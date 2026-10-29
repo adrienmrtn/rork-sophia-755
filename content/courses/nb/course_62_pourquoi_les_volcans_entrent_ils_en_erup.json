@@ -1,14 +1,14 @@
 {
   "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup",
   "title": "Hvorfor bryter vulkaner ut?",
-  "subtitle": "Magma og tallerkener",
+  "subtitle": "Magma og plater",
   "subject": "sciences",
   "subcategory": "Jorden og universet",
-  "description": "En vulkan er en åpning i jordskorpen. Magma under trykk stiger der og blir til lava. Dette er grunnen til at jorden \"spytter\".",
+  "description": "En vulkan er en åpning i jordskorpen. Magma under trykk stiger opp gjennom den og blir til lava. Her får du vite hvorfor jorden «spytter».",
   "hero": {
     "image": "pourquoi_les_volcans_entrent_en_eruption",
     "ratio": "16:9",
-    "hook": "Under våre føtter er ikke jorden frosset. Noen ganger åpner hun et ildvindu."
+    "hook": "Under føttene våre står ikke jorden stille. Noen ganger åpner den et vindu av ild."
   },
   "sections": [
     {
@@ -18,7 +18,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En vulkan er ikke bare et fjell som puster ild. Det er en åpning i den ytre konvolutten av jorden. På denne måten stiger **magma**: en blanding av smeltet stein og gass under høyt trykk. En gang i friluft blir denne magmaen **vasket**."
+          "text": "En vulkan er ikke bare et fjell som spyr ild. Den er en åpning i jordens ytre skall. Gjennom den stiger **magma** opp: en blanding av smeltet stein og gass under høyt trykk. Når magmaen kommer ut i friluft, blir den til **lava**."
         },
         {
           "type": "paragraph",
@@ -33,25 +33,25 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Jorden er laget av lag. Ved overflaten er **skorpe** en stiv konvolutt, **5 til 70 km tykk. Nedenfor ligger** mantle, til omtrent **2 900 km** dybde. Pelsen er for det meste solid, men over veldig lange perioder kan den flyte veldig sakte, som ultratykk honning."
+          "text": "Jorden er bygd opp av lag. Ytterst ligger **jordskorpen**, et stivt skall som er **5 til 70 km** tykt. Under den ligger **mantelen**, ned til omtrent **2 900 km** dyp. Mantelen er for det meste fast, men over svært lange tidsrom kan den flyte veldig sakte, som en ekstremt tykk honning."
         },
         {
           "type": "image",
           "asset": "volcano_eruption_lava",
           "ratio": "auto",
-          "caption": "Et utbrudd: økningen av magma til overflaten."
+          "caption": "Et utbrudd: magma som stiger opp til overflaten."
         },
         {
           "type": "paragraph",
-          "text": "Denne interne varmen får materie til å stige og falle: dette er **konveksjonsstrømmer**. De skyver ut store biter av skorpe kalt plakk. Dette er [[Platetektonikk]]: Jordens overflate er kuttet i plater som beveger seg fra hverandre, kolliderer eller glir mot hverandre."
+          "text": "Denne indre varmen får materiale til å stige opp og synke ned igjen: det er **konveksjonsstrømmer**. De skyver på de store bitene av jordskorpen som kalles plater. Dette er [[Platetektonikk]]: jordoverflaten er delt opp i plater som glir fra hverandre, kolliderer eller glir langs hverandre."
         },
         {
           "type": "funFact",
-          "text": "Enkelte svært raske stigninger bringer tilbake diamanter som er dannet på mer enn **150 km** dybde. De har ikke tid til å skifte på veien."
+          "text": "Noen svært raske oppstigninger bringer med seg diamanter som er dannet på over **150 km** dyp. De rekker ikke å omdannes på veien."
         },
         {
           "type": "paragraph",
-          "text": "Ved [[rygger]] beveger platene seg fra hverandre og magmaen stiger lett. I et område av [[Subduksjon]] dykker en plate under en annen og bærer vann med seg. Dette vannet senker smeltepunktet til bergarter: magma dannes og stiger deretter."
+          "text": "Ved [[rygger]] glir platene fra hverandre, og magmaen stiger lett opp. I en sone med [[subduksjon]] dykker én plate under en annen og drar vann med seg. Dette vannet senker smeltepunktet til bergartene: magma dannes og stiger opp."
         }
       ]
     },
@@ -62,53 +62,53 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Stein smelter ikke bare «fordi det er varmt». Det er tre utløsere: en temperaturøkning, et trykkfall eller tilsetning av vann. Når den først er dannet, er magma mindre tett enn steinen rundt den. Den prøver derfor å heve seg, litt som en luftboble i vann."
+          "text": "Stein smelter ikke bare «fordi det er varmt». Tre ting kan utløse smeltingen: høyere temperatur, lavere trykk eller tilført vann. Når magmaen først er dannet, har den lavere tetthet enn steinen rundt. Derfor prøver den å stige opp, litt som en luftboble i vann."
         },
         {
           "type": "paragraph",
-          "text": "Ofte stopper den først i et **magma-kammer**, et reservoar noen kilometer under overflaten. Der danner de oppløste gassene bobler når trykket synker. Hvis \"pluggen\" av stein over ikke lenger holder, begynner utbruddet."
+          "text": "Ofte stopper den først i et **magmakammer**, et reservoar noen kilometer under overflaten. Der danner de oppløste gassene bobler når trykket synker. Hvis «proppen» av stein over ikke holder lenger, begynner utbruddet."
         },
         {
           "type": "funFact",
-          "text": "Utbruddet av **Tambora** i **1815**, Indonesia, var så kraftig at det avkjølte det globale klimaet. **1816** fikk kallenavnet \"året uten sommer\", med katastrofale høstinger i Europa og Nord-Amerika."
+          "text": "Utbruddet i vulkanen **Tambora** i Indonesia i **1815** var så kraftig at det kjølte ned klimaet på hele jorden. **1816** fikk kallenavnet «året uten sommer», med katastrofalt dårlige avlinger i Europa og Nord-Amerika."
         }
       ]
     },
     {
       "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup_p3",
-      "title": "Væske eller eksplosiv?",
+      "title": "Flytende eller eksplosiv?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ikke alle utbrudd er like. Alt avhenger av magmaens **viskositet**, det vil si om den er ganske flytende eller klissete. Et flytende magma, som ved **Hawaii** eller ved Piton de la Fournaise (Reunion Island), lar gassene slippe ut. Lavastrømmer: utbrudd **overstrømmende**."
+          "text": "Ikke alle utbrudd ligner hverandre. Alt avhenger av magmaens **viskositet**, altså om den er mest flytende eller seig. Flytende magma, som på **Hawaii** eller ved Piton de la Fournaise (på øya Réunion), slipper gassene ut. Lavaen renner: et **effusivt** utbrudd."
         },
         {
           "type": "paragraph",
-          "text": "En klebrig magma fanger gassene. Trykket bygger seg opp, så eksploderer alt. Aske, blokker og [[pyroklastiske strømmer]] (brennende skyer av gass og aske som ruller nedover bakkene) kan deretter ødelegge området rundt. Dette er stilen til vulkaner som Mount **Saint Helens** (USA) eller **Pinatubo** (Filippinene)."
+          "text": "Seig magma holder gassene fanget. Trykket stiger, og så eksploderer alt. Aske, steinblokker og [[pyroklastiske strømmer]] (glohete skyer av gass og aske som raser nedover fjellsidene) kan da ødelegge alt i nærheten. Slik oppfører vulkaner som Mount **Saint Helens** (USA) og **Pinatubo** (Filippinene) seg."
         },
         {
           "type": "paragraph",
-          "text": "En vulkan kan også holde seg rolig i århundrer. I **79** etter. BC, **Vesuv**, nær Napoli, gravlagt Pompeii under aske. Omtrent **80%** av verdens vulkanske aktivitet skjer under havet, langt fra øynene våre."
+          "text": "En vulkan kan også ligge rolig i århundrer. I år **79** e.Kr. begravde **Vesuv**, nær Napoli, Pompeii under aske. Omtrent **80 %** av all vulkansk aktivitet på jorden skjer under havene, uten at vi ser den."
         }
       ]
     },
     {
       "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup_p4",
-      "title": "Fare, fruktbarhet, avgrunnsliv",
+      "title": "Fare, fruktbarhet, liv i dyphavet",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Vulkaner formet jordens tidlige atmosfære ved å slippe ut gasser. Asken deres beriker også jorda: mange fruktbare landbruksregioner lever ved foten av aktive vulkaner. Men et veldig stort utbrudd kan sende svovelpartikler høyt opp i atmosfæren og avkjøle klimaet i flere måneder."
+          "text": "Vulkanene formet jordens første atmosfære ved å slippe ut gasser. Asken deres gjør også jordsmonnet rikere: mange fruktbare jordbruksområder ligger ved foten av aktive vulkaner. Men et svært stort utbrudd kan sende svovelpartikler høyt opp i atmosfæren og kjøle ned klimaet i flere måneder."
         },
         {
           "type": "paragraph",
-          "text": "Noen nettsteder, som Yellowstones [[supervulkan]] i USA, overvåkes nøye. Under havet, nær åsryggene, spyr [[svarte røykere]] ut brennende væsker rike på mineraler. Økosystemer lever der uten sollys, næret av kjemien til varme kilder."
+          "text": "Noen steder overvåkes nøye, for eksempel Yellowstone i USA, som er en [[supervulkan]]. Under havet, nær ryggene, spyr [[svarte røykere]] ut glohete, mineralrike væsker. Der lever hele økosystemer uten sollys, drevet av kjemien i de varme kildene."
         },
         {
           "type": "takeaway",
-          "text": "Vulkaner driver ut magma under trykk, spesielt ved tektoniske plategrenser. Magmaens viskositet avgjør om utbruddet flyter stille eller eksploderer."
+          "text": "Vulkaner presser ut magma under trykk, særlig ved grensene mellom de tektoniske platene. Magmaens viskositet avgjør om utbruddet renner rolig eller eksploderer."
         }
       ]
     }

@@ -4,11 +4,11 @@
   "subtitle": "Fra Franklin til Tesla",
   "subject": "sciences",
   "subcategory": "Oppdagelser som endret verden",
-  "description": "Elektrisitet ble ikke oppfunnet plutselig. Den ble først observert, så forstått, deretter domestisert. Her er de viktigste trinnene.",
+  "description": "Elektrisiteten ble ikke oppfunnet over natten. Først ble den observert, så forstått og til slutt temmet. Her er de viktigste stegene.",
   "hero": {
     "image": "la_decouverte_de_l_electricite",
     "ratio": "16:9",
-    "hook": "Fra lyn til smarttelefonen: to århundrer for å temme det usynlige."
+    "hook": "Fra lyn til smarttelefon: to hundre år for å temme det usynlige."
   },
   "sections": [
     {
@@ -18,7 +18,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Elektrisitet finnes i naturen: lyn, elektrisk fisk, friksjon. Det som forandret verden var å lære å **produsent**, **transport** og bruke det."
+          "text": "Elektrisitet finnes i naturen: lyn, elektriske fisker, friksjon. Det som forandret verden, var å lære seg å **produsere** den, **transportere** den og ta den i bruk."
         },
         {
           "type": "paragraph",
@@ -33,7 +33,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "På 1700-tallet viste **Benjamin Franklin** at lyn er et elektrisk fenomen. Drageflygingseksperimentet hans (ofte fortalt på en fiksjonalisert måte) har som mål å bevise at himmelen og friksjonsmaskinen spiller med samme kraft."
+          "text": "På 1700-tallet viste **Benjamin Franklin** at lynet er et elektrisk fenomen. Drageforsøket hans (som ofte fortelles i en romantisert versjon) skulle bevise at det er den samme kraften som virker i himmelen og i friksjonsmaskinen."
         },
         {
           "type": "image",
@@ -43,18 +43,18 @@
         },
         {
           "type": "paragraph",
-          "text": "Vi oppfant også **torden**, en metallstang som gir lynet en trygg vei til bakken. Elektrisitet etterlater mystikk for å komme inn i ingeniørkunst."
+          "text": "Man fant også opp **lynavlederen**, en metallstang som gir lynet en trygg vei ned i bakken. Elektrisiteten går fra å være et mysterium til å bli ingeniørkunst."
         }
       ]
     },
     {
       "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p2",
-      "title": "Faraday: produserer strøm",
+      "title": "Faraday: å lage strøm",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "På 1800-tallet viste **Michael Faraday** at en magnet som beveger seg nær en ledning kunne skape en elektrisk strøm. Dette er **induksjon**. Uten denne ideen, ingen dynamo, ingen dynamo, ingen moderne kraftverk."
+          "text": "På 1800-tallet viste **Michael Faraday** at en magnet som beveger seg nær en ledning, kan lage elektrisk strøm. Dette er **induksjon**. Uten denne ideen: ingen dynamo, ingen vekselstrømsgenerator, ingen moderne kraftverk."
         },
         {
           "type": "image",
@@ -64,7 +64,7 @@
         },
         {
           "type": "funFact",
-          "text": "Faraday kom fra en ydmyk bakgrunn og begynte som bokbinder. Han lærte vitenskap ved å lese det han reliaba."
+          "text": "Faraday kom fra enkle kår og begynte som bokbinder. Han lærte seg naturvitenskap ved å lese bøkene han bandt inn."
         }
       ]
     },
@@ -75,17 +75,17 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "På slutten av 1800-tallet kolliderte to leire. **Thomas Edison** skyver likestrøm. **Nikola Tesla** (og Westinghouse-selskapet) forsvarer vekselstrøm, som er lettere å transportere over lange avstander."
+          "text": "På slutten av 1800-tallet sto to leirer mot hverandre. **Thomas Edison** satset på likestrøm. **Nikola Tesla** (og selskapet Westinghouse) forsvarte vekselstrøm, som var lettere å overføre over lange avstander."
         },
         {
           "type": "image",
           "asset": "tesla_edison_electric_power_station",
           "ratio": "4:3",
-          "caption": "Vekselstrøm får kraft i byer."
+          "caption": "Vekselstrømmen vinner kampen om å forsyne byene."
         },
         {
           "type": "paragraph",
-          "text": "Vekselstrøm vinner for urbane nettverk. Byene lyser opp. Fabrikkene endrer tempo."
+          "text": "Vekselstrømmen vant frem i strømnettene i byene. Byene ble lyst opp. Fabrikkene skiftet tempo."
         }
       ]
     },
@@ -96,11 +96,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "I dag driver elektrisitet sykehus, tog, internett, kjøleskap. Utfordringen er ikke lenger bare å produsere det, men å gjøre det rent og pålitelig."
+          "text": "I dag driver elektrisiteten sykehus, tog, internett og kjøleskap. Utfordringen er ikke lenger bare å produsere den, men å gjøre det rent og pålitelig."
         },
         {
           "type": "takeaway",
-          "text": "Elektrisitet ble forstått og deretter domestisert: Franklin for lyn, Faraday for å produsere strøm, Tesla og vekselstrøm for å bringe den inn i hjemmene. Dagliglivet vårt er fortsatt avhengig av det."
+          "text": "Elektrisiteten ble først forstått og så temmet: Franklin med lynet, Faraday med strømproduksjonen, Tesla og vekselstrømmen med veien inn i hjemmene. Hverdagen vår er fortsatt avhengig av den."
         }
       ]
     }

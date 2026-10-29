@@ -1,14 +1,14 @@
 {
   "id": "course_75_la_photosynthese_expliquee_simplement",
-  "title": "Fotosyntese forklart enkelt",
+  "title": "Fotosyntesen forklart enkelt",
   "subtitle": "Planter og energi",
   "subject": "sciences",
   "subcategory": "Jorden og universet",
-  "description": "Planter gjør noe ekstraordinært: de koker sukker med lys, vann og luft. Og de gir oss oksygen i gave.",
+  "description": "Planter gjør noe helt utrolig: de lager sukker av lys, vann og luft. Og på kjøpet gir de oss oksygen.",
   "hero": {
     "image": "la_photosynthese_expliquee_simplement",
     "ratio": "16:9",
-    "hook": "Et blad er et solar kjøkken: lys, vann, luft... og her er sukker."
+    "hook": "Et blad er et solkjøkken: lys, vann, luft … og vips, sukker."
   },
   "sections": [
     {
@@ -18,93 +18,93 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Se for deg en miniatyrfabrikk i hvert blad. Den krever tre verdslige ingredienser: **lys eng Søn**, **vann** fra røttene og **CO₂** fra luften. Den kommer ut med **sukker** for å vokse, og utgir **oksygen**."
+          "text": "Se for deg en bitteliten fabrikk i hvert blad. Den bruker tre helt vanlige ingredienser: **sollys**, **vann** fra røttene og **CO₂** fra luften. Av dette lager den **sukker** for å vokse, og den slipper ut **oksygen**."
         },
         {
           "type": "paragraph",
-          "text": "Denne bragden kalles **fotosyntese**. Uten det, ingen skoger, ingen pustende oksygen, nesten ikke noe komplekst liv på jorden."
+          "text": "Denne bragden heter **fotosyntese**. Uten den ville det ikke finnes skoger, ikke oksygen å puste inn og nesten ikke noe komplekst liv på jorden."
         }
       ]
     },
     {
       "id": "course_75_la_photosynthese_expliquee_simplement_p1",
-      "title": "Hvor skjer det i arket?",
+      "title": "Hvor i bladet det skjer",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "I plantecellen huser grønne organeller, **kloroplasten**, [[Klorofyll]]. Dette pigmentet fanger hovedsakelig det blå og røde lyset. Grønt blir returnert: dette er grunnen til at bladene ser grønne ut for oss."
+          "text": "I plantecellen finnes grønne organeller, **kloroplastene**, som huser [[klorofyll]]. Dette pigmentet fanger først og fremst det blå og det røde i lyset. Det grønne blir sendt tilbake: derfor ser bladene grønne ut for oss."
         },
         {
           "type": "image",
           "asset": "leaf_photosynthesis_sunlight_chloroplasts",
           "ratio": "auto",
-          "caption": "Blader fanger opp sollys for fotosyntese."
+          "caption": "Bladene fanger sollyset til fotosyntesen."
         },
         {
           "type": "paragraph",
-          "text": "Den enkle ligningen: CO₂ + vann + lys → sukker + oksygen. Gassen kommer inn gjennom bittesmå porer, [[stomata]]. Vann stiger opp fra røttene. Sukker blir til tre, frukt, røtter; oksygenet går ut i luften."
+          "text": "Den enkle ligningen: CO₂ + vann + lys → sukker + oksygen. Gassen kommer inn gjennom bittesmå porer, [[stomata]]. Vannet stiger opp fra røttene. Sukkeret blir til ved, frukt og røtter; oksygenet slipper ut i luften."
         },
         {
           "type": "funFact",
-          "text": "Klorofyll \"nekter\" grønt. Hun foretrekker blått og rødt, mer effektivt for å spennende elektronene og lansere energimaskinen."
+          "text": "Klorofyllet «nekter» å ta imot grønt. Det foretrekker blått og rødt, som er bedre til å eksitere elektronene og sette i gang energimaskineriet."
         }
       ]
     },
     {
       "id": "course_75_la_photosynthese_expliquee_simplement_p2",
-      "title": "To trinn: fangst, deretter håndverk",
+      "title": "To trinn: fange, så produsere",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Først **lett fase**. Lys bryter opp vannmolekyler. Oksygen slipper ut. Energi lagres i to kjemiske \"batterier\", **ATP** og **NADPH**."
+          "text": "Først kommer **lysfasen**. Lyset spalter vannmolekyler. Oksygenet slipper ut. Energien lagres i to kjemiske «batterier», **ATP** og **NADPH**."
         },
         {
           "type": "paragraph",
-          "text": "Deretter **-produksjonsfasen**, [[Calvin syklus]], oppkalt etter kjemikeren **Melvin Calvin**. Med energien fra batteriene setter anlegget sammen karbon fra CO₂ til glukose. Ikke behov for direkte sollys på dette stadiet, men det avhenger helt av hva lyset har produsert før."
+          "text": "Deretter kommer **produksjonsfasen**, [[Calvin-syklusen]], oppkalt etter kjemikeren **Melvin Calvin**. Med energien fra batteriene setter planten sammen karbonet fra CO₂ til glukose. På dette trinnet trengs ikke direkte sollys, men alt avhenger av det lyset har produsert på forhånd."
         },
         {
           "type": "funFact",
-          "text": "For å følge karbonbanen i bladet brukte Calvin radioaktive isotoper fra forskning på atombomben. Nobelprisen i **1961**."
+          "text": "For å følge karbonets vei gjennom bladet brukte Calvin radioaktive isotoper fra forskningen på atombomben. Han fikk nobelprisen i **1961**."
         }
       ]
     },
     {
       "id": "course_75_la_photosynthese_expliquee_simplement_p3",
-      "title": "Da oksygen forandret planeten",
+      "title": "Da oksygenet forandret planeten",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "For rundt **2,4 milliarder dollar på siden** begynte fotosyntetiske bakterier, **cyanobakterier**, å frigjøre oksygen massivt. Dette er **Flott oksidasjon**. For mange organisasjoner på den tiden var det gift."
+          "text": "For rundt **2,4 milliarder år** siden begynte fotosyntetiske bakterier, **cyanobakteriene**, å slippe ut store mengder oksygen. Dette kalles **den store oksidasjonshendelsen**. For mange organismer på den tiden var oksygenet gift."
         },
         {
           "type": "paragraph",
-          "text": "Da tillot oksygen ozonlaget og mye mer effektiv respirasjon. Luften vi puster inn er i utgangspunktet \"avfallsproduktet\" fra milliarder av år med fotosyntese."
+          "text": "Senere gjorde oksygenet ozonlaget mulig, og en mye mer effektiv respirasjon. Luften vi puster inn, er i grunnen «avfallet» etter milliarder år med fotosyntese."
         },
         {
           "type": "funFact",
-          "text": "Om **halv** av jordens oksygen kommer fra planteplankton i havene, ikke bare skoger."
+          "text": "Omtrent **halvparten** av oksygenet på jorden kommer fra planteplankton i havene, ikke bare fra skogene."
         }
       ]
     },
     {
       "id": "course_75_la_photosynthese_expliquee_simplement_p4",
-      "title": "En beskjeden produksjon, en enorm rolle",
+      "title": "Lav virkningsgrad, enorm betydning",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Et blad konverterer bare **1 til 3 %** av solenergien som mottas til biomasse. På global skala er dette nok til å mate næringskjeder og absorbere enorme mengder CO₂."
+          "text": "Et blad omdanner bare **1 til 3 %** av solenergien det mottar, til biomasse. På planetnivå er det likevel nok til å holde næringskjedene i gang og ta opp enorme mengder CO₂."
         },
         {
           "type": "paragraph",
-          "text": "Derav interessen for skog, hav ... og til og med kunstig fotosyntese for klimaet. En sjøsnegl, *Elysia chlorotica*, går så langt som å «stjele» kloroplaster fra alger for å leve litt av solenergi."
+          "text": "Derfor er skogene, havene … og til og med kunstig fotosyntese viktige for klimaet. En sjøsnegl, *Elysia chlorotica*, går så langt som å «stjele» kloroplaster fra alger for å leve litt på solenergi."
         },
         {
           "type": "takeaway",
-          "text": "Fotosyntese omdanner lys, vann og CO₂ til sukker, og regenererer oksygen. Det er solar matlaging på grunnlag av nesten alt liv."
+          "text": "Fotosyntesen gjør lys, vann og CO₂ om til sukker og fornyer oksygenet. Det er solkjøkkenet som ligger til grunn for nesten alt liv."
         }
       ]
     }

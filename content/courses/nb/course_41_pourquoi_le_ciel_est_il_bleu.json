@@ -1,14 +1,14 @@
 {
   "id": "course_41_pourquoi_le_ciel_est_il_bleu",
   "title": "Hvorfor er himmelen blå?",
-  "subtitle": "Lumière & atmosfære",
+  "subtitle": "Lys og atmosfære",
   "subject": "sciences",
   "subcategory": "Hverdagen forklart",
-  "description": "Å se på den blå himmelen er så vanlig at vi glemmer å spørre hvorfor. Svaret ligger i lyset fra solen og luften vi passerer gjennom for å se den.",
+  "description": "Den blå himmelen er så hverdagslig at man glemmer å spørre hvorfor. Svaret ligger i sollyset og i luften man ser det gjennom.",
   "hero": {
     "image": "pourquoi_le_ciel_est_il_bleu",
     "ratio": "16:9",
-    "hook": "Himmelen er ikke malt blå: det er et magisk triks av lys og luft."
+    "hook": "Himmelen er ikke malt blå: det er lyset og luften som tryller."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Å se opp på den blå himmelen er så vanlig at vi glemmer å spørre hvorfor det er det. **atmosfære**, gasslaget som omgir jorden, har imidlertid ingen egen farge. Denne fargen kommer fra et veldig presist møte mellom sollyset og gassmolekylene som flyter rundt oss."
+          "text": "Å se opp på den blå himmelen er så hverdagslig at man glemmer å spørre hvorfor den er blå. **Atmosfæren**, gasslaget rundt jorden, har likevel ingen egen farge. Fargen oppstår i et helt bestemt møte mellom sollyset og gassmolekylene som svever rundt oss."
         },
         {
           "type": "paragraph",
-          "text": "Å forstå dette blå betyr å forstå hvordan lys beveger seg og **spre**, det vil si at det går tilbake i alle retninger i stedet for å gå rett. Og hyggelig overraskelse: det er akkurat det samme fenomenet som farger himmelen rød og oransje ved solnedgang."
+          "text": "Å forstå dette blå er å forstå hvordan lyset beveger seg og **spres**, altså sendes ut i alle retninger i stedet for å gå rett frem. Og en hyggelig overraskelse: det er nøyaktig det samme fenomenet som farger himmelen rød og oransje ved solnedgang."
         }
       ]
     },
@@ -33,76 +33,76 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Sollys virker hvitt for oss, men det inneholder faktisk alle regnbuens farger: det er [[synlig lysspekter]]. Hver farge tilsvarer en **bølgelengde**, størrelsen på dens lyse \"bølge\". Blått og fiolett har korte bølger; rødt har lange bølger."
+          "text": "Sollyset ser hvitt ut, men inneholder faktisk alle regnbuens farger: dette kalles [[synlig lysspekter]]. Hver farge svarer til en **bølgelengde**, altså hvor stor lysbølgen er. Blått og fiolett har korte bølger, rødt har lange."
         },
         {
           "type": "funFact",
-          "text": "På månen er det ingen luft som sprer lys. Resultat: der forblir himmelen **svart ved fullt dagslys**, selv når solen skinner. Bevis på at fargen på himmelen kommer fra luften, ikke fra solen."
+          "text": "På månen finnes det ingen luft som kan spre lyset. Resultatet: der er himmelen **svart midt på dagen**, selv når solen skinner. Et bevis på at himmelens farge kommer fra luften, ikke fra solen."
         },
         {
           "type": "paragraph",
-          "text": "Fordi mellom solen og øynene våre er luften ikke tom: den er fylt med små **gassmolekyler**, spesielt nitrogen, omtrent 78 % av luften, og oksygen, omtrent 21 %. De er mye mindre enn lysbølger. Når en stråle treffer dem, går den ikke lenger rett: den sendes tilbake i alle retninger. Denne lille spretten er utgangspunktet for fargen på himmelen."
+          "text": "For mellom solen og øynene våre er ikke luften tom: den er full av bittesmå **gassmolekyler**, mest nitrogen, rundt **78 %** av luften, og oksygen, rundt **21 %**. De er mye mindre enn lysbølgene. Når en lysstråle treffer dem, fortsetter den ikke rett frem: den sendes ut i alle retninger. Denne lille spretten er utgangspunktet for himmelens farge."
         }
       ]
     },
     {
       "id": "course_41_pourquoi_le_ciel_est_il_bleu_p2",
-      "title": "Diffusjon: hvorfor blå vinner",
+      "title": "Spredning: hvorfor blått vinner",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "I **1871** satte den britiske fysikeren **Lord Rayleigh** dette fenomenet inn i en ligning. Han oppdaget at jo kortere farge en farge har, jo mer reflekteres den i alle retninger av luftmolekyler. Det er [[Rayleigh-spredning]]."
+          "text": "I **1871** beskrev den britiske fysikeren **Lord Rayleigh** fenomenet med en ligning. Han oppdaget at jo kortere bølgelengde en farge har, desto mer spres den i alle retninger av luftmolekylene. Dette kalles [[Rayleigh-spredning]]."
         },
         {
           "type": "funFact",
-          "text": "Mars himmel er det motsatte av vår: dets jernrike støv gjør den rosa om dagen, men solnedgangen er **blå**. Alt avhenger av hva luften inneholder."
+          "text": "Himmelen på Mars er det motsatte av vår: det jernrike støvet gjør den rosa om dagen, mens solnedgangene der er **blå**. Alt avhenger av hva luften inneholder."
         },
         {
           "type": "image",
           "asset": "blue_sky_sunlight_scattering_atmosphere",
           "ratio": "4:3",
-          "caption": "Blått lys er spredt i alle retninger med luft."
+          "caption": "Blått lys spres i alle retninger av luften."
         },
         {
           "type": "paragraph",
-          "text": "Konkret spres blått lys omtrent **9 ganger hav** enn rødt. Rødt reiser gjennom luften nesten i en rett linje, mens blå rikosjetterer overalt. Det er derfor, uansett hvor du ser på himmelen, blått alltid ender opp med å nå øynene dine: hele himmelen ser ut til å \"gløde\" med denne spredte blå."
+          "text": "Konkret spres blått lys omtrent **9 ganger mer** enn rødt. Rødt går gjennom luften nesten i rett linje, mens blått spretter i alle retninger. Derfor når det alltid blått lys frem til øynene dine, uansett hvor du ser på himmelen: hele himmelen ser ut til å «lyse» av dette spredte blå."
         }
       ]
     },
     {
       "id": "course_41_pourquoi_le_ciel_est_il_bleu_p3",
-      "title": "Så hvorfor ikke lilla?",
+      "title": "Så hvorfor ikke fiolett?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Et logisk spørsmål oppstår: hvis de korteste bølgene er de mest spredte, bør fiolett vinne, fordi bølgen er enda kortere enn blå. Himmelen inneholder også mye spredt lilla."
+          "text": "Et logisk spørsmål melder seg: hvis de korteste bølgene spres mest, burde fiolett vinne, for fiolett har enda kortere bølger enn blått. Himmelen inneholder faktisk mye spredt fiolett lys."
         },
         {
           "type": "paragraph",
-          "text": "Svaret er ikke i himmelen, men i våre øyne. Vi fanger farger ved hjelp av sensorer kalt **kjegler**, celler i netthinnen som er følsomme for lys. De er mye mer følsomme for blått enn for fiolett. I tillegg sender sola ut mer blått lys enn fiolett lys. Hjernen vår gjør da et slags gjennomsnitt og ser en vakker blå. Et dyr som er følsomt for andre farger, ville utvilsomt se en helt annen himmel."
+          "text": "Svaret ligger ikke i himmelen, men i øyet. Vi oppfatter farger med sanseceller som kalles **tapper**, lysfølsomme celler i netthinnen. De er mye mer følsomme for blått enn for fiolett. I tillegg sender solen ut mer blått enn fiolett lys. Hjernen lager da et slags gjennomsnitt og ser en vakker blåfarge. Et dyr som oppfatter andre farger, ville trolig sett en helt annen himmel."
         }
       ]
     },
     {
       "id": "course_41_pourquoi_le_ciel_est_il_bleu_p4",
-      "title": "Og kveldsrød?",
+      "title": "Og kveldsrøden?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Solnedgangen følger de samme reglene, men endrer én ting: avstanden. Ved middagstid passerer lyset gjennom et tynt luftlag. Om kvelden, når solen står lavt, må strålene passere gjennom **musling hav luft** før de når oss."
+          "text": "Solnedgangen følger de samme reglene, men én ting endrer seg: avstanden. Midt på dagen går lyset gjennom et tynt luftlag. Om kvelden, når solen står lavt, må strålene gjennom **mye mer luft** før de når oss."
         },
         {
           "type": "image",
           "asset": "sunset_red_orange_sky_atmosphere",
           "ratio": "16:9",
-          "caption": "På horisontnivå passerer lys gjennom en mye større tykkelse av luft."
+          "caption": "Nede ved horisonten går lyset gjennom et mye tykkere luftlag."
         },
         {
           "type": "paragraph",
-          "text": "På denne lange reisen blir alt det blå spredt godt før det når oss: det filtreres av luftens tykkelse. Bare de mest motstandsdyktige fargene gjenstår, røde og oransje. Hvis det er støv eller forurensning, kommer [[Mie spredning]] inn i bildet: partikler større enn luftmolekyler gjør himmelen melkeaktig eller forsterker disse oransje fargene."
+          "text": "På denne lange veien blir alt det blå spredt lenge før det når oss: det blir liksom filtrert bort av det tykke luftlaget. Igjen blir bare de mest motstandsdyktige fargene, rødt og oransje. Er det støv eller forurensning i luften, spiller [[Mie-spredning]] inn: partikler som er større enn luftmolekylene, gjør himmelen melkehvit eller forsterker de oransje fargetonene."
         },
         {
           "type": "takeaway",

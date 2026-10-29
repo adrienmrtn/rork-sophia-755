@@ -1,14 +1,14 @@
 {
   "id": "course_100_les_fleurs_du_mal_baudelaire",
-  "title": "Ondskapens blomster, Baudelaire",
+  "title": "Det ondes blomster, Baudelaire",
   "subtitle": "1857",
   "subject": "litterature",
   "subcategory": "Franske og europeiske klassikere",
-  "description": "Baudelaire henter skjønnhet fra det onde og det parisiske hverdagslivet. Samlingen ble fordømt i 1857 og grunnla moderne poesi.",
+  "description": "Baudelaire henter skjønnhet ut av det onde og av hverdagslivet i Paris. Samlingen ble dømt i 1857 og la grunnlaget for moderne poesi.",
   "hero": {
     "image": "les_fleurs_du_mal_baudelaire",
     "ratio": "16:9",
-    "hook": "Seks sensurerte dikt, en overbevisning og fødselen til moderne poesi."
+    "hook": "Seks sensurerte dikt, én domfellelse og den moderne poesiens fødsel."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "I **1857** publiserte **Charles Baudelaire** **Ondskapens blomster**. Samlingen markerer et vendepunkt i dikthistorien. Inntil da dominerte **[[Romantikk]]**: diktere idealiserte naturen og store følelser. Baudelaire gjør noe annet. Han skriver om stygghet, synd, byen, kvaler."
+          "text": "I **1857** publiserte **Charles Baudelaire** **Det ondes blomster**. Samlingen markerte et vendepunkt i poesiens historie. Frem til da hadde **[[Romantikk]]** dominert: dikterne idealiserte naturen og de store følelsene. Baudelaire gjorde det annerledes. Han skrev om det stygge, synden, byen og angsten."
         },
         {
           "type": "paragraph",
-          "text": "Boken forårsaket en skandale. Han ble dømt for å ha \"fornærmet offentlig moral\". Baudelaire forsvarer imidlertid en sterk idé: vi kan hente skjønnhet fra det som sjokkerer eller avskyr. Han sammenligner dikteren med en alkymist. Der andre bare ser gjørme, leter han etter gull."
+          "text": "Boken vakte skandale. Den ble dømt for «krenkelse av offentlig moral». Likevel forsvarte Baudelaire en sterk idé i den: man kan hente skjønnhet ut av det som sjokkerer eller vekker avsky. Han sammenlignet dikteren med en alkymist. Der andre bare så gjørme, lette han etter gull."
         }
       ]
     },
@@ -33,11 +33,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Charles Baudelaire** spiller den **forbannede poeten**: en forfatter i utkanten, uelsket av sin tid. Hans vanskelige liv gir næring til arbeidet hans. Han elsker eleganse og raffinement, det vi kaller **dandyisme**, men han kjenner også forfall og gjeld."
+          "text": "**Charles Baudelaire** er selve bildet på den **forbannede dikteren**: en forfatter på siden av samfunnet, lite elsket i sin samtid. Det vanskelige livet hans ga næring til diktningen. Han elsket eleganse og raffinement, det som kalles **dandyisme**, men han kjente også forfall og gjeld."
         },
         {
           "type": "paragraph",
-          "text": "Foreldreløs av sin far på **6 år** krangler han med sin svigerfar, general **Aupick**, som kontrollerer en del av formuen hans. Han elsker **Jeanne Duval**, skuespiller og sanger. Forholdet deres er lidenskapelig og konfliktfylt. Den inspirerer til flere dikt i samlingen."
+          "text": "Han mistet faren som **6-åring** og kom på kant med stefaren, general **Aupick**, som kontrollerte en del av formuen hans. Han elsket **Jeanne Duval**, skuespiller og sanger. Forholdet deres var lidenskapelig og stormfullt. Hun inspirerte flere av diktene i samlingen."
         },
         {
           "type": "image",
@@ -51,56 +51,56 @@
         },
         {
           "type": "paragraph",
-          "text": "I **1857**, samme år som rettssaken mot **[[Madame Bovary]]**, gikk også **Ondskapens blomster** for domstolene. Flaubert og Baudelaire blir dømt for umoral. Videre oversetter Baudelaire **Edgar Allan Poe**, amerikansk fantasyforfatter. Han betrakter ham som en \"sjelebror\", og deler sin smak for det makabre."
+          "text": "I **1857**, samme år som rettssaken mot **[[Madame Bovary]]**, havnet også **Det ondes blomster** for retten. Både Flaubert og Baudelaire ble tiltalt for umoral. Baudelaire oversatte dessuten **Edgar Allan Poe**, en amerikansk forfatter av fantastisk litteratur. Han så på ham som en «sjelebror» som delte hans sans for det makabre."
         }
       ]
     },
     {
       "id": "course_100_les_fleurs_du_mal_baudelaire_p2",
-      "title": "Samlingens arkitektur",
+      "title": "Samlingens oppbygning",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Boken er ikke en enkel diktsamling. Baudelaire sporer en progresjon der. **\"Milt og ideelt\"**, den første store delen, motsetter seg to stater. **milt**, et ord lånt fra engelsk, betegner en dyp kjedsomhet, en melankoli uten grunn. **ideelt** er tørsten etter høyde og ren skjønnhet."
+          "text": "Boken er ikke bare en samling dikt. Baudelaire bygger opp en utvikling i den. **«Spleen og ideal»**, den første store delen, stiller to sinnstilstander opp mot hverandre. **Spleen**, et ord lånt fra engelsk, betegner en dyp kjedsomhet, et tungsinn uten årsak. **Idealet** er lengselen etter det opphøyde og den rene skjønnheten."
         },
         {
           "type": "paragraph",
-          "text": "I **«Albatrossen»** sammenligner dikteren seg selv med denne sjøfuglen. I flukt er det majestetisk. På dekket av skipet blir han klønete og latterlig. Bildet oppsummerer ensomheten til den misforståtte kunstneren."
+          "text": "I **«Albatrossen»** sammenligner dikteren seg med denne havfuglen. I luften er den majestetisk. På skipsdekket blir den klønete og latterlig. Bildet oppsummerer ensomheten til den misforståtte kunstneren."
         },
         {
           "type": "image",
           "asset": "paris_1850s_night_streets_gas_lamps",
           "ratio": "4:3",
-          "caption": "Nattlige Paris på 1850-tallet: setting av Baudelairian milt."
+          "caption": "Paris om natten på 1850-tallet: kulissene for Baudelaires spleen."
         },
         {
           "type": "paragraph",
-          "text": "**«Parisiske malerier»** gjør byen til en interiørdekor. Gater, folkemengder og forbipasserende gjenspeiler dikterens stemninger. Under **[[Baron Haussmann]]** forvandles Paris: brede bulevarder, nye bygninger. Baudelaire vandrer deretter som en **barnevogn**, det vil si en vandrer som observerer byen uten et presist mål. Seksjonene «Vin», «Ondskapens blomster» og «Revolten» utforsker rømningsforsøk før konklusjonen «Døden»."
+          "text": "**«Parisiske bilder»** gjør byen til et indre landskap. Gater, folkemengder og forbipasserende kvinner speiler dikterens sinnsstemninger. Under **[[Baron Haussmann]]** ble Paris forvandlet: brede bulevarder, nye bygårder. Baudelaire vandret da rundt som **flanør**, det vil si en som rusler gjennom byen og iakttar den uten noe bestemt mål. Delene «Vinen», «Det ondes blomster» og «Opprøret» utforsker forsøk på å flykte før avslutningen, «Døden»."
         }
       ]
     },
     {
       "id": "course_100_les_fleurs_du_mal_baudelaire_p3",
-      "title": "Korrespondanse og poetisk alkymi",
+      "title": "Correspondances og poetisk alkymi",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Baudelaire behersker klassiske former. Han skriver ofte i **sonett**, et dikt på 14 linjer, eller i **alexandrine**, linjer med 12 stavelser. Men han bringer en ny visjon inn i det. Diktet hans **\"Korrespondanse\"** beskriver naturen som et tempel der parfymer, farger og lyder reagerer på hverandre."
+          "text": "Baudelaire behersker de klassiske formene. Han skriver ofte **sonetter**, dikt på 14 linjer, eller **aleksandrinere**, verselinjer på 12 stavelser. Men han fyller dem med et nytt blikk på verden. Diktet **«Correspondances»** (samsvar mellom sansene) beskriver naturen som et tempel der dufter, farger og lyder svarer hverandre."
         },
         {
           "type": "quote",
-          "text": "Naturen er et tempel hvor levende søyler / Noen ganger slipper ut forvirrede ord.",
-          "attribution": "Charles Baudelaire, \"Korrespondanser\""
+          "text": "Naturen er et tempel der levende søyler / av og til lar dunkle ord slippe frem.",
+          "attribution": "Charles Baudelaire, «Correspondances»"
         },
         {
           "type": "paragraph",
-          "text": "Baudelaire utvikler ideen om **synestesi**: sansene blandes. Vi kan \"lukte\" en farge eller \"se\" en parfyme. Verden blir et nettverk av tegn som dikteren må tyde. Denne poetikken åpner veien til **[[Symbolikk og Baudelaires arv]]**, senere båret av Verlaine og Mallarmé."
+          "text": "Baudelaire utvikler her ideen om **synestesi**: sansene blandes. Man kan «lukte» en farge eller «se» en duft. Verden blir et nettverk av tegn som dikteren må tyde. Denne poetikken baner vei for **[[Symbolismen og Baudelaires arv]]**, som Verlaine og Mallarmé senere førte videre."
         },
         {
           "type": "paragraph",
-          "text": "Hele prosjektet er oppsummert i en kjent setning: \"Du ga meg gjørmen din og jeg laget gull av den\". Baudelaire benekter ikke ondskap eller stygghet. Han forvandler dem til kunstmateriale."
+          "text": "Hele prosjektet oppsummeres i en berømt formulering: «Du ga meg gjørmen din, og jeg gjorde den til gull.» Baudelaire benekter verken det onde eller det stygge. Han gjør dem til råstoff for kunsten."
         }
       ]
     },
@@ -111,11 +111,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "For Baudelaire består **[[Modernitet]]** av å fange det som passerer: bylivet, det flyktige, det hverdagslige. Men han ser også etter det som varer. Den moderne poeten observerer sin tid uten å flykte fra den."
+          "text": "For Baudelaire handler **[[modernitet]]** om å fange det som går forbi: bylivet, det flyktige, hverdagen. Men han søker også det som varer. Den moderne dikteren iakttar sin egen tid uten å flykte fra den."
         },
         {
           "type": "paragraph",
-          "text": "Denne oppmerksomheten til byen forbereder **[[Prosadikt]]**, en poetisk tekst uten vers eller rim. Baudelaire utviklet den i **[[Le Spleen de Paris]]**, en posthum samling korte prosadikt om Paris."
+          "text": "Denne oppmerksomheten rettet mot byen baner vei for **[[prosadikt]]**, poetisk tekst uten vers og rim. Baudelaire utviklet formen videre i **[[Le Spleen de Paris]]**, en samling korte prosadikt om Paris som ble utgitt etter hans død."
         },
         {
           "type": "timeline",
@@ -128,22 +128,22 @@
             {
               "date": "1949",
               "title": "Rehabilitering",
-              "detail": "De seks sensurerte diktene er endelig løftet."
+              "detail": "Forbudet mot de seks sensurerte diktene oppheves endelig."
             },
             {
               "date": "Ettertiden",
-              "title": "Symbolikk",
+              "title": "Symbolismen",
               "detail": "Verlaine, Mallarmé og poesi fra 1900-tallet."
             }
           ]
         },
         {
           "type": "paragraph",
-          "text": "Baudelaire redefinerer også dikterens rolle. I Hugo veileder poeten fortsatt nasjonen. I Baudelaire blir han en marginal person som ser hva samfunnet foretrekker å skjule. **Ondskapens blomster** ble først skandalisert, og ble deretter en referanse for hele det følgende århundret."
+          "text": "Baudelaire omdefinerer også dikterens rolle. Hos Hugo leder dikteren fortsatt nasjonen. Hos Baudelaire blir han en utenforstående som ser det samfunnet helst vil skjule. **Det ondes blomster** vakte først skandale, men ble siden et referansepunkt for hele det neste århundret."
         },
         {
           "type": "takeaway",
-          "text": "**Ondskapens blomster** revolusjonerer poesi ved å trekke ut skjønnhet fra ondskap og hverdagsliv. Samlingen etablerer **[[Modernitet]]** og **[[Symbolikk og Baudelaires arv]]**, til tross for en fordømmelse som varte i nesten et århundre."
+          "text": "**Det ondes blomster** revolusjonerte poesien ved å hente skjønnhet ut av det onde og av hverdagslivet i byen. Samlingen grunnla **[[modernitet]]** og **[[Symbolismen og Baudelaires arv]]**, til tross for en dom som varte i nesten et århundre."
         }
       ]
     }

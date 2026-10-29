@@ -4,11 +4,11 @@
   "subtitle": "1859",
   "subject": "sciences",
   "subcategory": "Oppdagelser som endret verden",
-  "description": "I 1859 publiserte Darwin The Origin of Species. Den sentrale ideen: levende ting endres over tid ved naturlig utvalg.",
+  "description": "I 1859 ga Darwin ut Om artenes opprinnelse. Hovedideen: livet forandrer seg over tid gjennom naturlig utvalg.",
   "hero": {
     "image": "la_theorie_de_l_evolution_de_darwin",
     "ratio": "16:9",
-    "hook": "Arter er ikke faste. De forandrer seg. Sakte. Men sikkert."
+    "hook": "Arter står ikke stille. De forandrer seg. Sakte. Men sikkert."
   },
   "sections": [
     {
@@ -18,17 +18,17 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "I **1859** publiserte **Charles Darwin** *Om opprinnelsen til arter*. Boken sjokkerer, fascinerer, splitter. Den sentrale ideen er imidlertid enkel å formulere."
+          "text": "I **1859** ga **Charles Darwin** ut *Om artenes opprinnelse*. Boken sjokkerte, begeistret og splittet. Likevel er hovedideen enkel å formulere."
         },
         {
           "type": "paragraph",
-          "text": "Levende ting varierer. Noen varianter hjelper til med å overleve og reprodusere. Disse variasjonene overføres. Over generasjoner endrer befolkningen seg."
+          "text": "Levende vesener varierer. Noen variasjoner hjelper dem å overleve og formere seg. Disse variasjonene går i arv. Over generasjoner forandrer bestandene seg."
         }
       ]
     },
     {
       "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_p1",
-      "title": "Den øyeåpnende reisen",
+      "title": "Reisen som åpnet øynene hans",
       "free": false,
       "blocks": [
         {
@@ -39,47 +39,47 @@
         },
         {
           "type": "paragraph",
-          "text": "Som ung gutt drar Darwin på skipet **Beagle**. I årevis observerte han planter, fossiler, fugler. På Galapagosøyene la han merke til at nærliggende fugler hadde forskjellige nebb avhengig av maten."
+          "text": "Som ung dro Darwin ut med skipet **Beagle**. I flere år studerte han planter, fossiler og fugler. På Galápagosøyene la han merke til at nært beslektede fugler hadde ulike nebb, alt etter hva de spiste."
         },
         {
           "type": "image",
           "asset": "darwin_finches_galapagos_beaks",
           "ratio": "4:3",
-          "caption": "Dyser tilpasset ulike dietter: en sterk indikator."
+          "caption": "Nebb tilpasset ulikt kosthold: et sterkt hint."
         }
       ]
     },
     {
       "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_p2",
-      "title": "Naturlig utvalg, på vanlig engelsk",
+      "title": "Naturlig utvalg, enkelt forklart",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Se for deg en bestand av dyr. Noen løper litt fortere, fordøyer litt bedre, motstår kulden litt mer. Hvis det hjelper dem å overleve og få unger, blir disse egenskapene mer vanlige."
+          "text": "Se for deg en dyrebestand. Noen løper litt fortere, fordøyer litt bedre eller tåler kulde litt bedre. Hvis det hjelper dem å overleve og få unger, blir disse egenskapene vanligere."
         },
         {
           "type": "paragraph",
-          "text": "Det er ikke slik at individer \"ønsker\" å utvikle seg. Det er et filter: miljøet beholder det som fungerer. Darwin kaller dette **naturlig utvalg**."
+          "text": "Det er ikke slik at individene «vil» utvikle seg. Det er et filter: omgivelsene tar helst vare på det som fungerer. Darwin kalte dette **naturlig utvalg**."
         },
         {
           "type": "funFact",
-          "text": "Darwin ventet lenge før han publiserte. Han fryktet skandale. En annen naturforsker, **Alfred Russell Wallace**, kom til lignende ideer: dette presset Darwin til å gi ut boken sin."
+          "text": "Darwin ventet lenge med å publisere. Han fryktet skandalen. En annen naturforsker, **Alfred Russel Wallace**, kom frem til lignende ideer, og det fikk Darwin til å gi ut boken sin."
         }
       ]
     },
     {
       "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_p3",
-      "title": "Idesammenstøtet",
+      "title": "Ideer som kolliderer",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "På 1800-tallet trodde mange at arter ble skapt som de var. Å si at de forandrer seg, og at mennesker deler en historie med andre dyr, ryster religion og samfunn."
+          "text": "På 1800-tallet trodde mange at artene var skapt slik de er. Å påstå at de forandrer seg, og at mennesket deler historie med andre dyr, rystet både religionen og samfunnet."
         },
         {
           "type": "paragraph",
-          "text": "Vitenskapen går fremover: fossiler, arters geografi, så senere genetikk, bekrefter den generelle ideen."
+          "text": "Vitenskapen gikk likevel videre: fossilene, artenes geografiske utbredelse og senere genetikken bekreftet hovedideen."
         }
       ]
     },
@@ -90,11 +90,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Vi vet nå at DNA har variasjoner. Vi observerer evolusjon i laboratoriet (bakterier, virus) og i naturen. Vi bekjemper også bakterier som er resistente mot antibiotika: dette er levende evolusjon."
+          "text": "I dag vet man at variasjonene ligger i DNA. Forskere observerer evolusjon i laboratoriet (bakterier, virus) og i naturen. Man bekjemper også bakterier som er resistente mot antibiotika: det er evolusjon i sanntid."
         },
         {
           "type": "takeaway",
-          "text": "Darwin viste at levende ting utvikler seg ved naturlig utvalg: egenskaper som er nyttige for overlevelse og reproduksjon spres. Moderne genetikk har bekreftet og tydeliggjort dette rammeverket."
+          "text": "Darwin viste at livet utvikler seg gjennom naturlig utvalg: egenskaper som er nyttige for å overleve og formere seg, sprer seg. Moderne genetikk har bekreftet og presisert dette rammeverket."
         }
       ]
     }

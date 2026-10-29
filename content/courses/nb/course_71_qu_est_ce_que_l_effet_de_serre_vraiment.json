@@ -4,11 +4,11 @@
   "subtitle": "Klima og atmosfære",
   "subject": "sciences",
   "subcategory": "Jorden og universet",
-  "description": "Drivhuseffekten er ikke først og fremst et problem: det er den usynlige mantelen som hindrer jorden i å fryse. Det virkelige problemet er når du tykner den for raskt.",
+  "description": "Drivhuseffekten er ikke først og fremst et problem: den er det usynlige teppet som hindrer jorden i å fryse. Det virkelige problemet oppstår når man gjør teppet tykkere for raskt.",
   "hero": {
     "image": "qu_est_ce_que_l_effet_de_serre",
     "ratio": "16:9",
-    "hook": "Uten drivhuseffekten ville jorden vært en isete ørken. Med for mye blir den overopphetet."
+    "hook": "Uten drivhuseffekt ville jorden vært en isørken. Med for mye blir den overopphetet."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Se for deg en lukket bil i solen: Vinduene slipper lyset inn, men varmen har vanskelig for å komme ut. Passasjerrommet varmes opp. Jordens [[drivhuseffekt]] fungerer litt slik, med luft i stedet for glass."
+          "text": "Se for deg en lukket bil i solen: vinduene slipper lyset inn, men varmen kommer seg vanskelig ut igjen. Kupeen blir varmere. Jordens [[drivhuseffekt]] fungerer litt på samme måte, med luft i stedet for glass."
         },
         {
           "type": "paragraph",
-          "text": "Dette fenomenet er **naturlig** og livsviktig. Uten den ville gjennomsnittstemperaturen på kloden falle mot **-18 °C**. Med ham er vi rundt **+15 °C**. Det nåværende problemet er ikke dets eksistens: det er dets raske **forsterkning** av våre aktiviteter."
+          "text": "Dette fenomenet er **naturlig** og livsviktig. Uten det ville gjennomsnittstemperaturen på jorden falt til rundt **-18 °C**. Med det ligger den på rundt **+15 °C**. Problemet i dag er ikke at det finnes, men at aktivitetene våre raskt **forsterker** det."
         }
       ]
     },
@@ -33,7 +33,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Solen sender hovedsakelig synlig lys. Atmosfæren lar det passere. Landet og havene varmes opp, og utstråler deretter denne energien tilbake i form av **infrarødt lys**, bølger som er \"lengre\" enn synlig lys."
+          "text": "Solen sender mest synlig lys. Atmosfæren slipper det gjennom. Bakken og havene blir varmet opp og sender så energien tilbake som **infrarød varme**, bølger som er «lengre» enn synlig lys."
         },
         {
           "type": "image",
@@ -43,64 +43,64 @@
         },
         {
           "type": "paragraph",
-          "text": "Visse gasser, [[klimagasser]], absorberer denne varmen og stråler den ut i alle retninger, også mot bakken. Nitrogen og oksygen, de fleste i luften, gjør knapt denne jobben. Vanndamp, **CO₂** og **metan** gjør dette veldig bra."
+          "text": "Noen gasser, kalt [[klimagasser]], tar opp denne varmen og sender den ut i alle retninger, også ned mot bakken. Nitrogen og oksygen, som utgjør mesteparten av luften, gjør nesten ikke denne jobben. Vanndamp, **CO₂** og **metan** gjør den svært godt."
         },
         {
           "type": "funFact",
-          "text": "Navnet \"drivhuseffekt\" er litt misvisende. Et ekte drivhus varmer hovedsakelig ved å blokkere den stigende varme luften. Atmosfæren fanger varme ved å absorbere infrarøde stråler."
+          "text": "Navnet «drivhuseffekt» er litt misvisende. Et ekte drivhus blir varmt mest fordi det stenger inne den varme luften som stiger. Atmosfæren, derimot, fanger varmen ved å ta opp infrarød stråling."
         }
       ]
     },
     {
       "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment_p2",
-      "title": "Når mennesker tykner teppet",
+      "title": "Når mennesket gjør teppet tykkere",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Siden den industrielle revolusjonen har kull, olje og gass blitt brent. Dette karbonet, begravd under jorden i millioner av år, går tilbake til luften. Avskoging reduserer også skog som absorberte CO₂. Husdyr og risdyrking tilfører metan, omtrent **80 ganger** mer \"oppvarming\" enn CO₂ over 20 år."
+          "text": "Siden den industrielle revolusjonen har man brent kull, olje og gass. Karbonet, som har ligget begravd under jorden i millioner av år, havner i luften igjen. Avskoging fjerner dessuten skog som tok opp CO₂. Husdyrhold og risdyrking tilfører metan, som over 20 år varmer omtrent **80 ganger** så mye som CO₂."
         },
         {
           "type": "paragraph",
-          "text": "Resultat: CO₂-konsentrasjonen økte fra omtrent **280** til mer enn **420** deler per million. Et slikt nivå hadde ikke blitt sett siden [[Pliocen]], for rundt **3 millioner år siden**, da havet var høyere."
+          "text": "Resultatet: CO₂-konsentrasjonen har økt fra omtrent **280** til over **420** deler per million. Et slikt nivå er ikke sett siden [[Pliocen]], for rundt **3 millioner år siden**, da havnivået var høyere."
         }
       ]
     },
     {
       "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment_p3",
-      "title": "For en mer energisk klimaendringer",
+      "title": "Det et mer energirikt klima forandrer",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "[[IPCC]], som syntetiserer arbeidet til tusenvis av klimatologer, er tydelig: Oppvarmingen siden 1950 er enestående over årtusener, og dens menneskelige opprinnelse er etablert."
+          "text": "[[IPCC]], som sammenfatter arbeidet til tusenvis av klimaforskere, sier det klart: oppvarmingen siden 1950 er uten sidestykke på flere tusen år, og det er slått fast at den skyldes mennesker."
         },
         {
           "type": "paragraph",
-          "text": "Mer energi i luft og hav betyr flere ekstremer: tørrere tørke, mer voldsomt regn, smeltende isbreer og iskapper, stigende havnivå. Og en akselerator: når den hvite isen forsvinner, absorberer den mørke jorda og vannet mer sollys. [[Terrestrisk albedo]] faller, og planeten varmes opp enda raskere."
+          "text": "Mer energi i luften og havene gir kraftigere ekstremer: tørkeperioder som blir tørrere, voldsommere regn, isbreer og iskapper som smelter, havnivå som stiger. Og en forsterker: når den hvite isen forsvinner, tar den mørke bakken og det mørke vannet opp mer sollys. [[Jordens albedo]] synker, og planeten varmes opp enda raskere."
         },
         {
           "type": "funFact",
-          "text": "Venus viser den \"pakkede\" drivhuseffekten: en atmosfære på 96 % CO₂ og omtrent **460 °C** på bakken, nok til å smelte bly."
+          "text": "Venus viser en «løpsk» drivhuseffekt: en atmosfære med 96 % CO₂ og rundt **460 °C** ved bakken, nok til å smelte bly."
         }
       ]
     },
     {
       "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment_p4",
-      "title": "Begrens økningen, tilpass resten",
+      "title": "Begrense økningen, tilpasse seg resten",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Det internasjonale målet tar sikte på å holde seg under **+1,5°C** eller **+2°C** sammenlignet med den førindustrielle epoken, for å unngå farlige terskler som tining av [[permafrost]], som ville frigjøre enda mer metan."
+          "text": "Det internasjonale målet er å holde oppvarmingen under **+1,5 °C** eller **+2 °C** sammenlignet med førindustriell tid, for å unngå farlige terskler som tining av [[permafrost]], som ville frigjøre enda mer metan."
         },
         {
           "type": "paragraph",
-          "text": "To spaker: **redusere**-utslipp (ren energi, nøkternhet, skog) og **tilpasset** til det som allerede er forpliktet. CO₂ forblir i luften i århundrer: det vi slipper ut i dag varer lenge."
+          "text": "To virkemidler: **redusere** utslippene (ren energi, lavere forbruk, skog) og **tilpasse seg** det som allerede er i gang. CO₂ blir værende i luften i hundrevis av år: det som slippes ut i dag, får følger lenge."
         },
         {
           "type": "takeaway",
-          "text": "Uten en naturlig drivhuseffekt ville jorden fryse rundt **-18 °C**. Dens forsterkning med fossilt brensel presser CO₂ til nivåer som ikke er sett på **3 millioner dollar**."
+          "text": "Uten den naturlige drivhuseffekten ville jorden frosset ved rundt **-18 °C**. Når fossil energi forsterker den, når CO₂-nivået høyder som ikke er sett på **3 millioner år**."
         }
       ]
     }
