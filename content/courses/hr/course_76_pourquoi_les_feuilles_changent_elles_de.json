@@ -4,11 +4,11 @@
   "subtitle": "Jesen i pigmenti",
   "subject": "sciences",
   "subcategory": "Zemlja i svemir",
-  "description": "Jesen ne izmišlja boje: ona uklanja zelenilo koje ih je maskiralo. Iza predstave, strategija preživljavanja kako prebroditi zimu.",
+  "description": "Jesen ne izmišlja boje: ona uklanja zelenu koja ih je skrivala. Iza tog prizora krije se strategija kojom stablo preživljava zimu.",
   "hero": {
     "image": "pourquoi_les_feuilles_changent_de_couleur",
     "ratio": "16:9",
-    "hook": "Jesenje lišće ne stavlja šminku: ono skida zeleno."
+    "hook": "Jesenje lišće se ne šminka: ono sa sebe skida zelenilo."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Svake jeseni šume se mijenjaju iz zelene u zlatnu, u bakrenu, u ljubičastu. Ovo nije estetski hir. To je strategija: stablo oporavi ono što može prije nego što odbaci lišće za zimu."
+          "text": "Svake jeseni šume prelaze iz zelene u zlatnu, bakrenu i purpurnu. To nije estetski hir. To je strategija: stablo spašava što može prije nego što za zimu odbaci lišće."
         },
         {
           "type": "paragraph",
-          "text": "Tople boje ne pojavljuju se niotkuda. Često su već bili tu, skriveni pod zelenilom. Razumijevanje jeseni znači razumijevanje velikog biokemijskog čišćenja."
+          "text": "Tople boje ne pojavljuju se niotkuda. Često su već bile tu, skrivene pod zelenilom. Razumjeti jesen znači razumjeti veliko biokemijsko spremanje."
         }
       ]
     },
@@ -33,7 +33,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Od proljeća do kasnog ljeta lišće je puno **klorofila**, pigmenta koji potiče fotosintezu. Degradira pod svjetlom, ali ga stablo stalno zamjenjuje. Sve dok dominira, list ostaje zelen."
+          "text": "Od proljeća do kraja ljeta lišće je puno **klorofila**, pigmenta koji pokreće fotosintezu. Na svjetlosti se razgrađuje, ali ga stablo neprestano nadoknađuje. Dok god prevladava, list ostaje zelen."
         },
         {
           "type": "image",
@@ -43,11 +43,11 @@
         },
         {
           "type": "paragraph",
-          "text": "No list sadrži i **karotenoid**, žute i narančaste pigmente (kao kod mrkve). Ljeti su tu, ali nevidljivi pod zelenilom. U jesen proizvodnja klorofila prestaje. Zeleno blijedi, žuto i narančasto se otkrivaju."
+          "text": "No list sadrži i **karotenoide**, žute i narančaste pigmente (kakvih ima i u mrkvi). Ljeti su tu, ali se ne vide pod zelenilom. U jesen proizvodnja klorofila prestaje. Zelena blijedi, a žuta i narančasta izlaze na vidjelo."
         },
         {
           "type": "funFact",
-          "text": "“Klorofil” dolazi od grčke riječi *kloros* (zelen) i *filon* (list). “Karotenoid” dijeli korijen… mrkve, gdje je ovaj pigment prvi put identificiran."
+          "text": "„Klorofil” dolazi od grčkih riječi *chloros* (zelen) i *phyllon* (list). „Karotenoid” dijeli korijen s… mrkvom, u kojoj je taj pigment prvi put otkriven."
         }
       ]
     },
@@ -58,45 +58,45 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Jesen ne pokreće uglavnom hladnoća, već duljina noći. Drveće to mjeri pomoću svjetlosnih senzora, [[fitokromi]]. Kad noći postanu duže, hormonalni signal dolazi do svakog lista."
+          "text": "Hladnoća nije glavni okidač jeseni, nego duljina noći. Drveće je mjeri pomoću svjetlosnih senzora koji se zovu [[fitokromi]]. Kad se noći produlje, prema svakom listu kreće hormonski signal."
         },
         {
           "type": "paragraph",
-          "text": "Na dnu peteljke formira se [[Zona razdvajanja]], neka vrsta kapice. Sok se slabije diže, šećeri se slabo spuštaju. Izolirano, list brže razgrađuje svoj klorofil. Stabilnije žutilo ostaje nekoliko tjedana, a zatim list pada."
+          "text": "Na dnu peteljke stvara se [[zona odvajanja]], svojevrsni čep. Sok se slabije penje, a šećeri se teško vraćaju prema dolje. Odsječen od stabla, list brže razgrađuje klorofil. Stabilniji žuti pigmenti ostaju još nekoliko tjedana, a zatim list otpada."
         }
       ]
     },
     {
       "id": "course_76_pourquoi_les_feuilles_changent_elles_de_p3",
-      "title": "Odakle dolaze jarko crvene boje?",
+      "title": "Odakle dolaze jarkocrvene boje",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Žuto je već bilo tu. Crvena i ljubičasta često su **napravio** na kraju sezone. To su [[Antocijanini]], koji nastaju kada šećeri ostanu zarobljeni u listu."
+          "text": "Žuta je već bila tu. Crvena i ljubičasta pak često se **proizvode** tek na kraju sezone. To su [[Antocijanini]], pigmenti koji nastaju kad šećeri ostanu zarobljeni u listu."
         },
         {
           "type": "paragraph",
-          "text": "Zašto ulagati energiju neposredno prije bacanja papira? Vjerojatno radi zaštite tijekom recikliranja. Stablo obnavlja **azine** i druge vrijedne hranjive tvari. Bez klorofila, sunce može oštetiti još aktivna tkiva. Antocijani djeluju kao solarni filter tijekom velikog kretanja prema korijenu."
+          "text": "Zašto ulagati energiju neposredno prije nego što se list odbaci? Vjerojatno da bi ga se **zaštitilo** tijekom recikliranja. Stablo izvlači **dušik** i druge dragocjene hranjive tvari. Bez klorofila sunce može oštetiti tkiva koja još rade. Antocijanini djeluju kao krema za sunčanje dok traje velika selidba prema korijenju."
         }
       ]
     },
     {
       "id": "course_76_pourquoi_les_feuilles_changent_elles_de_p4",
-      "title": "Zašto neke jeseni gore više",
+      "title": "Zašto neke jeseni plamte jače",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Najljepše crvene boje često se rađaju iz sunčanih dana i hladnih noći bez mraza. Puno šećera, transformacija u antocijane. Siva i kišna jesen daje zagasitije nijanse. Rani mraz ubija lišće prije izlaganja."
+          "text": "Najljepše crvene boje često nastaju nakon sunčanih dana i svježih noći bez mraza. Puno šećera, a od njega antocijanini. Siva i kišna jesen daje bljeđe nijanse. Rani mraz ubije lišće prije nego što predstava počne."
         },
         {
           "type": "paragraph",
-          "text": "Na kraju ostaje samo [[tanini]], smeđa tvar iz šumskog tla. Neke studije također vjeruju da svijetle boje upozoravaju [[lisne uši]]: stablo u obliku, jaka obrana, bolje otići negdje drugdje."
+          "text": "Na kraju ostaju gotovo samo [[tanini]], smeđe tvari šumskog tla. Prema nekim studijama, žive boje upozoravaju i [[lisne uši]]: stablo je u dobroj formi, obrana mu je jaka, bolje je otići drugamo."
         },
         {
           "type": "takeaway",
-          "text": "Jesen otkriva žutilo koje je već prisutno kada klorofil nestane, a ponekad postaje crveno kako bi se zaštitilo recikliranje hranjivih tvari prije nego što lišće opadne."
+          "text": "Kad klorofil nestane, jesen otkriva žute pigmente koji su već bili tu, a katkad stvara i crvene da zaštiti recikliranje hranjivih tvari prije nego što lišće otpadne."
         }
       ]
     }

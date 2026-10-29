@@ -9,7 +9,7 @@
   "hero": {
     "image": "data_center_server_racks_aisle_blue_lights",
     "ratio": "4:3",
-    "hook": "Umjetna inteligencija izgleda kao softver, ali svaki odgovor nastaje u sasvim stvarnoj zgradi, priključenoj na istu mrežu kao i vaš dom."
+    "hook": "Umjetna inteligencija izgleda kao softver, ali svaki odgovor nastaje u sasvim stvarnoj zgradi, priključenoj na istu mrežu kao i tvoj dom."
   },
   "sections": [
     {
@@ -19,11 +19,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Postavite pitanje nekoj mrežnoj umjetnoj inteligenciji i odgovor se pojavi za nekoliko sekundi. Sam posao, međutim, ne odvija se u vašem mobitelu. Odvija se u objektu koji se zove [[podatkovni centar]]: u zgradi punoj strojeva koji obrađuju i pohranjuju podatke. Ti strojevi neprekidno troše struju, iako ih nitko ne vidi."
+          "text": "Postaviš pitanje nekoj umjetnoj inteligenciji na internetu i odgovor se pojavi za nekoliko sekundi. Sam posao, međutim, ne odvija se u tvojem mobitelu. Odvija se u objektu koji se zove [[podatkovni centar]]: u zgradi punoj strojeva koji obrađuju i pohranjuju podatke. Ti strojevi neprekidno troše struju, iako ih nitko ne vidi."
         },
         {
           "type": "paragraph",
-          "text": "Prema podacima koje objavljuje [[Međunarodna agencija za energiju]], svi su podatkovni centri zajedno 2025. potrošili oko **1,5 %** svjetske električne energije. Ta brojka obuhvaća sve mrežne usluge, ne samo umjetnu inteligenciju. No postrojenja namijenjena umjetnoj inteligenciji brzo se množe. Kratak odgovor sam po sebi stoji malo. Ipak, za svaki od njih rade strojevi, a nekoliko sustava istodobno troši struju da bi ga proizvelo."
+          "text": "Prema podacima koje objavljuje [[Međunarodna agencija za energiju]], svi su podatkovni centri zajedno 2025. godine potrošili oko **1,5%** svjetske električne energije. Ta brojka obuhvaća sve mrežne usluge, ne samo umjetnu inteligenciju. No postrojenja namijenjena umjetnoj inteligenciji brzo se množe. Kratak odgovor sam po sebi stoji malo. Ipak, za svaki odgovor rade strojevi, a da bi on nastao, struju istodobno troši nekoliko sustava."
         }
       ]
     },
@@ -34,7 +34,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Računalo koje obrađuje podatke i pokreće mrežne usluge zove se [[poslužitelj]]. U podatkovnom centru upravo poslužitelji obavljaju najveći dio računanja, pa su i najveći potrošači električne energije. Raščlani li se račun modernog podatkovnog centra, na poslužitelje u prosjeku otpada **60 %**. Ta brojka vrijedi za podatkovne centre općenito, ne samo za postrojenja umjetne inteligencije."
+          "text": "Računalo koje obrađuje podatke i pokreće mrežne usluge zove se [[poslužitelj]]. U podatkovnom centru upravo poslužitelji obavljaju najveći dio računanja, pa su i najveći potrošači električne energije. Raščlani li se račun modernog podatkovnog centra, na poslužitelje u prosjeku otpada **60%**. Ta brojka vrijedi za podatkovne centre općenito, ne samo za postrojenja umjetne inteligencije."
         },
         {
           "type": "image",
@@ -48,7 +48,7 @@
         },
         {
           "type": "funFact",
-          "text": "Prema IEA-i, potrošnja električne energije u podatkovnim centrima namijenjenima umjetnoj inteligenciji porasla je samo tijekom 2025. za 50 %."
+          "text": "Prema IEA-i, potrošnja električne energije u podatkovnim centrima namijenjenima umjetnoj inteligenciji samo je tijekom 2025. godine porasla za 50%."
         }
       ]
     },
@@ -59,7 +59,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Da bi mogla odgovarati, usluga umjetne inteligencije treba model: sustav koji je iz primjera naučio pravilnosti. Za njegovo stvaranje potrebno je [[treniranje]], faza u kojoj računala pretražuju goleme količine podataka. Taj posao može vrlo moćne strojeve zaokupiti tijekom dugih razdoblja."
+          "text": "Da bi mogla odgovarati, usluga umjetne inteligencije treba model: sustav koji je iz primjera naučio pravilnosti. Za njegovo stvaranje potrebno je [[treniranje]], faza u kojoj računala prosijavaju goleme količine podataka. Na tom poslu vrlo moćni strojevi mogu raditi dugo."
         },
         {
           "type": "image",
@@ -69,7 +69,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Kad je model istreniran, počinje drugi posao. Tada nastupa [[inferencija]], računanje koje daje odgovor na vaš zahtjev. Treniranje ne počinje ispočetka pri svakom pitanju, a inferencija se ponavlja za svaki upit. Što s vremenom više opterećuje? Ovisi o tome kako je usluga izgrađena i koliko je ljudi koristi. Vrlo posjećena usluga drži svoja računala zauzetima odgovaranjem, čak i između dviju velikih faza treniranja."
+          "text": "Kad je model istreniran, počinje drugi posao. Tada nastupa [[inferencija]], računanje koje daje odgovor na tvoj zahtjev. Treniranje ne počinje ispočetka pri svakom pitanju, dok se inferencija ponavlja pri svakom upitu. Što s vremenom troši više? Ovisi o tome kako je usluga izgrađena i koliko je ljudi koristi. Vrlo posjećena usluga drži svoja računala zauzetima odgovaranjem, čak i između dviju velikih faza treniranja."
         }
       ]
     },
@@ -80,15 +80,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Koliko električne energije troši jedan tekstualni upit? Objavljene procjene ne daju isti odgovor. Google, mjereći svoju uslugu u radu, svoj medijan tekstualnog upita smješta na **0,24 Wh**. Jedinica kojom se mjeri količina energije je [[vatsat]] (Wh). Druga studija dolazi do medijana od **0,31 Wh**, pri čemu se središnja polovica njezinih standardnih upita kreće između **0,16 i 0,60 Wh**."
+          "text": "Koliko električne energije troši jedan tekstualni upit? Objavljene procjene ne daju isti odgovor. Google mjeri svoju uslugu u radu i medijan tekstualnog upita procjenjuje na **0,24 Wh**. Jedinica kojom se mjeri količina energije je [[vatsat]] (Wh). Druga studija dolazi do medijana od **0,31 Wh**, pri čemu se središnja polovica njezinih standardnih upita kreće između **0,16 i 0,60 Wh**."
         },
         {
           "type": "paragraph",
-          "text": "Te brojke ne proturječe jedna drugoj: opisuju različite sustave i metode, a ne dva suprotna mjerenja istog zadatka. Izostavljaju i mnogo zahtjevnije poslove. Zatražite li od umjetne inteligencije da prije odgovora rasuđuje u nekoliko koraka, njezina će računala biti zauzeta mnogo dulje. Energija po upitu ovisi, dakle, o sustavu, o načinu mjerenja i o traženom poslu."
+          "text": "Te brojke ne proturječe jedna drugoj: opisuju različite sustave i metode, a ne dva suprotna mjerenja istog zadatka. Izostavljaju i mnogo zahtjevnije poslove. Zatražiš li od umjetne inteligencije da prije odgovora rasuđuje u nekoliko koraka, njezina će računala biti zauzeta mnogo dulje. Energija po upitu ovisi, dakle, o sustavu, o načinu mjerenja i o traženom poslu."
         },
         {
           "type": "funFact",
-          "text": "U istoj studiji upit s dugim rasuđivanjem, u kojem model razlaže svoje korake prije zaključka, doseže medijan od 3,91 Wh, više od deset puta više od standardnog upita."
+          "text": "U istoj studiji upit s dugim rasuđivanjem, u kojem model razlaže svoje korake prije zaključka, doseže medijan od 3,91 Wh, što je više od deset puta koliko troši standardni upit."
         }
       ]
     },
@@ -99,7 +99,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Struju od elektrana do kućanstava i tvrtki prenosi [[elektroenergetska mreža]], splet vodova koji pokriva cijelo područje. Velika postrojenja umjetne inteligencije priključuju se na tu istu mrežu. Da bi dočarala razmjere, IEA uspoređuje godišnju potrošnju podatkovnog centra namijenjenog umjetnoj inteligenciji, zgrade izgrađene ponajprije za pokretanje takvih usluga, s potrošnjom oko **100.000 kućanstava**."
+          "text": "Splet vodova koji struju prenosi od elektrana do kućanstava i tvrtki zove se [[elektroenergetska mreža]]. Velika postrojenja umjetne inteligencije priključuju se na tu istu mrežu. Da bi dočarala razmjere, IEA uspoređuje godišnju potrošnju podatkovnog centra namijenjenog umjetnoj inteligenciji, zgrade izgrađene ponajprije za pokretanje takvih usluga, s potrošnjom oko **100.000 kućanstava**."
         },
         {
           "type": "image",
@@ -109,7 +109,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Takva se postrojenja k tome grupiraju na istim mjestima. Kad nekoliko velikih lokacija traži struju na istom području, one dijele lokalnu mrežu, pa postojeće vodove možda treba ojačati. Regija s pričuvnim kapacitetom lakše prima nove lokacije od one koja je već blizu svojih granica. Mjesto na kojem se gradi infrastruktura umjetne inteligencije mijenja, dakle, nešto i za njezine susjede."
+          "text": "Takva se postrojenja usto obično okupljaju na istim mjestima. Kad nekoliko velikih lokacija traži struju na istom području, one dijele lokalnu mrežu, pa postojeće vodove možda treba ojačati. Regija s pričuvnim kapacitetom lakše prima nove lokacije od one koja je već blizu svojih granica. Zato mjesto na kojem se gradi infrastruktura umjetne inteligencije nije svejedno ni onima koji žive u blizini."
         },
         {
           "type": "takeaway",

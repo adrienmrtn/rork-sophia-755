@@ -1,10 +1,10 @@
 {
   "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895",
   "title": "Kako su otkrivene X-zrake?",
-  "subtitle": "Roentgen, 1895",
+  "subtitle": "Röntgen, 1895",
   "subject": "sciences",
   "subcategory": "Otkrića koja su promijenila svijet",
-  "description": "Godine 1895. Wilhelm Röntgen otkrio je nevidljivo zračenje koje može proći kroz materiju. Za nekoliko mjeseci medicina je doživjela revoluciju.",
+  "description": "Godine 1895. Wilhelm Röntgen otkriva nevidljivo zračenje koje može proći kroz tvar. Za nekoliko mjeseci medicina u tome vidi revoluciju.",
   "hero": {
     "image": "la_decouverte_des_rayons_x_rontgen",
     "ratio": "16:9",
@@ -18,22 +18,22 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**8. studenog 1895**., u Würzburgu (Njemačka), fizičar **Wilhelm Röntgen** primjećuje ekran koji svijetli... iako na njega ne utječe vidljivo svjetlo. Nešto nevidljivo prelazi kroz sobu."
+          "text": "**8. studenoga 1895. godine** u Würzburgu (Njemačka) fizičar **Wilhelm Röntgen** primjećuje zaslon koji svijetli… iako na njega ne pada vidljiva svjetlost. Nešto nevidljivo prolazi prostorijom."
         },
         {
           "type": "paragraph",
-          "text": "On to naziva **X** zrakama, a \"X\" znači \"nepoznato\". Unutar nekoliko tjedana fotografirao je kosti ruke svoje supruge. Radiologija je rođena."
+          "text": "Naziva ih **X-zrakama**, jer „X” znači „nepoznato”. Za nekoliko tjedana fotografira kosti šake svoje supruge. Rođena je radiologija."
         }
       ]
     },
     {
       "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_p1",
-      "title": "Laboratorijska nesreća",
+      "title": "Slučajnost u laboratoriju",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Röntgen radi s cijevi u kojoj elektroni pogađaju metu. Obložio je tubu crnim kartonom. Međutim, fluorescentni zaslon svijetli iz daljine. On razumije da iz cijevi izlazi nevidljivo zračenje."
+          "text": "Röntgen radi s cijevi u kojoj elektroni udaraju u metu. Cijev je obložio crnim kartonom. Ipak, fluorescentni zaslon podalje svijetli. Shvaća da iz cijevi izlazi nevidljivo zračenje."
         },
         {
           "type": "image",
@@ -49,18 +49,18 @@
     },
     {
       "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_p2",
-      "title": "Medicina zgrabi alat",
+      "title": "Medicina prihvaća novi alat",
       "free": false,
       "blocks": [
         {
           "type": "image",
           "asset": "early_x_ray_medical_radiograph",
           "ratio": "4:3",
-          "caption": "Vrlo brzo su liječnici i vojska upotrijebili X-zrake."
+          "caption": "Liječnici i vojske vrlo brzo počinju koristiti X-zrake."
         },
         {
           "type": "paragraph",
-          "text": "Prije, da biste \"vidjeli\" prijelom ili metak, često ste ga morali otvoriti. X-zrakama dobivamo sliku unutrašnjosti bez rezanja. Bolnice i vojske usvajaju tehniku vrtoglavom brzinom."
+          "text": "Da bi se „vidio” prijelom ili metak, prije je često trebalo rezati tijelo. Uz X-zrake dobiva se slika unutrašnjosti bez rezanja. Bolnice i vojske prihvaćaju tu tehniku nevjerojatnom brzinom."
         }
       ]
     },
@@ -71,11 +71,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "U početku ignoriramo rizike. Operateri snimaju rendgenske snimke satima. Opekline, zatim se pojavljuju karcinomi. Trebat će vremena da shvatimo da su X-zrake moćne... i opasne."
+          "text": "U početku nitko ne zna za rizike. Neki operateri satima snimaju. Pojavljuju se opekline, a zatim i rak. Trebat će vremena da se shvati da su X-zrake snažne… i opasne."
         },
         {
           "type": "paragraph",
-          "text": "Danas štitimo pacijente i njegovatelje: ograničene doze, olovne pregače, stroge kontrole."
+          "text": "Danas se štite pacijenti i medicinsko osoblje: ograničene doze, olovne pregače, strog nadzor."
         }
       ]
     },
@@ -86,11 +86,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "X-zrake su utrle put svim modernim slikama: skenerima, industrijskim kontrolama, pa čak i proučavanju strukture kristala (kasnije korisnih za DNK)."
+          "text": "X-zrake otvorile su put svim modernim tehnikama snimanja: skenerima, industrijskim kontrolama, pa čak i proučavanju strukture kristala (što je kasnije pomoglo kod DNK)."
         },
         {
           "type": "takeaway",
-          "text": "Godine **1895**., Röntgen je otkrio X-zrake, nevidljivo zračenje koje prolazi kroz materiju. Medicina dobiva novu perspektivu... pod uvjetom da su rizici kontrolirani."
+          "text": "**1895. godine** Röntgen otkriva X-zrake, nevidljivo zračenje koje prolazi kroz tvar. Medicina dobiva nov pogled… pod uvjetom da drži rizike pod kontrolom."
         }
       ]
     }
