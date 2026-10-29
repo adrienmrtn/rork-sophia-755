@@ -4,11 +4,11 @@
   "subtitle": "1859",
   "subject": "sciences",
   "subcategory": "Odkritja, ki so spremenila svet",
-  "description": "Leta 1859 je Darwin objavil Izvor vrst. Osrednja ideja: živa bitja se skozi čas spreminjajo z naravno selekcijo.",
+  "description": "Leta 1859 Darwin objavi delo O nastanku vrst. Osrednja zamisel: živa bitja se skozi čas spreminjajo z naravno selekcijo.",
   "hero": {
     "image": "la_theorie_de_l_evolution_de_darwin",
     "ratio": "16:9",
-    "hook": "Vrste niso določene. Spreminjajo se. počasi. Ampak zagotovo."
+    "hook": "Vrste niso nespremenljive. Spreminjajo se. Počasi. A zanesljivo."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Leta **1859** je **Charles Darwin** objavil *Oo izvoru vrst*. Knjiga šokira, fascinira, razdvaja. Njegovo osrednjo idejo pa je preprosto oblikovati."
+          "text": "**Charles Darwin** leta **1859** objavi *O nastanku vrst*. Knjiga šokira, navdušuje, razdvaja. Njeno osrednjo zamisel pa je mogoče preprosto povedati."
         },
         {
           "type": "paragraph",
-          "text": "Živa bitja se razlikujejo. Nekatere različice pomagajo preživeti in se razmnoževati. Te variacije se prenašajo. Skozi generacije se populacije spreminjajo."
+          "text": "Živa bitja se med seboj razlikujejo. Nekatere razlike pomagajo preživeti in se razmnoževati. Te razlike se prenašajo na potomce. Skozi rodove se populacije spreminjajo."
         }
       ]
     },
@@ -39,32 +39,32 @@
         },
         {
           "type": "paragraph",
-          "text": "Kot mlad deček Darwin odide z ladjo **Beagle**. Dolga leta je opazoval rastline, fosile, ptice. Na otočju Galapagos je opazil, da imajo bližnje ptice različne kljune glede na hrano."
+          "text": "Mladi Darwin odpluje z ladjo **Beagle**. Leta opazuje rastline, fosile, ptice. Na otočju Galápagos opazi, da imajo sorodne ptice različne kljune, odvisno od tega, s čim se hranijo."
         },
         {
           "type": "image",
           "asset": "darwin_finches_galapagos_beaks",
           "ratio": "4:3",
-          "caption": "Šobe, prilagojene različnim dietam: močan pokazatelj."
+          "caption": "Kljuni, prilagojeni različni prehrani: močan namig."
         }
       ]
     },
     {
       "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_p2",
-      "title": "Naravna selekcija, v navadni angleščini",
+      "title": "Naravna selekcija, preprosto povedano",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Predstavljajte si populacijo živali. Nekateri tečejo malo hitreje, malo bolje prebavljajo, malo bolj se upirajo mrazu. Če jim pomaga preživeti in imeti mlade, postanejo te lastnosti pogostejše."
+          "text": "Predstavljaj si populacijo živali. Nekatere tečejo malo hitreje, malo bolje prebavljajo, malo bolje prenašajo mraz. Če jim to pomaga preživeti in imeti mladiče, te lastnosti postanejo pogostejše."
         },
         {
           "type": "paragraph",
-          "text": "Ne gre za to, da se posamezniki \"želijo\" razvijati. Je filter: okolje ohranja tisto, kar deluje. Darwin temu pravi **naravni izbor**."
+          "text": "Ne gre za to, da bi se posamezniki »hoteli« razvijati. Gre za sito: okolje večinoma ohrani tisto, kar deluje. Darwin temu pravi **naravna selekcija**."
         },
         {
           "type": "funFact",
-          "text": "Darwin je dolgo čakal, preden je objavil. Bal se je škandala. Drug naravoslovec, **Alfred Russell Wallace**, je prišel do podobnih zamisli: to je spodbudilo Darwina, da je izdal svojo knjigo."
+          "text": "Darwin je dolgo odlašal z objavo. Bal se je škandala. Drug naravoslovec, **Alfred Russel Wallace**, pride do podobnih zamisli: to Darwina spodbudi, da izda svojo knjigo."
         }
       ]
     },
@@ -75,11 +75,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "V 19. stoletju so mnogi verjeli, da so vrste ustvarjene takšne, kot so. Reči, da se spreminjajo in da si ljudje delijo zgodovino z drugimi živalmi, pretresajo vero in družbo."
+          "text": "V 19. stoletju mnogi verjamejo, da so bile vrste ustvarjene takšne, kot so. Trditev, da se spreminjajo in da ima človek skupno zgodovino z drugimi živalmi, pretrese vero in družbo."
         },
         {
           "type": "paragraph",
-          "text": "Znanost napreduje: fosili, geografija vrst, kasneje genetika potrjujejo splošno idejo."
+          "text": "Znanost pa napreduje: fosili, razširjenost vrst po svetu in pozneje genetika potrjujejo splošno zamisel."
         }
       ]
     },
@@ -90,11 +90,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Zdaj vemo, da DNK nosi variacije. Opazujemo razvoj v laboratoriju (bakterije, virusi) in v naravi. Borimo se tudi proti bakterijam, odpornim na antibiotike: to je živa evolucija."
+          "text": "Zdaj je znano, da razlike nosi DNK. Evolucijo opazujejo v laboratoriju (bakterije, virusi) in v naravi. Ljudje se borijo tudi z bakterijami, odpornimi proti antibiotikom: to je evolucija v živo."
         },
         {
           "type": "takeaway",
-          "text": "Darwin je pokazal, da se živa bitja razvijajo z naravno selekcijo: lastnosti, koristne za preživetje in razmnoževanje, se širijo. Sodobna genetika je ta okvir potrdila in razjasnila."
+          "text": "Darwin je pokazal, da se živa bitja razvijajo z naravno selekcijo: lastnosti, koristne za preživetje in razmnoževanje, se širijo. Sodobna genetika je ta okvir potrdila in ga natančneje opredelila."
         }
       ]
     }

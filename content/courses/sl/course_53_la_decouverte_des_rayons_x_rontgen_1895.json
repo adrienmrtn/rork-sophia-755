@@ -1,10 +1,10 @@
 {
   "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895",
   "title": "Kako so odkrili rentgenske žarke?",
-  "subtitle": "Rentgen, 1895",
+  "subtitle": "Röntgen, 1895",
   "subject": "sciences",
   "subcategory": "Odkritja, ki so spremenila svet",
-  "description": "Leta 1895 je Wilhelm Röntgen odkril nevidno sevanje, ki lahko prehaja skozi snov. V nekaj mesecih je medicina doživela revolucijo.",
+  "description": "Leta 1895 je Wilhelm Röntgen odkril nevidno sevanje, ki lahko prehaja skozi snov. V nekaj mesecih je medicina v njem prepoznala revolucijo.",
   "hero": {
     "image": "la_decouverte_des_rayons_x_rontgen",
     "ratio": "16:9",
@@ -18,28 +18,28 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**8. november 1895**, v Würzburgu (Nemčija), fizik **Wilhelm Röntgen** opazi zaslon, ki sveti ... čeprav nanj ne vpliva vidna svetloba. Nekaj nevidnega prečka sobo."
+          "text": "**8. novembra 1895** v Würzburgu (Nemčija) fizik **Wilhelm Röntgen** opazi zaslon, ki sveti… čeprav nanj ne pada vidna svetloba. Nekaj nevidnega potuje skozi prostor."
         },
         {
           "type": "paragraph",
-          "text": "Temu pravi žarki **X**, pri čemer \"X\" pomeni \"neznano\". V nekaj tednih je fotografiral kosti roke svoje žene. Rodila se je radiologija."
+          "text": "Poimenuje jih **žarki X**, pri čemer »X« pomeni »neznano«. V nekaj tednih fotografira kosti v roki svoje žene. Rodi se radiologija."
         }
       ]
     },
     {
       "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_p1",
-      "title": "Laboratorijska nesreča",
+      "title": "Naključje v laboratoriju",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Röntgen deluje s cevjo, kjer elektroni zadenejo tarčo. Cev je prekril s črnim kartonom. Vendar pa fluorescentni zaslon sveti od daleč. Razume, da iz cevi prihaja nevidno sevanje."
+          "text": "Röntgen dela s cevjo, v kateri elektroni zadevajo tarčo. Cev je prekril s črnim kartonom. Pa vendar fluorescenčni zaslon v daljavi zasveti. Spozna, da iz cevi uhaja nevidno sevanje."
         },
         {
           "type": "image",
           "asset": "wilhelm_rontgen_x_ray_hand_1895",
           "ratio": "4:3",
-          "caption": "Slavna slika: kosti rok in poročni prstan."
+          "caption": "Slavna slika: kosti roke in poročni prstan."
         },
         {
           "type": "funFact",
@@ -49,18 +49,18 @@
     },
     {
       "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_p2",
-      "title": "Medicina zaseže orodje",
+      "title": "Medicina se polasti orodja",
       "free": false,
       "blocks": [
         {
           "type": "image",
           "asset": "early_x_ray_medical_radiograph",
           "ratio": "4:3",
-          "caption": "Zelo hitro so zdravniki in vojska uporabili rentgenske žarke."
+          "caption": "Zdravniki in vojske rentgenske žarke zelo hitro začnejo uporabljati."
         },
         {
           "type": "paragraph",
-          "text": "Prej, da bi \"videli\" zlom ali kroglo, ste jo morali pogosto odpreti. Z rentgenskimi žarki dobimo sliko notranjosti brez rezanja. Bolnišnice in vojske to tehniko sprejemajo z vrtoglavo hitrostjo."
+          "text": "Prej so morali telo pogosto odpreti, če so hoteli »videti« zlom ali kroglo. Z rentgenskimi žarki dobijo sliko notranjosti brez rezanja. Bolnišnice in vojske tehniko sprejmejo z vrtoglavo hitrostjo."
         }
       ]
     },
@@ -71,11 +71,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Sprva ignoriramo tveganja. Operaterji delajo rentgenske žarke več ur. Opekline, nato se pojavijo raki. Potreben bo čas, da razumemo, da so rentgenski žarki močni ... in nevarni."
+          "text": "Sprva za tveganja ne vedo. Operaterji cele ure snemajo rentgenske posnetke. Pojavijo se opekline, nato še rak. Trajalo bo, preden bodo ljudje razumeli, da so rentgenski žarki mogočni… in nevarni."
         },
         {
           "type": "paragraph",
-          "text": "Danes ščitimo bolnike in negovalce: omejeni odmerki, svinčeni predpasniki, strog nadzor."
+          "text": "Danes so bolniki in zdravstveno osebje zaščiteni: omejeni odmerki, svinčeni predpasniki, strog nadzor."
         }
       ]
     },
@@ -86,11 +86,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Rentgenski žarki so tlakovali pot vsem sodobnim slikanjem: skenerjem, industrijskim kontrolam in celo preučevanju strukture kristalov (pozneje uporabnih za DNK)."
+          "text": "Rentgenski žarki so odprli pot vsem sodobnim slikovnim tehnikam: skenerjem, industrijskim pregledom in celo proučevanju zgradbe kristalov (kar je pozneje koristilo pri raziskovanju DNK)."
         },
         {
           "type": "takeaway",
-          "text": "Leta **1895** je Röntgen odkril rentgenske žarke, nevidno sevanje, ki prehaja skozi snov. Medicina dobiva novo perspektivo ... pod pogojem, da so tveganja nadzorovana."
+          "text": "Leta **1895** je Röntgen odkril rentgenske žarke, nevidno sevanje, ki prehaja skozi snov. Medicina tako dobi nov pogled… če le obvladuje tveganja."
         }
       ]
     }

@@ -1,14 +1,14 @@
 {
   "id": "course_42_pourquoi_reve_t_on",
   "title": "Zakaj sanjamo?",
-  "subtitle": "Možgani & spanje",
+  "subtitle": "Možgani in spanje",
   "subject": "sciences",
-  "subcategory": "Vsakdanjik pod drobnogledom",
-  "description": "Vsako noč sanjate približno dve uri. Večina sanj zbledi, ko se zbudiš. Tukaj je tisto, kar znanost danes razume o tej skrivnosti.",
+  "subcategory": "Vsakdan pod drobnogledom",
+  "description": "Vsako noč sanjaš približno dve uri. Večina sanj zbledi, ko se zbudiš. Tole danes znanost ve o tej skrivnosti.",
   "hero": {
     "image": "pourquoi_reve_t_on",
     "ratio": "16:9",
-    "hook": "Sanjate o šestih letih svojega življenja. In pozabiš skoraj vse."
+    "hook": "Sanjaš približno šest let svojega življenja. In skoraj vse pozabiš."
   },
   "sections": [
     {
@@ -18,22 +18,22 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Vsako noč sanjate približno **dve uri**. V življenju je to skoraj **šest let**. Vendar ko se zbudite, večina teh zgodb izgine v nekaj sekundah."
+          "text": "Vsako noč približno **dve uri** sanjaš. V vsem življenju je to skoraj **šest let**. Pa vendar večina teh zgodb ob prebujenju izgine v nekaj sekundah."
         },
         {
           "type": "paragraph",
-          "text": "Vsi znanstveniki se ne strinjajo glede \"zakaj\". Vendar vse bolje vedo **kdaj** sanjamo in kaj možgani počnejo v tem času: reorganizirajo spomine, preizkušajo scenarije in prebavljajo čustva."
+          "text": "Znanstveniki si glede »zakaj« niso enotni. Vse bolje pa vedo, **kdaj** človek sanja in kaj takrat počnejo možgani: preurejajo spomine, preizkušajo scenarije in predelujejo čustva."
         }
       ]
     },
     {
       "id": "course_42_pourquoi_reve_t_on_p1",
-      "title": "Spanje ni \"izklopljeno\"",
+      "title": "Spanje ni »izklop«",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Spanje ni popoln izklop. Napreduje z **cikli** približno **90 min**, večkrat na noč. V vsakem ciklu gredo možgani skozi različne faze: rahel spanec, globok spanec, ki je koristen za okrevanje telesa, nato pa zelo posebna faza."
+          "text": "Spanje ni popoln izklop. Poteka v **ciklih**, ki trajajo približno **90 minut** in se večkrat na noč ponovijo. V vsakem ciklu možgani preidejo različne faze: lahko spanje, globoko spanje, ki telesu pomaga, da si opomore, nato pa še zelo posebno fazo."
         },
         {
           "type": "image",
@@ -43,51 +43,51 @@
         },
         {
           "type": "paragraph",
-          "text": "Ta faza se imenuje [[REM spanje]]. Možgani so skoraj tako aktivni kot budni, vendar je telo ohromljeno zaradi [[Atonija mišic]]. To je še posebej tam, kjer se rojevajo dolge, pripovedne sanje. Ta paraliza nam preprečuje, da bi fizično »igrali« to, kar sanjamo."
+          "text": "Ta faza se imenuje [[REM spanje]]. Možgani so skoraj tako dejavni kot v budnosti, telo pa ohromi [[Atonija mišic]]. Prav takrat nastajajo predvsem dolge, pripovedne sanje. Ta ohromelost preprečuje, da bi telo sanje fizično »odigralo«."
         },
         {
           "type": "funFact",
-          "text": "Sanjamo **4- do 6-krat** na noč. Na **95%** pozabimo v desetih minutah po tem, ko se zbudimo. Če se spomnite sanj, je to pogosto zato, ker ste se zbudili med njimi ali takoj za njimi."
+          "text": "Človek na noč sanja **4- do 6-krat**. Približno **95 %** sanj pozabi v desetih minutah po prebujenju. Če se sanj spomniš, je to pogosto zato, ker si se zbudil/-a ravno med njimi ali tik po njih."
         }
       ]
     },
     {
       "id": "course_42_pourquoi_reve_t_on_p2",
-      "title": "Kaj je smisel sanjati?",
+      "title": "Čemu služijo sanje?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Freud** je menil, da sanje razkrivajo predvsem skrite želje. Danes imajo raziskovalci raje bolj konkretne razlage, ki temeljijo na slikanju možganov, tehnikah, ki vizualizirajo možgansko aktivnost. Sanje še posebej aktivirajo **limbični sistem**, niz globokih struktur, povezanih s čustvi."
+          "text": "**Freud** je menil, da sanje razkrivajo predvsem skrite želje. Današnji raziskovalci imajo raje bolj oprijemljive razlage, ki temeljijo na **slikanju možganov**, tehnikah, ki prikažejo dejavnost možganov. Sanje predvsem aktivirajo **limbični sistem**, skupek globokih struktur, povezanih s čustvi."
         },
         {
           "type": "image",
           "asset": "brain_activity_dreaming_scan",
           "ratio": "4:3",
-          "caption": "Med sanjami delujejo možgani: čustva, slike, spomini."
+          "caption": "Med sanjanjem možgani delajo: čustva, podobe, spomini."
         },
         {
           "type": "paragraph",
-          "text": "Prevladujejo tri glavne skladbe. Prvič: **razvrstite spomin**, obdržite uporabno, opustite ostalo. Drugič: **usposabljanje za nevarnost** v svetu brez pravega tveganja. Tretjič: **prebava čustev**: med sanjami se možgani ponovno osredotočijo na močne trenutke z manj **norepinefrin**, nevrotransmiterja, povezanega s stresom in budnostjo."
+          "text": "Prevladujejo tri glavne razlage. Prva: **urejanje spomina**, ohraniti koristno in spustiti ostalo. Druga: **vadba za nevarnost** v svetu brez resničnega tveganja. Tretja: **predelava čustev**. Med sanjami možgani znova podoživijo močne trenutke ob manj **noradrenalina**, živčnega prenašalca, povezanega s stresom in budnostjo."
         }
       ]
     },
     {
       "id": "course_42_pourquoi_reve_t_on_p3",
-      "title": "Zakaj pozabimo na svoje sanje",
+      "title": "Zakaj sanje pozabiš",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Za trajno shranjevanje spomina potrebujejo možgani določene kemikalije. Vendar pa med paradoksalnim spanjem raven noradrenalina pade. Rezultat: sanje ostajajo v zelo krhkem spominu."
+          "text": "Da bi možgani spomin trajno shranili, potrebujejo določene kemične snovi. Med REM spanjem pa raven noradrenalina pade. Posledica: sanje ostanejo v zelo krhkem spominu."
         },
         {
           "type": "paragraph",
-          "text": "Takoj ko odprete oči, svetloba, zvoki in misli dneva zdrobijo ta krhki spomin. Kako ga najbolje obdržati? Zapišite sanje **takoj**, še preden se premaknete."
+          "text": "Takoj ko odpreš oči, svetloba, zvoki in misli novega dne prekrijejo ta krhki spomin. Kako ga najlaže ohraniš? Sanje si zapiši **takoj**, še preden se premakneš."
         },
         {
           "type": "funFact",
-          "text": "Pred barvno televizijo je malokdo rekel, da je sanjal v barvah. Danes jih večina. Naše vizualno okolje vpliva celo na teksturo naših sanj."
+          "text": "Pred barvno televizijo je le malo ljudi trdilo, da sanja v barvah. Danes to trdi večina. Naše vizualno okolje vpliva celo na teksturo naših sanj."
         }
       ]
     },
@@ -98,15 +98,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Včasih se zavemo **, od sanjamo**, medtem ko spimo: to je **lucidno sanjanje**. Območje možganov, povezano z logiko in samorefleksijo, **prefrontalni korteks**, nato rahlo zasveti."
+          "text": "Včasih se zaveš, **da sanjaš**, a pri tem še naprej spiš: to so **lucidne sanje**. Del možganov, povezan z logiko in samorefleksijo, **prefrontalni korteks**, se takrat spet malo prižge."
         },
         {
           "type": "paragraph",
-          "text": "Nekateri lahko nato vplivajo na okolje ali spremenijo nočno moro. Raziskovalci celo preučujejo ta pojav, da bi športnikom pomagali mentalno ponavljati kretnje ali za zdravljenje ponavljajočih se nočnih mor."
+          "text": "Nekateri lahko takrat vplivajo na prizorišče ali spremenijo nočno moro. Raziskovalci ta pojav celo preučujejo, da bi športnikom pomagali v mislih vaditi gibe ali da bi zdravili ponavljajoče se nočne more."
         },
         {
           "type": "takeaway",
-          "text": "Sanjamo predvsem med [[REM spanje]], fazo, ko so možgani aktivni in telo paralizirano. Sanje verjetno pomagajo pri obvladovanju spomina in čustev, tudi če skoraj vse pozabimo, ko se zbudimo."
+          "text": "Sanje nastajajo predvsem v fazi, ki se imenuje [[REM spanje]]: možgani so takrat dejavni, telo pa ohromljeno. Sanje verjetno pomagajo urejati spomin in čustva, čeprav ob prebujenju skoraj vse pozabiš."
         }
       ]
     }

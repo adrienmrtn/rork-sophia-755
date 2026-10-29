@@ -1,14 +1,14 @@
 {
   "id": "course_67_qu_est_ce_qu_un_trou_noir",
   "title": "Kaj je črna luknja?",
-  "subtitle": "Ekstremna resnost",
+  "subtitle": "Izjemna gravitacija",
   "subject": "sciences",
   "subcategory": "Zemlja in vesolje",
   "description": "Črna luknja ni vesoljski sesalnik. To je območje, kjer je gravitacija tako močna, da niti svetloba ne more ubežati.",
   "hero": {
     "image": "qu_est_ce_qu_un_trou_noir",
     "ratio": "16:9",
-    "hook": "Nič ne pride ven, niti svetloba. Vendar smo na koncu fotografirali njegovo senco."
+    "hook": "Iz nje ne uide nič, niti svetloba. Pa so ji na koncu vendarle fotografirali senco."
   },
   "sections": [
     {
@@ -18,22 +18,22 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Črna luknja je območje **prostora-časa**, tkanine, ki združuje prostor in čas, kjer je gravitacija tako močna, da hitrost, potrebna za pobeg, presega hitrost svetlobe. Nič ne pride ven: nič, ni svetlobnega signala."
+          "text": "Črna luknja je območje **prostora-časa** (tkiva, ki povezuje prostor in čas), kjer je gravitacija tako močna, da je hitrost, potrebna za pobeg, večja od svetlobne. Iz nje ne uide nič: ne snov ne svetlobni signal."
         },
         {
           "type": "paragraph",
-          "text": "To ni \"luknja\" v smislu tunela. Gre za izjemno koncentracijo materiala, ki zelo močno upogne to tkanino. Dolgo časa čista teorija, ki izhaja iz Einsteinovih enačb, črne luknje danes opazujemo na več načinov."
+          "text": "To ni »luknja« v smislu predora. Gre za izjemno zgostitev snovi, ki to tkivo zelo močno ukrivi. Črne luknje so bile dolgo le teorija, ki izhaja iz Einsteinovih enačb, danes pa jih opazujejo na več načinov."
         }
       ]
     },
     {
       "id": "course_67_qu_est_ce_qu_un_trou_noir_p1",
-      "title": "Ko zvezda propade",
+      "title": "Ko se zvezda sesede",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Zvezdna črna luknja se pogosto rodi iz smrti zelo masivne zvezde, ki ima vsaj **20 do 25-kratno maso Sonca. Med svojim življenjem se zvezda drži zahvaljujoč ravnotežju: gravitacija vleče proti središču, pritisk** jedrske **fuzije** potiska navzven. V središču zvezde se vodik spremeni v helij."
+          "text": "Zvezdna črna luknja pogosto nastane ob smrti zelo masivne zvezde z maso vsaj **20 do 25-krat** večjo od Sončeve. Med življenjem zvezdo drži skupaj ravnovesje: gravitacija vleče proti središču, tlak **jedrske fuzije** pa potiska navzven. V jedru zvezde se vodik spreminja v helij."
         },
         {
           "type": "image",
@@ -43,34 +43,34 @@
         },
         {
           "type": "paragraph",
-          "text": "Ko zmanjka goriva, tlak pade. Srce zvezde je strto. Eksplozija **supernove** lahko nato razsvetli galaksijo. Če je preostalo jedro dovolj masivno, ni nič, kar bi ustavilo stiskanje."
+          "text": "Ko zmanjka goriva, tlak popusti. Jedro zvezde se sesede. Eksplozija **supernove** lahko takrat razsvetli galaksijo. Če je preostalo jedro dovolj masivno, stiskanja ne ustavi nič več."
         },
         {
           "type": "paragraph",
-          "text": "V središču teorija opisuje [[Gravitacijska singularnost]]: točko, kjer postaneta gostota in ukrivljenost ekstremni in kjer naše trenutne enačbe prenehajo delovati dobro. Okrog nje najdemo [[obzorje dogodkov]]: nevidno mejo. Ko ga prečkate, vrnitev v preostali del vesolja ni več mogoča."
+          "text": "V središču je po teoriji [[gravitacijska singularnost]]: točka, kjer gostota in ukrivljenost postaneta skrajni in kjer naše današnje enačbe nehajo dobro delovati. Okoli nje je [[obzorje dogodkov]]: nevidna meja. Ko je prečkana, vrnitev v preostalo vesolje ni več mogoča."
         },
         {
           "type": "funFact",
-          "text": "Če bi padli proti črni luknji, bi gravitacija veliko močneje vlekla vaša stopala kot glavo. To raztezanje se imenuje \"špagetifikacija\"."
+          "text": "Pri padcu proti črni luknji bi gravitacija veliko močneje vlekla tvoja stopala kot glavo. Temu raztezanju pravijo »špagetifikacija«."
         }
       ]
     },
     {
       "id": "course_67_qu_est_ce_qu_un_trou_noir_p2",
-      "title": "Ne kozmični sesalnik",
+      "title": "Ni vesoljski sesalnik",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "V nasprotju s splošnim prepričanjem črna luknja ne posrka vase vsega, kar gre v daljavi. Njegova gravitacija je odvisna od njegove mase in razdalje, kot pri vsakem predmetu. Če bi Sonce zamenjali s črno luknjo enake mase, bi Zemlja še naprej krožila. Toda brez svetlobe in toplote bi zmrznili."
+          "text": "V nasprotju s splošnim prepričanjem črna luknja ne posrka vsega, kar gre mimo na veliki razdalji. Njena gravitacija je odvisna od mase in razdalje, kot pri vsakem drugem telesu. Če bi Sonce zamenjala črna luknja z enako maso, bi Zemlja še naprej krožila. Toda brez svetlobe in toplote bi zmrznili."
         },
         {
           "type": "paragraph",
-          "text": "V osrčju skoraj vseh galaksij obstajajo tudi **supermasivne črne luknje** z maso od milijonov do milijard Sonca. V Rimski cesti je **Strelec A***, približno **4 milijone** sončnih mas."
+          "text": "V osrčju skoraj vseh galaksij so tudi **supermasivne črne luknje**, ki tehtajo od milijonov do milijard sončnih mas. V Rimski cesti je to **Strelec A*** s približno **4 milijoni** sončnih mas."
         },
         {
           "type": "paragraph",
-          "text": "Pogosto jih opazimo zaradi [[Akrecijski disk]]: obroča plina in prahu, ki se zelo hitro vrti okoli njih. Trenje segreva ta material, dokler ne postane izjemno svetel v rentgenskih žarkih ali radijskih valovih. Nato vidimo senco črne luknje na tem svetlečem ozadju."
+          "text": "Pogosto jih izda [[akrecijski disk]]: obroč plina in prahu, ki se zelo hitro vrti okoli njih. Trenje to snov tako segreje, da postane izjemno svetla v rentgenskih žarkih ali radijskih valovih. Na tem svetlem ozadju se nato vidi senca črne luknje."
         }
       ]
     },
@@ -81,15 +81,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**april 2019** projekt Event Horizon Telescope objavi prvo sliko črne luknje. Z združitvijo osmih radijskih teleskopov z uporabo [[Interferometrija]] raziskovalci ustvarijo virtualni teleskop velikosti Zemlje."
+          "text": "Projekt Event Horizon Telescope **aprila 2019** objavi prvo sliko črne luknje. Raziskovalci združijo osem radijskih teleskopov, pri čemer jim pomaga [[interferometrija]], in tako ustvarijo navidezni teleskop velikosti Zemlje."
         },
         {
           "type": "paragraph",
-          "text": "Cilj je **M87***, supermasivna črna luknja v galaksiji Messier 87, oddaljena **55 milijonov** svetlobnih let. Okoli temnega območja vidimo svetel obroč: silhueto obzorja dogodkov. Leta **2022** sledi slika našega soseda Strelca A*."
+          "text": "Cilj je **M87***, supermasivna črna luknja v galaksiji Messier 87, oddaljena **55 milijonov** svetlobnih let. Na sliki je viden svetel obroč okoli temnega območja: silhueta obzorja dogodkov. Leta **2022** sledi slika našega soseda Strelca A*."
         },
         {
           "type": "funFact",
-          "text": "Od leta **2015** sta observatorija LIGO in Virgo zaznala tudi **gravitacijski ventil**: majhne vibracije prostora-časa, ki nastanejo ob združitvi dveh črnih lukenj."
+          "text": "Od leta **2015** observatorija LIGO in Virgo zaznavata tudi **gravitacijske valove**: drobne tresljaje prostora-časa, ki nastanejo ob zlitju dveh črnih lukenj."
         }
       ]
     },
@@ -100,19 +100,19 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Leta **1974** je britanski fizik **Stephen Hawking** pokazal, da črna luknja ne bi bila popolnoma črna. Zaradi kvantnih učinkov v bližini horizonta bi oddajal zelo šibko sevanje: [[Hawkingovo sevanje]]."
+          "text": "Leta **1974** britanski fizik **Stephen Hawking** pokaže, da črna luknja ni povsem črna. Zaradi kvantnih učinkov blizu obzorja naj bi oddajala zelo šibko sevanje: [[Hawkingovo sevanje]]."
         },
         {
           "type": "paragraph",
-          "text": "Rezultat: izolirana črna luknja bi počasi izgubljala maso in sčasoma izhlapela. Za zvezdno črno luknjo bi to trajalo fantastično dlje od trenutne starosti vesolja. Ta ideja odpira tudi informacijski paradoks: kaj se zgodi z informacijo o tem, kaj je padlo v notranjost, če črna luknja izgine?"
+          "text": "Posledica: osamljena črna luknja bi počasi izgubljala maso in sčasoma izhlapela. Pri zvezdni črni luknji bi to trajalo nepredstavljivo dlje, kot je današnja starost vesolja. Ta zamisel odpira tudi informacijski paradoks: kaj se zgodi z informacijo o tem, kar je padlo vanjo, če črna luknja izgine?"
         },
         {
           "type": "paragraph",
-          "text": "V bližini črne luknje tudi čas teče počasneje za oddaljenega opazovalca, kar je relativistični učinek **dilatacija ohišja**. Ti predmeti ostajajo med najboljšimi laboratoriji za testiranje meja fizike."
+          "text": "V bližini črne luknje čas za oddaljenega opazovalca tudi teče počasneje: to je relativistični učinek, ki se imenuje **dilatacija časa**. Ta telesa ostajajo med najboljšimi laboratoriji za preizkušanje meja fizike."
         },
         {
           "type": "takeaway",
-          "text": "Črna luknja pogosto nastane zaradi kolapsa masivne zvezde. Omejuje ga obzorje dogodkov, meja, ki je bila prvič fotografirana leta **2019** okoli M87*."
+          "text": "Črna luknja pogosto nastane s sesedanjem masivne zvezde. Omejuje jo obzorje dogodkov, meja, ki so jo prvič fotografirali leta **2019** okoli M87*."
         }
       ]
     }

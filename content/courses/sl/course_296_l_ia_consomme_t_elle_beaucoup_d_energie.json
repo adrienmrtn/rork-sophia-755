@@ -9,7 +9,7 @@
   "hero": {
     "image": "data_center_server_racks_aisle_blue_lights",
     "ratio": "4:3",
-    "hook": "Umetna inteligenca je videti kot programska oprema, a vsak odgovor nastane v povsem resnični stavbi, priključeni na isto omrežje kot vaš dom."
+    "hook": "Umetna inteligenca je videti kot programska oprema, a vsak odgovor nastane v povsem resnični stavbi, priključeni na isto omrežje kot tvoj dom."
   },
   "sections": [
     {
@@ -19,7 +19,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Spletni umetni inteligenci zastavite vprašanje in odgovor se prikaže v nekaj sekundah. Samo delo pa ne poteka v vašem telefonu. Opravi ga [[podatkovni center]], stavba, polna strojev, ki obdelujejo in shranjujejo podatke. Ti stroji neprekinjeno porabljajo elektriko, čeprav jih nihče ne vidi."
+          "text": "Spletni umetni inteligenci zastaviš vprašanje in odgovor se prikaže v nekaj sekundah. Samo delo pa ne poteka v tvojem telefonu. Opravi ga [[podatkovni center]], stavba, polna strojev, ki obdelujejo in shranjujejo podatke. Ti stroji neprekinjeno porabljajo elektriko, čeprav jih nihče ne vidi."
         },
         {
           "type": "paragraph",
@@ -34,7 +34,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Računalnik, ki obdeluje podatke in poganja spletne storitve, se imenuje [[strežnik]]. V podatkovnem centru strežniki opravijo večino računanja, zato so največji porabniki elektrike. Če račun sodobnega podatkovnega centra razdelimo, strežniki v povprečju poberejo **60 %**. Ta številka velja za podatkovne centre na splošno, ne le za objekte umetne inteligence."
+          "text": "Računalnik, ki obdeluje podatke in poganja spletne storitve, se imenuje [[strežnik]]. V podatkovnem centru strežniki opravijo večino računanja, zato so največji porabniki elektrike. Od računa za elektriko sodobnega podatkovnega centra gre na strežnike v povprečju **60 %**. Ta številka velja za podatkovne centre na splošno, ne le za objekte umetne inteligence."
         },
         {
           "type": "image",
@@ -69,7 +69,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Ko je model naučen, se začne drugačno delo. To je [[sklepanje]], izračun, ki ustvari odgovor na vašo zahtevo. Učenje se ob vsakem vprašanju ne začne v celoti znova; sklepanje pa se ponovi pri vsaki zahtevi. Kaj sčasoma bolj obremeni? To je odvisno od zasnove storitve in od tega, koliko ljudi jo uporablja. Zelo obiskana storitev ima računalnike nenehno zaposlene z odgovarjanjem, tudi med dvema velikima fazama učenja."
+          "text": "Ko je model naučen, se začne drugačno delo. To je [[sklepanje]], izračun, ki ustvari odgovor na tvojo zahtevo. Učenje se ob vsakem vprašanju ne začne v celoti znova; sklepanje pa se ponovi pri vsaki zahtevi. Kaj sčasoma bolj obremeni? To je odvisno od zasnove storitve in od tega, koliko ljudi jo uporablja. Zelo obiskana storitev ima računalnike nenehno zaposlene z odgovarjanjem, tudi med dvema velikima fazama učenja."
         }
       ]
     },
@@ -80,11 +80,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Koliko elektrike porabi ena sama besedilna zahteva? Objavljene ocene ne dajejo enakega odgovora. Google je meril svojo delujočo storitev in mediano besedilne zahteve postavlja na **0,24 Wh**. Enota, ki meri količino energije, je [[vatna ura]] (Wh). Druga študija pride do mediane **0,31 Wh**, pri čemer srednja polovica njenih standardnih zahtev leži med **0,16 in 0,60 Wh**."
+          "text": "Koliko elektrike porabi ena sama besedilna zahteva? Objavljene ocene ne dajejo enakega odgovora. Google je z meritvami svoje delujoče storitve mediano besedilne zahteve ocenil na **0,24 Wh**. Enota, ki meri količino energije, je [[vatna ura]] (Wh). Druga študija pride do mediane **0,31 Wh**, pri čemer srednja polovica njenih standardnih zahtev leži med **0,16 in 0,60 Wh**."
         },
         {
           "type": "paragraph",
-          "text": "Te številke si ne nasprotujejo: opisujejo različne sisteme in metode, ne dveh nasprotujočih si meritev iste naloge. Izpuščajo tudi veliko zahtevnejša opravila. Če umetno inteligenco prosimo, naj pred odgovorom razmisli v več korakih, so njeni računalniki zaposleni veliko dlje. Energija na zahtevo je torej odvisna od sistema, načina merjenja in zahtevanega dela."
+          "text": "Te številke si ne nasprotujejo: opisujejo različne sisteme in metode, ne dveh nasprotujočih si meritev iste naloge. Izpuščajo tudi veliko zahtevnejša opravila. Če umetno inteligenco prosiš, naj pred odgovorom razmisli v več korakih, so njeni računalniki zaposleni veliko dlje. Energija na zahtevo je torej odvisna od sistema, načina merjenja in zahtevanega dela."
         },
         {
           "type": "funFact",
@@ -109,7 +109,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Ti objekti se radi združujejo na istih krajih. Ko več velikih lokacij potrebuje elektriko na istem območju, si delijo lokalno omrežje, obstoječe vode pa je morda treba okrepiti. Regija z rezervnimi zmogljivostmi lažje sprejme nove lokacije kot regija, ki je že blizu svojih meja. Kraj, kjer gradijo infrastrukturo umetne inteligence, zato nekaj spremeni za njene sosede."
+          "text": "Ti objekti se radi združujejo na istih krajih. Ko več velikih lokacij potrebuje elektriko na istem območju, si delijo lokalno omrežje, obstoječe vode pa je morda treba okrepiti. Regija z rezervnimi zmogljivostmi lažje sprejme nove lokacije kot regija, ki je že blizu svojih meja. Za sosede torej ni vseeno, kje gradijo infrastrukturo umetne inteligence."
         },
         {
           "type": "takeaway",

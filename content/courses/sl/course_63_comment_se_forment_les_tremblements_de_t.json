@@ -1,10 +1,10 @@
 {
   "id": "course_63_comment_se_forment_les_tremblements_de_t",
   "title": "Kako nastanejo potresi?",
-  "subtitle": "Napake in valovi",
+  "subtitle": "Prelomi in valovi",
   "subject": "sciences",
   "subcategory": "Zemlja in vesolje",
-  "description": "Vsako leto Zemlja doživi na stotisoče potresov. Večina jih je nevidnih. Nekaj jih spremeni cela mesta.",
+  "description": "Vsako leto na Zemlji zabeležijo več sto tisoč potresov. Večina jih ostane neopaženih. Nekateri pa spremenijo cela mesta.",
   "hero": {
     "image": "comment_se_forment_les_tremblements_de_terre",
     "ratio": "16:9",
@@ -22,7 +22,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Da bi to razumeli, moramo videti površino planeta kot sestavljanko premikajočih se plošč. Kjer se te plošče drgnejo skupaj, nastane napetost … dokler se ne zlomi."
+          "text": "Da to razumeš, si moraš površje planeta predstavljati kot sestavljanko premikajočih se plošč. Kjer se te plošče drgnejo druga ob drugo, napetost narašča … dokler ne poči."
         }
       ]
     },
@@ -33,7 +33,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Zemljino površje je razdeljeno na okoli deset velikih **tektonskih plošč**. Drsijo po mehkejši plasti dlake, [[Astenosfera]]. Njihova hitrost? Približno **1 do 10 cm na leto**, približno enako rasti nohta."
+          "text": "Zemljino površje je razdeljeno na okoli deset velikih **tektonskih plošč**. Drsijo po mehkejši plasti plašča, ki se imenuje [[astenosfera]]. Njihova hitrost? Približno **1 do 10 cm na leto**, skoraj tako hitro, kot raste noht."
         },
         {
           "type": "image",
@@ -43,34 +43,34 @@
         },
         {
           "type": "paragraph",
-          "text": "Na mejah prevladujejo trije scenariji. Plošče se odmikajo (oceanski grebeni). Trčita: včasih se eden potopi pod drugega, to je [[Subdukcija]]. Ali pa drsita drug ob drugem, kot na primer po [[Prelom San Andreas]] v Kaliforniji, dolgem približno **1.300 km**."
+          "text": "Na mejah so mogoči predvsem trije scenariji. Plošče se razmikajo (oceanski grebeni). Lahko trčijo: včasih se ena podrine pod drugo, to je [[subdukcija]]. Lahko pa drsijo ena ob drugi, kot tam, kjer v Kaliforniji poteka [[Prelom San Andreas]], dolg približno **1300 km**."
         },
         {
           "type": "funFact",
-          "text": "Ob reki San Andreas se Los Angeles približa San Franciscu za približno **6 cm** na leto. Čez **15 milijonov let** bi bili mesti sosedi."
+          "text": "Ob prelomu San Andreas se Los Angeles vsako leto približa San Franciscu za približno **6 cm**. Čez **15 milijonov let** bi bili mesti sosedi."
         },
         {
           "type": "paragraph",
-          "text": "Še posebej na teh mejah prihaja do potresov. Gibanje plošč ovira trenje kamnin. Energija se tiho kopiči."
+          "text": "Potresi nastajajo predvsem na teh mejah. Gibanje plošč ovira trenje med kamninami. Energija se tiho kopiči."
         }
       ]
     },
     {
       "id": "course_63_comment_se_forment_les_tremblements_de_t_p2",
-      "title": "Ko napaka popusti",
+      "title": "Ko prelom popusti",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Do potresa pride vzdolž **preloma**: prelom med dvema skalnima blokoma. Teoretično bi morale plošče nenehno drseti. V praksi trenje pogosto blokira to drsenje."
+          "text": "Potres nastane ob **prelomu**: razpoki med dvema kamninskima blokoma. V teoriji bi morale plošče nenehno drseti. V praksi trenje to drsenje pogosto zavre."
         },
         {
           "type": "paragraph",
-          "text": "V tem času plaki še naprej rastejo. Skala se malo deformira, kot bi bil napet lok. Govorimo o elastičnih omejitvah. To lahko traja desetletja, včasih stoletja."
+          "text": "Medtem plošče še naprej pritiskajo. Kamnina se malo deformira, kot lok, ki ga napenjaš. Temu pravijo elastične napetosti. To lahko traja desetletja, včasih stoletja."
         },
         {
           "type": "paragraph",
-          "text": "Ko je meja upora presežena, bloki nenadoma zdrsnejo. Energija odhaja v obliki **eizmičnih valov**. Točka preloma globine se imenuje **fokus**. Na površini je točka tik zgoraj **epicenter**, kjer so učinki pogosto najmočnejši."
+          "text": "Ko je meja trdnosti presežena, bloki nenadoma zdrsnejo. Energija se sprosti v obliki **potresnih valov**. Točka v globini, kjer pride do preloma, se imenuje **žarišče**. Točka na površju tik nad njim je **epicenter**: tam so učinki pogosto najmočnejši."
         }
       ]
     },
@@ -81,34 +81,34 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Za merjenje energije potresa seizmologi uporabljajo predvsem moment [[lestvica velikosti]]. To je logaritemska lestvica: vsaka stopinja pomnoži energijo s približno **32**. Potres z magnitudo **8** torej sprosti približno **1000-krat** več energije kot potres z magnitudo **6**."
+          "text": "Energijo potresa seizmologi merijo predvsem z momentno magnitudo, ki jo podaja [[lestvica magnitude]]. Ta lestvica je logaritemska: vsaka stopnja pomnoži energijo s približno **32**. Potres z magnitudo **8** torej sprosti približno **1000-krat** več energije kot potres z magnitudo **6**."
         },
         {
           "type": "funFact",
-          "text": "Obstajajo tudi potresi **0** ali negativne magnitude. To so zelo majhni dogodki, vidni le z zelo občutljivimi senzorji."
+          "text": "Obstajajo tudi potresi z magnitudo **0** ali celo z negativno magnitudo. To so drobni dogodki, ki jih zaznajo le zelo občutljiva tipala."
         },
         {
           "type": "paragraph",
-          "text": "Najmočnejši, ki so ga kdaj izmerili s sodobnimi instrumenti, je **Valdivia**, v Čilu, leta **1960**: magnituda **9,5**. Če je žarišče pod oceanom in dviguje morsko dno, lahko izpodrinjeni vodni stolpec ustvari **cunami**. Leta **2004** je potres z magnitudo **9,1** blizu Sumatre sprožil cunami, ki je prizadel 14 držav in terjal približno **227.000** življenj."
+          "text": "Najmočnejši potres, kar so jih izmerili s sodobnimi instrumenti, je bil leta **1960** v **Valdivii** v Čilu: magnituda **9,5**. Če je žarišče pod oceanom in potres dvigne morsko dno, lahko izpodrinjeni vodni steber sproži **cunami**. Leta **2004** je potres z magnitudo **9,1** blizu Sumatre sprožil cunami, ki je prizadel 14 držav in terjal približno **227.000** žrtev."
         }
       ]
     },
     {
       "id": "course_63_comment_se_forment_les_tremblements_de_t_p4",
-      "title": "Valovi, alarm in zgradbe, ki se upirajo",
+      "title": "Valovi, opozorila in odporne stavbe",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Po razpadu odide več vrst valov. **P valovi** (primarni) pridejo prvi: stisnejo skalo kot harmoniko. Nato pridejo (sekundarni) valovi, počasnejši in pogosto bolj uničujoči. Površinski valovi nato povzročijo zelo vidno nihanje tal."
+          "text": "Po prelomu se razširi več vrst valov. Najprej pridejo **valovi P** (primarni): kamnino stiskajo kot harmoniko. Nato pridejo **valovi S** (sekundarni), ki so počasnejši in pogosto bolj uničujoči. Površinski valovi potem tla zelo vidno zazibljejo."
         },
         {
           "type": "paragraph",
-          "text": "Natančnega dneva močnejšega potresa še ne znamo napovedati. Po drugi strani pa kartiramo območja tveganja. [[Potresno inženirstvo]] načrtuje zgradbe, ki so sposobne prenesti udarce: premične temelje, velikanske amortizerje, strukture, ki absorbirajo energijo. Na Japonskem zgodnja opozorila zaznajo valove P in lahko prekinejo plin ali upočasnijo vlake, preden pridejo najnevarnejši valovi."
+          "text": "Natančnega dne velikega potresa še ni mogoče napovedati. Je pa mogoče narisati zemljevide ogroženih območij. [[Potresno inženirstvo]] načrtuje stavbe, ki prenesejo tresljaje: premični temelji, velikanski dušilci, konstrukcije, ki vpijejo energijo. Na Japonskem sistemi zgodnjega opozarjanja zaznajo valove P in lahko zaprejo dovod plina ali upočasnijo vlake, preden pridejo najnevarnejši valovi."
         },
         {
           "type": "takeaway",
-          "text": "Do potresa pride, ko skale, zataknjene vzdolž preloma, nenadoma sprostijo desetletja napetosti. Energija potuje v valovih in vsaka stopnja velikosti pomnoži to energijo s približno **32**."
+          "text": "Potres nastane, ko kamnine, zataknjene ob prelomu, nenadoma sprostijo desetletja nakopičene napetosti. Energija potuje v obliki valov, vsaka stopnja magnitude pa to energijo pomnoži s približno **32**."
         }
       ]
     }

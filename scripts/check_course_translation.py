@@ -159,7 +159,8 @@ ABBREVIATION_TAIL_RE = re.compile(
     r"(?:\b[A-Za-z]|Jr|Sr|St|Mt|Dr|Mr|Mrs|Ms|Prof|Gen|Col|Capt|Inc|Ltd|etc|vol|no"
     # era and date abbreviations of the edited languages: eKr./jKr. (fi), eKr./pKr. (et),
     # f.Kr./e.Kr. (da, nb), н. э. / г. / в. (ru), and ordinal dates or centuries ("12.", "8.")
-    r"|eKr|jKr|pKr|Kr|eaa|jaa|\b[а-яё]|\d)\.$"
+    # regnal ordinals of the Slavic languages ("Nikolaj II.", "Ludvik XIV.") and "pr. n. št." (sl)
+    r"|eKr|jKr|pKr|Kr|eaa|jaa|št|\b[IVXLC]+|\b[а-яё]|\d)\.$"
 )
 
 # Articles that must not precede a glossary key that already carries one.

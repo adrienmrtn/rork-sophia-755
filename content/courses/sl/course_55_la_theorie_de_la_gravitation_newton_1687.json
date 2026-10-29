@@ -4,11 +4,11 @@
   "subtitle": "Newton, 1687",
   "subject": "sciences",
   "subcategory": "Odkritja, ki so spremenila svet",
-  "description": "Leta 1687 je Newton objavil preprosto in neizmerno idejo: ista sila povzroči, da jabolko pade in se Luna vrti. Evo, kaj se to spremeni.",
+  "description": "Leta 1687 Newton objavi preprosto in hkrati velikansko zamisel: ista sila povzroči, da jabolko pade in da Luna kroži. Poglej, kaj se s tem spremeni.",
   "hero": {
     "image": "la_theorie_de_la_gravitation_newton",
     "ratio": "16:9",
-    "hook": "Jabolko, luna, planeti: ena sama sila, ki pojasni vse."
+    "hook": "Jabolko, Luna, planeti: ena sama sila pojasni vse."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Že pred Newtonom smo o planetih vedeli veliko po zaslugi **Galileo**, italijanskega fizika iz 17. stoletja, in **[[Johannes Kepler]]**, astronoma, ki je opisal eliptične orbite. Manjkala pa je jasna povezava med tem, kar pade na Zemljo in tem, kar se vrti na nebu."
+          "text": "Že pred Newtonom so o planetih veliko vedeli. Za to sta poskrbela **Galileo**, italijanski fizik iz 17. stoletja, in **[[Johannes Kepler]]**, astronom, ki je opisal eliptične orbite. Manjkala pa je jasna povezava med tem, kar pade na Zemljo, in tem, kar kroži po nebu."
         },
         {
           "type": "paragraph",
-          "text": "Leta **1687** je **Isaac Newton** objavil *[[Philosophiae Naturalis Principia Mathematica]]*, *Principia*, temeljno delo klasične fizike. Trdi, da je gravitacija **univerzalni**: deluje povsod, na enak način."
+          "text": "Leta **1687** **Isaac Newton** objavi *[[Philosophiae Naturalis Principia Mathematica]]*, na kratko *Principia*, temeljno delo klasične fizike. V njem trdi, da je gravitacija **univerzalna**: deluje povsod in na enak način."
         }
       ]
     },
@@ -33,11 +33,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kepler je opisal orbite planetov z natančnimi zakoni: orbite v **elipsi**, enake preletene površine v enakem času. Galileo je preučeval padec teles. Toda zakaj planeti ostanejo na svoji poti? Kaj jih \"vleče\"?"
+          "text": "Kepler je z natančnimi zakoni opisal orbite planetov: orbite so **elipse**, v enakem času pa planet opiše enako ploščino. Galileo je preučeval padanje teles. Toda zakaj planeti ostajajo na svoji poti? Kaj jih »vleče«?"
         },
         {
           "type": "paragraph",
-          "text": "Newton odgovarja: **gravitacija**, sila, ki vleče dve masi druga proti drugi. Zemlja privlači Luno. Sonce privlači Zemljo. In tudi pritegneš delček Zemlje... čeprav je majhen."
+          "text": "Newton odgovori: **gravitacijska privlačnost**, sila, ki vleče dve masi drugo proti drugi. Zemlja privlači Luno. Sonce privlači Zemljo. Tudi ti malce privlačiš Zemljo… čeprav je ta sila drobcena."
         }
       ]
     },
@@ -50,21 +50,21 @@
           "type": "image",
           "asset": "isaac_newton_apple_tree_woolsthorpe",
           "ratio": "4:3",
-          "caption": "Zgodba o jabolku je predvsem zgodba. Ideja je resnična."
+          "caption": "Zgodba o jabolku je predvsem pripovedka. Ideja pa je resnična."
         },
         {
           "type": "paragraph",
-          "text": "Dve telesi se medsebojno privlačita s silo, ki narašča z njuno **maso**, količino snovi, in z oddaljevanjem upada. Natančneje: sila slabi z **kvadratom razdalje**. Podvojitev razdalje deli privlačnost s štiri. Bolj ko ste oddaljeni, hitreje slabi privlačnost."
+          "text": "Dve telesi se privlačita s silo, ki narašča z njuno **maso**, torej s količino snovi, in pojema, ko sta bolj narazen. Natančneje: sila slabi s **kvadratom razdalje**. Če razdaljo podvojiš, je privlačnost štirikrat šibkejša. Čim dlje si, tem hitreje privlačnost slabi."
         },
         {
           "type": "image",
           "asset": "planets_orbit_solar_system_gravity",
           "ratio": "16:9",
-          "caption": "Planeti nenehno »padajo« proti Soncu ... in ga zgrešijo: to je orbita."
+          "caption": "Planeti nenehno »padajo« proti Soncu… in ga zgrešijo: to je orbita."
         },
         {
           "type": "funFact",
-          "text": "Luna nenehno »pada« proti Zemlji. Ker ima tudi veliko bočno hitrost, se zavrti, namesto da bi strmoglavil."
+          "text": "Luna nenehno »pada« proti Zemlji. Ker ima tudi veliko bočno hitrost, kroži okoli nje, namesto da bi treščila vanjo."
         }
       ]
     },
@@ -75,26 +75,26 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Newton daje tudi tri **zakona gibanja**. Če povzamemo: predmet obdrži svojo hitrost, če ni sile, načelo **vztrajnost**; sila spremeni hitrost; vsako dejanje ima nasprotno reakcijo."
+          "text": "Newton postavi tudi tri **zakone gibanja**. Na kratko: telo ohrani svojo hitrost, če nanj ne deluje nobena sila, to je načelo **vztrajnosti**; sila spremeni hitrost; vsaka akcija ima nasprotno reakcijo."
         },
         {
           "type": "paragraph",
-          "text": "S tem lahko izračunamo trajektorije, **zložiti**, vzpone in spuste oceanov pod vplivom Lune in Sonca ter orbite. Fizika postane orodje za napovedovanje."
+          "text": "S tem je mogoče izračunati tirnice, **plimovanje**, torej dviganje in upadanje oceanov pod vplivom Lune in Sonca, ter orbite. Fizika postane orodje za napovedovanje."
         }
       ]
     },
     {
       "id": "course_55_la_theorie_de_la_gravitation_newton_1687_p4",
-      "title": "Močan ... vendar ne zadnja beseda",
+      "title": "Mogočna… a ne zadnja beseda",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Dve stoletji pozneje je **[[Albert Einstein]]** popravil Newtona za ekstremne primere, zelo visoke hitrosti in zelo močne gravitacije, z [[Relativistična gravitacija (Einstein)]]. Gravitacija nato postane ukrivljenost prostora-časa in ne več nevidna sila. Toda za izstrelitev rakete ali razumevanje plimovanja je Newton še vedno odličen."
+          "text": "Dve stoletji pozneje **[[Albert Einstein]]** popravi Newtona za skrajne primere, zelo velike hitrosti in zelo močno gravitacijo: njegova teorija se imenuje [[Relativistična gravitacija (Einstein)]]. Gravitacija tedaj postane ukrivljenost prostor-časa in ne več nevidna sila. Toda za izstrelitev rakete ali razumevanje plimovanja je Newton še vedno odličen."
         },
         {
           "type": "takeaway",
-          "text": "Newton združuje nebo in Zemljo: gravitacija privlači množice povsod. Gre za eno največjih znanstvenih sintez v zgodovini."
+          "text": "Newton združi nebo in Zemljo: gravitacija povsod privlači mase. To je ena največjih znanstvenih sintez v zgodovini."
         }
       ]
     }

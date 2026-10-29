@@ -1,14 +1,14 @@
 {
   "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment",
   "title": "Kaj je (v resnici) učinek tople grede?",
-  "subtitle": "Podnebje in vzdušje",
+  "subtitle": "Podnebje in ozračje",
   "subject": "sciences",
   "subcategory": "Zemlja in vesolje",
-  "description": "Učinek tople grede ni predvsem problem: nevidni plašč je tisti, ki preprečuje, da bi Zemlja zmrznila. Prava težava je, ko jo prehitro zgostiš.",
+  "description": "Učinek tople grede ni v prvi vrsti problem: je nevidni plašč, ki Zemlji preprečuje, da bi zmrznila. Prava težava nastane, ko ga ljudje prehitro odebelijo.",
   "hero": {
     "image": "qu_est_ce_que_l_effet_de_serre",
     "ratio": "16:9",
-    "hook": "Brez učinka tople grede bi bila Zemlja ledena puščava. S preveliko količino se pregreje."
+    "hook": "Brez učinka tople grede bi bila Zemlja ledena puščava. Če ga je preveč, se pregreje."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Predstavljajte si zaprt avto na soncu: okna prepuščajo svetlobo, toplota pa težko odhaja ven. Potniški prostor se segreje. Zemeljski [[učinek tople grede]] deluje nekako takole, z zrakom namesto stekla."
+          "text": "Predstavljaj si zaprt avto na soncu: okna prepuščajo svetlobo, toplota pa težko uide ven. Notranjost avta se segreje. Na Zemlji [[učinek tople grede]] deluje podobno, le da je namesto stekla zrak."
         },
         {
           "type": "paragraph",
-          "text": "Ta pojav je **naraven** in življenjskega pomena. Brez tega bi povprečna temperatura sveta padla proti **-18 °C**. Z njim sva okoli **+15 °C**. Trenutni problem ni njegov obstoj: temveč njegovo hitro **Pomnoževanje** z našimi dejavnostmi."
+          "text": "Ta pojav je **naraven** in življenjsko pomemben. Brez njega bi povprečna temperatura na Zemlji padla na okoli **-18 °C**. Z njim je okoli **+15 °C**. Današnja težava ni v tem, da obstaja, temveč v njegovi hitri **krepitvi** zaradi naših dejavnosti."
         }
       ]
     },
@@ -33,7 +33,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Sonce pošilja predvsem vidno svetlobo. Atmosfera pusti mimo. Kopno in oceani se segrejejo, nato to energijo oddajajo nazaj v obliki **topplot infrardeči**, valov, ki so »daljši« od vidne svetlobe."
+          "text": "Sonce pošilja predvsem vidno svetlobo. Ozračje jo prepušča. Tla in oceani se segrejejo, nato pa to energijo oddajo nazaj kot **infrardečo toploto**, valove, ki so »daljši« od vidne svetlobe."
         },
         {
           "type": "image",
@@ -43,64 +43,64 @@
         },
         {
           "type": "paragraph",
-          "text": "Nekateri plini, [[Toplogredni plini]], absorbirajo to toploto in jo oddajajo v vse smeri, tudi proti tlom. Dušik in kisik, ki sta večina v zraku, komaj opravita to delo. Vodna para, **CO₂** in **metan** to zelo dobro obnesejo."
+          "text": "Nekateri plini iz skupine [[toplogrednih plinov]] vpijajo to toploto in jo oddajajo v vse smeri, tudi nazaj proti tlom. Dušik in kisik, ki ju je v zraku največ, tega skoraj ne počneta. Vodna para, **CO₂** in **metan** pa to počnejo zelo dobro."
         },
         {
           "type": "funFact",
-          "text": "Ime \"učinek tople grede\" je nekoliko zavajajoče. Pravi rastlinjak se ogreva predvsem tako, da blokira dvigajoči se vroč zrak. Ozračje zadržuje toploto tako, da absorbira infrardeče žarke."
+          "text": "Ime »učinek tople grede« je nekoliko zavajajoče. Pravi rastlinjak se ogreva predvsem tako, da zadržuje topel zrak, ki se dviga. Ozračje pa toploto ujame tako, da vpija infrardeče žarke."
         }
       ]
     },
     {
       "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment_p2",
-      "title": "Ko ljudje zgostijo odejo",
+      "title": "Ko človek odebeli odejo",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Od industrijske revolucije so kurili premog, nafto in plin. Ta ogljik, ki je bil milijone let zakopan pod zemljo, se vrne v zrak. Krčenje gozdov zmanjšuje tudi gozdove, ki so absorbirali CO₂. Živinoreja in gojenje riža dodajata metan, približno **80-krat** več \"ogrevanja\" kot CO₂ v 20 letih."
+          "text": "Od industrijske revolucije ljudje kurijo premog, nafto in plin. Ogljik, ki je bil milijone let zakopan pod zemljo, se tako vrača v zrak. Zaradi krčenja gozdov je manj tudi dreves, ki so vpijala CO₂. Živinoreja in gojenje riža dodajata metan, ki v 20 letih »greje« približno **80-krat** močneje kot CO₂."
         },
         {
           "type": "paragraph",
-          "text": "Rezultat: koncentracija CO₂ se je povečala s približno **280** na več kot **420** delcev na milijon. Takšne ravni ni bilo od [[pliocen]], pred približno **3 milijoni let**, ko so bila morja višja."
+          "text": "Rezultat: koncentracija CO₂ je narasla s približno **280** na več kot **420** delcev na milijon. Tako visoke ravni ni bilo vse od dobe [[pliocen]] pred približno **3 milijoni let**, ko so bila morja višja."
         }
       ]
     },
     {
       "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment_p3",
-      "title": "Kakšne bolj energične klimatske spremembe",
+      "title": "Kaj spremeni bolj energično podnebje",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "[[IPCC]], ki združuje delo na tisoče klimatologov, je jasen: segrevanja od leta 1950 je brez primere v tisočletjih in njegov človeški izvor je ugotovljen."
+          "text": "[[IPCC]], ki povzema delo tisočih podnebnih znanstvenikov, je jasen: segrevanje od leta 1950 je brez primere v zadnjih tisočletjih, njegov človeški izvor pa je dokazan."
         },
         {
           "type": "paragraph",
-          "text": "Več energije v zraku in oceanih pomeni več ekstremov: bolj sušne razmere, močnejše deževje, taljenje ledenikov in ledenih pokrovov, dvig morske gladine. In pospeševalnik: ko beli led izgine, temna prst in voda absorbirata več sončne svetlobe. [[Zemeljski albedo]] pada, planet pa se segreva še hitreje."
+          "text": "Več energije v zraku in oceanih pomeni izrazitejše skrajnosti: hujše suše, silovitejše padavine, taljenje ledenikov in ledenih pokrovov, dvigovanje morske gladine. Pa še pospeševalnik: ko beli led izgine, temna tla in voda vpijejo več sončne svetlobe. [[Zemeljski albedo]] se zmanjša, planet pa se segreva še hitreje."
         },
         {
           "type": "funFact",
-          "text": "Venera kaže \"zapakiran\" učinek tople grede: atmosfera s 96 % CO₂ in približno **460 °C** na tleh, kar je dovolj za taljenje svinca."
+          "text": "Venera kaže, kakšen je »pobegli« učinek tople grede: ozračje s 96 % CO₂ in okoli **460 °C** na površju, dovolj, da se stali svinec."
         }
       ]
     },
     {
       "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment_p4",
-      "title": "Omejite povečanje, prilagodite se ostalim",
+      "title": "Omejiti segrevanje, prilagoditi se preostalemu",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Mednarodni cilj je ostati pod **+1,5°C** ali **+2°C** v primerjavi s predindustrijsko dobo, da bi se izognili nevarnim pragom, kot je taljenje [[permafrost]], ki bi sprostilo še več metana."
+          "text": "Mednarodni cilj je ostati pod **+1,5 °C** ali **+2 °C** glede na predindustrijsko dobo in se izogniti nevarnim pragovom, na primer temu, da se odtali [[permafrost]], ki bi sprostil še več metana."
         },
         {
           "type": "paragraph",
-          "text": "Dva vzvoda: **zmanjšaj** emisije (čista energija, treznost, gozdovi) in **Prilagodi** že zavezanemu. CO₂ ostaja v zraku stoletja: to, kar oddajamo danes, traja dolgo časa."
+          "text": "Dva vzvoda: **zmanjšati** emisije (čista energija, zmernost, gozdovi) in se **prilagoditi** temu, kar se je že začelo. CO₂ ostane v zraku stoletja: današnje emisije bodo učinkovale še dolgo."
         },
         {
           "type": "takeaway",
-          "text": "Brez naravnega učinka tople grede bi Zemlja zmrznila okoli **-18 °C**. Njegovo ojačanje s fosilnimi gorivi potisne CO₂ na ravni, ki jih **3 milijone let**."
+          "text": "Brez naravnega učinka tople grede bi Zemlja zamrznila pri približno **-18 °C**. Njegova krepitev zaradi fosilnih goriv dviga CO₂ na ravni, kakršnih ni bilo že **3 milijone let**."
         }
       ]
     }

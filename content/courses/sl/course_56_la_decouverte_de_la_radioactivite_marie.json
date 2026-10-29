@@ -4,7 +4,7 @@
   "subtitle": "Marie Curie",
   "subject": "sciences",
   "subcategory": "Odkritja, ki so spremenila svet",
-  "description": "Marie Curie s Pierrom Curiejem in Henrijem Becquerelom odpira poglavje radioaktivnosti. Dve Nobelovi nagradi, ogromno dela in ogromna zapuščina.",
+  "description": "Marie Curie s Pierrom Curiejem in Henrijem Becquerelom odpre poglavje radioaktivnosti. Dve Nobelovi nagradi, izčrpavajoče delo in ogromna zapuščina.",
   "hero": {
     "image": "la_decouverte_de_la_radioactivite_marie_curie",
     "ratio": "16:9",
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Marie Curie** (rojena kot Maria Skłodowska) je prva ženska, ki je prejela Nobelovo nagrado. Ostaja edina oseba, ki je prejela **dva** iz dveh različnih ved: fizike in nato kemije."
+          "text": "**Marie Curie** (rojena kot Maria Skłodowska) je prva ženska, ki je prejela Nobelovo nagrado. Še vedno je edina oseba, ki je prejela **dve**, in to za dve različni vedi: najprej za fiziko, nato za kemijo."
         },
         {
           "type": "paragraph",
-          "text": "Njen predmet: **radioaktivnost**, to je dejstvo, da nekateri atomi spontano pošiljajo energijo in delce."
+          "text": "Njeno področje: **radioaktivnost**, torej pojav, da nekateri atomi sami od sebe oddajajo energijo in delce."
         }
       ]
     },
@@ -33,36 +33,36 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Rojena na Poljskem je odšla študirat v Pariz, ker so lokalne univerze ženskam zaprle mnoga vrata. Trdo dela, pogosto v negotovih razmerah."
+          "text": "Rodila se je na Poljskem, študirat pa je odšla v Pariz, ker so domače univerze ženskam zapirale veliko vrat. Trdo je delala, pogosto v negotovih razmerah."
         },
         {
           "type": "paragraph",
-          "text": "Poročila se je z **Pierrom Curie**, fizikom. Skupaj sta sestavljala za tisti čas redek laboratorijski duo."
+          "text": "Poročila se je s fizikom **Pierrom Curiejem**. Skupaj sta bila za tisti čas redek raziskovalni par."
         }
       ]
     },
     {
       "id": "course_56_la_decouverte_de_la_radioactivite_marie_p2",
-      "title": "Poimenujte nevidno",
+      "title": "Poimenovati nevidno",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Leta **1896** je **Henri Becquerel** opazil, da uranove tančice fotografske plošče brez svetlobe. Marie Curie se odloči podrobno preučiti ta pojav. Izumila je besedo **radioaktivnost**."
+          "text": "Leta **1896** **Henri Becquerel** opazi, da uran zamegli fotografske plošče, čeprav nanje ne pade svetloba. Marie Curie se odloči ta pojav podrobno raziskati. Izumi besedo **radioaktivnost**."
         },
         {
           "type": "image",
           "asset": "marie_curie_pitchblende_radioactivity",
           "ratio": "4:3",
-          "caption": "Na tone smole za izolacijo radija in polonija."
+          "caption": "Tone smolnate rude, da bi izolirali radij in polonij."
         },
         {
           "type": "paragraph",
-          "text": "S Pierrom odkrije dva nova elementa: **polonij** (poimenovan po Poljski) in **radij**. Za njihovo izolacijo je treba predelati ogromne količine rude, smole."
+          "text": "S Pierrom odkrije dva nova elementa: **polonij** (poimenovan po Poljski) in **radij**. Da bi ju izolirala, morata predelati ogromne količine rude, imenovane smolnata ruda."
         },
         {
           "type": "funFact",
-          "text": "Radij se v temi rahlo sveti. Sprva smo bili presenečeni ... preden smo razumeli, kako nevarno je."
+          "text": "Radij v temi šibko sveti. Ljudje so bili sprva navdušeni… preden so spoznali, kako nevaren je."
         }
       ]
     },
@@ -73,26 +73,26 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Leta **1903** so Marie, Pierre in Becquerel prejeli Nobelovo nagrado za fiziko. Leta **1911** je samo Marie prejela Nobelovo nagrado za kemijo. Pierre je nesrečno umrl leta 1906. Nadaljuje."
+          "text": "Leta **1903** Marie, Pierre in Becquerel prejmejo Nobelovo nagrado za fiziko. Leta **1911** Marie sama prejme Nobelovo nagrado za kemijo. Pierre leta 1906 umre v nesreči. Ona nadaljuje delo."
         },
         {
           "type": "paragraph",
-          "text": "Med prvo svetovno vojno je organizirala mobilne rentgenske enote za zdravljenje ranjencev. Svoje telo izpostavlja odmerkom, za katere danes vemo, da so nesprejemljivi."
+          "text": "Med prvo svetovno vojno organizira mobilne rentgenske enote za pomoč ranjencem. Svoje telo izpostavlja odmerkom, ki bi jih danes šteli za nesprejemljive."
         }
       ]
     },
     {
       "id": "course_56_la_decouverte_de_la_radioactivite_marie_p4",
-      "title": "Dvostranska zapuščina",
+      "title": "Dvorezna zapuščina",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Radioaktivnost je omogočila radioterapijo proti nekaterim vrstam raka … in tudi jedrsko orožje. Znanje je nevtralno; njegove uporabe niso."
+          "text": "Radioaktivnost je omogočila radioterapijo proti nekaterim vrstam raka… in tudi jedrsko orožje. Znanje je nevtralno, njegova uporaba pa ne."
         },
         {
           "type": "takeaway",
-          "text": "Marie Curie je nenavadno opazovanje spremenila v novo znanost: radioaktivnost. Njegovo delo je odprlo sodobno fiziko ... za ceno tveganj, ki so bila takrat slabo razumljena."
+          "text": "Marie Curie je nenavadno opažanje spremenila v novo vedo: radioaktivnost. Njeno delo je odprlo pot sodobni fiziki… za ceno tveganj, ki jih takrat še niso dobro razumeli."
         }
       ]
     }

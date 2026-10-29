@@ -1,14 +1,14 @@
 {
   "id": "course_110_les_raisins_de_la_colere_steinbeck",
-  "title": "Grozdje jeze, Steinbeck",
+  "title": "Grozdi jeze, Steinbeck",
   "subtitle": "1939",
   "subject": "litterature",
-  "subcategory": "Angleška in svetovna književnost",
-  "description": "Leta 1939 je družina Joad zapustila Oklahomo, ki jo je prizadela suša. Steinbeck pripoveduje o eksodusu Okijevih in slavi solidarnost, ki se upira krivicam.",
+  "subcategory": "Anglosaška in svetovna književnost",
+  "description": "Leta 1939 družina Joad zapusti Oklahomo, ki jo je prizadela suša. Steinbeck pripoveduje o eksodusu Okijev in slavi solidarnost, ki kljubuje krivici.",
   "hero": {
     "image": "les_raisins_de_la_colere_steinbeck",
     "ratio": "16:9",
-    "hook": "Pregnani iz svoje zemlje se odpravijo na Zahod: najmočnejši družbeni roman depresije."
+    "hook": "Pregnani s svoje zemlje se odpravijo na Zahod: najmogočnejši socialni roman velike gospodarske krize."
   },
   "sections": [
     {
@@ -18,36 +18,36 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Objavljeno leta **1939**, **Grozdje jeze** je monumentalno delo **Johna Steinbecka**. Med **veliko depresijo** je družino **Joad**, delilce iz Oklahome, suša in kmetijska mehanizacija pregnala z njihove zemlje. Steinbeck meša izmišljeno pripoved in poročanje, da bi obsodil izkoriščanje migrantov."
+          "text": "Roman **Grozdi jeze**, ki je izšel leta **1939**, je monumentalno delo **Johna Steinbecka**. V času **velike gospodarske krize** družino **Joad**, napolicarje iz Oklahome, z zemlje preženeta suša in mehanizacija kmetijstva. Steinbeck prepleta romaneskno pripoved in reportažo, da bi obsodil izkoriščanje migrantov."
         },
         {
           "type": "paragraph",
-          "text": "Roman ne pripoveduje le o pobegu v Kalifornijo. Pokaže, kako lahko revščina oblikuje kolektivno zavest, ki je širša od družine, in kako lahko jeza zatiranih postane sila družbene transformacije."
+          "text": "Roman ne pripoveduje le o begu v Kalifornijo. Pokaže, kako lahko beda izkuje kolektivno zavest, ki je širša od družine, in kako lahko jeza zatiranih postane sila, ki spreminja družbo."
         }
       ]
     },
     {
       "id": "course_110_les_raisins_de_la_colere_steinbeck_p1",
-      "title": "Steinbeck in potopitev v bedo Okijevih",
+      "title": "Steinbeck sredi bede Okijev",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Steinbeck ne piše za udobno mizo. Potuje z migranti, živi v **[[Hoovervilles]]**, barakarskih naseljih, ki so jih zgradili brezdomci med depresijo. Ta poglobljenost mu omogoča dojeti jezik, obup in dostojanstvo **V redu**, migrantov iz Oklahome."
+          "text": "Steinbeck ne piše v udobni pisarni. Potuje z migranti in živi v barakarskih naseljih **[[Hoovervilles]]**, ki so jih med veliko gospodarsko krizo postavili brezdomci. Tako lahko dojame jezik, obup in dostojanstvo **Okijev**, migrantov iz Oklahome."
         },
         {
           "type": "image",
           "asset": "john_steinbeck_portrait_photograph",
           "ratio": "4:3",
-          "caption": "John Steinbeck, romanopisec in priča velike depresije."
+          "caption": "John Steinbeck, romanopisec in priča velike gospodarske krize."
         },
         {
           "type": "funFact",
-          "text": "Naslov izvira iz vrstice *Bojna himna republike*, ki jo je predlagala Steinbeckova žena Carol."
+          "text": "Naslov, ki ga je predlagala Steinbeckova žena Carol, izvira iz verza himne *The Battle Hymn of the Republic*."
         },
         {
           "type": "paragraph",
-          "text": "Knjiga je povzročila potres: **Pulitzerjeva nagrada** leta **1940**, pa tudi cenzurne kampanje v Kaliforniji, kjer so se lastniki zemljišč počutili napadene. **FBI** začne spremljati Steinbecka. Delo je prispevalo k **Nobelovi nagradi** za literaturo, ki jo je prejel leta **1962**."
+          "text": "Knjiga povzroči potres: leta **1940** prejme **Pulitzerjevo nagrado**, v Kaliforniji pa sproži cenzurne kampanje, saj se veleposestniki počutijo napadene. **FBI** začne Steinbecka nadzorovati. Delo pripomore k **Nobelovi nagradi** za književnost, ki jo prejme leta **1962**."
         }
       ]
     },
@@ -58,51 +58,51 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Zaplet se začne v **[[Posoda za prah]]**, regiji, ki jo opustošita suša in slaba kmetijska praksa. Peščeni viharji črnijo nebo. Banke izselijo delničarje, zamenjajo jih traktorji. Joada se odpravita na **Cesta 66**, \"pot za pobeg\", v tovornjaku, preobremenjenem z blagom in ljudmi."
+          "text": "Zgodba se začne na območju, ki se imenuje **[[Dust Bowl]]**: pokrajino so opustošile suša in slaba kmetijska praksa. Peščeni viharji zatemnijo nebo. Banke preženejo napolicarje in jih nadomestijo s traktorji. Joadovi se po cesti **Route 66**, »cesti bega«, odpravijo v tovornjaku, prenatrpanem s stvarmi in ljudmi."
         },
         {
           "type": "image",
           "asset": "dust_bowl_okies_migrant_family_dorothea_lange",
           "ratio": "16:9",
-          "caption": "Družina migrantov: fotografirana revščina postane literarni material."
+          "caption": "Družina migrantov: revščina na fotografijah postane literarno gradivo."
         },
         {
           "type": "paragraph",
-          "text": "V Kaliforniji se sanje rušijo: zdrobljene plače, nehigienska taborišča, zasebne milice lastnikov. Letaki so obljubljali rodovitno zemljo; realnost je gospodarska blokada. Okiji so prezirani, izkoriščani, nadzorovani. Steinbeck izmenjuje pripovedna poglavja in »presejena« poglavja, ki širijo perspektivo na celotno migrantsko ljudstvo."
+          "text": "V Kaliforniji se sanje sesujejo: sramotno nizke plače, nehigienska taborišča, zasebne milice veleposestnikov. Letaki so obljubljali rodovitno zemljo, v resnici pa jih čaka gospodarska past. Okije prezirajo, izkoriščajo in nadzorujejo. Steinbeck izmenjuje pripovedna poglavja in »vmesna« poglavja, ki pogled razširijo na vse ljudstvo migrantov."
         }
       ]
     },
     {
       "id": "course_110_les_raisins_de_la_colere_steinbeck_p3",
-      "title": "Krepitev politične in družbene zavesti",
+      "title": "Nastajanje politične in družbene zavesti",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Ma Joad** drži družino skupaj, ko moški razpadejo. **Tom Joad**, sprva osredotočen na svoje individualno preživetje, se spremeni po stiku z **Jimmy Casy**, potujočim pridigarjem, ki je postal aktivist. Ko Casy umre, ko poskuša organizirati sindikat, Tom razume, da je njegova osebna bolečina del skupnega trpljenja."
+          "text": "**Ma Joad** drži družino pokonci, ko se moški zlomijo. **Tom Joad**, ki sprva misli le na lastno preživetje, se spremeni v stiku z **Jimom Casyjem**, potujočim pridigarjem, ki je postal aktivist. Ko Casy umre med poskusom, da bi ustanovil sindikat, Tom spozna, da je njegova osebna bolečina del skupnega trpljenja."
         },
         {
           "type": "paragraph",
-          "text": "Njegov zadnji govor svoji materi obljublja prisotnost povsod, kjer se moški borijo za svoje dostojanstvo: »Kjer je boj tako močan, da se morajo ljudje boriti, no, jaz bom tam.« Steinbeck je del **[[Ameriško delavsko gibanje tridesetih let prejšnjega stoletja]]**: vzpon sindikatov, množične stavke, kontekst Rooseveltovega **New Deal**. »Družina« se zdaj lahko nanaša na vse razdedinjene, ne le na kri."
+          "text": "V zadnjem govoru materi obljubi, da bo navzoč povsod, kjer se ljudje borijo za dostojanstvo: »Kjer koli bo spopad tako hud, da se bodo ljudje morali boriti, tam bom jaz.« Steinbeckov roman je del dogajanja, ki ga zaznamuje **[[Ameriško delavsko gibanje tridesetih let prejšnjega stoletja]]**: vzpon sindikatov, množične stavke in Rooseveltov **New Deal**. »Družina« lahko odslej pomeni vse razdedinjene, ne le krvne sorodnike."
         }
       ]
     },
     {
       "id": "course_110_les_raisins_de_la_colere_steinbeck_p4",
-      "title": "Solidarnost kot ultimativni odgovor na kaos",
+      "title": "Solidarnost kot zadnji odgovor na kaos",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Zadnji prizor ostaja eden najmočnejših v ameriški literaturi. **Rose of Sharon**, katere otrok je umrl zaradi podhranjenosti, doji sestradanega starca v poplavljenem skednju. Biološka tragedija, spremenjena v simbol absolutne delitve, onkraj kakršne koli biologije ali družbene konvencije."
+          "text": "Zadnji prizor ostaja eden najmočnejših v ameriški književnosti. **Rose of Sharon**, ki ji je otrok umrl zaradi podhranjenosti, v poplavljenem skednju doji sestradanega starca. Biološka tragedija postane simbol popolnega deljenja, onkraj vsake biologije in družbenih norm."
         },
         {
           "type": "paragraph",
-          "text": "Steinbeck nas spomni, da se jeza zatiranih rodi iz krivice, solidarnost pa jo lahko usmeri v ustvarjalno moč. Njegov roman ostaja svarilo pred pohlepom močnih in poklon dostojanstvu delavcev, ki nočejo tiho izginiti."
+          "text": "Steinbeck opozarja, da se jeza zatiranih rodi iz krivice, solidarnost pa jo lahko usmeri v ustvarjalno silo. Njegov roman ostaja svarilo pred pohlepom močnih in poklon dostojanstvu delavcev, ki nočejo tiho izginiti."
         },
         {
           "type": "takeaway",
-          "text": "**Grozdje jeze** spremeni eksodus družine v univerzalno lekcijo: kljub kaosu človeštvo vztraja, ko si ljudje pomagajo drug drugemu, ki presega njihove lastne interese."
+          "text": "**Grozdi jeze** spremenijo eksodus ene družine v univerzalni nauk: kljub kaosu človečnost vztraja, ko si ljudje pomagajo onkraj lastnih interesov."
         }
       ]
     }

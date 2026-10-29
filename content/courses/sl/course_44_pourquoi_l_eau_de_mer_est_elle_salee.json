@@ -3,12 +3,12 @@
   "title": "Zakaj je morska voda slana?",
   "subtitle": "Oceani",
   "subject": "sciences",
-  "subcategory": "Vsakdanjik pod drobnogledom",
-  "description": "En liter morske vode vsebuje približno 35 gramov soli. Ta sol se je kopičila milijarde let. Tukaj prihaja.",
+  "subcategory": "Vsakdan pod drobnogledom",
+  "description": "En liter morske vode vsebuje približno 35 gramov soli. Ta sol se je kopičila milijarde let. Tu izveš, od kod prihaja.",
   "hero": {
     "image": "pourquoi_l_eau_de_mer_est_salee",
     "ratio": "16:9",
-    "hook": "Reke so nežne. Oceani so slani. Skrivnost je čas in izhlapevanje."
+    "hook": "Reke so sladke. Oceani so slani. Skrivnost sta čas in izhlapevanje."
   },
   "sections": [
     {
@@ -18,42 +18,42 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Oceani pokrivajo več kot **70%** planeta. V povprečju en liter morske vode vsebuje približno **35 gramov soli**. To ni naključje: to je rezultat zelo dolgega procesa."
+          "text": "Oceani pokrivajo več kot **70 %** planeta. V povprečju en liter morske vode vsebuje približno **35 gramov soli**. To ni naključje: je rezultat zelo dolgega procesa."
         },
         {
           "type": "paragraph",
-          "text": "Sol ne »pade« z neba že pripravljena. Potuje s celin, nato pa ostane ujet v oceanu."
+          "text": "Sol ne »pade« z neba že narejena. Pripotuje s celin, nato pa ostane ujeta v oceanu."
         }
       ]
     },
     {
       "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_p1",
-      "title": "Sol prihaja najprej iz zemlje",
+      "title": "Sol najprej prihaja s kopnega",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Dež, ki prehaja skozi zrak, pobere malo ogljikovega dioksida. Postane rahlo kislo. Ko pade na skale, jih nežno napade: to je **kemična erozija**."
+          "text": "Dež na poti skozi zrak vsrka malo ogljikovega dioksida. Postane rahlo kisel. Ko pade na kamnine, jih počasi razjeda: to je **kemična erozija**."
         },
         {
           "type": "image",
           "asset": "ocean_sea_salt_evaporation",
           "ratio": "auto",
-          "caption": "Slana močvirja: izhlapevanje koncentrira sol, raztopljeno v morski vodi."
+          "caption": "Soline: izhlapevanje zgosti sol, raztopljeno v morski vodi."
         },
         {
           "type": "paragraph",
-          "text": "Reke nato prenašajo raztopljene minerale, zlasti **natrij** in **klor**, dve sestavini kuhinjske soli. Odvržejo jih v morje."
+          "text": "Reke nato odnašajo raztopljene minerale, predvsem **natrij** in **klor**, obe sestavini kuhinjske soli. Izlivajo jih v morje."
         },
         {
           "type": "funFact",
-          "text": "Podvodni vulkani in vroči vrelci na oceanskem dnu prav tako dodajajo sol. Toda glavnina še vedno prihaja s celin."
+          "text": "Podvodni vulkani in vroči vrelci na oceanskem dnu prav tako dodajajo soli. Toda glavnina še vedno prihaja s celin."
         }
       ]
     },
     {
       "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_p2",
-      "title": "Zakaj reke niso slane?",
+      "title": "Zakaj reke niso slane",
       "free": false,
       "blocks": [
         {
@@ -62,18 +62,18 @@
         },
         {
           "type": "paragraph",
-          "text": "V oceanu je drugače. Pod soncem voda **izhlapi** in se vrne na nebo. Sol **ostane**. Iz leta v leto, iz stoletja v stoletje se kopiči. Temu pravimo [[Hidrološki cikel in kopičenje soli]]."
+          "text": "V oceanu je drugače. Pod Soncem voda **izhlapi** in se dvigne nazaj v ozračje. Sol pa **ostane**. Iz leta v leto, iz stoletja v stoletje se kopiči. Temu pravijo [[hidrološki cikel in kopičenje soli]]."
         }
       ]
     },
     {
       "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_p3",
-      "title": "Sol kroži tudi po oceanih",
+      "title": "Sol poganja tudi kroženje oceanov",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Slana voda je bolj **gosta** (\"težja\" za enako prostornino) kot sladka voda. Na polih, ko površinska voda zamrzne, se sol delno sprosti v okoliško tekočo vodo. Ta voda postane še gostejša in pade na dno."
+          "text": "Slana voda je **gostejša** od sladke (pri enaki prostornini je »težja«). Na polih, ko površinska voda zmrzne, se del soli izloči v okoliško tekočo vodo. Ta voda postane še gostejša in potone proti dnu."
         },
         {
           "type": "paragraph",
@@ -83,16 +83,16 @@
     },
     {
       "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_p4",
-      "title": "Ni povsod enaka sol",
+      "title": "Ni povsod enako slano",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Slanost ni povsod enaka. V bližini ekvatorja lahko močno izhlapevanje koncentrira sol. V bližini velikih rek ali talečih se ledenih plošč je voda mehkejša. Mrtvo morje je skrajni primer: odteče zelo malo vode, ostane veliko soli."
+          "text": "Slanost ni povsod enaka. Blizu ekvatorja lahko močno izhlapevanje zgosti sol. Blizu velikih rek ali ob talečem se morskem ledu je voda manj slana. Mrtvo morje pa je skrajni primer: odteče zelo malo vode, ostane pa veliko soli."
         },
         {
           "type": "takeaway",
-          "text": "Morska voda je slana, ker reke prinašajo minerale s celin, izhlapevanje pa pusti sol v oceanu. To kopičenje je trajalo milijarde let."
+          "text": "Morska voda je slana, ker reke prinašajo minerale s celin, izhlapevanje pa pusti sol v oceanu. To kopičenje traja že milijarde let."
         }
       ]
     }
