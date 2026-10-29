@@ -1,14 +1,14 @@
 {
   "id": "course_59_la_decouverte_de_l_anesthesie",
   "title": "Objav anestézie",
-  "subtitle": "Liek",
+  "subtitle": "Medicína",
   "subject": "sciences",
   "subcategory": "Objavy, ktoré zmenili svet",
-  "description": "Pred rokom 1846 sa operácia často vykonávala vedome a v extrémnych bolestiach. Anestézia premieňa operáciu na starostlivosť, nie na mučenie.",
+  "description": "Pred rokom 1846 býval pacient pri operácii často pri vedomí a v strašných bolestiach. Anestézia mení chirurgiu na liečbu, nie na mučenie.",
   "hero": {
     "image": "la_decouverte_de_l_anesthesie",
     "ratio": "16:9",
-    "hook": "Jedného dňa v roku 1846 v Bostone chirurgia prestala byť pretekom proti bolesti."
+    "hook": "Jedného dňa roku 1846 v Bostone prestáva byť chirurgia pretekmi s bolesťou."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Predstavte si amputáciu bez toho, aby ste zaspali. Pred polovicou 19. storočia to bola norma. Pacienta pripútame, rýchlo sa pohybujeme, modlíme sa."
+          "text": "Predstav si amputáciu bez uspania. Až do polovice 19. storočia je to bežná prax. Pacienta priviažu, ponáhľajú sa a modlia sa."
         },
         {
           "type": "paragraph",
-          "text": "**anestézia** mení všetko: umožňuje vám operovať bez uvedomenia si bolesti. Moderná chirurgia si dá konečne načas."
+          "text": "**Anestézia** mení všetko: umožňuje operovať bez toho, aby pacient vnímal bolesť. Moderná chirurgia si konečne môže dať na čas."
         }
       ]
     },
@@ -39,7 +39,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Chirurgovia boli hodnotení podľa rýchlosti. Na znehybnenie ľudí sa používal alkohol, ópium alebo hrubá sila. Mnoho pacientov zomrelo na šok, infekciu alebo krvácanie."
+          "text": "Chirurgov hodnotili podľa rýchlosti. Na znehybnenie sa používal alkohol, ópium alebo hrubá sila. Mnoho pacientov zomieralo na šok, infekciu alebo krvácanie."
         }
       ]
     },
@@ -52,15 +52,15 @@
           "type": "image",
           "asset": "ether_anesthesia_first_demonstration_1846",
           "ratio": "4:3",
-          "caption": "Verejná demonštrácia v Bostone presvedčila lekársky svet."
+          "caption": "Verejná ukážka v Bostone presvedčí lekársky svet."
         },
         {
           "type": "paragraph",
-          "text": "**O 16. októbra 1846** v Bostone zubný lekár **William Morton** prinútil pacienta vdýchnuť **éter**. Chirurg **John Warren** operuje nádor na krku. Pacient nekričí. Izba je ohromená."
+          "text": "**16. októbra 1846** v Bostone dá zubár **William Morton** pacientovi vdýchnuť **éter**. Chirurg **John Warren** mu operuje nádor na krku. Pacient nekričí. Sála žasne."
         },
         {
           "type": "funFact",
-          "text": "Warren údajne povedal: \"Páni, toto nie je humbug.\" Fráza zostala slávna."
+          "text": "Warren vraj vyhlásil: „Páni, toto nie je žiadny humbug“ (teda podvod). Tá veta sa preslávila."
         }
       ]
     },
@@ -71,11 +71,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Nasledovali ďalšie produkty, ako napríklad **chloroform**, popularizovaný najmä vo Veľkej Británii. Vznikajú rivality o to, kto čo „vynašiel“. Na patente nezáleží: myšlienka sa šíri po celom svete."
+          "text": "Nasledujú ďalšie látky, napríklad **chloroform**, ktorý sa rozšíril najmä vo Veľkej Británii. Vypuknú spory o to, kto čo „vynašiel“. Na patente nezáleží: myšlienka sa šíri po celom svete."
         },
         {
           "type": "paragraph",
-          "text": "Zostáva jeden problém: uspať bez zabíjania. Musíte si to dávkovať, sledovať dýchanie a srdce. Zrodila sa nová špecialita."
+          "text": "Ostáva jeden problém: uspať, a pritom nezabiť. Treba presne dávkovať, sledovať dýchanie a srdce. Vzniká nový lekársky odbor."
         }
       ]
     },
@@ -86,11 +86,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Anesteziológ dnes používa presné plyny a lieky, prístroje, ktoré všetko zmerajú. Môžete uspať celé telo alebo len oblasť (lokálna alebo lokoregionálna anestézia)."
+          "text": "Anestéziológ dnes používa presne dávkované plyny a lieky a prístroje, ktoré merajú všetko. Uspať sa dá celé telo alebo len jedna oblasť (lokálna alebo lokoregionálna anestézia)."
         },
         {
           "type": "takeaway",
-          "text": "Od demonštrácie éteru v roku **1846** anestézia zmenila chirurgiu: menej bolesti, viac času, viac presnosti... a bezpečnosť sa stala vedou sama osebe."
+          "text": "Od ukážky éteru v roku **1846** anestézia zmenila chirurgiu: menej bolesti, viac času, viac presnosti… a bezpečnosť, z ktorej sa stala samostatná veda."
         }
       ]
     }

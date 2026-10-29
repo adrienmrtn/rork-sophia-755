@@ -1,14 +1,14 @@
 {
   "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee",
   "title": "Prečo je morská voda slaná?",
-  "subtitle": "oceány",
+  "subtitle": "Oceány",
   "subject": "sciences",
   "subcategory": "Každodenný život pod lupou",
-  "description": "Jeden liter morskej vody obsahuje približne 35 gramov soli. Táto soľ sa nahromadila za miliardy rokov. Odtiaľ pochádza.",
+  "description": "Jeden liter morskej vody obsahuje približne 35 gramov soli. Táto soľ sa hromadila miliardy rokov. Pozri sa, odkiaľ sa berie.",
   "hero": {
     "image": "pourquoi_l_eau_de_mer_est_salee",
     "ratio": "16:9",
-    "hook": "Rieky sú mierne. Oceány sú slané. Tajomstvom je čas a vyparovanie."
+    "hook": "Rieky sú sladké. Oceány sú slané. Tajomstvo spočíva v čase a vyparovaní."
   },
   "sections": [
     {
@@ -28,32 +28,32 @@
     },
     {
       "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_p1",
-      "title": "Soľ je na prvom mieste zo zeme",
+      "title": "Soľ pochádza najmä zo súše",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Dážď prechádzajúci vzduchom naberá trochu oxidu uhličitého. Stáva sa mierne kyslým. Keď padá na skaly, jemne na ne útočí: toto je **chemická erózia**."
+          "text": "Dážď cestou cez vzduch pohltí trochu oxidu uhličitého. Stáva sa mierne kyslým. Keď dopadá na horniny, pomaly ich rozrušuje: to je **chemická erózia**."
         },
         {
           "type": "image",
           "asset": "ocean_sea_salt_evaporation",
           "ratio": "auto",
-          "caption": "Soľné močiare: odparovaním sa koncentruje soľ rozpustená v morskej vode."
+          "caption": "Soľné panvy: vyparovanie zahusťuje soľ rozpustenú v morskej vode."
         },
         {
           "type": "paragraph",
-          "text": "Rieky potom nesú rozpustené minerály, najmä **sodík** a **chlór**, dve zložky kuchynskej soli. Vysypú ich do mora."
+          "text": "Rieky potom odnášajú rozpustené minerály, najmä **sodík** a **chlór**, dve zložky kuchynskej soli. A privádzajú ich do mora."
         },
         {
           "type": "funFact",
-          "text": "Podmorské sopky a horúce pramene na dne oceánu tiež pridávajú soli. Hlavná časť však stále pochádza z kontinentov."
+          "text": "Soli pridávajú aj podmorské sopky a horúce pramene na dne oceánov. Väčšina však stále pochádza z kontinentov."
         }
       ]
     },
     {
       "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_p2",
-      "title": "Prečo rieky nie sú slané?",
+      "title": "Prečo rieky nie sú slané",
       "free": false,
       "blocks": [
         {
@@ -62,18 +62,18 @@
         },
         {
           "type": "paragraph",
-          "text": "V oceáne je to iné. Pod Slnkom sa voda **odparuje** a vracia sa na oblohu. Soľ, **zostáva**. Rok čo rok, storočie po storočí sa hromadí. Toto sa nazýva [[Hydrologický cyklus a akumulácia solí]]."
+          "text": "V oceáne je to inak. Na slnku sa voda **vyparuje** a stúpa späť do ovzdušia. Soľ však **zostáva**. Rok čo rok, storočie za storočím sa hromadí. Nazýva sa to [[hydrologický cyklus a akumulácia solí]]."
         }
       ]
     },
     {
       "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_p3",
-      "title": "Soľ cirkuluje aj v oceánoch",
+      "title": "Soľ poháňa aj oceánske prúdy",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Slaná voda je **hustejšia** („ťažšia“ pri rovnakom objeme) ako sladká voda. Na póloch sa pri zamrznutí povrchovej vody soľ čiastočne uvoľňuje do okolitej tekutej vody. Táto voda sa stáva ešte hustejšou a padá na dno."
+          "text": "Slaná voda je **hustejšia** („ťažšia“ pri rovnakom objeme) ako sladká voda. Keď na póloch povrchová voda zamŕza, soľ sa čiastočne vytláča do okolitej tekutej vody. Tá je potom ešte hustejšia a klesá ku dnu."
         },
         {
           "type": "paragraph",
@@ -88,11 +88,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Slanosť nie je všade rovnaká. V blízkosti rovníka môže silné vyparovanie koncentrovať soľ. V blízkosti veľkých riek alebo topiacich sa ľadových kryh je voda mäkšia. Mŕtve more je extrémny prípad: odchádza veľmi málo vody, zostáva veľa soli."
+          "text": "Slanosť nie je všade rovnaká. Pri rovníku môže silné vyparovanie soľ zahusťovať. Pri ústí veľkých riek alebo pri topiacom sa morskom ľade je voda sladšia. Mŕtve more je zasa extrémny prípad: odchádza z neho veľmi málo vody a zostáva veľa soli."
         },
         {
           "type": "takeaway",
-          "text": "Morská voda je slaná, pretože rieky prinášajú minerály z kontinentov a vyparovaním zostáva soľ v oceáne. Táto akumulácia prebieha už miliardy rokov."
+          "text": "Morská voda je slaná, pretože rieky prinášajú minerály z kontinentov a vyparovanie necháva soľ v oceáne. Toto hromadenie trvá už miliardy rokov."
         }
       ]
     }

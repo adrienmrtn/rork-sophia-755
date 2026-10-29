@@ -1,14 +1,14 @@
 {
   "id": "course_223_l_economie_circulaire",
   "title": "Obehové hospodárstvo: čo ak by odpad neexistoval?",
-  "subtitle": "Útek od všetkého, čo je na jedno použitie",
+  "subtitle": "Preč od jednorazových vecí",
   "subject": "comprendreLeMonde",
   "subcategory": "Životné prostredie a budúcnosť",
-  "description": "**extrahovať, vyrobiť, vyhodiť**: tento model vyčerpáva planétu. Obehové hospodárstvo navrhuje opak: udržať predmety a materiály v obehu čo najdlhšie.",
+  "description": "**Vyťažiť, vyrobiť, vyhodiť**: tento model vyčerpáva planétu. Obehové hospodárstvo ponúka opak: udržať veci a materiály v obehu čo najdlhšie.",
   "hero": {
     "image": "l_economie_circulaire",
     "ratio": "16:9",
-    "hook": "Čo ak odpad neexistuje? Je to stávka na ekonomický model inšpirovaný prírodou."
+    "hook": "Čo ak by odpad neexistoval? Na to stavia ekonomický model inšpirovaný prírodou."
   },
   "sections": [
     {
@@ -18,55 +18,55 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Od priemyselnej revolúcie naša ekonomika funguje jedným smerom: ťažíme zdroje, vyrábame predmety a potom ich vyhodíme. Tento model predpokladá, že zdroje sú nekonečné. nie sú."
+          "text": "Od priemyselnej revolúcie funguje naša ekonomika jedným smerom: ťažia sa suroviny, vyrábajú sa z nich predmety a tie sa potom vyhodia. Tento model predpokladá, že zdroje sú nekonečné. Nie sú."
         },
         {
           "type": "paragraph",
-          "text": "**Kruhová ekonomika** ponúka ďalšiu logiku, inšpirovanú prírodou, kde sa naozaj nič nestratí. Jeho cieľom je udržať hodnotu výrobkov a materiálov v obehu čo najdlhšie, namiesto toho, aby sa premieňali na odpad."
+          "text": "**Obehové hospodárstvo** ponúka inú logiku, inšpirovanú prírodou, v ktorej sa nič naozaj nestráca. Jeho cieľom je udržať hodnotu výrobkov a materiálov v obehu čo najdlhšie, namiesto toho, aby sa z nich stal odpad."
         }
       ]
     },
     {
       "id": "course_223_l_economie_circulaire_p1",
-      "title": "Lineárny model dosahuje svoje limity",
+      "title": "Lineárny model naráža na svoje hranice",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Moderná ekonomika bola postavená na modeli s názvom **lineárne**: extrahovať, vyrábať, vyhadzovať. Suroviny berieme z prírody, vyrábame z nich produkty a po opotrebovaní alebo z módy sa tieto produkty stávajú odpadom."
+          "text": "Moderná ekonomika stojí na takzvanom **lineárnom** modeli: vyťažiť, vyrobiť, vyhodiť. Z prírody sa berú suroviny, vyrábajú sa z nich výrobky, a keď sa opotrebujú alebo vyjdú z módy, stane sa z nich odpad."
         },
         {
           "type": "image",
           "asset": "landfill_waste_garbage_linear_economy",
           "ratio": "16:9",
-          "caption": "Model „zober, vyrob, zahoď“ predpokladá nekonečné zdroje."
+          "caption": "Model „vyťažiť, vyrobiť, vyhodiť“ predpokladá nekonečné zdroje."
         },
         {
           "type": "paragraph",
-          "text": "Tento systém je založený na myšlienke, že zdroje sú neobmedzené a že príroda dokáže absorbovať všetko znečistenie. Ale dnes globálna ekonomika spotrebuje zdroje ekvivalentné 1,7 planéty ročne. Určité kovy nevyhnutné pre digitálne technológie, ako napríklad [[Lítium]], by mohlo byť ťažké nájsť už v roku 2040."
+          "text": "Tento systém stojí na predstave, že zdroje sú neobmedzené a príroda dokáže pohltiť všetko znečistenie. Lenže svetová ekonomika dnes každý rok spotrebuje toľko zdrojov, koľko by poskytlo 1,7 planéty. Niektorých kovov nevyhnutných pre digitálne technológie, ako je [[Lítium]], môže byť už od roku 2040 nedostatok."
         },
         {
           "type": "funFact",
-          "text": "Len 9 % všetkých plastov, ktoré kedy ľudstvo vyrobilo, bolo recyklovaných. Zvyšok skončí v prírode alebo na skládke, kde môže zostať 450 rokov."
+          "text": "Recyklovalo sa len 9 % všetkého plastu, ktorý ľudstvo kedy vyrobilo. Zvyšok končí v prírode alebo na skládkach, kde môže vydržať 450 rokov."
         },
         {
           "type": "paragraph",
-          "text": "Náklady na čistenie a nakladanie s odpadom nie sú takmer nikdy zahrnuté v predajnej cene produktu. Je to skrytý náklad, ktorý každý zaplatí neskôr."
+          "text": "Náklady na upratovanie a nakladanie s odpadom takmer nikdy nie sú zahrnuté v predajnej cene výrobku. Sú to skryté náklady, ktoré neskôr zaplatia všetci."
         }
       ]
     },
     {
       "id": "course_223_l_economie_circulaire_p2",
-      "title": "Opravte pred recykláciou",
+      "title": "Najprv opraviť, potom recyklovať",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Obehové hospodárstvo ponúka niekoľko slučiek a vždy v rovnakom poradí priority: najkratšia slučka je lepšia, pretože plytvá menej energiou a materiálom. Všetko to začína **ekodizajn**, teda premýšľaním o vplyve produktu na životné prostredie už od jeho vytvorenia, výberom materiálov, ktoré sú odolné a ľahko sa demontujú."
+          "text": "Obehové hospodárstvo ponúka niekoľko slučiek, vždy v rovnakom poradí dôležitosti: najlepšia je najkratšia slučka, pretože sa pri nej plytvá najmenej energiou a materiálom. Všetko sa začína **ekodizajnom**, teda tým, že sa na vplyv výrobku na životné prostredie myslí už pri jeho navrhovaní a vyberajú sa trvácne materiály, ktoré sa dajú ľahko rozobrať."
         },
         {
           "type": "paragraph",
-          "text": "Potom prichádza **opätovné použitie** (objekt mení vlastníctvo bez toho, aby sa premenil, ako na trhu ojazdených vozidiel), potom **oprava**, ktorý predlžuje životnosť produktu. Tieto kroky priamo bojujú so [[Plánované zastarávanie]], tento postup, ktorý dobrovoľne znižuje životnosť objektu."
+          "text": "Potom prichádza **opätovné použitie** (predmet zmení majiteľa bez toho, aby sa upravoval, ako na bazári) a po ňom **oprava**, ktorá predlžuje životnosť výrobku. Tieto kroky priamo bojujú proti praktike známej ako [[plánované zastarávanie]], ktorá zámerne skracuje životnosť predmetu."
         },
         {
           "type": "image",
@@ -76,7 +76,7 @@
         },
         {
           "type": "paragraph",
-          "text": "**recyklácia** sa vyskytuje len ako posledná možnosť. Zostáva to užitočné: recyklácia hliníka spotrebuje o 95 % menej energie ako jeho extrakcia zo surovej rudy, [[Bauxit]]. Stále je to však menej efektívne ako jednoduché opätovné použitie objektu."
+          "text": "**Recyklácia** prichádza na rad až ako posledná možnosť. Aj tak je užitočná: recyklácia hliníka spotrebuje o 95 % menej energie ako jeho výroba zo surovej rudy, ktorou je [[Bauxit]]. Stále je to však menej účinné ako predmet jednoducho znova použiť."
         }
       ]
     },
@@ -87,36 +87,36 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Napriek všetkému záujmu obehové hospodárstvo čelí jednoduchému problému: lineárny model často zostáva **krátkodobo menej drahý**. Ťažba nového materiálu niekedy stojí menej ako triedenie a recyklácia zložitého odpadu, najmä ak sú suroviny lacné."
+          "text": "Napriek všetkým výhodám naráža obehové hospodárstvo na jednoduchý problém: lineárny model býva **krátkodobo lacnejší**. Vyťažiť nový materiál niekedy stojí menej ako vytriediť a recyklovať zložitý odpad, najmä keď sú suroviny lacné."
         },
         {
           "type": "image",
           "asset": "repair_right_electronics_reuse",
           "ratio": "4:3",
-          "caption": "„Právo na opravu“ vyžaduje, aby výrobcovia poskytli náhradné diely."
+          "caption": "„Právo na opravu“ ukladá výrobcom povinnosť dodávať náhradné diely."
         },
         {
           "type": "paragraph",
-          "text": "Zoči-voči tomu verejné orgány čoraz viac zasahujú. Európska únia spustila v roku 2020 plán, ktorý zavádza prísnejšie pravidlá udržateľnosti. Jednou z hlavných osí je „právo na opravu“, ktoré zaväzuje výrobcov elektronických zariadení poskytovať náhradné diely na niekoľko rokov."
+          "text": "Preto štát čoraz viac zasahuje. Európska únia v roku 2020 spustila plán, ktorý zavádza prísnejšie pravidlá trvácnosti výrobkov. Jedným z hlavných pilierov je „právo na opravu“, ktoré zaväzuje výrobcov elektroniky dodávať náhradné diely ešte niekoľko rokov."
         },
         {
           "type": "paragraph",
-          "text": "Ďalšia páka: [[Rozšírená zodpovednosť výrobcu]], vďaka ktorej výrobcovia platia za nakladanie s odpadom z ich výrobkov. To im dáva finančnú motiváciu navrhovať predmety, ktoré sú menej znečisťujúce a ľahšie sa opravujú."
+          "text": "Ďalšia páka: [[Rozšírená zodpovednosť výrobcu]], vďaka ktorej výrobcovia platia za nakladanie s odpadom zo svojich výrobkov. To ich finančne motivuje navrhovať predmety, ktoré menej znečisťujú a ľahšie sa opravujú."
         }
       ]
     },
     {
       "id": "course_223_l_economie_circulaire_p4",
-      "title": "Smerom k zdrojovej spoločnosti",
+      "title": "K spoločnosti šetrnej k zdrojom",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Obehové hospodárstvo nie je len otázkou recyklácie: je to projekt pre triezvejšiu a odolnejšiu spoločnosť. Menšou závislosťou od dovážaných surovín krajina získava aj bezpečnosť v nestabilnejšom svete."
+          "text": "Obehové hospodárstvo nie je len otázkou recyklácie: je to projekt striedmejšej a odolnejšej spoločnosti. Keď krajina menej závisí od dovozu surovín, získava aj väčšiu bezpečnosť v čoraz nestabilnejšom svete."
         },
         {
           "type": "paragraph",
-          "text": "Úspech tejto transformácie závisí aj od nás ako spotrebiteľov. Pravidlo 3R, znížte, znovu použite, recyklujte, začína prvým krokom: znížte, teda položte si otázku, či je nákup skutočne potrebný. Práve táto prvá akcia má najväčší vplyv na klímu."
+          "text": "Úspech tejto premeny závisí aj od nás, od spotrebiteľov. Pravidlo 3R, teda znížiť, znovu použiť, recyklovať, sa začína prvým krokom: znížiť, čiže zamyslieť sa, či je nákup naozaj potrebný. Práve toto prvé rozhodnutie má na klímu najväčší vplyv."
         },
         {
           "type": "funFact",
@@ -124,7 +124,7 @@
         },
         {
           "type": "takeaway",
-          "text": "Cieľom obehového hospodárstva je prelomiť cyklus „vyťažiť, vyrobiť, vyhodiť“ udržiavaním zdrojov v obehu prostredníctvom ekologického dizajnu, opráv a recyklácie, aby sa rešpektovali fyzické limity našej planéty."
+          "text": "Obehové hospodárstvo chce prelomiť cyklus „vyťažiť, vyrobiť, vyhodiť“: vďaka ekodizajnu, opravám a recyklácii udržiava zdroje v obehu, aby sa rešpektovali fyzické hranice našej planéty."
         }
       ]
     }

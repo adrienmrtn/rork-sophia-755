@@ -1,14 +1,14 @@
 {
   "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap",
-  "title": "Ako bola objavená elektrina?",
+  "title": "Ako ľudia objavili elektrinu?",
   "subtitle": "Od Franklina po Teslu",
   "subject": "sciences",
   "subcategory": "Objavy, ktoré zmenili svet",
-  "description": "Elektrina nebola vynájdená náhle. Najprv bol pozorovaný, potom pochopený a potom domestikovaný. Tu sú kľúčové kroky.",
+  "description": "Elektrinu nikto nevynašiel naraz. Ľudia ju najprv pozorovali, potom pochopili a nakoniec skrotili. Toto sú kľúčové kroky.",
   "hero": {
     "image": "la_decouverte_de_l_electricite",
     "ratio": "16:9",
-    "hook": "Od blesku k smartfónu: dve storočia na skrotenie neviditeľného."
+    "hook": "Od blesku po smartfón: dve storočia krotenia neviditeľného."
   },
   "sections": [
     {
@@ -18,43 +18,43 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Elektrina existuje v prírode: blesk, elektrická ryba, trenie. To, čo zmenilo svet, bolo naučiť sa **produkt**, **dopravy** a používať ich."
+          "text": "Elektrina existuje v prírode: blesky, elektrické ryby, trenie. Svet však zmenilo to, že sa ju ľudia naučili **vyrábať**, **prenášať** a využívať."
         },
         {
           "type": "paragraph",
-          "text": "Tento príbeh trvá viac ako dve storočia s riskantnými experimentmi a veľkou rivalitou."
+          "text": "Tento príbeh sa tiahne viac ako dve storočia a sú v ňom riskantné pokusy aj veľké súperenia."
         }
       ]
     },
     {
       "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p1",
-      "title": "Pochopenie blesku",
+      "title": "Pochopiť blesk",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "V 18. storočí **Benjamin Franklin** ukázal, že blesk je elektrický jav. Jeho experiment s púšťaním šarkana (často rozprávaný beletrizovaným spôsobom) má za cieľ dokázať, že obloha a trecí stroj hrajú rovnakou silou."
+          "text": "V 18. storočí **Benjamin Franklin** dokazuje, že blesk je elektrický jav. Jeho pokus so šarkanom (o ktorom sa často rozpráva prikrášlene) má ukázať, že na oblohe aj v trecom stroji pôsobí tá istá sila."
         },
         {
           "type": "image",
           "asset": "benjamin_franklin_kite_lightning_experiment",
           "ratio": "4:3",
-          "caption": "Franklin spája blesk a elektrinu: nebezpečná, ale základná myšlienka."
+          "caption": "Franklin spája blesk s elektrinou: nebezpečná, no prelomová myšlienka."
         },
         {
           "type": "paragraph",
-          "text": "Vynašli sme tiež **hrom**, kovovú tyč, ktorá bleskom ponúka bezpečnú cestu k zemi. Elektrina zanecháva záhadu a vstupuje do inžinierstva."
+          "text": "Vtedy vzniká aj **bleskozvod**, kovová tyč, ktorá blesku ponúkne bezpečnú cestu do zeme. Elektrina prestáva byť záhadou a stáva sa vecou inžinierov."
         }
       ]
     },
     {
       "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p2",
-      "title": "Faraday: vyrába prúd",
+      "title": "Faraday: výroba prúdu",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "V 19. storočí **Michael Faraday** ukázal, že magnet pohybujúci sa v blízkosti drôtu môže vytvoriť elektrický prúd. Toto je **priemyselné**. Bez tohto nápadu žiadne dynamo, žiadny alternátor, žiadna moderná elektráreň."
+          "text": "V 19. storočí **Michael Faraday** ukázal, že magnet, ktorý sa pohybuje blízko drôtu, môže vytvoriť elektrický prúd. Tento jav sa nazýva **indukcia**. Bez tejto myšlienky by nebolo dynamo, alternátor ani moderná elektráreň."
         },
         {
           "type": "image",
@@ -64,7 +64,7 @@
         },
         {
           "type": "funFact",
-          "text": "Faraday pochádzal zo skromných pomerov a začínal ako kníhviazač. Naučil sa vedu čítaním toho, na čo sa spoliehal."
+          "text": "Faraday pochádzal zo skromných pomerov a začínal ako kníhviazač. Vedu sa naučil tak, že čítal knihy, ktoré viazal."
         }
       ]
     },
@@ -75,13 +75,13 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Koncom 19. storočia sa stretli dva tábory. **Thomas Edison** tlačí jednosmerný prúd. **Nikola Tesla** (a spoločnosť Westinghouse) obhajujú striedavý prúd, ktorý sa ľahšie prepravuje na veľké vzdialenosti."
+          "text": "Koncom 19. storočia stoja proti sebe dva tábory. **Thomas Edison** presadzuje jednosmerný prúd. **Nikola Tesla** (a spoločnosť Westinghouse) obhajujú striedavý prúd, ktorý sa ľahšie prenáša na veľké vzdialenosti."
         },
         {
           "type": "image",
           "asset": "tesla_edison_electric_power_station",
           "ratio": "4:3",
-          "caption": "V mestách naberá na sile striedavý prúd."
+          "caption": "Pri napájaní miest víťazí striedavý prúd."
         },
         {
           "type": "paragraph",
@@ -91,16 +91,16 @@
     },
     {
       "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p4",
-      "title": "Prepojený svet",
+      "title": "Svet pod prúdom",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Elektrina dnes poháňa nemocnice, vlaky, internet, chladničky. Výzvou už nie je len ho vyrobiť, ale urobiť to čisto a spoľahlivo."
+          "text": "Elektrina dnes poháňa nemocnice, vlaky, internet, chladničky. Výzvou už nie je len ju vyrobiť, ale vyrábať ju čisto a spoľahlivo."
         },
         {
           "type": "takeaway",
-          "text": "Elektrina bola pochopená a potom domestikovaná: Franklin na blesk, Faraday na výrobu prúdu, Tesla a striedavý prúd na privádzanie do domácností. Náš každodenný život stále závisí od toho."
+          "text": "Elektrinu ľudia najprv pochopili a potom skrotili: Franklin vysvetlil blesk, Faraday prišiel na to, ako vyrábať prúd, a Tesla so striedavým prúdom ju priviedli do domácností. Náš každodenný život od nej stále závisí."
         }
       ]
     }

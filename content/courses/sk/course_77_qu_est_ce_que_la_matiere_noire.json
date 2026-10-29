@@ -4,11 +4,11 @@
   "subtitle": "Neviditeľný vesmír",
   "subject": "sciences",
   "subcategory": "Zem a vesmír",
-  "description": "Nikdy sme ju nevideli. Bez nej by sa však galaxie rozpadli. Temná hmota je neviditeľným lepidlom vesmíru.",
+  "description": "Nikto ju ešte nevidel. Bez nej by sa však galaxie rozpadli. Temná hmota je neviditeľné lepidlo vesmíru.",
   "hero": {
     "image": "qu_est_ce_que_la_matiere_noire",
     "ratio": "16:9",
-    "hook": "Predstavte si neviditeľné lepidlo, ktoré drží galaxie pohromade. Nevidíme ju, ale vidíme, čo zadržiava."
+    "hook": "Predstav si neviditeľné lepidlo, ktoré drží galaxie pohromade. Nevidno ho, ale vidno, čo drží."
   },
   "sections": [
     {
@@ -18,51 +18,51 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Cítite vietor bez toho, aby ste ho videli: konáre sa pohybujú, vlasy lietajú. **Temná hmota** je trochu podobná tej v meradle vesmíru. Nesvieti, neodráža svetlo, neblokuje žiadne lúče. „Vidíme“ to len tým, čo robí pohyb."
+          "text": "Cítiš vietor, hoci ho nevidíš: konáre sa hýbu, vlasy vejú. **Temná hmota** je niečo podobné v meradle vesmíru. Nesvieti, neodráža svetlo, nezastaví žiadny lúč. „Vidno“ ju len podľa toho, čím hýbe."
         },
         {
           "type": "paragraph",
-          "text": "Predstavovalo by to približne **27%** vesmíru, päťkrát viac ako všetka bežná hmota: hviezdy, planéty, plyn. Bez nej by sa galaxie otáčali príliš rýchlo na to, aby držali pohromade."
+          "text": "Mala by tvoriť približne **27 %** vesmíru, päťkrát viac ako všetka bežná hmota: hviezdy, planéty, plyn. Bez nej by sa galaxie otáčali príliš rýchlo a nedržali by pohromade."
         }
       ]
     },
     {
       "id": "course_77_qu_est_ce_que_la_matiere_noire_p1",
-      "title": "Hviezdy na periférii príliš rýchlo",
+      "title": "Príliš rýchle hviezdy na okraji",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "V rokoch **1970** meral americký astronóm **Vera Rubinová** rýchlosť hviezd v špirálových galaxiách. V Slnečnej sústave platí, že čím ďalej od Slnka ideme, tým pomalšie rotujeme. Očakávala rovnaký vzor."
+          "text": "Okolo roku **1970** merala americká astronómka **Vera Rubinová** rýchlosť hviezd v špirálových galaxiách. V Slnečnej sústave platí, že čím je teleso ďalej od Slnka, tým pomalšie obieha. Očakávala rovnaký vzorec."
         },
         {
           "type": "image",
           "asset": "dark_matter_galaxy_cluster",
           "ratio": "auto",
-          "caption": "Temná hmota prezrádza svoju prítomnosť prostredníctvom svojho gravitačného účinku na kopy galaxií."
+          "caption": "Temná hmota prezrádza svoju prítomnosť gravitačným pôsobením na kopy galaxií."
         },
         {
           "type": "paragraph",
-          "text": "Teraz sa hviezdy na okraji otáčali **ako rýchlo** ako tie v strede. Len s viditeľnou hmotou mali odletieť. Preto bolo potrebné mať neviditeľnú hmotu, **halo**, neviditeľný sférický obal okolo galaxie, ktorý by ich zadržal. Rotujúca galaxia [[Krivka rotácie galaxie]] sa stala vlajkovou loďou dôkazu temnej hmoty."
+          "text": "Lenže hviezdy na okraji sa otáčali **rovnako rýchlo** ako tie v strede. Keby existovala len viditeľná hmota, mali by odletieť. Musela teda existovať neviditeľná hmota, ktorá ich udrží: **halo**, neviditeľný guľovitý obal okolo galaxie. [[Krivka rotácie galaxie]] sa stala hlavným dôkazom temnej hmoty."
         },
         {
           "type": "funFact",
-          "text": "Vera Rubin musela dlho bojovať, aby ju brali vážne. Princeton jej dlho odmietal doktorát z astronómie... pretože bola žena, až do roku 1975."
+          "text": "Vera Rubinová musela dlho bojovať, aby ju brali vážne. Princeton jej až do roku 1975 odopieral doktorát z astronómie… pretože bola žena."
         }
       ]
     },
     {
       "id": "course_77_qu_est_ce_que_la_matiere_noire_p2",
-      "title": "Z čoho je vyrobený? Stále hľadáme",
+      "title": "Z čoho je zložená? Stále sa hľadá",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Nie je to obyčajná hmota, nazývaná **baryonic**, zložená z protónov a neutrónov: neinteraguje so svetlom. Prechádza Zemou a nami bez zanechania viditeľnej stopy."
+          "text": "Nie je to obyčajná, takzvaná **baryónová** hmota zložená z protónov a neutrónov: so svetlom neinteraguje. Prechádza Zemou aj nami a nezanecháva viditeľnú stopu."
         },
         {
           "type": "paragraph",
-          "text": "Dlhodobo obľúbené olovo, **WIMP**, masívna slabo interagujúca častica, by bola ťažkou časticou mimo [[štandardného modelu]] fyziky, teórie, ktorá opisuje známe elementárne častice. Detektory **liquidxeon** zakopané pod zemou dúfajú v ojedinelý šok. Momentálne bez jasného úspechu. Iní sa spoliehajú na ultraľahkú časticu **axion** alebo na gravitáciu, ktorú treba preskúmať. Medzitým temná hmota ohýba priestor a vytvára [[gravitačné šošovky]], ktoré skresľujú svetlo z masívneho objektu."
+          "text": "Dlho najsľubnejšou stopou bol **WIMP**, masívna slabo interagujúca častica: ťažká častica mimo [[štandardného modelu]] fyziky, teda teórie, ktorá opisuje známe elementárne častice. Detektory s **kvapalným xenónom** ukryté hlboko pod zemou čakajú na zriedkavú zrážku. Zatiaľ bez jasného úspechu. Iní vsádzajú na **axión**, ultraľahkú časticu, alebo na prehodnotenie gravitácie. Temná hmota medzitým zakrivuje priestor a vytvára [[gravitačné šošovky]], ktoré skresľujú svetlo v okolí masívneho objektu."
         }
       ]
     },
@@ -73,34 +73,34 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Tmavá hmota priťahuje. [[Temná energia]], objavená v roku **1998**, robí pravý opak: urýchľuje **expanziu vesmíru**, zväčšujúcu sa vzdialenosť galaxií. Galaxie sa vzďaľujú čoraz rýchlejšie, pričom gravitácia by mala pohyb spomaľovať."
+          "text": "Temná hmota priťahuje. [[Temná energia]], objavená v roku **1998**, robí opak: urýchľuje **rozpínanie vesmíru**, čiže stále väčšie vzďaľovanie galaxií. Galaxie sa od seba vzďaľujú čoraz rýchlejšie, hoci gravitácia by mala pohyb brzdiť."
         },
         {
           "type": "paragraph",
-          "text": "Vážil by približne **68%** kozmu. S temnou hmotou to robí **95%** neviditeľného vesmíru. Všetko, čo vidíme, atómy a svetlo, je len pena **5 %**."
+          "text": "Mala by tvoriť približne **68 %** vesmíru. Spolu s temnou hmotou to dáva **95 %** neviditeľného vesmíru. Všetko, čo vidíme, teda atómy a svetlo, je len tenká pena: **5 %**."
         },
         {
           "type": "funFact",
-          "text": "Vo veľmi ďalekej budúcnosti by tmavá energia mohla odtlačiť iné galaxie tak, že by ich z Mliečnej dráhy bolo možné zneviditeľniť: takmer prázdnu oblohu."
+          "text": "Vo veľmi vzdialenej budúcnosti by temná energia mohla odsunúť ostatné galaxie tak ďaleko, že by z Mliečnej dráhy neboli vidieť: obloha by bola takmer prázdna."
         }
       ]
     },
     {
       "id": "course_77_qu_est_ce_que_la_matiere_noire_p4",
-      "title": "Obrovský dôkaz, častica sa nenašla",
+      "title": "Hromada dôkazov, nepolapiteľná častica",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Na jednej strane sa hromadia nepriame dôkazy: galaktické rotácie, **kozmické mikrovlnné pozadie**, fosílne žiarenie z mladého vesmíru, vláknitá štruktúra vesmíru. Na druhej strane žiadna priama detekcia častíc."
+          "text": "Na jednej strane pribúdajú nepriame dôkazy: rotácia galaxií, **kozmické mikrovlnné pozadie** (reliktové žiarenie mladého vesmíru), vláknitá štruktúra vesmíru. Na druhej strane ani jedna priama detekcia častice."
         },
         {
           "type": "paragraph",
-          "text": "21. storočie sa bude musieť rozhodnúť: nová rodina častíc alebo nový spôsob myslenia o gravitácii. Tmavá hmota nie je len detail oblohy. Je to laboratórium, kde sa vynájde fyzika zajtrajška."
+          "text": "21. storočie bude musieť rozhodnúť: nová rodina častíc, alebo nový pohľad na gravitáciu. Temná hmota nie je len detail na oblohe. Je to laboratórium, v ktorom sa rodí fyzika zajtrajška."
         },
         {
           "type": "takeaway",
-          "text": "Temná hmota tvorí **27 %** vesmíru. Dokazuje to jeho gravitácia na hviezdy a svetlo, aj keď sme to nikdy priamo nevideli."
+          "text": "Temná hmota tvorí **27 %** vesmíru. Jej existenciu dokazuje gravitácia, ktorou pôsobí na hviezdy a svetlo, hoci ju nikto nikdy priamo nevidel."
         }
       ]
     }

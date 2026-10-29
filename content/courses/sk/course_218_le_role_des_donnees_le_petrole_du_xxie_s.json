@@ -1,14 +1,14 @@
 {
   "id": "course_218_le_role_des_donnees_le_petrole_du_xxie_s",
   "title": "Prečo sa hovorí, že dáta sú nová ropa?",
-  "subtitle": "Najcennejší digitálny zdroj",
+  "subtitle": "Najcennejšia surovina digitálneho sveta",
   "subject": "comprendreLeMonde",
   "subcategory": "Ekonomika a spoločnosť",
-  "description": "Hovorí sa, že dáta sú nový olej. Ale na rozdiel od ropy sa nikdy neminú a stávajú sa tým cennejšími, čím viac sa s nimi stretávame.",
+  "description": "Hovorí sa, že dáta sú nová ropa. No na rozdiel od ropy sa nikdy neminú a sú tým cennejšie, čím viac sa kombinujú s ďalšími.",
   "hero": {
     "image": "le_role_des_donnees",
     "ratio": "16:9",
-    "hook": "Facebook dokáže uhádnuť, že sa niekto ožení alebo sťahuje skôr, než si to uvedomí."
+    "hook": "Facebook dokáže uhádnuť, že sa niekto chystá na svadbu alebo na sťahovanie, ešte skôr, než si to ten človek sám uvedomí."
   },
   "sections": [
     {
@@ -18,30 +18,30 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Od roku 2010 sa udomácnila fráza: **údajov** by bol „ropa 21. storočia“. Myšlienka je jednoduchá: akonáhle ich algoritmy upravia, stanú sa motorom rastu a globálnej moci."
+          "text": "Po roku 2010 sa ujala jedna veta: **dáta** sú vraj „ropa 21. storočia“. Myšlienka je jednoduchá: keď ich algoritmy „rafinujú“, stanú sa motorom rastu a svetovej moci."
         },
         {
           "type": "paragraph",
-          "text": "Ale na rozdiel od ropy, zdroja, ktorý sa minie, sa údaje nikdy nespotrebujú: možno ich donekonečna kopírovať a stávajú sa cennejšími, keď sú kombinované s inými informáciami. Tu je dôvod, prečo zmenila globálnu ekonomiku."
+          "text": "No na rozdiel od ropy, zdroja, ktorý sa vyčerpá, sa dáta nikdy nespotrebujú: dajú sa donekonečna kopírovať a sú tým cennejšie, čím viac sa kombinujú s inými informáciami. Pozri sa, prečo tak zmenili svetovú ekonomiku."
         }
       ]
     },
     {
       "id": "course_218_le_role_des_donnees_le_petrole_du_xxie_s_p1",
-      "title": "Predvídať svoje správanie sami pred sebou",
+      "title": "Predpovedať naše správanie skôr než my sami",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Skutočná hodnota údajov nespočíva v jednoduchom zozname mien alebo adries, ale v ich schopnosti predpovedať naše budúce správanie. Každé vyhľadávanie, každý pohyb, každé kliknutie zanecháva stopu, ktorú technologické spoločnosti zhromažďujú, aby vytvorili veľmi presný portrét každého človeka."
+          "text": "Skutočná hodnota údajov nespočíva v obyčajnom zozname mien alebo adries, ale v ich schopnosti predpovedať naše budúce správanie. Každé vyhľadávanie, každý presun, každé kliknutie zanecháva stopu, ktorú technologické firmy zhromažďujú, aby si o každom človeku vytvorili veľmi presný obraz."
         },
         {
           "type": "funFact",
-          "text": "Facebook dokáže rozpoznať veľkú životnú zmenu, ako napríklad blížiace sa manželstvo alebo presťahovanie, ešte predtým, než si to dotyčná osoba vôbec uvedomí, a to tak, že zistí malé odchýlky v ich online zvykoch."
+          "text": "Facebook dokáže odhaliť veľkú životnú zmenu, napríklad blížiacu sa svadbu alebo sťahovanie, ešte skôr, než si ju dotyčný človek naplno uvedomí: stačí mu zachytiť drobné zmeny v jeho správaní na internete."
         },
         {
           "type": "paragraph",
-          "text": "Toto systematické využívanie nášho správania dalo podnet k tomu, čo výskumníčka Shoshana Zuboff nazýva **kapitalizmus dohľadu**: ľudia už nie sú len zákazníkmi, stávajú sa surovinou systému, ktorý predáva predpovede tomu, kto ponúkne najvyššiu cenu."
+          "text": "Z tohto systematického využívania nášho správania sa zrodilo to, čo výskumníčka Shoshana Zuboffová nazýva **kapitalizmus dohľadu**: človek už nie je len zákazník, stáva sa surovinou systému, ktorý predáva predpovede tomu, kto ponúkne najviac."
         }
       ]
     },
@@ -52,47 +52,47 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Dátová ekonomika funguje v účinnom cykle: čím viac údajov má spoločnosť, tým lepšie sú jej služby, čo priťahuje viac používateľov, ktorí generujú ešte viac údajov. Umelá inteligencia tento jav urýchlila: algoritmus [[strojové učenie]] natrénovaný na miliardách príkladov sa stáva presnejším a rýchlejšie sa zlepšuje ako konkurencia s obmedzenými zdrojmi."
+          "text": "Dátová ekonomika funguje ako kruh, ktorý sa sám posilňuje: čím viac dát firma má, tým lepšie sú jej služby, a to priťahuje viac používateľov, ktorí vytvárajú ešte viac dát. Umelá inteligencia tento jav urýchlila: algoritmus, ktorý využíva [[strojové učenie]] a je natrénovaný na miliardách príkladov, je presnejší a zlepšuje sa rýchlejšie než konkurent s obmedzenými zdrojmi."
         },
         {
           "type": "image",
           "asset": "artificial_intelligence_machine_learning_datacenter",
           "ratio": "16:9",
-          "caption": "Dátové centrá spotrebujú na spracovanie týchto masívnych tokov informácií toľko elektriny ako celé mestá."
+          "caption": "Dátové centrá pri spracovaní týchto obrovských tokov informácií spotrebujú toľko elektriny ako celé mestá."
         },
         {
           "type": "paragraph",
-          "text": "Títo giganti, [[GAFAM]] v Spojených štátoch amerických a BATX v Číne, sa už neuspokojujú s ovládnutím svojho pôvodného sektora: využívajú svoj náskok v údajoch na expanziu do zdravotníctva, financií alebo prepojených automobilov, čím blokujú prístup k inováciám v mnohých oblastiach."
+          "text": "Títo giganti, [[GAFAM]] v USA a BATX v Číne, sa už neuspokoja s ovládaním svojho pôvodného odvetvia: náskok v dátach využívajú na prienik do zdravotníctva, financií či pripojených áut a v mnohých oblastiach tak uzatvárajú prístup k inováciám."
         }
       ]
     },
     {
       "id": "course_218_le_role_des_donnees_le_petrole_du_xxie_s_p3",
-      "title": "Európa vracia úder s GDPR",
+      "title": "Európa vracia úder: GDPR",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Tvárou v tvár tejto právomoci Európska únia v roku 2018 zaviedla [[Európske nariadenie GDPR]], nariadenie, ktoré teoreticky vracia občanom právomoc nad ich vlastnými osobnými informáciami: transparentnosť, právo byť zabudnutý, povinný súhlas."
+          "text": "Proti tejto moci zaviedla Európska únia v roku 2018 [[Európske nariadenie GDPR]], ktoré občanom aspoň teoreticky vracia moc nad ich vlastnými osobnými údajmi: transparentnosť, právo na zabudnutie, povinný súhlas."
         },
         {
           "type": "paragraph",
-          "text": "Jeho sila pochádza z jeho extrateritoriality: každá spoločnosť, ktorá narába s údajmi európskych občanov, sa musí podriadiť, pod hrozbou pokuty až do výšky 4 % jej celosvetového obratu. To prinútilo gigantov ako Meta alebo Amazon prehodnotiť svoje praktiky po celom svete, čím sa Európa stala neochotným globálnym regulátorom."
+          "text": "Jeho sila spočíva v extrateritorialite: musí ho dodržiavať každá firma, ktorá narába s údajmi európskych občanov, inak jej hrozí pokuta až do výšky 4 % celosvetového obratu. To prinútilo gigantov ako Meta či Amazon zmeniť svoje postupy na celom svete, a z Európy sa tak nechtiac stal svetový regulátor."
         },
         {
           "type": "funFact",
-          "text": "Pred požiadavkou GDPR na jasnosť by priemernému človeku trvalo približne 76 pracovných dní, kým by si prečítal všetky zmluvné podmienky pre digitálne služby, ktoré používa, za jeden rok."
+          "text": "Kým GDPR neuložilo povinnosť písať zrozumiteľne, obyčajný človek by potreboval približne 76 pracovných dní, aby si prečítal podmienky používania všetkých digitálnych služieb, ktoré využije za jeden rok."
         }
       ]
     },
     {
       "id": "course_218_le_role_des_donnees_le_petrole_du_xxie_s_p4",
-      "title": "Dáta, otázka suverenity",
+      "title": "Dáta ako otázka suverenity",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Okrem ekonomiky sa údaje stali mocenským nástrojom pre samotné štáty, ktoré ich môžu použiť na monitorovanie svojej populácie alebo na usmerňovanie verejnej mienky. Krajiny, ktoré nedokážu ochrániť údaje svojich občanov, riskujú formu technologickej závislosti, ktorá je známa ako porušenie [[digitálna suverenita]]."
+          "text": "Dáta sa stali nástrojom moci nielen v ekonomike, ale aj pre samotné štáty: môžu nimi sledovať vlastné obyvateľstvo alebo usmerňovať verejnú mienku. Krajinám, ktoré nedokážu ochrániť údaje svojich občanov, hrozí istá forma technologickej závislosti, a vtedy sa hovorí, že je ohrozená ich [[digitálna suverenita]]."
         },
         {
           "type": "paragraph",
@@ -100,7 +100,7 @@
         },
         {
           "type": "takeaway",
-          "text": "Dáta sa stali strategickým majetkom, ktorého hodnota pochádza z ich schopnosti predvídať naše správanie. Táto ekonomika uprednostňuje technologických gigantov, ktorým je takmer nemožné konkurovať, na čo Európa reaguje prísnou reguláciou: GDPR."
+          "text": "Dáta sa stali strategickým aktívom, ktorého hodnota spočíva v schopnosti predpovedať naše správanie. Táto ekonomika praje technologickým gigantom, ktorým sa takmer nedá konkurovať, a Európa na to odpovedá prísnou reguláciou: GDPR."
         }
       ]
     }

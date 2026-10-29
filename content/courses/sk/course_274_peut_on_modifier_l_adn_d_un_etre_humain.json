@@ -4,12 +4,12 @@
   "subtitle": "Nožnice CRISPR",
   "subject": "sciences",
   "subcategory": "Objavy, ktoré zmenili svet",
-  "description": "Od roku 2012 dokážu „molekulárne nožnice“ prevzaté od baktérií prestrihnúť DNA presne tam, kde chceme. Prvé vyliečené choroby, možné chyby a deti na objednávku: kam až to zájde?",
+  "description": "Od roku 2012 dokážu „molekulárne nožnice“ prevzaté od baktérií prestrihnúť DNA presne na želanom mieste. Prvé vyliečené choroby, možné chyby a deti na objednávku: kam až to zájde?",
   "author": "kate-waddams",
   "hero": {
     "image": "genetics_lab_pipette_dna_samples_gloved_hands",
     "ratio": "4:3",
-    "hook": "Čo keby sa písmeno vo vašej DNA dalo opraviť ako preklep?"
+    "hook": "Čo keby sa písmeno v tvojej DNA dalo opraviť ako preklep?"
   },
   "sections": [
     {
@@ -19,11 +19,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Vlasy, oči, farba pleti, postava: každý z nás je iný. Tieto telesné znaky sú dedičstvom: každý [[gén]] je úsek DNA, ktorý sme dostali od biologických rodičov. Samozrejme, záleží aj na prostredí: na tom, čo jeme, s kým sa stretávame, čomu veríme. Svoje gény však berieme ako danosť. Niekedy by sme chceli byť vyšší alebo štíhlejší, ale žijeme s nimi a veľmi o tom nepremýšľame."
+          "text": "Vlasy, oči, farba pleti, postava: každý z nás je iný. Tieto telesné znaky sú dedičstvom: každý [[gén]] je úsek DNA, ktorý sme dostali od biologických rodičov. Samozrejme, záleží aj na prostredí: na tom, čo jeme, s kým sa stretávame, čomu veríme. Svoje gény však berieme ako danosť. Človek by niekedy chcel byť vyšší alebo štíhlejší, ale žije s nimi a veľmi o tom nepremýšľa."
         },
         {
           "type": "paragraph",
-          "text": "Čo by ste zmenili, keby ste si mohli upraviť DNA? Táto otázka už nie je teoretická. V roku **2012** americká biochemička **Jennifer Doudnová** a francúzska mikrobiologička **Emmanuelle Charpentierová** vyvinuli spôsob, ako naprogramovať bielkovinu, ktorá strihá DNA. Odteraz dokážu odstrániť nežiaduci gén, a teda teoreticky upraviť DNA človeka."
+          "text": "Keby si si mohol (mohla) upraviť DNA, čo by si zmenil(a)? Táto otázka už nie je teoretická. V roku **2012** americká biochemička **Jennifer Doudnová** a francúzska mikrobiologička **Emmanuelle Charpentierová** vyvinuli spôsob, ako naprogramovať bielkovinu, ktorá strihá DNA. Odvtedy vedia odstrániť nežiaduci gén, a teda teoreticky upraviť DNA človeka."
         }
       ]
     },
@@ -44,7 +44,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Vedci tento prirodzený obranný systém využili na iný účel. Namiesto na vírus nasmerujú enzým na presné miesto v DNA človeka. Tam strihne a cielená zmena sa stáva možnou. Niekedy sa zasiahnutý gén jednoducho vypne. Inokedy sa zmení niekoľko jeho písmen. A niekedy sa nahradí celý."
+          "text": "Vedci tento prirodzený obranný systém využili na iný účel. Namiesto na vírus nasmerujú enzým na presné miesto v DNA človeka. Tam enzým strihne a DNA sa dá zámerne zmeniť. Niekedy sa cieľový gén jednoducho vypne. Inokedy sa zmení niekoľko jeho písmen. A niekedy sa nahradí celý."
         }
       ]
     },
@@ -65,7 +65,7 @@
         },
         {
           "type": "paragraph",
-          "text": "V roku **2023** sa Spojené kráľovstvo stáva prvou krajinou, ktorá schváli liek založený na CRISPR. Zameriava sa na dve dedičné choroby krvi: jednou je [[kosáčikovitá anémia]], druhou beta-talasémia. Liečba upraví bunky, ktoré tvoria krv, aby vyrábali viac látky, ktorou je [[fetálny hemoglobín]]: forma hemoglobínu, ktorá sa bežne tvorí pred narodením."
+          "text": "V roku **2023** sa Spojené kráľovstvo stáva prvou krajinou, ktorá schváli liek založený na CRISPR. Zameriava sa na dve dedičné choroby krvi: jednou je [[kosáčikovitá anémia]], druhou beta-talasémia. Liečba upraví krvotvorné bunky tak, aby v nich vo väčšom množstve vznikal [[fetálny hemoglobín]], forma hemoglobínu, ktorá sa bežne tvorí pred narodením."
         },
         {
           "type": "funFact",
@@ -73,13 +73,13 @@
         },
         {
           "type": "paragraph",
-          "text": "A to je len začiatok. Klinické skúšky dnes testujú CRISPR proti rakovine, poruchám metabolizmu, autoimunitným ochoreniam, srdcovo-cievnym chorobám aj svalovým dystrofiám. Zoznam je dlhý. Stanú sa genetické choroby čoskoro minulosťou?"
+          "text": "A to je len začiatok. V klinických štúdiách sa dnes CRISPR testuje proti rakovine, poruchám metabolizmu, autoimunitným ochoreniam, srdcovo-cievnym chorobám aj svalovým dystrofiám. Zoznam je dlhý. Stanú sa genetické choroby čoskoro minulosťou?"
         }
       ]
     },
     {
       "id": "course_274_peut_on_modifier_l_adn_d_un_etre_humain_p3",
-      "title": "Prečo nevyliečime všetko",
+      "title": "Prečo sa všetko vyliečiť nedá",
       "free": false,
       "blocks": [
         {
@@ -99,7 +99,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Liečiť choroby, ktoré človeka ochromia alebo zabijú: prínos vidí každý. Kde však má veda stanoviť hranicu? Má sa využiť na stvorenie „dokonalého človeka“? Táto otázka je naliehavejšia než kedykoľvek predtým, odkedy vieme strihať DNA podľa ľubovôle."
+          "text": "Liečiť choroby, ktoré človeka ochromia alebo zabijú: prínos vidí každý. Kde však má veda stanoviť hranicu? Má sa využiť na stvorenie „dokonalého človeka“? Táto otázka je naliehavejšia než kedykoľvek predtým, odkedy sa DNA dá strihať podľa ľubovôle."
         },
         {
           "type": "image",

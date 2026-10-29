@@ -4,11 +4,11 @@
   "subtitle": "Smerom k uhlíkovej neutralite",
   "subject": "comprendreLeMonde",
   "subcategory": "Životné prostredie a budúcnosť",
-  "description": "Svet sa snaží nahradiť fosílne palivá čistejšími zdrojmi. Zmena taká potrebná, ako aj ťažká.",
+  "description": "Svet sa snaží nahradiť fosílne palivá čistejšími zdrojmi. Je to zmena rovnako nevyhnutná ako náročná.",
   "hero": {
     "image": "la_transition_energetique",
     "ratio": "16:9",
-    "hook": "Solárna energia sa stala najlacnejšou energiou v histórii. Zostáva len uložiť."
+    "hook": "Solárna energia sa stala najlacnejšou energiou v histórii. Zostáva ju ešte uskladniť."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Po dlhú dobu ľudstvo menilo zdroje energie výberom účinnosti: z dreva na uhlie, potom z uhlia na ropu. Súčasný prechod **Energie** je iný: po prvýkrát je vyvolaný obmedzením prežitia, zmenou klímy."
+          "text": "Ľudstvo dlho menilo zdroje energie preto, že hľadalo vyššiu účinnosť: od dreva k uhliu, potom od uhlia k rope. Dnešný **energetický prechod** je iný: po prvý raz si ho vynucuje nutnosť prežiť, teda klimatická zmena."
         },
         {
           "type": "paragraph",
-          "text": "Tento kurz skúma, ako sa svet snaží nahradiť fosílne palivá čistejšími zdrojmi a prečo je tento posun taký náročný, ako je nevyhnutný."
+          "text": "Tento kurz skúma, ako sa svet snaží nahradiť fosílne palivá čistejšími zdrojmi a prečo je táto zmena rovnako náročná ako nevyhnutná."
         }
       ]
     },
@@ -33,7 +33,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Rámec, ktorým sa dnes riadia všetky energetické politiky, sa nazýva **Parisova dohoda**, podpísaná v roku 2015. Táto zmluva zaväzuje krajiny sveta obmedziť globálne otepľovanie s konkrétnym cieľom: zostať pokiaľ možno pod 1,5 °C nad úrovňami pred priemyselnou érou. Každá ďalšia desatina stupňa zhoršuje extrémne prejavy počasia."
+          "text": "Rámec, ktorým sa dnes riadia všetky energetické politiky, sa nazýva **[[Parížska dohoda]]** a bol podpísaný v roku 2015. Táto zmluva zaväzuje krajiny sveta obmedziť globálne otepľovanie s presným cieľom: udržať ho podľa možnosti pod 1,5 °C nad úrovňou z obdobia pred priemyselnou érou. Každá ďalšia desatina stupňa zhoršuje extrémne poveternostné javy."
         },
         {
           "type": "image",
@@ -43,45 +43,45 @@
         },
         {
           "type": "paragraph",
-          "text": "Na splnenie tohto cieľa si štáty kladú za cieľ **[[uhlíková neutralita]]**: rovnováhu medzi skleníkovými plynmi emitovanými ľudskou činnosťou a ich absorpciou lesmi, pôdou, oceánmi alebo technológiami zachytávania. To predpokladá, že globálne emisie prestanú rásť pred rokom 2025 a potom v nasledujúcich rokoch prudko klesnú."
+          "text": "Aby tento cieľ splnili, štáty sa usilujú o stav, ktorý sa nazýva **[[uhlíková neutralita]]**: rovnováha medzi skleníkovými plynmi, ktoré vypúšťa ľudská činnosť, a ich pohlcovaním lesmi, pôdou, oceánmi alebo technológiami na zachytávanie. To predpokladá, že svetové emisie prestanú rásť pred rokom 2025 a v ďalších rokoch výrazne klesnú."
         },
         {
           "type": "funFact",
-          "text": "Náklady na solárnu energiu klesli medzi rokmi 2010 a 2020 o 90 %, čo je rýchlejší pokles ako takmer akákoľvek iná technológia v ekonomickej histórii. V roku 2023 sa solárna energia dokonca stane najlacnejším zdrojom elektriny, aký bol kedy vyrobený v mnohých častiach sveta."
+          "text": "Náklady na solárnu energiu klesli medzi rokmi 2010 a 2020 o 90 %, rýchlejšie než pri takmer akejkoľvek inej technológii v hospodárskych dejinách. V roku 2023 sa solárna energia v mnohých častiach sveta dokonca stala najlacnejším zdrojom elektriny, aký kedy existoval."
         }
       ]
     },
     {
       "id": "course_238_la_transition_energetique_p2",
-      "title": "Veľkolepý pokles cien",
+      "title": "Prudký pád cien",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Hlavným motorom prechodu je ekonomický. Fotovoltaická solárna, ak je satelit predsatelitný, satelit sa zapne a potom budete môcť satelit používať.**Z**, inštalovaný najmä na mori, kde sú silnejšie a pravidelnejšie vetry, tiež dosiahol skutočnú priemyselnú zrelosť. V roku 2023 bude už takmer 90 % novej elektrickej kapacity inštalovanej na celom svete pochádzať z obnoviteľných energií."
+          "text": "Hlavný motor prechodu je ekonomický. **Fotovoltická solárna energia**, kedysi vyhradená pre satelity, za pätnásť rokov zlacnela desaťnásobne vďaka technickému pokroku a úsporám z rozsahu. Aj **veterná energia**, inštalovaná najmä na mori, kde vietor fúka silnejšie a pravidelnejšie, dosiahla skutočnú priemyselnú zrelosť. V roku 2023 už takmer 90 % nových elektrických kapacít inštalovaných na svete pochádzalo z obnoviteľných zdrojov."
         },
         {
           "type": "paragraph",
-          "text": "Hlavnou výzvou zostáva: solárna a veterná energia trpí **prerušovaný**, to znamená, že nevyrábajú elektrinu nepretržite. Z toho vyplýva dôležitosť veľkokapacitných batérií, ktorých cena zaznamenala rovnaký výrazný pokles ako cena solárnych, vďaka čomu sú elektromobily čoraz konkurencieschopnejšie."
+          "text": "Zostáva však veľká výzva: solárne a veterné elektrárne trpia **prerušovanosťou**, to znamená, že nevyrábajú elektrinu nepretržite. Preto sú dôležité veľkokapacitné batérie, ktorých cena klesla rovnako prudko ako cena solárnej energie, a elektromobily sú vďaka tomu čoraz konkurencieschopnejšie."
         },
         {
           "type": "funFact",
-          "text": "Čína v súčasnosti vyrába viac ako 80 % svetových solárnych panelov a viac ako 70 % lítium-iónových batérií pre elektrické vozidlá. Energetická transformácia Západu preto do značnej miery závisí od čínskeho výrobného reťazca."
+          "text": "Čína dnes vyrába viac ako 80 % svetových solárnych panelov a viac ako 70 % lítium-iónových batérií pre elektromobily. Energetický prechod Západu preto do veľkej miery závisí od čínskeho výrobného reťazca."
         }
       ]
     },
     {
       "id": "course_238_la_transition_energetique_p3",
-      "title": "Nové prekážky: skladovanie a vzácne kovy",
+      "title": "Nové prekážky: uskladňovanie a zriedkavé kovy",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Napriek tomuto nadšeniu má prechod veľmi reálne limity. Na rozdiel od plynu alebo uhlia, ktoré je možné spaľovať podľa ľubovôle, obnoviteľné energie vyžadujú flexibilnejšie elektrické siete so skladovacími alebo záložnými zdrojmi, ako je vodík alebo jadrová energia."
+          "text": "Napriek tomuto nadšeniu naráža prechod na celkom skutočné hranice. Na rozdiel od plynu či uhlia, ktoré možno spaľovať podľa potreby, obnoviteľné zdroje potrebujú pružnejšie elektrické siete s uskladňovaním energie alebo so záložnými zdrojmi, ako je vodík či jadrová energia."
         },
         {
           "type": "paragraph",
-          "text": "Ďalšou prekážkou je posun od závislosti od ropy k závislosti od **[[prvky vzácnych zemín]]** a iných kovov, ako je lítium alebo kobalt, ktoré sú potrebné na výrobu batérií a veterných turbín. Čína kontroluje obrovský podiel globálnej rafinácie týchto materiálov, čím vytvára nové zraniteľné miesta pre Európu a Spojené štáty."
+          "text": "Ďalšou prekážkou je, že závislosť od ropy sa mení na závislosť od surovín, ako sú **[[prvky vzácnych zemín]]** a ďalšie kovy, napríklad lítium či kobalt, potrebné na výrobu batérií a veterných turbín. Čína ovláda obrovský podiel svetovej rafinácie týchto materiálov, a tak vznikajú nové slabé miesta pre Európu a Spojené štáty."
         },
         {
           "type": "paragraph",
@@ -96,19 +96,19 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Energetická budúcnosť nepochybne nie je založená na jedinom riešení, ale na zmesi viacerých. Zdá sa, že **[[Zelený vodík]]** je kľúčovou súčasťou na dekarbonizáciu najťažších odvetví, ako je výroba ocele alebo letectvo, kde samotná elektrina nestačí."
+          "text": "Energetická budúcnosť pravdepodobne nebude stáť na jedinom riešení, ale na kombinácii viacerých. **[[Zelený vodík]]** sa javí ako kľúčový dielik na dekarbonizáciu najnáročnejších odvetví, napríklad výroby ocele či letectva, kde samotná elektrina nestačí."
         },
         {
           "type": "paragraph",
-          "text": "Prechod si tiež vyžaduje **triezvosť**: menej a lepšie spotrebovávanie, zatepľovaním budov alebo znižovaním priemyselného odpadu, často zostáva najefektívnejšou a najmenej nákladnou pákou."
+          "text": "Prechod si vyžaduje aj **striedmosť**: spotrebúvať menej a lepšie, napríklad zatepľovaním budov alebo obmedzovaním priemyselného plytvania, je často najúčinnejšia a najlacnejšia páka."
         },
         {
           "type": "funFact",
-          "text": "Niektoré experimentálne batérie fungujú pomocou gravitácie: zdvíhajú ťažké betónové bloky s denným prebytkom solárnej elektriny, potom ich večer nechajú zostúpiť, aby vyrobili elektrinu prostredníctvom turbíny."
+          "text": "Niektoré pokusné batérie fungujú vďaka gravitácii: cez deň zdvíhajú ťažké betónové bloky pomocou prebytočnej solárnej elektriny a večer ich nechajú klesnúť, aby cez turbínu vyrobili elektrinu."
         },
         {
           "type": "takeaway",
-          "text": "Cena solárnej energie klesla za pätnásť rokov o 90 % a stala sa najlacnejším zdrojom elektriny v histórii. Hlavnými výzvami energetického prechodu však zostávajú skladovanie energie a dodávky vzácnych kovov."
+          "text": "Solárna energia za pätnásť rokov zlacnela o 90 % a stala sa najlacnejším zdrojom elektriny v histórii. Hlavnými výzvami energetického prechodu však zostávajú uskladňovanie energie a dodávky zriedkavých kovov."
         }
       ]
     }
