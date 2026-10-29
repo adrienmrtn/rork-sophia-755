@@ -24767,7 +24767,7 @@ enum AppLocalizable {
         "paywall.plan.perMonth": "/ mes.",
         "paywall.plan.perWeek": "/ ned.",
         "paywall.trialBadge": "3 dana besplatno",
-        "paywall.restoreRow": "Vrati · Uslovi · Privatnost",
+        "paywall.restoreRow": "Vrati kupovine · Uslovi · Privatnost",
         "paywall.restore": "Vrati",
         "paywall.quiz.title": "Ne zaboravi upravo naučeno!",
         "paywall.quiz.subtitle": "Otključaj Sophia PRO za interaktivne kvizove i bogatiju opštu kulturu.",
