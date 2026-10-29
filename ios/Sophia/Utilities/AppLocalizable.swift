@@ -17517,7 +17517,7 @@ enum AppLocalizable {
         "tiktokBlocker.settings.row.on": "Til",
         "tiktokBlocker.premium.badge": "Premium",
         "tiktokBlocker.title": "Lær noget, før du scroller",
-        "tiktokBlocker.hero.body": "TikTok forbliver låst, indtil du har taget dagens kursus på Sophia. Når kurset er klaret, er TikTok låst op indtil i morgen.",
+        "tiktokBlocker.hero.body": "TikTok forbliver låst, indtil du har taget dagens kursus på Sophia. Når kurset er gennemført, er TikTok låst op indtil i morgen.",
         "tiktokBlocker.toggle.title": "Bloker TikTok",
         "tiktokBlocker.toggle.subtitle.premium": "Kun for Premium-medlemmer",
         "tiktokBlocker.toggle.subtitle.on": "Dagens kursus låser TikTok op",
