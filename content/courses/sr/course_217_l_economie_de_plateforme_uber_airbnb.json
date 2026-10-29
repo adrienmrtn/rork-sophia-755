@@ -4,11 +4,11 @@
   "subtitle": "Kapitalizam bez fabrika",
   "subject": "comprendreLeMonde",
   "subcategory": "Ekonomija i društvo",
-  "description": "Uber, Airbnb, Deliveroo ne poseduju skoro ništa: nema automobila, nema stanova, nema zaposlenih. Kako su ove platforme postale globalni giganti?",
+  "description": "Uber, Airbnb i Deliveroo ne poseduju skoro ništa: ni automobile, ni stanove, ni zaposlene. Kako su ove platforme postale svetski giganti?",
   "hero": {
     "image": "l_economie_de_plateforme",
     "ratio": "16:9",
-    "hook": "Uber nikada nije posedovao nijedan automobil, ali je poremetio transport širom sveta."
+    "hook": "Uber nikada nije posedovao nijedan automobil, a ipak je iz korena promenio prevoz širom sveta."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Uber, Airbnb, Amazon ili Deliveroo pripadaju novoj kategoriji kompanija: **digitalna platforma**. Oni ne digitalizuju samo usluge koje su već postojale: menjaju sam način posedovanja, rada i zaštite."
+          "text": "Uber, Airbnb, Amazon ili Deliveroo pripadaju novoj vrsti kompanija: **digitalnim platformama**. One ne digitalizuju samo usluge koje su već postojale: menjaju sam način na koji se poseduje, radi i dobija zaštita."
         },
         {
           "type": "paragraph",
-          "text": "Ovaj model je izmislio novi oblik kapitalizma, koji dovodi u pitanje naš društveni ugovor. Hajde da razumemo kako to funkcioniše i zašto se o tome toliko raspravlja."
+          "text": "Ovaj model je stvorio nov oblik kapitalizma, koji dovodi u pitanje naš društveni ugovor. Pogledajmo kako funkcioniše i zašto izaziva toliko rasprava."
         }
       ]
     },
@@ -33,36 +33,36 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Tradicionalna kompanija poseduje fabrike, vozila, inventar i zapošljava zaposlene. Platforma razbija ovaj model: postaje jednostavna digitalna infrastruktura koja povezuje ponudu i potražnju, a da ništa ne proizvodi sama."
+          "text": "Klasična kompanija poseduje fabrike, vozila i zalihe, i ima zaposlene radnike. Platforma ruši taj model: postaje obična digitalna infrastruktura koja spaja ponudu i potražnju, a sama ništa ne proizvodi."
         },
         {
           "type": "paragraph",
-          "text": "Ovaj sistem je zasnovan na [[Mrežni efekat]]: što više korisnika ima platforma, ona postaje korisnija, što privlači još više korisnika. Za uslugu prevoza, što je više vozača na raspolaganju, kraće je čekanje, što privlači više kupaca, koji zauzvrat privlače više vozača. Ovaj krug skoro uvek dovodi do kvazimonopolskih situacija."
+          "text": "Ovaj sistem počiva na pojavi koja se zove [[mrežni efekat]]: što platforma ima više korisnika, to je korisnija, a to privlači još više korisnika. Kod usluge prevoza, što je više slobodnih vozača, kraće se čeka, pa dolazi više mušterija, a one zauzvrat privlače još više vozača. Ovaj krug gotovo uvek vodi do skoro monopolskog položaja."
         },
         {
           "type": "funFact",
-          "text": "Uber je potrošio milijarde dolara na istraživanje samovozećih automobila, na kraju sa ciljem da se oslobodi poslednjeg velikog troška: ljudskog vozača."
+          "text": "Uber je potrošio milijarde dolara na istraživanje samovozećih automobila, sa dugoročnim ciljem da se reši svog poslednjeg velikog troška: vozača od krvi i mesa."
         }
       ]
     },
     {
       "id": "course_217_l_economie_de_plateforme_uber_airbnb_p2",
-      "title": "Rad bez zaštite zaposlenja",
+      "title": "Rad bez zaštite radnog odnosa",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ovu tehničku inovaciju prati i spornija pravna inovacija. U [[svirka ekonomija i uberizacija]], platforma odbija status poslodavca da se predstavi kao jednostavan tehnološki posrednik, koji izbegava plaćanje socijalnih doprinosa, minimalne zarade ili plaćenog odsustva."
+          "text": "Ovu tehničku inovaciju prati i pravna inovacija, mnogo spornija. U modelu koji se zove [[Gig ekonomija i uberizacija]], platforma odbija da bude poslodavac i predstavlja se kao običan tehnološki posrednik, pa tako izbegava da plaća socijalne doprinose, minimalnu zaradu ili plaćeni odmor."
         },
         {
           "type": "image",
           "asset": "gig_economy_workers_strike_protest",
           "ratio": "16:9",
-          "caption": "Vozači i dostavljači se često klasifikuju kao samozaposleni, a ne zaposleni."
+          "caption": "Vozači i dostavljači se često vode kao samozaposleni, a ne kao zaposleni."
         },
         {
           "type": "paragraph",
-          "text": "Radnik postaje samostalan radnik koji sam snosi sve rizike: bolest, nesreću, pad potražnje. Međutim, često ostaje podložan pravilima primene (nametnute cene, rejting, sankcije), situacija koju nazivamo **algoritamska podređenost**. Suočeni sa ovim, sudovi u nekoliko zemalja počeli su da nameću [[Reklasifikacija]] ovih ugovora u stvarni radni odnos."
+          "text": "Radnik postaje samozaposlen i sam snosi sve rizike: bolest, nesreću, pad potražnje. Ipak, često i dalje mora da se pokorava pravilima aplikacije (nametnute cene, ocene, kazne), a takav položaj se zove **algoritamska podređenost**. Zato su sudovi u nekoliko zemalja počeli da nalažu meru koja se zove [[reklasifikacija]]: ti ugovori se pretvaraju u pravi radni odnos."
         }
       ]
     },
@@ -73,34 +73,34 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Uticaj ovih platformi prevazilazi svet rada: one takođe transformišu gradove. Airbnb se, omogućavajući kratkoročne turističke iznajmljivanje, takmiči sa tradicionalnim hotelima, dok istovremeno smanjuje broj smeštaja koji su dostupni stanovnicima."
+          "text": "Uticaj ovih platformi ne zaustavlja se na svetu rada: one menjaju i gradove. Airbnb, olakšavajući kratkoročno izdavanje turistima, konkuriše klasičnim hotelima, a istovremeno smanjuje broj stanova dostupnih stanovnicima."
         },
         {
           "type": "paragraph",
-          "text": "Rezultat: kirije rastu u gradskim centrima, a metropole poput Pariza ili Barselone morale su da nametnu stroga pravila, kao što su kvote za dane iznajmljivanja. Države takođe nastoje da uspostave **digitalno ne oporezivanje** tako da ove platforme plaćaju svoj deo poreza tamo gde zapravo zarađuju svoj novac."
+          "text": "Rezultat: kirije rastu u centrima gradova, a metropole poput Pariza ili Barselone morale su da uvedu stroga pravila, na primer ograničen broj dana izdavanja. Države takođe pokušavaju da uvedu **digitalno oporezivanje**, kako bi ove platforme plaćale svoj deo poreza tamo gde zaista zarađuju novac."
         },
         {
           "type": "funFact",
-          "text": "U Njujorku je stroga regulativa protiv Airbnb-a 2023. godine dovela do pada broja legalnih unosa za 80% za nekoliko meseci."
+          "text": "U Njujorku je stroga regulativa protiv Airbnb-a 2023. godine za nekoliko meseci smanjila broj legalnih oglasa za 80%."
         }
       ]
     },
     {
       "id": "course_217_l_economie_de_plateforme_uber_airbnb_p4",
-      "title": "U susret novom statusu radnika?",
+      "title": "Ka novom statusu radnika?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ekonomija platforme donela je brze i često jeftinije usluge i olakšala nekim ljudima da pronađu prihod. Ali ova efikasnost je zasnovana na slabljenju zaštite izgrađene u 20. veku."
+          "text": "Ekonomija platformi donela je brze i često jeftinije usluge, a nekim ljudima je olakšala da dođu do prihoda. Ali ta efikasnost počiva na slabljenju zaštite izgrađene u 20. veku."
         },
         {
           "type": "paragraph",
-          "text": "Trenutna debata se tiče stvaranja srednjeg statusa, između zaposlenog i samozaposlenog, sa prenosivosti prava: svaki radnik bi akumulirao socijalnu zaštitu, bez obzira na broj platformi za koje radi. Budućnost ovog modela zavisiće od sposobnosti regulatora da ga regulišu bez gušenja inovacija."
+          "text": "Danas se raspravlja o uvođenju posrednog statusa, između zaposlenog i samozaposlenog, sa prenosivim pravima: svaki radnik bi skupljao socijalnu zaštitu bez obzira na to za koliko platformi radi. Budućnost ovog modela zavisiće od toga da li će regulatori umeti da ga urede, a da ne uguše inovacije."
         },
         {
           "type": "takeaway",
-          "text": "Ekonomija platforme zasnovana je na kapitalizmu bez fabrika koji iskorišćava efekat mreže, dok svoje radnike pretvara u često nesigurne slobodnjake. Bitka za bolju socijalnu zaštitu, bez narušavanja ovog modela, tek je počela."
+          "text": "Ekonomija platformi počiva na kapitalizmu bez fabrika koji koristi mrežni efekat, a svoje radnike pretvara u samozaposlene, često u nesigurnom položaju. Borba za bolju socijalnu zaštitu, bez rušenja ovog modela, tek počinje."
         }
       ]
     }

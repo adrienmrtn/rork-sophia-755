@@ -1,14 +1,14 @@
 {
   "id": "course_226_l_ia_et_l_emploi",
-  "title": "Hoće li AI zameniti poslove znanja?",
+  "title": "Hoće li AI zameniti intelektualna zanimanja?",
   "subtitle": "Pretnja ili novi talas?",
   "subject": "comprendreLeMonde",
   "subcategory": "Životna sredina i budućnost",
-  "description": "Svaka tehnološka revolucija je stvorila strah od zapošljavanja. Ali generativna AI po prvi put utiče na **intelektualce** profesije, a ne samo na fizičku snagu.",
+  "description": "Svaka tehnološka revolucija izazivala je strah za radna mesta. Ali generativna AI prvi put pogađa **intelektualna** zanimanja, a ne samo fizički rad.",
   "hero": {
     "image": "l_ia_et_l_emploi",
     "ratio": "16:9",
-    "hook": "Mašine su već zamenile ruke. Hoće li sada zameniti mozak?"
+    "hook": "Mašine su već zamenile ruke. Hoće li sada zameniti i mozgove?"
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Da li će veštačka inteligencija uništiti milione radnih mesta ili stvoriti nova? Ovo pitanje se pojavilo sa svakim velikim tehnološkim napretkom u poslednja dva veka."
+          "text": "Da li će veštačka inteligencija uništiti milione radnih mesta ili stvoriti nova? Ovo pitanje se vraća sa svakim velikim tehnološkim napretkom već dva veka."
         },
         {
           "type": "paragraph",
-          "text": "Ovog puta, novina je na drugom mestu: AI više ne zamenjuje samo fizičku silu, već zadatke za koje smo mislili da su rezervisani za ljudski um, poput pisanja teksta ili analize datoteke. Ovaj kurs prati ovaj drevni strah i istražuje šta se danas zaista menja."
+          "text": "Ovog puta novina je drugde: AI više ne zamenjuje samo fizičku snagu, već i zadatke za koje se mislilo da su rezervisani za ljudski um, poput pisanja teksta ili analize dokumentacije. Ovaj kurs prati taj stari strah i istražuje šta se danas zaista menja."
         }
       ]
     },
@@ -33,46 +33,46 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Strah da će mašine zameniti ljude nije nov. Početkom 19. veka, [[Luditi (1811-1816)]], britanski tekstilni radnici, uništili su mehaničke razboje koji su ugrozili njihovo znanje."
+          "text": "Strah da će mašine zameniti ljude nije nov. Početkom 19. veka [[Luditi (1811-1816)]], britanski tekstilni radnici, uništavali su mehaničke razboje koji su ugrožavali njihov zanat."
         },
         {
           "type": "image",
           "asset": "luddites_industrial_revolution_machine_breaking",
           "ratio": "4:3",
-          "caption": "U 19. veku, Luditi su napali mašine koje su ugrožavale njihovu profesiju."
+          "caption": "U 19. veku Luditi su napadali mašine koje su ugrožavale njihov zanat."
         },
         {
           "type": "paragraph",
-          "text": "Svaki veliki tehnološki talas prati istu logiku: uništava određene poslove, ali stvara druge na drugim mestima. Prelazak sa poljoprivrede na industriju smanjio je udeo poljoprivrednika sa 40% na 2% radno sposobnog stanovništva u jednom veku, bez izazivanja trajne nezaposlenosti, pošto su ovi radnici prešli u nove sektore."
+          "text": "Svaki veliki tehnološki talas sledio je istu logiku: uništava neke poslove, ali stvara druge na drugim mestima. Prelazak sa poljoprivrede na industriju za jedan vek je smanjio udeo poljoprivrednika sa 40% na 2% aktivnog stanovništva, a da nije izazvao trajnu nezaposlenost, jer su ti radnici prešli u nove sektore."
         },
         {
           "type": "funFact",
-          "text": "Reč \"sabotaža\" navodno potiče od francuskih radnika koji su bacili svoje drvene cipele, sabote, u zupčanike mašina kako bi ih blokirali, iako se o tačnom poreklu reči još uvek raspravlja."
+          "text": "Reč „sabotaža“ navodno potiče od francuskih radnika koji su svoje drvene klompe, „sabo“, bacali u zupčanike mašina da bi ih zaustavili, mada se o tačnom poreklu reči još raspravlja."
         }
       ]
     },
     {
       "id": "course_226_l_ia_et_l_emploi_p2",
-      "title": "Proboj: AI napada profesije znanja",
+      "title": "Prekretnica: AI napada intelektualna zanimanja",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "[[Generativna veštačka inteligencija (AI)]] označava pravu promenu, jer više ne sledi samo unapred utvrđena pravila: stvara originalni sadržaj. Klasično računarstvo zamenilo je zadatke koji se ponavljaju kao što je unos podataka. Savremena veštačka inteligencija može pisati, analizirati ugovor, komponovati muziku ili čak pomoći u postavljanju medicinske dijagnoze."
+          "text": "[[Generativna veštačka inteligencija (AI)]] donosi pravu promenu, jer više ne sledi samo unapred zadata pravila: ona stvara originalan sadržaj. Klasično računarstvo zamenjivalo je zadatke koji se ponavljaju, poput unosa podataka. Savremena AI, s druge strane, ume da piše, analizira ugovor, komponuje muziku, pa čak i da pomogne u postavljanju medicinske dijagnoze."
         },
         {
           "type": "image",
           "asset": "AI_generative_writing_artificial_intelligence",
           "ratio": "4:3",
-          "caption": "Generativna AI se bavi zadacima za koje se smatralo da su rezervisani za ljudski um."
+          "caption": "Generativna AI preuzima zadatke za koje se mislilo da su rezervisani za ljudski um."
         },
         {
           "type": "paragraph",
-          "text": "Ova svestranost posebno razotkriva [[beli ovratnici]], profesije u uslužnom sektoru čiji je glavni radni alat analiza. Prema nedavnim izveštajima, advokati, urednici i finansijski analitičari su među profesijama koje su najviše izložene ovoj promeni."
+          "text": "Zbog te svestranosti najizloženiji su [[beli ovratnici]], zaposleni u uslužnim delatnostima čiji je glavni radni alat analiza. Prema nedavnim izveštajima, pravnici, autori tekstova i finansijski analitičari spadaju među zanimanja najizloženija ovoj promeni."
         },
         {
           "type": "funFact",
-          "text": "Godine 1950. Alan Turing je predvideo da bi mašina jednog dana mogla prevariti čoveka simulirajući njihovo razmišljanje. Neki AI su od tada zaslužni kao koautori stvarnih naučnih patenata."
+          "text": "Godine 1950. Alan Tjuring je predvideo da bi mašina jednog dana mogla da prevari čoveka oponašajući njegovo mišljenje. Od tada su neke veštačke inteligencije navedene kao koautori pravih naučnih patenata."
         }
       ]
     },
@@ -83,15 +83,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Optimističniji pogled vidi AI kao pomoćnika, a ne kao zamenu. Automatizacijom manje zanimljivih zadataka, kao što su dokumentarna istraživanja ili rezimei, profesionalcima bi se ostavilo više vremena za ljudski, etički ili strateški aspekt njihovog rada."
+          "text": "Optimističnije gledište vidi AI kao pomoćnika, a ne kao zamenu. Kad bi automatizovala najmanje zanimljive zadatke, poput pretraživanja dokumentacije ili pisanja rezimea, ostavila bi stručnjacima više vremena za ljudsku, etičku ili stratešku stranu njihovog posla."
         },
         {
           "type": "paragraph",
-          "text": "Već se pojavljuju nove profesije, kao što je [[Prompt inženjer]], koji zna kako da formuliše precizna uputstva da dobije najbolje od AI. Lekar uz pomoć veštačke inteligencije ne nestaje: on može preciznije pratiti više pacijenata."
+          "text": "Već se pojavljuju nova zanimanja, kao što je [[Prompt inženjer]], stručnjak koji ume da napiše precizna uputstva kako bi iz AI izvukao najbolje. Lekar kome pomaže AI ne nestaje: može da prati više pacijenata, i to preciznije."
         },
         {
           "type": "paragraph",
-          "text": "Tačka zabrinutosti ostaje brzina promene. Prethodne industrijske revolucije su trajale decenijama, omogućavajući vremenu da se prilagodi. Transformacija veštačke inteligencije odvija se tokom nekoliko godina, što može da stvori jaz u veštinama koji je teško zatvoriti za mnoge radnike."
+          "text": "Ono što i dalje brine jeste brzina promene. Prethodne industrijske revolucije trajale su decenijama, pa je bilo vremena za prilagođavanje. Revolucija veštačke inteligencije odvija se za nekoliko godina, što mnogim radnicima može da otvori jaz u veštinama koji je teško nadoknaditi."
         }
       ]
     },
@@ -102,19 +102,19 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ishod ove promene zavisiće pre svega od političkih izbora koji je prate. Kontinuirana obuka postaje neophodna da bi se pomoglo radnicima da razviju nove veštine."
+          "text": "Ishod ove promene zavisiće pre svega od političkih odluka koje će je pratiti. Stalno usavršavanje postaje neophodno da bi radnici mogli da steknu nove veštine."
         },
         {
           "type": "paragraph",
-          "text": "Debata o preraspodeli bogatstva stvorenog mašinama takođe se ponovo pojavljuje. Ako veštačka inteligencija omogućava da se proizvodi više sa manje radnika, kako možemo da finansiramo naše društvene sisteme? Upravo u tom kontekstu ideja [[univerzalni osnovni dohodak (UBI)]] sve više uzima maha, ne kao utopija, već kao prava sigurnosna mreža."
+          "text": "Ponovo se otvara i rasprava o raspodeli bogatstva koje stvaraju mašine. Ako AI omogućava da se proizvodi više sa manje radnika, kako finansirati sisteme socijalne zaštite? U tom kontekstu sve više pristalica stiče ideja koja nosi ime [[univerzalni osnovni dohodak (UBI)]], i to ne kao utopija, već kao prava sigurnosna mreža."
         },
         {
           "type": "paragraph",
-          "text": "Neki takođe predlažu porez na korišćenje veštačke inteligencije kao kompenzaciju za smanjenje doprinosa za zapošljavanje. AI nas na kraju gura da ponovo razmislimo o samom mestu rada u našim životima."
+          "text": "Neki predlažu i porez na korišćenje veštačke inteligencije, kao nadoknadu za manje doprinose vezane za rad. AI nas na kraju tera da preispitamo mesto samog rada u našim životima."
         },
         {
           "type": "takeaway",
-          "text": "Prethodne industrijske revolucije uništile su radna mesta dok su stvarale druge na drugim mestima. Generativna AI je prva koja istovremeno ugrožava kognitivne i kreativne zadatke, čineći adaptaciju hitnijom nego ikad."
+          "text": "Prethodne industrijske revolucije uništavale su radna mesta, ali su stvarale nova na drugim mestima. Generativna AI je prva koja istovremeno ugrožava kognitivne i kreativne zadatke, pa je prilagođavanje hitnije nego ikad."
         }
       ]
     }

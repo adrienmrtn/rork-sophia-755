@@ -1,14 +1,14 @@
 {
   "id": "course_200_re_et_la_creation_du_monde_egypte",
   "title": "Šta Ra radi svake noći da bi spasao svet?",
-  "subtitle": "Kreativno sunce",
+  "subtitle": "Sunce stvoritelj",
   "subject": "mythologie",
   "subcategory": "Druge mitologije",
-  "description": "Re, solarni bog Egipta: on stvara svet, prelazi nebo svaki dan, bori se protiv haosa noću i kažnjava ljude svojim okom.",
+  "description": "Ra, egipatski bog sunca: stvara svet, svakog dana prelazi nebo, noću se bori protiv haosa i kažnjava ljude svojim Okom.",
   "hero": {
     "image": "re_et_la_creation_du_monde_egypte",
     "ratio": "16:9",
-    "hook": "Svaka zora je pobeda. Bez Raovog čamca, svet bi ponovo pao u ništavilo."
+    "hook": "Svaka zora je pobeda. Bez Raove barke svet bi ponovo potonuo u ništavilo."
   },
   "sections": [
     {
@@ -18,61 +18,61 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**D** (ili Ra) nije samo sunce. Za Egipćane **Heliopolisa**, grada obožavanja sunca u blizini današnjeg Kaira, to je sam princip postojanja: stvaranje sveta, a zatim ga svake noći braniti od ništavila."
+          "text": "**Ra** (ili Re) nije samo sunce. Za Egipćane iz **Heliopolisa**, grada kulta sunca blizu današnjeg Kaira, on je sam princip postojanja: da stvori svet, a zatim da ga svake noći brani od ništavila."
         },
         {
           "type": "paragraph",
-          "text": "Tokom tri milenijuma, njegova figura prelazila je državnu religiju. Razumevanje Re znači razumevanje kako je Egipat razmišljao o rođenju univerzuma, krhkosti poretka i zašto je svako svitanje pobeda koju treba ponovo osvojiti."
+          "text": "Tri milenijuma njegov lik prožima državnu religiju. Razumeti boga Ra znači razumeti kako je Egipat zamišljao rađanje sveta, krhkost poretka i zašto je svaka zora pobeda koju treba iznova izvojevati."
         }
       ]
     },
     {
       "id": "course_200_re_et_la_creation_du_monde_egypte_p1",
-      "title": "Nastanak sveta: iskonski tumulus",
+      "title": "Nastanak sveta: iskonski brežuljak",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Pre vremena, postoji **imenica**: tamna, beskonačna voda, puna klica. [[Heliopolitanska kosmogonija]] opisuje pojavu **Atum**, „onog završenog“. On se stvara i pojavljuje na **Pjer Benben**, prvoj čvrstoj tački."
+          "text": "Pre vremena postoji **Nun**: mračna, beskrajna voda, puna klica. [[Heliopolitanska kosmogonija]] opisuje pojavu **Atuma**, „onoga koji je potpun“. On rađa sam sebe i izranja na **kamenu Benben**, prvoj čvrstoj tački."
         },
         {
           "type": "image",
           "asset": "atum_primordial_egyptian_creation_benben",
           "ratio": "4:3",
-          "caption": "Atum nastaje iz Imenice na kamenu Benben."
+          "caption": "Atum izranja iz Nuna na kamenu Benben."
         },
         {
           "type": "funFact",
-          "text": "U Heliopolisu su sveštenici održavali svetu pticu, **Benou** (predak feniksa), koja je trebalo da bude duša Ra i da sleti na Benben kako bi najavila novi ciklus."
+          "text": "U Heliopolisu su sveštenici čuvali svetu pticu **Benu** (pretka feniksa), za koju se verovalo da je Raova duša i da sleće na Benben da najavi novi ciklus."
         },
         {
           "type": "paragraph",
-          "text": "Sam, Atoum stvara **Kupus** (vazduh) i **Tefnut** (vlažnost), zatim **Geb** (Zemlja) i **Nut** (Nebo), odvojene da napuste životni prostor. **Oziris**, **Isis**, **Seth** i **Nephtis** su rođeni: sa Atumom, **velikim Ennead** (devet). [[Egipatski božanski sinkretizam]] će kasnije spojiti Atuma i Re u jednu stvaralačku figuru."
+          "text": "Atum sam stvara **Šua** (vazduh) i **Tefnut** (vlagu), zatim **Geba** (Zemlju) i **Nut** (Nebo), koje razdvaja da bi ostalo mesta za život. Rađaju se **Oziris**, **Izida**, **Set** i **Neftida**: zajedno sa Atumom, to je **velika Eneada** (devet bogova). [[Egipatski božanski sinkretizam]] će kasnije stopiti Atuma i boga Ra u jedan lik stvoritelja."
         }
       ]
     },
     {
       "id": "course_200_re_et_la_creation_du_monde_egypte_p2",
-      "title": "Maat protiv Isfeta: opasno putovanje čamca",
+      "title": "Maat protiv Isfeta: opasno putovanje barke",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Tokom dana Re plovi na brodu **Mandjet**. U sumrak on prelazi preko **Mesektet** i prelazi dvanaest sati [[Duat]], sveta mrtvih. Ovo nije odmor: to je rat protiv **Isfet**, nereda."
+          "text": "Danju Ra plovi u barci **Mandžet**. U sumrak prelazi u barku **Mesektet** i dvanaest sati putuje kroz svet mrtvih, koji se zove [[Duat]]. To nije odmor: to je rat protiv **Isfeta**, nereda."
         },
         {
           "type": "image",
           "asset": "ra_solar_barque_egyptian_hieroglyphics",
           "ratio": "4:3",
-          "caption": "Solarni čamac Re, dnevni motor vremena."
+          "caption": "Raova sunčeva barka, svakodnevni pokretač vremena."
         },
         {
           "type": "funFact",
-          "text": "Od 4. dinastije pa nadalje, skoro svi faraoni su u svom imenu imali „Re“: nazivali su sebe „sinovima Re“, garantima solarnog ciklusa."
+          "text": "Od 4. dinastije skoro svi faraoni nose „Ra“ u svom imenu: nazivaju sebe „sinovima Ra“, čuvarima sunčevog ciklusa."
         },
         {
           "type": "paragraph",
-          "text": "Zmija **Apopis** nastoji da prevrne čamac ili da pije vodu nebeskog Nila. **Seth** sam ponekad brani luk. Kada se Re ponovo rodi u zoru pod maskom **Khepri**, skarabeja, **Maat** (ravnoteža) ponovo pobeđuje. Pomračenje? Apopis je skoro pobedio."
+          "text": "Zmija **Apopis** pokušava da prevrne barku ili da popije vode nebeskog Nila. Ponekad i sam **Set** brani pramac. Kada se Ra u zoru ponovo rodi u liku **Heprija**, skarabeja, **Maat** (ravnoteža) još jednom pobeđuje. Pomračenje? Apopis je skoro pobedio."
         }
       ]
     },
@@ -83,36 +83,36 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Čak i Ra stari. U priči „Uništenje ljudi“, njegove kosti postaju srebrne i čovečanstvo se zaverava protiv njega. Uvređen, oslobađa svoje vatreno Oko: boginja [[Sekhmet]], krvožedna lavica."
+          "text": "Čak i Ra stari. U priči „Uništenje ljudi“ njegove kosti postaju srebro, a čovečanstvo kuje zaveru protiv njega. Uvređen, pušta svoje vatreno Oko: boginju [[Sehmet]], krvožednu lavicu."
         },
         {
           "type": "image",
           "asset": "sekhmet_hathor_lioness_egyptian_goddess",
           "ratio": "4:3",
-          "caption": "Sekhmet, Oko Re, pre nego što je ponovo postao Hator."
+          "caption": "Sehmet, Raovo Oko, pre nego što ponovo postane Hator."
         },
         {
           "type": "paragraph",
-          "text": "Masakr preti da ugasi stvaranje. Re vari hiljade tegli piva obojenog crvenim okerom, izlivenih po poljima. Sekhmet, verujući da pije krv, opija se i smiruje: postaje slatka **Hathor**. Mit objašnjava zlo i opravdava praznik pijanstva, gde su ljudi pili da bi proslavili spasenje ljudi."
+          "text": "Pokolj preti da uništi stvoreni svet. Ra naređuje da se pripreme hiljade krčaga piva obojenog crvenim okerom i da se izliju po poljima. Sehmet, misleći da pije krv, opija se i smiruje: postaje blaga **Hator**. Mit objašnjava zlo i opravdava praznik pijanstva, na kome se pilo u slavu spasenja ljudi."
         }
       ]
     },
     {
       "id": "course_200_re_et_la_creation_du_monde_egypte_p4",
-      "title": "Potomstvo i fuzija: avatar Amon-Re",
+      "title": "Nasleđe i stapanje: novi lik Amon-Ra",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "U Novom kraljevstvu, tebanski bog **Amon** spojio se sa Re: rođen je **Amon-Re**, „Kralj bogova“, nevidljivi tvorac i vidljivo sunce. Za njega se uzdižu najveća svetilišta, kao što je hram [[Karnak Temple]]."
+          "text": "U Novom kraljevstvu tebanski bog **Amon** stapa se sa bogom Ra: rađa se **Amon-Ra**, „Kralj bogova“, nevidljivi tvorac i vidljivo sunce. Za njega se podižu najveća svetilišta, kao što je [[Hram u Karnaku]]."
         },
         {
           "type": "paragraph",
-          "text": "Piramide i obelisci okamenjuju sunčeve zrake da podignu faraona ka njegovom nebeskom ocu. Čak je i reforma **Ehnaton**, koja je nametnula kult **Aton** (diska), radikalizovala ionako solarnu ideju. Ra ostaje nepremostivi simbol egipatske stabilnosti."
+          "text": "Piramide i obelisci pretvaraju sunčeve zrake u kamen da bi uzdigli faraona ka njegovom nebeskom ocu. Čak je i reforma **Ehnatona**, koji je nametnuo kult **Atona** (sunčevog diska), samo zaoštrila ideju koja je već bila solarna. Ra ostaje nenadmašni simbol egipatske stabilnosti."
         },
         {
           "type": "takeaway",
-          "text": "**D** stvara svet od Heliopolisa, brani ga svake noći u svom čamcu od **Apopis**, i kažnjava, a zatim spasava čovečanstvo preko Oka **Sekhmet**. Postavši **Amon-Re**, on vlada na vrhu Egipta faraona."
+          "text": "**Ra** stvara svet iz Heliopolisa, svake noći ga u svojoj barci brani od **Apopisa**, a čovečanstvo kažnjava pa spasava preko svog Oka, boginje **Sehmet**. Kao **Amon-Ra**, vlada na vrhu faraonskog Egipta."
         }
       ]
     }

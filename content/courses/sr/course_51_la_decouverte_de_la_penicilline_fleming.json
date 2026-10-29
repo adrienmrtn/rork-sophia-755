@@ -4,11 +4,11 @@
   "subtitle": "Fleming, 1928",
   "subject": "sciences",
   "subcategory": "Otkrića koja su promenila svet",
-  "description": "Aleksandar Fleming je 1928. primetio da je plesan ubio bakterije na posudi za kulturu. Iz ove šanse rođen je prvi veliki antibiotik.",
+  "description": "Aleksandar Fleming 1928. godine primećuje da je buđ uništila bakterije u posudi sa kulturom. Iz tog slučaja nastaće prvi veliki antibiotik.",
   "hero": {
     "image": "la_decouverte_de_la_penicilline",
     "ratio": "16:9",
-    "hook": "Zaboravljena kutija, kalup, a lek se okreće naopačke."
+    "hook": "Zaboravljena posuda, malo buđi i medicina se preokreće."
   },
   "sections": [
     {
@@ -22,28 +22,28 @@
         },
         {
           "type": "paragraph",
-          "text": "Godine **1928**. škotski lekar **Aleksandar Fleming** slučajno je otkrio supstancu sposobnu da ubije bakterije. Zvaće se **penicilin**. Ali i dalje će biti potrebne godine da od njega postane pravi lek."
+          "text": "**1928. godine** škotski lekar **Aleksandar Fleming** slučajno otkriva supstancu koja može da ubije bakterije. Zvaće se **penicilin**. Ali proći će još godine dok od nje ne nastane pravi lek."
         }
       ]
     },
     {
       "id": "course_51_la_decouverte_de_la_penicilline_fleming_p1",
-      "title": "Zaboravljena kutija",
+      "title": "Zaboravljena posuda",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Fleming proučava bakterije u Londonu. Vraćajući se sa odmora, gleda stare kutije kulture. Na jednom od njih je izrastao **kalup**. Oko nje su bakterije mrtve."
+          "text": "Fleming proučava bakterije u Londonu. Kada se vrati sa odmora, pregleda stare posude sa kulturama. Na jednoj od njih izrasla je **buđ**. Oko nje su bakterije mrtve."
         },
         {
           "type": "image",
           "asset": "alexander_fleming_penicillin_petri_dish",
           "ratio": "4:3",
-          "caption": "Fleming i ključna ideja: nešto u kalupu zaustavlja bakterije."
+          "caption": "Fleming i ključna ideja: nešto u buđi zaustavlja bakterije."
         },
         {
           "type": "paragraph",
-          "text": "Kalup pripada rodu **Penicillium**. Fleming shvata da proizvodi antibakterijsku supstancu. On to zove penicilin. Ali ne može ga dovoljno očistiti da leči bolesne."
+          "text": "Ta buđ pripada rodu **Penicillium**. Fleming shvata da ona proizvodi antibakterijsku supstancu. Naziva je penicilin. Ali ne uspeva da je dovoljno prečisti da bi lečio bolesne."
         },
         {
           "type": "funFact",
@@ -58,11 +58,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Na početku **1940** godina, u Oksfordu, **Hovard Florei** i **Ernst Chain** vratili su se na posao. Sa svojim timom su izolovali, koncentrisali i testirali penicilin na životinjama, zatim na ljudima."
+          "text": "Početkom **1940-ih**, u Oksfordu, **Hauard Flori** i **Ernst Čejn** nastavljaju taj rad. Sa svojim timom izoluju, koncentrišu i testiraju penicilin na životinjama, a zatim na ljudima."
         },
         {
           "type": "paragraph",
-          "text": "Drugi svetski rat je učinio stvari hitnim: zaraženi vojnici su morali da se leče. Penicilin prelazi iz laboratorije u strateško pitanje."
+          "text": "Drugi svetski rat čini stvar hitnom: zaražene vojnike treba lečiti. Penicilin od laboratorijskog otkrića postaje strateško pitanje."
         }
       ]
     },
@@ -79,26 +79,26 @@
         },
         {
           "type": "paragraph",
-          "text": "Za lečenje miliona ljudi potrebne su ogromne količine. Sjedinjene Države su industrijalizovale proizvodnju tokom rata. Ogromne bačve čine da buđ nestaje kao pivo."
+          "text": "Za lečenje miliona ljudi potrebne su ogromne količine. Sjedinjene Države tokom rata industrijalizuju proizvodnju. Buđ se gaji u ogromnim tankovima, kao pivo."
         },
         {
           "type": "paragraph",
-          "text": "Godine **1945**. Fleming, Florei i Chain su dobili Nobelovu nagradu. Medicina ulazi u doba antibiotika."
+          "text": "**1945. godine** Fleming, Flori i Čejn dobijaju Nobelovu nagradu. Medicina ulazi u doba antibiotika."
         }
       ]
     },
     {
       "id": "course_51_la_decouverte_de_la_penicilline_fleming_p4",
-      "title": "Senka otpora",
+      "title": "Senka otpornosti",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Danas je previše zloupotrebljenih antibiotika omogućilo određenim bakterijama da postanu **otpor**: lekovi ih više ne ubijaju. Fleming je već upozorio na ovaj rizik."
+          "text": "Danas su neke bakterije postale **otporne** jer se previše antibiotika koristi pogrešno: lekovi ih više ne ubijaju. Fleming je već upozoravao na taj rizik."
         },
         {
           "type": "takeaway",
-          "text": "Penicilin je nastao iz slučajnosti koju je primetio Fleming **1928**. godine, a zatim je postao lek zahvaljujući Floriju, Čejnu i ratnoj industriji. Spasio je milione života... sve dok ga ne istrošite."
+          "text": "Penicilin nastaje iz slučajnosti koju je Fleming primetio **1928. godine**, a zatim postaje lek zahvaljujući Floriju, Čejnu i ratnoj industriji. Spasao je milione života... pod uslovom da se ne istroši."
         }
       ]
     }

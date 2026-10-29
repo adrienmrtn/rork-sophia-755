@@ -4,11 +4,11 @@
   "subtitle": "1861-1865",
   "subject": "histoire",
   "subcategory": "Hladni rat i savremeni svet",
-  "description": "Od **1861** do **1865**, Sjedinjene Države su razdvojene: više od **620,000** mrtvih. U srcu sukoba, ropstvo, nacionalno jedinstvo i rađanje jače savezne države.",
+  "description": "Od **1861. godine** do **1865. godine** Sjedinjene Države razdire građanski rat: više od **620.000** mrtvih. U središtu sukoba su ropstvo, nacionalno jedinstvo i rađanje jače savezne države.",
   "hero": {
     "image": "la_guerre_de_secession_americaine",
     "ratio": "16:9",
-    "hook": "Najsmrtonosniji rat u američkoj istoriji, za Uniju i protiv ropstva."
+    "hook": "Najkrvaviji rat u američkoj istoriji: za Uniju i protiv ropstva."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Od **1861** do **1865**, Sjedinjene Države doživljavaju svoju najozbiljniju krizu: Građanski rat. Sever (Unija) protiv Juga (Konfederacija). Nema više mrtvih **620,000**."
+          "text": "Od **1861. godine** do **1865. godine** Sjedinjene Države prolaze kroz svoju najtežu krizu: Američki građanski rat. Sever (Unija) protiv Juga (Konfederacija). Više od **620.000** mrtvih."
         },
         {
           "type": "paragraph",
-          "text": "Konflikt pretvara mladu republiku u industrijsku silu, po cenu trajne traume nacionalnog jedinstva i ropstva."
+          "text": "Sukob pretvara mladu republiku u industrijsku silu, ali po cenu trajne traume oko nacionalnog jedinstva i ropstva."
         }
       ]
     },
@@ -33,21 +33,21 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Sever** se industrijalizuje, sa platama i protekcionizmom. **Jug** ostaje ruralna, bogata pamukom koji proizvodi **4 miliona** robova."
+          "text": "**Sever** se industrijalizuje, uz najamni rad i protekcionizam. **Jug** ostaje seoski, bogat pamukom koji proizvode **4 miliona** robova."
         },
         {
           "type": "image",
           "asset": "slaves_american_southern_plantation",
           "ratio": "4:3",
-          "caption": "Južna plantaža: Ropstvo u srcu ekonomije Konfederacije."
+          "caption": "Plantaža na Jugu: ropstvo u središtu privrede Konfederacije."
         },
         {
           "type": "paragraph",
-          "text": "Debata se odnosi i na **[[Prava država protiv savezne vlade]]**: ko odlučuje o ropstvu, lokalna država ili Vašington? Izbor **Abrahama Linkolna** (**novembra 1860. godine**), republikanca koji se protivio proširenju ropstva, bez ijednog glasa sa juga, pokreće secesiju. Sedam država je osnovalo Konfederaciju, sa **[[Jefferson Davis]]** kao predsednikom, i garantovalo ropstvo u svojim ustavima."
+          "text": "Spor se vodi i oko pitanja **[[Prava država protiv savezne vlade]]**: ko odlučuje o ropstvu, pojedinačna država ili Vašington? Izbor **Abrahama Linkolna** (**novembra 1860. godine**), republikanca koji se protivi širenju ropstva i koji nije dobio nijedan glas sa Juga, pokreće secesiju. Sedam država osniva Konfederaciju, čiji je predsednik **[[Džeferson Dejvis]]**, i u svom ustavu jemči ropstvo."
         },
         {
           "type": "funFact",
-          "text": "Pre rata se često govorilo „Sjedinjene Države *je*“ u množini. Posle toga, upotreba jednine („*Istok*“) je neophodna: nedeljiva nacija."
+          "text": "Pre rata se na engleskom često govorilo „the United States *are*“, u množini. Posle rata preovlađuje jednina („*is*“): jedna nedeljiva nacija."
         }
       ]
     },
@@ -58,11 +58,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Dana 12. aprila 1861**., Južni topovi bombarduju Fort Samter, Južna Karolina. Rat, za koji se smatralo da je kratak, postao je industrijski. U **Antietam** (**17. septembra 1862**), **23,000** žrtava za dvanaest sati: najkrvaviji dan u američkoj vojnoj istoriji."
+          "text": "**12. aprila 1861. godine** topovi Juga bombarduju Fort Samter u Južnoj Karolini. Rat za koji se verovalo da će biti kratak postaje industrijski. Kod **Antitama** (**17. septembra 1862. godine**) za dvanaest sati pada **23.000** žrtava: najkrvaviji dan u američkoj vojnoj istoriji."
         },
         {
           "type": "paragraph",
-          "text": "Neuspeh **[[Robert E. Lee]]**, vodećeg generala Konfederacije, omogućio je Linkolnu da potpiše **[[Proklamacija o emancipaciji]]** (**1. januara 1863. godine**), kojom se oslobađaju robovi u pobunjeničkim državama. Rat za Uniju postao je i rat za slobodu, što je zatvorilo vrata evropskoj podršci Jugu. **Gettisburg** (jul **1863**) razbija zamah Konfederacije."
+          "text": "Neuspeh koji doživljava **[[Robert E. Li]]**, glavni general Konfederacije, omogućava Linkolnu da potpiše proglas **[[Proklamacija o emancipaciji]]** (**1. januara 1863. godine**), kojim se oslobađaju robovi u pobunjenim državama. Rat za Uniju postaje i rat za slobodu, što Jugu zatvara vrata evropske podrške. **Getisburg** (jula **1863. godine**) lomi zamah Konfederacije."
         },
         {
           "type": "image",
@@ -74,12 +74,12 @@
     },
     {
       "id": "course_40_la_guerre_de_secession_americaine_1861_1_p3",
-      "title": "Severna pobeda, Linkolnova smrt",
+      "title": "Pobeda Severa, Linkolnova smrt",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**[[Uliks Grant]]**, glavni general Unije, vodi rat na iscrpljivanje. Njegov poručnik **Villiam Tecumseh Sherman** opustošio je Gruziju tokom svog „Marša na more“. Li se predao u **Appomattok** **9. aprila 1865**.."
+          "text": "**[[Uliks Grant]]**, vrhovni komandant vojske Unije, vodi rat iscrpljivanja. Njegova desna ruka, **Vilijam Tekumse Šerman**, pustoši Džordžiju tokom „Marša ka moru“. Li se predaje kod **Apomatoksa** **9. aprila 1865. godine**."
         },
         {
           "type": "image",
@@ -89,11 +89,11 @@
         },
         {
           "type": "paragraph",
-          "text": "Pet dana kasnije, Linkolna je ubio **Džon Vilks Gol**, južnjački glumac. Bez njega počinje **[[Rekonstrukcija]]**, period obnove Juga. U decembru **1865**, [[13. amandman]] ukida ropstvo širom zemlje."
+          "text": "Pet dana kasnije Linkolna ubija **Džon Vilks But**, glumac sa Juga. Bez njega počinje **[[Rekonstrukcija]]**, period obnove Juga. Decembra **1865. godine** [[13. amandman]] ukida ropstvo u celoj zemlji."
         },
         {
           "type": "funFact",
-          "text": "Rat je takođe ubrzao operaciju: lekari poput **Gurdona Bak** izveli su prve rekonstrukcije lica na vojnicima izobličenim Minijevim mecima."
+          "text": "Rat ubrzava i razvoj hirurgije: lekari poput **Gurdona Baka** izvode prve rekonstrukcije lica kod vojnika unakaženih Minijevim mecima."
         }
       ]
     },
@@ -104,40 +104,40 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Prema **[[Rekonstrukcija]]** (**1865-1877**), Afroamerikanci su glasali i bili su izabrani. Zatim sledi reakcija: **[[Ku Kluk Klan]]** (**1865**), organizacija belih terorista, povlačenje saveznih trupa (**1877**), zakoni o segregaciji Džima Kroua. Pravna segregacija trajala bi skoro jedan vek."
+          "text": "U periodu koji se zove **[[Rekonstrukcija]]** (**1865-1877**) Afroamerikanci glasaju i biraju se na funkcije. Zatim dolazi reakcija: **[[Kju Kluks Klan]]** (**1865**), teroristička organizacija belaca, povlačenje saveznih trupa (**1877**), segregacioni zakoni Džima Kroua. Zakonska segregacija trajaće skoro jedan vek."
         },
         {
           "type": "paragraph",
-          "text": "Na mapi, ujedinjena nacija bez zakonskog ropstva. U stvari, duboka rasna podela. I oruđe buduće svetske sile: teška industrija, železnica, jaka savezna država."
+          "text": "Na mapi: ujedinjena nacija bez zakonskog ropstva. U stvarnosti: duboka rasna podela. I oruđa buduće svetske sile: teška industrija, železnice, jaka savezna država."
         },
         {
           "type": "timeline",
           "events": [
             {
               "date": "1860",
-              "title": "Linkoln izbori",
-              "detail": "Početak secesija."
+              "title": "Linkolnov izbor",
+              "detail": "Početak otcepljenja država."
             },
             {
               "date": "1861",
-              "title": "Fort Sumter",
+              "title": "Fort Samter",
               "detail": "Početak rata."
             },
             {
               "date": "1863",
               "title": "Emancipacija",
-              "detail": "Gettisburg Proclamation and Turning Point."
+              "detail": "Proklamacija i preokret kod Getisburga."
             },
             {
               "date": "1865",
-              "title": "Appomattok i 13. amandman",
+              "title": "Apomatoks i 13. amandman",
               "detail": "Kraj borbi i ustavno ukidanje."
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "Građanski rat (**1861-1865**) ujedinio je Sjedinjene Države i ukinuo ropstvo, po cenu **620.000** smrti, dok je ostavio rasnu podelu koju bi zakoni Džima Kroua produžili."
+          "text": "Američki građanski rat (**1861-1865**) ujedinjuje Sjedinjene Države i ukida ropstvo, po cenu **620.000** mrtvih, ali ostavlja rasnu podelu koju će zakoni Džima Kroua produžiti."
         }
       ]
     }

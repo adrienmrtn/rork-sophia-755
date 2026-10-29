@@ -4,11 +4,11 @@
   "subtitle": "Od 2009. godine",
   "subject": "comprendreLeMonde",
   "subcategory": "Životna sredina i budućnost",
-  "description": "**blockchain** je izmislio knjigu u koju niko ne može sam da menja, otvarajući put novoj digitalnoj ekonomiji.",
+  "description": "**Blokčejn** je doneo registar koji niko ne može sam da falsifikuje i otvorio put novoj digitalnoj ekonomiji.",
   "hero": {
     "image": "la_blockchain_et_les_cryptomonnaies",
     "ratio": "16:9",
-    "hook": "Knjiga računa koju niko ne poseduje, ali koju hiljade računara prate zajedno."
+    "hook": "Knjiga računa koju niko ne poseduje, ali je zajedno nadziru hiljade računara."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Zamislite knjigu računa koju niko ne poseduje, ali da se hiljade računara ažurira u isto vreme, širom sveta, i koju je skoro nemoguće falsifikovati. Ovo je početna ideja **blockchain**, tehnologije koja se često svodi na svoju prvu primenu, **Bitcoin**."
+          "text": "Zamisli knjigu računa koju niko ne poseduje sam, ali koju hiljade računara istovremeno ažuriraju, širom sveta, i koju je gotovo nemoguće falsifikovati. To je polazna ideja **blokčejna**, tehnologije koja se često svodi na svoju prvu primenu, **bitkoin**."
         },
         {
           "type": "paragraph",
-          "text": "Omogućavajući razmenu vrednosti bez prolaska kroz banku, ovaj pronalazak je pokrenuo čitavu paralelnu ekonomiju, između obećanja finansijske slobode i oštrih kritika njene cene energije."
+          "text": "Pošto omogućava razmenu vrednosti bez posredstva banke, ovaj pronalazak je pokrenuo čitavu paralelnu ekonomiju, koja obećava finansijsku slobodu, ali trpi i oštre kritike zbog potrošnje energije."
         }
       ]
     },
@@ -33,26 +33,26 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "U srcu blokčejna je jednostavna ideja: **distribuirana knjiga**. Za razliku od banke koja svoje račune drži na sopstvenim serverima, blokčejn se oslanja na mrežu [[vršnjaci]], odnosno na hiljade računara od kojih svaki čuva identičnu kopiju svih transakcija."
+          "text": "U srcu blokčejna je jednostavna ideja: **distribuirani registar**. Za razliku od banke, koja svoje račune drži na sopstvenim serverima, blokčejn se oslanja na mrežu u kojoj su svi učesnici ravnopravni [[ravnopravni čvorovi]]: hiljade računara od kojih svaki čuva identičnu kopiju svih transakcija."
         },
         {
           "type": "funFact",
-          "text": "Prvi blok bitkoin blok lanca, nazvan „blok geneze“, sadržao je skrivenu poruku: naslovnu stranu britanskih novina 3. januara 2009, koja je govorila o državnoj pomoći bankama. Politička klima od njenog tvorca."
+          "text": "Prvi blok u bitkoin blokčejnu, nazvan „blok geneze“, sadržao je skrivenu poruku: naslov sa naslovne strane britanskih novina od 3. januara 2009. godine, koji je govorio o tome kako država spasava banke. Bio je to politički mig njegovog tvorca."
         },
         {
           "type": "paragraph",
-          "text": "Svaku transakciju prvo verifikuje mreža, a zatim se grupiše sa drugima u **blok**. Ovaj blok se zatim povezuje sa prethodnim zahvaljujući matematičkom proračunu pod nazivom [[heširanje]]: neka vrsta jedinstvenog digitalnog otiska prsta. Rezultat je neprekinuti lanac blokova, pa otuda i naziv blockchain. Da biste izmenili jednu staru transakciju, morali biste ponovo da izračunate ceo lanac i ubedite više od polovine mreže, što je skoro nemoguće u velikim razmerama."
+          "text": "Svaku transakciju prvo proverava mreža, a zatim se ona zajedno sa drugima grupiše u **blok**. Taj blok se potom povezuje sa prethodnim pomoću matematičkog proračuna koji se zove [[heširanje]]: to je neka vrsta jedinstvenog digitalnog otiska. Rezultat je neprekinut lanac blokova, otuda i naziv blokčejn. Za izmenu samo jedne stare transakcije trebalo bi ponovo izračunati ceo lanac i ubediti više od polovine mreže, što je u velikim razmerama gotovo nemoguće."
         }
       ]
     },
     {
       "id": "course_232_la_blockchain_et_les_cryptomonnaies_p2",
-      "title": "Bitcoin i Ethereum: od plaćanja do programa",
+      "title": "Bitkoin i Ethereum: od plaćanja do programa",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Bitcoin**, koji je **2009**. godine pokrenula anonimna osoba (ili grupa) pod imenom [[Satoshi Nakamoto]], dokazao je da monetarni sistem može da funkcioniše bez centralne banke. Da bi garantovao njegovu oskudicu, njen tvorac je postavio strogu granicu: nikada više od **21 milion bitkoina** ne može postojati, kao da je zlato ograničeno na Zemlji."
+          "text": "**Bitkoin**, koji je **2009. godine** pokrenula osoba (ili grupa) koja je ostala anonimna pod imenom [[Satoshi Nakamoto]], dokazao je da monetarni sistem može da funkcioniše bez centralne banke. Da bi obezbedio njegovu retkost, tvorac je postavio strogu granicu: nikada neće moći da postoji više od **21 milion bitkoina**, pomalo kao što je i količina zlata na Zemlji ograničena."
         },
         {
           "type": "image",
@@ -62,26 +62,26 @@
         },
         {
           "type": "paragraph",
-          "text": "Godine 2015. pojavila se druga generacija blokčejna sa **Ethereum**. Njegova sjajna inovacija: **pametni ugovori**. To su programi koji se pokreću automatski čim se ispuni neki uslov, na primer automatska nadoknada u slučaju kašnjenja voza, bez potrebe za prolaskom preko posrednika."
+          "text": "Godine 2015. pojavila se druga generacija blokčejna: **Ethereum**. Njegova velika novina su **pametni ugovori**: programi koji se automatski izvršavaju čim se ispuni neki uslov, na primer automatska nadoknada kada voz kasni, bez ikakvog posrednika."
         }
       ]
     },
     {
       "id": "course_232_la_blockchain_et_les_cryptomonnaies_p3",
-      "title": "Kritičari: energija i nestabilnost",
+      "title": "Kritike: energija i nestabilnost",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Uspeh kriptovaluta nije bez problema. Najviše se raspravlja o **energetska potrošnja** Bitcoin mreže: njena godišnja potrošnja električne energije danas je uporediva sa potrošnjom cele zemlje poput Argentine."
+          "text": "Uspeh kriptovaluta ne ide bez problema. Najviše se raspravlja o tome kolika je **potrošnja energije** bitkoin mreže: ona danas godišnje troši količinu struje uporedivu sa potrošnjom cele jedne zemlje, kao što je Argentina."
         },
         {
           "type": "paragraph",
-          "text": "Tržište takođe pati od ekstremne **volatilnost**: cena bitkoina može da varira za 10 ili 20% za nekoliko sati. Ova nestabilnost trenutno sprečava da postane prava svakodnevna valuta."
+          "text": "Tržište muči i ekstremna **volatilnost**: cena bitkoina može da se promeni za 10 ili 20% za nekoliko sati. Zbog te nestabilnosti bitkoin za sada ne može da postane prava valuta za svakodnevnu upotrebu."
         },
         {
           "type": "paragraph",
-          "text": "Konačno, relativna anonimnost transakcija se ponekad koristila za nezakonite aktivnosti. Ali blokčejn zapravo ostaje potpuno transparentan: vlasti mogu da prate tok novca, što otežava pranje nego u klasičnom gotovinskom sistemu."
+          "text": "Najzad, relativna anonimnost transakcija ponekad je korišćena za nezakonite aktivnosti. Ali blokčejn je zapravo potpuno transparentan: vlasti mogu da prate tokove novca, pa je pranje novca teže nego u klasičnom sistemu sa gotovinom."
         }
       ]
     },
@@ -92,19 +92,19 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Danas kriptovalute napuštaju margine kako bi ušle u tradicionalne finansije. Velike banke sada nude da drže digitalna sredstva za svoje klijente, a nekoliko država razmatra stvaranje sopstvene zvanične digitalne valute, **[[CBDC]]** (digitalna valuta centralne banke)."
+          "text": "Danas kriptovalute izlaze sa margina i ulaze u tradicionalne finansije. Velike banke sada nude čuvanje digitalne imovine za svoje klijente, a nekoliko država razmišlja o uvođenju sopstvene zvanične digitalne valute, **[[CBDC]]** (digitalna valuta centralne banke)."
         },
         {
           "type": "paragraph",
-          "text": "**stablecoins**, kriptovalute čija je cena stabilizovana zahvaljujući rezervi dolara ili evra, služe kao most između dva sveta. Pored finansija, sektori kao što su luksuz (za borbu protiv falsifikovanja), logistika (za praćenje kontejnera) ili zdravstvo (za obezbeđenje medicinske dokumentacije) takođe usvajaju blokčejn zbog njegove pouzdanosti."
+          "text": "**Stejblkoini**, kriptovalute čija je cena stabilna zahvaljujući rezervi dolara ili evra, služe kao most između ta dva sveta. Osim u finansijama, blokčejn zbog njegove pouzdanosti usvajaju i oblasti kao što su luksuzna roba (u borbi protiv falsifikata), logistika (za praćenje kontejnera) ili zdravstvo (za zaštitu medicinske dokumentacije)."
         },
         {
           "type": "funFact",
-          "text": "El Salvador je 2021. godine postao prva zemlja na svetu koja je usvojila Bitcoin kao zakonsko sredstvo plaćanja, pored američkog dolara, zahtevajući od svakog trgovca da ga prihvati ako ima tehnička sredstva."
+          "text": "El Salvador je 2021. godine postao prva zemlja na svetu koja je bitkoin usvojila kao zakonsko sredstvo plaćanja, uz američki dolar, i obavezala svakog trgovca da ga prihvata ako za to ima tehničke uslove."
         },
         {
           "type": "takeaway",
-          "text": "Stvoren 2009. godine, blokčejn je zajednička knjiga koja se skoro nemoguće falsifikuje, čija je maksimalna ponuda bitkoina postavljena na 21 milion jedinica. Postavio je temelje nove digitalne ekonomije danas u punoj institucionalnoj integraciji."
+          "text": "Nastao 2009. godine, blokčejn je zajednički registar koji je gotovo nemoguće falsifikovati, a najveća moguća količina bitkoina ograničena je na 21 milion jedinica. On je postavio temelje nove digitalne ekonomije, koju institucije danas sve više prihvataju."
         }
       ]
     }

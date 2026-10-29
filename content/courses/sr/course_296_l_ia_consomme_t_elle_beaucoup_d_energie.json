@@ -9,7 +9,7 @@
   "hero": {
     "image": "data_center_server_racks_aisle_blue_lights",
     "ratio": "4:3",
-    "hook": "Veštačka inteligencija liči na softver, ali svaki odgovor nastaje u sasvim stvarnoj zgradi, priključenoj na istu mrežu kao i vaša kuća."
+    "hook": "Veštačka inteligencija liči na softver, ali svaki odgovor nastaje u sasvim stvarnoj zgradi, priključenoj na istu mrežu kao i tvoja kuća."
   },
   "sections": [
     {
@@ -19,7 +19,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Postavite pitanje veštačkoj inteligenciji na mreži i odgovor se pojavi za nekoliko sekundi. Ali sam posao se ne obavlja u vašem telefonu. Obavlja se u zgradi koja se zove [[centar podataka]], punoj mašina koje obrađuju i čuvaju informacije. Te mašine neprekidno troše struju, iako ih niko ne vidi."
+          "text": "Postaviš pitanje veštačkoj inteligenciji na mreži i odgovor se pojavi za nekoliko sekundi. Sam posao se, međutim, ne obavlja u tvom telefonu. Obavlja ga [[centar podataka]], zgrada puna mašina koje obrađuju i čuvaju informacije. Te mašine neprekidno troše struju, iako ih niko ne vidi."
         },
         {
           "type": "paragraph",
@@ -34,7 +34,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Jedan [[server]] je računar koji obrađuje podatke i pokreće usluge na mreži. U centru podataka serveri obavljaju najveći deo računanja, pa su zato i najveći potrošači struje. Ako se račun savremenog centra podataka raščlani, serveri u proseku odnose **60%**. Ta brojka važi za centre podataka uopšte, a ne samo za postrojenja veštačke inteligencije."
+          "text": "Računar koji obrađuje podatke i pokreće usluge na mreži zove se [[server]]. U centru podataka serveri obavljaju najveći deo računanja, pa su zato i najveći potrošači struje. Ako se račun savremenog centra podataka raščlani, serveri u proseku odnose **60%**. Ta brojka važi za centre podataka uopšte, a ne samo za postrojenja veštačke inteligencije."
         },
         {
           "type": "image",
@@ -54,22 +54,22 @@
     },
     {
       "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie_p2",
-      "title": "Prvo trening, zatim odgovori",
+      "title": "Prvo treniranje, pa odgovori",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Pre nego što može da odgovara, usluzi veštačke inteligencije potreban je model: sistem koji je iz primera naučio pravilnosti. Njegovo stvaranje prolazi kroz fazu koja se zove [[treniranje]], kada računari pretresaju ogromne količine podataka. Taj posao može dugo da zaposli veoma moćne mašine."
+          "text": "Pre nego što može da odgovara, usluzi veštačke inteligencije potreban je model: sistem koji je iz primera naučio pravilnosti. Da bi nastao, prolazi kroz fazu koja se zove [[treniranje]], u kojoj računari pretresaju ogromne količine podataka. Taj posao može dugo da zaposli veoma moćne mašine."
         },
         {
           "type": "image",
           "asset": "frontier_supercomputer_oak_ridge_cabinets",
           "ratio": "4:3",
-          "caption": "Ormari NASA-inog superračunara Kolumbija: mašine one vrste koja se koristi za treniranje modela."
+          "caption": "Ormari NASA-inog superračunara Kolumbija: upravo se takve mašine koriste za treniranje modela."
         },
         {
           "type": "paragraph",
-          "text": "Kada je model istreniran, počinje drugi posao, a to je [[inferencija]]: proračun koji daje odgovor na vaš zahtev. Treniranje ne počinje iznova u celosti pri svakom pitanju, dok se inferencija ponavlja pri svakom upitu. Šta s vremenom više opterećuje? To zavisi od toga kako je usluga izgrađena i koliko je ljudi koristi. Veoma posećena usluga drži svoje računare zauzetim odgovaranjem, čak i između dve velike faze treniranja."
+          "text": "Kada je model istreniran, počinje drugi posao. Zove se [[inferencija]]: to je proračun koji daje odgovor na tvoj zahtev. Treniranje ne počinje iznova u celosti pri svakom pitanju, dok se inferencija ponavlja pri svakom upitu. Šta s vremenom više troši? To zavisi od toga kako je usluga izgrađena i koliko je ljudi koristi. Veoma posećena usluga drži svoje računare zauzete odgovaranjem, čak i između dve velike faze treniranja."
         }
       ]
     },
@@ -80,7 +80,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Koliko struje troši jedan tekstualni upit? Objavljene procene ne daju isti odgovor. Gugl, merenjem svoje usluge u radu, smešta svoj medijalni tekstualni upit na **0,24 Wh**. Jedinica [[vat-čas]] (Wh) meri količinu energije. Druga studija, pak, dolazi do medijane od **0,31 Wh**, pri čemu se srednja polovina njenih standardnih upita kreće između **0,16 i 0,60 Wh**."
+          "text": "Koliko struje troši jedan tekstualni upit? Objavljene procene ne daju isti odgovor. Gugl meri svoju uslugu dok radi i dobija medijanu od **0,24 Wh** po tekstualnom upitu. Jedinica [[vat-čas]] (Wh) meri količinu energije. Druga studija, pak, dolazi do medijane od **0,31 Wh**, pri čemu se srednja polovina njenih standardnih upita kreće između **0,16 i 0,60 Wh**."
         },
         {
           "type": "paragraph",
@@ -88,7 +88,7 @@
         },
         {
           "type": "funFact",
-          "text": "U istoj studiji upit sa dugim rezonovanjem, u kom model detaljno izlaže korake pre zaključka, dostiže medijanu od 3,91 Wh, više od deset puta više od standardnog upita."
+          "text": "U istoj studiji upit sa dugim rezonovanjem, u kom model detaljno izlaže korake pre zaključka, dostiže medijanu od 3,91 Wh, preko deset puta više od standardnog upita."
         }
       ]
     },
@@ -99,7 +99,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ono što zovemo [[električna mreža]] jeste splet vodova koji prenosi struju od elektrana do kuća i preduzeća. Velika postrojenja veštačke inteligencije priključuju se na tu istu mrežu. Da bi dočarala razmere, IEA poredi godišnju potrošnju jednog centra podataka namenjenog veštačkoj inteligenciji, zgrade izgrađene pre svega za pokretanje takvih usluga, sa potrošnjom oko **100.000 domaćinstava**."
+          "text": "Splet vodova koji prenosi struju od elektrana do kuća i preduzeća zove se [[električna mreža]]. Velika postrojenja veštačke inteligencije priključuju se na tu istu mrežu. Da bi dočarala razmere, IEA poredi godišnju potrošnju jednog centra podataka namenjenog veštačkoj inteligenciji, zgrade izgrađene pre svega za pokretanje takvih usluga, sa potrošnjom oko **100.000 domaćinstava**."
         },
         {
           "type": "image",
@@ -109,7 +109,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Ta postrojenja uz to imaju sklonost da se grupišu na istim mestima. Kada više velikih lokacija traži struju u istoj oblasti, one dele lokalnu mrežu, pa postojeće vodove ponekad treba ojačati. Region koji ima rezervne kapacitete lakše prima nove lokacije od regiona koji je već blizu svojih granica. Mesto na kom se gradi infrastruktura veštačke inteligencije zato nešto menja i za njene susede."
+          "text": "Ta postrojenja uz to imaju sklonost da se grupišu na istim mestima. Kada više velikih lokacija traži struju u istoj oblasti, one dele lokalnu mrežu, pa postojeće vodove ponekad treba ojačati. Region koji ima rezervne kapacitete lakše prima nove lokacije od regiona koji je već blizu granice svojih mogućnosti. Mesto na kom se gradi infrastruktura veštačke inteligencije zato nešto menja i za one koji žive u blizini."
         },
         {
           "type": "takeaway",
