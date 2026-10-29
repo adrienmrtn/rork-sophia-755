@@ -4,11 +4,11 @@
   "subtitle": "Oceaner",
   "subject": "sciences",
   "subcategory": "Hverdagen forklaret",
-  "description": "En liter havvand indeholder cirka 35 gram salt. Dette salt har akkumuleret over milliarder af år. Her er hvor det kommer fra.",
+  "description": "En liter havvand indeholder cirka 35 gram salt. Saltet har hobet sig op gennem milliarder af år. Her er, hvor det kommer fra.",
   "hero": {
     "image": "pourquoi_l_eau_de_mer_est_salee",
     "ratio": "16:9",
-    "hook": "Floderne er blide. Havene er salte. Hemmeligheden er tid og fordampning."
+    "hook": "I floderne er vandet fersk. Havene er salte. Hemmeligheden er tid og fordampning."
   },
   "sections": [
     {
@@ -18,32 +18,32 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Havene dækker mere end **70%** af planeten. I gennemsnit indeholder en liter havvand cirka **35 gram salt**. Dette er ikke en tilfældighed: det er resultatet af en meget lang proces."
+          "text": "Havene dækker mere end **70 %** af planeten. I gennemsnit indeholder en liter havvand cirka **35 gram salt**. Det er ikke tilfældigt: det er resultatet af en meget lang proces."
         },
         {
           "type": "paragraph",
-          "text": "Salt \"falder\" ikke fra himlen færdiglavet. Den rejser fra kontinenterne og bliver derefter fanget i havet."
+          "text": "Saltet »falder« ikke færdigt ned fra himlen. Det rejser fra kontinenterne og bliver derefter fanget i havet."
         }
       ]
     },
     {
       "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_p1",
-      "title": "Salt kommer først fra jorden",
+      "title": "Saltet kommer først fra land",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Regn, der passerer gennem luften, optager lidt kuldioxid. Det bliver let surt. Når den falder på klipperne, angriber den dem forsigtigt: dette er **kemisk erosion**."
+          "text": "På vej gennem luften optager regnen lidt kuldioxid. Den bliver let sur. Når den falder på klipperne, tærer den langsomt på dem: det er **kemisk forvitring**."
         },
         {
           "type": "image",
           "asset": "ocean_sea_salt_evaporation",
           "ratio": "auto",
-          "caption": "strandenge: fordampning koncentrerer saltet opløst i havvand."
+          "caption": "Saltpander: fordampningen koncentrerer det salt, der er opløst i havvandet."
         },
         {
           "type": "paragraph",
-          "text": "Floderne bærer derefter opløste mineraler, især **natrium** og **klor**, de to ingredienser i bordsalt. De dumper dem i havet."
+          "text": "Floderne fører så opløste mineraler med sig, især **natrium** og **klor**, de to bestanddele i bordsalt. De afleverer dem i havet."
         },
         {
           "type": "funFact",
@@ -62,33 +62,33 @@
         },
         {
           "type": "paragraph",
-          "text": "I havet er det anderledes. Under solen fordamper vandet og vender tilbage til himlen. Saltet, **remains**. År efter år, århundrede efter århundrede akkumuleres det. Dette kaldes [[Hydrologisk kredsløb og saltophobning]]."
+          "text": "I havet er det anderledes. I solen **fordamper** vandet og stiger op mod himlen igen. Saltet derimod **bliver tilbage**. År efter år, århundrede efter århundrede hober det sig op. Det kaldes [[hydrologisk kredsløb og saltophobning]]."
         }
       ]
     },
     {
       "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_p3",
-      "title": "Salt cirkulerer også havene",
+      "title": "Saltet sætter også havene i bevægelse",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Saltvand er mere **tæt** (\"tyngre\" for samme volumen) end ferskvand. Ved polerne, når overfladevand fryser, frigives salt delvist til det omgivende flydende vand. Dette vand bliver endnu tættere og styrter til bunds."
+          "text": "Saltvand er **tættere** (»tungere« for samme rumfang) end ferskvand. Ved polerne, når overfladevandet fryser, presses en del af saltet ud i det flydende vand omkring isen. Det vand bliver endnu tættere og synker ned mod bunden."
         },
         {
           "type": "paragraph",
-          "text": "Denne bevægelse hjælper med at drive store havstrømme. Disse strømme transporterer varme og næringsstoffer rundt om i verden. Salt er ikke kun et spørgsmål om smag: det er en del af planetens klimamotor."
+          "text": "Denne bevægelse er med til at drive store havstrømme. Strømmene fører varme og næringsstoffer rundt om kloden. Salt handler ikke kun om smag: det er en del af planetens klimamotor."
         }
       ]
     },
     {
       "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_p4",
-      "title": "Ikke alle steder det samme salt",
+      "title": "Ikke lige salt overalt",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Saltholdigheden er ikke den samme overalt. Nær ækvator kan stærk fordampning koncentrere salt. Nær store floder eller smeltende isflager er vandet blødere. Det Døde Hav er et ekstremt tilfælde: meget lidt vand efterlader, meget salt er tilbage."
+          "text": "Saltholdigheden er ikke den samme overalt. Nær ækvator kan den kraftige fordampning koncentrere saltet. Nær store floder eller smeltende havis er vandet mindre salt. Det Døde Hav er et ekstremt tilfælde: meget lidt vand løber ud, og meget salt bliver tilbage."
         },
         {
           "type": "takeaway",

@@ -1,14 +1,14 @@
 {
   "id": "course_223_l_economie_circulaire",
   "title": "Cirkulær økonomi: hvad nu hvis affald ikke fandtes?",
-  "subtitle": "At komme væk fra alt engangs",
+  "subtitle": "Farvel til brug og smid væk",
   "subject": "comprendreLeMonde",
   "subcategory": "Miljø og fremtid",
-  "description": "**EUdtræk, fremstilling, smid væk**: denne model udtømmer planeten. Den cirkulære økonomi foreslår det modsatte: at holde genstande og materialer i omløb så længe som muligt.",
+  "description": "**Udvind, fremstil, smid væk**: den model udpiner planeten. Den cirkulære økonomi foreslår det modsatte: at holde ting og materialer i omløb så længe som muligt.",
   "hero": {
     "image": "l_economie_circulaire",
     "ratio": "16:9",
-    "hook": "Hvad hvis affald ikke eksisterede? Det er satsningen på en økonomisk model inspireret af naturen."
+    "hook": "Hvad nu hvis affald ikke fandtes? Det er, hvad en økonomisk model inspireret af naturen satser på."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Siden den industrielle revolution har vores økonomi arbejdet i én retning: vi udvinder ressourcer, vi fremstiller genstande, så smider vi dem væk. Denne model antager, at ressourcer er uendelige. Det er de ikke."
+          "text": "Siden den industrielle revolution har vores økonomi kun fungeret i én retning: man udvinder ressourcer, fremstiller ting og smider dem derefter væk. Den model forudsætter, at ressourcerne er uendelige. Det er de ikke."
         },
         {
           "type": "paragraph",
-          "text": "Den **cirkulære økonomi** tilbyder en anden logik, inspireret af naturen, hvor intet virkelig går tabt. Det sigter mod at holde værdien af produkter og materialer i omløb så længe som muligt i stedet for at omdanne dem til affald."
+          "text": "Den **cirkulære økonomi** tilbyder en anden logik, inspireret af naturen, hvor intet for alvor går tabt. Den sigter mod at holde værdien af produkter og materialer i omløb så længe som muligt i stedet for at gøre dem til affald."
         }
       ]
     },
@@ -33,13 +33,13 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Den moderne økonomi blev bygget på en model kaldet **lineær**: udvinde, fremstille, smid væk. Vi tager råvarer fra naturen, vi laver produkter af dem, og når de er slidte eller ude af mode, bliver disse produkter til affald."
+          "text": "Den moderne økonomi er bygget på en såkaldt **lineær** model: udvind, fremstil, smid væk. Man tager råstoffer fra naturen, laver produkter af dem, og når de er slidt op eller gået af mode, bliver de til affald."
         },
         {
           "type": "image",
           "asset": "landfill_waste_garbage_linear_economy",
           "ratio": "16:9",
-          "caption": "\"Tag, lav, smid væk\"-modellen antager uendelige ressourcer."
+          "caption": "Modellen »udvind, fremstil, smid væk« forudsætter uendelige ressourcer."
         },
         {
           "type": "paragraph",
@@ -47,61 +47,61 @@
         },
         {
           "type": "funFact",
-          "text": "Kun 9% af al plast, der nogensinde er produceret af menneskeheden, er blevet genbrugt. Resten ender i naturen eller på lossepladsen, hvor den kan blive i 450 år."
+          "text": "Kun 9 % af al den plast, menneskeheden nogensinde har produceret, er blevet genanvendt. Resten ender i naturen eller på lossepladser, hvor den kan ligge i 450 år."
         },
         {
           "type": "paragraph",
-          "text": "Omkostningerne til rengøring og affaldshåndtering er næsten aldrig inkluderet i salgsprisen for et produkt. Det er en skjult omkostning, som betales senere af alle."
+          "text": "Udgifterne til oprydning og affaldshåndtering er næsten aldrig regnet med i et produkts salgspris. Det er en skjult omkostning, som alle betaler senere."
         }
       ]
     },
     {
       "id": "course_223_l_economie_circulaire_p2",
-      "title": "Reparer før genbrug",
+      "title": "Reparér før genanvendelse",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Den cirkulære økonomi tilbyder flere sløjfer, og altid i samme prioritetsrækkefølge: Den korteste løkke er bedre, fordi den spilder mindre energi og materiale. Det hele starter med **øko-design**, det vil sige at tænke på miljøbelastningen af et produkt fra dets skabelse, ved at vælge materialer, der er holdbare og nemme at skille ad."
+          "text": "Den cirkulære økonomi består af flere kredsløb, altid i samme prioriterede rækkefølge: jo kortere kredsløb, jo bedre, for det spilder mindre energi og materiale. Det hele begynder med **øko-design**, altså at tænke over et produkts miljøpåvirkning, allerede når det skabes, ved at vælge materialer, der holder længe og er nemme at skille ad."
         },
         {
           "type": "paragraph",
-          "text": "Derefter kommer **genbruge** (et objekt skifter ejerskab uden at blive transformeret, som på et brugtmarked), derefter **reparation**, som forlænger et produkts levetid. Disse trin bekæmper direkte [[Planlagt forældelse]], denne praksis, som frivilligt reducerer et objekts levetid."
+          "text": "Derefter kommer **genbrug** (en ting skifter ejer uden at blive forarbejdet, som på et marked for brugte varer) og så **reparation**, som forlænger et produkts levetid. Disse trin bekæmper direkte [[planlagt forældelse]], den praksis, der bevidst forkorter en tings levetid."
         },
         {
           "type": "image",
           "asset": "recycling_sorting_waste_materials",
           "ratio": "4:3",
-          "caption": "Genbrug kommer som en sidste udvej efter genbrug og reparation."
+          "caption": "Genanvendelse er sidste udvej, efter genbrug og reparation."
         },
         {
           "type": "paragraph",
-          "text": "**genbrug** forekommer kun som en sidste udvej. Det forbliver nyttigt: Genbrug af aluminium bruger 95 % mindre energi end at udvinde det fra rå malm, [[Bauxit]]. Men det er stadig mindre effektivt end blot at genbruge et objekt."
+          "text": "**Genanvendelse** kommer kun på tale som sidste udvej. Den er stadig nyttig: at genanvende aluminium kræver 95 % mindre energi end at udvinde det af den rå malm, [[Bauxit]]. Men det er stadig mindre effektivt end blot at genbruge en ting."
         }
       ]
     },
     {
       "id": "course_223_l_economie_circulaire_p3",
-      "title": "Hvorfor er det stadig svært i dag",
+      "title": "Hvorfor det stadig er svært i dag",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "På trods af al dens interesse står den cirkulære økonomi over for et simpelt problem: Den lineære model forbliver ofte **mindre dyr på kort sigt**. At udvinde et nyt materiale koster nogle gange mindre end at sortere og genbruge komplekst affald, især når råvarerne er billige."
+          "text": "Trods alle sine fordele støder den cirkulære økonomi på et enkelt problem: den lineære model er ofte **billigere på kort sigt**. At udvinde nyt materiale koster nogle gange mindre end at sortere og genanvende komplekst affald, især når råstofferne er billige."
         },
         {
           "type": "image",
           "asset": "repair_right_electronics_reuse",
           "ratio": "4:3",
-          "caption": "\"Ret til reparation\" kræver, at producenterne leverer reservedele."
+          "caption": "»Retten til reparation« forpligter producenterne til at levere reservedele."
         },
         {
           "type": "paragraph",
-          "text": "Stillet over for dette griber offentlige myndigheder i stigende grad ind. Den Europæiske Union lancerede en plan i 2020, der pålægger strengere bæredygtighedsregler. En af de store akser er \"retten til reparation\", som forpligter producenter af elektroniske enheder til at levere reservedele i flere år."
+          "text": "Derfor griber myndighederne i stigende grad ind. EU lancerede i 2020 en plan, der indfører strengere krav til holdbarhed. Et af hovedpunkterne er »retten til reparation«, som forpligter producenter af elektronik til at levere reservedele i flere år."
         },
         {
           "type": "paragraph",
-          "text": "En anden løftestang: [[Udvidet producentansvar]], som får producenterne til at betale for affaldshåndteringen af deres produkter. Dette giver dem et økonomisk incitament til at designe genstande, der er mindre forurenende og lettere at reparere."
+          "text": "En anden løftestang er [[Udvidet producentansvar]], som får producenterne til at betale for håndteringen af affaldet fra deres produkter. Det giver dem en økonomisk tilskyndelse til at designe ting, der forurener mindre og er nemmere at reparere."
         }
       ]
     },
@@ -112,19 +112,19 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Den cirkulære økonomi er ikke kun et spørgsmål om genanvendelse: Det er et projekt for et mere nøgternt og mere modstandsdygtigt samfund. Ved at være mindre afhængig af importerede råvarer får et land også sikkerhed i en mere ustabil verden."
+          "text": "Den cirkulære økonomi handler ikke kun om genanvendelse: det er et projekt for et mere sparsommeligt og mere modstandsdygtigt samfund. Når et land er mindre afhængigt af importerede råstoffer, står det også mere sikkert i en mere ustabil verden."
         },
         {
           "type": "paragraph",
-          "text": "Succesen med denne transformation afhænger også af os som forbrugere. 3R-reglen, reducer, genbrug, genbrug, starter med det første trin: reducer, det vil sige spørg dig selv, om købet virkelig er nødvendigt. Det er denne første handling, der har den største effekt på klimaet."
+          "text": "Om omstillingen lykkes, afhænger også af os som forbrugere. 3R-reglen, reducér, genbrug, genanvend, begynder med første trin: at reducere, altså at spørge sig selv, om købet virkelig er nødvendigt. Det er den første handling, der har størst effekt på klimaet."
         },
         {
           "type": "funFact",
-          "text": "I dag er der mere guld i et ton gamle smartphone elektroniske boards end i et ton malm udvundet fra en traditionel guldmine."
+          "text": "I dag er der mere guld i et ton gamle printplader fra smartphones end i et ton malm fra en almindelig guldmine."
         },
         {
           "type": "takeaway",
-          "text": "Den cirkulære økonomi sigter mod at bryde \"udvinde, fremstille, smid væk\"-cyklussen ved at holde ressourcer i omløb gennem øko-design, reparation og genbrug for at respektere vores planets fysiske grænser."
+          "text": "Den cirkulære økonomi sigter mod at bryde cyklussen »udvind, fremstil, smid væk« ved at holde ressourcerne i omløb gennem øko-design, reparation og genanvendelse, så vores planets fysiske grænser bliver respekteret."
         }
       ]
     }

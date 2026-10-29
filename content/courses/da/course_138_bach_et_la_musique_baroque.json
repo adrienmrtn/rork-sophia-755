@@ -4,11 +4,11 @@
   "subtitle": "1685-1750",
   "subject": "art",
   "subcategory": "Musik",
-  "description": "Johann Sebastian Bach, kantor i Leipzig, tog fuga og kontrapunkt til deres højdepunkt og blev barokkens arkitekt.",
+  "description": "Johann Sebastian Bach, kantor i Leipzig, fører fugaen og kontrapunktet til deres højdepunkt og bliver barokkens arkitekt.",
   "hero": {
     "image": "bach_et_la_musique_baroque",
     "ratio": "16:9",
-    "hook": "En Leipzig-kantor bygger vestens lydkatedral."
+    "hook": "En kantor i Leipzig bygger Vestens katedral af lyd."
   },
   "sections": [
     {
@@ -18,97 +18,97 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Johann Sebastian Bach** (**1685**-**1750**) betragtes ofte som toppen af vestlig musik. Arkitekt af lyde, han bringer kunsten **fuga** og [[Kontrapunkt]] til perfektion: flere uafhængige melodiske linjer, der fletter sig ind i hinanden."
+          "text": "**Johann Sebastian Bach** (**1685**-**1750**) regnes ofte for højdepunktet i vestlig musik. Som tonernes arkitekt fører han kunsten at skrive **fuga** og [[Kontrapunkt]] til perfektion: flere selvstændige melodilinjer, der fletter sig ind i hinanden."
         },
         {
           "type": "paragraph",
-          "text": "Hans liv er ikke som en hofstjerne. Det er en genial håndværker, til tjeneste for kirken og fyrster, hvis arbejde først ville blive fuldt genopdaget i det 19. århundrede."
+          "text": "Hans liv er ikke en hofstjernes. Det er en genial håndværkers liv i kirkens og fyrsternes tjeneste, og hans værk bliver først for alvor genopdaget i det 19. århundrede."
         }
       ]
     },
     {
       "id": "course_138_bach_et_la_musique_baroque_p1",
-      "title": "Barok: kirke, gårdhave og scene",
+      "title": "Barokken: kirke, hof og scene",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**barok**-æraen går fra cirka **1600** til Bachs død. Hun kan lide kontrast, bevægelse, ornament. **Vivaldi** i Italien, **Handel** i Tyskland og derefter i England, dominerer landskabet. Musik tjener tre missioner: kirken (orgel og hellig sang), prinsernes soveværelse og scenen (opera)."
+          "text": "Den **barokke** æra varer cirka fra **1600** til Bachs død. Den elsker kontrast, bevægelse og udsmykning. **Vivaldi** i Italien og **Händel** i Tyskland og siden England dominerer landskabet. Musikken har tre opgaver: kirken (orgel og kirkesang), fyrsternes kammer og scenen (opera)."
         },
         {
           "type": "paragraph",
-          "text": "Bach skrev ikke en opera, men han injicerede lyrisk drama i sine passioner og oratorier. Den syntetiserer fransk takt, italiensk lyrik og tysk stringens. For ham afspejler musik en guddommelig orden, ikke kun fornøjelse."
+          "text": "Bach skriver ingen opera, men han fører det lyriske drama ind i sine passioner og oratorier. Han forener fransk rytme, italiensk lyrik og tysk stringens. For ham afspejler musikken en guddommelig orden, ikke bare en fornøjelse."
         },
         {
           "type": "funFact",
-          "text": "I 1717 i Weimar sad Bach en måned i fængsel for at have insisteret for stærkt på at træde tilbage: hertugen nægtede at lade ham rejse til Köthen."
+          "text": "I 1717 i Weimar sidder Bach en måned i fængsel, fordi han for hårdnakket insisterer på at sige op: hertugen vil ikke lade ham rejse til Köthen."
         }
       ]
     },
     {
       "id": "course_138_bach_et_la_musique_baroque_p2",
-      "title": "Leipzig: Kantoren og hans kantater",
+      "title": "Leipzig: kantoren og hans kantater",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Født i **Eisenach** i **1685** i et dynasti af musikere, bosatte Bach sig i **1723** i **Leipzig** som [[kantor]] i St. Thomas Church. Overvældende belastning: en ny [[kantate]] næsten hver uge, plus undervisning på [[Thomasschule]]."
+          "text": "Bach er født i **Eisenach** i **1685** i en musikerslægt og slår sig i **1723** ned i **Leipzig** som [[kantor]] ved Thomaskirken. En knusende arbejdsbyrde: en ny [[kantate]] næsten hver uge, plus undervisning på [[Thomasschule]]."
         },
         {
           "type": "image",
           "asset": "bach_eisenach_birthplace_portrait",
           "ratio": "4:3",
-          "caption": "Bach, arving til en række tyske musikere."
+          "caption": "Bach, arving til en slægt af tyske musikere."
         },
         {
           "type": "image",
           "asset": "leipzig_st_thomas_church_bach_cantor",
           "ratio": "4:3",
-          "caption": "Sankt Thomas af Leipzig: kantor Bachs daglige liv."
+          "caption": "Thomaskirken i Leipzig: kantor Bachs hverdag."
         },
         {
           "type": "paragraph",
-          "text": "Det anslås, at der blev sammensat ca. **300** kantater, hvoraf nogle **200** har nået os. Han har **20** børn fra to ægteskaber; **Carl Philipp Emanuel** og **Johann Christian** blev selv store komponister. Om aftenen leder han [[Collegium Musicum]], et ensemble, for hvilket han skriver koncerter og verdslige suiter."
+          "text": "Man regner med, at han komponerede omkring **300** kantater, hvoraf cirka **200** er bevaret. Han får **20** børn i to ægteskaber. **Carl Philipp Emanuel** og **Johann Christian** bliver selv store komponister. Om aftenen leder han [[Collegium Musicum]], et ensemble, som han skriver koncerter og verdslige suiter til."
         },
         {
           "type": "funFact",
-          "text": "I slutningen af sit liv, da han gennemgik en øjenoperation af den rejsende kirurg John Taylor, blev Bach blind kort før han døde."
+          "text": "Sidst i livet bliver Bach opereret i øjnene af den omrejsende kirurg John Taylor, og han bliver blind kort før sin død."
         }
       ]
     },
     {
       "id": "course_138_bach_et_la_musique_baroque_p3",
-      "title": "Den veltempererede Clavier og genopdagelsen",
+      "title": "Det veltempererede klaver og genopdagelsen",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Med [[Ligeværdigt temperament]], et stemmesystem, der forener intervaller, beviser Bach, at et keyboard kan spille på alle tangenter. *Det veltempererede Keyboard* (48 præludier og fugaer) åbner vejen til moderne musik. Hans fuga overlejrer et tema taget op af flere stemmer: matematisk arkitektur."
+          "text": "Med [[Ligesvævende temperatur]], et stemmesystem, der gør alle intervaller ens, beviser Bach, at et tasteinstrument kan spille i alle tonearter. *Det veltempererede klaver* (48 præludier og fugaer) baner vejen for den moderne musik. I hans fugaer bliver ét tema taget op af flere stemmer, lagt oven på hinanden: matematisk arkitektur."
         },
         {
           "type": "image",
           "asset": "bach_well_tempered_clavier_manuscript_fugue",
           "ratio": "4:3",
-          "caption": "Det veltempererede tastatur: alle tonerne på et enkelt tastatur."
+          "caption": "Det veltempererede klaver: alle tonearter på ét tastatur."
         },
         {
           "type": "paragraph",
-          "text": "Da han døde, foretrak mode den lettere [[stil galant]]. Bach virker \"gotisk\". I **1829** dirigerede den unge **Felix Mendelssohn** *Matthæus-passion* i Berlin: begyndelsen på \"Bach-renæssancen\". Uden ham kunne hundredvis af scor være forsvundet."
+          "text": "Ved hans død foretrækker moden den lettere [[galant stil]]. Bach virker »gotisk«. I **1829** dirigerer den unge **Felix Mendelssohn** *Matthæuspassionen* i Berlin: begyndelsen på »Bach-renæssancen«. Uden ham kunne hundredvis af partiturer være forsvundet."
         },
         {
           "type": "funFact",
-          "text": "Mendelssohn jokede: Det var nødvendigt for en omvendt jøde og en skuespiller (hans ven Devrient) at vende tilbage til verden, det største mesterværk af kristen musik."
+          "text": "Mendelssohn spøgte med, at der skulle en konverteret jøde og en skuespiller (hans ven Devrient) til at give verden den kristne musiks største mesterværk tilbage."
         }
       ]
     },
     {
       "id": "course_138_bach_et_la_musique_baroque_p4",
-      "title": "SDG, Rejser og universel arv",
+      "title": "SDG, Voyager og den universelle arv",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En glødende lutheraner, Bach underskrev ofte **SDG** (*Soli Deo Gloria*: til Gud alene æren). Han leger med [[numerologi]] og koder sit navn (B-A-C-H) i noder. I **1977** placerede NASA flere af hans værker på [[Gylden rekord]] fra Voyager-sonderne: menneskehedens lydambassade til rummet."
+          "text": "Bach er inderlig lutheraner og signerer ofte **SDG** (*Soli Deo Gloria*: Gud alene æren). Han leger med [[numerologi]] og koder sit navn (B-A-C-H) i noder. I **1977** lægger NASA flere af hans værker på [[Golden Record]] om bord på Voyager-sonderne: menneskehedens lydlige ambassade ud i rummet."
         },
         {
           "type": "timeline",
@@ -116,28 +116,28 @@
             {
               "date": "1685",
               "title": "Fødsel i Eisenach",
-              "detail": "Et dynasti af musikere giver Bach til verden."
+              "detail": "En musikerslægt giver verden Bach."
             },
             {
               "date": "1723",
               "title": "Kantor i Leipzig",
-              "detail": "Ugentlige kantater og enormt helligt arbejde."
+              "detail": "Ugentlige kantater og et enormt kirkeligt værk."
             },
             {
               "date": "1722-1742",
-              "title": "Veltempereret tastatur",
-              "detail": "Alle tonerne, fugaen som en katedral."
+              "title": "Det veltempererede klaver",
+              "detail": "Alle tonearter, fugaen som katedral."
             },
             {
               "date": "1829",
               "title": "Mendelssohn",
-              "detail": "Matthæus-passionen vender tilbage til lyset."
+              "detail": "Matthæuspassionen kommer frem i lyset igen."
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "Kantor af Leipzig, Bach tog kontrapunkt og fuga til deres højdepunkt; glemt og derefter genopstået af Mendelssohn, forbliver han barokkens arkitekt."
+          "text": "Som kantor i Leipzig førte Bach kontrapunktet og fugaen til deres højdepunkt. Glemt og siden genoplivet af Mendelssohn er han stadig barokkens arkitekt."
         }
       ]
     }

@@ -4,11 +4,11 @@
   "subtitle": "Biologi og lang levetid",
   "subject": "sciences",
   "subcategory": "Jorden og universet",
-  "description": "Nogle arter ser ud til at trodse døden. Vandmænd, der forynger, hydrar uden ældning: Hemmeligheden er cellulær reparation.",
+  "description": "Nogle arter ser ud til at trodse døden. Vandmænd, der bliver unge igen, og hydraer, der ikke ældes: Hemmeligheden ligger i reparationen af cellerne.",
   "hero": {
     "image": "pourquoi_certaines_especes_sont_immortelles",
     "ratio": "16:9",
-    "hook": "Aldring er ikke en absolut livslov. Nogle arter har fundet fejlen."
+    "hook": "Aldring er ikke en ufravigelig lov for alt levende. Nogle arter har fundet smuthullet."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Vi bliver gamle, så dør vi. Vandmænden [[Turritopsis dohrnii]] kan dog vende tilbage til et ungdomsstadie og starte igen. Muslingen **Ming** levede **507 år**. Aldring er derfor ikke en universel regel: Det er en proces, som visse arter omgår."
+          "text": "Vi ældes, og så dør vi. Alligevel kan vandmanden [[Turritopsis dohrnii]] vende tilbage til et ungdomsstadie og begynde forfra. Muslingen **Ming** levede i **507 år**. Aldring er altså ikke en universel regel: Det er en proces, som nogle arter kommer uden om."
         },
         {
           "type": "paragraph",
-          "text": "Ved at studere disse undtagelser leder forskerne mindre efter science fiction-udødelighed end efter livets tricks til bedre at reparere celler."
+          "text": "Når forskerne studerer disse undtagelser, leder de ikke så meget efter udødelighed som i science fiction, men efter de kneb, levende væsner bruger til at reparere deres celler bedre."
         }
       ]
     },
@@ -33,55 +33,55 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Aldring handler ikke kun om at \"slides\" som en maskine. Det er en ubalance: Skader akkumuleres hurtigere end reparationer."
+          "text": "Aldring er ikke bare at »slides op« som en maskine. Det er en ubalance: Skaderne hober sig op hurtigere, end de bliver repareret."
         },
         {
           "type": "image",
           "asset": "chromosome_dna_telomere_aging_cell",
           "ratio": "auto",
-          "caption": "Telomerer, i enderne af kromosomerne, forkortes med hver celledeling."
+          "caption": "Telomererne i enderne af kromosomerne bliver kortere ved hver celledeling."
         },
         {
           "type": "paragraph",
-          "text": "I enderne af vores kromosomer fungerer [[Telomerer]] som snørebåndsspidser. Med hver celledeling forkortes de. For kort holder cellen op med at dele sig. Samtidig producerer stofskiftet aggressive molekyler, som skader proteiner og DNA. \"Zombie\"-celler akkumuleres derefter og antænder vævene omkring dem."
+          "text": "I enderne af vores kromosomer sidder [[telomerer]], der fungerer som plastikspidserne på snørebånd. Ved hver celledeling bliver de kortere. Når de er for korte, holder cellen op med at dele sig. Samtidig danner stofskiftet aggressive molekyler, som skader proteiner og DNA. Så hober »zombieceller« sig op og skaber betændelse i vævet omkring dem."
         },
         {
           "type": "funFact",
-          "text": "Tardigraden, en lille \"vandbjørn\", kan næsten holde op med at leve ved at tørre ud. Hans stofskifte falder til **99,99%**, og han overlever rummets vakuum eller ekstrem stråling uden virkelig at blive ældre."
+          "text": "Bjørnedyret, en lillebitte »vandbjørn«, kan næsten holde op med at leve ved at tørre ud. Dets stofskifte falder med **99,99 %**, og det overlever rummets vakuum eller ekstrem stråling uden for alvor at ældes."
         }
       ]
     },
     {
       "id": "course_74_pourquoi_certaines_especes_sont_elles_im_p2",
-      "title": "Mestre, der undgår døden",
+      "title": "Mestrene, der snyder døden",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Den sårede eller udsultede [[Turritopsis dohrnii]] forvandler sine voksne celler til \"blanke\" celler, og bliver derefter til en polyp igen, startstadiet. Dette skridt tilbage, kaldet transdifferentiering, giver det en form for **biologisk udødelighed**."
+          "text": "Når [[Turritopsis dohrnii]] er såret eller sulter, forvandler den sine voksne celler til »blanke« celler og bliver derefter en polyp igen, altså startstadiet. Dette skridt tilbage, der kaldes transdifferentiering, giver den en form for **biologisk udødelighed**."
         },
         {
           "type": "paragraph",
-          "text": "**hydra**, en lille ferskvandspolyp, fornyer hele sin krop takket være et næsten ubegrænset udbud af [[stamceller]]. Hun viser ingen målbare tegn på aldring. Grønlandshvalen kan overstige **200 år** takket være ultraeffektiv DNA-reparation og stærk modstandsdygtighed over for kræft."
+          "text": "**Hydraen**, en lille ferskvandspolyp, fornyer hele sin krop takket være et næsten ubegrænset lager af [[stamceller]]. Den viser ingen målbare tegn på aldring. Grønlandshvalen kan til gengæld blive over **200 år** gammel takket være en ultraeffektiv DNA-reparation og en høj modstandskraft mod kræft."
         },
         {
           "type": "funFact",
-          "text": "Hummere laver telomerase overalt i deres kroppe: deres telomerer forkortes ikke. De vokser gennem hele deres liv og dør, især når smeltningen bliver for dyr."
+          "text": "Hummere danner telomerase overalt i kroppen: Deres telomerer bliver ikke kortere. De vokser hele livet og dør oftest, når hamskiftet bliver for krævende."
         }
       ]
     },
     {
       "id": "course_74_pourquoi_certaines_especes_sont_elles_im_p3",
-      "title": "Hvad medicin lærer af det",
+      "title": "Det, lægevidenskaben kan lære",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Tanken er ikke længere kun at behandle Alzheimers eller slidgigt én efter én, men at angribe selve ældningen. **senolytika** sigter mod at eliminere zombieceller. Hos dyr har dette allerede forynget visse funktioner."
+          "text": "Målet er ikke længere kun at behandle Alzheimers eller slidgigt én sygdom ad gangen, men at angribe selve aldringen. **Senolytika** skal fjerne zombiecellerne. Hos dyr har det allerede forynget visse funktioner."
         },
         {
           "type": "paragraph",
-          "text": "Begrænsning af kalorier uden underernæring aktiverer også reparationsveje, især ved at bremse [[mTOR]], et protein, der accelererer vækst... og nogle gange falder. Andre laboratorier forsøger at \"vinde uret\" af celler, som vandmænd, uden at omdanne dem til tumorer."
+          "text": "At skære ned på kalorierne uden at blive underernæret aktiverer også reparationsmekanismer, især ved at bremse [[mTOR]], et protein, der sætter skub i væksten … og nogle gange i forfaldet. Andre laboratorier prøver at »skrue tiden tilbage« i cellerne, ligesom vandmanden gør, uden at gøre dem til tumorer."
         }
       ]
     },
@@ -96,11 +96,11 @@
         },
         {
           "type": "paragraph",
-          "text": "For mennesker er den realistiske udfordring ikke at leve evigt, men at forlænge årene **i godt helbred**. Lang levetid, der er blevet omdannet til teknologi, vil også rejse store spørgsmål om retfærdighed og ressourcer."
+          "text": "For mennesker er det realistiske mål ikke at leve evigt, men at få flere år **ved godt helbred**. Hvis lang levetid blev et spørgsmål om teknologi, ville det også rejse enorme spørgsmål om retfærdighed og ressourcer."
         },
         {
           "type": "takeaway",
-          "text": "Biologisk udødelighed er afhængig af at reparere eller nulstille celler. Turritopsis dohrnii vandmændene bliver yngre; hydraen fornyer sig konstant. Aldring er ikke en universel dødsfald."
+          "text": "Biologisk udødelighed bygger på, at cellerne repareres eller nulstilles. Vandmanden Turritopsis dohrnii bliver yngre, og hydraen fornyer sig hele tiden. Aldring er ikke en universel skæbne."
         }
       ]
     }
