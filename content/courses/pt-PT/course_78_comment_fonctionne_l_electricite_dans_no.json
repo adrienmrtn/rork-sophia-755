@@ -33,13 +33,13 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Um **neurónio** em repouso não envia mensagens, mas «carrega-se». A membrana separa o dentro e o fora da célula. Graças às [[bombas de sódio-potássio]], mantém um [[potencial de repouso]] de cerca de **-70 milivolts**: o interior fica mais negativo do que o exterior."
+          "text": "Um **neurónio** em repouso não envia mensagens, mas «carrega-se». A sua membrana separa o interior do exterior da célula. Graças às [[bombas de sódio-potássio]], mantém um [[potencial de repouso]] de cerca de **-70 milivolts**: o interior é mais negativo do que o exterior."
         },
         {
           "type": "image",
           "asset": "neuron_electrical_signal_brain",
           "ratio": "auto",
-          "caption": "Os neurónios comunicam-se por impulsos elétricos muito curtos"
+          "caption": "Os neurónios comunicam através de breves impulsos elétricos"
         },
         {
           "type": "paragraph",
@@ -62,7 +62,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Esses mensageiros encaixam-se no neurónio seguinte como uma chave na fechadura. Conforme a mensagem, excitam ou inibem. Milhares destas decisões ao mesmo tempo formam o pensamento."
+          "text": "Estes mensageiros encaixam-se no neurónio seguinte como uma chave numa fechadura. Consoante a mensagem, excitam ou inibem. Milhares destas decisões simultâneas formam o pensamento."
         },
         {
           "type": "funFact",
@@ -77,11 +77,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "O coração não espera uma ordem do cérebro a cada batimento. No átrio direito, o **nó sinusal** gera os seus próprios impulsos, cerca de **60 a 100** vezes por minuto em repouso. O sinal espalha-se, contrai primeiro os átrios e depois os ventrículos."
+          "text": "O coração não espera por uma ordem do cérebro para cada batimento. No átrio direito, o **nó sinusal** gera os seus próprios impulsos, cerca de **60 a 100** vezes por minuto em repouso. O sinal propaga-se e contrai primeiro os átrios e depois os ventrículos."
         },
         {
           "type": "paragraph",
-          "text": "Essa atividade é forte o bastante para ser lida na pele: é o **eletrocardiograma (ECG)**. Se o ritmo desanda, fala-se de **arritmia**. O coração então bate de modo desordenado e bombeia mal."
+          "text": "Esta atividade é suficientemente forte para ser lida na pele: é o **eletrocardiograma (ECG)**. Se o ritmo se desregula, fala-se de **arritmia**. O coração bate então de forma desordenada e bombeia mal."
         },
         {
           "type": "funFact",
@@ -100,11 +100,11 @@
         },
         {
           "type": "paragraph",
-          "text": "A **desfibrilação** usa o mesmo princípio ao contrário: um choque externo reinicia todas as células para o nó sinusal retomar o ritmo. Próteses biónicas também captam estes sinais fracos para comandar uma mão artificial."
+          "text": "A **desfibrilação** usa o mesmo princípio ao contrário: um choque externo repõe todas as células «a zero» para que o nó sinusal retome o ritmo. Há também próteses biónicas que captam estes sinais fracos para comandar uma mão artificial."
         },
         {
           "type": "takeaway",
-          "text": "O ser vivo fala em fluxos de iões e em potenciais de ação. Pensamento, coração e músculos partilham a mesma linguagem elétrica."
+          "text": "Os seres vivos falam em fluxos de iões e em potenciais de ação. Pensamento, coração e músculos partilham a mesma linguagem elétrica."
         }
       ]
     }

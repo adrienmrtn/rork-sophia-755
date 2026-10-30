@@ -4,11 +4,11 @@
   "subtitle": "Física do voo",
   "subject": "sciences",
   "subcategory": "O nosso quotidiano explicado",
-  "description": "Um avião de várias centenas de toneladas voa. Não é magia: é a forma da asa, a velocidade e forças que se equilibram.",
+  "description": "Um avião de várias centenas de toneladas voa. Não é magia: é uma questão de forma da asa, de velocidade e de forças que se equilibram.",
   "hero": {
     "image": "comment_les_avions_volent",
     "ratio": "16:9",
-    "hook": "Mais pesado que um camião, e mesmo assim fica no ar. Vê como."
+    "hook": "Mais pesado do que um camião e, no entanto, mantém-se no ar. Eis como."
   },
   "sections": [
     {
@@ -22,7 +22,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Quatro forças principais entram em jogo: o **impulso** (para a frente), o **arrasto** (o travão do ar), o **peso** (para baixo) e a **sustentação** (para cima)."
+          "text": "Estão em jogo quatro forças principais: o **impulso** (para a frente), o **arrasto** (a travagem causada pelo ar), o **peso** (para baixo) e a **sustentação** (para cima)."
         }
       ]
     },
@@ -33,7 +33,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Vista de lado, uma asa de avião não é plana. O lado de cima é mais convexo que o de baixo. Quando o avião avança depressa, o ar tem de contornar essa forma."
+          "text": "Vista de lado, uma asa de avião não é plana. A parte de cima é mais abaulada do que a de baixo. Quando o avião avança depressa, o ar tem de contornar essa forma."
         },
         {
           "type": "image",
@@ -43,7 +43,7 @@
         },
         {
           "type": "paragraph",
-          "text": "O ar que passa por cima acelera um pouco. A sua pressão cai. Debaixo da asa, a pressão fica mais alta. Essa diferença empurra a asa para cima: é a **sustentação**. Isto explica-se muitas vezes com o princípio de **Bernoulli**, nome de um sábio do século XVIII, e com o facto de a asa também desviar o ar para baixo."
+          "text": "O ar que passa por cima acelera um pouco. A sua pressão baixa. Debaixo da asa, a pressão mantém-se mais alta. Essa diferença empurra a asa para cima: é a **sustentação**. Costuma explicar-se com o princípio de **Bernoulli**, que deve o nome a um cientista do século XVIII, e com o facto de a asa também desviar o ar para baixo."
         }
       ]
     },
@@ -54,11 +54,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Sem velocidade, passa pouco ar pela asa e sobra pouca sustentação. Por isso um avião precisa de uma pista longa para descolar: os motores têm de o acelerar o suficiente."
+          "text": "Sem velocidade, não passa ar suficiente pela asa e não há sustentação suficiente. É por isso que um avião precisa de uma pista longa para descolar: os motores têm de o acelerar com força suficiente."
         },
         {
           "type": "funFact",
-          "text": "Os pássaros usam a mesma ideia geral: as suas asas criam sustentação. Mas batem as asas para avançar. O avião, esse, avança graças aos motores."
+          "text": "As aves usam a mesma ideia geral: as suas asas criam sustentação. Mas elas batem as asas para avançar. O avião, esse, avança graças aos motores."
         },
         {
           "type": "paragraph",
@@ -88,7 +88,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Um balão de hélio flutua porque é menos denso que o ar. Um avião, não: é muito mais denso. Voa porque **força** o ar a carregá-lo, graças à velocidade e à forma das asas."
+          "text": "Um balão de hélio flutua porque é menos denso do que o ar. Um avião, não: é muito mais denso. Voa porque **obriga** o ar a sustentá-lo, graças à velocidade e à forma das asas."
         },
         {
           "type": "takeaway",

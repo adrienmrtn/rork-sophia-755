@@ -4,12 +4,12 @@
   "subtitle": "Uma mistura invisível",
   "subject": "comprendreLeMonde",
   "subcategory": "Ambiente & futuro",
-  "description": "Na tomada, nada diz se a corrente veio do sol, do vento ou de uma central a carvão. Por trás deste gesto banal existe uma mistura que muda de hora em hora, e às vezes de país.",
+  "description": "Na tomada, nada diz se a corrente vem do sol, do vento ou de uma central a carvão. Por trás deste gesto banal esconde-se uma mistura que muda de hora em hora, e às vezes de país.",
   "author": "rana-abdalla",
   "hero": {
     "image": "wind_turbines_coal_power_plant_landscape",
     "ratio": "4:3",
-    "hook": "A tomada é igual em todo o lado. O que existe por trás dela nunca é."
+    "hook": "A tomada é igual em todo o lado. O que está por trás dela nunca o é."
   },
   "sections": [
     {
@@ -19,11 +19,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ligas o telemóvel à tomada, e a eletricidade chega sem etiqueta. Nada, na tomada, diz se ela foi produzida com a luz do sol, a água de uma barragem ou um combustível queimado numa central. Nem duas casas da mesma rua conseguem apontar a central de onde vem cada unidade de energia."
+          "text": "Ligas o telemóvel à tomada e a eletricidade chega sem etiqueta. Nada, na tomada, indica se foi produzida com a luz do sol, a água de uma barragem ou um combustível queimado numa central. Nem mesmo duas casas da mesma rua conseguem identificar a central de onde vem cada unidade de corrente."
         },
         {
           "type": "paragraph",
-          "text": "O motivo é simples: quase todas as casas puxam energia de uma [[rede elétrica]], uma malha de cabos que liga as centrais e os consumidores de uma região. Várias centrais abastecem-na ao mesmo tempo, e a participação de cada uma forma a [[matriz elétrica]]. Essa matriz descreve as fontes que alimentam a rede, e não um fluxo separado de eletricidade solar ou a gás enviado diretamente para o teu telemóvel. A resposta começa, portanto, muito para lá das paredes da tua casa."
+          "text": "O motivo é simples: quase todas as casas vão buscar eletricidade a uma [[rede elétrica]], uma malha de cabos que liga as centrais e os consumidores de um território. Várias centrais abastecem-na ao mesmo tempo, e a parte de cada uma forma a [[matriz elétrica]]. Essa matriz descreve as fontes que alimentam a rede, e não um fluxo separado de eletricidade solar ou a gás enviado diretamente para o teu telemóvel. A resposta começa, portanto, muito para lá das paredes de casa."
         }
       ]
     },
@@ -44,11 +44,11 @@
         },
         {
           "type": "paragraph",
-          "text": "As turbinas eólicas giram com o vento, as centrais hidroelétricas com a água que corre. Os painéis solares seguem outro caminho: produzem eletricidade diretamente a partir da luz, sem nenhuma pá a girar. Essas fontes não trabalham nas mesmas condições. A produção solar cai quando o sol se põe, e a do vento muda com o tempo. As centrais que queimam combustível podem então fornecer energia quando as outras produzem menos."
+          "text": "As turbinas eólicas giram com o vento, as centrais hidroelétricas com a água que corre. Os painéis solares seguem outro caminho: produzem eletricidade diretamente a partir da luz, sem nenhuma pá a girar. Estas fontes não trabalham nas mesmas condições. A produção solar cai quando o sol se põe, e a eólica varia com o estado do tempo. As centrais que queimam combustível podem então fornecer corrente quando as outras produzem menos."
         },
         {
           "type": "funFact",
-          "text": "Uma central nuclear funciona, no fundo, como uma central a carvão: o calor ferve a água, e é o vapor que move a turbina. Só muda a fonte de calor."
+          "text": "Uma central nuclear funciona, no fundo, como uma central a carvão: o calor faz ferver a água, e é o vapor que move a turbina. Só muda a fonte de calor."
         }
       ]
     },
@@ -59,7 +59,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ao meio-dia, os painéis solares trabalham a todo o vapor enquanto escritórios e casas puxam energia. Depois do pôr do sol, param, mas as lâmpadas, os comboios e as cozinhas continuam a precisar de eletricidade. Uma tarde de vento também pode dar lugar a uma noite sem vento, enquanto o consumo sobe ou desce."
+          "text": "Ao meio-dia, os painéis solares funcionam em pleno enquanto escritórios e habitações consomem eletricidade. Depois do pôr do sol, param, mas as lâmpadas, os comboios e as cozinhas continuam a precisar de eletricidade. Uma tarde ventosa também pode dar lugar a uma noite sem vento, enquanto o consumo sobe ou desce."
         },
         {
           "type": "image",
@@ -69,7 +69,7 @@
         },
         {
           "type": "paragraph",
-          "text": "O [[operador da rede]], o organismo que comanda essa malha, tem de manter permanentemente o equilíbrio entre a oferta e a procura. Algumas centrais ajustam a sua produção. Onde há baterias instaladas, estas devolvem a eletricidade armazenada antes. Outras fontes cobrem o vazio deixado pelo sol que se põe. Não existe receita diária: a matriz do meio-dia pode ser muito diferente da de algumas horas depois, embora a tua tomada não tenha mudado."
+          "text": "O [[operador da rede]], o organismo que gere esta malha, tem de manter em permanência o equilíbrio entre a oferta e a procura. Algumas centrais ajustam a sua produção. Onde há baterias instaladas, estas devolvem a eletricidade armazenada mais cedo. Outras fontes preenchem o vazio deixado pelo sol que se põe. Não existe uma receita diária: a matriz do meio-dia pode ser muito diferente da de algumas horas depois, embora a tua tomada não tenha mudado."
         }
       ]
     },
@@ -80,22 +80,22 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Em 2025, cerca de **um quarto** (24%) da eletricidade produzida pelas grandes centrais dos Estados Unidos veio de [[energias renováveis]], as fontes que a natureza repõe sozinha: luz do sol, vento, água corrente. O número, ainda provisório, descreve o ano inteiro. Não significa que as renováveis forneciam a mesma parcela sempre que alguém ligava uma chaleira ou carregava um telemóvel."
+          "text": "Em 2025, cerca de **um quarto** (24%) da eletricidade produzida pelas grandes centrais dos Estados Unidos provinha de [[energias renováveis]], as fontes que a natureza repõe por si mesma: luz do sol, vento, água corrente. O número, ainda provisório, descreve o ano inteiro. Não significa que as renováveis fornecessem a mesma parte sempre que alguém ligava uma chaleira ou carregava um telemóvel."
         },
         {
           "type": "paragraph",
-          "text": "Uma percentagem anual mistura tardes de sol, noites de muito vento e períodos em que o sol e o vento produzem pouco. Também soma as horas de alta e de baixa procura. Para saber que fontes abastecem uma rede num momento preciso, é preciso olhar para a sua matriz hora a hora, e não para a sua média anual. Os dois pontos de vista são úteis, mas não respondem à mesma pergunta."
+          "text": "Uma percentagem anual mistura tardes de sol, noites de muito vento e períodos em que o sol e o vento produzem pouco. Também soma as horas de procura alta e baixa. Para saber que fontes abastecem uma rede num dado momento, é preciso olhar para a sua matriz hora a hora, e não para a média anual. Os dois pontos de vista são úteis, mas não respondem à mesma pergunta."
         }
       ]
     },
     {
       "id": "course_297_d_ou_vient_vraiment_l_electricite_de_p4",
-      "title": "Uma eletricidade que vem de fora",
+      "title": "Eletricidade vinda de fora",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A matriz horária exige ainda um pormenor: que eletricidade está realmente disponível na tua região. Uma central de um lado de uma fronteira pode abastecer a rede do outro lado. Essa eletricidade importada mistura-se com a produção local. A [[matriz de consumo]], ou seja, as fontes que abastecem os consumidores de uma região, pode então ser diferente da matriz produzida ali mesmo."
+          "text": "A matriz horária exige ainda um pormenor: que eletricidade está realmente disponível na tua região. Uma central situada de um lado de uma fronteira pode abastecer a rede do outro lado. Essa eletricidade importada mistura-se com a produção local. A [[matriz de consumo]], ou seja, as fontes que abastecem os consumidores de uma região, pode, portanto, ser diferente da matriz produzida no local."
         },
         {
           "type": "image",
@@ -105,11 +105,11 @@
         },
         {
           "type": "paragraph",
-          "text": "Isto importa para as emissões ligadas à tua eletricidade. Queimar carvão ou gás liberta dióxido de carbono, um gás que aquece o planeta. As turbinas eólicas, os painéis solares e as centrais nucleares não o libertam diretamente quando produzem energia. A eletricidade não para na fronteira, e o seu impacto também não. Consoante a origem das importações, as emissões ligadas ao teu consumo podem ser maiores ou menores do que a produção local sugere."
+          "text": "Isto pesa nas emissões associadas à tua eletricidade. Queimar carvão ou gás liberta dióxido de carbono, um gás que aquece o planeta. As turbinas eólicas, os painéis solares e as centrais nucleares não o libertam diretamente quando produzem corrente. A eletricidade não para na fronteira, e o seu impacto também não. Consoante a origem das importações, as emissões associadas ao teu consumo podem ser maiores ou menores do que a produção local sugere."
         },
         {
           "type": "takeaway",
-          "text": "A eletricidade da tua tomada é uma mistura que muda de hora em hora e atravessa fronteiras, e por isso nem a média anual nem a produção local dizem sozinhas de onde ela vem."
+          "text": "A eletricidade da tua tomada é uma mistura que muda de hora em hora e atravessa fronteiras, pelo que nem a média anual nem a produção local dizem, por si sós, de onde vem."
         }
       ]
     }
