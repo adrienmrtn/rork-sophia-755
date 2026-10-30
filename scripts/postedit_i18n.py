@@ -125,12 +125,28 @@ def hints(lang: str) -> dict[str, list[str]]:
     return out
 
 
-def _pack_id(surface: str, location: str) -> str:
+def _pack_id(surface: str, location: str, lang: str | None = None) -> str:
     """Where a terminology hit points, written as the pack id of the item to edit."""
     if location.startswith(("ios:", "android:")) and surface == "ui":
         return location.split(":", 1)[1]
     if surface == "glossaire":
         return location.rsplit("/", 1)[0]
+    if surface == "quiz":
+        return re.sub(r"/(option|item)(\d+)$", lambda m: f"/{m.group(1)}s/{m.group(2)}", location)
+    if surface == "collections":
+        return f"collection:{location}"
+    if surface == "store":
+        return f"store:{location.rsplit('/', 1)[1]}"
+    if surface == "legal" and lang:
+        # The checker names a section by its id, the packs by its position.
+        m = re.fullmatch(r"(ios|android):(terms|privacy)/(.+)/(title|body)", location)
+        if m:
+            docs = _legal_docs(lang)
+            if m.group(1) in docs:
+                ids = [x.get("id") for x in docs[m.group(1)][1].get(m.group(2), [])]
+                if m.group(3) in ids:
+                    return f"{m.group(1)}:{m.group(2)}/{ids.index(m.group(3))}/{m.group(4)}"
+        return location
     if surface == "catalogue":
         # Course cards repeat the lesson body: title, description, section titles.
         m = re.match(r"(.+)_(intro|p(\d+))/title$", location)
@@ -145,7 +161,7 @@ def live_hints(lang: str) -> list[tuple[str, str]]:
     from check_terminology import _scan_language
     out = []
     for h in _scan_language(lang)[2]:
-        out.append((_pack_id(h["surface"], h["emplacement"]),
+        out.append((_pack_id(h["surface"], h["emplacement"], lang),
                     f"terminologie : « {h['trouve']} » → attendu {h['attendu'][:120]}"))
     allowed = glossary_keys_by_course(lang)
     for p in sorted((COURSES / "fr").glob("*.json")):

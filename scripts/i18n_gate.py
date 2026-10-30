@@ -36,6 +36,10 @@ pour faire passer un commit : corrigez-le, ou, si c'est un faux positif, corrige
 règle. --accept-new ne sert qu'à un cours restructuré, dont les constats connus
 changent d'emplacement.
 
+Les faux positifs vérifiés un par un sont listés, avec leur raison, dans
+content/terminology/exceptions.json : ils ne comptent plus du tout. Le baseline ne doit
+garder que des défauts réels pas encore corrigés.
+
 Les clés manquantes, les placeholders, la fiche et les chaînes témoins n'ont pas de
 baseline : ils doivent être justes. Pour changer volontairement une chaîne témoin,
 modifiez sa valeur dans sentinelles.json dans le même commit, avec la raison.
@@ -66,6 +70,7 @@ COURSES = ROOT / "content" / "courses"
 TERM_DIR = ROOT / "content" / "terminology"
 BASELINE = TERM_DIR / "i18n_gate_baseline.json"
 SENTINELS = TERM_DIR / "sentinelles.json"
+EXCEPTIONS = TERM_DIR / "exceptions.json"
 
 CHECKS = ["cles", "copies", "validateur", "terminologie", "quiz", "fiche", "temoins"]
 BASELINED = {"copies", "validateur", "terminologie", "quiz"}
@@ -384,9 +389,12 @@ def main() -> int:
         parser.error("--update-baseline réécrit tout le baseline : lancez-le sans --only ni --lang")
 
     baseline = _json(BASELINE) if BASELINE.exists() else {}
+    exceptions = _json(EXCEPTIONS)["constats"] if EXCEPTIONS.exists() else {}
     failed, new_baseline, grown = False, {}, 0
     for check in checks:
         found = Counter(RUN[check](langs))
+        excused = sum(n for k, n in found.items() if k in exceptions)
+        found = Counter({k: n for k, n in found.items() if k not in exceptions})
         if check in BASELINED:
             new_baseline[check] = dict(sorted(found.items()))
             known = Counter(baseline.get(check, {}))
@@ -398,7 +406,8 @@ def main() -> int:
         status = "ÉCHEC" if new else "ok"
         extra = f", dont {sum(found.values()) - sum(new.values())} connus (baseline)" if check in BASELINED else ""
         print(f"{check:13s} {status:5s} {sum(found.values()):5d} constats{extra}"
-              + (f", {fixed} corrigés depuis le baseline" if fixed else ""))
+              + (f", {fixed} corrigés depuis le baseline" if fixed else "")
+              + (f", {excused} faux positifs justifiés (exceptions.json)" if excused else ""))
         for line in sorted(new.elements())[: args.max_lines]:
             print(f"    NOUVEAU {line.split('|', 1)[1]}")
         if sum(new.values()) > args.max_lines:
