@@ -295,7 +295,7 @@ PORTUGUESE_RULES = LanguageRules(
         re.IGNORECASE,
     ),
     leading_articles=("o ", "a ", "os ", "as ", "um ", "uma "),
-    leftover_extra_skip=frozenset({"entre", "du"}),
+    leftover_extra_skip=frozenset({"entre", "du", "une"}),  # "une": unir, 3rd person
     check_a_an=False,
     flag_space_thousands=True,
     thousands_hint="should use a period (30.000)",

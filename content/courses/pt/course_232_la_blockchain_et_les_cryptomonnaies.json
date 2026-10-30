@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Imagine um caderno de contas que ninguém possui sozinho, mas que milhares de computadores atualizam ao mesmo tempo, em todo o mundo, e que é quase impossível falsificar. Essa é a ideia de partida da **blockchain**, uma tecnologia muitas vezes reduzida à sua primeira aplicação, o **Bitcoin**."
+          "text": "Imagine um caderno de contas que ninguém possui sozinho, mas que milhares de computadores atualizam ao mesmo tempo, no mundo todo, e que é quase impossível falsificar. Essa é a ideia original da **blockchain**, uma tecnologia muitas vezes reduzida à sua primeira aplicação, o **Bitcoin**."
         },
         {
           "type": "paragraph",
-          "text": "Ao permitir trocar valor sem passar por um banco, essa invenção fez nascer toda uma economia paralela, entre promessas de liberdade financeira e críticas duras ao custo energético."
+          "text": "Ao permitir trocar valor sem passar por um banco, essa invenção deu origem a toda uma economia paralela, entre promessas de liberdade financeira e críticas duras ao seu custo energético."
         }
       ]
     },
@@ -33,11 +33,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "No coração da blockchain está uma ideia simples: o **registro distribuído**. Ao contrário de um banco, que guarda as contas nos próprios servidores, a blockchain se apoia numa rede de [[pares]], ou seja, milhares de computadores que guardam cada um uma cópia idêntica de todas as transações."
+          "text": "No centro da blockchain há uma ideia simples: o **registro distribuído**. Ao contrário de um banco, que guarda suas contas nos próprios servidores, a blockchain se apoia numa rede de [[pares]], ou seja, milhares de computadores, cada um com uma cópia idêntica de todas as transações."
         },
         {
           "type": "funFact",
-          "text": "O primeiro bloco da blockchain Bitcoin, chamado “bloco gênese”, trazia uma mensagem escondida: a manchete de um jornal britânico de 3 de janeiro de 2009, sobre o resgate dos bancos pelo Estado. Um aceno político do criador."
+          "text": "O primeiro bloco da blockchain do Bitcoin, chamado “bloco gênese”, trazia uma mensagem escondida: a manchete de um jornal britânico de 3 de janeiro de 2009, sobre o resgate dos bancos pelo Estado. Um aceno político do seu criador."
         },
         {
           "type": "paragraph",
@@ -52,17 +52,17 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "O **Bitcoin**, lançado em **2009** por uma pessoa (ou um grupo) que ficou anônima sob o nome de [[Satoshi Nakamoto]], provou que um sistema monetário podia funcionar sem banco central. Para garantir a escassez, o criador fixou um teto rígido: nunca mais de **21 milhões de bitcoins** poderão existir, um pouco como o ouro é limitado na Terra."
+          "text": "O **Bitcoin**, lançado em **2009** por uma pessoa (ou um grupo) que continua anônima sob o pseudônimo de [[Satoshi Nakamoto]], provou que um sistema monetário podia funcionar sem banco central. Para garantir a escassez da moeda, o criador fixou um teto rígido: nunca poderão existir mais de **21 milhões de bitcoins**, mais ou menos como a quantidade de ouro na Terra é limitada."
         },
         {
           "type": "image",
           "asset": "blockchain_technology_distributed_ledger_visualization",
           "ratio": "4:3",
-          "caption": "Cada transação é verificada por uma rede de computadores antes de ser acrescentada à cadeia"
+          "caption": "Cada transação é verificada por uma rede de computadores antes de ser adicionada à cadeia."
         },
         {
           "type": "paragraph",
-          "text": "Em 2015, uma segunda geração de blockchain surgiu com o **Ethereum**. Sua grande inovação: os **contratos inteligentes**. São programas que se executam sozinhos assim que uma condição é cumprida, por exemplo um reembolso automático em caso de atraso de trem, sem precisar de intermediário."
+          "text": "Em 2015, surgiu uma segunda geração de blockchain com o **Ethereum**. Sua grande inovação: os **contratos inteligentes**. São programas que se executam sozinhos assim que uma condição é cumprida, por exemplo, um reembolso automático quando o trem atrasa, sem precisar de intermediário."
         }
       ]
     },
@@ -77,11 +77,11 @@
         },
         {
           "type": "paragraph",
-          "text": "O mercado também sofre uma **volatilidade** extrema: o preço do Bitcoin pode variar 10% ou 20% em poucas horas. Essa instabilidade ainda o impede de virar uma moeda de verdade no dia a dia."
+          "text": "O mercado também sofre com uma **volatilidade** extrema: o preço do Bitcoin pode variar 10% ou 20% em poucas horas. Essa instabilidade ainda o impede de virar uma moeda de verdade no dia a dia."
         },
         {
           "type": "paragraph",
-          "text": "Por fim, o anonimato relativo das transações às vezes serviu a atividades ilegais. Mas a blockchain na verdade é totalmente transparente: as autoridades podem seguir os fluxos de dinheiro, o que torna a lavagem mais difícil do que no sistema clássico do dinheiro em espécie."
+          "text": "Por fim, o relativo anonimato das transações às vezes serviu a atividades ilegais. Mas, na verdade, a blockchain é totalmente transparente: as autoridades podem rastrear o caminho do dinheiro, o que torna a lavagem mais difícil do que com o dinheiro vivo do sistema tradicional."
         }
       ]
     },
@@ -92,11 +92,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Hoje as criptomoedas saem da margem e entram na finança tradicional. Grandes bancos já se oferecem para guardar ativos digitais para os clientes, e vários Estados pensam em criar a própria moeda digital oficial, uma **[[MNBC]]** (moeda digital de banco central)."
+          "text": "Hoje as criptomoedas estão deixando a margem e entrando no sistema financeiro tradicional. Grandes bancos já oferecem a guarda de ativos digitais para os clientes, e vários Estados estudam criar sua própria moeda digital oficial, uma **[[CBDC]]** (moeda digital de banco central)."
         },
         {
           "type": "paragraph",
-          "text": "Os **stablecoins**, criptomoedas cujo preço se estabiliza graças a uma reserva de dólares ou de euros, servem de ponte entre os dois mundos. Além da finança, setores como o luxo (para combater a falsificação), a logística (para rastrear contêineres) ou a saúde (para proteger prontuários) também adotam a blockchain pela confiabilidade."
+          "text": "As **stablecoins**, criptomoedas cujo preço é estabilizado por uma reserva de dólares ou de euros, servem de ponte entre os dois mundos. Além das finanças, setores como o de luxo (para combater a falsificação), a logística (para rastrear contêineres) ou a saúde (para proteger prontuários) também adotam a blockchain por sua confiabilidade."
         },
         {
           "type": "funFact",

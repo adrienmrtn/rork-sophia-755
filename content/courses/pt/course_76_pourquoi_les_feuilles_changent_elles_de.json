@@ -8,7 +8,7 @@
   "hero": {
     "image": "pourquoi_les_feuilles_changent_de_couleur",
     "ratio": "16:9",
-    "hook": "As folhas de outono não se maquiam: elas tiram o verde do corpo."
+    "hook": "As folhas de outono não se maquiam: elas se despem do verde."
   },
   "sections": [
     {
@@ -28,7 +28,7 @@
     },
     {
       "id": "course_76_pourquoi_les_feuilles_changent_elles_de_p1",
-      "title": "O verde que tapa tudo",
+      "title": "O verde que esconde tudo",
       "free": false,
       "blocks": [
         {
@@ -47,7 +47,7 @@
         },
         {
           "type": "funFact",
-          "text": "“Clorofila” vem do grego *chloros* (verde) e *phyllon* (folha). “Carotenoide” vem de *carota*, a cenoura em latim, onde esse pigmento foi identificado primeiro."
+          "text": "“Clorofila” vem do grego *chloros* (verde) e *phyllon* (folha). “Carotenoide” tem a mesma raiz de… cenoura (*carota*, em latim), onde esse pigmento foi identificado pela primeira vez."
         }
       ]
     },
@@ -58,7 +58,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Não é sobretudo o frio que dispara o outono, e sim a duração das noites. As árvores a medem graças a sensores de luz, os [[fitocromos]]. Quando as noites se alongam, um sinal hormonal parte rumo a cada folha."
+          "text": "Não é sobretudo o frio que dispara o outono, e sim a duração das noites. As árvores a medem com sensores de luz, os [[fitocromos]]. Quando as noites se alongam, um sinal hormonal segue para cada folha."
         },
         {
           "type": "paragraph",
@@ -68,16 +68,16 @@
     },
     {
       "id": "course_76_pourquoi_les_feuilles_changent_elles_de_p3",
-      "title": "De onde vêm os vermelhos fortes",
+      "title": "De onde vêm os vermelhos intensos",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "O amarelo já estava lá. O vermelho e o violeta, esses, muitas vezes são **fabricados** no fim da estação. São as [[antocianinas]], produzidas quando açúcares ficam presos na folha."
+          "text": "O amarelo já estava lá. Já o vermelho e o violeta muitas vezes são **fabricados** no fim da estação. São as [[antocianinas]], produzidas quando açúcares ficam presos na folha."
         },
         {
           "type": "paragraph",
-          "text": "Por que gastar energia justo antes de jogar a folha fora? Provavelmente para **proteger** a folha durante a reciclagem. A árvore recupera o **nitrogênio** e outros nutrientes preciosos. Sem clorofila, o sol pode danificar os tecidos ainda ativos. As antocianinas agem como um filtro solar no tempo da grande mudança rumo às raízes."
+          "text": "Por que gastar energia justo antes de jogar a folha fora? Provavelmente para **proteger** a folha durante a reciclagem. A árvore recupera o **nitrogênio** e outros nutrientes preciosos. Sem clorofila, o sol pode danificar os tecidos ainda ativos. As antocianinas agem como um filtro solar durante a grande mudança rumo às raízes."
         }
       ]
     },
@@ -92,7 +92,7 @@
         },
         {
           "type": "paragraph",
-          "text": "No fim, quase só restam os [[taninos]], substâncias marrons do tapete da floresta. Alguns estudos sugerem também que as cores vivas avisam os [[pulgões]]: árvore em forma, defesas fortes, melhor ir para outro lugar."
+          "text": "No fim, quase só restam os [[taninos]], substâncias marrons que cobrem o chão da floresta. Alguns estudos sugerem também que as cores vivas avisam os [[pulgões]]: árvore em forma, defesas fortes, melhor ir para outro lugar."
         },
         {
           "type": "takeaway",

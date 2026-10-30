@@ -4,11 +4,11 @@
   "subtitle": "1859",
   "subject": "sciences",
   "subcategory": "Descobertas que mudaram o mundo",
-  "description": "Em 1859, Darwin publica A Origem das Espécies. A ideia central: o vivo muda com o tempo por seleção natural.",
+  "description": "Em 1859, Darwin publica A Origem das Espécies. A ideia central: os seres vivos mudam com o tempo por seleção natural.",
   "hero": {
     "image": "la_theorie_de_l_evolution_de_darwin",
     "ratio": "16:9",
-    "hook": "As espécies não estão paradas. Elas mudam. Devagar. Mas com certeza."
+    "hook": "As espécies não são fixas. Elas mudam. Devagar. Mas sem parar."
   },
   "sections": [
     {
@@ -39,7 +39,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Jovem, Darwin embarca no navio **Beagle**. Durante anos, observa plantas, fósseis, pássaros. Nas ilhas Galápagos, percebe que aves próximas têm bicos diferentes conforme a comida."
+          "text": "Ainda jovem, Darwin embarca no navio **Beagle**. Durante anos, observa plantas, fósseis e aves. Nas ilhas Galápagos, percebe que aves aparentadas têm bicos diferentes conforme o que comem."
         },
         {
           "type": "image",
@@ -51,7 +51,7 @@
     },
     {
       "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_p2",
-      "title": "A seleção natural, sem rodeios",
+      "title": "A seleção natural, explicada",
       "free": false,
       "blocks": [
         {
@@ -60,11 +60,11 @@
         },
         {
           "type": "paragraph",
-          "text": "Não é que os indivíduos “queiram” evoluir. É um filtro: o meio guarda de preferência o que funciona. Darwin chama isso de **seleção natural**."
+          "text": "Não é que os indivíduos “queiram” evoluir. É um filtro: o ambiente tende a manter o que funciona. Darwin chama isso de **seleção natural**."
         },
         {
           "type": "funFact",
-          "text": "Darwin esperou muito tempo antes de publicar. Tinha medo do escândalo. Outro naturalista, **Alfred Russel Wallace**, chega a ideias próximas: isso empurra Darwin a lançar o livro."
+          "text": "Darwin esperou muito tempo antes de publicar. Tinha medo do escândalo. Outro naturalista, **Alfred Russel Wallace**, chega a ideias parecidas: isso leva Darwin a publicar o livro."
         }
       ]
     },
@@ -79,7 +79,7 @@
         },
         {
           "type": "paragraph",
-          "text": "A ciência, essa, avança: os fósseis, a geografia das espécies e, mais tarde, a genética confirmam a ideia geral."
+          "text": "Enquanto isso, a ciência avança: os fósseis, a geografia das espécies e, mais tarde, a genética confirmam a ideia geral."
         }
       ]
     },
@@ -90,11 +90,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Hoje sabemos que o DNA carrega as variações. Observamos a evolução no laboratório (bactérias, vírus) e na natureza. Também combatemos bactérias resistentes aos antibióticos: é evolução ao vivo."
+          "text": "Hoje se sabe que o DNA carrega as variações. A evolução pode ser observada em laboratório (bactérias, vírus) e na natureza. Também se combatem bactérias resistentes aos antibióticos: é evolução ao vivo."
         },
         {
           "type": "takeaway",
-          "text": "Darwin mostrou que o vivo evolui por seleção natural: os traços úteis à sobrevivência e à reprodução se espalham. A genética moderna confirmou e precisou esse quadro."
+          "text": "Darwin mostrou que os seres vivos evoluem por seleção natural: os traços úteis à sobrevivência e à reprodução se espalham. A genética moderna confirmou e detalhou esse modelo."
         }
       ]
     }

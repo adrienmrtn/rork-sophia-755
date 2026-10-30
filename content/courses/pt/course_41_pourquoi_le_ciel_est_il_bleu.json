@@ -4,7 +4,7 @@
   "subtitle": "Luz e atmosfera",
   "subject": "sciences",
   "subcategory": "Nosso cotidiano explicado",
-  "description": "Olhar o céu azul é tão banal que a gente esquece de se perguntar por quê. A resposta está na luz do Sol e no ar que atravessamos para enxergar essa luz.",
+  "description": "Olhar o céu azul é tão banal que a gente esquece de se perguntar por quê. A resposta está na luz do Sol e no ar que ela atravessa até chegar aos seus olhos.",
   "hero": {
     "image": "pourquoi_le_ciel_est_il_bleu",
     "ratio": "16:9",
@@ -52,11 +52,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Em **1871**, o físico britânico **Lord Rayleigh** põe esse fenômeno em equação. Ele descobre que quanto mais curta a onda de uma cor, mais ela é jogada para todos os lados pelas moléculas do ar. É a [[dispersão de Rayleigh]]."
+          "text": "Em **1871**, o físico britânico **Lord Rayleigh** descreveu esse fenômeno com uma equação. Ele descobriu que, quanto mais curta a onda de uma cor, mais ela é espalhada em todas as direções pelas moléculas do ar. É a [[dispersão de Rayleigh]]."
         },
         {
           "type": "funFact",
-          "text": "O céu de Marte faz o inverso do nosso: sua poeira rica em ferro o deixa rosado de dia, mas seus pores do sol, eles, são **azuis**. Tudo depende do que o ar contém."
+          "text": "O céu de Marte faz o inverso do nosso: a poeira rica em ferro o deixa rosado durante o dia, mas lá o pôr do sol é **azul**. Tudo depende do que o ar contém."
         },
         {
           "type": "image",
@@ -81,7 +81,7 @@
         },
         {
           "type": "paragraph",
-          "text": "A resposta não está no céu, e sim no nosso olho. Captamos as cores graças a sensores chamados **cones**, células da retina sensíveis à luz. Eles são bem mais sensíveis ao azul que ao violeta. Além disso, o Sol manda mais luz azul que violeta. Nosso cérebro então faz uma espécie de média e vê um belo azul. Um animal sensível a outras cores veria sem dúvida um céu bem diferente."
+          "text": "A resposta não está no céu, e sim no nosso olho. Captamos as cores graças a sensores chamados **cones**, células da retina sensíveis à luz. Eles são bem mais sensíveis ao azul que ao violeta. Além disso, o Sol manda mais luz azul que violeta. Nosso cérebro então faz uma espécie de média e vê um belo azul. Um animal sensível a outras cores provavelmente veria um céu bem diferente."
         }
       ]
     },
@@ -102,7 +102,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Nesse longo trajeto, todo o azul é dispersado bem antes de chegar até nós: ele é como filtrado pela espessura do ar. Restam então só as cores mais resistentes, os vermelhos e os laranjas. Se há poeira ou poluição, o [[espalhamento de Mie]] entra em jogo: partículas maiores que as moléculas do ar deixam o céu leitoso ou reforçam esses tons alaranjados."
+          "text": "Nesse longo trajeto, todo o azul é dispersado bem antes de chegar até nós: é como se a espessura do ar o filtrasse. Restam então só as cores mais resistentes, os vermelhos e os laranjas. Se houver poeira ou poluição, o [[espalhamento de Mie]] entra em jogo: partículas maiores que as moléculas do ar deixam o céu leitoso ou reforçam esses tons alaranjados."
         },
         {
           "type": "takeaway",

@@ -4,7 +4,7 @@
   "subtitle": "Física do voo",
   "subject": "sciences",
   "subcategory": "Nosso cotidiano explicado",
-  "description": "Um avião de várias centenas de toneladas voa. Não é mágica: é forma da asa, velocidade e forças que se equilibram.",
+  "description": "Um avião de várias centenas de toneladas voa. Não é mágica: é uma questão de formato da asa, de velocidade e de forças que se equilibram.",
   "hero": {
     "image": "comment_les_avions_volent",
     "ratio": "16:9",
@@ -22,7 +22,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Quatro forças principais entram em jogo: o **empuxo** (para frente), o **arrasto** (o freio do ar), o **peso** (para baixo) e a **sustentação** (para cima)."
+          "text": "Quatro forças principais entram em jogo: o **empuxo** (para frente), o **arrasto** (a resistência do ar), o **peso** (para baixo) e a **sustentação** (para cima)."
         }
       ]
     },
@@ -33,7 +33,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Vista de lado, uma asa de avião não é plana. O lado de cima é mais convexo que o de baixo. Quando o avião avança rápido, o ar precisa contornar essa forma."
+          "text": "Vista de lado, uma asa de avião não é plana. A parte de cima é mais curva que a de baixo. Quando o avião avança rápido, o ar precisa contornar essa forma."
         },
         {
           "type": "image",
@@ -43,7 +43,7 @@
         },
         {
           "type": "paragraph",
-          "text": "O ar que passa por cima acelera um pouco. Sua pressão cai. Debaixo da asa, a pressão fica mais alta. Essa diferença empurra a asa para cima: é a **sustentação**. Explica-se isso muitas vezes com o princípio de **Bernoulli**, nome de um sábio do século XVIII, e com o fato de a asa também desviar o ar para baixo."
+          "text": "O ar que passa por cima acelera um pouco. Sua pressão cai. Debaixo da asa, a pressão fica mais alta. Essa diferença empurra a asa para cima: é a **sustentação**. Isso costuma ser explicado pelo princípio de **Bernoulli**, que leva o nome de um cientista do século XVIII, e pelo fato de a asa também desviar o ar para baixo."
         }
       ]
     },
@@ -54,7 +54,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Sem velocidade, passa pouco ar pela asa e sobra pouca sustentação. Por isso um avião precisa de uma pista longa para decolar: os motores têm de acelerá-lo o bastante."
+          "text": "Sem velocidade, não passa ar suficiente pela asa, e a sustentação não basta. Por isso um avião precisa de uma pista longa para decolar: os motores têm de acelerá-lo bastante."
         },
         {
           "type": "funFact",
@@ -62,7 +62,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Em voo de cruzeiro, a sustentação equilibra o peso. O empuxo dos motores equilibra o arrasto do ar. O avião avança então a uma velocidade quase constante."
+          "text": "Em voo de cruzeiro, a sustentação equilibra o peso. O empuxo dos motores equilibra o arrasto do ar. Assim, o avião avança a uma velocidade quase constante."
         }
       ]
     },
@@ -73,11 +73,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Para subir, o piloto (ou o computador de bordo) inclina um pouco o nariz para cima e ajusta o empuxo. Para descer, costuma-se reduzir o empuxo. Para virar, inclina-se o avião de lado graças a partes móveis das asas, os ailerons."
+          "text": "Para subir, o piloto (ou o computador de bordo) inclina um pouco o nariz para cima e ajusta o empuxo. Para descer, em geral se reduz o empuxo. Para virar, o avião é inclinado de lado por partes móveis das asas, os ailerons."
         },
         {
           "type": "paragraph",
-          "text": "No pouso, reduz-se a velocidade. Flapes saem da asa para aumentar a sustentação em baixa velocidade. Depois as rodas tocam o solo, e os freios (às vezes também os reversos) param o avião."
+          "text": "No pouso, o avião desacelera. Os flapes saem da asa para aumentar a sustentação em baixa velocidade. Depois as rodas tocam o solo, e os freios (às vezes também os reversores de empuxo) param o avião."
         }
       ]
     },
