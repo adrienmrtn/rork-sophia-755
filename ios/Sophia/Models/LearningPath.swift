@@ -82,6 +82,8 @@ nonisolated struct PathLevel: Identifiable, Sendable {
     var id: String { collection.id }
     var courseCount: Int { max(0, nodes.count - 1) }
     var quizNodeId: String { LearningPathSnapshot.quizNodeId(collectionId: collection.id) }
+    /// Key under which the level's own lock (its banner) is diffed and remembered.
+    var levelKey: String { LearningPathSnapshot.levelKey(collectionId: collection.id) }
 
     /// The node the reader plays next, when this is the active level.
     var currentNodeId: String? {
@@ -107,9 +109,12 @@ nonisolated struct LearningPathSnapshot: Sendable {
     }
 
     /// Every node's state, keyed by node id, for diffing against what the reader last saw.
+    /// Each level's lock is in there too, under `levelKey`: a level can hold finished
+    /// courses while still locked, so its first pod no longer tells whether it is open.
     var nodeStates: [String: PathNodeState] {
         var states: [String: PathNodeState] = [:]
         for level in levels {
+            states[level.levelKey] = level.isUnlocked ? .available : .locked
             for node in level.nodes {
                 states[node.id] = node.state
             }
@@ -117,12 +122,17 @@ nonisolated struct LearningPathSnapshot: Sendable {
         return states
     }
 
-    var orderedNodeIds: [String] {
-        levels.flatMap { $0.nodes.map(\.id) }
+    /// Path order for the replay: each level's lock, then its nodes.
+    var orderedRevealIds: [String] {
+        levels.flatMap { [$0.levelKey] + $0.nodes.map(\.id) }
     }
 
     func level(containing nodeId: String) -> PathLevel? {
         levels.first { level in level.nodes.contains { $0.id == nodeId } }
+    }
+
+    func level(withKey key: String) -> PathLevel? {
+        levels.first { $0.levelKey == key }
     }
 
     /// A course can belong to several collections, so its node id carries the collection.
@@ -132,6 +142,10 @@ nonisolated struct LearningPathSnapshot: Sendable {
 
     static func quizNodeId(collectionId: String) -> String {
         "\(collectionId)|quiz"
+    }
+
+    static func levelKey(collectionId: String) -> String {
+        "\(collectionId)|level"
     }
 }
 
@@ -159,10 +173,12 @@ enum LearningPathEngine {
                 let isDone = progressManager.courseStatus(for: course.id) == .completed
                 if isDone { completedCount += 1 }
                 let state: PathNodeState
-                if !isUnlocked {
-                    state = .locked
-                } else if isDone {
+                if isDone {
+                    // Finished from the home or the library: completed, and open to re-read,
+                    // even while its level waits for the previous quiz.
                     state = .completed
+                } else if !isUnlocked {
+                    state = .locked
                 } else if everythingBeforeDone {
                     // The first unfinished course is the one to play; the ones after wait.
                     state = .available
