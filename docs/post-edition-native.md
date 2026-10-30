@@ -78,3 +78,35 @@ Sur les segments réécrits, la relecture corrige 11 % de l'échantillon, presqu
 - `scripts/postedit_i18n.py` : construction des lots, contrôle, application sur les trois copies (renommage de termes, rubriques, textes légaux Swift et Android), extraction d'un cours (`dump`).
 - `scripts/check_course_translation.py` : abréviations finnoises, slovènes et estoniennes (« eKr. », « pr. n. št. »), ordinaux et numéros de règne, « into » finnois et estonien, qui donnaient de faux constats.
 - `content/terminology/mots_pieges.json` : règles de dates russes, serbes et croates affinées (années en gras, quantités, « 1857. godine »).
+
+## Les quinze autres langues (option B, 30/10/2026)
+
+Anglais, espagnol, allemand, italien, portugais (Brésil et Portugal), turc, polonais, roumain, néerlandais, grec, suédois, hongrois, bulgare, tchèque. Ces langues étaient en meilleur état que les onze premières (3 à 4 sur 5 à l'audit, contre 1 à 2 pour les cours des onze). Plutôt que de tout relire, on a :
+
+- **post-édité en entier ce que l'utilisateur voit avant de payer** : l'interface (onboarding, paywall, réglages, hors chaînes témoins déjà figées), le catalogue (collections, rubriques), la fiche App Store et les textes légaux ;
+- **corrigé dans les cours, quiz et glossaires seulement les segments signalés** par la terminologie, le validateur ou l'audit (`packs --hinted`), une question de quiz signalée venant entière ;
+- **relu un échantillon par langue** (environ 80 segments changés et 40 laissés), en trois regards comme pour les onze premières ;
+- passé chaque correction par la porte (`scripts/i18n_gate.py`).
+
+| Langue | Interface | Catalogue, fiche, légal | Cours, quiz, glossaire (ciblé) | Corrections de la relecture | Terminologie avant → après |
+|---|---|---|---|---|---|
+| Bulgare | 283 | 85 | 415 | 11 | 393 → 16 |
+| Polonais | 303 | 85 | 385 | 6 | 358 → 56 |
+| Roumain | 247 | 82 | 278 | 14 | 334 → 10 |
+| Hongrois | 296 | 93 | 268 | 11 | 249 → 7 |
+| Tchèque | 236 | 87 | 141 | 7 | 178 → 8 |
+| Turc | 272 | 82 | 233 | 10 | 174 → 19 |
+| Espagnol | 209 | 79 | 175 | 6 | 161 → 14 |
+| Suédois | 260 | 87 | 139 | 7 | 144 → 4 |
+| Anglais | 169 | 76 | 133 | 6 | 127 → 9 |
+| Néerlandais | 246 | 96 | 140 | 7 | 117 → 2 |
+| Italien | 188 | 56 | 85 | 4 | 100 → 5 |
+| Allemand | 215 | 66 | 67 | 6 | 71 → 4 |
+| Grec | 262 | 95 | 76 | 8 | 68 → 6 |
+| Portugais (Brésil) | 146 | 65 | 13 | 2 | 64 → 6 |
+| Portugais (Portugal) | 167 | 41 | 17 | 6 | 43 → 9 |
+| **Total** | **3 499** | **1 175** | **2 565** | **111** | **2 581 → 175** |
+
+Les chiffres des quatre premières colonnes sont des segments réécrits. La relecture adverse a corrigé 111 segments sur environ 1 800 relus, dont 10 majeurs ou bloquants, par exemple « Le Milt de Paris » (la rate) au lieu de *Le Spleen de Paris* en néerlandais, « Πολιορκία Επικίνδυνη » (un siège militaire) pour le Siège périlleux en grec, « Two loves » ajouté à un sous-titre anglais, un titre d'œuvre calqué en roumain. Les 175 occurrences de terminologie qui restent sont en grande partie des faux positifs vérifiés (un nombre pris pour une année, le tutoiement allemand « du », le nom d'un menu Apple) ; le polonais garde le plus de reste réel.
+
+Ce que l'option B ne couvre pas : le reste des cours, quiz et glossaires de ces quinze langues n'a pas été relu segment par segment, et la passe de cohérence leçon / quiz / glossaire n'a pas été faite. Les défauts qui y restent sont ceux que les contrôles automatiques ne savent pas voir.
