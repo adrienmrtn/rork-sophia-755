@@ -68,13 +68,13 @@
       {
         "id": "course_100_les_fleurs_du_mal_baudelaire_q6",
         "type": "mcq",
-        "question": "Hangi şiir doğayı kokuları, renkleri ve sesleri birbirine bağlayan işaretlerden oluşan bir “tapınak” olarak tanımlar?",
-        "explanation": "“Yazışmalar” doğayı bir işaretler tapınağı olarak tanımlıyor. Burada duyular karışıyor; kokular, renkler ve sesler birbirine tepki veriyor.",
+        "question": "Hangi şiir doğayı kokuları, renkleri ve sesleri birbirine bağlayan işaretlerden oluşan bir “tapınak” olarak betimler?",
+        "explanation": "“Uyuşumlar” (Correspondances) doğayı bir işaretler tapınağı olarak betimler. Orada duyular birbirine karışır: kokular, renkler ve sesler birbirine karşılık verir.",
         "options": [
-          "“Yazışmalar”",
+          "“Uyuşumlar” (Correspondances)",
           "“Albatros”",
-          "\"Dalak\"",
-          "“Koleksiyon”"
+          "“Spleen”",
+          "“Düşünceye Dalış” (Recueillement)"
         ],
         "correctIndex": 0
       },
@@ -92,8 +92,8 @@
       {
         "id": "course_100_les_fleurs_du_mal_baudelaire_q8",
         "type": "mcq",
-        "question": "Baudelaire'in yazışmalarının poetikası hangi şiirsel hareketi buldu ve daha sonra Verlaine ve Mallarmé tarafından sürdürüldü?",
-        "explanation": "Bu yazışmaların şiirselliği, daha sonra Verlaine ve Mallarmé tarafından taşınan sembolizmi kurdu.",
+        "question": "Baudelaire'in uyuşumlar poetikası, daha sonra Verlaine ve Mallarmé'nin sürdüreceği hangi şiir akımının temelini attı?",
+        "explanation": "Bu uyuşumlar poetikası, daha sonra Verlaine ve Mallarmé'nin sürdürdüğü sembolizmin temelini attı.",
         "options": [
           "Sembolizm",
           "Romantizm",
@@ -1445,13 +1445,13 @@
       {
         "id": "course_111_to_kill_a_mockingbird_harper_lee_q1",
         "type": "mcq",
-        "question": "Alaycı Kuşu Vurmayın'daki hikayeyi kim anlatıyor?",
-        "explanation": "Roman, Alabama'nın Maycomb şehrinde yaşayan altı yaşındaki Scout'un gözünden anlatılıyor.",
+        "question": "Bülbülü Öldürmek romanında hikâyeyi kim anlatıyor?",
+        "explanation": "Roman, Alabama'nın Maycomb kasabasında yaşayan altı yaşındaki küçük kız Scout'un gözünden anlatılıyor.",
         "options": [
           "Scout, altı yaşında bir kız çocuğu",
           "Atticus Finch, bir avukat",
           "Boo Radley, münzevi bir komşu",
-          "Sanık Tom Robinson"
+          "Tom Robinson, sanık"
         ],
         "correctIndex": 0
       },
@@ -1482,12 +1482,12 @@
       {
         "id": "course_111_to_kill_a_mockingbird_harper_lee_q4",
         "type": "mcq",
-        "question": "Atticus'un öldürmeni yasakladığı alaycı kuş neyi simgeliyor?",
-        "explanation": "Zararsız alaycı kuş, Tom Robinson ve Boo Radley'i temsil ediyor: toplumun sebepsiz yere zulmettiği veya canavarlara dönüştürdüğü iki varlık.",
+        "question": "Atticus'un öldürülmesini yasakladığı bülbül neyi simgeliyor?",
+        "explanation": "Zararsız bir kuş olan bülbül, Tom Robinson ile Boo Radley'yi temsil ediyor: toplumun sebepsiz yere zulmettiği ya da canavara dönüştürdüğü iki insan.",
         "options": [
-          "Tom Robinson ve Boo Radley gibi masum varlıklar",
+          "Tom Robinson ve Boo Radley gibi masum insanlar",
           "Bir bütün olarak Amerikan adaleti",
-          "Maycomb kasabasının kendisi",
+          "Bizzat Maycomb kasabası",
           "Güneyli avukatların cesareti"
         ],
         "correctIndex": 0
@@ -2171,12 +2171,12 @@
       {
         "id": "course_117_le_maitre_et_marguerite_boulgakov_q1",
         "type": "mcq",
-        "question": "Usta ve Margarita romanı hangi üç dünyayı iç içe geçiriyor?",
-        "explanation": "Roman üç dünyayı örüyor: 1930'ların Sovyet Moskova'sı, antik Kudüs ve şeytanın yönettiği fantastik bir alan.",
+        "question": "Usta ile Margarita romanı hangi üç dünyayı iç içe geçiriyor?",
+        "explanation": "Roman üç dünyayı iç içe örüyor: 1930'ların Sovyet Moskova'sı, antik Kudüs ve şeytanın yönettiği fantastik bir evren.",
         "options": [
-          "Sovyet Moskova, antik Kudüs ve şeytanın yönettiği bir fantastik dünya",
-          "Moskova, St. Petersburg ve Kiev",
-          "Çarlık Geçmişi, Stalinist Bugün ve İdeal Komünist Gelecek",
+          "Sovyet Moskova'sı, antik Kudüs ve şeytanın yönettiği fantastik bir dünya",
+          "Moskova, Sankt Petersburg ve Kiev",
+          "Çarlık geçmişi, Stalinist bugün ve ideal bir komünist gelecek",
           "Berlin, Paris ve Moskova"
         ],
         "correctIndex": 0
@@ -2286,8 +2286,8 @@
       {
         "id": "course_117_le_maitre_et_marguerite_boulgakov_q10",
         "type": "trueFalse",
-        "question": "Doğru mu yanlış mı: Usta ve Margarita, Rolling Stones'un \"Sympathy for the Devil\" şarkısına ilham kaynağı oldu.",
-        "explanation": "Roman, Marianne Faithfull'un 1967'de İngilizce çevirisini teklif etmesinden sonra Mick Jagger'a \"Şeytana Sempati\"yi yazması için ilham kaynağı oldu.",
+        "question": "Doğru mu yanlış mı: Usta ile Margarita, Rolling Stones'un “Sympathy for the Devil” şarkısına ilham verdi.",
+        "explanation": "Marianne Faithfull 1967'de ona romanın İngilizce bir çevirisini hediye edince roman, Mick Jagger'a “Sympathy for the Devil” için ilham verdi.",
         "options": [
           "Doğru",
           "Yanlış"
@@ -2934,13 +2934,13 @@
       {
         "id": "course_122_la_naissance_de_l_impressionnisme_q1",
         "type": "mcq",
-        "question": "Hangi eleştirmen Monet'nin bir tablosuyla dalga geçerken \"empresyonist\" kelimesini icat etti?",
-        "explanation": "Louis Leroy, Monet'nin farkında olmadan harekete adını veren İzlenim, Yükselen Güneş başlığıyla alay ediyor.",
+        "question": "Hangi eleştirmen Monet'nin bir tablosuyla dalga geçerken “empresyonistler” sözcüğünü icat etti?",
+        "explanation": "Louis Leroy, Monet'nin İzlenim: Gün Doğumu adlı tablosunun başlığıyla alay etti ve farkında olmadan akıma adını verdi.",
         "options": [
           "Louis Leroy",
           "Émile Zola",
           "Charles Baudelaire",
-          "Theophile Gautier"
+          "Théophile Gautier"
         ],
         "correctIndex": 0
       },
@@ -2948,10 +2948,10 @@
         "id": "course_122_la_naissance_de_l_impressionnisme_q2",
         "type": "mcq",
         "question": "1863'te Reddedilenler Salonu'nda hangi Manet tablosu skandal yarattı?",
-        "explanation": "Manet, Çimenler Üzerinde Öğle Yemeği'nde çıplak bir kadınla modern giyimli iki erkeği bir araya getirerek şok eder.",
+        "explanation": "Manet, Kırda Öğle Yemeği'nde çıplak bir kadını modern giyimli iki erkekle bir araya getirerek şok etti.",
         "options": [
-          "Çimenlerin üzerinde öğle yemeği",
-          "Yazdır, yükselen güneş",
+          "Kırda Öğle Yemeği",
+          "İzlenim: Gün Doğumu",
           "Nilüferler",
           "Medusa'nın Salı"
         ],
@@ -3023,10 +3023,10 @@
       {
         "id": "course_122_la_naissance_de_l_impressionnisme_q8",
         "type": "chronological",
-        "question": "Empresyonizmin bu aşamalarını kronolojik sıraya koyun.",
-        "explanation": "Bu üç kilometre taşı, ilk skandaldan grubun karma sergilerinin sonuna kadar 1863'ten 1886'ya kadar uzanıyor.",
+        "question": "Empresyonizmin bu aşamalarını kronolojik sıraya koy.",
+        "explanation": "Bu üç dönüm noktası, ilk skandaldan grubun ortak sergilerinin sonuna kadar 1863'ten 1886'ya uzanıyor.",
         "items": [
-          "Manet'nin Çimenler Üzerinde Öğle Yemeği skandalı",
+          "Manet'nin Kırda Öğle Yemeği skandalı",
           "Nadar'daki ilk bağımsız sergi",
           "Grubun sekiz sergisinin sonuncusu"
         ]
@@ -4509,12 +4509,12 @@
         "id": "course_134_l_opera_de_verdi_q5",
         "type": "mcq",
         "question": "La Traviata hangi Fransız romanına dayanıyor?",
-        "explanation": "La Traviata, çağdaş ve tüberkülozlu kahramanıyla şoke eden Kamelyalı Kadın'ı beyazperdeye uyarlıyor.",
+        "explanation": "La Traviata, Kamelyalı Kadın'ın bir uyarlamasıdır. Çağdaş ve veremli kadın kahramanıyla büyük tepki çekti.",
         "options": [
-          "Kamelyaların Hanımı, Alexandre Dumas fils",
-          "Victor Hugo'nun Notre-Dame de Paris'i",
-          "Victor Hugo'nun Sefiller adlı eseri",
-          "Gustave Flaubert'in Madame Bovary'si"
+          "Kamelyalı Kadın, Alexandre Dumas (oğul)",
+          "Notre-Dame'ın Kamburu, Victor Hugo",
+          "Sefiller, Victor Hugo",
+          "Madame Bovary, Gustave Flaubert"
         ],
         "correctIndex": 0
       },
@@ -5986,11 +5986,11 @@
       {
         "id": "course_146_hitchcock_et_le_suspense_q3",
         "type": "mcq",
-        "question": "Hitchcock, The Rope'ta (1948) tek bir harekette çekilmiş bir filmi simüle etmek için hangi tekniği kullanıyor?",
-        "explanation": "Hitchcock, The Rope'daki tek bir sekans çekimini simüle etmek için kesikleri bir arkanın veya koyu renkli bir mobilya parçasının arkasına saklıyor.",
+        "question": "Hitchcock, İp (1948) filminde tek seferde çekilmiş bir film izlenimi vermek için hangi tekniği kullanıyor?",
+        "explanation": "Hitchcock, İp'te tek bir plan-sekans izlenimi vermek için kesmeleri birinin sırtının ya da koyu renkli bir mobilyanın arkasına gizliyor.",
         "options": [
-          "Arka veya mobilyaların arkasında gizli kesiklerin olduğu bir sekans çekimi",
-          "Klasik alternatif montaj",
+          "Kesmeleri sırtların ya da mobilyaların arkasına gizlenmiş bir plan-sekans",
+          "Klasik paralel kurgu",
           "Sürekli öznel kamera",
           "Bölünmüş ekran"
         ],
@@ -6036,8 +6036,8 @@
       {
         "id": "course_146_hitchcock_et_le_suspense_q7",
         "type": "trueFalse",
-        "question": "Doğru mu yanlış mı: Psycho için Hitchcock, seans başladıktan sonra odaya girişi yasakladı.",
-        "explanation": "Hitchcock, Psycho için seans başladıktan sonra girişi yasaklayarak olay örgüsünün sırrını bir olaya dönüştürür.",
+        "question": "Doğru mu yanlış mı: Hitchcock, Sapık için seans başladıktan sonra salona girişi yasakladı.",
+        "explanation": "Hitchcock, Sapık'ın gösterimlerinde seans başladıktan sonra girişi yasakladı ve böylece filmin sırrını başlı başına bir olaya dönüştürdü.",
         "options": [
           "Doğru",
           "Yanlış"
@@ -6060,12 +6060,12 @@
       {
         "id": "course_146_hitchcock_et_le_suspense_q9",
         "type": "chronological",
-        "question": "Hitchcock'un bu teknik yeniliklerini kronolojik sıraya koyun.",
-        "explanation": "Bu üç yenilik (1948, 1954, 1958), sürekli düzlem yanılsamasından baş dönmesinin optik bozulmasına kadar Hitchcock'un stilinin evrimine işaret ediyor.",
+        "question": "Hitchcock'un bu teknik yeniliklerini kronolojik sıraya koy.",
+        "explanation": "Bu üç yenilik (1948, 1954, 1958), Hitchcock'un üslubunun kesintisiz çekim yanılsamasından baş dönmesinin optik bozulmasına uzanan gelişimini gösteriyor.",
         "items": [
-          "La Corde tek sıralı çekimi simüle ediyor",
-          "Arka Cam subjektif kamerayı kullanır",
-          "Vertigo Dolly Zoom'u icat etti"
+          "İp tek bir plan-sekans izlenimi verir",
+          "Arka Pencere öznel kamerayı kullanır",
+          "Vertigo, Dolly Zoom'u icat eder"
         ]
       }
     ]
@@ -6161,11 +6161,11 @@
       {
         "id": "course_147_l_architecture_gothique_les_cathedrales_q8",
         "type": "mcq",
-        "question": "Hangi tamamlanmamış Gotik katedral, Gotik Uyanış sayesinde nihayet 19. yüzyılda tamamlandı?",
-        "explanation": "19. yüzyılda Avrupa, Gotik'i yeniden keşfetti ve 1880'de tamamlanan Köln'deki gibi tamamlanmamış projeleri tamamladı.",
+        "question": "Yarım kalan hangi Gotik katedral, neo-Gotik akım sayesinde nihayet 19. yüzyılda tamamlandı?",
+        "explanation": "19. yüzyılda Avrupa Gotik üslubu yeniden keşfetti ve 1880'de bitirilen Köln Katedrali gibi yarım kalmış inşaatları tamamladı.",
         "options": [
           "Köln Katedrali",
-          "Paris'in Notre-Dame'ı",
+          "Paris Notre-Dame Katedrali",
           "Chartres Katedrali",
           "Sainte-Chapelle"
         ],
@@ -11538,13 +11538,13 @@
       {
         "id": "course_18_la_grande_depression_1929_q6",
         "type": "chronological",
-        "question": "Büyük Buhran'ın bu olaylarını kronolojik sıraya koyun.",
-        "explanation": "Ekim 1929'daki çöküş bir dizi banka iflasına yol açtı, ardından kriz 1933'ün başlarında Hitler'in ve New Deal tepkisinin yolunu açtı.",
+        "question": "Büyük Buhran'la ilgili bu olayları kronolojik sıraya koy.",
+        "explanation": "Ekim 1929'daki borsa çöküşü zincirleme banka iflaslarına yol açtı. Ardından kriz, ikisi de 1933 başında gelen Hitler'in ve New Deal yanıtının önünü açtı.",
         "items": [
           "Wall Street'te Kara Perşembe",
           "ABD'de banka iflasları dalgası",
-          "Hitler'in Almanya'da iktidara yükselişi",
-          "Roosevelt'in Yeni Anlaşma'yı başlatması"
+          "Hitler'in Almanya'da iktidara gelişi",
+          "Roosevelt'in New Deal'i başlatması"
         ]
       },
       {
@@ -11577,11 +11577,11 @@
         "id": "course_18_la_grande_depression_1929_q9",
         "type": "mcq",
         "question": "Franklin D. Roosevelt krize yanıt vermek için hangi politikayı başlattı?",
-        "explanation": "1932'de seçilen Roosevelt, Yeni Anlaşma'yı başlattı: ekonomiyi canlandırmak için büyük çalışmalar, bankacılık düzenlemeleri ve sosyal korumanın başlatılması.",
+        "explanation": "1932'de seçilen Roosevelt, ekonomiyi canlandırmak için New Deal'i başlattı: büyük bayındırlık işleri, bankaların denetlenmesi ve sosyal korumanın ilk adımları.",
         "options": [
-          "Bırakınız yapsınlar ilkesine son veren ve ekonomiyi Devlet aracılığıyla canlandıran Yeni Düzen",
+          "Bırakınız yapsınlar ilkesine son veren ve ekonomiyi devlet eliyle canlandıran New Deal",
           "Tarım arazilerinin kolektifleştirilmesi",
-          "Altın standardının restorasyonu",
+          "Altın standardına geri dönülmesi",
           "Almanya ile askeri ittifak"
         ],
         "correctIndex": 0
@@ -12224,12 +12224,12 @@
       {
         "id": "course_196_merlin_l_enchanteur_q5",
         "type": "mcq",
-        "question": "Merlin'in Yuvarlak Masa'ya yerleştirdiği Tehlikeli Kuşatma nedir?",
-        "explanation": "Merlin, Yuvarlak Masa'da en saf şövalyeye ayrılmış boş bir yer olan ve daha sonra Kâse arayışı sırasında doldurulacak olan Tehlikeli Koltuğu tasarlar.",
+        "question": "Merlin'in Yuvarlak Masa'ya yerleştirdiği Tehlikeli Koltuk nedir?",
+        "explanation": "Merlin, Tehlikeli Koltuk'u tasarlar: Yuvarlak Masa'da en saf şövalyeye ayrılmış boş bir yerdir ve daha sonra Kutsal Kâse arayışı sırasında sahibini bulur.",
         "options": [
           "En saf şövalyeye ayrılmış boş bir koltuk",
           "Arthur'un kişisel tahtı",
-          "Merlin'in kendisine atfedilen koltuk",
+          "Merlin'in kendisine verilen koltuk",
           "Krallığın düşmanlarına yönelik bir tuzak"
         ],
         "correctIndex": 0
@@ -15951,8 +15951,8 @@
       {
         "id": "course_225_la_montee_des_eaux_q4",
         "type": "percentageSlider",
-        "question": "1970'den bu yana insan faaliyetleri nedeniyle üretilen aşırı ısının ne kadarı okyanuslar tarafından emildi?",
-        "explanation": "Okyanuslar, 1970'den bu yana insan faaliyeti nedeniyle üretilen aşırı ısının %90'ından fazlasını emdi ve bu da hacimlerinin artmasına neden oluyor.",
+        "question": "1970'ten bu yana insan faaliyetlerinin ürettiği fazla ısının ne kadarını okyanuslar emdi?",
+        "explanation": "Okyanuslar, 1970'ten bu yana insan faaliyetlerinin ürettiği fazla ısının %90'ından fazlasını emdi. Bu da hacimlerinin artmasına yol açıyor.",
         "correctValue": 90.0,
         "sliderMin": 0.0,
         "sliderMax": 100.0,
@@ -25054,8 +25054,8 @@
       {
         "id": "course_83_dipe_roi_sophocle_q7",
         "type": "trueFalse",
-        "question": "Doğru ya da yanlış: Kral Oedipus'ta kahraman gerçeği ne kadar net bir şekilde ararsa, kendi çöküşüne de o kadar yaklaşır.",
-        "explanation": "Oyunun trajik ironisi de budur: Oedipus'un adil ve aklı başında olma arzusu, onu kayıptan korumak yerine, kaybını hızlandırır.",
+        "question": "Doğru mu, yanlış mı: Kral Oidipus'ta kahraman gerçeği ne kadar açık bir zihinle ararsa kendi düşüşüne de o kadar yaklaşır.",
+        "explanation": "Oyunun trajik ironisi budur: Oidipus'un adil ve açık görüşlü olma isteği, onu felaketten korumak yerine felaketini hızlandırır.",
         "options": [
           "Doğru",
           "Yanlış"
@@ -25605,10 +25605,10 @@
       {
         "id": "course_88_la_poetique_aristote_q6",
         "type": "mcq",
-        "question": "Aristoteles hangi oyunu peripeteia ve tanınmanın yıldız örneği olarak gösterir?",
-        "explanation": "Aristoteles Kral Oedipus'u yıldız bir örnek olarak alır: Kahraman, örnek bir tersine dönüşle kim olduğunu çok geç keşfeder.",
+        "question": "Aristoteles, peripeteia ve tanımanın en parlak örneği olarak hangi oyunu gösterir?",
+        "explanation": "Aristoteles en parlak örnek olarak Kral Oidipus'u seçer: kahraman, örnek bir ani dönüşle kim olduğunu çok geç keşfeder.",
         "options": [
-          "Kral Oedipus",
+          "Kral Oidipus",
           "Antigone",
           "Persler",
           "Kurbağalar"
@@ -25711,11 +25711,11 @@
         "id": "course_89_les_travaux_et_les_jours_hesiode_q6",
         "type": "mcq",
         "question": "Hesiodos'a atfedilen başka hangi şiir tanrıların doğuşunu anlatır?",
-        "explanation": "Hesiodos'un bir başka şiiri olan Theogony, Tanrıların doğuşunu anlatırken, İşler ve Günler gökten sabana iner.",
+        "explanation": "Hesiodos'un bir başka şiiri olan Theogonia tanrıların doğuşunu anlatır; İşler ve Günler ise gökten sabana iner.",
         "options": [
-          "Teogoni",
-          "Odyssey",
-          "Georgics",
+          "Theogonia",
+          "Odysseia",
+          "Georgica",
           "İlyada"
         ],
         "correctIndex": 0
@@ -25931,12 +25931,12 @@
         "id": "course_90_medee_euripide_q5",
         "type": "mcq",
         "question": "Medea için oyun nasıl bitiyor?",
-        "explanation": "Deus ex machina, Medea'nın büyükbabası Güneş tarafından gönderilen kanatlı bir araba ile derhal cezalandırılmadan kaçmasına izin verir.",
+        "explanation": "Bir deus ex machina sayesinde Medea, büyükbabası Güneş'in gönderdiği kanatlı bir arabayla kaçar ve hemen cezalandırılmaz.",
         "options": [
           "Büyükbabası Güneş'in gönderdiği kanatlı arabayla kaçar",
-          "Korint'te halka açık olarak idam ediliyor",
-          "Kral Oedipus'taki Jocasta gibi intihar ediyor",
-          "Jason tarafından affedildi ve Korint'te kaldı."
+          "Korint'te herkesin önünde idam edilir",
+          "Kral Oidipus'taki İokaste gibi intihar eder",
+          "Jason onu affeder ve Korint'te kalır"
         ],
         "correctIndex": 0
       },
@@ -26489,9 +26489,9 @@
         "id": "course_95_les_confessions_rousseau_q1",
         "type": "mcq",
         "question": "İtiraflar kitabının yazarı kimdir?",
-        "explanation": "Jean-Jacques Rousseau, 1782 ile 1789 yılları arasında ölümünden sonra yayınlanan Les Confessions'ı yazdı.",
+        "explanation": "İtiraflar'ı Jean-Jacques Rousseau yazdı; eser ölümünden sonra, 1782 ile 1789 arasında yayımlandı.",
         "options": [
-          "Jean Jacques Rousseau",
+          "Jean-Jacques Rousseau",
           "Voltaire",
           "Diderot",
           "Chateaubriand"
@@ -26735,8 +26735,8 @@
       {
         "id": "course_97_le_mythe_de_sisyphe_camus_q1",
         "type": "mcq",
-        "question": "Sisifos Efsanesi'nin yazarı kimdir?",
-        "explanation": "Albert Camus, 1942'de absürd düşüncesi üzerine kurucu bir makale olan Sisifos Efsanesi'ni yayınladı.",
+        "question": "Sisifos Söyleni'nin yazarı kimdir?",
+        "explanation": "Albert Camus, absürt düşüncesinin kurucu denemesi olan Sisifos Söyleni'ni 1942'de yayımladı.",
         "options": [
           "Albert Camus",
           "Jean-Paul Sartre",
@@ -26811,13 +26811,13 @@
       {
         "id": "course_97_le_mythe_de_sisyphe_camus_q7",
         "type": "mcq",
-        "question": "Camus tam olarak hangi anda Sisifos mitiyle ilgilenmektedir?",
-        "explanation": "Camus iniş anıyla ilgilenir: Sisifos kaderinden üstündür çünkü onun tamamen farkındadır.",
+        "question": "Camus, Sisifos mitinin tam olarak hangi anıyla ilgilenir?",
+        "explanation": "Camus iniş anıyla ilgilenir: Sisifos o anda kaderinden üstündür, çünkü onun tamamen bilincindedir.",
         "options": [
-          "İniş anında, Sisifos kaderinin farkına vardığında",
-          "Sisifos kayayı yukarı doğru ittiğinde",
-          "Tanrılar tarafından kınandığı sırada",
-          "Onun ölümü sırasında"
+          "İniş anında, Sisifos kaderinin bilincindeyken",
+          "Sisifos kayayı yukarı doğru iterken",
+          "Tanrılar onu mahkûm ettiğinde",
+          "Öldüğü anda"
         ],
         "correctIndex": 0
       },
@@ -26999,10 +26999,10 @@
       {
         "id": "course_99_le_pere_goriot_balzac_q2",
         "type": "mcq",
-        "question": "Peder Goriot hangi romantik gruba mensup?",
-        "explanation": "Peder Goriot, Balzac'ın tekrarlanan karakterlerin geri dönüşünü ilk kez tanıttığı İnsanlık Komedyası'nın pivotudur.",
+        "question": "Goriot Baba hangi roman dizisine aittir?",
+        "explanation": "Goriot Baba, İnsanlık Komedyası'nın kilit romanıdır; Balzac yinelenen karakterlerin geri dönüşünü ilk kez bu romanda kullanır.",
         "options": [
-          "İnsanlık Komedisi",
+          "İnsanlık Komedyası",
           "Rougon-Macquart'lar",
           "Yüzyılların Efsanesi",
           "Komik Masallar"
@@ -27012,24 +27012,24 @@
       {
         "id": "course_99_le_pere_goriot_balzac_q3",
         "type": "mcq",
-        "question": "Peder Goriot tüm servetini kime feda ediyor?",
-        "explanation": "Eski bir erişte üreticisi olan Goriot, zengin olduklarında onu terk eden kızları Anastasie ve Delphine için her şeyi feda etti.",
+        "question": "Goriot Baba bütün servetini kimin için feda eder?",
+        "explanation": "Eski bir erişte üreticisi olan Goriot, her şeyini kızları Anastasie ve Delphine için feda etmiştir; kızları ise zengin olunca onu yüzüstü bırakır.",
         "options": [
           "Kızları Anastasie ve Delphine",
-          "Onun tek oğlu",
+          "Tek oğlu",
           "Eski çalışanları",
-          "Kendi cemaatinin kilisesi"
+          "Mahallesinin kilisesi"
         ],
         "correctIndex": 0
       },
       {
         "id": "course_99_le_pere_goriot_balzac_q4",
         "type": "mcq",
-        "question": "Kaynakları tükenen Peder Goriot nerede yaşıyor?",
-        "explanation": "Kaynakları tükenen Goriot, Vauquer pansiyonunun en mütevazı odasına kadar kat kat iner.",
+        "question": "Parası tükenirken Goriot Baba nerede yaşar?",
+        "explanation": "Parası tükendikçe Goriot, Vauquer pansiyonunda kattan kata geçerek en mütevazı odaya kadar düşer.",
         "options": [
           "Vauquer pansiyonunda",
-          "Özel bir otelde",
+          "Bir konakta",
           "Kızı Delphine'in yanında",
           "Bir manastırda"
         ],
@@ -27088,12 +27088,12 @@
       {
         "id": "course_99_le_pere_goriot_balzac_q9",
         "type": "mcq",
-        "question": "Balzac bu romanla hangi roman tekniğini başlatıyor?",
-        "explanation": "Peder Goriot, Comédie humaine'de bir romandan diğerine yeniden ortaya çıkan karakterlerin dönüşünün açılışını yapıyor.",
+        "question": "Balzac bu romanla hangi roman tekniğini ilk kez kullanır?",
+        "explanation": "Goriot Baba ile İnsanlık Komedyası'nda karakterlerin geri dönüşü başlar: aynı karakterler bir romandan ötekine yeniden çıkar.",
         "options": [
           "Karakterlerin bir romandan diğerine dönüşü",
           "İç monolog",
-          "Mektuplarla yazılmış roman",
+          "Mektup roman",
           "Birinci şahıs anlatımı"
         ],
         "correctIndex": 0

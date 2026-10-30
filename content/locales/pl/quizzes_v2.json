@@ -6,7 +6,7 @@
         "id": "course_100_les_fleurs_du_mal_baudelaire_q1",
         "type": "mcq",
         "question": "Kto napisał Kwiaty zła?",
-        "explanation": "Charles Baudelaire wydał Kwiaty zła w 1857 — to akt urodzenia nowoczesnej poezji.",
+        "explanation": "Charles Baudelaire wydał „Kwiaty zła” w 1857 roku. To akt narodzin nowoczesnej poezji.",
         "options": [
           "Charles Baudelaire",
           "Paul Verlaine",
@@ -69,12 +69,12 @@
         "id": "course_100_les_fleurs_du_mal_baudelaire_q6",
         "type": "mcq",
         "question": "Który wiersz opisuje naturę jako „świątynię” znaków łączących zapachy, kolory i dźwięki?",
-        "explanation": "„Korespondencje” opisują przyrodę jako świątynię znaków. Mieszają się tam zmysły: zapachy, kolory i dźwięki wzajemnie na siebie oddziałują.",
+        "explanation": "„Oddźwięki” opisują naturę jako świątynię znaków. Zmysły się w nich mieszają: zapachy, kolory i dźwięki odpowiadają sobie nawzajem.",
         "options": [
-          "„Correspondances”",
+          "„Oddźwięki”",
           "„Albatros”",
-          "\"Śledziona\"",
-          "\"Kolekcja\""
+          "„Spleen”",
+          "„Skupienie”"
         ],
         "correctIndex": 0
       },
@@ -240,13 +240,13 @@
       {
         "id": "course_101_1984_george_orwell_q9",
         "type": "chronological",
-        "question": "Ułóż te etapy życia i twórczości Orwella.",
-        "explanation": "Te cztery etapy wyznaczają karierę Orwella: hiszpańska wojna domowa (1936–1937), Folwark zwierzęcy (1945), 1984 (1949) i jego śmierć w 1950 r.",
+        "question": "Ułóż etapy życia i twórczości Orwella we właściwej kolejności.",
+        "explanation": "Te cztery etapy wyznaczają drogę Orwella: wojna domowa w Hiszpanii (1936-1937), „Folwark zwierzęcy” (1945), „Rok 1984” (1949) i śmierć w 1950 roku.",
         "items": [
           "Orwell walczył w milicji POUM podczas hiszpańskiej wojny domowej",
-          "Publikuje Farmę Zwierzęcą",
-          "Opublikował 1984",
-          "Zmarł w Londynie wkrótce po opublikowaniu swojej powieści."
+          "Wydał „Folwark zwierzęcy”",
+          "Wydał „Rok 1984”",
+          "Zmarł w Londynie wkrótce po wydaniu powieści"
         ]
       },
       {
@@ -331,12 +331,12 @@
       {
         "id": "course_102_la_ferme_des_animaux_george_orwell_q6",
         "type": "chronological",
-        "question": "Ułóż w kolejności kroki z Farmy zwierzęcej.",
+        "question": "Ułóż wydarzenia z „Folwarku zwierzęcego” we właściwej kolejności.",
         "explanation": "Ta sekwencja pokazuje stopniowe przejście od rewolucji egalitarnej do dyktatury świń.",
         "items": [
-          "Zwierzęta gonią Farmera Jonesa",
-          "Napoleon goni Snowballa ze swoimi psami",
-          "Świnie w tajemnicy zmieniają siedem przykazań",
+          "Zwierzęta wypędzają farmera Jonesa",
+          "Napoleon wypędza Snowballa z pomocą swoich psów",
+          "Świnie w tajemnicy zmieniają Siedem Przykazań",
           "Świnie zaczynają chodzić na dwóch nogach"
         ]
       },
@@ -367,8 +367,8 @@
       {
         "id": "course_102_la_ferme_des_animaux_george_orwell_q9",
         "type": "numericSlider",
-        "question": "Ile w przybliżeniu słów ma Farma zwierzęca, celowo bardzo krótki tekst?",
-        "explanation": "Orwell przedstawia swoją alegorię w zaledwie 30 000 słów, co wzmacnia skuteczność bajki.",
+        "question": "Ile mniej więcej słów liczy „Folwark zwierzęcy”, celowo bardzo krótki tekst?",
+        "explanation": "Orwell zamyka swoją alegorię w zaledwie 30.000 słów, dzięki czemu bajka działa jeszcze mocniej.",
         "correctValue": 30000.0,
         "sliderMin": 15000.0,
         "sliderMax": 50000.0,
@@ -1445,12 +1445,12 @@
       {
         "id": "course_111_to_kill_a_mockingbird_harper_lee_q1",
         "type": "mcq",
-        "question": "Kto opowiada historię w „Nie strzelaj do drozda”?",
+        "question": "Kto jest narratorem powieści „Zabić drozda”?",
         "explanation": "Powieść opowiedziana jest oczami Scout, sześcioletniej dziewczynki mieszkającej w Maycomb w Alabamie.",
         "options": [
           "Scout, sześcioletnia dziewczynka",
           "Atticus Finch, prawnik",
-          "Boo Radley, samotny sąsiad",
+          "Boo Radley, sąsiad odludek",
           "Tom Robinson, oskarżony"
         ],
         "correctIndex": 0
@@ -1834,13 +1834,13 @@
       {
         "id": "course_114_fahrenheit_451_bradbury_q4",
         "type": "mcq",
-        "question": "Skąd w przeciwieństwie do roku 1984 wziął się ucisk w 451 stopniach Fahrenheita?",
-        "explanation": "Inaczej niż w 1984 r., tutaj sami obywatele zrezygnowali z książek ze względu na wygodę i strach przed debatą.",
+        "question": "W odróżnieniu od „Roku 1984”, co jest źródłem ucisku w „451° Fahrenheita”?",
+        "explanation": "Inaczej niż w „Roku 1984” to sami obywatele zrezygnowali tu z książek: z wygody i ze strachu przed debatą.",
         "options": [
           "Sami obywatele, którzy dla wygody zrezygnowali z książek",
-          "O pojedynczym dyktatorze, który narzuca swoją wolę",
-          "O obcej inwazji wojskowej",
-          "Z centralnej sztucznej inteligencji"
+          "Jeden dyktator, który narzuca swoją wolę",
+          "Obca inwazja wojskowa",
+          "Centralna sztuczna inteligencja"
         ],
         "correctIndex": 0
       },
@@ -2155,8 +2155,8 @@
       {
         "id": "course_116_la_metamorphose_kafka_q10",
         "type": "numericSlider",
-        "question": "W którym roku Kafka napisał Metamorfozę?",
-        "explanation": "Kafka napisał Przemianę w 1912 roku, w okresie wielkiej twórczości, przed jej publikacją w 1915 roku.",
+        "question": "W którym roku Kafka napisał „Przemianę”?",
+        "explanation": "Kafka napisał „Przemianę” w 1912 roku, w okresie wielkiej płodności twórczej. Opowiadanie ukazało się w 1915 roku.",
         "correctValue": 1912.0,
         "sliderMin": 1880.0,
         "sliderMax": 1940.0,
@@ -2856,8 +2856,8 @@
       {
         "id": "course_121_la_renaissance_italienne_q4",
         "type": "numericSlider",
-        "question": "W którym roku Michał Anioł ukończył strop Kaplicy Sykstyńskiej?",
-        "explanation": "Michał Anioł namalował sufit Kaplicy Sykstyńskiej w latach 1508–1512, zajmując około 500 metrów kwadratowych.",
+        "question": "W którym roku Michał Anioł ukończył sklepienie Kaplicy Sykstyńskiej?",
+        "explanation": "Michał Anioł malował sklepienie Kaplicy Sykstyńskiej w latach 1508-1512, na powierzchni około 500 metrów kwadratowych.",
         "correctValue": 1512.0,
         "sliderMin": 1450.0,
         "sliderMax": 1550.0,
@@ -2935,12 +2935,12 @@
         "id": "course_122_la_naissance_de_l_impressionnisme_q1",
         "type": "mcq",
         "question": "Który krytyk wymyślił słowo „impresjoniści”, naśmiewając się z obrazu Moneta?",
-        "explanation": "Louis Leroy kpi z tytułu Moneta „Impresja, wschodzące słońce”, od którego mimowolnie pochodzi nazwa ruchu.",
+        "explanation": "Louis Leroy wyśmiał tytuł obrazu Moneta „Impresja, wschód słońca” i mimowolnie nadał nazwę całemu ruchowi.",
         "options": [
-          "Ludwika Leroya",
-          "Emil Zola",
+          "Louis Leroy",
+          "Émile Zola",
           "Charles Baudelaire",
-          "Teofil Gautier"
+          "Théophile Gautier"
         ],
         "correctIndex": 0
       },
@@ -3295,21 +3295,21 @@
       {
         "id": "course_125_le_romantisme_en_peinture_delacroix_geri_q2",
         "type": "mcq",
-        "question": "Jakie prawdziwe wydarzenie inspiruje Tratwę Meduzy Géricaulta?",
-        "explanation": "Inspiracją dla Géricaulta było rzeczywiste zatonięcie „Méduse” w 1816 r., kiedy to kapitan porzucił na tratwie około 150 marynarzy.",
+        "question": "Jakie prawdziwe wydarzenie zainspirowało „Tratwę Meduzy” Géricaulta?",
+        "explanation": "Géricault zainspirował się prawdziwą katastrofą „Meduzy” w 1816 roku: kapitan porzucił wtedy na tratwie około 150 marynarzy.",
         "options": [
-          "Zatonięcie fregaty Méduse",
+          "Katastrofa fregaty „Meduza”",
           "Bitwa pod Waterloo",
           "Rewolucja lipcowa",
-          "Siedziba Paryża"
+          "Oblężenie Paryża"
         ],
         "correctIndex": 0
       },
       {
         "id": "course_125_le_romantisme_en_peinture_delacroix_geri_q3",
         "type": "trueFalse",
-        "question": "Prawda czy fałsz: Delacroix namalował Wolność prowadząca lud, aby uczcić rewolucję lipcową 1830 roku.",
-        "explanation": "Obraz upamiętnia Trzy Chwalebne Lata, rewolucyjne dni lipca 1830 roku.",
+        "question": "Prawda czy fałsz: Delacroix namalował „Wolność wiodącą lud na barykady”, aby uczcić rewolucję lipcową 1830 roku.",
+        "explanation": "Obraz upamiętnia Trzy Chwalebne Dni, czyli rewolucyjne dni lipca 1830 roku.",
         "options": [
           "Prawda",
           "Fałsz"
@@ -3358,8 +3358,8 @@
       {
         "id": "course_125_le_romantisme_en_peinture_delacroix_geri_q7",
         "type": "numericSlider",
-        "question": "Ilu mniej więcej marynarzy porzucono na tratwie Meduse w 1816 roku?",
-        "explanation": "Kapitan wyznaczony z łaski królewskiej porzuca na prowizorycznej tratwie około 150 marynarzy.",
+        "question": "Ilu mniej więcej marynarzy porzucono na tratwie „Meduzy” w 1816 roku?",
+        "explanation": "Kapitan, który dostał stanowisko z łaski króla, porzucił na prowizorycznej tratwie około 150 marynarzy.",
         "correctValue": 150.0,
         "sliderMin": 50.0,
         "sliderMax": 300.0,
@@ -3383,11 +3383,11 @@
         "id": "course_125_le_romantisme_en_peinture_delacroix_geri_q9",
         "type": "chronological",
         "question": "Ułóż te dzieła i wydarzenia romantyzmu w porządku chronologicznym.",
-        "explanation": "Te etapy obejmują okres od 1816 do 1832 roku, od faktycznego rozbicia się statku po transformację palety Delacroix przez Orient.",
+        "explanation": "Te wydarzenia obejmują lata 1816-1832: od prawdziwej katastrofy statku po przemianę palety Delacroix pod wpływem Orientu.",
         "items": [
-          "Zatonięcie fregaty Méduse",
-          "Na wystawie znajduje się Tratwa Meduzy",
-          "Rewolucja lipcowa i wolność wiodąca naród",
+          "Katastrofa fregaty „Meduza”",
+          "Wystawienie „Tratwy Meduzy”",
+          "Rewolucja lipcowa i „Wolność wiodąca lud na barykady”",
           "Podróż Delacroix do Maroka"
         ]
       }
@@ -4509,12 +4509,12 @@
         "id": "course_134_l_opera_de_verdi_q5",
         "type": "mcq",
         "question": "Na podstawie jakiej francuskiej powieści powstała „Traviata”?",
-        "explanation": "La Traviata to adaptacja Damy kameliowej, która szokuje współczesną i gruźliczą bohaterką.",
+        "explanation": "„Traviata” to adaptacja „Damy kameliowej”. Szokowała współczesną bohaterką chorą na gruźlicę.",
         "options": [
-          "Dama kameliowa – Alexandre Dumas fils",
-          "Notre-Dame de Paris – Victor Hugo",
+          "„Dama kameliowa” Aleksandra Dumasa syna",
+          "„Katedra Marii Panny w Paryżu” Victora Hugo",
           "„Nędznicy” Victora Hugo",
-          "Madame Bovary – Gustave Flaubert"
+          "„Pani Bovary” Gustave'a Flauberta"
         ],
         "correctIndex": 0
       },
@@ -4956,7 +4956,7 @@
         "id": "course_138_bach_et_la_musique_baroque_q4",
         "type": "numericSlider",
         "question": "Ile mniej więcej kantat skomponował Bach w ciągu swojego życia?",
-        "explanation": "Szacuje się, że Bacha powstało około 300 kantat, z czego około 200 przetrwało do nas.",
+        "explanation": "Szacuje się, że Bach skomponował około 300 kantat, z których około 200 przetrwało do naszych czasów.",
         "correctValue": 300.0,
         "sliderMin": 100.0,
         "sliderMax": 500.0,
@@ -5999,12 +5999,12 @@
       {
         "id": "course_146_hitchcock_et_le_suspense_q4",
         "type": "mcq",
-        "question": "Jaki efekt wizualny wymyślił Hitchcock dla Vertigo w 1958 roku?",
-        "explanation": "W przypadku Vertigo Hitchcock wynalazł Dolly Zoom: kamera cofa się w miarę przesuwania się zoomu, zniekształcając przestrzeń, powodując zawroty głowy.",
+        "question": "Jaki efekt wizualny wymyślił Hitchcock na potrzeby „Zawrotu głowy” w 1958 roku?",
+        "explanation": "Na potrzeby „Zawrotu głowy” Hitchcock wymyślił Dolly Zoom: kamera odjeżdża, a obiektyw jednocześnie przybliża obraz. Przestrzeń się zniekształca, a widz czuje zawrót głowy.",
         "options": [
           "Dolly Zoom",
           "Głębia ostrości",
-          "Skan szczelinowy",
+          "Slit-scan",
           "Podzielony ekran"
         ],
         "correctIndex": 0
@@ -6036,8 +6036,8 @@
       {
         "id": "course_146_hitchcock_et_le_suspense_q7",
         "type": "trueFalse",
-        "question": "Prawda czy fałsz: w przypadku Psycho Hitchcock zabronił wstępu do pokoju po rozpoczęciu sesji.",
-        "explanation": "Hitchcock blokuje wstęp po rozpoczęciu sesji „Psychozy”, zamieniając tajemnicę fabuły w wydarzenie.",
+        "question": "Prawda czy fałsz: przy „Psychozie” Hitchcock zabronił wpuszczania widzów na salę po rozpoczęciu seansu.",
+        "explanation": "Przy „Psychozie” Hitchcock zabronił wpuszczania widzów po rozpoczęciu seansu i zamienił tajemnicę fabuły w wydarzenie.",
         "options": [
           "Prawda",
           "Fałsz"
@@ -6061,11 +6061,11 @@
         "id": "course_146_hitchcock_et_le_suspense_q9",
         "type": "chronological",
         "question": "Ułóż te innowacje techniczne Hitchcocka w porządku chronologicznym.",
-        "explanation": "Te trzy innowacje (1948, 1954, 1958) wyznaczają ewolucję stylu Hitchcocka, od iluzji ciągłej płaszczyzny po optyczne zniekształcenie zawrotów głowy.",
+        "explanation": "Te trzy innowacje (1948, 1954, 1958) wyznaczają kolejne etapy stylu Hitchcocka: od iluzji jednego nieprzerwanego ujęcia po optyczne zniekształcenie oddające zawrót głowy.",
         "items": [
-          "La Corde symuluje pojedyncze ujęcie sekwencyjne",
-          "Okno tylne wykorzystuje kamerę subiektywną",
-          "Vertigo wymyśla Dolly Zoom"
+          "„Sznur” udaje jedno nieprzerwane ujęcie",
+          "„Okno na podwórze” wykorzystuje kamerę subiektywną",
+          "„Zawrót głowy” wprowadza Dolly Zoom"
         ]
       }
     ]
@@ -6308,7 +6308,7 @@
         "id": "course_149_la_joconde_q1",
         "type": "mcq",
         "question": "Kto według Vasariego pozował do Mony Lisy?",
-        "explanation": "To ustalenie opiera się na biografii Leonarda, którą Giorgio Vasari wydał w 1550, a potem w 1568 roku.",
+        "explanation": "To ustalenie opiera się na biografii Leonarda, którą Giorgio Vasari wydał w 1550 roku, a potem ponownie w 1568 roku.",
         "options": [
           "Lisa Gherardini, żona kupca Francesca del Giocondo",
           "Kochanka Franciszka I",
@@ -7165,13 +7165,13 @@
       {
         "id": "course_155_nighthawks_hopper_q7",
         "type": "mcq",
-        "question": "Którzy reżyserzy wykorzystali później światło i samotność Nocnych Jastrzębi?",
-        "explanation": "Między innymi Ridley Scott i Wim Wenders poddali recyklingowi światło neonu i samotność obrazu.",
+        "question": "Którzy reżyserzy przejęli później światło i samotność z obrazu „Nocne marki”?",
+        "explanation": "Między innymi Ridley Scott i Wim Wenders przenieśli do swoich filmów neonowe światło i samotność tego obrazu.",
         "options": [
-          "Ridleya Scotta i Wima Wendersa",
-          "Alfreda Hitchcocka i Charliego Chaplina",
-          "Stevena Spielberga i George’a Lucasa",
-          "Federico Felliniego i Ingmara Bergmana"
+          "Ridley Scott i Wim Wenders",
+          "Alfred Hitchcock i Charlie Chaplin",
+          "Steven Spielberg i George Lucas",
+          "Federico Fellini i Ingmar Bergman"
         ],
         "correctIndex": 0
       },
@@ -7194,8 +7194,8 @@
       {
         "id": "course_156_les_demoiselles_d_avignon_picasso_q1",
         "type": "mcq",
-        "question": "W jakim mieście Picasso malował Panny z Awinionu w 1907?",
-        "explanation": "Picasso pracował w Bateau-Lavoir na Montmartre, gdzie ukończył obraz w 1907 roku.",
+        "question": "W jakim mieście Picasso namalował „Panny z Awinionu” w 1907 roku?",
+        "explanation": "Picasso pracował w Bateau-Lavoir na Montmartrze, gdzie ukończył obraz w 1907 roku.",
         "options": [
           "Paryż (Montmartre)",
           "Barcelona",
@@ -12013,10 +12013,10 @@
       {
         "id": "course_194_le_mahabharata_q7",
         "type": "mcq",
-        "question": "Czym jest Bhagavad-Gita w Mahabharacie?",
-        "explanation": "Bhagavad-Gita jest dialogiem składającym się z około 700 wersetów, w których Kryszna, woźnica Ardżuny, uczy go obowiązków i bezinteresownego działania.",
+        "question": "Czym jest Bhagawadgita w opowieści Mahabharaty?",
+        "explanation": "Bhagawadgita to dialog liczący około 700 wersetów, w którym Kryszna, woźnica Ardżuny, uczy go obowiązku i bezinteresownego działania.",
         "options": [
-          "Dialog Kryszny z Ardżuną na temat służby i działania",
+          "Dialog Kryszny z Ardżuną o obowiązku i działaniu",
           "Dziennik pokładowy króla Dhritarasztry",
           "Lista praw wygnania Pandawów",
           "Historia narodzin stu Kaurawów"
@@ -12224,12 +12224,12 @@
       {
         "id": "course_196_merlin_l_enchanteur_q5",
         "type": "mcq",
-        "question": "Czym jest niebezpieczne oblężenie, które Merlin umieszcza przy Okrągłym Stole?",
-        "explanation": "Merlin projektuje Niebezpieczne Miejsce, wolne miejsce przy Okrągłym Stole zarezerwowane dla najczystszego rycerza, które później zostanie zajęte podczas poszukiwania Graala.",
+        "question": "Czym jest Niebezpieczne Krzesło, które Merlin umieścił przy Okrągłym Stole?",
+        "explanation": "Merlin stworzył Niebezpieczne Krzesło: wolne miejsce przy Okrągłym Stole, zarezerwowane dla najczystszego rycerza. Zajęto je później, podczas poszukiwania Graala.",
         "options": [
           "Wolne miejsce zarezerwowane dla najczystszego rycerza",
           "Osobisty tron Artura",
-          "Fotel przypisywany samemu Merlinowi",
+          "Miejsce przydzielone samemu Merlinowi",
           "Pułapka przeznaczona na wrogów królestwa"
         ],
         "correctIndex": 0
@@ -12767,7 +12767,7 @@
         "id": "course_1_la_naissance_de_l_islam_622_q4",
         "type": "numericSlider",
         "question": "W którym roku zmarł Mahomet, zostawiając Arabię zjednoczoną pod jedną władzą?",
-        "explanation": "Mahomet zmarł w 632, zaledwie dziesięć lat po Hidżrze, gdy prawie cała Arabia była już zjednoczona.",
+        "explanation": "Mahomet zmarł w 632 roku, zaledwie dziesięć lat po Hidżrze, gdy prawie cała Arabia była już zjednoczona.",
         "correctValue": 632.0,
         "sliderMin": 600.0,
         "sliderMax": 660.0,
@@ -13103,7 +13103,7 @@
         "id": "course_202_la_rivalite_chine_etats_unis_q4",
         "type": "numericSlider",
         "question": "Ile w przybliżeniu miliardów dolarów amerykańskiego długu posiadają Chiny?",
-        "explanation": "Chiny są zadłużone w USA na około 800 miliardów dolarów, co powoduje, że trudne rozstanie jest rujnujące dla obu gospodarek.",
+        "explanation": "Chiny mają około 800 miliardów dolarów amerykańskiego długu, więc gwałtowne zerwanie byłoby rujnujące dla obu gospodarek.",
         "correctValue": 800.0,
         "sliderMin": 0.0,
         "sliderMax": 2000.0,
@@ -14379,8 +14379,8 @@
       {
         "id": "course_212_les_paradis_fiscaux_expliques_q5",
         "type": "numericSlider",
-        "question": "Ile mniej więcej miliardów dolarów raje podatkowe pozbawiają państwa każdego roku?",
-        "explanation": "Raje podatkowe pozbawiają stany około 600 miliardów dolarów rocznie, czyli pieniędzy, które mogłyby sfinansować szpitale i szkoły.",
+        "question": "Ile mniej więcej miliardów dolarów tracą co roku państwa przez raje podatkowe?",
+        "explanation": "Przez raje podatkowe państwa tracą około 600 miliardów dolarów rocznie, czyli pieniądze, które mogłyby sfinansować szpitale czy szkoły.",
         "correctValue": 600.0,
         "sliderMin": 100.0,
         "sliderMax": 1500.0,
@@ -14634,12 +14634,12 @@
         "id": "course_214_la_crise_de_l_etat_providence_q7",
         "type": "chronological",
         "question": "Ułóż te wydarzenia z kursu we właściwej kolejności.",
-        "explanation": "Wyłączenie braceros w 1951 roku, buldożer w Vitry w 1980, odmowa wobec Mazariego w 1986, wyrok Sądu Kasacyjnego w 1991.",
+        "explanation": "Wyłączenie braceros w 1951 roku, buldożer w Vitry w 1980 roku, odmowa wydana Mazariemu w 1986 roku, wyrok Sądu Kasacyjnego w 1991 roku.",
         "items": [
           "Braceros zostają wyłączeni z Social Security",
-          "Buldożer blokuje hotel robotników z Mali w Vitry",
-          "Kasa odmawia Mazariemu dodatku do renty",
-          "Sąd Kasacyjny uchyla odmowę wobec Mazariego"
+          "Buldożer blokuje hotel robotniczy dla Malijczyków w Vitry",
+          "Kasa emerytalna odmawia Mazariemu dodatku do emerytury",
+          "Sąd Kasacyjny uchyla odmowę wydaną Mazariemu"
         ]
       },
       {
@@ -15872,13 +15872,13 @@
       {
         "id": "course_224_pourquoi_les_abeilles_sont_elles_vitales_q6",
         "type": "mcq",
-        "question": "Ile w przybliżeniu gatunków pszczół istnieje na świecie, poza pszczołą miodną?",
-        "explanation": "Pszczoła domowa to tylko jeden gatunek spośród ponad 20 000 gatunków na świecie, włączając trzmiele i osmię.",
+        "question": "Ile mniej więcej gatunków pszczół żyje na świecie, licząc nie tylko pszczołę miodną?",
+        "explanation": "Pszczoła miodna to tylko jeden z ponad 20.000 gatunków na świecie, wśród których są też trzmiele i murarki.",
         "options": [
-          "Ponad 20 tys",
+          "Ponad 20.000",
           "Około 500",
-          "Około 2 tys",
-          "Około 100 tys"
+          "Około 2.000",
+          "Około 100.000"
         ],
         "correctIndex": 0
       },
@@ -16345,8 +16345,8 @@
       {
         "id": "course_228_la_sante_mentale_comme_enjeu_de_societe_q9",
         "type": "trueFalse",
-        "question": "Prawda czy fałsz: Uogólniony lęk dotyka około 300 milionów ludzi na całym świecie.",
-        "explanation": "Uogólniony lęk dotyka około 300 milionów ludzi na całym świecie i jest jednym z najczęstszych zaburzeń zdrowia psychicznego.",
+        "question": "Prawda czy fałsz: zaburzenie lękowe uogólnione dotyka około 300 milionów ludzi na świecie.",
+        "explanation": "Zaburzenie lękowe uogólnione dotyka około 300 milionów ludzi na świecie i należy do najczęstszych zaburzeń psychicznych.",
         "options": [
           "Prawda",
           "Fałsz"
@@ -18617,7 +18617,7 @@
         "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_q2",
         "type": "mcq",
         "question": "Jakie wydarzenie skłoniło cesarza bizantyjskiego Aleksego I Komnena do zwrócenia się o pomoc do papieża?",
-        "explanation": "W 1071 pod Manzikertem Turcy seldżuccy rozbili armię bizantyjską i otworzyli Anatolię — Aleksy I Komnen musiał prosić Rzym o pomoc.",
+        "explanation": "W 1071 roku pod Manzikertem Turcy seldżuccy rozbili armię bizantyjską i otworzyli sobie drogę do Anatolii, co skłoniło Aleksego I Komnena, by zwrócił się o pomoc do Rzymu.",
         "options": [
           "Klęska pod Manzikertem z rąk Turków seldżuckich",
           "Zdobycie Jerozolimy przez muzułmanów",
@@ -18687,8 +18687,8 @@
       {
         "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_q8",
         "type": "mcq",
-        "question": "Który sułtan muzułmański odzyskał Jerozolimę w 1187 r.?",
-        "explanation": "W 1187 sułtan Saladyn odebrał Jerozolimę krzyżowcom i znów rozkręcił cykl wypraw krzyżowych.",
+        "question": "Który sułtan muzułmański odbił Jerozolimę w 1187 roku?",
+        "explanation": "W 1187 roku sułtan Saladyn odbił Jerozolimę z rąk krzyżowców, co na nowo uruchomiło cykl wypraw krzyżowych.",
         "options": [
           "Saladyn",
           "Alp Arslan",
@@ -19830,13 +19830,13 @@
       {
         "id": "course_39_la_democratie_athenienne_q8",
         "type": "mcq",
-        "question": "Jaki pogląd ma Platon na demokrację ateńską, naznaczoną śmiercią Sokratesa?",
-        "explanation": "Platon, naznaczony potępieniem swego mistrza Sokratesa w 399 rpne, krytykuje demokrację, w której emocje i opinia mogą zwyciężyć nad rozumem.",
+        "question": "Jak Platon, naznaczony śmiercią Sokratesa, patrzy na demokrację ateńską?",
+        "explanation": "Platon, naznaczony skazaniem swojego mistrza Sokratesa w 399 roku p.n.e., krytykuje demokrację, w której emocje i opinia mogą wziąć górę nad rozumem.",
         "options": [
-          "Panowanie opinii przeciwnej prawdzie widzi jako formę tyranii większości",
-          "Uważa go za doskonały i nietykalny reżim polityczny",
-          "Proponuje rozszerzenie go na wszystkie greckie miasta",
-          "Chwalił to w kilku publicznych wystąpieniach"
+          "Widzi w niej rządy opinii przeciw prawdzie i formę tyranii większości",
+          "Uważa ją za doskonały i nietykalny ustrój polityczny",
+          "Proponuje rozszerzyć ją na wszystkie greckie miasta",
+          "Chwali ją w kilku publicznych przemówieniach"
         ],
         "correctIndex": 0
       },
@@ -19958,7 +19958,7 @@
         "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_q9",
         "type": "numericSlider",
         "question": "W którym roku obalony został ostatni cesarz zachodniorzymski?",
-        "explanation": "W 476 wódz Odoaker obala Romulusa Augustulusa i kończy zachodnie cesarstwo rzymskie.",
+        "explanation": "W 476 roku wódz Odoaker obalił Romulusa Augustulusa, co położyło kres Cesarstwu Zachodniorzymskiemu.",
         "correctValue": 476.0,
         "sliderMin": 400.0,
         "sliderMax": 550.0,
@@ -20071,10 +20071,10 @@
       {
         "id": "course_40_la_guerre_de_secession_americaine_1861_1_q9",
         "type": "chronological",
-        "question": "Ułóż te etapy wojny domowej w porządku chronologicznym.",
-        "explanation": "Od wyboru Lincolna w 1860 do kapitulacji Lee w 1865 te etapy obejmują całą wojnę i zwrot ku zniesieniu niewolnictwa.",
+        "question": "Ułóż te etapy wojny secesyjnej w kolejności chronologicznej.",
+        "explanation": "Od wyboru Lincolna w 1860 roku po kapitulację Lee w 1865 roku te etapy obejmują cały konflikt i jego zwrot ku zniesieniu niewolnictwa.",
         "items": [
-          "Wybór Abrahama Lincolna",
+          "Wybór Abrahama Lincolna na prezydenta",
           "Bombardowanie Fortu Sumter",
           "Proklamacja emancypacji",
           "Kapitulacja Roberta E. Lee w Appomattox"
@@ -21038,12 +21038,12 @@
       {
         "id": "course_4_le_couronnement_de_charlemagne_800_q2",
         "type": "mcq",
-        "question": "Jakie cesarstwo ma przywrócić koronacja z 800 roku?",
-        "explanation": "Leon III chce przywrócić zachodnie cesarstwo rzymskie, którego nie ma od obalenia Romulusa Augustulusa w 476.",
+        "question": "Które cesarstwo miała odnowić koronacja z 800 roku?",
+        "explanation": "Gest Leona III miał odnowić Cesarstwo Zachodniorzymskie, które nie istniało od obalenia Romulusa Augustulusa w 476 roku.",
         "options": [
-          "Zachodnie cesarstwo rzymskie, zniknęło w 476",
+          "Cesarstwo Zachodniorzymskie, nieistniejące od 476 roku",
           "Wschodnie Cesarstwo Bizantyjskie",
-          "Imperium Perskie Sasanian",
+          "Perskie Imperium Sasanidów",
           "Królestwo Longobardów we Włoszech"
         ],
         "correctIndex": 0
@@ -22696,8 +22696,8 @@
       {
         "id": "course_63_comment_se_forment_les_tremblements_de_t_q4",
         "type": "trueFalse",
-        "question": "Prawda czy fałsz: każdy dodatkowy stopień na skali wielkości mnoży uwolnioną energię przez około 32.",
-        "explanation": "Skala wielkości jest logarytmiczna: każdy stopień mnoży energię przez około 32, tak że trzęsienie ziemi o sile 8 w skali Richtera uwalnia około 1000 razy więcej energii niż trzęsienie ziemi o sile 6 w skali Richtera.",
+        "question": "Prawda czy fałsz: każdy kolejny stopień w skali magnitudy zwiększa wyzwoloną energię około 32 razy.",
+        "explanation": "Skala magnitudy jest logarytmiczna: każdy stopień zwiększa energię około 32 razy, więc trzęsienie ziemi o magnitudzie 8 uwalnia około 1.000 razy więcej energii niż trzęsienie o magnitudzie 6.",
         "options": [
           "Prawda",
           "Fałsz"
@@ -22708,7 +22708,7 @@
         "id": "course_63_comment_se_forment_les_tremblements_de_t_q5",
         "type": "numericSlider",
         "question": "Jaka jest przybliżona długość uskoku San Andreas w Kalifornii, w kilometrach?",
-        "explanation": "Usterka San Andreas rozciąga się na długości około 800 mil wzdłuż Kalifornii.",
+        "explanation": "Uskok San Andreas ciągnie się na długości około 1.300 km wzdłuż Kalifornii.",
         "correctValue": 1300.0,
         "sliderMin": 500.0,
         "sliderMax": 2000.0,
@@ -22958,8 +22958,8 @@
       {
         "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur_q7",
         "type": "mcq",
-        "question": "Dlaczego całkowite zaćmienia słońca są dziś możliwe?",
-        "explanation": "Geometryczny zbieg okoliczności sprawia, że Słońce jest 400 razy większe i 400 razy dalej od Księżyca, co daje im ten sam pozorny rozmiar na niebie.",
+        "question": "Dlaczego całkowite zaćmienia Słońca są dziś możliwe?",
+        "explanation": "Geometryczny zbieg okoliczności sprawia, że Słońce jest jednocześnie 400 razy większe od Księżyca i 400 razy dalej niż on, więc oba mają na niebie ten sam pozorny rozmiar.",
         "options": [
           "Słońce jest około 400 razy większe od Księżyca, ale także 400 razy dalej: oba mają ten sam pozorny rozmiar",
           "W rzeczywistości Księżyc jest większy od Słońca",
@@ -22971,8 +22971,8 @@
       {
         "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur_q8",
         "type": "trueFalse",
-        "question": "Prawda czy fałsz: w odległej przyszłości Księżyc odsunie się do punktu, w którym nie będzie już w stanie powodować całkowitych zaćmień Słońca.",
-        "explanation": "Za około 600 milionów lat Księżyc będzie zbyt daleko, aby całkowicie zasłonić Słońce: pozostaną jedynie zaćmienia pierścieniowe.",
+        "question": "Prawda czy fałsz: w odległej przyszłości Księżyc oddali się tak bardzo, że nie będzie już mógł powodować całkowitych zaćmień Słońca.",
+        "explanation": "Za około 600 milionów lat Księżyc będzie zbyt daleko, by całkowicie zasłonić Słońce: zostaną tylko zaćmienia obrączkowe.",
         "options": [
           "Prawda",
           "Fałsz"
@@ -23596,7 +23596,7 @@
       {
         "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment_q6",
         "type": "numericSlider",
-        "question": "O ile części na milion (ppm) wzrosło obecnie stężenie CO2 w powietrzu w porównaniu z 280 ppm przed erą przemysłową?",
+        "question": "Do ilu części na milion (ppm) wzrosło dziś stężenie CO2 w powietrzu, wobec 280 ppm przed erą przemysłową?",
         "explanation": "Stężenie CO2 wzrosło z około 280 do ponad 420 części na milion, czyli poziomu nienotowanego od około 3 milionów lat.",
         "correctValue": 420.0,
         "sliderMin": 280.0,
@@ -25513,11 +25513,11 @@
       {
         "id": "course_87_l_apologie_de_socrate_platon_q7",
         "type": "mcq",
-        "question": "Kto napisał Apologię Sokratesa?",
-        "explanation": "Przeprosiny zostały napisane przez Platona, ucznia Sokratesa i przedstawiają proces jego mistrza.",
+        "question": "Kto napisał Obronę Sokratesa?",
+        "explanation": "Obronę Sokratesa napisał Platon, jego uczeń, który przedstawia w niej proces swojego mistrza.",
         "options": [
           "Platon, jego uczeń",
-          "Samego Sokratesa",
+          "Sam Sokrates",
           "Arystoteles",
           "Tylko Ksenofont"
         ],
@@ -25605,10 +25605,10 @@
       {
         "id": "course_88_la_poetique_aristote_q6",
         "type": "mcq",
-        "question": "Którą sztukę Arystoteles przytacza jako wzorowy przykład perypetii i uznania?",
-        "explanation": "Arystoteles bierze za wzór króla Edypa: bohater zbyt późno odkrywa, kim jest, w wzorcowej odwrotności.",
+        "question": "Którą sztukę Arystoteles podaje jako sztandarowy przykład perypetii i rozpoznania?",
+        "explanation": "Arystoteles wybiera Króla Edypa na sztandarowy przykład: bohater za późno odkrywa, kim jest, a to wzorcowa perypetia.",
         "options": [
-          "Edyp Król",
+          "Król Edyp",
           "Antygona",
           "Persowie",
           "Żaby"
@@ -25647,8 +25647,8 @@
       {
         "id": "course_89_les_travaux_et_les_jours_hesiode_q1",
         "type": "mcq",
-        "question": "Do kogo Hezjod kieruje swój wiersz Dzieła i dni?",
-        "explanation": "Wiersz adresowany jest do Persesa, brata Hezjoda, oskarżonego o oszustwo przy podziale spadku.",
+        "question": "Do kogo Hezjod kieruje swój poemat Prace i dni?",
+        "explanation": "Poemat jest skierowany do Persesa, brata Hezjoda, oskarżanego o oszustwo przy podziale spadku.",
         "options": [
           "Do swojego brata Persesa",
           "Do swojej córki",
@@ -25711,11 +25711,11 @@
         "id": "course_89_les_travaux_et_les_jours_hesiode_q6",
         "type": "mcq",
         "question": "Jaki inny poemat przypisywany Hezjodowi opowiada o narodzinach bogów?",
-        "explanation": "Teogonia, kolejny wiersz Hezjoda, opowiada o narodzinach bogów, podczas gdy Dzieła i Dni zstępują z nieba do pługa.",
+        "explanation": "Teogonia, inny poemat Hezjoda, opowiada o narodzinach bogów, a Prace i dni schodzą z nieba do pługa.",
         "options": [
           "Teogonia",
           "Odyseja",
-          "Gruzini",
+          "Georgiki",
           "Iliada"
         ],
         "correctIndex": 0
@@ -26096,8 +26096,8 @@
       {
         "id": "course_91_les_miserables_victor_hugo_q10",
         "type": "numericSlider",
-        "question": "W którym roku, po siedemnastu latach pracy, ukazały się Nędznicy?",
-        "explanation": "Nędznicy ukazały się w 1862 w Brukseli, po siedemnastu latach pracy zaczętej w 1845.",
+        "question": "W którym roku, po siedemnastu latach pracy, ukazała się wreszcie powieść Nędznicy?",
+        "explanation": "Nędznicy ukazali się w 1862 roku w Brukseli, po siedemnastu latach pracy rozpoczętej już w 1845 roku.",
         "correctValue": 1862.0,
         "sliderMin": 1840.0,
         "sliderMax": 1880.0,
@@ -26113,12 +26113,12 @@
         "id": "course_92_madame_bovary_flaubert_q1",
         "type": "mcq",
         "question": "Kto napisał Panią Bovary?",
-        "explanation": "Gustave Flaubert wydał Panią Bovary w 1857 — tak zaczyna się nowoczesny realizm.",
+        "explanation": "Gustave Flaubert wydał Panią Bovary w 1857 roku. Tak narodził się nowoczesny realizm.",
         "options": [
-          "Gustaw Flaubert",
+          "Gustave Flaubert",
           "Stendhal",
           "Honoré de Balzac",
-          "Emil Zola"
+          "Émile Zola"
         ],
         "correctIndex": 0
       },
@@ -26151,7 +26151,7 @@
       {
         "id": "course_92_madame_bovary_flaubert_q4",
         "type": "trueFalse",
-        "question": "Prawda czy fałsz: Flaubert został skazany w 1857 na procesie o Panią Bovary.",
+        "question": "Prawda czy fałsz: na procesie w 1857 roku Flaubert został skazany za Panią Bovary.",
         "explanation": "W 1857 roku Flaubert został uniewinniony z zarzutu „obrazy moralności publicznej”.",
         "options": [
           "Prawda",
@@ -26231,12 +26231,12 @@
         "id": "course_93_le_rouge_et_le_noir_stendhal_q1",
         "type": "mcq",
         "question": "Kto napisał Czerwone i czarne? Jego prawdziwe nazwisko to Henri Beyle.",
-        "explanation": "Stendhal, naprawdę Henri Beyle, wydał Czerwone i czarne w 1830.",
+        "explanation": "Stendhal, a właściwie Henri Beyle, wydał Czerwone i czarne w 1830 roku.",
         "options": [
           "Stendhal",
           "Honoré de Balzac",
-          "Gustaw Flaubert",
-          "Wiktor Hugo"
+          "Gustave Flaubert",
+          "Victor Hugo"
         ],
         "correctIndex": 0
       },
@@ -26333,7 +26333,7 @@
         "id": "course_93_le_rouge_et_le_noir_stendhal_q9",
         "type": "numericSlider",
         "question": "W którym roku wydano „Czerwone i czarne”?",
-        "explanation": "Powieść ukazała się w 1830, tuż przed rewolucją lipcową.",
+        "explanation": "Powieść ukazała się w 1830 roku, tuż przed rewolucją lipcową.",
         "correctValue": 1830.0,
         "sliderMin": 1810.0,
         "sliderMax": 1840.0,
@@ -26811,12 +26811,12 @@
       {
         "id": "course_97_le_mythe_de_sisyphe_camus_q7",
         "type": "mcq",
-        "question": "W którym dokładnie momencie Camus zainteresował się mitem o Syzyfie?",
-        "explanation": "Camusa interesuje moment zstąpienia: Syzyf stoi ponad swoim losem, bo jest tego w pełni świadomy.",
+        "question": "Na którym dokładnie momencie mitu o Syzyfie skupia się Camus?",
+        "explanation": "Camusa interesuje moment zejścia: Syzyf stoi wtedy ponad swoim losem, bo jest go w pełni świadomy.",
         "options": [
-          "W chwili zejścia, kiedy Syzyf jest świadomy swego przeznaczenia",
-          "Kiedy Syzyf pcha skałę w górę",
-          "W czasie jego potępienia przez bogów",
+          "W chwili zejścia, kiedy Syzyf jest świadomy swojego losu",
+          "W chwili, gdy Syzyf pcha głaz pod górę",
+          "W chwili skazania go przez bogów",
           "W chwili jego śmierci"
         ],
         "correctIndex": 0
@@ -26987,11 +26987,11 @@
         "id": "course_99_le_pere_goriot_balzac_q1",
         "type": "mcq",
         "question": "Kto napisał Ojca Goriota?",
-        "explanation": "Honoré de Balzac wydał Ojca Goriota w 1835.",
+        "explanation": "Honoré de Balzac wydał Ojca Goriota w 1835 roku.",
         "options": [
           "Honoré de Balzac",
-          "Wiktor Hugo",
-          "Gustaw Flaubert",
+          "Victor Hugo",
+          "Gustave Flaubert",
           "Stendhal"
         ],
         "correctIndex": 0
@@ -27101,8 +27101,8 @@
       {
         "id": "course_99_le_pere_goriot_balzac_q10",
         "type": "numericSlider",
-        "question": "Ile postaci Balzac chce stworzyć w całej Comédie humaine?",
-        "explanation": "Balzac chce zarchiwizować wszystkie typy społeczne swoich czasów w 90 powieściach i około 2000 postaci.",
+        "question": "Ile postaci Balzac chciał stworzyć w całej Komedii ludzkiej?",
+        "explanation": "Balzac chciał uchwycić wszystkie typy społeczne swojej epoki w 90 powieściach i około 2.000 postaci.",
         "correctValue": 2000.0,
         "sliderMin": 1000.0,
         "sliderMax": 3000.0,
@@ -28517,7 +28517,7 @@
         "id": "course_253_pourquoi_l_imprimerie_a_t_elle_tout_q5",
         "type": "numericSlider",
         "question": "Ile Biblii Gutenberga, z około 180 wydrukowanych, przetrwało do dziś?",
-        "explanation": "Przetrwało około pięćdziesięciu egzemplarzy Biblii Gutenberga, pierwszej dużej książki wykonanej jego metodą.",
+        "explanation": "Przetrwało około pięćdziesięciu egzemplarzy Biblii Gutenberga, pierwszej wielkiej książki wydrukowanej jego metodą.",
         "correctValue": 50,
         "sliderMin": 0,
         "sliderMax": 180,
@@ -28644,7 +28644,7 @@
         "id": "course_254_qui_a_vendu_un_faux_vermeer_a_goring_q7",
         "type": "chronological",
         "question": "Ułóż te etapy życia Hana van Meegerena we właściwej kolejności.",
-        "explanation": "Rysunek powstał w 1921 roku, wystawa w 1922, sprzedaż Göringowi w czasie okupacji, proces ruszył 29 października 1947, a śmierć przyszła dwa miesiące później.",
+        "explanation": "Rysunek powstał w 1921 roku, wystawa odbyła się w 1922 roku, sprzedaż Göringowi w czasie okupacji, proces ruszył 29 października 1947 roku, a śmierć nastąpiła dwa miesiące później.",
         "items": [
           "Rysuje sarnę księżniczki Julianny",
           "Jego wystawa w Hadze kończy się porażką",
@@ -28734,11 +28734,11 @@
         "id": "course_255_comment_un_roman_a_t_il_sauve_notre_dame_q6",
         "type": "chronological",
         "question": "Ułóż te etapy historii Notre-Dame we właściwej kolejności.",
-        "explanation": "Ścięcie posągów w 1793, koronacja w 1804, powieść w 1831, petycja 31 maja 1842 i koniec prac w 1864 roku.",
+        "explanation": "Ścięcie głów posągom w 1793 r., koronacja w 1804 r., powieść w 1831 r., petycja 31 maja 1842 r. i koniec prac w 1864 r.",
         "items": [
-          "Rewolucjoniści ścinają galerię królów",
+          "Rewolucjoniści ścinają głowy posągom z galerii królów",
           "Napoleon koronuje się na cesarza w katedrze",
-          "Victor Hugo wydaje Katedrę Najświętszej Marii Panny w Paryżu",
+          "Victor Hugo wydaje Katedrę Marii Panny w Paryżu",
           "Hugo i paryska elita podpisują petycję o odnowienie kościoła",
           "Viollet-le-Duc kończy restaurację"
         ]
@@ -28865,12 +28865,12 @@
         "id": "course_256_pourquoi_a_t_on_peint_les_parois_de_q8",
         "type": "chronological",
         "question": "Ułóż te etapy historii Lascaux we właściwej kolejności.",
-        "explanation": "Malowidła pochodzą z około 15.000 p.n.e. Jaskinię odkryto w 1940 roku, zamknięto w 1963, a jej kopię otwarto w 1983.",
+        "explanation": "Malowidła powstały około 15.000 r. p.n.e. Jaskinię odkryto w 1940 r., zamknięto w 1963 r., a jej kopię otwarto w 1983 r.",
         "items": [
-          "Magdaleńczycy malują ściany jaskini",
+          "Ludzie kultury magdaleńskiej malują ściany jaskini",
           "Czterech nastolatków odkrywa jaskinię",
           "Jaskinia zostaje zamknięta dla zwiedzających",
-          "Lascaux II otwiera swoje podwoje"
+          "Lascaux II otwiera podwoje"
         ]
       }
     ]
@@ -29045,7 +29045,7 @@
         "id": "course_258_qui_s_est_vraiment_enrichi_pendant_la_q6",
         "type": "chronological",
         "question": "Ułóż te etapy gorączki złota we właściwej kolejności.",
-        "explanation": "Marshall znalazł złoto w styczniu 1848 roku, Polk potwierdził odkrycie w grudniu 1848, Forty-Niners napłynęli w 1849, a Kalifornia weszła do Unii we wrześniu 1850 roku.",
+        "explanation": "Marshall znalazł złoto w styczniu 1848 roku, Polk potwierdził odkrycie w grudniu 1848, Forty-Niners napłynęli w 1849 roku, a Kalifornia weszła do Unii we wrześniu 1850 roku.",
         "items": [
           "Odkrycie złota przy tartaku w Colomie",
           "Prezydent Polk publicznie potwierdza odkrycie",
@@ -29148,8 +29148,8 @@
       {
         "id": "course_259_pourquoi_amundsen_a_t_il_battu_scott_au_q6",
         "type": "chronological",
-        "question": "Ułóż te wydarzenia wyścigu na biegun południowy we właściwej kolejności.",
-        "explanation": "Discovery zawróciło w grudniu 1902 roku, Fram wypłynął w 1910, Amundsen dotarł na biegun 14 grudnia 1911, Scott 17 stycznia 1912, a ostatnia strona dziennika pochodzi z 29 marca 1912 roku.",
+        "question": "Ułóż we właściwej kolejności te wydarzenia z wyścigu do bieguna południowego.",
+        "explanation": "Wyprawa Discovery zawróciła w grudniu 1902 roku, Fram wypłynął w 1910 roku, Amundsen dotarł na biegun 14 grudnia 1911, Scott 17 stycznia 1912, a ostatnia strona dziennika pochodzi z 29 marca 1912 roku.",
         "items": [
           "Scott, Shackleton i Wilson zawracają w czasie wyprawy Discovery",
           "Fram wypływa z 97 psami na pokładzie",
@@ -29264,11 +29264,11 @@
       {
         "id": "course_260_d_ou_viennent_les_super_heros_q7",
         "type": "chronological",
-        "question": "Ułóż te debiuty w kolejności.",
-        "explanation": "Superman pojawił się w 1938 roku, Kapitan Marvel w 1940, Wonder Woman w 1941, Fantastyczna Czwórka w 1961, a Thor w 1962.",
+        "question": "Ułóż te debiuty we właściwej kolejności.",
+        "explanation": "Superman zadebiutował w 1938 r., Kapitan Marvel w 1940 r., Wonder Woman w 1941 r., Fantastyczna Czwórka w 1961 r., a Thor w 1962 r.",
         "items": [
           "Superman w Action Comics",
-          "Kapitan Marvel wykrzykuje Shazam w Whiz Comics",
+          "Kapitan Marvel woła „Shazam” w Whiz Comics",
           "Wonder Woman, córka Hippolity",
           "Fantastyczna Czwórka",
           "Thor w Journey into Mystery"
@@ -29670,7 +29670,7 @@
         "id": "course_264_qui_a_vraiment_construit_les_pyramides_q6",
         "type": "trueFalse",
         "question": "Prawda czy fałsz: Wielka Piramida była najwyższą budowlą świata przez prawie cztery tysiące lat.",
-        "explanation": "Mierząc około 146 metrów, utrzymała ten rekord przez blisko cztery tysiąclecia.",
+        "explanation": "Przy wysokości około 146 metrów utrzymywała ten rekord przez blisko cztery tysiąclecia.",
         "options": [
           "Prawda",
           "Fałsz"
@@ -29681,7 +29681,7 @@
         "id": "course_264_qui_a_vraiment_construit_les_pyramides_q7",
         "type": "chronological",
         "question": "Ułóż we właściwej kolejności te etapy śledztwa w sprawie budowniczych piramid.",
-        "explanation": "Budowa trwała około 4.500 lat temu, wykopaliska Marka Lehnera ruszyły w 1988 roku, a papirusy odkryto w 2013.",
+        "explanation": "Budowa toczyła się około 4.500 lat temu, wykopaliska Marka Lehnera ruszyły w 1988 roku, a papirusy odkryto w 2013 roku.",
         "items": [
           "Budowa Wielkiej Piramidy za Cheopsa",
           "Mark Lehner zaczyna odkopywać miasto robotników",
@@ -29782,7 +29782,7 @@
         "id": "course_265_pourquoi_les_spartiates_etaient_ils_si_q7",
         "type": "chronological",
         "question": "Ułóż te wydarzenia z historii Sparty we właściwej kolejności.",
-        "explanation": "Sparta przewodziła sojusznikom od VI wieku p.n.e., pokonała Ateny w 404, załamała się pod Leuktrami w 371, a w IV wieku miała niespełna 1.000 obywateli.",
+        "explanation": "Sparta przewodziła sojusznikom od VI wieku p.n.e., pokonała Ateny w 404 roku, załamała się pod Leuktrami w 371 roku, a w IV wieku miała niespełna 1.000 obywateli.",
         "items": [
           "Sparta staje na czele sojuszników z Peloponezu",
           "Sparta pokonuje Ateny",
@@ -30258,7 +30258,7 @@
         "id": "course_270_pourquoi_la_yougoslavie_a_t_elle_eclate_q4",
         "type": "trueFalse",
         "question": "Prawda czy fałsz: Chorwacja i Słowenia ogłosiły niepodległość w 1991 roku.",
-        "explanation": "Obie republiki opuściły federację w 1991 roku, a Bośnia i Hercegowina poszła w ich ślady w 1992.",
+        "explanation": "Obie republiki opuściły federację w 1991 roku, a Bośnia i Hercegowina poszła w ich ślady w 1992 roku.",
         "options": [
           "Prawda",
           "Fałsz"
@@ -31078,7 +31078,7 @@
         "id": "course_278_pourquoi_les_accords_climatiques_sont_q4",
         "type": "chronological",
         "question": "Ułóż te etapy dyplomacji klimatycznej we właściwej kolejności.",
-        "explanation": "Montreal w 1987 roku, Kioto w 1997, wycofanie się Kanady w 2012, Paryż w 2015, wycofanie się Stanów Zjednoczonych w 2026 roku.",
+        "explanation": "Montreal w 1987 r., Kioto w 1997 r., wycofanie się Kanady w 2012 r., Paryż w 2015 r. i wycofanie się Stanów Zjednoczonych w 2026 r.",
         "items": [
           "Przyjęcie protokołu montrealskiego",
           "Przyjęcie protokołu z Kioto",
@@ -31156,7 +31156,7 @@
       {
         "id": "course_279_pourquoi_accepter_une_armee_etrangere_q2",
         "type": "numericSlider",
-        "question": "Ile amerykańskich obiektów wojskowych za granicą naliczono w 2021 roku?",
+        "question": "Ile amerykańskich obiektów wojskowych było za granicą w 2021 roku?",
         "explanation": "Zestawienie z 2021 roku wymienia około 750 amerykańskich obiektów wojskowych w 80 krajach i terytoriach.",
         "correctValue": 750,
         "sliderMin": 100,
@@ -31205,9 +31205,9 @@
         "id": "course_279_pourquoi_accepter_une_armee_etrangere_q6",
         "type": "chronological",
         "question": "Ułóż te wydarzenia w kolejności chronologicznej.",
-        "explanation": "Umowa niszczyciele za bazy w 1940 roku, niepodległość Filipin w 1946, porozumienia z Évian w 1962, Cam Ranh w 1979.",
+        "explanation": "Umowa „niszczyciele za bazy” w 1940 r., niepodległość Filipin w 1946 r., porozumienia z Évian w 1962 r. i Cam Ranh w 1979 r.",
         "items": [
-          "Umowa niszczyciele za bazy między Waszyngtonem a Londynem",
+          "Umowa „niszczyciele za bazy” między Waszyngtonem a Londynem",
           "Niepodległość Filipin",
           "Porozumienia z Évian",
           "Otwarcie zatoki Cam Ranh dla radzieckiej marynarki"
@@ -31306,11 +31306,11 @@
       {
         "id": "course_280_pourquoi_le_dollar_domine_t_il_le_monde_q6",
         "type": "chronological",
-        "question": "Ułóż te wydarzenia z historii dolara w kolejności.",
-        "explanation": "Bretton Woods w 1944 roku, koniec wymiany w sierpniu 1971, płynne kursy w 1973, linie dolarowe w marcu 2020, kryzys na Sri Lance w 2022.",
+        "question": "Ułóż te wydarzenia z historii dolara we właściwej kolejności.",
+        "explanation": "Bretton Woods w 1944 r., koniec wymienialności dolara w sierpniu 1971 r., płynne kursy walut w 1973 r., linie dolarowe w marcu 2020 r. i kryzys na Sri Lance w 2022 r.",
         "items": [
           "Spotkanie 44 delegacji w Bretton Woods",
-          "Nixon kończy wymianę dolara na złoto",
+          "Nixon kończy wymienialność dolara na złoto",
           "Najważniejsze waluty przechodzą na płynne kursy",
           "Rezerwa Federalna otwiera linie dolarowe dla kolejnych dziewięciu banków centralnych",
           "Kryzys walutowy na Sri Lance"
@@ -31760,7 +31760,7 @@
         "id": "course_285_pourquoi_la_lune_s_eloigne_t_elle_de_la_q1",
         "type": "mcq",
         "question": "Jak mierzy się dziś odległość między Ziemią a Księżycem?",
-        "explanation": "Astronauci z misji Apollo zostawili na Księżycu odbłyśniki. Czas powrotu światła lasera daje odległość, średnio około 385.000 km.",
+        "explanation": "Astronauci z misji Apollo zostawili na Księżycu odbłyśniki. Z czasu powrotu światła lasera wylicza się odległość: średnio około 385.000 km.",
         "options": [
           "Mierząc czas powrotu impulsów lasera odbitych od odbłyśników na Księżycu",
           "Obserwując przez teleskop pozorną wielkość Księżyca",
@@ -31819,8 +31819,8 @@
       {
         "id": "course_285_pourquoi_la_lune_s_eloigne_t_elle_de_la_q6",
         "type": "mcq",
-        "question": "Dlaczego podczas całkowitego zaćmienia Księżyc może całkiem zasłonić Słońce?",
-        "explanation": "Przypadkiem oba ciała mają na naszym niebie prawie tę samą pozorną wielkość, więc Księżyc dokładnie zakrywa tarczę Słońca.",
+        "question": "Dlaczego podczas całkowitego zaćmienia Księżyc może zasłonić całe Słońce?",
+        "explanation": "Przypadkowo oba ciała niebieskie mają na naszym niebie prawie taką samą pozorną wielkość, więc Księżyc może dokładnie zakryć tarczę Słońca.",
         "options": [
           "Słońce jest około 400 razy szersze od Księżyca, ale też 400 razy dalej",
           "Księżyc jest w rzeczywistości tak duży jak Słońce",
@@ -31945,9 +31945,9 @@
         "id": "course_286_comment_a_t_on_evite_la_famine_annoncee_q8",
         "type": "chronological",
         "question": "Ułóż te wydarzenia we właściwej kolejności.",
-        "explanation": "Kolejno: krach w 1929 roku, niepodległość Indii w 1947, początek Wielkiego Skoku Naprzód w 1958 i secesja Biafry w 1967.",
+        "explanation": "Kolejno: krach w 1929 r., niepodległość Indii w 1947 r., początek Wielkiego Skoku Naprzód w 1958 r. i secesja Biafry w 1967 r.",
         "items": [
-          "Krach giełdowy i początek Wielkiego Kryzysu",
+          "Krach giełdowy i początek wielkiego kryzysu",
           "Niepodległość Indii",
           "Pierwsze ofiary Wielkiego Skoku Naprzód w Chinach",
           "Secesja Biafry"
@@ -32150,7 +32150,7 @@
         "id": "course_288_que_s_est_il_passe_a_bhopal_la_nuit_du_q8",
         "type": "chronological",
         "question": "Ułóż te wydarzenia we właściwej kolejności.",
-        "explanation": "Po kolei: budowa fabryki w 1969 roku, Three Mile Island w 1979, wyciek w Bhopalu w 1984, Czarnobyl w 1986 i ugoda z 1989 roku.",
+        "explanation": "Po kolei: budowa fabryki w 1969 r., Three Mile Island w 1979 r., wyciek w Bhopalu w 1984 r., Czarnobyl w 1986 r. i ugoda z 1989 r.",
         "items": [
           "Budowa fabryki Union Carbide pod Bhopalem",
           "Awaria jądrowa w Three Mile Island",
@@ -32450,7 +32450,7 @@
         "id": "course_291_l_esclavage_americain_a_t_il_vraiment_q7",
         "type": "chronological",
         "question": "Ułóż te wydarzenia w kolejności chronologicznej.",
-        "explanation": "Secesja w 1861 roku, Proklamacja w 1863, ratyfikacja XIII poprawki 6 grudnia 1865, a potem XIV poprawka w 1866 roku.",
+        "explanation": "Secesja w 1861 r., Proklamacja w 1863 r., ratyfikacja XIII poprawki 6 grudnia 1865 r., a potem XIV poprawka w 1866 r.",
         "items": [
           "Stany Południa ogłaszają secesję",
           "Lincoln wydaje Proklamację emancypacji",
@@ -32658,12 +32658,12 @@
         "id": "course_293_pourquoi_l_angleterre_s_est_elle_battue_q7",
         "type": "chronological",
         "question": "Ułóż te wydarzenia w kolejności chronologicznej.",
-        "explanation": "Zakaz w 1796 roku, zniszczenie opium w 1839, traktat nankiński w 1842, potem druga wojna w latach 1856-1860.",
+        "explanation": "Zakaz w 1796 r., zniszczenie opium w 1839 r., traktat nankiński w 1842 r., a potem druga wojna opiumowa w latach 1856-1860.",
         "items": [
           "Chiny zakazują opium",
           "Lin Zexu niszczy brytyjskie opium",
-          "Podpisanie traktatu nankińskiego",
-          "Druga wojna opiumowa legalizuje handel"
+          "Traktat nankiński zostaje podpisany",
+          "Druga wojna opiumowa legalizuje handel opium"
         ]
       },
       {
@@ -32747,7 +32747,7 @@
         "id": "course_294_pourquoi_l_irlande_affamee_exportait_q6",
         "type": "mcq",
         "question": "Jaki jest główny argument Jamesa Donnelly'ego?",
-        "explanation": "W 1847 i 1848 roku do Irlandii trafiło ponad 1,3 miliona ton zboża, ponad trzy razy więcej, niż z niej wyjechało.",
+        "explanation": "W latach 1847 i 1848 do Irlandii przywieziono ponad 1,3 miliona ton zboża, ponad trzy razy więcej, niż z niej wywieziono.",
         "options": [
           "W czasie głodu Irlandia sprowadziła ponad trzy razy więcej zboża, niż wywiozła",
           "Eksport ustał już jesienią 1845 roku",
@@ -33285,10 +33285,10 @@
         "id": "course_299_pourquoi_aurore_dupin_s_est_elle_q8",
         "type": "chronological",
         "question": "Ułóż te momenty z życia George Sand we właściwej kolejności.",
-        "explanation": "Rose et Blanche w 1831 roku, Indiana w 1832, Lukrecja Floriani w 1846, Komuna w 1871, a potem pogrzeb Sand, na którym przemawiał Hugo.",
+        "explanation": "Rose et Blanche w 1831 roku, Indiana w 1832 r., Lukrecja Floriani w 1846 r., Komuna Paryska w 1871 r., a potem pogrzeb Sand, na którym przemawiał Hugo.",
         "items": [
-          "Ukazuje się Rose et Blanche, podpisana J. Sand",
-          "Ukazuje się Indiana, podpisana G. Sand",
+          "Ukazuje się Rose et Blanche z podpisem J. Sand",
+          "Ukazuje się Indiana z podpisem G. Sand",
           "Ukazuje się Lukrecja Floriani",
           "Komuna Paryska powstaje i upada",
           "Victor Hugo wygłasza mowę na jej pogrzebie"
@@ -33352,14 +33352,14 @@
       {
         "id": "course_300_comment_le_journal_d_anne_frank_a_t_il_q5",
         "type": "chronological",
-        "question": "Ułóż te wydarzenia w kolejności.",
-        "explanation": "Ucieczka w 1933 roku, ukrycie się w 1942, aresztowanie 4 sierpnia 1944, pierwsze wydanie w 1947, Broadway w 1955.",
+        "question": "Ułóż te wydarzenia we właściwej kolejności.",
+        "explanation": "Ucieczka w 1933 roku, przeniesienie się do kryjówki w 1942 r., aresztowanie 4 sierpnia 1944 r., pierwsze wydanie w 1947 r., Broadway w 1955 r.",
         "items": [
           "Frankowie wyjeżdżają z Niemiec do Holandii",
           "Rodzina ukrywa się w Oficynie",
           "Ukrywający się zostają aresztowani",
           "Dziennik ukazuje się po niderlandzku",
-          "Premiera sztuki na Broadwayu"
+          "Sztuka ma premierę na Broadwayu"
         ]
       },
       {
@@ -34201,11 +34201,11 @@
         "id": "course_308_quelle_a_ete_la_guerre_la_plus_q7",
         "type": "chronological",
         "question": "Ułóż te etapy powstania tajpingów we właściwej kolejności.",
-        "explanation": "Porażki Honga poprzedziły powstanie. Nankin padł w 1853 roku, Anqing odbito w 1861, a Nankin w lipcu 1864 roku.",
+        "explanation": "Porażki Honga poprzedziły powstanie. Nankin padł w 1853 roku, Anqing odbito w 1861 r., a Nankin w lipcu 1864 roku.",
         "items": [
           "Hong Xiuquan oblewa egzaminy cesarskie",
           "Tajpingowie zdobywają Nankin",
-          "Qingowie odbijają Anqing",
+          "Wojska Qing odbijają Anqing",
           "Wojska cesarskie wkraczają do Nankinu"
         ]
       },

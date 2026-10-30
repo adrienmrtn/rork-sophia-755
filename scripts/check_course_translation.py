@@ -160,7 +160,7 @@ ABBREVIATION_TAIL_RE = re.compile(
     # era and date abbreviations of the edited languages: eKr./jKr. (fi), eKr./pKr. (et),
     # f.Kr./e.Kr. (da, nb), н. э. / г. / в. (ru), and ordinal dates or centuries ("12.", "8.")
     # regnal ordinals of the Slavic languages ("Nikolaj II.", "Ludvik XIV.") and "pr. n. št." (sl)
-    r"|eKr|jKr|pKr|Kr|eaa|jaa|št|\b[IVXLC]+|\b[а-яё]|\d)\.$"
+    r"|eKr|jKr|pKr|Kr|Hr|eaa|jaa|št|\b[IVXLC]+|\b[а-яё]|\d)\.$"
 )
 
 # Articles that must not precede a glossary key that already carries one.
@@ -261,7 +261,7 @@ GERMAN_RULES = LanguageRules(
         re.IGNORECASE,
     ),
     leading_articles=("der ", "die ", "das ", "dem ", "den ", "des ", "ein ", "eine "),
-    leftover_extra_skip=frozenset({"des"}),  # German genitive article
+    leftover_extra_skip=frozenset({"des", "du"}),  # German genitive article; "du" = informal you
     check_a_an=False,
     flag_space_thousands=True,
     thousands_hint="should use a period (30.000)",

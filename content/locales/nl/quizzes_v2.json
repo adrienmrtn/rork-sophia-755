@@ -240,13 +240,13 @@
       {
         "id": "course_101_1984_george_orwell_q9",
         "type": "chronological",
-        "question": "Breng deze fasen van Orwells leven en werk op orde.",
-        "explanation": "Deze vier fasen markeren de carrière van Orwell: de Spaanse Burgeroorlog (1936-1937), Dierenboerderij (1945), 1984 (1949) en vervolgens zijn dood in 1950.",
+        "question": "Zet deze fasen uit Orwells leven en werk in de juiste volgorde.",
+        "explanation": "Deze vier fasen markeren Orwells levensloop: de Spaanse Burgeroorlog (1936-1937), Boerderij der dieren (1945), 1984 (1949) en ten slotte zijn dood in 1950.",
         "items": [
           "Orwell vocht in de POUM-milities tijdens de Spaanse Burgeroorlog",
-          "Hij publiceert Dierenboerderij",
+          "Hij publiceerde Boerderij der dieren",
           "Hij publiceerde 1984",
-          "Hij stierf in Londen kort na de publicatie van zijn roman."
+          "Hij stierf in Londen, kort na het verschijnen van zijn roman"
         ]
       },
       {
@@ -268,13 +268,13 @@
       {
         "id": "course_102_la_ferme_des_animaux_george_orwell_q1",
         "type": "mcq",
-        "question": "Welke historische gebeurtenis beeldt Dierenboerderij uit in de vorm van een allegorie?",
+        "question": "Welke historische gebeurtenis verbeeldt Boerderij der dieren als allegorie?",
         "explanation": "Orwell zet de belangrijkste fases van de Russische Revolutie en het stalinistische verraad om in een dierenfabel.",
         "options": [
           "De Russische Revolutie",
           "De Franse Revolutie",
           "De Spaanse Burgeroorlog",
-          "De Engelse Industriële Revolutie"
+          "De industriële revolutie in Engeland"
         ],
         "correctIndex": 0
       },
@@ -331,13 +331,13 @@
       {
         "id": "course_102_la_ferme_des_animaux_george_orwell_q6",
         "type": "chronological",
-        "question": "Zet deze stappen van Dierenboerderij op een rij.",
-        "explanation": "Deze reeks toont de geleidelijke verschuiving van de egalitaire revolutie naar de dictatuur van de varkens.",
+        "question": "Zet deze stappen uit Boerderij der dieren in de juiste volgorde.",
+        "explanation": "Deze reeks laat zien hoe de revolutie voor gelijkheid geleidelijk omslaat in de dictatuur van de varkens.",
         "items": [
-          "De dieren achtervolgen boer Jones",
-          "Napoleon achtervolgt Sneeuwbal met zijn honden",
-          "Varkens veranderen in het geheim de zeven geboden",
-          "Varkens beginnen op twee benen te lopen"
+          "De dieren verjagen boer Jones",
+          "Napoleon verjaagt Sneeuwbal met behulp van zijn honden",
+          "De varkens veranderen in het geheim de Zeven Geboden",
+          "De varkens gaan op twee poten lopen"
         ]
       },
       {
@@ -367,8 +367,8 @@
       {
         "id": "course_102_la_ferme_des_animaux_george_orwell_q9",
         "type": "numericSlider",
-        "question": "Hoeveel woorden heeft Dierenboerderij ongeveer, een bewust heel korte tekst?",
-        "explanation": "Orwell levert zijn allegorie in amper 30.000 woorden, wat de effectiviteit van de fabel versterkt.",
+        "question": "Hoeveel woorden telt Boerderij der dieren ongeveer, een bewust heel korte tekst?",
+        "explanation": "Orwell vertelt zijn allegorie in amper 30.000 woorden, en dat maakt de fabel des te krachtiger.",
         "correctValue": 30000.0,
         "sliderMin": 15000.0,
         "sliderMax": 50000.0,
@@ -1086,7 +1086,7 @@
         "id": "course_109_don_quichotte_cervantes_q1",
         "type": "mcq",
         "question": "Wat denkt Don Quichot te zien als hij windmolens aanvalt?",
-        "explanation": "Don Quixote, meegesleept door het lezen van ridderromans, beschouwt windmolens als reuzen om mee te vechten.",
+        "explanation": "Don Quichot, meegesleept door de ridderromans die hij leest, ziet de windmolens aan voor reuzen die hij moet bevechten.",
         "options": [
           "Reuzen",
           "Draken",
@@ -1098,21 +1098,21 @@
       {
         "id": "course_109_don_quichotte_cervantes_q2",
         "type": "mcq",
-        "question": "Welke persoonlijke ervaring kenmerkte het leven van Cervantes voordat hij Don Quixote schreef?",
-        "explanation": "Cervantes raakte in 1571 gewond bij Lepanto en werd vervolgens gevangengenomen en vijf jaar lang gevangen gehouden in Algiers, voordat hij in Spanje relatieve armoede ervoer.",
+        "question": "Welke persoonlijke ervaring tekende het leven van Cervantes voordat hij Don Quichot schreef?",
+        "explanation": "Cervantes raakte in 1571 gewond bij Lepanto, werd daarna gevangengenomen en zat vijf jaar vast in Algiers, voordat hij in Spanje in betrekkelijke armoede leefde.",
         "options": [
-          "Hij raakte gewond bij de Slag bij Lepanto en zat vervolgens vijf jaar gevangen in Algiers.",
-          "Hij werd priester voordat hij zich tot het schrijven bekeerde",
-          "Hij leidt een reizend theatergezelschap",
-          "Hij erft een fortuin dat hij door gokken verliest"
+          "Hij raakte gewond in de slag bij Lepanto en zat daarna vijf jaar gevangen in Algiers",
+          "Hij werd priester voordat hij zich op het schrijven toelegde",
+          "Hij leidde een rondreizend toneelgezelschap",
+          "Hij erfde een fortuin dat hij vergokte"
         ],
         "correctIndex": 0
       },
       {
         "id": "course_109_don_quichotte_cervantes_q3",
         "type": "trueFalse",
-        "question": "Waar of niet waar: in 1614 publiceerde een andere auteur een vals vervolg op Don Quixote, wat Cervantes ertoe aanzette het echte tweede deel te schrijven.",
-        "explanation": "Woedend over dit valse vervolg publiceerde Cervantes in 1615 zijn eigen tweede deel, waarin de helden hun eigen beroemdheid ontdekken.",
+        "question": "Waar of niet waar: in 1614 publiceerde een andere auteur een vals vervolg op Don Quichot, wat Cervantes ertoe aanzette het echte tweede deel te schrijven.",
+        "explanation": "Woedend over dit valse vervolg publiceerde Cervantes in 1615 zijn eigen tweede deel, waarin de helden ontdekken dat ze beroemd zijn.",
         "options": [
           "Waar",
           "Onwaar"
@@ -1122,8 +1122,8 @@
       {
         "id": "course_109_don_quichotte_cervantes_q4",
         "type": "mcq",
-        "question": "Welk emblematisch duo bedenkt Cervantes om het ideale en het werkelijke tegenover elkaar te stellen?",
-        "explanation": "Don Quixote, dromer van ridderlijkheid, en Sancho Panza, pragmatisch en aan de maag gehecht, vormen een duo dat universeel is geworden.",
+        "question": "Welk iconisch duo bedenkt Cervantes om het ideaal en de werkelijkheid tegenover elkaar te zetten?",
+        "explanation": "Don Quichot, die van ridderschap droomt, en Sancho Panza, nuchter en vooral met zijn maag bezig, vormen een duo dat wereldwijd bekend is geworden.",
         "options": [
           "Don Quichot en Sancho Panza",
           "Alonso Quijano en de Ridder van de Witte Maan",
@@ -1148,13 +1148,13 @@
       {
         "id": "course_109_don_quichotte_cervantes_q6",
         "type": "mcq",
-        "question": "Hoe lachen bepaalde edelen in het tweede deel van de roman Don Quixote uit?",
-        "explanation": "Na het lezen van zijn gepubliceerde avonturen, orkestreren edelen ensceneringen om zichzelf te vermaken ten koste van de ridder, waardoor de grens tussen fictie en realiteit verder vervaagt.",
+        "question": "Hoe drijven sommige edelen in het tweede deel van de roman de spot met Don Quichot?",
+        "explanation": "Omdat ze zijn gepubliceerde avonturen hebben gelezen, zetten edelen toneelstukjes op om zich te vermaken ten koste van de ridder. Zo vervaagt de grens tussen fictie en werkelijkheid nog verder.",
         "options": [
-          "Ze organiseren scenario's om hem te misleiden, nadat ze het eerste deel hebben gelezen",
-          "Ze sluiten hem op in een gesticht zodra ze elkaar ontmoeten",
+          "Ze zetten toneelstukjes op om hem te misleiden, want ze hebben het eerste deel gelezen",
+          "Ze sluiten hem bij hun eerste ontmoeting op in een gesticht",
           "Ze geven hem aan bij de religieuze autoriteiten",
-          "Ze huren hem in als een echte ridder in hun dienst"
+          "Ze nemen hem in dienst als echte ridder"
         ],
         "correctIndex": 0
       },
@@ -1187,8 +1187,8 @@
       {
         "id": "course_109_don_quichotte_cervantes_q9",
         "type": "numericSlider",
-        "question": "In welk jaar publiceerde Cervantes het eerste deel van Don Quixote, met onmiddellijk succes?",
-        "explanation": "Het eerste deel van Don Quixote werd in 1605 gepubliceerd en kende onmiddellijk succes bij het publiek.",
+        "question": "In welk jaar publiceerde Cervantes het eerste deel van Don Quichot, dat meteen een succes was?",
+        "explanation": "Het eerste deel van Don Quichot verscheen in 1605 en was meteen een succes bij het publiek.",
         "correctValue": 1605.0,
         "sliderMin": 1580.0,
         "sliderMax": 1630.0,
@@ -3087,12 +3087,12 @@
       {
         "id": "course_123_le_caravage_et_le_clair_obscur_q4",
         "type": "mcq",
-        "question": "Welk schilderij uit 1600 verbaast Rome met zijn heiligheid voor de straat?",
-        "explanation": "De roeping van Sint Matteüs, geschilderd voor de Contarelli-kapel, legt een heilige op die door gewone mensen wordt gepersonifieerd.",
+        "question": "Welk schilderij uit 1600 verbluft Rome door het heilige het gezicht van de straat te geven?",
+        "explanation": "De roeping van Matteüs, geschilderd voor de Contarelli-kapel, laat het heilige zien in de gedaante van gewone mensen.",
         "options": [
-          "De roeping van Sint Matteüs",
+          "De roeping van Matteüs",
           "De Nachtwacht",
-          "De jongedames van Avignon",
+          "Les Demoiselles d'Avignon",
           "Het vlot van de Medusa"
         ],
         "correctIndex": 0
@@ -3426,12 +3426,12 @@
         "id": "course_126_le_cubisme_picasso_et_braque_q3",
         "type": "mcq",
         "question": "Welk schilderij uit 1907 markeert het startpunt van het kubisme?",
-        "explanation": "De jonge dames van Avignon, met zijn scherpgefacetteerde naakten, verbaasde zelfs mensen die dicht bij Picasso stonden.",
+        "explanation": "Les Demoiselles d'Avignon, met naakten vol scherpe facetten, verbijsterde zelfs de mensen rond Picasso.",
         "options": [
-          "De jongedames van Avignon",
+          "Les Demoiselles d'Avignon",
           "Guernica",
-          "Vrijheid leidt het volk",
-          "Lunchen op het gras"
+          "De Vrijheid leidt het volk",
+          "Le Déjeuner sur l'herbe"
         ],
         "correctIndex": 0
       },
@@ -3489,9 +3489,9 @@
         "id": "course_126_le_cubisme_picasso_et_braque_q8",
         "type": "chronological",
         "question": "Zet deze stadia van het kubisme in chronologische volgorde.",
-        "explanation": "Deze mijlpalen lopen van 1907 tot 1912, van het eerste uiteenvallen tot de uitvinding van collage.",
+        "explanation": "Deze mijlpalen lopen van 1907 tot 1912, van de eerste breuk tot de uitvinding van de collage.",
         "items": [
-          "De jongedames van Avignon",
+          "Les Demoiselles d'Avignon",
           "Analytisch kubisme ontleedt het object",
           "Collage en synthetisch kubisme"
         ]
@@ -3555,8 +3555,8 @@
         "question": "Op welk schilderij van Dalí zijn zachte horloges te zien in een Catalaans landschap?",
         "explanation": "De volharding der herinnering, geschilderd in 1931, toont zachte horloges in een landschap geïnspireerd op Port Lligat.",
         "options": [
-          "De volharding van het geheugen",
-          "Het verraad van beelden",
+          "De volharding der herinnering",
+          "Het verraad van de beelden",
           "Het vlot van de Medusa",
           "Guernica"
         ],
@@ -3620,8 +3620,8 @@
         "items": [
           "Bretons Manifest van het surrealisme",
           "Dalí sluit zich aan bij de surrealistische groep",
-          "De volharding van het geheugen",
-          "Bretons uitsluiting van Dalí"
+          "De volharding der herinnering",
+          "De uitsluiting van Dalí door Breton"
         ]
       }
     ]
@@ -3774,13 +3774,13 @@
       {
         "id": "course_129_l_art_abstrait_kandinsky_et_mondrian_q3",
         "type": "mcq",
-        "question": "In welk boek theoretiseerde Kandinsky in 1911 de lyrische abstractie?",
-        "explanation": "Kandinsky publiceerde Du Spirituel dans l'Art in 1911, waarin hij de emotionele vibratie van kleuren theoretiseerde.",
+        "question": "In welk boek werkte Kandinsky in 1911 zijn theorie van de lyrische abstractie uit?",
+        "explanation": "Kandinsky publiceerde in 1911 Over het geestelijke in de kunst, waarin hij een theorie geeft over de emotionele trilling van kleuren.",
         "options": [
-          "Spiritualiteit in de kunst",
-          "Het Surrealisme Manifest",
+          "Over het geestelijke in de kunst",
+          "Het manifest van het surrealisme",
           "De Stijl",
-          "De jongedames van Avignon"
+          "Les Demoiselles d'Avignon"
         ],
         "correctIndex": 0
       },
@@ -4056,11 +4056,11 @@
       {
         "id": "course_130_le_pop_art_warhol_et_lichtenstein_q7",
         "type": "mcq",
-        "question": "Welk schilderij van Lichtenstein transformeert een luchtgevechtstripverhaal tot een monumentaal schilderij?",
-        "explanation": "Wham! transformeert een afleidingsstrippaneel in een modern historisch schilderij op groot formaat.",
+        "question": "Welk schilderij van Lichtenstein maakt van een plaatje uit een strip over een luchtgevecht een monumentaal schilderij?",
+        "explanation": "Whaam! maakt van een plaatje uit een amusementsstrip een modern historiestuk op groot formaat.",
         "options": [
-          "Wham!",
-          "De volharding van het geheugen",
+          "Whaam!",
+          "De volharding der herinnering",
           "De schreeuw",
           "Guernica"
         ],
@@ -4458,12 +4458,12 @@
       {
         "id": "course_134_l_opera_de_verdi_q1",
         "type": "mcq",
-        "question": "Welke opera uit 1842 maakte Verdi beroemd dankzij het refrein Va, pensiero?",
-        "explanation": "Nabucco zegevierde in 1842 en zijn koor Va, pensiero werd een clandestien volkslied in bezet Italië.",
+        "question": "Welke opera uit 1842 maakte Verdi beroemd dankzij het koor Va, pensiero?",
+        "explanation": "Nabucco werd in 1842 een triomf en het koor Va, pensiero groeide uit tot een clandestiene hymne in het bezette Italië.",
         "options": [
           "Nabucco",
           "Rigoletto",
-          "Aïda",
+          "Aida",
           "Otello"
         ],
         "correctIndex": 0
@@ -5752,12 +5752,12 @@
       {
         "id": "course_144_la_nouvelle_vague_francaise_q3",
         "type": "mcq",
-        "question": "Welke film van François Truffaut zegevierde in Cannes in 1959 en lanceerde de New Wave?",
-        "explanation": "In 1959 zegevierde Les Quatre Cents Coups van François Truffaut in Cannes en vestigde de arthouse-cinema.",
+        "question": "Welke film van François Truffaut was in 1959 een triomf in Cannes en luidde de Nouvelle Vague in?",
+        "explanation": "In 1959 triomfeerde De vierhonderd slagen van François Truffaut in Cannes en zette de auteurscinema op de kaart.",
         "options": [
           "De vierhonderd slagen",
-          "Buiten adem",
-          "Burger Kane",
+          "À bout de souffle",
+          "Citizen Kane",
           "De dictator"
         ],
         "correctIndex": 0
@@ -6988,8 +6988,8 @@
       {
         "id": "course_154_impression_soleil_levant_monet_q1",
         "type": "mcq",
-        "question": "Waar schilderde Monet de scène afgebeeld in Impressie, zonsopgang?",
-        "explanation": "Monet schilderde de haven van Le Havre in de vroege ochtend rond 1872.",
+        "question": "Waar schilderde Monet de scène die je op Impression, soleil levant ziet?",
+        "explanation": "Monet schilderde rond 1872 de haven van Le Havre, vroeg in de ochtend.",
         "options": [
           "De haven van Le Havre",
           "De haven van Marseille",
@@ -12224,12 +12224,12 @@
       {
         "id": "course_196_merlin_l_enchanteur_q5",
         "type": "mcq",
-        "question": "Wat is de gevaarlijke belegering die Merlijn aan de Ronde Tafel plaatst?",
-        "explanation": "Merlijn ontwerpt de Perilous Seat, een lege plek aan de Ronde Tafel gereserveerd voor de puurste ridder, die later zal worden ingevuld tijdens de zoektocht naar de Graal.",
+        "question": "Wat is de Gevaarlijke Zetel die Merlijn aan de Ronde Tafel plaatst?",
+        "explanation": "Merlijn bedenkt de Gevaarlijke Zetel, een lege plaats aan de Ronde Tafel voor de zuiverste ridder. Die plaats wordt later ingenomen tijdens de zoektocht naar de Graal.",
         "options": [
-          "Een vacante zetel gereserveerd voor de zuiverste ridder",
-          "Arthur's persoonlijke troon",
-          "De stoel wordt aan Merlijn zelf toegeschreven",
+          "Een lege zetel voor de zuiverste ridder",
+          "Arthurs persoonlijke troon",
+          "De zetel van Merlijn zelf",
           "Een valstrik bedoeld voor de vijanden van het koninkrijk"
         ],
         "correctIndex": 0
@@ -12789,13 +12789,13 @@
       {
         "id": "course_1_la_naissance_de_l_islam_622_q6",
         "type": "mcq",
-        "question": "Wat is de Dhimma die door de islamitische veroveraars is ingesteld?",
-        "explanation": "De dhimma is de beschermde status waarmee ‘mensen van het Boek’ hun geloof mogen houden als ze de jizya betalen.",
+        "question": "Wat is de dhimma die de islamitische veroveraars invoerden?",
+        "explanation": "De dhimma is een beschermde status: de „mensen van het Boek” mogen hun geloof houden als ze de djizja betalen.",
         "options": [
-          "De status waardoor christenen en joden hun religie kunnen behouden tegen belasting",
-          "De naam van de moslimkalender",
-          "Een belasting op koopmanscaravans",
-          "De rechtbank belast met het oordelen van ongelovigen"
+          "De status waardoor christenen en joden hun geloof mogen houden in ruil voor belasting",
+          "De naam van de islamitische kalender",
+          "Een belasting op handelskaravanen",
+          "De rechtbank die over ongelovigen oordeelt"
         ],
         "correctIndex": 0
       },
@@ -12815,12 +12815,12 @@
       {
         "id": "course_1_la_naissance_de_l_islam_622_q8",
         "type": "mcq",
-        "question": "Wat is de Umma, gesticht door Mohammed in Medina?",
-        "explanation": "De umma vervangt de oude stamsolidariteit door een gemeenschap die op hetzelfde geloof rust.",
+        "question": "Wat is de oemma, die Mohammed in Medina stichtte?",
+        "explanation": "De oemma vervangt de oude stamsolidariteit door een gemeenschap die op hetzelfde geloof rust.",
         "options": [
-          "De gemeenschap van gelovigen, die verder gaat dan bloed- en clanbanden",
+          "De gemeenschap van gelovigen, die bloed- en clanbanden overstijgt",
           "De naam van de islamitische kalender",
-          "Het leger dat optrok tegen Mekka",
+          "Het leger dat tegen Mekka op de been werd gebracht",
           "De raad van de kaliefen"
         ],
         "correctIndex": 0
@@ -25319,26 +25319,26 @@
       {
         "id": "course_86_la_republique_platon_q1",
         "type": "mcq",
-        "question": "Welke centrale vraag probeert Plato te beantwoorden in de Republiek?",
-        "explanation": "De Republiek begint met een eenvoudige vraag: wat is rechtvaardigheid? Om dit te beantwoorden, stelt Socrates zich een ideale stad voor.",
+        "question": "Welke centrale vraag probeert Plato in De staat te beantwoorden?",
+        "explanation": "De staat begint met een eenvoudige vraag: wat is rechtvaardigheid? Om die te beantwoorden, bedenkt Socrates een ideale stad.",
         "options": [
-          "Wat is gerechtigheid?",
+          "Wat is rechtvaardigheid?",
           "Hoe win je een oorlog?",
           "Wat is de oorsprong van de goden?",
-          "Hoe stel je een tragedie samen?"
+          "Hoe schrijf je een tragedie?"
         ],
         "correctIndex": 0
       },
       {
         "id": "course_86_la_republique_platon_q2",
         "type": "mcq",
-        "question": "Hoe verdeelt Plato de menselijke ziel in de Republiek?",
-        "explanation": "Plato onderscheidt het verlangen (Epithumia), de moed (Thumos) en de rede (Logos), die hij in overeenstemming brengt met de drie klassen van de ideale staat.",
+        "question": "Hoe verdeelt Plato de menselijke ziel in De staat?",
+        "explanation": "Plato onderscheidt het verlangen (Epithumia), de moed (Thumos) en de rede (Logos), en zet die naast de drie klassen van de ideale stad.",
         "options": [
-          "In drie delen: het verlangen, de moed en de reden",
-          "En twee delen: het lichaam en de geest",
-          "Uit vier natuurlijke elementen",
-          "In vijf zinnen"
+          "In drie delen: het verlangen, de moed en de rede",
+          "In twee delen: het lichaam en de geest",
+          "In vier natuurlijke elementen",
+          "In vijf zintuigen"
         ],
         "correctIndex": 0
       },
@@ -25647,12 +25647,12 @@
       {
         "id": "course_89_les_travaux_et_les_jours_hesiode_q1",
         "type": "mcq",
-        "question": "Aan wie richt Hésiode zijn gedicht De Werken en de Dagen?",
-        "explanation": "Het gedicht is gericht aan Persès, de broer van Hésiode, beschuldigd van vals spelen bij de verdeling van een erfenis.",
+        "question": "Aan wie richt Hesiodus zijn gedicht Werken en dagen?",
+        "explanation": "Het gedicht is gericht aan Perses, de broer van Hesiodus. Hij werd ervan beschuldigd vals te hebben gespeeld bij de verdeling van een erfenis.",
         "options": [
-          "Aan zijn broer Persès",
+          "Aan zijn broer Perses",
           "Aan zijn dochter",
-          "Aan een vreemde koning",
+          "Aan een buitenlandse koning",
           "Aan de Muze zelf"
         ],
         "correctIndex": 0
@@ -25736,8 +25736,8 @@
       {
         "id": "course_89_les_travaux_et_les_jours_hesiode_q8",
         "type": "mcq",
-        "question": "Welke Romeinse dichter zal zich later laten inspireren door de Werken en de Dagen in zijn Georgica?",
-        "explanation": "Vergilius zal zich het gedicht van Hesiodus herinneren in zijn Georgica, een andere groot poëtisch werk gewijd aan het landleven.",
+        "question": "Welke Latijnse dichter liet zich later voor zijn Georgica inspireren door Werken en dagen?",
+        "explanation": "Vergilius greep in zijn Georgica, een ander groot gedicht over het boerenleven, terug op het werk van Hesiodus.",
         "options": [
           "Vergilius",
           "Ovidius",
@@ -26332,8 +26332,8 @@
       {
         "id": "course_93_le_rouge_et_le_noir_stendhal_q9",
         "type": "numericSlider",
-        "question": "In welk jaar wordt De Rode en de Zwarte gepubliceerd?",
-        "explanation": "De roman verschijnt in 1830, kort voor de Drie Gloriejaren.",
+        "question": "In welk jaar verscheen Het rood en het zwart?",
+        "explanation": "De roman verscheen in 1830, kort voor de Julirevolutie.",
         "correctValue": 1830.0,
         "sliderMin": 1810.0,
         "sliderMax": 1840.0,
@@ -27000,11 +27000,11 @@
         "id": "course_99_le_pere_goriot_balzac_q2",
         "type": "mcq",
         "question": "Tot welke romancyclus behoort Vader Goriot?",
-        "explanation": "De Vader Goriot is het zwaartepunt van de Menselijke Komedie, waar Balzac voor het eerst de terugkeer van terugkerende personages introduceert.",
+        "explanation": "Vader Goriot is de spil van De menselijke komedie: hier laat Balzac voor het eerst personages uit andere romans terugkeren.",
         "options": [
           "De menselijke komedie",
           "De Rougon-Macquart",
-          "De Legende van de Eeuwen",
+          "De legende der eeuwen",
           "De grappige verhalen"
         ],
         "correctIndex": 0
@@ -33175,14 +33175,14 @@
           "Aesopus zou in Griekenland hebben geleefd",
           "Demetrius van Phaleron stelt de eerste bekende verzameling samen",
           "Phaedrus, een Romeinse slaaf, schrijft zijn fabelverzameling",
-          "George Orwell publiceert Dierenboerderij"
+          "George Orwell publiceert Boerderij der dieren"
         ]
       },
       {
         "id": "course_298_esope_a_t_il_vraiment_existe_q8",
         "type": "numericSlider",
-        "question": "In welk jaar publiceerde George Orwell Dierenboerderij?",
-        "explanation": "Dierenboerderij verscheen in 1945: een lange fabel met als moraal dat absolute macht corrumpeert.",
+        "question": "In welk jaar publiceerde George Orwell Boerderij der dieren?",
+        "explanation": "Boerderij der dieren verscheen in 1945: een lange fabel met als moraal dat absolute macht corrumpeert.",
         "correctValue": 1945,
         "sliderMin": 1900,
         "sliderMax": 2000,

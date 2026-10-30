@@ -18,8 +18,8 @@
       {
         "id": "course_100_les_fleurs_du_mal_baudelaire_q2",
         "type": "mcq",
-        "question": "Why were Les Fleurs du Mal condemned in 1857?",
-        "explanation": "The collection was condemned for “offending public morals,” a scandal that was not officially lifted until 1949.",
+        "question": "Why was Baudelaire convicted over Les Fleurs du Mal in 1857?",
+        "explanation": "The collection got Baudelaire convicted of “offending public morals,” a ruling that was not officially overturned until 1949.",
         "options": [
           "For “offending public morals”",
           "For plagiarism",
@@ -31,8 +31,8 @@
       {
         "id": "course_100_les_fleurs_du_mal_baudelaire_q3",
         "type": "numericSlider",
-        "question": "In what year were the six condemned poems from Les Fleurs du Mal officially rehabilitated?",
-        "explanation": "The six poems condemned in 1857 were not officially rehabilitated until 1949, 92 years later.",
+        "question": "In what year were the six banned poems from Les Fleurs du Mal officially cleared?",
+        "explanation": "The six poems banned in 1857 were not officially cleared until 1949, 92 years later.",
         "correctValue": 1949.0,
         "sliderMin": 1920.0,
         "sliderMax": 1970.0,
@@ -42,12 +42,12 @@
       {
         "id": "course_100_les_fleurs_du_mal_baudelaire_q4",
         "type": "mcq",
-        "question": "What is the albatross in the “Spleen and Ideal” section?",
-        "explanation": "The albatross, majestic in flight but clumsy once it lands, is the poet in a world that does not understand him.",
+        "question": "What does the albatross represent in the “Spleen and Ideal” section?",
+        "explanation": "The albatross, majestic in flight but ridiculous once it lands, represents the poet in a world that doesn't understand him.",
         "options": [
           "The poet, majestic in flight but ridiculous on the ground",
-          "Total freedom of the artist",
-          "The inevitable death",
+          "The artist's total freedom",
+          "Inevitable death",
           "Unattainable beauty"
         ],
         "correctIndex": 0
@@ -82,7 +82,7 @@
         "id": "course_100_les_fleurs_du_mal_baudelaire_q7",
         "type": "trueFalse",
         "question": "True or false: Baudelaire entirely rejects classical poetic forms like the sonnet.",
-        "explanation": "Baudelaire, on the contrary, links the classical form, such as the sonnet and the alexandrine, to a radically new poetic vision.",
+        "explanation": "On the contrary, Baudelaire combines classical forms such as the sonnet and the alexandrine with a radically new poetic vision.",
         "options": [
           "True",
           "False"
@@ -92,8 +92,8 @@
       {
         "id": "course_100_les_fleurs_du_mal_baudelaire_q8",
         "type": "mcq",
-        "question": "What poetic movement did Baudelaire's correspondences found, later taken up by Verlaine and Mallarmé?",
-        "explanation": "This poetics of correspondences founded Symbolism, later taken up by Verlaine and Mallarmé.",
+        "question": "Which poetic movement grew out of Baudelaire's theory of correspondences and was later carried on by Verlaine and Mallarmé?",
+        "explanation": "This theory of correspondences laid the foundations of Symbolism, which Verlaine and Mallarmé later carried on.",
         "options": [
           "Symbolism",
           "Romanticism",
@@ -105,8 +105,8 @@
       {
         "id": "course_100_les_fleurs_du_mal_baudelaire_q9",
         "type": "mcq",
-        "question": "Which American writer, described as a “soul brother”, did Baudelaire translate?",
-        "explanation": "Baudelaire translated Edgar Poe, whom he considered a “soul brother” who shared his taste for the macabre.",
+        "question": "Which American writer, whom he called a “kindred spirit,” did Baudelaire translate?",
+        "explanation": "Baudelaire translated Edgar Allan Poe, whom he saw as a “kindred spirit” who shared his taste for the macabre.",
         "options": [
           "Edgar Allan Poe",
           "Herman Melville",
@@ -119,12 +119,12 @@
         "id": "course_100_les_fleurs_du_mal_baudelaire_q10",
         "type": "mcq",
         "question": "How does Baudelaire summarize his poetic alchemy of extracting beauty from mud?",
-        "explanation": "Baudelaire summarizes his project with this formula: “You gave me your mud and I made gold from it”.",
+        "explanation": "Baudelaire sums up his project in one line: “You gave me your mud and I turned it into gold.”",
         "options": [
-          "“You gave me your mud and I made gold from it”",
+          "“You gave me your mud and I turned it into gold”",
           "“Beauty is eternal”",
           "“Evil begets evil”",
-          "“Art for art’s sake”"
+          "“Art for art's sake”"
         ],
         "correctIndex": 0
       }
@@ -3087,12 +3087,12 @@
       {
         "id": "course_123_le_caravage_et_le_clair_obscur_q4",
         "type": "mcq",
-        "question": "Which painting from 1600 astounds Rome with its sacredness to the face of the street?",
-        "explanation": "The Vocation of Saint Matthew, painted for the Contarelli chapel, imposes a sacred personified by ordinary people.",
+        "question": "Which 1600 painting stunned Rome by putting street faces on a sacred scene?",
+        "explanation": "The Calling of Saint Matthew, painted for the Contarelli Chapel, shows the sacred embodied by ordinary people.",
         "options": [
-          "The Vocation of Saint Matthew",
+          "The Calling of Saint Matthew",
           "The Night Watch",
-          "The Young Ladies of Avignon",
+          "Les Demoiselles d'Avignon",
           "The Raft of the Medusa"
         ],
         "correctIndex": 0
@@ -3428,10 +3428,10 @@
         "question": "Which painting from 1907 marks the starting point of Cubism?",
         "explanation": "Les Demoiselles d'Avignon, with its sharp-faceted nudes, stunned even people close to Picasso.",
         "options": [
-          "The Young Ladies of Avignon",
+          "Les Demoiselles d'Avignon",
           "Guernica",
-          "Liberty leading the people",
-          "Lunch on the grass"
+          "Liberty Leading the People",
+          "Luncheon on the Grass"
         ],
         "correctIndex": 0
       },
@@ -3489,11 +3489,11 @@
         "id": "course_126_le_cubisme_picasso_et_braque_q8",
         "type": "chronological",
         "question": "Put these stages of Cubism in chronological order.",
-        "explanation": "These milestones range from 1907 to 1912, from the initial breakup to the invention of collage.",
+        "explanation": "These milestones run from 1907 to 1912, from the first break with tradition to the invention of collage.",
         "items": [
-          "The Young Ladies of Avignon",
+          "Les Demoiselles d'Avignon",
           "Analytical Cubism dissects the object",
-          "Collage and synthetic cubism"
+          "Collage and Synthetic Cubism"
         ]
       },
       {
@@ -3775,12 +3775,12 @@
         "id": "course_129_l_art_abstrait_kandinsky_et_mondrian_q3",
         "type": "mcq",
         "question": "In which book did Kandinsky theorize lyrical abstraction in 1911?",
-        "explanation": "Kandinsky published Du Spirituel dans l'Art in 1911, where he theorized the emotional vibration of colors.",
+        "explanation": "In 1911 Kandinsky published Concerning the Spiritual in Art, in which he set out his theory of the emotional vibration of colors.",
         "options": [
-          "Spirituality in Art",
-          "The Surrealism Manifesto",
+          "Concerning the Spiritual in Art",
+          "Manifesto of Surrealism",
           "De Stijl",
-          "The Young Ladies of Avignon"
+          "Les Demoiselles d'Avignon"
         ],
         "correctIndex": 0
       },
@@ -4509,11 +4509,11 @@
         "id": "course_134_l_opera_de_verdi_q5",
         "type": "mcq",
         "question": "What French novel is La Traviata based on?",
-        "explanation": "La Traviata adapts The Lady of the Camellias, which shocks with its contemporary and tuberculous heroine.",
+        "explanation": "La Traviata, adapted from The Lady of the Camellias, shocked audiences with a contemporary heroine dying of tuberculosis.",
         "options": [
           "The Lady of the Camellias by Alexandre Dumas fils",
-          "Notre-Dame de Paris by Victor Hugo",
-          "Les Miserables by Victor Hugo",
+          "The Hunchback of Notre-Dame by Victor Hugo",
+          "Les Misérables by Victor Hugo",
           "Madame Bovary by Gustave Flaubert"
         ],
         "correctIndex": 0
@@ -12224,13 +12224,13 @@
       {
         "id": "course_196_merlin_l_enchanteur_q5",
         "type": "mcq",
-        "question": "What is the Perilous Siege that Merlin places at the Round Table?",
-        "explanation": "Merlin designs the Perilous Seat, a vacant place at the Round Table reserved for the purest knight, which will later be filled during the quest for the Grail.",
+        "question": "What is the Siege Perilous that Merlin places at the Round Table?",
+        "explanation": "Merlin devises the Siege Perilous, an empty seat at the Round Table reserved for the purest knight, which is later filled during the quest for the Grail.",
         "options": [
-          "A vacant seat reserved for the purest knight",
+          "An empty seat reserved for the purest knight",
           "Arthur's personal throne",
-          "The seat attributed to Merlin himself",
-          "A trap intended for the enemies of the kingdom"
+          "Merlin's own seat",
+          "A trap set for the kingdom's enemies"
         ],
         "correctIndex": 0
       },
@@ -12730,7 +12730,7 @@
         "id": "course_1_la_naissance_de_l_islam_622_q1",
         "type": "mcq",
         "question": "What was the Hijra in 622?",
-        "explanation": "The Hijra is Muhammad leaving Mecca, where his life was under threat, for the oasis of Medina. From then on, that year is year 1 of the Muslim calendar.",
+        "explanation": "The Hijra was Muhammad's departure from Mecca, where his life was under threat, for the oasis of Medina. That year became year 1 of the Muslim calendar.",
         "options": [
           "Muhammad's departure from Mecca to Medina",
           "The first revelation received by Muhammad",
@@ -12756,7 +12756,7 @@
         "id": "course_1_la_naissance_de_l_islam_622_q3",
         "type": "trueFalse",
         "question": "True or false: after taking Mecca in 630, Muhammad massacred his former persecutors.",
-        "explanation": "Muhammad, on the contrary, grants a general pardon, which facilitates the rallying of Arab tribes to Islam.",
+        "explanation": "Quite the opposite: Muhammad granted a general pardon, which helped win the Arab tribes over to Islam.",
         "options": [
           "True",
           "False"
@@ -12780,7 +12780,7 @@
         "question": "Put these events in Muhammad's life in chronological order.",
         "explanation": "These four dates (622, 624, 630, 632) mark the twenty years in which Muhammad went from threatened prophet to head of a state unifying Arabia.",
         "items": [
-          "The Hijra: departure to Medina",
+          "The Hijra: departure for Medina",
           "The Battle of Badr",
           "The capture of Mecca",
           "The death of Muhammad"
@@ -12803,11 +12803,11 @@
         "id": "course_1_la_naissance_de_l_islam_622_q7",
         "type": "mcq",
         "question": "Which two great empires were exhausted by their wars around Arabia in the 7th century?",
-        "explanation": "Endless wars between Byzantium (the Eastern Roman Empire) and the Sasanian Persians left a geopolitical vacuum that Muhammad's new message could fill.",
+        "explanation": "Endless wars between Byzantium (the Eastern Roman Empire) and the Sassanid Persians left a geopolitical vacuum that Muhammad's new message was able to exploit.",
         "options": [
           "The Byzantine and Sassanid empires",
           "The Roman and Chinese empires",
-          "The Ottoman and Mongol Empires",
+          "The Ottoman and Mongol empires",
           "The Persian and Indian empires"
         ],
         "correctIndex": 0
@@ -12815,8 +12815,8 @@
       {
         "id": "course_1_la_naissance_de_l_islam_622_q8",
         "type": "mcq",
-        "question": "What is the Umma, founded by Muhammad in Medina?",
-        "explanation": "The Umma replaces old tribal loyalties with a community built on shared faith.",
+        "question": "What is the Ummah, founded by Muhammad in Medina?",
+        "explanation": "The Ummah replaced old tribal loyalties with a community built on shared faith.",
         "options": [
           "The community of believers, which goes beyond blood and clan ties",
           "The name of the Muslim calendar",
@@ -26999,37 +26999,37 @@
       {
         "id": "course_99_le_pere_goriot_balzac_q2",
         "type": "mcq",
-        "question": "To which romantic group does Father Goriot belong?",
-        "explanation": "Father Goriot is the pivot of the Comédie humaine, where Balzac introduces for the first time the return of recurring characters.",
+        "question": "Which cycle of novels does Père Goriot belong to?",
+        "explanation": "Père Goriot is the cornerstone of The Human Comedy, where Balzac first brings back recurring characters.",
         "options": [
           "The Human Comedy",
-          "The Rougon-Macquarts",
-          "The Legend of the Centuries",
-          "Funny Tales"
+          "Les Rougon-Macquart",
+          "The Legend of the Ages",
+          "Droll Stories"
         ],
         "correctIndex": 0
       },
       {
         "id": "course_99_le_pere_goriot_balzac_q3",
         "type": "mcq",
-        "question": "For whom does Father Goriot sacrifice all his fortune?",
+        "question": "Who does Père Goriot sacrifice his entire fortune for?",
         "explanation": "A former vermicelli maker, Goriot sacrificed everything for his daughters Anastasie and Delphine, who abandoned him once they got rich.",
         "options": [
           "His daughters Anastasie and Delphine",
           "His only son",
           "His former employees",
-          "The Church of his parish"
+          "His parish church"
         ],
         "correctIndex": 0
       },
       {
         "id": "course_99_le_pere_goriot_balzac_q4",
         "type": "mcq",
-        "question": "Where does Father Goriot live, while his resources are running out?",
-        "explanation": "Goriot descends from floor to floor at the Vauquer pension as his resources become exhausted, up to the most modest room.",
+        "question": "Where does Père Goriot live as his money runs out?",
+        "explanation": "Goriot moves from floor to floor at the Vauquer boarding house as his money runs out, ending up in the humblest room.",
         "options": [
-          "At the Vauquer pension",
-          "In a private hotel",
+          "At the Vauquer boarding house",
+          "In a private mansion",
           "At his daughter Delphine's",
           "In a convent"
         ],
@@ -27088,13 +27088,13 @@
       {
         "id": "course_99_le_pere_goriot_balzac_q9",
         "type": "mcq",
-        "question": "What novelistic technique does Balzac inaugurate with this novel?",
-        "explanation": "Father Goriot inaugurates in the Comédie humaine the return of the characters, who reappear from one novel to another.",
+        "question": "What novelistic technique does Balzac introduce with this novel?",
+        "explanation": "Père Goriot introduced returning characters to The Human Comedy: the same people reappear from one novel to the next.",
         "options": [
           "The return of characters from one novel to another",
-          "The inner monologue",
+          "The interior monologue",
           "The epistolary novel",
-          "First person narration"
+          "First-person narration"
         ],
         "correctIndex": 0
       },
@@ -27348,8 +27348,8 @@
       {
         "id": "course_242_pourquoi_a_t_on_le_hoquet_q2",
         "type": "mcq",
-        "question": "Where does the \"hic\" sound come from?",
-        "explanation": "Right after the diaphragm contracts, the glottis snaps shut: that snap is what produces the \"hic.\"",
+        "question": "Where does the “hic” sound come from?",
+        "explanation": "Right after the diaphragm contracts, the glottis snaps shut: that snap is what produces the “hic.”",
         "options": [
           "The glottis snapping shut between the vocal cords",
           "Air rushing back out of the lungs",
@@ -27373,7 +27373,7 @@
         "id": "course_242_pourquoi_a_t_on_le_hoquet_q4",
         "type": "mcq",
         "question": "What is a reflex arc?",
-        "explanation": "The reflex arc bypasses conscious decision: the signal travels to the spinal cord or brainstem, which answers at once.",
+        "explanation": "The reflex arc bypasses conscious decision-making: the signal travels to the spinal cord or brainstem, which responds right away.",
         "options": [
           "A neural circuit that triggers an automatic reaction, without any conscious decision",
           "A curve of the diaphragm during inhalation",
@@ -27385,7 +27385,7 @@
       {
         "id": "course_242_pourquoi_a_t_on_le_hoquet_q5",
         "type": "mcq",
-        "question": "Which of these is a common cause of passing hiccups?",
+        "question": "Which of these commonly triggers a short bout of hiccups?",
         "explanation": "Eating too fast, drinking carbonated drinks, swallowing air or drinking alcohol stretches the stomach and irritates the nearby nerves.",
         "options": [
           "Eating too fast or drinking carbonated drinks",
@@ -27398,8 +27398,8 @@
       {
         "id": "course_242_pourquoi_a_t_on_le_hoquet_q6",
         "type": "numericSlider",
-        "question": "How many years did the longest known attack of hiccups last, according to Guinness World Records?",
-        "explanation": "Charles Osborne, an American farmer, hiccupped without a break from 1922 to 1990, 68 years.",
+        "question": "How many years did the longest known bout of hiccups last, according to Guinness World Records?",
+        "explanation": "Charles Osborne, an American farmer, hiccupped nonstop from 1922 to 1990: 68 years in all.",
         "correctValue": 68.0,
         "sliderMin": 1.0,
         "sliderMax": 100.0,
@@ -27410,7 +27410,7 @@
         "id": "course_242_pourquoi_a_t_on_le_hoquet_q7",
         "type": "trueFalse",
         "question": "True or false: the effectiveness of home remedies for hiccups has been scientifically proven.",
-        "explanation": "No home remedy has been validated by a serious study. They rest on anecdotes, even though all of them aim to disrupt the reflex circuit.",
+        "explanation": "No home remedy has been validated by a serious study. They rely on personal accounts, even though they all aim to disrupt the reflex circuit.",
         "options": [
           "True",
           "False"
@@ -27421,7 +27421,7 @@
         "id": "course_242_pourquoi_a_t_on_le_hoquet_q8",
         "type": "mcq",
         "question": "What are hiccups called when they last more than a month?",
-        "explanation": "Beyond two days, hiccups are called persistent; beyond a month, intractable. These rare forms often signal a disease.",
+        "explanation": "After two days, hiccups are called persistent, and after a month, intractable. These rare forms often point to an underlying illness.",
         "options": [
           "Intractable hiccups",
           "Persistent hiccups",
@@ -31307,12 +31307,12 @@
         "id": "course_280_pourquoi_le_dollar_domine_t_il_le_monde_q6",
         "type": "chronological",
         "question": "Put these events in the history of the dollar in order.",
-        "explanation": "Bretton Woods in 1944, end of conversion in August 1971, floating rates in 1973, dollar lines in March 2020, the Sri Lankan crisis in 2022.",
+        "explanation": "Bretton Woods in 1944, the end of gold conversion in August 1971, floating rates in 1973, dollar swap lines in March 2020, and the Sri Lankan crisis in 2022.",
         "items": [
           "44 delegations meet at Bretton Woods",
           "Nixon ends the dollar's conversion into gold",
           "The major currencies move to floating exchange rates",
-          "The Federal Reserve opens dollar lines to nine more central banks",
+          "The Federal Reserve opens dollar swap lines to nine more central banks",
           "Currency crisis in Sri Lanka"
         ]
       },

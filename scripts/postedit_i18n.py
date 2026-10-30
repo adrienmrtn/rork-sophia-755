@@ -697,8 +697,10 @@ def apply(lang: str, src: Path, dry_run: bool, only: Path | None = None) -> dict
         if not dry_run:
             paths = _legal_paths(lang)
             for plat in changed:
-                raw = paths[plat].read_text(encoding="utf-8") if paths[plat].exists() else None
-                _dump(paths[plat], docs[plat][1], raw)
+                # Some languages have no content/locales/<lang>/legal.json: iOS reads the Swift
+                # arrays written below, so there is no copy to keep in step.
+                if paths[plat].exists():
+                    _dump(paths[plat], docs[plat][1], paths[plat].read_text(encoding="utf-8"))
             if "ios" in changed:
                 from translate_legal_docs import LEGAL_SWIFT, SWIFT_PROP, extract_existing_swift_array
                 swift = LEGAL_SWIFT.read_text(encoding="utf-8")
@@ -784,15 +786,25 @@ def sync_catalog(lang: str) -> int:
     return changed
 
 
+def _android_format(value: str, fr_android: str | None) -> str:
+    """Android formats strings with %s where iOS has %@: keep the Android convention when the
+    French Android string uses it."""
+    if fr_android and "%s" in fr_android or fr_android and re.search(r"%\d+\$s", fr_android):
+        return re.sub(r"%(\d+\$)?@", lambda m: f"%{m.group(1) or ''}s", value)
+    return value
+
+
 def _write_ui(lang: str, accepted: dict[str, str]) -> None:
+    fr_android = _load(AND / "strings" / "fr.json")
     for f in (AND / "strings" / f"{lang}.json", LOCALES / lang / "ui_strings.json"):
         if not f.exists():
             continue
         raw = f.read_text(encoding="utf-8")
         data = json.loads(raw)
+        android = f.parent.name == "strings"
         for k, v in accepted.items():
             if k in data:
-                data[k] = v
+                data[k] = _android_format(v, fr_android.get(k)) if android else v
         _dump(f, data, raw)
     source = LOCALIZABLE.read_text(encoding="utf-8")
     case = SWIFT_CASE_BY_CODE[lang]

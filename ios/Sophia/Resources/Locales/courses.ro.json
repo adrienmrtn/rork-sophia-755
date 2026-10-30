@@ -8663,7 +8663,7 @@
       },
       {
         "id": "course_64_la_catastrophe_de_tchernobyl_1986_p1",
-        "title": "Un test care derapează"
+        "title": "Un test scăpat de sub control"
       },
       {
         "id": "course_64_la_catastrophe_de_tchernobyl_1986_p2",
@@ -11217,8 +11217,8 @@
       {
         "id": "course_83_dipe_roi_sophocle_q7",
         "type": "trueFalse",
-        "question": "Adevărat sau fals: în Oedip regele, cu cât eroul caută mai lucid adevărul, cu atât se apropie mai mult de propria sa cădere.",
-        "explanation": "Aceasta este ironia tragică a piesei: dorința lui Oedip de a fi drept și lucid îi accelerează pierderea, mai degrabă decât să-l protejeze de aceasta.",
+        "question": "Adevărat sau fals: în Oedip rege, cu cât eroul caută adevărul mai lucid, cu atât se apropie mai mult de propria cădere.",
+        "explanation": "Asta e ironia tragică a piesei: dorința lui Oedip de a fi drept și lucid îi grăbește pieirea, în loc să-l ferească de ea.",
         "options": [
           "Adevărat",
           "Fals"
@@ -11335,13 +11335,13 @@
       {
         "id": "course_84_antigone_sophocle_q5",
         "type": "mcq",
-        "question": "Cine este Haemon în piesă?",
-        "explanation": "Haemon, fiul lui Creon și logodnicul Antigonei, îl imploră în zadar pe tatăl său să renunțe la sentință.",
+        "question": "Cine este Hemon în piesă?",
+        "explanation": "Hemon, fiul lui Creon și logodnicul Antigonei, îl roagă în zadar pe tatăl său să renunțe la condamnare.",
         "options": [
-          "Fiul lui Creon, logodnicul lui Antigone",
+          "Fiul lui Creon, logodnicul Antigonei",
           "Fratele Antigonei ucis în luptă",
-          "Un ghicitor care prezice dezastrul",
-          "Un gardian care descoperă crima Antigonei"
+          "Un prezicător care anunță dezastrul",
+          "Un străjer care descoperă fapta Antigonei"
         ],
         "correctIndex": 0
       },
@@ -11373,12 +11373,12 @@
         "id": "course_84_antigone_sophocle_q8",
         "type": "mcq",
         "question": "Cum reacționează sora Antigonei, Ismene, la decretul lui Creon?",
-        "explanation": "Ismene ezită în fața interdicției regale, în timp ce Antigone își acceptă deschis acțiunea.",
+        "explanation": "Ismena ezită în fața interdicției regelui, în timp ce Antigona își asumă deschis fapta.",
         "options": [
-          "Ea ezită, spre deosebire de Antigone care alege actul",
-          "Ea o denunță regelui pe sora ei",
-          "Ea îngroapă cadavrul la locul lui",
-          "Ea ia armele împotriva lui Creon"
+          "Ezită, spre deosebire de Antigona, care alege să acționeze",
+          "Își denunță sora regelui",
+          "Îngroapă trupul în locul ei",
+          "Ia armele împotriva lui Creon"
         ],
         "correctIndex": 0
       },
@@ -11898,12 +11898,12 @@
       {
         "id": "course_88_la_poetique_aristote_q6",
         "type": "mcq",
-        "question": "Ce piesă citează Aristotel ca exemplu vedetă de peripeteie și recunoaștere?",
-        "explanation": "Aristotel ia ca exemplu vedetă pe Oedip regele: eroul descoperă prea târziu cine este, într-o inversare exemplară.",
+        "question": "Ce piesă dă Aristotel drept exemplu perfect de peripeție și recunoaștere?",
+        "explanation": "Aristotel ia drept exemplu perfect Oedip rege: eroul află prea târziu cine este, printr-o răsturnare exemplară.",
         "options": [
-          "Oedip Regele",
+          "Oedip rege",
           "Antigona",
-          "Perşii",
+          "Perșii",
           "Broaștele"
         ],
         "correctIndex": 0
@@ -11936,7 +11936,7 @@
   },
   {
     "id": "course_89_les_travaux_et_les_jours_hesiode",
-    "title": "Muncile și zilele, Hesiod",
+    "title": "Munci și zile, Hesiod",
     "description": "Hesiod îi vorbește fratelui său Perses: muncește, fii drept, ferește-te de exces. Între mitul Pandorei și calendarul agricol se naște o etică a muncii.",
     "subject": "litterature",
     "subcategory": "Grecii și filozofii antici",
@@ -11966,13 +11966,13 @@
       {
         "id": "course_89_les_travaux_et_les_jours_hesiode_q1",
         "type": "mcq",
-        "question": "Cui îi adresează Hesiod poezia sa Lucrări și zile?",
-        "explanation": "Poemul se adresează lui Perses, fratele lui Hesiod, acuzat că a înșelat împărțirea unei moșteniri.",
+        "question": "Cui îi adresează Hesiod poemul Munci și zile?",
+        "explanation": "Poemul îi este adresat lui Perses, fratele lui Hesiod, acuzat că a trișat la împărțirea unei moșteniri.",
         "options": [
-          "Fratelui său Perses",
-          "Pentru fiica lui",
-          "La un rege străin",
-          "Muzei însăși"
+          "Fratelui său, Perses",
+          "Fiicei sale",
+          "Unui rege străin",
+          "Muzei înseși"
         ],
         "correctIndex": 0
       },
@@ -12029,12 +12029,12 @@
       {
         "id": "course_89_les_travaux_et_les_jours_hesiode_q6",
         "type": "mcq",
-        "question": "Ce alt poem, atribuit lui Hesiod, povestește despre nașterea zeilor?",
-        "explanation": "Teogonia, o altă poezie a lui Hesiod, povestește despre nașterea zeilor, în timp ce Lucrările și Zilele coboară din cer la plug.",
+        "question": "Ce alt poem, atribuit lui Hesiod, povestește nașterea zeilor?",
+        "explanation": "Teogonia, alt poem al lui Hesiod, povestește nașterea zeilor, în timp ce Munci și zile coboară din cer la plug.",
         "options": [
-          "Teogonie",
+          "Teogonia",
           "Odiseea",
-          "Georgicii",
+          "Georgicele",
           "Iliada"
         ],
         "correctIndex": 0
@@ -12123,10 +12123,10 @@
       {
         "id": "course_90_medee_euripide_q2",
         "type": "mcq",
-        "question": "Ce i-a adus Medea lui Jason înainte să divorțeze de ea?",
+        "question": "Ce i-a adus Medeea lui Iason înainte ca el s-o repudieze?",
         "explanation": "Fără vrăjile Medeei, Iason nu ar fi obținut niciodată Lâna de Aur: Euripide insistă asupra ingratitudinii omului „civilizat”.",
         "options": [
-          "Ajutorul său magic în obținerea Lânei de Aur",
+          "Ajutorul ei magic pentru a obține Lâna de Aur",
           "O avere personală considerabilă",
           "O armată pentru a cuceri Corintul",
           "Un regat în Colhida"
@@ -12136,8 +12136,8 @@
       {
         "id": "course_90_medee_euripide_q3",
         "type": "trueFalse",
-        "question": "Adevărat sau fals: în ochii grecilor, Medea este considerată un barbar, străin de lumea elenă.",
-        "explanation": "Medeea provine din Colchis, din afara lumii grecești, iar acest statut de străin devine central atunci când Jason o repudiază.",
+        "question": "Adevărat sau fals: în ochii grecilor, Medeea e o barbară, străină de lumea elenă.",
+        "explanation": "Medeea vine din Colhida, din afara lumii grecești, iar statutul ei de străină devine esențial când Iason o repudiază.",
         "options": [
           "Adevărat",
           "Fals"
@@ -12148,25 +12148,25 @@
         "id": "course_90_medee_euripide_q4",
         "type": "mcq",
         "question": "Cum reprezintă Euripide decizia Medeei de a-și ucide copiii?",
-        "explanation": "Medea ezită, dar decizia ei de a-și ucide copiii este explicată într-un discurs lucid: nu este un act tăcut de nebunie.",
+        "explanation": "Medeea ezită, dar hotărârea ei de a-și ucide copiii e expusă într-un discurs lucid: nu e un acces mut de nebunie.",
         "options": [
           "Ca o alegere lucidă, prezentată într-un discurs chibzuit",
-          "Ca un accident complet neintenționat",
+          "Ca un accident complet involuntar",
           "Ca un ordin direct de la zei",
-          "Ca un act imediat regretat și anulat"
+          "Ca un act regretat și anulat imediat"
         ],
         "correctIndex": 0
       },
       {
         "id": "course_90_medee_euripide_q5",
         "type": "mcq",
-        "question": "Cum se termină jocul pentru Medea?",
-        "explanation": "Un deus ex machina îi permite Medeei să scape cu un car înaripat trimis de bunicul ei Soarele, fără pedeapsă imediată.",
+        "question": "Cum se termină piesa pentru Medeea?",
+        "explanation": "Un deus ex machina îi permite Medeei să scape într-un car înaripat trimis de bunicul ei, Soarele, fără să fie pedepsită pe loc.",
         "options": [
-          "Ea scapă pe un car înaripat trimis de bunicul ei Soarele",
-          "Este executat public în Corint",
-          "Ea se sinucide ca Iocasta în Oedip Regele",
-          "Ea este iertată de Jason și rămâne în Corint"
+          "Scapă într-un car înaripat trimis de bunicul ei, Soarele",
+          "E executată public în Corint",
+          "Se sinucide ca Iocasta în Oedip rege",
+          "E iertată de Iason și rămâne în Corint"
         ],
         "correctIndex": 0
       },
@@ -12197,13 +12197,13 @@
       {
         "id": "course_90_medee_euripide_q8",
         "type": "mcq",
-        "question": "Dincolo de răzbunarea personală împotriva lui Jason, ce mai distruge Medea ucigându-și copiii, conform cursului?",
-        "explanation": "Distrugându-și propria descendență, Medea dăunează și viitorului orașului, cost politic pe care cursul îl subliniază.",
+        "question": "Dincolo de răzbunarea personală împotriva lui Iason, ce mai distruge Medeea ucigându-și copiii, potrivit cursului?",
+        "explanation": "Distrugându-și propria descendență, Medeea lovește și viitorul cetății, un cost politic pe care cursul îl subliniază.",
         "options": [
-          "Viitorul neamului, cu un cost politic pentru oraș",
+          "Viitorul neamului, cu un cost politic pentru cetate",
           "Reputația Corintului în străinătate",
           "Tronul Colhidei",
-          "Templul lui Apollo"
+          "Templul lui Apolo"
         ],
         "correctIndex": 0
       }
@@ -12394,8 +12394,8 @@
       {
         "id": "course_92_madame_bovary_flaubert_q1",
         "type": "mcq",
-        "question": "Cine a scris Madame Bovary?",
-        "explanation": "Gustave Flaubert a publicat Madame Bovary în 1857, marcând nașterea realismului modern.",
+        "question": "Cine este autorul romanului Doamna Bovary?",
+        "explanation": "Gustave Flaubert a publicat Doamna Bovary în 1857, iar romanul marchează nașterea realismului modern.",
         "options": [
           "Gustave Flaubert",
           "Stendhal",
@@ -12433,8 +12433,8 @@
       {
         "id": "course_92_madame_bovary_flaubert_q4",
         "type": "trueFalse",
-        "question": "Adevărat sau fals: Flaubert a fost condamnat în timpul procesului său din 1857 pentru Madame Bovary.",
-        "explanation": "Flaubert a fost achitat de acuzația de „ultraj față de morala publică” în 1857.",
+        "question": "Adevărat sau fals: Flaubert a fost condamnat la procesul din 1857 pentru Doamna Bovary.",
+        "explanation": "Flaubert a fost achitat în 1857 de acuzația de „ofensă adusă moralei publice”.",
         "options": [
           "Adevărat",
           "Fals"
@@ -12483,8 +12483,8 @@
       {
         "id": "course_92_madame_bovary_flaubert_q8",
         "type": "numericSlider",
-        "question": "Câți ani a petrecut Flaubert scriind Madame Bovary?",
-        "explanation": "Flaubert s-a izolat în Croisset și s-a dedicat cinci ani, din 1851 până în 1856, scrierii acestui roman.",
+        "question": "Câți ani i-a dedicat Flaubert scrierii romanului Doamna Bovary?",
+        "explanation": "Flaubert s-a retras la Croisset și a dedicat cinci ani, din 1851 până în 1856, scrierii acestui roman.",
         "correctValue": 5.0,
         "sliderMin": 1.0,
         "sliderMax": 12.0,
@@ -12663,8 +12663,8 @@
   },
   {
     "id": "course_94_candide_voltaire",
-    "title": "„Candide”: de ce trebuie să ne cultivăm grădina?",
-    "description": "Candide străbate o lume crudă crezând că totul merge cât se poate de bine. Voltaire dărâmă optimismul lui Leibniz cu o ironie neîndurătoare.",
+    "title": "„Candid”: de ce trebuie să ne cultivăm grădina?",
+    "description": "Candid străbate o lume crudă crezând că totul merge cât se poate de bine. Voltaire demolează optimismul lui Leibniz cu o ironie necruțătoare.",
     "subject": "litterature",
     "subcategory": "Clasici francezi și europeni",
     "lessons": [
@@ -12693,8 +12693,8 @@
       {
         "id": "course_94_candide_voltaire_q1",
         "type": "mcq",
-        "question": "Cine este autorul lui Candide?",
-        "explanation": "Voltaire a publicat Candide ou l'Optimisme în 1759, o capodopera a povestirii filozofice.",
+        "question": "Cine este autorul lui Candid?",
+        "explanation": "Voltaire a publicat Candid sau Optimismul în 1759, o capodoperă a povestirii filozofice.",
         "options": [
           "Voltaire",
           "Diderot",
@@ -12706,7 +12706,7 @@
       {
         "id": "course_94_candide_voltaire_q2",
         "type": "mcq",
-        "question": "Ce eveniment real din 1755 l-a șocat pe Voltaire și a alimentat scrisul lui Candide?",
+        "question": "Ce eveniment real din 1755 l-a zguduit pe Voltaire și l-a inspirat când a scris Candid?",
         "explanation": "Cutremurul de la Lisabona din 1 noiembrie 1755, care a ucis în jur de 60.000 de oameni, a spulberat încrederea lui Voltaire într-o lume perfect ordonată.",
         "options": [
           "Cutremurul de la Lisabona",
@@ -12743,10 +12743,10 @@
       {
         "id": "course_94_candide_voltaire_q5",
         "type": "mcq",
-        "question": "De ce Candide este alungat din castel la începutul poveștii?",
-        "explanation": "Candide este dat afară din castel pentru că a iubit-o pe Cunégonde, fiica baronului, ceea ce îi determină rătăcirea în jurul lumii.",
+        "question": "De ce este alungat Candid din castel la începutul povestirii?",
+        "explanation": "Candid este alungat din castel pentru că a iubit-o pe Cunégonde, fiica baronului, și așa începe rătăcirea lui prin lume.",
         "options": [
-          "Pentru că îl iubește pe Cunégonde",
+          "Pentru că o iubește pe Cunégonde",
           "Pentru că l-a insultat pe baron",
           "Pentru că a fost înrolat cu forța",
           "Pentru că l-a trădat pe Pangloss"
@@ -12757,25 +12757,25 @@
         "id": "course_94_candide_voltaire_q6",
         "type": "mcq",
         "question": "Ce demonstrează Eldorado în poveste?",
-        "explanation": "Eldorado, o utopie rațională sud-americană, demonstrează că optimismul poate funcționa, dar Candide o lasă tot așa pentru a găsi Cunégonde.",
+        "explanation": "Eldorado, utopie rațională din America de Sud, arată că optimismul poate funcționa, dar Candid tot îl părăsește ca s-o regăsească pe Cunégonde.",
         "options": [
-          "Acel optimism poate funcționa într-o societate rațională",
-          "Banii aceia te fac mereu fericit",
-          "Acea religie este esențială pentru fericire",
-          "Acel război este necesar pentru progres"
+          "Că optimismul poate funcționa într-o societate rațională",
+          "Că banii te fac mereu fericit",
+          "Că religia e indispensabilă fericirii",
+          "Că războiul e necesar progresului"
         ],
         "correctIndex": 0
       },
       {
         "id": "course_94_candide_voltaire_q7",
         "type": "mcq",
-        "question": "Ce împinge soarta „Negrului din Surinam”, un sclav mutilat pentru zahărul european, pe Candide să facă?",
-        "explanation": "În fața acestui sclav mutilat, Candide definește în cele din urmă optimismul drept „furia de a susține că totul este bine când cineva este rău”.",
+        "question": "La ce îl împinge pe Candid soarta „negrului din Surinam”, sclav mutilat pentru zahărul european?",
+        "explanation": "În fața acestui sclav mutilat, Candid definește în sfârșit optimismul drept „furia de a susține că totul e bine când ție ți-e rău”.",
         "options": [
-          "Definiți optimismul drept „furia de a menține că totul este bine când suntem răi”",
-          "Abandonează definitiv Cunégonde",
-          "Alăturați-vă Inchiziției",
-          "Întoarce-te la Eldorado"
+          "Să definească optimismul drept „furia de a susține că totul e bine când ție ți-e rău”",
+          "Să renunțe definitiv la Cunégonde",
+          "Să se alăture Inchiziției",
+          "Să se întoarcă în Eldorado"
         ],
         "correctIndex": 0
       },
@@ -12795,8 +12795,8 @@
       {
         "id": "course_94_candide_voltaire_q9",
         "type": "numericSlider",
-        "question": "În ce an a fost publicat Candide?",
-        "explanation": "Candide a apărut în 1759, fără numele autorului, la patru ani după cutremurul de la Lisabona.",
+        "question": "În ce an a fost publicat Candid?",
+        "explanation": "Candid a apărut în 1759, fără numele autorului, la patru ani după cutremurul de la Lisabona.",
         "correctValue": 1759.0,
         "sliderMin": 1740.0,
         "sliderMax": 1780.0,
@@ -12806,8 +12806,8 @@
       {
         "id": "course_94_candide_voltaire_q10",
         "type": "trueFalse",
-        "question": "Adevărat sau fals: Candide este interzis de Parlamentul Parisului, dar circulă în continuare clandestin.",
-        "explanation": "În ciuda interdicției de către Parlamentul Parisului, povestea a circulat în subteran, cu peste 20.000 de exemplare în primul an.",
+        "question": "Adevărat sau fals: Candid este interzis de Parlamentul din Paris, dar circulă totuși clandestin.",
+        "explanation": "În ciuda interdicției Parlamentului din Paris, povestirea a circulat clandestin, în peste 20.000 de exemplare încă din primul an.",
         "options": [
           "Adevărat",
           "Fals"
@@ -13657,26 +13657,26 @@
       {
         "id": "course_100_les_fleurs_du_mal_baudelaire_q5",
         "type": "mcq",
-        "question": "Care secțiune a colecției face din Paris un peisaj psihologic?",
-        "explanation": "„Tablourile pariziene” transformă orașul într-un peisaj psihologic. Poetul rătăcește acolo ca un cărucior, un observator al vieții pariziene sub Haussmann.",
+        "question": "Care secțiune a volumului face din Paris un peisaj psihologic?",
+        "explanation": "„Tablouri pariziene” face din oraș un peisaj psihologic. Poetul hoinărește aici ca un flâneur, observator al vieții pariziene din vremea lui Haussmann.",
         "options": [
           "„Tablouri pariziene”",
-          "„Splină și ideală”",
+          "„Spleen și Ideal”",
           "„Vinul”",
-          "\"Moarte\""
+          "„Moartea”"
         ],
         "correctIndex": 0
       },
       {
         "id": "course_100_les_fleurs_du_mal_baudelaire_q6",
         "type": "mcq",
-        "question": "Care poem descrie natura ca un „templu” de semne care leagă mirosuri, culori și sunete?",
-        "explanation": "„Corespondențele” descrie natura ca un templu al semnelor. Simțurile se amestecă acolo: parfumurile, culorile și sunetele răspund unele la altele.",
+        "question": "Care poem descrie natura ca pe un „templu” de semne care leagă parfumuri, culori și sunete?",
+        "explanation": "„Corespondențe” descrie natura ca pe un templu de semne. Simțurile se amestecă aici: parfumurile, culorile și sunetele își răspund.",
         "options": [
-          "„Corespondente”",
+          "„Corespondențe”",
           "„Albatrosul”",
-          "\"Splină\"",
-          "\"Colectare\""
+          "„Spleen”",
+          "„Reculegere”"
         ],
         "correctIndex": 0
       },
@@ -14812,8 +14812,8 @@
       {
         "id": "course_108_le_proces_kafka_q4",
         "type": "numericSlider",
-        "question": "În ce an a fost publicat The Trial postum, de Max Brod?",
-        "explanation": "Procesul a fost publicat în 1925, la un an după moartea lui Kafka, datorită lui Max Brod care a ghicit ordinea capitolelor.",
+        "question": "În ce an a fost publicat postum Procesul, prin grija lui Max Brod?",
+        "explanation": "Procesul a fost publicat în 1925, la un an după moartea lui Kafka, datorită lui Max Brod, care a ghicit ordinea capitolelor.",
         "correctValue": 1925.0,
         "sliderMin": 1900.0,
         "sliderMax": 1950.0,
@@ -15161,7 +15161,7 @@
       {
         "id": "course_110_les_raisins_de_la_colere_steinbeck_q9",
         "type": "numericSlider",
-        "question": "În ce an a fost publicat The Grapes of Wrath, în plină criză?",
+        "question": "În ce an a fost publicat Fructele mâniei, în plină Mare Depresiune?",
         "explanation": "Romanul a fost publicat în 1939 și a câștigat Premiul Pulitzer în anul următor.",
         "correctValue": 1939.0,
         "sliderMin": 1910.0,
@@ -15733,8 +15733,8 @@
       {
         "id": "course_114_fahrenheit_451_bradbury_q9",
         "type": "numericSlider",
-        "question": "În câte zile a scris Ray Bradbury 451 Fahrenheit, la o mașină de scris închiriată de la o bibliotecă?",
-        "explanation": "Bradbury a scris romanul în doar nouă zile, cu o mașină de scris închiriată zece cenți pentru treizeci de minute de la o bibliotecă universitară.",
+        "question": "În câte zile a scris Ray Bradbury Fahrenheit 451, la o mașină de scris închiriată la bibliotecă?",
+        "explanation": "Bradbury a scris romanul în doar nouă zile, la o mașină de scris închiriată cu zece cenți pe treizeci de minute, într-o bibliotecă universitară.",
         "correctValue": 9.0,
         "sliderMin": 1.0,
         "sliderMax": 30.0,
@@ -15788,13 +15788,13 @@
       {
         "id": "course_115_cent_ans_de_solitude_garcia_marquez_q2",
         "type": "mcq",
-        "question": "La ce mișcare literară globală a dat naștere O sută de ani de singurătate?",
-        "explanation": "O sută de ani de singurătate este certificatul de naștere global al realismului magic, unde minunatul este spus ca un fapt obișnuit.",
+        "question": "Cărui curent literar mondial i-a dat naștere Un veac de singurătate?",
+        "explanation": "Un veac de singurătate este actul de naștere mondial al realismului magic, în care miraculosul e povestit ca un fapt obișnuit.",
         "options": [
-          "Realism magic",
+          "Realismul magic",
           "Noul roman",
-          "Naturalism",
-          "Suprarealism"
+          "Naturalismul",
+          "Suprarealismul"
         ],
         "correctIndex": 0
       },
@@ -16085,8 +16085,8 @@
       {
         "id": "course_117_le_maitre_et_marguerite_boulgakov_q1",
         "type": "mcq",
-        "question": "Ce trei lumi se împletesc romanul Maestrul și Margarita?",
-        "explanation": "Romanul împletește trei lumi: Moscova sovietică în anii 1930, Ierusalimul antic și un spațiu fantastic condus de diavol.",
+        "question": "Ce trei lumi împletește romanul Maestrul și Margareta?",
+        "explanation": "Romanul împletește trei lumi: Moscova sovietică din anii 1930, Ierusalimul antic și un spațiu fantastic condus de diavol.",
         "options": [
           "Moscova sovietică, Ierusalimul antic și o lume fantastică condusă de diavol",
           "Moscova, Sankt Petersburg și Kiev",
@@ -16200,7 +16200,7 @@
       {
         "id": "course_117_le_maitre_et_marguerite_boulgakov_q10",
         "type": "trueFalse",
-        "question": "Adevărat sau fals: Maestrul și Margarita au inspirat melodia „Sympathy for the Devil” de la Rolling Stones.",
+        "question": "Adevărat sau fals: Maestrul și Margareta a inspirat piesa „Sympathy for the Devil” a trupei Rolling Stones.",
         "explanation": "Romanul l-a inspirat pe Mick Jagger să scrie „Sympathy for the Devil”, după ce Marianne Faithfull i-a oferit o traducere în engleză în 1967.",
         "options": [
           "Adevărat",
@@ -16850,8 +16850,8 @@
       {
         "id": "course_122_la_naissance_de_l_impressionnisme_q1",
         "type": "mcq",
-        "question": "Care critic a inventat cuvântul „impresionişti” în timp ce îşi bate joc de un tablou de Monet?",
-        "explanation": "Louis Leroy bate joc de titlul lui Monet Impression, Rising Sun, care dă involuntar numele mișcării.",
+        "question": "Ce critic a inventat cuvântul „impresioniști” luând în râs un tablou de Monet?",
+        "explanation": "Louis Leroy a luat în râs titlul tabloului lui Monet, Impresie, răsărit de soare, și a dat astfel, fără să vrea, numele curentului.",
         "options": [
           "Louis Leroy",
           "Émile Zola",
@@ -16863,13 +16863,13 @@
       {
         "id": "course_122_la_naissance_de_l_impressionnisme_q2",
         "type": "mcq",
-        "question": "Care pictură de Manet a scandalizat Salon des Refusés din 1863?",
-        "explanation": "Manet șochează amestecând un nud feminin cu doi bărbați în haine moderne — e Dejunul pe iarbă.",
+        "question": "Ce tablou de Manet a scandalizat Salonul Refuzaților în 1863?",
+        "explanation": "Manet a șocat amestecând un nud feminin cu doi bărbați în costume moderne, în Dejunul pe iarbă.",
         "options": [
-          "Prânzul pe iarbă",
-          "Imprimare, soare răsare",
+          "Dejunul pe iarbă",
+          "Impresie, răsărit de soare",
           "Nuferii",
-          "Pluta Medusei"
+          "Pluta Meduzei"
         ],
         "correctIndex": 0
       },
@@ -17029,13 +17029,13 @@
       {
         "id": "course_123_le_caravage_et_le_clair_obscur_q4",
         "type": "mcq",
-        "question": "Care pictură din 1600 uimește Roma prin caracterul ei sacru pentru fața străzii?",
-        "explanation": "Vocația Sfântului Matei, pictată pentru capela Contarelli, impune un sacru personificat de oamenii de rând.",
+        "question": "Ce tablou din 1600 a uluit Roma arătând sacrul cu chipuri luate de pe stradă?",
+        "explanation": "Chemarea Sfântului Matei, pictată pentru capela Contarelli, impune un sacru întrupat de oameni obișnuiți.",
         "options": [
-          "Vocația Sfântului Matei",
-          "Veghea de noapte",
-          "Fetele din Avignon",
-          "Pluta Medusei"
+          "Chemarea Sfântului Matei",
+          "Rondul de noapte",
+          "Domnișoarele din Avignon",
+          "Pluta Meduzei"
         ],
         "correctIndex": 0
       },
@@ -17302,8 +17302,8 @@
       {
         "id": "course_125_le_romantisme_en_peinture_delacroix_geri_q3",
         "type": "trueFalse",
-        "question": "Adevărat sau fals: Delacroix a pictat Libertatea conducând oamenii pentru a sărbători Revoluția din iulie 1830.",
-        "explanation": "Tabloul celebrează cei trei ani glorioși, zilele revoluționare din iulie 1830.",
+        "question": "Adevărat sau fals: Delacroix a pictat Libertatea conducând poporul ca să celebreze Revoluția din Iulie 1830.",
+        "explanation": "Tabloul celebrează Cele Trei Zile Glorioase, zilele revoluționare din iulie 1830.",
         "options": [
           "Adevărat",
           "Fals"
@@ -17377,11 +17377,11 @@
         "id": "course_125_le_romantisme_en_peinture_delacroix_geri_q9",
         "type": "chronological",
         "question": "Pune aceste lucrări și evenimente ale romantismului în ordine cronologică.",
-        "explanation": "Aceste etape merg de la 1816 și 1832, de la naufragiul propriu-zis până la transformarea paletei lui Delacroix de către Orient.",
+        "explanation": "Aceste repere merg din 1816 până în 1832, de la naufragiul real până la paleta lui Delacroix transformată de Orient.",
         "items": [
-          "Scufundarea fregatei Méduse",
-          "Pluta Medusei este expusă",
-          "Revoluția din iulie și libertatea care conduce poporul",
+          "Naufragiul fregatei Méduse",
+          "Pluta Meduzei este expusă",
+          "Revoluția din Iulie și Libertatea conducând poporul",
           "Călătoria lui Delacroix în Maroc"
         ]
       }
@@ -17448,10 +17448,10 @@
         "question": "Care pictură din 1907 marchează punctul de plecare al cubismului?",
         "explanation": "Domnișoarele din Avignon, cu nudurile tăiate în fațete ascuțite, i-au uluit până și pe apropiații lui Picasso.",
         "options": [
-          "Fetele din Avignon",
+          "Domnișoarele din Avignon",
           "Guernica",
-          "Libertatea conduce poporul",
-          "Prânzul pe iarbă"
+          "Libertatea conducând poporul",
+          "Dejunul pe iarbă"
         ],
         "correctIndex": 0
       },
@@ -17509,11 +17509,11 @@
         "id": "course_126_le_cubisme_picasso_et_braque_q8",
         "type": "chronological",
         "question": "Pune aceste etape ale cubismului în ordine cronologică.",
-        "explanation": "Aceste etape merg de la 1907 și 1912, de la destrămarea inițială până la inventarea colajului.",
+        "explanation": "Aceste repere merg din 1907 până în 1912, de la ruptura inițială până la inventarea colajului.",
         "items": [
-          "Fetele din Avignon",
+          "Domnișoarele din Avignon",
           "Cubismul analitic disecă obiectul",
-          "Colaj și cubism sintetic"
+          "Colajul și cubismul sintetic"
         ]
       },
       {
@@ -17704,13 +17704,13 @@
       {
         "id": "course_128_l_expressionnisme_munch_et_le_cri_q1",
         "type": "mcq",
-        "question": "Care pictor norvegian a fost pionierul expresionismului cu The Scream?",
-        "explanation": "Norvegianul Edvard Munch a făcut din angoasa modernă și singurătatea un simbol universal cu The Scream.",
+        "question": "Ce pictor norvegian a deschis drumul expresionismului cu Strigătul?",
+        "explanation": "Norvegianul Edvard Munch a făcut din angoasa și singurătatea omului modern un simbol universal, cu Strigătul.",
         "options": [
           "Edvard Munch",
           "Vincent Van Gogh",
           "Paul Gauguin",
-          "Vasili Kandinsky"
+          "Wassily Kandinsky"
         ],
         "correctIndex": 0
       },
@@ -17741,8 +17741,8 @@
       {
         "id": "course_128_l_expressionnisme_munch_et_le_cri_q4",
         "type": "mcq",
-        "question": "Unde a avut Munch viziunea care a inspirat The Scream?",
-        "explanation": "Originea Criului datează de la o plimbare pe dealul Ekeberg, unde cerul apusului devine un foc.",
+        "question": "Unde a avut Munch viziunea care a inspirat Strigătul?",
+        "explanation": "Strigătul își are originea într-o plimbare pe dealul Ekeberg, unde cerul apusului s-a transformat într-un incendiu.",
         "options": [
           "Pe dealul Ekeberg din Oslo",
           "Pe cheiurile din Bergen",
@@ -17778,21 +17778,21 @@
       {
         "id": "course_128_l_expressionnisme_munch_et_le_cri_q7",
         "type": "mcq",
-        "question": "Câte versiuni de The Scream a pictat Munch în total?",
+        "question": "Câte versiuni ale Strigătului a pictat Munch în total?",
         "explanation": "Munch a pictat patru versiuni ale Strigătului, în tempera, pastel și ulei, dovadă că acest motiv l-a bântuit multă vreme.",
         "options": [
           "Patru",
           "Două",
-          "Şase",
-          "Unul singur"
+          "Șase",
+          "Una singură"
         ],
         "correctIndex": 0
       },
       {
         "id": "course_128_l_expressionnisme_munch_et_le_cri_q8",
         "type": "trueFalse",
-        "question": "Adevărat sau fals: în The Scream, figura își acoperă urechile pentru că strigătul vine din afară, din peisaj.",
-        "explanation": "Strigătul este de fapt interior: figura își acoperă urechile în fața urletului lumii, nu invers.",
+        "question": "Adevărat sau fals: în Strigătul, personajul își astupă urechile pentru că strigătul vine din afară, din peisaj.",
+        "explanation": "Strigătul este de fapt interior: personajul își astupă urechile în fața urletului lumii, nu invers.",
         "options": [
           "Adevărat",
           "Fals"
@@ -17873,12 +17873,12 @@
         "id": "course_129_l_art_abstrait_kandinsky_et_mondrian_q3",
         "type": "mcq",
         "question": "În ce carte a teoretizat Kandinsky abstracția lirică în 1911?",
-        "explanation": "Kandinsky a publicat Du Spirituel dans l'Art în 1911, unde a teoretizat vibrația emoțională a culorilor.",
+        "explanation": "În 1911, Kandinsky a publicat Despre spiritual în artă, carte în care a teoretizat vibrația emoțională a culorilor.",
         "options": [
-          "Spiritualitatea în artă",
+          "Despre spiritual în artă",
           "Manifestul suprarealismului",
           "De Stijl",
-          "Fetele din Avignon"
+          "Domnișoarele din Avignon"
         ],
         "correctIndex": 0
       },
@@ -18622,12 +18622,12 @@
         "id": "course_134_l_opera_de_verdi_q5",
         "type": "mcq",
         "question": "Pe ce roman francez se bazează La Traviata?",
-        "explanation": "La Traviata adaptează The Lady of the Camellias, care șochează prin eroina sa contemporană și tuberculoasă.",
+        "explanation": "La Traviata adaptează Dama cu camelii și a șocat prin eroina ei contemporană, bolnavă de tuberculoză.",
         "options": [
-          "Doamna cameliilor de Alexandre Dumas fils",
+          "Dama cu camelii de Alexandre Dumas-fiul",
           "Notre-Dame de Paris de Victor Hugo",
           "Mizerabilii de Victor Hugo",
-          "Madame Bovary de Gustave Flaubert"
+          "Doamna Bovary de Gustave Flaubert"
         ],
         "correctIndex": 0
       },
@@ -20124,8 +20124,8 @@
       {
         "id": "course_145_kubrick_2001_l_odyssee_de_l_espace_q1",
         "type": "numericSlider",
-        "question": "În ce an a fost lansat în cinematografe 2001: A Space Odyssey?",
-        "explanation": "2001: A fost lansată A Space Odyssey în 1968 și a redefinit science-fiction în cinema.",
+        "question": "În ce an a apărut în cinematografe 2001: Odiseea spațială?",
+        "explanation": "2001: Odiseea spațială a apărut în 1968 și a redefinit filmul science-fiction.",
         "correctValue": 1968.0,
         "sliderMin": 1950.0,
         "sliderMax": 1985.0,
@@ -20239,7 +20239,7 @@
   {
     "id": "course_146_hitchcock_et_le_suspense",
     "title": "Surpriză sau suspans: ce diferență făcea pentru Hitchcock?",
-    "description": "**Alfred Hitchcock** inventează suspansul modern: îi dai publicului o informație pe care personajele nu o au. Cu *Psycho*, *Vertigo* sau *Fereastra din curte*, îți manipulează privirea.",
+    "description": "**Alfred Hitchcock** inventează suspansul modern: să-i dai publicului o informație pe care personajele nu o au. Cu *Psycho*, *Vertigo* sau *Fereastra din spate*, ne manipulează privirea.",
     "subject": "art",
     "subcategory": "Cinema, fotografie și arhitectură + opere emblematice",
     "lessons": [
@@ -20294,11 +20294,11 @@
       {
         "id": "course_146_hitchcock_et_le_suspense_q3",
         "type": "mcq",
-        "question": "Ce tehnică folosește Hitchcock în The Rope (1948) pentru a simula un film filmat într-o singură mișcare?",
-        "explanation": "Hitchcock ascunde tăieturile în spatele unui spate sau a unei piese de mobilier întunecate pentru a simula o singură secvență filmată în The Rope.",
+        "question": "Ce tehnică folosește Hitchcock în Frânghia (1948) ca filmul să pară turnat dintr-o singură bucată?",
+        "explanation": "Hitchcock ascunde tăieturile după spatele unui actor sau după o mobilă întunecată, ca să simuleze un singur plan-secvență în Frânghia.",
         "options": [
-          "O secvență cu tăieturi ascunse la spate sau la mobilier",
-          "Montajul alternant clasic",
+          "Un plan-secvență cu tăieturi ascunse după spatele actorilor sau după mobile",
+          "Montajul alternat clasic",
           "Camera subiectivă continuă",
           "Ecranul divizat"
         ],
@@ -20320,7 +20320,7 @@
       {
         "id": "course_146_hitchcock_et_le_suspense_q5",
         "type": "trueFalse",
-        "question": "Adevărat sau fals: în Rear Window, spectatorul vede exact ceea ce vede eroul datorită camerei subiective.",
+        "question": "Adevărat sau fals: în Fereastra din spate, spectatorul vede exact ce vede eroul, datorită camerei subiective.",
         "explanation": "Hitchcock folosește camera subiectivă: vedem exact ceea ce vede eroul, nimic mai mult.",
         "options": [
           "Adevărat",
@@ -20368,12 +20368,12 @@
       {
         "id": "course_146_hitchcock_et_le_suspense_q9",
         "type": "chronological",
-        "question": "Pune aceste inovații tehnice Hitchcock în ordine cronologică.",
+        "question": "Pune în ordine cronologică aceste inovații tehnice ale lui Hitchcock.",
         "explanation": "Aceste trei inovații (1948, 1954, 1958) marchează evoluția stilului lui Hitchcock, de la iluzia planului continuu până la distorsiunea optică a vertijului.",
         "items": [
-          "La Corde simulează o singură fotografie secvență",
-          "Geamul din spate folosește camera subiectivă",
-          "Vertigo inventează Dolly Zoom"
+          "Frânghia simulează un singur plan-secvență",
+          "Fereastra din spate folosește camera subiectivă",
+          "Vertigo inventează efectul Dolly Zoom"
         ]
       }
     ]
@@ -21093,10 +21093,10 @@
         "id": "course_152_la_liberte_guidant_le_peuple_delacroix_q1",
         "type": "mcq",
         "question": "Ce eveniment din 1830 l-a împins pe Delacroix să picteze acest tablou?",
-        "explanation": "În 1830, cele Trei Glorieuses l-au alungat pe regele Carol al X-lea, iar Delacroix a pictat imediat Libertatea conducând oamenii.",
+        "explanation": "În 1830, cele Trei Zile Glorioase l-au alungat pe regele Carol al X-lea, iar Delacroix a pictat imediat Libertatea conducând poporul.",
         "options": [
-          "Cele trei fete glorioase care l-au urmărit pe Charles",
-          "Asaltarea Bastiliei",
+          "Cele Trei Zile Glorioase, care îl alungă pe Carol al X-lea",
+          "Căderea Bastiliei",
           "Încoronarea lui Napoleon",
           "Comuna din Paris"
         ],
@@ -21206,7 +21206,7 @@
   },
   {
     "id": "course_153_la_creation_d_adam_michel_ange",
-    "title": "Creația lui Adam, Michelangelo",
+    "title": "Crearea lui Adam, Michelangelo",
     "description": "Pe tavanul Sixtinei, Michelangelo îi pictează pe Dumnezeu și pe Adam, cu degetele aproape atingându-se. Capodoperă a frescei și a Cinquecento-ului.",
     "subject": "art",
     "subcategory": "Cinema, fotografie și arhitectură + opere emblematice",
@@ -21284,12 +21284,12 @@
       {
         "id": "course_153_la_creation_d_adam_michel_ange_q5",
         "type": "mcq",
-        "question": "Ce spune întregul tavan Sixtin, din care Creația lui Adam este doar un panou?",
-        "explanation": "Întregul tavan spune povestea Genezei, iar Creația lui Adam este doar cel mai fotografiat panou.",
+        "question": "Ce povestește întregul tavan al Capelei Sixtine, din care Crearea lui Adam este doar un panou?",
+        "explanation": "Întregul tavan povestește Geneza, iar Crearea lui Adam este doar panoul cel mai fotografiat.",
         "options": [
-          "Geneză",
+          "Geneza",
           "Viața lui Hristos",
-          "Mitologia romana",
+          "Mitologia romană",
           "Istoria Romei antice"
         ],
         "correctIndex": 0
@@ -21378,11 +21378,11 @@
       {
         "id": "course_154_impression_soleil_levant_monet_q1",
         "type": "mcq",
-        "question": "Unde a pictat Monet scena descrisă în Impression, Soleil Levant?",
-        "explanation": "Monet a pictat portul Le Havre dimineața devreme, în jurul anului 1872.",
+        "question": "Unde a pictat Monet scena din Impresie, răsărit de soare?",
+        "explanation": "Monet a pictat portul din Le Havre dis-de-dimineață, în jurul anului 1872.",
         "options": [
-          "Portul Le Havre",
-          "Portul Marsilia",
+          "Portul din Le Havre",
+          "Portul din Marsilia",
           "Sena la Paris",
           "Golful Napoli"
         ],
@@ -24226,12 +24226,12 @@
         "id": "course_175_jason_et_la_toison_d_or_q1",
         "type": "mcq",
         "question": "De ce merge Jason în căutarea Lânei de Aur?",
-        "explanation": "Pelias, care a uzurpat tronul lui Iolcos, promite că i-l va înapoia lui Jason dacă va aduce înapoi Lâna de Aur păzită de un dragon.",
+        "explanation": "Pelias, care a uzurpat tronul din Iolcos, promite să i-l înapoieze lui Jason dacă îi aduce Lâna de Aur, păzită de un dragon.",
         "options": [
-          "Unchiul său Pelias i-o cere în schimbul tronului pe care l-a uzurpat.",
-          "Vrea să o impresioneze pe Medea",
+          "Unchiul său Pelias i-o cere în schimbul tronului pe care l-a uzurpat",
+          "Vrea să o impresioneze pe Medeea",
           "Zeii îl exilează în Colhida",
-          "El caută să-și răzbune tatăl Éson"
+          "Vrea să-și răzbune tatăl, pe Eson"
         ],
         "correctIndex": 0
       },
@@ -24278,20 +24278,20 @@
         "id": "course_175_jason_et_la_toison_d_or_q5",
         "type": "mcq",
         "question": "Ce rol joacă Medeea în cucerirea Lânei de Aur?",
-        "explanation": "Îndrăgostită de Iason, Medea îi oferă un unguent împotriva focului taurilor, sfătuiește o viclenie împotriva războinicilor născuți din dinți de dragon, apoi adoarme balaurul păzitor.",
+        "explanation": "Îndrăgostită de Jason, Medeea îi dă un unguent împotriva focului taurilor, îl sfătuiește cum să păcălească războinicii născuți din dinții dragonului, apoi adoarme dragonul păzitor.",
         "options": [
-          "Ea îi dă lui Jason un unguent protector și adoarme dragonul păzitor",
-          "Ea se luptă cu dragonul însăși cu o sabie",
-          "Își convinge tatăl să renunțe la Fleece în mod pașnic",
-          "Ea îl transformă pe Jason într-un taur invincibil"
+          "Îi dă lui Jason un unguent protector și adoarme dragonul păzitor",
+          "Se luptă ea însăși cu dragonul, cu sabia",
+          "Își convinge tatăl să cedeze Lâna pe cale pașnică",
+          "Îl transformă pe Jason într-un taur invincibil"
         ],
         "correctIndex": 0
       },
       {
         "id": "course_175_jason_et_la_toison_d_or_q6",
         "type": "trueFalse",
-        "question": "Adevărat sau fals: pentru a scăpa din Colhida, Medea își ucide propriul frate Absyrtos și își împrăștie rămășițele pe mare pentru a-și întârzia tatăl.",
-        "explanation": "Medeea îl ucide pe fratele ei Absyrtos și îi împrăștie rămășițele pe mare; tatăl lor Aeetes se oprește pentru a colecta cadavrul, ceea ce îi permite lui Jason și Medea să fugă.",
+        "question": "Adevărat sau fals: ca să fugă din Colhida, Medeea își ucide propriul frate, Absyrtos, și îi împrăștie rămășițele în mare, ca să-și întârzie tatăl.",
+        "explanation": "Medeea îl ucide pe fratele ei, Absyrtos, și îi împrăștie rămășițele în mare. Tatăl lor, Aeetes, se oprește să adune trupul, iar asta le permite lui Jason și Medeei să fugă.",
         "options": [
           "Adevărat",
           "Fals"
@@ -24301,21 +24301,21 @@
       {
         "id": "course_175_jason_et_la_toison_d_or_q7",
         "type": "mcq",
-        "question": "Cum se răzbună Medea pe Pelias, care refuză să cedeze tronul lui Jason?",
-        "explanation": "Medea le păcălește pe fiicele lui Pelias să creadă că își pot întineri tatăl tăindu-l, ceea ce îl ucide.",
+        "question": "Cum se răzbună Medeea pe Pelias, care refuză să-i cedeze tronul lui Jason?",
+        "explanation": "Medeea le păcălește pe fiicele lui Pelias: le face să creadă că își pot întineri tatăl tăindu-l în bucăți, ceea ce îl ucide.",
         "options": [
-          "Ea își păcălește fiicele să-l omoare cu credința că îl va face mai tânăr",
-          "Ea îl otrăvește direct",
-          "Ea îl predă dragonului din Colchis",
-          "Ea îi cere lui Heracles să lupte cu el"
+          "Îi păcălește fiicele să-l ucidă, crezând că îl întineresc",
+          "Îl otrăvește direct",
+          "Îl dă pradă dragonului din Colhida",
+          "Îi cere lui Heracle să lupte cu el"
         ],
         "correctIndex": 0
       },
       {
         "id": "course_175_jason_et_la_toison_d_or_q8",
         "type": "mcq",
-        "question": "De ce se răzbună Medea în sfârșit pe Jason în Corint?",
-        "explanation": "Când Jason vrea să se căsătorească cu fiica regelui Creon, Medea se răzbune ucigându-și rivala cu o rochie otrăvită, apoi propriii lor copii.",
+        "question": "De ce se răzbună Medeea, în cele din urmă, pe Jason, la Corint?",
+        "explanation": "Când Jason vrea să se căsătorească cu fiica regelui Creon, Medeea se răzbună ucigându-și rivala cu o rochie otrăvită, apoi chiar copiii lor.",
         "options": [
           "Jason vrea să o abandoneze pentru a se căsători cu fiica regelui Creon",
           "Jason refuză să-și recunoască copiii",
@@ -24327,13 +24327,13 @@
       {
         "id": "course_175_jason_et_la_toison_d_or_q9",
         "type": "chronological",
-        "question": "Pune acești pași în povestea lui Jason și lâna de aur.",
-        "explanation": "De la plecarea pentru Iolcos până la răzbunarea finală a Medeei la Corint, mitul urmează o traiectorie continuă de cucerire apoi cădere.",
+        "question": "Pune în ordine etapele poveștii lui Jason și a Lânei de Aur.",
+        "explanation": "De la plecarea spre Iolcos până la răzbunarea finală a Medeei la Corint, mitul urmează o traiectorie continuă: întâi cucerire, apoi cădere.",
         "items": [
           "Jason pierde o sandală în timp ce ajută o bătrână",
-          "Argo traversează Roches Symlégades datorită unui porumbel",
-          "Medea adoarme dragonul și Jason ia Lâna",
-          "Medea se răzbune pentru trădarea lui Jason în Corint"
+          "Argo trece de Stâncile Simplegade cu ajutorul unui porumbel",
+          "Medeea adoarme dragonul, iar Jason pune mâna pe Lână",
+          "Medeea se răzbună la Corint pentru trădarea lui Jason"
         ]
       }
     ]
@@ -24631,11 +24631,11 @@
         "id": "course_177_dipe_et_le_sphinx_q9",
         "type": "mcq",
         "question": "Ce face Oedip când află adevărul despre destinul său?",
-        "explanation": "Devenind orb prin scoaterea ochilor, Oedip „vede” în cele din urmă adevărul despre sine; rătăceşte apoi, sprijinit de fiica sa Antigone.",
+        "explanation": "Orb după ce și-a scos ochii, Oedip „vede” în sfârșit adevărul despre sine. Apoi rătăcește, sprijinit de fiica sa, Antigona.",
         "options": [
-          "Își iese ochii",
+          "Își scoate ochii",
           "Pleacă imediat în exil pe mare",
-          "El abdică și îl numește rege pe Creon",
+          "Abdică și îl numește rege pe Creon",
           "Se împacă cu Iocasta"
         ],
         "correctIndex": 0
@@ -24788,13 +24788,13 @@
       {
         "id": "course_178_antigone_devoir_familial_vs_loi_de_l_eta_q9",
         "type": "mcq",
-        "question": "Ce decese au loc după schimbarea târzie a inimii lui Creon?",
-        "explanation": "Creon cedează prea târziu: Antigona se spânzură, fiul ei Hémon se sinucide, apoi se sinucide și Eurydice, soția lui Creon.",
+        "question": "Ce morți urmează după ce Creon se răzgândește prea târziu?",
+        "explanation": "Creon cedează prea târziu: Antigona s-a spânzurat, fiul lui, Hemon, se sinucide, apoi și Euridice, soția lui Creon, își ia viața.",
         "options": [
-          "Antigone se spânzură, Haemon și Eurydice se sinucid",
-          "Doar Antigone moare, restul familiei supraviețuiește",
+          "Antigona se spânzură, Hemon și Euridice se sinucid",
+          "Doar Antigona moare, restul familiei supraviețuiește",
           "Creon moare primul",
-          "Ismene se sinucide în locul Antigonei"
+          "Ismena se sinucide în locul Antigonei"
         ],
         "correctIndex": 0
       },
@@ -24802,12 +24802,12 @@
         "id": "course_178_antigone_devoir_familial_vs_loi_de_l_eta_q10",
         "type": "chronological",
         "question": "Pune în ordine aceste etape ale tragediei Antigonei.",
-        "explanation": "De la moartea celor doi frați la decretul lui Creon, apoi la neascultarea Antigonei și condamnarea ei, tragedia urmează inexorabil.",
+        "explanation": "De la moartea celor doi frați la decretul lui Creon, apoi la neascultarea Antigonei și la condamnarea ei, tragedia se înlănțuie implacabil.",
         "items": [
-          "Eteocle și Polyneices se ucid reciproc pentru tronul Tebei",
-          "Creon interzice orice înmormântare pentru Polinice",
+          "Eteocle și Polinice se ucid unul pe altul pentru tronul Tebei",
+          "Creon îi refuză lui Polinice orice înmormântare",
           "Antigona îndeplinește singură ritualul de înmormântare interzis",
-          "Creon o condamnă pe Antigone să fie zidită de vie"
+          "Creon o condamnă pe Antigona să fie zidită de vie"
         ]
       }
     ]
@@ -27225,12 +27225,12 @@
       {
         "id": "course_196_merlin_l_enchanteur_q5",
         "type": "mcq",
-        "question": "Care este asediul periculos pe care Merlin îl plasează la masa rotundă?",
-        "explanation": "Merlin proiectează Scaunul Periculos, un loc liber la Masa Rotundă rezervat celui mai pur cavaler, care mai târziu va fi ocupat în timpul căutării Graalului.",
+        "question": "Ce este Scaunul Primejdios pe care Merlin îl așază la Masa Rotundă?",
+        "explanation": "Merlin concepe Scaunul Primejdios, un loc liber la Masa Rotundă, rezervat celui mai pur cavaler, care va fi ocupat mai târziu, în timpul căutării Graalului.",
         "options": [
           "Un loc liber rezervat celui mai pur cavaler",
           "Tronul personal al lui Arthur",
-          "Scaunul atribuit lui Merlin însuși",
+          "Locul destinat chiar lui Merlin",
           "O capcană destinată dușmanilor regatului"
         ],
         "correctIndex": 0
@@ -28680,7 +28680,7 @@
   {
     "id": "course_207_l_otan_a_quoi_ca_sert_encore",
     "title": "La ce mai folosește NATO după Războiul Rece?",
-    "description": "Fondată împotriva URSS în 1949, **OTAN** ar fi trebuit să dispară odată cu Războiul Rece. Azi e mai mare și mai activă ca oricând.",
+    "description": "Fondată împotriva URSS în 1949, **NATO** ar fi trebuit să dispară odată cu Războiul Rece. Azi e mai mare și mai activă ca oricând.",
     "subject": "comprendreLeMonde",
     "subcategory": "Conflicte și geopolitică",
     "lessons": [
@@ -28702,7 +28702,7 @@
       },
       {
         "id": "course_207_l_otan_a_quoi_ca_sert_encore_p4",
-        "title": "OTAN în fața provocărilor secolului XXI"
+        "title": "NATO în fața provocărilor secolului XXI"
       }
     ],
     "quiz": [
@@ -29523,7 +29523,7 @@
   {
     "id": "course_213_l_evasion_fiscale_des_multinationales",
     "title": "Cum plătesc GAFAM atât de puține taxe?",
-    "description": "Giganții digitalului plătesc adesea impozite derizorii pe lângă profiturile lor. Nu e mereu ilegal: e rezultatul unor falii din dreptul internațional.",
+    "description": "Giganții digitalului plătesc adesea impozite derizorii față de profiturile lor. Nu e mereu ilegal: e rezultatul unor lacune din dreptul internațional.",
     "subject": "comprendreLeMonde",
     "subcategory": "Economie și societate",
     "lessons": [

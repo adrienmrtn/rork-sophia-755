@@ -2,7 +2,7 @@
   {
     "id": "course_1_la_naissance_de_l_islam_622",
     "title": "¿Cómo nació el islam?",
-    "description": "En 622, un mercader de La Meca llamado Mahoma huyó de su ciudad hacia Medina. Esa partida, la Hégira, marca el año 1 del islam y el inicio de una civilización mundial.",
+    "description": "En el 622, un mercader de La Meca llamado Mahoma huyó de su ciudad hacia Medina. Esa partida, la Hégira, marca el año 1 del islam y el inicio de una civilización mundial.",
     "subject": "histoire",
     "subcategory": "Antigüedad y Edad Media",
     "lessons": [
@@ -69,7 +69,7 @@
         "id": "course_1_la_naissance_de_l_islam_622_q4",
         "type": "numericSlider",
         "question": "¿En qué año murió Mahoma, dejando a Arabia unificada bajo una sola autoridad?",
-        "explanation": "Mahoma murió en 632, sólo diez años después de la Hégira, cuando casi toda Arabia estaba unificada.",
+        "explanation": "Mahoma murió en el 632, solo diez años después de la Hégira, cuando casi toda Arabia estaba unificada.",
         "correctValue": 632.0,
         "sliderMin": 600.0,
         "sliderMax": 660.0,
@@ -91,12 +91,12 @@
       {
         "id": "course_1_la_naissance_de_l_islam_622_q6",
         "type": "mcq",
-        "question": "¿Qué es el Dhimma establecido por los conquistadores musulmanes?",
-        "explanation": "La Dhimma es el estatuto de protegido que permite a la «gente del Libro» seguir con su religión si pagan la yizia.",
+        "question": "¿Qué es la dimma que establecieron los conquistadores musulmanes?",
+        "explanation": "La dimma es el estatuto de protegido que permite a la “gente del Libro” conservar su culto a cambio de pagar la yizia.",
         "options": [
           "El estatuto que permite a cristianos y judíos conservar su religión a cambio de un impuesto",
           "El nombre del calendario musulmán",
-          "Un impuesto a las caravanas mercantes",
+          "Un impuesto sobre las caravanas de mercaderes",
           "El tribunal encargado de juzgar a los infieles"
         ],
         "correctIndex": 0
@@ -313,8 +313,8 @@
       {
         "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_q2",
         "type": "trueFalse",
-        "question": "Verdadero o falso: antes de 410, ningún ejército enemigo había entrado en Roma durante unos ocho siglos.",
-        "explanation": "La última captura de Roma por parte de un enemigo se remonta al saqueo galo del 390 a.C. BC, casi 800 años antes de la llegada de Alarico.",
+        "question": "Verdadero o falso: antes del 410, ningún ejército enemigo había entrado en Roma desde hacía unos ocho siglos.",
+        "explanation": "La última toma de Roma por un enemigo se remontaba al saqueo galo del 390 a. C., casi 800 años antes de la llegada de Alarico.",
         "options": [
           "Verdadero",
           "Falso"
@@ -397,8 +397,8 @@
       {
         "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_q9",
         "type": "numericSlider",
-        "question": "¿En qué año fue depuesto el último emperador romano occidental?",
-        "explanation": "En 476, el líder Odoacro depuso a Rómulo Augústulo, poniendo fin al Imperio Romano Occidental.",
+        "question": "¿En qué año fue depuesto el último emperador romano de Occidente?",
+        "explanation": "En el 476, el caudillo Odoacro depuso a Rómulo Augústulo y puso fin al Imperio romano de Occidente.",
         "correctValue": 476.0,
         "sliderMin": 400.0,
         "sliderMax": 550.0,
@@ -453,7 +453,7 @@
         "id": "course_4_le_couronnement_de_charlemagne_800_q2",
         "type": "mcq",
         "question": "¿Qué imperio pretende restaurar la coronación del año 800?",
-        "explanation": "El gesto de León III pretende restaurar el Imperio Romano de Occidente, desaparecido desde la deposición de Rómulo Augústulo en 476.",
+        "explanation": "El gesto de León III pretende restaurar el Imperio Romano de Occidente, desaparecido desde la deposición de Rómulo Augústulo en el 476.",
         "options": [
           "El Imperio Romano de Occidente, desaparecido desde el 476",
           "El Imperio Bizantino de Oriente",
@@ -536,8 +536,8 @@
       {
         "id": "course_4_le_couronnement_de_charlemagne_800_q9",
         "type": "numericSlider",
-        "question": "¿En qué año el Tratado de Verdún dividió el imperio entre los nietos de Carlomagno?",
-        "explanation": "En 843, el Tratado de Verdún dividió el Imperio carolingio en tres reinos, presagiando a Francia y Alemania.",
+        "question": "¿En qué año dividió el Tratado de Verdún el imperio entre los nietos de Carlomagno?",
+        "explanation": "En el 843, el Tratado de Verdún dividió el Imperio carolingio en tres reinos, que prefiguraban Francia y Alemania.",
         "correctValue": 843.0,
         "sliderMin": 800.0,
         "sliderMax": 900.0,
@@ -2469,11 +2469,11 @@
       {
         "id": "course_18_la_grande_depression_1929_q5",
         "type": "mcq",
-        "question": "¿Cuáles son las “corridas bancarias” que afectaron a los bancos estadounidenses después de la crisis?",
-        "explanation": "Los clientes, presas del pánico, se apresuran a retirar su dinero, lo que provocó la quiebra de unos 9.000 bancos estadounidenses.",
+        "question": "¿Qué son los “bank runs” que sacudieron a los bancos estadounidenses tras el crac?",
+        "explanation": "Presas del pánico, los clientes corrieron a retirar su dinero, lo que provocó la quiebra de unos 9.000 bancos estadounidenses.",
         "options": [
           "Oleadas de clientes que retiran su dinero presas del pánico",
-          "Robos organizados por bandas",
+          "Atracos organizados por bandas",
           "Auditorías obligatorias impuestas por el Estado",
           "Fusiones forzadas entre grandes bancos"
         ],
@@ -11899,9 +11899,9 @@
         "id": "course_88_la_poetique_aristote_q6",
         "type": "mcq",
         "question": "¿Qué obra cita Aristóteles como ejemplo estrella de peripecia y reconocimiento?",
-        "explanation": "Aristóteles toma como ejemplo estrella a Edipo Rey: el héroe descubre demasiado tarde quién es, en una inversión ejemplar.",
+        "explanation": "Aristóteles toma Edipo rey como ejemplo estrella: el héroe descubre demasiado tarde quién es, en un vuelco ejemplar.",
         "options": [
-          "Edipo el rey",
+          "Edipo rey",
           "Antígona",
           "Los persas",
           "Las ranas"
@@ -11966,8 +11966,8 @@
       {
         "id": "course_89_les_travaux_et_les_jours_hesiode_q1",
         "type": "mcq",
-        "question": "¿A quién dirige Hesíodo su poema Obras y días?",
-        "explanation": "El poema está dirigido a Perses, hermano de Hesíodo, acusado de haber engañado en el reparto de una herencia.",
+        "question": "¿A quién dirige Hesíodo su poema Trabajos y días?",
+        "explanation": "El poema está dirigido a Perses, hermano de Hesíodo, acusado de haber hecho trampa en el reparto de una herencia.",
         "options": [
           "A su hermano Perses",
           "A su hija",
@@ -12806,8 +12806,8 @@
       {
         "id": "course_94_candide_voltaire_q10",
         "type": "trueFalse",
-        "question": "Verdadero o falso: Candide está prohibido por el Parlamento de París pero aún circula clandestinamente.",
-        "explanation": "A pesar de la prohibición del Parlamento de París, el cuento circuló clandestinamente, con más de 20.000 copias en el primer año.",
+        "question": "Verdadero o falso: Cándido fue prohibido por el Parlamento de París, pero aun así circuló de forma clandestina.",
+        "explanation": "A pesar de la prohibición del Parlamento de París, el cuento circuló clandestinamente, con más de 20.000 ejemplares ya en el primer año.",
         "options": [
           "Verdadero",
           "Falso"
@@ -15173,7 +15173,7 @@
   },
   {
     "id": "course_111_to_kill_a_mockingbird_harper_lee",
-    "title": "Matar un ruiseñor, Harper Lee",
+    "title": "Matar a un ruiseñor, Harper Lee",
     "description": "Scout, de seis años, observa el pueblo de Maycomb, Alabama. Entre juegos de niños y un juicio injusto, Harper Lee muestra el valor moral frente al racismo.",
     "subject": "litterature",
     "subcategory": "Anglosajones y literatura mundial",
@@ -15203,12 +15203,12 @@
       {
         "id": "course_111_to_kill_a_mockingbird_harper_lee_q1",
         "type": "mcq",
-        "question": "¿Quién cuenta la historia de Matar un ruiseñor?",
-        "explanation": "La novela está contada a través de los ojos de Scout, una niña de seis años que vive en Maycomb, Alabama.",
+        "question": "¿Quién cuenta la historia en Matar a un ruiseñor?",
+        "explanation": "La novela se narra a través de los ojos de Scout, una niña de seis años que vive en Maycomb, Alabama.",
         "options": [
           "Scout, una niña de seis años",
-          "Atticus Finch, abogado",
-          "Boo Radley, un vecino solitario",
+          "Atticus Finch, un abogado",
+          "Boo Radley, un vecino ermitaño",
           "Tom Robinson, el acusado"
         ],
         "correctIndex": 0
@@ -16821,7 +16821,7 @@
   {
     "id": "course_122_la_naissance_de_l_impressionnisme",
     "title": "¿Cómo nació el impresionismo contra el Salón?",
-    "description": "En 1874, pintores rechazados por el Salón montaron su propia exposición. Un crítico se burló de Monet y le dio por accidente su nombre al **impresionismo**.",
+    "description": "En 1874, unos pintores rechazados por el Salón montaron su propia exposición. Un crítico se burló de Monet y, sin querer, bautizó al **impresionismo**.",
     "subject": "art",
     "subcategory": "Pintura y movimientos",
     "lessons": [
@@ -17029,12 +17029,12 @@
       {
         "id": "course_123_le_caravage_et_le_clair_obscur_q4",
         "type": "mcq",
-        "question": "¿Qué pintura de 1600 asombra a Roma por su carácter sagrado en la calle?",
-        "explanation": "La Vocación de San Mateo, pintada para la capilla Contarelli, impone un sagrado personificado por la gente corriente.",
+        "question": "¿Qué cuadro de 1600 dejó atónita a Roma al dar a lo sagrado el rostro de la gente de la calle?",
+        "explanation": "La vocación de san Mateo, pintada para la capilla Contarelli, impone una imagen de lo sagrado encarnada por gente corriente.",
         "options": [
-          "La vocación de San Mateo",
-          "La guardia nocturna",
-          "Las señoritas de Aviñón",
+          "La vocación de san Mateo",
+          "La ronda de noche",
+          "Las señoritas de Avignon",
           "La balsa de la Medusa"
         ],
         "correctIndex": 0
@@ -17234,10 +17234,10 @@
         "id": "course_124_rembrandt_et_l_ecole_flamande_q9",
         "type": "chronological",
         "question": "Ordena cronológicamente estas etapas de la vida de Rembrandt.",
-        "explanation": "Estos hitos se extienden desde 1631 hasta 1669, desde su instalación triunfal en Amsterdam hasta su muerte.",
+        "explanation": "Estos hitos van de 1631 a 1669, desde su triunfal llegada a Ámsterdam hasta su muerte.",
         "items": [
           "Llegada a Ámsterdam",
-          "La guardia nocturna",
+          "La ronda de noche",
           "Quiebra personal",
           "Muerte del pintor"
         ]
@@ -19940,11 +19940,11 @@
       {
         "id": "course_143_orson_welles_et_citizen_kane_q9",
         "type": "chronological",
-        "question": "Pon estas etapas de la historia de Citizen Kane en orden cronológico.",
-        "explanation": "Estos tres hitos (1938, 1941, años 1950) trazan el ascenso radiofónico de Welles, el fracaso inicial de la película y luego su rehabilitación por parte de la crítica europea.",
+        "question": "Pon estas etapas de la historia de Ciudadano Kane en orden cronológico.",
+        "explanation": "Estos tres hitos (1938, 1941, década de 1950) recorren el ascenso de Welles en la radio, el fracaso inicial de la película y, después, su rehabilitación por la crítica europea.",
         "items": [
-          "El engaño radiofónico de la Guerra de los Mundos",
-          "La liberación de Ciudadano Kane",
+          "La broma radiofónica de La guerra de los mundos",
+          "El estreno de Ciudadano Kane",
           "El redescubrimiento de la película por la crítica europea"
         ]
       }
@@ -20009,11 +20009,11 @@
         "id": "course_144_la_nouvelle_vague_francaise_q3",
         "type": "mcq",
         "question": "¿Qué película de François Truffaut triunfó en Cannes en 1959 y lanzó la Nueva Ola?",
-        "explanation": "En 1959, Los 400 golpes de François Truffaut triunfó en Cannes y consolidó el cine de autor.",
+        "explanation": "En 1959, Los cuatrocientos golpes, de François Truffaut, triunfó en Cannes e impuso el cine de autor.",
         "options": [
-          "Los 400 golpes",
+          "Los cuatrocientos golpes",
           "Al final de la escapada",
-          "Citizen Kane",
+          "Ciudadano Kane",
           "El gran dictador"
         ],
         "correctIndex": 0
@@ -20282,22 +20282,22 @@
         "id": "course_146_hitchcock_et_le_suspense_q2",
         "type": "mcq",
         "question": "¿Qué es un MacGuffin en una película de Hitchcock?",
-        "explanation": "El MacGuffin es un objeto o secreto que hace avanzar la trama, incluso si su naturaleza precisa realmente no importa.",
+        "explanation": "El MacGuffin es un objeto o un secreto que hace avanzar la trama, aunque su naturaleza exacta no importe demasiado.",
         "options": [
-          "Un objeto o secreto que motiva a los personajes sin que importe su naturaleza exacta.",
-          "Una toma de cámara característica de Hitchcock",
-          "El nombre del asesino en Psycho",
-          "Una técnica de edición de sonido."
+          "Un objeto o un secreto que motiva a los personajes sin que importe su naturaleza exacta",
+          "Un plano de cámara característico de Hitchcock",
+          "El nombre del asesino en Psicosis",
+          "Una técnica de montaje de sonido"
         ],
         "correctIndex": 0
       },
       {
         "id": "course_146_hitchcock_et_le_suspense_q3",
         "type": "mcq",
-        "question": "¿Qué técnica utiliza Hitchcock en La cuerda (1948) para simular una película rodada en un solo movimiento?",
-        "explanation": "Hitchcock esconde los cortes detrás de una espalda o de un mueble oscuro para simular un único plano secuencia en La cuerda.",
+        "question": "¿Qué técnica usa Hitchcock en La soga (1948) para simular una película rodada en una sola toma?",
+        "explanation": "Hitchcock esconde los cortes detrás de una espalda o de un mueble oscuro para simular un único plano secuencia en La soga.",
         "options": [
-          "Un plano secuencia con cortes ocultos detrás de espaldas o muebles.",
+          "Un plano secuencia con cortes ocultos detrás de espaldas o muebles",
           "El clásico montaje alterno",
           "La cámara subjetiva continua",
           "La pantalla dividida"
@@ -20308,11 +20308,11 @@
         "id": "course_146_hitchcock_et_le_suspense_q4",
         "type": "mcq",
         "question": "¿Qué efecto visual inventó Hitchcock para Vértigo en 1958?",
-        "explanation": "Para Vertigo, Hitchcock inventó el Dolly Zoom: la cámara retrocede mientras el zoom avanza, distorsionando el espacio para marear a la gente.",
+        "explanation": "Para Vértigo, Hitchcock inventó el Dolly Zoom: la cámara retrocede mientras el zoom avanza, lo que deforma el espacio y hace sentir el vértigo.",
         "options": [
-          "El zoom de Dolly",
-          "Profundidad de campo",
-          "El escaneo de hendidura",
+          "El Dolly Zoom",
+          "La profundidad de campo",
+          "El slit-scan",
           "La pantalla dividida"
         ],
         "correctIndex": 0
@@ -20344,8 +20344,8 @@
       {
         "id": "course_146_hitchcock_et_le_suspense_q7",
         "type": "trueFalse",
-        "question": "Verdadero o falso: para Psicosis, Hitchcock prohibió la entrada a la habitación tras el inicio de la sesión.",
-        "explanation": "Hitchcock prohíbe la entrada a Psycho después de que comienza la sesión, convirtiendo el secreto de la trama en un evento.",
+        "question": "Verdadero o falso: en Psicosis, Hitchcock prohibió entrar en la sala una vez empezada la sesión.",
+        "explanation": "Hitchcock prohibió entrar en la sala una vez empezada la sesión de Psicosis, lo que convirtió el secreto de la trama en un acontecimiento.",
         "options": [
           "Verdadero",
           "Falso"
@@ -20371,9 +20371,9 @@
         "question": "Coloca estas innovaciones técnicas de Hitchcock en orden cronológico.",
         "explanation": "Estas tres innovaciones (1948, 1954, 1958) marcan la evolución del estilo de Hitchcock, desde la ilusión del plano continuo hasta la distorsión óptica del vértigo.",
         "items": [
-          "La Corde simula un único plano secuencia",
-          "La ventana trasera usa la cámara subjetiva.",
-          "Vertigo inventa el Dolly Zoom"
+          "La soga simula un único plano secuencia",
+          "La ventana indiscreta usa la cámara subjetiva",
+          "Vértigo inventa el Dolly Zoom"
         ]
       }
     ]
@@ -25641,13 +25641,13 @@
       {
         "id": "course_184_romulus_et_remus_la_fondation_de_rome_q6",
         "type": "mcq",
-        "question": "¿Qué fecha conserva la tradición romana para la fundación de Roma?",
-        "explanation": "Según la tradición, Roma fue fundada el 21 de abril del 753 a.C. BC, fecha de inicio del calendario romano.",
+        "question": "¿Qué fecha fija la tradición romana para la fundación de Roma?",
+        "explanation": "Según la tradición, Roma se fundó el 21 de abril del 753 a. C., fecha de inicio del calendario romano.",
         "options": [
-          "21 de abril de 753 a. C. d.C.",
-          "1 de enero de 509 a.C. d.C.",
-          "15 de marzo del 44 a.C. d.C.",
-          "21 de abril del 27 a.C. d.C."
+          "21 de abril del 753 a. C.",
+          "1 de enero del 509 a. C.",
+          "15 de marzo del 44 a. C.",
+          "21 de abril del 27 a. C."
         ],
         "correctIndex": 0
       },
@@ -27226,12 +27226,12 @@
         "id": "course_196_merlin_l_enchanteur_q5",
         "type": "mcq",
         "question": "¿Qué es el Asedio Peligroso que Merlín coloca en la Mesa Redonda?",
-        "explanation": "Merlín diseña el Asiento Peligroso, un lugar vacante en la Mesa Redonda reservado para el caballero más puro, que luego se ocupará durante la búsqueda del Grial.",
+        "explanation": "Merlín concibe el Asiento Peligroso, un sitio vacío en la Mesa Redonda reservado al caballero más puro, que más tarde se ocupará durante la búsqueda del Grial.",
         "options": [
-          "Un asiento vacante reservado para el caballero más puro",
+          "Un asiento vacío reservado al caballero más puro",
           "El trono personal de Arturo",
-          "El asiento atribuido al propio Merlín",
-          "Una trampa destinada a los enemigos del reino."
+          "El asiento asignado al propio Merlín",
+          "Una trampa destinada a los enemigos del reino"
         ],
         "correctIndex": 0
       },
@@ -28680,7 +28680,7 @@
   {
     "id": "course_207_l_otan_a_quoi_ca_sert_encore",
     "title": "¿Para qué sirve todavía la OTAN tras la Guerra Fría?",
-    "description": "Fundada contra la URSS en 1949, la **OTAN** debería haber desaparecido con la Guerra Fría. Hoy es más grande y está más ocupada que nunca.",
+    "description": "Fundada contra la URSS en 1949, la **OTAN** debería haber desaparecido con la Guerra Fría. Hoy es más grande y más activa que nunca.",
     "subject": "comprendreLeMonde",
     "subcategory": "Conflictos y geopolítica",
     "lessons": [
@@ -28698,7 +28698,7 @@
       },
       {
         "id": "course_207_l_otan_a_quoi_ca_sert_encore_p3",
-        "title": "El choque de 2022 y el regreso de la defensa territorial"
+        "title": "El choque de 2022 y la vuelta a la defensa territorial"
       },
       {
         "id": "course_207_l_otan_a_quoi_ca_sert_encore_p4",
@@ -33955,8 +33955,8 @@
       {
         "id": "course_245_d_ou_vient_le_pere_noel_q1",
         "type": "mcq",
-        "question": "¿Qué personaje histórico está en el origen de la leyenda de Papá Noel?",
-        "explanation": "Nacido en 270, el obispo Nicolás de Mira reparte sus bienes entre los más necesitados y se convierte en santo patrón de los niños y los marineros.",
+        "question": "¿Qué personaje histórico dio origen a la leyenda de Papá Noel?",
+        "explanation": "Nacido en el 270, el obispo Nicolás de Mira repartió sus bienes entre los más necesitados y se convirtió en el santo patrón de los niños y los marineros.",
         "options": [
           "Nicolás de Mira, un obispo que reparte su fortuna",
           "Un rey mago llegado de Oriente",
@@ -34701,7 +34701,7 @@
     "title": "¿Por qué ardió Londres en 1666?",
     "description": "El 2 de septiembre de 1666, el fuego de una panadería se escapó de Pudding Lane. Cuatro días después, 13.000 casas y la catedral de San Pablo eran cenizas, con solo seis muertos registrados.",
     "subject": "histoire",
-    "subcategory": "Edad moderna y siglo XIX",
+    "subcategory": "Edad Moderna y siglo XIX",
     "lessons": [
       {
         "id": "course_251_pourquoi_londres_a_t_elle_brule_en_1666_intro",
@@ -34959,7 +34959,7 @@
     "title": "¿Por qué la imprenta lo cambió todo?",
     "description": "Hacia 1450, un artesano de Maguncia juntó letras de metal para imprimir páginas enteras. Cincuenta años después, Europa tenía 20 millones de libros, y la información era mucho más difícil de controlar.",
     "subject": "histoire",
-    "subcategory": "Edad moderna y siglo XIX",
+    "subcategory": "Edad Moderna y siglo XIX",
     "lessons": [
       {
         "id": "course_253_pourquoi_l_imprimerie_a_t_elle_tout_intro",
@@ -35604,7 +35604,7 @@
     "title": "¿Quién se hizo rico de verdad con la fiebre del oro?",
     "description": "El 24 de enero de 1848, un carpintero recogió unas pepitas amarillas en el canal de un aserradero y desató la mayor fiebre del oro de la historia. Pero los verdaderos ganadores casi nunca tuvieron una batea en las manos.",
     "subject": "histoire",
-    "subcategory": "Edad moderna y siglo XIX",
+    "subcategory": "Edad Moderna y siglo XIX",
     "lessons": [
       {
         "id": "course_258_qui_s_est_vraiment_enrichi_pendant_la_intro",
@@ -36058,7 +36058,7 @@
       {
         "id": "course_261_a_t_on_vraiment_tout_perdu_dans_l_q4",
         "type": "trueFalse",
-        "question": "Verdadero o falso: el califa Omar mandó quemar los manuscritos de Alejandría en 642 para calentar los baños de la ciudad.",
+        "question": "Verdadero o falso: el califa Omar mandó quemar los manuscritos de Alejandría en el 642 para calentar los baños de la ciudad.",
         "explanation": "Esta historia es una invención del siglo XIII. Edward Gibbon ya había señalado que se contaba también sobre una biblioteca de Persia.",
         "options": [
           "Verdadero",
@@ -36612,7 +36612,7 @@
         "id": "course_265_pourquoi_les_spartiates_etaient_ils_si_q7",
         "type": "chronological",
         "question": "Ordena estos acontecimientos de la historia de Esparta.",
-        "explanation": "Esparta dirigió a sus aliados desde el siglo VI a. C., venció a Atenas en 404, se hundió en Leuctra en 371 y tenía menos de 1.000 ciudadanos en el siglo IV.",
+        "explanation": "Esparta dirigió a sus aliados desde el siglo VI a. C., venció a Atenas en el 404, se hundió en Leuctra en el 371 y en el siglo IV tenía menos de 1.000 ciudadanos.",
         "items": [
           "Esparta se pone al frente de sus aliados del Peloponeso",
           "Esparta vence a Atenas",
@@ -39984,7 +39984,7 @@
     "title": "¿Por qué le faltaban botes salvavidas al Titanic?",
     "description": "En abril de 1912, el mayor transatlántico del mundo zarpó con botes para menos de la mitad de las personas a bordo. La ley lo permitía, y su compañía se había negado a llevar más.",
     "subject": "histoire",
-    "subcategory": "Edad moderna y siglo XIX",
+    "subcategory": "Edad Moderna y siglo XIX",
     "lessons": [
       {
         "id": "course_292_pourquoi_le_titanic_manquait_il_de_intro",
@@ -40244,7 +40244,7 @@
     "title": "¿Por qué Irlanda exportaba comida mientras pasaba hambre?",
     "description": "Entre 1845 y 1852, un millón de irlandeses murieron de hambre mientras barcos cargados de cereales y ganado salían de sus puertos. Dos historiadores se enfrentan sobre el sentido de esta paradoja.",
     "subject": "histoire",
-    "subcategory": "Edad moderna y siglo XIX",
+    "subcategory": "Edad Moderna y siglo XIX",
     "lessons": [
       {
         "id": "course_294_pourquoi_l_irlande_affamee_exportait_intro",
@@ -40371,7 +40371,7 @@
     "title": "¿Por qué tenemos husos horarios?",
     "description": "Hasta el siglo XIX, cada ciudad vivía con su propia hora. Los ferrocarriles, y luego una conferencia reunida en Washington en 1884, rehicieron el tiempo mismo.",
     "subject": "histoire",
-    "subcategory": "Edad moderna y siglo XIX",
+    "subcategory": "Edad Moderna y siglo XIX",
     "lessons": [
       {
         "id": "course_295_pourquoi_avons_nous_des_fuseaux_horaires_intro",
@@ -41917,7 +41917,7 @@
   {
     "id": "course_307_comment_le_christianisme_est_il_devenu",
     "title": "¿Cómo se convirtió el cristianismo en religión de Estado?",
-    "description": "En 313, Constantino concedió a los cristianos el derecho a practicar su fe. En 380, Teodosio hizo del cristianismo niceno la religión oficial del imperio: entre ambas fechas, un concilio, disputas sin fin y un emperador que intentó traer de vuelta a los antiguos dioses.",
+    "description": "En el 313, Constantino concedió a los cristianos el derecho a practicar su fe. En el 380, Teodosio hizo del cristianismo niceno la religión oficial del imperio: entre ambas fechas, un concilio, disputas sin fin y un emperador que intentó traer de vuelta a los antiguos dioses.",
     "subject": "histoire",
     "subcategory": "Antigüedad y Edad Media",
     "lessons": [
@@ -41946,7 +41946,7 @@
       {
         "id": "course_307_comment_le_christianisme_est_il_devenu_q1",
         "type": "mcq",
-        "question": "¿Qué dispuso el Edicto de Milán en 313?",
+        "question": "¿Qué dispuso el Edicto de Milán en el 313?",
         "explanation": "El Edicto de Milán legalizó el culto cristiano y ordenó devolver los bienes de las iglesias, pero no hizo del cristianismo la religión oficial.",
         "options": [
           "Los cristianos pueden practicar libremente su fe y recuperan sus bienes confiscados",
@@ -41960,7 +41960,7 @@
         "id": "course_307_comment_le_christianisme_est_il_devenu_q2",
         "type": "numericSlider",
         "question": "¿En qué año reunió Constantino el concilio de Nicea?",
-        "explanation": "Constantino convocó el concilio de Nicea en 325 para zanjar la cuestión de la naturaleza de Jesús.",
+        "explanation": "Constantino convocó el concilio de Nicea en el 325 para zanjar la cuestión de la naturaleza de Jesús.",
         "correctValue": 325,
         "sliderMin": 300,
         "sliderMax": 400,
@@ -42021,7 +42021,7 @@
         "id": "course_307_comment_le_christianisme_est_il_devenu_q7",
         "type": "chronological",
         "question": "Ordena estos acontecimientos.",
-        "explanation": "Puente Milvio en 312, concilio de Nicea en 325, reinado de Juliano de 361 a 363 y Edicto de Tesalónica en 380.",
+        "explanation": "Puente Milvio en el 312, concilio de Nicea en el 325, reinado de Juliano del 361 al 363 y Edicto de Tesalónica en el 380.",
         "items": [
           "Batalla del puente Milvio",
           "Concilio de Nicea",
@@ -42047,7 +42047,7 @@
     "title": "¿Cuál fue la guerra más mortífera de la historia?",
     "description": "Uno piensa en la Segunda Guerra Mundial. Sin embargo, según cómo se cuenten los muertos, el conflicto más mortífero de la historia es una guerra civil china del siglo XIX, nacida de las visiones de un aspirante suspendido en los exámenes imperiales.",
     "subject": "histoire",
-    "subcategory": "Edad moderna y siglo XIX",
+    "subcategory": "Edad Moderna y siglo XIX",
     "lessons": [
       {
         "id": "course_308_quelle_a_ete_la_guerre_la_plus_intro",
@@ -42305,7 +42305,7 @@
     "title": "¿Quién trazó las fronteras de África?",
     "description": "En el mapa, las fronteras africanas parecen trazadas con regla. Sin embargo, nacieron de tratados, guerras locales y una decisión de los Estados independientes, no de una sola reunión en Berlín.",
     "subject": "histoire",
-    "subcategory": "Edad moderna y siglo XIX",
+    "subcategory": "Edad Moderna y siglo XIX",
     "lessons": [
       {
         "id": "course_310_qui_a_trace_les_frontieres_de_l_afrique_intro",
