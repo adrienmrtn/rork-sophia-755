@@ -164,7 +164,7 @@ final class AuthService {
         guard let userID = currentUser?.id.uuidString else { return }
         if Purchases.isConfigured {
             // Attributes sent before logIn stayed on the anonymous customer.
-            Purchases.shared.logIn(userID) { _, _, _ in LanguageManager.reportToRevenueCat() }
+            Purchases.shared.logIn(userID) { _, _, _ in Task { @MainActor in LanguageManager.reportToRevenueCat() } }
         }
     }
 
