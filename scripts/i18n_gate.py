@@ -394,6 +394,10 @@ def main() -> int:
     for check in checks:
         found = Counter(RUN[check](langs))
         excused = sum(n for k, n in found.items() if k in exceptions)
+        if args.lang == "all":
+            stale = [k for k in exceptions if k.startswith(check + "|") and k not in found]
+            if stale:
+                print(f"    ({len(stale)} exceptions ne correspondent plus à aucun constat : à retirer de exceptions.json)")
         found = Counter({k: n for k, n in found.items() if k not in exceptions})
         if check in BASELINED:
             new_baseline[check] = dict(sorted(found.items()))

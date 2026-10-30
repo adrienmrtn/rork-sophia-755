@@ -28,7 +28,9 @@ python3 scripts/i18n_gate.py --lang fi             # une langue
 
 **Les exceptions** (`content/terminology/exceptions.json`) sont les faux positifs vérifiés un par un par un relecteur natif, chacun avec sa raison (un titre cité dans sa langue d'origine, un nombre pris pour une année, un mot juste dans son sens…). La porte ne les compte plus. Le 30/10/2026, après le tri des 575 constats restants, le baseline est vide : tout nouveau constat est soit un vrai défaut à corriger, soit un faux positif à justifier ici dans le même commit.
 
-Deux limites à connaître : un constat est identifié par son emplacement et sa règle, donc une deuxième faute de même règle dans un segment qui en a déjà une connue ne ressort pas ; et la porte ne lit pas les textes légaux affichés par iOS (`LegalDocumentContent.swift`), seulement leur copie `content/locales/<lang>/legal.json`.
+Une limite à connaître : un constat est identifié par son emplacement et sa règle, donc une deuxième faute de même règle dans un segment qui en a déjà une connue (ou excusée) ne ressort pas. Les textes légaux iOS sont lus là où l'app les prend, dans `LegalDocumentContent.swift`.
+
+Les entrées de glossaire qu'aucune leçon ne lie (environ un tiers, surtout des variantes d'un même terme) sont invisibles dans l'app et servent au script de traduction pour remapper les liens : on les garde.
 
 **Les chaînes témoins** (`content/terminology/sentinelles.json`) sont les 30 textes d'interface qui ont le plus trahi pendant l'audit (essai gratuit, mensuel, Premium, « Fin de l'essai », « Léger », « Impossible de charger l'offre »…). Leur traduction attendue est figée dans les 26 langues après une relecture native et une contre-relecture. Pour en changer une volontairement, modifiez sa valeur dans `sentinelles.json` dans le même commit que le texte, et dites pourquoi dans le message.
 

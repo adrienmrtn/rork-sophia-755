@@ -138,13 +138,26 @@ def iter_texts(code: str):
             if path.stem.endswith("_url"):
                 continue
             yield "store", f"{locale}/{path.stem}", path.read_text(encoding="utf-8")
-    for label, path in (("ios", LOCALES / code / "legal.json"), ("android", ANDROID_LEGAL / f"{code}.json")):
-        pack = _load(path) or {}
+    for label, path in (("ios", None), ("android", ANDROID_LEGAL / f"{code}.json")):
+        # iOS shows the Swift arrays of LegalDocumentContent.swift; content/locales/<lang>/legal.json
+        # is a copy that some languages do not have.
+        pack = _ios_legal(code) if path is None else (_load(path) or {})
         for kind in ("terms", "privacy"):
             for section in pack.get(kind) or []:
                 for field in ("title", "body"):
                     if section.get(field):
                         yield "legal", f"{label}:{kind}/{section.get('id')}/{field}", section[field]
+
+
+def _ios_legal(code: str) -> dict:
+    from translate_legal_docs import LEGAL_SWIFT, SECTION_RE, SWIFT_PROP, _swift_unescape, extract_existing_swift_array
+    swift = LEGAL_SWIFT.read_text(encoding="utf-8")
+    prop = SWIFT_PROP.get(code)
+    if not prop:
+        return {}
+    return {doc: [{"id": _swift_unescape(a), "title": _swift_unescape(b), "body": _swift_unescape(c)}
+                  for a, b, c in SECTION_RE.findall(extract_existing_swift_array(swift, f"{doc}{prop}") or "")]
+            for doc in ("terms", "privacy")}
 
 
 def load_lists() -> tuple[list[dict], list[dict], list[dict]]:
