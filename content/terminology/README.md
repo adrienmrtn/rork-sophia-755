@@ -67,8 +67,20 @@ python3 scripts/check_terminology.py --gate         # code retour 1 s'il reste u
 Le script balaye, pour chaque langue, toutes les surfaces affichées : chaînes
 iOS et Android, corps de cours, quiz, glossaire, collections, catalogue
 (titres, descriptions, titres de leçons), fiche App Store, textes légaux. Il
-sert aujourd'hui d'état des lieux ; avec `--gate` il devient la porte de sortie
-de toute traduction (étape 5 du plan).
+sert d'état des lieux ; la porte de sortie de toute traduction est
+`scripts/i18n_gate.py` (étape 5 du plan, `docs/processus-traduction.md`), qui
+l'appelle avec le validateur de cours et les autres contrôles, en CI.
+
+## La porte : baseline et chaînes témoins
+
+- `i18n_gate_baseline.json` : les constats (terminologie, validateur, quiz,
+  copies) qui existaient quand la porte a été posée. Ils ne bloquent pas, les
+  nouveaux bloquent. Après des corrections, `python3 scripts/i18n_gate.py
+  --update-baseline` resserre la porte. On n'y ajoute jamais un constat pour
+  faire passer un commit.
+- `sentinelles.json` : 30 chaînes d'interface qui ont trahi pendant l'audit
+  (essai, léger, mensuel, Premium, l'offre…), avec leur traduction attendue
+  dans les 26 langues. La porte refuse tout écart, sur iOS et sur Android.
 
 `scripts/proper_nouns.json` reste l'endroit où protéger un nom propre **avant**
 la traduction ; ce dossier vérifie le résultat **après**.

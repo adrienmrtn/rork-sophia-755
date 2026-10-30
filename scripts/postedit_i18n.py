@@ -132,8 +132,16 @@ def _hint_for(h: dict, *keys: str) -> list[str]:
 
 
 # ------------------------------------------------------------------ packs
-def packs(lang: str, out: Path) -> dict[str, int]:
+def packs(lang: str, out: Path, courses: set[str] | None = None, keys: list[str] | None = None) -> dict[str, int]:
+    """Every surface by default. With courses and/or keys, only those: the lessons, quizzes
+    and glossary of these course ids, and the UI keys equal to one of keys (or starting with
+    it when it ends in '*') -- the path for new content (docs/processus-traduction.md)."""
     out.mkdir(parents=True, exist_ok=True)
+    scoped = courses is not None or keys is not None
+    courses, keys = courses or set(), keys or []
+
+    def wanted_key(k: str) -> bool:
+        return any(k.startswith(x[:-1]) if x.endswith("*") else k == x for x in keys)
     h = hints(lang)
     counts: dict[str, int] = {}
 
@@ -154,15 +162,20 @@ def packs(lang: str, out: Path) -> dict[str, int]:
     ui = ui_items(lang)
     taken = set()
     for name, prefixes in UI_LOTS:
-        keys = sorted(k for k in ui if k not in taken and (not prefixes or k.startswith(prefixes)))
-        taken.update(keys)
+        lot = sorted(k for k in ui if k not in taken and (not prefixes or k.startswith(prefixes)))
+        taken.update(lot)
+        if scoped:
+            lot = [k for k in lot if wanted_key(k)]
+            if not lot:
+                continue
         items = [{"id": k, "fr": ui[k]["fr"].replace("\n", "⏎"), "texte": ui[k]["texte"].replace("\n", "⏎"),
-                  "hints": _hint_for(h, k)} for k in keys]
+                  "hints": _hint_for(h, k)} for k in lot]
         write(name, f"# Interface {lang} — lot {name} ({len(items)} clés). ⏎ = retour à la ligne.\n", items)
 
     # courses
     fr_dir = COURSES / "fr"
-    ids = sorted(p.stem for p in fr_dir.glob("*.json"))
+    all_ids = sorted(p.stem for p in fr_dir.glob("*.json"))
+    ids = [c for c in all_ids if c in courses] if scoped else all_ids
     gloss = glossary_keys_by_course(lang)
     for i in range(0, len(ids), COURSES_PER_LOT):
         items = []
@@ -178,7 +191,7 @@ def packs(lang: str, out: Path) -> dict[str, int]:
 
     # quizzes
     frq = {q["courseId"]: {x["id"]: x for x in q["quiz"]} for q in _load(LOCALES / "fr" / "quizzes_v2.json")}
-    cq = _load(LOCALES / lang / "quizzes_v2.json")
+    cq = [e for e in _load(LOCALES / lang / "quizzes_v2.json") if not scoped or e["courseId"] in courses]
     for i in range(0, len(cq), QUIZ_COURSES_PER_LOT):
         items = []
         for entry in cq[i:i + QUIZ_COURSES_PER_LOT]:
@@ -202,10 +215,10 @@ def packs(lang: str, out: Path) -> dict[str, int]:
     fr_by_course = defaultdict(list)
     for k, v in gfr.items():
         fr_by_course[k.split("|", 1)[0]].append(f"{v['displayTerm']} : {v.get('explanation','')}")
-    keys = sorted(g)
-    for i in range(0, len(keys), GLOSSARY_PER_LOT):
+    gkeys = sorted(k for k in g if not scoped or k.split("|", 1)[0] in courses)
+    for i in range(0, len(gkeys), GLOSSARY_PER_LOT):
         items, last = [], None
-        for k in keys[i:i + GLOSSARY_PER_LOT]:
+        for k in gkeys[i:i + GLOSSARY_PER_LOT]:
             cid, term = k.split("|", 1)
             ctx = None
             if cid != last:
@@ -215,6 +228,9 @@ def packs(lang: str, out: Path) -> dict[str, int]:
                           "texte": f"[{term}] {g[k].get('explanation','')}", "hints": _hint_for(h, k)})
         write(f"glossaire_{i // GLOSSARY_PER_LOT:03d}", f"# Glossaire {lang} — lot {i // GLOSSARY_PER_LOT:03d}. Le terme entre crochets ne change pas : réécrire seulement la définition qui suit.\n", items)
 
+    if scoped:
+        return counts
+
     # catalogue: collections + library section labels
     cfr = {c["id"]: c for c in _load(AND / "locales" / "collections.fr.json")}
     items = []
@@ -222,7 +238,7 @@ def packs(lang: str, out: Path) -> dict[str, int]:
         for field in ("title", "description"):
             items.append({"id": f"collection:{c['id']}/{field}", "fr": cfr.get(c["id"], {}).get(field, "∅"), "texte": c.get(field, "")})
     seen = {}
-    for cid in ids:
+    for cid in all_ids:
         f = _load(fr_dir / f"{cid}.json").get("subcategory")
         t = _load(COURSES / lang / f"{cid}.json").get("subcategory")
         if f and t and f not in seen:
@@ -705,19 +721,50 @@ def _write_ui(lang: str, accepted: dict[str, str]) -> None:
     LOCALIZABLE.write_text(source[: m.start(1)] + body + source[m.end(1):], encoding="utf-8")
 
 
+def termsheet(lang: str) -> str:
+    """The imposed terminology of one language, from content/terminology, as the editors read it."""
+    tdir = ROOT / "content" / "terminology"
+    out = [f"# Terminologie imposée pour {lang} (content/terminology)", "",
+           "## Termes produit (un seul terme partout dans l'interface)"]
+    for t in _load(tdir / "termes_produit.json")["termes"]:
+        x = t["par_langue"].get(lang)
+        if x:
+            out.append(f"- {t['fr']} → **{x['canon']}**" + (f" — {x['note']}" if x.get("note") else ""))
+    out += ["", "## Mots pièges (sens voulu → forme imposée ; jamais le faux sens)"]
+    for t in _load(tdir / "mots_pieges.json")["entrees"]:
+        x = t["par_langue"].get(lang)
+        if x and x.get("forme_imposee"):
+            wrong = f" (faux sens observés : {t['faux_sens_observes']})" if t.get("faux_sens_observes") else ""
+            out.append(f"- {t['fr']}{wrong} → **{x['forme_imposee']}**")
+    out += ["", "## Titres d'œuvres (titre sous lequel l'œuvre est connue)"]
+    for t in _load(tdir / "oeuvres.json")["oeuvres"]:
+        x = t["par_langue"].get(lang)
+        if x and x.get("titre"):
+            out.append(f"- {t['titre_fr']} ({t.get('auteur', '')}) → *{x['titre']}* [{x.get('statut', '')}]")
+    return "\n".join(out) + "\n"
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = ap.add_subparsers(dest="cmd", required=True)
     a = sub.add_parser("packs"); a.add_argument("--lang", required=True); a.add_argument("--out", type=Path, required=True)
+    a.add_argument("--courses", nargs="+", help="only these course ids (lessons, quizzes, glossary)")
+    a.add_argument("--keys", nargs="+", help="only these UI keys; a trailing * matches a prefix")
     b = sub.add_parser("apply"); b.add_argument("--lang", required=True); b.add_argument("--from", dest="src", type=Path, required=True)
     b.add_argument("--dry-run", action="store_true"); b.add_argument("--report", type=Path)
     d = sub.add_parser("dump", help="every editable item of some courses (body, quiz, glossary), with ids")
     d.add_argument("--lang", required=True); d.add_argument("courses", nargs="+")
+    t = sub.add_parser("termsheet", help="the imposed terminology of one language, as markdown")
+    t.add_argument("--lang", required=True); t.add_argument("--out", type=Path, required=True)
     c = sub.add_parser("check", help="dry run of one output file, one line per rejected edit")
     c.add_argument("--lang", required=True); c.add_argument("--file", type=Path, required=True)
     args = ap.parse_args()
     if args.cmd == "dump":
         print(dump(args.lang, args.courses))
+        return 0
+    if args.cmd == "termsheet":
+        args.out.parent.mkdir(parents=True, exist_ok=True)
+        args.out.write_text(termsheet(args.lang), encoding="utf-8")
         return 0
     if args.cmd == "check":
         rep = apply(args.lang, args.file.parent, True, only=args.file)
@@ -726,7 +773,8 @@ def main() -> int:
         print("acceptés", dict(rep["acceptes"]), "rejetés", sum(rep["rejetes"].values()))
         return 0
     if args.cmd == "packs":
-        print(json.dumps(packs(args.lang, args.out), ensure_ascii=False))
+        scope = (set(args.courses) if args.courses else None, args.keys)
+        print(json.dumps(packs(args.lang, args.out, *scope), ensure_ascii=False))
         return 0
     rep = apply(args.lang, args.src, args.dry_run)
     print(args.lang, "acceptés", dict(rep["acceptes"]), "rejetés", dict(rep["rejetes"]), "catalogue aligné", rep.get("catalogue_aligne"))
