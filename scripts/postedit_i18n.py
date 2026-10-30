@@ -119,7 +119,46 @@ def hints(lang: str) -> dict[str, list[str]]:
                 continue
             loc = h["emplacement"].split(":", 1)[-1] if h["emplacement"].startswith(("ios:", "android:")) else h["emplacement"]
             out[loc].append(f"terminologie : « {h['trouve']} » → attendu {h['attendu'][:120]}")
+    for loc, hint in live_hints(lang):
+        if hint not in out[loc]:
+            out[loc].append(hint)
     return out
+
+
+def _pack_id(surface: str, location: str) -> str:
+    """Where a terminology hit points, written as the pack id of the item to edit."""
+    if location.startswith(("ios:", "android:")) and surface == "ui":
+        return location.split(":", 1)[1]
+    if surface == "glossaire":
+        return location.rsplit("/", 1)[0]
+    if surface == "catalogue":
+        # Course cards repeat the lesson body: title, description, section titles.
+        m = re.match(r"(.+)_(intro|p(\d+))/title$", location)
+        if m:
+            return f"{m.group(1)}/s{0 if m.group(2) == 'intro' else int(m.group(3))}.title"
+    return location
+
+
+def live_hints(lang: str) -> list[tuple[str, str]]:
+    """What the checkers find today: terminology hits and course validator findings."""
+    from check_course_translation import check_course
+    from check_terminology import _scan_language
+    out = []
+    for h in _scan_language(lang)[2]:
+        out.append((_pack_id(h["surface"], h["emplacement"]),
+                    f"terminologie : « {h['trouve']} » → attendu {h['attendu'][:120]}"))
+    allowed = glossary_keys_by_course(lang)
+    for p in sorted((COURSES / "fr").glob("*.json")):
+        for f in check_course(p.stem, lang, allowed):
+            out.append((f"{f.course_id}/{f.key}", f"validateur ({f.rule}) : {f.detail[:160]}"))
+    return out
+
+
+def sentinel_keys() -> set[str]:
+    """UI strings frozen after native review (content/terminology/sentinelles.json): not offered
+    to editors, and an edit to one is refused; changing one goes through that file."""
+    p = ROOT / "content" / "terminology" / "sentinelles.json"
+    return set(_load(p)["cles"]) if p.exists() else set()
 
 
 def _hint_for(h: dict, *keys: str) -> list[str]:
@@ -132,11 +171,16 @@ def _hint_for(h: dict, *keys: str) -> list[str]:
 
 
 # ------------------------------------------------------------------ packs
-def packs(lang: str, out: Path, courses: set[str] | None = None, keys: list[str] | None = None) -> dict[str, int]:
+def packs(lang: str, out: Path, courses: set[str] | None = None, keys: list[str] | None = None,
+          surfaces: set[str] | None = None, hinted: bool = False) -> dict[str, int]:
     """Every surface by default. With courses and/or keys, only those: the lessons, quizzes
     and glossary of these course ids, and the UI keys equal to one of keys (or starting with
     it when it ends in '*') -- the path for new content (docs/processus-traduction.md)."""
     out.mkdir(parents=True, exist_ok=True)
+    # surfaces: only these lots (ui, catalogue, store, legal, glossaire, quiz, cours).
+    # hinted: in lessons, quizzes and glossary, only the items a checker or the audit flags.
+    want = lambda surface: surfaces is None or surface in surfaces
+    frozen = sentinel_keys()
     scoped = courses is not None or keys is not None
     courses, want_keys = courses or set(), keys or []
 
@@ -161,9 +205,10 @@ def packs(lang: str, out: Path, courses: set[str] | None = None, keys: list[str]
     # UI
     ui = ui_items(lang)
     taken = set()
-    for name, prefixes in UI_LOTS:
+    for name, prefixes in UI_LOTS if want("ui") else []:
         lot = sorted(k for k in ui if k not in taken and (not prefixes or k.startswith(prefixes)))
         taken.update(lot)
+        lot = [k for k in lot if k not in frozen]
         if scoped:
             lot = [k for k in lot if wanted_key(k)]
             if not lot:
@@ -177,9 +222,15 @@ def packs(lang: str, out: Path, courses: set[str] | None = None, keys: list[str]
     all_ids = sorted(p.stem for p in fr_dir.glob("*.json"))
     ids = [c for c in all_ids if c in courses] if scoped else all_ids
     gloss = glossary_keys_by_course(lang)
-    for i in range(0, len(ids), COURSES_PER_LOT):
+    if hinted:
+        flagged = lambda ident: bool(h.get(ident))
+        ids_c = [c for c in ids if any(k.startswith(c + "/") and v for k, v in h.items())]
+    else:
+        ids_c = ids
+    per_lot = COURSES_PER_LOT * 5 if hinted else COURSES_PER_LOT  # flagged segments only: bigger lots
+    for i in range(0, len(ids_c) if want("cours") else 0, per_lot):
         items = []
-        for cid in ids[i:i + COURSES_PER_LOT]:
+        for cid in ids_c[i:i + per_lot]:
             if not (COURSES / lang / f"{cid}.json").exists():
                 continue  # reported at the end for a scoped run
             fr = dict(segments(_load(fr_dir / f"{cid}.json")))
@@ -187,28 +238,39 @@ def packs(lang: str, out: Path, courses: set[str] | None = None, keys: list[str]
             keys = ", ".join(f"[[{k}]]" for k in sorted(gloss.get(cid, [])))
             items.append({"id": f"{cid}", "fr": "—", "texte": "—", "ctx": f"COURS {cid} — termes de glossaire autorisés : {keys or 'aucun'}"})
             for key, text in segments(cur):
+                if hinted and not flagged(f"{cid}/{key}"):
+                    continue
                 items.append({"id": f"{cid}/{key}", "fr": fr.get(key, "∅"), "texte": text,
                               "hints": _hint_for(h, f"{cid}/{key}")})
-        write(f"cours_{i // COURSES_PER_LOT:03d}", f"# Cours {lang} — lot {i // COURSES_PER_LOT:03d}\n", items)
+        write(f"cours_{i // per_lot:03d}", f"# Cours {lang} — lot {i // per_lot:03d}\n", items)
 
     # quizzes
     frq = {q["courseId"]: {x["id"]: x for x in q["quiz"]} for q in _load(LOCALES / "fr" / "quizzes_v2.json")}
     cq = [e for e in _load(LOCALES / lang / "quizzes_v2.json") if not scoped or e["courseId"] in courses]
-    for i in range(0, len(cq), QUIZ_COURSES_PER_LOT):
+    quiz_flagged = lambda q: any(k == q["id"] or k.startswith(q["id"] + "/") for k in h if h[k])
+    if hinted:
+        # A flagged question comes whole (question, options, explanation): they must agree.
+        cq = [e for e in cq if any(quiz_flagged(q) for q in e["quiz"])]
+    for i in range(0, len(cq) if want("quiz") else 0, QUIZ_COURSES_PER_LOT):
         items = []
         for entry in cq[i:i + QUIZ_COURSES_PER_LOT]:
             for q in entry["quiz"]:
+                if hinted and not quiz_flagged(q):
+                    continue
                 f = frq.get(entry["courseId"], {}).get(q["id"], {})
                 for field in ("question", "explanation", "statement"):
                     if q.get(field):
-                        items.append({"id": f"{q['id']}/{field}", "fr": f.get(field, "∅"), "texte": q[field], "hints": _hint_for(h, q["id"])})
+                        items.append({"id": f"{q['id']}/{field}", "fr": f.get(field, "∅"), "texte": q[field],
+                                      "hints": _hint_for(h, f"{q['id']}/{field}", q["id"])})
                 for j, o in enumerate(q.get("options") or []):
                     fo = (f.get("options") or [])
                     mark = " (bonne réponse)" if j == q.get("correctIndex") else ""
-                    items.append({"id": f"{q['id']}/options/{j}", "fr": (fo[j] if j < len(fo) else "∅") + mark, "texte": o})
+                    items.append({"id": f"{q['id']}/options/{j}", "fr": (fo[j] if j < len(fo) else "∅") + mark, "texte": o,
+                                  "hints": _hint_for(h, f"{q['id']}/options/{j}")})
                 for j, o in enumerate(q.get("items") or []):
                     fo = (f.get("items") or [])
-                    items.append({"id": f"{q['id']}/items/{j}", "fr": fo[j] if j < len(fo) else "∅", "texte": o})
+                    items.append({"id": f"{q['id']}/items/{j}", "fr": fo[j] if j < len(fo) else "∅", "texte": o,
+                                  "hints": _hint_for(h, f"{q['id']}/items/{j}")})
         write(f"quiz_{i // QUIZ_COURSES_PER_LOT:03d}", f"# Quiz {lang} — lot {i // QUIZ_COURSES_PER_LOT:03d}\n", items)
 
     # glossary definitions (FR found by course + classification order is unreliable: give the FR entries of the course)
@@ -217,8 +279,8 @@ def packs(lang: str, out: Path, courses: set[str] | None = None, keys: list[str]
     fr_by_course = defaultdict(list)
     for k, v in gfr.items():
         fr_by_course[k.split("|", 1)[0]].append(f"{v['displayTerm']} : {v.get('explanation','')}")
-    gkeys = sorted(k for k in g if not scoped or k.split("|", 1)[0] in courses)
-    for i in range(0, len(gkeys), GLOSSARY_PER_LOT):
+    gkeys = sorted(k for k in g if (not scoped or k.split("|", 1)[0] in courses) and (not hinted or h.get(k)))
+    for i in range(0, len(gkeys) if want("glossaire") else 0, GLOSSARY_PER_LOT):
         items, last = [], None
         for k in gkeys[i:i + GLOSSARY_PER_LOT]:
             cid, term = k.split("|", 1)
@@ -260,7 +322,8 @@ def packs(lang: str, out: Path, courses: set[str] | None = None, keys: list[str]
         if f and t and f not in seen:
             seen[f] = t
             items.append({"id": f"rubrique:{t}", "fr": f, "texte": t, "ctx": "libellé de rubrique de la bibliothèque (court)"})
-    write("catalogue", f"# Collections et rubriques {lang}\n", items)
+    if want("catalogue"):
+        write("catalogue", f"# Collections et rubriques {lang}\n", items)
 
     # legal: terms and privacy, iOS text (Apple) and Android text (Google)
     items = []
@@ -271,11 +334,12 @@ def packs(lang: str, out: Path, courses: set[str] | None = None, keys: list[str]
                 for field in ("title", "body"):
                     items.append({"id": f"{plat}:{doc}/{i}/{field}", "fr": frs[i][field] if i < len(frs) else "∅",
                                   "texte": sec[field].replace("\n", "⏎")})
-    write("legal", f"# Conditions et confidentialité {lang} (ios = App Store, android = Google Play). ⏎ = retour à la ligne.\n", items)
+    if want("legal"):
+        write("legal", f"# Conditions et confidentialité {lang} (ios = App Store, android = Google Play). ⏎ = retour à la ligne.\n", items)
 
     # store
     loc = STORE_LOCALE.get(lang)
-    if loc and (STORE / loc).is_dir():
+    if loc and (STORE / loc).is_dir() and want("store"):
         items = []
         for field, limit in STORE_FIELDS.items():
             p, pf = STORE / loc / f"{field}.txt", STORE / "fr-FR" / f"{field}.txt"
@@ -402,12 +466,15 @@ def apply(lang: str, src: Path, dry_run: bool, only: Path | None = None) -> dict
     # --- UI
     if edits.get("ui"):
         ui = ui_items(lang)
+        frozen = sentinel_keys()
         accepted = {}
         for k, v in edits["ui"].items():
             if k not in ui:
                 reject("ui", k, "id inconnu"); continue
             if v == ui[k]["texte"]:
                 continue
+            if k in frozen:
+                reject("ui", k, "chaîne témoin figée : la changer dans content/terminology/sentinelles.json"); continue
             why = check_edit("ui", ui[k]["texte"], v, ui[k]["fr"])
             if why:
                 reject("ui", k, why); continue
@@ -815,6 +882,8 @@ def main() -> int:
     a = sub.add_parser("packs"); a.add_argument("--lang", required=True); a.add_argument("--out", type=Path, required=True)
     a.add_argument("--courses", nargs="+", help="only these course ids (lessons, quizzes, glossary)")
     a.add_argument("--keys", nargs="+", help="only these UI keys; a trailing * matches a prefix")
+    a.add_argument("--surfaces", help="only these lots, comma-separated: ui,catalogue,store,legal,glossaire,quiz,cours")
+    a.add_argument("--hinted", action="store_true", help="lessons, quizzes, glossary: only the items a checker or the audit flags")
     b = sub.add_parser("apply"); b.add_argument("--lang", required=True); b.add_argument("--from", dest="src", type=Path, required=True)
     b.add_argument("--dry-run", action="store_true"); b.add_argument("--report", type=Path)
     d = sub.add_parser("dump", help="every editable item of some courses (body, quiz, glossary), with ids")
@@ -845,7 +914,8 @@ def main() -> int:
         return 0
     if args.cmd == "packs":
         scope = (set(args.courses) if args.courses else None, args.keys)
-        print(json.dumps(packs(args.lang, args.out, *scope), ensure_ascii=False))
+        surfaces = set(args.surfaces.split(",")) if args.surfaces else None
+        print(json.dumps(packs(args.lang, args.out, *scope, surfaces=surfaces, hinted=args.hinted), ensure_ascii=False))
         return 0
     rep = apply(args.lang, args.src, args.dry_run)
     print(args.lang, "acceptés", dict(rep["acceptes"]), "rejetés", dict(rep["rejetes"]), "catalogue aligné", rep.get("catalogue_aligne"))

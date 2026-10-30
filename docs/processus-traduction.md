@@ -58,7 +58,10 @@ C'est la méthode de l'étape 3 (voir `docs/post-edition-native.md`), outillée 
 # 1. Lots de travail et fiche de terminologie, par langue
 python3 scripts/postedit_i18n.py packs --lang it --out W/packs/it --courses course_312_mon_cours --keys paywall.nouveau.titre "offer.*"
 #    affiche les lots écrits, par exemple {"ui2": 4, "cours_000": 35, "quiz_000": 52, "glossaire_000": 9}
-#    (sans --courses ni --keys : toutes les surfaces de la langue, comme à l'étape 3)
+#    (sans --courses ni --keys : toutes les surfaces de la langue, comme à l'étape 3 ;
+#     --surfaces ui,catalogue,store,legal limite aux lots nommés ; --hinted ne garde, dans les
+#     cours, quiz et glossaire, que les segments que la terminologie, le validateur ou l'audit
+#     signalent. Les chaînes témoins ne sont jamais proposées, et apply refuse de les changer.)
 python3 scripts/postedit_i18n.py termsheet --lang it --out W/term/it.md
 
 # 2. Post-édition : workflow .claude/workflows/post-edition-native.js, avec les lots affichés
