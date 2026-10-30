@@ -8,7 +8,7 @@
   "hero": {
     "image": "pourquoi_les_feuilles_changent_de_couleur",
     "ratio": "16:9",
-    "hook": "Jesienne liście nie malują się na nowo: po prostu zdejmują zieleń."
+    "hook": "Jesienne liście się nie malują: po prostu zrzucają z siebie zieleń."
   },
   "sections": [
     {
@@ -18,7 +18,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Każdej jesieni lasy schodzą z zieleni w złoto, miedź i purpurę. To nie kaprys estetyki. To strategia przetrwania: drzewo odzyskuje, co może z liścia, zanim zrzuci go na zimę."
+          "text": "Każdej jesieni lasy przechodzą od zieleni do złota, miedzi i purpury. To nie estetyczny kaprys. To strategia: drzewo odzyskuje, co się da, zanim zrzuci liście na zimę."
         },
         {
           "type": "paragraph",
@@ -33,36 +33,36 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Od wiosny do końca lata liście pęcznieją od **chlorofilu**, barwnika, który napędza fotosyntezę. Światło go niszczy, ale drzewo wciąż go uzupełnia na bieżąco. Dopóki góruje, liść zostaje zielony."
+          "text": "Od wiosny do końca lata liście są pełne **chlorofilu**, barwnika, który napędza fotosyntezę. Światło go rozkłada, ale drzewo stale go uzupełnia. Dopóki przeważa, liść pozostaje zielony."
         },
         {
           "type": "image",
           "asset": "leaf_color_change_autumn_chlorophyll",
           "ratio": "auto",
-          "caption": "Jesienią chlorofil znika i wtedy odsłania prawdziwe barwy liści."
+          "caption": "Jesienią chlorofil znika i odsłania barwy liści."
         },
         {
           "type": "paragraph",
-          "text": "Liść ma też **karotenoidy**, żółte i pomarańczowe barwniki (jak w marchewce). Latem są na miejscu, ale niewidoczne pod zielenią. Jesienią produkcja chlorofilu ustaje. Zieleń blednie, żółć i pomarańcz wychodzą na wierzch."
+          "text": "Liść zawiera też **karotenoidy**, żółte i pomarańczowe barwniki (takie jak w marchewce). Latem już tam są, ale nie widać ich pod zielenią. Jesienią produkcja chlorofilu ustaje. Zieleń blednie, a żółć i pomarańcz wychodzą na wierzch."
         },
         {
           "type": "funFact",
-          "text": "„Chlorofil” pochodzi z greckiego *chloros* (zielony) i *phyllon* (liść). „Karotenoid” dzieli rdzeń z... marchewką, w której ten barwnik najpierw rozpoznano."
+          "text": "„Chlorofil” pochodzi od greckich słów *chloros* (zielony) i *phyllon* (liść). „Karotenoid” ma ten sam źródłosłów co… marchew, w której po raz pierwszy zidentyfikowano ten barwnik."
         }
       ]
     },
     {
       "id": "course_76_pourquoi_les_feuilles_changent_elles_de_p2",
-      "title": "Prawdziwy spust: noce, które się wydłużają",
+      "title": "Prawdziwy wyzwalacz: coraz dłuższe noce",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Jesieni nie odpala przede wszystkim zimno, tylko długość nocy. Drzewa mierzą ją czujnikami światła, [[fitochromy]]. Gdy noce się wydłużają, sygnał hormonalny idzie do każdego liścia."
+          "text": "Jesień uruchamia nie tyle zimno, ile długość nocy. Drzewa mierzą ją dzięki czujnikom światła, którymi są [[fitochromy]]. Gdy noce się wydłużają, do każdego liścia wędruje sygnał hormonalny."
         },
         {
           "type": "paragraph",
-          "text": "U nasady ogonka powstaje [[strefa separacji]], rodzaj korka. Soki słabiej idą w górę, cukry źle wracają w dół. Odcięty liść szybciej rozkłada chlorofil. Trwalsze żółcie zostają na kilka tygodni, potem liść spada."
+          "text": "U nasady ogonka powstaje [[strefa separacji]], rodzaj korka. Sok słabiej płynie w górę, a cukry z trudem spływają w dół. Odcięty liść szybciej rozkłada chlorofil. Trwalsze żółcie utrzymują się przez kilka tygodni, potem liść opada."
         }
       ]
     },
@@ -73,11 +73,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Żółć już tam była od dawna. Czerwień i fiolet często są **wytwarzane** dopiero pod koniec sezonu. To [[Antocyjany]], powstające, gdy cukry zostają uwięzione w liściu."
+          "text": "Żółć już tam była. Czerwień i fiolet są natomiast często **wytwarzane** dopiero pod koniec sezonu. [[Antocyjany]], bo o nie chodzi, powstają, gdy cukry zostają uwięzione w liściu."
         },
         {
           "type": "paragraph",
-          "text": "Po co wkładać energię tuż przed zrzuceniem liścia? Pewnie po to, by go **chronić** podczas recyklingu. Drzewo odzyskuje **azot** i inne cenne składniki. Bez chlorofilu słońce może uszkodzić tkanki, które jeszcze pracują. Antocyjany działają jak filtr przeciwsłoneczny na czas wielkiej przeprowadzki do korzeni."
+          "text": "Po co inwestować energię tuż przed zrzuceniem liścia? Najpewniej po to, by go **chronić** podczas recyklingu. Drzewo odzyskuje **azot** i inne cenne składniki odżywcze. Bez chlorofilu słońce może uszkodzić tkanki, które jeszcze pracują. Antocyjany działają jak filtr przeciwsłoneczny na czas wielkiej przeprowadzki do korzeni."
         }
       ]
     },
@@ -88,15 +88,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Najładniejsze czerwienie rodzą się często ze słonecznych dni i chłodnych nocy bez mrozu. Dużo cukru, zamiana w antocyjany. Szara, deszczowa jesień daje barwy bardziej matowe. Wczesny mróz zabija liście przed widowiskiem."
+          "text": "Najpiękniejsze czerwienie biorą się często ze słonecznych dni i chłodnych nocy bez przymrozków. Dużo cukru, zamiana w antocyjany. Szara, deszczowa jesień daje bardziej matowe odcienie. Wczesny mróz zabija liście przed widowiskiem."
         },
         {
           "type": "paragraph",
-          "text": "Na końcu zostają prawie tylko [[garbniki]], brązowe substancje ściółki. Część badań sądzi też, że jaskrawe barwy ostrzegają [[mszyce]]: drzewo w formie, obrona mocna, lepiej iść gdzie indziej."
+          "text": "Na końcu zostają prawie tylko [[garbniki]], brązowe substancje leśnej ściółki. Według niektórych badań jaskrawe barwy ostrzegają też [[mszyce]]: drzewo jest w dobrej formie, ma silną obronę, lepiej poszukać innego."
         },
         {
           "type": "takeaway",
-          "text": "Jesień odsłania żółcie, które już były w liściu, gdy znika chlorofil, i czasem robi czerwień, by chronić odzysk składników przed opadnięciem liści."
+          "text": "Gdy znika chlorofil, jesień odsłania żółcie, które już były w liściu, a czasem wytwarza czerwień, by chronić odzysk składników odżywczych, zanim liście opadną."
         }
       ]
     }

@@ -4,7 +4,7 @@
   "subtitle": "Nerw światowej gospodarki",
   "subject": "comprendreLeMonde",
   "subcategory": "Gospodarka i społeczeństwo",
-  "description": "Ceny ropy nie ustala jeden sprzedawca. Rodzi się z **starcia** krajów produkujących, rynków finansowych i nagłych kryzysów, czasem aż do absurdu.",
+  "description": "Ceny ropy nie ustala jeden sprzedawca. Wyłania się ona z **przeciągania liny** między krajami producentami, rynkami finansowymi i nagłymi kryzysami, czasem aż do absurdu.",
   "hero": {
     "image": "comment_fonctionne_le_prix_du_petrole",
     "ratio": "16:9",
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ropę czasem nazywa się „krwią gospodarki”. Jej cena waży na inflacji, cenie benzyny i nawet na stabilności niektórych krajów. A jednak nikt nie ustala tej ceny jednym stemplem."
+          "text": "Ropę czasem nazywa się „krwią gospodarki”. Jej cena wpływa na inflację, ceny benzyny, a nawet na stabilność niektórych krajów. A jednak nikt nie ustala tej ceny jednym przybiciem pieczątki."
         },
         {
           "type": "paragraph",
-          "text": "Rodzi się ze spotkania trzech sił: krajów, które wydobywają ropę, rynków finansowych, które handlują nią zanim wyjdzie z ziemi, i kryzysów, które panikują wszystkich. Kierunek: pustynie Arabii, równiny Teksasu i ekrany Chicago."
+          "text": "Wyłania się ze spotkania trzech sił: krajów, które wydobywają ropę, rynków finansowych, które handlują nią, zanim jeszcze wydobędzie się ją z ziemi, i kryzysów, które wywołują powszechną panikę. Czas wyruszyć na pustynie Arabii, równiny Teksasu i przed ekrany giełdy w Chicago."
         }
       ]
     },
@@ -37,55 +37,55 @@
         },
         {
           "type": "paragraph",
-          "text": "Od 1960 grupa krajów produkujących zorganizowała się, żeby ważyć na tym rynku: [[OPEC]]. Uzgadniając kwoty wydobycia, jej członkowie chcą utrzymać wysokie ceny. Od 2016 do sojuszu dołączyła Rosja i powstało OPEC+. Razem te kraje kontrolują około 40% światowej ropy."
+          "text": "Od 1960 roku grupa krajów producentów działa wspólnie, żeby wpływać na ten rynek: to [[OPEC]]. Uzgadniając limity wydobycia, jej członkowie starają się utrzymać wysokie ceny. W 2016 roku do sojuszu dołączyła Rosja i tak powstało OPEC+. Razem te kraje kontrolują około 40% światowej ropy."
         },
         {
           "type": "funFact",
-          "text": "Jedna baryłka ropy, 159 litrów, niesie tyle energii, ile ręczna praca jednej osoby przez około rok."
+          "text": "Jedna baryłka ropy, czyli 159 litrów, zawiera tyle energii, ile człowiek wkłada w pracę fizyczną przez mniej więcej rok."
         },
         {
           "type": "paragraph",
-          "text": "Ale ta władza została zachwiana. Dzięki technice zwanej szczelinowaniem hydraulicznym Stany Zjednoczone w dziesięć lat stały się pierwszym producentem ropy świata i wyprzedziły Arabię Saudyjską. Ta nowa podaż, szybsza do regulacji, zrobiła rynek bardziej konkurencyjnym i trudniejszym do kontroli dla OPEC+."
+          "text": "Ale ta władza została zachwiana. Dzięki technice zwanej szczelinowaniem hydraulicznym Stany Zjednoczone w ciągu dziesięciu lat stały się największym producentem ropy na świecie i wyprzedziły Arabię Saudyjską. Ta nowa podaż, którą łatwiej szybko dostosować, uczyniła rynek bardziej konkurencyjnym i trudniejszym do kontrolowania dla OPEC+."
         }
       ]
     },
     {
       "id": "course_211_comment_fonctionne_le_prix_du_petrole_p2",
-      "title": "Ropa „papierowa”: gdy wtrąca się finanse",
+      "title": "Ropa „papierowa”: gdy do gry wchodzą finanse",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Poza prawdziwymi baryłkami dowożonymi statkiem albo rurociągiem ropa krąży też na rynkach finansowych. Większość transakcji idzie przez rynek terminowy: kupujesz dziś baryłkę, która dotrze dopiero za miesiąc, trzy miesiące albo pół roku."
+          "text": "Oprócz fizycznych baryłek dostarczanych statkami lub rurociągami ropą handluje się też na rynkach finansowych. Większość transakcji przechodzi przez rynek terminowy: kupuje się na nim dziś baryłkę, która zostanie dostarczona dopiero za miesiąc, trzy albo sześć miesięcy."
         },
         {
           "type": "image",
           "asset": "oil_futures_trading_floor_markets",
           "ratio": "16:9",
-          "caption": "Ropa krąży na rynkach finansowych na długo przed fizyczną dostawą."
+          "caption": "Ropą handluje się na rynkach finansowych na długo przed jej dostawą."
         },
         {
           "type": "paragraph",
-          "text": "Banki i fundusze spekulacyjne kupują i sprzedają te kontrakty, choć nigdy nie chcą tknąć ani jednej baryłki: po prostu obstawiają wzrost albo spadek cen. To wlewa pieniądze na rynek, ale robi też ceny bardziej nerwowymi. Dwa punkty odniesienia rządzą światem: cena [[Brenta]], ropy z Morza Północnego, i WTI, ropa z Teksasu. Różnica między nimi oddaje jakość i koszty transportu."
+          "text": "Banki i fundusze spekulacyjne kupują i sprzedają te kontrakty, choć nigdy nie chcą tknąć ani jednej baryłki: po prostu obstawiają wzrost albo spadek cen. To zasila rynek pieniędzmi, ale też sprawia, że ceny są bardziej nerwowe. Na świecie obowiązują dwie ceny referencyjne: cena [[Brent]], ropy z Morza Północnego, i cena WTI, ropy z Teksasu. Różnica między nimi wynika z różnic w jakości i kosztach transportu."
         }
       ]
     },
     {
       "id": "course_211_comment_fonctionne_le_prix_du_petrole_p3",
-      "title": "Ceny, które nagle runą… albo wybuchną",
+      "title": "Ceny, które się załamują… albo eksplodują",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Rynek ropy idzie bardzo brutalnymi cyklami. Gdy ceny długo rosną, producenci inwestują w drogie złoża i z czasem robi się nadmiar podaży. Gdy ceny długo stoją nisko, dzieje się odwrotnie: mniej się szuka, a to przygotowuje następną dziurę."
+          "text": "Rynek ropy porusza się w gwałtownych cyklach. Gdy ceny długo rosną, producenci inwestują w drogie złoża, co z czasem prowadzi do nadmiaru podaży. Gdy ceny długo pozostają niskie, dzieje się odwrotnie: rzadziej szuka się nowych złóż, a to przygotowuje kolejny niedobór."
         },
         {
           "type": "paragraph",
-          "text": "Kryzys COVID-19 pokazał to w sposób spektakularny. W kwietniu 2020 światowa gospodarka stanęła naraz: nikt nie latał ani nie jeździł samochodem, a szyby dalej produkowały. Zbiorniki magazynowe napełniły się po same brzegi. Cena WTI spadła wtedy do minus 37 dolarów: sprzedawcy płacili kupującym, żeby zabrać im zapasy."
+          "text": "Kryzys COVID-19 pokazał to w spektakularny sposób. W kwietniu 2020 roku światowa gospodarka nagle stanęła: nikt nie latał samolotem ani nie jeździł samochodem, a szyby naftowe wciąż pompowały ropę. Zbiorniki magazynowe napełniły się po brzegi. Cena WTI spadła wtedy do minus 37 dolarów: sprzedawcy płacili kupującym, żeby odebrali od nich zapasy."
         },
         {
           "type": "paragraph",
-          "text": "Odwrotnie w 2022: rosyjska inwazja na Ukrainę wzbudziła strach przed niedoborem. Rosja jest drugim eksporterem świata, więc cena Brenta przekroczyła 130 dolarów w kilka tygodni. Ropa zostaje nerwowym barometrem napięć świata."
+          "text": "Z kolei w 2022 roku rosyjska inwazja na Ukrainę wywołała obawy przed niedoborem: Rosja jest drugim eksporterem ropy na świecie, więc cena Brenta w ciągu kilku tygodni przekroczyła 130 dolarów. Ropa pozostaje więc nerwowym barometrem napięć na świecie."
         },
         {
           "type": "funFact",
@@ -100,15 +100,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Na dłuższą metę ropa stoi przed zupełnie nowym wyzwaniem: przejściem gospodarek na czyste energie. Jeśli auta elektryczne zetną światowy popyt, kraje produkujące mogą wejść w wojnę cenową, żeby sprzedać zapasy, zanim stracą wartość."
+          "text": "Na dłuższą metę ropa stoi przed nowym wyzwaniem: przejściem na czystą energię. Jeśli samochody elektryczne zmniejszą światowy popyt, kraje producenci mogą rozpocząć wojnę cenową, żeby sprzedać swoje zasoby, zanim stracą one wartość."
         },
         {
           "type": "paragraph",
-          "text": "Rynkowi grozi jednak wyraźny paradoks: inwestorzy odchodzą od nowych projektów naftowych z powodów klimatycznych, więc podaż mogłaby spaść szybciej niż popyt i znów podpalić ceny. Ropa nie zniknie naraz: zostaje niezbędna do plastików, nawozów i ciężkiego transportu, jak lotnictwo."
+          "text": "Rynkowi grozi jednak paradoks: inwestorzy z powodów klimatycznych odchodzą od nowych projektów naftowych, więc podaż mogłaby spaść szybciej niż popyt i wywołać nowe skoki cen. Ropa nie zniknie nagle: pozostaje niezbędna do produkcji plastiku i nawozów oraz w ciężkim transporcie, takim jak lotnictwo."
         },
         {
           "type": "takeaway",
-          "text": "Cena ropy rodzi się ze starcia OPEC+, amerykańskiego wydobycia łupkowego i spekulacyjnych rynków finansowych. Skutek: kursy potrafią runąć albo wybuchnąć przy najmniejszym wstrząsie geopolitycznym."
+          "text": "Cena ropy wynika z przeciągania liny między OPEC+, amerykańskim wydobyciem z łupków i spekulacyjnymi rynkami finansowymi. Skutek: notowania potrafią runąć albo wystrzelić przy najmniejszym wstrząsie geopolitycznym."
         }
       ]
     }

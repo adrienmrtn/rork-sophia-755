@@ -8,7 +8,7 @@
   "hero": {
     "image": "la_theorie_de_l_evolution_de_darwin",
     "ratio": "16:9",
-    "hook": "Gatunki nie są zastygłe. Zmieniają się. Powoli. Ale pewnie."
+    "hook": "Gatunki nie są niezmienne. Zmieniają się. Powoli. Ale nieustannie."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "W **1859** **Charles Darwin** wydaje *O powstawaniu gatunków*. Książka szokuje, porywa, dzieli. Jej główna myśl daje się jednak powiedzieć prosto."
+          "text": "W **1859** roku **Charles Darwin** wydaje *O powstawaniu gatunków*. Książka szokuje, porywa, dzieli. A przecież jej główną myśl da się ująć prosto."
         },
         {
           "type": "paragraph",
-          "text": "Istoty żywe się różnią. Niektóre różnice pomagają przeżyć i mieć potomstwo. Te różnice się przekazują. Z pokolenia na pokolenie populacje się zmieniają."
+          "text": "Istoty żywe różnią się między sobą. Niektóre różnice pomagają przeżyć i mieć potomstwo. Te różnice są dziedziczone. Z pokolenia na pokolenie populacje się zmieniają."
         }
       ]
     },
@@ -39,7 +39,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Jako młody człowiek Darwin wsiada na statek **Beagle**. Przez lata ogląda rośliny, skamieniałości, ptaki. Na wyspach Galapagos widzi, że bliskie sobie ptaki mają różne dzioby, zależnie od pokarmu."
+          "text": "Jako młody człowiek Darwin wyrusza w rejs statkiem **Beagle**. Przez lata obserwuje rośliny, skamieniałości, ptaki. Na wyspach Galapagos zauważa, że blisko spokrewnione ptaki mają różne dzioby, zależnie od tego, czym się żywią."
         },
         {
           "type": "image",
@@ -51,20 +51,20 @@
     },
     {
       "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_p2",
-      "title": "Dobór naturalny, jasno",
+      "title": "Dobór naturalny w prostych słowach",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Wyobraź sobie stado zwierząt. Jedne biegają trochę szybciej, trawią trochę lepiej, znoszą trochę więcej zimna. Jeśli to pomaga przeżyć i mieć młode, te cechy stają się częstsze."
+          "text": "Wyobraź sobie populację zwierząt. Jedne biegają trochę szybciej, trawią trochę lepiej, trochę lepiej znoszą zimno. Jeśli to pomaga przeżyć i mieć młode, te cechy stają się coraz częstsze."
         },
         {
           "type": "paragraph",
-          "text": "Nie chodzi o to, że osobniki „chcą” ewoluować. To filtr: środowisko raczej zostawia to, co działa. Darwin nazywa to **doborem naturalnym**."
+          "text": "Nie chodzi o to, że osobniki „chcą” ewoluować. To działa jak filtr: środowisko zachowuje raczej to, co się sprawdza. Darwin nazywa to **doborem naturalnym**."
         },
         {
           "type": "funFact",
-          "text": "Darwin długo czekał z publikacją. Bał się skandalu. Inny przyrodnik, **Alfred Russel Wallace**, dochodzi do podobnych myśli: to pcha Darwina, żeby wydać książkę."
+          "text": "Darwin długo zwlekał z publikacją. Bał się skandalu. Inny przyrodnik, **Alfred Russel Wallace**, dochodzi do podobnych wniosków: to skłania Darwina do wydania książki."
         }
       ]
     },
@@ -75,11 +75,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "W XIX wieku wielu wierzy, że gatunki stworzono takimi, jakie są. Powiedzieć, że się zmieniają, i że człowiek dzieli historię z innymi zwierzętami, wywraca religię i społeczeństwo."
+          "text": "W XIX wieku wielu ludzi wierzy, że gatunki zostały stworzone takie, jakie są. Twierdzenie, że się zmieniają i że człowiek ma wspólną historię z innymi zwierzętami, wstrząsa religią i społeczeństwem."
         },
         {
           "type": "paragraph",
-          "text": "Nauka idzie naprzód: skamieniałości, geografia gatunków, a później genetyka, potwierdzają ogólną myśl."
+          "text": "Nauka tymczasem idzie naprzód: skamieniałości, rozmieszczenie gatunków na Ziemi, a później genetyka potwierdzają ogólną ideę."
         }
       ]
     },
@@ -90,11 +90,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Wiemy już, że DNA niesie te różnice. Ewolucję widać w laboratorium (bakterie, wirusy) i w naturze. Walczymy też z bakteriami odpornymi na antybiotyki: to ewolucja na żywo."
+          "text": "Dziś wiadomo, że to DNA niesie te różnice. Ewolucję obserwuje się w laboratorium (bakterie, wirusy) i w naturze. Walka z bakteriami odpornymi na antybiotyki to też ewolucja na żywo."
         },
         {
           "type": "takeaway",
-          "text": "Darwin pokazał, że życie ewoluuje przez dobór naturalny: cechy przydatne do przeżycia i rozrodu się rozchodzą. Nowoczesna genetyka potwierdziła ten schemat i go doprecyzowała."
+          "text": "Darwin pokazał, że życie ewoluuje dzięki doborowi naturalnemu: cechy przydatne do przeżycia i rozmnażania się rozprzestrzeniają. Współczesna genetyka potwierdziła ten model i go doprecyzowała."
         }
       ]
     }

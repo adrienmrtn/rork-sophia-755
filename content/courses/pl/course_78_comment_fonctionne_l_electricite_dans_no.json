@@ -4,7 +4,7 @@
   "subtitle": "Nerwy i jony",
   "subject": "sciences",
   "subcategory": "Ziemia i Wszechświat",
-  "description": "Myśleć, bić sercem, unieść ramię: to wszystko krąży najpierw jako żywa elektryczność, niesiona nie przez elektrony, lecz przez jony.",
+  "description": "Myślenie, bicie serca, podniesienie ręki: wszystko to najpierw płynie jako żywa elektryczność, którą niosą nie elektrony, lecz jony.",
   "hero": {
     "image": "comment_fonctionne_l_electricite_dans_notre_corps",
     "ratio": "16:9",
@@ -18,7 +18,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "W gniazdku prąd to **elektrony**, które płyną w przewodzie. W twoim ciele jest inaczej: to **jony**, naładowane atomy, wchodzą i wychodzą z komórek. Ten przepływ tworzy sygnały, które każą myśleć, bić sercu i kurczyć mięsień."
+          "text": "W gniazdku w ścianie prąd to płynące **elektrony**. W twoim ciele jest inaczej: to **jony**, czyli naładowane atomy, które wnikają do komórek i z nich wychodzą. Ten przepływ wytwarza sygnały, dzięki którym myślisz, serce bije, a mięsień się kurczy."
         },
         {
           "type": "paragraph",
@@ -33,7 +33,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Neuron** w spoczynku nie wysyła wiadomości, ale się „ładuje”. Jego błona oddziela wnętrze komórki od zewnątrz. [[pompy sodowo-potasowe]] utrzymują [[potencjał spoczynkowy]] około **-70 miliwoltów**: wnętrze jest bardziej ujemne niż zewnątrz."
+          "text": "**Neuron** w spoczynku nie wysyła wiadomości, ale się „ładuje”. Jego błona oddziela wnętrze komórki od jej otoczenia. Pracują w niej [[pompy sodowo-potasowe]], dzięki którym neuron utrzymuje [[potencjał spoczynkowy]] około **-70 miliwoltów**: wnętrze jest bardziej ujemne niż otoczenie."
         },
         {
           "type": "image",
@@ -43,11 +43,11 @@
         },
         {
           "type": "paragraph",
-          "text": "Gdy przychodzi bodziec, kanały się otwierają. Sód wchodzi jednym rzutem. Polaryzacja się odwraca: to [[potencjał czynnościowy]], sygnał wszystko-albo-nic, który pędzi wzdłuż aksonu, czasem przez metr. Jak elektryczna fala."
+          "text": "Gdy dociera bodziec, otwierają się kanały. Sód gwałtownie wpada do środka. Polaryzacja się odwraca: to [[potencjał czynnościowy]], sygnał typu „wszystko albo nic”, który pędzi wzdłuż aksonu, czasem nawet na odległość metra. Jak fala elektryczna."
         },
         {
           "type": "funFact",
-          "text": "Czujny mózg produkuje około **20 watów**, dość na małą diodę LED. A jednak zjada blisko **20%** kalorii ciała."
+          "text": "Mózg w stanie czuwania wytwarza około **20 watów**, tyle, ile potrzeba małej diodzie LED. A mimo to zużywa blisko **20%** kalorii całego ciała."
         }
       ]
     },
@@ -58,11 +58,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Neurony nie stykają się naprawdę. Między nimi jest malutka szczelina: **synapsa**. Sygnał elektryczny nie przeskoczy. Wtedy koniec aksonu uwalnia [[neuroprzekaźniki]], cząsteczki-posłańce, jak acetylocholina albo [[glutaminian]]."
+          "text": "Neurony tak naprawdę się nie stykają. Między nimi jest malutka szczelina: **synapsa**. Sygnał elektryczny nie może jej przeskoczyć. Dlatego zakończenie aksonu uwalnia [[neuroprzekaźniki]], czyli cząsteczki przenoszące wiadomość, takie jak acetylocholina czy [[glutaminian]]."
         },
         {
           "type": "paragraph",
-          "text": "Ci posłańcy siadają na następnym neuronie jak klucz w zamku. Według wiadomości pobudzają albo hamują. Tysiące takich decyzji naraz składają się na myśl."
+          "text": "Te przekaźniki przyłączają się do następnego neuronu jak klucz do zamka. Zależnie od wiadomości pobudzają go albo hamują. Tysiące takich jednoczesnych decyzji składają się na myśl."
         },
         {
           "type": "funFact",
@@ -77,34 +77,34 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Serce nie czeka na rozkaz mózgu przy każdym uderzeniu. W prawym przedsionku **węzeł zatokowy** sam generuje impulsy, około **60-100** razy na minutę w spoczynku. Sygnał się rozchodzi, kurczy najpierw przedsionki, potem komory."
+          "text": "Serce nie czeka na rozkaz mózgu przy każdym uderzeniu. W prawym przedsionku **węzeł zatokowy** wytwarza własne impulsy, w spoczynku około **60-100** razy na minutę. Sygnał rozchodzi się po sercu i wywołuje skurcz najpierw przedsionków, potem komór."
         },
         {
           "type": "paragraph",
-          "text": "Ta aktywność jest dość silna, by czytać ją ze skóry: to **elektrokardiogram (EKG)**. Gdy rytm się psuje, mówimy o **arytmii**. Serce bije wtedy w nieładzie i słabo pompuje."
+          "text": "Ta aktywność jest na tyle silna, że da się ją odczytać na skórze: to **elektrokardiogram (EKG)**. Gdy rytm się rozregulowuje, mówi się o **arytmii**. Serce bije wtedy nierówno i słabo pompuje krew."
         },
         {
           "type": "funFact",
-          "text": "Węgorz elektryczny używa tej samej zasady pobudliwych komórek, ale szeregowo: aż do **600 woltów**, dość, by sparaliżować ofiarę."
+          "text": "Węgorz elektryczny wykorzystuje tę samą zasadę pobudliwych komórek, tyle że połączonych szeregowo: wytwarza aż do **600 woltów**, dość, by sparaliżować ofiarę."
         }
       ]
     },
     {
       "id": "course_78_comment_fonctionne_l_electricite_dans_no_p4",
-      "title": "Od gestu świadomego do defibrylatora",
+      "title": "Od świadomego ruchu do defibrylatora",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Żeby unieść ramię, potencjał czynnościowy schodzi aż do mięśnia. Acetylocholina odpala lokalną falę elektryczną, potem uwalnia się wapń. Białka mięśnia ślizgają się po sobie: skurcz."
+          "text": "Kiedy podnosisz rękę, potencjał czynnościowy biegnie aż do mięśnia. Acetylocholina wyzwala w nim lokalną falę elektryczną, a potem uwolnienie wapnia. Białka mięśnia przesuwają się względem siebie: to skurcz."
         },
         {
           "type": "paragraph",
-          "text": "**Defibrylacja** używa tej samej zasady odwrotnie: wstrząs z zewnątrz ustawia wszystkie komórki „na zero”, żeby węzeł zatokowy znów wziął tempo. Protezy bioniczne łapią też te słabe sygnały, by sterować sztuczną ręką."
+          "text": "**Defibrylacja** to ta sama zasada, tylko odwrócona: wstrząs z zewnątrz sprowadza wszystkie komórki „do zera”, żeby węzeł zatokowy znów mógł nadawać rytm. Protezy bioniczne też wychwytują te słabe sygnały, by sterować sztuczną dłonią."
         },
         {
           "type": "takeaway",
-          "text": "Życie mówi strumieniem jonów i potencjałami czynnościowymi. Myśl, serce i mięśnie dzielą ten sam język elektryczny."
+          "text": "Organizmy żywe porozumiewają się przepływem jonów i potencjałami czynnościowymi. Myśl, serce i mięśnie posługują się tym samym językiem elektrycznym."
         }
       ]
     }

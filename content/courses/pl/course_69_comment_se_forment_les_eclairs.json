@@ -4,11 +4,11 @@
   "subtitle": "Burze",
   "subject": "sciences",
   "subcategory": "Ziemia i Wszechświat",
-  "description": "Błyskawica to nie magia: to ogromne wyładowanie elektryczne w chmurze burzowej. Oto jak się szykują, a potem jak uderzają.",
+  "description": "Błyskawica to nie magia, tylko ogromne wyładowanie elektryczne w chmurze burzowej. Oto jak się przygotowuje i jak potem uderza.",
   "hero": {
     "image": "comment_se_forment_les_eclairs",
     "ratio": "16:9",
-    "hook": "W ułamku sekundy powietrze idzie do 30.000°C. Pięć razy cieplej niż powierzchnia Słońca."
+    "hook": "W ułamku sekundy powietrze nagrzewa się do 30.000°C. To pięć razy więcej niż na powierzchni Słońca."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Błyskawica oddaje kolosalną energię w mgnieniu oka. Powietrze w kanale pioruna idzie do około **30.000°C**. Grzmot to tylko hałas tego gwałtownego ciepła."
+          "text": "Błyskawica w mgnieniu oka uwalnia kolosalną energię. Powietrze w kanale wyładowania nagrzewa się do około **30.000°C**. A grzmot to tylko odgłos tego gwałtownego nagrzania."
         },
         {
           "type": "paragraph",
-          "text": "Żeby zrozumieć błyskawicę, trzeba iść trzema krokami: jak chmura się ładuje, jak prąd znajduje drogę i czemu grzmot słyszysz później."
+          "text": "Żeby zrozumieć błyskawicę, trzeba prześledzić trzy etapy: jak chmura się ładuje, jak prąd znajduje drogę i dlaczego grzmot słychać dopiero później."
         }
       ]
     },
@@ -33,7 +33,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Błyskawice rodzą się głównie w [[cumulonimbus]]: bardzo wielkich chmurach burzowych, które potrafią iść w górę do około **15 km**. W środku powietrze gwałtownie wznosi się i opada."
+          "text": "Błyskawice powstają głównie w chmurach typu [[cumulonimbus]]: to bardzo wysokie chmury burzowe, które mogą sięgać nawet około **15 km**. W ich wnętrzu powietrze gwałtownie się wznosi i opada."
         },
         {
           "type": "image",
@@ -43,11 +43,11 @@
         },
         {
           "type": "paragraph",
-          "text": "W tym chaosie małe **kryształki lodu** idą w górę, a cięższe ziarna lodu ([[deszcz ze śniegiem]]) schodzą w dół. Gdy się zderzają, wymieniają ładunki elektryczne. Z wolna góra chmury robi się raczej dodatnia, podstawa raczej ujemna."
+          "text": "W tym chaosie drobne **kryształki lodu** unoszą się w górę, a cięższe ziarna lodu ([[krupa lodowa]]) opadają. Gdy się zderzają, wymieniają się ładunkami elektrycznymi. Stopniowo górna część chmury staje się raczej dodatnia, a dolna raczej ujemna."
         },
         {
           "type": "funFact",
-          "text": "Jezioro Maracaibo w Wenezueli jest jednym z najbardziej grzanych piorunami miejsc na planecie: burze prawie codzienne widać tam przez dużą część roku."
+          "text": "Jezioro Maracaibo w Wenezueli to jedno z miejsc na Ziemi, w które najczęściej uderzają pioruny: przez dużą część roku burze obserwuje się tam niemal codziennie."
         }
       ]
     },
@@ -62,11 +62,11 @@
         },
         {
           "type": "paragraph",
-          "text": "Niewidzialny kanał wychodzi z chmury małymi skokami. Z ziemi nitki prądu idą w górę głównie z ostrzy (drzewa, piorunochrony, budynki). Gdy obie się łączą, obwód się zamyka."
+          "text": "Z chmury małymi skokami wychodzi niewidzialny kanał. Z ziemi, głównie z wystających punktów (drzew, piorunochronów, budynków), wznoszą się ku niemu cienkie wyładowania. Gdy oba się spotkają, obwód się zamyka."
         },
         {
           "type": "paragraph",
-          "text": "Wielkie światło, które widzisz, **wyładowanie powrotne**, idzie głównie z ziemi ku chmurze. Prąd potrafi sięgnąć dziesiątek tysięcy amperów. Kilka wyładowań może iść tym samym kanałem: stąd efekt migotania."
+          "text": "Jasny błysk, który widać, czyli **wyładowanie powrotne**, biegnie głównie od ziemi ku chmurze. Natężenie prądu może sięgać dziesiątek tysięcy amperów. Tym samym kanałem może przejść kilka wyładowań po sobie: stąd efekt migotania."
         }
       ]
     },
@@ -77,15 +77,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Błyskawica grzeje powietrze tak szybko, że to rozszerza się naraz. Ta fala uderzeniowa staje się **grzmotem**. Światło przychodzi niemal natychmiast; dźwięk idzie z prędkością około **340 m/s**."
+          "text": "Błyskawica nagrzewa powietrze tak szybko, że gwałtownie się ono rozszerza. Ta fala uderzeniowa staje się **grzmotem**. Światło dociera niemal natychmiast, a dźwięk porusza się z prędkością około **340 m/s**."
         },
         {
           "type": "paragraph",
-          "text": "Prosta sztuczka: policz sekundy między błyskawicą a grzmotem, potem podziel przez **3**. Dostajesz szacunek odległości w kilometrach."
+          "text": "Prosta sztuczka: policz sekundy między błyskawicą a grzmotem, a potem podziel wynik przez **3**. Otrzymasz przybliżoną odległość w kilometrach."
         },
         {
           "type": "funFact",
-          "text": "Ziemię bije średnio około **100 piorunów na sekundę**. We Francji liczy się około **miliona** uderzeń w grunt rocznie."
+          "text": "W Ziemię uderza średnio około **100 piorunów na sekundę**. We Francji odnotowuje się około **miliona** uderzeń w ziemię rocznie."
         }
       ]
     },
@@ -96,15 +96,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Piorun zostaje groźny, zwłaszcza na otwartym terenie, przy samotnych drzewach albo wodzie. Rozpala też pożary. Ma jednak mniej znany skutek: pomaga robić związki azotu, które z deszczem użyźniają gleby."
+          "text": "Piorun nadal jest groźny, zwłaszcza na otwartym terenie, przy samotnych drzewach albo w pobliżu wody. Wywołuje też pożary. Ma jednak mniej znany skutek: pomaga wytwarzać związki azotu, które razem z deszczem użyźniają glebę."
         },
         {
           "type": "paragraph",
-          "text": "Nad burzami kamery złapały też dziwne zjawiska, jak [[Duszki]]: krótkie łuny w wysokiej atmosferze, niewidoczne gołym okiem z ziemi."
+          "text": "Nad burzami kamery zarejestrowały też dziwne zjawiska, takie jak [[Duszki]]: krótkie rozbłyski w górnych warstwach atmosfery, niewidoczne gołym okiem z ziemi."
         },
         {
           "type": "takeaway",
-          "text": "W cumulonimbusie zderzenia lodu i krupy rozdzielają ładunki. Gdy napięcie robi się za duże, powietrze się jonizuje: błyskawica grzeje do około 30.000°C, a to gwałtowne rozszerzenie robi grzmot."
+          "text": "W cumulonimbusie zderzenia lodu i krupy rozdzielają ładunki. Gdy napięcie staje się za duże, powietrze ulega jonizacji: błyskawica nagrzewa je do około 30.000°C, a to gwałtowne rozszerzenie wywołuje grzmot."
         }
       ]
     }

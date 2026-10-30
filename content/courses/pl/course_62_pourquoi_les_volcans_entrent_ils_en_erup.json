@@ -4,11 +4,11 @@
   "subtitle": "Magma i płyty",
   "subject": "sciences",
   "subcategory": "Ziemia i Wszechświat",
-  "description": "Wulkan to otwór w skorupie ziemskiej. Magma pod ciśnieniem idzie w górę i staje się lawą. Oto dlaczego Ziemia „pluje”.",
+  "description": "Wulkan to otwór w skorupie ziemskiej. Wydostaje się przez niego magma pod ciśnieniem, która zamienia się w lawę. Oto dlaczego Ziemia „pluje”.",
   "hero": {
     "image": "pourquoi_les_volcans_entrent_en_eruption",
     "ratio": "16:9",
-    "hook": "Pod twoimi stopami Ziemia nie stoi w miejscu. Czasem otwiera okno z ognia."
+    "hook": "Pod naszymi stopami Ziemia nie jest nieruchoma. Czasem otwiera ogniste okno."
   },
   "sections": [
     {
@@ -18,40 +18,40 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Wulkan to nie tylko góra, która pluje ogniem. To otwór w zewnętrznej powłoce Ziemi. Tamtędy idzie w górę **magma**: mieszanka stopionych skał i gazów pod silnym ciśnieniem. Na powietrzu ta magma staje się **lawą**."
+          "text": "Wulkan to nie tylko góra, która pluje ogniem. To otwór w zewnętrznej powłoce Ziemi. Przez niego wydostaje się **magma**: mieszanina stopionych skał i gazów pod dużym ciśnieniem. Gdy wyjdzie na powierzchnię, magma staje się **lawą**."
         },
         {
           "type": "paragraph",
-          "text": "Żeby zrozumieć erupcję, trzeba zajrzeć pod powierzchnię: ciepło wnętrza planety, ruch płyt i sposób, w jaki gazy windują ciśnienie, trochę jak w butelce sody, którą potrząsasz."
+          "text": "Żeby zrozumieć erupcję, trzeba zajrzeć pod powierzchnię: na ciepło z wnętrza planety, ruch płyt i to, jak gazy podnoszą ciśnienie, trochę jak we wstrząśniętej butelce napoju gazowanego."
         }
       ]
     },
     {
       "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup_p1",
-      "title": "Pod stopami nic nie stoi",
+      "title": "Pod naszymi stopami nic nie stoi w miejscu",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ziemia składa się z warstw. Na powierzchni **skorupa** to sztywna powłoka, gruba na **5-70 km**. Pod spodem rozciąga się **płaszcz**, do około **2.900 km** głębokości. Płaszcz jest głównie stały, ale przez bardzo długi czas potrafi płynąć bardzo wolno, jak ultragęsty miód."
+          "text": "Ziemia składa się z warstw. Na powierzchni leży **skorupa**, sztywna powłoka o grubości **5-70 km**. Pod nią rozciąga się **płaszcz**, sięgający głębokości około **2.900 km**. Płaszcz jest w większości stały, ale w bardzo długiej skali czasu potrafi bardzo powoli płynąć, jak niezwykle gęsty miód."
         },
         {
           "type": "image",
           "asset": "volcano_eruption_lava",
           "ratio": "auto",
-          "caption": "Erupcja: magma idzie w górę aż na powierzchnię."
+          "caption": "Erupcja: magma wydostaje się aż na powierzchnię."
         },
         {
           "type": "paragraph",
-          "text": "To wewnętrzne ciepło pcha materię w górę i w dół: to **prądy konwekcyjne**. One popychają wielkie kawały skorupy, zwane płytami. To [[Tektonika płyt]]: powierzchnia Ziemi jest pocięta na płyty, które się rozchodzą, zderzają albo suną jedna o drugą."
+          "text": "Przez to wewnętrzne ciepło materia unosi się i opada: to **prądy konwekcyjne**. Popychają one wielkie fragmenty skorupy, zwane płytami. Tak działa [[Tektonika płyt]]: powierzchnia Ziemi jest podzielona na płyty, które się rozsuwają, zderzają albo przesuwają jedna wzdłuż drugiej."
         },
         {
           "type": "funFact",
-          "text": "Niektóre bardzo szybkie wznoszenia wracają z diamentami powstałymi głębiej niż **150 km**. Nie zdążą się po drodze zmienić."
+          "text": "Niektóre bardzo szybkie wypływy magmy wynoszą na powierzchnię diamenty powstałe na głębokości ponad **150 km**. Po drodze nie mają czasu się przemienić."
         },
         {
           "type": "paragraph",
-          "text": "Tam, gdzie leżą [[grzbiety]], płyty się rozchodzą i magma idzie w górę łatwo. W strefie zwanej [[subdukcja]] jedna płyta nurkuje pod drugą i ciągnie ze sobą wodę. Ta woda obniża temperaturę topnienia skał: magma się tworzy, potem idzie w górę."
+          "text": "Tam, gdzie biegną [[grzbiety]], płyty się rozsuwają, a magma łatwo wydostaje się w górę. W strefie, gdzie zachodzi [[subdukcja]], jedna płyta wsuwa się pod drugą i wciąga ze sobą wodę. Ta woda obniża temperaturę topnienia skał: powstaje magma, która potem się unosi."
         }
       ]
     },
@@ -62,15 +62,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Skała nie topi się tylko „bo jest gorąco”. Liczą się trzy spusty: wzrost temperatury, spadek ciśnienia albo dodanie wody. Gdy już powstanie, magma jest lżejsza niż skała wokół. Próbuje więc iść w górę, trochę jak pęcherzyk powietrza w wodzie."
+          "text": "Skała nie topi się tylko dlatego, że „jest gorąco”. Liczą się trzy czynniki: wzrost temperatury, spadek ciśnienia albo dodanie wody. Powstała magma ma mniejszą gęstość niż otaczająca ją skała. Dlatego dąży w górę, trochę jak pęcherzyk powietrza w wodzie."
         },
         {
           "type": "paragraph",
-          "text": "Często zatrzymuje się najpierw w **komorze magmowej**, zbiorniku kilka kilometrów pod powierzchnią. Tam rozpuszczone gazy robią bańki, gdy ciśnienie spada. Jeśli skalny „korek” nad nią nie wytrzyma, erupcja się zaczyna."
+          "text": "Często najpierw zatrzymuje się w **komorze magmowej**, zbiorniku kilka kilometrów pod powierzchnią. Gdy ciśnienie spada, rozpuszczone w niej gazy tworzą pęcherzyki. Jeśli skalny „korek” nad komorą przestaje wytrzymywać, zaczyna się erupcja."
         },
         {
           "type": "funFact",
-          "text": "Erupcja **Tambory** w **1815** na Indonezji była tak silna, że ochłodziła klimat całej Ziemi. **1816** nazwano „rokiem bez lata”, z katastrofalnymi zbiorami w Europie i Ameryce Północnej."
+          "text": "Erupcja wulkanu **Tambora** w Indonezji w **1815** roku była tak potężna, że ochłodziła klimat całego świata. Rok **1816** nazwano „rokiem bez lata”: w Europie i Ameryce Północnej zbiory były katastrofalne."
         }
       ]
     },
@@ -81,15 +81,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Nie każda erupcja wygląda tak samo. Wszystko zależy od **lepkości** magmy, czyli czy jest raczej płynna, czy kleista. Płynna magma, jak na **Hawajach** albo na Piton de la Fournaise (Wyspa Reunion), puszcza gazy. Lawa płynie: erupcja **efuzywna**."
+          "text": "Nie każda erupcja wygląda tak samo. Wszystko zależy od **lepkości** magmy, czyli od tego, czy jest raczej płynna, czy kleista. Płynna magma, jak na **Hawajach** czy na wulkanie Piton de la Fournaise (wyspa Reunion), pozwala gazom uciec. Lawa spływa: to erupcja **efuzywna**."
         },
         {
           "type": "paragraph",
-          "text": "Kleista magma więzi gazy. Ciśnienie rośnie, potem wszystko wybucha. Popiół, bloki i [[przepływy piroklastyczne]] (gorejące chmury gazu i popiołu, które pędzą ze zboczy) mogą wtedy spustoszyć okolicę. Taki styl mają wulkany jak góra **Saint Helens** (Stany Zjednoczone) albo **Pinatubo** (Filipiny)."
+          "text": "Kleista magma zatrzymuje gazy w środku. Ciśnienie rośnie, aż wszystko wybucha. Popiół, bloki skalne i [[przepływy piroklastyczne]] (rozżarzone chmury gazu i popiołu, które pędzą w dół zboczy) mogą wtedy spustoszyć okolicę. Tak wybuchają wulkany takie jak **Saint Helens** (Stany Zjednoczone) czy **Pinatubo** (Filipiny)."
         },
         {
           "type": "paragraph",
-          "text": "Wulkan potrafi też milczeć przez stulecia. W **79 n.e.** **Wezuwiusz** pod Neapolem zasypał Pompeje popiołem. Około **80%** światowej aktywności wulkanicznej dzieje się pod oceanami, z dala od naszych oczu."
+          "text": "Wulkan potrafi też milczeć przez stulecia. W **79** roku n.e. **Wezuwiusz** pod Neapolem zasypał Pompeje popiołem. Około **80%** światowej aktywności wulkanicznej przypada na dno oceanów, z dala od naszych oczu."
         }
       ]
     },
@@ -100,15 +100,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Wulkany uformowały pierwotną atmosferę Ziemi, wyrzucając gazy. Ich popiół użyźnia też gleby: wiele żyznych regionów rolniczych żyje u stóp czynnych wulkanów. Ale bardzo wielka erupcja potrafi wysłać cząstki siarki wysoko w atmosferę i chłodzić klimat przez miesiące."
+          "text": "Wulkany, wyrzucając gazy, ukształtowały pierwotną atmosferę Ziemi. Ich popiół użyźnia też gleby: wiele urodzajnych regionów rolniczych leży u stóp czynnych wulkanów. Ale bardzo potężna erupcja może wyrzucić cząstki siarki wysoko w atmosferę i na wiele miesięcy ochłodzić klimat."
         },
         {
           "type": "paragraph",
-          "text": "Niektóre miejsca, jak [[superwulkan]] Yellowstone w Stanach Zjednoczonych, są pilnie obserwowane. Pod morzem, przy grzbietach, [[czarni palacze]] plują gorącymi płynami bogatymi w minerały. Żyją tam ekosystemy bez światła Słońca, karmione chemią gorących źródeł."
+          "text": "Niektóre miejsca, jak [[superwulkan]] Yellowstone w Stanach Zjednoczonych, są pod stałą obserwacją. Pod wodą, w pobliżu grzbietów oceanicznych, [[czarne kominy]] wyrzucają gorące płyny bogate w minerały. Żyją tam ekosystemy bez dostępu do światła słonecznego, które czerpią energię z chemii gorących źródeł."
         },
         {
           "type": "takeaway",
-          "text": "Wulkany wyrzucają magmę pod ciśnieniem, głównie na granicach płyt tektonicznych. Lepkość magmy decyduje, czy erupcja płynie spokojnie, czy wybucha."
+          "text": "Wulkany wyrzucają magmę pod ciśnieniem, głównie na granicach płyt tektonicznych. To lepkość magmy decyduje, czy lawa spokojnie wypłynie, czy dojdzie do wybuchu."
         }
       ]
     }

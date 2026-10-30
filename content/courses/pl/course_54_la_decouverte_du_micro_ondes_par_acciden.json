@@ -4,11 +4,11 @@
   "subtitle": "Przez przypadek",
   "subject": "sciences",
   "subcategory": "Odkrycia, które zmieniły świat",
-  "description": "W 1945 roku inżynier zauważa, że tabliczka czekolady stopiła się przy radarze. Z tej obserwacji urodzi się kuchenka mikrofalowa.",
+  "description": "W 1945 roku pewien inżynier zauważył, że baton czekoladowy stopił mu się przy radarze. Z tej obserwacji narodziła się kuchenka mikrofalowa.",
   "hero": {
     "image": "la_decouverte_du_micro_ondes",
     "ratio": "16:9",
-    "hook": "Stopiona tabliczka czekolady i nowoczesna kuchnia się zmienia."
+    "hook": "Stopiony baton czekoladowy… i nowoczesna kuchnia się zmienia."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "W **1945**, w Stanach Zjednoczonych, inżynier **Percy Spencer** pracuje przy radarach. Pewnego dnia zauważa, że tabliczka czekolady w kieszeni się stopiła. Nie od ciepła ciała: od fal radaru."
+          "text": "W **1945** roku w Stanach Zjednoczonych inżynier **Percy Spencer** pracował przy radarach. Pewnego dnia zauważył, że baton czekoladowy w jego kieszeni się stopił. Nie od ciepła ciała, tylko od fal radaru."
         },
         {
           "type": "paragraph",
-          "text": "Testuje kukurydzą: popcorn pęka. Rodzi się pomysł pieca, który grzeje inaczej."
+          "text": "Spróbował z ziarnami kukurydzy: popcorn zaczął strzelać. Tak narodził się pomysł kuchenki, która grzeje w inny sposób."
         }
       ]
     },
@@ -39,32 +39,32 @@
         },
         {
           "type": "paragraph",
-          "text": "**Mikrofale** to fale elektromagnetyczne, jak światło radiowe, ale „bardziej energetyczne” niż wiele klasycznych fal radiowych. W czasie wojny służą głównie radarom do wykrywania samolotów i statków."
+          "text": "**Mikrofale** to fale elektromagnetyczne, tak jak światło czy fale radiowe, ale bardziej „energetyczne” niż wiele klasycznych fal radiowych. W czasie wojny służyły głównie radarom do wykrywania samolotów i statków."
         },
         {
           "type": "paragraph",
-          "text": "Spencer rozumie, że potrafią też mieszać wodę i tłuszcze w jedzeniu i przez to je grzać."
+          "text": "Spencer zrozumiał, że mogą one też wprawiać w ruch wodę i tłuszcze w jedzeniu… a więc je podgrzewać."
         }
       ]
     },
     {
       "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p2",
-      "title": "Pierwszy piec jest ogromny",
+      "title": "Pierwsza kuchenka była ogromna",
       "free": false,
       "blocks": [
         {
           "type": "image",
           "asset": "first_microwave_oven_radarange_1947",
           "ratio": "4:3",
-          "caption": "Pierwsza handlowa kuchenka mikrofalowa jest wielka jak szafa."
+          "caption": "Pierwsza kuchenka mikrofalowa w sprzedaży była wielka jak szafa."
         },
         {
           "type": "paragraph",
-          "text": "Pierwszy model handlowy, **Radarange**, wychodzi około **1947**. Jest ogromny, drogi i raczej dla restauracji albo statków. Miną dekady, zanim się go zmniejszy i uczyni przystępnym dla domów."
+          "text": "Pierwszy model w sprzedaży, **Radarange**, pojawił się około **1947** roku. Był ogromny, drogi i przeznaczony raczej dla restauracji albo statków. Minęły dziesięciolecia, zanim udało się go zmniejszyć i uczynić przystępnym cenowo dla domów."
         },
         {
           "type": "funFact",
-          "text": "Na początku część ludzi bała się, że piec „czyni jedzenie radioaktywnym”. Fałsz: mikrofale grzeją, nie czynią radioaktywnym."
+          "text": "Na początku niektórzy bali się, że kuchenka „sprawi, że jedzenie będzie radioaktywne”. Nieprawda: mikrofale grzeją, ale nie sprawiają, że coś staje się radioaktywne."
         }
       ]
     },
@@ -75,26 +75,26 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Mikrofale przede wszystkim wprawiają w drgania cząsteczki wody (i trochę tłuszcze oraz cukry). To mieszanie tworzy ciepło **wewnątrz** jedzenia, nie tylko na powierzchni jak patelnia."
+          "text": "Mikrofale wprawiają w drgania przede wszystkim cząsteczki wody (i trochę tłuszcze oraz cukry). Ten ruch wytwarza ciepło **wewnątrz** jedzenia, a nie tylko na powierzchni, jak na patelni."
         },
         {
           "type": "paragraph",
-          "text": "Dlatego danie może być gorące na zewnątrz i letnie w środku, jeśli jest grube: fale nie wchodzą nieskończenie głęboko."
+          "text": "Dlatego grube danie może być parzące na zewnątrz i letnie w środku: fale nie wnikają nieskończenie głęboko."
         }
       ]
     },
     {
       "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p4",
-      "title": "Przedmiot codzienny",
+      "title": "Przedmiot codziennego użytku",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Od lat 1970-1980 kuchenka mikrofalowa wchodzi do milionów kuchni. Zmienia nawyki: szybkie podgrzewanie, gotowe dania, szybsze życie."
+          "text": "Od lat 1970-1980 kuchenka mikrofalowa trafiała do milionów kuchni. Zmieniła nawyki: szybkie podgrzewanie, gotowe dania, szybsze tempo życia."
         },
         {
           "type": "takeaway",
-          "text": "Mikrofala rodzi się z przypadku, który Percy Spencer zauważył przy radarze. Fale mieszają głównie wodę w jedzeniu i grzeją je od środka."
+          "text": "Kuchenka mikrofalowa narodziła się z przypadku, który Percy Spencer zauważył przy radarze. Fale pobudzają głównie wodę w jedzeniu i podgrzewają je od środka."
         }
       ]
     }

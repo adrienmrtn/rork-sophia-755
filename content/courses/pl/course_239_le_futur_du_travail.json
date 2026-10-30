@@ -8,7 +8,7 @@
   "hero": {
     "image": "le_futur_du_travail",
     "ratio": "16:9",
-    "hook": "Maszyny pracują szybciej niż kiedykolwiek. Zostaje pytanie, co zostanie do zrobienia ludziom."
+    "hook": "Maszyny pracują szybciej niż kiedykolwiek. Pytanie tylko, co zostanie do roboty ludziom."
   },
   "sections": [
     {
@@ -18,17 +18,17 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Praca nie układa tylko dochodów: kształtuje też naszą tożsamość społeczną i sens, jaki dajemy dniom. A sztuczna inteligencja, robotyka i nowe sposoby pracy wywracają dziś ten model odziedziczony po erze przemysłowej."
+          "text": "Praca to nie tylko źródło dochodu: kształtuje też naszą tożsamość społeczną i sens, jaki nadajemy naszym dniom. Tymczasem sztuczna inteligencja, robotyka i nowe sposoby pracy podważają dziś ten model, odziedziczony po epoce przemysłowej."
         },
         {
           "type": "paragraph",
-          "text": "Ten kurs pokazuje, jak praca zmienia kształt i wielkie pytania tej zmiany: mniej godzin, więcej maszyn i nowy podział bogactwa."
+          "text": "Ten kurs pokazuje, jak praca zmienia formę i jakie wielkie pytania rodzi ta przemiana: mniej godzin, więcej maszyn i nowy podział bogactwa."
         }
       ]
     },
     {
       "id": "course_239_le_futur_du_travail_p1",
-      "title": "Koniec modelu, który urodził Henry Ford",
+      "title": "Koniec modelu z czasów Henry'ego Forda",
       "free": false,
       "blocks": [
         {
@@ -41,18 +41,18 @@
         },
         {
           "type": "paragraph",
-          "text": "Ten model dziś się kruszy na rzecz **gospodarki gigów**, gospodarki „na zadanie”: ponad 57 milionów pracowników w Stanach Zjednoczonych sprzedaje już usługi przez platformy cyfrowe, poza klasycznym etatem. Automatyzacja bierze też zadania coraz bardziej złożone, a praca zdalna, przyspieszona pandemią 2020, rysuje na nowo samą geografię pracy."
+          "text": "Dziś ten model się kruszy, a jego miejsce zajmuje **gig economy**, czyli gospodarka „zleceń”: ponad 57 milionów pracowników w Stanach Zjednoczonych sprzedaje już swoje usługi przez platformy cyfrowe, poza klasycznym etatem. Automatyzacja przejmuje też coraz bardziej złożone zadania, a praca zdalna, którą przyspieszyła pandemia z 2020 roku, zmienia samą geografię pracy."
         }
       ]
     },
     {
       "id": "course_239_le_futur_du_travail_p2",
-      "title": "SI i test twórczej destrukcji",
+      "title": "SI i wyzwanie twórczej destrukcji",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Debata o przyszłości pracy często stoi na myśli filozofa i ekonomisty **[[Józef Schumpeter]]**: **[[Twórcza destrukcja]]**. Według niego każda rewolucja techniczna niszczy stare zawody, ale w końcu rodzi nowe, często bardziej wykwalifikowane. Generatywna sztuczna inteligencja wnosi jednak nowość: pierwszy raz grozi etatom biurowym i zawodom branym za intelektualne."
+          "text": "Debata o przyszłości pracy często opiera się na idei, którą filozof i ekonomista **[[Joseph Schumpeter]]** nazwał tak: **[[Twórcza destrukcja]]**. Według niego każda rewolucja technologiczna niszczy dawne zawody, ale w końcu tworzy nowe, często wymagające wyższych kwalifikacji. Generatywna sztuczna inteligencja wnosi jednak coś nowego: po raz pierwszy zagraża pracy biurowej i zawodom uważanym za intelektualne."
         },
         {
           "type": "funFact",
@@ -60,51 +60,51 @@
         },
         {
           "type": "paragraph",
-          "text": "Rysują się trzy scenariusze. Optymista widzi skok produktywności, który uwolni człowieka od powtarzalnych zadań. Pesymista boi się, że SI pójdzie szybciej niż nasza zdolność do przekwalifikowania i zrobi masowe bezrobocie. Hybryda stawia na współpracę człowieka i maszyny, gdzie kluczową kompetencją będzie sterowanie narzędziami, a nie opanowanie zastygłego rzemiosła."
+          "text": "Rysują się trzy scenariusze. Optymistyczny zakłada wzrost produktywności, który uwolniłby człowieka od powtarzalnych zadań. Pesymistyczny każe się obawiać, że SI będzie się rozwijać szybciej, niż zdołamy się przekwalifikować, co wywoła masowe bezrobocie. Wreszcie hybrydowy stawia na współpracę człowieka z maszyną, w której kluczową umiejętnością byłoby kierowanie narzędziami, a nie opanowanie raz na zawsze wyuczonego fachu."
         }
       ]
     },
     {
       "id": "course_239_le_futur_du_travail_p3",
-      "title": "Przestawić czas i pieniądze",
+      "title": "Nowy podział czasu i pieniędzy",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Wobec ryzyka społeczeństwa dwóch prędkości nowe narzędzia są na stole. **Dochód podstawowy** proponuje stałą kwotę każdemu obywatelowi, bez warunku, żeby zabezpieczyć drogi życia w gospodarce, w której praca staje się bardziej przerywana."
+          "text": "Wobec ryzyka społeczeństwa dwóch prędkości bada się nowe rozwiązania. **Powszechny dochód podstawowy** zakłada wypłacanie każdemu obywatelowi stałej kwoty, bez żadnych warunków, by dać ludziom poczucie bezpieczeństwa w gospodarce, w której praca staje się coraz mniej ciągła."
         },
         {
           "type": "image",
           "asset": "ai_generative_writing_artificial_intelligence",
           "ratio": "16:9",
-          "caption": "Automatyzacja, sztuczna inteligencja i nowe formy zatrudnienia rysują na nowo świat pracy."
+          "caption": "Automatyzacja, sztuczna inteligencja i nowe formy zatrudnienia zmieniają oblicze świata pracy."
         },
         {
           "type": "paragraph",
-          "text": "Obok tego idea **[[4-dniowy tydzień]]** nabiera wiatru: jeśli maszyny produkują więcej w krótszym czasie, logiczne, że czas pracy człowieka maleje w zamian, żeby utrzymać zatrudnienie i zdrowie pracowników. Zostaje pytanie o finansowanie: jeśli wartość coraz częściej robią programy, podatki pewnie ześlizgną się z dochodów pracy na dochody kapitału."
+          "text": "Coraz więcej zwolenników zyskuje też **[[4-dniowy tydzień]]** pracy: skoro maszyny produkują więcej w krótszym czasie, logiczne wydaje się, że czas pracy ludzi powinien się w zamian skrócić, by utrzymać zatrudnienie i chronić zdrowie pracowników. Pozostaje kwestia finansowania: jeśli wartość coraz częściej wytwarza oprogramowanie, podatki zapewne trzeba będzie przesunąć z dochodów z pracy na dochody z kapitału."
         }
       ]
     },
     {
       "id": "course_239_le_futur_du_travail_p4",
-      "title": "Jaki sens dać pracy jutra",
+      "title": "Jaki sens nadać pracy jutra",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Gdy równanie gospodarcze jest rozwiązane, zostaje głębsze pytanie: co się dzieje z sensem dni w świecie, w którym praca byłaby mniej centralna? Historycznie praca układała codzienność i poczucie wartości. Jej częściowe zniknięcie może prowadzić albo do nudy, albo do odrodzenia działań wolontariackich, artystycznych albo obywatelskich."
+          "text": "Gdy równanie ekonomiczne zostanie rozwiązane, pozostaje głębsze pytanie: co stanie się z sensem naszych dni w świecie, w którym praca nie byłaby już tak ważna? Historycznie to praca porządkowała codzienność i poczucie własnej wartości. Jej częściowe zniknięcie mogłoby prowadzić albo do nudy, albo do rozkwitu wolontariatu, sztuki i działalności obywatelskiej."
         },
         {
           "type": "funFact",
-          "text": "Słowo „praca” idzie z łacińskiego tripalium, narzędzia tortur o trzech palach. To pochodzenie przypomina, że długo brano ją za cierpienie, zanim stała się tożsamością."
+          "text": "Francuskie słowo „travail”, czyli praca, pochodzi od łacińskiego tripalium, narzędzia tortur z trzech pali. To pochodzenie przypomina, że pracę długo postrzegano jako cierpienie, zanim stała się częścią tożsamości."
         },
         {
           "type": "paragraph",
-          "text": "W tym układzie uczyć się uczyć staje się kompetencją kluczową. Prawdziwa stawka nie jest tylko techniczna, ale polityczna: użyjemy sztucznej inteligencji, żeby powiększyć nasze zdolności, czy tylko żeby ściąć koszty firm? Odpowiedź zdecyduje, czy praca jutra będzie wyzwoleniem, czy nowym przymusem."
+          "text": "W tej sytuacji umiejętność uczenia się staje się kluczowa. Prawdziwa stawka jest nie tylko technologiczna, ale i polityczna: czy użyjemy sztucznej inteligencji, by zwiększyć nasze możliwości, czy tylko by obniżyć koszty firm? Od odpowiedzi zależy, czy praca jutra będzie wyzwoleniem, czy nowym przymusem."
         },
         {
           "type": "takeaway",
-          "text": "Przyszłość pracy znaczy koniec jednego etatu na rzecz gospodarki gigów i test sztucznej inteligencji, która pierwszy raz grozi etatom intelektualnym. Nasz model społeczny będzie musiał pewnie rozdać zyski produktywności, przez dochód podstawowy albo krótszy tydzień pracy."
+          "text": "Przyszłość pracy wyznacza schyłek klasycznego etatu na rzecz gig economy oraz wyzwanie, jakim jest sztuczna inteligencja, która po raz pierwszy zagraża pracy intelektualnej. Nasz model społeczny będzie zapewne musiał inaczej dzielić zyski z produktywności, przez dochód podstawowy albo krótszy tydzień pracy."
         }
       ]
     }

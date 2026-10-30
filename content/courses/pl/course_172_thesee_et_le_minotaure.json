@@ -1,14 +1,14 @@
 {
   "id": "course_172_thesee_et_le_minotaure",
   "title": "Jak Tezeusz pokonał Minotaura?",
-  "subtitle": "Nić, potwór i czarne żagle",
+  "subtitle": "Nić, potwór i żagle",
   "subject": "mythologie",
   "subcategory": "Mitologia grecka: herosi",
   "description": "Tezeusz zabija Minotaura dzięki nici Ariadny. Zapomina jednak zmienić żagle: ojciec Egeusz rzuca się do morza, które wciąż nosi jego imię.",
   "hero": {
     "image": "thesee_et_le_minotaure",
     "ratio": "16:9",
-    "hook": "Potwór w labiryncie. Nić, żeby z niego wyjść. Zapomniane żagle, które chrzczą morze."
+    "hook": "Potwór w labiryncie. Nić, żeby z niego wyjść. Zapomniane żagle, które dają nazwę morzu."
   },
   "sections": [
     {
@@ -18,7 +18,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Tezeusz**, bohater założyciel Aten, staje przeciw **Minotaurowi**, istocie pół człowiek, pół byk, ukrytej w kreteńskiej budowli znanej jako [[Labirynt]]. Opowieść splata odwagę, miłosny podstęp i rodzinną tragedię."
+          "text": "**Tezeusz**, bohater i założyciel Aten, staje do walki z **Minotaurem**, pół człowiekiem, pół bykiem, ukrytym w kreteńskiej budowli znanej jako [[Labirynt]]. Opowieść łączy odwagę, miłosny podstęp i rodzinną tragedię."
         },
         {
           "type": "paragraph",
@@ -28,12 +28,12 @@
     },
     {
       "id": "course_172_thesee_et_le_minotaure_p1",
-      "title": "Minotaur i krwawy haracz Aten",
+      "title": "Minotaur i haracz Aten",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Król **Minos** z Krety odmawia ofiarowania białego byka **Posejdonowi**, bogu mórz. W zemście Posejdon budzi w królowej **Pasifae** namiętność do zwierzęcia. Rodzi się Minotaur. Minos każe wynalazcy [[Dedal]] zbudować więzienie bez wyjścia: Labirynt."
+          "text": "Król **Minos** z Krety odmawia złożenia białego byka w ofierze **Posejdonowi**, bogu mórz. Aby się zemścić, Posejdon budzi w królowej **Pasifae** namiętność do zwierzęcia. Tak rodzi się Minotaur. Więzienie bez wyjścia, Labirynt, ma dla Minosa zbudować wynalazca [[Dedal]]."
         },
         {
           "type": "image",
@@ -43,11 +43,11 @@
         },
         {
           "type": "paragraph",
-          "text": "Kreta panuje wtedy na morzu: [[Talasokracja]]. Po przegranej wojnie Ateny muszą co dziewięć lat oddawać **siedmiu młodzieńców i siedem dziewcząt** na pastwę potwora. Przy trzeciej dostawie **Tezeusz**, syn króla **Egeusza**, zgłasza się ochotniczo."
+          "text": "Kreta panuje wtedy na morzu: to [[Talasokracja]]. Po przegranej wojnie Ateny muszą co dziewięć lat wydawać potworowi na pastwę **siedmiu młodzieńców i siedem dziewcząt**. Za trzecim razem **Tezeusz**, syn króla **Egeusza**, zgłasza się na ochotnika."
         },
         {
           "type": "funFact",
-          "text": "Egeusz i Tezeusz umawiają się na znak: żagle **białe**, jeśli bohater wraca żywy, żagle **czarne**, jeśli zginął. Ten detal rozstrzygnie dramat."
+          "text": "Egeusz i Tezeusz umawiają się na sygnał: **białe** żagle, jeśli bohater wróci żywy, **czarne**, jeśli zginie. Ten szczegół przesądzi o tragedii."
         }
       ]
     },
@@ -58,7 +58,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Na Krecie **Ariadna**, córka Minosa, zakochuje się w Tezeuszu. Wie, że w Labiryncie siła nie wystarczy. Z pomocą Dedala daje mu kłębek wełny: [[Nić Ariadny]]. Przywiązuje go przy wejściu i odwija nić, idąc naprzód."
+          "text": "Na Krecie **Ariadna**, córka Minosa, zakochuje się w Tezeuszu. Wie, że w Labiryncie sama siła nie wystarczy. Z pomocą Dedala daje mu kłębek wełny: [[Nić Ariadny]]. Tezeusz przywiązuje koniec nici przy wejściu i idąc naprzód, rozwija kłębek."
         },
         {
           "type": "image",
@@ -68,18 +68,18 @@
         },
         {
           "type": "paragraph",
-          "text": "Tezeusz zabija Minotaura, potem zwija nić, żeby wyjść. Ucieka z młodymi Ateńczykami i Ariadną. Na wyspie **Naksos** porzuca ją jednak we śnie. Jedni mówią, że bóg **Dionizos** chciał ją za żonę. Ariadna, zrozpaczona, potem ubóstwiona, dostaje złotą koronę, która staje się konstelacją."
+          "text": "Tezeusz zabija Minotaura, a potem zwija nić, żeby wyjść. Ucieka z młodymi Ateńczykami i Ariadną. Na wyspie **Naksos** porzuca ją jednak śpiącą. Niektórzy twierdzą, że bóg **Dionizos** chciał ją pojąć za żonę. Ariadna, najpierw zrozpaczona, a potem ubóstwiona, dostaje złotą koronę, która zmienia się w gwiazdozbiór."
         }
       ]
     },
     {
       "id": "course_172_thesee_et_le_minotaure_p3",
-      "title": "Czarne żagle Przylądka Sunion",
+      "title": "Czarne żagle u przylądka Sunion",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Powrót powinien być świętem. Odurzony zwycięstwem albo zmącony porzuceniem Ariadny, Tezeusz zapomina podnieść białe żagle. Okręt zbliża się do Aten pod czarnymi żaglami."
+          "text": "Powrót powinien być świętem. Upojony zwycięstwem albo poruszony porzuceniem Ariadny, Tezeusz zapomina postawić białe żagle. Okręt zbliża się do Aten pod czarnymi żaglami."
         },
         {
           "type": "image",
@@ -89,11 +89,11 @@
         },
         {
           "type": "paragraph",
-          "text": "Na **Przylądku Sunion** stary król Egeusz śledzi horyzont. Widzi tylko czerń żałoby. Przekonany, że syn zginął, rzuca się z klifu. Morze nosi odtąd jego imię: **Morze Egejskie**. Tezeusz schodzi na ląd jako król... i sierota z własnego zaniedbania."
+          "text": "Na **Przylądku Sunion** stary król Egeusz wpatruje się w horyzont. Widzi tylko czerń żałoby. Przekonany, że syn zginął, rzuca się ze skały do morza. Morze nosi odtąd jego imię: **Morze Egejskie**. Tezeusz wraca jako król... i sierota przez własne niedbalstwo."
         },
         {
           "type": "funFact",
-          "text": "„Okręt Tezeusza” stał się paradoksem filozoficznym: jeśli wymienia się wszystkie deski jedną po drugiej, czy to wciąż ten sam statek?"
+          "text": "„Okręt Tezeusza” stał się paradoksem filozoficznym: jeśli wymienić w nim po kolei wszystkie deski, czy to wciąż ten sam statek?"
         }
       ]
     },
@@ -104,15 +104,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ukoronowany Tezeusz staje się królem organizatorem. Przypisuje mu się [[Synoecyzm]]: zjednoczenie osad Attyki wokół Aten. Ustanawia [[Panathenaia]], wielkie święta miasta. Siła łączy się z prawem."
+          "text": "Po koronacji Tezeusz okazuje się królem organizatorem. Przypisuje mu się [[Synojkizm]]: zjednoczenie osad Attyki wokół Aten. Ustanawia [[Panatenaje]], wielkie święto miasta. Siła łączy się z prawem."
         },
         {
           "type": "paragraph",
-          "text": "Jego panowanie zna też inne przygody, jak walka z [[Amazonki]]. Labirynt zostaje jednak jego znakiem: umieć rozwiązać to, co splątane, i zostać podatnym na zapomnienie. Tezeusz kuje wielkość Aten na popiołach rodzinnego dramatu."
+          "text": "Za jego panowania nie brakuje innych przygód, choćby walki, w której stanęły przeciw niemu [[Amazonki]]. Ale symbolem Tezeusza pozostaje Labirynt: umie rozwikłać to, co nie do rozwikłania, a zarazem jest bezbronny wobec zapomnienia. Tezeusz buduje wielkość Aten na zgliszczach rodzinnego dramatu."
         },
         {
           "type": "takeaway",
-          "text": "**Tezeusz** zabija **Minotaura** dzięki nici **Ariadny**. Zapominając zmienić żagle, powoduje samobójstwo ojca **Egeusza**, który daje imię Morzu Egejskiemu."
+          "text": "**Tezeusz** zabija **Minotaura** dzięki nici **Ariadny**. Zapominając zmienić żagle, doprowadza do samobójstwa swojego ojca **Egeusza**, od którego imienia pochodzi nazwa Morza Egejskiego."
         }
       ]
     }

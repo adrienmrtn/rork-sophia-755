@@ -8,7 +8,7 @@
   "hero": {
     "image": "merlin_l_enchanteur",
     "ratio": "16:9",
-    "hook": "Syn demona, ochrzczony od kołyski: Merlin służy dobru mocami zrodzonymi ze zła."
+    "hook": "Syn demona, ochrzczony już w kołysce: Merlin służy dobru mocami zrodzonymi ze zła."
   },
   "sections": [
     {
@@ -22,18 +22,18 @@
         },
         {
           "type": "paragraph",
-          "text": "Jego natura jest paradoksalna. Część idzie od demonów, część z nieba. To nie historia magicznego widowiska: to walka istoty hybrydowej, która wybiera służbę dobru, aż miłość wyjmuje ją ze świata."
+          "text": "Jego natura jest paradoksalna. Po części pochodzi od demonów, po części z nieba. Jego historia to nie pokaz magii, lecz walka istoty o podwójnej naturze, która wybiera służbę dobru, dopóki miłość nie zabierze jej ze świata."
         }
       ]
     },
     {
       "id": "course_196_merlin_l_enchanteur_p1",
-      "title": "Hybrydowe pochodzenie między demonem a chrztem",
+      "title": "Podwójne pochodzenie: demon i chrzest",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "U poety **Roberta de Boron** (XII wiek) demony chcą stworzyć antychrysta. [[Inkub demon]], duch, który łączy się ze śpiącą kobietą, uwodzi pobożną chrześcijankę. Plan pada: matka spowiada się i chrzci dziecko."
+          "text": "U poety **Roberta de Boron** (XII wiek) demony chcą stworzyć antychrysta. Pewien [[demon inkub]], czyli duch łączący się ze śpiącą kobietą, uwodzi młodą, pobożną chrześcijankę. Plan się nie udaje: matka się spowiada i każe ochrzcić dziecko."
         },
         {
           "type": "image",
@@ -43,11 +43,11 @@
         },
         {
           "type": "funFact",
-          "text": "Imię „Merlin” idzie z walijskiego **Myrddin**. Geoffrey z Monmouth zmienił „d” na „l”, by uniknąć gry słów zbyt bliskiej łacińskiemu *merda*."
+          "text": "Imię „Merlin” pochodzi od walijskiego **Myrddin**. Geoffrey z Monmouth zmienił „d” na „l”, by uniknąć skojarzenia z łacińskim słowem *merda*."
         },
         {
           "type": "paragraph",
-          "text": "[[Chrzest]] zmazuje klątwę, ale zostawia moce: znajomość przeszłości (dziedzictwo demoniczne) i dar [[Proroctwo w kulturze średniowiecznej]]. Merlin potrafi się przemieniać. Za nim stoi **Myrddin Wyllt**, walijski bard z VI wieku, który po bitwie, szalony, ucieka do lasu [[Celyddon]]."
+          "text": "[[Chrzest]] zmazuje klątwę, ale zostawia moce: znajomość przeszłości (dziedzictwo po demonie) i dar, jakim jest [[proroctwo w kulturze średniowiecznej]]. Merlin potrafi zmieniać postać. Za nim kryje się **Myrddin Wyllt**, walijski bard z VI wieku, który po bitwie oszalał i uciekł do lasu [[Celyddon]]."
         }
       ]
     },
@@ -58,7 +58,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Merlin nie jest iluzjonistą. Jest gwarantem królestwa. Pomaga królowi [[Utherpendragon]] przybrać rysy księcia Kornwalii, by dotrzeć do księżnej **Igerny**. Z tej nocy rodzi się **Artur**."
+          "text": "Merlin nie jest iluzjonistą. Jest strażnikiem królestwa. To dzięki niemu król [[Uther Pendragon]] przybiera postać księcia Kornwalii i dociera do księżnej **Igerny**. Z tej nocy rodzi się **Artur**."
         },
         {
           "type": "image",
@@ -68,7 +68,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Wychowuje dziecko w tajemnicy, orkiestruje miecz w kowadle, potem prowadzi Artura do Pani Jeziora po [[Excalibur]], której pochwa chroni przed śmiertelnymi ranami. W **Camelot** wymyśla **Okrągły Stół** i stawia [[Oblężenie niebezpieczne]], puste miejsce zarezerwowane dla najczystszego rycerza. Widzi nadchodzące niebezpieczeństwa. Wie też, że los i tak przejdzie."
+          "text": "Wychowuje dziecko w tajemnicy, aranżuje próbę miecza w kowadle, a potem prowadzi Artura do Pani Jeziora po [[Excalibur]], którego pochwa chroni przed śmiertelnymi ranami. W **Camelocie** projektuje **Okrągły Stół** i wyznacza przy nim [[Niebezpieczne Krzesło]]: puste krzesło zarezerwowane dla najczystszego rycerza. Przewiduje nadchodzące niebezpieczeństwa. Wie też, że przeznaczenie zawsze w końcu się spełnia."
         }
       ]
     },
@@ -79,21 +79,21 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Merlin zna swój koniec. Mimo to kocha **Vivianę**, Panią Jeziora, przy źródle Barenton. Uczy ją najskrytszych czarów, choć wie, że przez nią zginie."
+          "text": "Merlin zna swój koniec. Mimo to zakochuje się w **Vivianie**, Pani Jeziora, przy źródle Barenton. Uczy ją swoich najskrytszych czarów, choć wie, że ona go zgubi."
         },
         {
           "type": "image",
           "asset": "viviane_lady_of_the_lake_merlin_medieval_art",
           "ratio": "4:3",
-          "caption": "Viviana zamyka Merlina: koniec czasu magów"
+          "caption": "Viviana więzi Merlina: koniec epoki magów"
         },
         {
           "type": "funFact",
-          "text": "Według wersji Viviana zamyka go w krzaku głogu, szklanej wieży albo wnęce **Brocéliande**. Nieśmiertelny Merlin nie umarł: śpi poza światem."
+          "text": "W zależności od wersji Viviana więzi go w krzaku głogu, w szklanej wieży albo w grocie w **Brocéliande**. Merlin jest nieśmiertelny, więc nie umarł: śpi poza światem."
         },
         {
           "type": "paragraph",
-          "text": "Gdy rycerze idą po Graala, magia Merlina nie ma już miejsca. Jego odejście znaczy przejście od czasu mitów do czasu wiary."
+          "text": "Gdy rycerze wyruszają na poszukiwanie Graala, dla magii Merlina nie ma już miejsca. Jego odejście oznacza przejście od czasów mitu do czasów wiary."
         }
       ]
     },
@@ -104,15 +104,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Merlin utrwalił obraz starego mędrca: broda, laska, zagadki. Od niego idą **Gandalf** u Tolkiena i **Dumbledore** u Rowling. Jest pomocnikiem, który wie, ale nie może działać zamiast bohatera."
+          "text": "Merlin utrwalił obraz starego mędrca: broda, laska, zagadki. Od niego wywodzą się **Gandalf** Tolkiena i **Dumbledore** z książek Rowling. Jest pomocnikiem, który wie, ale nie może działać zamiast bohatera."
         },
         {
           "type": "paragraph",
-          "text": "Most między dzikim lasem a dworem, zostawia piętno [[Druid]] i jednocześnie doradza królom. Dziś jeszcze szepcze, że imperia są kruche, a mądrość nie zawsze chroni przed sobą samym."
+          "text": "Jest mostem między dzikim lasem a dworem: doradza królom, a zarazem zachowuje rysy, jakie ma [[druid]]. Do dziś przypomina szeptem, że imperia są kruche, a mądrość nie zawsze chroni przed samym sobą."
         },
         {
           "type": "takeaway",
-          "text": "**Merlin**, zrodzony z demona i ocalony przez chrzest, buduje los **Artura**, potem znika, więzień **Viviany**: trwały wzór zachodniego czarodzieja."
+          "text": "**Merlin**, zrodzony z demona i ocalony przez chrzest, kształtuje los **Artura**, a potem znika jako więzień **Viviany**: to trwały wzór zachodniego czarodzieja."
         }
       ]
     }

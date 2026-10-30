@@ -1,14 +1,14 @@
 {
   "id": "course_224_pourquoi_les_abeilles_sont_elles_vitales",
   "title": "Co zostałoby na naszych talerzach bez pszczół?",
-  "subtitle": "Małe robotnice naszego jedzenia",
+  "subtitle": "Małe robotnice, które nas karmią",
   "subject": "comprendreLeMonde",
   "subcategory": "Środowisko i przyszłość",
-  "description": "Bez pszczół **75% światowych upraw żywności** byłoby w niebezpieczeństwie. Te małe, ciche robotnice trzymają nasze jedzenie, a ich populacje się walą.",
+  "description": "Bez pszczół **75% światowych upraw żywności** byłoby zagrożonych. Te małe, niepozorne robotnice podtrzymują nasze wyżywienie, a ich populacje gwałtownie się kurczą.",
   "hero": {
     "image": "pourquoi_les_abeilles_sont_vitales",
     "ratio": "16:9",
-    "hook": "Nie robią tylko miodu: bez nich spora część naszego jedzenia zniknęłaby."
+    "hook": "Robią nie tylko miód: bez nich spora część naszego jedzenia by zniknęła."
   },
   "sections": [
     {
@@ -18,80 +18,80 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "O pszczołach myśli się często tylko przez miód. W rzeczywistości oddają dużo większą przysługę: pozwalają większości roślin kwiatowych się rozmnażać. Ta usługa jest warta setki miliardów dolarów co rok."
+          "text": "Pszczoły często kojarzą się tylko z miodem. W rzeczywistości oddają nam znacznie większą przysługę: dzięki nim rozmnaża się większość roślin kwiatowych. Ta usługa jest warta setki miliardów dolarów rocznie."
         },
         {
           "type": "paragraph",
-          "text": "Od kilku dekad te kluczowe owady znikają w niepokojącym tempie. Zrozumieć ich rolę i przyczyny spadku pozwala lepiej uchwycić stawkę wprost dla naszego przyszłego jedzenia."
+          "text": "Od kilku dziesięcioleci te niezbędne owady znikają w niepokojącym tempie. Kiedy zrozumiesz ich rolę i przyczyny ich wymierania, lepiej zobaczysz, co to oznacza dla naszego przyszłego jedzenia."
         }
       ]
     },
     {
       "id": "course_224_pourquoi_les_abeilles_sont_elles_vitales_p1",
-      "title": "Zapylanie, cicha, ale kluczowa praca",
+      "title": "Zapylanie: cicha, ale niezbędna praca",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "[[zapylanie]] to transport pyłku, męskich komórek kwiatu, do żeńskiego organu innego kwiatu tego samego gatunku. Wiatr albo woda czasem to robią, ale większość roślin kwiatowych woli transport zwierzęcy. Szukając nektaru i pyłku dla kolonii, pszczoły robią ten transport, nawet o tym nie wiedząc."
+          "text": "Kluczowe jest tu [[zapylanie]], czyli przenoszenie pyłku, męskich komórek kwiatu, na żeński organ innego kwiatu tego samego gatunku. Czasem robi to wiatr albo woda, ale większość roślin kwiatowych woli, gdy pyłek przenoszą zwierzęta. Pszczoły, szukając nektaru i pyłku dla swojej kolonii, robią to, nawet o tym nie wiedząc."
         },
         {
           "type": "image",
           "asset": "honey_bee_pollinating_flower_closeup",
           "ratio": "4:3",
-          "caption": "Zbierając nektar, pszczoła niesie pyłek z kwiatu na kwiat."
+          "caption": "Zbierając nektar, pszczoła przenosi pyłek z kwiatu na kwiat."
         },
         {
           "type": "funFact",
-          "text": "Jedna pszczoła może odwiedzić do 700 kwiatów dziennie. Żeby zrobić tylko 500 gramów miodu, cała kolonia musi przelecieć równowartość trzech okrążeń Ziemi."
+          "text": "Jedna pszczoła może odwiedzić do 700 kwiatów dziennie. Żeby wytworzyć zaledwie 500 gramów miodu, cała kolonia musi przelecieć dystans równy trzem okrążeniom Ziemi."
         },
         {
           "type": "paragraph",
-          "text": "Około **75% światowych upraw żywności** zależy, choć trochę, od zapylaczy jak pszczoły. To kawa, kakao, jabłka, migdały albo awokado. Wkład zapylania w gospodarkę świata szacuje się na 235-577 miliardów dolarów rocznie."
+          "text": "Około **75% światowych upraw żywności** choć w pewnym stopniu zależy od zapylaczy, takich jak pszczoły. Należą do nich kawa, kakao, jabłka, migdały i awokado. Wkład zapylania w światową gospodarkę szacuje się na 235-577 miliardów dolarów rocznie."
         }
       ]
     },
     {
       "id": "course_224_pourquoi_les_abeilles_sont_elles_vitales_p2",
-      "title": "Czemu kolonie się walą",
+      "title": "Dlaczego kolonie upadają",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Spadek pszczół nie ma jednej przyczyny: kilka groźb działa naraz. Od lat 1990 niektórzy pszczelarze tracą zimą nawet 30-50% kolonii, choć naturalna strata powinna krążyć koło 10%. To nagłe znikanie bywa nazywane [[Zaburzenie zapadania się kolonii]]."
+          "text": "Wymieranie pszczół nie ma jednej przyczyny: kilka zagrożeń działa jednocześnie. Od lat dziewięćdziesiątych niektórzy pszczelarze tracą każdej zimy nawet 30-50% kolonii, choć naturalne straty powinny wynosić około 10%. To nagłe znikanie bywa określane jako [[zaburzenie zapadania się kolonii]]."
         },
         {
           "type": "image",
           "asset": "neonicotinoid_pesticide_spraying_field",
           "ratio": "4:3",
-          "caption": "Neonikotynoidy wchodzą w całą roślinę, także w nektar i pyłek."
+          "caption": "Neonikotynoidy przenikają całą roślinę, także nektar i pyłek."
         },
         {
           "type": "paragraph",
-          "text": "Rodzina insektycydów, [[Neonikotynoidy]], jest szczególnie winna. Nasiąkają całą roślinę, także jej nektar i pyłek. Nawet w małej dawce dezorientują pszczoły, które nie znajdują już ula, i osłabiają ich odporność."
+          "text": "Szczególnie winne są [[Neonikotynoidy]], czyli rodzina insektycydów. Przenikają całą roślinę, także jej nektar i pyłek. Nawet w małych dawkach dezorientują pszczoły, które nie potrafią już trafić do ula, i osłabiają ich układ odpornościowy."
         },
         {
           "type": "paragraph",
-          "text": "Dokładają się do tego pasożytniczy roztocz, który przenosi śmiertelne wirusy, zniknięcie dzikich kwiatów przez monokultury i zmiana klimatu, która rozjeżdża pory kwitnienia z przebudzeniem owadów."
+          "text": "Do tego dochodzą pasożytniczy roztocz, który przenosi śmiertelne wirusy, znikanie dzikich kwiatów z powodu monokultur oraz zmiana klimatu, przez którą rośliny kwitną w innym czasie, niż budzą się owady."
         }
       ]
     },
     {
       "id": "course_224_pourquoi_les_abeilles_sont_elles_vitales_p3",
-      "title": "Nie ma jednej pszczoły",
+      "title": "Pszczoła pszczole nierówna",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Gdy mówisz „pszczoła”, myślisz prawie zawsze o pszczole miodnej, tej z ula, która robi miód. A to tylko jeden gatunek spośród ponad **20.000** na świecie, w tym trzmiele i murarki. Większość żyje samotnie i nie robi miodu, ale gra równie ważną rolę ekologiczną."
+          "text": "Słowo „pszczoła” prawie zawsze przywodzi na myśl pszczołę miodną, tę, która żyje w ulu i robi miód. To jednak tylko jeden z ponad **20.000** gatunków na świecie, wśród których są trzmiele i murarki. Większość żyje samotnie i nie wytwarza miodu, ale ich rola ekologiczna jest równie ważna."
         },
         {
           "type": "funFact",
-          "text": "Niektóre kwiaty, jak kwiaty pomidora, puszczają pyłek tylko przy precyzyjnej wibracji. Pszczoły miodne tego nie umieją, ale trzmiele tak, dzięki technice zwanej sonikacją."
+          "text": "Niektóre kwiaty, na przykład kwiaty pomidora, uwalniają pyłek tylko pod wpływem określonych drgań. Pszczoły miodne tego nie potrafią, ale trzmiele tak, dzięki technice zwanej sonikacją."
         },
         {
           "type": "paragraph",
-          "text": "Te dzikie gatunki często specjalizują się w jednej roślinie, którą czasem tylko one potrafią skutecznie zapylić. Są też bardziej kruche niż pszczoła miodna, bo nie mają żadnej ludzkiej opieki. Ich zniknięcie kruszy cały [[łańcuch pokarmowy]], bo wiele ptaków zależy od owoców i nasion z tego zapylania."
+          "text": "Te dzikie gatunki często specjalizują się w jednej roślinie, którą czasem tylko one potrafią skutecznie zapylić. Są też bardziej narażone niż pszczoła miodna, bo człowiek ich nie dogląda ani o nie nie dba. Ich zniknięcie osłabia cały [[łańcuch pokarmowy]], bo wiele ptaków zależy od owoców i nasion, które powstają dzięki temu zapylaniu."
         }
       ]
     },
@@ -106,15 +106,15 @@
         },
         {
           "type": "paragraph",
-          "text": "Każdy może też działać prosto: posadź lokalne kwiaty w ogrodzie albo zostaw trawnik trochę dłuższy, zanim skosisz. To prawdziwe schronienie dla pszczół, gdy kwiatów brakuje."
+          "text": "Każdy może też pomóc w prosty sposób: posadź w ogrodzie rodzime kwiaty albo pozwól trawie trochę urosnąć przed koszeniem. Gdy kwiatów brakuje, to dla pszczół prawdziwe schronienie."
         },
         {
           "type": "paragraph",
-          "text": "Chronić zapylaczy to nie tylko kwestia przyrody do ocalenia: to strategia długiego przetrwania, bo ich praca trzyma wprost zdolność roślin do karmienia nas."
+          "text": "Ochrona zapylaczy to nie tylko kwestia dbania o przyrodę: to strategia przetrwania na dłuższą metę, bo ich praca bezpośrednio podtrzymuje zdolność roślin do wykarmienia nas."
         },
         {
           "type": "takeaway",
-          "text": "Pszczoły i 20.000 gatunków dzikich zapylaczy zapewniają rozmnażanie 75% światowych upraw żywności. Ich spadek, przez pestycydy, pasożyty i utratę siedlisk, grozi wprost naszemu jedzeniu. Chronić je to chronić stół i przyszłość rolnictwa."
+          "text": "Pszczoły i 20.000 gatunków dzikich zapylaczy odpowiadają za rozmnażanie 75% światowych upraw żywności. Ich wymieranie, spowodowane pestycydami, pasożytami i utratą siedlisk, bezpośrednio zagraża naszemu wyżywieniu."
         }
       ]
     }
