@@ -38,7 +38,7 @@ from pathlib import Path
 
 from course_translation_io import glossary_keys_by_course, segments
 from i18n_copies import _DUMPERS, _style, _swift_escape, apply_mapping
-from i18n_languages import SWIFT_CASE_BY_CODE
+from i18n_languages import NON_FR_LANGS, SWIFT_CASE_BY_CODE
 
 ROOT = Path(__file__).resolve().parents[1]
 COURSES = ROOT / "content" / "courses"
@@ -138,10 +138,10 @@ def packs(lang: str, out: Path, courses: set[str] | None = None, keys: list[str]
     it when it ends in '*') -- the path for new content (docs/processus-traduction.md)."""
     out.mkdir(parents=True, exist_ok=True)
     scoped = courses is not None or keys is not None
-    courses, keys = courses or set(), keys or []
+    courses, want_keys = courses or set(), keys or []
 
     def wanted_key(k: str) -> bool:
-        return any(k.startswith(x[:-1]) if x.endswith("*") else k == x for x in keys)
+        return any(k.startswith(x[:-1]) if x.endswith("*") else k == x for x in want_keys)
     h = hints(lang)
     counts: dict[str, int] = {}
 
@@ -180,6 +180,8 @@ def packs(lang: str, out: Path, courses: set[str] | None = None, keys: list[str]
     for i in range(0, len(ids), COURSES_PER_LOT):
         items = []
         for cid in ids[i:i + COURSES_PER_LOT]:
+            if not (COURSES / lang / f"{cid}.json").exists():
+                continue  # reported at the end for a scoped run
             fr = dict(segments(_load(fr_dir / f"{cid}.json")))
             cur = _load(COURSES / lang / f"{cid}.json")
             keys = ", ".join(f"[[{k}]]" for k in sorted(gloss.get(cid, [])))
@@ -229,6 +231,20 @@ def packs(lang: str, out: Path, courses: set[str] | None = None, keys: list[str]
         write(f"glossaire_{i // GLOSSARY_PER_LOT:03d}", f"# Glossaire {lang} — lot {i // GLOSSARY_PER_LOT:03d}. Le terme entre crochets ne change pas : réécrire seulement la définition qui suit.\n", items)
 
     if scoped:
+        # A new course may bring a new library section label: offer it with the course.
+        items = []
+        for cid in ids:
+            f = _load(fr_dir / f"{cid}.json").get("subcategory")
+            t = _load(COURSES / lang / f"{cid}.json").get("subcategory")
+            if f and t and not any(x["id"] == f"rubrique:{t}" for x in items):
+                items.append({"id": f"rubrique:{t}", "fr": f, "texte": t, "ctx": "libellé de rubrique de la bibliothèque (court)"})
+        if items:
+            write("catalogue", f"# Rubriques {lang} des cours demandés\n", items)
+        missing = sorted(courses - set(ids)) + sorted(c for c in ids if not (COURSES / lang / f"{c}.json").exists())
+        unmatched = [k for k in want_keys if not any(x.startswith(k[:-1]) if k.endswith("*") else x == k for x in ui)]
+        if missing or unmatched:
+            raise SystemExit("introuvable : " + ", ".join(
+                [f"cours {c}" for c in missing] + [f"clé {k} (pas encore dans la langue : postedit_i18n.py ui-insert)" for k in unmatched]))
         return counts
 
     # catalogue: collections + library section labels
@@ -721,6 +737,53 @@ def _write_ui(lang: str, accepted: dict[str, str]) -> None:
     LOCALIZABLE.write_text(source[: m.start(1)] + body + source[m.end(1):], encoding="utf-8")
 
 
+def ui_insert(keys: list[str]) -> dict[str, dict[str, int]]:
+    """Add new UI keys, already written in French, to every language: iOS table, Android
+    strings and content/locales/<lang>/ui_strings.json. The value is the machine draft from
+    ui_strings.json when translate_ui_strings.py made one, else the French text (to be
+    post-edited before shipping). Only missing keys are added; nothing else is touched."""
+    source = LOCALIZABLE.read_text(encoding="utf-8")
+    fr_ios = swift_table("french", source)
+    fr_and = _load(AND / "strings" / "fr.json")
+    unknown = [k for k in keys if k not in fr_ios and k not in fr_and]
+    if unknown:
+        raise SystemExit(f"not in the French tables yet: {', '.join(unknown)}")
+    report: dict[str, dict[str, int]] = {}
+    for lang in NON_FR_LANGS:
+        pack_path = LOCALES / lang / "ui_strings.json"
+        pack = _load(pack_path) if pack_path.exists() else {}
+        draft = lambda k: pack.get(k) or fr_ios.get(k) or fr_and[k]
+        counts = {"ios": 0, "android": 0, "brouillon": 0, "francais": 0}
+        case = SWIFT_CASE_BY_CODE[lang]
+        m = re.search(r"private static let %s: \[String: String\] = \[(.*?)\n    \]" % case, source, re.S)
+        table = swift_table(case, source)
+        lines = [f'        "{_swift_escape(k)}": "{_swift_escape(draft(k))}",' for k in keys if k in fr_ios and k not in table]
+        if lines:
+            body = m.group(1).rstrip()
+            if not body.endswith(","):
+                body += ","
+            source = source[: m.start(1)] + body + "\n" + "\n".join(lines) + source[m.end(1):]
+            counts["ios"] = len(lines)
+        for path, wanted in ((AND / "strings" / f"{lang}.json", [k for k in keys if k in fr_and]),
+                             (pack_path, keys)):
+            if not path.exists():
+                continue
+            raw = path.read_text(encoding="utf-8")
+            data = json.loads(raw)
+            added = [k for k in wanted if k not in data]
+            for k in added:
+                data[k] = draft(k)
+            if added:
+                _dump(path, data, raw)
+                if path == AND / "strings" / f"{lang}.json":
+                    counts["android"] = len(added)
+        counts["brouillon"] = sum(1 for k in keys if pack.get(k))
+        counts["francais"] = len(keys) - counts["brouillon"]
+        report[lang] = counts
+    LOCALIZABLE.write_text(source, encoding="utf-8")
+    return report
+
+
 def termsheet(lang: str) -> str:
     """The imposed terminology of one language, from content/terminology, as the editors read it."""
     tdir = ROOT / "content" / "terminology"
@@ -735,7 +798,9 @@ def termsheet(lang: str) -> str:
         x = t["par_langue"].get(lang)
         if x and x.get("forme_imposee"):
             wrong = f" (faux sens observés : {t['faux_sens_observes']})" if t.get("faux_sens_observes") else ""
-            out.append(f"- {t['fr']}{wrong} → **{x['forme_imposee']}**")
+            where = f" [où : {t['ou']}]" if t.get("ou") else ""
+            note = f" — {x['note']}" if x.get("note") else ""
+            out.append(f"- {t['fr']}{wrong}{where} → **{x['forme_imposee']}**{note}")
     out += ["", "## Titres d'œuvres (titre sous lequel l'œuvre est connue)"]
     for t in _load(tdir / "oeuvres.json")["oeuvres"]:
         x = t["par_langue"].get(lang)
@@ -754,6 +819,8 @@ def main() -> int:
     b.add_argument("--dry-run", action="store_true"); b.add_argument("--report", type=Path)
     d = sub.add_parser("dump", help="every editable item of some courses (body, quiz, glossary), with ids")
     d.add_argument("--lang", required=True); d.add_argument("courses", nargs="+")
+    u = sub.add_parser("ui-insert", help="add new French UI keys to every language (draft or French), nothing else")
+    u.add_argument("--keys", nargs="+", required=True)
     t = sub.add_parser("termsheet", help="the imposed terminology of one language, as markdown")
     t.add_argument("--lang", required=True); t.add_argument("--out", type=Path, required=True)
     c = sub.add_parser("check", help="dry run of one output file, one line per rejected edit")
@@ -761,6 +828,10 @@ def main() -> int:
     args = ap.parse_args()
     if args.cmd == "dump":
         print(dump(args.lang, args.courses))
+        return 0
+    if args.cmd == "ui-insert":
+        for lang, counts in ui_insert(args.keys).items():
+            print(lang, counts)
         return 0
     if args.cmd == "termsheet":
         args.out.parent.mkdir(parents=True, exist_ok=True)

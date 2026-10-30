@@ -16,15 +16,17 @@ python3 scripts/i18n_gate.py --lang fi             # une langue
 
 | Vérification | Ce qu'elle refuse | Baseline |
 |---|---|---|
-| `cles` | une clé d'interface française absente d'une langue (iOS ou Android) ; des placeholders (`%@`, `%d`, `{n}`…) différents du français | non |
-| `copies` | un cours absent d'une langue ; une copie iOS ou Android différente de la source `content/courses` ; un glossaire ou un catalogue différent entre iOS et Android ; un lien `[[terme]]` sans entrée de glossaire | oui |
+| `cles` | une clé d'interface française absente d'une langue (iOS ou Android) ; des placeholders différents du français, ou des arguments `%@` / `%d` non numérotés dans un autre ordre (l'app planterait) ; une clé en double dans une table Swift ; un `content/locales/<lang>/ui_strings.json` qui ne correspond plus à la table publiée | non |
+| `copies` | un cours absent d'une langue ; une copie iOS ou Android différente de la source `content/courses` ; un glossaire, un catalogue, des collections ou l'index Android différents entre iOS et Android, ou absents d'un côté ; un lien `[[terme]]` sans entrée de glossaire (même règle que les apps : casse et ponctuation ignorées) | oui |
 | `validateur` | un nouveau constat de `scripts/check_course_translation.py` (anglais ou français résiduel, liens de glossaire perdus ou déplacés, balisage, ponctuation) | oui |
 | `terminologie` | une nouvelle occurrence d'un mot piège, d'une variante de terme produit ou d'un titre d'œuvre traduit littéralement (`content/terminology/`) | oui |
 | `quiz` | un quiz dont la structure ou la bonne réponse diffère du français, ou une option restée en anglais | oui |
 | `fiche` | un champ de la fiche App Store trop long ou une locale inconnue | non |
 | `temoins` | une chaîne témoin qui n'a plus sa traduction attendue | non |
 
-**Le baseline** (`content/terminology/i18n_gate_baseline.json`) liste les constats qui existaient quand la porte a été posée. Ils ne bloquent pas ; seuls les nouveaux bloquent. Quand vous en corrigez, la porte affiche « N corrigés depuis le baseline » : lancez alors `python3 scripts/i18n_gate.py --update-baseline` et commitez le fichier, pour que la porte se resserre. N'ajoutez jamais un constat au baseline pour faire passer un commit : corrigez le texte, ou, si c'est un faux positif, corrigez la règle (`check_course_translation.py`, `content/terminology/*.json`).
+**Le baseline** (`content/terminology/i18n_gate_baseline.json`) liste les constats qui existaient quand la porte a été posée. Ils ne bloquent pas ; seuls les nouveaux bloquent. Quand vous en corrigez, la porte affiche « N corrigés depuis le baseline » : lancez alors `python3 scripts/i18n_gate.py --update-baseline` et commitez le fichier, pour que la porte se resserre. Cette commande refuse d'écrire s'il reste des constats NOUVEAU : corrigez le texte, ou, si c'est un faux positif, corrigez la règle (`check_course_translation.py`, `content/terminology/*.json`). Un seul cas justifie `--update-baseline --accept-new` : un cours restructuré, dont les constats connus changent d'emplacement (`s2.b1` devient `s3.b0`) ; dites-le dans le message de commit.
+
+Deux limites à connaître : un constat est identifié par son emplacement et sa règle, donc une deuxième faute de même règle dans un segment qui en a déjà une connue ne ressort pas ; et la porte ne lit pas les textes légaux affichés par iOS (`LegalDocumentContent.swift`), seulement leur copie `content/locales/<lang>/legal.json`.
 
 **Les chaînes témoins** (`content/terminology/sentinelles.json`) sont les 30 textes d'interface qui ont le plus trahi pendant l'audit (essai gratuit, mensuel, Premium, « Fin de l'essai », « Léger », « Impossible de charger l'offre »…). Leur traduction attendue est figée dans les 26 langues après une relecture native et une contre-relecture. Pour en changer une volontairement, modifiez sa valeur dans `sentinelles.json` dans le même commit que le texte, et dites pourquoi dans le message.
 
@@ -35,15 +37,16 @@ Les trois copies d'un même texte (source `content/`, bundle iOS, copie Android)
 ### Une chaîne d'interface
 
 1. Écrire la clé en français dans la table `french` d'`ios/Sophia/Utilities/AppLocalizable.swift` (et dans `android/app/src/main/assets/strings/fr.json` si Android l'affiche).
-2. Brouillon dans les 26 langues : `python3 scripts/translate_ui_strings.py translate --lang all` (depuis le français, jamais depuis l'anglais).
-3. Post-édition des seules clés nouvelles (voir la section 3) : `packs --keys <clé> …`.
-4. `python3 scripts/i18n_gate.py --only cles,terminologie,temoins`, puis la porte complète.
+2. Brouillon machine (facultatif) : `python3 scripts/translate_ui_strings.py translate --lang all`. Il part du français et ne traduit que les clés absentes de la table publiée ; il écrit dans `content/locales/<lang>/ui_strings.json`. Il ne couvre pas l'anglais, l'espagnol, l'allemand, le portugais et l'italien.
+3. `python3 scripts/postedit_i18n.py ui-insert --keys <clé> …` : ajoute la clé à chaque langue, sur iOS et Android, avec le brouillon s'il existe, sinon le texte français. Rien d'autre n'est touché. (L'ancienne commande `translate_ui_strings.py inject` est retirée : elle réécrivait tout le fichier Swift.)
+4. Post-édition de ces clés (section 3) : `packs --keys <clé> …`. Tant qu'elle n'est pas faite, la clé affiche du français ou un brouillon machine.
+5. `python3 scripts/i18n_gate.py --only cles,terminologie,temoins`, puis la porte complète.
 
 ### Un cours
 
 1. Le cours en français dans `content/courses/fr/<id>.json`, son quiz et son glossaire.
-2. Brouillon dans les 26 langues (`scripts/translate_courses_v2.py --lang all` pour le corps ; quiz et glossaire par leurs scripts habituels), puis recopie vers iOS et Android.
-3. Post-édition du cours, de son quiz et de son glossaire (section 3) : `packs --courses <id>`.
+2. Brouillon dans les 26 langues (`scripts/translate_courses_v2.py --lang all` pour le corps : sans `--force`, il ne traduit que les cours qui n'existent pas encore dans la langue ; quiz et glossaire par leurs scripts habituels), puis recopie vers iOS et Android.
+3. Post-édition du cours, de son quiz, de son glossaire et de sa rubrique si elle est nouvelle (section 3) : `packs --courses <id>`. La commande s'arrête en erreur si un cours ou une clé demandés n'existent pas dans la langue.
 4. Passe de cohérence sur ce cours (section 3).
 5. La porte complète.
 
@@ -53,13 +56,13 @@ C'est la méthode de l'étape 3 (voir `docs/post-edition-native.md`), outillée 
 
 ```
 # 1. Lots de travail et fiche de terminologie, par langue
-python3 scripts/postedit_i18n.py packs --lang it --out W/packs/it --courses course_312_mon_cours
-python3 scripts/postedit_i18n.py packs --lang it --out W/packs/it --keys paywall.nouveau.titre "offer.*"
-python3 scripts/postedit_i18n.py termsheet --lang it --out W/term/it.md
+python3 scripts/postedit_i18n.py packs --lang it --out W/packs/it --courses course_312_mon_cours --keys paywall.nouveau.titre "offer.*"
+#    affiche les lots écrits, par exemple {"ui2": 4, "cours_000": 35, "quiz_000": 52, "glossaire_000": 9}
 #    (sans --courses ni --keys : toutes les surfaces de la langue, comme à l'étape 3)
+python3 scripts/postedit_i18n.py termsheet --lang it --out W/term/it.md
 
-# 2. Post-édition : workflow .claude/workflows/post-edition-native.js
-#    args : {"work": "W", "lots": ["it/cours_000", "it/quiz_000", "it/glossaire_000", "it/ui4"]}
+# 2. Post-édition : workflow .claude/workflows/post-edition-native.js, avec les lots affichés
+#    args : {"work": "W", "lots": ["it/ui2", "it/cours_000", "it/quiz_000", "it/glossaire_000"]}
 #    Chaque lot donne W/out/<lang>/<lot>.json ; le post-éditeur corrige jusqu'à zéro refus de
 python3 scripts/postedit_i18n.py check --lang it --file W/out/it/cours_000.json
 
@@ -80,6 +83,7 @@ Pour un gros lot (une langue entière, une nouvelle langue), ajouter la relectur
 python3 scripts/postedit_review.py sample --work W --lang it
 # workflow .claude/workflows/relecture-native.js, args {"work": "W", "langs": ["it"]}
 python3 scripts/postedit_review.py collect --work W --lang it --journal <journal.jsonl du workflow>
+#    s'arrête en erreur si un des cinq relecteurs n'a rien rendu : relancer celui-là
 python3 scripts/postedit_i18n.py apply --lang it --from W/review_out/it
 ```
 

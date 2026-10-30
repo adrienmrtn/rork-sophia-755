@@ -1,5 +1,5 @@
 export const meta = {
-  name: 'coherence-par-cours',
+  name: 'coherence-cours',
   description: 'Cohérence des noms et termes entre corps de cours, quiz et glossaire, huit cours par agent',
   phases: [{ title: 'Cohérence', detail: 'un agent par groupe de huit cours' }],
 }
@@ -15,7 +15,7 @@ function prompt(lang, g, courses) {
 
 Read first: ${R}/content/TRANSLATION_GUIDE_${lang.toUpperCase().replace('-', '_')}.md (section 5 on proper names, section 4 on glossary terms) and ${P}/term/${lang}.md.
 Your courses: ${courses ? courses.join(' ') : `cd ${R} && ls content/courses/${lang} | sort | sed -n '${g * PER + 1},${g * PER + PER}p' (strip ".json" to get the course ids)`}.
-Dump them: python3 scripts/postedit_i18n.py dump --lang ${lang} <course ids...> (one or two at a time if long). Each item is "### <id>" then its current text; sections say which output file the item belongs to.
+Dump them: cd ${R} && python3 scripts/postedit_i18n.py dump --lang ${lang} <course ids...> (one or two at a time if long). Each item is "### <id>" then its current text; sections say which output file the item belongs to.
 
 For each course, list every proper name (people, places, gods, characters, peoples, dynasties), title of a work, and technical term that occurs in more than one place: body, quiz questions/options/explanations, glossary definitions, and the glossary terms themselves (the keys after "|", which appear as [[term]] in the body). Wherever the same thing is written differently (spelling, transliteration, with or without article or prefix, a different word for the same concept, a quiz option that does not match the name used in the lesson), choose ONE form: the established ${NAMES[lang]} form (guide §5, terminology sheet), and if a glossary term exists for it, normally that term's form. Then make every occurrence use it. Also fix any plain error you meet while doing this (wrong gender agreement on a name, a name that is clearly mistranslated). Do not restyle anything else.
 
@@ -23,7 +23,7 @@ Constraints: [[ ]] spans must stay exactly a glossary key of that course, never 
 
 Write only the items you change, full new text, to these files (create only the ones you need), JSON {"edits":[{"id":"<exact id>","texte":"<full text>"}]} (glossary items: "texte" = definition only, optional "terme"):
   ${dir}/cours_coh${tag}.json, ${dir}/quiz_coh${tag}.json, ${dir}/glossaire_coh${tag}.json
-Then run for each file you wrote: python3 scripts/postedit_i18n.py check --lang ${lang} --file <file>  and fix every "REJET" line until none remain.
+Then run for each file you wrote: cd ${R} && python3 scripts/postedit_i18n.py check --lang ${lang} --file <file>  and fix every "REJET" line until none remain.
 Return one line: number of edits per file, and the names you harmonised (short).`
 }
 

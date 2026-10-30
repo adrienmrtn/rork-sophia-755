@@ -14,9 +14,11 @@ on:
     paths:
       - "content/**"
       - "ios/Sophia/Utilities/AppLocalizable.swift"
+      - "ios/Sophia/Utilities/AppLanguage.swift"
       - "ios/Sophia/Utilities/LegalDocumentContent.swift"
-      - "ios/Sophia/Resources/CoursesV2/**"
-      - "ios/Sophia/Resources/Locales/**"
+      - "ios/Sophia/Services/GlossaryData.swift"
+      - "ios/Sophia/Resources/**"
+      - "ios/Sophia/*.lproj/**"
       - "android/app/src/main/assets/**"
       - "appstore/**"
       - "scripts/i18n_gate.py"
@@ -26,14 +28,17 @@ on:
       - "scripts/check_quiz_structure.py"
       - "scripts/course_translation_io.py"
       - "scripts/appstore_metadata.py"
+      - "scripts/*.json"
       - ".github/workflows/i18n-gate.yml"
   pull_request:
     paths:
       - "content/**"
       - "ios/Sophia/Utilities/AppLocalizable.swift"
+      - "ios/Sophia/Utilities/AppLanguage.swift"
       - "ios/Sophia/Utilities/LegalDocumentContent.swift"
-      - "ios/Sophia/Resources/CoursesV2/**"
-      - "ios/Sophia/Resources/Locales/**"
+      - "ios/Sophia/Services/GlossaryData.swift"
+      - "ios/Sophia/Resources/**"
+      - "ios/Sophia/*.lproj/**"
       - "android/app/src/main/assets/**"
       - "appstore/**"
       - "scripts/i18n_gate.py"
@@ -43,6 +48,7 @@ on:
       - "scripts/check_quiz_structure.py"
       - "scripts/course_translation_io.py"
       - "scripts/appstore_metadata.py"
+      - "scripts/*.json"
       - ".github/workflows/i18n-gate.yml"
 
 concurrency:

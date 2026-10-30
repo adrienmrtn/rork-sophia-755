@@ -35,14 +35,22 @@ def _parse(md: Path) -> dict[str, dict]:
     items, ctx_by_course = {}, {}
     for block in md.read_text(encoding="utf-8").split("\n### ")[1:]:
         lines = block.split("\n")
-        it = {"id": lines[0]}
+        it, field = {"id": lines[0]}, None
         for line in lines[1:]:
             if line.startswith("FR: "):
-                it["fr"] = line[4:]
+                it["fr"], field = line[4:], "fr"
             elif line.startswith("ACTUEL: "):
-                it["avant"] = line[8:]
+                it["avant"], field = line[8:], "avant"
+            elif line.startswith("  ! "):
+                field = None
             elif line.startswith("(") and "fr" not in it:
                 it["ctx"] = line[1:-1] if line.endswith(")") else line[1:]
+            elif field:
+                # Store and legal texts keep their line breaks in the pack: the field goes on.
+                it[field] += "\n" + line
+        for field in ("fr", "avant"):
+            if field in it:
+                it[field] = it[field].rstrip("\n")
         cid = re.split(r"[/|]", it["id"])[0]
         if it.get("ctx", "").startswith(("COURS ", "Définitions françaises")):
             ctx_by_course[cid] = it["ctx"][:1500]
@@ -147,6 +155,12 @@ def collect(work: Path, lang: str, journals: list[Path]) -> dict:
             text = re.sub(r"\[\[(.+?)\]\]", lambda m: f"[[{ren.get(m.group(1), m.group(1))}]]", text)
         return ident, text
 
+    expected = {f"{lang}:fidélité:a", f"{lang}:fidélité:b", f"{lang}:langue:a", f"{lang}:langue:b", f"{lang}:oublis"}
+    answered = {labels.get(a, "") for a in results}
+    missing = sorted(expected - answered)
+    if missing:
+        print(f"ATTENTION : aucun verdict pour {', '.join(missing)} (agent échoué ou absent) : relancer ces relectures.")
+
     stats, final = Counter(), {}
     lens_rank = lambda a: 0 if ":fidélité:" in labels.get(a, "") else 1 if ":langue:" in labels.get(a, "") else 2
     for agent in sorted(results, key=lens_rank):
@@ -181,7 +195,7 @@ def collect(work: Path, lang: str, journals: list[Path]) -> dict:
     d.mkdir(parents=True, exist_ok=True)
     (d / "fixes.json").write_text(json.dumps(log, ensure_ascii=False, indent=1), encoding="utf-8")
     (d / "stats.json").write_text(json.dumps(stats, ensure_ascii=False, indent=1), encoding="utf-8")
-    return {"stats": stats, "fixes": {s: len(v) for s, v in by_surface.items()}}
+    return {"stats": stats, "fixes": {s: len(v) for s, v in by_surface.items()}, "relectures_manquantes": missing}
 
 
 def main() -> int:
@@ -197,7 +211,9 @@ def main() -> int:
     if args.cmd == "sample":
         print(json.dumps(sample(args.work, args.lang, args.changed, args.unchanged), ensure_ascii=False))
     else:
-        print(json.dumps(collect(args.work, args.lang, args.journal), ensure_ascii=False))
+        rep = collect(args.work, args.lang, args.journal)
+        print(json.dumps(rep, ensure_ascii=False))
+        return 1 if rep["relectures_manquantes"] else 0
     return 0
 
 

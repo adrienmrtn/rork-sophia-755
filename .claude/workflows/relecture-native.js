@@ -1,5 +1,5 @@
 export const meta = {
-  name: 'verification-native',
+  name: 'relecture-native',
   description: 'Relecture native adverse d\'un échantillon post-édité par langue : fidélité, puis langue, plus contrôle des segments laissés tels quels',
   phases: [{ title: 'Fidélité' }, { title: 'Langue' }, { title: 'Oublis' }],
 }

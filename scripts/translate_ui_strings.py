@@ -16,7 +16,7 @@ Outputs:
 Usage:
     python scripts/translate_ui_strings.py translate --lang tr --workers 10
     python scripts/translate_ui_strings.py translate --lang all --workers 10
-    python scripts/translate_ui_strings.py inject
+    python scripts/translate_ui_strings.py inject   # retired: use postedit_i18n.py ui-insert
     python scripts/translate_ui_strings.py qa --lang all
 """
 
@@ -274,10 +274,18 @@ def translate_lang(lang: str, workers: int, force: bool) -> Path:
     if cache_path.exists() and not force:
         cache = json.loads(cache_path.read_text(encoding="utf-8"))
 
+    # The shipped table is the truth: it carries the post-editing (docs/post-edition-native.md,
+    # docs/processus-traduction.md). Only keys it does not have yet get a machine draft;
+    # re-translating a shipped string would put raw MT back over an edited one.
+    shipped = dict(extract_dict_entries(source, SWIFT_CASE_BY_CODE[lang]))
+
     out: dict[str, str] = {}
     pending: list[tuple[str, str]] = []
 
     for key, french in entries:
+        if key in shipped:
+            out[key] = shipped[key]
+            continue
         pinned = pinned_value(key, french)
         if pinned is not None:
             out[key] = pinned
@@ -320,6 +328,8 @@ def translate_lang(lang: str, workers: int, force: bool) -> Path:
     en_map = dict(entries)
     repaired = 0
     for key, value in list(out.items()):
+        if key in shipped:
+            continue  # checked by scripts/i18n_gate.py, which knows the legitimate variants
         if placeholder_signature(value) != placeholder_signature(en_map[key]):
             out[key] = en_map[key]
             repaired += 1
@@ -328,14 +338,15 @@ def translate_lang(lang: str, workers: int, force: bool) -> Path:
 
     # Ensure every language.* endonym is correct even if EN block was incomplete.
     for name, label in NATIVE_LANGUAGE_NAMES.items():
-        out[f"language.{name}"] = label
+        out.setdefault(f"language.{name}", label)
 
     # Apply curated chrome overrides when present (short labels / imperatives).
     overrides_path = ROOT / "scripts" / "ui_string_overrides.json"
     if overrides_path.exists():
         all_overrides = json.loads(overrides_path.read_text(encoding="utf-8"))
         for key, value in all_overrides.get(lang, {}).items():
-            out[key] = value
+            if key not in shipped:
+                out[key] = value
 
     locale_dir = LOCALES_DIR / lang
     locale_dir.mkdir(parents=True, exist_ok=True)
@@ -374,10 +385,24 @@ def load_pack_entries(lang: str) -> list[tuple[str, str]]:
     missing = [k for k in fr_keys if k not in data]
     if missing:
         raise SystemExit(f"{lang}: missing {len(missing)} keys vs FR (e.g. {missing[:5]})")
-    return [(k, data[k]) for k in fr_keys]
+    # Plural forms French does not have (".few", ".two") live only in the language's own table:
+    # keep the ones it ships, or inject would drop them.
+    shipped = {k for k, _ in extract_dict_entries(source, SWIFT_CASE_BY_CODE[lang])}
+    fr_set = set(fr_keys)
+    extras = [k for k in data if k not in fr_set and k in shipped]
+    return [(k, data[k]) for k in fr_keys] + [(k, data[k]) for k in extras]
 
 
 def inject() -> None:
+    # Retired. It regenerated the whole of AppLocalizable.swift from a template that predates
+    # trialString / yearsString / the plural tables, so a run deleted that code and reset the
+    # language names. New keys now go in one at a time, without touching anything else:
+    #   python3 scripts/postedit_i18n.py ui-insert --keys <key> ...
+    # (docs/processus-traduction.md).
+    raise SystemExit(
+        "inject is retired: it rewrites AppLocalizable.swift from an outdated template. "
+        "Use: python3 scripts/postedit_i18n.py ui-insert --keys <key> ... (docs/processus-traduction.md)"
+    )
     source = LOCALIZABLE.read_text(encoding="utf-8")
     shipped_codes = ["fr", "en", "es", "de", "pt", "it", *NEW_UI_LANGS]
     shipped_names = [SWIFT_CASE_BY_CODE[c] for c in shipped_codes]
