@@ -209,6 +209,20 @@ def _json(p: Path):
     return json.loads(p.read_text(encoding="utf-8"))
 
 
+def _duplicate_keys(p: Path) -> list[str]:
+    dups = []
+
+    def hook(pairs):
+        seen = set()
+        for k, _ in pairs:
+            if k in seen:
+                dups.append(k)
+            seen.add(k)
+        return dict(pairs)
+    json.loads(p.read_text(encoding="utf-8"), object_pairs_hook=hook)
+    return dups
+
+
 def check_copies(langs: list[str]) -> list[str]:
     out = []
     # check_terminology reads these with a loader that turns a broken file into "nothing
@@ -237,6 +251,10 @@ def check_copies(langs: list[str]) -> list[str]:
         # Both apps fall back to a match that ignores case, spaces and punctuation
         # (GlossaryStore.normKey on iOS, GlossaryStore.normalize on Android).
         normalized = {f"{k.split('|', 1)[0]}|{_norm(k.split('|', 1)[1])}" for k in glossary if "|" in k}
+        # A duplicate key loads silently (the last one wins) and breaks every rewrite tool.
+        for p in {gi, ga}:
+            if p.exists():
+                out += [f"copies|{lang}|{p.relative_to(ROOT)}|{k}|clé en double" for k in _duplicate_keys(p)]
         if gi.exists() and ga.exists() and _json(ga) != glossary:
             g2 = _json(ga)
             for k in sorted(set(glossary) | set(g2)):
