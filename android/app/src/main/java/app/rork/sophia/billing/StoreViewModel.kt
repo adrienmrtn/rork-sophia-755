@@ -139,7 +139,7 @@ class StoreViewModel(app: Application) : AndroidViewModel(app) {
             observeCustomerInfo()
             attachSignedInUser()
             reportDiscountBucket()
-        LanguageManager.reportToRevenueCat(getApplication())
+            LanguageManager.reportToRevenueCat(getApplication())
             return
         }
         val key = AppConfig.revenueCatApiKey
