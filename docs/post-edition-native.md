@@ -110,3 +110,29 @@ Anglais, espagnol, allemand, italien, portugais (Brésil et Portugal), turc, pol
 Les chiffres des quatre premières colonnes sont des segments réécrits. La relecture adverse a corrigé 111 segments sur environ 1 800 relus, dont 10 majeurs ou bloquants, par exemple « Le Milt de Paris » (la rate) au lieu de *Le Spleen de Paris* en néerlandais, « Πολιορκία Επικίνδυνη » (un siège militaire) pour le Siège périlleux en grec, « Two loves » ajouté à un sous-titre anglais, un titre d'œuvre calqué en roumain. Les 175 occurrences de terminologie qui restent sont en grande partie des faux positifs vérifiés (un nombre pris pour une année, le tutoiement allemand « du », le nom d'un menu Apple) ; le polonais garde le plus de reste réel.
 
 Ce que l'option B ne couvre pas : le reste des cours, quiz et glossaires de ces quinze langues n'a pas été relu segment par segment, et la passe de cohérence leçon / quiz / glossaire n'a pas été faite. Les défauts qui y restent sont ceux que les contrôles automatiques ne savent pas voir.
+
+## Mesure de ce qui reste dans les cours (phase 1, 30/10/2026)
+
+Pour décider où relire en entier, un relecteur natif par langue a évalué 150 segments tirés au hasard parmi les cours, quiz et glossaires que personne n'avait retouchés (90 de cours, 40 de quiz, 20 de glossaire). Le finnois et le danois, relus en entier à l'étape 3, servent d'étalon : c'est le niveau d'une langue finie.
+
+| Langue | Note | Défauts majeurs ou bloquants | Tout défaut, mineurs compris | Principaux types |
+|---|---|---|---|---|
+| Tchèque | 3 | 37.3 % | 64.7 % | calque, grammaire, sens, nom_propre |
+| Polonais | 3 | 33.3 % | 54.7 % | calque, grammaire, nom_propre, terminologie |
+| Grec | 3 | 30.7 % | 48.7 % | calque, grammaire, nom_propre, sens |
+| Suédois | 3 | 30.0 % | 60.0 % | calque, terminologie, grammaire, sens |
+| Turc | 3 | 28.0 % | 58.0 % | calque, grammaire, sens, nom_propre |
+| Hongrois | 3 | 27.3 % | 60.0 % | sens, calque, grammaire, terminologie |
+| Roumain | 3.5 | 23.3 % | 52.0 % | grammaire, calque, sens, terminologie |
+| Bulgare | 3 | 22.7 % | 51.3 % | calque, grammaire, sens, nom_propre |
+| Allemand | 3.5 | 22.7 % | 48.7 % | calque, grammaire, sens, nom_propre |
+| Néerlandais | 3 | 21.3 % | 51.3 % | calque, grammaire, sens, terminologie |
+| Espagnol | 3.5 | 16.7 % | 42.0 % | calque, terminologie, sens, grammaire |
+| Italien | 3.5 | 16.7 % | 46.7 % | calque, sens, grammaire, nom_propre |
+| Anglais | 4 | 8.0 % | 35.3 % | calque, sens, grammaire, typographie |
+| Portugais (Portugal) | 4 | 6.7 % | 27.3 % | sens, typographie, grammaire, registre |
+| Portugais (Brésil) | 4 | 5.3 % | 24.0 % | calque, terminologie, sens |
+| Finnois (étalon) | 4 | 4.0 % | 26.7 % | sens, grammaire, typographie |
+| Danois (étalon) | 4 | 3.3 % | 18.0 % | grammaire, sens, calque |
+
+Sur 150 segments, la marge d'erreur est d'environ ±7 points autour de 30 %, ±4 points autour de 5 %. Lecture : l'anglais et les deux portugais sont proches de l'étalon ; les douze autres langues gardent dans leurs cours un défaut visible pour un lecteur natif dans un segment sur six à un sur trois, surtout des calques et des fautes de grammaire. Les 499 corrections proposées par les relecteurs pour les défauts majeurs de l'échantillon ont été appliquées (2 refusées par le contrôle : un nombre ajouté).
