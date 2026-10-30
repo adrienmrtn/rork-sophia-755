@@ -185,6 +185,10 @@ class ProgressManager {
     func applyRemoteProgress(_ remote: UserProgress) {
         progress = remote
         persistLocally()
+        // La série du cloud date du dernier envoi : si un jour a été sauté depuis, elle doit
+        // retomber à 0 ici aussi (la remise à zéro faite au lancement, avant la restauration
+        // de la session, n'avait pas pu partir vers le cloud).
+        updateStreak()
     }
 
     var streak: Int { progress.streak }

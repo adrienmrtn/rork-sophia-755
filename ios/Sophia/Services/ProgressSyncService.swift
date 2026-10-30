@@ -1,6 +1,7 @@
 import Foundation
 import Observation
 import Supabase
+import UIKit
 
 /// Conflit détecté au moment de lier un compte : la progression locale et celle du cloud
 /// sont toutes deux non vides et divergentes. L'utilisateur choisit laquelle conserver.
@@ -29,6 +30,8 @@ final class ProgressSyncService {
     private let client = SupabaseManager.shared
     private weak var progressManager: ProgressManager?
     private var pushTask: Task<Void, Never>?
+    /// Progression en attente d'envoi pendant le debounce, `nil` une fois partie.
+    private var pendingSnapshot: UserProgress?
     private let pushDebounce: UInt64 = 2_500_000_000 // 2,5 s
 
     private init() {}
@@ -45,11 +48,31 @@ final class ProgressSyncService {
     func schedulePush(_ progress: UserProgress) {
         guard AuthService.shared.isSignedIn else { return }
         let snapshot = progress
+        pendingSnapshot = snapshot
         pushTask?.cancel()
         pushTask = Task { [weak self] in
             try? await Task.sleep(nanoseconds: self?.pushDebounce ?? 2_500_000_000)
             guard !Task.isCancelled else { return }
+            self?.pendingSnapshot = nil
             await self?.push(snapshot)
+        }
+    }
+
+    /// Envoie tout de suite la progression en attente du debounce. Appelé quand l'app passe en
+    /// arrière-plan : un cours terminé juste avant de fermer l'app n'atteignait jamais le
+    /// cloud (l'app est suspendue avant la fin des 2,5 s), et le lancement suivant trouvait
+    /// deux progressions différentes.
+    func flushPendingPush() {
+        guard let snapshot = pendingSnapshot else { return }
+        pendingSnapshot = nil
+        pushTask?.cancel()
+        // Quelques secondes accordées par iOS pour finir l'envoi une fois l'app en arrière-plan.
+        let backgroundTask = UIApplication.shared.beginBackgroundTask(withName: "progress-sync")
+        pushTask = Task { [weak self] in
+            await self?.push(snapshot)
+            if backgroundTask != .invalid {
+                UIApplication.shared.endBackgroundTask(backgroundTask)
+            }
         }
     }
 

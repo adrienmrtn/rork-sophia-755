@@ -34,6 +34,20 @@ final class AuthService {
 
     var isSignedIn: Bool { currentUser != nil }
 
+    /// `true` entre le début d'une connexion Apple / Google et sa prise en compte par l'UI.
+    /// La session restaurée depuis le Keychain au lancement fait aussi passer `isSignedIn` à
+    /// `true` : sans ce drapeau, chaque lancement était traité comme une nouvelle liaison de
+    /// compte, et l'écran « Cet appareil / Ton compte » revenait dès que local et cloud
+    /// différaient d'un cours.
+    private var isInteractiveSignInPending = false
+
+    /// Indique si la session qui vient d'arriver vient d'une connexion faite par l'utilisateur,
+    /// et remet le drapeau à zéro.
+    func consumeInteractiveSignIn() -> Bool {
+        defer { isInteractiveSignInPending = false }
+        return isInteractiveSignInPending
+    }
+
     private let client = SupabaseManager.shared
     private var authStateTask: Task<Void, Never>?
 
@@ -88,6 +102,7 @@ final class AuthService {
             throw AuthError.missingIdentityToken
         }
 
+        isInteractiveSignInPending = true
         do {
             try await client.auth.signInWithIdToken(
                 credentials: OpenIDConnectCredentials(
@@ -97,6 +112,7 @@ final class AuthService {
                 )
             )
         } catch {
+            isInteractiveSignInPending = false
             throw AuthError.underlying(error.localizedDescription)
         }
     }
@@ -124,6 +140,7 @@ final class AuthService {
         }
         let accessToken = result.user.accessToken.tokenString
 
+        isInteractiveSignInPending = true
         do {
             try await client.auth.signInWithIdToken(
                 credentials: OpenIDConnectCredentials(
@@ -133,6 +150,7 @@ final class AuthService {
                 )
             )
         } catch {
+            isInteractiveSignInPending = false
             throw AuthError.underlying(error.localizedDescription)
         }
     }

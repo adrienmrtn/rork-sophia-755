@@ -258,13 +258,21 @@ struct ContentView: View {
             .sophiaSheetChrome()
         }
         .task {
+            // Une connexion faite pendant l'onboarding arrive ici comme un lancement.
+            _ = auth.consumeInteractiveSignIn()
             if auth.isSignedIn {
                 await syncService.syncAtLaunch()
             }
         }
         .onChange(of: auth.isSignedIn) { _, signedIn in
-            if signedIn {
+            guard signedIn else { return }
+            // Seule une connexion faite à l'instant peut demander quelle progression garder.
+            // La session restaurée au lancement (elle arrive après le premier affichage)
+            // passe aussi par ici : c'est un lancement, pas une liaison de compte.
+            if auth.consumeInteractiveSignIn() {
                 Task { await syncService.syncAfterSignIn() }
+            } else {
+                Task { await syncService.syncAtLaunch() }
             }
         }
         .onAppear {
@@ -301,6 +309,10 @@ struct ContentView: View {
             openBlockerCourseIfNeeded()
         }
         .onChange(of: scenePhase) { _, phase in
+            if phase == .background {
+                syncService.flushPendingPush()
+                return
+            }
             guard phase == .active else { return }
             blocker.reconcileShield()
             openBlockerCourseIfNeeded()
