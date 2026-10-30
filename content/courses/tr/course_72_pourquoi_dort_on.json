@@ -4,11 +4,11 @@
   "subtitle": "Beden ve beyin",
   "subject": "sciences",
   "subcategory": "Dünya ve evren",
-  "description": "Ömrünün üçte birini uyuyarak geçirirsin. Bu yitirilmiş zaman değildir: uyku beyni temizler, bedeni onarır ve anıları kazır.",
+  "description": "Ömrünün üçte birini uyuyarak geçirirsin. Bu boşa giden zaman değildir: uyku beyni temizler, bedeni onarır ve anıları belleğe kazır.",
   "hero": {
     "image": "pourquoi_dort_on",
     "ratio": "16:9",
-    "hook": "Uyumak sönmek değildir: bedenin bütün gece süren büyük şantiyesidir."
+    "hook": "Uyumak kapanmak değildir: bedenin gece boyunca süren büyük şantiyesidir."
   },
   "sections": [
     {
@@ -18,36 +18,36 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "75 yıllık bir ömürde yaklaşık **25 yıl** uyursun. Uzun süre uyku yalnızca bir ara sanıldı. Aslında içmek veya yemek kadar yaşamsal, etkin bir iştir."
+          "text": "75 yıllık bir ömürde yaklaşık **25 yıl** uyursun. Uzun zaman uykunun yalnızca bir mola olduğu sanıldı. Oysa uyku, içmek ya da yemek kadar yaşamsal, etkin bir çalışmadır."
         },
         {
           "type": "paragraph",
-          "text": "Bilim “neden” uyuduğumuza dair henüz bütün yanıtları vermez. Ama uyumayınca ne olduğunu ve gecenin sessizce neyi onardığını çok iyi bilir."
+          "text": "Bilimin, “neden” uyuduğumuza dair henüz bütün yanıtları yok. Ama uyunmadığında neler olduğunu ve gecenin sessizce neleri onardığını çok iyi biliyor."
         }
       ]
     },
     {
       "id": "course_72_pourquoi_dort_on_p1",
-      "title": "Uyku yokluğunun ortaya çıkardığı",
+      "title": "Uykusuzluğun ortaya koydukları",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**1964**'te Amerikalı öğrenci **Randy Gardner** **11 gün** uyumaz. Varsanılar, paranoya, çöken bir zihin: beyin dinlenmeden dayanamayacağının kanıtı."
+          "text": "**1964**'te Amerikalı öğrenci **Randy Gardner**, **11 gün** boyunca hiç uyumaz. Varsanılar, paranoya, çöken bir zihin: beynin dinlenmeden dayanamadığının kanıtı."
         },
         {
           "type": "image",
           "asset": "sleeping_person_bedroom_night",
           "ratio": "auto",
-          "caption": "Uyku, beyin ve bedenin toparlanması için vazgeçilmez bir iştir"
+          "caption": "Uyku, beynin ve bedenin toparlanması için vazgeçilmez"
         },
         {
           "type": "paragraph",
-          "text": "Sıçanda tüm uyku yokluğu **2 ile 3 haftada** öldürür, kıtlık gibi. İnsanda ender bir genetik hastalık, **ailevi ölümcül uykusuzluk**, ölüme de götürür. Gündelik hayatta 17 saat uyanıklık **0,5 g/l** alkol düzeyine denktir. Beyin o zaman istemsiz kısa bilinç kesintileri olan [[Mikro uykular]] dayatır."
+          "text": "Sıçanlarda hiç uyumamak, tıpkı açlık gibi, **2 ile 3 haftada** öldürür. İnsanda ender görülen genetik bir hastalık olan **ölümcül ailesel uykusuzluk** da ölüme götürür. Gündelik hayatta 17 saat uyanık kalmak, kanda **0,5 g/l** alkole denktir. Beyin bu durumda [[mikro uykular]] dayatır: istemsiz, kısa bilinç kesintileri."
         },
         {
           "type": "funFact",
-          "text": "Rekorundan sonra Randy Gardner art arda **14 saat** uyudu. Uyanınca işleyebildi, çalışabildi, ama uykusunun normal bir ritme dönmesi haftalar sürdü."
+          "text": "Rekorundan sonra Randy Gardner art arda **14 saat** uyudu. Uyandığında normal biçimde işlerini görebiliyordu, ama uykusunun normal ritmine dönmesi haftalar sürdü."
         }
       ]
     },
@@ -58,15 +58,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Uyku sırasında beyin durmaz: kip değiştirir. Denizatı biçimli bellek anahtarı **hipokampus** günü “yeniden oynatır” ve kalıcı depolama için bilgileri beynin dış katmanı [[Neokorteks]] katmanına gönderir. Sonuç: iyi bir geceden sonra çoğu zaman **%20 ile %40** daha iyi öğrenirsin."
+          "text": "Uyku sırasında beyin durmaz: mod değiştirir. Belleğin denizatı biçimindeki kilit yapısı **hipokampus**, günü “yeniden oynatır” ve bilgileri kalıcı olarak saklanmaları için beynin dış katmanı olan [[Neokorteks]] yapısına gönderir. Sonuç: iyi bir uykudan sonra çoğu zaman **%20 ile %40** daha iyi öğrenirsin."
         },
         {
           "type": "paragraph",
-          "text": "Derin uyku, kas ve dokuları onaran **büyüme hormonunu** da tetikler ve bağışıklık sisteminin sinyal molekülleri olan [[Sitokinler]] uyarılır. Başka büyük keşif: gece **on kat** daha etkin bir beyin drenaj ağı olan [[Glimfatik sistem]]. Alzheimer riskine bağlı proteinler dahil atıkları dışarı atar."
+          "text": "Derin uyku, kasları ve dokuları onaran **büyüme hormonunu** da tetikler; bağışıklık sisteminin sinyal molekülleri olan [[sitokinler]] de uyarılır. Bir başka büyük keşif: gece **on kat** daha etkin çalışan bir beyin drenaj ağı olan [[Glimfatik sistem]]. Bu sistem, Alzheimer riskiyle bağlantılı proteinler dahil atıkları dışarı atar."
         },
         {
           "type": "funFact",
-          "text": "Derin uyku sırasında beyin hücreleri yaklaşık **%60** çekilir. Böyle açılan boşluk temizlik sıvısının daha iyi dolaşmasını sağlar."
+          "text": "Derin uyku sırasında beyin hücreleri yaklaşık **%60** büzülür. Böylece açılan boşluk, temizlik sıvısının daha rahat dolaşmasını sağlar."
         }
       ]
     },
@@ -77,11 +77,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kediler **12 ile 16 saat** uyur: güvende yırtıcılar. Zürafalar bazen **30 dakika ile 2 saat**le yetinir, küçük kestirmelerle, kaçmaya hazır. Yunuslar nefes almak için yüzeye çıkmayı sürdürmek üzere **tek bir yarıküreyle**, beynin bir yarısıyla, uyur."
+          "text": "Kediler **12 ile 16 saat** uyur: güvende olan yırtıcılardır. Zürafalar bazen **30 dakika ile 2 saat** arası uykuyla yetinir; kısa kestirmelerle, her an kaçmaya hazır. Yunuslar ise nefes almak için yüzeye çıkmayı sürdürebilmek amacıyla aynı anda **tek bir yarıküreyle**, yani beynin yalnızca yarısıyla uyur."
         },
         {
           "type": "paragraph",
-          "text": "Bebekler ise **18 saate** kadar uyur ve hızlı göz hareketli rüya evresi [[REM uykusu]] bol olur. Bu evre nöronlar arası bağlantıların yapımı olan [[Sinaptogenez]] işini kolaylaştırır."
+          "text": "Bebekler ise **18 saate** kadar uyur ve uykularında hızlı göz hareketlerinin görüldüğü rüya evresi, yani [[REM uykusu]], geniş yer tutar. Bu evre, nöronlar arasında bağlantıların kurulması olan [[sinaptogenez]] sürecine yardım eder."
         }
       ]
     },
@@ -92,15 +92,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "İki güç bizi yatağa iter: gündüz biriken yorgunluk ve **24 saate** ayarlı iç saat [[Sirkadiyen ritimler ve melatonin]]. Işık azalınca beyin uykuyu dayatmadan bedeni hazırlayan bir hormon olan **melatonin** salar."
+          "text": "İki güç bizi yatağa iter: gün boyu biriken yorgunluk ve **24 saate** ayarlı iç saatimizi yöneten [[Sirkadiyen ritimler ve melatonin]] düzeni. Işık azalınca beyin **melatonin** salar: bedeni uykuya hazırlayan ama uykuyu dayatmayan bir hormon."
         },
         {
           "type": "paragraph",
-          "text": "Akşam ekranları bu saati aldatır ve uykuya dalışı geciktirir. Hafta sonunda bir uyku borcunu gerçekten “telafi” edemezsin: yorgunluk düşer, bütün hasar değil. Düzenli saatler, karanlık ve serin oda en iyi müttefiklerdir."
+          "text": "Akşamları ekranlar bu saati yanıltır ve uykuya dalmayı geciktirir. Uyku borcu hafta sonu gerçekten “kapatılamaz”: yorgunluk azalır, ama hasarın hepsi geçmez. Düzenli saatler, karanlık ve serin bir oda en iyi dostların olmayı sürdürür."
         },
         {
           "type": "takeaway",
-          "text": "Uyku beyni temizler, bedeni onarır ve belleği pekiştirir. Tam yoksunluk birkaç haftada öldürür: uyumak bir lüks değildir, yaşamsal bakımdır."
+          "text": "Uyku beyni temizler, bedeni onarır ve belleği pekiştirir. Uykudan tamamen yoksun kalmak birkaç haftada öldürür: uyumak bir lüks değil, yaşamsal bir bakımdır."
         }
       ]
     }

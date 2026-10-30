@@ -1,14 +1,14 @@
 {
   "id": "course_223_l_economie_circulaire",
   "title": "Döngüsel ekonomi: ya atık diye bir şey kalmasaydı?",
-  "subtitle": "Hepsi-atılır düzeninden çıkmak",
+  "subtitle": "Kullan-at düzeninden çıkmak",
   "subject": "comprendreLeMonde",
   "subcategory": "Çevre ve gelecek",
   "description": "**Çıkar, üret, at**: bu model gezegeni tüketir. Döngüsel ekonomi tersini önerir: nesneleri ve malzemeleri olabildiğince uzun süre dolaşımda tutmak.",
   "hero": {
     "image": "l_economie_circulaire",
     "ratio": "16:9",
-    "hook": "Ya atık hiç olmasaydı? Doğadan esinlenen bir ekonomik modelin iddiası budur."
+    "hook": "Ya atık hiç olmasaydı? Doğadan esinlenen bir ekonomik model tam da bunu hedefliyor."
   },
   "sections": [
     {
@@ -18,22 +18,22 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Sanayi devriminden beri ekonomimiz tek yönde işler: kaynak çıkarırız, nesne üretiriz, sonra onları atarız. Bu model kaynakların sonsuz olduğunu varsayar. Değillerdir."
+          "text": "Sanayi Devrimi'nden beri ekonomimiz tek yönde işliyor: kaynaklar çıkarılıyor, nesneler üretiliyor, sonra atılıyor. Bu model kaynakların sonsuz olduğunu varsayar. Oysa değiller."
         },
         {
           "type": "paragraph",
-          "text": "**Döngüsel ekonomi** doğadan esinlenen başka bir mantık önerir; orada hiçbir şey gerçekten yitmez. Ürünlerin ve malzemelerin değerini atığa çevirmek yerine olabildiğince uzun süre dolaşımda tutmayı hedefler."
+          "text": "**Döngüsel ekonomi**, doğadan esinlenen ve hiçbir şeyin gerçekten kaybolmadığı başka bir mantık önerir. Ürünlerin ve malzemelerin değerini atığa dönüştürmek yerine olabildiğince uzun süre dolaşımda tutmayı hedefler."
         }
       ]
     },
     {
       "id": "course_223_l_economie_circulaire_p1",
-      "title": "Doğrusal model sınırına varır",
+      "title": "Doğrusal model sınırlarına dayandı",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Modern ekonomi **doğrusal** denen bir model üzerine kuruldu: çıkar, üret, at. Doğadan hammadde alınır, ürün yapılır; yıpranınca veya modası geçince bu ürünler atık olur."
+          "text": "Modern ekonomi **doğrusal** denen bir model üzerine kuruldu: çıkar, üret, at. Doğadan hammadde alınır, bundan ürünler yapılır; bu ürünler eskiyince ya da modası geçince atığa dönüşür."
         },
         {
           "type": "image",
@@ -43,15 +43,15 @@
         },
         {
           "type": "paragraph",
-          "text": "Bu sistem, kaynakların sınırsız olduğu ve doğanın bütün kirliliği yutabileceği fikrine dayanır. Ama bugün dünya ekonomisi her yıl 1,7 gezegen eşdeğeri kaynak tüketir. Dijital teknolojiler için vazgeçilmez bazı metaller, [[Lityum]] gibi, 2040'tan itibaren zor bulunur olabilir."
+          "text": "Bu sistem, kaynakların sınırsız olduğu ve doğanın bütün kirliliği emebileceği fikrine dayanır. Ama bugün dünya ekonomisi her yıl 1,7 gezegene eşdeğer kaynak tüketiyor. Dijital teknolojiler için vazgeçilmez olan [[Lityum]] gibi bazı metallerin bulunması 2040'tan itibaren zorlaşabilir."
         },
         {
           "type": "funFact",
-          "text": "İnsanlığın ürettiği bütün plastiğin yalnızca %9'u geri dönüştürüldü. Gerisi doğada veya depoda biter; orada 450 yıl kalabilir."
+          "text": "İnsanlığın bugüne dek ürettiği bütün plastiğin yalnızca %9'u geri dönüştürüldü. Geri kalanı doğada ya da çöplüklerde son buluyor; orada 450 yıl kalabiliyor."
         },
         {
           "type": "paragraph",
-          "text": "Temizlik ve atık yönetiminin maliyeti neredeyse hiç bir ürünün satış fiyatına girmez. Gizli bir maliyettir, sonra herkes öder."
+          "text": "Temizlik ve atık yönetiminin maliyeti bir ürünün satış fiyatına neredeyse hiçbir zaman dahil edilmez. Bu, daha sonra herkesin ödediği gizli bir maliyettir."
         }
       ]
     },
@@ -62,11 +62,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Döngüsel ekonomi birkaç döngü önerir, hep aynı öncelik sırasında: en kısa döngü daha iyidir, çünkü daha az enerji ve madde harcar. Her şey **eko-tasarım**la başlar, yani bir ürünün çevresel etkisini yaratıldığı andan düşünmek, dayanıklı ve sökülmesi kolay malzemeler seçmek."
+          "text": "Döngüsel ekonomi birkaç döngü önerir ve bunlar hep aynı öncelik sırasını izler: en kısa döngü tercih edilir, çünkü daha az enerji ve malzeme harcar. Her şey **eko-tasarım**la başlar, yani bir ürünün çevresel etkisini daha tasarım aşamasında düşünmek, dayanıklı ve kolay sökülen malzemeler seçmek."
         },
         {
           "type": "paragraph",
-          "text": "Sonra **yeniden kullanım** gelir (bir nesne dönüştürülmeden el değiştirir, örneğin ikinci el pazarda), ardından bir ürünün ömrünü uzatan **tamir**. Bu adımlar [[Planlı eskitme]] pratiklerine doğrudan karşı koyar; bir nesnenin ömrünü bile isteye kısaltan pratiktir."
+          "text": "Sonra **yeniden kullanım** gelir (bir nesne, ikinci el pazarında olduğu gibi, dönüştürülmeden el değiştirir), ardından bir ürünün ömrünü uzatan **tamir**. Bu adımlar, bir nesnenin ömrünü kasıtlı olarak kısaltma uygulaması olan [[Planlı eskitme]] ile doğrudan mücadele eder."
         },
         {
           "type": "image",
@@ -76,7 +76,7 @@
         },
         {
           "type": "paragraph",
-          "text": "**Geri dönüşüm** ancak son çare olarak devreye girer. Yine de yararlıdır: alüminyum geri dönüştürmek, ham cevher olan [[Boksit]] üzerinden çıkarmaktan %95 daha az enerji harcar. Ama bir nesneyi olduğu gibi yeniden kullanmaktan yine de daha az verimlidir."
+          "text": "**Geri dönüşüm** ancak son çare olarak devreye girer. Yine de yararlıdır: alüminyumu geri dönüştürmek, onu ham cevher olan [[Boksit]] içinden çıkarmaktan %95 daha az enerji harcar. Ama bir nesneyi basitçe yeniden kullanmaktan her zaman daha az verimlidir."
         }
       ]
     },
@@ -93,15 +93,15 @@
           "type": "image",
           "asset": "repair_right_electronics_reuse",
           "ratio": "4:3",
-          "caption": "“Tamir hakkı” üreticilere yedek parça sağlamayı dayatır"
+          "caption": "“Tamir hakkı” üreticilerin yedek parça sağlamasını zorunlu kılar"
         },
         {
           "type": "paragraph",
-          "text": "Buna karşı kamu gücü gitgide daha çok müdahale eder. Avrupa Birliği 2020'de daha katı dayanıklılık kuralları dayatan bir plan başlattı. Ana eksenlerden biri “tamir hakkı”dır; elektronik aygıt üreticilerini yıllarca yedek parça vermeye zorlar."
+          "text": "Buna karşı kamu otoriteleri giderek daha fazla devreye giriyor. Avrupa Birliği 2020'de daha katı dayanıklılık kuralları getiren bir plan başlattı. Planın ana eksenlerinden biri “tamir hakkı”: elektronik cihaz üreticilerini birkaç yıl boyunca yedek parça sağlamaya zorluyor."
         },
         {
           "type": "paragraph",
-          "text": "Başka bir kaldıraç: [[Genişletilmiş Üretici Sorumluluğu]], üreticilere ürünlerinin atık yönetimini ödetir. Bu onları mali olarak daha az kirleten ve daha kolay tamir edilen nesneler tasarlamaya iter."
+          "text": "Bir başka araç da [[Genişletilmiş Üretici Sorumluluğu]]: üreticilere ürünlerinin atık yönetiminin bedelini ödetir. Bu da onları daha az kirleten ve daha kolay tamir edilen nesneler tasarlamaya mali açıdan teşvik eder."
         }
       ]
     },
@@ -116,11 +116,11 @@
         },
         {
           "type": "paragraph",
-          "text": "Bu dönüşümün başarısı tüketici olarak bize de bağlıdır. 3R kuralı, azalt, yeniden kullan, geri dönüştür, ilk adımla başlar: azaltmak, yani alımın gerçekten gerekli olup olmadığını sormak. İklim üzerinde en büyük etkiyi bu ilk jest yapar."
+          "text": "Bu dönüşümün başarısı tüketiciler olarak bize de bağlı. 3R kuralı (azalt, yeniden kullan, geri dönüştür) ilk adımla başlar: azaltmak, yani bir şeyi satın almanın gerçekten gerekli olup olmadığını sorgulamak. İklim üzerinde en büyük etkiyi bu ilk adım yapar."
         },
         {
           "type": "funFact",
-          "text": "Bugün bir ton eski akıllı telefon elektronik kartında, klasik bir altın madeninden çıkarılan bir ton cevherden daha çok altın vardır."
+          "text": "Bugün bir ton eski akıllı telefon devre kartında, klasik bir altın madeninden çıkarılan bir ton cevherden daha çok altın var."
         },
         {
           "type": "takeaway",

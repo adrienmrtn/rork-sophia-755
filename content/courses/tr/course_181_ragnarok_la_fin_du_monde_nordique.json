@@ -4,11 +4,11 @@
   "subtitle": "İskandinav mitolojisi",
   "subject": "mythologie",
   "subcategory": "Diğer mitolojiler",
-  "description": "İlahi bir ceza değil, kabul edilmiş bir kader: Asgard tanrıları düşer, dünya yanar, sonra daha yeşil doğar. İskandinav kıyameti.",
+  "description": "İlahi bir ceza değil, kabullenilmiş bir kader: Asgard tanrıları düşer, dünya yanar, sonra daha yeşil olarak yeniden doğar. İskandinav kıyameti.",
   "hero": {
     "image": "ragnarok_la_fin_du_monde_nordique",
     "ratio": "16:9",
-    "hook": "Tanrılar öleceklerini bilir. Yine de giderler. Sonra küllerin altında toprak yeniden yeşerir."
+    "hook": "Tanrılar öleceklerini bilir. Yine de savaşa giderler. Sonra küllerin altında toprak yeniden yeşerir."
   },
   "sections": [
     {
@@ -18,15 +18,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Ragnarök**, İskandinav mitolojisinde dünyanın sonudur. Sık sık “tanrıların alacakaranlığı” diye çevrilir, ama tam anlam “güçlerin kaderi”ne daha yakındır. Gökten inen bir ceza değildir, kesin bir hiçlik de."
+          "text": "**Ragnarök**, İskandinav mitolojisinde dünyanın sonudur. Çoğu zaman “tanrıların alacakaranlığı” diye çevrilir, ama asıl anlamı daha çok “güçlerin kaderi”dir. Ne gökten inen bir cezadır ne de kesin bir hiçlik."
         },
         {
           "type": "paragraph",
-          "text": "Bu **kaçınılmaz** bir trajedidir: **Asgard** düzeni, kaosa karşı son bir savaşta çöker. Yine de bu kaos bir yeniden doğuş hazırlar. Son, döngünün yalnızca bir evresidir."
+          "text": "Bu **kaçınılmaz** bir trajedidir: **Asgard**'ın düzeni, kaosa karşı verilen son savaşta çöker. Yine de bu kaos bir yeniden doğuşu hazırlar. Son, döngünün yalnızca bir aşamasıdır."
         },
         {
           "type": "funFact",
-          "text": "“Tanrıların alacakaranlığı” deyişi, Eski Norsça “rök” (kader) ile “rökr” (alacakaranlık) sözcüklerinin karıştırılmasından gelir; Wagner bunu yaymıştır."
+          "text": "“Tanrıların alacakaranlığı” deyişi, Eski Norsça “rök” (kader) ile “rökr” (alacakaranlık) sözcüklerinin karıştırılmasından doğmuştur; bu deyişi Wagner yaygınlaştırmıştır."
         }
       ]
     },
@@ -37,13 +37,13 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Her şey **Fimbulwinter** ile başlar: yazsız üç yıllık Büyük Kış. Soğuk aileleri kırar. Şiddet yayılır. Sonra büyülü kilitler çözülür. Kurt **Fenrir** zincirlerini kırar. Ağzı göğe ve yere değer."
+          "text": "Her şey **Fimbulwinter** ile başlar: hiç yaz gelmeyen üç yıllık Büyük Kış. Soğuk aileleri parçalar. Şiddet her yere yayılır. Sonra büyülü kilitler açılır. Kurt **Fenrir** zincirlerini koparır. Açtığı ağzı göğe ve yere değer."
         },
         {
           "type": "image",
           "asset": "fenrir_wolf_norse_mythology_chained",
           "ratio": "4:3",
-          "caption": "Zincirli Fenrir: özgür kaldığı gün dünya devrilir"
+          "caption": "Zincire vurulmuş Fenrir: kurtulduğu gün dünya altüst olur"
         },
         {
           "type": "paragraph",
@@ -58,7 +58,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Çarpışma **Vígríðr** ovasında olur. Tanrıların gözcüsü [[Heimdall]] borusunu çalar. Asgard tanrıları kaybedeceklerini bilerek gider. Her biri kendi düşmanıyla yüzleşir."
+          "text": "Büyük çarpışma **Vígríðr** ovasında yaşanır. Tanrıların gözcüsü [[Heimdall]] borusunu öttürür. Asgard tanrıları kaybedeceklerini bile bile savaşa gider. Her biri kendi düşmanıyla yüzleşir."
         },
         {
           "type": "image",
@@ -72,47 +72,47 @@
         },
         {
           "type": "funFact",
-          "text": "Tanrı Freyr büyülü kılıcı olmadan ölür: dev Gerd'in elini almak için onu aşkla vermiştir. Bu efsanelerde aşkın bile bir bedeli vardır."
+          "text": "Tanrı Freyr büyülü kılıcı olmadan ölür: dev kadın Gerd'le evlenebilmek için kılıcını aşkı uğruna vermiştir. Bu mitlerde aşkın bile bir bedeli vardır."
         }
       ]
     },
     {
       "id": "course_181_ragnarok_la_fin_du_monde_nordique_p3",
-      "title": "Ateşten sonra toprak yeşerir",
+      "title": "Ateşten sonra toprak yeniden yeşerir",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ragnarök'ü çizgisel kıyametlerden ayıran şey, dönüşüdür. Alevler sönünce toprak sulardan çıkar; daha yeşil, daha verimli görünür. Tarlalar ekilmeden ürün verir."
+          "text": "Ragnarök'ü düz bir çizgide ilerleyen kıyametlerden ayıran şey, geri dönüştür. Alevler sönünce toprak sulardan yükselir; eskisinden daha yeşil, daha verimlidir. Tarlalar ekilmeden ürün verir."
         },
         {
           "type": "image",
           "asset": "yggdrasil_world_tree_norse_mythology",
           "ratio": "4:3",
-          "caption": "Yggdrasil, dünya ağacı: sağ kalanların sığınağı ve devam vaadi"
+          "caption": "Yggdrasil, dünya ağacı: sağ kalanların sığınağı, devamın teminatı"
         },
         {
           "type": "paragraph",
-          "text": "Yeni bir tanrı kuşağı sağ kalır: **Baldr** ölümden döner; Thor'un oğulları Magni ve Móði çekici miras alır. İki insan, **Líf** ve **Lífþrasir**, [[Yggdrasil]] içinde gizlenmiş, çiyle beslenmiştir. Adları “Yaşam” ve “Yaşamın çoğalması” demektir. İnsanlık yeniden başlar."
+          "text": "Yeni bir tanrı kuşağı hayatta kalır: **Baldr** ölüler diyarından döner; Thor'un oğulları Magni ve Móði çekici miras alır. İki insan, **Líf** ve **Lífþrasir**, [[Yggdrasil]] ağacının içine saklanmış ve çiyle beslenmiştir. Adları “Yaşam” ve “Yaşam bolluğu” demektir. İnsanlık yeniden başlar."
         }
       ]
     },
     {
       "id": "course_181_ragnarok_la_fin_du_monde_nordique_p4",
-      "title": "Hâlâ konuşan bir efsane",
+      "title": "Bugün de seslenen bir mit",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "19. yüzyılda **Richard Wagner**, kırık yeminler üzerine kurulu bir düzenin sonu olan [[Götterdämmerung]] yani “Tanrıların Alacakaranlığı”nı yayar. Eski İskandinavlar için mesaj daha yalın ve daha sertti: son kesin olsa bile cesaret seçilebilir."
+          "text": "19. yüzyılda **Richard Wagner**, [[Götterdämmerung]] (“Tanrıların Alacakaranlığı”) operasıyla bu adı yaygınlaştırır: kırık yeminler üzerine kurulmuş bir düzenin sonu. Eski İskandinavlar için mesaj daha yalın ve daha sertti: son kesinse, geriye cesareti seçmek kalır."
         },
         {
           "type": "paragraph",
-          "text": "[[Karşılaştırmalı kıyametçilik]] bu anlatıyı başka dünya sonlarıyla yan yana koyar: uzun kış, göksel savaş, tufan, yeniden doğuş. Kışın bahardan önce gelmesi gibi Ragnarök yalnızca bir ölüm değildir. Bir başkalaşımdır."
+          "text": "[[Karşılaştırmalı kıyametçilik]] bu anlatıyı başka dünya sonlarıyla karşılaştırır: uzun kış, gökte savaş, tufan, yeniden doğuş. Kışın ardından nasıl bahar geliyorsa, Ragnarök de yalnızca bir ölüm değildir. Bir başkalaşımdır."
         },
         {
           "type": "takeaway",
-          "text": "**Ragnarök** bir hiçlik değildir: tanrıların kabul ettiği kaderdir, Asgard'ın düştüğü bir savaş, ardından yeniden doğan bir toprak. İskandinav dersi: zafer umudu olmasa bile cesaretle davranmak."
+          "text": "**Ragnarök** bir hiçlik değildir. Tanrıların kabullendiği kaderdir: Asgard'ın düştüğü bir savaş, ardından yeniden doğan bir toprak. İskandinavların dersi: zafer umudu olmasa bile cesaretle davranmak."
         }
       ]
     }

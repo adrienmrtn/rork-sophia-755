@@ -4,11 +4,11 @@
   "subtitle": "Okyanuslar",
   "subject": "sciences",
   "subcategory": "Gündelik hayatın sırları",
-  "description": "Bir litre deniz suyunda yaklaşık 35 gram tuz vardır. Bu tuz milyarlarca yılda birikmiştir. İşte nereden gelir.",
+  "description": "Bir litre deniz suyunda yaklaşık 35 gram tuz vardır. Bu tuz milyarlarca yıl boyunca birikti. Peki nereden geliyor? İşte cevabı.",
   "hero": {
     "image": "pourquoi_l_eau_de_mer_est_salee",
     "ratio": "16:9",
-    "hook": "Nehirler tatlıdır. Okyanuslar tuzludur. Sır, geçen zaman ve buharlaşmadadır."
+    "hook": "Nehirler tatlıdır. Okyanuslar tuzludur. İşin sırrı zaman ve buharlaşma."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Okyanuslar yeryüzünün **%70** kadarını kaplar. Ortalama bir litre deniz suyunda yaklaşık **35 gram tuz** vardır. Bu bir rastlantı değil: çok uzun bir sürecin sonucudur."
+          "text": "Okyanuslar yeryüzünün **%70**'inden fazlasını kaplar. Bir litre deniz suyunda ortalama **35 gram tuz** vardır. Bu bir rastlantı değil, çok uzun bir sürecin sonucudur."
         },
         {
           "type": "paragraph",
-          "text": "Tuz gökten hazır halde “düşmez”. Kıtalardan yolculuk eder, sonra okyanusta hapsolup kalır."
+          "text": "Tuz gökten hazır halde “düşmez”. Kıtalardan yola çıkar, sonra okyanusta hapsolup kalır."
         }
       ]
     },
@@ -33,7 +33,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Yağmur havadan geçerken biraz karbondioksit alır. Hafif asitlenir. Kayaların üzerine düşünce onları yavaşça aşındırır: buna **kimyasal erozyon** denir."
+          "text": "Yağmur havadan geçerken biraz karbondioksit tutar. Böylece hafifçe asidik hale gelir. Kayaların üzerine düştüğünde onları yavaş yavaş aşındırır: buna **kimyasal aşınma** denir."
         },
         {
           "type": "image",
@@ -43,11 +43,11 @@
         },
         {
           "type": "paragraph",
-          "text": "Nehirler o zaman çözünmüş mineralleri, özellikle sofra tuzunun iki bileşeni olan **sodyum** ve **klor**u taşır. Bunları denize döker."
+          "text": "Ardından nehirler çözünmüş mineralleri, özellikle de sofra tuzunun iki bileşenini, yani **sodyum** ve **klor**u taşır. Bunları denize dökerler."
         },
         {
           "type": "funFact",
-          "text": "Denizaltı volkanları ve okyanus tabanındaki sıcak kaynaklar da tuz ekler. Yine de asıl miktar hâlâ kıtalardan gelir."
+          "text": "Denizaltı volkanları ve okyanus tabanındaki sıcak kaynaklar da tuz ekler. Ama tuzun büyük kısmı yine de kıtalardan gelir."
         }
       ]
     },
@@ -58,26 +58,26 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Güzel soru: nehirler tuzu denize taşıyorsa, Ron veya Sen suyu neden tuzlu değildir? Çünkü tuz orada çok seyreltilmiş durumdadır ve çünkü nehir suyu durmadan yenilenir."
+          "text": "Güzel soru: nehirler tuz taşıyorsa, Ron ya da Sen nehirlerinin suyu neden tuzlu değil? Çünkü tuz orada çok seyreltiktir ve nehir suyu sürekli yenilenir."
         },
         {
           "type": "paragraph",
-          "text": "Okyanusta durum başka türlüdür. Güneş altında su **buharlaşır** ve göğe geri döner. Tuz ise yerinde **kalır**. Yıl yıl, yüzyıl yüzyıl birikir. Buna [[Hidrolojik döngü ve tuz birikimi]] adı verilir."
+          "text": "Okyanusta durum farklıdır. Güneşin altında su **buharlaşır** ve yeniden göğe yükselir. Tuz ise yerinde **kalır**. Yıllar, yüzyıllar boyunca birikir. Buna [[hidrolojik döngü ve tuz birikimi]] denir."
         }
       ]
     },
     {
       "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_p3",
-      "title": "Tuz okyanusları da dolaştırır",
+      "title": "Tuz okyanusları da hareket ettirir",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Tuzlu su, aynı hacimde tatlı sudan daha **yoğun**dur (aynı hacim için daha ağır). Kutuplarda yüzey suyu donunca tuzun bir kısmı çevredeki sıvı suya atılır. Bu su daha da yoğunlaşır ve dibe çöker."
+          "text": "Tuzlu su, tatlı sudan daha **yoğun**dur (aynı hacimde daha “ağır”). Kutuplarda yüzey suyu donarken tuzun bir kısmı çevredeki sıvı suya bırakılır. Bu su daha da yoğunlaşır ve dibe doğru batar."
         },
         {
           "type": "paragraph",
-          "text": "Bu hareket büyük okyanus akıntılarını sürüklemeye yardım eder. Bu akıntılar ısıyı ve besinleri yerküreye taşır. Tuz yalnızca bir tat işi değildir: gezegenin iklim motorunun parçasıdır."
+          "text": "Bu hareket, büyük okyanus akıntılarını harekete geçirmeye yardım eder. Bu akıntılar ısıyı ve besinleri dünyanın dört bir yanına taşır. Tuz yalnızca bir tat meselesi değildir: gezegenin iklim motorunun bir parçasıdır."
         }
       ]
     },
@@ -88,11 +88,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Tuzluluk her yerde aynı değildir. Ekvator yakınında güçlü buharlaşma tuzu yoğunlaştırabilir. Büyük nehirlerin veya eriyen buzların yanında su daha tatlıdır. Ölü Deniz ise uç bir örnektir: çok az su kaçar, çok tuz kalır."
+          "text": "Tuzluluk her yerde aynı değildir. Ekvator yakınında yoğun buharlaşma tuzu derişik hale getirebilir. Büyük nehirlerin ağzında ya da eriyen deniz buzlarının yakınında su daha tatlıdır. Ölü Deniz ise uç bir örnektir: çok az su çıkıp gider, çok fazla tuz kalır."
         },
         {
           "type": "takeaway",
-          "text": "Deniz suyu tuzludur çünkü nehirler mineralleri kıtalardan getirir ve çünkü buharlaşma tuzu okyanusta bırakır. Bu birikim milyarlarca yıldır, durmadan sürer."
+          "text": "Deniz suyu tuzludur, çünkü nehirler kıtalardan mineral getirir ve buharlaşma tuzu okyanusta bırakır. Bu birikim milyarlarca yıldır sürüyor."
         }
       ]
     }

@@ -4,7 +4,7 @@
   "subtitle": "Bakterilerin karşı saldırısı",
   "subject": "sciences",
   "subcategory": "Gündelik hayatın sırları",
-  "description": "Bir anjin, bir idrar yolu enfeksiyonu, sıradan bir ameliyat: etkili antibiyotikler olmadan hepsi yeniden tehlikeli hale gelir. Onları gereğinden fazla kullandıkça bakterilere antibiyotiklerden sağ çıkmayı öğretiyoruz.",
+  "description": "Bir boğaz enfeksiyonu, bir idrar yolu enfeksiyonu, sıradan bir ameliyat: etkili antibiyotikler olmadan hepsi yeniden tehlikeli hale gelir. Onları gereğinden fazla kullandıkça bakterilere antibiyotiklerden sağ çıkmayı öğretiyoruz.",
   "author": "kate-waddams",
   "hero": {
     "image": "antibiogram_petri_dish_inhibition_zones",
@@ -19,7 +19,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Bakteriler vücudumuzu istila edince bağışıklık sistemi karşılık verir: **akyuvarlar** enfeksiyona saldırır ve kısa sürede iyileşiriz. Ama savunmamız zayıflamışsa ya da baskı altında kalmışsa takviye gerekir: antibiyotikler. Antibiyotiklerin bir kısmı [[bakterisit]] etkilidir: bakterinin çeperine ve içeriğine saldırarak onu yok eder. Bakteriyostatik olanlar ise yalnızca çoğalmasını engeller."
+          "text": "Bakteriler vücudumuzu istila edince bağışıklık sistemi karşılık verir: **akyuvarlar** enfeksiyona saldırır ve kısa sürede iyileşiriz. Ama savunmamız zayıflamışsa ya da yetersiz kalmışsa takviye gerekir: antibiyotikler. Antibiyotiklerin bir kısmı [[bakterisit]] etkilidir: bakterinin çeperine ve içeriğine saldırarak onu yok eder. Bakteriyostatik olanlar ise yalnızca çoğalmasını engeller."
         },
         {
           "type": "funFact",
@@ -48,7 +48,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Evrim doğal bir süreçtir ve çevreden gelen saldırılar onu hızlandırır. Bakterileri onları öldürmek için tasarlanmış moleküllerle durmadan tedavi etmek, hayatta kalmayı bilenleri seçmek demektir. Savunma yolları çeşitlidir: genetik **mutasyonlar**, antibiyotiği çözen enzimler, işleyişteki değişiklikler, hatta ilacı hücre dışına atan minicik [[efluks pompaları]]."
+          "text": "Evrim doğal bir süreçtir ve çevreden gelen saldırılar onu hızlandırır. Bakterilere karşı durmadan onları öldürmek için tasarlanmış moleküller kullanmak, hayatta kalmayı becerenleri seçmek demektir. Savunma yolları çeşitlidir: genetik **mutasyonlar**, antibiyotiği parçalayan enzimler, işleyişteki değişiklikler, hatta ilacı hücre dışına atan minicik [[efluks pompaları]]."
         },
         {
           "type": "paragraph",
@@ -67,7 +67,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Üstelik ellerinde bir kestirme yol var: [[yatay gen transferi]]. Dirençli bir bakteri, bölünmeyi beklemeden direnç genlerini doğrudan komşusuna devredebilir. Çok kısa sürede koca bir dirençli bakteri topluluğu oluşur."
+          "text": "Üstelik bir kestirme yolları da var: [[yatay gen transferi]]. Dirençli bir bakteri, bölünmeyi beklemeden direnç genlerini doğrudan komşusuna devredebilir. Çok kısa sürede koca bir dirençli bakteri topluluğu oluşur."
         },
         {
           "type": "image",
@@ -96,7 +96,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Bilim insanları elini kolunu bağlamış oturmuyor. Dirençli bakterileri hedef alan yeni ve daha isabetli tedaviler geliştiriyorlar. Mevcut antibiyotiklerin etkisini geri kazandırmaya ve gereksiz reçeteleri azaltmaya da çalışıyorlar: önlenen her tedavi, bakteriler için uyum sağlamaya bir fırsat eksik demek."
+          "text": "Bilim insanları elini kolunu bağlamış oturmuyor. Dirençli bakterileri hedef alan yeni ve daha isabetli tedaviler geliştiriyorlar. Mevcut antibiyotiklerin etkisini geri kazandırmaya ve gereksiz reçeteleri azaltmaya da çalışıyorlar: kaçınılan her tedavi, bakterilerin uyum sağlaması için bir fırsat daha az demek."
         }
       ]
     },
@@ -107,7 +107,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Antibiyotiklerimizi hiç düşünmeden yutuyoruz. Ucuzlar, etkililer ve her yerde bulunuyorlar. Onlar olmasa bakteriyel **anjin** ya da idrar yolu enfeksiyonu gibi sıradan bir enfeksiyonu tedavi etmek çok daha zorlaşırdı. Sıyrılmış bir diz, hayatı tehdit eden yaygın bir enfeksiyon olan [[sepsis]] tablosuna dönüşebilirdi."
+          "text": "Antibiyotiklerimizi hiç düşünmeden yutuyoruz. Ucuzlar, etkililer ve her yerde bulunuyorlar. Onlar olmasa bakteriyel **boğaz enfeksiyonu** ya da idrar yolu enfeksiyonu gibi sıradan bir enfeksiyonu tedavi etmek çok daha zorlaşırdı. Sıyrılmış bir diz, hayatı tehdit eden yaygın bir enfeksiyon olan [[sepsis]] tablosuna dönüşebilirdi."
         },
         {
           "type": "image",

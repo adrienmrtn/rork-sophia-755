@@ -4,11 +4,11 @@
   "subtitle": "1859",
   "subject": "sciences",
   "subcategory": "Dünyayı değiştiren keşifler",
-  "description": "1859'da Darwin *Türlerin Kökeni*'ni yayımlar. Merkez fikir: canlı, doğal seçilimle zaman içinde değişir.",
+  "description": "1859'da Darwin *Türlerin Kökeni*'ni yayımlar. Temel fikir: canlılar doğal seçilim yoluyla zaman içinde değişir.",
   "hero": {
     "image": "la_theorie_de_l_evolution_de_darwin",
     "ratio": "16:9",
-    "hook": "Türler donmuş değildir. Değişirler. Yavaş. Ama emin adımlarla."
+    "hook": "Türler sabit değildir. Değişirler. Yavaş. Ama emin adımlarla."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**1859**'da **Charles Darwin** *Türlerin Kökeni*'ni yayımlar. Kitap şok eder, tutku uyandırır, böler. Merkez fikri yine de basitçe söylenebilir."
+          "text": "**1859**'da **Charles Darwin** *Türlerin Kökeni*'ni yayımlar. Kitap insanları sarsar, heyecanlandırır, ikiye böler. Oysa temel fikri basitçe ifade edilebilir."
         },
         {
           "type": "paragraph",
-          "text": "Canlılar çeşitlenir. Bazı çeşitlenmeler hayatta kalmaya ve üremeye yardım eder. Bu çeşitlenmeler aktarılır. Kuşaklar geçtikçe popülasyonlar değişir."
+          "text": "Canlılar birbirinden farklıdır. Bazı farklılıklar hayatta kalmaya ve üremeye yardım eder. Bu farklılıklar yavrulara aktarılır. Kuşaklar geçtikçe popülasyonlar değişir."
         }
       ]
     },
@@ -39,19 +39,19 @@
         },
         {
           "type": "paragraph",
-          "text": "Gençken Darwin **Beagle** gemisine biner. Yıllarca bitki, fosil, kuş gözler. Galápagos adalarında, yakın akraba kuşların besine göre farklı gagaları olduğunu fark eder."
+          "text": "Darwin gençken **Beagle** gemisiyle yola çıkar. Yıllarca bitkileri, fosilleri, kuşları gözlemler. Galápagos Adaları'nda, birbirine yakın kuşların beslendikleri yiyeceğe göre farklı gagaları olduğunu fark eder."
         },
         {
           "type": "image",
           "asset": "darwin_finches_galapagos_beaks",
           "ratio": "4:3",
-          "caption": "Farklı besin rejimlerine uyan gagalar: güçlü bir ipucu"
+          "caption": "Farklı beslenme biçimlerine uyum sağlamış gagalar: güçlü bir ipucu"
         }
       ]
     },
     {
       "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_p2",
-      "title": "Doğal seçilim, açıkça",
+      "title": "Açık dille doğal seçilim",
       "free": false,
       "blocks": [
         {
@@ -60,26 +60,26 @@
         },
         {
           "type": "paragraph",
-          "text": "Bireyler “evrimleşmek istemez”. Bu bir süzgeçtir: ortam işe yarayanı daha çok tutar, tutmayanı eler. Darwin buna **doğal seçilim** der."
+          "text": "Mesele bireylerin evrimleşmeyi “istemesi” değildir. Bu bir süzgeçtir: ortam daha çok işe yarayanı tutar. Darwin buna **doğal seçilim** der."
         },
         {
           "type": "funFact",
-          "text": "Darwin yayımlamadan önce uzun süre bekler. Skandaldan korkar. Başka bir doğa bilimci, **Alfred Russel Wallace**, yakın fikirlere varır: bu, Darwin'i kitabını çıkarmaya iter."
+          "text": "Darwin yayımlamadan önce uzun süre bekledi. Skandaldan korkuyordu. Başka bir doğa bilimci, **Alfred Russel Wallace**, benzer fikirlere ulaşınca bu durum Darwin'i kitabını yayımlamaya itti."
         }
       ]
     },
     {
       "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_p3",
-      "title": "Fikirlerin şoku",
+      "title": "Fikirlerin çatışması",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "19. yüzyılda çoğu kişi türlerin olduğu gibi yaratıldığına inanır. Türlerin değiştiğini, insanın da başka hayvanlarla ortak bir tarihi paylaştığını söylemek, dini ve toplumu sarsar."
+          "text": "19. yüzyılda pek çok kişi türlerin bugünkü halleriyle yaratıldığına inanır. Türlerin değiştiğini, insanın da başka hayvanlarla ortak bir geçmişi olduğunu söylemek, dini ve toplumu sarsar."
         },
         {
           "type": "paragraph",
-          "text": "Bilim ise kendi yolunda ilerler: fosiller, türlerin coğrafi dağılımı, sonra daha geç genetik, genel fikri doğrular."
+          "text": "Bilim ise ilerler: fosiller, türlerin coğrafi dağılımı, daha sonra da genetik, genel fikri doğrular."
         }
       ]
     },
@@ -90,7 +90,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Artık çeşitlenmeleri DNA'nın taşıdığını biliyoruz. Evrimi laboratuvarda (bakteriler, virüsler) ve doğada izliyoruz. Antibiyotiğe dirençli bakterilerle de savaşıyoruz: bu, canlı evrimdir."
+          "text": "Bugün çeşitlenmeleri DNA'nın taşıdığı biliniyor. Evrim laboratuvarda (bakteriler, virüsler) ve doğada gözlemleniyor. Antibiyotiğe dirençli bakterilerle de mücadele ediliyor: bu, gözümüzün önünde gerçekleşen evrimdir."
         },
         {
           "type": "takeaway",

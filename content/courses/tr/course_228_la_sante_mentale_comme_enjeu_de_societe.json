@@ -4,11 +4,11 @@
   "subtitle": "Sessiz salgın",
   "subject": "comprendreLeMonde",
   "subcategory": "Çevre ve gelecek",
-  "description": "Ruh sağlığı **dünyadaki hastalıkların %20**'sini oluşturur, ama sağlık bütçelerinin yalnızca %2'sini alır. Uzun süre unutulmuş bu davanın neden büyük bir toplum meselesi olduğunu görelim.",
+  "description": "Ruh sağlığı **dünyadaki hastalıkların %20'sini** oluşturur, ama sağlık bütçelerinin yalnızca %2'sini alır. Uzun süre unutulan bu konu artık büyük bir toplum meselesi hâline geliyor. İşte nedeni.",
   "hero": {
     "image": "la_sante_mentale_comme_enjeu_de_societe",
     "ratio": "16:9",
-    "hook": "Dünyada her beş hastalıktan biri zihni vurur, ama sağlık bütçelerinin zar zor %2'sini alır."
+    "hook": "Dünyada her beş hastalıktan biri ruh sağlığıyla ilgili, ama sağlık bütçelerinden ancak %2 pay alıyor."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Tıbbın uzun süre kenarda bıraktığı ruh sağlığı 21. yüzyılın büyük sınavlarından biri olur. Psikiyatrik bozuklukların yokluğuna indirgenmez: herkesin potansiyelini gerçekleştirmesini ve hayatın zorluklarıyla yüzleşmesini sağlayan bir esenlik halidir."
+          "text": "Tıbbın uzun süre göz ardı ettiği ruh sağlığı, 21. yüzyılın büyük sorunlarından biri hâline geliyor. Ruh sağlığı yalnızca psikiyatrik bozuklukların olmaması demek değildir: herkesin potansiyelini gerçekleştirmesini ve hayatın zorluklarıyla baş etmesini sağlayan bir iyilik hâlidir."
         },
         {
           "type": "paragraph",
-          "text": "Yine de çarpıcı bir paradoks sürer: bu bozukluklar dünyadaki hastalıkların yaklaşık %20'sini oluşturur, ama sağlık bütçelerinin yalnızca %2'sini alır. Bu ders o sessiz krizin köklerini araştırır."
+          "text": "Yine de çarpıcı bir çelişki sürüyor: bu bozukluklar dünyadaki hastalıkların yaklaşık %20'sini oluşturur, ama sağlık bütçelerinin yalnızca %2'sini alır. Bu kurs, bu sessiz krizin köklerini inceliyor."
         }
       ]
     },
@@ -33,50 +33,50 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Depresyon** bugün kalp hastalıkları veya diyabetin önünde, dünyanın birinci engellilik nedenidir. Kalıcı bir hüzün ve her şeye karşı ilgi kaybıyla işaretlenen bu hastalık bütün nüfus kategorilerini vurur, ama dünyanın pek çok bölgesinde eksik teşhis edilir."
+          "text": "**Depresyon** bugün dünyada, kalp hastalıklarının ve diyabetin de önünde, engelliliğin bir numaralı nedenidir. Kalıcı bir üzüntü ve her şeye karşı ilgi kaybıyla kendini gösteren bu hastalık toplumun her kesimini etkiler, ama dünyanın birçok bölgesinde yeterince teşhis edilmez."
         },
         {
           "type": "image",
           "asset": "depression_mental_health_person_dark",
           "ratio": "4:3",
-          "caption": "Depresyon bugün dünyanın birinci engellilik nedenidir"
+          "caption": "Depresyon, bugün dünyada engelliliğin bir numaralı nedenidir"
         },
         {
           "type": "paragraph",
-          "text": "Yaygın kaygı dünyada yaklaşık 300 milyon kişiyi vurur. Bu acılar bazen intihara gider; yılda 700.000 ölüm, savaş ve doğal felaket kurbanlarının toplamından fazladır."
+          "text": "Yaygın anksiyete bozukluğu dünyada yaklaşık 300 milyon kişiyi etkiler. Bu acılar bazen intihara yol açar: intihar her yıl 700.000 kişinin ölümüne neden olur. Bu sayı, savaşlarda ve doğal afetlerde ölenlerin toplamından fazladır."
         },
         {
           "type": "funFact",
-          "text": "“Melankoli” sözcüğü eski Yunancadan gelir ve harfiyen “kara safra” demektir. Antikçağ'da depresyonun vücuttaki bu sıvının fazlasından geldiği sanılırdı."
+          "text": "“Melankoli” sözcüğü eski Yunancadan gelir ve kelimesi kelimesine “kara safra” demektir. Antik Çağ'da depresyona vücuttaki bu sıvının fazlasının yol açtığı düşünülürdü."
         },
         {
           "type": "paragraph",
-          "text": "2019'da Dünya Sağlık Örgütü simgesel bir adım attı: [[Tükenmişlik (mesleki tükenme)]] olgusunu işle ilgili bir fenomen olarak tanıdı. Bu tanıma sorumluluğu tek başına bireyden çalışma ortamına kaydırır."
+          "text": "2019'da Dünya Sağlık Örgütü simgesel bir adım attı ve [[Tükenmişlik (mesleki tükenme)]] sendromunu işle bağlantılı bir olgu olarak tanıdı. Bu kabul, sorumluluğu yalnızca bireyin omzundan alıp çalışma ortamına taşır."
         }
       ]
     },
     {
       "id": "course_228_la_sante_mentale_comme_enjeu_de_societe_p2",
-      "title": "Özellikle vurulan bir gençlik",
+      "title": "Özellikle etkilenen gençler",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Bütün nüfus ilgili olsa da ergenler ve genç yetişkinler özellikle kaygılandırır. ABD'de 12-25 yaştakilerde kaygı ve depresyon bir on yılda neredeyse ikiye katlandı; 2012'ye doğru net bir dönüşle."
+          "text": "Bütün nüfus etkilense de en çok endişe uyandıranlar ergenler ve genç yetişkinlerdir. ABD'de 12-25 yaş arasındakilerde kaygı ve depresyon on yılda neredeyse ikiye katlandı; 2012 civarında belirgin bir kırılma yaşandı."
         },
         {
           "type": "image",
           "asset": "teenagers_smartphones_social_media_anxiety",
           "ratio": "16:9",
-          "caption": "Sosyal ağların patlaması, gençlerde kaygının belirgin yükselişiyle çakışır"
+          "caption": "Sosyal medyanın patlaması, gençlerde kaygının belirgin biçimde artmasıyla aynı döneme denk geliyor"
         },
         {
           "type": "paragraph",
-          "text": "Bu tarih akıllı telefonun ve sosyal ağların genelleşmesine denk düşer. Psikolog Jean Twenge, bu değişimin gençlerin sosyalliğini altüst ettiğini düşünür: [[Yukarı doğru sosyal karşılaştırma]], yani gerçekçi olmayan yaşam standartlarıyla kıyas, derin bir yetersizlik duygusu yaratır."
+          "text": "Bu tarih, akıllı telefonun ve sosyal medyanın yaygınlaşmasına denk gelir. Psikolog Jean Twenge, bu değişimin gençlerin sosyal ilişkilerini altüst ettiğini düşünür: insanın kendini gerçekçi olmayan yaşam standartlarıyla kıyasladığı [[Yukarı doğru sosyal karşılaştırma]], derin bir yetersizlik duygusu yaratır."
         },
         {
           "type": "paragraph",
-          "text": "Buna [[Siber mağduriyet]] ve ekran ışığının yol açtığı uyku eksikliği eklenir. Sosyal ağlar bağımlılık yapabilen ve gençleri spordan veya onarıcı uykudan saptırabilen [[Dopaminerjik takviye]] döngüleriyle işler."
+          "text": "Buna [[Siber mağduriyet]] ve ekran ışığının yol açtığı uyku eksikliği de eklenir. Sosyal medya, bağımlılık yapabilen ve gençleri spordan ya da dinlendirici uykudan uzaklaştırabilen [[Dopaminerjik pekiştirme]] döngüleriyle işler."
         }
       ]
     },
@@ -87,7 +87,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ruh sağlığı yalnızca özel hayatı ilgilendirmez: verimliliği de doğrudan etkiler. İşyerinde tükenmişlik ve acının yıllık maliyeti, yalnızca ABD'de, devamsızlık, tekrarlı ayrılışlar ve orada olup verimli çalışamayan çalışanlar arasında yılda 300 milyar dolar tahmin edilir."
+          "text": "Ruh sağlığı yalnızca özel hayatı ilgilendirmez: verimliliği de doğrudan etkiler. Yalnızca ABD'de tükenmişliğin ve işte yaşanan sıkıntının yıllık maliyeti 300 milyar dolar olarak tahmin ediliyor. Devamsızlıklar, tekrarlanan işten ayrılmalar ve işe gelip verimli çalışamayan çalışanlar bu maliyete dahildir."
         },
         {
           "type": "image",
@@ -97,7 +97,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Bu maliyet karşısında şirketler önleme programları geliştirir, ama yoksul ülkelerde sınav bütün kalır; bir psikiyatriste gitmek neredeyse imkânsızdır. En güçlü kaldıraçlardan biri damgayı kaldırmaktır: Simone Biles gibi bir kamu figürü zorluklarını açıkça anlatınca utanç kaynağını gerçek bir sağlık konusuna çevirmeye katkıda bulunur."
+          "text": "Bu maliyet karşısında şirketler önleme programları geliştirir, ama bir psikiyatriste gitmenin neredeyse imkânsız olduğu yoksul ülkelerde sorun olduğu gibi durur. En güçlü araçlardan biri damgalamayla mücadeledir: sporcu Simone Biles gibi tanınmış biri yaşadığı zorlukları açıkça anlattığında, bir utanç kaynağını gerçek bir sağlık konusuna dönüştürmeye katkıda bulunur."
         }
       ]
     },
@@ -108,19 +108,19 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ruh sağlığının geleceği, kriz geldikten sonra tedavi eden bir tıptan önleyici bir yaklaşıma geçme kapasitemize bağlıdır. Bu, stres kaynakları etki etmeden önce onları azaltmak için şehirciliği, okulu ve çalışma temposunu yeniden düşünmeyi ister."
+          "text": "Ruh sağlığının geleceği, krizi ancak patlak verdikten sonra tedavi eden bir tıptan önleyici bir yaklaşıma geçebilmemize bağlı. Bu da stres kaynaklarını etkisini göstermeden azaltmak için şehir planlamasını, okulu ve çalışma temposunu yeniden düşünmeyi gerektirir."
         },
         {
           "type": "paragraph",
-          "text": "Dijital terapiler veya yapay zekâ gibi yeni izler belirmektedir, hekim eksikini kapatmak için; gerçi bu araçlar veri mahremiyeti sorularını da açar."
+          "text": "Uzman eksikliğini gidermek için dijital terapiler veya yapay zekâ gibi yeni yollar ortaya çıkıyor; ama bu araçlar veri gizliliğiyle ilgili soruları da beraberinde getiriyor."
         },
         {
           "type": "paragraph",
-          "text": "Ruh sağlığı bugünkü büyük krizlere de bağlıdır: eko-kaygı kavramı, iklim gibi küresel tehditlerin psikolojik dengemizi nasıl doğrudan etkilediğini iyi gösterir. Ruh sağlığını toplumlarımızın vazgeçilmez bir direği olarak tanımak, gelecek krizleri göğüslemenin şartı olur."
+          "text": "Ruh sağlığı bugünün büyük krizleriyle de bağlantılıdır: eko-kaygı kavramı, iklim gibi küresel tehditlerin psikolojik dengemizi nasıl doğrudan etkilediğini iyi gösterir. Ruh sağlığını toplumlarımızın temel dayanaklarından biri olarak kabul etmek, önümüzdeki krizlerle baş edebilmenin koşulu hâline geliyor."
         },
         {
           "type": "takeaway",
-          "text": "Ruh sağlığı dünyadaki hastalıkların %20'sini oluşturur, sağlık bütçelerinin yalnızca %2'sini. Depresyon, tükenmişlik ve dijitalin gençler üzerindeki etkisi arasında, ekonomik olduğu kadar acil bir toplum meselesi olur."
+          "text": "Ruh sağlığı dünyadaki hastalıkların %20'sini oluşturur, ama sağlık bütçelerinin yalnızca %2'sini alır. Depresyon, tükenmişlik ve dijital dünyanın gençler üzerindeki etkisiyle, ekonomik olduğu kadar acil bir toplum meselesi hâline geliyor."
         }
       ]
     }

@@ -4,7 +4,7 @@
   "subtitle": "Tıp",
   "subject": "sciences",
   "subcategory": "Dünyayı değiştiren keşifler",
-  "description": "1846'dan önce bir ameliyat çoğu zaman uyanık ve aşırı acı içinde yapılırdı. Anestezi cerrahiyi işkenceden bakıma çevirir.",
+  "description": "1846'dan önce ameliyatlar çoğu zaman hasta uyanıkken, korkunç bir acı içinde yapılırdı. Anestezi cerrahiyi işkence olmaktan çıkarıp bir tedaviye dönüştürür.",
   "hero": {
     "image": "la_decouverte_de_l_anesthesie",
     "ratio": "16:9",
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Uyuşturulmadan bir ampütasyon düşün. 19. yüzyıl ortasına kadar bu normaldir. Hastayı bağlarlar, acele ederler, dua ederler."
+          "text": "Hasta uyutulmadan yapılan bir ampütasyon düşün. 19. yüzyılın ortasına kadar bu olağandır. Hasta bağlanır, hızlı çalışılır, dua edilir."
         },
         {
           "type": "paragraph",
-          "text": "**Anestezi** her şeyi değiştirir: acıyı hissetmeden ameliyat etmeyi sağlar. Modern cerrahi artık acele etmek zorunda değildir."
+          "text": "**Anestezi** her şeyi değiştirir: hasta acıyı hissetmeden ameliyat yapılabilir. Modern cerrahi sonunda acele etmeden çalışabilir."
         }
       ]
     },
@@ -39,7 +39,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Cerrahlar hızlarıyla ölçülürdü. Hastayı sabitlemek için alkol, afyon veya kaba kuvvet kullanılırdı. Birçok hasta şoktan, enfeksiyondan veya kanamadan ölürdü."
+          "text": "Cerrahlar hızlarına göre değerlendirilirdi. Hastayı hareketsiz tutmak için alkol, afyon ya da kaba kuvvet kullanılırdı. Birçok hasta şoktan, enfeksiyondan ya da kanamadan ölürdü."
         }
       ]
     },
@@ -56,11 +56,11 @@
         },
         {
           "type": "paragraph",
-          "text": "**16 Ekim 1846**'da Boston'da diş hekimi **William Morton** bir hastaya **eter** solutur. Cerrah **John Warren** boyundaki bir tümörü alır. Hasta bağırmaz. Salon şaşkına döner."
+          "text": "**16 Ekim 1846**'da Boston'da diş hekimi **William Morton** bir hastaya **eter** solutur. Cerrah **John Warren** hastanın boynundaki bir tümörü alır. Hasta bağırmaz. Salondakiler hayretler içinde kalır."
         },
         {
           "type": "funFact",
-          "text": "Warren şöyle demiş olmalı: “Baylar, bu bir aldatmaca değil”, bir sahtekarlık değil. Cümle ünlü kalır."
+          "text": "Warren'ın şöyle dediği anlatılır: “Baylar, bu bir humbug değil” (yani bir aldatmaca değil). Bu söz ünlü olmuştur."
         }
       ]
     },
@@ -71,26 +71,26 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ardından başka maddeler gelir, örneğin özellikle Britanya'da yayılan **kloroform**. Kim neyi “icat etti” diye rekabet patlar. Patentin önemi yoktur: fikir dünyaya yayılır."
+          "text": "Ardından başka maddeler gelir; özellikle Britanya'da yaygınlaşan **kloroform** bunlardan biridir. Kimin neyi “icat ettiği” konusunda çekişmeler patlak verir. Patent kimde olursa olsun, fikir bütün dünyaya yayılır."
         },
         {
           "type": "paragraph",
-          "text": "Sorun durur: öldürmeden uyutmak. Dozu ayarlamak, solunumu ve kalbi izlemek gerekir. Yeni bir uzmanlık doğar."
+          "text": "Geriye bir sorun kalır: öldürmeden uyutmak. Dozu ayarlamak, solunumu ve kalbi izlemek gerekir. Yeni bir uzmanlık dalı doğar."
         }
       ]
     },
     {
       "id": "course_59_la_decouverte_de_l_anesthesie_p4",
-      "title": "Bugünün anestezisi",
+      "title": "Günümüzde anestezi",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Bugün anestezist kesin gazlar ve ilaçlar kullanır, her şeyi ölçen makinelerle. Bütün bedeni uyutabilirsin veya yalnızca bir bölgeyi (lokal ya da bölgesel anestezi)."
+          "text": "Bugün anestezi uzmanı hassas dozlu gazlar ve ilaçlar, her şeyi ölçen makineler kullanır. Bütün beden uyutulabilir ya da yalnızca bir bölge (lokal ya da bölgesel anestezi)."
         },
         {
           "type": "takeaway",
-          "text": "**1846** eter gösterisinden beri anestezi cerrahiyi dönüştürdü: daha az acı, daha çok zaman, daha çok kesinlik... ve başlı başına bir bilim haline gelen güvenlik."
+          "text": "**1846**'daki eter gösterisinden bu yana anestezi cerrahiyi dönüştürdü: daha az acı, daha çok zaman, daha çok hassasiyet... ve başlı başına bir bilim dalı haline gelen güvenlik."
         }
       ]
     }

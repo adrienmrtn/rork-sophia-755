@@ -8,7 +8,7 @@
   "hero": {
     "image": "la_liberte_de_la_presse_et_le_journalisme_photographique",
     "ratio": "16:9",
-    "hook": "Bir fotoğraf savaşı durdurabilir... ya da yalan söyleyebilir. Yeter ki yayımlanabilsin."
+    "hook": "Bir fotoğraf bir savaşı durdurabilir... ya da yalan söyleyebilir. Ama önce yayımlanabilmesi gerekir."
   },
   "sections": [
     {
@@ -18,7 +18,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Fotoğraf gazeteciliği, görüntü haberi bir yazı kadar sert sabitlediğinde doğar. Tek bir kare bir savaşı, bir kıtlığı, bir zaferi özetleyebilir."
+          "text": "Fotoğraf gazeteciliği, görüntünün güncel olayı bir makale kadar güçlü biçimde yakaladığı anda doğar. Tek bir kare bir savaşı, bir kıtlığı, bir zaferi özetleyebilir."
         },
         {
           "type": "paragraph",
@@ -33,17 +33,17 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "[[Henri Cartier-Bresson]] “belirleyici an”ı kuramlaştırır: doğru yerde, doğru anda, doğru kadrajla olmak. Capa'nın yanında [[Gerda Taro]], İspanya savaşını örtülerken ölür. Foto muhabirliğinin de şehitleri vardır."
+          "text": "[[Henri Cartier-Bresson]] “belirleyici an” kuramını geliştirir: doğru yerde, doğru anda, doğru kadrajla olmak. Capa'nın yanında çalışan [[Gerda Taro]], İspanya İç Savaşı'nı izlerken hayatını kaybeder. Foto muhabirliğinin de şehitleri vardır."
         },
         {
           "type": "paragraph",
-          "text": "Resimli dergilerin ve foto ajanslarının çıkışı mesleği profesyonelleştirir. Muhabir, başkalarının defterle gittiği yere makineyle gider. Risk bedenseldir."
+          "text": "Resimli dergilerin ve fotoğraf ajanslarının ortaya çıkışı mesleği profesyonelleştirir. Muhabir, başkalarının not defteriyle yola çıktığı gibi fotoğraf makinesiyle yola çıkar. Risk bedenseldir."
         },
         {
           "type": "image",
           "asset": "cartier_bresson_decisive_moment",
           "ratio": "4:3",
-          "caption": "Omuzda Leica: saha olarak kent sokağı"
+          "caption": "Omzunda Leica: sokak onun sahası"
         }
       ]
     },
@@ -54,7 +54,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Vietnam'da [[Nick Ut]] napalmla yanmış bir kızı gösterir; fotoğraf kamuoyunu sarsar. Görüntü savaşı tek başına “bitirmez”, ama insani bedeli inkâr edilemez kılar."
+          "text": "Vietnam'da [[Nick Ut]] imzalı fotoğraf, napalmla yanmış küçük bir kızı gösterir ve kamuoyunu sarsar. Görüntü savaşı tek başına “bitirmez”, ama insani bedeli inkâr edilemez kılar."
         },
         {
           "type": "paragraph",
@@ -62,7 +62,7 @@
         },
         {
           "type": "funFact",
-          "text": "Ünlü karelerin çoğu, tarihsel kanıt haline gelmeden önce sansürlenmiş ya da tartışılmıştır."
+          "text": "Ünlü karelerin çoğu, tarihin tartışılmaz belgeleri olmadan önce sansürlendi ya da tartışıldı."
         }
       ]
     },
@@ -73,7 +73,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "[[Foto muhabirliğinin etiği]] sorular sorar: acıyı kadraja almak caiz midir? Rötuş? [[Medya yoğunlaşması ve editoryal bağımsızlık]] da özgür bakışı tehdit eder."
+          "text": "[[Foto muhabirliğinin etiği]] bazı soruları gündeme getirir: acı kadraja alınabilir mi? Rötuş yapılabilir mi? [[Medya yoğunlaşması ve editoryal bağımsızlık]] sorunu da özgür bakışı tehdit eder."
         },
         {
           "type": "paragraph",
@@ -94,7 +94,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ağlar çağında herkes fotoğraf çeker. Güvenilir, bağlamlı, haberdar etme hakkıyla korunan görüntü ihtiyacı hiç bu kadar güçlü olmamıştır."
+          "text": "Sosyal ağlar çağında herkes fotoğraf çeker. Güvenilir, bağlamına oturtulmuş, haber verme hakkıyla korunan görüntülere duyulan ihtiyaç hiç bu kadar büyük olmamıştı."
         },
         {
           "type": "paragraph",
@@ -102,11 +102,11 @@
         },
         {
           "type": "paragraph",
-          "text": "Bağlam üslup kadar önemlidir. Tarihler, yerler, sipariş verenler, kamu: bir biçimin neden tam o anda, daha önce değil, belirdiğini bunlar açıklar."
+          "text": "Bağlam, üslup kadar önemlidir. Tarihler, mekânlar, eseri ısmarlayanlar, seyirci: bir biçimin neden daha önce değil de tam o anda ortaya çıktığını bunlar açıklar."
         },
         {
           "type": "paragraph",
-          "text": "Son olarak miras uzun vadede ölçülür. Müzelerde, filmlerde ya da popüler müzikte bugün gördüğümüz şey hâlâ bu icatların izini taşır ve onları yeniden okur."
+          "text": "Son olarak, miras uzun vadede ölçülür. Bugün müzelerde, filmlerde ya da popüler müzikte gördüklerimiz hâlâ bu icatların izini taşır."
         },
         {
           "type": "paragraph",

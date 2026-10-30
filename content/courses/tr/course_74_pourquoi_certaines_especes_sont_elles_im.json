@@ -4,11 +4,11 @@
   "subtitle": "Biyoloji ve uzun ömür",
   "subject": "sciences",
   "subcategory": "Dünya ve evren",
-  "description": "Bazı türler ölüme meydan okur gibi görünür. Gençleşen denizanaları, yaşlanmayan hidralar: sır, hücrenin onarımındadır.",
+  "description": "Bazı türler ölüme meydan okur gibi görünür. Gençleşen denizanaları, yaşlanmayan hidralar: sır, hücre onarımında yatıyor.",
   "hero": {
     "image": "pourquoi_certaines_especes_sont_immortelles",
     "ratio": "16:9",
-    "hook": "Yaşlanmak canlının mutlak yasası değil. Bazı türler o çatlağı çoktan bulmuş."
+    "hook": "Yaşlanmak canlılar için mutlak bir yasa değil. Bazı türler bu yasanın açığını bulmuş."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Yaşlanırız, sonra ölürüz. Oysa [[Turritopsis dohrnii]] denizanası genç evreye dönüp baştan başlayabilir. **Ming** adlı midye **507 yıl** yaşadı. Demek ki yaşlanmak evrensel bir kural değil: bazı türlerin ustalıkla dolandığı bir süreçtir."
+          "text": "Yaşlanırız, sonra ölürüz. Oysa [[Turritopsis dohrnii]] denizanası gençlik evresine dönüp her şeye baştan başlayabilir. **Ming** adlı deniz tarağı **507 yıl** yaşadı. Demek ki yaşlanmak evrensel bir kural değil: bazı türlerin atlatmayı başardığı bir süreç."
         },
         {
           "type": "paragraph",
-          "text": "Bu istisnaları incelerken araştırmacılar bilimkurgu ölümsüzlüğünden çok, hücrenin daha iyi onarılması için doğanın hilelerini arar."
+          "text": "Araştırmacılar bu istisnaları incelerken bilimkurgudaki ölümsüzlükten çok, canlıların hücreleri daha iyi onarmak için bulduğu püf noktalarını arıyor."
         }
       ]
     },
@@ -39,49 +39,49 @@
           "type": "image",
           "asset": "chromosome_dna_telomere_aging_cell",
           "ratio": "auto",
-          "caption": "Kromozomların uçlarındaki telomerler her hücre bölünmesinde kısalır"
+          "caption": "Kromozomların uçlarındaki telomerler her hücre bölünmesinde kısalır."
         },
         {
           "type": "paragraph",
-          "text": "Kromozomlarımızın uçlarında [[Telomerler]] ayakkabı bağının plastik uçları gibi işler. Her hücre bölünmesinde kısalırlar. Çok kısalınca hücre bölünmeyi bırakır. Paralelinde metabolizma proteinleri ve DNA'yı zedeleyen saldırgan moleküller üretir. O zaman “zombi” hücreler birikir ve çevrelerindeki dokuları iltihaplandırır."
+          "text": "Kromozomlarımızın uçlarındaki [[telomerler]], ayakkabı bağlarının plastik uçları gibi iş görür. Her hücre bölünmesinde kısalırlar. Fazla kısalınca hücre bölünmeyi bırakır. Bu arada metabolizma, proteinlere ve DNA'ya zarar veren saldırgan moleküller üretir. Böylece “zombi” hücreler birikir ve çevrelerindeki dokularda iltihaba yol açar."
         },
         {
           "type": "funFact",
-          "text": "Minik “su ayıcığı” tardigrad, kuruyarak neredeyse yaşamayı durdurabilir. Metabolizması **%99,99** düşer; uzay boşluğunda veya aşırı radyasyonda, pek yaşlanmadan hayatta kalır."
+          "text": "Minik “su ayısı” tardigrad, kuruyarak yaşamını neredeyse durdurabilir. Metabolizması **%99,99** yavaşlar; uzay boşluğuna ya da aşırı radyasyona gerçekten yaşlanmadan dayanır."
         }
       ]
     },
     {
       "id": "course_74_pourquoi_certaines_especes_sont_elles_im_p2",
-      "title": "Ölümü dolanarak geçen şampiyonlar",
+      "title": "Ölümü atlatan şampiyonlar",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Yaralı veya aç [[Turritopsis dohrnii]] yetişkin hücrelerini “bakir” hücrelere çevirir, sonra başlangıç evresi olan polipe döner. Transdiferansiyasyon denen bu geriye dönüş ona bir tür **biyolojik ölümsüzlük** verir."
+          "text": "Yaralanan ya da aç kalan [[Turritopsis dohrnii]], yetişkin hücrelerini “özelleşmemiş” hücrelere dönüştürür, sonra başlangıç evresi olan polipe geri döner. Transdiferansiyasyon denen bu geri dönüş, ona bir tür **biyolojik ölümsüzlük** kazandırır."
         },
         {
           "type": "paragraph",
-          "text": "Tatlı suyun küçük polipi **hidra**, neredeyse sınırsız [[kök hücreler]] stoğuyla bütün bedenini yeniler. Ölçülebilir bir yaşlanma belirtisi göstermez. Grönland balinası ise son derece etkili DNA onarımı ve kansere yüksek direnç sayesinde **200 yılı** aşabilir."
+          "text": "Küçük bir tatlı su polipi olan **hidra**, neredeyse sınırsız sayıda [[kök hücreler]] barındırdığı için bütün bedenini yenileyebilir. Ölçülebilir hiçbir yaşlanma belirtisi göstermez. Grönland balinası ise son derece etkili DNA onarımı ve kansere karşı yüksek direnci sayesinde **200 yılı** aşabilir."
         },
         {
           "type": "funFact",
-          "text": "Istakozlar bedenin her yerinde telomeraz üretir: telomerleri kısalmaz. Ömür boyu büyürler ve çoğu zaman kabuk değiştirmek fazla pahalıya gelince ölürler."
+          "text": "Istakozlar bedenlerinin her yerinde telomeraz üretir: telomerleri kısalmaz. Ömür boyu büyürler ve çoğunlukla kabuk değiştirmek onlara fazla ağır gelmeye başlayınca ölürler."
         }
       ]
     },
     {
       "id": "course_74_pourquoi_certaines_especes_sont_elles_im_p3",
-      "title": "Tıbbın buradan çıkardığı",
+      "title": "Tıbbın bundan çıkardığı dersler",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Fikir artık Alzheimer'ı veya kireçlenmeyi tek tek tedavi etmek değil, yaşlanmanın kendisine saldırmaktır. **Senolitikler** zombi hücreleri yok etmeyi hedefler. Hayvanda bu, bazı işlevleri şimdiden gençleştirdi."
+          "text": "Amaç artık yalnızca Alzheimer'ı ya da kireçlenmeyi tek tek tedavi etmek değil, doğrudan yaşlanmanın kendisiyle savaşmak. **Senolitikler** zombi hücreleri yok etmeyi hedefler. Hayvanlarda bu yöntem bazı işlevleri şimdiden gençleştirdi."
         },
         {
           "type": "paragraph",
-          "text": "Yetersiz beslenmeden kalori kısmak da onarım yollarını açar; özellikle büyümeyi ve bazen çöküşü hızlandıran protein [[mTOR]] yavaşlatılarak. Başka laboratuvarlar, denizanası gibi, hücrelerin “saatini geri almayı” dener; onları tümöre çevirmeden."
+          "text": "Yetersiz beslenmeye yol açmadan kaloriyi kısmak da onarım mekanizmalarını harekete geçirir; özellikle büyümeyi… ve bazen çöküşü hızlandıran bir protein olan [[mTOR]] frenlenir. Başka laboratuvarlar da denizanası gibi hücrelerin “saatini geri almaya” çalışıyor, ama onları tümöre dönüştürmeden."
         }
       ]
     },
@@ -92,11 +92,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Biyolojik olarak ölümsüz bir tür bile avcıdan, hastalıktan veya bir felaketten ölür. Ölüm evrimin motoru kalır: daha iyi uyarlanmış yeni kuşaklara yer açar."
+          "text": "Biyolojik olarak ölümsüz bir tür bile yırtıcılar, hastalıklar ya da felaketler yüzünden ölür. Ölüm, evrimin itici gücü olmayı sürdürür: çevreye daha iyi uyum sağlamış yeni kuşaklara yer açar."
         },
         {
           "type": "paragraph",
-          "text": "İnsan için gerçekçi hedef sonsuza dek yaşamak değil, **sağlıklı** yılları uzatmaktır. Teknolojiye dönüşmüş bir uzun ömür, adalet ve kaynak üzerine de kocaman sorular doğurur."
+          "text": "İnsan için gerçekçi hedef sonsuza dek yaşamak değil, **sağlıklı** geçen yılları uzatmak. Uzun ömür bir teknolojiye dönüşürse eşitlik ve kaynaklar konusunda da çok büyük sorular doğururdu."
         },
         {
           "type": "takeaway",

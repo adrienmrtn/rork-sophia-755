@@ -1,14 +1,14 @@
 {
   "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup",
-  "title": "Volkanlar neden püskürmeye başlar?",
+  "title": "Volkanlar neden püskürür?",
   "subtitle": "Magma ve levhalar",
   "subject": "sciences",
   "subcategory": "Dünya ve evren",
-  "description": "Volkan, yerkabuğundaki bir açıklıktır. Basınç altındaki magma oradan yükselir ve lav olur. İşte Dünya'nın neden “tükürdüğü”.",
+  "description": "Volkan, yerkabuğundaki bir açıklıktır. Basınç altındaki magma oradan yükselir ve lav olur. Peki Dünya neden “tükürür”? İşte yanıtı.",
   "hero": {
     "image": "pourquoi_les_volcans_entrent_en_eruption",
     "ratio": "16:9",
-    "hook": "Ayaklarımızın altında Dünya donmuş değildir. Bazen bir ateş penceresi açar."
+    "hook": "Ayaklarımızın altındaki Dünya hareketsiz değildir. Bazen bir ateş penceresi açar."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Volkan yalnızca ateş tüküren bir dağ değildir. Dünya'nın dış kabuğundaki bir açıklıktır. Oradan **magma** yükselir: erimiş kaya ve gaz karışımı, yüksek basınç altındadır. Açık havaya çıkınca bu magma **lav** olur."
+          "text": "Volkan yalnızca ateş tüküren bir dağ değildir. Dünya'nın dış kabuğundaki bir açıklıktır. Oradan **magma** yükselir: yüksek basınç altındaki erimiş kaya ve gaz karışımı. Açık havaya çıkınca bu magma **lav** olur."
         },
         {
           "type": "paragraph",
-          "text": "Bir püskürmeyi anlamak için yüzeyin altına bakmak gerekir: gezegenin iç ısısı, levhaların hareketi ve gazların basıncı nasıl yükselttiği. Biraz çalkalanmış bir gazoz şişesindeki gibi."
+          "text": "Bir püskürmeyi anlamak için yüzeyin altına bakmak gerekir: gezegenin iç ısısına, levhaların hareketine ve gazların basıncı nasıl artırdığına. Tıpkı çalkalanmış bir gazoz şişesinde olduğu gibi."
         }
       ]
     },
@@ -33,25 +33,25 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Dünya katmanlardan oluşur. Yüzeyde **kabuk** sert bir zardır, **5 ile 70 km** kalınlığındadır. Altında **manto** yaklaşık **2.900 km** derinliğe kadar uzanır. Manto çoğu zaman katıdır, ama çok uzun sürelerde ultra koyu bir bal gibi çok yavaş akabilir."
+          "text": "Dünya katmanlardan oluşur. Yüzeydeki **kabuk**, **5 ile 70 km** kalınlığında sert bir örtüdür. Altında **manto**, yaklaşık **2.900 km** derinliğe kadar uzanır. Manto büyük ölçüde katıdır, ama çok uzun sürelerde son derece koyu bir bal gibi çok yavaş akabilir."
         },
         {
           "type": "image",
           "asset": "volcano_eruption_lava",
           "ratio": "auto",
-          "caption": "Bir püskürme: magmanın yerin derinliklerinden yüzeye yükselmesi"
+          "caption": "Bir püskürme: magmanın yüzeye yükselişi"
         },
         {
           "type": "paragraph",
-          "text": "Bu iç ısı maddeyi yükseltir ve yeniden aşağı indirir: bunlar **konveksiyon akımları**dır. Kabuğun levha denen büyük parçalarını iterler. İşte [[Plaka tektoniği]]: yeryüzü, birbirinden ayrılan, çarpışan veya yan yana kayan levhalara bölünmüştür."
+          "text": "Bu iç ısı, maddeyi yukarı çıkarıp yeniden aşağı indirir: bunlar **konveksiyon akımları**dır. Bu akımlar, kabuğun levha denen büyük parçalarını iter. Buna [[Plaka tektoniği]] denir: yeryüzü, birbirinden uzaklaşan, çarpışan ya da yan yana kayan levhalara bölünmüştür."
         },
         {
           "type": "funFact",
-          "text": "Bazı çok hızlı yükselmeler, **150 km**'den derinlerde oluşan elmasları yüzeye getirir. Yolda dönüşmeye vakitleri olmaz."
+          "text": "Bazı çok hızlı yükselişler, **150 km**'den daha derinde oluşmuş elmasları yüzeye taşır. Elmasların yolda dönüşmeye vakti olmaz."
         },
         {
           "type": "paragraph",
-          "text": "[[sırtlar]] boyunca levhalar açılır ve magma kolay yükselir. Bir [[Yitim]] kuşağında bir levha diğerinin altına dalar ve suyu da beraberinde götürür. Bu su kayaların erime noktasını düşürür: magma oluşur, sonra yükselir."
+          "text": "Levhalar [[sırtlar]] boyunca birbirinden uzaklaşır ve magma kolayca yükselir. Bir [[Yitim]] kuşağında bir levha diğerinin altına dalar ve suyu da beraberinde götürür. Bu su kayaların erime noktasını düşürür: magma oluşur, sonra yükselir."
         }
       ]
     },
@@ -62,11 +62,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kaya yalnızca “hava sıcak diye” erimez. Üç tetikleyici sayılır: sıcaklık artışı, basınç düşüşü veya su eklenmesi. Bir kez oluşunca magma çevresindeki kayadan daha az yoğundur. Bu yüzden yükselmeye çalışır, sudaki bir hava kabarcığı gibi."
+          "text": "Kaya yalnızca “sıcak olduğu için” erimez. Üç tetikleyici önemlidir: sıcaklığın artması, basıncın düşmesi ya da su eklenmesi. Oluştuktan sonra magma, çevresindeki kayadan daha az yoğundur. Bu yüzden, tıpkı sudaki bir hava kabarcığı gibi yükselmeye çalışır."
         },
         {
           "type": "paragraph",
-          "text": "Çoğu zaman önce yüzeyin birkaç kilometre altında bir rezervuar olan **magma odasında** durur. Orada çözünmüş gazlar, basınç düşünce kabarcık oluşturur. Üstteki kaya “tıpası” artık dayanamayınca püskürme başlar."
+          "text": "Çoğu zaman önce yüzeyin birkaç kilometre altındaki bir hazne olan **magma odasında** durur. Orada basınç düşünce çözünmüş gazlar kabarcık oluşturur. Üstteki kaya “tıpası” artık dayanamazsa püskürme başlar."
         },
         {
           "type": "funFact",
@@ -81,15 +81,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Bütün püskürmeler birbirine benzemez. Her şey magmanın **viskozitesine** bağlıdır, yani sıvı mı yoksa yapışkan mı olduğuna. **Hawaii**'de veya Fournaise Pitonu'nda (Réunion adası) olduğu gibi akışkan bir magma, gazların kaçmasına izin verir. Lav akar: **efüzif** püskürme."
+          "text": "Bütün püskürmeler birbirine benzemez. Her şey magmanın **viskozitesine**, yani daha çok sıvı mı yoksa yapışkan mı olduğuna bağlıdır. **Hawaii**'de ya da Piton de la Fournaise'de (Réunion Adası) olduğu gibi akışkan bir magma, gazların kaçmasına izin verir. Lav akar: **efüzif** püskürme."
         },
         {
           "type": "paragraph",
-          "text": "Yapışkan bir magma gazları hapseder. Basınç yükselir, sonra her şey patlar. Kül, bloklar ve yamaçlardan inen kızgın gaz-kül bulutları olan [[piroklastik akışlar]] çevreyi yakıp yıkabilir. **Saint Helens** dağı (ABD) veya **Pinatubo** (Filipinler) bu tarzdadır."
+          "text": "Yapışkan bir magma gazları hapseder. Basınç yükselir, sonra her şey patlar. Bu durumda kül, kaya blokları ve [[piroklastik akışlar]], yani yamaçlardan aşağı inen kızgın gaz ve kül bulutları, çevreyi yakıp yıkabilir. **Saint Helens** Dağı (ABD) ya da **Pinatubo** (Filipinler) gibi volkanlar böyledir."
         },
         {
           "type": "paragraph",
-          "text": "Bir volkan yüzyıllarca sakin de kalabilir. **M.S. 79**'da Napoli yakınındaki **Vezüv**, Pompei'yi kül altında gömer. Dünya volkan etkinliğinin yaklaşık **%80**'i okyanusların altında, gözümüzden uzak gerçekleşir."
+          "text": "Bir volkan yüzyıllarca sakin de kalabilir. **M.S. 79**'da Napoli yakınındaki **Vezüv**, Pompei'yi kül altına gömdü. Dünyadaki volkanik etkinliğin yaklaşık **%80**'i okyanusların altında, gözümüzden uzakta gerçekleşir."
         }
       ]
     },
@@ -100,15 +100,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Volkanlar gaz salarak Dünya'nın ilk atmosferini biçimlendirdi. Külleri toprağı da zenginleştirir: birçok verimli tarım bölgesi aktif volkanların eteğinde yaşar. Ama çok büyük bir püskürme kükürt parçacıklarını atmosferin yükseğine gönderebilir ve iklimi aylarca soğutabilir."
+          "text": "Volkanlar gaz salarak Dünya'nın ilk atmosferini biçimlendirdi. Külleri toprağı da zenginleştirir: birçok verimli tarım bölgesi etkin volkanların eteğinde yer alır. Ama çok büyük bir püskürme, kükürt parçacıklarını atmosferin yükseklerine gönderip iklimi aylarca soğutabilir."
         },
         {
           "type": "paragraph",
-          "text": "ABD'deki Yellowstone [[süper yanardağ]] sahası gibi bazı yerler yakından izlenir. Denizin altında, sırtların yanında, [[siyah sigara içenler]] mineralce zengin kızgın akışkanlar püskürtür. Orada Güneş ışığı olmadan, sıcak kaynakların kimyasıyla beslenen ekosistemler yaşar."
+          "text": "ABD'deki Yellowstone [[süper yanardağ]] sahası gibi bazı yerler yakından izlenir. Denizin altında, sırtların yanında, [[siyah bacalar]] mineralce zengin kızgın akışkanlar püskürtür. Orada Güneş ışığı olmadan, sıcak kaynakların kimyasıyla beslenen ekosistemler yaşar."
         },
         {
           "type": "takeaway",
-          "text": "Volkanlar basınç altındaki magmayı, özellikle tektonik levha sınırlarında, dışarı atar. Magmanın viskozitesi, püskürmenin sakin akıp akmayacağına veya patlayacağına karar verir."
+          "text": "Volkanlar, basınç altındaki magmayı özellikle tektonik levhaların sınırlarında dışarı atar. Püskürmenin sakin bir akış mı yoksa bir patlama mı olacağını magmanın viskozitesi belirler."
         }
       ]
     }

@@ -4,7 +4,7 @@
   "subtitle": "Su ve moleküller",
   "subject": "sciences",
   "subcategory": "Gündelik hayatın sırları",
-  "description": "Buz suyun üstünde yüzer. Normal gibi durur, ama aslında çok enderdir. Ve Dünya'daki hayat için şanstır.",
+  "description": "Buz suyun üstünde yüzer. Bu normal gibi görünür, ama aslında çok ender bir durumdur. Dünya'daki yaşam için de büyük bir şans.",
   "hero": {
     "image": "pourquoi_la_glace_flotte",
     "ratio": "16:9",
@@ -18,7 +18,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Bardaktaki bir buz kalıbı, okyanustaki bir aysberg: buz **yüzer**. Bunu sıradan bulursun. Oysa çoğu madde için katı daha **yoğundur**, yani aynı hacimde daha ağırdır: batar."
+          "text": "Bardakta bir buz küpü, okyanusta bir aysberg: buz **yüzer**. Bu bize sıradan gelir. Oysa çoğu maddede katı hâl daha **yoğundur**, yani aynı hacimde daha ağırdır: batar."
         },
         {
           "type": "paragraph",
@@ -33,7 +33,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Bir su molekülü, iki **hidrojen** atomuna bağlı bir **oksijen** atomudur. Düz değildir: bir **V** çizer. Bu biçim yüzünden elektrik yükleri eşit dağılmaz: molekül **kutupludur**, bir ucu hafif negatif, öteki hafif pozitiftir."
+          "text": "Bir su molekülü, iki **hidrojen** atomuna bağlı bir **oksijen** atomundan oluşur. Düz değildir: **V** biçimindedir. Bu biçim yüzünden elektrik yükleri eşit dağılmaz: molekül **kutupludur**, bir ucu hafifçe negatif, öteki hafifçe pozitiftir."
         },
         {
           "type": "image",
@@ -43,18 +43,18 @@
         },
         {
           "type": "paragraph",
-          "text": "Sonuç: su molekülleri küçük mıknatıslar gibi [[Hidrojen bağları]] ile birbirini çeker. Sıvıda yakın dururlar ama hâlâ hareket ederler. Buzda başka türlü donup kalırlar."
+          "text": "Sonuç: su molekülleri, küçük mıknatıslar gibi, [[hidrojen bağları]] sayesinde birbirini çeker. Sıvıdayken birbirine yakın dururlar ama hareket etmeyi sürdürürler. Buzda ise başka bir düzende donup kalırlar."
         }
       ]
     },
     {
       "id": "course_43_pourquoi_la_glace_flotte_t_elle_p2",
-      "title": "Su donunca yer kaplar",
+      "title": "Su donunca daha çok yer kaplar",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Yaklaşık **0°C**'de su katılaşır. Buzu kurmak için moleküller **altıgen** bir ağ, altı kenarlı bir arı peteği gibi dizilir. Aralarında sıvı halden daha çok **boşluk** bırakırlar."
+          "text": "Yaklaşık **0°C**'de su katılaşır. Buzu oluşturmak için moleküller **altıgen** bir ağ hâlinde, altı kenarlı bir tür bal peteği gibi dizilir. Böylece aralarında sıvı hâldekinden daha fazla **boşluk** bırakırlar."
         },
         {
           "type": "funFact",
@@ -62,7 +62,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Aynı hacimde daha az madde demek: **daha az yoğun**. Çevresindeki sıvıdan az yoğun bir cisim yükselir. Buz bu yüzden suyun üstünde yüzer. Buna suyun **anormal genleşmesi** denir: neredeyse bütün maddelerin tersine su **4°C**'nin altında soğurken genleşir."
+          "text": "Aynı hacimde daha az madde, **daha az yoğun** demektir. Oysa çevresindeki sıvıdan daha az yoğun bir cisim yukarı çıkar. Bu yüzden buz suyun üstünde yüzer. Buna **suyun anormal genleşmesi** denir: neredeyse bütün maddelerin aksine su, **4°C**'nin altında soğudukça genleşir."
         },
         {
           "type": "image",
@@ -79,11 +79,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Buz batsaydı diye düşün. Yüzeyde oluşur, sonra dibe düşerdi. Göl katman katman, ta dibine kadar donardı. Yaz çoğu zaman hepsini eritmeye yetmezdi."
+          "text": "Buzun battığını düşün. Yüzeyde oluşur, sonra dibe çökerdi. Göl katman katman, ta dibine kadar donardı. Yaz çoğu zaman hepsini eritmeye yetmezdi."
         },
         {
           "type": "paragraph",
-          "text": "Neyse ki buz üstte kalır. Bir **yalıtım kapağı** kurar. Donmuş yüzeyin altında sıvı su **4°C** civarında, sıvı suyun en yoğun olduğu sıcaklıkta kalabilir; balıkların ve su bitkilerinin yaşamasına yeter."
+          "text": "Neyse ki buz üstte kalır. Bir **yalıtım kapağı** oluşturur. Donmuş yüzeyin altında sıvı su, sıvı suyun en yoğun olduğu sıcaklık olan **4°C** civarında kalabilir. Bu, balıkların ve su bitkilerinin yaşaması için yeterlidir."
         }
       ]
     },
@@ -94,11 +94,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Beyaz buzul örtüsü yüksek **albedo**su, yani yansıtma gücü sayesinde Güneş ışığının büyük kısmını uzaya geri yollar. Yok olursa koyu okyanus daha çok ısı emer. Isınmayı hızlandırır: kısır bir döngü."
+          "text": "Beyaz deniz buzu, yüksek **albedo**su, yani yansıtma gücü sayesinde Güneş ışığının büyük kısmını uzaya geri yansıtır. Bu buz yok olursa koyu renkli okyanus daha fazla ısı emer. Bu da ısınmayı hızlandırır: bir kısır döngü."
         },
         {
           "type": "takeaway",
-          "text": "Buz yüzer çünkü katılaşırken su daha “havadar” bir ağ kurar: sıvı sudan daha az yoğun olur. Bu istisna kışın sucul hayatı korur: göller tabandan değil yüzeyden donar, altta sıvı bir sığınak kalır."
+          "text": "Buz yüzer, çünkü su katılaşırken daha “havadar” bir ağ oluşturur ve sıvı sudan daha az yoğun hâle gelir. Bu istisna, kışın sudaki yaşamı korur."
         }
       ]
     }

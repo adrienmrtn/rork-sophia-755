@@ -1,10 +1,10 @@
 {
   "id": "course_55_la_theorie_de_la_gravitation_newton_1687",
-  "title": "Yerçekimi kuramı",
+  "title": "Kütle çekimi kuramı",
   "subtitle": "Newton, 1687",
   "subject": "sciences",
   "subcategory": "Dünyayı değiştiren keşifler",
-  "description": "1687'de Newton yalın ve kocaman bir fikir yayımlar: aynı kuvvet bir elmayı düşürür ve Ay'ı döndürür. İşte bu neyi değiştirir.",
+  "description": "1687'de Newton basit ama çok büyük bir fikir yayımladı: elmayı düşüren kuvvet, Ay'ı da döndürür. Bakalım bu neleri değiştirdi.",
   "hero": {
     "image": "la_theorie_de_la_gravitation_newton",
     "ratio": "16:9",
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Newton'dan önce gezegenler hakkında çok şey biliniyordu: 17. yüzyıl İtalyan fizikçisi **Galileo** ve eliptik yörüngeleri betimleyen gökbilimci **[[Johannes Kepler]]** sayesinde. Ama yeryüzünde düşen ile gökte dönen arasında net bir bağ eksikti."
+          "text": "Newton'dan önce, 17. yüzyılın İtalyan fizikçisi **Galileo** ve eliptik yörüngeleri tanımlayan gökbilimci **[[Johannes Kepler]]** sayesinde gezegenler hakkında zaten çok şey biliniyordu. Ama yeryüzünde düşen şeylerle gökte dönenler arasında net bir bağ kurulamamıştı."
         },
         {
           "type": "paragraph",
-          "text": "**1687**'de **Isaac Newton** *[[Philosophiae Naturalis Principia Mathematica]]* eserini, klasik fiziğin kurucu kitabı *Principia*'yı yayımlar. Yerçekiminin **evrensel** olduğunu söyler: her yerde, aynı biçimde işler."
+          "text": "**1687**'de **Isaac Newton**, kısaca *Principia* diye bilinen *[[Philosophiae Naturalis Principia Mathematica]]* adlı eserini yayımladı. Klasik fiziğin temel kitabı olan bu eserde kütle çekiminin **evrensel** olduğunu ileri sürdü: her yerde aynı biçimde etki eder."
         }
       ]
     },
@@ -37,7 +37,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Newton cevaplar: bir **çekim kuvveti**, iki kütleyi birbirine çeken bir kuvvet. Dünya Ay'ı çeker. Güneş Dünya'yı çeker. Sen de Dünya'yı biraz çekersin... gerçi bu çekim çok küçüktür."
+          "text": "Newton'un cevabı şu: **kütle çekimi**, yani iki kütleyi birbirine doğru çeken bir kuvvet. Dünya Ay'ı çeker. Güneş Dünya'yı çeker. Sen de Dünya'yı biraz çekersin... gerçi bu çekim minicik."
         }
       ]
     },
@@ -50,21 +50,21 @@
           "type": "image",
           "asset": "isaac_newton_apple_tree_woolsthorpe",
           "ratio": "4:3",
-          "caption": "Elma öyküsü daha çok bir anlatıdır. Fikrin kendisi ise gerçektir"
+          "caption": "Elma hikâyesi daha çok anlatılagelen bir öyküdür. Fikir ise gerçektir."
         },
         {
           "type": "paragraph",
-          "text": "İki cisim, madde miktarı olan **kütleleriyle** artan ve uzaklaşınca azalan bir kuvvetle birbirini çeker. Daha kesin söylersek: kuvvet **mesafenin karesiyle** zayıflar. Mesafeyi ikiye katlamak çekimi dörde böler. Uzaklaştıkça çekim hızla zayıflar."
+          "text": "İki cisim birbirini, **kütleleri** (yani madde miktarları) büyüdükçe artan, aralarındaki uzaklık arttıkça azalan bir kuvvetle çeker. Daha doğrusu: kuvvet **uzaklığın karesiyle** zayıflar. Uzaklığı iki katına çıkarırsan çekim dörtte birine iner. Ne kadar uzaktaysan çekim o kadar hızlı zayıflar."
         },
         {
           "type": "image",
           "asset": "planets_orbit_solar_system_gravity",
           "ratio": "16:9",
-          "caption": "Gezegenler Güneş'e doğru durmadan “düşer” ve ıskalar: bu yörüngedir"
+          "caption": "Gezegenler Güneş'e doğru durmadan “düşer”... ve hep ıskalar: yörünge budur."
         },
         {
           "type": "funFact",
-          "text": "Ay, Dünya'ya doğru sürekli “düşer”. Yanlamasına büyük bir hızı da olduğu için ezilmek yerine çevresinde döner."
+          "text": "Ay, Dünya'ya doğru sürekli “düşer”. Ama yana doğru da büyük bir hızı olduğu için Dünya'ya çakılmak yerine onun çevresinde döner."
         }
       ]
     },
@@ -75,11 +75,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Newton ayrıca üç **hareket yasası** verir. Özetle: kuvvet yoksa bir cisim hızını korur, **eylemsizlik** ilkesi; bir kuvvet hızı değiştirir; her etkiye zıt bir tepki vardır."
+          "text": "Newton ayrıca üç **hareket yasası** ortaya koydu. Özetle: üzerine kuvvet etki etmeyen bir cisim hızını korur (**eylemsizlik** ilkesi); bir kuvvet hızı değiştirir; her etkiye karşıt bir tepki vardır."
         },
         {
           "type": "paragraph",
-          "text": "Bununla güzergahlar, Ay ve Güneş'in etkisiyle okyanusların inip kalkması olan **gelgitler** ve yörüngeler hesaplanabilir. Fizik bir öngörü aracı olur."
+          "text": "Bu yasalarla cisimlerin izleyeceği yollar, **gelgitler** (Ay ve Güneş'in etkisiyle okyanusların yükselip alçalması) ve yörüngeler hesaplanabildi. Fizik bir öngörü aracına dönüştü."
         }
       ]
     },
@@ -90,11 +90,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "İki yüzyıl sonra **[[Albert Einstein]]** uç durumlar için, çok büyük hızlar ve çok güçlü çekimler için, [[Göreli çekim (Einstein)]] ile Newton'u düzeltir. Yerçekimi o zaman görünmez bir kuvvet değil, uzay-zamanın eğriliği olur. Ama bir roket fırlatmak veya gelgitleri anlamak için Newton hâlâ üstündür."
+          "text": "İki yüzyıl sonra **[[Albert Einstein]]**, uç durumlarda (çok büyük hızlarda ve çok güçlü çekim alanlarında) Newton'u [[Göreli çekim (Einstein)]] kuramıyla düzeltecekti. Kütle çekimi artık görünmez bir kuvvet değil, uzay-zamanın eğriliği olarak görülür. Ama bir roket fırlatmak ya da gelgitleri anlamak için Newton hâlâ çok iyi iş görür."
         },
         {
           "type": "takeaway",
-          "text": "Newton göğü ve yeri birleştirir: yerçekimi kütleleri her yerde çeker. Tarihin en büyük bilimsel sentezlerinden biridir."
+          "text": "Newton gökle yeri birleştirdi: kütle çekimi her yerde kütleleri birbirine doğru çeker. Bu, tarihin en büyük bilimsel sentezlerinden biridir."
         }
       ]
     }

@@ -80,7 +80,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Tek bir metin isteği ne kadar elektrik tüketir? Yayımlanan tahminler aynı yanıtı vermiyor. Google, çalışan hizmetini ölçerek medyan metin isteğini **0,24 Wh** olarak belirliyor. Enerji miktarını ölçen birim [[watt-saat]] (Wh). Başka bir çalışma ise **0,31 Wh**'lik bir medyana ulaşıyor; standart isteklerinin ortadaki yarısı **0,16 ile 0,60 Wh** arasında."
+          "text": "Tek bir metin isteği ne kadar elektrik tüketir? Yayımlanan tahminler aynı yanıtı vermiyor. Google, çalışan hizmetini ölçerek medyan metin isteğini **0,24 Wh** olarak belirliyor. [[watt-saat]] (Wh), enerji miktarını ölçen birimdir. Başka bir çalışma ise **0,31 Wh**'lik bir medyana ulaşıyor; standart isteklerinin ortadaki yarısı **0,16 ile 0,60 Wh** arasında."
         },
         {
           "type": "paragraph",
@@ -88,7 +88,7 @@
         },
         {
           "type": "funFact",
-          "text": "Aynı çalışmada, modelin sonuca varmadan önce adımlarını tek tek açtığı uzun bir akıl yürütme isteği 3,91 Wh medyana ulaşıyor: standart bir isteğin on katından fazla."
+          "text": "Aynı çalışmada, modelin sonuca varmadan önce adımlarını tek tek açtığı uzun bir akıl yürütme isteği 3,91 Wh'lik bir medyana ulaşıyor: standart bir isteğin on katından fazla."
         }
       ]
     },
@@ -99,7 +99,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Santrallerden evlere ve işyerlerine akımı taşıyan hat ağına [[elektrik şebekesi]] denir. Büyük yapay zekâ tesisleri de aynı şebekeye bağlanır. Bir fikir vermek için IEA, esas olarak bu hizmetleri çalıştırmak için kurulmuş, yapay zekâya ayrılmış bir veri merkezinin yıllık tüketimini yaklaşık **100.000 hanenin** tüketimiyle karşılaştırıyor."
+          "text": "Santrallerden evlere ve işyerlerine akımı taşıyan hat ağına [[elektrik şebekesi]] denir. Büyük yapay zekâ tesisleri de aynı şebekeye bağlanır. Bir ölçü vermek gerekirse IEA, esas olarak bu hizmetleri çalıştırmak için kurulmuş, yapay zekâya ayrılmış bir veri merkezinin yıllık tüketimini yaklaşık **100.000 hanenin** tüketimiyle karşılaştırıyor."
         },
         {
           "type": "image",

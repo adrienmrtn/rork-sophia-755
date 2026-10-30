@@ -4,7 +4,7 @@
   "subtitle": "2009'dan beri",
   "subject": "comprendreLeMonde",
   "subcategory": "Çevre ve gelecek",
-  "description": "**Blockchain** kimsenin tek başına bozamayacağı bir defter icat etti ve yeni bir dijital ekonominin yolunu açtı.",
+  "description": "**Blockchain** kimsenin tek başına sahtesini yapamayacağı bir kayıt defteri icat etti ve yeni bir dijital ekonominin yolunu açtı.",
   "hero": {
     "image": "la_blockchain_et_les_cryptomonnaies",
     "ratio": "16:9",
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kimsenin tek başına sahip olmadığı, ama dünyanın her yerinde binlerce bilgisayarın aynı anda güncel tuttuğu ve neredeyse bozulması imkansız bir hesap defteri düşün. İşte **blockchain** fikrinin çıkış noktası budur. Bu teknoloji çoğu zaman ilk uygulamasına, yani **Bitcoin**'e indirgenir."
+          "text": "Kimsenin tek başına sahip olmadığı, ama dünyanın dört bir yanında binlerce bilgisayarın aynı anda güncel tuttuğu ve üzerinde oynanması neredeyse imkânsız bir hesap defteri düşün. **Blockchain**'in çıkış fikri budur. Bu teknoloji çoğu zaman ilk uygulaması olan **Bitcoin**'e indirgenir."
         },
         {
           "type": "paragraph",
-          "text": "Değeri bir bankadan geçmeden takas etmeye izin verdiği için bu icat bütün bir paralel ekonomi doğurdu: bir yanda mali özgürlük vaatleri, öte yanda enerji maliyeti üzerine sert eleştiriler."
+          "text": "Bankaya uğramadan değer alıp vermeyi mümkün kılan bu icat, koca bir paralel ekonomi doğurdu: bir yanda mali özgürlük vaatleri, öte yanda enerji maliyetine yönelik sert eleştiriler."
         }
       ]
     },
@@ -33,15 +33,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Blockchain'in kalbinde yalın bir fikir durur: **dağıtık defter**. Hesaplarını kendi sunucularında tutan bir bankanın tersine, blockchain bir [[akranlar]] ağına dayanır: her biri bütün işlemlerin aynı kopyasını saklayan binlerce bilgisayar."
+          "text": "Blockchain'in temelinde basit bir fikir yatar: **dağıtık defter**. Hesaplarını kendi sunucularında tutan bir bankanın aksine blockchain, [[eşler arası]] denen binlerce bilgisayardan oluşan bir ağa dayanır; bu bilgisayarların her biri bütün işlemlerin birebir aynı kopyasını saklar."
         },
         {
           "type": "funFact",
-          "text": "Bitcoin blockchain'inin ilk bloğuna “genesis bloğu” denir ve içinde gizli bir mesaj vardı: 3 Ocak 2009 tarihli bir Britanya gazetesinin manşeti, bankaların devlet tarafından kurtarılmasından söz ediyordu. Yaratıcısının siyasi bir göz kırpmasıydı."
+          "text": "Bitcoin blockchain'inin ilk bloğu olan “genesis bloğu” gizli bir mesaj taşıyordu: 3 Ocak 2009 tarihli bir İngiliz gazetesinin manşeti. Manşet, bankaların devlet tarafından kurtarılmasından söz ediyordu. Yaratıcısının siyasi bir göndermesiydi."
         },
         {
           "type": "paragraph",
-          "text": "Her işlem önce ağ tarafından doğrulanır, sonra başkalarıyla bir **blok** içinde toplanır. Bu blok, [[karma]] denen matematiksel bir hesapla bir öncekiline bağlanır: benzersiz bir dijital parmak izi. Sonuç, kesintisiz bir blok zinciridir; blockchain adı da buradan gelir. Eski tek bir işlemi değiştirmek için bütün zinciri yeniden hesaplamak ve ağın yarısından fazlasını ikna etmek gerekir; büyük ölçekte bu neredeyse imkansızdır."
+          "text": "Her işlem önce ağ tarafından doğrulanır, sonra başka işlemlerle birlikte bir **blok** içinde toplanır. Bu blok, [[hash]] denen matematiksel bir hesapla bir öncekine bağlanır: bir tür benzersiz dijital parmak izi. Sonuç, kesintisiz bir blok zinciridir; blockchain adı da buradan gelir. Eski tek bir işlemi değiştirmek için bütün zinciri yeniden hesaplamak ve ağın yarısından fazlasını ikna etmek gerekirdi; büyük ölçekte bu neredeyse imkânsızdır."
         }
       ]
     },
@@ -52,7 +52,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "[[Satoshi Nakamoto]] takma adıyla anonim kalan bir kişi (veya grup) **2009**'da **Bitcoin**'i başlattı ve parasal bir sistemin merkez bankası olmadan da işleyebileceğini kanıtladı. Kıtlığı güvenceye almak için yaratıcısı katı bir tavan koydu: asla **21 milyon bitcoin**'den fazla olmayacak, tıpkı yeryüzündeki altının sınırlı olması gibi."
+          "text": "[[Satoshi Nakamoto]] takma adıyla anonim kalan bir kişi (ya da grup) **2009**'da **Bitcoin**'i başlattı ve bir para sisteminin merkez bankası olmadan da işleyebileceğini kanıtladı. Kıtlığını güvenceye almak için yaratıcısı katı bir tavan koydu: hiçbir zaman **21 milyon bitcoin**'den fazlası var olamayacak, tıpkı Dünya'daki altının sınırlı olması gibi."
         },
         {
           "type": "image",
@@ -62,7 +62,7 @@
         },
         {
           "type": "paragraph",
-          "text": "2015'te **Ethereum** ile ikinci kuşak bir blockchain belirdi. Büyük yeniliği **akıllı sözleşmeler**di. Bunlar bir koşul yerine gelir gelmez kendiliğinden çalışan programlardır; örneğin tren gecikince otomatik bir geri ödeme, aracıya gerek kalmadan."
+          "text": "2015'te **Ethereum** ile ikinci kuşak blockchain ortaya çıktı. En büyük yeniliği **akıllı sözleşmeler** oldu. Bunlar, bir koşul yerine gelir gelmez kendiliğinden çalışan programlardır: örneğin tren geciktiğinde, araya kimse girmeden otomatik olarak yapılan bir geri ödeme."
         }
       ]
     },
@@ -73,15 +73,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kripto paraların başarısı sorunlardan azade değildir. En çok tartışılanı Bitcoin ağının **enerji tüketimi**dir: yıllık elektrik harcaması bugün Arjantin gibi bütün bir ülkeninkine denktir."
+          "text": "Kripto paraların başarısı sorunsuz değil. En çok tartışılanı Bitcoin ağının **enerji tüketimi**: yıllık elektrik harcaması bugün Arjantin gibi koca bir ülkeninkiyle kıyaslanabilir düzeyde."
         },
         {
           "type": "paragraph",
-          "text": "Piyasa ayrıca aşırı bir **oynaklık** çeker: Bitcoin fiyatı birkaç saatte %10 veya %20 değişebilir. Bu istikrarsızlık şimdilik onun gündelik gerçek bir para olmasını engeller."
+          "text": "Piyasada ayrıca aşırı bir **oynaklık** var: Bitcoin'in fiyatı birkaç saat içinde %10 ya da %20 değişebilir. Bu istikrarsızlık, şimdilik onun gündelik hayatta kullanılan gerçek bir paraya dönüşmesini engelliyor."
         },
         {
           "type": "paragraph",
-          "text": "Son olarak, işlemlerin göreli anonimliği bazen yasadışı işlere yaradı. Ama blockchain aslında tümüyle şeffaftır: makamlar para akışını izleyebilir, bu da aklamayı nakit para sisteminden daha zor kılar."
+          "text": "Son olarak, işlemlerin görece anonim olması bazen yasa dışı işlere alet oldu. Ama blockchain aslında tamamen şeffaftır: yetkililer para akışlarını izleyebilir; bu da kara para aklamayı klasik nakit para sistemine göre zorlaştırır."
         }
       ]
     },
@@ -92,19 +92,19 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Bugün kripto paralar kenardan çıkıp geleneksel finansa girer. Büyük bankalar artık müşterileri için dijital varlık saklar ve birkaç devlet kendi resmi dijital parasını, bir **[[CBDC]]** (merkez bankası dijital para birimi) kurmayı düşünür."
+          "text": "Bugün kripto paralar kenardan çıkıp geleneksel finansa giriyor. Büyük bankalar artık müşterileri için dijital varlık saklama hizmeti sunuyor ve birçok devlet kendi resmi dijital parasını, yani bir **[[CBDC]]** (merkez bankası dijital parası) çıkarmayı düşünüyor."
         },
         {
           "type": "paragraph",
-          "text": "**Stablecoin**'ler, fiyatı bir dolar veya euro rezerviyle sabitlenen kripto paralardır ve iki dünya arasında köprü olur. Finansın ötesinde lüks (sahteciliğe karşı), lojistik (konteynerleri izlemek) veya sağlık (tıbbi dosyaları korumak) gibi sektörler de güvenilirliği için blockchain'i benimser."
+          "text": "**Stablecoin**'ler, fiyatı bir dolar ya da euro rezerviyle sabitlenen kripto paralardır ve iki dünya arasında köprü görevi görür. Finansın ötesinde lüks (sahteciliğe karşı), lojistik (konteynerleri izlemek için) ya da sağlık (tıbbi kayıtları güvenceye almak için) gibi sektörler de güvenilirliği nedeniyle blockchain'i benimsiyor."
         },
         {
           "type": "funFact",
-          "text": "2021'de El Salvador, Amerikan dolarının yanında Bitcoin'i yasal para kabul eden dünyadaki ilk ülke oldu ve teknik imkanı olan her tüccarı onu kabule zorladı."
+          "text": "2021'de El Salvador, Bitcoin'i Amerikan dolarının yanında yasal para olarak kabul eden dünyadaki ilk ülke oldu; teknik imkânı olan her esnafı da Bitcoin'i kabul etmeye zorladı."
         },
         {
           "type": "takeaway",
-          "text": "2009'da doğan blockchain, paylaşılan ve neredeyse bozulması imkansız bir defterdir; bitcoin arzının tavanı 21 milyon birimdir. Bugün kurumlara hızla giren yeni bir dijital ekonominin temelini attı."
+          "text": "2009'da doğan blockchain, paylaşılan ve üzerinde oynanması neredeyse imkânsız bir kayıt defteridir; bitcoin arzı en fazla 21 milyon birimle sınırlıdır. Blockchain, bugün kurumlarla hızla bütünleşen yeni bir dijital ekonominin temellerini attı."
         }
       ]
     }
