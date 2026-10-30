@@ -19,6 +19,10 @@ import androidx.compose.material.icons.automirrored.filled.Login
 import androidx.compose.material.icons.automirrored.filled.Logout
 import androidx.compose.material.icons.automirrored.filled.ArrowForwardIos
 import androidx.compose.material.icons.filled.Close
+import androidx.compose.material.icons.filled.LightMode
+import androidx.compose.material.icons.filled.DarkMode
+import androidx.compose.material.icons.filled.Check
+import androidx.compose.material.icons.filled.BrightnessMedium
 import androidx.compose.material.icons.filled.CreditCard
 import androidx.compose.material.icons.filled.DeleteForever
 import androidx.compose.material.icons.filled.Description
@@ -73,7 +77,9 @@ import app.rork.sophia.ui.components.SectionLabel
 import app.rork.sophia.ui.components.TintedIconBox
 import app.rork.sophia.ui.components.softPress
 import app.rork.sophia.ui.components.sophiaCard
+import app.rork.sophia.ui.theme.AppearancePreference
 import app.rork.sophia.ui.theme.DS
+import app.rork.sophia.ui.theme.SophiaAppearance
 import app.rork.sophia.ui.theme.SophiaTypography
 import kotlinx.coroutines.launch
 import android.content.Intent
@@ -228,6 +234,52 @@ fun SettingsScreen(
                 if (index != AppLanguage.entries.lastIndex) HorizontalDivider(color = DS.hairline)
             }
         }
+
+        SettingsSection(StringStore.text(context, "settings.section.appearance", language))
+        SettingsGroup {
+            AppearancePreference.entries.forEachIndexed { index, option ->
+                val selected = SophiaAppearance.preference == option
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .softPress(onClick = { SophiaAppearance.setPreference(context, option) })
+                        .background(if (selected) DS.accentTint else Color.Transparent)
+                        .padding(horizontal = 14.dp, vertical = 13.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.spacedBy(12.dp),
+                ) {
+                    Icon(
+                        imageVector = when (option) {
+                            AppearancePreference.LIGHT -> Icons.Filled.LightMode
+                            AppearancePreference.DARK -> Icons.Filled.DarkMode
+                            AppearancePreference.SYSTEM -> Icons.Filled.BrightnessMedium
+                        },
+                        contentDescription = null,
+                        tint = if (selected) DS.accentSoft else DS.inkSecondary,
+                        modifier = Modifier.size(20.dp),
+                    )
+                    Text(
+                        text = StringStore.text(context, option.labelKey, language),
+                        style = SophiaTypography.bodyLarge.copy(fontSize = 16.sp),
+                        modifier = Modifier.weight(1f),
+                    )
+                    if (selected) {
+                        Icon(
+                            Icons.Filled.Check,
+                            contentDescription = null,
+                            tint = DS.accentSoft,
+                            modifier = Modifier.size(18.dp),
+                        )
+                    }
+                }
+                if (index != AppearancePreference.entries.lastIndex) HorizontalDivider(color = DS.hairline)
+            }
+        }
+        Text(
+            text = StringStore.text(context, "settings.appearance.hint", language),
+            style = SophiaTypography.labelMedium,
+            modifier = Modifier.padding(start = 4.dp, top = 8.dp),
+        )
 
         SettingsSection(StringStore.text(context, "settings.section.progress", language))
         SettingsGroup {

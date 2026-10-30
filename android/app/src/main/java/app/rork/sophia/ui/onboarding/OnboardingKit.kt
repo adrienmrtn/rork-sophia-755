@@ -61,6 +61,7 @@ import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import app.rork.sophia.ui.theme.DS
+import app.rork.sophia.ui.theme.DSPalette
 import app.rork.sophia.ui.theme.PlusJakartaSans
 import kotlinx.coroutines.delay
 
@@ -70,17 +71,19 @@ import kotlinx.coroutines.delay
  * fighting it.
  */
 object OV2 {
-    val bg = DS.canvas
-    val ink = DS.ink
-    val inkSecondary = DS.inkSecondary
-    val inkTertiary = DS.inkTertiary
-    val accent = DS.accent
-    val accentSoft = DS.accentSoft
-    val surface = DS.surface
-    val hairline = DS.hairline
+    // The light tokens, pinned: the onboarding is light-only (see `ForceLightAppearance`),
+    // and these are read once, whenever the object first loads.
+    val bg = DSPalette.Light.canvas
+    val ink = DSPalette.Light.ink
+    val inkSecondary = DSPalette.Light.inkSecondary
+    val inkTertiary = DSPalette.Light.inkTertiary
+    val accent = DSPalette.Light.accent
+    val accentSoft = DSPalette.Light.accentSoft
+    val surface = DSPalette.Light.surface
+    val hairline = DSPalette.Light.hairline
     val warm = Color(0xFFE6B233)
     val danger = Color(0xFFDB5A5C)
-    val success = DS.success
+    val success = DSPalette.Light.success
 
     // Composable getters: the family is resolved from the composition, so a Russian, Greek
     // or Hebrew reader gets one consistent typeface rather than Jakarta punctuation around
