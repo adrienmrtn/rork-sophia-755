@@ -136,3 +136,22 @@ Pour décider où relire en entier, un relecteur natif par langue a évalué 150
 | Danois (étalon) | 4 | 3.3 % | 18.0 % | grammaire, sens, calque |
 
 Sur 150 segments, la marge d'erreur est d'environ ±7 points autour de 30 %, ±4 points autour de 5 %. Lecture : l'anglais et les deux portugais sont proches de l'étalon ; les douze autres langues gardent dans leurs cours un défaut visible pour un lecteur natif dans un segment sur six à un sur trois, surtout des calques et des fautes de grammaire. Les 499 corrections proposées par les relecteurs pour les défauts majeurs de l'échantillon ont été appliquées (2 refusées par le contrôle : un nombre ajouté).
+
+## Portugais du Brésil et du Portugal en entier (phase 3, 30/10/2026)
+
+Les deux portugais ont eu le même traitement que les onze langues de l'étape 3 : post-édition de tous les segments de cours, de quiz et de glossaire, relecture adverse d'un échantillon, puis passe de cohérence leçon / quiz / glossaire, huit cours à la fois.
+
+| | Portugais (Brésil) | Portugais (Portugal) |
+|---|---|---|
+| Post-édition : cours | 2 777 | 2 645 |
+| Post-édition : quiz | 2 739 | 3 131 |
+| Post-édition : glossaire | 768 | 614 |
+| Relecture adverse : corrections | 12 (1 majeure) | 8 (1 bloquante) |
+| Cohérence : cours | 149 | 242 |
+| Cohérence : quiz | 438 | 457 |
+| Cohérence : glossaire | 98 | 124 |
+| Cohérence : termes renommés | 147 | 279 |
+
+Les chiffres sont des segments réécrits. La passe de cohérence aligne surtout les noms propres et les termes entre la leçon, ses questions et ses définitions, par exemple « Mjölnir » partout au lieu de deux graphies, ou « Hércules » dans un distracteur quand la leçon dit « Hércules ». Elle a aussi rouvert deux défauts, rattrapés avant publication. Le premier est en brésilien : le tableau de Manet était devenu « Almoço sobre a Relva », alors que le titre retenu est « Almoço na Relva » (le guide pt donnait l'autre forme, il est aligné). Le second est en portugais du Portugal : une définition corrigée par la relecture gardait le mot français « economiquement ». La relecture adverse a trouvé en pt-PT une définition restée à moitié en français, avec une balise visible (Paul Durand-Ruel).
+
+Les corrections de la passe de cohérence qui touchaient un segment déjà corrigé par la relecture ont été écartées : la relecture garde la main. La porte est ouverte sur les 26 langues après application.
