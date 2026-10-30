@@ -21,6 +21,7 @@ import com.revenuecat.purchases.PeriodType
 import com.revenuecat.purchases.Purchases
 import com.revenuecat.purchases.PurchasesConfiguration
 import com.revenuecat.purchases.PurchasesError
+import com.revenuecat.purchases.Store
 import com.revenuecat.purchases.getOfferingsWith
 import com.revenuecat.purchases.interfaces.ReceiveCustomerInfoCallback
 import com.revenuecat.purchases.interfaces.UpdatedCustomerInfoListener
@@ -67,6 +68,24 @@ class StoreViewModel(app: Application) : AndroidViewModel(app) {
     private val _trialExpirationDate = MutableStateFlow<Date?>(null)
     val trialExpirationDate: StateFlow<Date?> = _trialExpirationDate.asStateFlow()
 
+    /**
+     * The active Premium subscription as the stores report it, for the settings: a subscriber
+     * saw no sign of Premium there, no date and no way to cancel. `null` when not subscribed
+     * (and for the debug override, which has no store behind it).
+     */
+    data class SubscriptionStatus(
+        val expirationDate: Date?,
+        val willRenew: Boolean,
+        val isTrial: Boolean,
+        /** Play subscription id (`sophia_pro`), the `sku` of the Play management page. */
+        val productId: String,
+        /** Bought on the App Store (same Sophia account on an iPhone): Play cannot manage it. */
+        val isAppStore: Boolean,
+    )
+
+    private val _subscriptionStatus = MutableStateFlow<SubscriptionStatus?>(null)
+    val subscriptionStatus: StateFlow<SubscriptionStatus?> = _subscriptionStatus.asStateFlow()
+
     private val _configured = MutableStateFlow(false)
     val configured: StateFlow<Boolean> = _configured.asStateFlow()
 
@@ -90,6 +109,15 @@ class StoreViewModel(app: Application) : AndroidViewModel(app) {
         entitledPremium = active
         publishPremium()
         _isInFreeTrial.value = inTrial
+        _subscriptionStatus.value = entitlement?.takeIf { active }?.let {
+            SubscriptionStatus(
+                expirationDate = it.expirationDate,
+                willRenew = it.willRenew,
+                isTrial = inTrial,
+                productId = it.productIdentifier.substringBefore(':'),
+                isAppStore = it.store == Store.APP_STORE || it.store == Store.MAC_APP_STORE,
+            )
+        }
         _trialExpiresInOneDay.value = isTrialExpiringInOneDay(entitlement)
         val trialEnd = if (inTrial) entitlement?.expirationDate else null
         _trialExpirationDate.value = trialEnd

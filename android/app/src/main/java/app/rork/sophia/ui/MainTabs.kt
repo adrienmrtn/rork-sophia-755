@@ -116,6 +116,7 @@ fun MainTabs(
     val scope = rememberCoroutineScope()
     val constrained = remember { DeviceCapabilities.isConstrained(context) }
     val isPremium by storeViewModel.isPremium.collectAsState()
+    val subscriptionStatus by storeViewModel.subscriptionStatus.collectAsState()
     val debugPremium by storeViewModel.debugPremium.collectAsState()
     val trialExpiresInOneDay by storeViewModel.trialExpiresInOneDay.collectAsState()
     val progress by app.progressManager.progress.collectAsState()
@@ -510,6 +511,7 @@ fun MainTabs(
                             language = language,
                             progress = progress,
                             isPremium = isPremium,
+                            subscription = subscriptionStatus,
                             onBack = { closeOverlay() },
                             onLanguageChange = { app.languageManager.setLanguage(it) },
                             onShowPaywall = {
