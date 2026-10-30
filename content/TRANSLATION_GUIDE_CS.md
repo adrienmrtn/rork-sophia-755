@@ -166,7 +166,7 @@ jiný tvar uvnitř `[[...]]` na tomto kurzu, pokud takový klíč není.
 Citát není překladatelské cvičení. Když existuje kanonická česká
 formulace, použij ji. Jinak překládej krátce a čistě.
 
-- Uvozovky `„ ”`. Žádné francouzské `« »`.
+- Uvozovky `„ “`. Žádné francouzské `« »`.
 - Tečka citované věty je uvnitř uzavírací uvozovky:
   `„Všechna zvířata jsou si rovna.”`
 - `quote.attribution` je `Autor, Dílo`. Když francouzština mluvčího

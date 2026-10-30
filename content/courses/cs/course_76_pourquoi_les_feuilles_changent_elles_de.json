@@ -4,11 +4,11 @@
   "subtitle": "Podzim a pigmenty",
   "subject": "sciences",
   "subcategory": "Země a vesmír",
-  "description": "Podzim barvy nevymýšlí: sundá zelenou, která je maskovala. Za spektáklem je strategie přežití, jak přejít zimu.",
+  "description": "Podzim barvy nevymýšlí: jen odstraní zeleň, která je zakrývala. Za tou podívanou se skrývá strategie, jak přežít zimu.",
   "hero": {
     "image": "pourquoi_les_feuilles_changent_de_couleur",
     "ratio": "16:9",
-    "hook": "Podzimní listy se nelíčí: svlékají zeleň."
+    "hook": "Podzimní listy se nelíčí: svlékají ze sebe zeleň."
   },
   "sections": [
     {
@@ -18,22 +18,22 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Každý podzim lesy přejdou ze zelené do zlata, mědi, nachu. Není to estetický rozmar. Je to strategie: strom vezme, co může, než listy na zimu shodí, aby přežil zimu bez zbytečné ztráty vody."
+          "text": "Každý podzim se lesy převlékají ze zelené do zlaté, měděné a purpurové. Není to estetický rozmar. Je to strategie: strom si vezme zpátky, co může, než na zimu listy shodí."
         },
         {
           "type": "paragraph",
-          "text": "Teplé barvy se neobjeví z ničeho. Často tam už byly, schované pod zelenou. Pochopit podzim znamená pochopit velký biochemický úklid, ne nový nátěr vymyšlený na podzim."
+          "text": "Teplé barvy se neobjevují z ničeho. Často tam už byly, skryté pod zelenou. Pochopit podzim znamená pochopit velký biochemický úklid."
         }
       ]
     },
     {
       "id": "course_76_pourquoi_les_feuilles_changent_elles_de_p1",
-      "title": "Zeleň, která všechno přikryje",
+      "title": "Zeleň, která všechno zakrývá",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Od jara do konce léta listy přetékají **chlorofylem**, pigmentem, který živí fotosyntézu. Pod světlem se rozkládá, ale strom ho pořád nahrazuje. Dokud vládne, list zůstane zelený, dokud strom chlorofyl pořád doplňuje."
+          "text": "Od jara do konce léta listy přetékají **chlorofylem**, pigmentem, který pohání fotosyntézu. Na světle se rozkládá, ale strom ho neustále nahrazuje. Dokud převládá, list zůstává zelený."
         },
         {
           "type": "image",
@@ -43,11 +43,11 @@
         },
         {
           "type": "paragraph",
-          "text": "Jenže list obsahuje i **karotenoidy**, žluté a oranžové pigmenty (jako v mrkvi). V létě tam jsou, ale pod zelenou neviditelné. Na podzim výroba chlorofylu skončí. Zeleň vybledne, žlutá a oranžová se ukážou, proto po zmizení zelené najednou vysvitnou."
+          "text": "Jenže list obsahuje i **karotenoidy**, žluté a oranžové pigmenty (jako v mrkvi). V létě tam jsou, ale pod zelenou nejsou vidět. Na podzim se výroba chlorofylu zastaví. Zeleň mizí a vystupuje žlutá a oranžová."
         },
         {
           "type": "funFact",
-          "text": "„Chlorofyl” jde z řečtiny *chloros* (zelený) a *phyllon* (list). „Karotenoid” sdílí kořen s… mrkví, kde ten pigment nejdřív identifikovali."
+          "text": "„Chlorofyl“ pochází z řeckého *chloros* (zelený) a *phyllon* (list). „Karotenoid“ má společný kořen s… mrkví, ve které byl tento pigment poprvé objeven."
         }
       ]
     },
@@ -58,26 +58,26 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Podzim nespouští hlavně zima, ale délka nocí. Stromy ji měří světelnými čidly, [[fytochromy]]. Když se noci prodlouží, k každému listu odejde hormonální signál, ne teploměrem na první mráz."
+          "text": "Podzim nespouští ani tak chlad, jako spíš délka nocí. Stromy ji měří pomocí světelných čidel zvaných [[fytochromy]]. Když se noci prodlužují, vydá se ke každému listu hormonální signál."
         },
         {
           "type": "paragraph",
-          "text": "Na bázi řapíku se utvoří [[Separační zóna]], jakási zátka. Míza stoupá méně, cukry špatně klesají. Izolovaný list rozloží chlorofyl rychleji. Stabilnější žlutě zůstanou pár týdnů a pak list spadne a list se pak uživí sám ze zásob."
+          "text": "U základny řapíku vzniká [[separační zóna]], jakási zátka. Mízy stoupá méně a cukry hůř odtékají dolů. Odříznutý list rozkládá chlorofyl rychleji. Stálejší žluté pigmenty vydrží pár týdnů, pak list opadne."
         }
       ]
     },
     {
       "id": "course_76_pourquoi_les_feuilles_changent_elles_de_p3",
-      "title": "Odkud jdou zářivé červené",
+      "title": "Odkud se berou zářivě červené barvy",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Žlutá tam už byla. Červená a fialová se často **vyrobí** až na konci sezony. Jsou to [[Antokyany]], vzniklé, když v listu zůstanou uvězněné cukry, když se dny zkrátí."
+          "text": "Žlutá tam už byla. Červená a fialová se ale často **vyrábějí** až na konci sezony. [[Antokyany]], které je dávají, vznikají, když v listu zůstanou uvězněné cukry."
         },
         {
           "type": "paragraph",
-          "text": "Proč investovat energii těsně předtím, než list hodíš pryč? Pravděpodobně kvůli **ochraně** během recyklace. Strom získá zpátky **dusík** a další cenné živiny. Bez chlorofylu může slunce poškodit ještě aktivní tkáně. Antokyany fungují jako sluneční filtr po dobu velkého stěhování do kořenů, tedy ochrana listu až do poslední chvíle."
+          "text": "Proč vkládat energii do listu těsně předtím, než ho strom shodí? Nejspíš proto, aby ho během recyklace **chránil**. Strom si bere zpátky **dusík** a další cenné živiny. Bez chlorofylu může slunce poškodit tkáně, které ještě pracují. Antokyany fungují jako sluneční filtr po dobu velkého stěhování do kořenů."
         }
       ]
     },
@@ -88,15 +88,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Nejhezčí červené často vzejdou ze slunečných dnů a chladných nocí bez mrazu. Hodně cukru, přeměna v antokyany. Šedý a deštivý podzim dá matnější tóny. Raný mráz listy zabije před spektáklem, proto jsou některé podzimy červenější."
+          "text": "Nejkrásnější červené často vznikají za slunečných dnů a chladných nocí bez mrazu. Hodně cukru se promění v antokyany. Šedý a deštivý podzim dává matnější odstíny. Časný mráz zabije listy dřív, než podívaná začne."
         },
         {
           "type": "paragraph",
-          "text": "Nakonec zbývají skoro jen [[třísloviny]], hnědé látky lesního koberce. Některé studie taky myslí, že jasné barvy varují [[mšice]]: strom v kondici, silné obrany, radši jít jinam, které list barví do hněda."
+          "text": "Nakonec zbývají skoro jen [[třísloviny]], hnědé látky lesní hrabanky. Podle některých studií navíc jasné barvy varují [[mšice]]: strom je v kondici a dobře se brání, takže je lepší jít jinam."
         },
         {
           "type": "takeaway",
-          "text": "Podzim odhalí žluté, které už tam byly, když chlorofyl zmizí, a někdy vyrobí červenou, aby ochránil recyklaci živin před pádem listů, než ho strom shodí na zem."
+          "text": "Když chlorofyl zmizí, podzim odhalí žluté barvy, které už v listu byly, a někdy vyrobí i červenou, která chrání recyklaci živin, než listy opadnou."
         }
       ]
     }

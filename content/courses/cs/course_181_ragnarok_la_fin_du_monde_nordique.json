@@ -8,7 +8,7 @@
   "hero": {
     "image": "ragnarok_la_fin_du_monde_nordique",
     "ratio": "16:9",
-    "hook": "Bohové vědí, že zemřou. Jdou tam přesto. Pak se pod popelem země znovu zazelená."
+    "hook": "Bohové vědí, že zemřou. Přesto do toho jdou. A pak se pod popelem země znovu zazelená."
   },
   "sections": [
     {
@@ -18,15 +18,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Ragnarök** je konec světa v severské mytologii. Často se překládá jako „soumrak bohů”, ale přesný smysl je spíš „úděl mocností”. Není to trest spadlý z nebe, ani definitivní nicota."
+          "text": "**Ragnarök** je konec světa v severské mytologii. Často se překládá jako „soumrak bohů“, ale přesnější význam je spíš „úděl mocností“. Není to trest seslaný z nebe ani definitivní nicota."
         },
         {
           "type": "paragraph",
-          "text": "Je to **nevyhnutelná** tragédie: řád **Asgardu** se zhroutí v závěrečné bitvě proti chaosu. A přesto ten chaos připraví znovuzrození. Konec je jen etapa cyklu."
+          "text": "Je to **nevyhnutelná** tragédie: řád **Asgardu** se zhroutí v závěrečné bitvě s chaosem. A přece tento chaos chystá znovuzrození. Konec je jen jedna etapa cyklu."
         },
         {
           "type": "funFact",
-          "text": "Výraz „soumrak bohů” jde ze záměny staroseverských slov „rök” (úděl) a „rökr” (soumrak), kterou zpopularizoval Wagner."
+          "text": "Výraz „soumrak bohů“ vznikl záměnou staroseverských slov „rök“ (úděl) a „rökr“ (soumrak) a proslavil ho Wagner."
         }
       ]
     },
@@ -37,17 +37,17 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Všechno začne **Fimbulwinterem**: Velkou zimou tří let bez léta. Zima rozbije rodiny. Násilí se rozšíří. Pak magické závory povolí. Vlk **Fenrir** zlomí řetězy. Tlama se dotkne nebe i země."
+          "text": "Všechno začne **Fimbulwinterem**: Velkou zimou, třemi roky bez léta. Mráz rozvrací rodiny. Násilí se šíří všude. Pak povolí kouzelná pouta. Vlk **Fenrir** přetrhne řetězy. Jeho tlama sahá od země k nebi."
         },
         {
           "type": "image",
           "asset": "fenrir_wolf_norse_mythology_chained",
           "ratio": "4:3",
-          "caption": "Fenrir v řetězech: den, kdy se osvobodí, svět se převrátí"
+          "caption": "Fenrir v řetězech: v den, kdy se vysvobodí, se svět převrátí"
         },
         {
           "type": "paragraph",
-          "text": "Had **Jörmungandr**, který obepíná kontinenty, se zmítá v oceánu: vlny a jedy. Kosmičtí vlci sežerou Slunce a Měsíc. **Loki**, uprchlý, velí lodi [[Naglfar]], lodi z nehtů mrtvých, naložené obry k poslednímu bitevnímu poli."
+          "text": "Had **Jörmungandr**, který obepíná pevninu, se zmítá v oceánu: přicházejí obří vlny a jed. Kosmičtí vlci pohltí Slunce i Měsíc. **Loki**, který uprchl, vede loď [[Naglfar]] postavenou z nehtů mrtvých a veze na ní obry k poslednímu bojišti."
         }
       ]
     },
@@ -58,7 +58,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Střet se odehraje na pláni **Vígríðr**. [[Heimdall]], hlídač bohů, zaduje na roh. Bohové Asgardu tam jdou s vědomím, že prohrají. Každý čelí svému nepříteli."
+          "text": "Střet se odehraje na pláni **Vígríðr**. [[Heimdall]], strážce bohů, zatroubí na roh. Bohové Asgardu jdou do boje s vědomím, že prohrají. Každý se utká se svým nepřítelem."
         },
         {
           "type": "image",
@@ -68,11 +68,11 @@
         },
         {
           "type": "paragraph",
-          "text": "**Odin**, otec bohů, sežere Fenrir. Syn Víðarr otce pomstí. **Thor** rozdrtí Jörmungandra kladivem [[Mjölnir]], ale zemře jeho jedem po devíti krocích. Pak **Surtr**, ohnivý obr z [[Muspelheim]], zapálí devět světů. Země se potopí pod oceán."
+          "text": "**Odina**, otce bohů, sežere Fenrir. Jeho syn Víðarr otce pomstí. **Thor** rozdrtí Jörmungandra kladivem [[Mjölnir]], ale po devíti krocích zemře na jeho jed. Pak **Surtr**, ohnivý obr, který přichází z říše [[Muspelheim]], zapálí všech devět světů. Země se propadne pod hladinu oceánu."
         },
         {
           "type": "funFact",
-          "text": "Bůh Freyr zemře bez kouzelného meče: daroval ho z lásky, aby získal ruku obryně Gerdy. I láska má cenu v těchhle mýtech."
+          "text": "Bůh Freyr umírá bez svého kouzelného meče: daroval ho z lásky, aby získal ruku obryně Gerdy. I láska má v těchto mýtech svou cenu."
         }
       ]
     },
@@ -83,36 +83,36 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Co Ragnarök odlišuje od lineárních apokalyps, je návrat. Jakmile plameny zhasnou, země vystoupí z vln, zelenější a úrodnější. Pole dají úrodu, aniž bys je zasel."
+          "text": "Ragnarök se od lineárních apokalyps liší návratem. Jakmile plameny uhasnou, země se vynoří z vln, zelenější a úrodnější. Pole rodí, i když je nikdo neoseje."
         },
         {
           "type": "image",
           "asset": "yggdrasil_world_tree_norse_mythology",
           "ratio": "4:3",
-          "caption": "Yggdrasil, strom světa: úkryt přeživších a slib pokračování"
+          "caption": "Yggdrasil, světový strom: úkryt přeživších a příslib pokračování"
         },
         {
           "type": "paragraph",
-          "text": "Nová generace bohů přežije: **Baldr** se vrátí z mrtvých; Thorovi synové Magni a Móði zdědí kladivo. Dva lidé, **Líf** a **Lífþrasir**, se schovali ve stromu [[Yggdrasil]] a živili se rosou. Jejich jména znamenají „Život” a „Hojnost života”. Lidstvo začne znovu."
+          "text": "Nová generace bohů přežije: **Baldr** se vrátí z mrtvých; Thorovi synové Magni a Móði zdědí kladivo. Dva lidé, **Líf** a **Lífþrasir**, se schovali ve stromu [[Yggdrasil]] a živili se rosou. Jejich jména znamenají „Život“ a „Hojnost života“. Lidstvo začne znovu."
         }
       ]
     },
     {
       "id": "course_181_ragnarok_la_fin_du_monde_nordique_p4",
-      "title": "Mýtus, který ještě mluví",
+      "title": "Mýtus, který promlouvá dodnes",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "V 19. století **Richard Wagner** zpopularizuje svou [[Götterdämmerung]], „Soumrak bohů”: konec řádu postaveného na zlomených přísahách. Pro staré Skandinávce byla zpráva jednodušší a tvrdší: když je konec jistý, zbývá volba odvahy."
+          "text": "V 19. století proslavil **Richard Wagner** operu [[Götterdämmerung]], „Soumrak bohů“: konec řádu postaveného na porušených přísahách. Pro staré Skandinávce bylo poselství prostší a tvrdší: když je konec jistý, zbývá ještě volba být odvážný."
         },
         {
           "type": "paragraph",
-          "text": "[[Srovnávací apokalyptismus]] ten příběh přibližuje k jiným koncům světa: dlouhá zima, nebeský boj, potopa, znovuzrození. Jako zima předchází jaro, Ragnarök není jen smrt. Je to proměna."
+          "text": "[[Srovnávací apokalyptismus]] staví tento příběh vedle jiných konců světa: dlouhá zima, boj na nebesích, potopa, znovuzrození. Tak jako zima předchází jaru, ani Ragnarök není jen smrt. Je to proměna."
         },
         {
           "type": "takeaway",
-          "text": "**Ragnarök** není nicota: je to přijatý úděl bohů, bitva, kde Asgard padne, a pak země, která se znovu zrodí. Severská lekce: jednat odvážně, i bez naděje na vítězství."
+          "text": "**Ragnarök** není nicota: je to přijatý úděl bohů, bitva, v níž Asgard padne, a po ní země, která se znovu rodí. Severské poučení: jednat odvážně i bez naděje na vítězství."
         }
       ]
     }

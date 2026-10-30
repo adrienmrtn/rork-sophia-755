@@ -4,11 +4,11 @@
   "subtitle": "Mozek",
   "subject": "sciences",
   "subcategory": "Věda všedního dne",
-  "description": "Paměť není kamera. Každá vzpomínka se znovu skládá. Tady je, jak mozek kóduje, ukládá... a někdy si vymýšlí.",
+  "description": "Paměť není kamera. Každá vzpomínka se pokaždé znovu skládá. Podívej se, jak mozek kóduje, ukládá... a někdy si vymýšlí.",
   "hero": {
     "image": "comment_fonctionne_la_memoire",
     "ratio": "16:9",
-    "hook": "Vzpomínat není číst soubor. Je to znovu složit scénu."
+    "hook": "Vzpomínat neznamená otevřít soubor. Znamená to znovu poskládat scénu."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Paměť si často představuješ jako pevný disk: nahrát, uložit, znovu číst. Mozek tak nefunguje. Pokaždé, když si vzpomeneš, **složíš** scénu z úlomků."
+          "text": "Lidé si paměť často představují jako pevný disk: něco nahrají, uloží a pak si to znovu přečtou. Mozek tak nefunguje. Pokaždé, když si na něco vzpomeneš, **skládáš** scénu znovu z útržků."
         },
         {
           "type": "paragraph",
-          "text": "Je to silné... a omylné. Pochopit to znamená pochopit, proč zapomínáme, proč se pleteme a proč se učíme."
+          "text": "Je to mocné... a omylné. Kdo tomu porozumí, pochopí, proč lidé zapomínají, proč se mýlí a proč se učí."
         }
       ]
     },
@@ -35,15 +35,15 @@
           "type": "image",
           "asset": "human_brain_anatomy",
           "ratio": "4:3",
-          "caption": "Různé oblasti mozku spravují různé podoby paměti"
+          "caption": "Různé oblasti mozku mají na starosti různé druhy paměti."
         },
         {
           "type": "paragraph",
-          "text": "Nejdřív je [[pracovní paměť]]: to, co „držíš v hlavě” pár sekund, jako telefonní číslo. Je omezená, v průměru zhruba **7 prvků**. Pak **dlouhodobá paměť**: fakta, vzpomínky na události, dovednosti jako jízda na kole."
+          "text": "Nejdřív tu je [[pracovní paměť]]: to, co pár sekund „držíš v hlavě“, třeba telefonní číslo. Je omezená, pojme v průměru zhruba **7 prvků**. Pak je tu **dlouhodobá paměť**: fakta, vzpomínky na události a dovednosti, třeba jízda na kole."
         },
         {
           "type": "paragraph",
-          "text": "Ty systémy nebydlí všechny na stejném místě mozku. **Prefrontální kůra**, přední část mozku za čelem, hodně pomáhá pracovní paměti. Jiné oblasti, jako **neokortex**, vnější vrstva mozku, ukládají dlouhodobé stopy."
+          "text": "Tyto systémy nesídlí všechny na stejném místě mozku. **Prefrontální kůra**, přední část mozku za čelem, pracovní paměti hodně pomáhá. Jiné oblasti, třeba **neokortex**, vnější vrstva mozku, uchovávají dlouhodobou paměť."
         }
       ]
     },
@@ -56,19 +56,19 @@
           "type": "image",
           "asset": "hippocampus_brain_anatomy_scan",
           "ratio": "4:3",
-          "caption": "Hipokampus, hluboká struktura, pomáhá tvořit nové vzpomínky"
+          "caption": "Hipokampus, struktura uložená hluboko v mozku, pomáhá vytvářet nové vzpomínky."
         },
         {
           "type": "paragraph",
-          "text": "Aby informace přešla z křehké na trvalou, mozek musí posílit spoje mezi **neurony**, nervovými buňkami. Říká se tomu **konsolidace**, proměna čerstvé vzpomínky v trvalou stopu. Malá struktura zvaná **hipokampus**, ve tvaru mořského koníka ve spánkovém laloku, hraje klíčovou roli u vzpomínek na události."
+          "text": "Aby se z křehké informace stala trvalá, musí mozek posílit spoje mezi **neurony**, nervovými buňkami. Říká se tomu **konsolidace**, proměna čerstvé vzpomínky v trvalou stopu. Malá struktura zvaná **hipokampus**, ve tvaru mořského koníka, uložená ve spánkovém laloku, hraje klíčovou roli u vzpomínek na události."
         },
         {
           "type": "funFact",
-          "text": "Spánek, zvlášť některé fáze, pomáhá konsolidovat, co ses přes den naučil. Zopakovat a pak spát často vyjde líp než biflovat do tří ráno."
+          "text": "Spánek, hlavně některé jeho fáze, pomáhá upevnit, co se člověk přes den naučil. Zopakovat si látku a pak se vyspat často funguje líp než se učit do tří do rána."
         },
         {
           "type": "paragraph",
-          "text": "Slavné pravidlo, spojené s výzkumníkem **Donaldem Hebbem**: neurony, které se zapnou spolu, mají tendenci se silněji spojit. Zkrátka: „co se rozsvítí spolu, to se sváže spolu”. To je zásada **neuroplasticity**, schopnosti mozku měnit spoje."
+          "text": "Slavné pravidlo spojené s výzkumníkem **Donaldem Hebbem**: neurony, které se aktivují společně, mají sklon se spojovat silněji. Zkrátka: „co se rozsvítí společně, to se spolu spojí“. Na tom stojí **neuroplasticita**, schopnost mozku měnit své spoje."
         }
       ]
     },
@@ -79,11 +79,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Když si vzpomínku vyvoláš, stane se na chvíli **tvárnou**, měnitelnou. Mohou se do ní vklouznout detaily přítomnosti. Pak ji mozek uloží znovu. Proto dva svědci téže nehody můžou vyprávět různé verze."
+          "text": "Když si vzpomínku vybavíš, stane se na chvíli **tvárnou**, dá se změnit. Mohou se do ní vloudit detaily z přítomnosti. Pak ji mozek uloží znovu. Proto dva svědci téže nehody můžou vyprávět různé verze."
         },
         {
           "type": "paragraph",
-          "text": "Umíme dokonce tvořit **falešné vzpomínky**: scény, kterým věříš, ale nikdy se nestaly, nebo ne takhle. Mozek díry vyplní tím, co už zná."
+          "text": "Mohou dokonce vzniknout **falešné vzpomínky**: scény, které člověk považuje za skutečné, ale nikdy se nestaly, nebo ne takhle. Mozek zaplní mezery tím, co už zná."
         }
       ]
     },
@@ -94,7 +94,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kdybys pamatoval každý zbytečný detail, byl bys přesycený. Zapomínání pomáhá zobecňovat, rozhodovat, držet podstatné. Dobrá paměť třídí stejně, jako uchovává."
+          "text": "Kdyby sis pamatoval každý zbytečný detail, byl bys zahlcený. Zapomínání pomáhá zobecňovat, rozhodovat se a udržet to podstatné. Dobrá paměť stejně tak třídí, jako uchovává."
         },
         {
           "type": "takeaway",

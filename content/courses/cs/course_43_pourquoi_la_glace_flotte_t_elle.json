@@ -4,7 +4,7 @@
   "subtitle": "Voda a molekuly",
   "subject": "sciences",
   "subcategory": "Věda všedního dne",
-  "description": "Led plave na vodě. Zdá se to samozřejmé, ale ve skutečnosti je to velmi vzácné. A naštěstí pro život na Zemi.",
+  "description": "Led plave na vodě. Zdá se to samozřejmé, ale ve skutečnosti je to velmi vzácné. A pro život na Zemi je to štěstí.",
   "hero": {
     "image": "pourquoi_la_glace_flotte",
     "ratio": "16:9",
@@ -22,7 +22,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Voda dělá opak. Ta výjimka jde z tvaru její molekuly. A v zimě zachránila nejedno jezero."
+          "text": "Voda to má naopak. Ta výjimka plyne z tvaru její molekuly. A v zimě zachránila nejedno jezero."
         }
       ]
     },
@@ -39,11 +39,11 @@
           "type": "image",
           "asset": "water_molecule_model_crystal",
           "ratio": "4:3",
-          "caption": "Molekula vody: V, které přitahuje a odpuzuje sousedky"
+          "caption": "Molekula vody: V, které přitahuje i odpuzuje sousední molekuly"
         },
         {
           "type": "paragraph",
-          "text": "Výsledek: molekuly vody se k sobě táhnou [[vodíkové vazby]], jako malé magnety. V kapalině zůstanou blízko sebe, ale pořád se hýbou. V ledu ztuhnou jinak, do pevné mřížky."
+          "text": "Výsledek: mezi molekulami vody vznikají [[vodíkové vazby]], které je k sobě přitahují jako malé magnety. V kapalině zůstávají molekuly blízko sebe, ale pořád se pohybují. V ledu ztuhnou v jiném uspořádání."
         }
       ]
     },
@@ -54,7 +54,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kolem **0 °C** voda ztuhne. Aby vznikl led, molekuly se srovnají do **šestiúhelníkové** sítě, jakýchsi šestibokých včelích pláství. Mezi sebou pak nechají víc **prázdna** než v kapalině."
+          "text": "Kolem **0 °C** voda tuhne. Při vzniku ledu se molekuly uspořádají do **šestiúhelníkové** mřížky, podobné včelí plástvi. Mezi sebou pak nechávají víc **volného prostoru** než v kapalině."
         },
         {
           "type": "funFact",
@@ -62,7 +62,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Méně hmoty ve stejném objemu znamená: **menší hustota**. A objekt méně hustý než kapalina kolem stoupá vzhůru. Led proto plave na vodě. Říká se tomu **anomálie roztažnosti vody**: na rozdíl skoro od všech látek se voda při chladnutí pod **4 °C** rozpíná."
+          "text": "Méně hmoty ve stejném objemu znamená **menší hustotu**. A těleso s menší hustotou, než má okolní kapalina, stoupá vzhůru. Led proto plave na vodě. Říká se tomu **anomálie roztažnosti vody**: na rozdíl od téměř všech látek se voda při ochlazování pod **4 °C** rozpíná."
         },
         {
           "type": "image",
@@ -74,7 +74,7 @@
     },
     {
       "id": "course_43_pourquoi_la_glace_flotte_t_elle_p3",
-      "title": "Proč na tom jezera závisí",
+      "title": "Proč je to pro jezera životně důležité",
       "free": false,
       "blocks": [
         {
@@ -83,7 +83,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Naštěstí led zůstane nahoře. Utvoří **izolační poklop**. Pod zamrzlou hladinou může kapalná voda zůstat kolem **4 °C**, teploty, kde je kapalná voda nejhustší, dost na to, aby ryby i vodní rostliny přežily."
+          "text": "Naštěstí led zůstává nahoře. Vytvoří **izolační poklop**. Pod zamrzlou hladinou se kapalná voda může držet kolem **4 °C**, což je teplota, při níž má kapalná voda největší hustotu. To stačí, aby ryby i vodní rostliny přežily."
         }
       ]
     },
@@ -94,11 +94,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Bílý mořský led vrátí do vesmíru velkou část slunečního světla díky vysokému **albedu**, své odrazivé schopnosti. Když zmizí, tmavý oceán pohltí víc tepla. To zrychlí oteplování: začarovaný kruh."
+          "text": "Bílý mořský led odráží velkou část slunečního světla zpět do vesmíru díky vysokému **albedu**, tedy schopnosti odrážet světlo. Když zmizí, tmavý oceán pohltí víc tepla. To urychluje oteplování: začarovaný kruh."
         },
         {
           "type": "takeaway",
-          "text": "Led plave, protože voda při tuhnutí utvoří „vzdušnější” síť: stane se méně hustou než kapalná voda. Ta výjimka v zimě chrání vodní život."
+          "text": "Led plave, protože voda při tuhnutí utvoří „vzdušnější“ síť: stane se méně hustou než kapalná voda. Ta výjimka v zimě chrání vodní život."
         }
       ]
     }
