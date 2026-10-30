@@ -155,3 +155,19 @@ Les deux portugais ont eu le même traitement que les onze langues de l'étape 3
 Les chiffres sont des segments réécrits. La passe de cohérence aligne surtout les noms propres et les termes entre la leçon, ses questions et ses définitions, par exemple « Mjölnir » partout au lieu de deux graphies, ou « Hércules » au lieu d’« Héracles » dans un distracteur de quiz, comme dans la leçon. Elle a aussi rouvert deux défauts, rattrapés avant publication. Le premier est en brésilien : le tableau de Manet était devenu « Almoço sobre a Relva », alors que le titre retenu est « Almoço na Relva » (le guide pt donnait l'autre forme, il est aligné). Le second est en portugais du Portugal : une définition corrigée par la relecture gardait le mot français « economiquement ». La relecture adverse a trouvé en pt-PT une définition restée à moitié en français, avec une balise visible (Paul Durand-Ruel).
 
 Les corrections de la passe de cohérence qui touchaient un segment déjà corrigé par la relecture ont été écartées : la relecture garde la main. La porte est ouverte sur les 26 langues après application.
+
+## Tchèque, polonais et turc (phase 3, 30/10/2026)
+
+Les trois langues que la mesure de la phase 1 plaçait parmi les plus abîmées ont eu la post-édition complète de leurs cours, quiz et glossaires. Le tchèque et le turc ont aussi eu la relecture adverse et la passe de cohérence ; pour le polonais, ces deux étapes restent à faire (elles ont été interrompues par la limite d'usage et pas relancées).
+
+| | Tchèque | Polonais | Turc |
+|---|---|---|---|
+| Post-édition : cours | 4 025 | 4 013 | 3 841 |
+| Post-édition : quiz | 6 143 | 5 427 | 5 996 |
+| Post-édition : glossaire | 2 390 | 2 224 | 2 333 |
+| Relecture adverse : corrections | 11 (1 majeure) | à faire | 24 (6 majeures) |
+| Cohérence : cours / quiz / glossaire | 295 / 803 / 233 | à faire | 346 / 926 / 210 |
+
+Deux corrections de fond en chemin. Le guide tchèque imposait des guillemets „…” ; le signe fermant tchèque est “ : environ 1 800 guillemets corrigés dans les cours, quiz, glossaire et catalogue, et le guide aligné. Ce remplacement avait fondu deux variantes de glossaire en une même clé : la porte refuse désormais toute clé en double dans un glossaire.
+
+Le grec, le suédois et le hongrois n'ont pas encore eu la phase 3.
