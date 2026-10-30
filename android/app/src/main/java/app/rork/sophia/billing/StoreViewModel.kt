@@ -8,6 +8,7 @@ import app.rork.sophia.AppConfig
 import app.rork.sophia.BuildConfig
 import app.rork.sophia.SophiaApplication
 import app.rork.sophia.data.DiscountBucket
+import app.rork.sophia.data.LanguageManager
 import app.rork.sophia.data.TrialReminderScheduler
 import app.rork.sophia.domain.locale
 import com.revenuecat.purchases.CustomerInfo
@@ -138,6 +139,7 @@ class StoreViewModel(app: Application) : AndroidViewModel(app) {
             observeCustomerInfo()
             attachSignedInUser()
             reportDiscountBucket()
+        LanguageManager.reportToRevenueCat(getApplication())
             return
         }
         val key = AppConfig.revenueCatApiKey
@@ -156,6 +158,7 @@ class StoreViewModel(app: Application) : AndroidViewModel(app) {
         observeCustomerInfo()
         attachSignedInUser()
         reportDiscountBucket()
+        LanguageManager.reportToRevenueCat(getApplication())
     }
 
     /**

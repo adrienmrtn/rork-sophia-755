@@ -26,6 +26,7 @@ class StoreViewModel {
 
     init() {
         reportDiscountBucket()
+        LanguageManager.reportToRevenueCat()
         Task { await listenForUpdates() }
         Task { await loadOfferingsWithRetry() }
     }

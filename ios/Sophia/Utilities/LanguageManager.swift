@@ -1,3 +1,4 @@
+import RevenueCat
 import SwiftUI
 
 @Observable
@@ -27,6 +28,15 @@ final class LanguageManager {
         UserDefaults.standard.set(language.rawValue, forKey: AppLanguage.userDefaultsKey)
         UserDefaults.standard.set(true, forKey: AppLanguage.portugueseSplitKey)
         LocalizedContentLoader.resetCache()
+        Self.reportToRevenueCat(language)
+    }
+
+    /// Tells RevenueCat which language this customer reads the app in, so trial starts and
+    /// conversions can be compared language by language (customer attribute `app_language`).
+    /// Sent at every launch and on every change; RevenueCat ignores unchanged values.
+    static func reportToRevenueCat(_ language: AppLanguage = AppLanguage.currentPersisted()) {
+        guard Purchases.isConfigured else { return }
+        Purchases.shared.attribution.setAttributes(["app_language": language.rawValue])
     }
 
     func text(_ key: String) -> String {
