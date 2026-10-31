@@ -1,0 +1,62 @@
+{
+  "id": "course_50_comment_le_savon_tue_t_il_les_virus",
+  "title": "Comment le savon tue-t-il les virus ?",
+  "subtitle": "Hygiène",
+  "subject": "sciences",
+  "subcategory": "Notre quotidien expliqué",
+  "description": "Le savon n'est pas « magique ». Il attaque la coque grasse de certains virus et les arrache de ta peau. Voici pourquoi 20 secondes comptent.",
+  "hero": {
+    "image": "comment_le_savon_tue_les_virus",
+    "ratio": "16:9",
+    "hook": "Une arme simple contre les virus : des molécules qui aiment l'eau… et la graisse."
+  },
+  "sections": [
+    {
+      "id": "course_50_comment_le_savon_tue_t_il_les_virus_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        { "type": "paragraph", "text": "Pendant la pandémie de COVID-19, un geste très simple est redevenu central : se laver les mains au savon. Pas besoin d'un laboratoire. Juste de l'eau, du savon, et un peu de temps." },
+        { "type": "paragraph", "text": "Pourquoi ça marche si bien ? Parce que beaucoup de virus dangereux portent une enveloppe faite de graisse. Et le savon est excellent pour détruire la graisse." }
+      ]
+    },
+    {
+      "id": "course_50_comment_le_savon_tue_t_il_les_virus_p1",
+      "title": "La faiblesse de certains virus",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Certains virus, comme les **coronavirus** ou le virus de la grippe, ont une enveloppe extérieure faite de lipides (des graisses). Cette enveloppe les protège… jusqu'à ce qu'elle rencontre du savon." },
+        { "type": "paragraph", "text": "D'autres virus, dits « nus », n'ont pas cette enveloppe. Ils résistent mieux au savon et à l'alcool. Heureusement, beaucoup des virus qui circulent par les mains et les gouttelettes sont enveloppés." }
+      ]
+    },
+    {
+      "id": "course_50_comment_le_savon_tue_t_il_les_virus_p2",
+      "title": "Le savon, une molécule à deux faces",
+      "free": false,
+      "blocks": [
+        { "type": "image", "asset": "handwashing_soap_water_hands", "ratio": "4:3", "caption": "Le frottement aide le savon à atteindre tous les recoins des mains." },
+        { "type": "paragraph", "text": "Les molécules de savon sont des [[tensioactifs]]. Elles ont une tête qui aime l'eau et une queue qui aime la graisse. La queue s'enfonce dans l'enveloppe grasse du virus. La tête reste tournée vers l'eau." },
+        { "type": "paragraph", "text": "Résultat : l'enveloppe se déchire. Le virus est désactivé. Puis l'eau emporte les débris. Le savon ne « brûle » pas le virus comme un acide : il le **dissout** et l'enlève." },
+        { "type": "funFact", "text": "C'est le même principe qui fait partir la graisse d'une poêle : le savon accroche le gras et le laisse partir avec l'eau." }
+      ]
+    },
+    {
+      "id": "course_50_comment_le_savon_tue_t_il_les_virus_p3",
+      "title": "Pourquoi 20 secondes",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Il faut du temps pour que le savon atteigne tous les plis : entre les doigts, sous les ongles, autour des poignets. Environ **20 secondes** de frottement, c'est le minimum souvent recommandé." },
+        { "type": "paragraph", "text": "Sans frottement, le savon marche moins bien. L'eau seule non plus : elle n'attaque pas efficacement l'enveloppe grasse." }
+      ]
+    },
+    {
+      "id": "course_50_comment_le_savon_tue_t_il_les_virus_p4",
+      "title": "Savon ou gel hydroalcoolique ?",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Un gel avec au moins **60 %** d'alcool peut aussi détruire beaucoup de virus enveloppés. Mais s'il y a de la saleté visible ou de la graisse, le gel est moins efficace : les saletés font écran. Dans ce cas, le savon et l'eau restent le meilleur choix." },
+        { "type": "takeaway", "text": "Le savon tue beaucoup de virus en déchirant leur enveloppe grasse, puis en les emportant avec l'eau. Temps + frottement = efficacité." }
+      ]
+    }
+  ]
+}

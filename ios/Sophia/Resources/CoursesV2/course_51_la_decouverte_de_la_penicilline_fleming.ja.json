@@ -1,0 +1,63 @@
+{
+  "id": "course_51_la_decouverte_de_la_penicilline_fleming",
+  "title": "La découverte de la pénicilline",
+  "subtitle": "Fleming, 1928",
+  "subject": "sciences",
+  "subcategory": "Découvertes qui ont changé le monde",
+  "description": "En 1928, Alexander Fleming remarque qu'une moisissure a tué des bactéries sur une boîte de culture. De ce hasard naîtra le premier grand antibiotique.",
+  "hero": {
+    "image": "la_decouverte_de_la_penicilline",
+    "ratio": "16:9",
+    "hook": "Une boîte oubliée, une moisissure, et la médecine bascule."
+  },
+  "sections": [
+    {
+      "id": "course_51_la_decouverte_de_la_penicilline_fleming_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        { "type": "paragraph", "text": "Avant les antibiotiques, une simple infection pouvait tuer. Une coupure, une pneumonie, une blessure de guerre : le corps combattait souvent seul." },
+        { "type": "paragraph", "text": "En **1928**, le médecin écossais **Alexander Fleming** découvre par hasard une substance capable de tuer des bactéries. Elle s'appellera la **pénicilline**. Mais il faudra encore des années pour en faire un vrai médicament." }
+      ]
+    },
+    {
+      "id": "course_51_la_decouverte_de_la_penicilline_fleming_p1",
+      "title": "Une boîte oubliée",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Fleming étudie des bactéries à Londres. En rentrant de vacances, il regarde d'anciennes boîtes de culture. Sur l'une d'elles, une **moisissure** a poussé. Autour d'elle, les bactéries sont mortes." },
+        { "type": "image", "asset": "alexander_fleming_penicillin_petri_dish", "ratio": "4:3", "caption": "Fleming et l'idée clé : quelque chose dans la moisissure arrête les bactéries." },
+        { "type": "paragraph", "text": "La moisissure appartient au genre **Penicillium**. Fleming comprend qu'elle produit une substance antibactérienne. Il l'appelle pénicilline. Mais il n'arrive pas à la purifier assez pour soigner des malades." },
+        { "type": "funFact", "text": "Fleming a dit plus tard que s'il avait été plus ordonné, il aurait jeté la boîte. Le désordre du labo a aidé la découverte." }
+      ]
+    },
+    {
+      "id": "course_51_la_decouverte_de_la_penicilline_fleming_p2",
+      "title": "Oxford transforme l'idée en remède",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Au début des années **1940**, à Oxford, **Howard Florey** et **Ernst Chain** reprennent le travail. Avec leur équipe, ils isolent, concentrent et testent la pénicilline sur des animaux, puis sur des humains." },
+        { "type": "paragraph", "text": "La Seconde Guerre mondiale rend la chose urgente : il faut soigner les soldats infectés. La pénicilline passe du labo à un enjeu stratégique." }
+      ]
+    },
+    {
+      "id": "course_51_la_decouverte_de_la_penicilline_fleming_p3",
+      "title": "Produire en masse",
+      "free": false,
+      "blocks": [
+        { "type": "image", "asset": "penicillin_antibiotic_production_laboratory", "ratio": "4:3", "caption": "Il a fallu inventer des façons industrielles de faire pousser la moisissure." },
+        { "type": "paragraph", "text": "Pour soigner des millions de personnes, il faut des quantités énormes. Les États-Unis industrialisent la production pendant la guerre. Des cuves géantes font manquer la moisissure comme une bière." },
+        { "type": "paragraph", "text": "En **1945**, Fleming, Florey et Chain reçoivent le prix Nobel. La médecine entre dans l'âge des antibiotiques." }
+      ]
+    },
+    {
+      "id": "course_51_la_decouverte_de_la_penicilline_fleming_p4",
+      "title": "L'ombre de la résistance",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Aujourd'hui, trop d'antibiotiques mal utilisés ont permis à certaines bactéries de devenir **résistantes** : les médicaments ne les tuent plus. Fleming avait déjà prévenu ce risque." },
+        { "type": "takeaway", "text": "La pénicilline naît d'un hasard observé par Fleming en **1928**, puis devient un médicament grâce à Florey, Chain et l'industrie de guerre. Elle a sauvé des millions de vies… à condition de ne pas l'userer." }
+      ]
+    }
+  ]
+}

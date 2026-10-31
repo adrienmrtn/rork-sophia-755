@@ -1,0 +1,68 @@
+{
+  "id": "course_143_orson_welles_et_citizen_kane",
+  "title": "Orson Welles et Citizen Kane",
+  "subtitle": "1941",
+  "subject": "art",
+  "subcategory": "Cinéma, photo & architecture",
+  "description": "À **25 ans**, **Orson Welles** réalise *Citizen Kane* (**1941**). Le film invente un nouveau langage : profondeur de champ, flashbacks et enquête sur un mot mystérieux, Rosebud.",
+  "hero": {
+    "image": "orson_welles_et_citizen_kane",
+    "ratio": "16:9",
+    "hook": "Un prodige de 25 ans filme un magnat de la presse et invente le cinéma moderne."
+  },
+  "sections": [
+    {
+      "id": "course_143_orson_welles_et_citizen_kane_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        { "type": "paragraph", "text": "Pendant des décennies, les critiques ont classé *Citizen Kane* (**1941**) parmi les plus grands films de l'histoire. Son réalisateur, **Orson Welles**, a seulement **25 ans**. Le film raconte la vie d'un magnat de la presse, Charles Foster Kane, et pose une question simple : peut-on vraiment connaître un homme ?" },
+        { "type": "paragraph", "text": "Au-delà de l'intrigue, Welles invente un langage nouveau. Il mélange les techniques du muet et du parlant pour parler du pouvoir, de la solitude et de la mémoire." }
+      ]
+    },
+    {
+      "id": "course_143_orson_welles_et_citizen_kane_p1",
+      "title": "Le prodige qui obtient tous les droits",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "**George Orson Welles** s'impose d'abord au théâtre, puis à la radio. Le **30 octobre 1938**, il adapte *La Guerre des mondes*. En imitant un faux journal parlé, il fait croire à une invasion extraterrestre. Une partie de l'Amérique panique. Du jour au lendemain, Hollywood le veut." },
+        { "type": "image", "asset": "orson_welles_war_of_worlds_radio_1938", "ratio": "4:3", "caption": "1938 : Welles terrorise l'Amérique avec un faux reportage radio." },
+        { "type": "funFact", "text": "La [[RKO Pictures]], un grand studio en difficulté, offre à Welles un contrat rare : liberté totale de sujet et [[Final Cut]], c'est-à-dire le droit de décider seul du montage final." },
+        { "type": "paragraph", "text": "À Hollywood, un tel pouvoir pour un débutant est presque inédit. Welles en profite pour tout contrôler : scénario, casting, images, son." }
+      ]
+    },
+    {
+      "id": "course_143_orson_welles_et_citizen_kane_p2",
+      "title": "La profondeur de champ change le regard",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Avec le chef opérateur **Gregg Toland**, Welles refuse les fonds flous classiques. Ils imposent [[La profondeur de champ (deep focus)]] : tout reste net, du premier plan jusqu'au fond. Plusieurs actions peuvent se jouer en même temps dans le même cadre, sans coupe." },
+        { "type": "image", "asset": "citizen_kane_deep_focus_cinematography", "ratio": "4:3", "caption": "Dans Citizen Kane, chaque plan raconte plusieurs choses à la fois." },
+        { "type": "paragraph", "text": "Welles filme aussi souvent en contre-plongée, la caméra placée bas, pour grossir les personnages et accentuer leur pouvoir. Les plafonds deviennent visibles. L'espace parle autant que les dialogues." }
+      ]
+    },
+    {
+      "id": "course_143_orson_welles_et_citizen_kane_p3",
+      "title": "Rosebud, ou l'enquête impossible",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Le film commence par la fin : Kane meurt seul dans son palais, [[Xanadu]]. Son dernier mot est **« Rosebud »**. Un journaliste enquête. À travers des flashbacks, amis et ennemis racontent des versions contradictoires du même homme." },
+        { "type": "paragraph", "text": "Welles refuse la biographie simple. Pour les uns, Kane est un idéaliste. Pour les autres, un tyran. Le spectateur assemble les pièces, sans jamais obtenir une vérité unique. Le mystère de Rosebud reste un leurre élégant : une clé trop petite pour ouvrir toute une vie." }
+      ]
+    },
+    {
+      "id": "course_143_orson_welles_et_citizen_kane_p4",
+      "title": "Un film maudit, puis un modèle",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "[[William Randolph Hearst]], vrai magnat de la presse, se reconnaît dans Kane. Il tente d'étouffer le film : boycott dans ses journaux, pression sur les salles. *Citizen Kane* est un échec commercial à sa sortie. Plus tard, la [[Nouvelle Vague]] française en fait un étendard : le réalisateur-auteur qui contrôle tout." },
+        { "type": "timeline", "events": [
+          { "date": "1938", "title": "La Guerre des mondes", "detail": "Le canular radio propulse Welles." },
+          { "date": "1941", "title": "Citizen Kane", "detail": "Sortie du film, échec commercial immédiat." },
+          { "date": "1950s", "title": "Redécouverte", "detail": "La critique européenne réhabilite le film." }
+        ] },
+        { "type": "takeaway", "text": "*Citizen Kane* a prouvé qu'un film pouvait être une enquête sur le pouvoir et la mémoire. Ses images nettes, ses flashbacks et sa liberté de montage ont inventé une modernité que le cinéma explore encore." }
+      ]
+    }
+  ]
+}

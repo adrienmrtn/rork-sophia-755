@@ -1,0 +1,69 @@
+{
+  "id": "course_142_charlie_chaplin_et_le_cinema_muet",
+  "title": "Charlie Chaplin et le cinéma muet",
+  "subtitle": "1889-1977",
+  "subject": "art",
+  "subcategory": "Cinéma, photo & architecture",
+  "description": "**Charlie Chaplin** invente Charlot, un vagabond au chapeau melon, et devient la première star mondiale du cinéma. Du muet au parlant, il transforme le rire en art.",
+  "hero": {
+    "image": "charlie_chaplin_et_le_cinema_muet",
+    "ratio": "16:9",
+    "hook": "Avant la radio et la télé, un vagabond muet faisait rire la planète entière."
+  },
+  "sections": [
+    {
+      "id": "course_142_charlie_chaplin_et_le_cinema_muet_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        { "type": "paragraph", "text": "**Charlie Chaplin** (1889-1977) est la première vraie célébrité mondiale. À une époque de misère industrielle, son personnage de **Charlot**, un vagabond digne et maladroit, offre un visage d'humanité. Sans parler, il fait rire et pleurer à Tokyo, Paris ou New York." },
+        { "type": "paragraph", "text": "Ce cours suit sa trajectoire : des origines du cinéma aux chefs-d'œuvre du muet, puis à l'exil forcé. Chaplin n'est pas seulement un clown. Il est un auteur total." }
+      ]
+    },
+    {
+      "id": "course_142_charlie_chaplin_et_le_cinema_muet_p1",
+      "title": "Du Cinématographe à Hollywood",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Le cinéma naît d'une invention française : le [[Cinématographe]] des [[Les frères Lumière et le cinéma des origines]], breveté en **1895**. Le **28 décembre 1895**, au Grand Café de Paris, a lieu la première projection publique payante. Les premiers films sont de courts documents : une sortie d'usine, un train en gare." },
+        { "type": "image", "asset": "lumiere_brothers_first_cinema_projection_paris_1895", "ratio": "4:3", "caption": "1895 : le cinéma devient un spectacle collectif à Paris." },
+        { "type": "paragraph", "text": "Très vite, [[Georges Méliès]], illusionniste français, invente la fiction et les trucages. Puis l'industrie se structure aux États-Unis. **Hollywood** devient la capitale du rêve, avec ses studios qui produisent des films à la chaîne. C'est dans cette usine que Chaplin va s'imposer." }
+      ]
+    },
+    {
+      "id": "course_142_charlie_chaplin_et_le_cinema_muet_p2",
+      "title": "Charlot, l'outsider universel",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Né dans la pauvreté à Londres en **1889**, Charles Spencer Chaplin grandit entre cabarets et maisons pour indigents. Formé au [[music-hall]], il arrive à Hollywood. En **1914**, il invente presque par hasard le costume de **Charlot** : chapeau melon trop petit, pantalon trop large, canne et moustache." },
+        { "type": "image", "asset": "charlie_chaplin_tramp_bowler_hat_cane", "ratio": "4:3", "caption": "Charlot : un gentleman sans le sou, reconnaissable en une silhouette." },
+        { "type": "funFact", "text": "Chaplin a composé le costume en quelques minutes dans un vestiaire de studio, en empruntant des habits trop grands et trop petits aux autres acteurs." },
+        { "type": "paragraph", "text": "Charlot n'est pas seulement drôle. Il symbolise l'homme qui s'accroche à sa dignité malgré la misère. Chaplin utilise le [[Le slapstick]], la comédie de chutes et de coups, mais il y ajoute une émotion rare : la tendresse." }
+      ]
+    },
+    {
+      "id": "course_142_charlie_chaplin_et_le_cinema_muet_p3",
+      "title": "Résister au parlant, affronter les dictateurs",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "En **1927**, le cinéma sonore arrive avec *Le Chanteur de jazz*. Chaplin, cofondateur de [[United Artists]], résiste. Donner une voix à Charlot, c'est casser son universalité. Il continue donc en muet avec *Les Lumières de la ville* (**1931**)." },
+        { "type": "paragraph", "text": "Puis l'histoire le rattrape. En **1940**, il réalise *Le Dictateur*, une satire d'**Adolf Hitler**. C'est son premier film entièrement parlant, tourné alors que les États-Unis restent encore prudents face au nazisme. Le clown devient un artiste engagé." }
+      ]
+    },
+    {
+      "id": "course_142_charlie_chaplin_et_le_cinema_muet_p4",
+      "title": "L'exil et l'héritage d'un auteur",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Après 1945, la [[Guerre froide]] et le [[maccarthysme]] s'installent. Soupçonné d'idées de gauche, Chaplin est surveillé. En **1952**, alors qu'il part en Europe, les États-Unis lui interdisent le retour. Il s'installe à [[Vevey]], en Suisse, pour le reste de sa vie." },
+        { "type": "timeline", "events": [
+          { "date": "1895", "title": "Naissance du cinéma", "detail": "Première projection publique des frères Lumière." },
+          { "date": "1914", "title": "Naissance de Charlot", "detail": "Chaplin invente son costume légendaire." },
+          { "date": "1940", "title": "Le Dictateur", "detail": "Premier film parlant de Chaplin, satire d'Hitler." },
+          { "date": "1952", "title": "Exil forcé", "detail": "Interdit de séjour aux États-Unis, il part en Suisse." }
+        ] },
+        { "type": "takeaway", "text": "Chaplin a inventé une langue muette universelle. Auteur complet (acteur, réalisateur, compositeur), il a prouvé que le cinéma populaire pouvait aussi être un art politique et émotionnel." }
+      ]
+    }
+  ]
+}

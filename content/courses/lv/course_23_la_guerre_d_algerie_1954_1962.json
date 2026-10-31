@@ -1,0 +1,137 @@
+{
+  "id": "course_23_la_guerre_d_algerie_1954_1962",
+  "title": "La guerre d'Algérie",
+  "subtitle": "1954-1962",
+  "subject": "histoire",
+  "subcategory": "Guerre froide & monde contemporain",
+  "description": "Pendant **huit ans**, la France combat une insurrection indépendantiste sur un territoire qu'elle considère comme le sien. La guerre d'Algérie fait chuter la IVe République et laisse des cicatrices durables.",
+  "hero": {
+    "image": "la_guerre_d_algerie",
+    "ratio": "16:9",
+    "hook": "Huit ans de guerre que la France a longtemps refusé d'appeler une guerre."
+  },
+  "sections": [
+    {
+      "id": "course_23_la_guerre_d_algerie_1954_1962_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La guerre d'Algérie (**1954-1962**) est l'un des chapitres les plus douloureux de l'histoire française du XXe siècle. Ce n'est pas seulement une décolonisation. Pour Paris, l'Algérie n'est pas une colonie lointaine : c'est une partie de la France."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pendant huit ans, l'État affronte le **FLN**, le Front de libération nationale, qui veut l'indépendance. La crise fait tomber la IVe République et donne naissance à la Ve. Longtemps appelée « événements » ou « maintien de l'ordre », cette guerre laisse des mémoires déchirées des deux côtés de la Méditerranée."
+        }
+      ]
+    },
+    {
+      "id": "course_23_la_guerre_d_algerie_1954_1962_p1",
+      "title": "Une Algérie française… sur le papier",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Conquise à partir de **1830**, l'Algérie est découpée dès **1848** en [[départements français]]. Quitter l'Algérie, pour beaucoup, c'est amputer le territoire national. En **1954**, on compte environ **9 millions** de musulmans et **1 million** d'Européens, les [[Les pieds-noirs]]."
+        },
+        {
+          "type": "funFact",
+          "text": "Jusqu'en **1999**, l'État français refuse légalement le mot « guerre ». On parle d'opérations de « maintien de l'ordre », pour ne pas reconnaître aux combattants du FLN le statut de prisonniers de guerre."
+        },
+        {
+          "type": "image",
+          "asset": "algerian_war_fln_fighters",
+          "ratio": "4:3",
+          "caption": "Combattants du FLN durant la guerre d'Algérie."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le **8 mai 1945**, alors que l'Europe célèbre la victoire, la répression de manifestations à Sétif et Guelma, dans l'est de l'Algérie, fait des milliers de morts. Le **1er novembre 1954**, la « Toussaint rouge » : le FLN lance une soixantaine d'attentats. **François Mitterrand**, alors ministre de l'Intérieur, résume la ligne officielle : « L'Algérie, c'est la France. »"
+        }
+      ]
+    },
+    {
+      "id": "course_23_la_guerre_d_algerie_1954_1962_p2",
+      "title": "La bataille d'Alger",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En 1956, le Parlement vote les [[pouvoirs spéciaux]] : l'armée reçoit les pouvoirs de police. Près de **400 000** soldats, dont beaucoup d'appelés, quadrillent le pays face à la [[guérilla]] du FLN, une guerre d'embuscades et d'attentats."
+        },
+        {
+          "type": "image",
+          "asset": "battle_of_algiers_1957",
+          "ratio": "4:3",
+          "caption": "Alger, 1957 : la guerre urbaine au cœur de la capitale."
+        },
+        {
+          "type": "paragraph",
+          "text": "En **1957**, lors de la **bataille d'Alger**, les parachutistes du général **Jacques Massu** démantèlent les réseaux de poseurs de bombes. Victoire militaire, défaite morale : la torture devient un outil courant pour obtenir des renseignements. En métropole, le scandale grandit. La France se déchire sur la légitimité de sa propre guerre."
+        }
+      ]
+    },
+    {
+      "id": "course_23_la_guerre_d_algerie_1954_1962_p3",
+      "title": "De Gaulle et le tournant",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le **13 mai 1958**, Alger s'insurge pour garder l'« Algérie française ». **Charles de Gaulle** revient au pouvoir et fonde la Ve République. D'abord vu comme un sauveur de la souveraineté française, il comprend vite que le maintien est intenable. Il oriente le pays vers l'autodétermination : laisser les Algériens choisir leur avenir."
+        },
+        {
+          "type": "image",
+          "asset": "de_gaulle_speech_algeria",
+          "ratio": "4:3",
+          "caption": "De Gaulle face à la question algérienne."
+        },
+        {
+          "type": "paragraph",
+          "text": "En avril **1961**, le [[Le putsch des généraux (avril 1961)]] tente de le renverser. Après l'échec, l'[[OAS]], Organisation de l'armée secrète, multiplie les attentats pour bloquer toute négociation."
+        }
+      ]
+    },
+    {
+      "id": "course_23_la_guerre_d_algerie_1954_1962_p4",
+      "title": "Évian, l'indépendance, les mémoires",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Les **accords d'Évian** du **18 mars 1962** fixent le [[cessez-le-feu]]. Le 1er juillet, l'indépendance est plébiscitée. La violence ne s'arrête pas. Les [[harkis]], musulmans engagés aux côtés de la France, sont abandonnés et massacrés par milliers. Près d'un million de pieds-noirs fuient vers la métropole."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1er nov. 1954",
+              "title": "Toussaint rouge",
+              "detail": "Le FLN déclenche l'insurrection."
+            },
+            {
+              "date": "1957",
+              "title": "Bataille d'Alger",
+              "detail": "Victoire militaire française, scandale de la torture."
+            },
+            {
+              "date": "13 mai 1958",
+              "title": "Crise d'Alger",
+              "detail": "Retour de De Gaulle et naissance de la Ve République."
+            },
+            {
+              "date": "18 mars 1962",
+              "title": "Accords d'Évian",
+              "detail": "Cessez-le-feu puis indépendance en juillet."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "La guerre d'Algérie (**1954-1962**) termine l'empire colonial français. Elle laisse un héritage mémoriel douloureux : torture, exode des pieds-noirs, abandon des harkis."
+        }
+      ]
+    }
+  ]
+}

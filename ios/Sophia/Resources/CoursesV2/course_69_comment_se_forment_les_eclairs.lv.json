@@ -1,0 +1,65 @@
+{
+  "id": "course_69_comment_se_forment_les_eclairs",
+  "title": "Comment se forment les éclairs ?",
+  "subtitle": "Orages",
+  "subject": "sciences",
+  "subcategory": "La Terre et l'Univers",
+  "description": "Un éclair n'est pas de la magie : c'est une énorme décharge électrique dans un nuage d'orage. Voici comment elle se prépare, puis comment elle frappe.",
+  "hero": {
+    "image": "comment_se_forment_les_eclairs",
+    "ratio": "16:9",
+    "hook": "En une fraction de seconde, l'air passe à 30 000 °C. Cinq fois plus chaud que la surface du Soleil."
+  },
+  "sections": [
+    {
+      "id": "course_69_comment_se_forment_les_eclairs_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        { "type": "paragraph", "text": "Un éclair libère une énergie colossale en un clin d'œil. L'air dans le canal de l'éclair monte à environ **30 000 °C**. Le tonnerre, lui, n'est que le bruit de cette chaleur brutale." },
+        { "type": "paragraph", "text": "Pour comprendre l'éclair, il faut suivre trois étapes : comment le nuage se charge, comment l'électricité trouve un chemin, et pourquoi on entend le tonnerre après." }
+      ]
+    },
+    {
+      "id": "course_69_comment_se_forment_les_eclairs_p1",
+      "title": "Dans le nuage, des charges se séparent",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Les éclairs naissent surtout dans les [[cumulonimbus]] : de très grands nuages d'orage, qui peuvent monter jusqu'à environ **15 km**. À l'intérieur, l'air monte et descend très fort." },
+        { "type": "image", "asset": "cumulonimbus_thunderstorm_cloud", "ratio": "4:3", "caption": "Le cumulonimbus : l'usine à orages." },
+        { "type": "paragraph", "text": "Dans ce chaos, de petits **cristaux de glace** montent, et des grains de glace plus lourds (du [[grésil]]) descendent. Quand ils se percutent, des charges électriques s'échangent. Peu à peu, le haut du nuage devient plutôt positif, la base plutôt négative." },
+        { "type": "funFact", "text": "Le lac de Maracaibo, au Venezuela, est l'un des endroits les plus foudroyés de la planète : des orages quasi quotidiens y sont observés une grande partie de l'année." }
+      ]
+    },
+    {
+      "id": "course_69_comment_se_forment_les_eclairs_p2",
+      "title": "Quand l'air lâche : la décharge",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "L'air est un mauvais conducteur. Mais si la différence de charge devient trop forte (souvent des **centaines de millions de volts**), l'air finit par céder. Les molécules perdent des électrons : elles deviennent conductrices. C'est l'[[ionisation de l'air]]." },
+        { "type": "paragraph", "text": "Un canal invisible part du nuage par petits bonds. Du sol, des filets électriques montent surtout depuis les pointes (arbres, paratonnerres, bâtiments). Quand les deux se rejoignent, le circuit se ferme." },
+        { "type": "paragraph", "text": "La grande lumière que l'on voit, l'**arc en retour**, remonte surtout du sol vers le nuage. Le courant peut atteindre des dizaines de milliers d'ampères. Plusieurs décharges peuvent se succéder dans le même canal : d'où l'effet de scintillement." }
+      ]
+    },
+    {
+      "id": "course_69_comment_se_forment_les_eclairs_p3",
+      "title": "Pourquoi le tonnerre arrive après",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "L'éclair chauffe l'air si vite que celui-ci se dilate d'un coup. Cette onde de choc devient le **tonnerre**. La lumière arrive presque immédiatement ; le son, lui, avance à environ **340 m/s**." },
+        { "type": "paragraph", "text": "Astuce simple : compte les secondes entre l'éclair et le tonnerre, puis divise par **3**. Tu obtiens une estimation de la distance en kilomètres." },
+        { "type": "funFact", "text": "La Terre est frappée par environ **100 éclairs par seconde** en moyenne. En France, on compte autour d'**un million** d'impacts au sol par an." }
+      ]
+    },
+    {
+      "id": "course_69_comment_se_forment_les_eclairs_p4",
+      "title": "Danger, fertilité et curiosités",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "La foudre reste dangereuse, surtout en plein air, près des arbres isolés ou de l'eau. Elle déclenche aussi des incendies. Mais elle a un effet moins connu : elle aide à fabriquer des composés azotés qui fertilisent les sols avec la pluie." },
+        { "type": "paragraph", "text": "Au-dessus des orages, des caméras ont aussi capté des phénomènes bizarres, comme les [[Farfadets]] : de brèves lueurs dans la haute atmosphère, invisibles à l'œil nu depuis le sol." },
+        { "type": "takeaway", "text": "Dans un cumulonimbus, collisions glace/grésil séparent les charges. Quand la tension devient trop forte, l'air s'ionise : l'éclair chauffe à ~30 000 °C, et cette dilatation brutale produit le tonnerre." }
+      ]
+    }
+  ]
+}

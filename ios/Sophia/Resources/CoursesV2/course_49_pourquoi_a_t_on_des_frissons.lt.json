@@ -1,0 +1,62 @@
+{
+  "id": "course_49_pourquoi_a_t_on_des_frissons",
+  "title": "Pourquoi a-t-on des frissons ?",
+  "subtitle": "Corps & émotions",
+  "subject": "sciences",
+  "subcategory": "Notre quotidien expliqué",
+  "description": "Froid, peur, musique : les frissons ont plusieurs causes. Elles passent toutes par le système nerveux, mais pas pour les mêmes raisons.",
+  "hero": {
+    "image": "pourquoi_a_t_on_des_frissons",
+    "ratio": "16:9",
+    "hook": "Un frisson de froid et un frisson de musique ne racontent pas la même histoire."
+  },
+  "sections": [
+    {
+      "id": "course_49_pourquoi_a_t_on_des_frissons_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        { "type": "paragraph", "text": "Tu frissonnes en sortant sous la pluie. Tu frissonnes aussi en entendant une chanson qui te bouleverse. Même mot, mécanismes différents." },
+        { "type": "paragraph", "text": "Dans les deux cas, le corps réagit vite. Mais l'un sert surtout à se réchauffer, l'autre touche plutôt au plaisir et aux émotions." }
+      ]
+    },
+    {
+      "id": "course_49_pourquoi_a_t_on_des_frissons_p1",
+      "title": "Le frisson du froid : une mini-chaudière",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Le corps veut rester autour de **37 °C**. Quand la peau détecte le froid, elle prévient une zone du cerveau, l'**hypothalamus**, qui agit comme un thermostat." },
+        { "type": "image", "asset": "goosebumps_cold_skin", "ratio": "4:3", "caption": "La chair de poule : un vieux réflexe pour hérisser les poils." },
+        { "type": "paragraph", "text": "Les muscles se contractent très vite et de façon répétée : c'est le frisson. Ces contractions produisent de la chaleur. La « chair de poule » vient d'un vieux réflexe : hérisser les poils pour mieux isoler. Chez nous, avec peu de fourrure, cela sert surtout de vestige." }
+      ]
+    },
+    {
+      "id": "course_49_pourquoi_a_t_on_des_frissons_p2",
+      "title": "Le frisson de la peur",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Face à une menace, le [[système nerveux sympathique]] (la branche « alerte » du système nerveux) se met en marche. Il libère de l'**adrénaline**. Les muscles se tendent, le cœur s'accélère, la peau peut frissonner." },
+        { "type": "image", "asset": "adrenaline_stress_response_body", "ratio": "4:3", "caption": "L'adrénaline prépare le corps à réagir vite." },
+        { "type": "funFact", "text": "Ce même système explique pourquoi tu peux avoir la chair de poule en regardant un film d'horreur… alors que tu es bien au chaud sur ton canapé." }
+      ]
+    },
+    {
+      "id": "course_49_pourquoi_a_t_on_des_frissons_p3",
+      "title": "Le frisson de la musique",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Certains frissons, appelés parfois « chills », arrivent avec une émotion forte : musique, discours, film. Ils activent le circuit de la **récompense** du cerveau, avec de la **dopamine**, une substance liée au plaisir." },
+        { "type": "paragraph", "text": "Ce n'est pas utile pour survivre immédiatement. C'est plutôt le corps qui réagit à une émotion intense, comme une vague qui passe." }
+      ]
+    },
+    {
+      "id": "course_49_pourquoi_a_t_on_des_frissons_p4",
+      "title": "Quand s'inquiéter ?",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Des frissons avec forte fièvre peuvent signaler une infection. Des frissons constants sans raison claire méritent un avis médical. Mais la plupart du temps, un frisson de froid, de stress ou de musique est simplement le corps qui fait son travail." },
+        { "type": "takeaway", "text": "Les frissons de froid produisent de la chaleur. Ceux de la peur préparent à réagir. Ceux de la musique touchent au plaisir émotionnel. Même sensation, causes différentes." }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "id": "course_153_la_creation_d_adam_michel_ange",
+  "title": "La Création d'Adam, Michel-Ange",
+  "subtitle": "1508-1512",
+  "subject": "art",
+  "subcategory": "Cinéma, photo & architecture + œuvres iconiques",
+  "description": "Sur le plafond de la Sixtine, Michel-Ange peint Dieu et Adam dont les doigts presque se touchent. Chef-d'œuvre de la fresque et du Cinquecento.",
+  "hero": {
+    "image": "la_creation_d_adam_michel_ange",
+    "ratio": "16:9",
+    "hook": "Deux doigts séparés par un souffle : l'image la plus citée de la Renaissance."
+  },
+  "sections": [
+    {
+      "id": "course_153_la_creation_d_adam_michel_ange_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Entre **1508** et **1512**, **Michel-Ange** peint le plafond de la Chapelle Sixtine à Rome. Au centre, *La Création d'Adam* : Dieu tend la main, Adam s'éveille."
+        },
+        {
+          "type": "paragraph",
+          "text": "C'est le sommet du [[Cinquecento]], le XVIe siècle italien."
+        }
+      ]
+    },
+    {
+      "id": "course_153_la_creation_d_adam_michel_ange_p1",
+      "title": "Une commande papale",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le pape Jules II veut un plafond grandiose. Michel-Ange, surtout sculpteur, proteste… puis accepte. [[Bramante]], rival architecte, aurait poussé la commande pour le mettre en difficulté."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le plafond entier raconte la Genèse. *La Création d'Adam* n'est qu'un panneau, mais le plus photographié. Michel-Ange y condense tension anatomique et théologie."
+        },
+        {
+          "type": "image",
+          "asset": "sistine_chapel_ceiling_overview",
+          "ratio": "4:3",
+          "caption": "La Sixtine : un ciel peint de bout en bout."
+        }
+      ]
+    },
+    {
+      "id": "course_153_la_creation_d_adam_michel_ange_p2",
+      "title": "La fresque, un combat",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La [[fresque]] exige de peindre sur l'enduit frais. Dos courbé, mois après mois. La [[La théorie de la «cape en cerveau»]] voit dans le manteau de Dieu la forme d'un cerveau : hypothèse moderne séduisante, non prouvée."
+        },
+        {
+          "type": "funFact",
+          "text": "Michel-Ange a peint de nombreux personnages nus : le corps humain comme louange."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ses études d'anatomie, proches de la [[dissection_anatomique]], donnent aux muscles une vérité rare."
+        },
+        {
+          "type": "paragraph",
+          "text": "Travailler allongé sous la voûte épuise. Les lettres de l'artiste parlent de souffrance physique. Le sublime a un coût corporel."
+        }
+      ]
+    },
+    {
+      "id": "course_153_la_creation_d_adam_michel_ange_p3",
+      "title": "Doigts qui ne se touchent pas",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "L'espace entre les deux index crée la tension. Adam est beau, mais passif ; Dieu, entouré d'anges, apporte l'énergie. La [[mollezza]] (douceur vivante des chairs) rivalise avec la force."
+        },
+        {
+          "type": "paragraph",
+          "text": "Adam touche presque Dieu, mais l'écart reste. Ce millimètre a nourri des siècles d'interprétations : grâce, désir, science, humanisme."
+        },
+        {
+          "type": "image",
+          "asset": "creation_of_adam_hands_detail",
+          "ratio": "4:3",
+          "caption": "Le millimètre le plus célèbre de l'histoire de l'art."
+        }
+      ]
+    },
+    {
+      "id": "course_153_la_creation_d_adam_michel_ange_p4",
+      "title": "Héritage",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Reprise en pubs, films, mèmes : le geste survit hors du Vatican. Il reste surtout une leçon de [[manière_moderne]] : le génie peut transformer une voûte en théâtre de l'origine."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pour bien saisir La Création d'Adam, Michel-Ange, il faut garder une chose en tête : chaque détail technique sert une émotion ou une idée. L'œuvre n'est jamais seulement décorative."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le contexte compte autant que le style. Dates, lieux, commanditaires, public : tout cela explique pourquoi une forme apparaît à un moment précis, et pas avant."
+        },
+        {
+          "type": "paragraph",
+          "text": "Enfin, l'héritage se mesure dans le temps long. Ce que nous voyons aujourd'hui dans les musées, les films ou la musique populaire porte encore la trace de ces inventions."
+        },
+        {
+          "type": "paragraph",
+          "text": "Restaurée, commentée, parodiée, la scène survit hors contexte religieux. Elle reste le geste par lequel l'art occidental imagine l'origine."
+        },
+        {
+          "type": "takeaway",
+          "text": "Avec La Création d'Adam, Michel-Ange a condensé la Genesis en un geste : deux doigts, et l'humanité s'éveille."
+        }
+      ]
+    }
+  ]
+}

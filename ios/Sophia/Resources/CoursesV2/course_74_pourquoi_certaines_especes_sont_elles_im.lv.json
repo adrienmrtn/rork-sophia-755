@@ -1,0 +1,108 @@
+{
+  "id": "course_74_pourquoi_certaines_especes_sont_elles_im",
+  "title": "Pourquoi certaines espèces sont-elles immortelles ?",
+  "subtitle": "Biologie & longévité",
+  "subject": "sciences",
+  "subcategory": "La Terre et l'Univers",
+  "description": "Certaines espèces semblent défier la mort. Méduses qui rajeunissent, hydres sans vieillissement : le secret est dans la réparation cellulaire.",
+  "hero": {
+    "image": "pourquoi_certaines_especes_sont_immortelles",
+    "ratio": "16:9",
+    "hook": "Vieillir n'est pas une loi absolue du vivant. Certaines espèces ont trouvé la faille."
+  },
+  "sections": [
+    {
+      "id": "course_74_pourquoi_certaines_especes_sont_elles_im_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nous vieillissons, puis nous mourons. Pourtant, la méduse [[Turritopsis dohrnii]] peut revenir à un stade juvénile et recommencer. La palourde **Ming** a vécu **507 ans**. Le vieillissement n'est donc pas une règle universelle : c'est un processus que certaines espèces contournent."
+        },
+        {
+          "type": "paragraph",
+          "text": "En étudiant ces exceptions, les chercheurs cherchent moins l'immortalité de science-fiction que les astuces du vivant pour mieux réparer les cellules."
+        }
+      ]
+    },
+    {
+      "id": "course_74_pourquoi_certaines_especes_sont_elles_im_p1",
+      "title": "Pourquoi nos cellules s'usent",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vieillir, ce n'est pas seulement « s'user » comme une machine. C'est un déséquilibre : les dommages s'accumulent plus vite que les réparations."
+        },
+        {
+          "type": "image",
+          "asset": "chromosome_dna_telomere_aging_cell",
+          "ratio": "auto",
+          "caption": "Les télomères, aux extrémités des chromosomes, raccourcissent à chaque division cellulaire."
+        },
+        {
+          "type": "paragraph",
+          "text": "Aux bouts de nos chromosomes, les [[télomères]] agissent comme des embouts de lacets. À chaque division cellulaire, ils raccourcissent. Trop courts, la cellule arrête de se diviser. En parallèle, le métabolisme produit des molécules agressives qui abîment protéines et ADN. Des cellules « zombies » s'accumulent alors et enflamment les tissus autour d'elles."
+        },
+        {
+          "type": "funFact",
+          "text": "Le tardigrade, minuscule « ourson d'eau », peut presque s'arrêter de vivre en se desséchant. Son métabolisme chute à **99,99 %**, et il survit au vide spatial ou à des radiations extrêmes sans vraiment vieillir."
+        }
+      ]
+    },
+    {
+      "id": "course_74_pourquoi_certaines_especes_sont_elles_im_p2",
+      "title": "Les champions qui contournent la mort",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La [[Turritopsis dohrnii]] blessée ou affamée transforme ses cellules adultes en cellules « vierges », puis redevient un polype, le stade de départ. Ce retour en arrière, appelé transdifférenciation, lui donne une forme d'**immortalité biologique**."
+        },
+        {
+          "type": "paragraph",
+          "text": "L'**hydre**, petit polype d'eau douce, renouvelle tout son corps grâce à un stock presque illimité de [[cellules souches]]. Elle ne montre aucun signe de vieillissement mesurable. La baleine boréale, elle, peut dépasser **200 ans** grâce à une réparation d'ADN ultra-efficace et une forte résistance au cancer."
+        },
+        {
+          "type": "funFact",
+          "text": "Les homards fabriquent de la télomérase partout dans leur corps : leurs télomères ne raccourcissent pas. Ils grandissent toute leur vie et meurent surtout quand la mue devient trop coûteuse."
+        }
+      ]
+    },
+    {
+      "id": "course_74_pourquoi_certaines_especes_sont_elles_im_p3",
+      "title": "Ce que la médecine en retient",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "L'idée n'est plus seulement de soigner Alzheimer ou l'arthrose une par une, mais d'attaquer le vieillissement lui-même. Les **sénolytiques** visent à éliminer les cellules zombies. Chez l'animal, cela a déjà rajeuni certaines fonctions."
+        },
+        {
+          "type": "paragraph",
+          "text": "Limiter les calories sans malnutrition active aussi des voies de réparation, notamment en freinant [[mTOR]], une protéine qui accélère la croissance… et parfois le déclin. D'autres labos tentent de « remonter l'horloge » des cellules, comme la méduse, sans les transformer en tumeurs."
+        }
+      ]
+    },
+    {
+      "id": "course_74_pourquoi_certaines_especes_sont_elles_im_p4",
+      "title": "Immortel, mais pas invincible",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Même une espèce biologiquement immortelle meurt de prédateurs, de maladie ou de catastrophe. La mort reste un moteur de l'évolution : elle laisse place à de nouvelles générations mieux adaptées."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pour l'humain, l'enjeu réaliste n'est pas vivre éternellement, mais allonger les années **en bonne santé**. Une longévité devenue technologie soulèverait aussi d'énormes questions d'équité et de ressources."
+        },
+        {
+          "type": "takeaway",
+          "text": "L'immortalité biologique repose sur la réparation ou la réinitialisation des cellules. La méduse Turritopsis dohrnii rajeunit ; l'hydre se renouvelle sans cesse. Vieillir n'est pas une fatalité universelle."
+        }
+      ]
+    }
+  ]
+}

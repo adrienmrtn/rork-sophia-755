@@ -37,6 +37,11 @@ NON_FR_LANGS: list[str] = [
     "et",
 ]
 
+# Languages being added: seeded with the French text (scripts/seed_new_language.py)
+# and post-edited surface by surface. They join NON_FR_LANGS, the apps and the gate
+# once every surface is translated.
+PENDING_LANGS: list[str] = ["lt", "lv", "ja"]
+
 # Source language of every machine-translation call. French is the product
 # source; translating from the English table or through an English pivot took
 # French words in their most frequent English sense (essai -> trial -> court
@@ -88,4 +93,7 @@ SWIFT_CASE_BY_CODE: dict[str, str] = {
     "he": "hebrew",
     "fi": "finnish",
     "et": "estonian",
+    "lt": "lithuanian",
+    "lv": "latvian",
+    "ja": "japanese",
 }

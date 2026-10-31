@@ -1,0 +1,124 @@
+{
+  "id": "course_19_la_bataille_de_stalingrad_1942_1943",
+  "title": "La bataille de Stalingrad",
+  "subtitle": "1942-1943",
+  "subject": "histoire",
+  "subcategory": "Révolutions & conflits modernes",
+  "description": "De l'été 1942 à février 1943, Allemands et Soviétiques s'entretuent dans les ruines d'une ville sur la Volga. Stalingrad devient le tournant de la Seconde Guerre mondiale.",
+  "hero": {
+    "image": "la_bataille_de_stalingrad",
+    "ratio": "16:9",
+    "hook": "Dans les ruines d'une ville, l'armée jugée invincible se brise pour de bon."
+  },
+  "sections": [
+    {
+      "id": "course_19_la_bataille_de_stalingrad_1942_1943_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "De l'été **1942** au **2 février 1943**, le monde regarde une bande de ruines sur la **Volga**, un grand fleuve de Russie. À **Stalingrad** (aujourd'hui Volgograd), l'armée allemande se heurte à une résistance soviétique prête à tous les sacrifices."
+        },
+        {
+          "type": "paragraph",
+          "text": "Avec plus d'**un million** de morts, c'est la bataille la plus meurtrière de l'histoire… et le point de bascule de la Seconde Guerre mondiale."
+        }
+      ]
+    },
+    {
+      "id": "course_19_la_bataille_de_stalingrad_1942_1943_p1",
+      "title": "Hitler vise le pétrole du sud",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Après l'échec devant Moscou en 1941, Hitler lance [[Case Blue]], une offensive d'été vers le sud. Le but : le pétrole du **Caucase**. **Stalingrad**, nœud ferroviaire et fluvial sur la Volga, n'est d'abord qu'un objectif secondaire. Puis le symbole l'emporte : prendre la ville qui porte le nom de **Staline** devient une obsession."
+        },
+        {
+          "type": "image",
+          "asset": "battle_of_stalingrad_ruins",
+          "ratio": "4:3",
+          "caption": "Stalingrad en ruines : un champ de bataille urbain sans merci."
+        },
+        {
+          "type": "funFact",
+          "text": "Hitler était si sûr de vaincre qu'il aurait fait imprimer des invitations pour un banquet de victoire à l'hôtel Lux de Stalingrad."
+        },
+        {
+          "type": "paragraph",
+          "text": "La **6e Armée** allemande, commandée par le général [[Friedrich Paulus]], est détournée vers la ville. Les bombardements de la [[Luftwaffe]], l'aviation allemande, en août 1942 laissent un paysage de cratères… parfait pour la défense soviétique."
+        }
+      ]
+    },
+    {
+      "id": "course_19_la_bataille_de_stalingrad_1942_1943_p2",
+      "title": "Combattre maison par maison",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le général soviétique **Vassili Tchouïkov** impose une tactique simple : rester à moins de **30 mètres** de l'ennemi. Ainsi, l'artillerie et l'aviation allemandes ne peuvent pas frapper sans tuer leurs propres hommes. Les Allemands appellent cela la **Rattenkrieg**, la « guerre des rats » : on se bat dans les caves, les égouts, les immeubles en ruine."
+        },
+        {
+          "type": "paragraph",
+          "text": "La **Maison Pavlov**, un immeuble tenu par une poignée de soldats, résiste **58 jours**. Dans l'usine **Dzerjinski**, on fabrique des chars sous les bombes et on les conduit droit au front. L'**Ordre 227** de Staline résume la consigne : **« Pas un pas en arrière »**."
+        }
+      ]
+    },
+    {
+      "id": "course_19_la_bataille_de_stalingrad_1942_1943_p3",
+      "title": "La pince qui referme le piège",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pendant que Paulus s'use dans les décombres, le maréchal soviétique **Gueorgui Joukov** prépare l'[[Opération Uranus]]. Les flancs allemands, gardés par des alliés mal équipés (Roumains, Italiens, Hongrois), cèdent. Le **19 novembre 1942**, la pince se referme : environ **300 000** hommes sont encerclés."
+        },
+        {
+          "type": "funFact",
+          "text": "Les Soviétiques diffusaient par haut-parleurs le tic-tac d'une horloge, puis un message : un soldat allemand mourait toutes les **7 secondes** en URSS."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hitler interdit la sortie. [[Hermann Göring]], chef de la Luftwaffe, promet un pont aérien. Il échoue. Faim, typhus, **-30 °C** : le « chaudron » devient un piège mortel."
+        }
+      ]
+    },
+    {
+      "id": "course_19_la_bataille_de_stalingrad_1942_1943_p4",
+      "title": "La capitulation qui change la guerre",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le **30 janvier 1943**, Hitler nomme Paulus **feld-maréchal**, le grade le plus élevé, pour l'inciter à mourir plutôt qu'à se rendre. Paulus capitule le **2 février**. Sur 300 000 encerclés, **91 000** partent prisonniers. Pour la première fois, la propagande nazie doit avouer une défaite totale. L'armée jugée invincible a été brisée."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "été 1942",
+              "title": "Case Blue",
+              "detail": "Offensive allemande vers le Caucase et Stalingrad."
+            },
+            {
+              "date": "19 nov. 1942",
+              "title": "Opération Uranus",
+              "detail": "Encerclement de la 6e Armée."
+            },
+            {
+              "date": "2 fév. 1943",
+              "title": "Capitulation",
+              "detail": "Paulus se rend ; tournant de la guerre."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "**Stalingrad** (**1942-1943**) anéantit la 6e Armée allemande et brise le mythe de l'invincibilité nazie, lors de la bataille la plus meurtrière de l'histoire."
+        }
+      ]
+    }
+  ]
+}

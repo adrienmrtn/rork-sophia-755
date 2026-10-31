@@ -1,0 +1,127 @@
+{
+  "id": "course_306_pourquoi_rit_on_quand_on_nous_chatouille",
+  "title": "Pourquoi rit-on quand on nous chatouille ?",
+  "subtitle": "Knismesis et gargalesis",
+  "subject": "sciences",
+  "subcategory": "Notre quotidien expliqué",
+  "description": "Un frôlement de plume agace, une main sous les aisselles fait éclater de rire. Ce que la peau, le cerveau et le jeu fabriquent ensemble, et pourquoi tu ne peux pas te chatouiller toi-même.",
+  "author": "stacy-jankowski",
+  "hero": {
+    "image": "parent_tickling_laughing_child_bed",
+    "ratio": "4:3",
+    "hook": "Aristote et Darwin s'y sont cassé la tête : pourquoi un simple contact déclenche-t-il un rire que personne ne contrôle ?"
+  },
+  "sections": [
+    {
+      "id": "course_306_pourquoi_rit_on_quand_on_nous_chatouille_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Une main s'approche des côtes, et c'est parti : on se tortille, on supplie d'arrêter, et pourtant on rit. Ce petit mystère intrigue les penseurs depuis l'Antiquité. Socrate, Aristote, puis Francis Bacon, Galilée, René Descartes et **Charles Darwin** s'y sont tous intéressés."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le chatouillement a l'air d'un jeu sans importance. C'est en réalité un mécanisme complexe, où se combinent la peau qui sent, le corps qui réagit, l'émotion et plusieurs circuits du cerveau. Le résultat est un **rire involontaire**, que l'on ne commande pas."
+        }
+      ]
+    },
+    {
+      "id": "course_306_pourquoi_rit_on_quand_on_nous_chatouille_p1",
+      "title": "Deux chatouilles : knismesis et gargalesis",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Les chercheurs distinguent **deux sortes** de chatouilles. La première est légère, « comme une plume » : c'est la [[knismesis]]. Elle ressemble à une démangeaison, peut se ressentir presque partout sur le corps et ne fait pas rire. Un insecte qui court sur le bras : on frissonne, mais on ne s'esclaffe pas."
+        },
+        {
+          "type": "image",
+          "asset": "feather_light_touch_skin_knismesis",
+          "ratio": "3:2",
+          "caption": "Un doigt effleure le dos d'un enfant : la knismesis, une chatouille légère qui agace plus qu'elle ne fait rire."
+        },
+        {
+          "type": "paragraph",
+          "text": "Celle qui déclenche le rire s'appelle la [[gargalesis]]. Elle demande des mouvements **rapides et appuyés**, et provoque tortillements, contorsions et vocalisations proches du rire, impossibles à retenir. Le corps la traite un peu comme un jeu. Elle ne marche que sur certaines zones : aisselles, cou, torse, ventre et pieds."
+        },
+        {
+          "type": "funFact",
+          "text": "Pour étudier la gargalesis, les chercheurs chatouillent des **rats** : leurs vocalisations et leur comportement de jeu sont bien documentés, ce qui en fait un modèle de choix."
+        }
+      ]
+    },
+    {
+      "id": "course_306_pourquoi_rit_on_quand_on_nous_chatouille_p2",
+      "title": "Du toucher au rire : le circuit du cerveau",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tout commence dans la peau. Le toucher y est capté par des [[mécanorécepteurs]], des capteurs sensoriels qui réagissent à une pression ou à un mouvement. Leur signal remonte vers le cerveau et s'y mêle aux **signaux du jeu**, émotionnels et comportementaux : ce mélange allume plusieurs circuits à la fois."
+        },
+        {
+          "type": "image",
+          "asset": "human_brain_anatomy",
+          "ratio": "4:3",
+          "caption": "Coupe d'un cerveau humain : les régions profondes de la récompense et le cortex frontal participent au circuit du rire."
+        },
+        {
+          "type": "paragraph",
+          "text": "Des régions profondes liées à la **récompense** libèrent de la [[dopamine]] : la chatouille devient une expérience agréable. S'y ajoutent les zones qui traitent l'humour et les émotions, et une partie du [[réseau de saillance]], qui trie ce qui mérite notre attention. Le rire lui-même part d'ailleurs encore : de l'[[opercule frontal]] et de l'[[aire motrice supplémentaire]]."
+        }
+      ]
+    },
+    {
+      "id": "course_306_pourquoi_rit_on_quand_on_nous_chatouille_p3",
+      "title": "Pourquoi ne peut-on pas se chatouiller soi-même ?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Malgré tous ces circuits, impossible de se faire rire en se chatouillant les pieds. Première explication : la **prévisibilité**. Quand le cerveau sait d'avance ce que la peau va sentir, comme tes propres doigts qui glissent sur ta plante de pied, il atténue le signal."
+        },
+        {
+          "type": "paragraph",
+          "text": "Deuxième explication : il manque l'autre. La gargalesis est liée au jeu, donc à une **situation sociale**. Quand on se chatouille soi-même, il n'y a ni partenaire ni échange : toute la part émotionnelle et comportementale de la réaction disparaît. Il reste un contact sur la peau, mais plus de jeu, et donc pas de rire."
+        }
+      ]
+    },
+    {
+      "id": "course_306_pourquoi_rit_on_quand_on_nous_chatouille_p4",
+      "title": "À quoi servent les chatouilles ?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Personne ne sait vraiment pourquoi le chatouillement est apparu au cours de l'évolution. Une première piste en fait une affaire de **survie** : lors de fausses bagarres, les chatouilles apprennent où se trouvent les zones vulnérables du corps, et l'on met au point des stratégies de défense utiles le jour d'un vrai combat."
+        },
+        {
+          "type": "image",
+          "asset": "young_chimpanzees_play_fighting_laughing",
+          "ratio": "3:2",
+          "caption": "Un chimpanzé de la forêt de Kibale, en Ouganda : chez nos cousins aussi, le jeu tisse des liens."
+        },
+        {
+          "type": "paragraph",
+          "text": "L'autre piste est plus douce : les chatouilles seraient simplement un jeu, un comportement qui rapproche. Le rire partagé entre parents et enfants, entre frères et sœurs, entre amis, crée et entretient le **lien**. Entraînement au combat ou ciment du groupe : la question reste ouverte."
+        },
+        {
+          "type": "takeaway",
+          "text": "Le rire des chatouilles naît d'une chatouille appuyée, la gargalesis, que la peau, les circuits de la récompense et le contexte du jeu transforment ensemble en un rire involontaire, impossible à reproduire sur soi-même."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "S. Ishiyama, « The neurobiology of ticklishness », Neuroscience Research, vol. 217, 2025, article 104907.",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0168010225000847"
+    },
+    {
+      "text": "K. Kilteni, « The extraordinary enigma of ordinary tickle behavior: Why gargalesis still puzzles neuroscience », Science Advances, vol. 11, n° 21, 2025, eadt0350.",
+      "url": "https://www.science.org/doi/10.1126/sciadv.adt0350"
+    }
+  ]
+}

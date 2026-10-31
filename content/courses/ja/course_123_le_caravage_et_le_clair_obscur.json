@@ -1,0 +1,144 @@
+{
+  "id": "course_123_le_caravage_et_le_clair_obscur",
+  "title": "Le Caravage et le clair-obscur",
+  "subtitle": "1571-1610",
+  "subject": "art",
+  "subcategory": "Peinture & mouvements",
+  "description": "**Michelangelo Merisi**, dit Le Caravage, révolutionne la peinture avec un réalisme brutal et un contraste lumière-ombre extrême : le clair-obscur.",
+  "hero": {
+    "image": "le_caravage_et_le_clair_obscur",
+    "ratio": "16:9",
+    "hook": "Des saints aux pieds sales, une lumière de projecteur : l'art ne sera plus jamais le même."
+  },
+  "sections": [
+    {
+      "id": "course_123_le_caravage_et_le_clair_obscur_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Michelangelo Merisi**, dit **Le Caravage** (1571-1610), brise les codes de la beauté idéale hérités de la Renaissance. Il confronte le sacré et le quotidien : mendiants, tavernes, corps fatigués."
+        },
+        {
+          "type": "paragraph",
+          "text": "Son arme : un clair-obscur radical. Les corps surgissent du noir comme sous un projecteur. Cette rupture annonce l'esprit du [[Baroque en peinture]] et transforme le spectateur en témoin d'un drame."
+        },
+        {
+          "type": "image",
+          "asset": "caravaggio_self_portrait",
+          "ratio": "4:3",
+          "caption": "Le Caravage, peintre de génie et figure de la vie romaine turbulente."
+        }
+      ]
+    },
+    {
+      "id": "course_123_le_caravage_et_le_clair_obscur_p1",
+      "title": "Génie, violence et exil",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Né près de Milan, Le Caravage arrive à Rome vers **1593**. Sa carrière bascule en **1600** avec les toiles de la chapelle Contarelli, à l'église Saint-Louis-des-Français. *La Vocation de saint Matthieu* sidère Rome : le sacré y a le visage de la rue."
+        },
+        {
+          "type": "funFact",
+          "text": "À Malte, il est fait chevalier de l'Ordre, puis jeté en prison pour avoir agressé un supérieur. Il s'évade d'un fort réputé imprenable avec une corde de chanvre."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sa vie est aussi violente que ses tableaux. En **1606**, lors d'une rixe, il tue **Ranuccio Tomassoni**. Condamné à mort, il fuit vers Naples, Malte, puis la Sicile. Traqué et blessé, il meurt à **38 ans** à [[Porto Ercole]], quelques jours avant une grâce papale."
+        }
+      ]
+    },
+    {
+      "id": "course_123_le_caravage_et_le_clair_obscur_p2",
+      "title": "Le ténébrisme : une lumière qui frappe",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le Caravage invente le **ténébrisme**, une forme extrême du clair-obscur. Plus de lumière douce qui caresse les formes : une obscurité opaque, et des corps qui en jaillissent avec une force sculpturale. La lumière est artificielle, comme un projecteur de scène."
+        },
+        {
+          "type": "image",
+          "asset": "caravaggio_tenebrism_chiaroscuro_painting",
+          "ratio": "4:3",
+          "caption": "Dans le ténébrisme, le noir concentre le regard sur le drame."
+        },
+        {
+          "type": "funFact",
+          "text": "Pour obtenir cet éclairage, il travaillait dans un atelier aux murs noirs, percé d'une seule petite lucarne en hauteur."
+        },
+        {
+          "type": "paragraph",
+          "text": "En supprimant décors et paysages, il force le regard vers les visages et les gestes. Cette lumière sert aussi la [[Contre-Réforme]] : l'Église catholique veut émouvoir les fidèles. Chez lui, la lumière devient la grâce qui frappe l'âme sans prévenir."
+        }
+      ]
+    },
+    {
+      "id": "course_123_le_caravage_et_le_clair_obscur_p3",
+      "title": "Des saints qui ressemblent à la rue",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ce qui scandalise le plus, c'est son refus d'idéaliser. Il choisit ses modèles dans la rue : ouvriers, mendiants, courtisanes. La Vierge et les apôtres ont des rides, des pieds sales, des corps fatigués."
+        },
+        {
+          "type": "image",
+          "asset": "caravaggio_madonna_dei_pellegrini_painting",
+          "ratio": "4:3",
+          "caption": "La Madone des Pèlerins : des pieds nus et sales au premier plan."
+        },
+        {
+          "type": "paragraph",
+          "text": "*La Mort de la Vierge* est refusée : on dit qu'il aurait pris pour modèle une femme noyée. *La Madone des Pèlerins* choque par les pieds sales des pauvres agenouillés. Il refuse les artifices du [[Maniérisme]], ce style gracieux et déformé qui l'a précédé. Pour lui, le salut s'adresse d'abord aux humbles."
+        },
+        {
+          "type": "funFact",
+          "text": "Sa première version de *Saint Matthieu et l'Ange* montrait un évangéliste aux pieds sales, l'air inculte. Les commanditaires exigèrent qu'il la repeigne."
+        }
+      ]
+    },
+    {
+      "id": "course_123_le_caravage_et_le_clair_obscur_p4",
+      "title": "Le caravagisme : une Europe sous influence",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Il n'a pas fondé d'école, mais son style se répand : le **caravagisme**. [[Artemisia Gentileschi]] en Italie, Georges de La Tour en France, Zurbarán en Espagne, Rubens dans les Flandres. Plus tard, **Rembrandt** héritera de sa poésie de l'ombre, **Vélasquez** de sa dignité du peuple."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1600",
+              "title": "Chapelle Contarelli",
+              "detail": "Rome découvre La Vocation de saint Matthieu."
+            },
+            {
+              "date": "1606",
+              "title": "Meurtre et exil",
+              "detail": "Le Caravage fuit Rome, condamné à mort."
+            },
+            {
+              "date": "1610",
+              "title": "Mort à Porto Ercole",
+              "detail": "Il meurt à 38 ans, juste avant la grâce."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Oublié pendant deux siècles, il est redécouvert au XXe. Son cadrage serré et sa lumière influencent encore le cinéma et la photographie."
+        },
+        {
+          "type": "takeaway",
+          "text": "Le Caravage (1571-1610) impose le ténébrisme et un réalisme social radical. En peignant le sacré avec des modèles de la rue, il devient le père spirituel de la peinture baroque."
+        }
+      ]
+    }
+  ]
+}

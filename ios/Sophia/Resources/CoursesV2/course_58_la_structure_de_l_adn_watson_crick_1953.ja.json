@@ -1,0 +1,62 @@
+{
+  "id": "course_58_la_structure_de_l_adn_watson_crick_1953",
+  "title": "La structure de l'ADN",
+  "subtitle": "1953",
+  "subject": "sciences",
+  "subcategory": "Découvertes qui ont changé le monde",
+  "description": "En 1953, Watson et Crick décrivent la double hélice de l'ADN. Derrière cette gloire, le travail crucial de Rosalind Franklin.",
+  "hero": {
+    "image": "la_structure_de_l_adn",
+    "ratio": "16:9",
+    "hook": "La forme d'une molécule… et le secret de l'hérédité."
+  },
+  "sections": [
+    {
+      "id": "course_58_la_structure_de_l_adn_watson_crick_1953_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        { "type": "paragraph", "text": "On savait que les traits passent des parents aux enfants. Mais quel objet chimique porte cette information ? Au milieu du XXe siècle, la réponse se précise : l'**ADN**." },
+        { "type": "paragraph", "text": "En **1953**, **James Watson** et **Francis Crick** publient un modèle célèbre : la **double hélice**. Cette forme explique comment l'ADN peut se copier." }
+      ]
+    },
+    {
+      "id": "course_58_la_structure_de_l_adn_watson_crick_1953_p1",
+      "title": "Trouver le support de l'hérédité",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "L'ADN (acide désoxyribonucléique) est une longue molécule présente dans nos cellules. Elle contient des « lettres » chimiques qui forment un code. Mais dans les années 1940-1950, on ne connaît pas encore sa forme en 3D." },
+        { "type": "paragraph", "text": "Sans la forme, on comprend mal comment ce code peut se dupliquer à chaque division cellulaire." }
+      ]
+    },
+    {
+      "id": "course_58_la_structure_de_l_adn_watson_crick_1953_p2",
+      "title": "La photo qui change tout",
+      "free": false,
+      "blocks": [
+        { "type": "image", "asset": "rosalind_franklin_photo_51_x_ray", "ratio": "4:3", "caption": "La Photo 51 de Rosalind Franklin révèle une structure hélicoïdale." },
+        { "type": "paragraph", "text": "**Rosalind Franklin**, physicienne et chimiste, obtient des images de l'ADN par rayons X. Sa célèbre **Photo 51** montre des indices clairs d'une hélice." },
+        { "type": "paragraph", "text": "Watson et Crick voient ces données (dans des conditions aujourd'hui jugées injustes pour Franklin) et construisent leur modèle. Franklin meurt en 1958 ; le Nobel de 1962 ira à Watson, Crick et Wilkins, pas à elle." },
+        { "type": "funFact", "text": "Franklin a aussi fait des travaux majeurs sur les virus. Son rôle dans l'ADN a été longtemps sous-estimé dans les récits populaires." }
+      ]
+    },
+    {
+      "id": "course_58_la_structure_de_l_adn_watson_crick_1953_p3",
+      "title": "Pourquoi la double hélice compte",
+      "free": false,
+      "blocks": [
+        { "type": "image", "asset": "dna_double_helix_model_watson_crick", "ratio": "4:3", "caption": "Deux brins complémentaires : la copie devient imaginable." },
+        { "type": "paragraph", "text": "Deux brins s'enroulent. Les lettres se font face par paires. Quand les brins se séparent, chacun peut servir de modèle pour reconstruire l'autre. L'hérédité devient un mécanisme chimique compréhensible." }
+      ]
+    },
+    {
+      "id": "course_58_la_structure_de_l_adn_watson_crick_1953_p4",
+      "title": "La biologie moderne démarre ici",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "De cette découverte naissent la génétique moderne, le séquençage, les tests ADN, les thérapies géniques. Et aussi des débats éthiques : que faire de ce pouvoir ?" },
+        { "type": "takeaway", "text": "En **1953**, le modèle de la double hélice explique comment l'ADN stocke et copie l'information du vivant. Franklin a fourni des preuves décisives trop longtemps effacées du récit." }
+      ]
+    }
+  ]
+}

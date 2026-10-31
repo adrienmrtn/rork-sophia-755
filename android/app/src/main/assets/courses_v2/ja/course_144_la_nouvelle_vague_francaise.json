@@ -1,0 +1,68 @@
+{
+  "id": "course_144_la_nouvelle_vague_francaise",
+  "title": "La Nouvelle Vague française",
+  "subtitle": "1959-1968",
+  "subject": "art",
+  "subcategory": "Cinéma, photo & architecture",
+  "description": "Des jeunes critiques des *Cahiers du cinéma* passent derrière la caméra. Entre **1959** et **1968**, la Nouvelle Vague libère le film du studio et invente le cinéma d'auteur moderne.",
+  "hero": {
+    "image": "la_nouvelle_vague_francaise",
+    "ratio": "16:9",
+    "hook": "Des critiques de cinéma volent les caméras et réinventent le septième art."
+  },
+  "sections": [
+    {
+      "id": "course_144_la_nouvelle_vague_francaise_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        { "type": "paragraph", "text": "La **Nouvelle Vague** (1959-1968) n'est pas un simple style. C'est une prise de pouvoir. De jeunes cinéphiles français jugent le cinéma de studio trop figé, trop poli, trop écrit à l'avance. Ils veulent filmer comme on écrit un roman : librement, à la première personne." },
+        { "type": "paragraph", "text": "En passant de la critique à la réalisation, ils font du metteur en scène le vrai auteur du film. Et ils changent le cinéma mondial." }
+      ]
+    },
+    {
+      "id": "course_144_la_nouvelle_vague_francaise_p1",
+      "title": "D'abord une révolution d'idées",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Avant les plateaux, il y a une revue : les **Cahiers du cinéma**, fondée en **1951** par [[André Bazin]]. Autour de lui, de jeunes critiques : **Jean-Luc Godard**, **François Truffaut**, **Claude Chabrol**, **Jacques Rivette**, **Éric Rohmer**. Leur idée centrale s'appelle la [[Politique des auteurs]]." },
+        { "type": "image", "asset": "cahiers_du_cinema_magazine_1950s", "ratio": "4:3", "caption": "Les Cahiers du cinéma : l'école où la Nouvelle Vague apprend à penser le film." },
+        { "type": "paragraph", "text": "Pour eux, le vrai créateur n'est pas le scénariste, mais celui qui met en scène. Le cadrage, le rythme, les coupes : voilà la signature d'un auteur, comme le style d'un romancier." }
+      ]
+    },
+    {
+      "id": "course_144_la_nouvelle_vague_francaise_p2",
+      "title": "1959 : Truffaut et Godard entrent en scène",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "En **1959**, *Les Quatre Cents Coups* de **François Truffaut** triomphe à Cannes. Le film suit **Antoine Doinel**, un adolescent en rupture, joué par [[Jean-Pierre Léaud]]. La caméra suit la vie plutôt qu'un scénario corseté. Le regard final vers nous traverse le [[quatrième mur]] : le héros regarde le public, sans fin heureuse." },
+        { "type": "image", "asset": "truffaut_400_coups_antoine_doinel_film", "ratio": "4:3", "caption": "Antoine Doinel face à la mer : une jeunesse qui refuse le destin tout tracé." },
+        { "type": "funFact", "text": "L'année suivante, *À bout de souffle* de Godard, avec [[Jean-Paul Belmondo]], choque par ses coupes brusques. Godard coupe au milieu des gestes, comme s'il écrivait avec des ciseaux." },
+        { "type": "paragraph", "text": "Ces deux films prouvent qu'on peut raconter autrement : plus vite, plus libre, plus proche de la rue." }
+      ]
+    },
+    {
+      "id": "course_144_la_nouvelle_vague_francaise_p3",
+      "title": "Sortir du studio, filmer Paris",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "La rupture est aussi technique. Les caméras [[Éclair Caméflex]] et les pellicules plus sensibles permettent le [[Le tournage en décors naturels et la caméra légère]]. Fini les studios lourds : on filme dans les cafés, les appartements, les rues de Paris, souvent en lumière naturelle." },
+        { "type": "paragraph", "text": "Les acteurs improvisent. La parole devient familière, parfois bégayante. Le cinéma respire comme la vie. Cette liberté inspire ensuite le [[Cinéma Novo]] au Brésil, puis des règles ultra-strictes comme le [[Dogme 95]] au Danemark, héritiers lointains de la même soif d'authenticité." }
+      ]
+    },
+    {
+      "id": "course_144_la_nouvelle_vague_francaise_p4",
+      "title": "Un héritage mondial",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Dans les années **1970**, le **Nouveau Hollywood** s'en inspire : **Martin Scorsese**, **Francis Ford Coppola**, **Steven Spielberg** mêlent efficacité américaine et liberté française. La Nouvelle Vague a imposé une idée durable : un film peut porter la voix d'une seule personne." },
+        { "type": "timeline", "events": [
+          { "date": "1951", "title": "Cahiers du cinéma", "detail": "La revue devient le laboratoire des idées." },
+          { "date": "1959", "title": "Les Quatre Cents Coups", "detail": "Truffaut impose le cinéma d'auteur à Cannes." },
+          { "date": "1960", "title": "À bout de souffle", "detail": "Godard casse le montage classique." }
+        ] },
+        { "type": "takeaway", "text": "La Nouvelle Vague a sorti le cinéma du studio pour le jeter dans la rue. Elle a fait du réalisateur un auteur, et cette idée continue de façonner le cinéma indépendant partout dans le monde." }
+      ]
+    }
+  ]
+}

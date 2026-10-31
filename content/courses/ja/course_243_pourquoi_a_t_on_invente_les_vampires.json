@@ -1,0 +1,155 @@
+{
+  "id": "course_243_pourquoi_a_t_on_invente_les_vampires",
+  "title": "Pourquoi a-t-on inventé les vampires ?",
+  "subtitle": "1645-1897",
+  "subject": "mythologie",
+  "subcategory": "Légendes & créatures",
+  "description": "Avant d'être un aristocrate en cape, le vampire est un voisin mort trop tôt, qu'on accuse d'emporter sa famille. L'histoire d'une peur qui a trouvé un nom.",
+  "author": "angela-bouma",
+  "hero": {
+    "image": "foggy_village_graveyard_night_balkans",
+    "ratio": "4:3",
+    "hook": "La mort fait peur. Ne pas pouvoir l'expliquer fait encore plus peur."
+  },
+  "sections": [
+    {
+      "id": "course_243_pourquoi_a_t_on_invente_les_vampires_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En **1645**, un érudit grec installé à Rome, [[Leo Allatius]], décrit une créature que redoutent les villageois de son pays : le [[vrykolakas]]. Un mort qui sort la nuit et revient tourmenter sa propre famille, parce qu'il a été enterré sans les derniers sacrements. Seul le feu peut le détruire."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pendant deux siècles, épidémies et morts inexpliquées dans une même maison entretiennent la croyance. Chaque nouveau défunt mal enterré risque d'en faire un autre. Comment cette panique de village est-elle devenue le vampire en habit de soirée des romans et du cinéma ?"
+        }
+      ]
+    },
+    {
+      "id": "course_243_pourquoi_a_t_on_invente_les_vampires_p1",
+      "title": "Le mort qui réclame ses chaussures",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En **1725**, dans le village serbe de Kisiljevo, alors sous administration autrichienne, un paysan nommé [[Petar Blagojević]] meurt. En quelques jours, neuf voisins meurent à leur tour. Tous l'accusent, dans leurs derniers instants, d'être venu les étouffer la nuit. Sa veuve raconte qu'il est revenu lui réclamer ses chaussures, puis elle quitte le village."
+        },
+        {
+          "type": "image",
+          "asset": "edvard_munch_vampire_painting_1895",
+          "ratio": "auto",
+          "caption": "« Vampire », d'Edvard Munch (1895). Avant les peintres et les romanciers, le vampire est une affaire de village."
+        },
+        {
+          "type": "paragraph",
+          "text": "Les villageois exhument le corps. Ils le trouvent étonnamment intact : peau fraîche, sang à la bouche, cheveux et ongles qui semblent avoir poussé. Preuve suffisante. Ils lui plantent un pieu dans le cœur et brûlent la dépouille. Un fonctionnaire autrichien assiste à la scène et rédige un rapport. Le mot « vampire » se répand dans les journaux d'Europe."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ce que les villageois prenaient pour des signes surnaturels sont les effets ordinaires de la décomposition. Les gaz produits par les bactéries gonflent l'abdomen et le visage, et poussent par la bouche et le nez un liquide sombre qui ressemble à du sang. La peau se rétracte et découvre la racine des ongles et des cheveux, qui paraissent plus longs."
+        }
+      ]
+    },
+    {
+      "id": "course_243_pourquoi_a_t_on_invente_les_vampires_p2",
+      "title": "La maladie derrière la légende",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En Nouvelle-Angleterre, au XIXe siècle, une autre peur prend la même forme. La [[tuberculose]], qu'on appelle alors « consomption », fait maigrir et tousser ses victimes pendant des mois. Contagieuse, elle passe d'un membre de la famille à l'autre. Vu de l'extérieur, un mort semble revenir vider ses proches de leur vie, l'un après l'autre. Elle n'explique pas la vieille tradition des Balkans : ce sont deux croyances parallèles, nées à des époques et dans des lieux différents, mais qui répondent à la même angoisse."
+        },
+        {
+          "type": "image",
+          "asset": "mercy_brown_grave_exeter_rhode_island",
+          "ratio": "3:4",
+          "caption": "La tombe de Mercy Brown, à Exeter (Rhode Island), toujours visitée aujourd'hui."
+        },
+        {
+          "type": "paragraph",
+          "text": "En **1892**, à Exeter, dans le Rhode Island, [[Mercy Brown]] meurt de tuberculose à 19 ans, après sa mère et sa sœur. Quand son frère Edwin tombe malade à son tour, les voisins exhument les trois corps. Celui de Mercy, enterré en plein hiver, est bien conservé, et son cœur contient encore du sang. On le brûle et on fait boire les cendres à Edwin, en guise de remède. Il meurt deux mois plus tard."
+        },
+        {
+          "type": "funFact",
+          "text": "Le vrykolakas n'est pas une exclusivité grecque. La Mésopotamie antique avait ses démons buveurs de sang, la Russie son *upyr*, et la Chine son *jiangshi*, un cadavre raide qui se déplace en sautillant, bras tendus."
+        }
+      ]
+    },
+    {
+      "id": "course_243_pourquoi_a_t_on_invente_les_vampires_p3",
+      "title": "Le vampire devient aristocrate",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En **1819**, un jeune médecin anglais, [[John Polidori]], publie *Le Vampire*, premier récit en prose consacré à la créature en anglais. L'idée est née trois ans plus tôt, lors du fameux été pluvieux au bord du lac Léman où Mary Shelley imagine *Frankenstein*. Son personnage, **Lord Ruthven**, n'a plus rien du paysan sorti de sa tombe : il est riche, mystérieux, séduisant, et chasse dans les salons de Londres."
+        },
+        {
+          "type": "image",
+          "asset": "bram_stoker_dracula_1897_first_edition_cover",
+          "ratio": "3:4",
+          "caption": "La première édition de Dracula (1897), reliée de toile jaune et lettrée de rouge."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le récit est réédité, traduit, adapté au théâtre. Le vampire mondain fait école chez les auteurs gothiques. En **1897**, [[Bram Stoker]] publie *Dracula* et fixe le modèle pour un siècle : le comte, le château, les canines, l'ail et les crucifix. Presque tout ce que le cinéma en fera est déjà là."
+        },
+        {
+          "type": "funFact",
+          "text": "Stoker n'a jamais mis les pieds en Transylvanie. Il a écrit *Dracula* à partir de guides de voyage et des livres de la bibliothèque de Whitby, la petite ville anglaise où le comte débarque dans le roman."
+        }
+      ]
+    },
+    {
+      "id": "course_243_pourquoi_a_t_on_invente_les_vampires_p4",
+      "title": "La peur porte bien des noms",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Les traditions vampiriques ne parlent pas vraiment de surnaturel. Avant que la science n'explique la décomposition, la contagion ou la mort subite, une communauté a besoin de donner un sens à ce qu'elle voit. Un mort qui revient donne à la peur une forme et un nom. Et un coupable que l'on peut brûler."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1645",
+              "title": "Le vrykolakas décrit",
+              "detail": "Leo Allatius consigne la croyance grecque."
+            },
+            {
+              "date": "1725",
+              "title": "L'affaire Blagojević",
+              "detail": "Le mot « vampire » entre dans les journaux."
+            },
+            {
+              "date": "1819",
+              "title": "Le Vampire de Polidori",
+              "detail": "Le vampire devient un aristocrate."
+            },
+            {
+              "date": "1892",
+              "title": "Mercy Brown exhumée",
+              "detail": "Dernière grande affaire de vampire aux États-Unis."
+            },
+            {
+              "date": "1897",
+              "title": "Dracula",
+              "detail": "Bram Stoker fixe le modèle moderne."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Le même mécanisme produit le vrykolakas grec, l'*upyr* slave, le *jiangshi* chinois : chacun est la réponse locale à la même question sans réponse. Les légendes de loups-garous suivent le même schéma et comblent le même vide, avec la métamorphose à la place du sang."
+        },
+        {
+          "type": "takeaway",
+          "text": "Face aux mêmes peurs, chaque culture raconte une version de la même histoire. Un monstre est plus facile à vivre qu'une question sans réponse."
+        }
+      ]
+    }
+  ]
+}
