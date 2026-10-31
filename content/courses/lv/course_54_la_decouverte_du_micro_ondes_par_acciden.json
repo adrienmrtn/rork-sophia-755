@@ -16,8 +16,14 @@
       "title": "Introduction",
       "free": true,
       "blocks": [
-        { "type": "paragraph", "text": "En **1945**, aux États-Unis, l'ingénieur **Percy Spencer** travaille sur des radars. Un jour, il remarque que la barre chocolatée dans sa poche a fondu. Pas à cause de la chaleur du corps : à cause des ondes du radar." },
-        { "type": "paragraph", "text": "Il teste avec du maïs : le pop-corn éclate. L'idée d'un four qui chauffe autrement est née." }
+        {
+          "type": "paragraph",
+          "text": "En **1945**, aux États-Unis, l'ingénieur **Percy Spencer** travaille sur des radars. Un jour, il remarque que la barre chocolatée dans sa poche a fondu. Pas à cause de la chaleur du corps : à cause des ondes du radar."
+        },
+        {
+          "type": "paragraph",
+          "text": "Il teste avec du maïs : le pop-corn éclate. L'idée d'un four qui chauffe autrement est née."
+        }
       ]
     },
     {
@@ -25,9 +31,20 @@
       "title": "Du radar à la cuisine",
       "free": false,
       "blocks": [
-        { "type": "image", "asset": "percy_spencer_microwave_discovery_radar", "ratio": "4:3", "caption": "Les radars de la Seconde Guerre mondiale utilisaient déjà les micro-ondes." },
-        { "type": "paragraph", "text": "Les **micro-ondes** sont des ondes électromagnétiques, comme la lumière radio, mais plus « énergétiques » que beaucoup d'ondes radio classiques. Pendant la guerre, elles servent surtout aux radars pour détecter avions et bateaux." },
-        { "type": "paragraph", "text": "Spencer comprend qu'elles peuvent aussi agiter l'eau et les graisses dans les aliments… et donc les chauffer." }
+        {
+          "type": "image",
+          "asset": "percy_spencer_microwave_discovery_radar",
+          "ratio": "4:3",
+          "caption": "Les radars de la Seconde Guerre mondiale utilisaient déjà les micro-ondes."
+        },
+        {
+          "type": "paragraph",
+          "text": "Les **micro-ondes** sont des ondes électromagnétiques, comme la lumière radio, mais plus « énergétiques » que beaucoup d'ondes radio classiques. Pendant la guerre, elles servent surtout aux radars pour détecter avions et bateaux."
+        },
+        {
+          "type": "paragraph",
+          "text": "Spencer comprend qu'elles peuvent aussi agiter l'eau et les graisses dans les aliments… et donc les chauffer."
+        }
       ]
     },
     {
@@ -35,9 +52,20 @@
       "title": "Le premier four est énorme",
       "free": false,
       "blocks": [
-        { "type": "image", "asset": "first_microwave_oven_radarange_1947", "ratio": "4:3", "caption": "Le premier four à micro-ondes commercial est grand comme une armoire." },
-        { "type": "paragraph", "text": "Le premier modèle commercial, le **Radarange**, sort vers **1947**. Il est immense, cher, et plutôt destiné aux restaurants ou aux bateaux. Il faudra des décennies pour le miniaturiser et le rendre abordable pour les foyers." },
-        { "type": "funFact", "text": "Au début, certains avaient peur que le four « rende les aliments radioactifs ». Faux : les micro-ondes chauffent, elles ne rendent pas radioactif." }
+        {
+          "type": "image",
+          "asset": "first_microwave_oven_radarange_1947",
+          "ratio": "4:3",
+          "caption": "Le premier four à micro-ondes commercial est grand comme une armoire."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le premier modèle commercial, le **Radarange**, sort vers **1947**. Il est immense, cher, et plutôt destiné aux restaurants ou aux bateaux. Il faudra des décennies pour le miniaturiser et le rendre abordable pour les foyers."
+        },
+        {
+          "type": "funFact",
+          "text": "Au début, certains avaient peur que le four « rende les aliments radioactifs ». Faux : les micro-ondes chauffent, elles ne rendent pas radioactif."
+        }
       ]
     },
     {
@@ -45,8 +73,14 @@
       "title": "Comment ça chauffe vraiment",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Les micro-ondes font surtout vibrer les molécules d'eau (et un peu les graisses et sucres). Cette agitation crée de la chaleur **à l'intérieur** de l'aliment, pas seulement en surface comme une poêle." },
-        { "type": "paragraph", "text": "C'est pour ça qu'un plat peut être brûlant dehors et tiède au centre s'il est épais : les ondes ne pénètrent pas infiniment profond." }
+        {
+          "type": "paragraph",
+          "text": "Les micro-ondes font surtout vibrer les molécules d'eau (et un peu les graisses et sucres). Cette agitation crée de la chaleur **à l'intérieur** de l'aliment, pas seulement en surface comme une poêle."
+        },
+        {
+          "type": "paragraph",
+          "text": "C'est pour ça qu'un plat peut être brûlant dehors et tiède au centre s'il est épais : les ondes ne pénètrent pas infiniment profond."
+        }
       ]
     },
     {
@@ -54,8 +88,14 @@
       "title": "Un objet du quotidien",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "À partir des années 1970-1980, le four à micro-ondes entre dans des millions de cuisines. Il change les habitudes : réchauffer vite, plats préparés, vie plus rapide." },
-        { "type": "takeaway", "text": "Le micro-ondes naît d'un hasard observé par Percy Spencer près d'un radar. Les ondes agitent surtout l'eau des aliments et les chauffent de l'intérieur." }
+        {
+          "type": "paragraph",
+          "text": "À partir des années 1970-1980, le four à micro-ondes entre dans des millions de cuisines. Il change les habitudes : réchauffer vite, plats préparés, vie plus rapide."
+        },
+        {
+          "type": "takeaway",
+          "text": "Le micro-ondes naît d'un hasard observé par Percy Spencer près d'un radar. Les ondes agitent surtout l'eau des aliments et les chauffent de l'intérieur."
+        }
       ]
     }
   ]
