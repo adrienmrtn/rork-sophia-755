@@ -4,7 +4,7 @@
   "subtitle": "1953",
   "subject": "sciences",
   "subcategory": "Odkrycia, które zmieniły świat",
-  "description": "W 1953 roku Watson i Crick opisują podwójną helisę DNA. Za tą sławą stoi kluczowa praca Rosalind Franklin.",
+  "description": "W 1953 roku Watson i Crick opisali podwójną helisę DNA. Za tą sławą stoi kluczowa praca Rosalind Franklin.",
   "hero": {
     "image": "la_structure_de_l_adn",
     "ratio": "16:9",
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Wiedziano, że cechy idą od rodziców do dzieci. Ale jaki obiekt chemiczny niesie tę informację? W środku XX wieku odpowiedź się wyostrza: **DNA**."
+          "text": "Wiedziano, że cechy przechodzą z rodziców na dzieci. Ale jaka substancja chemiczna niesie tę informację? W połowie XX wieku odpowiedź zaczęła się klarować: **DNA**."
         },
         {
           "type": "paragraph",
-          "text": "W **1953** **James Watson** i **Francis Crick** publikują słynny model: **podwójną helisę**. Ten kształt wyjaśnia, jak DNA może się kopiować."
+          "text": "W **1953** roku **James Watson** i **Francis Crick** opublikowali słynny model: **podwójną helisę**. Ten kształt wyjaśnia, jak DNA może się kopiować."
         }
       ]
     },
@@ -33,11 +33,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "DNA (kwas deoksyrybonukleinowy) to długa cząsteczka obecna w naszych komórkach. Zawiera chemiczne „litery”, które składają kod. Ale w latach 1940-1950 nie znamy jeszcze jej kształtu w 3D."
+          "text": "DNA (kwas deoksyrybonukleinowy) to długa cząsteczka obecna w naszych komórkach. Zawiera chemiczne „litery”, które tworzą kod. Jednak w latach 1940-1950 nie znano jeszcze jej trójwymiarowego kształtu."
         },
         {
           "type": "paragraph",
-          "text": "Bez kształtu źle rozumiemy, jak ten kod może się powielać przy każdym podziale komórki."
+          "text": "Bez znajomości kształtu trudno zrozumieć, jak ten kod powiela się przy każdym podziale komórki."
         }
       ]
     },
@@ -54,47 +54,47 @@
         },
         {
           "type": "paragraph",
-          "text": "**Rosalind Franklin**, fizyczka i chemiczka, dostaje obrazy DNA przez promienie X. Jej słynne **Zdjęcie 51** pokazuje jasne ślady helisy."
+          "text": "**Rosalind Franklin**, fizyczka i chemiczka, uzyskała rentgenowskie obrazy DNA. Jej słynne **Zdjęcie 51** zawiera wyraźne ślady helisy."
         },
         {
           "type": "paragraph",
-          "text": "Watson i Crick widzą te dane (w warunkach dziś uznawanych za niesprawiedliwe wobec Franklin) i budują swój model. Franklin umiera w 1958; Nobel z 1962 idzie do Watsona, Cricka i Wilkinsa, nie do niej."
+          "text": "Watson i Crick zobaczyli te dane (w okolicznościach, które dziś uważa się za niesprawiedliwe wobec Franklin) i zbudowali swój model. Franklin zmarła w 1958 roku. Nobel z 1962 roku przypadł Watsonowi, Crickowi i Wilkinsowi, a nie jej."
         },
         {
           "type": "funFact",
-          "text": "Franklin zrobiła też ważne prace nad wirusami. Jej rola przy DNA długo była niedoszacowana w opowieściach popularnych."
+          "text": "Franklin prowadziła też ważne badania nad wirusami. W popularnych opowieściach jej rola w odkryciu DNA długo była niedoceniana."
         }
       ]
     },
     {
       "id": "course_58_la_structure_de_l_adn_watson_crick_1953_p3",
-      "title": "Dlaczego podwójna helisa się liczy",
+      "title": "Dlaczego podwójna helisa jest ważna",
       "free": false,
       "blocks": [
         {
           "type": "image",
           "asset": "dna_double_helix_model_watson_crick",
           "ratio": "4:3",
-          "caption": "Dwie nici komplementarne: kopia staje się wyobrażalna."
+          "caption": "Dwie komplementarne nici: już widać, jak może działać kopiowanie."
         },
         {
           "type": "paragraph",
-          "text": "Dwie nici się owijają. Litery stają naprzeciw siebie parami. Gdy nici się rozchodzą, każda może służyć za wzór, żeby złożyć drugą. Dziedziczenie staje się zrozumiałym mechanizmem chemicznym."
+          "text": "Dwie nici owijają się wokół siebie. Litery stoją naprzeciw siebie parami. Gdy nici się rozdzielają, każda może posłużyć za wzór do odbudowania drugiej. Dziedziczenie staje się zrozumiałym mechanizmem chemicznym."
         }
       ]
     },
     {
       "id": "course_58_la_structure_de_l_adn_watson_crick_1953_p4",
-      "title": "Nowoczesna biologia startuje tutaj",
+      "title": "Tu zaczyna się nowoczesna biologia",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Z tego odkrycia rodzą się nowoczesna genetyka, sekwencjonowanie, testy DNA, terapie genowe. I też debaty etyczne: co zrobić z tą władzą?"
+          "text": "Z tego odkrycia wyrosły nowoczesna genetyka, sekwencjonowanie, testy DNA i terapie genowe. A także debaty etyczne: co zrobić z tą mocą?"
         },
         {
           "type": "takeaway",
-          "text": "W **1953** model podwójnej helisy wyjaśnia, jak DNA przechowuje i kopiuje informację życia. Franklin dała decydujące dowody zbyt długo wymazane z opowieści."
+          "text": "W **1953** roku model podwójnej helisy wyjaśnił, jak DNA przechowuje i kopiuje informację, na której opiera się życie. Franklin dostarczyła rozstrzygających dowodów, które zbyt długo pomijano w tej historii."
         }
       ]
     }

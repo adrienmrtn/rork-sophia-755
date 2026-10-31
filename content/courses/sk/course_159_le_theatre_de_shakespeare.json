@@ -1,14 +1,14 @@
 {
   "id": "course_159_le_theatre_de_shakespeare",
-  "title": "Prečo sa Shakespeare stále hrá všade?",
+  "title": "Prečo sa Shakespeare dodnes hrá všade?",
   "subtitle": "1564-1616",
   "subject": "art",
   "subcategory": "Film, fotografia a architektúra + veľdiela",
-  "description": "V Londýne Shakespeare písal pre Globe. Hamlet, Macbeth, Romeo: populárne divadlo, ktoré sa stalo vrcholom anglického jazyka.",
+  "description": "V Londýne píše Shakespeare pre divadlo Globe. Hamlet, Macbeth, Rómeo: ľudové divadlo, ktoré sa stalo vrcholom anglického jazyka.",
   "hero": {
     "image": "le_theatre_de_shakespeare",
     "ratio": "16:9",
-    "hook": "Herecký dramatik, divadlo bez kulís... a večné linky."
+    "hook": "Dramatik, ktorý bol sám hercom, divadlo bez kulís… a nesmrteľné repliky."
   },
   "sections": [
     {
@@ -18,32 +18,32 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**William Shakespeare** (1564-1616) písal pre londýnsku scénu, nie pre školu. Jeho hry miešajú kráľov, klaunov, milencov a vrahov."
+          "text": "**William Shakespeare** (1564-1616) píše pre londýnske javisko, nie pre školu. V jeho hrách sa miešajú králi, šašovia, milenci a vrahovia."
         },
         {
           "type": "paragraph",
-          "text": "O štyri storočia neskôr sa stále hrá všade."
+          "text": "O štyri storočia neskôr ho hrajú všade."
         }
       ]
     },
     {
       "id": "course_159_le_theatre_de_shakespeare_p1",
-      "title": "Globe a groundlings",
+      "title": "Divadlo Globe a diváci na státie",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "So súborom [[Muži lorda Chamberlaina]] hrá na [[Divadlo Globe]], krúžok pod holým nebom. [[pozemšťania]] platia málo a ostávajú stáť blízko pódia. Divadlo je obľúbené, hlučné, živé."
+          "text": "Hrá so súborom [[Muži lorda Chamberlaina]] a jeho domovom je [[Divadlo Globe]], kruhová stavba pod holým nebom. Diváci zvaní [[groundlings]] platia málo a stoja tesne pri javisku. Divadlo je ľudové, hlučné, živé."
         },
         {
           "type": "paragraph",
-          "text": "Elizabethan London miluje divadlo. Divadlá súťažia s kázňami a bojmi s medveďmi. Shakespeare píše na tomto hlučnom trhu, nie v slonovinovej veži."
+          "text": "Alžbetínsky Londýn miluje predstavenia. Divadlá súperia s kázňami a so zápasmi medveďov. Shakespeare píše uprostred tohto hlučného trhu, nie vo veži zo slonoviny."
         },
         {
           "type": "image",
           "asset": "globe_theatre_london_reconstruction",
           "ratio": "4:3",
-          "caption": "The Globe: scéna sa tlačila do davu."
+          "caption": "Globe: javisko vysunuté do davu."
         }
       ]
     },
@@ -54,36 +54,36 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Často píše v shakespearovskom blankverse: jambický pentameter bez rýmu. Urážky, básne, monológy: vymýšľa slová a zakladá postavy (Hamlet, Lady Macbeth), ktoré sa stali mýtmi."
+          "text": "Často píše shakespearovským blankversom (blank verse), teda nerýmovaným jambickým pentametrom. Urážky, básne, monológy: vymýšľa nové slová a vytvára postavy (Hamlet, Lady Macbeth), z ktorých sa stali mýty."
         },
         {
           "type": "paragraph",
-          "text": "Recykluje kroniky, talianske novinky, staré kúsky. Originalita je v jazyku a postavách, nie v čistej invencii zápletky."
+          "text": "Preberá kroniky, talianske novely aj staršie hry. Jeho originalita spočíva v jazyku a postavách, nie v tom, že by si zápletku celú vymyslel."
         },
         {
           "type": "funFact",
-          "text": "Niekoľko jeho kúskov sa k nám dostalo až vďaka [[Prvé Folio]] z roku 1623, vydané po jeho smrti."
+          "text": "Viaceré jeho hry sa k nám dostali iba vďaka vydaniu, ktoré poznáme ako [[Prvé fólio]]: vyšlo v roku 1623, po jeho smrti."
         }
       ]
     },
     {
       "id": "course_159_le_theatre_de_shakespeare_p3",
-      "title": "Tragédie, komédie, príbehy",
+      "title": "Tragédie, komédie, historické hry",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Od smiechu prechádza do krvi. *Romeo a Júlia*, *Othello*, *Kráľ Lear*: rodiny, moc, žiarlivosť. „História histórie“ predstavuje Anglicko pre divákov, ktorí sa radi vidia v epickej podobe."
+          "text": "Od smiechu prechádza ku krvi. *Rómeo a Júlia*, *Othello*, *Kráľ Lear*: rodiny, moc, žiarlivosť. Historické hry („history plays“) znovu prehrávajú dejiny Anglicka pre publikum, ktoré sa rado vidí ako hrdina eposu."
         },
         {
           "type": "paragraph",
-          "text": "Komédie a tragédie na seba reagujú. Blázon hovorí pravdu; kráľ sa zblázni. Táto pórovitosť tónov vysvetľuje, prečo sa stále dá namontovať na tisíc spôsobov."
+          "text": "Komédie a tragédie si navzájom odpovedajú. Šašo hovorí pravdu, kráľ sa zblázni. Toto prelínanie tónov vysvetľuje, prečo ho možno dodnes inscenovať tisícimi spôsobmi."
         },
         {
           "type": "image",
           "asset": "shakespeare_first_folio_1623",
           "ratio": "4:3",
-          "caption": "The First Folio: záchrana textov pred zabudnutím."
+          "caption": "Prvé fólio: záchrana textov pred zabudnutím."
         }
       ]
     },
@@ -94,27 +94,27 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Shakespeare, preložený, upravený, vzorkovaný kinom a rapom, zostáva nástrojom na vyjadrenie ambícií a túžob. Jeho tajomstvo: písanie pre hercov, pred davom."
+          "text": "Preložený, prerobený, samplovaný filmom aj rapom, ostáva Shakespeare súpravou nástrojov, ako hovoriť o ambíciách a túžbe. Jeho tajomstvo: písať pre hercov, pred davom."
         },
         {
           "type": "paragraph",
-          "text": "Aby ste úplne porozumeli Shakespearovmu divadlu, musíte mať na pamäti jednu vec: každý technický detail slúži emócii alebo nápadu. Dielo nikdy nie je len dekoratívne."
+          "text": "Ak chceš dobre pochopiť Shakespearovo divadlo, maj na pamäti jednu vec: každý technický detail slúži emócii alebo myšlienke. Dielo nie je nikdy len ozdobou."
         },
         {
           "type": "paragraph",
-          "text": "Kontext je dôležitý rovnako ako štýl. Dátumy, miesta, sponzori, verejnosť: to všetko vysvetľuje, prečo sa formulár objaví v konkrétnom okamihu a nie skôr."
+          "text": "Kontext je rovnako dôležitý ako štýl. Dátumy, miesta, objednávatelia, publikum: to všetko vysvetľuje, prečo sa určitá forma objaví práve v danom čase, a nie skôr."
         },
         {
           "type": "paragraph",
-          "text": "Napokon, dedičstvo sa meria z dlhodobého hľadiska. To, čo dnes vidíme v múzeách, filmoch či populárnej hudbe, stále nesie stopy týchto vynálezov."
+          "text": "Napokon, odkaz sa ukáže až s odstupom času. To, čo dnes vidíme v múzeách, filmoch či populárnej hudbe, stále nesie stopy týchto objavov."
         },
         {
           "type": "paragraph",
-          "text": "Preložená v 18. storočí vo Francúzsku a inde sa stala svetovou klasikou. Každá doba v ňom nachádza svoje zrkadlo: romantické, politické, postkoloniálne, feministické."
+          "text": "Už v 18. storočí ho prekladajú vo Francúzsku aj inde a stáva sa svetovým klasikom. Každá doba v ňom nachádza svoje zrkadlo: romantické, politické, postkoloniálne, feministické."
         },
         {
           "type": "takeaway",
-          "text": "Na Globe Shakespeare vymyslel populárne divadlo, ktorého postavy a jazyk dobyli svet."
+          "text": "V divadle Globe vytvoril Shakespeare ľudové divadlo, ktorého postavy a jazyk dobyli svet."
         }
       ]
     }

@@ -163,7 +163,8 @@ final class AuthService {
     private func linkRevenueCatIdentity() {
         guard let userID = currentUser?.id.uuidString else { return }
         if Purchases.isConfigured {
-            Purchases.shared.logIn(userID) { _, _, _ in }
+            // Attributes sent before logIn stayed on the anonymous customer.
+            Purchases.shared.logIn(userID) { _, _, _ in Task { @MainActor in LanguageManager.reportToRevenueCat() } }
         }
     }
 

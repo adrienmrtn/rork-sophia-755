@@ -18,7 +18,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Když zemská gravitace Měsíc přitahuje, proč se do nás nezřítí? Odpověď zní divně: Měsíc k Zemi opravdu **padá**. Jen ji pokaždé, v každém okamžiku, mine."
+          "text": "Když zemská gravitace Měsíc přitahuje, proč se do nás nezřítí? Odpověď zní divně: Měsíc k Zemi opravdu **padá**. Jen ji v každém okamžiku mine."
         },
         {
           "type": "paragraph",
@@ -37,17 +37,17 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Newton si představí dělo na vrcholu hory tak vysoké, že by vyčnívala z atmosféry. Vystřelí koule vodorovně. S malou silou spadne rychle zpátky. S větší silou doletí dál."
+          "text": "Newton si představil dělo na vrcholu hory tak vysoké, že by vyčnívala z atmosféry. Z děla vystřelíš kouli vodorovně. S malou silou rychle spadne. S větší silou doletí dál."
         },
         {
           "type": "image",
           "asset": "newton_cannonball_orbit_thought_experiment",
           "ratio": "auto",
-          "caption": "Newtonův myšlený pokus s dělovou koulí: klíč k pochopení dráhy."
+          "caption": "Newtonův myšlenkový pokus s dělovou koulí: klíč k pochopení oběžné dráhy."
         },
         {
           "type": "paragraph",
-          "text": "Při přesné rychlosti, které se říká [[Orbitální rychlost]], se stane něco pozoruhodného. Zatímco koule padá, Země, která je kulatá, se pod ní zakřivuje stejným tempem. Projektil padá, a přitom se země nikdy nedotkne. Je v **trvalém volném pádu**, tažený gravitací, aniž by narazil."
+          "text": "Při přesné rychlosti, které se říká [[orbitální rychlost]], se stane něco pozoruhodného. Zatímco koule padá, Země, která je kulatá, se pod ní zakřivuje stejným tempem. Projektil padá, a přitom se země nikdy nedotkne. Je v **trvalém volném pádu**, tažený gravitací, aniž by narazil."
         },
         {
           "type": "paragraph",
@@ -62,30 +62,30 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Měsíc obíhá ve vzdálenosti asi **384.000 km**. Jeho boční rychlost je asi **1 km/s**. Kdyby se zastavil, za pár dní by dopadl. Kdyby gravitace naráz zmizela, odletěl by po přímce do vesmíru, podle [[Setrvačnost]]: těleso si rychlost drží, pokud ho nic nebrzdí."
+          "text": "Měsíc obíhá ve vzdálenosti asi **384.000 km**. Jeho boční rychlost je asi **1 km/s**. Kdyby se náhle zastavil, za pár dní by dopadl. Kdyby gravitace naráz zmizela, odletěl by po přímce do vesmíru. Tak funguje [[setrvačnost]]: těleso si udrží rychlost, dokud ho nic nebrzdí."
         },
         {
           "type": "paragraph",
-          "text": "[[Newtonův zákon univerzální gravitace]] říká, že každá hmota přitahuje každou jinou a že přitažlivost klesá se vzdáleností, přesněji s její druhou mocninou. Čím je družice blíž, tím rychleji musí letět, aby nespadla."
+          "text": "[[Newtonův gravitační zákon]] říká, že každá hmota přitahuje každou jinou a že přitažlivost klesá se vzdáleností, přesněji s její druhou mocninou. Čím je družice blíž, tím rychleji musí letět, aby nespadla."
         },
         {
           "type": "funFact",
-          "text": "Mezinárodní vesmírná stanice, jen **400 km** vysoko, letí asi **28.000 km/h**. Oběhne Zemi za **90 minut**. Měsíc, dál, potřebuje **27,3 dne**."
+          "text": "Mezinárodní vesmírná stanice, jen **400 km** vysoko, letí rychlostí asi **28.000 km/h**. Zemi oběhne za **90 minut**. Vzdálenějšímu Měsíci to trvá **27,3 dne**."
         },
         {
           "type": "paragraph",
-          "text": "Dráha tedy není magie. Je to trvalý kompromis mezi „padám” a „letím moc rychle na to, abych trefil”."
+          "text": "Oběžná dráha tedy není žádná magie. Je to trvalý kompromis mezi „padám“ a „letím moc rychle na to, abych dopadl“."
         }
       ]
     },
     {
       "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur_p3",
-      "title": "Příliv Měsíc oddaluje",
+      "title": "Slapy oddalují Měsíc",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Dráha není zafixovaná. Do hry vstoupí [[Slapové síly]]. Gravitace Měsíce táhne silněji na stranu Země, která je k němu otočená, než na střed. Deformuje oceány a vytváří vodní val."
+          "text": "Oběžná dráha není neměnná. Do hry vstupují [[slapové síly]]. Gravitace Měsíce táhne silněji za stranu Země, která je k němu otočená, než za její střed. Deformuje oceány a vytváří vodní val."
         },
         {
           "type": "paragraph",
@@ -104,11 +104,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Dnes díky geometrické náhodě je Slunce asi **400krát** větší než Měsíc, ale taky **400krát** dál. Obě tělesa proto mají stejnou **zdánlivou velikost**, úhel, pod kterým je vidíme na obloze. Úplná zatmění Slunce jsou díky tomu možná."
+          "text": "Díky geometrické náhodě je dnes Slunce asi **400krát** větší než Měsíc, ale taky **400krát** dál. Obě tělesa proto mají stejnou **zdánlivou velikost**, tedy úhel, pod kterým je vidíme na obloze. Díky tomu jsou možná úplná zatmění Slunce."
         },
         {
           "type": "paragraph",
-          "text": "Za asi **600 milionů let** bude Měsíc moc daleko na to, aby Slunce úplně zakryl. Zůstanou jen prstencová zatmění: prstenec světla kolem měsíčního kotouče. Ve velmi dlouhém horizontu by se Země a Měsíc mohly synchronizovat: každé těleso by druhé ukazovalo pořád stejnou tvář. Ale Slunce, až se stane **červeným obrem**, závěrečnou fází hvězdy jako je naše, systém přetvoří mnohem dřív."
+          "text": "Za asi **600 milionů let** bude Měsíc moc daleko na to, aby Slunce úplně zakryl. Zůstanou jen prstencová zatmění: prstenec světla kolem měsíčního kotouče. Ve velmi dlouhém horizontu by se Země a Měsíc mohly synchronizovat: každé těleso by druhému ukazovalo pořád stejnou tvář. Jenže Slunce, až se stane **červeným obrem**, což je závěrečná fáze hvězdy, jako je naše, celou soustavu přetvoří mnohem dřív."
         },
         {
           "type": "takeaway",

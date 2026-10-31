@@ -1,0 +1,104 @@
+{
+  "id": "course_213_l_evasion_fiscale_des_multinationales",
+  "title": "Kodėl GAFAM moka tiek mažai mokesčių?",
+  "subtitle": "Kaip GAFAM moka tiek mažai mokesčių",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Économie & société",
+  "description": "Skaitmeniniai milžinai, palyginti su savo pelnu, dažnai moka juokingai mažus mokesčius. Tai ne visada neteisėta: taip išnaudojamos tarptautinės teisės spragos.",
+  "hero": {
+    "image": "l_evasion_fiscale_des_multinationales",
+    "ratio": "16:9",
+    "hook": "2014 m. Apple efektyvusis mokesčio tarifas Airijoje siekė vos apie 0,005 %. Kaip tai įmanoma?"
+  },
+  "sections": [
+    {
+      "id": "course_213_l_evasion_fiscale_des_multinationales_intro",
+      "title": "Įvadas",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "GAFAM, t. y. Google, Apple, Facebook (Meta), Amazon ir Microsoft, priklauso turtingiausių pasaulio įmonių grupei. Vis dėlto, palyginti su pelnu, jos dažnai moka kur kas mažiau mokesčių nei įprasta maža ar vidutinė įmonė."
+        },
+        {
+          "type": "paragraph",
+          "text": "Griežtąja prasme tai nėra sukčiavimas: tai **mokesčių optimizavimas**, t. y. sumanus tarptautinės teisės spragų išnaudojimas. Dėl jo valstybės kasmet netenka šimtų milijardų dolerių. Pažiūrėkime, kaip jis veikia ir kaip pasaulis bando į jį atsakyti."
+        }
+      ]
+    },
+    {
+      "id": "course_213_l_evasion_fiscale_des_multinationales_p1",
+      "title": "Mokestis, sukurtas gamykloms, o ne skaitmeniniam pasauliui",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tarptautinė mokesčių sistema buvo sukurta XX a. pradžioje pramoninei ekonomikai: kad įmonė būtų apmokestinta šalyje, ji turėjo ten turėti gamyklų ar biurų. Tai vadinama taip: [[nuolatinė buveinė]]."
+        },
+        {
+          "type": "paragraph",
+          "text": "Skaitmeninė ekonomika šį ryšį su teritorija nutraukė. Šiandien įmonė gali dominuoti šalies rinkoje, rinkti milijonų naudotojų duomenis ir uždirbti milžiniškus pinigus, neturėdama ten nė vieno pastato. Tada ji gali atskirti vietą, kur pinigus uždirba, nuo vietos, kur juos deklaruoja."
+        },
+        {
+          "type": "funFact",
+          "text": "2014 m. JAV mokesčių tarnyba nustatė, kad Microsoft, pasinaudodama intelektinės nuosavybės teisėmis, perkėlė į Puerto Riką 39 mlrd. dolerių pelno ir sutaupė daugiau nei 6,5 mlrd. dolerių mokesčių."
+        }
+      ]
+    },
+    {
+      "id": "course_213_l_evasion_fiscale_des_multinationales_p2",
+      "title": "Šimtai milijardų negautų pajamų",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "EBPO duomenimis, šios praktikos viso pasaulio viešiesiems biudžetams kasmet kainuoja 100-240 mlrd. dolerių, t. y. 4-10 % visų planetoje surenkamų pelno mokesčių."
+        },
+        {
+          "type": "image",
+          "asset": "multinational_corporate_tax_avoidance_structure",
+          "ratio": "16:9",
+          "caption": "Skaitmeninių milžinų Europos būstinės dažnai įsikuria šalyse, kur mokesčiai mažiausi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dėl negautų pajamų valstybės turi rinktis: didinti namų ūkių ir mažų bei vidutinių įmonių mokesčius arba mažinti viešąsias išlaidas, pavyzdžiui, sveikatos apsaugai ar švietimui. Vietinė įmonė vidutiniškai moka gerokai didesnį mokesčių tarifą nei tarptautinė korporacija, todėl konkurencija tampa nesąžininga."
+        }
+      ]
+    },
+    {
+      "id": "course_213_l_evasion_fiscale_des_multinationales_p3",
+      "title": "Atsakas: pasaulinis minimalusis mokestis",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "2021 m., globojant EBPO ir G20, istoriniu susitarimu buvo įvestas [[pasaulinis 15 % minimalusis mokestis]]. Jis taikomas įmonėms, kurių apyvarta viršija 750 mln. eurų: jei kurioje nors šalyje jos moka tik 5 % mokesčių, jų kilmės šalis dabar gali pareikalauti trūkstamų 10 %."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kai kurios šalys, pavyzdžiui, Prancūzija, taip pat įvedė nacionalinį mokestį, tiesiogiai taikomą skaitmeninių milžinų apyvartai. Be to, tarptautinės korporacijos dabar turi skelbti, kiek kiekvienoje šalyje turi darbuotojų, pelno ir sumoka mokesčių. Toks skaidrumas padeda pastebėti akivaizdžiausius neatitikimus."
+        }
+      ]
+    },
+    {
+      "id": "course_213_l_evasion_fiscale_des_multinationales_p4",
+      "title": "Airija, Europos optimizavimo sostinė",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Airija, turinti oficialų 12,5 % pelno mokesčio tarifą ir slaptus susitarimus, vadinamus [[išankstiniai mokesčių sprendimai]], tapo Europos mokesčių optimizavimo centru. Dėl sudėtingos struktūros Apple 2014 m. efektyvusis mokesčio tarifas siekė vos apie 0,005 %."
+        },
+        {
+          "type": "paragraph",
+          "text": "Europos Komisija pareikalavo, kad Airija išieškotų iš Apple 13 mlrd. eurų nesumokėtų mokesčių, tačiau šalis ilgai atsisakė juos imti: ji baiminasi, kad per griežtos taisyklės išvaikys įmonių būstines į kitus pasaulio regionus. Mokestinio teisingumo šalininkai taip pat primena, kad 15 % tarifas vis tiek mažesnis už išsivysčiusių šalių vidurkį, o skurdžiausios šalys, dažnai labiausiai nukenčiančios nuo mokesčių vengimo, atgaus tik menką dalį."
+        },
+        {
+          "type": "takeaway",
+          "text": "GAFAM ilgai naudojosi tarptautinės teisės spragomis ir mokėjo juokingai mažus mokesčius, o viešieji biudžetai dėl to kasmet netekdavo iki 240 mlrd. dolerių. Nuo 2021 m. pasaulinis 15 % minimalusis mokestis bando ištaisyti šį disbalansą, tačiau kova už teisingesnę mokesčių sistemą tęsiasi."
+        }
+      ]
+    }
+  ]
+}

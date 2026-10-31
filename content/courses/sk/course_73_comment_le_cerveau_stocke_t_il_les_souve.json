@@ -4,11 +4,11 @@
   "subtitle": "Pamäť a neuróny",
   "subject": "sciences",
   "subcategory": "Zem a vesmír",
-  "description": "Pamäť nie je knižnica zásuviek. Je to živá sieť neurónov, ktoré sa navzájom posilňujú, prestavujú a niekedy robia chyby.",
+  "description": "Pamäť nie je kartotéka so zásuvkami. Je to živá sieť neurónov, ktoré sa posilňujú, prestavujú a niekedy sa mýlia.",
   "hero": {
     "image": "comment_le_cerveau_stocke_les_souvenirs",
     "ratio": "16:9",
-    "hook": "Pamäť nie je súbor: je to cesta, ktorú sa mozog naučil prerobiť."
+    "hook": "Spomienka nie je súbor: je to cesta, ktorú sa mozog naučil znova prejsť."
   },
   "sections": [
     {
@@ -18,22 +18,22 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Pamäť si často predstavujeme ako pevný disk. V skutočnosti je to živá sieť. Miliardy **neurónov**, nervových buniek, sa znovu spájajú, posilňujú alebo oslabujú v závislosti od toho, čo zažívame."
+          "text": "Pamäť si ľudia často predstavujú ako pevný disk. V skutočnosti je to živá sieť. Miliardy **neurónov**, nervových buniek, sa znovu prepájajú, posilňujú alebo oslabujú podľa toho, čo človek zažíva."
         },
         {
           "type": "paragraph",
-          "text": "Nič nie je uložené na jednom mieste. Spomienka je distribuovaná stopa, na začiatku krehká, po spánku pevnejšia a vždy trochu zrekonštruovaná, keď si na ňu spomenieme."
+          "text": "Nič nie je uložené na jednom mieste. Spomienka je rozptýlená stopa, na začiatku krehká, po spánku pevnejšia a vždy trochu poskladaná nanovo, keď si na ňu človek spomenie."
         }
       ]
     },
     {
       "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve_p1",
-      "title": "Spojenia, ktoré posilňujú",
+      "title": "Spojenia, ktoré sa posilňujú",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Medzi dvoma neurónmi sa bod kontaktu nazýva **synapsia**, spojenie, ktorým prechádza nervový signál. Ľudský mozog má približne **86 miliárd** neurónov a viac ako **100.000 miliárd** synapsií."
+          "text": "Miesto, kde sa dva neuróny stýkajú, sa nazýva **synapsia**: spoj, ktorým prechádza nervový signál. Ľudský mozog má približne **86 miliárd** neurónov a viac ako **100.000 miliárd** synapsií."
         },
         {
           "type": "image",
@@ -43,64 +43,64 @@
         },
         {
           "type": "paragraph",
-          "text": "Keď sa informácie opakujú alebo sú spojené so silnou emóciou, tie isté neuróny sa aktivujú spoločne. Ich spojenie sa ľahšie spúšťa: je to [[Dlhodobá potenciácia]], trvalé posilnenie synapsií. Čím viac sa okruh používa, tým je cesta „širšia“. Pamäť teda nie je uložený objekt, ale **stopa** v sieti."
+          "text": "Keď sa informácia opakuje alebo sa spája so silnou emóciou, aktivujú sa spoločne tie isté neuróny. Ich spojenie sa potom ľahšie spúšťa: to je [[dlhodobá potenciácia]], trvalé posilnenie synapsií. Čím viac sa okruh používa, tým je cesta „širšia“. Spomienka teda nie je odložený predmet, ale **stopa** v sieti."
         },
         {
           "type": "funFact",
-          "text": "Úložná kapacita mozgu sa odhaduje na približne **2,5 petabajtov**, čo je ekvivalent miliónov hodín videa. Ale nie je to disk: je to živé tkanivo, ktoré sa reorganizuje."
+          "text": "Kapacita mozgu sa odhaduje asi na **2,5 petabajtu**, čo zodpovedá miliónom hodín videa. Nie je to však disk: je to živé tkanivo, ktoré sa preskupuje."
         }
       ]
     },
     {
       "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve_p2",
-      "title": "Morský koník, prednosta spomienok",
+      "title": "Hipokampus, prednosta stanice spomienok",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**hippokampus**, malá štruktúra v spánkovom laloku, oblasti za spánkami, neuchováva spomienky navždy. Prijíma ich, **encode**, transformuje ich na pamäťové stopy a potom ich redistribuuje do **cortex**, vonkajšej vrstvy mozgu. Tento prevod sa nazýva **konsolidácia**."
+          "text": "**Hipokampus**, malá štruktúra, ktorú skrýva [[temporálny lalok]], oblasť za spánkami, neuchováva spomienky navždy. Prijíma ich, **kóduje**, teda mení na pamäťovú stopu, a potom ich rozdeľuje do **kôry**, vonkajšej vrstvy mozgu. Tento presun sa nazýva **konsolidácia**."
         },
         {
           "type": "paragraph",
-          "text": "Vykonáva sa hlavne počas **spánku**. Bez fungujúceho hipokampu môžeme žiť v prítomnom okamihu, no nové vedomé spomienky už neuchovávame. Zostávame uviaznutí v prítomnosti bez nedávnej minulosti."
+          "text": "Prebieha najmä počas **spánku**. Bez fungujúceho hipokampu človek dokáže prežívať prítomný okamih, no nové vedomé spomienky si už neukladá. Zostáva uväznený v prítomnosti bez nedávnej minulosti."
         },
         {
           "type": "funFact",
-          "text": "Pacient **H.M.**, operovaný v roku 1953, si už netvoril nové spomienky. Každý deň však napredoval v kreslení v zrkadle bez toho, aby si spomenul, že to už skúšal: jeho pamäť gest bola neporušená."
+          "text": "Pacient **H.M.**, operovaný v roku 1953, si už nevytváral nové spomienky. Každý deň sa však zlepšoval v kreslení podľa zrkadla, hoci si nepamätal, že to už skúšal: jeho pohybová pamäť zostala nedotknutá."
         }
       ]
     },
     {
       "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve_p3",
-      "title": "Pamätať znamená prestavovať",
+      "title": "Spomínať znamená skladať nanovo",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Vyvolanie spomienky neznamená opätovné prehrávanie videa. Zakaždým, keď ho vyberiete, stane sa **mužný**, upraviteľným. Naše súčasné emócie, naše nové poznatky alebo podnety ich môžu upraviť skôr, ako budú „prehraté“."
+          "text": "Vybaviť si spomienku neznamená prehrať video. Zakaždým, keď ju vytiahneš, stane sa znova **tvárnou**, teda meniteľnou. Naše aktuálne emócie, nové poznatky alebo cudzia sugescia ju môžu zmeniť skôr, ako sa „znova uloží“."
         },
         {
           "type": "paragraph",
-          "text": "Psychologička **Elizabeth Loftusová** ukázala, že **falošné spomienky** môžete implantovať jednoduchými otázkami. Preto dnešná opatrnosť tvárou v tvár očitým svedectvám: v dobrej viere mozog vypĺňa medzery."
+          "text": "Psychologička **Elizabeth Loftusová** ukázala, že **falošné spomienky** sa dajú vsugerovať jednoduchými otázkami. Preto sú dnes ľudia opatrní pri výpovediach očitých svedkov: mozog v dobrej viere vypĺňa medzery."
         }
       ]
     },
     {
       "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve_p4",
-      "title": "Viacero spomienok v jednom mozgu",
+      "title": "Viac druhov pamäti v jednom mozgu",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Spomienka na fakty a životné epizódy, čo si vieme povedať, prechádza hlavne cez hipokampus. [[Procedurálna pamäť]], teda bicyklovanie alebo plávanie, závisí namiesto toho od **cerebellum**, štruktúry v zadnej časti mozgu a iných starších štruktúr."
+          "text": "Pamäť na fakty a životné udalosti, teda na to, čo sa dá vyrozprávať, funguje hlavne cez hipokampus. [[Procedurálna pamäť]], napríklad na bicyklovanie či plávanie, závisí skôr od **mozočka**, štruktúry v zadnej časti mozgu, a od ďalších, starších štruktúr."
         },
         {
           "type": "paragraph",
-          "text": "To je dôvod, prečo niektorí pacienti s amnéziou zabudli svoje meno, ale stále hrajú na klavíri. Pamäť nie je jedna zásuvka: je to mozaika systémov."
+          "text": "Preto niektorí pacienti s amnéziou zabudnú vlastné meno, ale stále hrajú na klavíri. Pamäť nie je jedna zásuvka: je to mozaika systémov."
         },
         {
           "type": "takeaway",
-          "text": "Spomienka je dynamická stopa: synapsie zosilnené, konsolidované najmä v noci a prestavané s každou pripomienkou. Nikdy to nie je pevný súbor."
+          "text": "Spomienka je dynamická stopa: posilnené synapsie, ktoré sa upevňujú najmä v noci a pri každom vybavení sa skladajú nanovo. Nikdy to nie je nemenný súbor."
         }
       ]
     }

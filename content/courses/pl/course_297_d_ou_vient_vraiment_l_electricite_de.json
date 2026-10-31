@@ -19,11 +19,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Podłączasz telefon, a prąd przychodzi bez etykiety. Nic w gniazdku nie mówi, czy wytworzono go ze światła słonecznego, z wody spiętrzonej przez zaporę czy z paliwa spalonego w elektrowni. Nawet dwa domy przy tej samej ulicy nie potrafią wskazać elektrowni, z której pochodzi każda porcja prądu."
+          "text": "Podłączasz telefon, a prąd przychodzi bez etykiety. Nic w gniazdku nie mówi, czy wytworzono go ze światła słonecznego, z wody spiętrzonej przez zaporę czy z paliwa spalonego w elektrowni. Nawet w dwóch domach przy tej samej ulicy nie da się wskazać elektrowni, z której pochodzi każda porcja prądu."
         },
         {
           "type": "paragraph",
-          "text": "Powód jest prosty: prawie wszystkie domy czerpią prąd z jednej wspólnej całości. To [[sieć energetyczna]], plątanina przewodów łącząca elektrownie i odbiorców na danym obszarze. Zasila ją jednocześnie wiele elektrowni, a ich udziały tworzą [[miks energetyczny]]. Ten miks opisuje źródła, które zasilają sieć, a nie osobny strumień prądu słonecznego czy gazowego płynący prosto do twojego telefonu. Odpowiedź zaczyna się więc daleko za ścianami domu."
+          "text": "Powód jest prosty: prawie wszystkie domy czerpią prąd ze wspólnego źródła, jakim jest [[sieć energetyczna]], czyli siatka przewodów łącząca elektrownie i odbiorców na danym obszarze. Zasila ją jednocześnie wiele elektrowni, a ich udziały tworzą [[miks energetyczny]]. Ten miks opisuje źródła, które zasilają sieć, a nie osobny strumień prądu słonecznego czy gazowego płynący prosto do twojego telefonu. Odpowiedź zaczyna się więc daleko za ścianami domu."
         }
       ]
     },
@@ -34,7 +34,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Elektrownie węglowe i wiele elektrowni jądrowych wytwarza ciepłem parę. Ta para wprawia w ruch zestaw łopatek. To [[turbina]], a połączony z nią [[generator]] zamienia ruch w prąd. Elektrownie gazowe mogą też obracać turbiny bezpośrednio gorącymi gazami ze spalania. Różne metody, ale ten sam prąd, który trafia do tej samej sieci."
+          "text": "Elektrownie węglowe i wiele elektrowni jądrowych wykorzystuje ciepło do wytwarzania pary. Ta para wprawia w ruch zestaw łopatek. To [[turbina]], a połączony z nią [[generator]] zamienia ruch w prąd. Elektrownie gazowe mogą też obracać turbiny bezpośrednio gorącymi gazami ze spalania. Różne metody, ale ten sam prąd, który trafia do tej samej sieci."
         },
         {
           "type": "image",
@@ -48,7 +48,7 @@
         },
         {
           "type": "funFact",
-          "text": "Elektrownia jądrowa działa w gruncie rzeczy jak węglowa: ciepło zagotowuje wodę, a para napędza turbinę. Zmienia się tylko źródło ciepła."
+          "text": "Elektrownia jądrowa działa w gruncie rzeczy jak węglowa: ciepło doprowadza wodę do wrzenia, a para napędza turbinę. Zmienia się tylko źródło ciepła."
         }
       ]
     },
@@ -69,7 +69,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Tą siecią kieruje [[operator sieci]], który musi bez przerwy utrzymywać równowagę między podażą a popytem. Niektóre elektrownie dostosowują produkcję. Tam, gdzie zainstalowano baterie, oddają one prąd zmagazynowany wcześniej. Inne źródła wypełniają lukę po zachodzącym słońcu. Nie ma jednego codziennego przepisu: miks z południa może się bardzo różnić od tego sprzed kilku godzin, choć twoje gniazdko się nie zmieniło."
+          "text": "Tą siecią kieruje [[operator sieci]], który musi bez przerwy utrzymywać równowagę między podażą a popytem. Niektóre elektrownie dostosowują produkcję. Tam, gdzie zainstalowano magazyny energii, oddają one prąd zgromadzony wcześniej. Inne źródła wypełniają lukę po zachodzącym słońcu. Nie ma jednego codziennego przepisu: miks z południa może się bardzo różnić od tego, który będzie kilka godzin później, choć twoje gniazdko się nie zmieniło."
         }
       ]
     },

@@ -1,0 +1,132 @@
+{
+  "id": "course_222_la_crise_de_la_biodiversite",
+  "title": "Ar gyvename šeštąjį masinį išnykimą?",
+  "subtitle": "Šeštasis išnykimas",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environnement & avenir",
+  "description": "Laukinių gyvūnų populiacijos nuo **1970 m. sumažėjo 69 %**. Gyvename šeštąjį masinį išnykimą Žemės istorijoje ir pirmąjį, kurį sukėlė viena rūšis: mes.",
+  "hero": {
+    "image": "la_crise_de_la_biodiversite",
+    "ratio": "16:9",
+    "hook": "Jokio asteroido, jokio ugnikalnio: šį kartą masinis išnykimas turi žmogaus veidą."
+  },
+  "sections": [
+    {
+      "id": "course_222_la_crise_de_la_biodiversite_intro",
+      "title": "Įžanga",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Žemė jau patyrė penkis didžiuosius masinius išnykimus, kuriuos sukėlė asteroidai arba milžiniški ugnikalnių išsiveržimai. Šiandien vyksta šeštasis, bet pirmą kartą jo priežastis nėra natūrali."
+        },
+        {
+          "type": "paragraph",
+          "text": "Šiandien rūšys nyksta **100-1 000 kartų greičiau** nei natūraliu tempu, o kaltininkė yra viena rūšis: mūsų. Šis kursas paaiškina problemos mastą, jos priežastis ir kodėl ji mums rūpi tiesiogiai."
+        }
+      ]
+    },
+    {
+      "id": "course_222_la_crise_de_la_biodiversite_p1",
+      "title": "Išmatuotas žlugimas, skaičius po skaičiaus",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Gamtos būklei stebėti mokslininkai naudoja **Gyvosios planetos indeksą**, kurį kasmet skelbia organizacija [[WWF]]. 2022 m. išvada žiauri: 1970-2018 m. laukinių gyvūnų (žinduolių, paukščių, žuvų, roplių, varliagyvių) populiacijos pasaulyje vidutiniškai sumažėjo **69 %**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Šis nuosmukis labiausiai paliečia tropinius regionus, kuriuose gyvena daugiausia rūšių. Lotynų Amerikoje jis siekia 94 %. Tai nereiškia, kad išnyko 94 % rūšių: jų populiacijos smarkiai sumažėjo, todėl joms gresia visiškas išnykimas."
+        },
+        {
+          "type": "image",
+          "asset": "amazon_deforestation_rainforest_aerial",
+          "ratio": "16:9",
+          "caption": "Miškų kirtimas Amazonijoje naikina vieną turtingiausių gyvybės rezervuarų planetoje."
+        },
+        {
+          "type": "funFact",
+          "text": "Jei Žemės istorija truktų 24 valandas, žmonės būtų atsiradę 23:58. Jiems pakako dviejų sekundžių, kad sukeltų masinį išnykimą."
+        },
+        {
+          "type": "paragraph",
+          "text": "Remiantis [[IPBES]] duomenimis, šiandien išnykti gresia maždaug milijonui gyvūnų ir augalų rūšių, kai kurioms jau per artimiausius dešimtmečius."
+        }
+      ]
+    },
+    {
+      "id": "course_222_la_crise_de_la_biodiversite_p2",
+      "title": "Penkios priežastys, viena kilmė",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ši nelaimė nėra atsitiktinumas: ji tiesiogiai kyla iš to, kaip gaminame ir vartojame. Mokslininkai išskiria penkias pagrindines priežastis. Pirmoji ir labiausiai griaunanti yra žemės naudojimo pokyčiai: miškų kirtimas gyvulininkystei, urbanizacija, intensyvi žemdirbystė, kuri suskaido natūralias buveines į mažus, per daug izoliuotus gabalėlius, kad jose išliktų gyvybė."
+        },
+        {
+          "type": "paragraph",
+          "text": "Toliau eina pernelyg intensyvus išteklių naudojimas (perteklinė žvejyba, brakonieriavimas) ir tarša: pesticidai, trąšos, sukuriančios negyvas zonas vandenynuose, mikroplastikas, patenkantis į visą mitybos grandinę."
+        },
+        {
+          "type": "image",
+          "asset": "plastic_pollution_ocean_wildlife",
+          "ratio": "4:3",
+          "caption": "Mikroplastikas dabar teršia kiekvieną jūrų mitybos grandinės lygmenį."
+        },
+        {
+          "type": "paragraph",
+          "text": "Paskutiniai du varikliai yra svetimos rūšys, dažnai netyčia atvežamos per pasaulinę prekybą, kurios išstumia vietines rūšis, ir klimato kaita, kuri keičia temperatūras greičiau, nei rūšys spėja prisitaikyti."
+        }
+      ]
+    },
+    {
+      "id": "course_222_la_crise_de_la_biodiversite_p3",
+      "title": "Kodėl gamta nėra nemokama",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Biologinė įvairovė nėra vien estetikos klausimas. Gamta mums teikia gyvybiškai svarbias paslaugas, vadinamąsias [[ekosisteminės paslaugos]], dažnai nematomas, nes jos nemokamos. Ataskaita, žinoma kaip [[Dasguptos ataskaita]], primena per dažnai pamirštamą tiesą: mūsų ekonomika priklauso nuo gamtos, o ne atvirkščiai."
+        },
+        {
+          "type": "image",
+          "asset": "bee_flower_pollination_agriculture",
+          "ratio": "4:3",
+          "caption": "Apie 75 % pasaulio maistinių kultūrų priklauso nuo vabzdžių apdulkintojų."
+        },
+        {
+          "type": "paragraph",
+          "text": "Konkretus pavyzdys: apie 75 % pasaulio maistinių kultūrų apdulkinti reikia vabzdžių. Gamta yra ir didžiausia mūsų vaistinė, nes 25 % šiuolaikinių vaistų gaunami iš augaluose rastų molekulių. Ji taip pat reguliuoja vandenį, formuoja derlingą dirvožemį ir sugeria dalį CO₂ pertekliaus."
+        },
+        {
+          "type": "paragraph",
+          "text": "Taigi naikindami biologinę įvairovę, naikiname gamtos kapitalą, kuris palaiko mūsų pačių ekonominį gyvenimą ir aprūpinimą maistu, nes planetos išteklius vartojame kur kas greičiau, nei jie atsinaujina."
+        }
+      ]
+    },
+    {
+      "id": "course_222_la_crise_de_la_biodiversite_p4",
+      "title": "Ribos, kurių negalima peržengti, ir galimybė atsigauti",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Biologinė įvairovė yra viena iš devynių ribų, kurių negalima peržengti, kad Žemė liktų tinkama gyventi (tai [[planetinės ribos]]), ir ši riba jau peržengta. Tikrasis pavojus yra [[ekologiniai lūžio taškai]]: slenksčiai, kuriuos peržengus ekosistema staiga ir beveik negrįžtamai žlunga, pavyzdžiui, Amazonijos miškas virsta savana."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vis dėlto sprendimų yra. 2022 m. Monrealyje vykusi [[COP15]] iškėlė pasaulio šalims tikslą iki 2030 m. apsaugoti 30 % sausumos ir jūrų. Tam reikia pertvarkyti žemės ūkį, atkurti šlapžemes ir palikti koridorius, kuriais rūšys galėtų judėti."
+        },
+        {
+          "type": "paragraph",
+          "text": "Gamtos gebėjimas atsigauti, jos [[atsparumas]], yra didelis, jei jai paliekama erdvės ir laiko. Saugoti mišką reiškia saugoti milijonus rūšių ir kartu išlaikyti svarbią anglies absorbavimo vietą kovoje su visuotiniu atšilimu."
+        },
+        {
+          "type": "takeaway",
+          "text": "1970-2018 m. laukinių gyvūnų populiacijos sumažėjo 69 %: tai šeštasis masinis išnykimas ir pirmasis, kurį sukėlė viena rūšis. Jis kelia grėsmę gyvybiškai svarbioms paslaugoms, kurias gamta mums teikia nemokamai."
+        }
+      ]
+    }
+  ]
+}

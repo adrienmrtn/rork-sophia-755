@@ -4,7 +4,7 @@
   "subtitle": "Od Franklina do Tesle",
   "subject": "sciences",
   "subcategory": "Odkritja, ki so spremenila svet",
-  "description": "Elektrika ni bila izumljena nenadoma. Najprej so ga opazili, nato razumeli, nato udomačili. Tukaj so ključni koraki.",
+  "description": "Elektrike niso izumili čez noč. Najprej so jo opazovali, nato razumeli in nazadnje udomačili. To so ključni koraki.",
   "hero": {
     "image": "la_decouverte_de_l_electricite",
     "ratio": "16:9",
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Elektrika obstaja v naravi: strela, električna riba, trenje. Kar je spremenilo svet, je bilo učenje **proizvodnje**, **prevoza** in njegove uporabe."
+          "text": "Elektrika obstaja v naravi: strela, električne ribe, trenje. Svet pa je spremenilo šele to, da so jo ljudje znali **proizvajati**, **prenašati** in uporabljati."
         },
         {
           "type": "paragraph",
-          "text": "Ta zgodba zajema več kot dve stoletji, z tveganimi poskusi in velikim rivalstvom."
+          "text": "Ta zgodba traja več kot dve stoletji, polna je tveganih poskusov in hudih rivalstev."
         }
       ]
     },
@@ -33,7 +33,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "V 18. stoletju je **Benjamin Franklin** pokazal, da je strela električni pojav. Njegov poskus spuščanja zmaja (pogosto pripovedovan na izmišljen način) želi dokazati, da se nebo in torni stroj igrata z isto silo."
+          "text": "V 18. stoletju je **Benjamin Franklin** pokazal, da je strela električni pojav. Njegov poskus z zmajem (o katerem pogosto pripovedujejo olepšano) naj bi dokazal, da v nebu in v tornem stroju deluje ista sila."
         },
         {
           "type": "image",
@@ -43,18 +43,18 @@
         },
         {
           "type": "paragraph",
-          "text": "Izumili smo tudi **grmeti**, kovinsko palico, ki streli nudi varno pot do tal. Elektrika zapusti skrivnost in vstopi v inženirstvo."
+          "text": "Izumijo tudi **strelovod**, kovinsko palico, ki streli ponudi varno pot v tla. Elektrika ni več skrivnost, postane stvar inženirjev."
         }
       ]
     },
     {
       "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p2",
-      "title": "Faraday: proizvaja tok",
+      "title": "Faraday: proizvodnja toka",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "V 19. stoletju je **Michael Faraday** pokazal, da lahko magnet, ki se premika blizu žice, ustvari električni tok. To je **indukcija**. Brez te ideje ni dinama, ne alternatorja, ne sodobne elektrarne."
+          "text": "V 19. stoletju je **Michael Faraday** pokazal, da lahko magnet, ki se giblje ob žici, ustvari električni tok. To je **indukcija**. Brez te zamisli ni ne dinama ne alternatorja ne sodobne elektrarne."
         },
         {
           "type": "image",
@@ -64,7 +64,7 @@
         },
         {
           "type": "funFact",
-          "text": "Faraday je bil iz skromnega okolja in je začel kot knjigovez. Naučil se je znanosti tako, da je bral, kar je verjel."
+          "text": "Faraday je izhajal iz skromnih razmer in je začel kot knjigovez. Znanosti se je naučil tako, da je bral knjige, ki jih je vezal."
         }
       ]
     },
@@ -75,17 +75,17 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Konec 19. stoletja sta se spopadla dva tabora. **Thomas Edison** potiska enosmerni tok. **Nikola Tesla** (in podjetje Westinghouse) zagovarjata izmenični tok, ki ga je lažje prenašati na velike razdalje."
+          "text": "Konec 19. stoletja se spopadeta dva tabora. **Thomas Edison** stavi na enosmerni tok. **Nikola Tesla** (in podjetje Westinghouse) zagovarjata izmenični tok, ki ga je lažje prenašati na velike razdalje."
         },
         {
           "type": "image",
           "asset": "tesla_edison_electric_power_station",
           "ratio": "4:3",
-          "caption": "Izmenični tok pridobiva moč v mestih."
+          "caption": "Pri napajanju mest zmaga izmenični tok."
         },
         {
           "type": "paragraph",
-          "text": "Izmenični tok zmaga za mestna omrežja. Mesta zasvetijo. Tovarne spreminjajo tempo."
+          "text": "V mestnih omrežjih zmaga izmenični tok. Mesta se razsvetlijo. Tovarne spremenijo ritem."
         }
       ]
     },
@@ -96,11 +96,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Danes elektrika poganja bolnišnice, vlake, internet, hladilnike. Izziv ni več le izdelati, ampak to storiti čisto in zanesljivo."
+          "text": "Danes elektrika poganja bolnišnice, vlake, internet, hladilnike. Izziv ni več le, kako jo proizvesti, ampak kako to storiti čisto in zanesljivo."
         },
         {
           "type": "takeaway",
-          "text": "Elektrika je bila razumljena in nato udomačena: Franklin za strelo, Faraday za proizvodnjo toka, Tesla in izmenični tok za prenos v domove. Naše vsakdanje življenje je še vedno odvisno od tega."
+          "text": "Elektriko so najprej razumeli in nato udomačili: Franklin z razlago strele, Faraday s proizvodnjo toka, Tesla in izmenični tok pa z njenim prenosom v domove. Naše vsakdanje življenje je od nje odvisno še danes."
         }
       ]
     }

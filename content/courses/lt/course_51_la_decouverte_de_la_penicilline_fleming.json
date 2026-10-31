@@ -1,0 +1,106 @@
+{
+  "id": "course_51_la_decouverte_de_la_penicilline_fleming",
+  "title": "Penicilino atradimas",
+  "subtitle": "Flemingas, 1928",
+  "subject": "sciences",
+  "subcategory": "Découvertes qui ont changé le monde",
+  "description": "1928 m. Alexanderis Flemingas pastebi, kad pelėsis sunaikino bakterijas mitybinės terpės lėkštelėje. Iš šio atsitiktinumo gims pirmasis didysis antibiotikas.",
+  "hero": {
+    "image": "la_decouverte_de_la_penicilline",
+    "ratio": "16:9",
+    "hook": "Pamiršta lėkštelė, pelėsis, ir medicina pasikeičia."
+  },
+  "sections": [
+    {
+      "id": "course_51_la_decouverte_de_la_penicilline_fleming_intro",
+      "title": "Įvadas",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Iki antibiotikų net paprasta infekcija galėjo nužudyti. Įsipjovimas, plaučių uždegimas, karo žaizda: organizmas dažnai kovojo vienas."
+        },
+        {
+          "type": "paragraph",
+          "text": "**1928** m. škotų gydytojas **Alexanderis Flemingas** atsitiktinai atranda medžiagą, galinčią naikinti bakterijas. Ji bus pavadinta **penicilinu**. Tačiau prireiks dar daug metų, kol iš jos pavyks padaryti tikrą vaistą."
+        }
+      ]
+    },
+    {
+      "id": "course_51_la_decouverte_de_la_penicilline_fleming_p1",
+      "title": "Pamiršta lėkštelė",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Flemingas Londone tiria bakterijas. Grįžęs iš atostogų, jis apžiūri senas mitybinės terpės lėkšteles. Ant vienos jų išaugęs **pelėsis**. Aplink jį bakterijos žuvusios."
+        },
+        {
+          "type": "image",
+          "asset": "alexander_fleming_penicillin_petri_dish",
+          "ratio": "4:3",
+          "caption": "Flemingas ir pagrindinė mintis: kažkas pelėsyje sustabdo bakterijas."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pelėsis priklauso **Penicillium** genčiai. Flemingas supranta, kad jis gamina antibakterinę medžiagą. Ją pavadina penicilinu. Tačiau jam nepavyksta jos išgryninti tiek, kad būtų galima gydyti ligonius."
+        },
+        {
+          "type": "funFact",
+          "text": "Vėliau Flemingas sakė, kad jei būtų buvęs tvarkingesnis, būtų lėkštelę išmetęs. Netvarka laboratorijoje padėjo atradimui."
+        }
+      ]
+    },
+    {
+      "id": "course_51_la_decouverte_de_la_penicilline_fleming_p2",
+      "title": "Oksfordas idėją paverčia vaistu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "XX a. **5**-ojo dešimtmečio pradžioje Oksforde darbą tęsia **Howardas Florey** ir **Ernstas Chainas**. Su savo komanda jie išskiria, koncentruoja ir išbando peniciliną su gyvūnais, o paskui su žmonėmis."
+        },
+        {
+          "type": "paragraph",
+          "text": "Antrasis pasaulinis karas paskubina darbus: reikia gydyti užsikrėtusius karius. Penicilinas iš laboratorijos tampa strateginiu klausimu."
+        }
+      ]
+    },
+    {
+      "id": "course_51_la_decouverte_de_la_penicilline_fleming_p3",
+      "title": "Masinė gamyba",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "penicillin_antibiotic_production_laboratory",
+          "ratio": "4:3",
+          "caption": "Teko išrasti pramoninius būdus pelėsiui auginti."
+        },
+        {
+          "type": "paragraph",
+          "text": "Norint išgydyti milijonus žmonių, reikia milžiniškų kiekių. Per karą JAV gamybą paverčia pramonine. Milžiniškose talpose pelėsis rauginamas kaip alus."
+        },
+        {
+          "type": "paragraph",
+          "text": "**1945** m. Flemingas, Florey ir Chainas gauna Nobelio premiją. Medicina įžengia į antibiotikų amžių."
+        }
+      ]
+    },
+    {
+      "id": "course_51_la_decouverte_de_la_penicilline_fleming_p4",
+      "title": "Atsparumo šešėlis",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Šiandien dėl per dažno ir netinkamo antibiotikų vartojimo kai kurios bakterijos tapo **atsparios**: vaistai jų nebenaikina. Flemingas apie šį pavojų buvo įspėjęs."
+        },
+        {
+          "type": "takeaway",
+          "text": "Penicilinas gimsta iš atsitiktinumo, kurį **1928** m. pastebi Flemingas, o vaistu tampa Florey, Chaino ir karo pramonės dėka. Jis išgelbėjo milijonus gyvybių… jei tik juo nepiktnaudžiaujama."
+        }
+      ]
+    }
+  ]
+}

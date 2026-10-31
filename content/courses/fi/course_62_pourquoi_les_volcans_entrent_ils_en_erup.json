@@ -1,14 +1,14 @@
 {
   "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup",
   "title": "Miksi tulivuoret purkautuvat?",
-  "subtitle": "Magma & levyt",
+  "subtitle": "Magma & laatat",
   "subject": "sciences",
   "subcategory": "Maa ja maailmankaikkeus",
-  "description": "Tulivuori on aukko maankuoressa. Paineen alainen magma nousee siellä ja muuttuu laavaksi. Tästä syystä maa \"sylkee\".",
+  "description": "Tulivuori on aukko maankuoressa. Paineenalainen magma nousee sitä kautta ylös ja muuttuu laavaksi. Tästä opit, miksi maapallo ”sylkee”.",
   "hero": {
     "image": "pourquoi_les_volcans_entrent_en_eruption",
     "ratio": "16:9",
-    "hook": "Jalkojemme alla maa ei ole jäässä. Joskus hän avaa tuliikkunan."
+    "hook": "Jalkojemme alla maapallo ei ole jähmettynyt. Joskus se avaa tulisen ikkunan."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Tulivuori ei ole vain tulta hengittävä vuori. Se on aukko maan ulkoverhossa. Näin **magma** nousee: sulan kiven ja kaasun seos korkeassa paineessa. Kun tämä magma on ulkoilmassa, siitä tulee **pesty**."
+          "text": "Tulivuori ei ole pelkkä tulta syöksevä vuori. Se on aukko maapallon uloimmassa kuoressa. Sitä kautta nousee **magma**: sulan kiven ja kaasujen seos, joka on kovassa paineessa. Ulkoilmaan päästyään magmasta tulee **laavaa**."
         },
         {
           "type": "paragraph",
-          "text": "Purkauksen ymmärtämiseksi sinun on katsottava pinnan alle: lämpöä planeetan sisällä, levyjen liikettä ja tapaa, jolla kaasut nostavat painetta, vähän kuin juomapulloa ravistelisi."
+          "text": "Purkauksen ymmärtää vain katsomalla pinnan alle: planeetan sisäistä lämpöä, laattojen liikettä ja sitä, miten kaasut nostavat painetta, vähän kuin ravistellussa limsapullossa."
         }
       ]
     },
@@ -33,7 +33,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Maapallo koostuu kerroksista. Pinnalla **kuori** on jäykkä kuori, **5-70 km paksu. Mennään**mantle, ei**2 900 km** syvyyteen. Karvapeite on pääosin kiinteää, mutta hyvin pitkiä aikoja se voi virrata hyvin hitaasti, kuten ultrapaksu hunaja."
+          "text": "Maapallo koostuu kerroksista. Pinnalla on **kuori**, jäykkä kerros, joka on **5-70 km** paksu. Sen alla on **vaippa**, joka ulottuu noin **2 900 km** syvyyteen. Vaippa on enimmäkseen kiinteää, mutta hyvin pitkien aikojen kuluessa se voi virrata hyvin hitaasti, kuin erittäin paksu hunaja."
         },
         {
           "type": "image",
@@ -43,15 +43,15 @@
         },
         {
           "type": "paragraph",
-          "text": "Tämä sisäinen lämpö saa aineen nousemaan ja laskemaan: nämä ovat **konvektiovirtoja**. Ne työntävät ulos suuria kuoren paloja, joita kutsutaan plakeiksi. Tämä on [[Levytektoniikka]]: maan pinta leikataan levyiksi, jotka liikkuvat toisistaan, törmäävät tai liukuvat toisiaan vasten."
+          "text": "Tämä sisäinen lämpö saa aineen nousemaan ja laskeutumaan: syntyy **konvektiovirtoja**. Ne työntävät suuria kuoren kappaleita, joita kutsutaan laatoiksi. Tämä on [[laattatektoniikka]]: maan pinta on jakautunut laattoihin, jotka erkanevat toisistaan, törmäävät tai liukuvat toisiaan vasten."
         },
         {
           "type": "funFact",
-          "text": "Tietyt erittäin nopeat nousut tuovat takaisin yli **150 km** syvyydessä muodostuneita timantteja. Heillä ei ole aikaa muuttua matkalla."
+          "text": "Jotkin erittäin nopeat nousut tuovat pintaan timantteja, jotka ovat syntyneet yli **150 km** syvyydessä. Ne eivät ehdi muuttua matkalla."
         },
         {
           "type": "paragraph",
-          "text": "[[harjanteita]]:ssä levyt irtoavat toisistaan ja magma nousee helposti. Alueella [[Subduktio]] yksi levy sukeltaa toisen alle ja kuljettaa vettä mukanaan. Tämä vesi alentaa kivien sulamispistettä: magma muodostuu, sitten nousee."
+          "text": "Valtamerten [[selänteitä]] pitkin laatat erkanevat toisistaan, ja magma nousee helposti. Alueilla, joilla tapahtuu [[subduktio]], yksi laatta sukeltaa toisen alle ja vie vettä mukanaan. Vesi alentaa kivien sulamispistettä: syntyy magmaa, joka nousee ylös."
         }
       ]
     },
@@ -62,53 +62,53 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Rock ei vain sula \"koska se on kuumaa\". Laukaisijoita on kolme: lämpötilan nousu, paineen lasku tai veden lisääminen. Kun magma on muodostunut, se on vähemmän tiheää kuin sitä ympäröivä kivi. Siksi se yrittää nousta, vähän kuin ilmakupla vedessä."
+          "text": "Kivi ei sula pelkästään siksi, että ”on kuuma”. Laukaisijoita on kolme: lämpötilan nousu, paineen lasku tai veden lisääntyminen. Valmis magma on kevyempää kuin sitä ympäröivä kivi. Siksi se pyrkii ylöspäin, vähän kuin ilmakupla vedessä."
         },
         {
           "type": "paragraph",
-          "text": "Usein se pysähtyy ensin **magma-kammioon**, joka on säiliö muutaman kilometrin pinnan alapuolella. Siellä liuenneet kaasut muodostavat kuplia paineen laskiessa. Jos yläpuolella oleva kiven \"tulppa\" ei enää kestä, purkaus alkaa."
+          "text": "Usein se pysähtyy ensin **magmakammioon**, muutaman kilometrin syvyydessä olevaan säiliöön. Siellä liuenneet kaasut muodostavat kuplia, kun paine laskee. Jos yläpuolella oleva kivinen ”tulppa” ei enää kestä, purkaus alkaa."
         },
         {
           "type": "funFact",
-          "text": "**Tambora**:n purkautuminen **1815**:ssä Indonesiassa oli niin voimakas, että se jäähdytti maapallon ilmastoa. **1816** sai lempinimen \"vuosi ilman kesää\", ja Euroopassa ja Pohjois-Amerikassa oli tuhoisia satoja."
+          "text": "**Tamboran** purkaus Indonesiassa vuonna **1815** oli niin voimakas, että se viilensi koko maapallon ilmastoa. Vuotta **1816** alettiin kutsua ”vuodeksi ilman kesää”, ja sadot epäonnistuivat tuhoisasti Euroopassa ja Pohjois-Amerikassa."
         }
       ]
     },
     {
       "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup_p3",
-      "title": "Neste vai räjähdysaine?",
+      "title": "Juokseva vai räjähtävä?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kaikki purkaukset eivät ole samanlaisia. Kaikki riippuu magman **viskositeetista**, eli onko se melko nestemäinen vai tahmea. Nestemäinen magma, kuten **Havaiji** tai Piton de la Fournaise (Reunion Island), päästää kaasut poistumaan. Laavavirtaukset: purkaus **ylitsevuotava**."
+          "text": "Kaikki purkaukset eivät ole samanlaisia. Kaikki riippuu magman **viskositeetista** eli siitä, onko se pikemminkin juoksevaa vai tahmeaa. Juokseva magma, kuten **Havaijilla** tai Réunionin saaren Piton de la Fournaise -tulivuorella, päästää kaasut karkaamaan. Laava valuu: purkaus on **effusiivinen**."
         },
         {
           "type": "paragraph",
-          "text": "Tahmea magma vangitsee kaasut. Paine kasvaa, sitten kaikki räjähtää. Tuhka, lohkot ja [[pyroklastiset virtaukset]] (palavat kaasu- ja tuhkapilvet, jotka vierivät alas rinteitä) voivat sitten tuhota ympäröivän alueen. Tämä on tyyliin tulivuoria, kuten Mount **Pyhä Helens** (Yhdysvallat) tai **Pinatubo** (Filippiinit)."
+          "text": "Tahmea magma vangitsee kaasut. Paine kasvaa, ja sitten kaikki räjähtää. Tuhka, kivilohkareet ja [[pyroklastiset virtaukset]] (rinteitä alas syöksyvät tulikuumat kaasu- ja tuhkapilvet) voivat silloin tuhota ympäristön. Näin purkautuvat esimerkiksi **Mount St. Helens** (Yhdysvallat) ja **Pinatubo** (Filippiinit)."
         },
         {
           "type": "paragraph",
-          "text": "Tulivuori voi myös pysyä rauhallisena vuosisatoja. **79** jälkeen. eKr., **Vesuvius**, Napolin lähellä, hautasi Pompejin tuhkan alle. Noin **80 %** maailman vulkaanisesta toiminnasta tapahtuu valtamerten alla, kaukana silmistämme."
+          "text": "Tulivuori voi myös pysyä rauhallisena vuosisatoja. Vuonna **79** jKr. Napolin lähellä sijaitseva **Vesuvius** hautasi Pompejin tuhkan alle. Noin **80 %** maapallon tulivuoritoiminnasta tapahtuu valtamerten alla, poissa näkyvistä."
         }
       ]
     },
     {
       "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup_p4",
-      "title": "Vaara, hedelmällisyys, syvä elämä",
+      "title": "Vaara, hedelmällisyys, syvänmeren elämä",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Tulivuoret muovasivat maapallon varhaista ilmakehää lähettämällä kaasuja. Niiden tuhkat myös rikastavat maaperää: monet hedelmälliset maatalousalueet asuvat aktiivisten tulivuorten juurella. Mutta erittäin suuri purkaus voi lähettää rikkihiukkasia korkealle ilmakehään ja viilentää ilmastoa kuukausiksi."
+          "text": "Tulivuoret muovasivat maapallon varhaista ilmakehää päästämällä kaasuja. Niiden tuhka myös rikastaa maaperää: monet hedelmälliset viljelyalueet sijaitsevat aktiivisten tulivuorten juurella. Mutta hyvin suuri purkaus voi sinkota rikkihiukkasia korkealle ilmakehään ja viilentää ilmastoa kuukausiksi."
         },
         {
           "type": "paragraph",
-          "text": "Joitakin sivustoja, kuten Yellowstonen [[supertulivuori]] Yhdysvalloissa, seurataan tarkasti. Meren alla, lähellä harjuja, [[mustia tupakoitsijoita]] sylkee mineraalipitoisia palavia nesteitä. Ekosysteemit elävät siellä ilman auringonvaloa kuumien lähteiden kemian ravinnoksi."
+          "text": "Jotkin kohteet, kuten Yellowstonen [[supertulivuori]] Yhdysvalloissa, ovat tarkassa seurannassa. Meren alla, selänteiden lähellä, on [[mustia savuttajia]], jotka sylkevät tulikuumia, mineraalirikkaita nesteitä. Siellä elää ekosysteemejä ilman auringonvaloa, ja niiden ravintona on kuumien lähteiden kemia."
         },
         {
           "type": "takeaway",
-          "text": "Tulivuoret karkottavat magmaa paineen alaisena, erityisesti tektonisten levyjen rajoilla. Magman viskositeetti ratkaisee, virtaako purkaus hiljaa vai räjähtääkö se."
+          "text": "Tulivuoret purkavat paineenalaista magmaa etenkin mannerlaattojen rajoilla. Magman viskositeetti ratkaisee, valuuko purkaus rauhallisesti vai räjähtääkö se."
         }
       ]
     }

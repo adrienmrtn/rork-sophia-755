@@ -1,10 +1,10 @@
 {
   "id": "course_224_pourquoi_les_abeilles_sont_elles_vitales",
-  "title": "Mis jääks meie taldrikule ilma mesilasteta?",
-  "subtitle": "Meie toidu väikesed töötajad",
+  "title": "Mis saaks meie toidulauast ilma mesilasteta?",
+  "subtitle": "Meie toidulaua pisikesed töölised",
   "subject": "comprendreLeMonde",
   "subcategory": "Keskkond ja tulevik",
-  "description": "Ilma mesilasteta oleks **75% maailma toidusaagist** ohus. Need väikesed silmapaistmatud töötajad toetavad meie toiduvarusid ja nende populatsioon on kokku varisemas.",
+  "description": "Ilma mesilasteta oleks ohus **75% maailma toidukultuuridest**. Need pisikesed märkamatud töölised toetavad meie toidulauda, kuid nende arvukus langeb järsult.",
   "hero": {
     "image": "pourquoi_les_abeilles_sont_vitales",
     "ratio": "16:9",
@@ -18,28 +18,28 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Sageli mõtleme mesilastele ainult nende mee pärast. Tegelikkuses pakuvad nad palju suuremat teenust: võimaldavad enamikul õistaimedest paljuneda. Selle teenuse väärtus on igal aastal sadu miljardeid dollareid."
+          "text": "Mesilastele mõeldakse sageli ainult mee pärast. Tegelikult osutavad nad palju suuremat teenust: tänu neile saab enamik õistaimi paljuneda. Selle teenuse väärtus ulatub igal aastal sadadesse miljarditesse dollaritesse."
         },
         {
           "type": "paragraph",
-          "text": "Viimastel aastakümnetel on need olulised putukad murettekitava kiirusega kadunud. Nende rolli ja languse põhjuste mõistmine võimaldab meil paremini mõista meie tulevase toiduvarude otsest probleemi."
+          "text": "Viimastel aastakümnetel on need tähtsad putukad kadunud murettekitava kiirusega. Kui mõistad nende rolli ja hääbumise põhjusi, saad paremini aru, miks see puudutab otseselt meie tulevast toidulauda."
         }
       ]
     },
     {
       "id": "course_224_pourquoi_les_abeilles_sont_elles_vitales_p1",
-      "title": "Tolmeldamine, diskreetne, kuid hädavajalik töö",
+      "title": "Tolmeldamine: märkamatu, kuid hädavajalik töö",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "[[tolmeldamine]] on õietolmu, ühe õie isasrakkude transportimine sama liigi teise õie emasorganisse. Tuul või vesi võivad mõnikord seda teha, kuid enamik õistaimi eelistab loomade transporti. Otsides oma koloonia jaoks nektarit ja õietolmu, pakuvad mesilased seda transporti isegi teadmata."
+          "text": "Kõik algab protsessist, mille nimi on [[tolmeldamine]]: õietolmu ehk õie isasrakkude kandumine sama liigi teise õie emasorganini. Tuul või vesi saavad sellega mõnikord hakkama, kuid enamik õistaimi eelistab, et õietolmu kannaksid loomad. Kui mesilased otsivad oma kolooniale nektarit ja õietolmu, teevad nad seda tööd isegi teadmata."
         },
         {
           "type": "image",
           "asset": "honey_bee_pollinating_flower_closeup",
           "ratio": "4:3",
-          "caption": "Toitu otsides kannab mesilane õietolmu õielt õiele."
+          "caption": "Nektarit korjates kannab mesilane õietolmu õielt õiele."
         },
         {
           "type": "funFact",
@@ -47,7 +47,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Umbes **75% maailma toidukultuuridest** sõltuvad vähemalt mingil määral tolmeldajatest, nagu mesilased. Siia kuuluvad kohv, kakao, õunad, mandlid või avokaadod. Tolmeldamise panus maailmamajandusse on hinnanguliselt 235-577 miljardit dollarit aastas."
+          "text": "Umbes **75% maailma toidukultuuridest** sõltub vähemalt mingil määral tolmeldajatest, näiteks mesilastest. Nende hulka kuuluvad kohv, kakao, õunad, mandlid ja avokaadod. Tolmeldamise panust maailmamajandusse hinnatakse 235-577 miljardile dollarile aastas."
         }
       ]
     },
@@ -58,55 +58,55 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Mesilaste allakäigul pole ühte põhjust: korraga mõjub mitu ohtu. Alates 1990. aastatest on mõned mesinikud igal talvel kaotanud kuni 30-50% oma kolooniatest, samas kui loomulik kadu peaks olema umbes 10%. Seda äkilise kadumise nähtust nimetatakse mõnikord [[Koloonia kokkuvarisemise häire]]."
+          "text": "Mesilaste hääbumisel pole üht põhjust: korraga mõjub mitu ohtu. Alates 1990. aastatest kaotavad mõned mesinikud igal talvel kuni 30-50% oma kolooniatest, kuigi loomulik kadu peaks jääma umbes 10% juurde. Sellise äkilise kadumise kohta öeldakse mõnikord, et see on [[koloonia kokkuvarisemise häire]]."
         },
         {
           "type": "image",
           "asset": "neonicotinoid_pesticide_spraying_field",
           "ratio": "4:3",
-          "caption": "Neonikotinoidid tungivad läbi kogu taime, sealhulgas nektari ja õietolmu."
+          "caption": "Neonikotinoidid imbuvad kogu taime, ka nektarisse ja õietolmu."
         },
         {
           "type": "paragraph",
-          "text": "Eriti vastutustundlikud on insektitsiidide perekond [[Neonikotinoidid]]. Nad läbistavad kogu taime, sealhulgas selle nektarit ja õietolmu. Isegi väikestes annustes desorienteerivad nad mesilasi, kes ei leia enam oma taru, ja nõrgestavad nende immuunsüsteemi."
+          "text": "[[Neonikotinoidid]], üks insektitsiidide rühm, on eriti suured süüdlased. Need imbuvad kogu taime, ka selle nektarisse ja õietolmu. Juba väikeses annuses ajavad need mesilased segadusse, nii et nad ei leia enam oma taru üles, ning nõrgestavad nende immuunsüsteemi."
         },
         {
           "type": "paragraph",
-          "text": "Sellele lisanduvad parasiitlest, mis levitab surmavaid viiruseid, looduslike lillede kadumine monokultuuride tõttu ja kliimamuutused, mis nihutavad õitsemisperioode seoses putukate ärkamisega."
+          "text": "Sellele lisanduvad parasiitne lest, mis levitab surmavaid viiruseid, looduslike lillede kadumine monokultuuride tõttu ja kliimamuutus, mis nihutab õitsemisaegu nii, et need ei lange enam kokku putukate ärkamisega."
         }
       ]
     },
     {
       "id": "course_224_pourquoi_les_abeilles_sont_elles_vitales_p3",
-      "title": "Ei ole ainult üks mesilane",
+      "title": "Mesilasi on mitut liiki",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kui ütleme “mesilane”, mõtleme peaaegu alati kodumesilasele, kes elab tarudes ja toodab mett. See on aga ainult üks liik maailmas enam kui **20 000** hulgas, sealhulgas kimalased ja osmia. Enamik on üksildased ega tee mett, kuid täidavad sama olulist ökoloogilist rolli."
+          "text": "Kui öeldakse „mesilane“, mõeldakse peaaegu alati meemesilast, kes elab tarus ja toodab mett. Ometi on see vaid üks liik enam kui **20 000** seast kogu maailmas; teiste hulgas on näiteks kimalased ja müürimesilased. Enamik neist elab üksi ega tee mett, kuid nende ökoloogiline roll on sama tähtis."
         },
         {
           "type": "funFact",
-          "text": "Teatud lilled, nagu tomatid, vabastavad õietolmu ainult teatud vibratsiooni all. Mesilased ei tea, kuidas seda teha, kuid kimalased oskavad tänu tehnikale, mida nimetatakse ultrahelitöötluseks."
+          "text": "Mõne taime õied, näiteks tomati omad, vabastavad õietolmu ainult kindla värina mõjul. Meemesilased seda ei oska, kimalased aga oskavad tänu tehnikale, mida nimetatakse sonikatsiooniks."
         },
         {
           "type": "paragraph",
-          "text": "Need looduslikud liigid on sageli spetsialiseerunud konkreetsele taimele, mida mõnikord on nad ainsad, kes suudavad tõhusalt tolmeldada. Nad on ka haavatavamad kui kodumesilased, sest neile ei tule kasu inimese jälgimisest ega hooldusest. Nende kadumine nõrgestab kogu [[toiduahel]], kuna paljud linnud sõltuvad sellest tolmeldamisest tulenevatest viljadest ja seemnetest."
+          "text": "Need looduslikud liigid on sageli spetsialiseerunud kindlale taimele ja mõnikord on just nemad ainsad, kes suudavad seda tõhusalt tolmeldada. Nad on ka haavatavamad kui meemesilane, sest inimene neid ei jälgi ega hoolda. Nende kadumisest saab kannatada kogu [[toiduahel]], sest paljud linnud sõltuvad viljadest ja seemnetest, mis selle tolmeldamise tulemusel tekivad."
         }
       ]
     },
     {
       "id": "course_224_pourquoi_les_abeilles_sont_elles_vitales_p4",
-      "title": "Mida me veel muuta saame",
+      "title": "Mida saab veel muuta",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Pestitsiidide kasutamise vähendamine on endiselt kõige tõhusam hoob. Euroopa Liit keelustas 2018. aastal avamaal kolm peamist neonikotinoidi. Samal ajal luuakse [[agroökoloogilised infrastruktuurid]], nagu hekid või lilleribad, tagasi paika pannes putukate varjupaigad."
+          "text": "Kõige tõhusam hoob on endiselt pestitsiidide kasutamise vähendamine. 2018. aastal keelas Euroopa Liit kolme peamise neonikotinoidi kasutamise avamaal. Samal ajal, kui rajatakse taas [[agroökoloogilised infrastruktuurid]], näiteks hekid või lilleribad, tekivad putukatele uuesti pelgupaigad."
         },
         {
           "type": "paragraph",
-          "text": "Igaüks võib tegutseda ka lihtsalt: istutada oma aeda kohalikud lilled või jätta muru enne niitmist veidi pikemaks ajaks välja, pakub mesilastele tõelise pelgupaiga, kui lilli on harva."
+          "text": "Igaüks saab ka lihtsalt kaasa aidata: kohalike lillede istutamine oma aeda või muru veidi pikemaks jätmine enne niitmist pakub mesilastele tõelise pelgupaiga, kui õisi on vähe."
         },
         {
           "type": "paragraph",
@@ -114,7 +114,7 @@
         },
         {
           "type": "takeaway",
-          "text": "Mesilased ja 20 000 looduslike tolmeldajate liiki tagavad 75% maailma toidukultuuride taastootmise. Nende vähenemine, mis on põhjustatud pestitsiididest, parasiitidest ja elupaikade kadumisest, ohustab otseselt meie toiduvarusid."
+          "text": "Mesilased ja 20 000 looduslike tolmeldajate liiki tagavad 75% maailma toidukultuuride paljunemise. Nende hääbumine, mille põhjustavad pestitsiidid, parasiidid ja elupaikade kadu, ohustab otseselt meie toidulauda."
         }
       ]
     }

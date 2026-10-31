@@ -4,11 +4,11 @@
   "subtitle": "Franklinista Teslaan",
   "subject": "sciences",
   "subcategory": "Maailmaa muuttaneet löydöt",
-  "description": "Sähköä ei keksitty yhtäkkiä. Se ensin havaittiin, sitten ymmärrettiin ja sitten kesytettiin. Tässä ovat tärkeimmät vaiheet.",
+  "description": "Sähköä ei keksitty kerralla. Ensin se havaittiin, sitten ymmärrettiin ja lopulta kesytettiin. Tässä tärkeimmät vaiheet.",
   "hero": {
     "image": "la_decouverte_de_l_electricite",
     "ratio": "16:9",
-    "hook": "Salamasta älypuhelimeen: kaksi vuosisataa kesyttää näkymätön."
+    "hook": "Salamasta älypuhelimeen: kaksi vuosisataa näkymättömän kesyttämistä."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Sähköä on luonnossa: salama, sähkökalat, kitka. Se, mikä muutti maailman, oli oppia käyttämään **tuottaa**, **kuljetus** ja käyttämään niitä."
+          "text": "Sähköä on luonnossa: salamat, sähkökalat, kitka. Maailman muutti se, että sähköä opittiin **tuottamaan**, **siirtämään** ja käyttämään."
         },
         {
           "type": "paragraph",
-          "text": "Tämä tarina kattaa yli kaksi vuosisataa riskialttiine kokeiluineen ja suuriin kilpailuineen."
+          "text": "Tämä tarina ulottuu yli kahden vuosisadan ajalle, ja siihen kuuluu vaarallisia kokeita ja kovia kilpailuja."
         }
       ]
     },
@@ -33,7 +33,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "1700-luvulla **Benjamin Franklin** osoitti, että salama on sähköinen ilmiö. Hänen leijalentokokeillaan (usein fiktiivisellä tavalla kerrottu) pyritään todistamaan, että taivas ja kitkakone pelaavat samalla voimalla."
+          "text": "1700-luvulla **Benjamin Franklin** osoitti, että salama on sähköinen ilmiö. Hänen leijakokeensa (josta kerrotaan usein romantisoituja versioita) pyrki todistamaan, että taivaalla ja kitkasähkökoneella on kyse samasta voimasta."
         },
         {
           "type": "image",
@@ -43,18 +43,18 @@
         },
         {
           "type": "paragraph",
-          "text": "Keksimme myös **ukkonen**:n, metallitangon, joka tarjoaa salaman turvallisen polun maahan. Sähkö jättää mysteerin päästäkseen tekniikkaan."
+          "text": "Myös **ukkosenjohdatin** keksittiin: metallitanko, joka tarjoaa salamalle turvallisen reitin maahan. Sähkö siirtyi mysteerien piiristä tekniikan alalle."
         }
       ]
     },
     {
       "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p2",
-      "title": "Faraday: tuottaa virtaa",
+      "title": "Faraday: virran tuottaminen",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "1800-luvulla **Michael Faraday** osoitti, että johdon lähellä liikkuva magneetti voi luoda sähkövirran. Tämä on **induktio**. Ilman tätä ideaa ei dynamoa, ei vaihtovirtageneraattoria, ei modernia voimalaitosta."
+          "text": "1800-luvulla **Michael Faraday** osoitti, että johtimen lähellä liikkuva magneetti voi synnyttää sähkövirran. Tämä on **induktio**. Ilman tätä oivallusta ei olisi dynamoa, vaihtovirtageneraattoria eikä nykyaikaista voimalaitosta."
         },
         {
           "type": "image",
@@ -64,7 +64,7 @@
         },
         {
           "type": "funFact",
-          "text": "Faraday tuli vaatimattomasta taustasta ja aloitti kirjansidonna. Hän oppi luonnontieteitä lukemalla mitä hän reliaba."
+          "text": "Faraday tuli vaatimattomista oloista ja aloitti kirjansitojana. Hän oppi luonnontieteitä lukemalla kirjoja, joita sitoi."
         }
       ]
     },
@@ -75,32 +75,32 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "1800-luvun lopulla kaksi leiriä ottivat yhteen. **Thomas Edison** työntää tasavirtaa. **Nikola Tesla** (ja Westinghouse-yhtiö) puolustavat vaihtovirtaa, jota on helpompi kuljettaa pitkiä matkoja."
+          "text": "1800-luvun lopulla kaksi leiriä ottaa yhteen. **Thomas Edison** ajaa tasavirtaa. **Nikola Tesla** (ja Westinghouse-yhtiö) puolustavat vaihtovirtaa, jota on helpompi siirtää pitkiä matkoja."
         },
         {
           "type": "image",
           "asset": "tesla_edison_electric_power_station",
           "ratio": "4:3",
-          "caption": "Vaihtovirta on saamassa tehoa kaupungeissa."
+          "caption": "Kaupunkien sähkönsyötössä voittaa vaihtovirta."
         },
         {
           "type": "paragraph",
-          "text": "Vaihtovirta voittaa kaupunkiverkot. Kaupungit valaisevat. Tehtaiden vauhti muuttuu."
+          "text": "Vaihtovirta vie voiton kaupunkien sähköverkoissa. Kaupungit syttyvät valoon. Tehtaiden tahti muuttuu."
         }
       ]
     },
     {
       "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p4",
-      "title": "Yhdistetty maailma",
+      "title": "Verkkoon kytketty maailma",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Nykyään sähkö toimii sairaaloissa, junissa, internetissä ja jääkaapeissa. Haasteena ei ole enää vain tuottaa se, vaan tehdä se siististi ja luotettavasti."
+          "text": "Nykyään sähkö pyörittää sairaaloita, junia, internetiä ja jääkaappeja. Haasteena ei ole enää pelkästään sen tuottaminen, vaan tuottaminen puhtaasti ja luotettavasti."
         },
         {
           "type": "takeaway",
-          "text": "Sähkö ymmärrettiin ja sitten kesytettiin: Franklin salama, Faraday tuottamaan virtaa, Tesla ja vaihtovirta tuomaan sen koteihin. Jokapäiväinen elämämme riippuu edelleen siitä."
+          "text": "Sähkö ensin ymmärrettiin ja sitten kesytettiin: Franklin selitti salaman, Faraday näytti, miten virtaa tuotetaan, ja Tesla toi vaihtovirran avulla sähkön koteihin. Arkielämä on yhä siitä riippuvainen."
         }
       ]
     }

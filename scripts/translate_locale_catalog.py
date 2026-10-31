@@ -1,9 +1,15 @@
 #!/usr/bin/env python3
-"""Translate EN locale catalog JSON (courses / glossary / collections) → new langs.
+"""Translate the French locale catalog (courses / glossary / collections) → new langs.
 
-Source of truth: ``ios/Sophia/Resources/Locales/*.{en}.json``.
-Does not modify French Swift sources. Preserves ids, subject keys, quiz
-structure, and ``<>`` / ``**`` markup (angle links remapped via glossary).
+Source of truth: the French catalog, i.e. the files the Android app ships
+(``android/app/src/main/assets/locales/{courses,glossary,collections}.fr.json``,
+exported from the Swift sources) plus the lesson titles read from
+``content/courses/fr/<id>.json``. The English catalog used to be the source;
+translating from it, or through an English pivot, took French words in their
+most frequent English sense (spleen → the organ, flâneur → baby stroller).
+Run ``scripts/check_terminology.py`` on the output.
+Preserves ids, subject keys, quiz structure, and ``<>`` / ``**`` markup
+(angle links remapped via glossary).
 
 Usage:
     python scripts/translate_locale_catalog.py --lang tr --workers 10
@@ -25,12 +31,43 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
 import mt_backend
-from i18n_languages import GT_TARGETS, NON_FR_LANGS
+from i18n_languages import GT_TARGETS, MT_SOURCE_LANG, NON_FR_LANGS
 
 ROOT = Path(__file__).resolve().parents[1]
 LOCALE_DIR = ROOT / "ios" / "Sophia" / "Resources" / "Locales"
-CACHE_DIR = ROOT / "content" / "locales" / "_catalog_mt_cache"
+FR_CATALOG_DIR = ROOT / "android" / "app" / "src" / "main" / "assets" / "locales"
+FR_COURSES_DIR = ROOT / "content" / "courses" / "fr"
+CACHE_DIR = ROOT / "content" / "locales" / "_catalog_mt_cache_fr"
 CONTENT_LOCALES = ROOT / "content" / "locales"
+
+
+def load_french_catalog() -> tuple[list[dict], dict, list[dict]]:
+    """The French source catalog: courses (with lesson titles), glossary, collections.
+
+    The Android export carries no ``lessons`` (the reader builds them from the
+    course body), so the lesson titles are taken from the section titles of
+    ``content/courses/fr/<id>.json``: one lesson per section, ``_intro`` then
+    ``_p1``…, which is how every localised catalog already names them.
+    """
+    courses = json.loads((FR_CATALOG_DIR / "courses.fr.json").read_text(encoding="utf-8"))
+    glossary = json.loads((FR_CATALOG_DIR / "glossary.fr.json").read_text(encoding="utf-8"))
+    collections = json.loads((FR_CATALOG_DIR / "collections.fr.json").read_text(encoding="utf-8"))
+    out: list[dict] = []
+    for course in courses:
+        course = dict(course)
+        course.pop("coverAssetName", None)
+        if not course.get("lessons"):
+            body_path = FR_COURSES_DIR / f"{course['id']}.json"
+            lessons = []
+            if body_path.is_file():
+                body = json.loads(body_path.read_text(encoding="utf-8"))
+                for index, section in enumerate(body.get("sections") or []):
+                    suffix = "intro" if index == 0 else f"p{index}"
+                    lessons.append({"id": f"{course['id']}_{suffix}", "title": section.get("title") or ""})
+            course["lessons"] = lessons
+        out.append(course)
+    collections = [{k: v for k, v in c.items() if k != "coverAssetName"} for c in collections]
+    return out, glossary, collections
 
 # Strings per warmup request. The endpoint took 100 in testing; 60 leaves
 # headroom for long glossary explanations sharing a batch.
@@ -182,12 +219,12 @@ def restore_markup(text: str, angles: list[str], term_map: dict[str, str] | None
 
 def _translate_one(target: str, text: str) -> str:
     """One string. Retries and the soft-fail live in ``mt_backend``."""
-    return mt_backend.translate_one(text, GT_TARGETS.get(target, target), source="en")
+    return mt_backend.translate_one(text, GT_TARGETS.get(target, target), source=MT_SOURCE_LANG)
 
 
 def _translate_many(target: str, texts: list[str]) -> list[str]:
     """A whole batch in one round trip — see ``mt_backend`` for why that works."""
-    return mt_backend.translate_batch(texts, GT_TARGETS.get(target, target), source="en")
+    return mt_backend.translate_batch(texts, GT_TARGETS.get(target, target), source=MT_SOURCE_LANG)
 
 
 class CatalogTranslator:
@@ -506,9 +543,8 @@ def translate_lang(lang: str, workers: int, limit: int, force_warmup: bool) -> N
     if lang not in NEW_LANGS:
         raise SystemExit(f"lang {lang} not in {NEW_LANGS}")
 
-    en_courses = json.loads((LOCALE_DIR / "courses.en.json").read_text(encoding="utf-8"))
-    en_gloss = json.loads((LOCALE_DIR / "glossary.en.json").read_text(encoding="utf-8"))
-    en_cols = json.loads((LOCALE_DIR / "collections.en.json").read_text(encoding="utf-8"))
+    # ``en_*`` names kept for the diff: the variables now hold the French source.
+    en_courses, en_gloss, en_cols = load_french_catalog()
 
     translator = CatalogTranslator(lang)
     if force_warmup:
@@ -523,11 +559,11 @@ def translate_lang(lang: str, workers: int, limit: int, force_warmup: bool) -> N
 
     print(f"  [{lang}] translating glossary (scoped={bool(limit)})…")
     if limit:
-        # Gate: translate glossary for selected courses only; keep EN for the rest
+        # Gate: translate glossary for selected courses only; keep FR for the rest
         # so the bundled file stays complete and loadable.
         partial, term_maps = translate_glossary(en_gloss, translator, course_ids)
         new_gloss = dict(en_gloss)
-        # Drop EN keys for scoped courses, replace with translated keys.
+        # Drop FR keys for scoped courses, replace with translated keys.
         for key in list(new_gloss):
             if "|" in key and key.split("|", 1)[0] in course_ids:
                 del new_gloss[key]
@@ -563,7 +599,7 @@ def translate_lang(lang: str, workers: int, limit: int, force_warmup: bool) -> N
             "courses": len(new_courses),
             "glossary": len(new_gloss),
             "collections": len(new_cols),
-            "source": "en",
+            "source": MT_SOURCE_LANG,
         },
     )
     print(
@@ -573,9 +609,7 @@ def translate_lang(lang: str, workers: int, limit: int, force_warmup: bool) -> N
 
 
 def qa(langs: list[str]) -> int:
-    en_c = json.loads((LOCALE_DIR / "courses.en.json").read_text(encoding="utf-8"))
-    en_g = json.loads((LOCALE_DIR / "glossary.en.json").read_text(encoding="utf-8"))
-    en_col = json.loads((LOCALE_DIR / "collections.en.json").read_text(encoding="utf-8"))
+    en_c, en_g, en_col = load_french_catalog()
     en_ids = [c["id"] for c in en_c]
     en_col_ids = [c["id"] for c in en_col]
     hard = 0

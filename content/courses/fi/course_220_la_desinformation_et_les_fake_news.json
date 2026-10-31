@@ -1,14 +1,14 @@
 {
   "id": "course_220_la_desinformation_et_les_fake_news",
   "title": "Miksi valeuutiset kulkevat totuutta nopeammin?",
-  "subtitle": "Makaa virusiässä",
+  "subtitle": "Valhe viraalin aikakaudella",
   "subject": "comprendreLeMonde",
   "subcategory": "Talous ja yhteiskunta",
-  "description": "Väärä tieto leviää sosiaalisessa mediassa kuusi kertaa nopeammin kuin totuus. Miksi ja miten suojella itseäsi?",
+  "description": "Väärä tieto leviää sosiaalisessa mediassa kuusi kertaa nopeammin kuin totuus. Miksi, ja miten voit suojautua siltä?",
   "hero": {
     "image": "la_desinformation_et_les_fake_news",
     "ratio": "16:9",
-    "hook": "MIT:n tutkimus osoitti, että valeuutiset etenevät Twitterissä kuusi kertaa nopeammin kuin totuus. Tässä on syy."
+    "hook": "MIT:n tutkimus osoitti, että valeuutiset leviävät Twitterissä kuusi kertaa nopeammin kuin totuus. Tässä syyt."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Poliittista tarkoitusta palveleva valehteleminen ei ole mitään uutta: siitä on löydetty jälkiä antiikista lähtien. Internet ja sosiaaliset verkostot ovat kuitenkin muuttaneet tilannetta: väärä tieto ei enää kierrä vain valtiosta sen väestölle, vaan se leviää nyt horisontaalisesti, kansalaisten välillä."
+          "text": "Valehtelu poliittisten päämäärien hyväksi ei ole mitään uutta: siitä löytyy jälkiä antiikista asti. Internet ja sosiaalinen media ovat kuitenkin muuttaneet pelin: väärä tieto ei enää kulje vain valtiolta sen kansalaisille, vaan se leviää nyt vaakasuunnassa, kansalaiselta toiselle."
         },
         {
           "type": "paragraph",
-          "text": "Tämä muutos on luonut maailman, jossa totuus näyttää joskus valinnaiselta viraalisuuden edessä. Ymmärtäminen, kuinka **disinformaatiota** leviää ja kuka siitä hyötyy, on tullut olennaiseksi kansalaisten välisen luottamuksen säilyttämiseksi."
+          "text": "Tämä murros on luonut maailman, jossa totuus tuntuu joskus olevan vapaaehtoista viraalisuuden rinnalla. On tullut välttämättömäksi ymmärtää, miten **disinformaatio** leviää ja kuka siitä hyötyy, jotta kansalaisten välinen luottamus säilyy."
         }
       ]
     },
@@ -33,26 +33,26 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Meidän on erotettava disinformaatio, joka on tarkoituksella levitetty manipuloidaksemme, yksinkertaisista rehellisistä virheistä. Tämän valeuutisen menestys riippuu siitä, mitä tutkijat kutsuvat huomiotaloudeksi: sosiaalisen median algoritmit on suunniteltu maksimoimaan näyttöaika, ja aivomme reagoivat voimakkaammin tunteisiin ja sokkiin kuin vivahteisiin."
+          "text": "Disinformaatio, jota levitetään tahallaan manipulointitarkoituksessa, on erotettava vilpittömästä erehdyksestä. Valeuutisten menestys perustuu siihen, mitä tutkijat kutsuvat **huomiotaloudeksi**: sosiaalisen median algoritmit on suunniteltu maksimoimaan ruudun ääressä vietetty aika, ja aivomme reagoivat voimakkaammin tunteisiin ja järkytykseen kuin vivahteisiin."
         },
         {
           "type": "funFact",
-          "text": "[[MIT]]:n vuonna 2018 julkaisema tutkimus osoitti, että valeuutiset leviävät noin 6 kertaa nopeammin kuin vahvistetut uutiset Twitterissä, koska ne näyttävät uudemmilta ja emotionaalisesti voimakkaammilta."
+          "text": "[[MIT]]-yliopiston vuonna 2018 julkaisema tutkimus osoitti, että Twitterissä väärä tieto leviää noin 6 kertaa nopeammin kuin tarkistettu tieto, koska se vaikuttaa uudemmalta ja tunnepitoisemmalta."
         },
         {
           "type": "paragraph",
-          "text": "Algoritmit lukitsevat myös Internetin käyttäjät [[suodatinkuplia]]:lle: ne näyttävät heille vain sisältöä, joka vahvistaa heidän jo olemassa olevia mielipiteitään. Salaliittoteoriasta vakuuttunut henkilö näkee jokaisen uuden väärän tiedon lisätodisteena, mikä tekee mahdollisesta myöhemmästä korjauksesta erittäin vaikeaa."
+          "text": "Algoritmit rakentavat internetin käyttäjien ympärille myös [[suodatinkuplia]]: ne näyttävät heille vain sisältöä, joka vahvistaa heidän valmiiksi omaksumiaan mielipiteitä. Salaliittoteoriaan vakuuttunut ihminen näkee silloin jokaisen uuden valeuutisen lisätodisteena, minkä vuoksi myöhempi oikaisu on hyvin vaikeaa."
         }
       ]
     },
     {
       "id": "course_220_la_desinformation_et_les_fake_news_p2",
-      "title": "Valheiden toimiala valtioiden ja voiton välillä",
+      "title": "Valheteollisuus valtioiden ja rahan välissä",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Disinformaatiosta on tullut todellinen toimiala. Venäjän kaltaiset valtiot ovat Internet Research Agencyn kautta luoneet tuhansia väärennettyjä automatisoituja tilejä herättääkseen jännitteitä länsimaisissa demokratioissa, yrittämättä edes puolustaa tiettyä leiriä: tavoitteena on usein luoda kaaos ja saada ihmiset uskomaan, että \"kaikki valehtelevat\"."
+          "text": "Disinformaatiosta on tullut kokonainen teollisuudenala. Esimerkiksi Venäjä on luonut Internet Research Agencyn kautta tuhansia automatisoituja valetilejä lietsoakseen jännitteitä länsimaisissa demokratioissa, edes yrittämättä puolustaa mitään tiettyä puolta: tavoitteena on usein luoda kaaosta ja saada ihmiset uskomaan, että ”kaikki valehtelevat”."
         },
         {
           "type": "image",
@@ -62,7 +62,7 @@
         },
         {
           "type": "paragraph",
-          "text": "On myös puhtaasti tuottoisa ulottuvuus: Pohjois-Makedoniassa sijaitsevassa Velesin kaupungissa nuoret yrittäjät loivat sensaatiomaisia sivustoja vuonna 2016 ilman poliittista vakaumusta vain ansaitakseen rahaa sosiaalisten verkostojen liikenteellä. Valheesta tulee sitten yksinkertainen kannattava hyödyke."
+          "text": "Ilmiöllä on myös puhtaasti rahallinen puoli: Pohjois-Makedonian Velesin kaupungissa nuoret yrittäjät perustivat vuonna 2016 sensaatiohakuisia sivustoja ilman minkäänlaista poliittista vakaumusta, pelkästään tienatakseen sosiaalisesta mediasta tulevalla liikenteellä. Valheesta tulee silloin pelkkä kannattava kauppatavara."
         }
       ]
     },
@@ -73,30 +73,30 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Tämän tulvan edessä tiedon maailma järjestyy. **faktien tarkastamisesta**:stä, eli tosiasioiden todentamisesta, on tullut oma journalistinen tieteenala. Toimistot, kuten [[AFP]] tai erikoistuneet toimitukset, käyttävät kuvahakutyökaluja väärennösten havaitsemiseen ja epäilyttävän sisällön analysoimiseen."
+          "text": "Tulvaa vastaan tiedonvälityksen maailma on alkanut järjestäytyä. **Faktantarkistuksesta** eli tosiasioiden todentamisesta on tullut oma journalismin erikoisalansa. Uutistoimistot, kuten [[AFP]], ja erikoistuneet toimitukset käyttävät kuvahakutyökaluja paljastaakseen väärennöksiä ja analysoidakseen epäilyttävää sisältöä."
         },
         {
           "type": "paragraph",
-          "text": "Mutta kilpailu hyökkäyksen ja puolustuksen välillä on edelleen epätasainen. [[syvät väärennökset]], tekoälyn väärentämät videot, joissa ihminen pakotetaan sanomaan mitä tahansa häiritsevällä realismilla, tekee oikean ja valheen erottamisesta yhä vaikeampaa kouluttautumattomalle silmälle."
+          "text": "Kisa hyökkäyksen ja puolustuksen välillä on kuitenkin yhä epätasainen. Kun mukaan ovat tulleet [[syväväärennökset]], eli tekoälyllä manipuloidut videot, joissa kenet tahansa saadaan sanomaan mitä tahansa hämmentävän aidon näköisesti, toden ja väärän erottaminen käy harjaantumattomalle silmälle yhä vaikeammaksi."
         }
       ]
     },
     {
       "id": "course_220_la_desinformation_et_les_fake_news_p4",
-      "title": "Luottamuksen löytäminen kuvien maailmaan",
+      "title": "Luottamuksen palauttaminen kuvien maailmassa",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Väärininformaation pitkän aikavälin vaikutus on syvä: puhumme nyt **post-totuuden** aikakaudesta, jossa objektiivisilla tosiasioilla on joskus vähemmän painoarvoa kuin tunteilla ja henkilökohtaisilla uskomuksilla. Tämä yleinen suhteellisuus heikentää luottamusta, jota tarvitaan maailmanlaajuisten haasteiden, kuten ilmaston tai kansanterveyden, yhdessä käsittelemiseksi."
+          "text": "Disinformaation pitkän aikavälin vaikutus on syvä: nyt puhutaan **totuudenjälkeisestä** ajasta, jossa objektiiviset tosiasiat painavat joskus vähemmän kuin tunteet ja henkilökohtaiset uskomukset. Tämä kaiken suhteellistaminen heikentää luottamusta, jota tarvitaan, jotta ilmaston ja kansanterveyden kaltaisiin maailmanlaajuisiin haasteisiin voidaan vastata yhdessä."
         },
         {
           "type": "paragraph",
-          "text": "Vakavin vastaus on mediakasvatus: lähteen todentamisen oppiminen, useiden tietojen ristiinviittaus ja algoritmien toiminnan ymmärtäminen. Jotkut luottavat myös sisällön sertifiointitekniikoihin varmistaakseen videon alkuperän sen luomisesta lähtien. Sillä välin kaikkien valppaus on ensimmäinen puolustuslinja."
+          "text": "Vankin vastaus on yhä mediakasvatus: opetellaan tarkistamaan lähde, vertailemaan useita tietolähteitä ja ymmärtämään, miten algoritmit toimivat. Jotkut panostavat myös sisällön varmennustekniikoihin, jotka takaavat videon alkuperän heti sen syntyhetkestä. Siihen asti jokaisen oma valppaus on ensimmäinen puolustuslinja."
         },
         {
           "type": "takeaway",
-          "text": "Väärä tieto leviää sosiaalisissa verkostoissa keskimäärin 6 kertaa nopeammin kuin totuus, koska se hyödyntää tunteitamme ja uutuudenhimoamme. Deepfakejen ja peikkofarmien edessä mediakasvatus on edelleen paras ase kollektiivisen luottamuksen säilyttämiseksi."
+          "text": "Väärä tieto leviää sosiaalisessa mediassa keskimäärin 6 kertaa nopeammin kuin totuus, koska se hyödyntää tunteitamme ja uutuudennälkäämme. Syväväärennöksiä ja trollitehtaita vastaan mediakasvatus on yhä paras ase yhteisen luottamuksen säilyttämiseksi."
         }
       ]
     }

@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Od desátých let 21. století se vžila jedna věta: **data** prý jsou „ropa 21. století“. Myšlenka je jednoduchá: jakmile je algoritmy vyčistí a zpracují, stanou se motorem hospodářského růstu i světové moci."
+          "text": "Od desátých let 21. století se vžila jedna věta: **data** prý jsou „ropa 21. století“. Myšlenka je jednoduchá: jakmile je algoritmy zpracují, stanou se motorem hospodářského růstu i světové moci."
         },
         {
           "type": "paragraph",
-          "text": "Na rozdíl od ropy, zdroje, který se vyčerpá, se data nikdy nespotřebují: jde je kopírovat donekonečna a čím víc je křížíš s dalšími informacemi, tím rostou na ceně. Právě proto přepsala světovou ekonomiku."
+          "text": "Ropa je zdroj, který dojde. Data se ale nikdy nespotřebují: dají se kopírovat donekonečna a čím víc je propojuješ s dalšími informacemi, tím jsou cennější. Podívej se, proč překreslila světovou ekonomiku."
         }
       ]
     },
@@ -33,15 +33,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Skutečná cena dat neleží v obyčejném seznamu jmen nebo adres, ale v tom, že umí předpovědět naše budoucí chování. Každé hledání, každá cesta, každé kliknutí zanechá stopu, kterou technologické firmy sbírají, aby z nich složily velmi přesný portrét každého člověka."
+          "text": "Skutečná hodnota dat nespočívá v pouhém seznamu jmen nebo adres, ale v tom, že umí předpovědět naše budoucí chování. Každé hledání, každá cesta, každé kliknutí zanechá stopu. Technologické firmy tyto stopy sbírají a skládají z nich velmi přesný obraz každého člověka."
         },
         {
           "type": "funFact",
-          "text": "Facebook umí zachytit důležitou životní změnu, třeba svatbu nebo stěhování, které teprve přijdou, ještě než si to dotyčný plně uvědomí, protože zachytí drobné posuny v jeho online zvycích."
+          "text": "Facebook umí odhalit důležitou životní změnu, třeba blížící se svatbu nebo stěhování, ještě než si ji dotyčný plně uvědomí. Stačí mu k tomu zachytit drobné změny v jeho chování na internetu."
         },
         {
           "type": "paragraph",
-          "text": "Tohle systematické těžení z našeho chování dalo vzniknout tomu, čemu badatelka Shoshana Zuboff říká **kapitalismus dohledu**: člověk už není jen zákazník, stává se surovinou systému, který prodává předpovědi tomu, kdo nabídne víc."
+          "text": "Toto systematické vytěžování našeho chování dalo vzniknout tomu, čemu badatelka Shoshana Zuboffová říká **dohledový kapitalismus**: člověk už není jen zákazník, stává se surovinou systému, který prodává předpovědi tomu, kdo nabídne nejvíc."
         }
       ]
     },
@@ -52,7 +52,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Datová ekonomika funguje jako příznivý kruh: čím víc dat firma vlastní, tím víc se její služba zlepší, což přitáhne ještě víc uživatelů, a ti vygenerují zase víc dat. Umělá inteligence ten jev zrychlila: algoritmus [[strojové učení]], trénovaný na miliardách příkladů, je přesnější a rychleji se dá vylepšit než soupeř s omezenými zdroji."
+          "text": "Datová ekonomika funguje jako kruh, který se sám posiluje: čím víc dat firma má, tím lepší je její služba, což přitáhne víc uživatelů, a ti vytvoří ještě víc dat. Umělá inteligence tento jev zrychlila: algoritmus pro [[strojové učení]] natrénovaný na miliardách příkladů je přesnější a dá se rychleji vylepšovat než u konkurenta s omezenými zdroji."
         },
         {
           "type": "image",
@@ -68,7 +68,7 @@
     },
     {
       "id": "course_218_le_role_des_donnees_le_petrole_du_xxie_s_p3",
-      "title": "Evropa vrací úder s GDPR",
+      "title": "Evropa vrací úder: GDPR",
       "free": false,
       "blocks": [
         {
@@ -92,15 +92,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Vedle ekonomiky se data stala i nástrojem moci pro státy samotné, které jimi mohou sledovat vlastní obyvatelstvo nebo tlačit veřejné mínění. Země, které data svých občanů nedokážou ochránit, riskují jistou technologickou závislost, tedy zásah do toho, čemu se říká [[digitální suverenita]]."
+          "text": "Data se nestala jen ekonomickou silou, ale i nástrojem moci pro samotné státy, které je mohou využít ke sledování vlastních obyvatel nebo k ovlivňování veřejného mínění. Země, které data svých občanů nedokážou ochránit, riskují technologickou závislost, tedy zásah do toho, čemu se říká [[digitální suverenita]]."
         },
         {
           "type": "paragraph",
-          "text": "Velká výzva příštích desetiletí bude najít rovnováhu mezi pokrokem, který umožňuje analýza dat ve velkém měřítku, a respektem k soukromí, základní podmínkou osobní svobody v čím dál propojenější společnosti."
+          "text": "Velkou výzvou příštích desetiletí bude najít rovnováhu mezi pokrokem, který umožňuje analýza obrovského množství dat, a ochranou soukromí, základní podmínkou osobní svobody ve stále propojenější společnosti."
         },
         {
           "type": "takeaway",
-          "text": "Data se stala strategickým aktivem, jehož cena plyne z toho, že umí předpovědět naše chování. Tahle ekonomika nahrává technologickým obrům, kterým skoro nejde konkurovat, a Evropa na to odpovídá tvrdou regulací: GDPR."
+          "text": "Data se stala strategickým aktivem, jehož hodnota plyne z toho, že umí předpovědět naše chování. Tato ekonomika nahrává technologickým obrům, kterým skoro nejde konkurovat, a Evropa na to odpovídá přísnou regulací: GDPR."
         }
       ]
     }

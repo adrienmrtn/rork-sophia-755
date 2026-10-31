@@ -4,11 +4,11 @@
   "subtitle": "Verdensøkonomiens nerve",
   "subject": "comprendreLeMonde",
   "subcategory": "Økonomi og samfund",
-  "description": "Prisen på olie er ikke fastsat af en enkelt sælger. Den er født af en **lejr** mellem producerende lande, finansmarkeder og pludselige kriser, nogle gange til det absurde.",
+  "description": "Olieprisen fastsættes ikke af en enkelt sælger. Den opstår i et **tovtrækkeri** mellem producentlande, finansmarkeder og pludselige kriser, nogle gange helt ud i det absurde.",
   "hero": {
     "image": "comment_fonctionne_le_prix_du_petrole",
     "ratio": "16:9",
-    "hook": "I 2020 betalte oliesælgere deres købere for at komme af med dem. Her er hvorfor."
+    "hook": "I 2020 betalte oliesælgere deres købere for at blive af med olien. Her er forklaringen."
   },
   "sections": [
     {
@@ -18,22 +18,22 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Olie kaldes undertiden \"økonomiens blod\". Dens pris påvirker inflationen, prisen på benzin og endda stabiliteten i visse lande. Ingen sætter dog denne pris med et stempel."
+          "text": "Olie kaldes undertiden »økonomiens blod«. Prisen påvirker inflationen, benzinprisen og endda stabiliteten i visse lande. Alligevel er der ingen, der bare fastsætter prisen med et stempel."
         },
         {
           "type": "paragraph",
-          "text": "Det udspringer af et møde mellem tre kræfter: landene, der udvinder olien, de finansielle markeder, der handler med den, før den overhovedet forlader jorden, og kriserne, der får alle til at gå i panik. Tag til Arabiens ørkener, Texas-sletten og Chicagos skærme."
+          "text": "Den opstår i mødet mellem tre kræfter: de lande, der udvinder olien, finansmarkederne, der handler med den, før den overhovedet er kommet op af jorden, og kriserne, der får alle til at gå i panik. Turen går til Arabiens ørkener, Texas' sletter og skærmene i Chicago."
         }
       ]
     },
     {
       "id": "course_211_comment_fonctionne_le_prix_du_petrole_p1",
-      "title": "OPEC versus amerikansk skifer: kampen om forsyningen",
+      "title": "OPEC mod amerikansk skiferolie: kampen om udbuddet",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Oliemarkedet har en særegenhed: På kort sigt falder efterspørgslen næsten ikke, når priserne stiger. Biler, fabrikker og fly kan ikke ændre energi fra den ene dag til den anden. Økonomer kalder dette efterspørgslens **uelasticitet**."
+          "text": "Oliemarkedet har en særlig egenskab: på kort sigt falder efterspørgslen næsten ikke, når priserne stiger. Biler, fabrikker og fly kan ikke skifte energikilde fra den ene dag til den anden. Økonomer kalder det efterspørgslens **uelasticitet**."
         },
         {
           "type": "paragraph",
@@ -45,18 +45,18 @@
         },
         {
           "type": "paragraph",
-          "text": "Men denne magt er blevet rokket ved. Takket være en teknik kaldet hydraulisk frakturering blev USA verdens største olieproducent på ti år og overhalede Saudi-Arabien. Dette nye tilbud, som er hurtigere at tilpasse, har gjort markedet mere konkurrencedygtigt og sværere for OPEC+ at kontrollere."
+          "text": "Men den magt er blevet udfordret. Takket være en teknik, der hedder hydraulisk frakturering, blev USA på ti år verdens største olieproducent og overhalede Saudi-Arabien. Det nye udbud, som hurtigere kan tilpasses, har gjort markedet mere konkurrencepræget og sværere for OPEC+ at styre."
         }
       ]
     },
     {
       "id": "course_211_comment_fonctionne_le_prix_du_petrole_p2",
-      "title": "\"Papir\" olie: når økonomi bliver involveret",
+      "title": "»Papirolie«: når finansverdenen blander sig",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ud over de faktiske tønder leveret med skib eller rørledning, handles olie også på de finansielle markeder. De fleste transaktioner går gennem et futuresmarked: vi køber en tønde i dag, som kun vil blive leveret om en, tre eller seks måneder."
+          "text": "Ud over de fysiske tønder, der leveres med skib eller rørledning, handles olie også på finansmarkederne. De fleste handler går gennem et futuresmarked: her køber man i dag en tønde, som først bliver leveret om en, tre eller seks måneder."
         },
         {
           "type": "image",
@@ -66,30 +66,30 @@
         },
         {
           "type": "paragraph",
-          "text": "Banker og hedgefonde køber og sælger disse kontrakter uden nogensinde at ville røre en eneste tønde: de satser simpelthen på, om priserne vil stige eller falde. Dette bringer penge til markedet, men gør også priserne mere nervøse. To priser tjener som reference i verden: [[Brent]], olie fra Nordsøen, og WTI, olie fra Texas. Kløften mellem de to afspejler forskelle i kvalitet og transport."
+          "text": "Banker og hedgefonde køber og sælger disse kontrakter uden nogensinde at ville røre en eneste tønde: de satser blot på, om priserne stiger eller falder. Det tilfører markedet penge, men gør også priserne mere nervøse. To priser bruges som reference i verden: [[Brent]], olie fra Nordsøen, og WTI, olie fra Texas. Forskellen mellem de to afspejler forskelle i kvalitet og transport."
         }
       ]
     },
     {
       "id": "course_211_comment_fonctionne_le_prix_du_petrole_p3",
-      "title": "Priserne kollapser... eller eksploderer",
+      "title": "Priser, der styrtdykker ... eller eksploderer",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Oliemarkedet opererer i brutale cyklusser. Når priserne stiger i længere tid, investerer producenterne i dyre indskud, hvilket i sidste ende skaber et overudbud. Når priserne forbliver lave, sker det modsatte: Vi udforsker mindre, hvilket forbereder den næste mangel."
+          "text": "Oliemarkedet bevæger sig i brutale cyklusser. Når priserne stiger længe, investerer producenterne i dyre oliefelter, og det skaber på sigt et overudbud. Når priserne forbliver lave, sker det modsatte: man leder mindre efter ny olie, og det baner vejen for den næste mangel."
         },
         {
           "type": "paragraph",
-          "text": "COVID-19-krisen har vist dette spektakulært. I april 2020 gik den globale økonomi pludselig i stå: ingen fløj eller kørte, men brøndene fortsatte med at producere. Lagertankene var fyldt til randen. Prisen på WTI faldt derefter til minus $37: sælgere betalte deres købere for at rydde deres aktier."
+          "text": "COVID-19-krisen viste det på spektakulær vis. I april 2020 gik verdensøkonomien pludselig i stå: ingen fløj eller kørte bil længere, men brøndene blev ved med at producere. Lagertankene blev fyldt helt op. Prisen på WTI faldt til minus 37 dollar: sælgere betalte deres købere for at tage lagrene fra dem."
         },
         {
           "type": "paragraph",
-          "text": "Omvendt, i 2022, rejste Ruslands invasion af Ukraine frygten for en mangel: Rusland, som er den næststørste eksportør i verden, oversteg Brent $130 på få uger. Olie er derfor fortsat et nervøst barometer for verdensspændinger."
+          "text": "Omvendt fik Ruslands invasion af Ukraine i 2022 folk til at frygte mangel: da Rusland er verdens næststørste eksportør, steg Brent til over 130 dollar på få uger. Olien er derfor stadig et nervøst barometer for spændingerne i verden."
         },
         {
           "type": "funFact",
-          "text": "Det kræver omkring 7 liter olie at lave en enkelt smartphone, mellem udvinding af materialer, plastikdele og transport."
+          "text": "Der skal omkring 7 liter olie til at fremstille en enkelt smartphone, når man regner udvinding af materialer, plastikdele og transport med."
         }
       ]
     },
@@ -100,15 +100,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "På lang sigt står olien over for en ny udfordring: overgangen til ren energi. Hvis elbiler reducerer den globale efterspørgsel, kan producerende lande deltage i en priskrig for at sælge deres reserver, før de mister deres værdi."
+          "text": "På lang sigt står olien over for en ny udfordring: overgangen til ren energi. Hvis elbiler mindsker verdens efterspørgsel, kan producentlandene kaste sig ud i en priskrig for at sælge deres reserver, før de mister deres værdi."
         },
         {
           "type": "paragraph",
-          "text": "Et paradoks truer imidlertid markedet: Efterhånden som investorer opgiver nye olieprojekter af klimamæssige årsager, kan udbuddet falde hurtigere end efterspørgslen og forårsage nye prisstigninger. Olie forsvinder ikke pludseligt: den er fortsat vigtig for plastik, gødning og tung transport såsom luftfart."
+          "text": "Et paradoks truer dog markedet: fordi investorer af klimahensyn vender ryggen til nye olieprojekter, kan udbuddet falde hurtigere end efterspørgslen og give nye voldsomme prisstigninger. Olien forsvinder ikke fra den ene dag til den anden: den er stadig uundværlig for plastik, gødning og tung transport som luftfart."
         },
         {
           "type": "takeaway",
-          "text": "Prisen på olie er resultatet af en strid mellem OPEC+, amerikansk skiferproduktion og spekulative finansmarkeder. Resultat: priser, der er i stand til at kollapse eller eksplodere ved det mindste geopolitiske chok."
+          "text": "Olieprisen er resultatet af et tovtrækkeri mellem OPEC+, den amerikanske skiferolie og spekulative finansmarkeder. Resultatet: kurser, der kan styrtdykke eller eksplodere ved det mindste geopolitiske chok."
         }
       ]
     }

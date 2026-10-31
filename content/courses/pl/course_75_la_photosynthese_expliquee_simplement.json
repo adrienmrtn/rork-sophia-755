@@ -1,14 +1,14 @@
 {
   "id": "course_75_la_photosynthese_expliquee_simplement",
-  "title": "Fotosynteza wyjaśniona prosto",
+  "title": "Fotosynteza w prostych słowach",
   "subtitle": "Rośliny i energia",
   "subject": "sciences",
   "subcategory": "Ziemia i Wszechświat",
-  "description": "Rośliny robią coś niezwykłego: gotują cukier ze światła, wody i powietrza. A nam, przy okazji, oddają tlen w prezencie, bez którego nie oddychasz.",
+  "description": "Rośliny robią coś niezwykłego: gotują cukier ze światła, wody i powietrza. A w prezencie dają nam tlen.",
   "hero": {
     "image": "la_photosynthese_expliquee_simplement",
     "ratio": "16:9",
-    "hook": "Liść to kuchenka słoneczna: światło, woda, powietrze... i masz cukier."
+    "hook": "Liść to słoneczna kuchnia: światło, woda, powietrze… i gotowe, jest cukier."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Wyobraź sobie miniaturową fabrykę w każdym liściu. Bierze trzy zwykłe składniki: **światło Słońca**, **wodę** z korzeni i **CO₂** z powietrza. Na wyjściu daje **cukier**, żeby rosnąć, i wypuszcza **tlen**."
+          "text": "Wyobraź sobie miniaturową fabrykę w każdym liściu. Bierze trzy zwykłe składniki: **światło słoneczne**, **wodę** z korzeni i **CO₂** z powietrza. Wytwarza z nich **cukier**, dzięki któremu roślina rośnie, i wypuszcza **tlen**."
         },
         {
           "type": "paragraph",
-          "text": "Ten popis nazywa się **fotosynteza**. Bez niego nie ma lasów, nie ma tlenu do oddychania, prawie nie ma złożonego życia na Ziemi."
+          "text": "To niezwykłe zjawisko nazywa się **fotosyntezą**. Bez niego nie byłoby lasów, tlenu do oddychania ani prawie żadnego złożonego życia na Ziemi."
         }
       ]
     },
@@ -33,40 +33,40 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "W komórce roślinnej zielone organelle, **chloroplasty**, kryją [[chlorofil]]. Ten barwnik łapie głównie błękit i czerwień ze światła. Zieleń odbija z powrotem: właśnie dlatego liście wydają nam się zielone."
+          "text": "W komórce roślinnej zielone organelle, **chloroplasty**, zawierają [[chlorofil]]. Ten barwnik pochłania głównie niebieską i czerwoną część światła. Zieleń zostaje odbita: dlatego liście wydają nam się zielone."
         },
         {
           "type": "image",
           "asset": "leaf_photosynthesis_sunlight_chloroplasts",
           "ratio": "auto",
-          "caption": "Liście łapią światło Słońca, żeby napędzić fotosyntezę."
+          "caption": "Liście wychwytują światło słoneczne potrzebne do fotosyntezy."
         },
         {
           "type": "paragraph",
-          "text": "Proste równanie: CO₂ + woda + światło → cukier + tlen. Gaz wchodzi przez malutkie pory, [[szparki]]. Woda idzie w górę z korzeni. Cukier staje się drewnem, owocami, korzeniami; tlen uchodzi w powietrze."
+          "text": "Proste równanie: CO₂ + woda + światło → cukier + tlen. Gaz wnika przez malutkie pory, [[szparki]]. Woda wędruje w górę od korzeni. Cukier staje się drewnem, owocami, korzeniami, a tlen trafia do powietrza."
         },
         {
           "type": "funFact",
-          "text": "Chlorofil „odmawia” zieleni. Woli błękit i czerwień, skuteczniejsze, gdy trzeba pobudzić elektrony i uruchomić maszynę energetyczną."
+          "text": "Chlorofil „odrzuca” zieleń. Woli błękit i czerwień, bo lepiej pobudzają jego elektrony i uruchamiają maszynę energetyczną."
         }
       ]
     },
     {
       "id": "course_75_la_photosynthese_expliquee_simplement_p2",
-      "title": "Dwa etapy: złapać, potem zbudować",
+      "title": "Dwa etapy: wychwycić, potem wytworzyć",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Najpierw **faza świetlna**. Światło rozbija cząsteczki wody. Tlen ucieka. Energia ląduje w dwóch chemicznych „bateriach”, **ATP** i **NADPH**."
+          "text": "Najpierw **faza świetlna**. Światło rozbija cząsteczki wody. Tlen ucieka. Energia zostaje zmagazynowana w dwóch chemicznych „bateriach”: **ATP** i **NADPH**."
         },
         {
           "type": "paragraph",
-          "text": "Potem **faza budowy**, [[Cykl Calvina]], nazwany od chemika **Melvina Calvina**. Energią z baterii roślina składa węgiel z CO₂ w glukozę. Na tym etapie nie trzeba bezpośredniego słońca, ale wszystko zależy od tego, co światło wyprodukowało wcześniej."
+          "text": "Potem **faza wytwarzania**, czyli [[Cykl Calvina]], nazwany na cześć chemika **Melvina Calvina**. Dzięki energii z tych baterii roślina wbudowuje węgiel z CO₂ w glukozę. Na tym etapie nie potrzeba bezpośredniego słońca, ale wszystko zależy od tego, co światło wytworzyło wcześniej."
         },
         {
           "type": "funFact",
-          "text": "Żeby śledzić drogę węgla w liściu, Calvin użył izotopów radioaktywnych, które wzięły się z badań nad bombą atomową. Nagroda Nobla w **1961**."
+          "text": "Żeby śledzić drogę węgla w liściu, Calvin użył izotopów promieniotwórczych pochodzących z badań nad bombą atomową. Nagroda Nobla w **1961** roku."
         }
       ]
     },
@@ -77,15 +77,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Około **2,4 miliarda lat** temu bakterie fotosyntetyczne, **sinice**, zaczęły masowo wypuszczać tlen do atmosfery. To **Wielka Oksydacja**. Dla wielu ówczesnych organizmów ten gaz był trucizną."
+          "text": "Około **2,4 miliarda lat** temu bakterie fotosyntetyzujące, **sinice**, zaczęły masowo wypuszczać tlen. To **wielkie zdarzenie oksydacyjne**. Dla wielu ówczesnych organizmów ten gaz był trucizną."
         },
         {
           "type": "paragraph",
-          "text": "Potem tlen pozwolił na warstwę ozonu i znacznie sprawniejsze oddychanie. Powietrze, którym oddychamy, to w dużym stopniu „odpad” miliardów lat fotosyntezy."
+          "text": "Potem tlen umożliwił powstanie warstwy ozonowej i znacznie wydajniejsze oddychanie. Powietrze, którym oddychamy, to w gruncie rzeczy „odpad” miliardów lat fotosyntezy."
         },
         {
           "type": "funFact",
-          "text": "Około **połowy** ziemskiego tlenu daje fitoplankton oceanów, a nie tylko lasy na lądzie."
+          "text": "Około **połowy** tlenu na Ziemi pochodzi z oceanicznego fitoplanktonu, a nie tylko z lasów."
         }
       ]
     },
@@ -100,7 +100,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Stąd waga lasów, oceanów... i nawet sztucznej fotosyntezy dla klimatu. Ślimak morski *Elysia chlorotica* idzie dalej: „kradnie” chloroplasty glonom, żeby trochę żyć na energii słonecznej."
+          "text": "Dlatego tak ważne dla klimatu są lasy, oceany… a nawet sztuczna fotosynteza. Morski ślimak *Elysia chlorotica* posuwa się wręcz do „kradzieży” chloroplastów glonom, by choć trochę żyć z energii słonecznej."
         },
         {
           "type": "takeaway",

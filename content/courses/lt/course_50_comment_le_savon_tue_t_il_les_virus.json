@@ -1,0 +1,100 @@
+{
+  "id": "course_50_comment_le_savon_tue_t_il_les_virus",
+  "title": "Kaip muilas naikina virusus?",
+  "subtitle": "Higiena",
+  "subject": "sciences",
+  "subcategory": "Notre quotidien expliqué",
+  "description": "Muilas nėra „stebuklingas“. Jis ardo riebalinį kai kurių virusų apvalkalą ir nuplauna juos nuo tavo odos. Sužinok, kodėl svarbios 20 sekundžių.",
+  "hero": {
+    "image": "comment_le_savon_tue_les_virus",
+    "ratio": "16:9",
+    "hook": "Paprastas ginklas prieš virusus: molekulės, kurios mėgsta vandenį… ir riebalus."
+  },
+  "sections": [
+    {
+      "id": "course_50_comment_le_savon_tue_t_il_les_virus_intro",
+      "title": "Įvadas",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Per COVID-19 pandemiją labai paprastas veiksmas vėl tapo svarbiausiu: plauti rankas su muilu. Nereikia jokios laboratorijos. Tik vandens, muilo ir šiek tiek laiko."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kodėl tai taip gerai veikia? Todėl, kad daugelį pavojingų virusų gaubia riebalinis apvalkalas. O muilas puikiai ardo riebalus."
+        }
+      ]
+    },
+    {
+      "id": "course_50_comment_le_savon_tue_t_il_les_virus_p1",
+      "title": "Kai kurių virusų silpnoji vieta",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kai kurie virusai, pavyzdžiui, **koronavirusai** ar gripo virusas, turi išorinį apvalkalą iš lipidų (riebalų). Šis apvalkalas juos saugo… kol susiduria su muilu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kiti virusai, vadinamieji „nuogi“, tokio apvalkalo neturi. Jie atsparesni muilui ir alkoholiui. Laimei, daugelis virusų, plintančių per rankas ir lašelius, turi apvalkalą."
+        }
+      ]
+    },
+    {
+      "id": "course_50_comment_le_savon_tue_t_il_les_virus_p2",
+      "title": "Muilas: dviveidė molekulė",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "handwashing_soap_water_hands",
+          "ratio": "4:3",
+          "caption": "Trynimas padeda muilui pasiekti visus rankų kampelius."
+        },
+        {
+          "type": "paragraph",
+          "text": "Muilo molekulės yra [[paviršinio aktyvumo medžiagos]]. Jos turi vandenį mėgstančią galvutę ir riebalus mėgstančią uodegėlę. Uodegėlė įsiskverbia į riebalinį viruso apvalkalą. Galvutė lieka atsukta į vandenį."
+        },
+        {
+          "type": "paragraph",
+          "text": "Rezultatas: apvalkalas suplyšta. Virusas nebeveiklus. Tada vanduo nuplauna likučius. Muilas nedegina viruso kaip rūgštis: jis viruso apvalkalą **ištirpdo** ir pašalina."
+        },
+        {
+          "type": "funFact",
+          "text": "Tuo pačiu principu nuo keptuvės nusiplauna riebalai: muilas prikimba prie riebalų ir leidžia vandeniui juos nuplauti."
+        }
+      ]
+    },
+    {
+      "id": "course_50_comment_le_savon_tue_t_il_les_virus_p3",
+      "title": "Kodėl 20 sekundžių",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Reikia laiko, kad muilas pasiektų visas raukšles: tarp pirštų, po nagais, aplink riešus. Dažniausiai rekomenduojamas minimumas yra apie **20 sekundžių** trynimo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Be trynimo muilas veikia prasčiau. Vien vanduo irgi nepadės: jis veiksmingai neardo riebalinio apvalkalo."
+        }
+      ]
+    },
+    {
+      "id": "course_50_comment_le_savon_tue_t_il_les_virus_p4",
+      "title": "Muilas ar dezinfekcinis gelis?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Gelis, kuriame yra bent **60 %** alkoholio, taip pat gali sunaikinti daugelį apvalkalą turinčių virusų. Tačiau jei matyti nešvarumų ar riebalų, gelis veikia prasčiau: nešvarumai sudaro barjerą. Tokiu atveju geriausia rinktis muilą ir vandenį."
+        },
+        {
+          "type": "takeaway",
+          "text": "Muilas sunaikina daugelį virusų suplėšydamas jų riebalinį apvalkalą ir nuplaudamas juos vandeniu. Laikas + trynimas = veiksmingumas."
+        }
+      ]
+    }
+  ]
+}

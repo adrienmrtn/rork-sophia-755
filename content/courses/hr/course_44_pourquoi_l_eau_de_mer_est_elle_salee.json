@@ -1,14 +1,14 @@
 {
   "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee",
   "title": "Zašto je morska voda slana?",
-  "subtitle": "oceani",
+  "subtitle": "Oceani",
   "subject": "sciences",
   "subcategory": "Svakodnevica pod povećalom",
   "description": "Jedna litra morske vode sadrži približno 35 grama soli. Ta se sol nakupljala milijardama godina. Evo odakle dolazi.",
   "hero": {
     "image": "pourquoi_l_eau_de_mer_est_salee",
     "ratio": "16:9",
-    "hook": "Rijeke su pitome. Oceani su slani. Tajna je u vremenu i isparavanju."
+    "hook": "Rijeke su slatke. Oceani su slani. Tajna je u vremenu i isparavanju."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Oceani pokrivaju više od **70%** planeta. U prosjeku jedna litra morske vode sadrži približno **35 grama krutog**. To nije slučajnost: to je rezultat vrlo dugog procesa."
+          "text": "Oceani pokrivaju više od **70%** površine planeta. U prosjeku jedna litra morske vode sadrži otprilike **35 grama soli**. To nije slučajnost, nego rezultat vrlo dugog procesa."
         },
         {
           "type": "paragraph",
-          "text": "Sol ne “pada” s neba gotova. Putuje s kontinenata, a zatim ostaje zarobljen u oceanu."
+          "text": "Sol ne „pada” gotova s neba. Putuje s kontinenata, a zatim ostaje zarobljena u oceanu."
         }
       ]
     },
@@ -33,21 +33,21 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kiša, prolazeći kroz zrak, pokupi malo ugljičnog dioksida. Postaje blago kiselo. Dok pada na stijene, nježno ih napada: to je **kemijska erozija**."
+          "text": "Kiša na putu kroz zrak upije malo ugljičnog dioksida. Postaje blago kisela. Kad padne na stijene, polako ih nagriza: to je **kemijska erozija**."
         },
         {
           "type": "image",
           "asset": "ocean_sea_salt_evaporation",
           "ratio": "auto",
-          "caption": "Slane močvare: isparavanjem se koncentrira sol otopljena u morskoj vodi."
+          "caption": "Solane: isparavanje koncentrira sol otopljenu u morskoj vodi."
         },
         {
           "type": "paragraph",
-          "text": "Rijeke zatim nose otopljene minerale, posebno **natrij** i **klor**, dva sastojka kuhinjske soli. Bacaju ih u more."
+          "text": "Rijeke zatim odnose otopljene minerale, ponajviše **natrij** i **klor**, dva sastojka kuhinjske soli. Tako ih donose u more."
         },
         {
           "type": "funFact",
-          "text": "Podvodni vulkani i topli izvori na dnu oceana također dodaju soli. Ali glavnina ipak dolazi s kontinenata."
+          "text": "Podmorski vulkani i vrući izvori na dnu oceana također dodaju soli. Ali glavnina ipak dolazi s kontinenata."
         }
       ]
     },
@@ -58,26 +58,26 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Dobro pitanje: ako rijeke donose sol, zašto voda Rhône ili Seine nije slana? Zato što je sol tamo jako razrijeđena i zato što se voda u rijekama neprestano obnavlja."
+          "text": "Dobro pitanje: ako rijeke donose sol, zašto voda u Roni ili Seni nije slana? Zato što je sol u njima jako razrijeđena i zato što se riječna voda neprestano obnavlja."
         },
         {
           "type": "paragraph",
-          "text": "U oceanu je drugačije. Pod Suncem voda **ispari** i vrati se na nebo. Sol, **ostaje**. Godinu za godinom, stoljeće za stoljećem, gomila se. To zovemo [[hidrološki ciklus i nakupljanje soli]]."
+          "text": "U oceanu je drukčije. Pod Suncem voda **isparava** i vraća se u nebo. Sol pak **ostaje**. Iz godine u godinu, iz stoljeća u stoljeće, ona se nakuplja. To se zove [[hidrološki ciklus i nakupljanje soli]]."
         }
       ]
     },
     {
       "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_p3",
-      "title": "Sol također kruži oceanima",
+      "title": "Sol pokreće i oceanske struje",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Slana voda je **gušća** (\"teža\" za isti volumen) od slatke vode. Na polovima, kada se površinska voda smrzava, sol se djelomično oslobađa u okolnu tekuću vodu. Ova voda postaje još gušća i pada na dno."
+          "text": "Slana voda je **gušća** („teža” za isti volumen) od slatke. Na polovima, kad se površinska voda smrzava, dio soli izlučuje se u okolnu tekuću vodu. Ta voda postaje još gušća i tone prema dnu."
         },
         {
           "type": "paragraph",
-          "text": "Ovo kretanje pomaže pokretanju velikih oceanskih struja. Ove struje prenose toplinu i hranjive tvari diljem svijeta. Sol nije samo stvar okusa: ona je dio klimatskog motora planeta."
+          "text": "To kretanje pomaže pokretati velike oceanske struje. Te struje raznose toplinu i hranjive tvari po cijelom svijetu. Sol nije samo stvar okusa: ona je dio klimatskog motora planeta."
         }
       ]
     },
@@ -88,11 +88,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Salinitet nije svugdje isti. U blizini ekvatora, snažno isparavanje može koncentrirati sol. U blizini velikih rijeka ili leda koji se tope voda je mekša. Mrtvo more je ekstremni slučaj: vrlo malo vode odlazi, ostaje puno soli."
+          "text": "Slanost nije svugdje ista. Blizu ekvatora jako isparavanje može koncentrirati sol. Blizu velikih rijeka ili morskog leda koji se topi voda je manje slana. Mrtvo more je ekstreman slučaj: vrlo malo vode odlazi, a puno soli ostaje."
         },
         {
           "type": "takeaway",
-          "text": "Morska voda je slana jer rijeke donose minerale s kontinenata, a isparavanje ostavlja sol u oceanu. Ova akumulacija traje milijardama godina."
+          "text": "Morska voda je slana jer rijeke donose minerale s kontinenata, a isparavanje ostavlja sol u oceanu. To nakupljanje traje već milijardama godina."
         }
       ]
     }

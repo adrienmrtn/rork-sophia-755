@@ -1,6 +1,6 @@
 {
   "id": "course_297_d_ou_vient_vraiment_l_electricite_de",
-  "title": "Odakle zaista dolazi struja iz vaše utičnice?",
+  "title": "Odakle zaista dolazi struja iz tvoje utičnice?",
   "subtitle": "Nevidljiva mešavina",
   "subject": "comprendreLeMonde",
   "subcategory": "Životna sredina i budućnost",
@@ -19,11 +19,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Uključite telefon na punjenje, i struja stiže bez etikete. Ništa na utičnici ne kaže da li je proizvedena od sunčeve svetlosti, vode iz brane ili goriva sagorelog u nekoj elektrani. Čak ni dve kuće u istoj ulici ne mogu da pokažu elektranu iz koje dolazi svaka jedinica njihove struje."
+          "text": "Uključiš telefon na punjenje i struja stiže bez etikete. Ništa na utičnici ne kaže da li je proizvedena od sunčeve svetlosti, vode iz brane ili goriva sagorelog u nekoj elektrani. Čak ni dve kuće u istoj ulici ne mogu da pokažu elektranu iz koje dolazi svaka jedinica struje."
         },
         {
           "type": "paragraph",
-          "text": "Razlog je jednostavan: gotovo sva domaćinstva napaja ista [[električna mreža]], splet kablova koji povezuje elektrane i potrošače na jednoj teritoriji. Istovremeno je napaja više elektrana, a njihovi udeli čine ono što se zove [[energetski miks]]. Taj miks opisuje izvore koji hrane mrežu, a ne zaseban tok solarne ili gasne struje poslat pravo u vaš telefon. Odgovor, dakle, počinje daleko izvan zidova vaše kuće."
+          "text": "Razlog je jednostavan: gotovo sva domaćinstva napaja ista [[električna mreža]], splet kablova koji povezuje elektrane i potrošače na jednoj teritoriji. Istovremeno je napaja više elektrana, a njihovi udeli čine ono što se zove [[energetski miks]]. Taj miks opisuje izvore koji hrane mrežu, a ne zaseban tok solarne ili gasne struje poslat pravo u tvoj telefon. Odgovor, dakle, počinje daleko izvan zidova kuće."
         }
       ]
     },
@@ -34,7 +34,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Termoelektrane na ugalj i mnoge nuklearne elektrane koriste toplotu da bi proizvele paru. Ta para okreće točak sa lopaticama, a to je [[turbina]], povezana sa mašinom koja kretanje pretvara u električnu energiju: to je [[generator]]. Gasne elektrane mogu da okreću svoje turbine i direktno, vrelim gasovima nastalim sagorevanjem. Različiti postupci, ali ista struja, koja ulazi u istu mrežu."
+          "text": "Termoelektrane na ugalj i mnoge nuklearne elektrane koriste toplotu da bi proizvele paru. Ta para okreće skup lopatica koji se zove [[turbina]]. Ona je povezana sa mašinom koja kretanje pretvara u struju, a ta mašina je [[generator]]. Gasne elektrane mogu da okreću svoje turbine i direktno, vrelim gasovima nastalim sagorevanjem. Različiti postupci, ali ista struja, koja ulazi u istu mrežu."
         },
         {
           "type": "image",
@@ -44,7 +44,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Vetrenjače se okreću na vetru, hidroelektrane pomoću vode koja teče. Solarni paneli idu drugim putem: struju proizvode direktno iz svetlosti, bez ijedne lopatice koja se okreće. Ti izvori ne rade pod istim uslovima. Solarna proizvodnja pada kada sunce zađe, a proizvodnja iz vetra menja se sa vremenom. Elektrane koje sagorevaju gorivo tada mogu da daju struju kada drugi izvori proizvode manje."
+          "text": "U vetroelektranama turbinu okreće vetar, u hidroelektranama voda koja teče. Solarni paneli idu drugim putem: struju proizvode direktno iz svetlosti, bez ijedne lopatice koja se okreće. Ti izvori ne rade pod istim uslovima. Solarna proizvodnja pada kada sunce zađe, a proizvodnja iz vetra menja se sa vremenskim prilikama. Elektrane koje sagorevaju gorivo mogu tada da daju struju dok drugi izvori proizvode manje."
         },
         {
           "type": "funFact",
@@ -69,7 +69,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Tim spletom upravlja [[operator mreže]], organizacija koja u svakom trenutku mora da održava ravnotežu između ponude i potražnje. Neke elektrane prilagođavaju proizvodnju. Tamo gde postoje baterije, one vraćaju struju uskladištenu ranije. Drugi izvori popunjavaju prazninu koju ostavlja sunce na zalasku. Ne postoji dnevni recept: miks u podne može se veoma razlikovati od miksa nekoliko sati kasnije, iako se vaša utičnica nije promenila."
+          "text": "Tim spletom upravlja [[operator mreže]], organizacija koja u svakom trenutku mora da održava ravnotežu između ponude i potražnje. Neke elektrane prilagođavaju proizvodnju. Tamo gde postoje baterije, one vraćaju struju uskladištenu ranije. Drugi izvori popunjavaju prazninu koju ostavlja sunce na zalasku. Ne postoji dnevni recept: miks u podne može se veoma razlikovati od miksa nekoliko sati kasnije, iako se tvoja utičnica nije promenila."
         }
       ]
     },
@@ -84,7 +84,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Godišnji procenat meša sunčana popodneva, vetrovite noći i periode kada sunce i vetar proizvode malo. Sabira i sate velike i male potražnje. Da biste znali koji izvori napajaju mrežu u određenom trenutku, treba da pogledate njen miks iz sata u sat, a ne godišnji prosek. Oba pogleda su korisna, ali ne odgovaraju na isto pitanje."
+          "text": "Godišnji procenat meša sunčana popodneva, vetrovite noći i periode kada sunce i vetar proizvode malo. Sabira i sate velike i male potražnje. Da bi se saznalo koji izvori napajaju mrežu u određenom trenutku, treba gledati njen miks iz sata u sat, a ne godišnji prosek. Oba pogleda su korisna, ali ne odgovaraju na isto pitanje."
         }
       ]
     },
@@ -95,7 +95,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Satnom miksu nedostaje još jedan detalj: koja je struja zaista dostupna u vašoj oblasti. Elektrana sa jedne strane granice može da napaja mrežu sa druge strane. Ta uvezena struja meša se sa lokalnom proizvodnjom. Zato se [[miks potrošnje]], odnosno izvori koji napajaju korisnike jedne oblasti, može razlikovati od miksa proizvedenog na licu mesta."
+          "text": "Satnom miksu nedostaje još jedan detalj: koja je struja zaista dostupna na tvom području. Elektrana sa jedne strane granice može da napaja mrežu sa druge strane. Ta uvezena struja meša se sa lokalnom proizvodnjom. Zato se [[miks potrošnje]], odnosno izvori koji napajaju korisnike jednog područja, može razlikovati od miksa proizvedenog na licu mesta."
         },
         {
           "type": "image",
@@ -105,11 +105,11 @@
         },
         {
           "type": "paragraph",
-          "text": "To je važno za emisije povezane sa vašom strujom. Sagorevanje uglja ili gasa oslobađa ugljen-dioksid, gas koji zagreva planetu. Vetrenjače, solarni paneli i nuklearne elektrane ne ispuštaju ga direktno dok proizvode struju. Električna energija se ne zaustavlja na granici, a ni njen uticaj. U zavisnosti od porekla uvoza, emisije povezane sa vašom potrošnjom mogu biti veće ili manje nego što pokazuje lokalna proizvodnja."
+          "text": "To je važno za emisije povezane sa tvojom strujom. Sagorevanje uglja ili gasa oslobađa ugljen-dioksid, gas koji zagreva planetu. Vetroelektrane, solarni paneli i nuklearne elektrane ne ispuštaju ga direktno dok proizvode struju. Struja se ne zaustavlja na granici, a ni njen uticaj. U zavisnosti od porekla uvoza, emisije povezane sa tvojom potrošnjom mogu biti veće ili manje nego što pokazuje lokalna proizvodnja."
         },
         {
           "type": "takeaway",
-          "text": "Struja iz vaše utičnice je mešavina koja se menja iz sata u sat i prelazi granice, pa ni godišnji prosek ni lokalna proizvodnja sami ne govore odakle dolazi."
+          "text": "Struja iz tvoje utičnice je mešavina koja se menja iz sata u sat i prelazi granice, pa ni godišnji prosek ni lokalna proizvodnja sami ne govore odakle dolazi."
         }
       ]
     }

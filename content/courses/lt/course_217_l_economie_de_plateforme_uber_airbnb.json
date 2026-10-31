@@ -1,0 +1,108 @@
+{
+  "id": "course_217_l_economie_de_plateforme_uber_airbnb",
+  "title": "Kaip Uber ir Airbnb pakeitė darbą ir miestus?",
+  "subtitle": "Kapitalizmas be gamyklų",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Économie & société",
+  "description": "Uber, Airbnb ir Deliveroo beveik nieko neturi: nei automobilių, nei butų, nei darbuotojų. Kaip šios platformos tapo pasauliniais milžinais?",
+  "hero": {
+    "image": "l_economie_de_plateforme",
+    "ratio": "16:9",
+    "hook": "Uber niekada neturėjo nė vieno automobilio, tačiau apvertė transportą visame pasaulyje."
+  },
+  "sections": [
+    {
+      "id": "course_217_l_economie_de_plateforme_uber_airbnb_intro",
+      "title": "Įžanga",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Uber, Airbnb, Amazon ar Deliveroo priklauso naujai įmonių rūšiai: tai **skaitmeninės platformos**. Jos ne tik perkelia į skaitmeninę erdvę jau egzistavusias paslaugas: jos keičia patį būdą turėti, dirbti ir būti apsaugotam."
+        },
+        {
+          "type": "paragraph",
+          "text": "Šis modelis sukūrė visiškai naują kapitalizmo formą, kuri kelia klausimų mūsų socialinei sutarčiai. Pažiūrėkime, kaip jis veikia ir kodėl sukelia tiek ginčų."
+        }
+      ]
+    },
+    {
+      "id": "course_217_l_economie_de_plateforme_uber_airbnb_p1",
+      "title": "Kapitalizmas be gamyklų ir darbuotojų",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Įprasta įmonė turi gamyklų, transporto priemonių, atsargų ir samdo darbuotojus. Platforma šį modelį sulaužo: ji tampa paprasta skaitmenine infrastruktūra, kuri sujungia pasiūlą su paklausa, pati nieko negamindama."
+        },
+        {
+          "type": "paragraph",
+          "text": "Šios sistemos pagrindas yra [[tinklo efektas]]: kuo daugiau naudotojų turi platforma, tuo ji naudingesnė, o tai pritraukia dar daugiau naudotojų. Transporto paslaugoje kuo daugiau laisvų vairuotojų, tuo trumpiau tenka laukti, todėl atsiranda daugiau klientų, o šie savo ruožtu pritraukia daugiau vairuotojų. Šis ratas beveik visada baigiasi beveik monopolija."
+        },
+        {
+          "type": "funFact",
+          "text": "Uber išleido milijardus dolerių savaeigių automobilių tyrimams, siekdama ilgainiui atsikratyti paskutinių didelių išlaidų: žmogaus vairuotojo."
+        }
+      ]
+    },
+    {
+      "id": "course_217_l_economie_de_plateforme_uber_airbnb_p2",
+      "title": "Darbas be samdomo darbuotojo apsaugos",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Šią techninę naujovę lydi ir labiau ginčytina teisinė naujovė. Taip veikia [[gig ekonomika]]: platforma atsisako darbdavio statuso ir pristato save kaip paprastą technologinį tarpininką, todėl jai nereikia mokėti socialinio draudimo įmokų, minimalaus atlyginimo ar už apmokamas atostogas."
+        },
+        {
+          "type": "image",
+          "asset": "gig_economy_workers_strike_protest",
+          "ratio": "16:9",
+          "caption": "Vairuotojai ir kurjeriai dažnai laikomi savarankiškai dirbančiais, o ne samdomais darbuotojais."
+        },
+        {
+          "type": "paragraph",
+          "text": "Darbuotojas tampa savarankiškai dirbančiu asmeniu, kuris vienas prisiima visas rizikas: ligą, nelaimingą atsitikimą, paklausos kritimą. Vis dėlto jis dažnai lieka pavaldus programėlės taisyklėms (nustatyti tarifai, vertinimai, sankcijos), ir tokia padėtis vadinama **algoritminiu pavaldumu**. Todėl kelių šalių teismuose prasidėjo [[Sutarties perkvalifikavimas]]: tokios sutartys pripažįstamos tikromis darbo sutartimis."
+        }
+      ]
+    },
+    {
+      "id": "course_217_l_economie_de_plateforme_uber_airbnb_p3",
+      "title": "Pasikeitę miestai",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Šių platformų poveikis neapsiriboja darbo pasauliu: jos keičia ir miestus. Airbnb, palengvinusi trumpalaikę turistinę nuomą, konkuruoja su tradiciniais viešbučiais ir kartu mažina gyventojams prieinamų būstų skaičių."
+        },
+        {
+          "type": "paragraph",
+          "text": "Rezultatas: miestų centruose kyla nuomos kainos, o tokie didmiesčiai kaip Paryžius ar Barselona turėjo įvesti griežtas taisykles, pavyzdžiui, nuomos dienų kvotas. Valstybės taip pat siekia įvesti **skaitmeninį apmokestinimą**, kad šios platformos mokėtų savo mokesčių dalį ten, kur iš tikrųjų uždirba pinigus."
+        },
+        {
+          "type": "funFact",
+          "text": "2023 m. Niujorke įvestas griežtas Airbnb reguliavimas per kelis mėnesius sumažino legalių skelbimų skaičių 80 %."
+        }
+      ]
+    },
+    {
+      "id": "course_217_l_economie_de_plateforme_uber_airbnb_p4",
+      "title": "Naujas statusas darbuotojams?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Platformų ekonomika atnešė greitų ir dažnai pigesnių paslaugų, o kai kuriems žmonėms leido lengviau rasti pajamų. Tačiau šis efektyvumas remiasi XX a. sukurtų apsaugos priemonių silpninimu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Šiuo metu diskutuojama apie tarpinį statusą tarp samdomo darbuotojo ir savarankiškai dirbančiojo, su perkeliamomis teisėmis: kiekvienas darbuotojas kauptų socialines garantijas, nesvarbu, kelioms platformoms jis dirba. Šio modelio ateitis priklausys nuo to, ar reguliuotojai sugebės jį sureguliuoti, neužgniauždami inovacijų."
+        },
+        {
+          "type": "takeaway",
+          "text": "Platformų ekonomika remiasi kapitalizmu be gamyklų, kuris išnaudoja tinklo efektą, o savo darbuotojus paverčia dažnai nesaugiai gyvenančiais savarankiškai dirbančiais asmenimis. Kova dėl geresnės socialinės apsaugos, nesugriaunant šio modelio, tik prasideda."
+        }
+      ]
+    }
+  ]
+}

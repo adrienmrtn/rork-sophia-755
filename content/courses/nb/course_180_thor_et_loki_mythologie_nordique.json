@@ -1,14 +1,14 @@
 {
   "id": "course_180_thor_et_loki_mythologie_nordique",
   "title": "Thor og Loke (norrøn mytologi)",
-  "subtitle": "norrøn mytologi",
+  "subtitle": "Norrøn mytologi",
   "subject": "mythologie",
   "subcategory": "Andre mytologier",
-  "description": "Lynets gud og luringens gud: eventyrduo, deretter fiender ved Ragnarök. To ansikter av det skandinaviske pantheon.",
+  "description": "Tordenguden og listens gud: først et eventyrlig makkerpar, så fiender under Ragnarok. To sider av den skandinaviske gudeverdenen.",
   "hero": {
     "image": "thor_et_loki_mythologie_nordique",
     "ratio": "16:9",
-    "hook": "Man slår med en hammer. Den andre lyver for å vinne. Sammen redder de Asgard ... til den dagen Loke forråder henne."
+    "hook": "Den ene slår med en hammer. Den andre lyver for å vinne. Sammen redder de Åsgard … helt til Loke en dag forråder den."
   },
   "sections": [
     {
@@ -18,101 +18,101 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Thor** og **Loke** er de to mest populære figurene i norrøn mytologi. Thor beskytter menn med lyn. Loke sår uorden med lureri. Vi møter dem ofte sammen i reisehistorier."
+          "text": "**Thor** og **Loke** er de to mest populære skikkelsene i norrøn mytologi. Thor beskytter menneskene med lynet. Loke skaper uorden med list. De dukker ofte opp sammen i reisefortellingene."
         },
         {
           "type": "paragraph",
-          "text": "Båndet deres er ikke et enkelt komisk vennskap. Den viser spenningen mellom gudenes orden og kaos. Fra spøkefull vennskap til siste krig, her er hvordan denne alliansen bygges... og deretter brytes."
+          "text": "Båndet mellom dem er ikke bare et komisk vennskap. Det viser spenningen mellom gudenes orden og kaoset. Fra spøkefullt kameratskap til den siste krigen: slik bygges denne alliansen opp … før den går i stykker."
         }
       ]
     },
     {
       "id": "course_180_thor_et_loki_mythologie_nordique_p1",
-      "title": "Asgard, Midgard og kildene",
+      "title": "Åsgard, Midgard og kildene",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Disse mytene kommer fra skandinaviske folkeslag fra 500- til 1100-tallet. Vi kjenner dem hovedsakelig takket være sene islandske tekster, skrevet da regionen allerede var kristnet. Hovedkilden er [[Prosa Edda]], skrevet rundt **1220** av **Snorri Sturluson**, supplert med [[Poetisk Edda]]."
+          "text": "Disse mytene stammer fra de skandinaviske folkene fra det femte til det tolvte århundre. Man kjenner dem mest gjennom sene islandske tekster, skrevet da området allerede var kristnet. Hovedkilden er [[Prosa-Edda]], skrevet rundt **1220** av **Snorre Sturlason**, supplert av [[Den poetiske Edda]]."
         },
         {
           "type": "image",
           "asset": "asgard_midgard_bifrost_bridge_norse_mythology",
           "ratio": "4:3",
-          "caption": "Asgard og Midgard forbundet med Bifröst, regnbuebroen."
+          "caption": "Åsgard og Midgard forbundet av Bifrost, regnbuebroen."
         },
         {
           "type": "paragraph",
-          "text": "Verden er organisert rundt [[Yggdrasil]], det kosmiske treet. Øverst: **Asgard**, gudenes hjem. Nedre: **Midgard**, en verden av menn, forbundet med **Bifröst**. Gudene er delt inn i to klaner: **Aesir**, ledet av **Odin** (krig og suverenitet), og **Vanes**, som Freyr og Freyja (fruktbarhet)."
+          "text": "Verden er bygd opp rundt [[Yggdrasil]], det kosmiske treet. Øverst: **Åsgard**, gudenes bolig. Lenger nede: **Midgard**, menneskenes verden, forbundet med Åsgard av **Bifrost**. Gudene er delt i to ætter: **æsene**, ledet av **Odin** (krig og herskermakt), og **vanene**, som Frøy og Frøya (fruktbarhet)."
         },
         {
           "type": "funFact",
-          "text": "I gamle tekster er Bifröst en skjør bro: ved Ragnarök vil den skjelve og kollapse under tyngden av kjempene."
+          "text": "I de gamle tekstene er Bifrost en skjør bro: under Ragnarok skal den skjelve og styrte sammen under tyngden av kjempene."
         }
       ]
     },
     {
       "id": "course_180_thor_et_loki_mythologie_nordique_p2",
-      "title": "Thor, hammerbeskytteren",
+      "title": "Thor, beskytteren med hammeren",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Thor** er sønn av Odin og Jorden. Han er den mest ærede guden blant folket: han forsvarer menneskeheten mot **kjemper**, frigjorte naturkrefter. Skjegg og rødt hår, legemliggjør han en klar og rett styrke."
+          "text": "**Thor** er sønn av Odin og Jorden. Han er den guden folket dyrket mest: han forsvarer menneskene mot **kjempene**, naturens ville krefter. Med skjegg og rødt hår står han for en ren og rettlinjet styrke."
         },
         {
           "type": "image",
           "asset": "thor_hammer_mjolnir_norse_god_painting",
           "ratio": "4:3",
-          "caption": "Mjöllnir, Tors hammer: den slår og går tilbake til hånden."
+          "caption": "Mjølner, Thors hammer: den slår og vender tilbake til hånden."
         },
         {
           "type": "paragraph",
-          "text": "Våpenet hans, **Mjöllnir**, smidd av dverger, knuser fjell og vender alltid tilbake til hånden hans. Et belte med styrke og jernhansker hjelper ham å bruke det. Navnet hans ga **torsdag** (Tors dag) på germanske språk. I motsetning til den mer aristokratiske Odin, er Thor guden for frie bønder: regn, høsting, trygt hjem."
+          "text": "Våpenet hans, **Mjølner**, er smidd av dverger, knuser fjell og vender alltid tilbake til hånden hans. Et styrkebelte og jernhansker hjelper ham å håndtere den. Navnet hans har gitt **torsdag** (Thors dag) i de germanske språkene. I motsetning til den mer aristokratiske Odin er Thor de frie bøndenes gud: regn, avling, et trygt hjem."
         },
         {
           "type": "funFact",
-          "text": "Tors vogn blir trukket av to geiter. Hvis han er sulten, kan han spise dem om kvelden og gjenopplive dem neste dag med hammeren... så lenge han ikke knekker noen bein."
+          "text": "Thors vogn trekkes av to bukker. Er han sulten, kan han spise dem om kvelden og vekke dem til live igjen neste dag med hammeren … så lenge ingen knokler blir knust."
         }
       ]
     },
     {
       "id": "course_180_thor_et_loki_mythologie_nordique_p3",
-      "title": "Loke, rusen som ender dårlig",
+      "title": "Loke, listen som ender galt",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Loke** bor blant asene, men han er av gigantisk blod. Han sluttet seg til panteonet gjennom en blodpakt med Odin. Han er **luring**: hans skøyerstreker og løgner er urovekkende, men de flytter også historien fremover og tilbyr noen ganger gudene deres største skatter."
+          "text": "**Loke** lever blant æsene, men han er av kjempeæt. Han ble tatt opp i gudeverdenen gjennom en blodpakt med Odin. Han er **tricksteren**, luringen: skøyerstrekene og løgnene hans skaper uro, men de driver også historien fremover og gir noen ganger gudene deres største skatter."
         },
         {
           "type": "image",
           "asset": "loki_norse_trickster_god_mythology",
           "ratio": "4:3",
-          "caption": "Loke, luringens gud: nyttig alliert, annonsert forræder."
+          "caption": "Loke, listens gud: nyttig alliert, forræder i vente."
         },
         {
           "type": "paragraph",
-          "text": "Det endrer form og til og med sex. I hoppeform blir han mor til [[Sleipnir]], Odins åttebeinte hest. Med kjempeinnen Angrboda genererer han tre monstre: ulven **Fenrir**, slangen **Jörmungandr** og **Hel**, de dødes vokter. Litt etter litt blir spøken til forræderi: han organiserer døden til den lysende guden **Baldr**. Fra da av var skjebnen hans beseglet."
+          "text": "Han skifter skikkelse og til og med kjønn. Som hoppe blir han mor til [[Sleipner]], Odins åttebeinte hest. Med kjempekvinnen Angrboda får han tre uhyrer: **Fenrisulven**, **Midgardsormen** og **Hel**, som vokter de døde. Litt etter litt blir spøken til svik: han står bak drapet på den lysende guden **Balder**. Fra da av er skjebnen hans beseglet."
         }
       ]
     },
     {
       "id": "course_180_thor_et_loki_mythologie_nordique_p4",
-      "title": "Fra komisk duo til Ragnarök",
+      "title": "Fra komisk duo til Ragnarok",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "I lang tid utfylte Thor og Loke hverandre. Når giganten Thrym stjeler Mjöllnir, forkler Thor seg som en brud og Loke som en tjener for å hente den. Der hammeren svikter, lykkes løgnen, og omvendt."
+          "text": "Lenge utfyller Thor og Loke hverandre. Da kjempen Trym stjeler Mjølner, kler Thor seg ut som brud og Loke som tjenestepike for å få den tilbake. Der hammeren kommer til kort, lykkes løgnen, og omvendt."
         },
         {
           "type": "paragraph",
-          "text": "Så bryter alliansen opp. I **Ragnarök**, gudenes skumring, leder Loke fiendene til Asgard. Thor konfronterer Jörmungandr, sønn av Loke: han dreper slangen, og dør deretter av giften etter ni skritt. Styrke og list utslettes sammen."
+          "text": "Så går alliansen i stykker. Under **Ragnarok**, gudenes skumring, leder Loke Åsgards fiender. Thor kjemper mot Midgardsormen, Lokes sønn: han dreper slangen, men dør av giften etter ni skritt. Styrke og list går til grunne sammen."
         },
         {
           "type": "takeaway",
-          "text": "**Thor** og **Loke** legemliggjør spenningen mellom beskyttende kraft og forstyrrende list. Deres bånd, fra komisk vennskap til hatet til Ragnarök, viser hvor skjør gudenes orden forblir i møte med kaos."
+          "text": "**Thor** og **Loke** står for spenningen mellom beskyttende styrke og forstyrrende list. Båndet mellom dem, fra komisk vennskap til hatet under Ragnarok, viser hvor skjør gudenes orden er i møte med kaoset."
         }
       ]
     }

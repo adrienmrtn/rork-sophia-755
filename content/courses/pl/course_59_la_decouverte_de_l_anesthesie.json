@@ -4,11 +4,11 @@
   "subtitle": "Medycyna",
   "subject": "sciences",
   "subcategory": "Odkrycia, które zmieniły świat",
-  "description": "Przed 1846 operację robiono często przy świadomości i w ogromnym bólu. Znieczulenie zamienia chirurgię w leczenie, nie w torturę.",
+  "description": "Przed 1846 rokiem operacje często przeprowadzano na przytomnym pacjencie, w ogromnym bólu. Znieczulenie zmienia chirurgię w leczenie, a nie w torturę.",
   "hero": {
     "image": "la_decouverte_de_l_anesthesie",
     "ratio": "16:9",
-    "hook": "Pewnego dnia 1846 w Bostonie chirurgia przestaje być wyścigiem z bólem."
+    "hook": "Pewnego dnia 1846 roku w Bostonie chirurgia przestaje być wyścigiem z bólem."
   },
   "sections": [
     {
@@ -18,17 +18,17 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Wyobraź sobie amputację bez uśpienia. Przed środkiem XIX wieku to norma. Wiążą pacjenta, pędzą, modlą się."
+          "text": "Wyobraź sobie amputację bez uśpienia. Aż do połowy XIX wieku to była norma. Pacjenta przywiązywano, działano szybko i modlono się."
         },
         {
           "type": "paragraph",
-          "text": "**Znieczulenie** zmienia wszystko: pozwala operować bez świadomości bólu. Nowoczesna chirurgia może wreszcie nie śpieszyć się."
+          "text": "**Znieczulenie** zmienia wszystko: pozwala operować tak, że pacjent nie czuje bólu. Nowoczesna chirurgia może wreszcie działać bez pośpiechu."
         }
       ]
     },
     {
       "id": "course_59_la_decouverte_de_l_anesthesie_p1",
-      "title": "Przedtem: szybkość przeciw cierpieniu",
+      "title": "Wcześniej: szybkość kontra cierpienie",
       "free": false,
       "blocks": [
         {
@@ -39,7 +39,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Chirurgów oceniano po szybkości. Używano alkoholu, opium albo gołej siły, żeby unieruchomić. Wielu pacjentów umierało od wstrząsu, zakażenia albo krwotoku."
+          "text": "Chirurgów oceniano po szybkości. Żeby unieruchomić pacjenta, używano alkoholu, opium albo po prostu siły. Wielu pacjentów umierało z powodu wstrząsu, zakażenia albo krwotoku."
         }
       ]
     },
@@ -56,11 +56,11 @@
         },
         {
           "type": "paragraph",
-          "text": "**16 października 1846** w Bostonie dentysta **William Morton** każe pacjentowi wdychać **eter**. Chirurg **John Warren** wycina guza na szyi. Pacjent nie krzyczy. Sala jest w szoku."
+          "text": "**16 października 1846** roku w Bostonie dentysta **William Morton** podał pacjentowi do wdychania **eter**. Chirurg **John Warren** usunął mu guz szyi. Pacjent nie krzyczał. Sala osłupiała."
         },
         {
           "type": "funFact",
-          "text": "Warren miał powiedzieć: „Panowie, to nie jest oszustwo.” Fraza została sławna."
+          "text": "Warren miał powiedzieć: „Panowie, to nie jest humbug” (czyli nie oszustwo). To zdanie przeszło do historii."
         }
       ]
     },
@@ -71,11 +71,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Idą kolejne środki, jak **chloroform**, spopularyzowany zwłaszcza w Wielkiej Brytanii. Wybuchają kłótnie, kto co „wynalazł”. Patent nie ma znaczenia: pomysł idzie w świat."
+          "text": "Pojawiają się kolejne środki, jak **chloroform**, spopularyzowany zwłaszcza w Wielkiej Brytanii. Wybuchają spory o to, kto co „wynalazł”. Mniejsza o patent: idea rozchodzi się po całym świecie."
         },
         {
           "type": "paragraph",
-          "text": "Zostaje problem: uśpić, nie zabić. Trzeba dawkować, pilnować oddechu i serca. Rodzi się nowa specjalność."
+          "text": "Pozostaje jeden problem: jak uśpić, a nie zabić. Trzeba dobrać dawkę, pilnować oddechu i pracy serca. Rodzi się nowa specjalność."
         }
       ]
     },
@@ -86,11 +86,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Dziś anestezjolog używa gazów i precyzyjnych leków oraz maszyn, które mierzą wszystko. Można uśpić całe ciało albo tylko jeden obszar (znieczulenie miejscowe albo regionalne)."
+          "text": "Dziś anestezjolog używa gazów, precyzyjnie dobranych leków i aparatury, która mierzy wszystko. Można uśpić całe ciało albo znieczulić tylko jeden obszar (znieczulenie miejscowe albo regionalne)."
         },
         {
           "type": "takeaway",
-          "text": "Od pokazu eteru w **1846** znieczulenie zmieniło chirurgię: mniej bólu, więcej czasu, więcej precyzji... i bezpieczeństwo, które stało się osobną nauką."
+          "text": "Od pokazu z eterem w **1846** roku znieczulenie odmieniło chirurgię: mniej bólu, więcej czasu, więcej precyzji… i bezpieczeństwo, które stało się osobną dziedziną nauki."
         }
       ]
     }

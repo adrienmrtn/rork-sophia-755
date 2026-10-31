@@ -9,7 +9,7 @@
   "hero": {
     "image": "gutenberg_bible_open_pages_library_of_congress",
     "ratio": "4:3",
-    "hook": "Ühe raamatu ümberkirjutamine võttis kuid, ent trükipress annab äkitselt sadu eksemplare."
+    "hook": "Ümberkirjutajal kulus ühe raamatu peale kuid, trükipress aga trükib äkki sadu eksemplare."
   },
   "sections": [
     {
@@ -29,7 +29,7 @@
     },
     {
       "id": "course_253_pourquoi_l_imprimerie_a_t_elle_tout_p1",
-      "title": "Gutenberg ei leiutanud trükkimist",
+      "title": "Gutenberg ei leiutanud trükikunsti",
       "free": false,
       "blocks": [
         {
@@ -40,11 +40,11 @@
           "type": "image",
           "asset": "movable_metal_type_letters_composing_stick",
           "ratio": "3:2",
-          "caption": "Tai liikuvad trükitähed ladumisnurgikus (Bangkoki rahvusmuuseum): iga täht on valatud tagurpidi ja läheb uuesti kasutusse järgmisel leheküljel."
+          "caption": "Tai liikuvad trükitähed ladumisnurgikus (Bangkoki rahvusmuuseum): iga täht on valatud tagurpidi ja seda saab uuesti kasutada mõne teise lehekülje jaoks."
         },
         {
           "type": "paragraph",
-          "text": "Selle asemel et lõigata terve raamat puusse, valavad trükkalid iga tähe eraldi ning laovad need siis sõnadeks ja lehekülgedeks. Valmis ladu kaetakse värviga ja pressitakse vastu paberit. Kui lehekülg on trükitud, võetakse tähed lahti ja need lähevad kasutusse järgmises. Menetlus muutub palju paindlikumaks: trükkal saab toota **sadu eksemplare**, ilma et peaks iga lehekülje jaoks uut plaati lõikama."
+          "text": "Selle asemel et lõigata terve raamat puusse, valavad trükkalid iga tähe eraldi ning laovad need siis sõnadeks ja lehekülgedeks. Valmis ladu kaetakse trükivärviga ja pressitakse vastu paberit. Kui lehekülg on trükitud, võetakse tähed lahti ja neid kasutatakse järgmise lehekülje jaoks. Nii muutub töö palju paindlikumaks: trükkal saab toota **sadu eksemplare**, ilma et peaks iga lehekülje jaoks uut plaati lõikama."
         },
         {
           "type": "funFact",
@@ -59,11 +59,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kui leiutis käima läks, levis raamatutrükk Euroopas märkimisväärse kiirusega. Hinnanguliselt oli mandril umbes aastaks **1500**, vaevu viiskümmend aastat pärast Gutenbergi läbimurret, juba **20 miljonit** raamatut. Tuhanded eri pealkirjad liikusid linnade, ülikoolide, kirikute ja erakätes olevate lugejate vahel."
+          "text": "Kui leiutis oli kord kasutusele võetud, levis raamatutrükk Euroopas märkimisväärse kiirusega. Umbes aastaks **1500**, vaevalt viiskümmend aastat pärast Gutenbergi läbimurret, oli mandril hinnanguliselt juba **20 miljonit** raamatut. Tuhanded eri pealkirjad liikusid linnade, ülikoolide, kirikute ja eralugejate vahel."
         },
         {
           "type": "paragraph",
-          "text": "Muutus ei seisnenud ainult kiiruses. Trükikunst lõhkus ümberkirjutamise vana kitsaskoha. Hoolikalt ette valmistatud teksti sai paljundada ikka ja jälle ning sama teave jõudis tuhandete inimesteni. Esimest korda ajaloos levis kirjalik teadmine üle kogu mandri sellises ulatuses, millega käsitsi ümberkirjutamine poleks iialgi suutnud võistelda."
+          "text": "Muutus ei seisnenud ainult kiiruses. Trükikunst kõrvaldas ümberkirjutamise vana kitsaskoha. Hoolikalt ette valmistatud teksti sai paljundada ikka ja jälle ning sama teave jõudis tuhandete inimesteni. Esimest korda ajaloos levis kirjalik teadmine üle kogu mandri sellises ulatuses, millega käsitsi ümberkirjutamine poleks iialgi suutnud võistelda."
         }
       ]
     },
@@ -95,7 +95,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Trükikunsti mäletatakse kui üht esimest tehnikat, mis lõhkus ümberkirjutamise kitsaskoha. Viimaseks see ei jäänud. **19. sajandil** võimaldab [[telegraaf]] saata sõnumi tohutute vahemaade taha mõne minutiga, mitte mitme päevaga. Internet läheb veelgi kaugemale: teavet saab kopeerida ja saata sekunditega."
+          "text": "Trükikunsti mäletatakse kui üht esimest tehnikat, mis kõrvaldas ümberkirjutamise kitsaskoha. Viimaseks see ei jäänud. **19. sajandil** võimaldab [[telegraaf]] saata sõnumi tohutute vahemaade taha mõne minutiga, mitte mitme päevaga. Internet läheb veelgi kaugemale: teavet saab kopeerida ja saata sekunditega."
         },
         {
           "type": "timeline",
@@ -133,7 +133,7 @@
         },
         {
           "type": "takeaway",
-          "text": "Trükikunst muutis kõike mitte seetõttu, et Gutenberg oleks leiutanud trükkimise, vaid seetõttu, et tema liikuvad trükitähed lõhkusid ümberkirjutamise kitsaskoha: teavet sai lihtne paljundada ja raske kontrollida, ning seda mustrit kordasid hiljem telegraaf ja internet."
+          "text": "Trükikunst muutis kõike mitte seetõttu, et Gutenberg oleks leiutanud trükkimise, vaid seetõttu, et tema liikuvad trükitähed kõrvaldasid ümberkirjutamise kitsaskoha: teavet oli nüüd lihtne paljundada ja raske kontrollida. Sama mustrit kordasid hiljem telegraaf ja internet."
         }
       ]
     }

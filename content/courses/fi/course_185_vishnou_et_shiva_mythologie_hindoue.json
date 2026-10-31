@@ -4,11 +4,11 @@
   "subtitle": "Hindulainen mytologia",
   "subject": "mythologie",
   "subcategory": "Muut mytologiat",
-  "description": "Luo, säilytä, tuhoa syntyäksesi uudelleen: Vishnu ja Shiva, Trimurtin pilarit, kääntävät hindulaisuuden syklistä aikaa.",
+  "description": "Luoda, ylläpitää ja tuhota, jotta kaikki syntyisi uudelleen: Vishnu ja Shiva, Trimurtin tukipilarit, pyörittävät hindulaisuuden syklistä aikaa.",
   "hero": {
     "image": "vishnou_et_shiva_mythologie_hindoue",
     "ratio": "16:9",
-    "hook": "Yksi laskeutuu maan päälle pelastamaan järjestyksen. Toinen tanssii polttaakseen kaiken ja aloittaakseen alusta. Yhdessä ne tekevät maailmankaikkeudesta kestävän."
+    "hook": "Toinen laskeutuu maan päälle pelastamaan järjestyksen. Toinen tanssii, kunnes kaikki palaa ja alkaa alusta. Yhdessä he pitävät maailmankaikkeuden käynnissä."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Hindumytologiassa aika ei ole suora viiva. Se on syklien sarja. Yläosassa on [[Trimurti]]: kolme toimintoa samalla periaatteella. **Brahma** luo. **Vishnu** säilykkeet. **Shiva** tuhottu uusimisen mahdollistamiseksi."
+          "text": "Hindulaisessa mytologiassa aika ei ole suora viiva. Se on loputon kiertokulkujen sarja. Huipulla on [[Trimurti]]: kolme tehtävää, yksi ja sama perusta. **Brahma** luo. **Vishnu** ylläpitää. **Shiva** tuhoaa, jotta uusi voi syntyä."
         },
         {
           "type": "paragraph",
-          "text": "Tämä kurssi seuraa Vishnua ja Shivaa, tämän kolminaisuuden kahta elävintä pilaria. Niiden ominaisuudet, inkarnaatiot ja symboliikka osoittavat, kuinka hindulaisuus sovittaa yhteen elämän ja kuoleman, järjestyksen ja muutoksen."
+          "text": "Tämä kurssi keskittyy Vishnuun ja Shivaan, tämän kolmikon kahteen elävimpään tukipilariin. Heidän tunnusmerkkinsä, ruumiillistumansa ja symboliikkansa näyttävät, miten hindulaisuus sovittaa yhteen elämän ja kuoleman, järjestyksen ja muutoksen."
         }
       ]
     },
@@ -33,46 +33,46 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Monet jumalat ovat äärimmäisen todellisuuden kasvoja nimeltä [[Brahman]]. Trimurti antaa kolme hyödyllistä muotoa. **Brahma** luo maailmankaikkeuden jokaisen syklin alussa; hänen roolinsa sitten päättyy, mikä selittää sen, miksi häntä nykyään vähän kunnioitetaan Intiassa."
+          "text": "Lukuisat jumalat ovat kasvoja perimmäisestä todellisuudesta, jonka nimi on [[Brahman]]. Trimurti antaa sille kolme käytännön muotoa. **Brahma** synnyttää maailmankaikkeuden jokaisen kierron alussa; sen jälkeen hänen tehtävänsä päättyy, ja siksi häntä palvotaan Intiassa nykyään vähän."
         },
         {
           "type": "image",
           "asset": "brahma_vishnu_shiva_trimurti_hindu_gods",
           "ratio": "4:3",
-          "caption": "Brahma, Vishnu, Shiva: luo, säilytä, muunna."
+          "caption": "Brahma, Vishnu, Shiva: luoda, ylläpitää, muuttaa."
         },
         {
           "type": "paragraph",
-          "text": "**Vishnu** varmistaa, että tilaus pysyy voimassa. **Shiva** tuhoaa sen, mikä on kulunut tai vioittunut. Tämä tuho ei ole absoluuttinen paha: se avaa tietä uudelle syklille. \"Brahman päivä\" kestää miljardeja vuosia. Mikään ei todellakaan ole menetetty; kaikki alkaa alusta."
+          "text": "**Vishnu** pitää huolen siitä, että järjestys säilyy. **Shiva** tuhoaa sen, mikä on kulunutta tai turmeltunutta. Tämä tuho ei ole ehdoton paha: se raivaa tilaa uudelle kierrolle. Yksi ”Brahman päivä” kestää miljardeja vuosia. Mikään ei todella katoa; kaikki alkaa alusta."
         },
         {
           "type": "funFact",
-          "text": "Yksi \"Brahman päivä\" (kalpa) kestää **4,32 miljardia** vuotta, mikä on aavemaisen lähellä nykytieteen arvioimaa Maan ikää."
+          "text": "Yksi ”Brahman päivä” (kalpa) kestää **4,32 miljardia** vuotta, mikä on yllättävän lähellä nykytieteen arviota Maan iästä."
         }
       ]
     },
     {
       "id": "course_185_vishnou_et_shiva_mythologie_hindoue_p2",
-      "title": "Vishnu ja hänen avatarinsa",
+      "title": "Vishnu ja hänen avataransa",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Vishnu** suojaa [[Dharma]], moraalista ja kosmista lakia. Kun paha uhkaa ottaa vallan, hän laskeutuu maan päälle **avatar**:n muodossa. [[Dashavatar]]:n perinteessä on kymmenen, ensin eläin, sitten ihminen."
+          "text": "**Vishnu** suojelee moraalista ja kosmista lakia, jonka nimi on [[Dharma]]. Kun paha uhkaa voittaa, hän laskeutuu maan päälle **avatarana**. [[Dashavatar]]-perinne luettelee niitä kymmenen: ensin eläinhahmoja, sitten ihmisiä."
         },
         {
           "type": "image",
           "asset": "krishna_avatar_vishnu_hindu_god_painting",
           "ratio": "4:3",
-          "caption": "Krishna, Vishnun avatar: viisaus, rakkaus ja oikeudenmukainen sota."
+          "caption": "Krishna, Vishnun avatara: viisaus, rakkaus ja oikeutettu sota."
         },
         {
           "type": "paragraph",
-          "text": "Heistä kuningas **Rama** ilmentää hyvettä; **Krishna**, jumalallinen viisaus ja rakkaus. Hindulaisuus on jopa integroinut **Buddha**:n yhdeksänneksi avatariksi. Kymmenes, **Kalki**, saapuu valkoisen hevosen selässä lopettamaan [[Kali Yuga]]:n pimeän aikakauden."
+          "text": "Heistä kuningas **Rama** ruumiillistaa hyveen ja **Krishna** jumalallisen viisauden ja rakkauden. Hindulaisuus on jopa ottanut **Buddhan** yhdeksänneksi avataraksi. Kymmenes, **Kalki**, saapuu valkoisella hevosella päättämään pimeän [[Kali Yuga]] -aikakauden."
         },
         {
           "type": "funFact",
-          "text": "Digitaaliset pioneerit ovat lainanneet 1980-luvulta lähtien sanaa \"avatar\" kuvaamaan käyttäjän esitystä virtuaalimaailmassa."
+          "text": "Jo 1980-luvulla digitaalisen maailman pioneerit lainasivat sanan ”avatar” tarkoittamaan käyttäjän hahmoa virtuaalimaailmassa."
         }
       ]
     },
@@ -83,7 +83,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Shiva** on paradoksien jumala: askeettinen tuhkan peitossa vuorella [[Kailash]], mutta kuitenkin **Parvati**:n aviomies, **Ganesha**:n isä. Hän ilmentää energiaa, joka muuntuu erityisesti tanssin kautta."
+          "text": "**Shiva** on paradoksien jumala: tuhkan peittämä askeetti [[Kailash]]-vuorella ja silti **Parvatin** puoliso ja **Ganeshan** isä. Hän ruumiillistaa muuttavaa voimaa, ennen kaikkea tanssin kautta."
         },
         {
           "type": "image",
@@ -93,11 +93,11 @@
         },
         {
           "type": "paragraph",
-          "text": "**Nataraja**, \"tanssin kuningas\", hän esittää **Tandava**. Yhdessä kädessä [[Damaru]] merkitsee luomisen rytmiä; toisessa tuhon tuli. Yksi jalka murskaa tietämättömyyden; toinen, nostettu, tarjoaa vapautumisen. Muutos on ainoa pysyvä."
+          "text": "**Natarajana**, ”tanssin kuninkaana”, hän tanssii **tandavaa**. Toisessa kädessä [[damaru]]-rumpu lyö luomisen tahtia; toisessa palaa tuhon tuli. Yksi jalka murskaa tietämättömyyden; toinen nousee ilmaan ja tarjoaa vapautuksen. Muutos on ainoa pysyvä asia."
         },
         {
           "type": "funFact",
-          "text": "CERNissä Genevessä Intian tarjoama Natarajan patsas muistuttaa hiukkasfyysikot tästä tanssista: universumin ikuisesta luomisesta ja tuhoamisesta."
+          "text": "Genevessä CERNissä on Intian lahjoittama Nataraja-patsas, joka muistuttaa hiukkasfyysikoita tästä tanssista: maailmankaikkeuden loputtomasta luomisesta ja tuhosta."
         }
       ]
     },
@@ -108,15 +108,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Vishnu rakentaa ja ohjaa inkarnaatioidensa läpi. Shiva vapauttaa rikkomalla illuusioita ja kiintymyksiä. Yhdessä he tekevät [[Samsara ja karma]] ei vankilan, vaan polun: syntyä uudelleen, toimia, edistyä."
+          "text": "Vishnu luo rakennetta ja ohjaa ruumiillistumiensa kautta. Shiva vapauttaa murskaamalla harhat ja kiintymykset. Heidän ansiostaan [[Samsara ja karma]] eivät ole vankila vaan polku: syntyä uudelleen, toimia, kehittyä."
         },
         {
           "type": "paragraph",
-          "text": "Tästä kaksinaisuudesta syntyy **vishnuismi** ja **shiivismi**, virtauksia, jotka rikastavat toisiaan pikemminkin kuin ristiriidassa, erityisesti [[Bhagavad Gita]]:n ympärillä. Tässä visiossa jokainen pää valmistelee lähtöä."
+          "text": "Tästä kaksinaisuudesta syntyvät **vishnulaisuus** ja **shivalaisuus**, suuntaukset, jotka pikemminkin rikastavat toisiaan kuin kamppailevat keskenään, erityisesti [[Bhagavad Gita]] -teoksen äärellä. Tässä näkemyksessä jokainen loppu valmistaa uutta alkua."
         },
         {
           "type": "takeaway",
-          "text": "**Trimurti** harmonisoi maailmankaikkeutta: Brahma luo, Vishnu säilyttää avatariensa kautta, Shiva tuhoaa syntyäkseen uudelleen. Syklinen visio, jossa karma ja samsara tekevät jokaisesta tuhosta alkusoittoa uudelle syklille."
+          "text": "**Trimurti** pitää maailmankaikkeuden tasapainossa: Brahma luo, Vishnu ylläpitää avatarojensa kautta, Shiva tuhoaa, jotta kaikki syntyisi uudelleen. Kiertävä maailmankuva, jossa karma ja samsara tekevät jokaisesta tuhosta uuden kierron alkusoiton."
         }
       ]
     }

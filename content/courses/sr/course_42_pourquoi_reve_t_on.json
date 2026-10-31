@@ -4,11 +4,11 @@
   "subtitle": "Mozak i san",
   "subject": "sciences",
   "subcategory": "Naša svakodnevica objašnjena",
-  "description": "Svake noći sanjate oko dva sata. Većina snova bledi kada se probudite. Evo šta nauka danas razume o ovoj misteriji.",
+  "description": "Svake noći sanjaš oko dva sata. Većina snova izbledi čim se probudiš. Evo šta nauka danas zna o toj misteriji.",
   "hero": {
     "image": "pourquoi_reve_t_on",
     "ratio": "16:9",
-    "hook": "Sanjate o šest godina svog života. I zaboraviš skoro sve."
+    "hook": "Sanjaš oko šest godina svog života. I skoro sve to zaboraviš."
   },
   "sections": [
     {
@@ -18,95 +18,95 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Svake noći provedete oko **dva sata** sanjajući. Tokom života, to je skoro **šest godina**. Međutim, kada se probudite, većina ovih priča nestaje za nekoliko sekundi."
+          "text": "Svake noći sanjaš oko **dva sata**. Tokom celog života to je skoro **šest godina**. Ipak, čim se probudiš, većina tih priča nestane za nekoliko sekundi."
         },
         {
           "type": "paragraph",
-          "text": "Ne slažu se svi naučnici oko „zašto“. Ali oni znaju sve bolje i bolje **kada** sanjamo i šta mozak radi za to vreme: reorganizuje sećanja, testira scenarije i vari emocije."
+          "text": "Naučnici se ne slažu svi oko toga „zašto“. Ali sve bolje znaju **kada** se sanja i šta mozak tada radi: preuređuje sećanja, isprobava scenarije i prerađuje emocije."
         }
       ]
     },
     {
       "id": "course_42_pourquoi_reve_t_on_p1",
-      "title": "Spavanje nije „isključeno“",
+      "title": "Spavanje nije „gašenje“",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Spavanje nije potpuno isključenje. Napreduje **ciklusima** od približno **90 minuta**, nekoliko puta po noći. U svakom ciklusu, mozak prolazi kroz različite faze: lagani san, duboki san koji je koristan za oporavak tela, zatim vrlo određena faza."
+          "text": "Spavanje nije potpuni prekid. Odvija se u **ciklusima** od oko **90 minuta**, nekoliko puta tokom noći. U svakom ciklusu mozak prolazi kroz različite faze: lak san, dubok san koji pomaže telu da se oporavi, a zatim jednu sasvim posebnu fazu."
         },
         {
           "type": "image",
           "asset": "sleeping_person_rem_dream",
           "ratio": "4:3",
-          "caption": "Tokom REM sna, oči se pomeraju ispod očnih kapaka."
+          "caption": "Tokom REM spavanja oči se pomeraju ispod očnih kapaka."
         },
         {
           "type": "paragraph",
-          "text": "Ova faza se zove [[REM spavanje]]. Mozak je skoro isto toliko aktivan koliko i budan, ali telo je paralizovano [[Atonija mišića]]. Ovo je posebno mesto gde se rađaju dugi, narativni snovi. Ova paraliza nas sprečava da fizički „igramo“ ono što sanjamo."
+          "text": "Ova faza se zove [[REM spavanje]]. Mozak je tada gotovo jednako aktivan kao u budnom stanju, ali je telo oduzeto, jer nastupa [[Atonija mišića]]. Upravo tada se najčešće rađaju dugi snovi sa pričom. Ta paraliza sprečava da fizički „odigraš“ ono što sanjaš."
         },
         {
           "type": "funFact",
-          "text": "Sanjamo **4 do 6 puta** po noći. Zaboravljamo na **95%** u roku od deset minuta od buđenja. Ako se sećate sna, to je često zato što ste se probudili neposredno tokom njega ili odmah nakon njega."
+          "text": "Svake noći sanja se **4 do 6 puta**. Oko **95%** snova zaboravi se u prvih deset minuta posle buđenja. Ako se sećaš nekog sna, često je to zato što te buđenje zateklo baš usred njega ili odmah posle."
         }
       ]
     },
     {
       "id": "course_42_pourquoi_reve_t_on_p2",
-      "title": "Koja je poenta sanjanja?",
+      "title": "Čemu služi sanjanje?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Freud** je mislio da snovi uglavnom otkrivaju skrivene želje. Danas istraživači preferiraju konkretnija objašnjenja, zasnovana na snimanju mozga, tehnikama koje vizualizuju moždanu aktivnost. Sanjanje posebno aktivira **limbički sistem**, skup dubokih struktura povezanih sa emocijama."
+          "text": "**Frojd** je smatrao da san pre svega otkriva skrivene želje. Danas istraživači više vole konkretnija objašnjenja, zasnovana na **snimanju mozga**, tehnikama koje prikazuju moždanu aktivnost. San pre svega aktivira **limbički sistem**, skup dubokih struktura povezanih sa emocijama."
         },
         {
           "type": "image",
           "asset": "brain_activity_dreaming_scan",
           "ratio": "4:3",
-          "caption": "Tokom snova, mozak radi: emocije, slike, sećanja."
+          "caption": "Dok sanjaš, mozak radi: emocije, slike, sećanja."
         },
         {
           "type": "paragraph",
-          "text": "Dominiraju tri glavne staze. Prvo: **sort memoriju**, zadrži korisno, ostavi ostalo. Drugo: **Obuka za opasnost** u svetu bez stvarnog rizika. Treće: **probavljanje emocija**: tokom snova, mozak ponovo posećuje snažne trenutke sa manje **norepinefrina**, neurotransmitera povezanog sa stresom i budnošću."
+          "text": "Izdvajaju se tri glavne pretpostavke. Prva: **srediti pamćenje**, zadržati korisno i pustiti ostalo. Druga: **vežbati suočavanje sa opasnošću** u svetu bez stvarnog rizika. Treća: **preraditi emocije**: dok sanjaš, mozak ponovo prolazi kroz snažne trenutke uz manje **noradrenalina**, neurotransmitera povezanog sa stresom i budnošću."
         }
       ]
     },
     {
       "id": "course_42_pourquoi_reve_t_on_p3",
-      "title": "Zašto zaboravljamo svoje snove",
+      "title": "Zašto se snovi zaboravljaju",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Da bi se memorija trajno sačuvala, mozgu su potrebne određene hemikalije. Međutim, tokom paradoksalnog sna, nivo noradrenalina opada. Rezultat: san ostaje u vrlo krhkom sećanju."
+          "text": "Da bi sećanje trajno sačuvao, mozgu su potrebne određene hemijske supstance. A tokom REM spavanja nivo noradrenalina opada. Zato san ostaje samo u veoma krhkom pamćenju."
         },
         {
           "type": "paragraph",
-          "text": "Čim otvorite oči, svetlost, zvuci i misli dana slome ovu krhku uspomenu. Najbolji način da ga zadržite? Zapišite san **odmah**, pre nego što se pomerite."
+          "text": "Čim otvoriš oči, svetlost, zvuci i dnevne misli potisnu to krhko sećanje. Najbolji način da ga sačuvaš? Zapiši san **odmah**, još pre nego što se pomeriš."
         },
         {
           "type": "funFact",
-          "text": "Pre televizije u boji, malo ljudi je reklo da sanja u boji. Danas većina radi. Naše vizuelno okruženje čak utiče na teksturu naših snova."
+          "text": "Pre televizije u boji malo ko je tvrdio da sanja u boji. Danas većina sanja u boji. Vizuelno okruženje utiče čak i na teksturu naših snova."
         }
       ]
     },
     {
       "id": "course_42_pourquoi_reve_t_on_p4",
-      "title": "Šta je sa lucidnim sanjanjem?",
+      "title": "A lucidni snovi?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ponekad, dok spavamo, shvatimo **da sanjamo**: ovo je **lucidno sanjanje**. Područje mozga povezano sa logikom i samorefleksijom, **prefrontalni korteks**, zatim malo svetli."
+          "text": "Ponekad shvatiš **da sanjaš**, a i dalje spavaš: to je **lucidni san**. Deo mozga povezan sa logikom i samoposmatranjem, **prefrontalni korteks**, tada se ponovo malo uključuje."
         },
         {
           "type": "paragraph",
-          "text": "Neki tada mogu uticati na okruženje ili transformisati noćnu moru. Istraživači čak proučavaju ovaj fenomen kako bi pomogli sportistima da mentalno ponove gestove ili da leče noćne more koje se ponavljaju."
+          "text": "Neki tada mogu da menjaju okruženje u snu ili da preobraze noćnu moru. Istraživači čak proučavaju ovu pojavu kako bi pomogli sportistima da u mislima uvežbavaju pokrete ili da bi lečili noćne more koje se ponavljaju."
         },
         {
           "type": "takeaway",
-          "text": "Posebno sanjamo tokom [[REM spavanje]], faze kada je mozak aktivan, a telo paralizovano. Sanjanje verovatno pomaže u upravljanju pamćenjem i emocijama, čak i ako zaboravimo skoro sve kada se probudimo."
+          "text": "Najviše se sanja tokom faze [[REM spavanje]], kada je mozak aktivan, a telo paralizovano. San verovatno pomaže u sređivanju pamćenja i emocija, iako se po buđenju skoro sve zaboravi."
         }
       ]
     }

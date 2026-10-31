@@ -1,0 +1,154 @@
+{
+  "id": "course_121_la_renaissance_italienne",
+  "title": "Kodėl renesansas gimė Italijoje?",
+  "subtitle": "XIV-XVI a.",
+  "subject": "art",
+  "subcategory": "Peinture & mouvements",
+  "description": "Per du šimtmečius Italija iš naujo išranda tapybą, skulptūrą ir architektūrą bei pakeičia mūsų požiūrį į pasaulį.",
+  "hero": {
+    "image": "la_renaissance_italienne",
+    "ratio": "16:9",
+    "hook": "Per du šimtmečius Italija iš naujo išranda meną ir mūsų žvilgsnį į pasaulį."
+  },
+  "sections": [
+    {
+      "id": "course_121_la_renaissance_italienne_intro",
+      "title": "Įvadas",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Italijos renesansas (XIV-XVI a.) yra ne tik stiliaus pokytis. Tai naujas požiūris į pasaulį. Per du šimtmečius Italija viso ko centre pastato stebėjimą, protą ir individą."
+        },
+        {
+          "type": "paragraph",
+          "text": "Gimusi turtinguose pusiasalio miestuose, ši revoliucija iš naujo išranda tapybą, skulptūrą ir architektūrą. Ją varo dvi jėgos: iš naujo atrasta graikų ir romėnų Antika ir drąsūs techniniai išradimai."
+        }
+      ]
+    },
+    {
+      "id": "course_121_la_renaissance_italienne_p1",
+      "title": "Florencija, miestas, uždegęs dagtį",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Viskas prasideda **Florencijoje**, kuri XIV a. dėl tekstilės ir bankininkystės pirmauja Europos ekonomikoje. Valdžią čia perima **Medičių** šeima. Šie bankininkai finansuoja menininkus ir taip kelia savo prestižą: kiekvienas jų yra [[mecenatas]], menininkų rėmėjas."
+        },
+        {
+          "type": "funFact",
+          "text": "Kad apeitų draudimą skolinti už palūkanas, Medičiai sugalvoja bankininkystės gudrybių. Bažnyčia užmerkia akis, kol jie finansuoja koplyčias."
+        },
+        {
+          "type": "image",
+          "asset": "lorenzo_de_medici_portrait_florence",
+          "ratio": "4:3",
+          "caption": "Lorenzo de' Medici, pramintas Didinguoju, didysis menininkų globėjas."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tuo pat metu **humanizmas** keičia žmogaus vietą pasaulyje. Tokie mąstytojai kaip [[Pico della Mirandola]] tvirtina, kad žmogus protu gali suprasti gamtą. **1453** m. Konstantinopolio žlugimas priverčia mokslininkus bėgti į Italiją su pamirštais graikų rankraščiais."
+        }
+      ]
+    },
+    {
+      "id": "course_121_la_renaissance_italienne_p2",
+      "title": "Tapyti tikrovę: perspektyva ir kūnas",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "XV a., apie **1420** m., gimsta [[linijinė perspektyva]]: ją išranda architektas **Brunelleschi**. Baigėsi viduramžiai, kai svarbesnis dalykas buvo tapomas didesnis: dabar erdvė paklūsta matematinėms taisyklėms, tarsi pro langą matytum tikrovę."
+        },
+        {
+          "type": "image",
+          "asset": "brunelleschi_linear_perspective_florence",
+          "ratio": "4:3",
+          "caption": "Perspektyva sukuria gylio iliuziją plokščiame paviršiuje."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Leonardas da Vinčis** eina dar toliau: jis skrodžia kūnus, kad suprastų raumenis ir nervus ir galėtų tapyti net emocijas. Iš Flandrijos atkeliavusi aliejinė tapyba pamažu tampa populiaresnė nei [[tempera]], ir taip atsiranda [[šviesotamsa]]: šešėlio ir šviesos kontrastai, suteikiantys tūrio."
+        },
+        {
+          "type": "funFact",
+          "text": "Kūnas, kurį Leonardas tyrinėjo daugiausia, priklausė šimtamečiui seneliui. Jį tirdamas, Leonardas aprašė vieną pirmųjų žinomų atvejų, kai arterija užsikimšo dėl senatvės."
+        }
+      ]
+    },
+    {
+      "id": "course_121_la_renaissance_italienne_p3",
+      "title": "Leonardas, Mikelandželas, Rafaelis",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "XVI a. pradžioje Roma užima Florencijos vietą: ją iškelia popiežiai statytojai, tokie kaip **Julijus II**. Tai „visapusiško žmogaus“ epocha. Jo pavyzdys yra **Leonardas da Vinčis**: tapytojas, inžinierius, anatomas."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Mikelandželas** įkūnija jėgą. Jo **Dovydas** tampa Florencijos simboliu. Nuo **1508** iki **1512** m. jis tapo **Siksto koplyčios** lubas: 500 kvadratinių metrų Pradžios knygos scenų."
+        },
+        {
+          "type": "image",
+          "asset": "michelangelo_david_sistine_chapel_ceiling",
+          "ratio": "4:3",
+          "caption": "Mikelandželas: nuo Dovydo iki Siksto koplyčios lubų."
+        },
+        {
+          "type": "funFact",
+          "text": "*Paskutiniajame teisme* Mikelandželas nutapė savo veidą ant nudirtos odos: taip jis parodė, kaip labai jį išsekino šis darbas."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Rafaelis** įkūnija grakštumą. Jo freskoje *Atėnų mokykla* susirenka didieji Antikos mąstytojai, o jos harmonija šimtmečiais bus pavyzdys kitiems."
+        }
+      ]
+    },
+    {
+      "id": "course_121_la_renaissance_italienne_p4",
+      "title": "Palikimas, apėmęs visą Europą",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Po Rafaelio mirties **1520** m. pusiausvyra suyra. Menininkai ištempia kūnus ir sustiprina spalvas: tai [[manierizmas]], neramesnis menas. Prancūzijos karalius **Pranciškus I** pasikviečia Leonardą ir pradeda **Prancūzijos renesansą**, kurio ženklas yra Luaros pilys."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1420",
+              "title": "Linijinė perspektyva",
+              "detail": "Florencijoje Brunelleschi erdvę paverčia lygtimis."
+            },
+            {
+              "date": "1453",
+              "title": "Konstantinopolio žlugimas",
+              "detail": "Mokslininkai bėga į Italiją su savo graikų rankraščiais."
+            },
+            {
+              "date": "1504",
+              "title": "Mikelandželo Dovydas",
+              "detail": "Florencija pasirenka pilietinio pasididžiavimo simbolį."
+            },
+            {
+              "date": "1508-1512",
+              "title": "Siksto koplyčia",
+              "detail": "Mikelandželas tapo lubas su Pradžios knygos scenomis."
+            },
+            {
+              "date": "1520",
+              "title": "Rafaelio mirtis",
+              "detail": "Baigiasi brandusis renesansas, prasideda manierizmas."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Medičių remiamas, Florencijoje gimęs Italijos renesansas pakeičia meną perspektyva (apie 1420 m.) ir kūno tyrinėjimu, o savo viršūnę pasiekia Romoje su Leonardu, Mikelandželu ir Rafaeliu."
+        }
+      ]
+    }
+  ]
+}

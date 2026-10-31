@@ -3,8 +3,8 @@
   "title": "Kako milo ubija viruse?",
   "subtitle": "Higiena",
   "subject": "sciences",
-  "subcategory": "Vsakdanjik pod drobnogledom",
-  "description": "Milo ni \"čarovnija\". Napade maščobno lupino določenih virusov in jih izvleče iz kože. Evo, zakaj je 20 sekund pomembnih.",
+  "subcategory": "Vsakdan pod drobnogledom",
+  "description": "Milo ni »čarobno«. Napade maščobno ovojnico nekaterih virusov in jih odstrani s tvoje kože. Spoznaj, zakaj je 20 sekund pomembnih.",
   "hero": {
     "image": "comment_le_savon_tue_les_virus",
     "ratio": "16:9",
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Med pandemijo COVID-19 je zelo preprosta gesta spet postala osrednja: umivanje rok z milom. Ni potrebe po laboratoriju. Samo voda, milo in malo časa."
+          "text": "Med pandemijo covida-19 je zelo preprosto dejanje spet postalo ključno: umivanje rok z milom. Laboratorija ne potrebuješ. Le vodo, milo in malo časa."
         },
         {
           "type": "paragraph",
-          "text": "Zakaj deluje tako dobro? Kajti številni nevarni virusi nosijo ovojnico iz maščobe. In milo je odlično za uničevanje maščobe."
+          "text": "Zakaj deluje tako dobro? Ker ima veliko nevarnih virusov ovojnico iz maščobe. Milo pa maščobo odlično uničuje."
         }
       ]
     },
@@ -33,17 +33,17 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Nekateri virusi, kot je **coronavirus** ali virus gripe, imajo zunanjo ovojnico iz lipidov (maščob). Ta ovojnica jih ščiti ... dokler ne naleti na milo."
+          "text": "Nekateri virusi, kot so **koronavirusi** ali virus gripe, imajo zunanjo ovojnico iz lipidov (maščob). Ta ovojnica jih ščiti … dokler ne naleti na milo."
         },
         {
           "type": "paragraph",
-          "text": "Drugi virusi, imenovani \"goli\", te ovojnice nimajo. So bolj odporni na milo in alkohol. Na srečo je veliko virusov, ki potujejo skozi roke in kapljice, obdanih z ovojnico."
+          "text": "Drugi virusi, tako imenovani »goli«, te ovojnice nimajo. Bolje prenašajo milo in alkohol. Na srečo ima veliko virusov, ki se širijo prek rok in kapljic, ovojnico."
         }
       ]
     },
     {
       "id": "course_50_comment_le_savon_tue_t_il_les_virus_p2",
-      "title": "Milo, dvostranska molekula",
+      "title": "Milo, molekula z dvema obrazoma",
       "free": false,
       "blocks": [
         {
@@ -58,11 +58,11 @@
         },
         {
           "type": "paragraph",
-          "text": "Rezultat: ovojnica se raztrga. Virus je onemogočen. Nato voda odnese ostanke. Milo ne \"sežge\" virusa kot kislina: **raztopina** in ga odstrani."
+          "text": "Posledica: ovojnica se raztrga. Virus postane nedejaven. Nato voda odnese ostanke. Milo virusa ne »sežge« kot kislina: **raztopi** ga in odstrani."
         },
         {
           "type": "funFact",
-          "text": "To je isti princip, ki odstrani maščobo iz posode: milo zgrabi maščobo in jo pusti, da gre skupaj z vodo."
+          "text": "Po istem načelu gre maščoba s ponve: milo zagrabi maščobo, voda pa jo odplakne."
         }
       ]
     },
@@ -73,26 +73,26 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Potrebuje čas, da milo doseže vse gube: med prsti, pod nohti, okoli zapestij. Približno **20 sekund** trenja, to je najmanjša pogosto priporočena vrednost."
+          "text": "Milo potrebuje čas, da doseže vse gube: med prsti, pod nohti, okoli zapestij. Približno **20 sekund** drgnjenja je najmanj, kar se pogosto priporoča."
         },
         {
           "type": "paragraph",
-          "text": "Brez trenja deluje milo slabše. Tudi sama voda: ne deluje učinkovito na maščobno ovojnico."
+          "text": "Brez drgnjenja milo deluje slabše. Sama voda pa tudi ne zadošča: maščobne ovojnice ne načne učinkovito."
         }
       ]
     },
     {
       "id": "course_50_comment_le_savon_tue_t_il_les_virus_p4",
-      "title": "Milo ali hidroalkoholni gel?",
+      "title": "Milo ali alkoholni gel?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Gel z najmanj **60%** alkohola lahko uniči tudi številne viruse z ovojnico. Če pa je vidna umazanija ali maščoba, je gel manj učinkovit: umazanija deluje kot zaslon. V tem primeru ostaja milo in voda najboljša izbira."
+          "text": "Gel z vsaj **60 %** alkohola lahko prav tako uniči veliko virusov z ovojnico. Če pa je na rokah vidna umazanija ali maščoba, gel deluje slabše: umazanija je kot ščit. V tem primeru sta milo in voda še vedno najboljša izbira."
         },
         {
           "type": "takeaway",
-          "text": "Milo uniči številne viruse tako, da jim odtrga maščobne obloge in jih nato spere z vodo. Čas + trenje = učinkovitost."
+          "text": "Milo uniči veliko virusov tako, da raztrga njihovo maščobno ovojnico in jih nato odplakne z vodo. Čas + drgnjenje = učinkovitost."
         }
       ]
     }

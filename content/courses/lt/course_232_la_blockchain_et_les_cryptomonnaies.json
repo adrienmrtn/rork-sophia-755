@@ -1,0 +1,112 @@
+{
+  "id": "course_232_la_blockchain_et_les_cryptomonnaies",
+  "title": "Kaip veikia blokų grandinė ir kriptovaliutos?",
+  "subtitle": "Nuo 2009 m.",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environnement & avenir",
+  "description": "**Blokų grandinė** sukūrė registrą, kurio niekas negali suklastoti vienas, ir atvėrė kelią naujai skaitmeninei ekonomikai.",
+  "hero": {
+    "image": "la_blockchain_et_les_cryptomonnaies",
+    "ratio": "16:9",
+    "hook": "Apskaitos knyga, kuri nepriklauso niekam, bet kurią kartu prižiūri tūkstančiai kompiuterių."
+  },
+  "sections": [
+    {
+      "id": "course_232_la_blockchain_et_les_cryptomonnaies_intro",
+      "title": "Įvadas",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Įsivaizduok apskaitos knygą, kuri nepriklauso nė vienam žmogui, bet kurią vienu metu visame pasaulyje atnaujina tūkstančiai kompiuterių ir kurios beveik neįmanoma suklastoti. Tokia yra pradinė **blokų grandinės** idėja. Ši technologija dažnai tapatinama su pirmuoju jos pritaikymu, **bitkoinu**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Leisdamas keistis vertybėmis be banko, šis išradimas pagimdė visą lygiagrečią ekonomiką: vieni žada finansinę laisvę, kiti griežtai kritikuoja jos energijos sąnaudas."
+        }
+      ]
+    },
+    {
+      "id": "course_232_la_blockchain_et_les_cryptomonnaies_p1",
+      "title": "Registras, kurio niekas nekontroliuoja vienas",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Blokų grandinės pagrindas yra paprasta idėja: **paskirstytasis registras**. Kitaip nei bankas, kuris laiko sąskaitas savo serveriuose, blokų grandinė remiasi tinklu, kurį sudaro [[lygiarangiai]], t. y. tūkstančiai kompiuterių, kurių kiekvienas saugo identišką visų operacijų kopiją."
+        },
+        {
+          "type": "funFact",
+          "text": "Pačiame pirmajame bitkoino blokų grandinės bloke, vadinamajame „genezės bloke“, buvo paslėpta žinutė: 2009 m. sausio 3 d. britų laikraščio pirmojo puslapio antraštė apie tai, kaip valstybė gelbsti bankus. Tai politinė jo kūrėjo užuomina."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kiekviena operacija pirmiausia patikrinama tinkle, o paskui kartu su kitomis sugrupuojama į **bloką**. Tada blokas susiejamas su ankstesniu matematiniu skaičiavimu, kuris vadinamas [[maiša]]: tai savotiškas unikalus skaitmeninis pirštų atspaudas. Taip susidaro nenutrūkstama blokų grandinė, iš čia ir pavadinimas. Norint pakeisti bent vieną seną operaciją, tektų perskaičiuoti visą grandinę ir įtikinti daugiau nei pusę tinklo, o dideliu mastu tai praktiškai neįmanoma."
+        }
+      ]
+    },
+    {
+      "id": "course_232_la_blockchain_et_les_cryptomonnaies_p2",
+      "title": "Bitkoinas ir Ethereum: nuo mokėjimo iki programos",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Bitkoinas**, kurį **2009** m. paleido anonimu likęs asmuo (ar grupė), kurio slapyvardis yra [[Satoshi Nakamoto]], įrodė, kad pinigų sistema gali veikti be centrinio banko. Kad užtikrintų retumą, kūrėjas nustatė griežtą ribą: niekada negalės egzistuoti daugiau nei **21 milijonas bitkoinų**, panašiai kaip Žemėje ribotas aukso kiekis."
+        },
+        {
+          "type": "image",
+          "asset": "blockchain_technology_distributed_ledger_visualization",
+          "ratio": "4:3",
+          "caption": "Kiekvieną operaciją patikrina kompiuterių tinklas, ir tik tada ji įtraukiama į grandinę."
+        },
+        {
+          "type": "paragraph",
+          "text": "2015 m. su **Ethereum** atsirado antroji blokų grandinės karta. Didžiausia jos naujovė yra **išmanieji kontraktai**. Tai programos, kurios pačios pasileidžia, kai tik išpildoma sąlyga, pavyzdžiui, automatiškai grąžina pinigus, jei vėluoja traukinys, ir jokio tarpininko nereikia."
+        }
+      ]
+    },
+    {
+      "id": "course_232_la_blockchain_et_les_cryptomonnaies_p3",
+      "title": "Kritika: energija ir nestabilumas",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kriptovaliutų sėkmė neapsieina be problemų. Daugiausia diskutuojama apie bitkoino tinklo **energijos suvartojimą**: per metus jis sunaudoja tiek elektros, kiek visa šalis, pavyzdžiui, Argentina."
+        },
+        {
+          "type": "paragraph",
+          "text": "Rinka kenčia ir nuo didžiulio **nepastovumo**: bitkoino kaina per kelias valandas gali pasikeisti 10 ar 20 %. Dėl šio nestabilumo jis kol kas negali tapti tikrais kasdieniais pinigais."
+        },
+        {
+          "type": "paragraph",
+          "text": "Galiausiai santykinis operacijų anonimiškumas kartais buvo naudojamas neteisėtai veiklai. Tačiau iš tikrųjų blokų grandinė yra visiškai skaidri: valdžios institucijos gali sekti pinigų srautus, todėl pinigus plauti sunkiau nei įprastoje grynųjų pinigų sistemoje."
+        }
+      ]
+    },
+    {
+      "id": "course_232_la_blockchain_et_les_cryptomonnaies_p4",
+      "title": "Link institucinės integracijos",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Šiandien kriptovaliutos iš paraštės pereina į tradicinius finansus. Dideli bankai jau siūlo klientams saugoti jų skaitmeninį turtą, o kelios valstybės svarsto kurti savo oficialią skaitmeninę valiutą: tai **[[CBSP]]** (centrinio banko skaitmeniniai pinigai)."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Stabiliosios kriptovaliutos** (angl. stablecoins), kurių kainą stabilizuoja dolerių ar eurų rezervas, tampa tiltu tarp dviejų pasaulių. Be finansų, blokų grandinę dėl jos patikimumo diegia ir kiti sektoriai: prabangos prekių (kovai su klastotėmis), logistikos (konteineriams sekti) ar sveikatos priežiūros (medicininiams įrašams apsaugoti)."
+        },
+        {
+          "type": "funFact",
+          "text": "2021 m. Salvadoras tapo pirmąja šalimi pasaulyje, pripažinusia bitkoiną teisėta mokėjimo priemone šalia JAV dolerio: kiekvienas prekybininkas privalo jį priimti, jei turi tam techninių galimybių."
+        },
+        {
+          "type": "takeaway",
+          "text": "2009 m. sukurta blokų grandinė yra bendras ir beveik nesuklastojamas registras, o didžiausias bitkoinų kiekis apribotas iki 21 milijono vienetų. Ji padėjo pamatus naujai skaitmeninei ekonomikai, kuri šiandien sparčiai integruojama į institucijas."
+        }
+      ]
+    }
+  ]
+}

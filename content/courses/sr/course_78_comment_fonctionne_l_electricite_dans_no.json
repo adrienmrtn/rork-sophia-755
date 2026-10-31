@@ -4,11 +4,11 @@
   "subtitle": "Nervi i joni",
   "subject": "sciences",
   "subcategory": "Zemlja i svemir",
-  "description": "Razmišljanje, kucanje srca, podizanje ruke: sve ovo prvo kruži kao živi elektricitet, nošen ne elektronima, već jonima.",
+  "description": "Razmišljanje, kucanje srca, podizanje ruke: sve to najpre putuje kao živi elektricitet, koji ne nose elektroni, već joni.",
   "hero": {
     "image": "comment_fonctionne_l_electricite_dans_notre_corps",
     "ratio": "16:9",
-    "hook": "Vaše telo je električna mreža. Ali ovde je struja joni, a ne elektroni."
+    "hook": "Tvoje telo je električna mreža. Ali ovde struju čine joni, a ne elektroni."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "U zidnoj utičnici struja je **elektronika** koji cirkulišu. U vašem telu je drugačije: to su **joni**, naelektrisani atomi, koji ulaze i izlaze iz ćelija. Ovaj tok stvara signale koji teraju srce na razmišljanje, otkucaje srca i kontrakciju mišića."
+          "text": "U zidnoj utičnici struju čine **elektroni** koji se kreću. U tvom telu je drugačije: to su **joni**, naelektrisani atomi, koji ulaze u ćelije i izlaze iz njih. Taj tok stvara signale zahvaljujući kojima misliš, srce kuca, a mišić se steže."
         },
         {
           "type": "paragraph",
-          "text": "Bez ovog živog elektriciteta, nema misli, nema gesta, nema pulsa. Razumevanje tela takođe znači razumevanje ovog jezika optužbi."
+          "text": "Bez tog živog elektriciteta nema misli, pokreta ni pulsa. Razumeti telo znači razumeti i ovaj jezik naelektrisanja."
         }
       ]
     },
@@ -33,7 +33,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**neuron** u mirovanju ne šalje poruku, ali se „naplaćuje“. Njegova membrana odvaja unutrašnjost i spoljašnjost ćelije. Zahvaljujući [[natrijum-kalijum pumpe]], održava [[potencijal odmora]] od približno **-70 milivolta**: unutrašnjost je negativnija od spoljašnjosti."
+          "text": "**Neuron** u mirovanju ne šalje poruku, ali se „puni“. Njegova membrana razdvaja unutrašnjost i spoljašnjost ćelije. Njegove [[natrijum-kalijum pumpe]] održavaju takozvani [[potencijal mirovanja]] od oko **-70 milivolti**: unutrašnjost je negativnija od spoljašnjosti."
         },
         {
           "type": "image",
@@ -43,11 +43,11 @@
         },
         {
           "type": "paragraph",
-          "text": "Kada stigne stimulans, kanali se otvaraju. Natrijum dolazi odjednom. Polaritet je obrnut: to je [[akcioni potencijal]], signal sve ili ništa koji ide duž aksona, ponekad preko metra. Kao električni talas."
+          "text": "Kada stigne nadražaj, kanali se otvaraju. Natrijum naglo ulazi. Polaritet se obrće: to je [[akcioni potencijal]], signal po principu sve ili ništa koji juri duž aksona, ponekad i preko jednog metra. Kao električni talas."
         },
         {
           "type": "funFact",
-          "text": "Mozak u budnom stanju proizvodi oko **20 vati**, dovoljno za malu LED diodu. Međutim, on troši skoro **20%** kalorija u telu."
+          "text": "Budan mozak proizvodi oko **20 vati**, dovoljno za malu LED diodu. Ipak, na njega odlazi skoro **20%** kalorija koje telo troši."
         }
       ]
     },
@@ -58,15 +58,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Neuroni se zapravo ne dodiruju. Između njih, mali jaz: **sinapsis**. Električni signal ga ne može preskočiti. Zatim kraj aksona oslobađa [[Neurotransmiteri]], molekule glasnika kao što su acetilholin ili [[glutamat]]."
+          "text": "Neuroni se zapravo ne dodiruju. Između njih je sićušan procep: **sinapsa**. Električni signal ne može da ga preskoči. Zato kraj aksona oslobađa hemijske glasnike. To su [[neurotransmiteri]], molekuli kao što su acetilholin ili [[glutamat]]."
         },
         {
           "type": "paragraph",
-          "text": "Ovi glasnici se vezuju za sledeći neuron kao ključ u bravi. U zavisnosti od poruke, oni uzbuđuju ili koče. Hiljade ovih istovremenih odluka formiraju misao."
+          "text": "Ovi glasnici se vezuju za sledeći neuron kao ključ u bravi. U zavisnosti od poruke, pobuđuju ga ili koče. Hiljade takvih istovremenih odluka čine misao."
         },
         {
           "type": "funFact",
-          "text": "Neki nervni signali putuju brzinom **120 m/s** (više od **430 km/h**). Dovoljno da reagujete na opekotinu na nožnom prstu u deliću sekunde."
+          "text": "Neki nervni signali putuju brzinom od **120 m/s** (više od **430 km/h**). Dovoljno da u deliću sekunde reaguješ na opekotinu na nožnom prstu."
         }
       ]
     },
@@ -77,34 +77,34 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Srce ne čeka komandu mozga za svaki otkucaj. U desnoj pretkomori, **sinni čvor** generiše sopstvene impulse, otprilike **60 do 100** puta u minuti u mirovanju. Signal se širi, prvo kontrahuje atrijum, zatim komore."
+          "text": "Srce ne čeka naređenje mozga za svaki otkucaj. U desnoj pretkomori **sinusni čvor** stvara sopstvene impulse, oko **60 do 100** puta u minuti u mirovanju. Signal se širi i steže najpre pretkomore, a zatim komore."
         },
         {
           "type": "paragraph",
-          "text": "Ova aktivnost je dovoljno jaka da se očita na koži: to je **elektrokardiogram (EKG)**. Ako se ritam poremeti, govorimo o **aritmiji**. Srce tada neredovito kuca i slabo pumpa."
+          "text": "Ova aktivnost je dovoljno jaka da se očita na koži: to je **elektrokardiogram (EKG)**. Kada se ritam poremeti, reč je o **aritmiji**. Srce tada kuca neujednačeno i slabo pumpa."
         },
         {
           "type": "funFact",
-          "text": "Električna jegulja koristi isti princip ekscitabilnih ćelija, ali u seriji: do **600 volti**, dovoljno da parališe plen."
+          "text": "Električna jegulja koristi isti princip podražljivih ćelija, ali povezanih jedna za drugom: do **600 volti**, dovoljno da parališe plen."
         }
       ]
     },
     {
       "id": "course_78_comment_fonctionne_l_electricite_dans_no_p4",
-      "title": "Od voljnog gesta do defibrilatora",
+      "title": "Od voljnog pokreta do defibrilatora",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Da biste podigli ruku, akcioni potencijal se spušta do mišića. Acetilholin pokreće lokalni električni talas, a zatim oslobađanje kalcijuma. Proteini mišića klize jedan preko drugog: kontrakcija."
+          "text": "Kad podižeš ruku, akcioni potencijal se spušta do mišića. Acetilholin pokreće lokalni električni talas, a zatim oslobađanje kalcijuma. Mišićni proteini klize jedan preko drugog: kontrakcija."
         },
         {
           "type": "paragraph",
-          "text": "**defibrilacija** koristi isti princip u obrnutom smeru: spoljašnji šok resetuje sve ćelije „na nulu“ tako da sinusni čvor nastavlja tempo. Bionička protetika takođe hvata ove slabe signale za kontrolu veštačke ruke."
+          "text": "**Defibrilacija** koristi isti princip, samo obrnuto: spoljašnji električni udar vraća sve ćelije „na nulu“, da bi sinusni čvor ponovo preuzeo ritam. Bioničke proteze takođe hvataju ove slabe signale da bi upravljale veštačkom šakom."
         },
         {
           "type": "takeaway",
-          "text": "Živa bića govore u tokovima jona i akcionim potencijalima. Misao, srce i mišići dele isti električni jezik."
+          "text": "Živi svet govori jezikom jonskih tokova i akcionih potencijala. Misao, srce i mišići dele isti električni jezik."
         }
       ]
     }

@@ -1,14 +1,14 @@
 {
   "id": "course_54_la_decouverte_du_micro_ondes_par_acciden",
   "title": "Odkritje mikrovalovne pečice",
-  "subtitle": "Po nesreči",
+  "subtitle": "Po naključju",
   "subject": "sciences",
   "subcategory": "Odkritja, ki so spremenila svet",
   "description": "Leta 1945 je inženir opazil, da se je njegova čokoladica stopila v bližini radarja. Iz te ugotovitve se je rodila mikrovalovna pečica.",
   "hero": {
     "image": "la_decouverte_du_micro_ondes",
     "ratio": "16:9",
-    "hook": "Stopljena čokoladica … in spremembe moderne kuhinje."
+    "hook": "Stopljena čokoladica… in sodobna kuhinja se spremeni."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "V **1945**, v Združenih državah, inženir **Percy Spencer** dela na radarjih. Nekega dne opazi, da se je čokoladica v njegovem žepu stopila. Ne zaradi telesne toplote: zaradi radarskih valov."
+          "text": "Leta **1945** v Združenih državah inženir **Percy Spencer** dela na radarjih. Nekega dne opazi, da se mu je čokoladica v žepu stopila. Ne zaradi telesne toplote, temveč zaradi radarskih valov."
         },
         {
           "type": "paragraph",
-          "text": "Preizkuša s koruzo: pokovka poči. Rodila se je ideja o pečici, ki greje drugače."
+          "text": "Poskusi s koruzo: zrna se razpočijo v pokovko. Rodila se je zamisel o pečici, ki greje drugače."
         }
       ]
     },
@@ -35,15 +35,15 @@
           "type": "image",
           "asset": "percy_spencer_microwave_discovery_radar",
           "ratio": "4:3",
-          "caption": "Radarji iz druge svetovne vojne so že uporabljali mikrovalovne pečice."
+          "caption": "Radarji v drugi svetovni vojni so že uporabljali mikrovalove."
         },
         {
           "type": "paragraph",
-          "text": "**mikrovalovi** so elektromagnetni valovi, kot radijska svetloba, vendar bolj \"energični\" kot mnogi običajni radijski valovi. Med vojno so jih uporabljali predvsem za radar za odkrivanje letal in čolnov."
+          "text": "**Mikrovalovi** so elektromagnetni valovi, kot svetloba ali radijski valovi, vendar bolj »energični« od mnogih običajnih radijskih valov. Med vojno jih uporabljajo predvsem radarji za odkrivanje letal in ladij."
         },
         {
           "type": "paragraph",
-          "text": "Spencer razume, da lahko tudi mešajo vodo in maščobe v hrani ... in jo zato segrevajo."
+          "text": "Spencer spozna, da lahko spravijo v gibanje tudi vodo in maščobe v hrani… in jo tako segrejejo."
         }
       ]
     },
@@ -60,26 +60,26 @@
         },
         {
           "type": "paragraph",
-          "text": "Prvi komercialni model, **Radarange**, je bil izdan okrog leta **1947**. Je ogromen, drag in namenjen predvsem restavracijam ali čolnom. Potrebna bodo desetletja, da ga bomo miniaturizirali in naredili cenovno dostopnega za domove."
+          "text": "Prvi komercialni model, **Radarange**, pride na trg okoli leta **1947**. Je ogromen, drag in namenjen predvsem restavracijam ali ladjam. Trajalo bo desetletja, preden ga bodo pomanjšali in naredili cenovno dostopnega za gospodinjstva."
         },
         {
           "type": "funFact",
-          "text": "Sprva so se nekateri bali, da bo zaradi pečice hrana \"radioaktivna\". Napačno: mikrovalovne pečice se segrejejo, ne povzročijo radioaktivnosti."
+          "text": "Sprva so se nekateri bali, da pečica hrano »naredi radioaktivno«. Ne drži: mikrovalovi hrano segrejejo, radioaktivne pa je ne naredijo."
         }
       ]
     },
     {
       "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p3",
-      "title": "Kako se zares segreje?",
+      "title": "Kako zares greje",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Mikrovalovi v glavnem vibrirajo molekule vode (ter malo maščob in sladkorjev). To mešanje ustvari **toploto znotraj** hrane, ne samo na površini, kot je ponev."
+          "text": "Mikrovalovi predvsem spravijo v nihanje molekule vode (in nekoliko tudi maščob ter sladkorjev). To gibanje ustvarja toploto **v notranjosti** hrane, ne le na površini kot ponev."
         },
         {
           "type": "paragraph",
-          "text": "Zato je lahko jed na zunaj vroča, v sredini pa mlačna, če je gosta: valovi ne prodrejo neskončno globoko."
+          "text": "Zato je lahko debela jed na zunaj vroča, v sredini pa mlačna: valovi ne prodrejo neskončno globoko."
         }
       ]
     },
@@ -90,11 +90,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "V letih 1970-1980 je mikrovalovna pečica vstopila v milijone kuhinj. Spreminja navade: hitro pogrevanje, pripravljene jedi, hitrejše življenje."
+          "text": "Od sedemdesetih in osemdesetih let naprej mikrovalovna pečica pride v milijone kuhinj. Spremeni navade: hitro pogrevanje, gotove jedi, hitrejše življenje."
         },
         {
           "type": "takeaway",
-          "text": "Mikrovalovna pečica se je rodila iz naključja, ki ga je opazil Percy Spencer blizu radarja. Valovi predvsem vznemirjajo vodo v hrani in jo segrevajo od znotraj."
+          "text": "Mikrovalovna pečica se rodi iz naključja, ki ga Percy Spencer opazi ob radarju. Valovi spravljajo v gibanje predvsem vodo v hrani in jo segrevajo od znotraj."
         }
       ]
     }

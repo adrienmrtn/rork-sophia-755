@@ -1,0 +1,115 @@
+{
+  "id": "course_119_le_petit_prince_saint_exupery",
+  "title": "Mažasis princas, Saint-Exupéry",
+  "subtitle": "1943",
+  "subject": "litterature",
+  "subcategory": "Anglo-saxons & littérature mondiale",
+  "description": "Mažasis princas iš mažytės planetos moko lakūną, kad svarbiausia akimis nematoma.",
+  "hero": {
+    "image": "le_petit_prince_saint_exupery",
+    "ratio": "16:9",
+    "hook": "Prisijaukinti reiškia sukurti ryšius: lapės pamoka, tapusi visuotine."
+  },
+  "sections": [
+    {
+      "id": "course_119_le_petit_prince_saint_exupery_intro",
+      "title": "Įvadas",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Mažasis princas**, išleistas **1943** m., yra daugiausia verčiama prancūzų knyga pasaulyje: ji išversta į daugiau nei **300 kalbų**. Už paprastų pieštuko linijų slypi apmąstymai apie žmogaus būtį, kitoniškumą ir prasmės paieškas."
+        },
+        {
+          "type": "paragraph",
+          "text": "Knyga parašyta tremtyje per Antrąjį pasaulinį karą ir yra dvasinis **Antoine'o de Saint-Exupéry** testamentas; jis gimė **1900** m., o mirė **1944** m. Jis buvo lakūnas, o jo bendrovė buvo [[Aéropostale]], prancūzų pašto gabenimo aviakompanija. Vaikystės nekaltume jis ieško vaistų nuo suaugusiųjų pasaulio nusivylimo."
+        }
+      ]
+    },
+    {
+      "id": "course_119_le_petit_prince_saint_exupery_p1",
+      "title": "Antoine'as de Saint-Exupéry ir „Mažojo princo“ gimimas",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**1942** m. Saint-Exupéry atsiduria tremtyje: Prancūzija okupuota, o jo prieglobstis yra [[Niujorkas]]. Paradoksalu, bet šį pasakojimą apie dykumą jis rašo patogiai įsikūręs saloje, kurios vardas [[Long Ailendas]]. **1943 m. balandį** knygą JAV išleidžia [[Reynal & Hitchcock]], amerikiečių leidykla."
+        },
+        {
+          "type": "image",
+          "asset": "antoine_de_saint_exupery_portrait_photograph",
+          "ratio": "4:3",
+          "caption": "Antoine'as de Saint-Exupéry, rašytojas lakūnas, dingęs jūroje 1944 m."
+        },
+        {
+          "type": "funFact",
+          "text": "**1944 m. liepos 31 d.** jo lėktuvas [[Lockheed P-38 Lightning]], dvimotoris žvalgybinis orlaivis, dingsta virš Viduržemio jūros. Jo nuolaužos atpažintos tik 2000 m., netoli Marselio."
+        },
+        {
+          "type": "paragraph",
+          "text": "Saint-Exupéry taip ir nesulaukė pasaulinės savo kūrinio sėkmės. Originaliame rankraštyje avinėlis dėžėje nebuvo pavaizduotas: draugas patarė jį paslėpti, kad liktų vietos skaitytojo vaizduotei."
+        }
+      ]
+    },
+    {
+      "id": "course_119_le_petit_prince_saint_exupery_p2",
+      "title": "Mažojo princo kelionė: modernybės satyra",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pasakojimas prasideda lėktuvo gedimu Sacharos viduryje. Pasakotojas, dykumoje pasiklydęs lakūnas, sutinka mažą būtybę iš asteroido **B-612**. Ten nuolat raunami [[baobabai]], milžiniški medžiai, simbolizuojantys pavojus, kuriuos reikia išrauti vos jiems atsiradus, kad mažytė planeta būtų išgelbėta."
+        },
+        {
+          "type": "image",
+          "asset": "little_prince_original_illustration_saint_exupery",
+          "ratio": "4:3",
+          "caption": "Originalios Saint-Exupéry akvarelės: paprastumas ir gelmė."
+        },
+        {
+          "type": "paragraph",
+          "text": "Keliaudamas nuo planetos prie planetos, Mažasis princas sutinka savo aistrų apsėstų suaugusiųjų: **Karalius** trokšta absoliučios valdžios, **Garbėtroška** myli tik save, o **Verslininkas** skaičiuoja žvaigždes, tarsi jos būtų jo nuosavybė. Palankumo nusipelno tik **Žibintininkas**, nes jis šviečia pasauliui dėl kitų ir nesiekia valdyti."
+        }
+      ]
+    },
+    {
+      "id": "course_119_le_petit_prince_saint_exupery_p3",
+      "title": "Lapė ir prisijaukinimo filosofija",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Žemėje, tarp penkių tūkstančių rožių, Mažasis princas ima manyti, kad jo **Rožė** paprasta. **Lapė** jį moko **prisijaukinti**: kurti ryšius, dėl kurių kitas tampa vienintelis pasaulyje. „Tu visam gyvenimui lieki atsakingas už tuos, kuriuos prisijaukinai.“"
+        },
+        {
+          "type": "quote",
+          "text": "Tik širdimi gerai matai. Svarbiausia akimis nematoma.",
+          "attribution": "Antoine'as de Saint-Exupéry, Mažasis princas"
+        },
+        {
+          "type": "paragraph",
+          "text": "Būtybės tiesa slypi santykyje, o ne išvaizdoje. Pabaiga, kai Mažasis princas leidžiasi įgeliamas gyvatės, kad sugrįžtų į savo planetą, lieka viena dviprasmiškiausių literatūroje. Mirtis, kelionė ar išganymas? Klausimas lieka atviras."
+        }
+      ]
+    },
+    {
+      "id": "course_119_le_petit_prince_saint_exupery_p4",
+      "title": "Visuotinė reikšmė ir atmintis",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Knygą galima skaityti bet kokio amžiaus: vaikams tai pasaka, o suaugusiesiems materializmo kritika. Asteroido **46610** vardas yra [[Bésixdouze]]: tai duoklė veikėjo kosminiam adresui B-612."
+        },
+        {
+          "type": "paragraph",
+          "text": "Skrybėlės piešinys, kuris iš tikrųjų yra dramblį prarijęs smauglys, tapo vaizduotės, priešingos siauram racionalizmui, simboliu. Tai, kas prisijaukinta, įveikia atstumą ir laiką: lapės pamoka skamba toli už karo, kurio metu gimė ši pasaka."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Mažasis princas**, parašytas tremtyje prieš Saint-Exupéry dingimą **1944** m., yra visuotinė pasakėčia apie prisijaukinimą ir atsakomybę, tapusi plačiausiai pasaulyje paplitusiu prancūzų kūriniu."
+        }
+      ]
+    }
+  ]
+}

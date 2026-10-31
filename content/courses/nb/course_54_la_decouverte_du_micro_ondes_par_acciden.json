@@ -4,11 +4,11 @@
   "subtitle": "Ved et uhell",
   "subject": "sciences",
   "subcategory": "Oppdagelser som endret verden",
-  "description": "I 1945 la en ingeniør merke til at godteriet hans hadde smeltet nær en radar. Fra denne observasjonen ble mikrobølgeovnen født.",
+  "description": "I 1945 la en ingeniør merke til at sjokoladen hans hadde smeltet nær en radar. Av denne observasjonen ble mikrobølgeovnen til.",
   "hero": {
     "image": "la_decouverte_du_micro_ondes",
     "ratio": "16:9",
-    "hook": "En smeltet sjokoladebar... og moderne mat endres."
+    "hook": "En smeltet sjokolade… og det moderne kjøkkenet forandres."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "I **1945**, i USA, jobber ingeniør **Percy Spencer** på radarer. En dag legger han merke til at godteriet i lommen har smeltet. Ikke på grunn av kroppsvarme: på grunn av radarbølger."
+          "text": "I **1945** jobber ingeniøren **Percy Spencer** med radarer i USA. En dag merker han at sjokoladen i lommen har smeltet. Ikke på grunn av kroppsvarmen, men på grunn av radarbølgene."
         },
         {
           "type": "paragraph",
-          "text": "Han tester med mais: popcornet popper. Ideen om en ovn som varmer annerledes ble født."
+          "text": "Han prøver med maiskorn: de popper. Ideen om en ovn som varmer på en ny måte, er født."
         }
       ]
     },
@@ -35,15 +35,15 @@
           "type": "image",
           "asset": "percy_spencer_microwave_discovery_radar",
           "ratio": "4:3",
-          "caption": "Andre verdenskrigs radarer brukte allerede mikrobølger."
+          "caption": "Radarene under andre verdenskrig brukte allerede mikrobølger."
         },
         {
           "type": "paragraph",
-          "text": "**mikrobølger** er elektromagnetiske bølger, som radiolys, men mer \"energiske\" enn mange konvensjonelle radiobølger. Under krigen ble de hovedsakelig brukt til radar for å oppdage fly og båter."
+          "text": "**Mikrobølger** er elektromagnetiske bølger, i likhet med lys og radiobølger, men mer «energirike» enn mange vanlige radiobølger. Under krigen ble de først og fremst brukt i radarer for å oppdage fly og skip."
         },
         {
           "type": "paragraph",
-          "text": "Spencer forstår at de også kan agitere vann og fett i maten... og derfor varme den opp."
+          "text": "Spencer forstår at de også kan sette vannet og fettet i maten i bevegelse… og dermed varme den opp."
         }
       ]
     },
@@ -60,41 +60,41 @@
         },
         {
           "type": "paragraph",
-          "text": "Den første kommersielle modellen, **Radarrange**, ble utgitt rundt **1947**. Den er enorm, dyr og hovedsakelig beregnet på restauranter eller båter. Det vil ta flere tiår å miniatyrisere det og gjøre det rimelig for hjem."
+          "text": "Den første kommersielle modellen, **Radarange**, kom rundt **1947**. Den var enorm, dyr og mest beregnet på restauranter eller skip. Det skulle ta flere tiår å gjøre den liten nok og billig nok for vanlige hjem."
         },
         {
           "type": "funFact",
-          "text": "Til å begynne med var noen redde for at ovnen skulle «gjøre maten radioaktiv». Falsk: mikrobølger varmes opp, de gjør deg ikke radioaktiv."
+          "text": "I begynnelsen var noen redde for at ovnen skulle «gjøre maten radioaktiv». Feil: mikrobølger varmer opp, de gjør ingenting radioaktivt."
         }
       ]
     },
     {
       "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p3",
-      "title": "Hvordan varmes det egentlig opp?",
+      "title": "Slik varmer den egentlig",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Mikrobølger vibrerer hovedsakelig vannmolekyler (og litt fett og sukker). Denne omrøringen skaper **inni varm** maten, ikke bare på overflaten som en panne."
+          "text": "Mikrobølgene får først og fremst vannmolekylene til å vibrere (og litt av fettet og sukkeret). Denne bevegelsen skaper varme **inne i** maten, ikke bare på overflaten som i en stekepanne."
         },
         {
           "type": "paragraph",
-          "text": "Dette er grunnen til at en rett kan være varm på utsiden og lunken i midten hvis den er tykk: bølgene trenger ikke uendelig dypt."
+          "text": "Derfor kan en tykk rett være brennhet ytterst og lunken i midten: bølgene trenger ikke uendelig dypt inn."
         }
       ]
     },
     {
       "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p4",
-      "title": "Et hverdagsobjekt",
+      "title": "En hverdagsting",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Fra 1970-1980-tallet kom mikrobølgeovnen inn i millioner av kjøkken. Det endrer vaner: oppvarming raskt, ferdigmat, raskere liv."
+          "text": "På 1970- og 1980-tallet fant mikrobølgeovnen veien inn i millioner av kjøkken. Den endret vanene: rask oppvarming, ferdigretter, et raskere liv."
         },
         {
           "type": "takeaway",
-          "text": "Mikrobølgeovnen ble født fra en tilfeldighet observert av Percy Spencer nær en radar. Bølgene agiterer hovedsakelig vannet i maten og varmer det opp fra innsiden."
+          "text": "Mikrobølgeovnen oppsto fra en tilfeldighet som Percy Spencer la merke til ved en radar. Bølgene setter først og fremst vannet i maten i bevegelse og varmer den opp innenfra."
         }
       ]
     }

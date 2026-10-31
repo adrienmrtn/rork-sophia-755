@@ -1,14 +1,14 @@
 {
   "id": "course_47_pourquoi_baille_t_on",
-  "title": "Hvorfor gjesper vi?",
+  "title": "Hvorfor gjesper man?",
   "subtitle": "Kropp og hjerne",
   "subject": "sciences",
   "subcategory": "Hverdagen forklart",
-  "description": "Alle gjesper: mennesker, hunder, noen ganger til og med fostre. Det er nok ikke for \"mangel på oksygen\". Her er de sterkeste ledetrådene.",
+  "description": "Alle gjesper: mennesker, hunder, noen ganger til og med fostre. Det er nok ikke fordi man «mangler oksygen». Her er de mest holdbare forklaringene.",
   "hero": {
     "image": "pourquoi_baille_t_on",
     "ratio": "16:9",
-    "hook": "Du gjesper. Naboen din gjesper. Og det er (nesten) ikke smittsomt ved en tilfeldighet."
+    "hook": "Du gjesper. Sidemannen gjesper. Og det er (nesten) ikke tilfeldig at det smitter."
   },
   "sections": [
     {
@@ -18,32 +18,32 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Å gjespe virker vanlig. Det er imidlertid en kompleks refleks: kjeve, thorax, diafragma, hele kroppen blir involvert. Løver, hunder, mennesker: mange dyr gjesper."
+          "text": "Gjesping virker banalt. Likevel er det en sammensatt refleks: kjeven, brystkassen, mellomgulvet, hele kroppen er med. Løver, hunder, mennesker: mange dyr gjesper."
         },
         {
           "type": "paragraph",
-          "text": "I lang tid sa vi: «det er for å ha mer oksygen». Denne ideen er nå stort sett forlatt. Moderne forklaringer er mer interessante."
+          "text": "Lenge sa man: «Det er for å få mer oksygen.» Den ideen er i dag stort sett forlatt. De moderne forklaringene er mer interessante."
         }
       ]
     },
     {
       "id": "course_47_pourquoi_baille_t_on_p1",
-      "title": "Ikke (spesielt) for oksygen",
+      "title": "Ikke (først og fremst) for oksygenets skyld",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Eksperimenter har vist at økende oksygen i luften ikke hindrer gjesping. Senk karbondioksidet litt heller. Så å gjespe er ikke en enkel \"fange etter luft\"."
+          "text": "Forsøk har vist at mer oksygen i luften ikke hindrer gjesping. Det gjør heller ikke litt mindre karbondioksid. Gjesping er altså ikke bare en måte å «ta igjen luft» på."
         },
         {
           "type": "paragraph",
-          "text": "En sterk ledelse i dag: gjesping hjelper **regulert temperatur**. Ved å puste vidt og strekke ut ansiktet vil vi «ventilere» og avkjøle hodet litt, spesielt når vi er slitne."
+          "text": "En sterk hypotese i dag: gjesping kan hjelpe med å **regulere hjernens temperatur**. Når man trekker pusten dypt og strekker ansiktet, blir hodet på en måte «luftet» og avkjølt, særlig når man er trøtt."
         }
       ]
     },
     {
       "id": "course_47_pourquoi_baille_t_on_p2",
-      "title": "Hvorfor er det smittsomt?",
+      "title": "Hvorfor det smitter",
       "free": false,
       "blocks": [
         {
@@ -54,41 +54,41 @@
         },
         {
           "type": "paragraph",
-          "text": "Hos mennesker kan det å se, høre eller til og med lese ordet \"gjesp\" utløse et gjesp. Det er ikke bare en dum imitasjon: den påvirker også **empati** og hjernekretser knyttet til [[Speilnevroner og smittsomhet]], nevroner som aktiveres når vi handler... eller når vi ser noen handle."
+          "text": "Hos mennesker kan det å se, høre eller bare lese ordet «gjespe» utløse et gjesp. Det er ikke bare dum etteraping: det har også med **empati** å gjøre, og med hjernekretser knyttet til [[speilnevroner og smittsomhet]]. Speilnevroner aktiveres når man selv gjør noe … eller ser noen andre gjøre det."
         },
         {
           "type": "funFact",
-          "text": "Små barn gjesper lite på grunn av smitte. Denne følsomheten kommer senere, sammen med visse sosiale ferdigheter."
+          "text": "Små barn smittes sjelden av gjesping. Denne følsomheten kommer senere, samtidig med visse sosiale ferdigheter."
         }
       ]
     },
     {
       "id": "course_47_pourquoi_baille_t_on_p3",
-      "title": "Vi gjesper allerede før vi blir født",
+      "title": "Gjesping begynner før fødselen",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Fostre gjesper fra rundt **11. uke** av svangerskapet. I denne alderen puster ikke lungene luft ennå. Så igjen, det handler ikke om å «gå tom for oksygen»."
+          "text": "Fostre gjesper allerede fra rundt **uke 11** i svangerskapet. På dette stadiet puster lungene ennå ikke inn luft. Så igjen: det handler ikke om å «mangle oksygen»."
         },
         {
           "type": "paragraph",
-          "text": "Hos fosteret kan gjesping hjelpe utviklingen av kjeve- og ansiktsmuskler."
+          "text": "Hos fosteret kan gjesping bidra til at kjeve- og ansiktsmusklene utvikler seg."
         }
       ]
     },
     {
       "id": "course_47_pourquoi_baille_t_on_p4",
-      "title": "Gjesper for å være på vakt?",
+      "title": "Gjespe for å holde seg våken?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Vi gjesper ofte når vi er slitne... men også rett før en test, eller når vi kjeder oss mens vi prøver å holde fokus. Uttøyning kan stimulere nervesystemet og hjelpe **å holde seg våken**."
+          "text": "Man gjesper ofte når man er trøtt … men også rett før en prøve, eller når man kjeder seg og vil holde konsentrasjonen. Strekken kan stimulere nervesystemet og gjøre det lettere å **holde seg årvåken**."
         },
         {
           "type": "takeaway",
-          "text": "Å gjespe er nok ikke mangel på oksygen. Den vil heller brukes til å regulere hjernen (temperatur, årvåkenhet), og hos mennesker sprer den seg også ved sosial smitte."
+          "text": "Gjesping skyldes nok ikke oksygenmangel. Den ser heller ut til å hjelpe med å regulere hjernen (temperatur, årvåkenhet), og hos mennesker sprer den seg også ved sosial smitte."
         }
       ]
     }

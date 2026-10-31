@@ -4,7 +4,7 @@
   "subtitle": "Fizika leta",
   "subject": "sciences",
   "subcategory": "Svakodnevica pod povećalom",
-  "description": "Leti avion težak nekoliko stotina tona. To nije magija: to je stvar oblika krila, brzine i sila koje međusobno uravnotežuju.",
+  "description": "Avion težak nekoliko stotina tona leti. To nije magija, nego stvar oblika krila, brzine i sila koje se međusobno uravnotežuju.",
   "hero": {
     "image": "comment_les_avions_volent",
     "ratio": "16:9",
@@ -22,18 +22,18 @@
         },
         {
           "type": "paragraph",
-          "text": "U igri su četiri glavne sile: **potisak** (naprijed), **povlačenje** (zračno kočenje), **težina** (prema dolje) i **podizanje** (prema gore)."
+          "text": "U igri su četiri glavne sile: **potisak** (prema naprijed), **otpor** (kočenje zraka), **težina** (prema dolje) i **uzgon** (prema gore)."
         }
       ]
     },
     {
       "id": "course_46_comment_les_avions_volent_ils_p1",
-      "title": "Krilo, inteligentan oblik",
+      "title": "Krilo, pametan oblik",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Gledano sa strane, krilo aviona nije ravno. Vrh je zaobljeniji od dna. Kada se avion brzo kreće, zrak mora obilaziti ovaj oblik."
+          "text": "Gledano sa strane, krilo aviona nije ravno. Gornja strana je ispupčenija od donje. Kad avion brzo leti, zrak mora strujati oko tog oblika."
         },
         {
           "type": "image",
@@ -43,13 +43,13 @@
         },
         {
           "type": "paragraph",
-          "text": "Zrak koji prolazi iznad malo se ubrzava. Tlak mu pada. Ispod krila pritisak ostaje jači. Ova razlika gura krilo prema gore: ovo je **lift**. Često se objašnjava principom **Bernoulli**, nazvanim po učenjaku iz 18. stoljeća, te činjenicom da krilo također skreće zrak prema dolje."
+          "text": "Zrak koji prolazi iznad krila malo se ubrza. Tlak mu pada. Ispod krila tlak ostaje viši. Ta razlika gura krilo prema gore: to je **uzgon**. Često se objašnjava principom nazvanim po **Bernoulliju**, učenjaku iz 18. stoljeća, i time što krilo usto skreće zrak prema dolje."
         }
       ]
     },
     {
       "id": "course_46_comment_les_avions_volent_ils_p2",
-      "title": "Trebate brzinu",
+      "title": "Potrebna je brzina",
       "free": false,
       "blocks": [
         {
@@ -58,41 +58,41 @@
         },
         {
           "type": "funFact",
-          "text": "Ptice koriste istu opću ideju: njihova krila stvaraju uzgon. Ali oni mašu krilima kako bi krenuli naprijed. Avion se kreće naprijed zahvaljujući svojim motorima."
+          "text": "Ptice se služe istom osnovnom idejom: njihova krila stvaraju uzgon. No one mašu krilima da bi se kretale naprijed. Avion se pak kreće naprijed zahvaljujući motorima."
         },
         {
           "type": "paragraph",
-          "text": "U krstarenju, dizanje uravnotežuje težinu. Potisak motora uravnotežuje otpor zraka. Avion se tada kreće naprijed približno konstantnom brzinom."
+          "text": "Tijekom krstarenja uzgon uravnotežuje težinu. Potisak motora uravnotežuje otpor zraka. Avion se tada kreće približno stalnom brzinom."
         }
       ]
     },
     {
       "id": "course_46_comment_les_avions_volent_ils_p3",
-      "title": "Idite gore, dolje, okrenite se",
+      "title": "Penjanje, spuštanje, skretanje",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Za penjanje pilot (ili putno računalo) malo naginje nos prema gore i prilagođava potisak. Za spuštanje često smanjimo potisak. Za skretanje avion se naginje u stranu pomoću pomičnih dijelova krila, krilaca."
+          "text": "Za penjanje pilot (ili računalo u avionu) malo podigne nos i prilagodi potisak. Za spuštanje se često smanjuje potisak. Za skretanje se avion naginje u stranu pomoću pomičnih dijelova krila, krilaca."
         },
         {
           "type": "paragraph",
-          "text": "Prilikom slijetanja usporavamo. Zakrilca se protežu od krila za povećanje uzgona pri malim brzinama. Tada kotači dodiruju tlo, a kočnice (ponekad i reverzeri potiska) zaustavljaju avion."
+          "text": "Pri slijetanju avion usporava. Iz krila izlaze zakrilca koja povećavaju uzgon pri malim brzinama. Zatim kotači dotaknu tlo, a kočnice (ponekad i reverseri potiska) zaustave avion."
         }
       ]
     },
     {
       "id": "course_46_comment_les_avions_volent_ils_p4",
-      "title": "Nije \"lakši od zraka\"",
+      "title": "Nije „lakši od zraka”",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Balon s helijem lebdi jer je manje gustoće od zraka. Avion, ne: mnogo je gušći. Leti jer **sila** izgleda kao da ga nosi, zahvaljujući svojoj brzini i obliku krila."
+          "text": "Balon s helijem lebdi jer je manje gust od zraka. Avion nije: on je mnogo gušći. Leti jer **prisiljava** zrak da ga nosi, zahvaljujući svojoj brzini i obliku krila."
         },
         {
           "type": "takeaway",
-          "text": "Avion leti zahvaljujući **lift** stvorenom njegovim krilima koja se kreću kroz zrak. Brzina je bitna: bez nje krilo više ne \"gura\" prema gore dovoljno da kompenzira težinu."
+          "text": "Avion leti zahvaljujući **uzgonu** koji stvaraju njegova krila dok se kreću kroz zrak. Brzina je nužna: bez nje krilo više ne „gura” dovoljno prema gore da nadoknadi težinu."
         }
       ]
     }

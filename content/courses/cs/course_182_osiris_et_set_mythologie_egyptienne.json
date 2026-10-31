@@ -4,11 +4,11 @@
   "subtitle": "Egyptská mytologie",
   "subject": "mythologie",
   "subcategory": "Další mytologie",
-  "description": "Vražda, rozřezání, mumie a pomsta: cyklus Usira a Sutecha zakládá egyptské království a naději na život po smrti.",
+  "description": "Vražda, rozsekání těla, mumie a pomsta: příběh Usira a Sutecha je základem egyptské královské moci i naděje na život po smrti.",
   "hero": {
     "image": "osiris_et_set_mythologie_egyptienne",
     "ratio": "16:9",
-    "hook": "Bratr zabije krále a rozřeže tělo na čtrnáct kusů. Sestra ho složí. Syn pomstí. Celý Egypt vyjde z toho zločinu."
+    "hook": "Bratr zabije krále a rozseká jeho tělo na čtrnáct kusů. Sestra ho poskládá. Syn ho pomstí. Z tohoto zločinu vzešel celý Egypt."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Cyklus **Usira** a **Sutecha** je velké vyprávění starého Egypta. Není to jen rodinná tragédie. Je to boj mezi řádem ([[ma'at]], harmonií) a neplodným chaosem."
+          "text": "Příběh **Usira** a **Sutecha** je velkým vyprávěním starého Egypta. Není to jen rodinná tragédie. Je to boj mezi řádem ([[maat]], harmonií) a neplodným chaosem."
         },
         {
           "type": "paragraph",
-          "text": "Skrze vraždu, rozřezání a vzkříšení Usira Egypťané myslí království, úrodnost Nilu a život po smrti. Každý živý faraon je **Horem**. Každý mrtvý král se stane **Usirem**."
+          "text": "Příběhem o vraždě, rozsekání a vzkříšení Usira si Egypťané vysvětlovali královskou moc, úrodnost Nilu i život po smrti. Každý živý faraon je **Horem**. Každý mrtvý král se stává **Usirem**."
         }
       ]
     },
@@ -33,7 +33,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Usir** je civilizační král. Se sestrou-manželkou **Eset** učí zemědělství a zákony. Bratr **Sutech**, bůh pouště a násilí, ho nenávidí. Na hostině Sutech ukáže nádhernou truhlu: daruje ji tomu, komu bude sedět dokonale."
+          "text": "**Usir** je král, který přináší civilizaci. Se svou sestrou a manželkou **Eset** učí lidi zemědělství a zákonům. Jeho bratr **Sutech**, bůh pouště a násilí, ho nenávidí. Na hostině předvede Sutech nádhernou truhlu: daruje ji tomu, kdo se do ní přesně vejde."
         },
         {
           "type": "image",
@@ -43,11 +43,11 @@
         },
         {
           "type": "paragraph",
-          "text": "Když si Usirovy míry vzal potají, Sutech ho nechá ulehnout, truhlu zamkne, zapečetí olovem a hodí do Nilu. Později, když Eset tělo najde, Sutech ho rozřeže na **14 kusů** a rozháže po údolí. Bez celého těla není v záhrobí klid."
+          "text": "Sutech si předtím tajně vzal Usirovy míry. Přiměje ho, aby si do truhly lehl, zamkne ji, zalije olovem a hodí do Nilu. Když pak Eset tělo najde, Sutech ho rozseká na **14 kusů** a rozhází je po údolí. Bez neporušeného těla není v záhrobí klid."
         },
         {
           "type": "funFact",
-          "text": "Usira často malují zeleně. Ta barva neříká hnilobu: říká znovuzrození, jako pole po nilské záplavě."
+          "text": "Usir bývá často zobrazován zeleně. Ta barva neznamená hnilobu, ale znovuzrození, jako pole po záplavě Nilu."
         }
       ]
     },
@@ -58,7 +58,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Eset**, velká kouzelnice, vyrazí hledat úlomky. S pomocí sestry Nebthety a boha [[Anubis]] vztyčí svatyni na každém místě, kde najde kus. Zůstane problém: falus sežrala ryba [[Oxyrhynchus]]. Eset vyrobí náhradu."
+          "text": "**Eset**, mocná kouzelnice, se vydá hledat části těla. Pomáhají jí sestra Nebthet a bůh [[Anubis]]. Na každém místě, kde najde kus, postaví svatyni. Jeden problém zůstává: falus sežrala ryba [[Oxyrhynchus]]. Eset vytvoří náhradní."
         },
         {
           "type": "image",
@@ -68,7 +68,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Když složí kusy a zabalí je do obinadel, Eset a Anubis stvoří **první mumii**. Mávnutím křídel Eset Usirovi vdechne krátký život. Tehdy počne **Hora**, dědice určeného k obnově řádu."
+          "text": "Eset a Anubis kusy poskládají, ovinou je obinadly a vytvoří tak **první mumii**. Mávnutím křídel vdechne Eset Usirovi nakrátko život. Tehdy počne **Hora**, dědice, kterému je souzeno obnovit řád."
         },
         {
           "type": "funFact",
@@ -83,7 +83,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Vychovaný v tajnosti v bažinách [[Khemmis]] **Hor** vyroste v podobě sokola. Dospělý žádá trůn před soudem bohů, kterému předsedá [[Ra]]. Konflikt se Sutechem trvá desetiletí: souboje, lsti, rány. Hor ztratí oko; Sutech ztratí plodnost."
+          "text": "**Hor**, tajně vychovaný v bažinách [[Chemmis]], vyrůstá v podobě sokola. Jako dospělý žádá o trůn před soudem bohů, kterému předsedá [[Ra]]. Spor se Sutechem trvá desítky let: souboje, lsti, zranění. Hor přijde o oko, Sutech o plodnost."
         },
         {
           "type": "image",
@@ -93,7 +93,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Oko, složené bohem [[Thoth]], se stane symbolem hojení a ochrany. Bohové rozhodnou: Sutech je odsouzený sloužit, zvlášť bojovat s hadem [[Apophis]] na sluneční bárce. Hor je korunován. Každý faraon bude odteď „živý Hor”."
+          "text": "Oko, které znovu složil [[Thoth]], se stane symbolem uzdravení a ochrany. Bohové rozhodnou: Sutech je odsouzen sloužit, mimo jiné v boji s hadem [[Apop]] na sluneční bárce. Hor je korunován. Každý faraon bude odteď „živý Hor“."
         }
       ]
     },
@@ -104,15 +104,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Mumifikovaný Usir už nemůže vládnout na zemi. Stane se panovníkem **Amenti**, říše mrtvých. Pod jeho pohledem probíhá **vážení srdce**, popsané v díle [[Kniha mrtvých]]. Srdce zemřelého položí na váhu proti peru Maat."
+          "text": "Mumifikovaný Usir už nemůže vládnout na zemi. Stává se vládcem **Amenti**, říše mrtvých. Pod jeho dohledem probíhá **vážení srdce**, jak ho popisuje [[Kniha mrtvých]]. Srdce zemřelého se klade na váhu proti peru bohyně Maat."
         },
         {
           "type": "paragraph",
-          "text": "Je-li srdce lehké, zemřelý je „spravedlivý hlasem” a vstoupí do Usirovy věčnosti. Je-li těžké vinami, nestvůra [[Ammit]] ho sežere: definitivní zapomnění. Král i sedlák se soudí podle týchž měřítek. Hor spravuje přítomnost; Usir zajišťuje pokračování."
+          "text": "Je-li srdce lehké, zemřelý je „pravdivého hlasu“ a vstoupí do Usirovy věčnosti. Je-li ztížené vinami, sežere ho nestvůra [[Ammut]]: navždy upadne v zapomnění. Král i sedlák jsou souzeni podle stejných měřítek. Hor vládne přítomnosti, Usir zajišťuje pokračování."
         },
         {
           "type": "takeaway",
-          "text": "Mýtus o **Usirovi** a **Sutechovi** zakládá tři pilíře Egypta: království (živý Hor), mumifikaci (celé tělo pro záhrobí) a naději na spravedlnost po smrti pod Usirovým pohledem."
+          "text": "Mýtus o **Usirovi** a **Sutechovi** položil tři pilíře Egypta: královskou moc (živý Hor), mumifikaci (neporušené tělo pro záhrobí) a naději na spravedlnost po smrti pod Usirovým dohledem."
         }
       ]
     }

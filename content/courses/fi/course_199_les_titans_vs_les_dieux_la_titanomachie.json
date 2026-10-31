@@ -4,11 +4,11 @@
   "subtitle": "Sodan jälkeen",
   "subject": "mythologie",
   "subcategory": "Muut mytologiat",
-  "description": "Kymmenen vuoden sodan jälkeen Zeus rankaisee Atlasta, säästää Prometheuksen ja kohtaa sitten jättiläiset. Tässä on post-titanomachy: rangaistukset, Gigantomachy, Olympian järjestys.",
+  "description": "Kymmenen vuotta kestäneen sodan jälkeen Zeus rankaisee Atlasta, säästää Prometheuksen ja kohtaa sitten jättiläiset. Näin käy titanomakhian jälkeen: rangaistukset, gigantomakhia ja olympolainen järjestys.",
   "hero": {
     "image": "les_titans_vs_les_dieux_titanomachie",
     "ratio": "16:9",
-    "hook": "Sodan voittaminen ei riitä. Meidän on vielä keksittävä maailma, jossa voitetut kantavat taivasta."
+    "hook": "Sodan voittaminen ei riitä. On vielä luotava maailma, jossa voitetut kantavat taivasta."
   },
   "sections": [
     {
@@ -18,36 +18,36 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Titanomachy** kohtaa **Titaanit**, **Kronos**:n johtaman muinaisen jumalallisen sukupolven **Zeus**:n **olympialainen**:n kanssa kymmenen vuoden ajan. Tämä kurssi ei keskity itse sodan tarinaan. Siitä seuraa, mitä tulee sen jälkeen: surujen jakaminen, sitten viimeinen kaaoksen myrsky."
+          "text": "**Titanomakhiassa** kymmenen vuoden ajan vastakkain ovat **titaanit**, **Kronoksen** johtama vanhempi jumalsukupolvi, ja **Zeuksen** **olympolaiset**. Tämä kurssi ei viivy itse sodan kertomuksessa. Se seuraa sitä, mitä tapahtuu sen jälkeen: rangaistusten jakamista ja sitten kaaoksen viimeistä myrskyä."
         },
         {
           "type": "paragraph",
-          "text": "Koska voitto ei riitä. Zeuksen on vakautettava kosmos: määrättävä rangaistuksia, muutettava viholliset maailman pylväiksi ja sitten kohdattava **Jätäläiset**, jotka [[Gaia]], Äiti Maa, kasvaa rankaisemaan häntä. Näin Olympian järjestys todella vahvistuu."
+          "text": "Voitto ei nimittäin riitä. Zeuksen on vakautettava kosmos: jaettava rangaistukset, tehtävä vihollisista maailman tukipylväitä ja kohdattava sitten **jättiläiset**, jotka Maaemo [[Gaia]] synnyttää rangaistakseen häntä. Näin olympolainen järjestys todella vakiintuu."
         }
       ]
     },
     {
       "id": "course_199_les_titans_vs_les_dieux_la_titanomachie_p1",
-      "title": "Voimien siirtyminen ja kuilujen liitto",
+      "title": "Voimasuhteiden käänne ja syvyyksien liitto",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kymmenen vuoden ajan Mount **Othrys** vastaan Mount **Olympus** kumpikaan osapuoli ei voita. Gaian neuvosta Zeus vapauttaa liittolaisia, jotka Kronos oli ketjuttanut: **kyklooppi**, joka takoo salamaa, kolmiharppa ja [[Kynee]] (Hadesin näkymättömyyskypärä) sekä **Hecatonchires**, arms."
+          "text": "Kymmenen vuoden ajan **Othrysvuori** ja **Olymposvuori** ovat vastakkain, eikä kumpikaan osapuoli voita. Gaian neuvosta Zeus vapauttaa liittolaiset, jotka Kronos oli kahlinnut: **kykloopit**, joiden takomia ovat salama, kolmikärki ja [[Kynee]] (Hadeksen näkymättömyyskypärä), sekä **hekatonkheirit**, satakätiset jättiläiset."
         },
         {
           "type": "image",
           "asset": "hecatoncheires_hundred_handed_giants_greek_myth",
           "ratio": "4:3",
-          "caption": "Hecatonchiret, Zeuksen ratkaisevat liittolaiset titaaneja vastaan."
+          "caption": "Hekatonkheirit, Zeuksen ratkaisevat liittolaiset titaaneja vastaan."
         },
         {
           "type": "funFact",
-          "text": "Hesiodoksen mukaan \"titaani\" tulee verbistä *titaino*, \"herkkä\": titaanit olisivat laajentaneet voimaansa yli kaiken."
+          "text": "Hesiodoksen mukaan sana ”titaani” tulisi verbistä *titaino*, ”jännittää”: titaanit olisivat venyttäneet voimansa yli kaiken kohtuuden."
         },
         {
           "type": "paragraph",
-          "text": "Hecatonchiresin kivien ja Zeuksen salaman alla titaanit taipuvat. Voitetut heitetään **tatari**, alamaailman alla olevaan vankilaan. Hecatonchireista tulee sen vankiloita. Raa'an voiman aikakausi on päättymässä. Jäljelle jää selviytyneiden hallitseminen."
+          "text": "Hekatonkheirien kivien ja Zeuksen salamoiden alla titaanit taipuvat. Voitetut heitetään **Tartarokseen**, manalan alapuolella olevaan vankilaan. Hekatonkheireista tulee sen vartijoita. Raa'an voiman aikakausi päättyy. Jäljelle jää eloonjääneiden hallitseminen."
         }
       ]
     },
@@ -58,61 +58,61 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Zeus ei rankaise kaikkia titaaneja samalla tavalla. **Atlas**, Titaanin [[Iapetus]] poika ja Kronoksen armeijoiden kenraali, saa yksinäisen tuomion: kantaa taivaanholvia harteillaan, jotta taivas ja maa eivät enää kohtaa kaaoksessa."
+          "text": "Zeus ei rankaise kaikkia titaaneja samalla tavalla. **Atlas**, Kronoksen armeijoiden sotapäällikkö, jonka isä on titaani [[Iapetos]], saa yksinäisen rangaistuksen: hänen on kannettava taivaankantta harteillaan, jotteivät taivas ja maa enää sulautuisi yhteen kaaoksessa."
         },
         {
           "type": "image",
           "asset": "atlas_holding_sky_greek_mythology_sculpture",
           "ratio": "4:3",
-          "caption": "Atlas tuomittu kantamaan taivasta: rangaistuksesta tulee maailman arkkitehtuuri."
+          "caption": "Atlas on tuomittu kantamaan taivasta: rangaistuksesta tulee osa maailman rakennetta."
         },
         {
           "type": "paragraph",
-          "text": "**Prometheus**, Zeuksen serkku samasta sukulinjasta, valitsee toisen polun. Nähdessään, että titaanien vahvuus ei voita olympialaisten oveluutta, [[Ei-taisteleva Prometheus]] jää. Tämä valinta pelastaa hänet Tartarukselta ja jättää hänet vapaaksi: myöhemmin hän muotoilee ja suojelee ihmisiä Olympuksen jatkuvan jännityksen kustannuksella. Rangaistus tässä ei ole tuhoaminen: se on roolien uudelleenjako, joka rakentaa maailmankaikkeuden."
+          "text": "**Prometheus**, Zeuksen serkku samasta suvusta, valitsee toisen tien. Hän näkee, ettei titaanien voima voita olympolaisten oveluutta, joten hän jää sivuun: hänestä tulee [[Ei-taisteleva Prometheus]]. Valinta säästää hänet Tartarokselta ja jättää hänet vapaaksi: myöhemmin hän muovaa ihmiset ja suojelee heitä, minkä hintana on jatkuva jännite olympolaisten kanssa. Rangaistus ei tässä ole tuhoamista: se on roolien uudelleenjakoa, joka järjestää maailmankaikkeuden."
         }
       ]
     },
     {
       "id": "course_199_les_titans_vs_les_dieux_la_titanomachie_p3",
-      "title": "Gigantomachyn konsolidointi",
+      "title": "Gigantomakhia vakiinnuttaa järjestyksen",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Gaia, joka on raivoissaan titaanipoikiensa kohtalosta, luo [[Jättiläiset]] kaataakseen Zeuksen. Sitten alkaa [[The Gigantomachy (jatko-osa Titanomachylle)]]. Profetia muuttaa kaiken: jumalat eivät voi voittaa ilman kuolevaisen apua."
+          "text": "Gaia on raivoissaan titaanipoikiensa kohtalosta ja synnyttää [[jättiläiset]], joiden on määrä kaataa Zeus. Sitten alkaa [[Gigantomakhia, titanomakhian jatko]]. Ennustus muuttaa kaiken: jumalat eivät voi voittaa ilman kuolevaisen apua."
         },
         {
           "type": "image",
           "asset": "gigantomachy_giants_greek_gods_pergamon_frieze",
           "ratio": "4:3",
-          "caption": "Gigantomachy: jumalat ja kuolevaiset yhdistyneet kaaosta vastaan."
+          "caption": "Gigantomakhia: jumalat ja kuolevaiset yhdessä kaaosta vastaan."
         },
         {
           "type": "funFact",
-          "text": "Pergamonin suurella alttarilla (2. vuosisadalla eKr.) Gigantomachy on veistetty kymmeniä metrejä: hellenistinen politiikka lavastettiin kosmiseksi voitoksi."
+          "text": "Pergamonin suureen alttariin (2. vuosisata eKr.) on veistetty gigantomakhia kymmenien metrien pituudelta: hellenistinen politiikka esitti itsensä kosmisena voittona."
         },
         {
           "type": "paragraph",
-          "text": "[[Herakles]] puuttuu, sankari töissä. Hänen myrkylliset nuolensa päättävät salaman iskemät jättiläiset. Kuolemattomat tarvitsevat nyt inhimillistä rohkeutta. Zeus hallitsee taivaalla, **Poseidon** vesillä, **Hades** varjoilla: Olympian rakennus on vihdoin pystyssä."
+          "text": "Mukaan tulee [[Herakles]], urotöistään tunnettu sankari. Hänen myrkkynuolensa surmaavat jättiläiset, jotka salama on kaatanut maahan. Kuolemattomat tarvitsevat nyt ihmisen rohkeutta. Zeus hallitsee taivasta, **Poseidon** vesiä ja **Hades** varjoja: olympolainen rakennelma pysyy vihdoin pystyssä."
         }
       ]
     },
     {
       "id": "course_199_les_titans_vs_les_dieux_la_titanomachie_p4",
-      "title": "Myytin perintö ja metamorfoosit",
+      "title": "Myytin perintö ja muodonmuutokset",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Sana \"titaani\" on siirtynyt kieleen tarkoittamaan ylimääräistä. Jotkut orfiset perinteet jopa kuvittelevat Kronoksen vapautuneen, hallitsevan Siunattujen saaria: tuhovoimasta tulee kaukainen kulta-aika."
+          "text": "Sana ”titaani” on siirtynyt kieleen kuvaamaan kaiken mitan ylittävää. Jotkin orfiset perinteet kuvittelevat jopa Kronoksen vapautetuksi hallitsemaan Autuaiden saaria: tuhoava voima muuttuu kaukaiseksi kulta-ajaksi."
         },
         {
           "type": "paragraph",
-          "text": "Filosofisesti Zeuksen voitto juhlii oikeutta röyhkeyttä vastaan. Titaanit eivät katoa: ne ovat sivilisaation sisällä. Tähtitiedessä Saturnuksen (Cronos) kuut kantavat edelleen nimiään: Titan, Rhea, Iapetus."
+          "text": "Filosofisesti Zeuksen voitto on oikeudenmukaisuuden voitto hybriksestä. Titaanit eivät katoa: ne pysyvät kahlittuina sivilisaation alla. Tähtitieteessä Saturnuksen (Kronos) kuut kantavat yhä titaanien nimiä: Titan, Rhea, Japetus."
         },
         {
           "type": "takeaway",
-          "text": "Titanomachyn jälkeen Zeus vakauttaa maailmaa: **Atlas** kantaa taivasta, **Prometheus** pysyy vapaana puolueettomuutensa ansiosta, ja **Gigantomachia**, joka on voitettu **Herakles**:llä, sinetöi tilan."
+          "text": "Titanomakhian jälkeen Zeus vakauttaa maailman: **Atlas** kantaa taivasta, **Prometheus** pysyy vapaana puolueettomuutensa ansiosta, ja **Herakleen** avulla voitettu **gigantomakhia** sinetöi olympolaisen järjestyksen."
         }
       ]
     }

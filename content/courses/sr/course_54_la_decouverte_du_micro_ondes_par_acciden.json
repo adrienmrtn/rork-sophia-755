@@ -4,11 +4,11 @@
   "subtitle": "Slučajno",
   "subject": "sciences",
   "subcategory": "Otkrića koja su promenila svet",
-  "description": "Godine 1945. jedan inženjer je primetio da se njegova bombona istopila u blizini radara. Iz ovog zapažanja nastala je mikrotalasna pećnica.",
+  "description": "Jedan inženjer 1945. godine primećuje da mu se čokoladica istopila blizu radara. Iz tog zapažanja nastaće mikrotalasna pećnica.",
   "hero": {
     "image": "la_decouverte_du_micro_ondes",
     "ratio": "16:9",
-    "hook": "Otopljena čokoladica… i promene moderne kuhinje."
+    "hook": "Istopljena čokoladica… i moderna kuhinja se menja."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "U **1945**, u Sjedinjenim Državama, inženjer **Persi Spenser** radi na radarima. Jednog dana primećuje da mu se čokoladica u džepu istopila. Ne zbog toplote tela: zbog radarskih talasa."
+          "text": "**1945. godine**, u Sjedinjenim Državama, inženjer **Persi Spenser** radi na radarima. Jednog dana primećuje da mu se čokoladica u džepu istopila. Ne zbog toplote tela, nego zbog radarskih talasa."
         },
         {
           "type": "paragraph",
-          "text": "Testira sa kukuruzom: kokice iskaču. Rodila se ideja o pećnici koja se zagreva drugačije."
+          "text": "Isprobava to na kukuruzu: zrna pucaju u kokice. Rođena je ideja o pećnici koja greje na drugačiji način."
         }
       ]
     },
@@ -35,47 +35,47 @@
           "type": "image",
           "asset": "percy_spencer_microwave_discovery_radar",
           "ratio": "4:3",
-          "caption": "Radari iz Drugog svetskog rata su već koristili mikrotalasne pećnice."
+          "caption": "Radari iz Drugog svetskog rata već su koristili mikrotalase."
         },
         {
           "type": "paragraph",
-          "text": "**mikrotalasi** su elektromagnetni talasi, poput radio svetlosti, ali su „energetskiji“ od mnogih konvencionalnih radio talasa. Tokom rata uglavnom su korišćeni za radare za otkrivanje aviona i čamaca."
+          "text": "**Mikrotalasi** su elektromagnetni talasi, kao svetlost i radio-talasi, ali su „energičniji“ od mnogih klasičnih radio-talasa. Tokom rata uglavnom služe radarima za otkrivanje aviona i brodova."
         },
         {
           "type": "paragraph",
-          "text": "Spenser shvata da oni takođe mogu da uzburkaju vodu i masti u hrani... i stoga je zagreju."
+          "text": "Spenser shvata da mikrotalasi mogu i da uskomešaju vodu i masti u hrani... i tako je zagreju."
         }
       ]
     },
     {
       "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p2",
-      "title": "Prva peć je ogromna",
+      "title": "Prva pećnica je ogromna",
       "free": false,
       "blocks": [
         {
           "type": "image",
           "asset": "first_microwave_oven_radarange_1947",
           "ratio": "4:3",
-          "caption": "Prva komercijalna mikrotalasna pećnica bila je veličine ormarića."
+          "caption": "Prva komercijalna mikrotalasna pećnica velika je kao ormar."
         },
         {
           "type": "paragraph",
-          "text": "Prvi komercijalni model, **Radarange**, objavljen je oko **1947**. Ogroman je, skup i uglavnom namenjen restoranima ili brodovima. Biće potrebne decenije da se minijaturizuje i učini pristupačnim za kuće."
+          "text": "Prvi komercijalni model, **Radarange**, izlazi oko **1947. godine**. Ogroman je, skup i namenjen uglavnom restoranima ili brodovima. Trebaće decenije da se smanji i postane pristupačan za domaćinstva."
         },
         {
           "type": "funFact",
-          "text": "U početku su se neki plašili da će pećnica „učiniti hranu radioaktivnom“. Netačno: mikrotalasi se zagrevaju, ne čine vas radioaktivnim."
+          "text": "U početku su se neki plašili da će pećnica „učiniti hranu radioaktivnom“. Netačno: mikrotalasi greju, ali ništa ne čine radioaktivnim."
         }
       ]
     },
     {
       "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p3",
-      "title": "Kako se zaista zagreva?",
+      "title": "Kako zapravo greje",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Mikrotalasi uglavnom vibriraju molekule vode (i malo masti i šećera). Ovo mešanje stvara **toplotu unutar** hrane, a ne samo na površini poput tiganja."
+          "text": "Mikrotalasi pre svega teraju molekule vode da vibriraju (a pomalo i masti i šećere). To komešanje stvara toplotu **unutar** hrane, a ne samo na površini kao tiganj."
         },
         {
           "type": "paragraph",
@@ -90,11 +90,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Od 1970-ih do 1980-ih, mikrotalasna pećnica je ušla u milione kuhinja. Menja navike: brzo zagrevanje, gotova jela, brži život."
+          "text": "Od 1970-ih i 1980-ih mikrotalasna pećnica ulazi u milione kuhinja. Menja navike: brzo podgrevanje, gotova jela, brži život."
         },
         {
           "type": "takeaway",
-          "text": "Mikrotalasna je nastala iz slučajnosti koju je primetio Persi Spenser u blizini radara. Talasi uglavnom uzburkavaju vodu u hrani i zagrevaju je iznutra."
+          "text": "Mikrotalasna pećnica nastaje iz slučajnosti koju je Persi Spenser primetio blizu radara. Talasi pre svega komešaju vodu u hrani i zagrevaju je iznutra."
         }
       ]
     }

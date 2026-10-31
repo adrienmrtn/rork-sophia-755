@@ -3,12 +3,12 @@
   "title": "Parížska komúna",
   "subtitle": "1871",
   "subject": "histoire",
-  "subcategory": "Revolúcie a konflikty novoveku",
-  "description": "Od 18. marca do 28. mája 1871 vládol Paríž **72 dní**. Zážitok končí Krvavým týždňom, represiou, ktorá zanecháva trvalú stopu vo francúzskej pamäti.",
+  "subcategory": "Revolúcie a moderné konflikty",
+  "description": "Od 18. marca do 28. mája 1871 si Paríž **72 dní** vládne sám. Pokus sa končí Krvavým týždňom, represiou, ktorá sa natrvalo vryla do francúzskej pamäti.",
   "hero": {
     "image": "la_commune_de_paris_1871",
     "ratio": "16:9",
-    "hook": "72 dní, keď si Paríž vládne sám... predtým, než ho rozdrví krv."
+    "hook": "72 dní, keď si Paríž vládne sám… kým ho neutopia v krvi."
   },
   "sections": [
     {
@@ -18,22 +18,22 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Od **značka 18** do **28. mája 1871** zažíva Paríž vzácny zážitok: **magistrát**. Počas **72 dní** sa hlavné mesto riadi samo. Odmieta poslúchnuť vládu inštalovanú v **Versailles** a pokúša sa o viac sociálnej demokracie."
+          "text": "Od **18. marca** do **28. mája 1871** zažíva Paríž niečo výnimočné: **komúnu**. Počas **72 dní** si hlavné mesto vládne samo. Odmieta poslúchať vládu, ktorá sídli vo **Versailles**, a skúša sociálnejšiu demokraciu."
         },
         {
           "type": "paragraph",
-          "text": "Toto povstanie sa zrodilo z národnej porážky, hladového obliehania a rozdelenia medzi radikálnym Parížom a konzervatívnejšou provinciou. Končí sa **Krvavým týždňom**."
+          "text": "Toto povstanie sa rodí z národnej porážky, z hladu počas obliehania a z rozkolu medzi radikálnym Parížom a konzervatívnejším vidiekom. Končí sa **Krvavým týždňom**."
         }
       ]
     },
     {
       "id": "course_14_la_commune_de_paris_1871_p1",
-      "title": "Po porážke a obkľúčení",
+      "title": "Po porážke a obliehaní",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Všetko začína [[Francúzsko-pruská vojna]] (**1870-1871**). Francúzsky cisár **Napoleon III** je zajatý na **Sedan**. Paríž potom vydržal štvormesačné obliehanie. Jeme kone, zvieratá v zoo a potom potkany. Kapitulácia sa zdá byť ponižujúca."
+          "text": "Všetko sa začína vojnou, ktorá vošla do dejín ako [[francúzsko-pruská vojna]] (**1870-1871**). Francúzsky cisár **Napoleon III.** padne do zajatia pri **Sedane**. Paríž potom znáša štvormesačné obliehanie. Jedia sa kone, zvieratá zo zoo, potom potkany. Kapitulácia pôsobí ponižujúco."
         },
         {
           "type": "image",
@@ -43,32 +43,32 @@
         },
         {
           "type": "funFact",
-          "text": "Na Vianoce **1870** sa v niektorých luxusných reštauráciách podávalo slonie parfait alebo klokaní guláš zo zverinca Jardin des Plantes."
+          "text": "Na Vianoce **1870** podávali niektoré luxusné reštaurácie sloní vývar či klokanie ragú zo zverinca v Jardin des Plantes."
         },
         {
           "type": "paragraph",
-          "text": "Vo februári viedol [[Adolphe Thiers]] prevažne monarchistické zhromaždenie stiahnuté do Versailles. **marca 18** sa chcel zmocniť kanónov [[Národnej gardy]], milície ozbrojených Parížanov, uložených v **Montmartre**. Dav sa bratří s vojakmi. Thiers evakuuje Paríž. Ústredný výbor preberá kontrolu nad mestom."
+          "text": "Vo februári stojí [[Adolphe Thiers]] na čele zhromaždenia, prevažne monarchistického, ktoré sa stiahlo do Versailles. **18. marca** sa chce zmocniť kanónov [[Národnej gardy]], milície ozbrojených Parížanov, ktoré sú uložené na **Montmartri**. Dav sa bratríčkuje s vojakmi. Thiers nariadi evakuáciu Paríža. Mesto ovládne Ústredný výbor."
         }
       ]
     },
     {
       "id": "course_14_la_commune_de_paris_1871_p2",
-      "title": "Čo Komuna vyskúšala",
+      "title": "O čo sa komúna pokúsila",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Dňa **značka 28** bola obec vyhlásená. Robotníci, remeselníci, novinári, blízki [[Prvá internacionála]] (sieť odborov a robotníckych strán): rada prijíma zákony urgentne. Odpustenie nájomného. Zrušenie nočnej práce pre pekárov. Opustené dielne odovzdali družstvám."
+          "text": "**28. marca** je vyhlásená komúna. Robotníci, remeselníci, novinári aj ľudia blízki hnutiu [[Prvá internacionála]] (sieť odborov a robotníckych strán): rada prijíma zákony v zhone. Odpustenie nájomného. Zrušenie nočnej práce pekárov. Opustené dielne prechádzajú do rúk družstiev."
         },
         {
           "type": "image",
           "asset": "paris_city_hall_commune_1871",
           "ratio": "4:3",
-          "caption": "Radnica, politické srdce obce."
+          "caption": "Radnica, politické srdce komúny."
         },
         {
           "type": "paragraph",
-          "text": "Vyhlásila tiež odluku cirkvi od štátu, svetské a slobodné školy a dala strhnúť stĺp **Vendôme**, symbol impéria. [[Louise Michel]], učiteľka a aktivistka, stelesňuje ústrednú úlohu žien v kluboch a na barikádach."
+          "text": "Vyhlasuje aj odluku cirkvi od štátu, svetskú a bezplatnú školu a dáva strhnúť **Vendômský stĺp**, symbol cisárstva. [[Louise Michelová]], učiteľka a aktivistka, stelesňuje ústrednú úlohu žien v kluboch a na barikádach."
         }
       ]
     },
@@ -79,21 +79,21 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Dňa **Mája 21** vstúpili jednotky Versailles do Paríža. Je **Krvavý týždeň**. Susedstvo po susedstve, barikáda za barikádou, represie sú tvrdé. Rukojemníci sú zastrelení. Horia Tuileries a Hôtel de Ville."
+          "text": "**21. mája** vstupujú vojská z Versailles do Paríža. Začína sa **Krvavý týždeň**. Štvrť po štvrti, barikáda za barikádou, represie sú kruté. Popravujú rukojemníkov. Horí Tuilerijský palác aj radnica."
         },
         {
           "type": "image",
           "asset": "bloody_week_1871_paris",
           "ratio": "4:3",
-          "caption": "Krvavý týždeň: Paríž sa vracia ulica po ulici."
+          "caption": "Krvavý týždeň: Paríž dobývajú späť ulicu po ulici."
         },
         {
           "type": "funFact",
-          "text": "Počas komúny sa červená vlajka stala oficiálnym znakom Paríža a nahradila trikolóru, ktorá sa považovala za príliš spojenú s mocnosťami, ktoré kapitulovali."
+          "text": "Počas komúny sa červená vlajka stala oficiálnym znakom Paríža. Nahradila trikolóru, ktorú ľudia považovali za príliš spätú s režimami, ktoré kapitulovali."
         },
         {
           "type": "paragraph",
-          "text": "[[Fédérés]], čo je názov, ktorý dostali priaznivci Gúny, sa stiahli na cintorín **Père-Lachaise**. **147** tam boli zastrelení poslední bojovníci na **Múr Federátov**. Výsledky: medzi **10.000 až 30.000** úmrtí za jeden týždeň, potom deportácie do Novej Kaledónie."
+          "text": "Priaznivci komúny, nazývaní [[federáti]], ustupujú až na cintorín **Père-Lachaise**. Posledných **147** bojovníkov tam popravia pri **Múre federátov**. Bilancia: **10.000 až 30.000** mŕtvych za jediný týždeň, potom deportácie na Novú Kaledóniu."
         }
       ]
     },
@@ -104,7 +104,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Pre filozofa **Karla Marxová** a Internacionálu bola Komuna prvou skúsenosťou robotníckej moci. Jeho potlačenie však konsoliduje „poriadok“ **Tretia republika**. Komunardské myšlienky (sekularizmus, sociálne práva) by sa neskôr vrátili do republikánskeho práva."
+          "text": "Pre filozofa **Karla Marxa** a Internacionálu je komúna prvým pokusom o moc robotníkov. Jej potlačenie však upevní **Tretiu republiku**, republiku „poriadku“. Niektoré myšlienky komunardov (laicita, sociálne práva) sa neskôr vrátia do republikánskeho práva."
         },
         {
           "type": "timeline",
@@ -112,21 +112,21 @@
             {
               "date": "18. marca 1871",
               "title": "Montmartre",
-              "detail": "Thiersovi sa nedarí zachytiť delá; Paríž sa otriasa."
+              "detail": "Thiersovi sa nepodarí zmocniť kanónov; Paríž sa vzbúri."
             },
             {
               "date": "28. marca 1871",
               "title": "Proklamácia",
-              "detail": "Obec je oficiálne založená."
+              "detail": "Komúna je oficiálne nastolená."
             },
             {
-              "date": "21. - 28. mája 1871",
+              "date": "21.-28. mája 1871",
               "title": "Krvavý týždeň",
               "detail": "Versailles rozdrví povstanie."
             },
             {
               "date": "28. mája 1871",
-              "title": "Múr Federátov",
+              "title": "Múr federátov",
               "detail": "Koniec bojov pri Père-Lachaise."
             }
           ]

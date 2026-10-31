@@ -1,14 +1,14 @@
 {
   "id": "course_231_les_migrations_climatiques",
   "title": "Ilmastosiirtolaisuus: kuka suojelee lähtemään joutuvia?",
-  "subtitle": "216 miljoonaa pakolaista vuoteen 2050 mennessä?",
+  "subtitle": "216 miljoonaa kotinsa jättävää vuoteen 2050 mennessä?",
   "subject": "comprendreLeMonde",
   "subcategory": "Ympäristö ja tulevaisuus",
-  "description": "Ilmasto pakottaa satoja miljoonia ihmisiä kodeistaan, mutta mikään kansainvälinen laki ei vielä suojele heitä.",
+  "description": "Ilmasto pakottaa satoja miljoonia ihmisiä jättämään kotinsa, mutta mikään kansainvälinen laki ei vielä suojele heitä.",
   "hero": {
     "image": "les_migrations_climatiques",
     "ratio": "16:9",
-    "hook": "Ilmasto ajaa jo nyt enemmän ihmisiä pois kuin sota, mutta mikään laki ei tiedä, miksi heitä kutsutaan."
+    "hook": "Ilmasto ajaa ihmisiä kodeistaan jo enemmän kuin sota, mutta mikään laki ei osaa edes nimetä heitä."
   },
   "sections": [
     {
@@ -18,43 +18,43 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Vedenpinnan nousu ei aina ilmoita itsestään mahtavalla aallolla: se syö ensin pellon, sitten kaivon ja sitten kokonaisen kylän. Muualla äärimmäinen lämpö tekee ilmasta lähes mahdotonta hengittää. Molemmissa tapauksissa kokonaisten perheiden on poistuttava, ei sodan, vaan ilmaston vuoksi. Näillä pakollisilla lähdöillä on nimi: **Ilmaston muuttoliikkeet**. Ongelmana on, että mikään kansainvälinen laki ei todellakaan tunnusta niitä."
+          "text": "Merenpinnan nousu ei aina ilmoita itsestään näyttävällä aallolla: se syö ensin pellon, sitten kaivon ja lopulta kokonaisen kylän. Toisaalla äärimmäinen helle tekee ilmasta lähes mahdotonta hengittää. Kummassakin tapauksessa kokonaisten perheiden on lähdettävä, eikä sodan vaan ilmaston takia. Näillä pakkolähdöillä on nimi: **ilmastosiirtolaisuus**. Ongelma on, ettei mikään kansainvälinen laki oikeastaan tunnusta sitä."
         }
       ]
     },
     {
       "id": "course_231_les_migrations_climatiques_p1",
-      "title": "Pako jo isompi kuin sota",
+      "title": "Sotaa suurempi joukkopako",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Maassa **2022** yksi luku merkitsi käännekohtaa: ilmastokatastrofit aiheuttivat **60 sisäistä siirtymää**, pakkolähtöjä maan sisällä. Ensimmäistä kertaa tämä määrä ylitti sotia pakenevien ihmisten määrän."
+          "text": "Vuonna **2022** yksi luku merkitsi käännekohtaa: ilmastokatastrofit aiheuttivat **60 miljoonaa maan sisäistä siirtymää** eli pakkolähtöä saman maan rajojen sisällä. Ensimmäistä kertaa luku ylitti sotia pakenevien ihmisten määrän."
         },
         {
           "type": "funFact",
-          "text": "**2009**:ssa [[Matalat saarivaltiot]]:n hallitus piti ministerineuvoston veden alla happisäiliöissä ja sukelluspuvuissa varoittaakseen maailmaa tämän saariston mahdollisesta katoamisesta."
+          "text": "[[Matalat saarivaltiot]] -ryhmään kuuluvan Malediivien hallitus piti vuonna **2009** ministerikokouksen veden alla happipulloissa ja sukelluspuvuissa. Näin se varoitti maailmaa siitä, että koko saaristo voi kadota."
         },
         {
           "type": "image",
           "asset": "2015_refugee_migration_crisis_europe_mediterranean",
           "ratio": "16:9",
-          "caption": "Siirtolaiset ylittävät Välimeren: ilmastokriisi liitetään nyt poliittisten kriisien joukkoon lähtöjen liikkeellepanevana voimana."
+          "caption": "Siirtolaisia ylittämässä Välimerta: poliittisten kriisien rinnalle lähtöjen syyksi on nyt noussut myös ilmastokriisi."
         },
         {
           "type": "paragraph",
-          "text": "Muu näyttää huolestuttavammalta: **Maailmanpankki** arvioi, että ilman massiivisia ponnisteluja ilmastonmuutos voi pakottaa **216 aikaa** muuttamaan **2050**. Bangladeshissa valtameri syö maatalousmaata; Saharan eteläpuolisessa Afrikassa on pulaa vedestä; Tyynellämerellä tietyt saarivaltiot uhkaavat alueensa täydellisen katoamisen."
+          "text": "Tulevaisuus näyttää vielä huolestuttavammalta: **Maailmanpankki** arvioi, että ilman mittavia toimia ilmastonmuutos voi pakottaa **216 miljoonaa ihmistä** muuttamaan vuoteen **2050** mennessä. Bangladeshissa meri syö viljelymaata, Saharan eteläpuolisessa Afrikassa vedestä on pulaa, ja Tyynellämerellä joidenkin saarivaltioiden koko alue voi kadota."
         }
       ]
     },
     {
       "id": "course_231_les_migrations_climatiques_p2",
-      "title": "Kaksi murtumisnopeutta: isku ja kuluminen",
+      "title": "Kaksi tahtia: äkillinen isku ja hidas kuluminen",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ilmasto ajaa väestön pois kahdella tavalla. **Äkilliset katastrofit**, kuten myrskyt, aiheuttavat äkillisiä, mutta usein tilapäisiä lähtöjä, ennen kuin asukkaiden kyky toipua on loppunut toistosta. **Hidas rappeutuminen** muuttaa alueen ikuisiksi ajoiksi: nousevat vedet tekevät maaperän suolaiseksi, tappaen sadon ennen kuin vesi ehtii edes koteihin, kun taas aavikoiminen muuttaa laitumet vähitellen karuiksi maiksi, työntäen paimentolaisyhteisöjä kohti [[pakkoratkaisu]] tai maanpaossa kaupunkiin."
+          "text": "Ilmasto voi ajaa ihmisiä pois kahdella tavalla. **Äkilliset katastrofit**, kuten myrskyt, aiheuttavat yhtäkkisiä mutta usein tilapäisiä lähtöjä, kunnes toistuvat iskut lopulta kuluttavat asukkaiden kyvyn toipua. **Hidas heikkeneminen** taas muuttaa alueen pysyvästi: nouseva meri suolaa maaperän ja tappaa sadon jo ennen kuin vesi ulottuu taloihin, ja aavikoituminen muuttaa laitumet vähitellen hedelmättömäksi maaksi. Paimentolaisyhteisöille jää silloin [[pakkoasuttaminen]]: pakotettu paikalleen asettuminen tai lähtö kaupunkiin."
         },
         {
           "type": "paragraph",
@@ -69,11 +69,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kriisin todisteista huolimatta ilmaston takia siirtymään joutuneet ihmiset joutuvat [[\"Ilmastopakolaisen\" laillinen tyhjiö]]. Mediassa laajalti käytetty termi \"ilmastopakolainen\" ei ole arvoa kansainvälisessä oikeudessa: vuoden 1951 Geneven sopimus suojelee oman valtionsa vainoamia ihmisiä, mutta ilmastonmuutos ei ole kenenkään tietyn vainoajan syy, se on globaali ilmiö."
+          "text": "Vaikka kriisi on ilmeinen, ilmaston takia kotinsa jättäneitä ihmisiä koskee [[”ilmastopakolaisen” oikeudellinen tyhjiö]]. Medioissa paljon käytetyllä sanalla ”ilmastopakolainen” ei ole mitään painoa kansainvälisessä oikeudessa: vuoden 1951 Geneven pakolaissopimus suojelee ihmisiä, joita heidän oma valtionsa vainoaa, mutta ilmastonmuutos ei ole minkään yksittäisen vainoajan syytä, vaan maailmanlaajuinen ilmiö."
         },
         {
           "type": "paragraph",
-          "text": "Ilman virallista asemaa nämä ihmiset eivät hyödy **[[palauttamiskielto]]** periaatteesta, joka kieltää jonkun lähettämisen takaisin paikkaan, jossa heidän henkensä olisi vaarassa. Tämä suojelun puute luo epäoikeudenmukaisuutta: eniten kärsineet maat ovat saastuttaneet historiallisesti vähiten, kun taas rikkaat maat sulkevat usein rajansa. Tästä johtuu ajatus **ilmastovelasta**: teollisuusmaiden moraalinen vastuu omasta kehityksestään haavoittuvia väestöjä kohtaan."
+          "text": "Ilman virallista asemaa näitä ihmisiä ei suojaa **[[palauttamiskielto]]**, joka kieltää palauttamasta ketään paikkaan, jossa hänen henkensä olisi vaarassa. Suojan puute on epäoikeudenmukaista: pahiten kärsivät maat ovat historiallisesti saastuttaneet vähiten, kun taas rikkaat maat sulkevat usein rajansa. Tästä syntyi ajatus **ilmastovelasta**: teollisuusmaiden moraalisesta vastuusta niitä väestöjä kohtaan, jotka niiden oma kehitys on tehnyt haavoittuviksi."
         }
       ]
     },
@@ -84,15 +84,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Jotkut maat etsivät jo uusia ratkaisuja. Pienet saarivaltiot harkitsevat jäävänsä YK:n tunnustamaksi kansakunnaksi, vaikka niiden saari olisi kadonnut veden alle. Esimerkiksi Kiribati osti maata Fidžiltä valmistautuakseen tarvittaessa koko väestönsä muuttamiseen."
+          "text": "Jotkin maat etsivät jo aivan uudenlaisia ratkaisuja. Pienet saarivaltiot pohtivat, miten ne voisivat pysyä YK:n tunnustamina valtioina, vaikka niiden saari katoaisi veden alle. Esimerkiksi Kiribati on ostanut maata Fidžiltä siltä varalta, että koko väestö pitää joskus siirtää sinne."
         },
         {
           "type": "paragraph",
-          "text": "Vuonna 2018 **Global Compact on Migration** aloitti keskustelun lähtöjen ympäristösyistä. Mutta etusijalla on edelleen **Paikallinen sopeutuminen**: padot, suolankestävät viljelykasvit, varoitusjärjestelmät, jotta ihmiset voivat pysyä kotona mahdollisimman pitkään. Koska tapahtuva muuttoliike koetaan aina epäonnistumisena, ja massiiviset ja häiriöttömät virtaukset voivat lisätä jännitteitä veden ja asuttavan maan ympärillä."
+          "text": "Vuonna 2018 **globaali muuttoliikesopimus** alkoi käsitellä lähtöjen ympäristösyitä. Etusijalla on kuitenkin yhä **paikallinen sopeutuminen**: padot, suolaa kestävät viljelykasvit ja varoitusjärjestelmät, jotta ihmiset voisivat asua kotonaan mahdollisimman pitkään. Pakon edessä muuttaminen koetaan nimittäin aina epäonnistumisena, ja suuret hallitsemattomat muuttovirrat voivat kiristää kiistoja vedestä ja asuttavasta maasta."
         },
         {
           "type": "takeaway",
-          "text": "Vuonna 2022 ilmastokatastrofit aiheuttavat 60 miljoonaa maan sisäistä pakolaista, mikä ohittaa ensimmäistä kertaa sotapakolaiset. Ilman tunnustettua oikeudellista asemaa nämä väestöt ovat suojattomia kriisin edessä, joka voi koskea 216 miljoonaa ihmistä vuoteen 2050 mennessä."
+          "text": "Vuonna 2022 ilmastokatastrofit aiheuttivat 60 miljoonaa maan sisäistä siirtymää, ja luku ohitti ensimmäistä kertaa sotapakolaisten määrän. Koska tunnustettua oikeudellista asemaa ei ole, nämä ihmiset jäävät ilman suojaa kriisissä, joka voi koskettaa 216 miljoonaa ihmistä vuoteen 2050 mennessä."
         }
       ]
     }

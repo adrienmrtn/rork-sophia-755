@@ -1,6 +1,6 @@
 {
   "id": "course_42_pourquoi_reve_t_on",
-  "title": "Hvorfor drømmer vi?",
+  "title": "Hvorfor drømmer man?",
   "subtitle": "Hjerne & søvn",
   "subject": "sciences",
   "subcategory": "Hverdagen forklaret",
@@ -8,7 +8,7 @@
   "hero": {
     "image": "pourquoi_reve_t_on",
     "ratio": "16:9",
-    "hook": "Du drømmer om seks år af dit liv. Og du glemmer næsten alt."
+    "hook": "Du bruger omkring seks år af dit liv på at drømme. Og du glemmer næsten det hele."
   },
   "sections": [
     {
@@ -18,22 +18,22 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Hver nat bruger du omkring **til timer** på at drømme. I løbet af et helt liv er det næsten **seks år**. Men når du vågner, forsvinder de fleste af disse historier inden for få sekunder."
+          "text": "Hver nat bruger du omkring **to timer** på at drømme. I løbet af et liv bliver det til næsten **seks år**. Alligevel forsvinder de fleste af disse historier inden for få sekunder, når du vågner."
         },
         {
           "type": "paragraph",
-          "text": "Ikke alle videnskabsmænd er enige om \"hvorfor\". Men de ved bedre og bedre **når** vi drømmer, og hvad hjernen gør i løbet af denne tid: den omorganiserer minder, tester scenarier og fordøjer følelser."
+          "text": "Forskerne er ikke alle enige om »hvorfor«. Men de ved mere og mere om, **hvornår** man drømmer, og hvad hjernen laver imens: den omorganiserer minder, afprøver scenarier og bearbejder følelser."
         }
       ]
     },
     {
       "id": "course_42_pourquoi_reve_t_on_p1",
-      "title": "Søvn er ikke \"slukket\"",
+      "title": "Søvn er ikke at være »slukket«",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Søvn er ikke en fuldstændig afbrydelse. Den går frem med **cyklusser** på cirka **90 minutter** flere gange pr. nat. I hver cyklus gennemgår hjernen forskellige faser: let søvn, dyb søvn nyttig til at restituere kroppen, derefter en meget bestemt fase."
+          "text": "Søvn er ikke en total afbrydelse. Den forløber i **cyklusser** på cirka **90 minutter**, flere gange hver nat. I hver cyklus går hjernen gennem forskellige faser: let søvn, dyb søvn, der hjælper kroppen med at restituere, og derefter en helt særlig fase."
         },
         {
           "type": "image",
@@ -43,70 +43,70 @@
         },
         {
           "type": "paragraph",
-          "text": "Denne fase kaldes [[REM søvn]]. Hjernen er næsten lige så aktiv, som den er vågen, men kroppen er lammet af [[Muskelatoni]]. Det er især her lange, fortællende drømme fødes. Denne lammelse forhindrer os i fysisk at \"lege\" det, vi drømmer."
+          "text": "Denne fase kaldes [[REM-søvn]]. Hjernen er næsten lige så aktiv som i vågen tilstand, men kroppen er lammet af [[muskelatoni]]. Det er især her, de lange, fortællende drømme opstår. Lammelsen forhindrer, at man fysisk »spiller« det, man drømmer."
         },
         {
           "type": "funFact",
-          "text": "Vi drømmer **4 til 6 gange** per nat. Vi glemmer **95%** inden for ti minutter efter at være vågnet. Hvis du husker en drøm, er det ofte fordi du vågnede lige under den eller lige efter den."
+          "text": "Man drømmer **4 til 6 gange** hver nat. Omkring **95 %** af drømmene glemmer man inden for ti minutter efter at være vågnet. Hvis du husker en drøm, er det ofte, fordi du vågnede midt i den eller lige efter."
         }
       ]
     },
     {
       "id": "course_42_pourquoi_reve_t_on_p2",
-      "title": "Hvad er meningen med at drømme?",
+      "title": "Hvad er drømme godt for?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Freud** mente, at drømme hovedsageligt afslørede skjulte ønsker. I dag foretrækker forskere mere konkrete forklaringer, baseret på hjernebilleddannelse, teknikker, der visualiserer hjerneaktivitet. Drømme aktiverer især det **limbiske system**, sættet af dybe strukturer knyttet til følelser."
+          "text": "**Freud** mente, at drømme først og fremmest afslørede skjulte ønsker. I dag foretrækker forskerne mere konkrete forklaringer baseret på **hjerneskanning**, teknikker, der gør hjernens aktivitet synlig. Drømme aktiverer især det **limbiske system**, en samling dybtliggende strukturer, der har med følelser at gøre."
         },
         {
           "type": "image",
           "asset": "brain_activity_dreaming_scan",
           "ratio": "4:3",
-          "caption": "Under drømme arbejder hjernen: følelser, billeder, minder."
+          "caption": "Mens man drømmer, arbejder hjernen: følelser, billeder, minder."
         },
         {
           "type": "paragraph",
-          "text": "Tre hovedspor dominerer. Først: **sortere hukommelsen**, behold det nyttige, slip resten. For det andet: **træning til billetpris** i en verden uden reel risiko. For det tredje: **fordøjer følelser**: under drømme genbesøger hjernen stærke øjeblikke med mindre **noradrenalin**, en neurotransmitter forbundet med stress og vågenhed."
+          "text": "Tre hovedteorier dominerer. Den første: **sortere i hukommelsen**, beholde det nyttige og give slip på resten. Den anden: **øve sig i at møde fare** i en verden uden reel risiko. Den tredje: **bearbejde følelser**: mens man drømmer, genbesøger hjernen stærke øjeblikke med mindre **noradrenalin**, et signalstof forbundet med stress og vågenhed."
         }
       ]
     },
     {
       "id": "course_42_pourquoi_reve_t_on_p3",
-      "title": "Hvorfor glemmer vi vores drømme",
+      "title": "Hvorfor man glemmer sine drømme",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "For at lagre en hukommelse permanent har hjernen brug for visse kemikalier. Men under paradoksal søvn falder niveauet af noradrenalin. Resultat: drømmen forbliver i en meget skrøbelig hukommelse."
+          "text": "For at gemme et minde varigt har hjernen brug for bestemte kemiske stoffer. Men under REM-søvnen falder niveauet af noradrenalin. Resultat: drømmen havner i en meget skrøbelig hukommelse."
         },
         {
           "type": "paragraph",
-          "text": "Så snart du åbner dine øjne, knuser dagens lys, lyde og tanker dette skrøbelige minde. Den bedste måde at beholde den på? Skriv drømmen **ned med det samme**, før du overhovedet flytter."
+          "text": "Så snart du åbner øjnene, bliver det skrøbelige minde knust af dagens lys, lyde og tanker. Den bedste måde at holde fast i det? Skriv drømmen ned **med det samme**, før du overhovedet rører dig."
         },
         {
           "type": "funFact",
-          "text": "Før farvefjernsyn var der få mennesker, der sagde, at de drømte i farver. I dag gør de fleste. Vores visuelle miljø påvirker endda teksturen af vores drømme."
+          "text": "Før farvefjernsynet sagde kun få, at de drømte i farver. I dag gør de fleste. Vores visuelle omgivelser påvirker endda selve teksturen i vores drømme."
         }
       ]
     },
     {
       "id": "course_42_pourquoi_reve_t_on_p4",
-      "title": "Hvad med klar drøm?",
+      "title": "Og hvad med klare drømme?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Nogle gange indser vi **, at vi drømmer**, mens vi forbliver i søvn: dette er **klar drøm**. Et område af hjernen, der er forbundet med logik og selvrefleksion, **præfrontal cortex**, lyser derefter lidt op."
+          "text": "Nogle gange opdager man, **at man drømmer**, mens man stadig sover: det er en **klar drøm**. Et område i hjernen, der har med logik og selvrefleksion at gøre, **den præfrontale cortex**, tænder så lidt igen."
         },
         {
           "type": "paragraph",
-          "text": "Nogle kan så påvirke omgivelserne eller forvandle et mareridt. Forskere studerer endda dette fænomen for at hjælpe atleter med at gentage gestus mentalt eller for at behandle gentagne mareridt."
+          "text": "Nogle kan så påvirke kulisserne eller forvandle et mareridt. Forskere undersøger endda fænomenet for at hjælpe sportsfolk med at øve bevægelser mentalt eller for at behandle tilbagevendende mareridt."
         },
         {
           "type": "takeaway",
-          "text": "Vi drømmer især under [[REM søvn]], en fase hvor hjernen er aktiv og kroppen lammet. At drømme hjælper sandsynligvis med at håndtere hukommelse og følelser, selvom vi glemmer næsten alt, når vi vågner."
+          "text": "Man drømmer især under [[REM-søvn]], en fase hvor hjernen er aktiv og kroppen lammet. Drømme hjælper sandsynligvis med at håndtere hukommelse og følelser, selvom man glemmer næsten det hele, når man vågner."
         }
       ]
     }

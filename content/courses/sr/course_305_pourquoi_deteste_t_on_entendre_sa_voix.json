@@ -9,7 +9,7 @@
   "hero": {
     "image": "studio_microphone_headphones_voice_recording",
     "ratio": "4:3",
-    "hook": "Snimci tvojih prijatelja ti ne smetaju. Ali zbog sopstvenog glasa u glasovnoj poruci se mrštiš. Zašto baš taj zvuk zvuči lažno?"
+    "hook": "Snimci tvojih prijatelja ti ne smetaju. Ali kad čuješ svoj glas u glasovnoj poruci, napraviš grimasu. Zašto baš taj zvuk zvuči lažno?"
   },
   "sections": [
     {
@@ -19,11 +19,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Šta je to „ja“? Filozofi, naučnici i umetnici postavljaju to pitanje vekovima. Da bi ga proučavali, istraživači se često služe slikom lica, koje svako prepoznaje na prvi pogled. Ali glas je podjednako važan za osećaj da smo to mi."
+          "text": "Šta je to „ja“? Filozofi, naučnici i umetnici postavljaju to pitanje vekovima. Da bi ga proučavali, istraživači se često služe slikom lica, koje svako prepoznaje na prvi pogled. Ali za osećaj da si to ti glas je podjednako važan."
         },
         {
           "type": "paragraph",
-          "text": "Otuda paradoks. Bez muke gledamo snimke prijatelja ili porodice. Onda stigne glasovna poruka koju smo sami snimili, i trgnemo se: ovo nije moj glas. A ipak jeste. Da bismo razumeli zašto, treba pratiti put zvuka."
+          "text": "Otuda paradoks. Bez muke gledaš snimke prijatelja ili porodice. Onda pustiš sopstvenu glasovnu poruku i trgneš se: ovo nije moj glas. A ipak jeste. Da bi se to razumelo, treba pratiti put zvuka."
         }
       ]
     },
@@ -34,28 +34,28 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Govor počinje naletom vazduha. Dijafragma potiskuje vazduh iz pluća prema grlu. Prolazeći, vazduh natera [[glasne žice]] da veoma brzo trepere: te vibracije, više ili niže, putuju naviše kroz grlo. Usta i jezik ih zatim oblikuju u glasove i reči."
+          "text": "Govor počinje naletom vazduha. Dijafragma potiskuje vazduh iz pluća prema grlu. Prolazeći, vazduh tera [[glasne žice]] da veoma brzo trepere: te vibracije, više ili niže, putuju naviše kroz grlo. Usta i jezik ih zatim oblikuju u glasove i reči."
         },
         {
           "type": "paragraph",
-          "text": "Slušanje je obrnut put. Većinu zvukova prenosi [[vazdušna provodljivost]]: talasi prolaze kroz slušni kanal i nateraju bubnu opnu da treperi, a ona te vibracije prenosi sitnim koščicama srednjeg uha. Pojačane, stižu u unutrašnje uho, gde se nalazi [[pužnica]], u kojoj se hiljade čulnih ćelija, na kojima štrče [[stereocilije]], savijaju i proizvode električni signal. Slušni nerv ga prenosi do mozga, koji ga prepoznaje i razvrstava."
+          "text": "Slušanje je obrnut put. Većinu zvukova prenosi [[vazdušna provodljivost]]: talasi prolaze kroz slušni kanal i teraju bubnu opnu da treperi, a ona te vibracije prenosi sitnim koščicama srednjeg uha. Pojačane, one stižu do unutrašnjeg uha, u kom se nalazi [[pužnica]]. Tamo se hiljade trepljastih ćelija, na kojima štrče [[stereocilije]], savijaju i proizvode električni signal. Slušni nerv ga prenosi do mozga, koji ga prepoznaje i razvrstava."
         },
         {
           "type": "image",
           "asset": "cochlea_stereocilia_hair_cells_electron_micrograph",
           "ratio": "4:5",
-          "caption": "Pužnice miša pod elektronskim mikroskopom, normalna (levo) i mutirana: redovi čulnih ćelija na kojima štrče stereocilije."
+          "caption": "Mišje pužnice pod elektronskim mikroskopom, normalna (levo) i mutirana: redovi trepljastih ćelija na kojima štrče stereocilije."
         }
       ]
     },
     {
       "id": "course_305_pourquoi_deteste_t_on_entendre_sa_voix_p2",
-      "title": "Kako sebe čujemo kroz kosti",
+      "title": "Čuti sebe kroz kosti",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kada slušamo snimak sopstvenog glasa, sve prolazi kroz vazduh, kao i kod bilo kog drugog zvuka. Ali kada govorimo, dodaje se i drugi kanal: [[koštana provodljivost]]. Mehaničke vibracije glasa šire se kroz kosti lobanje neposredno do unutrašnjeg uha, zaobilazeći bubnu opnu i srednje uho."
+          "text": "Kada slušaš snimak svog glasa, sve stiže vazdušnim putem, kao i kod bilo kog drugog zvuka. Ali kada govoriš, dodaje se i drugi kanal: [[koštana provodljivost]]. Mehaničke vibracije glasa šire se kroz kosti lobanje neposredno do unutrašnjeg uha, zaobilazeći bubnu opnu i srednje uho."
         },
         {
           "type": "image",
@@ -65,7 +65,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Pužnica, dakle, istovremeno prima dva signala, jedan iz vazduha, a drugi iz kostiju, i oba pretvara u poruke za mozak. U stvarnom vremenu tvoj glas je bogatiji i složeniji zvuk od onoga što mikrofon može da uhvati. Snimak prenosi samo jedan njegov deo."
+          "text": "Pužnica, dakle, istovremeno prima dva signala, jedan iz vazduha, a drugi iz kostiju, i oba pretvara u poruke za mozak. Dok govoriš, tvoj glas je bogatiji i složeniji zvuk od onoga što mikrofon može da uhvati. Snimak prenosi samo jedan njegov deo."
         }
       ]
     },
@@ -76,11 +76,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ostaje da se objasni nelagoda. Istraživači još nemaju konačan odgovor, ali jedna ideja je privlačna: pojava poznata kao [[jeziva dolina]]. Pojam potiče iz robotike i animacije. Što neko veštačko biće više liči na čoveka, to nam deluje bliskije i simpatičnije. Do određene tačke."
+          "text": "Ostaje da se objasni nelagoda. Istraživači još nemaju konačan odgovor, ali jedno objašnjenje deluje posebno uverljivo: pojava poznata kao [[jeziva dolina]]. Pojam potiče iz robotike i animacije. Što neko veštačko biće više liči na čoveka, to nam deluje bliskije i simpatičnije. Do određene tačke."
         },
         {
           "type": "paragraph",
-          "text": "Kada imitacija postane veoma bliska, a da nije savršena, simpatija se pretvara u nelagodu, čak i u odbojnost. A snimak prenosi samo vazdušni deo našeg glasa, bez bogatstva koštane provodljivosti. Čujemo ono najvažnije, ali ne sve. Mozak se nađe u jezivoj dolini: to sam gotovo „ja“, ali ne sasvim."
+          "text": "Kada imitacija postane veoma bliska, a da nije savršena, simpatija se pretvara u nelagodu, čak i u odbojnost. A snimak prenosi samo vazdušni deo našeg glasa, bez bogatstva koštane provodljivosti. Čuje se ono najvažnije, ali ne sve. Mozak se nađe u jezivoj dolini: to sam gotovo „ja“, ali ne sasvim."
         }
       ]
     },
@@ -91,11 +91,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Jeziva dolina ne objašnjava sve. Snimak takođe pokazuje samo jedno lice načina na koji se predstavljamo drugima. Jer glas nije nepromenljiv: neprestano ga prilagođavamo kontekstu, često i ne razmišljajući, a osećaj sopstvenog ja gradi se na svim tim varijacijama odjednom."
+          "text": "Jeziva dolina ne objašnjava sve. Snimak takođe pokazuje samo jednu stranu načina na koji se predstavljaš drugima. Jer glas nije nepromenljiv: neprestano ga prilagođavaš situaciji, često i ne razmišljajući, a osećaj sopstvenog ja gradi se na svim tim varijacijama odjednom."
         },
         {
           "type": "funFact",
-          "text": "U poslovnom okruženju rado spuštamo ton da bismo delovali staloženije. Pred bebom ili kućnim ljubimcem glas se penje u visine. Usta, jezik i usne menjaju podešavanja, a sa njima i verzija „sebe“ koju dajemo drugima da čuju."
+          "text": "U poslovnom okruženju ljudi rado spuštaju ton da bi delovali staloženije. Pred bebom ili kućnim ljubimcem glas se penje u visine. Usta, jezik i usne menjaju podešavanja, a sa njima i verzija „sebe“ koju drugi čuju."
         },
         {
           "type": "paragraph",

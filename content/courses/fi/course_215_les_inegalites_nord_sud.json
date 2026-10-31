@@ -4,11 +4,11 @@
   "subtitle": "Kahden nopeuden maailma",
   "subject": "comprendreLeMonde",
   "subcategory": "Talous ja yhteiskunta",
-  "description": "Maapallon rikkaimmat 10 % saavat yli puolet maailman tuloista. Äärimmäinen köyhyys on kuitenkin jaettu neljällä kolmessakymmenessä vuodessa.",
+  "description": "Maailman rikkain 10 % saa yli puolet maailman tuloista. Silti äärimmäinen köyhyys on kolmessakymmenessä vuodessa pudonnut neljännekseen.",
   "hero": {
     "image": "les_inegalites_nord_sud",
     "ratio": "16:9",
-    "hook": "Amerikkalainen ansaitsee tunnissa sen, mitä Nigerin asukas ansaitsee koko työpäivän aikana."
+    "hook": "Yhdysvaltalainen ansaitsee tunnissa sen, mitä Nigerin asukas ansaitsee koko työpäivän aikana."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kuilu rikkaiden ja köyhien maiden välillä on edelleen yksi silmiinpistävimmistä tosiasioista maailmassa. Globalisaatio lupasi lähentyvän elintasoa, mutta varallisuuserot kansojen välillä ovat edelleen valtavat."
+          "text": "Rikkaiden ja köyhien maiden välinen kuilu on yhä yksi nykymaailman silmiinpistävimmistä piirteistä. Globalisaation piti lähentää elintasoja, mutta kansojen väliset varallisuuserot ovat edelleen valtavat."
         },
         {
           "type": "paragraph",
-          "text": "Lähihistoria ei kuitenkaan ole vain synkkä: äärimmäinen köyhyys on vähentynyt nopeammin kuin koskaan 30 vuoden aikana. Tämä kurssi tutkii näiden eriarvoisuuksien juuria ja syitä tähän outoon paradoksiin."
+          "text": "Lähihistoria ei silti ole pelkkää synkkyyttä: äärimmäinen köyhyys on viimeisten kolmenkymmenen vuoden aikana vähentynyt nopeammin kuin koskaan. Tällä kurssilla tutkitaan eriarvoisuuden juuria ja tämän oudon paradoksin syitä."
         }
       ]
     },
@@ -33,11 +33,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "rikkain 10 % maailman väestöstä saa yli 52 % maailman tuloista. Köyhimmän 50 % saa jakaa vain 8 % piirakasta. Tämä vaurauden keskittyminen ei ole koskaan ollut suurempaa ihmiskunnan historiassa."
+          "text": "Maailman väestön **rikkain 10 %** saa yli 52 % maailman tuloista. Köyhimmät 50 % joutuvat jakamaan keskenään vain 8 % kakusta. Vaurautta ei ole koskaan ihmiskunnan historiassa keskittynyt näin paljon."
         },
         {
           "type": "paragraph",
-          "text": "Tämä ero näkyy myös eliniän odotteessa: Japanissa se on 83 vuotta, mutta Keski-Afrikan tasavallassa se laskee 55 vuoteen. Nämä aukot eivät johdu sattumasta: ne johtuvat erittäin epätasa-arvoisesta juomaveden, ruoan ja terveydenhuollon saatavuudesta."
+          "text": "Kuilu näkyy myös elinajanodotteessa: Japanissa se on 83 vuotta, mutta Keski-Afrikan tasavallassa vain 55 vuotta. Erot eivät johdu sattumasta: puhdas juomavesi, ruoka ja terveydenhuolto ovat hyvin epätasaisesti ihmisten saatavilla."
         },
         {
           "type": "funFact",
@@ -47,22 +47,22 @@
     },
     {
       "id": "course_215_les_inegalites_nord_sud_p2",
-      "title": "Historialliset juuret elävät edelleen",
+      "title": "Yhä elävät historialliset juuret",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ymmärtääksemme nämä erot meidän on palattava kolonisaatioon. Eurooppalaiset suurvallat organisoivat monia eteläisiä alueita raaka-aineiden (kahvi, kaakao, puuvilla) toimittajiksi hillitseen omaa teollistumistaan suojellakseen omia tehtaitaan."
+          "text": "Erojen ymmärtäminen vaatii paluuta siirtomaa-aikaan. Eurooppalaiset suurvallat tekivät monista etelän alueista raaka-aineiden (kahvi, kaakao, puuvilla) toimittajia ja jarruttivat niiden teollistumista suojellakseen omia tehtaitaan."
         },
         {
           "type": "image",
           "asset": "global_inequality_rich_poor_contrast_photograph",
           "ratio": "16:9",
-          "caption": "Varallisuuserot pohjoisen ja etelän välillä ovat edelleen planeetan laajimpia."
+          "caption": "Pohjoisen ja etelän väliset varallisuuserot ovat yhä maailman jyrkimpiä."
         },
         {
           "type": "paragraph",
-          "text": "Tämä logiikka jatkuu tänään [[kauppaehdot]]: Etelän maat myyvät usein raaka-aineita, joiden hinta vaihtelee suuresti, kun taas ne ostavat valmistettuja tuotteita, joiden hinta vain nousee. Tähän lisätään vielä velan paino: korkojen takaisinmaksu vie joskus enemmän tilaa kansallisessa budjetissa kuin koulutus tai terveydenhuolto."
+          "text": "Nykyään samaa logiikkaa ylläpitää etelän maille epäedullinen [[vaihtosuhde]]: etelän maat myyvät usein raaka-aineita, joiden hinta heilahtelee voimakkaasti, mutta ostavat teollisuustuotteita, joiden hinta vain nousee. Lisäksi painaa velka: korkojen maksaminen vie valtion budjetista joskus enemmän kuin koulutus tai terveydenhuolto."
         }
       ]
     },
@@ -73,11 +73,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Viimeisten 30 vuoden aikana absoluuttinen köyhyys on kuitenkin vähentynyt dramaattisesti, ja se vaikutti 36 prosenttiin maailman väestöstä vuonna 1990, kun se oli alle 10 prosenttia ennen vuotta 2020. Tämä edistys johtuu pääasiassa Kiinan ja Intian voimakkaasta kasvusta."
+          "text": "Äärimmäinen köyhyys on kuitenkin vähentynyt viimeisten kolmenkymmenen vuoden aikana valtavasti: vuonna 1990 se koski 36 prosenttia maailman väestöstä, ennen vuotta 2020 enää alle 10 prosenttia. Edistys johtuu ennen kaikkea Kiinan ja Intian huimasta kasvusta."
         },
         {
           "type": "paragraph",
-          "text": "Tällä edistyksellä on piilotettu puoli: tämän osoittaa taloustieteilijä Branko Milanovicin teos [[\"norsukäyrä\"]]. Aasian keskiluokkien tulot ovat kasvaneet räjähdysmäisesti, mutta rikkaiden maiden työväenluokka on pysähtynyt maailmanlaajuisen kilpailun edessä. Maiden välisten eriarvoisuuksien vähentäminen ei siis ole estänyt uusia jännitteitä edes rikkaiden maiden sisällä."
+          "text": "Edistyksellä on kääntöpuolensa, ja sen paljastaa taloustieteilijä Branko Milanovicin [[norsukäyrä]]. Aasian keskiluokan tulot ovat kasvaneet räjähdysmäisesti, mutta rikkaiden maiden työväenluokan tulot ovat polkeneet paikallaan maailmanlaajuisen kilpailun paineessa. Maiden välisten erojen kaventuminen ei siis ole estänyt uusia jännitteitä itse rikkaiden maiden sisällä."
         }
       ]
     },
@@ -88,15 +88,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Pohjoisen ja etelän välisen eriarvoisuuden tulevaisuus riippuu nyt ilmastosta. Etelän maat, jotka ovat historiallisesti vähiten vastuussa kasvihuonekaasupäästöistä, ovat kuitenkin kaikkein alttiina kuivuudelle, tulville ja vedenpinnan nousulle."
+          "text": "Pohjoisen ja etelän välisen eriarvoisuuden tulevaisuus ratkeaa nyt ilmastossa. Etelän maat ovat historiallisesti vähiten vastuussa kasvihuonekaasupäästöistä, mutta silti ne ovat kaikkein alttiimpia kuivuudelle, tulville ja merenpinnan nousulle."
         },
         {
           "type": "paragraph",
-          "text": "Näiden kuilujen vähentämiseksi kestävästi kansainvälinen yhteisö etsii uusia keinoja: [[virallinen kehitysapu]], jonka kohteena on energiasiirtymä tai hauraimpien maiden velkojen anteeksianto. Niin kauan kuin rikkaimpien varallisuus kasvaa nopeammin kuin köyhimpien, jännitteet pysyvät korkeina."
+          "text": "Kansainvälinen yhteisö etsii uusia keinoja kaventaa eroja pysyvästi: energiasiirtymään kohdistettu [[virallinen kehitysapu]] tai haavoittuvimpien maiden velkojen anteeksianto. Niin kauan kuin rikkaimpien varallisuus kasvaa nopeammin kuin köyhimpien, jännitteet pysyvät kovina."
         },
         {
           "type": "takeaway",
-          "text": "Maailman rikkaimmat 10 prosenttia saavat yli puolet maailman tuloista, mutta äärimmäinen köyhyys on vähentynyt nopeammin kuin koskaan 30 vuoden aikana Kiinan ja Intian nousun ansiosta. Seuraava suuri haaste tässä pohjois-etelä-jaossa on ilmasto."
+          "text": "Maailman rikkain 10 % saa yli puolet maailman tuloista, mutta äärimmäinen köyhyys on kolmessakymmenessä vuodessa vähentynyt nopeammin kuin koskaan Kiinan ja Intian nousun ansiosta. Pohjoisen ja etelän välisen kuilun seuraava suuri haaste on ilmasto."
         }
       ]
     }

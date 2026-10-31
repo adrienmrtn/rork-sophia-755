@@ -23,7 +23,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Em 2025, segundo a [[Agência Internacional de Energia]], o conjunto dos centros de dados usou cerca de **1,5%** da eletricidade do mundo. Esse número cobre todos os serviços online, não só a IA. Mas as instalações dedicadas à IA multiplicam-se depressa. Uma resposta curta custa pouco, sozinha. Mesmo assim, há máquinas a funcionar para cada uma delas, e vários sistemas puxam energia ao mesmo tempo para a produzir."
+          "text": "Em 2025, segundo a [[Agência Internacional de Energia]] (AIE), o conjunto dos centros de dados usou cerca de **1,5%** da eletricidade do mundo. Esse número cobre todos os serviços online, não só a IA. Mas as instalações dedicadas à IA multiplicam-se depressa. Uma resposta curta, por si só, custa pouco. Mesmo assim, há máquinas a funcionar para cada uma delas, e vários sistemas consomem eletricidade ao mesmo tempo para a produzir."
         }
       ]
     },
@@ -34,7 +34,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Um [[servidor]] é um computador que processa dados e executa serviços online. Num centro de dados, são os servidores que fazem a maior parte do cálculo, e por isso são os maiores consumidores de eletricidade. Se dividirmos a fatura da eletricidade de um centro de dados moderno, os servidores ficam em média com **60%**. Esse número vale para os centros de dados em geral, não só para as instalações de IA."
+          "text": "Um [[servidor]] é um computador que processa dados e executa serviços online. Num centro de dados, são os servidores que fazem a maior parte do cálculo, e por isso são os maiores consumidores de eletricidade. Na fatura da eletricidade de um centro de dados moderno, os servidores representam em média **60%**. Esse número vale para os centros de dados em geral, não só para as instalações de IA."
         },
         {
           "type": "image",
@@ -69,7 +69,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Depois de o modelo estar treinado, começa outro trabalho. A [[inferência]] é o cálculo que produz uma resposta ao teu pedido. O treino não recomeça do zero a cada pergunta; já a inferência repete-se a cada pedido. Qual das duas pesa mais com o tempo? Depende de como o serviço foi construído e de quantas pessoas o usam. Um serviço muito procurado mantém os seus computadores ocupados a responder, mesmo entre duas grandes rondas de treino."
+          "text": "Depois de o modelo estar treinado, começa outro trabalho. A [[inferência]] é o cálculo que produz uma resposta ao teu pedido. O treino não recomeça do zero a cada pergunta; a inferência, essa, repete-se a cada pedido. Qual das duas pesa mais com o tempo? Depende de como o serviço foi construído e de quantas pessoas o usam. Um serviço muito procurado mantém os seus computadores ocupados a responder, mesmo entre duas grandes rondas de treino."
         }
       ]
     },

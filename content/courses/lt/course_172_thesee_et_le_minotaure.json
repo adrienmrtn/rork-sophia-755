@@ -1,0 +1,120 @@
+{
+  "id": "course_172_thesee_et_le_minotaure",
+  "title": "Kaip Tesėjas nugalėjo Minotaurą?",
+  "subtitle": "Siūlas, pabaisa, burės",
+  "subject": "mythologie",
+  "subcategory": "Grèce : les héros",
+  "description": "Tesėjas nužudo Minotaurą, padedamas Ariadnės siūlo. Bet jis pamiršta pakeisti bures: jo tėvas Egėjas puola į jūrą, kuri iki šiol vadinama jo vardu.",
+  "hero": {
+    "image": "thesee_et_le_minotaure",
+    "ratio": "16:9",
+    "hook": "Pabaisa labirinte. Siūlas, kad iš jo išeitum. Pamirštos burės, davusios vardą jūrai."
+  },
+  "sections": [
+    {
+      "id": "course_172_thesee_et_le_minotaure_intro",
+      "title": "Įvadas",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Tesėjas**, Atėnų įkūrėjas herojus, stoja prieš **Minotaurą**, pusiau žmogų, pusiau jautį. Pabaisa slepiasi Kretoje, o jos slėptuvė yra [[Labirintas]]. Pasakojime susipina drąsa, meilės gudrybė ir šeimos tragedija."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nužudęs pabaisą, Tesėjas išvaduoja Atėnus nuo kruvinos duoklės. Tačiau viena pamiršta smulkmena, juodos burės vietoj baltų, kainuos gyvybę jo tėvui ir duos vardą Egėjo jūrai."
+        }
+      ]
+    },
+    {
+      "id": "course_172_thesee_et_le_minotaure_p1",
+      "title": "Minotauras ir Atėnų duoklė",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kretos karalius **Minas** atsisako paaukoti baltą jautį jūrų dievui **Poseidonui**. Keršydamas Poseidonas įkvepia karalienei **Pasifajai** aistrą tam gyvuliui. Gimsta Minotauras. Mino paliepimu išradėjas [[Dedalas]] pastato kalėjimą be išėjimo: Labirintą."
+        },
+        {
+          "type": "image",
+          "asset": "theseus_minotaur_cretan_labyrinth_painting",
+          "ratio": "4:3",
+          "caption": "Minotauras, uždarytas Kretos Labirinte"
+        },
+        {
+          "type": "paragraph",
+          "text": "Tuo metu Kreta valdo jūrą: tai [[Talasokratija]]. Pralaimėję karą, Atėnai kas devyneri metai turi atiduoti pabaisai sudraskyti **septynis jaunuolius ir septynias merginas**. Trečią kartą savanoriu pasisiūlo **Tesėjas**, karaliaus **Egėjo** sūnus."
+        },
+        {
+          "type": "funFact",
+          "text": "Egėjas ir Tesėjas susitaria dėl ženklo: **baltos** burės, jei herojus grįš gyvas, **juodos**, jei žus. Ši smulkmena nulems dramą."
+        }
+      ]
+    },
+    {
+      "id": "course_172_thesee_et_le_minotaure_p2",
+      "title": "Ariadnės siūlas",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kretoje Mino duktė **Ariadnė** įsimyli Tesėją. Ji žino, kad Labirinte vien jėgos neužtenka. Padedama Dedalo, ji duoda jam vilnonių siūlų kamuolį: tai [[Ariadnės siūlas]]. Tesėjas pririša jį prie įėjimo ir eidamas vynioja siūlą."
+        },
+        {
+          "type": "image",
+          "asset": "ariadne_thread_theseus_labyrinth_painting",
+          "ratio": "4:3",
+          "caption": "Ariadnė duoda Tesėjui siūlą, kuris išgelbės jam gyvybę"
+        },
+        {
+          "type": "paragraph",
+          "text": "Tesėjas nužudo Minotaurą, paskui, sukdamas siūlą atgal, išeina. Jis pabėga su jaunaisiais atėniečiais ir Ariadne. Tačiau **Naksoso** saloje jis palieka ją miegančią. Kai kas sako, kad dievas **Dionisas** norėjo ją vesti. Ariadnė, iš pradžių nusivylusi, paskui sudievinta, gauna auksinį vainiką, kuris tampa žvaigždynu."
+        }
+      ]
+    },
+    {
+      "id": "course_172_thesee_et_le_minotaure_p3",
+      "title": "Juodos burės prie Sunijo kyšulio",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Grįžimas turėjo būti šventė. Apsvaigęs nuo pergalės ar sutrikęs palikęs Ariadnę, Tesėjas pamiršta iškelti baltas bures. Laivas artėja prie Atėnų su juodomis burėmis."
+        },
+        {
+          "type": "image",
+          "asset": "cape_sounion_aegean_sea_cliff_sunset",
+          "ratio": "4:3",
+          "caption": "Sunijo kyšulys, nuo kurio Egėjas laukė grįžtančio sūnaus"
+        },
+        {
+          "type": "paragraph",
+          "text": "Nuo **Sunijo kyšulio** senasis karalius Egėjas žvelgia į horizontą. Jis mato tik gedulo juodumą. Įsitikinęs, kad sūnus žuvo, jis šoka nuo uolos. Nuo tada jūra vadinama jo vardu: **Egėjo jūra**. Tesėjas išlipa į krantą karaliumi… ir našlaičiu dėl savo paties nerūpestingumo."
+        },
+        {
+          "type": "funFact",
+          "text": "„Tesėjo laivas“ tapo filosofiniu paradoksu: jei visas lentas pakeisi po vieną, ar tai vis dar tas pats laivas?"
+        }
+      ]
+    },
+    {
+      "id": "course_172_thesee_et_le_minotaure_p4",
+      "title": "Tesėjas, Atėnų karalius",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Karūnuotas Tesėjas tampa tvarkdariu karaliumi. Jam priskiriamas [[Sinoikizmas]]: Atikos gyvenviečių suvienijimas aplink Atėnus. Jo įsteigtos [[Panatėnajos]] tampa didžiosiomis miesto šventėmis. Jėga susijungia su teise."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jo valdymo metais būta ir kitų nuotykių: su juo kovoja net [[Amazonės]]. Tačiau jo ženklu lieka Labirintas: gebėjimas išnarplioti tai, kas painiausia, bet kartu pažeidžiamumas dėl užmaršumo. Tesėjas kuria Atėnų didybę ant šeimos dramos pelenų."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Tesėjas** nužudo **Minotaurą**, padedamas **Ariadnės** siūlo. Pamiršęs pakeisti bures, jis sukelia savo tėvo **Egėjo** savižudybę; šio vardu vadinama Egėjo jūra."
+        }
+      ]
+    }
+  ]
+}

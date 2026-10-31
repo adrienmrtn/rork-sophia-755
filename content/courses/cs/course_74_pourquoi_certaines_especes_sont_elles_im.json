@@ -4,11 +4,11 @@
   "subtitle": "Biologie a dlouhověkost",
   "subject": "sciences",
   "subcategory": "Země a vesmír",
-  "description": "Některé druhy jako by smrti vzdorovaly. Medúzy, které mládnou, hydry bez stárnutí: tajemství je v buněčné opravě.",
+  "description": "Některé druhy jako by vzdorovaly smrti. Medúzy, které mládnou, nezmaři, kteří nestárnou: tajemství je v opravě buněk.",
   "hero": {
     "image": "pourquoi_certaines_especes_sont_immortelles",
     "ratio": "16:9",
-    "hook": "Stárnout není absolutní zákon živého. Některé druhy našly trhlinu."
+    "hook": "Stárnutí není pro živé tvory absolutní zákon. Některé druhy našly skulinu."
   },
   "sections": [
     {
@@ -18,22 +18,22 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Stárneme a pak zemřeme. Přesto se medúza [[Turritopsis dohrnii]] umí vrátit do juvenilního stádia a začít znovu od začátku. Škeble **Ming** žila **507 let**. Stárnutí tedy není univerzální pravidlo: je to proces, který některé druhy obcházejí."
+          "text": "Stárneme a pak umíráme. Medúza [[Turritopsis dohrnii]] se přesto umí vrátit do mladistvého stadia a začít znovu. Škeble **Ming** žila **507 let**. Stárnutí tedy není univerzální pravidlo: je to proces, který některé druhy obcházejí."
         },
         {
           "type": "paragraph",
-          "text": "Když ty výjimky studují, vědci hledají méně sci-fi nesmrtelnost a víc fígle živého, jak buňky lépe opravovat."
+          "text": "Vědci, kteří tyto výjimky studují, nehledají ani tak nesmrtelnost ze sci-fi, jako spíš triky, kterými si živé organismy lépe opravují buňky."
         }
       ]
     },
     {
       "id": "course_74_pourquoi_certaines_especes_sont_elles_im_p1",
-      "title": "Proč se naše buňky opotřebují",
+      "title": "Proč se naše buňky opotřebovávají",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Stárnout neznamená jen „opotřebovat se” jako stroj. Je to nerovnováha: škody se hromadí rychleji než opravy."
+          "text": "Stárnout neznamená jen „opotřebovat se“ jako stroj. Je to nerovnováha: škody se hromadí rychleji než opravy."
         },
         {
           "type": "image",
@@ -43,30 +43,30 @@
         },
         {
           "type": "paragraph",
-          "text": "Na koncích našich chromozomů [[Telomery]] fungují jako koncovky tkaniček. S každým buněčným dělením se zkrátí. Jsou-li moc krátké, buňka se přestane dělit. Zároveň metabolismus vyrábí agresivní molekuly, které kazí bílkoviny i DNA. Pak se hromadí „zombie” buňky a zapalují tkáně kolem sebe."
+          "text": "Na koncích našich chromozomů fungují [[telomery]] jako koncovky tkaniček. Při každém buněčném dělení se zkrátí. Když jsou příliš krátké, buňka se přestane dělit. Metabolismus navíc vyrábí agresivní molekuly, které poškozují bílkoviny i DNA. Hromadí se pak „zombie“ buňky a vyvolávají zánět v okolních tkáních."
         },
         {
           "type": "funFact",
-          "text": "Želvuška, drobný „vodní medvídek”, skoro přestane žít, když se vysuší. Metabolismus klesne na **99,99%** a přežije vesmírné vakuum i extrémní záření, aniž by opravdu stárla."
+          "text": "Želvuška, drobný „vodní medvídek“, dokáže vyschnout a skoro přestat žít. Její metabolismus klesne o **99,99%** a ona přežije vesmírné vakuum i extrémní záření, aniž by doopravdy stárla."
         }
       ]
     },
     {
       "id": "course_74_pourquoi_certaines_especes_sont_elles_im_p2",
-      "title": "Šampioni, kteří smrt obejdou",
+      "title": "Šampioni, kteří obcházejí smrt",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Zraněná nebo vyhladovělá [[Turritopsis dohrnii]] promění dospělé buňky v buňky „panenské” a znovu se stane polypem, výchozím stádiem. Ten návrat nazývaný transdiferenciace jí dá jistou **biologickou nesmrtelnost**."
+          "text": "Zraněná nebo hladovějící [[Turritopsis dohrnii]] promění své dospělé buňky v „panenské“ a znovu se stane polypem, tedy výchozím stadiem. Tento návrat zpět, zvaný transdiferenciace, jí dává jistou formu **biologické nesmrtelnosti**."
         },
         {
           "type": "paragraph",
-          "text": "**Hydra**, malý sladkovodní polyp, obnovuje celé tělo díky skoro neomezené zásobě buněk zvaných [[kmenové buňky]]. Nemá žádné měřitelné znaky stárnutí. Grónská velryba umí přesáhnout **200 let** díky ultraúčinné opravě DNA a silné odolnosti vůči rakovině."
+          "text": "**Nezmar**, malý sladkovodní polyp, obnovuje celé své tělo díky téměř neomezené zásobě buněk zvaných [[kmenové buňky]]. Nejeví žádné měřitelné známky stárnutí. Velryba grónská se může dožít přes **200 let** díky mimořádně účinné opravě DNA a vysoké odolnosti vůči rakovině."
         },
         {
           "type": "funFact",
-          "text": "Homáři vyrábějí telomerázu v celém těle: jejich telomery se nezkracují. Rostou celý život a umírají hlavně, když svlékání krunýře začne být moc drahé."
+          "text": "Humři vyrábějí telomerázu v celém těle, takže se jim telomery nezkracují. Rostou celý život a umírají hlavně ve chvíli, kdy je pro ně svlékání krunýře příliš vyčerpávající."
         }
       ]
     },
@@ -77,11 +77,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Už nejde jen léčit Alzheimerovu chorobu nebo artrózu jednu po druhé, ale útočit na stárnutí samotné. **Senolytika** chtějí zombie buňky odstranit. U zvířat už některé funkce omladila."
+          "text": "Už nejde jen o to léčit Alzheimerovu chorobu nebo artrózu jednu po druhé, ale zaútočit na samotné stárnutí. **Senolytika** mají zombie buňky odstraňovat. U zvířat už některé funkce omladila."
         },
         {
           "type": "paragraph",
-          "text": "Omezit kalorie bez podvýživy taky spustí dráhy opravy, hlavně brzděním [[mTOR]], bílkoviny, která zrychluje růst… a někdy i úpadek. Jiné laboratoře se snaží buňkám „natočit hodiny zpátky”, jako medúza, aniž z nich udělají nádory."
+          "text": "Omezení kalorií bez podvýživy také spouští opravné dráhy, hlavně tím, že brzdí [[mTOR]], bílkovinu, která urychluje růst… a někdy i úpadek. Jiné laboratoře se snaží buňkám „přetočit hodiny zpátky“ jako medúza, ale tak, aby z nich nevznikly nádory."
         }
       ]
     },
@@ -92,15 +92,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "I biologicky nesmrtelný druh zemře na predátory, nemoc nebo katastrofu. Smrt zůstává motorem evoluce: nechá místo novým, lépe přizpůsobeným generacím."
+          "text": "I biologicky nesmrtelný druh hyne kvůli predátorům, nemocem nebo katastrofám. Smrt zůstává motorem evoluce: uvolňuje místo novým, lépe přizpůsobeným generacím."
         },
         {
           "type": "paragraph",
-          "text": "Pro člověka není realistická sázka žít věčně, ale prodloužit roky **ve zdraví**. Dlouhověkost, která by se stala technologií, by zvedla i obrovské otázky spravedlnosti a zdrojů."
+          "text": "Pro člověka není realistickým cílem žít věčně, ale prodloužit léta prožitá **ve zdraví**. Kdyby se dlouhověkost stala technologií, vyvolala by i obrovské otázky spravedlnosti a dostupnosti zdrojů."
         },
         {
           "type": "takeaway",
-          "text": "Biologická nesmrtelnost stojí na opravě nebo resetu buněk. Medúza Turritopsis dohrnii mládne; hydra se pořád obnovuje. Stárnout není univerzální osud."
+          "text": "Biologická nesmrtelnost stojí na opravě nebo resetu buněk. Medúza Turritopsis dohrnii mládne a nezmar se neustále obnovuje. Stárnutí není nevyhnutelný osud všeho živého."
         }
       ]
     }

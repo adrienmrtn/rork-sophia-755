@@ -9,7 +9,7 @@
   "hero": {
     "image": "cobalt_copper_open_pit_mine_kolwezi_drc",
     "ratio": "4:3",
-    "hook": "Kov, na ktorom závisia elektromobily, sa takmer nikdy neťaží kvôli nemu samotnému."
+    "hook": "Kov, od ktorého závisia elektromobily, sa takmer nikdy neťaží kvôli sebe samému."
   },
   "sections": [
     {
@@ -23,7 +23,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Asi **99 %** svetového kobaltu sa dostáva zo zeme ako vedľajší produkt: získava sa z rúd, ktoré sa ťažia pre meď alebo nikel. Takmer **tri štvrtiny** z neho dodáva [[Konžská demokratická republika]], a to skoro výlučne z medených baní. Ponuka kobaltu teda nezávisí od dopytu po kobalte, ale od dopytu po medi a nikli. Zvláštny spôsob, ako hospodáriť s kovom, na ktorom stoja elektromobily."
+          "text": "Asi **99 %** svetového kobaltu sa dostáva zo zeme ako vedľajší produkt: získava sa z rúd, ktoré sa ťažia kvôli medi alebo niklu. Takmer **tri štvrtiny** z neho dodáva [[Konžská demokratická republika]], a to skoro výlučne z medených baní. Ponuka kobaltu teda nezávisí od dopytu po kobalte, ale od dopytu po medi a nikli. Zvláštny spôsob, ako hospodáriť s kovom, na ktorom stoja elektromobily."
         }
       ]
     },
@@ -80,11 +80,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Vráťme sa k tehlovej stene. Pri každom nabíjaní a používaní lítiové tehly vykĺznu von a potom späť dnu. Kobalt je malta, ktorá bráni stene, aby sa počas stoviek cyklov nezvlnila alebo nezrútila. Iné materiály to samy nezvládnu: **nikel** uloží viac energie, ale opotrebuje sa príliš rýchlo, **mangán** je lacný, no chýba mu výkon."
+          "text": "Vráť sa k tehlovej stene. Pri každom nabíjaní a používaní lítiové tehly vykĺznu von a potom vkĺznu späť dnu. Kobalt je malta, ktorá bráni stene, aby sa počas stoviek cyklov nezvlnila alebo nezrútila. Iné materiály to samy nezvládnu: **nikel** uloží viac energie, ale opotrebuje sa príliš rýchlo, **mangán** je lacný, no chýba mu výkon."
         },
         {
           "type": "paragraph",
-          "text": "Preto zmesi, ktoré poháňajú väčšinu elektromobilov, napríklad katódy **NMC** (nikel, mangán, kobalt) a **NCA** (nikel, kobalt, hliník), podiel kobaltu len znižujú, nikdy ho neodstránia. Inžinieri ho už pätnásť rokov uberajú, aby znížili náklady, no štipka je vždy potrebná, aby celok držal pokope. Jediná, ktorá sa bez neho zaobíde úplne, [[batéria LFP]], to dokáže tak, že stenu zahodí a postaví úplne inú vnútornú štruktúru."
+          "text": "Preto zmesi, ktoré sa používajú vo väčšine elektromobilov, napríklad katódy **NMC** (nikel, mangán, kobalt) a **NCA** (nikel, kobalt, hliník), podiel kobaltu len znižujú, nikdy ho neodstránia. Inžinieri ho už pätnásť rokov uberajú, aby znížili náklady, no štipka je vždy potrebná, aby celok držal pokope. Jediná, ktorá sa bez neho zaobíde úplne, [[batéria LFP]], to dokáže tak, že stenu zahodí a postaví úplne inú vnútornú štruktúru."
         }
       ]
     },
@@ -95,13 +95,13 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Problém kobaltu nie je chemický. Časť konžskej produkcie zabezpečuje [[remeselná ťažba]]: kope sa ručne, v nebezpečných podmienkach a miestami ju vykonávajú deti. Jeho cena kolíše rýchlo a prudko, takže každá batéria, ktorá od neho závisí, je nepredvídateľná. A takmer všetok pochádza z **jedinej krajiny**."
+          "text": "Problém kobaltu nie je chemický. Časť konžskej produkcie zabezpečuje [[remeselná ťažba]]: kope sa ručne, v nebezpečných podmienkach a miestami ju vykonávajú deti. Cena kobaltu kolíše rýchlo a prudko, takže každá batéria, ktorá od neho závisí, je nepredvídateľná. A takmer všetok kobalt pochádza z **jedinej krajiny**."
         },
         {
           "type": "image",
           "asset": "artisanal_cobalt_miners_kolwezi_congo",
           "ratio": "4:3",
-          "caption": "Baníci plnia vrecia kobaltovou rudou v Konžskej demokratickej republike."
+          "caption": "Baníci z remeselnej ťažby plnia vrecia kobaltovou rudou v Konžskej demokratickej republike."
         },
         {
           "type": "paragraph",

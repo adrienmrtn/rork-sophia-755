@@ -1,0 +1,131 @@
+{
+  "id": "course_266_pourquoi_y_a_t_il_du_cobalt_dans_nos",
+  "title": "Kodėl mūsų baterijose yra kobalto?",
+  "subtitle": "27-asis elementas",
+  "subject": "sciences",
+  "subcategory": "Notre quotidien expliqué",
+  "description": "Kobalto beveik niekas specialiai nekasa, tačiau jo yra kiekvieno telefono baterijoje. Tai istorija apie metalą, kurio pramonė negali pakeisti, nors ir stengiasi jo atsikratyti.",
+  "author": "guido-manuel-de-la-torre-olvera",
+  "hero": {
+    "image": "cobalt_copper_open_pit_mine_kolwezi_drc",
+    "ratio": "4:3",
+    "hook": "Metalas, nuo kurio priklauso elektromobiliai, beveik niekada neišgaunamas dėl jo paties."
+  },
+  "sections": [
+    {
+      "id": "course_266_pourquoi_y_a_t_il_du_cobalt_dans_nos_intro",
+      "title": "Įžanga",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kobaltas yra **27**-asis periodinės lentelės elementas, įsispraudęs tarp geležies ir nikelio. Jo yra telefono, kurį laikai rankoje, baterijoje, magnetuose ir lydiniuose, tokiuose kietuose, kad atlaiko lėktuvo reaktyvinio variklio sąlygas. Ir beveik niekas jo specialiai nekasa."
+        },
+        {
+          "type": "paragraph",
+          "text": "Apie **99 %** pasaulio kobalto išgaunama kaip šalutinis produktas: jis atskiriamas iš rūdų, kasamų dėl vario ar nikelio. Didžiausia tiekėja yra [[Kongo Demokratinė Respublika]]: beveik **trys ketvirtadaliai** kobalto, ir beveik vien iš vario kasyklų. Taigi kobalto pasiūla priklauso ne nuo kobalto paklausos, o nuo vario ir nikelio paklausos. Keistas būdas tvarkytis su elektromobilių metalu."
+        }
+      ]
+    },
+    {
+      "id": "course_266_pourquoi_y_a_t_il_du_cobalt_dans_nos_p1",
+      "title": "Baterija, kuriai reikėjo kobalto",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**1980** m. Oksforde [[Johnas Goodenough]] ir Koichi Mizushima atranda, kad ličio kobalto oksidas (LiCoO2, arba LCO) veikia kaip elektrodas, kurio veikimo principas yra [[interkaliacija]]: tarp kobalto oksido sluoksnių įslysta ir vėl išslysta ličio jonai, o sluoksnių krūva nesugriūva. Tai ir yra reikiamas [[katodas]], vienas iš dviejų baterijos elektrodų."
+        },
+        {
+          "type": "image",
+          "asset": "john_goodenough_portrait_lithium_battery_inventor",
+          "ratio": "3:4",
+          "caption": "Johnas Goodenough, 1980 m. kartu su Koichi Mizushima atradęs kobalto katodą."
+        },
+        {
+          "type": "paragraph",
+          "text": "Paskui pasaulis laukia daugiau nei dešimt metų. **1991** m. Sony pradeda pardavinėti pirmąją komercinę ličio jonų bateriją, ir jos katodas yra LCO. Iki maždaug **2010** m. beveik visi ličio jonų katodai gaminami taip. LCO iki šiol vyrauja buitinėje elektronikoje: štai kodėl tavo telefone yra keli gramai metalo, kurio niekas nebuvo nusprendęs išgauti."
+        },
+        {
+          "type": "funFact",
+          "text": "Kobaltą 1735 m. atrado švedų chemikas Georgas Brandtas, beveik du su puse amžiaus prieš jam patenkant į mūsų baterijas."
+        }
+      ]
+    },
+    {
+      "id": "course_266_pourquoi_y_a_t_il_du_cobalt_dans_nos_p2",
+      "title": "Baterija, kuri pati gamina deguonį",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Įsivaizduok katodą kaip plytų sieną. Kobalto oksido sluoksniai yra lentynos, o ličio jonai yra tarp jų sudėtos plytos. Įkrauk bateriją per stipriai, ir išimsi per daug plytų: siena taps nestabili. Virš maždaug **130 °C** arba perkrovus struktūra pradeda irti, o kobalto okside užrakintas deguonis išsiveržia dujomis."
+        },
+        {
+          "type": "image",
+          "asset": "lithium_ion_battery_fire_thermal_runaway_test",
+          "ratio": "2:3",
+          "caption": "Dviejų 18650 ličio jonų elementų blokas: pati etiketė įspėja, kad ugnyje jis gali sprogti."
+        },
+        {
+          "type": "paragraph",
+          "text": "Elementą užpildantis skystis yra **degus**, o baterija ką tik pati pateikė deguonies jam sudeginti. Karštis spartina irimą, šis išlaisvina dar daugiau deguonies, o tai sukelia dar daugiau karščio. Tai ir yra [[šiluminis išbėgimas]]. Štai kodėl ličio baterijos gaisras negesinamas uždusinant: deguonis jau yra viduje."
+        }
+      ]
+    },
+    {
+      "id": "course_266_pourquoi_y_a_t_il_du_cobalt_dans_nos_p3",
+      "title": "Kodėl kobaltas vis dar reikalingas",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Grįžk prie plytų sienos. Su kiekvienu įkrovimu ir naudojimu ličio plytos išslysta ir vėl įslysta. Kobaltas yra cementas, neleidžiantis sienai išsikreipti ar sugriūti per šimtus ciklų. Kitos medžiagos vienos to nepajėgia: **nikelis** sukaupia daugiau energijos, bet per greitai dėvisi, **manganas** pigus, bet jam trūksta galios."
+        },
+        {
+          "type": "paragraph",
+          "text": "Todėl mišiniai, naudojami daugumoje elektromobilių, pavyzdžiui, **NMC** (nikelis, manganas, kobaltas) ir **NCA** (nikelis, kobaltas, aliuminis) katodai, mažina kobalto dalį, bet niekada jo visai neatsisako. Jau penkiolika metų inžinieriai jo kiekį mažina, kad atpigintų gamybą, bet visumai išlaikyti visada reikia žiupsnelio. Vienintelė, kuri visiškai be jo apsieina, yra [[LFP baterija]]: jai tai pavyksta išmetus sieną ir sukūrus visiškai kitokią vidinę struktūrą."
+        }
+      ]
+    },
+    {
+      "id": "course_266_pourquoi_y_a_t_il_du_cobalt_dans_nos_p4",
+      "title": "Apsieiti be kobalto",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kobalto problema nėra cheminė. Dalies Kongo produkcijos šaltinis yra [[kustarinė kasykla]], kasama rankomis pavojingomis sąlygomis, o kai kur net vaikų. Kobalto kaina greitai ir smarkiai svyruoja, todėl bet kuri nuo jo priklausanti baterija tampa nenuspėjama. Ir beveik viskas ateina iš **vienos šalies**."
+        },
+        {
+          "type": "image",
+          "asset": "artisanal_cobalt_miners_kolwezi_congo",
+          "ratio": "4:3",
+          "caption": "Kustarinių kasyklų darbininkai pila kobalto rūdą į maišus Kongo Demokratinėje Respublikoje."
+        },
+        {
+          "type": "paragraph",
+          "text": "Todėl pramonė stengiasi kurti baterijas be šio metalo. Pagrindinis atsakymas yra **LFP**, ličio geležies fosfatas, kuriame kobaltą pakeičia geležis ir fosforas, du iš pigiausių ir gausiausių elementų. Jis mažiau kaista, ir jį kur kas sunkiau pastūmėti į šiluminį išbėgimą."
+        },
+        {
+          "type": "paragraph",
+          "text": "Už tai tenka mokėti energija: esant **vienodam svoriui**, LFP elementas jos sukaupia mažiau. Štai kodėl tavo automobilis galbūt jau naudoja tokią bateriją, o telefonas dar ne: kišenėje svarbus kiekvienas gramas."
+        },
+        {
+          "type": "takeaway",
+          "text": "Kobaltas palaiko ličio jonų baterijų struktūrą, bet beveik visas jis ateina iš vienos šalies kaip vario šalutinis produktas: pramonė jo atsikrato tik keisdama chemiją, rinkdamasi LFP ir susitaikydama su mažesne energija."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "Cobalt Institute, « Cobalt uses ».",
+      "url": "https://www.cobaltinstitute.org/global-cobalt/cobalt-uses/"
+    },
+    {
+      "text": "« One hundred years of cobalt production in the Democratic Republic of the Congo », Resources Policy, 2022.",
+      "url": "https://doi.org/10.1016/j.resourpol.2022.103007"
+    }
+  ]
+}

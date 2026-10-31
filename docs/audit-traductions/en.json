@@ -1,0 +1,2403 @@
+{
+ "langue": "en",
+ "synthese": {
+  "verdict": "Le reproche « les traductions ne sont pas naturelles » n'est que partiellement fondé pour l'anglais : les trois échantillons (93 relevés UI, 44 cours, 68 quiz/glossaire/collections, soit 1 bloquant et 70 majeurs) montrent un texte édité, souvent de niveau natif, et non une traduction automatique brute — les onglets, les boutons, le tutoiement chaleureux et la plupart des paragraphes de cours passent sans retouche. Ce qui domine, de loin, ce sont les calques (38 à 55 % des relevés selon l'échantillon) : expressions figurées traduites mot à mot (« Come discover », « effort on oneself », « had no tongue left », « X, on the contrary, grants »), le faux ami « culture/cultured » martelé sur le paywall et le partage, puis l'instabilité terminologique (« Parcours » rendu path/journey/route, Pro/PRO/Premium, Umma/Ummah, Hijra/Hegira) et un mélange UK/US dans une édition annoncée US (revise, tick, personalised, lecturers). Les vrais contresens sont rares mais embarrassants et placés sur des écrans fréquentés : la rubrique « Anglo-Saxons & world literature » (seul bloquant), « Cancel anytime in 15 seconds » dans l'essai gratuit, les deux phrases du bloqueur TikTok, « soul brother » dans un quiz, et un fait inventé (Baudelaire aurait importé « spleen » en français). La surface la plus faible est celle des quiz/glossaire/collections (3/5) : les descriptions de collections de première génération cumulent majuscules françaises et calques (« the seventh art », « the living », « the World War »), et le glossaire du cours sur l'impressionnisme est du mot à mot avec des crochets résiduels, alors que les collections récentes sont natives, ce qui rend l'inégalité très visible. L'UI (4/5) et les cours (4/5) tiennent bien, avec des problèmes concentrés sur l'onboarding et le paywall pour l'UI (41 des 93 relevés), et sur des artefacts de pipeline pour les cours (libellés de glossaire étendus insérés tels quels dans la prose). Le catalogue (titres/descriptions de cours) et la page App Store n'ont pas été échantillonnés ; le seul titre de cours relevé (« How was Impressionism born against the Salon? ») laisse penser qu'un contrôle rapide des titres s'impose. Au total : un texte édité de bon niveau, à corriger de façon ciblée, avec une relecture native complète limitée aux glossaires et aux descriptions de collections anciennes.",
+  "scores": {
+   "ui": 4,
+   "cours": 4,
+   "quiz_glossaire": 3,
+   "global": 3.5
+  },
+  "top_issues": [
+   {
+    "title": "Rubrique « Anglo-Saxons & world literature » : contresens visible dans la navigation",
+    "where": "Libellés de sous-catégories (content) — rubrique « Anglo-saxons & littérature mondiale »",
+    "current": "Anglo-Saxons & world literature",
+    "gloss_fr": "« Les Anglo-Saxons (peuples germaniques de l'Angleterre médiévale) & littérature mondiale » — un anglophone ne comprend pas qu'il s'agit de littérature de langue anglaise",
+    "fix": "English-language & world literature",
+    "severity": "bloquant"
+   },
+   {
+    "title": "« Culture / cultivé » traduit par « culture / cultured » (faux ami) sur le paywall, l'onboarding et le partage",
+    "where": "paywall.quiz.review3.quote, paywall.reviews.r3.quote, paywall.review2.quote, share.card.subtitle, onboarding.graph.title",
+    "current": "I feel more cultured every week. The quizzes anchor everything. / Finally an app that turns scrolling into culture. / Give a friend 10 minutes of culture / Your cultural progress",
+    "gloss_fr": "« Je me sens plus raffiné / mondain chaque semaine » ; « transforme le scroll en culture (arts, coutumes) » ; « 10 minutes de culture (au sens arts) » ; « Ta progression culturelle (au sens d'une société) » — en anglais « cultured » = raffiné et « culture » = arts ou coutumes, jamais culture générale",
+    "fix": "I feel smarter every week. The quizzes make everything stick. / Finally an app that turns scrolling into learning. / Give a friend 10 minutes of knowledge / Your knowledge over time",
+    "severity": "majeur"
+   },
+   {
+    "title": "« Parcours » rendu par path, journey, route et learning paths selon l'écran",
+    "where": "tab.path, explain.path.title, path.title (« path ») vs collections.path, collections.badge.path, collections.pathComplete (« journey ») vs onboardingV2.intro.route.title (« route ») vs onboarding.showcase.collections.title (« learning paths »)",
+    "current": "Your journey / JOURNEY / Struggling to know what to learn? Sophia builds you a **personalized route** that you follow every day. / Your path",
+    "gloss_fr": "« Ton voyage / périple », « itinéraire routier personnalisé », « ton chemin » : l'utilisateur ne sait pas que l'onglet Path, le « journey » des collections et la « route » de l'onboarding désignent la même chose",
+    "fix": "Your path / PATH / Path complete / Not sure what to learn? Sophia builds you a **personalized path** to follow every day. — use “path” everywhere",
+    "severity": "majeur"
+   },
+   {
+    "title": "Essai gratuit : « Cancel anytime in 15 seconds » se lit comme une fenêtre d'annulation de 15 secondes",
+    "where": "onboardingV2.trial.step2.detail (étape de l'essai gratuit, vue par tous les nouveaux utilisateurs)",
+    "current": "We'll remind you via notification. Cancel anytime in 15 seconds.",
+    "gloss_fr": "« On te le rappellera par notification. Annule à tout moment dans les 15 secondes » — comme si on n'avait que 15 s pour annuler, alors que la FR veut dire que l'annulation prend 15 secondes",
+    "fix": "We'll send you a notification. Cancelling takes 15 seconds.",
+    "severity": "majeur"
+   },
+   {
+    "title": "Paywall : « your secret weapon for: » suivi de puces à l'impératif est agrammatical",
+    "where": "paywall.weaponHeadline + puces du paywall (Build your confidence, Feed your curiosity, Make…)",
+    "current": "Sophia, your secret weapon for: — Build your confidence / Feed your curiosity",
+    "gloss_fr": "« Sophia, ton arme secrète pour : — Construis ta confiance » : le « pour + infinitif » français ne se calque pas, « for: » attend des noms, pas des verbes à l'impératif",
+    "fix": "Sophia, your secret weapon to: — Build your confidence / Feed your curiosity (keep the bullets as verbs)",
+    "severity": "majeur"
+   },
+   {
+    "title": "Anglais britannique dans une table US : « revise », « tick », « personalised », « lecturers », « term »",
+    "where": "onboardingV2.exams.quote2 et quote4, tiktokBlocker.app.none / picker.header / picker.footer / toggle.subtitle.off, onboardingV2.problem.line3 + highlights, onboardingV2.teachers.subtitle, onboardingV2.exams.quote1, home.allCaughtUp",
+    "current": "\"I revise 10 minutes a day and my grades really took off.\" / No app chosen yet. Tick TikTok in Apple's list. / That's why we built Sophia: a clear, personalised path, for everyone.",
+    "gloss_fr": "Pour un Américain, « I revise 10 minutes a day » = « je corrige mon texte 10 minutes par jour » (pas « je révise ») ; « tick » = cocher (UK) ; « personalised » détonne à côté de « personalized » employé partout ailleurs",
+    "fix": "\"I study 10 minutes a day and my grades really took off.\" / No app selected yet. Check TikTok in Apple's list. / That's why we built Sophia: a clear, personalized path, for everyone. (and lecturers → professors, term → semester, well played → nice work)",
+    "severity": "majeur"
+   },
+   {
+    "title": "Offre : « -70% FOREVER » et « Unlock my -70% offer », notation promo à la française",
+    "where": "offer.discount, offer.unlock",
+    "current": "-70% FOREVER / Unlock my -70% offer",
+    "gloss_fr": "« -70 % POUR TOUJOURS » : en anglais le signe moins devant un pourcentage n'est pas une convention commerciale, on écrit « 70% OFF »",
+    "fix": "70% OFF FOREVER / Claim my 70% off",
+    "severity": "majeur"
+   },
+   {
+    "title": "Bloqueur TikTok : deux contresens qui égarent l'utilisateur (« Then again », « lock screen »)",
+    "where": "tiktokBlocker.how.step3, tiktokBlocker.notifications.subtitle",
+    "current": "TikTok is unlocked until tomorrow. Then again, every day. / The “Open Sophia” button on the lock screen goes through a notification. Without one, just open Sophia after tapping it.",
+    "gloss_fr": "« TikTok est débloqué jusqu'à demain. Cela dit / d'un autre côté, chaque jour. » (phrase sans sens) ; « lock screen » = l'écran de verrouillage de l'iPhone, pas l'écran de blocage de Sophia : l'utilisateur cherche le bouton au mauvais endroit",
+    "fix": "TikTok is unlocked until tomorrow. And it starts over every day. / The “Open Sophia” button on the blocking screen works through a notification. If notifications are off, just open Sophia yourself after tapping it.",
+    "severity": "majeur"
+   },
+   {
+    "title": "Descriptions de collections (1re génération) : majuscules aléatoires et calques incompréhensibles",
+    "where": "collections c_vblwguvnamcf, c_7etcora6amcf, c_nuv73pnuamcf, g_mpzqlws4_7r1yy, g_mpzqlws4_1j8bg, g_mpzqlws4_5kxjr, g_mpzqlws4_jwtrk, g_mpzqlws4_9zcsy (titres + descriptions)",
+    "current": "Why does Music move us? An exploration between Art and biology. / History of the seventh art / …our understanding of the living. / Turning points of the World War / genocides and Memory: Never again / …the science behind our planet's manifestations.",
+    "gloss_fr": "Majuscules sur Music, Art, Memory, World héritées des titres français ; « septième art » inconnu des anglophones ; « the living » = « les vivants » (par opposition aux morts) ; « the World War » sans numéro (laquelle ?) ; « manifestations » = apparitions / manifs",
+    "fix": "Why does music move us? Where art meets biology. / A History of Cinema / …our understanding of life. / Turning Points of World War II / Genocide and Memory: Never Again / …the science behind the forces that shape our planet.",
+    "severity": "majeur"
+   },
+   {
+    "title": "Quiz Baudelaire : « soul brother » (argot afro-américain) pour « frère d'âme »",
+    "where": "course_100_les_fleurs_du_mal_baudelaire_q9 / question (quiz)",
+    "current": "Which American writer, described as a “soul brother”, did Baudelaire translate?",
+    "gloss_fr": "« Soul brother » = « frère de couleur / pote noir » dans l'argot afro-américain des années 60-70, pas « âme sœur / frère d'âme » : la question devient involontairement comique à propos de Poe",
+    "fix": "Which American writer, whom he called a “kindred spirit,” did Baudelaire translate?",
+    "severity": "majeur"
+   }
+  ],
+  "systematic": [
+   "Calques d'expressions et de tournures françaises traduites mot à mot — catégorie n° 1 dans les trois échantillons (38 à 55 % des relevés) : « Come discover » (Viens découvrir), « learn with method », « effort on oneself », « had no tongue left », « pushed X to » (pousser à), « in the service of ». Artefacts MT à traiter en corpus : « au contraire » → « X, on the contrary, verb » inséré entre sujet et verbe (quiz), « entre X et Y » → « between X and Y » (collections), « pour + infinitif » → « for: » + impératifs (paywall).",
+   "Faux ami « culture / cultivé » → « culture / cultured » (paywall, partage, onboarding) : à remplacer en corpus par knowledge / learning / smarter (regex \\b(cultured|of culture|into culture)\\b).",
+   "Terminologie produit instable : « Parcours » = path / journey / route / learning paths ; abonnement = Sophia Pro / Sophia PRO / Premium / premium ; goal / objective ; en contenu Umma/Ummah, Hijra/Hegira, Sassanid/Sasanian, expansion/enlargement/extension. Fixer un glossaire produit et l'appliquer en corpus.",
+   "Mélange anglais britannique / américain dans une édition déclarée US : personalised, revise/revising, tick, lecturers, term, well played (UI), fire brigade, won through (cours), Theatre, Shakespearian (collections). Passe regex corpus-wide.",
+   "Majuscules françaises héritées sur des noms communs en milieu de phrase (Music, Art, History, World, Memory, Politics) dans les descriptions de collections, capitalisation incohérente des périodes et titres dans les cours (antiquity, central Europe, Persian empire, secretary general), title case vs sentence case pour boutons et libellés de section. Artefact MT (majuscules des titres FR recopiées) à corriger en corpus.",
+   "Artefacts de pipeline glossaire : libellés d'entrées étendus ou avec article majuscule insérés tels quels dans la prose (« [[Symbolism and Baudelaire's legacy]] », « founded [[The Ummah]] », « [[paint tubes and plein air]] work »), crochets [ ] résiduels autour des titres d'œuvres ([Les Nymphéas]), titres français non remplacés par le titre anglais établi (Water Lilies, Rouen Cathedral). À corriger à la source (génération des libellés), pas texte par texte.",
+   "Conventions numériques et typographiques françaises conservées : « 1h », « %d h », « -70% », « LVL. », « D3 », fourchettes « €30-100 / month », trois points « ... », tiret « - » entouré d'espaces, guillemets droits et typographiques mélangés. Passe regex corpus-wide.",
+   "Présent historique français conservé dans les explications de quiz et mélangé au prétérit dans le même cours (grants / links / summarizes vs died / published) ; l'anglais narratif attend le passé.",
+   "« @ » employé comme nom commun (« your @ », « this @ », « get an @ ») dans toute la section amis ; l'anglais dit « username » ou « @handle ».",
+   "Jargon produit interne exposé à l'utilisateur (« paywall », « onboarding », « Open source » pour ouvrir la source) et formulations de rapport d'entreprise (« boosts goal achievement by 89% », « Your profile has been created successfully ») qui cassent la voix chaleureuse et tutoyante.",
+   "Faux amis et sens inadaptés de mots polysémiques dans cours et glossaire : cult (culte), rehabilitation (réhabilitation), blunt (franc), chromatic circle (color wheel), clear touch (touche limpide), anecdotes (faits amusants), the living (le vivant), seventh art (cinéma), manifestations (phénomènes).",
+   "Témoignages avec prénoms français et âges (Léa, 24 ; Inès ; Yanis ; Malik) combinés à « on the App Store » : crédibilité affaiblie pour un public américain — décision produit plutôt que problème de traduction.",
+   "Légendes d'images sans point final en anglais alors que le français en a un : à confirmer comme choix de style délibéré et à appliquer partout."
+  ],
+  "action": "corrections_ciblees",
+  "effort": "UI : 1 jour (34 correctifs listés + passes regex culture / parcours / UK-US / -70% / 1h / @ / LVL.) ; cours : 1–2 jours de passes ciblées (libellés de glossaire à corriger à la source, calques et faux amis listés, capitalisation, présent historique) sans relecture intégrale ; quiz, glossaires et descriptions de collections de 1re génération : 2 jours de relecture native complète ; catalogue (titres/descriptions de cours) et page App Store : non échantillonnés, prévoir 0,5 jour de contrôle natif."
+ },
+ "scores_relecteur_par_surface": {
+  "ui": 4,
+  "courses": 4,
+  "content": 3
+ },
+ "justifications_relecteur": {
+  "ui": "L'anglais est globalement de qualité native : les boutons sont courts, le tutoiement informel est bien rendu, les écrans paywall et onboarding se lisent naturellement. Les problèmes qu'un natif remarquerait sont concentrés sur quelques points : des calques de « culture / cultivé » (« cultured », « 10 minutes of culture »), une poignée de contresens (« Then again, every day », « lock screen », « Cancel anytime in 15 seconds », « Open source »), des formes britanniques dans une table censée être en US English (personalised, revise, tick, lecturers), et du jargon interne exposé (« paywall », « onboarding »). Le terme produit « Parcours » est rendu tour à tour par path, journey, route et learning paths.",
+  "courses": "L'anglais de ces cinq cours est globalement fluide, idiomatique et fidèle : la plupart des paragraphes pourraient avoir été rédigés directement en anglais. Les problèmes relevés sont surtout des calques ponctuels d'expressions figurées françaises (« effort sur soi », « n'ont plus de langue », « cœur jaune », « Chez Hugo »), quelques titres ou formules maladroits (« born against the Salon ») et un artefact récurrent : des entrées de glossaire dont le libellé anglais a été étendu ou conserve un article majuscule, ce qui casse la phrase (« opened the road to Symbolism and Baudelaire's legacy, carried on later by Verlaine »). Un contresens factuel ajouté (Baudelaire aurait importé le mot « spleen » en français) et quelques flottements de capitalisation ou de lexique britannique en édition US complètent le tableau.",
+  "content": "Les quiz sont globalement corrects et lisibles, mais plusieurs explications calquent la syntaxe française (« X, on the contrary, grants… », présent historique mélangé au passé) et un faux sens embarrassant (« soul brother »). Le glossaire est inégal : certaines définitions sont natives, d'autres sont du mot à mot (« clear touch », « chromatic circle », « the plein air », « considers … as an aggression »), avec des crochets résiduels autour des titres d'œuvres et des translittérations incohérentes (Hijra/Hegira, Umma/Ummah). Les descriptions de collections de la première génération sont le point faible : majuscules aléatoires sur les noms communs (Music, Art, History, World), calques (« the living », « seventh art », « manifestations », « transversal journey ») et une rubrique « Anglo-Saxons » qui change de sens en anglais. Les collections récentes (Cold War, Storytelling, 19th century…) sont en revanche d'un niveau natif, ce qui rend l'inégalité d'autant plus visible."
+ },
+ "constats_non_listes_par_le_relecteur": {
+  "ui": 0,
+  "courses": 0,
+  "content": 0
+ },
+ "motifs_recurrents": [
+  {
+   "description": "« culture / cultivé » rendu par « culture / cultured », faux ami : en anglais « cultured » = raffiné et « culture » = arts ou coutumes, pas la culture générale.",
+   "frequency": "fréquent",
+   "example": "paywall.quiz.review3.quote : « I feel more cultured every week »",
+   "regex_fr": "\\b(cultiv\\w*|culture)\\b",
+   "regex_target": "\\b(cultured|of culture|into culture)\\b",
+   "pack": "ui"
+  },
+  {
+   "description": "Formes britanniques dans une table censée être en US English (personalised, revise/revising = réviser, tick = cocher, lecturers, term, well played).",
+   "frequency": "fréquent",
+   "example": "tiktokBlocker.app.none : « Tick TikTok in Apple’s list »",
+   "regex_target": "\\b(personalis\\w+|revis(e|es|ing)|tick(ed|s)?|lecturers?|well played)\\b",
+   "pack": "ui"
+  },
+  {
+   "description": "Le terme produit « Parcours » est rendu de façon incohérente : path (onglet, explications), journey (collections, chargement), route (intro), learning paths (showcase).",
+   "frequency": "fréquent",
+   "example": "collections.path « Your journey » vs explain.path.title « Your path » vs onboardingV2.intro.route.title « personalized route »",
+   "regex_fr": "\\bparcours\\b",
+   "regex_target": "\\b(journey|route|learning paths?)\\b",
+   "pack": "ui"
+  },
+  {
+   "description": "Conventions numériques françaises conservées : « 1h », « %d h », « -70% », fourchettes avec trait d'union et espaces (« €30-100 / month »).",
+   "frequency": "fréquent",
+   "example": "onboarding.phone.1to2h : « 1h to 2h »",
+   "regex_fr": "\\d\\s?h\\b|-\\d+\\s?%",
+   "regex_target": "\\b\\d+\\s?h\\b|-\\d+%|\\d+-\\d+ (h|€)|€\\d+-\\d+",
+   "pack": "ui"
+  },
+  {
+   "description": "« @ » employé comme nom commun pour « pseudo / identifiant » dans toute la section amis (« your @ », « this @ », « an @ ») ; l'anglais dit « username » ou « @handle ».",
+   "frequency": "systématique",
+   "example": "friends.handle.edit.title : « Edit your @ »",
+   "regex_fr": "\\b(le|ton|son|ce|un|leur) @",
+   "regex_target": "\\b(your|this|an|the|their|friend's) @(?!\\w)",
+   "pack": "ui"
+  },
+  {
+   "description": "Jargon produit interne exposé à l'utilisateur (« paywall », « onboarding ») là où la FR dit « l'offre » ou où le mot est dans la bouche d'un témoignage.",
+   "frequency": "isolé",
+   "example": "paywall.error.unavailable : « Unable to load paywall »",
+   "regex_target": "\\b(paywall|onboarding)\\b",
+   "pack": "ui"
+  },
+  {
+   "description": "Abréviation « LVL. / lvl. » avec point, calquée sur « NIV. » ; l'anglais écrit « LVL » sans point.",
+   "frequency": "fréquent",
+   "example": "common.levelShort : « LVL. %d »",
+   "regex_fr": "\\bniv\\.",
+   "regex_target": "\\b[Ll][Vv][Ll]\\.",
+   "pack": "ui"
+  },
+  {
+   "description": "Impératif français « Viens découvrir / Viens te joindre » calqué en « Come discover / Come join ».",
+   "frequency": "isolé",
+   "example": "notification.courseNudge.body : « Come discover “%@” »",
+   "regex_fr": "\\bViens (découvrir|te joindre)",
+   "regex_target": "\\bCome (discover|join)\\b",
+   "pack": "ui"
+  },
+  {
+   "description": "Génitif français « les cours du niveau / d'un niveau » rendu par « the courses of a level / of the level » au lieu de « a level's courses / in the level ».",
+   "frequency": "isolé",
+   "example": "explain.path.body : « Finish the courses of a level in order »",
+   "regex_fr": "\\bcours (du|d'un) niveau\\b",
+   "regex_target": "\\bcourses? of (a|the) level\\b",
+   "pack": "ui"
+  },
+  {
+   "description": "Nom de l'abonnement instable : « Sophia Pro », « Sophia PRO », « Premium », « premium » ; hérité de la source mais visible en anglais.",
+   "frequency": "fréquent",
+   "example": "paywall.course.proPitch « Sophia PRO » vs paywall.quiz.faq.a2 « Sophia Pro » vs settings.premium.title « Premium »",
+   "regex_fr": "\\bSophia (Pro|PRO)\\b|\\bpremium\\b",
+   "regex_target": "\\bSophia (Pro|PRO)\\b|\\bpremium\\b",
+   "pack": "ui"
+  },
+  {
+   "description": "Capitalisation incohérente des boutons et lignes de liste : quelques Title Case (« Try for Free », « Quizzes & Practice ») au milieu d'un corpus en sentence case ; trois points tapés « ... » au lieu de « … ».",
+   "frequency": "isolé",
+   "example": "onboardingV2.reminder.cta : « Try for Free »",
+   "regex_target": "\\b[A-Z][a-z]+ (for|&) [A-Z][a-z]+\\b|\\.\\.\\.",
+   "pack": "ui"
+  },
+  {
+   "description": "Les témoignages gardent des prénoms français (Léa, Inès, Camille, Yanis, Malik, Thomas) avec des âges ; pour un public américain cela affaiblit un peu la crédibilité des avis, surtout combiné à « on the App Store ».",
+   "frequency": "systématique",
+   "example": "onboardingV2.review.author : « Léa, 24 »",
+   "regex_target": "\\b(Léa|Inès|Camille|Yanis|Malik|Thomas|Lucas|Marie|Sarah), \\d+\\b",
+   "pack": "ui"
+  },
+  {
+   "description": "Libellés de glossaire étendus ou dotés d'un article majuscule insérés tels quels dans la prose (« [[Symbolism and Baudelaire's legacy]] », « founded [[The Ummah]] », « [[paint tubes and plein air]] work »), ce qui casse la phrase ou laisse une majuscule en milieu de phrase.",
+   "frequency": "fréquent",
+   "example": "This poetics is the road that leads to **[[Symbolism and Baudelaire's legacy]]**, carried on later by Verlaine and Mallarmé.",
+   "regex_target": "\\[\\[(?:The|A|An) [^\\]]+\\]\\]|\\[\\[[^\\]]+ and [^\\]]+\\]\\]",
+   "regex_fr": "\\[\\[(?:Le|La|Les|L') [^\\]]+\\]\\]",
+   "pack": "courses"
+  },
+  {
+   "description": "Calques d'expressions figurées françaises traduites mot à mot (« effort on oneself », « had no tongue left », « yellow heart », « crossed fates », « In Hugo », « thirst for height », « born against »).",
+   "frequency": "fréquent",
+   "example": "Her own desires had no tongue left.",
+   "regex_target": "\\b(?:effort on (?:oneself|himself|herself)|no tongue left|yellow heart|crossed fates|thirst for height|born against|In [A-Z][a-z]+, the poet)\\b",
+   "regex_fr": "\\b(?:effort sur soi|n'ont plus de langue|cœur jaune|destins croisés|Chez [A-Z]\\w+,|soif d'élévation|né[e]? contre)\\b",
+   "pack": "courses"
+  },
+  {
+   "description": "Faux amis et sens inadaptés de mots polysémiques (« cult » pour culte, « rehabilitation » pour réhabilitation judiciaire, « blunt » pour franc, « sound effect » pour phénomène sonore, « empty space » pour vide de pouvoir).",
+   "frequency": "fréquent",
+   "example": "At the heart of the cult stood a cube-shaped sanctuary",
+   "regex_target": "\\b(?:the cult\\b|[Rr]ehabilitation\\b|blunt contrasts|sound effect|empty space)",
+   "regex_fr": "\\b(?:culte|réhabilitation|contrastes francs|phénomène sonore|ce vide)\\b",
+   "pack": "courses"
+  },
+  {
+   "description": "« pousser à » rendu systématiquement par « pushed … to » là où l'anglais naturel emploie « prompted », « led » ou « drove ».",
+   "frequency": "fréquent",
+   "example": "That gesture pushed the tribes to join him.",
+   "regex_target": "\\bpush(?:ed|es)? (?:the )?\\w+(?: \\w+)? to (?:join|build|apply|ask)\\b",
+   "regex_fr": "\\bpouss(?:e|a|ent|èrent) .{1,30} à \\w+er\\b",
+   "pack": "courses"
+  },
+  {
+   "description": "Capitalisation incohérente des noms de périodes, régions et titres institutionnels (« antiquity », « central Europe », « Persian empire », « secretary general »).",
+   "frequency": "fréquent",
+   "example": "Its first secretary general, Lord Ismay",
+   "regex_target": "\\b(?:secretary general|central Europe|Persian empire|antiquity came)\\b",
+   "pack": "courses"
+  },
+  {
+   "description": "Lexique britannique dans une édition annoncée en anglais US (« fire brigade », « won through »).",
+   "frequency": "isolé",
+   "example": "helmets that looked like those of the Paris fire brigade",
+   "regex_target": "\\b(?:fire brigade|won through|colour|favourite|centre)\\b",
+   "pack": "courses"
+  },
+  {
+   "description": "Les légendes d'image (keys *.caption) perdent systématiquement le point final présent en français ; choix de style acceptable mais à confirmer comme délibéré pour être cohérent sur tout le corpus.",
+   "frequency": "systématique",
+   "example": "Medina, the “city of the Prophet,” the first capital of Islam",
+   "regex_target": "^EN: [^\\n]*[^.!?”\"]$",
+   "regex_fr": "^FR: [^\\n]*\\.$",
+   "pack": "courses"
+  },
+  {
+   "description": "Majuscules aléatoires sur des noms communs en milieu de phrase dans les descriptions de collections (Music, Art, History, Literature, World, Politics, Mythology, Memory), hérité des majuscules des titres français.",
+   "frequency": "systématique",
+   "example": "Why does Music move us? An exploration between Art and biology.",
+   "regex_target": "(?<=[a-z] )(?:Music|Art|History|Literature|World|Politics|Mythology|Memory|Geopolitics|Universe)\\b",
+   "regex_fr": "(?<=[a-zé] )(?:Musique|Art|Histoire|Littérature|Monde|Politique|Mythologie|Mémoire|Géopolitique|Univers)\\b",
+   "pack": "content"
+  },
+  {
+   "description": "« Au contraire » rendu par « X, on the contrary, verb » inséré entre sujet et verbe, dans les explications des vrai/faux.",
+   "frequency": "fréquent",
+   "example": "Muhammad, on the contrary, grants a general pardon…",
+   "regex_target": "\\b[A-Z]\\w+, on the contrary, \\w+",
+   "regex_fr": "\\bau contraire\\b",
+   "pack": "content"
+  },
+  {
+   "description": "Présent historique français conservé en anglais et mélangé au passé dans le même cours (grants / links / summarizes vs died / published), là où l'anglais narratif attend le prétérit.",
+   "frequency": "fréquent",
+   "example": "Muhammad, on the contrary, grants a general pardon… (q3) vs Muhammad died in 632 (q4)",
+   "regex_target": "\\b(?:Muhammad|Baudelaire|Napoleon|Monet|Manet) (?:grants|links|summarizes|publishes|founds|translates|replaces)\\b",
+   "regex_fr": "\\b(?:accorde|lie|résume|publie|fonde|traduit|remplace|meurt)\\b",
+   "pack": "content"
+  },
+  {
+   "description": "Translittérations et noms historiques incohérents entre quiz et glossaire (Hijra/Hegira, Umma/Ummah, Sassanid/Sasanian, expansion/enlargement/extension).",
+   "frequency": "fréquent",
+   "example": "quiz: Umma / glossary: Ummah ; quiz: Hijra / glossary: Hegira",
+   "regex_target": "\\b(?:Hegira|Hijra|Umma|Ummah|Sassanid|Sasanian)\\b",
+   "pack": "content"
+  },
+  {
+   "description": "« Entre X et Y » traduit par « between X and Y » pour exprimer un croisement thématique, ce qui ne fonctionne pas en anglais.",
+   "frequency": "fréquent",
+   "example": "An exploration between Art and biology / Between castles, cathedrals, and great epidemics",
+   "regex_target": "(?:^|— )(?:An? )?(?:exploration|study|journey|conquest)?[^.]*\\b[Bb]etween [a-z][^.]* and [a-z]",
+   "regex_fr": "\\b(?:entre|Entre) [^.]+ et [^.]+",
+   "pack": "content"
+  },
+  {
+   "description": "Mélange de guillemets droits (\") et typographiques (“ ”), et apostrophe courbe isolée, selon le cours.",
+   "frequency": "fréquent",
+   "example": "\"hic\" (hoquet) vs “Correspondences” (Baudelaire) ; art’s vs Muhammad's",
+   "regex_target": "\"[^\"\\n]{1,80}\"|’",
+   "pack": "content"
+  },
+  {
+   "description": "Titres d'œuvres entourés de crochets [ ] dans le glossaire (artefact de conversion des guillemets simples français), et titres laissés en français alors qu'un titre anglais établi existe.",
+   "frequency": "isolé",
+   "example": "[Les Nymphéas] or [La Cathédrale de Rouen]",
+   "regex_target": "\\[(?:Le|La|Les|L')[^\\]]+\\]",
+   "regex_fr": "'(?:Le|La|Les|L')[^']+'",
+   "pack": "content"
+  },
+  {
+   "description": "Calques lexicaux de noms abstraits ou d'expressions françaises sans équivalent direct (le vivant → the living, septième art → seventh art, manifestations, touche → touch, cercle chromatique → chromatic circle, transverse → transversal, acte fondateur → founding act).",
+   "frequency": "fréquent",
+   "example": "our understanding of the living",
+   "regex_target": "\\b(?:the living\\b(?! \\w)|seventh art|manifestations|chromatic circle|transversal|founding act|clear touch|the plein air)",
+   "regex_fr": "\\b(?:le vivant|septième art|manifestations|touche limpide|cercle chromatique|transverse|acte fondateur)\\b",
+   "pack": "content"
+  },
+  {
+   "description": "Casse incohérente des libellés de section et des titres de collection (title case vs sentence case, minuscule après deux-points).",
+   "frequency": "fréquent",
+   "example": "French & European Classics vs Conflicts & geopolitics ; The Human Body: from Healing to Technology",
+   "regex_target": "^(?:[A-Z][a-z]+ )+& [a-z]|: [a-z]\\w+ [A-Z]",
+   "pack": "content"
+  },
+  {
+   "description": "Trait d'union entouré d'espaces utilisé comme tiret long.",
+   "frequency": "isolé",
+   "example": "an existential threat - an argument used to justify",
+   "regex_target": "\\w - \\w",
+   "regex_fr": "\\w - \\w",
+   "pack": "content"
+  }
+ ],
+ "constats": [
+  {
+   "location": "SUBCATEGORY LABELS / « Anglo-saxons & littérature mondiale »",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Anglo-Saxons & world literature",
+   "gloss_fr": "« Les Anglo-Saxons (peuples germaniques du haut Moyen Âge) & littérature mondiale »",
+   "problem": "En anglais, « Anglo-Saxons » désigne les peuples germaniques de l'Angleterre médiévale, pas la littérature de langue anglaise ; un lecteur américain ou britannique ne comprend pas la rubrique.",
+   "fix": "English-language & world literature",
+   "surface": "content"
+  },
+  {
+   "location": "tiktokBlocker.how.step3",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "TikTok is unlocked until tomorrow. Then again, every day.",
+   "gloss_fr": "TikTok est débloqué jusqu'à demain. D'un autre côté, chaque jour.",
+   "problem": "« Then again » signifie « d'un autre côté / cela dit » en anglais, pas « et on recommence » ; la phrase n'a plus de sens.",
+   "fix": "TikTok is unlocked until tomorrow. And it starts over every day.",
+   "surface": "ui"
+  },
+  {
+   "location": "tiktokBlocker.notifications.subtitle",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "The “Open Sophia” button on the lock screen goes through a notification. Without one, just open Sophia after tapping it.",
+   "gloss_fr": "Le bouton « Ouvrir Sophia » sur l'écran de verrouillage (de l'iPhone) passe par une notification. Sans elle, ouvre simplement Sophia après avoir appuyé.",
+   "problem": "« lock screen » désigne l'écran de verrouillage iOS, pas l'écran de blocage affiché par Sophia ; l'utilisateur cherchera le bouton au mauvais endroit.",
+   "fix": "The “Open Sophia” button on the blocking screen works through a notification. If notifications are off, just open Sophia yourself after tapping it.",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.trial.step2.detail",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "We'll remind you via notification. Cancel anytime in 15 seconds.",
+   "gloss_fr": "On te le rappellera par notification. Annule à tout moment dans 15 secondes (comme si on avait 15 s pour annuler).",
+   "problem": "« Cancel anytime in 15 seconds » se lit comme une fenêtre de 15 secondes pour annuler, alors que la FR dit que l'annulation prend 15 secondes.",
+   "fix": "We'll send you a notification. Cancelling takes 15 seconds.",
+   "surface": "ui"
+  },
+  {
+   "location": "course.sources.open",
+   "severity": "majeur",
+   "category": "autre",
+   "current": "Open source",
+   "gloss_fr": "Logiciel libre / open source",
+   "problem": "« Open source » se lit d'abord comme l'expression figée « logiciel libre » et non comme « ouvrir la source ».",
+   "fix": "View source",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.error.unavailable",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "Unable to load paywall",
+   "gloss_fr": "Impossible de charger le paywall (terme interne de monétisation)",
+   "problem": "« paywall » est un mot de jargon produit jamais montré à l'utilisateur ; la FR dit « l'offre », et les autres erreurs utilisent « Couldn't ».",
+   "fix": "Couldn't load the offer",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.weaponHeadline",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Sophia, your secret⏎weapon for:",
+   "gloss_fr": "Sophia, ton arme secrète pour : (suivi de « Build your confidence », « Feed your curiosity »)",
+   "problem": "« for: » suivi de puces à l'impératif (Build…, Feed…, Make…) est agrammatical en anglais ; le français « pour + infinitif » ne se calque pas.",
+   "fix": "Sophia, your secret⏎weapon to: (and make the bullets verbs: “💬 Have better conversations”)",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.quiz.review3.quote",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "I feel more cultured every week. The quizzes anchor everything.",
+   "gloss_fr": "Je me sens plus raffiné / mondain chaque semaine. Les quiz ancrent tout.",
+   "problem": "« cultured » signifie raffiné, pas cultivé au sens de culture générale, et « anchor everything » est un calque de « ancrent tout ».",
+   "fix": "I feel smarter every week. The quizzes make everything stick.",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.reviews.r3.quote",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "I feel more cultured every week. Hard to stop at just one course.",
+   "gloss_fr": "Je me sens plus raffiné chaque semaine. Difficile de m'arrêter à un seul cours.",
+   "problem": "Même faux ami « cultured » (= raffiné, sophistiqué) pour « cultivé ».",
+   "fix": "I feel smarter every week. Hard to stop at just one course.",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.review2.quote",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Finally an app that turns scrolling into culture.",
+   "gloss_fr": "Enfin une appli qui transforme le scroll en culture (au sens arts / coutumes).",
+   "problem": "« culture » en anglais renvoie aux arts ou aux coutumes, pas à la culture générale ; la phrase sonne traduite.",
+   "fix": "Finally an app that turns scrolling into learning.",
+   "surface": "ui"
+  },
+  {
+   "location": "share.card.subtitle",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Give a friend 10 minutes of culture",
+   "gloss_fr": "Offre à un ami 10 minutes de culture (au sens arts / coutumes)",
+   "problem": "« 10 minutes of culture » n'existe pas en anglais au sens de culture générale.",
+   "fix": "Give a friend 10 minutes of knowledge",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.graph.title",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Your cultural⏎progress",
+   "gloss_fr": "Ta progression culturelle (au sens anthropologique / artistique)",
+   "problem": "« cultural progress » évoque l'évolution d'une société, pas la culture générale ; le graphique lui-même est légendé « KNOWLEDGE ».",
+   "fix": "Your knowledge⏎over time",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.welcome.title",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Sophia is your partner to master",
+   "gloss_fr": "Sophia est ton partenaire pour maîtriser (+ mot tournant : art, history…)",
+   "problem": "« your partner to master art » est une structure française ; en anglais « partner to + verbe » ne fonctionne pas.",
+   "fix": "Sophia helps you master",
+   "surface": "ui"
+  },
+  {
+   "location": "notification.courseNudge.body",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Come discover “%@” — five minutes is all it takes.",
+   "gloss_fr": "Viens découvrir « %@ » — cinq minutes suffisent.",
+   "problem": "« Come discover » est le calque classique de « Viens découvrir » ; un natif dirait « Check out ».",
+   "fix": "Check out “%@” — it only takes five minutes.",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.intro.route.title",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "Struggling to know what to learn? Sophia builds you a **personalized route** that you follow every day.",
+   "gloss_fr": "Tu peines à savoir quoi apprendre ? Sophia te construit un itinéraire routier personnalisé que tu suis chaque jour.",
+   "problem": "« route » évoque un trajet routier ; le même « parcours » est rendu « path » dans l'onglet et les explications, et « Struggling to know » est maladroit.",
+   "fix": "Not sure what to learn? Sophia builds you a **personalized path** to follow every day.",
+   "surface": "ui"
+  },
+  {
+   "location": "collections.path",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "Your journey",
+   "gloss_fr": "Ton voyage / périple (alors que l'onglet s'appelle « Path »)",
+   "problem": "Le même terme produit « Parcours » est « journey » dans Collections (collections.badge.path « JOURNEY », collections.pathComplete) et « path » dans tab.path, explain.path.title, path.title ; l'utilisateur ne sait plus s'il s'agit de la même chose.",
+   "fix": "Your path (and PATH / Path complete for collections.badge.path / collections.pathComplete)",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.problem.line3",
+   "severity": "majeur",
+   "category": "typographie",
+   "current": "That’s why we built Sophia: a clear, personalised path, for everyone.",
+   "gloss_fr": "C'est pour ça qu'on a créé Sophia : un parcours clair, personnalisé (orthographe britannique), pour tout le monde.",
+   "problem": "Orthographe britannique « personalised » (aussi dans onboardingV2.problem.highlights « clear,personalised ») alors que la table est en US English et écrit « personalized » partout ailleurs.",
+   "fix": "That’s why we built Sophia: a clear, personalized path, for everyone. (highlights: clear,personalized)",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.exams.quote2",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "\"I revise 10 minutes a day and my grades really took off.\"",
+   "gloss_fr": "« Je corrige / je relis mon texte 10 minutes par jour et mes notes ont décollé. »",
+   "problem": "En anglais américain « revise » signifie « corriger un texte » ; le sens « réviser ses cours » est britannique.",
+   "fix": "\"I study 10 minutes a day and my grades really took off.\"",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.exams.quote4",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "\"Perfect for revising on the go. My teachers noticed the difference.\"",
+   "gloss_fr": "« Parfait pour corriger des textes en déplacement. Mes profs ont vu la différence. »",
+   "problem": "Même problème : « revising » est britannique ; le témoignage voisin (review.t3) dit bien « studying ».",
+   "fix": "\"Perfect for studying on the go. My teachers noticed the difference.\"",
+   "surface": "ui"
+  },
+  {
+   "location": "tiktokBlocker.app.none",
+   "severity": "majeur",
+   "category": "autre",
+   "current": "No app chosen yet. Tick TikTok in Apple’s list.",
+   "gloss_fr": "Aucune appli choisie. Coche TikTok (verbe britannique) dans la liste d'Apple.",
+   "problem": "« Tick » est britannique ; en US English on dit « check » ou « select » (idem tiktokBlocker.picker.header « Tick TikTok », picker.footer « ticked », toggle.subtitle.off « tick TikTok »).",
+   "fix": "No app selected yet. Check TikTok in Apple’s list.",
+   "surface": "ui"
+  },
+  {
+   "location": "tiktokBlocker.picker.footer",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Apple does not tell us which app you ticked. Pick TikTok, and nothing else, so the way-back button works.",
+   "gloss_fr": "Apple ne nous dit pas quelle appli tu as cochée. Choisis TikTok, et rien d'autre, pour que le bouton « chemin du retour » fonctionne.",
+   "problem": "« the way-back button » n'existe pas en anglais ; il s'agit du bouton « Back to TikTok », et la forme non contractée « does not » est raide.",
+   "fix": "Apple doesn’t tell us which app you checked. Select TikTok, and nothing else, so the “Back to TikTok” button works.",
+   "surface": "ui"
+  },
+  {
+   "location": "explain.course.termBody",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Like “%@”, underlined words hide a definition. Tap it to reveal it.",
+   "gloss_fr": "Comme « %@ », les mots soulignés cachent une définition. Appuie dessus (singulier) pour la révéler.",
+   "problem": "« words » au pluriel puis « Tap it » au singulier ; « hide a definition » est un calque, et « underlined » contredit « Highlighted » dans explain.course.body.",
+   "fix": "Like “%@”, underlined words have a definition. Tap one to see it.",
+   "surface": "ui"
+  },
+  {
+   "location": "explain.course.body",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Highlighted terms hide a definition: tap them to understand everything.",
+   "gloss_fr": "Les termes surlignés cachent une définition : appuie dessus pour tout comprendre.",
+   "problem": "« tap them to understand everything » calque « pour tout comprendre » et sonne faux ; un natif dirait « tap one to see it ».",
+   "fix": "Highlighted terms have a definition — tap one to see it.",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.benefit.quiz",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Every quiz to remember more",
+   "gloss_fr": "Chaque quiz pour retenir plus",
+   "problem": "Calque mot à mot de « Tous les quiz pour mémoriser » ; la ligne n'est pas une tournure anglaise.",
+   "fix": "All quizzes, to make it stick",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.trial.startsDetail",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Cancel before if you don't want to continue.",
+   "gloss_fr": "Annule avant [quoi ?] si tu ne veux pas continuer.",
+   "problem": "« before » sans complément est bancal en anglais ; il faut « before then ».",
+   "fix": "Cancel before then if you don't want to continue.",
+   "surface": "ui"
+  },
+  {
+   "location": "trial.endingSoon.banner",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "In 1 day, you lose access to Sophia Premium.",
+   "gloss_fr": "Dans 1 jour, tu perds l'accès à Sophia Premium.",
+   "problem": "Structure française (« Dans 1 jour, tu perds ») ; l'anglais naturel parle de « tomorrow » ou de « 1 day left ».",
+   "fix": "Your Sophia Premium access ends tomorrow.",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.quiz.faq.q3.noTrial",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Am I tied into a commitment?",
+   "gloss_fr": "Suis-je attaché dans un engagement ?",
+   "problem": "« tied into a commitment » n'est pas une collocation anglaise ; on dit « locked into » ou « Is there a commitment? ».",
+   "fix": "Am I locked into anything?",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.program.nickname.mythologie",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Mythology curious",
+   "gloss_fr": "Mythologie curieux (adjectif collé à un nom, sans structure)",
+   "problem": "« Mythology curious » n'est pas un syntagme nominal anglais, contrairement aux autres surnoms (« Art enthusiast », « Literature lover »).",
+   "fix": "Mythology buff",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.profile.tagline.exams",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "You learn with method, ready when it counts.",
+   "gloss_fr": "Tu apprends avec méthode, prêt quand ça compte.",
+   "problem": "« learn with method » est un calque de « apprendre avec méthode » ; l'anglais dit « methodically ».",
+   "fix": "You study methodically, so you're ready when it counts.",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.mission.body2",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Our team of professors and designers counts on you to keep creating great content, in the service of one mission: making learning easy.",
+   "gloss_fr": "Notre équipe de professeurs d'université et de designers compte sur toi pour [que tu] continues à créer du bon contenu, au service d'une seule mission.",
+   "problem": "« counts on you to keep creating » laisse entendre que c'est l'utilisateur qui crée le contenu, « in the service of one mission » calque « au service de », et « professors » (universitaires) pour « profs ».",
+   "fix": "Our team of teachers and designers is counting on you so we can keep creating great content, all for one mission: making learning easy.",
+   "surface": "ui"
+  },
+  {
+   "location": "ambassador.form.hint",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Fill in the whole form (intro: 10 characters min.) to enable send.",
+   "gloss_fr": "Remplis tout le formulaire (présentation : 10 caractères min.) pour activer envoyer.",
+   "problem": "« to enable send » est agrammatical (verbe employé comme nom).",
+   "fix": "Fill in the whole form (intro: at least 10 characters) to submit.",
+   "surface": "ui"
+  },
+  {
+   "location": "settings.ambassador.banner.subtitle",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Earn money posting Sophia on TikTok",
+   "gloss_fr": "Gagne de l'argent en postant Sophia [elle-même] sur TikTok",
+   "problem": "On ne « poste » pas une appli ; il manque « about ».",
+   "fix": "Earn money posting about Sophia on TikTok",
+   "surface": "ui"
+  },
+  {
+   "location": "settings.appearance.dark",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "Night",
+   "gloss_fr": "Nuit",
+   "problem": "Le sélecteur de thème standard en anglais est « Light / Dark / Automatic » ; « Night » à côté de « Light » surprend.",
+   "fix": "Dark",
+   "surface": "ui"
+  },
+  {
+   "location": "friends.add.subtitle",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "Enter your friend's @ to add them to your leaderboard.",
+   "gloss_fr": "Entre le @ de ton ami pour l'ajouter à ton classement.",
+   "problem": "« @ » employé comme nom commun (« your @ », « this @ », « get an @ ») dans toute la section friends.* ; en anglais on dit « username » ou « @handle », et le placeholder dit déjà « username ».",
+   "fix": "Enter your friend's username to add them to your leaderboard.",
+   "surface": "ui"
+  },
+  {
+   "location": "offer.discount",
+   "severity": "majeur",
+   "category": "typographie",
+   "current": "-70% FOREVER",
+   "gloss_fr": "-70 % POUR TOUJOURS (notation promo à la française)",
+   "problem": "« -70% » est une convention commerciale française ; l'anglais affiche « 70% OFF ».",
+   "fix": "70% OFF FOREVER",
+   "surface": "ui"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire/s3.b2.text",
+   "severity": "majeur",
+   "category": "mt_artefact",
+   "current": "This poetics is the road that leads to **[[Symbolism and Baudelaire's legacy]]**, carried on later by Verlaine and Mallarmé.",
+   "gloss_fr": "Cette poétique est la route qui mène au « Symbolisme et héritage de Baudelaire », porté plus tard par Verlaine et Mallarmé.",
+   "problem": "Le libellé étendu de l'entrée de glossaire (FR : [[symbolisme]]) est inséré tel quel dans la phrase, ce qui donne une suite illogique (« l'héritage de Baudelaire porté par Verlaine ») et une phrase bancale.",
+   "fix": "This poetic vision opened the road to **[[Symbolism]]**, carried on later by Verlaine and Mallarmé.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire/s4.b4.text",
+   "severity": "majeur",
+   "category": "mt_artefact",
+   "current": "opened the road to **[[Symbolism and Baudelaire's legacy]]**, despite a ban that lasted nearly a century.",
+   "gloss_fr": "a ouvert la route au « Symbolisme et héritage de Baudelaire », malgré une interdiction…",
+   "problem": "Même libellé de glossaire étendu glissé dans la prose ; un lecteur voit une expression de menu, pas un mot de la phrase.",
+   "fix": "The collection founded **[[Modernity]]** in verse and opened the road to **[[Symbolism]]**, despite a ban that lasted nearly a century.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire/s2.b0.text",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "**Spleen**, an English word he carried into French, means a deep boredom, a sadness with no cause.",
+   "gloss_fr": "Spleen, un mot anglais qu'il a importé en français, désigne…",
+   "problem": "Le FR dit seulement « mot emprunté à l'anglais » ; l'anglais attribue l'emprunt à Baudelaire, ce qui est un ajout factuellement faux (le mot est attesté en français dès le XVIIIe siècle).",
+   "fix": "**Spleen**, a word borrowed from English, means a deep boredom, a sadness with no cause.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_122_la_naissance_de_l_impressionnisme/title",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "How was Impressionism born against the Salon?",
+   "gloss_fr": "Comment l'impressionnisme fut-il né contre le Salon ?",
+   "problem": "« born against » est un calque de « né contre » qui ne se dit pas en anglais ; un titre de cours visible dans la liste doit sonner naturel.",
+   "fix": "How did a revolt against the Salon give birth to Impressionism?",
+   "surface": "courses"
+  },
+  {
+   "location": "course_166_narcisse_et_echo/s1.b2.text",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Her own desires had no tongue left.",
+   "gloss_fr": "Ses propres désirs n'avaient plus de langue (organe).",
+   "problem": "Calque de « n'ont plus de langue » ; en anglais « tongue » évoque l'organe, l'image ne passe pas et un natif grimace.",
+   "fix": "Her own desires no longer had a voice.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/s4.b2.text",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "at once an effort on oneself and a defense of the community",
+   "gloss_fr": "à la fois un effort sur soi-même et une défense de la communauté",
+   "problem": "« an effort on oneself » est un mot-à-mot de « effort sur soi » qui n'existe pas en anglais.",
+   "fix": "at once an inner struggle and a defense of the community",
+   "surface": "courses"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/s2.b3.text",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "fast raids meant to cut the enemy caravans",
+   "gloss_fr": "des raids rapides destinés à couper (trancher) les caravanes ennemies",
+   "problem": "« cut the caravans » sans particule signifie « trancher » ; l'anglais exige « cut off » (intercepter, couper la route).",
+   "fix": "fast raids meant to cut off the enemy caravans",
+   "surface": "courses"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire_q9 / options",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "Which American writer, described as a “soul brother”, did Baudelaire translate?",
+   "gloss_fr": "« …qualifié de “soul brother” (expression afro-américaine : frère de couleur, pote noir) »",
+   "problem": "« Soul brother » a en anglais américain une connotation précise (argot afro-américain des années 60-70) qui n'a rien à voir avec « frère d'âme » ; l'idiome attendu est « kindred spirit ».",
+   "fix": "Which American writer, whom he called a “kindred spirit,” did Baudelaire translate?",
+   "surface": "content"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622_q3 / explanation",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Muhammad, on the contrary, grants a general pardon, which facilitates the rallying of Arab tribes to Islam.",
+   "gloss_fr": "Structure française mot à mot : « Muhammad, au contraire, accorde un pardon général, ce qui facilite le ralliement des tribus arabes à l'islam. »",
+   "problem": "« X, on the contrary, grants » et « facilitates the rallying of » sont des calques ; un natif écrirait au passé avec une phrase plus directe.",
+   "fix": "Quite the opposite: Muhammad granted a general pardon, which made it easier for the Arab tribes to rally to Islam.",
+   "surface": "content"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622_q8 / question + glossary « Ummah »",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "What is the Umma, founded by Muhammad in Medina? (glossary: The Ummah / Ummah)",
+   "gloss_fr": "« Umma » dans le quiz, « Ummah » dans le glossaire",
+   "problem": "Le terme est translittéré de deux façons entre quiz et glossaire ; le lien [[glossary]] et la mémorisation du terme en pâtissent.",
+   "fix": "Use “Umma” in both (quiz and glossary entries), or “Ummah” in both; e.g. glossary term “Umma”.",
+   "surface": "content"
+  },
+  {
+   "location": "glossary course_1 / Constitution of Medina",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "Edict issued by Muhammad shortly after the Hegira, governing the relations between monotheists…",
+   "gloss_fr": "« …peu après l'Hégire (orthographe “Hegira”) » alors que le reste du cours dit « Hijra »",
+   "problem": "« Hegira » ici contre « Hijra » partout ailleurs (quiz q1, q4, q5) : l'apprenant croit à deux événements différents.",
+   "fix": "Edict issued by Muhammad shortly after the Hijra, governing relations between the monotheists (Muslims and Jews) and the clans of the Medina oasis.",
+   "surface": "content"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire_q2 / question",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Why were Les Fleurs du Mal condemned in 1857?",
+   "gloss_fr": "Accord au pluriel (« furent condamnées ») avec un titre d'œuvre",
+   "problem": "En anglais un titre d'œuvre est singulier (« Les Fleurs du Mal was »), le pluriel est un calque de l'accord français.",
+   "fix": "Why was Les Fleurs du Mal condemned in 1857?",
+   "surface": "content"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire_q4 / question",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "What is the albatross in the “Spleen and Ideal” section?",
+   "gloss_fr": "« Qu'est-ce que l'albatros dans la section… ? » (comme si on demandait ce qu'est l'oiseau)",
+   "problem": "« Que représente » doit devenir « What does … represent/symbolize » ; « What is the albatross » sonne comme une question de zoologie.",
+   "fix": "What does the albatross represent in the “Spleen and Ideal” section?",
+   "surface": "content"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire_q7 / explanation",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Baudelaire, on the contrary, links the classical form, such as the sonnet and the alexandrine, to a radically new poetic vision.",
+   "gloss_fr": "« Baudelaire, au contraire, lie la forme classique, comme le sonnet et l'alexandrin, à une vision… » mot à mot",
+   "problem": "Même calque de « au contraire » inséré entre sujet et verbe, et « links the classical form … to » est raide ; un natif reformule.",
+   "fix": "On the contrary: Baudelaire pairs classical forms like the sonnet and the alexandrine with a radically new poetic vision.",
+   "surface": "content"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire_q8 / question",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "What poetic movement did Baudelaire's correspondences found, later taken up by Verlaine and Mallarmé?",
+   "gloss_fr": "« Quel mouvement poétique les correspondances de Baudelaire fondèrent-elles, repris ensuite par… » (« found » peut aussi se lire comme « trouvé »)",
+   "problem": "« did … found » est ambigu (found/find) et la relative « later taken up » flotte sans antécédent clair ; phrase typiquement traduite.",
+   "fix": "Which poetic movement grew out of Baudelaire's theory of correspondences and was later carried on by Verlaine and Mallarmé?",
+   "surface": "content"
+  },
+  {
+   "location": "course_242_pourquoi_a_t_on_le_hoquet_q5 / question",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Which of these is a common cause of passing hiccups?",
+   "gloss_fr": "« …cause courante de hoquet passager » rendu par « passing hiccups » (qui évoque « passing gas »)",
+   "problem": "« Passing hiccups » n'existe pas en anglais et prête à sourire ; on parle de « a short bout of hiccups » ou « temporary hiccups ».",
+   "fix": "Which of these commonly triggers a short bout of hiccups?",
+   "surface": "content"
+  },
+  {
+   "location": "glossary course_207 / Vladimir Putin",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "…he considers the extension of NATO as an aggression against Russian influence.",
+   "gloss_fr": "« il considère l'extension de l'OTAN comme une agression » mot à mot (« considers … as », « an aggression »)",
+   "problem": "« consider X as Y » est incorrect (« consider X Y » ou « see X as Y ») et « an aggression » n'est pas dénombrable en anglais ; « extension » devrait être « expansion ».",
+   "fix": "President of the Russian Federation since 1999 (with a stint as prime minister in between), he sees NATO's expansion as an act of aggression against Russian influence.",
+   "surface": "content"
+  },
+  {
+   "location": "glossary course_122 / Paint tubes and the plein air",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Paint tubes and the plein air [concept]",
+   "gloss_fr": "« Les tubes de peinture et le plein air » avec l'article calqué devant « plein air »",
+   "problem": "« the plein air » n'existe pas en anglais ; « plein air » s'emploie comme adjectif (« plein-air painting ») ou sans article (« painting en plein air »).",
+   "fix": "Paint tubes and plein-air painting",
+   "surface": "content"
+  },
+  {
+   "location": "glossary course_122 / Michel-Eugène Chevreul",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "…whose 'law of simultaneous contrast of colors' (1839) theoretically founded the use of complementary colors by the impressionists.",
+   "gloss_fr": "« a théoriquement fondé l'usage des couleurs complémentaires par les impressionnistes » mot à mot",
+   "problem": "« theoretically founded the use … by » est incompréhensible pour un natif (« theoretically » = « en théorie ») ; il faut « provided the theoretical basis for ».",
+   "fix": "French chemist whose “law of simultaneous contrast of colors” (1839) gave the Impressionists the theoretical basis for their use of complementary colors.",
+   "surface": "content"
+  },
+  {
+   "location": "glossary course_122 / Neo-Impressionism",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Movement succeeding impressionism, led by Georges Seurat, scientifically applying the decomposition of color in the form of dots.",
+   "gloss_fr": "« Mouvement succédant à l'impressionnisme… appliquant scientifiquement la décomposition de la couleur sous forme de points »",
+   "problem": "Enchaînement de participes et « decomposition of color in the form of dots » sont du mot à mot ; un natif reformule avec des verbes conjugués.",
+   "fix": "The movement that followed Impressionism, led by Georges Seurat, which broke color down scientifically into tiny dots.",
+   "surface": "content"
+  },
+  {
+   "location": "glossary course_122 / Claude Monet",
+   "severity": "majeur",
+   "category": "nom_propre",
+   "current": "Leader of the impressionism movement, famous for his series exploring light such as [Les Nymphéas] or [La Cathédrale de Rouen].",
+   "gloss_fr": "« Chef de file du mouvement impressionnisme » (nom au lieu d'adjectif) ; titres entre crochets [ ] et laissés en français",
+   "problem": "« impressionism movement » est agrammatical (il faut « Impressionist movement »), les crochets ressemblent à un balisage cassé, et les séries ont des titres anglais établis (Water Lilies, Rouen Cathedral).",
+   "fix": "Leader of the Impressionist movement, famous for his series exploring light, such as the Water Lilies and Rouen Cathedral.",
+   "surface": "content"
+  },
+  {
+   "location": "glossary course_122 / Édouard Manet",
+   "severity": "majeur",
+   "category": "mt_artefact",
+   "current": "Painter and precursor of modernity, whose painting [Le Déjeuner sur l'herbe] caused a major scandal in 1863.",
+   "gloss_fr": "Titre entre crochets [ ] comme un marqueur non résolu",
+   "problem": "Les crochets autour du titre (hérités des guillemets simples du FR) s'affichent tels quels et semblent être un bug ; l'anglais met le titre en italique ou tel quel, avec éventuellement la traduction usuelle.",
+   "fix": "Pioneering painter of modernity, whose Le Déjeuner sur l'herbe (Luncheon on the Grass) caused a major scandal in 1863.",
+   "surface": "content"
+  },
+  {
+   "location": "glossary course_122 / Berthe Morisot",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "…known for her scenes of bourgeois life and her clear touch.",
+   "gloss_fr": "« sa touche limpide » rendu par « clear touch » (son toucher clair / net)",
+   "problem": "« Clear touch » ne veut rien dire en critique d'art anglophone ; « touche » = « brushwork » et « limpide » = « light, luminous ».",
+   "fix": "One of the major figures of Impressionism, known for her scenes of middle-class life and her light, luminous brushwork.",
+   "surface": "content"
+  },
+  {
+   "location": "glossary course_122 / complementary colors",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Colors opposite each other on the chromatic circle (e.g., red/green). Their juxtaposition reinforces the vibrancy of each.",
+   "gloss_fr": "« cercle chromatique » rendu littéralement ; « leur juxtaposition renforce la vivacité de chacune » mot à mot",
+   "problem": "Le terme anglais est « color wheel » ; « chromatic circle » et la seconde phrase sentent la traduction.",
+   "fix": "Colors that sit opposite each other on the color wheel (e.g. red/green). Placed side by side, each makes the other look more vivid.",
+   "surface": "content"
+  },
+  {
+   "location": "collection c_vblwguvnamcf / description",
+   "severity": "majeur",
+   "category": "typographie",
+   "current": "Why does Music move us? An exploration between Art and biology.",
+   "gloss_fr": "« Pourquoi la Musique nous touche-t-elle ? Une exploration entre Art et biologie. » avec majuscules aléatoires",
+   "problem": "Majuscules injustifiées sur « Music » et « Art », et « an exploration between » est un calque de « entre ».",
+   "fix": "Why does music move us? Where art meets biology.",
+   "surface": "content"
+  },
+  {
+   "location": "collection c_6870opqzamcf / description",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "How built structures reflect beliefs and systems of Politics.",
+   "gloss_fr": "« …les croyances et les systèmes de Politique » avec majuscule et tournure calquée",
+   "problem": "« systems of Politics » n'est pas anglais (il faut « political systems ») et la majuscule est injustifiée.",
+   "fix": "How buildings reflect beliefs and political systems.",
+   "surface": "content"
+  },
+  {
+   "location": "collection c_7etcora6amcf / description",
+   "severity": "majeur",
+   "category": "typographie",
+   "current": "A study of fire through Mythology, geology, and the History of technology.",
+   "gloss_fr": "Majuscules sur « Mythology » et « History » mais pas sur « geology »",
+   "problem": "Majuscules aléatoires sur des noms communs au milieu d'une phrase ; un natif y voit une faute flagrante.",
+   "fix": "Fire: Divine Punishment or Energy Source? — Fire through mythology, geology and the history of technology.",
+   "surface": "content"
+  },
+  {
+   "location": "collection c_nuv73pnuamcf / title",
+   "severity": "majeur",
+   "category": "typographie",
+   "current": "genocides and Memory: Never again",
+   "gloss_fr": "Titre commençant par une minuscule, « Memory » en majuscule",
+   "problem": "Le titre commence par une minuscule et capitalise au hasard ; visible en tête de collection.",
+   "fix": "Genocide and Memory: Never Again",
+   "surface": "content"
+  },
+  {
+   "location": "collection c_9y3ap3px8kck / description",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "A transversal journey honoring the women who overturned History, whether through major scientific discoveries, social struggles, or founding Literature.",
+   "gloss_fr": "« Un parcours transverse honorant les femmes qui ont renversé l'Histoire… ou la Littérature fondatrice » mot à mot, majuscules comprises",
+   "problem": "« transversal journey », « overturned History » et « founding Literature » sont des calques incompréhensibles, avec majuscules injustifiées.",
+   "fix": "Exceptional Women: From Science to Freedom — A cross-disciplinary journey celebrating the women who changed the course of history, through major scientific discoveries, social struggles or groundbreaking writing.",
+   "surface": "content"
+  },
+  {
+   "location": "collection g_mpzqlws4_1j8bg / description",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "…the breakthroughs that transformed our understanding of the living.",
+   "gloss_fr": "« notre compréhension du vivant » rendu par « the living » (= les vivants, par opposition aux morts)",
+   "problem": "« the living » signifie « les vivants » en anglais ; « le vivant » se dit « life » ou « the living world ».",
+   "fix": "Scientific Revolutions — From gravity to DNA, discover the breakthroughs that transformed our understanding of life.",
+   "surface": "content"
+  },
+  {
+   "location": "collection g_mpzqlws4_5kxjr / title + description",
+   "severity": "majeur",
+   "category": "mt_artefact",
+   "current": "Turning points of the World War — Dive into the heart of the decisive confrontations that marked the mid-20th century.",
+   "gloss_fr": "« Les tournants de la Guerre mondiale » (laquelle ?) ; « plongez au cœur des affrontements décisifs » mot à mot",
+   "problem": "« the World War » sans numéro est anormal en anglais (il y en a deux) ; le contenu (milieu du XXe siècle) impose « World War II », et « dive into the heart of the confrontations » est un calque.",
+   "fix": "Turning Points of World War II — Dive into the decisive battles that shaped the mid-20th century.",
+   "surface": "content"
+  },
+  {
+   "location": "collection g_mpzqlws4_7r1yy / title",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "History of the seventh art",
+   "gloss_fr": "« Histoire du septième art » : expression française inconnue de la plupart des anglophones",
+   "problem": "« The seventh art » n'est pas un idiome anglais courant ; le lecteur ne comprend pas qu'il s'agit de cinéma.",
+   "fix": "A History of Cinema — The great directors and movements that revolutionized the moving image.",
+   "surface": "content"
+  },
+  {
+   "location": "collection g_mpzqlws4_9zcsy / title + description",
+   "severity": "majeur",
+   "category": "typographie",
+   "current": "Understanding current Geopolitics — The keys to decoding power dynamics and tensions in the modern World.",
+   "gloss_fr": "« Comprendre la Géopolitique actuelle… dans le Monde moderne » avec majuscules aléatoires",
+   "problem": "Majuscules injustifiées sur « Geopolitics » et « World » ; « current Geopolitics » est en outre raide.",
+   "fix": "Understanding Today's Geopolitics — The keys to decoding the power struggles and tensions of the modern world.",
+   "surface": "content"
+  },
+  {
+   "location": "collection g_mpzqlws4_afvtk / title + description",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Great names of the Theatre — From dramatic Greek tragedy to Shakespearian dramas.",
+   "gloss_fr": "« Grands noms du Théâtre » mot à mot ; orthographes britanniques « Theatre », « Shakespearian » dans une appli en anglais US",
+   "problem": "« Great names of the Theatre » est un calque, « Theatre » et « Shakespearian » sont des graphies britanniques (US : theater, Shakespearean), et « dramatic Greek tragedy » est redondant.",
+   "fix": "Giants of the Stage — From Greek tragedy to Shakespearean drama.",
+   "surface": "content"
+  },
+  {
+   "location": "collection g_mpzqlws4_bonja / description",
+   "severity": "majeur",
+   "category": "typographie",
+   "current": "From The invention of the Internet to the excesses of social networks and AI.",
+   "gloss_fr": "« De L'invention d'Internet aux dérives des réseaux sociaux » avec un « The » majuscule en milieu de phrase",
+   "problem": "« The » capitalisé au milieu de la phrase est une coquille visible, et « social networks » se dit « social media » en anglais courant.",
+   "fix": "The Digital Age — From the invention of the Internet to the dark side of social media and AI.",
+   "surface": "content"
+  },
+  {
+   "location": "collection g_mpzqlws4_jwtrk / description",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Discover the science behind our planet's manifestations.",
+   "gloss_fr": "« la science qui se cache derrière les manifestations de notre planète » mot à mot",
+   "problem": "« our planet's manifestations » est incompréhensible en anglais (manifestation = apparition, protestation) ; il faut nommer les phénomènes.",
+   "fix": "Natural Phenomena Explained — Discover the science behind the forces that shape our planet.",
+   "surface": "content"
+  },
+  {
+   "location": "offer.unlock",
+   "severity": "mineur",
+   "category": "typographie",
+   "current": "Unlock my -70% offer",
+   "gloss_fr": "Débloquer mon offre -70 %",
+   "problem": "Même notation « -70% » peu naturelle en anglais.",
+   "fix": "Claim my 70% off",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.loading.title",
+   "severity": "mineur",
+   "category": "registre",
+   "current": "We are preparing your knowledge journey",
+   "gloss_fr": "Nous sommes en train de préparer ton voyage de connaissances (forme non contractée, ton marketing)",
+   "problem": "Forme non contractée « We are » raide par rapport au reste (« We're »), et « knowledge journey » sonne corporate ; idem onboardingV2.loading.titleNamed.",
+   "fix": "We're building your learning path",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.dailyGoal.title",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Each day, you want to learn...",
+   "gloss_fr": "Chaque jour, tu veux apprendre... (ordre des mots français)",
+   "problem": "Tournure calquée ; « Every day » est plus naturel en tête de phrase et les trois points devraient être « … ».",
+   "fix": "Every day, you want to learn…",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.knowledge.subtitle",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "Be honest, it only helps Sophia adapt the level.",
+   "gloss_fr": "Sois honnête, ça aide seulement Sophia à adapter le niveau.",
+   "problem": "Virgule de jonction (comma splice) et « adapt the level » calqué ; l'anglais dit « adjust the difficulty ».",
+   "fix": "Be honest — it just helps Sophia adjust the difficulty.",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.knowledge.level2",
+   "severity": "mineur",
+   "category": "registre",
+   "current": "Okayish",
+   "gloss_fr": "Bof-correct (argot)",
+   "problem": "« Okayish » est très familier et détonne à côté de « Good » / « Very good ».",
+   "fix": "Decent",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.readingTime.lateMorning",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "During the morning",
+   "gloss_fr": "Pendant la matinée",
+   "problem": "Créneau peu idiomatique à côté de « First thing » ; l'anglais dit « Mid-morning ».",
+   "fix": "Mid-morning",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.reminder.cta",
+   "severity": "mineur",
+   "category": "typographie",
+   "current": "Try for Free",
+   "gloss_fr": "Essayer Gratuitement (majuscules à chaque mot)",
+   "problem": "Title Case alors que tous les autres boutons sont en sentence case (« Get started », « Subscribe now »).",
+   "fix": "Try for free",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.pw.feature.quiz",
+   "severity": "mineur",
+   "category": "typographie",
+   "current": "Quizzes & Practice",
+   "gloss_fr": "Quiz & Entraînement (majuscule incohérente)",
+   "problem": "Capitalisation incohérente avec les autres lignes de la liste (« Audio mode », « No ads », « Unlimited favorites »).",
+   "fix": "Quizzes & practice",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.features.row5",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Listen to every course in audio",
+   "gloss_fr": "Écoute chaque cours en audio",
+   "problem": "« in audio » calque « en audio » ; l'anglais dit « as audio » ou « available as audio ».",
+   "fix": "Every course is also available as audio",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.notifications.boost",
+   "severity": "mineur",
+   "category": "registre",
+   "current": "Activating reminders boosts goal achievement by **89%**.",
+   "gloss_fr": "Activer les rappels augmente l'accomplissement des objectifs de 89 % (ton corporate).",
+   "problem": "Formulation de rapport d'entreprise, loin du tutoiement chaleureux de la FR.",
+   "fix": "Turning on reminders makes you **89%** more likely to hit your goals.",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.notifications.bullet2",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "At the right moment, never in bursts",
+   "gloss_fr": "Au bon moment, jamais en rafales",
+   "problem": "« never in bursts » calque « jamais en rafale » et n'est pas idiomatique.",
+   "fix": "At the right moment, never a flood",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.trial.step0.detail",
+   "severity": "mineur",
+   "category": "registre",
+   "current": "Your profile has been created successfully.",
+   "gloss_fr": "Ton profil a été créé avec succès (message système).",
+   "problem": "Formulation de message système, pas de la voix chaleureuse de l'app.",
+   "fix": "Your profile is all set.",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.questions.q10",
+   "severity": "mineur",
+   "category": "autre",
+   "current": "What is Einstein's relativity?",
+   "gloss_fr": "Qu'est-ce que la relativité d'Einstein ?",
+   "problem": "En anglais on nomme la « theory of relativity » ; « Einstein's relativity » seul est tronqué.",
+   "fix": "What is Einstein's theory of relativity?",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.questions.q8",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "How was the Universe born?",
+   "gloss_fr": "Comment l'Univers est-il né ?",
+   "problem": "« born » pour l'Univers est un calque ; l'anglais dit « begin » ou « start ».",
+   "fix": "How did the Universe begin?",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.yearsGrid.caption",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "That's %d full years you lose on your phone over your whole life.",
+   "gloss_fr": "Ce sont %d années complètes que tu perds sur ton téléphone sur toute ta vie.",
+   "problem": "« lose on your phone » et « over your whole life » sont des calques ; l'anglais dit « spend… over your lifetime ».",
+   "fix": "That's %d whole years you'll spend on your phone over your lifetime.",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.teachers.subtitle",
+   "severity": "mineur",
+   "category": "autre",
+   "current": "Every course is written and reviewed by PhD holders and lecturers from these universities.",
+   "gloss_fr": "Chaque cours est rédigé et relu par des titulaires d'un doctorat et des chargés de cours (terme britannique) de ces universités.",
+   "problem": "« lecturers » est britannique et contredit le titre qui dit « professors ».",
+   "fix": "Every course is written and reviewed by PhDs and professors from these universities.",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.exams.quote1",
+   "severity": "mineur",
+   "category": "autre",
+   "current": "\"Thanks to Sophia, my history average went up 3 points this term.\"",
+   "gloss_fr": "« Grâce à Sophia, ma moyenne d'histoire a gagné 3 points ce trimestre (terme britannique). »",
+   "problem": "« term » est britannique ; un lycéen américain dit « semester ».",
+   "fix": "\"Thanks to Sophia, my history average went up 3 points this semester.\"",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.exams.author3",
+   "severity": "mineur",
+   "category": "autre",
+   "current": "Camille, university",
+   "gloss_fr": "Camille, université",
+   "problem": "Étiquette peu naturelle en US English ; on dirait « college » ou « college student ».",
+   "fix": "Camille, college",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.loading.step1",
+   "severity": "mineur",
+   "category": "terminologie",
+   "current": "Analyzing your objective",
+   "gloss_fr": "Analyse de ton objectif",
+   "problem": "« objective » alors que l'app dit « goal » partout (onboardingV2.objective.title, profile.objectiveTitle) ; idem onboardingV2.rightPlace.caption « with this objective ».",
+   "fix": "Analyzing your goal",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.phone.lessThan1h",
+   "severity": "mineur",
+   "category": "typographie",
+   "current": "Less than 1h",
+   "gloss_fr": "Moins de 1h (abréviation française)",
+   "problem": "« 1h » est une abréviation française ; l'anglais écrit « 1 hour » ou « 1 hr » (idem « 1h to 2h », « 2h to 4h », « More than 4h »).",
+   "fix": "Less than 1 hour (1–2 hours / 2–4 hours / More than 4 hours)",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.program.hoursSaved",
+   "severity": "mineur",
+   "category": "typographie",
+   "current": "%d h",
+   "gloss_fr": "%d h (espace + h à la française)",
+   "problem": "« 12 h » est la notation française ; en anglais « 12 hrs ».",
+   "fix": "%d hrs",
+   "surface": "ui"
+  },
+  {
+   "location": "ambassador.role.slideshow.income",
+   "severity": "mineur",
+   "category": "typographie",
+   "current": "€30-100 / month",
+   "gloss_fr": "30-100 € / mois (trait d'union et espaces à la française)",
+   "problem": "Les fourchettes anglaises utilisent un tiret demi-cadratin sans espaces et « /month » collé (idem « 1-2 h / month », « €50-1000 / month », « 2-10 h / month »).",
+   "fix": "€30–100/month (time: 1–2 hrs/month)",
+   "surface": "ui"
+  },
+  {
+   "location": "ambassador.conditions.age",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "16 years old or older",
+   "gloss_fr": "16 ans ou plus vieux",
+   "problem": "Formulation lourde ; les autres conditions sont des infinitifs / participes.",
+   "fix": "Be 16 or older",
+   "surface": "ui"
+  },
+  {
+   "location": "ambassador.form.presentation.hint",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "%d/%d min. characters",
+   "gloss_fr": "%d/%d caractères min. (ordre des mots inversé)",
+   "problem": "« min. characters » se lit « caractères minimum » de façon ambiguë ; l'anglais place « min. » après.",
+   "fix": "%d/%d characters (min.)",
+   "surface": "ui"
+  },
+  {
+   "location": "ambassador.role.ugc.body",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "We share UGC examples and coaching to help you perform.",
+   "gloss_fr": "On partage des exemples UGC et un coaching pour t'aider à performer.",
+   "problem": "« to help you perform » calque « pour performer » ; en anglais « perform » seul est vague.",
+   "fix": "We share UGC examples and coaching to help you get results.",
+   "surface": "ui"
+  },
+  {
+   "location": "audio.browse.empty",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "No audio course matches.",
+   "gloss_fr": "Aucun cours audio ne correspond.",
+   "problem": "« matches » sans complément est tronqué en anglais.",
+   "fix": "No audio courses match your search.",
+   "surface": "ui"
+  },
+  {
+   "location": "author.currentCourse",
+   "severity": "mineur",
+   "category": "longueur",
+   "current": "The course you are reading",
+   "gloss_fr": "Le cours que tu es en train de lire (étiquette longue, non contractée)",
+   "problem": "Étiquette de section trop longue et non contractée ; l'anglais d'app dit « Currently reading ».",
+   "fix": "Currently reading",
+   "surface": "ui"
+  },
+  {
+   "location": "author.otherCourses",
+   "severity": "mineur",
+   "category": "terminologie",
+   "current": "More courses by this professor",
+   "gloss_fr": "Autres cours de ce professeur d'université",
+   "problem": "« professor » implique un universitaire en US English ; « prof » FR est plus large.",
+   "fix": "More from this author",
+   "surface": "ui"
+  },
+  {
+   "location": "common.levelShort",
+   "severity": "mineur",
+   "category": "typographie",
+   "current": "LVL. %d",
+   "gloss_fr": "NIV. %d (abréviation avec point)",
+   "problem": "L'abréviation anglaise est « LVL » sans point (idem « lvl. » dans common.xpBeforeNext, profile.progress.toNext, quiz.xpProgress.toNext).",
+   "fix": "LVL %d (and “%d to lvl %d”)",
+   "surface": "ui"
+  },
+  {
+   "location": "course.streak.day",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "1-day streak",
+   "gloss_fr": "Série de 1 jour (étiquette singulier)",
+   "problem": "Le pluriel course.streak.days est « Day streak » (précédé du nombre) ; le singulier « 1-day streak » donnerait « 1 1-day streak » si le nombre est affiché.",
+   "fix": "Day streak",
+   "surface": "ui"
+  },
+  {
+   "location": "collections.subtitle",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Guided paths that connect the ideas.",
+   "gloss_fr": "Des parcours guidés qui relient les idées.",
+   "problem": "« connect the ideas » avec article défini calque « relier les idées entre elles ».",
+   "fix": "Guided paths that link ideas together.",
+   "surface": "ui"
+  },
+  {
+   "location": "explain.collections.body",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Each collection gathers courses on the same theme so you progress step by step.",
+   "gloss_fr": "Chaque collection rassemble des cours sur le même thème pour que tu progresses pas à pas.",
+   "problem": "« gathers courses » calque « réunit des cours » ; l'anglais dit « groups ».",
+   "fix": "Each collection groups courses on one theme so you can progress step by step.",
+   "surface": "ui"
+  },
+  {
+   "location": "explain.home.title",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Vertical swipe",
+   "gloss_fr": "Le swipe vertical",
+   "problem": "Titre d'explication peu naturel en anglais ; on décrit le geste.",
+   "fix": "Swipe up and down",
+   "surface": "ui"
+  },
+  {
+   "location": "explain.path.body",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Finish the courses of a level in order, then pass its quiz to unlock the next level.",
+   "gloss_fr": "Termine les cours d'un niveau dans l'ordre (structure « of a level »)",
+   "problem": "« the courses of a level » calque le génitif français (idem path.locked.quiz « every course of the level ») ; l'anglais dit « a level's courses » / « in the level ».",
+   "fix": "Finish a level's courses in order, then pass its quiz to unlock the next level.",
+   "surface": "ui"
+  },
+  {
+   "location": "path.quiz.rule.retries",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Unlimited attempts, with a new draw each time",
+   "gloss_fr": "Essais illimités, avec un nouveau tirage (au sort) à chaque fois",
+   "problem": "« a new draw » calque « tirage » ; un natif ne comprend pas immédiatement qu'il s'agit d'un nouveau jeu de questions.",
+   "fix": "Unlimited attempts, with a fresh set of questions each time",
+   "surface": "ui"
+  },
+  {
+   "location": "feedback.error.email",
+   "severity": "mineur",
+   "category": "registre",
+   "current": "This email address looks wrong. Correct it, or leave the field empty.",
+   "gloss_fr": "Cette adresse e-mail a l'air fausse. Corrige-la, ou laisse le champ vide.",
+   "problem": "« looks wrong » et « leave the field empty » sont raides ; l'anglais d'app dit « doesn't look right » / « leave it blank ».",
+   "fix": "This email address doesn't look right. Fix it, or leave it blank.",
+   "surface": "ui"
+  },
+  {
+   "location": "globalRank.savant",
+   "severity": "mineur",
+   "category": "autre",
+   "current": "Savant",
+   "gloss_fr": "Savant (en anglais : personne atteinte du « savant syndrome »)",
+   "problem": "En anglais « savant » évoque surtout l'« idiot savant » ; nom de rang maladroit entre « Scholar » et « Master ».",
+   "fix": "Sage",
+   "surface": "ui"
+  },
+  {
+   "location": "globalRank.curieux",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "Curious",
+   "gloss_fr": "Curieux (adjectif seul employé comme nom de rang)",
+   "problem": "Adjectif seul comme titre de rang, alors que les autres rangs sont des noms (Scholar, Master, Legend).",
+   "fix": "Curious Mind",
+   "surface": "ui"
+  },
+  {
+   "location": "home.allCaughtUp",
+   "severity": "mineur",
+   "category": "autre",
+   "current": "Every course done — well played!",
+   "gloss_fr": "Tous les cours faits — bien joué (expression britannique / jeu vidéo) !",
+   "problem": "« well played » est britannique et connoté jeu ; le reste de l'app dit « Well done » / « Nice work ».",
+   "fix": "Every course done — nice work!",
+   "surface": "ui"
+  },
+  {
+   "location": "library.search.placeholder",
+   "severity": "mineur",
+   "category": "typographie",
+   "current": "Search for a course...",
+   "gloss_fr": "Rechercher un cours... (trois points au lieu du caractère …)",
+   "problem": "Trois points tapés alors que le reste de l'app utilise le caractère « … » (idem quiz.feedback.wrong « Not quite... »).",
+   "fix": "Search for a course…",
+   "surface": "ui"
+  },
+  {
+   "location": "notification.dailyReady.title",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Your course of the day is ready",
+   "gloss_fr": "Ton cours du jour est prêt (structure « of the day »)",
+   "problem": "« course of the day » calque « cours du jour » ; partout ailleurs l'app dit « daily course ».",
+   "fix": "Your daily course is ready",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.quiz.chart.day",
+   "severity": "mineur",
+   "category": "autre",
+   "current": "D%d",
+   "gloss_fr": "J%d → D%d (abréviation non standard en anglais)",
+   "problem": "« D3 » n'est pas une abréviation reconnue pour « Day 3 » en anglais grand public.",
+   "fix": "Day %d",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.quiz.subtitle",
+   "severity": "mineur",
+   "category": "registre",
+   "current": "Unlock Sophia PRO for the interactive quizzes and become truly knowledgeable.",
+   "gloss_fr": "Débloque Sophia PRO pour les quiz interactifs et deviens vraiment savant.",
+   "problem": "« become truly knowledgeable » est guindé et abstrait pour un paywall.",
+   "fix": "Unlock Sophia PRO for interactive quizzes and actually remember what you learn.",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.review4.quote",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "My friends ask where I get all these anecdotes.",
+   "gloss_fr": "Mes amis me demandent d'où je sors toutes ces anecdotes (faux ami : « anecdote » = petite histoire personnelle).",
+   "problem": "« anecdotes » en anglais désigne de petites histoires vécues, pas des faits intéressants ; le profil « impress » dit bien « stories ».",
+   "fix": "My friends ask where I get all these fun facts.",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.review5.quote",
+   "severity": "mineur",
+   "category": "terminologie",
+   "current": "The personalized onboarding convinced me in the first minute.",
+   "gloss_fr": "L'onboarding (jargon produit) personnalisé m'a convaincu dès la première minute.",
+   "problem": "« onboarding » est du jargon produit dans la bouche d'un utilisateur ; « convinced me » est raide.",
+   "fix": "The personalized setup won me over in the first minute.",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.training.how.step2",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Its questions join your Practice",
+   "gloss_fr": "Ses questions rejoignent ton Entraînement",
+   "problem": "« join your Practice » calque « rejoignent » ; l'anglais dit « are added to » (idem training.how.step2).",
+   "fix": "Its questions are added to your Practice",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.plan.yearlySubtitle",
+   "severity": "mineur",
+   "category": "terminologie",
+   "current": "Billed annually",
+   "gloss_fr": "Facturé annuellement",
+   "problem": "Partout ailleurs « billed yearly » ; incohérence visible sur le même écran de plans.",
+   "fix": "Billed yearly",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.cancelAnytime",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Cancel anytime, free of charge.",
+   "gloss_fr": "Annule à tout moment, gratuitement (comme un service offert).",
+   "problem": "« free of charge » s'applique à un service, pas à une annulation ; l'anglais dit « at no cost » / « no fees » (idem onboarding.trial.cancelAnytime).",
+   "fix": "Cancel anytime, at no cost.",
+   "surface": "ui"
+  },
+  {
+   "location": "sync.conflict.title",
+   "severity": "mineur",
+   "category": "registre",
+   "current": "Two progress records found",
+   "gloss_fr": "Deux enregistrements de progression trouvés (ton base de données).",
+   "problem": "« progress records » est technique ; un utilisateur attend une formulation simple.",
+   "fix": "We found two versions of your progress",
+   "surface": "ui"
+  },
+  {
+   "location": "tiktokBlocker.status.unlocked.subtitle",
+   "severity": "mineur",
+   "category": "autre",
+   "current": "Left:",
+   "gloss_fr": "Reste : (étiquette seule devant un compteur)",
+   "problem": "« Left: » seul est ambigu (gauche ?) ; l'étiquette voisine dit « Time left ».",
+   "fix": "Time left:",
+   "surface": "ui"
+  },
+  {
+   "location": "training.ob.welcome.line",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "This is Practice — your review home.",
+   "gloss_fr": "Voici Entraînement — ta maison de révision.",
+   "problem": "« your review home » n'est pas idiomatique.",
+   "fix": "This is Practice — where you review what you've learned.",
+   "surface": "ui"
+  },
+  {
+   "location": "training.ob.algo.body",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "We bring back quizzes you've already done, right on time.",
+   "gloss_fr": "On te repose les quiz déjà faits, pile à l'heure (ponctualité).",
+   "problem": "« right on time » signifie « ponctuellement », pas « au bon moment ».",
+   "fix": "We bring back quizzes you've already done, at just the right moment.",
+   "surface": "ui"
+  },
+  {
+   "location": "training.emptyCta",
+   "severity": "mineur",
+   "category": "terminologie",
+   "current": "Explore a course",
+   "gloss_fr": "Explorer un cours (vs « Discover a course » ailleurs)",
+   "problem": "Le même CTA FR « Découvrir un cours » devient « Explore a course » ici et « Discover a course » dans myCourses.empty.cta.",
+   "fix": "Find a course (same in myCourses.empty.cta)",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.quiz.faq.a2",
+   "severity": "mineur",
+   "category": "terminologie",
+   "current": "Yes. Sophia Pro also unlocks Sophia Practice",
+   "gloss_fr": "Oui. Sophia Pro (vs « Sophia PRO » et « Premium » ailleurs) débloque aussi Sophia Entraînement",
+   "problem": "Le nom de l'abonnement varie entre « Sophia Pro », « Sophia PRO » (paywall.course.proPitch, paywall.blocker.subtitle.noTrial) et « Premium » (terme de marque) ; l'incohérence vient de la source mais elle est visible en anglais.",
+   "fix": "Yes. Sophia Premium also unlocks Sophia Practice (harmonise on one name across the app)",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.showcase.collections.title",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Follow thematic⏎learning paths",
+   "gloss_fr": "Suis des parcours d'apprentissage thématiques",
+   "problem": "« thematic » est un mot de registre académique ; en anglais d'app on dit « themed ».",
+   "fix": "Follow themed⏎learning paths",
+   "surface": "ui"
+  },
+  {
+   "location": "settings.appearance.hint",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Automatic follows your phone’s appearance.",
+   "gloss_fr": "Automatique suit l'apparence de ton téléphone.",
+   "problem": "« follows your phone's appearance » est un calque ; l'anglais dit « matches your phone's setting ».",
+   "fix": "Automatic matches your phone’s setting.",
+   "surface": "ui"
+  },
+  {
+   "location": "profile.progress.bySubject",
+   "severity": "mineur",
+   "category": "terminologie",
+   "current": "PROGRESS BY TOPIC",
+   "gloss_fr": "PROGRESSION PAR THÈME (alors que « subject » est utilisé partout)",
+   "problem": "« topic » ici alors que le reste du profil et du paywall parle de « subjects » (profile.mastery.details, paywall.feature.allSubjects).",
+   "fix": "PROGRESS BY SUBJECT",
+   "surface": "ui"
+  },
+  {
+   "location": "quiz.slider.validate",
+   "severity": "mineur",
+   "category": "terminologie",
+   "current": "Confirm",
+   "gloss_fr": "Valider → Confirmer (vs « Check » pour le même bouton ailleurs)",
+   "problem": "Le bouton « Valider » est « Check » dans quiz.validate mais « Confirm » ici et « Confirm the order » dans quiz.chronological.validate.",
+   "fix": "Check",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.teaserSubtitle",
+   "severity": "mineur",
+   "category": "terminologie",
+   "current": "Hundreds of premium courses to unlock",
+   "gloss_fr": "Des centaines de cours premium (minuscule sur le nom de marque)",
+   "problem": "« premium » en minuscule alors que « Premium » est un terme de marque capitalisé partout ailleurs.",
+   "fix": "Hundreds of Premium courses to unlock",
+   "surface": "ui"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/s2.b0.text",
+   "severity": "mineur",
+   "category": "typographie",
+   "current": "and founded [[The Ummah]], the community of believers",
+   "gloss_fr": "et fonda « La Oumma » (avec L majuscule au milieu de la phrase)",
+   "problem": "Le libellé du glossaire garde un article avec majuscule au milieu de la phrase (« founded The Ummah »), ce qui ressemble à un titre de fiche collé dans la prose.",
+   "fix": "and founded the [[Ummah]], the community of believers",
+   "surface": "courses"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/s1.b2.text",
+   "severity": "mineur",
+   "category": "typographie",
+   "current": "endless wars: [[The Byzantine and Sassanid Empires]], that is, the Eastern Roman Empire and the Persian empire.",
+   "gloss_fr": "des guerres sans fin : « Les Empires byzantin et sassanide », c'est-à-dire l'Empire romain d'Orient et l'empire perse.",
+   "problem": "Article « The » majuscule en milieu de phrase hérité du libellé de glossaire, et capitalisation incohérente « Empire » / « empire » dans la même phrase.",
+   "fix": "endless wars: the [[Byzantine and Sassanid Empires]], that is, the Eastern Roman Empire and the Persian Empire.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/s1.b2.text",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "It was in that empty space that **Muhammad**, born around **570**, said he began receiving revelations",
+   "gloss_fr": "C'est dans cet espace vide (physique) que Muhammad…",
+   "problem": "« vide » au sens de vide de pouvoir se rend par « vacuum » ; « empty space » évoque un lieu physiquement vide.",
+   "fix": "It was in that vacuum that **Muhammad**, born around **570**, said he began receiving revelations",
+   "surface": "courses"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/s1.b0.text",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "At the heart of the cult stood a cube-shaped sanctuary",
+   "gloss_fr": "Au cœur de la secte se dressait un sanctuaire cubique",
+   "problem": "« cult » est un faux ami de « culte » : en anglais il connote une secte ; le sens religieux neutre est « worship ».",
+   "fix": "At the heart of that worship stood a cube-shaped sanctuary",
+   "surface": "courses"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/s1.b0.text",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "The [[Bedouins]], nomads of the desert, shared the land",
+   "gloss_fr": "Les Bédouins, nomades du désert, partageaient la terre",
+   "problem": "« nomads of the desert » suit l'ordre français ; l'anglais dit « desert nomads ».",
+   "fix": "The [[Bedouins]], desert nomads, shared the land",
+   "surface": "courses"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/s4.b1.text",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Struck with wonder by Alexandria during the conquest of Egypt",
+   "gloss_fr": "Frappés d'émerveillement par Alexandrie",
+   "problem": "Tournure lourde et peu idiomatique pour « émerveillés » ; un natif dirait « awed » ou « dazzled ».",
+   "fix": "Awed by Alexandria during the conquest of Egypt",
+   "surface": "courses"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/s3.b3.e2.detail",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "The community holds out and imposes its authority.",
+   "gloss_fr": "La communauté résiste et impose son autorité.",
+   "problem": "« impose its authority » est un calque compréhensible mais raide ; l'anglais naturel est « asserts its authority ».",
+   "fix": "The community holds out and asserts its authority.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/s4.b2.text",
+   "severity": "mineur",
+   "category": "typographie",
+   "current": "Little by little, antiquity came to an end.",
+   "gloss_fr": "Peu à peu, l'antiquité (sens commun) prit fin.",
+   "problem": "Comme nom de période historique, l'anglais capitalise « Antiquity » (le sous-titre de matière du cours le fait d'ailleurs).",
+   "fix": "Little by little, Antiquity came to an end.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire/s0.b0.text",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Baudelaire did something else.",
+   "gloss_fr": "Baudelaire fit autre chose.",
+   "problem": "« fait autrement » = procède différemment ; « did something else » laisse entendre qu'il s'est consacré à une autre activité.",
+   "fix": "Baudelaire took a different path.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire/s0.b1.text",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "A court condemned it for “outrage to public morals.”",
+   "gloss_fr": "Un tribunal le condamna pour « outrage à la morale publique » (mot à mot).",
+   "problem": "« outrage to public morals » est un décalque du chef d'accusation français ; la formule anglaise usuelle est « offense against public morals ».",
+   "fix": "A court convicted it of “an offense against public morals.”",
+   "surface": "courses"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire/s1.b4.text",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "He called Poe a “soul brother,”",
+   "gloss_fr": "Il appelait Poe un « frère d'âme » (expression qui, en anglais US, renvoie à l'argot afro-américain « soul brother »).",
+   "problem": "« soul brother » a en anglais américain une connotation argotique précise sans rapport ; l'idiome attendu est « kindred spirit ».",
+   "fix": "He saw Poe as a “kindred spirit,”",
+   "surface": "courses"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire/s2.b0.text",
+   "severity": "mineur",
+   "category": "registre",
+   "current": "The book is not just a pile of poems.",
+   "gloss_fr": "Le livre n'est pas qu'un tas de poèmes.",
+   "problem": "« pile » (tas) est péjoratif et trahit « simple recueil » ; l'idée est « une simple collection ».",
+   "fix": "The book is more than a loose collection of poems.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire/s2.b0.text",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "The **ideal** is the thirst for height and pure beauty.",
+   "gloss_fr": "L'idéal est la soif de hauteur (altitude) et de beauté pure.",
+   "problem": "« thirst for height » rend « soif d'élévation » de façon physique et étrange.",
+   "fix": "The **ideal** is the longing to rise above it all, toward pure beauty.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire/s3.b2.text",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "This poetics is the road that leads to",
+   "gloss_fr": "Cette poétique (pluriel grammatical) est la route qui mène à",
+   "problem": "« This poetics » sonne faux : « poetics » est un terme de théorie littéraire, rarement précédé de « this » comme nom comptable.",
+   "fix": "This poetic vision opened the road to",
+   "surface": "courses"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire/s4.b3.text",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "In Hugo, the poet still guides the nation. In Baudelaire, he becomes an outsider",
+   "gloss_fr": "Dans Hugo, le poète guide encore la nation. Dans Baudelaire, il devient…",
+   "problem": "« In Hugo » calque « Chez Hugo » ; l'anglais dit « For Hugo » ou « In Hugo's work ».",
+   "fix": "For Hugo, the poet still guides the nation. For Baudelaire, he becomes an outsider",
+   "surface": "courses"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire/s4.b2.e1.title",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Rehabilitation",
+   "gloss_fr": "Réhabilitation (terme juridique français, peu usité en anglais pour un livre)",
+   "problem": "En anglais « rehabilitation » évoque la rééducation ou la convalescence ; pour la levée d'une condamnation d'un livre, on dit « Ban lifted » ou « Vindication ».",
+   "fix": "Ban lifted",
+   "surface": "courses"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire/s4.b1.text",
+   "severity": "mineur",
+   "category": "nom_propre",
+   "current": "Baudelaire developed it in **[[Le Spleen de Paris]]**, a posthumous collection",
+   "gloss_fr": "Baudelaire le développera dans « Le Spleen de Paris » (titre non traduit)",
+   "problem": "L'œuvre a un titre anglais établi, « Paris Spleen » ; le cours donne la traduction pour Les Fleurs du Mal mais pas ici.",
+   "fix": "Baudelaire developed it in **[[Le Spleen de Paris]]** (*Paris Spleen*), a posthumous collection",
+   "surface": "courses"
+  },
+  {
+   "location": "course_122_la_naissance_de_l_impressionnisme/s1.b0.text",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "To exist at all, a painter had to show at the Salon.",
+   "gloss_fr": "Pour exister tout court, un peintre devait exposer au Salon.",
+   "problem": "« Pour exister » au sens de « compter, percer » ne se rend pas littéralement ; « to exist at all » sonne existentiel.",
+   "fix": "To get anywhere, a painter had to show at the Salon.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_122_la_naissance_de_l_impressionnisme/s1.b3.text",
+   "severity": "mineur",
+   "category": "autre",
+   "current": "helmets that looked like those of the Paris fire brigade",
+   "gloss_fr": "des casques qui ressemblaient à ceux de la brigade de pompiers de Paris (lexique britannique)",
+   "problem": "L'édition est en anglais US ; « fire brigade » est britannique, l'américain dit « fire department » ou « firefighters ».",
+   "fix": "helmets that looked like those of Paris firefighters",
+   "surface": "courses"
+  },
+  {
+   "location": "course_122_la_naissance_de_l_impressionnisme/s1.b4.text",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "He worked in blunt contrasts.",
+   "gloss_fr": "Il travaillait en contrastes émoussés / brusques.",
+   "problem": "« blunt » ne se dit pas de contrastes picturaux ; « contrastes francs » = « bold » ou « stark contrasts ».",
+   "fix": "He worked in bold, stark contrasts.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_122_la_naissance_de_l_impressionnisme/s2.b0.text",
+   "severity": "mineur",
+   "category": "mt_artefact",
+   "current": "Earlier, a painter ground his pigments in the studio. With [[paint tubes and plein air]] work, he could finally set up outdoors",
+   "gloss_fr": "Plus tôt, un peintre broyait ses pigments à l'atelier. Avec « tubes de peinture et plein air » (le) travail, il pouvait…",
+   "problem": "« Earlier » en tête de phrase est maladroit pour « Avant » (« Until then »), et le libellé de glossaire collé à « work » donne une suite peu lisible.",
+   "fix": "Until then, a painter ground his pigments in the studio. Thanks to [[paint tubes and plein air]] painting, he could finally set up outdoors",
+   "surface": "courses"
+  },
+  {
+   "location": "course_122_la_naissance_de_l_impressionnisme/s3.b0.text",
+   "severity": "mineur",
+   "category": "autre",
+   "current": "whose talent won through despite the prejudices of the day",
+   "gloss_fr": "dont le talent « a percé à travers » malgré les préjugés (tournure britannique rare)",
+   "problem": "« won through » est britannique et peu courant ; en US on dit « prevailed » ou « shone through ».",
+   "fix": "whose talent shone through despite the prejudices of the day",
+   "surface": "courses"
+  },
+  {
+   "location": "course_122_la_naissance_de_l_impressionnisme/s3.b2.text",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "Leroy called them “Impressionists” to say they were only sketches.",
+   "gloss_fr": "Leroy les appela « impressionnistes » pour dire qu'ils (les peintres) n'étaient que des ébauches.",
+   "problem": "Le pronom « they » renvoie aux peintres, alors que ce sont leurs toiles qui sont des ébauches : logique de phrase brisée.",
+   "fix": "Leroy called them “Impressionists” to say their paintings were nothing more than sketches.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_122_la_naissance_de_l_impressionnisme/s4.b2.text",
+   "severity": "mineur",
+   "category": "typographie",
+   "current": "these once mocked canvases",
+   "gloss_fr": "ces toiles autrefois moquées (adjectif composé sans trait d'union)",
+   "problem": "Adjectif composé antéposé : l'anglais exige le trait d'union « once-mocked ».",
+   "fix": "these once-mocked canvases",
+   "surface": "courses"
+  },
+  {
+   "location": "course_166_narcisse_et_echo/subtitle",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "The love that can never meet",
+   "gloss_fr": "L'amour qui ne peut jamais se rencontrer",
+   "problem": "Un amour ne « rencontre » rien en anglais ; la formule sonne traduite alors qu'il s'agit de deux amours qui ne se rejoignent pas.",
+   "fix": "Two loves that can never meet",
+   "surface": "courses"
+  },
+  {
+   "location": "course_166_narcisse_et_echo/s0.b0.text",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "tells the crossed fates of **Narcissus** and **Echo**",
+   "gloss_fr": "raconte les destins croisés (littéralement « barrés ») de Narcisse et d'Écho",
+   "problem": "« crossed fates » calque « destins croisés » ; l'anglais dit « intertwined fates » (« crossed » évoque plutôt « star-crossed » ou « contrariés »).",
+   "fix": "tells the intertwined fates of **Narcissus** and **Echo**",
+   "surface": "courses"
+  },
+  {
+   "location": "course_166_narcisse_et_echo/s1.b0.text",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Before she became a simple sound effect",
+   "gloss_fr": "Avant de devenir un simple effet sonore (bruitage)",
+   "problem": "« sound effect » désigne un bruitage de cinéma ; « phénomène sonore » se rend mieux par « a mere trick of sound ».",
+   "fix": "Before she became a mere trick of sound",
+   "surface": "courses"
+  },
+  {
+   "location": "course_166_narcisse_et_echo/s3.b0.text",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "The cruelty of Narcissus wore the gods out.",
+   "gloss_fr": "La cruauté de Narcisse épuisa physiquement les dieux.",
+   "problem": "« wore out » = épuiser physiquement ; « lasse les dieux » = les dieux s'en lassent.",
+   "fix": "The gods grew tired of Narcissus's cruelty.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_166_narcisse_et_echo/s3.b3.text",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "You cannot join with your own reflection.",
+   "gloss_fr": "On ne peut pas se joindre à son propre reflet.",
+   "problem": "« join with » est raide et ambigu pour « s'unir à soi-même ».",
+   "fix": "No one can embrace his own reflection.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_166_narcisse_et_echo/s4.b0.text",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "a flower with a yellow heart and white petals",
+   "gloss_fr": "une fleur au cœur jaune (organe) et aux pétales blancs",
+   "problem": "Pour une fleur, l'anglais dit « center », pas « heart » (calque de « cœur »).",
+   "fix": "a flower with a yellow center and white petals",
+   "surface": "courses"
+  },
+  {
+   "location": "course_166_narcisse_et_echo/s4.b1.text",
+   "severity": "mineur",
+   "category": "typographie",
+   "current": "published “On Narcissism: An Introduction”. In it he described",
+   "gloss_fr": "publia « Pour introduire le narcissisme ». (point placé hors des guillemets)",
+   "problem": "Le reste du cours applique la ponctuation US (point à l'intérieur des guillemets) ; ici le point est à l'extérieur, incohérent.",
+   "fix": "published “On Narcissism: An Introduction.” In it he described",
+   "surface": "courses"
+  },
+  {
+   "location": "course_207_l_otan_a_quoi_ca_sert_encore/s1.b0.text",
+   "severity": "mineur",
+   "category": "typographie",
+   "current": "Its first secretary general, Lord Ismay",
+   "gloss_fr": "Son premier secrétaire général (sans majuscules)",
+   "problem": "L'usage anglais (et celui de l'OTAN) capitalise le titre devant un nom : « Secretary General ».",
+   "fix": "Its first Secretary General, Lord Ismay",
+   "surface": "courses"
+  },
+  {
+   "location": "course_207_l_otan_a_quoi_ca_sert_encore/s1.b0.text",
+   "severity": "mineur",
+   "category": "typographie",
+   "current": "with the Red Army occupying central Europe",
+   "gloss_fr": "alors que l'Armée rouge occupait l'Europe centrale (sans majuscule à Central)",
+   "problem": "La région géopolitique s'écrit « Central Europe » avec majuscule en anglais.",
+   "fix": "with the Red Army occupying Central Europe",
+   "surface": "courses"
+  },
+  {
+   "location": "course_207_l_otan_a_quoi_ca_sert_encore/s2.b1.text",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "called it a provocation and a broken promise from the end of the Cold War",
+   "gloss_fr": "y vit une provocation et une promesse rompue « venant de » la fin de la Guerre froide",
+   "problem": "« a broken promise from the end of the Cold War » est syntaxiquement bancal ; il s'agit de promesses faites à la fin de la Guerre froide.",
+   "fix": "called it a provocation and a betrayal of promises made at the end of the Cold War",
+   "surface": "courses"
+  },
+  {
+   "location": "course_207_l_otan_a_quoi_ca_sert_encore/s4.b0.text",
+   "severity": "mineur",
+   "category": "terminologie",
+   "current": "Computer attacks on critical infrastructure now count as acts of aggression",
+   "gloss_fr": "Les attaques d'ordinateurs contre les infrastructures critiques…",
+   "problem": "« Computer attacks » est daté et calqué sur « attaques informatiques » ; le terme courant est « cyberattacks ».",
+   "fix": "Cyberattacks on critical infrastructure now count as acts of aggression",
+   "surface": "courses"
+  },
+  {
+   "location": "course_207_l_otan_a_quoi_ca_sert_encore/s4.b2.text",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "while taking in new fields of conflict such as cyberspace",
+   "gloss_fr": "tout en « accueillant/absorbant » de nouveaux domaines de conflit",
+   "problem": "« taking in » (héberger, absorber) n'est pas le bon verbe pour « intégrer » ; « taking on » ou « adding ».",
+   "fix": "while taking on new domains of conflict such as cyberspace",
+   "surface": "courses"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/s3.b0.text",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "That gesture pushed the tribes to join him.",
+   "gloss_fr": "Ce geste poussa les tribus à le rejoindre.",
+   "problem": "« pushed X to » calque « pousser à » ; l'anglais préfère « prompted » ou « led » pour une incitation positive.",
+   "fix": "That gesture prompted the tribes to join him.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire_q9 / explanation",
+   "severity": "mineur",
+   "category": "nom_propre",
+   "current": "Baudelaire translated Edgar Poe, whom he considered a “soul brother” who shared his taste for the macabre.",
+   "gloss_fr": "« Baudelaire a traduit Edgar Poe, qu'il considérait comme un “frère de couleur”… »",
+   "problem": "« Edgar Poe » est l'usage français ; en anglais on dit « Edgar Allan Poe » (ou « Poe »), et « soul brother » est à corriger comme dans la question.",
+   "fix": "Baudelaire translated Edgar Allan Poe, whom he saw as a kindred spirit who shared his taste for the macabre.",
+   "surface": "content"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622_q1 / explanation",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "The Hijra is Muhammad leaving Mecca, where his life was under threat, for the oasis of Medina. From then on, that year is year 1 of the Muslim calendar.",
+   "gloss_fr": "« L'Hégire est Muhammad quittant La Mecque… À partir de là, cette année est l'an 1 du calendrier musulman. »",
+   "problem": "Mélange présent/passé et « From then on, that year is » est illogique en anglais ; une date « devient » l'an 1.",
+   "fix": "The Hijra was Muhammad's departure from Mecca, where his life was under threat, for the oasis of Medina. That year became year 1 of the Muslim calendar.",
+   "surface": "content"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622_q5 / items",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "The Hijra: departure to Medina",
+   "gloss_fr": "« départ vers Médine » avec la mauvaise préposition",
+   "problem": "En anglais on part « for » une destination (« departure for Medina »), pas « to ».",
+   "fix": "The Hijra: departure for Medina",
+   "surface": "content"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622_q7 / options + explanation",
+   "severity": "mineur",
+   "category": "terminologie",
+   "current": "The Byzantine and Sassanid empires / …the Sasanian Persians",
+   "gloss_fr": "Deux orthographes du même empire dans la même question (« Sassanide » / « Sasanien »)",
+   "problem": "Sassanid (options, glossaire) et Sasanian (explications q2 et q7) alternent ; il faut une seule forme dans tout le cours.",
+   "fix": "Use “Sassanid” everywhere (to match the glossary): “Endless wars between Byzantium (the Eastern Roman Empire) and the Sassanid Persians left a geopolitical vacuum…”",
+   "surface": "content"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622_q7 / options",
+   "severity": "mineur",
+   "category": "typographie",
+   "current": "The Byzantine and Sassanid empires / The Roman and Chinese empires / The Ottoman and Mongol Empires / The Persian and Indian empires",
+   "gloss_fr": "« empires » en minuscule dans trois options, « Empires » en majuscule dans la quatrième",
+   "problem": "La casse de « empires » varie d'une option à l'autre, ce qui trahit visuellement la bonne réponse ou la mauvaise.",
+   "fix": "The Ottoman and Mongol empires",
+   "surface": "content"
+  },
+  {
+   "location": "glossary course_1 / razzias",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "razzias [concept]: Rapid attacks led by tribes against caravans or enemy camps to seize livestock or goods.",
+   "gloss_fr": "« Attaques rapides dirigées (au sens de commandées) par des tribus… »",
+   "problem": "« mener une attaque » se dit « carry out », pas « lead » ; et « razzia » est rare en anglais, « raids » est le mot courant.",
+   "fix": "razzias (raids) [concept]: Quick raids carried out by tribes on caravans or enemy camps to seize livestock or goods.",
+   "surface": "content"
+  },
+  {
+   "location": "glossary course_1 / Dhimma",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Legal status of 'protected' granted to monotheistic non-Muslims living under Islamic authority.",
+   "gloss_fr": "« Statut juridique de 'protégé' » rendu avec le mot entre guillemets simples comme un nom",
+   "problem": "« status of 'protected' » n'est pas une tournure anglaise ; l'adjectif doit qualifier « status », et les guillemets simples droits sont hors convention US.",
+   "fix": "The legal “protected” status granted to monotheistic non-Muslims living under Islamic rule.",
+   "surface": "content"
+  },
+  {
+   "location": "glossary course_1 / Jihad",
+   "severity": "mineur",
+   "category": "typographie",
+   "current": "Arabic term literally meaning \"effort\". Refers to the inner effort for self-improvement…",
+   "gloss_fr": "Guillemets droits \"…\" alors que les quiz utilisent des guillemets typographiques “…”",
+   "problem": "Mélange de guillemets droits (glossaire, quiz hoquet q2) et typographiques (quiz Baudelaire) dans le même contenu.",
+   "fix": "Arabic term literally meaning “effort.” It refers both to the inner effort to better oneself and to the armed defense of the community.",
+   "surface": "content"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire_q2 / explanation",
+   "severity": "mineur",
+   "category": "autre",
+   "current": "…a scandal that was not officially lifted until 1949.",
+   "gloss_fr": "« un scandale qui ne fut officiellement levé qu'en 1949 »",
+   "problem": "On ne « lève » pas un scandale en anglais ; c'est la condamnation (conviction) qui est annulée.",
+   "fix": "The collection was condemned for “offending public morals,” a conviction that was not officially overturned until 1949.",
+   "surface": "content"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire_q4 / options",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "Total freedom of the artist / The inevitable death",
+   "gloss_fr": "« La mort inévitable » avec article défini calqué, « Liberté totale de l'artiste » sans article",
+   "problem": "Les noms abstraits ne prennent pas l'article en anglais (« The inevitable death ») et la possession se dit plus naturellement « the artist's total freedom ».",
+   "fix": "The artist's total freedom / Inevitable death",
+   "surface": "content"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire_q8 / explanation",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "This poetics of correspondences founded Symbolism, later taken up by Verlaine and Mallarmé.",
+   "gloss_fr": "« Cette poétique des correspondances fonda le symbolisme, repris ensuite par… »",
+   "problem": "« This poetics … founded » est raide ; en anglais une théorie « lays the foundations for » un mouvement.",
+   "fix": "This poetics of correspondences laid the foundations of Symbolism, later carried on by Verlaine and Mallarmé.",
+   "surface": "content"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire_q10 / explanation + options",
+   "severity": "mineur",
+   "category": "typographie",
+   "current": "…this formula: “You gave me your mud and I made gold from it”. / “Art for art’s sake”",
+   "gloss_fr": "Point placé hors des guillemets fermants ; apostrophe typographique ’ ici alors que tout le reste utilise l'apostrophe droite '",
+   "problem": "En anglais US le point va à l'intérieur des guillemets, et l'apostrophe courbe isolée (« art’s ») crée une incohérence avec « Muhammad's », « artist's ».",
+   "fix": "Baudelaire sums up his project in one line: “You gave me your mud and I turned it into gold.” / “Art for art's sake”",
+   "surface": "content"
+  },
+  {
+   "location": "course_242_pourquoi_a_t_on_le_hoquet_q2 / question + explanation",
+   "severity": "mineur",
+   "category": "typographie",
+   "current": "Where does the \"hic\" sound come from? … that snap is what produces the \"hic.\"",
+   "gloss_fr": "Guillemets droits dans ce cours, typographiques dans le cours Baudelaire",
+   "problem": "Incohérence des guillemets d'un cours à l'autre.",
+   "fix": "Where does the “hic” sound come from? … that snap is what produces the “hic.”",
+   "surface": "content"
+  },
+  {
+   "location": "course_242_pourquoi_a_t_on_le_hoquet_q4 / explanation",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "…the signal travels to the spinal cord or brainstem, which answers at once.",
+   "gloss_fr": "« …qui répond aussitôt » avec « answer » (répondre à une question)",
+   "problem": "Une structure nerveuse « responds », elle n'« answers » pas ; « at once » est un peu daté.",
+   "fix": "The reflex arc bypasses conscious decision: the signal goes to the spinal cord or brainstem, which responds instantly.",
+   "surface": "content"
+  },
+  {
+   "location": "course_242_pourquoi_a_t_on_le_hoquet_q6 / question + explanation",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "How many years did the longest known attack of hiccups last…? / …from 1922 to 1990, 68 years.",
+   "gloss_fr": "« la plus longue attaque de hoquet » ; « de 1922 à 1990, 68 ans » accolé sans lien",
+   "problem": "On dit « bout of hiccups », pas « attack » ; et « , 68 years » en apposition sèche est un calque de « soit 68 ans ».",
+   "fix": "How many years did the longest known bout of hiccups last, according to Guinness World Records? / Charles Osborne, an American farmer, hiccupped nonstop from 1922 to 1990 — 68 years.",
+   "surface": "content"
+  },
+  {
+   "location": "course_242_pourquoi_a_t_on_le_hoquet_q7 / explanation",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "They rest on anecdotes, even though all of them aim to disrupt the reflex circuit.",
+   "gloss_fr": "« Ils reposent sur des anecdotes… »",
+   "problem": "« rest on anecdotes » calque « reposer sur » ; l'anglais dit « are based on anecdotal evidence ».",
+   "fix": "No home remedy has been validated by a serious study. They're based on anecdotal evidence, even if they all aim to disrupt the reflex circuit.",
+   "surface": "content"
+  },
+  {
+   "location": "course_242_pourquoi_a_t_on_le_hoquet_q8 / explanation",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "These rare forms often signal a disease.",
+   "gloss_fr": "« …signalent souvent une maladie » avec l'article indéfini calqué",
+   "problem": "« signal a disease » est raide ; l'anglais médical courant dit « an underlying condition/illness ».",
+   "fix": "These rare forms are often a sign of an underlying illness.",
+   "surface": "content"
+  },
+  {
+   "location": "glossary course_207 / Cyberspace (+ alias cyberspace)",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Immaterial domain of digital and computer networks, now considered by NATO as a full-fledged battlefield in the same way as land, air, and sea.",
+   "gloss_fr": "« Domaine immatériel… considéré par l'OTAN comme… au même titre que… » calqué",
+   "problem": "« Immaterial » signifie surtout « sans importance » en anglais courant ; « considered … as » et « in the same way as » sont des calques.",
+   "fix": "The intangible world of digital and computer networks, which NATO now treats as a battlefield in its own right, alongside land, air and sea.",
+   "surface": "content"
+  },
+  {
+   "location": "glossary course_207 / Nuclear escalation (+ alias)",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "This is the major fear that hinders a direct NATO intervention in Ukraine.",
+   "gloss_fr": "« C'est la crainte majeure qui freine une intervention directe… »",
+   "problem": "« hinders a direct intervention » est raide ; l'anglais dit « holds back » ou « deters ».",
+   "fix": "This is the main fear holding NATO back from intervening directly in Ukraine.",
+   "surface": "content"
+  },
+  {
+   "location": "glossary course_207 / NATO's eastward expansion",
+   "severity": "mineur",
+   "category": "typographie",
+   "current": "Russia considers this enlargement an existential threat - an argument used to justify…",
+   "gloss_fr": "Tiret simple « - » utilisé comme tiret long ; « expansion » (titre) / « enlargement » (définition) / « extension » (entrée Poutine)",
+   "problem": "Un trait d'union entouré d'espaces n'est pas un tiret en anglais (il faut « — » ou « – »), et trois termes différents désignent le même phénomène.",
+   "fix": "Since 1991, NATO has taken in 14 new members, including former Soviet republics. Russia sees this expansion as an existential threat — the argument it used to justify invading Ukraine in 2022.",
+   "surface": "content"
+  },
+  {
+   "location": "glossary course_207 / North Atlantic Treaty",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Also called the Washington Treaty, it is the founding act signed on April 4, 1949…",
+   "gloss_fr": "« l'acte fondateur » rendu par « founding act »",
+   "problem": "« Founding act » n'est pas idiomatique pour un traité ; on dit « founding treaty/document ».",
+   "fix": "Also known as the Washington Treaty, it is NATO's founding document, signed on April 4, 1949, which sets out the alliance's goals and the principle of solidarity among its members.",
+   "surface": "content"
+  },
+  {
+   "location": "glossary course_207 / Warsaw Pact",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "It disappeared in 1991.",
+   "gloss_fr": "« Il a disparu en 1991 » mot à mot",
+   "problem": "Une alliance « is dissolved », elle ne « disappears » pas ; tournure visiblement traduite.",
+   "fix": "It was dissolved in 1991.",
+   "surface": "content"
+  },
+  {
+   "location": "glossary course_122 / Academy of Fine Arts (+ official Paris Salon)",
+   "severity": "mineur",
+   "category": "nom_propre",
+   "current": "Academy of Fine Arts [lieuInstitution]: State body that ran art education and the Salon in Paris…",
+   "gloss_fr": "« Académie des beaux-arts » traduit littéralement, alors que l'usage anglais garde le nom français",
+   "problem": "En histoire de l'art anglophone l'institution parisienne s'appelle « Académie des Beaux-Arts » ; « Academy of Fine Arts » est générique et fait penser à une autre institution.",
+   "fix": "Académie des Beaux-Arts [lieuInstitution]: The state institution that ran art education and the Paris Salon in the 19th century, imposing strict classical standards.",
+   "surface": "content"
+  },
+  {
+   "location": "glossary course_122 / (all entries) impressionism / Impressionist",
+   "severity": "mineur",
+   "category": "typographie",
+   "current": "the impressionists / impressionism / Neo-Impressionism / the Impressionist revolution / post-impressionist",
+   "gloss_fr": "Le mot « impressionnisme » tantôt en minuscule, tantôt en majuscule dans le même glossaire",
+   "problem": "En anglais US les mouvements artistiques prennent la majuscule (Impressionism, Impressionist) ; la casse doit être unifiée.",
+   "fix": "Impressionism, Impressionist(s), Neo-Impressionism, Post-Impressionist — capitalized throughout the glossary.",
+   "surface": "content"
+  },
+  {
+   "location": "collection c_fgpg15z4amcf / title",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Black Gold and the Economy of the World",
+   "gloss_fr": "« l'Économie du Monde » mot à mot",
+   "problem": "« the Economy of the World » est lourd ; l'anglais dit « the World Economy » ou « the Global Economy ».",
+   "fix": "Black Gold and the World Economy",
+   "surface": "content"
+  },
+  {
+   "location": "collection c_4kd6x78samcf / title",
+   "severity": "mineur",
+   "category": "typographie",
+   "current": "The Human Body: from Healing to Technology",
+   "gloss_fr": "Titre en casse de titre, mais « from » en minuscule après les deux-points",
+   "problem": "En anglais US le premier mot après les deux-points d'un titre prend la majuscule ; la casse est incohérente avec les autres titres (« Space: the Ultimate Frontier » idem).",
+   "fix": "The Human Body: From Healing to Technology",
+   "surface": "content"
+  },
+  {
+   "location": "collection c_m3308zqbamcf / title + description",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Space: the Ultimate Frontier — The conquest of the cosmos between astrophysics and cinematic imagination.",
+   "gloss_fr": "« l'Ultime Frontière » traduit littéralement alors que la formule consacrée est « the Final Frontier » ; « entre astrophysique et imaginaire cinématographique » mot à mot",
+   "problem": "Le clin d'œil Star Trek se dit « the Final Frontier » en anglais, et « between … and » n'exprime pas le croisement de disciplines.",
+   "fix": "Space: The Final Frontier — The conquest of the cosmos, from astrophysics to the movies.",
+   "surface": "content"
+  },
+  {
+   "location": "collection c_tl61pxu9amcf / description",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "From the foam of Greek myths to contemporary geopolitical issues of the oceans.",
+   "gloss_fr": "« …aux enjeux géopolitiques contemporains des océans » mot à mot",
+   "problem": "« geopolitical issues of the oceans » est raide ; l'anglais dit « today's geopolitical struggles over the oceans ».",
+   "fix": "From the sea foam of Greek myth to today's geopolitical struggles over the oceans.",
+   "surface": "content"
+  },
+  {
+   "location": "collection g_mpzqlws4_24n9h / description",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "A visual journey from the masterpieces of the Renaissance to the ruptures of abstract Art.",
+   "gloss_fr": "« aux ruptures de l'Art abstrait » avec majuscule sur Art",
+   "problem": "« the ruptures of abstract Art » est un calque (« ruptures » rare en ce sens) et la majuscule est injustifiée.",
+   "fix": "A visual journey from the masterpieces of the Renaissance to the radical breaks of abstract art.",
+   "surface": "content"
+  },
+  {
+   "location": "collection g_mpzqlws4_4xiac / description",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "When Literature imagines the worst of all worlds to better question our present.",
+   "gloss_fr": "« Quand la Littérature imagine le pire des mondes pour mieux questionner notre présent » mot à mot",
+   "problem": "Majuscule injustifiée sur « Literature » et « to better question our present » est un calque de « pour mieux questionner ».",
+   "fix": "When literature imagines the worst of all worlds to make us question our own.",
+   "surface": "content"
+  },
+  {
+   "location": "collection g_mpzqlws4_8liwv / title + description",
+   "severity": "mineur",
+   "category": "nom_propre",
+   "current": "The odyssey of Ulysses — Follow the journey of the hero of Ithaca through myths and founding texts.",
+   "gloss_fr": "« Ulysse » rendu par le nom latin « Ulysses » dans un contexte grec ; « textes fondateurs » → « founding texts »",
+   "problem": "Dans un contexte de mythologie grecque, l'anglais moderne préfère « Odysseus » (Ulysses est le nom latin / Joyce) ; « founding texts » doit être « foundational texts ».",
+   "fix": "The Odyssey of Odysseus — Follow the hero of Ithaca through myths and the foundational texts of Western literature.",
+   "surface": "content"
+  },
+  {
+   "location": "collection g_mpzqlws4_cuig5 / description",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Between castles, cathedrals, and great epidemics: medieval Europe.",
+   "gloss_fr": "« Entre châteaux, cathédrales et grandes épidémies » mot à mot",
+   "problem": "« Between castles, cathedrals and epidemics » ne fonctionne pas en anglais (between implique une position intermédiaire) ; il suffit d'une énumération.",
+   "fix": "Castles, cathedrals and great plagues: medieval Europe.",
+   "surface": "content"
+  },
+  {
+   "location": "collection g_mpzqlws4_hlrmk / title",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "To the edges of the Universe",
+   "gloss_fr": "« Aux confins de l'Univers » rendu par « bords » ; majuscule sur Universe",
+   "problem": "« the edges of the Universe » est plat ; l'idiome est « the far reaches / the edge of the universe », et la majuscule sur « Universe » est inutile.",
+   "fix": "To the Far Reaches of the Universe — A journey from the birth of the cosmos to the mysteries of black holes.",
+   "surface": "content"
+  },
+  {
+   "location": "collection c_enigmes_du_passe / title",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "Pyramids to Genghis Khan: riddles of the past",
+   "gloss_fr": "« Des pyramides à Gengis Khan » sans le « From » initial",
+   "problem": "« X to Y » sans « From » se lit comme un itinéraire ; l'anglais attend « From the pyramids to Genghis Khan ».",
+   "fix": "From the Pyramids to Genghis Khan: Riddles of the Past",
+   "surface": "content"
+  },
+  {
+   "location": "SUBCATEGORY LABELS / « Économie & société »",
+   "severity": "mineur",
+   "category": "terminologie",
+   "current": "Economy & society",
+   "gloss_fr": "« L'économie (d'un pays) & société » au lieu de la discipline",
+   "problem": "Pour désigner la discipline en nom de rubrique, l'anglais dit « Economics », pas « Economy ».",
+   "fix": "Economics & Society",
+   "surface": "content"
+  },
+  {
+   "location": "SUBCATEGORY LABELS / « Notre quotidien expliqué »",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Our daily life explained",
+   "gloss_fr": "« Notre vie quotidienne expliquée » mot à mot",
+   "problem": "« Our daily life » est un calque ; l'anglais dit « Everyday life explained ».",
+   "fix": "Everyday Life Explained",
+   "surface": "content"
+  },
+  {
+   "location": "SUBCATEGORY LABELS / « Grecs & Philosophes antiques »",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "Ancient Greeks & Philosophers",
+   "gloss_fr": "« Grecs antiques & Philosophes » : l'adjectif ne porte plus sur « philosophes »",
+   "problem": "La rubrique semble regrouper « les Grecs anciens » et « les philosophes » en général ; l'intention (philosophes de l'Antiquité) se perd.",
+   "fix": "Ancient Greece & Philosophy",
+   "surface": "content"
+  },
+  {
+   "location": "SUBCATEGORY LABELS / (all)",
+   "severity": "mineur",
+   "category": "typographie",
+   "current": "French & European Classics / Modern Revolutions & Conflicts / Painting & Movements / Cold War & Contemporary World vs Iconic works / Conflicts & geopolitics / Economy & society / Legends & creatures…",
+   "gloss_fr": "Certains libellés en casse de titre, d'autres en casse de phrase",
+   "problem": "Les en-têtes de section alternent casse de titre et casse de phrase, ce qui donne une impression de bricolage dans la bibliothèque.",
+   "fix": "Pick one convention (title case is standard for US section headers): Iconic Works / Conflicts & Geopolitics / Economics & Society / Legends & Creatures / Environment & the Future / Greece: The Gods / Greece: The Heroes / Other Mythologies / Cinema, Photography & Architecture…",
+   "surface": "content"
+  }
+ ]
+}

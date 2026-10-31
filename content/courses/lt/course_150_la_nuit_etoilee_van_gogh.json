@@ -1,0 +1,126 @@
+{
+  "id": "course_150_la_nuit_etoilee_van_gogh",
+  "title": "Kodėl „Žvaigždėtos nakties“ dangus sūkuriuoja?",
+  "subtitle": "1889",
+  "subject": "art",
+  "subcategory": "Œuvres iconiques",
+  "description": "**1889** m. Sen Remi de Provanso psichiatrinėje ligoninėje **Vincentas van Gogas** tapo *Žvaigždėtą naktį*. Dangus sūkuriuoja: menas nustoja kopijuoti tikrovę ir ima reikšti emociją.",
+  "hero": {
+    "image": "la_nuit_etoilee_van_gogh",
+    "ratio": "16:9",
+    "hook": "Iš ligoninės kambario Van Gogas tapo dangų, kuris nenori nurimti."
+  },
+  "sections": [
+    {
+      "id": "course_150_la_nuit_etoilee_van_gogh_intro",
+      "title": "Įžanga",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "*Žvaigždėta naktis* (**1889**) yra garsiausias **Vincento van Gogo** paveikslas; dailininko gimtinė yra [[Nyderlandai]]. Nutapytas Sen Remi de Provanso psichiatrinėje ligoninėje, jis žymi lūžį: tapoma nebe tik tai, kas matoma. Tapoma tai, kas jaučiama."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sūkuriuojantis dangus, kiparisas lyg juoda liepsna, išgalvotas kaimas: kūrinys atveria kelią ekspresyviam XX a. menui."
+        }
+      ]
+    },
+    {
+      "id": "course_150_la_nuit_etoilee_van_gogh_p1",
+      "title": "Sen Remi: kurti ligoninėje",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**1889 m. gegužę**, kai jau įvyko [[Arlio drama su Gogenu]] (krizė, kainavusi jam dalį ausies), Van Gogas pats atsiguldo į **Saint-Paul-de-Mausole** ligoninę netoli Sen Remi. Jam skiriamas kambarys tapyti. Naktinis vaizdas pirmiausia gimsta už jo kambario grotų."
+        },
+        {
+          "type": "image",
+          "asset": "van_gogh_saint_paul_asylum_saint_remy_provence",
+          "ratio": "4:3",
+          "caption": "Sen Remi ligoninė: suvaržymų ir intensyvios kūrybos vieta."
+        },
+        {
+          "type": "paragraph",
+          "text": "Drobėje susipina stebėjimas ir išmonė. Atpažįstamos Alpijų kalvos ir didelis **kiparisas**. Tačiau kaimas nėra tiksli kopija. Van Gogas perkuria peizažą, kad šis tarnautų emocijai."
+        }
+      ]
+    },
+    {
+      "id": "course_150_la_nuit_etoilee_van_gogh_p2",
+      "title": "Teptuku lipdomas dangus",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Techniškai Van Gogas naudoja **impasto**: dažai stori, beveik lipdyti. Vienuolika žvaigždžių sukasi lyg ūkai. Oranžinis mėnulis spinduliuoja. Dangus tampa tikruoju veikėju."
+        },
+        {
+          "type": "image",
+          "asset": "starry_night_cypress_tree_van_gogh_painting",
+          "ratio": "4:3",
+          "caption": "Kiparisas lyg tamsi liepsna jungia žemę su dangumi."
+        },
+        {
+          "type": "funFact",
+          "text": "Didžiosios dangaus spiralės primena dinamiką, kuria garsėja [[Didžioji banga prie Kanagavos]], japoniška estampa, kuria Van Gogas žavėjosi. Šią energiją jis paverčia kosmosu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Šis gestas skelbia naują kryptį, ir ji yra [[Menas kaip vidinė raiška]]: drobė perteikia sielos būseną, o ne orų prognozę."
+        }
+      ]
+    },
+    {
+      "id": "course_150_la_nuit_etoilee_van_gogh_p3",
+      "title": "Genijus, kurio niekas nepirko",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Per dešimt metų Van Gogas nutapo beveik **900 paveikslų**, bet miršta **1890 m. liepą** Overe prie Uazos, būdamas **37 metų**, beveik nežinomas. Jo kūrybą išgelbsti brolio žmona **Johanna van Gogh-Bonger**: parodos, pardavimai, laiškų broliui Teo išleidimas."
+        },
+        {
+          "type": "paragraph",
+          "text": "*Žvaigždėta naktis* kelis kartus pigiai pereina iš rankų į rankas, kol patenka į Niujorko **MoMA**. Niekintas paveikslas tampa ikona. [[Fovistai]], XX a. pradžios ryškių spalvų tapytojai, atpažins jame savo pirmtaką."
+        }
+      ]
+    },
+    {
+      "id": "course_150_la_nuit_etoilee_van_gogh_p4",
+      "title": "Kiparisas į begalybę",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kiparisas jungia žemę su dangumi: tai jungtis tarp žemiškojo gyvenimo ir anapusybės. Van Gogas rašė, kad žiūrint į žvaigždes jam sapnuojasi mirtis kaip kelionė. Šiuolaikiniai tyrimai net leidžia manyti, kad ryški žvaigždė šalia kipariso galėtų būti Venera, stebėta auštant."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1888",
+              "title": "Krizė Arlyje",
+              "detail": "Po nesutarimo su Gogenu seka gydymas ligoninėje."
+            },
+            {
+              "date": "1889",
+              "title": "Žvaigždėta naktis",
+              "detail": "Van Gogas tapo dangų Sen Remi."
+            },
+            {
+              "date": "1890",
+              "title": "Mirtis Overe",
+              "detail": "Dailininkas miršta būdamas 37 metų, vis dar nepripažintas."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "*Žvaigždėta naktis* paverčia kančią vaizdine kalba. Van Gogas čia nekopijuoja nakties: jis sukuria vidinį dangų ir atveria duris moderniam ekspresyviam menui."
+        }
+      ]
+    }
+  ]
+}

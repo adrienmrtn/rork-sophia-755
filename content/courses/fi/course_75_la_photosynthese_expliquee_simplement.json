@@ -1,14 +1,14 @@
 {
   "id": "course_75_la_photosynthese_expliquee_simplement",
-  "title": "Fotosynteesi selitettiin yksinkertaisesti",
-  "subtitle": "Kasvit & energia",
+  "title": "Fotosynteesi yksinkertaisesti selitettynä",
+  "subtitle": "Kasvit ja energia",
   "subject": "sciences",
   "subcategory": "Maa ja maailmankaikkeus",
-  "description": "Kasvit tekevät jotain poikkeuksellista: ne keittävät sokeria valolla, vedellä ja ilmalla. Ja he antavat meille happea lahjaksi.",
+  "description": "Kasvit tekevät jotain uskomatonta: ne kokkaavat sokeria valosta, vedestä ja ilmasta. Ja lahjaksi ne antavat meille happea.",
   "hero": {
     "image": "la_photosynthese_expliquee_simplement",
     "ratio": "16:9",
-    "hook": "Lehti on aurinkokeittiö: valoa, vettä, ilmaa... ja tässä on sokeria."
+    "hook": "Lehti on aurinkokeittiö: valoa, vettä, ilmaa… ja kas, sokeria."
   },
   "sections": [
     {
@@ -18,22 +18,22 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kuvittele miniatyyri tehdas jokaisessa lehdessä. Se vaatii kolme arkipäiväistä ainesosaa: **kevyt Auringosta**, **vettä** juurista ja **CO₂** ilmasta. Se julkaistaan **sokeria**:n kanssa kasvaakseen ja julkaisee **happea**."
+          "text": "Kuvittele pienoistehdas jokaisen lehden sisällä. Se käyttää kolmea arkista ainesosaa: **auringonvaloa**, juurista tulevaa **vettä** ja ilman **CO₂:ta**. Niistä se tekee **sokeria** kasvuaan varten ja vapauttaa **happea**."
         },
         {
           "type": "paragraph",
-          "text": "Tätä saavutusta kutsutaan nimellä **fotosynteesi**. Ilman sitä ei metsiä, ei hengittävää happea, melkein ei monimutkaista elämää maan päällä."
+          "text": "Tätä taidonnäytettä kutsutaan **fotosynteesiksi**. Ilman sitä ei olisi metsiä eikä hengitettävää happea, eikä Maassa olisi juuri lainkaan monimutkaista elämää."
         }
       ]
     },
     {
       "id": "course_75_la_photosynthese_expliquee_simplement_p1",
-      "title": "Missä arkissa se tapahtuu?",
+      "title": "Missä lehden osassa se tapahtuu",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kasvisolussa vihreissä organelleissa, **kloroplasteissa**, on [[Klorofylli]]. Tämä pigmentti vangitsee pääasiassa valon sinistä ja punaista. Vihreä palautetaan: siksi lehdet näyttävät meille vihreiltä."
+          "text": "Kasvisolussa on vihreitä soluelimiä, **kloroplasteja**, ja niissä on [[klorofylli]]. Tämä pigmentti sieppaa enimmäkseen valon sinistä ja punaista. Vihreän se sen sijaan heijastaa takaisin: siksi lehdet näyttävät meistä vihreiltä."
         },
         {
           "type": "image",
@@ -43,30 +43,30 @@
         },
         {
           "type": "paragraph",
-          "text": "Yksinkertainen yhtälö: CO₂ + vesi + valo → sokeri + happi. Kaasu pääsee sisään pienistä huokosista, [[stomata]]. Vesi nousee juurista. Sokerista tulee puuta, hedelmiä, juuria; happi menee ilmaan."
+          "text": "Yksinkertainen yhtälö: CO₂ + vesi + valo → sokeri + happi. Kaasu pääsee sisään pikkuruisista huokosista, joiden nimi on [[ilmaraot]]. Vesi nousee juurista. Sokerista tulee puuainesta, hedelmiä ja juuria; happi vapautuu ilmaan."
         },
         {
           "type": "funFact",
-          "text": "Klorofylli \"kieltäytyy\" vihreästä. Hän pitää parempana sinistä ja punaista, tehokkaampaa elektronien jännittämiseen ja energiakoneen käynnistämiseen."
+          "text": "Klorofylli ”torjuu” vihreän. Se suosii sinistä ja punaista, jotka virittävät sen elektroneja tehokkaammin ja käynnistävät energiakoneiston."
         }
       ]
     },
     {
       "id": "course_75_la_photosynthese_expliquee_simplement_p2",
-      "title": "Kaksi vaihetta: vangita, sitten askartele",
+      "title": "Kaksi vaihetta: ensin sieppaus, sitten valmistus",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ensinnäkin **valo-vaihe**. Valo hajottaa vesimolekyylejä. Happi karkaa. Energiaa varastoidaan kahteen kemialliseen \"paristoon\", **ATP** ja **NADPH**."
+          "text": "Ensin tulee **valovaihe**. Valo hajottaa vesimolekyylejä. Happi vapautuu. Energia varastoituu kahteen kemialliseen ”paristoon”: **ATP** ja **NADPH**."
         },
         {
           "type": "paragraph",
-          "text": "Seuraavaksi **valmistusvaihe**, [[Calvinin sykli]], joka on nimetty kemistin **Melvin Calvin** mukaan. Akkujen energian avulla tehdas kokoaa hiiltä CO₂:sta glukoosiksi. Suoraa auringonvaloa ei tässä vaiheessa tarvita, mutta se riippuu täysin siitä, mitä valo on tuottanut aiemmin."
+          "text": "Seuraavaksi tulee **valmistusvaihe** eli [[Calvinin sykli]], joka on nimetty kemisti **Melvin Calvinin** mukaan. Paristojen energialla kasvi kokoaa CO₂:n hiilestä glukoosia. Suoraa auringonvaloa ei tässä vaiheessa tarvita, mutta vaihe on täysin riippuvainen siitä, mitä valo on ensin tuottanut."
         },
         {
           "type": "funFact",
-          "text": "Seuratakseen hiilen polkua lehdissä Calvin käytti radioaktiivisia isotooppeja atomipommin tutkimuksesta. Nobel-palkinto vuonna **1961**."
+          "text": "Hiilen reittiä lehdessä Calvin seurasi radioaktiivisilla isotoopeilla, jotka olivat peräisin atomipommin tutkimuksesta. Nobelin palkinto vuonna **1961**."
         }
       ]
     },
@@ -77,34 +77,34 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Noin **2,4 miljardia vuotta sitten** fotosynteettiset bakteerit, **syanobakteerit**, alkoivat vapauttaa massiivisesti happea. Tämä on **Suuri hapettuminen**. Monille sen ajan järjestöille se oli myrkkyä."
+          "text": "Noin **2,4 miljardia vuotta sitten** fotosynteesiä tekevät bakteerit, **syanobakteerit**, alkoivat vapauttaa happea valtavia määriä. Tätä kutsutaan **suureksi hapettumistapahtumaksi**. Monille sen ajan eliöille happi oli myrkkyä."
         },
         {
           "type": "paragraph",
-          "text": "Sitten happi mahdollisti otsonikerroksen ja paljon tehokkaamman hengityksen. Hengittämämme ilma on pohjimmiltaan miljardeja vuosia kestäneen fotosynteesin \"jätetuote\"."
+          "text": "Sitten happi mahdollisti otsonikerroksen ja paljon tehokkaamman hengityksen. Hengittämämme ilma on karkeasti ottaen miljardien vuosien fotosynteesin ”jätettä”."
         },
         {
           "type": "funFact",
-          "text": "Tietoja **puoli** maapallon hapesta tulee valtamerten kasviplanktonista, ei vain metsistä."
+          "text": "Noin **puolet** maapallon hapesta tulee merten kasviplanktonista, ei pelkästään metsistä."
         }
       ]
     },
     {
       "id": "course_75_la_photosynthese_expliquee_simplement_p4",
-      "title": "Vaatimaton tulos, valtava rooli",
+      "title": "Vaatimaton hyötysuhde, valtava merkitys",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Lehti muuntaa vain **1 - 3 %** vastaanotetusta aurinkoenergiasta biomassaksi. Maailmanlaajuisesti tämä riittää ruokkimaan ravintoketjuja ja imemään valtavia määriä CO₂:ta."
+          "text": "Lehti muuntaa saamastaan aurinkoenergiasta biomassaksi vain **1-3 %**. Koko planeetan mittakaavassa se kuitenkin riittää ylläpitämään ravintoketjuja ja sitomaan valtavia määriä CO₂:ta."
         },
         {
           "type": "paragraph",
-          "text": "Tästä syystä kiinnostus metsiin, valtameriin… ja jopa ilmaston keinotekoiseen fotosynteesiin. Merietana, *Elysia chlorotica*, menee niin pitkälle, että se \"varastaa\" kloroplasteja levistä elääkseen vähän aurinkoenergialla."
+          "text": "Siksi metsät, meret… ja jopa keinotekoinen fotosynteesi ovat ilmastolle tärkeitä. Eräs merietana, *Elysia chlorotica*, jopa ”varastaa” leviltä kloroplasteja elääkseen osittain aurinkoenergialla."
         },
         {
           "type": "takeaway",
-          "text": "Fotosynteesi muuttaa valon, veden ja CO₂ sokeriksi ja regeneroi happea. Se on lähes kaiken elämän perusta aurinkoenergialla."
+          "text": "Fotosynteesi muuttaa valon, veden ja CO₂:n sokeriksi ja uudistaa samalla ilman happea. Se on aurinkokeittiö, jonka varassa lähes kaikki elämä on."
         }
       ]
     }

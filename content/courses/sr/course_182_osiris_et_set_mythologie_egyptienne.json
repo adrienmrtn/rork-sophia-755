@@ -4,11 +4,11 @@
   "subtitle": "Egipatska mitologija",
   "subject": "mythologie",
   "subcategory": "Druge mitologije",
-  "description": "Ubistvo, rasparčavanje, mumija i osveta: ciklus Ozirisa i Seta osnovao je egipatsko kraljevstvo i nadu u život posle smrti.",
+  "description": "Ubistvo, rasparčavanje, mumija i osveta: ciklus o Ozirisu i Setu temelj je egipatske kraljevske vlasti i nade u život posle smrti.",
   "hero": {
     "image": "osiris_et_set_mythologie_egyptienne",
     "ratio": "16:9",
-    "hook": "Brat ubije kralja, iseče njegovo telo na četrnaest delova. Sestra ga okuplja. Sin se osveti. Ceo Egipat izlazi iz ovog zločina."
+    "hook": "Brat ubija kralja i seče mu telo na četrnaest komada. Sestra ga sastavlja. Sin ga sveti. Ceo Egipat proističe iz tog zločina."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ciklus **Oziris** i **Set** je velika priča o drevnom Egiptu. Ovo nije samo porodična tragedija. To je borba između reda ([[Ma'at]], harmonija) i sterilnog haosa."
+          "text": "Ciklus o **Ozirisu** i **Setu** velika je priča starog Egipta. To nije samo porodična tragedija. To je borba između poretka ([[Ma'at]], sklad) i jalovog haosa."
         },
         {
           "type": "paragraph",
-          "text": "Kroz ubistvo, rasparčavanje i vaskrsenje Ozirisa, Egipćani razmišljaju o kraljevstvu, plodnosti Nila i životu posle smrti. Svaki živi faraon je **Horus**. Svaki mrtvi kralj postaje **Oziris**."
+          "text": "Kroz ubistvo, rasparčavanje i vaskrsenje Ozirisa Egipćani promišljaju kraljevsku vlast, plodnost Nila i život posle smrti. Svaki živi faraon je **Horus**. Svaki mrtvi kralj postaje **Oziris**."
         }
       ]
     },
@@ -33,21 +33,21 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Oziris** je civilizacijski kralj. Sa sestrom-ženom **Isis** predaje poljoprivredu i zakone. Njegov brat **Set**, bog pustinje i nasilja, mrzi ga. Na banketu Set poklanja veličanstven sanduk: ponudiće ga onome ko mu savršeno pristaje."
+          "text": "**Oziris** je kralj koji donosi civilizaciju. Sa svojom sestrom i ženom **Izidom** uči ljude zemljoradnji i zakonima. Njegov brat **Set**, bog pustinje i nasilja, mrzi ga. Na jednoj gozbi Set pokazuje raskošan kovčeg: obećava ga onome ko u njega savršeno stane."
         },
         {
           "type": "image",
           "asset": "osiris_egyptian_god_green_skin_painting",
           "ratio": "4:3",
-          "caption": "Oziris sa zelenom kožom: nije smrt, već ponovo rođena vegetacija."
+          "caption": "Oziris zelene kože: ne smrt, već vegetacija koja se ponovo rađa."
         },
         {
           "type": "paragraph",
-          "text": "Pošto je u tajnosti uzeo Ozirisove mere, Set ga tera da legne, zaključava sanduk, zapečati ga olovom i baci u Nil. Kasnije, kada Izida pronađe telo, Set ga iseče na **14 komada** i rasprši ih po dolini. Bez netaknutog tela, nema mira u zagrobnom životu."
+          "text": "Pošto je potajno uzeo Ozirisove mere, Set ga navodi da legne u kovčeg, zaključava ga, zaliva olovom i baca u Nil. Kasnije, kada Izida pronađe telo, Set ga seče na **14 komada** i rasipa ih po dolini. Bez celog tela nema mira u zagrobnom životu."
         },
         {
           "type": "funFact",
-          "text": "Oziris je često obojen zelenom bojom. Ova boja ne kaže trulež: ona kaže preporod, kao polja posle poplava Nila."
+          "text": "Oziris se često slika zelenom bojom. Ta boja ne govori o truljenju, već o preporodu, kao polja posle izlivanja Nila."
         }
       ]
     },
@@ -58,7 +58,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Isis**, veliki mađioničar, kreće u potragu za fragmentima. Uz pomoć svoje sestre Neftide i boga [[Anubis]], ona podiže svetilište na svakom mestu gde pronađe komad. Ostaje jedan problem: falus je progutala riba [[Okirhinchus]]. Isis pravi zamenu."
+          "text": "**Izida**, velika čarobnica, kreće u potragu za delovima tela. Pomažu joj sestra Neftida i bog [[Anubis]], a ona podiže svetilište na svakom mestu gde pronađe neki deo. Ostaje jedan problem: falus je progutala riba [[Oksirinh]]. Izida izrađuje novi umesto njega."
         },
         {
           "type": "image",
@@ -68,32 +68,32 @@
         },
         {
           "type": "paragraph",
-          "text": "Skupljajući delove i umotavajući ih u trake, Izida i Anubis stvaraju prvu **mumiju**. Udaranjem krila, Izida je nakratko udahnula Ozirisu život. Tada je začela **Horus**, naslednika predodređenog da uspostavi red."
+          "text": "Sastavljajući delove i umotavajući ih u zavoje, Izida i Anubis stvaraju **prvu mumiju**. Zamahom krila Izida je Ozirisu udahnula kratak život. Tada začinje **Horusa**, naslednika kome je suđeno da povrati red."
         },
         {
           "type": "funFact",
-          "text": "Prema nekim tekstovima, suze Izide tokom njene potrage bile su toliko obilne da su Egipćani u njima videli mitsko poreklo godišnje poplave Nila."
+          "text": "Prema nekim tekstovima, Izidine suze tokom potrage bile su toliko obilne da su Egipćani u njima videli mitsko poreklo godišnjeg izlivanja Nila."
         }
       ]
     },
     {
       "id": "course_182_osiris_et_set_mythologie_egyptienne_p3",
-      "title": "Horus osveti svog oca",
+      "title": "Horus sveti oca",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Uzgajan u tajnosti u močvarama [[Khemmis]], **Horus** prerasta u oblik jastreba. Kao odrasla osoba, on polaže pravo na tron pred sudom bogova, kojim predsedava [[Ra]]. Sukob sa Setom traje decenijama: dueli, trikovi, povrede. Horus gubi oko; Set gubi plodnost."
+          "text": "Odgajan u tajnosti u močvarama oko mesta [[Hemis]], **Horus** odrasta u obliku sokola. Kad odraste, polaže pravo na presto pred sudom bogova, kojim predsedava [[Ra]]. Sukob sa Setom traje decenijama: dvoboji, varke, rane. Horus gubi oko, a Set plodnost."
         },
         {
           "type": "image",
           "asset": "eye_of_horus_egyptian_symbol_protection",
           "ratio": "4:3",
-          "caption": "Horusovo oko (Oudjat): integritet ponovo stečen iz haosa."
+          "caption": "Horusovo oko (Udžat): celovitost ponovo osvojena od haosa."
         },
         {
           "type": "paragraph",
-          "text": "Oko, koje je prekomponovao [[Thoth]], postaje simbol isceljenja i zaštite. Bogovi odlučuju: Set je osuđen da služi, posebno borbom sa zmijom [[Apophis]] na solarnom čamcu. Horus je krunisan. Svaki faraon će od sada biti „živi Horus“."
+          "text": "Oko, koje je ponovo sastavio [[Tot]], postaje simbol isceljenja i zaštite. Bogovi presuđuju: Set je osuđen da služi, između ostalog tako što se bori sa zmijom [[Apofis]] na Sunčevoj barci. Horus biva krunisan. Svaki faraon će odsad biti „živi Horus“."
         }
       ]
     },
@@ -104,15 +104,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Mumificiran, Oziris više ne može da vlada na zemlji. On postaje vladar **Amenti**, carstva mrtvih. Pod njegovim pogledom odvija se **vaganje srca** opisano u [[Knjiga mrtvih]]. Srce pokojnika je postavljeno na vagu okrenutu prema peru Ma'at."
+          "text": "Mumificiran, Oziris više ne može da vlada na zemlji. Postaje vladar **Amentija**, carstva mrtvih. Pred njegovim očima odvija se **vaganje srca**, kako ga opisuje [[Knjiga mrtvih]]. Srce pokojnika stavlja se na vagu, naspram pera boginje Ma'at."
         },
         {
           "type": "paragraph",
-          "text": "Ako je srce svetlo, pokojnik je „pravog glasa“ i ulazi u Ozirisovu večnost. Ako je pun grešaka, proždire ga čudovište [[Ammit]]: definitivni zaborav. Kralj i seljak sude se po istim kriterijumima. Horus upravlja sadašnjošću; Oziris se brine za ostalo."
+          "text": "Ako je srce lako, pokojnik je „istinitog glasa“ i ulazi u Ozirisovu večnost. Ako je otežano gresima, proždire ga čudovište [[Amit]]: večni zaborav. Kralju i seljaku sudi se po istim merilima. Horus upravlja sadašnjošću, a Oziris se stara o onome što dolazi."
         },
         {
           "type": "takeaway",
-          "text": "Mit o **Oziris** i **Set** uspostavlja tri stuba Egipta: kraljevstvo (živi Horus), mumifikaciju (neoštećeno telo za zagrobni život) i nadu u pravdu posle smrti pod Ozirisovim pogledom."
+          "text": "Mit o **Ozirisu** i **Setu** postavlja tri stuba Egipta: kraljevsku vlast (živi Horus), mumifikaciju (celo telo za zagrobni život) i nadu u pravdu posle smrti, pod Ozirisovim pogledom."
         }
       ]
     }

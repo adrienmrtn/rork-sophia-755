@@ -1,14 +1,14 @@
 {
   "id": "course_54_la_decouverte_du_micro_ondes_par_acciden",
-  "title": "Opdagelsen af mikroovnen",
+  "title": "Opdagelsen af mikrobølgeovnen",
   "subtitle": "Ved et uheld",
   "subject": "sciences",
   "subcategory": "Opdagelser, der ændrede verden",
-  "description": "I 1945 bemærkede en ingeniør, at hans slikbar var smeltet nær en radar. Fra denne observation blev mikrobølgeovnen født.",
+  "description": "I 1945 opdager en ingeniør, at hans chokoladebar er smeltet tæt på en radar. Den iagttagelse bliver starten på mikrobølgeovnen.",
   "hero": {
     "image": "la_decouverte_du_micro_ondes",
     "ratio": "16:9",
-    "hook": "En smeltet chokoladebar... og moderne køkken ændrer sig."
+    "hook": "En smeltet chokoladebar… og det moderne køkken forandrer sig."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "I **1945**, i USA, arbejder ingeniør **Percy Spencer** på radarer. En dag bemærker han, at slikbaren i lommen er smeltet. Ikke på grund af kropsvarme: på grund af radarbølger."
+          "text": "I **1945** arbejder ingeniøren **Percy Spencer** med radarer i USA. En dag opdager han, at chokoladebaren i hans lomme er smeltet. Ikke på grund af kropsvarmen, men på grund af radarens bølger."
         },
         {
           "type": "paragraph",
-          "text": "Han tester med majs: popcornene springer. Ideen om en ovn, der varmer anderledes, blev født."
+          "text": "Han prøver med majskorn: de popper. Idéen om en ovn, der varmer på en ny måde, er født."
         }
       ]
     },
@@ -39,11 +39,11 @@
         },
         {
           "type": "paragraph",
-          "text": "**mikrobølger** er elektromagnetiske bølger, ligesom radiolys, men mere \"energiske\" end mange konventionelle radiobølger. Under krigen blev de hovedsageligt brugt til radar til at opdage fly og både."
+          "text": "**Mikrobølger** er elektromagnetiske bølger ligesom lys og radiobølger, men mere »energirige« end mange almindelige radiobølger. Under krigen bruges de mest i radarer til at opdage fly og skibe."
         },
         {
           "type": "paragraph",
-          "text": "Spencer forstår, at de også kan agitere vand og fedtstoffer i mad... og derfor opvarme det."
+          "text": "Spencer forstår, at de også kan sætte vandet og fedtet i maden i bevægelse… og dermed varme den op."
         }
       ]
     },
@@ -56,30 +56,30 @@
           "type": "image",
           "asset": "first_microwave_oven_radarange_1947",
           "ratio": "4:3",
-          "caption": "Den første kommercielle mikrobølgeovn var på størrelse med et skab."
+          "caption": "Den første kommercielle mikrobølgeovn er på størrelse med et skab."
         },
         {
           "type": "paragraph",
-          "text": "Den første kommercielle model, **Radarområde**, blev udgivet omkring **1947**. Den er enorm, dyr og primært beregnet til restauranter eller både. Det vil tage årtier at miniaturisere det og gøre det overkommeligt for hjem."
+          "text": "Den første kommercielle model, **Radarange**, kommer omkring **1947**. Den er kæmpestor og dyr og mest beregnet til restauranter eller skibe. Der skal gå årtier, før den bliver mindre og til at betale for almindelige hjem."
         },
         {
           "type": "funFact",
-          "text": "I begyndelsen var nogle bange for, at ovnen ville \"gøre maden radioaktiv\". Falsk: Mikrobølger opvarmes, de gør dig ikke radioaktiv."
+          "text": "I begyndelsen var nogle bange for, at ovnen ville »gøre maden radioaktiv«. Forkert: mikrobølger varmer, de gør ikke noget radioaktivt."
         }
       ]
     },
     {
       "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p3",
-      "title": "Hvordan varmer den egentlig op?",
+      "title": "Sådan varmer den egentlig",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Mikrobølger vibrerer hovedsageligt vandmolekyler (og lidt fedt og sukker). Denne omrøring skaber **varme indeni** maden, ikke kun på overfladen som en pande."
+          "text": "Mikrobølger får især vandmolekylerne til at vibrere (og lidt af fedtet og sukkeret). Den bevægelse skaber varme **inde i** maden, ikke kun på overfladen som på en pande."
         },
         {
           "type": "paragraph",
-          "text": "Derfor kan en ret være varm udenpå og lunken i midten, hvis den er tyk: Bølgerne trænger ikke uendeligt dybt ind."
+          "text": "Derfor kan en ret være brændende varm udenpå og lunken i midten, hvis den er tyk: bølgerne trænger ikke uendeligt dybt ind."
         }
       ]
     },
@@ -90,11 +90,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Fra 1970'erne-1980'erne kom mikrobølgeovnen ind i millioner af køkkener. Det ændrer vaner: genopvarm hurtigt, færdigretter, hurtigere liv."
+          "text": "Fra 1970'erne og 1980'erne flytter mikrobølgeovnen ind i millioner af køkkener. Den ændrer vanerne: hurtig opvarmning, færdigretter, et hurtigere liv."
         },
         {
           "type": "takeaway",
-          "text": "Mikrobølgeovnen blev født af en tilfældighed observeret af Percy Spencer nær en radar. Bølgerne agiterer hovedsageligt vandet i maden og opvarmer det indefra."
+          "text": "Mikrobølgeovnen opstår ved et tilfælde, som Percy Spencer opdager tæt på en radar. Bølgerne sætter især vandet i maden i bevægelse og varmer den op indefra."
         }
       ]
     }

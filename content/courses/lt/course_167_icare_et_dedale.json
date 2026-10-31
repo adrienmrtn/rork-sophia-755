@@ -1,0 +1,122 @@
+{
+  "id": "course_167_icare_et_dedale",
+  "title": "Ko mus moko Dedalo sūnaus Ikaro kritimas?",
+  "subtitle": "Skrydis per arti saulės",
+  "subject": "mythologie",
+  "subcategory": "Grèce : les dieux",
+  "description": "Dedalas pagamina vaškinius sparnus, kad pabėgtų iš Kretos. Jo sūnus Ikaras skrenda per aukštai, nukrenta ir suteikia vardą jūrai. Mitas apie saiką ir nesaikingumą.",
+  "hero": {
+    "image": "icare_et_dedale",
+    "ratio": "16:9",
+    "hook": "Tėvas išranda sparnus. Sūnus nepaiso įspėjimo. Jūra išsaugo jo vardą."
+  },
+  "sections": [
+    {
+      "id": "course_167_icare_et_dedale_intro",
+      "title": "Įžanga",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Ikaras** ir jo tėvas **Dedalas** yra vieno žinomiausių graikų mitų veikėjai. Be į jūrą krintančio paauglio vaizdo, šis pasakojimas kalba apie išradingumą, ribas ir pagundą nueiti per toli."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tai istorija apie neįmanomą pabėgimą, kuri tampa pamoka apie tai, kas yra [[Hibris (ir saiko stoka)]]: norėti prilygti dievams reiškia rizikuoti sudegti."
+        }
+      ]
+    },
+    {
+      "id": "course_167_icare_et_dedale_p1",
+      "title": "Dedalas, savo paties labirinto kalinys",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Dedalas** yra legendinis išradėjas, gudraus graikų proto įsikūnijimas; šis protas vadinamas [[Metis]]. Ištremtas į karaliaus **Mino** dvarą Kretoje, jis pastato **Labirintą**, tokį painų kalėjimą, kad iš jo niekas neišeina. Jame slepiamas **Minotauras**, pabaisa, gimusi iš uždraustos meilės, kurios kaltininkė buvo karalienė [[Pasifajė]]."
+        },
+        {
+          "type": "image",
+          "asset": "daedalus_labyrinth_crete_minotaur_myth",
+          "ratio": "4:3",
+          "caption": "Dedalas, Kretos Labirinto architektas."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sužinojęs, kad Dedalas padėjo herojui **Tesėjui** ištrūkti su Ariadnės siūlu, Minas uždaro išradėją ir jo jauną sūnų **Ikarą** jų pačių statinyje. Sausuma ir jūra užrakintos. Lieka dangus."
+        },
+        {
+          "type": "funFact",
+          "text": "Prancūziškas žodis **„dédale“** (labirintas) kilo iš šio veikėjo vardo: tai vieta, kurioje paklystama, kaip jo suprojektuotame Labirinte."
+        },
+        {
+          "type": "paragraph",
+          "text": "Stebėdamas paukščius, Dedalas pagamina dvi poras sparnų iš medžio, plunksnų ir bičių **vaško**. Technika tampa išeitimi."
+        }
+      ]
+    },
+    {
+      "id": "course_167_icare_et_dedale_p2",
+      "title": "Skristi per aukštai ar per žemai",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Prieš išskrendant Dedalas duoda Ikarui paprastą taisyklę: laikytis vidurio kelio. Per žemai drėgmė apsunkina plunksnas. Per aukštai saulė ištirpdo vašką. Toks atsargumas primena, kas yra [[Sophia]]: išmintis žinoti savo vietą."
+        },
+        {
+          "type": "paragraph",
+          "text": "Iš pradžių viskas gerai. Tėvas ir sūnus skrenda virš Egėjo jūros salų. Piemenims ant žemės atrodo, kad jie mato dievus. Tada Ikarą apima svaigulys. Jis kyla aukštyn, pakerėtas dangaus. Vaškas suminkštėja. Plunksnos krenta. Jis plasnoja plikomis rankomis ir įkrenta į jūrą."
+        },
+        {
+          "type": "image",
+          "asset": "icarus_falling_sun_bruegel_painting",
+          "ratio": "4:3",
+          "caption": "Ikaro kritimas, tapybos siužetas nuo renesanso laikų."
+        },
+        {
+          "type": "funFact",
+          "text": "Moksliškai mitas paradoksalus: kuo aukščiau kylama, tuo šalčiau. Ikaras greičiau būtų sušalęs, o ne matęs, kaip tirpsta vaškas."
+        }
+      ]
+    },
+    {
+      "id": "course_167_icare_et_dedale_p3",
+      "title": "Puikybė, idealas ar pamiršta detalė?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Senovės žmonės pirmiausia mato bausmę už puikybę: Ikaras moka už tai, kad norėjo per daug. Tačiau romantikai, pavyzdžiui, **Baudelaire'as**, paverčia jį idealo herojumi: geriau mirti žvelgiant į saulę, nei gyventi atsargiai ant žemės."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dailininkas **Pieteris Bruegelis Vyresnysis** siūlo kitokį skaitymą. Jo paveiksle kritimas tėra detalė: artojas tęsia darbą, pasaulis dėl herojaus nesustoja. Asmeninis žygdarbis tampa beveik nematomas."
+        },
+        {
+          "type": "funFact",
+          "text": "Kai kurios versijos priduria, kad sūnaus mirtyje Dedalas mato ir bausmę: kadaise iš pavydo jis neva nužudė savo sūnėną **Perdiką**, pernelyg gabų išradėją."
+        }
+      ]
+    },
+    {
+      "id": "course_167_icare_et_dedale_p4",
+      "title": "Jūra, sala, pamoka",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Srovės nuneša Ikaro kūną prie salos, kurią herojus **Heraklis** pavadina vardu [[Ikarija]]. Aplinkinė jūra tampa **Ikarijos jūra**. Vienas likęs Dedalas pasiekia Siciliją ir paaukoja savo sparnus dievui **Apolonui**, prisiekdamas daugiau nebeskraidyti."
+        },
+        {
+          "type": "paragraph",
+          "text": "Mitas gyvas visur: aeronautikoje kaip svajonė ir rizika, psichologijoje kaip „Ikaro kompleksas“, noras per greitai pasiekti sėkmę. Dedalas lieka dviprasmiškas išradėjas, galintis sukurti ir geriausia (sparnus), ir blogiausia. [[Labirintas kaip simbolis]] primena, kad technika gali ir įkalinti."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Dedalas** pabėga iš Kretos vaškiniais sparnais. **Ikaras** nepaiso įspėjimo, skrenda per arti saulės ir nuskęsta. Technika išlaisvina, bet be saiko ji žudo."
+        }
+      ]
+    }
+  ]
+}

@@ -1,14 +1,14 @@
 {
   "id": "course_195_lancelot_guenievre_et_la_table_ronde",
-  "title": "Kas Lancelot ja Guinevere põhjustasid Camelot' languse?",
-  "subtitle": "Camelot ja selle kukkumine",
+  "title": "Kas Lancelot ja Guinevere põhjustasid Cameloti languse?",
+  "subtitle": "Camelot ja selle langus",
   "subject": "mythologie",
   "subcategory": "Muud mütoloogiad",
-  "description": "Arthur, Lancelot, Guinevere: läänekeskaja suurim legend. Keelatud armastuse poolt hävitatud rüütellikkuse ideaal.",
+  "description": "Arthur, Lancelot, Guinevere: Lääne-Euroopa keskaja suurim legend. Rüütellikkuse ideaal, mille hävitab keelatud armastus.",
   "hero": {
     "image": "lancelot_guenievre_et_la_table_ronde",
     "ratio": "16:9",
-    "hook": "Maailma parim rüütel armastab kuninga naist. Camelot ei taastu."
+    "hook": "Maailma parim rüütel armastab kuninga naist. Camelot ei toibu sellest enam kunagi."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Legend kuningas **Arthur** ja tema **ümarlaua rüütlitest** on läänekeskaja suur mütoloogiline tsükkel. Nimetame seda **Materjal Bretagne'st**: segu ebamäärasest ajaloost, keldi folkloorist ja kristlikust moraalist."
+          "text": "Legend kuningas **Arthurist** ja tema **Ümarlaua** rüütlitest on Lääne-Euroopa keskaja suur mütoloogiline tsükkel. Seda nimetatakse **Bretooni ainestikuks**: see on segu ähmasest ajaloost, keldi folkloorist ja kristlikust moraalist."
         },
         {
           "type": "paragraph",
-          "text": "Loo keskmes on väga inimlik tragöödia: keelatud armastus parima rüütli **Lancelot** ja Arturi naise kuninganna **Guinevere** vahel. See armastus, mida tähistatakse täiuslikkusena, muutub mürkiks, mis kukutab **Cameloti**."
+          "text": "Loo keskmes on väga inimlik tragöödia: keelatud armastus parima rüütli **Lanceloti** ja Arthuri naise, kuninganna **Guinevere** vahel. See armastus, mida ülistatakse kui täiuslikkust, muutub mürgiks, mis kukutab **Cameloti**."
         }
       ]
     },
@@ -33,57 +33,57 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Pole ühtegi autorit. 6. ja 15. sajandi vahel kogunevad lood. Arthuri selja taga näeme bretooni sõjapealikku, võib-olla nimega **Arturus**, kes oleks pärast roomlaste lahkumist saksidele vastupanu osutanud. Tema ümber kasvavad **Merlin**, haldjad, võlumõõgad."
+          "text": "Ühte autorit pole. Lugusid koguneb järjest juurde 6.-15. sajandini. Arthuri taga aimub brittide sõjapealik, võib-olla nimega **Arturus**, kes olevat pärast roomlaste lahkumist saksidele vastu pannud. Tema ümber kasvavad välja **Merlin**, haldjad ja võlumõõgad."
         },
         {
           "type": "image",
           "asset": "king_arthur_excalibur_sword_stone_medieval",
           "ratio": "4:3",
-          "caption": "Arthur tõmbab kaljust mõõga: õiguspärase kuninga märk."
+          "caption": "Arthur tõmbab mõõga kivist: õiguspärase kuninga märk."
         },
         {
           "type": "funFact",
-          "text": "Inglismaal Winchesteri lossis ripub endiselt 13. sajandist pärit ümarlaud. Henry VIII lasi selle maalida, et siduda end Arthuriga."
+          "text": "Inglismaal Winchesteri lossis ripub tänini 13. sajandist pärit „Ümarlaud“. Henry VIII lasi selle maalida, et end Arthuriga siduda."
         },
         {
           "type": "paragraph",
-          "text": "[[mõõga katsumus]] ajal saab ainult tõeline kuningas **Excalibur** kivilt või alasilt tõmmata. Camelotis kroonitud Arthur asutas **Ümarlaua**. Selle ringikujuline kuju kaotab hierarhia: selle ümber on iga rüütel võrdne oma naabriga, sealhulgas kuningas."
+          "text": "Proovikiviks on [[mõõga katsumus]]: ainult tõeline kuningas suudab **Excaliburi** kivist või alasilt välja tõmmata. Camelotis kroonitud Arthur asutab **Ümarlaua**. Laua ümar kuju kaotab hierarhia: selle ümber on iga rüütel oma naabriga võrdne, ka kuningas ise."
         }
       ]
     },
     {
       "id": "course_195_lancelot_guenievre_et_la_table_ronde_p2",
-      "title": "Graali ja vaimse mutatsiooni otsimine",
+      "title": "Graali otsingud ja vaimne pööre",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Vähehaaval lähevad võitlused üle vaimsele otsingule: **Püha Graal**. Maagiline roog vanades keldi tekstides, sellest sai 12. sajandil Kristuse karikas. Sisemine puhtus loeb sama palju kui jõud."
+          "text": "Vähehaaval asendub võitlemine vaimse otsinguga: otsitakse **Püha Graali**. Vanades keldi tekstides on see võluvaagen, 12. sajandil saab sellest Kristuse karikas. Sisemine puhtus loeb sama palju kui jõud."
         },
         {
           "type": "image",
           "asset": "holy_grail_knights_round_table_medieval_painting",
           "ratio": "4:3",
-          "caption": "Graali otsimine muudab ümarlaua vaimseks seikluseks."
+          "caption": "Graali otsimine muudab Ümarlaua vaimseks seikluseks."
         },
         {
           "type": "funFact",
-          "text": "Sõna \"graal\" pärines iidsest prantsuse keelest ja tähistas algselt suurt rooga liha serveerimiseks, mitte hinnalist lõiku."
+          "text": "Sõna „graal“ pärineb vanaprantsuse keelest ja tähendas algul laia vaagnat, millel liha serveeriti, mitte väärtuslikku karikat."
         },
         {
           "type": "paragraph",
-          "text": "Lauas ootab ettemääratud rüütlit [[Siege Perilous]]. Graali jõuavad ainult **Gilead**, **Tajumine** ja **Bohort**. **Järve Lancelot**, \"parim rüütel maailmas\", ebaõnnestub: armastus Guinevere vastu muudab ta jumaliku nägemuse väärituks."
+          "text": "Laua ääres ootab ettemääratud rüütlit [[Ohtlik Iste]]. Graalini jõuavad ainult **Galahad**, **Perceval** ja **Bors**. **Lancelot Järvest**, „maailma parim rüütel“, kukub läbi: armastus Guinevere vastu teeb ta jumaliku nägemuse vääritutuks."
         }
       ]
     },
     {
       "id": "course_195_lancelot_guenievre_et_la_table_ronde_p3",
-      "title": "Guinevere reetmine ja korra rebimine",
+      "title": "Guinevere reetmine ja korra lõhenemine",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Lanceloti ja Guinevere armastus kehastab [[Keskaegne õukonnaarmastus (fin'amor)]]: rüütel seab end oma daami teenistusse. Kuid Guinevere on ülemjuhataja naine. Reetmine ei ole ainult abielu: see on feodaalne."
+          "text": "Lanceloti ja Guinevere armastuses kehastub [[keskaegne õukondlik armastus (fin'amor)]]: rüütel asub oma daami teenistusse. Kuid Guinevere on lääniisanda naine. Reetmine ei ole ainult abielurikkumine, vaid ka feodaalse truuduse murdmine."
         },
         {
           "type": "image",
@@ -93,7 +93,7 @@
         },
         {
           "type": "paragraph",
-          "text": "**Mordred**, olenevalt versioonist Arthuri verepilastatud vennapoeg või poeg, paljastab afääri. Arthur mõistab Guinevere tuleriidale hukka. Lancelot päästab ta, kuid tapab lähivõitluses **Gawain** vennad. Ümarlaud on lõhki rebitud: kodusõda, utoopia lõpp."
+          "text": "**Mordred**, olenevalt versioonist Arthuri õepoeg või verepilastusest sündinud poeg, paljastab suhte. Arthur mõistab Guinevere tuleriidal põletamisele. Lancelot päästab ta, kuid tapab segases võitluses **Gawaini** vennad. Ümarlaud lõheneb: algab kodusõda ja utoopia saab otsa."
         }
       ]
     },
@@ -104,15 +104,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Camlannis** tapab Arthur Mordredi ja saab surmava haava. Excalibur tagastatakse Lady of the Lake'ile. Guinevere satub kloostrisse, Lancelot erakuks. Räägitakse, et Arthur lahkub **Avaloni** saarele."
+          "text": "**Camlannis** tapab Arthur Mordredi ja saab ise surmava haava. Excalibur antakse tagasi Järve Daamile. Guinevere lõpetab oma päevad kloostris, Lancelot erakuna. Räägitakse, et Arthur lahkub **Avaloni** saarele."
         },
         {
           "type": "paragraph",
-          "text": "Temast saab [[Rex Quondam Rexque Futurus]], \"endine kuningas, tulevane kuningas\": magav kuningas, kes naaseb halvimal ajal. Camelot sureb legendis ja nii jääb see ellu."
+          "text": "Temast saab [[Rex Quondam Rexque Futurus]], „kunagine ja tulevane kuningas“: magav kuningas, kes naaseb kõige raskemal ajal. Camelot hääbub legendiks ja just nii elab see edasi."
         },
         {
           "type": "takeaway",
-          "text": "**Lancelot** armastus **Guinevere** vastu hävitab Cameloti. **Graal** otsimine õnnestub ainult puhtal: Lancelot, parim rüütel, jääb pühast lävest väljapoole."
+          "text": "**Lanceloti** armastus **Guinevere** vastu hävitab Cameloti. **Graali** otsingud õnnestuvad ainult puhastele: Lancelot, parim rüütel, jääb püha läve taha."
         }
       ]
     }

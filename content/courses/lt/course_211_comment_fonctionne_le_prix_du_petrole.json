@@ -1,0 +1,116 @@
+{
+  "id": "course_211_comment_fonctionne_le_prix_du_petrole",
+  "title": "Kas nustato naftos kainą?",
+  "subtitle": "Pasaulio ekonomikos variklis",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Économie & société",
+  "description": "Naftos kainos nenustato vienas pardavėjas. Ji gimsta iš **jėgų išbandymo** tarp naftą išgaunančių šalių, finansų rinkų ir staigių krizių, kartais iki absurdo.",
+  "hero": {
+    "image": "comment_fonctionne_le_prix_du_petrole",
+    "ratio": "16:9",
+    "hook": "2020 m. naftos pardavėjai mokėjo pirkėjams, kad tik atsikratytų naftos. Štai kodėl."
+  },
+  "sections": [
+    {
+      "id": "course_211_comment_fonctionne_le_prix_du_petrole_intro",
+      "title": "Įžanga",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nafta kartais vadinama „ekonomikos krauju“. Jos kaina veikia infliaciją, benzino kainą ir net kai kurių šalių stabilumą. Vis dėlto niekas šios kainos nenustato vienu antspaudo smūgiu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ji gimsta susidūrus trims jėgoms: šalims, kurios išgauna naftą, finansų rinkoms, kurios ja prekiauja dar prieš jai ištrykštant iš žemės, ir krizėms, kurios visus įvaro į paniką. Tavęs laukia Arabijos dykumos, Teksaso lygumos ir Čikagos biržos ekranai."
+        }
+      ]
+    },
+    {
+      "id": "course_211_comment_fonctionne_le_prix_du_petrole_p1",
+      "title": "OPEC prieš JAV skalūnų naftą: kova dėl pasiūlos",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Naftos rinka turi ypatybę: trumpuoju laikotarpiu, kylant kainoms, paklausa beveik nemažėja. Automobiliai, gamyklos ir lėktuvai negali per naktį pereiti prie kitos energijos. Ekonomistai tai vadina paklausos **neelastingumu**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nuo 1960 m. grupė naftą išgaunančių šalių susibūrė, kad darytų įtaką šiai rinkai: tai [[OPEC]]. Susitardamos dėl gavybos kvotų, jos narės siekia išlaikyti aukštas kainas. Nuo 2016 m. prie aljanso prisijungė Rusija, ir susidarė OPEC+. Kartu šios šalys kontroliuoja apie 40 % pasaulio naftos."
+        },
+        {
+          "type": "funFact",
+          "text": "Vienoje naftos statinėje (159 litrai) yra tiek energijos, kiek žmogus fiziniu darbu atiduoda maždaug per metus."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tačiau šią galią kai kas sujaukė. Pasitelkusios technologiją, vadinamą hidrauliniu ardymu, JAV per dešimt metų tapo didžiausia naftos gavėja pasaulyje ir aplenkė Saudo Arabiją. Ši nauja, greičiau pritaikoma pasiūla padarė rinką konkurencingesnę, o OPEC+ ją kontroliuoti tapo sunkiau."
+        }
+      ]
+    },
+    {
+      "id": "course_211_comment_fonctionne_le_prix_du_petrole_p2",
+      "title": "„Popierinė“ nafta: kai įsikiša finansai",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Be tikrų statinių, gabenamų laivais ar vamzdynais, nafta prekiaujama ir finansų rinkose. Dauguma sandorių vyksta ateities sandorių rinkoje: čia šiandien perkama statinė, kuri bus pristatyta tik po vieno, trijų ar šešių mėnesių."
+        },
+        {
+          "type": "image",
+          "asset": "oil_futures_trading_floor_markets",
+          "ratio": "16:9",
+          "caption": "Nafta finansų rinkose perkama ir parduodama gerokai anksčiau, nei pristatoma."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bankai ir rizikos draudimo fondai perka ir parduoda šiuos sandorius visai nenorėdami paliesti nė vienos statinės: jie tiesiog lažinasi, ar kainos kils, ar kris. Tai įneša į rinką pinigų, bet kartu padaro kainas nervingesnes. Pasaulyje yra dvi etaloninės kainos: [[Brent]], Šiaurės jūros nafta, ir WTI, Teksaso nafta. Skirtumas tarp jų atspindi kokybės ir transportavimo skirtumus."
+        }
+      ]
+    },
+    {
+      "id": "course_211_comment_fonctionne_le_prix_du_petrole_p3",
+      "title": "Kainos, kurios smunka... arba šauna aukštyn",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Naftos rinka juda staigiais ciklais. Kai kainos ilgai kyla, gavėjai investuoja į brangius telkinius, ir ilgainiui atsiranda pasiūlos perteklius. Kai kainos ilgai būna žemos, vyksta atvirkščiai: žvalgoma mažiau, ir taip bręsta kitas trūkumas."
+        },
+        {
+          "type": "paragraph",
+          "text": "COVID-19 krizė tai parodė įspūdingai. 2020 m. balandį pasaulio ekonomika staiga sustojo: niekas nebeskraidė lėktuvais ir nebevažinėjo automobiliais, bet gręžiniai vis dar tiekė naftą. Saugyklos prisipildė iki kraštų. Tada WTI kaina nukrito iki minus 37 dolerių: pardavėjai mokėjo pirkėjams, kad šie išsivežtų atsargas."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ir atvirkščiai, 2022 m. Rusijos invazija į Ukrainą sukėlė trūkumo baimę: kadangi Rusija yra antra pagal dydį naftos eksportuotoja pasaulyje, Brent per kelias savaites pakilo virš 130 dolerių. Taigi nafta lieka jautrus pasaulio įtampų barometras."
+        },
+        {
+          "type": "funFact",
+          "text": "Vienam išmaniajam telefonui pagaminti reikia apie 7 litrų naftos: medžiagoms išgauti, plastikinėms dalims ir transportui."
+        }
+      ]
+    },
+    {
+      "id": "course_211_comment_fonctionne_le_prix_du_petrole_p4",
+      "title": "Ar nafta turi ateitį?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ilgainiui naftai iškyla naujas iššūkis: perėjimas prie švarios energijos. Jei elektromobiliai sumažins pasaulinę paklausą, naftą išgaunančios šalys gali pradėti kainų karą, kad parduotų savo atsargas, kol šios dar nenuvertėjo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vis dėlto rinkai gresia paradoksas: kadangi investuotojai dėl klimato atsisako naujų naftos projektų, pasiūla gali mažėti greičiau nei paklausa, ir kainos vėl šoktels. Nafta neišnyks staiga: ji lieka būtina plastikams, trąšoms ir sunkiajam transportui, pavyzdžiui, aviacijai."
+        },
+        {
+          "type": "takeaway",
+          "text": "Naftos kaina gimsta iš jėgų išbandymo tarp OPEC+, JAV skalūnų naftos gavybos ir spekuliacinių finansų rinkų. Rezultatas: kainos, galinčios smukti arba šauti aukštyn nuo menkiausio geopolitinio sukrėtimo."
+        }
+      ]
+    }
+  ]
+}

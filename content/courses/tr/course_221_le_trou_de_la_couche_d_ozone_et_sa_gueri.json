@@ -4,11 +4,11 @@
   "subtitle": "1985-2065",
   "subject": "comprendreLeMonde",
   "subcategory": "Çevre ve gelecek",
-  "description": "Antarktika üzerinde dev bir delik, 197 ülkenin imzaladığı bir antlaşma ve iyileşen bir gezegen. İşte insanlığın şimdiden çözdüğü **tek büyük ekolojik kriz**.",
+  "description": "Antarktika üzerinde fark edilen dev bir delik, 197 ülkenin imzaladığı bir antlaşma ve iyileşen bir gezegen. İşte insanlığın bugüne kadar çözebildiği **tek büyük ekolojik kriz**.",
   "hero": {
     "image": "le_trou_de_la_couche_d_ozone",
     "ratio": "16:9",
-    "hook": "Gökyüzünde tesadüfen bulunan bir delik, bütün dünyanın imzaladığı bir antlaşmayla kapanır."
+    "hook": "Gökyüzünde tesadüfen bulunan bir delik ve onu kapatan, bütün dünyanın imzaladığı bir antlaşma."
   },
   "sections": [
     {
@@ -18,43 +18,43 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "1985'te Antarktika'da görevli Britanyalı bilim insanları ölçülerine inanamaz: gökyüzünün bir parçası Güneş'e karşı korumasını yitirmiş gibi durur. Alet hatası değildir, ozon tabakasındaki gerçek bir deliktir; hepimizi koruyan o görünmez kalkandır. Bu ders, dünyanın bu tehlikeyi nasıl keşfettiğini ve nadir bir iş olarak nasıl tamir ettiğini anlatır."
+          "text": "1985'te Antarktika'da görev yapan Britanyalı bilim insanları ölçümlerine inanamadı: gökyüzünün bir bölümü Güneş'e karşı korumasını yitirmiş gibiydi. Bu bir cihaz hatası değildi; hepimizi koruyan o görünmez kalkanda, ozon tabakasında gerçek bir delikti. Bu kurs, dünyanın bu tehlikeyi nasıl keşfettiğini ve nadir görülen bir şekilde onu nasıl onarmayı başardığını anlatıyor."
         }
       ]
     },
     {
       "id": "course_221_le_trou_de_la_couche_d_ozone_et_sa_gueri_p1",
-      "title": "Kırılgan bir kalkan, elverişli bir zehir",
+      "title": "Kırılgan bir kalkan, pek kullanışlı bir zehir",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Ozon tabakası** 15 ile 35 kilometre yükseklikte, [[Stratosfer]] içinde yer alır ve **UV-B** ışınlarının çoğunu emer; Güneş'in cildimizi ve canlı hücrelerin DNA'sını bozacak kadar güçlü ışınlarıdır. 1930'larda sanayi **kloroflorokarbonlar**, yani [[Kloroflorokarbonlar (CFC'ler)]] gazlarını icat eder: ucuz, kusursuz sayılan gazlar; buzdolabına, klimaya ve sprey kutularına her yere konur."
+          "text": "**Ozon tabakası** 15 ile 35 kilometre yükseklikte, [[stratosfer]] içinde bulunur ve **UV-B** ışınlarının çoğunu emer; bunlar Güneş'ten gelen, cildimize ve canlı hücrelerin DNA'sına zarar verecek kadar güçlü ışınlardır. 1930'larda sanayi **kloroflorokarbonları**, yani [[Kloroflorokarbonlar (CFC'ler)]] adlı gazları icat etti: kusursuz sayılan, ucuz ve buzdolaplarından klimalara, sprey kutularına kadar her yerde kullanılan gazlar."
         },
         {
           "type": "paragraph",
-          "text": "Sorun şu: bu gazlar fazla kararlıdır, yerde bozulmak yerine stratosfere çıkar. 1974'te kimyacılar Mario Molina ve Frank Sherwood Rowland uyarır: Güneş'in etkisiyle CFC'ler klor salar, klor ozonu yok eder. 1995'te Nobel alırlar, ama o gün neredeyse kimse onları dinlemez."
+          "text": "Sorun şu ki bu gazlar fazla kararlıdır: yere yakın yerde bozunmak yerine stratosfere kadar yükselirler. 1974'te kimyacılar Mario Molina ve Frank Sherwood Rowland uyardı: Güneş'in etkisiyle CFC'ler klor açığa çıkarıyor, klor da ozonu yok ediyordu. 1995'te Nobel Ödülü alacaklardı, ama o sırada neredeyse kimse onları dinlemedi."
         }
       ]
     },
     {
       "id": "course_221_le_trou_de_la_couche_d_ozone_et_sa_gueri_p2",
-      "title": "1985: şok, sonra dünya anlaşması",
+      "title": "1985: şok, ardından küresel anlaşma",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "1985'te British Antarctic Survey haberi doğrular: her bahar [[Antarktika]] üzerinde ozon tabakasında çarpıcı bir delik açılır. NASA uyduları bu verileri zaten toplamıştı, ama yazılımları onları gerçek olamayacak kadar uç diye elemişti."
+          "text": "1985'te British Antarctic Survey haberi doğruladı: her ilkbaharda [[Antarktika]] üzerindeki ozon tabakasında çarpıcı bir delik açılıyordu. NASA uyduları bu verilere zaten sahipti, ama yazılımları bunları gerçek olamayacak kadar uç değerler sayıp elemişti."
         },
         {
           "type": "image",
           "asset": "ozone_hole_antarctica_satellite_image_nasa",
           "ratio": "16:9",
-          "caption": "Uydudan görülen, Antarktika üzerindeki ozon deliği"
+          "caption": "Antarktika üzerindeki ozon deliği, uydudan görünüm"
         },
         {
           "type": "paragraph",
-          "text": "İnsan sağlığına yönelik tehdit çok ciddiye alınır ve dünya çabuk tepki verir. 1987'de ülkeler [[Montreal Protokolü (1987)]] anlaşmasını imzalar; CFC'lerin kademeli durdurulmasını örgütler. Başta yalnızca 24 ülke vardır; bugün **197** ülkeyi, Birleşmiş Milletler'in tüm üyelerini birleştirir."
+          "text": "İnsan sağlığına yönelik tehdit çok ciddiye alındı ve dünya hızla harekete geçti. 1987'de ülkeler, CFC'lerin aşamalı olarak bırakılmasını düzenleyen [[Montreal Protokolü (1987)]] adlı antlaşmayı imzaladı. Başlangıçta yalnızca 24 ülke vardı; bugün **197** ülkeyi, yani Birleşmiş Milletler'in tüm üyelerini bir araya getiriyor."
         },
         {
           "type": "funFact",
@@ -62,7 +62,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Bu başarı, herkes için net bir kurala ve yoksul ülkelerin makinelerini değiştirmesine yardım eden ortak bir fona dayanır. Başta karşı çıkan sanayiciler bile kârlı ikame ürünler bularak sonunda uydu."
+          "text": "Bu başarı, herkes için net bir kurala ve yoksul ülkelerin makinelerini değiştirmesine yardım eden ortak bir fona dayanır. Başta karşı çıkan sanayiciler bile kârlı ikame ürünler bulunca sonunda bu yola girdi."
         }
       ]
     },
@@ -73,11 +73,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Bu başarı sıkça, iklim değişikliğinin de aynı yolla çözülebileceğini söylemek için anılır. Ama iki sorun farklıdır: ozon deliği az sayıda fabrikanın ürettiği az sayıda gazdan geliyordu, hedeflemek kolaydı. [[Karbondioksit (CO₂)]] ise modern toplumun neredeyse her işinden çıkar: yer değiştirmek, ısınmak, ekmek, inşa etmek. CO₂'yi düşürmek bir avuç kimya fabrikası değil, bütün dünya ekonomisini değiştirmeyi ister."
+          "text": "Bu başarı, iklim değişikliğinin de aynı yolla çözülebileceğini söylemek için sıkça örnek gösterilir. Ama iki sorun birbirinden farklı: ozon deliği, az sayıda fabrikanın ürettiği az sayıda gazdan kaynaklanıyordu ve hedef almak kolaydı. [[Karbondioksit (CO₂)]] ise modern toplumun yaptığı hemen her şeyden çıkar: yolculuk etmek, ısınmak, tarım yapmak, inşa etmek. CO₂'yi azaltmak bir avuç kimya fabrikasını değil, bütün dünya ekonomisini değiştirmeyi gerektirir."
         },
         {
           "type": "paragraph",
-          "text": "Yolda bir iyi haber: CFC'ler aynı zamanda güçlü sera gazlarıydı. Onları yasaklayan Montreal Protokolü, birinci amacı bu olmadığı halde iklim ısınmasını da frenledi."
+          "text": "Bu arada güzel bir haber: CFC'ler aynı zamanda güçlü sera gazlarıydı. Bu yüzden onları yasaklayan Montreal Protokolü, asıl amacı bu olmasa da küresel ısınmayı da yavaşlattı."
         },
         {
           "type": "funFact",
@@ -92,7 +92,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Atmosfere çoktan çıkmış klor yok olmakta gecikir: zararlı gaz düzeylerinin durulması 1990'ların ortasını bekledi. 2000'lerin başından beri iyileşme açık ve ölçülebilirdir."
+          "text": "Atmosfere çoktan yükselmiş klorun yok olması zaman alır: zararlı gaz düzeylerinin dengelendiğini görmek için 1990'ların ortasını beklemek gerekti. 2000'lerin başından beri iyileşme açık ve ölçülebilir."
         },
         {
           "type": "timeline",
@@ -110,27 +110,27 @@
             {
               "date": "1987",
               "title": "Montreal Protokolü",
-              "detail": "Antlaşma imzalanır, bugün 197 ülke onaylamıştır."
+              "detail": "Antlaşma imzalanır; bugün 197 ülke tarafından onaylanmıştır."
             },
             {
               "date": "2000",
               "title": "İyileşmenin başlangıcı",
-              "detail": "Zararlı gaz düzeyleri sonunda durulur."
+              "detail": "Zararlı gaz düzeyleri sonunda dengelenir."
             },
             {
               "date": "2065",
               "title": "Normale dönüş (öngörülen)",
-              "detail": "Ozon tabakası 1980 düzeyine dönmelidir."
+              "detail": "Ozon tabakasının 1980 düzeyine dönmesi bekleniyor."
             }
           ]
         },
         {
           "type": "paragraph",
-          "text": "Antlaşmaya uyulursa ozon tabakası **2065-2070** dolayında 1980 haline dönmeli, milyonlarca cilt kanseri ve katarakt önlenmelidir. Uyanık kalmak gerekir: birkaç yıl önce Doğu Asya'da gizli CFC salımları yakalandı; bir dünya anlaşması ancak sürekli izlenirse işler."
+          "text": "Antlaşmaya uyulmaya devam edilirse ozon tabakasının **2065-2070** dolayında 1980'deki durumuna dönmesi ve böylece milyonlarca cilt kanseri ve katarakt vakasının önlenmesi bekleniyor. Yine de uyanık kalmak gerekiyor: birkaç yıl önce Doğu Asya'da gizli CFC salımları tespit edildi; bu da küresel bir anlaşmanın ancak sürekli denetlenirse işlediğini kanıtlıyor."
         },
         {
           "type": "takeaway",
-          "text": "Ozon deliği, tam bir küresel işbirliğiyle bütünüyle çözülmüş tek büyük çevre krizi kalır: 1987'de 197 ülkenin imzaladığı, bilimsel olarak ölçülebilir sonuçlu bir antlaşma."
+          "text": "Ozon deliği, küresel işbirliğiyle tamamen çözülmüş tek büyük çevre krizi olmaya devam ediyor: 1987'de 197 ülkenin imzaladığı, sonuçları bilimsel olarak ölçülebilen bir antlaşma."
         }
       ]
     }

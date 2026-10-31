@@ -1,0 +1,140 @@
+{
+  "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum",
+  "title": "Kodėl actekai aukodavo žmones?",
+  "subtitle": "Kraujas saulei",
+  "subject": "mythologie",
+  "subcategory": "Autres mythologies",
+  "description": "Actekai tikėjo, kad saulė pateka tik tada, kai dievai gauna kraujo. Tai atšiauri, bet nuosekli kosmologija, buvusi jų imperijos šerdimi.",
+  "hero": {
+    "image": "les_dieux_azteques_et_les_sacrifices_humains",
+    "ratio": "16:9",
+    "hook": "Be kraujo saulė sustotų: tokia buvo actekų kosminė skola."
+  },
+  "sections": [
+    {
+      "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum_intro",
+      "title": "Įvadas",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Actekai**, arba meksikai, tiki, kad visata trapi. Dievams reikia kraujo, kad saulė tęstų savo kelią. Be aukų sugrįžtų chaosas."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tai, kas taip pasibaisėjo ispanus, remiasi aiškia mintimi: dievų ir žmonių gyvenimai susiję. Pažiūrėkime, kaip veikia ši kosmologija."
+        }
+      ]
+    },
+    {
+      "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum_p1",
+      "title": "Penkios saulės: pasaulis, jau keturis kartus miręs",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pagal mitą, kuris vadinamas [[Penkios saulės]], keturios eros jau pražuvo per katastrofas. Mes gyvename penktosios saulės laikais. Ji vadinama [[Nahui Ollin]] („4-Judėjimas“), ir jai lemta baigtis žemės drebėjimais."
+        },
+        {
+          "type": "image",
+          "asset": "aztec_five_suns_teotihuacan_pyramid_sun_stone",
+          "ratio": "4:3",
+          "caption": "Saulės akmuo: actekų laikas sukasi besikeičiančiomis eromis."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Teotihuakane**, šventajame centrinės plokštikalnės mieste, dievai šoka į laužą, kad taptų saule ir mėnuliu. Tačiau saulė lieka nejudanti. Tada kiti dievai paaukoja savo kraują, kad ją pajudintų. Šią skolą paveldi žmonės."
+        },
+        {
+          "type": "funFact",
+          "text": "Actekams auka nėra beprasmis žiaurumas: tai dieviškos skolos grąžinimas, kurį numato [[penkių saulių kosmologija ir kosminė skola]]."
+        }
+      ]
+    },
+    {
+      "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum_p2",
+      "title": "Dvilypumų panteonas",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Svarbiausias dievas yra [[Huicilopočtlis]], karo ir vidurdienio saulės dievas. Kiekvieną naktį jis kovoja su tamsa, kad ryte atgimtų. Šalia jo [[Tlalokas]] siunčia lietų, o kartu derlių arba badą."
+        },
+        {
+          "type": "image",
+          "asset": "huitzilopochtli_aztec_sun_god_codex",
+          "ratio": "4:3",
+          "caption": "Huicilopočtlis: karingoji saulė, kurią reikia maitinti."
+        },
+        {
+          "type": "paragraph",
+          "text": "[[Kecalkoatlis]], Plunksnuotoji Gyvatė, įkūnija žinojimą ir civilizaciją. Jo varžovas [[Teskatlipoka]], Rūkstantis Veidrodis, valdo naktį, likimą ir magiją. Net pati žemė turi baisų veidą: tai [[Koatlikuė]], ryjanti deivė motina."
+        },
+        {
+          "type": "funFact",
+          "text": "Dievams aukojamas brangus kraujas turi savo vardą: [[chalchihuatl]], „brangusis vanduo“. Išplėšta širdis laikoma saulės kibirkštimi, grąžinama dangui."
+        }
+      ]
+    },
+    {
+      "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum_p3",
+      "title": "Gėlių karai",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Aukoms gauti actekai rengia ritualinius karus: tai [[Xochiyaoyotl]], „gėlių karai“. Jų tikslas ne žudyti, o paimti gyvų karių, kuriuos verta paaukoti."
+        },
+        {
+          "type": "image",
+          "asset": "aztec_sacrifice_pyramid_templo_mayor_codex",
+          "ratio": "4:3",
+          "caption": "Auka šventyklos viršūnėje: širdis rodoma saulei."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ežero sostinės Tenočtitlano **Templo Mayor** viršūnėje žynys išpjauna širdį **obsidiano** peiliu; obsidianas yra aštrus vulkaninis akmuo. Tai viešas, iškilmingas veiksmas, suvokiamas kaip paslauga saulei."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "Mitas",
+              "title": "Dievų auka",
+              "detail": "Saulė gauna dievišką kraują, kad galėtų judėti."
+            },
+            {
+              "date": "Imperija",
+              "title": "Gėlių karai",
+              "detail": "Karių gaudymas aukoms."
+            },
+            {
+              "date": "1519",
+              "title": "Ispanų smūgis",
+              "detail": "Atvyksta Kortesas; sistema žlunga."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum_p4",
+      "title": "Pasaulio pabaiga, ilgalaikiai pėdsakai",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ispanų kronikos kartais išpučia skaičius, kad pateisintų užkariavimą. Tačiau aukojimo sistema tikrai egzistavo. **1519** m. atvykęs **Hernanas Kortesas** paspartina šio ritualinio pasaulio pabaigą."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vis dėlto kai kurios actekų figūros išlieka sinkretizme: Gvadalupės Mergelė pasirodo vietoje, kadaise susijusioje su deive motina. Suprasti šias aukas reiškia suprasti kultūrą, kuri kosmoso išlikimą iškelia aukščiau už individą."
+        },
+        {
+          "type": "takeaway",
+          "text": "Actekams žmogaus kraujas maitina saulę. Dievai jau sumokėjo savo gyvybe: žmonės šią skolą grąžina aukomis, ypač per **gėlių karus**."
+        }
+      ]
+    }
+  ]
+}

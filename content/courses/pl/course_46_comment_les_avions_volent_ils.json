@@ -4,7 +4,7 @@
   "subtitle": "Fizyka lotu",
   "subject": "sciences",
   "subcategory": "Codzienność bez tajemnic",
-  "description": "Samolot o wadze setek ton leci. To nie magia: to sprawa kształtu skrzydła, prędkości i sił, które się równoważą.",
+  "description": "Samolot ważący kilkaset ton lata. To nie magia, tylko kwestia kształtu skrzydła, prędkości i sił, które się równoważą.",
   "hero": {
     "image": "comment_les_avions_volent",
     "ratio": "16:9",
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Duży samolot pasażerski może ważyć **setki ton**. Jak coś tak ciężkiego zostaje w powietrzu? Odpowiedź tkwi w kształcie skrzydeł i w prędkości samolotu."
+          "text": "Duży samolot pasażerski może ważyć **setki ton**. Jak coś tak ciężkiego może utrzymać się w powietrzu? Odpowiedź tkwi w kształcie skrzydeł i w prędkości samolotu."
         },
         {
           "type": "paragraph",
-          "text": "Grają cztery główne siły: **ciąg** (do przodu), **opór** (hamowanie przez powietrze), **ciężar** (w dół) i **siła nośna** (w górę)."
+          "text": "Działają tu cztery główne siły: **ciąg** (do przodu), **opór** (hamowanie przez powietrze), **ciężar** (w dół) i **siła nośna** (w górę)."
         }
       ]
     },
@@ -33,7 +33,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Z boku skrzydło samolotu nie jest płaskie. Góra jest bardziej wypukła niż dół. Gdy samolot jedzie szybko, powietrze musi obejść ten kształt."
+          "text": "Widziane z boku skrzydło samolotu nie jest płaskie. Jego górna strona jest bardziej wypukła niż dolna. Gdy samolot szybko leci, powietrze musi opłynąć ten kształt."
         },
         {
           "type": "image",
@@ -43,7 +43,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Powietrze, które idzie górą, trochę przyspiesza. Jego ciśnienie spada. Pod skrzydłem ciśnienie zostaje wyższe. Ta różnica pcha skrzydło w górę: to **siła nośna**. Tłumaczy się to często zasadą **Bernoulliego**, od nazwiska uczonego z XVIII wieku, i tym, że skrzydło zrzuca też powietrze w dół."
+          "text": "Powietrze, które opływa skrzydło od góry, trochę przyspiesza. Jego ciśnienie spada. Pod skrzydłem ciśnienie pozostaje wyższe. Ta różnica pcha skrzydło w górę: to **siła nośna**. Często tłumaczy się ją zasadą **Bernoulliego**, nazwaną od uczonego z XVIII wieku, a także tym, że skrzydło odchyla powietrze w dół."
         }
       ]
     },
@@ -54,15 +54,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Bez prędkości za mało powietrza idzie po skrzydle, za mało siły nośnej. Dlatego samolot potrzebuje długiego pasa do startu: silniki muszą go mocno rozpędzić."
+          "text": "Bez prędkości nad skrzydłem przepływa za mało powietrza, więc powstaje za mało siły nośnej. Dlatego samolot potrzebuje do startu długiego pasa: silniki muszą go mocno rozpędzić."
         },
         {
           "type": "funFact",
-          "text": "Ptaki używają tej samej ogólnej idei: ich skrzydła dają siłę nośną. Ale one machają skrzydłami, żeby iść do przodu. Samolot jedzie dzięki silnikom."
+          "text": "Ptaki korzystają z tej samej ogólnej zasady: ich skrzydła wytwarzają siłę nośną. Ale one machają skrzydłami, żeby lecieć do przodu. Samolot porusza się naprzód dzięki silnikom."
         },
         {
           "type": "paragraph",
-          "text": "W locie rejsowym siła nośna równoważy ciężar. Ciąg silników równoważy opór powietrza. Samolot jedzie wtedy ze stałą, mniej więcej, prędkością."
+          "text": "W locie przelotowym siła nośna równoważy ciężar. Ciąg silników równoważy opór powietrza. Samolot leci wtedy z mniej więcej stałą prędkością."
         }
       ]
     },
@@ -73,26 +73,26 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Żeby iść w górę, pilot (albo komputer pokładowy) unosi trochę nos i dobiera ciąg. Żeby zniżać, często ścina się ciąg. Żeby skręcać, przechyla się samolot na bok dzięki ruchomym częściom skrzydeł, lotkom."
+          "text": "Żeby się wznieść, pilot (albo komputer pokładowy) lekko unosi nos i reguluje ciąg. Żeby zejść niżej, zwykle zmniejsza się ciąg. Żeby skręcić, przechyla się samolot na bok za pomocą ruchomych części skrzydeł, czyli lotek."
         },
         {
           "type": "paragraph",
-          "text": "Przy lądowaniu zwalniamy. Ze skrzydła wychodzą klapy, żeby podbić siłę nośną przy małej prędkości. Potem koła dotykają ziemi, a hamulce (czasem też odwracacze ciągu) zatrzymują samolot."
+          "text": "Przy lądowaniu samolot zwalnia. Ze skrzydeł wysuwają się klapy, żeby zwiększyć siłę nośną przy małej prędkości. Potem koła dotykają ziemi, a hamulce (czasem też odwracacze ciągu) zatrzymują samolot."
         }
       ]
     },
     {
       "id": "course_46_comment_les_avions_volent_ils_p4",
-      "title": "To nie „lżejszy od powietrza”",
+      "title": "Wcale nie „lżejszy od powietrza”",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Balon z helem unosi się, bo jest rzadszy od powietrza. Samolot nie: jest dużo gęstszy. Leci, bo **zmusza** powietrze, żeby go niosło, dzięki prędkości i kształtowi skrzydeł."
+          "text": "Balon z helem unosi się, bo ma mniejszą gęstość niż powietrze. Samolot nie: jest od niego dużo gęstszy. Lata, bo **zmusza** powietrze, żeby go niosło, dzięki prędkości i kształtowi skrzydeł."
         },
         {
           "type": "takeaway",
-          "text": "Samolot leci dzięki **sile nośnej**, którą dają skrzydła w ruchu w powietrzu. Prędkość jest niezbędna: bez niej skrzydło już nie „pcha” dość w górę, żeby zrównoważyć ciężar."
+          "text": "Samolot lata dzięki **sile nośnej**, którą wytwarzają skrzydła poruszające się w powietrzu. Prędkość jest niezbędna: bez niej skrzydło nie „pcha” już dość mocno w górę, żeby zrównoważyć ciężar."
         }
       ]
     }

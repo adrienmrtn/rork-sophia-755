@@ -4,11 +4,11 @@
   "subtitle": "Fleming, 1928",
   "subject": "sciences",
   "subcategory": "Otkrića koja su promijenila svijet",
-  "description": "Godine 1928. Alexander Fleming primijetio je da je plijesan ubila bakterije na posudi s kulturom. Tom prilikom je rođen prvi veliki antibiotik.",
+  "description": "Godine 1928. Alexander Fleming primjećuje da je plijesan ubila bakterije u Petrijevoj zdjelici. Iz te slučajnosti nastat će prvi veliki antibiotik.",
   "hero": {
     "image": "la_decouverte_de_la_penicilline",
     "ratio": "16:9",
-    "hook": "Zaboravljena kutija, kalup i lijek okrenut naopako."
+    "hook": "Zaboravljena zdjelica, plijesan i medicina se iz temelja mijenja."
   },
   "sections": [
     {
@@ -18,22 +18,22 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Prije antibiotika, jednostavna infekcija mogla je ubiti. Posjekotina, upala pluća, ratna rana: tijelo se često borilo samo."
+          "text": "Prije antibiotika i obična infekcija mogla je ubiti. Posjekotina, upala pluća, ratna rana: tijelo se često borilo samo."
         },
         {
           "type": "paragraph",
-          "text": "U **1928**, škotski liječnik **Alexander Fleming** slučajno je otkrio tvar koja može ubiti bakterije. Zvat će se **penicilin**. No još će trebati godine da se od njega pretvori u pravi lijek."
+          "text": "**1928. godine** škotski liječnik **Alexander Fleming** slučajno otkriva tvar koja može ubiti bakterije. Ta će se tvar zvati **penicilin**. No proći će još godine dok od nje ne nastane pravi lijek."
         }
       ]
     },
     {
       "id": "course_51_la_decouverte_de_la_penicilline_fleming_p1",
-      "title": "Zaboravljena kutija",
+      "title": "Zaboravljena zdjelica",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Fleming proučava bakterije u Londonu. Vraćajući se s odmora, gleda stare kutije kulture. Na jednom od njih izrastao je **kalup**. Oko nje su bakterije mrtve."
+          "text": "Fleming proučava bakterije u Londonu. Kad se vrati s odmora, pregledava stare Petrijeve zdjelice. Na jednoj je izrasla **plijesan**. Oko nje su bakterije uginule."
         },
         {
           "type": "image",
@@ -43,11 +43,11 @@
         },
         {
           "type": "paragraph",
-          "text": "Plijesan pripada rodu **Penicillium**. Fleming razumije da proizvodi antibakterijsku tvar. Zove ga penicilin. Ali on ga ne može dovoljno pročistiti da liječi bolesne."
+          "text": "Plijesan pripada rodu **Penicillium**. Fleming shvaća da ona proizvodi antibakterijsku tvar. Naziva je penicilin. No ne uspijeva je dovoljno pročistiti da bi njome liječio bolesnike."
         },
         {
           "type": "funFact",
-          "text": "Fleming je kasnije rekao da bi, da je bio uredniji, kutiju bacio. Nered u laboratoriju pomogao je otkriću."
+          "text": "Fleming je kasnije rekao da bi zdjelicu bacio da je bio uredniji. Nered u laboratoriju pomogao je otkriću."
         }
       ]
     },
@@ -58,11 +58,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Početkom **1940** godina, u Oxfordu, **Howard Florey** i **Ernst Lanac** vratili su se na posao. Sa svojim timom izolirali su, koncentrirali i testirali penicilin na životinjama, zatim na ljudima."
+          "text": "Početkom **1940-ih**, u Oxfordu, **Howard Florey** i **Ernst Chain** nastavljaju taj rad. Sa svojim timom izoliraju, koncentriraju i ispituju penicilin na životinjama, a zatim na ljudima."
         },
         {
           "type": "paragraph",
-          "text": "Drugi svjetski rat učinio je stvari hitnima: zaražene vojnike trebalo je liječiti. Penicilin prelazi iz laboratorija u strateško pitanje."
+          "text": "Zbog Drugog svjetskog rata posao postaje hitan: zaražene vojnike treba liječiti. Penicilin iz laboratorija prelazi u strateški važno pitanje."
         }
       ]
     },
@@ -79,26 +79,26 @@
         },
         {
           "type": "paragraph",
-          "text": "Za liječenje milijuna ljudi potrebne su ogromne količine. Sjedinjene Države industrijalizirale su proizvodnju tijekom rata. Ogromne bačve čine da plijesan nedostaje poput piva."
+          "text": "Za liječenje milijuna ljudi potrebne su goleme količine. Sjedinjene Američke Države tijekom rata pokreću industrijsku proizvodnju. U divovskim spremnicima plijesan se uzgaja gotovo kao da se kuha pivo."
         },
         {
           "type": "paragraph",
-          "text": "Godine **1945**, Fleming, Florey i Chain dobili su Nobelovu nagradu. Medicina ulazi u doba antibiotika."
+          "text": "**1945. godine** Fleming, Florey i Chain dobivaju Nobelovu nagradu. Medicina ulazi u doba antibiotika."
         }
       ]
     },
     {
       "id": "course_51_la_decouverte_de_la_penicilline_fleming_p4",
-      "title": "Sjena otpora",
+      "title": "Sjena otpornosti",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Danas je previše zloupotrijebljenih antibiotika omogućilo određenim bakterijama da postanu **otporne**: lijekovi ih više ne ubijaju. Fleming je već upozorio na ovaj rizik."
+          "text": "Danas su zbog prečeste i pogrešne upotrebe antibiotika neke bakterije postale **otporne**: lijekovi ih više ne ubijaju. Na tu je opasnost upozoravao već Fleming."
         },
         {
           "type": "takeaway",
-          "text": "Penicilin je rođen kao slučajnost koju je primijetio Fleming u **1928**, a zatim je postao lijek zahvaljujući Floreyu, Chainu i ratnoj industriji. Spasio je milijune života... sve dok ga ne istrošite."
+          "text": "Penicilin nastaje iz slučajnosti koju Fleming uočava **1928. godine**, a lijek postaje zahvaljujući Floreyju, Chainu i ratnoj industriji. Spasio je milijune života… pod uvjetom da se njime ne pretjeruje."
         }
       ]
     }

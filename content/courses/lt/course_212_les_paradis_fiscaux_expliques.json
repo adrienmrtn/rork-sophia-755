@@ -1,0 +1,108 @@
+{
+  "id": "course_212_les_paradis_fiscaux_expliques",
+  "title": "Mokesčių rojai: kur slepiasi 10 000 milijardų dolerių?",
+  "subtitle": "Paslėpta 10 000 milijardų",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Économie & société",
+  "description": "Apie 10 % pasaulio turto neskaidriose teritorijose išvengia mokesčių. Kaip ši sistema veikia ir kodėl ji tokia atspari?",
+  "hero": {
+    "image": "les_paradis_fiscaux_expliques",
+    "ratio": "16:9",
+    "hook": "Kaimanų salose gyvena 65 000 žmonių, o įmonių ten daugiau nei 100 000. Sveiki atvykę į mokesčių rojų pasaulį."
+  },
+  "sections": [
+    {
+      "id": "course_212_les_paradis_fiscaux_expliques_intro",
+      "title": "Įžanga",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kai kurios, dažnai mažytės, teritorijos leidžia įmonėms ir turtuoliams beveik visiškai išvengti mokesčių savo kilmės šalyje. Jos vadinamos **mokesčių rojais**. Skaičiuojama, kad juose laikoma apie 10 000 milijardų dolerių, t. y. 8-10 % pasaulio turto."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tai ne vien buhalterių problema: dėl to valstybės kasmet netenka 600 milijardų dolerių, už kuriuos būtų galima išlaikyti ligonines ar mokyklas. Štai kaip veikia ši tyli sistema ir kodėl ji taip gerai atsilaiko prieš reguliavimo bandymus."
+        }
+      ]
+    },
+    {
+      "id": "course_212_les_paradis_fiscaux_expliques_p1",
+      "title": "Kaip slepiami pinigai",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mokesčių rojus remiasi trimis ramsčiais: beveik nuliniais mokesčiais, dideliu neskaidrumu ir menku bendradarbiavimu su kitomis šalimis. Taip šios teritorijos pritraukia kapitalą iš viso pasaulio. Tokia ekonomika vadinama žodžiu [[ofšoras]]."
+        },
+        {
+          "type": "paragraph",
+          "text": "Keliose iš šių teritorijų galima įsteigti fiktyvią bendrovę: įmonę be biuro ir darbuotojų, kuri egzistuoja tik popieriuje. Dažnai vienintelis jos tikslas yra nuslėpti tikrojo pinigų savininko, vadinamojo tikrojo naudos gavėjo, tapatybę."
+        },
+        {
+          "type": "image",
+          "asset": "cayman_islands_offshore_banking_paradise",
+          "ratio": "4:3",
+          "caption": "Kaimanų salos: nors mažos, jos yra vienas didžiausių pasaulio finansų centrų."
+        },
+        {
+          "type": "funFact",
+          "text": "Kaimanų salose gyvena vos 65 000 žmonių, bet ten įregistruota daugiau nei 100 000 įmonių: pagal banko indėlius tai penktas pasaulio finansų centras, nors jo teritorija mažesnė už Paryžių."
+        }
+      ]
+    },
+    {
+      "id": "course_212_les_paradis_fiscaux_expliques_p2",
+      "title": "Menas priversti pelną išnykti",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Didelėms įmonėms tikslas nebūtinai neteisėtas: kalbama apie **mokesčių optimizavimą**, t. y. sumanų kiekvienos šalies taisyklių naudojimą, kad būtų mokama mažiau mokesčių. Pagrindinis įrankis yra [[sandorių kainodara]]: įmonė pati nustato sandorių tarp savo dukterinių bendrovių kainas, kad pelnas atsirastų ten, kur mokesčiai mažiausi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dažnas būdas yra perkelti prekės ženklą ar patentą dukterinei bendrovei mokesčių rojuje. Tada kitos dukterinės bendrovės, pavyzdžiui, Prancūzijoje, turi mokėti milžiniškas sumas už teisę naudotis tuo prekės ženklu. Šie mokėjimai sumažina jų vietoje apmokestinamą pelną, o mokesčių rojuje pelnas išpučiamas."
+        },
+        {
+          "type": "funFact",
+          "text": "Prancūziškas pavadinimas „paradis fiscal“ (mokesčių rojus) atsirado dėl vertimo klaidos: angliškai sakoma „tax haven“, t. y. saugus uostas pinigams (haven), o ne rojus (heaven). Panašiai skambantys žodžiai pakeitė prasmę."
+        }
+      ]
+    },
+    {
+      "id": "course_212_les_paradis_fiscaux_expliques_p3",
+      "title": "Pasaulis reaguoja (šiek tiek)",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pasipiktinimo bangą sukėlė 2008 m. finansų krizė, o 2016 m. ir paskelbti [[Panamos dokumentai]]. Spaudžiami EBPO ir G20, bankai dabar privalo automatiškai perduoti mokesčių administratoriams informaciją apie savo užsienio klientus."
+        },
+        {
+          "type": "paragraph",
+          "text": "Svarbiausias postūmis įvyko 2021 m., kai sudarytas tarptautinis susitarimas nustatė 15 % minimalų tarptautinių bendrovių pelno mokesčio tarifą. Idėja paprasta: neleisti šalims konkuruoti be galo mažinant mokesčius, kad pritrauktų įmones. Jei įmonė mokesčių rojuje moka tik 5 %, jos kilmės šalis dabar gali pareikalauti likusių 10 %."
+        }
+      ]
+    },
+    {
+      "id": "course_212_les_paradis_fiscaux_expliques_p4",
+      "title": "Vis dar trapus mokesčių teisingumas",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kai didžiausi turtuoliai išvengia mokesčių, didesnę mokesčių naštos dalį neša vidurinioji klasė ir mažos vietos įmonės. Be to, trūkstant lėšų, silpnėja viešosios paslaugos, pavyzdžiui, sveikatos apsauga ir švietimas."
+        },
+        {
+          "type": "paragraph",
+          "text": "Šiandien kova persikelia į skaitmeninę erdvę: internetinėms platformoms nebereikia biurų, kad uždirbtų pinigų kurioje nors šalyje, todėl mokesčių sienos tampa vis pralaidesnės. Mokesčių administratoriai dabar naudoja didžiuosius duomenis anomalijoms aptikti ir reikalauja viešų registrų, atskleidžiančių tikrųjų bendrovių savininkų tapatybę."
+        },
+        {
+          "type": "takeaway",
+          "text": "Mokesčių rojuose laikoma apie 10 % pasaulio turto: tai leidžia banko paslaptis ir beveik nuliniai mokesčiai. Nuo 2021 m. pasaulinis 15 % minimalus mokesčio tarifas bando pažaboti šį vengimą, bet kova toli gražu nelaimėta."
+        }
+      ]
+    }
+  ]
+}

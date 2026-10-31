@@ -1,6 +1,6 @@
 {
   "id": "course_243_pourquoi_a_t_on_invente_les_vampires",
-  "title": "Zakaj smo si izmislili vampirje?",
+  "title": "Zakaj so si ljudje izmislili vampirje?",
   "subtitle": "1645-1897",
   "subject": "mythologie",
   "subcategory": "Legende in bajeslovna bitja",
@@ -9,7 +9,7 @@
   "hero": {
     "image": "foggy_village_graveyard_night_balkans",
     "ratio": "4:3",
-    "hook": "Smrt je strašljiva. Še bolj strašljivo je, če je ne znamo razložiti."
+    "hook": "Smrt je strašljiva. Še bolj strašljivo je, če je ni mogoče razložiti."
   },
   "sections": [
     {
@@ -19,7 +19,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Leta **1645** je grški učenjak, ki je živel v Rimu, [[Leo Allatius]], opisal bitje, ki so se ga bali vaščani v njegovi domovini: [[vrikolakas]]. Mrlič, ki ponoči vstaja in se vrača mučit lastno družino, ker so ga pokopali brez poslednjih zakramentov. Uniči ga lahko le ogenj."
+          "text": "Leta **1645** je [[Leo Allatius]], grški učenjak, ki je živel v Rimu, opisal bitje, ki so se ga bali vaščani v njegovi domovini: [[vrikolakas]]. Mrlič, ki ponoči vstaja in se vrača mučit lastno družino, ker so ga pokopali brez poslednjih zakramentov. Uniči ga lahko le ogenj."
         },
         {
           "type": "paragraph",
@@ -54,12 +54,12 @@
     },
     {
       "id": "course_243_pourquoi_a_t_on_invente_les_vampires_p2",
-      "title": "Bolezen za legendo",
+      "title": "Bolezen v ozadju legende",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "V 19. stoletju je v Novi Angliji drugačen strah dobil enako podobo. Povzročala ga je [[tuberkuloza]], ki so ji tedaj rekli »jetika«: bolniki so mesece hujšali in kašljali. Ker je nalezljiva, je prehajala z enega družinskega člana na drugega. Od zunaj je bilo videti, kot da se mrlič vrača in drugega za drugim izčrpava svoje bližnje. Stare balkanske tradicije to ne pojasni: gre za dve vzporedni verovanji, nastali v različnih časih in krajih, ki pa odgovarjata na isto tesnobo."
+          "text": "V 19. stoletju je v Novi Angliji drug strah dobil enako podobo. Tam je razsajala [[tuberkuloza]], ki so ji tedaj rekli »jetika«: bolniki so mesece hujšali in kašljali. Ker je nalezljiva, je prehajala z enega družinskega člana na drugega. Od zunaj je bilo videti, kot da se mrlič vrača in svojim bližnjim drugemu za drugim jemlje življenje. Stare balkanske tradicije pa tuberkuloza ne pojasni: gre za dve vzporedni verovanji, nastali v različnih časih in krajih, ki pa odgovarjata na isto tesnobo."
         },
         {
           "type": "image",
@@ -69,7 +69,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Leta **1892** je v Exeterju na Rhode Islandu za tuberkulozo pri 19 letih umrla [[Mercy Brown]], za materjo in sestro. Ko je zbolel še njen brat Edwin, so sosedje izkopali vsa tri trupla. Mercyjino truplo, pokopano sredi zime, je bilo dobro ohranjeno, v srcu pa je bilo še vedno nekaj krvi. Srce so sežgali in pepel dali piti Edwinu kot zdravilo. Umrl je dva meseca pozneje."
+          "text": "Leta **1892** je v Exeterju na Rhode Islandu za tuberkulozo umrla [[Mercy Brown]], stara 19 let, potem ko sta umrli že njena mati in sestra. Ko je zbolel še njen brat Edwin, so sosedje izkopali vsa tri trupla. Mercyjino truplo, pokopano sredi zime, je bilo dobro ohranjeno, v srcu pa je bilo še vedno nekaj krvi. Srce so sežgali in pepel dali piti Edwinu kot zdravilo. Umrl je dva meseca pozneje."
         },
         {
           "type": "funFact",
@@ -131,7 +131,7 @@
             },
             {
               "date": "1892",
-              "title": "Izkop Mercy Brown",
+              "title": "Ekshumacija Mercy Brown",
               "detail": "Zadnji veliki vampirski primer v ZDA."
             },
             {

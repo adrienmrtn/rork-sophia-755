@@ -4,7 +4,7 @@
   "subtitle": "Ciało i emocje",
   "subject": "sciences",
   "subcategory": "Codzienność bez tajemnic",
-  "description": "Zimno, strach, muzyka: dreszcze mają kilka przyczyn. Wszystkie idą przez układ nerwowy, ale nie z tych samych powodów.",
+  "description": "Zimno, strach, muzyka: dreszcze mają kilka przyczyn. Za wszystkie odpowiada układ nerwowy, ale z różnych powodów.",
   "hero": {
     "image": "pourquoi_a_t_on_des_frissons",
     "ratio": "16:9",
@@ -18,32 +18,32 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Dostajesz dreszczy, gdy wychodzisz pod deszcz. Dostajesz ich też, gdy słyszysz piosenkę, która cię rusza. To samo słowo, inne mechanizmy."
+          "text": "Dostajesz dreszczy, gdy wychodzisz na deszcz. Dostajesz ich też, gdy słyszysz piosenkę, która cię porusza. To samo słowo, różne mechanizmy."
         },
         {
           "type": "paragraph",
-          "text": "W obu przypadkach ciało reaguje szybko. Jedno służy głównie do ogrzania, drugie bardziej do przyjemności i emocji."
+          "text": "W obu przypadkach ciało reaguje szybko. Ale jeden dreszcz służy głównie do rozgrzania się, a drugi ma związek raczej z przyjemnością i emocjami."
         }
       ]
     },
     {
       "id": "course_49_pourquoi_a_t_on_des_frissons_p1",
-      "title": "Dreszcz od zimna: mini-piecyk",
+      "title": "Dreszcz od zimna: minipiecyk",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ciało chce zostać koło **37°C**. Gdy skóra czuje zimno, zawiadamia strefę mózgu, **podwzgórze**, które działa jak termostat."
+          "text": "Ciało stara się utrzymać temperaturę około **37°C**. Gdy skóra wyczuwa zimno, ostrzega obszar mózgu zwany **podwzgórzem**, który działa jak termostat."
         },
         {
           "type": "image",
           "asset": "goosebumps_cold_skin",
           "ratio": "4:3",
-          "caption": "Gęsia skórka: stary odruch, żeby nastroszyć włosy."
+          "caption": "Gęsia skórka: dawny odruch, który stroszy włosy."
         },
         {
           "type": "paragraph",
-          "text": "Mięśnie kurczą się bardzo szybko i wielokrotnie: to dreszcz. Te skurcze produkują ciepło. „Gęsia skórka” idzie ze starego odruchu: nastroszyć włosy, żeby lepiej izolować. U nas, przy słabej sierści, zostaje głównie ślad."
+          "text": "Mięśnie kurczą się bardzo szybko i wiele razy z rzędu: to właśnie dreszcz. Te skurcze wytwarzają ciepło. „Gęsia skórka” to pozostałość dawnego odruchu: zjeżone włosy lepiej izolują. U nas, przy tak skąpym owłosieniu, to już głównie relikt."
         }
       ]
     },
@@ -54,7 +54,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Wobec zagrożenia rusza [[współczulny układ nerwowy]] (gałąź alarmowa układu nerwowego). Uwalnia **adrenalinę**. Mięśnie się napinają, serce przyspiesza, skóra może dostać dreszczy."
+          "text": "W obliczu zagrożenia uruchamia się [[współczulny układ nerwowy]] („alarmowa” część układu nerwowego). Wydziela on **adrenalinę**. Mięśnie się napinają, serce przyspiesza, po skórze mogą przejść dreszcze."
         },
         {
           "type": "image",
@@ -64,7 +64,7 @@
         },
         {
           "type": "funFact",
-          "text": "Ten sam układ tłumaczy, czemu możesz dostać gęsiej skórki przy horrorze, choć siedzisz ciepło na kanapie."
+          "text": "Ten sam układ wyjaśnia, dlaczego możesz dostać gęsiej skórki, oglądając horror, choć siedzisz w cieple na kanapie."
         }
       ]
     },
@@ -75,11 +75,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Niektóre dreszcze, zwane czasem „chills”, przychodzą z silną emocją: muzyka, mowa, film. Włączają obwód **nagrody** w mózgu, z **dopaminą**, substancją związaną z przyjemnością."
+          "text": "Niektóre dreszcze, nazywane czasem „chills”, pojawiają się przy silnych emocjach: przy muzyce, przemówieniu, filmie. Uruchamiają w mózgu układ **nagrody**, z udziałem **dopaminy**, substancji związanej z przyjemnością."
         },
         {
           "type": "paragraph",
-          "text": "To nie przydaje się od razu do przeżycia. To raczej ciało, które reaguje na mocną emocję, jak fala, która przechodzi."
+          "text": "Nie pomagają przetrwać tu i teraz. To raczej reakcja ciała na silną emocję, która przechodzi jak fala."
         }
       ]
     },
@@ -90,11 +90,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Dreszcze z wysoką gorączką mogą oznaczać infekcję. Stałe dreszcze bez jasnego powodu zasługują na opinię lekarza. Ale zwykle dreszcz od zimna, stresu albo muzyki to po prostu ciało, które robi swoje."
+          "text": "Dreszcze z wysoką gorączką mogą oznaczać infekcję. Uporczywe dreszcze bez wyraźnej przyczyny warto skonsultować z lekarzem. Ale zwykle dreszcz z zimna, ze stresu albo od muzyki to po prostu ciało, które robi swoje."
         },
         {
           "type": "takeaway",
-          "text": "Dreszcze od zimna produkują ciepło. Te od strachu szykują do reakcji. Te od muzyki idą w emocjonalną przyjemność. To samo czucie, inne przyczyny."
+          "text": "Dreszcze z zimna wytwarzają ciepło. Te ze strachu przygotowują do reakcji. Te od muzyki wiążą się z przyjemnością i emocjami. To samo odczucie, różne przyczyny."
         }
       ]
     }

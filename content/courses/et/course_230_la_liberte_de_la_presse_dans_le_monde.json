@@ -1,14 +1,14 @@
 {
   "id": "course_230_la_liberte_de_la_presse_dans_le_monde",
-  "title": "Kas pressivabadus taandub kõikjal?",
-  "subtitle": "Seadus surve all",
+  "title": "Kas ajakirjandusvabadus taandub kõikjal?",
+  "subtitle": "Õigus surve all",
   "subject": "comprendreLeMonde",
   "subcategory": "Keskkond ja tulevik",
-  "description": "Vähem kui **10% maailmast** elab riigis, kus ajakirjandus on tõeliselt vaba. Riikliku tsensuuri ja majandusliku surve vahel on see oluline õigus peaaegu kõikjal taganemas.",
+  "description": "Vähem kui **10% maailma elanikkonnast** elab riigis, kus ajakirjandus on tõeliselt vaba. Riiklik tsensuur ja majanduslik surve suruvad seda olulist õigust peaaegu kõikjal tagasi.",
   "hero": {
     "image": "la_liberte_de_la_presse_dans_le_monde",
     "ratio": "16:9",
-    "hook": "Teavitamine maksab mõnikord vabadust või isegi elu: teekond hapra õiguse südamesse."
+    "hook": "Ajakirjanikutöö eest makstakse mõnikord vabaduse või isegi eluga: rännak hapra õiguse südamesse."
   },
   "sections": [
     {
@@ -18,7 +18,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Ajakirjandusvabadus** on üks parimaid riigi demokraatliku tervise näitajaid. See ei piirdu avaldamisõigusega: see hõlmab kodanike võimalust pääseda juurde kontrollitud teabele, sõltumata kehtivatest volitustest. Kogu maailmas on see õigus kahekordse surve all: otsesed repressioonid autoritaarsetes režiimides ja diskreetsem nõrgenemine demokraatiates endis."
+          "text": "**Ajakirjandusvabadus** on üks parimaid riigi demokraatia tervise näitajaid. See ei piirdu õigusega avaldada: see hõlmab ka kodanike võimalust saada kontrollitud teavet, mis on võimulolijatest sõltumatu. Kogu maailmas on see õigus kahekordse surve all: autoritaarsetes režiimides otsesed repressioonid, demokraatiates endis aga märkamatum nõrgenemine."
         }
       ]
     },
@@ -29,7 +29,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Organisatsioon [[Piirideta Reporterid (RSF)]] avaldab igal aastal teatmeteose ajakirjanduse elukutse takistustest maailmas."
+          "text": "Organisatsioon [[Piirideta Reporterid (RSF)]] avaldab igal aastal mõjuka aruande selle kohta, mis takistab ajakirjanike tööd maailmas."
         },
         {
           "type": "image",
@@ -43,30 +43,30 @@
         },
         {
           "type": "funFact",
-          "text": "Türkmenistanis kontrollib riik teavet nii rangelt, et keelustas 2020. aasta pandeemia alguses sõna \"koroonaviirus\" meedias."
+          "text": "Türkmenistanis kontrollib riik teavet nii rangelt, et 2020. aasta pandeemia alguses keelati meedias sõna „koroonaviirus“."
         },
         {
           "type": "paragraph",
-          "text": "2023. aastal kaotas vähemalt 79 ajakirjanikku oma elukutset täites, mille eesmärk on sageli vaigistada piinlikke uurimisi. Igal aastal pannakse üle maailma vangi ligi 600 ajakirjanikku."
+          "text": "2023. aastal hukkus tööd tehes vähemalt 79 ajakirjanikku. Sageli võeti nad sihikule, et vaigistada ebamugavaid uurimusi. Igal aastal pannakse üle maailma vangi ligi 600 ajakirjanikku."
         }
       ]
     },
     {
       "id": "course_230_la_liberte_de_la_presse_dans_le_monde_p2",
-      "title": "Demokraatiad pole immuunsed",
+      "title": "Ka demokraatiad pole kaitstud",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Vastupidiselt levinud arvamusele pole ajakirjandusvabadus lääneriikides igavesti tagatud. See läbis seal diskreetsemaid ümberkujundamisi, mis olid seotud [[meedia kontsentratsioon]] ja mõne suure grupi finantsmõjuga."
+          "text": "Erinevalt levinud arvamusest ei ole ajakirjandusvabadus lääneriikides igaveseks tagatud. Seal muutub see märkamatumalt: selle taga on [[meedia koondumine]] ja mõne suure kontserni rahaline mõju."
         },
         {
           "type": "paragraph",
-          "text": "Ungaris rakendas [[Viktor Orbán]] tõhusat strateegiat: opositsioonilise meedia keelamise asemel eelistas ta nende ülevõtmist valitsuse lähedastele, muutes meediamaastiku järk-järgult ametlikuks kajakambriks."
+          "text": "Ungaris valis [[Viktor Orbán]] tõhusa strateegia: opositsioonimeedia keelamise asemel aitas ta valitsusele lähedastel inimestel selle välja osta ning muutis meediamaastiku järk-järgult ametlikuks kajakambriks."
         },
         {
           "type": "paragraph",
-          "text": "Prantsusmaal puudutab debatt peamiselt meedia koondumist mõne suure grupi kätte, mis tekitab kartusi toimetuse enesetsensuuri ees. Mujal sagenevad kuritahtlikud kohtumenetlused nimega [[LÄKS]], et hirmutada kriitilisi hääli."
+          "text": "Prantsusmaal käib arutelu peamiselt selle üle, et meedia on koondunud mõne suure kontserni kätte, mistõttu kardetakse toimetuste enesetsensuuri. Mujal sagenevad kuritarvituslikud kohtuhagid, nn [[SLAPP]], mille eesmärk on kriitilisi hääli hirmutada."
         }
       ]
     },
@@ -77,44 +77,44 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Lisaks poliitilistele ohtudele seisab ajakirjandus silmitsi sügava majanduskriisiga. Individuaalsel müügil ja reklaamil põhinev ajalooline mudel on digitehnoloogiaga kokku varisenud ning nüüd hõivavad suurema osa veebireklaamidest suured platvormid."
+          "text": "Lisaks poliitilistele ohtudele on ajakirjandus sügavas majanduskriisis. Ajalooline mudel, mis põhines üksiknumbrite müügil ja reklaamil, varises digiajastul kokku, sest suurema osa veebireklaamist haaravad nüüd endale suured platvormid."
         },
         {
           "type": "image",
           "asset": "newspaper_crisis_digital_transformation_journalism",
           "ratio": "4:3",
-          "caption": "Ajakirjanduse ajalooline majandusmudel on digitaaltehnoloogiaga kokku varisenud."
+          "caption": "Ajakirjanduse ajalooline ärimudel varises digiajastul kokku."
         },
         {
           "type": "paragraph",
-          "text": "See ressursside vähenemine paneb paljud kohalikud ajalehed sulgema, tekitades \"infokõrbeid\", kus keegi ei jälgi kohalike valitud ametnike tegevust. Sellega silmitsi seistes kerkivad esile uued mudelid, mida rahastatakse annetuste või otsetellimuste kaudu, nagu Mediapart Prantsusmaal või ProPublica Ameerika Ühendriikides, mis tõestavad, et ka sõltumatu ajakirjandus võib olla kasumlik."
+          "text": "Rahapuuduse tõttu suletakse palju kohalikke ajalehti ja tekivad „infokõrbed“, kus keegi enam ei jälgi kohalike poliitikute tegevust. Vastukaaluks kerkivad esile uued mudelid, mida rahastatakse annetuste või otsetellimuste kaudu, näiteks Mediapart Prantsusmaal või ProPublica Ameerika Ühendriikides. Need tõestavad, et sõltumatu ajakirjandus võib olla ka kasumlik."
         },
         {
           "type": "funFact",
-          "text": "Ajaloo esimese trükitud ajalehe \"Suhe\" andis Strasbourgis 1605. aastal välja Johann Carolus, palju enne ajakirjandusvabaduse seaduslikku leiutamist."
+          "text": "Ajaloo esimese trükitud ajalehe „Relation“ andis 1605. aastal Strasbourgis välja Johann Carolus, ammu enne kui ajakirjandusvabadus seadusesse kirjutati."
         }
       ]
     },
     {
       "id": "course_230_la_liberte_de_la_presse_dans_le_monde_p4",
-      "title": "Reaalsuse kontrollimine piltidest küllastunud maailmas",
+      "title": "Tegelikkuse kontroll piltide üleujutuses",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Digiajastu on muutnud info kiiremaks, kuid avanud ka ukse [[desinformatsioon]]. Sotsiaalmeedia algoritmid eelistavad emotsionaalset sisu faktilisele analüüsile, killustades meie ühist maailmapilti."
+          "text": "Digiajastu on teinud info kiiremaks, kuid avanud ka ukse, mille kaudu levib [[desinformatsioon]]. Sotsiaalmeedia algoritmid eelistavad emotsionaalset sisu faktilisele analüüsile ja killustavad nii meie ühist maailmapilti."
         },
         {
           "type": "paragraph",
-          "text": "Ajakirjaniku roll on seega muutumas reaalsuse “kontrollija” rolliks pidevas piltide ja andmete voos. Eetilised küsimused muutuvad keerulisemaks, nagu fotoajakirjanduses konfliktipiirkondades, kus inimväärikuse austamine põrkub mõnikord näitamisvajadusega."
+          "text": "Seepärast muutub ajakirjaniku roll pidevas piltide ja andmete voos üha enam tegelikkuse „kontrollija“ rolliks. Eetilised küsimused muutuvad keerulisemaks, näiteks fotoajakirjanduses konfliktipiirkondades, kus inimväärikuse austamine põrkub mõnikord vajadusega näidata."
         },
         {
           "type": "paragraph",
-          "text": "Ajakirjandusvabaduse kaitsmine nõuab seetõttu suuremate digiplatvormide paremat reguleerimist ja tugevdatud meediaharidust. Ilma fakte kontrolliva vaba ajakirjanduseta ähvardab demokraatlik debatt maailmas, kus kõik arvamused on võrdsed, sõltumata nende tõest."
+          "text": "Ajakirjandusvabaduse kaitsmiseks on seega vaja suuri digiplatvorme paremini reguleerida ja meediaharidust tugevdada. Ilma vaba ajakirjanduseta, mis suudab fakte kontrollida, võib demokraatlik arutelu hajuda maailmas, kus kõik arvamused on võrdsed, olgu need tõesed või mitte."
         },
         {
           "type": "takeaway",
-          "text": "Vähem kui 10% maailma elanikkonnast elab riigis, kus ajakirjandus on tõeliselt vaba. Otsese repressiooni, majandusliku surve ja digitaalse desinformatsiooni vahel väheneb see oluline õigus demokraatiale peaaegu kõikjal."
+          "text": "Vähem kui 10% maailma elanikkonnast elab riigis, kus ajakirjandus on tõeliselt vaba. Otsesed repressioonid, majanduslik surve ja digitaalne desinformatsioon suruvad seda demokraatia jaoks olulist õigust peaaegu kõikjal tagasi."
         }
       ]
     }

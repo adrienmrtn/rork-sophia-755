@@ -1,0 +1,129 @@
+{
+  "id": "course_15_la_belle_epoque_1871_1914",
+  "title": "Kas yra Gražioji epocha?",
+  "subtitle": "1871-1914",
+  "subject": "histoire",
+  "subcategory": "Révolutions & conflits modernes",
+  "description": "Nuo 1870 m. karo pabaigos iki 1914 m. rugpjūčio Europa tiki pažanga. Elektra, parodos, naujas menas… ir lūžiai, vedantys į katastrofą.",
+  "hero": {
+    "image": "la_belle_epoque",
+    "ratio": "16:9",
+    "hook": "Keturiasdešimt metų tikėjimo pažanga… kol 1914 m. viskas apvirsta."
+  },
+  "sections": [
+    {
+      "id": "course_15_la_belle_epoque_1871_1914_intro",
+      "title": "Įvadas",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Gražioji epocha** yra santykinės taikos laikotarpis. Jis prasideda, kai baigiasi [[Prancūzijos-Prūsijos karas]] (**1871**), ir trunka, kol prasideda [[Pirmasis pasaulinis karas]] (**1914**). Tuo metu tikima mokslu, pažanga, protu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vakarų Europos pasiturintiems sluoksniams tai keturi komforto ir išradimų dešimtmečiai. Tačiau po blizgiu paviršiumi jau slypi socialiniai lūžiai ir varžybos, kurios viską susprogdins."
+        }
+      ]
+    },
+    {
+      "id": "course_15_la_belle_epoque_1871_1914_p1",
+      "title": "Kai technika keičia kasdienybę",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Antroji pramonės revoliucija atneša **elektrą**, **naftą**, chemiją. Tramvajus ir metro (Paryžius, **1900**) keičia miestą. Gimsta automobilis ir lėktuvas. Telefonas sutrumpina atstumus."
+        },
+        {
+          "type": "image",
+          "asset": "paris_universal_exhibition_1900",
+          "ratio": "4:3",
+          "caption": "1900 m. Paryžiaus pasaulinė paroda, pažangos vitrina."
+        },
+        {
+          "type": "funFact",
+          "text": "Pavadinimas „Gražioji epocha“ atsiranda tik po **1914** m. Amžininkai negyveno „Gražiojoje epochoje“: šį prarastąjį rojų išgalvojo apkasus išgyvenusieji."
+        },
+        {
+          "type": "paragraph",
+          "text": "**1900 m. pasaulinė paroda** sutraukia **50 milijonų** lankytojų. Brolių Lumière'ų kinas ir „Moulin Rouge“ paverčia Paryžių pramogų sostine. [[Auguste'o Comte'o pozityvizmas]], labai įtakinga filosofija, apibendrina optimizmą: mokslas viską išspręs."
+        }
+      ]
+    },
+    {
+      "id": "course_15_la_belle_epoque_1871_1914_p2",
+      "title": "Kita medalio pusė",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Už bulvarų darbininkai dažnai dirba **10-12 valandų** per dieną, be tikros apsaugos. Miesto skurdas kursto klasių įtampą."
+        },
+        {
+          "type": "image",
+          "asset": "eiffel_tower_1889",
+          "ratio": "4:3",
+          "caption": "Eifelio bokštas (1889), modernybės simbolis, kurios vaisiais naudojasi ne visi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pasauliniu mastu Europa dalijasi Afriką. [[Berlyno konferencija]] (**1884-1885**) nubrėžia sienas, neatsiklaususi susijusių tautų. Prancūzijoje Respubliką skaldo [[Dreyfuso byla]]: žydų kilmės karininkas Alfredas Dreyfusas neteisingai nuteisiamas už šnipinėjimą, ir antisemitizmas prasiveržia viešai."
+        }
+      ]
+    },
+    {
+      "id": "course_15_la_belle_epoque_1871_1914_p3",
+      "title": "Naujas menas, paskui žlugimas",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Menai sprogsta. [[Modernas (Art nouveau)]] išlenkia fasadus. Tapybą sukrečia [[fovizmas]] ir [[kubizmas]]. Gydytojas [[Sigmundas Freudas]] tyrinėja pasąmonę. **1905** m. pasirodo Alberto Einsteino [[Reliatyvumo teorija]]: erdvė ir laikas nebėra tokie, kokiais buvo laikomi."
+        },
+        {
+          "type": "funFact",
+          "text": "**1913** m. Igorio Stravinskio baletas *Pavasario šventė* Paryžiuje sukelia tokį skandalą, kad kai kurie žiūrovai susimuša."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tada viskas apvirsta. **1914 m. birželio 28 d.** Sarajeve nužudomas Austrijos-Vengrijos sosto įpėdinis erchercogas **Pranciškus Ferdinandas**. Įsijungia sąjungų mechanizmas. **Rugpjūčio 4 d.** į karą stoja Jungtinė Karalystė. Tikėjimas pažanga miršta apkasuose."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1871",
+              "title": "Prancūzijos-Prūsijos karo pabaiga",
+              "detail": "Gimsta suvienyta Vokietija, prancūzai jaučia nuoskaudą."
+            },
+            {
+              "date": "1889",
+              "title": "Eifelio bokštas",
+              "detail": "Techninės modernybės simbolis."
+            },
+            {
+              "date": "1894-1906",
+              "title": "Dreyfuso byla",
+              "detail": "Respublika skyla."
+            },
+            {
+              "date": "1900",
+              "title": "Pasaulinė paroda",
+              "detail": "Paryžius, pasaulio vitrina."
+            },
+            {
+              "date": "1914 m. rugpjūtis",
+              "title": "Didysis karas",
+              "detail": "Gražioji epocha staiga baigiasi."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Gražioji epocha (**1871-1914**) sujungia techninę pažangą ir gilius lūžius, kol nugrimzta į Didžiojo karo chaosą."
+        }
+      ]
+    }
+  ]
+}

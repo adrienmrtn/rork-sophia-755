@@ -1,0 +1,116 @@
+{
+  "id": "course_163_pandore_et_la_boite",
+  "title": "Kas iš tikrųjų buvo Pandoros skrynioje?",
+  "subtitle": "Nelaimių ąsotis",
+  "subject": "mythologie",
+  "subcategory": "Grèce : les dieux",
+  "description": "Pandora, pirmoji dievų sukurta moteris, atidaro ąsotį, pilną nelaimių. Dugne lieka viltis. Mitas apie smalsumą ir nelaimę.",
+  "hero": {
+    "image": "pandore_et_la_boite",
+    "ratio": "16:9",
+    "hook": "Tai buvo ne skrynia. Tai buvo ąsotis. O tai, kas jame buvo, pakeitė žmonių likimą."
+  },
+  "sections": [
+    {
+      "id": "course_163_pandore_et_la_boite_intro",
+      "title": "Įžanga",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Graikų mitologijoje **Pandora** nėra tik veikėja. Ji yra pirmoji moteris, dievų sukurta kaip spąstai. **Dzeusas** nori nubausti žmones, kuriems ugnį atnešė [[Prometėjas]]."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pandora atkeliauja su ąsočiu. Jį atidariusi, ji išleidžia nelaimes, kurios baigia žmonių nerūpestingumą. Dugne lieka kažkas mįslingo: **viltis**. Taip ir atsirado posakis „atverti Pandoros skrynią“."
+        }
+      ]
+    },
+    {
+      "id": "course_163_pandore_et_la_boite_p1",
+      "title": "Dievai sukuria „gražų blogį“",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Po ugnies vagystės Dzeusas liepia **Hefaistui**, kalvystės dievui, nulipdyti iš molio ir vandens moterį, gražią kaip deivė. Kiekvienas olimpietis prideda po dovaną. **Atėnė** išmoko ją austi. **Afroditė** suteikia jai žavesio. **Hermis**, dievų pasiuntinys, įdiegia jai gudrumą ir melą."
+        },
+        {
+          "type": "image",
+          "asset": "pandora_opening_jar_pithos_painting",
+          "ratio": "4:3",
+          "caption": "Pandora, „ta, kuri gavo visas dovanas“, sukurta apgauti žmonėms."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ji pavadinama **Pandora**: „ta, kuri gavo visas dovanas“. Prometėjas buvo įspėjęs savo brolį **Epimetėją** nepriimti jokios Dzeuso dovanos. Per vėlu. Epimetėjas, tas, kuris susimąsto tik po laiko, susižavi ja ir priima ją."
+        },
+        {
+          "type": "funFact",
+          "text": "Graikų pasakojime Pandora sukurta ne kaip palydovė. Ji sumanyta kaip bausmė, „gražus blogis“, skirtas užklupti žmoniją."
+        }
+      ]
+    },
+    {
+      "id": "course_163_pandore_et_la_boite_p2",
+      "title": "Ąsotis atsidaro, nelaimės išsilaksto",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pandora neša „pithos“, didelį ąsotį atsargoms laikyti. Lotyniški tekstai ir šiuolaikiniai vertimai pavers jį „skrynia“. Viduje dievai uždarė senatvę, ligas, badą, beprotybę, karą."
+        },
+        {
+          "type": "funFact",
+          "text": "„Skrynios“ klaidą XVI a. padaro [[Erazmas Roterdamietis]]. Versdamas Hesiodą, jis supainioja „pithos“ (ąsotį) ir „pyxis“ (mažą dėžutę)."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dievų įdiegto smalsumo skatinama, Pandora pakelia dangtį. Nelaimės ištrūksta visos iš karto. Išsigandusi ji uždaro ąsotį. Per vėlu. Dugne įsikibusi lieka tik [[Elpis]], Viltis."
+        }
+      ]
+    },
+    {
+      "id": "course_163_pandore_et_la_boite_p3",
+      "title": "Viltis: vaistas ar spąstai?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kodėl viltis lieka ąsotyje? Apie tai ginčijamasi nuo Antikos laikų. Jei inde buvo tik nelaimės, ar reikia manyti, kad ir viltis yra viena iš jų?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Kai kurių, pavyzdžiui, filosofo **Nietzsche's**, nuomone, viltis prailgina kančią: ji trukdo susitaikyti su tikrove. Kiti mano, kad Dzeusas ją paliko tyčia, kaip vienintelį vaistą nuo nevilties."
+        },
+        {
+          "type": "paragraph",
+          "text": "Graikiškai [[Elpis]] nėra vien teigiamas žodis. Jis reiškia laukimą to, kas ateis, gera ar bloga. Tai neutrali jėga, galinti išgelbėti arba kankinti."
+        }
+      ]
+    },
+    {
+      "id": "course_163_pandore_et_la_boite_p4",
+      "title": "Ką mitas paliko po savęs",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Hesiodo**, „Teogonijos“ autoriaus, pasakojime apie Pandorą juntama stipri [[mizoginija]]: moteris čia atrodo kaip našta vyrui. Šis mitas dažnai lygintas su Ieva ir bibliniu nuopuoliu."
+        },
+        {
+          "type": "funFact",
+          "text": "Kitose versijose ąsotyje buvo gėrybės. Išskridusios į Olimpą, jos esą tapo nepasiekiamos mirtingiesiems."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vėliau Pandora tampa ir smalsumo simboliu. Jos nepaklusnumas atveria kelią nelaimei, bet kartu skatina žmoniją dirbti, išradinėti, išgyventi. Šiandien „atverti Pandoros skrynią“ reiškia imtis veiksmo, kurio padarinių nebeįmanoma suvaldyti."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Pandoros** ąsotis baigia žmonių nerūpestingumą. Nelaimės pasklinda, o **viltis** lieka dugne: vienintelė, nors ir dviprasmiška, atsvara nelaimei."
+        }
+      ]
+    }
+  ]
+}

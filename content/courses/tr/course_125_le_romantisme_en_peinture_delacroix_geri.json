@@ -8,7 +8,7 @@
   "hero": {
     "image": "le_romantisme_en_peinture",
     "ratio": "16:9",
-    "hook": "Resim antik heykelleri taklit etmeyi bırakıp tutkuyu ve skandalı boyayınca."
+    "hook": "Resim, antik heykelleri taklit etmeyi bırakıp tutkuyu ve skandalı anlatmaya başlayınca."
   },
   "sections": [
     {
@@ -18,7 +18,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Resimde **romantizm** **1810** ile **1850** arasında açılır. [[David'in Neoklasizm'i]] katılığına karşı durur: daha az soğuk akıl, daha çok duygu, hareket ve bunalım."
+          "text": "Resimde **romantizm**, **1810** ile **1850** arasında doruğa ulaşır. [[David'in neoklasizmi]] akımının katılığına karşı çıkar: daha az soğuk akıl, daha çok duygu, hareket ve iç çalkantı."
         },
         {
           "type": "paragraph",
@@ -39,15 +39,15 @@
           "type": "image",
           "asset": "jacques_louis_david_oath_of_horatii_painting",
           "ratio": "4:3",
-          "caption": "David'in Horatiuslar'ın Yemini: neoklasik katılık ideali"
+          "caption": "David'in Horatiusların Yemini tablosu: neoklasik katılık ideali"
         },
         {
           "type": "funFact",
-          "text": "*Horatiuslar'ın Yemini* sunulurken bazı izleyiciler eserin gücü karşısında bayılırdı: neoklasizm akademikleşmeden önce de duygulandırmayı bilirdi."
+          "text": "*Horatiusların Yemini* ilk sergilendiğinde bazı kadın izleyiciler eserin gücü karşısında bayıldı: neoklasizm de akademikleşmeden önce insanları duygulandırmayı biliyordu."
         },
         {
           "type": "paragraph",
-          "text": "Romantikler dram, gizem ve duyguların şiddetini ister. Yunan kahramanlara [[Shakespeare]] ya da [[Byron]] tercih ederler, düzgün peyzajlara yaban bir doğa. Leke daha görünür, karşıtlıklar daha belirgin olur."
+          "text": "Romantikler dram, gizem ve duyguların şiddetini ister. [[Shakespeare]] ya da [[Byron]] gibi yazarları Yunan kahramanlarına, yabani bir doğayı da düzenli peyzajlara tercih ederler. Fırça vuruşu daha görünür, karşıtlıklar daha belirgin hâle gelir."
         }
       ]
     },
@@ -58,7 +58,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Théodore Géricault** romantizmi *Medusa'nın Salı* (**1819**) ile kamu alanına fırlatır. Eser gerçek bir skandala dayanır: fırkateyn *Méduse*'ün **1816**'da batışı. Kraliyet kayırmasıyla atanmış bir kaptan yaklaşık **150** denizciyi derme çatma bir salda bırakır."
+          "text": "**Théodore Géricault**, *Medusa'nın Salı* (**1819**) ile romantizmi kamuoyunun gündemine taşır. Eser gerçek bir skandala dayanır: *Méduse* fırkateyninin **1816**'daki batışı. Kralın kayırmasıyla atanmış bir kaptan, yaklaşık **150** denizciyi derme çatma bir salın üzerinde kaderine terk eder."
         },
         {
           "type": "image",
@@ -68,11 +68,11 @@
         },
         {
           "type": "funFact",
-          "text": "Géricault, her tahtayı yoklamak için Medusa'nın gemi ustasına, kazazedeye, salın birebir kopyasını yaptırdı."
+          "text": "Géricault, her tahtayı doğrulamak için salın birebir kopyasını *Méduse* fırkateyninin kendi marangozuna yaptırdı. Bu marangoz da kazadan sağ kurtulanlardandı."
         },
         {
           "type": "paragraph",
-          "text": "Bedenlerin gerçeğini resmetmek için cesetleri inceler. Kraliyet formatında bir tuvalde isimsizlerin can çekişmesini gösterir. Kompozisyonun zirvesinde siyah bir denizci minik bir gemiye bez sallar: [[kölelik karşıtı]] bir jest ve seçkinlerin eleştirisi."
+          "text": "Bedenleri gerçeğe uygun resmetmek için cesetleri inceler. Krallara yakışır büyüklükte bir tuvalde isimsiz insanların can çekişmesini gösterir. Kompozisyonun tepesinde siyah bir denizci, minicik bir gemiye doğru bir bez parçası sallar: [[kölelik karşıtı]] bir jest ve seçkinlere yöneltilmiş bir eleştiri."
         }
       ]
     },
@@ -83,7 +83,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Géricault erken ölünce **Eugène Delacroix** hareketin başı olur. Ona göre **renk** duyguyu taşır. Akademik rakibi [[Jean-Auguste-Dominique Ingres]] pürüzsüz ve kesin çizgiyi savunur."
+          "text": "Géricault erken ölünce **Eugène Delacroix** akımın önderi olur. Ona göre duyguyu taşıyan **renk**tir. Akademik rakibi [[Jean-Auguste-Dominique Ingres]] ise pürüzsüz ve kesin çizgiyi savunur."
         },
         {
           "type": "image",
@@ -93,7 +93,7 @@
         },
         {
           "type": "paragraph",
-          "text": "*Halka Yol Gösteren Özgürlük* (**1830**) temmuzun devrimci günleri [[Temmuz Devrimi]] olarak kutlar. Özgürlük alegorisi öğrenci, işçi ve Paris çocuğuyla yürür."
+          "text": "*Halka Yol Gösteren Özgürlük* (**1830**), [[Temmuz Devrimi]] adıyla bilinen temmuzdaki devrimci günleri kutlar. Özgürlük alegorisi; öğrenci, işçi ve Paris'in sokak çocuğuyla birlikte yürür."
         },
         {
           "type": "funFact",
@@ -101,7 +101,7 @@
         },
         {
           "type": "paragraph",
-          "text": "**1832**'de Fas yolculuğu paletini değiştirir. Yeni bir ışık keşfeder ve kısmen [[oryantalizm]] kurar. Gölgenin kara değil, renkli yansımalarla dolu olduğunu da anlar: empresyonistlerin tutacağı bir ders."
+          "text": "**1832**'de yaptığı Fas yolculuğu paletini değiştirir. Orada yeni bir ışık keşfeder ve [[oryantalizm]] akımının kurucularından biri olur. Gölgenin kara değil, renkli yansımalarla dolu olduğunu da anlar: empresyonistlerin unutmayacağı bir ders."
         }
       ]
     },
@@ -112,7 +112,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Romantizm 1850'de ölmez: evrilir. Lekeyi ve rengi serbest bırakarak Delacroix **Van Gogh** ve **Cézanne**'ı etkiler. Sanatçı artık yalnızca sipariş uygulayan biri değildir: bir görücü olur."
+          "text": "Romantizm 1850'de ölmez: dönüşür. Fırça vuruşunu ve rengi serbest bırakan Delacroix, **Van Gogh** ve **Cézanne**'ı etkiler. Sanatçı artık siparişleri yerine getiren biri değildir: bir vizyoner olur."
         },
         {
           "type": "timeline",
@@ -125,7 +125,7 @@
             {
               "date": "1830",
               "title": "Halka Yol Gösteren Özgürlük",
-              "detail": "Delacroix Temmuz devrimini resmeder."
+              "detail": "Delacroix Temmuz Devrimi'ni resmeder."
             },
             {
               "date": "1832",
@@ -136,7 +136,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Onlarla tarih resmi toplumsal eleştiri olur. Sanat pohpohlamakla yetinmemeli, sarsmalıdır."
+          "text": "Onlarla birlikte tarih resmi bir toplumsal eleştiriye dönüşür. Sanat pohpohlamakla yetinmemeli, sarsmalıdır."
         },
         {
           "type": "takeaway",

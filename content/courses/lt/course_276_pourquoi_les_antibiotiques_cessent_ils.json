@@ -1,0 +1,171 @@
+{
+  "id": "course_276_pourquoi_les_antibiotiques_cessent_ils",
+  "title": "Kodėl antibiotikai nustoja veikti?",
+  "subtitle": "Bakterijos kontratakuoja",
+  "subject": "sciences",
+  "subcategory": "Notre quotidien expliqué",
+  "description": "Angina, šlapimo takų infekcija, įprasta operacija: be veiksmingų antibiotikų visa tai vėl tampa pavojinga. O piktnaudžiaudami jais mokome bakterijas juos atlaikyti.",
+  "author": "kate-waddams",
+  "hero": {
+    "image": "antibiogram_petri_dish_inhibition_zones",
+    "ratio": "4:3",
+    "hook": "Kovodami su bakterijomis, išmokėme jas atsilaikyti prieš mūsų vaistus."
+  },
+  "sections": [
+    {
+      "id": "course_276_pourquoi_les_antibiotiques_cessent_ils_intro",
+      "title": "Įžanga",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kai bakterijos įsiveržia į mūsų kūną, imuninė sistema atsako: **baltieji kraujo kūneliai** puola infekciją, ir greitai pasveikstame. Bet jei mūsų apsauga nusilpusi ar nebespėja, reikia pastiprinimo: antibiotikų. Antibiotikas, kuris yra [[baktericidinis]], sunaikina bakteriją, pažeisdamas jos sienelę ir turinį; bakteriostatinis tik neleidžia jai daugintis."
+        },
+        {
+          "type": "funFact",
+          "text": "Antibiotikai nėra šiuolaikinis išradimas: yra ženklų, kad žmonės juos vartojo jau daugiau nei prieš 1 500 metų, nieko nežinodami apie bakterijas."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pagal infekciją gydytojas parenka **plataus spektro** antibiotiką, veikiantį daugelį rūšių, arba siauro spektro, skirtą tik kelioms. Veiksmingi, pigūs, lengvai gaunami, šie vaistai įveikia labai daug infekcijų. Būtent ši sėkmė paskatino šiuolaikinį pasaulį jais piktnaudžiauti. O bakterijos ėmė atsakyti."
+        }
+      ]
+    },
+    {
+      "id": "course_276_pourquoi_les_antibiotiques_cessent_ils_p1",
+      "title": "Kaip bakterijos išmoksta atsilaikyti",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Antibiotikai yra vieni didžiausių šiuolaikinės medicinos laimėjimų. Jie išgelbėjo nesuskaičiuojamą daugybę gyvybių, ir mes nuo jų priklausome. Tačiau dėl masinio jų vartojimo atsirado problema: [[atsparumas antibiotikams]]. Antibiotikai, kurie anksčiau naikino bakteriją ar stabdė jos augimą, nebeveikia. Bakterija evoliucionavo ir išmoko apeiti gydymą."
+        },
+        {
+          "type": "image",
+          "asset": "alexander_fleming_penicillin_petri_dish",
+          "ratio": "4:3",
+          "caption": "Alexanderis Flemingas, penicilino atradėjas, savo laboratorijoje."
+        },
+        {
+          "type": "paragraph",
+          "text": "Evoliucija yra natūralus procesas, kurį aplinkos spaudimas pagreitina. Nuolat gydant bakterijas medžiagomis, sukurtomis joms naikinti, atrenkamos tos, kurios moka išgyventi. Jų gynybos būdai įvairūs: genetinės **mutacijos**, antibiotiką ardantys fermentai, pakitęs veikimas ir net mažyčiai [[ištekėjimo siurbliai]], kurie išmeta vaistą iš ląstelės."
+        },
+        {
+          "type": "paragraph",
+          "text": "Šie gynybos būdai įrašyti genuose. Kai atspari bakterija dalijasi, ji perduoda juos palikuonims, o šie savo ruožtu perduoda toliau. Viena išgyvenusi bakterija gali pradėti visą atsparių bakterijų liniją. Taip atsparumas ir plinta."
+        }
+      ]
+    },
+    {
+      "id": "course_276_pourquoi_les_antibiotiques_cessent_ils_p2",
+      "title": "Keliaujantys genai: MRSA atvejis",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Atspari bakterija keliauja kaip bet kuris mikrobas. **Covid** pandemija parodė, kaip greitai virusas pereina nuo vieno žmogaus prie kito, paskui iš vienos šalies į kitą. Bakterijos plinta taip pat: per žmonių kontaktą, palankioje aplinkoje, dėl prastos higienos arba nuo gyvūnų žmogui."
+        },
+        {
+          "type": "paragraph",
+          "text": "Be to, jos turi trumpesnį kelią: tai [[horizontalioji genų pernaša]]. Atspari bakterija gali tiesiogiai perduoti savo atsparumo genus kaimynei, nelaukdama dalijimosi. Per labai trumpą laiką susidaro visa atsparių bakterijų populiacija."
+        },
+        {
+          "type": "image",
+          "asset": "mrsa_staphylococcus_aureus_electron_micrograph_cdc",
+          "ratio": "5:4",
+          "caption": "Meticilinui atsparaus auksinio stafilokoko sankaupos elektroniniu mikroskopu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Žinomiausia iš jų yra [[MRSA]], meticilinui atsparus auksinis stafilokokas. Jis atsilaiko prieš daugelį įprastų antibiotikų, todėl vadinamas „superbakterija“. Masinis antibiotikų vartojimas sunaikino silpnas padermes ir atvėrė kelią toms, kurios, kaip jis, išmoko atsilaikyti. Pasekmės gali būti mirtinos."
+        }
+      ]
+    },
+    {
+      "id": "course_276_pourquoi_les_antibiotiques_cessent_ils_p3",
+      "title": "1,27 mln. mirčių per metus: PSO perspėjimas",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ką šis atsparumas reiškia mums? Pasaulio sveikatos organizacija, trumpai [[PSO]], atsparumą antimikrobinėms medžiagoms (vaistams nuo mikrobų, įskaitant antibiotikus) priskiria prie **trijų** didžiausių pasaulio visuomenės sveikatos grėsmių. Kai veiksmingų vaistų nuo bakterinių infekcijų vis mažėja, pozicijas praranda visa šiuolaikinė medicina."
+        },
+        {
+          "type": "paragraph",
+          "text": "Skaičiai parodo pavojaus mastą. Vien 2019 m. pasaulyje **1,27 mln.** mirčių buvo priskirta atsparumui antimikrobinėms medžiagoms. Ir kreivė kyla: prognozuojama, kad iki **2050** m. per metus mirs **10 mln.** žmonių."
+        },
+        {
+          "type": "paragraph",
+          "text": "Mokslininkai nesėdi sudėję rankų. Jie kuria naujus, tikslesnius gydymo būdus, skirtus atsparioms bakterijoms. Taip pat stengiasi grąžinti esamų antibiotikų veiksmingumą ir sumažinti nereikalingų išrašymų: kiekvienas išvengtas gydymas yra viena proga mažiau bakterijoms prisitaikyti."
+        }
+      ]
+    },
+    {
+      "id": "course_276_pourquoi_les_antibiotiques_cessent_ils_p4",
+      "title": "Pasaulis be veiksmingų antibiotikų",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Antibiotikus geriame net nesusimąstydami. Jie pigūs, veiksmingi ir prieinami visur. Be jų paprasta infekcija, bakterinė **angina** ar šlapimo takų infekcija, būtų kur kas sunkiau išgydoma. Nubrozdintas kelis galėtų baigtis taip, kad išsivystytų [[sepsis]], gyvybei pavojinga išplitusi infekcija."
+        },
+        {
+          "type": "image",
+          "asset": "hospital_operating_room_surgery_team",
+          "ratio": "3:2",
+          "caption": "Šiuolaikinė operacinė: be antibiotikų įprastos operacijos vėl taptų rizikingos."
+        },
+        {
+          "type": "paragraph",
+          "text": "Įprastos operacijos, **cezario pjūvis** ar klubo sąnario protezavimas, būtų kur kas rizikingesnės. Mat antibiotikai dažnai skiriami po operacijos, kad būtų išvengta infekcijos. Be jų gyvybes gelbstinčios ar jų kokybę gerinančios intervencijos taptų per pavojingos, kad jas būtų galima atlikti."
+        },
+        {
+          "type": "takeaway",
+          "text": "Šiuolaikinės medicinos ateitis priklauso nuo vieno dalyko: išsaugoti antibiotikų veiksmingumą, taigi liautis jais piktnaudžiauti."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "Medical News Today, « Antibiotics: How they work, uses, side effects and how to use ».",
+      "url": "https://www.medicalnewstoday.com/articles/10278"
+    },
+    {
+      "text": "Wikipedia, « Antibiotic ».",
+      "url": "https://en.wikipedia.org/wiki/Antibiotic"
+    },
+    {
+      "text": "B. K. Nimmana et A. D. Nguyen, « Antibiotic Resistance », StatPearls, StatPearls Publishing, Treasure Island (FL), 2026.",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK513277/"
+    },
+    {
+      "text": "H. Endale, M. Mathewos et D. Abdeta, « Potential Causes of Spread of Antimicrobial Resistance and Preventive Measures in One Health Perspective: A Review », Infection and Drug Resistance, vol. 16, 2023, p. 7515-7545.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10715026/"
+    },
+    {
+      "text": "American Society for Microbiology, « Plasmids and the Spread of Antibiotic Resistance Genes », janvier 2023.",
+      "url": "https://asm.org/articles/2023/january/plasmids-and-the-spread-of-antibiotic-resistance-g"
+    },
+    {
+      "text": "M. A. Salam, M. Y. Al-Amin, M. T. Salam, J. S. Pawar et al., « Antimicrobial Resistance: A Growing Serious Threat for Global Public Health », Healthcare, vol. 11, n° 13, 2023, art. 1946.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10340576/"
+    },
+    {
+      "text": "Wikipedia, « Methicillin-resistant Staphylococcus aureus ».",
+      "url": "https://en.wikipedia.org/wiki/Methicillin-resistant_Staphylococcus_aureus"
+    },
+    {
+      "text": "S. Rugarabamu et G. Mwanyika, « Biotechnological Innovations to Combat Antimicrobial Resistance and Advance Global Health Equity », Bacteria, vol. 4, n° 3, 2025, art. 46.",
+      "url": "https://www.mdpi.com/2674-1334/4/3/46"
+    },
+    {
+      "text": "A. Nazir, A. Nazir, V. Zuhair, S. Aman et al., « The Global Challenge of Antimicrobial Resistance: Mechanisms, Case Studies, and Mitigation Approaches », Health Science Reports, vol. 8, n° 7, 2025, e71077.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12284435/"
+    },
+    {
+      "text": "ITN Business, « Antimicrobial resistance: understanding its global impact ».",
+      "url": "https://business.itn.co.uk/antimicrobial-resistance-understanding-its-global-impact/"
+    }
+  ]
+}

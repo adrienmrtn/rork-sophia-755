@@ -1,14 +1,14 @@
 {
   "id": "course_238_la_transition_energetique",
-  "title": "Energiomstillingen: hvad blokerer stadig?",
+  "title": "Energiomstillingen: Hvad står stadig i vejen?",
   "subtitle": "På vej mod kulstofneutralitet",
   "subject": "comprendreLeMonde",
   "subcategory": "Miljø og fremtid",
-  "description": "Verden forsøger at erstatte fossile brændstoffer med renere kilder. En forandring lige så nødvendig som den er svær.",
+  "description": "Verden forsøger at erstatte fossile brændsler med renere kilder. En forandring, der er lige så nødvendig, som den er svær.",
   "hero": {
     "image": "la_transition_energetique",
     "ratio": "16:9",
-    "hook": "Solenergi er blevet den billigste energi i historien. Det eneste, der er tilbage, er at opbevare det."
+    "hook": "Solenergi er blevet den billigste energi i historien. Nu skal den bare kunne lagres."
   },
   "sections": [
     {
@@ -18,22 +18,22 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "I lang tid ændrede menneskeheden energikilder ved valg af effektivitet: fra træ til kul, derefter fra kul til olie. Den nuværende **energiomstilling** er anderledes: For første gang er den pålagt af en overlevelsesbegrænsning, klimaændringer."
+          "text": "Længe skiftede menneskeheden energikilde for at blive mere effektiv: fra træ til kul og derefter fra kul til olie. Den nuværende **energiomstilling** er anderledes: For første gang er den tvunget frem af hensynet til overlevelse, nemlig klimaforandringerne."
         },
         {
           "type": "paragraph",
-          "text": "Dette kursus udforsker, hvordan verden forsøger at erstatte fossile brændstoffer med renere kilder, og hvorfor dette skift er så vanskeligt, som det er nødvendigt."
+          "text": "Dette kursus udforsker, hvordan verden forsøger at erstatte fossile brændsler med renere kilder, og hvorfor dette skift er så vanskeligt, som det er nødvendigt."
         }
       ]
     },
     {
       "id": "course_238_la_transition_energetique_p1",
-      "title": "1,5°C: målet, der driver alt",
+      "title": "1,5°C: målet, der styrer alt",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Rammen, der styrer alle energipolitikker i dag, kaldes **[[Paris-aftalen (2015)]]**, underskrevet i 2015. Denne traktat forpligter verdens lande til at begrænse den globale opvarmning, med et specifikt mål: at forblive om muligt under 1,5°C over niveauerne før den industrielle æra. Hver yderligere tiendedel af en grad gør ekstreme vejrbegivenheder værre."
+          "text": "Rammen for alle energipolitikker i dag hedder **[[Paris-aftalen]]** og blev underskrevet i 2015. Aftalen forpligter verdens lande til at begrænse den globale opvarmning med et præcist mål: om muligt at holde den under 1,5°C over niveauet før industrialiseringen. Hver ekstra tiendedel af en grad forværrer ekstremt vejr."
         },
         {
           "type": "image",
@@ -43,11 +43,11 @@
         },
         {
           "type": "paragraph",
-          "text": "For at opfylde dette mål sigter staterne efter **[[kulstofneutralitet]]**: en balance mellem drivhusgasser udledt af menneskelige aktiviteter og deres optagelse af skove, jordbund, oceaner eller fangstteknologier. Dette forudsætter, at de globale emissioner holder op med at stige før 2025, for derefter at falde kraftigt i de efterfølgende år."
+          "text": "For at nå målet sigter landene mod **[[kulstofneutralitet]]**: en balance mellem de drivhusgasser, menneskelige aktiviteter udleder, og den mængde, som skove, jord, have eller opsamlingsteknologier optager. Det kræver, at de globale udledninger holder op med at stige før 2025 og derefter falder markant i årene efter."
         },
         {
           "type": "funFact",
-          "text": "Omkostningerne til solenergi faldt med 90 % mellem 2010 og 2020, et hurtigere fald end næsten nogen anden teknologi i den økonomiske historie. I 2023 vil solenergi endda blive den billigste kilde til elektricitet, der nogensinde er produceret i mange dele af verden."
+          "text": "Prisen på solenergi faldt med 90 % mellem 2010 og 2020, et hurtigere fald end for næsten nogen anden teknologi i økonomisk historie. I 2023 blev solenergi endda den billigste elektricitet, der nogensinde er produceret, i mange dele af verden."
         }
       ]
     },
@@ -58,11 +58,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Den vigtigste drivkraft for overgangen er økonomisk. Fotovoltaisk solenergi, af den aktuelle satellit, er det muligt at operere uden at tage højde for forskellen mellem satellitterne og satellitten.**Z**, især installeret til søs, hvor vindene er stærkere og mere regelmæssige, har også nået ægte industriel modenhed. I 2023 vil næsten 90 % af den nye elkapacitet installeret på verdensplan allerede komme fra vedvarende energi."
+          "text": "Den vigtigste drivkraft bag omstillingen er økonomisk. Prisen på **solceller**, der engang var forbeholdt satellitter, er faldet til en tiendedel på femten år takket være teknisk udvikling og stordriftsfordele. **Vindkraften**, især til havs, hvor vinden er stærkere og mere stabil, er også blevet en moden industri. I 2023 kom næsten 90 % af den nye elkapacitet, der blev installeret i verden, allerede fra vedvarende energi."
         },
         {
           "type": "paragraph",
-          "text": "En stor udfordring står tilbage: sol- og vindkraft lider under **intermitterende**, det vil sige, at de ikke producerer elektricitet kontinuerligt. Derfor er vigtigheden af batterier med stor kapacitet, hvis pris har fulgt det samme spektakulære fald som solenergi, hvilket gør elbiler stadig mere konkurrencedygtige."
+          "text": "Men der er stadig en stor udfordring: Sol- og vindkraft lider under **intermittens**, det vil sige, at de ikke producerer strøm hele tiden. Derfor er store batterier vigtige, og deres pris er faldet lige så voldsomt som solenergiens, hvilket gør elbiler stadig mere konkurrencedygtige."
         },
         {
           "type": "funFact",
@@ -72,20 +72,20 @@
     },
     {
       "id": "course_238_la_transition_energetique_p3",
-      "title": "Nye forhindringer: opbevaring og sjældne metaller",
+      "title": "Nye forhindringer: lagring og sjældne metaller",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "På trods af denne entusiasme står overgangen over for meget reelle grænser. I modsætning til gas eller kul, som kan afbrændes efter behag, kræver vedvarende energi mere fleksible elektricitetsnetværk med lager- eller backupkilder som brint eller atomkraft."
+          "text": "Trods begejstringen støder omstillingen på helt reelle grænser. I modsætning til gas og kul, som man kan brænde af efter behov, kræver vedvarende energi mere fleksible elnet med lagring eller reservekilder som brint eller atomkraft."
         },
         {
           "type": "paragraph",
-          "text": "En anden hindring er skiftet fra en afhængighed af olie til en afhængighed af **[[sjældne jordarters grundstoffer]]** og andre metaller, såsom lithium eller kobolt, der er nødvendige for at fremstille batterier og vindmøller. Kina kontrollerer en stor del af den globale raffinering af disse materialer, hvilket skaber nye sårbarheder for Europa og USA."
+          "text": "En anden forhindring er, at afhængigheden af olie bliver afløst af en afhængighed af **[[sjældne jordartsmetaller]]** og andre metaller som lithium og kobolt, der skal bruges til batterier og vindmøller. Kina kontrollerer en enorm del af verdens raffinering af disse materialer, og det skaber nye sårbarheder for Europa og USA."
         },
         {
           "type": "paragraph",
-          "text": "Endelig møder overgangen social modstand: fossile brændselsindustrier beskæftiger stadig millioner af mennesker, og at transformere disse job uden at ødelægge dem er en væsentlig betingelse for, at overgangen kan accepteres af alle."
+          "text": "Endelig møder omstillingen social modstand: Den fossile industri beskæftiger stadig millioner af mennesker, og at omstille de job uden at nedlægge dem er en afgørende betingelse for, at alle kan acceptere omstillingen."
         }
       ]
     },
@@ -96,19 +96,19 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Energifremtiden er uden tvivl ikke baseret på en enkelt løsning, men på en blanding af flere. **[[Grøn brint]]** ser ud til at være en vigtig del af dekarboniseringen af de sværeste sektorer, såsom stålproduktion eller luftfart, hvor elektricitet alene ikke er nok."
+          "text": "Energiens fremtid bygger sandsynligvis ikke på én løsning, men på en blanding af flere. **[[Grøn brint]]** ser ud til at blive en nøglebrik, når de sværeste sektorer, som stålproduktion og luftfart, skal gøres fossilfri, dér hvor elektricitet alene ikke er nok."
         },
         {
           "type": "paragraph",
-          "text": "Overgangen kræver også **ædruelighed**: at forbruge mindre og bedre, ved at isolere bygninger eller reducere industriaffald, forbliver ofte den mest effektive og billigste løftestang."
+          "text": "Omstillingen kræver også **mådehold**: At forbruge mindre og bedre, ved at isolere bygninger eller mindske spildet i industrien, er ofte stadig det mest effektive og billigste greb."
         },
         {
           "type": "funFact",
-          "text": "Nogle eksperimentelle batterier arbejder ved hjælp af tyngdekraften: De rejser tunge betonblokke med dagens overskydende solenergi, og lader dem derefter komme ned om aftenen for at producere elektricitet via en turbine."
+          "text": "Nogle eksperimentelle batterier virker ved hjælp af tyngdekraften: De hejser tunge betonblokke op med dagens overskud af solstrøm og lader dem derefter sænke sig om aftenen, så de producerer elektricitet via en turbine."
         },
         {
           "type": "takeaway",
-          "text": "Omkostningerne til solenergi er faldet med 90 % på femten år og er blevet den billigste kilde til elektricitet i historien. Men energilagring og forsyning af sjældne metaller er fortsat de store udfordringer ved energiomstillingen."
+          "text": "Prisen på solenergi er faldet med 90 % på femten år, og solenergi er blevet den billigste elektricitetskilde i historien. Men lagring af energi og forsyningen af sjældne metaller er fortsat de store udfordringer for energiomstillingen."
         }
       ]
     }

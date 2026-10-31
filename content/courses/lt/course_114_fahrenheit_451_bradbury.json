@@ -1,0 +1,119 @@
+{
+  "id": "course_114_fahrenheit_451_bradbury",
+  "title": "451° pagal Farenheitą, Bradbury",
+  "subtitle": "1953",
+  "subject": "litterature",
+  "subcategory": "Anglo-saxons & littérature mondiale",
+  "description": "Šioje ateityje ugniagesiai degina knygas. Guy Montagas atranda, kad kultūra nyksta tiek dėl abejingumo, tiek dėl cenzūros.",
+  "hero": {
+    "image": "fahrenheit_451_bradbury",
+    "ratio": "16:9",
+    "hook": "451 °F: temperatūra, kurioje užsiliepsnoja popierius, o visuomenė atsisako mąstyti."
+  },
+  "sections": [
+    {
+      "id": "course_114_fahrenheit_451_bradbury_intro",
+      "title": "Įvadas",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**1953** m. išleistas romanas **451° pagal Farenheitą** yra vienas **distopijos** ramsčių. Šis žanras vaizduoja ateities visuomenę, kurioje žmogus engiamas. **Ray Bradbury** (gimė **1920** m., mirė **2012** m.) įsivaizduoja ateitį, kurioje ugniagesiai degina knygas, laikomas pavojingomis visuomenės stabilumui. Pavadinimas nurodo temperatūrą, kurioje užsiliepsnoja popierius: apie 233 °C."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kūrinys ne tik kritikuoja valstybės cenzūrą: jis rodo visuomenę, kuri savo noru atsisako skaitymo dėl tuščių pramogų ir technologinio skubėjimo. Bradbury įspėja: minties laisvė prarandama tiek per užmarštį, tiek per prievartą."
+        }
+      ]
+    },
+    {
+      "id": "course_114_fahrenheit_451_bradbury_p1",
+      "title": "Įtampoje gimęs pranašiškas kūrinys",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Romanas gimsta laikotarpiu, kuris vadinamas taip: [[makartizmas]] (**1950-1954** m.). Tai antikomunistinės raganų medžioklės metas JAV. Menininkai ir rašytojai buvo įtraukiami į juoduosius sąrašus. Vis dėlto Bradbury patikslina: grėsmė kyla ir iš televizijos, ir iš reiškinio, kuris vadinamas [[masinis vartojimas]]. Prekės standartizuojamos, o noras pirkti nuolat kurstomas."
+        },
+        {
+          "type": "image",
+          "asset": "ray_bradbury_portrait_photograph",
+          "ratio": "4:3",
+          "caption": "Ray Bradbury, autorius, parašęs romaną apie cenzūrą bibliotekoje."
+        },
+        {
+          "type": "funFact",
+          "text": "Bradbury parašė *451° pagal Farenheitą* per 9 dienas universiteto bibliotekoje, nuomota rašomąja mašinėle: 10 centų už 30 minučių."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kitaip nei romane [[1984]], kur Orwello pasaulyje priespauda kyla iš kiekvieną judesį sekančio diktatoriaus, čia patys piliečiai atsisakė knygų. Jie tai daro dėl patogumo ir iš baimės ginčytis. Cenzūra tapo bendru pasirinkimu, o ne vien primesta prievarta."
+        }
+      ]
+    },
+    {
+      "id": "course_114_fahrenheit_451_bradbury_p2",
+      "title": "Montago sistema: žinių gaisras",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Guy Montagas** yra ugniagesys: jo darbas deginti slaptas bibliotekas. Jo žmona **Mildred** ištisas dienas praleidžia prieš **svetainės ekranus**, užimančius visas sienas. Ją įtraukia tuščios laidos. Kaimynė **Clarisse** jam primena, kad kadaise ugniagesiai gaisrus gesindavo."
+        },
+        {
+          "type": "image",
+          "asset": "book_burning_nazi_germany_1933",
+          "ratio": "16:9",
+          "caption": "Knygų deginimas: istorinis vaizdas, kurį Bradbury paverčia ateities distopija."
+        },
+        {
+          "type": "paragraph",
+          "text": "Montagas slapta pasiima knygų. Jo priešininkas kapitonas **Beatty** išmano klasiką, bet ją degina su užsidegimu. Jo manymu, knygos kelia nerimą, nes atskleidžia nelygybę ir prieštaravimus. Clarisse dingsta, tikriausiai partrenkta automatinės transporto priemonės. Pasaulyje nebelieka vietos tiems, kurie klausia."
+        }
+      ]
+    },
+    {
+      "id": "course_114_fahrenheit_451_bradbury_p3",
+      "title": "Pasipriešinimas atmintimi: žmonės knygos",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Persekiojamas **Mechaninio skaliko**, roboto policininko, Montagas prisijungia prie tremtyje gyvenančių intelektualų bendruomenės. Kiekvienas išmoksta mintinai visą knygą, kad galėtų ją perduoti žodžiu: Platono *Valstybę*, Shakespeare'ą, Bibliją. Kultūra išlieka galvose, o ne popieriuje."
+        },
+        {
+          "type": "quote",
+          "text": "Mes esame knygos. Mus palietė ugnis, bet mes išlikome.",
+          "attribution": "Ray Bradbury, 451° pagal Farenheitą"
+        },
+        {
+          "type": "paragraph",
+          "text": "Montagas tampa **Koheleto knygos** saugotoju. Romanas baigiasi branduoliniu karu, kuris sunaikina miestą, bet pasipriešinimo dalyviai grįžta į griuvėsius. Kultūra gali atgimti iš pelenų, jei žmonija vėl sutiks mąstyti."
+        }
+      ]
+    },
+    {
+      "id": "course_114_fahrenheit_451_bradbury_p4",
+      "title": "Palikimas ir įspėjimas apie skubėjimą",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Bradbury numatė plokščius ekranus, belaides ausines ir tai, kas vadinama taip: [[pramogų visuomenė ir fragmentuotas dėmesys]]. Žmonės taip persisotinę greitųjų medijų, kad nebenori skaityti. Romane tekstai trumpinami tol, kol visai išnyksta, o jų vietą užima greiti vaizdai."
+        },
+        {
+          "type": "funFact",
+          "text": "Bradbury aprašo radijo „kriaukles“ ausyje, atskiriančias žmogų nuo aplinkos, likus penkiasdešimčiai metų iki šiuolaikinių belaidžių ausinių."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ironiška: šis kaltinimas cenzūrai pats buvo apkarpytas kai kuriuose mokykliniuose leidimuose. Kova už kūrinio vientisumą nesibaigia. **451° pagal Farenheitą** primena, kad minties laisvė prarandama ne tik per prievartą, bet ir per užmarštį bei intelektinį tingumą."
+        },
+        {
+          "type": "takeaway",
+          "text": "**451° pagal Farenheitą** parodo, kad minties laisvė prarandama ne tik per prievartą, bet ir per užmarštį, pramogas ir intelektinį tingumą."
+        }
+      ]
+    }
+  ]
+}

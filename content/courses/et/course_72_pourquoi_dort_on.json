@@ -1,14 +1,14 @@
 {
   "id": "course_72_pourquoi_dort_on",
-  "title": "Miks me magame?",
-  "subtitle": "Keha & aju",
+  "title": "Miks inimene magab?",
+  "subtitle": "Keha ja aju",
   "subject": "sciences",
   "subcategory": "Maa ja universum",
-  "description": "Veedame kolmandiku oma elust magades. See pole raisatud aeg: uni puhastab aju, parandab keha ja graveerib mälestusi.",
+  "description": "Kolmandik elust kulub magamisele. See pole raisatud aeg: uni puhastab aju, parandab keha ja talletab mälestused.",
   "hero": {
     "image": "pourquoi_dort_on",
     "ratio": "16:9",
-    "hook": "Magamine ei tähenda väljalülitamist: see on keha suur öine töö."
+    "hook": "Magamine ei ole väljalülitumine: see on keha suur öine ehitustöö."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "75-aastase eluea jooksul magame **25 aastat** lähedal. Uskusime pikka aega, et uni on lihtsalt vaheaeg. Tegelikkuses on see aktiivne töö, sama oluline kui joomine või söömine."
+          "text": "75-aastase elu jooksul magab inimene peaaegu **25 aastat**. Kaua arvati, et uni on lihtsalt paus. Tegelikult on see aktiivne töö, sama eluliselt tähtis kui joomine või söömine."
         },
         {
           "type": "paragraph",
-          "text": "Teadusel pole veel kõiki vastuseid küsimusele, miks me magame. Kuid ta teab väga hästi, mis juhtub, kui me ei maga, ja mida öö vaikselt parandab."
+          "text": "Teadusel pole veel kõiki vastuseid küsimusele, miks inimene magab. Küll aga teab teadus väga hästi, mis juhtub, kui ei magata, ja mida öö vaikselt korda teeb."
         }
       ]
     },
@@ -33,40 +33,40 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Aastal **1964** jäi Ameerika tudeng **Randy Gardner** **11 päeva** magama. Hallutsinatsioonid, paranoia, meele kollaps: tõend, et aju ei suuda ilma puhkuseta ellu jääda."
+          "text": "Aastal **1964** püsib Ameerika tudeng **Randy Gardner** **11 päeva** magamata. Hallutsinatsioonid, paranoia, mõistuse kokkuvarisemine: tõend, et aju ei pea ilma puhkuseta vastu."
         },
         {
           "type": "image",
           "asset": "sleeping_person_bedroom_night",
           "ratio": "auto",
-          "caption": "Uni, oluline aju ja keha taastumiseks."
+          "caption": "Uni on aju ja keha taastumiseks hädavajalik."
         },
         {
           "type": "paragraph",
-          "text": "Rottidel tapab täielik unepuudus 2-3 nädala jooksul, nagu nälg. Inimestel põhjustab surma ka haruldane geneetiline haigus, **fataalne perekondlik unetus**. Igapäevaselt võrdub 17 tundi ärkvelolekut vere alkoholisisaldusega **0,5 g/l**. Seejärel sunnib aju [[mikrounesid]], lühikesi tahtmatuid teadvuse katkestusi."
+          "text": "Rottidel tapab täielik unepuudus 2-3 nädalaga, nagu nälg. Inimestel viib surmani ka haruldane pärilik haigus, **fataalne perekondlik unetus**. Igapäevaelus võrdub 17 tundi ärkvelolekut vere alkoholisisaldusega **0,5 g/l**. Siis surub aju peale [[mikrouned]]: lühikesi tahtmatuid teadvusekatkestusi."
         },
         {
           "type": "funFact",
-          "text": "Pärast oma rekordit magas Randy Gardner **14 tundi** sirgelt. Ta ärkas üles funktsioneerides, kuid tema une normaalseks naasmiseks kulus nädalaid."
+          "text": "Pärast oma rekordit magas Randy Gardner **14 tundi** järjest. Ärgates suutis ta toimida, kuid tema unerütm taastus alles nädalate pärast."
         }
       ]
     },
     {
       "id": "course_72_pourquoi_dort_on_p2",
-      "title": "Öösel puhastab aju",
+      "title": "Öösel koristab aju",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Une ajal aju ei peatu: see muudab režiime. **hipokampus**, merihobuse kujuline võtmemälu struktuur, \"taasesitab\" päeva ja saadab teabe püsivaks säilitamiseks aju väliskihile [[Neokorteks]]. Tulemus: õpime sageli **20 kuni 40%** paremini pärast head und."
+          "text": "Une ajal aju ei seisku: see lülitub teise režiimi. **Hipokampus**, merihobuse kujuline ja mälu jaoks võtmetähtsusega struktuur, „mängib“ päeva uuesti läbi ja saadab info püsivaks talletamiseks edasi: vastuvõtja on [[neokorteks]], aju välimine kiht. Tulemus: pärast head ööund õpitakse sageli **20-40%** paremini."
         },
         {
           "type": "paragraph",
-          "text": "Sügav uni käivitab ka **kasvuhormooni**, mis parandab lihaseid ja kudesid ning stimuleerib [[Tsütokiinid]], immuunsüsteemi signaalimolekule. Veel üks suur avastus: [[glümfisüsteem]], aju äravooluvõrk **kümme corda** öösel aktiivsem. See eemaldab jäätmed, sealhulgas valgud, mis on seotud Alzheimeri tõve riskiga."
+          "text": "Sügav uni vallandab ka **kasvuhormooni**, mis parandab lihaseid ja kudesid. Samuti aktiveeruvad [[tsütokiinid]], immuunsüsteemi signaalmolekulid. Teine suur avastus on [[glümfaatiline süsteem]]: aju äravoolusüsteem, mis on öösel **kümme korda** aktiivsem. See viib minema jääkaineid, sealhulgas valke, mida seostatakse Alzheimeri tõve riskiga."
         },
         {
           "type": "funFact",
-          "text": "Sügava une ajal vähenevad ajurakud ligikaudu **60%**. Nii loodud ruum võimaldab puhastusvedelikul paremini ringelda."
+          "text": "Sügava une ajal tõmbuvad ajurakud umbes **60%** võrra kokku. Nii tekkinud ruumis saab puhastusvedelik paremini ringelda."
         }
       ]
     },
@@ -77,30 +77,30 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kassid magavad **12 kell 16.00**.: kiskjad on ohutud. Kaelkirjakud on mõnikord rahul **30 minuti kuni 2 tunniga** lühikeste uinakutega ja on valmis põgenema. Delfiinid magavad **kell ühe poolkeraga**, ühe poole ajust, korraga, et tõusta pidevalt üles hingama."
+          "text": "Kassid magavad **12-16 tundi**: kiskjatena pole neil midagi karta. Kaelkirjakutele piisab mõnikord **30 minutist kuni 2 tunnist** lühikeste uinakutena, et olla kogu aeg põgenemisvalmis. Delfiinid magavad korraga **ühe poolkeraga** ehk ühe ajupoolega, et saaksid ikka pinnale hingama tõusta."
         },
         {
           "type": "paragraph",
-          "text": "Imikud magavad kuni **18 tundi**, kus on palju [[paradoksaalne uni]], kiirete silmade liigutustega unenägude faas. See faas aitab [[Sünaptogenees]], neuronite vaheliste ühenduste loomisel."
+          "text": "Imikud magavad kuni **18 tundi** ja suure osa sellest moodustab [[paradoksaalne uni]]: kiirete silmaliigutustega unenäofaas. See faas toetab protsessi, mille nimi on [[sünaptogenees]]: neuronitevaheliste ühenduste loomine."
         }
       ]
     },
     {
       "id": "course_72_pourquoi_dort_on_p4",
-      "title": "Sisemine kell ja sinine tuli",
+      "title": "Sisemine kell ja sinine valgus",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Voodisse suruvad meid kaks jõudu: päeva jooksul kuhjuv väsimus ja [[Tsirkadiaanrütmid ja melatoniin]], sisemine kell **24 tundi**. Kui valgus hämardub, vabastab aju hormooni **melatoniini**, mis valmistab keha magama ilma seda peale surumata."
+          "text": "Voodisse ajavad meid kaks jõudu: päeva jooksul kogunev väsimus ja [[tsirkadiaanrütmid ja melatoniin]], sisemine kell, mille tsükkel on **24 tundi**. Kui valgus hämardub, vabastab aju **melatoniini**: hormooni, mis valmistab keha uneks ette, kuid und peale ei suru."
         },
         {
           "type": "paragraph",
-          "text": "Õhtused ekraanid narrivad seda kella ja viivitavad uinumist. Nädalavahetusel me unevõlga tegelikult ei \"tasu\": väsimus väheneb, aga kogu kahju mitte. Regulaarne tööaeg, pime ja jahe ruum jäävad parimateks liitlasteks."
+          "text": "Õhtused ekraanid petavad seda kella ja lükkavad uinumist edasi. Nädalavahetusel unevõlga tegelikult „tasa“ ei tehta: väsimus väheneb, kuid kogu kahju ei kao. Kindlad magamaminekuajad ning pime ja jahe tuba on endiselt parimad liitlased."
         },
         {
           "type": "takeaway",
-          "text": "Uni puhastab aju, parandab keha ja tugevdab mälu. Täielik puudus tapab mõne nädalaga: magamine pole luksus, see on eluliselt vajalik ülalpidamine."
+          "text": "Uni puhastab aju, parandab keha ja kinnistab mälu. Täielik unepuudus tapab mõne nädalaga: magamine pole luksus, vaid eluliselt vajalik hooldus."
         }
       ]
     }

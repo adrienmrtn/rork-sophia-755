@@ -4,11 +4,11 @@
   "subtitle": "Voda i molekuli",
   "subject": "sciences",
   "subcategory": "Naša svakodnevica objašnjena",
-  "description": "Led pluta na vodi. Ovo izgleda normalno, ali je zapravo veoma retko. I na sreću života na Zemlji.",
+  "description": "Led pluta na vodi. To deluje normalno, ali je zapravo vrlo retko. I to je sreća za život na Zemlji.",
   "hero": {
     "image": "pourquoi_la_glace_flotte",
     "ratio": "16:9",
-    "hook": "Ako bi led tekao, jezera bi se smrznula do dna. A život u vodi bi teško preživeo."
+    "hook": "Kad bi led tonuo, jezera bi se zaledila do dna. A život u vodi teško bi opstao."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kocka leda u čaši, ledeni breg u okeanu: led **pluta**. Smatramo to banalnim. Međutim, za većinu supstanci, čvrsta materija je više **gusto**, dakle teža za istu zapreminu: tone."
+          "text": "Kocka leda u čaši, ledeni breg u okeanu: led **pluta**. Svima to deluje obično. Ipak, kod većine supstanci čvrsto stanje je **gušće**, dakle teže za istu zapreminu: tone."
         },
         {
           "type": "paragraph",
-          "text": "Voda radi suprotno. Ovaj izuzetak dolazi od oblika njegovog molekula. I spasila je mnoga jezera zimi."
+          "text": "Voda se ponaša obrnuto. Ovaj izuzetak potiče od oblika njenog molekula. I spasao je mnoga jezera tokom zime."
         }
       ]
     },
@@ -33,7 +33,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Molekul vode je atom **oksigen** povezan sa dva atoma **vodonika**. Nije pravo: formira **V**. Zbog ovog oblika, električna naelektrisanja nisu podjednako raspoređena: molekul je **polarni**, sa jednim krajem blago negativnim, a drugim blago pozitivnim."
+          "text": "Molekul vode čine jedan atom **kiseonika** i dva atoma **vodonika**. Nije prav: ima oblik slova **V**. Zbog tog oblika električna naelektrisanja nisu ravnomerno raspoređena: molekul je **polaran**, jedan kraj mu je blago negativan, a drugi blago pozitivan."
         },
         {
           "type": "image",
@@ -43,26 +43,26 @@
         },
         {
           "type": "paragraph",
-          "text": "Rezultat: molekuli vode privlače jedni druge pomoću [[vodonične veze]], poput malih magneta. U tečnosti ostaju blizu, ali se i dalje kreću. U ledu se smrzavaju drugačije."
+          "text": "Zato se molekuli vode međusobno privlače: između njih nastaju [[vodonične veze]], kao mali magneti. U tečnosti ostaju blizu jedni drugima, ali se i dalje kreću. U ledu se ukrućuju u drugačiji raspored."
         }
       ]
     },
     {
       "id": "course_43_pourquoi_la_glace_flotte_t_elle_p2",
-      "title": "Kada se voda zamrzne, zauzima prostor",
+      "title": "Kad se voda zaledi, zauzima više mesta",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Oko **Nočьu 0°C**, voda se učvršćuje. Da bi formirali led, molekuli se organizuju u **heksagonalnu** mrežu, neku vrstu šestostranog saća. Zatim između sebe ostavljaju više **prazan** nego u tečnom stanju."
+          "text": "Na oko **0 °C** voda se zaleđuje. Da bi obrazovali led, molekuli se slažu u **heksagonalnu** mrežu, nalik saću sa šestougaonim ćelijama. Tako između sebe ostavljaju više **praznog prostora** nego u tečnom stanju."
         },
         {
           "type": "funFact",
-          "text": "Zbog toga puna flaša vode može **praskati** u zamrzivaču: led zauzima više zapremine od tečne vode."
+          "text": "Zato puna flaša vode može da **pukne** u zamrzivaču: led zauzima veću zapreminu od tečne vode."
         },
         {
           "type": "paragraph",
-          "text": "Manje materijala u istoj zapremini znači: **manje gusto**. Međutim, objekat manje gustoće od tečnosti oko njega se diže. Led stoga pluta na vodi. Ovo se zove **anomalija ekspanzije vode**: za razliku od skoro svih supstanci, voda se širi dok se hladi ispod **Nočьu 2°C**."
+          "text": "Manje materije u istoj zapremini znači: **manja gustina**. A telo manje gustine od tečnosti oko sebe isplivava. Zato led pluta na vodi. To se zove **anomalno širenje vode**: za razliku od gotovo svih supstanci, voda se pri hlađenju ispod **4 °C** širi."
         },
         {
           "type": "image",
@@ -74,31 +74,31 @@
     },
     {
       "id": "course_43_pourquoi_la_glace_flotte_t_elle_p3",
-      "title": "Zašto je od vitalnog značaja za jezera",
+      "title": "Zašto je to presudno za jezera",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Zamislite da je sladoled potekao. Formirao bi se na površini, a zatim bi potonuo na dno. Jezero bi se smrzavalo sloj po sloj, sve do dna. Leto često ne bi bilo dovoljno da sve istopi."
+          "text": "Zamisli da led tone. Stvarao bi se na površini, a zatim padao na dno. Jezero bi se zaledilo sloj po sloj, sve do dna. Leto često ne bi bilo dovoljno da se sve otopi."
         },
         {
           "type": "paragraph",
-          "text": "Na sreću, led ostaje na vrhu. Formira **Isolation poklopac**. Ispod smrznute površine, tečna voda može da ostane oko **Nočьu 2°C**, temperature na kojoj je tečna voda najgušća, dovoljna da ribe i vodene biljke prežive."
+          "text": "Na sreću, led ostaje gore. Pravi **izolacioni poklopac**. Ispod zaleđene površine tečna voda može da ostane na oko **4 °C**, temperaturi na kojoj je tečna voda najgušća, i to je dovoljno da ribe i vodene biljke prežive."
         }
       ]
     },
     {
       "id": "course_43_pourquoi_la_glace_flotte_t_elle_p4",
-      "title": "I za klimu takođe",
+      "title": "Važno i za klimu",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Bela ledena ploča odbija veliki deo sunčeve svetlosti nazad u svemir zahvaljujući svojoj visokoj **albedo**, svojoj reflektivnoj moći. Ako nestane, tamni okean apsorbuje više toplote. Ovo ubrzava zagrevanje: začarani krug."
+          "text": "Beli morski led odbija veliki deo sunčeve svetlosti nazad u svemir zahvaljujući svom visokom **albedu**, to jest moći odbijanja svetlosti. Ako on nestane, tamni okean upija više toplote. To ubrzava zagrevanje: začarani krug."
         },
         {
           "type": "takeaway",
-          "text": "Led pluta jer, kako se učvršćuje, voda formira više „gaziranu” mrežu: postaje manje gusta od tečne vode. Ovaj izuzetak štiti vodeni život zimi."
+          "text": "Led pluta zato što voda, kad se zaledi, gradi „prozračniju“ mrežu: postaje manje gusta od tečne vode. Ovaj izuzetak zimi štiti život u vodi."
         }
       ]
     }

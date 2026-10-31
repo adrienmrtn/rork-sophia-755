@@ -1,14 +1,14 @@
 {
   "id": "course_75_la_photosynthese_expliquee_simplement",
-  "title": "Fotosyntese forklaret enkelt",
+  "title": "Fotosyntesen forklaret enkelt",
   "subtitle": "Planter & energi",
   "subject": "sciences",
   "subcategory": "Jorden og universet",
-  "description": "Planter gør noget ekstraordinært: de koger sukker med lys, vand og luft. Og de giver os ilt i gave.",
+  "description": "Planter gør noget helt utroligt: De laver sukker af lys, vand og luft. Og så giver de os ilten i gave.",
   "hero": {
     "image": "la_photosynthese_expliquee_simplement",
     "ratio": "16:9",
-    "hook": "Et blad er et solkøkken: lys, vand, luft... og her er sukker."
+    "hook": "Et blad er et solkøkken: lys, vand, luft … og så har du sukker."
   },
   "sections": [
     {
@@ -18,22 +18,22 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Forestil dig en miniaturefabrik i hvert blad. Det kræver tre verdslige ingredienser: **lys eng søn**, **vand** fra rødderne og **CO₂** fra luften. Den kommer ud med **sukker** for at vokse, og frigiver **ilt**."
+          "text": "Forestil dig en lillebitte fabrik i hvert blad. Den bruger tre helt almindelige ingredienser: **sollys**, **vand** fra rødderne og **CO₂** fra luften. Ud af dem laver den **sukker**, som planten vokser af, og den udskiller **ilt**."
         },
         {
           "type": "paragraph",
-          "text": "Denne bedrift kaldes **fotosyntese**. Uden det, ingen skove, ingen åndbar ilt, næsten intet komplekst liv på Jorden."
+          "text": "Denne bedrift hedder **fotosyntese**. Uden den ingen skove, ingen ilt at ånde, næsten intet komplekst liv på Jorden."
         }
       ]
     },
     {
       "id": "course_75_la_photosynthese_expliquee_simplement_p1",
-      "title": "Hvor sker det i arket?",
+      "title": "Hvor i bladet det sker",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "I plantecellen rummer grønne organeller, **kloroplaster**, [[Klorofyl]]. Dette pigment fanger hovedsageligt det blå og røde lys. Grøn er returneret: det er derfor, bladene ser grønne ud for os."
+          "text": "I plantecellen sidder grønne organeller, **kloroplaster**, som indeholder [[klorofyl]]. Dette pigment opfanger især det blå og det røde lys. Det grønne bliver kastet tilbage: Derfor ser bladene grønne ud."
         },
         {
           "type": "image",
@@ -43,68 +43,68 @@
         },
         {
           "type": "paragraph",
-          "text": "Den simple ligning: CO₂ + vand + lys → sukker + ilt. Gassen kommer ind gennem små porer, [[stomata]]. Vand stiger fra rødderne. Sukker bliver til træ, frugt, rødder; ilten går i luften."
+          "text": "Den enkle ligning: CO₂ + vand + lys → sukker + ilt. Gassen kommer ind gennem bittesmå porer, [[stomata]]. Vandet stiger op fra rødderne. Sukkeret bliver til ved, frugt og rødder, og ilten slipper ud i luften."
         },
         {
           "type": "funFact",
-          "text": "Klorofyl \"nægter\" grønt. Hun foretrækker blå og rød, mere effektiv til at ophidse sine elektroner og starte energimaskinen."
+          "text": "Klorofyl »siger nej« til grønt. Det foretrækker blåt og rødt, som er bedre til at sætte dets elektroner i sving og starte energimaskinen."
         }
       ]
     },
     {
       "id": "course_75_la_photosynthese_expliquee_simplement_p2",
-      "title": "To trin: fangst og derefter håndværk",
+      "title": "To trin: først fange, så fremstille",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Først **lys fase**. Lys nedbryder vandmolekyler. Ilt slipper ud. Energi lagres i to kemiske \"batterier\", **ATP** og **NADPH**."
+          "text": "Først kommer **lysfasen**. Lyset spalter vandmolekyler. Ilten slipper ud. Energien lagres i to kemiske »batterier«, **ATP** og **NADPH**."
         },
         {
           "type": "paragraph",
-          "text": "Dernæst **-fremstillingsfasen**, [[Calvin cyklus]], opkaldt efter kemikeren **Melvin Calvin**. Med energien fra batterierne samler planten kulstof fra CO₂ til glukose. Der er ikke behov for direkte sollys på dette stadie, men det afhænger helt af, hvad lyset har frembragt før."
+          "text": "Derefter kommer **fremstillingsfasen**, [[Calvin-cyklussen]], opkaldt efter kemikeren **Melvin Calvin**. Med energien fra batterierne bygger planten kulstoffet fra CO₂ sammen til glukose. Dette trin kræver ikke direkte sollys, men det afhænger helt af det, lyset har produceret forinden."
         },
         {
           "type": "funFact",
-          "text": "For at følge kulstoffets vej i bladet brugte Calvin radioaktive isotoper fra forskning i atombomben. Nobelprisen i **1961**."
+          "text": "For at følge kulstoffets vej gennem bladet brugte Calvin radioaktive isotoper fra forskningen i atombomben. Han fik Nobelprisen i **1961**."
         }
       ]
     },
     {
       "id": "course_75_la_photosynthese_expliquee_simplement_p3",
-      "title": "Da ilt ændrede planeten",
+      "title": "Da ilten ændrede planeten",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "For omkring **2,4 milliarder dollars på siden** begyndte fotosyntetiske bakterier, **cyanobakterier**, at frigive ilt massivt. Dette er **Stor oxidation**. For mange af tidens organisationer var det gift."
+          "text": "For omkring **2,4 milliarder år** siden begyndte fotosyntetiske bakterier, **cyanobakterier**, at udlede ilt i store mængder. Det kaldes **den store iltningsbegivenhed**. For mange af datidens organismer var ilten gift."
         },
         {
           "type": "paragraph",
-          "text": "Så tillod ilt ozonlaget og langt mere effektiv respiration. Den luft, vi indånder, er dybest set \"affaldsproduktet\" af milliarder af års fotosyntese."
+          "text": "Siden gjorde ilten ozonlaget muligt og en langt mere effektiv respiration. Den luft, vi indånder, er groft sagt »affaldet« fra milliarder af års fotosyntese."
         },
         {
           "type": "funFact",
-          "text": "Om **halv** af Jordens ilt kommer fra fytoplankton i havene, ikke kun skove."
+          "text": "Omkring **halvdelen** af Jordens ilt kommer fra planteplankton i havene, ikke kun fra skovene."
         }
       ]
     },
     {
       "id": "course_75_la_photosynthese_expliquee_simplement_p4",
-      "title": "Et beskedent output, en enorm rolle",
+      "title": "Et beskedent udbytte, en enorm rolle",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Et blad omdanner kun **1 til 3%** af den modtagne solenergi til biomasse. På globalt plan er dette nok til at fodre fødekæder og absorbere enorme mængder CO₂."
+          "text": "Et blad omdanner kun **1 til 3 %** af den solenergi, det modtager, til biomasse. På hele planetens plan er det alligevel nok til at brødføde fødekæderne og optage enorme mængder CO₂."
         },
         {
           "type": "paragraph",
-          "text": "Derfor interessen for skove, oceaner ... og endda kunstig fotosyntese for klimaet. En havsnegl, *Elysia chlorotica*, går så langt som til at \"stjæle\" kloroplaster fra alger for at leve lidt af solenergi."
+          "text": "Derfor er skove, have … og endda kunstig fotosyntese så interessante for klimaet. En havsnegl, *Elysia chlorotica*, går så langt som til at »stjæle« kloroplaster fra alger for at leve lidt af solenergi."
         },
         {
           "type": "takeaway",
-          "text": "Fotosyntese omdanner lys, vand og CO₂ til sukker og regenererer ilt. Det er solar madlavning på grundlag af næsten alt liv."
+          "text": "Fotosyntesen omdanner lys, vand og CO₂ til sukker og fornyer ilten. Det er solkøkkenet, som næsten alt liv bygger på."
         }
       ]
     }

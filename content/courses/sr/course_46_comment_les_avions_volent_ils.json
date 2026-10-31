@@ -4,7 +4,7 @@
   "subtitle": "Fizika letenja",
   "subject": "sciences",
   "subcategory": "Naša svakodnevica objašnjena",
-  "description": "Leti avion težak nekoliko stotina tona. To nije magija: stvar je oblika krila, brzine i sila koje balansiraju jedna drugu.",
+  "description": "Avion težak nekoliko stotina tona leti. To nije magija: stvar je u obliku krila, brzini i silama koje se međusobno uravnotežuju.",
   "hero": {
     "image": "comment_les_avions_volent",
     "ratio": "16:9",
@@ -18,81 +18,81 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Veliki avion može da teži **stotine tona**. Kako nešto tako teško može ostati u vazduhu? Odgovor leži u obliku krila i brzini aviona."
+          "text": "Veliki putnički avion može da teži **stotine tona**. Kako nešto tako teško može da ostane u vazduhu? Odgovor je u obliku krila i brzini aviona."
         },
         {
           "type": "paragraph",
-          "text": "U igri su četiri glavne sile: **potisak** (napred), **drag** (vazdušno kočenje), **veight** (nadole) i **lift** (nagore)."
+          "text": "U igri su četiri glavne sile: **potisak** (napred), **otpor** (kočenje vazduha), **težina** (nadole) i **uzgon** (nagore)."
         }
       ]
     },
     {
       "id": "course_46_comment_les_avions_volent_ils_p1",
-      "title": "Krilo, inteligentnog oblika",
+      "title": "Krilo, pametan oblik",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Gledano sa strane, krilo aviona nije ravno. Vrh je zaobljeniji od dna. Kada se avion brzo kreće, vazduh mora da zaobiđe ovaj oblik."
+          "text": "Gledano sa strane, krilo aviona nije ravno. Gornja strana je ispupčenija od donje. Kada avion brzo ide napred, vazduh mora da obiđe taj oblik."
         },
         {
           "type": "image",
           "asset": "airplane_wing_cross_section_flight",
           "ratio": "auto",
-          "caption": "Profil krila stvara lift koji podiže avion."
+          "caption": "Profil krila stvara uzgon koji podiže avion."
         },
         {
           "type": "paragraph",
-          "text": "Vazduh koji prolazi iznad malo ubrzava. Njegov pritisak pada. Pod krilom pritisak ostaje jači. Ova razlika gura krilo nagore: ovo je **lift**. Često se objašnjava principom **Bernuli**, nazvanom po naučniku iz 18. veka, i činjenicom da krilo takođe odbija vazduh nadole."
+          "text": "Vazduh koji prolazi iznad krila malo ubrzava. Njegov pritisak opada. Ispod krila pritisak ostaje veći. Ta razlika gura krilo nagore: to je **uzgon**. Često se objašnjava **Bernulijevim** principom, nazvanim po naučniku iz 18. veka, i time što krilo usmerava vazduh i nadole."
         }
       ]
     },
     {
       "id": "course_46_comment_les_avions_volent_ils_p2",
-      "title": "Potrebna vam je brzina",
+      "title": "Potrebna je brzina",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Bez brzine, nema dovoljno vazduha koji prolazi preko krila, nema dovoljno uzgona. Zbog toga je avionu potrebna duga pista za poletanje: motori moraju da ga ubrzaju dovoljno snažno."
+          "text": "Bez brzine preko krila ne prolazi dovoljno vazduha, pa nema dovoljno uzgona. Zato je avionu za poletanje potrebna duga pista: motori moraju dovoljno snažno da ga ubrzaju."
         },
         {
           "type": "funFact",
-          "text": "Ptice koriste istu opštu ideju: njihova krila stvaraju podizanje. Ali mašu krilima da krenu napred. Avion se kreće napred zahvaljujući svojim motorima."
+          "text": "Ptice koriste istu osnovnu ideju: njihova krila stvaraju uzgon. Ali one mašu krilima da bi se kretale napred. Avion napred pokreću motori."
         },
         {
           "type": "paragraph",
-          "text": "U krstarenju, dizanje balansira težinu. Potisak motora uravnotežuje otpor vazduha. Avion se tada kreće napred približno konstantnom brzinom."
+          "text": "U krstarenju uzgon uravnotežuje težinu. Potisak motora uravnotežuje otpor vazduha. Avion se tada kreće približno stalnom brzinom."
         }
       ]
     },
     {
       "id": "course_46_comment_les_avions_volent_ils_p3",
-      "title": "Idi gore, dole, okreni se",
+      "title": "Penjanje, spuštanje, skretanje",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Da bi se penjao, pilot (ili kompjuter na brodu) malo naginje nos i podešava potisak. Da bismo se spustili, često smanjujemo potisak. Za okretanje, avion se naginje u stranu pomoću pokretnih delova krila, elerona."
+          "text": "Da bi se avion popeo, pilot (ili računar u avionu) malo podiže nos i podešava potisak. Za spuštanje se često smanjuje potisak. Za skretanje se avion naginje u stranu pomoću pokretnih delova krila, elerona."
         },
         {
           "type": "paragraph",
-          "text": "Prilikom sletanja usporavamo. Zakrilci se protežu od krila da bi povećali podizanje pri malim brzinama. Tada točkovi dodiruju tlo, a kočnice (ponekad i reverseri potiska) zaustavljaju avion."
+          "text": "Pri sletanju avion usporava. Iz krila izlaze zakrilca da bi povećala uzgon pri maloj brzini. Zatim točkovi dodiruju tlo, a kočnice (ponekad i reverseri potiska) zaustavljaju avion."
         }
       ]
     },
     {
       "id": "course_46_comment_les_avions_volent_ils_p4",
-      "title": "Nije \"lakši od vazduha\"",
+      "title": "Nije „lakši od vazduha“",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Balon sa helijumom pluta jer je manje gust od vazduha. Avion, ne: mnogo je gušći. Leti jer **snagu** izgleda kao da ga nosi, zahvaljujući svojoj brzini i obliku krila."
+          "text": "Balon sa helijumom lebdi jer je manje gust od vazduha. Avion nije: mnogo je gušći. Leti zato što **tera** vazduh da ga nosi, zahvaljujući brzini i obliku krila."
         },
         {
           "type": "takeaway",
-          "text": "Avion leti zahvaljujući **lift** stvorenom njegovim krilima koja se kreću kroz vazduh. Brzina je neophodna: bez nje, krilo više ne „gura“ nagore dovoljno da nadoknadi težinu."
+          "text": "Avion leti zahvaljujući **uzgonu** koji stvaraju njegova krila dok se kreću kroz vazduh. Brzina je neophodna: bez nje krilo više ne „gura“ dovoljno nagore da nadoknadi težinu."
         }
       ]
     }

@@ -4,11 +4,11 @@
   "subtitle": "Fleming, 1928",
   "subject": "sciences",
   "subcategory": "Maailmaa muuttaneet löydöt",
-  "description": "Vuonna 1928 Alexander Fleming huomasi, että home oli tappanut bakteerit viljelymaljalla. Tästä tilaisuudesta syntyi ensimmäinen suuri antibiootti.",
+  "description": "Vuonna 1928 Alexander Fleming huomasi, että home oli tappanut bakteereja viljelymaljalla. Tästä sattumasta syntyi ensimmäinen suuri antibiootti.",
   "hero": {
     "image": "la_decouverte_de_la_penicilline",
     "ratio": "16:9",
-    "hook": "Unohtunut laatikko, muotti ja lääke kääntyy ylösalaisin."
+    "hook": "Unohtunut malja, vähän hometta, ja lääketiede mullistuu."
   },
   "sections": [
     {
@@ -18,22 +18,22 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ennen antibiootteja yksinkertainen infektio voi tappaa. Haava, keuhkokuume, sotahaava: ruumis taisteli usein yksin."
+          "text": "Ennen antibiootteja pelkkä infektio saattoi tappaa. Viiltohaava, keuhkokuume, sotavamma: elimistö taisteli usein yksin."
         },
         {
           "type": "paragraph",
-          "text": "Skotlantilainen lääkäri **1928** löysi vahingossa aineen, joka pystyy tappamaan bakteereja. Sen nimi on **penisilliin**. Mutta kestää vielä vuosia, ennen kuin siitä tulee todellinen lääke."
+          "text": "Vuonna **1928** skotlantilainen lääkäri **Alexander Fleming** löysi sattumalta aineen, joka pystyy tappamaan bakteereja. Sen nimeksi tuli **penisilliini**. Todellisen lääkkeen tekemiseen kului kuitenkin vielä vuosia."
         }
       ]
     },
     {
       "id": "course_51_la_decouverte_de_la_penicilline_fleming_p1",
-      "title": "Unohdettu laatikko",
+      "title": "Unohtunut malja",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Fleming tutkii bakteereja Lontoossa. Palattuaan lomalta hän katselee vanhoja kulttuurilaatikoita. Yhdessä niistä kasvoi **hometta**. Hänen ympärillään bakteerit ovat kuolleet."
+          "text": "Fleming tutkii bakteereja Lontoossa. Lomalta palattuaan hän katselee vanhoja viljelymaljoja. Yhteen niistä on kasvanut **hometta**. Sen ympärillä bakteerit ovat kuolleet."
         },
         {
           "type": "image",
@@ -43,11 +43,11 @@
         },
         {
           "type": "paragraph",
-          "text": "Muotti kuuluu sukuun **Penicillium**. Fleming ymmärtää, että se tuottaa antibakteerista ainetta. Hän kutsuu sitä penisilliiniksi. Mutta hän ei voi puhdistaa sitä tarpeeksi hoitaakseen sairaita."
+          "text": "Home kuuluu **Penicillium**-sukuun. Fleming ymmärtää, että se tuottaa bakteereja tappavaa ainetta. Hän antaa sille nimen penisilliini. Hän ei kuitenkaan onnistu puhdistamaan sitä tarpeeksi, jotta sillä voisi hoitaa potilaita."
         },
         {
           "type": "funFact",
-          "text": "Fleming sanoi myöhemmin, että jos hän olisi ollut järjestelmällisempi, hän olisi heittänyt laatikon pois. Laboratorion sotku auttoi löytöä."
+          "text": "Fleming sanoi myöhemmin, että jos hän olisi ollut järjestelmällisempi, hän olisi heittänyt maljan pois. Laboratorion sotku edisti löytöä."
         }
       ]
     },
@@ -58,47 +58,47 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**1940**-vuosien alussa Oxfordissa **Howard Florey** ja **Ernst ketju** palasivat töihin. He eristivät, väkevöivät ja testasivat tiiminsä kanssa penisilliiniä eläimillä ja sitten ihmisillä."
+          "text": "**1940-luvun** alussa Oxfordissa **Howard Florey** ja **Ernst Chain** jatkoivat työtä. He eristivät ja väkevöivät penisilliiniä tiiminsä kanssa ja testasivat sitä ensin eläimillä, sitten ihmisillä."
         },
         {
           "type": "paragraph",
-          "text": "Toinen maailmansota teki asioista kiireellisiä: tartunnan saaneita sotilaita oli hoidettava. Penisilliini siirtyy laboratoriosta strategiseksi ongelmaksi."
+          "text": "Toinen maailmansota teki asiasta kiireellisen: tartunnan saaneita sotilaita oli hoidettava. Penisilliini siirtyi laboratoriosta strategiseksi kysymykseksi."
         }
       ]
     },
     {
       "id": "course_51_la_decouverte_de_la_penicilline_fleming_p3",
-      "title": "Massatuote",
+      "title": "Massatuotanto",
       "free": false,
       "blocks": [
         {
           "type": "image",
           "asset": "penicillin_antibiotic_production_laboratory",
           "ratio": "4:3",
-          "caption": "Oli tarpeen keksiä teollisia tapoja kasvattaa hometta."
+          "caption": "Homeen kasvattamiseen piti keksiä teollisia menetelmiä."
         },
         {
           "type": "paragraph",
-          "text": "Miljoonien ihmisten hoitamiseen tarvitaan valtavia määriä. Yhdysvallat teollisti tuotantoa sodan aikana. Jättiläiset sammiot tekevät homeesta ikävän kuin oluen."
+          "text": "Miljoonien ihmisten hoitamiseen tarvitaan valtavia määriä. Yhdysvallat teollistaa tuotannon sodan aikana. Hometta kasvatetaan jättimäisissä käymissäiliöissä kuin olutta."
         },
         {
           "type": "paragraph",
-          "text": "Vuonna **1945** Fleming, Florey ja Chain saivat Nobel-palkinnon. Lääketiede on tulossa antibioottien aikakauteen."
+          "text": "Vuonna **1945** Fleming, Florey ja Chain saivat Nobel-palkinnon. Lääketiede siirtyi antibioottien aikakauteen."
         }
       ]
     },
     {
       "id": "course_51_la_decouverte_de_la_penicilline_fleming_p4",
-      "title": "Vastustuksen varjo",
+      "title": "Resistenssin varjo",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Nykyään liian monet väärinkäytettyjen antibioottien vuoksi tietyt bakteerit ovat muuttuneet **resistenteiksi**: lääkkeet eivät enää tapa niitä. Fleming oli jo varoittanut tästä vaarasta."
+          "text": "Nykyään antibioottien liika- ja väärinkäyttö on tehnyt joistakin bakteereista **resistenttejä**: lääkkeet eivät enää tapa niitä. Fleming oli varoittanut tästä vaarasta jo aikanaan."
         },
         {
           "type": "takeaway",
-          "text": "Penisilliini syntyi sattumalta, jonka Fleming havaitsi teoksessa **1928**, ja siitä tuli sitten lääke Floreyn, Chainin ja sotateollisuuden ansiosta. Se on pelastanut miljoonia ihmishenkiä... kunhan et kuluta sitä loppuun."
+          "text": "Penisilliini syntyi sattumasta, jonka Fleming huomasi vuonna **1928**, ja siitä tuli lääke Floreyn, Chainin ja sotateollisuuden ansiosta. Se on pelastanut miljoonia ihmishenkiä… kunhan sitä ei käytetä liikaa."
         }
       ]
     }

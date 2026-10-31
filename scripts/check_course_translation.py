@@ -20,6 +20,11 @@ Usage:
     python scripts/check_course_translation.py --lang el --json report.json
     python scripts/check_course_translation.py --lang cs --json report.json
     python scripts/check_course_translation.py --lang bg --json report.json
+    python scripts/check_course_translation.py --lang all          # the 26 languages, one line each
+
+Every app language goes through this validator, with or without a translation
+guide: the eleven languages that never had one (da nb fi ru et he sk hr sr sl ar)
+are where machine-translation artefacts stayed in the app.
 """
 
 from __future__ import annotations
@@ -151,7 +156,11 @@ INITIALISM_VOWEL_LETTERS = set("AEFHILMNORSX")
 
 #: Abbreviations whose period belongs inside a bold span.
 ABBREVIATION_TAIL_RE = re.compile(
-    r"(?:\b[A-Za-z]|Jr|Sr|St|Mt|Dr|Mr|Mrs|Ms|Prof|Gen|Col|Capt|Inc|Ltd|etc|vol|no)\.$"
+    r"(?:\b[A-Za-z]|Jr|Sr|St|Mt|Dr|Mr|Mrs|Ms|Prof|Gen|Col|Capt|Inc|Ltd|etc|vol|no"
+    # era and date abbreviations of the edited languages: eKr./jKr. (fi), eKr./pKr. (et),
+    # f.Kr./e.Kr. (da, nb), н. э. / г. / в. (ru), and ordinal dates or centuries ("12.", "8.")
+    # regnal ordinals of the Slavic languages ("Nikolaj II.", "Ludvik XIV.") and "pr. n. št." (sl)
+    r"|eKr|jKr|pKr|Kr|Hr|eaa|jaa|št|\b[IVXLC]+|\b[а-яё]|\d)\.$"
 )
 
 # Articles that must not precede a glossary key that already carries one.
@@ -252,7 +261,7 @@ GERMAN_RULES = LanguageRules(
         re.IGNORECASE,
     ),
     leading_articles=("der ", "die ", "das ", "dem ", "den ", "des ", "ein ", "eine "),
-    leftover_extra_skip=frozenset({"des"}),  # German genitive article
+    leftover_extra_skip=frozenset({"des", "du"}),  # German genitive article; "du" = informal you
     check_a_an=False,
     flag_space_thousands=True,
     thousands_hint="should use a period (30.000)",
@@ -286,7 +295,7 @@ PORTUGUESE_RULES = LanguageRules(
         re.IGNORECASE,
     ),
     leading_articles=("o ", "a ", "os ", "as ", "um ", "uma "),
-    leftover_extra_skip=frozenset({"entre", "du"}),
+    leftover_extra_skip=frozenset({"entre", "du", "une"}),  # "une": unir, 3rd person
     check_a_an=False,
     flag_space_thousands=True,
     thousands_hint="should use a period (30.000)",
@@ -831,7 +840,11 @@ def bold_spans(text: str) -> list[str]:
     return parts[1:-1:2] if len(parts) % 2 else []
 
 
-def residual_english(text: str) -> tuple[str, str] | None:
+#: Words that look like English function words but are ordinary words of a language.
+ENGLISH_LEFTOVER_EXCLUDE_BY_LANG = {"fi": frozenset({"into"}), "et": frozenset({"into"})}
+
+
+def residual_english(text: str, exclude: frozenset[str] = frozenset()) -> tuple[str, str] | None:
     """First untranslated English function word, or None.
 
     Same exemptions as ``residual_french``: glossary keys and anything inside
@@ -848,6 +861,8 @@ def residual_english(text: str) -> tuple[str, str] | None:
             lowered = candidate.lower()
             start = index + len(phrase)
     for match in ENGLISH_LEFTOVERS.finditer(candidate):
+        if match.group(0).lower() in exclude:
+            continue
         before = candidate[: match.start()].rstrip()
         after = candidate[match.end() :].lstrip()
         previous_word = re.search(r"([\w'\u00c0-\u024f-]+)$", before)
@@ -1106,7 +1121,7 @@ def check_segment(
 
     # --- residual English -------------------------------------------------
     if lang != "en":
-        match = residual_english(english)
+        match = residual_english(english, ENGLISH_LEFTOVER_EXCLUDE_BY_LANG.get(lang, frozenset()))
         if match:
             word, context = match
             report("english-leftover", f"{word!r}: {context}")
@@ -1164,6 +1179,19 @@ def main() -> int:
     parser.add_argument("--json", type=Path, help="Write the full report as JSON")
     parser.add_argument("--rule", action="append", help="Only report these rules")
     args = parser.parse_args()
+
+    if args.lang == "all":
+        from i18n_languages import NON_FR_LANGS
+        failed = 0
+        for lang in NON_FR_LANGS:
+            sub = [sys.argv[0], *args.patterns, "--lang", lang] + sum((["--rule", r] for r in args.rule or []), [])
+            saved, sys.argv = sys.argv, sub
+            try:
+                failed += main()
+            finally:
+                sys.argv = saved
+        print(f"\n{len(NON_FR_LANGS) - failed}/{len(NON_FR_LANGS)} language(s) clean.")
+        return 1 if failed else 0
 
     allowed_by_course = glossary_keys_by_course(args.lang)
     course_ids = [p.stem for p in sorted((CONTENT_ROOT / "fr").glob("*.json"))]

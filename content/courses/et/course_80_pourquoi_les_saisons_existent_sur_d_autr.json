@@ -1,10 +1,10 @@
 {
   "id": "course_80_pourquoi_les_saisons_existent_sur_d_autr",
-  "title": "Miks on aastaajad teistel planeetidel?",
+  "title": "Miks on teistelgi planeetidel aastaajad?",
   "subtitle": "Planeedid ja orbiidid",
   "subject": "sciences",
   "subcategory": "Maa ja universum",
-  "description": "Maal tulevad aastaajad telje kaldest. Mujal annab sama põhimõte 42-aastaseks talveks või peaaegu üldse hooajaks.",
+  "description": "Maal tekivad aastaajad telje kaldest. Mujal annab sama põhimõte 42 aastat kestvaid talvi… või peaaegu üldse mitte mingeid aastaaegu.",
   "hero": {
     "image": "pourquoi_les_saisons_existent_sur_d_autres_planetes",
     "ratio": "16:9",
@@ -18,55 +18,55 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Maal tulenevad suvi ja talv peamiselt telje **kaldest**: ligikaudu **23,5°**. Päike lööb tugevamini ühte, siis teist poolkera. See mudel tundub ilmne. Päikesesüsteemis on see pigem mõõdukas versioon."
+          "text": "Maal tekivad suvi ja talv peamiselt telje **kalde** tõttu: see on umbes **23,5°**. Päike kõrvetab tugevamalt kord üht, siis teist poolkera. See mudel tundub iseenesestmõistetav. Päikesesüsteemis on see aga pigem mõõdukas variant."
         },
         {
           "type": "paragraph",
-          "text": "Iga planeet ühendab oma kalde ja orbiidi kuju. Tulemus: maailmad ilma aastaaegadeta, teised äärmuslike kontrastidega ja aastakümneid kestvad talved."
+          "text": "Iga planeedi aastaajad sõltuvad tema telje kaldest ja orbiidi kujust. Tulemus: maailmad ilma aastaaegadeta, teised äärmuslike vastanditega ja aastakümneid kestvad talved."
         }
       ]
     },
     {
       "id": "course_80_pourquoi_les_saisons_existent_sur_d_autr_p1",
-      "title": "Kallutus, kontrastide mootor",
+      "title": "Kalle kui vastandite mootor",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "[[Kaldus]] on nurk planeedi pöörlemistelje ja selle orbiidiga risti oleva nurga vahel. Mida suurem see on, seda märgatavamad on aastaajad."
+          "text": "[[Teljekalle]] on nurk planeedi pöörlemistelje ja orbiidi tasandiga risti oleva sirge vahel. Mida suurem see nurk on, seda selgemini aastaajad eristuvad."
         },
         {
           "type": "image",
           "asset": "uranus_planet_nasa",
           "ratio": "auto",
-          "caption": "Umbes 98° nurga all kallutatud Uraanil on ekstreemsed aastaajad, mis kestavad 42 aastat."
+          "caption": "Umbes 98° kaldega Uraanil on äärmuslikud, 42 aastat kestvad aastaajad."
         },
         {
           "type": "paragraph",
-          "text": "**Uraan** on äärmuslik juhtum: umbes **98°** kalle, peaaegu lamades. Ümber Päikese liikumiseks kulub **84 aastat**. Iga poolus saab siis peaaegu **42 aastat** pidevat päeva, seejärel **42 aastat** kogu öö. **märtsil**, **25,2°**, sarnaneb Maaga, kuid selle aasta kestab **687 maapealset päeva**: kuuekuuline kevad ja sügis. **Jupiter** ja **Merkuur**, peaaegu sirged, neil pole peaaegu ühtegi aastaaega."
+          "text": "**Uraan** on äärmuslik juhtum: kalle umbes **98°**, peaaegu külili. Tiir ümber Päikese võtab **84 aastat**. Seega saab kumbki poolus ligi **42 aastat** järjest päeva, seejärel **42 aastat** täielikku ööd. **Mars** kaldega **25,2°** sarnaneb Maaga, kuid tema aasta kestab **687 Maa päeva**: kevad ja sügis kestavad kuus kuud. **Jupiter** ja **Merkuur** on peaaegu püstised ning neil pole peaaegu üldse aastaaegu."
         },
         {
           "type": "funFact",
-          "text": "Uraanil ja Neptuunil võib äärmuslik rõhk \"sadada\" atmosfääri süsinikust moodustunud teemante."
+          "text": "Uraanil ja Neptuunil võib äärmuslik rõhk panna „sadama“ teemante, mis tekivad atmosfääri süsinikust."
         }
       ]
     },
     {
       "id": "course_80_pourquoi_les_saisons_existent_sur_d_autr_p2",
-      "title": "Kui oluline on ka kaugus Päikesest",
+      "title": "Kui loeb ka kaugus Päikesest",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Maal on orbiit peaaegu ringikujuline: kaugus Päikesest varieerub vähe. Seetõttu ei tee see suve ega talve, vaid kiirte nurk."
+          "text": "Maa orbiit on peaaegu ringikujuline: kaugus Päikesest muutub vähe. Seega ei tekita suve ega talve kaugus, vaid päikesekiirte langemisnurk."
         },
         {
           "type": "paragraph",
-          "text": "**märtsil**-l on orbiit palju ovaalsem, **ectentrilisem**: vahemikus **207 kuni 249 miljonit km**. Lõunapoolkeral langeb suvi Päikesele lähima punkti [[periheel]] lähedale. Lühemad, kuid soojemad suved. See termiline šokk kutsub mõnikord esile **planetaarsed tolmutormid**, mis varjavad taevast."
+          "text": "**Marsi** orbiit on palju ovaalsem ehk **ekstsentrilisem**: **207 kuni 249 miljonit km**. Lõunapoolkera suvi langeb ajale, mil lähedal on [[periheel]], Päikesele lähim orbiidipunkt. Suved on lühemad, kuid kuumemad. See termiline šokk vallandab mõnikord kogu planeeti hõlmavaid **tolmutorme**, mis varjavad taeva."
         },
         {
           "type": "funFact",
-          "text": "Aastal **2018** peatas hooajaline Marsi torm jäädavalt kulguri Opportunity, blokeerides Päikese."
+          "text": "**2018**. aastal peatas Marsi aastaajaline torm lõplikult kulguri Opportunity, varjates selle eest Päikese."
         }
       ]
     },
@@ -77,34 +77,34 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Elavhõbe**, ilma tõelise atmosfääri või kaldeta, elab peamiselt igapäevastes Pange tähele: **430 °C** päikese käes, **-180 °C** öösel. **Venus** pöörleb tagurpidi, [[Retrograadne pöörlemine]] idast läände, äärmise kaldega, kuid selle koletu **kasvuhooneefekt püüab atmosfääri soojust kinni ja ühtlustab temperatuuri kõikjal** Z460 **°C**."
+          "text": "**Merkuur**, millel pole õiget atmosfääri ega telje kallet, elab peamiselt **ööpäevaste** äärmuste rütmis: päikese käes **430 °C**, öösel **-180 °C**. **Veenus** pöörleb vastupidises suunas. [[Retrograadne pöörlemine]] idast läände käib sel planeedil koos äärmusliku kaldega, kuid koletu **kasvuhooneefekt** püüab soojuse atmosfääri lõksu ja ühtlustab temperatuuri kõikjal ja kogu aeg umbes **460 °C** peale."
         },
         {
           "type": "paragraph",
-          "text": "**Saturn**, kallutatud nagu Maa, on aastaajad umbes **7 aastat**. [[Saturni rõngad]] nurk muudab iga poolkera vastuvõetavat valgust ja muudab isegi pilvede värvi."
+          "text": "**Saturn** on kaldu nagu Maa ja tema aastaajad kestavad umbes **7 aastat**. Sõltuvalt nurgast muudavad [[Saturni rõngad]] valguse hulka, mida kumbki poolkera saab, ja isegi pilvede värvi."
         },
         {
           "type": "funFact",
-          "text": "Veenusel kestab selle pöörlemine ühel päeval kauem kui aasta, selle revolutsioon: **243** maapealsed päevad **225** vastu."
+          "text": "Veenusel kestab päev ehk pööre ümber oma telje kauem kui aasta ehk tiir ümber Päikese: **243** Maa päeva **225** vastu."
         }
       ]
     },
     {
       "id": "course_80_pourquoi_les_saisons_existent_sur_d_autr_p4",
-      "title": "Miks on Maal stabiilsed aastaajad?",
+      "title": "Miks on Maal stabiilsed aastaajad",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ilma **Kuuata** võnguks Maa kalle miljonite aastate jooksul kaootiliselt 0° ja rohkem kui 80° vahel. Uraani tüüpi aastaajad muudaksid kliima peaaegu elamiskõlbmatuks. Kuu toimib **gravitatsioon stabiliseerub**."
+          "text": "Ilma **Kuuta** kõiguks Maa telje kalle miljonite aastate jooksul kaootiliselt 0° ja üle 80° vahel. Uraani-laadsed aastaajad muudaksid kliima peaaegu elamiskõlbmatuks. Kuu toimib **gravitatsioonilise stabilisaatorina**."
         },
         {
           "type": "paragraph",
-          "text": "Otsides elamiskõlblikke [[eksoplaneedid]], vaatavad astronoomid ka telje stabiilsust. Pehmed ja korrapärased aastaajad ei ole detail: need on osa säästva eluviisi tingimustest."
+          "text": "Kui astronoomid otsivad, millised [[eksoplaneedid]] võiksid olla elamiskõlblikud, vaatavad nad ka telje stabiilsust. Pehmed ja korrapärased aastaajad pole tühiasi: need on üks püsiva elu tingimusi."
         },
         {
           "type": "takeaway",
-          "text": "Aastaajad tulenevad peamiselt telje kaldest. Uraanil kestavad need aastakümneid; Marsil muudab ovaalne orbiit need asümmeetriliseks. Kuu kaitseb neid, kes on Maal."
+          "text": "Aastaajad tulenevad peamiselt telje kaldest. Uraanil kestavad need aastakümneid, Marsil muudab ovaalne orbiit need ebasümmeetriliseks. Kuu kaitseb Maa aastaaegu."
         }
       ]
     }

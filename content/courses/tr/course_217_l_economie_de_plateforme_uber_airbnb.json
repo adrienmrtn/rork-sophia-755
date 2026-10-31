@@ -4,11 +4,11 @@
   "subtitle": "Fabrikasız bir kapitalizm",
   "subject": "comprendreLeMonde",
   "subcategory": "Ekonomi ve toplum",
-  "description": "Uber, Airbnb, Deliveroo neredeyse hiçbir şeye sahip değildir: ne araba, ne daire, ne ücretli çalışan. Bu platformlar nasıl dünya devleri oldu?",
+  "description": "Uber, Airbnb ve Deliveroo'nun neredeyse hiçbir şeyi yok: ne arabaları, ne daireleri, ne de maaşlı çalışanları. Bu platformlar nasıl dünya devi oldu?",
   "hero": {
     "image": "l_economie_de_plateforme",
     "ratio": "16:9",
-    "hook": "Uber hiç araba sahibi olmadı, yine de dünyada ulaşımı altüst etti."
+    "hook": "Uber'in tek bir arabası bile olmadı, ama yine de dünyanın her yerinde ulaşımı altüst etti."
   },
   "sections": [
     {
@@ -18,51 +18,51 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Uber, Airbnb, Amazon veya Deliveroo yeni bir şirket kategorisine aittir: **dijital platformlar**. Zaten var olan hizmetleri sayısallaştırmakla yetinmezler: sahip olma, çalışma ve korunma biçiminin kendisini değiştirirler."
+          "text": "Uber, Airbnb, Amazon ya da Deliveroo yeni bir şirket türünün örnekleridir: **dijital platformlar**. Zaten var olan hizmetleri dijitale taşımakla yetinmezler; sahip olma, çalışma ve korunma biçiminin kendisini değiştirirler."
         },
         {
           "type": "paragraph",
-          "text": "Bu model eşi görülmemiş bir kapitalizm biçimi icat etti, toplumsal sözleşmemizi sorgular. Nasıl işlediğini ve neden bu kadar tartışıldığını anlayalım."
+          "text": "Bu model eşi görülmemiş bir kapitalizm biçimi icat etti ve toplumsal sözleşmemizi sorgulatıyor. Nasıl işlediğine ve neden bu kadar tartışıldığına bakalım."
         }
       ]
     },
     {
       "id": "course_217_l_economie_de_plateforme_uber_airbnb_p1",
-      "title": "Fabrikasız, ücretlisiz bir kapitalizm",
+      "title": "Fabrikası ve çalışanı olmayan bir kapitalizm",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Klasik bir şirket fabrikalar, araçlar, stoklar sahibidir ve ücretli çalışan istihdam eder. Bir platform bu modeli kırar: kendisi hiçbir şey üretmeden bir arz ile bir talebi buluşturan yalın bir dijital altyapı olur."
+          "text": "Klasik bir şirketin fabrikaları, araçları ve stokları vardır; maaşlı çalışanlar istihdam eder. Platform bu modeli kırar: kendisi hiçbir şey üretmeden arzla talebi buluşturan basit bir dijital altyapıya dönüşür."
         },
         {
           "type": "paragraph",
-          "text": "Bu sistem [[Ağ etkisi]] üzerine kurulur: bir platformun kullanıcısı çoğaldıkça daha yararlı olur, bu da daha çok kullanıcı çeker. Bir ulaşım hizmetinde müsait sürücü ne kadar çoksa bekleme o kadar kısalır, bu da daha çok müşteri çeker, onlar da daha çok sürücü çeker. Bu çember neredeyse her zaman yarı tekel durumlarına varır."
+          "text": "Bu sistem [[ağ etkisi]] üzerine kurulur: bir platformun kullanıcısı çoğaldıkça platform daha yararlı olur, bu da daha çok kullanıcı çeker. Bir ulaşım hizmetinde müsait sürücü ne kadar çoksa bekleme o kadar kısalır; bu daha çok müşteri çeker, onlar da daha çok sürücü çeker. Bu döngü neredeyse her zaman tekele yakın durumlar doğurur."
         },
         {
           "type": "funFact",
-          "text": "Uber otonom arabalar araştırmasına milyarlarca dolar harcadı, uzun vadede son büyük maliyetinden kurtulmak için: insan sürücü."
+          "text": "Uber, uzun vadede son büyük maliyetinden, yani insan sürücüden kurtulmak için otonom araç araştırmalarına milyarlarca dolar harcadı."
         }
       ]
     },
     {
       "id": "course_217_l_economie_de_plateforme_uber_airbnb_p2",
-      "title": "Ücretliliğin korumaları olmadan bir iş",
+      "title": "Maaşlı çalışanın güvenceleri olmadan çalışmak",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Bu teknik yeniliğe daha tartışmalı bir hukuki yenilik eşlik eder. [[Gig ekonomisi ve uberizasyon]] içinde platform işveren statüsünü reddeder, kendini yalın bir teknoloji aracısı gibi sunar; böylece sosyal prim, asgari ücret veya ücretli izin ödemez."
+          "text": "Bu teknik yeniliğe daha tartışmalı bir hukuki yenilik eşlik eder. [[Gig ekonomisi ve uberizasyon]] modelinde platform işveren sayılmayı reddeder ve kendini basit bir teknoloji aracısı olarak sunar; böylece sosyal güvenlik primi, asgari ücret ya da ücretli izin ödemekten kurtulur."
         },
         {
           "type": "image",
           "asset": "gig_economy_workers_strike_protest",
           "ratio": "16:9",
-          "caption": "Sürücüler ve kuryeler çoğu zaman bağımsız sayılır, ücretli değil"
+          "caption": "Sürücüler ve kuryeler çoğu zaman maaşlı çalışan değil, serbest çalışan sayılır."
         },
         {
           "type": "paragraph",
-          "text": "Çalışan bütün riskleri tek başına taşıyan bir bağımsız olur: hastalık, kaza, talep düşüşü. Yine de çoğu zaman uygulamanın kurallarına (dayatılan tarifeler, puan, yaptırımlar) bağlı kalır, buna **algoritmik bağlılık** denir. Buna karşı birkaç ülkede mahkemeler [[Yeniden sınıflandırma]] kararı dayatmaya başladı: bu sözleşmeleri gerçek ücretli işe çevirmek."
+          "text": "Çalışan, bütün riskleri tek başına taşıyan bir serbest çalışana dönüşür: hastalık, kaza, talep düşüşü. Yine de çoğu zaman uygulamanın kurallarına (dayatılan ücretler, puanlama, yaptırımlar) bağlı kalır; bu duruma **algoritmik itaat** denir. Buna karşı birkaç ülkede mahkemeler, bu sözleşmeler için [[Yeniden sınıflandırma]] kararı vermeye, yani onları gerçek maaşlı işe dönüştürmeye başladı."
         }
       ]
     },
@@ -73,15 +73,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Bu platformların etkisi iş dünyasını aşar: kentleri de dönüştürür. Airbnb kısa süreli turistik kiralamayı kolaylaştırarak geleneksel otellerle rekabet eder, sakinler için kullanılabilir konut sayısını da düşürür."
+          "text": "Bu platformların etkisi çalışma hayatıyla sınırlı kalmaz: kentleri de dönüştürür. Airbnb, kısa süreli turistik kiralamayı kolaylaştırarak geleneksel otellerle rekabet eder ve aynı zamanda kentte yaşayanlara kalan konut sayısını azaltır."
         },
         {
           "type": "paragraph",
-          "text": "Sonuç: kent merkezlerinde kiralar tırmanır, Paris veya Barselona gibi metropoller kiralama günü kotaları gibi katı kurallar koymak zorunda kaldı. Devletler ayrıca bu platformların parayı gerçekten kazandıkları yerde vergi paylarını ödemesi için bir **dijital vergilendirme** kurmaya çalışır."
+          "text": "Sonuç: kent merkezlerinde kiralar tırmanıyor ve Paris ya da Barselona gibi büyük kentler, kiralama günlerine kota gibi katı kurallar koymak zorunda kaldı. Devletler de bu platformların vergilerini gerçekten para kazandıkları yerde ödemesi için bir **dijital vergilendirme** getirmeye çalışıyor."
         },
         {
           "type": "funFact",
-          "text": "New York'ta 2023'te Airbnb'ye karşı katı bir düzenleme, yasal ilan sayısını birkaç ayda %80 düşürdü."
+          "text": "New York'ta 2023'te Airbnb'ye karşı getirilen katı bir düzenleme, yasal ilan sayısını birkaç ay içinde %80 azalttı."
         }
       ]
     },
@@ -92,15 +92,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Platform ekonomisi hızlı ve çoğu zaman daha ucuz hizmetler getirdi, bazı kişilerin bir gelir bulmasını kolaylaştırdı. Ama bu verim 20. yüzyılda kurulmuş korumaların zayıflamasına dayanır."
+          "text": "Platform ekonomisi hızlı ve çoğu zaman daha ucuz hizmetler getirdi, bazı insanların daha kolay gelir elde etmesini sağladı. Ama bu verimlilik, 20. yüzyılda kazanılan güvencelerin zayıflamasına dayanıyor."
         },
         {
           "type": "paragraph",
-          "text": "Bugünkü tartışma ücretli ile bağımsız arasında ara bir statü kurmak üzerinedir, hakların taşınabilirliğiyle: her çalışan, kaç platform için çalışırsa çalışsın, sosyal koruma biriktirirdi. Bu modelin geleceği, düzenleyicilerin yeniliği boğmadan onu çerçeveleme becerisine bağlıdır."
+          "text": "Bugünkü tartışma, maaşlı çalışanla serbest çalışan arasında, hakların taşınabildiği bir ara statü yaratmak üzerine: her çalışan, kaç platform için çalışırsa çalışsın sosyal güvence biriktirebilecek. Bu modelin geleceği, düzenleyicilerin onu yeniliği boğmadan çerçeveleyebilmesine bağlı olacak."
         },
         {
           "type": "takeaway",
-          "text": "Platform ekonomisi, ağ etkisini sömüren fabrikasız bir kapitalizme dayanır, çalışanlarını çoğu zaman güvencesiz bağımsızlara çevirir. Bu modeli kırmadan daha iyi sosyal korumalar için savaş henüz başlamaktadır."
+          "text": "Platform ekonomisi, ağ etkisinden yararlanan fabrikasız bir kapitalizme dayanır ve çalışanlarını çoğu zaman güvencesiz serbest çalışanlara dönüştürür. Bu modeli yıkmadan daha iyi sosyal güvenceler elde etme mücadelesi daha yeni başlıyor."
         }
       ]
     }

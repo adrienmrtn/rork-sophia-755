@@ -4,11 +4,11 @@
   "subtitle": "Hrozba alebo nová vlna?",
   "subject": "comprendreLeMonde",
   "subcategory": "Životné prostredie a budúcnosť",
-  "description": "Každá technologická revolúcia vyvolala obavy o zamestnanie. Ale generatívna AI po prvýkrát ovplyvňuje **intelektuál** profesie, nielen fyzickú silu.",
+  "description": "Každá technologická revolúcia vyvolala strach o prácu. Generatívna AI však po prvý raz zasahuje **intelektuálne** profesie, nielen fyzickú silu.",
   "hero": {
     "image": "l_ia_et_l_emploi",
     "ratio": "16:9",
-    "hook": "Stroje už vymenili ramená. Nahradia teraz mozgy?"
+    "hook": "Stroje už nahradili ruky. Nahradia teraz aj mozgy?"
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Zničí umelá inteligencia milióny pracovných miest alebo vytvorí nové? Táto otázka prišla s každým významným technologickým pokrokom za posledné dve storočia."
+          "text": "Zničí umelá inteligencia milióny pracovných miest, alebo vytvorí nové? Táto otázka sa vracia pri každom veľkom technologickom pokroku už dve storočia."
         },
         {
           "type": "paragraph",
-          "text": "Tentoraz je novinka inde: AI už nenahrádza len fyzickú silu, ale úlohy, o ktorých sme si mysleli, že sú vyhradené pre ľudskú myseľ, ako napríklad písanie textu alebo analýza súboru. Tento kurz sleduje tento starodávny strach a skúma, čo sa dnes skutočne mení."
+          "text": "Tentoraz je novinka inde: AI už nenahrádza len fyzickú silu, ale aj úlohy, o ktorých sa myslelo, že ich zvládne iba ľudská myseľ, napríklad napísať text alebo rozobrať spis. Tento kurz ukazuje, odkiaľ sa tento starý strach berie, a skúma, čo sa dnes naozaj mení."
         }
       ]
     },
@@ -33,17 +33,17 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Strach, že stroje nahradia ľudí, nie je nový. Na začiatku 19. storočia britskí textilní robotníci [[Ludditi (1811-1816)]] zničili mechanické krosná, ktoré ohrozovali ich zručnosti."
+          "text": "Strach, že stroj nahradí človeka, nie je nový. Na začiatku 19. storočia [[ludditi (1811-1816)]], britskí robotníci z textilného priemyslu, rozbíjali mechanické tkáčske stavy, ktoré ohrozovali ich remeslo."
         },
         {
           "type": "image",
           "asset": "luddites_industrial_revolution_machine_breaking",
           "ratio": "4:3",
-          "caption": "V 19. storočí luddisti napadli stroje, ktoré ohrozovali ich profesiu."
+          "caption": "V 19. storočí ludditi útočili na stroje, ktoré ohrozovali ich remeslo."
         },
         {
           "type": "paragraph",
-          "text": "Každá veľká technologická vlna sa riadi rovnakou logikou: ničí určité pracovné miesta, no inde vytvára iné. Presun od poľnohospodárstva k priemyslu znížil za storočie podiel farmárov zo 40 % na 2 % pracujúceho obyvateľstva bez toho, aby spôsobil trvalú nezamestnanosť, keďže títo pracovníci prešli do nových odvetví."
+          "text": "Každá veľká technologická vlna sa riadila rovnakou logikou: niektoré pracovné miesta zničí, no inde vytvorí iné. Prechod od poľnohospodárstva k priemyslu znížil za storočie podiel poľnohospodárov zo 40 % na 2 % ekonomicky aktívneho obyvateľstva, a pritom nespôsobil trvalú nezamestnanosť, lebo títo ľudia prešli do nových odvetví."
         },
         {
           "type": "funFact",
@@ -58,40 +58,40 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "[[Generatívna umelá inteligencia (AI)]] znamená skutočnú zmenu, pretože sa už neriadi iba vopred stanovenými pravidlami: vytvára originálny obsah. Klasické výpočty nahradili opakujúce sa úlohy, ako je zadávanie údajov. Moderná AI dokáže napísať, analyzovať zmluvu, skladať hudbu alebo dokonca pomôcť pri stanovení lekárskej diagnózy."
+          "text": "[[Generatívna umelá inteligencia (AI)]] prináša skutočnú zmenu, pretože sa už neriadi iba vopred stanovenými pravidlami: vytvára pôvodný obsah. Klasická informatika nahrádzala opakujúce sa úlohy, ako je zadávanie údajov. Moderná AI dokáže písať texty, rozobrať zmluvu, skladať hudbu, ba dokonca pomôcť pri stanovení lekárskej diagnózy."
         },
         {
           "type": "image",
           "asset": "AI_generative_writing_artificial_intelligence",
           "ratio": "4:3",
-          "caption": "Generatívna AI rieši úlohy, o ktorých sa predpokladalo, že sú vyhradené pre ľudskú myseľ."
+          "caption": "Generatívna AI sa púšťa do úloh, o ktorých sa myslelo, že patria iba ľudskej mysli."
         },
         {
           "type": "paragraph",
-          "text": "Táto všestrannosť odhaľuje najmä [[bielych golierov]], profesie v sektore služieb, ktorých hlavným pracovným nástrojom je analýza. Podľa posledných správ patria právnici, redaktori a finanční analytici medzi profesie, ktoré sú najviac vystavené tejto zmene."
+          "text": "Táto všestrannosť ohrozuje najmä profesie [[bielych golierov]], teda prácu v službách, kde je hlavným pracovným nástrojom analýza. Podľa nedávnych správ patria právnici, redaktori a finanční analytici medzi profesie, ktoré táto zmena zasiahne najviac."
         },
         {
           "type": "funFact",
-          "text": "V roku 1950 Alan Turing predpovedal, že stroj môže jedného dňa oklamať človeka simuláciou jeho myslenia. Niektoré AI boli odvtedy považované za spoluautorov skutočných vedeckých patentov."
+          "text": "V roku 1950 Alan Turing predpovedal, že stroj raz bude môcť oklamať človeka tým, že napodobní jeho myslenie. Niektoré AI odvtedy uviedli ako spoluautorov skutočných vedeckých patentov."
         }
       ]
     },
     {
       "id": "course_226_l_ia_et_l_emploi_p3",
-      "title": "Radšej kopilot ako náhrada?",
+      "title": "Skôr kopilot než náhrada?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Optimistickejší pohľad vidí AI skôr ako asistenta než náhradu. Automatizáciou menej zaujímavých úloh, akými sú dokumentárny výskum alebo súhrny, by profesionálom zostalo viac času na ľudský, etický alebo strategický aspekt ich práce."
+          "text": "Optimistickejší pohľad vidí v AI skôr asistenta než náhradu. Keby prevzala menej zaujímavé úlohy, napríklad vyhľadávanie podkladov či písanie zhrnutí, odborníkom by zostalo viac času na ľudskú, etickú či strategickú stránku ich práce."
         },
         {
           "type": "paragraph",
-          "text": "Objavujú sa už aj nové profesie, ako napríklad [[Pohotový inžinier]], ktorý vie sformulovať presné inštrukcie, aby z AI získal to najlepšie. Lekár s pomocou AI nezmizne: môže sledovať viac pacientov s väčšou presnosťou."
+          "text": "Objavujú sa už aj nové profesie, ako napríklad [[prompt inžinier]], ktorý vie sformulovať presné pokyny, aby z AI získal to najlepšie. Lekár s pomocou AI nezmizne: môže sledovať viac pacientov s väčšou presnosťou."
         },
         {
           "type": "paragraph",
-          "text": "Problémom zostáva rýchlosť zmien. Predchádzajúce priemyselné revolúcie trvali desaťročia a poskytli čas na prispôsobenie sa. Transformácia AI prebieha v priebehu niekoľkých rokov, čo môže vytvoriť medzeru v zručnostiach, ktorú je pre mnohých pracovníkov ťažké odstrániť."
+          "text": "Znepokojuje však najmä rýchlosť zmeny. Predchádzajúce priemyselné revolúcie sa ťahali desaťročia, takže bol čas prispôsobiť sa. Revolúcia AI sa odohráva za pár rokov, a to môže otvoriť medzeru v zručnostiach, ktorú mnohí pracovníci len ťažko dobehnú."
         }
       ]
     },
@@ -102,19 +102,19 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Výsledok tejto zmeny bude závisieť predovšetkým od politických rozhodnutí, ktoré ju budú sprevádzať. Neustála odborná príprava sa stáva nevyhnutnou, aby pomohla pracovníkom získať nové zručnosti."
+          "text": "Výsledok tejto zmeny bude závisieť najmä od politických rozhodnutí, ktoré ju budú sprevádzať. Celoživotné vzdelávanie sa stáva nevyhnutnosťou: pomáha pracovníkom osvojiť si nové zručnosti."
         },
         {
           "type": "paragraph",
-          "text": "Opätovne sa otvára aj diskusia o prerozdeľovaní bohatstva vytvoreného strojmi. Ak AI umožňuje vyrábať viac s menším počtom pracovníkov, ako môžeme financovať naše sociálne systémy? V tomto kontexte sa presadzuje myšlienka univerzálneho základného príjmu (UBI), nie ako utópia, ale ako skutočná záchranná sieť."
+          "text": "Znova sa otvára aj diskusia o tom, ako rozdeliť bohatstvo, ktoré vytvárajú stroje. Ak AI umožní vyrábať viac s menším počtom pracovníkov, ako potom financovať naše sociálne systémy? Práve v tejto súvislosti si získava priaznivcov [[univerzálny základný príjem (UBI)]], nie ako utópia, ale ako skutočná záchranná sieť."
         },
         {
           "type": "paragraph",
-          "text": "Niektorí navrhujú aj daň za používanie umelej inteligencie ako kompenzáciu za zníženie príspevkov súvisiacich so zamestnaním. AI nás v konečnom dôsledku núti prehodnotiť samotné miesto práce v našich životoch."
+          "text": "Niektorí navrhujú aj daň z používania umelej inteligencie, ktorá by vyvážila nižšie odvody zo zamestnania. AI nás napokon núti prehodnotiť, aké miesto má v našom živote samotná práca."
         },
         {
           "type": "takeaway",
-          "text": "Predchádzajúce priemyselné revolúcie zničili pracovné miesta a vytvorili iné inde. Generatívna AI je prvá, ktorá ohrozuje kognitívne a kreatívne úlohy súčasne, vďaka čomu je adaptácia naliehavejšia než kedykoľvek predtým."
+          "text": "Predchádzajúce priemyselné revolúcie zničili pracovné miesta, no inde vytvorili iné. Generatívna AI je prvá, ktorá ohrozuje kognitívne aj tvorivé úlohy naraz, a preto je prispôsobenie naliehavejšie než kedykoľvek predtým."
         }
       ]
     }

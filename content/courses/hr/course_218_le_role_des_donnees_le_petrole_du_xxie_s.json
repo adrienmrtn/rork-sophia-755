@@ -1,14 +1,14 @@
 {
   "id": "course_218_le_role_des_donnees_le_petrole_du_xxie_s",
   "title": "Zašto se kaže da su podaci nova nafta?",
-  "subtitle": "Najvrjedniji digitalni izvor",
+  "subtitle": "Najvrjedniji resurs digitalnog svijeta",
   "subject": "comprendreLeMonde",
   "subcategory": "Gospodarstvo i društvo",
-  "description": "Kažu da su podaci novo ulje. Ali za razliku od nafte, oni nikada ne ponestaju i postaju sve vrjedniji što ih se više susreće.",
+  "description": "Kaže se da su podaci nova nafta. No za razliku od nafte, nikada se ne iscrpe i postaju sve vrjedniji što ih se više kombinira.",
   "hero": {
     "image": "le_role_des_donnees",
     "ratio": "16:9",
-    "hook": "Facebook može pogoditi da se netko ženi ili seli prije nego što oni to i znaju."
+    "hook": "Facebook može pogoditi da će se netko vjenčati ili preseliti i prije nego što ta osoba toga postane svjesna."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Od 2010-ih uvriježila se fraza: **podaci** bi bilo “nafta 21. stoljeća”. Ideja je jednostavna: nakon što ih pročisti algoritmi, oni postaju motor rasta i globalne moći."
+          "text": "Od 2010-ih uvriježila se jedna rečenica: **podaci** su navodno „nafta 21. stoljeća”. Ideja je jednostavna: kad ih algoritmi rafiniraju, postaju pokretač rasta i svjetske moći."
         },
         {
           "type": "paragraph",
-          "text": "Ali za razliku od nafte, resursa koji nestaje, podaci se nikada ne troše: mogu se beskonačno kopirati i postaju vrijedniji kada se kombiniraju s drugim informacijama. Evo zašto je preoblikovao globalnu ekonomiju."
+          "text": "No za razliku od nafte, resursa koji se iscrpljuje, podaci se nikada ne potroše: mogu se kopirati unedogled i postaju sve vrjedniji što ih se više kombinira s drugim informacijama. Evo zašto su preoblikovali svjetsku ekonomiju."
         }
       ]
     },
@@ -33,15 +33,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Prava vrijednost podataka ne leži u jednostavnom popisu imena ili adresa, već u njihovoj sposobnosti predviđanja našeg budućeg ponašanja. Svaka pretraga, svaki potez, svaki klik ostavlja trag koji tehnološke tvrtke prikupljaju kako bi stvorile vrlo precizan portret svake osobe."
+          "text": "Prava vrijednost podataka nije u običnom popisu imena ili adresa, nego u tome što mogu predvidjeti naše buduće ponašanje. Svaka pretraga, svako kretanje i svaki klik ostavljaju trag, a tehnološke ga tvrtke prikupljaju kako bi složile vrlo preciznu sliku svake osobe."
         },
         {
           "type": "funFact",
-          "text": "Facebook može uočiti veliku životnu promjenu, poput nadolazećeg braka ili selidbe, prije nego što uključena osoba toga uopće postane svjesna, otkrivajući male varijacije u njihovim online navikama."
+          "text": "Facebook može uočiti veliku životnu promjenu, poput skorog vjenčanja ili selidbe, i prije nego što je ta osoba toga potpuno svjesna, tako što prepoznaje sitne promjene u njezinim navikama na internetu."
         },
         {
           "type": "paragraph",
-          "text": "Ovo sustavno iskorištavanje našeg ponašanja dovelo je do onoga što istraživačica Shoshana Zuboff naziva **kapitalizmom nadzora**: ljudi više nisu samo kupci, oni postaju sirovina sustava koji prodaje predviđanja onome tko najviše ponudi."
+          "text": "Ovo sustavno iskorištavanje našeg ponašanja iznjedrilo je ono što istraživačica Shoshana Zuboff naziva **nadzornim kapitalizmom**: čovjek više nije samo kupac, nego postaje sirovina sustava koji predviđanja prodaje onome tko ponudi najviše."
         }
       ]
     },
@@ -52,17 +52,17 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ekonomija podataka funkcionira u dobrom ciklusu: što više podataka tvrtka ima, to je njena usluga bolja, što privlači više korisnika, koji generiraju još više podataka. Umjetna inteligencija ubrzala je ovaj fenomen: algoritam [[strojno učenje]] uvježban na milijardama primjera postaje precizniji i brži za poboljšanje od konkurenta s ograničenim resursima."
+          "text": "Ekonomija podataka funkcionira kao pozitivan krug: što tvrtka ima više podataka, to joj je usluga bolja, pa privlači više korisnika, a oni stvaraju još više podataka. Umjetna inteligencija ubrzala je tu pojavu: algoritam za [[strojno učenje]] uvježban na milijardama primjera postaje precizniji i brže se poboljšava od konkurenta s ograničenim resursima."
         },
         {
           "type": "image",
           "asset": "artificial_intelligence_machine_learning_datacenter",
           "ratio": "16:9",
-          "caption": "Podatkovni centri troše isto toliko električne energije koliko i cijeli gradovi za obradu ovih golemih protoka informacija."
+          "caption": "Podatkovni centri troše jednako struje kao cijeli gradovi kako bi obradili te goleme tokove informacija."
         },
         {
           "type": "paragraph",
-          "text": "Ovi divovi, [[GAFAM]] u Sjedinjenim Državama i BATX u Kini, više nisu zadovoljni dominacijom u svom izvornom sektoru: koriste svoje vodstvo u podacima za širenje na zdravstvo, financije ili povezane automobile, blokirajući pristup inovacijama u mnogim područjima."
+          "text": "Ti divovi, [[GAFAM]] u Sjedinjenim Državama i BATX u Kini, više ne vladaju samo svojim izvornim sektorom: prednost u podacima koriste da se prošire na zdravstvo, financije ili povezane automobile, pa zatvaraju pristup inovacijama u mnogim područjima."
         }
       ]
     },
@@ -73,15 +73,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Suočena s tom moći, Europska unija je 2018. godine uspostavila [[Europski GDPR]], uredbu koja u teoriji građanima vraća moć nad njihovim osobnim podacima: transparentnost, pravo na zaborav, obvezni pristanak."
+          "text": "Kao odgovor na tu moć, Europska unija je 2018. godine donijela [[Europski GDPR]], uredbu koja građanima, barem u teoriji, vraća moć nad vlastitim osobnim podacima: transparentnost, pravo na zaborav, obvezan pristanak."
         },
         {
           "type": "paragraph",
-          "text": "Njegova snaga dolazi iz njegove ekstrateritorijalnosti: svaka tvrtka koja rukuje podacima europskih građana mora se pridržavati, pod kaznenom kaznom do 4% svog globalnog prometa. To je prisililo divove poput Mete ili Amazona da preispitaju svoje prakse diljem svijeta, čineći Europu nevoljnim globalnim regulatorom."
+          "text": "Njegova je snaga u ekstrateritorijalnosti: svaka tvrtka koja obrađuje podatke europskih građana mora ga poštovati, inače joj prijete kazne do 4% svjetskog prometa. To je natjeralo divove poput Mete ili Amazona da promijene svoju praksu u cijelom svijetu, pa je Europa i nehotice postala svjetski regulator."
         },
         {
           "type": "funFact",
-          "text": "Prije zahtjeva jasnoće GDPR-a, prosječnoj bi osobi trebalo oko 76 radnih dana da pročita sve uvjete usluge za digitalne usluge koje koristi u jednoj godini."
+          "text": "Prije nego što je GDPR uveo obvezu jasnoće, prosječnoj bi osobi trebalo oko 76 radnih dana da pročita sve uvjete korištenja digitalnih usluga kojima se služi tijekom jedne godine."
         }
       ]
     },
@@ -92,15 +92,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Izvan gospodarstva, podaci su postali alat moći za same države, koje ih mogu koristiti za praćenje svoje populacije ili usmjeravanje javnog mnijenja. Zemlje koje ne mogu zaštititi podatke svojih građana riskiraju oblik tehnološke ovisnosti, poznatu kao povreda [[digitalni suverenitet]]."
+          "text": "Osim u gospodarstvu, podaci su postali alat moći i za same države, koje ih mogu koristiti za nadzor stanovništva ili usmjeravanje javnog mnijenja. Zemlje koje ne mogu zaštititi podatke svojih građana izlažu se svojevrsnoj tehnološkoj ovisnosti, a time je ugrožen njihov [[digitalni suverenitet]]."
         },
         {
           "type": "paragraph",
-          "text": "Veliki izazov u nadolazećim desetljećima bit će pronaći ravnotežu između napretka omogućenog velikom analizom podataka i poštivanja privatnosti, ključnog uvjeta slobode pojedinca u sve povezanijem društvu."
+          "text": "Veliki izazov idućih desetljeća bit će pronaći ravnotežu između napretka koji omogućuje analiza golemih količina podataka i poštovanja privatnosti, ključnog uvjeta slobode pojedinca u sve povezanijem društvu."
         },
         {
           "type": "takeaway",
-          "text": "Podaci su postali strateška imovina čija vrijednost proizlazi iz njihove sposobnosti predviđanja našeg ponašanja. Ovo gospodarstvo favorizira tehnološke divove s kojima je gotovo nemoguće konkurirati, na što Europa odgovara strogom regulativom: GDPR."
+          "text": "Podaci su postali strateška imovina čija vrijednost proizlazi iz toga što mogu predvidjeti naše ponašanje. Takva ekonomija pogoduje tehnološkim divovima kojima je gotovo nemoguće konkurirati, a Europa odgovara strogom regulativom: GDPR-om."
         }
       ]
     }

@@ -1,14 +1,14 @@
 {
   "id": "course_86_la_republique_platon",
-  "title": "Platónova „Republika“: kto má vládnuť?",
-  "subtitle": "4. storočie pred Kristom",
+  "title": "Platónova „Ústava“: kto má vládnuť?",
+  "subtitle": "4. storočie pred n. l.",
   "subject": "litterature",
   "subcategory": "Gréci a antickí filozofi",
-  "description": "Na definovanie spravodlivosti si Platón predstavuje ideálne mesto a mýtus o jaskyni. Republika nie je volebný program: je to skúmanie duše a moci.",
+  "description": "Aby Platón definoval spravodlivosť, vymyslí ideálny štát a mýtus o jaskyni. Ústava nie je volebný program: je to skúmanie duše a moci.",
   "hero": {
     "image": "la_republique_platon",
     "ratio": "16:9",
-    "hook": "Čo keby sa spravodlivosť lepšie pochopila nakreslením celého mesta?"
+    "hook": "Čo ak sa spravodlivosť dá lepšie pochopiť na náčrte celého štátu?"
   },
   "sections": [
     {
@@ -18,72 +18,72 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Okolo **380 pred Kr** napísal **Platón**, grécky filozof a zakladateľ akadémie v Aténach, **republiky**. Po grécky hovoríme *Politeia*. Dialóg začína jednoduchou otázkou: čo je **vysloviť**? Aby na to odpovedal **Sokrates**, ústredná postava Platónových dialógov, navrhuje úžasnú obchádzku: slovami postaviť ideálne mesto, [[Kallipolis]], „krásne mesto“."
+          "text": "Okolo roku **380** pred n. l. píše **Platón**, grécky filozof a zakladateľ Akadémie v Aténach, **Ústavu**. Po grécky sa volá *Politeia*. Dialóg sa začína jednoduchou otázkou: čo je **spravodlivosť**? Aby na ňu **Sokrates**, ústredná postava Platónových dialógov, odpovedal, navrhuje prekvapivú okľuku: slovami postaviť ideálny štát, [[Kallipolis]], „krásne mesto“."
         },
         {
           "type": "paragraph",
-          "text": "Toto nie je fantasy román. Je to **analógia**: porozumieť mestu, aby ste pochopili dušu, a duši, aby ste mohli súdiť silu. [[Alfred North Whitehead]], britský filozof a matematik, neskôr povedal, že celá západná filozofia je len séria poznámok pod čiarou k Platónovi. Táto kniha vysvetľuje prečo."
+          "text": "Nie je to futuristický román. Je to **analógia**: pochopiť štát, aby sa dala pochopiť duša, a pochopiť dušu, aby sa dala posúdiť moc. [[Alfred North Whitehead]], britský filozof a matematik, neskôr povie, že celá západná filozofia je len rad poznámok pod čiarou k Platónovi. Táto kniha vysvetľuje prečo."
         }
       ]
     },
     {
       "id": "course_86_la_republique_platon_p1",
-      "title": "Duša a mesto, rovnaký plán",
+      "title": "Duša a štát podľa jedného plánu",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Platón rozdeľuje dušu na tri časti. Túžba, [[Epithumia]], je spojená s chuťou na materiál. Odvaha, [[Thumos]], je sídlom vznešeného hnevu a sily charakteru. Rozum, [[Logá]], je schopný pristupovať k pravde. Ideálne mesto má tri triedy: producenti, **gardisti** vojaci, vodcovia. Spravodlivosť spočíva v tom, že každá strana robí svoju prácu bez toho, aby zasahovala do ostatných."
+          "text": "Platón delí dušu na tri časti. Túžba, [[Epithumia]], súvisí s hmotnými chúťkami. Odvaha, [[Thumos]], je sídlom ušľachtilého hnevu a sily charakteru. Rozum, [[Logos]], dokáže dospieť k pravde. Ideálny štát má tri vrstvy: výrobcov, **strážcov**, teda vojakov, a vládcov. Spravodlivosť znamená, že každá časť robí svoju prácu a nezasahuje do práce ostatných."
         },
         {
           "type": "image",
           "asset": "plato_academy_athens_painting",
           "ratio": "4:3",
-          "caption": "Platónova akadémia v Aténach: premýšľanie o meste na vzdelávanie duše."
+          "caption": "Platónova Akadémia v Aténach: premýšľať o štáte, aby sa vychovala duša."
         },
         {
           "type": "paragraph",
-          "text": "Táto myšlienka je stále šokujúca: spája súkromnú morálku a politickú organizáciu. Pre Platóna nespravodlivé mesto produkuje zvrátené duše. A neusporiadaná duša vytvára skazené mesto. Spravodlivosť nie je len dekrét. Je to vnútorná a kolektívna rovnováha."
+          "text": "Táto myšlienka dodnes šokuje: spája súkromnú morálku s politickým usporiadaním. Podľa Platóna nespravodlivý štát vytvára pokrivené duše. A rozvrátená duša plodí skazený štát. Spravodlivosť nie je len nariadenie. Je to vnútorná aj spoločná rovnováha."
         }
       ]
     },
     {
       "id": "course_86_la_republique_platon_p2",
-      "title": "Kto by mal vládnuť?",
+      "title": "Kto má vládnuť?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ideálni vodcovia sú [[filozof-králi]], tí, ktorí milujú pravdu viac ako moc. Žijú bez nadmerného súkromného vlastníctva. Dlho sa trénovali v matematike a **dialektike**, umení dialógu, ktorý hľadá pravdu. Platón nedôveruje aténskej demokracii, ktorá v roku 399 odsúdila Sokrata na pitie jedličky."
+          "text": "[[Filozofi-králi]] sú ideálni vládcovia: tí, ktorí milujú pravdu viac ako moc. Nemajú priveľký súkromný majetok. Dlho sa vzdelávajú v matematike a **dialektike**, umení rozhovoru, ktorý hľadá pravdu. Platón nedôveruje aténskej demokracii, ktorá v roku 399 odsúdila Sokrata na smrť bolehlavom."
         },
         {
           "type": "funFact",
-          "text": "[[Karl Popper]], filozof 20. storočia, obviní republiku z hlásania totality. Iní to považujú za vzdelávaciu utópiu, nie ako policajný manuál. Diskusia zostala otvorená už dvadsaťpäť storočí."
+          "text": "[[Karl Popper]], filozof 20. storočia, obviní Ústavu, že predznamenáva totalitné režimy. Iní v nej vidia výchovnú utópiu, nie policajnú príručku. Spor trvá už dvadsaťpäť storočí."
         },
         {
           "type": "paragraph",
-          "text": "Za politickou schémou sa skrýva [[Platónova teória ideí]]. Rozumný svet, ten, ktorý vidíme a ktorého sa dotýkame, je len tieň. Dobre vládnuť znamená vidieť **Dobré**, Najvyššiu myšlienku, nielen riadiť prchavé názory."
+          "text": "Za politickou schémou stojí [[Platónova teória ideí]]. Zmyslový svet, ten, ktorý možno vidieť a ohmatať, je len tieň. Dobre vládnuť znamená vidieť **Dobro**, najvyššiu Ideu, a nie iba spravovať prchavé názory."
         }
       ]
     },
     {
       "id": "course_86_la_republique_platon_p3",
-      "title": "Jaskyňa: vynorenie sa z ilúzie",
+      "title": "Jaskyňa: vyjsť z ilúzie",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Mýtus o **pivnica** je najznámejšou pasážou knihy. Pripútaní väzni vidia na stene len tiene, ktoré za nimi vrhá oheň. Jeden je prepustený, vychádza na slnko, vracia sa varovať ostatných. Hovoria mu blázon. Vzdelanie, hovorí Platón, nie je plnenie vázy. Obracia náš pohľad k svetlu."
+          "text": "**Mýtus o jaskyni** je najslávnejšou pasážou knihy. Spútaní väzni vidia na stene iba tiene, ktoré tam vrhá oheň za ich chrbtom. Jedného z nich oslobodia, vyjde na slnko a vráti sa varovať ostatných. Tí ho vyhlásia za blázna. Vzdelávanie, hovorí Platón, nie je plnenie nádoby. Je to obrátenie pohľadu k svetlu."
         },
         {
           "type": "image",
           "asset": "plato_portrait_bust_sculpture",
           "ratio": "1:1",
-          "caption": "Platón: myslieť znamená súhlasiť s opustením známych tieňov."
+          "caption": "Platón: myslieť znamená byť ochotný opustiť známe tiene."
         },
         {
           "type": "paragraph",
-          "text": "Tento obraz preklenul stáročia: médiá, ideológie, intelektuálny komfort. Výstup z jaskyne stojí. Zostať v ňom je upokojujúce. Platón naznačuje, že filozof sa musí vrátiť, aby osvietil ostatných, aj keď sa mu posmievajú. Vedomosti nie sú súkromný luxus. Je to zodpovednosť."
+          "text": "Tento obraz prešiel stáročiami: médiá, ideológie, myšlienkové pohodlie. Vyjsť z jaskyne niečo stojí. Zostať v nej upokojuje. Platón naznačuje, že filozof sa musí vrátiť a osvietiť ostatných, aj keď sa mu posmievajú. Poznanie nie je súkromný luxus. Je to zodpovednosť."
         }
       ]
     },
@@ -94,11 +94,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Platón opisuje aj úpadok režimov: aristokraciu, timokraciu, oligarchiu, demokraciu, tyraniu. Každý režim sa rodí z nerestí predchádzajúceho. Poučenie nie je fatalizmus. Je to bdelosť: inštitúcie sledujú charakter občanov."
+          "text": "Platón opisuje aj úpadok režimov: aristokracia, timokracia, oligarchia, demokracia, tyrania. Každý režim sa rodí z nerestí toho predchádzajúceho. Poučením nie je fatalizmus. Je ním ostražitosť: inštitúcie sa riadia charakterom občanov."
         },
         {
           "type": "takeaway",
-          "text": "**republiky** spája osobnú spravodlivosť a politickú spravodlivosť. Cez ideálne mesto a jaskyňu sa Platón pýta: akú hodnotu má moc, ktorá nehľadá pravdu?"
+          "text": "**Ústava** spája osobnú a politickú spravodlivosť. Prostredníctvom ideálneho štátu a jaskyne sa Platón pýta: akú cenu má moc, ktorá nehľadá pravdu?"
         }
       ]
     }

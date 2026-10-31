@@ -53,7 +53,7 @@ import app.rork.sophia.ui.theme.PlusJakartaSans
 import app.rork.sophia.ui.theme.SophiaTypography
 import kotlinx.coroutines.launch
 
-private val CATEGORIES = listOf("bug", "idea", "content", "other")
+private val CATEGORIES = listOf("bug", "idea", "content", "translation", "other")
 
 @OptIn(ExperimentalLayoutApi::class)
 @Composable

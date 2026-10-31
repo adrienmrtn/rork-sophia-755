@@ -42,39 +42,39 @@
       {
         "id": "course_100_les_fleurs_du_mal_baudelaire_q4",
         "type": "mcq",
-        "question": "Mit jelent az albatrosz a „Lép és ideális” részben?",
-        "explanation": "Az albatrosz, amely repülés közben fenséges, de ha egyszer a földre került, nevetséges, a költőt képviseli egy olyan világban, amely nem érti őt.",
+        "question": "Mit jelképez az albatrosz a „Spleen és Ideál” részben?",
+        "explanation": "Az albatrosz repülés közben fenséges, a földön viszont nevetséges: a költőt jelképezi egy olyan világban, amely nem érti őt.",
         "options": [
           "A költő, fenséges repülés közben, de nevetséges a földön",
           "A művész teljes szabadsága",
           "Az elkerülhetetlen halál",
-          "Elérhetetlen szépség"
+          "Az elérhetetlen szépség"
         ],
         "correctIndex": 0
       },
       {
         "id": "course_100_les_fleurs_du_mal_baudelaire_q5",
         "type": "mcq",
-        "question": "A gyűjtemény melyik része teszi Párizst pszichológiai tájképévé?",
-        "explanation": "A „Párizsi festmények” pszichológiai tájképgé varázsolja a várost. A költő babakocsiként bolyong ott, a párizsi élet szemlélője Haussmann alatt.",
+        "question": "A kötet melyik része teszi Párizst lelki tájképpé?",
+        "explanation": "A „Párizsi képek” lelki tájképpé teszi a várost. A költő flâneurként, kószáló szemlélőként bolyong benne, és figyeli a Haussmann-kori párizsi életet.",
         "options": [
-          "\"Párizsi festmények\"",
-          "“Lép és ideális”",
-          "“A bor”",
-          "\"Halál\""
+          "„Párizsi képek”",
+          "„Spleen és Ideál”",
+          "„A bor”",
+          "„A halál”"
         ],
         "correctIndex": 0
       },
       {
         "id": "course_100_les_fleurs_du_mal_baudelaire_q6",
         "type": "mcq",
-        "question": "Melyik vers írja le a természetet az illatokat, színeket és hangokat összekötő jelek „templomaként”?",
-        "explanation": "A „levelezés” a természetet a jelek templomaként írja le. Ott keverednek az érzékek: parfümök, színek és hangok reagálnak egymásra.",
+        "question": "Melyik vers írja le a természetet olyan „templomként”, amelynek jelei összekötik az illatokat, a színeket és a hangokat?",
+        "explanation": "A „Kapcsolatok” a természetet jelek templomaként írja le. Az érzékek itt összekeverednek: az illatok, a színek és a hangok felelnek egymásnak.",
         "options": [
-          "„Levelezések”",
-          "\"Az Albatrosz\"",
-          "\"Lép\"",
-          "\"Gyűjtemény\""
+          "„Kapcsolatok”",
+          "„Az albatrosz”",
+          "„Spleen”",
+          "„Áhítat”"
         ],
         "correctIndex": 0
       },
@@ -92,13 +92,13 @@
       {
         "id": "course_100_les_fleurs_du_mal_baudelaire_q8",
         "type": "mcq",
-        "question": "Milyen költői mozgalmat talált Baudelaire levelezésének poétikája, amelyet később Verlaine és Mallarmé vitt?",
-        "explanation": "Ez a megfeleltetési poétika alapozta meg a szimbolizmust, amelyet később Verlaine és Mallarmé hordozott.",
+        "question": "Melyik költői irányzatot alapozta meg Baudelaire megfelelés-poétikája, amelyet aztán Verlaine és Mallarmé vitt tovább?",
+        "explanation": "Ez a megfelelés-poétika alapozta meg a szimbolizmust, amelyet aztán Verlaine és Mallarmé vitt tovább.",
         "options": [
           "A szimbolizmus",
-          "Romantika",
-          "Naturalizmus",
-          "Klasszicizmus"
+          "A romantika",
+          "A naturalizmus",
+          "A klasszicizmus"
         ],
         "correctIndex": 0
       },
@@ -538,13 +538,13 @@
       {
         "id": "course_104_romeo_et_juliette_shakespeare_q4",
         "type": "mcq",
-        "question": "Ki ünnepli Rómeó és Júlia titkos házasságát, abban a reményben, hogy sikerül kibékítenie a két családot?",
-        "explanation": "Laurent testvér titokban feleségül veszi a szerelmeseket, remélve, hogy szövetségük csillapítja a klánok közötti gyűlöletet.",
+        "question": "Ki adja össze titokban Rómeót és Júliát, abban a reményben, hogy kibékítheti a két családot?",
+        "explanation": "Lőrinc barát titokban összeadja a szerelmeseket, mert reméli, hogy házasságuk csillapítja a két ház közti gyűlöletet.",
         "options": [
-          "Laurent testvér",
+          "Lőrinc barát",
           "Verona hercege",
           "Mercutio",
-          "Juliette ápolónője"
+          "Júlia dajkája"
         ],
         "correctIndex": 0
       },
@@ -1445,8 +1445,8 @@
       {
         "id": "course_111_to_kill_a_mockingbird_harper_lee_q1",
         "type": "mcq",
-        "question": "Ki meséli el a történetet a Ne lődd le a gúnymadárt?",
-        "explanation": "A regényt Scout, az alabamai Maycombban élő hatéves kislány szemével mesélik el.",
+        "question": "Ki a mesélő a Ne bántsátok a feketerigót! című regényben?",
+        "explanation": "A regény Scout, az alabamai Maycombban élő hatéves kislány szemszögéből meséli el a történetet.",
         "options": [
           "Scout, egy hatéves kislány",
           "Atticus Finch, ügyvéd",
@@ -1482,13 +1482,13 @@
       {
         "id": "course_111_to_kill_a_mockingbird_harper_lee_q4",
         "type": "mcq",
-        "question": "Mit szimbolizál az a gúnymadár, amelynek megölését Atticus megtiltja?",
-        "explanation": "Az ártalmatlan gúnymadár Tom Robinsont és Boo Radleyt ábrázolja: két lényt, akiket a társadalom ok nélkül üldöz vagy szörnyeteggé alakít.",
+        "question": "Mit jelképez a feketerigó, amelynek megölését Atticus megtiltja?",
+        "explanation": "Az ártalmatlan feketerigó Tom Robinsont és Boo Radleyt jelképezi: két embert, akiket a társadalom ok nélkül üldöz vagy szörnyeteggé tesz.",
         "options": [
-          "Olyan ártatlan lények, mint Tom Robinson és Boo Radley",
+          "Olyan ártatlan emberek, mint Tom Robinson és Boo Radley",
           "Az amerikai igazságszolgáltatás egésze",
           "Maga Maycomb városa",
-          "A déli jogászok bátorsága"
+          "A déli ügyvédek bátorsága"
         ],
         "correctIndex": 0
       },
@@ -1797,25 +1797,25 @@
       {
         "id": "course_114_fahrenheit_451_bradbury_q1",
         "type": "mcq",
-        "question": "Mit csinálnak a tűzoltók a Fahrenheit 451 által elképzelt világban?",
-        "explanation": "Ebben a Bradbury által elképzelt jövőben a tűzoltók küldetése a társadalmi stabilitás szempontjából veszélyesnek ítélt könyvek elégetése.",
+        "question": "Mit csinálnak a tűzoltók a 451 Fahrenheit világában?",
+        "explanation": "Bradbury elképzelt jövőjében a tűzoltók dolga, hogy elégessék a társadalom stabilitására veszélyesnek ítélt könyveket.",
         "options": [
           "Veszélyesnek ítélt könyveket égetnek el",
-          "Olyan tüzet oltottak, mint ma",
-          "Ők őrzik a város határait",
-          "Fali paravánokat készítenek"
+          "Tüzet oltanak, ugyanúgy, mint ma",
+          "A város határait őrzik",
+          "Falképernyőket gyártanak"
         ],
         "correctIndex": 0
       },
       {
         "id": "course_114_fahrenheit_451_bradbury_q2",
         "type": "mcq",
-        "question": "Mit jelent a Fahrenheit 451 cím?",
+        "question": "Mit jelent a 451 Fahrenheit cím?",
         "explanation": "A cím arra a hőmérsékletre utal Fahrenheit-fokban, amelyen a papír meggyullad.",
         "options": [
           "Az a hőmérséklet, amelyen a papír meggyullad",
           "A fa égési hőmérséklete",
-          "A montagi tűzoltóállomás száma",
+          "Montag tűzoltóállomásának száma",
           "Ray Bradbury születési éve"
         ],
         "correctIndex": 0
@@ -1834,12 +1834,12 @@
       {
         "id": "course_114_fahrenheit_451_bradbury_q4",
         "type": "mcq",
-        "question": "1984-től eltérően honnan származik az elnyomás a Fahrenheit 451-ben?",
-        "explanation": "1984-től eltérően itt maguk a polgárok adták fel a könyveket kényelemből és a vitától való félelem miatt.",
+        "question": "Az 1984 című regénnyel ellentétben honnan ered az elnyomás a 451 Fahrenheitben?",
+        "explanation": "Az 1984 című regénnyel ellentétben itt maguk a polgárok mondtak le a könyvekről, kényelemből és mert féltek a vitától.",
         "options": [
-          "Maguk a polgárok, akik a kényelemért lemondtak a könyvekről",
-          "Egyetlen diktátoré, aki rákényszeríti az akaratát",
-          "Egy külföldi katonai invázióról",
+          "Maguktól a polgároktól, akik kényelemből lemondtak a könyvekről",
+          "Egyetlen diktátortól, aki rákényszeríti az akaratát",
+          "Egy külföldi katonai inváziótól",
           "Egy központi mesterséges intelligenciától"
         ],
         "correctIndex": 0
@@ -1897,8 +1897,8 @@
       {
         "id": "course_114_fahrenheit_451_bradbury_q9",
         "type": "numericSlider",
-        "question": "Ray Bradbury hány nap alatt írta meg a Fahrenheit 451-et egy könyvtárból bérelt írógépen?",
-        "explanation": "Bradbury mindössze kilenc nap alatt írta meg a regényt, egy írógépen, amelyet harminc percre béreltek tíz centért egy egyetemi könyvtárból.",
+        "question": "Hány nap alatt írta meg Ray Bradbury a 451 Fahrenheitet egy könyvtárban bérelt írógépen?",
+        "explanation": "Bradbury mindössze kilenc nap alatt írta meg a regényt egy egyetemi könyvtárban bérelt írógépen, amelyért harminc percenként tíz centet fizetett.",
         "correctValue": 9.0,
         "sliderMin": 1.0,
         "sliderMax": 30.0,
@@ -2042,10 +2042,10 @@
       {
         "id": "course_116_la_metamorphose_kafka_q1",
         "type": "mcq",
-        "question": "Hogyan kezdődik a Metamorfózis az irodalom egyik leghíresebb kezdetén?",
-        "explanation": "A regény azzal kezdődik, hogy Gregor Samsa szörnyeteg rovarrá változva ébred fel, a jelenség magyarázata nélkül.",
+        "question": "Hogyan kezdődik Az átváltozás, amelynek nyitánya az irodalom egyik leghíresebb regénykezdete?",
+        "explanation": "A regény azzal kezdődik, hogy Gregor Samsa szörnyű rovarrá változva ébred, és semmi sem magyarázza, mi történt vele.",
         "options": [
-          "Gregor Samsa szörnyeteg rovarrá változva ébred fel",
+          "Gregor Samsa szörnyű rovarrá változva ébred",
           "Gregor Samsa elmegy dolgozni, mint minden reggel",
           "A Samsa család értesül Gregor haláláról",
           "Gregor Samsa elhagyja a családi házat"
@@ -2260,7 +2260,7 @@
       {
         "id": "course_117_le_maitre_et_marguerite_boulgakov_q8",
         "type": "mcq",
-        "question": "Mit jelent a híres kifejezés: „A kéziratok nem égnek”?",
+        "question": "Mit jelent a híres mondat: „A kéziratok nem égnek el”?",
         "explanation": "Ez a mondat megerősíti, hogy a művészet igazsága mindig győzedelmeskedik az elnyomás és a politikai cenzúra felett.",
         "options": [
           "Az igaz ötletek túléljék a cenzúrát",
@@ -3087,12 +3087,12 @@
       {
         "id": "course_123_le_caravage_et_le_clair_obscur_q4",
         "type": "mcq",
-        "question": "Melyik 1600-as festmény lepi meg Rómát szentségével az utca arcára?",
-        "explanation": "A Contarelli-kápolna számára festett Szent Máté hivatása a hétköznapi emberek által megszemélyesített szakrális alkotást állítja elénk.",
+        "question": "Melyik 1600-as festmény döbbentette meg Rómát azzal, hogy a szentséget utcai arcokkal ábrázolta?",
+        "explanation": "A Contarelli-kápolnába festett Szent Máté elhívása a szentséget hétköznapi emberek alakjában jeleníti meg.",
         "options": [
-          "Szent Máté hivatása",
-          "Az Éjjeli Őrség",
-          "Az avignoni ifjú hölgyek",
+          "Szent Máté elhívása",
+          "Éjjeli őrjárat",
+          "Avignoni kisasszonyok",
           "A Medúza tutaja"
         ],
         "correctIndex": 0
@@ -3193,8 +3193,8 @@
       {
         "id": "course_124_rembrandt_et_l_ecole_flamande_q3",
         "type": "trueFalse",
-        "question": "Igaz vagy hamis: Az Éjszakai őrség valójában egy nappali jelenetet képvisel.",
-        "explanation": "A cím téves értelmezés: a jelenet napirendű, de az évszázadok koszos lakkja annyira elsötétítette a vásznat, hogy az éjszakát sugallja.",
+        "question": "Igaz vagy hamis: az Éjjeli őrjárat valójában nappali jelenetet ábrázol.",
+        "explanation": "A cím félreértés: a jelenet nappal játszódik, de az évszázadok alatt bepiszkolódott lakk annyira besötétítette a vásznat, hogy éjszakának tűnik.",
         "options": [
           "Igaz",
           "Hamis"
@@ -3204,12 +3204,12 @@
       {
         "id": "course_124_rembrandt_et_l_ecole_flamande_q4",
         "type": "mcq",
-        "question": "Mit ábrázol valójában az Éjjeli őrség néven ismert festmény?",
-        "explanation": "Ez a Frans Banning Cocq kapitány társasága, egy milícia, amely mozgásban van, nem pedig a konvenciónak megfelelően.",
+        "question": "Mit ábrázol valójában az Éjjeli őrjárat néven ismert festmény?",
+        "explanation": "A kép Frans Banning Cocq kapitány polgárőrszázadát ábrázolja mozgás közben, nem pedig sorba állítva, ahogy a szokás megkövetelte.",
         "options": [
-          "Egy polgári milícia társaság mozgásban van",
+          "Mozgásban lévő polgárőrszázad",
           "Rembrandt önarcképe",
-          "Bibliai éjszakai jelenet",
+          "Éjszakai bibliai jelenet",
           "Holland táj"
         ],
         "correctIndex": 0
@@ -3266,10 +3266,10 @@
         "id": "course_124_rembrandt_et_l_ecole_flamande_q9",
         "type": "chronological",
         "question": "Állítsd időrendi sorrendbe Rembrandt életének ezeket a szakaszait.",
-        "explanation": "Ezek a mérföldkövek 1631-től 1669-ig tartanak, Amszterdamban diadalmaskodó beiktatásától egészen haláláig.",
+        "explanation": "Ezek a mérföldkövek 1631-től 1669-ig tartanak, a diadalmas amszterdami letelepedéstől a festő haláláig.",
         "items": [
           "Érkezés Amszterdamba",
-          "Az Éjjeli Őrség",
+          "Éjjeli őrjárat",
           "Személyes csőd",
           "A festő halála"
         ]
@@ -3552,10 +3552,10 @@
       {
         "id": "course_127_le_surrealisme_dali_et_magritte_q4",
         "type": "mcq",
-        "question": "Melyik Dalí-festmény mutatja puha karórákat katalán tájban?",
-        "explanation": "Az 1931-ben festett Az emlékezet kitartása port Lligat által ihletett tájban puha karórákat mutat be.",
+        "question": "Melyik Dalí-festményen láthatók puha órák egy katalán tájban?",
+        "explanation": "Az 1931-ben festett Az emlékezet állandósága puha órákat mutat egy Port Lligat ihlette tájban.",
         "options": [
-          "Az emlékezet kitartása",
+          "Az emlékezet állandósága",
           "A képek árulása",
           "A Medúza tutaja",
           "Guernica"
@@ -3618,10 +3618,10 @@
         "question": "Tedd időrendi sorrendbe a szürrealizmus e mérföldköveit.",
         "explanation": "Ezek a mérföldkövek 1924-től 1939-ig terjednek, a mozgalom megalapításától a Breton és Dalí közötti szakításig.",
         "items": [
-          "Breton szürrealizmus kiáltványa",
+          "Breton Szürrealista kiáltványa",
           "Dalí csatlakozik a szürrealista csoporthoz",
-          "Az emlékezet kitartása",
-          "Dalí Breton kizárása"
+          "Az emlékezet állandósága",
+          "Breton kizárja Dalít"
         ]
       }
     ]
@@ -4056,12 +4056,12 @@
       {
         "id": "course_130_le_pop_art_warhol_et_lichtenstein_q7",
         "type": "mcq",
-        "question": "Lichtenstein melyik festménye alakít át egy légiharc képregényt monumentális festménnyel?",
-        "explanation": "Whaam! egy elterelő képregénypanelt nagy formátumú modern történelmi festménysé alakít át.",
+        "question": "Lichtenstein melyik festménye tesz egy légiharcot ábrázoló képregénykockát monumentális festménnyé?",
+        "explanation": "A Whaam! egy szórakoztató képregény kockájából nagy formátumú modern történeti festményt csinál.",
         "options": [
           "Whaam!",
-          "Az emlékezet kitartása",
-          "A Sikoly",
+          "Az emlékezet állandósága",
+          "A sikoly",
           "Guernica"
         ],
         "correctIndex": 0
@@ -4509,12 +4509,12 @@
         "id": "course_134_l_opera_de_verdi_q5",
         "type": "mcq",
         "question": "Melyik francia regényen alapul a Traviata?",
-        "explanation": "A Traviata A kaméliás hölgyet dolgozza fel, és kortárs, tüdővészes hősnőjével sokkol.",
+        "explanation": "A Traviata A kaméliás hölgy feldolgozása, és kortárs, tüdőbajos hősnőjével megbotránkoztatta a közönséget.",
         "options": [
-          "A kaméliás hölgy, Alexandre Dumas fia",
-          "A párizsi Notre-Dame, Victor Hugo",
-          "A nyomorultak, Victor Hugo",
-          "Madame Bovary, Gustave Flaubert"
+          "Ifj. Alexandre Dumas: A kaméliás hölgy",
+          "Victor Hugo: A párizsi Notre-Dame",
+          "Victor Hugo: A nyomorultak",
+          "Gustave Flaubert: Bovaryné"
         ],
         "correctIndex": 0
       },
@@ -5455,7 +5455,7 @@
         "id": "course_141_la_naissance_de_la_photographie_q7",
         "type": "mcq",
         "question": "George Eastman és a Kodak milyen újítása tette hordozhatóvá a fényképezőgépet a 19. század végén?",
-        "explanation": "Az Eastman a nehéz üveglapokat rugalmas fóliára cseréli, így a készülék hordozhatóvá válik.",
+        "explanation": "Eastman a nehéz üveglemezeket rugalmas filmre cserélte, így a fényképezőgép hordozhatóvá vált.",
         "options": [
           "Rugalmas fólia, üveglapok cseréje",
           "Az elektromos vaku",
@@ -5636,8 +5636,8 @@
       {
         "id": "course_143_orson_welles_et_citizen_kane_q3",
         "type": "mcq",
-        "question": "Melyik operatőrrel fejlesztette ki Welles a mélységélesség technikáját a Citizen Kane-ben?",
-        "explanation": "Gregg Toland operatőrrel Welles előírja a mélységélességet, ami mindent éles marad az előtértől a kép hátteréig.",
+        "question": "Melyik operatőrrel dolgozta ki Welles a mélységélesség technikáját az Aranypolgárban?",
+        "explanation": "Welles Gregg Toland operatőrrel honosította meg a mélységélességet, amely az előtértől a kép hátteréig mindent élesen tart.",
         "options": [
           "Gregg Toland",
           "William Randolph Hearst",
@@ -5662,8 +5662,8 @@
       {
         "id": "course_143_orson_welles_et_citizen_kane_q5",
         "type": "trueFalse",
-        "question": "Igaz vagy hamis: Kane állampolgár egymásnak ellentmondó tanúvallomásokon keresztül meséli el Kane történetét, anélkül, hogy egyetlen igazságot is közölne erről az emberről.",
-        "explanation": "A barátok és ellenségek visszaemlékezéseken keresztül egymásnak ellentmondó változatokat mesélnek el Kane-ről, és a néző soha nem kap egyetlen igazságot sem.",
+        "question": "Igaz vagy hamis: az Aranypolgár egymásnak ellentmondó beszámolókon keresztül meséli el Kane életét, és sosem mond ki egyetlen igazságot erről az emberről.",
+        "explanation": "Flashbackekben barátok és ellenségek mesélik el Kane egymásnak ellentmondó változatait, így a néző sosem jut el egyetlen igazsághoz.",
         "options": [
           "Igaz",
           "Hamis"
@@ -5686,8 +5686,8 @@
       {
         "id": "course_143_orson_welles_et_citizen_kane_q7",
         "type": "trueFalse",
-        "question": "Igaz vagy hamis: A Citizen Kane hatalmas kereskedelmi sikert aratott 1941-es megjelenésekor.",
-        "explanation": "Ezzel szemben a Citizen Kane kereskedelmi kudarcot szenvedett a kiadásakor, különösen a Hearst által kifejtett nyomás miatt.",
+        "question": "Igaz vagy hamis: az Aranypolgár már az 1941-es bemutatásakor hatalmas kereskedelmi siker volt.",
+        "explanation": "Épp ellenkezőleg: az Aranypolgár a bemutatásakor kereskedelmi kudarc volt, többek között Hearst nyomása miatt.",
         "options": [
           "Igaz",
           "Hamis"
@@ -5697,11 +5697,11 @@
       {
         "id": "course_143_orson_welles_et_citizen_kane_q8",
         "type": "mcq",
-        "question": "Az 1950-es évek melyik francia filmművészeti mozgalma tette Citizen Kane-t a rendező-szerző mintájává?",
-        "explanation": "Az 1950-es években a kritikusok, majd a francia újhullám rehabilitálták a filmet, és a mindent irányító rendező etalonjává tették.",
+        "question": "Az 1950-es évek melyik francia filmes irányzata tette az Aranypolgárt a szerzői rendező mintájává?",
+        "explanation": "Az 1950-es években előbb a kritika, majd a francia újhullám rehabilitálta a filmet, és a mindent irányító rendező zászlajává tette.",
         "options": [
-          "Az Új Hullám",
-          "Csendes mozi",
+          "Újhullám",
+          "Némafilm",
           "Olasz neorealizmus",
           "Német expresszionizmus"
         ],
@@ -5710,12 +5710,12 @@
       {
         "id": "course_143_orson_welles_et_citizen_kane_q9",
         "type": "chronological",
-        "question": "Tedd időrendi sorrendbe a Citizen Kane történetének ezeket a szakaszait.",
-        "explanation": "Ez a három mérföldkő (1938, 1941, 1950-es évek) Welles rádiós felemelkedését, a film kezdeti kudarcát, majd az európai kritikusok általi rehabilitációját követi nyomon.",
+        "question": "Tedd időrendbe az Aranypolgár történetének ezeket az állomásait.",
+        "explanation": "Ez a három állomás (1938, 1941, 1950-es évek) Welles rádiós felemelkedését, a film kezdeti kudarcát, majd azt mutatja be, ahogy az európai kritika rehabilitálta.",
         "items": [
-          "A Világok háborúja rádiós hoax",
-          "Kane polgár szabadon bocsátása",
-          "Az európai kritikusok újra felfedezték a filmet"
+          "A Világok harca rádiós átverése",
+          "Az Aranypolgár bemutatója",
+          "A film újrafelfedezése az európai kritikában"
         ]
       }
     ]
@@ -5842,8 +5842,8 @@
       {
         "id": "course_145_kubrick_2001_l_odyssee_de_l_espace_q1",
         "type": "numericSlider",
-        "question": "Melyik évben került a mozikba a 2001: A Space Odyssey?",
-        "explanation": "2001: Az Űrodüsszeia 1968-ban jelent meg, és újradefiniálta a sci-fit a moziban.",
+        "question": "Melyik évben került a mozikba a 2001: Űrodüsszeia?",
+        "explanation": "A 2001: Űrodüsszeia 1968-ban jelent meg, és új alapokra helyezte a filmes sci-fit.",
         "correctValue": 1968.0,
         "sliderMin": 1950.0,
         "sliderMax": 1985.0,
@@ -6588,12 +6588,12 @@
       {
         "id": "course_150_la_nuit_etoilee_van_gogh_q5",
         "type": "mcq",
-        "question": "Melyik japán munka ihlette a Csillagos éjszaka nagy égbolt tekercseit?",
-        "explanation": "Az égbolt örvényei a Kanagawa melletti Nagy Hullám dinamikáját idézik, egy japán nyomatot, amelyet Van Gogh csodált.",
+        "question": "Melyik japán mű ihlette a Csillagos éj égboltjának nagy örvényeit?",
+        "explanation": "Az égbolt örvényei A nagy hullám Kanagawánál lendületét idézik. Ezt a japán fametszetet Van Gogh nagyon csodálta.",
         "options": [
           "A nagy hullám Kanagawánál",
           "A Fuji-hegy Kiotóból nézve",
-          "Edo száz nézete",
+          "Edo száz látképe",
           "Yoshiwara szépségei"
         ],
         "correctIndex": 0
@@ -6637,10 +6637,10 @@
         "id": "course_150_la_nuit_etoilee_van_gogh_q9",
         "type": "chronological",
         "question": "Állítsd időrendi sorrendbe Van Gogh életének ezeket a szakaszait.",
-        "explanation": "Ezek a mérföldkövek (1888, 1889, 1890) nyomon követik a Gauguin válságát, a Csillagos Éjszaka létrehozását a menhelyből, majd a művész halálát.",
+        "explanation": "Ezek az állomások (1888, 1889, 1890) a Gauguinnel kirobbant válságot, a Csillagos éj megfestését az elmegyógyintézetben, majd a művész halálát idézik fel.",
         "items": [
-          "Arles drámája Gauguinnel",
-          "Van Gogh megfesti a Csillagos éjszakát Saint-Rémyben",
+          "Az arles-i dráma Gauguinnel",
+          "Van Gogh megfesti a Csillagos éjt Saint-Rémyben",
           "Van Gogh halála Auvers-sur-Oise-ban"
         ]
       }
@@ -6988,12 +6988,12 @@
       {
         "id": "course_154_impression_soleil_levant_monet_q1",
         "type": "mcq",
-        "question": "Hol festette Monet az Impression, Soleil Levant című filmben ábrázolt jelenetet?",
-        "explanation": "Monet 1872 körül kora reggel lefestette Le Havre kikötőjét.",
+        "question": "Hol festette meg Monet az Impresszió, a felkelő nap című képén ábrázolt jelenetet?",
+        "explanation": "Monet 1872 körül, kora reggel Le Havre kikötőjét festette meg.",
         "options": [
           "Le Havre kikötője",
           "Marseille kikötője",
-          "Szajna Párizsban",
+          "A Szajna Párizsban",
           "A Nápolyi-öböl"
         ],
         "correctIndex": 0
@@ -7918,8 +7918,8 @@
       {
         "id": "course_161_la_naissance_des_dieux_grecs_cronos_zeus_q8",
         "type": "trueFalse",
-        "question": "Igaz vagy hamis: a francia „pánik” szó Pan istentől származik, akinek kiáltása állítólag hirtelen rémületet keltett.",
-        "explanation": "Az Óriások elleni háború során Pan isten kiáltása irracionális rémületet váltott volna ki az ellenségek között, innen ered a \"pánik\" szó.",
+        "question": "Igaz vagy hamis: a francia „panique” (pánik) szó Pán istentől ered, akinek kiáltása állítólag hirtelen rémületet keltett.",
+        "explanation": "Az óriások elleni háborúban Pán isten kiáltása állítólag oktalan rémületet keltett az ellenségben, innen ered a „pánik” szó.",
         "options": [
           "Igaz",
           "Hamis"
@@ -8286,7 +8286,7 @@
         "id": "course_165_orphee_et_eurydice_q4",
         "type": "mcq",
         "question": "Milyen feltételt szab Hádész Orfeusznak, hogy engedje vissza Euridikét?",
-        "explanation": "Hádész elfogadja Eurüdiké visszatérését azzal a feltétellel, hogy Orpheusz elmegy előtte anélkül, hogy megfordulna a fény előtt.",
+        "explanation": "Hádész beleegyezik, hogy Eurüdiké visszatérjen, azzal a feltétellel, hogy Orpheusz előtte megy, és nem fordul hátra, amíg ki nem érnek a fényre.",
         "options": [
           "Ne forduljon meg, amíg el nem éri a fényt",
           "Soha többé ne beszélj Eurydice-szel",
@@ -8639,13 +8639,13 @@
       {
         "id": "course_168_sisyphe_punition_eternelle_q7",
         "type": "mcq",
-        "question": "Albert Camus szerint a Sziszifusz mítosza című művében mi teszi őt „abszurd hőssé”?",
-        "explanation": "Camus számára az a tény, hogy Sziszifuszt az erőfeszítések haszontalansága és az a tény, hogy mindennek ellenére folytatja, felvirágoztatja.",
+        "question": "Albert Camus Sziszüphosz mítosza című esszéje szerint mi teszi Sziszüphoszt „abszurd hőssé”?",
+        "explanation": "Camus szerint Sziszüphoszt az teszi naggyá, hogy tisztán látja erőfeszítése hiábavalóságát, és mégis folytatja.",
         "options": [
-          "Folytatja erőfeszítéseit, jól tudja, hogy hiábavaló",
-          "Titkon abban reménykedik, hogy az istenek elfáradnak",
-          "Teljesen figyelmen kívül hagyja feladata hiúságát",
-          "Most nem hajlandó meglökni a sziklát"
+          "Folytatja a küzdelmet, pedig pontosan tudja, hogy hiábavaló",
+          "Titkon reméli, hogy az istenek egyszer megunják",
+          "Egyáltalán nem tudja, hogy a feladata hiábavaló",
+          "Többé nem hajlandó felgörgetni a sziklát"
         ],
         "correctIndex": 0
       },
@@ -9194,7 +9194,7 @@
         "id": "course_172_thesee_et_le_minotaure_q4",
         "type": "mcq",
         "question": "Milyen tárgynak hála sikerül Thészeusznak kijutni a Labirintusból?",
-        "explanation": "Ariane egy gyapjúgolyót ad neki, amit előrehaladva kiteker, majd visszatekerve megtalálja a kijáratot.",
+        "explanation": "Ariadné egy gombolyagot ad neki, amelyet befelé haladva leteker, majd visszafelé feltekerve megtalálja a kijáratot.",
         "options": [
           "Egy cérnagolyó, amit Ariane adott neki",
           "Daedalus által rajzolt térkép",
@@ -9561,21 +9561,21 @@
       {
         "id": "course_175_jason_et_la_toison_d_or_q5",
         "type": "mcq",
-        "question": "Milyen szerepet játszik Médeia az Aranygyapjú meghódításában?",
-        "explanation": "Szerelmes Jasonba, Médea kenőcsöt lát neki a bikák tüze ellen, trükköt tanácsol a sárkányfogakból született harcosok ellen, majd elaltatja az őrsárkányt.",
+        "question": "Milyen szerepet játszik Médeia az aranygyapjú megszerzésében?",
+        "explanation": "Az Iaszónba szerelmes Médeia kenőcsöt ad neki a bikák tüze ellen, cselt tanácsol a sárkányfogakból kikelt harcosok ellen, majd elaltatja az őrző sárkányt.",
         "options": [
-          "Védő kenőcsöt ad Jasonnak, és elaltatja az őrzősárkányt",
-          "Ő maga harcol a sárkánnyal karddal",
-          "Meggyőzi apját, hogy békésen adja fel a Fleece-t",
-          "Jasont legyőzhetetlen bikává változtatja"
+          "Védőkenőcsöt ad Iaszónnak, és elaltatja az őrző sárkányt",
+          "Ő maga küzd meg karddal a sárkánnyal",
+          "Rábeszéli apját, hogy békével adja át a gyapjút",
+          "Iaszónt legyőzhetetlen bikává változtatja"
         ],
         "correctIndex": 0
       },
       {
         "id": "course_175_jason_et_la_toison_d_or_q6",
         "type": "trueFalse",
-        "question": "Igaz vagy hamis: hogy megmeneküljön Kolchisz elől, Médea megöli saját testvérét, Abszirtoszt, és a maradványait a tengerbe szórja, hogy késleltesse apjukat.",
-        "explanation": "Médeia megöli bátyját, Abszirtoszt, és a maradványait a tengerbe szórja; apjuk, Aeetes megáll, hogy összeszedje a holttestet, így Jason és Medea elmenekülhet.",
+        "question": "Igaz vagy hamis: Médeia, hogy elmenekülhessen Kolkhiszból, megöli saját fivérét, Apszürtoszt, és a tengerbe szórja a maradványait, hogy feltartsa az apjukat.",
+        "explanation": "Médeia megöli fivérét, Apszürtoszt, és a tengerbe szórja a maradványait. Apjuk, Aietész megáll, hogy összeszedje a holttestet, így Iaszón és Médeia el tud menekülni.",
         "options": [
           "Igaz",
           "Hamis"
@@ -9598,26 +9598,26 @@
       {
         "id": "course_175_jason_et_la_toison_d_or_q8",
         "type": "mcq",
-        "question": "Miért áll Médeia végül bosszút Jászonon Korinthusban?",
-        "explanation": "Amikor Jason feleségül akarja venni Kreón király lányát, Médea bosszút áll azzal, hogy megöli riválisát egy mérgezett ruhával, majd a saját gyerekeiket.",
+        "question": "Miért áll végül bosszút Médeia Iaszónon Korinthoszban?",
+        "explanation": "Amikor Iaszón feleségül akarja venni Kreón király lányát, Médeia bosszút áll: egy mérgezett ruhával megöli a vetélytársát, majd a saját gyermekeiket is.",
         "options": [
-          "Jason el akarja hagyni őt, hogy feleségül vegye Kreón király lányát",
-          "Jason nem hajlandó felismerni gyermekeiket",
-          "Jason ok nélkül kiűzi őt Korinthoszból",
-          "Jason felfedi mágikus titkát a királynak"
+          "Iaszón elhagyná, hogy elvegye Kreón király lányát",
+          "Iaszón nem hajlandó elismerni a gyermekeiket",
+          "Iaszón ok nélkül elűzi őt Korinthoszból",
+          "Iaszón elárulja a királynak a varázstitkát"
         ],
         "correctIndex": 0
       },
       {
         "id": "course_175_jason_et_la_toison_d_or_q9",
         "type": "chronological",
-        "question": "Tedd sorrendbe ezeket a lépéseket Jason és az aranygyapjú történetében.",
-        "explanation": "Iolcos felé indulásától Médea végső bosszújáig Korinthusban a mítosz a hódítás, majd a bukás folyamatos pályáját követi.",
+        "question": "Tedd sorrendbe Iaszón és az aranygyapjú történetének ezeket az állomásait.",
+        "explanation": "Az Iolkoszba induló úttól Médeia végső, korinthoszi bosszújáig a mítosz töretlen ívet követ: előbb hódítás, aztán bukás.",
         "items": [
-          "Jason elveszített egy szandált, miközben egy idős nőn segít",
-          "Az Argo egy galambnak köszönhetően keresztezi a Roches Symlégades-t",
-          "Medea elaltatja a sárkányt, Jason pedig elveszi a gyapjút",
-          "Médeia bosszút áll Jászon árulásáért Korinthusban"
+          "Iaszón elveszít egy szandált, miközben segít egy idős asszonynak",
+          "Az Argo egy galamb segítségével átjut a Szümplégadesz sziklái között",
+          "Médeia elaltatja a sárkányt, Iaszón pedig megszerzi a gyapjút",
+          "Médeia Korinthoszban bosszút áll Iaszón árulásáért"
         ]
       }
     ]
@@ -11671,7 +11671,7 @@
         "id": "course_191_enee_et_la_fondation_de_rome_virgile_q7",
         "type": "mcq",
         "question": "Mit talált Aeneas a Turnus felett aratott győzelme után?",
-        "explanation": "Turnus legyőzése után Aeneas feleségül vette Laviniát és megalapította a Laviniumot; fia ezután meg fogja találni a Hosszú Albát, akiből Romulus és Remus születik.",
+        "explanation": "Turnus legyőzése után Aeneas feleségül vette Laviniát, és megalapította Laviniumot. Fia később Alba Longát alapította meg, ahonnan Romulus és Remus származik.",
         "options": [
           "Lavinium",
           "Róma",
@@ -12068,13 +12068,13 @@
       {
         "id": "course_195_lancelot_guenievre_et_la_table_ronde_q2",
         "type": "mcq",
-        "question": "Melyik tiltott szerelem bukta le végül Camelotot?",
-        "explanation": "Lancelot, a legjobb lovag és Guinevere, Arthur felesége közötti tiltott szerelem méreggé válik, amely lerombolja Camelotot.",
+        "question": "Melyik tiltott szerelem okozta végül Camelot bukását?",
+        "explanation": "A legjobb lovag, Lancelot és Artúr felesége, Ginevra tiltott szerelme lesz az a méreg, amely romba dönti Camelotot.",
         "options": [
-          "Lancelot és Guinevere királynő szerelme",
+          "Lancelot és Ginevra királyné szerelme",
           "Merlin és Viviane szerelme",
-          "Arthur és Morgane szerelme",
-          "Gawain és Yseult szerelme"
+          "Artúr és Morgana szerelme",
+          "Gawain és Izolda szerelme"
         ],
         "correctIndex": 0
       },
@@ -12224,13 +12224,13 @@
       {
         "id": "course_196_merlin_l_enchanteur_q5",
         "type": "mcq",
-        "question": "Mi az a Veszélyes ostrom, amelyet Merlin a kerekasztalhoz helyez?",
-        "explanation": "Merlin megtervezi a Perilous Seat-et, egy üres helyet a Kerekasztalnál, amelyet a legtisztább lovagok számára tartanak fenn, és amelyet később a Grál keresése során töltenek be.",
+        "question": "Mi az a Veszedelmes Szék, amelyet Merlin a Kerekasztalnál helyez el?",
+        "explanation": "Merlin megalkotja a Veszedelmes Széket: üres hely a Kerekasztalnál, a legtisztább lovagnak fenntartva, amelyet később, a Grál keresése idején foglalnak el.",
         "options": [
-          "A legtisztább lovagnak fenntartott üres hely",
-          "Arthur személyes trónja",
-          "Az ülést magának Merlinnek tulajdonították",
-          "A birodalom ellenségeinek szánt csapda"
+          "A legtisztább lovagnak fenntartott üres szék",
+          "Artúr saját trónja",
+          "A magának Merlinnek kijelölt szék",
+          "A királyság ellenségeinek szánt csapda"
         ],
         "correctIndex": 0
       },
@@ -12789,13 +12789,13 @@
       {
         "id": "course_1_la_naissance_de_l_islam_622_q6",
         "type": "mcq",
-        "question": "Mi az a Dhimma, amelyet a muszlim hódítók alapítottak?",
-        "explanation": "A dhimma az a védett státusz, amely felhatalmazza a „Könyv embereit”, hogy megtartsák vallásukat, dzsizja fizetése ellenében.",
+        "question": "Mi az a dzimma, amelyet a muszlim hódítók vezettek be?",
+        "explanation": "A dzimma védett státusz: a „Könyv népe” a dzsizja megfizetése fejében megtarthatja a vallását.",
         "options": [
-          "Az a státusz, amely lehetővé teszi a keresztények és a zsidók számára, hogy adó ellenében megtartsák vallásukat",
+          "Státusz, amellyel a keresztények és a zsidók adó fejében megtarthatják vallásukat",
           "A muszlim naptár neve",
           "Adó a kereskedőkaravánokra",
-          "A hitetlenek elítélésére rendelt bíróság"
+          "A hitetlenek felett ítélkező bíróság"
         ],
         "correctIndex": 0
       },
@@ -20460,7 +20460,7 @@
       {
         "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_q6",
         "type": "trueFalse",
-        "question": "Igaz vagy hamis: A pólusokon búvárkodó sűrű sós víz mozgása segít a nagy óceáni áramlatok meghajtásában.",
+        "question": "Igaz vagy hamis: a sűrű sós víz, amely a sarkvidékeken a mélybe süllyed, segít mozgásban tartani a nagy óceáni áramlatokat.",
         "explanation": "A pólusokon lemerülő sűrű sós víz részt vesz a főbb óceáni áramlatok keringésében, amelyek hőt és tápanyagokat szállítanak szerte a világon.",
         "options": [
           "Igaz",
@@ -25214,24 +25214,24 @@
       {
         "id": "course_85_le_banquet_platon_q1",
         "type": "mcq",
-        "question": "Milyen összefüggésben zajlik a bankett párbeszéde?",
-        "explanation": "A bankett egy szimpózium, egy polgári étkezés során zajlik, ahol az emberek isznak, megvitatják és versengenek az ékesszólásban.",
+        "question": "Milyen keretek között játszódik A lakoma párbeszéde?",
+        "explanation": "A lakoma egy szümposzionon, polgárok közös étkezésén játszódik, ahol isznak, beszélgetnek, és ékesszólásban versengenek egymással.",
         "options": [
-          "Athéni polgárok vacsorája, szimpóz",
+          "Athéni polgárok közös étkezése, egy szümposzion",
           "Egy népbíróság",
-          "Óra az Akadémián",
-          "Templom egy vallási szertartás alatt"
+          "Egy előadás az Akadémián",
+          "Egy templom vallási szertartás idején"
         ],
         "correctIndex": 0
       },
       {
         "id": "course_85_le_banquet_platon_q2",
         "type": "mcq",
-        "question": "Milyen témával foglalkozzanak beszédükben a bankett vendégei?",
-        "explanation": "Az est kényszertémája az Eros, és minden vendég felkínálja a saját szerelmi elméletét.",
+        "question": "Milyen témáról kell beszélniük A lakoma vendégeinek?",
+        "explanation": "Az est kötelező témája Erósz, és minden vendég előadja a saját elméletét a szerelemről.",
         "options": [
-          "Erósz, szerelem-vágy",
-          "Igazságszolgáltatás a városban",
+          "Erósz, a szerelmi vágy",
+          "Az igazságosság a városállamban",
           "A halál és a lélek halhatatlansága",
           "Az istenek természete"
         ],
@@ -25711,11 +25711,11 @@
         "id": "course_89_les_travaux_et_les_jours_hesiode_q6",
         "type": "mcq",
         "question": "Melyik másik, Hésziodosznak tulajdonított költemény mesél az istenek születéséről?",
-        "explanation": "A Theogony, Hésziodosz másik verse, az istenek születését meséli el, míg a Művek és napok az égből szállnak alá az eke felé.",
+        "explanation": "A Theogonia, Hésziodosz másik költeménye, az istenek születését beszéli el, a Munkák és napok viszont az égből leereszkedik az eke mellé.",
         "options": [
-          "Teogónia",
+          "A Theogonia",
           "Az Odüsszeia",
-          "A Georgicsok",
+          "A Georgica",
           "Az Iliász"
         ],
         "correctIndex": 0
@@ -25736,10 +25736,10 @@
       {
         "id": "course_89_les_travaux_et_les_jours_hesiode_q8",
         "type": "mcq",
-        "question": "Melyik latin költő merített később ihletet Georgicsában a Művek és napok című könyvéből?",
-        "explanation": "Vergilius emlékezni fog Hésziodosz költeményére Georgicsában, amely egy másik nagyszerű költői szöveg a mezőgazdasági életnek szentelve.",
+        "question": "Melyik latin költő merített később ihletet a Munkák és napokból Georgica című művéhez?",
+        "explanation": "Vergilius később Georgica című művében, egy másik nagy, a földműves életnek szentelt költeményben idézi fel Hésziodosz versét.",
         "options": [
-          "Virgil",
+          "Vergilius",
           "Ovidius",
           "Horatius",
           "Cicero"
@@ -25893,21 +25893,21 @@
       {
         "id": "course_90_medee_euripide_q2",
         "type": "mcq",
-        "question": "Mit hozott Médea Jasonnak, mielőtt elvált tőle?",
-        "explanation": "Médeia varázslatai nélkül Jason soha nem kapta volna meg az Aranygyapjút: Euripidész ragaszkodik a „civilizált” ember hálátlanságához.",
+        "question": "Mit adott Médeia Iaszónnak, mielőtt a férfi eltaszította őt?",
+        "explanation": "Médeia varázslatai nélkül Iaszón sosem szerezte volna meg az aranygyapjút: Euripidész a „civilizált” férfi hálátlanságát hangsúlyozza.",
         "options": [
-          "Mágikus segítsége az Aranygyapjú megszerzésében",
+          "Mágikus segítsége az aranygyapjú megszerzéséhez",
           "Jelentős személyes vagyon",
           "Egy hadsereg Korinthosz meghódítására",
-          "Egy királyság Colchisban"
+          "Egy királyság Kolkhiszban"
         ],
         "correctIndex": 0
       },
       {
         "id": "course_90_medee_euripide_q3",
         "type": "trueFalse",
-        "question": "Igaz vagy hamis: a görögök szemében Médeát barbárnak tartják, idegen a hellén világtól.",
-        "explanation": "Medea a görög világon kívülről, Kolchiszból származik, és ez a külföldi státusz központi jelentőségűvé válik, amikor Jason megtagadja őt.",
+        "question": "Igaz vagy hamis: a görögök barbárnak, a hellén világtól idegennek tartották Médeiát.",
+        "explanation": "Médeia Kolkhiszból, a görög világon kívülről érkezett, és idegen volta központi kérdéssé válik, amikor Iaszón eltaszítja.",
         "options": [
           "Igaz",
           "Hamis"
@@ -25918,12 +25918,12 @@
         "id": "course_90_medee_euripide_q4",
         "type": "mcq",
         "question": "Hogyan ábrázolja Euripidész Médeia döntését, hogy megöli gyermekeit?",
-        "explanation": "Médea tétovázik, de a döntését, hogy megöli gyermekeit, világos beszéd magyarázza: ez nem egy néma őrület.",
+        "explanation": "Médeia habozik, de a gyermekei megöléséről hozott döntését tiszta fejjel, egy beszédben fejti ki: ez nem néma őrületroham.",
         "options": [
-          "Mint egy világos választás, egy átgondolt beszédben bemutatva",
-          "Mint egy teljesen véletlen baleset",
-          "Mint az istenek közvetlen parancsa",
-          "Mint egy azonnal megbánt és lemondott cselekedet"
+          "Tudatos döntésként, átgondolt beszédben kifejtve",
+          "Teljesen véletlen balesetként",
+          "Az istenek közvetlen parancsaként",
+          "Azonnal megbánt és visszavont tettként"
         ],
         "correctIndex": 0
       },
@@ -25967,11 +25967,11 @@
       {
         "id": "course_90_medee_euripide_q8",
         "type": "mcq",
-        "question": "A Jason elleni személyes bosszún túl mit pusztít el Médea a gyermekei meggyilkolásával?",
-        "explanation": "Azáltal, hogy elpusztítja saját származását, Médea a város jövőjének is árt, ami politikai költség, amit a kurzus kiemel.",
+        "question": "A kurzus szerint az Iaszón elleni személyes bosszún túl mit pusztít el Médeia azzal is, hogy megöli a gyermekeit?",
+        "explanation": "Saját nemzetsége kiirtásával Médeia a város jövőjére is csapást mér, és a kurzus kiemeli ennek politikai árát.",
         "options": [
-          "A nemzetség jövője, politikai költséggel a város számára",
-          "Corinth hírneve külföldön",
+          "A nemzetség jövője, a város politikai kárára",
+          "Korinthosz hírneve külföldön",
           "Kolkhisz trónja",
           "Apollón temploma"
         ],
@@ -26112,8 +26112,8 @@
       {
         "id": "course_92_madame_bovary_flaubert_q1",
         "type": "mcq",
-        "question": "Ki a Madame Bovary szerzője?",
-        "explanation": "Gustave Flaubert 1857-ben adta ki Madame Bovary című művét, ezzel a modern realizmus születését.",
+        "question": "Ki a Bovaryné szerzője?",
+        "explanation": "Gustave Flaubert 1857-ben adta ki a Bovarynét, amellyel megszületett a modern realizmus.",
         "options": [
           "Gustave Flaubert",
           "Stendhal",
@@ -26151,8 +26151,8 @@
       {
         "id": "course_92_madame_bovary_flaubert_q4",
         "type": "trueFalse",
-        "question": "Igaz vagy hamis: Flaubert-t elítélték 1857-ben Madame Bovary perében.",
-        "explanation": "Flaubertet 1857-ben felmentették a „közerkölcs megbotránkozása” vádja alól.",
+        "question": "Igaz vagy hamis: Flaubert-t 1857-ben elítélték a Bovaryné miatt indított perben.",
+        "explanation": "Flaubert-t 1857-ben felmentették a „közerkölcs megsértése” vádja alól.",
         "options": [
           "Igaz",
           "Hamis"
@@ -26201,8 +26201,8 @@
       {
         "id": "course_92_madame_bovary_flaubert_q8",
         "type": "numericSlider",
-        "question": "Hány évet töltött Flaubert a Madame Bovary megírásával?",
-        "explanation": "Flaubert elszigetelte magát Croissetben, és öt évet, 1851-től 1856-ig szentelt ennek a regénynek.",
+        "question": "Hány évig dolgozott Flaubert a Bovaryné megírásán?",
+        "explanation": "Flaubert visszavonult Croisset-ba, és öt évet, 1851-től 1856-ig, szentelt a regény megírásának.",
         "correctValue": 5.0,
         "sliderMin": 1.0,
         "sliderMax": 12.0,
@@ -26256,8 +26256,8 @@
       {
         "id": "course_93_le_rouge_et_le_noir_stendhal_q3",
         "type": "mcq",
-        "question": "Mit jelent a vörös és a fekete a címben?",
-        "explanation": "A katonai egyenruha piros és az egyházi ruha fekete színe volt a restauráció idején a művelt közember egyetlen hatalmi hordozója.",
+        "question": "Mit jelképez a két szín a Vörös és fekete címében?",
+        "explanation": "A restauráció idején a katonai egyenruha vöröse és az egyházi viselet feketéje volt a művelt közember egyetlen útja a hatalomhoz.",
         "options": [
           "A katonai egyenruha és az egyházi viselet, a közemberek felemelkedésének egyetlen útja",
           "Vér és gyász",
@@ -26735,8 +26735,8 @@
       {
         "id": "course_97_le_mythe_de_sisyphe_camus_q1",
         "type": "mcq",
-        "question": "Ki a Sziszifusz mítosza szerzője?",
-        "explanation": "Albert Camus 1942-ben adta ki Sziszifusz mítosza című művét, amely az abszurd gondolatának alapja.",
+        "question": "Ki írta a Sziszüphosz mítosza című esszét?",
+        "explanation": "Albert Camus 1942-ben adta ki Sziszüphosz mítosza című esszéjét, az abszurd gondolkodás alapművét.",
         "options": [
           "Albert Camus",
           "Jean-Paul Sartre",
@@ -26855,8 +26855,8 @@
       {
         "id": "course_98_a_la_recherche_du_temps_perdu_proust_q1",
         "type": "mcq",
-        "question": "Ki a szerzője az Elveszett idő nyomában?",
-        "explanation": "Marcel Proust 1913 és 1927 között írta Az elveszett idő nyomában című művét.",
+        "question": "Ki írta Az eltűnt idő nyomában című regényt?",
+        "explanation": "Marcel Proust 1913 és 1927 között írta Az eltűnt idő nyomában című regényét.",
         "options": [
           "Marcel Proust",
           "André Gide",
@@ -26944,8 +26944,8 @@
       {
         "id": "course_98_a_la_recherche_du_temps_perdu_proust_q8",
         "type": "numericSlider",
-        "question": "Hány kötete van az Elveszett idő nyomában című kötetnek?",
-        "explanation": "A regény hét kötetes, 1913 és 1927 között jelent meg.",
+        "question": "Hány kötetből áll Az eltűnt idő nyomában?",
+        "explanation": "A regény hét kötetből áll, ezek 1913 és 1927 között jelentek meg.",
         "correctValue": 7.0,
         "sliderMin": 3.0,
         "sliderMax": 12.0,
@@ -26999,37 +26999,37 @@
       {
         "id": "course_99_le_pere_goriot_balzac_q2",
         "type": "mcq",
-        "question": "Melyik romantikus csoporthoz tartozik Goriot atya?",
-        "explanation": "Goriot atya a Comédie humaine főszereplője, ahol Balzac először mutatja be a visszatérő karakterek visszatérését.",
+        "question": "Melyik regényciklushoz tartozik a Goriot apó?",
+        "explanation": "A Goriot apó Az emberi színjáték kulcsműve: Balzac itt alkalmazza először a visszatérő szereplők módszerét.",
         "options": [
-          "Az emberi komédia",
+          "Az emberi színjáték",
           "A Rougon-Macquartok",
-          "Az évszázadok legendája",
-          "Vicces mesék"
+          "A századok legendája",
+          "Pajzán históriák"
         ],
         "correctIndex": 0
       },
       {
         "id": "course_99_le_pere_goriot_balzac_q3",
         "type": "mcq",
-        "question": "Kiért áldozza fel Goriot atya minden vagyonát?",
-        "explanation": "Az egykori cérnametélt gyártó Goriot mindent feláldozott lányaiért, Anastasie-ért és Delphine-ért, akik elhagyták őt, miután meggazdagodtak.",
+        "question": "Kiért áldozza fel minden vagyonát Goriot apó?",
+        "explanation": "Az egykori tésztagyáros Goriot mindent feláldozott a lányaiért, Anastasie-ért és Delphine-ért, akik magára hagyták, amint meggazdagodtak.",
         "options": [
-          "Lányai Anastasie és Delphine",
+          "Lányai, Anastasie és Delphine",
           "Az egyetlen fia",
           "Volt alkalmazottai",
-          "Plébániájának temploma"
+          "A plébániatemploma"
         ],
         "correctIndex": 0
       },
       {
         "id": "course_99_le_pere_goriot_balzac_q4",
         "type": "mcq",
-        "question": "Hol lakik Goriot atya, miközben a forrásai fogynak?",
-        "explanation": "Goriot emeletről emeletre ereszkedik a Vauquer panzióban, miközben erőforrásai kimerülnek, egészen a legszerényebb szobáig.",
+        "question": "Hol lakik Goriot apó, miközben fogy a pénze?",
+        "explanation": "Ahogy fogy a pénze, Goriot emeletről emeletre egyre lejjebb csúszik a Vauquer-panzióban, míg végül a legszerényebb szobába kerül.",
         "options": [
-          "A Vauquer panzióban",
-          "Egy privát szállodában",
+          "A Vauquer-panzióban",
+          "Egy városi palotában",
           "Delphine lányánál",
           "Egy kolostorban"
         ],
@@ -27088,13 +27088,13 @@
       {
         "id": "course_99_le_pere_goriot_balzac_q9",
         "type": "mcq",
-        "question": "Milyen regényisztikai technikát avat be Balzac ezzel a regénnyel?",
-        "explanation": "Goriot atya a Comédie humaine-ben avatja be az egyik regényből a másikba újra felbukkanó szereplők visszatérését.",
+        "question": "Milyen regényírói technikát vezet be Balzac ezzel a regénnyel?",
+        "explanation": "Az emberi színjátékban a Goriot apóval kezdődik a szereplők visszatérése: ugyanazok az alakok bukkannak fel egyik regényből a másikban.",
         "options": [
           "A szereplők visszatérése egyik regényből a másikba",
           "A belső monológ",
           "A levélregény",
-          "Első személyű narráció"
+          "Az egyes szám első személyű elbeszélés"
         ],
         "correctIndex": 0
       },

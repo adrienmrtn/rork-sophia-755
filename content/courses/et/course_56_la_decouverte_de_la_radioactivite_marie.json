@@ -4,11 +4,11 @@
   "subtitle": "Marie Curie",
   "subject": "sciences",
   "subcategory": "Maailma muutnud avastused",
-  "description": "Marie Curie koos Pierre Curie ja Henri Becquereliga avab radioaktiivsuse peatüki. Kaks Nobeli preemiat, tohutu töö ja tohutu pärand.",
+  "description": "Marie Curie avab koos Pierre Curie ja Henri Becquereliga radioaktiivsuse peatüki. Kaks Nobeli preemiat, kurnav töö ja hiiglaslik pärand.",
   "hero": {
     "image": "la_decouverte_de_la_radioactivite_marie_curie",
     "ratio": "16:9",
-    "hook": "Ta kaalus tonni maaki, et eraldada paar grammi nähtamatut elementi."
+    "hook": "Ta kaalus tonnide viisi maaki, et eraldada mõni gramm nähtamatut elementi."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Marie Curie** (sünninimega Maria Skłodowska) on esimene naine, kes on saanud Nobeli preemia. Ta on ainus inimene, kes on saanud **kaks** kahes erinevas teaduses: füüsika, seejärel keemia."
+          "text": "**Marie Curie** (sündinud Maria Skłodowska) on esimene naine, kes sai Nobeli preemia. Ta on siiani ainus inimene, kes on saanud **kaks** preemiat kahes eri teaduses: esmalt füüsikas, seejärel keemias."
         },
         {
           "type": "paragraph",
-          "text": "Selle teema: **radioaktiivsus**, see tähendab asjaolu, et teatud aatomid saadavad spontaanselt energiat ja osakesi."
+          "text": "Tema uurimisteema on **radioaktiivsus** ehk see, et mõned aatomid kiirgavad iseeneslikult energiat ja osakesi."
         }
       ]
     },
@@ -33,51 +33,51 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Poolas sündinud ta läks õppima Pariisi, sest sealsed ülikoolid sulgesid naistele palju uksi. Ta töötab kõvasti, sageli ebakindlates tingimustes."
+          "text": "Poolas sündinud Marie läheb õppima Pariisi, sest kodumaa ülikoolid sulgevad naiste ees palju uksi. Ta töötab kõvasti, sageli kasinates oludes."
         },
         {
           "type": "paragraph",
-          "text": "Ta abiellus füüsiku **Pierre Curie**-ga. Koos moodustasid nad selleks ajaks haruldase laboriduo."
+          "text": "Ta abiellub füüsik **Pierre Curie'ga**. Koos moodustavad nad teadlaspaari, mis oli tolle aja kohta haruldane."
         }
       ]
     },
     {
       "id": "course_56_la_decouverte_de_la_radioactivite_marie_p2",
-      "title": "Nimeta nähtamatu",
+      "title": "Nimi nähtamatule",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**1896** märkas **Henri Becquerel**, et uraan katab fotoplaate ilma valguseta. Marie Curie otsustab seda nähtust üksikasjalikult uurida. Ta leiutas sõna **radioaktiivsus**."
+          "text": "**1896**. aastal märkab **Henri Becquerel**, et uraan muudab fotoplaadid tumedaks ka ilma valguseta. Marie Curie otsustab seda nähtust põhjalikult uurida. Ta mõtleb välja sõna **radioaktiivsus**."
         },
         {
           "type": "image",
           "asset": "marie_curie_pitchblende_radioactivity",
           "ratio": "4:3",
-          "caption": "Tonni pigisegu raadiumi ja polooniumi eraldamiseks."
+          "caption": "Tonnide viisi pigimaaki raadiumi ja polooniumi eraldamiseks."
         },
         {
           "type": "paragraph",
-          "text": "Koos Pierre'iga avastab ta kaks uut elementi: **poloonium** (nimetatud Poola järgi) ja **raadium**. Nende isoleerimiseks tuleb töödelda tohututes kogustes maaki, pigisegu."
+          "text": "Koos Pierre'iga avastab ta kaks uut elementi: **poloonium** (nimetatud Poola järgi) ja **raadium**. Nende eraldamiseks tuleb töödelda tohutul hulgal maaki ehk pigimaaki."
         },
         {
           "type": "funFact",
-          "text": "Raadium helendab pimedas nõrgalt. Me olime alguses üllatunud… enne kui mõistsime, kui ohtlik see oli."
+          "text": "Raadium helendab pimedas nõrgalt. Alguses seda imetleti… enne kui mõisteti, kui ohtlik see on."
         }
       ]
     },
     {
       "id": "course_56_la_decouverte_de_la_radioactivite_marie_p3",
-      "title": "Au ja hind, mida maksta",
+      "title": "Kuulsus ja selle hind",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Aastal **1903** said Marie, Pierre ja Becquerel Nobeli füüsikaauhinna. Filmis **1911** sai Marie üksi Nobeli keemiaauhinna. Pierre suri kogemata aastal 1906. Ta jätkab."
+          "text": "Aastal **1903** saavad Marie, Pierre ja Becquerel Nobeli füüsikapreemia. Aastal **1911** saab Marie üksi Nobeli keemiapreemia. Pierre hukkub 1906. aastal õnnetuses. Marie jätkab."
         },
         {
           "type": "paragraph",
-          "text": "Esimese maailmasõja ajal organiseeris ta mobiilsed röntgeniüksused haavatute raviks. Ta avaldab oma keha annustele, mida me tänapäeval teame, et need on vastuvõetamatud."
+          "text": "Esimese maailmasõja ajal korraldab ta liikuvaid röntgeniüksusi, et haavatuid ravida. Ta saab ise kiirgusdoose, mida tänapäeval peetaks vastuvõetamatuks."
         }
       ]
     },
@@ -88,11 +88,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Radioaktiivsus on võimaldanud kiiritusravi teatud vähivormide vastu ja ka tuumarelvi. Teadmised on neutraalsed; selle kasutusalad ei ole."
+          "text": "Radioaktiivsus tegi võimalikuks teatud vähivormide kiiritusravi… aga ka tuumarelvad. Teadmine on neutraalne, selle kasutused aga mitte."
         },
         {
           "type": "takeaway",
-          "text": "Marie Curie muutis kummalise vaatluse uueks teaduseks: radioaktiivsuseks. Tema töö avas kaasaegse füüsika… toona halvasti mõistetud riskide hinnaga."
+          "text": "Marie Curie muutis kummalise vaatluse uueks teaduseks: radioaktiivsuseks. Tema töö avas tee moodsale füüsikale… riskide hinnaga, mida toona veel hästi ei mõistetud."
         }
       ]
     }

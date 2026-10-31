@@ -1,0 +1,122 @@
+{
+  "id": "course_159_le_theatre_de_shakespeare",
+  "title": "Kodėl Shakespeare'as iki šiol vaidinamas visur?",
+  "subtitle": "1564-1616",
+  "subject": "art",
+  "subcategory": "Cinéma, photo & architecture + œuvres iconiques",
+  "description": "Londone Shakespeare'as rašo „Globe“ teatrui. Hamletas, Makbetas, Romeo: liaudies teatras, tapęs anglų kalbos viršūne.",
+  "hero": {
+    "image": "le_theatre_de_shakespeare",
+    "ratio": "16:9",
+    "hook": "Aktorių dramaturgas, teatras be dekoracijų… ir amžinos replikos."
+  },
+  "sections": [
+    {
+      "id": "course_159_le_theatre_de_shakespeare_intro",
+      "title": "Įvadas",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Williamas Shakespeare'as** (1564-1616) rašo Londono scenai, o ne mokyklai. Jo pjesėse susitinka karaliai, juokdariai, įsimylėjėliai ir žudikai."
+        },
+        {
+          "type": "paragraph",
+          "text": "Po keturių šimtmečių jis vis dar vaidinamas visur."
+        }
+      ]
+    },
+    {
+      "id": "course_159_le_theatre_de_shakespeare_p1",
+      "title": "„Globe“ teatras ir groundlings",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Su trupe [[Lord Chamberlain's Men]] jis vaidina pastate, kuris vadinasi [[Globe teatras]]: tai atviras apskritas teatras. Žiūrovai [[groundlings]] moka mažai ir stovi prie pat scenos. Teatras liaudiškas, triukšmingas, gyvas."
+        },
+        {
+          "type": "paragraph",
+          "text": "Elžbietos laikų Londonas mėgsta reginius. Teatrai varžosi su pamokslais ir lokių kautynėmis. Shakespeare'as rašo šioje triukšmingoje rinkoje, o ne dramblio kaulo bokšte."
+        },
+        {
+          "type": "image",
+          "asset": "globe_theatre_london_reconstruction",
+          "ratio": "4:3",
+          "caption": "„Globe“: scena, įsiterpusi į minią."
+        }
+      ]
+    },
+    {
+      "id": "course_159_le_theatre_de_shakespeare_p2",
+      "title": "Nauja kalba",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Jis dažnai rašo Shakespeare'o baltąja eile (blank verse): jambiniu penkiapėdžiu be rimo. Įžeidimai, eilėraščiai, monologai: jis kuria naujus žodžius ir nulipdo charakterius (Hamletas, ledi Makbet), tapusius mitais."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jis perdirba kronikas, italų noveles, senas pjeses. Originalumas slypi kalboje ir charakteriuose, o ne grynai išgalvotame siužete."
+        },
+        {
+          "type": "funFact",
+          "text": "Kai kurias jo pjeses turime tik todėl, kad po jo mirties, 1623 m., buvo išleistas [[First Folio]]."
+        }
+      ]
+    },
+    {
+      "id": "course_159_le_theatre_de_shakespeare_p3",
+      "title": "Tragedijos, komedijos, kronikos",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Jis pereina nuo juoko prie kraujo. *Romeo ir Džiuljeta*, *Otelas*, *Karalius Lyras*: šeimos, valdžia, pavydas. Kronikos („history plays“) iš naujo suvaidina Anglijos istoriją publikai, kuri mėgsta save matyti epe."
+        },
+        {
+          "type": "paragraph",
+          "text": "Komedijos ir tragedijos atliepia viena kitą. Juokdarys sako tiesą, karalius išprotėja. Dėl šio tonų pralaidumo jį ir šiandien galima statyti tūkstančiais būdų."
+        },
+        {
+          "type": "image",
+          "asset": "shakespeare_first_folio_1623",
+          "ratio": "4:3",
+          "caption": "First Folio: tekstai, išgelbėti nuo užmaršties."
+        }
+      ]
+    },
+    {
+      "id": "course_159_le_theatre_de_shakespeare_p4",
+      "title": "Palikimas",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Verčiamas, adaptuojamas, kino ir repo semplinamas Shakespeare'as lieka įrankių dėžė kalbėti apie ambicijas ir geismą. Jo paslaptis: rašyti aktoriams, prieš minią."
+        },
+        {
+          "type": "paragraph",
+          "text": "Norint gerai suprasti Shakespeare'o teatrą, verta atsiminti vieną dalyką: kiekviena techninė detalė tarnauja jausmui ar idėjai. Kūrinys niekada nėra vien dekoratyvus."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kontekstas svarbus ne mažiau nei stilius. Datos, vietos, užsakovai, publika: visa tai paaiškina, kodėl tam tikra forma atsiranda būtent tuo metu, o ne anksčiau."
+        },
+        {
+          "type": "paragraph",
+          "text": "Galiausiai palikimas matuojamas ilguoju laiku. Tai, ką šiandien matome muziejuose, filmuose ar populiariojoje muzikoje, vis dar neša šių išradimų pėdsakus."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nuo XVIII a. verčiamas Prancūzijoje ir kitur, jis tampa pasauline klasika. Kiekviena epocha randa jame savo veidrodį: romantinį, politinį, postkolonijinį, feministinį."
+        },
+        {
+          "type": "takeaway",
+          "text": "„Globe“ teatre Shakespeare'as sukūrė liaudies teatrą, kurio charakteriai ir kalba užkariavo pasaulį."
+        }
+      ]
+    }
+  ]
+}

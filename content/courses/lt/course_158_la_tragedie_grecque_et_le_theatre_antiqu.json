@@ -1,0 +1,122 @@
+{
+  "id": "course_158_la_tragedie_grecque_et_le_theatre_antiqu",
+  "title": "Kam reikėjo graikų tragedijos?",
+  "subtitle": "V a. pr. Kr.",
+  "subject": "art",
+  "subcategory": "Cinéma, photo & architecture + œuvres iconiques",
+  "description": "Atėnuose Aischilas, Sofoklis ir Euripidas sukuria tragediją. Choras, hibris, katarsis: teatras, padedantis mąstyti apie polį.",
+  "hero": {
+    "image": "la_tragedie_grecque_et_le_theatre_antique",
+    "ratio": "16:9",
+    "hook": "Kaukės po saule, kurios gydo miestą sukrėtimu."
+  },
+  "sections": [
+    {
+      "id": "course_158_la_tragedie_grecque_et_le_theatre_antiqu_intro",
+      "title": "Įvadas",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V a. pr. Kr. Atėnuose gimsta **tragedija**. Tai ne privati pramoga: tai pilietinė apeiga, vaidinama prieš tūkstančius piliečių."
+        },
+        {
+          "type": "paragraph",
+          "text": "Aischilas, Sofoklis ir Euripidas sukuria meną, kuriame susipina dievai, politika ir aistros."
+        }
+      ]
+    },
+    {
+      "id": "course_158_la_tragedie_grecque_et_le_theatre_antiqu_p1",
+      "title": "Choras ir orkestra",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dainuoja, šoka ir komentuoja [[choras graikų tragedijoje]]. Kaukėti aktoriai įkūnija herojus ir dievus. Turtingas pilietis finansuoja vaidinimą: tai ir yra [[choregija]]."
+        },
+        {
+          "type": "paragraph",
+          "text": "Didžiosiose Dionisijose, Dioniso šventėse, rengiami konkursai. Tragedija gimsta šiame religiniame ir pilietiniame kontekste. Laimėti reiškia pagerbti ir miestą, ir dievą."
+        },
+        {
+          "type": "image",
+          "asset": "epidaurus_ancient_theatre",
+          "ratio": "4:3",
+          "caption": "Epidauro teatras: akustika kaip akmens stebuklas"
+        }
+      ]
+    },
+    {
+      "id": "course_158_la_tragedie_grecque_et_le_theatre_antiqu_p2",
+      "title": "Hibris ir žlugimas",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tragiškąjį herojų dažnai užvaldo [[hibris]], saiko stoka, metanti iššūkį tvarkai. Po to sekantis žlugimas nėra beprasmis: jis kelia klausimus apie teisingumą, likimą, atsakomybę."
+        },
+        {
+          "type": "paragraph",
+          "text": "Aischilas prideda aktorių, Sofoklis išgrynina psichologiją, Euripidas sujaukia įsitikinimus. Trys stiliai vienam mechanizmui: priversti mąstyti per jausmus."
+        },
+        {
+          "type": "funFact",
+          "text": "Kartais pasitelktas [[deus ex machina]]: dievas kranu nuleidžiamas į sceną, kad atrištų intrigą… Jau tada šis triukas kritikuotas kaip per patogus."
+        }
+      ]
+    },
+    {
+      "id": "course_158_la_tragedie_grecque_et_le_theatre_antiqu_p3",
+      "title": "Katarsis",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pasak Aristotelio, tragedijos poveikis yra [[katarsis]]: apsivalymas per gailestį ir baimę. Žiūrovas išeina sukrėstas, bet nurimęs. Teatras gydo miestą, scenoje parodydamas jo baimes."
+        },
+        {
+          "type": "paragraph",
+          "text": "Žiūrovai dažnai žino mitą. Įdomu ne netikėta atomazga, o tai, kaip viskas vyksta. Kaip kris Edipas? Kaip Antigonė pasakys „ne“?"
+        },
+        {
+          "type": "image",
+          "asset": "greek_theatre_masks_tragedy",
+          "ratio": "4:3",
+          "caption": "Kaukės: emocija, matoma iš toli"
+        }
+      ]
+    },
+    {
+      "id": "course_158_la_tragedie_grecque_et_le_theatre_antiqu_p4",
+      "title": "Palikimas",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Shakespeare'as, opera, kinas: graikų tragedija tebėra likimo scenoje gramatika. Mūsų modernūs antiherojai jai vis dar skolingi savo žlugimus."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kad gerai suprastum graikų tragediją ir antikinį teatrą, turėk omenyje vieną dalyką: kiekviena techninė detalė tarnauja emocijai ar idėjai. Šis kūrinys niekada nėra vien dekoratyvus."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kontekstas svarbus ne mažiau nei stilius. Datos, vietos, užsakovai, publika: visa tai paaiškina, kodėl tam tikra forma atsiranda būtent tuo metu, o ne anksčiau."
+        },
+        {
+          "type": "paragraph",
+          "text": "Galiausiai palikimas matuojamas ilgu laiku. Tai, ką šiandien matome muziejuose, filmuose ar populiariojoje muzikoje, vis dar neša šių išradimų pėdsaką."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nuo Wagnerio operų iki katastrofų filmų tragiškoji struktūra išlieka. Pakeitėme dievus, bet ne visada žlugimus."
+        },
+        {
+          "type": "takeaway",
+          "text": "Atėnuose tragedija sukūrė pilietinį teatrą, kuriame hibris, choras ir katarsis moko miestą pažvelgti į save."
+        }
+      ]
+    }
+  ]
+}

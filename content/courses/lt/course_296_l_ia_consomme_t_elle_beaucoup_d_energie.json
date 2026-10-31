@@ -1,0 +1,139 @@
+{
+  "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie",
+  "title": "Ar DI sunaudoja daug energijos?",
+  "subtitle": "Už kiekvieno atsakymo",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environnement & avenir",
+  "description": "Kiekvienas DI atsakymas gimsta pastate, pilname mašinų, kurios dirba dieną naktį. Kiek elektros tai iš tikrųjų kainuoja, nuo modelio mokymo iki jį maitinančio tinklo?",
+  "author": "rana-abdalla",
+  "hero": {
+    "image": "data_center_server_racks_aisle_blue_lights",
+    "ratio": "4:3",
+    "hook": "DI atrodo kaip programinė įranga, bet kiekvienas atsakymas sukuriamas visiškai tikrame pastate, prijungtame prie to paties tinklo kaip ir tavo namai."
+  },
+  "sections": [
+    {
+      "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie_intro",
+      "title": "Įvadas",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Užduodi klausimą internetiniam DI, ir atsakymas pasirodo per kelias sekundes. Tačiau darbas vyksta ne tavo telefone. Jį atlieka [[duomenų centras]], pastatas, pilnas mašinų, kurios apdoroja ir saugo informaciją. Šios mašinos nuolat naudoja elektrą, net jei niekas jų nemato."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kaip skaičiuoja [[Tarptautinė energetikos agentūra]], 2025 m. visi duomenų centrai sunaudojo apie **1,5 %** pasaulio elektros. Šis skaičius apima visas internetines paslaugas, ne vien DI. Tačiau DI skirtų įrenginių sparčiai daugėja. Vienas trumpas atsakymas pats savaime kainuoja nedaug. Vis dėlto kiekvienam atsakymui dirba mašinos, o jį kuriant vienu metu elektrą naudoja kelios sistemos."
+        }
+      ]
+    },
+    {
+      "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie_p1",
+      "title": "Serveriai, didžiausi vartotojai",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Duomenų centro pagrindas yra [[serveris]]: kompiuteris, kuris apdoroja duomenis ir palaiko internetines paslaugas. Duomenų centre būtent serveriai atlieka didžiąją dalį skaičiavimų, todėl jie ir sunaudoja daugiausia elektros. Išskaidžius šiuolaikinio duomenų centro sąskaitą, serveriams vidutiniškai tenka **60 %**. Šis skaičius taikomas duomenų centrams apskritai, ne vien DI įrenginiams."
+        },
+        {
+          "type": "image",
+          "asset": "data_center_cooling_pipes_chillers",
+          "ratio": "3:2",
+          "caption": "Serverių eilės duomenų centre: būtent jie sunaudoja daugiausia elektros."
+        },
+        {
+          "type": "paragraph",
+          "text": "Likusi dalis skirta duomenims saugoti ir perduoti, įrangai aušinti ir pastatui išlaikyti. Aušinimas svarbus, nes dirbdamas kompiuteris išskiria šilumą. Be sistemos, kuri ją pašalina, mašinos galiausiai perkaistų. Taigi elektra, slypinti už DI atsakymo, maitina daug daugiau nei jį kuriančius kompiuterius."
+        },
+        {
+          "type": "funFact",
+          "text": "Pasak TEA, vien per 2025 m. DI skirtų duomenų centrų elektros suvartojimas išaugo 50 %."
+        }
+      ]
+    },
+    {
+      "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie_p2",
+      "title": "Pirma mokyti, paskui atsakyti",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kad galėtų atsakyti, DI paslaugai reikia modelio: sistemos, kuri iš pavyzdžių išmoko dėsningumų. Jam sukurti reikalingas [[mokymas]], etapas, kai kompiuteriai išsijoja milžiniškus duomenų kiekius. Šis darbas gali ilgam užimti labai galingas mašinas."
+        },
+        {
+          "type": "image",
+          "asset": "frontier_supercomputer_oak_ridge_cabinets",
+          "ratio": "4:3",
+          "caption": "NASA superkompiuterio Columbia spintos: tokios mašinos naudojamos modeliui mokyti."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kai modelis apmokytas, prasideda kitas darbas. Atsakymą į tavo užklausą parengia skaičiavimas, kurio pavadinimas yra [[išvedimas]]. Mokymas nepradedamas iš naujo su kiekvienu klausimu, o išvedimas kartojamas su kiekviena užklausa. Kuris iš jų laikui bėgant sveria daugiau? Tai priklauso nuo to, kaip sukurta paslauga ir kiek žmonių ja naudojasi. Labai populiari paslauga nuolat laiko savo kompiuterius užimtus atsakymais, net tarp dviejų didelių mokymo etapų."
+        }
+      ]
+    },
+    {
+      "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie_p3",
+      "title": "Užklausa be fiksuotos kainos",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kiek elektros sunaudoja viena tekstinė užklausa? Paskelbti įverčiai pateikia skirtingus atsakymus. „Google“, matuodama veikiančią savo paslaugą, savo tekstinės užklausos medianą nustato ties **0,24 Wh**. Energijos kiekį matuojantis vienetas yra [[vatvalandė]] (Wh). Kitas tyrimas gauna **0,31 Wh** medianą, o vidurinė jo standartinių užklausų pusė patenka į intervalą nuo **0,16 iki 0,60 Wh**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Šie skaičiai vienas kitam neprieštarauja: jie aprašo skirtingas sistemas ir metodus, o ne du priešingus tos pačios užduoties matavimus. Be to, juose neįskaičiuoti daug sunkesni darbai. Jei paprašai DI prieš atsakant samprotauti keliais žingsniais, jo kompiuteriai užimti daug ilgiau. Taigi energija vienai užklausai priklauso nuo sistemos, matavimo būdo ir prašomo darbo."
+        },
+        {
+          "type": "funFact",
+          "text": "Tame pačiame tyrime ilgo samprotavimo užklausa, kai modelis prieš darydamas išvadą išdėsto savo žingsnius, pasiekia 3,91 Wh medianą, daugiau nei dešimt kartų daugiau nei standartinė užklausa."
+        }
+      ]
+    },
+    {
+      "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie_p4",
+      "title": "Elektros tinklai patiria spaudimą",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Elektrą iš elektrinių į namus ir įmones perduoda [[elektros tinklas]], linijų sistema. Dideli DI įrenginiai jungiasi prie to paties tinklo. Kad būtų aiškus mastas, TEA lygina metinį DI skirto duomenų centro (pastato, pastatyto daugiausia šioms paslaugoms teikti) suvartojimą su maždaug **100 000 namų ūkių** suvartojimu."
+        },
+        {
+          "type": "image",
+          "asset": "high_voltage_power_lines_data_center_virginia",
+          "ratio": "4:3",
+          "caption": "Labai aukštos įtampos (750 kV) linijos atramos: duomenų centrai jungiasi prie to paties tinklo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Be to, šie įrenginiai linkę telktis tose pačiose vietose. Kai keli dideli objektai toje pačioje zonoje reikalauja elektros, jie dalijasi vietiniu tinklu, ir esamas linijas gali tekti sustiprinti. Regionas, turintis atsarginių pajėgumų, naujus objektus priima lengviau nei regionas, jau artėjantis prie savo ribų. Taigi vieta, kur statoma DI infrastruktūra, kaimynams nėra nesvarbi."
+        },
+        {
+          "type": "takeaway",
+          "text": "DI elektra eikvojama keliais lygmenimis, nuo aušinamų serverių iki vietinio tinklo, o užklausos kaina priklauso nuo sistemos, matavimo ir prašomo darbo."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "International Energy Agency (IEA), Key Questions on Energy and AI, 2026, p. 9 et 17."
+    },
+    {
+      "text": "International Energy Agency (IEA), Energy and AI, 2025, p. 13, 38 et 52."
+    },
+    {
+      "text": "Shehabi et al., 2024 United States Data Center Energy Usage Report, Lawrence Berkeley National Laboratory, 2024, p. 22-23."
+    },
+    {
+      "text": "Oviedo et al., Joule, 2026, p. 1.",
+      "url": "https://doi.org/10.1016/j.joule.2026.102430"
+    },
+    {
+      "text": "Elsworth et al., Measuring the Environmental Impact of Delivering AI at Google Scale, Google, 2025, p. 7."
+    }
+  ]
+}

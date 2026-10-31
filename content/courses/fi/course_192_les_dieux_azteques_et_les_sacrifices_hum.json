@@ -1,14 +1,14 @@
 {
   "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum",
   "title": "Miksi atsteekit uhrasivat ihmisiä?",
-  "subtitle": "Verta aurinkoon",
+  "subtitle": "Verta auringolle",
   "subject": "mythologie",
   "subcategory": "Muut mytologiat",
-  "description": "Atsteekkien keskuudessa aurinko nousee vain, jos jumalat saavat verta. Ankara, mutta johdonmukainen kosmologia heidän imperiuminsa ytimessä.",
+  "description": "Atsteekkien uskossa aurinko nousee vain, jos jumalat saavat verta. Ankara mutta johdonmukainen kosmologia, joka oli heidän valtakuntansa ytimessä.",
   "hero": {
     "image": "les_dieux_azteques_et_les_sacrifices_humains",
     "ratio": "16:9",
-    "hook": "Ilman verta aurinko pysähtyisi: sellainen on atsteekkien kosminen velka."
+    "hook": "Ilman verta aurinko pysähtyisi: tämä on atsteekkien kosminen velka."
   },
   "sections": [
     {
@@ -18,47 +18,47 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Atsteekit** eli Meksiko uskovat, että maailmankaikkeus on hauras. Jumalat tarvitsevat verta, jotta aurinko jatkaa matkaansa. Ilman tarjouksia kaaos palaisi."
+          "text": "**Atsteekit** eli mexicat uskovat, että maailmankaikkeus on hauras. Jumalat tarvitsevat verta, jotta aurinko jatkaisi kulkuaan. Ilman uhrilahjoja kaaos palaisi."
         },
         {
           "type": "paragraph",
-          "text": "Se, mikä kauhistutti espanjalaisia, perustuu selkeään ajatukseen: jumalien ja ihmisten elämät liittyvät toisiinsa. Näin tämä kosmologia toimii."
+          "text": "Se, mikä kauhistutti espanjalaisia, perustuu selkeään ajatukseen: jumalten ja ihmisten elämä on sidottu toisiinsa. Näin tämä kosmologia toimii."
         }
       ]
     },
     {
       "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum_p1",
-      "title": "Viisi aurinkoa: maailma on kuollut jo neljä kertaa",
+      "title": "Viisi aurinkoa: jo neljästi kuollut maailma",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "[[Viisi aurinkoa]] myytin mukaan neljä aikakautta on jo hävinnyt katastrofeissa. Elämme viidettä aurinkoa, [[Nahui Ollin]] (\"4-liike\"), jonka on luvattu päättyvän maanjäristyksiin."
+          "text": "[[Viisi aurinkoa]] -myytin mukaan neljä aikakautta on jo tuhoutunut katastrofeissa. Nyt eletään viidennen auringon aikaa: se on [[Nahui Ollin]] (”4-liike”), ja sen on määrä päättyä maanjäristyksiin."
         },
         {
           "type": "image",
           "asset": "aztec_five_suns_teotihuacan_pyramid_sun_stone",
           "ratio": "4:3",
-          "caption": "Auringon kivi: Atsteekkien aika muuttuu peräkkäisiksi aikakausiksi."
+          "caption": "Aurinkokivi: atsteekkien aika kiertää peräkkäisinä aikakausina."
         },
         {
           "type": "paragraph",
-          "text": "**Teotihuacán**:ssä, pyhässä kaupungissa keskitasangolla, jumalat heittäytyvät tuleen muuttuakseen auringoksi ja kuuksi. Mutta aurinko pysyy paikallaan. Muut jumalat uhraavat sitten omaa vertaan sen käynnistämiseksi. Miehet perivät tämän velan."
+          "text": "**Teotihuacánissa**, keskitasangon pyhässä kaupungissa, jumalat heittäytyvät tuleen tullakseen auringoksi ja kuuksi. Aurinko ei kuitenkaan liiku. Silloin muut jumalat uhraavat omaa vertaan saadakseen sen liikkeelle. Ihmiset perivät tämän velan."
         },
         {
           "type": "funFact",
-          "text": "Atsteekeille uhraus ei ole turhaa julmuutta: se on jumalallisen velan takaisinmaksua, [[Viiden auringon kosmologia ja kosminen velka]]."
+          "text": "Atsteekeille uhraus ei ole turhaa julmuutta vaan jumalallisen velan takaisinmaksua, kuten opettaa [[Viiden auringon kosmologia ja kosminen velka]]."
         }
       ]
     },
     {
       "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum_p2",
-      "title": "Kaksinaisuuden panteoni",
+      "title": "Kaksinaisuuksien jumalisto",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Keskusjumala on [[Huitzilopochtli]], sodan ja keskipäivän auringon jumala. Joka ilta hän taistelee pimeyttä vastaan syntyäkseen uudelleen aamulla. Hänen rinnallaan [[Tlaloc]] tuottaa sadetta, siis satoa tai nälänhätää."
+          "text": "Keskeisin jumala on [[Huitzilopochtli]], sodan ja keskipäivän auringon jumala. Joka yö hän taistelee pimeyttä vastaan ja syntyy aamulla uudelleen. Hänen rinnallaan [[Tlaloc]] antaa sateen, siis sadon, tai nälänhädän."
         },
         {
           "type": "image",
@@ -68,11 +68,11 @@
         },
         {
           "type": "paragraph",
-          "text": "[[Quetzalcoatl]], höyhenkäärme, ilmentää tietoa ja sivilisaatiota. Hänen kilpailijansa [[Tezcatlipoca]], Smoking Mirror, hallitsee yötä, kohtaloa ja taikuutta. Itse maapallolla on kauheat kasvot: [[Coatlicue]], ahmiva äitijumalattar."
+          "text": "[[Quetzalcoatl]], höyhenkäärme, ilmentää tietoa ja sivilisaatiota. Hänen kilpailijansa [[Tezcatlipoca]], savuava peili, hallitsee yötä, kohtaloa ja taikuutta. Maallakin on kauhistuttavat kasvot: [[Coatlicue]], kaiken nielevä äitijumalatar."
         },
         {
           "type": "funFact",
-          "text": "Jumalille uhrattua kallisarvoista verta kutsutaan [[chalchihuatl]], \"arvokas vesi\". Poistettua sydäntä pidetään auringon kipinänä, joka palasi taivaalle."
+          "text": "Jumalille uhrattu kallisarvoinen veri on [[chalchihuatl]], ”kallisarvoinen vesi”. Irrotettua sydäntä pidetään auringon kipinänä, joka palautetaan taivaalle."
         }
       ]
     },
@@ -83,34 +83,34 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Uhrien hankkimiseksi atsteekit järjestävät [[Xochiyaoyotl]], \"kukkasodat\": rituaalitaisteluja, joiden tavoitteena ei ole tappaa, vaan vangita elävät soturit, jotka ovat tarjouksen arvoisia."
+          "text": "Uhreja saadakseen atsteekit järjestävät rituaalisia taisteluja. Ne ovat [[Xochiyaoyotl]], ”kukkasodat”, joiden tarkoitus ei ole tappaa vaan vangita elävinä sotureita, jotka kelpaavat uhreiksi."
         },
         {
           "type": "image",
           "asset": "aztec_sacrifice_pyramid_templo_mayor_codex",
           "ratio": "4:3",
-          "caption": "Uhri temppelin huipulla: sydän esitettiin auringolle."
+          "caption": "Uhri temppelin huipulla: sydän ojennetaan auringolle."
         },
         {
           "type": "paragraph",
-          "text": "**Templon pormestari**:n huipulla Tenochtitlánissa, järvenrantapääkaupungissa, pappi poimii veitsellä sydämen terävästä vulkaanisesta kivestä **Obsidiaani**. Ele on julkinen, juhlallinen, sitä pidetään palveluksena auringolle."
+          "text": "**Templo Mayorin** huipulla Tenochtitlánissa, järvelle rakennetussa pääkaupungissa, pappi irrottaa sydämen **obsidiaaniveitsellä**: obsidiaani on terävää vulkaanista kiveä. Ele on julkinen ja juhlallinen, ja sitä pidetään palveluksena auringolle."
         },
         {
           "type": "timeline",
           "events": [
             {
               "date": "Myytti",
-              "title": "Jumalien uhri",
-              "detail": "Aurinko vastaanottaa jumalallista verta kulkeakseen eteenpäin."
+              "title": "Jumalten uhri",
+              "detail": "Aurinko saa jumalten verta, jotta se lähtisi liikkeelle."
             },
             {
               "date": "Imperiumi",
               "title": "Kukkasodat",
-              "detail": "Sotureiden vangitseminen uhrauksia varten."
+              "detail": "Sotureiden vangitseminen uhreiksi."
             },
             {
               "date": "1519",
-              "title": "Espanjalainen shokki",
+              "title": "Espanjalaisten isku",
               "detail": "Cortés saapuu; järjestelmä romahtaa."
             }
           ]
@@ -119,20 +119,20 @@
     },
     {
       "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum_p4",
-      "title": "Maailmanloppu, pysyvät jäljet",
+      "title": "Erään maailman loppu, pysyvät jäljet",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Espanjalaiset kronikot paisuttavat joskus lukuja oikeuttaakseen valloituksen. Mutta uhrausjärjestelmä on hyvin todellinen. **1519**:ssa **Hernán Cortés**:n saapuminen nopeuttaa tämän rituaaliuniversumin loppua."
+          "text": "Espanjalaiset kronikat liioittelevat joskus lukuja oikeuttaakseen valloituksen. Uhrijärjestelmä on silti täysin todellinen. Vuonna **1519** **Hernán Cortésin** saapuminen jouduttaa tämän rituaalisen maailman loppua."
         },
         {
           "type": "paragraph",
-          "text": "Atsteekkien hahmot selviävät kuitenkin synkretismistä: Guadalupen neitsyt ilmestyy sivustolle, joka on kerran liitetty äitijumalattareen. Näiden uhrausten ymmärtäminen tarkoittaa kulttuurin ymmärtämistä, joka asettaa kosmoksen selviytymisen yksilön edelle."
+          "text": "Atsteekkien hahmot elävät kuitenkin edelleen synkretismissä: Guadalupen neitsyt ilmestyy paikassa, joka liittyi aikoinaan erääseen äitijumalattareen. Näiden uhrien ymmärtäminen on sellaisen kulttuurin ymmärtämistä, joka asettaa kosmoksen säilymisen yksilön edelle."
         },
         {
           "type": "takeaway",
-          "text": "Atsteekkien keskuudessa ihmisveri ravisi aurinkoa. Jumalat ovat jo maksaneet hengellään: miehet maksavat tämän velan takaisin uhrauksin, erityisesti **Kukkasotien** kautta."
+          "text": "Atsteekeilla ihmisveri ruokkii aurinkoa. Jumalat ovat jo maksaneet hengellään: ihmiset maksavat velan takaisin uhrauksilla, erityisesti **kukkasotien** avulla."
         }
       ]
     }

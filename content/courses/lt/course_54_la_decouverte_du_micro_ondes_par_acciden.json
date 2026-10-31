@@ -1,0 +1,102 @@
+{
+  "id": "course_54_la_decouverte_du_micro_ondes_par_acciden",
+  "title": "Mikrobangų krosnelės atradimas",
+  "subtitle": "Atsitiktinai",
+  "subject": "sciences",
+  "subcategory": "Découvertes qui ont changé le monde",
+  "description": "1945 m. inžinierius pastebi, kad prie radaro ištirpo jo šokoladinis batonėlis. Iš šio pastebėjimo gims mikrobangų krosnelė.",
+  "hero": {
+    "image": "la_decouverte_du_micro_ondes",
+    "ratio": "16:9",
+    "hook": "Ištirpęs šokoladinis batonėlis… ir šiuolaikinė virtuvė pasikeičia."
+  },
+  "sections": [
+    {
+      "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_intro",
+      "title": "Įvadas",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**1945** m. JAV inžinierius **Percy Spenceris** dirba su radarais. Vieną dieną jis pastebi, kad kišenėje ištirpo šokoladinis batonėlis. Ne nuo kūno šilumos, o nuo radaro bangų."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jis išbando su kukurūzais: spragėsiai sprogsta. Gimsta idėja apie krosnį, kuri šildo kitaip."
+        }
+      ]
+    },
+    {
+      "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p1",
+      "title": "Nuo radaro iki virtuvės",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "percy_spencer_microwave_discovery_radar",
+          "ratio": "4:3",
+          "caption": "Antrojo pasaulinio karo radarai jau naudojo mikrobangas."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Mikrobangos** yra elektromagnetinės bangos, kaip šviesa ar radijo bangos, tik „energingesnės“ už daugelį įprastų radijo bangų. Per karą jos daugiausia naudojamos radaruose lėktuvams ir laivams aptikti."
+        },
+        {
+          "type": "paragraph",
+          "text": "Spenceris supranta, kad jos taip pat gali judinti vandens ir riebalų molekules maiste… ir taip jį šildyti."
+        }
+      ]
+    },
+    {
+      "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p2",
+      "title": "Pirmoji krosnelė milžiniška",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "first_microwave_oven_radarange_1947",
+          "ratio": "4:3",
+          "caption": "Pirmoji parduodama mikrobangų krosnelė buvo spintos dydžio."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pirmasis parduodamas modelis, **Radarange**, pasirodo apie **1947** m. Jis didžiulis, brangus ir skirtas daugiausia restoranams ar laivams. Prireiks dešimtmečių, kol jis taps mažas ir įperkamas namų ūkiams."
+        },
+        {
+          "type": "funFact",
+          "text": "Iš pradžių kai kas bijojo, kad krosnelė „padaro maistą radioaktyvų“. Netiesa: mikrobangos šildo, bet radioaktyvumo nesukelia."
+        }
+      ]
+    },
+    {
+      "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p3",
+      "title": "Kaip ji iš tikrųjų šildo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mikrobangos daugiausia virpina vandens molekules (ir šiek tiek riebalus bei cukrus). Šis judėjimas sukuria šilumą **viduje** maisto, o ne tik paviršiuje, kaip keptuvėje."
+        },
+        {
+          "type": "paragraph",
+          "text": "Todėl storas patiekalas gali būti karštas iš išorės, bet drungnas viduryje: bangos neprasiskverbia be galo giliai."
+        }
+      ]
+    },
+    {
+      "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p4",
+      "title": "Kasdienis daiktas",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nuo XX a. 8-9-ojo dešimtmečio mikrobangų krosnelė atsiranda milijonuose virtuvių. Ji keičia įpročius: greitas pašildymas, paruošti patiekalai, spartesnis gyvenimas."
+        },
+        {
+          "type": "takeaway",
+          "text": "Mikrobangų krosnelė gimsta iš atsitiktinumo, kurį prie radaro pastebi Percy Spenceris. Bangos daugiausia judina maisto vandenį ir šildo jį iš vidaus."
+        }
+      ]
+    }
+  ]
+}

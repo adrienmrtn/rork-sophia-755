@@ -1,0 +1,126 @@
+{
+  "id": "course_144_la_nouvelle_vague_francaise",
+  "title": "Prancūzijos Naujoji banga",
+  "subtitle": "1959-1968",
+  "subject": "art",
+  "subcategory": "Cinéma, photo & architecture",
+  "description": "Jauni žurnalo *Cahiers du cinéma* kritikai patys stoja už kameros. **1959**-**1968** m. Naujoji banga išlaisvina kiną iš studijos ir sukuria modernų autorinį kiną.",
+  "hero": {
+    "image": "la_nouvelle_vague_francaise",
+    "ratio": "16:9",
+    "hook": "Kino kritikai pagrobia kameras ir iš naujo išranda septintąjį meną."
+  },
+  "sections": [
+    {
+      "id": "course_144_la_nouvelle_vague_francaise_intro",
+      "title": "Įvadas",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Naujoji banga** (1959-1968) nėra vien stilius. Tai valdžios perėmimas. Jauniems prancūzų kino mylėtojams studijų kinas atrodo per daug sustingęs, per daug nugludintas, per daug iš anksto surašytas. Jie nori filmuoti taip, kaip rašomas romanas: laisvai, pirmuoju asmeniu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Iš kritikų tapę režisieriais, jie paverčia režisierių tikruoju filmo autoriumi. Ir pakeičia viso pasaulio kiną."
+        }
+      ]
+    },
+    {
+      "id": "course_144_la_nouvelle_vague_francaise_p1",
+      "title": "Pirmiausia idėjų revoliucija",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Prieš filmavimo aikšteles buvo žurnalas: **Cahiers du cinéma**, kurį **1951** m. įkūrė [[André Bazinas]]. Aplink jį telkiasi jauni kritikai: **Jeanas-Lucas Godard'as**, **François Truffaut**, **Claude'as Chabrolis**, **Jacques'as Rivette'as**, **Éricas Rohmeris**. Jų pagrindinė idėja vadinama taip: [[Autorių politika]]."
+        },
+        {
+          "type": "image",
+          "asset": "cahiers_du_cinema_magazine_1950s",
+          "ratio": "4:3",
+          "caption": "Cahiers du cinéma: mokykla, kurioje Naujoji banga mokosi mąstyti apie filmą."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jiems tikrasis kūrėjas yra ne scenaristas, o tas, kuris režisuoja. Kadravimas, ritmas, montažo kirpimai: štai autoriaus parašas, kaip rašytojo stilius."
+        }
+      ]
+    },
+    {
+      "id": "course_144_la_nouvelle_vague_francaise_p2",
+      "title": "1959: į sceną žengia Truffaut ir Godard'as",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**1959** m. **François Truffaut** filmas *Keturi šimtai smūgių* triumfuoja Kanuose. Filmas seka **Antoine'ą Doinelį**, maištaujantį paauglį, kurį vaidina [[Jeanas-Pierre'as Léaud]]. Kamera seka gyvenimą, o ne suvaržytą scenarijų. Paskutinis žvilgsnis į mus pralaužia barjerą, vadinamą [[ketvirtoji siena]]: herojus žiūri į žiūrovus, o laimingos pabaigos nėra."
+        },
+        {
+          "type": "image",
+          "asset": "truffaut_400_coups_antoine_doinel_film",
+          "ratio": "4:3",
+          "caption": "Antoine'as Doinelis prie jūros: jaunystė, kuri atmeta iš anksto nubrėžtą likimą."
+        },
+        {
+          "type": "funFact",
+          "text": "Kitais metais Godard'o filmas *Iki paskutinio atodūsio*, kuriame vaidina [[Jeanas-Paulis Belmondo]], šokiruoja staigiais kirpimais. Godard'as kerpa gestų viduryje, tarsi rašytų žirklėmis."
+        },
+        {
+          "type": "paragraph",
+          "text": "Šie du filmai įrodo, kad pasakoti galima kitaip: greičiau, laisviau, arčiau gatvės."
+        }
+      ]
+    },
+    {
+      "id": "course_144_la_nouvelle_vague_francaise_p3",
+      "title": "Iš studijos į Paryžiaus gatves",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Lūžis yra ir techninis. Kameros [[Éclair Caméflex]] ir jautresnės juostos atveria naują galimybę: [[Natūrali filmavimo aplinka ir lengva kamera]]. Sunkių studijų nebereikia: filmuojama kavinėse, butuose, Paryžiaus gatvėse, dažnai natūralioje šviesoje."
+        },
+        {
+          "type": "paragraph",
+          "text": "Aktoriai improvizuoja. Kalba tampa kasdieniška, kartais mikčiojanti. Kinas kvėpuoja kaip gyvenimas. Ši laisvė vėliau įkvepia Brazilijos judėjimą, vadinamą [[Cinema Novo]], o paskui ir itin griežtas taisykles Danijoje, kurias nustato [[Dogma 95]]: tai tolimi tos pačios autentiškumo troškulio paveldėtojai."
+        }
+      ]
+    },
+    {
+      "id": "course_144_la_nouvelle_vague_francaise_p4",
+      "title": "Pasaulinis palikimas",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "XX a. 8-ajame dešimtmetyje (**1970**-aisiais) ja įkvepiamas **Naujasis Holivudas**: **Martinas Scorsese**, **Francis Fordas Coppola**, **Stevenas Spielbergas** sujungia amerikietišką efektyvumą ir prancūzišką laisvę. Naujoji banga įtvirtino ilgaamžę idėją: filmas gali skleisti vieno žmogaus balsą."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1951",
+              "title": "Cahiers du cinéma",
+              "detail": "Žurnalas tampa idėjų laboratorija."
+            },
+            {
+              "date": "1959",
+              "title": "Keturi šimtai smūgių",
+              "detail": "Truffaut įtvirtina autorinį kiną Kanuose."
+            },
+            {
+              "date": "1960",
+              "title": "Iki paskutinio atodūsio",
+              "detail": "Godard'as sulaužo klasikinį montažą."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Naujoji banga išvedė kiną iš studijos į gatvę. Ji pavertė režisierių autoriumi, ir ši idėja iki šiol formuoja nepriklausomą kiną visame pasaulyje."
+        }
+      ]
+    }
+  ]
+}
