@@ -1,113 +1,113 @@
 {
   "id": "course_252_la_vie_au_moyen_age_etait_elle_vraiment",
-  "title": "La vie au Moyen Âge était-elle vraiment si misérable ?",
-  "subtitle": "Ni courte, ni sale",
+  "title": "Ar gyvenimas viduramžiais tikrai buvo toks vargingas?",
+  "subtitle": "Nei trumpas, nei purvinas",
   "subject": "histoire",
   "subcategory": "Antiquité & Moyen Âge",
-  "description": "On imagine des paysans morts à 30 ans, crasseux et nourris de pain sec. Les archives, les comptes de maison et les squelettes dressent un tout autre portrait.",
+  "description": "Įsivaizduojama, kad valstiečiai mirdavo sulaukę 30 metų, buvo purvini ir valgė sausą duoną. Archyvai, namų ūkio sąskaitos ir griaučiai piešia visai kitą vaizdą.",
   "author": "benjamin-campbell",
   "hero": {
     "image": "tres_riches_heures_berry_june_haymaking",
     "ratio": "4:3",
-    "hook": "Vies courtes, corps sales, ventres vides : les archives et les squelettes racontent une autre histoire."
+    "hook": "Trumpas gyvenimas, nešvarūs kūnai, tušti pilvai: archyvai ir griaučiai pasakoja kitą istoriją."
   },
   "sections": [
     {
       "id": "course_252_la_vie_au_moyen_age_etait_elle_vraiment_intro",
-      "title": "Introduction",
+      "title": "Įžanga",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le Moyen Âge a mauvaise réputation : on l'imagine peuplé de gens qui vivent peu, mal et dans la crasse. Un chiffre semble le confirmer, une espérance de vie d'environ **30 ans**. Il est trompeur : cette moyenne est écrasée par la [[kūdikių mirtingumas]], tant d'enfants meurent en bas âge. Cela ne signifie pas que la plupart des gens meurent avant 30 ans."
+          "text": "Viduramžiai turi prastą reputaciją: įsivaizduojama, kad tada žmonės gyveno trumpai, blogai ir purve. Atrodo, kad tai patvirtina ir skaičius: vidutinė gyvenimo trukmė apie **30 metų**. Jis klaidinantis: šį vidurkį smarkiai sumažina [[kūdikių mirtingumas]], nes labai daug vaikų miršta dar maži. Tai nereiškia, kad dauguma žmonių mirdavo nesulaukę 30 metų."
         },
         {
           "type": "paragraph",
-          "text": "Pour comprendre la vie il y a plus de **1 000 ans**, les historiens ne se contentent plus de ces statistiques. Ils lisent les actes de justice et les comptes de maison, fouillent les habitats et étudient les squelettes. Ces sources disent comment les gens travaillaient, mangeaient et mouraient. Que révèlent-elles sur le quotidien d'un paysan ou d'un citadin médiéval ?"
+          "text": "Norėdami suprasti gyvenimą prieš daugiau nei **1000 metų**, istorikai nebesitenkina šia statistika. Jie skaito teismo dokumentus ir namų ūkio sąskaitas, kasinėja gyvenvietes ir tiria griaučius. Šie šaltiniai pasakoja, kaip žmonės dirbo, valgė ir mirė. Ką jie atskleidžia apie viduramžių valstiečio ar miestiečio kasdienybę?"
         }
       ]
     },
     {
       "id": "course_252_la_vie_au_moyen_age_etait_elle_vraiment_p1",
-      "title": "Travailler au rythme des saisons",
+      "title": "Darbas pagal metų laikus",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Les paysans travaillent dur, mais ils ne connaissent pas la semaine du lundi au vendredi. Le travail des champs suit les **saisons** et la lumière du jour. Semailles et moissons imposent des journées longues et épuisantes. L'hiver, en revanche, est beaucoup plus calme, et bien des tâches attendent le retour des beaux jours."
+          "text": "Valstiečiai sunkiai dirba, bet darbo savaitės nuo pirmadienio iki penktadienio jie nežino. Lauko darbai priklauso nuo **metų laikų** ir dienos šviesos. Sėja ir pjūtis reiškia ilgas, varginančias dienas. O žiema daug ramesnė, ir nemažai darbų laukia šiltesnių dienų."
         },
         {
           "type": "image",
           "asset": "luttrell_psalter_ploughing_scene_14th_century",
           "ratio": "3:2",
-          "caption": "Une réplique du Psautier de Luttrell (Angleterre, vers 1325-1340) : le texte des psaumes, les marges peuplées de petits personnages."
+          "caption": "Luttrello psalteriaus kopija (Anglija, apie 1325-1340 m.): psalmių tekstas, o paraštėse daugybė mažų figūrėlių."
         },
         {
           "type": "paragraph",
-          "text": "Le [[liturginis kalendorius]], celui des fêtes de l'Église, façonne aussi l'année. Les dimanches et les jours de fête interrompent souvent le labeur ordinaire : certains travaux sont alors suspendus ou interdits. Ces pauses ne font pas des paysans des privilégiés. L'agriculture reste un métier éreintant, et une mauvaise récolte peut mettre toute une maisonnée en danger. Mais l'image de gens qui triment du lever au coucher du soleil toute l'année manque l'essentiel : le travail médiéval a un rythme, et ce rythme change au fil des mois."
+          "text": "Metus taip pat formuoja [[liturginis kalendorius]], Bažnyčios švenčių kalendorius. Sekmadieniai ir šventės dažnai pertraukia įprastą darbą: tada kai kurie darbai sustabdomi arba draudžiami. Šios pertraukos nepaverčia valstiečių privilegijuotaisiais. Žemdirbystė lieka alinantis darbas, o prastas derlius gali pražudyti visą namų ūkį. Tačiau vaizdas, kuriame žmonės visus metus pluša nuo saulėtekio iki saulėlydžio, praleidžia esmę: viduramžių darbas turi ritmą, ir tas ritmas keičiasi kas mėnesį."
         }
       ]
     },
     {
       "id": "course_252_la_vie_au_moyen_age_etait_elle_vraiment_p2",
-      "title": "Du pain, mais pas seulement",
+      "title": "Duona, bet ne tik",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Pour la plupart des paysans, le repas ordinaire tourne autour du pain et du [[tiršta sriuba]], une bouillie épaisse de céréales, souvent enrichie de fèves, de légumes du jardin et de restes de viande. Le foyer dispose aussi de fromage, d'œufs et de laitages, autant de sources précieuses de protéines."
+          "text": "Daugumos valstiečių kasdienio valgio pagrindas yra duona ir [[tiršta sriuba]]: grūdų košė, dažnai praturtinta pupomis, daržovėmis iš daržo ir mėsos likučiais. Namuose taip pat būna sūrio, kiaušinių ir pieno produktų, vertingų baltymų šaltinių."
         },
         {
           "type": "paragraph",
-          "text": "La viande est bien présente, mais sa fréquence dépend de la fortune, de la région et de la saison. Le **poisson** nourrit de nombreuses communautés, et les légumes conservés apportent de la variété quand les produits frais manquent. La bière et d'autres boissons fermentées sont courantes. L'image de paysans qui survivent avec du pain et de la bière est donc dépassée : ce qu'ils mangent dépend de ce qu'ils peuvent cultiver, conserver ou acheter, une nourriture pratique et saisonnière plutôt que monotone."
+          "text": "Mėsos tikrai valgoma, bet kaip dažnai, priklauso nuo turto, regiono ir metų laiko. **Žuvis** maitina daugelį bendruomenių, o konservuotos daržovės suteikia įvairovės, kai trūksta šviežių produktų. Alus ir kiti fermentuoti gėrimai įprasti. Taigi vaizdas, kuriame valstiečiai išgyvena vien duona ir alumi, pasenęs: jų maistas priklauso nuo to, ką jie gali užsiauginti, išsaugoti ar nusipirkti, ir yra praktiškas bei sezoninis, o ne vienodas."
         }
       ]
     },
     {
       "id": "course_252_la_vie_au_moyen_age_etait_elle_vraiment_p3",
-      "title": "Se laver sans salle de bains",
+      "title": "Prausimasis be vonios kambario",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Autre cliché moderne : des gens qui ne se lavent presque jamais. Sans canalisations ni salle de bains, les hommes et les femmes du Moyen Âge tiennent pourtant à la propreté. Le **savon** sert à laver le corps comme le linge, et la plupart se lavent chez eux avec l'eau du puits ou d'une autre source."
+          "text": "Dar vienas šiuolaikinis stereotipas: žmonės beveik niekada nesiprausdavo. Nors neturi nei vandentiekio, nei vonios kambario, viduramžių vyrai ir moterys vis dėlto rūpinasi švara. **Muilu** prausiamas kūnas ir skalbiami drabužiai, o dauguma prausiasi namie vandeniu iš šulinio ar kito šaltinio."
         },
         {
           "type": "image",
           "asset": "medieval_public_bathhouse_illumination_15th_century",
           "ratio": "1:1",
-          "caption": "Un bain public dans un manuscrit de Valère Maxime, vers 1470."
+          "caption": "Viešoji pirtis Valerijaus Maksimo rankraštyje, apie 1470 m."
         },
         {
           "type": "paragraph",
-          "text": "Dans certaines villes, les [[viešosios pirtys]] sont même des lieux ordinaires. L'[[sanitarija]] collectif, lui, est bien pire qu'aujourd'hui : les villes surpeuplées peinent à évacuer leurs déchets, et l'eau est souvent contaminée. Mais hygiène personnelle et salubrité publique sont deux choses différentes. Les gens du Moyen Âge vivent avec la saleté ; ils n'acceptent pas pour autant d'être sales."
+          "text": "Kai kuriuose miestuose [[viešosios pirtys]] netgi yra įprastos vietos. O bendroji [[sanitarija]] gerokai prastesnė nei šiandien: perpildyti miestai sunkiai atsikrato atliekų, o vanduo dažnai užterštas. Tačiau asmens higiena ir viešoji švara yra du skirtingi dalykai. Viduramžių žmonės gyvena tarp nešvarumų, bet tai nereiškia, kad jie sutinka būti nešvarūs."
         },
         {
           "type": "funFact",
-          "text": "Dans certaines villes médiévales, les bains publics sont si nombreux que les autorités les réglementent et prélèvent une taxe sur eux."
+          "text": "Kai kuriuose viduramžių miestuose viešųjų pirčių tiek daug, kad valdžia jas reglamentuoja ir apmokestina."
         }
       ]
     },
     {
       "id": "course_252_la_vie_au_moyen_age_etait_elle_vraiment_p4",
-      "title": "Mille ans, mille vies",
+      "title": "Tūkstantis metų, tūkstantis gyvenimų",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Il n'existe pas une seule vie médiévale. L'aristocrate dans son château de pierre, le paysan sur sa terre et le marchand d'une ville animée ne partagent ni la même table, ni le même travail, ni la même santé. Le lieu et le **rang social** décident de presque tout, de la nourriture à la santé."
+          "text": "Nėra vieno viduramžių gyvenimo. Aristokratas savo akmeninėje pilyje, valstietis savo žemėje ir prekybininkas šurmuliuojančiame mieste nesidalija nei tuo pačiu stalu, nei tuo pačiu darbu, nei ta pačia sveikata. Vieta ir **socialinė padėtis** lemia beveik viską, nuo maisto iki sveikatos."
         },
         {
           "type": "paragraph",
-          "text": "L'époque compte autant. La vie au [[ankstyvieji viduramžiai]], les premiers siècles après la chute de Rome, ne ressemble pas à celle du **XIVe siècle**, et les conditions en Angleterre diffèrent de celles du continent. La période s'étend sur environ **1 000 ans** et traverse d'immenses changements techniques, sociaux et politiques."
+          "text": "Laikotarpis taip pat svarbus. Kai vyko [[ankstyvieji viduramžiai]], pirmieji amžiai po Romos žlugimo, gyvenimas buvo kitoks nei **XIV a.**, o sąlygos Anglijoje skyrėsi nuo sąlygų žemyne. Šis laikotarpis trunka apie **1000 metų** ir apima milžiniškus technikos, socialinius ir politinius pokyčius."
         },
         {
           "type": "paragraph",
-          "text": "Le Moyen Âge n'est donc pas un âge de faim, de crasse et de misère permanentes. C'est une longue période aux existences très diverses. Certains vivent assez confortablement dans leur ferme ou en ville ; d'autres connaissent la pauvreté, la maladie et une mort précoce. Où et quand l'on vit compte souvent plus que l'étiquette « médiéval »."
+          "text": "Taigi viduramžiai nebuvo nuolatinio bado, purvo ir skurdo amžius. Tai ilgas laikotarpis su labai įvairiais gyvenimais. Kai kurie gana patogiai gyvena savo ūkyje ar mieste; kiti patiria skurdą, ligas ir ankstyvą mirtį. Kur ir kada žmogus gyvena, dažnai lemia daugiau nei etiketė „viduramžių“."
         },
         {
           "type": "takeaway",
-          "text": "Espérance de vie de 30 ans, crasse et pain sec sont des clichés : le quotidien médiéval dépend du lieu, du rang et du siècle bien plus que du mot « Moyen Âge »."
+          "text": "30 metų gyvenimo trukmė, purvas ir sausa duona yra stereotipai: viduramžių kasdienybę kur kas labiau nei žodis „viduramžiai“ lemia vieta, padėtis ir amžius."
         }
       ]
     }

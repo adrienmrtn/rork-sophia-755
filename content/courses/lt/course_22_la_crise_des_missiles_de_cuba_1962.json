@@ -1,133 +1,133 @@
 {
   "id": "course_22_la_crise_des_missiles_de_cuba_1962",
-  "title": "La crise des missiles de Cuba",
+  "title": "Kubos raketų krizė",
   "subtitle": "1962",
   "subject": "histoire",
   "subcategory": "Guerre froide & monde contemporain",
-  "description": "En octobre **1962**, le monde passe **13 jours** à deux doigts d'une guerre nucléaire. Missiles à Cuba, flottes en alerte : la Guerre froide atteint son pic.",
+  "description": "**1962** m. spalį pasaulis **13 dienų** praleidžia per plauką nuo branduolinio karo. Raketos Kuboje, laivynai parengties būsenoje: Šaltasis karas pasiekia viršūnę.",
   "hero": {
     "image": "la_crise_des_missiles_de_cuba_1962",
     "ratio": "16:9",
-    "hook": "Treize jours où un seul « oui » aurait pu déclencher l'apocalypse nucléaire."
+    "hook": "Trylika dienų, kai vienas vienintelis „taip“ galėjo sukelti branduolinę apokalipsę."
   },
   "sections": [
     {
       "id": "course_22_la_crise_des_missiles_de_cuba_1962_intro",
-      "title": "Introduction",
+      "title": "Įvadas",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En octobre **1962**, l'humanité frôle le pire. Pendant **13 jours**, les États-Unis et l'URSS s'affrontent autour de missiles nucléaires installés à Cuba, une île à moins de 150 km de la Floride. Les bombardiers sont prêts. Une erreur, et tout peut basculer."
+          "text": "**1962** m. spalį žmonija atsiduria per žingsnį nuo katastrofos. **13 dienų** JAV ir SSRS grumiasi dėl branduolinių raketų, įrengtų Kuboje, saloje mažiau nei 150 km nuo Floridos. Bombonešiai parengti. Viena klaida, ir viskas gali apsiversti."
         },
         {
           "type": "paragraph",
-          "text": "Cette crise est le sommet de la Guerre froide. Elle se joue dans les bureaux de Washington et de Moscou… et aussi dans un sous-marin isolé, où un officier refuse un tir qui aurait pu tout détruire."
+          "text": "Ši krizė yra Šaltojo karo viršūnė. Ji vyksta Vašingtono ir Maskvos kabinetuose… ir atkirstame povandeniniame laive, kur karininkas atsisako šūvio, galėjusio viską sunaikinti."
         }
       ]
     },
     {
       "id": "course_22_la_crise_des_missiles_de_cuba_1962_p1",
-      "title": "Cuba, trop près des États-Unis",
+      "title": "Kuba, per arti JAV",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En **1959**, **Fidel Castro** prend le pouvoir à Cuba. Pour Washington, un allié de Moscou si près du continent américain est inacceptable. En avril **1961**, la CIA, les services secrets américains, organise un débarquement à la [[Kiaulių įlanka]]. C'est un désastre. Le président américain **John F. Kennedy** est humilié. Castro se rapproche encore plus de l'URSS."
+          "text": "**1959** m. **Fidelis Castro** perima valdžią Kuboje. Vašingtonui Maskvos sąjungininkas taip arti Amerikos žemyno yra nepriimtinas. **1961** m. balandį CŽV, JAV slaptoji žvalgyba, surengia išsilaipinimą, o jo vieta yra [[Kiaulių įlanka]]. Tai visiška nesėkmė. JAV prezidentas **Johnas F. Kennedy** pažemintas. Castro dar labiau suartėja su SSRS."
         },
         {
           "type": "funFact",
-          "text": "Pour cacher l'opération [[Anadyr]], le déploiement secret des missiles, les Soviétiques embarquent aussi du matériel agricole… et des vêtements d'hiver russes, comme si la destination était ailleurs."
+          "text": "Slaptas raketų dislokavimas vadinosi operacija [[Anadyr]]. Kad ją nuslėptų, sovietai į laivus krauna ir žemės ūkio techniką… ir rusiškus žieminius drabužius, tarsi kelionės tikslas būtų visai kitur."
         },
         {
           "type": "paragraph",
-          "text": "**Nikita Khrouchtchev**, le dirigeant soviétique, veut rétablir l'équilibre. Les Américains ont déjà placé des missiles [[Jupiter]] en Italie et en [[Turkija]], tout près de l'URSS. Il décide d'installer en secret des missiles à moyenne portée sur le sol cubain."
+          "text": "Sovietų vadovas **Nikita Chruščiovas** nori atkurti pusiausvyrą. Amerikiečiai jau dislokavo raketas [[Jupiter]] dviejose šalyse: tai Italija ir [[Turkija]], esanti visai šalia SSRS. Jis nusprendžia slapta įrengti vidutinio nuotolio raketas Kubos žemėje."
         }
       ]
     },
     {
       "id": "course_22_la_crise_des_missiles_de_cuba_1962_p2",
-      "title": "14 octobre : le secret éclate",
+      "title": "Spalio 14 d.: paslaptis atskleista",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le **14 octobre**, un avion espion américain U-2 photographie des rampes pour missiles [[SS-4]], capables d'atteindre une grande partie des États-Unis. Kennedy réunit un petit comité de crise. Pendant six jours, on pèse toutes les options : bombardements, invasion, diplomatie."
+          "text": "**Spalio 14 d.** amerikiečių žvalgybinis lėktuvas U-2 nufotografuoja raketų [[SS-4]] paleidimo aikšteles; šios raketos gali pasiekti didelę JAV dalį. Kennedy sušaukia nedidelį krizių komitetą. Šešias dienas svarstomos visos galimybės: bombardavimas, invazija, diplomatija."
         },
         {
           "type": "image",
           "asset": "u_2_spy_plane_aerial_photography",
           "ratio": "4:3",
-          "caption": "Les photos du U-2 révèlent les missiles soviétiques à Cuba."
+          "caption": "U-2 nuotraukos atskleidžia sovietų raketas Kuboje."
         },
         {
           "type": "paragraph",
-          "text": "Des généraux, comme Curtis LeMay, veulent frapper tout de suite. Kennedy choisit une voie du milieu : un blocus naval. Il le baptise « quarantaine » pour éviter le mot « blocus », qui signifie la guerre en droit international. Le **22 octobre**, à la télévision, il révèle les missiles au monde et exige leur retrait."
+          "text": "Kai kurie generolai, pavyzdžiui, Curtisas LeMay, nori smogti nedelsiant. Kennedy renkasi vidurio kelią: jūrų blokadą. Jis ją vadina „karantinu“, kad išvengtų žodžio „blokada“, kuris pagal tarptautinę teisę reiškia karą. **Spalio 22 d.** per televiziją jis atskleidžia raketas pasauliui ir reikalauja jas išvežti."
         }
       ]
     },
     {
       "id": "course_22_la_crise_des_missiles_de_cuba_1962_p3",
-      "title": "Le Samedi noir",
+      "title": "Juodasis šeštadienis",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le **27 octobre**, surnommé « Samedi noir », un U-2 est abattu au-dessus de Cuba. En mer, le sous-marin soviétique **B-59**, harcelé et coupé de Moscou, s'apprête à lancer une torpille nucléaire. Le protocole exige l'accord de trois officiers. Deux disent oui. **Vasili Arkhipov**, l'officier politique à bord, dit non."
+          "text": "**Spalio 27 d.**, vadinamąjį „Juodąjį šeštadienį“, virš Kubos numušamas U-2. Jūroje persekiojamas ir nuo Maskvos atkirstas sovietų povandeninis laivas **B-59** ruošiasi paleisti branduolinę torpedą. Protokolas reikalauja trijų karininkų sutikimo. Du sako „taip“. **Vasilijus Archipovas**, laivo politinis karininkas, sako „ne“."
         },
         {
           "type": "image",
           "asset": "cuban_missile_crisis_1962_kennedy",
           "ratio": "4:3",
-          "caption": "Kennedy face à la crise, octobre 1962."
+          "caption": "Kennedy krizės akivaizdoje, 1962 m. spalis."
         },
         {
           "type": "funFact",
-          "text": "Le fameux « téléphone rouge » installé après la crise est en réalité un **téléscripteur**. Le téléphone rouge n'existe que dans les films."
+          "text": "Garsusis „raudonasis telefonas“, įrengtas po krizės, iš tikrųjų buvo **teletaipas**. Raudonasis telefonas egzistuoja tik filmuose."
         },
         {
           "type": "paragraph",
-          "text": "Dans les coulisses, un accord se noue. L'URSS retire ses missiles de Cuba. Les États-Unis s'engagent à ne pas envahir l'île. Clause secrète : les missiles américains de Turquie seront retirés plus tard."
+          "text": "Užkulisiuose pasiekiamas susitarimas. SSRS išveža raketas iš Kubos. JAV įsipareigoja neįsiveržti į salą. Slapta sąlyga: amerikiečių raketos vėliau bus išvežtos iš Turkijos."
         }
       ]
     },
     {
       "id": "course_22_la_crise_des_missiles_de_cuba_1962_p4",
-      "title": "Après la peur, un peu de dialogue",
+      "title": "Po baimės – šiek tiek dialogo",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La crise ouvre une phase de [[Įtampos mažinimas]], un apaisement relatif entre les deux blocs. Une ligne directe relie bientôt le Kremlin et la Maison-Blanche. La doctrine de la [[Abipusis garantuotas sunaikinimas (MAD)]] s'impose : puisque personne ne peut gagner une guerre nucléaire, personne ne doit l'engager."
+          "text": "Krizė atveria naują etapą: prasideda [[Įtampos mažinimas]], santykinis dviejų blokų atšilimas. Netrukus Kremlių ir Baltuosius rūmus sujungia tiesioginė linija. Įsitvirtina [[Abipusio garantuoto sunaikinimo doktrina (MAD)]]: kadangi niekas negali laimėti branduolinio karo, niekas neturi jo pradėti."
         },
         {
           "type": "timeline",
           "events": [
             {
-              "date": "14 oct. 1962",
-              "title": "Découverte des missiles",
-              "detail": "Un U-2 photographie les rampes à Cuba."
+              "date": "1962 m. spalio 14 d.",
+              "title": "Raketos aptiktos",
+              "detail": "U-2 nufotografuoja paleidimo aikšteles Kuboje."
             },
             {
-              "date": "22 oct. 1962",
-              "title": "Discours de Kennedy",
-              "detail": "Quarantaine navale et ultimatum public."
+              "date": "1962 m. spalio 22 d.",
+              "title": "Kennedy kalba",
+              "detail": "Jūrų karantinas ir viešas ultimatumas."
             },
             {
-              "date": "27 oct. 1962",
-              "title": "Samedi noir",
-              "detail": "U-2 abattu ; Arkhipov refuse le tir nucléaire."
+              "date": "1962 m. spalio 27 d.",
+              "title": "Juodasis šeštadienis",
+              "detail": "U-2 numuštas; Archipovas atsisako branduolinio šūvio."
             },
             {
-              "date": "28 oct. 1962",
-              "title": "Accord",
-              "detail": "Khrouchtchev annonce le retrait des missiles."
+              "date": "1962 m. spalio 28 d.",
+              "title": "Susitarimas",
+              "detail": "Chruščiovas paskelbia, kad raketos bus išvežtos."
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "En **13 jours**, la crise de Cuba montre que la Guerre froide pouvait détruire le monde… et qu'elle a parfois tenu à un seul refus, celui d'Arkhipov."
+          "text": "Kubos krizė per **13 dienų** parodė, kad Šaltasis karas galėjo sunaikinti pasaulį… ir kad kartais viskas priklausė nuo vieno vienintelio atsisakymo, Archipovo."
         }
       ]
     }

@@ -1,139 +1,139 @@
 {
   "id": "course_27_la_naissance_de_l_ue_de_la_ceca_a_maastr",
-  "title": "Comment est née l'Union européenne ?",
-  "subtitle": "De la CECA à Maastricht",
+  "title": "Kaip gimė Europos Sąjunga?",
+  "subtitle": "Nuo EAPB iki Mastrichto",
   "subject": "histoire",
   "subcategory": "Guerre froide & monde contemporain",
-  "description": "L'Union européenne naît d'une idée pragmatique : rendre la guerre franco-allemande matériellement impossible en liant charbon et acier. Des petits pas de **1950** à Maastricht.",
+  "description": "Europos Sąjunga gimsta iš pragmatiškos idėjos: susiejus anglį ir plieną, padaryti Prancūzijos ir Vokietijos karą fiziškai neįmanomą. Nuo mažų žingsnių **1950** m. iki Mastrichto.",
   "hero": {
     "image": "la_naissance_de_l_ue",
     "ratio": "16:9",
-    "hook": "Rendre la guerre impossible… en partageant le charbon et l'acier."
+    "hook": "Padaryti karą neįmanomą… dalijantis anglimi ir plienu."
   },
   "sections": [
     {
       "id": "course_27_la_naissance_de_l_ue_de_la_ceca_a_maastr_intro",
-      "title": "Introduction",
+      "title": "Įvadas",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L'**Union européenne** ne naît pas d'un grand soir constitutionnel. Elle avance par « petits pas ». Dans les décombres de 1945, l'objectif est précis : rendre une nouvelle guerre entre la France et l'Allemagne non seulement impensable, mais matériellement impossible."
+          "text": "**Europos Sąjunga** negimsta per vieną didelę konstitucinę revoliuciją. Ji žengia „mažais žingsniais“. 1945 m. griuvėsiuose tikslas aiškus: naujas Prancūzijos ir Vokietijos karas turi tapti ne tik neįsivaizduojamas, bet ir fiziškai neįmanomas."
         },
         {
           "type": "paragraph",
-          "text": "De la solidarité industrielle de **1950** à l'union politique et monétaire de **1992**, l'Europe invente une intégration unique au monde. La [[Prancūzijos ir Vokietijos susitaikymas]] en devient le moteur."
+          "text": "Nuo pramoninio solidarumo **1950** m. iki politinės ir pinigų sąjungos **1992** m. Europa sukuria pasaulyje unikalią integraciją. Jos varikliu tampa [[Prancūzijos ir Vokietijos susitaikymas]]."
         }
       ]
     },
     {
       "id": "course_27_la_naissance_de_l_ue_de_la_ceca_a_maastr_p1",
-      "title": "1950 : Schuman, le charbon et l'acier",
+      "title": "1950: Schumanas, anglis ir plienas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Au sortir de la guerre, le contrôle de la Ruhr, le grand bassin industriel allemand, cristallise les tensions. **Jean Monnet**, haut fonctionnaire français, et **Robert Schuman**, ministre des Affaires étrangères, proposent une idée simple. Le **9 mai 1950**, lors de la [[Schumano deklaracija]], ils veulent placer la production franco-allemande de charbon et d'acier sous une [[Vyriausioji valdyba]] commune."
+          "text": "Po karo įtampą kelia Rūro, didžiojo Vokietijos pramonės baseino, kontrolė. **Jeanas Monnet**, aukštas Prancūzijos valdininkas, ir **Robertas Schumanas**, užsienio reikalų ministras, pasiūlo paprastą idėją. **1950 m. gegužės 9 d.** paskelbiama [[Schumano deklaracija]]: Prancūzijos ir Vokietijos anglies ir plieno gamybą turi prižiūrėti bendra [[Vyriausioji valdyba]]."
         },
         {
           "type": "image",
           "asset": "jean_monnet_robert_schuman_portrait",
           "ratio": "4:3",
-          "caption": "Jean Monnet et Robert Schuman, architectes des premiers pas européens."
+          "caption": "Jeanas Monnet ir Robertas Schumanas, pirmųjų Europos žingsnių architektai."
         },
         {
           "type": "funFact",
-          "text": "Schuman garde son plan si secret que ses propres diplomates ne le découvrent que le matin de l'annonce."
+          "text": "Schumanas savo planą laiko tokioje paslaptyje, kad net jo paties diplomatai apie jį sužino tik paskelbimo rytą."
         },
         {
           "type": "paragraph",
-          "text": "Charbon et acier : les nerfs de toute industrie d'armement. En **1951**, naît la **CECA**, Communauté européenne du charbon et de l'acier. L'Italie et le Benelux (Belgique, Pays-Bas, Luxembourg) la rejoignent. Pour la première fois, des États délèguent une part de souveraineté à une instance qui les dépasse."
+          "text": "Anglis ir plienas: bet kokios ginklų pramonės pagrindas. **1951** m. gimsta **EAPB**, Europos anglių ir plieno bendrija. Prie jos prisijungia Italija ir Beneliuksas (Belgija, Nyderlandai, Liuksemburgas). Pirmą kartą valstybės dalį suvereniteto perduoda aukščiau už jas stovinčiai institucijai."
         }
       ]
     },
     {
       "id": "course_27_la_naissance_de_l_ue_de_la_ceca_a_maastr_p2",
-      "title": "1957 : le Marché commun",
+      "title": "1957: bendroji rinka",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le **25 mars 1957**, les Six signent à Rome les traités qui créent la **CEE**, Communauté économique européenne, et l'**Euratom** pour l'atome civil. Objectif : un [[bendroji rinka]] sans barrières douanières, fondé sur [[Keturios bendrosios rinkos laisvės]] (marchandises, personnes, services, capitaux)."
+          "text": "**1957 m. kovo 25 d.** šešios valstybės Romoje pasirašo sutartis, kuriomis įkuriama **EEB**, Europos ekonominė bendrija, ir **Euratomas** taikiai atominei energetikai. Tikslas: [[bendroji rinka]] be muitų kliūčių. Jos pagrindas yra [[Keturios bendrosios rinkos laisvės]] (prekės, asmenys, paslaugos, kapitalas)."
         },
         {
           "type": "image",
           "asset": "treaty_of_rome_signing_1957",
           "ratio": "4:3",
-          "caption": "Signature des traités de Rome, 25 mars 1957."
+          "caption": "Romos sutarčių pasirašymas, 1957 m. kovo 25 d."
         },
         {
           "type": "funFact",
-          "text": "À Rome, les traités officiels n'étaient pas prêts à temps. Pour la photo, les dirigeants ont signé… des pages blanches."
+          "text": "Romoje oficialūs sutarčių tekstai nebuvo laiku parengti. Nuotraukai vadovai pasirašė… tuščius lapus."
         },
         {
           "type": "paragraph",
-          "text": "En **1962**, la [[BŽŪP]], Politique agricole commune, structure l'agriculture. En **1973**, le Royaume-Uni, l'Irlande et le Danemark rejoignent le club. D'un petit cercle industriel, la CEE devient une puissance commerciale face aux USA et à l'URSS."
+          "text": "**1962** m. žemės ūkį pertvarko [[BŽŪP]], bendroji žemės ūkio politika. **1973** m. prie klubo prisijungia Jungtinė Karalystė, Airija ir Danija. Iš nedidelio pramonės ratelio EEB tampa prekybos galia, galinčia lygiuotis į JAV ir SSRS."
         }
       ]
     },
     {
       "id": "course_27_la_naissance_de_l_ue_de_la_ceca_a_maastr_p3",
-      "title": "1992 : Maastricht et l'euro",
+      "title": "1992: Mastrichtas ir euras",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Après 1989 et la chute du mur de Berlin, pour arrimer l'Allemagne réunifiée, l'intégration s'accélère. Le [[Mastrichto sutartis (1992)]] transforme la CEE en **Union européenne** : citoyenneté européenne, politique étrangère commune, union économique et monétaire."
+          "text": "Po 1989 m. ir Berlyno sienos griuvimo integracija spartėja, kad susivienijusi Vokietija liktų tvirtai susieta su Europa. [[Mastrichto sutartis (1992)]] paverčia EEB **Europos Sąjunga**: Europos pilietybė, bendra užsienio politika, ekonominė ir pinigų sąjunga."
         },
         {
           "type": "image",
           "asset": "franco_german_reconciliation_adenauer_de_gaulle",
           "ratio": "4:3",
-          "caption": "La réconciliation franco-allemande, moteur durable de l'Europe."
+          "caption": "Prancūzijos ir Vokietijos susitaikymas, ilgalaikis Europos variklis."
         },
         {
           "type": "paragraph",
-          "text": "L'**euro** devient réalité scripturale en 1999, puis billets et pièces le **1er janvier 2002**. Le grand marché a désormais une monnaie. Mais les États doivent aussi accepter une discipline budgétaire commune, source de tensions futures."
+          "text": "1999 m. **euras** tampa negrynųjų pinigų realybe, o **2002 m. sausio 1 d.** atsiranda banknotai ir monetos. Didžioji rinka dabar turi savo valiutą. Tačiau valstybės turi priimti ir bendrą biudžeto drausmę, būsimų įtampų šaltinį."
         }
       ]
     },
     {
       "id": "course_27_la_naissance_de_l_ue_de_la_ceca_a_maastr_p4",
-      "title": "Élargir sans se diluer",
+      "title": "Plėstis neištirpstant",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Dans les années 2000, l'UE intègre les ex-pays du bloc de l'Est (28 membres en 2013). Le traité de Lisbonne réforme les institutions. Puis vient le choc : le **Brexit** (vote 2016, sortie 2020). L'UE reste une construction hybride, plus qu'une organisation, moins qu'un État."
+          "text": "XXI a. pirmajame dešimtmetyje ES priima buvusias Rytų bloko šalis (2013 m. jau 28 narės). Lisabonos sutartis reformuoja institucijas. Tada ateina smūgis: **Brexit** (balsavimas 2016 m., išstojimas 2020 m.). ES lieka mišrus darinys: daugiau nei organizacija, mažiau nei valstybė."
         },
         {
           "type": "timeline",
           "events": [
             {
-              "date": "9 mai 1950",
-              "title": "Déclaration Schuman",
-              "detail": "Acte de naissance politique de l'Europe unie."
+              "date": "1950 m. gegužės 9 d.",
+              "title": "Schumano deklaracija",
+              "detail": "Politinis vieningos Europos gimimo liudijimas."
             },
             {
               "date": "1951",
-              "title": "CECA",
-              "detail": "Charbon et acier sous Haute Autorité commune."
+              "title": "EAPB",
+              "detail": "Anglis ir plienas pavedami bendrai Vyriausiajai valdybai."
             },
             {
-              "date": "25 mars 1957",
-              "title": "Traités de Rome",
-              "detail": "Naissance de la CEE et du marché commun."
+              "date": "1957 m. kovo 25 d.",
+              "title": "Romos sutartys",
+              "detail": "Gimsta EEB ir bendroji rinka."
             },
             {
               "date": "1992",
-              "title": "Maastricht",
-              "detail": "L'Union européenne et la voie de l'euro."
+              "title": "Mastrichtas",
+              "detail": "Europos Sąjunga ir kelias į eurą."
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "L'UE naît en **1950** pour rendre la guerre franco-allemande impossible par l'industrie, puis passe du marché commun (**1957**) à l'union politique et monétaire (**1992**)."
+          "text": "ES gimsta **1950** m., kad pramonės priemonėmis Prancūzijos ir Vokietijos karas taptų neįmanomas, o vėliau pereina nuo bendrosios rinkos (**1957**) prie politinės ir pinigų sąjungos (**1992**)."
         }
       ]
     }

@@ -1,119 +1,119 @@
 {
   "id": "course_106_frankenstein_mary_shelley",
-  "title": "Qui est le vrai monstre de « Frankenstein » ?",
+  "title": "Kas tikrasis „Frankenšteino“ pabaisa?",
   "subtitle": "1818",
   "subject": "litterature",
   "subcategory": "Anglo-saxons & littérature mondiale",
-  "description": "En 1818, Mary Shelley, 18 ans, écrit le premier grand roman de science-fiction. Victor Frankenstein crée la vie, puis fuit sa créature : une fable sur la science sans éthique.",
+  "description": "1818 m. aštuoniolikmetė Mary Shelley parašo pirmąjį didįjį mokslinės fantastikos romaną. Viktoras Frankenšteinas sukuria gyvybę ir pabėga nuo savo kūrinio: pasakėčia apie mokslą be etikos.",
   "hero": {
     "image": "frankenstein_mary_shelley",
     "ratio": "16:9",
-    "hook": "Une nuit orageuse, un pari entre poètes, et le mythe du Prométhée moderne."
+    "hook": "Audringa naktis, poetų lažybos ir šiuolaikinio Prometėjo mitas."
   },
   "sections": [
     {
       "id": "course_106_frankenstein_mary_shelley_intro",
-      "title": "Introduction",
+      "title": "Įvadas",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Publié en **1818**, **Frankenstein ou le Prométhée moderne** est considéré comme le premier grand roman de **science-fiction**. **Mary Shelley** n'a que **18 ans** quand elle l'écrit, au croisement du **[[Romantizmas]]** noir et des débats scientifiques de son époque."
+          "text": "**1818** m. išleistas romanas **Frankenšteinas, arba Šiuolaikinis Prometėjas** laikomas pirmuoju didžiuoju **mokslinės fantastikos** romanu. **Mary Shelley** jį rašydama buvo vos **18 metų**; romanas gimė ten, kur susitinka tamsusis **[[Romantizmas]]** ir to meto mokslo ginčai."
         },
         {
           "type": "paragraph",
-          "text": "Victor Frankenstein et son être sans nom ne sont pas seulement des personnages d'horreur gothique. Ils posent une question durable : que devient une conscience qu'on fabrique, puis qu'on abandonne ? Le roman interroge la **[[Kūrėjo atsakomybė (šiuolaikinis Prometėjas)]]** : on ne peut pas créer une vie sans en assumer la suite."
+          "text": "Viktoras Frankenšteinas ir jo bevardė būtybė nėra vien gotikinio siaubo veikėjai. Jie kelia ilgaamžį klausimą: kas nutinka sąmonei, kurią pagamina, o paskui palieka? Romano tema yra **[[Kūrėjo atsakomybė (šiuolaikinis Prometėjas)]]**: negalima sukurti gyvybės neprisiimant atsakomybės už tai, kas bus toliau."
         }
       ]
     },
     {
       "id": "course_106_frankenstein_mary_shelley_p1",
-      "title": "Le laboratoire du lac Léman : une genèse apocalyptique",
+      "title": "Ženevos ežero laboratorija: apokaliptinė pradžia",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En **1816**, l'éruption du volcan **Tambora** en Indonésie plonge l'Europe dans une **[[Metai be vasaros (1816)]]** : ciel gris, récoltes perdues, atmosphère apocalyptique. Mary Shelley séjourne à la **Villa Diodati**, au bord du lac Léman, avec **Percy Shelley** et **Lord Byron**. Pour tromper l'ennui, Byron propose un concours d'histoires effrayantes."
+          "text": "**1816** m. išsiveržus **Tamboros** ugnikalniui Indonezijoje, Europą ištinka **[[Metai be vasaros (1816)]]**: pilkas dangus, žuvęs derlius, apokaliptinė nuotaika. Mary Shelley su **Percy Shelley'iu** ir **lordu Byronu** gyvena **viloje Diodati** prie Ženevos ežero. Kad išsisklaidytų nuobodulys, Byronas pasiūlo baisių istorijų konkursą."
         },
         {
           "type": "image",
           "asset": "mary_shelley_portrait_painting",
           "ratio": "4:3",
-          "caption": "Mary Shelley, auteure d'un mythe qui dépasse largement l'horreur gothique."
+          "caption": "Mary Shelley, mito, gerokai pranokstančio gotikinį siaubą, autorė."
         },
         {
           "type": "image",
           "asset": "lake_geneva_villa_diodati_storm",
           "ratio": "16:9",
-          "caption": "La Villa Diodati : naissance du Frankenstein dans la tempête de 1816."
+          "caption": "Vila Diodati: Frankenšteinas gimė per 1816 m. audrą."
         },
         {
           "type": "funFact",
-          "text": "John Polidori, médecin de Byron, écrit aussi à Diodati le texte fondateur du vampire moderne, avant Dracula."
+          "text": "Byrono gydytojas Johnas Polidori Diodati viloje taip pat parašė šiuolaikinio vampyro pradininką, dar prieš Drakulą."
         },
         {
           "type": "paragraph",
-          "text": "Mary Shelley s'inspire du **[[Galvanizmas]]**, ces expériences qui semblaient réveiller les muscles des cadavres. Dans un rêve éveillé, elle voit un étudiant devant une créature qui prend vie sous ses yeux. Seule parmi les participants, elle mène le pari jusqu'au bout et produit un chef-d'œuvre."
+          "text": "Mary Shelley įkvėpė **[[galvanizmas]]**, bandymai, kurie, atrodė, pažadina lavonų raumenis. Pusiau sapne ji išvysta studentą prie būtybės, kuri atgyja jam prieš akis. Vienintelė iš visų dalyvių ji lažybas įvykdo iki galo ir sukuria šedevrą."
         }
       ]
     },
     {
       "id": "course_106_frankenstein_mary_shelley_p2",
-      "title": "Victor Frankenstein ou l'hubris scientifique",
+      "title": "Viktoras Frankenšteinas, arba mokslinis hibris",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Victor Frankenstein** incarne l'**[[Hibris]]** : l'ambition qui défie l'ordre naturel. À **Ingolstadt**, il cherche le « secret de la vie », non pour s'enrichir, mais pour devenir un **Prométhée moderne**, comme le titan grec qui vola le feu aux dieux. Quand sa créature s'éveille, le rêve bascule immédiatement en cauchemar."
+          "text": "**Viktoras Frankenšteinas** įkūnija tai, ką graikai vadino žodžiu **[[Hibris]]**: užmojį, kuris meta iššūkį gamtos tvarkai. **Ingolštate** jis ieško „gyvybės paslapties“ ne tam, kad praturtėtų, o kad taptų **šiuolaikiniu Prometėju**, kaip graikų titanas, pavogęs ugnį iš dievų. Kai jo būtybė pabunda, svajonė akimirksniu virsta košmaru."
         },
         {
           "type": "image",
           "asset": "frankenstein_monster_illustration_1831",
           "ratio": "4:3",
-          "caption": "La créature de Shelley : terrifiante, mais surtout éloquente et consciente."
+          "caption": "Shelley būtybė: baisi, bet pirmiausia iškalbinga ir sąmoninga."
         },
         {
           "type": "paragraph",
-          "text": "Victor fuit par dégoût devant la laideur de ce qu'il a engendré. Il abandonne son « fils » artificiel : c'est cette lâcheté, plus que l'acte de création lui-même, qui déclenche la tragédie. Shelley montre qu'une science sans conscience condamne le créateur autant que la créature rejetée."
+          "text": "Viktoras pabėga, pasibjaurėjęs savo kūrinio bjaurumu. Jis palieka savo dirbtinį „sūnų“: būtent šis bailumas, labiau nei pats kūrimas, sukelia tragediją. Shelley parodo, kad mokslas be sąžinės pasmerkia kūrėją taip pat kaip ir atstumtą būtybę."
         }
       ]
     },
     {
       "id": "course_106_frankenstein_mary_shelley_p3",
-      "title": "L'éveil de la créature : une conscience sans nom",
+      "title": "Būtybės pabudimas: bevardė sąmonė",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L'originalité du roman tient à la voix de la créature. Intelligente et éloquente, elle apprend en observant une famille de paysans et en lisant **[[Prarastasis rojus]]** de **Milton**. Née « bonne » selon la **[[Tabula rasa]]**, elle se voit corrompue par le rejet violent des hommes."
+          "text": "Romano originalumas slypi būtybės balse. Protinga ir iškalbinga, ji mokosi stebėdama valstiečių šeimą ir skaitydama **Miltono** poemą **[[Prarastasis rojus]]**. Gimusi „gera“, kaip teigia **[[tabula rasa]]** idėja, ji sugadinama žiauraus žmonių atstūmimo."
         },
         {
           "type": "quote",
-          "text": "Je suis méchant parce que je suis malheureux.",
-          "attribution": "Mary Shelley, Frankenstein"
+          "text": "Aš piktas, nes esu nelaimingas.",
+          "attribution": "Mary Shelley, Frankenšteinas"
         },
         {
           "type": "paragraph",
-          "text": "Elle demande une compagne pour ne plus souffrir seule ; Victor refuse par peur. Alors elle détruit tout ce qu'il aime pour le réduire à sa propre solitude. Le roman devient une réflexion sur le **[[Socialinis determinizmas]]** : la société fabrique parfois ses monstres en excluant les différents."
+          "text": "Ji prašo draugės, kad nebekentėtų viena; Viktoras iš baimės atsisako. Tada ji sunaikina viską, ką jis myli, kad pasmerktų jį tokiai pat vienatvei. Romano tema tampa **[[socialinis determinizmas]]**: visuomenė kartais pati pagamina savo pabaisas, atstumdama kitokius."
         }
       ]
     },
     {
       "id": "course_106_frankenstein_mary_shelley_p4",
-      "title": "Un mythe moderne et sa postérité universelle",
+      "title": "Šiuolaikinis mitas ir jo visuotinis palikimas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le roman se termine dans l'**Arctique**, Victor mort, la créature disparaissant dans les brumes en promettant de s'anéantir. Aujourd'hui, « Frankenstein » désigne toute technologie qui échappe à son inventeur : OGM, intelligence artificielle, génie génétique. Shelley anticipe le **[[Posthumanizmas]]**."
+          "text": "Romanas baigiasi **Arktyje**: Viktoras miręs, o būtybė dingsta rūke, žadėdama save sunaikinti. Šiandien „Frankenšteinu“ vadinama bet kuri technologija, ištrūkusi iš išradėjo kontrolės: GMO, dirbtinis intelektas, genų inžinerija. Shelley romane jau nujaučiamas **[[posthumanizmas]]**."
         },
         {
           "type": "funFact",
-          "text": "Dans la culture populaire, on appelle souvent « Frankenstein » le monstre. En réalité, Frankenstein est le créateur : l'être n'a pas de nom, signe du déni de paternité de Victor."
+          "text": "Populiariojoje kultūroje „Frankenšteinu“ dažnai vadinama pabaisa. Iš tiesų Frankenšteinas yra kūrėjas: būtybė neturi vardo, ir tai rodo, kad Viktoras išsižada tėvystės."
         },
         {
           "type": "takeaway",
-          "text": "**Frankenstein** rappelle qu'on ne peut pas créer une vie sans en assumer la suite. Le vrai monstre n'est pas la laideur, mais l'abandon de ce qu'on a mis au monde."
+          "text": "**Frankenšteinas** primena, kad negalima sukurti gyvybės neprisiimant atsakomybės už tai, kas bus toliau. Tikroji pabaisa yra ne bjaurumas, o palikimas likimo valiai to, ką pats atvedei į pasaulį."
         }
       ]
     }

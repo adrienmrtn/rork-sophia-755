@@ -1,123 +1,123 @@
 {
   "id": "course_275_que_peut_on_vraiment_lire_dans_son_adn",
-  "title": "Que peut-on vraiment lire dans son ADN ?",
-  "subtitle": "Gènes et destin",
+  "title": "Ką iš tikrųjų galima perskaityti savo DNR?",
+  "subtitle": "Genai ir likimas",
   "subject": "sciences",
   "subcategory": "Notre quotidien expliqué",
-  "description": "Goûts, caractère, risques de maladie, origines lointaines : notre ADN en dit long sur nous. Mais une prédisposition n'a jamais été un destin.",
+  "description": "Skonis, charakteris, ligų rizika, tolimos šaknys: DNR apie mus pasako labai daug. Tačiau polinkis niekada nebuvo likimas.",
   "author": "kate-waddams",
   "hero": {
     "image": "dna_double_helix_3d_render_blue",
     "ratio": "4:3",
-    "hook": "Votre ADN raconte d'où vous venez, ce que vous aimez et ce qui vous menace, mais il ne décide pas de tout."
+    "hook": "Tavo DNR pasakoja, iš kur esi kilęs, ką mėgsti ir kas tau gresia, bet ji nesprendžia visko."
   },
   "sections": [
     {
       "id": "course_275_que_peut_on_vraiment_lire_dans_son_adn_intro",
-      "title": "Introduction",
+      "title": "Įžanga",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Notre ADN en dit énormément sur nous : d'où nous venons, de quoi notre corps est capable, et peut-être même ce qui nous attend. C'est notre histoire et notre plan de construction. Mais de quoi s'agit-il exactement ? L'ADN se trouve dans presque toutes les cellules du corps. Enroulé en **double hélice**, il porte les instructions génétiques qui règlent notre fonctionnement, notre croissance, notre développement et notre reproduction."
+          "text": "Mūsų DNR apie mus pasako labai daug: iš kur esame kilę, ką gali mūsų kūnas ir galbūt net kas mūsų laukia. Tai mūsų istorija ir mūsų statybos planas. Bet kas tai yra? DNR randama beveik visose kūno ląstelėse. Susukta į **dvigubą spiralę**, ji neša genetines instrukcijas, kurios valdo mūsų veiklą, augimą, vystymąsi ir dauginimąsi."
         },
         {
           "type": "paragraph",
-          "text": "Ses brins ne sont faits que de **quatre petites unités**, les nucléotides, notées A, T, C et G. C'est l'enchaînement de ces quatre lettres qui forme notre [[genomas]], un plan génétique unique pour chacun de nous. Que peut-on vraiment y lire ? Nos goûts, nos risques de maladie, nos origines. Et jusqu'où ce texte écrit-il notre avenir ?"
+          "text": "Jos grandinės sudarytos tik iš **keturių mažų vienetų**, nukleotidų, žymimų A, T, C ir G. Šių keturių raidžių seka ir sudaro tai, kas vadinama [[genomas]]: kiekvieno iš mūsų unikalus genetinis planas. Ką iš tikrųjų jame galima perskaityti? Mūsų skonį, ligų riziką, kilmę. Ir kiek šis tekstas nulemia mūsų ateitį?"
         }
       ]
     },
     {
       "id": "course_275_que_peut_on_vraiment_lire_dans_son_adn_p1",
-      "title": "Vos gènes façonnent vos goûts et votre caractère",
+      "title": "Genai formuoja tavo skonį ir charakterį",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Un [[genas]] est un morceau de ce texte. Il agit comme une notice biologique : il dit au corps comment fabriquer ses **protéines**, qui à leur tour construisent et font tourner nos cellules. De là naissent nos traits visibles. Mais les gènes jouent un rôle bien plus profond que l'apparence."
+          "text": "Šio teksto gabalėlis yra [[genas]]. Jis veikia kaip biologinė instrukcija: nurodo kūnui, kaip gaminti **baltymus**, o šie savo ruožtu kuria ląsteles ir palaiko jų darbą. Iš čia kyla matomi mūsų bruožai. Tačiau genų vaidmuo kur kas gilesnis nei išvaizda."
         },
         {
           "type": "image",
           "asset": "identical_twins_sisters_portrait_nature_nurture",
           "ratio": "5:4",
-          "caption": "« Les Compagnes de voyage », d'Augustus Egg (1862) : deux jeunes femmes semblables en tout, l'une dort, l'autre lit."
+          "caption": "Augustus Egg, „Kelionės palydovės“ (1862): dvi visais atžvilgiais panašios jaunos moterys, viena miega, kita skaito."
         },
         {
           "type": "paragraph",
-          "text": "Un [[genetinis variantas]] est une version légèrement différente d'un gène. Récemment, des scientifiques en ont relié plusieurs à la **personnalité**. De subtils réglages génétiques peuvent orienter nos préférences : adorer le sport ou le détester, être extraverti, collectionner les passe-temps. Notre ADN pèserait sur notre quotidien bien plus qu'on ne l'imagine. D'où une question : quelle part de notre comportement est déjà écrite dans notre biologie ?"
+          "text": "Šiek tiek kitokia geno versija yra [[genetinis variantas]]. Neseniai mokslininkai kelis tokius variantus susiejo su **asmenybe**. Subtilūs genetiniai niuansai gali lemti mūsų pomėgius: mylėti sportą ar jo nekęsti, būti ekstravertu, kolekcionuoti pomėgius. Panašu, kad DNR mūsų kasdienybę veikia kur kas labiau, nei manoma. Todėl kyla klausimas: kokia mūsų elgesio dalis jau įrašyta mūsų biologijoje?"
         },
         {
           "type": "funFact",
-          "text": "Thé ou café ? Même cette préférence toute simple pourrait tenir à de subtiles variations de nos gènes, selon les travaux qui relient l'ADN à la personnalité."
+          "text": "Arbata ar kava? Pasak tyrimų, siejančių DNR su asmenybe, net toks paprastas pasirinkimas gali priklausyti nuo subtilių genų skirtumų."
         },
         {
           "type": "paragraph",
-          "text": "Et ce n'est peut-être pas tout. L'ADN donne aussi des indices sur les personnes qui présentent une [[genetinis polinkis]] à certains troubles de **santé mentale**, comme la dépression. Il ne renseigne donc pas seulement sur ce que nous aimons, mais aussi sur ce qui peut nous fragiliser."
+          "text": "Ir tai dar ne viskas. DNR taip pat duoda užuominų apie žmones, kuriems būdingas [[genetinis polinkis]] į tam tikrus **psichikos sveikatos** sutrikimus, pavyzdžiui, depresiją. Taigi ji pasako ne tik tai, ką mėgstame, bet ir tai, kas mus gali pažeisti."
         }
       ]
     },
     {
       "id": "course_275_que_peut_on_vraiment_lire_dans_son_adn_p2",
-      "title": "Ce que l'ADN révèle des risques de maladie",
+      "title": "Ką DNR atskleidžia apie ligų riziką",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La santé mentale n'est pas la seule concernée. La composition de notre ADN peut nous rendre plus vulnérables à d'autres maladies, dont certaines « courent dans les familles ». Exemple connu : des variants hérités des gènes [[BRCA1 ir BRCA2]] prédisposent certaines femmes à un **cancer du sein précoce**."
+          "text": "Psichikos sveikata nėra vienintelė sritis. Mūsų DNR sudėtis gali padaryti mus labiau pažeidžiamus ir kitoms ligoms, kai kurios jų „eina per šeimą“. Gerai žinomas pavyzdys yra genai [[BRCA1 ir BRCA2]]: paveldėti jų variantai kai kurioms moterims sukelia polinkį į **ankstyvą krūties vėžį**."
         },
         {
           "type": "image",
           "asset": "dna_sequencing_chromatogram_sanger_readout",
           "ratio": "2:1",
-          "caption": "Chromatogramme de séquençage : chaque pic coloré est une lettre de l'ADN. C'est sur cette lecture qu'un test repère un variant."
+          "caption": "Sekoskaitos chromatograma: kiekviena spalvota smailė yra viena DNR raidė. Būtent iš šio įrašo tyrimas aptinka variantą."
         },
         {
           "type": "paragraph",
-          "text": "C'est là que le [[genetinis tyrimas]] prend toute sa valeur, pour le système de santé comme pour les personnes concernées. Repérer un risque héréditaire permet d'agir tôt : **dépistage** plus précoce, suivi rapproché, médicaments ou autre traitement préventif. Cette avance peut sauver des vies et réduire les coûts médicaux."
+          "text": "Būtent čia atsiskleidžia, kokią vertę turi [[genetinis tyrimas]], tiek sveikatos sistemai, tiek patiems žmonėms. Laiku aptikta paveldima rizika leidžia veikti anksti: anksčiau atlikti **patikrą**, atidžiau stebėti, skirti vaistų ar kitokį profilaktinį gydymą. Toks pranašumas gali išgelbėti gyvybes ir sumažinti gydymo išlaidas."
         }
       ]
     },
     {
       "id": "course_275_que_peut_on_vraiment_lire_dans_son_adn_p3",
-      "title": "Une machine à remonter le temps : d'où venez-vous ?",
+      "title": "Laiko mašina: iš kur esi kilęs?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Notre ADN se transmet de génération en génération. Il garde des indices sur nos ancêtres : d'où ils venaient, ce qu'ils mangeaient, comment ils vivaient. C'est une véritable machine à remonter le temps. En comparant les **motifs génétiques** des populations actuelles, les scientifiques ont pu retracer le chemin parcouru par les humains à travers le globe."
+          "text": "Mūsų DNR perduodama iš kartos į kartą. Ji saugo užuominas apie protėvius: iš kur jie buvo kilę, ką valgė, kaip gyveno. Tai tikra laiko mašina. Lygindami dabartinių populiacijų **genetinius raštus**, mokslininkai atsekė, kokį kelią žmonės nuėjo per visą pasaulį."
         },
         {
           "type": "image",
           "asset": "early_human_migrations_out_of_africa_map",
           "ratio": "5:4",
-          "caption": "Les premières lignées d'Homo sapiens en Afrique et leur sortie vers l'Eurasie, reconstituées par la génétique des populations."
+          "caption": "Pirmosios Homo sapiens linijos Afrikoje ir jų išėjimas į Euraziją, atkurti populiacijų genetikos."
         },
         {
           "type": "paragraph",
-          "text": "Un exemple. Les sources écrites racontent que des populations d'**Afrique du Nord** se sont installées dans la [[Pirėnų pusiasalis]] entre **700 et 1200**. L'ADN confirme le récit : les habitants actuels de la péninsule portent encore la trace génétique de ces rencontres."
+          "text": "Pavyzdys. Rašytiniai šaltiniai pasakoja, kad **700-1200** m. žmonės iš **Šiaurės Afrikos** apsigyveno regione, kuris vadinamas [[Pirėnų pusiasalis]]. DNR tai patvirtina: dabartiniai pusiasalio gyventojai vis dar turi šių susitikimų genetinį pėdsaką."
         },
         {
           "type": "funFact",
-          "text": "Même nos origines les plus lointaines sont plus compliquées qu'un simple arbre généalogique. Une étude fondée sur des génomes complets a trouvé la trace de deux populations humaines anciennes, séparées il y a environ **1,5 million d'années**, qui se sont ensuite mélangées à nouveau."
+          "text": "Net mūsų tolimiausia kilmė sudėtingesnė už paprastą giminės medį. Viename tyrime, paremtame visais genomais, rastas dviejų senovinių žmonių populiacijų pėdsakas: jos atsiskyrė maždaug prieš **1,5 mln. metų**, o vėliau vėl susimaišė."
         }
       ]
     },
     {
       "id": "course_275_que_peut_on_vraiment_lire_dans_son_adn_p4",
-      "title": "Prédisposition n'est pas destin",
+      "title": "Polinkis nėra likimas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Votre ADN influence donc beaucoup de vos caractéristiques. Mais être prédisposé à quelque chose ne veut pas dire que votre sort est scellé. Porter un risque génétique de **dépression** ne signifie pas que vous développerez une dépression. Un risque génétique n'est pas une certitude."
+          "text": "Taigi tavo DNR lemia daugelį tavo savybių. Tačiau polinkis į ką nors nereiškia, kad tavo likimas nulemtas. Genetinė **depresijos** rizika nereiškia, kad tu susirgsi depresija. Genetinė rizika nėra tikrumas."
         },
         {
           "type": "paragraph",
-          "text": "Les gènes ouvrent des possibilités, ils ne les imposent pas. Nos expériences, nos choix et nos circonstances comptent tout autant. Lire son ADN, c'est lire une partie de soi : une partie précieuse, parfois décisive pour la santé, mais une partie seulement."
+          "text": "Genai atveria galimybes, bet jų neprimeta. Mūsų patirtis, pasirinkimai ir aplinkybės yra ne mažiau svarbūs. Skaityti savo DNR reiškia skaityti dalį savęs: vertingą, kartais lemiamą sveikatai, bet tik dalį."
         },
         {
           "type": "takeaway",
-          "text": "L'ADN raconte nos goûts, nos risques et nos origines, mais une prédisposition n'est jamais une certitude : votre ADN n'est qu'une partie de vous."
+          "text": "DNR pasakoja apie mūsų skonį, riziką ir kilmę, bet polinkis niekada nėra tikrumas: tavo DNR yra tik dalis tavęs."
         }
       ]
     }

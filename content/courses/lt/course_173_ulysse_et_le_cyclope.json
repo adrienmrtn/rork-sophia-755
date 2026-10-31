@@ -1,114 +1,114 @@
 {
   "id": "course_173_ulysse_et_le_cyclope",
-  "title": "Ulysse et le Cyclope",
-  "subtitle": "La ruse contre la force",
+  "title": "Odisėjas ir Kiklopas",
+  "subtitle": "Gudrumas prieš jėgą",
   "subject": "mythologie",
   "subcategory": "Grèce : les héros",
-  "description": "Dans l'Odyssée, Ulysse affronte le Cyclope Polyphème. Sa [[metis]] le sauve, mais son orgueil attire la colère de Poséidon.",
+  "description": "„Odisėjoje“ Odisėjas susiduria su kiklopu Polifemu. Jį išgelbsti [[metis]], bet puikybė užtraukia Poseidono rūstybę.",
   "hero": {
     "image": "ulysse_et_le_cyclope",
     "ratio": "16:9",
-    "hook": "Un géant à un seul œil dévore ses hommes. Ulysse ne peut pas vaincre par la force. Alors il invente un nom : Personne."
+    "hook": "Vienaakis milžinas ryja jo vyrus. Jėga Odisėjas nugalėti negali. Todėl jis išsigalvoja vardą: Niekas."
   },
   "sections": [
     {
       "id": "course_173_ulysse_et_le_cyclope_intro",
-      "title": "Introduction",
+      "title": "Įvadas",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Après la guerre de Troie, **Ulysse**, roi de l'île d'Ithaque, tente de rentrer chez lui. Homère raconte son périple dans l'**Odyssée**. Au chant IX, il aborde une île fertile où vivent les [[Kiklopai]], géants solitaires à un seul œil."
+          "text": "Po Trojos karo **Odisėjas**, Itakos salos karalius, bando grįžti namo. Jo kelionę Homeras aprašo **Odisėjoje**. IX giesmėje jis priplaukia derlingą salą, kur gyvena [[Kiklopai]], vieniši vienaakiai milžinai."
         },
         {
           "type": "paragraph",
-          "text": "Là, il rencontre **Polyphème**, fils du dieu de la mer **Poséidon**. L'épisode n'est pas seulement un conte de monstre. C'est une leçon : la [[metis]], l'intelligence rusée, peut battre la force brute. Mais l'[[hibris]], l'orgueil excessif, peut tout gâcher."
+          "text": "Ten jis sutinka **Polifemą**, jūrų dievo **Poseidono** sūnų. Šis epizodas nėra vien pasaka apie pabaisą. Tai pamoka: [[metis]], gudrus protas, gali nugalėti brutalią jėgą. Tačiau [[hibris]], perdėta puikybė, gali viską sugadinti."
         }
       ]
     },
     {
       "id": "course_173_ulysse_et_le_cyclope_p1",
-      "title": "Hospitalité espérée, barbarie trouvée",
+      "title": "Laukta svetingumo, rasta barbarybė",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ulysse débarque avec douze compagnons. Les Cyclopes n'ont ni assemblées, ni lois, ni vraie agriculture. Ils vivent dans des grottes. Les Grecs, eux, croient à la [[ksenija]] : le devoir sacré d'accueillir l'étranger, sous la protection de Zeus."
+          "text": "Odisėjas išsilaipina su dvylika bendražygių. Kiklopai neturi nei susirinkimų, nei įstatymų, nei tikros žemdirbystės. Jie gyvena olose. O graikams privaloma [[ksenija]]: šventa pareiga priimti svetimšalį, kurią globoja Dzeusas."
         },
         {
           "type": "image",
           "asset": "cyclops_polyphemus_one_eye_greek_myth",
           "ratio": "4:3",
-          "caption": "Polyphème, le Cyclope, figure de la force sans loi."
+          "caption": "Kiklopas Polifemas, beįstatymės jėgos įvaizdis."
         },
         {
           "type": "paragraph",
-          "text": "Dans la caverne, les hommes voient des fromages et du bétail. Les compagnons veulent partir. Ulysse insiste pour attendre le maître, espérant un cadeau d'hôte. Erreur. Polyphème revient, bloque l'entrée avec un rocher immense, et dévore deux Grecs. La force ne suffira pas. Il faut ruser."
+          "text": "Oloje vyrai mato sūrių ir gyvulių. Bendražygiai nori išeiti. Odisėjas primygtinai nori palaukti šeimininko, tikėdamasis svečio dovanos. Klaida. Polifemas grįžta, užverčia įėjimą milžinišku akmeniu ir suryja du graikus. Jėgos neužteks. Reikia gudrauti."
         }
       ]
     },
     {
       "id": "course_173_ulysse_et_le_cyclope_p2",
-      "title": "Le vin, le pieu et « Personne »",
+      "title": "Vynas, kuolas ir „Niekas“",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ulysse taille un pieu d'olivier, bois cher à Athéna, déesse de la sagesse. Il le cache. Puis il offre à Polyphème un vin très fort, presque pur. Le géant s'enivre. Avant de s'endormir, il demande le nom de son invité."
+          "text": "Odisėjas nutašo kuolą iš alyvmedžio, kurį brangina išminties deivė Atėnė. Jis kuolą paslepia. Tada pasiūlo Polifemui labai stipraus, beveik neskiesto vyno. Milžinas apsvaigsta. Prieš užmigdamas jis klausia svečio vardo."
         },
         {
           "type": "funFact",
-          "text": "En grec, Ulysse dit s'appeler **Outis**, « Personne ». Ce mot évoque aussi **métis**, la ruse. Homère joue sur le double sens : c'est bien la ruse qui vainc le géant."
+          "text": "Graikiškai Odisėjas sakosi esąs **Outis**, „Niekas“. Šis žodis primena ir **metis**, gudrumą. Homeras žaidžia dviprasmybe: milžiną iš tiesų nugali gudrumas."
         },
         {
           "type": "image",
           "asset": "ulysses_cyclops_blinding_stake_ancient_vase",
           "ratio": "4:3",
-          "caption": "Ulysse et ses hommes aveuglent Polyphème, scène célèbre des vases grecs."
+          "caption": "Odisėjas ir jo vyrai apakina Polifemą: garsi graikų vazų scena."
         },
         {
           "type": "paragraph",
-          "text": "Ulysse répond : « Je m'appelle **Personne**. » Puis ses hommes enfoncent le pieu brûlant dans l'œil unique. Les autres Cyclopes accourent. « Qui te tue ? » demandent-ils. « Personne ! » répond Polyphème. Ils s'éloignent, pensant à un mal divin."
+          "text": "Odisėjas atsako: „Mano vardas **Niekas**.“ Tada jo vyrai įsmeigia įkaitusį kuolą į vienintelę akį. Subėga kiti kiklopai. „Kas tave žudo?“ klausia jie. „Niekas!“ atsako Polifemas. Jie nueina, manydami, kad tai dievų siųsta liga."
         }
       ]
     },
     {
       "id": "course_173_ulysse_et_le_cyclope_p3",
-      "title": "Sortir sous les moutons",
+      "title": "Pabėgimas po avimis",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le lendemain, Polyphème aveugle garde la sortie. Il palpe le dos de chaque mouton. Ulysse attache ses compagnons sous le ventre des bêtes les plus laineuses. Lui-même se suspend sous le plus gros bélier. Le géant caresse l'animal sans sentir l'ennemi juste en dessous."
+          "text": "Kitą dieną aklas Polifemas saugo išėjimą. Jis apčiupinėja kiekvienos avies nugarą. Odisėjas pririša bendražygius po gauruočiausių gyvulių pilvais. Pats įsikimba po didžiausiu avinu. Milžinas glosto gyvulį ir nejaučia priešo, esančio visai po juo."
         },
         {
           "type": "paragraph",
-          "text": "Une fois en mer, Ulysse ne résiste pas. Il crie son vrai nom, sa lignée, sa cité. Il veut le [[kleos]], la gloire qui survit par le nom. Polyphème peut enfin maudire une cible précise auprès de son père Poséidon."
+          "text": "Jau jūroje Odisėjas neatsispiria. Jis šaukia savo tikrąjį vardą, giminę, miestą. Jam rūpi [[kleos]], šlovė, kuri išlieka per vardą. Dabar Polifemas pagaliau gali prakeikti konkretų taikinį, kreipdamasis į savo tėvą Poseidoną."
         }
       ]
     },
     {
       "id": "course_173_ulysse_et_le_cyclope_p4",
-      "title": "La malédiction qui ouvre l'Odyssée",
+      "title": "Prakeiksmas, kuriuo prasideda „Odisėja“",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Polyphème prie Poséidon : qu'Ulysse n'arrive jamais chez lui, ou alors tard, seul, après avoir perdu tous ses compagnons. Cette malédiction structure les dix ans d'errance qui suivent. La mer devient un châtiment."
+          "text": "Polifemas meldžia Poseidoną: tegul Odisėjas niekada negrįžta namo, o jei ir grįš, tai vėlai, vienas, praradęs visus bendražygius. Šis prakeiksmas lemia tolesnius dešimt klajonių metų. Jūra tampa bausme."
         },
         {
           "type": "image",
           "asset": "poseidon_god_sea_trident_greek",
           "ratio": "4:3",
-          "caption": "Poséidon, dieu de la mer, venge son fils Polyphème."
+          "caption": "Jūrų dievas Poseidonas keršija už savo sūnų Polifemą."
         },
         {
           "type": "paragraph",
-          "text": "Le mythe oppose deux héroïsmes. Dans l'Iliade, on gagne par la force et la renommée. Dans l'Odyssée, on survit par la retenue. Ulysse a gagné par l'esprit. Il a perdu par l'orgueil de vouloir être reconnu."
+          "text": "Mitas supriešina du didvyriškumo tipus. „Iliadoje“ laimima jėga ir šlove. „Odisėjoje“ išgyvenama santūrumu. Odisėjas laimėjo protu. Pralaimėjo dėl puikybės, nes norėjo būti pripažintas."
         },
         {
           "type": "takeaway",
-          "text": "Face à Polyphème, Ulysse triomphe grâce à la [[metis]] et au nom « Personne ». En révélant son identité pour le [[kleos]], il déclenche la colère de Poséidon et prolonge son exil."
+          "text": "Prieš Polifemą Odisėją į pergalę atveda [[metis]] ir vardas „Niekas“. Atskleidęs savo tapatybę, nes jam rūpėjo [[kleos]], jis užtraukia Poseidono rūstybę ir pratęsia savo tremtį."
         }
       ]
     }

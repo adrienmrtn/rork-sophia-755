@@ -1,143 +1,143 @@
 {
   "id": "course_138_bach_et_la_musique_baroque",
-  "title": "Bach et la musique baroque",
+  "title": "Bachas ir baroko muzika",
   "subtitle": "1685-1750",
   "subject": "art",
   "subcategory": "Musique",
-  "description": "Johann Sebastian Bach, cantor à Leipzig, porte la fugue et le contrepoint à leur sommet et devient l'architecte du baroque.",
+  "description": "Johannas Sebastianas Bachas, Leipcigo kantorius, iškelia fugą ir kontrapunktą į viršūnę ir tampa baroko architektu.",
   "hero": {
     "image": "bach_et_la_musique_baroque",
     "ratio": "16:9",
-    "hook": "Un cantor de Leipzig construit la cathédrale sonore de l'Occident."
+    "hook": "Leipcigo kantorius stato Vakarų garsų katedrą."
   },
   "sections": [
     {
       "id": "course_138_bach_et_la_musique_baroque_intro",
-      "title": "Introduction",
+      "title": "Įvadas",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Johann Sebastian Bach** (**1685**-**1750**) est souvent tenu pour le sommet de la musique occidentale. Architecte des sons, il porte à perfection l'art de la **fugue** et du [[Kontrapunktas]] : plusieurs lignes mélodiques indépendantes qui s'entrelacent."
+          "text": "**Johannas Sebastianas Bachas** (**1685**-**1750**) dažnai laikomas Vakarų muzikos viršūne. Šio garsų architekto rankose tobulumą pasiekia **fugos** menas ir [[Kontrapunktas]]: kelios savarankiškos melodinės linijos, kurios susipina."
         },
         {
           "type": "paragraph",
-          "text": "Sa vie n'est pas celle d'une star de cour. C'est celle d'un artisan de génie, au service de l'Église et des princes, dont l'œuvre ne sera pleinement redécouverte qu'au XIXe siècle."
+          "text": "Jo gyvenimas nėra dvaro žvaigždės gyvenimas. Tai genialaus amatininko, tarnaujančio Bažnyčiai ir kunigaikščiams, gyvenimas, o jo kūryba iki galo iš naujo atrasta tik XIX a."
         }
       ]
     },
     {
       "id": "course_138_bach_et_la_musique_baroque_p1",
-      "title": "Le baroque : église, cour et scène",
+      "title": "Barokas: bažnyčia, dvaras ir scena",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L'ère **baroque** va environ de **1600** à la mort de Bach. Elle aime contraste, mouvement, ornement. **Vivaldi** en Italie, **Haendel** en Allemagne puis en Angleterre, dominent le paysage. La musique sert trois missions : l'église (orgue et chant sacré), la chambre des princes, et la scène (opéra)."
+          "text": "**Baroko** epocha trunka maždaug nuo **1600** m. iki Bacho mirties. Ji mėgsta kontrastą, judesį, puošybą. Vyrauja **Vivaldi** Italijoje ir **Händelis** Vokietijoje, vėliau Anglijoje. Muzika tarnauja trims tikslams: bažnyčiai (vargonai ir sakralinis giedojimas), kunigaikščių rūmų menėms ir scenai (opera)."
         },
         {
           "type": "paragraph",
-          "text": "Bach n'écrit pas d'opéra, mais il injecte le drame lyrique dans ses Passions et oratorios. Il synthétise mesure française, lyrisme italien et rigueur allemande. Pour lui, la musique reflète un ordre divin, pas seulement un agrément."
+          "text": "Bachas nerašo operų, bet į savo pasijas ir oratorijas įlieja lyrinės dramos. Jis sujungia prancūzišką saiką, itališką lyrizmą ir vokišką griežtumą. Jam muzika atspindi dieviškąją tvarką, o ne vien teikia malonumą."
         },
         {
           "type": "funFact",
-          "text": "En 1717 à Weimar, Bach passe un mois en prison pour avoir insisté trop fort à démissionner : le duc refusait de le laisser partir pour Köthen."
+          "text": "1717 m. Veimare Bachas mėnesį praleidžia kalėjime, nes per atkakliai reikalavo atleisti jį iš pareigų: kunigaikštis nenorėjo jo išleisti į Kioteną."
         }
       ]
     },
     {
       "id": "course_138_bach_et_la_musique_baroque_p2",
-      "title": "Leipzig : le cantor et ses cantates",
+      "title": "Leipcigas: kantorius ir jo kantatos",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Né à **Eisenach** en **1685** dans une dynastie de musiciens, Bach s'installe en **1723** à **Leipzig** comme [[kantorius]] de l'église Saint-Thomas. Charge écrasante : une nouvelle [[kantata]] presque chaque semaine, plus l'enseignement à la [[Šv. Tomo mokykla]]."
+          "text": "Gimęs **Eizenache** **1685** m. muzikantų dinastijoje, Bachas **1723** m. atvyksta į **Leipcigą**: čia jis yra Šv. Tomo bažnyčios [[kantorius]]. Krūvis milžiniškas: beveik kas savaitę reikia nauja [[kantata]], be to, jo laukia mokymas, kurio vieta yra [[Šv. Tomo mokykla]]."
         },
         {
           "type": "image",
           "asset": "bach_eisenach_birthplace_portrait",
           "ratio": "4:3",
-          "caption": "Bach, héritier d'une lignée de musiciens allemands."
+          "caption": "Bachas, vokiečių muzikantų giminės paveldėtojas."
         },
         {
           "type": "image",
           "asset": "leipzig_st_thomas_church_bach_cantor",
           "ratio": "4:3",
-          "caption": "Saint-Thomas de Leipzig : le quotidien du cantor Bach."
+          "caption": "Leipcigo Šv. Tomo bažnyčia: kantoriaus Bacho kasdienybė."
         },
         {
           "type": "paragraph",
-          "text": "On estime environ **300** cantates composées, dont quelque **200** nous sont parvenues. Il a **20** enfants de deux mariages ; **Carl Philipp Emanuel** et **Johann Christian** deviennent eux-mêmes des compositeurs majeurs. Le soir, il dirige le [[Collegium Musicum]], ensemble pour lequel il écrit concertos et suites profanes."
+          "text": "Manoma, kad jis sukūrė apie **300** kantatų, iš kurių iki mūsų išliko apie **200**. Iš dviejų santuokų jis turi **20** vaikų; **Carlas Philippas Emanuelis** ir **Johannas Christianas** patys tampa žymiais kompozitoriais. Vakarais jis vadovauja ansambliui [[Collegium Musicum]], kuriam rašo koncertus ir pasaulietines siuitas."
         },
         {
           "type": "funFact",
-          "text": "En fin de vie, opéré des yeux par le chirurgien itinérant John Taylor, Bach devient aveugle peu avant de mourir."
+          "text": "Gyvenimo pabaigoje Bachui akis operuoja keliaujantis chirurgas Johnas Tayloras, ir netrukus prieš mirtį Bachas apanka."
         }
       ]
     },
     {
       "id": "course_138_bach_et_la_musique_baroque_p3",
-      "title": "Le Clavier bien tempéré et la redécouverte",
+      "title": "Gerai temperuotas klavyras ir atgimimas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Avec le [[Tolygioji temperacija]], système d'accordage qui unifie les intervalles, Bach prouve qu'un clavier peut jouer dans toutes les tonalités. *Le Clavier bien tempéré* (48 préludes et fugues) ouvre la voie à la musique moderne. Sa fugue superpose un thème repris par plusieurs voix : architecture mathématique."
+          "text": "Bacho įrankis yra [[Tolygioji temperacija]], derinimo sistema, kuri suvienodina intervalus: ja jis įrodo, kad klavišiniu instrumentu galima groti visomis tonacijomis. *Gerai temperuotas klavyras* (48 preliudai ir fugos) atveria kelią moderniai muzikai. Jo fugoje vieną temą paeiliui perima keli balsai: tai matematinė architektūra."
         },
         {
           "type": "image",
           "asset": "bach_well_tempered_clavier_manuscript_fugue",
           "ratio": "4:3",
-          "caption": "Le Clavier bien tempéré : toutes les tonalités sur un seul clavier."
+          "caption": "Gerai temperuotas klavyras: visos tonacijos vienoje klaviatūroje."
         },
         {
           "type": "paragraph",
-          "text": "À sa mort, la mode préfère le [[Galantiškasis stilius]], plus léger. Bach paraît « gothique ». En **1829**, le jeune **Felix Mendelssohn** dirige à Berlin la *Passion selon Saint-Matthieu* : début de la « Renaissance Bach ». Sans lui, des centaines de partitions auraient pu disparaître."
+          "text": "Bachui mirus, mada renkasi lengvesnį stilių: tai [[Galantiškasis stilius]]. Bachas atrodo „gotiškas“. **1829** m. jaunasis **Felixas Mendelssohnas** Berlyne diriguoja *Pasiją pagal Matą*: prasideda „Bacho renesansas“. Be jo šimtai partitūrų galėjo dingti."
         },
         {
           "type": "funFact",
-          "text": "Mendelssohn plaisantait : il fallait qu'un juif converti et un acteur (son ami Devrient) rendent au monde le plus grand chef-d'œuvre de la musique chrétienne."
+          "text": "Mendelssohnas juokavo: reikėjo, kad atsivertęs žydas ir aktorius (jo draugas Devrientas) grąžintų pasauliui didžiausią krikščioniškosios muzikos šedevrą."
         }
       ]
     },
     {
       "id": "course_138_bach_et_la_musique_baroque_p4",
-      "title": "SDG, Voyager et l'héritage universel",
+      "title": "SDG, „Voyager“ ir visuotinis palikimas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Fervent luthérien, Bach signe souvent **SDG** (*Soli Deo Gloria* : à Dieu seul la gloire). Il joue avec la [[Numerologija]] et code son nom (B-A-C-H) en notes. En **1977**, la NASA place plusieurs de ses œuvres sur le [[Auksinė plokštelė]] des sondes Voyager : ambassade sonore de l'humanité vers l'espace."
+          "text": "Uolus liuteronas Bachas dažnai pasirašo **SDG** (*Soli Deo Gloria*: vien Dievui šlovė). Jį žavi [[Numerologija]], ir savo vardą (B-A-C-H) jis užkoduoja natomis. **1977** m. NASA kelis jo kūrinius įrašo į zondų „Voyager“ diską: tai [[Auksinė plokštelė]], žmonijos garsinė ambasada kosmosui."
         },
         {
           "type": "timeline",
           "events": [
             {
               "date": "1685",
-              "title": "Naissance à Eisenach",
-              "detail": "Une dynastie de musiciens donne Bach au monde."
+              "title": "Gimimas Eizenache",
+              "detail": "Muzikantų dinastija dovanoja pasauliui Bachą."
             },
             {
               "date": "1723",
-              "title": "Cantor à Leipzig",
-              "detail": "Cantates hebdomadaires et œuvre sacrée immense."
+              "title": "Kantorius Leipcige",
+              "detail": "Kantatos kas savaitę ir milžiniškas sakralinės muzikos palikimas."
             },
             {
               "date": "1722-1742",
-              "title": "Clavier bien tempéré",
-              "detail": "Toutes les tonalités, la fugue comme cathédrale."
+              "title": "Gerai temperuotas klavyras",
+              "detail": "Visos tonacijos, fuga kaip katedra."
             },
             {
               "date": "1829",
-              "title": "Mendelssohn",
-              "detail": "La Passion selon Saint-Matthieu revient à la lumière."
+              "title": "Mendelssohnas",
+              "detail": "„Pasija pagal Matą“ vėl išvysta dienos šviesą."
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "Cantor de Leipzig, Bach a porté le contrepoint et la fugue à leur sommet ; oublié puis ressuscité par Mendelssohn, il reste l'architecte du baroque."
+          "text": "Leipcigo kantorius Bachas iškėlė kontrapunktą ir fugą į viršūnę; užmirštas, o vėliau Mendelssohno prikeltas, jis lieka baroko architektu."
         }
       ]
     }

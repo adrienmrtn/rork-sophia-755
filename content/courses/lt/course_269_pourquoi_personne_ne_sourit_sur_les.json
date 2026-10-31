@@ -1,161 +1,161 @@
 {
   "id": "course_269_pourquoi_personne_ne_sourit_sur_les",
-  "title": "Pourquoi personne ne sourit sur les vieilles photos ?",
-  "subtitle": "Poser, pas sourire",
+  "title": "Kodėl senose nuotraukose niekas nesišypso?",
+  "subtitle": "Pozuoti, o ne šypsotis",
   "subject": "sciences",
   "subcategory": "Notre quotidien expliqué",
-  "description": "Sur les portraits du XIXe siècle, personne ne sourit. On accuse la lenteur des appareils, mais la vraie raison tient à trois siècles de règles du portrait.",
+  "description": "XIX a. portretuose niekas nesišypso. Kaltinamas lėtas fotoaparatas, bet tikroji priežastis yra trys šimtmečiai portreto taisyklių.",
   "author": "guido-manuel-de-la-torre-olvera",
   "hero": {
     "image": "victorian_family_daguerreotype_unsmiling_portrait",
     "ratio": "4:3",
-    "hook": "Ils ne sont pas tristes, et l'appareil n'est pas trop lent : ils posent pour un portrait."
+    "hook": "Jie neliūdni, ir aparatas nėra per lėtas: jie pozuoja portretui."
   },
   "sections": [
     {
       "id": "course_269_pourquoi_personne_ne_sourit_sur_les_intro",
-      "title": "Introduction",
+      "title": "Įvadas",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La photographie commence par une pièce, pas par un appareil. La [[camera obscura]] est une salle obscure percée d'un petit trou : la lumière y projette, sur le mur d'en face, l'image renversée du dehors. Décrite dès la Chine ancienne, étudiée des Grecs à Léonard de Vinci, elle montre l'image. Elle ne sait pas la garder."
+          "text": "Fotografija prasideda nuo kambario, ne nuo aparato. Tamsioji kamera, arba [[camera obscura]], yra tamsi patalpa su maža skylute: pro ją šviesa ant priešingos sienos projektuoja apverstą lauko vaizdą. Aprašyta jau senovės Kinijoje, tyrinėta nuo graikų iki Leonardo da Vinčio, ji vaizdą parodo. Išsaugoti jo ji nemoka."
         },
         {
           "type": "paragraph",
-          "text": "Il faut attendre **1826** pour qu'un inventeur français, [[Nicéphore'as Niépce]], fixe la vue depuis sa fenêtre, au Gras : la plus ancienne photographie d'après nature conservée. Il travaille au bitume, et la plaque reste des **heures** dans l'appareil. Niépce s'associe ensuite à un autre inventeur, Louis Daguerre, qui remplace le bitume par une résine plus sensible. Même ainsi, personne ne pose pour un portrait : rien de vivant ne tient immobile aussi longtemps."
+          "text": "Tik **1826** m. prancūzų išradėjas [[Nicéphore'as Niépce]] užfiksuoja vaizdą pro savo langą Le Gras dvare: tai seniausia išlikusi nuotrauka iš natūros. Jis dirba su bitumu, ir plokštelė aparate išbūna ištisas **valandas**. Vėliau Niépce'as susideda su kitu išradėju, Louis Daguerre'u, kuris bitumą pakeičia jautresne derva. Net ir taip niekas portretui nepozuoja: joks gyvas padaras negali taip ilgai išbūti nejudėdamas."
         }
       ]
     },
     {
       "id": "course_269_pourquoi_personne_ne_sourit_sur_les_p1",
-      "title": "L'homme qui ne bougeait pas",
+      "title": "Žmogus, kuris nejudėjo",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En **1837**, Daguerre tient un procédé qui fonctionne : une plaque argentée sensibilisée à la vapeur d'iode, développée à la vapeur de mercure, fixée à l'eau salée chaude. C'est le [[dagerotipas]]. Le [[ekspozicijos trukmė]] tombe de plusieurs heures à quelques minutes."
+          "text": "**1837** m. Daguerre'as turi veikiantį procesą: sidabruota plokštelė įjautrinama jodo garais, ryškinama gyvsidabrio garais ir fiksuojama karštu sūriu vandeniu. Tai yra [[dagerotipas]]. Taip sutrumpėja [[ekspozicijos trukmė]]: nuo kelių valandų iki kelių minučių."
         },
         {
           "type": "paragraph",
-          "text": "En **1838**, il pointe son appareil vers le boulevard du Temple, l'une des rues les plus animées de Paris. La photographie montre une ville vide : chaque voiture, chaque passant traverse le cadre trop vite pour laisser une trace sur la plaque."
+          "text": "**1838** m. jis nukreipia aparatą į Tamplio bulvarą, vieną gyviausių Paryžiaus gatvių. Nuotraukoje matyti tuščias miestas: kiekvienas vežimas, kiekvienas praeivis kadrą kerta per greitai, kad paliktų pėdsaką plokštelėje."
         },
         {
           "type": "image",
           "asset": "daguerre_boulevard_du_temple_1838_first_person",
           "ratio": "4:3",
-          "caption": "Le boulevard du Temple par Daguerre, 1838 : en bas à gauche, l'homme qui se fait cirer les bottes."
+          "caption": "Daguerre'o Tamplio bulvaras, 1838 m.: apačioje kairėje žmogus, kuriam valomi batai."
         },
         {
           "type": "paragraph",
-          "text": "Sauf un. Un homme qui se fait cirer les bottes reste immobile pendant toute la pose et devient le premier être humain jamais photographié. Il est sur l'image parce qu'il ne bouge pas. En **1839**, la France achète le procédé et l'offre au monde : la nouvelle fait sensation."
+          "text": "Išskyrus vieną. Žmogus, kuriam valomi batai, visą ekspoziciją išstovi nejudėdamas ir tampa pirmuoju kada nors nufotografuotu žmogumi. Jis pateko į nuotrauką todėl, kad nejuda. **1839** m. Prancūzija nuperka šį procesą ir padovanoja jį pasauliui: naujiena sukelia furorą."
         }
       ]
     },
     {
       "id": "course_269_pourquoi_personne_ne_sourit_sur_les_p2",
-      "title": "L'excuse de la lenteur s'effondre",
+      "title": "Lėtumo pasiteisinimas žlunga",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La même année, à **Philadelphie**, [[Robertas Cornelius]] installe un appareil devant la boutique familiale, découvre l'objectif, entre dans le cadre et attend. Le résultat : le plus ancien autoportrait photographique conservé. Cheveux en désordre, bras croisés, regard de côté. Il ne sourit pas."
+          "text": "Tais pačiais metais **Filadelfijoje** [[Robertas Cornelius]] pastato aparatą prie šeimos parduotuvės, nuima objektyvo dangtelį, įžengia į kadrą ir laukia. Rezultatas: seniausias išlikęs fotografinis autoportretas. Susivėlę plaukai, sukryžiuotos rankos, žvilgsnis į šoną. Jis nesišypso."
         },
         {
           "type": "image",
           "asset": "robert_cornelius_self_portrait_1839_daguerreotype",
           "ratio": "3:4",
-          "caption": "L'autoportrait de Robert Cornelius, Philadelphie, 1839."
+          "caption": "Roberto Corneliaus autoportretas, Filadelfija, 1839 m."
         },
         {
           "type": "paragraph",
-          "text": "C'est ici que l'explication habituelle commence à flancher. Les objectifs deviennent plus lumineux, la chimie progresse, et en quelques années un portrait ne demande plus que des **secondes**. Dans les années **1850**, un photographe saisit son modèle le temps d'une respiration."
+          "text": "Būtent čia įprastas paaiškinimas ima svyruoti. Objektyvai tampa šviesesni, chemija tobulėja, ir po kelerių metų portretui tereikia kelių **sekundžių**. Jau **1850**-ųjų dešimtmetyje fotografas užfiksuoja modelį per vieną įkvėpimą."
         },
         {
           "type": "paragraph",
-          "text": "Les visages devraient donc se détendre. Ils ne le font pas. Pendant encore **cinquante ans**, presque tous ceux qui posent devant un appareil regardent droit devant eux, bouche fermée. La lenteur des appareils n'explique plus rien : il faut chercher ailleurs."
+          "text": "Taigi veidai turėtų atsipalaiduoti. Bet taip nebūna. Dar **penkiasdešimt metų** beveik visi, kurie pozuoja prieš aparatą, žiūri tiesiai priešais save sučiauptomis lūpomis. Aparatų lėtumas nebepaaiškina nieko: priežasties reikia ieškoti kitur."
         }
       ]
     },
     {
       "id": "course_269_pourquoi_personne_ne_sourit_sur_les_p3",
-      "title": "Un sourire voulait dire autre chose",
+      "title": "Šypsena reiškė ką kita",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La vraie réponse, c'est qu'une photographie n'est pas un [[momentinė nuotrauka]]. C'est un portrait, et le portrait traîne derrière lui **trois cents ans** de règles héritées de la peinture. Les peintres savaient ce qu'un large sourire signalait, et ce n'était pas le bonheur."
+          "text": "Tikrasis atsakymas toks: fotografija nėra [[momentinė nuotrauka]]. Tai portretas, o portretas tempia paskui save **tris šimtus metų** iš tapybos paveldėtų taisyklių. Dailininkai žinojo, ką reiškia plati šypsena, ir tai nebuvo laimė."
         },
         {
           "type": "image",
           "asset": "frans_hals_malle_babbe_laughing_woman_painting",
           "ratio": "3:2",
-          "caption": "Malle Babbe, de Frans Hals (Gemäldegalerie, Berlin), détail : le rire à pleines dents, signe de folie ou d'ivresse en peinture."
+          "caption": "Franso Halso „Malle Babbe“ (Gemäldegalerie, Berlynas), fragmentas: juokas išsišiepus tapyboje reiškė beprotybę arba girtumą."
         },
         {
           "type": "paragraph",
-          "text": "L'historien de l'art [[Angusas Trumble'as]], auteur d'une histoire du sourire, le dit sans détour : un grand sourire signalait la folie, l'ivresse ou la bêtise. Un saint pouvait en porter un, à peine esquissé. Une personne respectable qui posait pour son portrait, non."
+          "text": "Meno istorikas [[Angusas Trumble'as]], šypsenos istorijos autorius, sako tiesiai: plati šypsena reiškė beprotybę, girtumą arba kvailumą. Šventasis galėjo šypsotis vos vos. Garbingas žmogus, pozuojantis portretui, ne."
         },
         {
           "type": "funFact",
-          "text": "Les dents comptent aussi. Pour Angus Trumble, c'est la dentisterie, et non la timidité, qui finit par permettre d'ouvrir la bouche devant l'objectif."
+          "text": "Svarbūs ir dantys. Angusas Trumble'as mano, kad būtent odontologija, o ne drovumas, galiausiai leido prieš objektyvą praverti burną."
         },
         {
           "type": "paragraph",
-          "text": "Alors les premiers photographes copient les peintres. On s'assied droit, on regarde l'objectif, on garde la bouche fermée. Ce que l'image enregistre, c'est la dignité du modèle, pas son humeur du jour : le sérieux est une tenue, pas un état d'âme."
+          "text": "Taigi pirmieji fotografai kopijuoja dailininkus. Sėdima tiesiai, žiūrima į objektyvą, burna laikoma užčiaupta. Vaizdas užfiksuoja modelio orumą, o ne tos dienos nuotaiką: rimtumas yra apranga, ne sielos būsena."
         }
       ]
     },
     {
       "id": "course_269_pourquoi_personne_ne_sourit_sur_les_p4",
-      "title": "On sourit quand personne ne pose",
+      "title": "Šypsomasi, kai niekas nepozuoja",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La règle n'est pas absolue, et les exceptions la trahissent. Sur une photographie de **1847**, l'un de deux officiers de la guerre américano-mexicaine sourit largement. Sur une partie de cartes de **1853**, un joueur sourit pendant que l'autre étudie son jeu. En **1860**, un homme boxe, poings levés, visiblement ravi."
+          "text": "Taisyklė nėra absoliuti, ir išimtys ją išduoda. **1847** m. nuotraukoje vienas iš dviejų Meksikos ir Amerikos karo karininkų plačiai šypsosi. **1853** m. kortų partijos nuotraukoje vienas žaidėjas šypsosi, kol kitas tyrinėja savo kortas. **1860** m. žmogus boksuoja iškėlęs kumščius, akivaizdžiai patenkintas."
         },
         {
           "type": "paragraph",
-          "text": "Aucun d'eux ne se fait tirer le portrait. Ils font quelque chose, et l'appareil se trouve là. Ce qui change tout, c'est l'instantané : les appareils bon marché mettent la photographie entre les mains de gens qui ne posent pas, et dans les années **1920** le sourire devient le visage attendu."
+          "text": "Nė vienas iš jų nepozuoja portretui. Jie kažką veikia, o aparatas tiesiog yra šalia. Viską pakeičia momentinė nuotrauka: pigūs aparatai atiduoda fotografiją į rankas žmonėms, kurie nepozuoja, ir **1920**-ųjų dešimtmetyje šypsena tampa laukiama veido išraiška."
         },
         {
           "type": "timeline",
           "events": [
             {
               "date": "1826",
-              "title": "Première photographie",
-              "detail": "Niépce fixe la vue depuis sa fenêtre du Gras, après des heures de pose."
+              "title": "Pirmoji nuotrauka",
+              "detail": "Po kelias valandas trukusios ekspozicijos Niépce'as užfiksuoja vaizdą pro savo langą Le Gras dvare."
             },
             {
               "date": "1838",
-              "title": "Le boulevard du Temple",
-              "detail": "Daguerre photographie une rue vide, sauf un homme immobile."
+              "title": "Tamplio bulvaras",
+              "detail": "Daguerre'as nufotografuoja tuščią gatvę, kurioje tik vienas nejudantis žmogus."
             },
             {
               "date": "1839",
-              "title": "Premier autoportrait",
-              "detail": "Robert Cornelius pose devant la boutique familiale, sans sourire."
+              "title": "Pirmasis autoportretas",
+              "detail": "Robertas Cornelius pozuoja prie šeimos parduotuvės, nesišypsodamas."
             },
             {
-              "date": "Années 1850",
-              "title": "Quelques secondes suffisent",
-              "detail": "Les visages restent pourtant fermés pendant cinquante ans."
+              "date": "1850-ieji",
+              "title": "Užtenka kelių sekundžių",
+              "detail": "Vis dėlto veidai dar penkiasdešimt metų lieka rūstūs."
             },
             {
-              "date": "Années 1920",
-              "title": "Le sourire s'impose",
-              "detail": "Avec l'instantané, sourire devient le visage attendu."
+              "date": "1920-ieji",
+              "title": "Šypsena įsigali",
+              "detail": "Atsiradus momentinei nuotraukai, šypsena tampa laukiama veido išraiška."
             }
           ]
         },
         {
           "type": "paragraph",
-          "text": "Nous avons hérité de ce réflexe, et c'est pour cela que le **XIXe siècle** nous paraît si malheureux. Il ne l'était pas. Ces hommes et ces femmes se tiennent comme on se tenait devant un peintre, droits et sérieux : ils prennent la pose."
+          "text": "Mes paveldėjome šį refleksą, todėl **XIX amžius** mums atrodo toks nelaimingas. Toks jis nebuvo. Šie vyrai ir moterys laikosi taip, kaip buvo laikomasi prieš dailininką, tiesiai ir rimtai: jie pozuoja."
         },
         {
           "type": "takeaway",
-          "text": "Si personne ne sourit sur les vieilles photos, ce n'est pas la lenteur des appareils : c'est la règle du portrait, héritée des peintres, pour qui un grand sourire trahissait la folie ou l'ivresse."
+          "text": "Senose nuotraukose niekas nesišypso ne dėl lėtų aparatų, o dėl portreto taisyklės, paveldėtos iš dailininkų, kuriems plati šypsena reiškė beprotybę arba girtumą."
         }
       ]
     }

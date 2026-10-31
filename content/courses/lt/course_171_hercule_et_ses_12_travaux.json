@@ -1,116 +1,116 @@
 {
   "id": "course_171_hercule_et_ses_12_travaux",
-  "title": "Hercule et ses 12 travaux",
-  "subtitle": "Du chaos à l'Olympe",
+  "title": "Heraklis ir jo 12 žygdarbių",
+  "subtitle": "Nuo chaoso iki Olimpo",
   "subject": "mythologie",
   "subcategory": "Grèce : les héros",
-  "description": "Héraclès, fils de Zeus, tue sa famille dans un accès de folie. Ses Douze Travaux sont une pénitence : tuer des monstres, puis vaincre la mort elle-même.",
+  "description": "Dzeuso sūnus Heraklis beprotybės priepuolio apimtas nužudo savo šeimą. Jo Dvylika žygdarbių yra atgaila: nugalėti pabaisas, o galiausiai įveikti pačią mirtį.",
   "hero": {
     "image": "hercule_et_ses_12_travaux",
     "ratio": "16:9",
-    "hook": "Douze épreuves pour laver un crime. Un demi-dieu qui finit parmi les dieux."
+    "hook": "Dvylika išbandymų nusikaltimui nuplauti. Pusdievis, kuris atsiduria tarp dievų."
   },
   "sections": [
     {
       "id": "course_171_hercule_et_ses_12_travaux_intro",
-      "title": "Introduction",
+      "title": "Įvadas",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Héraclès**, appelé **Hercule** par les Romains, est le plus grand héros grec. Fils de [[Dzeusas]], roi des dieux, et de la mortelle **Alcmène**, il n'est pas seulement un colosse. Il incarne la force, mais aussi la violence et la rédemption."
+          "text": "**Heraklis**, romėnų vadintas **Herkuliu**, yra didžiausias graikų herojus. Jo tėvas yra dievų karalius [[Dzeusas]], o motina mirtingoji **Alkmena**. Jis ne vien milžinas stipruolis. Jis įkūnija jėgą, bet kartu smurtą ir atpirkimą."
         },
         {
           "type": "paragraph",
-          "text": "Ses **Douze Travaux** ne sont pas une quête de gloire volontaire. C'est une pénitence pour un crime atroce. En purgeant le monde des monstres, Héraclès ouvre la voie à la civilisation… et gagne, rare privilège, l'immortalité."
+          "text": "Jo **Dvylika žygdarbių** nėra savanoriškas šlovės ieškojimas. Tai atgaila už baisų nusikaltimą. Valydamas pasaulį nuo pabaisų, Heraklis atveria kelią civilizacijai… ir gauna retą privilegiją: nemirtingumą."
         }
       ]
     },
     {
       "id": "course_171_hercule_et_ses_12_travaux_p1",
-      "title": "La folie d'Héra, le crime, la pénitence",
+      "title": "Heros beprotybė, nusikaltimas, atgaila",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "[[Hera]], épouse légitime de Zeus, hait l'enfant né d'une infidélité. Dès le berceau, elle envoie deux serpents. Le nourrisson les étouffe à mains nues. Plus tard, Héraclès épouse **Mégara**, fille du roi de Thèbes. Héra le frappe alors de folie : il massacre sa femme et ses enfants."
+          "text": "[[Hera]], teisėta Dzeuso žmona, nekenčia vaiko, gimusio iš neištikimybės. Dar į lopšį ji pasiunčia dvi gyvates. Kūdikis jas pasmaugia plikomis rankomis. Vėliau Heraklis veda **Megarą**, Tėbų karaliaus dukterį. Tada Hera užsiunčia jam beprotybę: jis išžudo žmoną ir vaikus."
         },
         {
           "type": "paragraph",
-          "text": "Ce crime de sang, un [[Miasma]], le place hors de la société. L'oracle de Delphes lui ordonne de servir son cousin, le roi **Eurysthée**. Ce souverain peureux, guidé par Héra, lui impose dix travaux, puis douze, car il refuse d'en compter certains."
+          "text": "Šis kraujo nusikaltimas, [[Miasma]], išstumia jį iš visuomenės. Delfų orakulas liepia jam tarnauti pusbroliui, karaliui **Euristėjui**. Šis bailus valdovas, Heros kurstomas, skiria jam dešimt žygdarbių, paskui dvylika, nes kai kurių atsisako įskaityti."
         },
         {
           "type": "funFact",
-          "text": "Selon la légende, le lait d'Héra, jailli de son sein alors qu'elle allaitait Héraclès par ruse, aurait formé la **Voie lactée** dans le ciel."
+          "text": "Pasak legendos, Heros pienas, ištryškęs iš krūties, kai ji, apgauta, žindė Heraklį, danguje virto **Paukščių Taku**."
         }
       ]
     },
     {
       "id": "course_171_hercule_et_ses_12_travaux_p2",
-      "title": "Lions, hydres et écuries",
+      "title": "Liūtai, hidros ir arklidės",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le premier défi est le **Lion de Némée**, à la peau impénétrable. Héraclès l'étrangle, puis le dépouille avec ses propres griffes. Cette peau, la [[Leontė]], devient son armure. Vient ensuite l'**Hydre de Lerne**, serpent à plusieurs têtes : pour chaque tête coupée, deux repoussent. Avec son neveu Iolaos, il cautérise les cous au feu."
+          "text": "Pirmasis išbandymas yra **Nemėjos liūtas**, kurio kailio neperduria joks ginklas. Heraklis jį pasmaugia, paskui nudiria jo paties nagais. Šis kailis, [[Leontė]], tampa jo šarvais. Paskui laukia **Lernos hidra**, daugiagalvė gyvatė: vietoj kiekvienos nukirstos galvos atauga dvi. Su sūnėnu Jolajumi jis išdegina kaklus ugnimi."
         },
         {
           "type": "image",
           "asset": "hercules_nemean_lion_hydra_labours_painting",
           "ratio": "4:3",
-          "caption": "Héraclès face au Lion de Némée et à l'Hydre."
+          "caption": "Heraklis prieš Nemėjos liūtą ir Hidrą"
         },
         {
           "type": "funFact",
-          "text": "Les Anciens disaient que Zeus avait placé le Lion de Némée parmi les étoiles : la constellation du **Lion**."
+          "text": "Senovės žmonės sakė, kad Dzeusas Nemėjos liūtą iškėlė tarp žvaigždžių: tai **Liūto** žvaigždynas."
         },
         {
           "type": "paragraph",
-          "text": "Les **Écuries d'Augias** changent de registre. Des milliers de bœufs n'ont pas été nettoyés depuis trente ans. Eurysthée veut humilier le héros. Héraclès détourne les fleuves [[Alfėjas]] et Pénée : en un jour, le courant emporte le fumier. L'intelligence vaut autant que les muscles."
+          "text": "**Augijo arklidės** pakeičia toną. Tūkstančiai jaučių nevalyti trisdešimt metų. Euristėjas nori pažeminti herojų. Heraklis nukreipia dvi upes, Pinėją ir dar vieną, kuri vadinasi [[Alfėjas]]: per vieną dieną srovė nuplauna mėšlą. Protas vertas tiek pat, kiek raumenys."
         }
       ]
     },
     {
       "id": "course_171_hercule_et_ses_12_travaux_p3",
-      "title": "Jusqu'aux confins du monde",
+      "title": "Iki pasaulio pakraščių",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Les travaux l'éloignent de la Grèce : Taureau de Crète, juments mangeuses d'hommes, ceinture d'**Hippolyte**, reine des Amazones. Pour le troupeau du géant **Géryon**, à l'extrême Occident, Héraclès ouvre un passage entre Méditerranée et Atlantique : les [[Heraklio stulpai]], aujourd'hui le détroit de Gibraltar."
+          "text": "Žygdarbiai nuveda jį toli nuo Graikijos: Kretos jautis, žmonėmis mintančios kumelės, amazonių karalienės **Hipolitės** diržas. Dėl milžino **Geriono** bandos tolimuosiuose Vakaruose Heraklis atveria praėjimą tarp Viduržemio jūros ir Atlanto: tai [[Heraklio stulpai]], šiandien Gibraltaro sąsiauris."
         },
         {
           "type": "paragraph",
-          "text": "Il vole les **pommes d'or** des Hespérides en rusant avec le titan [[Atlantas]], qui porte le ciel. Le dernier travail est le plus terrible : descendre aux Enfers et en ramener **Cerbère**, le chien à plusieurs têtes. En ressortir vivant, c'est symboliquement vaincre la mort."
+          "text": "Dangų laiko titanas [[Atlantas]]; jį apgavęs, Heraklis pavagia Hesperidžių **auksinius obuolius**. Paskutinis žygdarbis baisiausias: nusileisti į požemių karalystę ir parvesti iš ten **Kerberį**, daugiagalvį šunį. Grįžti gyvam reiškia simboliškai nugalėti mirtį."
         },
         {
           "type": "funFact",
-          "text": "L'explorateur Orellana aurait nommé le fleuve **Amazone** après avoir cru voir des guerrières sur ses rives, en écho aux Amazones du mythe."
+          "text": "Sakoma, kad tyrinėtojas Orellana pavadino upę **Amazone**, nes jam pasirodė, kad jos krantuose mato kariauninkes, tarsi mito amazones."
         }
       ]
     },
     {
       "id": "course_171_hercule_et_ses_12_travaux_p4",
-      "title": "L'apothéose : un héros devient dieu",
+      "title": "Apoteozė: herojus tampa dievu",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Les Travaux finissent, mais pas les tragédies. Sa femme **Déjanire** lui fait porter une tunique imbibée du sang empoisonné du [[kentauras]] Nessus. Brûlé vif, Héraclès monte sur un bûcher au mont Œta. Sa part mortelle brûle. Son essence divine monte vers l'Olympe : c'est l'**apothéose**."
+          "text": "Žygdarbiai baigiasi, bet tragedijos ne. Žmona **Dejanira** duoda jam vilkėti tuniką, permirkusią nuodingu Neso krauju (Nesas buvo [[kentauras]]). Degdamas gyvas, Heraklis užlipa ant laužo Etos kalne. Jo mirtingoji dalis sudega. Dieviškoji esmė pakyla į Olimpą: tai **apoteozė**."
         },
         {
           "type": "image",
           "asset": "hercules_olympus_divinization_rubens_painting",
           "ratio": "4:3",
-          "caption": "L'apothéose d'Héraclès : le héros rejoint les dieux."
+          "caption": "Heraklio apoteozė: herojus prisijungia prie dievų"
         },
         {
           "type": "paragraph",
-          "text": "Réconcilié avec Héra, il épouse **Hébé**, l'éternelle jeunesse. Les Romains adoptent sa figure sous le nom d'**Hercule**. Un « travail herculéen » désigne encore une tâche immense. Héraclès n'est pas qu'un tueur de monstres : il est un architecte de l'ordre."
+          "text": "Susitaikęs su Hera, jis veda **Hebę**, amžinąją jaunystę. Romėnai perima jo figūrą **Herkulio** vardu. „Herkulio darbu“ iki šiol vadinama milžiniška užduotis. Heraklis ne vien pabaisų žudikas: jis tvarkos kūrėjas."
         },
         {
           "type": "takeaway",
-          "text": "**Héraclès** (Hercule) accomplit douze travaux pour expier le meurtre de sa famille. Du Lion de Némée à Cerbère, il passe du chaos à la civilisation… et gagne l'immortalité."
+          "text": "**Heraklis** (Herkulis) atlieka dvylika žygdarbių, kad išpirktų savo šeimos nužudymą. Nuo Nemėjos liūto iki Kerberio jis pereina nuo chaoso prie civilizacijos… ir gauna nemirtingumą."
         }
       ]
     }

@@ -1,143 +1,143 @@
 {
   "id": "course_140_le_blues_racines_de_toute_la_musique_mod",
-  "title": "Le blues est-il la racine de la musique moderne ?",
+  "title": "Ar bliuzas yra šiuolaikinės muzikos šaknis?",
   "subtitle": "1870-1960",
   "subject": "art",
   "subcategory": "Musique",
-  "description": "Né dans les champs de coton du Mississippi, le blues invente la grille en 12 mesures et nourrit jazz, rock, soul et hip-hop.",
+  "description": "Gimęs Misisipės medvilnės laukuose, bliuzas sukūrė 12 taktų formą ir išmaitino džiazą, roką, soulą ir hiphopą.",
   "hero": {
     "image": "le_blues_racines_de_toute_la_musique_moderne",
     "ratio": "16:9",
-    "hook": "Un cri dans les champs de coton, et toute la musique moderne a une racine."
+    "hook": "Vienas šauksmas medvilnės laukuose, ir visa šiuolaikinė muzika turi savo šaknį."
   },
   "sections": [
     {
       "id": "course_140_le_blues_racines_de_toute_la_musique_mod_intro",
-      "title": "Introduction",
+      "title": "Įžanga",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le blues n'est pas seulement un genre. C'est la matrice d'une grande part de la musique populaire occidentale du XXe siècle. Il naît dans le dénuement des champs de coton du **Mississippi**, à la fin du XIXe siècle, comme résistance et expression des Africains-Américains."
+          "text": "Bliuzas yra ne tik žanras. Tai didelės dalies XX a. Vakarų populiariosios muzikos pagrindas. Jis gimsta XIX a. pabaigoje skurdžiuose **Misisipės** medvilnės laukuose kaip afroamerikiečių pasipriešinimas ir saviraiška."
         },
         {
           "type": "paragraph",
-          "text": "Du jazz au rock'n'roll, de la soul au hip-hop, ses structures et son émotion irriguent encore nos oreilles. Comprendre le blues, c'est remonter à la source d'un cri transformé en art."
+          "text": "Nuo džiazo iki rokenrolo, nuo soulo iki hiphopo: jo struktūros ir emocija iki šiol pasiekia mūsų ausis. Suprasti bliuzą reiškia grįžti prie šaltinio, kur šauksmas virto menu."
         }
       ]
     },
     {
       "id": "course_140_le_blues_racines_de_toute_la_musique_mod_p1",
-      "title": "Champs de coton, hollers et 12 mesures",
+      "title": "Medvilnės laukai, šūksniai ir 12 taktų",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Entre **1870** et **1890**, dans le [[Gilieji Pietūs]] marqué par la ségrégation et la misère des métayers, le blues synthétise des traditions orales africaines. Les [[laukų šūksniai]] (cris de travail solitaires) et les [[darbo dainos]] (chants cadencés pour synchroniser l'effort) croisent les [[spiričiuelsai]], chants religieux parfois porteurs de messages de liberté."
+          "text": "**1870**-**1890** m. [[Gilieji Pietūs]] gyvena segregacijos ir skurdžių pusininkų vargo ženkle, o bliuzas ten sujungia afrikietiškas žodines tradicijas. Susitinka [[laukų šūksniai]] (pavieniai darbo šauksmai), [[darbo dainos]] (ritmingos dainos, padedančios derinti pastangas) ir [[spiričiuelsai]], religinės giesmės, kartais nešusios laisvės žinią."
         },
         {
           "type": "paragraph",
-          "text": "L'innovation majeure : la [[12 taktų struktūra]], grille de trois accords qui sert de canevas à l'improvisation. Les [[bliuzinės natos]], notes fléchies, imitent la douleur de la voix. La guitare, souvent avec un [[bottleneck]] (tube de verre ou métal glissé sur les cordes), dialogue avec le chanteur."
+          "text": "Svarbiausia naujovė: [[12 taktų struktūra]], trijų akordų seka, tampanti improvizacijos pagrindu. Vadinamosios [[bliuzinės natos]] (šiek tiek pažemintos natos) mėgdžioja balso skausmą. Gitara kalbasi su dainininku; dažnai naudojamas [[bottleneck]] (stiklinis ar metalinis vamzdelis, slystantis stygomis)."
         },
         {
           "type": "funFact",
-          "text": "Dans les paroles, le mot « rider » (cavalier) codait souvent un amant, pour aborder des thèmes tabous devant un public non averti."
+          "text": "Dainų žodžiuose žodis „rider“ (raitelis) dažnai reiškė meilužį: taip buvo galima kalbėti apie tabu temas nieko neįtariančių klausytojų akivaizdoje."
         }
       ]
     },
     {
       "id": "course_140_le_blues_racines_de_toute_la_musique_mod_p2",
-      "title": "Robert Johnson et le mythe du Delta",
+      "title": "Robertas Johnsonas ir Deltos mitas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le **Delta du Mississippi**, entre Memphis et Vicksburg, est le berceau du **Delta blues**, forme brute du genre. **Robert Johnson** (**1911**-**1938**) incarne le musicien errant : seulement **29** enregistrements, une influence immense. Son [[fingerpikingas]] traite la guitare comme un orchestre miniature."
+          "text": "**Misisipės delta** tarp Memfio ir Viksburgo yra **Deltos bliuzo**, šiurkščiausios žanro formos, lopšys. **Robertas Johnsonas** (**1911**-**1938**) įkūnija klajojantį muzikantą: vos **29** įrašai, bet didžiulė įtaka. Jo [[fingerpikingas]] paverčia gitarą miniatiūriniu orkestru."
         },
         {
           "type": "image",
           "asset": "mississippi_delta_blues_cotton_fields",
           "ratio": "4:3",
-          "caption": "Le Delta du Mississippi : berceau du blues rural."
+          "caption": "Misisipės delta: kaimo bliuzo lopšys."
         },
         {
           "type": "image",
           "asset": "robert_johnson_blues_guitarist_crossroads",
           "ratio": "4:3",
-          "caption": "Robert Johnson : 29 titres, une légende éternelle."
+          "caption": "Robertas Johnsonas: 29 dainos, amžina legenda."
         },
         {
           "type": "paragraph",
-          "text": "La légende dit qu'il aurait vendu son âme au diable à un [[kryžkelė]] (carrefour) en échange de sa maîtrise. Le blues était alors souvent dit « musique du diable », face aux chants d'église. Johnson meurt empoisonné, jeune. *Cross Road Blues* et *Sweet Home Chicago* deviennent des standards."
+          "text": "Pasak legendos, mainais už meistriškumą jis pardavė sielą velniui, o sandorio vieta buvo [[kryžkelė]]. Tuo metu bliuzas, priešingai nei bažnytinės giesmės, dažnai vadintas „velnio muzika“. Johnsonas miršta jaunas, nunuodytas. *Cross Road Blues* ir *Sweet Home Chicago* tampa standartais."
         },
         {
           "type": "funFact",
-          "text": "Il enregistrait face au mur dans une chambre d'hôtel de San Antonio, non par timidité, mais pour exploiter l'acoustique de la pièce."
+          "text": "Jis įrašinėjo atsisukęs į sieną San Antonijaus viešbučio kambaryje ne iš drovumo, o norėdamas išnaudoti patalpos akustiką."
         }
       ]
     },
     {
       "id": "course_140_le_blues_racines_de_toute_la_musique_mod_p3",
-      "title": "Chicago : le blues devient électrique",
+      "title": "Čikaga: bliuzas tampa elektrinis",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Dans les années **1940**, la Grande Migration emmène des millions d'Africains-Américains vers le Nord industriel. À **Chicago**, le blues s'électrifie pour couvrir le bruit des usines. **Muddy Waters** et **Howlin' Wolf** imposent guitare électrique, basse, batterie."
+          "text": "**1940**-ųjų dešimtmetyje Didžioji migracija nuveda milijonus afroamerikiečių į pramoninę Šiaurę. **Čikagoje** bliuzas elektrifikuojamas, kad perrėktų gamyklų triukšmą. **Muddy Waters** ir **Howlin' Wolf** įtvirtina elektrinę gitarą, bosinę gitarą ir būgnus."
         },
         {
           "type": "image",
           "asset": "muddy_waters_chicago_electric_blues",
           "ratio": "4:3",
-          "caption": "Muddy Waters à Chicago : le blues branché sur le courant."
+          "caption": "Muddy Waters Čikagoje: bliuzas, įjungtas į elektros tinklą."
         },
         {
           "type": "paragraph",
-          "text": "Cette électrification mène au rock'n'roll. **Chuck Berry** et **Bo Diddley** accélèrent le tempo. Dans les années 1960, les **Rolling Stones** (nom tiré d'un titre de Muddy Waters) et **Led Zeppelin** réexportent ces racines vers le public blanc, souvent sans que les créateurs originaux en tirent fortune."
+          "text": "Ši elektrifikacija atveda prie rokenrolo. **Chuckas Berry** ir **Bo Diddley** pagreitina tempą. 1960-aisiais **Rolling Stones** (pavadinimas paimtas iš Muddy Waters dainos) ir **Led Zeppelin** grąžina šias šaknis baltajai publikai, o tikrieji kūrėjai iš to dažnai nepraturtėja."
         },
         {
           "type": "funFact",
-          "text": "Muddy Waters a été « découvert » par le musicologue Alan Lomax alors qu'il conduisait encore un tracteur dans une plantation de coton."
+          "text": "Muddy Waters „atrado“ muzikologas Alanas Lomaxas, kai šis dar vairavo traktorių medvilnės plantacijoje."
         }
       ]
     },
     {
       "id": "course_140_le_blues_racines_de_toute_la_musique_mod_p4",
-      "title": "De B.B. King au sampling",
+      "title": "Nuo B.B. Kingo iki semplingo",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le jazz lui emprunte structures et improvisation. La soul et le R&B gardent sa voix viscérale. Le hip-hop recycle son héritage par le [[semplingas]] de vieux vinyles. **B.B. King** popularise le solo de guitare mélodique. Plus qu'un style historique, le blues reste un langage sur l'amour perdu, l'injustice et l'espoir."
+          "text": "Džiazas perima iš jo struktūras ir improvizaciją. Soulas ir R&B išsaugo jo gelmingą balsą. Hiphopas perdirba jo palikimą, o įrankis yra [[semplingas]] iš senų vinilinių plokštelių. **B.B. Kingas** išpopuliarina melodingą gitaros solo. Bliuzas yra daugiau nei istorinis stilius: tai kalba apie prarastą meilę, neteisybę ir viltį."
         },
         {
           "type": "timeline",
           "events": [
             {
               "date": "1870-1890",
-              "title": "Naissance dans le Deep South",
-              "detail": "Hollers, spirituals et grille en 12 mesures."
+              "title": "Gimimas Giliuosiuose Pietuose",
+              "detail": "Šūksniai, spiričiuelsai ir 12 taktų forma."
             },
             {
-              "date": "1930s",
-              "title": "Robert Johnson",
-              "detail": "Le mythe du Delta et du carrefour."
+              "date": "1930-ieji",
+              "title": "Robertas Johnsonas",
+              "detail": "Deltos ir kryžkelės mitas."
             },
             {
-              "date": "1940s-1950s",
-              "title": "Chicago électrique",
-              "detail": "Muddy Waters ouvre la voie au rock."
+              "date": "1940-1950-ieji",
+              "title": "Elektrinė Čikaga",
+              "detail": "Muddy Waters atveria kelią rokui."
             },
             {
-              "date": "1960s",
-              "title": "Renaissance britannique",
-              "detail": "Stones et Zeppelin mondialise le blues."
+              "date": "1960-ieji",
+              "title": "Britų atgimimas",
+              "detail": "Stones ir Zeppelin išgarsina bliuzą visame pasaulyje."
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "Né de la souffrance des communautés noires du Mississippi, le blues a donné au monde la grille en 12 mesures et, via Chicago, le rock et bien plus encore."
+          "text": "Gimęs iš Misisipės juodaodžių bendruomenių kančios, bliuzas davė pasauliui 12 taktų formą, o per Čikagą ir roką bei dar daug daugiau."
         }
       ]
     }

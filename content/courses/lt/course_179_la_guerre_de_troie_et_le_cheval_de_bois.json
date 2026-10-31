@@ -1,133 +1,133 @@
 {
   "id": "course_179_la_guerre_de_troie_et_le_cheval_de_bois",
-  "title": "Comment un cheval de bois a-t-il fait tomber Troie ?",
-  "subtitle": "Mythologie grecque",
+  "title": "Kaip medinis arklys sužlugdė Troją?",
+  "subtitle": "Graikų mitologija",
   "subject": "mythologie",
   "subcategory": "Grèce : les héros",
-  "description": "Dix ans de siège, des dieux des deux côtés, puis un cheval de bois. Le plus grand récit épique de la Grèce antique, et l'archétype de la ruse militaire.",
+  "description": "Dešimt metų apgulties, dievai abiejose pusėse, o paskui medinis arklys. Didžiausias senovės Graikijos epinis pasakojimas ir karinės gudrybės pirmavaizdis.",
   "hero": {
     "image": "la_guerre_de_troie_et_le_cheval_de_bois",
     "ratio": "16:9",
-    "hook": "Une pomme d'or, une femme enlevée, puis dix ans de guerre : Troie ne tombe pas sous les armes, mais par un cheval de bois."
+    "hook": "Aukso obuolys, pagrobta moteris, paskui dešimt metų karo: Troja krinta ne nuo ginklų, o dėl medinio arklio."
   },
   "sections": [
     {
       "id": "course_179_la_guerre_de_troie_et_le_cheval_de_bois_intro",
-      "title": "Introduction",
+      "title": "Įžanga",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La **guerre de Troie** est le grand récit de la Grèce antique, immortalisé par Homère dans l'Iliade. Une coalition de cités grecques assiège [[Ilionas]], autre nom de Troie, pendant **dix ans**. Des dieux prennent parti. Des héros meurent pour l'honneur."
+          "text": "**Trojos karas** yra didysis senovės Graikijos pasakojimas, kurį Homeras įamžino „Iliadoje“. Graikų miestų sąjunga apgula Troją (kitas jos vardas [[Ilionas]]) **dešimt metų**. Dievai stoja į vieną ar kitą pusę. Didvyriai žūva dėl garbės."
         },
         {
           "type": "paragraph",
-          "text": "La ville ne cède pas à la force. Elle tombe par un stratagème : le **cheval de bois**. Cette ruse est devenue un symbole universel, du champ de bataille jusqu'aux virus informatiques d'aujourd'hui."
+          "text": "Miestas nepasiduoda jėgai. Jis krinta dėl gudrybės: tai **medinis arklys**. Ši klasta tapo visuotiniu simboliu, nuo mūšio lauko iki šiandienių kompiuterinių virusų."
         }
       ]
     },
     {
       "id": "course_179_la_guerre_de_troie_et_le_cheval_de_bois_p1",
-      "title": "Une pomme d'or déclenche tout",
+      "title": "Viską pradeda aukso obuolys",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Tout commence aux noces de Pélée et de la nymphe Thétis. **Éris**, déesse de la Discorde, n'est pas invitée. Furieuse, elle jette une pomme d'or gravée « À la plus belle ». Trois déesses la réclament : **Héra**, **Athéna** et **Aphrodite**."
+          "text": "Viskas prasideda per Pelėjo ir nimfos Tetidės vestuves. **Erida**, nesantaikos deivė, nepakviesta. Įsiutusi ji meta aukso obuolį su užrašu „Gražiausiajai“. Jo užsigeidžia trys deivės: **Hera**, **Atėnė** ir **Afroditė**."
         },
         {
           "type": "paragraph",
-          "text": "Zeus demande l'avis d'un mortel : **Pâris**, prince de Troie. Héra lui promet le pouvoir, Athéna la victoire au combat, Aphrodite l'amour de la plus belle femme. Il choisit Aphrodite. Elle lui offre **Hélène**, épouse de **Ménélas**, roi de Sparte. Pâris l'emmène à Troie. La Grèce se lève pour la récupérer."
+          "text": "Dzeusas paprašo mirtingojo nuomonės: tai **Paris**, Trojos princas. Hera jam žada valdžią, Atėnė pergalę kovoje, Afroditė gražiausios moters meilę. Jis renkasi Afroditę. Ši jam dovanoja **Heleną**, Spartos karaliaus **Menelajo** žmoną. Paris išsiveža ją į Troją. Graikija sukyla jos susigrąžinti."
         },
         {
           "type": "funFact",
-          "text": "À Hisarlik, en Turquie, les archéologues ont trouvé une cité brûlée vers **1184 av. J.-C.** : le site possible de la Troie historique, derrière le mythe."
+          "text": "Hisarlike, Turkijoje, archeologai rado miestą, sudegusį apie **1184 m. pr. Kr.**: tai galima istorinės Trojos vieta, slypinti už mito."
         }
       ]
     },
     {
       "id": "course_179_la_guerre_de_troie_et_le_cheval_de_bois_p2",
-      "title": "Dix ans de siège sans vainqueur",
+      "title": "Dešimt metų apgulties be nugalėtojo",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Agamemnon**, frère de Ménélas et roi de Mycènes, prend le commandement. Une flotte immense part : Achille, Ajax, le sage Nestor, le rusé **Ulysse**. Les Grecs, ou Achéens, débarquent en [[Troada]], la région de Troie, et le siège commence."
+          "text": "Vadovavimą perima **Agamemnonas**, Menelajo brolis ir Mikėnų karalius. Išplaukia milžiniškas laivynas: Achilas, Ajantas, išmintingasis Nestoras, gudrusis **Odisėjas**. Graikai, arba achajai, išsilaipina ten, kur driekiasi [[Troada]], Trojos kraštas, ir prasideda apgultis."
         },
         {
           "type": "image",
           "asset": "greek_fleet_trojan_war_thousand_ships_painting",
           "ratio": "4:3",
-          "caption": "La flotte grecque : la légende parle de mille navires."
+          "caption": "Graikų laivynas: legenda kalba apie tūkstantį laivų."
         },
         {
           "type": "paragraph",
-          "text": "Les remparts de Troie sont réputés indestructibles, bâtis avec l'aide de Poséidon et d'Apollon. Pendant dix ans, on se bat dans la plaine du [[Skamandras]] sans décision. Sur terre, les hommes meurent. Sur l'Olympe, Héra et Athéna aident les Grecs ; Aphrodite et Apollon protègent les fils de [[Priamas]], le vieux roi de Troie."
+          "text": "Trojos sienos laikomos nesugriaunamomis, nes jas statyti padėjo Poseidonas ir Apolonas. Dešimt metų kovojama lygumoje, kurią drėkina [[Skamandras]], bet niekas nelaimi. Žemėje žūva žmonės. Olimpe Hera ir Atėnė padeda graikams; Afroditė ir Apolonas saugo sūnus, kurių tėvas yra [[Priamas]], senasis Trojos karalius."
         }
       ]
     },
     {
       "id": "course_179_la_guerre_de_troie_et_le_cheval_de_bois_p3",
-      "title": "Le cheval de bois",
+      "title": "Medinis arklys",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La force ne suffit pas. **Ulysse**, roi d'Ithaque et maître de la [[Metis]] (la ruse intelligente), invente le piège. Les Grecs brûlent leur camp, font mine de partir et se cachent près de l'île de [[Tenedas]]. Sur la plage, ils laissent un immense **cheval de bois** creux, rempli de soldats."
+          "text": "Jėgos nepakanka. **Odisėjas**, Itakės karalius, kurio stiprybė yra [[Metis]] (protinga gudrybė), sugalvoja spąstus. Graikai sudegina stovyklą, apsimeta išplaukiantys ir pasislepia už salos, kuri vadinasi [[Tenedas]]. Paplūdimyje jie palieka milžinišką tuščiavidurį **medinį arklį**, pilną karių."
         },
         {
           "type": "image",
           "asset": "trojan_horse_wooden_troy_ancient_painting",
           "ratio": "4:3",
-          "caption": "Le cheval de Troie : offrande trompeuse, soldats à l'intérieur."
+          "caption": "Trojos arklys: apgaulinga auka, viduje kariai."
         },
         {
           "type": "paragraph",
-          "text": "L'espion grec **Sinon** convainc les Troyens que le cheval est une offrande pour Athéna. Le prêtre **Laocoon** crie au piège : on l'ignore. On démolit une partie des remparts pour faire entrer le cheval. La nuit, les Grecs sortent, ouvrent les portes, et l'armée revenue achève la ville."
+          "text": "Graikų šnipas **Sinonas** įtikina trojėnus, kad arklys yra auka Atėnei. Žynys **Laokoonas** šaukia, kad tai spąstai, bet jo niekas neklauso. Arkliui įtempti išgriaunama dalis sienų. Naktį graikai išlenda, atveria vartus, ir sugrįžusi kariuomenė miestą pribaigia."
         },
         {
           "type": "funFact",
-          "text": "L'expression « le visage qui lança mille navires », pour Hélène, vient du poète Christopher Marlowe. On a même inventé en plaisantant le « hélène », unité de beauté égale à mille navires."
+          "text": "Posakis apie Heleną „veidas, kuris paskandino tūkstantį laivų“ kilęs iš poeto Christopherio Marlowe kūrybos. Juokais buvo net išgalvotas „helenas“: grožio vienetas, lygus tūkstančiui laivų."
         }
       ]
     },
     {
       "id": "course_179_la_guerre_de_troie_et_le_cheval_de_bois_p4",
-      "title": "La chute et l'héritage",
+      "title": "Žlugimas ir palikimas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Troie brûle. Priam est tué. Les survivants deviennent esclaves. Seul le prince **Énée** s'enfuit avec son père et ses dieux [[Larai]] ; plus tard, la légende romaine en fera l'ancêtre de Rome. Les vainqueurs, eux, ne sont pas épargnés : leurs retours périlleux ([[Herojų sugrįžimai (Nostoi)]]) sont souvent tragiques. Agamemnon est assassiné. Ulysse erre encore dix ans."
+          "text": "Troja dega. Priamas nužudomas. Išlikusieji tampa vergais. Pabėga tik princas **Enėjas** su tėvu ir namų dievais (tai [[Larai]]); vėliau romėnų legenda padarys jį Romos protėviu. Nugalėtojai irgi nepasigailimi: jų pavojingi grįžimai namo, vadinamieji [[Herojų sugrįžimai (Nostoi)]], dažnai baigiasi tragiškai. Agamemnonas nužudomas. Odisėjas klajoja dar dešimt metų."
         },
         {
           "type": "timeline",
           "events": [
             {
-              "date": "Mythe",
-              "title": "Jugement de Pâris",
-              "detail": "Une pomme d'or, Hélène enlevée, la guerre commence."
+              "date": "Mitas",
+              "title": "Pario teismas",
+              "detail": "Aukso obuolys, pagrobta Helena, prasideda karas."
             },
             {
-              "date": "10 ans",
-              "title": "Siège de Troie",
-              "detail": "Les remparts tiennent ; dieux et héros s'entrechoquent."
+              "date": "10 metų",
+              "title": "Trojos apgultis",
+              "detail": "Sienos atlaiko; susiremia dievai ir didvyriai."
             },
             {
-              "date": "Nuit fatale",
-              "title": "Cheval de bois",
-              "detail": "La ruse d'Ulysse ouvre la ville imprenable."
+              "date": "Lemtinga naktis",
+              "title": "Medinis arklys",
+              "detail": "Odisėjo gudrybė atveria neįveikiamą miestą."
             },
             {
-              "date": "Après",
+              "date": "Po karo",
               "title": "Nostoi",
-              "detail": "Les retours des vainqueurs tournent souvent au malheur."
+              "detail": "Nugalėtojų sugrįžimai dažnai baigiasi nelaime."
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "Née d'une querelle divine pour une pomme d'or, la guerre de Troie ne s'achève qu'après **dix ans** : non par la force, mais par la ruse d'Ulysse et un cheval de bois qui détruit la cité en une nuit."
+          "text": "Kilęs iš dievų vaido dėl aukso obuolio, Trojos karas baigiasi tik po **dešimties metų**: ne jėga, o Odisėjo gudrybe ir mediniu arkliu, kuris per vieną naktį sunaikina miestą."
         }
       ]
     }

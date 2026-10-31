@@ -1,142 +1,142 @@
 {
   "id": "course_123_le_caravage_et_le_clair_obscur",
-  "title": "Le Caravage et le clair-obscur",
+  "title": "Caravaggio ir šviesotamsa",
   "subtitle": "1571-1610",
   "subject": "art",
   "subcategory": "Peinture & mouvements",
-  "description": "**Michelangelo Merisi**, dit Le Caravage, révolutionne la peinture avec un réalisme brutal et un contraste lumière-ombre extrême : le clair-obscur.",
+  "description": "**Michelangelo Merisi**, vadinamas Caravaggio, sukelia perversmą tapyboje žiauriu realizmu ir kraštutiniu šviesos ir šešėlio kontrastu: šviesotamsa.",
   "hero": {
     "image": "le_caravage_et_le_clair_obscur",
     "ratio": "16:9",
-    "hook": "Des saints aux pieds sales, une lumière de projecteur : l'art ne sera plus jamais le même."
+    "hook": "Šventieji purvinomis kojomis, prožektoriaus šviesa: menas jau niekada nebebus toks pat."
   },
   "sections": [
     {
       "id": "course_123_le_caravage_et_le_clair_obscur_intro",
-      "title": "Introduction",
+      "title": "Įžanga",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Michelangelo Merisi**, dit **Le Caravage** (1571-1610), brise les codes de la beauté idéale hérités de la Renaissance. Il confronte le sacré et le quotidien : mendiants, tavernes, corps fatigués."
+          "text": "**Michelangelo Merisi**, vadinamas **Caravaggio** (1571-1610), sulaužo iš renesanso paveldėtus idealaus grožio kanonus. Jis sujungia šventybę su kasdienybe: elgetas, smukles, pavargusius kūnus."
         },
         {
           "type": "paragraph",
-          "text": "Son arme : un clair-obscur radical. Les corps surgissent du noir comme sous un projecteur. Cette rupture annonce l'esprit du [[Barokas tapyboje]] et transforme le spectateur en témoin d'un drame."
+          "text": "Jo ginklas yra radikali šviesotamsa. Kūnai išnyra iš tamsos tarsi po prožektoriumi. Šis lūžis pranašauja būsimą kryptį, [[barokas tapyboje]], ir paverčia žiūrovą dramos liudininku."
         },
         {
           "type": "image",
           "asset": "caravaggio_self_portrait",
           "ratio": "4:3",
-          "caption": "Le Caravage, peintre de génie et figure de la vie romaine turbulente."
+          "caption": "Caravaggio: genialus dailininkas ir audringo Romos gyvenimo figūra."
         }
       ]
     },
     {
       "id": "course_123_le_caravage_et_le_clair_obscur_p1",
-      "title": "Génie, violence et exil",
+      "title": "Genialumas, smurtas ir tremtis",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Né près de Milan, Le Caravage arrive à Rome vers **1593**. Sa carrière bascule en **1600** avec les toiles de la chapelle Contarelli, à l'église Saint-Louis-des-Français. *La Vocation de saint Matthieu* sidère Rome : le sacré y a le visage de la rue."
+          "text": "Gimęs netoli Milano, Caravaggio apie **1593** m. atvyksta į Romą. Jo karjera pasisuka **1600** m., kai jis nutapo drobes Contarelli koplyčiai San Luigi dei Francesi bažnyčioje. *Šventojo Mato pašaukimas* pritrenkia Romą: šventybė čia turi gatvės veidą."
         },
         {
           "type": "funFact",
-          "text": "À Malte, il est fait chevalier de l'Ordre, puis jeté en prison pour avoir agressé un supérieur. Il s'évade d'un fort réputé imprenable avec une corde de chanvre."
+          "text": "Maltoje jis įšventinamas į ordino riterius, o paskui įmetamas į kalėjimą už tai, kad užpuolė vyresnįjį. Iš neįveikiama laikytos tvirtovės jis pabėga kanapių virve."
         },
         {
           "type": "paragraph",
-          "text": "Sa vie est aussi violente que ses tableaux. En **1606**, lors d'une rixe, il tue **Ranuccio Tomassoni**. Condamné à mort, il fuit vers Naples, Malte, puis la Sicile. Traqué et blessé, il meurt à **38 ans** à [[Porto Ercole]], quelques jours avant une grâce papale."
+          "text": "Jo gyvenimas toks pat žiaurus kaip jo paveikslai. **1606** m. per muštynes jis nužudo **Ranuccio Tomassoni**. Nuteistas mirti, jis bėga į Neapolį, Maltą, paskui į Siciliją. Persekiojamas ir sužeistas, jis pasiekia vietovę, kuri vadinasi [[Porto Ercole]], ir ten miršta būdamas **38 metų**, likus kelioms dienoms iki popiežiaus malonės."
         }
       ]
     },
     {
       "id": "course_123_le_caravage_et_le_clair_obscur_p2",
-      "title": "Le ténébrisme : une lumière qui frappe",
+      "title": "Tenebrizmas: šviesa, kuri smogia",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le Caravage invente le **ténébrisme**, une forme extrême du clair-obscur. Plus de lumière douce qui caresse les formes : une obscurité opaque, et des corps qui en jaillissent avec une force sculpturale. La lumière est artificielle, comme un projecteur de scène."
+          "text": "Caravaggio sukuria **tenebrizmą**, kraštutinę šviesotamsos formą. Nebėra švelnios šviesos, glostančios formas: tik neperregima tamsa ir kūnai, kurie iš jos išnyra su skulptūriška jėga. Šviesa dirbtinė, tarsi scenos prožektorius."
         },
         {
           "type": "image",
           "asset": "caravaggio_tenebrism_chiaroscuro_painting",
           "ratio": "4:3",
-          "caption": "Dans le ténébrisme, le noir concentre le regard sur le drame."
+          "caption": "Tenebrizme juoda spalva sutelkia žvilgsnį į dramą."
         },
         {
           "type": "funFact",
-          "text": "Pour obtenir cet éclairage, il travaillait dans un atelier aux murs noirs, percé d'une seule petite lucarne en hauteur."
+          "text": "Kad išgautų tokį apšvietimą, jis dirbo juodų sienų ateljė, kurioje buvo tik vienas mažas langelis aukštai."
         },
         {
           "type": "paragraph",
-          "text": "En supprimant décors et paysages, il force le regard vers les visages et les gestes. Cette lumière sert aussi la [[Kontrreformacija]] : l'Église catholique veut émouvoir les fidèles. Chez lui, la lumière devient la grâce qui frappe l'âme sans prévenir."
+          "text": "Atsisakydamas dekoracijų ir peizažų, jis priverčia žvilgsnį krypti į veidus ir gestus. Ši šviesa tarnauja ir tikslui, kurį kelia [[Kontrreformacija]]: Katalikų Bažnyčia nori sujaudinti tikinčiuosius. Jo paveiksluose šviesa tampa malone, kuri netikėtai sukrečia sielą."
         }
       ]
     },
     {
       "id": "course_123_le_caravage_et_le_clair_obscur_p3",
-      "title": "Des saints qui ressemblent à la rue",
+      "title": "Šventieji, panašūs į gatvės žmones",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ce qui scandalise le plus, c'est son refus d'idéaliser. Il choisit ses modèles dans la rue : ouvriers, mendiants, courtisanes. La Vierge et les apôtres ont des rides, des pieds sales, des corps fatigués."
+          "text": "Labiausiai piktina jo atsisakymas idealizuoti. Modelius jis renkasi gatvėje: darbininkus, elgetas, kurtizanes. Mergelė Marija ir apaštalai turi raukšlių, purvinas kojas, pavargusius kūnus."
         },
         {
           "type": "image",
           "asset": "caravaggio_madonna_dei_pellegrini_painting",
           "ratio": "4:3",
-          "caption": "La Madone des Pèlerins : des pieds nus et sales au premier plan."
+          "caption": "„Piligrimų Madona“: basos ir purvinos kojos pirmame plane."
         },
         {
           "type": "paragraph",
-          "text": "*La Mort de la Vierge* est refusée : on dit qu'il aurait pris pour modèle une femme noyée. *La Madone des Pèlerins* choque par les pieds sales des pauvres agenouillés. Il refuse les artifices du [[Manierizmas]], ce style gracieux et déformé qui l'a précédé. Pour lui, le salut s'adresse d'abord aux humbles."
+          "text": "*Mergelės Marijos mirtis* atmetama: sakoma, kad modeliu jis pasirinkęs nuskendusią moterį. *Piligrimų Madona* šokiruoja klūpančių vargšų purvinomis kojomis. Jis atmeta dirbtinumą, kurį buvo įtvirtinęs [[Manierizmas]], grakštus ir deformuotas stilius prieš jį. Jam išganymas pirmiausia skirtas nuolankiesiems."
         },
         {
           "type": "funFact",
-          "text": "Sa première version de *Saint Matthieu et l'Ange* montrait un évangéliste aux pieds sales, l'air inculte. Les commanditaires exigèrent qu'il la repeigne."
+          "text": "Pirmojoje *Šventojo Mato ir angelo* versijoje evangelistas buvo purvinomis kojomis ir atrodė neišsilavinęs. Užsakovai pareikalavo paveikslą pertapyti."
         }
       ]
     },
     {
       "id": "course_123_le_caravage_et_le_clair_obscur_p4",
-      "title": "Le caravagisme : une Europe sous influence",
+      "title": "Karavadžizmas: Europa jo įtakoje",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Il n'a pas fondé d'école, mais son style se répand : le **caravagisme**. [[Artemisia Gentileschi]] en Italie, Georges de La Tour en France, Zurbarán en Espagne, Rubens dans les Flandres. Plus tard, **Rembrandt** héritera de sa poésie de l'ombre, **Vélasquez** de sa dignité du peuple."
+          "text": "Jis neįkūrė mokyklos, tačiau jo stilius plinta: tai **karavadžizmas**. Juo seka [[Artemisia Gentileschi]] Italijoje, Georges'as de La Touras Prancūzijoje, Zurbaránas Ispanijoje, Rubensas Flandrijoje. Vėliau **Rembrandtas** perims jo šešėlio poeziją, o **Velázquezas** paveldės jo pagarbą paprastų žmonių orumui."
         },
         {
           "type": "timeline",
           "events": [
             {
               "date": "1600",
-              "title": "Chapelle Contarelli",
-              "detail": "Rome découvre La Vocation de saint Matthieu."
+              "title": "Contarelli koplyčia",
+              "detail": "Roma išvysta „Šventojo Mato pašaukimą“."
             },
             {
               "date": "1606",
-              "title": "Meurtre et exil",
-              "detail": "Le Caravage fuit Rome, condamné à mort."
+              "title": "Žmogžudystė ir tremtis",
+              "detail": "Nuteistas mirti, Caravaggio bėga iš Romos."
             },
             {
               "date": "1610",
-              "title": "Mort à Porto Ercole",
-              "detail": "Il meurt à 38 ans, juste avant la grâce."
+              "title": "Mirtis Porto Ercole",
+              "detail": "Jis miršta būdamas 38 metų, prieš pat malonę."
             }
           ]
         },
         {
           "type": "paragraph",
-          "text": "Oublié pendant deux siècles, il est redécouvert au XXe. Son cadrage serré et sa lumière influencent encore le cinéma et la photographie."
+          "text": "Du šimtmečius pamirštas, jis iš naujo atrastas XX a. Jo glaudus kadravimas ir šviesa iki šiol daro įtaką kinui ir fotografijai."
         },
         {
           "type": "takeaway",
-          "text": "Le Caravage (1571-1610) impose le ténébrisme et un réalisme social radical. En peignant le sacré avec des modèles de la rue, il devient le père spirituel de la peinture baroque."
+          "text": "Caravaggio (1571-1610) įtvirtina tenebrizmą ir radikalų socialinį realizmą. Tapydamas šventybę su gatvės modeliais, jis tampa dvasiniu barokinės tapybos tėvu."
         }
       ]
     }

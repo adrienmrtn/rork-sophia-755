@@ -1,118 +1,118 @@
 {
   "id": "course_165_orphee_et_eurydice",
-  "title": "Orphée et Eurydice",
-  "subtitle": "L'amour qui défie la mort",
+  "title": "Orfėjas ir Euridikė",
+  "subtitle": "Meilė, metanti iššūkį mirčiai",
   "subject": "mythologie",
   "subcategory": "Grèce : les dieux",
-  "description": "Orphée descend aux Enfers pour ramener Eurydice. Sa musique fléchit la mort. Un seul regard interdit suffit à tout perdre.",
+  "description": "Orfėjas nusileidžia į požemių karalystę parsivesti Euridikės. Jo muzika suminkština mirtį. Užtenka vieno draudžiamo žvilgsnio, kad viskas būtų prarasta.",
   "hero": {
     "image": "orphee_et_eurydice",
     "ratio": "16:9",
-    "hook": "Sa lyre apaise les Enfers. Son doute, lui, rend Eurydice pour toujours."
+    "hook": "Jo lyra nuramina požemių karalystę. O dėl jo abejonės Euridikė ten grįžta amžiams."
   },
   "sections": [
     {
       "id": "course_165_orphee_et_eurydice_intro",
-      "title": "Introduction",
+      "title": "Įžanga",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Orphée** est un musicien dont la lyre émeut même les pierres. Quand sa femme **Eurydice** meurt, il refuse le deuil. Il descend vivant chez les morts pour la ramener."
+          "text": "**Orfėjas** yra muzikantas, kurio lyra sujaudina net akmenis. Kai miršta jo žmona **Euridikė**, jis nesusitaiko su netektimi. Jis gyvas nusileidžia pas mirusiuosius, kad ją parsivestų."
         },
         {
           "type": "paragraph",
-          "text": "Les poètes latins [[Vergilijus]] et [[Ovidijus]] ont fixé ce récit. Au-delà de l'amour tragique, c'est une histoire sur le doute, l'impatience et le pouvoir de l'art face à la mort."
+          "text": "Šį pasakojimą įtvirtino Romos poetai [[Vergilijus]] ir [[Ovidijus]]. Tai ne tik tragiška meilės istorija: tai pasakojimas apie abejonę, nekantrumą ir meno galią prieš mirtį."
         }
       ]
     },
     {
       "id": "course_165_orphee_et_eurydice_p1",
-      "title": "Un musicien plus fort que les armes",
+      "title": "Muzikantas, galingesnis už ginklus",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Orphée est fils de la Muse **Calliope**. Sa **lyre**, cadeau d'**Apollon**, dieu des arts, ne sert pas seulement à plaire. Elle apaise les bêtes, déplace les arbres, calme la nature sauvage. Là où d'autres héros vainquent par la force, Orphée triomphe par l'harmonie."
+          "text": "Orfėjas yra mūzos **Kaliopės** sūnus. Jo **lyra**, **Apolono**, menų dievo, dovana, skirta ne vien džiuginti. Ji ramina žvėris, judina medžius, malšina laukinę gamtą. Ten, kur kiti didvyriai laimi jėga, Orfėjas triumfuoja harmonija."
         },
         {
           "type": "image",
           "asset": "orpheus_lyre_painting_ancient_myth",
           "ratio": "4:3",
-          "caption": "Orphée et sa lyre : l'art comme pouvoir sur le monde."
+          "caption": "Orfėjas ir jo lyra: menas kaip galia pasauliui."
         },
         {
           "type": "paragraph",
-          "text": "Lors de l'expédition des **Argonautes**, menée par le héros [[Jasonas]], les Sirènes tentent d'attirer l'équipage. Orphée chante plus fort et sauve ses compagnons. Puis il épouse la dryade **Eurydice**, nymphe des bois. Le bonheur est bref."
+          "text": "**Argonautų** žygyje, kuriam vadovauja didvyris [[Jasonas]], sirenos bando suvilioti įgulą. Orfėjas užgieda garsiau ir išgelbsti draugus. Paskui jis veda driadę **Euridikę**, miško nimfą. Laimė trunka neilgai."
         },
         {
           "type": "funFact",
-          "text": "Le jour des noces, Eurydice fuit le berger [[Aristėjas]]. Elle marche sur un serpent. Le venin la tue. Son ombre part vers le [[Stiksas]], fleuve des Enfers."
+          "text": "Vestuvių dieną Euridikę persekioja piemuo [[Aristėjas]], ir ji bėga. Ji užlipa ant gyvatės. Nuodai ją nužudo. Jos šešėlis iškeliauja ten, kur teka [[Stiksas]], požemių upė."
         }
       ]
     },
     {
       "id": "course_165_orphee_et_eurydice_p2",
-      "title": "Descendre vivant chez les morts",
+      "title": "Gyvam nusileisti pas mirusiuosius",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Orphée tente une [[katabasis]] : une descente aux Enfers. Pas d'armes. Seulement sa musique. Elle endort [[Kerberis]], le chien à trois têtes qui garde l'entrée. Elle fléchit [[Charonas]], le batelier des morts."
+          "text": "Orfėjo laukia [[katabasis]]: nusileidimas į požemių karalystę. Jokių ginklų. Tik muzika. Nuo jos užmiega [[Kerberis]], trigalvis šuo, saugantis įėjimą. Nuo jos suminkštėja ir [[Charonas]], mirusiųjų keltininkas."
         },
         {
           "type": "paragraph",
-          "text": "Devant **Hadès** et **Perséphone**, souverains du monde souterrain, Orphée joue l'air le plus bouleversant de sa vie. Les Enfers s'arrêtent un instant. **Sisyphe** et **Tantale** oublient leur supplice. Les [[Erinijos]], déesses de la vengeance, versent des larmes."
+          "text": "Prieš **Hadą** ir **Persefonę**, požemių pasaulio valdovus, Orfėjas groja jaudinančiausią savo gyvenimo melodiją. Požemių karalystė akimirkai sustingsta. **Sizifas** ir **Tantalas** pamiršta savo kančias. Net [[Erinijos]], keršto deivės, pravirksta."
         },
         {
           "type": "funFact",
-          "text": "Dans certaines versions, Orphée touche Perséphone en lui rappelant son propre enlèvement par Hadès. La reine des morts reconnaît sa douleur."
+          "text": "Kai kuriose versijose Orfėjas sujaudina Persefonę, primindamas, kaip ją pačią pagrobė Hadas. Mirusiųjų karalienė atpažįsta jo skausmą."
         },
         {
           "type": "paragraph",
-          "text": "Hadès accepte l'impossible : Eurydice peut remonter. Mais une condition absolue. Orphée doit marcher devant elle sans se retourner tant qu'ils n'ont pas atteint la lumière."
+          "text": "Hadas sutinka su neįmanomu: Euridikė gali grįžti. Bet su viena griežta sąlyga. Orfėjas turi eiti priekyje ir neatsigręžti, kol jie nepasieks šviesos."
         }
       ]
     },
     {
       "id": "course_165_orphee_et_eurydice_p3",
-      "title": "Le regard qui perd tout",
+      "title": "Žvilgsnis, pražudęs viską",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La remontée est un calvaire. Derrière lui, le silence. Les ombres ne font aucun bruit. Près de la sortie, le doute l'emporte. Et si Hadès l'avait trompé ? Orphée **se retourne**."
+          "text": "Kelias aukštyn virsta kančia. Už jo tyla. Šešėliai nekelia jokio garso. Prie pat išėjimo nugali abejonė. O jei Hadas jį apgavo? Orfėjas **atsigręžia**."
         },
         {
           "type": "paragraph",
-          "text": "Leurs regards se croisent une seconde. Puis Eurydice est happée par les ténèbres. Cette fois, la perte vient d'une erreur humaine. Le passage se referme. Orphée erre, puis se retire en Thrace."
+          "text": "Jų žvilgsniai akimirkai susitinka. Tada Euridikę praryja tamsa. Šįkart netektį lemia žmogaus klaida. Praėjimas užsiveria. Orfėjas klajoja, o paskui pasitraukia į Trakiją."
         },
         {
           "type": "funFact",
-          "text": "Après sa mort, la tête d'Orphée, jetée dans le fleuve [[Hebras]], aurait dérivé jusqu'à Lesbos. Elle y serait devenue un oracle, si puissant qu'**Apollon** lui-même aurait exigé son silence."
+          "text": "Po Orfėjo mirties jo galvą nunešė upė [[Hebras]], ir ji esą nuplaukė iki Lesbo. Ten ji tapusi tokiu galingu orakulu, kad net **Apolonas** pareikalavęs jos tylos."
         },
         {
           "type": "paragraph",
-          "text": "Son refus de tout nouvel amour provoque la fureur des [[Menadės]], prêtresses de **Dionysos** prises d'un délire rituel. Elles le déchirent. Sa lyre continue pourtant de chanter, emportée par le courant."
+          "text": "Jis atsisako bet kokios naujos meilės, ir įsiunta [[Menadės]], ritualinio pakvaišimo apimtos **Dioniso** žynės. Jos jį sudrasko. Tačiau jo lyra, nešama srovės, toliau gieda."
         }
       ]
     },
     {
       "id": "course_165_orphee_et_eurydice_p4",
-      "title": "Ce que le mythe a transmis",
+      "title": "Ką mitas perdavė",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "De la mort d'Orphée naît l'[[Orfizmas]], courant religieux qui promettait un salut de l'âme par des rites de purification. La mort n'y est plus une fin morne, mais un passage à préparer."
+          "text": "Iš Orfėjo mirties gimsta [[Orfizmas]], religinė srovė, žadėjusi sielos išganymą per apsivalymo apeigas. Mirtis čia nebėra niūri pabaiga, o perėjimas, kuriam reikia ruoštis."
         },
         {
           "type": "paragraph",
-          "text": "Le « regard d'Orphée » inspire encore l'opéra, le cinéma, notamment chez [[Jeanas Cocteau]], et la littérature. Pour [[Maurice'as Blanchot]], l'artiste est celui qui regarde l'obscurité, même au prix de perdre ce qu'il aime. Les dieux placent enfin la lyre dans le ciel, en constellation : l'art dure plus longtemps que l'artiste."
+          "text": "„Orfėjo žvilgsnis“ iki šiol įkvepia operą, kiną ir literatūrą; jam ištikimas liko ir [[Jeanas Cocteau]]. Rašytojas [[Maurice'as Blanchot]] teigia, kad menininkas yra tas, kuris žvelgia į tamsą, net jei dėl to praranda tai, ką myli. Galiausiai dievai iškelia lyrą į dangų, ir ji tampa žvaigždynu: menas gyvuoja ilgiau nei menininkas."
         },
         {
           "type": "takeaway",
-          "text": "**Orphée** charme les Enfers par sa musique, puis perd **Eurydice** en se retournant trop tôt. L'art peut fléchir la mort ; le doute humain, lui, a le dernier mot."
+          "text": "**Orfėjas** muzika užburia požemių karalystę, bet per anksti atsigręžęs praranda **Euridikę**. Menas gali suminkštinti mirtį, tačiau paskutinis žodis lieka žmogaus abejonei."
         }
       ]
     }

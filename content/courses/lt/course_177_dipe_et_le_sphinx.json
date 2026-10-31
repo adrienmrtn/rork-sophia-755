@@ -1,112 +1,112 @@
 {
   "id": "course_177_dipe_et_le_sphinx",
-  "title": "Quelle énigme Œdipe a-t-il résolue devant le Sphinx ?",
-  "subtitle": "L'énigme et l'aveuglement",
+  "title": "Kokią mįslę Oidipas įminė Sfinksui?",
+  "subtitle": "Mįslė ir aklumas",
   "subject": "mythologie",
   "subcategory": "Grèce : les héros",
-  "description": "Œdipe sauve Thèbes en résolvant l'énigme du Sphinx. Cette victoire de l'esprit ouvre pourtant la porte à la plus terrible des tragédies.",
+  "description": "Oidipas išgelbsti Tebus, įminęs Sfinkso mįslę. Tačiau ši proto pergalė atveria kelią baisiausiai tragedijai.",
   "hero": {
     "image": "oedipe_et_le_sphinx",
     "ratio": "16:9",
-    "hook": "Un monstre pose une énigme. Œdipe répond « l'Homme ». Il sauve une ville… et marche vers son propre malheur."
+    "hook": "Pabaisa užduoda mįslę. Oidipas atsako: „Žmogus“. Jis išgelbsti miestą… ir žengia į savo paties nelaimę."
   },
   "sections": [
     {
       "id": "course_177_dipe_et_le_sphinx_intro",
-      "title": "Introduction",
+      "title": "Įžanga",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Avant d'être le héros tragique qui tue son père et épouse sa mère, **Œdipe** est d'abord un sauveur. Devant **Thèbes**, cité de Béotie en Grèce centrale, il affronte le **Sphinx**, monstre qui dévore quiconque échoue à son énigme."
+          "text": "Dar prieš tapdamas tragišku herojumi, kuris nužudo tėvą ir veda motiną, **Oidipas** pirmiausia yra gelbėtojas. Prie **Tebų**, Beotijos miesto Vidurio Graikijoje, jis stoja prieš **Sfinksą**, pabaisą, kuri suryja kiekvieną, neįminusį jos mįslės."
         },
         {
           "type": "paragraph",
-          "text": "Il gagne par l'esprit, pas par l'épée. Mais cette victoire le place sur un trône où il devra affronter ce qu'il ignore de lui-même. Le mythe oppose la connaissance de l'homme en général… et l'ignorance tragique de soi."
+          "text": "Jis laimi protu, ne kalaviju. Tačiau ši pergalė pasodina jį į sostą, kuriame teks susidurti su tuo, ko jis apie save nežino. Mitas supriešina žmogaus apskritai pažinimą… ir tragišką savęs nepažinimą."
         }
       ]
     },
     {
       "id": "course_177_dipe_et_le_sphinx_p1",
-      "title": "Un monstre sur la route de Thèbes",
+      "title": "Pabaisa kelyje į Tebus",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le Sphinx est un châtiment divin, souvent lié à **Héra**. Corps de lion, buste de femme, ailes d'oiseau, queue de serpent : une créature hybride. Installée près de la ville, elle coupe les routes. Le roi **Laïos** a disparu, tué par un inconnu à un carrefour. La cité est sans vrai chef."
+          "text": "Sfinksas yra dievų bausmė, dažnai siejama su **Hera**. Liūto kūnas, moters krūtinė, paukščio sparnai, gyvatės uodega: tai mišrus padaras. Įsikūrusi prie miesto, ji užkerta kelius. Karalius **Lajas** dingęs: jį kryžkelėje nužudė nepažįstamasis. Miestas neturi tikro vado."
         },
         {
           "type": "image",
           "asset": "sphinx_greek_mythology_thebes_monster",
           "ratio": "4:3",
-          "caption": "Le Sphinx de Thèbes, gardien d'une énigme mortelle."
+          "caption": "Tebų Sfinksas, mirtinos mįslės sargas."
         },
         {
           "type": "paragraph",
-          "text": "Chaque passant doit répondre. L'échec signifie la mort. Même le régent [[Kreontas]] échoue. Le monstre incarne le triomphe de l'énigme sur la raison… jusqu'à l'arrivée d'un étranger nommé Œdipe."
+          "text": "Kiekvienas keleivis privalo atsakyti. Nesėkmė reiškia mirtį. Suklysta net regentas [[Kreontas]]. Pabaisa įkūnija mįslės pergalę prieš protą… kol atvyksta svetimšalis, vardu Oidipas."
         }
       ]
     },
     {
       "id": "course_177_dipe_et_le_sphinx_p2",
-      "title": "« Quel être a quatre, deux, puis trois pieds ? »",
+      "title": "„Kas vaikšto keturiomis, dviem, paskui trimis?“",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Œdipe fuit Corinthe. Un oracle lui a prédit qu'il tuerait son père et épouserait sa mère. Il croit éviter le destin. Sur la route de Thèbes, le Sphinx pose sa question : quel être a quatre pieds le matin, deux à midi, trois le soir ?"
+          "text": "Oidipas bėga iš Korinto. Orakulas jam išpranašavo, kad jis nužudys tėvą ir ves motiną. Jis tiki išvengsiąs likimo. Kelyje į Tebus Sfinksas užduoda savo klausimą: kas rytą vaikšto keturiomis kojomis, vidudienį dviem, o vakare trimis?"
         },
         {
           "type": "image",
           "asset": "oedipus_answering_sphinx_ingres_painting",
           "ratio": "4:3",
-          "caption": "Œdipe face au Sphinx, victoire de l'intelligence."
+          "caption": "Oidipas prieš Sfinksą: proto pergalė."
         },
         {
           "type": "funFact",
-          "text": "Le mot **Sphinx** vient du grec *sphingein*, « serrer » ou « étrangler ». Il désigne à la fois la façon dont le monstre tue… et la façon dont une énigme paralyse l'esprit."
+          "text": "Žodis **Sfinksas** kilęs iš graikų *sphingein*, „spausti“ arba „smaugti“. Jis nusako ir tai, kaip pabaisa žudo… ir tai, kaip mįslė sukausto protą."
         },
         {
           "type": "paragraph",
-          "text": "Œdipe répond : **« L'Homme »**. Enfant, il rampe à quatre pattes ; adulte, il marche sur deux jambes ; vieux, il s'appuie sur une canne. Le Sphinx, vaincu, se jette du rocher. C'est un [[netikėtas posūkis]] brutal. Thèbes est libre. Comme promis, Œdipe reçoit la couronne et la main de la reine veuve, **Jocaste**."
+          "text": "Oidipas atsako: **„Žmogus“**. Vaikas ropoja keturiomis; suaugęs vaikšto dviem kojomis; senas remiasi lazda. Nugalėtas Sfinksas puola nuo uolos. Tai staigus [[netikėtas posūkis]]. Tebai laisvi. Kaip žadėta, Oidipas gauna karūną ir našlės karalienės **Jokastės** ranką."
         }
       ]
     },
     {
       "id": "course_177_dipe_et_le_sphinx_p3",
-      "title": "Savoir tout… sauf qui l'on est",
+      "title": "Žinoti viską… išskyrus, kas esi",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Œdipe règne. La ville prospère. Mais une peste frappe plus tard. **Apollon** révèle : le fléau cessera quand le meurtrier de Laïos sera trouvé. Œdipe lance une enquête avec la même énergie qu'autrefois face au Sphinx."
+          "text": "Oidipas karaliauja. Miestas klesti. Bet vėliau užeina maras. **Apolonas** paskelbia: nelaimė liausis, kai bus surastas Lajo žudikas. Oidipas pradeda tyrimą su tokia pat energija, kaip kadaise prieš Sfinksą."
         },
         {
           "type": "paragraph",
-          "text": "L'ironie est cruelle. Celui qui a défini l'« Homme » ne sait pas qui il est. Il a gagné une [[dialektika]] publique, un duel d'arguments, mais reste aveugle à son identité. Chez **Sophocle**, dans *Œdipe Roi*, c'est le cœur de la tragédie."
+          "text": "Ironija žiauri. Tas, kuris apibrėžė „Žmogų“, nežino, kas yra jis pats. Viešoje kovoje jį iškėlė [[dialektika]], argumentų dvikova, tačiau savo tapatybei jis lieka aklas. **Sofoklio** tragedijoje *Karalius Oidipas* tai ir yra jos šerdis."
         }
       ]
     },
     {
       "id": "course_177_dipe_et_le_sphinx_p4",
-      "title": "La vérité et les yeux crevés",
+      "title": "Tiesa ir išdurtos akys",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La vérité éclate : Œdipe a tué Laïos, son père, et épousé Jocaste, sa mère. Jocaste se suicide. Œdipe se crève les yeux. Devenu aveugle, il « voit » enfin. Il erre, soutenu par sa fille Antigone, devenu lui-même le vieillard à trois pieds de l'énigme."
+          "text": "Tiesa išaiškėja: Oidipas nužudė Lają, savo tėvą, ir vedė Jokastę, savo motiną. Jokastė nusižudo. Oidipas išsiduria akis. Apakęs jis pagaliau „regi“. Jis klajoja, remiamas dukters Antigonės, pats tapęs mįslės senoliu trimis kojomis."
         },
         {
           "type": "funFact",
-          "text": "**Freud** baptise le [[Oidipo kompleksas]] d'après ce mythe : non pour faire d'Œdipe un monstre, mais pour parler de désirs inconscients que la civilisation apprend à refouler."
+          "text": "Iš šio mito kilo **Freudo** sąvoka [[Oidipo kompleksas]]: ne tam, kad Oidipas būtų paverstas pabaisa, o tam, kad būtų kalbama apie nesąmoningus troškimus, kuriuos civilizacija išmoko slopinti."
         },
         {
           "type": "paragraph",
-          "text": "Le récit devient un pilier de la culture occidentale : intelligence brillante, destin inévitable, et prix terrible de la vérité sur soi."
+          "text": "Šis pasakojimas tampa vienu Vakarų kultūros ramsčių: ryškus protas, neišvengiamas likimas ir baisi tiesos apie save kaina."
         },
         {
           "type": "takeaway",
-          "text": "Œdipe libère Thèbes en répondant « l'Homme » à l'énigme du Sphinx. Cette brillance ne l'empêche pas de réaliser, sans le savoir, la prophétie : le mythe de l'aveuglement sur soi-même."
+          "text": "Oidipas išlaisvina Tebus, į Sfinkso mįslę atsakęs „Žmogus“. Tačiau šis protas nesutrukdo jam pačiam to nežinant išpildyti pranašystės: tai mitas apie aklumą sau."
         }
       ]
     }

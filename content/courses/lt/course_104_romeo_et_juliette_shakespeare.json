@@ -1,109 +1,109 @@
 {
   "id": "course_104_romeo_et_juliette_shakespeare",
-  "title": "Qui est responsable de la mort de Roméo et Juliette ?",
-  "subtitle": "vers 1595",
+  "title": "Kas kaltas dėl Romeo ir Džuljetos mirties?",
+  "subtitle": "apie 1595",
   "subject": "litterature",
   "subcategory": "Anglo-saxons & littérature mondiale",
-  "description": "Vers 1595, deux amants de Vérone meurent en moins de cinq jours. Shakespeare condense une romance en tragédie sociale : la haine des clans détruit la jeunesse.",
+  "description": "Apie 1595 m. du įsimylėjėliai iš Veronos žūva per mažiau nei penkias dienas. Shakespeare'as romaną suspaudžia į socialinę tragediją: giminių neapykanta sunaikina jaunystę.",
   "hero": {
     "image": "romeo_et_juliette_shakespeare",
     "ratio": "16:9",
-    "hook": "Cinq jours entre le coup de foudre et la mort : la tragédie amoureuse la plus célèbre du monde."
+    "hook": "Penkios dienos nuo meilės iš pirmo žvilgsnio iki mirties: garsiausia pasaulyje meilės tragedija."
   },
   "sections": [
     {
       "id": "course_104_romeo_et_juliette_shakespeare_intro",
-      "title": "Introduction",
+      "title": "Įvadas",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Vers **1595**, **William Shakespeare** écrit **[[Romeo ir Džuljeta]]**. On la connaît comme la plus grande histoire d'amour du théâtre. En réalité, c'est aussi une critique violente de la haine héritée entre familles rivales. Les deux amants ne meurent pas seulement par malchance : ils paient l'échec d'une cité incapable de protéger sa jeunesse contre la violence des clans."
+          "text": "Apie **1595** m. pasirodo **Williamo Shakespeare'o** pjesė **[[Romeo ir Džuljeta]]**. Ji žinoma kaip didžiausia meilės istorija teatre. Iš tiesų tai ir aštri paveldėtos neapykantos tarp priešiškų šeimų kritika. Įsimylėjėliai žūva ne vien dėl nesėkmės: jie sumoka už miestą, kuris nesugeba apsaugoti savo jaunimo nuo giminių smurto."
         },
         {
           "type": "image",
           "asset": "romeo_juliet_balcony_painting",
           "ratio": "4:3",
-          "caption": "La scène du balcon : amour absolu face aux clans de Vérone."
+          "caption": "Balkono scena: absoliuti meilė prieš Veronos gimines."
         }
       ]
     },
     {
       "id": "course_104_romeo_et_juliette_shakespeare_p1",
-      "title": "L'alchimie shakespearienne : de la nouvelle au drame",
+      "title": "Shakespeare'o alchemija: nuo novelės iki dramos",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Shakespeare ne invente pas l'histoire. Il s'inspire surtout de **Matteo Bandello**, conteur italien du XVIe siècle, lui-même héritier de récits plus anciens. Son génie tient à la **condensation** : là où les sources étalent l'action sur des mois, Shakespeare la resserre sur **cinq jours** seulement. Chaque minute compte, la catastrophe devient inéluctable."
+          "text": "Shakespeare'as istorijos neišgalvoja. Daugiausia jis remiasi **Matteo Bandello**, XVI a. italų pasakotoju, kuris pats perėmė senesnius pasakojimus. Jo genialumas slypi **sutirštinime**: šaltiniuose veiksmas išsitęsia mėnesiais, o Shakespeare'as jį suspaudžia vos į **penkias dienas**. Svarbi kiekviena minutė, katastrofa tampa neišvengiama."
         },
         {
           "type": "funFact",
-          "text": "Chez Bandello, Juliette se réveille avant la mort de Roméo. Shakespeare supprime cet adieu pour rendre la fin plus cruelle."
+          "text": "Pas Bandello Džuljeta pabunda dar prieš Romeo mirtį. Shakespeare'as šį atsisveikinimą išbraukia, kad pabaiga būtų dar žiauresnė."
         },
         {
           "type": "paragraph",
-          "text": "La pièce commence presque comme une comédie, avec des jeux de mots et des scènes de rue animées. Puis **Mercutio**, esprit brillant et porteur de **[[Cinizmas]]**, meurt au milieu du récit. Avec lui disparaît l'insouciance : le ton bascule définitivement dans la tragédie. Roméo avait d'abord incarné l'**[[Viduramžių kurtuazinė meilė]]**, amoureux de Rosalinde avant de découvrir un amour bien plus profond et dangereux."
+          "text": "Pjesė prasideda beveik kaip komedija: žodžių žaismas, gyvos gatvės scenos. Tada istorijos viduryje žūva **Merkucijus**, šmaikštus veikėjas, kurio laikysena yra **[[Cinizmas]]**. Kartu su juo dingsta nerūpestingumas: tonas galutinai virsta tragedija. Iš pradžių Romeo jausmas Rozalinai buvo tipiška **[[Viduramžių kurtuazinė meilė]]**, kol jis atrado daug gilesnę ir pavojingesnę meilę."
         }
       ]
     },
     {
       "id": "course_104_romeo_et_juliette_shakespeare_p2",
-      "title": "Une mécanique tragique : entre hasard et nécessité",
+      "title": "Tragiškas mechanizmas: tarp atsitiktinumo ir būtinybės",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Roméo Montague** et **Juliette Capulet** s'aiment lors d'un bal masqué, ignorant d'abord le nom de l'autre. La scène du balcon célèbre l'amour, mais aussi le refus du nom de famille : « Renonce à ton père et abdique ton nom. » Le mariage secret du **Frère Laurent** devait apaiser la **[[Vendeta]]** entre les deux clans."
+          "text": "**Romeo Montekis** ir **Džuljeta Kapuleti** įsimyli per kaukių balių, iš pradžių nežinodami vienas kito pavardės. Balkono scena šlovina meilę, bet ir pavardės atsisakymą: „Išsižadėk tėvo ir atsisakyk savo vardo.“ Slaptoji santuoka, kurią sutvirtina **brolis Lorensas**, turėjo padėti, kad baigtųsi tarp abiejų giminių vykstanti **[[vendeta]]**."
         },
         {
           "type": "image",
           "asset": "romeo_juliet_frank_dicksee_painting",
           "ratio": "4:3",
-          "caption": "Roméo et Juliette : passion adolescente prise dans la violence des clans."
+          "caption": "Romeo ir Džuljeta: paauglių aistra giminių smurto gniaužtuose."
         },
         {
           "type": "paragraph",
-          "text": "En quelques heures, **Tybalt** tue Mercutio, Roméo tue Tybalt en représailles et est banni de Vérone. Une épidémie de **peste** retarde le messager chargé d'avertir Roméo que Juliette n'est pas morte, mais seulement endormie par un breuvage. Ce n'est pas le destin divin seul : ce sont des hasards triviaux ajoutés à une société déjà toxique. Les suicides finaux affirment une liberté absolue là où le monde ne leur laisse plus de place."
+          "text": "Per kelias valandas **Tibaltas** nužudo Merkucijų, Romeo keršydamas nužudo Tibaltą ir yra ištremiamas iš Veronos. Dėl **maro** epidemijos vėluoja pasiuntinys, kuris turėjo pranešti Romeo, kad Džuljeta nemirusi, o tik užmigdyta gėrimu. Tai ne vien dievų lemtis: tai banalūs atsitiktinumai, prisidėję prie ir taip nuodingos visuomenės. Galutinės savižudybės yra absoliuti laisvė ten, kur pasaulis jiems nebepalieka vietos."
         },
         {
           "type": "quote",
-          "text": "Renonce à ton nom, et à la place de ce nom qui n'est plus toi, prends-moi.",
-          "attribution": "William Shakespeare, Roméo et Juliette, acte II, scène 2"
+          "text": "Išsižadėk savo vardo, o vietoj to vardo, kuris nėra tu, imk mane visą.",
+          "attribution": "Williamas Shakespeare'as, Romeo ir Džuljeta, II veiksmas, 2 scena"
         }
       ]
     },
     {
       "id": "course_104_romeo_et_juliette_shakespeare_p3",
-      "title": "La responsabilité sociale et le sacrifice de la jeunesse",
+      "title": "Visuomenės atsakomybė ir paaukota jaunystė",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La pièce analyse la vendetta comme moteur de destruction. Montague et Capulet se haïssent sans même se rappeler pourquoi. Le prologue parle d'une « haine ancienne » qui produit un « sang nouveau ». Juliette, à peine **13 ans**, doit épouser le comte **Pâris** ; Roméo erre dans une mélancolie que ses amis comprennent mal."
+          "text": "Pjesė rodo vendetą kaip naikinimo variklį. Montekiai ir Kapuleti nekenčia vieni kitų, net neprisimindami kodėl. Prologe kalbama apie „seną neapykantą“, kuri lieja „naują kraują“. Džuljeta, kuriai vos **13** metų, turi tekėti už grafo **Pariso**; Romeo klaidžioja apimtas melancholijos, kurios draugai beveik nesupranta."
         },
         {
           "type": "paragraph",
-          "text": "Le **Prince de Vérone** représente une loi impuissante face aux milices privées des deux familles. À la fin, devant les corps des jeunes, il accuse les parents : « Tous sont punis. » Les amants sont les victimes d'un système où l'honneur du clan l'emporte sur le bonheur individuel. Dante mentionnait déjà les **Montecchi** et **Cappelletti** au XIVe siècle, deux siècles avant Shakespeare."
+          "text": "**Veronos kunigaikštis** įkūnija įstatymą, bejėgį prieš privačias abiejų šeimų gaujas. Pabaigoje, prie jaunuolių kūnų, jis kaltina tėvus: „Visi nubausti.“ Įsimylėjėliai yra sistemos aukos: joje giminės garbė svarbesnė už asmens laimę. Dantė jau XIV a., du šimtmečiais anksčiau už Shakespeare'ą, mini **Montecchi** ir **Cappelletti**."
         }
       ]
     },
     {
       "id": "course_104_romeo_et_juliette_shakespeare_p4",
-      "title": "Une postérité universelle : du lyrisme aux gangs modernes",
+      "title": "Visuotinis palikimas: nuo lyrikos iki šiuolaikinių gaujų",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L'influence de la pièce est immense. Shakespeare mêle dévotion religieuse et passion physique, inventant un vocabulaire amoureux nouveau pour le théâtre anglais. Le **[[Peripatetizmas]]** shakespearien reste un modèle dramaturgique étudié dans les conservatoires du monde entier."
+          "text": "Pjesės įtaka milžiniška. Shakespeare'as sujungia religinį atsidavimą ir kūnišką aistrą ir sukuria naują meilės žodyną anglų teatrui. Shakespeare'o **[[Peripatetizmas]]** iki šiol yra dramaturgijos pavyzdys, nagrinėjamas viso pasaulio konservatorijose."
         },
         {
           "type": "paragraph",
-          "text": "Au XXe siècle, **[[Vestsaido istorija]]** transpose le conflit à New York : les **Sharks** et les **Jets** remplacent les clans de Vérone. Le schéma tient toujours : l'amour de l'autre heurte la haine du groupe. Conflits religieux, raciaux ou sociaux reprennent sans cesse la matrice shakespearienne."
+          "text": "XX a. miuziklas **[[Vestsaido istorija]]** perkelia konfliktą į Niujorką: Veronos gimines pakeičia **„Sharks“** ir **„Jets“** gaujos. Schema vis dar veikia: meilė kitam susiduria su grupės neapykanta. Religiniai, rasiniai ar socialiniai konfliktai vis iš naujo kartoja Shakespeare'o modelį."
         },
         {
           "type": "takeaway",
-          "text": "**Roméo et Juliette** condense en cinq jours une idylle adolescente et une dénonciation de la violence héritée. Shakespeare montre que l'amour absolu ne survit pas là où la société préfère la rancœur au vivant."
+          "text": "**Romeo ir Džuljeta** per penkias dienas sujungia paauglių idiliją ir paveldėto smurto kaltinimą. Shakespeare'as parodo, kad absoliuti meilė neišgyvena ten, kur visuomenė pagiežą vertina labiau nei gyvybę."
         }
       ]
     }

@@ -1,130 +1,130 @@
 {
   "id": "course_223_l_economie_circulaire",
-  "title": "Économie circulaire : et si le déchet n'existait plus ?",
-  "subtitle": "Sortir du tout-jetable",
+  "title": "Žiedinė ekonomika: o jei atliekų nebeliktų?",
+  "subtitle": "Ne vienkartiniam vartojimui",
   "subject": "comprendreLeMonde",
   "subcategory": "Environnement & avenir",
-  "description": "**Extraire, fabriquer, jeter** : ce modèle épuise la planète. L'économie circulaire propose l'inverse : garder les objets et les matériaux en circulation le plus longtemps possible.",
+  "description": "**Išgauti, pagaminti, išmesti**: šis modelis alina planetą. Žiedinė ekonomika siūlo priešingai: kuo ilgiau išlaikyti daiktus ir medžiagas apyvartoje.",
   "hero": {
     "image": "l_economie_circulaire",
     "ratio": "16:9",
-    "hook": "Et si le déchet n'existait pas ? C'est le pari d'un modèle économique inspiré de la nature."
+    "hook": "O jei atliekų išvis nebūtų? Tokį iššūkį meta gamtos įkvėptas ekonomikos modelis."
   },
   "sections": [
     {
       "id": "course_223_l_economie_circulaire_intro",
-      "title": "Introduction",
+      "title": "Įžanga",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Depuis la révolution industrielle, notre économie fonctionne dans un seul sens : on extrait des ressources, on fabrique des objets, puis on les jette. Ce modèle suppose que les ressources sont infinies. Elles ne le sont pas."
+          "text": "Nuo pramonės perversmo mūsų ekonomika veikia viena kryptimi: išgaunami ištekliai, gaminami daiktai, o paskui jie išmetami. Šis modelis daro prielaidą, kad ištekliai begaliniai. Bet taip nėra."
         },
         {
           "type": "paragraph",
-          "text": "L'**économie circulaire** propose une autre logique, inspirée de la nature, où rien ne se perd vraiment. Elle vise à garder la valeur des produits et des matériaux en circulation le plus longtemps possible, au lieu de les transformer en déchets."
+          "text": "**Žiedinė ekonomika** siūlo kitą, gamtos įkvėptą logiką, kurioje niekas iš tikrųjų nepradingsta. Ja siekiama kuo ilgiau išlaikyti gaminių ir medžiagų vertę apyvartoje, užuot pavertus juos atliekomis."
         }
       ]
     },
     {
       "id": "course_223_l_economie_circulaire_p1",
-      "title": "Le modèle linéaire arrive à ses limites",
+      "title": "Linijinis modelis pasiekė ribas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L'économie moderne s'est construite sur un modèle dit **linéaire** : extraire, fabriquer, jeter. On prend des matières premières dans la nature, on en fait des produits, et une fois usés ou démodés, ces produits deviennent des déchets."
+          "text": "Šiuolaikinė ekonomika sukurta remiantis vadinamuoju **linijiniu** modeliu: išgauti, pagaminti, išmesti. Iš gamtos paimamos žaliavos, iš jų gaminami produktai, o susidėvėję ar išėję iš mados jie tampa atliekomis."
         },
         {
           "type": "image",
           "asset": "landfill_waste_garbage_linear_economy",
           "ratio": "16:9",
-          "caption": "Le modèle « extraire, fabriquer, jeter » suppose des ressources infinies."
+          "caption": "Modelis „išgauti, pagaminti, išmesti“ remiasi prielaida, kad ištekliai begaliniai."
         },
         {
           "type": "paragraph",
-          "text": "Ce système repose sur l'idée que les ressources sont illimitées, et que la nature peut absorber toute la pollution. Mais aujourd'hui, l'économie mondiale consomme chaque année l'équivalent de 1,7 planète en ressources. Certains métaux essentiels aux technologies numériques, comme le [[Litis]], pourraient devenir difficiles à trouver dès 2040."
+          "text": "Ši sistema remiasi idėja, kad ištekliai neriboti, o gamta gali sugerti visą taršą. Tačiau šiandien pasaulio ekonomika kasmet suvartoja tiek išteklių, kiek jų yra 1,7 planetos. Kai kurie skaitmeninėms technologijoms būtini metalai, pavyzdžiui, [[litis]], jau 2040 m. gali tapti sunkiai randami."
         },
         {
           "type": "funFact",
-          "text": "Seulement 9% de tout le plastique jamais produit par l'humanité a été recyclé. Le reste finit dans la nature ou en décharge, où il peut rester 450 ans."
+          "text": "Perdirbta tik 9 % viso plastiko, kurį žmonija kada nors pagamino. Likęs atsiduria gamtoje arba sąvartyne, kur gali išlikti 450 metų."
         },
         {
           "type": "paragraph",
-          "text": "Le coût du nettoyage et de la gestion des déchets n'est presque jamais inclus dans le prix de vente d'un produit. C'est un coût caché, payé plus tard par tout le monde."
+          "text": "Valymo ir atliekų tvarkymo kaina beveik niekada neįtraukiama į gaminio pardavimo kainą. Tai paslėpta kaina, kurią vėliau sumoka visi."
         }
       ]
     },
     {
       "id": "course_223_l_economie_circulaire_p2",
-      "title": "Réparer avant de recycler",
+      "title": "Pirma taisyti, paskui perdirbti",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L'économie circulaire propose plusieurs boucles, et toujours dans le même ordre de priorité : mieux vaut la boucle la plus courte, car elle gaspille moins d'énergie et de matière. Tout commence par l'**éco-conception**, c'est-à-dire penser l'impact environnemental d'un produit dès sa création, en choisissant des matériaux durables et faciles à démonter."
+          "text": "Žiedinė ekonomika siūlo kelis ratus, visada ta pačia prioritetų tvarka: geriausias yra trumpiausias ratas, nes jis švaisto mažiausiai energijos ir medžiagų. Viskas prasideda nuo **ekologinio projektavimo**, t. y. gaminio poveikio aplinkai apgalvojimo nuo pat jo sukūrimo, renkantis patvarias ir lengvai išardomas medžiagas."
         },
         {
           "type": "paragraph",
-          "text": "Ensuite vient la **réutilisation** (un objet change de propriétaire sans être transformé, comme sur un marché de l'occasion), puis la **réparation**, qui prolonge la vie d'un produit. Ces étapes luttent directement contre l'[[Planuotas pasenimas]], cette pratique qui réduit volontairement la durée de vie d'un objet."
+          "text": "Paskui eina **pakartotinis naudojimas** (daiktas keičia savininką nebūdamas perdirbtas, kaip naudotų daiktų turguje), o tada **taisymas**, kuris prailgina gaminio gyvenimą. Šie etapai tiesiogiai kovoja su reiškiniu, kurio pavadinimas yra [[Planuotas pasenimas]]: tai praktika, kai daikto tarnavimo laikas sąmoningai sutrumpinamas."
         },
         {
           "type": "image",
           "asset": "recycling_sorting_waste_materials",
           "ratio": "4:3",
-          "caption": "Le recyclage arrive en dernier recours, après la réutilisation et la réparation."
+          "caption": "Perdirbimas yra paskutinė priemonė po pakartotinio naudojimo ir taisymo."
         },
         {
           "type": "paragraph",
-          "text": "Le **recyclage** n'intervient qu'en dernier recours. Il reste utile : recycler de l'aluminium consomme 95% moins d'énergie que d'en extraire à partir du minerai brut, la [[Boksitas]]. Mais c'est toujours moins efficace que de simplement réutiliser un objet."
+          "text": "**Perdirbimas** naudojamas tik kaip paskutinė priemonė. Jis vis tiek naudingas: perdirbant aliuminį sunaudojama 95 % mažiau energijos nei išgaunant jį iš žaliavinės rūdos, kuri vadinama [[boksitas]]. Bet tai visada mažiau veiksminga nei tiesiog pakartotinai naudoti daiktą."
         }
       ]
     },
     {
       "id": "course_223_l_economie_circulaire_p3",
-      "title": "Pourquoi c'est encore difficile aujourd'hui",
+      "title": "Kodėl tai vis dar sunku",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Malgré tout son intérêt, l'économie circulaire se heurte à un problème simple : le modèle linéaire reste souvent **moins cher à court terme**. Extraire une matière neuve coûte parfois moins que trier et recycler un déchet complexe, surtout quand les matières premières sont bon marché."
+          "text": "Nepaisant visos naudos, žiedinė ekonomika susiduria su paprasta problema: linijinis modelis dažnai lieka **pigesnis trumpuoju laikotarpiu**. Išgauti naują žaliavą kartais kainuoja mažiau nei surūšiuoti ir perdirbti sudėtingas atliekas, ypač kai žaliavos pigios."
         },
         {
           "type": "image",
           "asset": "repair_right_electronics_reuse",
           "ratio": "4:3",
-          "caption": "Le « droit à la réparation » impose aux fabricants de fournir des pièces détachées."
+          "caption": "„Teisė į taisymą“ įpareigoja gamintojus tiekti atsargines dalis."
         },
         {
           "type": "paragraph",
-          "text": "Face à cela, les pouvoirs publics interviennent de plus en plus. L'Union européenne a lancé en 2020 un plan qui impose des règles plus strictes de durabilité. L'un des axes majeurs est le « droit à la réparation », qui oblige les fabricants d'appareils électroniques à fournir des pièces détachées pendant plusieurs années."
+          "text": "Todėl valdžios institucijos vis dažniau įsikiša. 2020 m. Europos Sąjunga pradėjo planą, kuriuo nustatomos griežtesnės patvarumo taisyklės. Viena svarbiausių krypčių yra „teisė į taisymą“, įpareigojanti elektronikos prietaisų gamintojus kelerius metus tiekti atsargines dalis."
         },
         {
           "type": "paragraph",
-          "text": "Autre levier : la [[Išplėstinė gamintojo atsakomybė]], qui fait payer aux fabricants la gestion des déchets de leurs produits. Cela les incite financièrement à concevoir des objets moins polluants et plus faciles à réparer."
+          "text": "Kitas svertas yra [[Išplėstinė gamintojo atsakomybė]], dėl kurios gamintojai patys moka už savo gaminių atliekų tvarkymą. Tai finansiškai skatina juos kurti mažiau teršiančius ir lengviau taisomus daiktus."
         }
       ]
     },
     {
       "id": "course_223_l_economie_circulaire_p4",
-      "title": "Vers une société de la ressource",
+      "title": "Link išteklius tausojančios visuomenės",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L'économie circulaire n'est pas qu'une question de recyclage : c'est un projet de société plus sobre et plus résistante. En dépendant moins des importations de matières premières, un pays gagne aussi en sécurité dans un monde plus instable."
+          "text": "Žiedinė ekonomika nėra vien perdirbimo klausimas: tai saikingesnės ir atsparesnės visuomenės projektas. Mažiau priklausydama nuo žaliavų importo, šalis tampa saugesnė vis nestabilesniame pasaulyje."
         },
         {
           "type": "paragraph",
-          "text": "Le succès de cette transformation dépend aussi de nous, comme consommateurs. La règle des 3R, réduire, réutiliser, recycler, commence par la première étape : réduire, c'est-à-dire se demander si l'achat est vraiment nécessaire. C'est ce premier geste qui a le plus grand effet sur le climat."
+          "text": "Šio virsmo sėkmė priklauso ir nuo mūsų kaip vartotojų. 3R taisyklė (mažinti, pakartotinai naudoti, perdirbti) prasideda nuo pirmo žingsnio: mažinti, t. y. paklausti savęs, ar pirkinys tikrai reikalingas. Būtent šis pirmas žingsnis labiausiai paveikia klimatą."
         },
         {
           "type": "funFact",
-          "text": "Il y a aujourd'hui plus d'or dans une tonne de vieilles cartes électroniques de smartphones que dans une tonne de minerai extrait d'une mine d'or classique."
+          "text": "Šiandien vienoje tonoje senų išmaniųjų telefonų elektroninių plokščių yra daugiau aukso nei tonoje rūdos, išgautos įprastoje aukso kasykloje."
         },
         {
           "type": "takeaway",
-          "text": "L'économie circulaire vise à casser le cycle « extraire, fabriquer, jeter » en gardant les ressources en circulation grâce à l'éco-conception, la réparation et le recyclage, pour respecter les limites physiques de notre planète."
+          "text": "Žiedine ekonomika siekiama nutraukti ciklą „išgauti, pagaminti, išmesti“ ir išlaikyti išteklius apyvartoje pasitelkiant ekologinį projektavimą, taisymą ir perdirbimą, kad būtų paisoma fizinių mūsų planetos ribų."
         }
       ]
     }

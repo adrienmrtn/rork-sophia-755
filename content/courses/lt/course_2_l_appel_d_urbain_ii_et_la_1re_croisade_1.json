@@ -1,121 +1,121 @@
 {
   "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1",
-  "title": "Qu'est-ce qui a causé la Première Croisade ?",
+  "title": "Kas sukėlė Pirmąjį kryžiaus žygį?",
   "subtitle": "1095",
   "subject": "histoire",
   "subcategory": "Antiquité & Moyen Âge",
-  "description": "En novembre 1095, à Clermont, le pape Urbain II lance un appel qui envoie des dizaines de milliers d'Européens vers Jérusalem. Naissance des Croisades.",
+  "description": "1095 m. lapkritį Klermone popiežius Urbonas II paskelbia raginimą, kuris į Jeruzalę pasiunčia dešimtis tūkstančių europiečių. Taip gimsta kryžiaus žygiai.",
   "hero": {
     "image": "l_appel_d_urbain_ii_et_la_1re_croisade",
     "ratio": "16:9",
-    "hook": "Un discours de vingt minutes, et l'Occident se met en marche vers Jérusalem."
+    "hook": "Dvidešimties minučių kalba, ir Vakarai pajuda Jeruzalės link."
   },
   "sections": [
     {
       "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_intro",
-      "title": "Introduction",
+      "title": "Įvadas",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En novembre **1095**, en Auvergne, le pape **Urbain II** s'adresse à une foule. Son appel est simple : partez libérer Jérusalem et secourir les chrétiens d'Orient. En échange, le pardon des péchés."
+          "text": "**1095** m. lapkritį Overnėje popiežius **Urbonas II** kreipiasi į minią. Jo raginimas paprastas: eikite išvaduoti Jeruzalės ir padėti Rytų krikščionims. Už tai žadamas nuodėmių atleidimas."
         },
         {
           "type": "paragraph",
-          "text": "Personne n'imagine encore ce que ce discours va déclencher. Des dizaines de milliers d'hommes vont s'élancer vers l'Est. La papauté invente une guerre sacrée. Elle changera pour longtemps les rapports entre les chrétiens d'Occident (souvent appelés Latins), l'Empire byzantin d'Orient, et le monde musulman."
+          "text": "Niekas dar neįsivaizduoja, ką ši kalba sukels. Dešimtys tūkstančių vyrų patrauks į Rytus. Popiežiai sugalvoja šventąjį karą. Jis ilgam pakeis Vakarų krikščionių (dažnai vadinamų lotynais), Rytų Bizantijos imperijos ir musulmonų pasaulio santykius."
         }
       ]
     },
     {
       "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_p1",
-      "title": "Byzance appelle à l'aide",
+      "title": "Bizantija šaukiasi pagalbos",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Depuis le VIIe siècle, Jérusalem est sous domination musulmane. Les pèlerins chrétiens y passent encore. Tout bascule avec les **Turcs Seldjoukides**, un peuple guerrier venu d'Asie. En **1071**, à la [[Mancikerto mūšis]], en Asie Mineure, ils écrasent l'armée de l'Empire byzantin, l'Empire romain d'Orient. Ils ouvrent ainsi l'Anatolie, le cœur de ce qui est aujourd'hui la Turquie."
+          "text": "Nuo VII a. Jeruzalę valdo musulmonai. Krikščionys piligrimai ten vis dar keliauja. Viskas pasikeičia atėjus **turkams seldžiukams**, karingai tautai iš Azijos. **1071** m. Mažojoje Azijoje vyksta [[Mancikerto mūšis]]: jame jie sutriuškina Bizantijos imperijos, Rytų Romos imperijos, kariuomenę. Taip jiems atsiveria Anatolija, dabartinės Turkijos širdis."
         },
         {
           "type": "image",
           "asset": "seljuk_turks_battle_of_manzikert",
           "ratio": "4:3",
-          "caption": "Mantzikert, 1071 : Byzance perd l'Anatolie face aux Seldjoukides."
+          "caption": "Mancikertas, 1071 m.: Bizantija netenka Anatolijos, kurią užima seldžiukai."
         },
         {
           "type": "paragraph",
-          "text": "Acculé, l'empereur de Byzance, [[Aleksijas I Komninas]], demande de l'aide à Rome. Pourtant, depuis le [[1054 m. schizma]], l'Église catholique d'Occident et l'Église orthodoxe d'Orient sont séparées. Pour Urbain II, l'occasion est parfaite : affirmer le pouvoir du pape, et détourner la violence des chevaliers vers une cause extérieure. L'Église avait déjà tenté de limiter ces combats privés avec la [[Dievo taika]], un mouvement pour protéger les non-combattants."
+          "text": "Prispaustas prie sienos, Bizantijos imperatorius [[Aleksijas I Komninas]] prašo Romos pagalbos. Tačiau nuo tada, kai įvyko [[1054 m. didžioji schizma]], Vakarų Katalikų Bažnyčia ir Rytų Ortodoksų Bažnyčia yra atsiskyrusios. Urbonui II tai puiki proga: sustiprinti popiežiaus valdžią ir nukreipti riterių smurtą į išorinį tikslą. Bažnyčia jau buvo bandžiusi riboti šias privačias kovas, ir tam atsirado [[Dievo taika]], judėjimas nekovojantiems žmonėms apsaugoti."
         },
         {
           "type": "funFact",
-          "text": "À Mantzikert, le sultan Alp Arslan captura l'empereur byzantin. Au lieu de le tuer, il le traita avec les honneurs avant de le libérer."
+          "text": "Prie Mancikerto sultonas Alp Arslanas paėmė į nelaisvę Bizantijos imperatorių. Užuot jį nužudęs, jis elgėsi su juo pagarbiai, o paskui paleido."
         }
       ]
     },
     {
       "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_p2",
-      "title": "Clermont : « Dieu le veut ! »",
+      "title": "Klermonas: „To nori Dievas!“",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le **27 novembre 1095**, au [[Klermono susirinkimas]], une grande assemblée d'Église, Urbain II promet une [[Visuotiniai atlaidai]] à ceux qui partiront : le pardon total des peines dues aux péchés. L'expédition devient un pèlerinage armé. Le cri **« Dieu le veut ! »** se répand. Les volontaires cousent une croix rouge sur leur épaule : on « se croise »."
+          "text": "**1095 m. lapkričio 27 d.** susirenka [[Klermono susirinkimas]], didelis Bažnyčios suvažiavimas. Urbonas II pažada, kad išvykstančiųjų laukia [[Visiški atlaidai]]: visiškas bausmių už nuodėmes atleidimas. Žygis tampa ginkluota piligrimyste. Pasklinda šūkis **„To nori Dievas!“**. Savanoriai prisisiuva ant peties raudoną kryžių: taip tampama kryžiuočiu."
         },
         {
           "type": "image",
           "asset": "council_of_clermont_1095",
           "ratio": "4:3",
-          "caption": "Le concile de Clermont, 1095 : l'appel qui lance la Première Croisade."
+          "caption": "Klermono susirinkimas, 1095 m.: raginimas, nuo kurio prasidėjo Pirmasis kryžiaus žygis."
         },
         {
           "type": "paragraph",
-          "text": "La ferveur échappe vite au pape. Avant les seigneurs, [[Petras Atsiskyrėlis]], un prédicateur populaire, entraîne une foule de pauvres vers l'Est. Sans discipline ni ravitaillement, cette « Croisade des pauvres » pille en chemin et est décimée en Anatolie. La ferveur seule ne fait pas une armée."
+          "text": "Įkarštis greitai išsprūsta popiežiui iš rankų. Dar prieš didikus liaudies pamokslininkas [[Petras Atsiskyrėlis]] nusiveda į Rytus vargšų minią. Be drausmės ir atsargų šis „vargšų kryžiaus žygis“ pakeliui plėšikauja, o Anatolijoje beveik visiškai sunaikinamas. Vien įkarštis kariuomenės nesukuria."
         }
       ]
     },
     {
       "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_p3",
-      "title": "D'Antioche à Jérusalem",
+      "title": "Nuo Antiochijos iki Jeruzalės",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En **1096**, part la Croisade des barons : **Godefroy de Bouillon**, un seigneur lorrain, [[Bohemundas Tarantietis]], un prince normand d'Italie du Sud, et d'autres chefs. Alexis leur exige des serments. Après le long siège d'**Antioche** (1097-1098), une grande ville de Syrie, les survivants atteignent Jérusalem. Le **15 juillet 1099**, la ville tombe. Le massacre marque durablement la mémoire musulmane."
+          "text": "**1096** m. išsiruošia baronų kryžiaus žygis: **Gotfridas Bujonietis**, Lotaringijos didikas, [[Bohemundas Tarantietis]], normanų kunigaikštis iš Pietų Italijos, ir kiti vadai. Aleksijas reikalauja, kad jie jam prisiektų. Po ilgos **Antiochijos**, didelio Sirijos miesto, apgulties (1097-1098) išlikusieji pasiekia Jeruzalę. **1099 m. liepos 15 d.** miestas krenta. Žudynės ilgam įsirėžia į musulmonų atmintį."
         },
         {
           "type": "funFact",
-          "text": "Godefroy de Bouillon refuse le titre de roi. Il se fait appeler [[Šventojo Kapo gynėjas]], protecteur du tombeau du Christ : trop humble, dit-il, pour porter une couronne d'or là où le Christ a porté des épines."
+          "text": "Gotfridas Bujonietis atsisako karaliaus titulo. Jis pasirenka kuklesnį vardą: [[Šventojo Kapo gynėjas]], tai yra Kristaus kapo saugotojas. Esą jis per kuklus nešioti auksinę karūną ten, kur Kristus nešiojo erškėčių vainiką."
         },
         {
           "type": "paragraph",
-          "text": "Les croisés fondent les [[Lotynų valstybės Rytuose]], quatre petits États chrétiens au Proche-Orient. Plus tard, les [[Tamplieriai]], moines-soldats, protègent les pèlerins. En **1187**, [[Saladinas]], un sultan musulman, reprend Jérusalem. D'autres croisades suivront, jusqu'à la chute de Saint-Jean-d'Acre, dernier bastion latin, en **1291**."
+          "text": "Kryžiuočiai įkuria keturias mažas krikščionių valstybes Artimuosiuose Rytuose: tai [[Lotynų valstybės Rytuose]]. Vėliau piligrimus saugo [[Tamplieriai]], vienuoliai kariai. **1187** m. musulmonų sultonas [[Saladinas]] atsiima Jeruzalę. Vyks dar kiti kryžiaus žygiai, kol **1291** m. kris Akra, paskutinė lotynų tvirtovė."
         },
         {
           "type": "timeline",
           "events": [
             {
               "date": "1071",
-              "title": "Mantzikert",
-              "detail": "Byzance perd l'Anatolie face aux Seldjoukides."
+              "title": "Mancikertas",
+              "detail": "Bizantija netenka Anatolijos, kurią užima seldžiukai."
             },
             {
               "date": "1095",
-              "title": "Concile de Clermont",
-              "detail": "Urbain II lance l'appel à la croisade."
+              "title": "Klermono susirinkimas",
+              "detail": "Urbonas II paskelbia kryžiaus žygį."
             },
             {
               "date": "1099",
-              "title": "Prise de Jérusalem",
-              "detail": "Les croisés fondent les États latins d'Orient."
+              "title": "Jeruzalės užėmimas",
+              "detail": "Kryžiuočiai įkuria Lotynų valstybes Rytuose."
             },
             {
               "date": "1187",
-              "title": "Saladin reprend Jérusalem",
-              "detail": "La reconquête musulmane relance les croisades."
+              "title": "Saladinas atsiima Jeruzalę",
+              "detail": "Musulmonų atkariavimas paskatina naujus kryžiaus žygius."
             },
             {
               "date": "1291",
-              "title": "Chute de Saint-Jean-d'Acre",
-              "detail": "Fin de la présence latine en Terre sainte."
+              "title": "Akros žlugimas",
+              "detail": "Lotynų buvimo Šventojoje Žemėje pabaiga."
             }
           ]
         }
@@ -123,20 +123,20 @@
     },
     {
       "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_p4",
-      "title": "Un fossé durable",
+      "title": "Ilgalaikė praraja",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Sur le plan militaire, l'aventure finit mal. Sur le plan culturel, elle rapproche pourtant Orient et Occident : science grecque transmise par les Arabes, techniques, produits, finance des ordres militaires. L'Europe apprend à se mobiliser sous une même bannière."
+          "text": "Kariniu požiūriu nuotykis baigiasi prastai. Tačiau kultūriniu požiūriu jis suartina Rytus ir Vakarus: arabų perduotas graikų mokslas, technologijos, prekės, karinių ordinų finansai. Europa išmoksta telktis po viena vėliava."
         },
         {
           "type": "paragraph",
-          "text": "L'héritage reste ambigu. L'appel d'Urbain II a forgé une identité chrétienne d'Occident commune. Mais il a aussi creusé une méfiance durable entre religions. Un discours de quelques minutes a ouvert deux siècles de guerres et d'échanges."
+          "text": "Palikimas lieka dviprasmiškas. Urbono II raginimas sukūrė bendrą Vakarų krikščionių tapatybę. Tačiau jis ir ilgam įskiepijo nepasitikėjimą tarp religijų. Kelių minučių kalba atvėrė du šimtmečius karų ir mainų."
         },
         {
           "type": "takeaway",
-          "text": "En **1095**, Urbain II transforme une demande d'aide byzantine en pèlerinage armé. En **1099**, Jérusalem tombe ; en **1291**, la présence latine s'effondre. Les Croisades ont uni l'Occident et durablement divisé les mémoires."
+          "text": "**1095** m. Urbonas II Bizantijos pagalbos prašymą paverčia ginkluota piligrimyste. **1099** m. krenta Jeruzalė, o **1291** m. žlunga lotynų buvimas Rytuose. Kryžiaus žygiai suvienijo Vakarus ir ilgam padalijo atmintį."
         }
       ]
     }

@@ -1,117 +1,117 @@
 {
   "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum",
-  "title": "Pourquoi les Aztèques offraient-ils des sacrifices humains ?",
-  "subtitle": "Sang pour le soleil",
+  "title": "Kodėl actekai aukodavo žmones?",
+  "subtitle": "Kraujas saulei",
   "subject": "mythologie",
   "subcategory": "Autres mythologies",
-  "description": "Chez les Aztèques, le soleil ne se lève que si les dieux reçoivent du sang. Une cosmologie dure, mais cohérente, au cœur de leur empire.",
+  "description": "Actekai tikėjo, kad saulė pateka tik tada, kai dievai gauna kraujo. Tai atšiauri, bet nuosekli kosmologija, buvusi jų imperijos šerdimi.",
   "hero": {
     "image": "les_dieux_azteques_et_les_sacrifices_humains",
     "ratio": "16:9",
-    "hook": "Sans sang, le soleil s'arrêterait : telle est la dette cosmique des Aztèques."
+    "hook": "Be kraujo saulė sustotų: tokia buvo actekų kosminė skola."
   },
   "sections": [
     {
       "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum_intro",
-      "title": "Introduction",
+      "title": "Įvadas",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Les **Aztèques**, ou Mexica, croient que l'univers est fragile. Les dieux ont besoin de sang pour que le soleil continue sa course. Sans offrandes, le chaos reviendrait."
+          "text": "**Actekai**, arba meksikai, tiki, kad visata trapi. Dievams reikia kraujo, kad saulė tęstų savo kelią. Be aukų sugrįžtų chaosas."
         },
         {
           "type": "paragraph",
-          "text": "Ce qui a horrifié les Espagnols repose sur une idée claire : la vie des dieux et celle des hommes sont liées. Voici comment cette cosmologie fonctionne."
+          "text": "Tai, kas taip pasibaisėjo ispanus, remiasi aiškia mintimi: dievų ir žmonių gyvenimai susiję. Pažiūrėkime, kaip veikia ši kosmologija."
         }
       ]
     },
     {
       "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum_p1",
-      "title": "Les Cinq Soleils : un monde déjà mort quatre fois",
+      "title": "Penkios saulės: pasaulis, jau keturis kartus miręs",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Selon le mythe des [[Penkios saulės]], quatre ères ont déjà disparu dans des catastrophes. Nous vivons le cinquième soleil, [[Nahui Ollin]] (« 4-Mouvement »), promis à finir par des tremblements de terre."
+          "text": "Pagal mitą, kuris vadinamas [[Penkios saulės]], keturios eros jau pražuvo per katastrofas. Mes gyvename penktosios saulės laikais. Ji vadinama [[Nahui Ollin]] („4-Judėjimas“), ir jai lemta baigtis žemės drebėjimais."
         },
         {
           "type": "image",
           "asset": "aztec_five_suns_teotihuacan_pyramid_sun_stone",
           "ratio": "4:3",
-          "caption": "Pierre du Soleil : le temps aztèque tourne en ères successives."
+          "caption": "Saulės akmuo: actekų laikas sukasi besikeičiančiomis eromis."
         },
         {
           "type": "paragraph",
-          "text": "À **Teotihuacán**, cité sacrée du plateau central, les dieux se jettent dans un brasier pour devenir soleil et lune. Mais le soleil reste immobile. Les autres dieux offrent alors leur propre sang pour le mettre en marche. Les hommes héritent de cette dette."
+          "text": "**Teotihuakane**, šventajame centrinės plokštikalnės mieste, dievai šoka į laužą, kad taptų saule ir mėnuliu. Tačiau saulė lieka nejudanti. Tada kiti dievai paaukoja savo kraują, kad ją pajudintų. Šią skolą paveldi žmonės."
         },
         {
           "type": "funFact",
-          "text": "Pour les Aztèques, le sacrifice n'est pas une cruauté gratuite : c'est le remboursement d'une dette divine, la [[Penkių saulių kosmologija ir kosminė skola]]."
+          "text": "Actekams auka nėra beprasmis žiaurumas: tai dieviškos skolos grąžinimas, kurį numato [[penkių saulių kosmologija ir kosminė skola]]."
         }
       ]
     },
     {
       "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum_p2",
-      "title": "Un panthéon de dualités",
+      "title": "Dvilypumų panteonas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le dieu central est [[Huicilopočtlis]], dieu de la guerre et du soleil de midi. Chaque nuit, il combat les ténèbres pour renaître au matin. À ses côtés, [[Tlalokas]] donne la pluie, donc les récoltes, ou la famine."
+          "text": "Svarbiausias dievas yra [[Huicilopočtlis]], karo ir vidurdienio saulės dievas. Kiekvieną naktį jis kovoja su tamsa, kad ryte atgimtų. Šalia jo [[Tlalokas]] siunčia lietų, o kartu derlių arba badą."
         },
         {
           "type": "image",
           "asset": "huitzilopochtli_aztec_sun_god_codex",
           "ratio": "4:3",
-          "caption": "Huitzilopochtli, soleil guerrier qui exige d'être nourri."
+          "caption": "Huicilopočtlis: karingoji saulė, kurią reikia maitinti."
         },
         {
           "type": "paragraph",
-          "text": "[[Kecalkoatlis]], le Serpent à plumes, incarne le savoir et la civilisation. Son rival [[Teskatlipoka]], le Miroir fumant, règne sur la nuit, le destin et la magie. La terre elle-même a un visage terrible : [[Koatlikuė]], déesse mère dévorante."
+          "text": "[[Kecalkoatlis]], Plunksnuotoji Gyvatė, įkūnija žinojimą ir civilizaciją. Jo varžovas [[Teskatlipoka]], Rūkstantis Veidrodis, valdo naktį, likimą ir magiją. Net pati žemė turi baisų veidą: tai [[Koatlikuė]], ryjanti deivė motina."
         },
         {
           "type": "funFact",
-          "text": "Le sang précieux offert aux dieux s'appelle [[chalchihuatl]], « l'eau précieuse ». Le cœur extrait est pensé comme une étincelle solaire rendue au ciel."
+          "text": "Dievams aukojamas brangus kraujas turi savo vardą: [[chalchihuatl]], „brangusis vanduo“. Išplėšta širdis laikoma saulės kibirkštimi, grąžinama dangui."
         }
       ]
     },
     {
       "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum_p3",
-      "title": "Les guerres fleuries",
+      "title": "Gėlių karai",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Pour obtenir des victimes, les Aztèques organisent les [[Xochiyaoyotl]], les « guerres fleuries » : des combats rituels dont le but n'est pas de tuer, mais de capturer des guerriers vivants dignes d'être offerts."
+          "text": "Aukoms gauti actekai rengia ritualinius karus: tai [[Xochiyaoyotl]], „gėlių karai“. Jų tikslas ne žudyti, o paimti gyvų karių, kuriuos verta paaukoti."
         },
         {
           "type": "image",
           "asset": "aztec_sacrifice_pyramid_templo_mayor_codex",
           "ratio": "4:3",
-          "caption": "Sacrifice au sommet du temple : le cœur présenté au soleil."
+          "caption": "Auka šventyklos viršūnėje: širdis rodoma saulei."
         },
         {
           "type": "paragraph",
-          "text": "Au sommet du **Templo Mayor** de Tenochtitlán, capitale lacustre, un prêtre extrait le cœur avec un couteau d'**obsidienne**, pierre volcanique tranchante. Le geste est public, solennel, pensé comme un service rendu au soleil."
+          "text": "Ežero sostinės Tenočtitlano **Templo Mayor** viršūnėje žynys išpjauna širdį **obsidiano** peiliu; obsidianas yra aštrus vulkaninis akmuo. Tai viešas, iškilmingas veiksmas, suvokiamas kaip paslauga saulei."
         },
         {
           "type": "timeline",
           "events": [
             {
-              "date": "Mythe",
-              "title": "Sacrifice des dieux",
-              "detail": "Le soleil reçoit le sang divin pour avancer."
+              "date": "Mitas",
+              "title": "Dievų auka",
+              "detail": "Saulė gauna dievišką kraują, kad galėtų judėti."
             },
             {
-              "date": "Empire",
-              "title": "Guerres fleuries",
-              "detail": "Capturer des guerriers pour les offrandes."
+              "date": "Imperija",
+              "title": "Gėlių karai",
+              "detail": "Karių gaudymas aukoms."
             },
             {
               "date": "1519",
-              "title": "Choc espagnol",
-              "detail": "Cortés arrive ; le système s'effondre."
+              "title": "Ispanų smūgis",
+              "detail": "Atvyksta Kortesas; sistema žlunga."
             }
           ]
         }
@@ -119,20 +119,20 @@
     },
     {
       "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum_p4",
-      "title": "Fin d'un monde, traces durables",
+      "title": "Pasaulio pabaiga, ilgalaikiai pėdsakai",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Les chroniques espagnoles gonflent parfois les chiffres pour justifier la conquête. Mais le système sacrificiel est bien réel. En **1519**, l'arrivée d'**Hernán Cortés** précipite la fin de cet univers rituel."
+          "text": "Ispanų kronikos kartais išpučia skaičius, kad pateisintų užkariavimą. Tačiau aukojimo sistema tikrai egzistavo. **1519** m. atvykęs **Hernanas Kortesas** paspartina šio ritualinio pasaulio pabaigą."
         },
         {
           "type": "paragraph",
-          "text": "Pourtant, des figures aztèques survivent dans le syncrétisme : la Vierge de Guadalupe apparaît sur un site jadis lié à une déesse mère. Comprendre ces sacrifices, c'est comprendre une culture qui place la survie du cosmos au-dessus de l'individu."
+          "text": "Vis dėlto kai kurios actekų figūros išlieka sinkretizme: Gvadalupės Mergelė pasirodo vietoje, kadaise susijusioje su deive motina. Suprasti šias aukas reiškia suprasti kultūrą, kuri kosmoso išlikimą iškelia aukščiau už individą."
         },
         {
           "type": "takeaway",
-          "text": "Chez les Aztèques, le sang humain nourrit le soleil. Les dieux ont déjà payé de leur vie : les hommes remboursent cette dette par le sacrifice, notamment via les **guerres fleuries**."
+          "text": "Actekams žmogaus kraujas maitina saulę. Dievai jau sumokėjo savo gyvybe: žmonės šią skolą grąžina aukomis, ypač per **gėlių karus**."
         }
       ]
     }

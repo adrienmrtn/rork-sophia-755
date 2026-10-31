@@ -1,108 +1,108 @@
 {
   "id": "course_116_la_metamorphose_kafka",
-  "title": "La Métamorphose, Kafka",
+  "title": "Metamorfozė, Kafka",
   "subtitle": "1915",
   "subject": "litterature",
   "subcategory": "Anglo-saxons & littérature mondiale",
-  "description": "Gregor Samsa se réveille transformé en insecte. Kafka montre comment la famille et la société rejettent celui qui ne peut plus travailler.",
+  "description": "Gregoras Samsa pabunda virtęs vabzdžiu. Kafka parodo, kaip šeima ir visuomenė atstumia tą, kuris nebegali dirbti.",
   "hero": {
     "image": "la_metamorphose_kafka",
     "ratio": "16:9",
-    "hook": "Un matin, Gregor Samsa se réveille métamorphosé : la phrase qui résume toute une époque."
+    "hook": "Vieną rytą Gregoras Samsa pabunda pavirtęs: sakinys, apibendrinantis visą epochą."
   },
   "sections": [
     {
       "id": "course_116_la_metamorphose_kafka_intro",
-      "title": "Introduction",
+      "title": "Įvadas",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Publiée en **1915**, [[Metamorfozė]] s'ouvre sur une des incipit les plus célèbres de la littérature : « Un matin, au sortir d'un rêve agité, Gregor Samsa se réveilla métamorphosé en un monstrueux insecte. » Le titre original en allemand est *Die Verwandlung*. **Franz Kafka**, né en **1883** et mort en **1924**, ne propose pas un conte fantastique, mais l'archétype de la déshumanisation moderne."
+          "text": "**1915** m. išleista [[Metamorfozė]] prasideda vienu garsiausių literatūros pradžios sakinių: „Vieną rytą, pabudęs po neramių sapnų, Gregoras Samsa pamatė, kad lovoje virto baisiu vabzdžiu.“ Originalus vokiškas pavadinimas yra *Die Verwandlung*. **Franzas Kafka** (gimė **1883** m., mirė **1924** m.) siūlo ne fantastinę pasaką, o šiuolaikinio nužmoginimo archetipą."
         },
         {
           "type": "paragraph",
-          "text": "Rédigée en un temps record en novembre **1912**, l'œuvre explore ce qui arrive quand un individu cesse d'être productif. Il perd instantanément son statut d'humain aux yeux des siens. La transformation absurde révèle une aliénation déjà à l'œuvre avant le changement physique."
+          "text": "Rekordiškai greitai, **1912** m. lapkritį, parašytas kūrinys tiria, kas nutinka, kai žmogus nustoja būti produktyvus. Artimųjų akyse jis akimirksniu praranda žmogaus statusą. Absurdiška transformacija atskleidžia susvetimėjimą, kuris veikė dar prieš fizinį pasikeitimą."
         }
       ]
     },
     {
       "id": "course_116_la_metamorphose_kafka_p1",
-      "title": "La genèse d'un chef-d'œuvre de l'absurde",
+      "title": "Absurdo šedevro gimimas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kafka rédige la nouvelle en **1912**, dans une période d'intense créativité à Prague. Il traite la transformation avec un **réalisme clinique** : aucune explication surnaturelle, aucune quête de cause. L'attention porte entièrement sur les conséquences matérielles et familiales."
+          "text": "Kafka parašo apsakymą **1912** m., intensyvios kūrybos laikotarpiu Prahoje. Transformaciją jis vaizduoja su **klinikiniu realizmu**: jokio antgamtinio paaiškinimo, jokių priežasčių paieškų. Visas dėmesys skiriamas materialinėms ir šeiminėms pasekmėms."
         },
         {
           "type": "image",
           "asset": "giant_insect_metamorphosis_kafka_illustration",
           "ratio": "4:3",
-          "caption": "La métamorphose de Gregor : Kafka a interdit de représenter l'insecte sur la couverture."
+          "caption": "Gregoro metamorfozė: Kafka uždraudė vaizduoti vabzdį ant viršelio."
         },
         {
           "type": "funFact",
-          "text": "Kafka a formellement interdit à son éditeur de dessiner l'insecte sur la couverture, préférant que le lecteur imagine sa propre version de l'horreur."
+          "text": "Kafka griežtai uždraudė leidėjui piešti vabzdį ant viršelio: jis norėjo, kad skaitytojas pats įsivaizduotų savąją siaubo versiją."
         },
         {
           "type": "paragraph",
-          "text": "Son ami [[Maxas Brodas]] a désobéi aux dernières volontés de Kafka. Kafka demandait la destruction de ses manuscrits. Brod les a publiés à titre posthume, sauvant ainsi une œuvre devenue [[kafkiška]] par excellence. L'adjectif désigne une situation absurde, oppressante et illogique."
+          "text": "Jo draugas, [[Maxas Brodas]], nepaklausė paskutinės Kafkos valios. Kafka prašė sunaikinti savo rankraščius. Brodas juos išleido po autoriaus mirties ir taip išgelbėjo kūrybą, kurią šiandien apibūdina žodis [[kafkiška]]. Šis būdvardis reiškia absurdišką, slegiančią ir nelogišką situaciją."
         }
       ]
     },
     {
       "id": "course_116_la_metamorphose_kafka_p2",
-      "title": "Gregor Samsa : la vermine sociale",
+      "title": "Gregoras Samsa: visuomenės parazitas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Avant sa transformation, **Gregor Samsa** est **commis voyageur**, représentant de commerce itinérant. Il est seul soutien financier de sa famille. Sa vie est une suite de trajets épuisants et de soumission à un chef tyrannique. Il rêve secrètement de démissionner, mais la dette familiale l'en empêche."
+          "text": "Prieš transformaciją **Gregoras Samsa** yra **keliaujantis prekybos agentas**, važinėjantis po kraštą komivojažierius. Jis vienintelis išlaiko šeimą. Jo gyvenimas yra varginančių kelionių ir paklusimo tironiškam viršininkui virtinė. Jis slapta svajoja išeiti iš darbo, bet šeimos skola jam to neleidžia."
         },
         {
           "type": "paragraph",
-          "text": "En devenant une « vermine », Gregor rend visible une déshumanisation déjà à l'œuvre. Le terme allemand *Ungeziefer* désigne un animal impur, rejeté, sans valeur. Paradoxalement, cette forme monstrueuse le libère enfin du train de 5 heures du matin : il n'a plus à partir au travail."
+          "text": "Tapdamas „parazitu“, Gregoras padaro matomą jau vykusį nužmoginimą. Vokiškas žodis *Ungeziefer* reiškia nešvarų, atstumtą, bevertį gyvį. Paradoksalu, bet ši baisi išvaizda pagaliau išlaisvina jį nuo 5 valandos ryto traukinio: jam nebereikia važiuoti į darbą."
         }
       ]
     },
     {
       "id": "course_116_la_metamorphose_kafka_p3",
-      "title": "L'épuisement de la solidarité familiale",
+      "title": "Šeimos solidarumo išsekimas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Au départ, la sœur **Grete** nourrit Gregor et nettoie sa chambre avec dévouement. Mais le temps érode cette solidarité. Pour survivre, chaque membre de la famille retravaille : le père retrouve un emploi, la mère coud, Grete devient vendeuse. Gregor devient une charge honteuse."
+          "text": "Iš pradžių sesuo **Greta** atsidavusi maitina Gregorą ir tvarko jo kambarį. Tačiau laikas šį solidarumą ardo. Kad išgyventų, visi šeimos nariai vėl pradeda dirbti: tėvas susiranda darbą, motina siuva, Greta tampa pardavėja. Gregoras virsta gėdinga našta."
         },
         {
           "type": "paragraph",
-          "text": "Les Samsa louent des chambres à des [[nuomininkai]], locataires qui prennent leurs repas dans la maison. Gregor est réduit à vivre caché. Quand Grete déclare qu'ils doivent « se débarrasser de lui », Gregor se laisse mourir de faim. Il comprend qu'il n'a plus sa place dans cette famille redevenue « normale »."
+          "text": "Samsos išnuomoja kambarius, o juose apsigyvena [[nuomininkai]], kurie ir valgo namuose. Gregoras priverstas gyventi pasislėpęs. Kai Greta pareiškia, kad jo reikia „atsikratyti“, Gregoras numiršta iš bado. Jis supranta, kad šioje vėl „normalia“ tapusioje šeimoje jam nebėra vietos."
         }
       ]
     },
     {
       "id": "course_116_la_metamorphose_kafka_p4",
-      "title": "La survie des vivants et la fin du cauchemar",
+      "title": "Gyvųjų išlikimas ir košmaro pabaiga",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La mort de Gregor n'est pas une tragédie pour la famille, mais une **délivrance**. Ils partent en promenade en tramway, songeant déjà au mariage de Grete. Gregor est totalement évacué de leur mémoire en quelques semaines. La normalité retrouvée s'avère plus terrifiante que la métamorphose elle-même."
+          "text": "Gregoro mirtis šeimai yra ne tragedija, o **išsivadavimas**. Jie išvažiuoja pasivažinėti tramvajumi ir jau galvoja apie Gretos vestuves. Per kelias savaites Gregoras visiškai išnyksta iš jų atminties. Atgauta normalybė pasirodo baisesnė už pačią metamorfozę."
         },
         {
           "type": "image",
           "asset": "prague_early_20th_century_street",
           "ratio": "16:9",
-          "caption": "Prague au début du XXe siècle : la ville où Kafka a écrit sa nouvelle."
+          "caption": "XX a. pradžios Praha: miestas, kuriame Kafka parašė savo apsakymą."
         },
         {
           "type": "paragraph",
-          "text": "La nouvelle illustre comment le travail et la structure familiale broient l'individu dès qu'il cesse d'être utile économiquement. Kafka décrit un monde bureaucratique où l'homme n'est qu'une fonction. L'amour familial dépend de la productivité. L'absurde n'est pas dans la métamorphose elle-même, mais dans la réaction des proches, qui préfèrent l'effacement du malade à la compassion."
+          "text": "Apsakymas rodo, kaip darbas ir šeimos struktūra sutraiško žmogų, vos tik jis tampa ekonomiškai nenaudingas. Kafka aprašo biurokratinį pasaulį, kuriame žmogus tėra funkcija. Šeimos meilė priklauso nuo produktyvumo. Absurdas slypi ne pačioje metamorfozėje, o artimųjų reakcijoje: jie verčiau leidžia ligoniui išnykti, nei jį užjaučia."
         },
         {
           "type": "takeaway",
-          "text": "[[Metamorfozė]] utilise la transformation absurde d'un homme en insecte pour dénoncer l'aliénation par le travail et la fragilité des liens fondés sur l'utilité économique."
+          "text": "[[Metamorfozė]] pasitelkia absurdišką žmogaus virtimą vabzdžiu, kad atskleistų susvetimėjimą dėl darbo ir ryšių, grindžiamų ekonomine nauda, trapumą."
         }
       ]
     }

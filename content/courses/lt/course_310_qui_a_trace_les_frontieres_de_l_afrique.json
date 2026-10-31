@@ -1,138 +1,138 @@
 {
   "id": "course_310_qui_a_trace_les_frontieres_de_l_afrique",
-  "title": "Qui a tracé les frontières de l'Afrique ?",
-  "subtitle": "Le partage de l'Afrique",
+  "title": "Kas nubrėžė Afrikos sienas?",
+  "subtitle": "Afrikos padalijimas",
   "subject": "histoire",
   "subcategory": "Époque moderne & XIXe siècle",
-  "description": "Sur la carte, les frontières africaines semblent tirées à la règle. Elles sont pourtant nées de traités, de guerres locales et d'un choix des États indépendants, pas d'une seule réunion à Berlin.",
+  "description": "Žemėlapyje Afrikos sienos atrodo nubrėžtos liniuote. Tačiau jos atsirado iš sutarčių, vietinių karų ir nepriklausomų valstybių pasirinkimo, o ne per vieną susitikimą Berlyne.",
   "author": "vedran-obucina",
   "hero": {
     "image": "berlin_conference_1884_engraving_congo_map",
     "ratio": "4:3",
-    "hook": "Les lignes droites de la carte africaine n'ont pas été tirées à la règle en une soirée à Berlin."
+    "hook": "Tiesios Afrikos žemėlapio linijos nebuvo nubrėžtos liniuote per vieną vakarą Berlyne."
   },
   "sections": [
     {
       "id": "course_310_qui_a_trace_les_frontieres_de_l_afrique_intro",
-      "title": "Introduction",
+      "title": "Įvadas",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Sur une carte de l'Afrique, beaucoup de frontières filent en ligne droite, comme tirées à la règle. On imagine une main unique derrière ce dessin. Pourtant, aucune personne ni aucune réunion n'a découpé le continent entier. La plupart des frontières actuelles datent de l'expansion rapide de la puissance coloniale européenne au **XIXe siècle**."
+          "text": "Afrikos žemėlapyje daug sienų driekiasi tiesia linija, tarsi nubrėžtos liniuote. Atrodo, kad už šio piešinio slypi viena ranka. Tačiau joks žmogus ir joks susitikimas nepadalijo viso žemyno. Dauguma dabartinių sienų atsirado per spartų Europos kolonijinės galios plėtimąsi **XIX a.**"
         },
         {
           "type": "paragraph",
-          "text": "Le point de départ le plus connu est la [[Berlyno konferencija]], réunie en **1884-1885**. Les puissances européennes y fixent les règles pour acquérir des colonies et protéger leurs intérêts. Mais cette conférence ne décide pas de toutes les frontières d'aujourd'hui. La plupart naissent plus tard, par traités, échanges de territoires et guerres. Comment des États si éloignés de l'Afrique ont-ils pu se croire des droits sur ces terres ?"
+          "text": "Žinomiausias atskaitos taškas yra [[Berlyno konferencija]], vykusi **1884-1885** m. Joje Europos valstybės nustato kolonijų įgijimo ir savo interesų gynimo taisykles. Tačiau ši konferencija nenulemia visų šiandieninių sienų. Dauguma jų atsiranda vėliau, per sutartis, teritorijų mainus ir karus. Kaip valstybės, esančios taip toli nuo Afrikos, galėjo manyti turinčios teisių į šias žemes?"
         }
       ]
     },
     {
       "id": "course_310_qui_a_trace_les_frontieres_de_l_afrique_p1",
-      "title": "Revendiquer n'est pas gouverner",
+      "title": "Pareikšti pretenzijas dar nereiškia valdyti",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Revendiquer un territoire, ce n'est pas l'administrer. Un gouvernement européen peut colorier une région sur une carte et la déclarer sienne. Pour la gouverner, il lui faut une armée, des fonctionnaires et la coopération des autorités locales, ou leur soumission. À Berlin, les puissances s'engagent à reconnaître mutuellement leurs revendications, à condition d'[[faktinė okupacija]] : un État doit montrer qu'il exerce réellement le pouvoir sur le territoire qu'il réclame."
+          "text": "Pareikšti pretenzijas į teritoriją dar nereiškia ją administruoti. Europos vyriausybė gali nuspalvinti regioną žemėlapyje ir paskelbti jį savu. Kad jį valdytų, jai reikia kariuomenės, valdininkų ir vietos valdžios bendradarbiavimo arba paklusnumo. Berlyne valstybės įsipareigoja abipusiškai pripažinti savo pretenzijas, jei bus įvykdyta sąlyga, vadinama [[faktinė okupacija]]: valstybė turi parodyti, kad tikrai valdo teritoriją, į kurią pretenduoja."
         },
         {
           "type": "image",
           "asset": "africa_colonial_map_1913_european_powers",
           "ratio": "16:9",
-          "caption": "L'Afrique en 1880 et en 1913 : une couleur par puissance coloniale, seuls le Liberia et l'Éthiopie restent indépendants."
+          "caption": "Afrika 1880 ir 1913 m.: kiekviena kolonijinė valstybė pažymėta sava spalva, nepriklausomos lieka tik Liberija ir Etiopija."
         },
         {
           "type": "paragraph",
-          "text": "Ces discussions se tiennent entre Européens. Les États et les souverains africains n'y sont pas admis sur un pied d'égalité. Les puissances se reconnaissent aussi chacune une [[įtakos sfera]], une zone où l'une d'elles détient un contrôle politique et économique particulier. Cartes et accords deviennent les outils des empires. Mais une ligne sur le papier ne signifie pas que les habitants l'acceptent."
+          "text": "Šios diskusijos vyksta tarp europiečių. Afrikos valstybės ir valdovai į jas nepriimami kaip lygiaverčiai. Valstybės viena kitai pripažįsta ir sritis, kurių kiekviena vadinama [[įtakos sfera]]: tai zona, kurioje viena iš jų turi ypatingą politinę ir ekonominę kontrolę. Žemėlapiai ir susitarimai tampa imperijų įrankiais. Tačiau linija popieriuje dar nereiškia, kad gyventojai ją priima."
         }
       ]
     },
     {
       "id": "course_310_qui_a_trace_les_frontieres_de_l_afrique_p2",
-      "title": "Des frontières nées de conflits locaux",
+      "title": "Sienos, gimusios iš vietinių konfliktų",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Sur le terrain, les Européens doivent encore imposer leur autorité. Certains souverains africains négocient et signent des traités. D'autres résistent, par la diplomatie ou par les armes. La conquête britannique du [[Ašančių karalystė]], en Afrique de l'Ouest, montre comment une guerre redessine la carte politique. Les Ashanti repoussent longtemps les tentatives britanniques de gouverner leur pays. La **Grande-Bretagne** finit pourtant par s'imposer et intègre leur territoire à son système colonial."
+          "text": "Vietoje europiečiams dar reikia įtvirtinti savo valdžią. Kai kurie Afrikos valdovai derasi ir pasirašo sutartis. Kiti priešinasi, diplomatija arba ginklu. Kaip karas perbraižo politinį žemėlapį, rodo Vakarų Afrikos pavyzdys: britai užkariauja valstybę, kurią vadiname [[Ašančių karalystė]]. Ašančiai ilgai atremia britų bandymus valdyti jų šalį. Vis dėlto **Didžioji Britanija** galiausiai įsigali ir įtraukia jų teritoriją į savo kolonijinę sistemą."
         },
         {
           "type": "image",
           "asset": "anglo_ashanti_war_kumasi_1874_engraving",
           "ratio": "4:5",
-          "caption": "Carte de la dernière guerre anglo-ashanti (1900) : Kumasi, la capitale du royaume, et les routes montant de la côte."
+          "caption": "Paskutinio anglų ir ašančių karo (1900) žemėlapis: karalystės sostinė Kumasis ir keliai, kylantys nuo pakrantės."
         },
         {
           "type": "paragraph",
-          "text": "Des conflits semblables accompagnent l'avancée française dans la région. Les frontières coloniales coupent souvent des liens anciens : une même communauté est répartie entre plusieurs colonies, des peuples différents sont réunis dans la même. Ces populations étaient pourtant liées par la langue, le commerce, la religion et des alliances politiques."
+          "text": "Panašūs konfliktai lydi ir prancūzų veržimąsi į šį regioną. Kolonijinės sienos dažnai nutraukia senus ryšius: ta pati bendruomenė padalijama tarp kelių kolonijų, o skirtingos tautos sujungiamos vienoje. Tačiau šias tautas siejo kalba, prekyba, religija ir politinės sąjungos."
         },
         {
           "type": "funFact",
-          "text": "Toutes les frontières coloniales ne sont pas absurdes : certaines suivent un fleuve, un lac, une montagne ou une limite politique plus ancienne. Des travaux récents montrent que les États précoloniaux et la géographie ont pesé sur le tracé, même si ce sont les gouvernements européens qui l'ont officialisé."
+          "text": "Ne visos kolonijinės sienos yra absurdiškos: kai kurios eina upe, ežeru, kalnais ar senesne politine riba. Naujausi tyrimai rodo, kad ikikolonijinės valstybės ir geografija paveikė sienų brėžimą, nors oficialiai jas įtvirtino Europos vyriausybės."
         }
       ]
     },
     {
       "id": "course_310_qui_a_trace_les_frontieres_de_l_afrique_p3",
-      "title": "Les nouveaux États héritent des cartes",
+      "title": "Naujosios valstybės paveldi žemėlapius",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "À l'indépendance, les nouveaux États conservent en règle générale les frontières héritées de la colonisation. C'est le principe de l'[[uti possidetis]], une expression latine : l'État garde le territoire qu'il possédait au moment de son indépendance. Les dirigeants africains l'acceptent, car retracer les frontières mènerait à des conflits sans fin et à de nouvelles guerres."
+          "text": "Tapusios nepriklausomos, naujosios valstybės paprastai išsaugo iš kolonijinių laikų paveldėtas sienas. Tai principas [[uti possidetis]], lotyniškas posakis: valstybė išlaiko teritoriją, kurią valdė nepriklausomybės paskelbimo metu. Afrikos vadovai jį priima, nes sienų perbraižymas vestų į nesibaigiančius konfliktus ir naujus karus."
         },
         {
           "type": "paragraph",
-          "text": "Beaucoup auraient pourtant voulu décider quelle communauté appartiendrait à quel État, et quelles limites historiques devaient l'emporter. L'[[Afrikos vienybės organizacija]] (OUA), fondée en **1963**, accepte malgré tout l'ordre territorial existant. Un an plus tard, ses dirigeants s'engagent à respecter les frontières que chaque État possédait au moment de son indépendance."
+          "text": "Vis dėlto daugelis būtų norėję nuspręsti, kuriai valstybei priklausys kuri bendruomenė ir kurios istorinės ribos turi nusverti. Tačiau **1963** m. įkurta [[Afrikos vienybės organizacija]] (AVO) priima esamą teritorinę tvarką. Po metų jos vadovai įsipareigoja gerbti sienas, kurias kiekviena valstybė turėjo nepriklausomybės paskelbimo metu."
         },
         {
           "type": "funFact",
-          "text": "La décision de l'OUA ne reposait pas sur l'idée que ces frontières étaient justes. Ses dirigeants craignaient que rouvrir chaque question territoriale après l'indépendance n'entraîne des conflits généralisés."
+          "text": "AVO sprendimas nebuvo grindžiamas mintimi, kad šios sienos teisingos. Jos vadovai bijojo, kad kiekvieno teritorinio klausimo atvėrimas po nepriklausomybės sukeltų visuotinius konfliktus."
         }
       ]
     },
     {
       "id": "course_310_qui_a_trace_les_frontieres_de_l_afrique_p4",
-      "title": "Des frontières aux nombreux auteurs",
+      "title": "Sienos, turinčios daug autorių",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Alors, qui a tracé les frontières de l'Afrique ? Les gouvernements européens ont façonné l'essentiel du cadre, par la conquête, les traités, l'administration coloniale et les marchandages diplomatiques. Mais le tracé actuel reflète aussi la résistance des sociétés africaines, les négociations avec les souverains locaux et les décisions prises après les indépendances. Les lignes droites existent, mais les Européens ne les ont pas simplement tirées à la règle."
+          "text": "Tad kas nubrėžė Afrikos sienas? Didžiąją rėmų dalį suformavo Europos vyriausybės: užkariavimais, sutartimis, kolonijiniu administravimu ir diplomatinėmis derybomis. Tačiau dabartinės sienos atspindi ir Afrikos visuomenių pasipriešinimą, derybas su vietos valdovais bei sprendimus, priimtus po nepriklausomybės. Tiesių linijų yra, bet europiečiai jų nenubrėžė tiesiog liniuote."
         },
         {
           "type": "timeline",
           "events": [
             {
               "date": "1874",
-              "title": "La guerre anglo-ashanti",
-              "detail": "Les troupes britanniques marchent sur Kumasi, mais le royaume n'est pas soumis pour autant."
+              "title": "Anglų ir ašančių karas",
+              "detail": "Britų kariuomenė žygiuoja į Kumasį, tačiau karalystė dar nepavergta."
             },
             {
               "date": "1884-1885",
-              "title": "La conférence de Berlin",
-              "detail": "Les puissances européennes fixent les règles du partage colonial."
+              "title": "Berlyno konferencija",
+              "detail": "Europos valstybės nustato kolonijinio padalijimo taisykles."
             },
             {
               "date": "1963",
-              "title": "L'Organisation de l'unité africaine",
-              "detail": "Fondée à Addis-Abeba, elle accepte l'ordre territorial existant."
+              "title": "Afrikos vienybės organizacija",
+              "detail": "Įkurta Adis Abeboje, ji priima esamą teritorinę tvarką."
             },
             {
               "date": "1964",
-              "title": "Les frontières héritées",
-              "detail": "Les dirigeants africains s'engagent à respecter les frontières de l'indépendance."
+              "title": "Paveldėtos sienos",
+              "detail": "Afrikos vadovai įsipareigoja gerbti nepriklausomybės metų sienas."
             }
           ]
         },
         {
           "type": "paragraph",
-          "text": "Surtout, une frontière n'est pas qu'un trait sur une carte. Elle décide de l'État auquel on appartient, des lois que l'on suit et des endroits où l'on peut circuler librement. Des choix politiques faits à l'époque coloniale façonnent encore des vies, longtemps après la disparition des empires qui les ont pris."
+          "text": "Svarbiausia, siena nėra tik brūkšnys žemėlapyje. Ji lemia, kuriai valstybei priklausai, kokių įstatymų laikaisi ir kur gali laisvai keliauti. Kolonijiniais laikais priimti politiniai sprendimai vis dar formuoja gyvenimus, praėjus daug laiko po to, kai juos priėmusios imperijos išnyko."
         },
         {
           "type": "takeaway",
-          "text": "Les frontières africaines ont plusieurs auteurs : les empires européens ont fixé le cadre, les sociétés africaines l'ont combattu ou négocié, et les États indépendants ont choisi de le garder pour éviter des guerres sans fin."
+          "text": "Afrikos sienos turi kelis autorius: Europos imperijos nustatė rėmus, Afrikos visuomenės su jais kovojo arba dėl jų derėjosi, o nepriklausomos valstybės nusprendė juos išsaugoti, kad išvengtų nesibaigiančių karų."
         }
       ]
     }

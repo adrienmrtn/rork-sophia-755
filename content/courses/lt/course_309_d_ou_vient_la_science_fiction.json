@@ -1,124 +1,124 @@
 {
   "id": "course_309_d_ou_vient_la_science_fiction",
-  "title": "D'où vient la science-fiction ?",
-  "subtitle": "De Lucien à Frankenstein",
+  "title": "Iš kur atsirado mokslinė fantastika?",
+  "subtitle": "Nuo Lukiano iki Frankenšteino",
   "subject": "litterature",
   "subcategory": "Anglo-saxons & littérature mondiale",
-  "description": "Au IIe siècle, Lucien de Samosate envoyait déjà son narrateur sur la Lune. Mais il faut la révolution scientifique, puis le monstre de Mary Shelley, pour que ces rêves deviennent une façon nouvelle d'interroger le changement.",
+  "description": "Jau II a. Lukianas iš Samosatos siuntė savo pasakotoją į Mėnulį. Tačiau prireikė mokslo revoliucijos, o paskui Mary Shelley pabaisos, kad šios svajonės taptų nauju būdu klausti apie pokyčius.",
   "author": "vedran-obucina",
   "hero": {
     "image": "melies_trip_to_the_moon_1902",
     "ratio": "4:3",
-    "hook": "Un voyage sur la Lune au IIe siècle, un monstre cousu en 1818, un nom trouvé en 1929 : la science-fiction est bien plus vieille que ses fusées."
+    "hook": "Kelionė į Mėnulį II a., 1818 m. susiūta pabaisa, 1929 m. rastas pavadinimas: mokslinė fantastika daug senesnė už savo raketas."
   },
   "sections": [
     {
       "id": "course_309_d_ou_vient_la_science_fiction_intro",
-      "title": "Introduction",
+      "title": "Įvadas",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La science-fiction ne commence pas avec les vaisseaux spatiaux. Pendant des siècles, on a imaginé des voyages vers la Lune, des sociétés étranges et des êtres créés de toutes pièces. Au **IIe siècle**, l'auteur grec [[Lukianas iš Samosatos]] écrit son *Histoire véritable* : le narrateur y voyage jusqu'à la Lune et y rencontre des créatures surprenantes."
+          "text": "Mokslinė fantastika neprasideda nuo kosminių laivų. Šimtmečius žmonės įsivaizdavo keliones į Mėnulį, keistas visuomenes ir nuo nulio sukurtas būtybes. **II a.** graikų rašytojas [[Lukianas iš Samosatos]] parašo *Tikrąją istoriją*: jos pasakotojas nukeliauja iki Mėnulio ir sutinka ten stebinančių būtybių."
         },
         {
           "type": "paragraph",
-          "text": "Ce n'est pas encore de la science-fiction au sens moderne. Lucien exagère, se moque, manie la satire pour rire des idées humaines. Mais son récit pose déjà la question essentielle : à quoi ressemblerait le monde si la réalité fonctionnait autrement ? Quelque chose change le jour où l'on se met à croire que la science peut expliquer la nature et transformer l'avenir."
+          "text": "Tai dar ne mokslinė fantastika šiuolaikine prasme. Lukianas perdeda, šaiposi, satyra juokiasi iš žmonių idėjų. Tačiau jo pasakojimas jau kelia esminį klausimą: kaip atrodytų pasaulis, jei tikrovė veiktų kitaip? Kažkas pasikeičia tą dieną, kai imama tikėti, kad mokslas gali paaiškinti gamtą ir pakeisti ateitį."
         }
       ]
     },
     {
       "id": "course_309_d_ou_vient_la_science_fiction_p1",
-      "title": "La lunette change la question",
+      "title": "Teleskopas pakeičia klausimą",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La [[mokslo revoliucija]] est cette période où l'observation, la mesure et l'expérience bouleversent les idées européennes sur la nature. Au **XVIIe siècle**, on regarde la Lune et les planètes avec un intérêt neuf. La lunette astronomique, que Galilée pointe vers le ciel en 1610, montre que la voûte céleste n'est ni parfaite ni immuable, contrairement à ce que beaucoup croyaient."
+          "text": "Laikotarpis, kai stebėjimas, matavimas ir eksperimentas apverčia europiečių supratimą apie gamtą, vadinamas taip: [[mokslo revoliucija]]. **XVII a.** į Mėnulį ir planetas žiūrima su nauju susidomėjimu. Teleskopas, kurį Galilėjus 1610 m. nukreipia į dangų, parodo, kad dangaus skliautas nėra nei tobulas, nei nekintamas, priešingai nei daugelis tikėjo."
         },
         {
           "type": "image",
           "asset": "galileo_moon_drawings_sidereus_nuncius_1610",
           "ratio": "3:4",
-          "caption": "Ballons et explorateurs de la Lune dans une estampe comique de F. Wenzel (XIXe siècle) : l'astre observé devient une destination."
+          "caption": "Balionai ir Mėnulio tyrinėtojai F. Wenzelio komiškoje graviūroje (XIX a.): stebimas dangaus kūnas tampa kelionės tikslu."
         },
         {
           "type": "paragraph",
-          "text": "L'astronome [[Johannesas Kepleris]] s'empare de ce savoir nouveau dans son *Somnium*, « Le Songe », publié en **1634**, après sa mort. Il y imagine un voyage vers la Lune et décrit à quoi la Terre ressemblerait vue de l'espace. Le texte n'a pas de genre littéraire clair. Mais les idées scientifiques n'y servent plus de simple décor : elles deviennent la matière avec laquelle un écrivain bâtit un monde imaginaire."
+          "text": "Astronomas [[Johannesas Kepleris]] šias naujas žinias panaudoja veikale *Somnium* („Sapnas“), išleistame **1634** m., jau po jo mirties. Jame jis įsivaizduoja kelionę į Mėnulį ir aprašo, kaip Žemė atrodytų iš kosmoso. Tekstas neturi aiškaus literatūrinio žanro. Tačiau mokslinės idėjos jame jau nebėra vien dekoracija: jos tampa medžiaga, iš kurios rašytojas kuria įsivaizduojamą pasaulį."
         }
       ]
     },
     {
       "id": "course_309_d_ou_vient_la_science_fiction_p2",
-      "title": "Frankenstein donne sa forme au genre",
+      "title": "Frankenšteinas suteikia žanrui formą",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En **1818**, [[Mary Shelley]] publie *Frankenstein*. C'est une histoire de monstre, mais sa question centrale est neuve : que se passe-t-il quand un savant utilise ses connaissances pour créer la vie ? Victor Frankenstein franchit une frontière que l'on tient pour contre-nature. Quand sa créature s'anime, le succès scientifique lui apporte la gloire, mais aussi le désastre."
+          "text": "**1818** m. [[Mary Shelley]] išleidžia *Frankenšteiną*. Tai pasakojimas apie pabaisą, bet jo pagrindinis klausimas naujas: kas nutinka, kai mokslininkas panaudoja savo žinias gyvybei sukurti? Viktoras Frankenšteinas peržengia ribą, kuri laikoma prieštaraujančia gamtai. Kai jo sukurta būtybė atgyja, mokslinė sėkmė jam atneša šlovę, bet ir katastrofą."
         },
         {
           "type": "image",
           "asset": "frankenstein_monster_illustration_1831",
           "ratio": "3:4",
-          "caption": "La créature s'éveille sur la table du laboratoire : frontispice de l'édition de 1831."
+          "caption": "Būtybė pabunda ant laboratorijos stalo: 1831 m. leidimo frontispisas."
         },
         {
           "type": "paragraph",
-          "text": "Shelley parle de responsabilité, de peur, de souffrance. Elle demande si l'ambition humaine n'avance pas plus vite que notre capacité à en comprendre les conséquences. C'est la question même de la [[pramonės revoliucija]] : machines, usines et techniques nouvelles changent la vie à toute allure. La technologie n'est plus une idée abstraite quand elle entre dans les villes, les ateliers et jusque dans les corps. La science-fiction prend toute sa force lorsque la technique devient la source des grands problèmes."
+          "text": "Shelley kalba apie atsakomybę, baimę, kančią. Ji klausia, ar žmogaus ambicija nežengia greičiau, nei mes gebame suprasti jos pasekmes. Būtent šį klausimą kelia ir [[pramonės revoliucija]]: mašinos, fabrikai ir naujos technologijos keičia gyvenimą milžinišku greičiu. Technologija nebėra abstrakti idėja, kai ji įsiveržia į miestus, dirbtuves ir net į kūnus. Mokslinė fantastika įgauna visą savo jėgą, kai technika tampa didžiųjų problemų šaltiniu."
         }
       ]
     },
     {
       "id": "course_309_d_ou_vient_la_science_fiction_p3",
-      "title": "Un nom venu bien plus tard",
+      "title": "Pavadinimas atsirado daug vėliau",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Les récits de science-fiction existent bien avant l'expression elle-même. Jules Verne et H. G. Wells développent de grandes idées : voyage dans l'espace, machines extraordinaires, voyage dans le temps, sociétés du futur. Dans les années **1920**, l'éditeur américain [[Hugo Gernsbackas]] aide ces histoires à trouver leur place. Ses magazines publient des récits de science, de technique, d'inventions et de futurs possibles."
+          "text": "Mokslinės fantastikos pasakojimai egzistuoja gerokai anksčiau nei pats terminas. Jules'is Verne'as ir H. G. Wellsas plėtoja dideles idėjas: kelionės į kosmosą, nepaprastos mašinos, kelionės laiku, ateities visuomenės. XX a. **3-iajame** dešimtmetyje šioms istorijoms rasti savo vietą padeda amerikiečių leidėjas, kurio vardas [[Hugo Gernsbackas]]. Jo žurnaluose spausdinami pasakojimai apie mokslą, techniką, išradimus ir galimas ateitis."
         },
         {
           "type": "image",
           "asset": "amazing_stories_april_1926_cover_frank_paul",
           "ratio": "3:4",
-          "caption": "La couverture du premier numéro d'Amazing Stories, avril 1926, illustrée par Frank R. Paul."
+          "caption": "Pirmojo „Amazing Stories“ numerio viršelis, 1926 m. balandis, iliustravo Frankas R. Paulas."
         },
         {
           "type": "paragraph",
-          "text": "Les lecteurs peuvent désormais suivre un genre entier, et non plus quelques livres isolés. Gernsback n'a pas « créé » la science-fiction. Il lui a donné un nom reconnu, un espace public et commercial, une familiarité. L'expression « science fiction » s'impose à la fin de la décennie, quand il l'associe à son magazine *Science Wonder Stories*. Le genre a enfin une adresse littéraire."
+          "text": "Skaitytojai dabar gali sekti visą žanrą, o ne pavienes knygas. Gernsbackas mokslinės fantastikos „nesukūrė“. Jis suteikė jai pripažintą pavadinimą, viešą ir komercinę erdvę, atpažįstamumą. Terminas „science fiction“ įsitvirtina dešimtmečio pabaigoje, kai jis susieja jį su savo žurnalu *Science Wonder Stories*. Žanras pagaliau turi literatūrinį adresą."
         },
         {
           "type": "funFact",
-          "text": "Hugo Gernsback a d'abord parlé de « scientifiction » avant que « science fiction » ne s'impose. Il lance *Amazing Stories* en 1926, puis contribue à populariser le nom moderne avec *Science Wonder Stories* en 1929."
+          "text": "Hugo Gernsbackas iš pradžių kalbėjo apie „scientifiction“, kol įsitvirtino „science fiction“. 1926 m. jis įkuria *Amazing Stories*, o 1929 m. žurnalu *Science Wonder Stories* padeda išpopuliarinti šiuolaikinį pavadinimą."
         },
         {
           "type": "timeline",
           "events": [
             {
-              "date": "IIe siècle",
-              "title": "Histoire véritable de Lucien",
-              "detail": "Un voyage satirique jusqu'à la Lune."
+              "date": "II a.",
+              "title": "Lukiano „Tikroji istorija“",
+              "detail": "Satyrinė kelionė iki Mėnulio."
             },
             {
               "date": "1634",
-              "title": "Somnium de Kepler",
-              "detail": "Publié après sa mort, il décrit la Terre vue de l'espace."
+              "title": "Keplerio „Somnium“",
+              "detail": "Išleistas po autoriaus mirties, aprašo Žemę iš kosmoso."
             },
             {
               "date": "1818",
-              "title": "Frankenstein de Mary Shelley",
-              "detail": "Un savant crée la vie et déclenche le désastre."
+              "title": "Mary Shelley „Frankenšteinas“",
+              "detail": "Mokslininkas sukuria gyvybę ir sukelia katastrofą."
             },
             {
               "date": "1926",
-              "title": "Amazing Stories",
-              "detail": "Hugo Gernsback lance son magazine."
+              "title": "„Amazing Stories“",
+              "detail": "Hugo Gernsbackas įkuria savo žurnalą."
             },
             {
               "date": "1929",
-              "title": "Science Wonder Stories",
-              "detail": "L'expression « science fiction » s'impose."
+              "title": "„Science Wonder Stories“",
+              "detail": "Įsitvirtina terminas „science fiction“."
             }
           ]
         }
@@ -126,20 +126,20 @@
     },
     {
       "id": "course_309_d_ou_vient_la_science_fiction_p4",
-      "title": "Une façon de penser le changement",
+      "title": "Būdas mąstyti apie pokyčius",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Vaisseaux, robots, extraterrestres, savants : ce n'est pas cela qui définit d'abord la science-fiction. Son sujet le plus profond, c'est le changement. Que se passe-t-il quand une découverte, une technique ou une idée scientifique transforme la vie humaine ? Le même genre peut voyager vers des planètes lointaines, explorer l'intelligence artificielle, jouer avec le génie génétique ou décrire des sociétés qui n'existent pas encore."
+          "text": "Kosminiai laivai, robotai, ateiviai, mokslininkai: ne jie pirmiausia apibrėžia mokslinę fantastiką. Giliausia jos tema yra pokytis. Kas nutinka, kai atradimas, technologija ar mokslinė idėja pakeičia žmonių gyvenimą? Tas pats žanras gali keliauti į tolimas planetas, tyrinėti dirbtinį intelektą, žaisti su genų inžinerija ar aprašyti dar neegzistuojančias visuomenes."
         },
         {
           "type": "paragraph",
-          "text": "Le monde imaginé se doit d'être étrange, neuf, spectaculaire. Mais il pose au fond des questions sur notre monde, ses peurs, ses angoisses et ses espoirs. Roman effrayant ou thriller au cinéma, la science-fiction plonge dans l'éthique et la psychologie humaines. Elle existe chaque fois que l'on se sert d'un futur imaginé pour interroger le présent."
+          "text": "Įsivaizduojamas pasaulis turi būti keistas, naujas, įspūdingas. Tačiau iš esmės jis kelia klausimus apie mūsų pasaulį, jo baimes, nerimą ir viltis. Ar tai bauginantis romanas, ar kino trileris, mokslinė fantastika neria į etiką ir žmogaus psichologiją. Ji atsiranda kaskart, kai įsivaizduojama ateitis pasitelkiama dabarčiai tirti."
         },
         {
           "type": "takeaway",
-          "text": "La science-fiction naît quand la science devient une matière à récits, de Kepler à Mary Shelley, et elle vit chaque fois qu'un futur imaginé sert à poser les questions que le présent ne sait pas encore résoudre."
+          "text": "Mokslinė fantastika gimsta, kai mokslas tampa pasakojimų medžiaga, nuo Keplerio iki Mary Shelley, ir gyvuoja kaskart, kai įsivaizduojama ateitis padeda kelti klausimus, kurių dabartis dar nemoka išspręsti."
         }
       ]
     }

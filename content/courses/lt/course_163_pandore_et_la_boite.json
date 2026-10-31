@@ -1,114 +1,114 @@
 {
   "id": "course_163_pandore_et_la_boite",
-  "title": "Que contenait vraiment la boîte de Pandore ?",
-  "subtitle": "La jarre des maux",
+  "title": "Kas iš tikrųjų buvo Pandoros skrynioje?",
+  "subtitle": "Nelaimių ąsotis",
   "subject": "mythologie",
   "subcategory": "Grèce : les dieux",
-  "description": "Première femme créée par les dieux, Pandore ouvre une jarre pleine de fléaux. Au fond reste l'espoir. Un mythe sur la curiosité et le malheur.",
+  "description": "Pandora, pirmoji dievų sukurta moteris, atidaro ąsotį, pilną nelaimių. Dugne lieka viltis. Mitas apie smalsumą ir nelaimę.",
   "hero": {
     "image": "pandore_et_la_boite",
     "ratio": "16:9",
-    "hook": "Ce n'était pas une boîte. C'était une jarre. Et ce qu'elle contenait a changé le sort des humains."
+    "hook": "Tai buvo ne skrynia. Tai buvo ąsotis. O tai, kas jame buvo, pakeitė žmonių likimą."
   },
   "sections": [
     {
       "id": "course_163_pandore_et_la_boite_intro",
-      "title": "Introduction",
+      "title": "Įžanga",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Dans la mythologie grecque, **Pandore** n'est pas seulement un personnage. Elle est la première femme, façonnée par les dieux comme un piège. **Zeus** veut punir les hommes qui ont reçu le feu de [[Prometėjas]]."
+          "text": "Graikų mitologijoje **Pandora** nėra tik veikėja. Ji yra pirmoji moteris, dievų sukurta kaip spąstai. **Dzeusas** nori nubausti žmones, kuriems ugnį atnešė [[Prometėjas]]."
         },
         {
           "type": "paragraph",
-          "text": "Pandore arrive avec une jarre. En l'ouvrant, elle libère les maux qui mettent fin à l'insouciance humaine. Au fond reste une chose énigmatique : l'**espoir**. Voici comment naît l'expression « ouvrir la boîte de Pandore »."
+          "text": "Pandora atkeliauja su ąsočiu. Jį atidariusi, ji išleidžia nelaimes, kurios baigia žmonių nerūpestingumą. Dugne lieka kažkas mįslingo: **viltis**. Taip ir atsirado posakis „atverti Pandoros skrynią“."
         }
       ]
     },
     {
       "id": "course_163_pandore_et_la_boite_p1",
-      "title": "Les dieux fabriquent un « beau mal »",
+      "title": "Dievai sukuria „gražų blogį“",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Après le vol du feu, Zeus ordonne à **Héphaïstos**, dieu de la forge, de modeler une femme en argile et en eau, belle comme une déesse. Chaque Olympien ajoute un don. **Athéna** lui apprend le tissage. **Aphrodite** lui donne le charme. **Hermès**, messager des dieux, lui glisse la ruse et le mensonge."
+          "text": "Po ugnies vagystės Dzeusas liepia **Hefaistui**, kalvystės dievui, nulipdyti iš molio ir vandens moterį, gražią kaip deivė. Kiekvienas olimpietis prideda po dovaną. **Atėnė** išmoko ją austi. **Afroditė** suteikia jai žavesio. **Hermis**, dievų pasiuntinys, įdiegia jai gudrumą ir melą."
         },
         {
           "type": "image",
           "asset": "pandora_opening_jar_pithos_painting",
           "ratio": "4:3",
-          "caption": "Pandore, « celle qui a reçu tous les dons », créée pour tromper les hommes."
+          "caption": "Pandora, „ta, kuri gavo visas dovanas“, sukurta apgauti žmonėms."
         },
         {
           "type": "paragraph",
-          "text": "On la nomme **Pandore** : « celle qui a reçu tous les dons ». Prométhée avait prévenu son frère **Épiméthée** de n'accepter aucun cadeau de Zeus. Trop tard. Épiméthée, celui qui réfléchit après coup, tombe sous le charme et l'accueille."
+          "text": "Ji pavadinama **Pandora**: „ta, kuri gavo visas dovanas“. Prometėjas buvo įspėjęs savo brolį **Epimetėją** nepriimti jokios Dzeuso dovanos. Per vėlu. Epimetėjas, tas, kuris susimąsto tik po laiko, susižavi ja ir priima ją."
         },
         {
           "type": "funFact",
-          "text": "Chez les Grecs, Pandore n'est pas créée comme une compagne. Elle est conçue comme une punition, un « beau mal » destiné à frapper l'humanité."
+          "text": "Graikų pasakojime Pandora sukurta ne kaip palydovė. Ji sumanyta kaip bausmė, „gražus blogis“, skirtas užklupti žmoniją."
         }
       ]
     },
     {
       "id": "course_163_pandore_et_la_boite_p2",
-      "title": "La jarre s'ouvre, les fléaux s'envolent",
+      "title": "Ąsotis atsidaro, nelaimės išsilaksto",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Pandore porte un « pithos », une grande jarre de stockage. Les textes latins et les traductions modernes en feront une « boîte ». À l'intérieur, les dieux ont enfermé la vieillesse, la maladie, la famine, la folie, la guerre."
+          "text": "Pandora neša „pithos“, didelį ąsotį atsargoms laikyti. Lotyniški tekstai ir šiuolaikiniai vertimai pavers jį „skrynia“. Viduje dievai uždarė senatvę, ligas, badą, beprotybę, karą."
         },
         {
           "type": "funFact",
-          "text": "L'erreur de la « boîte » vient d'[[Erazmas Roterdamietis]], au XVIe siècle. En traduisant Hésiode, il confond « pithos » (jarre) et « pyxis » (petit coffret)."
+          "text": "„Skrynios“ klaidą XVI a. padaro [[Erazmas Roterdamietis]]. Versdamas Hesiodą, jis supainioja „pithos“ (ąsotį) ir „pyxis“ (mažą dėžutę)."
         },
         {
           "type": "paragraph",
-          "text": "Poussée par la curiosité que les dieux ont mise en elle, Pandore soulève le couvercle. Les fléaux s'échappent d'un coup. Paniquée, elle referme la jarre. Trop tard. Seule reste [[Elpis]], l'Espoir, accrochée au fond."
+          "text": "Dievų įdiegto smalsumo skatinama, Pandora pakelia dangtį. Nelaimės ištrūksta visos iš karto. Išsigandusi ji uždaro ąsotį. Per vėlu. Dugne įsikibusi lieka tik [[Elpis]], Viltis."
         }
       ]
     },
     {
       "id": "course_163_pandore_et_la_boite_p3",
-      "title": "L'espoir : remède ou piège ?",
+      "title": "Viltis: vaistas ar spąstai?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Pourquoi l'espoir reste-t-il dans la jarre ? Depuis l'Antiquité, on débat. Si le récipient ne contenait que des maux, faut-il croire que l'espoir en est un ?"
+          "text": "Kodėl viltis lieka ąsotyje? Apie tai ginčijamasi nuo Antikos laikų. Jei inde buvo tik nelaimės, ar reikia manyti, kad ir viltis yra viena iš jų?"
         },
         {
           "type": "paragraph",
-          "text": "Pour certains, comme le philosophe **Nietzsche**, l'espoir prolonge le supplice : il empêche d'accepter la réalité. Pour d'autres, Zeus l'a laissé exprès, comme unique remède face au désespoir."
+          "text": "Kai kurių, pavyzdžiui, filosofo **Nietzsche's**, nuomone, viltis prailgina kančią: ji trukdo susitaikyti su tikrove. Kiti mano, kad Dzeusas ją paliko tyčia, kaip vienintelį vaistą nuo nevilties."
         },
         {
           "type": "paragraph",
-          "text": "En grec, [[Elpis]] n'est pas seulement positif. Le mot désigne l'attente de ce qui va venir, bon ou mauvais. Une force neutre, capable de sauver ou de tourmenter."
+          "text": "Graikiškai [[Elpis]] nėra vien teigiamas žodis. Jis reiškia laukimą to, kas ateis, gera ar bloga. Tai neutrali jėga, galinti išgelbėti arba kankinti."
         }
       ]
     },
     {
       "id": "course_163_pandore_et_la_boite_p4",
-      "title": "Ce que le mythe a laissé derrière lui",
+      "title": "Ką mitas paliko po savęs",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Chez **Hésiode**, auteur de la Théogonie, le récit de Pandore porte une forte [[mizoginija]] : la femme y apparaît comme un fardeau pour l'homme. On a souvent comparé ce mythe à Ève et à la chute biblique."
+          "text": "**Hesiodo**, „Teogonijos“ autoriaus, pasakojime apie Pandorą juntama stipri [[mizoginija]]: moteris čia atrodo kaip našta vyrui. Šis mitas dažnai lygintas su Ieva ir bibliniu nuopuoliu."
         },
         {
           "type": "funFact",
-          "text": "Dans d'autres versions, la jarre contenait des bienfaits. En s'envolant vers l'Olympe, ils seraient devenus inaccessibles aux mortels."
+          "text": "Kitose versijose ąsotyje buvo gėrybės. Išskridusios į Olimpą, jos esą tapo nepasiekiamos mirtingiesiems."
         },
         {
           "type": "paragraph",
-          "text": "Plus tard, Pandore devient aussi la figure de la curiosité. Sa désobéissance ouvre le malheur, mais pousse aussi l'humanité à travailler, inventer, survivre. Aujourd'hui, « ouvrir la boîte de Pandore » désigne une action aux conséquences incontrôlables."
+          "text": "Vėliau Pandora tampa ir smalsumo simboliu. Jos nepaklusnumas atveria kelią nelaimei, bet kartu skatina žmoniją dirbti, išradinėti, išgyventi. Šiandien „atverti Pandoros skrynią“ reiškia imtis veiksmo, kurio padarinių nebeįmanoma suvaldyti."
         },
         {
           "type": "takeaway",
-          "text": "La jarre de **Pandore** met fin à l'insouciance humaine. Les maux se répandent, et l'**espoir** reste au fond : seul contrepoint, ambigu, face au malheur."
+          "text": "**Pandoros** ąsotis baigia žmonių nerūpestingumą. Nelaimės pasklinda, o **viltis** lieka dugne: vienintelė, nors ir dviprasmiška, atsvara nelaimei."
         }
       ]
     }

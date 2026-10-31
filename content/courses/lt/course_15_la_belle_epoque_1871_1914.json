@@ -1,127 +1,127 @@
 {
   "id": "course_15_la_belle_epoque_1871_1914",
-  "title": "Qu'est-ce que la Belle Époque ?",
+  "title": "Kas yra Gražioji epocha?",
   "subtitle": "1871-1914",
   "subject": "histoire",
   "subcategory": "Révolutions & conflits modernes",
-  "description": "Entre la fin de la guerre de 1870 et août 1914, l'Europe croit au progrès. Électricité, expositions, arts nouveaux… et fractures qui mènent à la catastrophe.",
+  "description": "Nuo 1870 m. karo pabaigos iki 1914 m. rugpjūčio Europa tiki pažanga. Elektra, parodos, naujas menas… ir lūžiai, vedantys į katastrofą.",
   "hero": {
     "image": "la_belle_epoque",
     "ratio": "16:9",
-    "hook": "Quarante ans de foi dans le progrès… avant que tout bascule en 1914."
+    "hook": "Keturiasdešimt metų tikėjimo pažanga… kol 1914 m. viskas apvirsta."
   },
   "sections": [
     {
       "id": "course_15_la_belle_epoque_1871_1914_intro",
-      "title": "Introduction",
+      "title": "Įvadas",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La **Belle Époque** désigne la période de paix relative entre la fin de la [[Prancūzijos-Prūsijos karas]] (**1871**) et le déclenchement de la [[Pirmasis pasaulinis karas]] (**1914**). On y croit à la science, au progrès, à la raison."
+          "text": "**Gražioji epocha** yra santykinės taikos laikotarpis. Jis prasideda, kai baigiasi [[Prancūzijos-Prūsijos karas]] (**1871**), ir trunka, kol prasideda [[Pirmasis pasaulinis karas]] (**1914**). Tuo metu tikima mokslu, pažanga, protu."
         },
         {
           "type": "paragraph",
-          "text": "Pour les classes aisées d'Europe occidentale, ce sont quatre décennies de confort et d'inventions. Mais sous le vernis brillent déjà des fractures sociales et des rivalités qui feront tout exploser."
+          "text": "Vakarų Europos pasiturintiems sluoksniams tai keturi komforto ir išradimų dešimtmečiai. Tačiau po blizgiu paviršiumi jau slypi socialiniai lūžiai ir varžybos, kurios viską susprogdins."
         }
       ]
     },
     {
       "id": "course_15_la_belle_epoque_1871_1914_p1",
-      "title": "Quand la technique transforme le quotidien",
+      "title": "Kai technika keičia kasdienybę",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Une deuxième révolution industrielle apporte l'**électricité**, le **pétrole**, la chimie. Le tramway et le métro (Paris, **1900**) changent la ville. L'automobile et l'avion naissent. Le téléphone raccourcit les distances."
+          "text": "Antroji pramonės revoliucija atneša **elektrą**, **naftą**, chemiją. Tramvajus ir metro (Paryžius, **1900**) keičia miestą. Gimsta automobilis ir lėktuvas. Telefonas sutrumpina atstumus."
         },
         {
           "type": "image",
           "asset": "paris_universal_exhibition_1900",
           "ratio": "4:3",
-          "caption": "L'Exposition universelle de 1900 à Paris, vitrine du progrès."
+          "caption": "1900 m. Paryžiaus pasaulinė paroda, pažangos vitrina."
         },
         {
           "type": "funFact",
-          "text": "Le nom « Belle Époque » n'apparaît qu'après **1914**. Les contemporains ne vivaient pas « la Belle Époque » : ce sont les survivants des tranchées qui ont inventé ce paradis perdu."
+          "text": "Pavadinimas „Gražioji epocha“ atsiranda tik po **1914** m. Amžininkai negyveno „Gražiojoje epochoje“: šį prarastąjį rojų išgalvojo apkasus išgyvenusieji."
         },
         {
           "type": "paragraph",
-          "text": "L'**Exposition universelle de 1900** attire **50 millions** de visiteurs. Le cinéma des frères Lumière et le Moulin Rouge font de Paris une capitale du spectacle. [[Auguste'o Comte'o pozityvizmas]], une philosophie très influente, résume l'optimisme : la science résoudra tout."
+          "text": "**1900 m. pasaulinė paroda** sutraukia **50 milijonų** lankytojų. Brolių Lumière'ų kinas ir „Moulin Rouge“ paverčia Paryžių pramogų sostine. [[Auguste'o Comte'o pozityvizmas]], labai įtakinga filosofija, apibendrina optimizmą: mokslas viską išspręs."
         }
       ]
     },
     {
       "id": "course_15_la_belle_epoque_1871_1914_p2",
-      "title": "L'envers du décor",
+      "title": "Kita medalio pusė",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Derrière les boulevards, les ouvriers travaillent souvent **10 à 12 heures** par jour, sans vraie protection. La misère urbaine nourrit les tensions entre classes."
+          "text": "Už bulvarų darbininkai dažnai dirba **10-12 valandų** per dieną, be tikros apsaugos. Miesto skurdas kursto klasių įtampą."
         },
         {
           "type": "image",
           "asset": "eiffel_tower_1889",
           "ratio": "4:3",
-          "caption": "La tour Eiffel (1889), icône d'une modernité qui ne profite pas à tous."
+          "caption": "Eifelio bokštas (1889), modernybės simbolis, kurios vaisiais naudojasi ne visi."
         },
         {
           "type": "paragraph",
-          "text": "À l'échelle du monde, l'Europe se partage l'Afrique. La [[Berlyno konferencija]] (**1884-1885**) fixe des frontières sans consulter les peuples concernés. En France, l'[[Dreyfuso byla]] déchire la République : un officier juif, Alfred Dreyfus, est condamné à tort pour espionnage, et l'antisémitisme éclate au grand jour."
+          "text": "Pasauliniu mastu Europa dalijasi Afriką. [[Berlyno konferencija]] (**1884-1885**) nubrėžia sienas, neatsiklaususi susijusių tautų. Prancūzijoje Respubliką skaldo [[Dreyfuso byla]]: žydų kilmės karininkas Alfredas Dreyfusas neteisingai nuteisiamas už šnipinėjimą, ir antisemitizmas prasiveržia viešai."
         }
       ]
     },
     {
       "id": "course_15_la_belle_epoque_1871_1914_p3",
-      "title": "Arts nouveaux, puis la chute",
+      "title": "Naujas menas, paskui žlugimas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Les arts explosent. L'[[Modernas (Art nouveau)]] courbes les façades. Le [[fovizmas]] et le [[kubizmas]] bousculent la peinture. Le médecin [[Sigmundas Freudas]] explore l'inconscient. Albert Einstein publie la [[Reliatyvumo teorija]] en **1905** : l'espace et le temps ne sont plus ce qu'on croyait."
+          "text": "Menai sprogsta. [[Modernas (Art nouveau)]] išlenkia fasadus. Tapybą sukrečia [[fovizmas]] ir [[kubizmas]]. Gydytojas [[Sigmundas Freudas]] tyrinėja pasąmonę. **1905** m. pasirodo Alberto Einsteino [[Reliatyvumo teorija]]: erdvė ir laikas nebėra tokie, kokiais buvo laikomi."
         },
         {
           "type": "funFact",
-          "text": "En **1913**, le ballet *Le Sacre du printemps* d'Igor Stravinsky provoque un tel scandale à Paris que des spectateurs en viennent aux mains."
+          "text": "**1913** m. Igorio Stravinskio baletas *Pavasario šventė* Paryžiuje sukelia tokį skandalą, kad kai kurie žiūrovai susimuša."
         },
         {
           "type": "paragraph",
-          "text": "Puis tout bascule. Le **28 juin 1914**, l'archiduc **François-Ferdinand**, héritier d'Autriche-Hongrie, est assassiné à Sarajevo. L'engrenage des alliances se déclenche. Le **4 août**, le Royaume-Uni entre en guerre. La foi dans le progrès meurt dans les tranchées."
+          "text": "Tada viskas apvirsta. **1914 m. birželio 28 d.** Sarajeve nužudomas Austrijos-Vengrijos sosto įpėdinis erchercogas **Pranciškus Ferdinandas**. Įsijungia sąjungų mechanizmas. **Rugpjūčio 4 d.** į karą stoja Jungtinė Karalystė. Tikėjimas pažanga miršta apkasuose."
         },
         {
           "type": "timeline",
           "events": [
             {
               "date": "1871",
-              "title": "Fin de la guerre franco-prussienne",
-              "detail": "Naissance d'une Allemagne unifiée, ressentiment français."
+              "title": "Prancūzijos-Prūsijos karo pabaiga",
+              "detail": "Gimsta suvienyta Vokietija, prancūzai jaučia nuoskaudą."
             },
             {
               "date": "1889",
-              "title": "Tour Eiffel",
-              "detail": "Symbole de la modernité technique."
+              "title": "Eifelio bokštas",
+              "detail": "Techninės modernybės simbolis."
             },
             {
               "date": "1894-1906",
-              "title": "Affaire Dreyfus",
-              "detail": "La République se déchire."
+              "title": "Dreyfuso byla",
+              "detail": "Respublika skyla."
             },
             {
               "date": "1900",
-              "title": "Exposition universelle",
-              "detail": "Paris vitrine du monde."
+              "title": "Pasaulinė paroda",
+              "detail": "Paryžius, pasaulio vitrina."
             },
             {
-              "date": "août 1914",
-              "title": "Grande Guerre",
-              "detail": "La Belle Époque s'achève brutalement."
+              "date": "1914 m. rugpjūtis",
+              "title": "Didysis karas",
+              "detail": "Gražioji epocha staiga baigiasi."
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "La Belle Époque (**1871-1914**) allie progrès technique et fractures profondes, avant de sombrer dans le chaos de la Grande Guerre."
+          "text": "Gražioji epocha (**1871-1914**) sujungia techninę pažangą ir gilius lūžius, kol nugrimzta į Didžiojo karo chaosą."
         }
       ]
     }

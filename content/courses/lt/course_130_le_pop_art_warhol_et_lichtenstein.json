@@ -1,136 +1,136 @@
 {
   "id": "course_130_le_pop_art_warhol_et_lichtenstein",
-  "title": "Comment Warhol et Lichtenstein ont-ils fait du banal un art ?",
-  "subtitle": "années 1950-1970",
+  "title": "Kaip Warholas ir Lichtensteinas pavertė banalybę menu?",
+  "subtitle": "1950-1970 m.",
   "subject": "art",
   "subcategory": "Peinture & mouvements",
-  "description": "Le Pop Art répond à la société de consommation. **Warhol** et **Lichtenstein** font de la publicité, des comics et des stars un grand art.",
+  "description": "Popartas atsako į vartotojų visuomenę. **Warholas** ir **Lichtensteinas** reklamą, komiksus ir žvaigždes paverčia didžiuoju menu.",
   "hero": {
     "image": "le_pop_art_warhol_et_lichtenstein",
     "ratio": "16:9",
-    "hook": "Une boîte de soupe, une case de BD : et si le banal était l'icône du siècle ?"
+    "hook": "Sriubos skardinė, komikso kadras: o gal banalybė ir yra amžiaus ikona?"
   },
   "sections": [
     {
       "id": "course_130_le_pop_art_warhol_et_lichtenstein_intro",
-      "title": "Introduction",
+      "title": "Įvadas",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le **Pop Art**, du milieu des années **1950** aux années **1970**, répond à la [[JAV vartotojų visuomenė XX a. 6-7 dešimtmečiais]] et à la culture de masse. Publicité, bande dessinée, stars hollywoodiennes : tout devient matière à art."
+          "text": "**Popartas**, gyvavęs nuo **1950**-ųjų vidurio iki **1970**-ųjų, atsiliepia į masinę kultūrą ir į tai, kuo tapo [[JAV vartotojų visuomenė XX a. 6-7 dešimtmečiais]]. Reklama, komiksai, Holivudo žvaigždės: viskas tampa meno medžiaga."
         },
         {
           "type": "paragraph",
-          "text": "Avec **Andy Warhol** et **Roy Lichtenstein**, la frontière saute entre le musée et le supermarché. L'objet quotidien devient icône. La valeur de l'œuvre et le rôle de l'artiste s'en trouvent bouleversés."
+          "text": "**Andy Warholas** ir **Roy Lichtensteinas** sugriauna sieną tarp muziejaus ir prekybos centro. Kasdienis daiktas tampa ikona. Apverčiama ir kūrinio vertė, ir menininko vaidmuo."
         }
       ]
     },
     {
       "id": "course_130_le_pop_art_warhol_et_lichtenstein_p1",
-      "title": "Du quotidien au musée",
+      "title": "Nuo kasdienybės iki muziejaus",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le Pop Art naît en **Grande-Bretagne** avec l'[[Independent Group]], mais c'est aux **États-Unis**, dans les années **1960**, qu'il explose. Après-guerre, prospérité, supermarchés, logos partout : le paysage visuel des Américains a changé."
+          "text": "Popartas gimsta **Didžiojoje Britanijoje**, kur jį pradeda [[Independent Group]], bet tikrai sprogsta **1960**-aisiais **Jungtinėse Valstijose**. Pokario gerovė, prekybos centrai, logotipai visur: amerikiečių vizualinis kraštovaizdis pasikeitė."
         },
         {
           "type": "funFact",
-          "text": "En 1957, Richard Hamilton définit le Pop Art par des adjectifs : « éphémère », « bon marché », « sexy ». Un art à consommer aussi vite qu'un magazine."
+          "text": "1957 m. Richardas Hamiltonas apibūdina popartą būdvardžiais: „trumpalaikis“, „pigus“, „seksualus“. Tai menas, kurį suvartoji taip pat greitai kaip žurnalą."
         },
         {
           "type": "paragraph",
-          "text": "Les artistes pop s'opposent à l'[[Abstraktusis ekspresionizmas]], ces toiles introspectives alors dominantes. Quand Warhol peint des soupes, il montre que l'individu se définit par ce qu'il achète. La répétition vide l'image de son émotion pour n'en garder que l'efficacité commerciale."
+          "text": "Popartininkai sukyla prieš tuo metu vyraujančią kryptį: tai [[Abstraktusis ekspresionizmas]] su savo introspektyviomis drobėmis. Tapydamas sriubos skardines, Warholas parodo, kad žmogų apibrėžia tai, ką jis perka. Kartojimas atima iš vaizdo emociją ir palieka tik komercinį poveikį."
         }
       ]
     },
     {
       "id": "course_130_le_pop_art_warhol_et_lichtenstein_p2",
-      "title": "Warhol : l'atelier comme usine",
+      "title": "Warholas: dirbtuvė kaip fabrikas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Andy Warhol** (1928-1987), ancien graphiste publicitaire, applique les méthodes de l'industrie à l'art. Sa **Factory**, à New York, n'est plus un sanctuaire solitaire : assistants et amis produisent ensemble."
+          "text": "**Andy Warholas** (1928-1987), buvęs reklamos grafikas, mene taiko pramonės metodus. Jo **Factory** Niujorke nebėra vienišo kūrėjo šventovė: asistentai ir draugai kuria kartu."
         },
         {
           "type": "image",
           "asset": "andy_warhol_factory_silkscreen_marilyn",
           "ratio": "4:3",
-          "caption": "Marilyn en série : la star comme produit reproductible."
+          "caption": "Marilyn serija: žvaigždė kaip dauginamas produktas."
         },
         {
           "type": "funFact",
-          "text": "Warhol accumulait plus de 600 « capsules temporelles » : boîtes où il jetait courriers, factures et même restes de nourriture."
+          "text": "Warholas sukaupė daugiau nei 600 „laiko kapsulių“: dėžių, į kurias mesdavo laiškus, sąskaitas ir net maisto likučius."
         },
         {
           "type": "paragraph",
-          "text": "Sa technique reine : la [[Šilkografija]], qui permet de reproduire une image des dizaines de fois. En multipliant Marilyn Monroe, il illustre l'idée de [[Aura ir mechaninis atgaminimas (Walteris Benjaminas)]] : plus l'image circule, moins elle est « sacrée », plus elle devient icône. La célébrité elle-même est un produit."
+          "text": "Jo pagrindinė technika: [[Šilkografija]], leidžianti atkartoti vaizdą dešimtis kartų. Daugindamas Marilyn Monroe, jis iliustruoja idėją, kurią apibendrina sąvoka [[Aura ir mechaninis atgaminimas (Walteris Benjaminas)]]: kuo daugiau vaizdas plinta, tuo mažiau jis „šventas“ ir tuo labiau tampa ikona. Pati šlovė yra produktas."
         }
       ]
     },
     {
       "id": "course_130_le_pop_art_warhol_et_lichtenstein_p3",
-      "title": "Lichtenstein : la BD agrandie",
+      "title": "Lichtensteinas: padidintas komiksas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Roy Lichtenstein** (1923-1997) s'attaque au langage des **comics**. Il isole une case chargée de cliché émotionnel et la peint en format monumental."
+          "text": "**Roy Lichtensteinas** (1923-1997) imasi **komiksų** kalbos. Jis išskiria vieną emocinių štampų kupiną kadrą ir nutapo jį milžinišku formatu."
         },
         {
           "type": "image",
           "asset": "roy_lichtenstein_comic_ben_day_dots_painting",
           "ratio": "4:3",
-          "caption": "Points Ben-Day peints à la main : l'usine imitée par le geste."
+          "caption": "Ranka tapyti Ben-Day taškai: gestas mėgdžioja fabriką."
         },
         {
           "type": "funFact",
-          "text": "Pour juger une composition, Lichtenstein regardait ses toiles à l'envers dans un miroir, afin de voir si elles tenaient de façon purement abstraite."
+          "text": "Norėdamas įvertinti kompoziciją, Lichtensteinas žiūrėdavo į savo drobes apverstas veidrodyje: ar jos laikosi vien kaip abstrakcija."
         },
         {
           "type": "paragraph",
-          "text": "Sa signature : le point [[Ben-Day taškai]], ces petits points d'impression industrielle qui créent des nuances. Il les peint à la main au pochoir : des heures pour imiter ce qu'une machine fait en secondes. *Whaam!* transforme une case de diversion en peinture d'histoire moderne."
+          "text": "Jo parašas: [[Ben-Day taškai]], smulkūs pramoninės spaudos taškeliai, kuriantys atspalvius. Jis juos tapo ranka per trafaretą: valandų valandas mėgdžioja tai, ką mašina padaro per kelias sekundes. *Whaam!* pramoginio komikso kadrą paverčia šiuolaikine istorine tapyba."
         }
       ]
     },
     {
       "id": "course_130_le_pop_art_warhol_et_lichtenstein_p4",
-      "title": "L'héritage : du marché aux réseaux",
+      "title": "Palikimas: nuo rinkos iki socialinių tinklų",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le Pop Art change le marché et les institutions. La marque de l'artiste compte autant que le geste. En **2022**, un portrait de Marilyn par Warhol atteint **195 millions** de dollars : l'image de masse, sacralisée, devient le bien le plus précieux."
+          "text": "Popartas pakeičia meno rinką ir institucijas. Menininko vardas kaip prekės ženklas svarbus ne mažiau nei gestas. **2022** m. Warholo Marilyn portretas parduodamas už **195 milijonus** dolerių: sušventintas masinis vaizdas tampa brangiausiu turtu."
         },
         {
           "type": "timeline",
           "events": [
             {
               "date": "1957",
-              "title": "Définition du Pop",
-              "detail": "Hamilton résume le mouvement : éphémère, bon marché, sexy."
+              "title": "Poparto apibrėžimas",
+              "detail": "Hamiltonas apibendrina judėjimą: trumpalaikis, pigus, seksualus."
             },
             {
-              "date": "années 1960",
-              "title": "Factory et comics",
-              "detail": "Warhol et Lichtenstein imposent l'esthétique pop aux USA."
+              "date": "1960-ieji",
+              "title": "Factory ir komiksai",
+              "detail": "Warholas ir Lichtensteinas įtvirtina popartą JAV."
             },
             {
               "date": "2022",
-              "title": "Marilyn à 195 M$",
-              "detail": "L'icône de masse devient trophée absolu du marché."
+              "title": "Marilyn už 195 mln. $",
+              "detail": "Masinė ikona tampa didžiausiu rinkos trofėjumi."
             }
           ]
         },
         {
           "type": "paragraph",
-          "text": "La prédiction de Warhol sur les « 15 minutes de célébrité » est devenue notre quotidien numérique. Mèmes et recyclage d'images descendent en droite ligne de cette révolution."
+          "text": "Warholo pranašystė apie „15 minučių šlovės“ tapo mūsų skaitmenine kasdienybe. Memai ir vaizdų perdirbimas kyla tiesiai iš šios revoliucijos."
         },
         {
           "type": "takeaway",
-          "text": "Le Pop Art a brisé la barrière entre art savant et culture de masse. Par la sérigraphie et les points Ben-Day, Warhol et Lichtenstein ont fait des objets quotidiens et des stars des icônes durables."
+          "text": "Popartas sugriovė barjerą tarp elitinio meno ir masinės kultūros. Pasitelkę šilkografiją ir Ben-Day taškus, Warholas ir Lichtensteinas kasdienius daiktus ir žvaigždes pavertė ilgaamžėmis ikonomis."
         }
       ]
     }

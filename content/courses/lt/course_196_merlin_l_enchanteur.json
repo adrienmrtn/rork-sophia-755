@@ -1,118 +1,118 @@
 {
   "id": "course_196_merlin_l_enchanteur",
-  "title": "Qui était vraiment Merlin l'Enchanteur ?",
-  "subtitle": "Le mage d'Arthur",
+  "title": "Kas iš tikrųjų buvo burtininkas Merlinas?",
+  "subtitle": "Artūro magas",
   "subject": "mythologie",
   "subcategory": "Autres mythologies",
-  "description": "Merlin, conseiller d'Arthur, prophète et mage : une figure née d'un démon et d'un baptême, architecte de Camelot, prisonnier de son propre amour.",
+  "description": "Merlinas: Artūro patarėjas, pranašas ir magas. Demono ir krikšto vaikas, Kameloto architektas, savo paties meilės kalinys.",
   "hero": {
     "image": "merlin_l_enchanteur",
     "ratio": "16:9",
-    "hook": "Fils d'un démon, baptisé dès le berceau : Merlin sert le bien avec des pouvoirs nés du mal."
+    "hook": "Demono sūnus, pakrikštytas dar lopšyje: Merlinas tarnauja gėriui galiomis, gimusiomis iš blogio."
   },
   "sections": [
     {
       "id": "course_196_merlin_l_enchanteur_intro",
-      "title": "Introduction",
+      "title": "Įvadas",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Merlin** est le magicien le plus célèbre du Moyen Âge occidental. Barde, prophète, conseiller du roi **Arthur** : il se tient à la frontière entre le monde celte ancien et la chevalerie chrétienne."
+          "text": "**Merlinas** yra garsiausias Vakarų viduramžių burtininkas. Bardas, pranašas, karaliaus **Artūro** patarėjas: jis stovi ant ribos tarp senojo keltų pasaulio ir krikščioniškosios riterystės."
         },
         {
           "type": "paragraph",
-          "text": "Sa nature est paradoxale. Une part de lui vient des démons, l'autre du ciel. Son histoire n'est pas celle d'un spectacle de magie : c'est la lutte d'un être hybride qui choisit de servir le bien, jusqu'à ce que l'amour le retire du monde."
+          "text": "Jo prigimtis paradoksali. Viena jo dalis kilusi iš demonų, kita iš dangaus. Jo istorija nėra magijos šou: tai dvilypės būtybės, pasirinkusios tarnauti gėriui, kova, kol meilė galiausiai atitraukia jį nuo pasaulio."
         }
       ]
     },
     {
       "id": "course_196_merlin_l_enchanteur_p1",
-      "title": "L'origine hybride entre démon et baptême",
+      "title": "Dvilypė kilmė: tarp demono ir krikšto",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Chez le poète **Robert de Boron** (XIIe siècle), les démons veulent créer un antéchrist. Un [[demonas inkubas]], esprit qui s'unit à une femme endormie, séduit une jeune chrétienne pieuse. Le plan échoue : la mère se confesse et fait baptiser l'enfant."
+          "text": "Poeto **Roberto de Borono** (XII a.) pasakojime demonai nori sukurti antikristą. Pamaldžią jauną krikščionę suvilioja [[demonas inkubas]], dvasia, kuri susijungia su miegančia moterimi. Planas žlunga: motina išpažįsta nuodėmes ir pakrikštija vaiką."
         },
         {
           "type": "image",
           "asset": "merlin_wizard_medieval_manuscript_illumination",
           "ratio": "4:3",
-          "caption": "Merlin, figure du mage médiéval entre forêt et cour."
+          "caption": "Merlinas, viduramžių mago figūra tarp miško ir dvaro."
         },
         {
           "type": "funFact",
-          "text": "Le nom « Merlin » vient du gallois **Myrddin**. Geoffroy de Monmouth changea le « d » en « l » pour éviter un jeu de mots trop proche du latin *merda*."
+          "text": "Vardas „Merlinas“ kilęs iš valų **Myrddin**. Džefris Monmutietis pakeitė „d“ į „l“, kad išvengtų žodžių žaismo, per daug primenančio lotynišką *merda*."
         },
         {
           "type": "paragraph",
-          "text": "Le [[krikštas]] efface la malédiction, mais laisse les pouvoirs : connaissance du passé (héritage démoniaque) et don de [[pranašystė viduramžių kultūroje]]. Merlin peut se métamorphoser. Derrière lui, on retrouve **Myrddin Wyllt**, barde gallois du VIe siècle qui, fou après une bataille, s'enfuit dans la forêt de [[Celyddon]]."
+          "text": "[[Krikštas]] panaikina prakeiksmą, bet galios lieka: praeities pažinimas (demoniškas palikimas) ir pranašo dovana ([[pranašystė viduramžių kultūroje]]). Merlinas gali keisti pavidalą. Už jo slypi **Myrddin Wyllt**, VI a. valų bardas, kuris po mūšio išprotėjo ir pabėgo į [[Celyddon]] mišką."
         }
       ]
     },
     {
       "id": "course_196_merlin_l_enchanteur_p2",
-      "title": "L'architecte du destin arthurien",
+      "title": "Artūro likimo architektas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Merlin n'est pas un illusionniste. Il est le garant du royaume. Il aide le roi [[Uteris Pendragonas]] à prendre les traits du duc de Cornouailles pour rejoindre la duchesse **Igerne**. De cette nuit naît **Arthur**."
+          "text": "Merlinas nėra iliuzionistas. Jis yra karalystės garantas. Jo padedamas karalius [[Uteris Pendragonas]] įgauna Kornvalio hercogo išvaizdą ir patenka pas hercogienę **Igerną**. Iš tos nakties gimsta **Artūras**."
         },
         {
           "type": "image",
           "asset": "merlin_arthur_camelot_medieval_illustration",
           "ratio": "4:3",
-          "caption": "Merlin guide Arthur vers le trône et Camelot."
+          "caption": "Merlinas veda Artūrą į sostą ir Kamelotą."
         },
         {
           "type": "paragraph",
-          "text": "Il élève l'enfant en secret, orchestre l'épée dans l'enclume, puis conduit Arthur vers la Dame du Lac pour obtenir [[Ekskaliburas]], dont le fourreau protège des blessures mortelles. À **Camelot**, il conçoit la **Table Ronde** et place le [[Pavojingasis sostas]], siège vacant réservé au chevalier le plus pur. Il voit les dangers venir. Il sait aussi que le destin finit toujours par passer."
+          "text": "Jis slapta augina vaiką, surežisuoja kardo ištraukimą iš priekalo, paskui nuveda Artūrą pas Ežero Damą, ir šis gauna kardą: tai [[Ekskaliburas]], kurio makštys saugo nuo mirtinų žaizdų. **Kamelote** jis sumano **Apskritąjį stalą**, prie kurio stovi jo įrengtas [[Pavojingasis sostas]], tuščia vieta, skirta tyriausiam riteriui. Jis mato artėjančius pavojus. Jis taip pat žino, kad likimas visada galiausiai išsipildo."
         }
       ]
     },
     {
       "id": "course_196_merlin_l_enchanteur_p3",
-      "title": "La chute de l'enchanteur : l'amour et l'oubli",
+      "title": "Burtininko žlugimas: meilė ir užmarštis",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Merlin connaît sa fin. Il tombe pourtant amoureux de **Viviane**, la Dame du Lac, près de la fontaine de Barenton. Il lui enseigne ses sortilèges les plus secrets, même s'il sait qu'elle le perdra."
+          "text": "Merlinas žino savo pabaigą. Vis dėlto jis įsimyli **Vivianą**, Ežero Damą, prie Barentono šaltinio. Jis išmoko ją slapčiausių savo kerų, nors žino, kad ji jį pražudys."
         },
         {
           "type": "image",
           "asset": "viviane_lady_of_the_lake_merlin_medieval_art",
           "ratio": "4:3",
-          "caption": "Viviane enferme Merlin : la fin du temps des mages."
+          "caption": "Viviana įkalina Merliną: magų laikų pabaiga."
         },
         {
           "type": "funFact",
-          "text": "Selon les versions, Viviane l'enferme dans un buisson d'aubépine, une tour de verre ou une cavité de **Brocéliande**. Immortel, Merlin n'est pas mort : il dort hors du monde."
+          "text": "Pagal skirtingas versijas, Viviana uždaro jį gudobelės krūme, stiklo bokšte arba **Broselijando** miško ole. Nemirtingas Merlinas nėra miręs: jis miega už pasaulio ribų."
         },
         {
           "type": "paragraph",
-          "text": "Quand les chevaliers partent vers le Graal, la magie de Merlin n'a plus de place. Son retrait marque le passage du temps des mythes au temps de la foi."
+          "text": "Kai riteriai iškeliauja ieškoti Gralio, Merlino magijai nebelieka vietos. Jo pasitraukimas žymi perėjimą nuo mitų laikų prie tikėjimo laikų."
         }
       ]
     },
     {
       "id": "course_196_merlin_l_enchanteur_p4",
-      "title": "Héritage littéraire et figure de l'archimage",
+      "title": "Literatūrinis palikimas ir archimago figūra",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Merlin a fixé l'image du vieux sage : barbe, bâton, énigmes. De lui descendent **Gandalf** chez Tolkien et **Dumbledore** chez Rowling. Il est l'adjuvant qui sait, mais ne peut agir à la place du héros."
+          "text": "Merlinas įtvirtino seno išminčiaus įvaizdį: barzda, lazda, mįslės. Iš jo kilę Tolkieno **Gandalfas** ir Rowling **Dumbledore'as**. Jis yra pagalbininkas, kuris žino, bet negali veikti vietoj herojaus."
         },
         {
           "type": "paragraph",
-          "text": "Pont entre la forêt sauvage et la cour, il garde une empreinte [[druidiškas]] tout en conseillant les rois. Aujourd'hui encore, il murmure que les empires sont fragiles, et que la sagesse ne protège pas toujours de soi-même."
+          "text": "Būdamas tiltu tarp laukinio miško ir dvaro, jis išlieka [[druidiškas]], nors ir pataria karaliams. Ir šiandien jis tarsi šnabžda, kad imperijos trapios ir kad išmintis ne visada apsaugo nuo savęs paties."
         },
         {
           "type": "takeaway",
-          "text": "**Merlin**, né d'un démon et sauvé par le baptême, bâtit le destin d'**Arthur** puis disparaît, prisonnier de **Viviane** : le modèle durable de l'enchanteur occidental."
+          "text": "**Merlinas**, gimęs iš demono ir išgelbėtas krikšto, sukuria **Artūro** likimą ir dingsta, tapęs **Vivianos** kaliniu: tai ilgaamžis Vakarų burtininko modelis."
         }
       ]
     }

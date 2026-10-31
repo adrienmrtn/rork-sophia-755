@@ -1,118 +1,118 @@
 {
   "id": "course_182_osiris_et_set_mythologie_egyptienne",
-  "title": "Osiris et Set : comment un meurtre a-t-il façonné l'Égypte ?",
-  "subtitle": "Mythologie égyptienne",
+  "title": "Ozyris ir Setas: kaip viena žmogžudystė sukūrė Egiptą?",
+  "subtitle": "Egipto mitologija",
   "subject": "mythologie",
   "subcategory": "Autres mythologies",
-  "description": "Meurtre, démembrement, momie et vengeance : le cycle d'Osiris et Set fonde la royauté égyptienne et l'espoir d'une vie après la mort.",
+  "description": "Žmogžudystė, sukapojimas, mumija ir kerštas: Ozyrio ir Seto mitas grindžia Egipto karališkąją valdžią ir pomirtinio gyvenimo viltį.",
   "hero": {
     "image": "osiris_et_set_mythologie_egyptienne",
     "ratio": "16:9",
-    "hook": "Un frère tue le roi, découpe son corps en quatorze morceaux. Une sœur le rassemble. Un fils venge. L'Égypte entière sort de ce crime."
+    "hook": "Brolis nužudo karalių ir sukapoja jo kūną į keturiolika dalių. Sesuo jį surenka. Sūnus atkeršija. Visas Egiptas kyla iš šio nusikaltimo."
   },
   "sections": [
     {
       "id": "course_182_osiris_et_set_mythologie_egyptienne_intro",
-      "title": "Introduction",
+      "title": "Įvadas",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le cycle d'**Osiris** et de **Set** est le grand récit de l'Égypte ancienne. Ce n'est pas seulement une tragédie familiale. C'est le combat entre l'ordre ([[Maat]], l'harmonie) et le chaos stérile."
+          "text": "**Ozyrio** ir **Seto** mitas yra didysis senovės Egipto pasakojimas. Tai ne vien šeimos tragedija. Tai kova tarp tvarkos ([[Maat]], darna) ir nevaisingo chaoso."
         },
         {
           "type": "paragraph",
-          "text": "À travers le meurtre, le démembrement et la résurrection d'Osiris, les Égyptiens pensent la royauté, la fertilité du Nil et la vie après la mort. Chaque pharaon vivant est un **Horus**. Chaque roi mort devient un **Osiris**."
+          "text": "Per Ozyrio nužudymą, sukapojimą ir prisikėlimą egiptiečiai apmąsto karališkąją valdžią, Nilo derlingumą ir gyvenimą po mirties. Kiekvienas gyvas faraonas yra **Horas**. Kiekvienas miręs karalius tampa **Ozyriu**."
         }
       ]
     },
     {
       "id": "course_182_osiris_et_set_mythologie_egyptienne_p1",
-      "title": "Set tue Osiris",
+      "title": "Setas nužudo Ozyrį",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Osiris** est un roi civilisateur. Avec son épouse-sœur **Isis**, il enseigne l'agriculture et les lois. Son frère **Set**, dieu du désert et de la violence, le hait. Lors d'un banquet, Set présente un coffre magnifique : il l'offrira à celui qui y tiendra parfaitement."
+          "text": "**Ozyris** yra karalius, nešantis civilizaciją. Su savo žmona ir seserimi **Izide** jis moko žemdirbystės ir įstatymų. Jo brolis **Setas**, dykumos ir smurto dievas, jo nekenčia. Puotos metu Setas parodo nuostabią skrynią: ją gaus tas, kuris joje tobulai tilps."
         },
         {
           "type": "image",
           "asset": "osiris_egyptian_god_green_skin_painting",
           "ratio": "4:3",
-          "caption": "Osiris à la peau verte : non la mort, mais la végétation qui renaît."
+          "caption": "Žaliaodis Ozyris: ne mirtis, o atgimstanti augmenija."
         },
         {
           "type": "paragraph",
-          "text": "Ayant pris les mesures d'Osiris en secret, Set le fait s'allonger, verrouille le coffre, le scelle au plomb et le jette dans le Nil. Plus tard, quand Isis retrouve le corps, Set le découpe en **14 morceaux** et les disperse dans la vallée. Sans corps intact, pas de paix dans l'au-delà."
+          "text": "Slapta išmatavęs Ozyrį, Setas liepia jam atsigulti, užrakina skrynią, užlieja ją švinu ir įmeta į Nilą. Vėliau, kai Izidė suranda kūną, Setas sukapoja jį į **14 dalių** ir išmėto po slėnį. Be sveiko kūno nėra ramybės anapusiniame pasaulyje."
         },
         {
           "type": "funFact",
-          "text": "Osiris est souvent peint en vert. Cette couleur ne dit pas la pourriture : elle dit la renaissance, comme les champs après la crue du Nil."
+          "text": "Ozyris dažnai vaizduojamas žalias. Ši spalva reiškia ne puvimą, o atgimimą, kaip laukai po Nilo potvynio."
         }
       ]
     },
     {
       "id": "course_182_osiris_et_set_mythologie_egyptienne_p2",
-      "title": "Isis invente la momie",
+      "title": "Izidė išranda mumiją",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Isis**, grande magicienne, part à la recherche des fragments. Aidée de sa sœur Nephtys et du dieu [[Anubis]], elle érige un sanctuaire à chaque endroit où elle retrouve un morceau. Un problème reste : le phallus a été dévoré par le poisson [[Oksirinchas]]. Isis en façonne un de remplacement."
+          "text": "**Izidė**, didžioji burtininkė, leidžiasi ieškoti dalių. Jai padeda sesuo Neftidė ir dievas [[Anubis]]; kiekvienoje vietoje, kur randa dalį, ji pastato šventovę. Lieka viena bėda: falą prarijo žuvis [[Oksirinchas]]. Izidė padaro jam pakaitalą."
         },
         {
           "type": "image",
           "asset": "isis_egyptian_goddess_winged_resurrection_painting",
           "ratio": "4:3",
-          "caption": "Isis aux ailes déployées : le souffle qui ranime Osiris."
+          "caption": "Izidė išskėstais sparnais: kvėpavimas, atgaivinantis Ozyrį."
         },
         {
           "type": "paragraph",
-          "text": "En rassemblant les pièces et en les enveloppant de bandelettes, Isis et Anubis créent la **première momie**. D'un battement d'ailes, Isis a insufflé une vie brève à Osiris. C'est alors qu'elle conçoit **Horus**, l'héritier destiné à restaurer l'ordre."
+          "text": "Surinkusios dalis ir apvyniojusios jas tvarsčiais, Izidė ir Anubis sukuria **pirmąją mumiją**. Sparnų plazdesiu Izidė įkvepia Ozyriui trumpą gyvybę. Būtent tada ji pradeda **Horą**, įpėdinį, kuriam lemta atkurti tvarką."
         },
         {
           "type": "funFact",
-          "text": "Selon certains textes, les larmes d'Isis pendant sa quête étaient si abondantes que les Égyptiens y voyaient l'origine mythique de la crue annuelle du Nil."
+          "text": "Kai kurių tekstų teigimu, Izidė per paieškas liejo tiek ašarų, kad egiptiečiai jose matė mitinę kasmetinio Nilo potvynio kilmę."
         }
       ]
     },
     {
       "id": "course_182_osiris_et_set_mythologie_egyptienne_p3",
-      "title": "Horus venge son père",
+      "title": "Horas atkeršija už tėvą",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Élevé en secret dans les marais de [[Chemis]], **Horus** grandit sous la forme du faucon. Adulte, il réclame le trône devant le tribunal des dieux, présidé par [[Ra]]. Le conflit avec Set dure des décennies : duels, ruses, blessures. Horus perd un œil ; Set perd sa fertilité."
+          "text": "**Horas** slapta užauga pelkėse, kurių vardas [[Chemis]], ir įgauna sakalo pavidalą. Suaugęs jis reikalauja sosto dievų teisme, kuriam pirmininkauja [[Ra]]. Konfliktas su Setu trunka dešimtmečius: dvikovos, gudrybės, žaizdos. Horas netenka akies, Setas netenka vaisingumo."
         },
         {
           "type": "image",
           "asset": "eye_of_horus_egyptian_symbol_protection",
           "ratio": "4:3",
-          "caption": "L'œil d'Horus (Oudjat) : l'intégrité reconquise sur le chaos."
+          "caption": "Horo akis (Udžatas): iš chaoso atkovotas vientisumas."
         },
         {
           "type": "paragraph",
-          "text": "L'œil, recomposé par [[Totas]], devient le symbole de la guérison et de la protection. Les dieux tranchent : Set est condamné à servir, notamment en combattant le serpent [[Apopis]] sur la barque solaire. Horus est couronné. Chaque pharaon sera désormais un « Horus vivant »."
+          "text": "Akį sulipdo [[Totas]], ir ji tampa gijimo bei apsaugos simboliu. Dievai nusprendžia: Setas nuteisiamas tarnauti, visų pirma saulės valtyje kovoti su gyvate, kurios vardas [[Apopis]]. Horas karūnuojamas. Nuo šiol kiekvienas faraonas bus „gyvasis Horas“."
         }
       ]
     },
     {
       "id": "course_182_osiris_et_set_mythologie_egyptienne_p4",
-      "title": "Osiris, juge des morts",
+      "title": "Ozyris, mirusiųjų teisėjas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Momifié, Osiris ne peut plus régner sur terre. Il devient souverain de l'**Amenti**, le royaume des morts. Sous son regard se déroule la **pesée du cœur**, décrite dans [[Mirusiųjų knyga]]. Le cœur du défunt est mis sur une balance face à la plume de Ma'at."
+          "text": "Mumifikuotas Ozyris nebegali valdyti žemėje. Jis tampa mirusiųjų karalystės, vadinamos **Amenti**, valdovu. Jo akivaizdoje vyksta **širdies svėrimas**, aprašytas knygoje, kuri vadinasi [[Mirusiųjų knyga]]. Mirusiojo širdis dedama ant svarstyklių priešais Maat plunksną."
         },
         {
           "type": "paragraph",
-          "text": "Si le cœur est léger, le défunt est « juste de voix » et entre dans l'éternité d'Osiris. S'il est lourd de fautes, le monstre [[Amitė]] le dévore : l'oubli définitif. Roi et paysan sont jugés selon les mêmes critères. Horus gère le présent ; Osiris assure la suite."
+          "text": "Jei širdis lengva, mirusysis pripažįstamas „teisiu balsu“ ir įžengia į Ozyrio amžinybę. Jei ji sunki nuo nuodėmių, mirusįjį praryja pabaisa [[Amitė]]: tai galutinė užmarštis. Karalius ir valstietis teisiami pagal tuos pačius kriterijus. Horas rūpinasi dabartimi, Ozyris užtikrina tęsinį."
         },
         {
           "type": "takeaway",
-          "text": "Le mythe d'**Osiris** et de **Set** fonde trois piliers de l'Égypte : la royauté (Horus vivant), la momification (corps intact pour l'au-delà) et l'espoir d'une justice après la mort sous le regard d'Osiris."
+          "text": "**Ozyrio** ir **Seto** mitas grindžia tris Egipto ramsčius: karališkąją valdžią (gyvasis Horas), mumifikavimą (sveikas kūnas anapusiniam pasauliui) ir teisingumo po mirties viltį Ozyrio akivaizdoje."
         }
       ]
     }

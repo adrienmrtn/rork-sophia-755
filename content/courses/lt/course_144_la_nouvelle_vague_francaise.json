@@ -1,100 +1,100 @@
 {
   "id": "course_144_la_nouvelle_vague_francaise",
-  "title": "La Nouvelle Vague française",
+  "title": "Prancūzijos Naujoji banga",
   "subtitle": "1959-1968",
   "subject": "art",
   "subcategory": "Cinéma, photo & architecture",
-  "description": "Des jeunes critiques des *Cahiers du cinéma* passent derrière la caméra. Entre **1959** et **1968**, la Nouvelle Vague libère le film du studio et invente le cinéma d'auteur moderne.",
+  "description": "Jauni žurnalo *Cahiers du cinéma* kritikai patys stoja už kameros. **1959**-**1968** m. Naujoji banga išlaisvina kiną iš studijos ir sukuria modernų autorinį kiną.",
   "hero": {
     "image": "la_nouvelle_vague_francaise",
     "ratio": "16:9",
-    "hook": "Des critiques de cinéma volent les caméras et réinventent le septième art."
+    "hook": "Kino kritikai pagrobia kameras ir iš naujo išranda septintąjį meną."
   },
   "sections": [
     {
       "id": "course_144_la_nouvelle_vague_francaise_intro",
-      "title": "Introduction",
+      "title": "Įvadas",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La **Nouvelle Vague** (1959-1968) n'est pas un simple style. C'est une prise de pouvoir. De jeunes cinéphiles français jugent le cinéma de studio trop figé, trop poli, trop écrit à l'avance. Ils veulent filmer comme on écrit un roman : librement, à la première personne."
+          "text": "**Naujoji banga** (1959-1968) nėra vien stilius. Tai valdžios perėmimas. Jauniems prancūzų kino mylėtojams studijų kinas atrodo per daug sustingęs, per daug nugludintas, per daug iš anksto surašytas. Jie nori filmuoti taip, kaip rašomas romanas: laisvai, pirmuoju asmeniu."
         },
         {
           "type": "paragraph",
-          "text": "En passant de la critique à la réalisation, ils font du metteur en scène le vrai auteur du film. Et ils changent le cinéma mondial."
+          "text": "Iš kritikų tapę režisieriais, jie paverčia režisierių tikruoju filmo autoriumi. Ir pakeičia viso pasaulio kiną."
         }
       ]
     },
     {
       "id": "course_144_la_nouvelle_vague_francaise_p1",
-      "title": "D'abord une révolution d'idées",
+      "title": "Pirmiausia idėjų revoliucija",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Avant les plateaux, il y a une revue : les **Cahiers du cinéma**, fondée en **1951** par [[André Bazinas]]. Autour de lui, de jeunes critiques : **Jean-Luc Godard**, **François Truffaut**, **Claude Chabrol**, **Jacques Rivette**, **Éric Rohmer**. Leur idée centrale s'appelle la [[Autorių politika]]."
+          "text": "Prieš filmavimo aikšteles buvo žurnalas: **Cahiers du cinéma**, kurį **1951** m. įkūrė [[André Bazinas]]. Aplink jį telkiasi jauni kritikai: **Jeanas-Lucas Godard'as**, **François Truffaut**, **Claude'as Chabrolis**, **Jacques'as Rivette'as**, **Éricas Rohmeris**. Jų pagrindinė idėja vadinama taip: [[Autorių politika]]."
         },
         {
           "type": "image",
           "asset": "cahiers_du_cinema_magazine_1950s",
           "ratio": "4:3",
-          "caption": "Les Cahiers du cinéma : l'école où la Nouvelle Vague apprend à penser le film."
+          "caption": "Cahiers du cinéma: mokykla, kurioje Naujoji banga mokosi mąstyti apie filmą."
         },
         {
           "type": "paragraph",
-          "text": "Pour eux, le vrai créateur n'est pas le scénariste, mais celui qui met en scène. Le cadrage, le rythme, les coupes : voilà la signature d'un auteur, comme le style d'un romancier."
+          "text": "Jiems tikrasis kūrėjas yra ne scenaristas, o tas, kuris režisuoja. Kadravimas, ritmas, montažo kirpimai: štai autoriaus parašas, kaip rašytojo stilius."
         }
       ]
     },
     {
       "id": "course_144_la_nouvelle_vague_francaise_p2",
-      "title": "1959 : Truffaut et Godard entrent en scène",
+      "title": "1959: į sceną žengia Truffaut ir Godard'as",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En **1959**, *Les Quatre Cents Coups* de **François Truffaut** triomphe à Cannes. Le film suit **Antoine Doinel**, un adolescent en rupture, joué par [[Jeanas-Pierre'as Léaud]]. La caméra suit la vie plutôt qu'un scénario corseté. Le regard final vers nous traverse le [[ketvirtoji siena]] : le héros regarde le public, sans fin heureuse."
+          "text": "**1959** m. **François Truffaut** filmas *Keturi šimtai smūgių* triumfuoja Kanuose. Filmas seka **Antoine'ą Doinelį**, maištaujantį paauglį, kurį vaidina [[Jeanas-Pierre'as Léaud]]. Kamera seka gyvenimą, o ne suvaržytą scenarijų. Paskutinis žvilgsnis į mus pralaužia barjerą, vadinamą [[ketvirtoji siena]]: herojus žiūri į žiūrovus, o laimingos pabaigos nėra."
         },
         {
           "type": "image",
           "asset": "truffaut_400_coups_antoine_doinel_film",
           "ratio": "4:3",
-          "caption": "Antoine Doinel face à la mer : une jeunesse qui refuse le destin tout tracé."
+          "caption": "Antoine'as Doinelis prie jūros: jaunystė, kuri atmeta iš anksto nubrėžtą likimą."
         },
         {
           "type": "funFact",
-          "text": "L'année suivante, *À bout de souffle* de Godard, avec [[Jeanas-Paulis Belmondo]], choque par ses coupes brusques. Godard coupe au milieu des gestes, comme s'il écrivait avec des ciseaux."
+          "text": "Kitais metais Godard'o filmas *Iki paskutinio atodūsio*, kuriame vaidina [[Jeanas-Paulis Belmondo]], šokiruoja staigiais kirpimais. Godard'as kerpa gestų viduryje, tarsi rašytų žirklėmis."
         },
         {
           "type": "paragraph",
-          "text": "Ces deux films prouvent qu'on peut raconter autrement : plus vite, plus libre, plus proche de la rue."
+          "text": "Šie du filmai įrodo, kad pasakoti galima kitaip: greičiau, laisviau, arčiau gatvės."
         }
       ]
     },
     {
       "id": "course_144_la_nouvelle_vague_francaise_p3",
-      "title": "Sortir du studio, filmer Paris",
+      "title": "Iš studijos į Paryžiaus gatves",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La rupture est aussi technique. Les caméras [[Éclair Caméflex]] et les pellicules plus sensibles permettent le [[Filmavimas natūralioje aplinkoje ir lengva kamera]]. Fini les studios lourds : on filme dans les cafés, les appartements, les rues de Paris, souvent en lumière naturelle."
+          "text": "Lūžis yra ir techninis. Kameros [[Éclair Caméflex]] ir jautresnės juostos atveria naują galimybę: [[Natūrali filmavimo aplinka ir lengva kamera]]. Sunkių studijų nebereikia: filmuojama kavinėse, butuose, Paryžiaus gatvėse, dažnai natūralioje šviesoje."
         },
         {
           "type": "paragraph",
-          "text": "Les acteurs improvisent. La parole devient familière, parfois bégayante. Le cinéma respire comme la vie. Cette liberté inspire ensuite le [[Cinema Novo]] au Brésil, puis des règles ultra-strictes comme le [[Dogma 95]] au Danemark, héritiers lointains de la même soif d'authenticité."
+          "text": "Aktoriai improvizuoja. Kalba tampa kasdieniška, kartais mikčiojanti. Kinas kvėpuoja kaip gyvenimas. Ši laisvė vėliau įkvepia Brazilijos judėjimą, vadinamą [[Cinema Novo]], o paskui ir itin griežtas taisykles Danijoje, kurias nustato [[Dogma 95]]: tai tolimi tos pačios autentiškumo troškulio paveldėtojai."
         }
       ]
     },
     {
       "id": "course_144_la_nouvelle_vague_francaise_p4",
-      "title": "Un héritage mondial",
+      "title": "Pasaulinis palikimas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Dans les années **1970**, le **Nouveau Hollywood** s'en inspire : **Martin Scorsese**, **Francis Ford Coppola**, **Steven Spielberg** mêlent efficacité américaine et liberté française. La Nouvelle Vague a imposé une idée durable : un film peut porter la voix d'une seule personne."
+          "text": "XX a. 8-ajame dešimtmetyje (**1970**-aisiais) ja įkvepiamas **Naujasis Holivudas**: **Martinas Scorsese**, **Francis Fordas Coppola**, **Stevenas Spielbergas** sujungia amerikietišką efektyvumą ir prancūzišką laisvę. Naujoji banga įtvirtino ilgaamžę idėją: filmas gali skleisti vieno žmogaus balsą."
         },
         {
           "type": "timeline",
@@ -102,23 +102,23 @@
             {
               "date": "1951",
               "title": "Cahiers du cinéma",
-              "detail": "La revue devient le laboratoire des idées."
+              "detail": "Žurnalas tampa idėjų laboratorija."
             },
             {
               "date": "1959",
-              "title": "Les Quatre Cents Coups",
-              "detail": "Truffaut impose le cinéma d'auteur à Cannes."
+              "title": "Keturi šimtai smūgių",
+              "detail": "Truffaut įtvirtina autorinį kiną Kanuose."
             },
             {
               "date": "1960",
-              "title": "À bout de souffle",
-              "detail": "Godard casse le montage classique."
+              "title": "Iki paskutinio atodūsio",
+              "detail": "Godard'as sulaužo klasikinį montažą."
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "La Nouvelle Vague a sorti le cinéma du studio pour le jeter dans la rue. Elle a fait du réalisateur un auteur, et cette idée continue de façonner le cinéma indépendant partout dans le monde."
+          "text": "Naujoji banga išvedė kiną iš studijos į gatvę. Ji pavertė režisierių autoriumi, ir ši idėja iki šiol formuoja nepriklausomą kiną visame pasaulyje."
         }
       ]
     }

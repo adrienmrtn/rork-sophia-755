@@ -1,98 +1,98 @@
 {
   "id": "course_50_comment_le_savon_tue_t_il_les_virus",
-  "title": "Comment le savon tue-t-il les virus ?",
-  "subtitle": "Hygiène",
+  "title": "Kaip muilas naikina virusus?",
+  "subtitle": "Higiena",
   "subject": "sciences",
   "subcategory": "Notre quotidien expliqué",
-  "description": "Le savon n'est pas « magique ». Il attaque la coque grasse de certains virus et les arrache de ta peau. Voici pourquoi 20 secondes comptent.",
+  "description": "Muilas nėra „stebuklingas“. Jis ardo riebalinį kai kurių virusų apvalkalą ir nuplauna juos nuo tavo odos. Sužinok, kodėl svarbios 20 sekundžių.",
   "hero": {
     "image": "comment_le_savon_tue_les_virus",
     "ratio": "16:9",
-    "hook": "Une arme simple contre les virus : des molécules qui aiment l'eau… et la graisse."
+    "hook": "Paprastas ginklas prieš virusus: molekulės, kurios mėgsta vandenį… ir riebalus."
   },
   "sections": [
     {
       "id": "course_50_comment_le_savon_tue_t_il_les_virus_intro",
-      "title": "Introduction",
+      "title": "Įvadas",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Pendant la pandémie de COVID-19, un geste très simple est redevenu central : se laver les mains au savon. Pas besoin d'un laboratoire. Juste de l'eau, du savon, et un peu de temps."
+          "text": "Per COVID-19 pandemiją labai paprastas veiksmas vėl tapo svarbiausiu: plauti rankas su muilu. Nereikia jokios laboratorijos. Tik vandens, muilo ir šiek tiek laiko."
         },
         {
           "type": "paragraph",
-          "text": "Pourquoi ça marche si bien ? Parce que beaucoup de virus dangereux portent une enveloppe faite de graisse. Et le savon est excellent pour détruire la graisse."
+          "text": "Kodėl tai taip gerai veikia? Todėl, kad daugelį pavojingų virusų gaubia riebalinis apvalkalas. O muilas puikiai ardo riebalus."
         }
       ]
     },
     {
       "id": "course_50_comment_le_savon_tue_t_il_les_virus_p1",
-      "title": "La faiblesse de certains virus",
+      "title": "Kai kurių virusų silpnoji vieta",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Certains virus, comme les **coronavirus** ou le virus de la grippe, ont une enveloppe extérieure faite de lipides (des graisses). Cette enveloppe les protège… jusqu'à ce qu'elle rencontre du savon."
+          "text": "Kai kurie virusai, pavyzdžiui, **koronavirusai** ar gripo virusas, turi išorinį apvalkalą iš lipidų (riebalų). Šis apvalkalas juos saugo… kol susiduria su muilu."
         },
         {
           "type": "paragraph",
-          "text": "D'autres virus, dits « nus », n'ont pas cette enveloppe. Ils résistent mieux au savon et à l'alcool. Heureusement, beaucoup des virus qui circulent par les mains et les gouttelettes sont enveloppés."
+          "text": "Kiti virusai, vadinamieji „nuogi“, tokio apvalkalo neturi. Jie atsparesni muilui ir alkoholiui. Laimei, daugelis virusų, plintančių per rankas ir lašelius, turi apvalkalą."
         }
       ]
     },
     {
       "id": "course_50_comment_le_savon_tue_t_il_les_virus_p2",
-      "title": "Le savon, une molécule à deux faces",
+      "title": "Muilas: dviveidė molekulė",
       "free": false,
       "blocks": [
         {
           "type": "image",
           "asset": "handwashing_soap_water_hands",
           "ratio": "4:3",
-          "caption": "Le frottement aide le savon à atteindre tous les recoins des mains."
+          "caption": "Trynimas padeda muilui pasiekti visus rankų kampelius."
         },
         {
           "type": "paragraph",
-          "text": "Les molécules de savon sont des [[paviršinio aktyvumo medžiagos]]. Elles ont une tête qui aime l'eau et une queue qui aime la graisse. La queue s'enfonce dans l'enveloppe grasse du virus. La tête reste tournée vers l'eau."
+          "text": "Muilo molekulės yra [[paviršinio aktyvumo medžiagos]]. Jos turi vandenį mėgstančią galvutę ir riebalus mėgstančią uodegėlę. Uodegėlė įsiskverbia į riebalinį viruso apvalkalą. Galvutė lieka atsukta į vandenį."
         },
         {
           "type": "paragraph",
-          "text": "Résultat : l'enveloppe se déchire. Le virus est désactivé. Puis l'eau emporte les débris. Le savon ne « brûle » pas le virus comme un acide : il le **dissout** et l'enlève."
+          "text": "Rezultatas: apvalkalas suplyšta. Virusas nebeveiklus. Tada vanduo nuplauna likučius. Muilas nedegina viruso kaip rūgštis: jis viruso apvalkalą **ištirpdo** ir pašalina."
         },
         {
           "type": "funFact",
-          "text": "C'est le même principe qui fait partir la graisse d'une poêle : le savon accroche le gras et le laisse partir avec l'eau."
+          "text": "Tuo pačiu principu nuo keptuvės nusiplauna riebalai: muilas prikimba prie riebalų ir leidžia vandeniui juos nuplauti."
         }
       ]
     },
     {
       "id": "course_50_comment_le_savon_tue_t_il_les_virus_p3",
-      "title": "Pourquoi 20 secondes",
+      "title": "Kodėl 20 sekundžių",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Il faut du temps pour que le savon atteigne tous les plis : entre les doigts, sous les ongles, autour des poignets. Environ **20 secondes** de frottement, c'est le minimum souvent recommandé."
+          "text": "Reikia laiko, kad muilas pasiektų visas raukšles: tarp pirštų, po nagais, aplink riešus. Dažniausiai rekomenduojamas minimumas yra apie **20 sekundžių** trynimo."
         },
         {
           "type": "paragraph",
-          "text": "Sans frottement, le savon marche moins bien. L'eau seule non plus : elle n'attaque pas efficacement l'enveloppe grasse."
+          "text": "Be trynimo muilas veikia prasčiau. Vien vanduo irgi nepadės: jis veiksmingai neardo riebalinio apvalkalo."
         }
       ]
     },
     {
       "id": "course_50_comment_le_savon_tue_t_il_les_virus_p4",
-      "title": "Savon ou gel hydroalcoolique ?",
+      "title": "Muilas ar dezinfekcinis gelis?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Un gel avec au moins **60 %** d'alcool peut aussi détruire beaucoup de virus enveloppés. Mais s'il y a de la saleté visible ou de la graisse, le gel est moins efficace : les saletés font écran. Dans ce cas, le savon et l'eau restent le meilleur choix."
+          "text": "Gelis, kuriame yra bent **60 %** alkoholio, taip pat gali sunaikinti daugelį apvalkalą turinčių virusų. Tačiau jei matyti nešvarumų ar riebalų, gelis veikia prasčiau: nešvarumai sudaro barjerą. Tokiu atveju geriausia rinktis muilą ir vandenį."
         },
         {
           "type": "takeaway",
-          "text": "Le savon tue beaucoup de virus en déchirant leur enveloppe grasse, puis en les emportant avec l'eau. Temps + frottement = efficacité."
+          "text": "Muilas sunaikina daugelį virusų suplėšydamas jų riebalinį apvalkalą ir nuplaudamas juos vandeniu. Laikas + trynimas = veiksmingumas."
         }
       ]
     }

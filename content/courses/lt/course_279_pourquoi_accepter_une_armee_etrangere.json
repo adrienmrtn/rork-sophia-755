@@ -1,112 +1,112 @@
 {
   "id": "course_279_pourquoi_accepter_une_armee_etrangere",
-  "title": "Pourquoi accepter une armée étrangère sur son sol ?",
-  "subtitle": "De Mers el-Kébir à Guantánamo",
+  "title": "Kodėl įsileisti svetimą kariuomenę į savo žemę?",
+  "subtitle": "Nuo Mers el Kebiro iki Gvantanamo",
   "subject": "comprendreLeMonde",
   "subcategory": "Conflits & géopolitique",
-  "description": "Des dizaines de pays hébergent des soldats étrangers, et les États-Unis comptent à eux seuls plusieurs centaines de bases dans le monde. Comment un État souverain en vient-il à accepter l'armée d'un plus puissant que lui ?",
+  "description": "Dešimtys šalių priima užsienio karius, o vien JAV turi kelis šimtus bazių visame pasaulyje. Kaip suvereni valstybė ima ir įsileidžia už save galingesnės šalies kariuomenę?",
   "author": "mark-n-hoffman",
   "hero": {
     "image": "subic_bay_naval_base_philippines_aerial_us_navy",
     "ratio": "4:3",
-    "hook": "Un État est censé être maître chez lui, et pourtant des dizaines de pays laissent une armée étrangère s'installer sur leur sol."
+    "hook": "Valstybė turėtų būti šeimininkė savo namuose, tačiau dešimtys šalių leidžia svetimai kariuomenei įsikurti savo žemėje."
   },
   "sections": [
     {
       "id": "course_279_pourquoi_accepter_une_armee_etrangere_intro",
-      "title": "Introduction",
+      "title": "Įvadas",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Un État moderne revendique la [[suverenitetas]] : l'autorité exclusive sur son territoire et sa population. Pourtant, des dizaines de pays hébergent des bases militaires étrangères, et certains en comptent plusieurs. Quelques puissances y entretiennent des troupes loin de chez elles. Les **États-Unis** en possèdent à eux seuls plusieurs centaines : environ **750 sites** dans **80 pays** et territoires, selon un décompte de 2021."
+          "text": "Šiuolaikinė valstybė tvirtina, kad jai priklauso [[suverenitetas]]: išimtinė valdžia savo teritorijai ir gyventojams. Vis dėlto dešimtys šalių priima užsienio karines bazes, o kai kuriose jų yra net kelios. Kelios didžiosios valstybės laiko ten karius toli nuo savo namų. Vien **JAV** jų turi kelis šimtus: pagal 2021 m. skaičiavimą, apie **750 objektų** **80 šalių** ir teritorijų."
         },
         {
           "type": "paragraph",
-          "text": "Pourquoi un État accepterait-il l'armée d'un pays plus puissant que lui à l'intérieur de ses frontières ? Pour répondre, il faut regarder au-delà de la carte des États indépendants, vers les empires, anciens et nouveaux, dans lesquels ils vivent. L'histoire commence sur la côte algérienne."
+          "text": "Kodėl valstybė įsileistų į savo teritoriją už save galingesnės šalies kariuomenę? Kad atsakytum, reikia žvelgti toliau nei nepriklausomų valstybių žemėlapis: į senas ir naujas imperijas, kuriose tos valstybės gyvena. Istorija prasideda Alžyro pakrantėje."
         }
       ]
     },
     {
       "id": "course_279_pourquoi_accepter_une_armee_etrangere_p1",
-      "title": "Mers el-Kébir : l'empreinte coloniale",
+      "title": "Mers el Kebiras: kolonijinis pėdsakas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En **1830**, la France entreprend la conquête de l'Algérie. Ses troupes occupent aussitôt la rade de [[Mers el Kebiras]], près d'Oran, un mouillage abrité que la marine française utilisera pendant les **130 ans** de la colonisation. Dans les années 1930, la France y construit une base navale moderne, à portée des routes maritimes entre Gibraltar et Suez."
+          "text": "**1830** m. Prancūzija pradeda užkariauti Alžyrą. Jos kariai iškart užima reidą netoli Orano. Tai [[Mers el Kebiras]], užuovėja, kuria Prancūzijos laivynas naudosis visus **130 metų** kolonijinio valdymo. XX a. 4-ajame dešimtmetyje Prancūzija čia pastato modernią karinio jūrų laivyno bazę netoli jūrų kelių tarp Gibraltaro ir Sueco."
         },
         {
           "type": "image",
           "asset": "mers_el_kebir_naval_base_algeria_harbour",
           "ratio": "3:2",
-          "caption": "La rade de Mers el-Kébir, près d'Oran, sur la côte algérienne."
+          "caption": "Mers el Kebiro reidas netoli Orano, Alžyro pakrantėje."
         },
         {
           "type": "paragraph",
-          "text": "L'Algérie obtient son indépendance en **1962**. La marine française, elle, reste. Les [[Eviano susitarimai]], qui mettent fin à la guerre d'Algérie, reconnaissent que la base est en territoire algérien, mais autorisent la France à l'utiliser **15 ans** de plus. Le texte qui consacre la souveraineté algérienne préserve donc un point d'appui militaire français. Le cas est loin d'être unique : partout, d'anciennes installations coloniales sont devenues des bases durables."
+          "text": "Alžyras nepriklausomybę gauna **1962** m. O Prancūzijos laivynas lieka. Alžyro karą užbaigę [[Eviano susitarimai]] pripažįsta, kad bazė yra Alžyro teritorijoje, bet leidžia Prancūzijai ja naudotis dar **15 metų**. Taigi tekstas, įtvirtinantis Alžyro suverenitetą, išsaugo Prancūzijos karinį atramos tašką. Toks atvejis toli gražu ne vienintelis: visur buvę kolonijiniai įrenginiai virto ilgalaikėmis bazėmis."
         }
       ]
     },
     {
       "id": "course_279_pourquoi_accepter_une_armee_etrangere_p2",
-      "title": "1940 : cinquante destroyers contre des bases",
+      "title": "1940: penkiasdešimt eskadrinių minininkų už bazes",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En **1940**, la Grande-Bretagne est en guerre contre l'Allemagne. Les États-Unis, pas encore en guerre, cherchent déjà un accès militaire aux territoires de l'Empire britannique. L'[[susitarimas „eskadriniai minininkai mainais į bazes“]] scelle l'échange : Washington livre **cinquante** vieux navires de guerre. En retour, Londres concède pour **99 ans** des bases navales et aériennes dans ses colonies des Caraïbes et en Guyane britannique, et y ajoute des sites à Terre-Neuve et aux Bermudes."
+          "text": "**1940** m. Didžioji Britanija kariauja su Vokietija. Dar nekariaujančios JAV jau siekia karinės prieigos prie Britų imperijos teritorijų. Mainus įtvirtina [[susitarimas „eskadriniai minininkai mainais į bazes“]]: Vašingtonas perduoda **penkiasdešimt** senų karo laivų. Mainais Londonas **99 metams** suteikia jūrų ir oro bazes savo Karibų kolonijose ir Britų Gvianoje, o dar prideda vietų Niufaundlende ir Bermuduose."
         },
         {
           "type": "paragraph",
-          "text": "Ces bases étendent la portée de l'armée américaine à travers l'Atlantique. Si la Grande-Bretagne peut les offrir, c'est qu'elle contrôle des terres bien au-delà de ses côtes. La coopération de guerre ouvre ainsi aux États-Unis les possessions d'un autre empire, et le réseau qui en résulte traverse les frontières de futurs pays indépendants."
+          "text": "Šios bazės išplečia JAV kariuomenės pasiekiamumą per Atlantą. Didžioji Britanija gali jas pasiūlyti todėl, kad valdo žemes toli už savo krantų. Taip karo meto bendradarbiavimas atveria JAV kitos imperijos valdas, o susidaręs tinklas kerta būsimų nepriklausomų šalių sienas."
         },
         {
           "type": "funFact",
-          "text": "Roosevelt a présenté l'accord de 1940 comme le plus important renforcement de la défense nationale depuis l'achat de la Louisiane, l'une des plus grandes acquisitions territoriales de l'histoire du pays."
+          "text": "Rooseveltas 1940 m. susitarimą pristatė kaip svarbiausią šalies gynybos sustiprinimą nuo Luizianos pirkimo, vieno didžiausių teritorinių įsigijimų šalies istorijoje."
         }
       ]
     },
     {
       "id": "course_279_pourquoi_accepter_une_armee_etrangere_p3",
-      "title": "Décolonisation et rivalité de la guerre froide",
+      "title": "Dekolonizacija ir Šaltojo karo varžybos",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En **1898**, les États-Unis prennent les Philippines à l'Espagne et y installent des sites militaires dans tout l'archipel. L'indépendance vient en **1946**, mais un accord de **1947** conserve aux Américains l'accès aux bases de Clark et de la baie de Subic. Elles rejoignent le réseau de Washington en Asie, tandis que se durcit la [[Šaltasis karas]], la rivalité qui oppose les États-Unis à l'Union soviétique."
+          "text": "**1898** m. JAV atima Filipinus iš Ispanijos ir įrengia karinių objektų visame salyne. Nepriklausomybė ateina **1946** m., tačiau **1947** m. susitarimas išsaugo amerikiečiams prieigą prie Klarko ir Subiko įlankos bazių. Jos tampa Vašingtono tinklo Azijoje dalimi, kol aštrėja [[Šaltasis karas]], JAV ir Sovietų Sąjungos varžybos."
         },
         {
           "type": "paragraph",
-          "text": "Les Soviétiques se dotent eux aussi de bases outre-mer. En **1979**, le Vietnam leur ouvre la baie de Cam Ranh, agrandie par les Américains pendant la guerre du Vietnam. À mesure que les anciennes colonies deviennent des États, chaque superpuissance cherche à les attirer dans son camp. La décolonisation n'a pas mis fin à la compétition impériale pour leurs territoires."
+          "text": "Sovietai irgi įsigyja bazių užjūryje. **1979** m. Vietnamas jiems atveria Kamranio įlanką, kurią amerikiečiai išplėtė per Vietnamo karą. Buvusioms kolonijoms tampant valstybėmis, kiekviena supervalstybė stengiasi patraukti jas į savo pusę. Dekolonizacija nenutraukė imperijų varžybų dėl jų teritorijų."
         },
         {
           "type": "timeline",
           "events": [
             {
               "date": "1830",
-              "title": "La France à Mers el-Kébir",
-              "detail": "Les troupes françaises occupent la rade dès la conquête de l'Algérie."
+              "title": "Prancūzija Mers el Kebire",
+              "detail": "Prancūzų kariai užima reidą vos užkariavę Alžyrą."
             },
             {
               "date": "1940",
-              "title": "Destroyers contre bases",
-              "detail": "Cinquante navires américains contre des bases britanniques louées pour 99 ans."
+              "title": "Eskadriniai minininkai už bazes",
+              "detail": "Penkiasdešimt amerikiečių laivų už 99 metams išnuomotas britų bazes."
             },
             {
               "date": "1947",
-              "title": "Clark et Subic Bay",
-              "detail": "Un an après l'indépendance, les Philippines maintiennent l'accès américain."
+              "title": "Klarkas ir Subiko įlanka",
+              "detail": "Praėjus metams po nepriklausomybės, Filipinai išsaugo amerikiečių prieigą."
             },
             {
               "date": "1962",
-              "title": "Accords d'Évian",
-              "detail": "L'Algérie indépendante laisse Mers el-Kébir à la France pour 15 ans."
+              "title": "Eviano susitarimai",
+              "detail": "Nepriklausomas Alžyras 15 metų palieka Mers el Kebirą Prancūzijai."
             },
             {
               "date": "1979",
-              "title": "Cam Ranh",
-              "detail": "Le Vietnam ouvre la baie à la marine soviétique."
+              "title": "Kamranis",
+              "detail": "Vietnamas atveria įlanką Sovietų laivynui."
             }
           ]
         }
@@ -114,30 +114,30 @@
     },
     {
       "id": "course_279_pourquoi_accepter_une_armee_etrangere_p4",
-      "title": "Guantánamo et la police du monde",
+      "title": "Gvantanamas ir pasaulio policija",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Quand l'Union soviétique s'effondre en **1991**, les États-Unis disposent déjà d'un réseau militaire mondial et restent seuls au sommet : c'est le « moment unipolaire ». Après les attentats du **11 septembre 2001**, ce réseau sert à mener la [[karas su terorizmu]] et à poursuivre des suspects par-delà les frontières."
+          "text": "Kai **1991** m. Sovietų Sąjunga žlunga, JAV jau turi pasaulinį karinį tinklą ir lieka vienos viršūnėje: tai „vienpolis momentas“. Po **2001 m. rugsėjo 11 d.** išpuolių šis tinklas tampa atrama, kai prasideda [[karas su terorizmu]] ir įtariamieji persekiojami už valstybių sienų."
         },
         {
           "type": "image",
           "asset": "camp_x_ray_guantanamo_detainees_january_2002",
           "ratio": "3:2",
-          "caption": "Les vestiges du camp X-Ray, à Guantánamo, en 2021 : ouvert en janvier 2002, il n'a servi que quelques mois."
+          "caption": "X-Ray stovyklos liekanos Gvantaname 2021 m.: atidaryta 2002 m. sausį, ji veikė vos kelis mėnesius."
         },
         {
           "type": "paragraph",
-          "text": "En **2002**, les États-Unis ouvrent le tristement célèbre camp de détention de [[Gvantanamas]], à Cuba, sur une base navale louée depuis **1903**, au lendemain de la guerre hispano-américaine. On y enferme des personnes capturées à l'étranger, d'abord en Afghanistan. Le Pentagone découpe aujourd'hui la planète entière en **six** commandements géographiques, et ses bases servent d'avant-postes à une police mondiale d'un genre nouveau, qui exerce un pouvoir impérial sur le territoire souverain d'autres États."
+          "text": "**2002** m. JAV atidaro liūdnai pagarsėjusią sulaikymo stovyklą. Jos vieta yra [[Gvantanamas]] Kuboje, karinio jūrų laivyno bazė, nuomojama nuo **1903** m., netrukus po Ispanijos ir Amerikos karo. Ten kalinami užsienyje, pirmiausia Afganistane, sulaikyti žmonės. Šiandien Pentagonas visą planetą dalija į **šešias** geografines vadovybes, o jo bazės tampa naujo tipo pasaulinės policijos forpostais. Ši policija vykdo imperinę valdžią kitų valstybių suverenioje teritorijoje."
         },
         {
           "type": "funFact",
-          "text": "La carte des commandements ne s'arrête pas à la Terre : le commandement de l'espace est lui aussi classé géographique. Sa zone commence à 100 kilomètres au-dessus du niveau de la mer et s'étend au-delà de la Lune."
+          "text": "Vadovybių žemėlapis nesibaigia Žeme: kosmoso vadovybė irgi priskiriama geografinėms. Jos zona prasideda 100 kilometrų virš jūros lygio ir tęsiasi už Mėnulio."
         },
         {
           "type": "takeaway",
-          "text": "Les bases étrangères sont l'héritage des empires : conquêtes coloniales, marchandages de guerre et rivalités entre superpuissances ont laissé des armées sur le sol d'États pourtant souverains."
+          "text": "Užsienio bazės yra imperijų palikimas: kolonijiniai užkariavimai, karo meto sandoriai ir supervalstybių varžybos paliko kariuomenes net suverenių valstybių žemėje."
         }
       ]
     }

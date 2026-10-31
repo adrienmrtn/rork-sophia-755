@@ -1,119 +1,119 @@
 {
   "id": "course_214_la_crise_de_l_etat_providence",
-  "title": "L'État-providence est-il réservé aux citoyens ?",
-  "subtitle": "Algériens et braceros",
+  "title": "Ar gerovės valstybė skirta tik piliečiams?",
+  "subtitle": "Alžyriečiai ir braserai",
   "subject": "comprendreLeMonde",
   "subcategory": "Économie & société",
-  "description": "En France comme aux États-Unis, la protection sociale née après 1945 a aussi été financée par des travailleurs venus des anciennes colonies. Pension refusée à un Algérien, braceros mexicains privés de retraite, bulldozer de Vitry : l'histoire d'une crise plus ancienne que les déficits.",
+  "description": "Ir Prancūzijoje, ir JAV po 1945 m. atsiradusią socialinę apsaugą finansavo ir darbininkai iš buvusių kolonijų. Alžyriečiui nepaskirta pensija, be pensijų likę meksikiečiai braserai, buldozeris Vitri mieste: krizės, senesnės už deficitus, istorija.",
   "author": "mark-n-hoffman",
   "hero": {
     "image": "bracero_mexican_farmworkers_california_1942_lange",
     "ratio": "4:3",
-    "hook": "Pour les travailleurs venus des anciennes colonies, la crise de l'État-providence n'a pas commencé avec les déficits : elle a commencé dès le premier jour."
+    "hook": "Darbininkams iš buvusių kolonijų gerovės valstybės krizė prasidėjo ne nuo deficitų: ji prasidėjo nuo pirmos dienos."
   },
   "sections": [
     {
       "id": "course_214_la_crise_de_l_etat_providence_intro",
-      "title": "Introduction",
+      "title": "Įvadas",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En **2025**, les comptes de la Sécurité sociale française affichent un déficit de **21,6 milliards d'euros**. Aux États-Unis, les administrateurs de la Social Security, le régime fédéral de retraite, prévoient l'épuisement de ses réserves en **2034**. Pour beaucoup, ces chiffres le prouvent : l'[[gerovės valstybė]], cet ensemble de retraites, de soins et d'allocations financé par l'impôt, est en crise."
+          "text": "**2025** m. Prancūzijos socialinės apsaugos sąskaitose fiksuojamas **21,6 mlrd. eurų** deficitas. JAV federalinės pensijų sistemos Social Security administratoriai prognozuoja, kad jos rezervai išseks **2034** m. Daugeliui šie skaičiai įrodo, kad krizę išgyvena [[gerovės valstybė]], t. y. iš mokesčių finansuojamų pensijų, sveikatos priežiūros ir išmokų visuma."
         },
         {
           "type": "paragraph",
-          "text": "Mais un État ne fait pas que payer : il décide aussi qui a droit à quoi. En 2025, le président américain Donald Trump ordonne aux agences fédérales de durcir le contrôle des immigrés sans papiers, au nom des retraites et des soins des citoyens. Ces immigrés sont pourtant déjà exclus de la plupart des prestations. Quand un gouvernement déclare la crise de l'État-providence, de quels bénéficiaires parle-t-il ?"
+          "text": "Tačiau valstybė ne tik moka: ji taip pat sprendžia, kam kas priklauso. 2025 m. JAV prezidentas Donaldas Trumpas įsako federalinėms agentūroms griežtinti nelegalių imigrantų kontrolę, neva saugant piliečių pensijas ir sveikatos priežiūrą. Tačiau šie imigrantai ir taip neturi teisės į daugumą išmokų. Kai vyriausybė skelbia gerovės valstybės krizę, apie kuriuos naudos gavėjus ji kalba?"
         }
       ]
     },
     {
       "id": "course_214_la_crise_de_l_etat_providence_p1",
-      "title": "Le pacte d'après-guerre et ses exclus",
+      "title": "Pokario susitarimas ir jo atstumtieji",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Après la Seconde Guerre mondiale, industriels, syndicats et gouvernement américains passent un marché. Les ouvriers de l'industrie obtiennent de meilleurs salaires et une couverture sociale ; en échange, les syndicats soutiennent la production de masse et rangent leurs revendications les plus radicales. Le politiste Mark Rupert voit dans ces syndicats de citoyens le « partenaire junior » de l'arrangement."
+          "text": "Po Antrojo pasaulinio karo JAV pramonininkai, profesinės sąjungos ir vyriausybė sudaro sandorį. Pramonės darbininkai gauna didesnius atlyginimus ir socialinę apsaugą, o mainais profsąjungos remia masinę gamybą ir atsisako radikaliausių reikalavimų. Politologas Markas Rupertas šias piliečių profsąjungas vadina „jaunesniuoju partneriu“ šiame susitarime."
         },
         {
           "type": "image",
           "asset": "renault_billancourt_immigrant_workers_assembly_line",
           "ratio": "4:5",
-          "caption": "Affiche de Mai 1968 de l'atelier populaire des Beaux-Arts : les ouvriers de Renault-Billancourt, grande usine de main-d'œuvre immigrée."
+          "caption": "1968 m. gegužės plakatas iš Dailės mokyklos liaudies dirbtuvių: Renault-Billancourt, didelės imigrantų gamyklos, darbininkai."
         },
         {
           "type": "paragraph",
-          "text": "La France crée de son côté un système public d'assurance sociale plus large, où employeurs et salariés cotisent tous deux ; l'État y a depuis allégé les cotisations patronales sur les bas salaires pour favoriser l'embauche. Les deux pactes ont pourtant un point commun : ils privilégient une main-d'œuvre nationale aux dépens des non-citoyens venus des colonies. Les usines françaises embauchent des Algériens, hier colonisés, que l'administration requalifie en « étrangers immigrés ». Les fermes américaines recrutent des Mexicains dont les contrats les tiennent à l'écart des ayants droit."
+          "text": "Prancūzija savo ruožtu sukuria platesnę valstybinę socialinio draudimo sistemą, į kurią įmokas moka ir darbdaviai, ir darbuotojai; vėliau valstybė sumažino darbdavių įmokas už mažus atlyginimus, kad skatintų įdarbinimą. Vis dėlto abu susitarimai turi bendrą bruožą: jie teikia pirmenybę savo šalies darbo jėgai ne piliečių iš kolonijų sąskaita. Prancūzijos gamyklos samdo alžyriečius, neseniai kolonizuotus, kuriuos administracija perkvalifikuoja į „užsieniečius imigrantus“. Amerikos ūkiai samdo meksikiečius, kurių sutartys neleidžia jiems tapti teisių turėtojais."
         }
       ]
     },
     {
       "id": "course_214_la_crise_de_l_etat_providence_p2",
-      "title": "L'affaire Mazari : une pension refusée",
+      "title": "Mazari byla: nepaskirta pensija",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En **1986**, Mazari, un Algérien vivant en France métropolitaine, demande un complément à sa pension d'invalidité française, une aide réservée aux pensionnés à faibles revenus. La caisse refuse. Un citoyen français avec la même pension et les mêmes revenus l'aurait obtenu : c'est sa nationalité qui motive le refus. En **1991**, la [[Kasacinis teismas]], plus haute juridiction civile du pays, casse ce refus fondé sur la nationalité."
+          "text": "**1986** m. Mazari, žemyninėje Prancūzijoje gyvenantis alžyrietis, prašo priedo prie savo Prancūzijos invalidumo pensijos. Ši pagalba skirta mažas pajamas gaunantiems pensininkams. Kasa atsisako. Prancūzijos pilietis su tokia pat pensija ir pajamomis būtų priedą gavęs: atsisakymo priežastis yra pilietybė. **1991** m. aukščiausias šalies civilinių bylų teismas, [[Kasacinis teismas]], šį pilietybe pagrįstą atsisakymą panaikina."
         },
         {
           "type": "image",
           "asset": "cour_de_cassation_paris_palais_de_justice",
           "ratio": "16:9",
-          "caption": "La Cour de cassation siège au Palais de justice de Paris, sur l'île de la Cité."
+          "caption": "Kasacinis teismas posėdžiauja Paryžiaus Teisingumo rūmuose, Sitė saloje."
         },
         {
           "type": "paragraph",
-          "text": "En **1993**, un député influent, Jean Charroppin, relaie une inquiétude répandue : de telles demandes risquent d'alourdir le « budget social » de la France. La crainte est claire : d'autres immigrés des anciennes colonies pourraient contester les mêmes refus. Or, depuis l'époque coloniale, le travail mal payé des Algériens enrichit les employeurs français et finance, par impôts et cotisations, l'État-providence lui-même. Leur refuser les droits des citoyens revient à rétablir un ordre colonial."
+          "text": "**1993** m. įtakingas parlamentaras Jeanas Charroppinas išsako plačiai paplitusį nerimą: tokie prašymai gali apsunkinti Prancūzijos „socialinį biudžetą“. Baimė aiški: kiti imigrantai iš buvusių kolonijų gali ginčyti tokius pat atsisakymus. Tačiau nuo kolonijinių laikų prastai apmokamas alžyriečių darbas praturtina Prancūzijos darbdavius ir per mokesčius bei įmokas finansuoja pačią gerovės valstybę. Atimti iš jų piliečių teises reiškia atkurti kolonijinę tvarką."
         }
       ]
     },
     {
       "id": "course_214_la_crise_de_l_etat_providence_p3",
-      "title": "Les braceros, un colonialisme importé",
+      "title": "Braserai: importuotas kolonializmas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Aux États-Unis, la même logique s'applique dans les champs. Le [[„Bracero“ programa]] permet aux grands exploitants agricoles de recruter des citoyens mexicains pour les récoltes, sur des contrats temporaires. Après **juillet 1951**, ces ouvriers sous contrat ne sont plus couverts par la Social Security. Le Mexique, contrairement à l'Algérie sous domination française, est pourtant un pays indépendant."
+          "text": "JAV ta pati logika veikia laukuose. Stambiems ūkininkams derliui nuimti samdyti Meksikos piliečius pagal laikinas sutartis leidžia [[„Bracero“ programa]]. Po **1951 m. liepos** šie sutartiniai darbininkai nebėra apdrausti Social Security. O juk Meksika, kitaip nei Prancūzijos valdomas Alžyras, yra nepriklausoma šalis."
         },
         {
           "type": "funFact",
-          "text": "La loi américaine interdisait autrefois de faire venir des travailleurs étrangers sous contrat, vus comme une menace pour le travail libre. En 1951, le Congrès fait une exception pour le programme bracero, déjà en place : les contrats attachent les ouvriers à un emploi temporaire et imposent leur retour au Mexique."
+          "text": "Anksčiau JAV įstatymai draudė įvežti užsienio darbininkus pagal sutartis, nes tai buvo laikoma grėsme laisvam darbui. 1951 m. Kongresas padaro išimtį jau veikiančiai braserų programai: sutartys pririša darbininkus prie laikino darbo ir įpareigoja grįžti į Meksiką."
         },
         {
           "type": "paragraph",
-          "text": "L'historienne Mae Ngai parle d'un [[importuotas kolonializmas]] : les travailleurs mexicains entrent dans l'économie américaine sans place sûre dans la communauté politique, ni la retraite et les soins promis de naissance aux citoyens. L'exclusion vaut encore pour les ouvriers agricoles sous visa H-2A, dont les employeurs ne paient aucune cotisation de Social Security. Par des voies juridiques variées, France et États-Unis ont intégré ces travailleurs à une main-d'œuvre impériale en limitant leurs droits."
+          "text": "Istorikė Mae Ngai tai vadina taip: [[importuotas kolonializmas]]. Meksikos darbininkai patenka į Amerikos ekonomiką, bet neturi tvirtos vietos politinėje bendruomenėje, nei pensijos ir sveikatos priežiūros, kurios piliečiams garantuotos nuo gimimo. Ši atskirtis tebegalioja žemės ūkio darbininkams su H-2A vizomis: jų darbdaviai nemoka jokių Social Security įmokų. Skirtingais teisiniais keliais Prancūzija ir JAV įtraukė šiuos darbininkus į imperinę darbo jėgą, apribodamos jų teises."
         }
       ]
     },
     {
       "id": "course_214_la_crise_de_l_etat_providence_p4",
-      "title": "Le « seuil de tolérance » et le bulldozer de Vitry",
+      "title": "„Tolerancijos slenkstis“ ir Vitri buldozeris",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le philosophe [[Étienne Balibar]] s'est penché sur une conviction largement partagée : l'immigration aurait franchi un « [[tolerancijos slenkstis]] ». Ses partisans, de droite comme de gauche, accusent volontiers les immigrés de raréfier les emplois, de surcharger les logements et d'encombrer les hôpitaux."
+          "text": "Filosofas [[Étienne Balibar]] tyrė plačiai paplitusį įsitikinimą, kad imigracija esą peržengė ribą, vadinamą „[[tolerancijos slenkstis]]“. Šio požiūrio šalininkai, tiek dešinieji, tiek kairieji, noriai kaltina imigrantus, kad šie atima darbo vietas, perpildo būstus ir apsunkina ligonines."
         },
         {
           "type": "paragraph",
-          "text": "En **décembre 1980**, à Vitry-sur-Seine, le maire communiste Paul Mercieca envoie un bulldozer bloquer un foyer occupé par des travailleurs maliens. [[Georges Marchais]], le chef du Parti communiste français, le défend : Vitry ne peut pas accueillir davantage d'immigrés. Là, être français compte visiblement plus qu'être ouvrier, même pour des communistes."
+          "text": "**1980 m. gruodį** Vitri prie Senos komunistų meras Paulis Mercieca pasiunčia buldozerį užblokuoti bendrabutį, kuriame gyvena Malio darbininkai. Jį gina [[Georges Marchais]], Prancūzijos komunistų partijos vadovas: Vitri negali priimti daugiau imigrantų. Čia būti prancūzu akivaizdžiai svarbiau nei būti darbininku, net komunistams."
         },
         {
           "type": "image",
           "asset": "georges_marchais_portrait_1981",
           "ratio": "2:3",
-          "caption": "Georges Marchais, secrétaire général du Parti communiste français, vers 1981."
+          "caption": "Georges'as Marchais, Prancūzijos komunistų partijos generalinis sekretorius, apie 1981 m."
         },
         {
           "type": "paragraph",
-          "text": "Depuis longtemps, la France et les États-Unis recrutent dans leurs anciennes colonies des travailleurs pour leurs économies impériales. Leur travail a produit des profits et des recettes. Les règles sociales leur ont refusé des droits égaux, et quand ils ont demandé un logement ou une aide, l'administration y a vu des coûts nouveaux. Les alertes budgétaires arrivent bien tard : pour les travailleurs immigrés, l'État-providence est en crise depuis le début."
+          "text": "Prancūzija ir JAV jau seniai samdo darbininkus iš buvusių kolonijų savo imperinėms ekonomikoms. Jų darbas kūrė pelną ir biudžeto pajamas. Socialinės taisyklės jiems nesuteikė lygių teisių, o kai jie prašė būsto ar pagalbos, administracija tai laikė naujomis išlaidomis. Biudžeto pavojaus signalai skamba labai pavėluotai: imigrantams darbininkams gerovės valstybė krizę išgyvena nuo pat pradžių."
         },
         {
           "type": "takeaway",
-          "text": "En France comme aux États-Unis, l'État-providence, financé aussi par le travail des Algériens et des braceros mexicains, leur a refusé des droits égaux dès l'origine : sa crise n'a pas commencé avec les déficits."
+          "text": "Ir Prancūzijoje, ir JAV gerovės valstybė, kurią finansavo ir alžyriečių bei meksikiečių braserų darbas, nuo pat pradžių nesuteikė jiems lygių teisių: jos krizė prasidėjo ne nuo deficitų."
         }
       ]
     }

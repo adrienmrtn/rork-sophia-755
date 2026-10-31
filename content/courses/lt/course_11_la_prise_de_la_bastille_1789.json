@@ -1,142 +1,142 @@
 {
   "id": "course_11_la_prise_de_la_bastille_1789",
-  "title": "Que cherchaient les Parisiens en prenant la Bastille ?",
+  "title": "Ko siekė paryžiečiai, užimdami Bastiliją?",
   "subtitle": "1789",
   "subject": "histoire",
   "subcategory": "Révolutions & conflits modernes",
-  "description": "Le 14 juillet 1789, des Parisiens prennent d'assaut une forteresse qui ne contenait que **7 prisonniers**. Ce geste devient le symbole de la Révolution française.",
+  "description": "1789 m. liepos 14 d. paryžiečiai šturmuoja tvirtovę, kurioje tebuvo **7 kaliniai**. Šis žygis tampa Prancūzijos revoliucijos simboliu.",
   "hero": {
     "image": "la_prise_de_la_bastille_1789",
     "ratio": "16:9",
-    "hook": "Le 14 juillet 1789, Paris prend d'assaut une forteresse… pour de la poudre."
+    "hook": "1789 m. liepos 14 d. Paryžius šturmuoja tvirtovę… dėl parako."
   },
   "sections": [
     {
       "id": "course_11_la_prise_de_la_bastille_1789_intro",
-      "title": "Introduction",
+      "title": "Įvadas",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le **14 juillet 1789**, une foule de Parisiens marche sur la **Bastille**, une vieille forteresse à l'est de Paris. Ils ne viennent pas libérer des milliers de prisonniers. Ils veulent surtout de la **poudre** pour se défendre."
+          "text": "**1789 m. liepos 14 d.** paryžiečių minia patraukia į **Bastiliją**, seną tvirtovę rytinėje Paryžiaus dalyje. Jie ateina ne išlaisvinti tūkstančių kalinių. Pirmiausia jiems reikia **parako**, kad galėtų gintis."
         },
         {
           "type": "paragraph",
-          "text": "Ce jour-là, le roi **Louis XVI** voit sa capitale lui échapper. Une émeute pour des armes devient l'acte fondateur de la **Révolution française**. Voici comment."
+          "text": "Tą dieną karalius **Liudvikas XVI** mato, kaip sostinė išsprūsta jam iš rankų. Riaušės dėl ginklų tampa **Prancūzijos revoliucijos** pradžia. Pažiūrėkime, kaip tai nutiko."
         }
       ]
     },
     {
       "id": "course_11_la_prise_de_la_bastille_1789_p1",
-      "title": "La France au bord de la faillite",
+      "title": "Prancūzija ant bankroto slenksčio",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En 1789, le royaume est ruiné. Aider les colonies américaines pendant la [[JAV nepriklausomybės karas]] a coûté très cher. Pour lever de nouveaux impôts, Louis XVI convoque les **États généraux** en mai : une assemblée du clergé, de la noblesse et du reste du peuple."
+          "text": "1789 m. karalystė nuskurdusi. Labai brangiai kainavo karas, kuriame Prancūzija padėjo Amerikos kolonijoms: [[JAV nepriklausomybės karas]]. Norėdamas įvesti naujus mokesčius, Liudvikas XVI gegužę sušaukia **Generalinius luomus**: dvasininkų, bajorų ir likusios tautos atstovų susirinkimą."
         },
         {
           "type": "image",
           "asset": "estates_general_1789_france",
           "ratio": "4:3",
-          "caption": "Les États généraux de 1789 : le Tiers État face au clergé et à la noblesse."
+          "caption": "1789 m. Generaliniai luomai: trečiasis luomas prieš dvasininkiją ir bajoriją."
         },
         {
           "type": "paragraph",
-          "text": "Sous l'[[Senasis režimas ir trys luomai]], la société est coupée en trois. Clergé et noblesse gardent leurs privilèges. Le **Tiers État**, presque tout le monde, n'a qu'une voix. Bloqué, il se proclame **Assemblée nationale** le **17 juin**. Trois jours plus tard, au **Serment du Jeu de Paume**, les députés jurent de ne pas se séparer avant d'avoir écrit une constitution."
+          "text": "Tai [[senasis režimas ir trys luomai]]: visuomenė padalyta į tris dalis. Dvasininkija ir bajorija išlaiko savo privilegijas. **Trečiasis luomas**, beveik visi gyventojai, turi tik vieną balsą. Atsidūręs aklavietėje, jis **birželio 17 d.** pasiskelbia **Nacionaliniu susirinkimu**. Po trijų dienų, per **Kamuolio aikštelės priesaiką**, deputatai prisiekia nesiskirstyti, kol neparašys konstitucijos."
         },
         {
           "type": "paragraph",
-          "text": "Le roi semble céder, mais il place environ **30 000 soldats** autour de Paris. Le **11 juillet**, il renvoie **Jacques Necker**, son ministre des Finances très populaire. La panique gagne la capitale."
+          "text": "Karalius tarsi nusileidžia, bet aplink Paryžių sutelkia apie **30 000 karių**. **Liepos 11 d.** jis atleidžia **Jacques'ą Neckerį**, labai populiarų savo finansų ministrą. Sostinę apima panika."
         }
       ]
     },
     {
       "id": "course_11_la_prise_de_la_bastille_1789_p2",
-      "title": "Des fusils, puis de la poudre",
+      "title": "Šautuvai, paskui parakas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Les **12** et **13 juillet**, Paris s'insurge. On brûle les barrières d'octroi (taxes à l'entrée de la ville). On pille les armureries. Le matin du **14**, la foule saisit environ **32 000 fusils** aux **Invalides**. Il manque la poudre."
+          "text": "**Liepos 12** ir **13 d.** Paryžius sukyla. Deginamos muitinės užkardos (vietos, kur imami mokesčiai įvažiuojant į miestą). Plėšiamos ginklų parduotuvės. **14** d. rytą minia **Invalidų rūmuose** pasiima apie **32 000 šautuvų**. Trūksta tik parako."
         },
         {
           "type": "image",
           "asset": "storming_of_the_bastille_1789",
           "ratio": "4:3",
-          "caption": "La prise de la Bastille, 14 juillet 1789."
+          "caption": "Bastilijos šturmas, 1789 m. liepos 14 d."
         },
         {
           "type": "funFact",
-          "text": "Ce jour-là, la Bastille ne contenait que **7 prisonniers** : 4 faussaires, 2 hommes jugés fous et un aristocrate. Sa force était surtout dans ce qu'elle représentait."
+          "text": "Tą dieną Bastilijoje tebuvo **7 kaliniai**: 4 klastotojai, 2 pamišusiais pripažinti vyrai ir vienas aristokratas. Jos galia pirmiausia slypėjo tame, ką ji simbolizavo."
         },
         {
           "type": "paragraph",
-          "text": "La rumeur dit que la poudre est à la Bastille. Pour beaucoup, cette prison incarne l'arbitraire du roi, surtout à cause de la [[užantspauduotas raštas]], un ordre d'enfermement sans procès. Le gouverneur **de Launay** refuse d'ouvrir. Vers **13 h 30**, des coups de feu éclatent : **98 morts** parmi les assaillants. Des soldats qui passent du côté du peuple amènent des canons. En fin d'après-midi, la forteresse tombe. De Launay est lynché dans la rue."
+          "text": "Sklando gandas, kad parakas laikomas Bastilijoje. Daugeliui šis kalėjimas įkūnija karaliaus savivalę, ypač dėl vieno dokumento: tai [[užantspauduotas raštas]], įsakymas įkalinti be teismo. Komendantas **de Launay** atsisako atverti vartus. Apie **13.30** pasigirsta šūviai: tarp puolančiųjų **98 žuvusieji**. Liaudies pusėn perėję kareiviai atgabena patrankas. Vėlyvą popietę tvirtovė krinta. De Launay linčiuojamas gatvėje."
         }
       ]
     },
     {
       "id": "course_11_la_prise_de_la_bastille_1789_p3",
-      "title": "Quand la révolte devient révolution",
+      "title": "Kai maištas virsta revoliucija",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le **15 juillet**, on réveille Louis XVI. « Est-ce une révolte ? » demande-t-il. On lui répond : « Non Sire, c'est une révolution. » Ironie du calendrier : dans son journal de chasse, le roi avait noté « Rien » le 14."
+          "text": "**Liepos 15 d.** Liudviką XVI pažadina. Jis klausia: „Tai maištas?“ Jam atsakoma: „Ne, Didenybe, tai revoliucija.“ Kalendoriaus ironija: savo medžioklės dienoraštyje 14 d. karalius buvo įrašęs „Nieko“."
         },
         {
           "type": "funFact",
-          "text": "L'entrepreneur **Palloy**, chargé de démolir la Bastille, fit tailler des dominos dans ses pierres et en offrit un jeu au fils du roi, « pour qu'il joue avec les restes du despotisme »."
+          "text": "Rangovas **Palloy**, kuriam pavedė nugriauti Bastiliją, liepė iš jos akmenų išpjaustyti domino kauliukų ir vieną rinkinį padovanojo karaliaus sūnui, „kad jis žaistų su despotizmo likučiais“."
         },
         {
           "type": "paragraph",
-          "text": "Le roi rappelle Necker, retire ses troupes et accepte la **cocarde tricolore**. Dans les campagnes, la nouvelle alimente [[Didžioji baimė]] : les paysans, craignant une vengeance des nobles, brûlent les papiers des droits seigneuriaux. Dans la nuit du **4 août 1789**, l'Assemblée abolit les privilèges."
+          "text": "Karalius sugrąžina Neckerį, atitraukia kariuomenę ir priima **trispalvę kokardą**. Kaimuose ši žinia įžiebia paniką, ir prasideda [[Didžioji baimė]]: valstiečiai, bijodami bajorų keršto, degina senjorų teisių dokumentus. **1789 m. rugpjūčio 4 d.** naktį Susirinkimas panaikina privilegijas."
         }
       ]
     },
     {
       "id": "course_11_la_prise_de_la_bastille_1789_p4",
-      "title": "Du 14 juillet à la fête nationale",
+      "title": "Nuo liepos 14-osios iki nacionalinės šventės",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Dès le lendemain, on démolit la Bastille. Un an plus tard, la **Fête de la Fédération** célèbre l'unité. Mais le 14 juillet ne devient fête nationale qu'en **1880**, sous la IIIe République."
+          "text": "Jau kitą dieną Bastiliją pradedama griauti. Po metų **Federacijos šventė** sutelkia tautą vienybei. Tačiau liepos 14-oji nacionaline švente tampa tik **1880** m., Trečiosios Respublikos laikais."
         },
         {
           "type": "timeline",
           "events": [
             {
-              "date": "5 mai 1789",
-              "title": "États généraux",
-              "detail": "Louis XVI convoque le royaume pour sortir de la faillite."
+              "date": "1789 m. gegužės 5 d.",
+              "title": "Generaliniai luomai",
+              "detail": "Liudvikas XVI sušaukia karalystės atstovus, kad išbristų iš bankroto."
             },
             {
-              "date": "20 juin 1789",
-              "title": "Serment du Jeu de Paume",
-              "detail": "Les députés jurent de donner une constitution à la France."
+              "date": "1789 m. birželio 20 d.",
+              "title": "Kamuolio aikštelės priesaika",
+              "detail": "Deputatai prisiekia suteikti Prancūzijai konstituciją."
             },
             {
-              "date": "14 juillet 1789",
-              "title": "Prise de la Bastille",
-              "detail": "Paris s'empare de la poudre et d'un symbole royal."
+              "date": "1789 m. liepos 14 d.",
+              "title": "Bastilijos šturmas",
+              "detail": "Paryžius užvaldo paraką ir karališkosios valdžios simbolį."
             },
             {
-              "date": "4 août 1789",
-              "title": "Abolition des privilèges",
-              "detail": "La Grande Peur pousse l'Assemblée à agir."
+              "date": "1789 m. rugpjūčio 4 d.",
+              "title": "Privilegijų panaikinimas",
+              "detail": "Didžioji baimė priverčia Susirinkimą veikti."
             },
             {
-              "date": "26 août 1789",
-              "title": "Déclaration des droits",
-              "detail": "Les sujets deviennent citoyens devant la loi."
+              "date": "1789 m. rugpjūčio 26 d.",
+              "title": "Teisių deklaracija",
+              "detail": "Pavaldiniai tampa piliečiais, lygiais prieš įstatymą."
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "Le **14 juillet 1789**, Paris prend la Bastille pour de la poudre. Ce geste transforme une crise financière en révolution et précipite la fin de l'ordre des privilèges."
+          "text": "**1789 m. liepos 14 d.** Paryžius užima Bastiliją dėl parako. Šis žygis finansų krizę paverčia revoliucija ir paspartina privilegijų tvarkos žlugimą."
         }
       ]
     }

@@ -1,153 +1,153 @@
 {
   "id": "course_243_pourquoi_a_t_on_invente_les_vampires",
-  "title": "Pourquoi a-t-on inventé les vampires ?",
+  "title": "Kodėl buvo išgalvoti vampyrai?",
   "subtitle": "1645-1897",
   "subject": "mythologie",
   "subcategory": "Légendes & créatures",
-  "description": "Avant d'être un aristocrate en cape, le vampire est un voisin mort trop tôt, qu'on accuse d'emporter sa famille. L'histoire d'une peur qui a trouvé un nom.",
+  "description": "Prieš tapdamas aristokratu su apsiaustu, vampyras buvo per anksti miręs kaimynas, kaltinamas, kad nusineša į kapą savo šeimą. Tai istorija apie baimę, kuri gavo vardą.",
   "author": "angela-bouma",
   "hero": {
     "image": "foggy_village_graveyard_night_balkans",
     "ratio": "4:3",
-    "hook": "La mort fait peur. Ne pas pouvoir l'expliquer fait encore plus peur."
+    "hook": "Mirtis gąsdina. Dar labiau gąsdina negalėjimas jos paaiškinti."
   },
   "sections": [
     {
       "id": "course_243_pourquoi_a_t_on_invente_les_vampires_intro",
-      "title": "Introduction",
+      "title": "Įžanga",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En **1645**, un érudit grec installé à Rome, [[Leo Allatius]], décrit une créature que redoutent les villageois de son pays : le [[vrikolakas]]. Un mort qui sort la nuit et revient tourmenter sa propre famille, parce qu'il a été enterré sans les derniers sacrements. Seul le feu peut le détruire."
+          "text": "**1645** m. Romoje gyvenantis graikų mokslininkas [[Leo Allatius]] aprašo būtybę, kurios bijo jo krašto kaimiečiai: tai [[vrikolakas]]. Tai mirusysis, kuris naktimis išeina iš kapo ir grįžta kankinti savo paties šeimos, nes buvo palaidotas be paskutiniųjų sakramentų. Sunaikinti jį gali tik ugnis."
         },
         {
           "type": "paragraph",
-          "text": "Pendant deux siècles, épidémies et morts inexpliquées dans une même maison entretiennent la croyance. Chaque nouveau défunt mal enterré risque d'en faire un autre. Comment cette panique de village est-elle devenue le vampire en habit de soirée des romans et du cinéma ?"
+          "text": "Du šimtmečius šį tikėjimą palaiko epidemijos ir nepaaiškinamos mirtys tuose pačiuose namuose. Kiekvienas naujas netinkamai palaidotas velionis gali pagimdyti kitą. Kaip ši kaimo panika virto romanų ir kino vampyru su vakariniu kostiumu?"
         }
       ]
     },
     {
       "id": "course_243_pourquoi_a_t_on_invente_les_vampires_p1",
-      "title": "Le mort qui réclame ses chaussures",
+      "title": "Mirusysis, kuris reikalauja savo batų",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En **1725**, dans le village serbe de Kisiljevo, alors sous administration autrichienne, un paysan nommé [[Petaras Blagojevičius]] meurt. En quelques jours, neuf voisins meurent à leur tour. Tous l'accusent, dans leurs derniers instants, d'être venu les étouffer la nuit. Sa veuve raconte qu'il est revenu lui réclamer ses chaussures, puis elle quitte le village."
+          "text": "**1725** m. Serbijos kaime Kisiljeve, tuo metu valdytame Austrijos, miršta valstietis, vardu [[Petaras Blagojevičius]]. Per kelias dienas miršta dar devyni kaimynai. Prieš mirtį visi jie kaltina jį, kad naktimis ateidavo jų smaugti. Jo našlė pasakoja, kad jis grįžo pareikalauti savo batų, ir palieka kaimą."
         },
         {
           "type": "image",
           "asset": "edvard_munch_vampire_painting_1895",
           "ratio": "auto",
-          "caption": "« Vampire », d'Edvard Munch (1895). Avant les peintres et les romanciers, le vampire est une affaire de village."
+          "caption": "Edvardo Muncho „Vampyras“ (1895). Prieš tapdamas dailininkų ir rašytojų tema, vampyras buvo kaimo reikalas."
         },
         {
           "type": "paragraph",
-          "text": "Les villageois exhument le corps. Ils le trouvent étonnamment intact : peau fraîche, sang à la bouche, cheveux et ongles qui semblent avoir poussé. Preuve suffisante. Ils lui plantent un pieu dans le cœur et brûlent la dépouille. Un fonctionnaire autrichien assiste à la scène et rédige un rapport. Le mot « vampire » se répand dans les journaux d'Europe."
+          "text": "Kaimiečiai atkasa kūną. Jis atrodo stebėtinai nepakitęs: oda šviežia, burnoje kraujas, plaukai ir nagai tarsi ataugę. To užtenka kaip įrodymo. Jie įsmeigia jam į širdį kuolą ir sudegina palaikus. Scenoje dalyvauja austrų valdininkas ir surašo ataskaitą. Žodis „vampyras“ pasklinda po Europos laikraščius."
         },
         {
           "type": "paragraph",
-          "text": "Ce que les villageois prenaient pour des signes surnaturels sont les effets ordinaires de la décomposition. Les gaz produits par les bactéries gonflent l'abdomen et le visage, et poussent par la bouche et le nez un liquide sombre qui ressemble à du sang. La peau se rétracte et découvre la racine des ongles et des cheveux, qui paraissent plus longs."
+          "text": "Tai, ką kaimiečiai laikė antgamtiniais ženklais, yra įprasti irimo padariniai. Bakterijų išskiriamos dujos išpučia pilvą ir veidą, o pro burną ir nosį išstumia tamsų skystį, panašų į kraują. Oda susitraukia ir apnuogina nagų bei plaukų šaknis, todėl jie atrodo ilgesni."
         }
       ]
     },
     {
       "id": "course_243_pourquoi_a_t_on_invente_les_vampires_p2",
-      "title": "La maladie derrière la légende",
+      "title": "Liga už legendos",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En Nouvelle-Angleterre, au XIXe siècle, une autre peur prend la même forme. La [[tuberkuliozė]], qu'on appelle alors « consomption », fait maigrir et tousser ses victimes pendant des mois. Contagieuse, elle passe d'un membre de la famille à l'autre. Vu de l'extérieur, un mort semble revenir vider ses proches de leur vie, l'un après l'autre. Elle n'explique pas la vieille tradition des Balkans : ce sont deux croyances parallèles, nées à des époques et dans des lieux différents, mais qui répondent à la même angoisse."
+          "text": "XIX a. Naujojoje Anglijoje kita baimė įgauna tą pačią formą. Ten siaučia [[tuberkuliozė]], tuomet vadinta „džiova“: jos aukos mėnesių mėnesius liesėja ir kosti. Liga užkrečiama ir pereina nuo vieno šeimos nario prie kito. Iš šalies atrodo, kad mirusysis grįžta ir vieną po kito siurbia artimųjų gyvybę. Tačiau ji nepaaiškina senosios Balkanų tradicijos: tai du lygiagretūs tikėjimai, atsiradę skirtingais laikais ir skirtingose vietose, bet atsakantys į tą patį nerimą."
         },
         {
           "type": "image",
           "asset": "mercy_brown_grave_exeter_rhode_island",
           "ratio": "3:4",
-          "caption": "La tombe de Mercy Brown, à Exeter (Rhode Island), toujours visitée aujourd'hui."
+          "caption": "Mercy Brown kapas Exeteryje (Rod Ailandas), lankomas iki šiol."
         },
         {
           "type": "paragraph",
-          "text": "En **1892**, à Exeter, dans le Rhode Island, [[Mercy Brown]] meurt de tuberculose à 19 ans, après sa mère et sa sœur. Quand son frère Edwin tombe malade à son tour, les voisins exhument les trois corps. Celui de Mercy, enterré en plein hiver, est bien conservé, et son cœur contient encore du sang. On le brûle et on fait boire les cendres à Edwin, en guise de remède. Il meurt deux mois plus tard."
+          "text": "**1892** m. Exeteryje, Rod Ailando valstijoje, po motinos ir sesers nuo tuberkuliozės miršta 19 metų [[Mercy Brown]]. Kai suserga jos brolis Edwinas, kaimynai atkasa visus tris kūnus. Viduržiemį palaidotos Mercy kūnas gerai išsilaikęs, o jos širdyje dar yra kraujo. Širdį sudegina, o pelenus kaip vaistą duoda išgerti Edwinui. Jis miršta po dviejų mėnesių."
         },
         {
           "type": "funFact",
-          "text": "Le vrykolakas n'est pas une exclusivité grecque. La Mésopotamie antique avait ses démons buveurs de sang, la Russie son *upyr*, et la Chine son *jiangshi*, un cadavre raide qui se déplace en sautillant, bras tendus."
+          "text": "Vrikolakas nėra vien graikų išradimas. Senovės Mesopotamija turėjo kraują geriančių demonų, Rusija savo *upyr*, o Kinija *jiangshi*: sustingusį lavoną, kuris juda šokinėdamas ištiestomis rankomis."
         }
       ]
     },
     {
       "id": "course_243_pourquoi_a_t_on_invente_les_vampires_p3",
-      "title": "Le vampire devient aristocrate",
+      "title": "Vampyras tampa aristokratu",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En **1819**, un jeune médecin anglais, [[Johnas Polidori]], publie *Le Vampire*, premier récit en prose consacré à la créature en anglais. L'idée est née trois ans plus tôt, lors du fameux été pluvieux au bord du lac Léman où Mary Shelley imagine *Frankenstein*. Son personnage, **Lord Ruthven**, n'a plus rien du paysan sorti de sa tombe : il est riche, mystérieux, séduisant, et chasse dans les salons de Londres."
+          "text": "**1819** m. jaunas anglų gydytojas [[Johnas Polidori]] išleidžia *Vampyrą*, pirmąjį angliškai parašytą prozos kūrinį apie šią būtybę. Idėja gimė prieš trejus metus, tą garsiąją lietingą vasarą prie Ženevos ežero, kai Mary Shelley sugalvojo *Frankenšteiną*. Jo veikėjas **lordas Ruthvenas** nebeturi nieko bendra su iš kapo išlindusiu valstiečiu: jis turtingas, paslaptingas, žavus ir medžioja Londono salonuose."
         },
         {
           "type": "image",
           "asset": "bram_stoker_dracula_1897_first_edition_cover",
           "ratio": "3:4",
-          "caption": "La première édition de Dracula (1897), reliée de toile jaune et lettrée de rouge."
+          "caption": "Pirmasis „Drakulos“ leidimas (1897), įrištas geltonu audeklu, raudonomis raidėmis."
         },
         {
           "type": "paragraph",
-          "text": "Le récit est réédité, traduit, adapté au théâtre. Le vampire mondain fait école chez les auteurs gothiques. En **1897**, [[Bramas Stokeris]] publie *Dracula* et fixe le modèle pour un siècle : le comte, le château, les canines, l'ail et les crucifix. Presque tout ce que le cinéma en fera est déjà là."
+          "text": "Kūrinys perleidžiamas, verčiamas, statomas teatre. Pasaulietiškas vampyras tampa pavyzdžiu gotikos autoriams. **1897** m. [[Bramas Stokeris]] išleidžia *Drakulą* ir šimtmečiui nustato modelį: grafas, pilis, iltys, česnakas ir kryžiai. Beveik viskas, ką vėliau parodys kinas, čia jau yra."
         },
         {
           "type": "funFact",
-          "text": "Stoker n'a jamais mis les pieds en Transylvanie. Il a écrit *Dracula* à partir de guides de voyage et des livres de la bibliothèque de Whitby, la petite ville anglaise où le comte débarque dans le roman."
+          "text": "Stokeris niekada nebuvo Transilvanijoje. *Drakulą* jis parašė remdamasis kelionių vadovais ir knygomis iš Whitby bibliotekos. Whitby yra mažas Anglijos miestelis, kuriame romane išsilaipina grafas."
         }
       ]
     },
     {
       "id": "course_243_pourquoi_a_t_on_invente_les_vampires_p4",
-      "title": "La peur porte bien des noms",
+      "title": "Baimė turi daug vardų",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Les traditions vampiriques ne parlent pas vraiment de surnaturel. Avant que la science n'explique la décomposition, la contagion ou la mort subite, une communauté a besoin de donner un sens à ce qu'elle voit. Un mort qui revient donne à la peur une forme et un nom. Et un coupable que l'on peut brûler."
+          "text": "Vampyrų tradicijos iš tiesų kalba ne apie antgamtiškumą. Kol mokslas dar nepaaiškino irimo, užkrato ar staigios mirties, bendruomenei reikia suteikti prasmę tam, ką ji mato. Grįžtantis mirusysis baimei suteikia formą ir vardą. Ir kaltininką, kurį galima sudeginti."
         },
         {
           "type": "timeline",
           "events": [
             {
               "date": "1645",
-              "title": "Le vrykolakas décrit",
-              "detail": "Leo Allatius consigne la croyance grecque."
+              "title": "Aprašomas vrikolakas",
+              "detail": "Leo Allatius užrašo graikų tikėjimą."
             },
             {
               "date": "1725",
-              "title": "L'affaire Blagojević",
-              "detail": "Le mot « vampire » entre dans les journaux."
+              "title": "Blagojevičiaus byla",
+              "detail": "Žodis „vampyras“ patenka į laikraščius."
             },
             {
               "date": "1819",
-              "title": "Le Vampire de Polidori",
-              "detail": "Le vampire devient un aristocrate."
+              "title": "Polidori „Vampyras“",
+              "detail": "Vampyras tampa aristokratu."
             },
             {
               "date": "1892",
-              "title": "Mercy Brown exhumée",
-              "detail": "Dernière grande affaire de vampire aux États-Unis."
+              "title": "Mercy Brown ekshumacija",
+              "detail": "Paskutinė didelė vampyrų byla JAV."
             },
             {
               "date": "1897",
-              "title": "Dracula",
-              "detail": "Bram Stoker fixe le modèle moderne."
+              "title": "„Drakula“",
+              "detail": "Bramas Stokeris nustato šiuolaikinį modelį."
             }
           ]
         },
         {
           "type": "paragraph",
-          "text": "Le même mécanisme produit le vrykolakas grec, l'*upyr* slave, le *jiangshi* chinois : chacun est la réponse locale à la même question sans réponse. Les légendes de loups-garous suivent le même schéma et comblent le même vide, avec la métamorphose à la place du sang."
+          "text": "Tas pats mechanizmas sukuria graikų vrikolaką, slavų *upyr* ir kinų *jiangshi*: kiekvienas jų yra vietinis atsakas į tą patį klausimą be atsakymo. Vilkolakių legendos seka ta pačia schema ir užpildo tą pačią tuštumą, tik vietoj kraujo čia virsmas."
         },
         {
           "type": "takeaway",
-          "text": "Face aux mêmes peurs, chaque culture raconte une version de la même histoire. Un monstre est plus facile à vivre qu'une question sans réponse."
+          "text": "Susidūrusi su tomis pačiomis baimėmis, kiekviena kultūra pasakoja savą tos pačios istorijos versiją. Su pabaisa gyventi lengviau nei su klausimu be atsakymo."
         }
       ]
     }

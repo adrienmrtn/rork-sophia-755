@@ -1,113 +1,113 @@
 {
   "id": "course_109_don_quichotte_cervantes",
-  "title": "Don Quichotte, Cervantès",
+  "title": "Don Kichotas, Cervantesas",
   "subtitle": "1605-1615",
   "subject": "litterature",
   "subcategory": "Anglo-saxons & littérature mondiale",
-  "description": "Don Quichotte attaque des moulins à vent en croyant combattre des géants. Cervantès invente le roman moderne, entre folie généreuse, ironie et métafiction.",
+  "description": "Don Kichotas puola vėjo malūnus, manydamas, kad kaunasi su milžinais. Cervantesas sukuria modernųjį romaną, kuriame susipina kilni beprotybė, ironija ir metafikcija.",
   "hero": {
     "image": "don_quichotte_cervantes",
     "ratio": "16:9",
-    "hook": "Un gentilhomme lit trop de romances de chevalerie et part sauver le monde."
+    "hook": "Bajoras perskaito per daug riterių romanų ir išjoja gelbėti pasaulio."
   },
   "sections": [
     {
       "id": "course_109_don_quichotte_cervantes_intro",
-      "title": "Introduction",
+      "title": "Įvadas",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Publié en **1605** puis **1615**, **Don Quichotte** de **Miguel de Cervantès** est souvent considéré comme le premier roman moderne de l'Occident. **Alonso Quijano**, petit noble de la Manche, se prend pour un chevalier errant et part combattre des moulins qu'il croit être des géants."
+          "text": "Išleistas **1605** ir **1615** m., **Miguelio de Cervanteso** **Don Kichotas** dažnai laikomas pirmuoju moderniuoju Vakarų romanu. **Alonso Quijano**, smulkus bajoras iš Lamančos, įsivaizduoja esąs klajojantis riteris ir išjoja kautis su malūnais, kuriuos laiko milžinais."
         },
         {
           "type": "paragraph",
-          "text": "Bien plus qu'une parodie des romans de chevalerie, le livre invente une manière nouvelle de raconter : personnages changeants, doute permanent, humour et profondeur mêlés. Cervantès pose les bases du roman psychologique et de la fiction qui se commente elle-même."
+          "text": "Tai daug daugiau nei riterių romanų parodija: knyga atranda naują pasakojimo būdą, kuriame veikėjai kinta, abejonė nuolatinė, o humoras susipina su gelme. Cervantesas padeda psichologinio romano ir pačią save komentuojančios grožinės literatūros pamatus."
         }
       ]
     },
     {
       "id": "course_109_don_quichotte_cervantes_p1",
-      "title": "Cervantès : une vie d'aventures et la naissance du roman",
+      "title": "Cervantesas: nuotykių gyvenimas ir romano gimimas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Cervantès mène une vie d'aventures extraordinaires : blessé à la **[[Lepanto mūšis (1571) ir Cervanteso nelaisvė]]**, où il perd l'usage de sa main gauche, captif cinq ans à **Alger** après avoir été pris par des pirates. De retour en Espagne, dans une relative pauvreté, il publie la première partie en **1605** avec un succès immédiat."
+          "text": "Cervanteso gyvenimas kupinas nepaprastų nuotykių, ir svarbiausias jų yra **[[Lepanto mūšis (1571) ir Cervanteso nelaisvė]]**: mūšyje jis netenka kairės rankos valdymo, o vėliau piratų pagrobtas penkerius metus kalinamas **Alžyre**. Grįžęs į Ispaniją ir gyvendamas gana skurdžiai, **1605** m. jis išleidžia pirmąją dalį, kuri iškart sulaukia sėkmės."
         },
         {
           "type": "image",
           "asset": "miguel_de_cervantes_portrait_painting",
           "ratio": "4:3",
-          "caption": "Miguel de Cervantès, soldat, captif et inventeur du roman moderne."
+          "caption": "Miguelis de Cervantesas: karys, belaisvis ir moderniojo romano kūrėjas."
         },
         {
           "type": "funFact",
-          "text": "En 1614, un auteur publie une fausse suite. Furieux, Cervantès écrit la vraie seconde partie en 1615, où les héros découvrent qu'ils sont célèbres grâce au premier tome."
+          "text": "1614 m. vienas autorius išleidžia netikrą tęsinį. Įsiutęs Cervantesas 1615 m. parašo tikrąją antrąją dalį, kurioje herojai sužino, kad išgarsėjo dėl pirmojo tomo."
         },
         {
           "type": "paragraph",
-          "text": "Cervantès critique les romans de chevalerie obsolètes, mais surtout il invente la **polyphonie narrative** : chaque personnage a sa voix, sa perspective, son ironie propre."
+          "text": "Cervantesas kritikuoja pasenusius riterių romanus, bet svarbiausia, kad jis sukuria **pasakojimo polifoniją**: kiekvienas veikėjas turi savo balsą, požiūrį ir savitą ironiją."
         }
       ]
     },
     {
       "id": "course_109_don_quichotte_cervantes_p2",
-      "title": "L'antagonisme fondateur : le Chevalier et l'Écuyer",
+      "title": "Pamatinė priešprieša: riteris ir ginklanešys",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Don Quichotte** et **Sancho Panza** forment un duo immortel. L'un rêve de chevalerie et de justice idéale, l'autre pense au ventre, au vin et au gouvernement d'une île promise. Sancho tente de corriger son maître, notamment quand celui-ci attaque des moulins à vent qu'il prend pour des géants menaçants."
+          "text": "**Don Kichotas** ir **Sančas Pansa** sudaro nemirtingą porą. Vienas svajoja apie riteriškumą ir idealų teisingumą, kitas galvoja apie pilvą, vyną ir pažadėtos salos valdymą. Sančas bando pataisyti savo šeimininką, ypač kai šis puola vėjo malūnus, laikydamas juos grėsmingais milžinais."
         },
         {
           "type": "image",
           "asset": "don_quixote_windmills_gustave_dore_illustration",
           "ratio": "4:3",
-          "caption": "Don Quichotte et les moulins : l'idéal heurte le réel."
+          "caption": "Don Kichotas ir malūnai: idealas atsitrenkia į tikrovę."
         },
         {
           "type": "paragraph",
-          "text": "Au fil du voyage, Sancho se laisse séduire par le rêve chevaleresque tandis que Quichotte doute face aux humiliations répétées. Cette « quichottisation » et « sanchification » mutuelles transforment une farce initiale en méditation profonde sur l'amitié, l'idéal et la lucidité."
+          "text": "Kelionės metu Sančą ima vilioti riteriška svajonė, o Kichotas po pasikartojančių pažeminimų ima abejoti. Ši abipusė „kichotizacija“ ir „sančifikacija“ pirminį farsą paverčia gilia meditacija apie draugystę, idealą ir blaivų žvilgsnį."
         }
       ]
     },
     {
       "id": "course_109_don_quichotte_cervantes_p3",
-      "title": "La métafiction et le jeu des réalités",
+      "title": "Metafikcija ir tikrovių žaismas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Cervantès pratique la **[[Metafikcija bei pasakojimo refleksyvumas]]** : il prétend traduire un manuscrit arabe trouvé sur un marché. Le narrateur est mis en doute, le lecteur aussi. Dans la seconde partie, des nobles qui ont lu le livre organisent des mises en scène pour tromper le chevalier."
+          "text": "Cervanteso metodas yra **[[Metafikcija ir pasakojimo refleksyvumas]]**: jis tvirtina verčiąs arabišką rankraštį, rastą turguje. Abejojama pasakotoju, o kartu ir skaitytoju. Antrojoje dalyje knygą skaitę didikai rengia vaidinimus, kad apgautų riterį."
         },
         {
           "type": "quote",
-          "text": "La plume est la langue de l'âme ; les pensées qu'elle exprime sont les mots qu'elle parle.",
-          "attribution": "Miguel de Cervantès, Don Quichotte"
+          "text": "Plunksna yra sielos liežuvis; jos išreiškiamos mintys yra žodžiai, kuriuos ji taria.",
+          "attribution": "Miguelis de Cervantesas, Don Kichotas"
         },
         {
           "type": "paragraph",
-          "text": "La folie n'est plus seulement dans la tête de Quichotte : la société la fabrique aussi en le manipulant. L'identité devient un récit qu'on se raconte et qu'on nous impose. Cervantès pose les bases du roman psychologique moderne, plusieurs siècles avant le postmodernisme."
+          "text": "Beprotybė slypi jau ne vien Kichoto galvoje: ją gamina ir visuomenė, juo manipuliuodama. Tapatybė tampa pasakojimu, kurį sekame sau ir kurį mums primeta kiti. Cervantesas padeda moderniojo psichologinio romano pamatus keliais šimtmečiais anksčiau už postmodernizmą."
         }
       ]
     },
     {
       "id": "course_109_don_quichotte_cervantes_p4",
-      "title": "Postérité : du quichottisme à l'héritage universel",
+      "title": "Palikimas: nuo donkichotiškumo iki visuotinio paveldo",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le « quichottisme » désigne un idéalisme généreux, parfois naïf, qui persiste malgré les échecs. **Flaubert**, **Dostoïevski** et **[[James Joyce]]** s'inspirent de lui. Le roman accepte l'ambiguïté : plus une seule Vérité imposée, mais des vérités conflictuelles portées par des individus."
+          "text": "„Donkichotiškumas“ reiškia kilnų, kartais naivų idealizmą, kuris išlieka nepaisant nesėkmių. Iš jo semiasi įkvėpimo **Flaubert'as**, **Dostojevskis** ir **[[James Joyce]]**. Romanas priima dviprasmiškumą: nebėra vienos primestos Tiesos, yra prieštaringos tiesos, kurias neša atskiri žmonės."
         },
         {
           "type": "paragraph",
-          "text": "Vaincu par le **Chevalier de la Blanche Lune**, Don Quichotte retrouve la raison et meurt en **Alonso Quijano le Bon**. Paradoxe final : la raison est nécessaire pour vivre en société, mais l'imagination donne un sens héroïque à l'existence ordinaire."
+          "text": "Nugalėtas **Baltojo Mėnulio riterio**, Don Kichotas atgauna protą ir miršta kaip **Alonso Quijano Gerasis**. Paskutinis paradoksas: protas būtinas gyventi visuomenėje, bet vaizduotė suteikia herojišką prasmę kasdieniam gyvenimui."
         },
         {
           "type": "takeaway",
-          "text": "**Don Quichotte** invente le roman moderne en jouant entre illusion et réalité. Cervantès montre qu'on peut être fou et lucide à la fois, et que l'idéal transforme le monde, même quand il échoue."
+          "text": "**Don Kichotas** sukuria modernųjį romaną, žaisdamas iliuzija ir tikrove. Cervantesas parodo, kad galima būti kartu ir beprotiu, ir aiškiaregiu, o idealas keičia pasaulį net tada, kai patiria nesėkmę."
         }
       ]
     }

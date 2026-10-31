@@ -1,127 +1,127 @@
 {
   "id": "course_276_pourquoi_les_antibiotiques_cessent_ils",
-  "title": "Pourquoi les antibiotiques cessent-ils d'agir ?",
-  "subtitle": "Les bactéries contre-attaquent",
+  "title": "Kodėl antibiotikai nustoja veikti?",
+  "subtitle": "Bakterijos kontratakuoja",
   "subject": "sciences",
   "subcategory": "Notre quotidien expliqué",
-  "description": "Une angine, une infection urinaire, une opération de routine : sans antibiotiques efficaces, tout redevient dangereux. Et à force d'en abuser, nous apprenons aux bactéries à leur survivre.",
+  "description": "Angina, šlapimo takų infekcija, įprasta operacija: be veiksmingų antibiotikų visa tai vėl tampa pavojinga. O piktnaudžiaudami jais mokome bakterijas juos atlaikyti.",
   "author": "kate-waddams",
   "hero": {
     "image": "antibiogram_petri_dish_inhibition_zones",
     "ratio": "4:3",
-    "hook": "À force de les combattre, nous avons entraîné les bactéries à survivre à nos médicaments."
+    "hook": "Kovodami su bakterijomis, išmokėme jas atsilaikyti prieš mūsų vaistus."
   },
   "sections": [
     {
       "id": "course_276_pourquoi_les_antibiotiques_cessent_ils_intro",
-      "title": "Introduction",
+      "title": "Įžanga",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Quand des bactéries envahissent notre corps, le système immunitaire riposte : les **globules blancs** attaquent l'infection et nous allons vite mieux. Mais si nos défenses sont affaiblies, ou débordées, il faut un renfort : les antibiotiques. Un antibiotique [[baktericidinis]] détruit la bactérie en s'attaquant à sa paroi et à son contenu ; un bactériostatique l'empêche seulement de se multiplier."
+          "text": "Kai bakterijos įsiveržia į mūsų kūną, imuninė sistema atsako: **baltieji kraujo kūneliai** puola infekciją, ir greitai pasveikstame. Bet jei mūsų apsauga nusilpusi ar nebespėja, reikia pastiprinimo: antibiotikų. Antibiotikas, kuris yra [[baktericidinis]], sunaikina bakteriją, pažeisdamas jos sienelę ir turinį; bakteriostatinis tik neleidžia jai daugintis."
         },
         {
           "type": "funFact",
-          "text": "L'antibiotique n'est pas une invention moderne : des indices montrent que des humains en utilisaient déjà il y a plus de 1 500 ans, sans rien savoir des bactéries."
+          "text": "Antibiotikai nėra šiuolaikinis išradimas: yra ženklų, kad žmonės juos vartojo jau daugiau nei prieš 1 500 metų, nieko nežinodami apie bakterijas."
         },
         {
           "type": "paragraph",
-          "text": "Selon l'infection, le médecin choisit un antibiotique à **large spectre**, actif contre de nombreuses espèces, ou à spectre étroit, réservé à quelques-unes. Efficaces, peu coûteux, faciles à obtenir, ces médicaments couvrent une immense gamme d'infections. C'est ce succès même qui a conduit le monde moderne à en abuser. Et les bactéries ont commencé à répliquer."
+          "text": "Pagal infekciją gydytojas parenka **plataus spektro** antibiotiką, veikiantį daugelį rūšių, arba siauro spektro, skirtą tik kelioms. Veiksmingi, pigūs, lengvai gaunami, šie vaistai įveikia labai daug infekcijų. Būtent ši sėkmė paskatino šiuolaikinį pasaulį jais piktnaudžiauti. O bakterijos ėmė atsakyti."
         }
       ]
     },
     {
       "id": "course_276_pourquoi_les_antibiotiques_cessent_ils_p1",
-      "title": "Comment les bactéries apprennent à résister",
+      "title": "Kaip bakterijos išmoksta atsilaikyti",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Les antibiotiques comptent parmi les plus grandes avancées de la médecine moderne. Ils ont sauvé d'innombrables vies et nous en dépendons. Mais leur usage massif a créé un problème : l'[[atsparumas antibiotikams]]. Des antibiotiques qui tuaient une bactérie ou bloquaient sa croissance ne font plus effet. La bactérie a évolué pour déjouer le traitement."
+          "text": "Antibiotikai yra vieni didžiausių šiuolaikinės medicinos laimėjimų. Jie išgelbėjo nesuskaičiuojamą daugybę gyvybių, ir mes nuo jų priklausome. Tačiau dėl masinio jų vartojimo atsirado problema: [[atsparumas antibiotikams]]. Antibiotikai, kurie anksčiau naikino bakteriją ar stabdė jos augimą, nebeveikia. Bakterija evoliucionavo ir išmoko apeiti gydymą."
         },
         {
           "type": "image",
           "asset": "alexander_fleming_penicillin_petri_dish",
           "ratio": "4:3",
-          "caption": "Alexander Fleming, découvreur de la pénicilline, dans son laboratoire."
+          "caption": "Alexanderis Flemingas, penicilino atradėjas, savo laboratorijoje."
         },
         {
           "type": "paragraph",
-          "text": "L'évolution est un processus naturel, que les agressions du milieu accélèrent. Traiter sans cesse des bactéries avec des molécules conçues pour les tuer revient à sélectionner celles qui savent survivre. Leurs parades sont variées : **mutations** génétiques, enzymes qui dissolvent l'antibiotique, changements de fonctionnement, et même de minuscules [[ištekėjimo siurbliai]] qui rejettent le médicament hors de la cellule."
+          "text": "Evoliucija yra natūralus procesas, kurį aplinkos spaudimas pagreitina. Nuolat gydant bakterijas medžiagomis, sukurtomis joms naikinti, atrenkamos tos, kurios moka išgyventi. Jų gynybos būdai įvairūs: genetinės **mutacijos**, antibiotiką ardantys fermentai, pakitęs veikimas ir net mažyčiai [[ištekėjimo siurbliai]], kurie išmeta vaistą iš ląstelės."
         },
         {
           "type": "paragraph",
-          "text": "Ces parades sont inscrites dans les gènes. Quand une bactérie résistante se divise, elle les transmet à ses descendantes, qui les transmettent à leur tour. Une seule survivante peut fonder toute une lignée de résistantes. C'est ainsi que la résistance se propage."
+          "text": "Šie gynybos būdai įrašyti genuose. Kai atspari bakterija dalijasi, ji perduoda juos palikuonims, o šie savo ruožtu perduoda toliau. Viena išgyvenusi bakterija gali pradėti visą atsparių bakterijų liniją. Taip atsparumas ir plinta."
         }
       ]
     },
     {
       "id": "course_276_pourquoi_les_antibiotiques_cessent_ils_p2",
-      "title": "Des gènes qui voyagent : le cas du SARM",
+      "title": "Keliaujantys genai: MRSA atvejis",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Une bactérie résistante voyage comme n'importe quel microbe. La pandémie de **Covid** a montré à quelle vitesse un virus passe d'une personne, puis d'un pays, à l'autre. Les bactéries circulent de la même façon : par contact humain, dans des milieux favorables, par manque d'hygiène, ou des animaux vers l'homme."
+          "text": "Atspari bakterija keliauja kaip bet kuris mikrobas. **Covid** pandemija parodė, kaip greitai virusas pereina nuo vieno žmogaus prie kito, paskui iš vienos šalies į kitą. Bakterijos plinta taip pat: per žmonių kontaktą, palankioje aplinkoje, dėl prastos higienos arba nuo gyvūnų žmogui."
         },
         {
           "type": "paragraph",
-          "text": "Elles disposent en plus d'un raccourci : le [[horizontalioji genų pernaša]]. Une bactérie résistante peut céder directement ses gènes de résistance à une voisine, sans attendre de se diviser. En très peu de temps, une population entière de bactéries résistantes se forme."
+          "text": "Be to, jos turi trumpesnį kelią: tai [[horizontalioji genų pernaša]]. Atspari bakterija gali tiesiogiai perduoti savo atsparumo genus kaimynei, nelaukdama dalijimosi. Per labai trumpą laiką susidaro visa atsparių bakterijų populiacija."
         },
         {
           "type": "image",
           "asset": "mrsa_staphylococcus_aureus_electron_micrograph_cdc",
           "ratio": "5:4",
-          "caption": "Amas de staphylocoques dorés résistants à la méticilline, vus au microscope électronique."
+          "caption": "Meticilinui atsparaus auksinio stafilokoko sankaupos elektroniniu mikroskopu."
         },
         {
           "type": "paragraph",
-          "text": "La plus connue est le [[MRSA]], le staphylocoque doré résistant à la méticilline. Il tient tête à de nombreux antibiotiques courants, d'où son surnom de « superbactérie ». L'usage massif d'antibiotiques a éliminé les souches fragiles et laissé le champ libre à celles qui, comme lui, ont appris à résister. Les conséquences peuvent être mortelles."
+          "text": "Žinomiausia iš jų yra [[MRSA]], meticilinui atsparus auksinis stafilokokas. Jis atsilaiko prieš daugelį įprastų antibiotikų, todėl vadinamas „superbakterija“. Masinis antibiotikų vartojimas sunaikino silpnas padermes ir atvėrė kelią toms, kurios, kaip jis, išmoko atsilaikyti. Pasekmės gali būti mirtinos."
         }
       ]
     },
     {
       "id": "course_276_pourquoi_les_antibiotiques_cessent_ils_p3",
-      "title": "1,27 million de morts par an : l'alerte de l'OMS",
+      "title": "1,27 mln. mirčių per metus: PSO perspėjimas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Que signifie cette résistance pour nous ? L'[[PSO]], l'Organisation mondiale de la santé, classe la résistance aux antimicrobiens, les médicaments qui combattent les microbes, antibiotiques compris, parmi les **trois** principales menaces de santé publique dans le monde. Avec de moins en moins de médicaments efficaces contre les infections bactériennes, c'est toute la médecine moderne qui perd du terrain."
+          "text": "Ką šis atsparumas reiškia mums? Pasaulio sveikatos organizacija, trumpai [[PSO]], atsparumą antimikrobinėms medžiagoms (vaistams nuo mikrobų, įskaitant antibiotikus) priskiria prie **trijų** didžiausių pasaulio visuomenės sveikatos grėsmių. Kai veiksmingų vaistų nuo bakterinių infekcijų vis mažėja, pozicijas praranda visa šiuolaikinė medicina."
         },
         {
           "type": "paragraph",
-          "text": "Les chiffres donnent la mesure du danger. Pour la seule année 2019, **1,27 million** de décès dans le monde ont été attribués à la résistance aux antimicrobiens. Et la courbe monte : les projections tablent sur **10 millions** de morts par an d'ici **2050**."
+          "text": "Skaičiai parodo pavojaus mastą. Vien 2019 m. pasaulyje **1,27 mln.** mirčių buvo priskirta atsparumui antimikrobinėms medžiagoms. Ir kreivė kyla: prognozuojama, kad iki **2050** m. per metus mirs **10 mln.** žmonių."
         },
         {
           "type": "paragraph",
-          "text": "Les scientifiques ne restent pas les bras croisés. Ils mettent au point des traitements nouveaux et plus précis, qui visent les bactéries résistantes. Ils cherchent aussi à restaurer l'efficacité des antibiotiques existants et à réduire les prescriptions inutiles : chaque traitement évité est une occasion de moins, pour les bactéries, de s'adapter."
+          "text": "Mokslininkai nesėdi sudėję rankų. Jie kuria naujus, tikslesnius gydymo būdus, skirtus atsparioms bakterijoms. Taip pat stengiasi grąžinti esamų antibiotikų veiksmingumą ir sumažinti nereikalingų išrašymų: kiekvienas išvengtas gydymas yra viena proga mažiau bakterijoms prisitaikyti."
         }
       ]
     },
     {
       "id": "course_276_pourquoi_les_antibiotiques_cessent_ils_p4",
-      "title": "Un monde sans antibiotiques efficaces",
+      "title": "Pasaulis be veiksmingų antibiotikų",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Nous avalons nos antibiotiques sans y réfléchir. Ils sont bon marché, efficaces et disponibles partout. Sans eux, une infection banale, **angine** bactérienne ou infection urinaire, deviendrait bien plus difficile à soigner. Un genou écorché pourrait dégénérer en [[sepsis]], une infection généralisée qui met la vie en danger."
+          "text": "Antibiotikus geriame net nesusimąstydami. Jie pigūs, veiksmingi ir prieinami visur. Be jų paprasta infekcija, bakterinė **angina** ar šlapimo takų infekcija, būtų kur kas sunkiau išgydoma. Nubrozdintas kelis galėtų baigtis taip, kad išsivystytų [[sepsis]], gyvybei pavojinga išplitusi infekcija."
         },
         {
           "type": "image",
           "asset": "hospital_operating_room_surgery_team",
           "ratio": "3:2",
-          "caption": "Un bloc opératoire moderne : sans antibiotiques, les opérations de routine redeviendraient risquées."
+          "caption": "Šiuolaikinė operacinė: be antibiotikų įprastos operacijos vėl taptų rizikingos."
         },
         {
           "type": "paragraph",
-          "text": "Les opérations courantes, **césarienne** ou pose d'une prothèse de hanche, comporteraient un risque bien plus élevé. Les antibiotiques sont en effet souvent prescrits après une chirurgie pour prévenir une infection. Sans eux, des interventions qui sauvent ou améliorent des vies deviendraient trop dangereuses pour être pratiquées."
+          "text": "Įprastos operacijos, **cezario pjūvis** ar klubo sąnario protezavimas, būtų kur kas rizikingesnės. Mat antibiotikai dažnai skiriami po operacijos, kad būtų išvengta infekcijos. Be jų gyvybes gelbstinčios ar jų kokybę gerinančios intervencijos taptų per pavojingos, kad jas būtų galima atlikti."
         },
         {
           "type": "takeaway",
-          "text": "L'avenir de la médecine moderne dépend d'une seule chose : garder aux antibiotiques leur efficacité, donc cesser d'en abuser."
+          "text": "Šiuolaikinės medicinos ateitis priklauso nuo vieno dalyko: išsaugoti antibiotikų veiksmingumą, taigi liautis jais piktnaudžiauti."
         }
       ]
     }

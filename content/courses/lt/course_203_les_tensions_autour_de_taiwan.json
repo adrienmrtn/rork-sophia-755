@@ -1,126 +1,126 @@
 {
   "id": "course_203_les_tensions_autour_de_taiwan",
-  "title": "Pourquoi Taïwan est-elle au cœur des tensions mondiales ?",
-  "subtitle": "23 millions d'habitants, une planète dépendante",
+  "title": "Kodėl Taivanas yra pasaulio įtampų centre?",
+  "subtitle": "23 mln. gyventojų ir nuo jų priklausoma planeta",
   "subject": "comprendreLeMonde",
   "subcategory": "Conflits & géopolitique",
-  "description": "Une île de 36 000 km² fabrique la plupart des puces électroniques du monde. Voilà pourquoi **Taïwan** est l'un des points les plus dangereux de la planète.",
+  "description": "36 000 km² sala gamina daugumą pasaulio lustų. Štai kodėl **Taivanas** yra vienas pavojingiausių planetos taškų.",
   "hero": {
     "image": "les_tensions_autour_de_taiwan",
     "ratio": "16:9",
-    "hook": "Une petite île fabrique les puces qui font tourner le monde entier, et Pékin la revendique comme sa province."
+    "hook": "Maža sala gamina lustus, kurie suka visą pasaulį, o Pekinas laiko ją savo provincija."
   },
   "sections": [
     {
       "id": "course_203_les_tensions_autour_de_taiwan_intro",
-      "title": "Introduction",
+      "title": "Įvadas",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Taïwan** est considérée comme l'un des points les plus dangereux du XXIe siècle. Pour la Chine, cette île n'est qu'une province rebelle qui doit un jour « revenir » dans le giron national. Pour ses 23 millions d'habitants, c'est une démocratie souveraine, née d'une guerre civile que le reste du monde a presque oubliée."
+          "text": "**Taivanas** laikomas vienu pavojingiausių XXI a. taškų. Kinijai ši sala tėra maištinga provincija, kuri kada nors turi „sugrįžti“ į tėvynės glėbį. Jos 23 mln. gyventojų tai suvereni demokratija, gimusi per pilietinį karą, kurį likęs pasaulis beveik pamiršo."
         },
         {
           "type": "paragraph",
-          "text": "Au-delà des questions d'identité, Taïwan est devenue le cœur battant de l'économie numérique mondiale. C'est ce qui rend un éventuel conflit armé si effrayant : il ne menacerait pas seulement l'Asie, mais toutes les usines et tous les smartphones de la planète."
+          "text": "Be tapatybės klausimų, Taivanas tapo plakančia pasaulio skaitmeninės ekonomikos širdimi. Todėl galimas ginkluotas konfliktas toks bauginantis: jis grėstų ne tik Azijai, bet ir visoms planetos gamykloms bei išmaniesiems telefonams."
         }
       ]
     },
     {
       "id": "course_203_les_tensions_autour_de_taiwan_p1",
-      "title": "L'héritage de 1949 : la fracture des deux Chines",
+      "title": "1949 m. palikimas: dviejų Kinijų skilimas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Tout part de la **guerre civile chinoise**, qui oppose les communistes de Mao Zedong aux nationalistes du **[[Kuomintangas]]**, menés par Chiang Kai-shek. En 1949, écrasés par la victoire communiste, les nationalistes se réfugient sur l'île de Taïwan, avec les trésors de la Cité interdite et les structures de leur État."
+          "text": "Viskas prasideda nuo **Kinijos pilietinio karo**, kuriame Mao Zedongo komunistai kovoja su nacionalistais, kuriuos veda Chiang Kai-shekas. Jų partija yra **[[Kuomintangas]]**. 1949 m., sutriuškinti komunistų, nacionalistai pasitraukia į Taivano salą, išsiveždami Uždraustojo miesto lobius ir savo valstybės struktūras."
         },
         {
           "type": "image",
           "asset": "chiang_kai_shek_taiwan_1949_nationalists",
           "ratio": "4:3",
-          "caption": "En 1949, les nationalistes du Kuomintang se replient sur l'île de Taïwan après leur défaite face aux communistes."
+          "caption": "1949 m. Kuomintango nacionalistai, pralaimėję komunistams, pasitraukia į Taivano salą."
         },
         {
           "type": "paragraph",
-          "text": "Pendant des décennies, deux gouvernements se disputent le titre de seul représentant légitime de la Chine. La bascule se produit en 1971, quand l'ONU retire son siège à Taipei pour le donner à Pékin. Taïwan se retrouve isolée diplomatiquement, tout en conservant sa monnaie, son armée et un gouvernement élu."
+          "text": "Kelis dešimtmečius dvi vyriausybės ginčijasi, kuri yra vienintelė teisėta Kinijos atstovė. Lūžis įvyksta 1971 m., kai JTO atima vietą iš Taipėjaus ir atiduoda ją Pekinui. Taivanas lieka diplomatinėje izoliacijoje, nors išsaugo savo valiutą, kariuomenę ir renkamą vyriausybę."
         },
         {
           "type": "funFact",
-          "text": "Le Kuomintang a emporté tant d'œuvres d'art en fuyant le continent en 1949 que le musée national du Palais, à Taipei, possède aujourd'hui l'une des plus riches collections d'art chinois au monde."
+          "text": "Bėgdamas iš žemyno 1949 m., Kuomintangas išsivežė tiek meno kūrinių, kad Nacionalinis rūmų muziejus Taipėjuje šiandien turi vieną turtingiausių kinų meno kolekcijų pasaulyje."
         }
       ]
     },
     {
       "id": "course_203_les_tensions_autour_de_taiwan_p2",
-      "title": "Le bouclier de silicium : TSMC et l'enjeu mondial",
+      "title": "Silicio skydas: TSMC ir pasaulinė svarba",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Isolée sur le plan diplomatique, Taïwan opère une métamorphose économique spectaculaire. L'île se spécialise dans la haute technologie, donnant naissance en 1987 à **[[TSMC]]**, devenue le cœur de l'industrie mondiale des semi-conducteurs, avec plus de 90 % des puces les plus avancées."
+          "text": "Diplomatiškai izoliuotas Taivanas patiria įspūdingą ekonominę metamorfozę. Sala specializuojasi aukštųjų technologijų srityje, ir 1987 m. įkuriama **[[TSMC]]**. Ši bendrovė tampa pasaulinės puslaidininkių pramonės širdimi ir gamina daugiau nei 90 % pažangiausių lustų."
         },
         {
           "type": "image",
           "asset": "tsmc_semiconductor_factory_taiwan_chips",
           "ratio": "4:3",
-          "caption": "TSMC fabrique à Taïwan la grande majorité des puces électroniques les plus avancées du monde."
+          "caption": "TSMC Taivane gamina didžiąją dalį pažangiausių pasaulio lustų."
         },
         {
           "type": "paragraph",
-          "text": "Cette suprématie crée un « bouclier de silicium ». Le monde entier dépend tellement des usines taïwanaises qu'une invasion paralyserait les chaînes de production mondiales, de l'intelligence artificielle à l'automobile."
+          "text": "Toks pranašumas sukuria „silicio skydą“. Visas pasaulis taip priklauso nuo Taivano gamyklų, kad invazija paralyžiuotų pasaulines gamybos grandines, nuo dirbtinio intelekto iki automobilių."
         },
         {
           "type": "paragraph",
-          "text": "Cette réussite s'accompagne d'une transition politique majeure. Après des décennies de régime autoritaire, Taïwan devient l'une des démocraties les plus libérales d'Asie. En 1996, ses premières élections au **suffrage universel direct** marquent une rupture avec le modèle chinois."
+          "text": "Šią sėkmę lydi didelis politinis virsmas. Po kelių dešimtmečių autoritarinio režimo Taivanas tampa viena liberaliausių Azijos demokratijų. 1996 m. pirmieji rinkimai, paremti **visuotine tiesiogine rinkimų teise**, reiškia lūžį, atsiribojant nuo kiniško modelio."
         }
       ]
     },
     {
       "id": "course_203_les_tensions_autour_de_taiwan_p3",
-      "title": "L'ambiguïté stratégique américaine",
+      "title": "Amerikos strateginis dviprasmiškumas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La survie de Taïwan repose sur un jeu diplomatique subtil orchestré par Washington. Depuis une loi de 1979, les États-Unis pratiquent l'**[[JAV strateginis dviprasmiškumas]]** : ils reconnaissent officiellement Pékin, mais fournissent à Taïwan les moyens de sa défense, sans jamais dire clairement s'ils interviendraient militairement en cas d'attaque."
+          "text": "Taivano išlikimas priklauso nuo subtilaus diplomatinio žaidimo, kurį režisuoja Vašingtonas. Nuo 1979 m. įstatymo JAV politikos pagrindas yra **[[JAV strateginis dviprasmiškumas]]**: oficialiai jos pripažįsta Pekiną, bet teikia Taivanui priemones gintis ir niekada aiškiai nepasako, ar užpuolimo atveju įsikištų kariškai."
         },
         {
           "type": "paragraph",
-          "text": "Cet équilibre fragile poursuit deux buts : dissuader Pékin d'attaquer par crainte d'une riposte américaine, et dissuader Taipei de déclarer une indépendance officielle qui déclencherait la guerre. Mais cet équilibre est de plus en plus mis à l'épreuve par les incursions répétées d'avions militaires chinois dans la zone de défense aérienne de l'île, la **ZIDA**."
+          "text": "Ši trapi pusiausvyra turi du tikslus: atgrasyti Pekiną nuo puolimo, keliant Amerikos atsako baimę, ir atgrasyti Taipėjų nuo oficialios nepriklausomybės paskelbimo, kuris sukeltų karą. Tačiau pusiausvyrą vis labiau išbando pasikartojantys Kinijos karo lėktuvų įsiveržimai į salos oro gynybos identifikavimo zoną, **ADIZ**."
         },
         {
           "type": "image",
           "asset": "taiwan_china_military_incursions_aircraft",
           "ratio": "16:9",
-          "caption": "Les incursions d'avions militaires chinois dans l'espace aérien taïwanais se sont multipliées ces dernières années."
+          "caption": "Pastaraisiais metais Kinijos karo lėktuvai vis dažniau įsiveržia į Taivano oro erdvę."
         },
         {
           "type": "paragraph",
-          "text": "Les discours de Xi Jinping, affirmant que la question de Taïwan ne peut être transmise indéfiniment aux générations suivantes, inquiètent les observateurs. Les États-Unis, eux, tendent à clarifier peu à peu leur soutien, ce qui augmente le risque d'une confrontation directe entre les deux superpuissances."
+          "text": "Stebėtojus neramina Xi Jinpingo kalbos, kad Taivano klausimo negalima be galo perleisti ateities kartoms. O JAV pamažu vis aiškiau išreiškia savo paramą, ir tai didina tiesioginio dviejų supervalstybių susidūrimo riziką."
         }
       ]
     },
     {
       "id": "course_203_les_tensions_autour_de_taiwan_p4",
-      "title": "Défis contemporains et souveraineté",
+      "title": "Šiuolaikiniai iššūkiai ir suverenitetas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le conflit ne se limite plus aux missiles : il s'étend au cyberespace et à la désinformation. Taïwan subit chaque jour des millions de cyberattaques destinées à déstabiliser sa démocratie. L'enjeu est aussi symbolique : Taïwan prouve qu'un monde chinois peut prospérer sous un régime démocratique."
+          "text": "Konfliktas nebeapsiriboja raketomis: jis persikelia į kibernetinę erdvę ir dezinformaciją. Taivanas kasdien patiria milijonus kibernetinių atakų, kuriomis siekiama destabilizuoti jo demokratiją. Svarbi ir simbolinė pusė: Taivanas įrodo, kad kiniškas pasaulis gali klestėti demokratijoje."
         },
         {
           "type": "paragraph",
-          "text": "La situation est compliquée par l'interdépendance économique : la Chine reste le premier partenaire commercial de l'île, ce qui freine l'escalade. Chez la jeune génération, le sentiment d'appartenir à une nation distincte progresse, tandis que Pékin durcit sa diplomatie depuis l'intégration forcée de Hong Kong."
+          "text": "Padėtį komplikuoja ekonominė tarpusavio priklausomybė: Kinija tebėra didžiausia salos prekybos partnerė, ir tai stabdo eskalaciją. Jaunojoje kartoje stiprėja jausmas, kad jie priklauso atskirai tautai, o Pekinas nuo priverstinės Honkongo integracijos griežtina savo diplomatiją."
         },
         {
           "type": "funFact",
-          "text": "En 2021, après un embargo chinois sur ses produits, Taïwan a lancé la campagne des « ananas de la liberté » : une consommation massive d'ananas locaux qui a transformé le fruit en symbole de résistance."
+          "text": "2021 m., Kinijai paskelbus embargą jo produkcijai, Taivanas pradėjo kampaniją „Laisvės ananasai“: masiškai vartojami vietiniai ananasai pavertė šį vaisių pasipriešinimo simboliu."
         },
         {
           "type": "takeaway",
-          "text": "Taïwan est le plus grand paradoxe géopolitique actuel : un territoire non reconnu par l'ONU, mais devenu indispensable à la survie technologique et économique de toutes les grandes puissances mondiales."
+          "text": "Taivanas yra didžiausias šių dienų geopolitinis paradoksas: JTO nepripažinta teritorija, tapusi būtina visų didžiųjų pasaulio galių technologiniam ir ekonominiam išlikimui."
         }
       ]
     }

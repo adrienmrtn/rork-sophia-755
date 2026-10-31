@@ -1,129 +1,129 @@
 {
   "id": "course_142_charlie_chaplin_et_le_cinema_muet",
-  "title": "Charlie Chaplin et le cinéma muet",
+  "title": "Charlie Chaplinas ir nebylusis kinas",
   "subtitle": "1889-1977",
   "subject": "art",
   "subcategory": "Cinéma, photo & architecture",
-  "description": "**Charlie Chaplin** invente Charlot, un vagabond au chapeau melon, et devient la première star mondiale du cinéma. Du muet au parlant, il transforme le rire en art.",
+  "description": "**Charlie Chaplinas** sukuria Valkatą, vargšą su katiliuku, ir tampa pirmąja pasauline kino žvaigžde. Nuo nebyliojo iki garsinio kino jis paverčia juoką menu.",
   "hero": {
     "image": "charlie_chaplin_et_le_cinema_muet",
     "ratio": "16:9",
-    "hook": "Avant la radio et la télé, un vagabond muet faisait rire la planète entière."
+    "hook": "Dar prieš radiją ir televiziją nebylus valkata juokino visą planetą."
   },
   "sections": [
     {
       "id": "course_142_charlie_chaplin_et_le_cinema_muet_intro",
-      "title": "Introduction",
+      "title": "Įžanga",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Charlie Chaplin** (1889-1977) est la première vraie célébrité mondiale. À une époque de misère industrielle, son personnage de **Charlot**, un vagabond digne et maladroit, offre un visage d'humanité. Sans parler, il fait rire et pleurer à Tokyo, Paris ou New York."
+          "text": "**Charlie Chaplinas** (1889-1977) yra pirmoji tikra pasaulinė įžymybė. Pramoninio skurdo laikais jo personažas **Valkata**, orus ir nerangus klajūnas, suteikia žmogiškumui veidą. Netaręs nė žodžio, jis prajuokina ir pravirkdo Tokijuje, Paryžiuje ar Niujorke."
         },
         {
           "type": "paragraph",
-          "text": "Ce cours suit sa trajectoire : des origines du cinéma aux chefs-d'œuvre du muet, puis à l'exil forcé. Chaplin n'est pas seulement un clown. Il est un auteur total."
+          "text": "Šis kursas seka jo kelią: nuo kino pradžios iki nebyliojo kino šedevrų ir priverstinės tremties. Chaplinas yra ne tik klounas. Jis yra visapusis autorius."
         }
       ]
     },
     {
       "id": "course_142_charlie_chaplin_et_le_cinema_muet_p1",
-      "title": "Du Cinématographe à Hollywood",
+      "title": "Nuo kinematografo iki Holivudo",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le cinéma naît d'une invention française : le [[Kinematografas]] des [[Broliai Lumière'ai ir ankstyvasis kinas]], breveté en **1895**. Le **28 décembre 1895**, au Grand Café de Paris, a lieu la première projection publique payante. Les premiers films sont de courts documents : une sortie d'usine, un train en gare."
+          "text": "Kinas gimsta iš prancūziško išradimo. Tai [[Kinematografas]], o jo autoriai, [[Broliai Lumière'ai ir ankstyvasis kinas]], užpatentuoja jį **1895** m. **1895 m. gruodžio 28 d.** Paryžiaus „Grand Café“ įvyksta pirmasis viešas mokamas seansas. Pirmieji filmai yra trumpi dokumentiniai kadrai: darbininkai išeina iš gamyklos, traukinys atvyksta į stotį."
         },
         {
           "type": "image",
           "asset": "lumiere_brothers_first_cinema_projection_paris_1895",
           "ratio": "4:3",
-          "caption": "1895 : le cinéma devient un spectacle collectif à Paris."
+          "caption": "1895 m.: Paryžiuje kinas tampa bendru reginiu."
         },
         {
           "type": "paragraph",
-          "text": "Très vite, [[Georges'as Méliès]], illusionniste français, invente la fiction et les trucages. Puis l'industrie se structure aux États-Unis. **Hollywood** devient la capitale du rêve, avec ses studios qui produisent des films à la chaîne. C'est dans cette usine que Chaplin va s'imposer."
+          "text": "Labai greitai prancūzų iliuzionistas [[Georges'as Méliès]] išranda vaidybinį kiną ir specialiuosius efektus. Vėliau kino pramonė susiformuoja JAV. **Holivudas** tampa svajonių sostine, o jo studijos filmus gamina tarsi konvejeriu. Būtent šioje gamykloje įsitvirtins Chaplinas."
         }
       ]
     },
     {
       "id": "course_142_charlie_chaplin_et_le_cinema_muet_p2",
-      "title": "Charlot, l'outsider universel",
+      "title": "Valkata, visuotinis atstumtasis",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Né dans la pauvreté à Londres en **1889**, Charles Spencer Chaplin grandit entre cabarets et maisons pour indigents. Formé au [[mjuzikholas]], il arrive à Hollywood. En **1914**, il invente presque par hasard le costume de **Charlot** : chapeau melon trop petit, pantalon trop large, canne et moustache."
+          "text": "Gimęs skurde Londone **1889** m., Charlesas Spenceris Chaplinas auga tarp kabaretų ir vargšų prieglaudų. Jį išugdo [[mjuzikholas]], o vėliau jis atvyksta į Holivudą. **1914** m. jis beveik atsitiktinai sukuria **Valkatos** kostiumą: per mažas katiliukas, per plačios kelnės, lazdelė ir ūsiukai."
         },
         {
           "type": "image",
           "asset": "charlie_chaplin_tramp_bowler_hat_cane",
           "ratio": "4:3",
-          "caption": "Charlot : un gentleman sans le sou, reconnaissable en une silhouette."
+          "caption": "Valkata: džentelmenas be skatiko, atpažįstamas vien iš silueto."
         },
         {
           "type": "funFact",
-          "text": "Chaplin a composé le costume en quelques minutes dans un vestiaire de studio, en empruntant des habits trop grands et trop petits aux autres acteurs."
+          "text": "Chaplinas kostiumą susidėliojo per kelias minutes studijos persirengimo kambaryje, pasiskolinęs iš kitų aktorių per didelių ir per mažų drabužių."
         },
         {
           "type": "paragraph",
-          "text": "Charlot n'est pas seulement drôle. Il symbolise l'homme qui s'accroche à sa dignité malgré la misère. Chaplin utilise le [[Slapstikas]], la comédie de chutes et de coups, mais il y ajoute une émotion rare : la tendresse."
+          "text": "Valkata nėra tik juokingas. Jis simbolizuoja žmogų, kuris nepaisydamas skurdo laikosi savo orumo. Chaplino įrankis yra [[Slapstikas]], griuvimų ir smūgių komedija, bet jis prideda retą emociją: švelnumą."
         }
       ]
     },
     {
       "id": "course_142_charlie_chaplin_et_le_cinema_muet_p3",
-      "title": "Résister au parlant, affronter les dictateurs",
+      "title": "Atsispirti garsui, stoti prieš diktatorius",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En **1927**, le cinéma sonore arrive avec *Le Chanteur de jazz*. Chaplin, cofondateur de [[United Artists]], résiste. Donner une voix à Charlot, c'est casser son universalité. Il continue donc en muet avec *Les Lumières de la ville* (**1931**)."
+          "text": "**1927** m. su filmu *Džiazo dainininkas* ateina garsinis kinas. Chaplinas, vienas iš [[United Artists]] įkūrėjų, priešinasi. Suteikti Valkatai balsą reikštų sugriauti jo universalumą. Todėl jis toliau kuria nebylųjį kiną: *Didmiesčio žiburiai* (**1931**)."
         },
         {
           "type": "paragraph",
-          "text": "Puis l'histoire le rattrape. En **1940**, il réalise *Le Dictateur*, une satire d'**Adolf Hitler**. C'est son premier film entièrement parlant, tourné alors que les États-Unis restent encore prudents face au nazisme. Le clown devient un artiste engagé."
+          "text": "Tada jį pasiveja istorija. **1940** m. jis sukuria *Didįjį diktatorių*, **Adolfo Hitlerio** satyrą. Tai pirmasis jo visiškai garsinis filmas, sukurtas tuo metu, kai JAV dar atsargiai vertina nacizmą. Klounas tampa angažuotu menininku."
         }
       ]
     },
     {
       "id": "course_142_charlie_chaplin_et_le_cinema_muet_p4",
-      "title": "L'exil et l'héritage d'un auteur",
+      "title": "Tremtis ir autoriaus palikimas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Après 1945, la [[Šaltasis karas]] et le [[makartizmas]] s'installent. Soupçonné d'idées de gauche, Chaplin est surveillé. En **1952**, alors qu'il part en Europe, les États-Unis lui interdisent le retour. Il s'installe à [[Vevey]], en Suisse, pour le reste de sa vie."
+          "text": "Po 1945 m. įsigali [[Šaltasis karas]] ir [[makartizmas]]. Įtariamas kairiosiomis pažiūromis, Chaplinas sekamas. **1952** m., jam išvykus į Europą, JAV uždraudžia jam grįžti. Jis apsigyvena Šveicarijoje, o jo namai iki gyvenimo pabaigos yra [[Vevey]]."
         },
         {
           "type": "timeline",
           "events": [
             {
               "date": "1895",
-              "title": "Naissance du cinéma",
-              "detail": "Première projection publique des frères Lumière."
+              "title": "Kino gimimas",
+              "detail": "Pirmasis viešas brolių Lumière'ų seansas."
             },
             {
               "date": "1914",
-              "title": "Naissance de Charlot",
-              "detail": "Chaplin invente son costume légendaire."
+              "title": "Gimsta Valkata",
+              "detail": "Chaplinas sukuria legendinį savo kostiumą."
             },
             {
               "date": "1940",
-              "title": "Le Dictateur",
-              "detail": "Premier film parlant de Chaplin, satire d'Hitler."
+              "title": "Didysis diktatorius",
+              "detail": "Pirmasis garsinis Chaplino filmas, Hitlerio satyra."
             },
             {
               "date": "1952",
-              "title": "Exil forcé",
-              "detail": "Interdit de séjour aux États-Unis, il part en Suisse."
+              "title": "Priverstinė tremtis",
+              "detail": "Uždraudus grįžti į JAV, jis išvyksta į Šveicariją."
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "Chaplin a inventé une langue muette universelle. Auteur complet (acteur, réalisateur, compositeur), il a prouvé que le cinéma populaire pouvait aussi être un art politique et émotionnel."
+          "text": "Chaplinas sukūrė universalią nebylią kalbą. Visapusis autorius (aktorius, režisierius, kompozitorius), jis įrodė, kad populiarusis kinas gali būti ir politinis, ir jausmingas menas."
         }
       ]
     }

@@ -1,111 +1,111 @@
 {
   "id": "course_191_enee_et_la_fondation_de_rome_virgile",
-  "title": "Énée et la fondation de Rome (Virgile)",
-  "subtitle": "L'Énéide",
+  "title": "Enėjas ir Romos įkūrimas (Vergilijus)",
+  "subtitle": "Eneida",
   "subject": "mythologie",
   "subcategory": "Autres mythologies",
-  "description": "Dans l'Énéide, Virgile raconte comment Énée, prince rescapé de Troie, traverse la Méditerranée pour fonder la lignée de Rome.",
+  "description": "Poemoje „Eneida“ Vergilijus pasakoja, kaip iš Trojos išsigelbėjęs princas Enėjas perplaukia Viduržemio jūrą ir pradeda giminę, iš kurios kils Roma.",
   "hero": {
     "image": "enee_et_la_fondation_de_rome",
     "ratio": "16:9",
-    "hook": "Un Troyen en fuite porte son père sur les épaules : Rome naît de cet exil."
+    "hook": "Bėgantis trojėnas neša tėvą ant pečių: iš šios tremties gimsta Roma."
   },
   "sections": [
     {
       "id": "course_191_enee_et_la_fondation_de_rome_virgile_intro",
-      "title": "Introduction",
+      "title": "Įvadas",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L'**Énéide** est le grand poème de **Virgile**. Elle raconte l'odyssée d'**Énée**, prince troyen rescapé de la chute de Troie. Guidé par les dieux, il traverse la Méditerranée pour fonder, en Italie, la lignée qui mènera à Rome."
+          "text": "**Eneida** yra didžioji **Vergilijaus** poema. Ji pasakoja apie **Enėjo**, iš žlugusios Trojos išsigelbėjusio Trojos princo, klajones. Dievų vedamas, jis perplaukia Viduržemio jūrą, kad Italijoje pradėtų giminę, iš kurios kils Roma."
         },
         {
           "type": "paragraph",
-          "text": "Ce n'est pas seulement une aventure. C'est le mythe de naissance de la puissance romaine, écrit pour donner à Rome un passé digne d'Homère."
+          "text": "Tai ne vien nuotykis. Tai Romos galybės gimimo mitas, parašytas tam, kad Roma turėtų Homero vertą praeitį."
         }
       ]
     },
     {
       "id": "course_191_enee_et_la_fondation_de_rome_virgile_p1",
-      "title": "Virgile écrit pour Auguste",
+      "title": "Vergilijus rašo Augustui",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "À la fin du Ier siècle avant J.-C., après des guerres civiles, l'empereur **Auguste** veut stabiliser son pouvoir. Il commande à Virgile une épopée digne d'Homère. L'œuvre sert aussi [[Augusto propaganda]] : relier le prince à un héros divin."
+          "text": "I a. pr. Kr. pabaigoje, po pilietinių karų, imperatorius **Augustas** nori įtvirtinti savo valdžią. Jis užsako Vergilijui Homero vertą epą. Kūrinys kartu yra ir [[Augusto propaganda]]: jis sieja valdovą su dievišku herojumi."
         },
         {
           "type": "image",
           "asset": "dido_aeneas_carthage_painting",
           "ratio": "4:3",
-          "caption": "Virgile, poète de l'Énéide, chantre d'une Rome voulue par le destin."
+          "caption": "Vergilijus, „Eneidos“ poetas, likimo lemtos Romos dainius."
         },
         {
           "type": "paragraph",
-          "text": "Virgile y travaille onze ans (29-19 av. J.-C.). Les six premiers chants suivent l'errance en mer. Les six suivants racontent la guerre en Italie. Il écrit en [[daktiliniai hegzametrai]], le vers des grandes épopées antiques."
+          "text": "Vergilijus prie jo dirba vienuolika metų (29-19 m. pr. Kr.). Pirmosios šešios giesmės pasakoja apie klajones jūroje. Kitos šešios pasakoja apie karą Italijoje. Jo eilėdara yra [[daktiliniai hegzametrai]], didžiųjų antikos epų eilutė."
         },
         {
           "type": "funFact",
-          "text": "Virgile meurt en **19** avant J.-C. et demande qu'on brûle le manuscrit, jugé inachevé. Auguste interdit d'obéir. L'épopée nationale de Rome paraît contre la volonté de son auteur."
+          "text": "Vergilijus miršta **19** m. pr. Kr. ir prašo sudeginti rankraštį, kurį laiko nebaigtu. Augustas uždraudžia paklusti. Nacionalinis Romos epas išleidžiamas prieš autoriaus valią."
         }
       ]
     },
     {
       "id": "course_191_enee_et_la_fondation_de_rome_virgile_p2",
-      "title": "Fuite de Troie et amour à Carthage",
+      "title": "Bėgimas iš Trojos ir meilė Kartaginoje",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Alors que Troie brûle, à la fin de la [[Trojos karas]], Énée, fils de la déesse **Vénus** et du mortel Anchise, reçoit l'ordre de fuir. Il part en portant son père sur les épaules, son fils Ascagne à la main, et emporte les [[Penatai]], dieux du foyer. Ce geste définit la [[romėnų pietas]] : le devoir envers famille, dieux et destin."
+          "text": "Baigiasi [[Trojos karas]], Troja dega, ir Enėjas, deivės **Veneros** ir mirtingojo Anchizo sūnus, gauna įsakymą bėgti. Jis išeina nešdamas tėvą ant pečių ir vesdamas už rankos sūnų Askanijų. Su juo keliauja ir [[Penatai]], namų židinio dievai. Toks poelgis ir yra [[romėnų pietas]]: pareiga šeimai, dievams ir likimui."
         },
         {
           "type": "image",
           "asset": "aeneas_fleeing_burning_troy_anchises_painting",
           "ratio": "4:3",
-          "caption": "Énée fuit Troie en flammes, père et fils avec lui."
+          "caption": "Enėjas bėga iš liepsnojančios Trojos su tėvu ir sūnumi."
         },
         {
           "type": "paragraph",
-          "text": "À Carthage, il aime la reine **Didon**. Mais [[Jupiteris]], roi des dieux romains, le rappelle à sa mission. Énée repart. Didon se suicide et maudit sa lignée : le mythe explique ainsi la haine future entre Rome et Carthage, avant les [[Pūnų karai]]."
+          "text": "Kartaginoje jis pamilsta karalienę **Didoną**. Bet romėnų dievų karalius [[Jupiteris]] primena jam jo misiją. Enėjas išplaukia. Didona nusižudo ir prakeikia jo giminę: taip mitas paaiškina būsimą Romos ir Kartaginos neapykantą, kol dar neprasidėjo [[Pūnų karai]]."
         },
         {
           "type": "funFact",
-          "text": "Le fils d'Énée, Ascagne, s'appelle aussi Iule. La famille des [[Julijai]], dont Jules César et Auguste, revendique cette origine divine via Vénus."
+          "text": "Enėjo sūnus Askanijus dar vadinamas Julu. Giminė [[Julijai]], kuriai priklauso Julijus Cezaris ir Augustas, per Venerą kildina save iš dievų."
         }
       ]
     },
     {
       "id": "course_191_enee_et_la_fondation_de_rome_virgile_p3",
-      "title": "La guerre dans le Latium",
+      "title": "Karas Lacijuje",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Après une descente aux Enfers, Énée débarque dans le **Latium**, en Italie centrale. Le roi **Latinus** lui promet sa fille **Lavinia**. Mais le prince **Turnus**, soutenu par [[Junona]], déesse hostile aux Troyens, déclenche la guerre."
+          "text": "Nusileidęs į požemių pasaulį, Enėjas išsilaipina **Lacijuje**, Vidurio Italijoje. Karalius **Latinas** pažada jam savo dukterį **Laviniją**. Bet princą **Turną** remia [[Junona]], trojėnams priešiška deivė, ir jis pradeda karą."
         },
         {
           "type": "paragraph",
-          "text": "Énée vainc Turnus et fonde **Lavinium**. Plus tard, son fils fondera [[Alba Longa]], d'où naîtront Romulus et Rémus. Le mythe relie ainsi Troie à Rome en une seule chaîne."
+          "text": "Enėjas nugali Turną ir įkuria **Lavinijų**. Vėliau jo sūnus įkurs miestą, kurio vardas [[Alba Longa]], ir iš ten kils Romulas ir Remas. Taip mitas sujungia Troją ir Romą į vieną grandinę."
         },
         {
           "type": "timeline",
           "events": [
             {
-              "date": "Troie",
-              "title": "Fuite d'Énée",
-              "detail": "Il sauve père, fils et dieux du foyer."
+              "date": "Troja",
+              "title": "Enėjo bėgimas",
+              "detail": "Jis išgelbsti tėvą, sūnų ir namų dievus."
             },
             {
-              "date": "Carthage",
-              "title": "Didon",
-              "detail": "Amour brisé, malédiction contre Rome."
+              "date": "Kartagina",
+              "title": "Didona",
+              "detail": "Sudužusi meilė, prakeiksmas Romai."
             },
             {
-              "date": "Latium",
-              "title": "Victoire sur Turnus",
-              "detail": "Fondation de Lavinium, amorce de Rome."
+              "date": "Lacijus",
+              "title": "Pergalė prieš Turną",
+              "detail": "Lavinijaus įkūrimas, Romos užuomazga."
             }
           ]
         }
@@ -113,16 +113,16 @@
     },
     {
       "id": "course_191_enee_et_la_fondation_de_rome_virgile_p4",
-      "title": "Un héros du devoir",
+      "title": "Pareigos herojus",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Au Moyen Âge, Virgile devient un sage presque prophétique. Dante en fait son guide dans la [[Dieviškoji komedija]]. Mais Énée n'est pas un héros joyeux : il porte le poids du destin. Rome naît d'un exil, d'un amour sacrifié et d'une guerre."
+          "text": "Viduramžiais Vergilijus tampa beveik pranašišku išminčiumi. Dantė jį paverčia savo vedliu poemoje, kurios vardas [[Dieviškoji komedija]]. Tačiau Enėjas nėra linksmas herojus: jis neša likimo naštą. Roma gimsta iš tremties, paaukotos meilės ir karo."
         },
         {
           "type": "takeaway",
-          "text": "Dans l'**Énéide**, Virgile fait d'**Énée**, rescapé de Troie, l'ancêtre mythique de Rome. Le héros incarne la **pietas** : devoir avant désir, destin avant bonheur personnel."
+          "text": "**Eneidoje** Vergilijus iš Trojos išsigelbėjusį **Enėją** paverčia mitiniu Romos protėviu. Herojus įkūnija **pietas**: pareiga svarbiau už troškimą, likimas svarbiau už asmeninę laimę."
         }
       ]
     }

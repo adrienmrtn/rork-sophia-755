@@ -1,100 +1,100 @@
 {
   "id": "course_49_pourquoi_a_t_on_des_frissons",
-  "title": "Pourquoi a-t-on des frissons ?",
-  "subtitle": "Corps & émotions",
+  "title": "Kodėl mus krečia šiurpuliai?",
+  "subtitle": "Kūnas ir emocijos",
   "subject": "sciences",
   "subcategory": "Notre quotidien expliqué",
-  "description": "Froid, peur, musique : les frissons ont plusieurs causes. Elles passent toutes par le système nerveux, mais pas pour les mêmes raisons.",
+  "description": "Šaltis, baimė, muzika: šiurpulių priežasčių yra kelios. Visi jie kyla per nervų sistemą, bet dėl skirtingų priežasčių.",
   "hero": {
     "image": "pourquoi_a_t_on_des_frissons",
     "ratio": "16:9",
-    "hook": "Un frisson de froid et un frisson de musique ne racontent pas la même histoire."
+    "hook": "Šiurpulys nuo šalčio ir šiurpulys nuo muzikos pasakoja skirtingas istorijas."
   },
   "sections": [
     {
       "id": "course_49_pourquoi_a_t_on_des_frissons_intro",
-      "title": "Introduction",
+      "title": "Įvadas",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Tu frissonnes en sortant sous la pluie. Tu frissonnes aussi en entendant une chanson qui te bouleverse. Même mot, mécanismes différents."
+          "text": "Išėjus į lietų tave nukrečia šiurpas. Šiurpas nukrečia ir išgirdus dainą, kuri tave sujaudina. Žodis tas pats, mechanizmai skirtingi."
         },
         {
           "type": "paragraph",
-          "text": "Dans les deux cas, le corps réagit vite. Mais l'un sert surtout à se réchauffer, l'autre touche plutôt au plaisir et aux émotions."
+          "text": "Abiem atvejais kūnas reaguoja greitai. Tačiau vienas šiurpulys pirmiausia padeda sušilti, o kitas labiau susijęs su malonumu ir emocijomis."
         }
       ]
     },
     {
       "id": "course_49_pourquoi_a_t_on_des_frissons_p1",
-      "title": "Le frisson du froid : une mini-chaudière",
+      "title": "Šiurpulys nuo šalčio: mažas katilas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le corps veut rester autour de **37 °C**. Quand la peau détecte le froid, elle prévient une zone du cerveau, l'**hypothalamus**, qui agit comme un thermostat."
+          "text": "Kūnas stengiasi išlaikyti apie **37 °C** temperatūrą. Kai oda pajunta šaltį, ji praneša smegenų sričiai, vadinamai **pagumburiu**, kuri veikia kaip termostatas."
         },
         {
           "type": "image",
           "asset": "goosebumps_cold_skin",
           "ratio": "4:3",
-          "caption": "La chair de poule : un vieux réflexe pour hérisser les poils."
+          "caption": "Žąsies oda: senas refleksas pastatyti plaukelius."
         },
         {
           "type": "paragraph",
-          "text": "Les muscles se contractent très vite et de façon répétée : c'est le frisson. Ces contractions produisent de la chaleur. La « chair de poule » vient d'un vieux réflexe : hérisser les poils pour mieux isoler. Chez nous, avec peu de fourrure, cela sert surtout de vestige."
+          "text": "Raumenys susitraukinėja labai greitai ir pakartotinai: tai ir yra drebulys. Šie susitraukimai gamina šilumą. „Žąsies oda“ kilusi iš seno reflekso: pastatyti plaukelius, kad geriau izoliuotų. Mums, turintiems mažai kailio, tai daugiausia tik liekana."
         }
       ]
     },
     {
       "id": "course_49_pourquoi_a_t_on_des_frissons_p2",
-      "title": "Le frisson de la peur",
+      "title": "Baimės šiurpulys",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Face à une menace, le [[simpatinė nervų sistema]] (la branche « alerte » du système nerveux) se met en marche. Il libère de l'**adrénaline**. Les muscles se tendent, le cœur s'accélère, la peau peut frissonner."
+          "text": "Iškilus grėsmei, įsijungia [[simpatinė nervų sistema]] (nervų sistemos „pavojaus“ šaka). Ji išskiria **adrenaliną**. Raumenys įsitempia, širdis plaka greičiau, odą gali nukrėsti šiurpas."
         },
         {
           "type": "image",
           "asset": "adrenaline_stress_response_body",
           "ratio": "4:3",
-          "caption": "L'adrénaline prépare le corps à réagir vite."
+          "caption": "Adrenalinas paruošia kūną greitai reaguoti."
         },
         {
           "type": "funFact",
-          "text": "Ce même système explique pourquoi tu peux avoir la chair de poule en regardant un film d'horreur… alors que tu es bien au chaud sur ton canapé."
+          "text": "Ta pati sistema paaiškina, kodėl žiūrint siaubo filmą gali pašiurpti oda… nors sėdi šiltai ant savo sofos."
         }
       ]
     },
     {
       "id": "course_49_pourquoi_a_t_on_des_frissons_p3",
-      "title": "Le frisson de la musique",
+      "title": "Muzikos šiurpulys",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Certains frissons, appelés parfois « chills », arrivent avec une émotion forte : musique, discours, film. Ils activent le circuit de la **récompense** du cerveau, avec de la **dopamine**, une substance liée au plaisir."
+          "text": "Kai kurie šiurpuliai, kartais vadinami angliškai „chills“, atsiranda kartu su stipria emocija: muzika, kalba, filmu. Jie suaktyvina smegenų **atlygio** grandinę, išsiskiria **dopaminas**, su malonumu susijusi medžiaga."
         },
         {
           "type": "paragraph",
-          "text": "Ce n'est pas utile pour survivre immédiatement. C'est plutôt le corps qui réagit à une émotion intense, comme une vague qui passe."
+          "text": "Tai nepadeda išgyventi čia ir dabar. Greičiau tai kūnas, reaguojantis į stiprią emociją, tarsi pro šalį praeinanti banga."
         }
       ]
     },
     {
       "id": "course_49_pourquoi_a_t_on_des_frissons_p4",
-      "title": "Quand s'inquiéter ?",
+      "title": "Kada verta sunerimti?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Des frissons avec forte fièvre peuvent signaler une infection. Des frissons constants sans raison claire méritent un avis médical. Mais la plupart du temps, un frisson de froid, de stress ou de musique est simplement le corps qui fait son travail."
+          "text": "Šiurpuliai su aukšta temperatūra gali signalizuoti infekciją. Nuolatiniai šiurpuliai be aiškios priežasties yra rimta priežastis pasitarti su gydytoju. Tačiau dažniausiai šiurpulys nuo šalčio, streso ar muzikos tėra kūnas, atliekantis savo darbą."
         },
         {
           "type": "takeaway",
-          "text": "Les frissons de froid produisent de la chaleur. Ceux de la peur préparent à réagir. Ceux de la musique touchent au plaisir émotionnel. Même sensation, causes différentes."
+          "text": "Šiurpuliai nuo šalčio gamina šilumą. Baimės šiurpuliai paruošia reaguoti. Muzikos šiurpuliai susiję su emociniu malonumu. Pojūtis tas pats, priežastys skirtingos."
         }
       ]
     }

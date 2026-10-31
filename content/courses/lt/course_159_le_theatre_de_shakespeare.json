@@ -1,120 +1,120 @@
 {
   "id": "course_159_le_theatre_de_shakespeare",
-  "title": "Pourquoi joue-t-on encore Shakespeare partout ?",
+  "title": "Kodėl Shakespeare'as iki šiol vaidinamas visur?",
   "subtitle": "1564-1616",
   "subject": "art",
   "subcategory": "Cinéma, photo & architecture + œuvres iconiques",
-  "description": "À Londres, Shakespeare écrit pour le Globe. Hamlet, Macbeth, Roméo : un théâtre populaire devenu sommet de la langue anglaise.",
+  "description": "Londone Shakespeare'as rašo „Globe“ teatrui. Hamletas, Makbetas, Romeo: liaudies teatras, tapęs anglų kalbos viršūne.",
   "hero": {
     "image": "le_theatre_de_shakespeare",
     "ratio": "16:9",
-    "hook": "Un dramaturge d'acteur, un théâtre sans décors… et des répliques éternelles."
+    "hook": "Aktorių dramaturgas, teatras be dekoracijų… ir amžinos replikos."
   },
   "sections": [
     {
       "id": "course_159_le_theatre_de_shakespeare_intro",
-      "title": "Introduction",
+      "title": "Įvadas",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**William Shakespeare** (1564-1616) écrit pour la scène londonienne, non pour l'école. Ses pièces mêlent rois, clowns, amoureux et assassins."
+          "text": "**Williamas Shakespeare'as** (1564-1616) rašo Londono scenai, o ne mokyklai. Jo pjesėse susitinka karaliai, juokdariai, įsimylėjėliai ir žudikai."
         },
         {
           "type": "paragraph",
-          "text": "Quatre siècles plus tard, on le joue encore partout."
+          "text": "Po keturių šimtmečių jis vis dar vaidinamas visur."
         }
       ]
     },
     {
       "id": "course_159_le_theatre_de_shakespeare_p1",
-      "title": "Le Globe et les groundlings",
+      "title": "„Globe“ teatras ir groundlings",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Avec la troupe des [[Lord Chamberlain's Men]], il joue au [[Globe teatras]], cercle à ciel ouvert. Les [[groundlings]] paient peu et restent debout, près de la scène. Le théâtre est populaire, bruyant, vivant."
+          "text": "Su trupe [[Lord Chamberlain's Men]] jis vaidina pastate, kuris vadinasi [[Globe teatras]]: tai atviras apskritas teatras. Žiūrovai [[groundlings]] moka mažai ir stovi prie pat scenos. Teatras liaudiškas, triukšmingas, gyvas."
         },
         {
           "type": "paragraph",
-          "text": "Londres élisabéthaine aime le spectacle. Les théâtres concurrencent les sermons et les combats d'ours. Shakespeare écrit dans ce marché bruyant, pas dans une tour d'ivoire."
+          "text": "Elžbietos laikų Londonas mėgsta reginius. Teatrai varžosi su pamokslais ir lokių kautynėmis. Shakespeare'as rašo šioje triukšmingoje rinkoje, o ne dramblio kaulo bokšte."
         },
         {
           "type": "image",
           "asset": "globe_theatre_london_reconstruction",
           "ratio": "4:3",
-          "caption": "Le Globe : la scène poussée dans la foule."
+          "caption": "„Globe“: scena, įsiterpusi į minią."
         }
       ]
     },
     {
       "id": "course_159_le_theatre_de_shakespeare_p2",
-      "title": "Une langue neuve",
+      "title": "Nauja kalba",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Il écrit souvent en vers blanc (blank verse) shakespearien : pentamètre iambique sans rime. Insultes, poèmes, monologues : il invente des mots et fixe des caractères (Hamlet, Lady Macbeth) devenus mythes."
+          "text": "Jis dažnai rašo Shakespeare'o baltąja eile (blank verse): jambiniu penkiapėdžiu be rimo. Įžeidimai, eilėraščiai, monologai: jis kuria naujus žodžius ir nulipdo charakterius (Hamletas, ledi Makbet), tapusius mitais."
         },
         {
           "type": "paragraph",
-          "text": "Il recycle chroniques, nouvelles italiennes, pièces anciennes. L'originalité est dans le langage et les caractères, pas dans l'invention pure de l'intrigue."
+          "text": "Jis perdirba kronikas, italų noveles, senas pjeses. Originalumas slypi kalboje ir charakteriuose, o ne grynai išgalvotame siužete."
         },
         {
           "type": "funFact",
-          "text": "Plusieurs de ses pièces ne nous sont parvenues que grâce au [[First Folio]] de 1623, publié après sa mort."
+          "text": "Kai kurias jo pjeses turime tik todėl, kad po jo mirties, 1623 m., buvo išleistas [[First Folio]]."
         }
       ]
     },
     {
       "id": "course_159_le_theatre_de_shakespeare_p3",
-      "title": "Tragédies, comédies, histoires",
+      "title": "Tragedijos, komedijos, kronikos",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Il passe du rire au sang. *Roméo et Juliette*, *Othello*, *Le Roi Lear* : familles, pouvoir, jalousie. Les « history plays » rejouent l'Angleterre pour un public qui aime se voir en épopée."
+          "text": "Jis pereina nuo juoko prie kraujo. *Romeo ir Džiuljeta*, *Otelas*, *Karalius Lyras*: šeimos, valdžia, pavydas. Kronikos („history plays“) iš naujo suvaidina Anglijos istoriją publikai, kuri mėgsta save matyti epe."
         },
         {
           "type": "paragraph",
-          "text": "Comédies et tragédies se répondent. Le fou dit la vérité ; le roi devient fou. Cette porosité des tons explique qu'on puisse encore le monter de mille façons."
+          "text": "Komedijos ir tragedijos atliepia viena kitą. Juokdarys sako tiesą, karalius išprotėja. Dėl šio tonų pralaidumo jį ir šiandien galima statyti tūkstančiais būdų."
         },
         {
           "type": "image",
           "asset": "shakespeare_first_folio_1623",
           "ratio": "4:3",
-          "caption": "Le First Folio : sauver les textes de l'oubli."
+          "caption": "First Folio: tekstai, išgelbėti nuo užmaršties."
         }
       ]
     },
     {
       "id": "course_159_le_theatre_de_shakespeare_p4",
-      "title": "Héritage",
+      "title": "Palikimas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Traduit, adapté, samplé par le cinéma et le rap, Shakespeare reste une boîte à outils pour dire l'ambition et le désir. Son secret : écrire pour des acteurs, devant une foule."
+          "text": "Verčiamas, adaptuojamas, kino ir repo semplinamas Shakespeare'as lieka įrankių dėžė kalbėti apie ambicijas ir geismą. Jo paslaptis: rašyti aktoriams, prieš minią."
         },
         {
           "type": "paragraph",
-          "text": "Pour bien saisir Le théâtre de Shakespeare, il faut garder une chose en tête : chaque détail technique sert une émotion ou une idée. L'œuvre n'est jamais seulement décorative."
+          "text": "Norint gerai suprasti Shakespeare'o teatrą, verta atsiminti vieną dalyką: kiekviena techninė detalė tarnauja jausmui ar idėjai. Kūrinys niekada nėra vien dekoratyvus."
         },
         {
           "type": "paragraph",
-          "text": "Le contexte compte autant que le style. Dates, lieux, commanditaires, public : tout cela explique pourquoi une forme apparaît à un moment précis, et pas avant."
+          "text": "Kontekstas svarbus ne mažiau nei stilius. Datos, vietos, užsakovai, publika: visa tai paaiškina, kodėl tam tikra forma atsiranda būtent tuo metu, o ne anksčiau."
         },
         {
           "type": "paragraph",
-          "text": "Enfin, l'héritage se mesure dans le temps long. Ce que nous voyons aujourd'hui dans les musées, les films ou la musique populaire porte encore la trace de ces inventions."
+          "text": "Galiausiai palikimas matuojamas ilguoju laiku. Tai, ką šiandien matome muziejuose, filmuose ar populiariojoje muzikoje, vis dar neša šių išradimų pėdsakus."
         },
         {
           "type": "paragraph",
-          "text": "Traduit dès le XVIIIe siècle en France et ailleurs, il devient un classique mondial. Chaque époque trouve en lui son miroir : romantique, politique, postcolonial, féministe."
+          "text": "Nuo XVIII a. verčiamas Prancūzijoje ir kitur, jis tampa pasauline klasika. Kiekviena epocha randa jame savo veidrodį: romantinį, politinį, postkolonijinį, feministinį."
         },
         {
           "type": "takeaway",
-          "text": "Au Globe, Shakespeare a inventé un théâtre populaire dont les caractères et la langue ont conquis le monde."
+          "text": "„Globe“ teatre Shakespeare'as sukūrė liaudies teatrą, kurio charakteriai ir kalba užkariavo pasaulį."
         }
       ]
     }

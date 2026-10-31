@@ -1,102 +1,102 @@
 {
   "id": "course_219_la_fracture_numerique_mondiale",
-  "title": "Pourquoi un tiers de l'humanité vit-il encore sans Internet ?",
-  "subtitle": "Un tiers de l'humanité hors ligne",
+  "title": "Kodėl trečdalis žmonijos vis dar gyvena be interneto?",
+  "subtitle": "Trečdalis žmonijos be ryšio",
   "subject": "comprendreLeMonde",
   "subcategory": "Économie & société",
-  "description": "2,7 milliards de personnes n'ont toujours pas accès à Internet. Dans un monde de plus en plus numérique, cette absence de connexion devient une nouvelle forme d'exclusion.",
+  "description": "2,7 milijardo žmonių vis dar neturi prieigos prie interneto. Vis labiau skaitmeniniame pasaulyje ryšio nebuvimas tampa nauja atskirties forma.",
   "hero": {
     "image": "la_fracture_numerique_mondiale",
     "ratio": "16:9",
-    "hook": "Le Kenya a inventé le paiement par téléphone dix ans avant l'Europe, faute d'agences bancaires."
+    "hook": "Kenija išrado mokėjimą telefonu dešimčia metų anksčiau nei Europa, nes trūko bankų skyrių."
   },
   "sections": [
     {
       "id": "course_219_la_fracture_numerique_mondiale_intro",
-      "title": "Introduction",
+      "title": "Įžanga",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Alors que les sociétés développées vivent une révolution portée par l'intelligence artificielle, une réalité brutale persiste : **2,7 milliards de personnes**, soit environ un tiers de l'humanité, n'ont toujours pas accès à Internet."
+          "text": "Kol išsivysčiusios visuomenės išgyvena dirbtinio intelekto revoliuciją, išlieka žiauri tikrovė: **2,7 milijardo žmonių**, maždaug trečdalis žmonijos, vis dar neturi prieigos prie interneto."
         },
         {
           "type": "paragraph",
-          "text": "Cette **fracture numérique** n'est pas qu'un retard technique : elle est devenue une véritable barrière, qui éloigne des millions de personnes de l'éducation, de la santé et de l'économie mondiale. Voici pourquoi elle persiste, et comment certains pays tentent de la combler."
+          "text": "Ši **skaitmeninė atskirtis** nėra vien techninis atsilikimas: ji tapo tikru barjeru, kuris atitolina milijonus žmonių nuo švietimo, sveikatos priežiūros ir pasaulio ekonomikos. Pažiūrėkime, kodėl ji išlieka ir kaip kai kurios šalys bando ją įveikti."
         }
       ]
     },
     {
       "id": "course_219_la_fracture_numerique_mondiale_p1",
-      "title": "Une carte du monde à deux vitesses",
+      "title": "Dviejų greičių pasaulio žemėlapis",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En 2024, environ 5,4 milliards de personnes sont connectées à Internet dans le monde, mais la progression stagne dans les régions les plus pauvres. L'Europe et l'Amérique du Nord dépassent les 90% de connexion, alors que l'Afrique subsaharienne reste à seulement 37%."
+          "text": "2024 m. internetu pasaulyje naudojasi apie 5,4 milijardo žmonių, tačiau skurdžiausiuose regionuose pažanga sustojo. Europoje ir Šiaurės Amerikoje prisijungusiųjų yra daugiau nei 90 %, o Užsachario Afrikoje tik 37 %."
         },
         {
           "type": "paragraph",
-          "text": "Cette exclusion tient à plusieurs causes. D'abord, l'absence d'infrastructures : installer la fibre optique dans certaines régions isolées est jugé trop coûteux par les opérateurs. Ensuite, le prix : dans certains pays, un simple [[išmanusis telefonas]] d'entrée de gamme représente plusieurs mois de salaire. Enfin, la barrière de la langue (environ 70% du contenu du web est en anglais) et le manque de formation numérique limitent l'usage même quand une connexion existe."
+          "text": "Ši atskirtis turi kelias priežastis. Pirma, trūksta infrastruktūros: operatoriai mano, kad tiesti šviesolaidį į kai kuriuos atokius regionus per brangu. Antra, kaina: kai kuriose šalyse net paprasčiausias pigus [[išmanusis telefonas]] kainuoja kelių mėnesių atlyginimą. Galiausiai kalbos barjeras (apie 70 % interneto turinio yra anglų kalba) ir skaitmeninių įgūdžių stoka riboja naudojimąsi net ten, kur ryšys yra."
         }
       ]
     },
     {
       "id": "course_219_la_fracture_numerique_mondiale_p2",
-      "title": "Quand le manque d'infrastructure force l'innovation",
+      "title": "Kai infrastruktūros stoka skatina naujoves",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Cette fracture agit comme un multiplicateur d'inégalités. Dans un monde où le télétravail, le commerce en ligne et l'éducation en ligne (les [[MOOC]]) deviennent la norme, ne pas être connecté revient à devenir invisible pour l'économie mondiale."
+          "text": "Ši atskirtis didina nelygybę. Pasaulyje, kuriame nuotolinis darbas, e. prekyba ir nuotolinis mokymasis (pavyzdžiui, [[MOOC]]) tampa norma, neturėti ryšio reiškia tapti nematomam pasaulio ekonomikai."
         },
         {
           "type": "image",
           "asset": "digital_divide_africa_rural_village_smartphone",
           "ratio": "16:9",
-          "caption": "Dans de nombreuses régions rurales, le téléphone mobile reste le seul point d'accès à Internet."
+          "caption": "Daugelyje kaimo vietovių mobilusis telefonas tebėra vienintelė prieiga prie interneto."
         },
         {
           "type": "paragraph",
-          "text": "Le Kenya illustre une autre voie : faute d'agences bancaires suffisantes, le pays a massivement adopté dès 2007 un système de paiement par simple SMS, le [[Kenijos sistema M-Pesa]], devançant l'Europe de dix ans. Ce système a permis à des millions de personnes sans compte bancaire de réaliser des transactions sécurisées avec un simple téléphone."
+          "text": "Kenija rodo kitą kelią: kadangi bankų skyrių trūko, nuo 2007 m. šalis masiškai ėmė naudoti mokėjimų paprasta SMS žinute sistemą. Tai [[Kenijos sistema M-Pesa]], aplenkusi Europą dešimčia metų. Ji leido milijonams žmonių be banko sąskaitos saugiai atlikti operacijas vien su telefonu."
         },
         {
           "type": "funFact",
-          "text": "Le Kenya a surnommé cette stratégie le « saut-de-mouton » technologique : plutôt que d'installer des infrastructures coûteuses et dépassées, le pays est directement passé à une solution plus moderne et moins chère."
+          "text": "Kenijoje ši strategija pavadinta technologiniu „šuoliu per pakopą“: užuot tiesusi brangią ir pasenusią infrastruktūrą, šalis iškart perėjo prie modernesnio ir pigesnio sprendimo."
         }
       ]
     },
     {
       "id": "course_219_la_fracture_numerique_mondiale_p3",
-      "title": "Internet par satellite : une solution sous conditions",
+      "title": "Palydovinis internetas: sprendimas su sąlygomis",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Pour connecter les villages les plus isolés, de nouveaux acteurs misent sur l'espace. Le projet [[Starlink]] envoie des milliers de satellites en orbite basse, permettant une connexion rapide même dans les déserts ou les hautes montagnes, sans avoir à poser le moindre câble."
+          "text": "Norėdami prijungti atokiausius kaimus, nauji žaidėjai stato ant kosmoso. Projektas [[Starlink]] į žemąją orbitą siunčia tūkstančius palydovų, todėl spartus ryšys pasiekiamas net dykumose ar aukštuose kalnuose, nenutiesus nė vieno kabelio."
         },
         {
           "type": "paragraph",
-          "text": "Mais le coût de l'abonnement et du matériel reste aligné sur les standards occidentaux, ce qui rend ces solutions inaccessibles aux populations rurales les plus pauvres sans aide extérieure. Résoudre la fracture numérique ne pourra donc pas se faire par la seule technologie : cela demande aussi une volonté politique pour faire d'Internet un bien accessible à tous."
+          "text": "Tačiau prenumeratos ir įrangos kaina atitinka Vakarų standartus, todėl be išorės pagalbos skurdžiausiems kaimo gyventojams šie sprendimai neįperkami. Taigi vien technologijomis skaitmeninės atskirties neįveikti: reikia ir politinės valios, kad internetas taptų prieinamas visiems."
         }
       ]
     },
     {
       "id": "course_219_la_fracture_numerique_mondiale_p4",
-      "title": "L'intelligence artificielle, un nouveau fossé",
+      "title": "Dirbtinis intelektas, nauja praraja",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L'essor rapide de l'intelligence artificielle menace d'aggraver encore cette fracture. Elle exige d'immenses puissances de calcul et de données, des ressources concentrées entre les mains de quelques pays et entreprises. Les populations déconnectées risquent alors de devenir dépendantes d'outils conçus sans tenir compte de leur culture ou de leur langue."
+          "text": "Sparti dirbtinio intelekto plėtra gali dar labiau pagilinti šią atskirtį. Jam reikia milžiniškos skaičiavimo galios ir duomenų, o šie ištekliai sutelkti kelių šalių ir įmonių rankose. Tad interneto neturintys gyventojai rizikuoja tapti priklausomi nuo įrankių, sukurtų neatsižvelgiant į jų kultūrą ar kalbą."
         },
         {
           "type": "paragraph",
-          "text": "L'écart de compétences entre élèves connectés et non connectés pourrait aussi se creuser très rapidement. L'enjeu des prochaines années ne sera donc plus seulement d'apporter une connexion, mais de garantir un accès juste à la création de valeur numérique, en combinant baisse des coûts, contenus locaux et formation."
+          "text": "Įgūdžių atotrūkis tarp mokinių, turinčių ryšį, ir jo neturinčių taip pat gali labai greitai didėti. Todėl ateinančių metų uždavinys bus ne tik suteikti ryšį, bet ir užtikrinti teisingą prieigą prie skaitmeninės vertės kūrimo, derinant mažesnes kainas, vietinį turinį ir mokymą."
         },
         {
           "type": "takeaway",
-          "text": "2,7 milliards de personnes restent aujourd'hui exclues d'Internet, une fracture qui risque de s'aggraver avec l'intelligence artificielle. Réduire cet écart demande de transformer la connectivité en un véritable bien accessible à tous, et pas seulement en un produit à vendre."
+          "text": "Šiandien 2,7 milijardo žmonių lieka atskirti nuo interneto, o dirbtinis intelektas šią atskirtį gali dar pagilinti. Norint sumažinti šį atotrūkį, ryšį reikia paversti tikru visiems prieinamu gėriu, o ne vien parduodamu produktu."
         }
       ]
     }

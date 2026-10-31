@@ -1,127 +1,127 @@
 {
   "id": "course_24_la_bataille_de_dien_bien_phu_1954",
-  "title": "Comment le Viet-Minh a-t-il vaincu la France à Diên Biên Phu ?",
+  "title": "Kaip Vietminhas nugalėjo Prancūziją ties Dien Bien Fu?",
   "subtitle": "1954",
   "subject": "histoire",
   "subcategory": "Guerre froide & monde contemporain",
-  "description": "Du **13 mars** au **7 mai 1954**, une armée française assiégée dans une cuvette du Nord-Vietnam capitule face au Viet-Minh. La défaite sonne la fin de l'Indochine française.",
+  "description": "Nuo **kovo 13 d.** iki **1954 m. gegužės 7 d.** Šiaurės Vietnamo slėnyje apsupta prancūzų armija kapituliuoja prieš Vietminhą. Šis pralaimėjimas reiškia Prancūzijos Indokinijos pabaigą.",
   "hero": {
     "image": "la_bataille_de_dien_bien_phu",
     "ratio": "16:9",
-    "hook": "Dans une cuvette du Vietnam, une armée coloniale découvre que la jungle peut vaincre l'aviation."
+    "hook": "Vietnamo slėnyje kolonijinė armija sužino, kad džiunglės gali nugalėti aviaciją."
   },
   "sections": [
     {
       "id": "course_24_la_bataille_de_dien_bien_phu_1954_intro",
-      "title": "Introduction",
+      "title": "Įžanga",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le **7 mai 1954**, dans une vallée du Nord-Vietnam, une armée coloniale européenne capitule. Face à elle : le Viet-Minh, le mouvement d'indépendance vietnamien. **Diên Biên Phu** n'est pas seulement un désastre français. C'est le signal que l'ère coloniale vacille, en pleine Guerre froide."
+          "text": "**1954 m. gegužės 7 d.** Šiaurės Vietnamo slėnyje kapituliuoja Europos kolonijinė armija. Prieš ją stovi Vietminhas, Vietnamo nepriklausomybės judėjimas. **Dien Bien Fu** yra ne tik Prancūzijos katastrofa. Tai ženklas, kad kolonijinė era svyruoja, o aplink siaučia Šaltasis karas."
         },
         {
           "type": "paragraph",
-          "text": "Comment un ancien professeur d'histoire, le général **Võ Nguyên Giáp**, a-t-il vaincu une armée moderne ? Par la logistique, la patience, et en retournant contre les Français leur propre certitude de supériorité."
+          "text": "Kaip buvęs istorijos mokytojas, generolas **Vo Nguyenas Giapas**, nugalėjo modernią armiją? Logistika, kantrybe ir tuo, kad atsuko prieš prancūzus jų pačių įsitikinimą savo pranašumu."
         }
       ]
     },
     {
       "id": "course_24_la_bataille_de_dien_bien_phu_1954_p1",
-      "title": "L'Indochine en guerre",
+      "title": "Karas Indokinijoje",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Depuis les années 1880, la France domine l'Indochine, aujourd'hui Vietnam, Laos et Cambodge. En **septembre 1945**, [[Ho Ši Minas]], fondateur du Viet-Minh, proclame l'indépendance. Paris refuse. Commence la guerre d'Indochine : d'un côté le corps expéditionnaire français, avec chars et avions ; de l'autre le Viet-Minh et sa [[partizaninis karas]] dans le [[Tonkinas]], le Nord du Vietnam."
+          "text": "Nuo 1880-ųjų Prancūzija valdo Indokiniją: dabartinį Vietnamą, Laosą ir Kambodžą. **1945 m. rugsėjį** Vietminho įkūrėjas [[Ho Ši Minas]] paskelbia nepriklausomybę. Paryžius atsisako ją pripažinti. Prasideda Indokinijos karas: vienoje pusėje prancūzų ekspedicinis korpusas su tankais ir lėktuvais, kitoje Vietminhas ir jo [[partizaninis karas]] Šiaurės Vietnamo regione, kurio vardas [[Tonkinas]]."
         },
         {
           "type": "image",
           "asset": "general_giap_viet_minh",
           "ratio": "4:3",
-          "caption": "Le général Võ Nguyên Giáp, stratège du Viet-Minh."
+          "caption": "Generolas Vo Nguyenas Giapas, Vietminho strategas."
         },
         {
           "type": "funFact",
-          "text": "[[Generolas Vo Nguyen Giapas]] n'a jamais suivi d'école militaire. Il dit avoir appris la stratégie en lisant les campagnes de Napoléon à la bibliothèque de Hanoï."
+          "text": "[[Generolas Vo Nguyen Giapas]] niekada nesimokė karo mokykloje. Jis sakė strategijos išmokęs Hanojaus bibliotekoje, skaitydamas apie Napoleono žygius."
         },
         {
           "type": "paragraph",
-          "text": "Giáp pense la guerre en étapes : clandestinité, guérilla mobile, puis offensive générale. En 1953, il juge son armée prête. Les Français, eux, cherchent le terrain d'une bataille décisive."
+          "text": "Giapas karą įsivaizduoja etapais: pogrindis, judrus partizaninis karas, tada visuotinis puolimas. 1953 m. jis nusprendžia, kad jo armija pasirengusi. O prancūzai ieško vietos lemiamam mūšiui."
         }
       ]
     },
     {
       "id": "course_24_la_bataille_de_dien_bien_phu_1954_p2",
-      "title": "Le piège de la cuvette",
+      "title": "Slėnio spąstai",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le général **Henri Navarre**, chef des forces françaises en Indochine, lance l'**opération Castor** : installer une base aéro-terrestre à Diên Biên Phu pour forcer le Viet-Minh à l'attaquer. En **novembre 1953**, des parachutistes sautent dans la cuvette. Les points d'appui portent des noms de femmes : Béatrice, Gabrielle, Éliane…"
+          "text": "Generolas **Henri Navarre'as**, Prancūzijos pajėgų Indokinijoje vadas, pradeda **operaciją „Castor“**: Dien Bien Fu įrengti oro ir sausumos bazę ir taip priversti Vietminhą ją pulti. **1953 m. lapkritį** parašiutininkai nusileidžia į slėnį. Atramos punktai pavadinti moterų vardais: Béatrice, Gabrielle, Éliane…"
         },
         {
           "type": "paragraph",
-          "text": "Le calcul français : l'ennemi ne pourra jamais hisser de l'artillerie lourde dans la jungle. Erreur. Des dizaines de milliers de porteurs acheminent canons et munitions à dos d'homme et de bicyclettes renforcées. Les pièces sont camouflées sur les crêtes qui dominent le camp."
+          "text": "Prancūzų apskaičiavimas paprastas: priešas niekada neužtemps sunkiosios artilerijos per džiungles. Klaida. Dešimtys tūkstančių nešikų gabena patrankas ir šaudmenis ant savo pečių ir ant sustiprintų dviračių. Pabūklai užmaskuojami ant kalnagūbrių, iškilusių virš stovyklos."
         }
       ]
     },
     {
       "id": "course_24_la_bataille_de_dien_bien_phu_1954_p3",
-      "title": "55 jours sous le feu",
+      "title": "55 dienos po ugnimi",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le **13 mars 1954**, le déluge commence. La piste d'aviation est détruite dès les premières heures. Le colonel **Charles Piroth**, qui avait promis de faire taire l'artillerie ennemie, se suicide. Le siège dure **55 jours**. Sous la [[musonas]], ces pluies torrentielles d'Asie, la cuvette devient un bourbier. Les tranchées viet-minh se rapprochent chaque nuit."
+          "text": "**1954 m. kovo 13 d.** prasideda pragaras. Kilimo ir tūpimo takas sunaikinamas jau per pirmąsias valandas. Pulkininkas **Charles'is Pirothas**, žadėjęs nutildyti priešo artileriją, nusižudo. Apsiaustis trunka **55 dienas**. Užeina [[musonas]], Azijos liūčių metas, ir slėnis virsta klampyne. Vietminho apkasai kiekvieną naktį vis artėja."
         },
         {
           "type": "funFact",
-          "text": "Le premier jour, les Français tirent **6 000** obus. L'artillerie de Giáp en tire **9 000** : une puissance que l'état-major jugeait impossible pour une armée de guérilla."
+          "text": "Pirmąją dieną prancūzai iššauna **6000** sviedinių. Giapo artilerija iššauna **9000**: tokios galios štabas nelaikė įmanoma partizanų armijai."
         },
         {
           "type": "paragraph",
-          "text": "Les États-Unis refusent une intervention aérienne massive. Le **7 mai**, après des combats au corps à corps sur le point d'appui Éliane, le cessez-le-feu est sonné."
+          "text": "Jungtinės Valstijos atsisako surengti didelę oro intervenciją. **Gegužės 7 d.**, po kovų vienas prieš vieną atramos punkte Éliane, paskelbiamos paliaubos."
         }
       ]
     },
     {
       "id": "course_24_la_bataille_de_dien_bien_phu_1954_p4",
-      "title": "La fin d'un empire",
+      "title": "Imperijos pabaiga",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Les [[Ženevos susitarimai]] (juillet 1954) actent le départ français. Le Vietnam est divisé au **17e parallèle**. Plus de **2 000** morts côté français, **11 000** prisonniers ; moins de **4 000** reviendront. Quelques mois plus tard, l'Algérie s'embrase. Les États-Unis, eux, s'engagent peu à peu dans ce qui deviendra la [[Vietnamo karas]]."
+          "text": "Prancūzų pasitraukimą įtvirtina [[Ženevos susitarimai]] (1954 m. liepa). Vietnamas padalijamas ties **17-ąja lygiagrete**. Prancūzai neteko daugiau nei **2000** žuvusiųjų, **11 000** pateko į nelaisvę; grįš mažiau nei **4000**. Po kelių mėnesių įsiliepsnoja Alžyras. O Jungtinės Valstijos pamažu įsitraukia į konfliktą, iš kurio išsivystys [[Vietnamo karas]]."
         },
         {
           "type": "timeline",
           "events": [
             {
-              "date": "nov. 1953",
-              "title": "Opération Castor",
-              "detail": "Les Français s'installent dans la cuvette."
+              "date": "1953 m. lapkritis",
+              "title": "Operacija „Castor“",
+              "detail": "Prancūzai įsikuria slėnyje."
             },
             {
-              "date": "13 mars 1954",
-              "title": "Offensive viet-minh",
-              "detail": "L'artillerie détruit la piste d'aviation."
+              "date": "1954 m. kovo 13 d.",
+              "title": "Vietminho puolimas",
+              "detail": "Artilerija sunaikina kilimo ir tūpimo taką."
             },
             {
-              "date": "7 mai 1954",
-              "title": "Capitulation",
-              "detail": "Fin de 55 jours de siège."
+              "date": "1954 m. gegužės 7 d.",
+              "title": "Kapituliacija",
+              "detail": "Baigiasi 55 dienų apsiaustis."
             },
             {
-              "date": "juil. 1954",
-              "title": "Accords de Genève",
-              "detail": "Fin de la guerre d'Indochine, Vietnam divisé."
+              "date": "1954 m. liepa",
+              "title": "Ženevos susitarimai",
+              "detail": "Baigiasi Indokinijos karas, Vietnamas padalijamas."
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "Diên Biên Phu (**13 mars - 7 mai 1954**) montre qu'une logistique populaire et une stratégie patientes peuvent vaincre une armée coloniale moderne."
+          "text": "Dien Bien Fu (**1954 m. kovo 13 d.-gegužės 7 d.**) parodė, kad liaudies logistika ir kantri strategija gali nugalėti modernią kolonijinę armiją."
         }
       ]
     }

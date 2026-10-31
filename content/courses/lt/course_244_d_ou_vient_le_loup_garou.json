@@ -1,133 +1,133 @@
 {
   "id": "course_244_d_ou_vient_le_loup_garou",
-  "title": "D'où vient le loup-garou ?",
-  "subtitle": "De Lycaon à Hollywood",
+  "title": "Iš kur atsirado vilkolakis?",
+  "subtitle": "Nuo Likaono iki Holivudo",
   "subject": "mythologie",
   "subcategory": "Légendes & créatures",
-  "description": "Pleine lune, morsure, balle en argent : le loup-garou du cinéma est une invention récente. Les plus vieux récits parlent d'un roi puni par un dieu et d'un seigneur trahi par sa femme.",
+  "description": "Pilnatis, įkandimas, sidabrinė kulka: kino vilkolakis yra visai naujas išradimas. Seniausi pasakojimai kalba apie dievo nubaustą karalių ir žmonos išduotą senjorą.",
   "author": "angela-bouma",
   "hero": {
     "image": "grey_wolf_snowy_forest_dusk",
     "ratio": "4:3",
-    "hook": "La peur est ancienne. Le monstre, lui, change de visage à chaque époque."
+    "hook": "Baimė sena. O pabaisa kiekvienoje epochoje keičia veidą."
   },
   "sections": [
     {
       "id": "course_244_d_ou_vient_le_loup_garou_intro",
-      "title": "Introduction",
+      "title": "Įžanga",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Une pleine lune, un homme qui se couvre de poils et part chasser la nuit, poussé par une faim qu'il ne contrôle pas. Pour devenir **loup-garou**, il faut avoir été mordu par un autre, parfois seulement une nuit de pleine lune. Cette image, tout le monde la connaît. Elle est pourtant très récente."
+          "text": "Pilnatis, žmogus, kuris apauga plaukais ir naktį išeina medžioti, varomas nesuvaldomo alkio. **Vilkolakiu** tampa tas, kurį įkando kitas vilkolakis, kartais tik per pilnatį. Šį vaizdinį žino visi. Tačiau jis visai naujas."
         },
         {
           "type": "paragraph",
-          "text": "Le récit d'origine est bien plus étrange. L'un des plus anciens témoignages vient de l'historien grec [[Herodotas]], au **Ve siècle** av. J.-C. Il décrit les [[Neurai]], un peuple installé au nord de la **mer Noire** : chacun d'eux, lui a-t-on raconté, devient loup quelques jours par an avant de reprendre forme humaine. Hérodote note l'histoire, mais précise qu'il n'en croit pas un mot."
+          "text": "Pirminis pasakojimas daug keistesnis. Vieną seniausių liudijimų palieka graikų istorikas [[Herodotas]], gyvenęs **V amžiuje** pr. Kr. Jis aprašo į šiaurę nuo **Juodosios jūros** gyvenusią tautą: tai [[Neurai]]. Kaip jam pasakojo, kiekvienas iš jų kelias dienas per metus virsta vilku, o paskui vėl įgauna žmogaus pavidalą. Herodotas istoriją užrašo, bet pabrėžia, kad jai nė kiek netiki."
         }
       ]
     },
     {
       "id": "course_244_d_ou_vient_le_loup_garou_p1",
-      "title": "Lycaon, le roi changé en loup",
+      "title": "Likaonas, vilku paverstas karalius",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le récit le plus souvent associé au loup-garou est celui de [[Likaonas]], roi d'[[Arkadija]], en Grèce, que le poète latin Ovide raconte dans les *Métamorphoses*. **Jupiter**, le roi des dieux, visite l'Arcadie déguisé en simple voyageur. Lycaon soupçonne son hôte d'être un dieu et décide de le tester : il tue un otage, fait cuire le corps et le sert à table. Si l'étranger est vraiment divin, il saura ce qu'il mange."
+          "text": "Dažniausiai su vilkolakiu siejamo pasakojimo herojus yra [[Likaonas]], Graikijos krašto, kurio vardas [[Arkadija]], karalius. Šią istoriją lotynų poetas Ovidijus pasakoja *Metamorfozėse*. **Jupiteris**, dievų karalius, aplanko Arkadiją persirengęs paprastu keliautoju. Likaonas įtaria, kad svečias yra dievas, ir nusprendžia jį išbandyti: nužudo įkaitą, išverda kūną ir patiekia jį prie stalo. Jei svetimšalis tikrai dieviškas, jis supras, ką valgo."
         },
         {
           "type": "paragraph",
-          "text": "Jupiter découvre le crime et punit le roi : il le change en loup. Sa cruauté reçoit enfin une forme à sa mesure. C'est l'un des plus vieux récits de loup-garou, et il ne ressemble en rien au nôtre. Lycaon n'est pas mordu. Pas de pleine lune, pas d'argent. Il devient loup parce qu'**un dieu le punit**."
+          "text": "Jupiteris atskleidžia nusikaltimą ir nubaudžia karalių: paverčia jį vilku. Jo žiaurumas pagaliau gauna jį atitinkantį pavidalą. Tai vienas seniausių pasakojimų apie vilkolakį, ir jis visai nepanašus į mūsiškį. Likaono niekas neįkando. Nei pilnaties, nei sidabro. Jis tampa vilku todėl, kad **jį baudžia dievas**."
         },
         {
           "type": "funFact",
-          "text": "L'exclamation anglaise « By Jove ! » a au moins 450 ans : le plus ancien exemple connu se trouve dans une pièce de théâtre de 1575. « Jove » est l'ancien nom de Jupiter."
+          "text": "Angliškam šūksniui „By Jove!“ yra mažiausiai 450 metų: seniausias žinomas pavyzdys randamas 1575 m. pjesėje. „Jove“ yra senasis Jupiterio vardas."
         }
       ]
     },
     {
       "id": "course_244_d_ou_vient_le_loup_garou_p2",
-      "title": "Neuf ans dans la peau d'un loup",
+      "title": "Devyneri metai vilko kailyje",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "D'autres auteurs antiques racontent une métamorphose moins définitive. Un homme peut vivre **neuf ou dix ans** en loup, selon celui qui raconte, puis redevenir humain, à une condition : n'avoir jamais goûté de chair humaine. [[Plinijus Vyresnysis]], naturaliste romain du Ier siècle, rapporte ainsi le cas d'un certain **Déménète**. Ni transformation mensuelle, ni pleine lune : un long exil, avec la possibilité de rentrer chez soi."
+          "text": "Kiti antikos autoriai pasakoja apie ne tokį galutinį virsmą. Žmogus gali **devynerius ar dešimt metų** gyventi vilko pavidalu (priklauso nuo pasakotojo), o paskui vėl tapti žmogumi, bet su viena sąlyga: jei niekada neragavo žmogienos. Tokį atvejį aprašo I a. romėnų gamtininkas [[Plinijus Vyresnysis]]: jis pasakoja apie tam tikrą **Demenetą**. Jokio kasmėnesinio virsmo, jokios pilnaties: tik ilga tremtis su galimybe grįžti namo."
         },
         {
           "type": "paragraph",
-          "text": "Ce sont des récits littéraires, pas la preuve que quelqu'un a réellement passé **neuf ans** dans la peau d'un loup. On leur doit la même distance qu'Hérodote gardait face aux Neures, des siècles plus tôt. Le vrai fait historique est ailleurs : non pas que la chose soit arrivée, mais que des auteurs antiques, génération après génération, aient continué à se la raconter."
+          "text": "Tai literatūriniai pasakojimai, o ne įrodymas, kad kas nors tikrai **devynerius metus** praleido vilko kailyje. Juos verta vertinti su tokiu pat atsargumu, kokio prieš kelis šimtmečius laikėsi Herodotas, kalbėdamas apie neurus. Tikrasis istorinis faktas kitur: ne tai, kad taip nutiko, o tai, kad antikos autoriai karta po kartos ir toliau tai pasakojo."
         }
       ]
     },
     {
       "id": "course_244_d_ou_vient_le_loup_garou_p3",
-      "title": "Bisclavret, le loup-garou honorable",
+      "title": "Bisclavret, garbingas vilkolakis",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Au **XIIe siècle**, la poétesse [[Marie de France]] écrit l'un des récits de loup-garou les plus célèbres : [[Bisclavret]]. Son héros est un seigneur qui, régulièrement, se change en loup. Sa femme découvre le secret et finit par voler les vêtements dont il a besoin pour reprendre forme humaine. Sans eux, il reste prisonnier de sa peau de loup."
+          "text": "**XII a.** poetė [[Marie de France]] parašo vieną garsiausių pasakojimų apie vilkolakį: tai [[Bisclavret]]. Jo herojus yra senjoras, kuris reguliariai virsta vilku. Žmona sužino paslaptį ir galiausiai pavagia drabužius, kurių jam reikia, kad vėl taptų žmogumi. Be jų jis lieka įkalintas vilko kailyje."
         },
         {
           "type": "paragraph",
-          "text": "Ce loup-garou a quelque chose d'inhabituel : ce n'est **pas vraiment un monstre**. Bisclavret garde son intelligence et sa droiture sous l'apparence de la bête. L'histoire parle moins de chasse au monstre que d'identité, de mariage et de trahison. Les apparences trompent : un homme qui ressemble à un loup peut se conduire avec honneur, et un humain d'allure ordinaire se montrer cruel."
+          "text": "Šis vilkolakis neįprastas: jis **iš tikrųjų nėra pabaisa**. Po žvėries išvaizda Bisclavret išsaugo protą ir dorumą. Pasakojimas mažiau kalba apie pabaisos medžioklę nei apie tapatybę, santuoką ir išdavystę. Išvaizda apgaulinga: vilką primenantis žmogus gali elgtis garbingai, o paprastos išvaizdos žmogus gali pasirodyti žiaurus."
         }
       ]
     },
     {
       "id": "course_244_d_ou_vient_le_loup_garou_p4",
-      "title": "La peur derrière la fourrure",
+      "title": "Baimė po kailiu",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le loup-garou change parce que les peurs qui l'entourent changent. La Grèce antique punit Lycaon par la malédiction d'un dieu. La France médiévale se demande ce qui fait vraiment un monstre. L'Europe du début de l'époque moderne l'intègre à la **sorcellerie** et à la peur du démon : c'est la même époque qui produit ses sorcières accusées et ses vampires buveurs de sang."
+          "text": "Vilkolakis keičiasi, nes keičiasi jį supančios baimės. Antikinė Graikija Likaoną baudžia dievo prakeiksmu. Viduramžių Prancūzija klausia, kas iš tikrųjų daro pabaisą. Ankstyvųjų naujųjų laikų Europa jį susieja su **raganavimu** ir velnio baime: ta pati epocha gimdo kaltinamas raganas ir kraują geriančius vampyrus."
         },
         {
           "type": "image",
           "asset": "werewolf_woodcut_lucas_cranach_elder_1512",
           "ratio": "3:4",
-          "caption": "« Le Loup-garou » de Lucas Cranach l'Ancien, vers 1512 : un homme à quatre pattes attaque un village."
+          "caption": "Lucaso Cranacho Vyresniojo „Vilkolakis“, apie 1512 m.: keturpėsčias žmogus puola kaimą."
         },
         {
           "type": "paragraph",
-          "text": "Hollywood lui donne enfin la **pleine lune** et la **balle en argent**. Ce n'est plus une peur religieuse, mais une histoire construite pour l'écran et vendue comme un divertissement. Le loup-garou n'a donc ni forme unique ni origine unique. Comme la sorcière et le vampire, il prouve que chaque époque invente la peur dont elle a besoin, puis se raconte une histoire à son sujet."
+          "text": "Galiausiai Holivudas jam suteikia **pilnatį** ir **sidabrinę kulką**. Tai jau ne religinė baimė, o istorija, sukurta ekranui ir parduodama kaip pramoga. Taigi vilkolakis neturi nei vieno pavidalo, nei vienos kilmės. Kaip ir ragana ar vampyras, jis įrodo, kad kiekviena epocha išranda jai reikalingą baimę ir paskui pasakoja apie ją istoriją."
         },
         {
           "type": "timeline",
           "events": [
             {
-              "date": "Ve siècle av. J.-C.",
-              "title": "Les Neures d'Hérodote",
-              "detail": "Un peuple qui deviendrait loup quelques jours par an."
+              "date": "V a. pr. Kr.",
+              "title": "Herodoto neurai",
+              "detail": "Tauta, kuri esą kelias dienas per metus virsta vilkais."
             },
             {
-              "date": "Ier siècle",
-              "title": "Lycaon et Déménète",
-              "detail": "Ovide et Pline l'Ancien mettent le loup-garou par écrit."
+              "date": "I a.",
+              "title": "Likaonas ir Demenetas",
+              "detail": "Ovidijus ir Plinijus Vyresnysis užrašo pasakojimus apie vilkolakį."
             },
             {
-              "date": "XIIe siècle",
+              "date": "XII a.",
               "title": "Bisclavret",
-              "detail": "Marie de France écrit le loup-garou honorable."
+              "detail": "Marie de France aprašo garbingą vilkolakį."
             },
             {
-              "date": "vers 1512",
-              "title": "La gravure de Cranach",
-              "detail": "Le loup-garou rejoint la peur des sorcières."
+              "date": "apie 1512",
+              "title": "Cranacho graviūra",
+              "detail": "Vilkolakis susiejamas su raganų baime."
             },
             {
-              "date": "XXe siècle",
-              "title": "Hollywood",
-              "detail": "Pleine lune et balle en argent."
+              "date": "XX a.",
+              "title": "Holivudas",
+              "detail": "Pilnatis ir sidabrinė kulka."
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "Du roi puni par Jupiter au monstre de cinéma, le loup-garou n'a pas une origine mais plusieurs : chaque époque lui prête la peur qu'elle a besoin de raconter."
+          "text": "Nuo Jupiterio nubausto karaliaus iki kino pabaisos: vilkolakis turi ne vieną kilmę, o kelias. Kiekviena epocha jam priskiria baimę, kurią jai reikia papasakoti."
         }
       ]
     }

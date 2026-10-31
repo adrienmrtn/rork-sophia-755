@@ -1,118 +1,118 @@
 {
   "id": "course_180_thor_et_loki_mythologie_nordique",
-  "title": "Thor et Loki (mythologie nordique)",
-  "subtitle": "Mythologie nordique",
+  "title": "Toras ir Lokis (Šiaurės mitologija)",
+  "subtitle": "Šiaurės mitologija",
   "subject": "mythologie",
   "subcategory": "Autres mythologies",
-  "description": "Le dieu de la foudre et le dieu de la ruse : duo d'aventures, puis ennemis au Ragnarök. Deux faces du panthéon scandinave.",
+  "description": "Žaibo dievas ir gudrybių dievas: nuotykių bičiuliai, o per Ragnaroką priešai. Du skandinavų panteono veidai.",
   "hero": {
     "image": "thor_et_loki_mythologie_nordique",
     "ratio": "16:9",
-    "hook": "L'un frappe avec un marteau. L'autre ment pour gagner. Ensemble, ils sauvent Asgard… jusqu'au jour où Loki la trahit."
+    "hook": "Vienas smogia kūju. Kitas meluoja, kad laimėtų. Kartu jie gelbsti Asgardą… kol vieną dieną Lokis jį išduoda."
   },
   "sections": [
     {
       "id": "course_180_thor_et_loki_mythologie_nordique_intro",
-      "title": "Introduction",
+      "title": "Įvadas",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Thor** et **Loki** sont les deux figures les plus populaires de la mythologie nordique. Thor protège les hommes avec la foudre. Loki sème le désordre avec la ruse. On les croise souvent ensemble dans les récits de voyage."
+          "text": "**Toras** ir **Lokis** yra dvi populiariausios Šiaurės mitologijos figūros. Toras žaibu saugo žmones. Lokis gudrumu sėja sumaištį. Kelionių pasakojimuose jie dažnai sutinkami kartu."
         },
         {
           "type": "paragraph",
-          "text": "Leur lien n'est pas une simple amitié comique. Il montre la tension entre l'ordre des dieux et le chaos. Du compagnonnage farceur à la guerre finale, voici comment cette alliance se construit… puis se brise."
+          "text": "Jų ryšys nėra vien komiška draugystė. Jis rodo įtampą tarp dievų tvarkos ir chaoso. Nuo išdaigų bičiulystės iki paskutinio karo: taip ši sąjunga kuriasi… ir subyra."
         }
       ]
     },
     {
       "id": "course_180_thor_et_loki_mythologie_nordique_p1",
-      "title": "Asgard, Midgard et les sources",
+      "title": "Asgardas, Midgardas ir šaltiniai",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ces mythes viennent des peuples scandinaves du Ve au XIIe siècle. On les connaît surtout grâce à des textes islandais tardifs, écrits alors que la région était déjà christianisée. La source majeure est l'[[Prozos Eda]], rédigée vers **1220** par **Snorri Sturluson**, complétée par l'[[Poetinė Eda]]."
+          "text": "Šie mitai kilę iš V-XII a. skandinavų tautų. Jie žinomi daugiausia iš vėlyvų islandiškų tekstų, parašytų, kai kraštas jau buvo krikščioniškas. Svarbiausias šaltinis yra [[Prozos Eda]], kurią apie **1220** m. parašė **Snorris Sturlusonas**; ją papildo [[Poetinė Eda]]."
         },
         {
           "type": "image",
           "asset": "asgard_midgard_bifrost_bridge_norse_mythology",
           "ratio": "4:3",
-          "caption": "Asgard et Midgard reliés par le Bifröst, le pont arc-en-ciel."
+          "caption": "Asgardas ir Midgardas, sujungti Bifrostu, vaivorykštės tiltu."
         },
         {
           "type": "paragraph",
-          "text": "Le monde s'organise autour de [[Igdrasilis]], l'arbre cosmique. En haut : **Asgard**, demeure des dieux. Plus bas : **Midgard**, monde des hommes, relié par le **Bifröst**. Les dieux se partagent en deux clans : les **Ases**, menés par **Odin** (guerre et souveraineté), et les **Vanes**, comme Freyr et Freyja (fertilité)."
+          "text": "Pasaulio centre stovi [[Igdrasilis]], kosminis medis. Viršuje yra **Asgardas**, dievų buveinė. Žemiau yra **Midgardas**, žmonių pasaulis, su kuriuo jį jungia **Bifrostas**. Dievai skirstomi į dvi gimines: **asai**, kuriems vadovauja **Odinas** (karas ir valdžia), ir **vanai**, pavyzdžiui, Frejas ir Freja (vaisingumas)."
         },
         {
           "type": "funFact",
-          "text": "Dans les textes anciens, le Bifröst est un pont fragile : au Ragnarök, il tremblera et s'effondrera sous le poids des géants."
+          "text": "Senuosiuose tekstuose Bifrostas yra trapus tiltas: per Ragnaroką jis drebės ir sugrius po milžinų svoriu."
         }
       ]
     },
     {
       "id": "course_180_thor_et_loki_mythologie_nordique_p2",
-      "title": "Thor, le protecteur au marteau",
+      "title": "Toras, gynėjas su kūju",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Thor** est le fils d'Odin et de la Terre. C'est le dieu le plus vénéré du peuple : il défend l'humanité contre les **géants**, forces déchaînées de la nature. Barbu, cheveux roux, il incarne une force nette et droite."
+          "text": "**Toras** yra Odino ir Žemės sūnus. Tai labiausiai liaudies garbinamas dievas: jis gina žmoniją nuo **milžinų**, siautulingų gamtos jėgų. Barzdotas ir raudonplaukis, jis įkūnija aiškią ir tiesią jėgą."
         },
         {
           "type": "image",
           "asset": "thor_hammer_mjolnir_norse_god_painting",
           "ratio": "4:3",
-          "caption": "Mjöllnir, le marteau de Thor : il frappe et revient à la main."
+          "caption": "Mjolniras, Toro kūjis: smogia ir grįžta į ranką."
         },
         {
           "type": "paragraph",
-          "text": "Son arme, **Mjöllnir**, forgée par des nains, brise les montagnes et revient toujours à sa main. Une ceinture de force et des gants de fer l'aident à la manier. Son nom a donné le **jeudi** (Thor's day) dans les langues germaniques. Contrairement à Odin, plus aristocratique, Thor est le dieu des paysans libres : pluie, récolte, foyer sûr."
+          "text": "Jo ginklas **Mjolniras**, nukaltas nykštukų, skaldo kalnus ir visada grįžta į jo ranką. Jį valdyti padeda jėgos diržas ir geležinės pirštinės. Nuo jo vardo germanų kalbose kilo **ketvirtadienio** pavadinimas (Thor's day). Kitaip nei aristokratiškesnis Odinas, Toras yra laisvųjų valstiečių dievas: lietus, derlius, saugūs namai."
         },
         {
           "type": "funFact",
-          "text": "Le char de Thor est tiré par deux boucs. S'il a faim, il peut les manger le soir et les ressusciter le lendemain avec son marteau… à condition de ne casser aucun os."
+          "text": "Toro vežimą traukia du ožiai. Išalkęs jis gali vakare juos suvalgyti, o kitą dieną prikelti savo kūju… jei tik nesulaužytas nė vienas kaulas."
         }
       ]
     },
     {
       "id": "course_180_thor_et_loki_mythologie_nordique_p3",
-      "title": "Loki, la ruse qui finit mal",
+      "title": "Lokis, blogai pasibaigęs gudrumas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Loki** vit parmi les Ases, mais il est de sang géant. Il a intégré le panthéon par un pacte de sang avec Odin. C'est le **trickster** : ses farces et ses mensonges dérangent, mais ils font aussi avancer l'histoire et offrent parfois aux dieux leurs plus grands trésors."
+          "text": "**Lokis** gyvena tarp asų, bet jo kraujas milžinų. Į panteoną jis pateko sudaręs kraujo paktą su Odinu. Jis yra **triksteris**: jo išdaigos ir melas trikdo, bet kartu varo istoriją į priekį ir kartais atneša dievams didžiausius lobius."
         },
         {
           "type": "image",
           "asset": "loki_norse_trickster_god_mythology",
           "ratio": "4:3",
-          "caption": "Loki, dieu de la ruse : allié utile, traître annoncé."
+          "caption": "Lokis, gudrybių dievas: naudingas sąjungininkas, iš anksto žinomas išdavikas."
         },
         {
           "type": "paragraph",
-          "text": "Il change de forme et même de sexe. Sous forme de jument, il devient la mère de [[Sleipniras]], le cheval à huit pattes d'Odin. Avec la géante Angrboda, il engendre trois monstres : le loup **Fenrir**, le serpent **Jörmungandr** et **Hel**, gardienne des morts. Peu à peu, la farce devient trahison : il organise la mort du dieu lumineux **Baldr**. Dès lors, son destin est scellé."
+          "text": "Jis keičia pavidalą ir net lytį. Virtęs kumele, jis tampa motina: jo sūnus yra [[Sleipniras]], aštuonkojis Odino žirgas. Su milžine Angrboda jis susilaukia trijų pabaisų: vilko **Fenrio**, gyvatės **Jormungando** ir **Hel**, mirusiųjų sergėtojos. Pamažu išdaiga virsta išdavyste: jis surengia šviesiojo dievo **Baldro** mirtį. Nuo tada jo likimas nulemtas."
         }
       ]
     },
     {
       "id": "course_180_thor_et_loki_mythologie_nordique_p4",
-      "title": "Du duo comique au Ragnarök",
+      "title": "Nuo komiško dueto iki Ragnaroko",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Longtemps, Thor et Loki se complètent. Quand le géant Thrym vole Mjöllnir, Thor se déguise en mariée et Loki en servante pour le récupérer. Là où le marteau échoue, le mensonge réussit, et l'inverse."
+          "text": "Ilgą laiką Toras ir Lokis vienas kitą papildo. Kai milžinas Trymas pavagia Mjolnirą, Toras persirengia nuotaka, o Lokis tarnaite, kad kūjį atgautų. Kur nepavyksta kūjui, pavyksta melui, ir atvirkščiai."
         },
         {
           "type": "paragraph",
-          "text": "Puis l'alliance se brise. Au **Ragnarök**, le crépuscule des dieux, Loki mène les ennemis d'Asgard. Thor affronte Jörmungandr, fils de Loki : il tue le serpent, puis meurt de son venin après neuf pas. Force et ruse s'anéantissent ensemble."
+          "text": "Paskui sąjunga suyra. Per **Ragnaroką**, dievų sutemas, Lokis veda Asgardo priešus. Toras stoja prieš Jormungandą, Lokio sūnų: jis nukauna gyvatę, bet nužengęs devynis žingsnius miršta nuo jos nuodų. Jėga ir gudrumas sunaikina vienas kitą."
         },
         {
           "type": "takeaway",
-          "text": "**Thor** et **Loki** incarnent la tension entre force protectrice et ruse disruptive. Leur lien, de l'amitié comique à la haine du Ragnarök, montre combien l'ordre des dieux reste fragile face au chaos."
+          "text": "**Toras** ir **Lokis** įkūnija įtampą tarp saugančios jėgos ir ardančio gudrumo. Jų ryšys, nuo komiškos draugystės iki Ragnaroko neapykantos, rodo, kokia trapi dievų tvarka prieš chaosą."
         }
       ]
     }

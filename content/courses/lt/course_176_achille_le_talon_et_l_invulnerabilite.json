@@ -1,118 +1,118 @@
 {
   "id": "course_176_achille_le_talon_et_l_invulnerabilite",
-  "title": "D'où vient l'expression « talon d'Achille » ?",
-  "subtitle": "La gloire et le point faible",
+  "title": "Iš kur kilo posakis „Achilo kulnas“?",
+  "subtitle": "Šlovė ir silpnoji vieta",
   "subject": "mythologie",
   "subcategory": "Grèce : les héros",
-  "description": "Achille, héros de l'Iliade, semble invincible. Un talon, une flèche, et le mythe invente la métaphore universelle du point faible fatal.",
+  "description": "„Iliados“ herojus Achilas atrodo nenugalimas. Kulnas, strėlė, ir mitas sukuria visuotinę pražūtingos silpnosios vietos metaforą.",
   "hero": {
     "image": "achille_le_talon_et_l_invulnerabilite",
     "ratio": "16:9",
-    "hook": "Le plus grand guerrier de Troie. Une peau presque impénétrable. Et un talon qui change le sens du mot « faiblesse »."
+    "hook": "Didžiausias karys prie Trojos. Beveik neperveriama oda. Ir kulnas, pakeitęs žodžio „silpnybė“ prasmę."
   },
   "sections": [
     {
       "id": "course_176_achille_le_talon_et_l_invulnerabilite_intro",
-      "title": "Introduction",
+      "title": "Įvadas",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Achille** est le héros central de l'**Iliade**, le poème d'Homère sur la guerre de Troie. Fils de la nymphe **Thétis** et du mortel **Pélée**, il incarne le guerrier parfait : rapide, féroce, obsédé par le [[Kleos]], la gloire qui survit après la mort."
+          "text": "**Achilas** yra pagrindinis **Iliados**, Homero poemos apie Trojos karą, herojus. Nimfos **Tetidės** ir mirtingojo **Pelėjo** sūnus įkūnija tobulą karį: greitą, nuožmų, apsėstą troškimo, kurį graikai vadino žodžiu [[Kleos]], tai yra šlovės, išliekančios po mirties."
         },
         {
           "type": "paragraph",
-          "text": "Son histoire mêle puissance quasi divine et mortalité certaine. Un détail du corps, le talon, est devenu le symbole universel de la faille cachée au cœur de la force."
+          "text": "Jo istorijoje susipina beveik dieviška galia ir neišvengiamas mirtingumas. Viena kūno detalė, kulnas, tapo visuotiniu jėgos širdyje slypinčios spragos simboliu."
         }
       ]
     },
     {
       "id": "course_176_achille_le_talon_et_l_invulnerabilite_p1",
-      "title": "Plongé dans le Styx",
+      "title": "Panardintas į Stiksą",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Une prophétie annonce qu'Achille sera plus puissant que son père. **Zeus** et **Poséidon** renoncent donc à Thétis et la marient à Pélée. Pour protéger l'enfant, Thétis le plonge dans le **Styx**, fleuve des Enfers dont l'eau rendrait la peau impénétrable."
+          "text": "Pranašystė skelbia, kad Achilas bus galingesnis už savo tėvą. Todėl **Dzeusas** ir **Poseidonas** atsisako Tetidės ir išleidžia ją už Pelėjo. Norėdama apsaugoti vaiką, Tetidė panardina jį į **Stiksą**, požemio upę, kurios vanduo esą padaro odą neperveriamą."
         },
         {
           "type": "image",
           "asset": "thetis_dipping_achilles_styx_baby_painting",
           "ratio": "4:3",
-          "caption": "Thétis plonge Achille dans le Styx, en le tenant par le talon."
+          "caption": "Tetidė panardina Achilą į Stiksą, laikydama jį už kulno."
         },
         {
           "type": "funFact",
-          "text": "Cette version magique de l'invulnérabilité apparaît tard, chez le poète [[Stacijus]] (Ier siècle). Chez Homère, Achille n'est pas protégé par un sort : il est simplement le meilleur combattant, et donc toujours mortel."
+          "text": "Ši magiška nepažeidžiamumo versija atsiranda vėlai: ją pateikia poetas [[Stacijus]] (I a.). Homero Achilas nėra apsaugotas kerais: jis tiesiog geriausias karys, todėl vis tiek mirtingas."
         },
         {
           "type": "paragraph",
-          "text": "Elle le tient par le **talon**. Cette zone reste sèche, donc vulnérable. Le détail technique devient le cœur du mythe."
+          "text": "Ji laiko jį už **kulno**. Ši vieta lieka sausa, todėl pažeidžiama. Techninė detalė tampa mito šerdimi."
         }
       ]
     },
     {
       "id": "course_176_achille_le_talon_et_l_invulnerabilite_p2",
-      "title": "Colère, Patrocle, Hector",
+      "title": "Rūstybė, Patroklas, Hektoras",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Devant Troie, Achille se retire du combat après un affront d'**Agamemnon**, chef des Grecs, qui lui prend sa captive [[Briseidė]]. Sans lui, l'armée achéenne s'effondre. C'est la mort de **Patrocle**, son compagnon le plus cher, qui le ramène au front."
+          "text": "Prie Trojos Achilas pasitraukia iš kovos, įžeistas graikų vado **Agamemnono**, kuris atima iš jo belaisvę, vardu [[Briseidė]]. Be Achilo achajų kariuomenė žlunga. Į kovą jį sugrąžina tik brangiausio draugo **Patroklo** mirtis."
         },
         {
           "type": "image",
           "asset": "achilles_hector_battle_troy_ancient_vase",
           "ratio": "4:3",
-          "caption": "Achille face à Hector, duel décisif sous les murs de Troie."
+          "caption": "Achilas prieš Hektorą: lemiama dvikova prie Trojos sienų."
         },
         {
           "type": "paragraph",
-          "text": "Il revêt une armure forgée par [[Hefaistas]], dieu forgeron, et lance une [[aristėja]], une suite d'exploits guerriers hors norme. Il tue **Hector**, prince de Troie, puis traîne son corps derrière son char. Cet [[hibris]], cet excès orgueilleux, choque. Seule la visite nocturne du vieux roi **Priam** ramène Achille à l'humanité : il rend enfin le corps pour les funérailles."
+          "text": "Jis apsivelka šarvus, kuriuos nukaldino dievas kalvis [[Hefaistas]], ir prasideda jo [[aristėja]], nepaprastų karinių žygdarbių virtinė. Jis nukauna Trojos princą **Hektorą**, o paskui tempia jo kūną pririšęs prie vežimo. Šis [[hibris]], išpuikęs saiko peržengimas, šokiruoja. Tik naktį atėjęs senas karalius **Priamas** sugrąžina Achilui žmogiškumą: šis pagaliau atiduoda kūną laidotuvėms."
         },
         {
           "type": "funFact",
-          "text": "Achille aurait eu le choix : une vie longue et oubliée, ou une vie courte et célèbre à jamais. Il choisit la gloire. Ce choix définit l'héroïsme tragique grec."
+          "text": "Sakoma, kad Achilas turėjo rinktis: ilgas ir užmirštas gyvenimas arba trumpas, bet amžinai šlovingas. Jis renkasi šlovę. Šis pasirinkimas apibrėžia tragišką graikų didvyriškumą."
         }
       ]
     },
     {
       "id": "course_176_achille_le_talon_et_l_invulnerabilite_p3",
-      "title": "La flèche au talon",
+      "title": "Strėlė į kulną",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Sous les murs de Troie, **Pâris**, prince archer peu estimé pour sa bravoure, décoche une flèche. Guidé par **Apollon**, le projectile atteint le talon d'Achille. Le plus grand guerrier tombe par le moins vaillant des combattants."
+          "text": "Prie Trojos sienų **Paris**, princas lankininkas, nelabai garsėjęs drąsa, paleidžia strėlę. **Apolono** nukreipta, ji pataiko Achilui į kulną. Didžiausias karys krinta nuo menkiausio kovotojo rankos."
         },
         {
           "type": "image",
           "asset": "achilles_death_heel_arrow_paris_ancient_art",
           "ratio": "4:3",
-          "caption": "La mort d'Achille : la flèche de Pâris atteint le talon."
+          "caption": "Achilo mirtis: Pario strėlė pataiko į kulną."
         },
         {
           "type": "paragraph",
-          "text": "Ses cendres sont mêlées à celles de Patrocle. Même mort, Achille reste un enjeu : on se dispute ses armes. L'ère des héros commence à se fermer."
+          "text": "Jo pelenai sumaišomi su Patroklo pelenais. Net miręs Achilas lieka ginčų objektu: dėl jo ginklų kyla ginčas. Didvyrių era ima baigtis."
         }
       ]
     },
     {
       "id": "course_176_achille_le_talon_et_l_invulnerabilite_p4",
-      "title": "Un talon dans notre langue",
+      "title": "Kulnas mūsų kalboje",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L'expression « **talon d'Achille** » désigne encore aujourd'hui la faille d'un système apparemment solide. En anatomie, le [[Achilo sausgyslė (anatomija)]] rappelle le même mythe. En politique, en informatique ou en stratégie, l'idée reste la même : rien n'est plus fort que son maillon le plus faible."
+          "text": "Posakis „**Achilo kulnas**“ ir šiandien reiškia iš pažiūros tvirtos sistemos spragą. Anatomijoje tą patį mitą primena [[Achilo sausgyslė (anatomija)]]. Politikoje, informatikoje ar strategijoje mintis ta pati: grandinė stipri tiek, kiek stipri silpniausia jos grandis."
         },
         {
           "type": "paragraph",
-          "text": "Au-delà de la métaphore, Achille incarne le dilemme grec : vivre longtemps dans l'ombre, ou briller peu et rester immortel dans les récits. En choisissant le combat, il a gagné l'immortalité littéraire."
+          "text": "Be metaforos, Achilas įkūnija graikų dilemą: ilgai gyventi šešėlyje ar trumpai spindėti ir likti nemirtingam pasakojimuose. Pasirinkęs kovą, jis pelnė literatūrinį nemirtingumą."
         },
         {
           "type": "takeaway",
-          "text": "Presque invulnérable grâce au Styx, Achille meurt à Troie d'une flèche au talon. Le mythe laisse à la postérité le [[Achilo sausgyslė (anatomija)]] et l'image universelle du point faible fatal."
+          "text": "Stiksas padarė Achilą beveik nepažeidžiamą, tačiau jis žūva prie Trojos nuo strėlės į kulną. Ainiams mitas paliko visuotinį pražūtingos silpnosios vietos įvaizdį, o jį primena ir [[Achilo sausgyslė (anatomija)]]."
         }
       ]
     }

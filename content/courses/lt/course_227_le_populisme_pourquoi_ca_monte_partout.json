@@ -1,126 +1,126 @@
 {
   "id": "course_227_le_populisme_pourquoi_ca_monte_partout",
-  "title": "Pourquoi le populisme monte-t-il dans tant de démocraties ?",
-  "subtitle": "Depuis les années 2010",
+  "title": "Kodėl populizmas stiprėja daugybėje demokratijų?",
+  "subtitle": "Nuo 2010-ųjų",
   "subject": "comprendreLeMonde",
   "subcategory": "Environnement & avenir",
-  "description": "Des États-Unis à l'Inde, en passant par l'Europe, des leaders populistes bousculent les partis traditionnels. Pourquoi cette vague touche-t-elle **presque toutes les démocraties** en même temps ?",
+  "description": "Nuo JAV iki Indijos, taip pat Europoje, populistiniai lyderiai sukrečia tradicines partijas. Kodėl ši banga vienu metu apima **beveik visas demokratijas**?",
   "hero": {
     "image": "le_populisme_pourquoi_ca_monte",
     "ratio": "16:9",
-    "hook": "Le peuple contre les élites : un discours vieux de plus d'un siècle, mais qui n'a jamais autant convaincu."
+    "hook": "Liaudis prieš elitą: šiai retorikai daugiau nei šimtmetis, bet ji dar niekada nebuvo tokia įtikinama."
   },
   "sections": [
     {
       "id": "course_227_le_populisme_pourquoi_ca_monte_partout_intro",
-      "title": "Introduction",
+      "title": "Įvadas",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Depuis les années 2010, le **populisme** n'est plus un phénomène marginal. Des États-Unis à l'Inde, en passant par l'Europe et l'Amérique latine, des leaders bousculent les partis traditionnels au pouvoir depuis des décennies."
+          "text": "Nuo 2010-ųjų **populizmas** nebėra paraštės reiškinys. Nuo JAV iki Indijos, Europoje ir Lotynų Amerikoje lyderiai sukrečia tradicines partijas, dešimtmečius buvusias valdžioje."
         },
         {
           "type": "paragraph",
-          "text": "Ce mouvement ne vient pas de nulle part. Il s'enracine dans des fractures économiques, culturelles et technologiques bien réelles. Ce cours explore la logique de ce discours et les raisons de sa montée."
+          "text": "Šis judėjimas neatsirado iš niekur. Jo šaknys glūdi labai realiuose ekonominiuose, kultūriniuose ir technologiniuose lūžiuose. Šis kursas nagrinėja šios retorikos logiką ir jos populiarėjimo priežastis."
         }
       ]
     },
     {
       "id": "course_227_le_populisme_pourquoi_ca_monte_partout_p1",
-      "title": "Le peuple pur contre l'élite corrompue",
+      "title": "Tyra liaudis prieš korumpuotą elitą",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le populisme ne se définit pas par un programme économique précis, mais par une logique politique bien particulière. Selon le politologue Jan-Werner Müller, son idée centrale est le [[monizmas]] : il n'existerait qu'un seul « vrai peuple », et le leader populiste serait son unique porte-parole."
+          "text": "Populizmą apibrėžia ne konkreti ekonominė programa, o labai savita politinė logika. Pasak politologo Jano-Wernerio Müllerio, jo pagrindinė idėja yra [[monizmas]]: esą egzistuoja tik viena „tikroji liaudis“, o populistinis lyderis yra vienintelis jos balsas."
         },
         {
           "type": "image",
           "asset": "populist_political_rally_crowd_flags",
           "ratio": "16:9",
-          "caption": "Le discours populiste divise la société en deux camps opposés."
+          "caption": "Populistinė retorika visuomenę padalija į dvi priešingas stovyklas."
         },
         {
           "type": "paragraph",
-          "text": "Cette vision divise la société en deux camps : d'un côté, un « peuple pur », porteur de valeurs authentiques, de l'autre, une « élite corrompue », accusée de trahir l'intérêt général. Ce cadre est très flexible : à droite, le peuple est souvent défini par la nation, opposée à une élite jugée trop mondialiste. À gauche, il est défini par la classe sociale, face à une élite financière."
+          "text": "Toks požiūris dalija visuomenę į dvi stovyklas: vienoje „tyra liaudis“, autentiškų vertybių nešėja, kitoje „korumpuotas elitas“, kaltinamas bendrojo intereso išdavyste. Šis rėmas labai lankstus: dešinėje liaudis dažnai apibrėžiama per tautą, priešpriešinamą pernelyg globalistiniu laikomam elitui. Kairėje ji apibrėžiama per socialinę klasę, priešpriešinamą finansiniam elitui."
         },
         {
           "type": "funFact",
-          "text": "Le tout premier grand parti populiste moderne, le People's Party américain en 1892, demandait déjà de nationaliser les chemins de fer, car les agriculteurs pensaient que les tarifs étaient fixés par une élite financière invisible."
+          "text": "Pati pirmoji didelė moderni populistinė partija, amerikiečių People's Party, jau 1892 m. reikalavo nacionalizuoti geležinkelius, nes ūkininkai manė, kad tarifus nustato nematomas finansinis elitas."
         }
       ]
     },
     {
       "id": "course_227_le_populisme_pourquoi_ca_monte_partout_p2",
-      "title": "Des colères bien réelles",
+      "title": "Labai tikras pyktis",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Plusieurs crises se rejoignent pour expliquer cette montée. Sur le plan économique, le chercheur Branko Milanović a montré qu'entre 1988 et 2008, les classes moyennes asiatiques et les plus riches du monde ont vu leurs revenus grimper, tandis que les classes moyennes occidentales stagnaient. Ce sentiment de déclassement a nourri une colère durable."
+          "text": "Šį kilimą paaiškina kelios susikertančios krizės. Ekonomikos srityje tyrėjas Branko Milanovićius parodė, kad 1988-2008 m. Azijos vidurinių klasių ir turtingiausių pasaulio žmonių pajamos augo, o Vakarų vidurinės klasės pajamos stovėjo vietoje. Šis smukimo socialiniais laiptais jausmas maitino ilgalaikį pyktį."
         },
         {
           "type": "image",
           "asset": "2015_refugee_migration_crisis_Europe_Mediterranean",
           "ratio": "4:3",
-          "caption": "La crise migratoire de 2015 a nourri un sentiment d'insécurité identitaire en Europe."
+          "caption": "2015 m. migracijos krizė Europoje sustiprino tapatybės nesaugumo jausmą."
         },
         {
           "type": "paragraph",
-          "text": "À cette fracture économique s'ajoute un clivage culturel : l'accélération des changements de société et la crise migratoire de 2015 ont créé une insécurité identitaire chez de nombreux électeurs, qui se sentent plus éloignés des décisions prises par les élites urbaines."
+          "text": "Prie šio ekonominio lūžio prisideda kultūrinė skirtis: visuomenės pokyčių spartėjimas ir 2015 m. migracijos krizė daugeliui rinkėjų sukėlė tapatybės nesaugumą, ir jie jaučiasi vis labiau nutolę nuo miestų elito priimamų sprendimų."
         },
         {
           "type": "paragraph",
-          "text": "Enfin, les réseaux sociaux ont transformé la communication politique. Ils renforcent la polarisation et permettent aux leaders de s'adresser directement à leur public, avec un langage simple et émotionnel, sans passer par les médias traditionnels."
+          "text": "Galiausiai socialiniai tinklai pakeitė politinę komunikaciją. Jie stiprina poliarizaciją ir leidžia lyderiams kreiptis tiesiai į savo auditoriją paprasta, emocinga kalba, aplenkiant tradicinę žiniasklaidą."
         }
       ]
     },
     {
       "id": "course_227_le_populisme_pourquoi_ca_monte_partout_p3",
-      "title": "Des visages très différents, une même méthode",
+      "title": "Labai skirtingi veidai, tas pats metodas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le paysage politique mondial offre une grande diversité de figures populistes. Donald Trump a transformé le Parti républicain américain autour du protectionnisme et du nationalisme. En Hongrie, Viktor Orbán a construit une [[Neliberaliosios demokratijos (Orbánas)]], où le résultat des élections justifie une concentration croissante du pouvoir."
+          "text": "Pasaulio politikoje populistų esama labai įvairių. Donaldas Trumpas perkūrė JAV Respublikonų partiją, remdamasis protekcionizmu ir nacionalizmu. Vengrijoje Viktoras Orbánas sukūrė modelį, žinomą kaip [[Neliberaliosios demokratijos (Orbánas)]]: rinkimų rezultatai ten pateisina vis didesnę valdžios koncentraciją."
         },
         {
           "type": "image",
           "asset": "Donald_Trump_Marine_Le_Pen_populist_leaders",
           "ratio": "16:9",
-          "caption": "Des figures très différentes partagent une même rhétorique de rupture avec les élites."
+          "caption": "Labai skirtingi veikėjai vartoja tą pačią retoriką prieš elitą."
         },
         {
           "type": "paragraph",
-          "text": "En France, Marine Le Pen a mené une stratégie de [[dedemonizavimas]] pour élargir son électorat, tout en gardant un discours centré sur la préférence nationale. Le populisme de gauche, incarné par Jean-Luc Mélenchon en France ou Bernie Sanders aux États-Unis, privilégie plutôt la redistribution des richesses, mais partage la même rhétorique de rupture avec le « système »."
+          "text": "Prancūzijoje Marine Le Pen strategija buvo [[dedemonizavimas]]: taip ji siekė išplėsti rinkėjų ratą, bet išlaikė retoriką, sutelktą į nacionalinį pirmumą. Kairysis populizmas, kurį Prancūzijoje įkūnija Jeanas-Lucas Mélenchonas, o JAV Bernie Sandersas, labiau akcentuoja turto perskirstymą, bet vartoja tą pačią retoriką prieš „sistemą“."
         }
       ]
     },
     {
       "id": "course_227_le_populisme_pourquoi_ca_monte_partout_p4",
-      "title": "Le vrai test : l'exercice du pouvoir",
+      "title": "Tikrasis išbandymas: valdžia",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le grand paradoxe du populisme apparaît une fois arrivé au pouvoir. Le leader ne peut plus se contenter d'être l'opposant au système : il devient le système. Pour garder son image de rebelle, il désigne souvent de nouveaux ennemis, comme les juges ou les fonctionnaires, accusés de bloquer sa volonté."
+          "text": "Didysis populizmo paradoksas išryškėja, kai jis ateina į valdžią. Lyderis nebegali būti vien sistemos priešininkas: jis pats tampa sistema. Kad išlaikytų maištininko įvaizdį, jis dažnai suranda naujų priešų, pavyzdžiui, teisėjus ar valstybės tarnautojus, kaltinamus jo valios blokavimu."
         },
         {
           "type": "paragraph",
-          "text": "C'est là que le risque pour les institutions devient concret. En Hongrie ou en Pologne, des réformes ont visé à réduire l'indépendance de la justice. En cas de défaite électorale, certains leaders contestent même la légitimité du vote, comme lors de l'attaque du Capitole en 2021."
+          "text": "Būtent tada rizika institucijoms tampa apčiuopiama. Vengrijoje ir Lenkijoje reformomis siekta sumažinti teismų nepriklausomybę. Pralaimėję rinkimus, kai kurie lyderiai net ginčija balsavimo teisėtumą, kaip per 2021 m. Kapitolijaus šturmą."
         },
         {
           "type": "funFact",
-          "text": "Un des présidents les plus populaires des États-Unis, Andrew Jackson, était surnommé « King Mob » (le roi de la foule) par ses détracteurs, car il avait ouvert la Maison-Blanche au peuple pour une fête qui a fini en quasi-émeute."
+          "text": "Vieną populiariausių JAV prezidentų Andrew Jacksoną kritikai pravardžiavo „King Mob“ (minios karalius), nes jis atvėrė Baltuosius rūmus liaudžiai, o šventė baigėsi beveik riaušėmis."
         },
         {
           "type": "paragraph",
-          "text": "Mais cette montée agit aussi comme un signal d'alarme utile : elle force les partis traditionnels à se saisir de sujets délaissés, comme la souveraineté industrielle ou les services publics dans les zones rurales."
+          "text": "Vis dėlto šis kilimas yra ir naudingas pavojaus signalas: jis verčia tradicines partijas imtis apleistų temų, tokių kaip pramonės suverenumas ar viešosios paslaugos kaimo vietovėse."
         },
         {
           "type": "takeaway",
-          "text": "Le populisme divise le monde en « peuple pur » contre « élite corrompue ». Il monte partout depuis 2010, porté par les inégalités liées à la mondialisation et une insécurité culturelle amplifiée par les réseaux sociaux."
+          "text": "Populizmas dalija pasaulį į „tyrą liaudį“ ir „korumpuotą elitą“. Nuo 2010 m. jis stiprėja visur, maitinamas globalizacijos sukeltos nelygybės ir socialinių tinklų sustiprinto kultūrinio nesaugumo."
         }
       ]
     }

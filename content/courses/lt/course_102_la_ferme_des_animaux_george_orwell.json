@@ -1,109 +1,109 @@
 {
   "id": "course_102_la_ferme_des_animaux_george_orwell",
-  "title": "Qui sont les cochons de « La Ferme des animaux » ?",
+  "title": "Kas yra „Gyvulių ūkio“ kiaulės?",
   "subtitle": "1945",
   "subject": "litterature",
   "subcategory": "Anglo-saxons & littérature mondiale",
-  "description": "En 1945, Orwell raconte une ferme où les animaux chassent l'homme, puis voient les cochons reprendre le pouvoir. Une allégorie limpide de la Révolution russe et de la trahison révolutionnaire.",
+  "description": "1945 m. Orwellas pasakoja apie ūkį, kuriame gyvuliai išveja žmogų, o paskui mato, kaip valdžią vėl užgrobia kiaulės. Tai aiški Rusijos revoliucijos ir revoliucijos išdavystės alegorija.",
   "hero": {
     "image": "la_ferme_des_animaux_orwell",
     "ratio": "16:9",
-    "hook": "Trente mille mots, des animaux, et une leçon politique que le monde n'a pas fini d'apprendre."
+    "hook": "Trisdešimt tūkstančių žodžių, gyvuliai ir politinė pamoka, kurios pasaulis vis dar mokosi."
   },
   "sections": [
     {
       "id": "course_102_la_ferme_des_animaux_george_orwell_intro",
-      "title": "Introduction",
+      "title": "Įvadas",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Publié en **1945**, **La Ferme des animaux** ressemble à un conte pour enfants. Sous cette apparence simple, **George Orwell** décrit comment une révolution populaire peut être confisquée par une élite corrompue. En à peine **30 000 mots**, il livre l'une des **[[Rusijos revoliucijos alegorija]]** les plus efficaces jamais écrites."
+          "text": "**1945** m. išleistas **Gyvulių ūkis** primena pasaką vaikams. Po šiuo paprastu apvalkalu **George'as Orwellas** parodo, kaip liaudies revoliuciją gali pasisavinti korumpuotas elitas. Vos per **30 000 žodžių** gimsta **[[Rusijos revoliucijos alegorija]]**, viena taikliausių kada nors parašytų."
         },
         {
           "type": "image",
           "asset": "animal_farm_pigs_barnyard_orwell",
           "ratio": "4:3",
-          "caption": "Des cochons au pouvoir : la fable qui dénonce la corruption révolutionnaire."
+          "caption": "Kiaulės valdžioje: pasakėčia, demaskuojanti revoliucijos korupciją."
         }
       ]
     },
     {
       "id": "course_102_la_ferme_des_animaux_george_orwell_p1",
-      "title": "Une allégorie chirurgicale de l'histoire soviétique",
+      "title": "Chirurgiškai tiksli sovietinės istorijos alegorija",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le livre naît pendant la **[[Antrasis pasaulinis karas]]**, alors que l'URSS est l'alliée de l'Occident contre l'Allemagne nazie. Critiquer **Staline** passe alors pour une trahison politique. Orwell attend la fin du conflit pour publier. Chaque animal correspond à une figure historique : le **Vieux Major** évoque **Marx** et **Lénine**, **Napoléon** calque **Staline**, **Boule de neige** rappelle **Trotski**, rival de Staline, exilé puis assassiné."
+          "text": "Knyga gimsta, kai vyksta **[[Antrasis pasaulinis karas]]**, o SSRS yra Vakarų sąjungininkė prieš nacistinę Vokietiją. Tuo metu kritikuoti **Staliną** laikoma politine išdavyste. Orwellas laukia, kol karas baigsis, ir tik tada knygą išleidžia. Kiekvienas gyvulys atitinka istorinę asmenybę: **Senasis Majoras** primena **Marksą** ir **Leniną**, **Napoleonas** yra **Stalino** kopija, o **Snieguolis** primena **Trockį**, Stalino varžovą, ištremtą ir vėliau nužudytą."
         },
         {
           "type": "funFact",
-          "text": "T.S. Eliot, alors éditeur, refusa le manuscrit en arguant que les porcs intelligents risquaient d'offenser les hommes d'État."
+          "text": "T. S. Eliotas, tuo metu dirbęs leidėju, atmetė rankraštį, nes esą protingos kiaulės galėjo įžeisti valstybės veikėjus."
         },
         {
           "type": "paragraph",
-          "text": "Les **chiens** de Napoléon figurent la police secrète et la terreur politique. **Malabar**, le cheval laborieux, incarne le **[[proletariatas]]** exploité jusqu'à l'épuisement total. **Brille-Babil**, le propagandiste cochon, transforme chaque échec en victoire officielle, réécrivant l'histoire au fil des jours. Orwell décrit le **[[Stalinizmas]]** avec la précision d'un pamphlet et la légèreté d'une fable."
+          "text": "Napoleono **šunys** vaizduoja slaptąją policiją ir politinį terorą. Darbštus arklys **Boksininkas** yra **[[proletariatas]]**, išnaudojamas iki visiško išsekimo. Kiaulė propagandistas **Cypėjas** kiekvieną nesėkmę paverčia oficialia pergale ir diena po dienos perrašo istoriją. Orwello knygoje **[[Stalinizmas]]** aprašytas pamfleto tikslumu ir pasakėčios lengvumu."
         }
       ]
     },
     {
       "id": "course_102_la_ferme_des_animaux_george_orwell_p2",
-      "title": "Le basculement : de l'utopie à la dictature",
+      "title": "Lūžis: nuo utopijos prie diktatūros",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Les animaux chassent le fermier **Jones**, symbole du **[[Caras Nikolajus II]]**, renversé en **1917**. Ils proclament l'**Animalisme** et inscrivent les **Sept Commandements** sur le mur de la grange. L'égalité semble enfin possible. Puis Napoléon chasse Boule de neige avec ses chiens dressés à la violence et installe la terreur."
+          "text": "Gyvuliai išveja fermerį **Jonesą**, kurio prototipas yra **[[Caras Nikolajus II]]**, nuverstas **1917** m. Jie paskelbia **gyvulizmą** ir užrašo **Septynis įsakymus** ant tvarto sienos. Atrodo, kad lygybė pagaliau įmanoma. Tačiau Napoleonas su smurtui išdresuotais šunimis išveja Snieguolį ir įveda terorą."
         },
         {
           "type": "image",
           "asset": "farm_animals_barn_countryside",
           "ratio": "16:9",
-          "caption": "La ferme au départ : une utopie qui bascule vers la dictature."
+          "caption": "Ūkis pradžioje: utopija, kuri virsta diktatūra."
         },
         {
           "type": "paragraph",
-          "text": "Le moulin à vent devient un symbole de mobilisation forcée : les animaux s'épuisent à le construire pendant que les cochons se déclarent « travailleurs intellectuels » et s'accaparent les ressources. Les pommes et le lait sont d'abord réservés aux dirigeants, au nom du « cerveau » qu'il faudrait nourrir. La corruption commence par de petits privilèges, puis s'installe comme une norme. Les procès publics et les exécutions rappellent les **grandes purges** staliniennes des années 1930."
+          "text": "Vėjo malūnas tampa priverstinės mobilizacijos simboliu: gyvuliai nusikamuoja jį statydami, o kiaulės pasiskelbia „protinio darbo darbininkėmis“ ir pasisavina išteklius. Obuoliai ir pienas iš pradžių skiriami vadams, neva reikia maitinti „smegenis“. Korupcija prasideda nuo smulkių privilegijų, o paskui tampa norma. Viešieji teismai ir egzekucijos primena 1930-ųjų stalininius **didžiuosius valymus**."
         }
       ]
     },
     {
       "id": "course_102_la_ferme_des_animaux_george_orwell_p3",
-      "title": "La modification du langage et la trahison finale",
+      "title": "Kalbos keitimas ir galutinė išdavystė",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Orwell montre que celui qui contrôle les mots contrôle la réalité perçue. Les cochons modifient les Commandements la nuit, quand les animaux dorment : « Aucun animal ne dormira dans un lit » devient « avec des draps ». L'interdiction de l'alcool gagne la mention « avec excès ». La mémoire collective est effacée mot par mot, jusqu'à ce que personne ne se souvienne de l'originel."
+          "text": "Orwellas parodo: kas valdo žodžius, tas valdo ir tai, kaip suvokiama tikrovė. Kiaulės keičia įsakymus naktį, kai gyvuliai miega: „Joks gyvulys nemiegos lovoje“ virsta „ant paklodžių“. Prie alkoholio draudimo atsiranda žodžiai „per daug“. Bendra atmintis trinama žodis po žodžio, kol niekas nebeprisimena, kaip buvo iš pradžių."
         },
         {
           "type": "quote",
-          "text": "Tous les animaux sont égaux, mais certains animaux sont plus égaux que d'autres.",
-          "attribution": "George Orwell, La Ferme des animaux"
+          "text": "Visi gyvuliai lygūs, bet kai kurie gyvuliai lygesni už kitus.",
+          "attribution": "George'as Orwellas, Gyvulių ūkis"
         },
         {
           "type": "paragraph",
-          "text": "C'est une **[[naujakalbė]]** avant l'heure : le langage ne communique plus, il masque. À la fin, les cochons marchent sur deux pattes, s'habillent et banquetent avec des fermiers humains. Les autres animaux, regardant du porc à l'homme et de l'homme au porc, ne distinguent plus les uns des autres. La **[[Rusijos revoliucija]]** a produit exactement ce qu'elle prétendait combattre."
+          "text": "Tai dar iki laiko gimusi **[[naujakalbė]]**: kalba nebeperduoda minčių, ji jas slepia. Pabaigoje kiaulės vaikšto dviem kojomis, rengiasi drabužiais ir puotauja su žmonėmis fermeriais. Kiti gyvuliai, žvelgdami tai į kiaulę, tai į žmogų, nebeatskiria vienų nuo kitų. **[[Rusijos revoliucija]]** sukūrė būtent tai, prieš ką tvirtino kovojanti."
         }
       ]
     },
     {
       "id": "course_102_la_ferme_des_animaux_george_orwell_p4",
-      "title": "Un avertissement universel sur le pouvoir",
+      "title": "Visuotinis perspėjimas apie valdžią",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Si le livre vise d'abord la Révolution russe, son message dépasse l'histoire soviétique. Orwell analyse la soumission, la propagande et la fragilité des idéaux face à l'ambition personnelle. Sans éducation critique et sans mémoire collective, les peuples voient leurs rêves de liberté dévoyés par ceux qui prennent le pouvoir au nom du peuple."
+          "text": "Nors knyga pirmiausia taikoma Rusijos revoliucijai, jos žinia peržengia sovietinę istoriją. Orwellas nagrinėja paklusnumą, propagandą ir idealų trapumą asmeninių ambicijų akivaizdoje. Be kritinio ugdymo ir bendros atminties tautų laisvės svajones iškreipia tie, kurie paima valdžią tautos vardu."
         },
         {
           "type": "paragraph",
-          "text": "Vendu à plus de **30 millions** d'exemplaires, le roman touche des lecteurs de tous âges et de toutes cultures. Enfant, on lit une histoire d'animaux ; adulte, on y lit un traité de science politique. La leçon reste simple et actuelle : quand les mots perdent leur sens, la liberté physique suit rapidement. Orwell prépare ici les thèmes qu'il poussera à l'extrême dans **1984** quatre ans plus tard."
+          "text": "Parduotas daugiau nei **30 milijonų** egzempliorių tiražu, romanas pasiekia įvairaus amžiaus ir įvairių kultūrų skaitytojus. Vaikystėje jame skaitai istoriją apie gyvulius, o užaugus jau politikos mokslo traktatą. Pamoka paprasta ir aktuali: kai žodžiai praranda prasmę, netrukus prarandama ir fizinė laisvė. Čia Orwellas parengia temas, kurias po ketverių metų iki kraštutinumo išplės romane **1984**."
         },
         {
           "type": "takeaway",
-          "text": "**La Ferme des animaux** montre qu'une révolution trahie passe par la manipulation du langage et la confiscation de la mémoire. Orwell prouve qu'une fable courte peut dire plus qu'un discours de mille pages."
+          "text": "**Gyvulių ūkis** parodo, kad išduota revoliucija remiasi kalbos manipuliacija ir atminties atėmimu. Orwellas įrodo, kad trumpa pasakėčia gali pasakyti daugiau nei tūkstančio puslapių kalba."
         }
       ]
     }

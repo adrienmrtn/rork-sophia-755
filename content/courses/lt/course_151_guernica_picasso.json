@@ -1,128 +1,128 @@
 {
   "id": "course_151_guernica_picasso",
-  "title": "Que dit « Guernica » de Picasso sur la guerre ?",
+  "title": "Ką Picasso'o „Gernika“ sako apie karą?",
   "subtitle": "1937",
   "subject": "art",
   "subcategory": "Cinéma, photo & architecture + œuvres iconiques",
-  "description": "Après le bombardement de Guernica, Picasso peint un cri noir et blanc contre la guerre. L'œuvre voyage, puis rentre en Espagne après Franco.",
+  "description": "Po Gernikos bombardavimo Picasso'as nutapo juodai baltą šauksmą prieš karą. Kūrinys keliauja po pasaulį, o po Franco grįžta į Ispaniją.",
   "hero": {
     "image": "guernica_picasso",
     "ratio": "16:9",
-    "hook": "Un village basque incendié, une toile qui refuse d'oublier."
+    "hook": "Sudegintas baskų kaimas ir drobė, kuri atsisako pamiršti."
   },
   "sections": [
     {
       "id": "course_151_guernica_picasso_intro",
-      "title": "Introduction",
+      "title": "Įvadas",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le **26 avril 1937**, la ville basque de Guernica est bombardée pendant la [[Ispanijos pilietinis karas]]. Picasso, à Paris, répond par une toile immense, en noir et blanc."
+          "text": "**1937 m. balandžio 26 d.**, kai vyksta [[Ispanijos pilietinis karas]], bombarduojamas baskų miestas Gernika. Paryžiuje gyvenantis Picasso'as atsako milžiniška juodai balta drobe."
         },
         {
           "type": "paragraph",
-          "text": "*Guernica* devient l'une des images anti-guerre les plus puissantes du XXe siècle."
+          "text": "*Gernika* tampa vienu galingiausių XX a. antikarinių vaizdų."
         }
       ]
     },
     {
       "id": "course_151_guernica_picasso_p1",
-      "title": "La guerre d'Espagne",
+      "title": "Ispanijos karas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Depuis **1936**, l'Espagne se déchire entre la [[Antroji Ispanijos Respublika]] et les nationalistes de Franco, soutenus par la [[Kondoro legionas]] allemande. Le [[kiliminis bombardavimas]] de Guernica vise à terroriser."
+          "text": "Nuo **1936** m. Ispaniją drasko kova tarp dviejų stovyklų: [[Antroji Ispanijos Respublika]] ir Franco nacionalistai, kuriuos remia vokiečių [[Kondoro legionas]]. Gernikoje panaudotas [[kiliminis bombardavimas]] turi įbauginti."
         },
         {
           "type": "paragraph",
-          "text": "Picasso travaille vite, sur de grandes études. Il abandonne la couleur pour coller à l'urgence du témoignage. Le format monumental interdit la contemplation confortable."
+          "text": "Picasso'as dirba greitai, daro didelius eskizus. Jis atsisako spalvų, kad perteiktų liudijimo skubą. Monumentalus formatas neleidžia ramiai grožėtis."
         },
         {
           "type": "image",
           "asset": "guernica_bombing_aftermath_1937",
           "ratio": "4:3",
-          "caption": "Guernica en ruines : le fait divers devient symbole."
+          "caption": "Gernikos griuvėsiai: kronikos įvykis tampa simboliu."
         }
       ]
     },
     {
       "id": "course_151_guernica_picasso_p2",
-      "title": "Une peinture-cri",
+      "title": "Paveikslas-šauksmas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Picasso compose un chaos de corps, cheval, taureau, ampoule. Pas de couleur : comme une une de journal. La monumentalité force le spectateur à faire face."
+          "text": "Picasso'as sukuria kūnų, arklio, jaučio ir lemputės chaosą. Jokių spalvų, kaip pirmajame laikraščio puslapyje. Monumentalumas verčia žiūrovą pažvelgti tiesai į akis."
         },
         {
           "type": "paragraph",
-          "text": "Cheval éventré, mère à l'enfant, bras levés : chaque motif est lisible sans légende. C'est une grammaire de la terreur civile, pas une bataille héroïque."
+          "text": "Perskrostas arklys, motina su vaiku, iškeltos rankos: kiekvienas motyvas suprantamas be paaiškinimo. Tai civilių siaubo gramatika, o ne didvyriškas mūšis."
         },
         {
           "type": "funFact",
-          "text": "Il a refusé que le tableau aille en Espagne tant que Franco resterait au pouvoir."
+          "text": "Jis neleido vežti paveikslo į Ispaniją, kol valdžioje bus Franco."
         }
       ]
     },
     {
       "id": "course_151_guernica_picasso_p3",
-      "title": "Exil au MoMA",
+      "title": "Tremtis MoMA",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Après l'Exposition universelle de Paris, *Guernica* voyage puis reste longtemps au [[MoMA]] de New York, protégé pendant la [[Šaltasis karas]] franquiste. Il rentre à Madrid en **1981**."
+          "text": "Po Paryžiaus pasaulinės parodos *Gernika* keliauja, o paskui ilgam lieka Niujorke, kur ją saugo [[MoMA]]. Ten ji išlaukia, kol trunka frankistinis [[Šaltasis karas]]. Į Madridą ji grįžta **1981** m."
         },
         {
           "type": "paragraph",
-          "text": "Pendant la dictature, le tableau devient un exilé politique. Son retour en Espagne après Franco est un événement national autant qu'esthétique."
+          "text": "Diktatūros metais paveikslas tampa politiniu tremtiniu. Jo sugrįžimas į Ispaniją po Franco yra ne tik estetinis, bet ir nacionalinis įvykis."
         },
         {
           "type": "image",
           "asset": "guernica_picasso_painting_detail",
           "ratio": "4:3",
-          "caption": "Noir, blanc, gris : la guerre sans héroïsme."
+          "caption": "Juoda, balta, pilka: karas be didvyriškumo."
         }
       ]
     },
     {
       "id": "course_151_guernica_picasso_p4",
-      "title": "Héritage",
+      "title": "Palikimas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Reproduite devant l'[[JTO]] comme avertissement, l'œuvre reste un langage universel contre le massacre des civils."
+          "text": "Kūrinio reprodukciją kaip įspėjimą eksponuoja [[JTO]], o pats kūrinys lieka visuotine kalba prieš civilių žudynes."
         },
         {
           "type": "paragraph",
-          "text": "Pour bien saisir Guernica, Picasso, il faut garder une chose en tête : chaque détail technique sert une émotion ou une idée. L'œuvre n'est jamais seulement décorative."
+          "text": "Norint gerai suprasti Picasso'o „Gerniką“, reikia atsiminti vieną dalyką: kiekviena techninė detalė tarnauja emocijai ar idėjai. Kūrinys niekada nėra vien dekoratyvus."
         },
         {
           "type": "paragraph",
-          "text": "Le contexte compte autant que le style. Dates, lieux, commanditaires, public : tout cela explique pourquoi une forme apparaît à un moment précis, et pas avant."
+          "text": "Kontekstas svarbus ne mažiau nei stilius. Datos, vietos, užsakovai, publika: visa tai paaiškina, kodėl tam tikra forma atsiranda būtent tuo metu, o ne anksčiau."
         },
         {
           "type": "paragraph",
-          "text": "Enfin, l'héritage se mesure dans le temps long. Ce que nous voyons aujourd'hui dans les musées, les films ou la musique populaire porte encore la trace de ces inventions."
+          "text": "Galiausiai palikimas matuojamas ilgu laiku. Tai, ką šiandien matome muziejuose, filmuose ar populiariojoje muzikoje, vis dar turi šių išradimų pėdsakų."
         },
         {
           "type": "paragraph",
-          "text": "Chaque nouvelle guerre redonne à *Guernica* une actualité triste. L'œuvre fonctionne comme un avertissement qu'on n'écoute jamais assez."
+          "text": "Kiekvienas naujas karas *Gernikai* vėl suteikia liūdną aktualumą. Kūrinys veikia kaip įspėjimas, kurio niekada neįsiklausoma pakankamai."
         },
         {
           "type": "paragraph",
-          "text": "Pour bien saisir Guernica, Picasso, il faut garder une chose en tête : chaque détail technique sert une émotion ou une idée. L'œuvre n'est jamais seulement décorative."
+          "text": "Norint gerai suprasti Picasso'o „Gerniką“, reikia atsiminti vieną dalyką: kiekviena techninė detalė tarnauja emocijai ar idėjai. Kūrinys niekada nėra vien dekoratyvus."
         },
         {
           "type": "paragraph",
-          "text": "Le contexte compte autant que le style. Dates, lieux, commanditaires, public : tout cela explique pourquoi une forme apparaît à un moment précis, et pas avant."
+          "text": "Kontekstas svarbus ne mažiau nei stilius. Datos, vietos, užsakovai, publika: visa tai paaiškina, kodėl tam tikra forma atsiranda būtent tuo metu, o ne anksčiau."
         },
         {
           "type": "takeaway",
-          "text": "Avec Guernica, Picasso a transformé un bombardement de 1937 en mémoire visuelle mondiale de la guerre totale."
+          "text": "„Gernikoje“ Picasso'as 1937 m. bombardavimą pavertė pasauline totalinio karo vizualine atmintimi."
         }
       ]
     }

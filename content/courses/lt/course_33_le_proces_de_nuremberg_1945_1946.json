@@ -1,112 +1,112 @@
 {
   "id": "course_33_le_proces_de_nuremberg_1945_1946",
-  "title": "Comment les nazis ont-ils été jugés à Nuremberg ?",
+  "title": "Kaip Niurnberge buvo teisiami naciai?",
   "subtitle": "1945-1946",
   "subject": "histoire",
   "subcategory": "Guerre froide & monde contemporain",
-  "description": "Entre **1945** et **1946**, **24** dirigeants nazis sont jugés à Nuremberg. Pour la première fois, un tribunal international invente les crimes contre l'humanité.",
+  "description": "Nuo **1945** iki **1946** m. Niurnberge teisiami **24** nacių vadovai. Pirmą kartą tarptautinis teismas sukuria nusikaltimų žmoniškumui sąvoką.",
   "hero": {
     "image": "le_proces_de_nuremberg",
     "ratio": "16:9",
-    "hook": "Juger les vaincus pour inventer une justice mondiale, pas seulement pour se venger."
+    "hook": "Teisti nugalėtuosius, kad gimtų pasaulinis teisingumas, o ne vien iš keršto."
   },
   "sections": [
     {
       "id": "course_33_le_proces_de_nuremberg_1945_1946_intro",
-      "title": "Introduction",
+      "title": "Įžanga",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "De novembre **1945** à octobre **1946**, la ville allemande de **Nuremberg**, autrefois vitrine des nazis, accueille un tribunal sans précédent. Les Alliés ne se contentent pas d'avoir gagné la guerre. Ils jugent."
+          "text": "Nuo **1945** m. lapkričio iki **1946** m. spalio Vokietijos mieste **Niurnberge**, kadaise buvusiame nacių vitrina, posėdžiauja precedento neturintis teismas. Sąjungininkams neužtenka laimėti karą. Jie teisia."
         },
         {
           "type": "paragraph",
-          "text": "Ce procès invente une idée simple et radicale : même un dirigeant puissant peut répondre de ses actes devant la justice. Il consacre aussi les **[[nusikaltimai žmoniškumui]]** comme catégorie du **[[tarptautinė teisė]]**."
+          "text": "Šis procesas įtvirtina paprastą ir radikalią idėją: net galingas vadovas gali atsakyti teismui už savo veiksmus. Be to, **[[tarptautinė teisė]]** gauna naują kategoriją: **[[nusikaltimai žmoniškumui]]**."
         }
       ]
     },
     {
       "id": "course_33_le_proces_de_nuremberg_1945_1946_p1",
-      "title": "Choisir le droit plutôt que la vengeance",
+      "title": "Teisė, o ne kerštas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le Premier ministre britannique **Winston Churchill** envisage d'abord des exécutions sommaires. **Joseph Staline**, dirigeant de l'URSS, préfère des procès dont le verdict serait écrit d'avance. C'est la ligne américaine, portée par le juriste **Robert Jackson**, qui l'emporte : un procès avec preuves et droits de la défense."
+          "text": "Didžiosios Britanijos ministras pirmininkas **Winstonas Churchillis** iš pradžių svarsto apie egzekucijas be teismo. SSRS vadovas **Josifas Stalinas** nori procesų, kurių nuosprendis būtų parašytas iš anksto. Laimi amerikiečių linija, kurią gina teisininkas **Robertas Jacksonas**: procesas su įrodymais ir teise į gynybą."
         },
         {
           "type": "paragraph",
-          "text": "Le **[[Londono chartija]]** (août **1945**) crée le Tribunal militaire international. Quatre chefs d'accusation : complot, crimes contre la paix, crimes de guerre, et pour la première fois les **[[nusikaltimai žmoniškumui]]**."
+          "text": "Tarptautinį karinį tribunolą įsteigia **[[Londono chartija]]** (**1945** m. rugpjūtis). Keturi kaltinimai: sąmokslas, nusikaltimai taikai, karo nusikaltimai ir, pirmą kartą, **[[nusikaltimai žmoniškumui]]**."
         },
         {
           "type": "image",
           "asset": "nuremberg_trials_defendants_dock",
           "ratio": "4:3",
-          "caption": "Le banc des accusés à Nuremberg, face aux juges des quatre Alliés."
+          "caption": "Kaltinamųjų suolas Niurnberge priešais keturių sąjungininkų teisėjus."
         },
         {
           "type": "funFact",
-          "text": "Nuremberg n'est pas choisi seulement pour le symbole : c'est l'une des rares villes allemandes avec un palais de justice intact et une prison reliée par un tunnel."
+          "text": "Niurnbergas pasirinktas ne vien dėl simbolio: tai vienas iš nedaugelio Vokietijos miestų, kuriame išliko sveiki teismo rūmai ir kalėjimas, sujungtas su jais tuneliu."
         }
       ]
     },
     {
       "id": "course_33_le_proces_de_nuremberg_1945_1946_p2",
-      "title": "Des preuves face aux accusés",
+      "title": "Įrodymai prieš kaltinamuosius",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Vingt-quatre accusés représentent le pouvoir nazi. **Hermann Göring**, ancien chef de la **[[liuftvafė]]** (l'armée de l'air allemande), domine le banc par son arrogance. **Albert Speer**, ministre de l'Armement, reconnaît une part de responsabilité."
+          "text": "Dvidešimt keturi kaltinamieji atstovauja nacių valdžiai. **Hermannas Göringas**, kurio vadovaujama kadaise buvo **[[liuftvafė]]** (Vokietijos karinės oro pajėgos), savo arogancija užgožia visą suolą. Ginkluotės ministras **Albertas Speeras** pripažįsta dalį atsakomybės."
         },
         {
           "type": "image",
           "asset": "hermann_goring_nuremberg_trial",
           "ratio": "4:3",
-          "caption": "Hermann Göring au procès de Nuremberg."
+          "caption": "Hermannas Göringas Niurnbergo procese."
         },
         {
           "type": "paragraph",
-          "text": "Jackson s'appuie surtout sur les archives nazies elles-mêmes : millions de pages, photos, agendas. Le choc vient aussi des films tournés à la libération des camps. La salle se tait. On ne juge plus une défaite. On juge un système."
+          "text": "Jacksonas daugiausia remiasi pačių nacių archyvais: milijonai puslapių, nuotraukos, užrašų knygelės. Sukrečia ir filmai, nufilmuoti išlaisvinant stovyklas. Salėje stoja tyla. Teisiamas jau ne pralaimėjimas. Teisiama sistema."
         }
       ]
     },
     {
       "id": "course_33_le_proces_de_nuremberg_1945_1946_p3",
-      "title": "Un verdict qui compte encore",
+      "title": "Nuosprendis, svarbus iki šiol",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le **1er octobre 1946**, le verdict tombe : **12** condamnations à mort, **3** perpétuités, **4** peines de prison, **3** acquittements. Pas de condamnation automatique : la culpabilité individuelle compte."
+          "text": "**1946 m. spalio 1 d.** paskelbiamas nuosprendis: **12** mirties bausmių, **3** kalėjimo iki gyvos galvos bausmės, **4** laisvės atėmimo bausmės, **3** išteisinimai. Jokio automatinio apkaltinimo: svarbi asmeninė kaltė."
         },
         {
           "type": "paragraph",
-          "text": "Les **[[Niurnbergo principai]]** affirment qu'obéir à un supérieur ne lave pas d'un crime. Plus tard naîtront les tribunaux pour l'ex-Yougoslavie et le Rwanda, puis la **[[Tarptautinis baudžiamasis teismas]]** (**2002**)."
+          "text": "**[[Niurnbergo principai]]** skelbia, kad paklusimas viršininkui nusikaltimo nepateisina. Vėliau atsiras tribunolai buvusiai Jugoslavijai ir Ruandai, o paskui ir **[[Tarptautinis baudžiamasis teismas]]** (**2002**)."
         },
         {
           "type": "funFact",
-          "text": "Göring se suicide la veille de son exécution avec une capsule de cyanure. On n'a jamais pleinement élucidé comment il l'avait obtenue."
+          "text": "Göringas nusižudo egzekucijos išvakarėse, prarijęs cianido kapsulę. Taip ir nebuvo iki galo išsiaiškinta, kaip jis ją gavo."
         }
       ]
     },
     {
       "id": "course_33_le_proces_de_nuremberg_1945_1946_p4",
-      "title": "Des avancées, et des limites",
+      "title": "Laimėjimai ir ribos",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "On a critiqué la **[[atgalinio galiojimo draudimas]]** : juger des crimes absents des codes d'avant-guerre. Et l'absence de jugement sur certains crimes alliés, comme le massacre de **[[Katynė]]** (officiers polonais tués par les Soviétiques en **1940**), a nourri l'idée d'une justice à géométrie variable."
+          "text": "Kritikai teigė, kad buvo pažeistas **[[atgalinio galiojimo draudimas]]**: teisiami nusikaltimai, kurių nebuvo prieškario kodeksuose. O tai, kad nebuvo teisiami kai kurie sąjungininkų nusikaltimai, pavyzdžiui, **[[Katynė]]** (**1940** m. sovietų nužudyti lenkų karininkai), stiprino nuomonę, kad teisingumas taiko dvigubus standartus."
         },
         {
           "type": "paragraph",
-          "text": "Pourtant Nuremberg fixe une vérité historique difficile à nier et prépare la Déclaration universelle des droits de l'homme de **1948** : même un État puissant n'est pas au-dessus du droit."
+          "text": "Vis dėlto Niurnbergas įtvirtina istorinę tiesą, kurią sunku paneigti, ir paruošia dirvą **1948** m. Visuotinei žmogaus teisių deklaracijai: net galinga valstybė nėra aukščiau teisės."
         },
         {
           "type": "takeaway",
-          "text": "Nuremberg (**1945-1946**) invente les **[[nusikaltimai žmoniškumui]]** et affirme qu'un dirigeant peut être jugé individuellement par un tribunal international."
+          "text": "Niurnbergo procese (**1945-1946**) gimsta nauja kategorija, **[[nusikaltimai žmoniškumui]]**, ir įtvirtinama, kad tarptautinis teismas gali asmeniškai teisti vadovą."
         }
       ]
     }

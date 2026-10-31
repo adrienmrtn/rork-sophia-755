@@ -1,134 +1,134 @@
 {
   "id": "course_311_qui_a_invente_les_zombies",
-  "title": "Qui a inventé les zombies ?",
-  "subtitle": "Du vaudou à Hollywood",
+  "title": "Kas išrado zombius?",
+  "subtitle": "Nuo vudu iki Holivudo",
   "subject": "mythologie",
   "subcategory": "Légendes & créatures",
-  "description": "Le mort-vivant lent et affamé du cinéma n'a pas cent ans. Derrière lui se cache une figure haïtienne bien plus ancienne, et bien plus triste : une personne à qui l'on a volé son âme.",
+  "description": "Lėtam ir alkanam kino gyvam numirėliui dar nėra šimto metų. Už jo slypi kur kas senesnė ir liūdnesnė haitiečių figūra: žmogus, iš kurio pavogta siela.",
   "author": "vedran-obucina",
   "hero": {
     "image": "night_of_the_living_dead_1968_still",
     "ratio": "4:3",
-    "hook": "Avant de dévorer les vivants à l'écran, le zombi était un homme à qui l'on avait volé sa volonté."
+    "hook": "Prieš ekrane ryjant gyvuosius, zombis buvo žmogus, iš kurio pavogta valia."
   },
   "sections": [
     {
       "id": "course_311_qui_a_invente_les_zombies_intro",
-      "title": "Introduction",
+      "title": "Įvadas",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Un zombie, chacun voit de quoi il s'agit : un mort lent, sans voix, qui avance sans but. Cette image semble très ancienne. Elle ne l'est pas. Le zombie de cinéma est un produit du **XXe siècle**, quand le film d'horreur en a fait un monstre qui dévore la chair des vivants."
+          "text": "Zombį kiekvienas įsivaizduoja: lėtas, bebalsis numirėlis, be tikslo einantis pirmyn. Šis vaizdas atrodo labai senas. Bet taip nėra. Kino zombis yra **XX a.** produktas: siaubo filmai pavertė jį pabaisa, ryjančia gyvųjų kūną."
         },
         {
           "type": "paragraph",
-          "text": "Une idée bien plus vieille vient d'Haïti. Le [[vudu]], religion locale, s'est formé à partir de croyances d'Afrique de l'Ouest, du christianisme catholique, de l'histoire de l'île et de coutumes populaires. Dans cet univers, le zonbi n'est pas un cadavre affamé qui poursuit des innocents. C'est une personne à qui l'on a pris son âme ou son libre arbitre. Un sorcier, le [[bokoras]], pratique la magie qui permet de contrôler ces êtres. Comment cette figure haïtienne est-elle devenue un monstre connu du monde entier ?"
+          "text": "Kur kas senesnė idėja kilo Haityje. Vietinė religija [[vudu]] susiformavo iš Vakarų Afrikos tikėjimų, katalikiškos krikščionybės, salos istorijos ir liaudies papročių. Šiame pasaulyje zonbi nėra alkanas lavonas, persekiojantis nekaltuosius. Tai žmogus, iš kurio atimta siela ar laisva valia. Raganius, vadinamas [[bokoras]], užsiima magija, leidžiančia valdyti šias būtybes. Kaip ši haitiečių figūra tapo visam pasauliui žinoma pabaisa?"
         }
       ]
     },
     {
       "id": "course_311_qui_a_invente_les_zombies_p1",
-      "title": "Un mot venu d'Haïti",
+      "title": "Žodis, atkeliavęs iš Haičio",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le mot zombi vient de langues africaines parlées par les personnes réduites en esclavage à leur arrivée en Haïti. En [[Haičio kreolų kalba]], il s'écrit zonbi ; en français, zombi. Il renvoie aux esprits, aux morts et aux personnes privées de volonté. Le zonbi peut être un corps qu'un autre contrôle après la mort. Il peut aussi être la part spirituelle d'une personne, son âme, capturée ou séparée du corps."
+          "text": "Žodis zombi kilo iš Afrikos kalbų, kuriomis kalbėjo į Haitį atgabenti pavergti žmonės. Kalba, vadinama [[Haičio kreolų kalba]], jis rašomas zonbi, prancūziškai zombi. Jis siejamas su dvasiomis, mirusiaisiais ir valios netekusiais žmonėmis. Zonbi gali būti kūnas, kurį po mirties valdo kitas. Tai gali būti ir dvasinė žmogaus dalis, jo siela, pagauta ar atskirta nuo kūno."
         },
         {
           "type": "image",
           "asset": "haitian_vodou_ceremony_drums_ritual",
           "ratio": "3:2",
-          "caption": "Un autel du vaudou haïtien, dédié aux esprits Petwo, Rada et Gede : bouteilles, fruits, fleurs, crânes et guirlandes."
+          "caption": "Haičio vudu altorius, skirtas Petwo, Rada ir Gede dvasioms: buteliai, vaisiai, gėlės, kaukolės ir girliandos."
         },
         {
           "type": "paragraph",
-          "text": "Ces croyances appartiennent à une culture religieuse et historique précise. Elles puisent dans les idées africaines sur le monde des esprits, mais aussi dans l'expérience de l'esclavage et de la vie en Haïti. Le zonbi n'a donc rien du monstre auquel on pense : c'est plutôt une figure triste, celle d'une personne qui a perdu sa liberté intérieure."
+          "text": "Šie tikėjimai priklauso konkrečiai religinei ir istorinei kultūrai. Jie semiasi Afrikos idėjų apie dvasių pasaulį, bet ir vergovės bei gyvenimo Haityje patirties. Taigi zonbi visai nepanašus į pabaisą, kurią įsivaizduojame: tai veikiau liūdna figūra, žmogus, praradęs vidinę laisvę."
         },
         {
           "type": "funFact",
-          "text": "Le zonbi haïtien n'est pas créé par une contagion ni par une morsure : cette idée vient de la culture populaire plus tardive. En Haïti, le zonbi tient à l'âme, au corps et à la perte de la liberté personnelle, par des rituels que les bokors gardent secrets."
+          "text": "Haičio zonbi neatsiranda nei per užkratą, nei per įkandimą: ši idėja kilo iš vėlesnės populiariosios kultūros. Haityje zonbi siejamas su siela, kūnu ir asmeninės laisvės praradimu, per ritualus, kuriuos bokorai laiko paslaptyje."
         }
       ]
     },
     {
       "id": "course_311_qui_a_invente_les_zombies_p2",
-      "title": "Les Américains réinventent la créature",
+      "title": "Amerikiečiai iš naujo išranda būtybę",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Au début du XXe siècle, des visiteurs américains, journalistes, aventuriers et écrivains, se mettent à écrire sur Haïti et sur le vaudou. Ils y rencontrent les zombis. Cela se passe pendant l'[[Amerikos okupuotas Haitis]], de **1915 à 1934**. Ils racontent les traditions et les histoires haïtiennes à un public qui ne sait presque rien du pays."
+          "text": "XX a. pradžioje amerikiečiai lankytojai, žurnalistai, nuotykių ieškotojai ir rašytojai, ima rašyti apie Haitį ir vudu. Ten jie susiduria su zombiais. Tai vyksta laikotarpiu, kuris vadinamas [[Amerikos okupuotas Haitis]], **1915-1934** m. Jie pasakoja haitiečių tradicijas ir istorijas publikai, kuri apie šalį beveik nieko nežino."
         },
         {
           "type": "paragraph",
-          "text": "Parmi les auteurs les plus influents figure [[Williamas Seabrookas]]. Son livre *The Magic Island*, paru en **1929**, change durablement le regard sur cette île des Caraïbes. Seabrook décrit Haïti comme un lieu mystérieux et dangereux. Sa description des zombis est assez fidèle : des morts qui travaillent contre leur volonté. Mais elle est trop simplifiée. Les Haïtiens situent le zombi dans leurs récits, leurs croyances et leur histoire ; les étrangers n'y voient qu'une horreur exotique. C'est là que le zombie devient un monstre inventé."
+          "text": "Vienas įtakingiausių autorių yra [[Williamas Seabrookas]]. Jo **1929** m. išleista knyga *The Magic Island* („Magiškoji sala“) ilgam pakeičia požiūrį į šią Karibų salą. Seabrookas vaizduoja Haitį kaip paslaptingą ir pavojingą vietą. Jo zombių aprašymas gana tikslus: mirusieji, dirbantys prieš savo valią. Bet jis per daug supaprastintas. Haitiečiai zombį sieja su savo pasakojimais, tikėjimais ir istorija, o užsieniečiai jame mato tik egzotišką siaubą. Būtent čia zombis tampa išgalvota pabaisa."
         }
       ]
     },
     {
       "id": "course_311_qui_a_invente_les_zombies_p3",
-      "title": "Hollywood lui donne un corps",
+      "title": "Holivudas suteikia jam kūną",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En **1932** sort le film *White Zombie*. Le zombi y est un vivant transformé en instrument obéissant, qu'un autre homme contrôle. Le film garde l'idée ancienne d'une personne privée de son libre arbitre. Hollywood fait du zombie une vedette de cinéma, mais pas encore celle que nous connaissons."
+          "text": "**1932** m. pasirodo filmas *White Zombie*. Zombis jame yra gyvas žmogus, paverstas paklusniu įrankiu, kurį valdo kitas žmogus. Filmas išlaiko senąją idėją apie laisvos valios netekusį žmogų. Holivudas paverčia zombį kino žvaigžde, bet dar ne tokia, kokią pažįstame."
         },
         {
           "type": "image",
           "asset": "white_zombie_1932_bela_lugosi_film_poster",
           "ratio": "2:3",
-          "caption": "L'affiche de White Zombie (1932) : les « yeux de zombie » et la poigne du maître, incarné par Bela Lugosi."
+          "caption": "Filmo „White Zombie“ (1932) plakatas: „zombio akys“ ir šeimininko, kurį vaidina Bela Lugosi, gniaužtai."
         },
         {
           "type": "paragraph",
-          "text": "Le grand tournant vient avec *La Nuit des morts-vivants* de [[George'as A. Romero]], en **1968**. Les morts s'y relèvent et attaquent les vivants. Aucun maître ne les commande. Ce changement fonde le zombie moderne : les films, les séries et les jeux vidéo qui suivent reprennent le même schéma."
+          "text": "Didysis lūžis įvyksta **1968** m., kai pasirodo filmas *Gyvųjų numirėlių naktis*, kurio režisierius [[George'as A. Romero]]. Mirusieji jame prisikelia ir puola gyvuosius. Jiems nevadovauja joks šeimininkas. Šis pokytis sukuria šiuolaikinį zombį: vėlesni filmai, serialai ir vaizdo žaidimai kartoja tą pačią schemą."
         }
       ]
     },
     {
       "id": "course_311_qui_a_invente_les_zombies_p4",
-      "title": "Une métaphore mondiale",
+      "title": "Pasaulinė metafora",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "On croise aujourd'hui des zombies dans les films, les romans, les applications et jusque dans les commentaires politiques. Une métaphore est une image qui se sert d'une chose pour parler d'une autre. Le zombie peut ainsi représenter la peur de la contagion, une masse qui suit des chefs manipulateurs, la surconsommation, l'effondrement d'une société ou la perte de contrôle. Son sens change avec l'époque et le lieu."
+          "text": "Šiandien zombių sutinkame filmuose, romanuose, programėlėse ir net politiniuose komentaruose. Metafora yra vaizdas, kai vienas dalykas pasitelkiamas kalbėti apie kitą. Taigi zombis gali reikšti užkrato baimę, manipuliuojančius vadus sekančią masę, perteklinį vartojimą, visuomenės žlugimą ar kontrolės praradimą. Jo prasmė keičiasi priklausomai nuo laiko ir vietos."
         },
         {
           "type": "timeline",
           "events": [
             {
               "date": "1915-1934",
-              "title": "L'occupation américaine d'Haïti",
-              "detail": "Journalistes et écrivains américains découvrent le vaudou et les zombis."
+              "title": "Amerikiečių Haičio okupacija",
+              "detail": "Amerikiečiai žurnalistai ir rašytojai atranda vudu ir zombius."
             },
             {
               "date": "1929",
               "title": "The Magic Island",
-              "detail": "William Seabrook présente Haïti comme une île mystérieuse et dangereuse."
+              "detail": "Williamas Seabrookas vaizduoja Haitį kaip paslaptingą ir pavojingą salą."
             },
             {
               "date": "1932",
               "title": "White Zombie",
-              "detail": "Premier zombi de cinéma : un vivant réduit à l'obéissance par un maître."
+              "detail": "Pirmasis kino zombis: gyvas žmogus, šeimininko priverstas paklusti."
             },
             {
               "date": "1968",
-              "title": "La Nuit des morts-vivants",
-              "detail": "Chez George A. Romero, les morts se relèvent et attaquent sans maître."
+              "title": "Gyvųjų numirėlių naktis",
+              "detail": "George'o A. Romero filme mirusieji prisikelia ir puola be šeimininko."
             }
           ]
         },
         {
           "type": "paragraph",
-          "text": "Le zombie n'a donc pas d'inventeur unique. Les traditions religieuses haïtiennes fournissent l'idée de départ. La culture populaire américaine en fait une histoire de monstre. Romero fixe ensuite la forme que nous connaissons : des morts qui se relèvent, attaquent les vivants et provoquent une catastrophe. Beaucoup de mains fabriquent un monstre, et les histoires changent en voyageant."
+          "text": "Taigi zombis neturi vieno išradėjo. Pradinę idėją suteikia Haičio religinės tradicijos. Amerikiečių populiarioji kultūra paverčia ją pasakojimu apie pabaisą. Vėliau Romero įtvirtina mums pažįstamą pavidalą: mirusieji prisikelia, puola gyvuosius ir sukelia katastrofą. Pabaisą kuria daug rankų, o istorijos keliaudamos keičiasi."
         },
         {
           "type": "takeaway",
-          "text": "Né en Haïti comme la figure d'une personne dépossédée de son âme, le zombi est devenu, par les récits américains puis par le cinéma de Romero, le mort-vivant affamé qui sert aujourd'hui de métaphore à toutes nos peurs collectives."
+          "text": "Gimęs Haityje kaip sielos netekusio žmogaus figūra, zombis per amerikiečių pasakojimus, o vėliau per Romero kiną tapo alkanu gyvu numirėliu, kuris šiandien tarnauja kaip visų mūsų kolektyvinių baimių metafora."
         }
       ]
     }

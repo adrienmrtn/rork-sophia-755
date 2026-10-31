@@ -1,123 +1,123 @@
 {
   "id": "course_251_pourquoi_londres_a_t_elle_brule_en_1666",
-  "title": "Pourquoi Londres a-t-elle brûlé en 1666 ?",
-  "subtitle": "Quatre jours de flammes",
+  "title": "Kodėl 1666 m. sudegė Londonas?",
+  "subtitle": "Keturios liepsnų dienos",
   "subject": "histoire",
   "subcategory": "Époque moderne & XIXe siècle",
-  "description": "Le 2 septembre 1666, un feu de boulangerie s'échappe de Pudding Lane. Quatre jours plus tard, 13 000 maisons et la cathédrale Saint-Paul sont en cendres, pour six morts recensés seulement.",
+  "description": "1666 m. rugsėjo 2 d. Pudding Lane gatvės kepykloje kilęs gaisras išsiveržia laukan. Po keturių dienų 13 000 namų ir Šv. Pauliaus katedra virsta pelenais, o užregistruotos vos šešios aukos.",
   "author": "benjamin-campbell",
   "hero": {
     "image": "great_fire_london_1666_thames_painting",
     "ratio": "4:3",
-    "hook": "Un four de boulanger, un vent violent et une ville de bois : il n'en fallait pas plus pour effacer le Londres médiéval."
+    "hook": "Kepėjo krosnis, smarkus vėjas ir medinis miestas: daugiau nieko nereikėjo, kad viduramžių Londonas išnyktų."
   },
   "sections": [
     {
       "id": "course_251_pourquoi_londres_a_t_elle_brule_en_1666_intro",
-      "title": "Introduction",
+      "title": "Įžanga",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le **2 septembre 1666**, un feu se déclare dans une boulangerie de [[Pudding Lane]], à Londres. Ce qui n'est d'abord qu'un petit foyer devient l'un des incendies les plus destructeurs de l'histoire de la ville. Les flammes brûlent pendant **quatre jours** et détruisent environ **13 000 maisons** et une grande partie de la ville médiévale, dont la [[Šv. Pauliaus katedra]]."
+          "text": "**1666 m. rugsėjo 2 d.** kyla gaisras Londono kepykloje, įsikūrusioje gatvėje, kurios pavadinimas [[Pudding Lane]]. Tai, kas iš pradžių buvo nedidelis židinys, tampa vienu pražūtingiausių gaisrų miesto istorijoje. Liepsnos siaučia **keturias dienas** ir sunaikina apie **13 000 namų** bei didelę viduramžių miesto dalį; tarp sudegusių pastatų yra ir [[Šv. Pauliaus katedra]]."
         },
         {
           "type": "paragraph",
-          "text": "Plusieurs témoins de l'époque racontent l'ampleur du désastre, dont [[Samuelis Pepysas]], haut fonctionnaire de la marine et membre du Parlement britannique. Dans son journal, il décrit le feu qui gagne Londres, les destructions qui s'accumulent et la confusion de ceux qui tentent de fuir. Mais comment un feu parti d'une boulangerie a-t-il pu grandir au point de détruire presque toute la ville ?"
+          "text": "Nelaimės mastą aprašo keli to meto liudininkai, tarp jų [[Samuelis Pepysas]], aukštas laivyno pareigūnas ir Didžiosios Britanijos parlamento narys. Savo dienoraštyje jis aprašo, kaip ugnis apima Londoną, kaip daugėja sugriovimų ir kokia sumaištis tvyro tarp bandančių bėgti. Bet kaip kepykloje kilęs gaisras galėjo išaugti tiek, kad sunaikino beveik visą miestą?"
         }
       ]
     },
     {
       "id": "course_251_pourquoi_londres_a_t_elle_brule_en_1666_p1",
-      "title": "Une ville de bois poussée par le vent",
+      "title": "Vėjo genamas medinis miestas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En **1666**, la plupart des bâtiments de Londres sont en bois. Beaucoup de maisons ont un toit de chaume ou enduit de poix, des matériaux qui prennent feu facilement. Les constructions se serrent le long de rues étroites : par endroits, les maisons qui se font face se touchent presque. Le feu trouve là un terrain idéal pour se propager."
+          "text": "**1666** m. dauguma Londono pastatų yra mediniai. Daugelio namų stogai šiaudiniai arba dervuoti, o šios medžiagos lengvai užsiliepsnoja. Pastatai susigrūdę palei siauras gatves: kai kur vienas priešais kitą stovintys namai beveik liečiasi. Ugniai tai ideali vieta plisti."
         },
         {
           "type": "image",
           "asset": "hollar_map_london_burnt_area_1666",
           "ratio": "4:3",
-          "caption": "Vestiges des incendies de 1666 et 1940 à St Bride, Londres : bois calciné, fragments de cloche, verre déformé."
+          "caption": "1666 ir 1940 m. gaisrų liekanos St Bride bažnyčioje, Londone: apanglėjusi mediena, varpo nuolaužos, deformuotas stiklas."
         },
         {
           "type": "paragraph",
-          "text": "Le vent aggrave tout. Une forte rafale souffle au moment où le feu commence à s'étendre et pousse les flammes vers l'ouest, vers le reste de la ville. Des morceaux de bois et de chaume enflammés volent dans les airs et allument de nouveaux foyers en avant du brasier principal. L'incendie n'a rien d'exceptionnel en lui-même : ce sont les rues encombrées et les structures de bois qui lui ont donné tout ce qu'il fallait pour courir."
+          "text": "Vėjas viską pablogina. Kai ugnis pradeda plisti, pučia stiprus vėjas ir gena liepsnas į vakarus, likusio miesto link. Degančios medienos ir šiaudų nuolaužos skrieja oru ir uždega naujus židinius pagrindinio gaisro priekyje. Pats gaisras nebuvo išskirtinis: jam įsibėgėti leido susigrūdusios gatvės ir mediniai statiniai."
         }
       ]
     },
     {
       "id": "course_251_pourquoi_londres_a_t_elle_brule_en_1666_p2",
-      "title": "Pourquoi personne n'a pu l'arrêter",
+      "title": "Kodėl niekas negalėjo jo sustabdyti",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En 1666, Londres n'a pas de corps de pompiers officiel. Des volontaires descendent dans la rue avec des pompes à eau, des seaux de cuir, des crochets et des haches, dans l'espoir d'arrêter la progression du feu. Ils tentent de démolir des bâtiments en avant des flammes pour créer des [[priešgaisrinė juosta]], des vides que le feu ne peut pas franchir."
+          "text": "1666 m. Londonas neturi oficialios ugniagesių tarnybos. Savanoriai išeina į gatves su vandens siurbliais, odiniais kibirais, kabliais ir kirviais, tikėdamiesi sustabdyti ugnį. Jie bando nugriauti pastatus liepsnų kelyje, kad atsirastų [[priešgaisrinė juosta]]: tuščia vieta, kurios ugnis negali peršokti."
         },
         {
           "type": "paragraph",
-          "text": "Mais on hésite d'abord à abattre maisons et commerces, ce qui a sans doute accéléré la propagation. [[Thomas Bloodworth]], le lord-maire de Londres, n'ordonne pas tout de suite de démolitions à grande échelle. Quand les grands coupe-feu sont enfin organisés, il est déjà trop tard."
+          "text": "Tačiau iš pradžių delsiama griauti namus ir parduotuves, ir tai tikriausiai paspartino gaisro plitimą. Londono lordas meras [[Thomas Bloodworth]] ne iš karto įsako griauti plačiu mastu. Kai didelės priešgaisrinės juostos pagaliau įrengiamos, jau per vėlu."
         },
         {
           "type": "paragraph",
-          "text": "Certains historiens estiment que l'hésitation de Bloodworth a laissé le feu se répandre. Mais la réponse de Londres était aussi limitée par les outils et le niveau d'organisation disponibles à l'époque. La ville affrontait simplement une catastrophe qu'elle n'était pas préparée à gérer."
+          "text": "Kai kurie istorikai mano, kad Bloodwortho neryžtingumas leido ugniai išplisti. Tačiau Londono atsaką ribojo ir to meto įrankiai bei organizuotumo lygis. Miestas tiesiog susidūrė su katastrofa, kuriai nebuvo pasirengęs."
         }
       ]
     },
     {
       "id": "course_251_pourquoi_londres_a_t_elle_brule_en_1666_p3",
-      "title": "Six morts, vraiment ?",
+      "title": "Šešios aukos? Tikrai?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L'incendie a détruit la plus grande partie de Londres, et pourtant le bilan humain paraît très faible. Les registres de l'époque ne recensent qu'environ **six morts**. Face aux milliers de bâtiments partis en fumée en quatre jours, le chiffre semble presque impossible."
+          "text": "Gaisras sunaikino didžiąją Londono dalį, tačiau aukų skaičius atrodo labai mažas. To meto registruose užrašyta tik apie **šešis žuvusiuosius**. Palyginti su tūkstančiais per keturias dienas sudegusių pastatų, šis skaičius atrodo beveik neįmanomas."
         },
         {
           "type": "image",
           "asset": "great_fire_london_ludgate_fleeing_crowd_painting",
           "ratio": "4:3",
-          "caption": "Londoniens fuyant en barque sur la Tamise devant Saint-Paul en flammes : tableau de Philippe-Jacques de Loutherbourg, peint vers 1797."
+          "caption": "Londoniečiai valtimis bėga Temze, fone liepsnoja Šv. Pauliaus katedra: Philippe'o Jacques'o de Loutherbourgo paveikslas, nutapytas apie 1797 m."
         },
         {
           "type": "paragraph",
-          "text": "En réalité, personne ne sait combien de personnes sont vraiment mortes, et certains historiens pensent qu'elles furent plus nombreuses. Les Londoniens les plus pauvres laissent peu de traces écrites : les décès causés indirectement par le feu n'ont jamais été enregistrés. Autre explication : le feu progresse assez lentement au début, ce qui laisse aux habitants le temps de fuir. La destruction matérielle est immense, mais le nombre de morts recensés reste bas."
+          "text": "Iš tikrųjų niekas nežino, kiek žmonių iš tiesų žuvo, ir kai kurie istorikai mano, kad jų buvo daugiau. Skurdžiausi londoniečiai paliko mažai rašytinių pėdsakų: netiesiogiai gaisro sukeltos mirtys niekada nebuvo užregistruotos. Kitas paaiškinimas: iš pradžių ugnis plito gana lėtai, todėl gyventojai spėjo pabėgti. Materialinė žala milžiniška, tačiau užregistruotų aukų skaičius lieka mažas."
         },
         {
           "type": "funFact",
-          "text": "Le brasier était si chaud qu'il a fait fondre poteries et verre. Les archéologues ont retrouvé des matériaux fondus ou soudés entre eux par la chaleur, preuve de l'intensité du feu."
+          "text": "Gaisras buvo toks karštas, kad lydė keramiką ir stiklą. Archeologai rado išsilydžiusių arba karščio sulydytų medžiagų, ir tai liudija, koks stiprus buvo gaisras."
         }
       ]
     },
     {
       "id": "course_251_pourquoi_londres_a_t_elle_brule_en_1666_p4",
-      "title": "Londres reconstruite en brique",
+      "title": "Iš plytų atstatytas Londonas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Après l'incendie, Londres change de visage. Les autorités adoptent de nouvelles règles de construction qui limitent le bois et poussent les bâtisseurs vers la pierre et la brique. De nombreuses rues sont élargies, pour qu'un futur feu ait plus de mal à sauter d'une façade à l'autre."
+          "text": "Po gaisro Londonas pakeičia savo veidą. Valdžia priima naujas statybos taisykles, kurios riboja medienos naudojimą ir skatina statytojus rinktis akmenį ir plytas. Daug gatvių paplatinama, kad būsimam gaisrui būtų sunkiau peršokti nuo vieno fasado prie kito."
         },
         {
           "type": "image",
           "asset": "monument_great_fire_london_pudding_lane",
           "ratio": "4:3",
-          "caption": "Bas-relief du Monument au grand incendie (1677), près de Pudding Lane : Charles II vient au secours de la Cité."
+          "caption": "Didžiojo gaisro paminklo (1677) bareljefas netoli Pudding Lane: Karolis II ateina į pagalbą Sičiui."
         },
         {
           "type": "paragraph",
-          "text": "Le désastre fait aussi réfléchir à l'assurance. Avant 1666, rares sont les habitants de la ville protégés d'une manière ou d'une autre. Ensuite, de nouveaux systèmes apparaissent et ouvrent la voie à l'[[draudimas nuo gaisro]] moderne que beaucoup utilisent encore aujourd'hui."
+          "text": "Nelaimė paskatino susimąstyti ir apie draudimą. Iki 1666 m. vos keli miesto gyventojai buvo kaip nors apdrausti. Vėliau atsiranda naujų sistemų, iš kurių išauga šiuolaikinis [[draudimas nuo gaisro]], kuriuo daugelis naudojasi ir šiandien."
         },
         {
           "type": "paragraph",
-          "text": "L'incendie de Londres révèle un schéma qui façonne encore nos villes. Une grande catastrophe met à nu les faiblesses d'une cité, dans sa construction comme dans sa protection, et force à repenser la sécurité de ceux qui y vivront ensuite."
+          "text": "Londono gaisras atskleidžia dėsningumą, kuris tebeformuoja mūsų miestus. Didelė katastrofa apnuogina miesto silpnybes, tiek jo statyboje, tiek apsaugoje, ir priverčia permąstyti vėlesnių gyventojų saugumą."
         },
         {
           "type": "takeaway",
-          "text": "Londres a brûlé parce qu'une ville de bois, serrée et sans pompiers, a rencontré un vent violent et une réaction trop lente ; de ses cendres sont nées les règles de construction en brique et l'assurance incendie."
+          "text": "Londonas sudegė, nes medinis, tankiai užstatytas ir ugniagesių neturintis miestas susidūrė su smarkiu vėju ir per lėta reakcija; iš jo pelenų gimė plytinės statybos taisyklės ir draudimas nuo gaisro."
         }
       ]
     }

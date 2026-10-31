@@ -1,109 +1,109 @@
 {
   "id": "course_305_pourquoi_deteste_t_on_entendre_sa_voix",
-  "title": "Pourquoi déteste-t-on entendre sa voix enregistrée ?",
-  "subtitle": "Le son de soi",
+  "title": "Kodėl nemalonu girdėti savo įrašytą balsą?",
+  "subtitle": "Savęs garsas",
   "subject": "sciences",
   "subcategory": "Notre quotidien expliqué",
-  "description": "Sur un enregistrement, ta voix te paraît étrangère, presque gênante. Le coupable n'est pas le micro : c'est ton crâne, et la façon dont ton cerveau se reconnaît.",
+  "description": "Įraše tavo balsas atrodo svetimas, net kiek gėdingas. Kaltas ne mikrofonas: kalta tavo kaukolė ir tai, kaip tavo smegenys atpažįsta save.",
   "author": "stacy-jankowski",
   "hero": {
     "image": "studio_microphone_headphones_voice_recording",
     "ratio": "4:3",
-    "hook": "Les vidéos de tes amis ne te dérangent pas. Mais ta propre voix dans un message vocal te fait grimacer. Pourquoi ce son-là sonne-t-il faux ?"
+    "hook": "Draugų vaizdo įrašai tau netrukdo. Bet savas balsas balso žinutėje priverčia susiraukti. Kodėl būtent šis garsas skamba netikrai?"
   },
   "sections": [
     {
       "id": "course_305_pourquoi_deteste_t_on_entendre_sa_voix_intro",
-      "title": "Introduction",
+      "title": "Įvadas",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Qu'est-ce que le « soi » ? Philosophes, scientifiques et artistes se posent la question depuis des siècles. Pour l'étudier, les chercheurs utilisent souvent l'image du visage, que chacun reconnaît au premier coup d'œil. Mais la voix compte tout autant dans le sentiment d'être soi-même."
+          "text": "Kas yra „aš“? Filosofai, mokslininkai ir menininkai šį klausimą kelia šimtmečius. Tirdami jį, mokslininkai dažnai pasitelkia veidą, nes kiekvienas jį atpažįsta iš pirmo žvilgsnio. Tačiau balsas savęs jausmui ne mažiau svarbus."
         },
         {
           "type": "paragraph",
-          "text": "D'où le paradoxe. On regarde sans peine des vidéos de ses amis ou de sa famille. Puis vient un message vocal que l'on a soi-même enregistré, et l'on a un mouvement de recul : cette voix-là, ce n'est pas la mienne. Pourtant, si. Pour comprendre, il faut suivre le trajet du son."
+          "text": "Iš čia ir paradoksas. Draugų ar šeimos vaizdo įrašus žiūrėti nesunku. Bet tada pasigirsta paties įrašyta balso žinutė, ir norisi atsitraukti: šis balsas ne mano. O vis dėlto tavo. Kad suprastum kodėl, reikia sekti garso kelią."
         }
       ]
     },
     {
       "id": "course_305_pourquoi_deteste_t_on_entendre_sa_voix_p1",
-      "title": "Parler et entendre : de l'air qui vibre",
+      "title": "Kalbėti ir girdėti: virpantis oras",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Parler commence par une poussée d'air. Le diaphragme chasse l'air des poumons vers la gorge. En passant entre les [[balso klostės]], il les fait vibrer à grande vitesse : ces vibrations, plus ou moins aiguës, remontent le long de la gorge. La bouche et la langue les sculptent ensuite en sons et en mots."
+          "text": "Kalbėjimas prasideda nuo oro srauto. Diafragma išstumia orą iš plaučių į gerklę. Ten yra [[balso klostės]]: pro jas eidamas oras priverčia jas labai greitai virpėti, ir šie aukštesni ar žemesni virpesiai kyla gerkle aukštyn. Tada burna ir liežuvis juos paverčia garsais ir žodžiais."
         },
         {
           "type": "paragraph",
-          "text": "Entendre, c'est le trajet inverse. La plupart des sons nous parviennent par [[oro laidumas]] : les ondes traversent le conduit auditif et font vibrer le tympan, qui transmet ces vibrations aux petits os de l'oreille moyenne. Amplifiées, elles atteignent la [[sraigė]], dans l'oreille interne, où des milliers de cellules ciliées hérissées de [[stereocilijos]] se plient et produisent un signal électrique. Le nerf auditif le porte au cerveau, qui l'identifie et le classe."
+          "text": "Girdėjimas yra atvirkštinis kelias. Dauguma garsų mus pasiekia oru, tai yra [[oro laidumas]]: bangos keliauja klausomąja landa ir virpina būgnelį, kuris šiuos virpesius perduoda vidurinės ausies kauleliams. Sustiprinti jie pasiekia vidinę ausį, kurioje yra [[sraigė]]: ten tūkstančiai plaukuotųjų ląstelių, ant kurių styro [[stereocilijos]], sulinksta ir sukuria elektrinį signalą. Klausos nervas jį perduoda smegenims, kurios jį atpažįsta ir priskiria."
         },
         {
           "type": "image",
           "asset": "cochlea_stereocilia_hair_cells_electron_micrograph",
           "ratio": "4:5",
-          "caption": "Cochlées de souris au microscope électronique, normale (à gauche) et mutante : les rangées de cellules ciliées hérissées de stéréocils."
+          "caption": "Pelių sraigės elektroniniu mikroskopu, normali (kairėje) ir mutantinė: plaukuotųjų ląstelių su stereocilijomis eilės."
         }
       ]
     },
     {
       "id": "course_305_pourquoi_deteste_t_on_entendre_sa_voix_p2",
-      "title": "S'entendre par les os",
+      "title": "Girdėti save per kaulus",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Quand on écoute un enregistrement de soi, tout passe par la conduction aérienne, comme pour n'importe quel son. Mais quand on parle, un second canal s'ajoute : la [[kaulinis laidumas]]. Les vibrations mécaniques de la voix se propagent directement à travers les os du crâne jusqu'à l'oreille interne, sans passer par le tympan ni l'oreille moyenne."
+          "text": "Klausantis savo įrašo, viskas sklinda oro laidumu, kaip ir bet kuris kitas garsas. Tačiau kalbant prisideda antras kanalas: [[kaulinis laidumas]]. Mechaniniai balso virpesiai sklinda tiesiai per kaukolės kaulus iki vidinės ausies, aplenkdami būgnelį ir vidurinę ausį."
         },
         {
           "type": "image",
           "asset": "tuning_fork_weber_test_bone_conduction_skull",
           "ratio": "3:4",
-          "caption": "Un diapason posé sur le crâne lors d'un examen de l'audition : le son passe par l'os, pas par l'air."
+          "caption": "Kamertonas, pridėtas prie kaukolės per klausos tyrimą: garsas sklinda per kaulą, ne per orą."
         },
         {
           "type": "paragraph",
-          "text": "La cochlée reçoit donc deux signaux à la fois, l'un venu de l'air, l'autre venu des os, et les transforme tous deux en messages pour le cerveau. En temps réel, ta voix est un son plus riche et plus complexe que ce qu'un micro peut capter. L'enregistrement n'en restitue qu'une partie."
+          "text": "Taigi sraigė vienu metu gauna du signalus, vieną iš oro, kitą iš kaulų, ir abu paverčia pranešimais smegenims. Realiu laiku tavo balsas yra turtingesnis ir sudėtingesnis garsas, nei gali užfiksuoti mikrofonas. Įrašas perteikia tik jo dalį."
         }
       ]
     },
     {
       "id": "course_305_pourquoi_deteste_t_on_entendre_sa_voix_p3",
-      "title": "La vallée de l'étrange",
+      "title": "Keistumo slėnis",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Reste à expliquer le malaise. Les chercheurs n'ont pas encore de réponse définitive, mais une piste séduit : l'effet de [[keistumo slėnis]]. L'idée vient de la robotique et de l'animation. Plus une créature artificielle ressemble à un humain, plus elle nous paraît familière et sympathique. Jusqu'à un certain point."
+          "text": "Lieka paaiškinti nemalonų jausmą. Mokslininkai dar neturi galutinio atsakymo, bet viena hipotezė patraukli: tai [[keistumo slėnis]]. Idėja kilo iš robotikos ir animacijos. Kuo labiau dirbtinė būtybė panaši į žmogų, tuo artimesnė ir simpatiškesnė ji mums atrodo. Iki tam tikros ribos."
         },
         {
           "type": "paragraph",
-          "text": "Quand l'imitation devient très proche sans être parfaite, la sympathie se change en malaise, voire en répulsion. Or un enregistrement ne livre que la part aérienne de notre voix, sans la richesse de la conduction osseuse. On entend l'essentiel, mais pas tout. Le cerveau se retrouve dans la vallée de l'étrange : c'est presque « moi », mais pas tout à fait."
+          "text": "Kai imitacija tampa labai artima, bet ne tobula, simpatija virsta nemaloniu jausmu ar net pasibjaurėjimu. O įrašas perteikia tik oru sklindančią mūsų balso dalį, be kaulinio laidumo turtingumo. Girdima esmė, bet ne viskas. Smegenys atsiduria keistumo slėnyje: tai beveik „aš“, bet ne visai."
         }
       ]
     },
     {
       "id": "course_305_pourquoi_deteste_t_on_entendre_sa_voix_p4",
-      "title": "Une voix, mille versions de soi",
+      "title": "Vienas balsas, tūkstantis savęs versijų",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La vallée de l'étrange n'explique pas tout. Un enregistrement ne montre aussi qu'une seule facette de la manière dont on se présente aux autres. Car la voix n'est pas fixe : on la module sans cesse selon le contexte, souvent sans y penser, et le sentiment de soi se construit sur toutes ces variations à la fois."
+          "text": "Keistumo slėnis nepaaiškina visko. Be to, įrašas parodo tik vieną pusę to, kaip žmogus prisistato kitiems. Mat balsas nėra pastovus: jis nuolat keičiamas pagal aplinkybes, dažnai to nė nepastebint, o savęs jausmas susiklosto iš visų šių variacijų kartu."
         },
         {
           "type": "funFact",
-          "text": "Dans un cadre professionnel, on baisse volontiers le ton pour paraître plus posé. Face à un bébé ou à un animal de compagnie, la voix grimpe dans les aigus. Bouche, langue et lèvres changent de réglage, et avec elles la version de « soi » que l'on donne à entendre."
+          "text": "Darbo aplinkoje balsas dažnai pažeminamas, kad skambėtų solidžiau. Kalbant su kūdikiu ar naminiu gyvūnu, balsas pakyla į aukštus tonus. Burna, liežuvis ir lūpos keičia padėtį, o kartu su jais keičiasi ir „savęs“ versija, kurią leidžiama išgirsti kitiems."
         },
         {
           "type": "paragraph",
-          "text": "La perception de soi est donc une construction élaborée, faite de dizaines de voix différentes. Le cerveau ne dispose d'aucun modèle unique auquel comparer l'enregistrement. Ce qu'il entend sort du micro sans passer par les os, figé dans un seul registre : assez proche pour être reconnu, trop différent pour être adopté."
+          "text": "Taigi savęs suvokimas yra sudėtingas darinys, sudarytas iš dešimčių skirtingų balsų. Smegenys neturi jokio vieno modelio, su kuriuo galėtų palyginti įrašą. Tai, ką jos girdi, ateina iš mikrofono, aplenkus kaulus, ir yra sustingę viename registre: pakankamai artima, kad būtų atpažinta, per daug kitokia, kad būtų priimta."
         },
         {
           "type": "takeaway",
-          "text": "Ta voix enregistrée sonne faux parce qu'il lui manque la conduction osseuse que ton crâne ajoute quand tu parles, et parce qu'elle fige une seule des mille versions de toi : assez proche pour être reconnue, pas assez pour être acceptée."
+          "text": "Tavo įrašytas balsas skamba netikrai, nes jam trūksta kaulinio laidumo, kurį prideda tavo kaukolė, kai kalbi, ir nes jis įamžina tik vieną iš tūkstančio tavo versijų: pakankamai artimą, kad būtų atpažinta, bet nepakankamai, kad būtų priimta."
         }
       ]
     }

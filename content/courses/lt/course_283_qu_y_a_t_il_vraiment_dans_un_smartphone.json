@@ -1,115 +1,115 @@
 {
   "id": "course_283_qu_y_a_t_il_vraiment_dans_un_smartphone",
-  "title": "Qu'y a-t-il vraiment dans un smartphone ?",
-  "subtitle": "Une mine de poche",
+  "title": "Kas iš tikrųjų yra išmaniajame telefone?",
+  "subtitle": "Kišeninė kasykla",
   "subject": "sciences",
   "subcategory": "Notre quotidien expliqué",
-  "description": "Jusqu'à 50 métaux, du verre traité au potassium, du cobalt du Congo et du lithium du Chili : un téléphone est un concentré de planète. Et quand il meurt, ses matériaux, eux, restent précieux.",
+  "description": "Iki 50 metalų, kaliu apdorotas stiklas, kobaltas iš Kongo ir litis iš Čilės: telefonas yra visos planetos koncentratas. O kai jis sugenda, jo medžiagos vis tiek išlieka vertingos.",
   "author": "muhammad-zaheer",
   "hero": {
     "image": "disassembled_smartphone_components_flat_lay",
     "ratio": "4:3",
-    "hook": "Ton téléphone semble un seul objet, mais il cache des dizaines de matériaux arrachés au sol de plusieurs continents."
+    "hook": "Tavo telefonas atrodo kaip vienas daiktas, bet slepia dešimtis medžiagų, iškastų iš kelių žemynų gelmių."
   },
   "sections": [
     {
       "id": "course_283_qu_y_a_t_il_vraiment_dans_un_smartphone_intro",
-      "title": "Introduction",
+      "title": "Įvadas",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Un smartphone semble un objet unique. C'est en réalité un assemblage de dizaines de matériaux venus du monde entier, bien au-delà du verre, du plastique et du métal visibles. Selon la Commission européenne, un téléphone peut contenir jusqu'à **50 métaux** différents. Le service géologique des États-Unis estime qu'au moins la moitié des composants d'un appareil mobile proviennent de minéraux extraits du sol ou transformés à partir de ceux-ci."
+          "text": "Išmanusis telefonas atrodo kaip vientisas daiktas. Iš tikrųjų tai dešimčių medžiagų iš viso pasaulio rinkinys, toli gražu ne vien matomas stiklas, plastikas ir metalas. Europos Komisijos duomenimis, telefone gali būti iki **50 metalų**. JAV geologijos tarnyba vertina, kad bent pusė mobiliojo įrenginio komponentų pagaminta iš iškastų mineralų arba iš jų perdirbtų medžiagų."
         },
         {
           "type": "paragraph",
-          "text": "Pourquoi un si petit objet a-t-il besoin de tant de matières différentes ? Parce que chaque pièce exige une propriété précise : conduire l'électricité, rester transparente, se comporter comme un aimant ou stocker de l'énergie. Autrement dit, une bonne partie de ton téléphone commence dans la roche."
+          "text": "Kodėl tokiam mažam daiktui reikia tiek skirtingų medžiagų? Todėl, kad kiekviena dalis turi turėti konkrečią savybę: praleisti elektrą, likti skaidri, veikti kaip magnetas arba kaupti energiją. Kitaip tariant, didelė tavo telefono dalis prasideda uolienoje."
         }
       ]
     },
     {
       "id": "course_283_qu_y_a_t_il_vraiment_dans_un_smartphone_p1",
-      "title": "Même le verre travaille",
+      "title": "Net stiklas dirba",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L'écran a besoin d'une vitre à la fois transparente et solide. Beaucoup de téléphones utilisent du [[Gorilla Glass]], un verre renforcé composé de [[silicis]], d'aluminium et d'oxygène. Sa résistance vient d'un traitement astucieux : près de la surface, les petits atomes de sodium sont remplacés par des atomes de potassium, plus gros. Ces ions volumineux se serrent en surface et créent une pression qui empêche les fissures de se propager."
+          "text": "Ekranui reikia stiklo, kuris būtų ir skaidrus, ir tvirtas. Daugelyje telefonų naudojamas [[Gorilla Glass]], sustiprintas stiklas, sudarytas iš trijų elementų: tai [[silicis]], aliuminis ir deguonis. Jo tvirtumą lemia gudrus apdorojimas: prie paviršiaus maži natrio atomai pakeičiami didesniais kalio atomais. Šie stambūs jonai susispaudžia paviršiuje ir sukuria slėgį, kuris neleidžia plisti įtrūkimams."
         },
         {
           "type": "paragraph",
-          "text": "Juste sous la vitre se trouve souvent une fine couche d'[[indžio alavo oksidas]], un matériau aux propriétés rares : il conduit l'électricité tout en restant transparent. Quand un doigt touche l'écran, il modifie le signal électrique dans cette couche. Le téléphone détecte ce changement sans rien masquer de l'image en dessous."
+          "text": "Iškart po stiklu dažnai būna plonas sluoksnis medžiagos, vadinamos [[indžio alavo oksidas]]. Jos savybės retos: ji praleidžia elektrą ir kartu lieka skaidri. Kai pirštas paliečia ekraną, jis pakeičia elektrinį signalą šiame sluoksnyje. Telefonas užfiksuoja šį pokytį, visiškai neuždengdamas po juo esančio vaizdo."
         }
       ]
     },
     {
       "id": "course_283_qu_y_a_t_il_vraiment_dans_un_smartphone_p2",
-      "title": "À chaque matériau sa fonction",
+      "title": "Kiekviena medžiaga turi savo darbą",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Sous l'écran, chaque matériau a été choisi pour une tâche. Le silicium forme la base des circuits minuscules gravés dans les puces. Le cuivre transporte l'électricité entre les composants. La batterie repose sur le [[litis]] et le graphite, une forme de carbone, pour stocker et libérer l'énergie."
+          "text": "Po ekranu kiekviena medžiaga parinkta konkrečiai užduočiai. Silicis yra mažyčių grandynų, išraižytų lustuose, pagrindas. Varis perduoda elektrą tarp komponentų. Baterijai energijai kaupti ir atiduoti reikia dviejų medžiagų: tai [[litis]] ir grafitas, viena iš anglies formų."
         },
         {
           "type": "image",
           "asset": "smartphone_logic_board_chips_gold_contacts_macro",
           "ratio": "4:3",
-          "caption": "La carte mère d'un smartphone : puces de silicium, pistes de cuivre et contacts dorés."
+          "caption": "Išmaniojo telefono pagrindinė plokštė: silicio lustai, varinės jungtys ir paauksuoti kontaktai."
         },
         {
           "type": "funFact",
-          "text": "Ni l'or ni le lithium : le métal le plus abondant dans un smartphone est le **cuivre**, qui relie tous les composants entre eux."
+          "text": "Ne auksas ir ne litis: išmaniajame telefone daugiausia yra **vario**, kuris sujungia visus komponentus."
         },
         {
           "type": "paragraph",
-          "text": "Les [[retieji žemių elementai]], comme le néodyme, servent à fabriquer des aimants minuscules mais très puissants pour les haut-parleurs, les micros et le vibreur. Le téléphone contient aussi d'infimes quantités de métaux précieux, or et argent. L'**or** est particulièrement utile : il conduit bien l'électricité et ne se corrode pas, ce qui en fait le matériau idéal pour les petites connexions fiables de l'appareil."
+          "text": "[[retieji žemių elementai]], pavyzdžiui, neodimis, naudojami mažyčiams, bet labai galingiems magnetams garsiakalbiuose, mikrofonuose ir vibracijos variklyje. Telefone taip pat yra menki tauriųjų metalų, aukso ir sidabro, kiekiai. **Auksas** ypač naudingas: jis gerai praleidžia elektrą ir nerūdija, todėl idealiai tinka mažoms patikimoms įrenginio jungtims."
         }
       ]
     },
     {
       "id": "course_283_qu_y_a_t_il_vraiment_dans_un_smartphone_p3",
-      "title": "Un téléphone qui a fait le tour du monde",
+      "title": "Telefonas, apkeliavęs pasaulį",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ton téléphone porte peut-être une étiquette « fabriqué en... », mais ses matériaux viennent rarement d'un seul pays. Avant d'atteindre l'usine finale, ils ont souvent traversé plusieurs continents. La majeure partie du [[kobaltas]] mondial, un métal essentiel aux batteries, est extraite en République démocratique du Congo. Le lithium, lui, est produit dans des pays comme l'Australie, le Chili, la Chine et l'Argentine."
+          "text": "Ant tavo telefono gal ir parašyta „Pagaminta...“, bet jo medžiagos retai būna iš vienos šalies. Prieš pasiekdamos galutinę gamyklą, jos dažnai būna apkeliavusios kelis žemynus. Baterijoms būtinas metalas [[kobaltas]] daugiausia išgaunamas Kongo Demokratinėje Respublikoje. Litis gaminamas tokiose šalyse kaip Australija, Čilė, Kinija ir Argentina."
         },
         {
           "type": "image",
           "asset": "salar_de_atacama_lithium_evaporation_ponds_aerial",
           "ratio": "2:3",
-          "caption": "Le Chili vu par satellite (MODIS, 2015) : au nord, les salars de l'Atacama, où l'on extrait le lithium."
+          "caption": "Čilė iš palydovo (MODIS, 2015): šiaurėje Atakamos druskožemiai, kuriuose išgaunamas litis."
         },
         {
           "type": "paragraph",
-          "text": "Ces matières premières sont ensuite raffinées, puis transformées en composants ailleurs, avant l'assemblage du téléphone. Un smartphone est donc un produit réellement mondial, dont le voyage commence bien avant l'usine. Et ce voyage a un prix : l'extraction et le raffinage demandent des terres, de l'eau et de l'énergie, avec un coût pour l'environnement."
+          "text": "Vėliau šios žaliavos rafinuojamos, paskui kitur paverčiamos komponentais, ir tik tada telefonas surenkamas. Taigi išmanusis telefonas yra tikrai pasaulinis produktas, kurio kelionė prasideda gerokai anksčiau nei gamykloje. Ir ši kelionė turi kainą: kasybai ir rafinavimui reikia žemės, vandens ir energijos, o tai kenkia aplinkai."
         }
       ]
     },
     {
       "id": "course_283_qu_y_a_t_il_vraiment_dans_un_smartphone_p4",
-      "title": "Un vieux téléphone reste précieux",
+      "title": "Senas telefonas išlieka vertingas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Un téléphone devient inutile quand il cesse de fonctionner et ne peut plus être réparé. Mais les matériaux qu'il renferme gardent leur valeur : on peut les récupérer et les réutiliser. En **2022**, le monde a produit **62 millions de tonnes** de [[elektroninės atliekos]], smartphones compris. À peine plus de **20 %** ont été collectés et recyclés."
+          "text": "Telefonas tampa nebereikalingas, kai nustoja veikti ir jo nebeįmanoma pataisyti. Tačiau jame esančios medžiagos išlaiko vertę: jas galima atgauti ir panaudoti iš naujo. **2022** m. pasaulyje susidarė **62 milijonai tonų** elektroninių atliekų, įskaitant išmaniuosius telefonus. Tokios [[elektroninės atliekos]] surenkamos ir perdirbamos vos šiek tiek daugiau nei **20 %**."
         },
         {
           "type": "image",
           "asset": "e_waste_pile_discarded_mobile_phones",
           "ratio": "3:2",
-          "caption": "Une décharge de déchets électroniques au Ghana, où finit une partie des appareils mis au rebut dans le monde."
+          "caption": "Elektroninių atliekų sąvartynas Ganoje, kur atsiduria dalis pasaulyje išmestų prietaisų."
         },
         {
           "type": "paragraph",
-          "text": "Récupérer ces matériaux réduit le besoin d'extraire et de transformer de nouvelles matières premières. Cela garde aussi des ressources précieuses en circulation plus longtemps. Un téléphone peut vieillir. Les matériaux qu'il contient, eux, ne vieillissent pas. Tout l'enjeu est de les garder en usage le plus longtemps possible."
+          "text": "Atgaunant šias medžiagas, mažiau reikia kasti ir perdirbti naujas žaliavas. Be to, vertingi ištekliai ilgiau išlieka apyvartoje. Telefonas gali pasenti. O jame esančios medžiagos nesensta. Svarbiausia kuo ilgiau jas naudoti."
         },
         {
           "type": "takeaway",
-          "text": "Un smartphone est une mine de poche, jusqu'à 50 métaux venus de plusieurs continents, et le vrai défi n'est pas de le remplacer mais de garder ses matériaux en circulation le plus longtemps possible."
+          "text": "Išmanusis telefonas yra kišeninė kasykla, iki 50 metalų iš kelių žemynų, ir tikrasis iššūkis yra ne jį pakeisti, o kuo ilgiau išlaikyti jo medžiagas apyvartoje."
         }
       ]
     }

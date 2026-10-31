@@ -1,118 +1,118 @@
 {
   "id": "course_195_lancelot_guenievre_et_la_table_ronde",
-  "title": "Lancelot et Guenièvre ont-ils causé la chute de Camelot ?",
-  "subtitle": "Camelot et sa chute",
+  "title": "Ar Lanselotas ir Gvinevra sužlugdė Kamelotą?",
+  "subtitle": "Kamelotas ir jo žlugimas",
   "subject": "mythologie",
   "subcategory": "Autres mythologies",
-  "description": "Arthur, Lancelot, Guenièvre : la plus grande légende du Moyen Âge occidental. Un idéal de chevalerie détruit par un amour interdit.",
+  "description": "Artūras, Lanselotas, Gvinevra: didžiausia Vakarų viduramžių legenda. Riterystės idealas, sugriautas uždraustos meilės.",
   "hero": {
     "image": "lancelot_guenievre_et_la_table_ronde",
     "ratio": "16:9",
-    "hook": "Le meilleur chevalier du monde aime la femme du roi. Camelot ne s'en remettra pas."
+    "hook": "Geriausias pasaulio riteris myli karaliaus žmoną. Kamelotas po to nebeatsigaus."
   },
   "sections": [
     {
       "id": "course_195_lancelot_guenievre_et_la_table_ronde_intro",
-      "title": "Introduction",
+      "title": "Įvadas",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La légende du roi **Arthur** et de ses chevaliers de la **Table Ronde** est le grand cycle mythologique du Moyen Âge occidental. On l'appelle la **Matière de Bretagne** : un mélange d'histoire floue, de folklore celte et de morale chrétienne."
+          "text": "Legenda apie karalių **Artūrą** ir jo **Apskritojo stalo** riterius yra didysis Vakarų viduramžių mitologinis ciklas. Ji vadinama **Britanijos tema**: tai miglotos istorijos, keltų folkloro ir krikščioniškos moralės mišinys."
         },
         {
           "type": "paragraph",
-          "text": "Au cœur du récit, une tragédie très humaine : l'amour interdit entre **Lancelot**, le meilleur chevalier, et la reine **Guenièvre**, épouse d'Arthur. Cet amour, célébré comme une perfection, devient le poison qui fait tomber **Camelot**."
+          "text": "Pasakojimo širdyje glūdi labai žmogiška tragedija: uždrausta meilė tarp **Lanseloto**, geriausio riterio, ir karalienės **Gvinevros**, Artūro žmonos. Ši meilė, šlovinama kaip tobulybė, tampa nuodais, kurie sugriauna **Kamelotą**."
         }
       ]
     },
     {
       "id": "course_195_lancelot_guenievre_et_la_table_ronde_p1",
-      "title": "Aux sources du mythe : entre histoire et folklore celtique",
+      "title": "Mito ištakos: tarp istorijos ir keltų folkloro",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Pas d'auteur unique. Entre le VIe et le XVe siècle, les récits s'accumulent. Derrière Arthur, on entrevoit un chef de guerre breton, peut-être nommé **Arturus**, qui aurait résisté aux Saxons après le départ des Romains. Autour de lui grandissent **Merlin**, les fées, les épées magiques."
+          "text": "Vieno autoriaus nėra. Pasakojimai kaupiasi nuo VI iki XV a. Už Artūro įžvelgiamas britų karo vadas, galbūt vardu **Arturus**, kuris esą priešinosi saksams, kai pasitraukė romėnai. Aplink jį atsiranda **Merlinas**, fėjos, stebuklingi kalavijai."
         },
         {
           "type": "image",
           "asset": "king_arthur_excalibur_sword_stone_medieval",
           "ratio": "4:3",
-          "caption": "Arthur tire l'épée du rocher : le signe du roi légitime."
+          "caption": "Artūras ištraukia kalaviją iš uolos: teisėto karaliaus ženklas."
         },
         {
           "type": "funFact",
-          "text": "Une « Table Ronde » du XIIIe siècle est encore suspendue au château de Winchester, en Angleterre. Henri VIII la fit peindre pour se rattacher à Arthur."
+          "text": "XIII a. „Apskritasis stalas“ iki šiol kabo Vinčesterio pilyje Anglijoje. Henrikas VIII liepė jį ištapyti, kad susietų save su Artūru."
         },
         {
           "type": "paragraph",
-          "text": "Lors de [[kalavijo išbandymas]], seul le vrai roi peut tirer **Excalibur** du rocher ou de l'enclume. Couronné à Camelot, Arthur fonde la **Table Ronde**. Sa forme circulaire abolit la hiérarchie : autour d'elle, chaque chevalier est l'égal de son voisin, y compris le roi."
+          "text": "Kai vyksta [[kalavijo išbandymas]], tik tikrasis karalius gali ištraukti **Ekskaliburą** iš uolos ar priekalo. Karūnuotas Kamelote, Artūras įkuria **Apskritąjį stalą**. Apskrita forma panaikina hierarchiją: prie jo visi riteriai lygūs, įskaitant ir karalių."
         }
       ]
     },
     {
       "id": "course_195_lancelot_guenievre_et_la_table_ronde_p2",
-      "title": "La quête du Graal et la mutation spirituelle",
+      "title": "Gralio ieškojimas ir dvasinis virsmas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Peu à peu, les combats cèdent la place à une quête spirituelle : le **Saint Graal**. Plat magique dans les vieux textes celtes, il devient au XIIe siècle le calice du Christ. La pureté intérieure compte autant que la force."
+          "text": "Pamažu kovas pakeičia dvasinis ieškojimas: **Šventasis Gralis**. Senuosiuose keltų tekstuose tai stebuklingas dubuo, o XII a. jis tampa Kristaus taure. Vidinis tyrumas reiškia tiek pat, kiek jėga."
         },
         {
           "type": "image",
           "asset": "holy_grail_knights_round_table_medieval_painting",
           "ratio": "4:3",
-          "caption": "La quête du Graal transforme la Table Ronde en aventure spirituelle."
+          "caption": "Gralio ieškojimas Apskritąjį stalą paverčia dvasiniu nuotykiu."
         },
         {
           "type": "funFact",
-          "text": "Le mot « graal » venait de l'ancien français et désignait d'abord un plat large pour servir les viandes, pas une coupe précieuse."
+          "text": "Žodis „gralis“ kilęs iš senosios prancūzų kalbos ir iš pradžių reiškė platų dubenį mėsai patiekti, o ne brangią taurę."
         },
         {
           "type": "paragraph",
-          "text": "À la table, le [[Pavojingasis sostas]] attend le chevalier prédestiné. Seuls **Galaad**, **Perceval** et **Bohort** atteignent le Graal. **Lancelot du Lac**, « meilleur chevalier du monde », échoue : son amour pour Guenièvre le rend indigne de la vision divine."
+          "text": "Prie stalo išrinktojo riterio laukia [[Pavojingasis sostas]]. Gralį pasiekia tik **Galahadas**, **Persivalis** ir **Bortas**. **Lanselotas Ežerietis**, „geriausias pasaulio riteris“, patiria nesėkmę: dėl meilės Gvinevrai jis nevertas dieviškojo regėjimo."
         }
       ]
     },
     {
       "id": "course_195_lancelot_guenievre_et_la_table_ronde_p3",
-      "title": "La trahison de Guenièvre et la déchirure de l'ordre",
+      "title": "Gvinevros išdavystė ir tvarkos žlugimas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L'amour de Lancelot et Guenièvre incarne [[kurtuazinė meilė (fin'amor)]] : le chevalier se met au service de sa dame. Mais Guenièvre est l'épouse du suzerain. La trahison n'est pas seulement conjugale : elle est féodale."
+          "text": "Lanseloto ir Gvinevros meilė yra [[viduramžių kurtuazinė meilė (fin'amor)]] grynuoju pavidalu: riteris tarnauja savo damai. Tačiau Gvinevra yra senjoro žmona. Ši išdavystė ne tik santuokinė: ji feodalinė."
         },
         {
           "type": "image",
           "asset": "lancelot_guinevere_medieval_romance_painting",
           "ratio": "4:3",
-          "caption": "Lancelot et Guenièvre : l'amour qui brise Camelot."
+          "caption": "Lanselotas ir Gvinevra: meilė, kuri sugriauna Kamelotą."
         },
         {
           "type": "paragraph",
-          "text": "**Mordred**, neveu ou fils incestueux d'Arthur selon les versions, révèle la liaison. Arthur condamne Guenièvre au bûcher. Lancelot la sauve, mais tue dans la mêlée les frères de **Gauvain**. La Table Ronde se déchire : guerre civile, fin de l'utopie."
+          "text": "**Mordredas**, pagal skirtingas versijas Artūro sūnėnas arba kraujomaišos sūnus, atskleidžia ryšį. Artūras pasmerkia Gvinevrą sudeginti ant laužo. Lanselotas ją išgelbsti, bet sumaištyje nužudo **Gaveno** brolius. Apskritasis stalas skyla: pilietinis karas, utopijos pabaiga."
         }
       ]
     },
     {
       "id": "course_195_lancelot_guenievre_et_la_table_ronde_p4",
-      "title": "La fin d'un monde et le mythe du roi dormant",
+      "title": "Pasaulio pabaiga ir miegančio karaliaus mitas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "À **Camlann**, Arthur tue Mordred et reçoit une blessure mortelle. Excalibur est rendue à la Dame du Lac. Guenièvre finit au couvent, Lancelot en ermite. Arthur, dit-on, part vers l'île d'**Avalon**."
+          "text": "**Kamlane** Artūras nužudo Mordredą ir pats mirtinai sužeidžiamas. Ekskaliburas grąžinamas Ežero Damai. Gvinevra baigia gyvenimą vienuolyne, Lanselotas tampa atsiskyrėliu. Sakoma, kad Artūras iškeliauja į **Avalono** salą."
         },
         {
           "type": "paragraph",
-          "text": "Il devient le [[Rex Quondam Rexque Futurus]], « roi jadis, roi futur » : le roi dormant qui reviendra au pire moment. Camelot meurt en légende, et c'est ainsi qu'elle survit."
+          "text": "Dabar jis yra [[Rex Quondam Rexque Futurus]], „buvęs ir būsimas karalius“: miegantis karalius, kuris sugrįš sunkiausią valandą. Kamelotas miršta tapdamas legenda, ir būtent taip jis išlieka."
         },
         {
           "type": "takeaway",
-          "text": "L'amour de **Lancelot** pour **Guenièvre** détruit Camelot. La quête du **Graal** n'aboutit que pour les purs : Lancelot, meilleur chevalier, reste hors du seuil sacré."
+          "text": "**Lanseloto** meilė **Gvinevrai** sugriauna Kamelotą. **Gralio** ieškojimas sėkmingas tik tyriesiems: Lanselotas, geriausias riteris, lieka už šventosios ribos."
         }
       ]
     }

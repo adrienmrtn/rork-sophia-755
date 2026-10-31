@@ -1,143 +1,143 @@
 {
   "id": "course_139_la_naissance_du_jazz_americain",
-  "title": "Pourquoi le jazz est-il né à La Nouvelle-Orléans ?",
+  "title": "Kodėl džiazas gimė Naujajame Orleane?",
   "subtitle": "1890-1960",
   "subject": "art",
   "subcategory": "Musique",
-  "description": "Né à La Nouvelle-Orléans, le jazz mêle rythmes africains, blues et harmonie européenne, puis invente swing, bebop et jazz modal.",
+  "description": "Naujajame Orleane gimęs džiazas sujungia Afrikos ritmus, bliuzą ir europietišką harmoniją, o vėliau sukuria svingą, bibopą ir modalinį džiazą.",
   "hero": {
     "image": "la_naissance_du_jazz_americain",
     "ratio": "16:9",
-    "hook": "Dans une ville portuaire, l'Amérique invente sa musique classique : le jazz."
+    "hook": "Uostamiestyje Amerika sukuria savo klasikinę muziką: džiazą."
   },
   "sections": [
     {
       "id": "course_139_la_naissance_du_jazz_americain_intro",
-      "title": "Introduction",
+      "title": "Įvadas",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le jazz naît à [[Naujasis Orleanas]] vers la fin du XIXe siècle. Port de Louisiane, carrefour français, espagnol, africain et caribéen, la ville est un laboratoire sonore."
+          "text": "Džiazas gimsta XIX a. pabaigoje, o jo lopšys yra [[Naujasis Orleanas]]. Luizianos uostas, prancūzų, ispanų, afrikiečių ir Karibų kultūrų kryžkelė, šis miestas yra tikra garsų laboratorija."
         },
         {
           "type": "paragraph",
-          "text": "Née dans la violence de l'esclavage et de la ségrégation, cette musique devient la « musique classique de l'Amérique ». En un siècle, elle influence rock, funk et hip-hop. Comprendre le jazz, c'est comprendre une liberté inventée sous contrainte."
+          "text": "Gimusi vergovės ir segregacijos smurte, ši muzika tampa „Amerikos klasikine muzika“. Per šimtmetį ji paveikia roką, funką ir hiphopą. Suprasti džiazą reiškia suprasti laisvę, sukurtą prievartos sąlygomis."
         }
       ]
     },
     {
       "id": "course_139_la_naissance_du_jazz_americain_p1",
-      "title": "La Nouvelle-Orléans et Congo Square",
+      "title": "Naujasis Orleanas ir Kongo aikštė",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "À la fin du XIXe siècle, La Nouvelle-Orléans mêle créoles de couleur, descendants d'Africains asservis, immigrants européens. Opéra européen et rythmes caribéens s'y croisent. Au [[Kongo aikštė]], seul lieu du Nord où les populations noires avaient un droit de réunion dominical, tambours et polyrythmies africaines survivent."
+          "text": "XIX a. pabaigoje Naujajame Orleane susimaišo spalvotieji kreolai, pavergtų afrikiečių palikuonys ir europiečiai imigrantai. Čia susitinka europietiška opera ir Karibų ritmai. Afrikietiški būgnai ir poliritmai išlieka vienoje vietoje: tai [[Kongo aikštė]], vienintelė Šiaurės vieta, kur juodaodžiai sekmadieniais turėjo teisę rinktis."
         },
         {
           "type": "image",
           "asset": "congo_square_new_orleans_slaves_music",
           "ratio": "4:3",
-          "caption": "Congo Square : mémoire rythmique africaine au cœur de la Louisiane."
+          "caption": "Kongo aikštė: afrikietiškų ritmų atmintis Luizianos širdyje."
         },
         {
           "type": "paragraph",
-          "text": "Les **brass bands** (fanfares de cuivres) animent parades et funérailles : marche lente vers le cimetière, explosion de joie au retour. Cette bascule entre deuil et fête est l'âme émotionnelle du jazz naissant."
+          "text": "**Brass bands** (pučiamųjų orkestrai) groja paraduose ir laidotuvėse: lėtas maršas į kapines, džiaugsmo sprogimas grįžtant. Šis perėjimas nuo gedulo prie šventės yra gimstančio džiazo emocinė siela."
         },
         {
           "type": "funFact",
-          "text": "Le pionnier **Buddy Bolden**, coiffeur de métier, n'a jamais été enregistré : sa légende repose sur ceux qui entendaient son cornet de l'autre côté du Mississippi."
+          "text": "Pradininkas **Buddy Boldenas**, pagal profesiją kirpėjas, niekada nebuvo įrašytas: jo legenda remiasi tais, kurie girdėdavo jo kornetą kitame Misisipės krante."
         }
       ]
     },
     {
       "id": "course_139_la_naissance_du_jazz_americain_p2",
-      "title": "Blue notes, improvisation et Jim Crow",
+      "title": "Bliuzinės natos, improvizacija ir Jim Crow",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le jazz hérite du blues ses [[bliuzinės natos]], notes « fléchies » qui créent une tension expressive. Du gospel et des chants de travail, il tire l'appel-réponse. Ces éléments se placent sur l'harmonie européenne des fanfares."
+          "text": "Iš bliuzo džiazui atitenka [[bliuzinės natos]], „palenktos“ natos, kuriančios išraiškingą įtampą. Iš gospelo ir darbo dainų jis perima klausimo ir atsakymo principą. Visa tai klojama ant europietiškos pučiamųjų orkestrų harmonijos."
         },
         {
           "type": "paragraph",
-          "text": "La rupture, c'est [[improvizacija džiaze]] : la partition n'est plus une loi, mais une grille. Le musicien compose en temps réel. Dans une Amérique des [[Džimo Krou įstatymai]], cette liberté est aussi politique : affirmer sa singularité quand le système veut l'effacer."
+          "text": "Lūžis yra [[improvizacija džiaze]]: partitūra nebėra įstatymas, o tik schema. Muzikantas kuria realiuoju laiku. Amerikoje, kur galioja [[Džimo Krou įstatymai]], ši laisvė yra ir politinė: įtvirtinti savo išskirtinumą, kai sistema siekia jį ištrinti."
         },
         {
           "type": "funFact",
-          "text": "En 1917, le premier disque de jazz est enregistré par des musiciens blancs (Original Dixieland Jass Band) : les maisons de disques n'osent pas encore parier sur les inventeurs noirs du genre."
+          "text": "1917 m. pirmąją džiazo plokštelę įrašo baltieji muzikantai (Original Dixieland Jass Band): įrašų kompanijos dar nedrįsta statyti ant juodaodžių, šio žanro kūrėjų."
         }
       ]
     },
     {
       "id": "course_139_la_naissance_du_jazz_americain_p3",
-      "title": "Armstrong, swing, bebop, Kind of Blue",
+      "title": "Armstrongas, svingas, bibopas, Kind of Blue",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Avec la [[Didžioji migracija]] vers Chicago et New York, le jazz quitte le Sud. **Louis Armstrong** place le soliste virtuose au centre. À Harlem, pendant la [[Harlemo renesansas]], le jazz est célébré comme modernité noire. Dans les années 1930, le [[svingas]] de **Duke Ellington** fait danser l'Amérique."
+          "text": "Kai prasideda [[Didžioji migracija]] į Čikagą ir Niujorką, džiazas palieka Pietus. **Louisas Armstrongas** iškelia į centrą virtuozą solistą. Harleme, kai klesti [[Harlemo renesansas]], džiazas šlovinamas kaip juodaodžių modernybė. 1930-aisiais Ameriką šokdina [[svingas]], kurį groja **Duke'as Ellingtonas**."
         },
         {
           "type": "image",
           "asset": "louis_armstrong_trumpet_1920s_jazz",
           "ratio": "4:3",
-          "caption": "Louis Armstrong : le soliste devient le cœur du jazz."
+          "caption": "Louisas Armstrongas: solistas tampa džiazo širdimi."
         },
         {
           "type": "paragraph",
-          "text": "Après 1945, **Charlie Parker** invente le [[bibopas]] : tempos rapides, harmonies complexes, musique d'écoute. En **1959**, **Miles Davis** publie *Kind of Blue* : le [[modalinis džiazas]] ralentit les changements d'accords pour explorer une couleur. C'est encore le disque de jazz le plus vendu au monde."
+          "text": "Po 1945 m. **Charlie Parkeris** sukuria naują stilių: tai [[bibopas]], greiti tempai, sudėtingos harmonijos, muzika klausytis. **1959** m. **Milesas Davisas** išleidžia *Kind of Blue*: [[modalinis džiazas]] sulėtina akordų kaitą, kad ištyrinėtų spalvą. Tai iki šiol perkamiausia džiazo plokštelė pasaulyje."
         },
         {
           "type": "image",
           "asset": "miles_davis_kind_of_blue_album_cool_jazz",
           "ratio": "4:3",
-          "caption": "Kind of Blue (1959) : le jazz modal, calme et révolutionnaire."
+          "caption": "Kind of Blue (1959): modalinis džiazas, ramus ir revoliucingas."
         },
         {
           "type": "funFact",
-          "text": "Le club new-yorkais Birdland tire son nom du surnom de Parker, « Bird ». Parker lui-même s'y est fait expulser un soir après une dispute."
+          "text": "Niujorko klubas „Birdland“ pavadintas pagal Parkerio pravardę „Bird“. Pats Parkeris vieną vakarą buvo iš jo išmestas po barnio."
         }
       ]
     },
     {
       "id": "course_139_la_naissance_du_jazz_americain_p4",
-      "title": "Free jazz, fusion et héritage",
+      "title": "Fri džiazas, fiuzija ir palikimas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Dans les années 1960, le [[fri džiazas]] casse les cadres, lié aux droits civiques. Puis le [[džiazo fiuzija]] croise rock et funk électriques. Le swing, cette pulsation élastique, irrigue encore rock et hip-hop. Institutionnalisé dans les conservatoires, le jazz reste un langage de l'instant : chaque concert est unique."
+          "text": "1960-aisiais su pilietinių teisių kova susijęs [[fri džiazas]] laužo rėmus. Vėliau [[džiazo fiuzija]] sujungia elektrinį roką ir funką. Svingas, tas elastingas pulsas, iki šiol maitina roką ir hiphopą. Įsitvirtinęs konservatorijose, džiazas lieka akimirkos kalba: kiekvienas koncertas unikalus."
         },
         {
           "type": "timeline",
           "events": [
             {
-              "date": "fin XIXe",
-              "title": "Nouvelle-Orléans",
-              "detail": "Congo Square, brass bands, naissance du jazz."
+              "date": "XIX a. pabaiga",
+              "title": "Naujasis Orleanas",
+              "detail": "Kongo aikštė, pučiamųjų orkestrai, džiazo gimimas."
             },
             {
-              "date": "1920s",
-              "title": "Armstrong",
-              "detail": "Le soliste virtuose conquiert Chicago et New York."
+              "date": "1920-ieji",
+              "title": "Armstrongas",
+              "detail": "Virtuozas solistas užkariauja Čikagą ir Niujorką."
             },
             {
-              "date": "1930s-1940s",
-              "title": "Swing puis bebop",
-              "detail": "De la danse à la musique de chambre moderne."
+              "date": "1930-1940-ieji",
+              "title": "Svingas, paskui bibopas",
+              "detail": "Nuo šokių iki modernios kamerinės muzikos."
             },
             {
               "date": "1959",
               "title": "Kind of Blue",
-              "detail": "Miles Davis invente un jazz modal universel."
+              "detail": "Milesas Davisas sukuria visuotinį modalinį džiazą."
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "Né à La Nouvelle-Orléans de la fusion entre rythmes africains, blues et harmonie européenne, le jazz est un art de l'improvisation et un symbole de liberté."
+          "text": "Gimęs Naujajame Orleane iš Afrikos ritmų, bliuzo ir europietiškos harmonijos susiliejimo, džiazas yra improvizacijos menas ir laisvės simbolis."
         }
       ]
     }

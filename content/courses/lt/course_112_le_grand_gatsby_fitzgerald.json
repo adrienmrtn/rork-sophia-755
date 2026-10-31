@@ -1,119 +1,119 @@
 {
   "id": "course_112_le_grand_gatsby_fitzgerald",
-  "title": "Le Grand Gatsby, Fitzgerald",
+  "title": "Didysis Getsbis, Fitzgeraldas",
   "subtitle": "1925",
   "subject": "litterature",
   "subcategory": "Anglo-saxons & littérature mondiale",
-  "description": "Jay Gatsby organise des fêtes somptueuses pour reconquérir Daisy. Fitzgerald décrit les Années folles et la corruption du rêve américain.",
+  "description": "Džėjus Getsbis rengia prabangius vakarėlius, kad susigrąžintų Deizę. Fitzgeraldas vaizduoja Šėlstančius dvidešimtuosius ir amerikietiškosios svajonės sugedimą.",
   "hero": {
     "image": "le_grand_gatsby_fitzgerald",
     "ratio": "16:9",
-    "hook": "Une lumière verte au bout du quai : le symbole d'un passé qu'on ne peut pas racheter."
+    "hook": "Žalia šviesa prieplaukos gale: praeities, kurios neįmanoma atpirkti, simbolis."
   },
   "sections": [
     {
       "id": "course_112_le_grand_gatsby_fitzgerald_intro",
-      "title": "Introduction",
+      "title": "Įvadas",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Publié en **1925**, **Le Grand Gatsby** est le chef-d'œuvre de **F. Scott Fitzgerald**, né en **1896** et mort en **1940**. À travers **Jay Gatsby**, homme mystérieux aux fêtes fabuleuses, il explore l'ascension sociale, l'illusion du bonheur et l'impossibilité de racheter le passé."
+          "text": "**1925** m. išleistas **Didysis Getsbis** yra **F. Scotto Fitzgeraldo** (gimė **1896** m., mirė **1940** m.) šedevras. Per **Džėjų Getsbį**, paslaptingą pasakiškų vakarėlių šeimininką, jis tyrinėja kilimą visuomenės laiptais, laimės iliuziją ir negalėjimą atpirkti praeities."
         },
         {
           "type": "paragraph",
-          "text": "Le roman est le requiem du [[amerikietiškoji svajonė]]. Cette idée veut qu'aux États-Unis, chacun peut réussir par le seul mérite et le travail. Derrière les dorures de l'ère du jazz, Fitzgerald montre une corruption morale profonde. L'argent achète le spectacle, mais pas la rédemption."
+          "text": "Romanas yra rekviem idėjai, kurią vadiname taip: [[amerikietiškoji svajonė]]. Pagal ją JAV kiekvienas gali pasiekti sėkmę vien savo nuopelnais ir darbu. Už džiazo epochos auksinių dekoracijų Fitzgeraldas atskleidžia gilų moralinį sugedimą. Pinigais galima nupirkti reginį, bet ne atpirkimą."
         }
       ]
     },
     {
       "id": "course_112_le_grand_gatsby_fitzgerald_p1",
-      "title": "Fitzgerald et l'ambivalence des Années folles",
+      "title": "Fitzgeraldas ir dviprasmiški Šėlstantys dvidešimtieji",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Fitzgerald vit les **Roaring Twenties**, qu'on appelle aussi les « Années folles ». C'est une décennie d'euphorie après la Première Guerre mondiale. Avec son épouse **Zelda**, il incarne le glamour et les excès de cette génération perdue, mais aussi sa fragilité psychologique et financière."
+          "text": "Fitzgeraldas gyvena **Roaring Twenties** laikais, kurie dar vadinami „Šėlstančiais dvidešimtaisiais“. Tai euforijos dešimtmetis po Pirmojo pasaulinio karo. Su žmona **Zelda** jis įkūnija šios prarastosios kartos žavesį ir perteklių, bet ir jos psichologinį bei finansinį trapumą."
         },
         {
           "type": "image",
           "asset": "f_scott_fitzgerald_portrait_photograph",
           "ratio": "4:3",
-          "caption": "F. Scott Fitzgerald, chroniqueur et acteur des Années folles."
+          "caption": "F. Scottas Fitzgeraldas, Šėlstančių dvidešimtųjų metraštininkas ir dalyvis."
         },
         {
           "type": "paragraph",
-          "text": "Le roman s'inscrit dans la période de [[Prohibicija]], de **1920** à **1933**. L'alcool est alors interdit par la Constitution. Cette interdiction favorise paradoxalement le trafic clandestin et les fortunes illicites. Gatsby lui-même doit sa richesse à cette économie souterraine. À sa sortie, le livre se vend mal. Fitzgerald meurt en **1940** en croyant avoir échoué."
+          "text": "Romano laikotarpis, nuo **1920** iki **1933** m., yra [[Prohibicija]]. Alkoholis tuo metu uždraustas Konstitucija. Paradoksalu, bet šis draudimas skatina kontrabandą ir neteisėtus turtus. Pats Getsbis praturtėjo iš šios šešėlinės ekonomikos. Pasirodžiusi knyga prastai pardavinėjama. Fitzgeraldas miršta **1940** m., manydamas, kad jam nepavyko."
         },
         {
           "type": "image",
           "asset": "jazz_age_1920s_party_america",
           "ratio": "16:9",
-          "caption": "L'Amérique des années 1920 : fêtes, jazz et illusion de prospérité."
+          "caption": "1920-ųjų Amerika: vakarėliai, džiazas ir gerovės iliuzija."
         },
         {
           "type": "funFact",
-          "text": "Le Grand Gatsby ne s'est vendu qu'à environ 20 000 exemplaires à sa publication. Ce n'est qu'après la mort de Fitzgerald, distribué aux soldats pendant la Seconde Guerre mondiale, qu'il devient un classique."
+          "text": "Pasirodžius *Didžiojo Getsbio* parduota tik apie 20 000 egzempliorių. Klasika jis tapo tik po Fitzgeraldo mirties, kai per Antrąjį pasaulinį karą buvo dalijamas kariams."
         }
       ]
     },
     {
       "id": "course_112_le_grand_gatsby_fitzgerald_p2",
-      "title": "Gatsby ou l'invention de soi",
+      "title": "Getsbis, arba savęs išradimas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Jay Gatsby**, né **James Gatz**, fils de fermiers pauvres du Dakota, rejette ses origines pour se réinventer. Sa fortune, liée au trafic d'alcool durant la Prohibition, sert une seule obsession : reconquérir **Daisy Buchanan**, qu'il a aimée avant la guerre."
+          "text": "**Džėjus Getsbis**, gimęs kaip **Džeimsas Gatzas**, neturtingų Dakotos ūkininkų sūnus, atsižada savo kilmės ir išranda save iš naujo. Jo turtas, susijęs su alkoholio kontrabanda Prohibicijos metais, tarnauja vienai aistrai: susigrąžinti **Deizę Bjukenen**, kurią jis mylėjo prieš karą."
         },
         {
           "type": "image",
           "asset": "long_island_mansion_1920s",
           "ratio": "16:9",
-          "caption": "West Egg et East Egg : la demeure de Gatsby face à celle de Daisy."
+          "caption": "West Egg ir East Egg: Getsbio rūmai priešais Deizės namus."
         },
         {
           "type": "paragraph",
-          "text": "Installé à **West Egg**, quartier des « nouveaux riches », Gatsby contemple chaque nuit la **lumière verte** au bout du quai des Buchanan, à **East Egg**. East Egg abrite l'aristocratie héréditaire. La lumière symbolise l'avenir qu'il poursuit, toujours hors de portée. Gatsby croit qu'on peut effacer le temps par la volonté seule, mais le passé résiste."
+          "text": "Įsikūręs **West Egg**, „naujųjų turtuolių“ kvartale, Getsbis kas naktį žvelgia į **žalią šviesą** Bjukenenų prieplaukos gale, **East Egg**. East Egg gyvena paveldėtojų aristokratija. Šviesa simbolizuoja ateitį, kurios jis vejasi ir kuri visada lieka nepasiekiama. Getsbis tiki, kad vien valios jėga galima ištrinti laiką, bet praeitis nepasiduoda."
         }
       ]
     },
     {
       "id": "course_112_le_grand_gatsby_fitzgerald_p3",
-      "title": "Nick Carraway et le regard du témoin",
+      "title": "Nikas Karauėjus ir liudininko žvilgsnis",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le narrateur **Nick Carraway**, cousin de Daisy et voisin de Gatsby, observe ce monde avec fascination et dégoût. Il voit la noblesse de Gatsby malgré ses fautes, face à la cruauté des Buchanan, richesse héréditaire protégée par l'argent et l'indifférence."
+          "text": "Pasakotojas **Nikas Karauėjus**, Deizės pusbrolis ir Getsbio kaimynas, stebi šį pasaulį su susižavėjimu ir pasibjaurėjimu. Nepaisant Getsbio klaidų, jis mato jo kilnumą, priešingą Bjukenenų žiaurumui: jų paveldėtą turtą saugo pinigai ir abejingumas."
         },
         {
           "type": "quote",
-          "text": "Gatsby croyait à la lumière verte, à l'orgiastique avenir qui, année après année, se retire devant nous.",
-          "attribution": "F. Scott Fitzgerald, Le Grand Gatsby"
+          "text": "Getsbis tikėjo žalia šviesa, orgiastine ateitimi, kuri metai iš metų tolsta nuo mūsų.",
+          "attribution": "F. Scottas Fitzgeraldas, Didysis Getsbis"
         },
         {
           "type": "paragraph",
-          "text": "Quand Daisy tue accidentellement **Myrtle Wilson** au volant de la voiture de Gatsby, elle le laisse porter le chapeau. Gatsby meurt, tué par le mari de Myrtle. Personne ne vient à ses funérailles. Nick comprend que tout n'était qu'un mirage : les fêtes somptueuses masquaient une solitude absolue."
+          "text": "Kai Deizė, vairuodama Getsbio automobilį, netyčia partrenkia **Mirtlę Vilson**, kaltę ji palieka prisiimti jam. Getsbį nužudo Mirtlės vyras. Į jo laidotuves niekas neateina. Nikas supranta, kad viskas tebuvo miražas: prabangūs vakarėliai slėpė visišką vienatvę."
         }
       ]
     },
     {
       "id": "course_112_le_grand_gatsby_fitzgerald_p4",
-      "title": "La postérité mémorielle et le déclin du rêve",
+      "title": "Atmintis palikuonims ir svajonės nuosmukis",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le roman se clôt sur la métaphore des barques luttant contre le courant : nous sommes poussés vers l'avant par nos espoirs, mais ancrés dans le passé. Fitzgerald dresse aussi le portrait de la **Vallée des Cendres**, zone industrielle dévastée. Les yeux du docteur T.J. Eckleburg sur un panneau publicitaire symbolisent un [[Nesantis Dievas]]. La spiritualité a cédé la place au commerce."
+          "text": "Romanas baigiasi valčių, irkluojančių prieš srovę, metafora: viltys mus stumia pirmyn, bet esame prirakinti prie praeities. Fitzgeraldas taip pat vaizduoja **Pelenų slėnį**, nuniokotą pramonės zoną. Daktaro T. J. Eklbergo akys reklaminiame skyde simbolizuoja tai, ką galima pavadinti taip: [[Nesantis Dievas]]. Dvasingumą išstūmė prekyba."
         },
         {
           "type": "paragraph",
-          "text": "Redécouvert après **1945**, le livre est devenu le miroir des contradictions américaines : nouvelle fortune contre vieille lignée, rêve contre réalité, spectacle contre vérité. Il reste l'une des critiques les plus célèbres du [[amerikietiškoji svajonė]] et de ses promesses trahies."
+          "text": "Iš naujo atrasta po **1945** m., knyga tapo Amerikos prieštaravimų veidrodžiu: nauji turtai prieš seną giminę, svajonė prieš tikrovę, reginys prieš tiesą. Ji tebėra viena žinomiausių kritikų to, ką žada [[amerikietiškoji svajonė]], ir jos išduotų pažadų."
         },
         {
           "type": "takeaway",
-          "text": "**Le Grand Gatsby** montre la chute tragique d'un homme qui a voulu racheter son passé par la fortune, et critique l'irresponsabilité d'une élite protégée par l'argent."
+          "text": "**Didysis Getsbis** parodo tragišką žmogaus, norėjusio turtais atpirkti savo praeitį, žlugimą ir kritikuoja pinigų saugomo elito neatsakingumą."
         }
       ]
     }

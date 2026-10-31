@@ -1,110 +1,110 @@
 {
   "id": "course_239_le_futur_du_travail",
-  "title": "À quoi ressemblera le travail de demain ?",
-  "subtitle": "Automatisation & intelligence artificielle",
+  "title": "Koks bus rytojaus darbas?",
+  "subtitle": "Automatizacija ir dirbtinis intelektas",
   "subject": "comprendreLeMonde",
   "subcategory": "Environnement & avenir",
-  "description": "L'intelligence artificielle et de nouvelles formes d'emploi bousculent un modèle du travail hérité de l'ère industrielle.",
+  "description": "Dirbtinis intelektas ir naujos užimtumo formos griauna iš pramonės eros paveldėtą darbo modelį.",
   "hero": {
     "image": "le_futur_du_travail",
     "ratio": "16:9",
-    "hook": "Les machines travaillent plus vite que jamais. Reste à savoir ce qu'il restera à faire aux humains."
+    "hook": "Mašinos dirba greičiau nei bet kada. Belieka išsiaiškinti, kas liks daryti žmonėms."
   },
   "sections": [
     {
       "id": "course_239_le_futur_du_travail_intro",
-      "title": "Introduction",
+      "title": "Įvadas",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le travail ne définit pas seulement nos revenus : il façonne aussi notre identité sociale et le sens que nous donnons à nos journées. Or l'intelligence artificielle, la robotique et de nouvelles façons de travailler bousculent aujourd'hui ce modèle hérité de l'ère industrielle."
+          "text": "Darbas lemia ne tik mūsų pajamas: jis formuoja ir mūsų socialinę tapatybę bei prasmę, kurią suteikiame savo dienoms. Tačiau dirbtinis intelektas, robotika ir naujos darbo formos šiandien griauna šį iš pramonės eros paveldėtą modelį."
         },
         {
           "type": "paragraph",
-          "text": "Ce cours explore comment le travail change de forme, et les grandes questions que soulève cette transformation : moins d'heures, plus de machines, et un nouveau partage des richesses."
+          "text": "Šiame kurse pamatysi, kaip keičiasi darbo forma ir kokius didelius klausimus kelia šis pokytis: mažiau valandų, daugiau mašinų ir naujas turto pasidalijimas."
         }
       ]
     },
     {
       "id": "course_239_le_futur_du_travail_p1",
-      "title": "La fin du modèle né avec Henry Ford",
+      "title": "Henry Fordo modelio pabaiga",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le travail moderne s'est longtemps organisé autour d'une idée popularisée par **[[Henry Fordas]]**, qui instaure la semaine de 40 heures en 1926. Ce choix n'était pas un geste de générosité : des ouvriers disposant de temps libre deviennent aussi des clients, capables d'acheter les produits qu'ils fabriquent eux-mêmes."
+          "text": "Šiuolaikinis darbas ilgai rėmėsi idėja, kurią išpopuliarino **[[Henry Fordas]]**, 1926 m. įvedęs 40 valandų darbo savaitę. Tai nebuvo dosnumo gestas: laisvo laiko turintys darbininkai tampa ir klientais, galinčiais pirkti gaminius, kuriuos patys pagamina."
         },
         {
           "type": "funFact",
-          "text": "En 1930, l'économiste John Maynard Keynes avait prédit que ses petits-enfants ne travailleraient que 15 heures par semaine, grâce aux progrès technologiques. Presque un siècle plus tard, nous disposons de cette technologie, mais nous travaillons toujours autant."
+          "text": "1930 m. ekonomistas Johnas Maynardas Keynesas prognozavo, kad dėl technologinės pažangos jo anūkai dirbs tik 15 valandų per savaitę. Praėjus beveik šimtmečiui, tokias technologijas jau turime, bet dirbame tiek pat."
         },
         {
           "type": "paragraph",
-          "text": "Ce modèle s'effrite aujourd'hui au profit de la **gig economy**, l'économie « à la tâche » : plus de 57 millions de travailleurs aux États-Unis vendent désormais leurs services via des plateformes numériques, hors du salariat classique. L'automatisation gagne aussi des tâches de plus en plus complexes, tandis que le télétravail, accéléré par la pandémie de 2020, redessine la géographie même du travail."
+          "text": "Šiandien šis modelis byra, o jo vietą užima **gig economy**, vadinamoji „užduočių ekonomika“: daugiau nei 57 milijonai darbuotojų JAV dabar parduoda savo paslaugas per skaitmenines platformas, už įprasto samdomojo darbo ribų. Automatizacija perima vis sudėtingesnes užduotis, o nuotolinis darbas, kurį paspartino 2020 m. pandemija, perbraižo pačią darbo geografiją."
         }
       ]
     },
     {
       "id": "course_239_le_futur_du_travail_p2",
-      "title": "L'IA et le défi de la destruction créatrice",
+      "title": "DI ir kūrybinio griovimo iššūkis",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le débat sur l'avenir du travail s'appuie souvent sur une idée du philosophe et économiste **[[Josephas Schumpeteris]]** : la **[[destruction créatrice]]**. Selon lui, chaque révolution technologique détruit des métiers anciens, mais finit par en créer de nouveaux, souvent plus qualifiés. L'intelligence artificielle générative introduit toutefois une nouveauté : elle menace, pour la première fois, des emplois de bureau et des professions considérées comme intellectuelles."
+          "text": "Diskusijos apie darbo ateitį dažnai remiasi idėja, kurią iškėlė filosofas ir ekonomistas **[[Josephas Schumpeteris]]**: tai **[[Kūrybinis griovimas]]**. Pasak jo, kiekviena technologinė revoliucija sunaikina senas profesijas, bet galiausiai sukuria naujų, dažnai reikalaujančių aukštesnės kvalifikacijos. Vis dėlto generatyvusis dirbtinis intelektas atneša naujovę: pirmą kartą jis kelia grėsmę biuro darbo vietoms ir profesijoms, laikomoms intelektinėmis."
         },
         {
           "type": "funFact",
-          "text": "En 2023, une étude a montré que l'intelligence artificielle réussissait mieux que 99 % des humains à un test de créativité, remettant en cause l'idée que la créativité serait notre dernier avantage face aux machines."
+          "text": "2023 m. tyrimas parodė, kad dirbtinis intelektas kūrybiškumo teste pasirodė geriau nei 99 % žmonių. Tai kvestionuoja įsitikinimą, kad kūrybiškumas yra paskutinis mūsų pranašumas prieš mašinas."
         },
         {
           "type": "paragraph",
-          "text": "Trois scénarios se dessinent. L'optimiste imagine une hausse de productivité qui libérerait l'humain des tâches répétitives. Le pessimiste redoute que l'IA n'avance plus vite que notre capacité à nous reconvertir, créant un chômage massif. L'hybride, enfin, mise sur une collaboration entre l'humain et la machine, où la compétence clé deviendrait la capacité à diriger les outils plutôt qu'à maîtriser un savoir-faire figé."
+          "text": "Ryškėja trys scenarijai. Optimistinis numato produktyvumo augimą, kuris išlaisvintų žmogų nuo pasikartojančių užduočių. Pesimistinis baiminasi, kad DI tobulės greičiau, nei spėsime persikvalifikuoti, ir sukels masinį nedarbą. Galiausiai hibridinis scenarijus remiasi žmogaus ir mašinos bendradarbiavimu, kai svarbiausias gebėjimas būtų valdyti įrankius, o ne įvaldyti sustingusius įgūdžius."
         }
       ]
     },
     {
       "id": "course_239_le_futur_du_travail_p3",
-      "title": "Redistribuer le temps et l'argent",
+      "title": "Laiko ir pinigų perskirstymas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Face au risque d'une société à deux vitesses, de nouveaux outils sont à l'étude. Le **revenu universel de base** propose de verser une somme fixe à chaque citoyen, sans condition, pour sécuriser les parcours de vie dans une économie où le travail devient plus intermittent."
+          "text": "Kylant dviejų greičių visuomenės rizikai, svarstomi nauji įrankiai. Pagal **visuotinių bazinių pajamų** idėją kiekvienam piliečiui besąlygiškai būtų mokama fiksuota suma, kad gyvenimas būtų saugesnis ekonomikoje, kurioje darbas tampa vis labiau protarpinis."
         },
         {
           "type": "image",
           "asset": "ai_generative_writing_artificial_intelligence",
           "ratio": "16:9",
-          "caption": "Automatisation, intelligence artificielle et nouvelles formes d'emploi redessinent le monde du travail."
+          "caption": "Automatizacija, dirbtinis intelektas ir naujos užimtumo formos perbraižo darbo pasaulį."
         },
         {
           "type": "paragraph",
-          "text": "En complément, l'idée d'une **[[semaine de 4 jours]]** gagne du terrain : si les machines produisent davantage en moins de temps, il paraît logique que le temps de travail humain diminue en retour, pour maintenir l'emploi et préserver la santé des travailleurs. Reste une question de financement : si la valeur est de plus en plus créée par des logiciels, les impôts devront sans doute glisser des revenus du travail vers ceux du capital."
+          "text": "Be to, vis populiaresnė tampa **[[4 dienų darbo savaitė]]**: jei mašinos per trumpesnį laiką pagamina daugiau, atrodo logiška, kad žmonių darbo laikas atitinkamai sumažėtų, siekiant išsaugoti darbo vietas ir darbuotojų sveikatą. Lieka finansavimo klausimas: jei vertę vis dažniau kuria programinė įranga, mokesčius greičiausiai teks perkelti nuo darbo pajamų prie kapitalo pajamų."
         }
       ]
     },
     {
       "id": "course_239_le_futur_du_travail_p4",
-      "title": "Quel sens donner au travail de demain",
+      "title": "Kokią prasmę turės rytojaus darbas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Une fois l'équation économique résolue reste une question plus profonde : que devient le sens de nos journées dans un monde où le travail serait moins central ? Historiquement, le travail a structuré le quotidien et l'estime de soi. Sa disparition partielle pourrait mener soit à l'ennui, soit à un renouveau des activités bénévoles, artistiques ou civiques."
+          "text": "Išsprendus ekonominę lygtį, lieka gilesnis klausimas: kokią prasmę įgis mūsų dienos pasaulyje, kuriame darbas būtų mažiau svarbus? Istoriškai darbas struktūravo kasdienybę ir savivertę. Dalinis jo išnykimas galėtų vesti arba į nuobodulį, arba į savanoriškos, meninės ar pilietinės veiklos atgimimą."
         },
         {
           "type": "funFact",
-          "text": "Le mot « travail » vient du latin tripalium, un instrument de torture à trois pieux. Une origine qui rappelle qu'il fut longtemps perçu comme une souffrance avant de devenir une identité."
+          "text": "Prancūziškas žodis „travail“ (darbas) kilęs iš lotyniško tripalium: taip vadintas kankinimo įrankis iš trijų kuolų. Ši kilmė primena, kad darbas ilgai buvo laikomas kančia, kol tapo tapatybės dalimi."
         },
         {
           "type": "paragraph",
-          "text": "Dans ce contexte, apprendre à apprendre devient une compétence essentielle. Le véritable enjeu n'est pas seulement technologique, mais politique : utiliserons-nous l'intelligence artificielle pour augmenter nos capacités, ou seulement pour réduire les coûts des entreprises ? La réponse déterminera si le travail de demain sera une libération ou une nouvelle contrainte."
+          "text": "Tokiomis aplinkybėmis gebėjimas mokytis tampa esminiu įgūdžiu. Tikrasis iššūkis yra ne tik technologinis, bet ir politinis: ar dirbtinį intelektą naudosime savo gebėjimams stiprinti, ar tik įmonių sąnaudoms mažinti? Nuo atsakymo priklausys, ar rytojaus darbas bus išlaisvinimas, ar nauja prievarta."
         },
         {
           "type": "takeaway",
-          "text": "Le futur du travail est marqué par la fin du salariat unique, au profit de la gig economy, et par le défi de l'intelligence artificielle, qui menace pour la première fois des emplois intellectuels. Notre modèle social devra sans doute redistribuer les gains de productivité, par un revenu universel ou une semaine de travail plus courte."
+          "text": "Darbo ateitį ženklina vienintelio samdomo darbo pabaiga, užleidžianti vietą gig economy, ir dirbtinio intelekto iššūkis, pirmą kartą keliantis grėsmę intelektiniam darbui. Mūsų socialiniam modeliui greičiausiai teks perskirstyti produktyvumo naudą, įvedant visuotines pajamas arba trumpesnę darbo savaitę."
         }
       ]
     }
