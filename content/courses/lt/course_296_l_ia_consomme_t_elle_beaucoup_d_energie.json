@@ -19,11 +19,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Vous posez une question à une IA en ligne, la réponse s'affiche en quelques secondes. Le travail, lui, n'a pas lieu dans votre téléphone. Il se fait dans un [[centre de données]], un bâtiment rempli de machines qui traitent et stockent l'information. Ces machines consomment de l'électricité en continu, même si personne ne les voit."
+          "text": "Vous posez une question à une IA en ligne, la réponse s'affiche en quelques secondes. Le travail, lui, n'a pas lieu dans votre téléphone. Il se fait dans un [[duomenų centras]], un bâtiment rempli de machines qui traitent et stockent l'information. Ces machines consomment de l'électricité en continu, même si personne ne les voit."
         },
         {
           "type": "paragraph",
-          "text": "En 2025, selon l'[[Agence internationale de l'énergie]], l'ensemble des centres de données a utilisé environ **1,5 %** de l'électricité mondiale. Ce chiffre couvre tous les services en ligne, pas seulement l'IA. Mais les installations dédiées à l'IA se multiplient vite. Une réponse courte coûte peu à elle seule. Reste que des machines tournent pour chacune d'elles, et que plusieurs systèmes tirent du courant en même temps pour la produire."
+          "text": "En 2025, selon l'[[Tarptautinė energetikos agentūra]], l'ensemble des centres de données a utilisé environ **1,5 %** de l'électricité mondiale. Ce chiffre couvre tous les services en ligne, pas seulement l'IA. Mais les installations dédiées à l'IA se multiplient vite. Une réponse courte coûte peu à elle seule. Reste que des machines tournent pour chacune d'elles, et que plusieurs systèmes tirent du courant en même temps pour la produire."
         }
       ]
     },
@@ -34,7 +34,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Un [[serveur]] est un ordinateur qui traite des données et fait tourner des services en ligne. Dans un centre de données, ce sont les serveurs qui font l'essentiel du calcul : ils sont donc les premiers consommateurs d'électricité. Si l'on découpe la facture d'un centre de données moderne, les serveurs en prennent en moyenne **60 %**. Ce chiffre vaut pour les centres de données en général, pas pour les seules installations d'IA."
+          "text": "Un [[serveris]] est un ordinateur qui traite des données et fait tourner des services en ligne. Dans un centre de données, ce sont les serveurs qui font l'essentiel du calcul : ils sont donc les premiers consommateurs d'électricité. Si l'on découpe la facture d'un centre de données moderne, les serveurs en prennent en moyenne **60 %**. Ce chiffre vaut pour les centres de données en général, pas pour les seules installations d'IA."
         },
         {
           "type": "image",
@@ -59,7 +59,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Avant de pouvoir répondre, un service d'IA a besoin d'un modèle : un système qui a appris des régularités à partir d'exemples. Le créer passe par l'[[entraînement]], une phase où des ordinateurs passent au crible d'énormes quantités de données. Ce travail peut occuper des machines très puissantes pendant de longues périodes."
+          "text": "Avant de pouvoir répondre, un service d'IA a besoin d'un modèle : un système qui a appris des régularités à partir d'exemples. Le créer passe par l'[[mokymas]], une phase où des ordinateurs passent au crible d'énormes quantités de données. Ce travail peut occuper des machines très puissantes pendant de longues périodes."
         },
         {
           "type": "image",
@@ -69,7 +69,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Une fois le modèle entraîné, un autre travail commence. L'[[inférence]] est le calcul qui produit une réponse à votre demande. L'entraînement ne recommence pas en entier à chaque question ; l'inférence, elle, se répète à chaque requête. Laquelle pèse le plus au fil du temps ? Cela dépend de la façon dont le service est construit et du nombre de personnes qui l'utilisent. Un service très fréquenté garde ses ordinateurs occupés à répondre, même entre deux grandes phases d'entraînement."
+          "text": "Une fois le modèle entraîné, un autre travail commence. L'[[išvedimas]] est le calcul qui produit une réponse à votre demande. L'entraînement ne recommence pas en entier à chaque question ; l'inférence, elle, se répète à chaque requête. Laquelle pèse le plus au fil du temps ? Cela dépend de la façon dont le service est construit et du nombre de personnes qui l'utilisent. Un service très fréquenté garde ses ordinateurs occupés à répondre, même entre deux grandes phases d'entraînement."
         }
       ]
     },
@@ -80,7 +80,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Combien d'électricité consomme une seule requête texte ? Les estimations publiées ne donnent pas la même réponse. Google, en mesurant son service en fonctionnement, situe sa requête texte médiane à **0,24 Wh**. Le [[watt-heure]] (Wh) est l'unité qui mesure une quantité d'énergie. Une autre étude arrive, elle, à une médiane de **0,31 Wh**, la moitié centrale de ses requêtes standard se situant entre **0,16 et 0,60 Wh**."
+          "text": "Combien d'électricité consomme une seule requête texte ? Les estimations publiées ne donnent pas la même réponse. Google, en mesurant son service en fonctionnement, situe sa requête texte médiane à **0,24 Wh**. Le [[vatvalandė]] (Wh) est l'unité qui mesure une quantité d'énergie. Une autre étude arrive, elle, à une médiane de **0,31 Wh**, la moitié centrale de ses requêtes standard se situant entre **0,16 et 0,60 Wh**."
         },
         {
           "type": "paragraph",
@@ -99,7 +99,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le [[réseau électrique]] est le maillage de lignes qui transporte le courant des centrales jusqu'aux maisons et aux entreprises. Les grandes installations d'IA se branchent sur ce même réseau. Pour donner un ordre de grandeur, l'AIE compare la consommation annuelle d'un centre de données dédié à l'IA, un bâtiment construit surtout pour faire tourner ces services, à celle d'environ **100 000 foyers**."
+          "text": "Le [[elektros tinklas]] est le maillage de lignes qui transporte le courant des centrales jusqu'aux maisons et aux entreprises. Les grandes installations d'IA se branchent sur ce même réseau. Pour donner un ordre de grandeur, l'AIE compare la consommation annuelle d'un centre de données dédié à l'IA, un bâtiment construit surtout pour faire tourner ces services, à celle d'environ **100 000 foyers**."
         },
         {
           "type": "image",
