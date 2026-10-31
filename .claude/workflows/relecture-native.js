@@ -5,7 +5,7 @@ export const meta = {
 }
 const R = args.repo || '/home/user/rork-sophia-755' // checkout of this repository
 const P = args.work // working folder: packs/<lang>/, term/<lang>.md, out/<lang>/ … (see docs/processus-traduction.md)
-const NAMES = { en: 'English (US)', es: 'Spanish (Spain)', de: 'German', pt: 'Brazilian Portuguese', 'pt-PT': 'European Portuguese', it: 'Italian', tr: 'Turkish', pl: 'Polish', ro: 'Romanian', nl: 'Dutch', el: 'Greek', sv: 'Swedish', hu: 'Hungarian', bg: 'Bulgarian', cs: 'Czech', da: 'Danish', nb: 'Norwegian Bokmål', ru: 'Russian', hr: 'Croatian', sl: 'Slovenian', sk: 'Slovak', sr: 'Serbian (Latin script, ekavian)', ar: 'Arabic (Modern Standard Arabic)', he: 'Hebrew', fi: 'Finnish', et: 'Estonian' }
+const NAMES = { en: 'English (US)', es: 'Spanish (Spain)', de: 'German', pt: 'Brazilian Portuguese', 'pt-PT': 'European Portuguese', it: 'Italian', tr: 'Turkish', pl: 'Polish', ro: 'Romanian', nl: 'Dutch', el: 'Greek', sv: 'Swedish', hu: 'Hungarian', bg: 'Bulgarian', cs: 'Czech', da: 'Danish', nb: 'Norwegian Bokmål', ru: 'Russian', hr: 'Croatian', sl: 'Slovenian', sk: 'Slovak', sr: 'Serbian (Latin script, ekavian)', ar: 'Arabic (Modern Standard Arabic)', he: 'Hebrew', fi: 'Finnish', et: 'Estonian', lt: 'Lithuanian', lv: 'Latvian', ja: 'Japanese' }
 
 const VERDICTS = {
   type: 'object',

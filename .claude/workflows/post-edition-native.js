@@ -5,7 +5,7 @@ export const meta = {
 }
 const R = args.repo || '/home/user/rork-sophia-755' // checkout of this repository
 const P = args.work // working folder: packs/<lang>/, term/<lang>.md, out/<lang>/ … (see docs/processus-traduction.md)
-const NAMES = { en: 'English (US)', es: 'Spanish (Spain)', de: 'German', pt: 'Brazilian Portuguese', 'pt-PT': 'European Portuguese', it: 'Italian', tr: 'Turkish', pl: 'Polish', ro: 'Romanian', nl: 'Dutch', el: 'Greek', sv: 'Swedish', hu: 'Hungarian', bg: 'Bulgarian', cs: 'Czech', da: 'Danish', nb: 'Norwegian Bokmål', ru: 'Russian', hr: 'Croatian', sl: 'Slovenian', sk: 'Slovak', sr: 'Serbian (Latin script, ekavian)', ar: 'Arabic (Modern Standard Arabic)', he: 'Hebrew', fi: 'Finnish', et: 'Estonian' }
+const NAMES = { en: 'English (US)', es: 'Spanish (Spain)', de: 'German', pt: 'Brazilian Portuguese', 'pt-PT': 'European Portuguese', it: 'Italian', tr: 'Turkish', pl: 'Polish', ro: 'Romanian', nl: 'Dutch', el: 'Greek', sv: 'Swedish', hu: 'Hungarian', bg: 'Bulgarian', cs: 'Czech', da: 'Danish', nb: 'Norwegian Bokmål', ru: 'Russian', hr: 'Croatian', sl: 'Slovenian', sk: 'Slovak', sr: 'Serbian (Latin script, ekavian)', ar: 'Arabic (Modern Standard Arabic)', he: 'Hebrew', fi: 'Finnish', et: 'Estonian', lt: 'Lithuanian', lv: 'Latvian', ja: 'Japanese' }
 
 const SURFACE = {
   ui: `App interface strings. Keep every placeholder exactly ({name}, %@, %d, %1$@, %s, %lld…), keep the same number of ⏎ (line breaks) as the current text, keep buttons and labels about as short as now. Product voice: informal singular "you", warm, short.`,
@@ -21,7 +21,7 @@ function prompt(lang, lot) {
   const surface = lot.startsWith('ui') ? 'ui' : lot.split('_')[0]
   const guide = `${R}/content/TRANSLATION_GUIDE_${lang.toUpperCase().replace('-', '_')}.md`
   const out = `${P}/out/${lang}/${lot}.json`
-  return `You are a senior native ${NAMES[lang]} editor, fluent in French, post-editing the ${NAMES[lang]} edition of Sophia (general-knowledge micro-courses for curious teenagers and adults). The current ${NAMES[lang]} text is raw machine translation and native speakers complain it is unnatural. French is the source of truth for meaning.
+  return `You are a senior native ${NAMES[lang]} editor, fluent in French, post-editing the ${NAMES[lang]} edition of Sophia (general-knowledge micro-courses for curious teenagers and adults). The current ${NAMES[lang]} text is raw machine translation and native speakers complain it is unnatural. French is the source of truth for meaning. For a language being added (Lithuanian, Latvian, Japanese), ACTUEL is still the French text: translate every item in full from the French, so every item gets an edit; glossary items then always return "terme" too (the term in the language).
 
 Read fully first:
 1. ${guide} — the ${NAMES[lang]} translation guide. Follow it.
