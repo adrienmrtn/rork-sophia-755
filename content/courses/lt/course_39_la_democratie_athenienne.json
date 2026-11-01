@@ -1,137 +1,137 @@
 {
   "id": "course_39_la_democratie_athenienne",
-  "title": "Qui avait vraiment le pouvoir dans la démocratie athénienne ?",
-  "subtitle": "Ve siècle av. J.-C.",
+  "title": "Kam Atėnų demokratijoje tikrai priklausė valdžia?",
+  "subtitle": "V a. pr. Kr.",
   "subject": "histoire",
   "subcategory": "Šaltasis karas ir dabartinis pasaulis",
-  "description": "Au Ve siècle avant J.-C., Athènes invente un système où les citoyens gouvernent directement. Tirage au sort, égalité de parole… et exclusion massive.",
+  "description": "V a. pr. Kr. Atėnai sukuria sistemą, kurioje piliečiai valdo tiesiogiai. Burtai, lygi žodžio teisė… ir masinė atskirtis.",
   "hero": {
     "image": "la_democratie_athenienne",
     "ratio": "16:9",
-    "hook": "Comment une cité grecque a inventé le pouvoir du peuple, et ses limites."
+    "hook": "Kaip Graikijos miestas išrado liaudies valdžią ir jos ribas."
   },
   "sections": [
     {
       "id": "course_39_la_democratie_athenienne_intro",
-      "title": "Introduction",
+      "title": "Įvadas",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Au Ve siècle avant J.-C., Athènes invente quelque chose de radical : la **[[politika]]** au sens où les citoyens ne sont plus sujets d'un roi, mais acteurs de leur destin. Le pouvoir (*kratos*) appartient au peuple (*demos*). D'où le mot démocratie."
+          "text": "V a. pr. Kr. Atėnai išranda kai ką radikalaus: **[[politika]]** ta prasme, kad piliečiai nebe karaliaus pavaldiniai, o savo likimo kūrėjai. Valdžia (*kratos*) priklauso tautai (*demos*). Iš čia ir žodis demokratija."
         },
         {
           "type": "paragraph",
-          "text": "Cette démocratie directe, née de crises et de réformes, reste une référence pour la pensée politique occidentale, avec ses forces et ses angles morts."
+          "text": "Ši tiesioginė demokratija, gimusi iš krizių ir reformų, tebėra Vakarų politinės minties atskaitos taškas, su visomis stiprybėmis ir aklosiomis dėmėmis."
         }
       ]
     },
     {
       "id": "course_39_la_democratie_athenienne_p1",
-      "title": "Des réformes qui ouvrent la cité",
+      "title": "Reformos, atvėrusios miestą",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Au VIIe siècle avant J.-C., Athènes est déchirée entre aristocrates et paysans endettés. **[[Solonas]]**, homme d'État élu en **594 av. J.-C.**, abolit l'esclavage pour dettes et ouvre les magistratures selon la fortune, pas seulement le sang."
+          "text": "VII a. pr. Kr. Atėnai plyšta tarp aristokratų ir skolose paskendusių valstiečių. **594 m. pr. Kr.** išrinktas valstybės veikėjas **[[Solonas]]** panaikina skolinę vergiją ir magistratūras atveria pagal turtą, o ne vien pagal kilmę."
         },
         {
           "type": "paragraph",
-          "text": "Le vrai tournant, c'est **[[Kleistenas]]** (**508-507**). Ce réformateur crée **10 tribus** mixtes pour casser les clans, et institue la **[[Bulė]]**, Conseil des Cinq Cents tirés au sort. Chaque citoyen peut servir la cité."
+          "text": "Tikrasis posūkis: **[[Kleistenas]]** (**508-507**). Šis reformatorius sukuria **10 mišrių tribų**, kad suardytų klanus. Atsiranda ir **[[Bulė]]**, Penkių šimtų taryba, kurios nariai traukiami burtų keliu. Kiekvienas pilietis gali tarnauti miestui."
         },
         {
           "type": "image",
           "asset": "athens_agora_ancient_ruins",
           "ratio": "4:3",
-          "caption": "L'Agora d'Athènes, cœur de la vie civique."
+          "caption": "Atėnų agora, pilietinio gyvenimo širdis."
         },
         {
           "type": "funFact",
-          "text": "Pour écarter un homme trop puissant, les Athéniens votaient l'**[[Ostrakizmas (šukių teismas)]]** sur un tesson de céramique : exil de dix ans, avec un quorum de **6 000** votants."
+          "text": "Pernelyg galingam žmogui pašalinti atėniečiai turėjo priemonę: **[[Ostrakizmas (šukių teismas)]]**. Balsuota ant keramikos šukės, tremtis trukdavo dešimt metų, o kvorumui reikėjo **6000** balsuotojų."
         }
       ]
     },
     {
       "id": "course_39_la_democratie_athenienne_p2",
-      "title": "Comment ça marche sous Périclès",
+      "title": "Kaip tai veikė Periklio laikais",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Au milieu du Ve siècle, sous **Périclès**, stratège réélu quinze fois et figure de l'âge d'or athénien, le système devient plus ouvert. L'**Ecclésia**, assemblée des citoyens, se réunit environ **40 fois** par an sur la colline de la Pnyx. Elle vote les lois, la guerre, la paix, le budget."
+          "text": "V a. pr. Kr. viduryje, valdant **Periklį**, penkiolika kartų perrinktą strategą ir Atėnų aukso amžiaus veidą, sistema tampa atviresnė. **Ekklesija**, piliečių susirinkimas, renkasi maždaug **40 kartų** per metus Pnikso kalvoje. Ji balsuoja dėl įstatymų, karo, taikos, biudžeto."
         },
         {
           "type": "image",
           "asset": "pericles_bust_sculpture",
           "ratio": "1:1",
-          "caption": "Périclès, stratège réélu quinze fois, figure de l'âge d'or athénien."
+          "caption": "Periklis, penkiolika kartų perrinktas strategas, Atėnų aukso amžiaus veidas."
         },
         {
           "type": "paragraph",
-          "text": "L'**[[Isegorija]]** garantit l'égalité de parole. Le **[[Mistas]]**, indemnité journalière, permet aux plus pauvres de siéger. La justice passe par l'**[[Heliėja]]** : **6 000** jurés tirés au sort. Le tirage au sort limite l'accaparement du pouvoir, sauf pour les stratèges militaires."
+          "text": "**[[Isegorija]]** garantuoja lygią žodžio teisę. **[[Mistas]]**, dienos išmoka, leidžia dalyvauti ir vargingiausiems. Teisingumą vykdo **[[Heliėja]]**, kurią sudaro **6000** burtais parinktų prisiekusiųjų. Burtai riboja valdžios monopolizavimą, išskyrus karinius strategus."
         }
       ]
     },
     {
       "id": "course_39_la_democratie_athenienne_p3",
-      "title": "Une démocratie qui exclut beaucoup",
+      "title": "Demokratija, kuri daugelį atstumia",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Sur environ **300 000** habitants, seuls **30 000 à 50 000** citoyens mâles votent. Femmes, esclaves et métèques (étrangers résidents) sont exclus. En **451**, Périclès durcit même la règle : il faut deux parents citoyens."
+          "text": "Iš maždaug **300 000** gyventojų balsuoja tik **30 000-50 000** piliečių vyrų. Moterys, vergai ir metekai (gyvenantys užsieniečiai) atstumiami. **451** m. Periklis net sugriežtina taisyklę: reikia dviejų tėvų piliečių."
         },
         {
           "type": "paragraph",
-          "text": "Paradoxe fondateur : l'égalité entre pairs repose sur l'esclavage et l'exclusion. Une démocratie de face-à-face, intense, mais fermée."
+          "text": "Esminis paradoksas: lygybė tarp lygių remiasi vergove ir atskirtimi. Tiesioginė demokratija akis į akį, intensyvi, bet uždara."
         },
         {
           "type": "funFact",
-          "text": "Celui qui se désintéressait de la vie publique était appelé *idiotes* (« particulier »). Le mot a donné « idiot » : se couper du bien commun passait pour un manque de raison."
+          "text": "Tas, kuris nesidomėjo visuomeniniu gyvenimu, buvo vadinamas *idiotes* („privatus asmuo“). Iš to atsirado žodis „idiotas“: atsiribojimas nuo bendro gėrio buvo laikomas proto stoka."
         }
       ]
     },
     {
       "id": "course_39_la_democratie_athenienne_p4",
-      "title": "Fragilités et héritage",
+      "title": "Trapumas ir palikimas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Un [[Demagogas]], orateur qui flatte les passions, peut emporter l'assemblée par l'émotion. **Platon**, philosophe marqué par la mort de son maître **Socrate** (**399 av. J.-C.**), voit dans la démocratie le règne de l'opinion contre la vérité, et l'exemple type de la tyrannie de la majorité."
+          "text": "[[Demagogas]], aistras glostantis oratorius, gali emocijomis pakreipti susirinkimą. **Platonas**, filosofas, kurį paveikė mokytojo **Sokrato** mirtis (**399 m. pr. Kr.**), demokratijoje mato nuomonės viešpatavimą prieš tiesą ir tipišką daugumos tironijos pavyzdį."
         },
         {
           "type": "paragraph",
-          "text": "Malgré ses failles, Athènes lègue des idées durables : responsabilité des gouvernants, égalité devant la loi, débat contradictoire. Aujourd'hui, le tirage au sort et la démocratie directe reviennent même dans les discussions contemporaines."
+          "text": "Nepaisant spragų, Atėnai palieka ilgalaikių idėjų: valdančiųjų atsakomybę, lygybę prieš įstatymą, diskusiją, kurioje girdimos skirtingos pusės. Šiandien burtų traukimas ir tiesioginė demokratija net sugrįžta į šiuolaikines diskusijas."
         },
         {
           "type": "timeline",
           "events": [
             {
-              "date": "594 av. J.-C.",
-              "title": "Solon",
-              "detail": "Fin de l'esclavage pour dettes."
+              "date": "594 m. pr. Kr.",
+              "title": "Solonas",
+              "detail": "Skolinės vergijos pabaiga."
             },
             {
-              "date": "508 av. J.-C.",
-              "title": "Clisthène",
-              "detail": "Tribus mixtes et Boulé."
+              "date": "508 m. pr. Kr.",
+              "title": "Kleistenas",
+              "detail": "Mišrios tribos ir Bulė."
             },
             {
-              "date": "Ve siècle",
-              "title": "Périclès",
-              "detail": "Misthos et démocratie radicale."
+              "date": "V a. pr. Kr.",
+              "title": "Periklis",
+              "detail": "Mistas ir radikali demokratija."
             },
             {
-              "date": "399 av. J.-C.",
-              "title": "Mort de Socrate",
-              "detail": "Face sombre de la souveraineté populaire."
+              "date": "399 m. pr. Kr.",
+              "title": "Sokrato mirtis",
+              "detail": "Tamsioji liaudies suverenumo pusė."
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "La démocratie athénienne est un gouvernement direct des citoyens mâles libres, fondé sur le tirage au sort et l'égalité de parole. Elle excluait environ **85 %** de la population, mais a inventé le débat public occidental."
+          "text": "Atėnų demokratija yra laisvų vyrų piliečių tiesioginis valdymas, pagrįstas burtais ir lygia žodžio teise. Ji atstūmė maždaug **85 %** gyventojų, bet išrado Vakarų viešąsias diskusijas."
         }
       ]
     }

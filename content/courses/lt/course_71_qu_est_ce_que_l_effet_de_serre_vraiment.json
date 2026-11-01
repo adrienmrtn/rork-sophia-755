@@ -1,106 +1,106 @@
 {
   "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment",
-  "title": "Qu'est-ce que l'effet de serre (vraiment) ?",
-  "subtitle": "Climat & atmosphère",
+  "title": "Kas iš tikrųjų yra šiltnamio efektas?",
+  "subtitle": "Klimatas ir atmosfera",
   "subject": "sciences",
   "subcategory": "Žemė ir Visata",
-  "description": "L'effet de serre n'est pas d'abord un problème : c'est le manteau invisible qui empêche la Terre de geler. Le vrai enjeu, c'est quand on l'épaissit trop vite.",
+  "description": "Šiltnamio efektas pirmiausia yra ne problema, o nematoma antklodė, neleidžianti Žemei sušalti. Tikroji problema atsiranda, kai ji storėja per greitai.",
   "hero": {
     "image": "qu_est_ce_que_l_effet_de_serre",
     "ratio": "16:9",
-    "hook": "Sans effet de serre, la Terre serait un désert de glace. Avec trop, elle surchauffe."
+    "hook": "Be šiltnamio efekto Žemė būtų ledo dykuma. Kai jo per daug, ji perkaista."
   },
   "sections": [
     {
       "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment_intro",
-      "title": "Introduction",
+      "title": "Įvadas",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Imaginez une voiture fermée au soleil : les vitres laissent entrer la lumière, mais la chaleur a du mal à ressortir. L'habitacle se réchauffe. L'[[šiltnamio efektas]] de la Terre marche un peu comme ça, avec l'air à la place du verre."
+          "text": "Įsivaizduok uždarą automobilį saulėje: stiklai praleidžia šviesą, bet šilumai išeiti sunku. Salonas įkaista. Žemės [[šiltnamio efektas]] veikia maždaug taip pat, tik vietoj stiklo yra oras."
         },
         {
           "type": "paragraph",
-          "text": "Ce phénomène est **naturel** et vital. Sans lui, la température moyenne du globe chuterait vers **-18 °C**. Avec lui, on est autour de **+15 °C**. Le problème actuel n'est pas son existence : c'est son **amplification** rapide par nos activités."
+          "text": "Šis reiškinys yra **natūralus** ir gyvybiškai svarbus. Be jo vidutinė pasaulio temperatūra nukristų iki maždaug **-18 °C**. Su juo ji siekia apie **+15 °C**. Dabartinė problema ne jo buvimas, o spartus jo **stiprėjimas** dėl mūsų veiklos."
         }
       ]
     },
     {
       "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment_p1",
-      "title": "Comment la planète garde sa chaleur",
+      "title": "Kaip planeta išlaiko šilumą",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le Soleil envoie surtout de la lumière visible. L'atmosphère la laisse passer. Le sol et les océans se réchauffent, puis renvoient cette énergie sous forme de **chaleur infrarouge**, des ondes plus « longues » que la lumière visible."
+          "text": "Saulė daugiausia siunčia matomą šviesą. Atmosfera ją praleidžia. Žemės paviršius ir vandenynai sušyla, o paskui šią energiją grąžina **infraraudonosios šilumos** pavidalu, tai bangos, „ilgesnės“ už matomą šviesą."
         },
         {
           "type": "image",
           "asset": "factory_chimneys_greenhouse_gas_emissions",
           "ratio": "auto",
-          "caption": "Les émissions industrielles renforcent l'effet de serre."
+          "caption": "Pramonės išmetamieji teršalai stiprina šiltnamio efektą."
         },
         {
           "type": "paragraph",
-          "text": "Certains gaz, les [[šiltnamio efektą sukeliančios dujos]], absorbent cette chaleur et la renvoient dans toutes les directions, y compris vers le sol. L'azote et l'oxygène, majoritaires dans l'air, ne font presque pas ce travail. La vapeur d'eau, le **CO₂** et le **méthane** le font très bien."
+          "text": "Kai kurios dujos, [[šiltnamio efektą sukeliančios dujos]], sugeria šią šilumą ir grąžina ją į visas puses, taip pat ir žemyn. Azotas ir deguonis, kurių ore daugiausia, to beveik nedaro. Vandens garai, **CO₂** ir **metanas** tai daro labai gerai."
         },
         {
           "type": "funFact",
-          "text": "Le nom « effet de serre » est un peu trompeur. Une vraie serre chauffe surtout en bloquant l'air chaud qui monte. L'atmosphère, elle, piège la chaleur par absorption des rayons infrarouges."
+          "text": "Pavadinimas „šiltnamio efektas“ šiek tiek klaidina. Tikras šiltnamis kaista daugiausia todėl, kad sulaiko kylantį šiltą orą. Atmosfera šilumą sulaiko sugerdama infraraudonuosius spindulius."
         }
       ]
     },
     {
       "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment_p2",
-      "title": "Quand l'humain épaissit la couverture",
+      "title": "Kai žmogus sustorina antklodę",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Depuis la révolution industrielle, on brûle du charbon, du pétrole et du gaz. Ce carbone, enfoui sous terre depuis des millions d'années, repart dans l'air. La déforestation réduit aussi les forêts qui absorbaient du CO₂. L'élevage et la culture du riz ajoutent du méthane, environ **80 fois** plus « chauffant » que le CO₂ sur 20 ans."
+          "text": "Nuo pramonės revoliucijos deginama anglis, nafta ir dujos. Ši anglis, milijonus metų buvusi palaidota po žeme, grįžta į orą. Miškų naikinimas taip pat mažina miškus, kurie sugerdavo CO₂. Gyvulininkystė ir ryžių auginimas prideda metano, kuris per 20 metų „šildo“ maždaug **80 kartų** stipriau nei CO₂."
         },
         {
           "type": "paragraph",
-          "text": "Résultat : la concentration de CO₂ est passée d'environ **280** à plus de **420** parties par million. Un tel niveau n'avait pas été vu depuis le [[Pliocenas]], il y a environ **3 millions d'années**, quand les mers étaient plus hautes."
+          "text": "Rezultatas: CO₂ koncentracija išaugo nuo maždaug **280** iki daugiau nei **420** milijonųjų dalių. Tokio lygio nebuvo nuo geologinės epochos, kurios pavadinimas [[Pliocenas]]. Tai buvo maždaug prieš **3 milijonus metų**, kai jūros buvo aukštesnės."
         }
       ]
     },
     {
       "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment_p3",
-      "title": "Ce que change un climat plus énergique",
+      "title": "Ką keičia energingesnis klimatas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le [[IPCC]], qui synthétise le travail de milliers de climatologues, est clair : le réchauffement depuis 1950 est sans précédent sur des millénaires, et son origine humaine est établie."
+          "text": "[[IPCC]], apibendrinantis tūkstančių klimatologų darbą, kalba aiškiai: šilimas nuo 1950 m. nematytas tūkstantmečius, o žmogiškoji jo kilmė įrodyta."
         },
         {
           "type": "paragraph",
-          "text": "Plus d'énergie dans l'air et les océans, c'est des extrêmes plus marqués : sécheresses plus sèches, pluies plus violentes, glaciers et calottes qui fondent, niveau des mers qui monte. Et un accélérateur : quand la glace blanche disparaît, le sol et l'eau sombres absorbent plus de soleil. C'est l'[[planetos albedas]] qui baisse, et la planète se réchauffe encore plus vite."
+          "text": "Kai ore ir vandenynuose daugiau energijos, kraštutinumai ryškesni: sausros sausesnės, liūtys smarkesnės, tirpsta ledynai ir ledo kepurės, kyla jūrų lygis. Be to, veikia greitintuvas: kai baltas ledas dingsta, tamsus žemės paviršius ir vanduo sugeria daugiau saulės šviesos. Mažėja [[planetos albedas]], ir planeta šyla dar greičiau."
         },
         {
           "type": "funFact",
-          "text": "Vénus montre l'effet de serre « emballé » : une atmosphère à 96 % de CO₂, et environ **460 °C** au sol, assez pour faire fondre le plomb."
+          "text": "Venera rodo „pašėlusį“ šiltnamio efektą: atmosfera 96 % sudaryta iš CO₂, o paviršiuje apie **460 °C**, to pakanka švinui išlydyti."
         }
       ]
     },
     {
       "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment_p4",
-      "title": "Limiter la hausse, s'adapter au reste",
+      "title": "Riboti kilimą, prisitaikyti prie likusio",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L'objectif international vise à rester sous **+1,5 °C** ou **+2 °C** par rapport à l'ère préindustrielle, pour éviter des seuils dangereux comme le dégel du [[amžinasis įšalas]], qui libérerait encore plus de méthane."
+          "text": "Tarptautinis tikslas yra neviršyti **+1,5 °C** arba **+2 °C** palyginti su ikipramonine era, kad būtų išvengta pavojingų slenksčių, pavyzdžiui, kai ištirpsta [[amžinasis įšalas]], išlaisvinantis dar daugiau metano."
         },
         {
           "type": "paragraph",
-          "text": "Deux leviers : **réduire** les émissions (énergies propres, sobriété, forêts) et **s'adapter** à ce qui est déjà engagé. Le CO₂ reste des siècles dans l'air : ce qu'on émet aujourd'hui pèse longtemps."
+          "text": "Du svertai: **mažinti** išmetamą kiekį (švari energija, saikingas vartojimas, miškai) ir **prisitaikyti** prie to, kas jau nulemta. CO₂ ore išlieka šimtmečius: tai, ką išmetama šiandien, veikia ilgai."
         },
         {
           "type": "takeaway",
-          "text": "Sans effet de serre naturel, la Terre gèlerait vers **-18 °C**. Son amplification par les énergies fossiles pousse le CO₂ à des niveaux inédits depuis **3 millions d'années**."
+          "text": "Be natūralaus šiltnamio efekto Žemė sušaltų iki apie **-18 °C**. Iškastinė energija šį efektą stiprina, ir CO₂ pasiekia lygius, kokių nebuvo jau **3 milijonus metų**."
         }
       ]
     }

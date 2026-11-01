@@ -1,110 +1,110 @@
 {
   "id": "course_69_comment_se_forment_les_eclairs",
-  "title": "Comment se forment les éclairs ?",
-  "subtitle": "Orages",
+  "title": "Kaip susidaro žaibai?",
+  "subtitle": "Audros",
   "subject": "sciences",
   "subcategory": "Žemė ir Visata",
-  "description": "Un éclair n'est pas de la magie : c'est une énorme décharge électrique dans un nuage d'orage. Voici comment elle se prépare, puis comment elle frappe.",
+  "description": "Žaibas nėra magija: tai milžiniškas elektros išlydis audros debesyje. Štai kaip jis ruošiasi ir kaip trenkia.",
   "hero": {
     "image": "comment_se_forment_les_eclairs",
     "ratio": "16:9",
-    "hook": "En une fraction de seconde, l'air passe à 30 000 °C. Cinq fois plus chaud que la surface du Soleil."
+    "hook": "Per sekundės dalį oras įkaista iki 30 000 °C. Penkis kartus karščiau nei Saulės paviršius."
   },
   "sections": [
     {
       "id": "course_69_comment_se_forment_les_eclairs_intro",
-      "title": "Introduction",
+      "title": "Įvadas",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Un éclair libère une énergie colossale en un clin d'œil. L'air dans le canal de l'éclair monte à environ **30 000 °C**. Le tonnerre, lui, n'est que le bruit de cette chaleur brutale."
+          "text": "Žaibas per akimirksnį išlaisvina kolosalią energiją. Oras žaibo kanale įkaista maždaug iki **30 000 °C**. O griaustinis tėra šio staigaus karščio garsas."
         },
         {
           "type": "paragraph",
-          "text": "Pour comprendre l'éclair, il faut suivre trois étapes : comment le nuage se charge, comment l'électricité trouve un chemin, et pourquoi on entend le tonnerre après."
+          "text": "Norint suprasti žaibą, reikia sekti tris etapus: kaip debesis įsielektrina, kaip elektra suranda kelią ir kodėl griaustinis girdisi vėliau."
         }
       ]
     },
     {
       "id": "course_69_comment_se_forment_les_eclairs_p1",
-      "title": "Dans le nuage, des charges se séparent",
+      "title": "Debesyje atsiskiria krūviai",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Les éclairs naissent surtout dans les [[kamuoliniai lietaus debesys]] : de très grands nuages d'orage, qui peuvent monter jusqu'à environ **15 km**. À l'intérieur, l'air monte et descend très fort."
+          "text": "Dažniausiai žaibus gimdo [[kamuoliniai lietaus debesys]]: labai dideli audros debesys, galintys kilti iki maždaug **15 km** aukščio. Viduje oras labai stipriai kyla ir leidžiasi."
         },
         {
           "type": "image",
           "asset": "cumulonimbus_thunderstorm_cloud",
           "ratio": "4:3",
-          "caption": "Le cumulonimbus : l'usine à orages."
+          "caption": "Kamuolinis lietaus debesis: audrų fabrikas."
         },
         {
           "type": "paragraph",
-          "text": "Dans ce chaos, de petits **cristaux de glace** montent, et des grains de glace plus lourds (du [[ledo kruopos]]) descendent. Quand ils se percutent, des charges électriques s'échangent. Peu à peu, le haut du nuage devient plutôt positif, la base plutôt négative."
+          "text": "Šiame chaose maži **ledo kristalai** kyla aukštyn, o sunkesni ledo grūdeliai ([[ledo kruopos]]) leidžiasi žemyn. Kai jie susiduria, apsikeičiama elektros krūviais. Pamažu debesies viršus darosi veikiau teigiamas, o apačia veikiau neigiama."
         },
         {
           "type": "funFact",
-          "text": "Le lac de Maracaibo, au Venezuela, est l'un des endroits les plus foudroyés de la planète : des orages quasi quotidiens y sont observés une grande partie de l'année."
+          "text": "Marakaibo ežeras Venesueloje yra viena labiausiai žaibų talžomų planetos vietų: ten didelę metų dalį stebimos beveik kasdienės audros."
         }
       ]
     },
     {
       "id": "course_69_comment_se_forment_les_eclairs_p2",
-      "title": "Quand l'air lâche : la décharge",
+      "title": "Kai oras neatlaiko: išlydis",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L'air est un mauvais conducteur. Mais si la différence de charge devient trop forte (souvent des **centaines de millions de volts**), l'air finit par céder. Les molécules perdent des électrons : elles deviennent conductrices. C'est l'[[oro jonizacija]]."
+          "text": "Oras prastai praleidžia elektrą. Bet jei krūvių skirtumas tampa per didelis (dažnai **šimtai milijonų voltų**), oras galiausiai pasiduoda. Molekulės praranda elektronus ir tampa laidžios. Tai ir yra [[oro jonizacija]]."
         },
         {
           "type": "paragraph",
-          "text": "Un canal invisible part du nuage par petits bonds. Du sol, des filets électriques montent surtout depuis les pointes (arbres, paratonnerres, bâtiments). Quand les deux se rejoignent, le circuit se ferme."
+          "text": "Nematomas kanalas leidžiasi iš debesies mažais šuoliais. Nuo žemės elektrinės gijos kyla daugiausia nuo smailių vietų (medžių, žaibolaidžių, pastatų). Kai abi pusės susitinka, grandinė užsidaro."
         },
         {
           "type": "paragraph",
-          "text": "La grande lumière que l'on voit, l'**arc en retour**, remonte surtout du sol vers le nuage. Le courant peut atteindre des dizaines de milliers d'ampères. Plusieurs décharges peuvent se succéder dans le même canal : d'où l'effet de scintillement."
+          "text": "Didžioji šviesa, kurią matome, tai **grįžtamasis smūgis**, kuris kyla daugiausia nuo žemės į debesį. Srovė gali siekti dešimtis tūkstančių amperų. Tame pačiame kanale gali vienas po kito sekti keli išlydžiai, todėl žaibas mirga."
         }
       ]
     },
     {
       "id": "course_69_comment_se_forment_les_eclairs_p3",
-      "title": "Pourquoi le tonnerre arrive après",
+      "title": "Kodėl griaustinis girdisi vėliau",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L'éclair chauffe l'air si vite que celui-ci se dilate d'un coup. Cette onde de choc devient le **tonnerre**. La lumière arrive presque immédiatement ; le son, lui, avance à environ **340 m/s**."
+          "text": "Žaibas orą įkaitina taip greitai, kad šis staiga išsiplečia. Ši smūgio banga ir tampa **griaustiniu**. Šviesa atkeliauja beveik akimirksniu, o garsas sklinda maždaug **340 m/s** greičiu."
         },
         {
           "type": "paragraph",
-          "text": "Astuce simple : compte les secondes entre l'éclair et le tonnerre, puis divise par **3**. Tu obtiens une estimation de la distance en kilomètres."
+          "text": "Paprastas patarimas: suskaičiuok sekundes tarp žaibo ir griaustinio, tada padalyk iš **3**. Gausi apytikslį atstumą kilometrais."
         },
         {
           "type": "funFact",
-          "text": "La Terre est frappée par environ **100 éclairs par seconde** en moyenne. En France, on compte autour d'**un million** d'impacts au sol par an."
+          "text": "Į Žemę vidutiniškai trenkia maždaug **100 žaibų per sekundę**. Prancūzijoje per metus į žemę trenkia apie **milijoną** žaibų."
         }
       ]
     },
     {
       "id": "course_69_comment_se_forment_les_eclairs_p4",
-      "title": "Danger, fertilité et curiosités",
+      "title": "Pavojus, derlingumas ir keistenybės",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La foudre reste dangereuse, surtout en plein air, près des arbres isolés ou de l'eau. Elle déclenche aussi des incendies. Mais elle a un effet moins connu : elle aide à fabriquer des composés azotés qui fertilisent les sols avec la pluie."
+          "text": "Žaibas tebėra pavojingas, ypač po atviru dangumi, šalia pavienių medžių ar vandens. Jis taip pat sukelia gaisrus. Bet turi ir mažiau žinomą poveikį: padeda susidaryti azoto junginiams, kurie su lietumi tręšia dirvą."
         },
         {
           "type": "paragraph",
-          "text": "Au-dessus des orages, des caméras ont aussi capté des phénomènes bizarres, comme les [[Spraitai]] : de brèves lueurs dans la haute atmosphère, invisibles à l'œil nu depuis le sol."
+          "text": "Virš audrų kameros yra užfiksavusios ir keistų reiškinių, pavyzdžiui, [[Spraitai]]: trumpi žybsniai aukštutinėje atmosferoje, nematomi plika akimi nuo žemės."
         },
         {
           "type": "takeaway",
-          "text": "Dans un cumulonimbus, collisions glace/grésil séparent les charges. Quand la tension devient trop forte, l'air s'ionise : l'éclair chauffe à ~30 000 °C, et cette dilatation brutale produit le tonnerre."
+          "text": "Kamuoliniame lietaus debesyje ledo ir ledo kruopų susidūrimai atskiria krūvius. Kai įtampa tampa per didelė, oras jonizuojasi: žaibas įkaista iki ~30 000 °C, o šis staigus plėtimasis sukelia griaustinį."
         }
       ]
     }

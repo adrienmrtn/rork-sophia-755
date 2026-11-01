@@ -1,94 +1,94 @@
 {
   "id": "course_47_pourquoi_baille_t_on",
-  "title": "Pourquoi bâille-t-on ?",
-  "subtitle": "Corps & cerveau",
+  "title": "Kodėl žmonės žiovauja?",
+  "subtitle": "Kūnas ir smegenys",
   "subject": "sciences",
   "subcategory": "Kasdienybė paaiškinta",
-  "description": "Tout le monde bâille : humains, chiens, parfois même des fœtus. Ce n'est probablement pas pour « manquer d'oxygène ». Voici les pistes les plus solides.",
+  "description": "Žiovauja visi: žmonės, šunys, kartais net vaisiai įsčiose. Tikriausiai ne todėl, kad „trūksta deguonies“. Štai tvirčiausios versijos.",
   "hero": {
     "image": "pourquoi_baille_t_on",
     "ratio": "16:9",
-    "hook": "Tu bâilles. Ton voisin bâille. Et ce n'est (presque) pas contagieux par hasard."
+    "hook": "Tu žiovauji. Tavo kaimynas žiovauja. Ir tai užkrečiama (beveik) ne šiaip sau."
   },
   "sections": [
     {
       "id": "course_47_pourquoi_baille_t_on_intro",
-      "title": "Introduction",
+      "title": "Įvadas",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le bâillement semble banal. Pourtant, c'est un réflexe complexe : mâchoire, thorax, diaphragme, le corps entier s'y met. Lions, chiens, humains : beaucoup d'animaux bâillent."
+          "text": "Žiovulys atrodo kasdieniškas. Vis dėlto tai sudėtingas refleksas: žandikaulis, krūtinės ląsta, diafragma, įsitraukia visas kūnas. Liūtai, šunys, žmonės: žiovauja daugelis gyvūnų."
         },
         {
           "type": "paragraph",
-          "text": "Longtemps, on a dit : « c'est pour avoir plus d'oxygène ». Cette idée est aujourd'hui largement abandonnée. Les explications modernes sont plus intéressantes."
+          "text": "Ilgai buvo sakoma: „žiovaujama, kad gautum daugiau deguonies“. Šiandien ši mintis daugiausia atmesta. Šiuolaikiniai paaiškinimai įdomesni."
         }
       ]
     },
     {
       "id": "course_47_pourquoi_baille_t_on_p1",
-      "title": "Pas (surtout) pour l'oxygène",
+      "title": "Ne (visų pirma) dėl deguonies",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Des expériences ont montré qu'augmenter l'oxygène dans l'air n'empêche pas de bâiller. Baisser un peu le dioxyde de carbone non plus. Donc le bâillement n'est pas un simple « rattrapage d'air »."
+          "text": "Eksperimentai parodė, kad padidinus deguonies kiekį ore, žiovauti vis tiek nenustojama. Šiek tiek sumažinus anglies dioksido kiekį taip pat nenustojama. Vadinasi, žiovulys nėra paprastas „oro pasipildymas“."
         },
         {
           "type": "paragraph",
-          "text": "Une piste forte aujourd'hui : le bâillement aiderait à **réguler la température du cerveau**. En inspirant largement et en étirant le visage, on ferait un peu « ventiler » et refroidir la tête, surtout quand on est fatigué."
+          "text": "Viena tvirta šiandienė versija: žiovulys padėtų **reguliuoti smegenų temperatūrą**. Giliai įkvepiant ir tempiant veidą, galva tarsi šiek tiek „vėdinama“ ir vėsinama, ypač kai pavargstama."
         }
       ]
     },
     {
       "id": "course_47_pourquoi_baille_t_on_p2",
-      "title": "Pourquoi c'est contagieux",
+      "title": "Kodėl tai užkrečiama",
       "free": false,
       "blocks": [
         {
           "type": "image",
           "asset": "contagious_yawning_people_group",
           "ratio": "4:3",
-          "caption": "Voir quelqu'un bâiller suffit souvent à déclencher le réflexe."
+          "caption": "Pamatyti žiovaujantį žmogų dažnai užtenka, kad refleksas įsijungtų."
         },
         {
           "type": "paragraph",
-          "text": "Chez l'humain, voir, entendre, ou même lire le mot « bâiller » peut déclencher un bâillement. Ce n'est pas qu'une imitation bête : cela touche aussi l'**empathie** et des circuits du cerveau liés aux [[veidrodiniai neuronai]], des neurones qui s'activent quand on agit… ou quand on voit quelqu'un agir."
+          "text": "Žmogui žiovulį gali sukelti pamatytas, išgirstas ar net perskaitytas žodis „žiovauti“. Tai ne tik kvailas mėgdžiojimas: čia veikia ir **empatija**, ir smegenų grandinės, kurios vadinamos taip: [[veidrodiniai neuronai]]. Tai neuronai, kurie suaktyvėja, kai pats veiki… arba kai matai kitą veikiant."
         },
         {
           "type": "funFact",
-          "text": "Les jeunes enfants bâillent peu par contagion. Cette sensibilité arrive plus tard, en même temps que certaines compétences sociales."
+          "text": "Maži vaikai žiovauja iš užkrato retai. Šis jautrumas atsiranda vėliau, kartu su kai kuriais socialiniais gebėjimais."
         }
       ]
     },
     {
       "id": "course_47_pourquoi_baille_t_on_p3",
-      "title": "On bâille déjà avant de naître",
+      "title": "Žiovaujama dar negimus",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Les fœtus bâillent dès environ la **11e semaine** de grossesse. À cet âge, leurs poumons ne respirent pas encore l'air. Donc, encore une fois, ce n'est pas pour « manquer d'oxygène »."
+          "text": "Vaisiai pradeda žiovauti maždaug nuo **11-osios** nėštumo savaitės. Tuo metu jų plaučiai dar nekvėpuoja oru. Taigi dar kartą: tai ne dėl „deguonies trūkumo“."
         },
         {
           "type": "paragraph",
-          "text": "Chez le fœtus, le bâillement pourrait aider au développement des muscles de la mâchoire et du visage."
+          "text": "Vaisiui žiovulys galėtų padėti vystytis žandikaulio ir veido raumenims."
         }
       ]
     },
     {
       "id": "course_47_pourquoi_baille_t_on_p4",
-      "title": "Bâiller pour rester alerte ?",
+      "title": "Žiovulys budrumui palaikyti?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "On bâille souvent quand on est fatigué… mais aussi juste avant une épreuve, ou quand on s'ennuie en voulant rester concentré. L'étirement pourrait stimuler le système nerveux et aider à **rester vigilant**."
+          "text": "Dažnai žiovaujama pavargus… bet taip pat prieš pat egzaminą ar nuobodžiaujant, stengiantis išlaikyti dėmesį. Tempimasis galėtų stimuliuoti nervų sistemą ir padėti **išlaikyti budrumą**."
         },
         {
           "type": "takeaway",
-          "text": "Le bâillement n'est probablement pas un manque d'oxygène. Il servirait plutôt à réguler le cerveau (température, vigilance) et, chez l'humain, il se propage aussi par contagion sociale."
+          "text": "Žiovulys tikriausiai nėra deguonies trūkumo ženklas. Veikiau jis padeda reguliuoti smegenis (temperatūrą, budrumą), o žmonėms dar ir plinta socialiniu užkratu."
         }
       ]
     }

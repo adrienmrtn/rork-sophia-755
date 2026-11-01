@@ -1,102 +1,102 @@
 {
   "id": "course_76_pourquoi_les_feuilles_changent_elles_de",
-  "title": "Pourquoi les feuilles changent-elles de couleur ?",
-  "subtitle": "Automne & pigments",
+  "title": "Kodėl lapai keičia spalvą?",
+  "subtitle": "Ruduo ir pigmentai",
   "subject": "sciences",
   "subcategory": "Žemė ir Visata",
-  "description": "L'automne n'invente pas les couleurs : il retire le vert qui les masquait. Derrière le spectacle, une stratégie de survie pour passer l'hiver.",
+  "description": "Ruduo neišranda spalvų: jis nuima jas slėpusią žalumą. Už šio reginio slypi išgyvenimo strategija žiemai pergyventi.",
   "hero": {
     "image": "pourquoi_les_feuilles_changent_de_couleur",
     "ratio": "16:9",
-    "hook": "Les feuilles d'automne ne se maquillent pas : elles se déshabillent du vert."
+    "hook": "Rudens lapai nesidažo: jie nusimeta žalumą."
   },
   "sections": [
     {
       "id": "course_76_pourquoi_les_feuilles_changent_elles_de_intro",
-      "title": "Introduction",
+      "title": "Įvadas",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Chaque automne, les forêts passent du vert à l'or, au cuivre, au pourpre. Ce n'est pas un caprice esthétique. C'est une stratégie : l'arbre récupère ce qu'il peut avant de laisser tomber ses feuilles pour l'hiver."
+          "text": "Kiekvieną rudenį miškai iš žalių tampa auksiniai, vario, purpuriniai. Tai ne estetinė užgaida. Tai strategija: medis pasiima, ką gali, prieš žiemai numesdamas lapus."
         },
         {
           "type": "paragraph",
-          "text": "Les couleurs chaudes n'apparaissent pas de nulle part. Souvent, elles étaient déjà là, cachées sous le vert. Comprendre l'automne, c'est comprendre un grand ménage biochimique."
+          "text": "Šiltos spalvos neatsiranda iš niekur. Dažnai jos jau būdavo čia, paslėptos po žaluma. Suprasti rudenį reiškia suprasti didelį biocheminį sutvarkymą."
         }
       ]
     },
     {
       "id": "course_76_pourquoi_les_feuilles_changent_elles_de_p1",
-      "title": "Le vert qui masque tout",
+      "title": "Žaluma, užgožianti viską",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Du printemps à la fin de l'été, les feuilles regorgent de **chlorophylle**, le pigment qui alimente la photosynthèse. Elle se dégrade sous la lumière, mais l'arbre la remplace sans cesse. Tant qu'elle domine, la feuille reste verte."
+          "text": "Nuo pavasario iki vasaros pabaigos lapai pilni **chlorofilo**, pigmento, kuris maitina fotosintezę. Šviesoje jis skyla, bet medis nuolat jį atkuria. Kol chlorofilas vyrauja, lapas lieka žalias."
         },
         {
           "type": "image",
           "asset": "leaf_color_change_autumn_chlorophyll",
           "ratio": "auto",
-          "caption": "En automne, la chlorophylle disparaît et révèle les couleurs des feuilles."
+          "caption": "Rudenį chlorofilas išnyksta ir atskleidžia lapų spalvas."
         },
         {
           "type": "paragraph",
-          "text": "Or la feuille contient aussi des **caroténoïdes**, pigments jaunes et orangés (comme dans la carotte). En été, ils sont là, mais invisibles sous le vert. À l'automne, la production de chlorophylle s'arrête. Le vert s'efface, le jaune et l'orange se révèlent."
+          "text": "Tačiau lape yra ir **karotenoidų**, geltonų ir oranžinių pigmentų (kaip morkose). Vasarą jų esama, bet po žaluma jų nematyti. Rudenį chlorofilo gamyba nutrūksta. Žalia spalva išblėsta, geltona ir oranžinė atsiskleidžia."
         },
         {
           "type": "funFact",
-          "text": "« Chlorophylle » vient du grec *chloros* (vert) et *phyllon* (feuille). « Caroténoïde » partage la racine de… la carotte, où ce pigment a d'abord été identifié."
+          "text": "„Chlorofilas“ kilo iš graikų *chloros* (žalias) ir *phyllon* (lapas). „Karotenoidas“ turi tą pačią šaknį kaip… morka, kurioje šis pigmentas pirmą kartą ir buvo nustatytas."
         }
       ]
     },
     {
       "id": "course_76_pourquoi_les_feuilles_changent_elles_de_p2",
-      "title": "Le vrai déclencheur : les nuits qui allongent",
+      "title": "Tikrasis veiksnys: ilgėjančios naktys",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ce n'est pas surtout le froid qui lance l'automne, mais la durée des nuits. Les arbres la mesurent grâce à des capteurs de lumière, les [[fitochromai]]. Quand les nuits s'allongent, un signal hormonal part vers chaque feuille."
+          "text": "Rudenį pradeda ne tiek šaltis, kiek naktų trukmė. Medžiai ją pajunta šviesos jutikliais. Tai [[fitochromai]]. Kai naktys ilgėja, į kiekvieną lapą iškeliauja hormoninis signalas."
         },
         {
           "type": "paragraph",
-          "text": "À la base du pétiole se forme une [[atskyrimo sluoksnis]], une sorte de bouchon. La sève monte moins, les sucres redescendent mal. Isolée, la feuille dégrade sa chlorophylle plus vite. Les jaunes plus stables restent quelques semaines, puis la feuille tombe."
+          "text": "Lapkočio apačioje susidaro savotiškas kamštis: [[atskyrimo sluoksnis]]. Sula kyla mažiau, cukrai blogai grįžta atgal. Atsiskyręs lapas greičiau skaido chlorofilą. Stabilesni geltonieji pigmentai išlieka kelias savaites, paskui lapas nukrenta."
         }
       ]
     },
     {
       "id": "course_76_pourquoi_les_feuilles_changent_elles_de_p3",
-      "title": "D'où viennent les rouges éclatants",
+      "title": "Iš kur atsiranda ryškiai raudona",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le jaune était déjà là. Le rouge et le violet, eux, sont souvent **fabriqués** à la fin de la saison. Ce sont les [[antocianinai]], produites quand des sucres restent piégés dans la feuille."
+          "text": "Geltona spalva jau buvo. O raudona ir violetinė dažnai **pagaminamos** sezono pabaigoje. Tai [[antocianinai]]: jie susidaro, kai lape įstringa cukrai."
         },
         {
           "type": "paragraph",
-          "text": "Pourquoi investir de l'énergie juste avant de jeter la feuille ? Probablement pour la **protéger** pendant le recyclage. L'arbre récupère l'**azote** et d'autres nutriments précieux. Sans chlorophylle, le soleil peut abîmer les tissus encore actifs. Les anthocyanes agissent comme un filtre solaire le temps du grand déménagement vers les racines."
+          "text": "Kodėl eikvoti energiją prieš pat numetant lapą? Tikriausiai tam, kad lapas būtų **apsaugotas** perdirbimo metu. Medis atgauna **azotą** ir kitas vertingas maistines medžiagas. Be chlorofilo saulė gali pakenkti dar aktyviems audiniams. Antocianinai veikia kaip apsauga nuo saulės, kol vyksta didysis kraustymasis į šaknis."
         }
       ]
     },
     {
       "id": "course_76_pourquoi_les_feuilles_changent_elles_de_p4",
-      "title": "Pourquoi certains automnes flambent plus",
+      "title": "Kodėl kai kurie rudenys liepsnoja ryškiau",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Les plus beaux rouges naissent souvent de journées ensoleillées et de nuits fraîches sans gel. Beaucoup de sucre, transformation en anthocyanes. Un automne gris et pluvieux donne des teintes plus ternes. Un gel précoce tue les feuilles avant le spectacle."
+          "text": "Gražiausios raudonos spalvos dažnai gimsta iš saulėtų dienų ir vėsių naktų be šalnų. Daug cukraus, virsmas antocianinais. Pilkas lietingas ruduo duoda blankesnius atspalvius. Ankstyva šalna lapus pražudo dar prieš prasidedant reginiui."
         },
         {
           "type": "paragraph",
-          "text": "À la fin, il ne reste guère que les [[taninai]], substances brunes du tapis forestier. Certaines études pensent aussi que les couleurs vives avertissent les [[amarai]] : arbre en forme, défenses fortes, mieux vaut aller ailleurs."
+          "text": "Galiausiai lieka beveik vien [[taninai]], rudos miško paklotės medžiagos. Kai kurie tyrimai mano, kad ryškios spalvos įspėja kenkėjus, pavyzdžiui, [[amarai]]: medis sveikas, apsauga stipri, geriau skristi kitur."
         },
         {
           "type": "takeaway",
-          "text": "L'automne révèle les jaunes déjà présents quand la chlorophylle disparaît, et fabrique parfois du rouge pour protéger le recyclage des nutriments avant la chute des feuilles."
+          "text": "Ruduo atskleidžia geltonas spalvas, kurios jau buvo, kai išnyksta chlorofilas, o kartais pagamina raudonos, kad apsaugotų maistinių medžiagų perdirbimą prieš lapų kritimą."
         }
       ]
     }

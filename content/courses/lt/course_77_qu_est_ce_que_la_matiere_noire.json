@@ -1,106 +1,106 @@
 {
   "id": "course_77_qu_est_ce_que_la_matiere_noire",
-  "title": "Qu'est-ce que la matière noire ?",
-  "subtitle": "Cosmos invisible",
+  "title": "Kas yra tamsioji materija?",
+  "subtitle": "Nematomas kosmosas",
   "subject": "sciences",
   "subcategory": "Žemė ir Visata",
-  "description": "On ne l'a jamais vue. Pourtant, sans elle, les galaxies se déferaient. La matière noire est la colle invisible de l'Univers.",
+  "description": "Jos niekas niekada nėra matęs. Vis dėlto be jos galaktikos išsiskirstytų. Tamsioji materija yra nematomi Visatos klijai.",
   "hero": {
     "image": "qu_est_ce_que_la_matiere_noire",
     "ratio": "16:9",
-    "hook": "Imaginez une colle invisible qui tient les galaxies. On ne la voit pas, mais on voit ce qu'elle retient."
+    "hook": "Įsivaizduok nematomus klijus, laikančius galaktikas. Jų nematome, bet matome, ką jie sulaiko."
   },
   "sections": [
     {
       "id": "course_77_qu_est_ce_que_la_matiere_noire_intro",
-      "title": "Introduction",
+      "title": "Įvadas",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Vous sentez le vent sans le voir : les branches bougent, les cheveux volent. La **matière noire**, c'est un peu ça à l'échelle du cosmos. Elle ne brille pas, ne reflète pas la lumière, ne bloque aucun rayon. On ne la « voit » que par ce qu'elle fait bouger."
+          "text": "Vėją jauti, nors jo nematai: linksta šakos, plazda plaukai. **Tamsioji materija** kosmoso mastu šiek tiek panaši. Ji nešviečia, neatspindi šviesos, neužstoja jokių spindulių. „Pamatyti“ ją galima tik pagal tai, ką ji priverčia judėti."
         },
         {
           "type": "paragraph",
-          "text": "Elle représenterait environ **27 %** de l'Univers, cinq fois plus que toute la matière ordinaire : étoiles, planètes, gaz. Sans elle, les galaxies tourneraient trop vite pour tenir ensemble."
+          "text": "Manoma, kad ji sudaro apie **27 %** Visatos, penkis kartus daugiau nei visa paprastoji materija: žvaigždės, planetos, dujos. Be jos galaktikos suktųsi per greitai, kad išsilaikytų kartu."
         }
       ]
     },
     {
       "id": "course_77_qu_est_ce_que_la_matiere_noire_p1",
-      "title": "Des étoiles trop rapides en périphérie",
+      "title": "Per greitos žvaigždės pakraščiuose",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Dans les années **1970**, l'astronome américaine **Vera Rubin** mesure la vitesse des étoiles dans les galaxies spirales. Dans le Système solaire, plus on s'éloigne du Soleil, plus on tourne lentement. Elle s'attendait au même schéma."
+          "text": "**1970**-aisiais amerikietė astronomė **Vera Rubin** matuoja žvaigždžių greitį spiralinėse galaktikose. Saulės sistemoje kuo toliau nuo Saulės, tuo lėčiau sukamasi. Ji tikėjosi tokios pat tvarkos."
         },
         {
           "type": "image",
           "asset": "dark_matter_galaxy_cluster",
           "ratio": "auto",
-          "caption": "La matière noire trahit sa présence par son effet gravitationnel sur les amas de galaxies."
+          "caption": "Tamsioji materija išduoda savo buvimą gravitaciniu poveikiu galaktikų spiečiams."
         },
         {
           "type": "paragraph",
-          "text": "Or les étoiles du bord tournaient **aussi vite** que celles du centre. Avec la seule masse visible, elles auraient dû s'envoler. Il fallait donc une masse invisible, un **halo**, une enveloppe sphérique invisible autour de la galaxie, pour les retenir. La [[Galaktikų sukimosi kreivė]] est devenue la preuve phare de la matière noire."
+          "text": "Tačiau pakraščio žvaigždės sukosi **tokiu pat greičiu** kaip ir centro. Vien su matoma mase jos būtų turėjusios išlėkti. Taigi reikėjo nematomos masės, **halo**, nematomo sferinio apvalkalo aplink galaktiką, kuris jas sulaikytų. [[Galaktikų sukimosi kreivė]] tapo pagrindiniu tamsiosios materijos įrodymu."
         },
         {
           "type": "funFact",
-          "text": "Vera Rubin a longtemps dû se battre pour être prise au sérieux. Princeton lui a longtemps refusé un doctorat en astronomie… parce qu'elle était une femme, jusqu'en 1975."
+          "text": "Vera Rubin ilgai turėjo kovoti, kad ją imtų rimtai. Prinstonas jai ilgai atsisakinėjo suteikti astronomijos daktaro laipsnį… nes ji moteris, ir taip iki 1975 m."
         }
       ]
     },
     {
       "id": "course_77_qu_est_ce_que_la_matiere_noire_p2",
-      "title": "De quoi est-elle faite ? On cherche encore",
+      "title": "Iš ko ji sudaryta? Dar ieškoma",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ce n'est pas de la matière ordinaire, dite **baryonique**, composée de protons et neutrons : elle n'interagit pas avec la lumière. Elle traverse la Terre et nous sans laisser de trace visible."
+          "text": "Tai ne paprastoji, vadinamoji **barioninė** materija, sudaryta iš protonų ir neutronų: ji nesąveikauja su šviesa. Ji eina pro Žemę ir pro mus nepalikdama matomo pėdsako."
         },
         {
           "type": "paragraph",
-          "text": "La piste longtemps favorite, le **WIMP**, particule massive à interaction faible, serait une particule lourde hors du [[Standartinis fizikos modelis]], la théorie qui décrit les particules élémentaires connues. Des détecteurs de **xéon liquide**, enfouis sous terre, espèrent un choc rare. Sans succès net pour l'instant. D'autres misent sur l'**axion**, particule ultra-légère, ou sur une gravité à revoir. En attendant, la matière noire courbe l'espace et crée des [[gravitacinis lęšiavimas]], qui déforment la lumière d'un objet massif."
+          "text": "Ilgai mėgstamiausias kandidatas, **WIMP**, masyvi silpnai sąveikaujanti dalelė, būtų sunki dalelė, nepatenkanti į žinomas elementariąsias daleles aprašančią teoriją: [[Standartinis fizikos modelis]]. **Skystojo ksenono** detektoriai, įkasti po žeme, laukia retos dalelės smūgio. Kol kas aiškaus pasisekimo nėra. Kiti stato ant **aksiono**, itin lengvos dalelės, arba ant gravitacijos teorijos peržiūros. Tuo tarpu tamsioji materija lenkia erdvę, ir atsiranda [[gravitacinis lęšiavimas]]: masyvaus objekto šviesa iškreipiama."
         }
       ]
     },
     {
       "id": "course_77_qu_est_ce_que_la_matiere_noire_p3",
-      "title": "Et l'énergie sombre, l'autre mystère",
+      "title": "Ir tamsioji energija, kita paslaptis",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La matière noire attire. L'[[Tamsioji energija]], découverte en **1998**, fait l'inverse : elle accélère l'**expansion de l'Univers**, l'éloignement croissant des galaxies. Les galaxies s'éloignent de plus en plus vite, alors que la gravité devrait freiner le mouvement."
+          "text": "Tamsioji materija traukia. [[Tamsioji energija]], atrasta **1998** m., daro priešingai: ji greitina **Visatos plėtimąsi**. Galaktikos tolsta vis greičiau, nors gravitacija turėtų stabdyti judėjimą."
         },
         {
           "type": "paragraph",
-          "text": "Elle pèserait environ **68 %** du cosmos. Avec la matière noire, cela fait **95 %** d'Univers invisible. Tout ce que nous voyons, atomes et lumière, n'est qu'une écume de **5 %**."
+          "text": "Manoma, kad ji sudaro apie **68 %** kosmoso. Kartu su tamsiąja materija tai yra **95 %** nematomos Visatos. Viskas, ką matome, atomai ir šviesa, yra tik **5 %** putos."
         },
         {
           "type": "funFact",
-          "text": "Dans un futur très lointain, l'énergie sombre pourrait éloigner les autres galaxies jusqu'à les rendre invisibles depuis la Voie lactée : un ciel presque vide."
+          "text": "Labai tolimoje ateityje tamsioji energija galėtų nutolinti kitas galaktikas tiek, kad jos taptų nematomos iš Paukščių Tako: dangus būtų beveik tuščias."
         }
       ]
     },
     {
       "id": "course_77_qu_est_ce_que_la_matiere_noire_p4",
-      "title": "Preuves massives, particule introuvable",
+      "title": "Daugybė įrodymų, bet dalelės nerasta",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "D'un côté, les preuves indirectes s'accumulent : rotations galactiques, **fond diffus cosmologique**, rayonnement fossile du jeune univers, structure en filaments de l'Univers. De l'autre, aucune détection directe de particule."
+          "text": "Vienoje pusėje kaupiasi netiesioginiai įrodymai: galaktikų sukimasis, **kosminis mikrobangų fonas**, jaunos visatos reliktinė spinduliuotė, gijinė Visatos struktūra. O kitoje pusėje nėra nė vieno tiesioginio dalelės aptikimo."
         },
         {
           "type": "paragraph",
-          "text": "Le XXIe siècle devra trancher : nouvelle famille de particules, ou nouvelle façon de penser la gravité. La matière noire n'est pas qu'un détail du ciel. C'est le laboratoire où s'invente la physique de demain."
+          "text": "XXI a. teks apsispręsti: nauja dalelių šeima ar naujas požiūris į gravitaciją. Tamsioji materija nėra smulkmena danguje. Tai laboratorija, kurioje kuriama rytojaus fizika."
         },
         {
           "type": "takeaway",
-          "text": "La matière noire forme **27 %** de l'Univers. On la prouve par sa gravité sur les étoiles et la lumière, même si on ne l'a jamais vue directement."
+          "text": "Tamsioji materija sudaro **27 %** Visatos. Ją įrodome per jos gravitaciją, veikiančią žvaigždes ir šviesą, nors tiesiogiai jos niekada nematėme."
         }
       ]
     }

@@ -1,133 +1,133 @@
 {
   "id": "course_99_le_pere_goriot_balzac",
-  "title": "Le Père Goriot, Balzac",
+  "title": "Tėvas Gorio, Balzakas",
   "subtitle": "1835",
   "subject": "litterature",
   "subcategory": "Prancūzų ir Europos klasika",
-  "description": "Goriot sacrifie tout pour ses filles ingrates. Rastignac apprend Paris sur le dos d'un père et d'un bagnard. Balzac invente la Comédie humaine.",
+  "description": "Gorio paaukoja viską dėl nedėkingų dukterų. Rastignac'as išmoksta Paryžiaus tėvo ir katorgininko sąskaita. Balzakas sukuria „Žmogiškąją komediją“.",
   "hero": {
     "image": "le_pere_goriot_balzac",
     "ratio": "16:9",
-    "hook": "Une pension sordide, un père qui meurt seul, et un jeune homme qui défie Paris depuis un cimetière."
+    "hook": "Niūrus pensionas, vienišas mirštantis tėvas ir jaunuolis, metantis iššūkį Paryžiui iš kapinių."
   },
   "sections": [
     {
       "id": "course_99_le_pere_goriot_balzac_intro",
-      "title": "Introduction",
+      "title": "Įvadas",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Publié en **1835**, **Le Père Goriot** est le pivot de la **[[Žmogiškoji komedija]]**, projet d'**Honoré de Balzac** : près de 90 romans interconnectés décrivant toute la société française. C'est ici qu'il introduit le retour des personnages d'un livre à l'autre."
+          "text": "**1835** m. išleistas **Tėvas Gorio** yra **Honoré de Balzako** sumanymo lūžio taškas: tai **[[Žmogiškoji komedija]]**, beveik 90 tarpusavyje susijusių romanų, vaizduojančių visą Prancūzijos visuomenę. Čia jis pirmąkart pristato veikėjų sugrįžimą iš vienos knygos į kitą."
         },
         {
           "type": "paragraph",
-          "text": "Trois pensionnaires de la **Maison Vauquer** incarnent les tensions entre province et Paris, fortune et morale, innocence et cynisme. Le roman est une leçon sur l'argent, l'ambition et la trahison familiale. Balzac y montre comment Paris « corrompt » ceux qui y viennent chercher la gloire."
+          "text": "Trys **Vauquer pensiono** gyventojai įkūnija įtampą tarp provincijos ir Paryžiaus, turto ir moralės, nekaltumo ir cinizmo. Romanas yra pamoka apie pinigus, ambiciją ir šeimos išdavystę. Balzakas rodo, kaip Paryžius „gadina“ tuos, kurie čia atvyksta ieškoti šlovės."
         }
       ]
     },
     {
       "id": "course_99_le_pere_goriot_balzac_p1",
-      "title": "Balzac et le monde total",
+      "title": "Balzakas ir visa apimantis pasaulis",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Honoré de Balzac** veut archiver tous les types sociaux de son époque dans **90 romans** et **2 000 personnages**. Un protagoniste d'un livre reparaît dans un autre, créant une profondeur quasi historique. C'est une innovation majeure du roman du XIXe siècle."
+          "text": "**Honoré de Balzakas** **90 romanų** ir **2000 veikėjų** apimties kūrinyje nori užfiksuoti visus savo laikmečio socialinius tipus. Vienos knygos veikėjas pasirodo kitoje, ir taip atsiranda beveik istorinis gylis. Tai didelė XIX a. romano naujovė."
         },
         {
           "type": "image",
           "asset": "honore_de_balzac_portrait_photograph",
           "ratio": "4:3",
-          "caption": "Honoré de Balzac : l'archiviste obsédé de la France du XIXe siècle."
+          "caption": "Honoré de Balzakas: apsėstas XIX a. Prancūzijos archyvaras."
         },
         {
           "type": "funFact",
-          "text": "Balzac commandait ses cafetières sur mesure. On estime qu'il a bu environ 50 000 tasses de café au cours de sa vie de travailleur nocturne."
+          "text": "Balzakas kavinukus užsisakydavo pagal savo poreikius. Manoma, kad per savo naktinio darbininko gyvenimą jis išgėrė apie 50 000 puodelių kavos."
         },
         {
           "type": "paragraph",
-          "text": "Chez Balzac, on sait toujours d'où vient l'argent de chaque personnage. Le budget est le moteur secret des drames humains. Il observe la **Monarchie de Juillet**, de 1830 à 1848, époque où l'argent remplace peu à peu la naissance noble."
+          "text": "Balzako romanuose visada žinoma, iš kur kiekvienas veikėjas gauna pinigų. Biudžetas yra slaptas žmogiškų dramų variklis. Jis stebi **Liepos monarchiją**, 1830-1848 m., laikotarpį, kai pinigai pamažu išstumia aukštą kilmę."
         }
       ]
     },
     {
       "id": "course_99_le_pere_goriot_balzac_p2",
-      "title": "Goriot : le Christ de la paternité",
+      "title": "Gorio: tėvystės Kristus",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Jean-Joachim Goriot**, ancien vermicellier, fabricant de pâtes, a tout sacrifié pour ses filles **Anastasie** et **Delphine**. Il descend d'étage en étage à la **pension Vauquer** à mesure que ses ressources s'épuisent."
+          "text": "**Jean-Joachim Gorio**, buvęs vermišelių, tai yra makaronų, gamintojas, viską paaukojo dukterims **Anastasie** ir **Delphine**. **Vauquer pensione** jis leidžiasi iš aukšto į aukštą, kol išsenka jo lėšos."
         },
         {
           "type": "image",
           "asset": "paris_19th_century_boarding_house_pension",
           "ratio": "4:3",
-          "caption": "La pension Vauquer : microcosme social de la misère parisienne."
+          "caption": "Vauquer pensionas: socialinis Paryžiaus skurdo mikrokosmosas."
         },
         {
           "type": "paragraph",
-          "text": "Ses filles, enfermées dans les exigences du **[[Pasaulis]]**, haute société parisienne aux codes impitoyables, ne reviennent que pour réclamer de l'argent. Goriot meurt seul pendant qu'elles vont au bal. Balzac en fait une figure christique, sacrifice total pour des êtres ingrats."
+          "text": "Jo dukteris pavergia **[[Pasaulis]]**, aukštoji Paryžiaus visuomenė su negailestingais kodais, todėl jos grįžta tik pinigų prašyti. Gorio miršta vienas, kol dukterys išvykusios į balių. Balzakas jį paverčia Kristaus figūra: tai visiška auka dėl nedėkingų būtybių."
         }
       ]
     },
     {
       "id": "course_99_le_pere_goriot_balzac_p3",
-      "title": "Rastignac et Vautrin",
+      "title": "Rastignac'as ir Vautrinas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Eugène de Rastignac**, jeune provincial ambitieux, découvre que le mérite seul ne suffit pas à Paris. **[[Vautrinas (Jacques'as Collinas)]]**, forçat évadé et génie du crime, lui propose un pacte cynique : faire fortune par un meurtre."
+          "text": "**Eugène de Rastignac'as**, jaunas ambicingas provincijietis, supranta, kad Paryžiuje vien nuopelnų nepakanka. **[[Vautrinas (Jacques'as Collinas)]]**, pabėgęs katorgininkas ir nusikaltimų genijus, pasiūlo jam ciniškąjį sandėrį: praturtėti per žmogžudystę."
         },
         {
           "type": "quote",
-          "text": "À nous deux maintenant !",
-          "attribution": "Honoré de Balzac, Le Père Goriot — Rastignac"
+          "text": "Dabar mudu!",
+          "attribution": "Honoré de Balzakas, Tėvas Gorio (Rastignac'as)"
         },
         {
           "type": "paragraph",
-          "text": "Rastignac refuse le crime, mais sa conscience s'émousse au contact des salons. La mort de Goriot agit comme révélateur final. Depuis le cimetière du **Père-Lachaise**, il lance son défi à Paris. Balzac est aujourd'hui enterré à cet endroit exact."
+          "text": "Rastignac'as atmeta nusikaltimą, tačiau salonų aplinkoje jo sąžinė atšimpa. Gorio mirtis galutinai atveria jam akis. Iš **Père-Lachaise** kapinių jis meta iššūkį Paryžiui. Šiandien Balzakas palaidotas lygiai toje pačioje vietoje."
         }
       ]
     },
     {
       "id": "course_99_le_pere_goriot_balzac_p4",
-      "title": "Naissance du réalisme moderne",
+      "title": "Šiuolaikinio realizmo gimimas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Balzac fait du lieu un moteur psychologique : l'odeur de renfermé de la pension Vauquer prépare la misère morale. Cette théorie du milieu, où l'environnement façonne les personnages, annonce le **naturalisme** d'**Émile Zola**, courant qui pousse le réalisme vers la description scientifique. L'argent brise les familles sous la Monarchie de Juillet. Le roman reste un passage obligé pour comprendre le Paris du XIXe siècle."
+          "text": "Balzakas vietą paverčia psichologiniu varikliu: Vauquer pensiono užsistovėjęs kvapas paruošia dirvą moraliniam skurdui. Ši aplinkos teorija, pagal kurią aplinka formuoja veikėjus, pranašauja **natūralizmą**, kurį vėliau išplėtos **Émile Zola**: tai srovė, stumianti realizmą link mokslinio aprašymo. Liepos monarchijos laikais pinigai ardo šeimas. Romanas yra nepamainomas žingsnis norint suprasti XIX a. Paryžių."
         },
         {
           "type": "paragraph",
-          "text": "En créant Rastignac et Vautrin, Balzac offre à la culture européenne des archétypes pour lire l'ambition provinciale et le cynisme parisien. Le roman ne peint pas seulement des vies : il cartographie un système où l'argent et le rang mangent les sentiments. **Rastignac** reviendra dans une vingtaine d'œuvres de la Comédie humaine, preuve que Balzac pensait déjà son univers en série."
+          "text": "Sukurdamas Rastignac'ą ir Vautriną, Balzakas Europos kultūrai padovanoja archetipus, padedančius suprasti provincijos ambiciją ir Paryžiaus ciniškumą. Romanas ne tik piešia gyvenimus: jis nubraižo sistemos žemėlapį, kurioje pinigai ir rangas ryja jausmus. **Rastignac'as** sugrįš maždaug dvidešimtyje „Žmogiškosios komedijos“ kūrinių, o tai įrodo, kad Balzakas jau tada savo pasaulį mąstė kaip seriją."
         },
         {
           "type": "timeline",
           "events": [
             {
               "date": "1835",
-              "title": "Publication",
-              "detail": "Le roman central de la Comédie humaine."
+              "title": "Išleidimas",
+              "detail": "Centrinis „Žmogiškosios komedijos“ romanas."
             },
             {
-              "date": "Monarchie de Juillet",
-              "title": "Contexte",
-              "detail": "Paris où l'argent remplace la morale."
+              "date": "Liepos monarchija",
+              "title": "Kontekstas",
+              "detail": "Paryžius, kuriame pinigai pakeičia moralę."
             },
             {
-              "date": "Fin",
-              "title": "Défi de Rastignac",
-              "detail": "L'ambition triomphe des illusions."
+              "date": "Pabaiga",
+              "title": "Rastignac'o iššūkis",
+              "detail": "Ambicija nugali iliuzijas."
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "**Le Père Goriot**, paru en **1835**, inaugure le retour des personnages et la figure de Rastignac, qui défie Paris en acceptant la lutte sociale sans les gants de la morale."
+          "text": "**Tėvas Gorio**, išleistas **1835** m., pradeda veikėjų sugrįžimą ir Rastignac'o figūrą: jis meta iššūkį Paryžiui, priimdamas socialinę kovą be moralės pirštinių."
         }
       ]
     }

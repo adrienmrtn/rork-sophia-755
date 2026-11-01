@@ -1,100 +1,100 @@
 {
   "id": "course_58_la_structure_de_l_adn_watson_crick_1953",
-  "title": "La structure de l'ADN",
+  "title": "DNR struktūra",
   "subtitle": "1953",
   "subject": "sciences",
   "subcategory": "Atradimai, pakeitę pasaulį",
-  "description": "En 1953, Watson et Crick décrivent la double hélice de l'ADN. Derrière cette gloire, le travail crucial de Rosalind Franklin.",
+  "description": "1953 m. Watson ir Crick aprašo DNR dvigubą spiralę. Už šios šlovės slypi esminis Rosalind Franklin darbas.",
   "hero": {
     "image": "la_structure_de_l_adn",
     "ratio": "16:9",
-    "hook": "La forme d'une molécule… et le secret de l'hérédité."
+    "hook": "Molekulės forma… ir paveldimumo paslaptis."
   },
   "sections": [
     {
       "id": "course_58_la_structure_de_l_adn_watson_crick_1953_intro",
-      "title": "Introduction",
+      "title": "Įvadas",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "On savait que les traits passent des parents aux enfants. Mais quel objet chimique porte cette information ? Au milieu du XXe siècle, la réponse se précise : l'**ADN**."
+          "text": "Buvo žinoma, kad savybės keliauja nuo tėvų vaikams. Bet koks cheminis objektas neša šią informaciją? XX a. viduryje atsakymas paaiškėja: **DNR**."
         },
         {
           "type": "paragraph",
-          "text": "En **1953**, **James Watson** et **Francis Crick** publient un modèle célèbre : la **double hélice**. Cette forme explique comment l'ADN peut se copier."
+          "text": "**1953** m. **James Watson** ir **Francis Crick** paskelbia garsųjį modelį: **dvigubą spiralę**. Ši forma paaiškina, kaip DNR gali kopijuotis."
         }
       ]
     },
     {
       "id": "course_58_la_structure_de_l_adn_watson_crick_1953_p1",
-      "title": "Trouver le support de l'hérédité",
+      "title": "Paveldimumo nešėjo paieška",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L'ADN (acide désoxyribonucléique) est une longue molécule présente dans nos cellules. Elle contient des « lettres » chimiques qui forment un code. Mais dans les années 1940-1950, on ne connaît pas encore sa forme en 3D."
+          "text": "DNR (dezoksiribonukleorūgštis) yra ilga molekulė, esanti mūsų ląstelėse. Joje yra cheminių „raidžių“, sudarančių kodą. Bet 1940-1950 m. jos trimatė forma dar nežinoma."
         },
         {
           "type": "paragraph",
-          "text": "Sans la forme, on comprend mal comment ce code peut se dupliquer à chaque division cellulaire."
+          "text": "Be formos sunku suprasti, kaip šis kodas gali dvigubėti per kiekvieną ląstelės dalijimąsi."
         }
       ]
     },
     {
       "id": "course_58_la_structure_de_l_adn_watson_crick_1953_p2",
-      "title": "La photo qui change tout",
+      "title": "Nuotrauka, kuri viską pakeitė",
       "free": false,
       "blocks": [
         {
           "type": "image",
           "asset": "rosalind_franklin_photo_51_x_ray",
           "ratio": "4:3",
-          "caption": "La Photo 51 de Rosalind Franklin révèle une structure hélicoïdale."
+          "caption": "Rosalind Franklin Nuotrauka 51 atskleidžia spiralinę struktūrą."
         },
         {
           "type": "paragraph",
-          "text": "**Rosalind Franklin**, physicienne et chimiste, obtient des images de l'ADN par rayons X. Sa célèbre **Photo 51** montre des indices clairs d'une hélice."
+          "text": "**Rosalind Franklin**, fizikė ir chemikė, rentgeno spinduliais gauna DNR vaizdų. Jos garsioji **Nuotrauka 51** rodo aiškius spiralės požymius."
         },
         {
           "type": "paragraph",
-          "text": "Watson et Crick voient ces données (dans des conditions aujourd'hui jugées injustes pour Franklin) et construisent leur modèle. Franklin meurt en 1958 ; le Nobel de 1962 ira à Watson, Crick et Wilkins, pas à elle."
+          "text": "Watsonas ir Crickas mato šiuos duomenis (sąlygomis, kurios šiandien laikomos Franklin atžvilgiu neteisingomis) ir sukuria savo modelį. Franklin miršta 1958 m.; 1962 m. Nobelio premija atiteks Watsonui, Crickui ir Wilkinsui, o ne jai."
         },
         {
           "type": "funFact",
-          "text": "Franklin a aussi fait des travaux majeurs sur les virus. Son rôle dans l'ADN a été longtemps sous-estimé dans les récits populaires."
+          "text": "Franklin taip pat atliko svarbių virusų tyrimų. Populiariuose pasakojimuose jos vaidmuo tiriant DNR ilgai buvo nuvertintas."
         }
       ]
     },
     {
       "id": "course_58_la_structure_de_l_adn_watson_crick_1953_p3",
-      "title": "Pourquoi la double hélice compte",
+      "title": "Kodėl svarbi dviguba spiralė",
       "free": false,
       "blocks": [
         {
           "type": "image",
           "asset": "dna_double_helix_model_watson_crick",
           "ratio": "4:3",
-          "caption": "Deux brins complémentaires : la copie devient imaginable."
+          "caption": "Dvi komplementarios gijos: kopijavimas tampa įsivaizduojamas."
         },
         {
           "type": "paragraph",
-          "text": "Deux brins s'enroulent. Les lettres se font face par paires. Quand les brins se séparent, chacun peut servir de modèle pour reconstruire l'autre. L'hérédité devient un mécanisme chimique compréhensible."
+          "text": "Dvi gijos apsivynioja viena aplink kitą. Raidės išsidėsto viena prieš kitą poromis. Kai gijos išsiskiria, kiekviena gali būti šablonas kitai atkurti. Paveldimumas tampa suprantamu cheminiu mechanizmu."
         }
       ]
     },
     {
       "id": "course_58_la_structure_de_l_adn_watson_crick_1953_p4",
-      "title": "La biologie moderne démarre ici",
+      "title": "Čia prasideda šiuolaikinė biologija",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "De cette découverte naissent la génétique moderne, le séquençage, les tests ADN, les thérapies géniques. Et aussi des débats éthiques : que faire de ce pouvoir ?"
+          "text": "Iš šio atradimo gimsta šiuolaikinė genetika, sekoskaita, DNR testai, genų terapijos. Taip pat ir etinės diskusijos: ką daryti su šia galia?"
         },
         {
           "type": "takeaway",
-          "text": "En **1953**, le modèle de la double hélice explique comment l'ADN stocke et copie l'information du vivant. Franklin a fourni des preuves décisives trop longtemps effacées du récit."
+          "text": "**1953** m. dvigubos spiralės modelis paaiškina, kaip DNR saugo ir kopijuoja gyvybės informaciją. Franklin pateikė lemiamų įrodymų, kurie pernelyg ilgai buvo išbraukti iš pasakojimo."
         }
       ]
     }
