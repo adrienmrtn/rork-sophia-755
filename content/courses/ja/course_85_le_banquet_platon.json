@@ -1,104 +1,104 @@
 {
   "id": "course_85_le_banquet_platon",
-  "title": "« Le Banquet » de Platon : d'où vient l'idée d'âme sœur ?",
-  "subtitle": "IVe siècle av. J.-C.",
+  "title": "プラトン『饗宴』：「ソウルメイト」という考えはどこから来たのか",
+  "subtitle": "紀元前4世紀",
   "subject": "litterature",
-  "subcategory": "Grecs & Philosophes antiques",
-  "description": "Autour d'un repas athénien, des convives définissent l'amour. Aristophane raconte les androgynes, Socrate élève le désir vers le Beau. Platon transforme la fête en philosophie.",
+  "subcategory": "ギリシア人と古代の哲学者",
+  "description": "アテナイの宴席で、客たちが愛を語ります。アリストファネスは両性具有の人間の物語を語り、ソクラテスは欲望を美へと高めていきます。プラトンは、宴をそのまま哲学にしました。",
   "hero": {
     "image": "le_banquet_platon",
     "ratio": "16:9",
-    "hook": "Une soirée trop arrosée. Et soudain, la plus belle définition de l'amour."
+    "hook": "飲みすぎた夜。そこから突然、愛のもっとも美しい定義が生まれます。"
   },
   "sections": [
     {
       "id": "course_85_le_banquet_platon_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "À Athènes, au **IVe siècle avant J.-C.**, **Platon**, philosophe grec et disciple de Socrate, écrit le **Banquet**. En grec, on dit *Symposion*. Le cadre est un [[シュンポシオン（酒宴）]], repas masculin après le dîner où l'on mêle vin dilué et discussions intellectuelles. Ce soir-là, le thème imposé est **[[エロス]]**, la force qui pousse l'âme vers le beau."
+          "text": "**紀元前4世紀**のアテナイで、ギリシアの哲学者でソクラテスの弟子の**プラトン**が『**饗宴**』を書きました。ギリシア語では*シュンポシオン*といいます。舞台は[[アテナイのシュンポシオン]]、夕食のあとに男たちだけで開く宴で、水で割ったワインを飲みながら知的な議論をかわします。この夜の課題は**[[エロス]]**、魂を美へと向かわせる力です。"
         },
         {
           "type": "paragraph",
-          "text": "Chaque convive propose une théorie de l'amour. Le dialogue devient une montée : du corps au beau, du beau aux **Idées**, formes parfaites et éternelles selon Platon. Et **Socrate**, maître de Platon, condamné à mort en 399, comme souvent dans les dialogues platoniciens, a le dernier mot."
+          "text": "客たちは一人ずつ愛の理論を語ります。対話は、体から美へ、美から**イデア**（プラトンによれば完全で永遠の形）へと上っていきます。そして、プラトンの対話篇ではいつもそうですが、最後に語るのは、プラトンの師で、のちの紀元前399年に死刑を宣告される**ソクラテス**です。"
         }
       ]
     },
     {
       "id": "course_85_le_banquet_platon_p1",
-      "title": "Boire, parler, rivaliser",
+      "title": "飲んで、語って、競い合う",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le banquet célèbre la victoire du poète **Agathon**, auteur tragique et hôte de la soirée. Les gueules de bois sont encore là, mais on décide de louer Éros plutôt que de trop boire. Les discours s'enchaînent : médecins, poètes, hommes politiques. Chacun projette sa vision du désir. **Phèdre** parle de l'amour comme moteur du courage. **Pausanias** distingue amour noble et amour grossier."
+          "text": "この宴は、悲劇作家で宴の主人でもある詩人**アガトン**の優勝を祝う席です。二日酔いはまだ残っていますが、飲みすぎるより、エロスをたたえることにします。演説が次々に続きます。医者、詩人、政治家。それぞれが自分の欲望観を語ります。**パイドロス**は、愛を勇気の原動力として語ります。**パウサニアス**は、気高い愛と俗な愛を区別します。"
         },
         {
           "type": "image",
           "asset": "ancient_greek_symposium_banquet_painting",
           "ratio": "4:3",
-          "caption": "Le symposion grec : vin, couronnes et parole comme sport social."
+          "caption": "ギリシアのシュンポシオン：ワインと花冠、そして社交の競技としての言葉。"
         },
         {
           "type": "paragraph",
-          "text": "Platon utilise la fête pour faire de la philosophie sans cours magistral. On rit, on provoque, on se corrige. L'idée avance avec le vin, mais aussi grâce à la règle du jeu : chacun doit défendre Éros devant les autres. La compétition d'éloquence, l'*agon* grec, devient une école de pensée."
+          "text": "プラトンは、宴を使って、堅苦しい講義なしに哲学をします。笑い合い、挑発し合い、言い直し合う。議論はワインとともに進みますが、ルールのおかげでもあります。だれもがほかの客の前でエロスを弁護しなければなりません。弁論の競い合い、ギリシア語でいう*アゴーン*は、思考の学校になります。"
         }
       ]
     },
     {
       "id": "course_85_le_banquet_platon_p2",
-      "title": "Le mythe des androgynes",
+      "title": "両性具有の神話",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le discours le plus célèbre est celui d'**Aristophane**, auteur comique athénien connu pour ses satires. Autrefois, dit-il, les humains étaient doubles. Les [[アンドロギュノス]] mêlaient caractères masculins et féminins. D'autres couples étaient soudés. **Zeus**, roi des dieux, les a coupés en deux pour les punir. Depuis, chacun cherche sa moitié perdue."
+          "text": "もっとも有名な演説は、風刺で知られるアテナイの喜劇作家**アリストファネス**のものです。昔、人間は二人分の体でできていた、と彼は言います。[[アンドロギュノス]]は男性の性質と女性の性質を併せ持っていました。ほかに、体がくっついたままの二人組もいました。神々の王**ゼウス**は、罰として彼らを二つに切り離しました。それ以来、人はみな失った半身を探しています。"
         },
         {
           "type": "funFact",
-          "text": "Cette histoire a donné au français l'expression « âme sœur ». Platon la met dans la bouche d'un comique, puis la dépasse : l'amour ne s'arrête pas à retrouver un corps perdu."
+          "text": "この話は、フランス語で「ソウルメイト」にあたる表現のもとになりました。プラトンはこの話を喜劇作家の口に語らせ、そのうえで乗り越えます。愛とは、失った体を取り戻すことで終わるものではないのです。"
         },
         {
           "type": "paragraph",
-          "text": "Le mythe est beau, tendre, un peu triste. Il explique le **manque**, ce sentiment d'incomplétude qui pousse à chercher l'autre. Mais Socrate va ailleurs : aimer, ce n'est pas seulement coller deux moitiés. C'est monter vers quelque chose de plus grand que soi."
+          "text": "この神話は美しく、優しく、少し切なくもあります。**欠乏**、つまり他者を求めさせる満たされなさの感覚を説明しています。けれどもソクラテスは別のところへ進みます。愛するとは、二つの半身をただくっつけることではありません。自分よりも大きなものへと上っていくことです。"
         }
       ]
     },
     {
       "id": "course_85_le_banquet_platon_p3",
-      "title": "Diotime et l'échelle des amours",
+      "title": "ディオティマが語る愛の階梯",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Socrate rapporte l'enseignement de **Diotime**, prêtresse étrangère et figure de sagesse dans le dialogue. Éros n'est ni dieu plein, ni mortel pauvre : c'est un [[ダイモーン]], être intermédiaire entre dieux et hommes. Il désire ce qui lui manque. L'amoureux part du beau corps, passe aux belles âmes, puis aux belles actions, jusqu'au **Beau en soi**, l'Idée parfaite de la beauté."
+          "text": "ソクラテスは、異国の巫女で、対話の中では知恵を体現する人物でもある**ディオティマ**の教えを語ります。エロスは満ち足りた神でも、貧しい人間でもありません。神々と人間の中間にいる存在、[[ダイモーン]]です。エロスは、自分に足りないものを求めます。愛する人は、美しい体から出発し、美しい魂へ、美しい行いへと進み、ついには**美そのもの**、つまり美の完全なイデアに至ります。"
         },
         {
           "type": "image",
           "asset": "socrates_alcibiades_banquet_painting",
           "ratio": "4:3",
-          "caption": "Socrate et Alcibiade : le désir peut aussi être une école de l'âme."
+          "caption": "ソクラテスとアルキビアデス：欲望もまた、魂の学びの場になりえます。"
         },
         {
           "type": "paragraph",
-          "text": "C'est l'[[プラトン的エロス]], un désir qui éduque. Plus tard, [[アルキビアデス]], jeune homme politique athénien, beau et instable, ivre, fait irruption et loue Socrate comme un Satyre troublant. L'amour philosophique n'abolit pas le trouble charnel. Il le transforme en quête de vérité."
+          "text": "これが[[プラトン的エロス]]、人を教え導く欲望です。のちに、美しくて気まぐれなアテナイの若い政治家[[アルキビアデス]]が、酔ったまま乱入し、ソクラテスを人を惑わすサテュロスにたとえてほめたたえます。哲学的な愛は、肉体的な心の乱れをなくしはしません。それを真理の探究へと変えるのです。"
         }
       ]
     },
     {
       "id": "course_85_le_banquet_platon_p4",
-      "title": "Ce que « platonique » a fini par vouloir dire",
+      "title": "「プラトニック」はやがて何を意味するようになったか",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Dans le langage courant, un amour « platonique » signifie sans relation charnelle. Chez Platon, c'est plus riche : le corps est un point de départ, pas une honte. Le Banquet a marqué la théologie chrétienne, la poésie amoureuse de Petrarque ou Ronsard, et la psychologie du désir. Il montre qu'aimer, c'est aussi apprendre à voir."
+          "text": "ふだんの言葉では、「プラトニック」な愛とは、肉体関係のない愛のことです。プラトンにとっては、もっと豊かな意味があります。体は出発点であり、恥ずべきものではありません。『饗宴』は、キリスト教神学、ペトラルカやロンサールの恋愛詩、欲望の心理学に影響を与えました。愛するとは、見ることを学ぶことでもあると教えてくれます。"
         },
         {
           "type": "takeaway",
-          "text": "Dans le **Banquet**, Platon fait d'une soirée athénienne une échelle : on part du désir sensible pour viser une beauté plus vaste. Aimer, ici, c'est apprendre à voir plus loin que soi."
+          "text": "**『饗宴』**で、プラトンはアテナイのある夜の宴を一つの階段に変えます。感覚的な欲望から出発して、より大きな美をめざすのです。ここで愛するとは、自分を超えて遠くまで見ることを学ぶことです。"
         }
       ]
     }

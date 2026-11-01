@@ -1,132 +1,132 @@
 {
   "id": "course_13_la_bataille_de_waterloo_1815",
-  "title": "Pourquoi Napoléon a-t-il perdu à Waterloo ?",
+  "title": "ナポレオンはなぜワーテルローで敗れたのか？",
   "subtitle": "1815",
   "subject": "histoire",
-  "subcategory": "Révolutions & conflits modernes",
-  "description": "Le **18 juin 1815**, en une journée de pluie en Belgique, l'Empire de Napoléon s'effondre. Waterloo clôt les Cent-Jours et ouvre un siècle d'ordre monarchique en Europe.",
+  "subcategory": "革命と近現代の紛争",
+  "description": "**1815年6月18日**、ベルギーの雨の一日に、ナポレオンの帝国は崩れ落ちます。ワーテルローは百日天下に幕を下ろし、ヨーロッパに君主制の秩序が続く1世紀の幕を開けました。",
   "hero": {
     "image": "la_bataille_de_waterloo_1815",
     "ratio": "16:9",
-    "hook": "Une journée de boue en Belgique, et l'Empire s'effondre pour de bon."
+    "hook": "ベルギーのぬかるみの一日で、帝国は決定的に崩れ去りました。"
   },
   "sections": [
     {
       "id": "course_13_la_bataille_de_waterloo_1815_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le **18 juin 1815**, près du village de **Waterloo**, en Belgique, le destin de l'Europe se joue sous la pluie. **Napoléon** affronte deux ennemis à la fois : le Britannique **Arthur Wellesley**, duc de **Wellington**, et le Prussien **Gebhard von Blücher**."
+          "text": "**1815年6月18日**、ベルギーの**ワーテルロー**村近くで、ヨーロッパの命運が雨の中で決まろうとしていました。**ナポレオン**は二つの敵を同時に相手にします。イギリスの**アーサー・ウェルズリー**（**ウェリントン**公爵）と、プロイセンの**ゲープハルト・フォン・ブリュッヒャー**です。"
         },
         {
           "type": "paragraph",
-          "text": "Ce n'est pas seulement une défaite. C'est la fin du Premier Empire. En une journée, l'homme qui avait dominé l'Europe se brise sur la boue, les erreurs et une alliance qui tient enfin ensemble."
+          "text": "これは単なる敗北ではありません。第一帝政の終わりでした。わずか一日で、ヨーロッパを支配してきた男は、ぬかるみと失策、そしてようやく一つにまとまった同盟の前に打ち砕かれます。"
         }
       ]
     },
     {
       "id": "course_13_la_bataille_de_waterloo_1815_p1",
-      "title": "Le retour de l'île d'Elbe",
+      "title": "エルバ島からの帰還",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Après son abdication d'**avril 1814**, Napoléon est exilé sur l'île d'**Elbe**, au large de l'Italie. Les vainqueurs redessinent l'Europe au [[ウィーン会議]]. Le **1er mars 1815**, il débarque près d'Antibes. C'est le début des **Cent-Jours** : les troupes envoyées pour l'arrêter se rallient. Il reprend Paris sans effusion de sang."
+          "text": "**1814年4月**に退位したナポレオンは、イタリア沖の**エルバ**島に流されます。勝者たちは[[ウィーン会議]]でヨーロッパの地図を描き直しました。**1815年3月1日**、ナポレオンはアンティーブ近くに上陸します。**百日天下**の始まりです。阻止に送られた部隊は、次々と味方につきました。ナポレオンは血を流さずにパリを取り戻します。"
         },
         {
           "type": "image",
           "asset": "napoleon_return_from_elba_1815",
           "ratio": "4:3",
-          "caption": "Le retour de l'île d'Elbe : Napoléon reprend le pouvoir."
+          "caption": "エルバ島からの帰還：ナポレオンが権力を取り戻す"
         },
         {
           "type": "funFact",
-          "text": "Napoléon et Wellington ne s'étaient jamais rencontrés avant Waterloo. Le champ de bataille belge fut leur seul face-à-face."
+          "text": "ナポレオンとウェリントンは、ワーテルロー以前に会ったことがありませんでした。ベルギーの戦場が、二人にとって唯一の顔合わせの場になりました。"
         },
         {
           "type": "paragraph",
-          "text": "L'Europe le déclare « hors-la-loi ». Son plan : utiliser la [[中央位置]]. L'idée est simple. Se placer entre Wellington et Blücher, les battre l'un après l'autre, avant qu'ils ne se rejoignent."
+          "text": "ヨーロッパはナポレオンを「無法者」と宣告しました。その作戦は、[[中央位置]]を活かすことです。考え方は単純で、ウェリントンとブリュッヒャーの間に陣取り、二人が合流する前に一人ずつ倒す、というものです。"
         }
       ]
     },
     {
       "id": "course_13_la_bataille_de_waterloo_1815_p2",
-      "title": "Deux jours avant : Ligny et Quatre-Bras",
+      "title": "二日前：リニーとカトル・ブラの戦い",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le **16 juin**, Napoléon bat les Prussiens à **Ligny**, un village belge. Le même jour, [[ネイ元帥]], l'un de ses plus braves généraux, tient les Britanniques aux **Quatre-Bras**, un carrefour stratégique. Mais Napoléon croit les Prussiens hors de combat. Il détache le maréchal **Grouchy** avec **33 000 hommes** pour les poursuivre."
+          "text": "**6月16日**、ナポレオンはベルギーの村**リニー**でプロイセン軍を破りました。同じ日、最も勇敢な将軍の一人である[[ネイ元帥]]は、戦略上の要衝**カトル・ブラ**でイギリス軍を食い止めます。ところがナポレオンは、プロイセン軍はもう戦えないと考え、**グルーシー**元帥に**33,000人**の兵を預けて追撃させました。"
         },
         {
           "type": "funFact",
-          "text": "Certains historiens attribuent le retard du matin du 18 juin à une crise d'hémorroïdes qui aurait empêché Napoléon de monter à cheval pour ses reconnaissances habituelles."
+          "text": "一部の歴史家は、6月18日の朝の遅れを、痔の発作のせいだとしています。そのせいでナポレオンは、いつもの偵察に馬で出かけられなかったというのです。"
         },
         {
           "type": "paragraph",
-          "text": "Le **18**, après une nuit de pluie, il attend **11 h 30** pour que le sol sèche. Il veut déplacer sa [[大砲列（グランド・バトリー）]], une concentration massive de canons. Ce délai offre à Blücher le temps de marcher vers le bruit du canon."
+          "text": "**18日**、雨の夜が明けると、ナポレオンは地面が乾くのを待って、**11時30分**まで動きませんでした。[[大砲列（グランド・バトリー）]]を動かすためで、これは大砲を大量に集めたものです。この遅れで、ブリュッヒャーは砲声のする方へ進軍する時間を得ました。"
         }
       ]
     },
     {
       "id": "course_13_la_bataille_de_waterloo_1815_p3",
-      "title": "La journée qui brise l'Empire",
+      "title": "帝国を打ち砕いた、運命の一日",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La bataille s'engage autour de fermes fortifiées : **Hougoumont** et la **Haie Sainte**. Les charges de Ney se brisent sur les [[方陣]] britanniques, des formations d'infanterie en rectangle, baïonnettes vers l'extérieur. Vers **16 h 30**, les Prussiens apparaissent sur le flanc droit français. Grouchy, lui, reste trop loin."
+          "text": "戦いは、要塞化された農場、**ウーグモン**と**ラ・エー・サント**をめぐって始まりました。ネイの突撃は、イギリス軍の[[方陣]]に砕かれます。方陣とは、歩兵が銃剣を外に向けて長方形に並んだ陣形です。**16時30分**ごろ、プロイセン軍がフランス軍の右側面に現れました。一方グルーシーは、まだ遠くにいます。"
         },
         {
           "type": "paragraph",
-          "text": "En dernier recours, Napoléon lance la **Garde impériale**, son unité d'élite. Pour la première fois, elle recule. Le cri « La Garde recule ! » déclenche la panique. La retraite devient déroute. Wellington et Blücher se rejoignent à la **Belle-Alliance**."
+          "text": "最後の手段として、ナポレオンは精鋭部隊の**帝国近衛隊**を投入します。近衛隊が初めて後退しました。「近衛隊が退くぞ！」という叫びがパニックを引き起こします。退却は総崩れになり、ウェリントンとブリュッヒャーは**ベル・アリアンス**で合流しました。"
         }
       ]
     },
     {
       "id": "course_13_la_bataille_de_waterloo_1815_p4",
-      "title": "L'exil final et l'Europe des rois",
+      "title": "最後の流刑と王たちのヨーロッパ",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Napoléon abdique le **22 juin 1815**. Exilé à **Sainte-Hélène**, une île isolée dans l'Atlantique sud, il meurt en **1821**. Le Congrès de Vienne impose la [[正統主義]] : remettre les dynasties royales sur leurs trônes. Russie, Autriche et Prusse encadrent le continent. Ce « Concert européen » maintient une paix relative jusqu'en **1914**."
+          "text": "ナポレオンは**1815年6月22日**に退位します。大西洋南部の孤島**セントヘレナ**に流され、**1821年**に亡くなりました。ウィーン会議が打ち出したのが[[正統主義]]で、王家をもとの王座に戻す考え方です。ロシア、オーストリア、プロイセンが大陸を取り仕切りました。この「ヨーロッパ協調」のもと、相対的な平和が**1914年**まで続きます。"
         },
         {
           "type": "timeline",
           "events": [
             {
-              "date": "1er mars 1815",
-              "title": "Retour d'Elbe",
-              "detail": "Début des Cent-Jours."
+              "date": "1815年3月1日",
+              "title": "エルバ島からの帰還",
+              "detail": "百日天下の始まり"
             },
             {
-              "date": "16 juin 1815",
-              "title": "Ligny et Quatre-Bras",
-              "detail": "Victoire partielle, mais les Prussiens ne sont pas écrasés."
+              "date": "1815年6月16日",
+              "title": "リニーとカトル・ブラ",
+              "detail": "部分的には勝利したものの、プロイセン軍は壊滅しませんでした。"
             },
             {
-              "date": "18 juin 1815",
-              "title": "Waterloo",
-              "detail": "Défaite décisive face à Wellington et Blücher."
+              "date": "1815年6月18日",
+              "title": "ワーテルロー",
+              "detail": "ウェリントンとブリュッヒャーの前に決定的な敗北"
             },
             {
-              "date": "22 juin 1815",
-              "title": "Seconde abdication",
-              "detail": "Fin définitive de l'Empire."
+              "date": "1815年6月22日",
+              "title": "二度目の退位",
+              "detail": "帝国は、これで最終的に終わりを迎えます。"
             },
             {
-              "date": "1821",
-              "title": "Mort à Sainte-Hélène",
-              "detail": "Napoléon meurt en exil."
+              "date": "1821年",
+              "title": "セントヘレナで死去",
+              "detail": "ナポレオンは流刑地で亡くなる"
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "**Waterloo** (**18 juin 1815**) achève Napoléon. Le retard de l'attaque, l'absence de Grouchy et la jonction de Wellington avec Blücher font chuter l'Empire et ouvrent un siècle d'ordre monarchique."
+          "text": "**ワーテルロー**（**1815年6月18日**）が、ナポレオンにとどめを刺しました。攻撃の遅れ、グルーシーの不在、ウェリントンとブリュッヒャーの合流が帝国を崩壊させ、君主制の秩序が続く1世紀の幕を開けます。"
         }
       ]
     }

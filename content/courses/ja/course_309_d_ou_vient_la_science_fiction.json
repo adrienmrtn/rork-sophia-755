@@ -1,124 +1,124 @@
 {
   "id": "course_309_d_ou_vient_la_science_fiction",
-  "title": "D'où vient la science-fiction ?",
-  "subtitle": "De Lucien à Frankenstein",
+  "title": "SFはどこから生まれたのか",
+  "subtitle": "ルキアノスからフランケンシュタインまで",
   "subject": "litterature",
-  "subcategory": "Anglo-saxons & littérature mondiale",
-  "description": "Au IIe siècle, Lucien de Samosate envoyait déjà son narrateur sur la Lune. Mais il faut la révolution scientifique, puis le monstre de Mary Shelley, pour que ces rêves deviennent une façon nouvelle d'interroger le changement.",
+  "subcategory": "英米と世界の文学",
+  "description": "2世紀、サモサタのルキアノスはすでに、語り手を月へ送っていました。けれども、こうした夢が変化を問うための新しい方法になるには、科学革命と、メアリー・シェリーの生んだ怪物が必要でした。",
   "author": "vedran-obucina",
   "hero": {
     "image": "melies_trip_to_the_moon_1902",
     "ratio": "4:3",
-    "hook": "Un voyage sur la Lune au IIe siècle, un monstre cousu en 1818, un nom trouvé en 1929 : la science-fiction est bien plus vieille que ses fusées."
+    "hook": "2世紀の月旅行、1818年に縫い合わされた怪物、1929年に見つかった名前。SFの歴史は、ロケットよりはるかに古いのです。"
   },
   "sections": [
     {
       "id": "course_309_d_ou_vient_la_science_fiction_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La science-fiction ne commence pas avec les vaisseaux spatiaux. Pendant des siècles, on a imaginé des voyages vers la Lune, des sociétés étranges et des êtres créés de toutes pièces. Au **IIe siècle**, l'auteur grec [[サモサタのルキアノス]] écrit son *Histoire véritable* : le narrateur y voyage jusqu'à la Lune et y rencontre des créatures surprenantes."
+          "text": "SFは、宇宙船から始まったわけではありません。何世紀ものあいだ、人は月への旅や不思議な社会、人工的につくられた生き物を想像してきました。**2世紀**、ギリシアの作家[[サモサタのルキアノス]]は*『本当の話』*を書き、語り手が月まで旅をして、そこで驚くべき生き物たちに出会う物語を描きます。"
         },
         {
           "type": "paragraph",
-          "text": "Ce n'est pas encore de la science-fiction au sens moderne. Lucien exagère, se moque, manie la satire pour rire des idées humaines. Mais son récit pose déjà la question essentielle : à quoi ressemblerait le monde si la réalité fonctionnait autrement ? Quelque chose change le jour où l'on se met à croire que la science peut expliquer la nature et transformer l'avenir."
+          "text": "これは、現代的な意味でのSFではまだありません。ルキアノスは誇張し、からかい、風刺を使って人間の考えを笑います。それでも、この物語はすでに本質的な問いを投げかけています。現実が別の仕組みで動いていたら、世界はどんな姿になるだろうか、という問いです。科学が自然を説明し、未来を変えられると信じ始めたとき、何かが変わります。"
         }
       ]
     },
     {
       "id": "course_309_d_ou_vient_la_science_fiction_p1",
-      "title": "La lunette change la question",
+      "title": "望遠鏡が人々の問いを変える",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La [[科学革命]] est cette période où l'observation, la mesure et l'expérience bouleversent les idées européennes sur la nature. Au **XVIIe siècle**, on regarde la Lune et les planètes avec un intérêt neuf. La lunette astronomique, que Galilée pointe vers le ciel en 1610, montre que la voûte céleste n'est ni parfaite ni immuable, contrairement à ce que beaucoup croyaient."
+          "text": "[[科学革命]]とは、観察、測定、実験がヨーロッパの自然観を根底から揺さぶった時代のことです。**十七世紀**、人々はそれまでになかった強い関心をもって、月や惑星を眺めるようになります。天文学で使われる望遠鏡を、ガリレオが1610年に空へ向けると、多くの人が信じていたこととは逆に、天空が完全でも不変でもないことが、はっきりと示されました。"
         },
         {
           "type": "image",
           "asset": "galileo_moon_drawings_sidereus_nuncius_1610",
           "ratio": "3:4",
-          "caption": "Ballons et explorateurs de la Lune dans une estampe comique de F. Wenzel (XIXe siècle) : l'astre observé devient une destination."
+          "caption": "F・ヴェンツェルによる風刺的な版画（十九世紀）に描かれた、気球と月の探検家たち。観察の対象だった天体が、行き先に変わります。"
         },
         {
           "type": "paragraph",
-          "text": "L'astronome [[ヨハネス・ケプラー]] s'empare de ce savoir nouveau dans son *Somnium*, « Le Songe », publié en **1634**, après sa mort. Il y imagine un voyage vers la Lune et décrit à quoi la Terre ressemblerait vue de l'espace. Le texte n'a pas de genre littéraire clair. Mais les idées scientifiques n'y servent plus de simple décor : elles deviennent la matière avec laquelle un écrivain bâtit un monde imaginaire."
+          "text": "天文学者[[ヨハネス・ケプラー]]は、この新しい知識を使って*『ソムニウム』*（「夢」）を書きます。ケプラーの死後、**1634年**に出版された作品です。月への旅を想像し、宇宙から見た地球がどう見えるかを描きました。この作品にははっきりした文学ジャンルがありません。しかし、科学的な考えはもはや単なる背景ではなく、作家が想像の世界を築く材料になっています。"
         }
       ]
     },
     {
       "id": "course_309_d_ou_vient_la_science_fiction_p2",
-      "title": "Frankenstein donne sa forme au genre",
+      "title": "フランケンシュタインがジャンルに形を与える",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En **1818**, [[メアリー・シェリー]] publie *Frankenstein*. C'est une histoire de monstre, mais sa question centrale est neuve : que se passe-t-il quand un savant utilise ses connaissances pour créer la vie ? Victor Frankenstein franchit une frontière que l'on tient pour contre-nature. Quand sa créature s'anime, le succès scientifique lui apporte la gloire, mais aussi le désastre."
+          "text": "**1818年**、[[メアリー・シェリー]]は*『フランケンシュタイン』*を発表します。怪物の物語ですが、中心にある問いは新しいものでした。科学者が知識を使って生命をつくったら、何が起こるのか。ヴィクター・フランケンシュタインは、自然に反するとされる一線を越えます。創造物が動き出したとき、彼は科学的な成功で栄光を手にしますが、同時に破滅も招きます。"
         },
         {
           "type": "image",
           "asset": "frankenstein_monster_illustration_1831",
           "ratio": "3:4",
-          "caption": "La créature s'éveille sur la table du laboratoire : frontispice de l'édition de 1831."
+          "caption": "実験室の台の上で目を覚ます創造物の姿。1831年版の本に掲げられた口絵です。"
         },
         {
           "type": "paragraph",
-          "text": "Shelley parle de responsabilité, de peur, de souffrance. Elle demande si l'ambition humaine n'avance pas plus vite que notre capacité à en comprendre les conséquences. C'est la question même de la [[産業革命]] : machines, usines et techniques nouvelles changent la vie à toute allure. La technologie n'est plus une idée abstraite quand elle entre dans les villes, les ateliers et jusque dans les corps. La science-fiction prend toute sa force lorsque la technique devient la source des grands problèmes."
+          "text": "シェリーが語るのは、責任、恐れ、苦しみです。人間の野心は、その結果を理解する私たちの力よりも速く進んでいないだろうか、と問いかけます。その問いは、[[産業革命]]の時代の問いそのものです。機械、工場、新しい技術が、人々の生活をあっという間に変えていったからです。技術は、都市や作業場、さらには人間の体の中にまで入り込むと、もはや抽象的な考えではなくなります。SFがもっとも力を発揮するのは、技術が大きな問題の源になるときです。"
         }
       ]
     },
     {
       "id": "course_309_d_ou_vient_la_science_fiction_p3",
-      "title": "Un nom venu bien plus tard",
+      "title": "ずっと後に生まれた名前",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Les récits de science-fiction existent bien avant l'expression elle-même. Jules Verne et H. G. Wells développent de grandes idées : voyage dans l'espace, machines extraordinaires, voyage dans le temps, sociétés du futur. Dans les années **1920**, l'éditeur américain [[ヒューゴー・ガーンズバック]] aide ces histoires à trouver leur place. Ses magazines publient des récits de science, de technique, d'inventions et de futurs possibles."
+          "text": "SFの物語は、その呼び名よりずっと前から存在していました。ジュール・ヴェルヌやH・G・ウェルズは、宇宙旅行、驚異の機械、時間旅行、未来社会といった大きな着想を発展させます。**1920年代**、アメリカの編集者[[ヒューゴー・ガーンズバック]]が、これらの物語の居場所づくりを助けます。彼の雑誌には、科学、技術、発明、ありうる未来を描いた物語が載りました。"
         },
         {
           "type": "image",
           "asset": "amazing_stories_april_1926_cover_frank_paul",
           "ratio": "3:4",
-          "caption": "La couverture du premier numéro d'Amazing Stories, avril 1926, illustrée par Frank R. Paul."
+          "caption": "『アメージング・ストーリーズ』創刊号の表紙（1926年4月）。イラストはフランク・R・ポール。"
         },
         {
           "type": "paragraph",
-          "text": "Les lecteurs peuvent désormais suivre un genre entier, et non plus quelques livres isolés. Gernsback n'a pas « créé » la science-fiction. Il lui a donné un nom reconnu, un espace public et commercial, une familiarité. L'expression « science fiction » s'impose à la fin de la décennie, quand il l'associe à son magazine *Science Wonder Stories*. Le genre a enfin une adresse littéraire."
+          "text": "読者は、数冊の孤立した本ではなく、ジャンル全体を追いかけられるようになります。ガーンズバックがSFを「生み出した」わけではありません。彼が与えたのは、認知された名前、公共の場と商業の場、そしてなじみ深さでした。「サイエンス・フィクション」という呼び名は、同じ年代の終わりに定着します。彼がそれを自分の雑誌*『サイエンス・ワンダー・ストーリーズ』*と結びつけたときです。ジャンルはついに、文学の中に居場所を得ました。"
         },
         {
           "type": "funFact",
-          "text": "Hugo Gernsback a d'abord parlé de « scientifiction » avant que « science fiction » ne s'impose. Il lance *Amazing Stories* en 1926, puis contribue à populariser le nom moderne avec *Science Wonder Stories* en 1929."
+          "text": "ヒューゴー・ガーンズバックは、最初は「サイエンティフィクション」と呼んでいて、のちに「サイエンス・フィクション」という呼び名が定着しました。1926年に*『アメージング・ストーリーズ』*を創刊し、1929年に*『サイエンス・ワンダー・ストーリーズ』*を出して、現代の呼び名を広めるのに貢献します。"
         },
         {
           "type": "timeline",
           "events": [
             {
-              "date": "IIe siècle",
-              "title": "Histoire véritable de Lucien",
-              "detail": "Un voyage satirique jusqu'à la Lune."
+              "date": "2世紀",
+              "title": "ルキアノスの『本当の話』",
+              "detail": "月まで旅をする、風刺のこもった物語です。"
             },
             {
-              "date": "1634",
-              "title": "Somnium de Kepler",
-              "detail": "Publié après sa mort, il décrit la Terre vue de l'espace."
+              "date": "1634年",
+              "title": "ケプラーの『ソムニウム』",
+              "detail": "作者の死後に出版され、宇宙から見た地球が描かれています。"
             },
             {
-              "date": "1818",
-              "title": "Frankenstein de Mary Shelley",
-              "detail": "Un savant crée la vie et déclenche le désastre."
+              "date": "1818年",
+              "title": "メアリー・シェリーの『フランケンシュタイン』",
+              "detail": "科学者が生命をつくり出し、破滅を引き起こします。"
             },
             {
-              "date": "1926",
-              "title": "Amazing Stories",
-              "detail": "Hugo Gernsback lance son magazine."
+              "date": "1926年",
+              "title": "『アメージング・ストーリーズ』",
+              "detail": "ヒューゴー・ガーンズバックが雑誌を創刊します。"
             },
             {
-              "date": "1929",
-              "title": "Science Wonder Stories",
-              "detail": "L'expression « science fiction » s'impose."
+              "date": "1929年",
+              "title": "『サイエンス・ワンダー・ストーリーズ』",
+              "detail": "「サイエンス・フィクション」という呼び名が定着します。"
             }
           ]
         }
@@ -126,20 +126,20 @@
     },
     {
       "id": "course_309_d_ou_vient_la_science_fiction_p4",
-      "title": "Une façon de penser le changement",
+      "title": "変化を考えるためのひとつの方法",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Vaisseaux, robots, extraterrestres, savants : ce n'est pas cela qui définit d'abord la science-fiction. Son sujet le plus profond, c'est le changement. Que se passe-t-il quand une découverte, une technique ou une idée scientifique transforme la vie humaine ? Le même genre peut voyager vers des planètes lointaines, explorer l'intelligence artificielle, jouer avec le génie génétique ou décrire des sociétés qui n'existent pas encore."
+          "text": "宇宙船、ロボット、宇宙人、科学者。SFをまず定義するのは、そうしたものではありません。いちばん深いところにある主題は、変化です。発見や技術、科学的な考えが人間の生活を変えてしまったら、いったい何が起こるのか。同じジャンルが、遠い惑星へ旅することも、人工知能の可能性を探ることも、遺伝子工学をもてあそぶことも、まだこの世に存在しない社会を描くことも、できるのです。"
         },
         {
           "type": "paragraph",
-          "text": "Le monde imaginé se doit d'être étrange, neuf, spectaculaire. Mais il pose au fond des questions sur notre monde, ses peurs, ses angoisses et ses espoirs. Roman effrayant ou thriller au cinéma, la science-fiction plonge dans l'éthique et la psychologie humaines. Elle existe chaque fois que l'on se sert d'un futur imaginé pour interroger le présent."
+          "text": "想像された世界は、奇妙で、新しく、華々しいものでなければなりません。けれども根底では、私たち自身の世界、その恐れや不安、そして希望を問いかけています。怖い小説でも映画のスリラーでも、SFは人間の倫理と心理に深く入り込みます。想像した未来を使って現在を問いかけるとき、SFは必ずそこにあるのです。"
         },
         {
           "type": "takeaway",
-          "text": "La science-fiction naît quand la science devient une matière à récits, de Kepler à Mary Shelley, et elle vit chaque fois qu'un futur imaginé sert à poser les questions que le présent ne sait pas encore résoudre."
+          "text": "SFは、科学が物語の素材になったときに生まれました。ケプラーからメアリー・シェリーへ、そして今も、想像された未来が、現在にはまだ解けない問いを投げかけるために使われるたび、SFは生きています。"
         }
       ]
     }

@@ -1,118 +1,118 @@
 {
   "id": "course_182_osiris_et_set_mythologie_egyptienne",
-  "title": "Osiris et Set : comment un meurtre a-t-il façonné l'Égypte ?",
-  "subtitle": "Mythologie égyptienne",
+  "title": "オシリスとセト：ひとつの殺人はどのようにエジプトを形づくったのか？",
+  "subtitle": "エジプト神話",
   "subject": "mythologie",
-  "subcategory": "Autres mythologies",
-  "description": "Meurtre, démembrement, momie et vengeance : le cycle d'Osiris et Set fonde la royauté égyptienne et l'espoir d'une vie après la mort.",
+  "subcategory": "世界の神話",
+  "description": "殺害、遺体の切断、ミイラ、そして復讐。オシリスとセトの物語は、エジプトの王権と、死後の命への希望の土台となりました。",
   "hero": {
     "image": "osiris_et_set_mythologie_egyptienne",
     "ratio": "16:9",
-    "hook": "Un frère tue le roi, découpe son corps en quatorze morceaux. Une sœur le rassemble. Un fils venge. L'Égypte entière sort de ce crime."
+    "hook": "兄が王を殺し、遺体を十四個に切り刻む。妹がそれを集める。息子が仇を討つ。エジプトのすべてが、この罪から生まれました。"
   },
   "sections": [
     {
       "id": "course_182_osiris_et_set_mythologie_egyptienne_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le cycle d'**Osiris** et de **Set** est le grand récit de l'Égypte ancienne. Ce n'est pas seulement une tragédie familiale. C'est le combat entre l'ordre ([[マアト]], l'harmonie) et le chaos stérile."
+          "text": "**オシリス**と**セト**の物語は、古代エジプトの大きな神話です。単なる家族の悲劇ではありません。秩序（[[マアト]]、調和）と、実りのない混沌との戦いなのです。"
         },
         {
           "type": "paragraph",
-          "text": "À travers le meurtre, le démembrement et la résurrection d'Osiris, les Égyptiens pensent la royauté, la fertilité du Nil et la vie après la mort. Chaque pharaon vivant est un **Horus**. Chaque roi mort devient un **Osiris**."
+          "text": "オシリスの殺害、遺体の切断、そして復活を通して、エジプト人は王権、ナイル川の豊かさ、死後の命を考えました。生きているファラオはみな**ホルス**であり、亡くなった王はみな**オシリス**になります。"
         }
       ]
     },
     {
       "id": "course_182_osiris_et_set_mythologie_egyptienne_p1",
-      "title": "Set tue Osiris",
+      "title": "セト、オシリスを殺す",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Osiris** est un roi civilisateur. Avec son épouse-sœur **Isis**, il enseigne l'agriculture et les lois. Son frère **Set**, dieu du désert et de la violence, le hait. Lors d'un banquet, Set présente un coffre magnifique : il l'offrira à celui qui y tiendra parfaitement."
+          "text": "**オシリス**は文明をもたらした王です。妹であり妻でもある**イシス**とともに、農業と法を人々に教えます。砂漠と暴力の神である弟の**セト**は、オシリスを憎んでいます。宴の席でセトは見事な箱を見せ、ぴったり収まった者にそれを贈ると言います。"
         },
         {
           "type": "image",
           "asset": "osiris_egyptian_god_green_skin_painting",
           "ratio": "4:3",
-          "caption": "Osiris à la peau verte : non la mort, mais la végétation qui renaît."
+          "caption": "緑色の肌をしたオシリス。それは死ではなく、よみがえる植物を表している"
         },
         {
           "type": "paragraph",
-          "text": "Ayant pris les mesures d'Osiris en secret, Set le fait s'allonger, verrouille le coffre, le scelle au plomb et le jette dans le Nil. Plus tard, quand Isis retrouve le corps, Set le découpe en **14 morceaux** et les disperse dans la vallée. Sans corps intact, pas de paix dans l'au-delà."
+          "text": "セトは、こっそりオシリスの寸法を測っておき、彼を箱に寝かせてふたを閉じ、鉛で封をしてナイル川に投げ込みます。のちにイシスが遺体を見つけると、セトはそれを**14個**に切り刻み、谷じゅうにばらまきます。遺体がそろわなければ、あの世で安らぎは得られません。"
         },
         {
           "type": "funFact",
-          "text": "Osiris est souvent peint en vert. Cette couleur ne dit pas la pourriture : elle dit la renaissance, comme les champs après la crue du Nil."
+          "text": "オシリスは緑色に描かれることがよくあります。この色は腐敗ではなく、ナイル川の増水のあとの畑のような、再生を表しています。"
         }
       ]
     },
     {
       "id": "course_182_osiris_et_set_mythologie_egyptienne_p2",
-      "title": "Isis invente la momie",
+      "title": "イシス、ミイラを発明する",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Isis**, grande magicienne, part à la recherche des fragments. Aidée de sa sœur Nephtys et du dieu [[アヌビス]], elle érige un sanctuaire à chaque endroit où elle retrouve un morceau. Un problème reste : le phallus a été dévoré par le poisson [[オクシリンコス]]. Isis en façonne un de remplacement."
+          "text": "偉大な魔術師**イシス**は、遺体のかけらを探しに出ます。妹ネフテュスと神[[アヌビス]]の助けを受け、かけらを見つけるたびに、その場所に聖所を建てます。ひとつだけ問題が残りました。男性器が、魚の[[オクシリンコス]]に食べられていたのです。イシスは、代わりのものを作ります。"
         },
         {
           "type": "image",
           "asset": "isis_egyptian_goddess_winged_resurrection_painting",
           "ratio": "4:3",
-          "caption": "Isis aux ailes déployées : le souffle qui ranime Osiris."
+          "caption": "翼を広げたイシス。オシリスをよみがえらせる息吹"
         },
         {
           "type": "paragraph",
-          "text": "En rassemblant les pièces et en les enveloppant de bandelettes, Isis et Anubis créent la **première momie**. D'un battement d'ailes, Isis a insufflé une vie brève à Osiris. C'est alors qu'elle conçoit **Horus**, l'héritier destiné à restaurer l'ordre."
+          "text": "イシスとアヌビスは、かけらを集めて包帯で巻き、**最初のミイラ**を作ります。イシスが翼をはばたかせて、オシリスにつかの間の命を吹き込みました。そのとき、秩序を取り戻す運命の跡継ぎ**ホルス**を身ごもります。"
         },
         {
           "type": "funFact",
-          "text": "Selon certains textes, les larmes d'Isis pendant sa quête étaient si abondantes que les Égyptiens y voyaient l'origine mythique de la crue annuelle du Nil."
+          "text": "ある文献によると、イシスが探し歩いているあいだに流した涙はあまりに多く、エジプト人はそこに、毎年のナイル川の増水の神話的な起源を見ていたといいます。"
         }
       ]
     },
     {
       "id": "course_182_osiris_et_set_mythologie_egyptienne_p3",
-      "title": "Horus venge son père",
+      "title": "ホルス、父の仇を討つ",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Élevé en secret dans les marais de [[ケミス]], **Horus** grandit sous la forme du faucon. Adulte, il réclame le trône devant le tribunal des dieux, présidé par [[ラー]]. Le conflit avec Set dure des décennies : duels, ruses, blessures. Horus perd un œil ; Set perd sa fertilité."
+          "text": "秘密のうちに[[ケミス]]の沼地で育てられた**ホルス**は、ハヤブサの姿で成長します。大人になると、[[ラー]]が議長を務める神々の法廷で王位を求めます。セトとの争いは何十年も続き、決闘、策略、傷つけ合いがありました。ホルスは片目を失い、セトは生殖力を失います。"
         },
         {
           "type": "image",
           "asset": "eye_of_horus_egyptian_symbol_protection",
           "ratio": "4:3",
-          "caption": "L'œil d'Horus (Oudjat) : l'intégrité reconquise sur le chaos."
+          "caption": "ホルスの目（ウジャト）。混沌から取り戻された完全さ"
         },
         {
           "type": "paragraph",
-          "text": "L'œil, recomposé par [[トト]], devient le symbole de la guérison et de la protection. Les dieux tranchent : Set est condamné à servir, notamment en combattant le serpent [[アポピス]] sur la barque solaire. Horus est couronné. Chaque pharaon sera désormais un « Horus vivant »."
+          "text": "[[トト]]が元どおりにしたこの目は、癒やしと守りの象徴になります。神々は裁定を下します。セトは仕える身となり、とりわけ太陽の船で蛇[[アポピス]]と戦うことになりました。ホルスは王位に就きます。以後、ファラオはみな「生きているホルス」となります。"
         }
       ]
     },
     {
       "id": "course_182_osiris_et_set_mythologie_egyptienne_p4",
-      "title": "Osiris, juge des morts",
+      "title": "オシリス、死者の裁判官",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Momifié, Osiris ne peut plus régner sur terre. Il devient souverain de l'**Amenti**, le royaume des morts. Sous son regard se déroule la **pesée du cœur**, décrite dans [[『死者の書』]]. Le cœur du défunt est mis sur une balance face à la plume de Ma'at."
+          "text": "ミイラになったオシリスは、もう地上を治められません。死者の国**アメンティ**の支配者となります。オシリスの見守るなかで行われるのが**心臓の計量**で、[[『死者の書』]]に描かれています。死者の心臓は天秤にのせられ、マアトの羽根と釣り合わされます。"
         },
         {
           "type": "paragraph",
-          "text": "Si le cœur est léger, le défunt est « juste de voix » et entre dans l'éternité d'Osiris. S'il est lourd de fautes, le monstre [[アメミト]] le dévore : l'oubli définitif. Roi et paysan sont jugés selon les mêmes critères. Horus gère le présent ; Osiris assure la suite."
+          "text": "心臓が軽ければ、死者は「声が正しい」と認められ、オシリスの永遠の世界に入ります。罪で重ければ、怪物[[アメミト]]に食べられ、永遠に忘れ去られます。王も農民も、同じ基準で裁かれます。ホルスが現在を治め、オシリスが続きを保証するのです。"
         },
         {
           "type": "takeaway",
-          "text": "Le mythe d'**Osiris** et de **Set** fonde trois piliers de l'Égypte : la royauté (Horus vivant), la momification (corps intact pour l'au-delà) et l'espoir d'une justice après la mort sous le regard d'Osiris."
+          "text": "**オシリス**と**セト**の神話は、エジプトの三つの柱の土台です。王権（生きているホルス）、ミイラづくり（あの世のために損なわれない体）、そしてオシリスの見守るもとで死後に正義が行われるという希望です。"
         }
       ]
     }

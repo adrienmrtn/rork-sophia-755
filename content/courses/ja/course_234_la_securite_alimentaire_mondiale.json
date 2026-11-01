@@ -1,123 +1,123 @@
 {
   "id": "course_234_la_securite_alimentaire_mondiale",
-  "title": "Comment nourrir huit milliards d'humains ?",
-  "subtitle": "Produire mieux, gaspiller moins",
+  "title": "八十億人もの人びとを、どう養えばよいのか",
+  "subtitle": "よりよくつくり、むだを減らす",
   "subject": "comprendreLeMonde",
-  "subcategory": "Environnement & avenir",
-  "description": "La planète produit plus de nourriture que jamais, et pourtant la faim progresse. Le problème n'est pas la quantité, mais la façon dont on produit, transporte et gaspille ce que l'on mange.",
+  "subcategory": "環境と未来",
+  "description": "地球は、かつてないほど多くの食料をつくっています。それでも飢えは広がっています。問題は量ではなく、食べるものをつくり、運び、むだにするやり方にあります。",
   "author": "kate-waddams",
   "hero": {
     "image": "combine_harvester_wheat_field_aerial",
     "ratio": "4:3",
-    "hook": "Nous produisons assez pour nourrir tout le monde. Le problème, c'est ce que nous faisons de cette nourriture."
+    "hook": "私たちは、みんなを養えるだけの食料をつくっています。問題は、その食料をどうしているかです。"
   },
   "sections": [
     {
       "id": "course_234_la_securite_alimentaire_mondiale_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Avec la montée de la faim et de la [[栄養不良]] dans le monde, on pourrait croire que la Terre ne produit plus assez pour une population qui grossit. C'est faux. Depuis les années **1960**, la production agricole augmente plus vite que le nombre d'humains. Ce qui coince, c'est la manière dont cette nourriture est produite et distribuée."
+          "text": "世界で飢えや[[栄養不良]]が増えていると聞くと、増え続ける人口に対して、地球はもう十分な食料をつくれないのだと思うかもしれません。けれども、それはまちがいです。**1960年**代から、農業の生産量は人口よりも速いペースで増えてきました。問題は、その食料のつくられ方と届けられ方です。"
         },
         {
           "type": "paragraph",
-          "text": "Les chiffres sont contradictoires. **7 %** des enfants de moins de cinq ans souffrent de malnutrition, alors que **40 %** des adultes sont en surpoids. Et aujourd'hui, une mauvaise alimentation tue plus d'adultes que le tabac. Nourrir huit milliards de personnes n'a rien de simple : la [[サプライチェーン]] a des trous, nous gaspillons énormément, et beaucoup de pratiques agricoles ne sont plus tenables."
+          "text": "数字は矛盾しています。5歳未満の子どもの**7%**が栄養不良に苦しむ一方で、成人の**40%**が太りすぎです。しかも今では、不健康な食生活が、たばこよりも多くの大人の命を奪っています。八十億人を養うのは、単純なことではありません。[[サプライチェーン]]には穴があり、私たちは大量の食料をむだにし、多くの農法はこの先も続けられるものではないからです。"
         }
       ]
     },
     {
       "id": "course_234_la_securite_alimentaire_mondiale_p1",
-      "title": "Les fermes transforment le soleil en nourriture",
+      "title": "農場とは、太陽の光を食べ物に変える大切な場所",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Une ferme capte la lumière du soleil et la transforme en nourriture. Ce travail, ce sont les plantes qui le font : cultivées, elles donnent des aliments comestibles. Le bétail au pâturage, lui, convertit l'herbe en viande et en lait. Pourtant, les fermes ont mauvaise presse : sols dégradés, pollution, déforestation, animaux qui concurrencent les humains pour la nourriture et l'espace."
+          "text": "農場は、太陽の光をとらえて食べ物に変えます。その仕事を実際にしているのは植物で、人が育てた植物が、食べられる作物になります。牧草地で育つ家畜は、草を肉や乳に変えます。ところが、農場の評判はあまりよくありません。土地の劣化、汚染、森林破壊、そして人間と食べ物や土地を奪い合う動物の存在などが、その理由としてあげられます。"
         },
         {
           "type": "image",
           "asset": "dairy_cows_grazing_green_pasture",
           "ratio": "3:2",
-          "caption": "Des vaches au pâturage : de l'herbe transformée en lait et en viande."
+          "caption": "牧草地で草を食べる牛たち。草が乳と肉に変わっていきます。"
         },
         {
           "type": "paragraph",
-          "text": "Ces problèmes viennent en partie de pratiques agricoles non durables. C'est cela qu'il faut changer. Une idée reçue veut que produire toujours plus oblige à injecter toujours plus dans les systèmes de production. C'est faux. Produire davantage n'exige pas forcément plus de pesticides, d'engrais, de terres ou de main-d'œuvre. Cela peut même signifier l'inverse."
+          "text": "こうした問題は、一部には持続できない農法から生まれています。変えるべきなのは、そこです。よくある思い込みに、もっと多くをつくるには、生産のしくみにもっと多くを注ぎ込むしかない、というものがあります。これはまちがいです。生産を増やすのに、農薬や肥料、土地、人手を増やす必要は、かならずしもありません。むしろ逆になることさえあります。"
         },
         {
           "type": "paragraph",
-          "text": "Tout tient dans un mot : l'efficacité. Avec des méthodes agricoles plus efficaces, on peut produire plus de nourriture pour des milliards de personnes tout en utilisant moins d'[[投入資材]], c'est-à-dire moins d'engrais, de pesticides, d'énergie et de main-d'œuvre, et en occupant moins de terres."
+          "text": "カギになるのは、効率という、たった一つの言葉です。より効率のよい農法を取り入れさえすれば、何十億人分もの食料を、より少ない[[投入資材]]でつくれます。つまり、肥料や農薬、エネルギー、人手を減らすことができ、しかも使う土地も少なくてすむのです。"
         }
       ]
     },
     {
       "id": "course_234_la_securite_alimentaire_mondiale_p2",
-      "title": "Un tiers de la nourriture n'arrive jamais dans l'assiette",
+      "title": "食べ物の3分の1は、食卓の皿には決してたどり着かない",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Produire assez n'est que la moitié du chemin. Encore faut-il acheminer la nourriture jusqu'aux consommateurs, un tout autre défi. Le chiffre donne le vertige : **un tiers** de la nourriture produite dans le monde est perdu ou gaspillé, soit **1,3 milliard de tonnes** chaque année."
+          "text": "十分につくることは、道のりの半分にすぎません。その食べ物を消費者のもとまで届けるという、まったく別の課題が残っています。数字には目がくらみます。世界でつくられる食料の**3分の1**が、失われるか捨てられています。その量は毎年**十三億トン**です。"
         },
         {
           "type": "image",
           "asset": "discarded_fruit_vegetables_food_waste_dumpster",
           "ratio": "3:2",
-          "caption": "Campagne anti-gaspillage américaine de la Première Guerre mondiale : des enfants apprennent aux adultes à mettre fruits et légumes en conserve."
+          "caption": "第一次世界大戦中のアメリカの食品廃棄削減キャンペーン。子どもたちが大人に、果物や野菜の瓶詰めの作り方を教えています。"
         },
         {
           "type": "funFact",
-          "text": "Le [[食品廃棄]] coûte plus qu'il n'y paraît. Jeter une pomme, c'est aussi jeter le temps, l'énergie et l'argent qu'il a fallu pour la faire pousser, la récolter et la transporter."
+          "text": "[[食品廃棄]]がもたらす損失は、見かけよりも大きなものです。リンゴを1個捨てることは、それを育て、収穫し、運ぶのにかかった時間とエネルギーとお金を捨てることでもあります。"
         },
         {
           "type": "paragraph",
-          "text": "Avec la [[グローバル化]] de l'agriculture, le commerce entre continents et l'ouverture des marchés, les pays ne dépendent plus de leur propre production pour nourrir leur population. Certains produits ne sont plus saisonniers : on les importe des quatre coins du monde. Mais cet accès élargi allonge les chaînes d'approvisionnement, et plus une chaîne est longue, plus elle compte de maillons fragiles."
+          "text": "農業の[[グローバル化]]が進み、大陸をまたぐ貿易や市場の開放が広がったことで、各国は自国の生産だけで国民を養う必要がなくなりました。季節に左右されなくなった産物もあり、世界の隅々から輸入されるようになっています。ところが、この広がった入手経路は、サプライチェーンを長くします。そして、鎖が長くなればなるほど、弱い輪も増えていきます。"
         }
       ]
     },
     {
       "id": "course_234_la_securite_alimentaire_mondiale_p3",
-      "title": "Produire plus avec moins",
+      "title": "より少ない資源で、より多くを",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Augmenter les intrants pour suivre la demande n'est ni durable ni réaliste. Les agriculteurs doivent adopter de meilleures pratiques, et la démographie n'est pas la seule à les y pousser. Ils subissent déjà le changement climatique : une météo erratique et imprévisible les force à sortir des sentiers battus."
+          "text": "需要に合わせて投入資材を増やし続けるのは、持続可能でも現実的でもありません。農家はよりよい方法に切り替えなければなりませんが、それを後押ししているのは人口動態だけではありません。農家はすでに気候変動の影響を受けています。荒れて予測できない天候のせいで、慣れ親しんだやり方から踏み出さざるをえなくなっています。"
         },
         {
           "type": "paragraph",
-          "text": "Améliorer la santé des sols, optimiser les performances des animaux, planter des cultures résistantes au climat, pratiquer l'[[精密農業]] : autant de façons de tirer plus de moins. Plutôt que d'épandre de l'engrais sur tout un champ, un robot analyse le sol en temps réel et ne délivre que la dose exacte nécessaire à cette parcelle. Résultat : des coûts réduits, un impact environnemental limité et des rendements optimisés."
+          "text": "土壌の健康を高める、家畜の生産性を最適化する、気候に強い作物を植える、[[精密農業]]を取り入れる。どれも、少ない資源からより多くを引き出すための方法です。畑全体に肥料をまくのではなく、ロボットが土壌をその場でリアルタイムに分析し、その区画に必要なぴったりの量だけを与えます。その結果として、コストは下がり、環境への負荷は抑えられ、収穫量は最適化されるのです。"
         },
         {
           "type": "image",
           "asset": "agricultural_drone_precision_farming_field",
           "ratio": "4:3",
-          "caption": "Vue aérienne d'un champ de céréales et de ses passages de tracteur, près de Dülmen (Allemagne), en 2024."
+          "caption": "穀物畑と、トラクターが通った跡を空から撮影した写真。ドイツ、デュルメン近郊、2024年。"
         },
         {
           "type": "paragraph",
-          "text": "Ces technologies font partie de la solution et pèsent de plus en plus dans la recherche agricole. Pour nourrir huit milliards de personnes, il ne faut pas forcément plus de terres, plus d'animaux ni plus d'hectares de cultures. Il faut tirer davantage de ce que nous utilisons déjà."
+          "text": "こうした技術は解決策の一部であり、農業研究での存在感も年々増しています。八十億人を養うために、かならずしも土地や家畜、作付面積を増やす必要はありません。いま求められているのは、すでに使っているものから、より多くを引き出すことです。"
         }
       ]
     },
     {
       "id": "course_234_la_securite_alimentaire_mondiale_p4",
-      "title": "Un problème partagé, de la ferme au consommateur",
+      "title": "農場から消費者まで、みんなで分かち合う問題",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Les agriculteurs sont souvent montrés du doigt. Ce sont pourtant eux qui nourrissent nos enfants, et ils sont aussi les gardiens des campagnes et de l'environnement. Mais nourrir la planète n'est pas leur affaire à eux seuls : cela demande bien plus que de faire pousser des aliments."
+          "text": "農家は、しばしば責められがちです。けれども、私たちの子どもを養っているのは農家であり、農村と環境の守り手でもあります。それでも、地球を養うのは農家だけの仕事ではありません。そのために必要なのは、食べ物を育てること以上のことなのです。"
         },
         {
           "type": "paragraph",
-          "text": "Cela nous demande des choix durables : préférer des produits plus sains et d'origine responsable, et n'acheter que ce que nous mangerons vraiment. Toute la filière alimentaire, transformateurs, emballeurs, transporteurs, distributeurs et nous, les consommateurs, peut aussi changer ses habitudes. L'avenir de l'alimentation est un problème partagé. L'alimentation de huit milliards de personnes façonne la planète entière, et vous en faites partie."
+          "text": "私たちには、これからも続けられる、持続可能な選択が求められます。より健康的で、責任ある産地の産物を選ぶこと。本当に食べきれる分だけを買うこと。食品の流れに関わるすべての人、つまり加工業者、包装業者、運送業者、販売業者、そして私たち消費者が、習慣を変えることができます。食の未来は、みんなで分かち合う問題です。八十億人の食が地球全体を形づくっていて、あなたもその一員です。"
         },
         {
           "type": "takeaway",
-          "text": "La Terre produit assez pour tous : nourrir huit milliards d'humains suppose de gaspiller moins, de produire plus avec moins d'intrants et de terres, et de changer nos choix, de la ferme à l'assiette."
+          "text": "地球は、みんなの分を十分につくっています。八十億人を養うには、むだを減らし、より少ない投入資材と土地でより多くをつくり、農場から皿まで、私たちの選択を変えていく必要があります。"
         }
       ]
     }

@@ -449,7 +449,10 @@ def check_edit(kind: str, old: str, new: str, fr: str | None, allowed: set[str] 
     if extra:
         return "nombre nouveau : " + ", ".join(sorted(extra))[:40]
     ref = fr if fr and fr not in ("∅", "—") else old
-    if len(ref) > 25 and not (0.4 <= len(new) / max(1, len(ref)) <= 2.6):
+    # Japanese is far shorter than French in characters (about 0.3 to 0.5)
+    cjk = sum(1 for c in new if "\u3040" <= c <= "\u30ff" or "\u4e00" <= c <= "\u9fff")
+    low = 0.12 if cjk >= 0.3 * max(1, len(new)) else 0.4
+    if len(ref) > 25 and not (low <= len(new) / max(1, len(ref)) <= 2.6):
         return "longueur"
     return None
 

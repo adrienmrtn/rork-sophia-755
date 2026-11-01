@@ -1,127 +1,127 @@
 {
   "id": "course_24_la_bataille_de_dien_bien_phu_1954",
-  "title": "Comment le Viet-Minh a-t-il vaincu la France à Diên Biên Phu ?",
-  "subtitle": "1954",
+  "title": "ベトミンはディエンビエンフーでどのようにフランスを破ったのか",
+  "subtitle": "1954年",
   "subject": "histoire",
-  "subcategory": "Guerre froide & monde contemporain",
-  "description": "Du **13 mars** au **7 mai 1954**, une armée française assiégée dans une cuvette du Nord-Vietnam capitule face au Viet-Minh. La défaite sonne la fin de l'Indochine française.",
+  "subcategory": "冷戦と現代世界",
+  "description": "**1954年3月13日**から**5月7日**にかけて、北ベトナムの盆地で包囲されたフランス軍が、ベトミンに降伏します。この敗北が、フランス領インドシナの終わりを告げました。",
   "hero": {
     "image": "la_bataille_de_dien_bien_phu",
     "ratio": "16:9",
-    "hook": "Dans une cuvette du Vietnam, une armée coloniale découvre que la jungle peut vaincre l'aviation."
+    "hook": "ベトナムの盆地で、植民地軍は、ジャングルが空軍に勝ちうるという現実を思い知らされます。"
   },
   "sections": [
     {
       "id": "course_24_la_bataille_de_dien_bien_phu_1954_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le **7 mai 1954**, dans une vallée du Nord-Vietnam, une armée coloniale européenne capitule. Face à elle : le Viet-Minh, le mouvement d'indépendance vietnamien. **Diên Biên Phu** n'est pas seulement un désastre français. C'est le signal que l'ère coloniale vacille, en pleine Guerre froide."
+          "text": "**1954年5月7日**、北ベトナムの谷間で、ヨーロッパの植民地軍が降伏します。相手は、ベトナムの独立運動であるベトミンです。**ディエンビエンフー**は、フランスの大敗というだけではありません。冷戦のさなかに、植民地の時代が揺らぎ始めたことを告げる出来事です。"
         },
         {
           "type": "paragraph",
-          "text": "Comment un ancien professeur d'histoire, le général **Võ Nguyên Giáp**, a-t-il vaincu une armée moderne ? Par la logistique, la patience, et en retournant contre les Français leur propre certitude de supériorité."
+          "text": "歴史の教師だった**ヴォー・グエン・ザップ**将軍は、どのようにして近代的な軍隊を打ち破ったのでしょうか。答えは、兵站と忍耐、そして「自分たちのほうが優位にある」というフランス側の思い込みを逆手に取ったことです。"
         }
       ]
     },
     {
       "id": "course_24_la_bataille_de_dien_bien_phu_1954_p1",
-      "title": "L'Indochine en guerre",
+      "title": "戦火のインドシナ",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Depuis les années 1880, la France domine l'Indochine, aujourd'hui Vietnam, Laos et Cambodge. En **septembre 1945**, [[ホー・チ・ミン]], fondateur du Viet-Minh, proclame l'indépendance. Paris refuse. Commence la guerre d'Indochine : d'un côté le corps expéditionnaire français, avec chars et avions ; de l'autre le Viet-Minh et sa [[ゲリラ戦]] dans le [[トンキン]], le Nord du Vietnam."
+          "text": "フランスは1880年代から、現在のベトナム、ラオス、カンボジアにあたるインドシナを支配しています。**1945年9月**、ベトミンの創設者[[ホー・チ・ミン]]が独立を宣言しますが、パリは認めません。こうしてインドシナ戦争が始まります。一方には、戦車と飛行機を備えたフランス遠征軍。もう一方には、ベトナム北部の[[トンキン]]で[[ゲリラ戦]]を展開するベトミンがいます。"
         },
         {
           "type": "image",
           "asset": "general_giap_viet_minh",
           "ratio": "4:3",
-          "caption": "Le général Võ Nguyên Giáp, stratège du Viet-Minh."
+          "caption": "ベトミンの戦略家、ヴォー・グエン・ザップ将軍"
         },
         {
           "type": "funFact",
-          "text": "[[ヴォー・グエン・ザップ将軍]] n'a jamais suivi d'école militaire. Il dit avoir appris la stratégie en lisant les campagnes de Napoléon à la bibliothèque de Hanoï."
+          "text": "[[ヴォー・グエン・ザップ将軍]]は、軍事学校に通ったことが一度もありません。戦略は、ハノイの図書館でナポレオンの戦役を読んで学んだと語っています。"
         },
         {
           "type": "paragraph",
-          "text": "Giáp pense la guerre en étapes : clandestinité, guérilla mobile, puis offensive générale. En 1953, il juge son armée prête. Les Français, eux, cherchent le terrain d'une bataille décisive."
+          "text": "ザップは、戦争を段階で考えます。地下活動、機動的なゲリラ戦、そして総攻勢です。1953年、ザップは自軍の準備が整ったと判断します。一方フランス側は、決戦にふさわしい戦場を探しています。"
         }
       ]
     },
     {
       "id": "course_24_la_bataille_de_dien_bien_phu_1954_p2",
-      "title": "Le piège de la cuvette",
+      "title": "盆地という罠",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le général **Henri Navarre**, chef des forces françaises en Indochine, lance l'**opération Castor** : installer une base aéro-terrestre à Diên Biên Phu pour forcer le Viet-Minh à l'attaquer. En **novembre 1953**, des parachutistes sautent dans la cuvette. Les points d'appui portent des noms de femmes : Béatrice, Gabrielle, Éliane…"
+          "text": "インドシナのフランス軍を率いる**アンリ・ナヴァール**将軍は、**カストール作戦**を発動します。ディエンビエンフーに空陸一体の基地を築き、ベトミンのほうから攻めざるをえない状況をつくる作戦です。**1953年十一月**、落下傘部隊が盆地に降下します。拠点には、ベアトリス、ガブリエル、エリアーヌなど、女性の名前が付けられました。"
         },
         {
           "type": "paragraph",
-          "text": "Le calcul français : l'ennemi ne pourra jamais hisser de l'artillerie lourde dans la jungle. Erreur. Des dizaines de milliers de porteurs acheminent canons et munitions à dos d'homme et de bicyclettes renforcées. Les pièces sont camouflées sur les crêtes qui dominent le camp."
+          "text": "フランス側の読みは、敵がジャングルの奥まで重砲を運び上げられるはずがない、というものです。これは誤算でした。数万人の運搬人が、大砲と弾薬を、人の背と補強した自転車で運びます。砲は、基地を見下ろす尾根にカムフラージュされます。"
         }
       ]
     },
     {
       "id": "course_24_la_bataille_de_dien_bien_phu_1954_p3",
-      "title": "55 jours sous le feu",
+      "title": "55日間の砲火",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le **13 mars 1954**, le déluge commence. La piste d'aviation est détruite dès les premières heures. Le colonel **Charles Piroth**, qui avait promis de faire taire l'artillerie ennemie, se suicide. Le siège dure **55 jours**. Sous la [[モンスーン]], ces pluies torrentielles d'Asie, la cuvette devient un bourbier. Les tranchées viet-minh se rapprochent chaque nuit."
+          "text": "**1954年3月13日**、砲撃の嵐が始まります。滑走路は最初の数時間で破壊されます。敵の砲兵を黙らせると約束していた**シャルル・ピロト**大佐は、自殺します。包囲戦は**55日間**続きます。アジアの豪雨をもたらす[[モンスーン]]のもと、盆地はぬかるみと化し、ベトミンの塹壕は夜ごとに近づいてきます。"
         },
         {
           "type": "funFact",
-          "text": "Le premier jour, les Français tirent **6 000** obus. L'artillerie de Giáp en tire **9 000** : une puissance que l'état-major jugeait impossible pour une armée de guérilla."
+          "text": "初日、フランス軍は**6,000**発の砲弾を撃ちます。ザップの砲兵が撃つのは**9,000**発。ゲリラの軍隊にそんな火力があるはずはないと、司令部が考えていた規模です。"
         },
         {
           "type": "paragraph",
-          "text": "Les États-Unis refusent une intervention aérienne massive. Le **7 mai**, après des combats au corps à corps sur le point d'appui Éliane, le cessez-le-feu est sonné."
+          "text": "アメリカは、大規模な空からの介入を認めようとしません。**5月7日**、エリアーヌ拠点での激しい白兵戦のあと、ついに停戦の合図が鳴り響きます。"
         }
       ]
     },
     {
       "id": "course_24_la_bataille_de_dien_bien_phu_1954_p4",
-      "title": "La fin d'un empire",
+      "title": "帝国の終わり",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Les [[ジュネーヴ協定]] (juillet 1954) actent le départ français. Le Vietnam est divisé au **17e parallèle**. Plus de **2 000** morts côté français, **11 000** prisonniers ; moins de **4 000** reviendront. Quelques mois plus tard, l'Algérie s'embrase. Les États-Unis, eux, s'engagent peu à peu dans ce qui deviendra la [[ベトナム戦争]]."
+          "text": "[[ジュネーヴ協定]]（1954年7月）で、フランスの撤退が定まります。ベトナムは**北緯17度線**で南北に分けられます。フランス側の死者は**2,000**人以上、捕虜は**11,000**人で、帰還できたのは**4,000**人に満たない数です。数か月後には、アルジェリアが燃え上がります。一方アメリカは、のちに[[ベトナム戦争]]となる戦いへ、少しずつ踏み込んでいきます。"
         },
         {
           "type": "timeline",
           "events": [
             {
-              "date": "nov. 1953",
-              "title": "Opération Castor",
-              "detail": "Les Français s'installent dans la cuvette."
+              "date": "1953年十一月",
+              "title": "カストール作戦",
+              "detail": "フランス軍が盆地に陣取って拠点を築きます"
             },
             {
-              "date": "13 mars 1954",
-              "title": "Offensive viet-minh",
-              "detail": "L'artillerie détruit la piste d'aviation."
+              "date": "1954年3月13日",
+              "title": "ベトミンの攻勢",
+              "detail": "ベトミンの砲兵が砲撃で滑走路を破壊します"
             },
             {
-              "date": "7 mai 1954",
-              "title": "Capitulation",
-              "detail": "Fin de 55 jours de siège."
+              "date": "1954年5月7日",
+              "title": "降伏",
+              "detail": "55日間の包囲戦が終わります"
             },
             {
-              "date": "juil. 1954",
-              "title": "Accords de Genève",
-              "detail": "Fin de la guerre d'Indochine, Vietnam divisé."
+              "date": "1954年7月",
+              "title": "ジュネーヴ協定",
+              "detail": "インドシナ戦争が終わり、ベトナムは南北に分断されます"
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "Diên Biên Phu (**13 mars - 7 mai 1954**) montre qu'une logistique populaire et une stratégie patientes peuvent vaincre une armée coloniale moderne."
+          "text": "ディエンビエンフー（**1954年3月13日〜5月7日**）は、民衆に支えられた兵站と辛抱強い戦略があれば、近代的な植民地軍にも勝てることを示しました。"
         }
       ]
     }

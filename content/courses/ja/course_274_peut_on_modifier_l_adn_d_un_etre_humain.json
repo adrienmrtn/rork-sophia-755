@@ -1,123 +1,123 @@
 {
   "id": "course_274_peut_on_modifier_l_adn_d_un_etre_humain",
-  "title": "Peut-on modifier l'ADN d'un être humain ?",
-  "subtitle": "Les ciseaux CRISPR",
+  "title": "人間のDNAを書きかえることはできるのか",
+  "subtitle": "CRISPRというハサミ",
   "subject": "sciences",
-  "subcategory": "Découvertes qui ont changé le monde",
-  "description": "Depuis 2012, des « ciseaux moléculaires » empruntés aux bactéries permettent de couper l'ADN à l'endroit voulu. Premières guérisons, erreurs possibles et bébés sur mesure : jusqu'où ira-t-on ?",
+  "subcategory": "世界を変えた発見",
+  "description": "2012年以来、細菌から借りた「分子のハサミ」で、DNAを狙った場所で切れるようになりました。最初の治癒、起こりうる間違い、オーダーメイドの赤ちゃん。どこまで進むのでしょうか。",
   "author": "kate-waddams",
   "hero": {
     "image": "genetics_lab_pipette_dna_samples_gloved_hands",
     "ratio": "4:3",
-    "hook": "Et si l'on pouvait corriger une lettre de son ADN comme une faute de frappe ?"
+    "hook": "もし自分のDNAの一文字を、打ち間違いのように直せるとしたら？"
   },
   "sections": [
     {
       "id": "course_274_peut_on_modifier_l_adn_d_un_etre_humain_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Cheveux, yeux, couleur de peau, silhouette : nous sommes tous différents. Ces traits physiques tiennent à un héritage : chaque [[遺伝子]] est un segment d'ADN reçu de nos parents biologiques. L'environnement compte aussi, bien sûr : ce que nous mangeons, les gens que nous fréquentons, ce que nous croyons. Mais nos gènes, nous les prenons pour acquis. On aimerait parfois être plus grand ou plus mince, mais on vit avec, sans vraiment y penser."
+          "text": "髪、目、肌の色、体つき。私たちはみんな違います。こうした身体的な特徴は遺伝によるもので、それぞれの[[遺伝子]]は、生物学上の両親から受け継いだDNAの一部です。もちろん環境も影響します。何を食べるか、どんな人と付き合うか、何を信じるか。でも遺伝子は、与えられたものとして受け入れています。もっと背が高ければ、もっとやせていればと思うことはあっても、そのまま付き合っていて、ふだんはあまり考えません。"
         },
         {
           "type": "paragraph",
-          "text": "Que changeriez-vous si vous pouviez retoucher votre ADN ? La question n'est plus théorique. En **2012**, une biochimiste américaine, **Jennifer Doudna**, et une microbiologiste française, **Emmanuelle Charpentier**, mettent au point une façon de programmer une protéine qui coupe l'ADN. Elles peuvent désormais retirer un gène indésirable et donc, en théorie, modifier l'ADN d'un être humain."
+          "text": "もし自分のDNAを手直しできるとしたら、何を変えたいですか。この問いは、もう空想ではありません。**2012年**、アメリカの生化学者**ジェニファー・ダウドナ**と、フランスの微生物学者**エマニュエル・シャルパンティエ**が、DNAを切るタンパク質をプログラムする方法を開発しました。これで望まない遺伝子を取り除けるようになり、理論上は、人間のDNAも書きかえられることになります。"
         }
       ]
     },
     {
       "id": "course_274_peut_on_modifier_l_adn_d_un_etre_humain_p1",
-      "title": "CRISPR, des ciseaux empruntés aux bactéries",
+      "title": "CRISPR、細菌から借りてきたハサミ",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "[[CRISPR]] n'est pas le seul outil capable de modifier l'ADN, mais c'est le plus célèbre. Son principe a d'abord été observé chez des microbes. Pour se défendre, une bactérie repère l'ADN du virus qui l'attaque et le découpe en morceaux. Elle utilise pour cela des segments d'ADN appelés CRISPR et une enzyme nommée **Cas**, qui joue le rôle des ciseaux."
+          "text": "[[CRISPR]]はDNAを書きかえられる唯一の道具ではありませんが、いちばん有名です。その仕組みは、まず微生物で見つかりました。細菌は身を守るために、自分を攻撃するウイルスのDNAを見つけ出し、ばらばらに切り刻みます。そのために使うのが、CRISPRと呼ばれるDNAの断片と、ハサミの役目をする**Cas**という酵素です。"
         },
         {
           "type": "image",
           "asset": "emmanuelle_charpentier_jennifer_doudna_crispr_pioneers",
           "ratio": "16:9",
-          "caption": "Emmanuelle Charpentier et Jennifer Doudna, les deux chercheuses qui ont transformé cette défense bactérienne en outil."
+          "caption": "エマニュエル・シャルパンティエとジェニファー・ダウドナ。細菌の防御の仕組みを道具に変えた2人の研究者。"
         },
         {
           "type": "paragraph",
-          "text": "Les scientifiques ont détourné ce système de défense naturel. Au lieu de viser un virus, ils guident l'enzyme vers un endroit précis de l'ADN d'une personne. Là, elle coupe, et une modification volontaire devient possible. Parfois le gène visé est simplement désactivé. Parfois quelques-unes de ses lettres sont changées. Parfois il est remplacé en entier."
+          "text": "科学者たちは、この仕組みに目をつけ、この自然の防御システムを転用しました。ウイルスを狙う代わりに、酵素を人のDNAの特定の場所へ導きます。そこで酵素が切ることで、意図した改変が可能になります。狙った遺伝子を単に働かなくすることもあれば、数文字だけ変えることもあり、まるごと置きかえることもあります。"
         }
       ]
     },
     {
       "id": "course_274_peut_on_modifier_l_adn_d_un_etre_humain_p2",
-      "title": "Les premières guérisons : drépanocytose et thalassémie",
+      "title": "最初の治癒：鎌状赤血球症とサラセミアの治療例",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Pouvoir éditer l'ADN ouvre la porte au traitement de nombreuses maladies génétiques. Notre ADN s'écrit avec **quatre bases**, A, T, C et G. Leur enchaînement forme notre [[ゲノム]], le plan de construction de notre corps. Une erreur dans ce texte peut suffire à déclencher une maladie, et la corriger peut, en principe, la guérir."
+          "text": "DNAを編集できるようになれば、多くの遺伝性の病気の治療への扉が開きます。DNAは、A、T、C、Gの**4種類の塩基**で書かれています。その並びが[[ゲノム]]、つまり私たちの体の設計図です。この文章に一つ誤りがあるだけで病気が起こることがあり、それを直せば、原理上は治せます。"
         },
         {
           "type": "image",
           "asset": "sickle_cell_red_blood_cells_micrograph",
           "ratio": "3:2",
-          "caption": "Coupe de foie d'un malade de la drépanocytose, vue au microscope : la première maladie traitée par CRISPR."
+          "caption": "鎌状赤血球症の患者の肝臓の切片を顕微鏡で見た像。CRISPRで治療された最初の病気です。"
         },
         {
           "type": "paragraph",
-          "text": "En **2023**, le Royaume-Uni devient le premier pays à autoriser un médicament fondé sur CRISPR. Il vise deux maladies héréditaires du sang, la [[鎌状赤血球症]] et la bêta-thalassémie. Le traitement modifie les cellules qui fabriquent le sang pour qu'elles produisent davantage d'[[胎児ヘモグロビン]], une forme d'hémoglobine normalement produite avant la naissance."
+          "text": "**2023年**、イギリスはCRISPRを使った医薬品を世界で初めて承認した国になりました。対象は、血液の遺伝性疾患である[[鎌状赤血球症]]とベータサラセミアの2つです。この治療では、血液をつくる細胞を改変し、[[胎児ヘモグロビン]]をより多くつくらせます。これは、ふつうは生まれる前につくられるヘモグロビンの一種です。"
         },
         {
           "type": "funFact",
-          "text": "Une faute de frappe peut tuer. Une seule lettre erronée dans l'ADN, un T à la place d'un C par exemple, suffit parfois à provoquer une maladie génétique mortelle. Remettre la bonne lettre pourrait, en théorie, la guérir."
+          "text": "打ち間違いは命を奪うことがあります。DNAのたった一文字の誤り、たとえばCのところにTが入っているだけで、命にかかわる遺伝性の病気が起こることがあります。正しい文字に戻せば、理論上は治せるかもしれません。"
         },
         {
           "type": "paragraph",
-          "text": "Et ce n'est qu'un début. Des essais cliniques testent aujourd'hui CRISPR contre des cancers, des troubles du métabolisme, des maladies auto-immunes, des maladies cardiovasculaires ou encore des dystrophies musculaires. La liste est longue. Les maladies génétiques appartiendront-elles bientôt au passé ?"
+          "text": "しかも、これはまだこれは始まりにすぎません。いまCRISPRは、がん、代謝の異常、自己免疫疾患、心血管疾患、筋ジストロフィーなどに対して、臨床試験で試されています。対象のリストは、さらに長く続きます。遺伝性の病気は、まもなく過去のものになるのでしょうか。"
         }
       ]
     },
     {
       "id": "course_274_peut_on_modifier_l_adn_d_un_etre_humain_p3",
-      "title": "Pourquoi on ne guérira pas tout",
+      "title": "すべてを治せるわけではない理由",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ce n'est pas si simple. D'abord, la façon dont un gène s'exprime ne dépend pas seulement de l'héritage reçu des parents : l'environnement l'influence aussi. Ensuite, une maladie n'est pas forcément le fait d'un seul gène défectueux. Plusieurs gènes peuvent être impliqués, et la réparation devient alors bien plus compliquée."
+          "text": "話はそれほど単純ではありません。まず、遺伝子がどう働くかは、親から受け継いだものだけでは決まらず、環境にも左右されます。次に、病気の原因が一つの欠陥遺伝子だけとは限りません。複数の遺伝子がかかわっている場合は、その修復はずっと難しく、手間もかかり、結果も読みにくくなります。"
         },
         {
           "type": "paragraph",
-          "text": "CRISPR lui-même peut se tromper. Il arrive que les ciseaux coupent au mauvais endroit, ou que les deux extrémités coupées ne se ressoudent pas correctement. Cet ADN altéré peut créer de nouveaux problèmes sans corriger le premier. Malgré tout, la médecine avance à grands pas vers l'élimination de certaines des pires maladies génétiques."
+          "text": "CRISPR自体も間違えることがあります。ハサミが違う場所を切ったり、切った両端がうまくつながらなかったりするのです。そうして変化したDNAが、最初の問題を直さないまま、新たな問題を生むこともあります。それでも医学は、最悪の遺伝性疾患のいくつかをなくす方向へ、大きく前進しています。"
         }
       ]
     },
     {
       "id": "course_274_peut_on_modifier_l_adn_d_un_etre_humain_p4",
-      "title": "Bébés sur mesure : où placer la limite ?",
+      "title": "オーダーメイドの赤ちゃん：線引きはどこに？",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Soigner des maladies invalidantes ou mortelles, tout le monde en voit l'intérêt. Mais où la science doit-elle tracer la limite ? Faut-il s'en servir pour créer l'« humain parfait » ? La question se pose avec une acuité nouvelle depuis que l'on sait couper l'ADN à volonté."
+          "text": "体の自由を奪う病気や命にかかわる病気を治すことに意義があるのは、だれもが認めます。しかし、科学はどこで線を引くべきでしょうか。「完璧な人間」をつくるために使ってよいのでしょうか。DNAを思いのままに切れるようになって、この問いはこれまでになく切実になっています。"
         },
         {
           "type": "image",
           "asset": "ivf_embryo_icsi_microinjection_micrograph",
           "ratio": "16:9",
-          "caption": "Un ovocyte humain maintenu par une pipette pendant une micro-injection en laboratoire."
+          "caption": "研究室での顕微注入のあいだ、ピペットでしっかり固定されているヒトの卵母細胞。"
         },
         {
           "type": "funFact",
-          "text": "L'expression « bébé sur mesure » n'est pas née avec CRISPR. On l'emploie depuis l'arrivée de la [[体外受精]], qui permet de concevoir un embryon en laboratoire avant de l'implanter."
+          "text": "「オーダーメイドの赤ちゃん」という言葉は、CRISPRとともに生まれたものではありません。胚を研究室でつくり、子宮に移植できる[[体外受精]]が登場して以来、使われてきました。"
         },
         {
           "type": "paragraph",
-          "text": "L'[[生殖細胞系列の編集]] modifie l'ADN des cellules reproductrices : spermatozoïdes, ovules ou embryons aux tout premiers stades. La différence avec un traitement classique est de taille : ces modifications se transmettent ensuite de génération en génération. Aujourd'hui, l'édition germinale est interdite dans tous les pays. Mais pour combien de temps ? À quel moment l'édition génétique à visée médicale basculera-t-elle vers des lignées génétiques à la demande ?"
+          "text": "[[生殖細胞系列の編集]]は、精子、卵子、ごく初期の胚といった生殖にかかわる細胞のDNAを書きかえます。ふつうの治療との違いは大きく、この改変はそのあと世代から世代へと受け継がれます。いまのところ、生殖細胞系列の編集はすべての国で禁止されています。でも、いつまでそうでしょうか。医療のための遺伝子編集は、どの時点で、注文に応じた遺伝的な系統づくりへと傾いていってしまうのでしょうか。"
         },
         {
           "type": "takeaway",
-          "text": "Depuis 2012, les ciseaux CRISPR permettent de corriger l'ADN humain, avec de premières guérisons autorisées en 2023, mais les erreurs restent possibles, beaucoup de maladies impliquent plusieurs gènes, et l'édition germinale reste interdite partout."
+          "text": "2012年以来、CRISPRというハサミでヒトのDNAを直せるようになり、2023年には最初の治療が承認されました。しかし誤りは今も起こりえ、多くの病気には複数の遺伝子がかかわり、生殖細胞系列の編集は世界じゅうで禁止されたままです。"
         }
       ]
     }

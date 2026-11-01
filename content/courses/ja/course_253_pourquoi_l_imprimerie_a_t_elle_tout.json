@@ -1,139 +1,139 @@
 {
   "id": "course_253_pourquoi_l_imprimerie_a_t_elle_tout",
-  "title": "Pourquoi l'imprimerie a-t-elle tout changé ?",
-  "subtitle": "Mayence, vers 1450",
+  "title": "なぜ印刷術は世の中のすべてを変えたのか？",
+  "subtitle": "マインツ、1450年ごろ",
   "subject": "histoire",
-  "subcategory": "Époque moderne & XIXe siècle",
-  "description": "Vers 1450, un artisan de Mayence assemble des lettres de métal pour imprimer des pages entières. Cinquante ans plus tard, l'Europe compte 20 millions de livres, et l'information devient bien plus difficile à contrôler.",
+  "subcategory": "近世と19世紀",
+  "description": "1450年ごろ、マインツの職人が金属の文字を組み合わせて、ページ丸ごとを印刷しました。半世紀後、ヨーロッパの本は2千万冊に達し、情報を管理することははるかに難しくなっていきます。",
   "author": "benjamin-campbell",
   "hero": {
     "image": "gutenberg_bible_open_pages_library_of_congress",
     "ratio": "4:3",
-    "hook": "Un livre demandait des mois de travail à un copiste ; une presse en tire soudain des centaines d'exemplaires."
+    "hook": "本は写字生が何か月もかけて作るものでしたが、印刷機はたちまち何百部もの同じ本を刷り上げます。"
   },
   "sections": [
     {
       "id": "course_253_pourquoi_l_imprimerie_a_t_elle_tout_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Longtemps avant l'imprimerie, produire un livre en Europe est un travail lent et coûteux. Chaque ouvrage est copié à la main par un [[写字生]] formé, qui passe des mois, parfois des années, sur un seul manuscrit. Les livres sont donc réservés aux riches, aux institutions religieuses et aux universités. Non que les autres n'en veuillent pas : fabriquer un seul volume demande simplement un temps et une main-d'œuvre énormes."
+          "text": "印刷術が生まれるずっと前、ヨーロッパで本を作るのは手間も費用もかかる仕事でした。本はどれも、訓練を積んだ[[写字生]]が手で書き写し、たった1冊の写本に何か月、ときには何年もかけます。そのため、本を持てるのは富裕層や教会などの宗教施設、大学に限られていました。ほかの人が欲しがらなかったわけではありません。1冊作るだけで、膨大な時間と人手が必要だったのです。"
         },
         {
           "type": "paragraph",
-          "text": "Puis, au milieu du **XVe siècle**, tout commence à changer. À Mayence, en Allemagne, un artisan nommé [[ヨハネス・グーテンベルク]] met au point un nouveau système d'impression qui révolutionne la fabrication des livres. Son invention ne transforme pas seulement le monde du livre : elle change la manière dont l'information peut être copiée et partagée. Pourquoi une presse a-t-elle eu un tel effet ?"
+          "text": "やがて**十五世紀**なかば、すべてが変わり始めます。ドイツのマインツで、[[ヨハネス・グーテンベルク]]という職人が新しい印刷の仕組みを考え出し、本づくりに革命を起こしました。この発明が変えたのは、本の世界だけではありません。情報を複製し、広める方法そのものを変えたのです。なぜ一台の印刷機が、それほど大きな影響を及ぼしたのでしょうか。"
         }
       ]
     },
     {
       "id": "course_253_pourquoi_l_imprimerie_a_t_elle_tout_p1",
-      "title": "Gutenberg n'a pas inventé l'imprimerie",
+      "title": "グーテンベルクは印刷術の発明者ではない",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Gutenberg n'est pas le premier à imprimer. La [[木版印刷]], qui consiste à graver une page entière sur une planche de bois pour l'appliquer ensuite sur le papier, est utilisée en **Chine** et dans toute l'Asie depuis des siècles. Ce qui distingue son système, ce sont ses [[活字]] en métal."
+          "text": "グーテンベルクは、印刷をした最初の人ではありません。[[木版印刷]]は、1ページ分を丸ごと木の板に彫り、それを紙に押しつける方法で、**中国**をはじめアジア各地で何百年も前から使われていました。グーテンベルクの仕組みの特徴は、金属製の[[活字]]にあります。"
         },
         {
           "type": "image",
           "asset": "movable_metal_type_letters_composing_stick",
           "ratio": "3:2",
-          "caption": "Caractères mobiles thaïs dans un composteur (Musée national de Bangkok) : chaque lettre, fondue à l'envers, resservira pour une autre page."
+          "caption": "タイの活字を植字用のステッキに並べたもの（バンコク国立博物館）。一つひとつの文字は鏡文字に鋳造されていて、別のページで何度も使われます。"
         },
         {
           "type": "paragraph",
-          "text": "Au lieu de graver un livre entier dans le bois, les imprimeurs fondent chaque lettre séparément, puis les assemblent en mots et en pages. L'ensemble est encré et pressé sur le papier. Une fois la page tirée, les lettres sont démontées et resservent pour la suivante. Le procédé devient bien plus souple : un imprimeur peut produire des **centaines d'exemplaires** sans graver une nouvelle planche pour chaque page."
+          "text": "木に本を丸ごと彫る代わりに、印刷職人は文字を一つずつ鋳造し、それを組み合わせて単語やページにします。組んだ版にインクを塗り、紙に押しつけます。1ページ刷り終えたら文字をばらして、次のページで使い回します。文字は何度でも再利用できるのです。このやり方はずっと融通がきくようになり、ページごとに新しい板を彫らなくても、**何百部**もの本を作れるようになりました。"
         },
         {
           "type": "funFact",
-          "text": "La Bible de Gutenberg, imprimée vers 1455, n'est pas le premier livre imprimé en Europe, mais c'est le premier grand ouvrage produit avec son système typographique. Sur environ 180 exemplaires tirés, une cinquantaine seulement subsistent aujourd'hui."
+          "text": "1455年ごろに印刷されたグーテンベルク聖書は、ヨーロッパで最初の印刷本ではありませんが、彼の活版印刷の仕組みで作られた最初の大型書籍です。約180部が刷られましたが、現存するのは五十部ほどにすぎません。"
         }
       ]
     },
     {
       "id": "course_253_pourquoi_l_imprimerie_a_t_elle_tout_p2",
-      "title": "Vingt millions de livres en cinquante ans",
+      "title": "わずか半世紀で、本は2千万冊に増えた",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Une fois l'invention lancée, l'impression de livres se développe en Europe à un rythme remarquable. Vers **1500**, cinquante ans à peine après la percée de Gutenberg, on estime que le continent compte déjà **20 millions** de livres. Des milliers de titres différents circulent entre villes, universités, églises et lecteurs particuliers."
+          "text": "発明が世に出ると、ヨーロッパでは本の印刷が目覚ましい勢いで広がります。グーテンベルクの突破口からわずか半世紀ほどの**1500年**ごろには、大陸にはすでに**2千万冊**の本があったと推定されています。何千種類もの本が、都市や大学、教会、個人の読者のあいだを行き交いました。"
         },
         {
           "type": "paragraph",
-          "text": "Le changement ne tient pas seulement à la vitesse. L'imprimerie fait sauter le vieux goulot d'étranglement de la copie. Un texte préparé avec soin peut être reproduit encore et encore, et la même information atteint des milliers de personnes. Pour la première fois de l'histoire, le savoir écrit se répand à travers le continent à une échelle que la copie manuscrite n'aurait jamais pu égaler."
+          "text": "変わったのは速さだけではありません。印刷術は、写本という昔からの難所をこじ開けました。丁寧に準備した原稿を何度でも複製でき、同じ情報が何千人もの人に届きます。これは、一人の写字生が一冊ずつ書き写していた時代にはありえないことでした。歴史上はじめて、書かれた知識が、手書きの写本では到底及ばない規模で大陸じゅうに広まったのです。"
         }
       ]
     },
     {
       "id": "course_253_pourquoi_l_imprimerie_a_t_elle_tout_p3",
-      "title": "Luther et la Réforme en pamphlets",
+      "title": "ルターと宗教改革、パンフレットで広まる",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Au début du **XVIe siècle**, un moine et professeur allemand, [[マルティン・ルター]], conteste l'Église catholique et déclenche ce qui devient la [[宗教改革]]. Aux siècles précédents, la querelle serait sans doute restée un débat théologique local. L'imprimerie change la donne."
+          "text": "**十六世紀**のはじめ、ドイツの修道士で大学教授の[[マルティン・ルター]]がカトリック教会に異議を唱え、のちの[[宗教改革]]のきっかけをつくります。それ以前の時代なら、この論争はおそらく地元の神学上の議論にとどまったでしょう。しかし、印刷術が状況を一変させました。"
         },
         {
           "type": "image",
           "asset": "luther_ninety_five_theses_1517_printed_broadsheet",
           "ratio": "5:4",
-          "caption": "Placard du centenaire de la Réforme (1617) : Luther écrit ses thèses sur la porte de Wittenberg d'une plume géante."
+          "caption": "宗教改革百周年を記念する1枚刷り（1617年）。ルターが巨大な羽根ペンで、ヴィッテンベルクの扉に論題を書きつけています。"
         },
         {
           "type": "paragraph",
-          "text": "Ses arguments sont vite reproduits en pamphlets et diffusés bien au-delà de l'université où il enseigne. Ses écrits sont aussi imprimés en allemand, ce qui les rend accessibles à ceux qui ne lisent pas le latin. L'imprimerie n'a pas créé la Réforme à elle seule, mais elle permet aux idées de Luther de toucher bien plus de monde que n'importe quelle copie manuscrite. La controverse devient beaucoup plus difficile à contenir pour les autorités de l'Église."
+          "text": "ルターの主張はすぐにパンフレットとして複製され、彼が教える大学をはるかに越えて広まりました。著作はドイツ語でも印刷されたため、ラテン語が読めない人にも手が届くようになりました。印刷術だけで宗教改革が起きたわけではありませんが、おかげでルターの考えは、手書きの写本とは比べものにならないほど多くの人に届きました。論争は、教会の権威にとってはるかに抑えにくいものになります。"
         }
       ]
     },
     {
       "id": "course_253_pourquoi_l_imprimerie_a_t_elle_tout_p4",
-      "title": "Du télégraphe à Internet",
+      "title": "電信からインターネットまで",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L'imprimerie reste dans les mémoires comme l'une des premières techniques à avoir brisé le goulot de la copie. Elle n'est pas la dernière. Au **XIXe siècle**, le [[電信]] permet d'envoyer un message à travers d'immenses distances en quelques minutes, au lieu de plusieurs jours. Internet va encore plus loin : l'information se copie et s'envoie en quelques secondes."
+          "text": "印刷術は、写本という難所を最初に打ち破った技術の一つとして記憶されています。しかし、最後ではありません。**十九世紀**には[[電信]]によって、メッセージを遠く離れた場所へ、数日ではなく数分で送れるようになりました。インターネットはさらに先へ進み、情報は数秒のうちにコピーされ、遠くへ送られます。印刷術は、その長い流れの出発点にあたります。"
         },
         {
           "type": "timeline",
           "events": [
             {
-              "date": "vers 1450",
-              "title": "La presse de Gutenberg",
-              "detail": "À Mayence, des caractères mobiles en métal remplacent la copie à la main."
+              "date": "1450年ごろ",
+              "title": "グーテンベルクの印刷機",
+              "detail": "マインツで、金属の活字が、手で書き写す作業に取って代わります。"
             },
             {
-              "date": "vers 1500",
-              "title": "20 millions de livres",
-              "detail": "Cinquante ans après Gutenberg, l'Europe compte des millions de volumes imprimés."
+              "date": "1500年ごろ",
+              "title": "2千万冊の本",
+              "detail": "グーテンベルクから半世紀後、ヨーロッパには何百万冊もの印刷本があります。"
             },
             {
-              "date": "1517",
-              "title": "Les thèses de Luther",
-              "detail": "Les pamphlets imprimés portent la Réforme bien au-delà de son université."
+              "date": "1517年",
+              "title": "ルターの論題",
+              "detail": "印刷されたパンフレットが、宗教改革を大学の外へ大きく広げます。"
             },
             {
-              "date": "XIXe siècle",
-              "title": "Le télégraphe",
-              "detail": "Un message traverse d'immenses distances en quelques minutes."
+              "date": "十九世紀",
+              "title": "電信",
+              "detail": "メッセージが、遠く離れた場所へ数分で届くようになります。"
             },
             {
-              "date": "Fin du XXe siècle",
-              "title": "Internet",
-              "detail": "L'information se copie et s'envoie en quelques secondes."
+              "date": "二十世紀末",
+              "title": "インターネット",
+              "detail": "情報が、数秒のうちにコピーされ、送られるようになります。"
             }
           ]
         },
         {
           "type": "paragraph",
-          "text": "Chaque technique change plus que la vitesse de la communication. Elle bouscule les institutions bâties pour contrôler et distribuer l'information. Églises, gouvernements, journaux et entreprises doivent tous s'adapter à mesure que l'information devient plus facile à reproduire et beaucoup plus difficile à contrôler. L'imprimerie reste un repère utile pour comprendre ce qu'une invention peut faire au monde."
+          "text": "どの技術も、変えるのは通信の速さだけではありません。教会や政府、新聞社、企業など、情報を管理し、配るために築かれてきた制度を揺さぶります。情報が複製しやすくなり、管理はずっと難しくなるにつれて、教会も政府も新聞社も企業も、みな適応を迫られます。印刷術は、一つの発明が世界に何をもたらしうるかを考えるうえで、今も役に立つ目印です。"
         },
         {
           "type": "takeaway",
-          "text": "L'imprimerie a tout changé non parce que Gutenberg a inventé l'impression, mais parce que ses caractères mobiles ont brisé le goulot de la copie : l'information est devenue facile à reproduire et difficile à contrôler, un schéma que le télégraphe puis Internet ont répété."
+          "text": "印刷術がすべてを変えたのは、グーテンベルクが印刷を発明したからではなく、彼の活字が写本という難所を打ち破ったからです。情報は複製しやすく、管理しにくいものになりました。この構図は、電信、そしてインターネットでも繰り返されています。"
         }
       ]
     }

@@ -1,124 +1,124 @@
 {
   "id": "course_150_la_nuit_etoilee_van_gogh",
-  "title": "Pourquoi le ciel de « La Nuit étoilée » tourbillonne-t-il ?",
-  "subtitle": "1889",
+  "title": "『星月夜』の空は、なぜ渦を巻いているのでしょうか",
+  "subtitle": "1889年",
   "subject": "art",
-  "subcategory": "Œuvres iconiques",
-  "description": "En **1889**, depuis l'asile de Saint-Rémy-de-Provence, **Vincent Van Gogh** peint *La Nuit étoilée*. Le ciel tourbillonne : l'art cesse de copier le réel pour dire une émotion.",
+  "subcategory": "象徴的な作品",
+  "description": "**1889年**、**フィンセント・ファン・ゴッホ**はサン＝レミ＝ド＝プロヴァンスの精神病院で*『星月夜』*を描きます。空は渦を巻いています。芸術が現実を写すことをやめ、感情を語りはじめたのです。",
   "hero": {
     "image": "la_nuit_etoilee_van_gogh",
     "ratio": "16:9",
-    "hook": "Depuis une chambre d'asile, Van Gogh peint un ciel qui refuse de rester sage."
+    "hook": "精神病院の一室から、ゴッホは、おとなしくしていようとしない空を描きます。"
   },
   "sections": [
     {
       "id": "course_150_la_nuit_etoilee_van_gogh_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "*La Nuit étoilée* (**1889**) est le tableau le plus célèbre de **Vincent Van Gogh**, peintre né aux [[オランダ]]. Peinte à l'asile de Saint-Rémy-de-Provence, elle marque un tournant : on ne peint plus seulement ce que l'on voit. On peint ce que l'on ressent."
+          "text": "*『星月夜』*（**1889年**）は、**フィンセント・ファン・ゴッホ**のもっとも有名な作品です。ゴッホは[[オランダ]]で生まれた画家です。サン＝レミ＝ド＝プロヴァンスの精神病院で描かれたこの絵は、転機を示しています。目に見えるものだけを描くのではなく、感じたものを描く時代の幕開けです。"
         },
         {
           "type": "paragraph",
-          "text": "Ciel en tourbillon, cyprès comme une flamme noire, village inventé : l'œuvre ouvre la voie à l'art expressif du XXe siècle."
+          "text": "うずまく空、黒い炎のようなイトスギ、想像でつくられた村。この作品は、二十世紀の表現的な芸術への道を開きました。"
         }
       ]
     },
     {
       "id": "course_150_la_nuit_etoilee_van_gogh_p1",
-      "title": "Saint-Rémy : créer depuis l'asile",
+      "title": "サン＝レミ：精神病院で創作する",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En **mai 1889**, après le [[ゴーギャンとのアルルの悲劇]] (la crise qui lui coûte une partie de l'oreille), Van Gogh se fait interner à **Saint-Paul-de-Mausole**, près de Saint-Rémy. Il obtient une pièce pour peindre. La vue nocturne naît d'abord derrière les barreaux de sa chambre."
+          "text": "**1889年5月**、[[ゴーギャンとのアルルの悲劇]]（耳の一部を失うことになった発作）の後、ゴッホは自ら望んでサン＝レミ近郊の**サン＝ポール＝ド＝モゾール**に入院します。絵を描くための部屋も与えられました。夜景は、まず部屋の鉄格子ごしの眺めから生まれます。"
         },
         {
           "type": "image",
           "asset": "van_gogh_saint_paul_asylum_saint_remy_provence",
           "ratio": "4:3",
-          "caption": "L'asile de Saint-Rémy : cadre de contrainte, et de création intense."
+          "caption": "サン＝レミの精神病院：制約の場であり、濃密な創作の場でもあった"
         },
         {
           "type": "paragraph",
-          "text": "La toile mélange observation et invention. On reconnaît les collines des Alpilles et un grand **cyprès**. Mais le village n'est pas une copie exacte. Van Gogh reconstruit le paysage pour servir l'émotion."
+          "text": "この絵は、観察と創作が入りまじっています。アルピーユの丘と大きな**イトスギ**はそれとわかりますが、村は実物そのままの写しではありません。ゴッホは感情を表すために、風景を組み立て直しました。"
         }
       ]
     },
     {
       "id": "course_150_la_nuit_etoilee_van_gogh_p2",
-      "title": "Sculpter le ciel au pinceau",
+      "title": "絵筆で、空を彫刻のように仕上げる",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Techniquement, Van Gogh utilise l'**empâtement** : la peinture est épaisse, presque sculptée. Onze étoiles tournent comme des nébuleuses. La lune orange irradie. Le ciel devient le vrai personnage."
+          "text": "技法の面では、ゴッホは**インパスト**を使います。絵の具を厚く盛り上げ、ほとんど彫刻のようです。十一個の星が星雲のように渦を巻き、オレンジ色の月は光を放ちます。空こそが真の主役になります。"
         },
         {
           "type": "image",
           "asset": "starry_night_cypress_tree_van_gogh_painting",
           "ratio": "4:3",
-          "caption": "Le cyprès relie la terre au ciel comme une flamme sombre."
+          "caption": "イトスギは、暗い炎のように大地と空をつないでいる"
         },
         {
           "type": "funFact",
-          "text": "Les grandes volutes du ciel rappellent la dynamique de la [[神奈川沖浪裏]], estampe japonaise que Van Gogh admirait. Il transforme cette énergie en cosmos."
+          "text": "空の大きなうねりは、ゴッホが称賛した日本の浮世絵、[[神奈川沖浪裏]]の躍動感を思わせます。ゴッホはそのエネルギーを宇宙へと変えました。"
         },
         {
           "type": "paragraph",
-          "text": "Ce geste annonce l'[[内面の表現としての芸術]] : la toile dit un état d'âme, pas un bulletin météo."
+          "text": "この筆づかいは、[[内面の表現としての芸術]]の先がけです。絵が語るのは心のありようで、天気予報ではありません。"
         }
       ]
     },
     {
       "id": "course_150_la_nuit_etoilee_van_gogh_p3",
-      "title": "Le génie que personne n'achetait",
+      "title": "だれにも買われなかった天才",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Van Gogh peint près de **900 tableaux** en dix ans, mais meurt en **juillet 1890** à Auvers-sur-Oise, à **37 ans**, presque inconnu. C'est sa belle-sœur, **Johanna van Gogh-Bonger**, qui sauve l'œuvre : expositions, ventes, publication des lettres à son frère Théo."
+          "text": "ゴッホは十年で約**900点**の絵を描きましたが、**1890年7月**、**37歳**でオーヴェル＝シュル＝オワーズに没し、ほとんど無名のままでした。作品を救ったのは義妹の**ヨハンナ・ファン・ゴッホ＝ボンゲル**です。展覧会を開き、作品を売り、弟テオにあてた手紙を出版しました。"
         },
         {
           "type": "paragraph",
-          "text": "*La Nuit étoilée* change plusieurs fois de mains pour peu d'argent, avant d'entrer au **MoMA** de New York. Le tableau méprisé devient une icône. Les [[フォーヴィスム]], peintres aux couleurs violentes du début du XXe siècle, reconnaîtront en lui un ancêtre."
+          "text": "*『星月夜』*は、わずかな金額で何度か持ち主を変えたのち、ニューヨークの**MoMA**に収まります。軽んじられた絵は、象徴になりました。[[フォーヴィスム]]の画家たち、つまり二十世紀初めに強烈な色彩を使った画家たちは、のちにゴッホを先駆者と認めることになります。"
         }
       ]
     },
     {
       "id": "course_150_la_nuit_etoilee_van_gogh_p4",
-      "title": "Un cyprès vers l'infini",
+      "title": "無限へのびるイトスギ",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le cyprès relie le sol au ciel : trait d'union entre la vie terrestre et l'ailleurs. Van Gogh écrivait que regarder les étoiles lui faisait rêver la mort comme un voyage. Des études modernes suggèrent même que l'étoile brillante près du cyprès pourrait être Vénus, observée à l'aube."
+          "text": "イトスギは地面と空をつなぎます。地上の生と、その向こうの世界との結び目です。ゴッホは、星を見ていると死が旅のように思えてくる、と書いていました。近年の研究には、イトスギの近くの明るい星は、明け方に見た金星かもしれないとするものもあります。"
         },
         {
           "type": "timeline",
           "events": [
             {
-              "date": "1888",
-              "title": "Crise d'Arles",
-              "detail": "La rupture avec Gauguin précède l'internement."
+              "date": "1888年",
+              "title": "アルルの発作",
+              "detail": "ゴーギャンとの決裂が、入院の前にあった。"
             },
             {
-              "date": "1889",
-              "title": "La Nuit étoilée",
-              "detail": "Van Gogh peint le ciel depuis Saint-Rémy."
+              "date": "1889年",
+              "title": "『星月夜』",
+              "detail": "ゴッホがサン＝レミの精神病院で空を描く。"
             },
             {
-              "date": "1890",
-              "title": "Mort à Auvers",
-              "detail": "L'artiste meurt à 37 ans, encore méconnu."
+              "date": "1890年",
+              "title": "オーヴェルでの死",
+              "detail": "37歳で亡くなる。まだ世に知られていなかった。"
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "*La Nuit étoilée* transforme la souffrance en langage visuel. Van Gogh n'y copie pas la nuit : il invente un ciel intérieur, et ouvre la porte à l'art expressif moderne."
+          "text": "*『星月夜』*は、苦しみを視覚の言語へと変えました。ゴッホはここで夜を写したのではなく、内なる空をつくり出し、近代の表現的な芸術への扉を開いたのです。"
         }
       ]
     }

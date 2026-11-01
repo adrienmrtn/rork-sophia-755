@@ -1,106 +1,106 @@
 {
   "id": "course_240_la_chine_et_son_modele_economique",
-  "title": "Quel modèle a fait de la Chine la deuxième économie mondiale ?",
-  "subtitle": "1978-2024 : un miracle sous contrôle",
+  "title": "中国はどのようなモデルで、世界第2位の経済大国になったのか",
+  "subtitle": "1978-2024：統制のもとでの奇跡",
   "subject": "comprendreLeMonde",
-  "subcategory": "Environnement & avenir",
-  "description": "En quarante ans, la Chine est passée d'un pays agricole isolé à la deuxième puissance économique mondiale.",
+  "subcategory": "環境と未来",
+  "description": "わずか四十年のあいだに、中国は孤立した農業国から、世界第2位の経済大国へと変わりました。",
   "hero": {
     "image": "la_chine_et_son_modele_economique",
     "ratio": "16:9",
-    "hook": "Un pays agricole isolé devenu la deuxième puissance mondiale, en une seule génération."
+    "hook": "孤立した農業国が、たった一世代のうちに世界第2位の大国へと駆け上がりました。"
   },
   "sections": [
     {
       "id": "course_240_la_chine_et_son_modele_economique_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En l'espace de quatre décennies, la **Chine** a réalisé une transformation économique sans équivalent dans l'histoire, passant d'un pays agricole isolé à la deuxième puissance économique mondiale. Ce basculement a été rendu possible par l'abandon progressif du modèle strictement communiste, au profit d'un mélange original entre contrôle politique et dynamisme entrepreneurial."
+          "text": "わずか四十年ほどのあいだに、**中国**は、歴史のなかでも例のないほど大きな経済の変貌を遂げました。孤立した農業国だった国が、世界第2位の経済大国になったのです。これを可能にしたのは、厳格な共産主義のモデルから少しずつ離れ、政治による統制と起業家精神の活力をあわせもつ、独自の仕組みに移っていったことでした。"
         },
         {
           "type": "paragraph",
-          "text": "Ce succès spectaculaire arrive aujourd'hui à un tournant : vieillissement de la population, dettes massives et tensions internationales menacent la suite de cette histoire."
+          "text": "この目覚ましい成功は、いま大きな転機を迎えています。人口の高齢化、巨額の借金、国際的な緊張が、この成功物語のこれからに暗い影を落としています。"
         }
       ]
     },
     {
       "id": "course_240_la_chine_et_son_modele_economique_p1",
-      "title": "1978 : le grand tournant",
+      "title": "1978年：大きな転換点",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le point de rupture se situe en 1978, quand **[[鄧小平]]** prend la tête du pays après la mort de Mao Zedong. Convaincu que l'isolement mène à l'impasse, il lance une politique de « réforme et ouverture » : les terres agricoles retrouvent une gestion plus libre, et des **zones économiques spéciales** sont créées sur la côte, dont Shenzhen devient le symbole."
+          "text": "転機は1978年、毛沢東の死後に**[[鄧小平]]**が国の指導者の座についたときに訪れます。孤立は行き詰まりにつながると確信していた鄧小平は、「改革開放」と呼ばれる政策を打ち出しました。農地ではより自由な経営が認められるようになり、沿岸部には**経済特区**がつくられて、なかでも深圳がその象徴になります。"
         },
         {
           "type": "image",
           "asset": "shenzhen_skyline_china_economic_zone",
           "ratio": "16:9",
-          "caption": "Shenzhen, simple village de pêcheurs dans les années 1970, est devenue une mégapole technologique en quelques décennies."
+          "caption": "1970年代にはただの小さな漁村にすぎなかった深圳は、数十年のうちに技術の巨大都市へと生まれ変わりました。"
         },
         {
           "type": "paragraph",
-          "text": "Ces zones attirent les investisseurs étrangers grâce à une main-d'œuvre abondante et peu coûteuse. Entre 1978 et 2018, la Chine maintient une croissance moyenne de 9,5 % par an, un rythme exceptionnel qui permet à plus de 800 millions de personnes de sortir de la pauvreté extrême en quarante ans."
+          "text": "経済特区は、豊富で安い労働力を武器に、外国の投資家を引きつけました。1978年から2018年にかけて、中国は年平均9.5%という高い成長を保ちます。これは並外れたペースで、そのおかげで、四十年のあいだに8億人以上の人々が極度の貧困から抜け出すことができました。"
         },
         {
           "type": "funFact",
-          "text": "À la fin des années 1970, le PIB de la Chine équivalait à celui de l'Espagne. Aujourd'hui, il est plus de quatre fois supérieur à celui du Japon, son voisin."
+          "text": "1970年代の終わり、中国のGDPはスペインと同じくらいでした。今では、隣の国である日本のGDPと比べても、4倍以上の大きさになっています。"
         }
       ]
     },
     {
       "id": "course_240_la_chine_et_son_modele_economique_p2",
-      "title": "Un capitalisme sous contrôle du Parti",
+      "title": "共産党の管理下に置かれた資本主義",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ce miracle économique n'a rien d'un libéralisme sans limite. L'État a gardé le contrôle exclusif de la propriété des terres et des secteurs stratégiques, utilisant la croissance comme source de légitimité pour le **[[中国共産党]]**. C'est ce que l'on appelle le « capitalisme d'État » : une économie de marché dynamique pour les biens de consommation, mais un contrôle strict sur l'énergie, les télécommunications et la finance."
+          "text": "この経済の奇跡は、歯止めのない自由主義とはまるで違います。国家は土地の所有権と戦略的な分野の管理を一手に握り続け、経済成長を**[[中国共産党]]**の統治の正統性を支える源として活用してきました。これが[[中国の「国家資本主義」]]と呼ばれるものです。消費財の分野では活発な市場経済が働いている一方で、エネルギー、通信、金融の分野は国によって厳しく管理されています。"
         },
         {
           "type": "paragraph",
-          "text": "En parallèle, un puissant secteur privé s'est développé, porté par des entreprises technologiques comme Alibaba, Tencent ou Huawei, capables aujourd'hui de rivaliser avec les géants américains de la Silicon Valley."
+          "text": "並行して、力のある民間部門も育ちました。アリババ、テンセント、ファーウェイなどの技術企業がその担い手で、いまやアメリカの[[シリコンバレー]]の巨大企業とも渡り合えるほどです。"
         }
       ]
     },
     {
       "id": "course_240_la_chine_et_son_modele_economique_p3",
-      "title": "Nouvelles routes de la soie et failles internes",
+      "title": "新シルクロードと、国内にあらわれたひび割れ",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L'ascension chinoise s'exprime aussi par les infrastructures. Lancée en 2013 par **[[習近平]]**, la Belt and Road Initiative (les « nouvelles routes de la soie ») est l'un des plus grands projets d'investissement de l'histoire moderne : ports, voies ferrées et pipelines financés par Pékin à travers l'Asie, l'Afrique et l'Europe, pour sécuriser ses approvisionnements et étendre son influence."
+          "text": "中国の台頭は、インフラの面にも表れています。2013年に**[[習近平]]**が打ち出した「一帯一路」構想（「新シルクロード」）は、近現代史で最大級の投資プロジェクトの一つです。港、鉄道、パイプラインを、北京の資金でアジア、アフリカ、ヨーロッパにまたがって整備し、資源の調達を安定させるとともに、影響力を広げるねらいがあります。"
         },
         {
           "type": "funFact",
-          "text": "Le réseau chinois de trains à grande vitesse représente à lui seul plus des deux tiers de la longueur totale des lignes à grande vitesse en service dans le monde entier."
+          "text": "中国の高速鉄道の路線網は、それだけで、世界じゅうで営業している高速鉄道の総延長の3分の2以上を占めるほどの規模で、その巨大さは他の国々を大きく引き離しています。"
         },
         {
           "type": "paragraph",
-          "text": "Cette puissance extérieure cache pourtant des fragilités internes. La croissance chinoise s'est beaucoup appuyée sur l'immobilier et les infrastructures, ce qui a créé une dette considérable. La quasi-faillite du géant immobilier Evergrande en 2021 a révélé les failles d'un marché dopé par la spéculation, alors même que la croissance chinoise ralentit désormais autour de 5 % par an."
+          "text": "ところが、この対外的な強さの裏には、内側の弱さが隠れています。中国の成長は不動産とインフラに大きく頼ってきたため、巨額の債務を生みました。2021年には不動産大手の[[恒大集団]]がほぼ経営破綻し、投機であおられた市場のもろさを明らかにしました。そのうえ、中国の成長率は今では年5%前後まで落ち込んでいます。"
         }
       ]
     },
     {
       "id": "course_240_la_chine_et_son_modele_economique_p4",
-      "title": "Le prix du vieillissement et les tensions avec l'Occident",
+      "title": "高齢化がもたらす代償と、西側諸国とのあいだの緊張",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le défi le plus redoutable pour l'avenir chinois n'est pas économique, mais démographique. La politique de l'enfant unique, imposée entre 1980 et 2015, a ralenti les naissances pendant des décennies. La population chinoise a commencé à diminuer en 2022, réduisant le nombre d'actifs et augmentant les coûts pour les systèmes de santé et de retraite."
+          "text": "中国の将来にとって最も手ごわい課題は、経済ではなく人口の問題です。1980年から2015年まで実施された一人っ子政策は、何十年ものあいだ出生数を押し下げました。中国の人口は2022年に減り始めました。その結果、働く世代の数が減り、医療や年金の制度にかかる負担もしだいに重くなっています。"
         },
         {
           "type": "paragraph",
-          "text": "À cela s'ajoutent des tensions croissantes avec l'Occident, en particulier autour du statut de **[[台湾]]** et de l'accès aux semi-conducteurs, ces puces électroniques indispensables à toute l'industrie moderne. Pour réduire sa dépendance à l'extérieur, Pékin cherche désormais à renforcer son autosuffisance technologique."
+          "text": "さらに、西側諸国との緊張も強まっています。とりわけ争点になっているのが**[[台湾]]**の地位と、[[半導体]]の入手です。半導体は、現代のあらゆる産業に欠かせない電子部品です。外国への依存を減らすため、北京はいま、技術の面での自給自足をいっそう強めようとしています。"
         },
         {
           "type": "takeaway",
-          "text": "En quarante ans, la Chine a sorti 800 millions de personnes de la pauvreté grâce à un modèle mêlant contrôle du Parti et dynamisme entrepreneurial. Elle fait maintenant face à un ralentissement structurel, lié au vieillissement de sa population, à un endettement massif et à des tensions géopolitiques majeures."
+          "text": "四十年で、中国は党の統制と起業家の活力を組み合わせたモデルによって、8億人を貧困から救い出しました。しかしいま中国は、人口の高齢化、巨額の債務、そして深刻な地政学的緊張という重荷を背負い、成長の勢いが構造的に鈍っていくという、新しい局面に直面しています。"
         }
       ]
     }

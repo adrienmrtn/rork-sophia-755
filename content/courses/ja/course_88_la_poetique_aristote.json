@@ -1,104 +1,104 @@
 {
   "id": "course_88_la_poetique_aristote",
-  "title": "« La Poétique » d'Aristote : à quoi sert la tragédie ?",
-  "subtitle": "IVe siècle av. J.-C.",
+  "title": "アリストテレス『詩学』：悲劇は何の役に立つのか",
+  "subtitle": "紀元前4世紀",
   "subject": "litterature",
-  "subcategory": "Grecs & Philosophes antiques",
-  "description": "Aristote analyse la tragédie grecque et invente des mots encore partout : mimèsis, catharsis, péripétie. La Poétique est le premier grand mode d'emploi du récit.",
+  "subcategory": "ギリシア人と古代の哲学者",
+  "description": "アリストテレスは、ギリシア悲劇を分析し、今でもあちこちで使われる言葉を生み出しました。ミメーシス、カタルシス、急転。『詩学』は、物語についての最初の本格的な取扱説明書です。",
   "hero": {
     "image": "la_poetique_aristote",
     "ratio": "16:9",
-    "hook": "Avant les manuels de scénario, il y avait Aristote et la tragédie grecque."
+    "hook": "脚本術の教本ができるずっと前に、アリストテレスとギリシア悲劇がありました。"
   },
   "sections": [
     {
       "id": "course_88_la_poetique_aristote_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Au **IVe siècle avant J.-C.**, **Aristote**, élève de Platon puis penseur autonome, fondateur du **Lycée** à Athènes, écrit la **Poétique**. Ce n'est pas un poème. C'est une analyse de la poésie, surtout de la **tragédie**, genre théâtral grec qui met en scène la chute d'un héros. Comment une histoire fait-elle peur et pitié ? Pourquoi cela nous fait-il du bien ?"
+          "text": "**紀元前4世紀**に、プラトンの弟子から独自の思想家となり、アテナイで**リュケイオン**を創設した**アリストテレス**が、『**詩学**』を書きました。これは詩ではありません。詩、とりわけ**悲劇**の分析です。悲劇とは、一人の英雄の没落を舞台にかけるギリシアの演劇のジャンルです。物語はどのようにして恐れと憐れみを呼び起こすのでしょうか。そして、なぜそれが心のためになるのでしょうか。"
         },
         {
           "type": "paragraph",
-          "text": "Le texte qui nous est parvenu est partiel, parfois sec, rédigé sous forme de notes. Pourtant il a façonné le théâtre, le roman, puis le cinéma. Beaucoup de règles de « bon récit » y trouvent une ancêtre grecque. Aristote observe ce qui fonctionne sur scène, puis en tire des principes."
+          "text": "現代まで伝わったテキストは、不完全で、ときにそっけなく、メモの形で書かれています。それでもこの本は、演劇、小説、そして映画を形づくりました。「よい物語」の規則の多くが、ここにギリシアの祖先を見いだします。アリストテレスは、舞台でうまくいっているものを観察し、そこから原則を引き出しました。"
         }
       ]
     },
     {
       "id": "course_88_la_poetique_aristote_p1",
-      "title": "Imiter n'est pas tricher",
+      "title": "まねることは、ごまかしではない",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Platon se méfiait des images, qu'il comparait à des ombres trompeuses. Aristote réhabilite la [[アリストテレスのミメーシス]]. Pour lui, l'art imite la nature de façon sélective. Il montre les choses non telles qu'elles sont, mais telles qu'elles pourraient être. Représenter des actions humaines, ce n'est pas mentir. C'est apprendre. L'enfant imite pour comprendre. L'art aussi."
+          "text": "プラトンは、イメージを疑い、人を欺く影にたとえました。アリストテレスは、[[アリストテレスのミメーシス]]の名誉を回復します。彼にとって、芸術は自然を選びながらまねるものです。ものごとをあるがままではなく、あり得たかもしれない姿で示します。人間の行為を表現することは、嘘をつくことではありません。学ぶことです。子どもは理解するためにまねをします。芸術も同じです。"
         },
         {
           "type": "image",
           "asset": "aristotle_portrait_bust_sculpture",
           "ratio": "1:1",
-          "caption": "Aristote : classer le monde, y compris les histoires qu'on se raconte."
+          "caption": "アリストテレス：世界を分類する、人々が語る物語も含めて。"
         },
         {
           "type": "paragraph",
-          "text": "La tragédie imite des actions graves, complètes, d'une certaine ampleur. Le critère n'est pas le documentaire exact. C'est le **vraisemblable** et le **nécessaire** : ce qui devait arriver dans cette histoire, selon la logique interne du récit. Aristote distingue aussi épopée, récit long en vers, et tragédie, action théâtrale en un temps limité."
+          "text": "悲劇は、重大で完結した、ある程度の規模を持つ行為をまねます。基準は、正確な記録ではありません。**ありそうなこと**と**必然的なこと**です。つまり、この物語の内部の論理からして、起こるはずだったことです。アリストテレスはまた、叙事詩（韻文による長い語り）と悲劇（限られた時間で演じられる劇行為）を区別しています。"
         }
       ]
     },
     {
       "id": "course_88_la_poetique_aristote_p2",
-      "title": "La catharsis : peur, pitié, soulagement",
+      "title": "カタルシス：恐れ、憐れみ、そして解放",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Aristote dit que la tragédie accomplit la [[カタルシス]] des émotions de pitié et de crainte. Le sens exact du mot est débattu depuis vingt-cinq siècles : purification, évacuation, clarification ? L'idée centrale reste : le spectacle violent n'excite pas seulement. Il **ordonne** nos affects. On pleure et on tremble en sécurité, dans le théâtre."
+          "text": "アリストテレスは、悲劇が憐れみと恐れの感情の[[カタルシス]]を成し遂げると言います。この言葉の正確な意味は、二十五世紀にわたって議論されてきました。浄化なのか、排出なのか、明確化なのか。それでも中心の考えは変わりません。暴力的な見せ物は、ただ興奮させるだけではない。私たちの感情を**整える**のです。人は劇場の中で、安全に泣き、震えます。"
         },
         {
           "type": "funFact",
-          "text": "Au Moyen Âge et à la Renaissance, le texte passe par des traductions arabes et latines, dont celles liées à [[アヴェロエス]], philosophe andalou du XIIe siècle. Aristote revient en Europe par des détours savants, pas en ligne directe."
+          "text": "中世とルネサンスのあいだ、このテキストはアラビア語やラテン語の翻訳を経て伝わりました。その中には、十二世紀のアンダルスの哲学者[[アヴェロエス]]にかかわるものがあります。アリストテレスは、学問的な回り道を経てヨーロッパに戻ってきたのであり、まっすぐ戻ったわけではありません。"
         },
         {
           "type": "image",
           "asset": "ancient_greek_theater_epidaurus",
           "ratio": "16:9",
-          "caption": "Le théâtre d'Épidaure : l'espace où la cité grecque regardait ses mythes."
+          "caption": "エピダウロスの劇場：ギリシアの都市が自分たちの神話を見つめた場所。"
         }
       ]
     },
     {
       "id": "course_88_la_poetique_aristote_p3",
-      "title": "Intrigue, retournement, reconnaissance",
+      "title": "物語の筋、状況の急転、そして認知",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Pour Aristote, le cœur du drame est le *muthos*, l'intrigue, l'enchaînement des actions. Il valorise la **péripétie**, le retournement soudain de situation, et la **reconnaissance**, l'*anagnorisis*, moment où un personnage passe de l'ignorance à la connaissance. **Œdipe Roi** de Sophocle est son exemple star : le héros découvre trop tard qui il est."
+          "text": "アリストテレスにとって、劇の核心は*ミュートス*、つまり筋、行為のつながりです。彼が重んじるのは、状況の突然の逆転である**急転**と、登場人物が無知から知へ移る瞬間である**認知**（*アナグノリシス*）です。ソポクレスの**『オイディプス王』**は、その代表的な例です。英雄は、自分が何者かを、遅すぎるときに知ります。"
         },
         {
           "type": "paragraph",
-          "text": "Il préfère une **erreur**, l'*hamartia*, faute involontaire ou jugement faussé, à une méchanceté pure. Le héros n'est ni parfaitement bon ni monstrueux. Sa chute doit sembler logique, donc terrible. C'est ce mélange qui provoque pitié : on reconnaît une faiblesse humaine, pas seulement un méchant caricatural."
+          "text": "アリストテレスが好むのは、純粋な悪意よりも、**過ち**（*ハマルティア*）、つまり故意でない誤りや誤った判断です。英雄は、完全に善人でも、怪物でもありません。その没落は論理的に見えなければならず、だからこそ恐ろしいのです。この混じり合いが憐れみを呼び起こします。人は、戯画的な悪人ではなく、人間の弱さを見いだすのです。"
         }
       ]
     },
     {
       "id": "course_88_la_poetique_aristote_p4",
-      "title": "Un mode d'emploi qui a survécu",
+      "title": "時代を超えて生き残った取扱説明書",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Classicismes français du XVIIe siècle, dramaturgies modernes, pitchs Hollywood : on retrouve partout l'unité d'action, le nœud, le dénouement. On peut contester Aristote. On le cite encore. Le [[Théâtre d'Épidaure]], théâtre grec remarquable pour son acoustique, n'est plus le seul lieu du récit, mais ses questions restent."
+          "text": "十七世紀フランスの古典主義、近代の劇作術、ハリウッドの企画書。行為の一致、結び目、解決は、どこにでも見つかります。アリストテレスに異を唱えることはできます。それでも、今も引用されています。音響のよさで知られるギリシアの劇場[[エピダウロス劇場]]は、もはや物語の唯一の場ではありませんが、その問いは残っています。"
         },
         {
           "type": "paragraph",
-          "text": "Aristote rappelle aussi que la poésie dit le **général**, tandis que l'histoire dit le **particulier**. Une intrigue bien faite montre ce qui aurait pu arriver selon le vraisemblable. C'est pourquoi Œdipe reste un modèle : chaque révélation semble à la fois surprenante et inévitable. Les auteurs de théâtre classiques, puis les scénaristes modernes, ont repris cette exigence de nécessité narrative."
+          "text": "アリストテレスは、詩は**一般的なこと**を語り、歴史は**個別のこと**を語る、とも述べています。よくできた筋は、ありそうなことに従って、起こり得たことを示します。だからオイディプスは今も手本なのです。どの暴露も、驚きであると同時に避けがたいものに感じられます。古典劇の作者も、のちの脚本家も、この物語の必然性という要求を受け継いできました。"
         },
         {
           "type": "takeaway",
-          "text": "La **Poétique** d'Aristote donne à l'Occident son premier grand vocabulaire du récit : imiter, émouvoir, retourner la situation. Avant d'écrire une histoire, beaucoup la pensent encore avec lui."
+          "text": "アリストテレスの**『詩学』**は、西洋に、物語についての最初の大きな語彙を与えました。まねる、感動させる、状況を逆転させる。物語を書く前に、多くの人は今もアリストテレスの助けを借りて考えます。"
         }
       ]
     }

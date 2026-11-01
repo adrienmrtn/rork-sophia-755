@@ -1,152 +1,152 @@
 {
   "id": "course_161_la_naissance_des_dieux_grecs_cronos_zeus",
-  "title": "Du Chaos à Zeus : comment sont nés les dieux grecs ?",
-  "subtitle": "Cronos, Zeus, l'Olympe",
+  "title": "カオスからゼウスへ：ギリシアの神々はどう生まれたのか",
+  "subtitle": "クロノス、ゼウス、オリュンポス",
   "subject": "mythologie",
-  "subcategory": "Grèce : les dieux",
-  "description": "Avant Zeus, son père Cronos dévorait ses enfants. Voici comment le vide a donné naissance aux dieux de l'Olympe.",
+  "subcategory": "ギリシア：神々",
+  "description": "ゼウスの前には、父クロノスが自分の子どもたちを呑み込んでいました。何もない虚空から、どのようにオリュンポスの神々が生まれたのかを見ていきましょう。",
   "hero": {
     "image": "la_naissance_des_dieux_grecs",
     "ratio": "16:9",
-    "hook": "Avant l'Olympe, le monde naît dans le vide, la violence et les coups d'État familiaux."
+    "hook": "オリュンポス以前、世界は虚空と暴力、そして一族内のクーデターの中から生まれます。"
   },
   "sections": [
     {
       "id": "course_161_la_naissance_des_dieux_grecs_cronos_zeus_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Avant que les dieux de l'**Olympe** ne règnent, la mythologie grecque imagine un vide originel : le **Chaos**. Ce n'est pas un désordre bruyant. C'est une béance, un abîme d'où surgit la vie."
+          "text": "**オリュンポス**の神々が君臨する前、ギリシア神話は、原初の虚空である**カオス**を思い描きました。それは騒々しい混乱ではありません。ぽっかり開いた裂け目であり、そこから生命が現れる深淵です。"
         },
         {
           "type": "paragraph",
-          "text": "La naissance des dieux n'est pas douce. C'est une suite de crises et de prises de pouvoir. Le poète **Hésiode**, au VIIIe siècle avant notre ère, la raconte dans la [[『神統記』（ヘシオドス）]]. Voici comment le monde passe du vide à la cour de **Zeus**."
+          "text": "神々の誕生は穏やかではありません。危機と権力の奪い合いが続きます。詩人**ヘシオドス**は、紀元前8世紀に、それを[[『神統記』（ヘシオドス）]]で語りました。ここでは、世界が虚空から**ゼウス**の宮廷に至るまでの流れを見ていきます。"
         }
       ]
     },
     {
       "id": "course_161_la_naissance_des_dieux_grecs_cronos_zeus_p1",
-      "title": "Du Chaos naissent la Terre et le Ciel",
+      "title": "カオスから大地と天空が生まれる",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Du **Chaos** naissent d'abord des forces sans visage humain. **Gaïa**, la Terre, offre un sol solide. Le **Tartare** est une prison profonde sous le monde. **Éros**, le désir, permet aux êtres de s'unir."
+          "text": "**カオス**から、まず人間の顔をもたない力が生まれます。大地の女神**ガイア**は、固い地面を与えます。**タルタロス**は、世界の底にある深い牢獄です。欲望の神**エロス**は、生き物どうしが結ばれるようにします。"
         },
         {
           "type": "image",
           "asset": "gaia_primordial_goddess_greek_mythology",
           "ratio": "4:3",
-          "caption": "Gaïa, la Terre, première puissance du monde grec."
+          "caption": "大地の女神ガイア：ギリシア世界で最初の力"
         },
         {
           "type": "paragraph",
-          "text": "Gaïa engendre seule **Ouranos**, le Ciel étoilé. De leur couple naissent les **Titans**, dieux de la force brute, et des monstres : les **Cyclopes** et les **Hécatonchires**, géants aux cent bras."
+          "text": "ガイアは、ひとりで星をちりばめた天、**ウラノス**を生みます。二人の間には、あふれる力の神である**ティタン**たちと、怪物が生まれました。**キュクロプス**と、百本の腕をもつ巨人**ヘカトンケイル**です。"
         },
         {
           "type": "funFact",
-          "text": "Pour les Grecs, le monde ne naît pas du néant. Il naît d'une séparation : l'espace entre Ciel et Terre laisse enfin place à la vie."
+          "text": "ギリシア人にとって、世界は無から生まれたのではありません。分離から生まれます。天と地のあいだに空間ができて、ようやく命の入る余地ができたのです。"
         },
         {
           "type": "paragraph",
-          "text": "Ouranos hait ses enfants. Il les enferme dans le ventre de Gaïa. La Terre étouffe. La première révolution du cosmos se prépare."
+          "text": "ウラノスは、自分の子どもたちを憎みます。子どもたちをガイアの腹の中に閉じ込めました。大地は息苦しくなります。宇宙で最初の革命が、準備されていきます。"
         }
       ]
     },
     {
       "id": "course_161_la_naissance_des_dieux_grecs_cronos_zeus_p2",
-      "title": "Cronos renverse son père",
+      "title": "クロノスが父を倒す",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Gaïa forge une faucille d'[[アダマント]], un métal légendaire d'une dureté absolue. Seul le plus jeune des Titans, le rusé **Cronos**, accepte d'agir. Caché dans le flanc de sa mère, il castre Ouranos et sépare pour toujours le Ciel de la Terre."
+          "text": "ガイアは、[[アダマント]]の鎌を作ります。絶対的な硬さをもつ、伝説の金属です。実行を引き受けたのは、ティタンの末っ子で、ずる賢い**クロノス**だけでした。母の脇腹に隠れていたクロノスは、ウラノスを去勢し、天と地を永遠に引き離します。"
         },
         {
           "type": "paragraph",
-          "text": "Cronos devient roi. Mais le sang d'Ouranos fertilise encore le monde : naissent les **Érinyes**, déesses de la vengeance familiale, et **Aphrodite**, déesse de l'amour, sortie de l'écume de mer."
+          "text": "クロノスは王になります。けれども、ウラノスの血は、なおも世界を実らせます。そこから、一族の復讐の女神**エリニュス**と、海の泡から生まれた愛の女神**アフロディーテ**が生まれました。"
         },
         {
           "type": "funFact",
-          "text": "Le nom d'**Aphrodite** vient du grec « aphros », « écume ». Sa naissance rappelle le crime qui a ouvert le règne de Cronos."
+          "text": "**アフロディーテ**という名は、ギリシア語の「アフロス」（泡）に由来します。その誕生は、クロノスの治世の幕開けとなった罪を思い出させます。"
         },
         {
           "type": "paragraph",
-          "text": "Une prophétie menace Cronos : un de ses fils le détrônera. Pour l'éviter, il dévore ses enfants dès leur naissance, **Hestia**, **Déméter**, **Héra**, **Hadès**, **Poséidon**. Les dieux grecs ont des peurs très humaines : c'est l'[[ギリシアの神々の擬人化]]."
+          "text": "クロノスは、息子の一人に王座を奪われるという予言におびえます。それを避けるため、生まれてくる子どもたちを次々に呑み込みました。**ヘスティア**、**デメテル**、**ヘラ**、**ハデス**、**ポセイドン**です。ギリシアの神々は、とても人間らしい恐れを抱きます。これが[[ギリシアの神々の擬人化]]です。"
         }
       ]
     },
     {
       "id": "course_161_la_naissance_des_dieux_grecs_cronos_zeus_p3",
-      "title": "Zeus libère ses frères et sœurs",
+      "title": "ゼウスがきょうだいを救い出す",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Rhéa**, épouse de Cronos, refuse de perdre son dernier enfant. Elle lui tend une pierre emmaillotée. Le vrai bébé, **Zeus**, grandit en secret dans la grotte de [[ディクテ山]], en Crète. Les [[クーレーテス]], guerriers sacrés, couvrent ses pleurs de leurs cris. La chèvre **Amalthée** le nourrit."
+          "text": "クロノスの妻**レア**は、最後の子まで失うことを拒みます。夫には産着にくるんだ石を渡しました。本物の赤ん坊**ゼウス**は、クレタ島の[[ディクテ山]]の洞窟でひそかに育ちます。聖なる戦士の[[クーレーテス]]が、叫び声で泣き声をかき消しました。山羊の**アマルテイア**が乳を与えます。"
         },
         {
           "type": "paragraph",
-          "text": "Adulte, Zeus force Cronos à régurgiter sa fratrie. Les enfants ressortent prêts au combat. Commence la **Titanomachie**, une guerre de dix ans entre Titans et futurs Olympiens. Les Cyclopes offrent à Zeus l'arme décisive : la **foudre**."
+          "text": "おとなになったゼウスは、クロノスに、呑み込んだきょうだいを吐き出させます。子どもたちは、戦う準備を整えて出てきました。**ティタノマキア**、つまりティタンと、のちのオリュンポスの神々との十年にわたる戦いが始まります。キュクロプスは、ゼウスに決め手となる武器、**雷霆**を贈りました。"
         },
         {
           "type": "timeline",
           "events": [
             {
               "date": "1",
-              "title": "Chaos",
-              "detail": "Le vide originel ouvre l'espace du monde."
+              "title": "カオス",
+              "detail": "原初の虚空が、世界の空間を開きます。"
             },
             {
               "date": "2",
-              "title": "Gaïa et Ouranos",
-              "detail": "La Terre et le Ciel engendrent les Titans."
+              "title": "ガイアとウラノス",
+              "detail": "大地と天が、ティタンたちを生みます。"
             },
             {
               "date": "3",
-              "title": "Cronos roi",
-              "detail": "Il castre son père, puis dévore ses enfants."
+              "title": "王クロノス",
+              "detail": "父を去勢し、やがて自分の子どもたちを呑み込みます。"
             },
             {
               "date": "4",
-              "title": "Victoire de Zeus",
-              "detail": "La foudre décide la Titanomachie."
+              "title": "ゼウスの勝利",
+              "detail": "雷霆が、ティタノマキアの勝敗を決めます。"
             },
             {
               "date": "5",
-              "title": "L'Olympe",
-              "detail": "Zeus, Poséidon et Hadès se partagent le monde."
+              "title": "オリュンポス",
+              "detail": "ゼウス、ポセイドン、ハデスが世界を分け合います。"
             }
           ]
         },
         {
           "type": "paragraph",
-          "text": "Les Titans sont jetés dans le Tartare. **Zeus** prend le Ciel, **Poséidon** les mers, **Hadès** le monde des morts. L'**Olympe** devient une cour divine, plus ordonnée que la force des Titans."
+          "text": "ティタンたちは、タルタロスに投げ込まれます。**ゼウス**は天を、**ポセイドン**は海を、**ハデス**は死者の世界を受け持ちました。**オリュンポス**は神々の宮廷となり、ティタンの力による支配よりも秩序立ったものになります。"
         }
       ]
     },
     {
       "id": "course_161_la_naissance_des_dieux_grecs_cronos_zeus_p4",
-      "title": "Un ordre fragile, très humain",
+      "title": "もろく、とても人間的な秩序",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Même vainqueur, Zeus reste inquiet. Il épouse **Métis**, la Sagesse, puis l'avale par peur d'un fils plus fort. De cet acte naît **Athéna**, sortie tout armée du crâne de son père : la stratégie devient le pilier du pouvoir."
+          "text": "勝者となってからも、ゼウスは不安を抱えています。知恵の女神**メティス**と結婚しますが、自分より強い息子が生まれることを恐れて、彼女を呑み込んでしまいます。この行いから、父の頭から完全武装で現れた**アテナ**が生まれました。策略が、権力の柱になったのです。"
         },
         {
           "type": "funFact",
-          "text": "Le mot **panique** vient du dieu **Pan**. Lors d'une guerre contre les Géants, son cri aurait semé une terreur soudaine et irrationnelle."
+          "text": "**パニック**という言葉は、神**パーン**に由来します。巨人族との戦いのとき、パーンの叫び声が、突然の理屈に合わない恐怖をまき散らしたといわれます。"
         },
         {
           "type": "paragraph",
-          "text": "Ces mythes ne font pas des dieux des modèles de vertu. Ils en font des miroirs : jalousie, peur de la succession, soif de règne. Du Chaos à l'Olympe, les Grecs racontent comment la civilisation tente de maîtriser la violence brute."
+          "text": "こうした神話は、神々を美徳の手本にしているわけではありません。むしろ神々は、人間を映す鏡です。嫉妬、後継ぎへの恐れ、支配への渇望。カオスからオリュンポスまで、ギリシア人は、文明が剥き出しの暴力を抑えようとする姿を語っています。"
         },
         {
           "type": "takeaway",
-          "text": "La mythologie grecque passe du **Chaos** à l'ordre de l'**Olympe** par des coups de force successifs. Les dieux partagent nos passions, mais pas notre mortalité."
+          "text": "ギリシア神話は、力ずくの出来事を重ねながら、**カオス**から**オリュンポス**の秩序へと移っていきます。神々は私たちと同じ情熱をもちますが、死ぬ運命だけはもっていません。"
         }
       ]
     }

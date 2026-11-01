@@ -1,129 +1,129 @@
 {
   "id": "course_147_l_architecture_gothique_les_cathedrales",
-  "title": "Comment les cathédrales gothiques font-elles entrer la lumière ?",
-  "subtitle": "XIIe-XVIe siècle",
+  "title": "ゴシック様式の大聖堂は、どうやって光を取り込むのか？",
+  "subtitle": "十二〜十六世紀",
   "subject": "art",
-  "subcategory": "Cinéma, photo & architecture",
-  "description": "Du XIIe au XVIe siècle, les cathédrales gothiques font monter la pierre vers le ciel. Arc brisé, ogives, vitraux : une révolution technique au service de la lumière.",
+  "subcategory": "映画・写真・建築",
+  "description": "十二世紀から十六世紀にかけて、ゴシックの大聖堂は石を空へと伸ばしました。尖頭アーチ、リブ・ヴォールト、ステンドグラス。光のために生まれた技術革命です。",
   "hero": {
     "image": "l_architecture_gothique_les_cathedrales",
     "ratio": "16:9",
-    "hook": "Comment le Moyen Âge a fait voler la pierre pour laisser entrer Dieu en lumière."
+    "hook": "中世の人々は石を宙に舞わせ、光となった神を大聖堂に迎え入れました。"
   },
   "sections": [
     {
       "id": "course_147_l_architecture_gothique_les_cathedrales_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Entre le XIIe et le XVIe siècle, l'Europe se couvre de **cathédrales gothiques**. Ce ne sont pas seulement des églises. Ce sont des défis d'ingénierie : des vaisseaux de pierre qui semblent défier la pesanteur pour laisser entrer la lumière."
+          "text": "十二世紀から十六世紀にかけて、ヨーロッパは**ゴシックの大聖堂**で覆われていきます。ただの教会ではありません。工学への挑戦でした。重力に逆らうように見える石の船が、光を取り込むために建てられたのです。"
         },
         {
           "type": "paragraph",
-          "text": "Le mot « gothique » naîtra plus tard comme une insulte, « art des Goths ». Pourtant, ce style marie foi, prospérité urbaine et audace technique. Il domine encore nos centres-villes."
+          "text": "「ゴシック」という言葉は、のちに「ゴート人の芸術」という侮辱の言葉として生まれました。それでも、この様式は信仰、都市の繁栄、技術の大胆さを結びつけました。今も、街の中心部で大きな存在感を放っています。"
         }
       ]
     },
     {
       "id": "course_147_l_architecture_gothique_les_cathedrales_p1",
-      "title": "Saint-Denis : la pierre apprend à s'alléger",
+      "title": "サン＝ドニ：石が軽くなることを学んだ場所",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le gothique naît en **Île-de-France** vers **1140**. Le choc fondateur est le chœur de la [[サン＝ドニ大聖堂]], porté par l'[[修道院長シュジェール]]. Face aux églises romanes sombres aux murs épais, Suger veut un espace plus uni, plus clair, plus haut."
+          "text": "ゴシックは**1140年**ごろ、**イル＝ド＝フランス**で生まれます。出発点となったのは、[[修道院長シュジェール]]のもとで進められた[[サン＝ドニ大聖堂]]の内陣です。暗くて壁の厚いロマネスクの教会に対して、シュジェールは、もっと一体感があり、明るく、高い空間を望みました。"
         },
         {
           "type": "image",
           "asset": "saint_denis_basilica_gothic_abbot_suger",
           "ratio": "4:3",
-          "caption": "Saint-Denis : le laboratoire où le gothique apprend à monter."
+          "caption": "サン＝ドニ：ゴシックが高さを学んだ実験室となった場所"
         },
         {
           "type": "paragraph",
-          "text": "Trois inventions travaillent ensemble : l'**arc brisé**, plus haut et plus étroit ; la **voûte d'ogives**, qui concentre le poids sur des points précis ; et l'[[フライング・バットレス]], un arc extérieur qui contrebalance les poussées. Ensemble, [[フライング・バットレスとリブ・ヴォールト]] libèrent les murs : on peut y ouvrir de vastes fenêtres."
+          "text": "三つの発明が組み合わさります。より高く細い**尖頭アーチ**、重みを特定の点に集める**リブ・ヴォールト**、そして外側から押す力を支える弧、[[フライング・バットレス]]です。[[フライング・バットレスとリブ・ヴォールト]]がそろうと壁が重みから解放され、大きな窓を開けられるようになります。"
         }
       ]
     },
     {
       "id": "course_147_l_architecture_gothique_les_cathedrales_p2",
-      "title": "La lumière comme langage divin",
+      "title": "神の言葉としての光、その役割",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Pour Suger, la lumière n'est pas un détail décoratif. Selon la [[光の神学（シュジェール）]], les rayons colorés aident l'âme à s'élever vers Dieu. Les murs deviennent des **vitraux**. Dans une société où beaucoup ne savent pas lire, ces images racontent la Bible et la vie de la cité."
+          "text": "シュジェールにとって、光は単なる装飾ではありませんでした。[[光の神学（シュジェール）]]によれば、色のついた光が魂を神へと高めてくれます。壁は**ステンドグラス**になります。多くの人が字を読めない社会で、その絵は聖書や都市の暮らしを語りました。"
         },
         {
           "type": "funFact",
-          "text": "À **Chartres**, certains vitraux du XIIIe siècle ont gardé un bleu si intense qu'on parle encore du « bleu de Chartres » : une couleur devenue signature."
+          "text": "**シャルトル**では、十三世紀のステンドグラスの中に、今も強い青を保っているものがあり、「シャルトル・ブルー」と呼ばれるほどです。この色は、大聖堂のトレードマークになりました。"
         },
         {
           "type": "paragraph",
-          "text": "La cathédrale n'est plus une forteresse de pierre. Elle devient une cage de lumière."
+          "text": "大聖堂はもう、石でできた要塞ではありません。光に包まれた檻のような空間になります。"
         }
       ]
     },
     {
       "id": "course_147_l_architecture_gothique_les_cathedrales_p3",
-      "title": "Un chantier qui dure des siècles",
+      "title": "何世紀も終わらない大工事の現場",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Construire une cathédrale prend souvent plus de **deux siècles**. Guerres, épidémies, argent qui manque : le chantier avance par à-coups. **Notre-Dame de Paris** commence en **1163** et trouve sa forme vers **1345**, après environ 180 ans."
+          "text": "大聖堂を建てるには、たいてい**2世紀**以上かかります。戦争、疫病、足りなくなる資金。工事は断続的に進みます。**パリのノートルダム大聖堂**は**1163年**に着工し、**1345年**ごろに形が整いました。約180年かかった計算です。"
         },
         {
           "type": "image",
           "asset": "notre_dame_de_paris_cathedral_facade",
           "ratio": "4:3",
-          "caption": "Notre-Dame de Paris : un chantier médiéval devenu symbole national."
+          "caption": "パリのノートルダム大聖堂：国民的なシンボルとなった中世の工事現場"
         },
         {
           "type": "paragraph",
-          "text": "Toute la ville travaille : tailleurs de pierre, charpentiers, verriers. Extraire la pierre, transporter le bois, nourrir les équipes : la cathédrale est aussi une machine économique."
+          "text": "街全体が働きます。石工、大工、ステンドグラス職人。石を切り出し、木材を運び、作業員たちの食事をまかなう。大聖堂は、経済を動かす巨大な機械でもあります。"
         }
       ]
     },
     {
       "id": "course_147_l_architecture_gothique_les_cathedrales_p4",
-      "title": "Du gothique flamboyant au néo-gothique",
+      "title": "フランボワイヤン式からネオ・ゴシックへ",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le style évolue : gothique classique (Chartres, Amiens), puis rayonnant (Sainte-Chapelle), puis flamboyant, plus décoratif. Au XIXe siècle, l'Europe le redécouvre avec le **néo-gothique**. Des chantiers inachevés reprennent, comme **Cologne**, terminée en **1880**."
+          "text": "様式は移り変わります。古典ゴシック（シャルトル、アミアン）、次にレイヨナン式（サント＝シャペル）、そしてより装飾的なフランボワイヤン式。十九世紀になると、ヨーロッパはこれを**ネオ・ゴシック**として再発見します。未完成だった工事も再開され、**ケルン**の大聖堂は**1880年**に完成します。"
         },
         {
           "type": "timeline",
           "events": [
             {
-              "date": "1140",
-              "title": "Saint-Denis",
-              "detail": "Suger lance le chœur qui ouvre l'ère gothique."
+              "date": "1140年",
+              "title": "サン＝ドニ",
+              "detail": "シュジェールが、ゴシック時代の幕を開く内陣に着手します。"
             },
             {
-              "date": "1163",
-              "title": "Notre-Dame de Paris",
-              "detail": "Début d'un chantier de près de deux siècles."
+              "date": "1163年",
+              "title": "パリのノートルダム大聖堂",
+              "detail": "二世紀近くにおよぶ長い大工事の始まりです。"
             },
             {
-              "date": "XIIIe s.",
-              "title": "Apogée",
-              "detail": "Chartres, Amiens, Reims imposent le modèle classique."
+              "date": "十三世紀",
+              "title": "最盛期",
+              "detail": "シャルトル、アミアン、ランスが古典的な型を確立します。"
             },
             {
-              "date": "XIXe s.",
-              "title": "Néo-gothique",
-              "detail": "L'Europe restaure et réinvente le style médiéval."
+              "date": "十九世紀",
+              "title": "ネオ・ゴシック",
+              "detail": "ヨーロッパが中世の様式を修復し、新たに作り直します。"
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "Le gothique a transformé la cathédrale en vaisseau de lumière. En libérant les murs grâce à l'ogive et à l'arc-boutant, le Moyen Âge a inventé une architecture qui parle encore à nos villes."
+          "text": "ゴシックは、大聖堂を光の船に変えました。リブ・ヴォールトとフライング・バットレスによって壁を重みから解放し、中世は、今の私たちの街にも語りかけてくる建築を生み出しました。"
         }
       ]
     }

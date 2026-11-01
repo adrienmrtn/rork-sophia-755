@@ -1,104 +1,104 @@
 {
   "id": "course_43_pourquoi_la_glace_flotte_t_elle",
-  "title": "Pourquoi la glace flotte-t-elle ?",
-  "subtitle": "Eau & molécules",
+  "title": "氷はなぜ水に浮かぶのでしょうか？",
+  "subtitle": "水と分子",
   "subject": "sciences",
-  "subcategory": "Notre quotidien expliqué",
-  "description": "La glace flotte sur l'eau. Cela paraît normal, mais c'est en réalité très rare. Et heureusement pour la vie sur Terre.",
+  "subcategory": "暮らしの解説",
+  "description": "氷は水に浮きます。当たり前に思えますが、実はとても珍しいことです。そして、地球の生き物にとっては幸運なことでもあります。",
   "hero": {
     "image": "pourquoi_la_glace_flotte",
     "ratio": "16:9",
-    "hook": "Si la glace coulait, les lacs gèleraient jusqu'au fond. Et la vie dans l'eau aurait du mal à survivre."
+    "hook": "もし氷が沈んだら、湖は底まで凍ってしまいます。水の中の生き物は生き延びにくくなるでしょう。"
   },
   "sections": [
     {
       "id": "course_43_pourquoi_la_glace_flotte_t_elle_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Un glaçon dans un verre, un iceberg dans l'océan : la glace **flotte**. On trouve ça banal. Pourtant, pour la plupart des substances, le solide est plus **dense**, donc plus lourd pour un même volume : il coule."
+          "text": "グラスの中の氷、海に浮かぶ氷山。氷は**浮かびます**。それは当たり前に思えますが、たいていの物質では、固体のほうが**密度**が高く、同じ体積なら重いので、沈んでしまいます。"
         },
         {
           "type": "paragraph",
-          "text": "L'eau fait l'inverse. Cette exception vient de la forme de sa molécule. Et elle a sauvé bien des lacs, l'hiver."
+          "text": "水は、その逆です。この例外は、水の分子の形から生まれます。そして冬の湖を、何度も救ってきました。"
         }
       ]
     },
     {
       "id": "course_43_pourquoi_la_glace_flotte_t_elle_p1",
-      "title": "Une molécule en forme de V",
+      "title": "分子はV字形をしている",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Une molécule d'eau, c'est un atome d'**oxygène** relié à deux atomes d'**hydrogène**. Elle n'est pas droite : elle forme un **V**. À cause de cette forme, les charges électriques ne sont pas réparties également : la molécule est **polaire**, avec un bout légèrement négatif et l'autre légèrement positif."
+          "text": "水の分子は、**酸素**原子1個が**水素**原子2個とつながったものです。まっすぐではなく、**V字**に曲がっています。この形のせいで、電気の偏りが均等にならず、分子は**極性**をもちます。一方の端がわずかにマイナス、もう一方がわずかにプラスです。"
         },
         {
           "type": "image",
           "asset": "water_molecule_model_crystal",
           "ratio": "4:3",
-          "caption": "La molécule d'eau : un V qui attire et repousse ses voisines."
+          "caption": "水の分子。V字の形で、まわりの分子を引きつけたり押しのけたりします。"
         },
         {
           "type": "paragraph",
-          "text": "Résultat : les molécules d'eau s'attirent entre elles par des [[水素結合（水分子）]], comme de petits aimants. Dans le liquide, elles restent proches mais bougent encore. Dans la glace, elles se figent autrement."
+          "text": "その結果、水の分子どうしは、小さな磁石のように[[水素結合（水分子）]]で引き合います。液体のときは、近くにいながらまだ動き回っています。氷になると、別の並び方で固まります。"
         }
       ]
     },
     {
       "id": "course_43_pourquoi_la_glace_flotte_t_elle_p2",
-      "title": "Quand l'eau se fige, elle prend de la place",
+      "title": "水は凍るとき、まわりの場所を広くとる",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Vers **0 °C**, l'eau se solidifie. Pour former la glace, les molécules s'organisent en un réseau **hexagonal**, une sorte de nids d'abeilles à six côtés. Elles laissent alors plus de **vide** entre elles qu'à l'état liquide."
+          "text": "**0℃**ごろになると、水は固まります。氷になるとき、分子は**六角形**の網目状に並びます。六角形の蜂の巣のようなものです。すると、分子のあいだの**すき間**は、液体のときより大きくなります。"
         },
         {
           "type": "funFact",
-          "text": "C'est pour ça qu'une bouteille d'eau pleine peut **éclater** au congélateur : la glace occupe plus de volume que l'eau liquide."
+          "text": "だから、水をいっぱいに入れたペットボトルを冷凍庫に入れると**破裂**することがあります。氷は液体の水より体積が大きいからです。"
         },
         {
           "type": "paragraph",
-          "text": "Moins de matière dans le même volume, cela veut dire : **moins dense**. Or un objet moins dense que le liquide autour remonte. La glace flotte donc sur l'eau. C'est ce qu'on appelle l'**anomalie de dilatation de l'eau** : contrairement à presque toutes les substances, l'eau se dilate en refroidissant sous **4 °C**."
+          "text": "同じ体積に入る物質が少ない、つまり**密度が低い**ということです。まわりの液体より密度の低い物体は浮き上がります。だから氷は水に浮かびます。これが**水の異常膨張**です。ほとんどの物質とは違って、水は**4℃**を下回ると、冷えるにつれて膨らみます。"
         },
         {
           "type": "image",
           "asset": "iceberg_floating_arctic_ocean",
           "ratio": "16:9",
-          "caption": "Un iceberg flotte parce que la glace est moins dense que l'eau liquide."
+          "caption": "氷山が浮かぶのは、氷のほうが液体の水より密度が低いからです。"
         }
       ]
     },
     {
       "id": "course_43_pourquoi_la_glace_flotte_t_elle_p3",
-      "title": "Pourquoi c'est vital pour les lacs",
+      "title": "それが湖にとって命に関わる理由",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Imagine si la glace coulait. Elle se formerait en surface, puis tomberait au fond. Le lac gèlerait couche après couche, jusqu'en bas. L'été ne suffirait souvent pas à tout faire fondre."
+          "text": "もし氷が沈むとしたら、と想像してみましょう。氷は水面にでき、やがて底に落ちます。湖は層ごとに底まで凍っていきます。夏になっても、すべてが溶けきらないことが多くなるでしょう。"
         },
         {
           "type": "paragraph",
-          "text": "Heureusement, la glace reste en haut. Elle forme un **couvercle isolant**. Sous la surface gelée, l'eau liquide peut rester autour de **4 °C**, température où l'eau liquide est la plus dense, assez pour que poissons et plantes aquatiques survivent."
+          "text": "幸い、氷は上にとどまります。氷は**断熱のふた**になります。凍った水面の下では、液体の水が約**4℃**に保たれます。この温度は液体の水がいちばん密度の高くなる温度で、魚や水草が生き延びるのに十分です。"
         }
       ]
     },
     {
       "id": "course_43_pourquoi_la_glace_flotte_t_elle_p4",
-      "title": "Et pour le climat aussi",
+      "title": "気候にとっても",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La banquise blanche renvoie une grande partie de la lumière du Soleil vers l'espace grâce à son **albédo** élevé, son pouvoir réfléchissant. Si elle disparaît, l'océan sombre absorbe plus de chaleur. Cela accélère le réchauffement : un cercle vicieux."
+          "text": "白い海氷は、**アルベド**、つまり光を反射する力が高いため、太陽の光の多くを宇宙へ送り返します。海氷が消えると、暗い色の海がより多くの熱を吸収します。それが温暖化をさらに加速させる、悪循環になります。"
         },
         {
           "type": "takeaway",
-          "text": "La glace flotte parce que, en se solidifiant, l'eau forme un réseau plus « aéré » : elle devient moins dense que l'eau liquide. Cette exception protège la vie aquatique l'hiver."
+          "text": "氷が浮かぶのは、水が固まるときに、すき間の多い網目をつくるからです。そのため、液体の水より密度が低くなります。この例外が、冬の水中の生き物を守っています。"
         }
       ]
     }

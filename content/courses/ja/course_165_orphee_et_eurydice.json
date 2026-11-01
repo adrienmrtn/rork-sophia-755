@@ -1,118 +1,118 @@
 {
   "id": "course_165_orphee_et_eurydice",
-  "title": "Orphée et Eurydice",
-  "subtitle": "L'amour qui défie la mort",
+  "title": "オルペウスとエウリュディケ",
+  "subtitle": "死に挑む愛",
   "subject": "mythologie",
-  "subcategory": "Grèce : les dieux",
-  "description": "Orphée descend aux Enfers pour ramener Eurydice. Sa musique fléchit la mort. Un seul regard interdit suffit à tout perdre.",
+  "subcategory": "ギリシア：神々",
+  "description": "オルペウスは、エウリュディケを連れ戻すために冥界へ下ります。その音楽は死さえ動かしました。禁じられたたった一度の視線が、すべてを失わせます。",
   "hero": {
     "image": "orphee_et_eurydice",
     "ratio": "16:9",
-    "hook": "Sa lyre apaise les Enfers. Son doute, lui, rend Eurydice pour toujours."
+    "hook": "彼の竪琴は冥界を静めました。けれども彼の疑いが、エウリュディケを永遠に奪ったのです。"
   },
   "sections": [
     {
       "id": "course_165_orphee_et_eurydice_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Orphée** est un musicien dont la lyre émeut même les pierres. Quand sa femme **Eurydice** meurt, il refuse le deuil. Il descend vivant chez les morts pour la ramener."
+          "text": "**オルペウス**は、竪琴の音で石さえ感動させる音楽家です。妻の**エウリュディケ**が死ぬと、彼は悲しみを受け入れませんでした。生きたまま死者の国へ下り、妻を連れ戻そうとします。"
         },
         {
           "type": "paragraph",
-          "text": "Les poètes latins [[ウェルギリウス]] et [[オウィディウス]] ont fixé ce récit. Au-delà de l'amour tragique, c'est une histoire sur le doute, l'impatience et le pouvoir de l'art face à la mort."
+          "text": "ローマの詩人[[ウェルギリウス]]と[[オウィディウス]]が、この物語を定着させました。悲劇的な愛を超えて、これは疑い、焦り、そして死に向き合う芸術の力をめぐる物語です。"
         }
       ]
     },
     {
       "id": "course_165_orphee_et_eurydice_p1",
-      "title": "Un musicien plus fort que les armes",
+      "title": "武器よりも強い力をもつ音楽家",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Orphée est fils de la Muse **Calliope**. Sa **lyre**, cadeau d'**Apollon**, dieu des arts, ne sert pas seulement à plaire. Elle apaise les bêtes, déplace les arbres, calme la nature sauvage. Là où d'autres héros vainquent par la force, Orphée triomphe par l'harmonie."
+          "text": "オルペウスは、ムーサ（芸術の女神）の**カリオペ**の息子です。芸術の神**アポロン**から贈られた**竪琴**は、人を楽しませるだけのものではありません。獣を鎮め、木々を動かし、荒々しい自然をなだめます。ほかの英雄が力で勝つところを、オルペウスは調和で勝つのです。"
         },
         {
           "type": "image",
           "asset": "orpheus_lyre_painting_ancient_myth",
           "ratio": "4:3",
-          "caption": "Orphée et sa lyre : l'art comme pouvoir sur le monde."
+          "caption": "オルペウスと竪琴。世界を動かす力としての芸術です。"
         },
         {
           "type": "paragraph",
-          "text": "Lors de l'expédition des **Argonautes**, menée par le héros [[イアソン]], les Sirènes tentent d'attirer l'équipage. Orphée chante plus fort et sauve ses compagnons. Puis il épouse la dryade **Eurydice**, nymphe des bois. Le bonheur est bref."
+          "text": "英雄[[イアソン]]が率いる**アルゴナウタイ**の遠征では、セイレーンが船の乗組員を誘惑しようとします。オルペウスはそれより大きな声で歌い、仲間を救いました。その後、森のニンフであるドリュアス、**エウリュディケ**と結婚します。幸せは短いものでした。"
         },
         {
           "type": "funFact",
-          "text": "Le jour des noces, Eurydice fuit le berger [[アリスタイオス]]. Elle marche sur un serpent. Le venin la tue. Son ombre part vers le [[ステュクス]], fleuve des Enfers."
+          "text": "結婚式の日、エウリュディケは羊飼いの[[アリスタイオス]]から逃げる途中で、蛇を踏んでしまいます。毒がまわって、彼女は死にました。その魂は、冥界の川[[ステュクス]]へと向かいます。"
         }
       ]
     },
     {
       "id": "course_165_orphee_et_eurydice_p2",
-      "title": "Descendre vivant chez les morts",
+      "title": "生きたまま死者の国へ下りる",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Orphée tente une [[冥界下り（カタバシス）]] : une descente aux Enfers. Pas d'armes. Seulement sa musique. Elle endort [[ケルベロス]], le chien à trois têtes qui garde l'entrée. Elle fléchit [[カロン]], le batelier des morts."
+          "text": "オルペウスは[[冥界下り（カタバシス）]]、つまり冥界への下降に挑みます。武器はありません。あるのは音楽だけです。その音楽は、入り口を守る三つの頭をもつ犬[[ケルベロス]]を眠らせ、死者の渡し守[[カロン]]の心を動かしました。"
         },
         {
           "type": "paragraph",
-          "text": "Devant **Hadès** et **Perséphone**, souverains du monde souterrain, Orphée joue l'air le plus bouleversant de sa vie. Les Enfers s'arrêtent un instant. **Sisyphe** et **Tantale** oublient leur supplice. Les [[エリニュス]], déesses de la vengeance, versent des larmes."
+          "text": "冥界の支配者である**ハデス**と**ペルセポネ**の前で、オルペウスは生涯でもっとも胸を打つ曲を奏でます。冥界は一瞬、動きを止めました。**シシュポス**と**タンタロス**は責め苦を忘れます。復讐の女神[[エリニュス]]さえ、涙を流しました。"
         },
         {
           "type": "funFact",
-          "text": "Dans certaines versions, Orphée touche Perséphone en lui rappelant son propre enlèvement par Hadès. La reine des morts reconnaît sa douleur."
+          "text": "伝承によっては、オルペウスはペルセポネ自身がハデスにさらわれた過去を思い出させて、心を動かします。死者の女王は、彼の痛みを理解しました。"
         },
         {
           "type": "paragraph",
-          "text": "Hadès accepte l'impossible : Eurydice peut remonter. Mais une condition absolue. Orphée doit marcher devant elle sans se retourner tant qu'ils n'ont pas atteint la lumière."
+          "text": "ハデスは、ありえないことを認めます。エウリュディケは地上に戻ってよい。ただし、絶対の条件がありました。光にたどり着くまで、オルペウスは振り返らずに、彼女の前を歩かなければなりません。"
         }
       ]
     },
     {
       "id": "course_165_orphee_et_eurydice_p3",
-      "title": "Le regard qui perd tout",
+      "title": "すべてを失う視線",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La remontée est un calvaire. Derrière lui, le silence. Les ombres ne font aucun bruit. Près de la sortie, le doute l'emporte. Et si Hadès l'avait trompé ? Orphée **se retourne**."
+          "text": "地上への道のりは、苦難の連続です。背後は静まり返っています。影たちは音を立てません。出口が近づくと、疑いが勝ちました。もしハデスにだまされていたら。オルペウスは**振り返ります**。"
         },
         {
           "type": "paragraph",
-          "text": "Leurs regards se croisent une seconde. Puis Eurydice est happée par les ténèbres. Cette fois, la perte vient d'une erreur humaine. Le passage se referme. Orphée erre, puis se retire en Thrace."
+          "text": "二人の視線が、一瞬だけ交わります。次の瞬間、エウリュディケは闇にさらわれました。今度の喪失は、人間の過ちが原因です。冥界への道は閉ざされ、オルペウスはさまよったあげく、トラキアに引きこもります。"
         },
         {
           "type": "funFact",
-          "text": "Après sa mort, la tête d'Orphée, jetée dans le fleuve [[ヘブロス川]], aurait dérivé jusqu'à Lesbos. Elle y serait devenue un oracle, si puissant qu'**Apollon** lui-même aurait exigé son silence."
+          "text": "死後、オルペウスの首は[[ヘブロス川]]に投げ込まれ、レスボス島まで流れ着いたといわれます。そこで神託を告げる首となり、その力があまりに強いので、**アポロン**自身が沈黙を命じたと伝えられています。"
         },
         {
           "type": "paragraph",
-          "text": "Son refus de tout nouvel amour provoque la fureur des [[マイナス]], prêtresses de **Dionysos** prises d'un délire rituel. Elles le déchirent. Sa lyre continue pourtant de chanter, emportée par le courant."
+          "text": "オルペウスが新しい愛を拒んだことで、**ディオニュソス**の巫女で、儀式の狂乱にとらわれた[[マイナス]]たちが激怒します。彼女たちはオルペウスを引き裂きました。それでも彼の竪琴は、川の流れに運ばれながら歌い続けたといいます。"
         }
       ]
     },
     {
       "id": "course_165_orphee_et_eurydice_p4",
-      "title": "Ce que le mythe a transmis",
+      "title": "この神話が後世に伝えたもの",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "De la mort d'Orphée naît l'[[オルペウス教]], courant religieux qui promettait un salut de l'âme par des rites de purification. La mort n'y est plus une fin morne, mais un passage à préparer."
+          "text": "オルペウスの死から、[[オルペウス教]]が生まれます。清めの儀式によって魂が救われると説いた宗教です。そこでは、死はもはや暗い終わりではなく、備えるべき通過点でした。"
         },
         {
           "type": "paragraph",
-          "text": "Le « regard d'Orphée » inspire encore l'opéra, le cinéma, notamment chez [[ジャン・コクトー]], et la littérature. Pour [[モーリス・ブランショ]], l'artiste est celui qui regarde l'obscurité, même au prix de perdre ce qu'il aime. Les dieux placent enfin la lyre dans le ciel, en constellation : l'art dure plus longtemps que l'artiste."
+          "text": "「オルペウスのまなざし」は、オペラや映画、とくに[[ジャン・コクトー]]の作品、そして文学に今も影響を与えています。[[モーリス・ブランショ]]にとって、芸術家とは、愛するものを失うことになっても闇を見つめる人です。神々はやがて竪琴を天に置き、星座にしました。芸術は芸術家より長く生きるのです。"
         },
         {
           "type": "takeaway",
-          "text": "**Orphée** charme les Enfers par sa musique, puis perd **Eurydice** en se retournant trop tôt. L'art peut fléchir la mort ; le doute humain, lui, a le dernier mot."
+          "text": "**オルペウス**は音楽で冥界を魅了しますが、早く振り返ったために**エウリュディケ**を失います。芸術は死を動かすことができても、最後に勝つのは人間の疑いなのです。"
         }
       ]
     }

@@ -1,115 +1,115 @@
 {
   "id": "course_304_pourquoi_rougit_on",
-  "title": "Pourquoi rougit-on ?",
-  "subtitle": "L'expression la plus humaine",
+  "title": "なぜ顔は赤くなるのか？",
+  "subtitle": "いちばん人間らしい感情表現",
   "subject": "sciences",
-  "subcategory": "Notre quotidien expliqué",
-  "description": "Une remarque gênante, un compliment : dans les deux cas, les joues chauffent et rosissent. Ce que le corps fabrique à cet instant, et pourquoi on ne peut presque rien y faire.",
+  "subcategory": "暮らしの解説",
+  "description": "気まずい一言を言われたときも、ほめられたときも、頬は熱くなって赤みを帯びます。そのとき体の中で何が起きているのか、そしてなぜほとんど止められないのかを見ていきます。",
   "author": "stacy-jankowski",
   "hero": {
     "image": "blushing_red_cheeks_woman_portrait_close_up",
     "ratio": "4:3",
-    "hook": "Une remarque de travers, et tes joues s'enflamment. Un compliment, et c'est pareil. Personne ne décide de rougir."
+    "hook": "的外れな一言で、頬がかっと熱くなる。ほめられても同じ。顔を赤くしようと決める人は、だれもいません。"
   },
   "sections": [
     {
       "id": "course_304_pourquoi_rougit_on_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Tout le monde connaît la sensation. Quelqu'un lance une remarque gênante à ton sujet : ton visage chauffe, ta peau rosit. Le phénomène a intrigué jusqu'au naturaliste [[チャールズ・ダーウィン]], qui y voyait « la plus singulière et la plus humaine de toutes les expressions »."
+          "text": "この感覚を知らない人はいないでしょう。だれかに気まずいことを言われると、顔が熱くなり、肌が赤みを帯びます。この現象は、博物学者の[[チャールズ・ダーウィン]]も不思議がり、「あらゆる表情のなかで、もっとも特異で、もっとも人間的なもの」と評しました。"
         },
         {
           "type": "paragraph",
-          "text": "Le plus étrange, c'est que le compliment produit le même effet que la moquerie. Félicité devant les autres, on sent la même chaleur monter aux joues. Que se passe-t-il exactement sous la peau, et pourquoi le corps répond-il de la même façon à la honte et au plaisir ?"
+          "text": "いちばん不思議なのは、ほめられても、からかわれたときと同じことが起きる点です。人前でほめられると、頬に同じ熱さがのぼってくるのを感じます。肌の下では正確には何が起きているのか。そして、なぜ体は恥ずかしさにも喜びにも同じように反応するのでしょうか。"
         }
       ]
     },
     {
       "id": "course_304_pourquoi_rougit_on_p1",
-      "title": "Un coup de chaud sous la peau",
+      "title": "肌の下で、一気に体温が上がる",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Rougir est d'abord une affaire de sang. Le volume qui circule dans les petits vaisseaux du visage, situés tout près de la surface de la peau, augmente d'un coup. Ce phénomène est commandé par le [[交感神経系]], la branche du système nerveux qui pilote la [[闘争・逃走反応]], notre réponse d'urgence face au danger."
+          "text": "顔が赤くなるのは、まず血液のはたらきによるものです。皮膚の表面のすぐ近くにある顔の細い血管を流れる血液の量が、ある瞬間に一気に増えます。この現象を指令しているのが[[交感神経系]]で、危険に対する私たちの体の緊急反応、つまり[[闘争・逃走反応]]をつかさどっている、神経系の一部です。"
         },
         {
           "type": "image",
           "asset": "thermal_infrared_image_human_face_heat",
           "ratio": "3:2",
-          "caption": "Des silhouettes vues à travers une caméra thermique : plus une surface est chaude, plus elle apparaît claire à l'écran."
+          "caption": "サーモグラフィーのカメラを通して見た人影。表面の温度が高いほど、画面の中では明るく映し出されます。"
         },
         {
           "type": "paragraph",
-          "text": "Quand ce système s'active, le cœur bat plus vite et la température du corps grimpe. Pour évacuer ce surplus, les vaisseaux du visage se dilatent : plus de sang y passe, et la chaleur qu'il transporte s'échappe à travers la peau. Comme ces vaisseaux affleurent, l'afflux se voit : la peau prend une teinte rose ou rouge. Rougir, c'est un système de refroidissement en action."
+          "text": "この神経系が働き出すと、心臓の鼓動が速まり、体温が上がります。余分な熱を逃がすため、顔の血管が広がります。血液がたくさん流れ込み、血液が運ぶ熱が皮膚から逃げていくのです。血管は表面近くにあるので、血流が増えたことが外から見え、肌がピンクや赤に染まります。顔が赤くなるのは、冷却システムが働いている姿なのです。"
         }
       ]
     },
     {
       "id": "course_304_pourquoi_rougit_on_p2",
-      "title": "La gêne, un réflexe de fuite",
+      "title": "気まずさ：逃げるための反射",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Une gaffe en société, une règle tacite enfreinte sans le vouloir : le cerveau y répond comme à une menace. Il active le système nerveux sympathique, avec l'envie de se défendre (« lutter ») ou de disparaître (« fuir »). Le sang afflue dans les vaisseaux du visage, et les joues s'embrasent."
+          "text": "人前でのうっかりや、知らずに破ってしまった暗黙のルール。脳はこれを脅威として受け止めます。交感神経系が働き、身を守りたい（「闘う」）、あるいは消えてしまいたい（「逃げる」）という気持ちが生まれます。顔の血管に血が流れ込み、頬が燃えるように熱くなります。"
         },
         {
           "type": "image",
           "asset": "embarrassed_person_hiding_face_in_hands",
           "ratio": "3:2",
-          "caption": "Cacher son visage derrière ses mains : la version quotidienne du réflexe de fuite."
+          "caption": "両手で顔を隠す。逃げるという反射が、日常の中に現れた形です。これもその一つです。"
         },
         {
           "type": "paragraph",
-          "text": "Certaines personnes rougissent plus que d'autres. Celles qui souffrent d'[[社交不安]] portent souvent un regard plus sévère sur elles-mêmes. Ce biais négatif amplifie la réponse du système sympathique, et la moindre maladresse déclenche une véritable alerte dans tout le corps."
+          "text": "ほかの人より赤くなりやすい人もいます。[[社交不安]]に悩む人は、自分に対してより厳しい目を向けがちです。この否定的な見方の偏りが交感神経系の反応をさらに強め、ほんのちょっとしたしくじりでも、全身に本物の警報が鳴り響いてしまうのです。"
         },
         {
           "type": "funFact",
-          "text": "La peur de rougir fait rougir. Chez ceux qui redoutent leurs rougeurs, la simple conscience d'être observé renforce la réponse du système sympathique. On rougit donc d'avoir rougi, et la boucle se referme."
+          "text": "赤くなることへの恐れが、顔を赤くさせます。赤面を恐れる人は、見られていると意識するだけで交感神経系の反応が強まります。こうして、赤くなったことでまた赤くなり、悪循環が完成します。"
         }
       ]
     },
     {
       "id": "course_304_pourquoi_rougit_on_p3",
-      "title": "Rougir aussi de plaisir",
+      "title": "うれしくても赤くなる",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L'attention positive déclenche le même mécanisme. Un éloge en public, des applaudissements, un compliment inattendu : on se sent soudain exposé au regard des autres, ou inquiet de ne pas savoir remercier comme il faut. Cette gêne suffit à lancer la réponse d'urgence."
+          "text": "好意的な注目も、同じしくみを動かします。人前でほめられる、拍手を浴びる、思いがけないお世辞を言われる。そんなとき、ふいに人の視線にさらされたように感じたり、うまくお礼を言えるか不安になったりします。この気まずさだけで、緊急反応は始まるのです。"
         },
         {
           "type": "image",
           "asset": "shy_speaker_receiving_applause_audience",
           "ratio": "5:4",
-          "caption": "Le maire de Boston applaudit un orateur lors d'un déjeuner en plein air, années 1960 : l'attention positive fait rougir aussi."
+          "caption": "屋外の昼食会で、演説をした人に拍手を送るボストン市長。1960年代の一枚です。好意的な注目でも、人は赤くなります。"
         },
         {
           "type": "paragraph",
-          "text": "Le cerveau, lui, sait très bien distinguer une félicitation d'une humiliation. Mais le système nerveux sympathique est plus fruste : il n'a pas encore décidé s'il faut prendre la fuite ou non. Le temps qu'il tranche, le visage a déjà changé de couleur."
+          "text": "脳は、祝福と屈辱をきちんと区別できます。ところが、交感神経系はもっと単純なつくりをしています。逃げるべきかどうか、まだ決めかねているのです。その判断がつくまでの間に、顔の色はもう変わってしまっています。"
         }
       ]
     },
     {
       "id": "course_304_pourquoi_rougit_on_p4",
-      "title": "Peut-on s'empêcher de rougir ?",
+      "title": "赤くなるのは止められる？",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Pas vraiment, et ce n'est pas grave : rougir est une réponse naturelle au monde social qui nous entoure, pas un défaut à corriger. En revanche, on peut agir sur ce qui le déclenche, c'est-à-dire la façon dont le cerveau range une situation embarrassante dans la catégorie « danger »."
+          "text": "ほとんど止められません。でも、心配はいりません。赤くなるのは、周りの社会に対する自然な反応で、直すべき欠点ではないからです。その代わり、きっかけには働きかけられます。つまり、脳が気まずい状況を「危険」に分類してしまう、その仕方です。"
         },
         {
           "type": "paragraph",
-          "text": "Deux approches peuvent aider. La [[曝露療法]] consiste à affronter progressivement les situations redoutées, jusqu'à ce qu'elles ne déclenchent plus l'alarme. La [[マインドフルネス]] apprend à observer la chaleur qui monte sans la craindre. Dans les deux cas, on ne supprime pas le rougissement : on désamorce la peur de rougir, et la boucle se calme."
+          "text": "助けになる方法が二つあります。[[曝露療法]]は、こわい状況に少しずつ立ち向かい、やがて警報が鳴らなくなるまで続けるものです。[[マインドフルネス]]は、のぼってくる熱さをこわがらずに観察する練習です。どちらも、赤面そのものをなくすわけではありません。赤くなることへの恐れをやわらげ、悪循環を落ち着かせます。"
         },
         {
           "type": "takeaway",
-          "text": "Rougir, c'est le système nerveux sympathique qui dilate les vaisseaux du visage pour évacuer la chaleur d'une alerte, qu'elle vienne d'une gaffe ou d'un compliment : on ne l'empêche pas, mais on peut apprendre à ne plus le craindre."
+          "text": "顔が赤くなるのは、交感神経系が顔の血管を広げて、警報の熱を逃がしているからです。警報のきっかけが失敗でも、ほめ言葉でも同じです。止めることはできませんが、こわがらないよう学ぶことはできます。"
         }
       ]
     }

@@ -1,142 +1,142 @@
 {
   "id": "course_12_la_strategie_de_napoleon_a_ulm_1805",
-  "title": "Comment Napoléon a-t-il capturé une armée entière à Ulm ?",
-  "subtitle": "1805",
+  "title": "ナポレオンは、どうやってウルムで敵軍をまるごと捕らえたのでしょうか？",
+  "subtitle": "1805年",
   "subject": "histoire",
-  "subcategory": "Révolutions & conflits modernes",
-  "description": "En octobre 1805, Napoléon encercle et capture **60 000 Autrichiens** en deux semaines, presque sans grande bataille. Ulm montre la force de la vitesse.",
+  "subcategory": "革命と近現代の紛争",
+  "description": "**1805年**十月、ナポレオンは**6万人**のオーストリア兵を包囲して捕らえます。わずか2週間で、大きな会戦もほとんどありませんでした。ウルムは、スピードの力を教えてくれます。",
   "hero": {
     "image": "la_strategie_de_napoleon_a_ulm",
     "ratio": "16:9",
-    "hook": "En deux semaines, Napoléon capture une armée entière… sans livrer la grande bataille."
+    "hook": "ナポレオンは、わずか2週間で軍隊をまるごと捕らえます。決戦を交えることもなく。"
   },
   "sections": [
     {
       "id": "course_12_la_strategie_de_napoleon_a_ulm_1805_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En octobre **1805**, **Napoléon Bonaparte**, empereur des Français depuis moins d'un an, réalise un exploit rare. En deux semaines, il encercle et capture une armée autrichienne d'environ **60 000 hommes**, presque sans grande bataille rangée."
+          "text": "**1805年**十月、フランス皇帝になって1年足らずの**ナポレオン・ボナパルト**は、めずらしい快挙をやってのけます。わずか2週間で、約**6万人**のオーストリア軍を包囲して捕らえたのです。正面からの大会戦は、ほとんどありませんでした。"
         },
         {
           "type": "paragraph",
-          "text": "La campagne se joue autour d'**Ulm**, une ville fortifiée du sud de l'Allemagne, sur le Danube. Napoléon y prouve qu'on peut gagner par la vitesse et le secret, pas seulement par le choc frontal."
+          "text": "この作戦の舞台は、ドイツ南部、ドナウ川沿いの要塞都市**ウルム**の周辺です。ナポレオンはここで、正面からぶつかるだけでなく、スピードと秘密でも勝てることを証明しました。"
         }
       ]
     },
     {
       "id": "course_12_la_strategie_de_napoleon_a_ulm_1805_p1",
-      "title": "L'Autriche attaque trop tôt",
+      "title": "オーストリアの早すぎる出陣",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L'Angleterre finance une alliance contre la France : la **Troisième Coalition**. Elle réunit l'Autriche de l'empereur **François II** et la Russie du tsar **Alexandre Ier**. Mais l'Autriche n'attend pas les Russes. Le général **Karl Mack**, qui commande l'armée autrichienne, pousse environ **70 000 hommes** jusqu'à Ulm. Il croit la place imprenable."
+          "text": "イギリスは、フランスに対抗する同盟に資金を出します。**第三次対仏大同盟**です。皇帝**フランツ2世**のオーストリアと、ロシア皇帝**アレクサンドル1世**のロシアが加わりました。ところがオーストリアは、ロシア軍を待たずに動きます。オーストリア軍を指揮する**カール・マック**将軍は、約**7万人**を率いてウルムまで進みました。マックは、この要塞は落とせないと信じていました。"
         },
         {
           "type": "image",
           "asset": "napoleon_bonaparte_portrait",
           "ratio": "4:3",
-          "caption": "Napoléon Bonaparte, Empereur depuis moins d'un an en 1805."
+          "caption": "ナポレオン・ボナパルト。1805年、皇帝になって1年足らず。"
         },
         {
           "type": "funFact",
-          "text": "L'armée russe utilisait le calendrier julien, décalé de **12 jours** par rapport aux Autrichiens. Cette confusion retarda encore l'arrivée des renforts et isola Mack à Ulm."
+          "text": "ロシア軍はユリウス暦を使っていて、オーストリア軍とは**12日**ずれていました。この混乱で援軍の到着はさらに遅れ、マックはウルムで孤立します。"
         },
         {
           "type": "paragraph",
-          "text": "Mack attend les Français par l'ouest, depuis la [[シュヴァルツヴァルト（黒い森）]], un massif du sud-ouest de l'Allemagne. Il néglige ses flancs et ses arrières. Pendant ce temps, les Russes du général **Koutouzov** sont encore loin à l'est."
+          "text": "マックは、フランス軍が西の[[シュヴァルツヴァルト（黒い森）]]方面から来ると予想していました。ドイツ南西部の山地です。側面と背後は、ほとんど警戒していません。そのころ、**クトゥーゾフ**将軍のロシア軍は、まだはるか東にいました。"
         }
       ]
     },
     {
       "id": "course_12_la_strategie_de_napoleon_a_ulm_1805_p2",
-      "title": "Marcher plus vite que l'ennemi",
+      "title": "敵よりも速く、先回りして進む",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Napoléon abandonne un temps l'idée d'envahir l'Angleterre. Il pivote sa [[大陸軍]] vers l'Allemagne. Son atout : le [[ナポレオンの軍団]]. Chaque corps est une petite armée autonome, avec son infanterie, sa cavalerie et ses canons. Sept corps marchent sur des routes parallèles."
+          "text": "ナポレオンは、イギリス侵攻の計画をいったん脇に置きます。そして[[大陸軍]]の向きをドイツへ変えました。切り札は[[ナポレオンの軍団]]です。各軍団は、歩兵、騎兵、大砲をそなえた、自立した小さな軍隊です。7つの軍団が、平行する道をそれぞれ進みます。"
         },
         {
           "type": "paragraph",
-          "text": "Le **25 septembre**, environ **210 000 hommes** traversent le Rhin. Le maréchal **Murat**, beau-frère de Napoléon et chef de la cavalerie, fixe l'attention de Mack à l'ouest. Pendant ce temps, d'autres maréchaux (Bernadotte, Davout, Soult, Ney, Lannes) contournent Ulm par le nord, à près de **30 km par jour**."
+          "text": "九月二十五日、約**210,000人**の兵がライン川を渡ります。ナポレオンの義弟で騎兵隊長の**ミュラ**元帥は、西側でマックの注意を引きつけます。その間に、ほかの元帥たち（ベルナドット、ダヴー、スルト、ネ、ランヌ）は、1日に約**30km**のペースで、北からウルムを回り込みます。"
         },
         {
           "type": "paragraph",
-          "text": "Le **7 octobre**, les Français passent le Danube derrière Mack. Il est coupé de Vienne, la capitale autrichienne, et des Russes. Le piège d'Ulm s'est refermé."
+          "text": "十月七日、フランス軍はマックの背後でドナウ川を渡ります。マックは、オーストリアの首都ウィーンからも、ロシア軍からも切り離されました。ウルムの罠は閉じたのです。"
         }
       ]
     },
     {
       "id": "course_12_la_strategie_de_napoleon_a_ulm_1805_p3",
-      "title": "Une armée qui se rend sans grande bataille",
+      "title": "大きな会戦を交えることなく降伏した軍隊",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Mack tente de sortir, notamment à **Elchingen**, un village voisin. Le maréchal **Ney** s'empare des hauteurs. Le **17 octobre 1805**, Mack se rend : **27 000** soldats déposent les armes sur place. Au total, l'Autriche perd environ **60 000 hommes** dans la campagne."
+          "text": "マックは、近くの村**エルヒンゲン**などで包囲を破ろうとします。**ネ**元帥は高地を押さえました。**1805年十月十七日**、マックは降伏し、**27,000人**の兵がその場で武器を置きます。この作戦でオーストリアが失った兵は、全体で約**6万人**です。"
         },
         {
           "type": "image",
           "asset": "battle_of_ulm_1805_surrender",
           "ratio": "4:3",
-          "caption": "La reddition d'Ulm : une armée capturée presque sans bataille décisive."
+          "caption": "ウルムの降伏。決定的な戦いのないまま、軍隊が捕らえられました。"
         },
         {
           "type": "funFact",
-          "text": "Après la capitulation, Napoléon invita les officiers autrichiens à dîner. Mack se présenta ainsi : « Voilà le malheureux Mack. » L'Empereur lui rendit son épée."
+          "text": "降伏のあと、ナポレオンはオーストリアの将校たちを夕食に招きました。マックは「ここにいるのが、不運なマックです」と挨拶します。皇帝は、マックに剣を返しました。"
         },
         {
           "type": "paragraph",
-          "text": "C'est une victoire des jambes autant que du courage. Mais la même semaine, à la [[トラファルガーの海戦]], au large de l'Espagne, l'amiral britannique Nelson détruit la flotte franco-espagnole. Napoléon règne sur le continent. L'Angleterre garde la mer."
+          "text": "これは、勇気だけでなく脚で勝ち取った勝利です。ところが同じ週、スペイン沖の[[トラファルガーの海戦]]で、イギリスのネルソン提督がフランスとスペインの連合艦隊を撃滅します。ナポレオンは大陸に君臨し、イギリスは海を守り抜きます。"
         }
       ]
     },
     {
       "id": "course_12_la_strategie_de_napoleon_a_ulm_1805_p4",
-      "title": "La route s'ouvre vers Austerlitz",
+      "title": "アウステルリッツへの道が開く",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La route de **Vienne** s'ouvre. Les Français y entrent le **13 novembre**. Puis, le **2 décembre 1805**, à **Austerlitz** (dans l'actuelle Tchéquie), Napoléon bat Autrichiens et Russes. Ulm devient un modèle : paralyser l'ennemi avant de le frapper. Pour tenter de ruiner l'Angleterre autrement, Napoléon inventera bientôt le [[大陸封鎖]], qui interdit le commerce européen avec Londres."
+          "text": "**ウィーン**への道が開き、フランス軍は十一月十三日に入城します。そして**1805年十二月二日**、**アウステルリッツ**（現在のチェコ）で、ナポレオンはオーストリアとロシアの軍を破ります。ウルムは、敵をまひさせてから打つというお手本になりました。ナポレオンはほどなく、イギリスを別の方法で追い詰めようと[[大陸封鎖]]を考え出し、ヨーロッパ各国にロンドンとの貿易を禁じます。"
         },
         {
           "type": "timeline",
           "events": [
             {
-              "date": "25 sept. 1805",
-              "title": "Passage du Rhin",
-              "detail": "La Grande Armée pivote vers le cœur de l'Allemagne."
+              "date": "1805年九月二十五日",
+              "title": "ライン川を渡る",
+              "detail": "大陸軍が、ドイツの中心部へ向きを変えます。"
             },
             {
-              "date": "7 oct. 1805",
-              "title": "Danube derrière Mack",
-              "detail": "L'armée autrichienne est coupée de Vienne."
+              "date": "1805年十月七日",
+              "title": "マックの背後でドナウ川を渡る",
+              "detail": "オーストリア軍が、ウィーンから切り離されます。"
             },
             {
-              "date": "17 oct. 1805",
-              "title": "Capitulation d'Ulm",
-              "detail": "Des dizaines de milliers d'Autrichiens se rendent."
+              "date": "1805年十月十七日",
+              "title": "ウルムの降伏",
+              "detail": "降伏したオーストリア兵は数万人にのぼります。"
             },
             {
-              "date": "21 oct. 1805",
-              "title": "Trafalgar",
-              "detail": "Nelson détruit la flotte franco-espagnole."
+              "date": "1805年十月二十一日",
+              "title": "トラファルガー",
+              "detail": "ネルソンが、フランスとスペインの連合艦隊を撃滅します。"
             },
             {
-              "date": "2 déc. 1805",
-              "title": "Austerlitz",
-              "detail": "Victoire décisive contre Autriche et Russie."
+              "date": "1805年十二月二日",
+              "title": "アウステルリッツ",
+              "detail": "オーストリアとロシアに決定的な勝利をおさめます。"
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "En octobre **1805**, Napoléon capture **60 000** Autrichiens à Ulm presque sans bataille décisive : la vitesse et la manœuvre valent autant que le choc frontal."
+          "text": "**1805年**十月、ナポレオンはウルムでオーストリア兵**6万人**を、決定的な戦いのないまま捕らえました。スピードと機動は、正面からの衝突に劣らない力を持つのです。"
         }
       ]
     }

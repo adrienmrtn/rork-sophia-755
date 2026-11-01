@@ -1,120 +1,120 @@
 {
   "id": "course_230_la_liberte_de_la_presse_dans_le_monde",
-  "title": "La liberté de la presse recule-t-elle partout ?",
-  "subtitle": "Un droit sous pression",
+  "title": "報道の自由は、世界中で後退しているのか？",
+  "subtitle": "圧力にさらされる権利",
   "subject": "comprendreLeMonde",
-  "subcategory": "Environnement & avenir",
-  "description": "Moins de **10% de la population mondiale** vit dans un pays où la presse est vraiment libre. Entre censure d'État et pressions économiques, ce droit essentiel recule presque partout.",
+  "subcategory": "環境と未来",
+  "description": "報道が本当に自由な国に暮らす人は、**世界人口の10%**にも届きません。国家による検閲と経済的な圧力のなかで、この大切な権利は、ほとんどどこでも後退しています。",
   "hero": {
     "image": "la_liberte_de_la_presse_dans_le_monde",
     "ratio": "16:9",
-    "hook": "Informer coûte parfois la liberté, ou même la vie : voyage au cœur d'un droit fragile."
+    "hook": "情報を伝えることが、ときに自由を、ときには命さえ奪います。壊れやすい権利の核心をめぐる旅です。"
   },
   "sections": [
     {
       "id": "course_230_la_liberte_de_la_presse_dans_le_monde_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La **liberté de la presse** est un des meilleurs indicateurs de la santé démocratique d'un pays. Elle ne se limite pas au droit de publier : elle inclut la capacité des citoyens à accéder à une information vérifiée et indépendante des pouvoirs en place. Dans le monde entier, ce droit subit une double pression : une répression directe dans les régimes autoritaires, et un affaiblissement plus discret dans les démocraties elles-mêmes."
+          "text": "**報道の自由**は、その国の民主主義が健全かどうかを示す、最も大切な指標の一つだといわれます。それは、記事を発表する権利だけにとどまりません。市民が、検証された、権力から独立した情報に触れられる力も含みます。世界中で、この権利は二重の圧力を受けています。独裁的な体制による直接の弾圧と、民主主義国そのものの中で進む、もっと目立ちにくい弱体化の二つです。"
         }
       ]
     },
     {
       "id": "course_230_la_liberte_de_la_presse_dans_le_monde_p1",
-      "title": "Un métier de plus en plus dangereux",
+      "title": "ますます危険を増している、記者という仕事",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Chaque année, l'organisation [[国境なき記者団（RSF）]] publie un rapport de référence sur les obstacles au métier de journaliste dans le monde."
+          "text": "毎年、[[国境なき記者団（RSF）]]という団体が、世界のジャーナリストの仕事を妨げるさまざまな障害について、基準となる報告書を発表しています。"
         },
         {
           "type": "image",
           "asset": "press_freedom_world_map_RSF_index",
           "ratio": "16:9",
-          "caption": "Moins de 10% de la population mondiale vit dans un pays où la presse est vraiment libre."
+          "caption": "報道が本当に自由だといえる国に暮らす人は、世界人口の10%にも届きません。"
         },
         {
           "type": "paragraph",
-          "text": "Les données de 2024 sont alarmantes : moins de **10%** de la population mondiale vit dans une zone où la presse travaille sans entrave. Si des pays comme la Norvège gardent des standards élevés, de vastes régions comme la Chine, la Russie ou l'Iran considèrent le journalisme d'enquête comme une forme de trahison."
+          "text": "2024年のデータは深刻です。報道が妨げられずに活動できる地域に住む人は、世界人口の**10%**にも満たないのです。ノルウェーのように高い水準を保つ国がある一方、中国、ロシア、イランなど広大な地域では今も、調査報道は一種の裏切り行為とみなされています。"
         },
         {
           "type": "funFact",
-          "text": "Au Turkménistan, l'État contrôle si strictement l'information qu'il a interdit le mot « coronavirus » dans les médias au début de la pandémie de 2020."
+          "text": "トルクメニスタンでは、国家が情報を厳しく統制し、2020年のパンデミックの初めには、メディアで「コロナウイルス」という言葉を禁止したほどです。"
         },
         {
           "type": "paragraph",
-          "text": "En 2023, au moins 79 journalistes ont perdu la vie dans l'exercice de leur métier, souvent visés pour faire taire des enquêtes gênantes. Près de 600 journalistes sont emprisonnés chaque année à travers le monde."
+          "text": "2023年には、少なくとも79人のジャーナリストが職務中に命を落としました。都合の悪い取材を黙らせるために、狙われることも少なくありません。毎年、600人近いジャーナリストが世界各地で投獄されています。"
         }
       ]
     },
     {
       "id": "course_230_la_liberte_de_la_presse_dans_le_monde_p2",
-      "title": "Les démocraties ne sont pas à l'abri",
+      "title": "民主主義国も安全だとはいえない",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Contrairement à une idée reçue, la liberté de la presse n'est pas acquise pour toujours dans les pays occidentaux. Elle y subit des transformations plus discrètes, liées à la [[メディアの集中]] et à l'influence financière de quelques grands groupes."
+          "text": "よくある思い込みとは違い、西側の国々でも、報道の自由が永遠に保証されているわけではありません。そこでは、[[メディアの集中]]や、一握りの大手グループの資金力による影響など、もっと目立たない変化が進んでいます。"
         },
         {
           "type": "paragraph",
-          "text": "En Hongrie, [[オルバーン・ヴィクトル]] a mis en place une stratégie efficace : plutôt que d'interdire les médias d'opposition, il a favorisé leur rachat par des proches du gouvernement, transformant peu à peu le paysage médiatique en chambre d'écho officielle."
+          "text": "ハンガリーでは、[[ヴィクトル・オルバーン]]が効果的な戦略をとりました。野党系メディアを禁じるのではなく、政権に近い人々に買い取らせたのです。こうして、メディアの環境を少しずつ、公式のエコーチェンバーに変えていきました。"
         },
         {
           "type": "paragraph",
-          "text": "En France, le débat porte surtout sur la concentration des médias entre les mains de quelques grands groupes, ce qui fait craindre une autocensure des rédactions. Ailleurs, des poursuites judiciaires abusives, appelées [[スラップ訴訟]], se multiplient pour intimider les voix critiques."
+          "text": "フランスでは、少数の大手グループにメディアが集中していることが主な論点になっていて、編集部が自己検閲に陥るのではないかと懸念されています。ほかの国々では、批判の声を威嚇するための不当な訴訟、いわゆる[[スラップ訴訟]]が増えています。"
         }
       ]
     },
     {
       "id": "course_230_la_liberte_de_la_presse_dans_le_monde_p3",
-      "title": "L'argent, nouvel adversaire du journalisme",
+      "title": "お金という、ジャーナリズムの新たな敵",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Au-delà des menaces politiques, le journalisme fait face à une crise économique profonde. Le modèle historique, basé sur la vente au numéro et la publicité, s'est effondré avec le numérique, les grandes plateformes captant désormais l'essentiel de la publicité en ligne."
+          "text": "政治的な脅威に加えて、ジャーナリズムは、深刻な経済危機にも直面しています。販売部数と広告に頼ってきた従来のモデルは、デジタル化によって崩れ、いまでは大手プラットフォームがオンライン広告の大部分を握るようになっています。"
         },
         {
           "type": "image",
           "asset": "newspaper_crisis_digital_transformation_journalism",
           "ratio": "4:3",
-          "caption": "Le modèle économique historique de la presse s'est effondré avec le numérique."
+          "caption": "報道の従来の経済モデルは、デジタル化によって崩れてしまいました。"
         },
         {
           "type": "paragraph",
-          "text": "Cette baisse de ressources fait fermer de nombreux journaux locaux, créant des « déserts d'information » où plus personne ne surveille l'action des élus locaux. Face à cela, de nouveaux modèles émergent, financés par des dons ou des abonnements directs, comme Mediapart en France ou ProPublica aux États-Unis, qui prouvent qu'un journalisme indépendant peut aussi être rentable."
+          "text": "収入が減ったことで、多くの地方紙が廃刊に追い込まれ、地方議員の動きをもはやだれも監視しない「情報の砂漠」が生まれています。これに対し、寄付や直接の購読で成り立つ新しいモデルが登場しています。フランスのメディアパルトやアメリカのプロパブリカがその例で、独立したジャーナリズムも採算がとれることを示しています。"
         },
         {
           "type": "funFact",
-          "text": "Le premier journal imprimé de l'histoire, la « Relation », a été lancé à Strasbourg en 1605 par Johann Carolus, bien avant l'invention légale de la liberté de la presse."
+          "text": "世界で最初の印刷された新聞「レラツィオン」は、1605年にヨハン・カロルスがストラスブールで創刊しました。報道の自由が法的に確立されるよりずっと前のことです。"
         }
       ]
     },
     {
       "id": "course_230_la_liberte_de_la_presse_dans_le_monde_p4",
-      "title": "Vérifier le réel dans un monde saturé d'images",
+      "title": "画像があふれる世界で、現実を確かめるということ",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L'ère numérique a rendu l'information plus rapide, mais elle a aussi ouvert la porte à la [[偽情報]]. Les algorithmes des réseaux sociaux favorisent les contenus émotionnels plutôt que l'analyse factuelle, fragmentant notre vision commune du monde."
+          "text": "デジタル時代は情報を速くしましたが、同時に[[偽情報]]が入りこむ扉も開きました。SNSのアルゴリズムは、事実に基づく分析よりも感情に訴える内容を優先し、世界についての私たちの共通の見方をばらばらにしています。"
         },
         {
           "type": "paragraph",
-          "text": "Le rôle du journaliste évolue donc vers celui d'un « vérificateur » du réel, dans un flux permanent d'images et de données. Les questions éthiques deviennent plus complexes, comme dans le photojournalisme en zone de conflit, où le respect de la dignité humaine se heurte parfois à la nécessité de montrer."
+          "text": "こうしてジャーナリストの役割は、絶え間なく流れる画像とデータのなかで、現実を確かめる「検証者」へと変わりつつあります。紛争地域でのフォトジャーナリズムのように、倫理の問題はいっそう複雑になっています。そこでは、人間の尊厳を守ることが、ときに伝える必要性とぶつかるのです。"
         },
         {
           "type": "paragraph",
-          "text": "Défendre la liberté de la presse suppose donc une meilleure régulation des grandes plateformes numériques et une éducation aux médias renforcée. Sans une presse libre capable de vérifier les faits, le débat démocratique risque de se dissoudre dans un monde où toutes les opinions se valent, peu importe leur véracité."
+          "text": "だからこそ報道の自由を守るには、大手デジタルプラットフォームへのより良い規制と、メディアリテラシー教育の強化が欠かせません。事実を確かめられる自由な報道がなければ、民主的な議論は、真偽にかかわらずどの意見も同じ価値だという世界に溶けていきかねないのです。"
         },
         {
           "type": "takeaway",
-          "text": "Moins de 10% de la population mondiale vit dans un pays où la presse est vraiment libre. Entre répression directe, pressions économiques et désinformation numérique, ce droit essentiel à la démocratie recule presque partout."
+          "text": "報道が本当に自由な国に暮らす人は、世界人口の10%にも届きません。直接の弾圧、経済的な圧力、デジタル上の偽情報のなかで、民主主義に欠かせないこの権利は、ほとんどどこでも後退しています。"
         }
       ]
     }

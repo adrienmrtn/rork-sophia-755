@@ -1,124 +1,124 @@
 {
   "id": "course_93_le_rouge_et_le_noir_stendhal",
-  "title": "« Le Rouge et le Noir » : jusqu'où ira Julien Sorel ?",
+  "title": "『赤と黒』：ジュリアン・ソレルはどこまで行くのか",
   "subtitle": "1830",
   "subject": "litterature",
-  "subcategory": "Classiques français & européens",
-  "description": "Julien Sorel, fils de charpentier, veut s'élever dans une France fermée. Stendhal invente le roman psychologique moderne.",
+  "subcategory": "フランス・ヨーロッパの古典",
+  "description": "大工の息子ジュリアン・ソレルは、閉ざされたフランス社会で成り上がろうとします。スタンダールは近代心理小説を生み出しました。",
   "hero": {
     "image": "le_rouge_et_le_noir_stendhal",
     "ratio": "16:9",
-    "hook": "Rouge pour l'uniforme, noir pour la soutane : deux couleurs, une seule ambition."
+    "hook": "赤は軍服の色、黒は聖職者の黒衣の色。二つの色に宿るのは、ひとつの野心です。"
   },
   "sections": [
     {
       "id": "course_93_le_rouge_et_le_noir_stendhal_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Publié en **1830**, **Le Rouge et le Noir** est l'acte de naissance du roman psychologique, centré sur les pensées intérieures du personnage. **Stendhal**, de son vrai nom **Henri Beyle**, suit **Julien Sorel**, jeune roturier sans titre noble, dévoré par l'ambition dans la **[[復古王政（1815-1830年）]]**, période où les Bourbons sont revenus au pouvoir après Napoléon."
+          "text": "**1830年**に出版された**『赤と黒』**は、登場人物の内面の思考を中心に据えた心理小説の誕生を告げる作品です。**スタンダール**（本名**アンリ・ベール**）が描くのは、**[[復古王政（1815-1830年）]]**のもとで野心に取りつかれた、爵位のない若い平民、**ジュリアン・ソレル**です。この時代は、ナポレオンのあとにブルボン家が権力に復帰した時期にあたります。"
         },
         {
           "type": "paragraph",
-          "text": "Entre nostalgie napoléonienne et société étouffante, le roman analyse l'hypocrisie sociale et les tourments d'une âme qui cherche sa place. Julien regrette l'époque où le talent pouvait s'élever par l'armée. Stendhal décrit avec lucidité comment on calcule ses sentiments pour avancer. Julien devient le modèle du héros romantique moderne : intelligent, fier, mais piégé par son époque."
+          "text": "ナポレオンへの郷愁と息苦しい社会のはざまで、この小説は社会の偽善と、居場所を探す魂の苦悩を分析します。ジュリアンは、才能があれば軍隊で出世できた時代を懐かしみます。スタンダールは、人が出世のために自分の感情まで計算するさまを冷静に描きます。ジュリアンは、聡明で誇り高いものの時代に絡め取られた、近代ロマン主義的な英雄の手本になりました。"
         }
       ]
     },
     {
       "id": "course_93_le_rouge_et_le_noir_stendhal_p1",
-      "title": "Stendhal et le beylisme",
+      "title": "スタンダールとベーリスム",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Stendhal revendique un style sec, influencé par sa carrière militaire sous Napoléon. Il appelle cela le **[[ベーリスム]]** : clarté, sincérité, refus de l'emphase romantique. Pour lui, écrire, c'est analyser froidement les passions humaines."
+          "text": "スタンダールは、ナポレオンのもとでの軍人としての経歴に影響を受けた、そっけない文体を掲げました。これを**[[ベーリスム]]**と名づけています。明晰さ、誠実さ、ロマン主義的な誇張の拒否がその中身です。スタンダールにとって、書くとは人間の情熱を冷静に分析することでした。"
         },
         {
           "type": "image",
           "asset": "stendhal_henri_beyle_portrait",
           "ratio": "4:3",
-          "caption": "Stendhal : l'analyste implacable des passions."
+          "caption": "スタンダール：情熱を容赦なく分析する人。"
         },
         {
           "type": "funFact",
-          "text": "Stendhal lisait chaque matin quelques pages du Code civil pour garder un ton naturel et dénué d'emphase."
+          "text": "スタンダールは、飾り気のない自然な調子を保つために、毎朝『民法典』を数ページ読んでいました。"
         },
         {
           "type": "paragraph",
-          "text": "Le sous-titre, **[[「1830年代記」]]**, rappelle la double ambition du livre : peindre l'âme avec précision et dresser le portrait d'une France sclérosée, figée et incapable de changer. Le roman paraît peu avant les **Trois Glorieuses**, révolution de juillet 1830 qui renverse Charles X."
+          "text": "副題の**[[「1830年代記」]]**は、この本の二つの狙いを示しています。魂を正確に描くことと、硬直して動かず、変われなくなったフランスの肖像を描くことです。小説が出版されたのは、シャルル十世を倒した1830年7月の革命、**栄光の三日間**のわずか前でした。"
         }
       ]
     },
     {
       "id": "course_93_le_rouge_et_le_noir_stendhal_p2",
-      "title": "Julien Sorel : l'énergie contre le système",
+      "title": "ジュリアン・ソレル：体制に挑むエネルギー",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Fils de charpentier méprisé, Julien possède une intelligence rare. Il récite la **[[ウルガタ聖書]]**, traduction latine de la Bible, en latin. En **1830**, le « rouge » de l'uniforme militaire, la carrière sous Napoléon, a cédé au « noir » de la robe ecclésiastique, seul vecteur de pouvoir pour un roturier instruit."
+          "text": "見下されている大工の息子ジュリアンは、まれな知性を持っています。**[[ウルガタ聖書]]**、つまりラテン語訳聖書を、ラテン語で暗誦してみせるほどです。**1830年**には、軍服の「赤」、つまりナポレオン時代の出世の道は、聖職者の黒衣の「黒」に取って代わられていました。教養ある平民が権力に近づける、唯一の手段です。"
         },
         {
           "type": "image",
           "asset": "french_restoration_era_1830_painting",
           "ratio": "4:3",
-          "caption": "La France de la Restauration : une société où l'ambition doit se cacher."
+          "caption": "復古王政期のフランス：野心をおおっぴらに見せてはならない息苦しい社会。"
         },
         {
           "type": "paragraph",
-          "text": "Julien entre au séminaire, école de prêtres, puis devient précepteur chez les **de Rênal** à **Verrières**, en Franche-Comté. Sa conquête de **Mme de Rênal** est d'abord une opération de guerre, pas un coup de cœur. L'hypocrisie devient son outil de survie. L'intrigue s'inspire de l'affaire **Antoine Berthet**, séminariste condamné à mort en **1827**."
+          "text": "ジュリアンは聖職者を養成する神学校に入り、やがてフランシュ＝コンテ地方の**ヴェリエール**で、**レナール家**の家庭教師になります。**レナール夫人**の籠絡は、まず戦のような作戦であって、ときめきではありませんでした。偽善が生き延びるための道具になります。物語は、**1827年**に死刑を宣告された神学生、**アントワーヌ・ベルテ**の事件に着想を得ています。"
         }
       ]
     },
     {
       "id": "course_93_le_rouge_et_le_noir_stendhal_p3",
-      "title": "De la province aux salons parisiens",
+      "title": "地方の町からパリの社交界のサロンへ",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "À Paris, Julien devient secrétaire du **marquis de La Mole**, grand aristocrate. Il séduit **Mathilde de La Mole**, jeune femme fière qui aime le danger et le scandale. Julien la voit comme le trophée ultime de son ascension sociale."
+          "text": "パリで、ジュリアンは大貴族の**ラ・モール侯爵**の秘書になります。そして、危険とスキャンダルを好む誇り高い娘、**マチルド・ド・ラ・モール**を誘惑します。ジュリアンにとってマチルドは、社会的上昇の究極の戦利品でした。"
         },
         {
           "type": "paragraph",
-          "text": "Chez Stendhal, l'amour est souvent une mise en scène où l'on s'observe plus qu'on ne s'abandonne. Julien obtient un titre de noblesse et l'accord pour épouser Mathilde, mais une lettre de **Mme de Rênal** dénonce ses mensonges. Le **[[「赤」と「黒」の象徴]]** oppose l'uniforme militaire à la robe ecclésiastique, seuls leviers d'ascension pour un roturier dans cette société fermée."
+          "text": "スタンダールの世界では、恋愛はしばしば、身を任せるより互いを観察し合う駆け引きの場です。ジュリアンは貴族の称号とマチルドとの結婚の承諾を手に入れますが、**レナール夫人**の手紙がその嘘を暴きます。**[[「赤」と「黒」の象徴]]**は、軍服と聖職者の黒衣を対比させます。閉ざされたこの社会で、平民が出世できる手段はこの二つだけだったのです。"
         }
       ]
     },
     {
       "id": "course_93_le_rouge_et_le_noir_stendhal_p4",
-      "title": "La vérité au pied de l'échafaud",
+      "title": "断頭台のふもとで明らかになる真実",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Julien tire sur Mme de Rênal dans l'église de Verrières, après qu'elle ait écrit une lettre compromettante. En prison, il cesse de calculer. Face à la mort, l'ambition s'efface devant le regret du bonheur vécu avec elle. Il refuse de sauver sa tête par l'intrigue ou les protections aristocratiques. **Mathilde** emporte sa tête tranchée dans un geste théâtral, fidèle à son caractère. Stendhal montre ainsi que seule la vérité des sentiments survit au théâtre social."
+          "text": "ジュリアンは、レナール夫人が不利な手紙を書いたことをきっかけに、ヴェリエールの教会で夫人を撃ちます。獄中で、ジュリアンは計算をやめます。死を前にして、野心は、夫人と過ごした幸せへの悔いに道を譲ります。策略や貴族の庇護によって命を救うことを拒みます。**マチルド**は、いかにも彼女らしい芝居がかった仕草で、切り落とされた首を持ち去ります。こうしてスタンダールは、社会という舞台の上でも生き残るのは感情の真実だけだと示します。"
         },
         {
           "type": "timeline",
           "events": [
             {
               "date": "1827",
-              "title": "Fait divers",
-              "detail": "L'affaire Antoine Berthet inspire le roman."
+              "title": "実際の事件",
+              "detail": "アントワーヌ・ベルテ事件が小説の着想になります。"
             },
             {
               "date": "1830",
-              "title": "Publication",
-              "detail": "Le roman paraît peu avant les Trois Glorieuses."
+              "title": "出版",
+              "detail": "小説は栄光の三日間のわずか前に出版されます。"
             },
             {
-              "date": "Fin",
-              "title": "Exécution",
-              "detail": "Mathilde emporte la tête tranchée de Julien."
+              "date": "結末",
+              "title": "処刑",
+              "detail": "マチルドがジュリアンの切り落とされた首を持ち去ります。"
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "Dans **Le Rouge et le Noir**, paru en **1830**, Stendhal montre comment l'ambition sociale et le bonheur sincère s'opposent dans une société fondée sur l'hypocrisie."
+          "text": "**1830年**に出版された**『赤と黒』**で、スタンダールは、偽善に基づく社会では、社会的野心と誠実な幸福が対立することを示します。"
         }
       ]
     }

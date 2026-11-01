@@ -1,122 +1,122 @@
 {
   "id": "course_68_la_theorie_de_la_relativite_pour_tous",
-  "title": "La théorie de la relativité pour tous",
-  "subtitle": "Einstein 1905 & 1915",
+  "title": "だれにでもわかる相対性理論の話",
+  "subtitle": "アインシュタイン、1905年と1915年",
   "subject": "sciences",
-  "subcategory": "La Terre et l'Univers",
-  "description": "En 1905 et 1915, Einstein change notre idée de l'espace, du temps et de la gravité. Et sans ses calculs, votre GPS se tromperait de plusieurs kilomètres.",
+  "subcategory": "地球と宇宙",
+  "description": "1905年と1915年、アインシュタインは空間と時間と重力についての考え方を変えました。彼の計算がなければ、スマホのGPSは数キロもずれてしまいます。",
   "hero": {
     "image": "la_theorie_de_la_relativite_pour_tous",
     "ratio": "16:9",
-    "hook": "Le temps n'est pas une horloge universelle. Et la gravité n'est pas une corde invisible."
+    "hook": "時間は、宇宙共通の時計ではありません。重力も、見えない綱ではありません。"
   },
   "sections": [
     {
       "id": "course_68_la_theorie_de_la_relativite_pour_tous_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En **1905** et **1915**, **Albert Einstein** publie deux théories qui bouleversent la physique. Jusque-là, on suivait surtout [[ニュートン]] : le temps coulait de la même façon pour tout le monde, partout."
+          "text": "**1905年**と**1915年**、**アルベルト・アインシュタイン**は物理学を揺るがす二つの理論を発表します。それまでは主に[[ニュートン]]の考えが支持され、時間はいつでもどこでも、だれにとっても同じように流れるとされていました。"
         },
         {
           "type": "paragraph",
-          "text": "Einstein montre que l'espace et le temps sont liés, et que la gravité peut se comprendre comme une courbure de ce tissu. Ces idées expliquent les [[ブラックホール]] et le [[ビッグバン]]. Elles corrigent aussi, chaque jour, le GPS de votre téléphone."
+          "text": "アインシュタインは、空間と時間はつながっていて、重力は時空という布のゆがみとして理解できると示しました。この考えは[[ブラックホール]]や[[ビッグバン]]を説明します。毎日、スマホのGPSの誤差を直してもいます。"
         }
       ]
     },
     {
       "id": "course_68_la_theorie_de_la_relativite_pour_tous_p1",
-      "title": "1905 : la relativité restreinte",
+      "title": "1905年：特殊相対性理論",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La **relativité restreinte** repose sur deux idées simples. Les lois de la nature sont les mêmes pour tous ceux qui se déplacent à vitesse constante. Et la vitesse de la lumière dans le vide, **environ 300 000 km/s**, est la même pour tous, qu'on s'en approche ou qu'on s'en éloigne."
+          "text": "**特殊相対性理論**は、二つのシンプルな考えにもとづいています。自然の法則は、一定の速度で動くすべての人にとって同じです。そして真空中の光の速さ、**秒速約300,000km**は、近づいても遠ざかっても、だれにとっても同じです。"
         },
         {
           "type": "image",
           "asset": "albert_einstein_portrait_princeton",
           "ratio": "auto",
-          "caption": "Albert Einstein, auteur de la théorie de la relativité."
+          "caption": "相対性理論をつくったアルベルト・アインシュタイン。"
         },
         {
           "type": "paragraph",
-          "text": "Pour que la lumière garde toujours la même vitesse, le temps doit s'ajuster. C'est la [[時間の伸び]] : plus un objet va vite, plus le temps passe lentement pour lui par rapport à quelqu'un au repos. Ce n'est pas une illusion. Des **horloges atomiques**, instruments qui mesurent le temps avec une extrême précision, l'ont mesuré."
+          "text": "光の速さが常に同じであるためには、時間のほうが調整されなければなりません。これが[[時間の遅れ]]です。物体が速く動くほど、静止している人から見て、その物体の時間はゆっくり進みます。錯覚ではありません。時間をきわめて正確に測る装置である**原子時計**が、実際に測定しています。"
         },
         {
           "type": "paragraph",
-          "text": "Einstein en tire aussi [[E=mc²]] : la masse est une forme d'énergie très concentrée. Comme **c**, la vitesse de la lumière, est énorme, une toute petite masse peut libérer une énergie colossale. C'est un pilier de la [[原子核物理学]], l'étude des noyaux atomiques et de leurs réactions."
+          "text": "アインシュタインはここから[[E=mc²]]も導きます。質量は、非常に濃縮されたエネルギーの一形態だという式です。**c**、つまり光の速さは非常に大きいので、ごくわずかな質量から莫大なエネルギーを取り出せます。これは、原子核とその反応を研究する[[原子核物理学]]の柱です。"
         },
         {
           "type": "funFact",
-          "text": "En 1905, Einstein n'est pas professeur d'université. Il travaille comme examinateur au bureau des brevets de Berne, en Suisse."
+          "text": "1905年、アインシュタインは大学教授ではありませんでした。スイスのベルンにある特許局で、審査官として働いていました。"
         }
       ]
     },
     {
       "id": "course_68_la_theorie_de_la_relativite_pour_tous_p2",
-      "title": "1915 : la gravité comme courbure",
+      "title": "1915年：曲がりとしての重力",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Dix ans plus tard, Einstein publie la **relativité générale**. Newton voyait la gravité comme une force invisible tirant les masses l'une vers l'autre. Einstein propose une autre image : l'**espace-temps**, l'espace et le temps réunis en un seul tissu, forme un tissu souple."
+          "text": "十年後、アインシュタインは**一般相対性理論**を発表します。ニュートンは、重力を質量どうしを引き合う見えない力と考えました。アインシュタインは別のイメージを示します。空間と時間を一つにした**時空**は、しなやかな布のようなものだというのです。"
         },
         {
           "type": "paragraph",
-          "text": "Une masse lourde, comme le Soleil, creuse ce tissu. Imaginez une boule de bowling sur un trampoline. Une bille lancée à côté ne va pas tout droit : elle suit le creux. De même, la Terre orbite parce qu'elle suit la courbure créée par le Soleil."
+          "text": "太陽のような重い質量は、この布をへこませます。トランポリンの上にボウリングの球がのっているところを想像してみてください。そのそばに転がした小さな玉は、まっすぐには進まず、へこみに沿って曲がります。同じように、地球が公転するのは、太陽がつくった時空の曲がりに沿って進んでいるからです。"
         },
         {
           "type": "paragraph",
-          "text": "Même la lumière suit ces courbes. En **1919**, l'astronome britannique **Arthur Eddington** le vérifie pendant une éclipse : la position apparente d'étoiles derrière le Soleil est légèrement décalée. Einstein devient célèbre du jour au lendemain."
+          "text": "光もこの曲がりに沿って進みます。**1919年**、イギリスの天文学者**アーサー・エディントン**が日食のときにこれを確かめました。太陽の向こう側にある星の見かけの位置が、わずかにずれていたのです。アインシュタインは一夜にして有名になりました。"
         }
       ]
     },
     {
       "id": "course_68_la_theorie_de_la_relativite_pour_tous_p3",
-      "title": "Le GPS, preuve de poche",
+      "title": "ポケットの中の証拠、GPS",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Les satellites GPS tournent à environ **14 000 km/h**, à **20 000 km** d'altitude. Pour vous situer au mètre près, leurs horloges doivent rester synchronisées avec celles du sol. Or deux effets relativistes jouent en même temps."
+          "text": "GPS衛星は、高度**2万km**を**時速約14,000km**で回っています。位置をメートル単位で割り出すには、衛星の時計を地上の時計と同期させ続けなければなりません。ところが、二つの相対論的な効果が同時に働きます。"
         },
         {
           "type": "paragraph",
-          "text": "À cause de leur vitesse, le temps y passe un peu plus lentement, effet de relativité restreinte : environ **7 microsecondes** de retard par jour. À cause de la gravité plus faible en altitude, le temps y passe un peu plus vite, effet de relativité générale : environ **45 microsecondes** d'avance."
+          "text": "衛星は高速で動いているため、時間がわずかにゆっくり進みます。これは特殊相対性理論の効果で、1日あたり約**7マイクロ秒**の遅れになります。一方、高度が高くて重力が弱いため、時間は少し速く進みます。これは一般相対性理論の効果で、約**45マイクロ秒**の進みになります。"
         },
         {
           "type": "funFact",
-          "text": "Sans corrections relativistes, l'erreur de position du GPS pourrait atteindre environ **11 km** par jour."
+          "text": "相対論的な補正がなければ、GPSの位置の誤差は1日に約**11km**に達しかねません。"
         },
         {
           "type": "paragraph",
-          "text": "Le bilan est une avance nette d'environ **38 microsecondes** par jour. Cela paraît minuscule. À la vitesse de la lumière, c'est déjà énorme pour la navigation."
+          "text": "差し引きすると、1日あたり約**38マイクロ秒**の進みになります。ごくわずかに思えますが、光の速さで考えると、ナビゲーションにとってはすでに大きな値です。"
         }
       ]
     },
     {
       "id": "course_68_la_theorie_de_la_relativite_pour_tous_p4",
-      "title": "Ondes, trous noirs, univers en expansion",
+      "title": "波、ブラックホール、膨張する宇宙",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La relativité générale prédit les trous noirs : des régions où la courbure est si forte que même la lumière ne sort plus. Einstein doutait de leur existence réelle. La [[電波天文学]], l'observation du ciel en ondes radio, et les images récentes les ont confirmés."
+          "text": "一般相対性理論は、ブラックホールを予言します。曲がりがあまりに強く、光さえ出てこられない領域です。アインシュタイン自身は、その実在を疑っていました。[[電波天文学]]、つまり電波で空を観測する学問と、近年の画像が、存在を確かめました。"
         },
         {
           "type": "paragraph",
-          "text": "En **1916**, il prédit aussi les **ondes gravitationnelles** : des rides de l'espace-temps produites par des catastrophes cosmiques, comme la fusion de deux trous noirs. Il faut attendre **2015** et l'observatoire **LIGO**, un détecteur au sol sensible aux vibrations de l'espace, pour les détecter."
+          "text": "**1916年**には、**重力波**の存在も予言します。2つのブラックホールの合体のような、宇宙規模の大事件が生み出す、時空のさざ波です。実際に検出されるまでには長い時間がかかり、それが実現したのは**2015年**、空間の振動をとらえる地上の検出器**LIGO**によってでした。"
         },
         {
           "type": "paragraph",
-          "text": "Enfin, ces équations ouvrent la voie à un univers en expansion, base du modèle du Big Bang. Einstein avait d'abord ajouté une **constante cosmologique**, un terme mathématique pour forcer un univers fixe. Les observations de Hubble l'ont ensuite convaincu du contraire."
+          "text": "そして、これらの方程式は膨張する宇宙への道を開き、ビッグバン理論の土台になります。アインシュタインは当初、宇宙を静止したままにするために、数学的な項である**宇宙定数**を付け加えていました。しかしその後、ハッブルの観測を知って、考えを改めました。"
         },
         {
           "type": "takeaway",
-          "text": "**E=mc²** lie masse et énergie. La relativité générale dit que la gravité courbe l'espace-temps. Sans ces corrections, votre GPS se tromperait de plusieurs kilomètres chaque jour."
+          "text": "**E=mc²**は質量とエネルギーを結びつけます。一般相対性理論によれば、重力は時空を曲げます。これらの補正がなければ、GPSは毎日数キロもずれてしまいます。"
         }
       ]
     }

@@ -1,112 +1,112 @@
 {
   "id": "course_42_pourquoi_reve_t_on",
-  "title": "Pourquoi rêve-t-on ?",
-  "subtitle": "Cerveau & sommeil",
+  "title": "なぜ夢を見るの？",
+  "subtitle": "脳と睡眠",
   "subject": "sciences",
-  "subcategory": "Notre quotidien expliqué",
-  "description": "Chaque nuit, tu rêves environ deux heures. La plupart des rêves s'effacent au réveil. Voici ce que la science comprend aujourd'hui de ce mystère.",
+  "subcategory": "暮らしの解説",
+  "description": "毎晩、およそ2時間は夢を見ています。けれども、夢のほとんどは目覚めると消えてしまいます。この謎について、科学が今どこまでわかっているかを紹介します。",
   "hero": {
     "image": "pourquoi_reve_t_on",
     "ratio": "16:9",
-    "hook": "Tu rêves environ six ans de ta vie. Et tu en oublies presque tout."
+    "hook": "人生のおよそ6年間は、夢の中。そして、そのほとんどを忘れています。"
   },
   "sections": [
     {
       "id": "course_42_pourquoi_reve_t_on_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Chaque nuit, tu passes environ **deux heures** à rêver. Sur une vie, cela fait près de **six ans**. Pourtant, au réveil, la plupart de ces histoires disparaissent en quelques secondes."
+          "text": "毎晩、およそ**2時間**は夢を見ています。一生では、**6年**近くにもなります。それなのに、目覚めると、夢の物語はたいてい数秒で消えてしまいます。"
         },
         {
           "type": "paragraph",
-          "text": "Les scientifiques ne sont pas tous d'accord sur le « pourquoi ». Mais ils savent de mieux en mieux **quand** on rêve, et ce que le cerveau fait pendant ce temps : il réorganise les souvenirs, teste des scénarios et digère les émotions."
+          "text": "「なぜ」夢を見るのかについては、科学者のあいだでも意見が一致していません。それでも、**いつ**夢を見るのか、そのあいだ脳が何をしているのかは、だんだんわかってきました。脳は記憶を整理し、いろいろな場面を試し、感情を消化しているのです。"
         }
       ]
     },
     {
       "id": "course_42_pourquoi_reve_t_on_p1",
-      "title": "Le sommeil, ce n'est pas « éteint »",
+      "title": "眠っているとき、脳は「オフ」ではない",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le sommeil n'est pas une coupure totale. Il avance par **cycles** d'environ **90 minutes**, plusieurs fois par nuit. Dans chaque cycle, le cerveau passe par des phases différentes : un sommeil léger, un sommeil profond utile pour récupérer le corps, puis une phase très particulière."
+          "text": "眠りは、完全なスイッチオフではありません。一晩に何度も、約**90分**ごとの**サイクル**で進みます。1サイクルのなかで、脳はいくつもの段階を通ります。浅い眠り、体を回復させるのに役立つ深い眠り、そして、とても特別な段階です。"
         },
         {
           "type": "image",
           "asset": "sleeping_person_rem_dream",
           "ratio": "4:3",
-          "caption": "Pendant le sommeil paradoxal, les yeux bougent sous les paupières."
+          "caption": "レム睡眠のあいだ、まぶたの下で目がせわしなく動いています。"
         },
         {
           "type": "paragraph",
-          "text": "Cette phase s'appelle le [[逆説睡眠]]. Le cerveau est presque aussi actif qu'éveillé, mais le corps est paralysé par l'[[筋緊張の消失]]. C'est surtout là que naissent les rêves longs et narratifs. Cette paralysie évite de « jouer » physiquement ce qu'on rêve."
+          "text": "この段階が[[レム睡眠]]です。脳はほとんど起きているときと同じくらい活発なのに、体は[[筋緊張の消失]]によって動かなくなっています。長くて物語のような夢は、おもにこの段階で生まれます。体が動かないおかげで、夢の中の動きを実際に「演じて」しまうことがありません。"
         },
         {
           "type": "funFact",
-          "text": "On rêve **4 à 6 fois** par nuit. On en oublie environ **95 %** dans les dix minutes après le réveil. Si tu te souviens d'un rêve, c'est souvent parce que tu t'es réveillé pile pendant ou juste après."
+          "text": "夢は一晩に**4〜6回**見ます。そのうち約**95%**は、目覚めて十分間のうちに忘れてしまいます。夢を覚えているのは、夢の最中や直後にちょうど目が覚めたからであることが多いのです。"
         }
       ]
     },
     {
       "id": "course_42_pourquoi_reve_t_on_p2",
-      "title": "À quoi ça sert de rêver ?",
+      "title": "夢は何の役に立つの？",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Freud** pensait que le rêve révélait surtout des désirs cachés. Aujourd'hui, les chercheurs préfèrent des explications plus concrètes, basées sur l'**imagerie cérébrale**, des techniques qui visualisent l'activité du cerveau. Le rêve active surtout le **système limbique**, l'ensemble de structures profondes liées aux émotions."
+          "text": "**フロイト**は、夢はおもに隠された欲望を表すと考えました。今の研究者は、もっと具体的な説明を好みます。その根拠になるのが、脳の活動を可視化する技術である**脳画像法**です。夢を見ているとき、とくに活発になるのは**大脳辺縁系**、つまり感情に関わる脳の深部の構造のまとまりです。"
         },
         {
           "type": "image",
           "asset": "brain_activity_dreaming_scan",
           "ratio": "4:3",
-          "caption": "Pendant le rêve, le cerveau travaille : émotions, images, souvenirs."
+          "caption": "夢を見ているあいだも、脳は働いています。感情、イメージ、記憶。"
         },
         {
           "type": "paragraph",
-          "text": "Trois grandes pistes dominent. Première : **trier la mémoire**, garder l'utile, laisser partir le reste. Deuxième : **s'entraîner au danger** dans un monde sans risque réel. Troisième : **digérer les émotions** : pendant le rêve, le cerveau revisite des moments forts avec moins de **noradrénaline**, un neurotransmetteur lié au stress et à l'éveil."
+          "text": "有力な説は三つあります。一つ目は、**記憶を整理**すること。役立つものを残し、残りは手放します。二つ目は、現実の危険がない世界で**危険に備える練習**をすること。三つ目は、**感情を消化**すること。夢のあいだ、脳は強い印象の出来事をたどり直しますが、そのとき**ノルアドレナリン**、つまりストレスや覚醒に関わる神経伝達物質は少なくなっています。"
         }
       ]
     },
     {
       "id": "course_42_pourquoi_reve_t_on_p3",
-      "title": "Pourquoi on oublie ses rêves",
+      "title": "夢を忘れてしまうのはなぜ？",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Pour stocker un souvenir durablement, le cerveau a besoin de certaines substances chimiques. Or, pendant le sommeil paradoxal, le niveau de noradrénaline chute. Résultat : le rêve reste dans une mémoire très fragile."
+          "text": "記憶を長くしまっておくには、脳にある種の化学物質が必要です。ところが、レム睡眠のあいだはノルアドレナリンの量が下がります。その結果、夢はとても壊れやすい記憶のままになります。"
         },
         {
           "type": "paragraph",
-          "text": "Dès que tu ouvres les yeux, la lumière, les sons et les pensées de la journée écrasent ce souvenir fragile. Le meilleur moyen de le garder ? Noter le rêve **tout de suite**, avant même de bouger."
+          "text": "目を開けた瞬間、光や音、その日の考えごとが、このもろい記憶を押しつぶしてしまいます。覚えておくいちばんの方法は、動く前に、**すぐ**夢を書き留めることです。"
         },
         {
           "type": "funFact",
-          "text": "Avant la télévision couleur, peu de gens disaient rêver en couleur. Aujourd'hui, la plupart le font. Notre environnement visuel influence même la texture de nos rêves."
+          "text": "カラーテレビが普及する前は、カラーの夢を見ると答える人は多くありませんでした。今では、ほとんどの人が見ます。身のまわりの視覚的な環境が、夢の質感にまで影響しているのです。"
         }
       ]
     },
     {
       "id": "course_42_pourquoi_reve_t_on_p4",
-      "title": "Et le rêve lucide ?",
+      "title": "明晰夢とは？",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Parfois, on se rend compte **qu'on rêve**, tout en restant endormi : c'est le **rêve lucide**. Une zone du cerveau liée à la logique et à l'auto-réflexion, le **cortex préfrontal**, se rallume alors un peu."
+          "text": "眠ったまま、**夢を見ていると気づく**ことがあります。これが**明晰夢**です。論理や自己省察に関わる脳の領域、**前頭前皮質**が、このときは少しだけ再び活動します。"
         },
         {
           "type": "paragraph",
-          "text": "Certains peuvent alors influencer le décor ou transformer un cauchemar. Des chercheurs étudient même ce phénomène pour aider des sportifs à répéter mentalement des gestes, ou pour soigner des cauchemars répétitifs."
+          "text": "そうなると、夢の舞台を変えたり、悪夢を別の展開にしたりできる人もいます。研究者はこの現象を、スポーツ選手が動きを頭の中で繰り返し練習する助けにしたり、何度も見る悪夢を治療したりするために研究しています。"
         },
         {
           "type": "takeaway",
-          "text": "On rêve surtout pendant le [[逆説睡眠]], une phase où le cerveau est actif et le corps paralysé. Le rêve aide probablement à gérer la mémoire et les émotions, même si on en oublie presque tout au réveil."
+          "text": "夢を見るのは、おもに[[レム睡眠]]のときです。脳は活発で、体は動かない段階です。夢はおそらく記憶と感情を整える助けになっていますが、目覚めたときにはほとんど忘れてしまいます。"
         }
       ]
     }

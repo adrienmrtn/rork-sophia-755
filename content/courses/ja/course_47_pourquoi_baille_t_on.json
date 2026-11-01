@@ -1,94 +1,94 @@
 {
   "id": "course_47_pourquoi_baille_t_on",
-  "title": "Pourquoi bâille-t-on ?",
-  "subtitle": "Corps & cerveau",
+  "title": "なぜあくびをするの？",
+  "subtitle": "体と脳",
   "subject": "sciences",
-  "subcategory": "Notre quotidien expliqué",
-  "description": "Tout le monde bâille : humains, chiens, parfois même des fœtus. Ce n'est probablement pas pour « manquer d'oxygène ». Voici les pistes les plus solides.",
+  "subcategory": "暮らしの解説",
+  "description": "あくびをするのは、人間も犬も同じで、胎児がすることさえあります。おそらく「酸素不足」が理由ではありません。ここでは、有力な説を紹介します。",
   "hero": {
     "image": "pourquoi_baille_t_on",
     "ratio": "16:9",
-    "hook": "Tu bâilles. Ton voisin bâille. Et ce n'est (presque) pas contagieux par hasard."
+    "hook": "あくびが出ます。となりの人もあくびをします。それがうつるのは、（ほとんど）偶然ではありません。"
   },
   "sections": [
     {
       "id": "course_47_pourquoi_baille_t_on_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le bâillement semble banal. Pourtant, c'est un réflexe complexe : mâchoire, thorax, diaphragme, le corps entier s'y met. Lions, chiens, humains : beaucoup d'animaux bâillent."
+          "text": "あくびはありふれたものに見えます。でも実は複雑な反射で、あご、胸、横隔膜と、体じゅうが動員されます。ライオンも犬も人間も、多くの動物があくびをします。"
         },
         {
           "type": "paragraph",
-          "text": "Longtemps, on a dit : « c'est pour avoir plus d'oxygène ». Cette idée est aujourd'hui largement abandonnée. Les explications modernes sont plus intéressantes."
+          "text": "長いあいだ、「酸素をもっと取り込むためだ」と言われてきました。この考えは、今ではほとんど否定されています。現代の説明のほうが、ずっとおもしろいのです。"
         }
       ]
     },
     {
       "id": "course_47_pourquoi_baille_t_on_p1",
-      "title": "Pas (surtout) pour l'oxygène",
+      "title": "おもに酸素のためではない",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Des expériences ont montré qu'augmenter l'oxygène dans l'air n'empêche pas de bâiller. Baisser un peu le dioxyde de carbone non plus. Donc le bâillement n'est pas un simple « rattrapage d'air »."
+          "text": "いくつかの実験によると、空気中の酸素を増やしても、あくびは止まりません。二酸化炭素を少し減らしても同じです。だからあくびは、単なる「空気の補給」ではありません。"
         },
         {
           "type": "paragraph",
-          "text": "Une piste forte aujourd'hui : le bâillement aiderait à **réguler la température du cerveau**. En inspirant largement et en étirant le visage, on ferait un peu « ventiler » et refroidir la tête, surtout quand on est fatigué."
+          "text": "今注目されている有力な説は、あくびが**脳の温度を調節する**のを助けるというものです。大きく息を吸い、顔を引きのばすことで、頭に風を通して冷やしているのかもしれません。とくに疲れているときに。"
         }
       ]
     },
     {
       "id": "course_47_pourquoi_baille_t_on_p2",
-      "title": "Pourquoi c'est contagieux",
+      "title": "なぜうつるのか",
       "free": false,
       "blocks": [
         {
           "type": "image",
           "asset": "contagious_yawning_people_group",
           "ratio": "4:3",
-          "caption": "Voir quelqu'un bâiller suffit souvent à déclencher le réflexe."
+          "caption": "だれかがあくびをするのを見ると、それだけで反射が起きることがよくあります。"
         },
         {
           "type": "paragraph",
-          "text": "Chez l'humain, voir, entendre, ou même lire le mot « bâiller » peut déclencher un bâillement. Ce n'est pas qu'une imitation bête : cela touche aussi l'**empathie** et des circuits du cerveau liés aux [[ミラーニューロン]], des neurones qui s'activent quand on agit… ou quand on voit quelqu'un agir."
+          "text": "人間では、あくびを見たり、聞いたり、「あくび」という言葉を読んだりするだけでも、あくびが出ることがあります。これは単なるまねではありません。**共感**や、脳の回路のうち[[ミラーニューロン]]とかかわるものも関係しています。ミラーニューロンは、自分が動くときも、だれかが動くのを見るときも活動する神経細胞です。"
         },
         {
           "type": "funFact",
-          "text": "Les jeunes enfants bâillent peu par contagion. Cette sensibilité arrive plus tard, en même temps que certaines compétences sociales."
+          "text": "幼い子どもは、あくびがうつることがあまりありません。この感受性は、ある種の社会的な能力と同じころ、あとになって現れます。"
         }
       ]
     },
     {
       "id": "course_47_pourquoi_baille_t_on_p3",
-      "title": "On bâille déjà avant de naître",
+      "title": "生まれる前からあくびをしている",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Les fœtus bâillent dès environ la **11e semaine** de grossesse. À cet âge, leurs poumons ne respirent pas encore l'air. Donc, encore une fois, ce n'est pas pour « manquer d'oxygène »."
+          "text": "胎児は妊娠**11週**ごろからあくびをします。この時期の胎児の肺は、まだ空気で呼吸していません。つまりここでも、「酸素不足」が理由ではないのです。"
         },
         {
           "type": "paragraph",
-          "text": "Chez le fœtus, le bâillement pourrait aider au développement des muscles de la mâchoire et du visage."
+          "text": "胎児にとってのあくびは、あごや顔の筋肉が育っていくのを助けているのかもしれません。"
         }
       ]
     },
     {
       "id": "course_47_pourquoi_baille_t_on_p4",
-      "title": "Bâiller pour rester alerte ?",
+      "title": "あくびで目を覚ましておく？",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "On bâille souvent quand on est fatigué… mais aussi juste avant une épreuve, ou quand on s'ennuie en voulant rester concentré. L'étirement pourrait stimuler le système nerveux et aider à **rester vigilant**."
+          "text": "あくびは疲れているときによく出ますが、試験の直前や、退屈なのに集中しようとしているときにも出ます。体を伸ばすことで神経系が刺激され、**注意を保つ**助けになるのかもしれません。"
         },
         {
           "type": "takeaway",
-          "text": "Le bâillement n'est probablement pas un manque d'oxygène. Il servirait plutôt à réguler le cerveau (température, vigilance) et, chez l'humain, il se propage aussi par contagion sociale."
+          "text": "あくびは、おそらく酸素不足のサインではありません。むしろ脳のはたらき（温度や覚醒度）を調節するためのもので、人間ではさらに、人づきあいを通じた伝染によっても広がります。"
         }
       ]
     }
