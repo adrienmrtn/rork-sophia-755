@@ -1,124 +1,124 @@
 {
   "id": "course_153_la_creation_d_adam_michel_ange",
-  "title": "La Création d'Adam, Michel-Ange",
+  "title": "ミケランジェロ『アダムの創造』",
   "subtitle": "1508-1512",
   "subject": "art",
   "subcategory": "映画・写真・建築と象徴的な作品",
-  "description": "Sur le plafond de la Sixtine, Michel-Ange peint Dieu et Adam dont les doigts presque se touchent. Chef-d'œuvre de la fresque et du Cinquecento.",
+  "description": "システィーナ礼拝堂の天井に、ミケランジェロは神とアダムを描きました。二人の指は、あとわずかで触れ合いそうです。フレスコ画とチンクエチェントを代表する傑作です。",
   "hero": {
     "image": "la_creation_d_adam_michel_ange",
     "ratio": "16:9",
-    "hook": "Deux doigts séparés par un souffle : l'image la plus citée de la Renaissance."
+    "hook": "息ひとつぶんだけ離れた二本の指。ルネサンスでもっとも引用されるイメージ。"
   },
   "sections": [
     {
       "id": "course_153_la_creation_d_adam_michel_ange_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Entre **1508** et **1512**, **Michel-Ange** peint le plafond de la Chapelle Sixtine à Rome. Au centre, *La Création d'Adam* : Dieu tend la main, Adam s'éveille."
+          "text": "**1508年**から**1512年**にかけて、**ミケランジェロ**はローマのシスティーナ礼拝堂の天井を描きます。その中央にあるのが*『アダムの創造』*です。神が手を差し伸べ、アダムが目を覚まします。"
         },
         {
           "type": "paragraph",
-          "text": "C'est le sommet du [[チンクエチェント]], le XVIe siècle italien."
+          "text": "これは、十六世紀のイタリアを指す[[チンクエチェント]]の頂点です。"
         }
       ]
     },
     {
       "id": "course_153_la_creation_d_adam_michel_ange_p1",
-      "title": "Une commande papale",
+      "title": "教皇からの注文",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le pape Jules II veut un plafond grandiose. Michel-Ange, surtout sculpteur, proteste… puis accepte. [[ブラマンテ]], rival architecte, aurait poussé la commande pour le mettre en difficulté."
+          "text": "教皇ユリウス2世は、壮大な天井画を望みます。彫刻家としての顔が強いミケランジェロは、抗議した末に引き受けます。建築家で競争相手の[[ブラマンテ]]が、彼を窮地に追い込むためにこの注文を後押しした、と言われます。"
         },
         {
           "type": "paragraph",
-          "text": "Le plafond entier raconte la Genèse. *La Création d'Adam* n'est qu'un panneau, mais le plus photographié. Michel-Ange y condense tension anatomique et théologie."
+          "text": "天井全体が『創世記』を物語ります。*『アダムの創造』*は一つの区画にすぎませんが、いちばん多く撮影される区画です。ミケランジェロはそこに、解剖学的な緊張と神学を凝縮しました。"
         },
         {
           "type": "image",
           "asset": "sistine_chapel_ceiling_overview",
           "ratio": "4:3",
-          "caption": "La Sixtine : un ciel peint de bout en bout."
+          "caption": "システィーナ礼拝堂：端から端まで描かれた空"
         }
       ]
     },
     {
       "id": "course_153_la_creation_d_adam_michel_ange_p2",
-      "title": "La fresque, un combat",
+      "title": "フレスコという闘い",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La [[フレスコ]] exige de peindre sur l'enduit frais. Dos courbé, mois après mois. La [[「脳の形をしたマント」説]] voit dans le manteau de Dieu la forme d'un cerveau : hypothèse moderne séduisante, non prouvée."
+          "text": "[[フレスコ]]では、塗りたての漆喰の上に描かなければなりません。背中を曲げたまま、何か月も続きます。[[「脳の形をしたマント」説]]は、神のマントが脳の形をしていると見ます。魅力的な現代の仮説ですが、証明されてはいません。"
         },
         {
           "type": "funFact",
-          "text": "Michel-Ange a peint de nombreux personnages nus : le corps humain comme louange."
+          "text": "ミケランジェロは、裸の人物をたくさん描きました。人間の体を賛美するためです。"
         },
         {
           "type": "paragraph",
-          "text": "Ses études d'anatomie, proches de la [[人体解剖]], donnent aux muscles une vérité rare."
+          "text": "解剖学の研究は[[人体解剖]]に迫るもので、筋肉にまれに見る真実味を与えています。"
         },
         {
           "type": "paragraph",
-          "text": "Travailler allongé sous la voûte épuise. Les lettres de l'artiste parlent de souffrance physique. Le sublime a un coût corporel."
+          "text": "天井の下で仰向けになって働くのは、体力を消耗させます。画家の手紙には、肉体的な苦痛が綴られています。崇高さには、体で払う代価があります。"
         }
       ]
     },
     {
       "id": "course_153_la_creation_d_adam_michel_ange_p3",
-      "title": "Doigts qui ne se touchent pas",
+      "title": "最後まで触れ合うことのない二本の指",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L'espace entre les deux index crée la tension. Adam est beau, mais passif ; Dieu, entouré d'anges, apporte l'énergie. La [[モッレッツァ]] (douceur vivante des chairs) rivalise avec la force."
+          "text": "二本の人さし指のあいだの空間が、緊張を生みます。アダムは美しいものの受け身で、天使たちに囲まれた神がエネルギーをもたらします。[[モッレッツァ]]（肉体のみずみずしいやわらかさ）は、力強さに引けをとりません。"
         },
         {
           "type": "paragraph",
-          "text": "Adam touche presque Dieu, mais l'écart reste. Ce millimètre a nourri des siècles d'interprétations : grâce, désir, science, humanisme."
+          "text": "アダムは神にほとんど触れそうですが、すきまは残ります。この一ミリが、何世紀にもわたる解釈を生んできました。恩寵、欲望、科学、人文主義。"
         },
         {
           "type": "image",
           "asset": "creation_of_adam_hands_detail",
           "ratio": "4:3",
-          "caption": "Le millimètre le plus célèbre de l'histoire de l'art."
+          "caption": "美術史のなかでもっとも有名な、わずか一ミリのすきま"
         }
       ]
     },
     {
       "id": "course_153_la_creation_d_adam_michel_ange_p4",
-      "title": "Héritage",
+      "title": "受け継がれたもの",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Reprise en pubs, films, mèmes : le geste survit hors du Vatican. Il reste surtout une leçon de [[マニエラ・モデルナ]] : le génie peut transformer une voûte en théâtre de l'origine."
+          "text": "広告、映画、ミームにも取り上げられ、このしぐさはバチカンの外でも生き続けています。とりわけ残っているのは、[[マニエラ・モデルナ]]の教訓です。天才は、天井を起源の劇場に変えることができる、というものです。"
         },
         {
           "type": "paragraph",
-          "text": "Pour bien saisir La Création d'Adam, Michel-Ange, il faut garder une chose en tête : chaque détail technique sert une émotion ou une idée. L'œuvre n'est jamais seulement décorative."
+          "text": "ミケランジェロの『アダムの創造』を深く味わうには、心にとめておきたいことがあります。技法の細部はどれも、感情か考えを伝えるためにある、ということです。この作品は、ただの飾りではありません。"
         },
         {
           "type": "paragraph",
-          "text": "Le contexte compte autant que le style. Dates, lieux, commanditaires, public : tout cela explique pourquoi une forme apparaît à un moment précis, et pas avant."
+          "text": "背景は、様式と同じくらい大切です。年代、場所、依頼主、観客。こうしたことが、ある形がなぜその時にあらわれ、それ以前にはあらわれなかったのかを説明してくれます。"
         },
         {
           "type": "paragraph",
-          "text": "Enfin, l'héritage se mesure dans le temps long. Ce que nous voyons aujourd'hui dans les musées, les films ou la musique populaire porte encore la trace de ces inventions."
+          "text": "最後に、受け継がれたものは長い時間のなかで測られます。今日、私たちが美術館や映画、ポピュラー音楽で目にするものには、こうした発明の跡が今も残っています。"
         },
         {
           "type": "paragraph",
-          "text": "Restaurée, commentée, parodiée, la scène survit hors contexte religieux. Elle reste le geste par lequel l'art occidental imagine l'origine."
+          "text": "修復され、論じられ、パロディにされても、この場面は宗教の文脈を離れて生き続けています。西洋美術が起源を思い描くときの、あのしぐさであり続けているのです。"
         },
         {
           "type": "takeaway",
-          "text": "Avec La Création d'Adam, Michel-Ange a condensé la Genesis en un geste : deux doigts, et l'humanité s'éveille."
+          "text": "『アダムの創造』によって、ミケランジェロは『創世記』を一つのしぐさに凝縮しました。二本の指、そして人類が目を覚まします。"
         }
       ]
     }

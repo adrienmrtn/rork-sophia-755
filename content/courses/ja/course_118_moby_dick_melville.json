@@ -1,114 +1,114 @@
 {
   "id": "course_118_moby_dick_melville",
-  "title": "Moby Dick, Melville",
-  "subtitle": "1851",
+  "title": "白鯨（メルヴィル）",
+  "subtitle": "1851年",
   "subject": "litterature",
   "subcategory": "英米と世界の文学",
-  "description": "Ismaël embarque sur le Pequod pour chasser Moby Dick. Melville mêle aventure maritime, science des baleines et méditation sur l'obsession.",
+  "description": "イシュメールはモビー・ディックを追うため、ピークォド号に乗り込みます。メルヴィルは、海の冒険、クジラの科学、執念をめぐる思索を一つにまとめました。",
   "hero": {
     "image": "moby_dick_melville",
     "ratio": "16:9",
-    "hook": "Call me Ishmael : trois mots qui ouvrent l'une des cathédrales de la littérature américaine."
+    "hook": "「Call me Ishmael」。この3語が、アメリカ文学の大聖堂の一つの幕を開けます。"
   },
   "sections": [
     {
       "id": "course_118_moby_dick_melville_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Publié en **1851**, **Moby Dick** n'est pas seulement un récit d'aventures maritimes. Le titre original complet est *Moby-Dick; or, The Whale*. **Herman Melville**, né en **1819** et mort en **1891**, y mêle épopée, traité sur les cétacés et réflexions métaphysiques. Incompris à sa sortie, ce monument de la [[アメリカ文学]] est devenu un mythe fondateur."
+          "text": "**1851年**に出版された**『白鯨』**は、海の冒険物語にとどまりません。原題の完全な形は*Moby-Dick; or, The Whale*です。**1819年**に生まれ**1891年**に亡くなった**ハーマン・メルヴィル**は、叙事詩、クジラ類についての論考、形而上学的な考察をこの作品に盛り込みました。発表当時は理解されませんでしたが、この[[アメリカ文学]]の金字塔は、いまでは文学の礎をなす神話のような存在です。"
         },
         {
           "type": "paragraph",
-          "text": "Le roman explore la lutte titanesque entre l'homme, la nature et le divin, à travers la traque d'une baleine blanche légendaire. Son incipit, « Call me Ishmael », « Appelez-moi Ismaël », est l'une des ouvertures les plus célèbres de la littérature."
+          "text": "小説は、伝説の白いクジラを追う旅を通して、人間と自然と神との巨大な闘いを描きます。書き出しの「Call me Ishmael」、つまり「私をイシュメールと呼んでください」は、文学史上屈指の有名な冒頭です。"
         }
       ]
     },
     {
       "id": "course_118_moby_dick_melville_p1",
-      "title": "Melville et l'échec initial d'une œuvre totale",
+      "title": "メルヴィルと、壮大な作品の最初の大きな失敗",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Herman Melville** a navigué sur des baleiniers dans le Pacifique dans les années **1840**. Il a même vécu parmi des tribus des [[マルキーズ諸島]], archipel de Polynésie française. Fort de cette expérience, il rédige son opus entre **1850** et **1851**, dans une maison partagée avec **Nathaniel Hawthorne**."
+          "text": "**ハーマン・メルヴィル**は**1840年代**に、太平洋で捕鯨船に乗り組んでいました。[[マルキーズ諸島]]（フランス領ポリネシアの群島）では、現地の部族のもとで暮らしたこともあります。この経験を土台に、**1850年**から**1851年**にかけて、**ナサニエル・ホーソーン**と共有した家で大作を書き上げました。"
         },
         {
           "type": "image",
           "asset": "herman_melville_portrait_photograph",
           "ratio": "4:3",
-          "caption": "Herman Melville, oublié de son vivant, redécouvert au XXe siècle."
+          "caption": "ハーマン・メルヴィル：生前は忘れられ、二十世紀に再発見された。"
         },
         {
           "type": "funFact",
-          "text": "À sa mort en **1891**, Melville était si oublié que le New York Times a publié une nécrologie au nom de « Henry Melville »."
+          "text": "**1891年**にメルヴィルが亡くなったとき、すでにすっかり忘れられていて、ニューヨーク・タイムズは「ヘンリー・メルヴィル」という名前で死亡記事を載せました。"
         },
         {
           "type": "paragraph",
-          "text": "Le roman est un échec commercial total. Melville meurt convaincu que son nom disparaîtra. Ce n'est qu'au XXe siècle qu'il entre dans le [[文学の正典]], ensemble des œuvres considérées comme fondamentales et dignes d'être enseignées."
+          "text": "小説は商業的に完全な失敗でした。メルヴィルは、自分の名は消えていくと信じたまま亡くなります。二十世紀になってようやく、メルヴィルは[[文学の正典]]、つまり基本的で教える価値があるとされる作品の集まりに名を連ねます。"
         }
       ]
     },
     {
       "id": "course_118_moby_dick_melville_p2",
-      "title": "Le Pequod : un microcosme social et industriel",
+      "title": "ピークォド号：社会と産業を映し出す小さな世界",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "« Call me Ishmael » : le narrateur s'engage sur le **Pequod** à [[ニューベッドフォード]]. Cette ville était la capitale mondiale de l'industrie baleinière au XIXe siècle. Le navire est un microcosme de la société américaine, avec des marins de toutes origines. [[クイークェグ]], harponneur polynésien tatoué, est fils d'un chef insulaire."
+          "text": "「Call me Ishmael」と名乗る語り手は、[[ニューベッドフォード]]で**ピークォド号**に乗り組みます。この町は十九世紀、世界の捕鯨産業の中心地でした。船はアメリカ社会の縮図で、あらゆる出身の船乗りが乗り込んでいます。タトゥーを入れたポリネシアの銛打ち[[クイークェグ]]は、島の首長の息子です。"
         },
         {
           "type": "image",
           "asset": "sperm_whale_19th_century_whaling_engraving",
           "ratio": "4:3",
-          "caption": "La chasse au [[マッコウクジラ]] : Melville consacre des chapitres entiers à la [[鯨類学]]."
+          "caption": "[[マッコウクジラ]]の捕鯨：メルヴィルは、まるまる何章もを[[鯨類学]]に割いています。"
         },
         {
           "type": "paragraph",
-          "text": "Les lieutenants [[スターバック]], quaker pragmatique, [[スタッブ]], flegmatique et jovial, et [[フラスク]], impulsif, incarnent différentes facettes de la raison. Le capitaine **Achab** impose une discipline de fer au service d'une obsession secrète : traquer la baleine qui lui a arraché la jambe."
+          "text": "航海士の[[スターバック]]は現実的なクエーカー教徒、[[スタッブ]]は動じない陽気な男、[[フラスク]]は衝動的で、それぞれ理性のさまざまな面を表しています。船長**エイハブ**は、鉄の規律で船を従わせ、ひそかな執念に仕えさせます。それは、自分の脚を奪ったクジラを追うことです。"
         }
       ]
     },
     {
       "id": "course_118_moby_dick_melville_p3",
-      "title": "La baleine blanche comme miroir de l'absolu",
+      "title": "絶対的なものを映す鏡としての白いクジラ",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Moby Dick** est un [[マッコウクジラ]] blanc, [[リヴァイアサン]] invincible. Ce monstre marin biblique possède une puissance colossale. Pour **Achab**, ce n'est pas un animal mais le masque de la [[悪意]] cosmique. Achab y voit une méchanceté délibérée projetée sur l'univers. Ayant perdu sa jambe, il consacre sa vie à traquer le Mal incarné."
+          "text": "**モビー・ディック**は白い[[マッコウクジラ]]であり、不死身の[[リヴァイアサン]]です。聖書に出てくるこの海の怪物は、圧倒的な力を持っています。**エイハブ**にとって、それは動物ではなく、宇宙に潜む[[悪意]]の仮面です。エイハブはそこに、宇宙に投げかけられた意図的な邪悪さを見ます。脚を失ってから、エイハブは、悪の化身を追うことに人生を捧げます。"
         },
         {
           "type": "image",
           "asset": "whaling_ship_19th_century_painting",
           "ratio": "16:9",
-          "caption": "Le Pequod face à l'océan : voyage commercial devenu quête théologique."
+          "caption": "大海原に立ち向かうピークォド号。商業航海は神学的な探求へと変わります。"
         },
         {
           "type": "paragraph",
-          "text": "Melville utilise le [[鯨蝋]] pour souligner l'indifférence de la nature. C'est une substance cireuse appelée spermaceti, logée dans la tête du cachalot. Le blanc représente un vide terrifiant, une absence de réponse de l'univers. Chaque personnage projette sur la baleine ses propres démons."
+          "text": "メルヴィルは[[鯨蝋]]を使って、自然の無関心を強調します。それは、スペルマセチと呼ばれるろう状の物質で、マッコウクジラの頭部にあります。白は恐ろしい虚無、宇宙が答えを返さないことを表します。登場人物はそれぞれ、クジラに自分自身の悪魔を投影します。"
         }
       ]
     },
     {
       "id": "course_118_moby_dick_melville_p4",
-      "title": "La chute finale et la survie par le récit",
+      "title": "最後の破局と、物語によって生き延びること",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Lors de l'assaut final, Moby Dick pulvérise le Pequod. Achab meurt étranglé par sa corde de harpon. Seul Ismaël survit, flottant sur le cercueil de Queequeg, recueilli par le baleinier **Rachel**. Tout l'équipage disparaît dans l'océan."
+          "text": "最後の襲撃で、モビー・ディックはピークォド号を粉々にします。エイハブは銛綱に首を絞められて死にます。生き残るのはイシュメールだけで、クイークェグの棺に浮かび、捕鯨船**レイチェル号**に救われます。乗組員はみな海に消えます。"
         },
         {
           "type": "paragraph",
-          "text": "La survie d'Ismaël permet la naissance du livre. Le survivant témoigne de la folie des hommes et de la puissance indomptable de la nature. Si l'homme ne peut vaincre l'inconnu, il peut en faire le récit. Melville mélange aventure maritime, encyclopédie de la baleine et méditation sur l'obsession destructrice. Des chapitres entiers décrivent la [[鯨類学]], l'étude des cétacés, avec une précision quasi scientifique, avant de basculer dans la tragédie."
+          "text": "イシュメールが生き残ったからこそ、この本が生まれます。生還者は、人間の愚かさと、自然の手なずけられない力を証言します。人は未知に勝てなくても、それを物語ることはできます。メルヴィルは、海の冒険、クジラの百科事典、破滅的な執念についての思索を混ぜ合わせます。まるまる何章もが、ほとんど科学的といえる正確さで[[鯨類学]]、つまりクジラ類の研究を描き、やがて悲劇へと転じます。"
         },
         {
           "type": "takeaway",
-          "text": "**Moby Dick** transforme la traque d'un cachalot en odyssée philosophique sur l'obsession d'Achab et l'indifférence d'un univers dont Ismaël est le seul témoin."
+          "text": "**『白鯨』**は、一頭のマッコウクジラを追う旅を、エイハブの執念と、イシュメールだけが目撃者である宇宙の無関心をめぐる、哲学的な叙事詩に変えます。"
         }
       ]
     }

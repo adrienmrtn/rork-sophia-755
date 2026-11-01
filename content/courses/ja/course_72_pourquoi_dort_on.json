@@ -1,106 +1,106 @@
 {
   "id": "course_72_pourquoi_dort_on",
-  "title": "Pourquoi dort-on ?",
-  "subtitle": "Corps & cerveau",
+  "title": "なぜ人は眠るのか",
+  "subtitle": "体と脳",
   "subject": "sciences",
   "subcategory": "地球と宇宙",
-  "description": "On passe un tiers de sa vie à dormir. Ce n'est pas du temps perdu : le sommeil nettoie le cerveau, répare le corps et grave les souvenirs.",
+  "description": "人は人生の3分の1を眠って過ごします。それは無駄な時間ではありません。眠りは脳をきれいにし、体を修復し、記憶を刻み込みます。",
   "hero": {
     "image": "pourquoi_dort_on",
     "ratio": "16:9",
-    "hook": "Dormir, ce n'est pas s'éteindre : c'est le grand chantier nocturne du corps."
+    "hook": "眠るとは、スイッチが切れることではありません。体が夜のあいだに進める、大きな工事なのです。"
   },
   "sections": [
     {
       "id": "course_72_pourquoi_dort_on_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Sur une vie de 75 ans, on dort près de **25 ans**. Longtemps, on a cru que le sommeil n'était qu'une pause. En réalité, c'est un travail actif, aussi vital que boire ou manger."
+          "text": "75年の人生のうち、人は約**25年**も眠って過ごします。長いあいだ、睡眠はただの休止だと考えられてきました。実際には、飲んだり食べたりするのと同じくらい欠かせない、活発な営みです。"
         },
         {
           "type": "paragraph",
-          "text": "La science n'a pas encore toutes les réponses sur « pourquoi » on dort. Mais elle sait très bien ce qui se passe quand on ne dort pas, et ce que la nuit répare en silence."
+          "text": "人がなぜ眠るのかについて、科学はまだすべての答えを持っていません。それでも、眠らないと何が起こるのか、夜のあいだに静かに何が修復されるのかは、よくわかっています。"
         }
       ]
     },
     {
       "id": "course_72_pourquoi_dort_on_p1",
-      "title": "Ce que révèle le manque de sommeil",
+      "title": "睡眠不足が明らかにしていること",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En **1964**, l'étudiant américain **Randy Gardner** reste **11 jours** sans dormir. Hallucinations, paranoïa, esprit qui s'effondre : la preuve que le cerveau ne tient pas sans repos."
+          "text": "**1964年**、アメリカの学生**ランディ・ガードナー**は**11日間**眠らずに過ごしました。幻覚、妄想、崩れていく精神。脳は休息なしにはもたないことの証拠です。"
         },
         {
           "type": "image",
           "asset": "sleeping_person_bedroom_night",
           "ratio": "auto",
-          "caption": "Le sommeil, indispensable à la récupération du cerveau et du corps."
+          "caption": "睡眠は、脳と体を回復させるために欠かせない、大切な時間です。"
         },
         {
           "type": "paragraph",
-          "text": "Chez le rat, l'absence totale de sommeil tue en **2 à 3 semaines**, comme la famine. Chez l'humain, une maladie génétique rare, l'**insomnie fatale familiale**, mène aussi à la mort. Au quotidien, 17 heures de veille équivalent à un taux d'alcoolémie de **0,5 g/l**. Le cerveau force alors des [[瞬間的な居眠り]], de courtes coupures de conscience involontaires."
+          "text": "ラットでは、睡眠を完全に奪うと**2〜3週間**で死に至ります。飢餓と同じです。人間でも、まれな遺伝性の病気である**致死性家族性不眠症**は、やはり死に至ります。日常の面では、17時間起き続けると、血中アルコール濃度**0.5g/l**に相当する状態になります。すると脳は、[[マイクロスリープ]]、つまり意思とは関係なく起こる短い意識の途切れを強制的に起こします。"
         },
         {
           "type": "funFact",
-          "text": "Après son record, Randy Gardner a dormi **14 heures** d'affilée. Il s'est réveillé capable de fonctionner, mais son sommeil a mis des semaines à retrouver un rythme normal."
+          "text": "記録を達成したあと、ランディ・ガードナーは**14時間**続けて眠りました。目覚めたときは普通に動けましたが、睡眠のリズムが元に戻るまでには数週間かかりました。"
         }
       ]
     },
     {
       "id": "course_72_pourquoi_dort_on_p2",
-      "title": "La nuit, le cerveau fait le ménage",
+      "title": "夜のあいだに、脳は大掃除をする",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Pendant le sommeil, le cerveau ne s'arrête pas : il change de mode. L'**hippocampe**, structure clé de la mémoire en forme de cheval de mer, « rejoue » la journée et envoie les infos vers le [[大脳新皮質]], la couche externe du cerveau, pour un stockage durable. Résultat : on apprend souvent **20 à 40 %** mieux après une bonne nuit."
+          "text": "眠っているあいだも、脳は止まりません。モードを切り替えているのです。タツノオトシゴの形をした、記憶の鍵となる構造の**海馬**は、その日の出来事を「再生」し、情報を[[大脳新皮質]]、つまり脳の外側の層へ送って、長く保存できるようにします。その結果、ぐっすり眠った後は、学習の成果が**20〜40%**高まることがよくあります。"
         },
         {
           "type": "paragraph",
-          "text": "Le sommeil profond déclenche aussi l'**hormone de croissance**, qui répare muscles et tissus, et stimule les [[サイトカイン類]], molécules de signalisation du système immunitaire. Autre découverte majeure : le [[グリンパティックシステム]], un réseau de drainage cérébral **dix fois** plus actif la nuit. Il évacue des déchets, dont les protéines liées au risque d'Alzheimer."
+          "text": "深い眠りは**成長ホルモン**の分泌も促します。成長ホルモンは筋肉や組織を修復し、免疫系の情報伝達物質である[[サイトカイン]]の働きも高めます。もう一つ大きな発見が、[[グリンパティックシステム]]です。脳の老廃物を排出するこの仕組みは、夜には**十倍**活発になります。アルツハイマー病のリスクに関わるタンパク質を含め、老廃物を洗い流します。"
         },
         {
           "type": "funFact",
-          "text": "Durant le sommeil profond, les cellules du cerveau se rétractent d'environ **60 %**. L'espace ainsi créé laisse mieux circuler le liquide de nettoyage."
+          "text": "深い眠りのあいだ、脳の細胞は約**60%**縮みます。こうして生まれた隙間を、老廃物を洗い流す液体がいっそう流れやすくなります。"
         }
       ]
     },
     {
       "id": "course_72_pourquoi_dort_on_p3",
-      "title": "Qui dort combien, et comment",
+      "title": "だれが、どれだけ、どのように眠るか",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Les chats dorment **12 à 16 heures** : prédateurs en sécurité. Les girafes se contentent parfois de **30 minutes à 2 heures**, en petites siestes, prêtes à fuir. Les dauphins dorment avec **un seul hémisphère**, une moitié du cerveau, à la fois, pour continuer à remonter respirer."
+          "text": "ネコは**12〜16時間**眠ります。安全な場所にいる捕食者だからです。キリンは**30分から2時間**で足りることもあり、いつでも逃げられるよう短い仮眠を重ねます。イルカは**片方の半球だけ**、つまり脳の半分ずつ眠り、呼吸のために浮上し続けます。"
         },
         {
           "type": "paragraph",
-          "text": "Les bébés, eux, dorment jusqu'à **18 heures**, avec beaucoup de [[逆説睡眠]], la phase des rêves avec mouvements oculaires rapides. Cette phase aide la [[シナプスの形成]], la fabrication des connexions entre neurones."
+          "text": "赤ちゃんは最長**18時間**も眠り、その多くが[[逆説睡眠]]、つまり眼球が素早く動く、夢を見る段階です。この段階は[[シナプス形成]]、つまりニューロン同士のつながりづくりを助けます。"
         }
       ]
     },
     {
       "id": "course_72_pourquoi_dort_on_p4",
-      "title": "L'horloge interne et la lumière bleue",
+      "title": "体内時計と、青い光が睡眠に与える影響",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Deux forces nous poussent au lit : la fatigue qui s'accumule le jour, et les [[概日リズム]], l'horloge interne calée sur **24 heures**. Quand la lumière baisse, le cerveau libère de la **mélatonine**, une hormone qui prépare le corps au sommeil sans l'imposer."
+          "text": "人をベッドへ向かわせる力は二つあります。日中にたまる疲れと、**24時間**に合わせて刻む体内時計の[[概日リズム]]です。光が弱まると、脳は**メラトニン**を分泌します。メラトニンは、眠りを強制はせず、体を眠る準備に向かわせるホルモンです。"
         },
         {
           "type": "paragraph",
-          "text": "Les écrans le soir trompent cette horloge et retardent l'endormissement. On ne « rattrape » pas vraiment une dette de sommeil le week-end : la fatigue baisse, pas tous les dégâts. Horaires réguliers, pièce sombre et fraîche restent les meilleurs alliés."
+          "text": "夜の画面は、この体内時計をだまして、寝つきを遅らせます。睡眠不足を週末に「取り戻す」ことも、実際にはできません。疲れは減っても、ダメージのすべては消えないのです。決まった時間に寝起きすること、暗くて涼しい部屋が、変わらず最良の味方です。"
         },
         {
           "type": "takeaway",
-          "text": "Le sommeil nettoie le cerveau, répare le corps et consolide la mémoire. Une privation totale tue en quelques semaines : dormir n'est pas un luxe, c'est une maintenance vitale."
+          "text": "睡眠は脳をきれいにし、体を修復し、記憶を定着させます。完全な断眠は数週間で命を奪います。眠ることは贅沢ではなく、生きるための保守点検なのです。"
         }
       ]
     }

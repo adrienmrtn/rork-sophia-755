@@ -1,161 +1,161 @@
 {
   "id": "course_265_pourquoi_les_spartiates_etaient_ils_si",
-  "title": "Pourquoi les Spartiates étaient-ils si redoutables ?",
-  "subtitle": "Le mirage spartiate",
+  "title": "スパルタ人はなぜあれほどまでに恐れられたのか",
+  "subtitle": "スパルタという幻",
   "subject": "histoire",
   "subcategory": "古代と中世",
-  "description": "Deux rois, des filles athlètes, des repas pris en commun et une armée que toute la Grèce admire. Mais presque tout ce qu'on sait de Sparte vient de gens qui n'y vivaient pas.",
+  "description": "2人の王、競技に励む少女たち、みんなで取る食事、そしてギリシア中が称賛した軍隊。けれども、スパルタについて知られていることのほとんどは、そこに住んでいなかった人々の言葉によるものです。",
   "author": "ezgi-gizem-berkay",
   "hero": {
     "image": "young_spartans_exercising_degas_painting_1860",
     "ratio": "4:3",
-    "hook": "Vingt-cinq siècles qu'on admire Sparte. Pas une ligne de son histoire n'a été écrite par un Spartiate."
+    "hook": "スパルタが称賛されて二十五世紀。けれども、その歴史は1行たりともスパルタ人自身によって書かれていません。"
   },
   "sections": [
     {
       "id": "course_265_pourquoi_les_spartiates_etaient_ils_si_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le modèle social de Sparte garde sa part de mystère. Les lois attribuées à son législateur [[リュクルゴス]] auraient créé un équilibre rare, dans le partage des biens comme dans la vie quotidienne. Platon s'en inspire pour *La République*. Mais cette société idéale vieille de **2 500 ans** a-t-elle existé, ou n'est-elle qu'une façade soigneusement construite ?"
+          "text": "スパルタの社会モデルには、今も謎が残ります。立法者[[リュクルゴス]]が作ったとされる法は、財産の分け方でも日々の暮らしでも、めずらしいほどの均衡を生んだといいます。プラトンはそこから着想を得て*『国家』*を書きました。では、**2,500年**前のこの理想社会は本当にあったのでしょうか。それとも、念入りに作られた見せかけにすぎないのでしょうか。"
         },
         {
           "type": "paragraph",
-          "text": "Depuis vingt-cinq siècles, Sparte sert surtout de miroir aux idéaux de chaque époque. Et rien de ce récit ne vient des Spartiates eux-mêmes : les lois écrites y sont interdites, et il ne reste que des fragments de **deux poètes**, Alcman et Tyrtée. Aucune source ne décrit Sparte de l'intérieur."
+          "text": "二十五世紀にわたって、スパルタは何よりも、それぞれの時代の理想を映す鏡として使われてきました。しかも、その物語のどれ一つとして、スパルタ人自身から出たものではありません。成文法は禁じられ、残るのはアルクマンとティルタイオスという**2人の詩人**の断片だけです。スパルタを内側から描いた史料は存在しません。"
         }
       ]
     },
     {
       "id": "course_265_pourquoi_les_spartiates_etaient_ils_si_p1",
-      "title": "Lycurgue et la constitution mixte",
+      "title": "リュクルゴスの築いた混合政体",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Selon les auteurs anciens, Lycurgue étudie l'histoire, la philosophie et la politique en Crète, en Ionie et en Égypte, au **IXe ou VIIIe siècle** av. J.-C., puis réorganise la cité. L'[[デルフォイの神託]] ratifie ses lois : cette caution sacrée porte le nom de « Grande Rhêtra ». Les récits divergent tant que Plutarque, son biographe grec, écrit : « On ne peut rien dire de lui qui ne soit contesté. » Pour les historiens d'aujourd'hui, ce fondateur flou a reçu après coup le mérite de siècles d'évolution des institutions."
+          "text": "古代の著述家によれば、リュクルゴスはクレタ、イオニア、エジプトで歴史、哲学、政治を学び、**紀元前9〜8世紀**に都市国家を再編します。[[デルフォイの神託]]がその法を承認し、この神聖なお墨付きは「大レトラ」と呼ばれます。伝承はあまりに食い違うため、ギリシアの伝記作家プルタルコスは「彼について、異論のないことは何一つ言えない」と書いています。今日の歴史家は、このおぼろげな創設者に、何世紀もかけた制度の発展の功績が、後から与えられたと見ています。"
         },
         {
           "type": "image",
           "asset": "delphi_temple_of_apollo_ruins_oracle_greece",
           "ratio": "2:1",
-          "caption": "Le sanctuaire de Delphes, le temple d'Apollon au fond : l'oracle y aurait ratifié les lois de Lycurgue."
+          "caption": "デルフォイの聖域。奥にアポロン神殿が見えます。ここで神託がリュクルゴスの法を承認したとされます。"
         },
         {
           "type": "paragraph",
-          "text": "Soucieux d'égalité, Lycurgue met en place une structure unique : **deux rois** qui règnent ensemble, un conseil de **trente anciens**, la gérousie, où siègent aussi les rois, une assemblée des citoyens, l'apella, et cinq inspecteurs élus chaque année, les [[エフォロイ]]. L'ensemble tient très longtemps sans tyrannie ni guerre civile. Ailleurs en Grèce, craindre ses dirigeants est déshonorant ; à Sparte, obéir à la loi est une fierté, et les penseurs de l'Antiquité s'en fascinent."
+          "text": "平等を重んじたリュクルゴスは、類のない政治の仕組みをつくります。ともに統治する**2人の王**、王も席に着く**三十人の長老**の評議会ゲルーシア、市民の集会アペラ、そして毎年選ばれる5人の監督官、[[エフォロイ]]です。この体制は、僭主政も内戦もなく、とても長く続きました。ギリシアのほかの地域では、支配者を恐れるのは不名誉ですが、スパルタでは法に従うことが誇りで、古代の思想家たちはそこに魅了されました。"
         },
         {
           "type": "funFact",
-          "text": "Xénophon loue en Lycurgue un sage qui apprend aux citoyens à préférer une mort honorable à la lâcheté. Les lâches ont d'ailleurs un nom, les tresantes, « ceux qui tremblent », et sont tenus à l'écart de la cité."
+          "text": "クセノフォンは、リュクルゴスを、名誉ある死を臆病より選ぶよう市民に教えた賢者として称えます。臆病者にはトレサンテス、つまり「震える者」という呼び名まであり、市民社会から遠ざけられました。"
         }
       ]
     },
     {
       "id": "course_265_pourquoi_les_spartiates_etaient_ils_si_p2",
-      "title": "Filles athlètes, garçons de l'agogè, « Égaux »",
+      "title": "少女アスリート、アゴーゲーの少年、「対等な者」",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Pour Lycurgue, enfanter est le premier devoir des femmes. Il exige donc qu'elles soient éduquées, comme les hommes. Les filles disputent des concours athlétiques où l'on juge leur agilité et leur force, exactement comme les garçons. Et contrairement aux **Athéniennes**, les Spartiates peuvent acquérir des biens et en hériter."
+          "text": "リュクルゴスにとって、子を産むことは女性の第一の務めでした。そのため、男性と同じように女性にも教育を受けさせるよう求めます。少女たちは、敏捷さと力を競う運動競技に、少年たちとまったく同じように出場します。また、**アテネの女性**と違って、スパルタの女性は財産を手に入れ、相続することができます。"
         },
         {
           "type": "image",
           "asset": "spartan_running_girl_bronze_statuette_british_museum",
           "ratio": "3:2",
-          "caption": "Une jeune Spartiate en pleine course : statuette de bronze conservée au British Museum."
+          "caption": "走っている最中の若いスパルタの少女をかたどった、大英博物館所蔵の青銅の小像。"
         },
         {
           "type": "paragraph",
-          "text": "Les garçons, eux, passent par l'éducation d'État, l'[[アゴーゲー]]. Retirés à leur famille à **sept ans**, ils grandissent sous la surveillance des adultes de la classe dirigeante, marchent pieds nus et portent le même vêtement toute l'année."
+          "text": "一方、少年たちは国家が行う教育、[[アゴーゲー]]を受けます。**7歳**で家族のもとから引き離され、支配階級の大人たちの監督のもとで育ち、はだしで歩き、1年を通して同じ服を着て過ごします。"
         },
         {
           "type": "paragraph",
-          "text": "Les citoyens s'appellent entre eux les « Égaux », homoioi. Ils prennent des repas communs frugaux, les [[シュシティア]], conçus pour une alimentation équilibrée, fuient toute ostentation et rentrent chez eux à pied, pour l'exercice. C'est aussi là que les jeunes apprennent directement des **anciens**."
+          "text": "市民は互いを「対等な者」、ホモイオイと呼び合います。質素な共同の食事である[[シュシティア]]をとりますが、これは栄養のバランスを考えたもので、見栄は張らず、帰りは運動のために歩いて家へ戻ります。若者が**年長者**から直接学ぶのも、この場です。"
         }
       ]
     },
     {
       "id": "course_265_pourquoi_les_spartiates_etaient_ils_si_p3",
-      "title": "Une armée faite pour tenir les hilotes",
+      "title": "ヘイロータイを押さえつけるための軍隊",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L'infanterie lourde de Sparte passe longtemps pour l'armée la plus disciplinée du monde grec. Lycurgue a bâti l'État autour d'une **armée permanente**, ce qui structure aussi l'administration et la production. Les soldats combattent en [[ファランクス]], par escouades et par compagnies, en tunique rouge et bouclier de bronze. L'armée marche en ordre, dresse ses camps selon des règles précises et s'entraîne sans relâche."
+          "text": "スパルタの重装歩兵は、長いあいだギリシア世界でいちばん規律のとれた軍隊とされてきました。リュクルゴスは**常備軍**を軸に国家をつくり、それが行政や生産の仕組みも形づくっています。兵士は、赤いチュニックと青銅の盾を身につけ、分隊や中隊ごとに[[ファランクス]]を組んで戦います。軍は整然と行進し、決まりに従って野営し、休みなく訓練します。"
         },
         {
           "type": "image",
           "asset": "hoplite_phalanx_chigi_vase_corinthian_650_bc",
           "ratio": "3:2",
-          "caption": "Deux rangs de fantassins lourds, les hoplites, sur le vase Chigi, vers 650 av. J.-C."
+          "caption": "重装歩兵（ホプリテス）の2列の戦列。紀元前650年ごろのキージの壺より。"
         },
         {
           "type": "paragraph",
-          "text": "Sparte est avant tout une puissance d'infanterie. Sa mission vitale : tenir les [[ヘイロータイ]], la population asservie, bien plus nombreuse que les citoyens. Chaque année, les **éphores** leur déclarent officiellement la guerre, et les jeunes de la [[クリュプテイア]], des unités secrètes, répandent la peur en tuant des hilotes dans les campagnes."
+          "text": "スパルタは何よりも歩兵の国です。その最大の使命は、市民よりはるかに数の多い隷属民、[[ヘイロータイ]]を押さえつけることです。毎年、**エフォロイ**は彼らに公式に宣戦布告し、秘密部隊である[[クリュプテイア]]の若者たちは、農村でヘイロータイを殺して恐怖をまき散らします。"
         },
         {
           "type": "funFact",
-          "text": "Le corps d'élite des hippeis, dont le nom veut dire « cavaliers », combat à pied. Sparte n'a pas de cavalerie régulière avant la fin du Ve siècle av. J.-C."
+          "text": "エリート部隊ヒッペイスは、名前は「騎兵」という意味ですが、徒歩で戦います。スパルタには、紀元前5世紀末まで正規の騎兵隊がありません。"
         },
         {
           "type": "paragraph",
-          "text": "À la tête de ses alliés du Péloponnèse depuis le **VIe siècle** av. J.-C., Sparte finit par vaincre Athènes en **404** av. J.-C. Mais sa domination sur la Grèce dure une trentaine d'années à peine. En **371** av. J.-C., Thèbes l'écrase à Leuctres, libère les hilotes de Messénie et détruit la base économique de la cité."
+          "text": "スパルタは**紀元前6世紀**からペロポネソスの同盟国の盟主となり、**紀元前404年**にはついにアテネを破ります。しかし、ギリシアへの支配はわずか三十年ほどしか続きません。**紀元前371年**、テーバイがレウクトラでスパルタを打ち破り、メッセニアのヘイロータイを解放して、都市国家の経済基盤を壊します。"
         }
       ]
     },
     {
       "id": "course_265_pourquoi_les_spartiates_etaient_ils_si_p4",
-      "title": "Le déclin d'une cité qui rétrécit",
+      "title": "縮んでいく都市国家と、その衰退",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Contrairement à l'idée reçue, la chute de Sparte vient d'une contraction interne. La terre y est privée, inégalement répartie et transmise par héritage. De riches éleveurs de chevaux côtoient des citoyens qui peinent à payer leur part des syssities. Or la citoyenneté dépend de cette cotisation : qui perd sa terre perd son statut. Le nombre de citoyens tombe de **8 000** à moins de **1 000** à l'époque d'Aristote."
+          "text": "通説と違い、スパルタの没落は内部の縮小から生じました。土地は私有で、不平等に分かれ、相続で受け継がれます。裕福な馬の飼育者がいる一方で、シュシティアの分担金を払うのに苦労する市民もいます。ところが市民権はこの分担金に左右され、土地を失う者は身分も失います。市民の数は、**8,000人**からアリストテレスの時代には**1,000人**未満にまで落ち込みます。"
         },
         {
           "type": "paragraph",
-          "text": "Les droits des femmes sur la terre servent d'abord la natalité voulue par l'État. Sans droits politiques, exclues de l'apella et des charges publiques, elles peuvent être partagées entre plusieurs hommes pour donner des enfants vigoureux. **Aristote** voit une faiblesse dans le fait qu'elles possèdent les **deux cinquièmes** des terres, et note que les Spartiates, si forts à la guerre, échouent en temps de paix."
+          "text": "女性が土地について持つ権利は、何よりも国家が望む出生率に役立ちました。女性は政治的権利を持たず、アペラにも公職にも加われず、強健な子を産むため、複数の男性のあいだで共有されることもあります。**アリストテレス**は、女性が土地の**5分の2**を所有していることを弱点と見て、戦争にはあれほど強いスパルタ人が平時には失敗すると指摘しています。"
         },
         {
           "type": "timeline",
           "events": [
             {
-              "date": "IXe-VIIIe s. av. J.-C.",
-              "title": "Les lois de Lycurgue",
-              "detail": "Selon la tradition, l'oracle de Delphes ratifie la Grande Rhêtra."
+              "date": "紀元前9〜8世紀",
+              "title": "リュクルゴスの法",
+              "detail": "伝承では、デルフォイの神託が大レトラを承認したとされます。"
             },
             {
-              "date": "VIe s. av. J.-C.",
-              "title": "Tête du Péloponnèse",
-              "detail": "Sparte prend la direction de ses alliés péloponnésiens."
+              "date": "紀元前6世紀",
+              "title": "ペロポネソスの盟主",
+              "detail": "スパルタが、ペロポネソスの同盟国を率いる立場に立ちます。"
             },
             {
-              "date": "404 av. J.-C.",
-              "title": "Victoire sur Athènes",
-              "detail": "Une domination sur la Grèce qui dure à peine trente ans."
+              "date": "紀元前404年",
+              "title": "アテネに勝利",
+              "detail": "ギリシアへの支配は、わずか三十年ほどしか続きません。"
             },
             {
-              "date": "371 av. J.-C.",
-              "title": "Désastre de Leuctres",
-              "detail": "Thèbes bat Sparte et libère les hilotes de Messénie."
+              "date": "紀元前371年",
+              "title": "レウクトラの惨敗",
+              "detail": "テーバイがスパルタを破り、メッセニアのヘイロータイを解放します。"
             },
             {
-              "date": "IVe s. av. J.-C.",
-              "title": "Moins de 1 000 citoyens",
-              "detail": "Au temps d'Aristote, la cité s'est vidée de ses Égaux."
+              "date": "紀元前4世紀",
+              "title": "市民は1,000人未満",
+              "detail": "アリストテレスの時代には、都市国家から「対等な者」が減っていました。"
             }
           ]
         },
         {
           "type": "paragraph",
-          "text": "Notre image de Sparte vient d'admirateurs et de critiques athéniens, puis de **Plutarque**, qui écrit cinq siècles après l'âge d'or de la cité. L'« histoire spartiate » n'est souvent que ce qu'on a dit de Sparte."
+          "text": "私たちが持つスパルタのイメージは、アテネの賛美者と批判者に由来し、さらに、スパルタの黄金時代から五百年後に書いた**プルタルコス**に由来します。「スパルタの歴史」とは、多くの場合、スパルタについて言われたことにすぎません。"
         },
         {
           "type": "takeaway",
-          "text": "Sparte doit sa force à une armée permanente conçue pour tenir les hilotes, et sa chute à un corps de citoyens qui ne cesse de rétrécir. Le reste est un mirage écrit par les autres."
+          "text": "スパルタの強さは、ヘイロータイを押さえつけるために作られた常備軍にあり、没落は、縮み続けた市民団にありました。それ以外は、他者が書いた幻にすぎません。"
         }
       ]
     }

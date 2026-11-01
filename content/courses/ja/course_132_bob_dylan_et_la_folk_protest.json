@@ -1,147 +1,147 @@
 {
   "id": "course_132_bob_dylan_et_la_folk_protest",
-  "title": "Comment Bob Dylan est-il passé de la folk au prix Nobel ?",
-  "subtitle": "1961-2016",
+  "title": "ボブ・ディランは、どのようにしてフォークからノーベル賞へたどり着いたのでしょうか？",
+  "subtitle": "1961〜2016年",
   "subject": "art",
   "subcategory": "音楽",
-  "description": "De Greenwich Village au Nobel, Bob Dylan transforme la chanson folk en poésie politique, puis en rock électrique.",
+  "description": "グリニッジ・ヴィレッジからノーベル賞まで、ボブ・ディランはフォークソングを政治的な詩へ、そして電気を使ったロックへと変えていきます。",
   "hero": {
     "image": "bob_dylan_et_la_folk_protest",
     "ratio": "16:9",
-    "hook": "Une guitare, un harmonica, et la chanson américaine devient littérature."
+    "hook": "一本のギターと、一本のハーモニカ。それだけで、アメリカの歌は文学になっていきます。"
   },
   "sections": [
     {
       "id": "course_132_bob_dylan_et_la_folk_protest_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Bob Dylan**, né Robert Zimmerman en **1941** dans le Minnesota, est l'une des figures les plus influentes de la chanson du XXe siècle. Prophète de la contestation, puis poète électrique, il refuse de rester dans une seule case."
+          "text": "**ボブ・ディラン**は、本名ロバート・ジマーマン。**1941年**にミネソタ州で生まれ、二十世紀の歌の世界で最も影響力のある存在の一人です。抗議の預言者から、電気の詩人へ。ひとつの枠にとどまることを拒み続けました。"
         },
         {
           "type": "paragraph",
-          "text": "En **2016**, l'Académie suédoise lui décerne le **Prix Nobel de littérature**. Pour la première fois, un auteur-compositeur de rock est reconnu comme un grand écrivain de la langue anglaise."
+          "text": "**2016年**、スウェーデン・アカデミーはディランに**ノーベル文学賞**を贈ります。ロックのシンガーソングライターが、英語圏の偉大な作家として認められたのは、これが初めてでした。"
         }
       ]
     },
     {
       "id": "course_132_bob_dylan_et_la_folk_protest_p1",
-      "title": "Greenwich Village et l'héritage de Woody Guthrie",
+      "title": "グリニッジ・ヴィレッジとウディ・ガスリーの遺産",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En janvier **1961**, à 19 ans, Zimmerman quitte le froid du Midwest pour **New York**. Il a déjà choisi le nom de Bob Dylan. Son idole : le chanteur folk **Woody Guthrie**, voix des travailleurs et des opprimés, alors hospitalisé. Dylan veut rencontrer cette authenticité américaine."
+          "text": "**1961年**1月、19歳のジマーマンは、中西部の寒さを離れて**ニューヨーク**へ向かいます。ボブ・ディランという名前は、すでに決めていました。憧れの人は、フォークシンガーの**ウディ・ガスリー**。労働者や虐げられた人びとの代弁者で、当時は入院中でした。ディランは、そのアメリカの本物らしさに会いたかったのです。"
         },
         {
           "type": "paragraph",
-          "text": "Il s'installe à **Greenwich Village**, quartier bohème de Manhattan. C'est le cœur de la [[フォーク・リバイバル]], ce mouvement qui redécouvre les chansons traditionnelles pour en faire un levier de critique sociale. Dylan écume les cafés, absorbe blues, country et gospel, découvre aussi la poésie et la [[ビート・ジェネレーション]]."
+          "text": "ディランは、マンハッタンのボヘミアンな街**グリニッジ・ヴィレッジ**に住みつきます。そこは[[フォーク・リバイバル]]の中心地でした。伝統的な歌を見直し、社会批判の武器にしようという運動です。ディランはカフェを渡り歩き、ブルース、カントリー、ゴスペルを吸収し、詩や[[ビート・ジェネレーション]]にも出会います。"
         },
         {
           "type": "image",
           "asset": "greenwich_village_folk_scene_1960s",
           "ratio": "4:3",
-          "caption": "Greenwich Village dans les années 1960 : cafés, guitares et contestation."
+          "caption": "1960年代のグリニッジ・ヴィレッジ：カフェ、ギター、抗議の声。"
         },
         {
           "type": "paragraph",
-          "text": "Repéré pour son phrasé et son harmonica brut, il signe chez [[コロムビア・レコード]] fin **1961**. La légende commence."
+          "text": "独特の歌い回しと荒削りなハーモニカが目に留まり、**1961年**の末に[[コロムビア・レコード]]と契約します。伝説の始まりです。"
         },
         {
           "type": "funFact",
-          "text": "À ses débuts, Dylan inventait sa biographie : il prétendait avoir fui un cirque ou voyagé avec des carnavals, pour forger une aura d'outsider."
+          "text": "駆け出しのころのディランは、経歴を作り話にしていました。サーカスから逃げ出した、カーニバルの一座と旅をした、などと語って、アウトサイダーの雰囲気を作ろうとしたのです。"
         }
       ]
     },
     {
       "id": "course_132_bob_dylan_et_la_folk_protest_p2",
-      "title": "La protest song et la Marche sur Washington",
+      "title": "プロテスト・ソングとワシントン大行進",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En **1963**, l'album *The Freewheelin' Bob Dylan* change tout. *Blowin' in the Wind* devient un hymne. Dylan utilise [[政治の道具としての音楽]] : mélodies simples, messages sur le racisme, la guerre et la peur nucléaire."
+          "text": "**1963年**、アルバム*『フリーホイーリン・ボブ・ディラン』*がすべてを変えます。*『風に吹かれて』*は、時代を代表する賛歌になりました。ディランは[[政治の道具としての音楽]]を使いこなします。シンプルなメロディに、人種差別、戦争、核の恐怖についてのメッセージをのせました。"
         },
         {
           "type": "paragraph",
-          "text": "En août **1963**, il chante lors de la **Marche sur Washington** pour les droits civiques, devant **250 000** personnes, juste avant le discours de **Martin Luther King**. Pourtant, il commence déjà à rejeter le rôle de « porte-parole d'une génération ». Ses textes deviennent plus surréalistes, plus personnels."
+          "text": "**1963年**8月、ディランは公民権を求める**ワシントン大行進**で歌います。聴衆は**250,000人**、**マーティン・ルーサー・キング**の演説の直前でした。それでも、すでに「一つの世代の代弁者」という役を拒みはじめていました。歌詞は、より超現実的で、より個人的になっていきます。"
         },
         {
           "type": "image",
           "asset": "march_on_washington_1963_civil_rights",
           "ratio": "4:3",
-          "caption": "Août 1963 : la Marche sur Washington, moment clé des droits civiques."
+          "caption": "1963年8月：ワシントン大行進。公民権運動の大きな節目となりました。"
         },
         {
           "type": "funFact",
-          "text": "La même année, des producteurs de télévision le recalent à une audition : ils trouvaient qu'il chantait trop faux."
+          "text": "同じ年、テレビ番組のプロデューサーたちが、オーディションでディランを落としました。音程が外れすぎていると考えたのです。"
         }
       ]
     },
     {
       "id": "course_132_bob_dylan_et_la_folk_protest_p3",
-      "title": "Newport 1965 : la guitare électrique",
+      "title": "ニューポート1965年：エレキギター",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En juillet **1965**, au festival folk de Newport, Dylan monte sur scène avec une [[フェンダー・ストラトキャスター]] électrique. Une partie du public puriste le hue : l'électricité serait une trahison commerciale. En réalité, c'est la naissance du folk-rock."
+          "text": "**1965年**7月、ニューポート・フォーク・フェスティバルで、ディランはエレキの[[フェンダー・ストラトキャスター]]を提げてステージに上がります。純粋主義の観客の一部は、ブーイングを浴びせます。電気楽器は商業主義への裏切りだ、というのです。けれど実際には、これがフォーク・ロックの誕生でした。"
         },
         {
           "type": "image",
           "asset": "bob_dylan_electric_newport_folk_festival_1965",
           "ratio": "4:3",
-          "caption": "Newport 1965 : Dylan branche l'électricité, et une époque bascule."
+          "caption": "ニューポート1965年：ディランがプラグを差し込み、時代が大きく動く。"
         },
         {
           "type": "paragraph",
-          "text": "Suivent une trilogie fondatrice : *Bringing It All Back Home*, *Highway 61 Revisited*, *Blonde on Blonde*. *Like a Rolling Stone* pulvérise les formats radio. Dylan n'accuse plus seulement la société : il explore la désillusion et la psyché, avec une verve verbale inédite au sommet des hit-parades."
+          "text": "その後に、画期的な三部作が続きます。*『ブリンギング・イット・オール・バック・ホーム』*、*『追憶のハイウェイ61』*、*『ブロンド・オン・ブロンド』*です。*『ライク・ア・ローリング・ストーン』*は、ラジオの尺の常識を打ち破りました。ディランはもはや社会を告発するだけではなく、幻滅や心の奥を掘り下げ、前例のない言葉の勢いでヒットチャートの頂点に立ちます。"
         },
         {
           "type": "funFact",
-          "text": "La Stratocaster de Newport a été perdue pendant 47 ans, oubliée dans un avion, puis vendue aux enchères pour près d'un million de dollars en 2013."
+          "text": "ニューポートのストラトキャスターは、47年間行方不明でした。飛行機の中に置き忘れられ、のちに2013年、競売で百万ドル近い価格で売られました。"
         }
       ]
     },
     {
       "id": "course_132_bob_dylan_et_la_folk_protest_p4",
-      "title": "Du Never Ending Tour au Nobel",
+      "title": "ネヴァー・エンディング・ツアーからノーベル賞へ",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Après un accident de moto en **1966**, Dylan se réinvente sans cesse : country, gospel, standards. Son influence touche **John Lennon**, **Jimi Hendrix** et des générations d'auteurs. Le Nobel de **2016** scelle le débat : les paroles de chansons peuvent être de la grande littérature."
+          "text": "**1966年**のバイク事故のあとも、ディランは絶えず自分を作り変えます。カントリー、ゴスペル、スタンダード。その影響は**ジョン・レノン**や**ジミ・ヘンドリックス**、そして何世代もの作家たちに及びました。**2016年**のノーベル賞は、論争に決着をつけます。歌詞は偉大な文学になりうる、ということです。"
         },
         {
           "type": "timeline",
           "events": [
             {
-              "date": "1961",
-              "title": "Arrivée à New York",
-              "detail": "Dylan découvre Greenwich Village et signe chez Columbia."
+              "date": "1961年",
+              "title": "ニューヨークへ",
+              "detail": "ディランはグリニッジ・ヴィレッジを知り、コロムビアと契約します。"
             },
             {
-              "date": "1963",
-              "title": "Marche sur Washington",
-              "detail": "La protest song devient voix d'une génération."
+              "date": "1963年",
+              "title": "ワシントン大行進",
+              "detail": "プロテスト・ソングが、一つの世代の声になります。"
             },
             {
-              "date": "1965",
-              "title": "Newport électrique",
-              "detail": "La Stratocaster invente le folk-rock."
+              "date": "1965年",
+              "title": "エレキのニューポート",
+              "detail": "ストラトキャスターが、フォーク・ロックを生み出します。"
             },
             {
-              "date": "2016",
-              "title": "Prix Nobel",
-              "detail": "La chanson populaire entre dans le panthéon littéraire."
+              "date": "2016年",
+              "title": "ノーベル賞",
+              "detail": "大衆の歌が、ついに文学の殿堂に仲間入りします。"
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "Branché à Newport en 1965, sifflé par les puristes, Dylan devient la figure la plus influente de la chanson américaine, jusqu'au Nobel."
+          "text": "1965年、ニューポートでプラグをつなぎ、純粋主義者たちにブーイングを浴びたディランは、アメリカの歌で最も影響力のある存在となり、ノーベル賞にまで至ります。"
         }
       ]
     }

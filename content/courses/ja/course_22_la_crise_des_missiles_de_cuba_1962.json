@@ -1,133 +1,133 @@
 {
   "id": "course_22_la_crise_des_missiles_de_cuba_1962",
-  "title": "La crise des missiles de Cuba",
-  "subtitle": "1962",
+  "title": "キューバの核ミサイル危機",
+  "subtitle": "1962年",
   "subject": "histoire",
   "subcategory": "冷戦と現代世界",
-  "description": "En octobre **1962**, le monde passe **13 jours** à deux doigts d'une guerre nucléaire. Missiles à Cuba, flottes en alerte : la Guerre froide atteint son pic.",
+  "description": "**1962年**十月、世界は**13日間**にわたって、核戦争の寸前に立たされます。キューバのミサイル、警戒態勢に入った艦隊。冷戦は頂点に達します。",
   "hero": {
     "image": "la_crise_des_missiles_de_cuba_1962",
     "ratio": "16:9",
-    "hook": "Treize jours où un seul « oui » aurait pu déclencher l'apocalypse nucléaire."
+    "hook": "たった一つの「はい」が、核による破滅の引き金になりえた十三日間。"
   },
   "sections": [
     {
       "id": "course_22_la_crise_des_missiles_de_cuba_1962_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En octobre **1962**, l'humanité frôle le pire. Pendant **13 jours**, les États-Unis et l'URSS s'affrontent autour de missiles nucléaires installés à Cuba, une île à moins de 150 km de la Floride. Les bombardiers sont prêts. Une erreur, et tout peut basculer."
+          "text": "**1962年**十月、人類は最悪の事態に近づきます。**13日間**、アメリカとソ連は、フロリダから150km足らずの島キューバに持ちこまれた核ミサイルをめぐって対立します。爆撃機は準備を終え、ひとつ間違えれば、すべてが崩れかねない状況です。"
         },
         {
           "type": "paragraph",
-          "text": "Cette crise est le sommet de la Guerre froide. Elle se joue dans les bureaux de Washington et de Moscou… et aussi dans un sous-marin isolé, où un officier refuse un tir qui aurait pu tout détruire."
+          "text": "この危機は冷戦の頂点です。舞台はワシントンとモスクワの執務室、そして……孤立した潜水艦の中でもありました。そこでは一人の士官が、すべてを破壊しかねない発射を拒みます。"
         }
       ]
     },
     {
       "id": "course_22_la_crise_des_missiles_de_cuba_1962_p1",
-      "title": "Cuba, trop près des États-Unis",
+      "title": "アメリカに近すぎたキューバ",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En **1959**, **Fidel Castro** prend le pouvoir à Cuba. Pour Washington, un allié de Moscou si près du continent américain est inacceptable. En avril **1961**, la CIA, les services secrets américains, organise un débarquement à la [[ピッグス湾事件]]. C'est un désastre. Le président américain **John F. Kennedy** est humilié. Castro se rapproche encore plus de l'URSS."
+          "text": "**1959年**、**フィデル・カストロ**がキューバで権力を握ります。ワシントンにとって、アメリカ大陸のすぐそばにモスクワの同盟国がいることは受け入れられません。**1961年**4月、アメリカの情報機関CIAは、のちに[[ピッグス湾事件]]と呼ばれる上陸作戦を実行します。結果は惨敗でした。アメリカの大統領**ジョン・F・ケネディ**は面目を失い、カストロはソ連にいっそう近づきます。"
         },
         {
           "type": "funFact",
-          "text": "Pour cacher l'opération [[アナディル作戦]], le déploiement secret des missiles, les Soviétiques embarquent aussi du matériel agricole… et des vêtements d'hiver russes, comme si la destination était ailleurs."
+          "text": "[[アナディル作戦]]、つまりミサイルの秘密配備を隠すため、ソ連は農業機械やロシアの冬服まで船に積みこみます。行き先が別の場所であるかのように見せかけたのです。"
         },
         {
           "type": "paragraph",
-          "text": "**Nikita Khrouchtchev**, le dirigeant soviétique, veut rétablir l'équilibre. Les Américains ont déjà placé des missiles [[ジュピター]] en Italie et en [[トルコ]], tout près de l'URSS. Il décide d'installer en secret des missiles à moyenne portée sur le sol cubain."
+          "text": "ソ連の指導者**ニキータ・フルシチョフ**は、力の均衡を取り戻そうとします。アメリカはすでに、ソ連のすぐ近くのイタリアと[[トルコ]]に、[[ジュピター]]という名のミサイルを配備していました。そこでフルシチョフは、キューバの地に中距離ミサイルを秘密裏に設置することを決めます。"
         }
       ]
     },
     {
       "id": "course_22_la_crise_des_missiles_de_cuba_1962_p2",
-      "title": "14 octobre : le secret éclate",
+      "title": "十月十四日：秘密が明るみに",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le **14 octobre**, un avion espion américain U-2 photographie des rampes pour missiles [[SS-4]], capables d'atteindre une grande partie des États-Unis. Kennedy réunit un petit comité de crise. Pendant six jours, on pèse toutes les options : bombardements, invasion, diplomatie."
+          "text": "**十月十四日**、アメリカの偵察機U-2が、ミサイル[[SS-4]]の発射台を撮影します。アメリカの広い範囲に届くミサイルです。ケネディは少人数の危機対策委員会を招集します。6日間、爆撃、侵攻、外交と、あらゆる選択肢が検討されます。"
         },
         {
           "type": "image",
           "asset": "u_2_spy_plane_aerial_photography",
           "ratio": "4:3",
-          "caption": "Les photos du U-2 révèlent les missiles soviétiques à Cuba."
+          "caption": "U-2が撮影した写真から、キューバのソ連ミサイルが明らかになります。"
         },
         {
           "type": "paragraph",
-          "text": "Des généraux, comme Curtis LeMay, veulent frapper tout de suite. Kennedy choisit une voie du milieu : un blocus naval. Il le baptise « quarantaine » pour éviter le mot « blocus », qui signifie la guerre en droit international. Le **22 octobre**, à la télévision, il révèle les missiles au monde et exige leur retrait."
+          "text": "カーティス・ルメイらの将軍たちは、すぐに攻撃したがります。ケネディが選んだのは中間の道、海上封鎖でした。国際法では「封鎖」は戦争を意味するため、その言葉を避けて「隔離」と名づけます。**十月二十二日**、テレビでミサイルの存在を世界に明かし、撤去を求めます。"
         }
       ]
     },
     {
       "id": "course_22_la_crise_des_missiles_de_cuba_1962_p3",
-      "title": "Le Samedi noir",
+      "title": "暗黒の土曜日",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le **27 octobre**, surnommé « Samedi noir », un U-2 est abattu au-dessus de Cuba. En mer, le sous-marin soviétique **B-59**, harcelé et coupé de Moscou, s'apprête à lancer une torpille nucléaire. Le protocole exige l'accord de trois officiers. Deux disent oui. **Vasili Arkhipov**, l'officier politique à bord, dit non."
+          "text": "**十月二十七日**、「暗黒の土曜日」と呼ばれるこの日、U-2がキューバ上空で撃墜されます。海上では、ソ連の潜水艦**B-59**が追い回されてモスクワとの連絡も途絶え、核魚雷を発射しようとします。規則では、3人の士官の同意が必要です。2人は賛成します。艦に乗っていた政治将校**ヴァシーリー・アルヒーポフ**が反対します。"
         },
         {
           "type": "image",
           "asset": "cuban_missile_crisis_1962_kennedy",
           "ratio": "4:3",
-          "caption": "Kennedy face à la crise, octobre 1962."
+          "caption": "危機に向き合うケネディ、1962年十月。"
         },
         {
           "type": "funFact",
-          "text": "Le fameux « téléphone rouge » installé après la crise est en réalité un **téléscripteur**. Le téléphone rouge n'existe que dans les films."
+          "text": "危機のあとに設置された有名な「赤い電話」は、実際には**テレタイプ**です。赤い電話は、映画の中にしかありません。"
         },
         {
           "type": "paragraph",
-          "text": "Dans les coulisses, un accord se noue. L'URSS retire ses missiles de Cuba. Les États-Unis s'engagent à ne pas envahir l'île. Clause secrète : les missiles américains de Turquie seront retirés plus tard."
+          "text": "舞台裏では、合意がまとまります。ソ連はキューバからミサイルを撤去し、アメリカはキューバに侵攻しないと約束します。秘密の条項もありました。トルコにあるアメリカのミサイルは、あとで撤去されるというものです。"
         }
       ]
     },
     {
       "id": "course_22_la_crise_des_missiles_de_cuba_1962_p4",
-      "title": "Après la peur, un peu de dialogue",
+      "title": "恐怖のあとに訪れた、少しの対話",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La crise ouvre une phase de [[デタント]], un apaisement relatif entre les deux blocs. Une ligne directe relie bientôt le Kremlin et la Maison-Blanche. La doctrine de la [[相互確証破壊（MAD）]] s'impose : puisque personne ne peut gagner une guerre nucléaire, personne ne doit l'engager."
+          "text": "この危機をきっかけに、二つの陣営の緊張が和らぐ[[デタント]]の時期が始まります。まもなく、クレムリンとホワイトハウスを結ぶ直通回線が設けられます。そして[[相互確証破壊（MAD）]]という考え方が定着します。核戦争にはだれも勝てないのだから、だれも始めてはならない、というものです。"
         },
         {
           "type": "timeline",
           "events": [
             {
-              "date": "14 oct. 1962",
-              "title": "Découverte des missiles",
-              "detail": "Un U-2 photographie les rampes à Cuba."
+              "date": "1962年十月十四日",
+              "title": "ミサイルの発見",
+              "detail": "U-2がキューバの発射台を撮影します。"
             },
             {
-              "date": "22 oct. 1962",
-              "title": "Discours de Kennedy",
-              "detail": "Quarantaine navale et ultimatum public."
+              "date": "1962年十月二十二日",
+              "title": "ケネディの演説",
+              "detail": "海上隔離の実施と、公開の最後通告。"
             },
             {
-              "date": "27 oct. 1962",
-              "title": "Samedi noir",
-              "detail": "U-2 abattu ; Arkhipov refuse le tir nucléaire."
+              "date": "1962年十月二十七日",
+              "title": "暗黒の土曜日",
+              "detail": "U-2撃墜。アルヒーポフが核の発射を拒否。"
             },
             {
-              "date": "28 oct. 1962",
-              "title": "Accord",
-              "detail": "Khrouchtchev annonce le retrait des missiles."
+              "date": "1962年十月二十八日",
+              "title": "合意",
+              "detail": "フルシチョフがミサイルの撤去を発表します。"
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "En **13 jours**, la crise de Cuba montre que la Guerre froide pouvait détruire le monde… et qu'elle a parfois tenu à un seul refus, celui d'Arkhipov."
+          "text": "**13日間**で、キューバ危機は、冷戦が世界を破壊しかねなかったこと、そしてそれがときにたった一つの拒否、アルヒーポフの拒否にかかっていたことを示しています。"
         }
       ]
     }

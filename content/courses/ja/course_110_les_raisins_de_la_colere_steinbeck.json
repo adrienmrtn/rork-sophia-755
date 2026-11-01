@@ -1,108 +1,108 @@
 {
   "id": "course_110_les_raisins_de_la_colere_steinbeck",
-  "title": "Les Raisins de la colère, Steinbeck",
+  "title": "『怒りの葡萄』、スタインベック",
   "subtitle": "1939",
   "subject": "litterature",
   "subcategory": "英米と世界の文学",
-  "description": "En 1939, la famille Joad quitte l'Oklahoma frappée par la sécheresse. Steinbeck raconte l'exode des Okies et célèbre une solidarité qui résiste à l'injustice.",
+  "description": "1939年、ジョード一家は干ばつに見舞われたオクラホマを離れます。スタインベックは、オーキーたちの大移動を語り、不正に屈しない連帯をたたえます。",
   "hero": {
     "image": "les_raisins_de_la_colere_steinbeck",
     "ratio": "16:9",
-    "hook": "Chassés de leurs terres, ils partent vers l'Ouest : le roman social le plus puissant de la Dépression."
+    "hook": "土地を追われ、人びとは西へ向かいます。世界恐慌の時代を描いた、もっとも力強い社会小説です。"
   },
   "sections": [
     {
       "id": "course_110_les_raisins_de_la_colere_steinbeck_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Publié en **1939**, **Les Raisins de la colère** est l'œuvre monumentale de **John Steinbeck**. Pendant la **Grande Dépression**, la famille **Joad**, métayers d'Oklahoma, est chassée de ses terres par la sécheresse et la mécanisation agricole. Steinbeck mêle récit romanesque et reportage pour dénoncer l'exploitation des migrants."
+          "text": "**1939年**に出版された**『怒りの葡萄』**は、**ジョン・スタインベック**の記念碑的な作品です。**世界恐慌**のさなか、オクラホマの小作農**ジョード**一家は、干ばつと農業の機械化によって土地を追われます。スタインベックは小説の物語とルポルタージュを織り交ぜ、移民労働者への搾取を告発しました。"
         },
         {
           "type": "paragraph",
-          "text": "Le roman ne raconte pas seulement une fuite vers la Californie. Il montre comment la misère peut forger une conscience collective plus large que la famille, et comment la colère des opprimés peut devenir une force de transformation sociale."
+          "text": "この小説が語るのは、カリフォルニアへの逃避行だけではありません。貧しさが家族を超えた、もっと広い集団的な意識を鍛えうること、そして虐げられた人びとの怒りが社会変革の力になりうることを描いています。"
         }
       ]
     },
     {
       "id": "course_110_les_raisins_de_la_colere_steinbeck_p1",
-      "title": "Steinbeck et l'immersion dans la misère des Okies",
+      "title": "スタインベックと、オーキーたちの貧困への没入",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Steinbeck n'écrit pas depuis un bureau confortable. Il voyage avec les migrants, vit dans des **[[フーヴァーヴィル]]**, bidonvilles construits par les sans-abris durant la Dépression. Cette immersion lui permet de saisir le langage, le désespoir et la dignité des **Okies**, migrants d'Oklahoma."
+          "text": "スタインベックは、居心地のよい書斎から書いたのではありません。移民たちと旅をし、**[[フーヴァーヴィル]]**で暮らしました。世界恐慌のあいだ、家を失った人びとが建てたスラム街です。この体験のおかげで、オクラホマからの移民**オーキー**たちの言葉、絶望、そして尊厳をつかむことができました。"
         },
         {
           "type": "image",
           "asset": "john_steinbeck_portrait_photograph",
           "ratio": "4:3",
-          "caption": "John Steinbeck, romancier et témoin de la Grande Dépression."
+          "caption": "ジョン・スタインベック、作家であり世界恐慌の証人。"
         },
         {
           "type": "funFact",
-          "text": "Le titre vient d'un vers de *The Battle Hymn of the Republic*, suggéré par l'épouse de Steinbeck, Carol."
+          "text": "題名は*『リパブリック讃歌』*の一節に由来し、スタインベックの妻キャロルが提案したものです。"
         },
         {
           "type": "paragraph",
-          "text": "Le livre provoque un séisme : **Prix Pulitzer** en **1940**, mais aussi des campagnes de censure en Californie, où les propriétaires terriens se sentent attaqués. Le **FBI** commence à surveiller Steinbeck. L'œuvre contribue au **Prix Nobel** de littérature qu'il reçoit en **1962**."
+          "text": "この本は大きな衝撃を与えます。**1940年**には**ピュリッツァー賞**を受賞しますが、地主たちが攻撃されたと感じたカリフォルニアでは、検閲運動も起こりました。**FBI**はスタインベックの監視を始めます。この作品は、彼が**1962年**に受けた**ノーベル文学賞**にもつながりました。"
         }
       ]
     },
     {
       "id": "course_110_les_raisins_de_la_colere_steinbeck_p2",
-      "title": "La migration vers l'Ouest : un exil sans terre promise",
+      "title": "西への移住：約束の地のない、行き場なき流浪の旅",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L'intrigue commence dans le **[[ダストボウル]]**, région ravagée par sécheresse et mauvaises pratiques agricoles. Les tempêtes de sable noircissent le ciel. Les banques expulsent les métayers, remplacés par des tracteurs. Les Joad empruntent la **Route 66**, « route de la fuite », dans un camion surchargé de biens et de personnes."
+          "text": "物語は**[[ダストボウル]]**で始まります。干ばつと誤った農法で荒れ果てた地域です。砂嵐が空を黒く染めます。銀行は小作農を追い出し、その土地はトラクターに取って代わられます。ジョード一家は、家財と人であふれたトラックで**ルート66**、「逃避の道」を進みます。"
         },
         {
           "type": "image",
           "asset": "dust_bowl_okies_migrant_family_dorothea_lange",
           "ratio": "16:9",
-          "caption": "Famille de migrants : la misère photographiée devient matière littéraire."
+          "caption": "二十世紀初頭のプラハ：ひとつの帝国と、不透明な官僚機構を背景にした物語の舞台。"
         },
         {
           "type": "paragraph",
-          "text": "En Californie, le rêve s'effondre : salaires écrasés, camps insalubres, milices privées des propriétaires. Les tracts promettaient une terre fertile ; la réalité est un verrouillage économique. Les Okies sont méprisés, exploités, surveillés. Steinbeck alterne chapitres narratifs et chapitres « intercalés » qui élargissent le regard à l'ensemble du peuple migrant."
+          "text": "カリフォルニアで夢は崩れ去ります。叩かれた賃金、不衛生なキャンプ、地主たちの私設民兵。ビラは肥沃な土地を約束していましたが、現実は経済的な締めつけでした。オーキーたちは見下され、搾取され、監視されます。スタインベックは物語の章と、移民たち全体へと視野を広げる「挿入章」を交互に配置しています。"
         }
       ]
     },
     {
       "id": "course_110_les_raisins_de_la_colere_steinbeck_p3",
-      "title": "Construction d'une conscience politique et sociale",
+      "title": "政治的・社会的な意識が目覚め、育っていくまで",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Ma Joad** tient la famille debout quand les hommes s'effondrent. **Tom Joad**, d'abord centré sur sa survie individuelle, change au contact de **Jim Casy**, prédicateur itinérant devenu militant. Quand Casy meurt en tentant d'organiser un syndicat, Tom comprend que sa douleur individuelle fait partie d'une souffrance collective."
+          "text": "**ジョード母さん**は、男たちが打ちのめされるなか、家族を支え続けます。**トム・ジョード**は、最初は自分ひとりが生き延びることしか考えていませんでしたが、巡回説教師から活動家になった**ジム・ケーシー**との出会いで変わっていきます。ケーシーが労働組合を組織しようとして命を落としたとき、トムは自分ひとりの痛みが、みんなの苦しみの一部だと悟ります。"
         },
         {
           "type": "paragraph",
-          "text": "Son discours final à sa mère promet une présence partout où les hommes luttent pour leur dignité : « Là où il y aura une bagarre si dure que des gens devront se battre, eh bien, je serai là. » Steinbeck s'inscrit dans le **[[1930年代のアメリカの労働運動]]** : montée des syndicats, grèves massives, contexte du **New Deal** de Roosevelt. La « famille » peut désormais désigner tous les déshérités, pas seulement le sang."
+          "text": "母に語る最後の言葉で、トムは、人びとが尊厳のために闘うところならどこにでもいると約束します。「人が戦わなきゃならないほど激しい争いがあるなら、そこにおれはいる」。スタインベックの作品は、**[[1930年代のアメリカの労働運動]]**とつながっています。労働組合の台頭、大規模なストライキ、ローズヴェルトの**ニューディール政策**を背景にしているのです。「家族」は、いまや血縁だけでなく、すべての持たざる人びとを指せるようになりました。"
         }
       ]
     },
     {
       "id": "course_110_les_raisins_de_la_colere_steinbeck_p4",
-      "title": "La solidarité comme ultime réponse au chaos",
+      "title": "混沌への究極の答えとしての人びとの連帯",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La scène finale reste l'une des plus fortes de la littérature américaine. **Rose de Sharon**, dont le bébé est mort de malnutrition, allaite un vieil homme mourant de faim dans une grange inondée. Tragédie biologique transformée en symbole de partage absolu, au-delà de toute biologie ou convention sociale."
+          "text": "最後の場面は、アメリカ文学のなかでもとりわけ力強いものの一つです。赤ん坊を栄養失調で亡くした**ローズ・オブ・シャロン**が、水に浸かった納屋で、飢えて死にかけた老人に乳を与えます。生物学的な悲劇は、生物学や社会の慣習を超えた、絶対的な分かち合いの象徴へと変わります。"
         },
         {
           "type": "paragraph",
-          "text": "Steinbeck rappelle que la colère des opprimés naît de l'injustice, mais que la solidarité peut la canaliser en force créatrice. Son roman demeure un avertissement contre l'avidité des puissants et un hommage à la dignité des travailleurs qui refusent de disparaître silencieusement."
+          "text": "スタインベックは、虐げられた人びとの怒りが不正から生まれることを語り、連帯がそれを創造的な力へ導けると示します。この小説は、権力者の強欲への警告であり、黙って消え去ることを拒む労働者たちの尊厳に捧げられた賛辞でもあり続けているのです。"
         },
         {
           "type": "takeaway",
-          "text": "**Les Raisins de la colère** transforme l'exode d'une famille en leçon universelle : face au chaos, l'humanité persiste quand les hommes s'entraident au-delà de leurs intérêts."
+          "text": "**『怒りの葡萄』**は、一つの家族の脱出を普遍的な教訓に変えます。混沌を前にしても、人びとが自分の利害を超えて助け合うとき、人間らしさは生き続けるのです。"
         }
       ]
     }

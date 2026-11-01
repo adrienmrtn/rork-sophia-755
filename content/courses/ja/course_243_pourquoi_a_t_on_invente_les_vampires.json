@@ -1,153 +1,153 @@
 {
   "id": "course_243_pourquoi_a_t_on_invente_les_vampires",
-  "title": "Pourquoi a-t-on inventé les vampires ?",
+  "title": "人はなぜ吸血鬼をつくり出したのか",
   "subtitle": "1645-1897",
   "subject": "mythologie",
   "subcategory": "伝説と怪物",
-  "description": "Avant d'être un aristocrate en cape, le vampire est un voisin mort trop tôt, qu'on accuse d'emporter sa famille. L'histoire d'une peur qui a trouvé un nom.",
+  "description": "マントをまとった貴族になる前、吸血鬼は、早く亡くなりすぎた隣人でした。家族を道連れにすると疑われた存在です。名前を得た恐怖の歴史をたどります。",
   "author": "angela-bouma",
   "hero": {
     "image": "foggy_village_graveyard_night_balkans",
     "ratio": "4:3",
-    "hook": "La mort fait peur. Ne pas pouvoir l'expliquer fait encore plus peur."
+    "hook": "死は怖いものです。それを説明できないことは、もっと怖いのです。"
   },
   "sections": [
     {
       "id": "course_243_pourquoi_a_t_on_invente_les_vampires_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En **1645**, un érudit grec installé à Rome, [[レオ・アラティウス]], décrit une créature que redoutent les villageois de son pays : le [[ヴリコラカス]]. Un mort qui sort la nuit et revient tourmenter sa propre famille, parce qu'il a été enterré sans les derniers sacrements. Seul le feu peut le détruire."
+          "text": "**1645年**、ローマに住むギリシア人の学者[[レオ・アラティウス]]は、故郷の村人が恐れる怪物、[[ヴリコラカス]]について書き記します。夜に出歩き、自分の家族のもとへ戻って苦しめる死者です。最後の秘跡を受けないまま埋葬されたためだといいます。倒せるのは火だけです。"
         },
         {
           "type": "paragraph",
-          "text": "Pendant deux siècles, épidémies et morts inexpliquées dans une même maison entretiennent la croyance. Chaque nouveau défunt mal enterré risque d'en faire un autre. Comment cette panique de village est-elle devenue le vampire en habit de soirée des romans et du cinéma ?"
+          "text": "2世紀にわたって、同じ家で起こる流行病や原因不明の死が、この信仰を支え続けます。きちんと埋葬されなかった死者が出るたびに、また一人が同じ怪物になるおそれがありました。では、この村のパニックは、小説や映画に出てくる夜会服の吸血鬼に、どうやって変わったのでしょうか？"
         }
       ]
     },
     {
       "id": "course_243_pourquoi_a_t_on_invente_les_vampires_p1",
-      "title": "Le mort qui réclame ses chaussures",
+      "title": "靴を返してほしいと訴える死者",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En **1725**, dans le village serbe de Kisiljevo, alors sous administration autrichienne, un paysan nommé [[ペタル・ブラゴイェヴィチ]] meurt. En quelques jours, neuf voisins meurent à leur tour. Tous l'accusent, dans leurs derniers instants, d'être venu les étouffer la nuit. Sa veuve raconte qu'il est revenu lui réclamer ses chaussures, puis elle quitte le village."
+          "text": "**1725年**、当時オーストリアの統治下にあったセルビアのキシリェヴォ村で、[[ペタル・ブラゴイェヴィチ]]という農夫が亡くなります。数日のうちに、隣人9人が次々に亡くなります。全員が臨終のとき、夜に来て首を絞められたと彼を責めています。未亡人は、夫が戻ってきて靴を返せと言ったと語り、その後村を去ります。"
         },
         {
           "type": "image",
           "asset": "edvard_munch_vampire_painting_1895",
           "ratio": "auto",
-          "caption": "« Vampire », d'Edvard Munch (1895). Avant les peintres et les romanciers, le vampire est une affaire de village."
+          "caption": "エドヴァルド・ムンク『吸血鬼』（1895年）。画家や小説家が取り上げる前、吸血鬼は村の出来事でした。"
         },
         {
           "type": "paragraph",
-          "text": "Les villageois exhument le corps. Ils le trouvent étonnamment intact : peau fraîche, sang à la bouche, cheveux et ongles qui semblent avoir poussé. Preuve suffisante. Ils lui plantent un pieu dans le cœur et brûlent la dépouille. Un fonctionnaire autrichien assiste à la scène et rédige un rapport. Le mot « vampire » se répand dans les journaux d'Europe."
+          "text": "村人たちは遺体を掘り起こします。驚くほど傷んでいません。肌は生き生きとしていて、口には血が付き、髪と爪は伸びたように見えます。証拠は十分です。心臓に杭を打ち、遺体を焼きます。オーストリアの役人がその場に立ち会い、報告書を書きます。「吸血鬼」という言葉は、ヨーロッパの新聞に広まります。"
         },
         {
           "type": "paragraph",
-          "text": "Ce que les villageois prenaient pour des signes surnaturels sont les effets ordinaires de la décomposition. Les gaz produits par les bactéries gonflent l'abdomen et le visage, et poussent par la bouche et le nez un liquide sombre qui ressemble à du sang. La peau se rétracte et découvre la racine des ongles et des cheveux, qui paraissent plus longs."
+          "text": "村人が超自然のしるしだと思ったものは、実は分解で起きるごくありふれた自然な現象にすぎません。細菌が出すガスで腹部と顔がふくらみ、血のように見える黒っぽい液体が、口と鼻から押し出されます。さらに皮膚が縮んで、爪や髪の根もとがむき出しになるため、それらが前より長く伸びたように見えるのです。"
         }
       ]
     },
     {
       "id": "course_243_pourquoi_a_t_on_invente_les_vampires_p2",
-      "title": "La maladie derrière la légende",
+      "title": "伝説の裏に隠れていた、ある病気",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En Nouvelle-Angleterre, au XIXe siècle, une autre peur prend la même forme. La [[結核]], qu'on appelle alors « consomption », fait maigrir et tousser ses victimes pendant des mois. Contagieuse, elle passe d'un membre de la famille à l'autre. Vu de l'extérieur, un mort semble revenir vider ses proches de leur vie, l'un après l'autre. Elle n'explique pas la vieille tradition des Balkans : ce sont deux croyances parallèles, nées à des époques et dans des lieux différents, mais qui répondent à la même angoisse."
+          "text": "十九世紀のニューイングランドでは、別の恐怖が同じ姿を取ります。当時「消耗病」と呼ばれた[[結核]]は、患者を何か月もやせ衰えさせ、咳き込ませます。感染力があり、家族から家族へうつります。はたから見ると、死者が戻ってきて、近親者の命を一人また一人と吸い取っているように見えます。結核ではバルカン半島の古い伝承は説明できません。この二つは並行した別々の信仰で、生まれた時代も場所も違いますが、同じ不安に応えるものでした。"
         },
         {
           "type": "image",
           "asset": "mercy_brown_grave_exeter_rhode_island",
           "ratio": "3:4",
-          "caption": "La tombe de Mercy Brown, à Exeter (Rhode Island), toujours visitée aujourd'hui."
+          "caption": "マーシー・ブラウンの墓（ロードアイランド州エクセター）。今も訪れる人がいます。"
         },
         {
           "type": "paragraph",
-          "text": "En **1892**, à Exeter, dans le Rhode Island, [[マーシー・ブラウン]] meurt de tuberculose à 19 ans, après sa mère et sa sœur. Quand son frère Edwin tombe malade à son tour, les voisins exhument les trois corps. Celui de Mercy, enterré en plein hiver, est bien conservé, et son cœur contient encore du sang. On le brûle et on fait boire les cendres à Edwin, en guise de remède. Il meurt deux mois plus tard."
+          "text": "**1892年**、ロードアイランド州エクセターで、[[マーシー・ブラウン]]が19歳で結核のため亡くなります。母と女のきょうだいに続いてのことでした。兄弟のエドウィンも病気になると、隣人たちは3人の遺体を掘り起こします。真冬に埋葬されたマーシーの遺体は保存状態がよく、心臓にはまだ血が残っています。遺体を焼き、その灰を薬としてエドウィンに飲ませます。エドウィンは2か月後に亡くなります。"
         },
         {
           "type": "funFact",
-          "text": "Le vrykolakas n'est pas une exclusivité grecque. La Mésopotamie antique avait ses démons buveurs de sang, la Russie son *upyr*, et la Chine son *jiangshi*, un cadavre raide qui se déplace en sautillant, bras tendus."
+          "text": "ヴリコラカスはギリシア特有のものではありません。古代メソポタミアには血を飲む悪霊がいて、ロシアには*upyr*がいます。中国の*jiangshi*（キョンシー）は硬直した死体で、両腕を前に伸ばしてぴょんぴょん跳ねて移動します。"
         }
       ]
     },
     {
       "id": "course_243_pourquoi_a_t_on_invente_les_vampires_p3",
-      "title": "Le vampire devient aristocrate",
+      "title": "吸血鬼がしだいに貴族になる",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En **1819**, un jeune médecin anglais, [[ジョン・ポリドリ]], publie *Le Vampire*, premier récit en prose consacré à la créature en anglais. L'idée est née trois ans plus tôt, lors du fameux été pluvieux au bord du lac Léman où Mary Shelley imagine *Frankenstein*. Son personnage, **Lord Ruthven**, n'a plus rien du paysan sorti de sa tombe : il est riche, mystérieux, séduisant, et chasse dans les salons de Londres."
+          "text": "**1819年**、イギリスの若い医師[[ジョン・ポリドリ]]が*『吸血鬼』*を発表します。英語で書かれた、この怪物を扱う初めての散文作品です。着想が生まれたのは3年前、レマン湖のほとりで過ごした雨の多い有名な夏のことで、同じとき、メアリー・シェリーは『フランケンシュタイン』を思いつきました。主人公の**ルスヴン卿**には、墓から出てきた農民の面影はもうありません。裕福で、謎めいて、魅力的で、ロンドンの社交界で獲物を狙います。"
         },
         {
           "type": "image",
           "asset": "bram_stoker_dracula_1897_first_edition_cover",
           "ratio": "3:4",
-          "caption": "La première édition de Dracula (1897), reliée de toile jaune et lettrée de rouge."
+          "caption": "『ドラキュラ』初版（1897年）。黄色い布の装丁に、赤い文字が入っています。"
         },
         {
           "type": "paragraph",
-          "text": "Le récit est réédité, traduit, adapté au théâtre. Le vampire mondain fait école chez les auteurs gothiques. En **1897**, [[ブラム・ストーカー]] publie *Dracula* et fixe le modèle pour un siècle : le comte, le château, les canines, l'ail et les crucifix. Presque tout ce que le cinéma en fera est déjà là."
+          "text": "この作品は再版され、翻訳され、舞台化されます。社交界の吸血鬼は、ゴシック小説の作家たちのあいだで流行します。**1897年**、[[ブラム・ストーカー]]が*『ドラキュラ』*を発表し、その後1世紀にわたる型を決めます。伯爵、城、牙、にんにく、十字架。のちに映画が描くもののほとんどは、すでにここにそろっています。"
         },
         {
           "type": "funFact",
-          "text": "Stoker n'a jamais mis les pieds en Transylvanie. Il a écrit *Dracula* à partir de guides de voyage et des livres de la bibliothèque de Whitby, la petite ville anglaise où le comte débarque dans le roman."
+          "text": "ストーカーはトランシルヴァニアに足を踏み入れたことがありません。*『ドラキュラ』*は、旅行ガイドとホイットビー図書館の本をもとに書きました。ホイットビーは、小説で伯爵が上陸するイギリスの小さな町です。"
         }
       ]
     },
     {
       "id": "course_243_pourquoi_a_t_on_invente_les_vampires_p4",
-      "title": "La peur porte bien des noms",
+      "title": "恐怖にはさまざまな名前がある",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Les traditions vampiriques ne parlent pas vraiment de surnaturel. Avant que la science n'explique la décomposition, la contagion ou la mort subite, une communauté a besoin de donner un sens à ce qu'elle voit. Un mort qui revient donne à la peur une forme et un nom. Et un coupable que l'on peut brûler."
+          "text": "吸血鬼の伝承は、本当は超自然について語っているわけではありません。科学が分解や感染、突然死を説明できるようになる前、共同体は目の前の出来事に意味を与える必要がありました。戻ってくる死者は、恐怖に姿と名前を与えます。そして、焼くことのできる犯人も与えます。"
         },
         {
           "type": "timeline",
           "events": [
             {
               "date": "1645",
-              "title": "Le vrykolakas décrit",
-              "detail": "Leo Allatius consigne la croyance grecque."
+              "title": "ヴリコラカスの記述",
+              "detail": "レオ・アラティウスがギリシアの信仰を書き留める。"
             },
             {
               "date": "1725",
-              "title": "L'affaire Blagojević",
-              "detail": "Le mot « vampire » entre dans les journaux."
+              "title": "ブラゴイェヴィチ事件",
+              "detail": "「吸血鬼」という言葉が、新聞に載るようになる。"
             },
             {
               "date": "1819",
-              "title": "Le Vampire de Polidori",
-              "detail": "Le vampire devient un aristocrate."
+              "title": "ポリドリの『吸血鬼』",
+              "detail": "吸血鬼が、ついに貴族の姿になる。"
             },
             {
               "date": "1892",
-              "title": "Mercy Brown exhumée",
-              "detail": "Dernière grande affaire de vampire aux États-Unis."
+              "title": "マーシー・ブラウンの掘り起こし",
+              "detail": "アメリカで記録された最後の大きな吸血鬼事件。"
             },
             {
               "date": "1897",
-              "title": "Dracula",
-              "detail": "Bram Stoker fixe le modèle moderne."
+              "title": "ドラキュラ",
+              "detail": "ブラム・ストーカーが現代の型を決める。"
             }
           ]
         },
         {
           "type": "paragraph",
-          "text": "Le même mécanisme produit le vrykolakas grec, l'*upyr* slave, le *jiangshi* chinois : chacun est la réponse locale à la même question sans réponse. Les légendes de loups-garous suivent le même schéma et comblent le même vide, avec la métamorphose à la place du sang."
+          "text": "ギリシアのヴリコラカス、スラヴの*upyr*、中国の*jiangshi*。どれも同じしくみから生まれたもので、それぞれが、答えのない同じ問いに対する土地ごとの答えです。人狼の伝説も同じ型をたどり、同じ空白を埋めます。血の代わりに変身が使われるだけです。"
         },
         {
           "type": "takeaway",
-          "text": "Face aux mêmes peurs, chaque culture raconte une version de la même histoire. Un monstre est plus facile à vivre qu'une question sans réponse."
+          "text": "同じ恐怖に向き合って、どの文化も同じ物語の一つの版を語ります。答えのない問いより、怪物のほうが受け止めやすいのです。"
         }
       ]
     }

@@ -1,106 +1,106 @@
 {
   "id": "course_74_pourquoi_certaines_especes_sont_elles_im",
-  "title": "Pourquoi certaines espèces sont-elles immortelles ?",
-  "subtitle": "Biologie & longévité",
+  "title": "なぜ一部の生物は不死に近い存在でいられるのか",
+  "subtitle": "生物学と長寿",
   "subject": "sciences",
   "subcategory": "地球と宇宙",
-  "description": "Certaines espèces semblent défier la mort. Méduses qui rajeunissent, hydres sans vieillissement : le secret est dans la réparation cellulaire.",
+  "description": "死に逆らっているように見える生物がいます。若返るクラゲ、老化しないヒドラ。その秘密は、細胞を修復するしくみにあります。",
   "hero": {
     "image": "pourquoi_certaines_especes_sont_immortelles",
     "ratio": "16:9",
-    "hook": "Vieillir n'est pas une loi absolue du vivant. Certaines espèces ont trouvé la faille."
+    "hook": "老いは、生き物すべてに課せられた絶対の法則ではありません。抜け穴を見つけた生物がいるのです。"
   },
   "sections": [
     {
       "id": "course_74_pourquoi_certaines_especes_sont_elles_im_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Nous vieillissons, puis nous mourons. Pourtant, la méduse [[ベニクラゲ（Turritopsis dohrnii）]] peut revenir à un stade juvénile et recommencer. La palourde **Ming** a vécu **507 ans**. Le vieillissement n'est donc pas une règle universelle : c'est un processus que certaines espèces contournent."
+          "text": "人は老いて、やがて死にます。ところが、[[ベニクラゲ（Turritopsis dohrnii）]]は、幼い段階に戻って、もう一度やり直すことができます。二枚貝の**ミン**は**507年**生きました。老化はすべての生物に共通のルールではなく、一部の生物が回避しているしくみなのです。"
         },
         {
           "type": "paragraph",
-          "text": "En étudiant ces exceptions, les chercheurs cherchent moins l'immortalité de science-fiction que les astuces du vivant pour mieux réparer les cellules."
+          "text": "こうした例外を調べる研究者が探しているのは、SFのような不死ではありません。細胞をよりうまく修復する、生き物の工夫です。"
         }
       ]
     },
     {
       "id": "course_74_pourquoi_certaines_especes_sont_elles_im_p1",
-      "title": "Pourquoi nos cellules s'usent",
+      "title": "なぜ私たちの細胞はすり減っていくのか",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Vieillir, ce n'est pas seulement « s'user » comme une machine. C'est un déséquilibre : les dommages s'accumulent plus vite que les réparations."
+          "text": "老いるとは、機械のように「すり減る」ことだけではありません。ダメージが修復を上回る速さでたまっていく、バランスの崩れです。"
         },
         {
           "type": "image",
           "asset": "chromosome_dna_telomere_aging_cell",
           "ratio": "auto",
-          "caption": "Les télomères, aux extrémités des chromosomes, raccourcissent à chaque division cellulaire."
+          "caption": "染色体の末端にあるテロメアは、細胞が分裂するたびに少しずつ短くなっていきます。"
         },
         {
           "type": "paragraph",
-          "text": "Aux bouts de nos chromosomes, les [[染色体末端のテロメア]] agissent comme des embouts de lacets. À chaque division cellulaire, ils raccourcissent. Trop courts, la cellule arrête de se diviser. En parallèle, le métabolisme produit des molécules agressives qui abîment protéines et ADN. Des cellules « zombies » s'accumulent alors et enflamment les tissus autour d'elles."
+          "text": "染色体の端では、[[テロメア]]が靴ひもの先端のキャップのような役目をしています。細胞が分裂するたびに、テロメアは短くなります。短くなりすぎると、細胞は分裂をやめます。同時に、代謝によって攻撃性の高い分子が生まれ、タンパク質やDNAを傷つけます。すると「ゾンビ」細胞がたまり、周りの組織に炎症を起こします。"
         },
         {
           "type": "funFact",
-          "text": "Le tardigrade, minuscule « ourson d'eau », peut presque s'arrêter de vivre en se desséchant. Son métabolisme chute à **99,99 %**, et il survit au vide spatial ou à des radiations extrêmes sans vraiment vieillir."
+          "text": "クマムシは「水の子グマ」とも呼ばれる極小の生き物で、乾燥するとほとんど生命活動を止めることができます。代謝は**99.99%**も落ち込み、宇宙空間の真空や強い放射線にも、ほとんど老いることなく耐えます。"
         }
       ]
     },
     {
       "id": "course_74_pourquoi_certaines_especes_sont_elles_im_p2",
-      "title": "Les champions qui contournent la mort",
+      "title": "死を回避する長寿のチャンピオンたち",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La [[ベニクラゲ（Turritopsis dohrnii）]] blessée ou affamée transforme ses cellules adultes en cellules « vierges », puis redevient un polype, le stade de départ. Ce retour en arrière, appelé transdifférenciation, lui donne une forme d'**immortalité biologique**."
+          "text": "[[ベニクラゲ（Turritopsis dohrnii）]]は、傷ついたり飢えたりすると、成体の細胞を「まっさら」な細胞に変え、出発点であるポリプに戻ります。この巻き戻しは分化転換と呼ばれ、クラゲに一種の**生物学的不死**をもたらします。"
         },
         {
           "type": "paragraph",
-          "text": "L'**hydre**, petit polype d'eau douce, renouvelle tout son corps grâce à un stock presque illimité de [[幹細胞]]. Elle ne montre aucun signe de vieillissement mesurable. La baleine boréale, elle, peut dépasser **200 ans** grâce à une réparation d'ADN ultra-efficace et une forte résistance au cancer."
+          "text": "**ヒドラ**は淡水にすむ小さなポリプで、ほぼ無限にある[[幹細胞]]のおかげで、体全体を新しく作り替えます。老化の兆候は、測定できる範囲では見られません。一方、ホッキョククジラは、非常に効率のよいDNA修復と、がんへの強い抵抗力のおかげで、**200年**以上生きることがあります。"
         },
         {
           "type": "funFact",
-          "text": "Les homards fabriquent de la télomérase partout dans leur corps : leurs télomères ne raccourcissent pas. Ils grandissent toute leur vie et meurent surtout quand la mue devient trop coûteuse."
+          "text": "ロブスターは体のあらゆる場所でテロメラーゼを作るため、テロメアが短くなりません。一生のあいだ成長を続け、死ぬのは主に、脱皮にかかる負担が大きくなりすぎたときです。"
         }
       ]
     },
     {
       "id": "course_74_pourquoi_certaines_especes_sont_elles_im_p3",
-      "title": "Ce que la médecine en retient",
+      "title": "医学がこの研究から持ち帰るもの",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L'idée n'est plus seulement de soigner Alzheimer ou l'arthrose une par une, mais d'attaquer le vieillissement lui-même. Les **sénolytiques** visent à éliminer les cellules zombies. Chez l'animal, cela a déjà rajeuni certaines fonctions."
+          "text": "目指すのは、アルツハイマー病や関節症を一つずつ治すことだけではなく、老化そのものに立ち向かうことです。**セノリティクス**は、ゾンビ細胞を取り除くことを狙った薬です。動物では、一部の機能がすでに若返りました。"
         },
         {
           "type": "paragraph",
-          "text": "Limiter les calories sans malnutrition active aussi des voies de réparation, notamment en freinant [[mTOR]], une protéine qui accélère la croissance… et parfois le déclin. D'autres labos tentent de « remonter l'horloge » des cellules, comme la méduse, sans les transformer en tumeurs."
+          "text": "栄養不足にならない程度にカロリーを制限すると、修復の経路も活発になります。とくに、成長を促し、ときに衰えも早める[[mTOR]]というタンパク質の働きを抑えます。ほかの研究室は、クラゲのように細胞の「時計を巻き戻す」方法を試しています。ただし、細胞を腫瘍に変えてしまわないようにしなければなりません。"
         }
       ]
     },
     {
       "id": "course_74_pourquoi_certaines_especes_sont_elles_im_p4",
-      "title": "Immortel, mais pas invincible",
+      "title": "不死であっても、無敵ではない",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Même une espèce biologiquement immortelle meurt de prédateurs, de maladie ou de catastrophe. La mort reste un moteur de l'évolution : elle laisse place à de nouvelles générations mieux adaptées."
+          "text": "生物学的に不死の種でも、捕食者に食べられたり、病気や災害に襲われたりして死にます。死は今も進化の原動力です。死によって、環境により適した新しい世代に場所が譲られるからです。"
         },
         {
           "type": "paragraph",
-          "text": "Pour l'humain, l'enjeu réaliste n'est pas vivre éternellement, mais allonger les années **en bonne santé**. Une longévité devenue technologie soulèverait aussi d'énormes questions d'équité et de ressources."
+          "text": "人間にとって現実的な目標は、永遠に生きることではなく、**健康に過ごせる年数**を延ばすことです。長寿が技術になれば、公平さや資源をめぐる大きな問題も生まれるでしょう。"
         },
         {
           "type": "takeaway",
-          "text": "L'immortalité biologique repose sur la réparation ou la réinitialisation des cellules. La méduse Turritopsis dohrnii rajeunit ; l'hydre se renouvelle sans cesse. Vieillir n'est pas une fatalité universelle."
+          "text": "生物学的な不死は、細胞の修復や初期化のしくみに支えられています。ベニクラゲは若返り、ヒドラは絶えず自分を作り替えます。老いは、だれにも避けられない運命ではありません。"
         }
       ]
     }

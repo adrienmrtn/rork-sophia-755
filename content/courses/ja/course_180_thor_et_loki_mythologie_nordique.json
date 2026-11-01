@@ -1,118 +1,118 @@
 {
   "id": "course_180_thor_et_loki_mythologie_nordique",
-  "title": "Thor et Loki (mythologie nordique)",
-  "subtitle": "Mythologie nordique",
+  "title": "トールとロキ（北欧神話）：雷と策略の二人",
+  "subtitle": "北欧神話",
   "subject": "mythologie",
   "subcategory": "世界の神話",
-  "description": "Le dieu de la foudre et le dieu de la ruse : duo d'aventures, puis ennemis au Ragnarök. Deux faces du panthéon scandinave.",
+  "description": "雷の神と策略の神。冒険の相棒だった二人は、やがてラグナロクで敵どうしになります。北欧の神々の二つの顔です。",
   "hero": {
     "image": "thor_et_loki_mythologie_nordique",
     "ratio": "16:9",
-    "hook": "L'un frappe avec un marteau. L'autre ment pour gagner. Ensemble, ils sauvent Asgard… jusqu'au jour où Loki la trahit."
+    "hook": "一人はハンマーで戦い、もう一人は嘘で勝つ。二人はアースガルズを救ってきました……ロキが裏切るその日までは。"
   },
   "sections": [
     {
       "id": "course_180_thor_et_loki_mythologie_nordique_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Thor** et **Loki** sont les deux figures les plus populaires de la mythologie nordique. Thor protège les hommes avec la foudre. Loki sème le désordre avec la ruse. On les croise souvent ensemble dans les récits de voyage."
+          "text": "**トール**と**ロキ**は、北欧神話でいちばん人気のある二人の神です。トールは雷で人間を守り、ロキは策略で混乱をまき散らします。旅の物語では、二人がそろって登場することがよくあります。"
         },
         {
           "type": "paragraph",
-          "text": "Leur lien n'est pas une simple amitié comique. Il montre la tension entre l'ordre des dieux et le chaos. Du compagnonnage farceur à la guerre finale, voici comment cette alliance se construit… puis se brise."
+          "text": "二人の関係は、ただの愉快な友情ではありません。そこには、神々の秩序と混沌の緊張が表れています。ふざけ合う旅仲間から最後の戦いまで、この同盟がどう築かれ、そして壊れるのかを見ていきましょう。"
         }
       ]
     },
     {
       "id": "course_180_thor_et_loki_mythologie_nordique_p1",
-      "title": "Asgard, Midgard et les sources",
+      "title": "アースガルズ、ミズガルズ、そして史料",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ces mythes viennent des peuples scandinaves du Ve au XIIe siècle. On les connaît surtout grâce à des textes islandais tardifs, écrits alors que la région était déjà christianisée. La source majeure est l'[[『散文のエッダ』]], rédigée vers **1220** par **Snorri Sturluson**, complétée par l'[[『詩のエッダ』]]."
+          "text": "これらの神話は、五〜十二世紀のスカンディナヴィアの人々のあいだで語られたものです。伝わっているのは主に、地域がすでにキリスト教化されたあとに書かれた、後世のアイスランドの文献です。中心となる史料は、**1220年**ごろに**スノッリ・ストゥルルソン**がまとめた[[『散文のエッダ』]]で、それを補うのが[[『詩のエッダ』]]です。"
         },
         {
           "type": "image",
           "asset": "asgard_midgard_bifrost_bridge_norse_mythology",
           "ratio": "4:3",
-          "caption": "Asgard et Midgard reliés par le Bifröst, le pont arc-en-ciel."
+          "caption": "虹の橋ビフレストで結ばれた、アースガルズとミズガルズ"
         },
         {
           "type": "paragraph",
-          "text": "Le monde s'organise autour de [[ユグドラシル]], l'arbre cosmique. En haut : **Asgard**, demeure des dieux. Plus bas : **Midgard**, monde des hommes, relié par le **Bifröst**. Les dieux se partagent en deux clans : les **Ases**, menés par **Odin** (guerre et souveraineté), et les **Vanes**, comme Freyr et Freyja (fertilité)."
+          "text": "世界は宇宙樹[[ユグドラシル]]を中心に成り立っています。いちばん上には神々の住まい**アースガルズ**、その下には人間の世界**ミズガルズ**があり、**ビフレスト**で結ばれています。神々は二つの氏族に分かれます。**オーディン**（戦争と王権）が率いる**アース神族**と、フレイやフレイヤ（豊穣）のような**ヴァン神族**です。"
         },
         {
           "type": "funFact",
-          "text": "Dans les textes anciens, le Bifröst est un pont fragile : au Ragnarök, il tremblera et s'effondrera sous le poids des géants."
+          "text": "古い文献では、ビフレストはもろい橋です。ラグナロクの日、巨人たちの重みで震え、崩れ落ちるとされています。"
         }
       ]
     },
     {
       "id": "course_180_thor_et_loki_mythologie_nordique_p2",
-      "title": "Thor, le protecteur au marteau",
+      "title": "トール、ハンマーを持つ守り手",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Thor** est le fils d'Odin et de la Terre. C'est le dieu le plus vénéré du peuple : il défend l'humanité contre les **géants**, forces déchaînées de la nature. Barbu, cheveux roux, il incarne une force nette et droite."
+          "text": "**トール**はオーディンと大地の女神の子です。民衆にもっとも敬われた神で、自然の荒ぶる力である**巨人**から人類を守ります。赤い髪とひげをたくわえ、まっすぐで揺るぎない力を体現しています。"
         },
         {
           "type": "image",
           "asset": "thor_hammer_mjolnir_norse_god_painting",
           "ratio": "4:3",
-          "caption": "Mjöllnir, le marteau de Thor : il frappe et revient à la main."
+          "caption": "トールのハンマー、ミョルニル。打てば手元に戻ってくる"
         },
         {
           "type": "paragraph",
-          "text": "Son arme, **Mjöllnir**, forgée par des nains, brise les montagnes et revient toujours à sa main. Une ceinture de force et des gants de fer l'aident à la manier. Son nom a donné le **jeudi** (Thor's day) dans les langues germaniques. Contrairement à Odin, plus aristocratique, Thor est le dieu des paysans libres : pluie, récolte, foyer sûr."
+          "text": "小人たちが鍛えた武器**ミョルニル**は山をも砕き、いつも手元に戻ってきます。力の帯と鉄の手袋が、これを扱う助けになります。トールの名はゲルマン系の言語で**木曜日**（Thor's day）の由来になりました。貴族的なオーディンとは対照的に、トールは自由な農民の神で、雨や収穫、安全な家庭をつかさどります。"
         },
         {
           "type": "funFact",
-          "text": "Le char de Thor est tiré par deux boucs. S'il a faim, il peut les manger le soir et les ressusciter le lendemain avec son marteau… à condition de ne casser aucun os."
+          "text": "トールの戦車は2頭の雄ヤギが引きます。おなかがすいたら、夜にヤギを食べて、翌日ハンマーでよみがえらせることができます。ただし、骨を1本も折らないことが条件です。"
         }
       ]
     },
     {
       "id": "course_180_thor_et_loki_mythologie_nordique_p3",
-      "title": "Loki, la ruse qui finit mal",
+      "title": "ロキ、悪い結末を招く策略",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Loki** vit parmi les Ases, mais il est de sang géant. Il a intégré le panthéon par un pacte de sang avec Odin. C'est le **trickster** : ses farces et ses mensonges dérangent, mais ils font aussi avancer l'histoire et offrent parfois aux dieux leurs plus grands trésors."
+          "text": "**ロキ**はアース神族のなかで暮らしていますが、巨人の血を引いています。オーディンと血の誓いを交わして、神々の仲間入りをしました。**トリックスター**で、いたずらや嘘は周りを困らせますが、物語を前に進め、ときには神々に最高の宝をもたらしもします。"
         },
         {
           "type": "image",
           "asset": "loki_norse_trickster_god_mythology",
           "ratio": "4:3",
-          "caption": "Loki, dieu de la ruse : allié utile, traître annoncé."
+          "caption": "策略の神ロキ。頼りになる味方で、裏切りを予告された者"
         },
         {
           "type": "paragraph",
-          "text": "Il change de forme et même de sexe. Sous forme de jument, il devient la mère de [[スレイプニル]], le cheval à huit pattes d'Odin. Avec la géante Angrboda, il engendre trois monstres : le loup **Fenrir**, le serpent **Jörmungandr** et **Hel**, gardienne des morts. Peu à peu, la farce devient trahison : il organise la mort du dieu lumineux **Baldr**. Dès lors, son destin est scellé."
+          "text": "ロキは姿を変え、性別さえ変えます。雌馬になったときには、オーディンの八本脚の馬[[スレイプニル]]を産みました。巨人の女アングルボザとのあいだには、狼の**フェンリル**、蛇の**ヨルムンガンド**、死者の国を預かる**ヘル**という三匹の怪物をもうけます。やがて、いたずらは裏切りに変わり、光の神**バルドル**を死に追いやる企てを進めます。こうして、ロキの運命は決まりました。"
         }
       ]
     },
     {
       "id": "course_180_thor_et_loki_mythologie_nordique_p4",
-      "title": "Du duo comique au Ragnarök",
+      "title": "愉快な二人組からラグナロクへ",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Longtemps, Thor et Loki se complètent. Quand le géant Thrym vole Mjöllnir, Thor se déguise en mariée et Loki en servante pour le récupérer. Là où le marteau échoue, le mensonge réussit, et l'inverse."
+          "text": "長いあいだ、トールとロキは互いを補い合っていました。巨人スリュムがミョルニルを盗んだときは、トールが花嫁に、ロキが侍女に変装して取り戻しに行きます。ハンマーが通用しないところでは嘘が成功し、その逆もありました。"
         },
         {
           "type": "paragraph",
-          "text": "Puis l'alliance se brise. Au **Ragnarök**, le crépuscule des dieux, Loki mène les ennemis d'Asgard. Thor affronte Jörmungandr, fils de Loki : il tue le serpent, puis meurt de son venin après neuf pas. Force et ruse s'anéantissent ensemble."
+          "text": "やがて同盟は壊れます。神々の黄昏と呼ばれる**ラグナロク**で、ロキは敵の軍勢を率いてアースガルズに攻め込みます。トールはロキの子ヨルムンガンドと戦い、蛇を倒しますが、九歩歩いたところで毒に倒れます。力と策略は、共に滅びます。"
         },
         {
           "type": "takeaway",
-          "text": "**Thor** et **Loki** incarnent la tension entre force protectrice et ruse disruptive. Leur lien, de l'amitié comique à la haine du Ragnarök, montre combien l'ordre des dieux reste fragile face au chaos."
+          "text": "**トール**と**ロキ**は、守る力と、秩序をかき乱す策略の緊張を体現しています。二人の関係は、愉快な友情からラグナロクでの憎しみまで変わっていき、混沌の前で神々の秩序がいかにもろいかを物語っています。"
         }
       ]
     }

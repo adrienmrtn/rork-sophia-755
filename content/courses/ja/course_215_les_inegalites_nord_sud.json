@@ -1,102 +1,102 @@
 {
   "id": "course_215_les_inegalites_nord_sud",
-  "title": "D'où viennent les inégalités entre le Nord et le Sud ?",
-  "subtitle": "Un monde à deux vitesses",
+  "title": "北と南の格差は、いったいどこから生まれたのか",
+  "subtitle": "二つの速度で進む世界",
   "subject": "comprendreLeMonde",
   "subcategory": "経済と社会",
-  "description": "Les 10% les plus riches de la planète captent plus de la moitié des revenus mondiaux. Pourtant, l'extrême pauvreté a été divisée par quatre en trente ans.",
+  "description": "世界で最も豊かな10%の人びとが、世界の所得の半分以上を手にしています。それでも、極度の貧困は三十年のあいだに4分の1に減りました。",
   "hero": {
     "image": "les_inegalites_nord_sud",
     "ratio": "16:9",
-    "hook": "Un Américain gagne en une heure ce qu'un habitant du Niger gagne en une journée entière de travail."
+    "hook": "アメリカ人が1時間で稼ぐ金額を、ニジェールの人は丸1日働いて、やっと稼げるかどうかです。"
   },
   "sections": [
     {
       "id": "course_215_les_inegalites_nord_sud_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le fossé entre pays riches et pays pauvres reste l'un des faits les plus frappants du monde actuel. La mondialisation promettait un rapprochement des niveaux de vie, mais les écarts de richesse restent immenses entre les nations."
+          "text": "豊かな国と貧しい国のあいだにある溝は、今の世界でもとりわけ目を引く事実のひとつです。グローバル化は生活水準の接近を約束しましたが、国どうしの貧富の差は、今も非常に大きいままで残っています。"
         },
         {
           "type": "paragraph",
-          "text": "Pourtant, l'histoire récente n'est pas seulement sombre : l'extrême pauvreté a reculé plus vite que jamais depuis trente ans. Ce cours explore les racines de ces inégalités, et les raisons de cet étrange paradoxe."
+          "text": "とはいえ、近年の歴史は暗いことばかりではありません。極度の貧困は、この三十年でかつてない速さで減りました。このコースでは、こうした格差の根っこと、この不思議な逆説の理由を探っていきます。"
         }
       ]
     },
     {
       "id": "course_215_les_inegalites_nord_sud_p1",
-      "title": "Un monde à deux vitesses",
+      "title": "二つの速度で進む世界",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Les **10% les plus riches** de la population mondiale captent plus de 52% des revenus mondiaux. Les 50% les plus pauvres doivent se partager seulement 8% du gâteau. Cette concentration des richesses n'a jamais été aussi forte dans l'histoire humaine."
+          "text": "世界で最も豊かな**10%**の人びとが、世界の所得の52%以上を手にしています。最も貧しい50%の人びとは、全体のわずか8%を分け合うしかありません。富のこれほどの集中は、人類の歴史でもかつてありませんでした。"
         },
         {
           "type": "paragraph",
-          "text": "Cette fracture se voit aussi dans l'espérance de vie : elle atteint 83 ans au Japon, mais tombe à 55 ans en République centrafricaine. Ces écarts ne sont pas dus au hasard : ils viennent d'un accès très inégal à l'eau potable, à la nourriture et aux soins de santé."
+          "text": "この分断は、平均寿命にも表れています。日本では83歳に達しますが、中央アフリカ共和国では55歳まで下がります。こうした差は偶然ではなく、安全な水、食べ物、医療を手に入れられる機会が大きく違うことから生まれています。"
         },
         {
           "type": "funFact",
-          "text": "Un habitant des États-Unis gagne en moyenne, en une heure de travail, autant qu'un habitant du Niger en une journée entière."
+          "text": "アメリカの人は平均すると、1時間働いて得る金額が、ニジェールの人が丸1日働いて得る金額とほぼ同じです。"
         }
       ]
     },
     {
       "id": "course_215_les_inegalites_nord_sud_p2",
-      "title": "Des racines historiques toujours vivantes",
+      "title": "今も生き続けている、歴史的な根っこ",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Pour comprendre ces écarts, il faut remonter à la colonisation. Les puissances européennes ont organisé de nombreux territoires du Sud comme des fournisseurs de matières premières (café, cacao, coton), freinant leur propre industrialisation pour protéger leurs propres usines."
+          "text": "こうした差を理解するには、植民地支配の時代までさかのぼる必要があります。ヨーロッパ列強は、南の多くの地域を、原材料（コーヒー、カカオ、綿花）の供給地に仕立てました。そして自国の工場を守るために、その地域自身の工業化を妨げたのです。"
         },
         {
           "type": "image",
           "asset": "global_inequality_rich_poor_contrast_photograph",
           "ratio": "16:9",
-          "caption": "Les écarts de richesse entre le Nord et le Sud restent parmi les plus marqués de la planète."
+          "caption": "北と南のあいだの貧富の差は、今も地球上で最も大きな差のひとつに数えられます。"
         },
         {
           "type": "paragraph",
-          "text": "Cette logique se poursuit aujourd'hui à travers les [[交易条件]] : les pays du Sud vendent souvent des matières premières dont le prix varie fortement, tandis qu'ils achètent des produits fabriqués dont le prix ne fait qu'augmenter. À cela s'ajoute le poids de la dette : rembourser les intérêts prend parfois plus de place dans un budget national que l'éducation ou la santé."
+          "text": "この構図は、今も[[交易条件]]を通じて続いています。今の世界の取引にも、その名残があるのです。南の国々が売るのは、価格が大きく上下する原材料であることが多く、買うのは、価格が上がる一方の工業製品であることが多いのです。さらに債務の重みも加わります。利子の返済が、国の予算のなかで教育や医療よりも大きな割合を占めてしまうことさえあります。"
         }
       ]
     },
     {
       "id": "course_215_les_inegalites_nord_sud_p3",
-      "title": "Des progrès réels, mais inégaux",
+      "title": "確かな進歩、しかしそれは不均等なもの",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Les trente dernières années ont pourtant permis un recul spectaculaire de la pauvreté absolue, qui touchait 36% de la population mondiale en 1990, contre moins de 10% avant 2020. Ce progrès vient surtout de la croissance fulgurante de la Chine et de l'Inde."
+          "text": "それでも、この三十年で、絶対的な貧困は目覚ましく減りました。1990年には世界人口の36%が貧困状態にありましたが、2020年より前には10%を切っています。この進歩は、主に中国とインドの急成長によるものです。"
         },
         {
           "type": "paragraph",
-          "text": "Ce progrès a une face cachée : c'est ce que montre la [[courbe de l'éléphant]] de l'économiste Branko Milanovic. Les classes moyennes asiatiques ont vu leurs revenus exploser, mais les classes populaires des pays riches ont stagné, confrontées à la concurrence mondiale. Réduire les inégalités entre pays n'a donc pas empêché de nouvelles tensions à l'intérieur même des pays riches."
+          "text": "この進歩には隠れた一面があり、それを示しているのが、経済学者ブランコ・ミラノヴィッチの[[エレファントカーブ]]です。アジアの中間層は所得が急増しましたが、豊かな国の庶民層は、世界規模の競争にさらされて所得が伸び悩みました。国どうしの格差が縮まっても、豊かな国の内部で新しい緊張が生まれるのは防げなかったのです。"
         }
       ]
     },
     {
       "id": "course_215_les_inegalites_nord_sud_p4",
-      "title": "Le climat, nouvelle ligne de fracture",
+      "title": "気候という、南北をわける新しい線",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L'avenir des inégalités Nord-Sud se joue désormais sur le climat. Les pays du Sud, historiquement les moins responsables des émissions de gaz à effet de serre, sont pourtant les plus exposés aux sécheresses, aux inondations et à la montée des eaux."
+          "text": "北と南の格差がこれからどうなるかは、気候をめぐって決まっていきます。南の国々は、温室効果ガスの排出に歴史的な責任が最も小さいにもかかわらず、干ばつ、洪水、海面上昇の被害を最も受けやすい立場に置かれています。"
         },
         {
           "type": "paragraph",
-          "text": "Pour réduire ces écarts durablement, la communauté internationale explore de nouvelles pistes : [[政府開発援助]] ciblée sur la transition énergétique, ou annulation de la dette des pays les plus fragiles. Tant que la richesse des plus riches croîtra plus vite que celle des plus pauvres, les tensions resteront fortes."
+          "text": "こうした格差を長く続く形で縮めるため、国際社会は新しい道を探っています。その例が、たとえば、エネルギー転換に重点を置いた[[政府開発援助]]や、最も脆弱な国々の債務の帳消しなどといったものです。最も豊かな人びとの富が、最も貧しい人びとの富より速く増え続けるかぎり、緊張は強いままでしょう。"
         },
         {
           "type": "takeaway",
-          "text": "Les 10% les plus riches du monde captent plus de la moitié des revenus mondiaux, mais l'extrême pauvreté a reculé plus vite que jamais en trente ans grâce à l'essor de la Chine et de l'Inde. Le prochain grand défi de cette fracture Nord-Sud sera climatique."
+          "text": "世界で最も豊かな10%の人びとが、世界の所得の半分以上を手にしていますが、中国とインドの台頭のおかげで、極度の貧困は三十年でかつてない速さで減りました。この北と南の分断で、次の大きな課題となるのは気候です。"
         }
       ]
     }

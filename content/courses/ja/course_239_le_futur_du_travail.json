@@ -1,110 +1,110 @@
 {
   "id": "course_239_le_futur_du_travail",
-  "title": "À quoi ressemblera le travail de demain ?",
-  "subtitle": "Automatisation & intelligence artificielle",
+  "title": "これからの仕事は、どんな姿に変わっていくのか？",
+  "subtitle": "自動化と人工知能がもたらす、仕事の変化",
   "subject": "comprendreLeMonde",
   "subcategory": "環境と未来",
-  "description": "L'intelligence artificielle et de nouvelles formes d'emploi bousculent un modèle du travail hérité de l'ère industrielle.",
+  "description": "人工知能や新しい雇用のかたちが、工業化の時代から受け継がれてきた仕事のあり方を大きく揺さぶっています。",
   "hero": {
     "image": "le_futur_du_travail",
     "ratio": "16:9",
-    "hook": "Les machines travaillent plus vite que jamais. Reste à savoir ce qu'il restera à faire aux humains."
+    "hook": "機械はかつてない速さで働いています。では、人間にはこの先どんな仕事が残るのでしょうか。"
   },
   "sections": [
     {
       "id": "course_239_le_futur_du_travail_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le travail ne définit pas seulement nos revenus : il façonne aussi notre identité sociale et le sens que nous donnons à nos journées. Or l'intelligence artificielle, la robotique et de nouvelles façons de travailler bousculent aujourd'hui ce modèle hérité de l'ère industrielle."
+          "text": "仕事は、収入を決めるだけのものではありません。社会の中での自分の立ち位置や、毎日の暮らしに感じる意味までかたちづくります。ところが今、人工知能やロボット工学、そして新しい働き方が、工業化の時代から続くこの仕組みを大きく揺るがしています。"
         },
         {
           "type": "paragraph",
-          "text": "Ce cours explore comment le travail change de forme, et les grandes questions que soulève cette transformation : moins d'heures, plus de machines, et un nouveau partage des richesses."
+          "text": "このコースでは、仕事のかたちがどう変わっていくのか、そして労働時間の短縮、機械の増加、富の新しい分け方といった、この変化が投げかける大きな問いを見ていきます。"
         }
       ]
     },
     {
       "id": "course_239_le_futur_du_travail_p1",
-      "title": "La fin du modèle né avec Henry Ford",
+      "title": "フォードが築いた働き方モデルの終わり",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le travail moderne s'est longtemps organisé autour d'une idée popularisée par **[[ヘンリー・フォード]]**, qui instaure la semaine de 40 heures en 1926. Ce choix n'était pas un geste de générosité : des ouvriers disposant de temps libre deviennent aussi des clients, capables d'acheter les produits qu'ils fabriquent eux-mêmes."
+          "text": "現代の働き方は、長いあいだ**[[ヘンリー・フォード]]**が広めた考え方を軸に組み立てられてきました。フォードは1926年に週40時間労働を導入しています。これは善意からではありません。自由な時間を持つ労働者は、自分たちがつくる製品を買える客にもなるからです。"
         },
         {
           "type": "funFact",
-          "text": "En 1930, l'économiste John Maynard Keynes avait prédit que ses petits-enfants ne travailleraient que 15 heures par semaine, grâce aux progrès technologiques. Presque un siècle plus tard, nous disposons de cette technologie, mais nous travaillons toujours autant."
+          "text": "1930年、経済学者のジョン・メイナード・ケインズは、技術の進歩によって孫の世代は週15時間しか働かなくなると予言しました。それからほぼ1世紀、その技術はすでに手にしているのに、私たちの働く時間はほとんど変わっていません。"
         },
         {
           "type": "paragraph",
-          "text": "Ce modèle s'effrite aujourd'hui au profit de la **gig economy**, l'économie « à la tâche » : plus de 57 millions de travailleurs aux États-Unis vendent désormais leurs services via des plateformes numériques, hors du salariat classique. L'automatisation gagne aussi des tâches de plus en plus complexes, tandis que le télétravail, accéléré par la pandémie de 2020, redessine la géographie même du travail."
+          "text": "この仕組みは今、**ギグエコノミー**、つまり仕事ごとに報酬を得る経済に取って代わられつつあります。アメリカでは57百万人以上が、従来の雇用の枠の外で、デジタルプラットフォームを通じて自分のサービスを売っています。自動化はますます複雑な作業にも広がり、2020年のパンデミックで加速したテレワークは、働く場所のあり方そのものを描き直しています。"
         }
       ]
     },
     {
       "id": "course_239_le_futur_du_travail_p2",
-      "title": "L'IA et le défi de la destruction créatrice",
+      "title": "AIがつきつける「創造的破壊」という課題",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le débat sur l'avenir du travail s'appuie souvent sur une idée du philosophe et économiste **[[ヨーゼフ・シュンペーター]]** : la **[[destruction créatrice]]**. Selon lui, chaque révolution technologique détruit des métiers anciens, mais finit par en créer de nouveaux, souvent plus qualifiés. L'intelligence artificielle générative introduit toutefois une nouveauté : elle menace, pour la première fois, des emplois de bureau et des professions considérées comme intellectuelles."
+          "text": "仕事の未来をめぐる議論では、哲学者であり経済学者でもある**[[ヨーゼフ・シュンペーター]]**の考え方がよく引き合いに出されます。それが**[[創造的破壊]]**です。技術革命のたびに古い職業は消えますが、やがて新しい職業が生まれ、しかもその多くはより高い技能を求める、という見方です。ただ、生成AIには新しい点があります。事務職や、知的とされてきた専門職が、初めて脅かされているのです。"
         },
         {
           "type": "funFact",
-          "text": "En 2023, une étude a montré que l'intelligence artificielle réussissait mieux que 99 % des humains à un test de créativité, remettant en cause l'idée que la créativité serait notre dernier avantage face aux machines."
+          "text": "2023年のある研究で、人工知能が創造性を測るテストで、人間の99%より高い成績を収めたことが示されました。創造性こそ機械に対する人間の最後の強みだ、という考えが揺らいでいます。"
         },
         {
           "type": "paragraph",
-          "text": "Trois scénarios se dessinent. L'optimiste imagine une hausse de productivité qui libérerait l'humain des tâches répétitives. Le pessimiste redoute que l'IA n'avance plus vite que notre capacité à nous reconvertir, créant un chômage massif. L'hybride, enfin, mise sur une collaboration entre l'humain et la machine, où la compétence clé deviendrait la capacité à diriger les outils plutôt qu'à maîtriser un savoir-faire figé."
+          "text": "三つのシナリオが描かれています。楽観派は、生産性の向上によって、人間が単調な繰り返しの作業から解放されると考えます。悲観派は、AIの進歩が人間の学び直しの速さを上回り、大量の失業を生むのではないかと恐れます。そして協働派は、人間と機械の協力に賭けます。そこで鍵になるのは、決まった技能を極めることよりも、道具を使いこなして方向を示す力だとされます。"
         }
       ]
     },
     {
       "id": "course_239_le_futur_du_travail_p3",
-      "title": "Redistribuer le temps et l'argent",
+      "title": "働く時間とお金をどう分け直すか",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Face au risque d'une société à deux vitesses, de nouveaux outils sont à l'étude. Le **revenu universel de base** propose de verser une somme fixe à chaque citoyen, sans condition, pour sécuriser les parcours de vie dans une économie où le travail devient plus intermittent."
+          "text": "社会が二極化するおそれに対して、新しい仕組みが検討されています。その一つ、**ベーシックインカム**は、すべての市民に一定額を無条件で支給し、仕事がより不安定になっていく経済でも、人生の見通しを立てやすくしようという制度です。"
         },
         {
           "type": "image",
           "asset": "ai_generative_writing_artificial_intelligence",
           "ratio": "16:9",
-          "caption": "Automatisation, intelligence artificielle et nouvelles formes d'emploi redessinent le monde du travail."
+          "caption": "自動化、人工知能、そして新しい雇用のかたちが、私たちの働く世界のすがたを大きく描き直しています。"
         },
         {
           "type": "paragraph",
-          "text": "En complément, l'idée d'une **[[semaine de 4 jours]]** gagne du terrain : si les machines produisent davantage en moins de temps, il paraît logique que le temps de travail humain diminue en retour, pour maintenir l'emploi et préserver la santé des travailleurs. Reste une question de financement : si la valeur est de plus en plus créée par des logiciels, les impôts devront sans doute glisser des revenus du travail vers ceux du capital."
+          "text": "これに加えて、**[[週4日勤務]]**という考え方も支持を広げています。機械がより短い時間でより多くを生み出すなら、人間の労働時間もそれに応じて減らすのが理にかなっていて、雇用を守り、働く人の健康を保つことにもつながる、という理屈です。残る課題は財源です。価値の多くをソフトウェアが生み出すようになれば、税の負担は、労働から得る所得から資本から得る所得へと移っていくでしょう。"
         }
       ]
     },
     {
       "id": "course_239_le_futur_du_travail_p4",
-      "title": "Quel sens donner au travail de demain",
+      "title": "明日の仕事に、どんな意味を見いだすか",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Une fois l'équation économique résolue reste une question plus profonde : que devient le sens de nos journées dans un monde où le travail serait moins central ? Historiquement, le travail a structuré le quotidien et l'estime de soi. Sa disparition partielle pourrait mener soit à l'ennui, soit à un renouveau des activités bénévoles, artistiques ou civiques."
+          "text": "経済の方程式が解けても、さらに根本的な問いが残ります。仕事の比重が小さくなった世界で、毎日の意味はどうなるのでしょうか。歴史的に、仕事は日々の生活のリズムと自尊心を支えてきました。仕事が部分的になくなれば、退屈に陥るか、ボランティアや芸術、市民活動が新たに盛んになるか、そのどちらかになるかもしれません。"
         },
         {
           "type": "funFact",
-          "text": "Le mot « travail » vient du latin tripalium, un instrument de torture à trois pieux. Une origine qui rappelle qu'il fut longtemps perçu comme une souffrance avant de devenir une identité."
+          "text": "フランス語で「仕事」を意味するtravailは、ラテン語のtripalium（3本の杭でできた拷問の道具）に由来します。この語源は、仕事が長いあいだ苦しみとみなされ、のちにアイデンティティとなったことを思い出させます。"
         },
         {
           "type": "paragraph",
-          "text": "Dans ce contexte, apprendre à apprendre devient une compétence essentielle. Le véritable enjeu n'est pas seulement technologique, mais politique : utiliserons-nous l'intelligence artificielle pour augmenter nos capacités, ou seulement pour réduire les coûts des entreprises ? La réponse déterminera si le travail de demain sera une libération ou une nouvelle contrainte."
+          "text": "そのためには、学び方を学ぶことが欠かせない力になります。本当の争点は、技術ではなく政治にあります。私たちは人工知能を、人間の能力を高めるために使うのでしょうか。それとも、企業のコストを減らすためだけに使うのでしょうか。この問いへの答えが、明日の仕事が解放になるのか、新たな束縛になるのかを決めます。"
         },
         {
           "type": "takeaway",
-          "text": "Le futur du travail est marqué par la fin du salariat unique, au profit de la gig economy, et par le défi de l'intelligence artificielle, qui menace pour la première fois des emplois intellectuels. Notre modèle social devra sans doute redistribuer les gains de productivité, par un revenu universel ou une semaine de travail plus courte."
+          "text": "仕事の未来を特徴づけるのは、一つの雇用先に頼る働き方の終わりとギグエコノミーの広がり、そして人工知能という課題です。人工知能は、知的な職業を初めて脅かしています。社会の仕組みは、ベーシックインカムや労働時間の短縮などによって、生産性向上の成果を分け直す必要がありそうです。"
         }
       ]
     }

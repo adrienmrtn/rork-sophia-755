@@ -1,112 +1,112 @@
 {
   "id": "course_41_pourquoi_le_ciel_est_il_bleu",
-  "title": "Pourquoi le ciel est-il bleu ?",
-  "subtitle": "Lumière & atmosphère",
+  "title": "空はなぜ青いのでしょうか？",
+  "subtitle": "光と大気",
   "subject": "sciences",
   "subcategory": "暮らしの解説",
-  "description": "Regarder le ciel bleu est si banal qu'on oublie de se demander pourquoi. La réponse tient à la lumière du Soleil et à l'air que l'on traverse pour la voir.",
+  "description": "青空を見上げるのはあまりに当たり前で、なぜ青いのかを考えることはほとんどありません。答えは、太陽の光と、その光が空を見るまでに通り抜ける空気にあります。",
   "hero": {
     "image": "pourquoi_le_ciel_est_il_bleu",
     "ratio": "16:9",
-    "hook": "Le ciel n'est pas peint en bleu : c'est un tour de magie de la lumière et de l'air."
+    "hook": "空は青く塗られているわけではありません。光と空気が見せる、ちょっとした手品なのです。"
   },
   "sections": [
     {
       "id": "course_41_pourquoi_le_ciel_est_il_bleu_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Lever les yeux vers le ciel bleu est si banal qu'on oublie de se demander pourquoi il l'est. L'**atmosphère**, la couche de gaz qui entoure la Terre, n'a pourtant aucune couleur propre. Cette teinte vient d'une rencontre très précise entre la lumière du Soleil et les molécules de gaz qui flottent autour de nous."
+          "text": "青空を見上げるのはあまりに当たり前で、なぜ青いのかを考えることはほとんどありません。ところが、地球を包む気体の層である**大気**には、もともと色がありません。この青は、太陽の光と、私たちのまわりを漂う気体の分子との、とても精密な出会いから生まれる色なのです。"
         },
         {
           "type": "paragraph",
-          "text": "Comprendre ce bleu, c'est comprendre comment la lumière voyage et se **disperse**, c'est-à-dire se renvoie dans toutes les directions au lieu de filer tout droit. Et bonne surprise : c'est exactement le même phénomène qui colore le ciel en rouge et orange au coucher du soleil."
+          "text": "この青を理解することは、光がどう進み、どう**散らばる**のか、つまりまっすぐ進まずにあらゆる方向へはね返されるのはどういうことかを理解することです。しかもうれしいことに、夕焼けの空を赤やオレンジに染めるのも、まったく同じ現象です。"
         }
       ]
     },
     {
       "id": "course_41_pourquoi_le_ciel_est_il_bleu_p1",
-      "title": "La lumière blanche cache toutes les couleurs",
+      "title": "白い光の中には、じつはすべての色が隠れている",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La lumière du Soleil nous paraît blanche, mais elle contient en réalité toutes les couleurs de l'arc-en-ciel : c'est le [[可視光のスペクトル]]. Chaque couleur correspond à une **longueur d'onde**, la taille de sa « vague » lumineuse. Le bleu et le violet ont des ondes courtes ; le rouge a des ondes longues."
+          "text": "太陽の光は白く見えますが、実際には虹のすべての色が混ざっています。これが[[可視光のスペクトル]]、つまり目に見える光の色の並びです。色はそれぞれ**波長**、つまり光の「波」ひとつ分の長さに対応しています。青と紫は波長が短い光で、赤は波長が長い光なのです。"
         },
         {
           "type": "funFact",
-          "text": "Sur la Lune, il n'y a pas d'air pour disperser la lumière. Résultat : là-bas, le ciel reste **noir en plein jour**, même quand le Soleil brille. La preuve que la couleur du ciel vient de l'air, pas du Soleil."
+          "text": "月には、光を散らす空気がありません。その結果、月の空は、太陽が輝いている昼間でも**真っ黒**のままです。空の色は太陽ではなく空気から生まれる、ということを示す証拠です。"
         },
         {
           "type": "paragraph",
-          "text": "Car entre le Soleil et nos yeux, l'air n'est pas vide : il est rempli de minuscules **molécules de gaz**, surtout de l'azote, environ **78 %** de l'air, et de l'oxygène, environ **21 %**. Elles sont bien plus petites que les ondes de lumière. Quand un rayon les percute, il ne file plus tout droit : il est renvoyé dans toutes les directions. Ce petit rebond est le point de départ de la couleur du ciel."
+          "text": "太陽と私たちの目のあいだにある空気は、空っぽではありません。ごく小さな**気体の分子**でいっぱいで、主なものは窒素（空気の約**78%**）と酸素（約**21%**）です。これらは光の波よりずっと小さな粒です。光線がぶつかると、もうまっすぐには進めず、あらゆる方向へはね返されます。この小さなはね返りが、空の色の出発点です。"
         }
       ]
     },
     {
       "id": "course_41_pourquoi_le_ciel_est_il_bleu_p2",
-      "title": "La diffusion : pourquoi le bleu l'emporte",
+      "title": "光が散らばるしくみ：なぜ青がいちばん強いのか",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En **1871**, le physicien britannique **Lord Rayleigh** met ce phénomène en équation. Il découvre que plus une couleur a une onde courte, plus elle est renvoyée dans tous les sens par les molécules d'air. C'est la [[レイリー散乱]]."
+          "text": "**1871年**、イギリスの物理学者**レイリー卿**がこの現象を数式で表しました。波長が短い色ほど、空気の分子によってあらゆる方向へ強くはね返されることがわかったのです。これが[[レイリー散乱]]です。"
         },
         {
           "type": "funFact",
-          "text": "Le ciel de Mars fait l'inverse du nôtre : sa poussière riche en fer le rend rosé en journée, mais ses couchers de soleil, eux, sont **bleus**. Tout dépend de ce que contient l'air."
+          "text": "火星の空は、地球とは逆です。鉄分の多いちりのせいで昼は赤みがかったピンク色ですが、夕焼けは**青**くなります。すべては空気に何が含まれているかで決まります。"
         },
         {
           "type": "image",
           "asset": "blue_sky_sunlight_scattering_atmosphere",
           "ratio": "4:3",
-          "caption": "La lumière bleue est dispersée dans toutes les directions par l'air."
+          "caption": "青い光は、空気の分子によってあらゆる方向に散らされます。"
         },
         {
           "type": "paragraph",
-          "text": "Concrètement, la lumière bleue est dispersée environ **9 fois plus** que la rouge. Le rouge traverse l'air presque en ligne droite, alors que le bleu ricoche partout. Voilà pourquoi, où que vous regardiez dans le ciel, du bleu finit toujours par arriver à vos yeux : le ciel entier semble « briller » de ce bleu éparpillé."
+          "text": "具体的に言うと、青い光は赤い光の約**9倍**も散らされます。赤は空気をほぼまっすぐ通り抜けますが、青はあちこちではね回ります。だから、空のどこを見ても、はね回った青い光がかならず目に届きます。空全体が、この散らばった青で「光って」いるように見えるわけです。"
         }
       ]
     },
     {
       "id": "course_41_pourquoi_le_ciel_est_il_bleu_p3",
-      "title": "Alors, pourquoi pas violet ?",
+      "title": "では、なぜ紫ではないの？",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Une question logique se pose : si les ondes les plus courtes sont les plus dispersées, le violet devrait gagner, car son onde est encore plus courte que celle du bleu. Le ciel contient d'ailleurs beaucoup de violet dispersé."
+          "text": "ここで、当然の疑問がわきます。波長の短い光ほどよく散らされるなら、青よりさらに波長の短い紫が勝つはずではないか、という疑問です。じつは、空には散乱した紫の光もたくさん含まれています。"
         },
         {
           "type": "paragraph",
-          "text": "La réponse n'est pas dans le ciel, mais dans notre œil. Nous captons les couleurs grâce à des capteurs appelés **cônes**, des cellules de la rétine sensibles à la lumière. Ils sont bien plus sensibles au bleu qu'au violet. En plus, le Soleil envoie plus de lumière bleue que violette. Notre cerveau fait alors une sorte de moyenne et voit un beau bleu. Un animal sensible à d'autres couleurs verrait sans doute un tout autre ciel."
+          "text": "答えは空ではなく、私たちの目の中にあります。色を捉えるのは**錐体**というセンサーで、光を感じる網膜の細胞です。錐体は紫よりも青にずっと敏感です。それに、太陽が出す光も、紫より青のほうが多くなっています。そこで脳は、それらをいわば平均して、きれいな青を見せてくれるのです。ほかの色に敏感な動物なら、きっとまったく違う色の空を見ているでしょう。"
         }
       ]
     },
     {
       "id": "course_41_pourquoi_le_ciel_est_il_bleu_p4",
-      "title": "Et le rouge du soir ?",
+      "title": "では、夕焼けの赤は？",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le coucher de soleil suit les mêmes règles, mais change une chose : la distance. À midi, la lumière traverse une fine couche d'air. Le soir, quand le Soleil est bas, ses rayons doivent traverser **beaucoup plus d'air** avant de nous atteindre."
+          "text": "夕焼けも同じ仕組みですが、一つだけ違うことがあります。距離です。正午、光が通る空気の層は薄いままです。夕方、太陽が低くなると、光は私たちに届くまでに**はるかに厚い空気**を通らなければなりません。"
         },
         {
           "type": "image",
           "asset": "sunset_red_orange_sky_atmosphere",
           "ratio": "16:9",
-          "caption": "Au ras de l'horizon, la lumière traverse une épaisseur d'air bien plus grande."
+          "caption": "地平線すれすれでは、光が通り抜ける空気の層がずっと厚くなります。"
         },
         {
           "type": "paragraph",
-          "text": "Sur ce long trajet, tout le bleu est dispersé bien avant d'arriver jusqu'à nous : il est comme filtré par l'épaisseur de l'air. Il ne reste alors que les couleurs les plus résistantes, les rouges et les oranges. S'il y a de la poussière ou de la pollution, la [[ミー散乱]] entre en jeu : des particules plus grosses que les molécules d'air rendent le ciel laiteux ou renforcent ces teintes orangées."
+          "text": "この長い道のりのあいだに、青い光は私たちに届くずっと前に散らされてしまい、空気の厚みで濾されたようになります。そのため、いちばん散らされにくい赤やオレンジの光だけが残ります。ちりや汚れた空気があると、[[ミー散乱]]が加わります。空気の分子より大きな粒子が、空を乳白色にしたり、オレンジ色の色合いをいっそう強めたりすることもあります。"
         },
         {
           "type": "takeaway",
-          "text": "Le ciel est bleu parce que les ondes courtes sont environ **9 fois plus dispersées** par l'air que les ondes longues. Au coucher du soleil, la lumière traverse tellement d'air que seul le rouge nous parvient encore."
+          "text": "空が青いのは、波長の短い光が、波長の長い光より約**9倍**も空気に散らされるからです。夕焼けでは光が通る空気の量がとても多く、赤い光だけがなんとか私たちのもとに届きます。"
         }
       ]
     }

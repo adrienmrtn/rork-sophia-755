@@ -1,109 +1,109 @@
 {
   "id": "course_102_la_ferme_des_animaux_george_orwell",
-  "title": "Qui sont les cochons de « La Ferme des animaux » ?",
-  "subtitle": "1945",
+  "title": "『動物農場』に出てくるブタは、いったいだれのこと？",
+  "subtitle": "1945年",
   "subject": "litterature",
   "subcategory": "英米と世界の文学",
-  "description": "En 1945, Orwell raconte une ferme où les animaux chassent l'homme, puis voient les cochons reprendre le pouvoir. Une allégorie limpide de la Révolution russe et de la trahison révolutionnaire.",
+  "description": "1945年、オーウェルは、動物たちが人間を追い出したのに、やがてブタが権力を握り直す農場の物語を書きました。ロシア革命と革命の裏切りを、明快に描いた寓意です。",
   "hero": {
     "image": "la_ferme_des_animaux_orwell",
     "ratio": "16:9",
-    "hook": "Trente mille mots, des animaux, et une leçon politique que le monde n'a pas fini d'apprendre."
+    "hook": "3万語ほどの短い物語、動物たち、そして世界がまだ学び終えていない政治の教訓。"
   },
   "sections": [
     {
       "id": "course_102_la_ferme_des_animaux_george_orwell_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Publié en **1945**, **La Ferme des animaux** ressemble à un conte pour enfants. Sous cette apparence simple, **George Orwell** décrit comment une révolution populaire peut être confisquée par une élite corrompue. En à peine **30 000 mots**, il livre l'une des **[[ロシア革命の寓意]]** les plus efficaces jamais écrites."
+          "text": "**1945年**に出版された**『動物農場』**は、一見、子ども向けのおとぎ話のようです。しかしこの素朴な見かけの下で、**ジョージ・オーウェル**は、民衆の革命が腐敗したエリートに奪われてしまうさまを描いています。わずか**3万語**で、史上屈指の出来ばえの**[[ロシア革命の寓意]]**を書き上げました。"
         },
         {
           "type": "image",
           "asset": "animal_farm_pigs_barnyard_orwell",
           "ratio": "4:3",
-          "caption": "Des cochons au pouvoir : la fable qui dénonce la corruption révolutionnaire."
+          "caption": "権力の座についたブタたち：革命が腐敗していくさまを告発する寓話"
         }
       ]
     },
     {
       "id": "course_102_la_ferme_des_animaux_george_orwell_p1",
-      "title": "Une allégorie chirurgicale de l'histoire soviétique",
+      "title": "ソ連の歴史を鋭く切り取った、寓意という物語",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le livre naît pendant la **[[第二次世界大戦]]**, alors que l'URSS est l'alliée de l'Occident contre l'Allemagne nazie. Critiquer **Staline** passe alors pour une trahison politique. Orwell attend la fin du conflit pour publier. Chaque animal correspond à une figure historique : le **Vieux Major** évoque **Marx** et **Lénine**, **Napoléon** calque **Staline**, **Boule de neige** rappelle **Trotski**, rival de Staline, exilé puis assassiné."
+          "text": "この本は**[[第二次世界大戦]]**中に生まれました。当時ソ連は、ナチス・ドイツに対する西側の同盟国でした。そのため、**スターリン**を批判することは政治的な裏切りとみなされたのです。オーウェルは戦争が終わるのを待って出版しました。それぞれの動物は歴史上の人物に対応しています。**老メジャー**は**マルクス**と**レーニン**を、**ナポレオン**は**スターリン**を、**スノーボール**はスターリンのライバルで、亡命ののち暗殺された**トロツキー**を思わせます。"
         },
         {
           "type": "funFact",
-          "text": "T.S. Eliot, alors éditeur, refusa le manuscrit en arguant que les porcs intelligents risquaient d'offenser les hommes d'État."
+          "text": "当時編集者だったT・S・エリオットは、賢いブタが政治家の気分を害するおそれがあるとして、原稿を断りました。"
         },
         {
           "type": "paragraph",
-          "text": "Les **chiens** de Napoléon figurent la police secrète et la terreur politique. **Malabar**, le cheval laborieux, incarne le **[[プロレタリアート]]** exploité jusqu'à l'épuisement total. **Brille-Babil**, le propagandiste cochon, transforme chaque échec en victoire officielle, réécrivant l'histoire au fil des jours. Orwell décrit le **[[スターリン主義]]** avec la précision d'un pamphlet et la légèreté d'une fable."
+          "text": "ナポレオンの**犬**たちは、秘密警察と政治的な恐怖を表します。働き者の馬**ボクサー**は、疲れ果てるまで搾取される**[[プロレタリアート]]**の象徴です。宣伝係のブタ**スクウィーラー**は、あらゆる失敗を公式の勝利に変え、日々歴史を書き換えていきます。オーウェルは**[[スターリン主義]]**を、パンフレットの正確さと寓話の軽みで描き出しているのです。"
         }
       ]
     },
     {
       "id": "course_102_la_ferme_des_animaux_george_orwell_p2",
-      "title": "Le basculement : de l'utopie à la dictature",
+      "title": "転換点：ユートピアが独裁に変わるとき",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Les animaux chassent le fermier **Jones**, symbole du **[[皇帝ニコライ2世]]**, renversé en **1917**. Ils proclament l'**Animalisme** et inscrivent les **Sept Commandements** sur le mur de la grange. L'égalité semble enfin possible. Puis Napoléon chasse Boule de neige avec ses chiens dressés à la violence et installe la terreur."
+          "text": "動物たちは農場主**ジョーンズ**を追い出します。彼は、**1917年**に倒された**[[皇帝ニコライ2世]]**の象徴です。動物たちは**動物主義**を宣言し、納屋の壁に**七戒**を書きます。ついに平等が実現できそうに思えます。やがてナポレオンは、暴力を仕込んだ犬たちを使ってスノーボールを追放し、恐怖政治を敷きます。"
         },
         {
           "type": "image",
           "asset": "farm_animals_barn_countryside",
           "ratio": "16:9",
-          "caption": "La ferme au départ : une utopie qui bascule vers la dictature."
+          "caption": "出発点の農場：やがて独裁へと傾いていくユートピアの姿"
         },
         {
           "type": "paragraph",
-          "text": "Le moulin à vent devient un symbole de mobilisation forcée : les animaux s'épuisent à le construire pendant que les cochons se déclarent « travailleurs intellectuels » et s'accaparent les ressources. Les pommes et le lait sont d'abord réservés aux dirigeants, au nom du « cerveau » qu'il faudrait nourrir. La corruption commence par de petits privilèges, puis s'installe comme une norme. Les procès publics et les exécutions rappellent les **grandes purges** staliniennes des années 1930."
+          "text": "風車は強制動員の象徴になります。動物たちが疲れ果てて風車を建てているあいだに、ブタは自分たちを「知的労働者」と称して資源を独占します。リンゴとミルクは、まず指導者たちのためにとっておかれます。養わなければならない「頭脳」のためだというのです。腐敗は小さな特権から始まり、やがてそれが当たり前の規範として定着します。公開裁判と処刑は、1930年代にスターリンが行った**大粛清**を思わせます。"
         }
       ]
     },
     {
       "id": "course_102_la_ferme_des_animaux_george_orwell_p3",
-      "title": "La modification du langage et la trahison finale",
+      "title": "言葉の書き換えと、最後に待ち受ける裏切り",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Orwell montre que celui qui contrôle les mots contrôle la réalité perçue. Les cochons modifient les Commandements la nuit, quand les animaux dorment : « Aucun animal ne dormira dans un lit » devient « avec des draps ». L'interdiction de l'alcool gagne la mention « avec excès ». La mémoire collective est effacée mot par mot, jusqu'à ce que personne ne se souvienne de l'originel."
+          "text": "オーウェルは、言葉を支配する者が、人々の知覚する現実を支配することを示します。ブタたちは、動物が眠っている夜に戒律を書き換えます。「どの動物もベッドで寝てはならない」には、「シーツを敷いた」という語が書き加えられます。酒の禁止には「度を超して」という語が加わります。集団の記憶は一語ずつ消され、ついには、もとの文言を覚えている者がいなくなります。"
         },
         {
           "type": "quote",
-          "text": "Tous les animaux sont égaux, mais certains animaux sont plus égaux que d'autres.",
-          "attribution": "George Orwell, La Ferme des animaux"
+          "text": "すべての動物は平等である。しかし、ある動物はほかの動物よりもっと平等である。",
+          "attribution": "ジョージ・オーウェル『動物農場』"
         },
         {
           "type": "paragraph",
-          "text": "C'est une **[[ニュースピーク]]** avant l'heure : le langage ne communique plus, il masque. À la fin, les cochons marchent sur deux pattes, s'habillent et banquetent avec des fermiers humains. Les autres animaux, regardant du porc à l'homme et de l'homme au porc, ne distinguent plus les uns des autres. La **[[ロシア革命]]** a produit exactement ce qu'elle prétendait combattre."
+          "text": "これは、時代に先がけた**[[ニュースピーク]]**です。言葉はもう伝えるためのものではなく、覆い隠すためのものになります。最後には、ブタが二本足で歩き、服を着て、人間の農場主たちと宴会を開きます。ほかの動物たちは、ブタから人間へ、人間からブタへと見比べますが、もう見分けがつきません。**[[ロシア革命]]**は、自分が戦うと言っていたものを、そっくりそのまま生み出してしまったのです。"
         }
       ]
     },
     {
       "id": "course_102_la_ferme_des_animaux_george_orwell_p4",
-      "title": "Un avertissement universel sur le pouvoir",
+      "title": "権力をめぐる、時代を超えた普遍的な警告",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Si le livre vise d'abord la Révolution russe, son message dépasse l'histoire soviétique. Orwell analyse la soumission, la propagande et la fragilité des idéaux face à l'ambition personnelle. Sans éducation critique et sans mémoire collective, les peuples voient leurs rêves de liberté dévoyés par ceux qui prennent le pouvoir au nom du peuple."
+          "text": "この本はまずロシア革命を狙っていますが、そのメッセージはソ連の歴史を超えています。オーウェルは、服従やプロパガンダ、そして個人の野心の前での理想のもろさを分析しています。批判的な教育と集団の記憶がなければ、人々の自由への夢は、民衆の名で権力を握る者たちにゆがめられてしまうのです。"
         },
         {
           "type": "paragraph",
-          "text": "Vendu à plus de **30 millions** d'exemplaires, le roman touche des lecteurs de tous âges et de toutes cultures. Enfant, on lit une histoire d'animaux ; adulte, on y lit un traité de science politique. La leçon reste simple et actuelle : quand les mots perdent leur sens, la liberté physique suit rapidement. Orwell prépare ici les thèmes qu'il poussera à l'extrême dans **1984** quatre ans plus tard."
+          "text": "**三千万部**以上売れたこの小説は、あらゆる年齢、あらゆる文化の読者の心をとらえます。子どものころは動物の物語として読み、大人になれば政治学の論考として読めるのです。教訓は単純で、いまも色あせません。言葉が意味を失うとき、身体の自由もすぐに失われるのです。オーウェルは、四年後の**『1984年』**で極限まで突き詰めるテーマを、ここで準備しています。"
         },
         {
           "type": "takeaway",
-          "text": "**La Ferme des animaux** montre qu'une révolution trahie passe par la manipulation du langage et la confiscation de la mémoire. Orwell prouve qu'une fable courte peut dire plus qu'un discours de mille pages."
+          "text": "**『動物農場』**は、裏切られた革命が、言葉の操作と記憶の没収を通って進むことを示しています。短い寓話が千ページの演説より多くを語れることを、オーウェルは証明してみせました。"
         }
       ]
     }

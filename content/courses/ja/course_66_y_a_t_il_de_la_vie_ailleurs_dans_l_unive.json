@@ -1,118 +1,118 @@
 {
   "id": "course_66_y_a_t_il_de_la_vie_ailleurs_dans_l_unive",
-  "title": "Sommes-nous seuls dans l'Univers ?",
-  "subtitle": "Exobiologie",
+  "title": "宇宙で、私たちは孤独なのか？",
+  "subtitle": "宇宙生物学",
   "subject": "sciences",
   "subcategory": "地球と宇宙",
-  "description": "Des milliers de milliards de planètes, et pourtant un silence radio. La science cherche la vie ailleurs sans promettre de petits hommes verts.",
+  "description": "数兆個もの惑星があるのに、電波は沈黙したまま。科学は宇宙のどこかにいる生命を探していますが、緑色の小さな宇宙人を約束するわけではありません。",
   "hero": {
     "image": "y_a_t_il_de_la_vie_ailleurs_dans_l_univers",
     "ratio": "16:9",
-    "hook": "L'univers est immense. Alors pourquoi personne ne répond ?"
+    "hook": "宇宙はこんなに広いのに、なぜだれも答えてくれないのでしょう？"
   },
   "sections": [
     {
       "id": "course_66_y_a_t_il_de_la_vie_ailleurs_dans_l_unive_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L'univers observable contient environ **2 000 milliards** de galaxies, immenses ensembles d'étoiles, chacune avec des centaines de milliards d'étoiles. Statistiques aidant, les planètes potentiellement habitables devraient être innombrables. Pourtant, depuis le début de l'astronomie moderne, nous n'avons aucun contact confirmé."
+          "text": "観測できる宇宙には、約**2兆**個の銀河があります。銀河とは星の巨大な集まりで、それぞれに数千億個もの星があります。確率から考えれば、生命が暮らせそうな惑星は数えきれないほどあるはずです。それなのに、近代天文学が始まってから今日まで、確かな接触は一度もありません。"
         },
         {
           "type": "paragraph",
-          "text": "Cette contradiction porte un nom : le **paradoxe de Fermi**, d'après le physicien **Enrico Fermi**. La question n'est plus seulement de la science-fiction. Elle relève de l'[[宇宙生物学]] : la science qui étudie les conditions d'apparition de la vie ailleurs, et les moyens de la détecter."
+          "text": "この矛盾には名前があります。物理学者**エンリコ・フェルミ**にちなんだ**フェルミのパラドックス**です。もはやSFだけの問いではありません。これは[[宇宙生物学]]の領分です。宇宙のどこかで生命が生まれる条件と、それを見つける方法を研究する科学です。"
         }
       ]
     },
     {
       "id": "course_66_y_a_t_il_de_la_vie_ailleurs_dans_l_unive_p1",
-      "title": "Ce que la vie semble demander",
+      "title": "生命が必要としているらしいもの",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Pour chercher ailleurs, on part du seul exemple connu : la vie terrestre. Elle repose surtout sur la chimie du **carbone**, atome qui forme des molécules complexes, et sur l'**eau liquide**, qui permet aux réactions chimiques de bien se dérouler."
+          "text": "よその星で生命を探すときは、知られている唯一の例である地球の生命から出発します。地球の生命は主に、複雑な分子をつくる原子である**炭素**の化学と、化学反応をうまく進めてくれる**液体の水**に支えられています。"
         },
         {
           "type": "image",
           "asset": "radio_telescope_seti",
           "ratio": "auto",
-          "caption": "Les radiotélescopes scrutent le ciel, à l'écoute d'un éventuel signal."
+          "caption": "電波望遠鏡が空を見渡し、届くかもしれない信号に耳をすましています。"
         },
         {
           "type": "paragraph",
-          "text": "Une planète candidate doit souvent se trouver dans la [[zone habitable]] de son étoile : ni trop près, sinon l'eau s'évapore, ni trop loin, sinon l'eau gèle. Depuis les années 1990, on a découvert plus de **5 500 exoplanètes**, planètes autour d'autres étoiles que le Soleil. Presque chaque étoile de notre galaxie en aurait au moins une."
+          "text": "候補になる惑星は、多くの場合、恒星の[[ハビタブルゾーン]]にある必要があります。近すぎれば水が蒸発し、遠すぎれば水が凍ってしまうからです。1990年代以降、太陽以外の恒星を回る惑星、つまり**5,500個以上の系外惑星**が見つかっています。天の川銀河のほぼすべての恒星に、少なくとも一つは惑星があると見られています。"
         },
         {
           "type": "funFact",
-          "text": "Il y a plus d'étoiles dans l'univers observable que de grains de sable sur toutes les plages de la Terre."
+          "text": "観測できる宇宙には、地球上のすべての浜辺にある砂粒の数よりも、さらに多くの星があります。"
         },
         {
           "type": "paragraph",
-          "text": "En **1961**, l'astronome **Frank Drake** propose l'[[ドレイク方程式]] : une formule qui multiplie des facteurs — étoiles, planètes habitables, durée des civilisations — pour estimer le nombre de civilisations capables de communiquer dans la Voie lactée. Les chiffres restent très incertains. La formule sert surtout à structurer le débat."
+          "text": "**1961年**、天文学者**フランク・ドレイク**が[[ドレイクの方程式]]を提案します。星の数、居住可能な惑星の数、文明が続く期間といった要素を掛け合わせて、天の川銀河で通信できる文明の数を見積もる式です。数字はとても不確かで、この式は主に議論を整理するために使われます。"
         }
       ]
     },
     {
       "id": "course_66_y_a_t_il_de_la_vie_ailleurs_dans_l_unive_p2",
-      "title": "Des oasis dans le système solaire",
+      "title": "太陽系のなかにもあるオアシス",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Pas besoin d'aller tout de suite vers d'autres étoiles. Dans notre système solaire, plusieurs mondes intriguent. **Europa**, une lune de Jupiter, abrite probablement un océan d'eau liquide sous une croûte de glace. Cet océan resterait liquide grâce aux [[潮汐力]] : l'énorme attraction de Jupiter déforme Europa et chauffe son intérieur par frottement."
+          "text": "ほかの恒星へ急いで向かう必要はありません。私たちの太陽系にも、気になる天体がいくつもあります。木星の衛星**エウロパ**には、氷の地殻の下に液体の水の海があると考えられています。この海が凍らずにいられるのは[[潮汐力]]のおかげです。木星の巨大な引力でエウロパが変形し、摩擦で内部が温められるのです。"
         },
         {
           "type": "paragraph",
-          "text": "**Encelade**, une petite lune de Saturne, éjecte des **geysers**, des jets de vapeur et de matière. La sonde **Cassini** y a trouvé des indices d'activité **hydrothermale**, un chauffage par réactions chimiques au fond de l'océan, capable en principe de nourrir des microbes sans soleil."
+          "text": "土星の小さな衛星**エンケラドス**は、水蒸気や物質を噴き上げる**間欠泉**を持っています。探査機**カッシーニ**は、そこで**熱水活動**の手がかりを見つけました。海底で化学反応によって熱が生まれる現象で、太陽の光がなくても微生物を養える可能性があります。"
         },
         {
           "type": "paragraph",
-          "text": "Sur **Mars**, de l'eau liquide a autrefois coulé en surface. Les robots y cherchent des [[バイオシグネチャー]] : traces fossiles ou chimiques d'une vie passée, avant que la planète ne perde une grande partie de son atmosphère et de son eau."
+          "text": "**火星**では、かつて地表を液体の水が流れていました。探査機は[[バイオシグネチャー]]を探しています。火星が大気と水の多くを失う前に生きていた生命が残した、化石や化学的な痕跡のことです。"
         }
       ]
     },
     {
       "id": "course_66_y_a_t_il_de_la_vie_ailleurs_dans_l_unive_p3",
-      "title": "Le grand silence",
+      "title": "大いなる沈黙",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En **1950**, Fermi demande : si des civilisations avancées existent par milliers, pourquoi n'en voyons-nous aucune trace ? L'univers est vieux. Une civilisation avec seulement un million d'années d'avance aurait eu le temps de se faire remarquer, même sans voyager à la vitesse de la lumière."
+          "text": "**1950年**、フェルミは問いかけました。高度な文明が何千も存在するのなら、なぜその痕跡がひとつも見えないのだろうか、と。宇宙は古く、たった百万年ほど進んでいるだけの文明でも、光の速さで旅をしなくても、自分たちの存在を知らせるだけの時間は十分にあったはずです。"
         },
         {
           "type": "paragraph",
-          "text": "Une hypothèse est celle du [[グレートフィルター]] : une étape presque impossible à franchir dans l'évolution, par exemple le passage à une vie complexe, ou l'autodestruction technologique. Soit nous l'avons déjà passée, soit elle est devant nous."
+          "text": "仮説の一つが[[グレートフィルター]]です。進化の途中にある、ほとんど越えられない関門のことで、たとえば複雑な生命への移行や、技術による自滅が挙げられます。私たちがすでに越えたか、これから先に待っているか、どちらかです。"
         },
         {
           "type": "paragraph",
-          "text": "D'autres pistes : nous n'écoutons peut-être pas les bons signaux. Le programme **SETI**, Search for Extraterrestrial Intelligence, scrute surtout les ondes radio. Ou les civilisations sont trop brèves et trop éloignées pour se croiser. Ou encore l'[[動物園説]] : la Terre serait volontairement laissée à l'écart, comme une réserve."
+          "text": "ほかにも手がかりがあります。私たちが適切な信号を聞いていないのかもしれません。地球外知的生命体探査計画**SETI**は、主に電波を調べています。あるいは、文明の寿命が短すぎ、距離も遠すぎて出会えないのかもしれません。さらに[[動物園仮説]]では、地球は保護区のように、わざと放っておかれているとされます。"
         }
       ]
     },
     {
       "id": "course_66_y_a_t_il_de_la_vie_ailleurs_dans_l_unive_p4",
-      "title": "Comment on cherche aujourd'hui",
+      "title": "いま、どうやって探しているか",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le télescope spatial **James Webb** analyse la lumière qui traverse l'atmosphère de planètes lointaines grâce à la [[分光学]], le découpage de la lumière pour identifier les gaz présents. On y cherche des gaz comme l'oxygène ou le méthane en quantités étranges, possibles indices de vie."
+          "text": "宇宙望遠鏡**ジェームズ・ウェッブ**は、遠く離れた惑星の大気を通り抜けてきた光を、[[分光法]]で調べています。これは光を波長ごとに分けて、含まれる気体を見分ける方法です。酸素やメタンといった気体が不自然な量で見つかれば、それは生命の手がかりかもしれません。"
         },
         {
           "type": "funFact",
-          "text": "Si quelqu'un dans la galaxie d'Andromède nous observait « maintenant », il verrait la Terre telle qu'elle était il y a **2,5 millions d'années** : la lumière met ce temps à faire le trajet."
+          "text": "もしアンドロメダ銀河にだれかがいて、いま地球を「見ている」としたら、そこに映るのは**二百五十万年前**の地球の姿です。光がそこまで届くのに、それだけの時間がかかるからです。"
         },
         {
           "type": "paragraph",
-          "text": "Même une vie microbienne changerait tout : elle prouverait que le vivant n'est pas un accident unique. En attendant, les sondes **Voyager** emportent depuis **1977** des disques d'or avec des sons et images de la Terre. Probabilité d'interception : quasi nulle. Besoin de ne pas se sentir seuls : intact."
+          "text": "微生物ほどの生命でも、すべてが変わります。生き物は唯一無二の偶然ではないと証明されるからです。その間にも、探査機**ボイジャー**は**1977年**から、地球の音や画像を収めた金のレコードを運び続けています。受け取られる確率はほぼゼロ。それでも、ひとりぼっちでいたくないという私たちの思いは、少しも変わりません。"
         },
         {
           "type": "takeaway",
-          "text": "Les planètes sont innombrables et la vie paraît statistiquement plausible. Mais l'absence de contact, le paradoxe de Fermi, rappelle que l'intelligence technologique pourrait être très rare, ou très brève."
+          "text": "惑星は数えきれないほどあり、生命の存在は統計的にありえそうに見えます。けれども、接触がないというフェルミのパラドックスは、技術をもつ知性がきわめてまれか、きわめて短命かもしれないことを思い出させてくれます。"
         }
       ]
     }

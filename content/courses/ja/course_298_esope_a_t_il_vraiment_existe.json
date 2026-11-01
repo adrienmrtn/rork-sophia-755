@@ -1,124 +1,124 @@
 {
   "id": "course_298_esope_a_t_il_vraiment_existe",
-  "title": "Ésope a-t-il vraiment existé ?",
-  "subtitle": "L'esclave qui disait vrai",
+  "title": "イソップは本当にいたのか",
+  "subtitle": "真実を語った奴隷",
   "subject": "litterature",
   "subcategory": "ギリシア人と古代の哲学者",
-  "description": "Esclave, laid, muet de naissance : la légende d'Ésope est trop belle pour être vraie. Derrière elle se cache une invention qui traverse les siècles, la fable.",
+  "description": "奴隷で、容姿が醜く、生まれつき口がきけない。イソップの伝説は、できすぎていて本当とは思えません。その陰には、何世紀も受け継がれてきた発明、寓話があります。",
   "author": "simon-lea",
   "hero": {
     "image": "aesop_fox_kylix_vatican_470_bc",
     "ratio": "4:3",
-    "hook": "On lui attribue plus de fables qu'un homme n'en pourrait écrire en une vie, et personne ne sait s'il a vécu."
+    "hook": "一人の人間が一生で書ける数をはるかに超える寓話が彼の作とされますが、実在したかどうかはだれも知りません。"
   },
   "sections": [
     {
       "id": "course_298_esope_a_t_il_vraiment_existe_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La légende fait d'[[イソップ]] un esclave grec qui aurait vécu entre **600 et 500** av. J.-C., le père de la [[寓話]]. L'historien Hérodote, le poète comique Aristophane et le philosophe Platon le citent. Pourtant, le premier recueil connu de ses fables, rassemblé par [[パレロンのデメトリオス]] au **IVe siècle** av. J.-C., paraît longtemps après sa mort. Si toutefois il a jamais vécu."
+          "text": "伝説では、[[イソップ]]は**紀元前600年から500年**の間に生きたギリシアの奴隷で、[[寓話]]の父とされています。歴史家ヘロドトス、喜劇詩人アリストパネス、哲学者プラトンも彼の名を挙げています。ところが、彼の寓話を集めた最初の寓話集として知られるのは、[[パレロンのデメトリオス]]が**紀元前4世紀**にまとめたもので、イソップの死からずいぶん後のものです。そもそも、彼が実在したならの話ですが。"
         },
         {
           "type": "paragraph",
-          "text": "Personne ne sait avec certitude si un homme nommé Ésope a vraiment existé. Le mieux est de le voir comme une figure à demi historique, à la manière de **Robin des Bois** : un conteur réel, puis une légende qui ajoute beaucoup de fiction aux faits. Une chose est sûre : on lui attribue bien plus de fables qu'un seul homme n'aurait pu en écrire."
+          "text": "イソップという名の人物が本当にいたのか、確かなことはだれにも分かりません。**ロビン・フッド**のように、半ば歴史上の人物と考えるのがいちばんでしょう。実在した語り手がいて、そこに多くの作り話を加えた伝説が育った、というわけです。確かなのは、一人の人間が書ける数をはるかに超える寓話が、彼の作とされていることです。"
         }
       ]
     },
     {
       "id": "course_298_esope_a_t_il_vraiment_existe_p1",
-      "title": "Dire la vérité aux puissants",
+      "title": "権力者に向かって真実を語る",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L'image populaire d'Ésope vient d'un recueil de fables composé par un esclave romain, [[パエドルス]], au **Ier ou IIe siècle** de notre ère. Ésope y est un esclave très laid, muet de naissance, à qui la déesse [[イシス]] offre une parole éloquente. Rusé, il roule sans cesse son maître, un philosophe. Il finit par se quereller avec le dieu Apollon, et on le précipite d'une falaise. Le vrai Ésope, s'il a existé, a peut-être fini ainsi."
+          "text": "イソップのよく知られた姿は、ローマの奴隷[[パエドルス]]が**1世紀か2世紀**に編んだ寓話集に由来します。そこでのイソップは、ひどく醜く、生まれつき口がきけない奴隷で、女神[[イシス]]から雄弁な言葉を授かります。ずる賢く、哲学者である主人をいつもだまします。最後は神アポロンと言い争い、崖から突き落とされます。実在したイソップも、こんな最期だったのかもしれません。"
         },
         {
           "type": "image",
           "asset": "aesop_velazquez_portrait_1638_prado",
           "ratio": "5:4",
-          "caption": "Ésope vu par Vélasquez vers 1638 : détail du portrait conservé au musée du Prado."
+          "caption": "ベラスケスが描いたイソップ（1638年ごろ）。プラド美術館所蔵の肖像画の部分。"
         },
         {
           "type": "paragraph",
-          "text": "Laid et esclave : dans la société grecque, Ésope est le dernier des derniers. Et pourtant, à travers ses fables, c'est lui qui dit la vérité, et il la dit à bien plus puissant que lui. Il incarne l'archétype du filou, ce personnage rusé et sans pouvoir qui ose parler franchement aux puissants."
+          "text": "醜くて奴隷。ギリシア社会で、イソップは最底辺の存在です。それでも寓話を通して真実を語るのは彼で、しかも自分よりはるかに強い相手に向かって語ります。彼はトリックスター、つまり力はないが機転が利き、権力者にも臆せず率直にものを言う人物の原型です。"
         }
       ]
     },
     {
       "id": "course_298_esope_a_t_il_vraiment_existe_p2",
-      "title": "Des fictions qui peignent le vrai",
+      "title": "真実をありありと描き出す作り話",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "On peut définir la fable ainsi : **une fiction qui peint le vrai**. Chaque mot compte. D'abord, une fable doit être inventée. Avec des personnes et des événements réels, elle ne fonctionnerait plus : le lecteur ne penserait qu'à la réalité derrière le récit. Et comme la fable dit la vérité aux puissants, nommer des individus et des institutions réels serait très dangereux."
+          "text": "寓話は**真実を描く作り話**と定義できます。どの言葉も大切です。まず、寓話は創作でなければなりません。実在の人物や出来事が出てくると、読者は物語の向こうの現実ばかり考えてしまい、寓話として働かなくなります。それに、寓話は権力者に真実を語るものなので、実在の個人や組織の名を挙げるのはとても危険です。"
         },
         {
           "type": "image",
           "asset": "hare_and_tortoise_fable_arthur_rackham_1912",
           "ratio": "3:4",
-          "caption": "« Le Lièvre et la Tortue » par Arthur Rackham, 1912 : les deux rivaux face à face devant les autres animaux."
+          "caption": "アーサー・ラッカムが描いた『ウサギとカメ』（1912年）。ほかの動物たちの前で向き合う二人のライバル。"
         },
         {
           "type": "paragraph",
-          "text": "Ensuite, la fable donne vie aux idées par des images vives et imaginaires. Chez Ésope, ce sont toujours des animaux qui parlent ou des forces de la nature personnifiées. Ces symboles restent ouverts à l'interprétation : ses lecteurs remarquent souvent qu'une même fable peut se lire de façons contradictoires. Enfin, la fable exprime une vérité. Dans *Le Lièvre et la Tortue*, c'est que la persévérance l'emporte sur la vitesse."
+          "text": "次に、寓話は鮮やかで空想的なイメージによって、考えに命を吹き込みます。イソップの場合、登場するのはいつも、しゃべる動物か、擬人化された自然の力です。こうした象徴は解釈に開かれていて、同じ寓話が正反対の読み方もできることに、読者はよく気づきます。最後に、寓話は一つの真実を表します。*『ウサギとカメ』*なら、粘り強さは速さに勝つ、という真実です。"
         },
         {
           "type": "funFact",
-          "text": "La morale d'une fable d'Ésope est souvent énoncée noir sur blanc. Placée avant le récit, elle s'appelle un promythion ; placée après, un épimythion."
+          "text": "イソップの寓話の教訓は、はっきり言葉にされていることが多いです。物語の前に置かれたものはプロミュティオン、後に置かれたものはエピミュティオンと呼ばれます。"
         }
       ]
     },
     {
       "id": "course_298_esope_a_t_il_vraiment_existe_p3",
-      "title": "Des histoires pour enfants ?",
+      "title": "これは子ども向けのお話なのか？",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Simples en apparence, avec une leçon facile à retenir, les fables semblent faites pour les enfants. Pour la plupart, elles le sont. Certaines, pourtant, sont jugées trop violentes ou trop ambiguës pour les plus jeunes. On s'en sert aussi longtemps pour enseigner le **latin** aux écoliers. Mais pendant des centaines d'années, les fables d'Ésope s'adressent d'abord aux adultes."
+          "text": "一見単純で、覚えやすい教訓がついているので、寓話は子どものためのもののように思えます。たいていはそのとおりです。ただ、暴力的すぎる、あるいは曖昧すぎるとして、幼い子には向かないとされるものもあります。長いあいだ、学校では**ラテン語**を教えるためにも使われてきました。けれども何百年ものあいだ、イソップの寓話はまず大人に向けて語られていたのです。"
         },
         {
           "type": "paragraph",
-          "text": "À l'époque où elles naissent, les fables servent souvent d'outil aux plus marginalisés, pour partager ce qu'ils ont appris afin de survivre dans des sociétés impitoyablement hiérarchisées. Ce n'est pas un hasard si Ésope est un esclave, comme Phèdre après lui. Les premières morales apprennent souvent aux esclaves comment se comporter avec leurs maîtres, cachées derrière des histoires de loups et de renards, de brebis et d'agneaux."
+          "text": "寓話が生まれた当時、それはたいてい、社会の底辺に置かれた人々の道具でした。容赦のない身分社会を生き抜くために学んだことを、仲間と分かち合う手段だったのです。イソップが奴隷なのも、その後のパエドルスが奴隷なのも、偶然ではありません。初期の教訓の多くは、主人とどう付き合うかを奴隷に教えるもので、オオカミとキツネ、雌羊と子羊の話の陰に隠されていました。"
         }
       ]
     },
     {
       "id": "course_298_esope_a_t_il_vraiment_existe_p4",
-      "title": "Des fables jusqu'à Orwell",
+      "title": "寓話からオーウェルまで",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "On lit encore les fables d'Ésope aujourd'hui, surtout aux enfants. Mais leurs morales sont entrées dans le bon sens commun, partout dans le monde. Comme des proverbes, on les invoque en quelques mots pour se guider dans la vie. Les apparences sont trompeuses : c'est *Le Loup déguisé en brebis*. La nécessité est mère de l'invention : c'est *Le Corbeau et la Cruche*."
+          "text": "イソップの寓話は今も読まれていて、とくに子どもに読み聞かせられます。ただ、その教訓は世界じゅうで常識の一部になりました。ことわざのように、ほんの数語で、人生の指針として引き合いに出されます。見かけにだまされるな、といえば*『羊の皮を着たオオカミ』*。必要は発明の母、といえば*『カラスと水差し』*です。"
         },
         {
           "type": "paragraph",
-          "text": "L'écriture de fables ne s'arrête pas avec l'Antiquité. *La Ferme des animaux*, que [[ジョージ・オーウェル]] publie en **1945**, est une longue fable : des animaux personnifiés et une morale, le pouvoir absolu corrompt. On y trouve aussi des phrases souvent citées, qui disent la vérité aux puissants."
+          "text": "寓話づくりは古代で終わったわけではありません。*『動物農場』*は、[[ジョージ・オーウェル]]が**1945年**に発表した長い寓話で、擬人化された動物たちと、権力は絶対的に腐敗する、という教訓からできています。権力者に真実を語る、よく引用される言葉も出てきます。"
         },
         {
           "type": "image",
           "asset": "animal_farm_pigs_barnyard_orwell",
           "ratio": "3:2",
-          "caption": "Un cochon en costume et cravate : l'animal personnifié de la fable d'Orwell, sur une fresque murale."
+          "caption": "背広にネクタイ姿のブタ。オーウェルの寓話に出てくる擬人化された動物を描いた壁画です。"
         },
         {
           "type": "quote",
-          "text": "Tous les animaux sont égaux, mais certains animaux sont plus égaux que d'autres.",
-          "attribution": "George Orwell, La Ferme des animaux, 1945"
+          "text": "すべての動物は平等である。しかし、ある動物はほかの動物よりもっと平等である。",
+          "attribution": "ジョージ・オーウェル『動物農場』（1945年）"
         },
         {
           "type": "paragraph",
-          "text": "Le public a changé, la ruse est restée : des bêtes qui parlent pour dire aux hommes ce qu'ils n'ont pas envie d'entendre. Ésope, lui, demeure introuvable, entre l'histoire et la légende, comme si l'inventeur de la fable était lui-même une fable."
+          "text": "読者は変わりましたが、手口は変わりませんでした。しゃべる動物の口を借りて、人間が聞きたがらないことを伝えるのです。イソップ本人は、歴史と伝説のあいだで今も行方が知れず、寓話の発明者自身が一つの寓話であるかのようです。"
         },
         {
           "type": "takeaway",
-          "text": "Qu'Ésope ait existé ou non, la fable qu'on lui attribue, une fiction qui peint le vrai, permet depuis l'Antiquité aux sans-pouvoir de dire la vérité aux puissants."
+          "text": "イソップが実在したかどうかにかかわらず、彼の作とされる寓話は、真実を描く作り話として、古代から、力のない人々が権力者に真実を語ることを可能にしてきました。"
         }
       ]
     }

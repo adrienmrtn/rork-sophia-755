@@ -1,116 +1,116 @@
 {
   "id": "course_6_la_peste_noire_en_europe_1347_1353",
-  "title": "Comment la Peste noire a-t-elle bouleversé l'Europe ?",
+  "title": "黒死病は、ヨーロッパをどのように揺るがしたのか",
   "subtitle": "1347-1353",
   "subject": "histoire",
   "subcategory": "古代と中世",
-  "description": "Entre 1347 et 1353, la peste bubonique tue 30 à 60 % des Européens. Une catastrophe sanitaire qui ébranle la société médiévale et accélère le basculement vers un monde nouveau.",
+  "description": "1347〜1353年、腺ペストがヨーロッパ人の30〜60%の命を奪いました。中世社会を揺さぶり、新しい時代への転換を早めた衛生上の大惨事です。",
   "hero": {
     "image": "la_peste_noire_en_europe",
     "ratio": "16:9",
-    "hook": "En six ans, l'Europe perd jusqu'à la moitié de sa population."
+    "hook": "わずか6年で、ヨーロッパは人口の最大で半分を失います。"
   },
   "sections": [
     {
       "id": "course_6_la_peste_noire_en_europe_1347_1353_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Entre **1347** et **1353**, l'Europe est frappée par la **Peste noire**. Causée par la bactérie **Yersinia pestis**, elle tue entre **30 et 60 %** de la population, soit **25 à 50 millions** de personnes."
+          "text": "**1347年**から**1353年**にかけて、ヨーロッパを**黒死病**が襲いました。原因は**Yersinia pestis**（ペスト菌）という細菌で、人口の**30〜60%**、つまり**2千5百万〜5千万人**が亡くなりました。"
         },
         {
           "type": "paragraph",
-          "text": "Les Européens sont déjà affaiblis par les famines du [[小氷期]], un refroidissement du climat qui a gâché les récoltes. Le fléau n'est pas seulement une crise sanitaire. C'est un accélérateur d'histoire : il ébranle l'ordre seigneurial et force la société à se reconstruire autrement."
+          "text": "ヨーロッパの人々は、すでに[[小氷期]]の飢饉で弱っていました。気候の寒冷化で作物が不作になっていたのです。この疫病は、単なる健康上の危機ではありません。歴史を加速させる出来事で、領主による支配秩序を揺るがし、社会は別の形での立て直しを迫られました。"
         }
       ]
     },
     {
       "id": "course_6_la_peste_noire_en_europe_1347_1353_p1",
-      "title": "De l'Asie à l'Italie",
+      "title": "アジアからイタリアへ",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La bactérie circule d'abord chez les rongeurs d'Asie centrale. La [[パクス・モンゴリカ]], période de relative paix sous l'Empire mongol, et la [[シルクロード]], réseau commercial reliant l'Asie à l'Europe, lui offrent des voies sûres. Au comptoir génois de [[カッファ]], en Crimée, assiégé par la [[キプチャク・ハン国]] (un empire mongol des steppes), la maladie bascule vers la Méditerranée. Des galères fuient vers l'Italie."
+          "text": "細菌はまず、中央アジアのげっ歯類のあいだで広まっていました。モンゴル帝国のもとで比較的平和が保たれた[[パクス・モンゴリカ]]の時代と、アジアとヨーロッパを結ぶ交易網の[[シルクロード]]が、細菌に安全な道を与えます。クリミアにあるジェノヴァ人の商館[[カッファ]]は、草原のモンゴル系国家である[[キプチャク・ハン国]]に包囲されていました。ここで病は地中海へと広がります。ガレー船がイタリアへ逃げ出しました。"
         },
         {
           "type": "image",
           "asset": "black_death_burial_medieval_plague",
           "ratio": "4:3",
-          "caption": "Enterrements de peste : l'Europe découvre une mort de masse."
+          "caption": "ペストの犠牲者の埋葬：ヨーロッパは大量死を目の当たりにしました。"
         },
         {
           "type": "paragraph",
-          "text": "En **octobre 1347**, elles accostent à **Messine**, en Sicile. Malgré l'expulsion des navires, le mal est déjà à quai. En **1348**, il gagne Marseille, puis toute l'Europe via les réseaux des marchands italiens."
+          "text": "**1347年十月**、船団はシチリア島の**メッシーナ**に着きます。船を追い払ったものの、病はすでに港に入り込んでいました。**1348年**にはマルセイユに達し、イタリア商人のネットワークを通じてヨーロッパ全土に広がります。"
         },
         {
           "type": "funFact",
-          "text": "Le siège de Caffa est souvent cité comme l'un des premiers exemples de guerre biologique : les Mongols auraient catapulté des cadavres infectés par-dessus les murs."
+          "text": "カッファの包囲戦は、生物兵器が使われた最初期の例の一つとしてよく語られます。モンゴル軍が、感染した遺体を城壁の向こうへ投石機で投げ込んだとされています。"
         }
       ]
     },
     {
       "id": "course_6_la_peste_noire_en_europe_1347_1353_p2",
-      "title": "Une médecine impuissante",
+      "title": "無力だった医学",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Les médecins s'appuient sur [[ガレノス]], un médecin grec de l'Antiquité, et sur la [[瘴気説]] : l'idée que les maladies viennent d'un air corrompu. Ils ne voient pas le vrai vecteur, la puce du rat ([[ケオプスネズミノミ]]). Quand les rats meurent, les puces passent à l'homme."
+          "text": "医師たちは、古代ギリシアの医師[[ガレノス]]の理論と、[[瘴気説]]（病気は腐った空気から生じるという考え）に頼っていました。本当の媒介者であるネズミのノミ（[[ケオプスネズミノミ]]）には気づきません。ネズミが死ぬと、ノミが人に移ります。"
         },
         {
           "type": "image",
           "asset": "plague_doctor_mask_beak",
           "ratio": "4:3",
-          "caption": "Le médecin de peste au masque en bec : une protection plus symbolique qu'efficace."
+          "caption": "くちばし形のマスクをつけたペスト医師：実際の効果より、象徴的な意味合いが強い防護でした。"
         },
         {
           "type": "paragraph",
-          "text": "La forme bubonique gonfle les ganglions. La septicémique noircit la peau. La pneumonique, elle, se transmet d'homme à homme et tue en **24 à 48 heures**. Dans des villes surpeuplées et sales, la propagation est très rapide."
+          "text": "腺ペストはリンパ節を腫れさせます。敗血症型は皮膚を黒く変色させます。肺ペストは人から人へうつり、**24〜48時間**で命を奪います。人があふれて不衛生な都市では、感染はたちまち広がりました。"
         }
       ]
     },
     {
       "id": "course_6_la_peste_noire_en_europe_1347_1353_p3",
-      "title": "Peur, flagellants, pogroms",
+      "title": "恐怖、鞭打ち苦行者、ユダヤ人迫害",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La société vacille. Les [[鞭打ち苦行者]] se fouettent en public pour apaiser Dieu. L'art invente les Danses macabres. Faute d'explication, on cherche des coupables : les [[ユダヤ人虐殺（1348-1349）]] ensanglantent la vallée du Rhône et l'Empire germanique. Accusés d'empoisonner les puits, des milliers de Juifs sont massacrés. Le pape [[クレメンス6世]], alors à Avignon, tente de les protéger. Trop peu, trop tard."
+          "text": "社会は揺らぎます。[[鞭打ち苦行者]]たちは神の怒りを鎮めようと、人前で自分の体を鞭で打ちました。芸術では「死の舞踏」が生まれます。説明がつかないため、人々は犯人探しを始め、[[ユダヤ人迫害（1348-1349）]]がローヌ川流域とドイツ地方を血に染めました。井戸に毒を入れたと責められ、何千人ものユダヤ人が殺されます。当時アヴィニョンにいた教皇[[クレメンス6世]]は彼らを守ろうとしましたが、力が及ばず、手遅れでした。"
         },
         {
           "type": "funFact",
-          "text": "À Avignon, Clément VI restait entre deux grands feux pour « purifier l'air ». La chaleur tenait les puces à distance : il survécut."
+          "text": "アヴィニョンで、クレメンス6世は「空気を清める」ために二つの大きな火のあいだにとどまっていました。熱がノミを遠ざけたため、教皇は生き延びました。"
         },
         {
           "type": "paragraph",
-          "text": "[[ボッカッチョ]], écrivain florentin, décrit des pères abandonnant leurs fils. La charité, le voisinage, la famille : tout craque sous la peur de la contagion."
+          "text": "フィレンツェの作家[[ボッカッチョ]]は、父親が息子を見捨てる光景を描いています。慈善も、近所づきあいも、家族も、感染への恐怖の前にすべて崩れ去りました。"
         },
         {
           "type": "timeline",
           "events": [
             {
-              "date": "1346",
-              "title": "Caffa",
-              "detail": "La peste atteint le comptoir génois de Crimée."
+              "date": "1346年",
+              "title": "カッファ",
+              "detail": "ペストがクリミアのジェノヴァ人商館に達します。"
             },
             {
-              "date": "1347",
-              "title": "Messine",
-              "detail": "Les galères génoises importent le fléau en Europe."
+              "date": "1347年",
+              "title": "メッシーナ",
+              "detail": "ジェノヴァのガレー船が、この疫病をヨーロッパに持ち込みます。"
             },
             {
-              "date": "1348",
-              "title": "Vague européenne",
-              "detail": "France, Angleterre, Empire : la mort s'étend."
+              "date": "1348年",
+              "title": "ヨーロッパ全土へ",
+              "detail": "フランス、イングランド、神聖ローマ帝国へと死が広がります。"
             },
             {
-              "date": "1353",
-              "title": "Reflux",
-              "detail": "L'épidémie s'apaise, l'Europe est transformée."
+              "date": "1353年",
+              "title": "収束",
+              "detail": "流行は収まり、ヨーロッパは大きく変わりました。"
             }
           ]
         }
@@ -118,20 +118,20 @@
     },
     {
       "id": "course_6_la_peste_noire_en_europe_1347_1353_p4",
-      "title": "Après la mort, le basculement",
+      "title": "大量死のあとに訪れた大転換",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Vers **1353**, la pandémie reflue. La main-d'œuvre est devenue rare. Les salaires montent, les corvées baissent, le servage recule en Occident. Les seigneurs doivent négocier. La catastrophe a, paradoxalement, renforcé les survivants."
+          "text": "**1353年**ごろ、パンデミックは収まります。労働力は希少になっていました。賃金は上がり、賦役は減り、西ヨーロッパでは農奴制が後退します。領主は交渉せざるをえません。皮肉にも、この大災厄は生き残った人々を強くしたのです。"
         },
         {
           "type": "paragraph",
-          "text": "La faillite des autorités face au fléau nourrit aussi l'esprit critique. On observe davantage, on doute des vieux dogmes. En vidant les villages et en redistribuant les héritages, la Peste noire a préparé, malgré elle, le terrain de la Renaissance."
+          "text": "疫病を前にした権威の無力さは、批判精神も育てました。人々はものごとをより注意深く観察し、昔から信じられてきた教えを疑うようになります。村々を空にし、遺産の持ち主を入れ替えたことで、黒死病は意図せずしてルネサンスの土壌を整えたのです。"
         },
         {
           "type": "takeaway",
-          "text": "Entre **1347** et **1353**, la Peste noire tue jusqu'à la moitié de l'Europe. Ce choc démographique affaiblit l'ordre seigneurial, fait monter le prix du travail et accélère l'entrée dans un monde nouveau."
+          "text": "**1347年**から**1353年**にかけて、黒死病はヨーロッパの最大で半分の命を奪いました。この人口の激減は領主支配の秩序を弱め、労働の価格を押し上げ、新しい時代への移行を早めました。"
         }
       ]
     }

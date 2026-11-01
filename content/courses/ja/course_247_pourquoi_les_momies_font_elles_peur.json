@@ -1,149 +1,149 @@
 {
   "id": "course_247_pourquoi_les_momies_font_elles_peur",
-  "title": "Pourquoi les momies font-elles peur ?",
-  "subtitle": "Du tombeau à l'écran",
+  "title": "ミイラはどうして怖がられるのか？",
+  "subtitle": "墓からスクリーンへ",
   "subject": "mythologie",
   "subcategory": "伝説と怪物",
-  "description": "Les Égyptiens embaumaient leurs morts pour les protéger, pas pour effrayer les vivants. Il a fallu des apothicaires, des journalistes et Hollywood pour faire de la momie un monstre.",
+  "description": "エジプト人が死者に防腐処理をしたのは、死者を守るためで、生きている人を怖がらせるためではありませんでした。ミイラを怪物に仕立てるには、薬種商とジャーナリストとハリウッドの力が必要でした。",
   "author": "angela-bouma",
   "hero": {
     "image": "tutankhamun_golden_mask_egyptian_museum_cairo",
     "ratio": "4:3",
-    "hook": "Un cadavre est censé disparaître. La momie refuse, et c'est exactement ce qui dérange."
+    "hook": "死体は消えるものです。ミイラはそれを拒み、不気味さはまさにそこにあります。"
   },
   "sections": [
     {
       "id": "course_247_pourquoi_les_momies_font_elles_peur_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La plupart des corps se décomposent. Pas la momie. Elle est visiblement morte, mais elle garde un air humain : peau, cheveux, dents et traits du visage peuvent traverser **des siècles**. La peur qu'elle inspire ne tient pas à la violence, mais à ce corps qui s'obstine à ne pas disparaître."
+          "text": "たいていの遺体は腐って崩れます。ミイラは違います。はっきり死んでいるのに、人間らしい姿を保っています。皮膚、髪、歯、顔立ちが**何世紀**も残ることがあるのです。ミイラが呼び起こす恐怖は、暴力からではなく、消えようとしないその体から来ています。"
         },
         {
           "type": "paragraph",
-          "text": "La momie **égyptienne** est la plus connue, mais bien des climats conservent les corps. Le désert, la glace, les tourbières ou le sel le font naturellement. La [[ミイラ作り]] obtient le même résultat volontairement : on sèche le corps, on retire les organes, on le couvre de résines et de bandelettes. Dans les deux cas, un corps est retenu bien après que la mort aurait dû l'emporter."
+          "text": "**エジプト**のミイラが最もよく知られていますが、遺体が保存される環境はほかにも多くあります。砂漠、氷、泥炭地、塩は、自然にそれをやってのけます。[[ミイラ作り]]は、同じ結果を意図的に得る技術です。遺体を乾かし、臓器を取り出し、樹脂と包帯で覆います。どちらの場合も、本来なら死が持ち去るはずの体が、ずっとあとまで残ります。"
         }
       ]
     },
     {
       "id": "course_247_pourquoi_les_momies_font_elles_peur_p1",
-      "title": "Préserver le corps pour l'au-delà",
+      "title": "来世のために遺体を残しておく",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Aucun pays n'est plus associé aux momies que l'**Égypte**. La tradition s'y construit sur des milliers d'années, avec les croyances sur la mort et l'au-delà. Conserver le corps permet au défunt de continuer à exister. Le corps est donc au cœur des rites funéraires égyptiens."
+          "text": "ミイラとの結びつきが**エジプト**ほど強い国はありません。その伝統は、死と来世をめぐる信仰とともに、何千年もかけて築かれました。遺体を保存すれば、死者は存在し続けられます。そのため、エジプトの葬送儀礼では遺体が中心にありました。"
         },
         {
           "type": "image",
           "asset": "anubis_embalming_mummy_sennedjem_tomb_painting",
           "ratio": "3:2",
-          "caption": "Anubis, dieu à tête de chacal, embaume une momie. Tombe de Sennedjem, Deir el-Médineh."
+          "caption": "ジャッカルの頭をもつ神アヌビスが、ミイラに防腐処理をしている。センネジェムの墓、デイル・エル・メディーナ。"
         },
         {
           "type": "paragraph",
-          "text": "Les premières sépultures comptent sur la chaleur sèche du désert. Peu à peu, les embaumeurs affinent leurs méthodes. Sous le [[新王国]], entre **1550 et 1070** av. J.-C. environ, les Égyptiens fortunés reçoivent un traitement élaboré : organes retirés et conservés à part, corps séché au [[ナトロン]], puis enduit d'huiles et enveloppé de lin."
+          "text": "初期の墓は、砂漠の乾いた熱に頼っていました。やがて防腐処理をする人々は技術を磨いていきます。[[新王国]]の時代、**紀元前1550〜1070年**ごろには、裕福なエジプト人に手の込んだ処置が施されました。臓器は取り出して別に保存し、遺体は[[ナトロン]]で乾燥させ、油を塗って亜麻布で包みます。"
         },
         {
           "type": "paragraph",
-          "text": "Rien de tout cela ne vise à créer un monstre. La momie incarne la **préservation** et la continuité religieuse, dans un système conçu pour protéger les morts, pas pour effrayer les vivants. Ce sens ne bascule que lorsqu'elle quitte le lieu pour lequel elle a été faite."
+          "text": "こうしたことは、どれも怪物をつくるためのものではありません。ミイラは**保存**と宗教的な連続性を体現しており、死者を守り、生きている人を怖がらせないために設計された体系の一部でした。この意味が変わるのは、ミイラがつくられた場所を離れたときです。"
         }
       ]
     },
     {
       "id": "course_247_pourquoi_les_momies_font_elles_peur_p2",
-      "title": "De la relique sacrée au remède en poudre",
+      "title": "聖なる遺物から、粉末にして飲む薬へ",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le sens change dès que les momies arrivent en **Europe**. Au Moyen Âge puis à l'époque moderne, les Européens les découvrent par le commerce, les voyages et l'étude des antiquités. Les rites de l'Égypte, lointains et mal compris, ne paraissent plus que mystérieux."
+          "text": "ミイラが**ヨーロッパ**に着くと、意味はすぐに変わります。中世から近世にかけて、ヨーロッパの人々は貿易や旅行、古代遺物の研究を通じてミイラを知りました。遠くて理解されないエジプトの儀礼は、ただ神秘的なものとしか映らなくなります。"
         },
         {
           "type": "paragraph",
-          "text": "Le tournant le plus étrange vient de la médecine. Un mot arabe désignant une substance bitumineuse, **mūmiyā**, finit par être associé aux momies égyptiennes sur les marchés européens. Dès le Moyen Âge, la poudre de momie, vendue sous le nom de [[ムミア]], passe pour un vrai remède que médecins et apothicaires prescrivent contre toutes sortes de maux. Pendant des siècles, de vraies momies sont donc vendues, puis broyées en médicament. Le corps sacré est devenu une **marchandise**."
+          "text": "いちばん奇妙な転換は医学から来ました。瀝青のような物質を指すアラビア語の**ムーミヤー**が、ヨーロッパの市場でエジプトのミイラと結びつけられるようになります。中世からすでに、ミイラの粉末は[[ムミア]]の名で売られ、医者や薬種商があらゆる病気に処方する本物の薬だと思われていました。何世紀ものあいだ、本物のミイラが売られ、砕かれて薬になったのです。聖なる遺体は**商品**になりました。"
         },
         {
           "type": "image",
           "asset": "mumia_apothecary_jar_powdered_mummy_medicine",
           "ratio": "3:4",
-          "caption": "Un vase canope égyptien, qui recevait les organes retirés lors de l'embaumement, aujourd'hui conservé à Londres (Wellcome Collection)."
+          "caption": "防腐処理で取り出された臓器を納めた、エジプトのカノプス壺。現在はロンドンのウェルカム・コレクションが所蔵している。"
         },
         {
           "type": "funFact",
-          "text": "À l'époque victorienne, des peintres utilisent un pigment appelé « brun de momie », fabriqué à partir de vraies momies broyées. Quand des artistes apprennent de quoi il est fait, certains auraient enterré leurs tubes de peinture en signe de protestation."
+          "text": "ヴィクトリア朝時代のイギリスでは、画家たちが「ミイラ褐色」という顔料を使っていました。本物のミイラを砕いてつくったものです。原料を知った芸術家のなかには、抗議のしるしとして絵の具のチューブを埋めた人もいたといいます。"
         }
       ]
     },
     {
       "id": "course_247_pourquoi_les_momies_font_elles_peur_p3",
-      "title": "La malédiction de Toutânkhamon",
+      "title": "ツタンカーメンの呪いという伝説",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Les tombes égyptiennes portent parfois des avertissements contre les intrus. Mais une croyance ancienne en une malédiction surnaturelle, qui tuerait quiconque ouvre un tombeau, n'a jamais existé. La **malédiction de la momie** est une invention moderne, née des récits et de la presse à sensation, pas de la religion égyptienne."
+          "text": "エジプトの墓には、侵入者への警告が刻まれていることがあります。しかし、墓を開けた者を殺す超自然的な呪いという古代の信仰は、一度も存在しませんでした。**ミイラの呪い**は近代の発明で、物語とセンセーショナルな報道から生まれたもので、エジプトの宗教から生まれたものではありません。"
         },
         {
           "type": "paragraph",
-          "text": "En **1922**, l'archéologue britannique [[ハワード・カーター]] découvre le tombeau de [[ツタンカーメン]]. C'est le moment où le mythe s'installe. [[カーナーヴォン卿]], qui finance les fouilles, meurt l'année suivante des suites d'une maladie. Les journaux relient sa mort à la malédiction supposée du tombeau, et la coïncidence devient légende. Si l'histoire prend, c'est qu'elle est à moitié vraie : un vrai tombeau, une vraie momie et une vraie mort, pliés dans un récit surnaturel que les faits n'ont jamais confirmé."
+          "text": "**1922年**、イギリスの考古学者[[ハワード・カーター]]が[[ツタンカーメン]]の墓を発見します。神話が定着したのは、このときです。発掘の資金を出していた[[カーナーヴォン卿]]は、翌年、病気がもとで亡くなります。新聞はその死を墓の呪いと結びつけ、偶然が伝説になりました。この話が広まったのは、半分は本当だからです。本物の墓、本物のミイラ、本物の死が、事実が一度も裏づけたことのない超自然的な物語に包み込まれたのです。"
         }
       ]
     },
     {
       "id": "course_247_pourquoi_les_momies_font_elles_peur_p4",
-      "title": "Ce qui refuse de rester enterré",
+      "title": "埋もれたままでいようとしない存在",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le cinéma achève la transformation. En **1932**, *La Momie*, avec [[ボリス・カーロフ]], fait d'un objet archéologique un monstre qui bouge, poursuit et se venge. Tous les films de momies qui suivent s'en inspirent. Bandelettes, tombeau et pas traînants deviennent un raccourci dès qu'une histoire veut dire « danger venu du passé »."
+          "text": "映画が変貌を完成させます。**1932年**、[[ボリス・カーロフ]]が主演した*『ミイラ再生』*は、考古学の対象だったものを、動き、追いかけ、復讐する怪物に変えました。以後のミイラ映画はどれもこの作品の影響を受けています。包帯、墓、ひきずる足取りは、「過去から来る危険」を言いたい物語の定番の記号になりました。"
         },
         {
           "type": "image",
           "asset": "the_mummy_1932_film_poster_boris_karloff",
           "ratio": "2:3",
-          "caption": "L'affiche américaine de La Momie (1932), avec Boris Karloff."
+          "caption": "『ミイラ再生』（1932年）のアメリカ版ポスター。主演はボリス・カーロフ。"
         },
         {
           "type": "timeline",
           "events": [
             {
-              "date": "v. 1550-1070 av. J.-C.",
-              "title": "Le Nouvel Empire",
-              "detail": "Les Égyptiens fortunés reçoivent un embaumement élaboré."
+              "date": "紀元前1550-1070年ごろ",
+              "title": "新王国",
+              "detail": "裕福なエジプト人が手の込んだ防腐処理を受ける。"
             },
             {
-              "date": "Moyen Âge",
-              "title": "La mumia en pharmacie",
-              "detail": "La poudre de momie est vendue comme remède en Europe."
+              "date": "中世",
+              "title": "薬局のムミア",
+              "detail": "ミイラの粉末が、ヨーロッパで薬として売られる。"
             },
             {
-              "date": "1922",
-              "title": "Le tombeau de Toutânkhamon",
-              "detail": "Howard Carter ouvre la sépulture."
+              "date": "1922年",
+              "title": "ツタンカーメンの墓が発見される",
+              "detail": "ハワード・カーターが墓室を開ける。"
             },
             {
-              "date": "1923",
-              "title": "Mort de Lord Carnarvon",
-              "detail": "Les journaux parlent de malédiction."
+              "date": "1923年",
+              "title": "カーナーヴォン卿の死",
+              "detail": "新聞がこの死を呪いのせいだと報じる。"
             },
             {
-              "date": "1932",
-              "title": "La Momie au cinéma",
-              "detail": "Boris Karloff fait de la momie un monstre."
+              "date": "1932年",
+              "title": "映画になったミイラ",
+              "detail": "ボリス・カーロフが、ミイラを怪物にする。"
             }
           ]
         },
         {
           "type": "paragraph",
-          "text": "La vraie horreur n'est pas la religion égyptienne, mais ce qui vient après : un corps conservé pour garantir une place dans l'au-delà est vidé de ce sens et devient le symbole d'un passé qui refuse de rester enterré. Sous les bandelettes, la momie garde un **visage humain**, et c'est bien pour cela qu'elle dérange. Un cadavre est censé disparaître. Pas elle, et cela suffit, bien après que plus personne ne croit aux malédictions."
+          "text": "本当の恐怖はエジプトの宗教にあるのではなく、そのあとに起きたことにあります。来世での居場所を保証するために保存された遺体が、その意味を失い、埋もれたままでいようとしない過去の象徴になったのです。包帯の下で、ミイラは**人間の顔**を保ち続けています。不気味なのは、まさにそのためです。死体は消えるものです。ミイラはそうではなく、それだけで十分に不気味で、呪いを信じる人がもういなくなってからも変わりません。"
         },
         {
           "type": "takeaway",
-          "text": "Faite pour protéger un mort, la momie n'est devenue effrayante qu'une fois arrachée à son tombeau : broyée en remède, montée en légende par la presse, puis animée par le cinéma."
+          "text": "死者を守るためにつくられたミイラが、恐ろしい存在になったのは、墓から引きはがされてからのことです。砕かれて薬になり、新聞によって伝説に仕立てられ、やがて映画に動かされました。"
         }
       ]
     }

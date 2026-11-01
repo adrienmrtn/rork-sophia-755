@@ -1,6 +1,6 @@
 {
   "id": "course_61_le_big_bang",
-  "title": "Qu'est-ce que le Big Bang ?",
+  "title": "ビッグバンとは何のことか",
   "subtitle": "13,8 milliards d'années",
   "subject": "sciences",
   "subcategory": "地球と宇宙",
@@ -8,12 +8,12 @@
   "hero": {
     "image": "le_big_bang",
     "ratio": "16:9",
-    "hook": "Le Big Bang n'est pas une explosion dans l'espace. C'est l'espace qui se met à grandir."
+    "hook": "ビッグバンは、空間の中で起きた爆発ではありません。空間そのものが広がり始めたのです。"
   },
   "sections": [
     {
       "id": "course_61_le_big_bang_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
@@ -22,66 +22,66 @@
         },
         {
           "type": "paragraph",
-          "text": "Puis l'univers se met à s'étendre. Ce n'est pas une bombe qui jette de la matière dans un vide déjà là. C'est l'**espace-temps**, le tissu qui unit l'espace et le temps, qui grandit, emportant la matière avec lui. Cette histoire continue encore aujourd'hui."
+          "text": "やがて宇宙は膨張を始めます。すでにある空虚に物質を放り出す爆弾ではありません。広がっているのは**時空**、つまり空間と時間を結びつける織物のようなもので、物質もそれに乗って運ばれていきます。この歴史は今も続いています。"
         }
       ]
     },
     {
       "id": "course_61_le_big_bang_p1",
-      "title": "Pas une explosion dans le vide",
+      "title": "何もない空間での爆発ではない",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le nom **« Big Bang »** prête à confusion. On imagine souvent un feu d'artifice au milieu d'une pièce vide. Or avant cet événement, il n'y a ni pièce, ni dehors. Espace et temps tels que nous les connaissons commencent avec lui. Demander « qu'y avait-il avant ? » devient donc très délicat : le « avant » n'a plus le même sens."
+          "text": "**「ビッグバン」**という名前は誤解を招きます。何もない部屋の真ん中で花火が上がるところを思い浮かべる人が多いでしょう。しかし、この出来事の前には、部屋も外側もありません。私たちが知る空間と時間は、ビッグバンとともに始まります。だから「その前に何があったのか」という問いはとてもむずかしくなります。「前」という言葉が、もとの意味をもたなくなるからです。"
         },
         {
           "type": "image",
           "asset": "big_bang_universe_expansion_galaxies",
           "ratio": "auto",
-          "caption": "L'expansion de l'Univers depuis le Big Bang."
+          "caption": "ビッグバンのときから現在までの宇宙の膨張"
         },
         {
           "type": "funFact",
-          "text": "Le terme « Big Bang » a été inventé en **1949** par l'astrophysicien britannique **Fred Hoyle**, qui n'y croyait pas. Il voulait se moquer de l'idée. Le surnom est resté."
+          "text": "「ビッグバン」という言葉は、**1949年**にイギリスの天体物理学者**フレッド・ホイル**がつくりました。ホイルはこの説を信じておらず、からかうつもりで名づけたのです。そのあだ名が定着しました。"
         },
         {
           "type": "paragraph",
-          "text": "Pour se représenter l'expansion, imaginez des points dessinés sur un ballon. Quand on gonfle le ballon, chaque point s'éloigne des autres. Aucun point à la surface n'est « le centre ». Dans l'univers, c'est un peu la même idée : les **galaxies**, immenses ensembles d'étoiles, s'éloignent les unes des autres parce que l'espace entre elles s'étire."
+          "text": "膨張を思い描くには、風船の表面に点を描いたところを想像してみてください。風船をふくらませると、どの点も、ほかのすべての点から遠ざかっていきます。表面のどの点も「中心」ではありません。宇宙でも、考え方はほぼ同じです。星の巨大な集まりである**銀河**は、そのあいだの空間が引きのばされるために、たがいに遠ざかっていきます。"
         }
       ]
     },
     {
       "id": "course_61_le_big_bang_p2",
-      "title": "Trois grandes preuves",
+      "title": "三つの大きな証拠",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En **1929**, l'astronome américain **Edwin Hubble** observe que plus une galaxie est loin, plus elle s'éloigne vite. L'univers n'est donc pas figé : il grandit. C'est la **loi de Hubble**, la relation entre distance et vitesse de fuite des galaxies."
+          "text": "**1929年**、アメリカの天文学者**エドウィン・ハッブル**は、遠い銀河ほど速く遠ざかっていることを観測します。つまり宇宙は静止しておらず、大きくなっているのです。これが**ハッブルの法則**で、銀河までの距離と遠ざかる速さの関係を表します。"
         },
         {
           "type": "paragraph",
-          "text": "En **1965**, deux ingénieurs, **Arno Penzias** et **Robert Wilson**, captent un grésillement radio qui vient de partout. C'est le [[宇宙マイクロ波背景放射]] : une sorte d'écho thermique du jeune univers, émis quand la lumière a pu circuler librement pour la première fois, environ **380 000 ans** après le début."
+          "text": "**1965年**、二人の技術者**アーノ・ペンジアス**と**ロバート・ウィルソン**が、空のあらゆる方向から届く電波のノイズをとらえます。これが[[宇宙マイクロ波背景放射]]です。若い宇宙が放った熱のこだまのようなもので、光が初めて自由に進めるようになったときに放たれました。始まりからおよそ**380,000年**後のことです。"
         },
         {
           "type": "funFact",
-          "text": "Une petite partie du « neige » des vieux téléviseurs analogiques mal réglés venait de ce fond diffus cosmologique."
+          "text": "調整の悪い古いアナログテレビの「砂嵐」の一部は、この宇宙マイクロ波背景放射によるものでした。"
         },
         {
           "type": "paragraph",
-          "text": "Troisième pilier : les proportions des éléments légers. Les calculs prévoient environ **75 %** d'hydrogène et **25 %** d'hélium formés dans les premières minutes. Les observations confirment ces chiffres. C'est la [[ビッグバン元素合成]], la fabrique des premiers noyaux atomiques dans les minutes qui suivent le Big Bang."
+          "text": "三本目の柱は、軽い元素の割合です。計算では、最初の数分間に、水素が約**75%**、ヘリウムが約**25%**できると予測されます。観測もこの数字を裏づけています。これが[[ビッグバン元素合成]]で、ビッグバンの数分後に最初の原子核が生み出された、いわば原子核の工場です。"
         }
       ]
     },
     {
       "id": "course_61_le_big_bang_p3",
-      "title": "Une chronologie en accéléré",
+      "title": "駆け足でたどる宇宙の年表",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Juste après le début, l'univers traverse une phase d'**inflation**, une expansion extrêmement rapide en une fraction de seconde. Puis, vers **3 minutes**, **protons** et **neutrons**, particules qui composent les noyaux atomiques, s'assemblent en premiers noyaux. Pendant longtemps, l'univers reste comme un brouillard opaque : la lumière ne voyage pas librement."
+          "text": "始まった直後、宇宙は**インフレーション**の段階を通ります。ほんの一瞬のうちに起きた、極めて急激な膨張です。その後、約**3分**で、原子核を構成する粒子である**陽子**と**中性子**が結びつき、最初の原子核になります。長いあいだ、宇宙は不透明な霧のような状態で、光は自由に進めませんでした。"
         },
         {
           "type": "paragraph",
@@ -95,16 +95,16 @@
     },
     {
       "id": "course_61_le_big_bang_p4",
-      "title": "Et demain ?",
+      "title": "では、これから先は？",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Longtemps, on s'est demandé si la gravité finirait par ralentir l'expansion. En **1998**, l'observation de [[超新星]] lointaines, des explosions d'étoiles utilisées comme balises de distance, montre l'inverse : l'[[宇宙の膨張の加速]]. Une mystérieuse **énergie sombre**, force répulsive qui pousse les galaxies à s'éloigner, semblerait pousser cet éloignement, et représenterait environ **68 %** du contenu de l'univers. La matière ordinaire, celle dont nous sommes faits, n'en ferait qu'environ **5 %**."
+          "text": "長いあいだ、重力が膨張をやがて遅らせるのかどうかが問われてきました。**1998年**、遠くの[[超新星]]、つまり距離を測る目印に使われる星の爆発を観測すると、逆の結果、つまり[[宇宙の膨張の加速]]が示されます。謎に満ちた**ダークエネルギー**、つまり銀河を遠ざけるように働く反発力が、この遠ざかりを押し進めているとみられ、宇宙の中身のおよそ**68%**を占めるとされます。私たちの体をつくる通常の物質は、およそ**5%**にすぎないとされます。"
         },
         {
           "type": "paragraph",
-          "text": "Si cette accélération continue, l'univers pourrait tendre vers un refroidissement extrême, parfois surnommé **Big Freeze**, la fin par le froid. Une chose est sûre : ce que nous voyons n'est qu'une portion de l'ensemble. Pendant que la lumière voyage vers nous, l'espace continue de s'étirer."
+          "text": "この加速が続けば、宇宙は極端な冷却に向かうかもしれません。**ビッグフリーズ**とも呼ばれる、寒さによる終わりです。確かなことが一つあります。私たちに見えているのは全体の一部にすぎないということです。光が私たちに届くまでの間にも、空間は引きのばされ続けています。"
         },
         {
           "type": "takeaway",

@@ -1,116 +1,116 @@
 {
   "id": "course_10_la_decouverte_de_l_amerique_1492",
-  "title": "Comment Christophe Colomb a-t-il découvert l'Amérique ?",
+  "title": "コロンブスはどのようにアメリカ大陸を発見したのか？",
   "subtitle": "1492",
   "subject": "histoire",
   "subcategory": "古代と中世",
-  "description": "Le 12 octobre 1492, Christophe Colomb atteint une île des Bahamas qu'il croit être le Japon. Une erreur de navigation ouvre la mondialisation.",
+  "description": "1492年十月十二日、コロンブスはバハマの島に到達します。本人はそこを日本だと信じていました。航海上の誤りが、グローバル化の幕を開けます。",
   "hero": {
     "image": "la_decouverte_de_l_amerique_1492",
     "ratio": "16:9",
-    "hook": "Il cherchait l'Asie. Il a heurté un continent que l'Europe avait oublié."
+    "hook": "彼が探していたのはアジア。ぶつかったのは、ヨーロッパが忘れていた大陸でした。"
   },
   "sections": [
     {
       "id": "course_10_la_decouverte_de_l_amerique_1492_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le **12 octobre 1492**, après plus de deux mois en Atlantique, un marin de la Pinta crie « Terre ! ». **Christophe Colomb**, Génois au service de l'Espagne, débarque sur une île des Bahamas qu'il baptise San Salvador. Il croit toucher l'Asie."
+          "text": "**1492年十月十二日**、大西洋を2か月以上進んだ末に、ピンタ号の水夫が「陸だ！」と叫びます。スペインに仕えるジェノヴァ人の**コロンブス**は、バハマの島に上陸し、サン・サルバドルと名づけます。彼はアジアに着いたと信じていました。"
         },
         {
           "type": "paragraph",
-          "text": "Cette méprise va unir deux hémisphères. Portée par l'élan de la [[レコンキスタ（1492年）]], la reconquête de Grenade sur les musulmans la même année, l'expédition marque, pour l'Europe, le passage du Moyen Âge à l'époque moderne."
+          "text": "この思い違いが、二つの半球を結びつけます。[[レコンキスタ（1492年）]]、つまり同じ年のイスラム勢力からのグラナダ奪還の勢いに乗ったこの遠征は、ヨーロッパにとって中世から近世への移行を告げるものとなりました。"
         }
       ]
     },
     {
       "id": "course_10_la_decouverte_de_l_amerique_1492_p1",
-      "title": "Une route vers l'ouest, une erreur de taille",
+      "title": "西へ向かう航路、そして大きな見込み違い",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Colomb ne cherche pas à prouver que la Terre est ronde. [[エラトステネス]], savant grec du IIIe siècle av. J.-C., l'avait déjà calculée. Le vrai but est économique : atteindre les épices et la soie par l'ouest, sans passer par les Ottomans qui contrôlent les routes d'Orient."
+          "text": "コロンブスは、地球が丸いことを証明しようとしたわけではありません。紀元前3世紀のギリシアの学者[[エラトステネス]]が、すでに地球の大きさを計算していました。本当の目的は経済で、東方の交易路を握るオスマン帝国を通らずに、西回りで香辛料と絹に到達することでした。"
         },
         {
           "type": "image",
           "asset": "christopher_columbus_portrait",
           "ratio": "4:3",
-          "caption": "Christophe Colomb, navigateur génois au service des Rois Catholiques."
+          "caption": "コロンブス、カトリック両王に仕えたジェノヴァ出身の航海者。"
         },
         {
           "type": "paragraph",
-          "text": "Son erreur : sous-estimer la circonférence terrestre. Il place le Japon à **4 500 km** des Canaries, contre près de **20 000** en réalité. Le Portugal refuse. Isabelle de Castille, reine d'Espagne, accepte. Par les [[サンタフェ協約]], un contrat, Colomb devient amiral, vice-roi, et touche **10 %** des bénéfices."
+          "text": "彼の誤りは、地球の円周を小さく見積もったことでした。カナリア諸島から日本まで**4,500km**と考えたのに、実際には**2万**km近くあります。ポルトガルは断り、スペイン女王イサベルは受け入れました。契約である[[サンタフェ協約]]によって、コロンブスは提督兼副王となり、利益の**10%**を受け取ります。"
         },
         {
           "type": "funFact",
-          "text": "Colomb écrivit avoir vu des sirènes aux Caraïbes. C'étaient des lamantins. Il nota, déçu, qu'elles étaient bien moins belles que dans les légendes."
+          "text": "コロンブスは、カリブ海で人魚を見たと書き残しています。実際にはマナティーでした。彼は、伝説よりずっと美しくないと、がっかりして記しています。"
         }
       ]
     },
     {
       "id": "course_10_la_decouverte_de_l_amerique_1492_p2",
-      "title": "70 jours vers San Salvador",
+      "title": "サン・サルバドルへの70日",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le **3 août 1492**, trois navires quittent Palos, en Espagne : la **Pinta**, la **Niña** et la **Santa María**. Grâce à la famille [[ピンソン]], riches armateurs locaux, l'équipage de **90 hommes** est expérimenté. La traversée dure **70 jours**. Colomb tient deux journaux : l'un vrai, l'autre falsifié, pour rassurer ses marins."
+          "text": "**1492年8月3日**、3隻の船がスペインのパロスを出港します。**ピンタ号**、**ニーニャ号**、**サンタ・マリア号**です。地元の裕福な船主である[[ピンソン]]の一族のおかげで、**90人**の乗組員は経験豊富でした。航海は**70日**に及びます。コロンブスは日誌を2冊つけていました。1冊は本物、もう1冊は水夫たちを安心させるための偽物です。"
         },
         {
           "type": "image",
           "asset": "santa_maria_caravel_ship",
           "ratio": "4:3",
-          "caption": "La Santa María, navire amiral de l'expédition de 1492."
+          "caption": "二十世紀初頭のプラハ：ひとつの帝国と、不透明な官僚機構を背景にした物語の舞台。"
         },
         {
           "type": "paragraph",
-          "text": "Le **12 octobre**, il rencontre les [[タイノ族]], habitants autochtones des Grandes Antilles. Convaincu d'être aux Indes, il les appelle « Indiens ». Il note leur or et leur docilité apparente. Le regard colonial est déjà là."
+          "text": "**十月十二日**、コロンブスは大アンティル諸島の先住民である[[タイノ族]]と出会います。インドに着いたと信じ込んでいた彼は、彼らを「インディオ」と呼びました。彼らが金を持っていること、見かけ上おとなしいことを書き留めます。植民地的なまなざしは、すでにここにありました。"
         },
         {
           "type": "funFact",
-          "text": "La Niña s'appelait en réalité *Santa Clara*. La Santa María était surnommée *La Gallega*, car construite en Galice."
+          "text": "ニーニャ号の本当の名は*サンタ・クララ*号でした。サンタ・マリア号は、ガリシアで造られたことから*ラ・ガレガ*というあだ名で呼ばれていました。"
         }
       ]
     },
     {
       "id": "course_10_la_decouverte_de_l_amerique_1492_p3",
-      "title": "L'échange colombien",
+      "title": "コロンブス交換",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L'arrivée des Européens déclenche l'**échange colombien**, un transfert massif de plantes, d'animaux et de maladies entre les deux mondes. Vers l'Europe : pomme de terre, maïs, tomate, cacao, tabac. Vers l'Amérique : blé, sucre, café, cheval, bétail. Les assiettes et les paysages des deux côtés changent pour toujours."
+          "text": "ヨーロッパ人の到来は**コロンブス交換**を引き起こします。二つの世界のあいだで、植物、動物、病気が大規模にやり取りされたのです。ヨーロッパへは、ジャガイモ、トウモロコシ、トマト、カカオ、タバコ。アメリカへは、小麦、砂糖、コーヒー、馬、家畜。双方の食卓と風景は、永遠に変わりました。"
         },
         {
           "type": "paragraph",
-          "text": "Le prix est terrible. Variole, rougeole, grippe tuent **50 à 90 %** des populations autochtones en un siècle. Diplomatiquement, Espagne et Portugal se partagent le globe par le [[トルデシリャス条約]], sans consulter personne."
+          "text": "代償は恐ろしいものでした。天然痘、はしか、インフルエンザが、1世紀のうちに先住民の人口の**50〜90%**を奪います。外交の面では、スペインとポルトガルが[[トルデシリャス条約]]によって、だれにも相談せずに地球を二分しました。"
         },
         {
           "type": "timeline",
           "events": [
             {
-              "date": "3 août 1492",
-              "title": "Départ de Palos",
-              "detail": "Trois navires prennent la mer vers l'ouest."
+              "date": "1492年8月3日",
+              "title": "パロスからの出航",
+              "detail": "3隻の船が西へ向けて出港していきます。"
             },
             {
-              "date": "12 oct. 1492",
-              "title": "San Salvador",
-              "detail": "Colomb débarque aux Bahamas."
+              "date": "1492年十月十二日",
+              "title": "サン・サルバドル",
+              "detail": "コロンブスがバハマに上陸します。"
             },
             {
-              "date": "1494",
-              "title": "Tordesillas",
-              "detail": "Espagne et Portugal se partagent le monde."
+              "date": "1494年",
+              "title": "トルデシリャス",
+              "detail": "スペインとポルトガルが世界を分け合います。"
             },
             {
-              "date": "1507",
-              "title": "America",
-              "detail": "Waldseemüller baptise le Nouveau Monde."
+              "date": "1507年",
+              "title": "アメリカ",
+              "detail": "ヴァルトゼーミュラーが新世界に名をつけます。"
             }
           ]
         }
@@ -118,20 +118,20 @@
     },
     {
       "id": "course_10_la_decouverte_de_l_amerique_1492_p4",
-      "title": "Un continent sans son découvreur",
+      "title": "発見者の名がつかなかった大陸",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Colomb meurt en **1506** sans admettre sa découverte. C'est [[アメリゴ・ヴェスプッチ]], un navigateur florentin, qui comprend qu'il s'agit d'un « Mundus Novus », un Nouveau Monde. En **1507**, le cartographe Waldseemüller baptise le continent **America**. Le prénom du Florentin entre dans la carte du monde."
+          "text": "コロンブスは**1506年**、自分の発見の意味を認めないまま死にます。それが「ムンドゥス・ノウス」、つまり新世界だと見抜いたのは、フィレンツェの航海者[[アメリゴ・ヴェスプッチ]]でした。**1507年**、地図製作者ヴァルトゼーミュラーが、この大陸を**アメリカ**と名づけます。フィレンツェ人の名が、世界地図に刻まれたのです。"
         },
         {
           "type": "paragraph",
-          "text": "Administrateur brutal à Hispaniola (Haïti et République dominicaine actuelles), Colomb finit même renvoyé enchaîné. Au-delà de l'homme, **1492** ouvre la mondialisation : l'argent américain afflue, le centre du commerce glisse de la Méditerranée vers l'Atlantique. L'Europe devient le pivot d'un système à quatre continents."
+          "text": "コロンブスはイスパニョーラ島（現在のハイチとドミニカ共和国）で残忍な統治者となり、最後には鎖につながれて本国に送り返されます。個人を超えて、**1492年**はグローバル化の幕を開けました。アメリカ大陸の銀が流れ込み、商業の中心は地中海から大西洋へと移っていきます。ヨーロッパは、四つの大陸にまたがる体制の要になったのです。"
         },
         {
           "type": "takeaway",
-          "text": "Colomb meurt persuadé d'avoir atteint l'Asie. Son erreur a uni deux hémisphères et déclenché un bouleversement biologique, économique et humain irréversible."
+          "text": "コロンブスは、アジアに着いたと信じたまま死にました。彼の誤りは二つの半球を結びつけ、生物、経済、人間のあり方にわたる、取り返しのつかない大変動を引き起こしました。"
         }
       ]
     }

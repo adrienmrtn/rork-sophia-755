@@ -1,135 +1,135 @@
 {
   "id": "course_201_la_naissance_du_conflit_israelo_palestin",
-  "title": "Comment est né le conflit israélo-palestinien ?",
-  "subtitle": "1917-1949",
+  "title": "イスラエルとパレスチナの対立はどう始まったのか？",
+  "subtitle": "1917〜1949年",
   "subject": "comprendreLeMonde",
   "subcategory": "紛争と地政学",
-  "description": "Une même terre, deux peuples, une promesse britannique impossible à tenir. Comment **1948** a fait naître le conflit le plus long du Moyen-Orient.",
+  "description": "ひとつの土地、二つの民族、果たせるはずのないイギリスの約束。**1948年**は、いかにして中東でもっとも長い対立を生んだのでしょうか。",
   "hero": {
     "image": "la_naissance_du_conflit_israelo_palestinien",
     "ratio": "16:9",
-    "hook": "Comment une lettre écrite en 1917 a fait naître le conflit le plus long du Moyen-Orient."
+    "hook": "1917年に書かれた一通の手紙は、どのようにして中東でもっとも長い対立を生んだのでしょうか。"
   },
   "sections": [
     {
       "id": "course_201_la_naissance_du_conflit_israelo_palestin_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "À la fin du XIXe siècle, la **Palestine** est une province tranquille de l'**Empire ottoman**, majoritairement arabe et musulmane, avec des minorités chrétiennes et une petite communauté juive ancienne. Rien ne laisse deviner que ce territoire deviendra le théâtre d'un des conflits les plus longs du monde. Tout commence par la rencontre de deux mouvements nationaux qui réclament la même terre : l'un né en Europe chez des Juifs voulant échapper aux persécutions, l'autre chez les Arabes de la région qui rêvent eux aussi d'un pays à eux. Entre les deux, une puissance coloniale multiplie les promesses contradictoires."
+          "text": "十九世紀末、**パレスチナ**は**オスマン帝国**の静かな一地方で、住民の多くはアラブ人でイスラーム教徒、ほかにキリスト教徒の少数派と、古くからの小さなユダヤ人社会がありました。この土地が世界でも指折りの長い対立の舞台になるとは、だれにも想像できません。すべては、同じ土地を求める二つの民族運動の出会いから始まります。ひとつは、ヨーロッパで迫害から逃れようとしたユダヤ人のあいだに生まれた運動。もうひとつは、自分たちの国を夢見る、この地域のアラブ人のあいだに生まれた運動です。その間で、ある植民地大国が、矛盾した約束を重ねていきます。"
         }
       ]
     },
     {
       "id": "course_201_la_naissance_du_conflit_israelo_palestin_p1",
-      "title": "L'éveil des nationalismes en Palestine ottomane",
+      "title": "オスマン帝国領パレスチナでの民族主義の目覚め",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le contexte change avec l'apparition du **[[シオニズム運動]]** en Europe, théorisé par **Theodor Herzl** lors d'un congrès à Bâle en 1897, en réponse à la montée de l'antisémitisme. Pour Herzl, les Juifs ne seront jamais en sécurité sans un État qui leur soit propre."
+          "text": "ヨーロッパで**[[シオニズム運動]]**が現れたことで、状況が変わります。これは**テオドール・ヘルツル**が1897年のバーゼルでの会議で理論化したもので、反ユダヤ主義の高まりへの対応でした。ヘルツルによれば、ユダヤ人は自分たちの国家がなければ、決して安全にはなれません。"
         },
         {
           "type": "funFact",
-          "text": "Theodor Herzl, pourtant fondateur du sionisme politique, ne parlait pas l'hébreu et envisagea même l'Argentine comme terre d'accueil, avant de se rallier à la Palestine."
+          "text": "テオドール・ヘルツルは政治的シオニズムの創始者でありながら、ヘブライ語を話せず、受け入れ先としてアルゼンチンまで考えたことがありました。のちにパレスチナを選ぶことになります。"
         },
         {
           "type": "paragraph",
-          "text": "La rupture survient pendant la Première Guerre mondiale : en 1917, le gouvernement britannique publie la **[[バルフォア宣言]]**, qui promet un « foyer national pour le peuple juif » en Palestine, tout en précisant que rien ne doit nuire aux droits des communautés déjà présentes. Pour les Arabes de la région, cette promesse ressemble à une trahison."
+          "text": "転機は第一次世界大戦中に訪れます。1917年、イギリス政府が**[[バルフォア宣言]]**を発表し、パレスチナに「ユダヤ人の民族的郷土」をつくることを約束しました。ただし、すでにそこにいる共同体の権利を損なってはならないとも記しています。この地域のアラブ人には、この約束は裏切りに見えました。"
         }
       ]
     },
     {
       "id": "course_201_la_naissance_du_conflit_israelo_palestin_p2",
-      "title": "L'impasse du mandat britannique",
+      "title": "行き詰まるイギリスの委任統治",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Après la défaite ottomane, la Société des Nations confie à la Grande-Bretagne le **mandat de Palestine** en 1922 : Londres doit à la fois favoriser l'installation de Juifs venus d'Europe et protéger les droits de la population arabe, majoritaire sur le territoire."
+          "text": "オスマン帝国の敗戦後、国際連盟は1922年、パレスチナの**委任統治**をイギリスにゆだねます。ロンドンは、ヨーロッパから来るユダヤ人の入植を促しつつ、域内で多数を占めるアラブ人住民の権利も守らなければなりませんでした。"
         },
         {
           "type": "paragraph",
-          "text": "Dans les années 1930, l'arrivée des nazis en Allemagne provoque une vague d'immigration juive, l'**Alya** : la population juive passe de 8 % en 1918 à plus de 30 % avant la Seconde Guerre mondiale, inquiétant les Arabes de Palestine, qui se soulèvent entre 1936 et 1939."
+          "text": "1930年代、ドイツでナチスが政権を握ると、ユダヤ人移民の波、**アリヤー**が起こります。ユダヤ人の人口は1918年の8%から、第二次世界大戦前には30%を超えました。これを恐れたパレスチナのアラブ人は、1936年から1939年にかけて蜂起します。"
         },
         {
           "type": "funFact",
-          "text": "Tel-Aviv, fondée en 1909 sur des dunes de sable, tire son nom d'un roman de Herzl : « Tel » pour la colline ancienne, « Aviv » pour le printemps."
+          "text": "テルアビブは1909年に砂丘の上に建設され、その名はヘルツルの小説に由来します。「テル」は古い丘、「アビブ」は春を意味します。"
         },
         {
           "type": "paragraph",
-          "text": "Les Britanniques limitent alors l'immigration juive, au moment où les Juifs d'Europe fuient la Shoah, ce qui retourne les milices juives contre l'occupant. Épuisée, la Grande-Bretagne finit par confier son mandat à l'ONU."
+          "text": "やがてイギリスはユダヤ人の移民を制限します。ちょうどヨーロッパのユダヤ人がホロコーストから逃れようとしていた時期で、ユダヤ人の武装組織は、占領者であるイギリスに銃を向けるようになりました。疲れ果てたイギリスは、ついに委任統治を国連に委ねます。"
         }
       ]
     },
     {
       "id": "course_201_la_naissance_du_conflit_israelo_palestin_p3",
-      "title": "1947-1948 : le partage puis la guerre",
+      "title": "1947〜1948年：分割、そして戦争",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En novembre 1947, l'ONU adopte un plan de partage de la Palestine en deux États, un juif et un arabe, tandis que Jérusalem obtient un statut international spécial. Les dirigeants sionistes acceptent ce plan, les Arabes le rejettent : une guerre civile éclate presque immédiatement."
+          "text": "1947年十一月、国連はパレスチナを、ユダヤ人国家とアラブ人国家の二つに分ける分割案を採択します。エルサレムは、特別な国際管理下に置かれることになりました。シオニストの指導者たちはこの案を受け入れ、アラブ側は拒否します。内戦がほぼ直ちに始まります。"
         },
         {
           "type": "image",
           "asset": "ben_gurion_declaration_israel_independence_1948",
           "ratio": "16:9",
-          "caption": "Le 14 mai 1948, David Ben Gourion proclame la naissance de l'État d'Israël, quelques heures avant la fin du mandat britannique."
+          "caption": "1948年5月14日、ダヴィド・ベン・グリオンが、イギリスの委任統治が終わる数時間前に、イスラエル国の建国を宣言します。"
         },
         {
           "type": "paragraph",
-          "text": "Le 14 mai 1948, David Ben Gourion proclame la naissance de l'**État d'Israël**. Le lendemain, plusieurs armées arabes envahissent le territoire pour s'y opposer, mais les forces israéliennes, mieux organisées, repoussent l'offensive et étendent leur contrôle à 78 % de l'ancienne Palestine mandataire."
+          "text": "1948年5月14日、ダヴィド・ベン・グリオンが**イスラエル国**の建国を宣言します。翌日、複数のアラブ諸国の軍が、これに反対して領内に侵攻します。しかし、より組織の整ったイスラエル軍は攻勢を押し返し、旧委任統治領パレスチナの78%にまで支配を広げました。"
         }
       ]
     },
     {
       "id": "course_201_la_naissance_du_conflit_israelo_palestin_p4",
-      "title": "La Nakba et la question des réfugiés",
+      "title": "ナクバと、パレスチナ難民をめぐる問題",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Pour les Israéliens, cette victoire assure leur survie. Pour les Palestiniens, l'événement porte un nom : la **Nakba**, « la catastrophe ». Entre 700 000 et 750 000 Arabes palestiniens fuient ou sont chassés de leurs foyers, souvent dans l'espoir de revenir après la victoire arabe."
+          "text": "イスラエル人にとって、この勝利は自分たちの生存を確かなものにしました。パレスチナ人にとって、この出来事には名前があります。**ナクバ**、つまり「大災厄」です。七十万から七十五万人のパレスチナ・アラブ人が故郷から逃れるか追われ、その多くは、アラブ側の勝利のあとに戻れると期待していました。"
         },
         {
           "type": "paragraph",
-          "text": "Ces réfugiés s'installent à Gaza, en Cisjordanie ou dans les pays voisins. Israël refuse leur retour, craignant de perdre sa majorité juive. Au même moment, environ 800 000 Juifs des pays arabes rejoignent Israël, souvent sous la contrainte."
+          "text": "難民たちは、ガザ、ヨルダン川西岸、近隣諸国に身を寄せます。イスラエルは、ユダヤ人が多数派でなくなることを恐れて、帰還を認めません。同じころ、アラブ諸国にいたユダヤ人約八十万人が、多くは強いられる形でイスラエルに移ります。"
         },
         {
           "type": "paragraph",
-          "text": "En 1949, l'ONU crée l'agence **[[UNRWA（国連パレスチナ難民救済事業機関）]]** pour aider les réfugiés palestiniens. Ce qui devait être provisoire devient permanent : aucun accord ne fixe de frontières définitives ni ne règle le sort des exilés, et l'absence d'État palestinien reste au cœur du conflit."
+          "text": "1949年、国連はパレスチナ難民を支援するため、**[[UNRWA（国連パレスチナ難民救済事業機関）]]**という機関をつくります。一時的なはずだったものが、恒久的になりました。最終的な国境を定める合意も、亡命者の扱いを決める合意もなく、パレスチナ国家の不在は今も対立の核心にあります。"
         },
         {
           "type": "timeline",
           "events": [
             {
-              "date": "1897",
-              "title": "Congrès de Bâle",
-              "detail": "Herzl théorise le sionisme politique."
+              "date": "1897年",
+              "title": "バーゼル会議",
+              "detail": "ヘルツルが政治的シオニズムを理論化する"
             },
             {
-              "date": "1917",
-              "title": "Déclaration Balfour",
-              "detail": "Londres promet un foyer national juif en Palestine."
+              "date": "1917年",
+              "title": "バルフォア宣言",
+              "detail": "ロンドンがパレスチナでのユダヤ人の民族的郷土を約束する"
             },
             {
-              "date": "1947",
-              "title": "Plan de partage de l'ONU",
-              "detail": "Deux États sont proposés, les Arabes le refusent."
+              "date": "1947年",
+              "title": "国連の分割案",
+              "detail": "二つの国家が提案され、アラブ側は拒否する"
             },
             {
-              "date": "1948",
-              "title": "Indépendance et Nakba",
-              "detail": "Israël naît, la guerre éclate, des centaines de milliers de Palestiniens fuient."
+              "date": "1948年",
+              "title": "独立とナクバ",
+              "detail": "イスラエルが誕生し、戦争が起こり、数十万人のパレスチナ人が故郷から逃れる"
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "En 1947, l'ONU propose de partager la Palestine en deux États. Les Juifs acceptent, les Arabes refusent. La guerre qui suit la création d'Israël en 1948 se termine par une victoire israélienne et l'exode de plus de 700 000 Palestiniens : le début de la Nakba et d'une crise des réfugiés jamais résolue."
+          "text": "1947年、国連はパレスチナを二つの国家に分けることを提案しました。ユダヤ人は受け入れ、アラブ人は拒みます。1948年のイスラエル建国に続く戦争は、イスラエルの勝利と七十万人を超えるパレスチナ人の流出で終わりました。これがナクバの始まりであり、いまだ解決しない難民問題の始まりです。"
         }
       ]
     }

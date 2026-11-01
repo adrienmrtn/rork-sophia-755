@@ -1,143 +1,143 @@
 {
   "id": "course_135_mozart_enfant_prodige_et_vie_tragique",
-  "title": "Qui était Mozart, au-delà de l'enfant prodige ?",
+  "title": "神童だけではないモーツァルトとは、どんな人だったのか？",
   "subtitle": "1756-1791",
   "subject": "art",
   "subcategory": "音楽",
-  "description": "Wolfgang Amadeus Mozart, génie précoce de Salzbourg à Vienne, invente l'indépendance du compositeur et laisse un Requiem inachevé.",
+  "description": "ザルツブルクからウィーンへ、早熟の天才ヴォルフガング・アマデウス・モーツァルトは、作曲家の自立という道を切り開き、未完のレクイエムを遺しました。",
   "hero": {
     "image": "mozart_enfant_prodige_et_vie_tragique",
     "ratio": "16:9",
-    "hook": "Six cents œuvres en trente-cinq ans : le météore de Salzbourg."
+    "hook": "三十五年の生涯で六百曲を生み出した、ザルツブルクの流星。"
   },
   "sections": [
     {
       "id": "course_135_mozart_enfant_prodige_et_vie_tragique_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Wolfgang Amadeus Mozart** (**1756**-**1791**) incarne le génie précoce. Né à **Salzbourg**, il produit plus de **600** œuvres en trente-cinq ans et transforme la musique occidentale."
+          "text": "**ヴォルフガング・アマデウス・モーツァルト**（**1756**〜**1791年**）は、早熟の天才の代名詞です。**ザルツブルク**に生まれ、三十五年のあいだに**600**を超える作品を生み出し、西洋音楽を変えました。"
         },
         {
           "type": "paragraph",
-          "text": "Son parcours raconte aussi un basculement social : du musicien serviteur de cour à l'artiste indépendant. Cette quête, coûteuse et fragile, annonce le [[ロマン主義]] et la figure moderne du compositeur libre."
+          "text": "その歩みは、社会の大きな転換も物語っています。宮廷に仕える音楽家から、独立した芸術家へという変化です。お金がかかり、不安定でもあったこの挑戦は、[[ロマン主義]]と、自由な作曲家という現代的なイメージを先取りしていました。"
         }
       ]
     },
     {
       "id": "course_135_mozart_enfant_prodige_et_vie_tragique_p1",
-      "title": "L'enfant prodige sur les routes d'Europe",
+      "title": "ヨーロッパ各地の街道を旅した神童",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Né le **27 janvier 1756**, Wolfgang montre dès trois ans des dons hors normes. Son père **Leopold**, violoniste et pédagogue ambitieux, organise dès six ans des tournées : Vienne, Versailles, Londres, Rome. Ces voyages forgent son oreille : il absorbe toutes les grammaires musicales du continent."
+          "text": "**1756年1月27日**に生まれたヴォルフガングは、3歳で並外れた才能を見せました。野心的なヴァイオリン奏者で教育者でもあった父**レオポルト**は、6歳のときから演奏旅行を組みます。行き先はウィーン、ヴェルサイユ、ロンドン、ローマでした。この旅で彼の耳は磨かれ、大陸のあらゆる音楽の文法を吸収していきます。"
         },
         {
           "type": "image",
           "asset": "young_mozart_performing_european_tour_painting",
           "ratio": "4:3",
-          "caption": "Le jeune Mozart en tournée : un prodige exhibé devant les cours d'Europe."
+          "caption": "演奏旅行中の少年モーツァルト：ヨーロッパの宮廷でお披露目された神童。"
         },
         {
           "type": "paragraph",
-          "text": "En Italie, en **1770**, un exploit frappe les esprits : après une seule audition du *Miserere* de [[グレゴリオ・アレグリ]] à la Chapelle Sixtine, il le retranscrit de mémoire. Partition protégée, menace d'excommunication : le prodige contourne l'interdit. Mais cette enfance en carrosse le prive de repères stables."
+          "text": "**1770年**、イタリアで人びとを驚かせる出来事がありました。システィーナ礼拝堂で[[グレゴリオ・アレグリ]]の*『ミゼレーレ』*を一度聴いただけで、記憶から楽譜に書き起こしたのです。楽譜は門外不出で、持ち出せば破門の脅しまでありましたが、神童はその禁を破りました。ただ、馬車に揺られて過ごした子ども時代は、彼から落ち着いた拠り所を奪いました。"
         },
         {
           "type": "funFact",
-          "text": "À Londres en 1764, un savant de la Royal Society examine l'enfant : il soupçonne une supercherie sur son âge, tant l'improvisation paraît surhumaine."
+          "text": "1764年のロンドンでは、王立協会の学者が少年を調べました。即興演奏があまりに人間離れしていたので、年齢をごまかしているのではないかと疑ったのです。"
         }
       ]
     },
     {
       "id": "course_135_mozart_enfant_prodige_et_vie_tragique_p2",
-      "title": "Vienne : la rupture avec la cour",
+      "title": "ウィーン：宮廷との決別を選ぶ",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En **1781**, Mozart ne supporte plus [[18世紀の音楽家の地位]] sous l'**archevêque Colloredo**. Après une dispute célèbre (un « coup de pied au derrière » du secrétaire), il s'installe à **Vienne**. Acte historique : il devient l'un des premiers compositeurs « free-lance »."
+          "text": "**1781年**、モーツァルトは**コロレド大司教**のもとでの[[18世紀の音楽家の地位]]に耐えられなくなります。有名な口論（大司教の秘書に「お尻を蹴られた」といわれます）のあと、**ウィーン**に移り住みました。これは歴史的な決断で、彼は最初期の「フリーランス」の作曲家のひとりになったのです。"
         },
         {
           "type": "image",
           "asset": "mozart_marriage_of_figaro_vienna_opera",
           "ratio": "4:3",
-          "caption": "Les Noces de Figaro : l'opéra gagne une psychologie moderne."
+          "caption": "『フィガロの結婚』：オペラが現代的な心理描写を手に入れます。"
         },
         {
           "type": "paragraph",
-          "text": "Son génie dramatique explose avec *Les Noces de Figaro* (**1786**). Il fréquente la [[フリーメイソン]] (loge « La Bienfaisance », **1784**), influence visible dans *[[魔笛]]*. Ses **27** concertos pour piano dialoguent entre soliste et orchestre : sommet du [[古典派]]. Mais sa gestion financière est désastreuse."
+          "text": "劇作の才能は*『フィガロの結婚』*（**1786年**）で爆発します。彼は[[フリーメイソン]]（**1784年**に「慈善」支部に入会）にも関わり、その影響は*[[魔笛]]*にはっきり表れています。**27**曲のピアノ協奏曲は、独奏者とオーケストラが対話するように進み、[[古典派]]の頂点とされます。一方で、お金の管理はひどいものでした。"
         },
         {
           "type": "funFact",
-          "text": "Mozart aimait le billard au point d'avoir sa propre table : un luxe rare. Il composait parfois entre deux coups de queue."
+          "text": "モーツァルトはビリヤードが大好きで、自分専用の台まで持っていました。当時としてはめずらしい贅沢です。ときには、キューを突く合間に作曲することもあったそうです。"
         }
       ]
     },
     {
       "id": "course_135_mozart_enfant_prodige_et_vie_tragique_p3",
-      "title": "1791 : la Flûte enchantée et le Requiem",
+      "title": "1791年：『魔笛』とレクイエム",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L'année **1791** est un paradoxe : déclin physique, apogée créatrice. Il achève *La Flûte enchantée*, qui vulgarise des thèmes maçonniques pour le grand public. Puis un émissaire mystérieux commande un **Requiem** sous le sceau du secret. Malade, Mozart se persuade qu'il écrit sa propre messe funèbre."
+          "text": "**1791年**は矛盾に満ちた年でした。体は衰え、創作は絶頂を迎えます。モーツァルトは*『魔笛』*を完成させ、フリーメイソンの思想を広い観客にもわかる形で届けました。続いて、正体不明の使者が、秘密を条件に**レクイエム**を依頼します。病床のモーツァルトは、自分自身の葬送ミサを書いているのだと思い込むようになりました。"
         },
         {
           "type": "image",
           "asset": "mozart_requiem_manuscript_last_work",
           "ratio": "4:3",
-          "caption": "Le Requiem : une commande secrète, une œuvre inachevée."
+          "caption": "レクイエム：秘密の依頼と、未完のままの作品。"
         },
         {
           "type": "paragraph",
-          "text": "Il meurt le **5 décembre 1791**, à 35 ans. La légende d'un empoisonnement par **Antonio Salieri** est romantique ; les historiens parlent plutôt d'infection ou de fièvre rhumatismale. Son élève **Franz Xaver Süssmayr** termine le *Requiem* pour que la veuve **Constance** touche le solde de la commande."
+          "text": "モーツァルトは**1791年十二月5日**、三十五歳で亡くなります。**アントニオ・サリエリ**に毒殺されたという伝説はロマンチックですが、歴史家は感染症かリウマチ熱が原因だったと考えています。弟子の**フランツ・クサーヴァー・ジュスマイヤー**が*『レクイエム』*を完成させたのは、未亡人の**コンスタンツェ**が依頼の残金を受け取れるようにするためでした。"
         },
         {
           "type": "funFact",
-          "text": "Le commanditaire secret était le comte von Walsegg, qui faisait passer pour siennes des œuvres achetées à des compositeurs."
+          "text": "秘密の依頼主は、ヴァルゼック伯爵でした。彼は、作曲家から買い取った作品を自作として発表していたのです。"
         }
       ]
     },
     {
       "id": "course_135_mozart_enfant_prodige_et_vie_tragique_p4",
-      "title": "Mythe de la fosse commune et héritage",
+      "title": "共同墓地の神話と、その後の遺産",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Mozart est inhumé dans une tombe communautaire, pratique imposée par l'empereur **Joseph II** pour des raisons d'hygiène. Ce n'était pas un affront : c'était la norme pour une grande part de la bourgeoisie viennoise. **Beethoven** et **Schubert** bâtiront ensuite sur ses fondations."
+          "text": "モーツァルトは共同墓地に埋葬されました。皇帝**ヨーゼフ2世**が衛生上の理由から定めた慣行です。これは侮辱ではなく、ウィーンの市民層の多くにとって普通のことでした。のちに**ベートーヴェン**と**シューベルト**が、彼の築いた土台の上に作品を重ねていきます。"
         },
         {
           "type": "timeline",
           "events": [
             {
               "date": "1756",
-              "title": "Naissance à Salzbourg",
-              "detail": "Le prodige commence sous la tutelle de Leopold."
+              "title": "ザルツブルクで誕生",
+              "detail": "神童の歩みが、父レオポルトのもとで始まります。"
             },
             {
               "date": "1781",
-              "title": "Rupture avec Colloredo",
-              "detail": "Mozart s'installe à Vienne en indépendant."
+              "title": "コロレドとの決別",
+              "detail": "モーツァルトが、独立した音楽家としてウィーンに移ります。"
             },
             {
               "date": "1786",
-              "title": "Les Noces de Figaro",
-              "detail": "L'opéra gagne une psychologie moderne."
+              "title": "フィガロの結婚",
+              "detail": "オペラが現代的な心理描写を手に入れます。"
             },
             {
               "date": "1791",
-              "title": "Mort et Requiem",
-              "detail": "Une œuvre inachevée devient mythe."
+              "title": "死とレクイエム",
+              "detail": "未完の作品が神話になります。"
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "En 35 ans, Mozart a révolutionné symphonie, opéra et concerto, s'émancipant de la cour avant de mourir en laissant un Requiem inachevé."
+          "text": "モーツァルトは三十五年のあいだに、交響曲、オペラ、協奏曲を一新しました。宮廷から自立し、未完のレクイエムを遺してこの世を去ります。"
         }
       ]
     }

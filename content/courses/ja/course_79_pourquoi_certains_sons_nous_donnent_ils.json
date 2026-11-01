@@ -1,100 +1,100 @@
 {
   "id": "course_79_pourquoi_certains_sons_nous_donnent_ils",
-  "title": "Pourquoi certains sons nous donnent-ils des frissons ?",
-  "subtitle": "Musique & cerveau",
+  "title": "ある種の音を聴くと、なぜ鳥肌が立つのでしょうか？",
+  "subtitle": "音楽と脳",
   "subject": "sciences",
   "subcategory": "地球と宇宙",
-  "description": "Chair de poule, picotements, cœur qui s'accélère : la musique peut pirater nos circuits de plaisir et de survie. Voici pourquoi.",
+  "description": "鳥肌、ぞくぞく感、速まる鼓動。音楽は、脳の快感と生存の回路をハッキングできます。そのわけを見てみましょう。",
   "hero": {
     "image": "pourquoi_certains_sons_nous_donnent_des_frissons",
     "ratio": "16:9",
-    "hook": "Une note, et la peau se hérisse. La musique vient de pirater votre cerveau de survie."
+    "hook": "一つの音で、肌が総毛立つ。音楽が、生存のための脳をハッキングしたのです。"
   },
   "sections": [
     {
       "id": "course_79_pourquoi_certains_sons_nous_donnent_ils_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Environ **55 à 70 %** des personnes ressentent des frissons à la musique : chair de poule, picotements, montée d'émotion. On parle de **frisson esthétique**, ou *chills* en anglais."
+          "text": "**55〜70%**ほどの人が、音楽でぞくぞくする感覚を味わいます。鳥肌、ざわざわ感、こみ上げる感動です。これを**美的なぞくぞく感**と呼び、英語では*chills*といいます。"
         },
         {
           "type": "paragraph",
-          "text": "Ce n'est pas qu'une image. Des ondes sonores déclenchent une vraie tempête chimique dans le cerveau, en empruntant des circuits conçus pour la survie… et détournés vers le beau."
+          "text": "たとえ話ではありません。音波が、脳の中で本物の化学の嵐を起こします。生き残るために作られた回路を借りて、その回路が美しいものへと転用されているのです。"
         }
       ]
     },
     {
       "id": "course_79_pourquoi_certains_sons_nous_donnent_ils_p1",
-      "title": "Le même circuit que la récompense",
+      "title": "快感のごほうびと同じ回路が動く",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Quand un morceau « touche », le cerveau active son **système de récompense**, le réseau de zones liées au plaisir, le même que pour la nourriture, le sexe… ou certaines drogues. L'**imagerie cérébrale**, des techniques qui visualisent l'activité du cerveau, montre deux temps : d'abord l'**anticipation**, avec de la **dopamine**, neurotransmetteur du plaisir, pendant qu'on attend le moment fort ; puis le frisson lui-même, quand le plaisir éclate."
+          "text": "曲が心に「響く」と、脳は**報酬系**を活性化させます。これは快感に関わる領域のネットワークで、食べ物やセックス、あるいは一部の薬物のときと同じものです。**脳画像法**、つまり脳の活動を可視化する技術で見ると、二つの段階があります。まず**期待**の段階で、盛り上がる瞬間を待つあいだに、快感の神経伝達物質**ドーパミン**が出ます。次に、快感がはじけて、ぞくぞく感そのものが起こります。"
         },
         {
           "type": "paragraph",
-          "text": "La preuve chimique : la **naltrexone**, médicament qui bloque les récepteurs **opioïdes**, molécules du plaisir naturel, peut presque effacer le plaisir musical. Le cerveau produit donc ses propres « drogues » internes pour récompenser une expérience esthétique."
+          "text": "化学的な証拠があります。自然な快感をもたらす分子である**オピオイド**の受容体をふさぐ薬、**ナルトレキソン**は、音楽の楽しみをほぼ消してしまうことがあります。つまり脳は、美的な体験にごほうびを与えるために、自前の内なる「薬物」をつくっているのです。"
         },
         {
           "type": "funFact",
-          "text": "Environ **5 %** des gens n'éprouvent aucun plaisir à la musique malgré une ouïe normale. On parle d'**anhédonie musicale**, l'incapacité à ressentir du plaisir avec la musique."
+          "text": "聴力は正常なのに、音楽にまったく喜びを感じない人が、約**5%**います。これを**音楽性無快感症**と呼び、音楽で快感を覚えられない状態のことです。"
         }
       ]
     },
     {
       "id": "course_79_pourquoi_certains_sons_nous_donnent_ils_p2",
-      "title": "La surprise qui fait frissonner",
+      "title": "ぞくっとさせるのは「驚き」",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le frisson naît souvent d'une [[音楽の予測の裏切り]]. Le cerveau prédit sans cesse la note suivante. Un chœur qui entre trop tôt, une **modulation**, un changement de tonalité inattendu, une tension qui tarde à se résoudre : l'alerte émotionnelle s'allume."
+          "text": "ぞくぞく感は、しばしば[[音楽の予測の裏切り]]から生まれます。脳は次の音をたえず予測しています。合唱が早すぎるタイミングで入る、**転調**、思いがけない調の変化、なかなか解決しない緊張。そんなとき、感情の警報が鳴ります。"
         },
         {
           "type": "paragraph",
-          "text": "L'**amygdale**, zone profonde du cerveau liée au danger, réagit une fraction de seconde. La chair de poule est un vieux réflexe : hérisser les poils pour paraître plus grand ou garder la chaleur. Puis le cortex comprend que c'est de l'art, pas une menace. Le soulagement devient plaisir intense."
+          "text": "**扁桃体**は、危険に関わる脳の深い部分で、ほんの一瞬だけ反応します。鳥肌は古い反射で、毛を逆立てて体を大きく見せたり、体温を保ったりするためのものです。やがて皮質が、これは芸術であって脅威ではないと理解します。安心が、強烈な快感に変わるのです。"
         },
         {
           "type": "funFact",
-          "text": "La chair de poule s'appelle la **piloérection**, l'hérissage des poils. Chez l'humain moderne, la musique la déclenche surtout sur des passages tristes ou mélancoliques."
+          "text": "鳥肌は医学の用語で**立毛**と呼ばれ、体の毛が逆立つ現象のことです。現代の人間では、音楽が鳥肌を起こすのは、とくに悲しい場面や切ない場面が中心になります。"
         }
       ]
     },
     {
       "id": "course_79_pourquoi_certains_sons_nous_donnent_ils_p3",
-      "title": "Pourquoi certains y sont plus sensibles",
+      "title": "ぞくぞくしやすい人としにくい人の違い",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le chercheur [[マシュー・サックス]] a montré que les personnes sujettes aux frissons ont souvent plus de connexions, la **substance blanche**, fibres qui relient les zones du cerveau, entre le cortex auditif, le cortex préfrontal et l'**insula**, zone d'intégration des émotions. Leur cerveau relie plus directement son et sentiment."
+          "text": "研究者の[[マシュー・サックス]]は、ぞくぞくしやすい人には、聴覚皮質、前頭前皮質、感情を統合する領域の**島皮質**の間に、**白質**（脳の領域どうしを結ぶ線維）によるつながりが多い傾向があることを示しました。そうした人の脳は、音と感情をより直接結びつけています。"
         },
         {
           "type": "paragraph",
-          "text": "Ce trait va aussi avec l'[[経験への開放性]] : curiosité, goût pour la complexité et l'ambiguïté. Plus on accueille l'inattendu, plus le cerveau a d'occasions de déclencher sa récompense."
+          "text": "この特性は、[[経験への開放性]]とも結びついています。好奇心があり、複雑さやあいまいさを楽しめる、という性質です。予想外のことを受け入れるほど、脳は報酬を引き出す機会に恵まれます。"
         }
       ]
     },
     {
       "id": "course_79_pourquoi_certains_sons_nous_donnent_ils_p4",
-      "title": "Un héritage évolutif détourné",
+      "title": "形を変えて受け継がれた進化の遺産",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Darwiniennement, le frisson musical est un paradoxe : il ne nourrit ni ne protège directement. Mais synchroniser les émotions d'un groupe a pu favoriser la **cohésion sociale**. Les fréquences qui frappent le plus rappellent aussi les pleurs ou les cris de détresse : l'urgence d'abord, la beauté ensuite."
+          "text": "進化の観点から見ると、音楽によるぞくぞく感は一つの謎です。栄養にもならず、直接身を守ってもくれません。ただ、集団の感情をそろえることが、**社会的なまとまり**を強めたのかもしれません。いちばん強く響く周波数は、泣き声や助けを求める叫びにも似ています。まず切迫感、そのあとに美しさがやってくるのです。"
         },
         {
           "type": "paragraph",
-          "text": "Au fond, la musique pirate des systèmes anciens pour offrir l'une des expériences les plus corporelles de l'art : une vibration de l'air devenue sensation sur la peau."
+          "text": "つまり音楽は、古くからある脳のしくみをハッキングして、芸術のなかでもとりわけ身体的な体験をもたらします。空気の振動が、肌の上の感覚になるのです。"
         },
         {
           "type": "takeaway",
-          "text": "Les frissons musicaux naissent d'une libération de dopamine déclenchée par une surprise harmonique, surtout chez les cerveaux très connectés entre audition et émotion."
+          "text": "音楽によるぞくぞく感は、ハーモニーの意外性で引き起こされるドーパミンの放出から生まれます。特に、聴覚と感情が強く結びついた脳で起こりやすいのです。"
         }
       ]
     }

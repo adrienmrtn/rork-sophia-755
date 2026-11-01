@@ -1,124 +1,124 @@
 {
   "id": "course_148_le_bauhaus",
-  "title": "Pourquoi le Bauhaus est-il partout autour de nous ?",
-  "subtitle": "1919-1933",
+  "title": "バウハウスのデザインは、なぜ身のまわりにあふれているのか",
+  "subtitle": "1919〜1933年",
   "subject": "art",
   "subcategory": "映画・写真・建築",
-  "description": "Entre **1919** et **1933**, l'école du **Bauhaus** fusionne art, artisanat et industrie en Allemagne. Fermée par les nazis, elle diffuse pourtant le design moderne dans le monde entier.",
+  "description": "**1919年**から**1933年**まで、ドイツの学校**バウハウス**は、芸術と工芸と工業を一つに結びつけようとしました。ナチスに閉鎖されましたが、モダンデザインは世界中に広まります。",
   "hero": {
     "image": "le_bauhaus",
     "ratio": "16:9",
-    "hook": "Une école allemande de 14 ans a dessiné le monde moderne, de la chaise au smartphone."
+    "hook": "わずか14年のドイツの学校が、椅子からスマートフォンまで、現代の世界の形をつくりました。"
   },
   "sections": [
     {
       "id": "course_148_le_bauhaus_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le **Bauhaus** (1919-1933) est l'école d'art et de design la plus influente du XXe siècle. Fondée en Allemagne juste après la Première Guerre mondiale, elle refuse le décor inutile du XIXe siècle. Son but : inventer un langage simple, adapté à l'âge industriel."
+          "text": "**バウハウス**（1919〜1933年）は、二十世紀でもっとも影響力のあった美術・デザインの学校です。第一次世界大戦の直後にドイツで創立され、十九世紀の無駄な装飾を退けました。目指したのは、工業の時代にふさわしい、シンプルな表現の言語をつくることです。"
         },
         {
           "type": "paragraph",
-          "text": "En fusionnant art, artisanat et technique, elle pose les bases du [[デザインの機能主義]] moderne. Sa vie est brève. Son héritage, lui, est partout."
+          "text": "芸術と工芸と技術を一つにすることで、現代の[[デザインの機能主義]]の土台を築きました。学校の寿命は短いものでした。けれども、その遺産はいたるところにあります。"
         }
       ]
     },
     {
       "id": "course_148_le_bauhaus_p1",
-      "title": "Weimar 1919 : abolir la hiérarchie des arts",
+      "title": "ヴァイマル、1919年：芸術の序列をなくす",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En **1919**, l'architecte **Walter Gropius** fonde le Bauhaus à **Weimar**. Son manifeste est clair : le but final de toute création, c'est l'architecture. Plus de frontière entre « beaux-arts » nobles et « arts appliqués » secondaires. L'artisanat devient la base de tout."
+          "text": "**1919年**、建築家**ヴァルター・グロピウス**が**ヴァイマル**にバウハウスを創立します。宣言ははっきりしています。あらゆる創造の最終目的は建築である、というのです。高尚な「純粋芸術」と二流の「応用芸術」の境界はなくなり、工芸がすべての土台になります。"
         },
         {
           "type": "image",
           "asset": "bauhaus_weimar_1919_walter_gropius_building",
           "ratio": "4:3",
-          "caption": "Le Bauhaus : une école où l'on apprend en fabriquant."
+          "caption": "バウハウス：手を動かして、作りながら学ぶ学校"
         },
         {
           "type": "paragraph",
-          "text": "Chaque atelier a deux maîtres : un artiste et un artisan. Des figures comme [[ワシリー・カンディンスキー]], peintre abstrait russe, y enseignent. L'école dialogue aussi avec [[デ・ステイル]], mouvement néerlandais obsédé par le rectangle et les couleurs pures."
+          "text": "どの工房にも、芸術家と職人の二人の親方がいました。ロシア出身の抽象画家[[ワシリー・カンディンスキー]]のような人物も、ここで教えています。学校は、長方形と純色にこだわったオランダの芸術運動[[デ・ステイル]]とも交流しました。"
         }
       ]
     },
     {
       "id": "course_148_le_bauhaus_p2",
-      "title": "La forme suit la fonction",
+      "title": "形は機能に従う",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Installée ensuite à **Dessau**, l'école se tourne vers la production en série. Slogan célèbre : **« la forme suit la fonction »**. L'ornement est jugé inutile. On cherche des objets simples, beaux et fabriquables en usine."
+          "text": "次の拠点**デッサウ**で、学校は量産へと舵を切ります。有名なスローガンは「**形は機能に従う**」。装飾は不要とされ、シンプルで美しく、しかも工場でつくれる品物が求められるようになりました。"
         },
         {
           "type": "funFact",
-          "text": "**Marcel Breuer**, enseignant au Bauhaus, recycle l'acier tubulaire des bicyclettes pour inventer des chaises légères. Un matériau d'usine devient du mobilier de salon."
+          "text": "バウハウスの教師**マルセル・ブロイヤー**は、自転車のスチールパイプを再利用して、軽やかな椅子を考案しました。工場の素材が、居間の家具になったのです。"
         },
         {
           "type": "paragraph",
-          "text": "Les ateliers testent le métal, le verre, le textile, la typographie. Le but n'est plus l'objet unique de luxe. C'est l'objet type, accessible au plus grand nombre."
+          "text": "工房では、金属、ガラス、織物、活字などを試しました。目標はもはや、一点ものの高級品ではありません。多くの人の手に届く、標準的な品物です。"
         }
       ]
     },
     {
       "id": "course_148_le_bauhaus_p3",
-      "title": "Fermée par les nazis, sauvée par l'exil",
+      "title": "ナチスに閉鎖され、亡命で生き延びる",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L'école dérange. On l'accuse d'être trop moderne, trop internationale, trop à gauche. Après un passage à Berlin sous **Mies van der Rohe**, survient [[ナチスによる閉鎖（1933年）]]. Le régime y voit du « bolchevisme culturel »."
+          "text": "学校は目をつけられました。モダンすぎる、国際的すぎる、左寄りすぎると非難されたのです。**ミース・ファン・デル・ローエ**のもとでベルリンに移った後に起きたのが、[[ナチスによる閉鎖（1933年）]]です。体制は、バウハウスに「文化的ボルシェヴィズム」を見ていました。"
         },
         {
           "type": "image",
           "asset": "mies_van_der_rohe_modernist_architecture",
           "ratio": "4:3",
-          "caption": "Mies van der Rohe : dernière direction du Bauhaus, puis exil américain."
+          "caption": "ミース・ファン・デル・ローエ：バウハウス最後の校長で、のちにアメリカへ亡命"
         },
         {
           "type": "paragraph",
-          "text": "La fermeture devient une diffusion. Les maîtres partent aux États-Unis, en Grande-Bretagne, en Palestine. À Tel-Aviv, leurs idées nourrissent la [[テルアビブの白い都市]], vaste ensemble d'architecture moderne blanche."
+          "text": "閉鎖は、かえって普及のきっかけになりました。教師たちはアメリカ、イギリス、パレスチナへ渡ります。テルアビブでは、彼らの考えが[[テルアビブの白い都市]]を育てました。白い近代建築が並ぶ広大な街並みです。"
         }
       ]
     },
     {
       "id": "course_148_le_bauhaus_p4",
-      "title": "Un design devenu invisible à force d'évidence",
+      "title": "当たり前すぎて、目に見えなくなったデザイン",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Aujourd'hui, l'héritage du Bauhaus est partout : meubles en kit, immeubles simples, interfaces claires, typographies [[サンセリフ]] sans empattements. IKEA, les aéroports, nos téléphones : la clarté géométrique du Bauhaus est devenue le décor ordinaire du monde."
+          "text": "今日、バウハウスの遺産はどこにでもあります。組み立て式の家具、シンプルな建物、わかりやすい操作画面、そして飾りのない書体の[[サンセリフ]]。IKEA、空港、私たちのスマートフォン。バウハウスの幾何学的な明快さは、世界のありふれた風景になりました。"
         },
         {
           "type": "timeline",
           "events": [
             {
-              "date": "1919",
-              "title": "Fondation à Weimar",
-              "detail": "Gropius lance l'école art-artisanat-industrie."
+              "date": "1919年",
+              "title": "ヴァイマルで創立",
+              "detail": "グロピウスが、芸術・工芸・工業を結ぶ学校を始める。"
             },
             {
-              "date": "1925",
-              "title": "Dessau",
-              "detail": "Virage vers la production en série."
+              "date": "1925年",
+              "title": "デッサウ",
+              "detail": "量産の時代へと大きくかじを切る。"
             },
             {
-              "date": "1933",
-              "title": "Fermeture nazie",
-              "detail": "L'exil diffuse le Bauhaus dans le monde."
+              "date": "1933年",
+              "title": "ナチスによる閉鎖",
+              "detail": "亡命によって、バウハウスが世界に広まる。"
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "En 14 ans seulement, le Bauhaus a inventé l'idée moderne du design : moins d'ornement, plus de fonction, des objets beaux parce qu'utiles. Sa fermeture politique n'a fait qu'accélérer sa conquête du quotidien."
+          "text": "たった14年で、バウハウスは近代デザインの考え方をつくり上げました。装飾は減らし、機能は増やし、役に立つから美しい品物をめざす。政治的な閉鎖は、日常への浸透をむしろ早めただけでした。"
         }
       ]
     }

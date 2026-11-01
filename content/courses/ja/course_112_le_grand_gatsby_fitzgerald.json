@@ -1,119 +1,119 @@
 {
   "id": "course_112_le_grand_gatsby_fitzgerald",
-  "title": "Le Grand Gatsby, Fitzgerald",
+  "title": "『グレート・ギャツビー』、フィッツジェラルド",
   "subtitle": "1925",
   "subject": "litterature",
   "subcategory": "英米と世界の文学",
-  "description": "Jay Gatsby organise des fêtes somptueuses pour reconquérir Daisy. Fitzgerald décrit les Années folles et la corruption du rêve américain.",
+  "description": "ジェイ・ギャツビーは、デイジーを取り戻すために豪華なパーティーを開きます。フィッツジェラルドは、狂騒の時代と、アメリカン・ドリームの腐敗を描きます。",
   "hero": {
     "image": "le_grand_gatsby_fitzgerald",
     "ratio": "16:9",
-    "hook": "Une lumière verte au bout du quai : le symbole d'un passé qu'on ne peut pas racheter."
+    "hook": "桟橋の先に灯る緑の光：二度とお金では取り戻せない過去を象徴するもの。"
   },
   "sections": [
     {
       "id": "course_112_le_grand_gatsby_fitzgerald_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Publié en **1925**, **Le Grand Gatsby** est le chef-d'œuvre de **F. Scott Fitzgerald**, né en **1896** et mort en **1940**. À travers **Jay Gatsby**, homme mystérieux aux fêtes fabuleuses, il explore l'ascension sociale, l'illusion du bonheur et l'impossibilité de racheter le passé."
+          "text": "**1925年**に出版された**『グレート・ギャツビー』**は、**1896年**に生まれ**1940年**に亡くなった**F・スコット・フィッツジェラルド**の代表作です。華やかなパーティーで知られる謎めいた男**ジェイ・ギャツビー**を通して、立身出世、幸福という幻想、過去は買い戻せないという現実を描きます。"
         },
         {
           "type": "paragraph",
-          "text": "Le roman est le requiem du [[アメリカン・ドリーム]]. Cette idée veut qu'aux États-Unis, chacun peut réussir par le seul mérite et le travail. Derrière les dorures de l'ère du jazz, Fitzgerald montre une corruption morale profonde. L'argent achète le spectacle, mais pas la rédemption."
+          "text": "この小説は、[[アメリカン・ドリーム]]に捧げられた鎮魂歌です。アメリカでは、だれでも実力と努力だけで成功できるという考え方です。ジャズ・エイジの金ぴかの裏に、フィッツジェラルドは深い道徳的な腐敗を見ています。お金で見せ物は買えても、救いは買えません。"
         }
       ]
     },
     {
       "id": "course_112_le_grand_gatsby_fitzgerald_p1",
-      "title": "Fitzgerald et l'ambivalence des Années folles",
+      "title": "フィッツジェラルドと、狂騒の時代がもつ二面性",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Fitzgerald vit les **Roaring Twenties**, qu'on appelle aussi les « Années folles ». C'est une décennie d'euphorie après la Première Guerre mondiale. Avec son épouse **Zelda**, il incarne le glamour et les excès de cette génération perdue, mais aussi sa fragilité psychologique et financière."
+          "text": "フィッツジェラルドが生きたのは**ローリング・トウェンティーズ**、つまり「狂騒の時代」です。第一次世界大戦のあとに訪れた、熱狂の十年間でした。妻の**ゼルダ**とともに、この「失われた世代」の華やかさと放埒を体現しましたが、同時に精神面や経済面のもろさも抱えていました。"
         },
         {
           "type": "image",
           "asset": "f_scott_fitzgerald_portrait_photograph",
           "ratio": "4:3",
-          "caption": "F. Scott Fitzgerald, chroniqueur et acteur des Années folles."
+          "caption": "F・スコット・フィッツジェラルド：狂騒の時代を書き、生きた作家。"
         },
         {
           "type": "paragraph",
-          "text": "Le roman s'inscrit dans la période de [[禁酒法]], de **1920** à **1933**. L'alcool est alors interdit par la Constitution. Cette interdiction favorise paradoxalement le trafic clandestin et les fortunes illicites. Gatsby lui-même doit sa richesse à cette économie souterraine. À sa sortie, le livre se vend mal. Fitzgerald meurt en **1940** en croyant avoir échoué."
+          "text": "小説の舞台は、**1920年**から**1933年**までの[[禁酒法]]の時代です。当時は憲法でアルコールが禁じられていました。皮肉なことに、この禁止が密売や不正な富を生みました。ギャツビー自身も、その地下経済で財を築いています。刊行当時、この本はあまり売れませんでした。フィッツジェラルドは、自分は失敗したと思いながら**1940年**に亡くなります。"
         },
         {
           "type": "image",
           "asset": "jazz_age_1920s_party_america",
           "ratio": "16:9",
-          "caption": "L'Amérique des années 1920 : fêtes, jazz et illusion de prospérité."
+          "caption": "1920年代のアメリカ：パーティー、ジャズ、そして見せかけの繁栄。"
         },
         {
           "type": "funFact",
-          "text": "Le Grand Gatsby ne s'est vendu qu'à environ 20 000 exemplaires à sa publication. Ce n'est qu'après la mort de Fitzgerald, distribué aux soldats pendant la Seconde Guerre mondiale, qu'il devient un classique."
+          "text": "『グレート・ギャツビー』は、刊行されたときには約2万部しか売れませんでした。この本が古典になるのは、フィッツジェラルドの死後、第二次世界大戦中に兵士たちに配られてからのことです。"
         }
       ]
     },
     {
       "id": "course_112_le_grand_gatsby_fitzgerald_p2",
-      "title": "Gatsby ou l'invention de soi",
+      "title": "ギャツビー、または自己の創造",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Jay Gatsby**, né **James Gatz**, fils de fermiers pauvres du Dakota, rejette ses origines pour se réinventer. Sa fortune, liée au trafic d'alcool durant la Prohibition, sert une seule obsession : reconquérir **Daisy Buchanan**, qu'il a aimée avant la guerre."
+          "text": "**ジェイ・ギャツビー**は、本名**ジェームズ・ガッツ**。ダコタの貧しい農家に生まれ、出自を捨てて自分を作り直します。禁酒法時代の酒の密売で築いた財産は、ただ一つの執念のために使われます。戦前に愛した**デイジー・ブキャナン**を取り戻すことです。"
         },
         {
           "type": "image",
           "asset": "long_island_mansion_1920s",
           "ratio": "16:9",
-          "caption": "West Egg et East Egg : la demeure de Gatsby face à celle de Daisy."
+          "caption": "ウェスト・エッグとイースト・エッグ：デイジーの家と向かい合うギャツビーの邸宅。"
         },
         {
           "type": "paragraph",
-          "text": "Installé à **West Egg**, quartier des « nouveaux riches », Gatsby contemple chaque nuit la **lumière verte** au bout du quai des Buchanan, à **East Egg**. East Egg abrite l'aristocratie héréditaire. La lumière symbolise l'avenir qu'il poursuit, toujours hors de portée. Gatsby croit qu'on peut effacer le temps par la volonté seule, mais le passé résiste."
+          "text": "「新興成金」が住む地区**ウェスト・エッグ**に越してきたギャツビーは、毎晩、**イースト・エッグ**にあるブキャナン家の桟橋の先の**緑の光**を見つめます。イースト・エッグには、世襲の貴族階級が住んでいます。この光は、彼が追い求める、いつまでも手の届かない未来を象徴します。ギャツビーは意志の力だけで時間を消せると信じていますが、過去は消えません。"
         }
       ]
     },
     {
       "id": "course_112_le_grand_gatsby_fitzgerald_p3",
-      "title": "Nick Carraway et le regard du témoin",
+      "title": "ニック・キャラウェイと、目撃者のまなざし",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le narrateur **Nick Carraway**, cousin de Daisy et voisin de Gatsby, observe ce monde avec fascination et dégoût. Il voit la noblesse de Gatsby malgré ses fautes, face à la cruauté des Buchanan, richesse héréditaire protégée par l'argent et l'indifférence."
+          "text": "語り手の**ニック・キャラウェイ**は、デイジーのいとこでギャツビーの隣人です。魅了されながら嫌悪も抱いて、この世界を見つめます。欠点はあっても、ギャツビーには気高さがあると見ています。対するブキャナン夫妻は残酷で、世襲の富を金と無関心に守られています。"
         },
         {
           "type": "quote",
-          "text": "Gatsby croyait à la lumière verte, à l'orgiastique avenir qui, année après année, se retire devant nous.",
-          "attribution": "F. Scott Fitzgerald, Le Grand Gatsby"
+          "text": "ギャツビーは緑の光を信じていた。年ごとに私たちの前から遠ざかっていく、陶酔するような未来を信じていたのだ。",
+          "attribution": "F・スコット・フィッツジェラルド『グレート・ギャツビー』"
         },
         {
           "type": "paragraph",
-          "text": "Quand Daisy tue accidentellement **Myrtle Wilson** au volant de la voiture de Gatsby, elle le laisse porter le chapeau. Gatsby meurt, tué par le mari de Myrtle. Personne ne vient à ses funérailles. Nick comprend que tout n'était qu'un mirage : les fêtes somptueuses masquaient une solitude absolue."
+          "text": "デイジーは、ギャツビーの車を運転中に**マートル・ウィルソン**を誤ってひき殺し、その罪をギャツビーにかぶせます。ギャツビーは、マートルの夫に殺されます。葬儀に来る人はだれもいません。すべては蜃気楼にすぎず、華やかなパーティーの裏には、底知れない孤独が隠れていたのだと、ニックは悟ります。"
         }
       ]
     },
     {
       "id": "course_112_le_grand_gatsby_fitzgerald_p4",
-      "title": "La postérité mémorielle et le déclin du rêve",
+      "title": "後世への影響と、夢が色あせていくこと",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le roman se clôt sur la métaphore des barques luttant contre le courant : nous sommes poussés vers l'avant par nos espoirs, mais ancrés dans le passé. Fitzgerald dresse aussi le portrait de la **Vallée des Cendres**, zone industrielle dévastée. Les yeux du docteur T.J. Eckleburg sur un panneau publicitaire symbolisent un [[不在の神]]. La spiritualité a cédé la place au commerce."
+          "text": "小説は、流れに逆らって進むボートのたとえで幕を閉じます。人は希望に押されて前へ進みながら、過去につなぎとめられているのです。フィッツジェラルドは、荒れ果てた工業地帯**灰の谷**も描きます。広告看板に描かれたT・J・エックルバーグ博士の目は、[[不在の神]]を象徴しています。精神性は、商業に道を譲りました。"
         },
         {
           "type": "paragraph",
-          "text": "Redécouvert après **1945**, le livre est devenu le miroir des contradictions américaines : nouvelle fortune contre vieille lignée, rêve contre réalité, spectacle contre vérité. Il reste l'une des critiques les plus célèbres du [[アメリカン・ドリーム]] et de ses promesses trahies."
+          "text": "**1945年**以降に再発見されたこの本は、アメリカの矛盾を映す鏡になりました。新興の富と古い家柄、夢と現実、見せかけと真実の対立です。[[アメリカン・ドリーム]]と、裏切られたその約束に対する、もっとも有名な批判の一つであり続けています。"
         },
         {
           "type": "takeaway",
-          "text": "**Le Grand Gatsby** montre la chute tragique d'un homme qui a voulu racheter son passé par la fortune, et critique l'irresponsabilité d'une élite protégée par l'argent."
+          "text": "**『グレート・ギャツビー』**は、財産で過去を買い戻そうとした男の悲劇的な転落を描き、お金に守られたエリートの無責任さを批判しています。"
         }
       ]
     }

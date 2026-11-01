@@ -1,120 +1,120 @@
 {
   "id": "course_159_le_theatre_de_shakespeare",
-  "title": "Pourquoi joue-t-on encore Shakespeare partout ?",
-  "subtitle": "1564-1616",
+  "title": "シェイクスピアは、なぜ今も世界中で上演されるのか",
+  "subtitle": "1564〜1616年",
   "subject": "art",
   "subcategory": "映画・写真・建築と象徴的な作品",
-  "description": "À Londres, Shakespeare écrit pour le Globe. Hamlet, Macbeth, Roméo : un théâtre populaire devenu sommet de la langue anglaise.",
+  "description": "ロンドンで、シェイクスピアはグローブ座のために戯曲を書きました。『ハムレット』『マクベス』『ロミオとジュリエット』など、庶民の娯楽だった演劇が、英語の最高峰にまで高められます。",
   "hero": {
     "image": "le_theatre_de_shakespeare",
     "ratio": "16:9",
-    "hook": "Un dramaturge d'acteur, un théâtre sans décors… et des répliques éternelles."
+    "hook": "役者のために書く劇作家、舞台装置のない劇場、そして永遠に残るせりふ。"
   },
   "sections": [
     {
       "id": "course_159_le_theatre_de_shakespeare_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**William Shakespeare** (1564-1616) écrit pour la scène londonienne, non pour l'école. Ses pièces mêlent rois, clowns, amoureux et assassins."
+          "text": "**ウィリアム・シェイクスピア**（1564〜1616年）は、学校の教材ではなく、ロンドンの舞台のために戯曲を書きました。作品には、王や道化、恋人たち、人殺しが入り混じって登場します。"
         },
         {
           "type": "paragraph",
-          "text": "Quatre siècles plus tard, on le joue encore partout."
+          "text": "4世紀たった今も、世界のあちこちで上演されています。"
         }
       ]
     },
     {
       "id": "course_159_le_theatre_de_shakespeare_p1",
-      "title": "Le Globe et les groundlings",
+      "title": "グローブ座と立ち見の観客",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Avec la troupe des [[宮内大臣一座]], il joue au [[グローブ座]], cercle à ciel ouvert. Les [[グラウンドリングズ]] paient peu et restent debout, près de la scène. Le théâtre est populaire, bruyant, vivant."
+          "text": "シェイクスピアは[[宮内大臣一座]]の一員として、円形で屋根のない[[グローブ座]]で上演しました。[[グラウンドリングズ]]は安い料金で、舞台のすぐ近くに立ったまま見ます。庶民的で、騒がしく、活気のある劇場でした。"
         },
         {
           "type": "paragraph",
-          "text": "Londres élisabéthaine aime le spectacle. Les théâtres concurrencent les sermons et les combats d'ours. Shakespeare écrit dans ce marché bruyant, pas dans une tour d'ivoire."
+          "text": "エリザベス朝のロンドンは見世物が大好きでした。劇場は、説教や熊いじめと客を奪い合っていました。シェイクスピアが書いたのは、象牙の塔ではなく、この騒がしい市場の中です。"
         },
         {
           "type": "image",
           "asset": "globe_theatre_london_reconstruction",
           "ratio": "4:3",
-          "caption": "Le Globe : la scène poussée dans la foule."
+          "caption": "グローブ座：観客のただ中に突き出した舞台"
         }
       ]
     },
     {
       "id": "course_159_le_theatre_de_shakespeare_p2",
-      "title": "Une langue neuve",
+      "title": "新しい言葉",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Il écrit souvent en vers blanc (blank verse) shakespearien : pentamètre iambique sans rime. Insultes, poèmes, monologues : il invente des mots et fixe des caractères (Hamlet, Lady Macbeth) devenus mythes."
+          "text": "シェイクスピアは、韻を踏まない弱強五歩格の「無韻詩」（ブランク・ヴァース）でよく書きました。悪口、詩、独白のなかで、新しい言葉を生み出し、ハムレットやマクベス夫人のような、神話になるほどの人物像を作り上げます。"
         },
         {
           "type": "paragraph",
-          "text": "Il recycle chroniques, nouvelles italiennes, pièces anciennes. L'originalité est dans le langage et les caractères, pas dans l'invention pure de l'intrigue."
+          "text": "年代記やイタリアの短編小説、古い芝居を、うまく作り変えて使っています。独創性があるのは筋立てそのものではなく、言葉と人物像のほうです。"
         },
         {
           "type": "funFact",
-          "text": "Plusieurs de ses pièces ne nous sont parvenues que grâce au [[ファースト・フォリオ]] de 1623, publié après sa mort."
+          "text": "彼の戯曲のいくつかが今に伝わっているのは、死後の1623年に出版された[[ファースト・フォリオ]]のおかげです。"
         }
       ]
     },
     {
       "id": "course_159_le_theatre_de_shakespeare_p3",
-      "title": "Tragédies, comédies, histoires",
+      "title": "悲劇、喜劇、そして歴史劇",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Il passe du rire au sang. *Roméo et Juliette*, *Othello*, *Le Roi Lear* : familles, pouvoir, jalousie. Les « history plays » rejouent l'Angleterre pour un public qui aime se voir en épopée."
+          "text": "シェイクスピアは、笑いから流血まで自在に書き分けます。*『ロミオとジュリエット』*、*『オセロ』*、*『リア王』*では、家族、権力、嫉妬が描かれます。「史劇」はイングランドの歴史を舞台で再現し、自分たちを叙事詩の登場人物のように見たい観客を喜ばせました。"
         },
         {
           "type": "paragraph",
-          "text": "Comédies et tragédies se répondent. Le fou dit la vérité ; le roi devient fou. Cette porosité des tons explique qu'on puisse encore le monter de mille façons."
+          "text": "喜劇と悲劇は互いに響き合います。道化は真実を語り、王は狂います。このように調子が入り混じっているからこそ、今も千通りの演出ができるのです。"
         },
         {
           "type": "image",
           "asset": "shakespeare_first_folio_1623",
           "ratio": "4:3",
-          "caption": "Le First Folio : sauver les textes de l'oubli."
+          "caption": "ファースト・フォリオ：作品を忘却から救った本"
         }
       ]
     },
     {
       "id": "course_159_le_theatre_de_shakespeare_p4",
-      "title": "Héritage",
+      "title": "受け継がれるもの",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Traduit, adapté, samplé par le cinéma et le rap, Shakespeare reste une boîte à outils pour dire l'ambition et le désir. Son secret : écrire pour des acteurs, devant une foule."
+          "text": "シェイクスピアは翻訳され、翻案され、映画やラップにサンプリングされて、野心や欲望を語るための道具箱であり続けています。その秘訣は、観客の前に立つ役者のために書いたことです。"
         },
         {
           "type": "paragraph",
-          "text": "Pour bien saisir Le théâtre de Shakespeare, il faut garder une chose en tête : chaque détail technique sert une émotion ou une idée. L'œuvre n'est jamais seulement décorative."
+          "text": "シェイクスピアの演劇を深く味わうには、ひとつ心に留めておきたいことがあります。技術的な工夫はどれも、感情か考えを伝えるためにあるということです。作品は、単なる飾りではありません。"
         },
         {
           "type": "paragraph",
-          "text": "Le contexte compte autant que le style. Dates, lieux, commanditaires, public : tout cela explique pourquoi une forme apparaît à un moment précis, et pas avant."
+          "text": "様式と同じくらい、背景も大切です。年代、場所、注文主、観客。これらを知ると、ある形式がなぜその時に現れ、それ以前には現れなかったのかが分かります。"
         },
         {
           "type": "paragraph",
-          "text": "Enfin, l'héritage se mesure dans le temps long. Ce que nous voyons aujourd'hui dans les musées, les films ou la musique populaire porte encore la trace de ces inventions."
+          "text": "最後に、受け継がれたものの価値は、長い時間をかけて見えてきます。美術館や映画、ポピュラー音楽など、今日私たちが目にするものには、こうした発明の跡が残っています。"
         },
         {
           "type": "paragraph",
-          "text": "Traduit dès le XVIIIe siècle en France et ailleurs, il devient un classique mondial. Chaque époque trouve en lui son miroir : romantique, politique, postcolonial, féministe."
+          "text": "シェイクスピアは、十八世紀にはもうフランスなどで翻訳され、世界的な古典になりました。どの時代も、そこに自分の姿を見いだします。ロマン主義的にも、政治的にも、ポストコロニアル的にも、フェミニズムの視点でも読まれてきました。"
         },
         {
           "type": "takeaway",
-          "text": "Au Globe, Shakespeare a inventé un théâtre populaire dont les caractères et la langue ont conquis le monde."
+          "text": "シェイクスピアはグローブ座で、庶民の演劇を生み出しました。その人物像と言葉は、世界を魅了しました。"
         }
       ]
     }

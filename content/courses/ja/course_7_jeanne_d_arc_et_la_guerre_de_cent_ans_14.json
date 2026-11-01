@@ -1,115 +1,115 @@
 {
   "id": "course_7_jeanne_d_arc_et_la_guerre_de_cent_ans_14",
-  "title": "Qui était Jeanne d'Arc, paysanne devenue chef de guerre ?",
-  "subtitle": "1429",
+  "title": "ジャンヌ・ダルクとはだれ？農民の娘から戦の指導者へ",
+  "subtitle": "1429年",
   "subject": "histoire",
   "subcategory": "古代と中世",
-  "description": "En 1429, une paysanne de 17 ans convainc le dauphin de lui confier une armée. En quelques mois, Jeanne d'Arc renverse le cours d'une guerre que la France semblait avoir perdue.",
+  "description": "1429年、17歳の農民の娘が、王太子を説得して軍を任されます。わずか数か月で、ジャンヌ・ダルクは、フランスが負けたかに見えた戦争の流れを変えました。",
   "hero": {
     "image": "jeanne_d_arc_et_la_guerre_de_cent_ans",
     "ratio": "16:9",
-    "hook": "Dix-sept ans, une bannière, et un royaume qui bascule."
+    "hook": "十七歳の少女、一本の軍旗、そして大きく傾く王国。"
   },
   "sections": [
     {
       "id": "course_7_jeanne_d_arc_et_la_guerre_de_cent_ans_14_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En **1429**, la France semble perdue. Les Anglais et leurs alliés bourguignons tiennent le Nord. Le dauphin Charles, héritier du trône, végète au sud de la Loire. C'est alors qu'une paysanne de **17 ans**, venue de Domrémy en Lorraine, affirme avoir une mission divine."
+          "text": "**1429年**、フランスは負けたも同然に見えます。イングランド軍と、その同盟者のブルゴーニュ派が北部を押さえ、王位継承者である王太子シャルルは、ロワール川の南でくすぶっています。そこへ、ロレーヌ地方のドンレミ村から来た**17歳**の農民の娘が現れ、神から使命を授かったと語ります。"
         },
         {
           "type": "paragraph",
-          "text": "**Jeanne d'Arc** ne transforme pas seulement le front. Elle change la légitimité même du conflit. À son époque, beaucoup croient au [[神の摂理論]] : l'idée que Dieu intervient directement dans l'histoire. Jeanne dit savoir lequel des deux prétendants Il a choisi."
+          "text": "**ジャンヌ・ダルク**が変えたのは、戦線だけではありません。この戦いの正統性そのものを変えました。当時の人々の多くは[[神の摂理論]]を信じていました。神が歴史に直接介入するという考え方です。ジャンヌは、二人の王位請求者のどちらを神が選んだかを知っている、と語りました。"
         }
       ]
     },
     {
       "id": "course_7_jeanne_d_arc_et_la_guerre_de_cent_ans_14_p1",
-      "title": "Une France coupée en deux",
+      "title": "二つに裂かれたフランス",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La Guerre de Cent Ans (1337-1453) oppose les rois d'Angleterre (Plantagenêts) et les rois de France (Valois). En 1429, le pays est aussi déchiré par une guerre civile : les [[アルマニャック派]], fidèles au dauphin, contre les [[ブルゴーニュ派]], alliés des Anglais. Le [[1420年のトロワ条約]] a déshérité le dauphin au profit du roi d'Angleterre. À Paris, on proclame Henri VI. Charles VII n'est plus que le « petit roi de Bourges »."
+          "text": "百年戦争（1337〜1453年）は、イングランド王家（プランタジネット家）とフランス王家（ヴァロワ家）の争いです。1429年のフランスは、内戦にも引き裂かれています。王太子に忠実な[[アルマニャック派]]と、イングランドと結んだ[[ブルゴーニュ派]]の対立です。[[1420年のトロワ条約]]は、王太子から相続権を奪い、イングランド王のものとしています。パリではヘンリー6世が王と宣言され、シャルル7世は「ブールジュの小王」にすぎません。"
         },
         {
           "type": "image",
           "asset": "joan_of_arc_portrait",
           "ratio": "4:3",
-          "caption": "Jeanne d'Arc, figure de la reconquête française."
+          "caption": "フランス奪回の象徴として語られるジャンヌ・ダルク。"
         },
         {
           "type": "paragraph",
-          "text": "En **1428**, les Anglais assiègent **Orléans**, ville clé sur la Loire. Si elle tombe, le sud s'ouvre. C'est dans ce désespoir que Jeanne quitte la Lorraine."
+          "text": "**1428年**、イングランド軍がロワール川沿いの要衝**オルレアン**を包囲します。ここが落ちれば、南部への道が開いてしまいます。この絶望的な状況のなかで、ジャンヌはロレーヌを発ちます。"
         },
         {
           "type": "funFact",
-          "text": "Jeanne n'a jamais tué d'ennemi de sa main. Elle préférait porter sa bannière plutôt que l'épée, pour diriger sans verser le sang elle-même."
+          "text": "ジャンヌは、自分の手で敵を殺したことは一度もありません。剣よりも軍旗を持つことを好み、自らは血を流さずに軍を率いました。"
         }
       ]
     },
     {
       "id": "course_7_jeanne_d_arc_et_la_guerre_de_cent_ans_14_p2",
-      "title": "De Domrémy à Chinon",
+      "title": "ドンレミからシノンへ",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Née vers **1412**, Jeanne dit entendre saint Michel, sainte Catherine et sainte Marguerite dès **13 ans**. Leur ordre : lever le siège d'Orléans, puis mener le dauphin au [[ランスの聖別式]]. Seul ce rite, l'onction d'huile sainte dans la cathédrale de Reims, fait un vrai roi aux yeux du royaume."
+          "text": "**1412年**ごろに生まれたジャンヌは、**13歳**のころから聖ミカエル、聖カトリーヌ、聖マルグリットの声が聞こえると語っていました。その命令は、オルレアンの包囲を解くこと、次に王太子を[[ランスの聖別式]]に連れていくことでした。ランスの大聖堂で聖油を注ぐこの儀式だけが、王国の目に本物の王をつくるのです。"
         },
         {
           "type": "paragraph",
-          "text": "En **février 1429**, à **Chinon**, sur la Loire, elle reconnaît Charles au milieu de ses courtisans déguisés. Les théologiens de Poitiers l'examinent trois semaines, puis l'autorisent. On lui donne une armure, une bannière, un convoi pour Orléans."
+          "text": "**1429年2月**、ジャンヌは、ロワール川沿いの**シノン**で、変装した廷臣たちに紛れていたシャルルを見抜きます。ポワティエの神学者たちが3週間かけて審査し、ジャンヌに許可を出します。甲冑、軍旗、オルレアンへ向かう補給部隊が与えられます。"
         },
         {
           "type": "funFact",
-          "text": "À Poitiers, des matrones vérifièrent sa virginité. On croyait qu'une sorcière ne pouvait l'être, car elle aurait forcément pactisé charnellement avec le diable."
+          "text": "ポワティエでは、年配の女性たちがジャンヌの処女性を確かめました。魔女は悪魔と肉体的に契りを結んでいるはずで、処女ではありえないと信じられていたからです。"
         }
       ]
     },
     {
       "id": "course_7_jeanne_d_arc_et_la_guerre_de_cent_ans_14_p3",
-      "title": "Orléans, Reims, puis la chute",
+      "title": "オルレアン、ランス、そして転落",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En **mai 1429**, Jeanne brise en **neuf jours** un siège de sept mois. Les troupes françaises se galvanisent. Les Anglais battent en retraite. Le **17 juillet**, Charles est sacré à Reims, en plein territoire bourguignon. Le traité de Troyes devient politiquement caduc : le roi est oint."
+          "text": "**1429年5月**、ジャンヌは7か月続いた包囲を**9日間**で破ります。フランス軍の士気は高まり、イングランド軍は退却します。**7月17日**、シャルルはブルゴーニュ派の勢力圏のど真ん中にあるランスで、国王として聖別されます。トロワ条約は、政治的に意味を失います。王はすでに聖油を注がれているからです。"
         },
         {
           "type": "paragraph",
-          "text": "L'élan s'essouffle. Paris résiste. Le **23 mai 1430**, à Compiègne, Jeanne est capturée par les Bourguignons, puis vendue aux Anglais pour **10 000 livres**. À Rouen, l'évêque [[ピエール・コーション]], partisan des Anglais, orchestre un procès d'hérésie. Le **30 mai 1431**, elle est brûlée vive."
+          "text": "勢いは衰えます。パリは抵抗を続けます。**1430年5月23日**、ジャンヌはコンピエーニュでブルゴーニュ派に捕らえられ、**1万リーヴル**でイングランドに売られます。ルーアンでは、イングランド寄りの司教[[ピエール・コーション]]が異端裁判を取り仕切り、**1431年5月30日**、ジャンヌは火あぶりにされます。"
         },
         {
           "type": "timeline",
           "events": [
             {
-              "date": "1420",
-              "title": "Traité de Troyes",
-              "detail": "Le dauphin est déshérité au profit de l'Angleterre."
+              "date": "1420年",
+              "title": "トロワ条約",
+              "detail": "王太子が、イングランドのために相続権を奪われる。"
             },
             {
-              "date": "1429",
-              "title": "Orléans et Reims",
-              "detail": "Jeanne lève le siège, puis fait sacrer Charles VII."
+              "date": "1429年",
+              "title": "オルレアンとランス",
+              "detail": "ジャンヌが包囲を解き、シャルル7世を聖別させる。"
             },
             {
-              "date": "1431",
-              "title": "Bûcher de Rouen",
-              "detail": "Jeanne est brûlée après un procès politique."
+              "date": "1431年",
+              "title": "ルーアンの火刑",
+              "detail": "政治的な裁判の末、ジャンヌは火あぶりにされる。"
             },
             {
-              "date": "1453",
-              "title": "Castillon",
-              "detail": "Victoire française : fin effective de la guerre."
+              "date": "1453年",
+              "title": "カスティヨン",
+              "detail": "フランスが勝利し、戦争が事実上の終わりを迎える。"
             },
             {
-              "date": "1456",
-              "title": "Réhabilitation",
-              "detail": "La sentence de 1431 est cassée."
+              "date": "1456年",
+              "title": "名誉回復",
+              "detail": "1431年の判決が破棄される。"
             }
           ]
         }
@@ -117,20 +117,20 @@
     },
     {
       "id": "course_7_jeanne_d_arc_et_la_guerre_de_cent_ans_14_p4",
-      "title": "Martyre et mémoire",
+      "title": "殉教者、そして記憶",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La mort de Jeanne ne stoppe pas la reconquête. Elle a soudé le sentiment national autour du trône. En **1456**, Charles VII la fait réhabiliter. La guerre s'achève à [[カスティヨン]], en Guyenne, en **1453** : les Anglais sont presque chassés de France."
+          "text": "ジャンヌの死でも、国土の回復は止まりませんでした。むしろ国民意識が、王位のもとに固く結びつきました。**1456年**、シャルル7世はジャンヌの名誉回復を行わせます。戦争は**1453年**、ギュイエンヌ地方の[[カスティヨン]]で終わり、イングランド軍はほぼフランスから追い出されました。"
         },
         {
           "type": "paragraph",
-          "text": "Paysanne illettrée, chef de guerre, martyre, sainte : Jeanne traverse les siècles comme une figure que chaque époque réinvente. En quelques mois, elle a rendu possible ce qui semblait perdu."
+          "text": "読み書きのできない農民の娘、戦の指導者、殉教者、聖人。ジャンヌは、時代ごとに姿を変えて語り直される存在として、何世紀もの時を超えてきました。わずか数か月で、失われたかに見えたものを可能にしたのです。"
         },
         {
           "type": "takeaway",
-          "text": "En **1429**, Jeanne d'Arc, **17 ans**, lève le siège d'Orléans et fait sacrer Charles VII. Brûlée en **1431**, réhabilitée en **1456**, elle reste le symbole d'un royaume qui refuse de disparaître."
+          "text": "**1429年**、**17歳**のジャンヌ・ダルクはオルレアンの包囲を解き、シャルル7世を聖別させました。**1431年**に火あぶりにされ、**1456年**に名誉回復されたジャンヌは、消えまいとする王国の象徴であり続けています。"
         }
       ]
     }

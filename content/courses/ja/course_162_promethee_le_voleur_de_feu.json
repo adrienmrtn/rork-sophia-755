@@ -1,118 +1,118 @@
 {
   "id": "course_162_promethee_le_voleur_de_feu",
-  "title": "Pourquoi Prométhée a-t-il volé le feu aux dieux ?",
-  "subtitle": "Le Titan qui défie Zeus",
+  "title": "プロメテウスはなぜ神々から火を盗んだのか",
+  "subtitle": "ゼウスに挑んだティタン",
   "subject": "mythologie",
   "subcategory": "ギリシア：神々",
-  "description": "Prométhée vole le feu des dieux pour les hommes, puis endure un supplice sans fin. Un mythe sur le progrès, la ruse et le prix de la liberté.",
+  "description": "プロメテウスは人間のために神々の火を盗み、終わりのない責め苦を受けます。進歩と知恵、そして自由の代償を語る神話です。",
   "hero": {
     "image": "promethee_le_voleur_de_feu",
     "ratio": "16:9",
-    "hook": "Un Titan vole le feu de l'Olympe. Les hommes gagnent la civilisation. Lui gagne un aigle et une chaîne."
+    "hook": "ひとりのティタンがオリュンポスの火を盗みました。人間は文明を手に入れ、彼が手に入れたのは大鷲と鎖でした。"
   },
   "sections": [
     {
       "id": "course_162_promethee_le_voleur_de_feu_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Prométhée** est un Titan, un dieu de la génération précédente. Son nom évoque celui qui prévoit. Dans les mythes grecs, il façonne les premiers hommes, les protège face à **Zeus**, roi de l'Olympe, et paie ce choix d'un châtiment atroce."
+          "text": "**プロメテウス**はティタン、つまり前の世代の神です。名前は「先に考える者」を意味します。ギリシア神話では、最初の人間を形づくり、オリュンポスの王**ゼウス**から人間を守り、その代わりにむごい罰を受けます。"
         },
         {
           "type": "paragraph",
-          "text": "En volant le feu pour les mortels, il donne aux humains la technique et le savoir. Son supplice sur le Caucase devient le symbole du génie qui ose défier le pouvoir."
+          "text": "死すべき者たちのために火を盗んだことで、人間は技術と知識を手に入れました。コーカサス山での責め苦は、権力に立ち向かう天才の象徴になりました。"
         }
       ]
     },
     {
       "id": "course_162_promethee_le_voleur_de_feu_p1",
-      "title": "L'homme naît nu, Prométhée ruse",
+      "title": "裸で生まれる人間、策をめぐらすプロメテウス",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "On raconte que Prométhée modèle les premiers hommes avec de l'argile et de l'eau. Son frère [[エピメテウス]], lui, agit trop vite. Chargé de doter les animaux, il donne tout : griffes, ailes, fourrure, vitesse. Quand vient le tour de l'homme, il ne reste plus rien. L'humain naît fragile et sans défense."
+          "text": "プロメテウスは、粘土と水で最初の人間をつくったと語られています。弟の[[エピメテウス]]は、あわて者でした。動物たちに能力を配る役を任されると、爪、翼、毛皮、速さと、すべてを与えてしまいます。人間の番が来たときには、もう何も残っていません。人間は弱く、身を守るすべもないまま生まれました。"
         },
         {
           "type": "paragraph",
-          "text": "Prométhée décide de compenser. Lors d'un sacrifice à [[メコネ]], il découpe un bœuf en deux parts. Sous une peau laide, il cache la bonne viande. Sous une graisse appétissante, il cache les os. **Zeus** choisit la belle apparence. Depuis, les hommes mangent la chair et offrent les os aux dieux."
+          "text": "プロメテウスは埋め合わせをしようと考えます。[[メコネ]]での供犠の場で、牛を二つに分けました。見た目の悪い皮の下には、おいしい肉を隠します。おいしそうな脂身の下には、骨を隠しました。**ゼウス**は見栄えのよいほうを選びます。それ以来、人間は肉を食べ、骨を神々にささげるようになりました。"
         },
         {
           "type": "funFact",
-          "text": "Pour cacher le feu, Prométhée utilise une tige de [[オオウイキョウ（フェルラ）]]. Sa moelle brûle très lentement : les bergers méditerranéens s'en servaient vraiment comme briquet portatif."
+          "text": "火を隠すために、プロメテウスは[[オオウイキョウ（フェルラ）]]の茎を使います。その髄はとてもゆっくり燃えるので、地中海地方の羊飼いたちは、実際に持ち運びできる火種として使っていました。"
         },
         {
           "type": "paragraph",
-          "text": "Furieux d'avoir été trompé, Zeus retire aux hommes le feu. Sans chaleur ni lumière, ils retombent dans une vie presque animale."
+          "text": "だまされたことに怒ったゼウスは、人間から火を取り上げます。熱も光もなくなり、人間は動物に近い暮らしに逆戻りしました。"
         }
       ]
     },
     {
       "id": "course_162_promethee_le_voleur_de_feu_p2",
-      "title": "Le vol du feu et le supplice",
+      "title": "火の盗みと、そのあとの責め苦",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Prométhée s'introduit sur l'Olympe. Il dérobe une étincelle au char du Soleil, ou à la forge d'**Héphaïstos**, dieu des forgerons, selon les versions. Il la cache dans sa tige creuse et la rapporte aux mortels."
+          "text": "プロメテウスはオリュンポスに忍び込みます。伝承によっては太陽の車から、あるいは鍛冶の神**ヘパイストス**の鍛冶場から、火花を一つ盗み出します。それを中空の茎に隠し、死すべき者たちのもとへ持ち帰りました。"
         },
         {
           "type": "image",
           "asset": "prometheus_steal_fire_ancient_greek_painting",
           "ratio": "4:3",
-          "caption": "Prométhée apporte le feu aux humains, acte fondateur de la technique."
+          "caption": "人間に火をもたらすプロメテウス。技術の始まりを示す行為です。"
         },
         {
           "type": "paragraph",
-          "text": "Pour les Grecs, le feu n'est pas seulement une flamme. Il incarne la **technique** et la **raison**, ce qui permet à l'homme de transformer le monde. Zeus riposte. Contre l'humanité, il enverra plus tard Pandore. Contre Prométhée, le châtiment est direct."
+          "text": "ギリシア人にとって、火はただの炎ではありません。**技術**と**理性**の象徴であり、人間が世界を変えるための力です。ゼウスは反撃に出ます。人類に対しては、のちにパンドラを送ります。プロメテウスに対しては、すぐに罰を与えました。"
         },
         {
           "type": "funFact",
-          "text": "Dans la médecine antique, le **foie** était vu comme le siège des émotions et de la vitalité. Zeus choisit cet organe pour briser la volonté du Titan."
+          "text": "古代の医学では、**肝臓**は感情と生命力が宿る場所と考えられていました。ゼウスは、ティタンの意志をくじくためにこの臓器を選びます。"
         },
         {
           "type": "paragraph",
-          "text": "Le Titan est enchaîné à une paroi du **Caucase**. Chaque jour, un aigle lui dévore le foie. Chaque nuit, l'organe renaît. Le supplice recommence à l'aube, sans fin."
+          "text": "ティタンは**コーカサス山**の岩壁に鎖でつながれます。毎日、大鷲が飛んできて肝臓を食らいます。夜のうちに臓器はよみがえり、夜明けとともに責め苦がまた始まります。それは終わることがありません。"
         }
       ]
     },
     {
       "id": "course_162_promethee_le_voleur_de_feu_p3",
-      "title": "Héraclès brise les chaînes",
+      "title": "英雄ヘラクレスが鎖を断ち切る",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Pendant des siècles, Prométhée refuse de céder. Il connaît un secret dangereux : quelle femme mettra au monde un fils plus fort que Zeus. Malgré la torture, il se tait. Il devient le symbole de la résistance face à la tyrannie."
+          "text": "何世紀ものあいだ、プロメテウスは屈しませんでした。彼は危険な秘密を知っています。どの女性が、ゼウスより強い息子を産むかという秘密です。拷問を受けても、彼は口を閉ざしました。こうして暴政に抵抗する象徴になります。"
         },
         {
           "type": "paragraph",
-          "text": "Le héros **Héraclès**, fils de Zeus, finit par arriver au Caucase. Il abat l'aigle d'une flèche et libère le prisonnier. Zeus accepte la grâce : Prométhée révèle enfin le secret sur la nymphe **Thétis**. Le roi des dieux évite ainsi sa propre chute."
+          "text": "ゼウスの子である英雄**ヘラクレス**が、やがてコーカサス山にやって来ます。矢で大鷲を射落とし、囚われの身を解き放ちました。ゼウスは赦しを認め、プロメテウスはついに、海のニンフ**テティス**にまつわる秘密を明かします。こうして神々の王は、自らの没落を免れました。"
         },
         {
           "type": "paragraph",
-          "text": "Pour respecter le serment qui le liait au rocher, Prométhée porte une bague faite du fer de ses chaînes et d'un fragment de pierre. Il reste « lié » à la montagne, mais libre."
+          "text": "岩に縛られるという誓いを守るため、プロメテウスは鎖の鉄と石のかけらでつくった指輪を身につけます。山に「つながれた」ままでありながら、彼は自由なのです。"
         }
       ]
     },
     {
       "id": "course_162_promethee_le_voleur_de_feu_p4",
-      "title": "Un mythe qui ne s'éteint pas",
+      "title": "今も消えることのない神話",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Au Ve siècle avant notre ère, le tragédien [[アイスキュロス]] met en scène « Prométhée enchaîné ». Plus tard, le mythe inspire la science et le progrès. Mary Shelley sous-titre « Frankenstein » « Le Prométhée moderne » : créer la vie sans sagesse peut aussi détruire."
+          "text": "紀元前5世紀、悲劇詩人の[[アイスキュロス]]が『縛られたプロメテウス』を上演しました。のちにこの神話は、科学と進歩の物語にも影響を与えます。メアリー・シェリーは『フランケンシュタイン』に「現代のプロメテウス」という副題をつけました。知恵なく命をつくれば、破滅を招くこともあるという警告です。"
         },
         {
           "type": "paragraph",
-          "text": "Le philosophe [[ガストン・バシュラール]] parle même d'un « complexe de Prométhée » : cette envie d'en savoir plus que ses maîtres. Aujourd'hui, on compare souvent l'intelligence artificielle ou la génétique à un nouveau feu : un pouvoir immense, encore mal maîtrisé."
+          "text": "哲学者の[[ガストン・バシュラール]]は、「プロメテウス・コンプレックス」という言葉まで使いました。師より多くを知りたいという欲求のことです。今日では、人工知能や遺伝子技術が新しい火にたとえられることがよくあります。大きな力ですが、まだ十分には使いこなせていません。"
         },
         {
           "type": "takeaway",
-          "text": "**Prométhée** offre aux hommes la civilisation par le vol du feu, endure un supplice millénaire, puis est délivré par **Héraclès**. Le progrès a un prix, et le pouvoir divin aussi."
+          "text": "**プロメテウス**は火を盗んで人間に文明を贈り、千年にわたる責め苦に耐え、やがて**ヘラクレス**に解き放たれます。進歩には代償があり、神の力にも代償があるのです。"
         }
       ]
     }

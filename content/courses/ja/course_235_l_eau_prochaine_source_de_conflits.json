@@ -1,110 +1,110 @@
 {
   "id": "course_235_l_eau_prochaine_source_de_conflits",
-  "title": "Va-t-on se faire la guerre pour l'eau ?",
-  "subtitle": "L'or bleu du XXIe siècle",
+  "title": "水をめぐって戦争になるのでしょうか？",
+  "subtitle": "二十一世紀の青い黄金",
   "subject": "comprendreLeMonde",
   "subcategory": "環境と未来",
-  "description": "Moins de 1 % de l'eau terrestre est douce et facilement accessible. Certains experts y voient déjà la prochaine grande source de conflits.",
+  "description": "地球上の水のうち、淡水で、しかも使いやすい形で存在するのは1%未満です。専門家のなかには、水を次の大きな紛争の種と見る人もいます。",
   "hero": {
     "image": "l_eau_prochaine_source_de_conflits",
     "ratio": "16:9",
-    "hook": "Moins de 1 % de l'eau terrestre est douce et accessible. Le reste se dispute."
+    "hook": "地球の水のうち、淡水で手の届くものは1%未満。残りは、取り合いになります。"
   },
   "sections": [
     {
       "id": "course_235_l_eau_prochaine_source_de_conflits_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L'eau douce est la ressource la plus essentielle à la vie humaine. Elle est aussi, aujourd'hui, de plus en plus rare : la démographie augmente, le climat se dérègle, et certains experts prédisent déjà les premières « guerres de l'eau » du XXIe siècle."
+          "text": "淡水は、人間が生きていくうえで何よりも欠かせない資源です。しかも今、その淡水はますます不足しつつあります。人口は増え続け、気候は乱れ、二十一世紀最初の「水戦争」がすでに近づいていると予測する専門家もいます。"
         },
         {
           "type": "paragraph",
-          "text": "Ce cours explore pourquoi une ressource aussi vitale devient un enjeu stratégique majeur, capable de rapprocher des pays voisins, ou de les opposer."
+          "text": "このコースでは、これほど命に直結する資源がなぜ戦略上の大きな争点になるのかを見ていきます。水は、隣り合う国どうしを近づけることも、対立させることもあります。"
         }
       ]
     },
     {
       "id": "course_235_l_eau_prochaine_source_de_conflits_p1",
-      "title": "Une ressource rare, mal répartie",
+      "title": "乏しく、偏って存在する資源",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La Terre est recouverte à 70 % d'eau, ce qui lui vaut le surnom de « planète bleue ». Mais cette eau est presque toute salée. L'eau douce ne représente qu'environ 3 % du total, et les deux tiers de cette eau douce sont emprisonnés sous forme de glace, dans les calottes polaires et les glaciers. Au bout du compte, l'eau douce liquide et accessible (lacs, rivières, nappes peu profondes) représente moins de 1 % de toute l'eau de la planète."
+          "text": "地球は70%が水に覆われていて、そのことから「青い惑星」とも呼ばれています。でも、その水のほとんどは塩水です。淡水は全体のおよそ3%しかありません。しかもその3分の2は、極地の氷床や氷河のなかに、氷の形で閉じこめられています。結局のところ、湖や川、浅い地下水など、液体のまま使うことのできる淡水は、なんと、地球上にある水全体のなかで、1%にも満たないのです。"
         },
         {
           "type": "image",
           "asset": "dried_riverbed_water_scarcity_drought",
           "ratio": "16:9",
-          "caption": "L'eau douce accessible représente moins de 1 % de toute l'eau présente sur Terre."
+          "caption": "使いやすい淡水は、地球上にある水全体のうち、1%にも満たない量しかありません。"
         },
         {
           "type": "paragraph",
-          "text": "Cette rareté n'est pas répartie de façon égale. Certains pays, comme le Brésil, le Canada ou la Russie, disposent de réserves immenses. D'autres, comme le Moyen-Orient ou l'Afrique du Nord, connaissent un **[[水ストレス状態]]** durable : leur demande en eau dépasse ce que le territoire peut fournir. En 2024, environ 4 milliards de personnes vivent au moins un mois par an dans cette situation."
+          "text": "この乏しさは、世界に均等に分かれているわけではありません。ブラジル、カナダ、ロシアなどの国々には、巨大な水資源があります。一方、中東や北アフリカは、水の需要が国土の供給力を上回る**[[水ストレス状態]]**が長く続いています。2024年には、約四十億人が、年に少なくとも1か月は、こうした厳しい状況のなかで暮らしています。"
         },
         {
           "type": "funFact",
-          "text": "Au XXe siècle, la population mondiale a triplé, mais la consommation d'eau a été multipliée par six, notamment à cause de l'industrialisation et des régimes alimentaires plus riches en viande."
+          "text": "二十世紀のあいだに、世界の人口は3倍になりましたが、水の消費量は6倍に増えました。おもな理由は、産業の工業化が進んだことと、肉の多い食生活が広がったことです。"
         }
       ]
     },
     {
       "id": "course_235_l_eau_prochaine_source_de_conflits_p2",
-      "title": "Géopolitique des fleuves partagés",
+      "title": "国境をまたいで流れる川の地政学",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Les tensions naissent surtout quand une ressource est partagée. Plus de 260 fleuves dans le monde sont **transfrontaliers** : ils traversent plusieurs pays, créant une dépendance forcée entre ceux situés en amont, qui contrôlent la source, et ceux situés en aval, qui reçoivent ce qu'il en reste."
+          "text": "争いが生まれやすいのは、とくに資源を共有しているときです。世界には260本を超える川が**国境をまたいで**流れています。複数の国を通るため、水源を押さえる上流の国と、残りを受け取る下流の国は、いやおうなくおたがいに頼り合うことになります。"
         },
         {
           "type": "paragraph",
-          "text": "Le Nil illustre bien cette tension. L'Éthiopie a construit le **[[GERD]]**, un immense barrage sur le Nil Bleu, pour produire de l'électricité et devenir plus autonome. Mais l'Égypte, qui dépend du Nil à 95 % pour son eau, perçoit chaque mètre cube retenu en amont comme une menace directe pour sa sécurité."
+          "text": "ナイル川はこの緊張をよく表しています。エチオピアは、電力をつくり、エネルギーの自立を高めるために、青ナイル川に巨大なダム**[[GERD]]**を建設しました。しかし水の95%をナイル川に頼るエジプトは、上流でせき止められる水が1立方メートル増えるたびに、自国の安全保障への直接の脅威と受け止めています。"
         },
         {
           "type": "funFact",
-          "text": "Le traité sur le fleuve Indus, signé en 1960 entre l'Inde et le Pakistan, a survécu à trois guerres entre les deux pays sans jamais être rompu : la preuve que l'eau peut aussi être un puissant outil de paix."
+          "text": "1960年にインドとパキスタンが結んだインダス川の条約は、両国のあいだで起きた3度の戦争を経ても、一度も破棄されませんでした。水は平和の強力な手段にもなりうる、ということの証しです。"
         }
       ]
     },
     {
       "id": "course_235_l_eau_prochaine_source_de_conflits_p3",
-      "title": "La technologie contre la pénurie",
+      "title": "技術の力で水不足に立ち向かう",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Face à la raréfaction de l'eau, certains pays misent sur la technologie. La **désalinisation**, qui transforme l'eau de mer en eau potable, s'est imposée dans les pays du Golfe et au Proche-Orient. Israël produit ainsi plus de 80 % de son eau potable grâce à des usines de dessalement. Le procédé reste toutefois coûteux et énergivore, et il rejette de la **saumure**, une eau très salée qui peut abîmer les écosystèmes marins."
+          "text": "水が乏しくなるなか、技術に望みをかける国もあります。海水を飲み水に変える**海水淡水化**は、湾岸諸国や近東の国々で広く使われるようになりました。イスラエルは、飲み水の80%以上を淡水化プラントでまかなっています。ただし、費用もエネルギーもかかるうえ、**濃縮塩水**という非常に塩分の高い水が排出されて、海の生態系を傷めるおそれがあります。"
         },
         {
           "type": "paragraph",
-          "text": "D'autres solutions jouent sur la sobriété. L'irrigation au goutte-à-goutte, qui amène l'eau directement aux racines des plantes, réduit la consommation agricole de 30 à 70 %."
+          "text": "水を使いすぎないようにする、節約型の方法もあります。植物の根もとに直接水を届ける点滴灌漑は、農業で使う水の量を30〜70%も減らすことができます。"
         },
         {
           "type": "funFact",
-          "text": "À **[[シンガポール]]**, un territoire minuscule et sans grande réserve d'eau, les eaux usées sont traitées par des techniques si poussées qu'elles deviennent plus pures que l'eau de source, avant d'être recyclées sous le nom de « NEWater »."
+          "text": "国土がごく小さく、これといったまとまった水資源もない**[[シンガポール]]**では、下水を、とても高度な技術で処理して湧き水よりも清らかな水にしたうえで、「NEWater」という名前で、飲み水などとして再利用しています。"
         }
       ]
     },
     {
       "id": "course_235_l_eau_prochaine_source_de_conflits_p4",
-      "title": "Vers une gouvernance partagée de l'or bleu",
+      "title": "青い黄金を、みんなで分かち合って管理する道へ",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Malgré les prédictions de « guerres de l'eau », l'histoire montre que cette ressource a plus souvent servi à la coopération qu'au conflit ouvert. Créer des commissions de bassin et des traités entre pays voisins reste le meilleur moyen d'éviter les crises."
+          "text": "「水戦争」が予測されていますが、歴史を見ると、水は公然たる紛争よりも協力に役立ってきたことのほうが多いのです。流域委員会をつくり、隣り合う国どうしで条約を結ぶことが、危機を避けるいちばんの方法であり続けています。"
         },
         {
           "type": "paragraph",
-          "text": "Un concept aide à comprendre l'ampleur du problème : l'**[[バーチャルウォーター]]**, c'est-à-dire la quantité d'eau nécessaire pour fabriquer un produit. En important du blé, un pays en stress hydrique importe en réalité l'eau utilisée pour le cultiver ailleurs. Il faut par exemple environ 15 000 litres d'eau pour produire un seul kilogramme de bœuf, contre 1 500 litres pour un kilogramme de blé."
+          "text": "問題の大きさを理解する助けになる考え方があります。**[[バーチャルウォーター]]**です。ある製品をつくるのに必要な水の量のことです。小麦を輸入すると、水ストレスを抱える国は、実際にはよその土地で小麦を育てるのに使われた水を輸入していることになります。たとえば、牛肉1キログラムをつくるには約1万5千リットルの水が必要ですが、小麦1キログラムなら1500リットルです。"
         },
         {
           "type": "takeaway",
-          "text": "L'eau douce accessible représente moins de 1 % de l'eau terrestre, et des centaines de millions de personnes vivent dans des bassins partagés entre pays aux intérêts opposés. La technologie et la coopération internationale restent les meilleures armes contre les crises de l'eau à venir."
+          "text": "使いやすい淡水は、地球の水の1%にも満たない量です。そのうえ、何億人もの人が、利害の対立する国々で分け合っている流域に暮らしています。これからやってくるさまざまな水の危機に対して、いちばん頼りになる武器は、技術と国際協力であり続けるのです。"
         }
       ]
     }

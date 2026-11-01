@@ -1,122 +1,122 @@
 {
   "id": "course_19_la_bataille_de_stalingrad_1942_1943",
-  "title": "La bataille de Stalingrad",
-  "subtitle": "1942-1943",
+  "title": "スターリングラード攻防戦",
+  "subtitle": "1942〜1943年",
   "subject": "histoire",
   "subcategory": "革命と近現代の紛争",
-  "description": "De l'été 1942 à février 1943, Allemands et Soviétiques s'entretuent dans les ruines d'une ville sur la Volga. Stalingrad devient le tournant de la Seconde Guerre mondiale.",
+  "description": "1942年夏から1943年2月まで、ドイツ軍とソ連軍はヴォルガ川沿いの都市の廃墟で殺し合います。スターリングラードは第二次世界大戦の転換点となります。",
   "hero": {
     "image": "la_bataille_de_stalingrad",
     "ratio": "16:9",
-    "hook": "Dans les ruines d'une ville, l'armée jugée invincible se brise pour de bon."
+    "hook": "廃墟と化した都市の中で、無敵と思われていた軍が、ついに完全に打ち砕かれます。"
   },
   "sections": [
     {
       "id": "course_19_la_bataille_de_stalingrad_1942_1943_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "De l'été **1942** au **2 février 1943**, le monde regarde une bande de ruines sur la **Volga**, un grand fleuve de Russie. À **Stalingrad** (aujourd'hui Volgograd), l'armée allemande se heurte à une résistance soviétique prête à tous les sacrifices."
+          "text": "**1942年**夏から**1943年2月2日**まで、世界は**ヴォルガ川**（ロシアの大河）沿いに広がる廃墟の帯に目を注ぎます。**スターリングラード**（現在のヴォルゴグラード）で、ドイツ軍は、あらゆる犠牲をいとわないソ連軍の抵抗にぶつかります。"
         },
         {
           "type": "paragraph",
-          "text": "Avec plus d'**un million** de morts, c'est la bataille la plus meurtrière de l'histoire… et le point de bascule de la Seconde Guerre mondiale."
+          "text": "死者は**百万人**を超え、史上もっとも多くの命が失われた戦いです。そして、第二次世界大戦の転換点でもありました。"
         }
       ]
     },
     {
       "id": "course_19_la_bataille_de_stalingrad_1942_1943_p1",
-      "title": "Hitler vise le pétrole du sud",
+      "title": "ヒトラーが狙うのは南の石油",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Après l'échec devant Moscou en 1941, Hitler lance [[青作戦]], une offensive d'été vers le sud. Le but : le pétrole du **Caucase**. **Stalingrad**, nœud ferroviaire et fluvial sur la Volga, n'est d'abord qu'un objectif secondaire. Puis le symbole l'emporte : prendre la ville qui porte le nom de **Staline** devient une obsession."
+          "text": "1941年のモスクワ攻略の失敗のあと、ヒトラーは南へ向かう夏の攻勢、[[青作戦]]を始めます。目的は**カフカス**の石油です。ヴォルガ川の鉄道と水運の要衝である**スターリングラード**は、当初は二次的な目標にすぎませんでした。やがて象徴的な意味が勝ります。**スターリン**の名を冠した都市を奪うことが、執念になっていくのです。"
         },
         {
           "type": "image",
           "asset": "battle_of_stalingrad_ruins",
           "ratio": "4:3",
-          "caption": "Stalingrad en ruines : un champ de bataille urbain sans merci."
+          "caption": "廃墟となったスターリングラード、容赦のない市街戦の戦場"
         },
         {
           "type": "funFact",
-          "text": "Hitler était si sûr de vaincre qu'il aurait fait imprimer des invitations pour un banquet de victoire à l'hôtel Lux de Stalingrad."
+          "text": "ヒトラーは勝利を確信するあまり、スターリングラードのホテル「ルクス」で開く戦勝祝賀会の招待状まで印刷させたといわれます。"
         },
         {
           "type": "paragraph",
-          "text": "La **6e Armée** allemande, commandée par le général [[フリードリヒ・パウルス]], est détournée vers la ville. Les bombardements de la [[ドイツ空軍（ルフトヴァッフェ）]], l'aviation allemande, en août 1942 laissent un paysage de cratères… parfait pour la défense soviétique."
+          "text": "ドイツの**第6軍**は、[[フリードリヒ・パウルス]]将軍の指揮のもと、市街へ振り向けられます。1942年8月、ドイツ空軍の[[ドイツ空軍（ルフトヴァッフェ）]]による爆撃が、あたり一面をクレーターだらけにします。ソ連軍の防衛にはおあつらえ向きの地形でした。"
         }
       ]
     },
     {
       "id": "course_19_la_bataille_de_stalingrad_1942_1943_p2",
-      "title": "Combattre maison par maison",
+      "title": "一軒一軒を奪い合う市街戦",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le général soviétique **Vassili Tchouïkov** impose une tactique simple : rester à moins de **30 mètres** de l'ennemi. Ainsi, l'artillerie et l'aviation allemandes ne peuvent pas frapper sans tuer leurs propres hommes. Les Allemands appellent cela la **Rattenkrieg**, la « guerre des rats » : on se bat dans les caves, les égouts, les immeubles en ruine."
+          "text": "ソ連の**ヴァシリー・チュイコフ**将軍は、単純な戦術を課します。敵から**30メートル**以内にとどまることです。こうすれば、ドイツ軍の砲兵も航空機も、味方を巻き込まずには攻撃できません。ドイツ軍はこれを**ラッテンクリーク**、つまり「ネズミ戦争」と呼びます。地下室、下水道、崩れかけたビルの中で戦うのです。"
         },
         {
           "type": "paragraph",
-          "text": "La **Maison Pavlov**, un immeuble tenu par une poignée de soldats, résiste **58 jours**. Dans l'usine **Dzerjinski**, on fabrique des chars sous les bombes et on les conduit droit au front. L'**Ordre 227** de Staline résume la consigne : **« Pas un pas en arrière »**."
+          "text": "**パヴロフの家**は、一握りの兵士が守るビルで、**58日間**持ちこたえます。**ジェルジンスキー**工場では、爆撃のさなかに戦車をつくり、そのまま前線へ送り出します。スターリンの**命令第227号**は、方針を**「一歩も退くな」**の一言で示しました。"
         }
       ]
     },
     {
       "id": "course_19_la_bataille_de_stalingrad_1942_1943_p3",
-      "title": "La pince qui referme le piège",
+      "title": "ソ連軍の挟み撃ちが罠を閉じていく",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Pendant que Paulus s'use dans les décombres, le maréchal soviétique **Gueorgui Joukov** prépare l'[[ウラヌス作戦]]. Les flancs allemands, gardés par des alliés mal équipés (Roumains, Italiens, Hongrois), cèdent. Le **19 novembre 1942**, la pince se referme : environ **300 000** hommes sont encerclés."
+          "text": "パウルスが廃墟で消耗するあいだに、ソ連の**ゲオルギー・ジューコフ**元帥は[[ウラヌス作戦]]を準備します。装備の乏しい同盟国（ルーマニア、イタリア、ハンガリー）が守るドイツ軍の側面は、崩れます。**1942年十一月十九日**、包囲の輪が閉じ、約**三十万人**の兵が閉じ込められます。"
         },
         {
           "type": "funFact",
-          "text": "Les Soviétiques diffusaient par haut-parleurs le tic-tac d'une horloge, puis un message : un soldat allemand mourait toutes les **7 secondes** en URSS."
+          "text": "ソ連軍は拡声器で時計のチクタクという音を流し、続けてこう告げました。ソ連ではドイツ兵が**7秒**に1人の割合で死んでいる、と。"
         },
         {
           "type": "paragraph",
-          "text": "Hitler interdit la sortie. [[ヘルマン・ゲーリング]], chef de la Luftwaffe, promet un pont aérien. Il échoue. Faim, typhus, **-30 °C** : le « chaudron » devient un piège mortel."
+          "text": "ヒトラーは脱出を禁じます。ドイツ空軍の司令官[[ヘルマン・ゲーリング]]は空輸を約束しますが、失敗します。飢え、発疹チフス、**-30°C**。「釜」と呼ばれた包囲網は、死の罠と化します。"
         }
       ]
     },
     {
       "id": "course_19_la_bataille_de_stalingrad_1942_1943_p4",
-      "title": "La capitulation qui change la guerre",
+      "title": "戦争の流れを変えたドイツ軍の降伏",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le **30 janvier 1943**, Hitler nomme Paulus **feld-maréchal**, le grade le plus élevé, pour l'inciter à mourir plutôt qu'à se rendre. Paulus capitule le **2 février**. Sur 300 000 encerclés, **91 000** partent prisonniers. Pour la première fois, la propagande nazie doit avouer une défaite totale. L'armée jugée invincible a été brisée."
+          "text": "**1943年1月30日**、ヒトラーはパウルスを最高位の階級である**元帥**に任命します。降伏させず、死を選ばせるためです。パウルスは**2月2日**に降伏します。包囲された三十万人のうち、**9万1千人**が捕虜になりました。ナチスの宣伝は、初めて完全な敗北を認めざるをえなくなります。無敵と思われていた軍は、打ち砕かれたのです。"
         },
         {
           "type": "timeline",
           "events": [
             {
-              "date": "été 1942",
-              "title": "Case Blue",
-              "detail": "Offensive allemande vers le Caucase et Stalingrad."
+              "date": "1942年夏",
+              "title": "青作戦",
+              "detail": "カフカスとスターリングラードへ向かうドイツ軍の攻勢"
             },
             {
-              "date": "19 nov. 1942",
-              "title": "Opération Uranus",
-              "detail": "Encerclement de la 6e Armée."
+              "date": "1942年十一月十九日",
+              "title": "ウラヌス作戦",
+              "detail": "ドイツ第6軍が包囲される"
             },
             {
-              "date": "2 fév. 1943",
-              "title": "Capitulation",
-              "detail": "Paulus se rend ; tournant de la guerre."
+              "date": "1943年2月2日",
+              "title": "降伏",
+              "detail": "パウルスが降伏し、戦争の転換点となる"
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "**Stalingrad** (**1942-1943**) anéantit la 6e Armée allemande et brise le mythe de l'invincibilité nazie, lors de la bataille la plus meurtrière de l'histoire."
+          "text": "**スターリングラード**（**1942〜1943年**）は、ドイツの第6軍を壊滅させ、ナチスは無敵だという神話を打ち砕きました。史上もっとも犠牲の多い戦いでした。"
         }
       ]
     }

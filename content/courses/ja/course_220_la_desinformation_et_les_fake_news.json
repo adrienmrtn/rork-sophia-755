@@ -1,102 +1,102 @@
 {
   "id": "course_220_la_desinformation_et_les_fake_news",
-  "title": "Pourquoi les fake news vont-elles plus vite que la vérité ?",
-  "subtitle": "Le mensonge à l'ère virale",
+  "title": "なぜフェイクニュースは真実よりも速く広まってしまうのか？",
+  "subtitle": "ネットで拡散する時代のうそ",
   "subject": "comprendreLeMonde",
   "subcategory": "経済と社会",
-  "description": "Les fausses informations se propagent 6 fois plus vite que la vérité sur les réseaux sociaux. Pourquoi, et comment s'en protéger ?",
+  "description": "SNSでは、偽の情報が真実の6倍の速さで広まるといわれます。それはなぜなのか、そしてどうすれば身を守れるのでしょうか？",
   "hero": {
     "image": "la_desinformation_et_les_fake_news",
     "ratio": "16:9",
-    "hook": "Une étude du MIT a montré que les fake news voyagent 6 fois plus vite que la vérité sur Twitter. Voici pourquoi."
+    "hook": "MITの研究で、Twitterではフェイクニュースが真実の6倍の速さで広がることがわかりました。その理由を見てみましょう。"
   },
   "sections": [
     {
       "id": "course_220_la_desinformation_et_les_fake_news_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Mentir pour servir un but politique n'a rien de nouveau : on en trouve des traces depuis l'Antiquité. Mais Internet et les réseaux sociaux ont changé la donne : la fausse information ne circule plus seulement d'un État vers sa population, elle se propage désormais de façon horizontale, entre citoyens."
+          "text": "政治的な目的のためにうそをつくことは、少しも新しいことではありません。その痕跡は古代からあります。しかしインターネットとSNSが状況を変えました。デマはもはや国家から国民へ一方向に流れるだけでなく、市民どうしのあいだで横へと広がるようになったのです。"
         },
         {
           "type": "paragraph",
-          "text": "Ce basculement a créé un monde où la vérité semble parfois facultative face à la viralité. Comprendre comment la **désinformation** se propage, et qui en profite, est devenu essentiel pour préserver la confiance entre citoyens."
+          "text": "この変化によって、拡散力の前では真実などどうでもよいかのように見える世界が生まれました。**偽情報**がどう広まり、だれが得をするのかを理解することは、市民どうしの信頼を守るために欠かせなくなっています。"
         }
       ]
     },
     {
       "id": "course_220_la_desinformation_et_les_fake_news_p1",
-      "title": "Pourquoi le mensonge voyage plus vite que la vérité",
+      "title": "なぜうそは、真実よりも速く広がってしまうのか",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Il faut distinguer la désinformation, diffusée volontairement pour manipuler, de la simple erreur de bonne foi. Le succès de ces fausses informations repose sur ce que les chercheurs appellent l'**économie de l'attention** : les algorithmes des réseaux sociaux sont conçus pour maximiser le temps passé devant l'écran, et nos cerveaux réagissent plus fort à l'émotion et au choc qu'à la nuance."
+          "text": "偽情報、つまり人を操るために意図的に流される情報と、善意による単なる間違いは区別する必要があります。こうしたデマが広まる土台にあるのは、研究者が**アテンション・エコノミー**と呼ぶ仕組みです。SNSのアルゴリズムは画面を見ている時間を最大にするように作られていて、人間の脳は、ニュアンスよりも感情や衝撃に強く反応します。"
         },
         {
           "type": "funFact",
-          "text": "Une étude du [[MIT]] publiée en 2018 a montré que les fausses informations se propagent environ 6 fois plus vite que les informations vérifiées sur Twitter, car elles paraissent plus nouvelles et plus intenses émotionnellement."
+          "text": "2018年に発表された[[MIT]]の研究によると、Twitterではデマが、検証された情報の約6倍の速さで広がります。デマのほうが目新しく、感情に強く訴えるように感じられるからです。"
         },
         {
           "type": "paragraph",
-          "text": "Les algorithmes enferment aussi les internautes dans des [[フィルターバブル]] : ils ne leur montrent que des contenus confirmant leurs opinions déjà en place. Une personne convaincue d'une théorie complotiste voit alors chaque nouvelle fausse information comme une preuve supplémentaire, ce qui rend toute correction ultérieure très difficile."
+          "text": "ネットの利用者をアルゴリズムが[[フィルターバブル]]の中に閉じ込めてしまう点も見逃せません。もともとの意見を裏づける内容しか見せないからです。陰謀論を信じている人は、新しいデマを見るたびに、さらなる証拠だと受け取ります。そのため、あとから訂正することが非常に難しくなります。"
         }
       ]
     },
     {
       "id": "course_220_la_desinformation_et_les_fake_news_p2",
-      "title": "Une industrie du mensonge, entre États et profit",
+      "title": "国家の思惑と金もうけが生み出す、うその産業",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La désinformation est devenue une véritable industrie. Des États comme la Russie, à travers l'Internet Research Agency, ont créé des milliers de faux comptes automatisés pour attiser les tensions au sein des démocraties occidentales, sans même chercher à défendre un camp précis : le but est souvent de créer le chaos et de faire croire que « tout le monde ment »."
+          "text": "偽情報はれっきとした産業になりました。ロシアのような国家は、[[インターネット・リサーチ・エージェンシー]]を通じて、自動化された偽アカウントを何千も作り、西側の民主主義国の対立をあおってきました。特定の陣営を支持することさえ目的ではなく、混乱を生み出し、「みんなうそをついている」と思わせることがねらいであることも多いのです。"
         },
         {
           "type": "image",
           "asset": "fake_news_social_media_manipulation_phone",
           "ratio": "4:3",
-          "caption": "Les fausses informations se diffusent en quelques secondes sur les réseaux sociaux."
+          "caption": "偽の情報は、SNSの上でわずか数秒のうちに広い範囲へ拡散していきます。"
         },
         {
           "type": "paragraph",
-          "text": "Il existe aussi une dimension purement lucrative : dans la ville de Veles, en Macédoine du Nord, de jeunes entrepreneurs ont créé en 2016 des sites sensationnalistes sans aucune conviction politique, uniquement pour gagner de l'argent grâce au trafic généré sur les réseaux sociaux. Le mensonge devient alors une simple marchandise rentable."
+          "text": "純粋に金もうけだけが目的の側面もあります。北マケドニアのヴェレスという町では、2016年に若い起業家たちが、政治的な信念などまったくないまま、扇情的なサイトを次々に作りました。SNSで生まれるアクセスでお金を稼ぐためだけです。こうしてうそは、もうかる単なる商品になっていきます。"
         }
       ]
     },
     {
       "id": "course_220_la_desinformation_et_les_fake_news_p3",
-      "title": "Comment démêler le vrai du faux",
+      "title": "真実とうそを、どう見分けるのか",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Face à ce déluge, le monde de l'information s'organise. Le **fact-checking**, c'est-à-dire la vérification des faits, est devenu une discipline journalistique à part entière. Des agences comme l'[[AFP]] ou des rédactions spécialisées utilisent des outils de recherche d'images pour détecter les trucages et analyser les contenus suspects."
+          "text": "この洪水のような情報を前に、情報の世界も態勢を整えつつあります。**ファクトチェック**、つまり事実の検証は、ジャーナリズムの独立した専門分野になりました。[[AFP]]のような通信社や専門の編集部は、画像検索ツールを使って加工を見破り、疑わしいコンテンツを分析しています。"
         },
         {
           "type": "paragraph",
-          "text": "Mais la course entre l'attaque et la défense reste inégale. L'apparition des [[deepfakes]], des vidéos truquées par intelligence artificielle où l'on fait dire n'importe quoi à une personne avec un réalisme troublant, rend la distinction entre le vrai et le faux de plus en plus difficile pour un œil non entraîné."
+          "text": "それでも、攻撃側と防御側の競争は、まだ対等ではありません。[[ディープフェイク]]、つまり人工知能で加工され、だれにでも何でも言わせられる動画は、驚くほどリアルです。その登場によって、慣れていない目には、本物と偽物の区別がますます難しくなってきています。"
         }
       ]
     },
     {
       "id": "course_220_la_desinformation_et_les_fake_news_p4",
-      "title": "Retrouver confiance dans un monde d'images",
+      "title": "画像があふれる世界で、信頼を取り戻す",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L'effet à long terme de la désinformation est profond : on parle désormais d'ère de la **post-vérité**, où les faits objectifs pèsent parfois moins que les émotions et les croyances personnelles. Cette relativisation généralisée fragilise la confiance nécessaire pour affronter ensemble des défis mondiaux comme le climat ou la santé publique."
+          "text": "偽情報が長期的に残す影響は深刻です。いまでは**ポスト真実**の時代と言われ、客観的な事実が、感情や個人的な信念より軽く扱われることもあります。こうしてあらゆることが相対化されると、気候変動や公衆衛生のような世界規模の課題にともに立ち向かうために必要な信頼が、もろくなってしまいます。"
         },
         {
           "type": "paragraph",
-          "text": "La réponse la plus solide reste l'éducation aux médias : apprendre à vérifier une source, croiser plusieurs informations, et comprendre comment fonctionnent les algorithmes. Certains misent aussi sur des technologies de certification des contenus, pour garantir l'origine d'une vidéo dès sa création. En attendant, la vigilance de chacun reste la première ligne de défense."
+          "text": "いちばん確かな答えは、やはりメディア教育です。情報源を確かめる、複数の情報を突き合わせる、アルゴリズムの仕組みを理解するといったことを学びます。コンテンツを認証する技術によって、動画の出どころを作られた時点から保証しようとする動きもあります。それまでのあいだは、一人ひとりの注意深さが最初の防衛線であり続けます。"
         },
         {
           "type": "takeaway",
-          "text": "Les fausses informations se propagent en moyenne 6 fois plus vite que la vérité sur les réseaux sociaux, car elles exploitent nos émotions et notre soif de nouveauté. Face aux deepfakes et aux fermes de trolls, l'éducation aux médias reste la meilleure arme pour préserver la confiance collective."
+          "text": "デマは、SNSでは平均して真実の6倍の速さで広がります。私たちの感情と、目新しいものを求める気持ちを利用するからです。ディープフェイクやトロール工場を前にして、メディア教育は、社会全体の信頼を守るための最良の武器であり続けています。これからも、その点は変わりません。"
         }
       ]
     }

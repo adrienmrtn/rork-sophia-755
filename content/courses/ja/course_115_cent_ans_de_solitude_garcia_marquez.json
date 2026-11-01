@@ -1,108 +1,108 @@
 {
   "id": "course_115_cent_ans_de_solitude_garcia_marquez",
-  "title": "Cent ans de solitude, García Márquez",
-  "subtitle": "1967",
+  "title": "百年の孤独（ガルシア＝マルケス）",
+  "subtitle": "1967年",
   "subject": "litterature",
   "subcategory": "英米と世界の文学",
-  "description": "Sept générations de Buendía à Macondo. García Márquez mêle prodiges et tragédie pour raconter l'histoire latino-américaine.",
+  "description": "ブエンディア家の7世代がマコンドで過ごす歳月。ガルシア＝マルケスは、不思議な出来事と悲劇を織り交ぜて、ラテンアメリカの歴史を描きます。",
   "hero": {
     "image": "cent_ans_de_solitude_garcia_marquez",
     "ratio": "16:9",
-    "hook": "Une pluie de fleurs jaunes ou une femme qui monte au ciel : le merveilleux raconté comme un fait ordinaire."
+    "hook": "黄色い花の雨が降り、女性が空へ昇っていく。不思議な出来事が、ごくふつうのことのように語られます。"
   },
   "sections": [
     {
       "id": "course_115_cent_ans_de_solitude_garcia_marquez_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Publié en **1967**, [[百年の孤独]] est l'acte de naissance mondial du [[魔術的リアリズム]]. Ce style présente des événements magiques avec le même naturel que les événements réels, sans surprise ni explication. **Gabriel García Márquez**, né en **1927** et mort en **2014**, y retrace sept générations de la famille Buendía à **Macondo**, village fictif inspiré de sa ville natale."
+          "text": "**1967年**に出版された[[百年の孤独]]は、世界に[[魔術的リアリズム]]の名を知らしめた作品です。この手法では、魔法のような出来事が、驚きも説明もなく、現実の出来事と同じ自然さで描かれます。**1927年**に生まれ**2014年**に亡くなった**ガブリエル・ガルシア＝マルケス**は、この小説で、生まれ故郷の町にヒントを得た架空の村**マコンド**を舞台に、ブエンディア家の7世代を描きました。"
         },
         {
           "type": "paragraph",
-          "text": "Violence politique, impérialisme économique et mythes ancestraux s'entrelacent. En brisant la linéarité du temps, l'auteur fait cohabiter prodige et tragédie avec une évidence déconcertante. Une pluie de fleurs jaunes ou une ascension au ciel sont racontées comme des faits ordinaires."
+          "text": "政治的な暴力、経済的な帝国主義、先祖から伝わる神話が絡み合います。作者は時間の直線的な流れを壊し、不思議な出来事と悲劇を、戸惑うほどあたりまえのように同じ場面に並べます。黄色い花の雨も、昇天も、ごくふつうの出来事として淡々と語られます。"
         }
       ]
     },
     {
       "id": "course_115_cent_ans_de_solitude_garcia_marquez_p1",
-      "title": "La genèse d'un style : Aracataca et l'illumination",
+      "title": "作風の誕生：故郷アラカタカと、小説を書く閃き",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Gabriel García Márquez**, dit « Gabo », puise dans **Aracataca**, sa ville natale colombienne. Son grand-père lui conte les guerres civiles ; sa grand-mère raconte fantômes et présages avec un sérieux imperturbable. Cette manière de raconter le merveilleux sans le commenter devient la clé de son style."
+          "text": "**ガブリエル・ガルシア＝マルケス**は「ガボ」とも呼ばれ、コロンビアの生まれ故郷**アラカタカ**から多くを汲み取りました。祖父は内戦の話を、祖母は幽霊や予兆の話を、まったく動じない真顔で語って聞かせました。不思議なことに解説を加えず語るこの流儀が、のちに作風の鍵になります。"
         },
         {
           "type": "image",
           "asset": "gabriel_garcia_marquez_portrait_photograph",
           "ratio": "4:3",
-          "caption": "Gabriel García Márquez, le Nobel qui a fait entendre l'Amérique latine au monde entier."
+          "caption": "ガブリエル・ガルシア＝マルケス。ラテンアメリカの声を世界に響かせたノーベル賞作家。"
         },
         {
           "type": "funFact",
-          "text": "En **1965**, García Márquez a eu son illumination en voiture vers Acapulco. Il fit demi-tour et s'isola 18 mois pour écrire, pendant que sa femme mettait en gage leurs biens."
+          "text": "**1965年**、ガルシア＝マルケスはアカプルコへ向かう車の中で閃きを得ました。すぐに引き返し、18か月こもって執筆します。そのあいだ、妻は家財を質に入れて暮らしを支えました。"
         },
         {
           "type": "paragraph",
-          "text": "Le premier tirage de **8 000 exemplaires** s'épuise en quelques jours à Buenos Aires. L'auteur recevra le **prix Nobel de littérature** en **1982**, consacrant un roman devenu emblème de toute une littérature continentale."
+          "text": "初版**8,000部**は、ブエノスアイレスで数日のうちに売り切れました。のちに作者は**1982年**に**ノーベル文学賞**を受け、この小説は大陸全体の文学を象徴する作品になります。"
         }
       ]
     },
     {
       "id": "course_115_cent_ans_de_solitude_garcia_marquez_p2",
-      "title": "Macondo : entre fondation mythique et réalité brutale",
+      "title": "マコンド：神話のような建国と、苛酷な現実のあいだで",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**José Arcadio Buendía** fonde Macondo dans la jungle colombienne. Le village traverse les âges : innocence, technologie apportée par les gitans, puis corruption politique. Le **Colonel Aureliano Buendía** mène trente-deux soulèvements armés et les perd tous. Il incarne la répétition tragique de l'histoire latino-américaine."
+          "text": "**ホセ・アルカディオ・ブエンディア**が、コロンビアのジャングルにマコンドを築きます。村は時代を経て、無垢の時代、ジプシーがもたらす技術、そして政治の腐敗へと移ります。**アウレリャノ・ブエンディア大佐**は三十二回も武装蜂起を率い、すべて負けます。大佐は、ラテンアメリカの歴史が悲劇的に繰り返されることを体現しています。"
         },
         {
           "type": "image",
           "asset": "colombia_tropical_jungle_village",
           "ratio": "16:9",
-          "caption": "Macondo : un village tropical où l'histoire de l'Amérique latine se condense."
+          "caption": "マコンド：ラテンアメリカの歴史がぎゅっと凝縮された、熱帯の小さな村。"
         },
         {
           "type": "paragraph",
-          "text": "L'arrivée de [[ユナイテッド・フルーツ社と「バナナ共和国」]] transpose le massacre des bananeraies de **1928** en Colombie. Des milliers d'ouvriers grévistes sont fusillés, puis un déluge efface la mémoire de l'événement. García Márquez montre comment l'impérialisme économique et l'oubli collectif détruisent les peuples."
+          "text": "[[ユナイテッド・フルーツ社と「バナナ共和国」]]の到来を通して、**1928年**にコロンビアで起きたバナナ農園の虐殺が物語に移されます。ストライキ中の労働者が数千人も銃殺され、その後、大洪水が出来事の記憶を洗い流します。ガルシア＝マルケスは、経済的な帝国主義と人々の集団的な忘却が、民をいかに滅ぼすかを示しています。"
         }
       ]
     },
     {
       "id": "course_115_cent_ans_de_solitude_garcia_marquez_p3",
-      "title": "La mécanique de l'insolite et la circularité du temps",
+      "title": "奇妙なことが日常になるしくみと、循環する時間の輪",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Quand **Remedios la Belle** monte au ciel en pliant des draps, le narrateur ne marque aucune surprise. Le magique est une extension organique du réel, pas une fantaisie décorative. C'est la règle d'or du [[魔術的リアリズム]] : le merveilleux fait partie du quotidien."
+          "text": "**美女レメディオス**がシーツをたたみながら空へ昇っていっても、語り手は少しも驚きません。魔法は現実の延長にあるもので、飾りの空想ではありません。これが[[魔術的リアリズム]]の黄金律で、不思議なことが日常の一部になっています。"
         },
         {
           "type": "paragraph",
-          "text": "Le temps à Macondo est **circulaire** : les Buendía répètent les erreurs de leurs ancêtres, confondent les prénoms, retombent dans les mêmes passions. Le manuscrit de **Melquíades**, écrit en [[サンスクリット語]], langue codée des prophéties, raconte cent ans à l'avance l'histoire de la famille. À la lecture finale, un cyclone détruit Macondo : le cycle se referme."
+          "text": "マコンドの時間は**循環**しています。ブエンディア家の人々は先祖の過ちを繰り返し、名前を取り違え、同じ情熱に何度も落ちます。**メルキアデス**の手稿は、予言を記した暗号の言語である[[サンスクリット語]]で書かれ、一族の歴史を百年も前に語っています。最後に読み終えるとき、サイクロンがマコンドを破壊し、循環は閉じます。"
         }
       ]
     },
     {
       "id": "course_115_cent_ans_de_solitude_garcia_marquez_p4",
-      "title": "Un héritage universel et politique",
+      "title": "世界に広がり、政治にも響く遺産",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le roman a ouvert la voie au « **Boom** » latino-américain. Ce mouvement littéraire marque les années **1960**-**1970**. Des auteurs comme [[マリオ・バルガス・リョサ]] en font partie. Le roman a prouvé que le récit pouvait être le lieu d'une mythologie moderne aussi puissante que l'Antiquité."
+          "text": "この小説は、ラテンアメリカ文学の「**ブーム**」への道を開きました。この文学運動は、**1960年代**から**1970年代**にかけて続きます。[[マリオ・バルガス・リョサ]]らもその一人です。物語が、古代に劣らず力強い現代の神話の場になりうることを、この小説は示しました。"
         },
         {
           "type": "paragraph",
-          "text": "García Márquez montre l'érosion de l'idéalisme par la guerre et l'oubli collectif. Sans mémoire ni solidarité, les civilisations sont éphémères, condamnées à répéter le tragique. Macondo n'est pas seulement un village : c'est une mémoire latino-américaine condensée, où le merveilleux et le politique se touchent."
+          "text": "ガルシア＝マルケスは、戦争と集団的な忘却によって理想主義がむしばまれていくさまを描いています。記憶も連帯もなければ、文明ははかなく、悲劇を繰り返す運命にあります。マコンドは単なる村ではありません。魔法と政治が触れ合う、ラテンアメリカの記憶が凝縮された場所です。"
         },
         {
           "type": "takeaway",
-          "text": "Le [[魔術的リアリズム]] de García Márquez utilise le merveilleux pour dire la vérité historique et la solitude tragique de l'Amérique latine."
+          "text": "ガルシア＝マルケスの[[魔術的リアリズム]]は、不思議なものを使って、歴史の真実とラテンアメリカの悲劇的な孤独を語っています。"
         }
       ]
     }

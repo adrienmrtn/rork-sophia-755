@@ -1,142 +1,142 @@
 {
   "id": "course_11_la_prise_de_la_bastille_1789",
-  "title": "Que cherchaient les Parisiens en prenant la Bastille ?",
-  "subtitle": "1789",
+  "title": "パリの人びとはバスティーユで何を求めたのか？",
+  "subtitle": "1789年",
   "subject": "histoire",
   "subcategory": "革命と近現代の紛争",
-  "description": "Le 14 juillet 1789, des Parisiens prennent d'assaut une forteresse qui ne contenait que **7 prisonniers**. Ce geste devient le symbole de la Révolution française.",
+  "description": "1789年7月14日、パリの人びとがひとつの要塞に攻め込みます。中にいた囚人は**7人**だけでした。この行動が、フランス革命の象徴になります。",
   "hero": {
     "image": "la_prise_de_la_bastille_1789",
     "ratio": "16:9",
-    "hook": "Le 14 juillet 1789, Paris prend d'assaut une forteresse… pour de la poudre."
+    "hook": "1789年7月14日、パリは要塞を襲います…目当ては火薬でした。"
   },
   "sections": [
     {
       "id": "course_11_la_prise_de_la_bastille_1789_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le **14 juillet 1789**, une foule de Parisiens marche sur la **Bastille**, une vieille forteresse à l'est de Paris. Ils ne viennent pas libérer des milliers de prisonniers. Ils veulent surtout de la **poudre** pour se défendre."
+          "text": "**1789年7月14日**、パリの群衆が、パリ東部の古い要塞**バスティーユ**へ向かいます。何千人もの囚人を解放しに行くわけではありません。目当ては、身を守るための**火薬**でした。"
         },
         {
           "type": "paragraph",
-          "text": "Ce jour-là, le roi **Louis XVI** voit sa capitale lui échapper. Une émeute pour des armes devient l'acte fondateur de la **Révolution française**. Voici comment."
+          "text": "この日、国王**ルイ十六世**は、首都が手から離れていくのを目にします。武器を求める暴動が、**フランス革命**の出発点になりました。その経緯をたどりましょう。"
         }
       ]
     },
     {
       "id": "course_11_la_prise_de_la_bastille_1789_p1",
-      "title": "La France au bord de la faillite",
+      "title": "破産の瀬戸際に立たされたフランス",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En 1789, le royaume est ruiné. Aider les colonies américaines pendant la [[アメリカ独立戦争]] a coûté très cher. Pour lever de nouveaux impôts, Louis XVI convoque les **États généraux** en mai : une assemblée du clergé, de la noblesse et du reste du peuple."
+          "text": "1789年、王国は破産状態でした。[[アメリカ独立戦争]]でアメリカの植民地を助けたため、莫大な費用がかかったのです。新しい税を課すために、ルイ十六世は5月に**三部会**を招集します。聖職者、貴族、それ以外の民衆による議会です。"
         },
         {
           "type": "image",
           "asset": "estates_general_1789_france",
           "ratio": "4:3",
-          "caption": "Les États généraux de 1789 : le Tiers État face au clergé et à la noblesse."
+          "caption": "1789年に開かれた三部会：聖職者・貴族の身分と向かい合う第三身分。"
         },
         {
           "type": "paragraph",
-          "text": "Sous l'[[アンシャン・レジームと三身分]], la société est coupée en trois. Clergé et noblesse gardent leurs privilèges. Le **Tiers État**, presque tout le monde, n'a qu'une voix. Bloqué, il se proclame **Assemblée nationale** le **17 juin**. Trois jours plus tard, au **Serment du Jeu de Paume**, les députés jurent de ne pas se séparer avant d'avoir écrit une constitution."
+          "text": "[[アンシャン・レジームと三身分]]のもとで、社会は三つに分けられていました。聖職者と貴族は特権を守り、人口のほとんどを占める**第三身分**には1票しかありません。行き詰まった第三身分は、**6月17日**に**国民議会**を名乗ります。3日後の**球戯場の誓い**で、議員たちは憲法を作るまで解散しないと誓いました。"
         },
         {
           "type": "paragraph",
-          "text": "Le roi semble céder, mais il place environ **30 000 soldats** autour de Paris. Le **11 juillet**, il renvoie **Jacques Necker**, son ministre des Finances très populaire. La panique gagne la capitale."
+          "text": "国王は譲歩するように見せながら、パリの周辺に約**3万人の兵**を配置します。**7月11日**には、人気の高かった財務長官**ジャック・ネッケル**を罷免します。パニックが首都に広がります。"
         }
       ]
     },
     {
       "id": "course_11_la_prise_de_la_bastille_1789_p2",
-      "title": "Des fusils, puis de la poudre",
+      "title": "まずは銃、それから火薬を求めて",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Les **12** et **13 juillet**, Paris s'insurge. On brûle les barrières d'octroi (taxes à l'entrée de la ville). On pille les armureries. Le matin du **14**, la foule saisit environ **32 000 fusils** aux **Invalides**. Il manque la poudre."
+          "text": "**7月12日**と**13日**、パリで蜂起が起こります。市の入口で税を取り立てる入市税関門に火が放たれ、武器店が襲われます。**14日**の朝、群衆は**廃兵院**で約**3万2千丁の銃**を手に入れます。足りないのは火薬です。"
         },
         {
           "type": "image",
           "asset": "storming_of_the_bastille_1789",
           "ratio": "4:3",
-          "caption": "La prise de la Bastille, 14 juillet 1789."
+          "caption": "1789年7月14日、バスティーユ襲撃。"
         },
         {
           "type": "funFact",
-          "text": "Ce jour-là, la Bastille ne contenait que **7 prisonniers** : 4 faussaires, 2 hommes jugés fous et un aristocrate. Sa force était surtout dans ce qu'elle représentait."
+          "text": "この日、バスティーユにいた囚人は**7人**だけでした。文書偽造犯が4人、精神を病んでいるとされた男が2人、貴族が1人です。この要塞の力は、中身よりも、それが象徴するものにありました。"
         },
         {
           "type": "paragraph",
-          "text": "La rumeur dit que la poudre est à la Bastille. Pour beaucoup, cette prison incarne l'arbitraire du roi, surtout à cause de la [[国王の封印状]], un ordre d'enfermement sans procès. Le gouverneur **de Launay** refuse d'ouvrir. Vers **13 h 30**, des coups de feu éclatent : **98 morts** parmi les assaillants. Des soldats qui passent du côté du peuple amènent des canons. En fin d'après-midi, la forteresse tombe. De Launay est lynché dans la rue."
+          "text": "火薬はバスティーユにあるといううわさが流れます。多くの人にとって、この牢獄は国王の恣意的な支配の象徴でした。とりわけ、裁判なしで人を閉じ込める命令書、[[国王の封印状]]のためです。守備隊長**ド・ローネ**は開門を拒みます。**午後1時30分**ごろ、銃声が響き、攻める側に**98人**の死者が出ます。民衆の側につく兵士たちが大砲を運んできます。夕方、要塞は陥落します。ド・ローネは路上で私刑にされて殺されます。"
         }
       ]
     },
     {
       "id": "course_11_la_prise_de_la_bastille_1789_p3",
-      "title": "Quand la révolte devient révolution",
+      "title": "反乱がやがて革命へと変わるとき",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le **15 juillet**, on réveille Louis XVI. « Est-ce une révolte ? » demande-t-il. On lui répond : « Non Sire, c'est une révolution. » Ironie du calendrier : dans son journal de chasse, le roi avait noté « Rien » le 14."
+          "text": "**7月15日**、ルイ十六世は起こされます。「反乱か」と尋ねる王に、「いいえ陛下、革命です」と答えが返ります。歴史の皮肉というべきか、王は14日の狩猟日誌に「何もなし」と書いていました。"
         },
         {
           "type": "funFact",
-          "text": "L'entrepreneur **Palloy**, chargé de démolir la Bastille, fit tailler des dominos dans ses pierres et en offrit un jeu au fils du roi, « pour qu'il joue avec les restes du despotisme »."
+          "text": "請負業者の**パロワ**は、バスティーユの解体を任されると、その石からドミノを作らせ、一組を国王の息子に贈りました。「専制の残骸で遊べるように」という言葉を添えて。"
         },
         {
           "type": "paragraph",
-          "text": "Le roi rappelle Necker, retire ses troupes et accepte la **cocarde tricolore**. Dans les campagnes, la nouvelle alimente [[大恐怖]] : les paysans, craignant une vengeance des nobles, brûlent les papiers des droits seigneuriaux. Dans la nuit du **4 août 1789**, l'Assemblée abolit les privilèges."
+          "text": "国王はネッケルを呼び戻し、軍隊を引き揚げ、**三色の帽章**を受け入れます。地方では、この知らせが[[大恐怖]]をあおります。農民たちは貴族の報復を恐れて、領主の権利を記した書類を焼き払います。**1789年8月4日**の夜、議会は特権の廃止を決めます。"
         }
       ]
     },
     {
       "id": "course_11_la_prise_de_la_bastille_1789_p4",
-      "title": "Du 14 juillet à la fête nationale",
+      "title": "7月14日から国民の祝日になるまで",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Dès le lendemain, on démolit la Bastille. Un an plus tard, la **Fête de la Fédération** célèbre l'unité. Mais le 14 juillet ne devient fête nationale qu'en **1880**, sous la IIIe République."
+          "text": "翌日にはもう、バスティーユの解体が始まります。1年後には**全国連盟祭**が国民の団結を祝います。しかし、7月14日が国の祝日になるのは、第三共和政の下の**1880年**になってからです。"
         },
         {
           "type": "timeline",
           "events": [
             {
-              "date": "5 mai 1789",
-              "title": "États généraux",
-              "detail": "Louis XVI convoque le royaume pour sortir de la faillite."
+              "date": "1789年5月5日",
+              "title": "三部会",
+              "detail": "ルイ十六世が、破産から抜け出すために王国の代表を集めます。"
             },
             {
-              "date": "20 juin 1789",
-              "title": "Serment du Jeu de Paume",
-              "detail": "Les députés jurent de donner une constitution à la France."
+              "date": "1789年6月20日",
+              "title": "球戯場の誓い",
+              "detail": "議員たちが、フランスに憲法を与えることを誓い合います。"
             },
             {
-              "date": "14 juillet 1789",
-              "title": "Prise de la Bastille",
-              "detail": "Paris s'empare de la poudre et d'un symbole royal."
+              "date": "1789年7月14日",
+              "title": "バスティーユ襲撃",
+              "detail": "パリが、火薬と王権の象徴を自分たちのものにします。"
             },
             {
-              "date": "4 août 1789",
-              "title": "Abolition des privilèges",
-              "detail": "La Grande Peur pousse l'Assemblée à agir."
+              "date": "1789年8月4日",
+              "title": "特権の廃止",
+              "detail": "大恐怖に突き動かされ、議会が行動に出ます。"
             },
             {
-              "date": "26 août 1789",
-              "title": "Déclaration des droits",
-              "detail": "Les sujets deviennent citoyens devant la loi."
+              "date": "1789年8月26日",
+              "title": "人権宣言",
+              "detail": "臣民が、法の前ではみな市民になります。"
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "Le **14 juillet 1789**, Paris prend la Bastille pour de la poudre. Ce geste transforme une crise financière en révolution et précipite la fin de l'ordre des privilèges."
+          "text": "**1789年7月14日**、パリは火薬を求めてバスティーユを占拠します。この行動が財政危機を革命に変え、特権の秩序の終わりを早めました。"
         }
       ]
     }

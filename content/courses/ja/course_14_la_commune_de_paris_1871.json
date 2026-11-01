@@ -1,139 +1,139 @@
 {
   "id": "course_14_la_commune_de_paris_1871",
-  "title": "La Commune de Paris",
-  "subtitle": "1871",
+  "title": "パリ・コミューン",
+  "subtitle": "1871年",
   "subject": "histoire",
   "subcategory": "革命と近現代の紛争",
-  "description": "Du 18 mars au 28 mai 1871, Paris se gouverne seul pendant **72 jours**. L'expérience s'achève dans la Semaine sanglante, une répression qui marque durablement la mémoire française.",
+  "description": "1871年3月18日から5月28日まで、パリは**72日間**、自らの手で自らを治めました。この試みは「血の週間」で幕を閉じ、苛烈な弾圧は、フランスの記憶に長く刻まれます。",
   "hero": {
     "image": "la_commune_de_paris_1871",
     "ratio": "16:9",
-    "hook": "72 jours où Paris se gouverne seul… avant d'être écrasé dans le sang."
+    "hook": "パリが自らを治めた72日間……そして、血の海に沈められるまで。"
   },
   "sections": [
     {
       "id": "course_14_la_commune_de_paris_1871_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Du **18 mars** au **28 mai 1871**, Paris vit une expérience rare : la **Commune**. Pendant **72 jours**, la capitale se gouverne seule. Elle refuse d'obéir au gouvernement installé à **Versailles** et tente une démocratie plus sociale."
+          "text": "**1871年3月18日**から**5月28日**まで、パリはまれな経験をします。**コミューン**です。**72日間**、首都は自らを治めました。**ヴェルサイユ**に置かれた政府への服従を拒み、より社会的な民主主義を試みます。"
         },
         {
           "type": "paragraph",
-          "text": "Ce soulèvement naît d'une défaite nationale, d'un siège affamé et d'une fracture entre un Paris radical et une province plus conservatrice. Il s'achève par la **Semaine sanglante**."
+          "text": "この蜂起は、国家的な敗戦、飢えに苦しんだ包囲戦、そして急進的なパリとより保守的な地方との断絶から生まれました。最後は**血の週間**で幕を閉じます。"
         }
       ]
     },
     {
       "id": "course_14_la_commune_de_paris_1871_p1",
-      "title": "Après la défaite et le siège",
+      "title": "敗戦と、飢えた包囲戦のあとで",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Tout part de la [[普仏戦争]] (**1870-1871**). L'empereur français **Napoléon III** est capturé à **Sedan**. Paris endure ensuite un siège de quatre mois. On mange chevaux, animaux du zoo, puis rats. La capitulation paraît humiliante."
+          "text": "すべては[[普仏戦争]]（**1870〜1871年**）から始まります。フランス皇帝**ナポレオン3世**は**スダン**で捕虜となり、パリはその後4か月の包囲に耐えます。馬、動物園の動物、そしてついにはネズミまで食べるありさまでした。降伏は屈辱的に思えました。"
         },
         {
           "type": "image",
           "asset": "paris_commune_barricades_1871",
           "ratio": "4:3",
-          "caption": "Barricades parisiennes pendant la Commune de 1871."
+          "caption": "1871年のパリ・コミューン時代のバリケード"
         },
         {
           "type": "funFact",
-          "text": "À Noël **1870**, certains restaurants de luxe servirent consommée d'éléphant ou civet de kangourou, issus de la ménagerie du Jardin des Plantes."
+          "text": "**1870年**のクリスマスには、パリ植物園の動物園の動物を使って、ゾウのコンソメやカンガルーの煮込みを出す高級レストランもありました。"
         },
         {
           "type": "paragraph",
-          "text": "En février, [[アドルフ・ティエール]] dirige une Assemblée surtout monarchiste, repliée à Versailles. Le **18 mars**, il veut saisir les canons de la [[国民衛兵]], une milice de Parisiens armés, stockés à **Montmartre**. La foule fraternise avec les soldats. Thiers évacue Paris. Un Comité central prend le contrôle de la ville."
+          "text": "2月、[[アドルフ・ティエール]]は、ヴェルサイユに移った王政派中心の国民議会を率います。**3月18日**、ティエールは、**モンマルトル**に保管されていた、武装したパリ市民の民兵組織[[国民衛兵]]の大砲を押収しようとします。群衆は兵士たちと打ち解け、ティエールはパリから撤退します。中央委員会が市の実権を握りました。"
         }
       ]
     },
     {
       "id": "course_14_la_commune_de_paris_1871_p2",
-      "title": "Ce que la Commune a tenté",
+      "title": "コミューンが試みたこと",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le **28 mars**, la Commune est proclamée. Ouvriers, artisans, journalistes, proches de l'[[国際労働者協会]] (un réseau de syndicats et de partis ouvriers) : le conseil légifère dans l'urgence. Remise des loyers. Abolition du travail de nuit des boulangers. Ateliers abandonnés remis aux coopératives."
+          "text": "**3月28日**、コミューンが宣言されます。労働者、職人、ジャーナリスト、そして[[国際労働者協会]]（労働組合と労働者政党のネットワーク）に近い人々からなる評議会は、急ぎで法律をつくっていきます。家賃の免除、パン職人の夜間労働の廃止、放棄された作業場の協同組合への引き渡しなどです。"
         },
         {
           "type": "image",
           "asset": "paris_city_hall_commune_1871",
           "ratio": "4:3",
-          "caption": "L'Hôtel de Ville, cœur politique de la Commune."
+          "caption": "パリ市庁舎：コミューンの政治の中心となった建物"
         },
         {
           "type": "paragraph",
-          "text": "Elle proclame aussi la séparation de l'Église et de l'État, l'école laïque et gratuite, et fait abattre la **colonne Vendôme**, symbole de l'Empire. [[ルイーズ・ミシェル]], institutrice et militante, incarne le rôle central des femmes dans les clubs et sur les barricades."
+          "text": "コミューンはまた、政教分離と無償の世俗教育を宣言し、帝政の象徴である**ヴァンドーム広場の円柱**を倒させました。教師で活動家の[[ルイーズ・ミシェル]]は、クラブでもバリケードでも女性が中心的な役割を果たしたことを象徴する人物です。"
         }
       ]
     },
     {
       "id": "course_14_la_commune_de_paris_1871_p3",
-      "title": "La Semaine sanglante",
+      "title": "血の週間",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le **21 mai**, les troupes de Versailles entrent dans Paris. C'est la **Semaine sanglante**. Quartier par quartier, barricade après barricade, la répression est féroce. Des otages sont fusillés. Les Tuileries et l'Hôtel de Ville brûlent."
+          "text": "**5月21日**、ヴェルサイユ軍がパリに入ります。**血の週間**の始まりです。地区ごとに、バリケードごとに、弾圧は容赦のないものでした。人質が銃殺され、テュイルリー宮殿とパリ市庁舎が燃えます。"
         },
         {
           "type": "image",
           "asset": "bloody_week_1871_paris",
           "ratio": "4:3",
-          "caption": "La Semaine sanglante : Paris repris rue par rue."
+          "caption": "血の週間：通りごとに奪い返されていくパリ"
         },
         {
           "type": "funFact",
-          "text": "Durant la Commune, le drapeau rouge devient l'emblème officiel de Paris, remplaçant le tricolore jugé trop lié aux pouvoirs qui avaient capitulé."
+          "text": "コミューンの間、赤旗がパリの公式の旗となりました。降伏した権力と結びつきすぎているとされた三色旗に、取って代わったのです。"
         },
         {
           "type": "paragraph",
-          "text": "Les [[連盟兵]], nom donné aux partisans de la Commune, reculent jusqu'au cimetière du **Père-Lachaise**. **147** derniers combattants y sont fusillés au **Mur des Fédérés**. Bilan : entre **10 000 et 30 000** morts en une semaine, puis des déportations en Nouvelle-Calédonie."
+          "text": "コミューンの支持者は[[連盟兵]]と呼ばれ、**ペール・ラシェーズ**墓地まで後退します。最後の戦闘員**147人**が、**連盟兵の壁**の前で銃殺されました。犠牲者は1週間で**1万〜3万人**にのぼり、その後ニューカレドニアへの流刑が続きます。"
         }
       ]
     },
     {
       "id": "course_14_la_commune_de_paris_1871_p4",
-      "title": "Un mythe qui dure",
+      "title": "生き続ける神話",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Pour le philosophe **Karl Marx** et l'Internationale, la Commune est la première expérience de pouvoir ouvrier. Sa répression consolide pourtant la **IIIe République** « d'ordre ». Des idées communardes (laïcité, droits sociaux) reviendront plus tard dans le droit républicain."
+          "text": "哲学者**カール・マルクス**と第一インターナショナルにとって、コミューンは労働者による権力の最初の経験でした。ところがその弾圧は、「秩序」を掲げる**第三共和政**をかえって固めます。コミューンの理念（世俗主義、社会権）は、のちに共和国の法に取り入れられていきます。"
         },
         {
           "type": "timeline",
           "events": [
             {
-              "date": "18 mars 1871",
-              "title": "Montmartre",
-              "detail": "Thiers échoue à saisir les canons ; Paris bascule."
+              "date": "1871年3月18日",
+              "title": "モンマルトル",
+              "detail": "ティエールは大砲の押収に失敗し、パリは蜂起する。"
             },
             {
-              "date": "28 mars 1871",
-              "title": "Proclamation",
-              "detail": "La Commune est officiellement instaurée."
+              "date": "1871年3月28日",
+              "title": "宣言",
+              "detail": "パリ・コミューンが正式に発足する。"
             },
             {
-              "date": "21-28 mai 1871",
-              "title": "Semaine sanglante",
-              "detail": "Versailles écrase l'insurrection."
+              "date": "1871年5月21〜28日",
+              "title": "血の週間",
+              "detail": "ヴェルサイユ軍が蜂起を鎮圧する。"
             },
             {
-              "date": "28 mai 1871",
-              "title": "Mur des Fédérés",
-              "detail": "Fin des combats au Père-Lachaise."
+              "date": "1871年5月28日",
+              "title": "連盟兵の壁",
+              "detail": "ペール・ラシェーズで戦闘が終わる。"
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "En **72 jours**, la Commune de Paris a tenté une démocratie sociale radicale, avant d'être anéantie lors de la Semaine sanglante, au prix de dizaines de milliers de morts."
+          "text": "**72日間**という短い間に、パリ・コミューンは急進的な社会民主主義を試みましたが、血の週間で壊滅させられ、数万人もの命と引きかえになりました。"
         }
       ]
     }

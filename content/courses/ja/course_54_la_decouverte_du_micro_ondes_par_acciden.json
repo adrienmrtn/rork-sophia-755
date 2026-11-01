@@ -1,100 +1,100 @@
 {
   "id": "course_54_la_decouverte_du_micro_ondes_par_acciden",
-  "title": "La découverte du micro-ondes",
-  "subtitle": "Par accident",
+  "title": "電子レンジはどうして生まれたの？",
+  "subtitle": "偶然から",
   "subject": "sciences",
   "subcategory": "世界を変えた発見",
-  "description": "En 1945, un ingénieur remarque que sa barre chocolatée a fondu près d'un radar. De cette observation naîtra le four à micro-ondes.",
+  "description": "1945年、一人の技術者が、レーダーのそばでチョコレートバーが溶けたことに気づきます。この観察から電子レンジが生まれました。",
   "hero": {
     "image": "la_decouverte_du_micro_ondes",
     "ratio": "16:9",
-    "hook": "Une barre chocolatée fondue… et la cuisine moderne change."
+    "hook": "溶けたチョコレートバー。そして、現代のキッチンが変わります。"
   },
   "sections": [
     {
       "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En **1945**, aux États-Unis, l'ingénieur **Percy Spencer** travaille sur des radars. Un jour, il remarque que la barre chocolatée dans sa poche a fondu. Pas à cause de la chaleur du corps : à cause des ondes du radar."
+          "text": "**1945年**、アメリカの技術者**パーシー・スペンサー**はレーダーの研究をしていました。ある日、ポケットに入れていたチョコレートバーが溶けているのに気づきます。体温のせいではありません。レーダーの電波のせいでした。"
         },
         {
           "type": "paragraph",
-          "text": "Il teste avec du maïs : le pop-corn éclate. L'idée d'un four qui chauffe autrement est née."
+          "text": "スペンサーはトウモロコシで試してみました。すると、ポップコーンがはじけます。ふつうとは違う方法で加熱するオーブンの発想が生まれた瞬間です。"
         }
       ]
     },
     {
       "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p1",
-      "title": "Du radar à la cuisine",
+      "title": "レーダーからキッチンへ",
       "free": false,
       "blocks": [
         {
           "type": "image",
           "asset": "percy_spencer_microwave_discovery_radar",
           "ratio": "4:3",
-          "caption": "Les radars de la Seconde Guerre mondiale utilisaient déjà les micro-ondes."
+          "caption": "第二次世界大戦のレーダーは、すでにマイクロ波を使っていました。"
         },
         {
           "type": "paragraph",
-          "text": "Les **micro-ondes** sont des ondes électromagnétiques, comme la lumière radio, mais plus « énergétiques » que beaucoup d'ondes radio classiques. Pendant la guerre, elles servent surtout aux radars pour détecter avions et bateaux."
+          "text": "**マイクロ波**は電磁波の一種で、ラジオなどの電波と同じ仲間ですが、ふつうの電波の多くよりもエネルギーが高い波です。戦時中は、おもにレーダーで飛行機や船を探知するために使われました。"
         },
         {
           "type": "paragraph",
-          "text": "Spencer comprend qu'elles peuvent aussi agiter l'eau et les graisses dans les aliments… et donc les chauffer."
+          "text": "スペンサーは、マイクロ波が食べ物の中の水分や脂肪も振動させられることに気づきます。つまり、食べ物を温められるということです。"
         }
       ]
     },
     {
       "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p2",
-      "title": "Le premier four est énorme",
+      "title": "最初のオーブンは巨大だった",
       "free": false,
       "blocks": [
         {
           "type": "image",
           "asset": "first_microwave_oven_radarange_1947",
           "ratio": "4:3",
-          "caption": "Le premier four à micro-ondes commercial est grand comme une armoire."
+          "caption": "最初の業務用電子レンジは、戸棚ほどの大きさがありました。"
         },
         {
           "type": "paragraph",
-          "text": "Le premier modèle commercial, le **Radarange**, sort vers **1947**. Il est immense, cher, et plutôt destiné aux restaurants ou aux bateaux. Il faudra des décennies pour le miniaturiser et le rendre abordable pour les foyers."
+          "text": "最初の商品となった**レイダーレンジ**は、**1947年**ごろに発売されました。巨大で高価で、おもにレストランや船向けでした。小型化して家庭で買える値段になるまでには、何十年もかかりました。"
         },
         {
           "type": "funFact",
-          "text": "Au début, certains avaient peur que le four « rende les aliments radioactifs ». Faux : les micro-ondes chauffent, elles ne rendent pas radioactif."
+          "text": "発売当初は、電子レンジで食べ物が「放射性になる」のではと心配する人もいました。それは誤りです。マイクロ波は食べ物を温めるだけで、放射性にはしません。"
         }
       ]
     },
     {
       "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p3",
-      "title": "Comment ça chauffe vraiment",
+      "title": "食べ物が温まる本当のしくみ",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Les micro-ondes font surtout vibrer les molécules d'eau (et un peu les graisses et sucres). Cette agitation crée de la chaleur **à l'intérieur** de l'aliment, pas seulement en surface comme une poêle."
+          "text": "マイクロ波は、おもに水の分子を振動させます（脂肪や糖も少しは振動させます）。この振動が熱になり、フライパンのように表面だけでなく、食べ物の**内部**で熱が生まれるのです。"
         },
         {
           "type": "paragraph",
-          "text": "C'est pour ça qu'un plat peut être brûlant dehors et tiède au centre s'il est épais : les ondes ne pénètrent pas infiniment profond."
+          "text": "そのため、厚みのある料理は、外が熱いのに中はぬるいことがあります。マイクロ波は、どこまでも深く届くわけではないからです。"
         }
       ]
     },
     {
       "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p4",
-      "title": "Un objet du quotidien",
+      "title": "暮らしの道具に",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "À partir des années 1970-1980, le four à micro-ondes entre dans des millions de cuisines. Il change les habitudes : réchauffer vite, plats préparés, vie plus rapide."
+          "text": "1970年代から1980年代にかけて、電子レンジは何百万もの家庭のキッチンに入っていきました。すばやく温める、調理済みの食品を使う、暮らしが速くなる。そんなふうに、人々の習慣が変わりました。"
         },
         {
           "type": "takeaway",
-          "text": "Le micro-ondes naît d'un hasard observé par Percy Spencer près d'un radar. Les ondes agitent surtout l'eau des aliments et les chauffent de l'intérieur."
+          "text": "電子レンジは、パーシー・スペンサーがレーダーのそばで見つけた偶然から生まれました。マイクロ波はおもに食べ物の水分を振動させ、内側から温めます。"
         }
       ]
     }

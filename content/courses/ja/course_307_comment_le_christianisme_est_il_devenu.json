@@ -1,124 +1,124 @@
 {
   "id": "course_307_comment_le_christianisme_est_il_devenu",
-  "title": "Comment le christianisme est-il devenu religion d'État ?",
-  "subtitle": "De Constantin à Théodose",
+  "title": "キリスト教はどのようにしてローマ帝国の国教になったのか",
+  "subtitle": "コンスタンティヌスからテオドシウスまで",
   "subject": "histoire",
   "subcategory": "古代と中世",
-  "description": "En 313, Constantin accorde aux chrétiens le droit de pratiquer leur foi. En 380, Théodose fait du christianisme de Nicée la religion officielle de l'empire : entre les deux, un concile, des querelles sans fin et un empereur qui tente de ramener les anciens dieux.",
+  "description": "313年、コンスタンティヌスはキリスト教徒に信仰を実践する権利を認めます。380年、テオドシウスはニカイア派のキリスト教をローマ帝国の公式の宗教と定めます。その間には、公会議、果てしない論争、そして古い神々を呼び戻そうとした皇帝がいます。",
   "author": "vedran-obucina",
   "hero": {
     "image": "arch_of_constantine_rome_colosseum_view",
     "ratio": "4:3",
-    "hook": "En moins de soixante-dix ans, une religion tout juste tolérée devient la seule foi officielle de l'Empire romain."
+    "hook": "七十年足らずのうちに、かろうじて黙認されていた宗教が、ローマ帝国で唯一の公認の信仰になります。"
   },
   "sections": [
     {
       "id": "course_307_comment_le_christianisme_est_il_devenu_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En **312**, [[コンスタンティヌス]] écrase son rival Maxence à la bataille du pont Milvius, aux portes de Rome. Maître de l'Occident romain, il se met à soutenir les chrétiens. L'année suivante, avec son collègue Licinius, il publie l'[[ミラノ勅令]] : liberté de culte pour les chrétiens, et restitution des biens confisqués aux Églises pendant les persécutions."
+          "text": "**312年**、[[コンスタンティヌス]]はローマ目前のミルウィウス橋の戦いで、ライバルのマクセンティウスを破ります。西ローマの支配者となった皇帝は、キリスト教徒を支援するようになります。翌年には共同皇帝のリキニウスとともに[[ミラノ勅令]]を出し、キリスト教徒の信教の自由と、迫害の時代に教会から没収された財産の返還を認めます。"
         },
         {
           "type": "paragraph",
-          "text": "Le texte fait du christianisme une religion légale, pas la religion officielle de l'empire. Les cultes traditionnels restent autorisés. Constantin finance des églises et promeut des chrétiens, mais il ne touche pas aux anciens dieux. Comment cette religion simplement tolérée devient-elle, en moins de soixante-dix ans, la seule foi reconnue par l'État ?"
+          "text": "この勅令は、キリスト教を合法の宗教にしただけで、帝国の公式の宗教にしたわけではありません。伝統的な信仰も引き続き認められます。コンスタンティヌスは教会を建てる資金を出し、キリスト教徒を取り立てますが、古い神々には手を出しません。では、ただ黙認されていたこの宗教が、七十年足らずのうちに国家が認める唯一の信仰になったのは、どのようにしてでしょうか。"
         }
       ]
     },
     {
       "id": "course_307_comment_le_christianisme_est_il_devenu_p1",
-      "title": "Constantin et le concile de Nicée",
+      "title": "コンスタンティヌスとニカイア公会議",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le soutien de l'empereur change la place du christianisme dans la société romaine. Les Églises reçoivent de l'argent et des terres. Leurs chefs, les évêques, ont désormais accès à l'empereur et pèsent sur sa politique. Constantin se mêle aussi des disputes entre chrétiens. En **325**, il réunit le [[ニカイア公会議]], une assemblée d'évêques chargée de trancher une question brûlante : qui est Jésus, et quel est son lien avec Dieu le Père ?"
+          "text": "皇帝の支援によって、ローマ社会でのキリスト教の位置づけは変わります。教会は資金や土地を受け取ります。教会の指導者である司教たちは、皇帝に近づけるようになり、その政策にも影響を与えます。コンスタンティヌスは、キリスト教徒どうしの論争にも口を出します。**325年**、皇帝は司教たちの会議である[[ニカイア公会議]]を開き、差し迫った問いに決着をつけさせます。イエスとは何者で、父なる神とどういう関係にあるのか、という問いです。"
         },
         {
           "type": "image",
           "asset": "first_council_of_nicaea_325_byzantine_icon",
           "ratio": "3:2",
-          "caption": "Le concile de Nicée sur une fresque d'église orthodoxe : Constantin trône parmi les évêques, Arius prostré à leurs pieds."
+          "caption": "正教会の聖堂のフレスコ画に描かれたニカイア公会議。司教たちの中央にコンスタンティヌスが座り、アリウスはその足もとにひれ伏しています。"
         },
         {
           "type": "paragraph",
-          "text": "Le concile adopte le Credo de Nicée, toujours au cœur de la foi chrétienne. Mais la présence de l'empereur n'apporte pas l'unité. Les partisans d'[[アリウス]], un prêtre qui refuse de placer Jésus au même rang que le Père, ne désarment pas, et les querelles durent des décennies. Le vrai changement est politique : le christianisme a gagné l'accès au pouvoir impérial, à son argent et à ses institutions."
+          "text": "公会議はニカイア信条を採択し、これは今もキリスト教信仰の中心にあります。しかし、皇帝が出席しても一致は生まれません。司祭[[アリウス]]は、イエスを父と同格に置くことを認めませんでした。その支持者たちはあきらめず、論争は数十年続きます。本当の変化は政治にあります。キリスト教が、皇帝の権力とその財力、そして制度に近づく道を手に入れたのです。"
         }
       ]
     },
     {
       "id": "course_307_comment_le_christianisme_est_il_devenu_p2",
-      "title": "Un empire encore païen",
+      "title": "なお異教が根強い帝国",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Les successeurs de Constantin ne suivent pas tous la même ligne. Certains soutiennent les chrétiens fidèles à Nicée, d'autres favorisent des courants rivaux, comme les ariens, que leurs adversaires jugent hérétiques. Pendant ce temps, les rites du [[異教]] restent bien vivants dans les villes, dans les campagnes et surtout dans l'armée."
+          "text": "コンスタンティヌスの後継者たちの方針は、全員が同じではありません。ニカイア派のキリスト教徒を支持する皇帝もいれば、アリウス派など対立する流派を後押しする皇帝もいます。アリウス派は、敵対者から異端とみなされました。その間も、[[異教]]の儀式は、都市でも農村でも、とくに軍隊の中で生き続けています。"
         },
         {
           "type": "image",
           "asset": "emperor_julian_apostate_statue_louvre",
           "ratio": "1:1",
-          "caption": "L'empereur Julien, barbu comme un philosophe, sur un solidus d'or frappé à Sirmium, dans l'actuelle Serbie."
+          "caption": "哲学者のようにひげをはやした皇帝ユリアヌス。現在のセルビアにあるシルミウムで鋳造された金のソリドゥス金貨です。"
         },
         {
           "type": "paragraph",
-          "text": "En **361**, un empereur tente même de revenir en arrière. [[背教者ユリアヌス]], élevé dans le christianisme mais rallié aux anciens dieux, rétablit la religion traditionnelle de Rome. Il honore les divinités antiques et coupe les subventions impériales aux institutions chrétiennes. Son règne s'achève dès **363**, mais il prouve une chose : le christianisme n'a pas simplement remplacé l'ancien système religieux. Après lui, des empereurs chrétiens reviennent au pouvoir. La loi avance plus vite que les croyances, et la société romaine reste une mosaïque de religions."
+          "text": "**361年**、ひとりの皇帝が時計の針を戻そうとさえします。キリスト教の中で育ちながら古い神々に傾いた[[背教者ユリアヌス]]は、ローマの伝統的な宗教を復活させます。古代の神々をあがめ、キリスト教の施設への皇帝の補助金を打ち切ります。治世は早くも**363年**に終わりますが、ここから分かることがあります。キリスト教は、古い宗教の体制をただ置き換えたわけではない、ということです。ユリアヌスの後、キリスト教徒の皇帝が権力に戻ります。法は信仰よりも速く進み、ローマ社会は宗教のモザイクのままでした。"
         }
       ]
     },
     {
       "id": "course_307_comment_le_christianisme_est_il_devenu_p3",
-      "title": "Théodose impose la foi de Nicée",
+      "title": "テオドシウスによるニカイア信仰の強制",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En **380**, l'empereur Théodose Ier publie l'[[テッサロニキ勅令]], avec Gratien et Valentinien II, qui gouvernent l'Occident. Le texte réserve le soutien de l'État au seul christianisme fidèle à Nicée, celui qui confesse la Trinité : un Dieu unique en trois personnes, le Père, le Fils et le Saint-Esprit."
+          "text": "**380年**、皇帝テオドシウス1世は、西方を治めるグラティアヌス、ウァレンティニアヌス2世とともに[[テッサロニキ勅令]]を出します。この勅令は、国家の支援をニカイア派のキリスト教だけに限ります。三位一体、つまり父と子と聖霊という三つの位格をもつ唯一の神を信じる立場です。"
         },
         {
           "type": "image",
           "asset": "missorium_of_theodosius_388_silver_dish",
           "ratio": "5:4",
-          "caption": "Le missorium de Théodose, plat d'argent de 388 : l'empereur trône entre Valentinien II et Arcadius."
+          "caption": "テオドシウスのミッソリウム、388年の銀の大皿。皇帝はウァレンティニアヌス2世とアルカディウスの間に座しています。"
         },
         {
           "type": "paragraph",
-          "text": "Le geste va bien plus loin que la loi de 313. Constantin avait donné la liberté aux chrétiens ; Théodose choisit quelle forme de christianisme l'État reconnaît et la lie au pouvoir impérial. Dans les décennies suivantes, les autorités restreignent peu à peu les cultes païens et les enseignements chrétiens qui s'écartent de Nicée."
+          "text": "この措置は、313年の法よりはるかに踏み込んでいます。コンスタンティヌスがキリスト教徒に自由を与えたのに対し、テオドシウスはどの形のキリスト教を国が認めるかを選び、それを皇帝権力に結びつけました。その後の数十年で、当局は異教の祭祀や、ニカイアから外れたキリスト教の教えを少しずつ制限していきます。"
         },
         {
           "type": "paragraph",
-          "text": "Cela ne veut pas dire que tous les habitants de l'empire deviennent chrétiens du jour au lendemain. Beaucoup continuent d'honorer les anciennes divinités, et les factions chrétiennes poursuivent leurs disputes. La vie religieuse change lentement, mais elle change en profondeur."
+          "text": "だからといって、帝国に暮らす人々の全員が、一夜にしてキリスト教徒になるわけではありません。多くの人はこれまでどおり古い神々をあがめ続け、キリスト教の内部でも、さまざまな派が互いに論争を続けます。宗教生活の変化はゆっくりですが、そのぶん根本から深く変わっていきます。"
         },
         {
           "type": "timeline",
           "events": [
             {
-              "date": "312",
-              "title": "Bataille du pont Milvius",
-              "detail": "Constantin bat Maxence et devient maître de l'Occident."
+              "date": "312年",
+              "title": "ミルウィウス橋の戦い",
+              "detail": "コンスタンティヌスがマクセンティウスを破り、西方の支配者になります。"
             },
             {
-              "date": "313",
-              "title": "Édit de Milan",
-              "detail": "Les chrétiens obtiennent la liberté de culte."
+              "date": "313年",
+              "title": "ミラノ勅令",
+              "detail": "キリスト教徒が信教の自由を正式に得ます。"
             },
             {
-              "date": "325",
-              "title": "Concile de Nicée",
-              "detail": "Les évêques adoptent le Credo de Nicée."
+              "date": "325年",
+              "title": "ニカイア公会議",
+              "detail": "司教たちがニカイア信条を採択します。"
             },
             {
-              "date": "361-363",
-              "title": "Règne de Julien",
-              "detail": "Retour éphémère des anciens dieux."
+              "date": "361-363年",
+              "title": "ユリアヌスの治世",
+              "detail": "古い神々が束の間よみがえります。"
             },
             {
-              "date": "380",
-              "title": "Édit de Thessalonique",
-              "detail": "Le christianisme de Nicée devient religion d'État."
+              "date": "380年",
+              "title": "テッサロニキ勅令",
+              "detail": "ニカイア派のキリスト教が国教になります。"
             }
           ]
         }
@@ -126,24 +126,24 @@
     },
     {
       "id": "course_307_comment_le_christianisme_est_il_devenu_p4",
-      "title": "Une société changée en profondeur",
+      "title": "根底から大きく変わったローマ社会",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le christianisme dispose désormais d'institutions reconnues, de privilèges juridiques et d'une influence durable sur la vie publique. Les évêques deviennent des personnages clés : ils tranchent des litiges, participent à l'administration de l'empire et servent de diplomates. Le calendrier chrétien se diffuse : le dimanche et les grandes fêtes rythment la vie publique. Le droit romain, puis le droit européen, se construit dans des sociétés où les idées chrétiennes façonnent le mariage, la famille, la sexualité et la pratique religieuse."
+          "text": "キリスト教は、公認された制度、法的な特権、そして公の生活に長く続く影響力を、ようやく手にします。司教は重要な人物になり、人々のあいだの訴訟に裁定を下し、帝国の行政にも加わり、外交の使者の役目も果たします。キリスト教の暦も広まり、日曜日や大きな祝祭が、人々の公の生活にリズムを与えるようになります。ローマ法、そしてのちのヨーロッパの法は、キリスト教の考え方が結婚、家族、性、そして宗教の実践のあり方を形づくった社会の中で、少しずつ築かれていきます。"
         },
         {
           "type": "paragraph",
-          "text": "Entre la légalisation de 313 et l'édit de 380, il s'écoule moins de **70 ans**. Pour le statut légal du christianisme, c'est un bouleversement. Mais la transformation la plus profonde prend des siècles. L'empereur a changé la loi ; il n'a pas pu changer d'un coup la façon dont les gens croyaient, vivaient et pensaient."
+          "text": "313年の合法化から380年の勅令までは、**七十年**足らずです。キリスト教の法的な地位にとっては、まさに大変動でした。しかし、最も深い変化が起こるには数世紀かかります。皇帝は法を変えましたが、人々の信じ方、暮らし方、考え方までを一気に変えることはできませんでした。"
         },
         {
           "type": "funFact",
-          "text": "Constantin a légalisé le christianisme, mais il n'a été baptisé qu'à la fin de sa vie. Devenir le protecteur politique des chrétiens et devenir soi-même un chrétien pleinement initié n'étaient pas forcément un seul et même moment."
+          "text": "コンスタンティヌスはキリスト教を合法にしましたが、洗礼を受けたのは生涯の終わりになってからでした。キリスト教徒の政治的な保護者になることと、自分自身が完全に入信したキリスト教徒になることは、かならずしも同じ瞬間の出来事ではなかったのです。"
         },
         {
           "type": "takeaway",
-          "text": "Constantin rend le christianisme légal en 313, Théodose en fait la religion officielle en 380 : la loi bascule en deux générations, les croyances mettent des siècles à suivre."
+          "text": "コンスタンティヌスは313年にキリスト教を合法にし、テオドシウスは380年にそれを国教にしました。法は二世代で大きく変わり、人々の信仰が追いつくには数世紀かかります。"
         }
       ]
     }

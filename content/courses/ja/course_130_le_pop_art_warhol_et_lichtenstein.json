@@ -1,136 +1,136 @@
 {
   "id": "course_130_le_pop_art_warhol_et_lichtenstein",
-  "title": "Comment Warhol et Lichtenstein ont-ils fait du banal un art ?",
-  "subtitle": "années 1950-1970",
+  "title": "ウォーホルとリキテンスタインは、どうやってありふれたものを芸術にしたのでしょうか？",
+  "subtitle": "1950〜1970年代",
   "subject": "art",
   "subcategory": "絵画と芸術運動",
-  "description": "Le Pop Art répond à la société de consommation. **Warhol** et **Lichtenstein** font de la publicité, des comics et des stars un grand art.",
+  "description": "ポップ・アートは、消費社会への応答として生まれました。**ウォーホル**と**リキテンスタイン**は、広告やコミック、スターを、大きな芸術に変えます。",
   "hero": {
     "image": "le_pop_art_warhol_et_lichtenstein",
     "ratio": "16:9",
-    "hook": "Une boîte de soupe, une case de BD : et si le banal était l'icône du siècle ?"
+    "hook": "スープ缶、マンガのひとコマ。もし、ありふれたものこそが世紀のアイコンだったとしたら？"
   },
   "sections": [
     {
       "id": "course_130_le_pop_art_warhol_et_lichtenstein_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le **Pop Art**, du milieu des années **1950** aux années **1970**, répond à la [[1950〜60年代のアメリカ消費社会]] et à la culture de masse. Publicité, bande dessinée, stars hollywoodiennes : tout devient matière à art."
+          "text": "**ポップ・アート**は、**1950年代**半ばから**1970年代**にかけて、[[1950〜60年代のアメリカ消費社会]]と大衆文化に応える形で広がりました。広告、マンガ、ハリウッドスター。あらゆるものが芸術の素材になります。"
         },
         {
           "type": "paragraph",
-          "text": "Avec **Andy Warhol** et **Roy Lichtenstein**, la frontière saute entre le musée et le supermarché. L'objet quotidien devient icône. La valeur de l'œuvre et le rôle de l'artiste s'en trouvent bouleversés."
+          "text": "**アンディ・ウォーホル**と**ロイ・リキテンスタイン**によって、美術館とスーパーマーケットの境目がなくなります。日用品がアイコンになり、作品の価値も、芸術家の役割も、大きく揺さぶられました。"
         }
       ]
     },
     {
       "id": "course_130_le_pop_art_warhol_et_lichtenstein_p1",
-      "title": "Du quotidien au musée",
+      "title": "日常から美術館へ",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le Pop Art naît en **Grande-Bretagne** avec l'[[インディペンデント・グループ]], mais c'est aux **États-Unis**, dans les années **1960**, qu'il explose. Après-guerre, prospérité, supermarchés, logos partout : le paysage visuel des Américains a changé."
+          "text": "ポップ・アートは**イギリス**で[[インディペンデント・グループ]]とともに生まれましたが、爆発的に広がったのは**1960年代**の**アメリカ**です。戦後の豊かさ、スーパーマーケット、あちこちにあふれるロゴ。アメリカ人の目に映る景色は、すっかり変わりました。"
         },
         {
           "type": "funFact",
-          "text": "En 1957, Richard Hamilton définit le Pop Art par des adjectifs : « éphémère », « bon marché », « sexy ». Un art à consommer aussi vite qu'un magazine."
+          "text": "1957年、リチャード・ハミルトンは、ポップ・アートを「一時的」「安価」「セクシー」という形容詞で定義します。雑誌のように、すぐに消費される芸術というわけです。"
         },
         {
           "type": "paragraph",
-          "text": "Les artistes pop s'opposent à l'[[抽象表現主義]], ces toiles introspectives alors dominantes. Quand Warhol peint des soupes, il montre que l'individu se définit par ce qu'il achète. La répétition vide l'image de son émotion pour n'en garder que l'efficacité commerciale."
+          "text": "ポップの芸術家たちは、当時主流だった内省的な絵画、[[抽象表現主義]]に対抗しました。ウォーホルがスープ缶を描くのは、人は何を買うかで自分が決まる、と示すためです。繰り返しは、イメージから感情を抜き取り、商業的な効き目だけを残します。"
         }
       ]
     },
     {
       "id": "course_130_le_pop_art_warhol_et_lichtenstein_p2",
-      "title": "Warhol : l'atelier comme usine",
+      "title": "ウォーホル：アトリエは工場",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Andy Warhol** (1928-1987), ancien graphiste publicitaire, applique les méthodes de l'industrie à l'art. Sa **Factory**, à New York, n'est plus un sanctuaire solitaire : assistants et amis produisent ensemble."
+          "text": "**アンディ・ウォーホル**（1928〜1987年）は、元は広告のグラフィックデザイナーで、産業の手法を芸術に持ち込みました。ニューヨークの**ファクトリー**は、もはや孤独な聖域ではなく、助手や友人がいっしょに作品を生み出す場です。"
         },
         {
           "type": "image",
           "asset": "andy_warhol_factory_silkscreen_marilyn",
           "ratio": "4:3",
-          "caption": "Marilyn en série : la star comme produit reproductible."
+          "caption": "シリーズ化されたマリリン：複製できる商品としてのスター。"
         },
         {
           "type": "funFact",
-          "text": "Warhol accumulait plus de 600 « capsules temporelles » : boîtes où il jetait courriers, factures et même restes de nourriture."
+          "text": "ウォーホルは、「タイムカプセル」と呼ぶ箱を600個以上ためこんでいました。手紙や請求書、食べ残しまで放り込んだ箱です。"
         },
         {
           "type": "paragraph",
-          "text": "Sa technique reine : la [[シルクスクリーン]], qui permet de reproduire une image des dizaines de fois. En multipliant Marilyn Monroe, il illustre l'idée de [[アウラと機械的複製（ヴァルター・ベンヤミン）]] : plus l'image circule, moins elle est « sacrée », plus elle devient icône. La célébrité elle-même est un produit."
+          "text": "得意の技法は[[シルクスクリーン]]で、一つの画像を何十枚も刷れます。マリリン・モンローを繰り返し並べることで、ウォーホルは[[アウラと機械的複製（ヴァルター・ベンヤミン）]]の考え方を形にしました。画像が広まるほど「神聖さ」は薄れ、アイコンになっていきます。有名であること自体が商品なのです。"
         }
       ]
     },
     {
       "id": "course_130_le_pop_art_warhol_et_lichtenstein_p3",
-      "title": "Lichtenstein : la BD agrandie",
+      "title": "リキテンスタイン：拡大されたマンガ",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Roy Lichtenstein** (1923-1997) s'attaque au langage des **comics**. Il isole une case chargée de cliché émotionnel et la peint en format monumental."
+          "text": "**ロイ・リキテンスタイン**（1923〜1997年）は、**コミック**の表現に目をつけました。感情の決まり文句にあふれたひとコマを選び出し、巨大なサイズで描きます。"
         },
         {
           "type": "image",
           "asset": "roy_lichtenstein_comic_ben_day_dots_painting",
           "ratio": "4:3",
-          "caption": "Points Ben-Day peints à la main : l'usine imitée par le geste."
+          "caption": "手描きのベンデイ・ドット：工場の印刷を、手の動きで再現。"
         },
         {
           "type": "funFact",
-          "text": "Pour juger une composition, Lichtenstein regardait ses toiles à l'envers dans un miroir, afin de voir si elles tenaient de façon purement abstraite."
+          "text": "構図がよいかどうかを確かめるため、リキテンスタインは自分の絵を鏡に映し、上下を逆さにして見ていました。純粋に抽象として成り立っているかを見るためです。"
         },
         {
           "type": "paragraph",
-          "text": "Sa signature : le point [[ベンデイ・ドット]], ces petits points d'impression industrielle qui créent des nuances. Il les peint à la main au pochoir : des heures pour imiter ce qu'une machine fait en secondes. *Whaam!* transforme une case de diversion en peinture d'histoire moderne."
+          "text": "トレードマークは[[ベンデイ・ドット]]です。陰影を生む、工業印刷の小さな点のことです。これをステンシルで、手で描きます。機械なら数秒でできることを、何時間もかけて真似るのです。*『Whaam!』*は、気晴らしのコマを、現代の歴史画に変えます。"
         }
       ]
     },
     {
       "id": "course_130_le_pop_art_warhol_et_lichtenstein_p4",
-      "title": "L'héritage : du marché aux réseaux",
+      "title": "受け継がれたもの：市場からSNSへ",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le Pop Art change le marché et les institutions. La marque de l'artiste compte autant que le geste. En **2022**, un portrait de Marilyn par Warhol atteint **195 millions** de dollars : l'image de masse, sacralisée, devient le bien le plus précieux."
+          "text": "ポップ・アートは、美術市場と美術館のあり方を変えました。芸術家のブランドが、描く行為と同じくらい重みを持ちます。**2022年**には、ウォーホルが描いたマリリンの肖像が**195,000,000ドル**に達しました。大衆的なイメージが聖なるものとなり、最も価値ある財産になったのです。"
         },
         {
           "type": "timeline",
           "events": [
             {
-              "date": "1957",
-              "title": "Définition du Pop",
-              "detail": "Hamilton résume le mouvement : éphémère, bon marché, sexy."
+              "date": "1957年",
+              "title": "ポップの定義",
+              "detail": "ハミルトンは、この運動を「一時的、安価、セクシー」とまとめます。"
             },
             {
-              "date": "années 1960",
-              "title": "Factory et comics",
-              "detail": "Warhol et Lichtenstein imposent l'esthétique pop aux USA."
+              "date": "1960年代",
+              "title": "ファクトリーとコミック",
+              "detail": "ウォーホルとリキテンスタインが、ポップの美学をアメリカに根づかせます。"
             },
             {
-              "date": "2022",
-              "title": "Marilyn à 195 M$",
-              "detail": "L'icône de masse devient trophée absolu du marché."
+              "date": "2022年",
+              "title": "マリリンが195,000,000ドルに",
+              "detail": "大衆のアイコンが、市場の究極のトロフィーになります。"
             }
           ]
         },
         {
           "type": "paragraph",
-          "text": "La prédiction de Warhol sur les « 15 minutes de célébrité » est devenue notre quotidien numérique. Mèmes et recyclage d'images descendent en droite ligne de cette révolution."
+          "text": "ウォーホルが予言した「15分間の有名人」は、私たちのデジタルな日常になりました。ミームやイメージの再利用は、この革命の流れをまっすぐに引いています。"
         },
         {
           "type": "takeaway",
-          "text": "Le Pop Art a brisé la barrière entre art savant et culture de masse. Par la sérigraphie et les points Ben-Day, Warhol et Lichtenstein ont fait des objets quotidiens et des stars des icônes durables."
+          "text": "ポップ・アートは、高尚な芸術と大衆文化の壁を打ち破りました。シルクスクリーンとベンデイ・ドットを通じて、ウォーホルとリキテンスタインは、日用品とスターを色あせないアイコンにしました。"
         }
       ]
     }

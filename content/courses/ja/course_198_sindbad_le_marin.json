@@ -1,114 +1,114 @@
 {
   "id": "course_198_sindbad_le_marin",
-  "title": "Que cachent les sept voyages de Sindbad le marin ?",
-  "subtitle": "Sept voyages",
+  "title": "船乗りシンドバッドの七つの航海は、何を隠しているのか",
+  "subtitle": "七つの航海",
   "subject": "mythologie",
   "subcategory": "世界の神話",
-  "description": "Sindbad le marin : sept voyages, monstres et trésors. Derrière le merveilleux, le portrait du marchand-aventurier de l'âge d'or islamique.",
+  "description": "船乗りシンドバッド：七つの航海、怪物、財宝。不思議な物語の向こうに見えるのは、イスラーム黄金期を生きた商人冒険家の姿です。",
   "hero": {
     "image": "sindbad_le_marin",
     "ratio": "16:9",
-    "hook": "Sept fois, il part riche ou curieux. Sept fois, la mer le brise. Sept fois, il revient plus riche encore."
+    "hook": "七度、豊かな身で、あるいは好奇心に駆られて旅立ちます。七度、海に打ちのめされます。七度、前よりさらに豊かになって帰ってきます。"
   },
   "sections": [
     {
       "id": "course_198_sindbad_le_marin_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Sindbad le marin** appartient aux **Mille et Une Nuits**, mais pas au vieux noyau perse du recueil. Son cycle de sept voyages s'est fixé plus tard, en Égypte, vers le XVe siècle."
+          "text": "**船乗りシンドバッド**は**千夜一夜物語**に収められていますが、物語集のいちばん古いペルシア由来の核には含まれません。七つの航海の連作が定まったのは、もっとあと、十五世紀ごろのエジプトです。"
         },
         {
           "type": "paragraph",
-          "text": "Il incarne le voyageur-marchand de l'**âge d'or islamique** : piété, cupidité, courage, et l'incapacité de rester tranquille une fois riche. Derrière les monstres, on lit une allégorie de la fortune qui monte et qui tombe."
+          "text": "シンドバッドは、**イスラーム黄金期**の旅する商人を体現しています。敬虔さ、強欲、勇気、そして豊かになってもじっとしていられない性分です。怪物の背後には、栄えては没落する運命の寓話が読み取れます。"
         }
       ]
     },
     {
       "id": "course_198_sindbad_le_marin_p1",
-      "title": "La structure cyclique de l'aventure",
+      "title": "同じ型をくり返す、冒険の循環構造",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le récit s'ouvre à Bagdad. **Sindbad le Marin**, désormais âgé et fortuné, raconte ses épreuves à un porteur nommé lui aussi Sindbad (parfois Hindbad). Le contraste de classe est immédiat."
+          "text": "物語はバグダードで始まります。年を重ねて裕福になった**船乗りシンドバッド**が、同じくシンドバッド（ヒンドバッドと呼ばれることもあります）という名の荷担ぎ人に、自分の苦難を語ります。身分の差がすぐに際立ちます。"
         },
         {
           "type": "image",
           "asset": "baghdad_medieval_islamic_golden_age_trade",
           "ratio": "4:3",
-          "caption": "Bagdad, point de départ et de retour des voyages de Sindbad."
+          "caption": "バグダード。シンドバッドの航海の出発点であり、帰る場所。"
         },
         {
           "type": "paragraph",
-          "text": "Chaque voyage suit la même mécanique : lassitude de la vie sédentaire, départ du port de [[バスラ]], naufrage, survie dans une terre inconnue, retour chargé de trésors. Le chiffre sept, chargé de sens dans la [[イスラームの世界観]], donne à la série une dimension initiatique : de l'imprudence à la sagesse."
+          "text": "どの航海も同じ流れをたどります。定住生活に飽き、[[バスラ]]の港を出発し、難破し、見知らぬ土地で生き延び、財宝を積んで帰ってくるのです。七という数は[[イスラームの宇宙観]]で重い意味を持ち、この連作に、未熟さから知恵へという成長の趣を与えています。"
         }
       ]
     },
     {
       "id": "course_198_sindbad_le_marin_p2",
-      "title": "Un bestiaire fantastique entre mythe et réalité",
+      "title": "神話と現実のあいだを行き交う、幻想的な動物たち",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le **Roc** (ou Rokh), oiseau dont l'envergure occulte le soleil, a marqué l'imaginaire mondial. On y voit l'écho de récits de voyageurs arabes sur les côtes d'Afrique de l'Est."
+          "text": "**ロック鳥**（ルフとも）は、翼を広げると太陽を隠すほどの鳥で、世界の想像力に深い跡を残しました。東アフリカの沿岸を旅したアラブ人の話が、その背景にあると見られています。"
         },
         {
           "type": "image",
           "asset": "sinbad_roc_giant_bird_illustration",
           "ratio": "4:3",
-          "caption": "Le Roc, oiseau géant des voyages de Sindbad."
+          "caption": "ロック鳥。シンドバッドの航海に出てくる巨大な鳥。"
         },
         {
           "type": "funFact",
-          "text": "Le Roc s'inspire probablement de l'**Aepyornis**, oiseau-éléphant de Madagascar disparu vers l'an 1000. Ses œufs faisaient jusqu'à 150 fois le volume d'un œuf de poule."
+          "text": "ロック鳥は、おそらく**エピオルニス**に着想を得ています。1000年ごろに絶滅したマダガスカルの象鳥です。その卵は、ニワトリの卵の最大150倍の体積がありました。"
         },
         {
           "type": "paragraph",
-          "text": "Sindbad affronte aussi le **Vieillard de la mer**, qui s'accroche à son dos, et l'**île-tortue**, sol trompeur. La **vallée des diamants**, où l'on jette de la viande pour coller les gemmes, circule déjà chez les Anciens. Le merveilleux sédimente des siècles de [[中世のアラブ交易路]]."
+          "text": "シンドバッドは、ほかにも背中にしがみつく**海の老人**や、足場に見えて裏切る**亀の島**と出会います。**ダイヤモンドの谷**（宝石をくっつけるために肉を投げ入れる）の話は、すでに古代の人々のあいだに伝わっていました。この不思議な話は、何世紀にもわたる[[中世のアラブ交易路]]の歴史が積み重なってできています。"
         }
       ]
     },
     {
       "id": "course_198_sindbad_le_marin_p3",
-      "title": "Le miroir de l'Âge d'or du commerce arabe",
+      "title": "アラブ交易の黄金時代を、そのまま映し出す鏡",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le cadre est historique. Aux VIIIe et IXe siècles, les marins de Bassora et de Siraf dominent l'océan Indien. Les escales de Sindbad évoquent des lieux réels : [[セレンディブ]] (Ceylan) pour les épices, l'Asie du Sud-Est pour le camphre, les côtes pour les perles."
+          "text": "舞台は史実に基づいています。8〜9世紀、バスラとシーラーフの船乗りがインド洋を支配していました。シンドバッドの寄港地は、実在の場所を思わせます。香辛料なら[[セレンディブ]]（セイロン）、樟脳なら東南アジア、真珠なら沿岸部です。"
         },
         {
           "type": "image",
           "asset": "arab_indian_ocean_trade_routes_medieval_ship",
           "ratio": "4:3",
-          "caption": "Navires arabes sur les routes de l'océan Indien."
+          "caption": "インド洋の交易路を行き交う、アラブの船の数々。"
         },
         {
           "type": "paragraph",
-          "text": "Sindbad n'est pas un guerrier : c'est un marchand-aventurier, statut prestigieux dans une société qui valorise le commerce. On y trouve la mousson, des navires cousus de fibres de coco plutôt que cloués. Parallèle occidental : [[マルコ・ポーロ（西洋の対比）]], qui décrit l'Asie en faits, là où Sindbad la peint en merveilles."
+          "text": "シンドバッドは戦士ではありません。商人であり冒険家で、商いを重んじる社会では名誉ある身分でした。物語にはモンスーンが出てきますし、釘ではなくヤシの繊維で縫い合わせた船も登場します。西洋で対になる人物は[[マルコ・ポーロ（西洋の対比）]]です。アジアを事実で記したマルコ・ポーロに対し、シンドバッドは驚異で描きます。"
         }
       ]
     },
     {
       "id": "course_198_sindbad_le_marin_p4",
-      "title": "L'héritage universel : de l'Orient à l'Occident",
+      "title": "世界じゅうに広がった遺産：東洋から西洋へ",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Traduits au XVIIIe siècle par **Antoine Galland**, les voyages nourrissent le [[冒険物語]] européen, de Defoe à Jules Verne. Le cinéma en fait souvent un corsaire au service de princesses. Erreur : Sindbad est d'abord un citadin de Bagdad, survivant par la foi et l'ingéniosité."
+          "text": "十八世紀に**アントワーヌ・ガラン**が翻訳した航海譚は、デフォーからジュール・ヴェルヌまで、ヨーロッパの[[冒険小説]]を育てました。映画では、王女に仕える海賊として描かれがちです。これは誤解で、シンドバッドはまずバグダードの町人であり、信仰と機転で生き延びる人物です。"
         },
         {
           "type": "funFact",
-          "text": "Le nom de Sindbad évoquerait le « prince du fleuve Sindh », l'Indus, au carrefour des mondes arabe et indien."
+          "text": "シンドバッドの名は、アラブとインドの世界が出会う場所を流れるインダス川、つまり「シンド川の王子」を思わせるといわれます。"
         },
         {
           "type": "takeaway",
-          "text": "**Sindbad** incarne l'âge d'or maritime islamique en **sept** voyages cycliques : le Roc et les diamants masquent une réalité, celle des marchands arabes maîtres de l'océan Indien."
+          "text": "**シンドバッド**は、循環する**七**つの航海を通じて、イスラームの海の黄金期を体現しています。ロック鳥やダイヤモンドは現実を覆い隠していますが、その現実とは、インド洋を制したアラブの商人たちです。"
         }
       ]
     }

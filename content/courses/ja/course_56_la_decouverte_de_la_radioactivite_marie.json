@@ -1,98 +1,98 @@
 {
   "id": "course_56_la_decouverte_de_la_radioactivite_marie",
-  "title": "La découverte de la radioactivité",
-  "subtitle": "Marie Curie",
+  "title": "放射能の発見をめぐる物語とその歩み",
+  "subtitle": "マリー・キュリー",
   "subject": "sciences",
   "subcategory": "世界を変えた発見",
-  "description": "Marie Curie, avec Pierre Curie et Henri Becquerel, ouvre le chapitre de la radioactivité. Deux prix Nobel, un travail écrasant, et un héritage immense.",
+  "description": "マリー・キュリーは、ピエール・キュリー、アンリ・ベクレルとともに、放射能研究の扉を開きました。二度のノーベル賞、過酷な研究、そして大きな遺産を残しています。",
   "hero": {
     "image": "la_decouverte_de_la_radioactivite_marie_curie",
     "ratio": "16:9",
-    "hook": "Elle a pesé des tonnes de minerai pour isoler quelques grammes d'un élément invisible."
+    "hook": "何トンもの鉱石を処理して、目に見えない元素をほんの数グラムだけ取り出しました。"
   },
   "sections": [
     {
       "id": "course_56_la_decouverte_de_la_radioactivite_marie_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Marie Curie** (née Maria Skłodowska) est la première femme à recevoir un prix Nobel. Elle reste la seule personne à en avoir reçu **deux** dans deux sciences différentes : physique, puis chimie."
+          "text": "**マリー・キュリー**（旧姓マリア・スクウォドフスカ）は、女性として初めてノーベル賞を受けた人です。異なる二つの科学分野、物理学と化学で**二度**ノーベル賞を受けた人は、今もマリー・キュリーただ一人です。"
         },
         {
           "type": "paragraph",
-          "text": "Son sujet : la **radioactivité**, c'est-à-dire le fait que certains atomes envoient spontanément de l'énergie et des particules."
+          "text": "マリーが取り組んだテーマは**放射能**です。つまり、ある種の原子がエネルギーや粒子を自然に外へ放出するという現象のことです。"
         }
       ]
     },
     {
       "id": "course_56_la_decouverte_de_la_radioactivite_marie_p1",
-      "title": "Une porte étroite vers la science",
+      "title": "科学の世界へと続く、せまい門",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Née en Pologne, elle part étudier à Paris car les universités locales ferment beaucoup de portes aux femmes. Elle travaille dur, souvent dans des conditions précaires."
+          "text": "ポーランドに生まれたマリーは、地元の大学が女性に門戸を閉ざしていたため、パリへ学びに行きます。懸命に勉強を続けますが、暮らしはしばしば苦しいものでした。"
         },
         {
           "type": "paragraph",
-          "text": "Elle épouse **Pierre Curie**, physicien. Ensemble, ils forment un duo de laboratoire rare pour l'époque."
+          "text": "やがて物理学者の**ピエール・キュリー**と結婚します。二人は、当時としてはめずらしい、研究室の名コンビになりました。"
         }
       ]
     },
     {
       "id": "course_56_la_decouverte_de_la_radioactivite_marie_p2",
-      "title": "Nommer l'invisible",
+      "title": "見えないものに名前をつける",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En **1896**, **Henri Becquerel** remarque que l'uranium voile des plaques photographiques sans lumière. Marie Curie décide d'étudier ce phénomène en détail. Elle invente le mot **radioactivité**."
+          "text": "**1896年**、**アンリ・ベクレル**は、ウランが光に当てなくても写真乾板を感光させることに気づきます。マリー・キュリーはこの現象を詳しく調べることにし、**放射能**という言葉を生み出しました。"
         },
         {
           "type": "image",
           "asset": "marie_curie_pitchblende_radioactivity",
           "ratio": "4:3",
-          "caption": "Des tonnes de pechblende pour isoler le radium et le polonium."
+          "caption": "数トンのピッチブレンドから、ラジウムとポロニウムを取り出しました。"
         },
         {
           "type": "paragraph",
-          "text": "Avec Pierre, elle découvre deux nouveaux éléments : le **polonium** (nommé d'après la Pologne) et le **radium**. Pour les isoler, il faut traiter d'énormes quantités de minerai, la pechblende."
+          "text": "ピエールとともに、二つの新しい元素を発見します。**ポロニウム**（ポーランドにちなんで命名）と**ラジウム**です。これらを取り出すには、原料の鉱石であるピッチブレンドを大量に処理しなければなりませんでした。"
         },
         {
           "type": "funFact",
-          "text": "Le radium brille faiblement dans le noir. On s'en est d'abord émerveillé… avant de comprendre sa dangerosité."
+          "text": "ラジウムは暗闇でほのかに光ります。人々は最初それに驚嘆しましたが、やがてその危険性を知ることになります。"
         }
       ]
     },
     {
       "id": "course_56_la_decouverte_de_la_radioactivite_marie_p3",
-      "title": "Gloire et prix à payer",
+      "title": "栄光と、その代償",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En **1903**, Marie, Pierre et Becquerel reçoivent le Nobel de physique. En **1911**, Marie reçoit seule le Nobel de chimie. Pierre meurt accidentellement en 1906. Elle continue."
+          "text": "**1903年**、マリーとピエール、ベクレルがノーベル物理学賞を受けます。**1911年**には、マリーが単独でノーベル化学賞を受けました。ピエールは1906年に事故で亡くなりますが、マリーは研究を続けます。"
         },
         {
           "type": "paragraph",
-          "text": "Pendant la Première Guerre mondiale, elle organise des unités mobiles de radiographie pour soigner les blessés. Elle expose son corps à des doses que l'on saurait aujourd'hui inacceptables."
+          "text": "第一次世界大戦中、マリーは負傷者の治療のために移動式のレントゲン車を組織します。自分の体も、今なら受け入れられないとわかるほどの量の放射線にさらしていました。"
         }
       ]
     },
     {
       "id": "course_56_la_decouverte_de_la_radioactivite_marie_p4",
-      "title": "Un héritage à double face",
+      "title": "二つの顔をもつ遺産",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La radioactivité a permis la radiothérapie contre certains cancers… et aussi les armes nucléaires. Le savoir est neutre ; ses usages ne le sont pas."
+          "text": "放射能のおかげで、一部のがんに対する放射線治療が可能になりました。同時に、核兵器も生まれました。知識そのものは中立ですが、その使い道は中立ではありません。"
         },
         {
           "type": "takeaway",
-          "text": "Marie Curie a transformé une observation étrange en science nouvelle : la radioactivité. Son travail a ouvert la physique moderne… au prix de risques alors mal compris."
+          "text": "マリー・キュリーは、奇妙な観察を新しい科学へと発展させました。それが放射能です。その仕事は現代物理学への道を開きましたが、当時はまだ十分に理解されていなかった危険と引き換えでした。"
         }
       ]
     }

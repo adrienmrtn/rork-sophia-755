@@ -1,106 +1,106 @@
 {
   "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap",
-  "title": "Comment a-t-on découvert l'électricité ?",
-  "subtitle": "De Franklin à Tesla",
+  "title": "電気はどのようにして発見されたの？",
+  "subtitle": "フランクリンからテスラまで",
   "subject": "sciences",
   "subcategory": "世界を変えた発見",
-  "description": "L'électricité n'a pas été inventée d'un coup. On l'a d'abord observée, puis comprise, puis domestiquée. Voici les étapes clés.",
+  "description": "電気は一度に発明されたわけではありません。まず観察され、次に理解され、やがて人の暮らしに役立てられるようになりました。その主な段階を見ていきます。",
   "hero": {
     "image": "la_decouverte_de_l_electricite",
     "ratio": "16:9",
-    "hook": "De la foudre au smartphone : deux siècles pour apprivoiser l'invisible."
+    "hook": "雷からスマホまで、目に見えない力を手なずけるのに2世紀かかりました。"
   },
   "sections": [
     {
       "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L'électricité existe dans la nature : foudre, poissons électriques, frottements. Ce qui a changé le monde, c'est d'apprendre à la **produire**, la **transporter** et s'en servir."
+          "text": "電気は自然の中にもあります。雷、電気魚、摩擦で起きる静電気などです。世界を変えたのは、電気を**つくり**、**送り**、使いこなす方法を学んだことでした。"
         },
         {
           "type": "paragraph",
-          "text": "Cette histoire s'étale sur plus de deux siècles, avec des expériences risquées et de grandes rivalités."
+          "text": "この歴史は2世紀以上にわたって続き、その間には、危険をともなう実験や、研究者どうしの激しい競争がいくつもありました。"
         }
       ]
     },
     {
       "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p1",
-      "title": "Comprendre la foudre",
+      "title": "雷の正体を知る",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Au XVIIIe siècle, **Benjamin Franklin** montre que la foudre est un phénomène électrique. Son expérience du cerf-volant (souvent racontée de façon romancée) vise à prouver que le ciel et la machine à frottement jouent avec la même force."
+          "text": "十八世紀、**ベンジャミン・フランクリン**は、雷が電気現象であることを示しました。凧の実験（よく脚色して語られます）は、空の雷と摩擦起電機が同じ力で動いていることを証明しようとしたものです。"
         },
         {
           "type": "image",
           "asset": "benjamin_franklin_kite_lightning_experiment",
           "ratio": "4:3",
-          "caption": "Franklin relie foudre et électricité : une idée dangereuse, mais fondatrice."
+          "caption": "フランクリンは雷と電気を結びつけました。危険ですが、基礎となる発想でした。"
         },
         {
           "type": "paragraph",
-          "text": "On invente aussi le **paratonnerre**, une tige métallique qui offre à la foudre un chemin sûr vers le sol. L'électricité sort du mystère pour entrer dans l'ingénierie."
+          "text": "**避雷針**も発明されました。金属の棒で、雷が安全に地面へ抜ける道をつくるしくみです。電気は謎めいたものから、工学の対象へと変わっていきました。"
         }
       ]
     },
     {
       "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p2",
-      "title": "Faraday : produire du courant",
+      "title": "ファラデー：電流をつくる",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Au XIXe siècle, **Michael Faraday** montre qu'un aimant en mouvement près d'un fil peut créer un courant électrique. C'est l'**induction**. Sans cette idée, pas de dynamo, pas d'alternateur, pas de centrale électrique moderne."
+          "text": "十九世紀、**マイケル・ファラデー**は、導線の近くで磁石を動かすと電流が生まれることを示しました。これが**電磁誘導**です。この発想がなければ、発電機も交流発電機も、現代の発電所もありませんでした。"
         },
         {
           "type": "image",
           "asset": "faraday_electromagnetic_induction_experiment",
           "ratio": "4:3",
-          "caption": "Faraday transforme le mouvement et le magnétisme en courant."
+          "caption": "ファラデーは、動きと磁気から電流をつくり出しました。"
         },
         {
           "type": "funFact",
-          "text": "Faraday venait d'un milieu modeste et a commencé comme relieur de livres. Il a appris la science en lisant ce qu'il reliaba."
+          "text": "ファラデーは貧しい家に生まれ、製本職人として働き始めました。科学は、自分が製本していた本を読んで学んだのです。"
         }
       ]
     },
     {
       "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p3",
-      "title": "Edison contre Tesla",
+      "title": "エジソン対テスラ",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "À la fin du XIXe siècle, deux camps s'affrontent. **Thomas Edison** pousse le courant continu. **Nikola Tesla** (et la société Westinghouse) défendent le courant alternatif, plus facile à transporter sur de longues distances."
+          "text": "十九世紀の終わり、電気の方式をめぐって二つの陣営が対立しました。**トーマス・エジソン**は直流を推し、**ニコラ・テスラ**（とウェスティングハウス社）は、遠くまで送りやすい交流を支持しました。"
         },
         {
           "type": "image",
           "asset": "tesla_edison_electric_power_station",
           "ratio": "4:3",
-          "caption": "Le courant alternatif gagne pour alimenter les villes."
+          "caption": "都市に電気を送る方式として、交流が勝ちました。"
         },
         {
           "type": "paragraph",
-          "text": "Le courant alternatif l'emporte pour les réseaux urbains. Les villes s'allument. Les usines changent de rythme."
+          "text": "都市の送電網では交流が勝利を収めます。街に明かりがともり、工場のリズムも変わっていきました。"
         }
       ]
     },
     {
       "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p4",
-      "title": "Un monde branché",
+      "title": "電気でつながる世界",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Aujourd'hui, l'électricité fait tourner hôpitaux, trains, internet, frigos. Le défi n'est plus seulement de la produire, mais de le faire proprement et de façon fiable."
+          "text": "今日、電気は病院も電車もインターネットも冷蔵庫も動かしています。課題は、電気をつくることだけではなく、環境への負担を抑えて安定して供給することです。"
         },
         {
           "type": "takeaway",
-          "text": "L'électricité a été comprise puis domestiquée : Franklin pour la foudre, Faraday pour produire le courant, Tesla et le courant alternatif pour l'amener dans les maisons. Notre quotidien en dépend encore."
+          "text": "電気は理解され、そして手なずけられました。雷はフランクリン、電流の生成はファラデー、家庭への送電はテスラと交流のおかげです。私たちの暮らしは、いまも電気に支えられています。"
         }
       ]
     }

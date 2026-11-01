@@ -1,119 +1,119 @@
 {
   "id": "course_214_la_crise_de_l_etat_providence",
-  "title": "L'État-providence est-il réservé aux citoyens ?",
-  "subtitle": "Algériens et braceros",
+  "title": "福祉国家は、市民だけのためのものなのでしょうか",
+  "subtitle": "アルジェリア人とブラセロ",
   "subject": "comprendreLeMonde",
   "subcategory": "経済と社会",
-  "description": "En France comme aux États-Unis, la protection sociale née après 1945 a aussi été financée par des travailleurs venus des anciennes colonies. Pension refusée à un Algérien, braceros mexicains privés de retraite, bulldozer de Vitry : l'histoire d'une crise plus ancienne que les déficits.",
+  "description": "フランスでもアメリカでも、1945年以降に生まれた社会保障は、かつての植民地から来た労働者にも支えられてきました。年金を拒まれたアルジェリア人、退職後の保障を奪われたメキシコ人ブラセロ、ヴィトリーのブルドーザー。財政赤字よりずっと古い危機の歴史です。",
   "author": "mark-n-hoffman",
   "hero": {
     "image": "bracero_mexican_farmworkers_california_1942_lange",
     "ratio": "4:3",
-    "hook": "Pour les travailleurs venus des anciennes colonies, la crise de l'État-providence n'a pas commencé avec les déficits : elle a commencé dès le premier jour."
+    "hook": "かつての植民地から来た労働者にとって、福祉国家の危機は財政赤字から始まったのではありません。最初の日から、すでに始まっていたのです。"
   },
   "sections": [
     {
       "id": "course_214_la_crise_de_l_etat_providence_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En **2025**, les comptes de la Sécurité sociale française affichent un déficit de **21,6 milliards d'euros**. Aux États-Unis, les administrateurs de la Social Security, le régime fédéral de retraite, prévoient l'épuisement de ses réserves en **2034**. Pour beaucoup, ces chiffres le prouvent : l'[[福祉国家]], cet ensemble de retraites, de soins et d'allocations financé par l'impôt, est en crise."
+          "text": "**2025年**、フランスの社会保障会計は二百十六億ユーロの赤字を抱えています。アメリカでは、連邦の年金制度であるソーシャル・セキュリティの運営者が、積立金が**2034年**に底をつくと見込んでいます。多くの人はこうした数字を見て、年金、医療、各種手当を税金でまかなう仕組み、つまり[[福祉国家]]は危機にあると考えます。"
         },
         {
           "type": "paragraph",
-          "text": "Mais un État ne fait pas que payer : il décide aussi qui a droit à quoi. En 2025, le président américain Donald Trump ordonne aux agences fédérales de durcir le contrôle des immigrés sans papiers, au nom des retraites et des soins des citoyens. Ces immigrés sont pourtant déjà exclus de la plupart des prestations. Quand un gouvernement déclare la crise de l'État-providence, de quels bénéficiaires parle-t-il ?"
+          "text": "しかし国は、お金を払うだけではありません。だれが何を受け取れるかも決めています。2025年、アメリカのドナルド・トランプ大統領は、市民の年金と医療を守るためとして、連邦機関に在留資格のない移民への取り締まりを強めるよう命じました。ところが、こうした移民は、ほとんどの給付からすでに除外されています。政府が福祉国家の危機を口にするとき、いったいだれの受給を問題にしているのでしょうか。"
         }
       ]
     },
     {
       "id": "course_214_la_crise_de_l_etat_providence_p1",
-      "title": "Le pacte d'après-guerre et ses exclus",
+      "title": "戦後の協定と、そこから外された人びと",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Après la Seconde Guerre mondiale, industriels, syndicats et gouvernement américains passent un marché. Les ouvriers de l'industrie obtiennent de meilleurs salaires et une couverture sociale ; en échange, les syndicats soutiennent la production de masse et rangent leurs revendications les plus radicales. Le politiste Mark Rupert voit dans ces syndicats de citoyens le « partenaire junior » de l'arrangement."
+          "text": "第二次世界大戦後、アメリカの企業、労働組合、政府は、ある取引を結びました。それは、こんな内容でした。工業労働者はより高い賃金と社会保障を手に入れ、その代わりに、労働組合は大量生産を支え、最も急進的な要求を引っこめることにしたのです。政治学者のマーク・ルパートは、市民から成るこうした労働組合を、この取り決めにおける「ジュニア・パートナー」と見ています。"
         },
         {
           "type": "image",
           "asset": "renault_billancourt_immigrant_workers_assembly_line",
           "ratio": "4:5",
-          "caption": "Affiche de Mai 1968 de l'atelier populaire des Beaux-Arts : les ouvriers de Renault-Billancourt, grande usine de main-d'œuvre immigrée."
+          "caption": "1968年5月のポスター。美術学校ボザールの民衆アトリエの作品で、移民労働者の多い大工場、ルノー・ビヤンクールの労働者を描いています。"
         },
         {
           "type": "paragraph",
-          "text": "La France crée de son côté un système public d'assurance sociale plus large, où employeurs et salariés cotisent tous deux ; l'État y a depuis allégé les cotisations patronales sur les bas salaires pour favoriser l'embauche. Les deux pactes ont pourtant un point commun : ils privilégient une main-d'œuvre nationale aux dépens des non-citoyens venus des colonies. Les usines françaises embauchent des Algériens, hier colonisés, que l'administration requalifie en « étrangers immigrés ». Les fermes américaines recrutent des Mexicains dont les contrats les tiennent à l'écart des ayants droit."
+          "text": "フランスは独自に、より広い公的社会保険制度をつくり、雇用主と被用者の双方が保険料を負担します。国はその後、雇用を促すため、低賃金層への雇用主負担を軽くしてきました。それでも、二つの協定には共通点があります。どちらも、植民地から来た市民権のない人びとを犠牲にして、自国民の労働力を優遇したのです。フランスの工場は、かつて植民地支配を受けていたアルジェリア人を雇い、行政は彼らを「移民外国人」に分類し直しました。アメリカの農場はメキシコ人を雇いましたが、その契約のせいで、彼らは受給資格者の外に置かれました。"
         }
       ]
     },
     {
       "id": "course_214_la_crise_de_l_etat_providence_p2",
-      "title": "L'affaire Mazari : une pension refusée",
+      "title": "マザリ事件：支給を拒まれた年金のゆくえ",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En **1986**, Mazari, un Algérien vivant en France métropolitaine, demande un complément à sa pension d'invalidité française, une aide réservée aux pensionnés à faibles revenus. La caisse refuse. Un citoyen français avec la même pension et les mêmes revenus l'aurait obtenu : c'est sa nationalité qui motive le refus. En **1991**, la [[破毀院]], plus haute juridiction civile du pays, casse ce refus fondé sur la nationalité."
+          "text": "**1986年**、フランス本土に住むアルジェリア人のマザリは、フランスの障害年金への上乗せ給付を申請します。低所得の年金受給者向けの支援です。ところが金庫は拒否しました。同じ年金額と所得を持つフランス市民なら受け取れたはずで、拒否の理由は国籍でした。**1991年**、国内の民事の最高裁判所にあたる[[破毀院]]は、国籍にもとづくこの拒否を破棄しました。"
         },
         {
           "type": "image",
           "asset": "cour_de_cassation_paris_palais_de_justice",
           "ratio": "16:9",
-          "caption": "La Cour de cassation siège au Palais de justice de Paris, sur l'île de la Cité."
+          "caption": "破毀院は、パリのシテ島にある司法宮に置かれています。パリの中心部にあります。"
         },
         {
           "type": "paragraph",
-          "text": "En **1993**, un député influent, Jean Charroppin, relaie une inquiétude répandue : de telles demandes risquent d'alourdir le « budget social » de la France. La crainte est claire : d'autres immigrés des anciennes colonies pourraient contester les mêmes refus. Or, depuis l'époque coloniale, le travail mal payé des Algériens enrichit les employeurs français et finance, par impôts et cotisations, l'État-providence lui-même. Leur refuser les droits des citoyens revient à rétablir un ordre colonial."
+          "text": "**1993年**、有力な議員ジャン・シャロパンは、広がっていた不安を代弁しました。こうした申請が増えれば、フランスの「社会保障予算」が重くなるというのです。恐れていたのは、旧植民地出身のほかの移民も同じ拒否に異議を申し立てることでした。しかし、植民地時代から、アルジェリア人の低賃金労働はフランスの雇用主を潤し、税と保険料を通じて福祉国家そのものを支えてきました。彼らに市民の権利を認めないことは、植民地的な秩序を取り戻すことにほかなりません。"
         }
       ]
     },
     {
       "id": "course_214_la_crise_de_l_etat_providence_p3",
-      "title": "Les braceros, un colonialisme importé",
+      "title": "ブラセロと、輸入された植民地主義",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Aux États-Unis, la même logique s'applique dans les champs. Le [[ブラセロ計画]] permet aux grands exploitants agricoles de recruter des citoyens mexicains pour les récoltes, sur des contrats temporaires. Après **juillet 1951**, ces ouvriers sous contrat ne sont plus couverts par la Social Security. Le Mexique, contrairement à l'Algérie sous domination française, est pourtant un pays indépendant."
+          "text": "アメリカでは、同じ論理が農場で働いていました。[[ブラセロ計画]]によって、大規模な農場主は、収穫期の人手として、一時的な契約でメキシコ市民を雇えるようになります。**1951年7月**以降、こうした契約労働者はソーシャル・セキュリティの対象から外されました。それでもメキシコは、フランスの支配下にあったアルジェリアとは違って、独立国なのです。"
         },
         {
           "type": "funFact",
-          "text": "La loi américaine interdisait autrefois de faire venir des travailleurs étrangers sous contrat, vus comme une menace pour le travail libre. En 1951, le Congrès fait une exception pour le programme bracero, déjà en place : les contrats attachent les ouvriers à un emploi temporaire et imposent leur retour au Mexique."
+          "text": "アメリカの法律は、かつては契約労働者を外国から連れてくることを禁じていました。自由な労働への脅威と見られていたからです。1951年、議会はすでに動いていたブラセロ計画だけを例外としました。契約は労働者を一時的な仕事に縛りつけ、メキシコへの帰国を義務づけるものでした。"
         },
         {
           "type": "paragraph",
-          "text": "L'historienne Mae Ngai parle d'un [[輸入された植民地主義]] : les travailleurs mexicains entrent dans l'économie américaine sans place sûre dans la communauté politique, ni la retraite et les soins promis de naissance aux citoyens. L'exclusion vaut encore pour les ouvriers agricoles sous visa H-2A, dont les employeurs ne paient aucune cotisation de Social Security. Par des voies juridiques variées, France et États-Unis ont intégré ces travailleurs à une main-d'œuvre impériale en limitant leurs droits."
+          "text": "歴史家のメイ・ンガイは、これを[[輸入された植民地主義]]と呼びます。メキシコ人労働者はアメリカ経済に入りましたが、政治共同体の中に確かな居場所はなく、市民が生まれながらに約束されている年金や医療も受けられませんでした。この排除は、H-2Aビザで働く農業労働者に今も続いており、雇用主はソーシャル・セキュリティの保険料をまったく払いません。法的な手段は違っても、フランスとアメリカは、権利を制限することで、こうした労働者を帝国の労働力に組み込んできたのです。"
         }
       ]
     },
     {
       "id": "course_214_la_crise_de_l_etat_providence_p4",
-      "title": "Le « seuil de tolérance » et le bulldozer de Vitry",
+      "title": "「許容限度」という考えと、ヴィトリーのブルドーザー",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le philosophe [[エティエンヌ・バリバール]] s'est penché sur une conviction largement partagée : l'immigration aurait franchi un « [[許容限度]] ». Ses partisans, de droite comme de gauche, accusent volontiers les immigrés de raréfier les emplois, de surcharger les logements et d'encombrer les hôpitaux."
+          "text": "哲学者の[[エティエンヌ・バリバール]]は、広く共有されているある信念を調べました。移民の数は、もう「[[許容限度]]」を超えたという考えです。右派にも左派にもこれを支持する人がいて、移民が仕事を奪い、住宅を圧迫し、病院を混雑させていると、すぐに非難します。"
         },
         {
           "type": "paragraph",
-          "text": "En **décembre 1980**, à Vitry-sur-Seine, le maire communiste Paul Mercieca envoie un bulldozer bloquer un foyer occupé par des travailleurs maliens. [[ジョルジュ・マルシェ]], le chef du Parti communiste français, le défend : Vitry ne peut pas accueillir davantage d'immigrés. Là, être français compte visiblement plus qu'être ouvrier, même pour des communistes."
+          "text": "**1980年十二月**、ヴィトリー＝シュル＝セーヌで、共産党のポール・メルシエカ市長は、マリ人労働者が住む寮の入口をふさぐためにブルドーザーを送りました。フランス共産党の党首[[ジョルジュ・マルシェ]]はこれを擁護し、ヴィトリーにはこれ以上移民を受け入れられないと述べました。共産党員にとってさえ、労働者であることよりフランス人であることのほうが重いのは明らかでした。"
         },
         {
           "type": "image",
           "asset": "georges_marchais_portrait_1981",
           "ratio": "2:3",
-          "caption": "Georges Marchais, secrétaire général du Parti communiste français, vers 1981."
+          "caption": "フランス共産党の書記長、ジョルジュ・マルシェ。1981年ごろの写真です。"
         },
         {
           "type": "paragraph",
-          "text": "Depuis longtemps, la France et les États-Unis recrutent dans leurs anciennes colonies des travailleurs pour leurs économies impériales. Leur travail a produit des profits et des recettes. Les règles sociales leur ont refusé des droits égaux, et quand ils ont demandé un logement ou une aide, l'administration y a vu des coûts nouveaux. Les alertes budgétaires arrivent bien tard : pour les travailleurs immigrés, l'État-providence est en crise depuis le début."
+          "text": "フランスもアメリカも、ずっと前から旧植民地の労働者を、自国の帝国的な経済のために雇ってきました。彼らの労働は、利益と税収を生みました。それなのに社会保障の規則は対等な権利を与えず、彼らが住居や支援を求めると、行政はそこに新しい負担を見ただけで、権利を認めようとはしませんでした。財政への警告が出るのは、あまりに遅すぎます。移民労働者にとって、福祉国家は最初から危機にあったのです。"
         },
         {
           "type": "takeaway",
-          "text": "En France comme aux États-Unis, l'État-providence, financé aussi par le travail des Algériens et des braceros mexicains, leur a refusé des droits égaux dès l'origine : sa crise n'a pas commencé avec les déficits."
+          "text": "フランスでもアメリカでも、福祉国家はアルジェリア人やメキシコ人ブラセロの労働にも支えられながら、彼らに対等な権利を最初から認めませんでした。その危機は財政赤字から始まったのではありません。"
         }
       ]
     }

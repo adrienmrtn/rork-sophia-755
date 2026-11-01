@@ -1,116 +1,116 @@
 {
   "id": "course_171_hercule_et_ses_12_travaux",
-  "title": "Hercule et ses 12 travaux",
-  "subtitle": "Du chaos à l'Olympe",
+  "title": "ヘラクレスと12の功業",
+  "subtitle": "混沌からオリュンポスへ",
   "subject": "mythologie",
   "subcategory": "ギリシア：英雄",
-  "description": "Héraclès, fils de Zeus, tue sa famille dans un accès de folie. Ses Douze Travaux sont une pénitence : tuer des monstres, puis vaincre la mort elle-même.",
+  "description": "ゼウスの子ヘラクレスは、狂気の発作で家族を殺してしまいます。十二の功業はその償いです。怪物を倒し、最後には死そのものにも打ち勝ちます。",
   "hero": {
     "image": "hercule_et_ses_12_travaux",
     "ratio": "16:9",
-    "hook": "Douze épreuves pour laver un crime. Un demi-dieu qui finit parmi les dieux."
+    "hook": "罪を洗い清めるための十二の試練。最後は神々の仲間入りをする半神。"
   },
   "sections": [
     {
       "id": "course_171_hercule_et_ses_12_travaux_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Héraclès**, appelé **Hercule** par les Romains, est le plus grand héros grec. Fils de [[ゼウス]], roi des dieux, et de la mortelle **Alcmène**, il n'est pas seulement un colosse. Il incarne la force, mais aussi la violence et la rédemption."
+          "text": "**ヘラクレス**は、ローマ人に**ヘルクレス**と呼ばれた、ギリシア最大の英雄です。神々の王[[ゼウス]]と、人間の女**アルクメネ**の子で、ただの怪力の持ち主ではありません。力の象徴であると同時に、暴力と贖いの象徴でもあります。"
         },
         {
           "type": "paragraph",
-          "text": "Ses **Douze Travaux** ne sont pas une quête de gloire volontaire. C'est une pénitence pour un crime atroce. En purgeant le monde des monstres, Héraclès ouvre la voie à la civilisation… et gagne, rare privilège, l'immortalité."
+          "text": "**十二の功業**は、自分から栄光を求めた冒険ではありません。恐ろしい罪に対する償いです。世界から怪物を取り除くことで、ヘラクレスは文明への道を開き、そして、めったにない特権として不死を手に入れます。"
         }
       ]
     },
     {
       "id": "course_171_hercule_et_ses_12_travaux_p1",
-      "title": "La folie d'Héra, le crime, la pénitence",
+      "title": "ヘラがもたらした狂気、罪、そして償い",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "[[ヘラ]], épouse légitime de Zeus, hait l'enfant né d'une infidélité. Dès le berceau, elle envoie deux serpents. Le nourrisson les étouffe à mains nues. Plus tard, Héraclès épouse **Mégara**, fille du roi de Thèbes. Héra le frappe alors de folie : il massacre sa femme et ses enfants."
+          "text": "ゼウスの正妻[[ヘラ]]は、不貞から生まれた子を憎みます。揺りかごにいる赤ん坊のもとへ、2匹の蛇を送りました。赤ん坊は素手で蛇を絞め殺します。のちにヘラクレスは、テーバイ王の娘**メガラ**と結婚します。するとヘラは彼を狂気に陥れ、ヘラクレスは妻と子どもたちを殺してしまいます。"
         },
         {
           "type": "paragraph",
-          "text": "Ce crime de sang, un [[ミアスマ（穢れ）]], le place hors de la société. L'oracle de Delphes lui ordonne de servir son cousin, le roi **Eurysthée**. Ce souverain peureux, guidé par Héra, lui impose dix travaux, puis douze, car il refuse d'en compter certains."
+          "text": "血にまみれたこの罪は[[ミアスマ（穢れ）]]とされ、彼を社会から締め出します。デルフォイの神託は、いとこの**エウリュステウス**王に仕えるよう命じます。臆病なこの王は、ヘラの入れ知恵で、まず十の功業を課し、さらに十二に増やします。いくつかは数に入れないと言い張ったからです。"
         },
         {
           "type": "funFact",
-          "text": "Selon la légende, le lait d'Héra, jailli de son sein alors qu'elle allaitait Héraclès par ruse, aurait formé la **Voie lactée** dans le ciel."
+          "text": "伝説によれば、ヘラが策略によってヘラクレスに乳を飲ませたとき、胸からほとばしった乳が空に**天の川**をつくったといいます。"
         }
       ]
     },
     {
       "id": "course_171_hercule_et_ses_12_travaux_p2",
-      "title": "Lions, hydres et écuries",
+      "title": "ライオン、ヒュドラ、家畜小屋",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le premier défi est le **Lion de Némée**, à la peau impénétrable. Héraclès l'étrangle, puis le dépouille avec ses propres griffes. Cette peau, la [[レオンテー]], devient son armure. Vient ensuite l'**Hydre de Lerne**, serpent à plusieurs têtes : pour chaque tête coupée, deux repoussent. Avec son neveu Iolaos, il cautérise les cous au feu."
+          "text": "最初の難題は、皮が刃を通さない**ネメアのライオン**です。ヘラクレスは首を絞めて倒し、ライオン自身の爪で皮をはぎます。この皮、[[レオンテー]]は、彼の鎧となります。続いて**レルネのヒュドラ**。多くの頭をもつ蛇で、頭を1つ切ると2つ生えてきます。甥のイオラオスとともに、首の切り口を火で焼いてふさぎます。"
         },
         {
           "type": "image",
           "asset": "hercules_nemean_lion_hydra_labours_painting",
           "ratio": "4:3",
-          "caption": "Héraclès face au Lion de Némée et à l'Hydre."
+          "caption": "ネメアのライオンとヒュドラに立ち向かうヘラクレス"
         },
         {
           "type": "funFact",
-          "text": "Les Anciens disaient que Zeus avait placé le Lion de Némée parmi les étoiles : la constellation du **Lion**."
+          "text": "古代の人々は、ゼウスがネメアのライオンを星々のあいだに置いたと語りました。それが**しし座**です。"
         },
         {
           "type": "paragraph",
-          "text": "Les **Écuries d'Augias** changent de registre. Des milliers de bœufs n'ont pas été nettoyés depuis trente ans. Eurysthée veut humilier le héros. Héraclès détourne les fleuves [[アルペイオス川]] et Pénée : en un jour, le courant emporte le fumier. L'intelligence vaut autant que les muscles."
+          "text": "**アウゲイアスの家畜小屋**は、毛色の違う難題です。数千頭の牛の小屋が、三十年も掃除されていませんでした。エウリュステウスは英雄に恥をかかせようとします。ヘラクレスは[[アルペイオス川]]とペネイオス川の流れを引き込み、1日で水流が汚物を押し流します。力と同じくらい、知恵も物を言うのです。"
         }
       ]
     },
     {
       "id": "course_171_hercule_et_ses_12_travaux_p3",
-      "title": "Jusqu'aux confins du monde",
+      "title": "世界のはずれ、地の果てまで",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Les travaux l'éloignent de la Grèce : Taureau de Crète, juments mangeuses d'hommes, ceinture d'**Hippolyte**, reine des Amazones. Pour le troupeau du géant **Géryon**, à l'extrême Occident, Héraclès ouvre un passage entre Méditerranée et Atlantique : les [[ヘラクレスの柱]], aujourd'hui le détroit de Gibraltar."
+          "text": "功業は、ヘラクレスをギリシアから遠くへ連れ出します。クレタの雄牛、人食い馬、アマゾン族の女王**ヒッポリュテ**の帯。西の果てにいる巨人**ゲリュオン**の牛を連れ帰るため、ヘラクレスは地中海と大西洋のあいだに道を開きます。それが[[ヘラクレスの柱]]で、今のジブラルタル海峡にあたります。"
         },
         {
           "type": "paragraph",
-          "text": "Il vole les **pommes d'or** des Hespérides en rusant avec le titan [[アトラス]], qui porte le ciel. Le dernier travail est le plus terrible : descendre aux Enfers et en ramener **Cerbère**, le chien à plusieurs têtes. En ressortir vivant, c'est symboliquement vaincre la mort."
+          "text": "ヘラクレスは、天を支えるティタンの[[アトラス]]をうまくだまして、ヘスペリデスの**黄金のリンゴ**を盗み出します。最後の功業がいちばん恐ろしいものでした。冥界へ降り、頭がいくつもある犬**ケルベロス**を連れ戻すのです。生きて戻ることは、象徴的に死に打ち勝つことを意味します。"
         },
         {
           "type": "funFact",
-          "text": "L'explorateur Orellana aurait nommé le fleuve **Amazone** après avoir cru voir des guerrières sur ses rives, en écho aux Amazones du mythe."
+          "text": "探検家オレリャーナは、川の岸辺に女戦士がいるのを見たと思い、神話のアマゾン族にちなんで**アマゾン川**と名づけたといわれます。"
         }
       ]
     },
     {
       "id": "course_171_hercule_et_ses_12_travaux_p4",
-      "title": "L'apothéose : un héros devient dieu",
+      "title": "神格化：一人の英雄が神々の仲間入りをする",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Les Travaux finissent, mais pas les tragédies. Sa femme **Déjanire** lui fait porter une tunique imbibée du sang empoisonné du [[ケンタウロス（半人半馬）]] Nessus. Brûlé vif, Héraclès monte sur un bûcher au mont Œta. Sa part mortelle brûle. Son essence divine monte vers l'Olympe : c'est l'**apothéose**."
+          "text": "功業は終わりますが、悲劇は終わりません。妻**デイアネイラ**は、[[ケンタウロス（半人半馬）]]のネッソスの毒の血にひたした衣を、夫に着せます。生きながら焼かれるヘラクレスは、オイテ山で薪の山に登ります。人間の部分は燃え尽きます。神の本質はオリュンポスへ昇ります。これが**神格化**です。"
         },
         {
           "type": "image",
           "asset": "hercules_olympus_divinization_rubens_painting",
           "ratio": "4:3",
-          "caption": "L'apothéose d'Héraclès : le héros rejoint les dieux."
+          "caption": "ヘラクレスの神格化：英雄は神々の仲間入りをする"
         },
         {
           "type": "paragraph",
-          "text": "Réconcilié avec Héra, il épouse **Hébé**, l'éternelle jeunesse. Les Romains adoptent sa figure sous le nom d'**Hercule**. Un « travail herculéen » désigne encore une tâche immense. Héraclès n'est pas qu'un tueur de monstres : il est un architecte de l'ordre."
+          "text": "ヘラと和解したヘラクレスは、永遠の若さの女神**ヘベ**と結婚します。ローマ人はこの英雄を**ヘルクレス**の名で受け入れました。今も「ヘラクレスのような仕事」といえば、途方もない大仕事を指します。ヘラクレスは怪物を退治するだけの存在ではなく、秩序をつくった存在でもあるのです。"
         },
         {
           "type": "takeaway",
-          "text": "**Héraclès** (Hercule) accomplit douze travaux pour expier le meurtre de sa famille. Du Lion de Némée à Cerbère, il passe du chaos à la civilisation… et gagne l'immortalité."
+          "text": "**ヘラクレス**（ヘルクレス）は、家族を殺した罪を償うため、十二の功業をなしとげます。ネメアのライオンからケルベロスまで、混沌から文明へと進み、そして不死を手に入れます。"
         }
       ]
     }

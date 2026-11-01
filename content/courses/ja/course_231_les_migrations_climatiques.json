@@ -1,98 +1,98 @@
 {
   "id": "course_231_les_migrations_climatiques",
-  "title": "Migrations climatiques : qui protège ceux qui doivent partir ?",
-  "subtitle": "216 millions de déplacés d'ici 2050 ?",
+  "title": "気候移住：出ていかざるをえない人を、だれが守るのか",
+  "subtitle": "2050年までに2億1千6百万人が故郷を追われる？",
   "subject": "comprendreLeMonde",
   "subcategory": "環境と未来",
-  "description": "Le climat va forcer des centaines de millions de personnes à quitter leur foyer, mais aucune loi internationale ne les protège encore.",
+  "description": "気候変動は、数億人もの人びとに住まいを離れさせようとしています。ところが、その人たちを守る国際的な法律は、まだありません。",
   "hero": {
     "image": "les_migrations_climatiques",
     "ratio": "16:9",
-    "hook": "Le climat chasse déjà plus de monde que la guerre, mais aucune loi ne sait comment les appeler."
+    "hook": "気候はすでに、戦争よりも多くの人を故郷から追い出しています。それなのに、その人たちを何と呼べばよいのか、法律は決めていません。"
   },
   "sections": [
     {
       "id": "course_231_les_migrations_climatiques_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Une montée des eaux ne s'annonce pas toujours par une vague spectaculaire : elle grignote d'abord un champ, puis un puits, puis un village entier. Ailleurs, une chaleur extrême rend l'air presque impossible à respirer. Dans les deux cas, des familles entières doivent partir, non à cause d'une guerre, mais du climat. Ces départs forcés portent un nom : les **migrations climatiques**. Le problème, c'est qu'aucune loi internationale ne les reconnaît vraiment."
+          "text": "海面の上昇は、いつも大きな波とともにやってくるわけではありません。最初は畑が、次に井戸が、やがて村ごと少しずつ削られていきます。別の場所では、極端な暑さのせいで、空気を吸うのもつらくなります。どちらの場合も、家族そろって土地を離れなければなりません。理由は戦争ではなく、気候です。こうした強いられた移動は**気候移住**と呼ばれます。問題は、これを本当の意味で認める国際的な法律がないことです。"
         }
       ]
     },
     {
       "id": "course_231_les_migrations_climatiques_p1",
-      "title": "Un exode déjà plus grand que la guerre",
+      "title": "すでに戦争を上回っている人びとの移動",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En **2022**, un chiffre a marqué un tournant : les catastrophes climatiques ont provoqué **60 millions de déplacements internes**, des départs forcés à l'intérieur même d'un pays. Pour la première fois, ce nombre a dépassé celui des personnes fuyant les guerres."
+          "text": "**2022年**は、ひとつの数字が転換点になった年です。気候災害によって**6千万件の国内避難**、つまり同じ国の内側での、強いられた移動が起きました。この数字が、戦争から逃れる人の数を初めて上回ったのです。"
         },
         {
           "type": "funFact",
-          "text": "En **2009**, le gouvernement des [[モルディブ]] a tenu un conseil des ministres sous l'eau, en bouteilles d'oxygène et combinaison de plongée, pour alerter le monde sur la disparition possible de cet archipel."
+          "text": "**2009年**、[[モルディブ]]政府は、酸素ボンベとダイビングスーツを身につけて水中で閣議を開きました。この島々が消えてしまうかもしれないと、世界に訴えるためです。"
         },
         {
           "type": "image",
           "asset": "2015_refugee_migration_crisis_europe_mediterranean",
           "ratio": "16:9",
-          "caption": "Des migrants traversent la Méditerranée : la crise climatique s'ajoute désormais aux crises politiques comme moteur des départs."
+          "caption": "地中海を渡る移民の人びと。移動の原因として、政治的な危機に加えて、今では気候危機も重なるようになりました。"
         },
         {
           "type": "paragraph",
-          "text": "La suite s'annonce plus inquiétante : la **Banque mondiale** estime que sans effort massif, le changement climatique pourrait forcer **216 millions de personnes** à migrer d'ici **2050**. Au Bangladesh, l'océan grignote les terres agricoles ; en Afrique subsaharienne, c'est l'eau qui manque ; dans le Pacifique, certains États insulaires risquent la disparition totale de leur territoire."
+          "text": "この先はさらに心配です。**世界銀行**は、大規模な対策をとらなければ、気候変動によって**2050年**までに**2億1千6百万人**が移住を迫られるおそれがあると見積もっています。バングラデシュでは海が農地を侵食し、サハラ以南のアフリカでは水が足りません。太平洋では、国土そのものが完全に失われかねない島国もあります。"
         }
       ]
     },
     {
       "id": "course_231_les_migrations_climatiques_p2",
-      "title": "Deux vitesses de rupture : le choc et l'usure",
+      "title": "土地を離れさせる二つの速さ：衝撃と、じわじわ進む消耗",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Il existe deux façons pour le climat de chasser les populations. Les **catastrophes soudaines**, comme les tempêtes, provoquent des départs brutaux mais souvent provisoires, avant que la capacité des habitants à rebondir ne s'épuise à force de répétition. Les **dégradations lentes**, elles, transforment un territoire pour toujours : la montée des eaux rend les sols salés, tuant les cultures avant même que l'eau n'atteigne les maisons, tandis que la désertification change peu à peu des pâturages en terres stériles, poussant des communautés nomades vers une [[強制的な定住化]] ou l'exil en ville."
+          "text": "気候が人びとを故郷から追い立てるやり方には、大きく分けて二つあります。**突発的な災害**、たとえば嵐は、急な、しかも多くは一時的な避難を引き起こします。ただし、くり返されるうちに住民の立ち直る力は尽きていきます。一方、**ゆっくり進む環境悪化**は、土地を永久に変えてしまいます。海面が上がると土が塩分を含むようになり、水が家に届く前に作物が枯れます。砂漠化が進むと牧草地が少しずつ不毛の地へと変わっていき、遊牧の共同体は[[強制的な定住化]]を迫られるか、都市へ逃れていくしかなくなります。"
         },
         {
           "type": "paragraph",
-          "text": "Une nouvelle menace inquiète les scientifiques : la **chaleur humide**. Quand température et humidité dépassent un certain seuil, le corps ne peut plus se refroidir en transpirant. D'ici 2050, certaines régions du Golfe Persique ou d'Asie du Sud pourraient devenir mortelles pour quiconque reste à l'extérieur plus de quelques heures."
+          "text": "科学者たちは、新たな脅威として**湿球高温**に注目しています。気温と湿度がある限界を超えると、汗をかいても体を冷やせなくなります。2050年までに、ペルシア湾岸や南アジアの一部の地域では、数時間以上外にいる人にとって命にかかわる、きわめて危険な環境になるおそれがあります。"
         }
       ]
     },
     {
       "id": "course_231_les_migrations_climatiques_p3",
-      "title": "Un vide juridique face à une crise mondiale",
+      "title": "世界的な危機に立ちはだかる、法律上の空白",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Malgré l'évidence de la crise, les personnes déplacées par le climat tombent dans un [[法の空白]]. Le terme de « réfugié climatique », très employé dans les médias, n'a aucune valeur en droit international : la Convention de Genève de 1951 protège les personnes persécutées par leur propre État, mais le changement climatique n'est la faute d'aucun persécuteur précis, c'est un phénomène global."
+          "text": "危機がこれほど明らかなのに、気候によって土地を追われた人びとは[[法の空白]]に落ち込んでいます。メディアでよく使われる「気候難民」という言葉は、国際法上はまったく効力がありません。1951年の難民条約が守るのは、自国の政府に迫害された人です。ところが気候変動には、特定の加害者がいません。地球全体にかかわる現象だからです。"
         },
         {
           "type": "paragraph",
-          "text": "Sans statut officiel, ces personnes ne bénéficient pas du principe de **[[ノン・ルフールマン]]**, qui interdit de renvoyer quelqu'un vers un endroit où sa vie serait en danger. Cette absence de protection crée une injustice : les pays les plus touchés ont historiquement le moins pollué, tandis que les pays riches ferment souvent leurs frontières. D'où l'idée d'une **dette climatique** : la responsabilité morale des pays industrialisés envers les populations rendues vulnérables par leur propre développement."
+          "text": "正式な地位がなければ、こうした人びとは**[[ノン・ルフールマン]]**の原則による保護を受けられません。この原則は、命が危険にさらされる場所へ人を送り返すことを禁じています。保護がないことで、不公平も生まれます。最も被害を受けている国は、歴史的に見て汚染の原因がいちばん小さい国です。それなのに、豊かな国は国境を閉ざしがちです。そこで出てきたのが**気候債務**という考え方です。自国の発展によって弱い立場に追いやられた人びとに対し、先進国が負う道義的な責任のことです。"
         }
       ]
     },
     {
       "id": "course_231_les_migrations_climatiques_p4",
-      "title": "Vers une reconnaissance et une adaptation locale",
+      "title": "法的な認定と、地域に根ざした適応をめざして",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Certains pays cherchent déjà des solutions inédites. Les petits États insulaires réfléchissent à rester une nation reconnue par l'ONU même si leur île a disparu sous l'eau. Le Kiribati a par exemple acheté des terres aux Fidji pour préparer, si besoin, la relocalisation de toute sa population."
+          "text": "すでに、これまでにない新しい解決策を探している国もあります。小さな島国は、島が水に沈んでも国連に認められた国家であり続けられないかと考えています。たとえばキリバスは、必要になったときに全国民を移住させる準備として、フィジーに土地を買いました。"
         },
         {
           "type": "paragraph",
-          "text": "En 2018, le **Pacte mondial sur les migrations** a commencé à évoquer les causes environnementales des départs. Mais la priorité reste l'**adaptation locale** : digues, cultures résistantes au sel, systèmes d'alerte, pour permettre aux gens de rester chez eux le plus longtemps possible. Car la migration subie reste toujours vécue comme un échec, et des flux massifs et désordonnés risquent d'alimenter des tensions autour de l'eau et des terres habitables."
+          "text": "**2018年**、**移住のためのグローバル・コンパクト**が、移動の環境的な原因に触れ始めました。それでも優先されるのは、**地域での適応**です。堤防、塩分に強い作物、警報システムなどによって、人びとができるだけ長く自分の家にとどまれるようにします。強いられた移住は、いつでも失敗として受け止められるからです。大規模で無秩序な人の流れは、水や住める土地をめぐる対立を招くおそれもあります。"
         },
         {
           "type": "takeaway",
-          "text": "En 2022, les catastrophes climatiques ont provoqué 60 millions de déplacements internes, dépassant pour la première fois les réfugiés de guerre. Faute de statut juridique reconnu, ces populations restent sans protection face à une crise qui pourrait toucher 216 millions de personnes d'ici 2050."
+          "text": "2022年には、気候災害によって6千万件の国内避難が起き、戦争による難民の数を初めて上回りました。法的に認められた地位がないため、この人たちは保護のないまま取り残されています。この危機は、2050年までに2億1千6百万人に及ぶおそれがあります。"
         }
       ]
     }

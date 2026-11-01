@@ -1,100 +1,100 @@
 {
   "id": "course_49_pourquoi_a_t_on_des_frissons",
-  "title": "Pourquoi a-t-on des frissons ?",
-  "subtitle": "Corps & émotions",
+  "title": "ぞくっとするのは、なぜ起こるのか？",
+  "subtitle": "体と感情",
   "subject": "sciences",
   "subcategory": "暮らしの解説",
-  "description": "Froid, peur, musique : les frissons ont plusieurs causes. Elles passent toutes par le système nerveux, mais pas pour les mêmes raisons.",
+  "description": "寒さ、恐怖、音楽。ぞくっとする感覚にはいくつもの原因があります。どれも神経系を通りますが、理由はそれぞれ違います。",
   "hero": {
     "image": "pourquoi_a_t_on_des_frissons",
     "ratio": "16:9",
-    "hook": "Un frisson de froid et un frisson de musique ne racontent pas la même histoire."
+    "hook": "寒さでぞくっとするのと、音楽でぞくっとするのは、同じ話ではありません。"
   },
   "sections": [
     {
       "id": "course_49_pourquoi_a_t_on_des_frissons_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Tu frissonnes en sortant sous la pluie. Tu frissonnes aussi en entendant une chanson qui te bouleverse. Même mot, mécanismes différents."
+          "text": "雨の中に出ると、体がぶるっと震えます。心を揺さぶる曲を聴いても、ぞくっとします。同じ言葉でも、しくみは違います。"
         },
         {
           "type": "paragraph",
-          "text": "Dans les deux cas, le corps réagit vite. Mais l'un sert surtout à se réchauffer, l'autre touche plutôt au plaisir et aux émotions."
+          "text": "どちらの場合も、体はすばやく反応します。ただ、一方は主に体を温めるためで、もう一方はむしろ快感や感情に関わっています。"
         }
       ]
     },
     {
       "id": "course_49_pourquoi_a_t_on_des_frissons_p1",
-      "title": "Le frisson du froid : une mini-chaudière",
+      "title": "寒いときの震え：体の中の小さなボイラー",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le corps veut rester autour de **37 °C**. Quand la peau détecte le froid, elle prévient une zone du cerveau, l'**hypothalamus**, qui agit comme un thermostat."
+          "text": "体は**37℃**前後を保とうとします。皮膚が寒さを感じ取ると、脳の一部である**視床下部**に知らせます。視床下部はサーモスタットのように働きます。"
         },
         {
           "type": "image",
           "asset": "goosebumps_cold_skin",
           "ratio": "4:3",
-          "caption": "La chair de poule : un vieux réflexe pour hérisser les poils."
+          "caption": "鳥肌：寒さに毛を逆立てて対抗する、古い反射のなごり"
         },
         {
           "type": "paragraph",
-          "text": "Les muscles se contractent très vite et de façon répétée : c'est le frisson. Ces contractions produisent de la chaleur. La « chair de poule » vient d'un vieux réflexe : hérisser les poils pour mieux isoler. Chez nous, avec peu de fourrure, cela sert surtout de vestige."
+          "text": "筋肉がとても速く、しかもくり返し収縮します。これが震えです。この収縮が熱を生み、体を温めます。「鳥肌」は古い反射に由来していて、毛を逆立てることで断熱をよくするためのものでした。人間のように毛の少ない動物では、今はおもに名残にすぎません。"
         }
       ]
     },
     {
       "id": "course_49_pourquoi_a_t_on_des_frissons_p2",
-      "title": "Le frisson de la peur",
+      "title": "恐怖のぞくぞく",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Face à une menace, le [[交感神経系（闘争か逃走か）]] (la branche « alerte » du système nerveux) se met en marche. Il libère de l'**adrénaline**. Les muscles se tendent, le cœur s'accélère, la peau peut frissonner."
+          "text": "脅威に直面すると、[[交感神経系（闘争か逃走か）]]（神経系の「警戒」を担う部分）が働き出します。**アドレナリン**が出て、筋肉が緊張し、心臓の鼓動が速くなり、肌がぞくっとすることもあります。"
         },
         {
           "type": "image",
           "asset": "adrenaline_stress_response_body",
           "ratio": "4:3",
-          "caption": "L'adrénaline prépare le corps à réagir vite."
+          "caption": "アドレナリンは、体をすばやく反応できる状態にします。"
         },
         {
           "type": "funFact",
-          "text": "Ce même système explique pourquoi tu peux avoir la chair de poule en regardant un film d'horreur… alors que tu es bien au chaud sur ton canapé."
+          "text": "この同じしくみが、ホラー映画を見ているときに鳥肌が立つ理由を説明してくれます。体はソファの上でぽかぽか暖かいのに、です。"
         }
       ]
     },
     {
       "id": "course_49_pourquoi_a_t_on_des_frissons_p3",
-      "title": "Le frisson de la musique",
+      "title": "音楽のぞくぞく",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Certains frissons, appelés parfois « chills », arrivent avec une émotion forte : musique, discours, film. Ils activent le circuit de la **récompense** du cerveau, avec de la **dopamine**, une substance liée au plaisir."
+          "text": "「チルズ」と呼ばれることもあるぞくぞく感は、音楽、演説、映画など、強い感情とともにやってきます。こうしたぞくぞくは、脳の**報酬**回路を働かせ、快感に関わる物質である**ドーパミン**を出します。"
         },
         {
           "type": "paragraph",
-          "text": "Ce n'est pas utile pour survivre immédiatement. C'est plutôt le corps qui réagit à une émotion intense, comme une vague qui passe."
+          "text": "すぐに生き延びるために役立つわけではありません。強い感情に体が反応しているのであって、波が通り過ぎるようなものです。"
         }
       ]
     },
     {
       "id": "course_49_pourquoi_a_t_on_des_frissons_p4",
-      "title": "Quand s'inquiéter ?",
+      "title": "心配なのはどんなとき？",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Des frissons avec forte fièvre peuvent signaler une infection. Des frissons constants sans raison claire méritent un avis médical. Mais la plupart du temps, un frisson de froid, de stress ou de musique est simplement le corps qui fait son travail."
+          "text": "高い熱を伴う悪寒は、感染症のサインかもしれません。はっきりした理由もなく悪寒が続くときは、医師に相談したほうがよいです。ただ、たいていの場合、寒さやストレス、音楽でぞくっとするのは、体がただ自分の仕事をしているだけです。"
         },
         {
           "type": "takeaway",
-          "text": "Les frissons de froid produisent de la chaleur. Ceux de la peur préparent à réagir. Ceux de la musique touchent au plaisir émotionnel. Même sensation, causes différentes."
+          "text": "寒さの震えは熱を生みます。恐怖のぞくぞくは、反応の準備をさせます。音楽のぞくぞくは、感情的な快感に触れます。感覚は同じでも、原因は違うのです。"
         }
       ]
     }

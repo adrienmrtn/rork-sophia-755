@@ -1,113 +1,113 @@
 {
   "id": "course_263_a_quoi_servait_vraiment_la_route_de_la",
-  "title": "À quoi servait vraiment la route de la soie ?",
-  "subtitle": "Chevaux, soie et microbes",
+  "title": "シルクロードは、本当は何のためにあったのか？",
+  "subtitle": "馬、絹、そして微生物",
   "subject": "histoire",
   "subcategory": "古代と中世",
-  "description": "Un empereur chinois voulait des chevaux et des alliés. Il a ouvert sans le savoir le couloir par lequel la soie, le bouddhisme, la variole et la peste ont traversé l'Eurasie.",
+  "description": "中国の皇帝が求めたのは、馬と同盟相手でした。皇帝は知らないうちに、絹や仏教、天然痘やペストがユーラシアを渡っていく通り道を開いていたのです。",
   "author": "ezgi-gizem-berkay",
   "hero": {
     "image": "silk_road_camel_caravan_dunhuang_sand_dunes",
     "ratio": "4:3",
-    "hook": "Ni le marchand ni la peste ne parcouraient la route entière : ils avançaient par relais, d'étape en étape."
+    "hook": "商人もペストも、道の全体を旅したわけではありません。どちらも、宿場から宿場へと、リレーのように進んだのです。"
   },
   "sections": [
     {
       "id": "course_263_a_quoi_servait_vraiment_la_route_de_la_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Aucun empereur n'a décrété son tracé, aucun ingénieur n'en a dessiné le parcours sur une carte. La route de la soie n'est pas une route : c'est un réseau de pistes que le temps a changé en légende. Pourquoi l'a-t-on ouverte, et qu'est-elle devenue ? Deux questions différentes : l'une parle d'une intention, l'autre d'un résultat qui l'a dépassée de très loin."
+          "text": "皇帝がそのルートを定めたわけでも、技師が地図に道筋を描いたわけでもありません。シルクロードは、本当は一本の道ではなく、時が伝説に変えた道の網目です。なぜ開かれたのか、そして何になったのか。この二つは別の問いです。前者は意図について、後者は、その意図をはるかに超えた結果について語っています。"
         },
         {
           "type": "paragraph",
-          "text": "Contrairement à l'idée reçue, la route naît de raisons militaires et diplomatiques. Au **IIe siècle av. J.-C.**, l'empereur Wu, de la dynastie chinoise des Han, envoie son émissaire [[張騫]] vers l'ouest chercher des alliés contre les [[匈奴]], des nomades qui menacent le nord de l'empire. À son retour, Zhang Qian décrit les villes et les richesses de l'Asie centrale, et surtout les légendaires « chevaux célestes » de [[フェルガナ]]."
+          "text": "通説とは違い、この道は、商売ではなく軍事と外交の理由から生まれました。**紀元前2世紀**、漢王朝の武帝は、北方の国境を脅かしていた遊牧民[[匈奴]]に対抗する同盟相手を探すため、使者の[[張騫]]を西方へ送り出します。帰国した張騫は、中央アジアの都市の様子や、そこにある富について、皇帝に報告します。なかでもとりわけ語ったのが、[[フェルガナ]]にいるという伝説的な「天馬」のことでした。"
         }
       ]
     },
     {
       "id": "course_263_a_quoi_servait_vraiment_la_route_de_la_p1",
-      "title": "De la soie aux microbes : un relais fatal",
+      "title": "絹から微生物へ：命取りになったリレー",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ces chevaux valent tant pour l'armée des Han que Wu lance deux grandes campagnes contre Ferghana entre **104 et 101 av. J.-C.** : la « guerre des chevaux célestes ». Une fois ouverte, la route dépasse vite son objectif. Au-delà de la soie, on y échange chevaux, verrerie, pierres précieuses, épices, papier et objets de métal. À Rome, la soie devient le luxe le plus convoité et le symbole de tout ce réseau."
+          "text": "この馬は漢の軍隊にとってあまりに価値が高く、武帝は**紀元前104〜101年**にフェルガナへ二度の大遠征を行います。「天馬の戦争」です。いったん開かれた道は、すぐに当初の目的を超えて広がります。絹のほかにも、馬、ガラス器、宝石、香辛料、紙、金属製品が取引されます。ローマでは、絹がもっとも求められる贅沢品になり、この交易網全体の象徴になります。"
         },
         {
           "type": "image",
           "asset": "mogao_caves_dunhuang_buddhist_mural_silk_road",
           "ratio": "4:3",
-          "caption": "Servantes portant des fleurs, détail d'une copie du « Portrait de dame Wang », peinture murale d'époque Tang à Mogao (Dunhuang)."
+          "caption": "花を運ぶ侍女たち。敦煌の莫高窟に残る唐代の壁画にある「王夫人の肖像」の、模写の細部を拡大して取り上げたもの"
         },
         {
           "type": "funFact",
-          "text": "Le nom est récent : c'est en **1877** que le géographe allemand Ferdinand von Richthofen baptise ces pistes « Seidenstraße », la route de la soie. Avant lui, l'Orient et l'Occident traversaient ces sables sans donner de nom aux liens qu'ils tissaient."
+          "text": "この名前は新しいものです。**1877年**、ドイツの地理学者フェルディナント・フォン・リヒトホーフェンが、これらの道を「ザイデンシュトラーセ」、つまり絹の道と名づけました。それ以前は、東洋と西洋がこの砂漠を行き来しながら、自分たちが結んでいたつながりに名前をつけることはありませんでした。"
         },
         {
           "type": "paragraph",
-          "text": "Avec les marchandises voyagent des hommes et des idées : le bouddhisme entre en Chine, les techniques et les styles artistiques circulent. Mais la cargaison la plus meurtrière est invisible. Les agents pathogènes passent de main en main aussi vite que les soieries et les épices. Ni le marchand ni la peste ne parcourent la route entière : ils avancent par relais, chaque étape transmettant la contagion à la suivante. Les voyageurs et leurs bêtes de somme en sont les principaux vecteurs."
+          "text": "商品とともに、人も思想も旅をします。仏教が中国に入り、技術や芸術の様式も各地を行き来します。しかし、もっとも死をもたらす積み荷は、目に見えません。病原体は、絹織物や香辛料と同じ速さで、人から人へと渡っていきます。商人もペストも、道の全体を旅するわけではありません。どちらもリレーのように進み、それぞれの宿場が、感染を次の宿場へと伝えていく、という具合です。旅人と、荷を運ぶ家畜が、おもな運び手になります。"
         }
       ]
     },
     {
       "id": "course_263_a_quoi_servait_vraiment_la_route_de_la_p2",
-      "title": "Les pestes qui ont ébranlé Rome",
+      "title": "ローマを揺るがした二つの疫病",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Deux grandes épidémies qui ébranlent l'Empire romain sont étroitement liées aux routes commerciales de l'Orient. La première est la [[アントニヌスの疫病]], de **165 à 180**. Les historiens y voient généralement la variole, rapportée par les légions qui rentrent de campagne contre les Parthes. L'épidémie marque le règne de l'empereur **Marc Aurèle**, décime la population et affaiblit l'armée impériale."
+          "text": "ローマ帝国を揺るがした二つの大きな疫病は、東方との交易路と深く結びついています。一つ目は、**165〜180年**の[[アントニヌスの疫病]]です。歴史家の多くは、これを天然痘だと考えており、パルティアとの戦役から帰還した軍団が持ち帰ったとされます。この疫病は皇帝**マルクス・アウレリウス**の治世を特徴づけ、人口を激減させ、帝国軍を弱体化させました。"
         },
         {
           "type": "paragraph",
-          "text": "Près d'un siècle plus tard, la peste de Cyprien frappe à son tour, de **249 à 262**. On la croit venue de l'Orient, mais sa nature exacte fait encore débat : variole, rougeole ou fièvre hémorragique virale ? Une chose est sûre : l'appétit insatiable de Rome pour la soie a fait voyager vers l'Occident des agents pathogènes jusque-là inconnus."
+          "text": "それからおよそ一世紀後、今度はキプリアヌスの疫病が、**249〜262年**にかけて襲います。東方から来たと考えられていますが、その正体は今も議論が続いており、天然痘、はしか、ウイルス性出血熱のいずれなのか分かっていません。ただ一つ確かなのは、ローマが絹を飽くことなく求めたために、それまで知られていなかった病原体が西方へ運ばれたことです。"
         }
       ]
     },
     {
       "id": "course_263_a_quoi_servait_vraiment_la_route_de_la_p3",
-      "title": "De Justinien à la Peste noire",
+      "title": "ユスティニアヌスから黒死病へ",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La peste de Justinien, de **541 à 750**, est reconnue comme la première grande pandémie de peste bubonique, causée par la bactérie [[ペスト菌]]. Les récits de l'époque placent son point de départ à Péluse, en Égypte. Mais ses vraies origines sont ailleurs : le séquençage de l'ADN ancien a établi que la bactérie vient d'Asie centrale et s'est propagée vers l'ouest le long des routes commerciales."
+          "text": "**541〜750年**のユスティニアヌスの疫病は、腺ペストの最初の大流行と認められており、原因は[[ペスト菌]]という細菌です。当時の記録は、その出発点をエジプトのペルシウムとしています。しかし、本当の起源は別の場所にありました。古代DNAの配列解析によって、この細菌が中央アジアに由来し、交易路に沿って西へ広がったことが明らかになっています。"
         },
         {
           "type": "image",
           "asset": "yersinia_pestis_bacteria_electron_micrograph",
           "ratio": "4:3",
-          "caption": "La bactérie Yersinia pestis, responsable de la peste, vue au microscope électronique."
+          "caption": "ペストの原因となるペスト菌（Yersinia pestis）を電子顕微鏡で見た像"
         },
         {
           "type": "paragraph",
-          "text": "L'exemple le plus célèbre de ce mécanisme est la Peste noire du **XIVe siècle**, deuxième pandémie de Yersinia pestis. Elle éclate au moment où l'Empire mongol sécurise et unifie ces réseaux commerciaux : la [[パクス・モンゴリカ]]. La même infrastructure accélère la maladie, d'Asie centrale vers l'Occident. Entre **1347 et 1351**, la pandémie emporte un tiers à la moitié de la population de l'Europe."
+          "text": "この仕組みのもっとも有名な例が、**十四世紀**の黒死病で、ペスト菌による二度目の大流行です。黒死病が起きたのは、モンゴル帝国がこうした交易網を安全にして統合した時期、すなわち[[パクス・モンゴリカ]]のさなかです。同じ基盤が、病気を中央アジアから西方へと加速させたのです。**1347〜1351年**のあいだに、この大流行はヨーロッパの人口の3分の1から半数を奪いました。"
         },
         {
           "type": "timeline",
           "events": [
             {
-              "date": "165",
-              "title": "La peste antonine",
-              "detail": "Sans doute la variole, rapportée par les légions."
+              "date": "165年",
+              "title": "アントニヌスの疫病",
+              "detail": "おそらく天然痘で、軍団が持ち帰りました。"
             },
             {
-              "date": "249",
-              "title": "La peste de Cyprien",
-              "detail": "Sa nature exacte fait encore débat."
+              "date": "249年",
+              "title": "キプリアヌスの疫病",
+              "detail": "正体は今も議論が続いています。"
             },
             {
-              "date": "541",
-              "title": "La peste de Justinien",
-              "detail": "Première grande pandémie de peste bubonique."
+              "date": "541年",
+              "title": "ユスティニアヌスの疫病",
+              "detail": "腺ペストの、最初の世界規模の大流行です。"
             },
             {
-              "date": "1347",
-              "title": "La Peste noire",
-              "detail": "En quatre ans, un tiers à la moitié de l'Europe disparaît."
+              "date": "1347年",
+              "title": "黒死病",
+              "detail": "4年で、ヨーロッパの3分の1から半数が失われます。"
             }
           ]
         }
@@ -115,24 +115,24 @@
     },
     {
       "id": "course_263_a_quoi_servait_vraiment_la_route_de_la_p4",
-      "title": "L'unification microbienne du monde",
+      "title": "微生物がもたらした世界の統一",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La route ne propage pas seulement de grandes épidémies. Elle diffuse aussi des maladies endémiques et silencieuses, qui s'enracinent là où elles passent : la lèpre, la tuberculose, les parasites intestinaux. Le schéma est toujours le même : des mondes longtemps séparés mettent en commun leurs microbes en même temps que leurs marchandises."
+          "text": "道が広めたのは、大きな疫病だけではありません。ゆっくりと目立たないかたちで広がり、通った先々に根づいていく風土病も運びました。ハンセン病、結核、腸内寄生虫などです。そこに見られる図式は、いつも同じです。長いあいだ隔てられていた世界どうしが、商品を持ち寄るのと同じように、それぞれの微生物も持ち寄っていたのです。"
         },
         {
           "type": "paragraph",
-          "text": "Les historiens appellent ce phénomène l'[[世界の微生物的統一]], ou convergence des réservoirs de maladies. L'expression est due à l'historien français **Emmanuel Le Roy Ladurie**, en **1973**. Trois ans plus tard, dans *Plagues and Peoples* (1976), l'historien **William McNeill** pose les bases d'une histoire des rapports entre maladies et sociétés humaines."
+          "text": "歴史家はこの現象を[[世界の微生物的統一]]、つまり病気の保有源の収束と呼びます。この言葉は、フランスの歴史家**エマニュエル・ル・ロワ・ラデュリ**が**1973年**に唱えたものです。3年後、歴史家の**ウィリアム・マクニール**は、*『疫病と世界史』*（1976年）で、病気と人間社会の関わりの歴史の土台を築きました。"
         },
         {
           "type": "paragraph",
-          "text": "Alors, à quoi servait vraiment la route de la soie ? À procurer des chevaux et des alliés à un empereur chinois. Ce qu'elle est devenue : un couloir où ont voyagé la soie, le bouddhisme et le papier, mais aussi la variole et la peste. Ses effets les plus durables n'ont été ni voulus ni prévus."
+          "text": "では、シルクロードは本当は何のためにあったのでしょうか。中国の皇帝に、馬と同盟相手を手に入れさせるためでした。やがて道は、絹、仏教、紙だけでなく、天然痘やペストも運ぶ通り道になりました。もっとも長く続いた影響は、だれも望まず、予想もしなかったものでした。"
         },
         {
           "type": "takeaway",
-          "text": "Ouverte par les Han pour des chevaux et des alliances, la route de la soie est devenue le couloir qui a mis en commun les marchandises, les idées et les microbes de l'Eurasie, de la peste antonine à la Peste noire."
+          "text": "漢が馬と同盟を求めて開いたシルクロードは、やがてユーラシアの商品、思想、そして微生物までも一つに混ぜ合わせる通り道となりました。アントニヌスの疫病から黒死病まで、その影響は続いたのです。"
         }
       ]
     }

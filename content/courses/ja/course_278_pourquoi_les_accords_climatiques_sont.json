@@ -1,119 +1,119 @@
 {
   "id": "course_278_pourquoi_les_accords_climatiques_sont",
-  "title": "Pourquoi les accords climatiques sont-ils si peu respectés ?",
-  "subtitle": "De Kyoto à Paris",
+  "title": "気候変動に関する協定は、なぜほとんど守られないのだろうか",
+  "subtitle": "京都からパリへ",
   "subject": "comprendreLeMonde",
   "subcategory": "環境と未来",
-  "description": "Kyoto imposait des objectifs contraignants, Paris a misé sur des promesses volontaires : dans les deux cas, de grands émetteurs se sont dérobés. Pourquoi des États qui reconnaissent le danger n'arrivent-ils pas à tenir leurs engagements ?",
+  "description": "京都は拘束力のある目標を課し、パリは自主的な約束に賭けました。どちらでも、大排出国が不参加や離脱に回りました。危険を認めている国々が、なぜ約束を守れずにいるのでしょうか。その理由をたどります。",
   "author": "mark-n-hoffman",
   "hero": {
     "image": "cop21_paris_agreement_adoption_2015_fabius_gavel",
     "ratio": "4:3",
-    "hook": "Les États signent, applaudissent, puis se retirent : aucun tribunal ne peut forcer un pays à tenir sa promesse climatique."
+    "hook": "各国は署名し、拍手を送り、やがて離脱します。気候の約束を守らせられる裁判所は、どこにもありません。"
   },
   "sections": [
     {
       "id": "course_278_pourquoi_les_accords_climatiques_sont_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "À l'été **2022**, la chaleur extrême a tué environ **38 000 personnes** en Europe. Si les émissions de [[温室効果ガス]] ne baissent pas, le continent pourrait compter plus de **120 000 morts** par an d'ici 2050. En moins de vingt-cinq ans, la montée des mers pourrait inonder chaque année des côtes entières et déplacer des centaines de millions de personnes, sans compter les récoltes perdues et les maladies dues aux fumées d'incendie et aux eaux polluées."
+          "text": "**2022年**の夏、猛暑によって、ヨーロッパで約**38,000人**が亡くなりました。[[温室効果ガス]]の排出が減らなければ、ヨーロッパでは2050年までに、毎年**120,000人**を超える死者が出るおそれがあります。二十五年もたたないうちに、海面上昇によって毎年沿岸地域がまるごと水没し、数億人が移り住まざるをえなくなるかもしれません。失われる収穫や、山火事の煙や汚れた水による病気は、これに含まれていません。"
         },
         {
           "type": "paragraph",
-          "text": "On pourrait croire que des morts par milliers, des maisons perdues et des pénuries d'eau et de nourriture pousseraient les gouvernements à coopérer. Pourtant, certains des plus gros émetteurs refusent de signer les accords mondiaux sur le climat. D'autres s'en retirent, ou restent loin des réductions nécessaires pour ralentir le réchauffement."
+          "text": "何千人もの死者、失われた家、水と食料の不足を前にすれば、各国政府は協力せざるをえなくなるはずだと思うかもしれません。ところが、最大級の排出国の中には、世界の気候協定への署名を拒む国があります。協定から離脱する国や、温暖化の速度を落とすのに必要な削減からほど遠いままの国もあります。"
         }
       ]
     },
     {
       "id": "course_278_pourquoi_les_accords_climatiques_sont_p1",
-      "title": "Kyoto, 1997 : le prix de la coopération",
+      "title": "京都、1997年：協力の代償とは何か",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Certains gouvernements ont pourtant tenté une réponse collective. En **1997**, le [[京都議定書]] fixe des objectifs de réduction juridiquement contraignants aux pays qui ont le plus contribué au réchauffement. Les pays en développement, eux, n'ont aucun objectif contraignant. Les États-Unis refusent de ratifier le texte : ces pays, jugent-ils, ne supportent pas assez le coût. Le Canada le ratifie en **2002**, puis s'en retire dix ans plus tard."
+          "text": "それでも、集団で対応しようとした政府はありました。**1997年**、[[京都議定書]]は、温暖化に最も責任のある国々に、法的拘束力のある削減目標を定めました。一方、途上国には拘束力のある目標はありません。アメリカは批准を拒みました。そうした途上国が負担するコストが十分ではない、と考えたのです。カナダは**2002年**に批准しましたが、十年後に離脱しました。協力には、それなりの代償がともなうのです。"
         },
         {
           "type": "image",
           "asset": "factory_chimneys_greenhouse_gas_emissions",
           "ratio": "4:3",
-          "caption": "Réduire ses émissions coûte d'abord aux industries les plus polluantes, face à des concurrentes étrangères sans contrainte."
+          "caption": "排出を減らすと、規制を受けない外国の競合他社を相手に、まず最も汚染の大きい産業が負担を負うことになります。"
         },
         {
           "type": "funFact",
-          "text": "Kyoto prévoyait bel et bien des sanctions. Un pays qui dépassait son quota d'émissions sur la première période voyait le surplus déduit de son quota suivant, devait présenter un plan de mise en conformité et pouvait se voir interdire de vendre ses droits d'émission à d'autres pays."
+          "text": "京都議定書には、実は制裁もありました。第1約束期間に排出枠を超えた国は、その超過分を、次の期間の排出枠から差し引かれました。さらに遵守計画の提出も求められ、場合によっては、他国に排出権を売ることを禁じられることもありました。実効性を高めるための仕組みは、用意されていたのです。"
         },
         {
           "type": "paragraph",
-          "text": "Réduire ses émissions impose aux industries nationales les plus émettrices des contraintes et des coûts que leurs concurrentes étrangères n'ont pas, tandis que les bénéfices profitent aussi aux pays qui n'ont rien fait. Chaque gouvernement a donc intérêt à attendre que les autres agissent, même si le retard aggrave les conséquences. C'est un [[集合行為問題]]. Les négociateurs ont besoin d'engagements qui changent vraiment les comportements, mais plus ils exigent, moins les États veulent participer."
+          "text": "排出を減らすと、自国の排出の多い産業には、外国の競合他社が負わない規制やコストがのしかかります。一方で、その恩恵は、何もしなかった国にも及びます。そのため、どの政府にとっても、ほかの国が動くのを待つほうが得になります。遅れによって影響がいっそう深刻になるとしても、です。これが[[集合行為問題]]です。交渉する側は、行動を本当に変える約束を必要としますが、厳しくするほど、参加したがる国は減ってしまいます。この板ばさみが、交渉を難しくしています。"
         }
       ]
     },
     {
       "id": "course_278_pourquoi_les_accords_climatiques_sont_p2",
-      "title": "Paris, 2015 : des promesses sans sanction",
+      "title": "パリ、2015年：制裁のない約束とは",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En **2015**, l'[[パリ協定]] choisit une autre voie pour attirer les participants : chaque pays fixe lui-même ses objectifs de réduction. Il doit présenter un nouvel engagement tous les **cinq ans**, agir chez lui pour l'atteindre et rendre compte de ses progrès. Ces engagements sont juridiquement contraignants, mais le comité de suivi de l'accord n'a aucun pouvoir de sanction contre un pays qui manque ses objectifs."
+          "text": "**2015年**、[[パリ協定]]は、参加国を増やすために別の道を選びました。各国が自ら削減目標を決める方式です。各国は**5年**ごとに新しい約束を示し、その達成のために国内で行動し、進み具合を報告しなければなりません。これらの約束は法的拘束力がありますが、協定の履行を見守る委員会には、目標を達成できない国に制裁を科す権限がありません。"
         },
         {
           "type": "paragraph",
-          "text": "Ce suivi par déclaration devait créer la confiance et inciter chacun à tenir parole. Mais il ne s'accompagne d'aucun mécanisme de contrainte, et n'importe quel pays peut se retirer à tout moment. Les États-Unis quittent complètement l'accord en **2026**. La souplesse de Paris a bien attiré davantage de gouvernements ; elle n'a pas garanti qu'ils respectent durablement leurs engagements."
+          "text": "申告による監視は、信頼を生み、各国に約束を守らせるはずでした。しかし、強制の仕組みは何もなく、どの国もいつでも協定から離脱できます。アメリカは**2026年**に協定から完全に離脱します。パリ協定の柔軟さは、確かにより多くの政府を引きつけましたが、約束が長く守られることまでは保証してくれませんでした。参加しやすくすることと、守らせることは、別の問題だったのです。"
         }
       ]
     },
     {
       "id": "course_278_pourquoi_les_accords_climatiques_sont_p3",
-      "title": "Le poids de la politique intérieure",
+      "title": "国内政治という重い壁が立ちはだかる",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En **1987**, le [[モントリオール議定書]] impose aux États d'interdire une série de produits chimiques qui détruisent la couche d'ozone. Certains pays reçoivent une aide financière pour convertir leurs usines à des produits de remplacement. Cette fois, l'engagement est tenu."
+          "text": "**1987年**、[[モントリオール議定書]]は、オゾン層を破壊する一連の化学物質を禁止するよう、各国に義務づけました。一部の国は、工場を代替品に切り替えるための資金援助を受けました。このときは、約束がきちんと守られました。"
         },
         {
           "type": "image",
           "asset": "montreal_protocol_1987_signing_ceremony",
           "ratio": "4:3",
-          "caption": "La cérémonie de signature du protocole de Montréal, en septembre 1987."
+          "caption": "1987年9月に行われた、モントリオール議定書の署名式。"
         },
         {
           "type": "funFact",
-          "text": "En 2023, près de 99 % des substances interdites par le protocole de Montréal avaient disparu. Si les politiques actuelles tiennent, la couche d'ozone devrait retrouver son niveau de 1980 vers 2040 sur la majeure partie du globe, et vers 2066 au-dessus de l'Antarctique."
+          "text": "2023年には、モントリオール議定書で禁止された物質の約99%が姿を消していました。現在の政策が守られれば、オゾン層は、地球の大部分で2040年ごろ、南極上空では2066年ごろに1980年の水準を取り戻す見込みです。"
         },
         {
           "type": "paragraph",
-          "text": "Même quand un gouvernement s'est fixé un objectif contraignant, l'appliquer reste difficile. Fermer une mine de charbon, par exemple, dresse contre soi l'entreprise qui y a investi des sommes considérables et des ouvriers qui perdent leur emploi sans avoir le temps d'en retrouver un. Pour mettre en œuvre ce qui a été signé dans les conférences sur le climat, il faut gagner le soutien de ces groupes d'intérêt puissants."
+          "text": "政府が拘束力のある目標を自ら定めた場合でも、それを実行するのは容易ではありません。たとえば石炭鉱山を閉めれば、巨額の投資をした企業と、再就職の時間もないまま職を失う労働者の双方を、敵に回すことになります。気候会議で署名されたことを実行に移すには、こうした強力な利益団体の支持を得なければなりません。実行の段階で、国内の事情が大きな壁になるのです。"
         }
       ]
     },
     {
       "id": "course_278_pourquoi_les_accords_climatiques_sont_p4",
-      "title": "Coopérer dans un monde de rivaux",
+      "title": "ライバルだらけの世界で協力する",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Les traités climatiques sont négociés par des gouvernements souverains, dont chacun est censé défendre les intérêts nationaux sur le marché mondial. Ils peuvent donc reconnaître un problème commun tout en refusant les mesures qui menacent une industrie puissante, des emplois ou un groupe influent. Les accords permettent la coopération ; ils révèlent aussi l'inaction."
+          "text": "気候条約は、主権をもつ政府どうしが交渉して結ぶもので、各政府は世界市場で自国の利益を守るものとされています。そのため、共通の問題があることは認めても、強力な産業や雇用、影響力のある集団を脅かす対策は、拒むことがあります。協定は協力を可能にしますが、同時に、行動が足りないことも浮き彫りにします。約束することと、実行することは別なのです。"
         },
         {
           "type": "image",
           "asset": "garzweiler_lignite_open_pit_mine_germany",
           "ratio": "2:1",
-          "caption": "La mine de lignite à ciel ouvert de Garzweiler, en Rhénanie, en Allemagne."
+          "caption": "ドイツ、ライン地方にあるガルツヴァイラーの露天掘り褐炭鉱山。"
         },
         {
           "type": "paragraph",
-          "text": "Faire respecter ces accords plus strictement supposerait que les États acceptent des limites à leur [[主権]], c'est-à-dire à leur pouvoir de décider seuls. Le défi dépasse donc l'amélioration des textes : il faut changer les incitations à attendre, et les conditions dans lesquelles un gouvernement peut abandonner un engagement commun. Dans un système international ultra-compétitif d'États-nations, c'est difficile. Une chose est pourtant claire : sans coopération durable, la catastrophe environnementale attend au bout du chemin."
+          "text": "これらの協定をもっと厳格に守らせるには、各国が[[主権]]、つまり自分だけで決める権限に、制限を受け入れる必要があります。課題は、条文を改善するだけにとどまりません。待つことへの動機を変え、政府が共同の約束を放棄できる条件も変えなければなりません。国民国家が極端に競い合う国際システムでは、これは難しいことです。それでも、はっきり言えることが一つだけあります。それは、持続的な協力がなければ、行く手に環境の大惨事が待っているということです。"
         },
         {
           "type": "takeaway",
-          "text": "De Kyoto à Paris, les accords climatiques échouent moins par manque de textes que parce que des États souverains, en concurrence, ont chacun intérêt à attendre que les autres paient le prix de l'effort."
+          "text": "京都からパリまで、気候協定が失敗するのは、条文が足りないからというより、主権をもつ競争相手の国々が、努力の代価をほかの国が払うのを待つほうが得だと考えているからです。"
         }
       ]
     }

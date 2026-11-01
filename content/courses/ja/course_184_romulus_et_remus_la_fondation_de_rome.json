@@ -1,143 +1,143 @@
 {
   "id": "course_184_romulus_et_remus_la_fondation_de_rome",
-  "title": "Pourquoi Romulus a-t-il tué son frère Rémus ?",
-  "subtitle": "Mythologie romaine",
+  "title": "ロムルスはなぜ弟レムスを殺したのか？",
+  "subtitle": "ローマ神話",
   "subject": "mythologie",
   "subcategory": "世界の神話",
-  "description": "Allaités par une louve, fondateurs de Rome… et fratricides. Un mythe qui place la loi et la frontière avant le sang.",
+  "description": "雌狼に育てられたローマの建国者は、兄弟殺しでもありました。血縁よりも法と境界を優先させた神話です。",
   "hero": {
     "image": "romulus_et_remus_la_fondation_de_rome",
     "ratio": "16:9",
-    "hook": "Rome ne naît pas d'un pacte doux. Elle naît d'une louve, d'un sillon sacré… et d'un frère tué."
+    "hook": "ローマは穏やかな約束から生まれたのではありません。雌狼と、聖なる溝と、殺された弟から生まれたのです。"
   },
   "sections": [
     {
       "id": "course_184_romulus_et_remus_la_fondation_de_rome_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le récit de **Romulus** et **Rémus** est le mythe fondateur de Rome. Ce n'est pas un conte pour enfants. C'est l'histoire d'une double rupture : une [[ウェスタの巫女]] qui brise son vœu de chasteté, puis un **fratricide** qui place la loi avant le sang."
+          "text": "**ロムルス**と**レムス**の物語は、ローマの建国神話です。子ども向けのおとぎ話ではありません。二つの断絶の物語です。貞潔の誓いを破る[[ウェスタの巫女]]がいて、やがて法を血縁よりも優先する**兄弟殺し**が起きます。"
         },
         {
           "type": "paragraph",
-          "text": "La tradition romaine ne cache pas ce crime. Elle en fait le socle d'une cité bâtie sur la frontière sacrée et la survie de l'État, plus que sur la famille."
+          "text": "ローマの伝承は、この罪を隠そうとはしません。むしろ、家族よりも聖なる境界と国家の存続を土台にした都市の礎として語り継いでいます。"
         }
       ]
     },
     {
       "id": "course_184_romulus_et_remus_la_fondation_de_rome_p1",
-      "title": "La louve du Tibre",
+      "title": "テヴェレ川の雌狼",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "À Albe la Longue, cité des descendants d'Énée, l'usurpateur **Amulius** chasse son frère Numitor. Pour éteindre la lignée, il force sa nièce **Rhéa Silvia** à devenir vestale. Mais **Mars**, dieu de la guerre, s'unit à elle. Naissent des jumeaux."
+          "text": "アイネイアースの子孫が治めるアルバ・ロンガで、簒奪者**アムリウス**は兄ヌミトルを追放します。血筋を絶やすため、姪の**レア・シルウィア**を無理やり巫女にしました。ところが、戦の神**マルス**が彼女と結ばれ、双子が生まれます。"
         },
         {
           "type": "image",
           "asset": "mars_rhea_silvia_roman_mythology_painting",
           "ratio": "4:3",
-          "caption": "Mars et Rhéa Silvia : la naissance divine des jumeaux."
+          "caption": "マルスとレア・シルウィア：双子の神聖な誕生。"
         },
         {
           "type": "paragraph",
-          "text": "Amulius ordonne de les noyer dans le Tibre. Le fleuve en crue dépose le berceau près du **Palatin**, sous le figuier [[ルミナリスのイチジク]]. Une **louve** les allaite ; un pivert, oiseau de Mars, les nourrit. Le berger Faustulus et sa femme Acca Larentia les élèvent."
+          "text": "アムリウスは双子をテヴェレ川に沈めるよう命じます。増水した川は、ゆりかごを**パラティーノの丘**のそば、[[ルミナリスのイチジク]]の木の下に運びました。一頭の**雌狼**が乳を与え、マルスの鳥であるキツツキが餌を運びます。羊飼いのファウストゥルスと妻のアッカ・ラレンティアが二人を育てました。"
         },
         {
           "type": "image",
           "asset": "capitoline_wolf_romulus_remus_bronze_sculpture",
           "ratio": "1:1",
-          "caption": "La louve capitoline, image de Rome orpheline et prédatrice."
+          "caption": "カピトリーノの雌狼：みなしごで捕食者でもあるローマの象徴。"
         },
         {
           "type": "funFact",
-          "text": "En latin, « lupa » signifie louve… et prostituée. Des auteurs anciens suggéraient déjà qu'Acca Larentia, surnommée ainsi, était la vraie « louve » de la légende."
+          "text": "ラテン語で「lupa」は雌狼を意味しますが、売春婦という意味もあります。古代の著述家のなかには、そう呼ばれていたアッカ・ラレンティアこそ伝説の本当の「雌狼」だったのではないか、と考える人もいました。"
         }
       ]
     },
     {
       "id": "course_184_romulus_et_remus_la_fondation_de_rome_p2",
-      "title": "Le sillon et le meurtre",
+      "title": "聖なる溝と殺人",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Adultes, les jumeaux renversent Amulius et rétablissent Numitor. Puis ils veulent fonder leur propre cité. Romulus choisit le **Palatin** ; Rémus, l'Aventin. Pour trancher, ils prennent les [[鳥占い]] : Rémus voit six vautours le premier ; Romulus en voit douze ensuite."
+          "text": "成長した双子はアムリウスを倒し、ヌミトルを王位に戻します。そして自分たちの都市をつくろうとしました。ロムルスは**パラティーノの丘**を、レムスはアヴェンティーノの丘を選びます。決着をつけるため、二人は[[鳥占い]]に頼りました。レムスが先に六羽のハゲワシを見て、ロムルスはそのあとで十二羽を見ます。"
         },
         {
           "type": "image",
           "asset": "palatine_hill_rome_founding_myth",
           "ratio": "4:3",
-          "caption": "Le Palatin : la colline où Romulus trace Rome."
+          "caption": "パラティーノの丘：ロムルスがローマの境界を引いた丘。"
         },
         {
           "type": "paragraph",
-          "text": "Romulus trace le [[ポメリウム]], sillon sacré de l'enceinte, et promet la mort à qui le franchira. Rémus saute par-dessus, par défi. Romulus (ou son lieutenant Celer) le tue. Rome est fondée le **21 avril 753 av. J.-C.**, an I du calendrier [[アブ・ウルベ・コンディタ（紀元前753年）]]."
+          "text": "ロムルスは城壁を囲む聖なる溝、[[ポメリウム]]を引き、これを越える者には死を与えると宣言します。レムスは挑発のつもりで溝を飛び越えました。ロムルス（一説では部下のケレル）が彼を殺します。ローマは**紀元前753年4月21日**に建国され、この年が[[アブ・ウルベ・コンディタ（紀元前753年）]]という暦の元年になりました。"
         },
         {
           "type": "funFact",
-          "text": "Le 21 avril reste le « Natale di Roma ». À midi, le soleil frappe l'entrée du Panthéon : un effet que les architectes antiques auraient conçu pour magnifier le pouvoir."
+          "text": "4月21日は今も「ナターレ・ディ・ローマ」（ローマの誕生日）とされています。この日の正午、太陽の光がパンテオンの入口を照らします。古代の建築家が権力を際立たせるために仕組んだ効果だったと言われます。"
         }
       ]
     },
     {
       "id": "course_184_romulus_et_remus_la_fondation_de_rome_p3",
-      "title": "Le rapt des Sabines",
+      "title": "サビニの女たちの略奪",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Premier problème : la cité manque de femmes. Romulus organise des jeux et invite les voisins. Au milieu de la fête, les Romains enlèvent les jeunes filles : le **Rapt des Sabines**. Les **Sabins**, menés par Titus Tatius, déclarent la guerre."
+          "text": "最初の問題は、都市に女性が足りないことでした。ロムルスは競技会を開き、近隣の人々を招きます。祭りのさなか、ローマ人は若い娘たちをさらいました。これが**サビニの女たちの略奪**です。**サビニ人**は、ティトゥス・タティウスに率いられて宣戦布告します。"
         },
         {
           "type": "paragraph",
-          "text": "Sur le champ de bataille, les femmes sabines, déjà mères d'enfants romains, s'interposent entre pères et maris. La guerre s'arrête. Les deux peuples fusionnent. Romulus et Titus Tatius règnent ensemble. Les Romains prennent le nom de [[クイリテス]]. Rome devient une société qui intègre l'ennemi."
+          "text": "戦場で、サビニの女たちは、すでにローマ人の子の母になっており、父親たちと夫たちの間に割って入りました。戦いは止まります。二つの民は一つになり、ロムルスとティトゥス・タティウスがともに王となりました。ローマ人は[[クイリテス]]と名のるようになります。ローマは、敵さえ受け入れる社会になったのです。"
         }
       ]
     },
     {
       "id": "course_184_romulus_et_remus_la_fondation_de_rome_p4",
-      "title": "Romulus devient Quirinus",
+      "title": "ロムルスがクィリヌスになる",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Après trente-sept ans de règne et la création d'un Sénat de cent « pères », Romulus disparaît lors d'une tempête au Champ de Mars. La version officielle dit que Mars l'enlève au ciel : il devient le dieu **Quirinus**. Une autre version murmure que les sénateurs l'ont assassiné."
+          "text": "三十七年にわたって王位にあり、百人の「父」からなる元老院をつくったあと、ロムルスは嵐の日にマルスの野で姿を消します。公式の伝承では、マルスが彼を天へ連れ去り、**クィリヌス**という神になったとされます。別の伝承は、元老院議員たちが彼を殺したとささやきます。"
         },
         {
           "type": "paragraph",
-          "text": "Reste l'image de [[カピトリーノの雌狼]] : une cité orpheline, nourrie par la sauvagerie, capable de transformer des marginaux en maîtres du monde."
+          "text": "残ったのは[[カピトリーノの雌狼]]の姿です。野性に育てられたみなしごの都市が、はみ出し者を世界の支配者に変えてしまう、という象徴でした。"
         },
         {
           "type": "timeline",
           "events": [
             {
-              "date": "Mythe",
-              "title": "Naissance des jumeaux",
-              "detail": "Mars et Rhéa Silvia ; la louve du Tibre."
+              "date": "神話",
+              "title": "双子の誕生",
+              "detail": "マルスとレア・シルウィア、テヴェレ川の雌狼。"
             },
             {
-              "date": "753 av. J.-C.",
-              "title": "Fondation de Rome",
-              "detail": "Romulus tue Rémus et trace le pomoerium."
+              "date": "紀元前753年",
+              "title": "ローマの建国",
+              "detail": "ロムルスがレムスを殺し、ポメリウムを引く。"
             },
             {
-              "date": "Suite",
-              "title": "Rapt des Sabines",
-              "detail": "Guerre, puis fusion des peuples."
+              "date": "その後",
+              "title": "サビニの女たちの略奪",
+              "detail": "戦争、そして二つの民の融合。"
             },
             {
-              "date": "+37 ans",
-              "title": "Apothéose",
-              "detail": "Romulus disparaît et devient Quirinus."
+              "date": "37年後",
+              "title": "神格化",
+              "detail": "ロムルスが姿を消し、クィリヌスになる。"
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "Fondée sur un fratricide et un enlèvement, Rome tire de son mythe une idée claire : la survie de l'État et le respect de la frontière sacrée passent avant les liens du sang."
+          "text": "兄弟殺しと誘拐の上に建てられたローマは、自らの神話から明快な考えを引き出しました。国家の存続と聖なる境界を守ることは、血のつながりより先にくる、という考えです。"
         }
       ]
     }

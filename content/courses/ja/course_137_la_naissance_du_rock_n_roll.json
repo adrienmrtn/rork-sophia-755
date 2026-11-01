@@ -1,143 +1,143 @@
 {
   "id": "course_137_la_naissance_du_rock_n_roll",
-  "title": "La naissance du rock'n'roll",
+  "title": "ロックンロールはこうして生まれた",
   "subtitle": "1954-1960",
   "subject": "art",
   "subcategory": "音楽",
-  "description": "Au milieu des années 1950, blues noir et country blanche fusionnent : Elvis, Chuck Berry et Little Richard inventent le rock'n'roll.",
+  "description": "1950年代半ば、黒人のブルースと白人のカントリーが溶け合い、エルヴィス、チャック・ベリー、リトル・リチャードがロックンロールを生み出します。",
   "hero": {
     "image": "la_naissance_du_rock_n_roll",
     "ratio": "16:9",
-    "hook": "Un cri, une guitare électrique, et l'Amérique adolescente a sa musique."
+    "hook": "叫び声とエレキギターで、ティーンエイジャーのアメリカは自分たちの音楽を手に入れました。"
   },
   "sections": [
     {
       "id": "course_137_la_naissance_du_rock_n_roll_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le rock'n'roll ne surgit pas du néant au milieu des années **1950**. Aux États-Unis, il fusionne des musiques longtemps séparées par les barrières raciales : blues, country et [[ゴスペル音楽]]."
+          "text": "ロックンロールは、**1950年代**半ばに突然現れたわけではありません。アメリカで、人種の壁に長く隔てられてきた音楽、つまりブルース、カントリー、[[ゴスペル音楽]]が一つに溶け合って生まれました。"
         },
         {
           "type": "paragraph",
-          "text": "Trois figures portent la rupture : **Elvis Presley**, **Chuck Berry** et **Little Richard**. Plus qu'un style, c'est une culture de la jeunesse, et un miroir des tensions de la [[人種隔離政策]]."
+          "text": "この転換を担った三人が、**エルヴィス・プレスリー**、**チャック・ベリー**、**リトル・リチャード**です。単なる音楽のスタイルにとどまらず、若者の文化であり、[[人種隔離政策]]をめぐる緊張を映す鏡でもありました。"
         }
       ]
     },
     {
       "id": "course_137_la_naissance_du_rock_n_roll_p1",
-      "title": "Blues, country et rhythm and blues",
+      "title": "ブルース、カントリー、リズム・アンド・ブルース",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Jusque-là, deux mondes coexistent dans le Sud : la culture noire (blues électrique, gospel) et la culture blanche (country). Le pont s'appelle [[リズム・アンド・ブルース]] : version urbaine et électrifiée du blues qui séduit, dès la fin des années 1940, une jeunesse blanche en quête de rythme."
+          "text": "それまで南部には、二つの世界が並び立っていました。黒人の文化（エレキ・ブルース、ゴスペル）と、白人の文化（カントリー）です。その橋渡しをしたのが[[リズム・アンド・ブルース]]で、ブルースを都会風に電気化したこの音楽は、1940年代末から、リズムを求める白人の若者を引きつけました。"
         },
         {
           "type": "paragraph",
-          "text": "Naît le **rockabilly**, hybride country et blues. **Elvis Presley**, de Tupelo, grandit entre églises pentecôtistes et blues de Beale Street. En **1954**, chez le producteur [[サム・フィリップス]] à Memphis, il enregistre *That's All Right*. Mais [[アメリカ音楽業界の人種隔離]] reste la règle : les artistes noirs restent souvent confinés à des circuits marginaux, tandis qu'un interprète blanc peut franchir le marché national."
+          "text": "そこで生まれたのが**ロカビリー**で、カントリーとブルースの混血です。**エルヴィス・プレスリー**はトゥペロの出身で、ペンテコステ派の教会とビール・ストリートのブルースのあいだで育ちました。**1954年**、メンフィスのプロデューサー[[サム・フィリップス]]のもとで、*『ザッツ・オールライト』*を録音します。ただ、[[アメリカ音楽業界の人種隔離]]が当たり前という状況は変わらず、黒人アーティストは周縁的な興行網に閉じ込められがちでした。一方、白人の歌手は全国市場に進出できました。"
         },
         {
           "type": "funFact",
-          "text": "Le terme « rock'n'roll » désignait d'abord le tangage d'un navire, puis, dans le blues des années 1920, l'acte sexuel, avant d'être popularisé par le DJ [[アラン・フリード]]."
+          "text": "「ロックンロール」という言葉は、もともと船の横揺れを指し、1920年代のブルースでは性行為を意味していました。それを広めたのが、DJの[[アラン・フリード]]です。"
         }
       ]
     },
     {
       "id": "course_137_la_naissance_du_rock_n_roll_p2",
-      "title": "Elvis, Chuck Berry, Little Richard",
+      "title": "エルヴィス、チャック・ベリー、リトル・リチャード",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Chez [[サン・レコード]], Elvis devient l'icône. Son corps en mouvement choque l'Amérique puritaine et scelle l'alliance entre rock et adolescence."
+          "text": "エルヴィスは[[サン・レコード]]で、時代の象徴になります。体を揺らす姿は清教徒的なアメリカに衝撃を与え、ロックと思春期の結びつきを決定づけました。"
         },
         {
           "type": "image",
           "asset": "elvis_presley_sun_records_memphis_1954",
           "ratio": "4:3",
-          "caption": "Elvis chez Sun Records : le rock trouve son visage."
+          "caption": "サン・レコードのエルヴィス：ロックに顔ができた"
         },
         {
           "type": "paragraph",
-          "text": "**Chuck Berry** apporte la structure : le **riff** de guitare, motif répété qui devient colonne vertébrale du morceau. Il chante voitures, lycée, liberté. **Little Richard**, lui, hurle et frappe le piano debout : énergie brute héritée de la ferveur gospel."
+          "text": "**チャック・ベリー**は、曲の骨組みをもたらしました。ギターの**リフ**、つまり繰り返しのフレーズが、曲の背骨になります。歌うのは車、高校、自由。**リトル・リチャード**はというと、叫びながら立ったままピアノをたたきつけます。ゴスペルの熱気を受け継いだ、むき出しのエネルギーです。"
         },
         {
           "type": "image",
           "asset": "chuck_berry_guitar_rock_and_roll",
           "ratio": "4:3",
-          "caption": "Chuck Berry : le riff de guitare comme grammaire du rock."
+          "caption": "チャック・ベリー：ロックの文法としてのギターリフ"
         },
         {
           "type": "image",
           "asset": "little_richard_piano_1950s_rock",
           "ratio": "4:3",
-          "caption": "Little Richard : le cri et le piano comme explosion."
+          "caption": "リトル・リチャード：爆発としての叫びとピアノ"
         },
         {
           "type": "funFact",
-          "text": "En 1956, à *The Ed Sullivan Show*, les caméras ne filment plus Elvis qu'au-dessus de la taille : ses déhanchements sont jugés trop scandaleux."
+          "text": "1956年、*『エド・サリヴァン・ショー』*では、カメラはエルヴィスを腰から上しか映さなくなりました。腰の動きが、あまりにも過激だと判断されたからです。"
         }
       ]
     },
     {
       "id": "course_137_la_naissance_du_rock_n_roll_p3",
-      "title": "Rock, race et droits civiques",
+      "title": "ロック、人種、公民権運動",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Pour la première fois, des adolescents noirs et blancs partagent les mêmes idoles, malgré les [[ジム・クロウ諸法]]. Mais l'intégration reste asymétrique. L'industrie multiplie les [[カバー曲]] : versions blanches édulcorées de hits noirs, mieux promues à la radio. *Tutti Frutti* de Pat Boone vend longtemps plus que l'original de Little Richard."
+          "text": "史上初めて、黒人と白人の十代が同じアイドルを共有しました。[[ジム・クロウ諸法]]があったにもかかわらずです。ただ、融合は一方向に偏っていました。業界は[[カバー曲]]を量産します。黒人のヒット曲を毒抜きした白人版で、ラジオでの扱いも上々でした。パット・ブーンの*『トゥッティ・フルッティ』*は、長いあいだリトル・リチャードのオリジナルより売れました。"
         },
         {
           "type": "paragraph",
-          "text": "Malgré ces spoliations, le rock nourrit l'esprit du [[公民権運動]]. En brisant les codes des parents, la jeunesse des années 1950 amorce une remise en question morale et raciale de l'Amérique."
+          "text": "こうした搾取にもかかわらず、ロックは[[公民権運動]]の精神を育てました。親世代の決まりごとを壊すことで、1950年代の若者は、アメリカの道徳と人種のあり方を問い直し始めます。"
         },
         {
           "type": "funFact",
-          "text": "Chuck Berry n'emmenait pas son groupe en tournée : il engageait des musiciens locaux dans chaque ville, pour économiser et éviter des tensions raciales à l'hôtel."
+          "text": "チャック・ベリーは、ツアーにバンドを連れて行きませんでした。町ごとに地元のミュージシャンを雇ったのです。費用を節約し、ホテルでの人種間の摩擦を避けるためでした。"
         }
       ]
     },
     {
       "id": "course_137_la_naissance_du_rock_n_roll_p4",
-      "title": "De la British Invasion à l'héritage",
+      "title": "ブリティッシュ・インヴェイジョンから遺産まで",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Vers **1960**, le premier souffle s'essouffle (Elvis à l'armée, Little Richard vers la religion). Mais le genre a déjà conquis le Royaume-Uni. Les **Beatles** et les **Rolling Stones** réinterprètent les standards américains : la « British Invasion » transforme le rock en art d'album et de contestation. Sans la brèche de **1954**, les contre-cultures des années 1960 n'auraient pas eu le même moteur sonore."
+          "text": "**1960年**ごろ、最初の勢いは衰えます（エルヴィスは入隊、リトル・リチャードは宗教の道へ）。それでも、ロックはすでにイギリスを席巻していました。**ビートルズ**と**ローリング・ストーンズ**がアメリカのスタンダードを再解釈し、「ブリティッシュ・インヴェイジョン」によって、ロックはアルバムの芸術、そして抗議の表現になります。**1954年**の突破口がなければ、1960年代のカウンターカルチャーは、同じ音のエンジンを持てなかったでしょう。"
         },
         {
           "type": "timeline",
           "events": [
             {
-              "date": "1954",
-              "title": "That's All Right",
-              "detail": "Elvis chez Sam Phillips : la fusion devient hit."
+              "date": "1954年",
+              "title": "『ザッツ・オールライト』",
+              "detail": "サム・フィリップスのもとでエルヴィスが録音：融合がヒットに"
             },
             {
               "date": "1955-1956",
-              "title": "Berry et Richard",
-              "detail": "Riff, cri et énergie définissent le genre."
+              "title": "ベリーとリチャード",
+              "detail": "リフ、叫び、エネルギーがロックを形づくる"
             },
             {
-              "date": "1956",
-              "title": "Ed Sullivan",
-              "detail": "Le corps d'Elvis scandalise la télévision."
+              "date": "1956年",
+              "title": "エド・サリヴァン",
+              "detail": "エルヴィスの腰の動きにテレビ界が騒然"
             },
             {
-              "date": "1960s",
-              "title": "British Invasion",
-              "detail": "Le rock américain revient d'Europe amplifié."
+              "date": "1960年代",
+              "title": "ブリティッシュ・インヴェイジョン",
+              "detail": "アメリカのロックが、増幅されてヨーロッパから戻ってくる"
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "Né en 1954 de la fusion entre rhythm and blues et country, le rock'n'roll d'Elvis, Berry et Little Richard a donné à la jeunesse un premier langage commun contre la ségrégation."
+          "text": "1954年、リズム・アンド・ブルースとカントリーの融合から生まれたエルヴィス、ベリー、リトル・リチャードのロックンロールは、若者に初めての共通言語を与え、人種隔離に立ち向かう力になりました。"
         }
       ]
     }

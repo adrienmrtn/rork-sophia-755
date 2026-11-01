@@ -1,138 +1,138 @@
 {
   "id": "course_308_quelle_a_ete_la_guerre_la_plus",
-  "title": "Quelle a été la guerre la plus meurtrière de l'histoire ?",
-  "subtitle": "La révolte des Taiping",
+  "title": "史上もっとも多くの命を奪った戦争は、どの戦争だったのか",
+  "subtitle": "太平天国の乱",
   "subject": "histoire",
   "subcategory": "近世と19世紀",
-  "description": "On pense à la Seconde Guerre mondiale. Pourtant, selon la façon de compter les morts, le conflit le plus meurtrier de l'histoire est une guerre civile chinoise du XIXe siècle, née des visions d'un candidat recalé aux examens impériaux.",
+  "description": "多くの人は第二次世界大戦を思い浮かべます。ところが、死者の数え方によっては、史上最も多くの命を奪った紛争は、十九世紀の中国で起きた内戦です。科挙に落ちた一人の男が見た幻から生まれた戦争でした。",
   "author": "vedran-obucina",
   "hero": {
     "image": "taiping_rebellion_battle_qing_court_painting_1860s",
     "ratio": "4:3",
-    "hook": "Vingt à trente millions de morts, et à sa tête un homme qui se disait le frère cadet de Jésus : la guerre la plus meurtrière de l'histoire n'est pas celle que l'on croit."
+    "hook": "死者は二千万から三千万人。その先頭に立ったのは、自らをイエスの弟と名のる男でした。史上最悪の戦争は、一般に思われている戦争ではありません。"
   },
   "sections": [
     {
       "id": "course_308_quelle_a_ete_la_guerre_la_plus_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La guerre la plus meurtrière de l'histoire ? Beaucoup répondent aussitôt : la Seconde Guerre mondiale. Mais tout dépend de la façon de compter. Certains historiens ne retiennent que les morts au combat. D'autres ajoutent les civils emportés par la famine et les maladies que la guerre traîne derrière elle."
+          "text": "史上最も多くの命を奪った戦争は何でしょうか。多くの人はすぐに「第二次世界大戦」と答えます。しかし、すべては死者の数え方しだいです。戦場での死者だけを数える歴史家もいます。一方で、戦争があとに引き連れてくる飢えや病気で亡くなった民間人まで加える歴史家もいます。"
         },
         {
           "type": "paragraph",
-          "text": "Avec cette seconde méthode, le premier candidat est la révolte des Taiping, l'immense soulèvement qui secoue la Chine entre **1850 et 1864**. Les estimations prudentes parlent de **20 à 30 millions** de morts, d'autres vont plus haut, et le chiffre exact restera inconnu. Le plus étonnant : tout commence par un mouvement religieux. Comment une foi nouvelle a-t-elle pu déclencher une guerre d'une telle ampleur ?"
+          "text": "後者の数え方をとると、最有力の候補は太平天国の乱です。**1850年から1864年**にかけて中国を揺るがした大規模な蜂起で、慎重な推計でも死者は**二千万〜三千万人**とされ、それ以上とする説もあり、正確な数はこの先も分からないでしょう。いちばん意外なのは、すべてが宗教運動から始まったことです。新しい信仰が、これほど大きな戦争を引き起こしたのはなぜでしょうか。"
         }
       ]
     },
     {
       "id": "course_308_quelle_a_ete_la_guerre_la_plus_p1",
-      "title": "Hong Xiuquan, frère cadet de Jésus",
+      "title": "洪秀全、イエスの弟を名のった男",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "[[洪秀全]] est un candidat malheureux aux [[科挙]], les célèbres concours qui ouvrent les portes de l'administration chinoise. Ces épreuves reposent sur le [[儒教]], l'une des trois grandes traditions de pensée de la Chine avec le taoïsme et le bouddhisme. Après avoir lu des textes chrétiens, Hong relit ses propres visions et ses rêves à leur lumière."
+          "text": "[[洪秀全]]は、[[科挙]]に落ちた不運な受験生でした。科挙は、中国の官僚への道を開く、よく知られた難関の試験です。この試験は[[儒教]]を土台にしています。儒教は、道教、仏教とともに、中国の三大思想の伝統の一つに数えられます。キリスト教の文書を読んだ洪は、それに照らして、自分がこれまでに見た幻や夢をとらえ直します。"
         },
         {
           "type": "image",
           "asset": "hong_xiuquan_portrait_taiping_heavenly_king",
           "ratio": "4:3",
-          "caption": "Des écrits de Hong Xiuquan exposés dans un musée : les textes imprimés qui fondent la doctrine religieuse des Taiping."
+          "caption": "博物館に展示された洪秀全の著作。太平天国の宗教的な教えの土台となった、印刷された文書の数々です。"
         },
         {
           "type": "paragraph",
-          "text": "Sa conclusion est vertigineuse : Dieu est son père céleste, Jésus son frère aîné, et lui-même le frère cadet de Jésus. Cette croyance lui donne une autorité religieuse à part : Dieu l'a chargé de chasser le mal et d'établir un royaume nouveau sur la Terre. Ses fidèles fondent le [[太平天国]], un État autoproclamé dans le sud de la Chine, avec ses propres doctrines et ses propres rites, loin du christianisme classique. Et avec la religion nouvelle grandit le pouvoir politique."
+          "text": "洪が出した結論は、めまいがするほど大胆でした。神は天の父、イエスは兄、そして自分自身はイエスの弟だというのです。この信念によって、洪は特別な宗教的権威を得ます。神は洪に、悪を追い払い、地上に新しい王国をつくる使命を託したのです。信者たちは[[太平天国]]を建てます。中国南部に自称で生まれたこの国家は、独自の教義と儀礼をもち、従来のキリスト教とはかけ離れていました。そして新しい宗教とともに、政治権力も大きくなっていきます。"
         },
         {
           "type": "funFact",
-          "text": "Les Taiping n'ont pas simplement copié le christianisme européen. Leur religion mêle des idées protestantes et des traditions chinoises, et affirme que le Dieu suprême, Shangdi, a choisi Hong Xiuquan pour établir un royaume céleste sur la Terre."
+          "text": "太平天国の人々は、ヨーロッパのキリスト教をただ写したわけではありません。その宗教はプロテスタントの考え方と中国の伝統を混ぜ合わせたもので、最高神の上帝が洪秀全を選び、地上に天の王国を築かせたと主張します。"
         }
       ]
     },
     {
       "id": "course_308_quelle_a_ete_la_guerre_la_plus_p2",
-      "title": "Un mouvement religieux devenu État",
+      "title": "国家へと姿を変えていく宗教運動",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Les Taiping veulent abattre la [[清]], le pouvoir impérial qui gouverne la Chine. Mais ce ne sont pas de simples ambitieux : ce sont des zélotes. Ils croient accomplir l'ordre de Dieu et bâtir un royaume juste sous son autorité. Leurs armées conquièrent rapidement de vastes régions du sud de la Chine."
+          "text": "太平天国の人々が倒そうとしたのは、中国を治める帝国の権力、つまり[[清]]です。しかし、彼らは単なる野心家ではなく、熱狂的な信者でした。神の命令を果たし、神の権威のもとに正しい王国を築くのだと信じています。軍は中国南部の広い地域をまたたく間に征服しました。"
         },
         {
           "type": "paragraph",
-          "text": "Le mouvement se dote d'une administration, de lois, d'une hiérarchie, d'une armée et de fonctionnaires. Hong se proclame Roi céleste, un titre très chinois et pas du tout chrétien, fondé sur l'idée que Dieu lui-même l'a choisi. Les Qing entrent en guerre contre les rebelles, mais ce choc d'armées devient vite un conflit religieux : qui a le droit de gouverner au nom de Dieu ?"
+          "text": "運動は、行政機構、法、階層、軍隊、官僚を備えるようになります。洪は自らを「天王」と称しました。これは非常に中国的で、キリスト教的とはまったく言えない称号で、神自身が自分を選んだという考えに基づいています。清は反乱軍との戦争に入りますが、この軍隊どうしの衝突はたちまち宗教の争いになります。神の名において統治する権利をもつのはだれか、という争いです。"
         },
         {
           "type": "funFact",
-          "text": "Les Taiping ont tenté d'interdire la consommation d'opium, le bandage des pieds, les mariages arrangés et le culte des images religieuses traditionnelles. Plus qu'un changement de souverain, ces réformes visaient une refonte complète de la société."
+          "text": "太平天国は、アヘンの吸引、纏足、親が決める結婚、そして伝統的な宗教的偶像の崇拝を、すべて禁止しようとしました。単に君主を替えるだけではなく、これらの改革が目指したのは、社会そのものを根こそぎ作り直すことでした。"
         }
       ]
     },
     {
       "id": "course_308_quelle_a_ete_la_guerre_la_plus_p3",
-      "title": "Nankin, la capitale céleste",
+      "title": "南京、天の都と呼ばれた街",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le premier grand succès des Taiping date de **1853** : ils s'emparent de [[南京]], l'une des villes les plus importantes de Chine. Ils la rebaptisent Tianjing, la « Capitale céleste ». Le message est clair : Dieu soutient la révolte, et le royaume nouveau s'étendra selon son plan. Les armées Taiping poussent ensuite vers le nord et vers l'ouest. Leur Marche vers le Nord approche de Pékin, la capitale des Qing, mais échoue."
+          "text": "太平天国の最初の大きな成功は**1853年**です。中国で最も重要な都市の一つ、[[南京]]を占領します。彼らは南京を「天京」、つまり「天の都」と改名しました。メッセージは明快です。神が反乱を支持し、新しい王国は神の計画どおりに広がっていく、ということです。太平天国軍はその後、北と西へ進みます。北伐軍は清の首都・北京に迫りますが、失敗しました。"
         },
         {
           "type": "image",
           "asset": "nanjing_ming_city_wall_zhonghua_gate",
           "ratio": "3:2",
-          "caption": "Le panneau explicatif de la porte Zhonghua, dans les murailles Ming de Nankin, tenues onze ans par les Taiping."
+          "caption": "太平天国が十一年間にわたって守り抜いた、南京の明代の城壁。その中華門に設けられた、説明パネルです。"
         },
         {
           "type": "paragraph",
-          "text": "Dans le bassin inférieur du Yangzi, les combats tournent à l'horreur. Le siège d'[[安慶]], reprise par les Qing en **1861**, est particulièrement atroce, et la chute de cette ville ouvre la route de Nankin. Les campagnes sont ravagées : agriculture détruite, épidémies, famine. Pourtant les soldats Taiping continuent de prier avant chaque bataille, d'écouter des sermons et de croire fermement à leur mission."
+          "text": "長江下流域では、戦闘は目を覆うほどの惨状になります。**1861年**に清が奪い返した[[安慶]]の攻防戦はとりわけ悲惨で、この都市が陥落したことで、南京への道が開かれました。農村は荒れ果て、農業は壊滅し、疫病と飢饉が広がります。それでも太平天国の兵士たちは、戦いの前には毎回祈り、説教に耳を傾け、自分たちの使命を固く信じ続けました。"
         }
       ]
     },
     {
       "id": "course_308_quelle_a_ete_la_guerre_la_plus_p4",
-      "title": "La fin du Royaume de Dieu",
+      "title": "神の王国の終わり",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Nankin résiste près de deux ans de siège. Les combattants Taiping défendent avec acharnement ce qu'ils tiennent pour le Royaume de Dieu. Mais les Qing coupent les ravitaillements. En **juillet 1864**, leurs troupes entrent dans la ville et s'en emparent. Hong est mort peu avant, et le Royaume céleste s'effondre."
+          "text": "南京は2年近く包囲に耐えます。太平天国の戦士たちは、神の王国と信じるものを死にものぐるいで守りました。しかし清軍は補給を断ちます。**1864年7月**、清の軍隊が城内に入って都市を奪い取りました。洪はその少し前に亡くなっており、天の王国は崩れ去ります。"
         },
         {
           "type": "paragraph",
-          "text": "Se dire le frère cadet de Jésus donnait à ces combattants une autorité claire et un but plus grand que le pouvoir terrestre. Les Qing n'étaient pas un simple adversaire dans une guerre civile : ils incarnaient un règne du mal qu'il fallait détruire. Un tel extrémisme religieux ne laisse aucune place au compromis. Soit il l'emporte et impose son ordre, soit tout le monde meurt."
+          "text": "自分をイエスの弟と称することは、この戦士たちに明確な権威と、地上の権力よりも大きな目的を与えていました。清は、内戦の単なる敵ではなく、打ち倒さなければならない悪の支配の化身だったのです。このような宗教的な過激主義に、妥協の余地はありません。勝って自分たちの秩序を押しつけるか、全員が死ぬか、そのどちらかです。"
         },
         {
           "type": "timeline",
           "events": [
             {
-              "date": "1850",
-              "title": "Début du soulèvement",
-              "detail": "Les fidèles de Hong Xiuquan prennent les armes dans le sud de la Chine."
+              "date": "1850年",
+              "title": "蜂起の始まり",
+              "detail": "洪秀全に従う信者たちが、中国南部で武器を取って立ち上がります。"
             },
             {
-              "date": "1853",
-              "title": "Prise de Nankin",
-              "detail": "La ville devient Tianjing, la Capitale céleste."
+              "date": "1853年",
+              "title": "南京の占領",
+              "detail": "都市は天京、つまり天の都と呼ばれるようになります。"
             },
             {
-              "date": "1861",
-              "title": "Chute d'Anqing",
-              "detail": "Les Qing reprennent la ville et ouvrent la route de Nankin."
+              "date": "1861年",
+              "title": "安慶の陥落",
+              "detail": "清が都市を奪い返し、その結果、南京へ向かう道が開けます。"
             },
             {
-              "date": "1864",
-              "title": "Reprise de Nankin",
-              "detail": "En juillet, les troupes impériales entrent dans la ville."
+              "date": "1864年",
+              "title": "南京の奪還",
+              "detail": "7月、清の帝国軍が城内に入って都市を奪い返します。"
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "Guerre de religion, guerre civile et lutte de pouvoir à la fois, la révolte des Taiping a fait 20 à 30 millions de morts : sans sa théologie, on ne comprend ni sa naissance ni son fanatisme."
+          "text": "宗教戦争であり、内戦であり、権力闘争でもあった太平天国の乱は、二千万〜三千万人の死者を出しました。その神学を知らなければ、戦争の始まりも狂信も理解できません。"
         }
       ]
     }

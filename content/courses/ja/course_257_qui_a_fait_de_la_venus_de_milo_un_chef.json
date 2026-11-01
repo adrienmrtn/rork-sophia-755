@@ -1,139 +1,139 @@
 {
   "id": "course_257_qui_a_fait_de_la_venus_de_milo_un_chef",
-  "title": "Qui a fait de la Vénus de Milo un chef-d'œuvre ?",
-  "subtitle": "1820",
+  "title": "ミロのヴィーナスを名作に仕立てたのはだれか",
+  "subtitle": "1820年",
   "subject": "art",
   "subcategory": "象徴的な作品",
-  "description": "Découverte par hasard en 1820 sur une île grecque, une statue mutilée entre au Louvre l'année suivante. Comment une sculpture antique parmi d'autres est-elle devenue l'idéal de la beauté féminine ?",
+  "description": "1820年、ギリシアの島で偶然見つかった欠損だらけの像は、翌年ルーヴル美術館に収まります。数ある古代彫刻のひとつにすぎなかった像は、なぜ女性美の理想とされるようになったのでしょうか。",
   "author": "dusan-nikolic",
   "hero": {
     "image": "venus_de_milo_louvre_gallery_wide_view",
     "ratio": "4:3",
-    "hook": "Une statue antique parmi tant d'autres, mutilée et mal datée : il a fallu la France du XIXe siècle pour en faire un mythe."
+    "hook": "数ある古代彫刻のひとつで、腕は欠け、制作年もはっきりしない像。それを神話に仕立てたのは、十九世紀のフランスでした。"
   },
   "sections": [
     {
       "id": "course_257_qui_a_fait_de_la_venus_de_milo_un_chef_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Depuis sa découverte, la Vénus de Milo incarne, aux yeux du public occidental, la beauté antique par excellence. Exhumée sur l'île grecque de Milos, dans la mer Égée, elle passe très vite entre les mains du roi de France [[ルイ18世]]. Le souverain l'offre au musée du Louvre, qui la reçoit officiellement en **1821**."
+          "text": "ミロのヴィーナスは、発見されて以来、西洋の人びとにとって古代の美の象徴とされてきました。エーゲ海のミロス島で掘り出されると、すぐにフランス国王[[ルイ18世]]の手に渡ります。国王はこれをルーヴル美術館に贈り、美術館は**1821年**に正式に受け取りました。"
         },
         {
           "type": "paragraph",
-          "text": "La statue est visiblement abîmée, mais c'est justement son état incomplet qui attire les savants. La reconstituer devient une **affaire d'importance nationale** dans la France du XIXe siècle, qui transforme une statue antique ordinaire en œuvre unique de la Grèce ancienne. Un peu plus grande que nature, elle trône toujours au Louvre et attire des **millions de visiteurs** chaque année."
+          "text": "像の傷みは目に見えて明らかですが、学者たちを引きつけたのは、まさにその欠けた姿でした。失われた部分を復元することは、十九世紀のフランスで**国家的な大事業**となり、ありふれた古代の彫像は、古代ギリシア唯一の傑作へと姿を変えます。等身大よりやや大きいこの像は、今もルーヴルに据えられ、毎年**数百万人の来館者**を集めています。"
         },
         {
           "type": "funFact",
-          "text": "Pour les Grecs, la déesse s'appelait Aphrodite. Vénus est le nom que lui donnent les Romains, qui adoptent la mythologie grecque."
+          "text": "ギリシア人にとって、この女神の名はアフロディテでした。ヴィーナスはローマ人がつけた名前で、ローマ人はギリシア神話を取り入れたのです。"
         }
       ]
     },
     {
       "id": "course_257_qui_a_fait_de_la_venus_de_milo_un_chef_p1",
-      "title": "Une découverte fortuite à Milos",
+      "title": "ミロス島で起きた偶然の発見",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le **8 avril 1820**, sur l'île de Milos, un paysan grec met au jour, en partie, la statue de la déesse. Un officier de marine français passionné d'archéologie, [[オリヴィエ・ヴーティエ]], est envoyé sur le lieu de cette fouille accidentelle. Une fois la statue entièrement dégagée, il en fait un dessin pour garder trace de l'événement."
+          "text": "**1820年4月8日**、ミロス島で、ギリシア人の農民が女神像の一部を掘り当てます。考古学に熱心なフランス海軍の士官[[オリヴィエ・ヴーティエ]]が、この思いがけない発掘の現場に派遣されました。像が完全に掘り出されると、ヴーティエは出来事の記録としてそのスケッチを残します。"
         },
         {
           "type": "image",
           "asset": "olivier_voutier_drawing_venus_de_milo_1820",
           "ratio": "3:4",
-          "caption": "Étude académique d'après un buste de la Vénus de Milo, dessin anonyme (1855-1875, Musea Brugge)."
+          "caption": "ミロのヴィーナスの胸像をもとにした習作。作者不詳のデッサン（1855〜1875年、ブルージュ美術館）"
         },
         {
           "type": "paragraph",
-          "text": "La statue est faite de **deux blocs**, le haut et le bas du corps, assemblés ensuite. Elle se dressait dans une niche en demi-cercle, encadrée par deux [[ヘルマ柱]], des piliers rectangulaires surmontés d'un buste. Le gymnase antique qui l'abritait a disparu sous la charrue. Deux inscriptions, perdues depuis, permettent de la dater avec prudence entre **150 et 50** av. J.-C. Les conditions de la fouille et la suite des événements laissent bien d'autres questions sans réponse."
+          "text": "像は、上半身と下半身の**二つの塊**を後から組み合わせてつくられています。半円形の壁龕（へきがん）に立ち、その両脇には、上に胸像をのせた四角い柱、つまり[[ヘルマ柱]]が二本並んでいました。像を収めていた古代の体育場は、畑の下に消えています。のちに失われた二つの碑文から、制作年は慎重に見て**紀元前150〜50年**の間とされます。発掘の状況やその後の経緯には、ほかにも答えの出ない疑問がたくさん残っています。"
         }
       ]
     },
     {
       "id": "course_257_qui_a_fait_de_la_venus_de_milo_un_chef_p2",
-      "title": "À la recherche des bras perdus",
+      "title": "失われた両腕を探し求める旅",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le trait le plus frappant de la statue, ce sont ses **bras absents**. Dès son arrivée en France, les savants tentent de reconstituer son état d'origine. Ils disposent de deux autres fragments trouvés au même endroit : une main gauche tenant une pomme et un haut de bras droit. Pour les contemporains, ces morceaux comblent en partie les membres manquants."
+          "text": "この像でいちばん目を引くのは、**腕がない**ことです。フランスに着くとすぐ、学者たちは元の姿を復元しようと試みました。手がかりになるのは、同じ場所で見つかった二つの断片、つまりリンゴを持つ左手と、右腕の上の部分です。当時の人びとには、これらの断片が、欠けた腕をいくらか補ってくれるものに思えました。"
         },
         {
           "type": "image",
           "asset": "venus_de_milo_arms_reconstruction_furtwangler_1893",
           "ratio": "2:1",
-          "caption": "Hypothèses de restitution des bras de la Vénus de Milo : près de Mars, tenant une couronne, appuyée sur un pilier."
+          "caption": "ミロのヴィーナスの腕の復元案。マルスのそばに立つ姿、冠を持つ姿、柱にもたれる姿が考えられました。"
         },
         {
           "type": "paragraph",
-          "text": "Une Vénus tenant une pomme rappellerait sa victoire au [[パリスの審判]], l'épisode évoqué dans l'*Iliade* d'Homère où un prince troyen la désigne comme la plus belle des déesses. D'autres versions circulent : Vénus debout près du dieu Mars, Vénus le bras posé sur une colonne, Vénus tenant une couronne de laurier. Aucune ne s'impose, car la France du XIXe siècle veut sa propre version des [[パルテノン・マーブル]], ces sculptures du grand temple d'Athènes conservées à Londres."
+          "text": "リンゴを持つヴィーナスなら、[[パリスの審判]]での勝利を思わせます。これはホメロスの『イーリアス』にも出てくる話で、トロイアの王子が彼女を女神のなかでいちばん美しいと選んだのでした。ほかの復元案も出ています。軍神マルスのそばに立つヴィーナス、柱に腕をのせたヴィーナス、月桂冠を持つヴィーナスなどです。どれも決め手を欠きました。十九世紀のフランスは、ロンドンにある、アテネの大神殿の彫刻群[[パルテノン・マーブル]]に並ぶ、自分たち独自のものを求めていたからです。"
         },
         {
           "type": "funFact",
-          "text": "En grec, le nom de l'île, Milos, se traduit par « pomme ». Un joli hasard pour une statue dont la main retrouvée tient justement ce fruit."
+          "text": "ギリシア語で、島の名ミロスは「リンゴ」を意味します。見つかった手がちょうどこの果実を持っているのは、なかなか洒落た偶然です。"
         }
       ]
     },
     {
       "id": "course_257_qui_a_fait_de_la_venus_de_milo_un_chef_p3",
-      "title": "Une statue devenue affaire d'État",
+      "title": "国家の問題になった一体の彫像",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La découverte de la Vénus de Milo déclenche une suite d'événements complexes. Leurs conséquences politiques et culturelles transforment une statue antique ordinaire en icône de l'héritage classique. L'île est alors sous domination ottomane, mais ce sont les Français qui achètent la statue au paysan. Acquérir la Vénus est une **affaire politique**."
+          "text": "ミロのヴィーナスの発見は、複雑な出来事の連なりを引き起こしました。その政治的・文化的な影響で、ありふれた古代の彫像は、古典の遺産を象徴する存在になります。当時ミロス島はオスマン帝国の支配下にありましたが、農民から像を買い取ったのはフランス人でした。ヴィーナスを手に入れることは、**政治的な出来事**だったのです。"
         },
         {
           "type": "image",
           "asset": "venus_de_milo_louvre_19th_century_photograph",
           "ratio": "3:2",
-          "caption": "La foule des visiteurs autour de la Vénus de Milo au Louvre, de nos jours."
+          "caption": "現在のルーヴル美術館で、ミロのヴィーナスを取り巻く来館者の人だかり"
         },
         {
           "type": "paragraph",
-          "text": "Au XIXe siècle, la Grèce antique passe pour le berceau de la civilisation européenne, et les pays d'Europe de l'Ouest se veulent les **héritiers de la Grèce classique**. Les savants français comparent la Vénus aux œuvres de [[ペイディアス]], le grand sculpteur du Parthénon, et tentent de la lui rattacher. En **1893**, l'archéologue allemand [[アドルフ・フルトヴェングラー]] réfute longuement cette thèse, archéologie à l'appui. Une partie de ses conclusions tient encore, mais le mythe de la Vénus de Milo, idéal de la beauté féminine classique, survit."
+          "text": "十九世紀、古代ギリシアはヨーロッパ文明のゆりかごとみなされ、西欧諸国は自らを**古典期ギリシアの後継者**と考えるようになります。フランスの学者たちは、ヴィーナスをパルテノン神殿の偉大な彫刻家[[ペイディアス]]の作品と比べ、その作とみなそうとしました。**1893年**、ドイツの考古学者[[アドルフ・フルトヴェングラー]]は、考古学的な証拠を挙げてこの説を詳しく退けます。その結論の一部は今も通用しますが、古典的な女性美の理想というミロのヴィーナスの神話は生き残りました。"
         }
       ]
     },
     {
       "id": "course_257_qui_a_fait_de_la_venus_de_milo_un_chef_p4",
-      "title": "Le mystère comme héritage",
+      "title": "謎という遺産",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L'exactitude historique a peu pesé dans la fabrication de l'image de la Vénus de Milo. Les besoins politiques de la France du XIXe siècle l'ont emporté sur les tentatives sincères de recherche. Une statue comme tant d'autres de son époque est devenue l'égale des marbres du Parthénon. Plus de **deux siècles** après, son histoire résonne encore chez chaque visiteur du Louvre."
+          "text": "ミロのヴィーナスのイメージづくりで、歴史的な正確さはほとんど重みを持ちませんでした。十九世紀フランスの政治的な事情が、真摯な研究の試みを上回ったのです。同時代のほかの像と変わらないひとつの像が、パルテノンの大理石彫刻と肩を並べる存在になりました。**2世紀以上**たった今も、その歩みはルーヴルを訪れる一人ひとりの心に響いています。"
         },
         {
           "type": "timeline",
           "events": [
             {
-              "date": "1820",
-              "title": "La découverte",
-              "detail": "Le 8 avril, un paysan de Milos met la statue au jour et Olivier Voutier la dessine."
+              "date": "1820年",
+              "title": "発見",
+              "detail": "4月8日、ミロス島の農民が像を掘り出し、オリヴィエ・ヴーティエがそれをスケッチします。"
             },
             {
-              "date": "1821",
-              "title": "Entrée au Louvre",
-              "detail": "Louis XVIII offre la statue au musée, qui la reçoit officiellement."
+              "date": "1821年",
+              "title": "ルーヴルへ",
+              "detail": "ルイ十八世が像を美術館に贈り、美術館が正式に受け取ります。"
             },
             {
-              "date": "1893",
-              "title": "La réfutation",
-              "detail": "Adolf Furtwängler démonte le lien avec Phidias défendu par les savants français."
+              "date": "1893年",
+              "title": "反論",
+              "detail": "アドルフ・フルトヴェングラーが、フランスの学者たちが唱えたペイディアスとの結びつきを覆します。"
             }
           ]
         },
         {
           "type": "paragraph",
-          "text": "C'est aussi pour cela que la statue n'a jamais subi de restauration invasive. Elle se présente **pratiquement inchangée** depuis le jour de sa découverte. La recherche moderne n'apporte guère de certitudes à son sujet. Les récits comblent le vide, façonnés par les besoins de l'époque et le regard de celui qui la contemple."
+          "text": "だからこそ、この像は大がかりな修復を一度も受けていません。発見された日から**ほとんど変わらない**姿で、今ここにあります。現代の研究も、この像についてはほとんど確かなことを示せていません。空白を埋めてきたのは物語で、それは時代の要請と、像を見つめる人のまなざしによって形づくられてきました。"
         },
         {
           "type": "takeaway",
-          "text": "La Vénus de Milo doit moins son statut de chef-d'œuvre à ce que l'on sait d'elle qu'au besoin de la France du XIXe siècle de posséder son propre trésor grec, et son mystère fait encore sa force."
+          "text": "ミロのヴィーナスが名作とされるのは、わかっていることのおかげというより、自前のギリシアの宝を持ちたかった十九世紀フランスの思いのおかげです。そして、その謎は今もこの像の魅力になっています。"
         }
       ]
     }
