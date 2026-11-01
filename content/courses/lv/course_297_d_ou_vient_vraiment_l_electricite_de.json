@@ -4,7 +4,7 @@
   "subtitle": "Neredzams maisījums",
   "subject": "comprendreLeMonde",
   "subcategory": "Vide un nākotne",
-  "description": "Pie rozetes nekas neliecina, vai strāva nāk no saules, vēja vai ogļu spēkstacijas. Aiz šī ikdienišķā žesta slēpjas maisījums, kas mainās no stundas uz stundu un reizēm arī no valsts uz valsti.",
+  "description": "Pie rozetes nekas neliecina, vai strāva nāk no saules, vēja vai ogļu elektrostacijas. Aiz šī ikdienišķā žesta slēpjas maisījums, kas mainās no stundas uz stundu un reizēm arī no valsts uz valsti.",
   "author": "rana-abdalla",
   "hero": {
     "image": "wind_turbines_coal_power_plant_landscape",
@@ -19,11 +19,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Tu pievieno tālruni uzlādei, un elektrība ierodas bez etiķetes. Rozete nekādi neliecina, vai tā ražota no saules gaismas, aizsprosta ūdens vai spēkstacijā sadedzināta kurināmā. Pat divas mājas vienā ielā nevar pateikt, no kuras spēkstacijas nāk katra strāvas vienība."
+          "text": "Tu pievieno tālruni uzlādei, un elektrība ierodas bez etiķetes. Rozete nekādi neliecina, vai tā ražota no saules gaismas, aizsprosta ūdens vai elektrostacijā sadedzināta kurināmā. Pat divas mājas vienā ielā nevar pateikt, no kuras elektrostacijas nāk katra strāvas vienība."
         },
         {
           "type": "paragraph",
-          "text": "Iemesls ir vienkāršs: gandrīz visas mājsaimniecības strāvu ņem no kopīga tīkla. Tas ir [[elektrotīkls]], kabeļu sistēma, kas savieno kādas teritorijas spēkstacijas un lietotājus. Tīklu vienlaikus baro vairākas spēkstacijas, un to daļas kopā ir [[elektroenerģijas avotu sadalījums]]. Šis sadalījums parāda, kādi avoti baro tīklu, nevis atsevišķu saules vai gāzes elektrības plūsmu, kas tiktu sūtīta tieši uz tavu tālruni. Tāpēc atbilde sākas krietni tālāk par mājas sienām."
+          "text": "Iemesls ir vienkāršs: gandrīz visas mājsaimniecības strāvu ņem no kopīga tīkla. Tas ir [[elektrotīkls]], kabeļu sistēma, kas savieno kādas teritorijas elektrostacijas un lietotājus. Tīklu vienlaikus baro vairākas elektrostacijas, un to daļas kopā ir [[elektroenerģijas avotu sadalījums]]. Šis sadalījums parāda, kādi avoti baro tīklu, nevis atsevišķu saules vai gāzes elektrības plūsmu, kas tiktu sūtīta tieši uz tavu tālruni. Tāpēc atbilde sākas krietni tālāk par mājas sienām."
         }
       ]
     },
@@ -34,7 +34,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ogļu spēkstacijas un daudzas atomelektrostacijas siltumu izmanto tvaika ražošanai. Šis tvaiks iedarbina divas ierīces. Pirmā ir [[turbīna]], lāpstiņu komplekts. Otrā ir [[ģenerators]], mašīna, kas kustību pārvērš elektrībā. Gāzes spēkstacijas var turbīnas griezt arī tieši ar karstajām sadegšanas gāzēm. Atšķirīgi paņēmieni, bet viena un tā pati elektrība, kas nonāk tajā pašā tīklā."
+          "text": "Ogļu elektrostacijas un daudzas kodolelektrostacijas siltumu izmanto tvaika ražošanai. Šis tvaiks iedarbina divas ierīces. Pirmā ir [[turbīna]], lāpstiņu komplekts. Otrā ir [[ģenerators]], mašīna, kas kustību pārvērš elektrībā. Gāzes elektrostacijas var turbīnas griezt arī tieši ar karstajām sadegšanas gāzēm. Atšķirīgi paņēmieni, bet viena un tā pati elektrība, kas nonāk tajā pašā tīklā."
         },
         {
           "type": "image",
@@ -44,11 +44,11 @@
         },
         {
           "type": "paragraph",
-          "text": "Vēja turbīnas griežas ar vēju, hidroelektrostacijas ar tekošu ūdeni. Saules paneļi iet citu ceļu: tie ražo elektrību tieši no gaismas, bez neviena rotējoša spārna. Šie avoti nedarbojas vienādos apstākļos. Saulei rietot, saules ražošana samazinās, vēja elektrība mainās līdz ar laikapstākļiem. Spēkstacijas, kas dedzina kurināmo, tad var dot strāvu, kad citi avoti dod mazāk."
+          "text": "Vēja turbīnas griežas ar vēju, hidroelektrostacijas ar tekošu ūdeni. Saules paneļi iet citu ceļu: tie ražo elektrību tieši no gaismas, bez neviena rotējoša spārna. Šie avoti nedarbojas vienādos apstākļos. Saulei rietot, saules ražošana samazinās, vēja elektrība mainās līdz ar laikapstākļiem. Elektrostacijas, kas dedzina kurināmo, tad var dot strāvu, kad citi avoti dod mazāk."
         },
         {
           "type": "funFact",
-          "text": "Atomelektrostacija pēc būtības darbojas kā ogļu spēkstacija: siltums vāra ūdeni, un turbīnu griež tvaiks. Mainās tikai siltuma avots."
+          "text": "Kodolelektrostacija pēc būtības darbojas kā ogļu elektrostacija: siltums vāra ūdeni, un turbīnu griež tvaiks. Mainās tikai siltuma avots."
         }
       ]
     },
@@ -69,7 +69,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Šo tīklu vada [[tīkla operators]], organizācija, kurai pastāvīgi jāuztur līdzsvars starp piedāvājumu un pieprasījumu. Dažas spēkstacijas pielāgo ražošanu. Kur uzstādītas baterijas, tās atdod agrāk uzkrāto elektrību. Citi avoti aizpilda tukšumu, ko atstāj rietošā saule. Ikdienas receptes nav: pusdienlaika sadalījums var ļoti atšķirties no tā, kāds ir pēc dažām stundām, lai gan tava rozete nav mainījusies."
+          "text": "Šo tīklu vada [[tīkla operators]], organizācija, kurai pastāvīgi jāuztur līdzsvars starp piedāvājumu un pieprasījumu. Dažas elektrostacijas pielāgo ražošanu. Kur uzstādītas baterijas, tās atdod agrāk uzkrāto elektrību. Citi avoti aizpilda tukšumu, ko atstāj rietošā saule. Ikdienas receptes nav: pusdienlaika sadalījums var ļoti atšķirties no tā, kāds ir pēc dažām stundām, lai gan tava rozete nav mainījusies."
         }
       ]
     },
@@ -80,7 +80,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "2025. gadā aptuveni **ceturtā daļa** (24%) ASV lielo spēkstaciju saražotās elektrības bija [[atjaunīgā enerģija]]: avoti, ko daba atjauno pati, proti, saules gaisma, vējš un tekošs ūdens. Šis rādītājs, vēl provizorisks, attiecas uz visu gadu. Tas nenozīmē, ka atjaunojamie avoti nodrošināja vienādu daļu katru reizi, kad kāds vārīja tēju vai uzlādēja tālruni."
+          "text": "2025. gadā aptuveni **ceturtā daļa** (24%) ASV lielo elektrostaciju saražotās elektrības bija [[atjaunojamā enerģija]]: avoti, ko daba atjauno pati, proti, saules gaisma, vējš un tekošs ūdens. Šis rādītājs, vēl provizorisks, attiecas uz visu gadu. Tas nenozīmē, ka atjaunojamie avoti nodrošināja vienādu daļu katru reizi, kad kāds vārīja tēju vai uzlādēja tālruni."
         },
         {
           "type": "paragraph",
@@ -95,17 +95,17 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Sadalījums pa stundām prasa vēl vienu precizējumu: kāda elektrība tavā zonā ir patiešām pieejama. Spēkstacija vienā robežas pusē var barot tīklu otrā pusē. Šī importētā elektrība sajaucas ar vietējo ražošanu. Tāpēc [[patēriņa enerģijas avotu sadalījums]], tas ir, avoti, kas apgādā kādas zonas lietotājus, var atšķirties no turpat saražotā."
+          "text": "Sadalījums pa stundām prasa vēl vienu precizējumu: kāda elektrība tavā zonā ir patiešām pieejama. Elektrostacija vienā robežas pusē var barot tīklu otrā pusē. Šī importētā elektrība sajaucas ar vietējo ražošanu. Tāpēc [[patēriņa enerģijas avotu sadalījums]], tas ir, avoti, kas apgādā kādas zonas lietotājus, var atšķirties no turpat saražotā."
         },
         {
           "type": "image",
           "asset": "belchatow_coal_power_plant_cooling_towers_poland",
           "ratio": "4:3",
-          "caption": "Bełchatów ogļu spēkstacija Polijā, lielākā Eiropā."
+          "caption": "Bełchatów ogļu elektrostacija Polijā, lielākā Eiropā."
         },
         {
           "type": "paragraph",
-          "text": "Tas ir svarīgi ar tavu elektrību saistītajām emisijām. Ogļu vai gāzes dedzināšana izdala oglekļa dioksīdu, gāzi, kas sasilda planētu. Vēja turbīnas, saules paneļi un atomelektrostacijas, ražojot strāvu, to tieši neizdala. Elektrība neapstājas pie robežas, un tās ietekme arī ne. Atkarībā no importa izcelsmes ar tavu patēriņu saistītās emisijas var būt lielākas vai mazākas, nekā liecina vietējā ražošana."
+          "text": "Tas ir svarīgi ar tavu elektrību saistītajām emisijām. Ogļu vai gāzes dedzināšana izdala oglekļa dioksīdu, gāzi, kas sasilda planētu. Vēja turbīnas, saules paneļi un kodolelektrostacijas, ražojot strāvu, to tieši neizdala. Elektrība neapstājas pie robežas, un tās ietekme arī ne. Atkarībā no importa izcelsmes ar tavu patēriņu saistītās emisijas var būt lielākas vai mazākas, nekā liecina vietējā ražošana."
         },
         {
           "type": "takeaway",
