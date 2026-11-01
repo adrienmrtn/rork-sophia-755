@@ -1,123 +1,123 @@
 {
   "id": "course_274_peut_on_modifier_l_adn_d_un_etre_humain",
-  "title": "Peut-on modifier l'ADN d'un être humain ?",
-  "subtitle": "Les ciseaux CRISPR",
+  "title": "Vai var mainīt cilvēka DNS?",
+  "subtitle": "CRISPR šķēres",
   "subject": "sciences",
-  "subcategory": "Découvertes qui ont changé le monde",
-  "description": "Depuis 2012, des « ciseaux moléculaires » empruntés aux bactéries permettent de couper l'ADN à l'endroit voulu. Premières guérisons, erreurs possibles et bébés sur mesure : jusqu'où ira-t-on ?",
+  "subcategory": "Atklājumi, kas mainīja pasauli",
+  "description": "Kopš 2012. gada no baktērijām aizgūtas „molekulārās šķēres“ ļauj pārgriezt DNS vēlamajā vietā. Pirmie izārstētie, iespējamās kļūdas un bērni pēc pasūtījuma: cik tālu tas aizies?",
   "author": "kate-waddams",
   "hero": {
     "image": "genetics_lab_pipette_dna_samples_gloved_hands",
     "ratio": "4:3",
-    "hook": "Et si l'on pouvait corriger une lettre de son ADN comme une faute de frappe ?"
+    "hook": "Ja nu savu DNS burtu varētu labot kā drukas kļūdu?"
   },
   "sections": [
     {
       "id": "course_274_peut_on_modifier_l_adn_d_un_etre_humain_intro",
-      "title": "Introduction",
+      "title": "Ievads",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Cheveux, yeux, couleur de peau, silhouette : nous sommes tous différents. Ces traits physiques tiennent à un héritage : chaque [[gēns]] est un segment d'ADN reçu de nos parents biologiques. L'environnement compte aussi, bien sûr : ce que nous mangeons, les gens que nous fréquentons, ce que nous croyons. Mais nos gènes, nous les prenons pour acquis. On aimerait parfois être plus grand ou plus mince, mais on vit avec, sans vraiment y penser."
+          "text": "Mati, acis, ādas krāsa, augums: mēs visi esam atšķirīgi. Šīs fiziskās pazīmes ir mantojums: katrs [[gēns]] ir DNS posms, ko saņemam no bioloģiskajiem vecākiem. Vide, protams, arī ietekmē: ko mēs ēdam, ar kādiem cilvēkiem saskaramies, kam ticam. Taču savus gēnus mēs uztveram kā pašsaprotamu. Reizēm gribētos augstāku augumu vai slaidāku stāvu, bet ar to dzīvo, īpaši nedomājot."
         },
         {
           "type": "paragraph",
-          "text": "Que changeriez-vous si vous pouviez retoucher votre ADN ? La question n'est plus théorique. En **2012**, une biochimiste américaine, **Jennifer Doudna**, et une microbiologiste française, **Emmanuelle Charpentier**, mettent au point une façon de programmer une protéine qui coupe l'ADN. Elles peuvent désormais retirer un gène indésirable et donc, en théorie, modifier l'ADN d'un être humain."
+          "text": "Ko tu mainītu, ja varētu pārlabot savu DNS? Šis jautājums vairs nav teorētisks. **2012**. gadā amerikāņu bioķīmiķe **Dženifera Daudna** un franču mikrobioloģe **Emanuela Šarpentjē** izstrādā veidu, kā ieprogrammēt proteīnu, kas griež DNS. Tagad viņas var izņemt nevēlamu gēnu un tātad teorētiski mainīt cilvēka DNS."
         }
       ]
     },
     {
       "id": "course_274_peut_on_modifier_l_adn_d_un_etre_humain_p1",
-      "title": "CRISPR, des ciseaux empruntés aux bactéries",
+      "title": "CRISPR: no baktērijām aizgūtas šķēres",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "[[CRISPR]] n'est pas le seul outil capable de modifier l'ADN, mais c'est le plus célèbre. Son principe a d'abord été observé chez des microbes. Pour se défendre, une bactérie repère l'ADN du virus qui l'attaque et le découpe en morceaux. Elle utilise pour cela des segments d'ADN appelés CRISPR et une enzyme nommée **Cas**, qui joue le rôle des ciseaux."
+          "text": "[[CRISPR]] nav vienīgais DNS maiņas rīks, bet gan slavenākais. Tā princips vispirms novērots mikrobos. Lai aizsargātos, baktērija atpazīst to uzbrūkošā vīrusa DNS un sagriež to gabalos. Šim nolūkam tā izmanto DNS posmus, ko sauc par CRISPR, un enzīmu **Cas**, kas pilda šķēru lomu."
         },
         {
           "type": "image",
           "asset": "emmanuelle_charpentier_jennifer_doudna_crispr_pioneers",
           "ratio": "16:9",
-          "caption": "Emmanuelle Charpentier et Jennifer Doudna, les deux chercheuses qui ont transformé cette défense bactérienne en outil."
+          "caption": "Emanuela Šarpentjē un Dženifera Daudna, abas pētnieces, kas šo baktēriju aizsardzību pārvērta par rīku."
         },
         {
           "type": "paragraph",
-          "text": "Les scientifiques ont détourné ce système de défense naturel. Au lieu de viser un virus, ils guident l'enzyme vers un endroit précis de l'ADN d'une personne. Là, elle coupe, et une modification volontaire devient possible. Parfois le gène visé est simplement désactivé. Parfois quelques-unes de ses lettres sont changées. Parfois il est remplacé en entier."
+          "text": "Zinātnieki šo dabisko aizsardzības sistēmu ir pārveidojuši citam mērķim. Tā vietā, lai mērķētu uz vīrusu, viņi virza enzīmu uz precīzu vietu cilvēka DNS. Tur tas pārgriež, un kļūst iespējama apzināta izmaiņa. Dažreiz mērķa gēnu vienkārši izslēdz. Dažreiz nomaina dažus tā burtus. Dažreiz to aizstāj pilnībā."
         }
       ]
     },
     {
       "id": "course_274_peut_on_modifier_l_adn_d_un_etre_humain_p2",
-      "title": "Les premières guérisons : drépanocytose et thalassémie",
+      "title": "Pirmie izārstētie: sirpjveida šūnu anēmija un talasēmija",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Pouvoir éditer l'ADN ouvre la porte au traitement de nombreuses maladies génétiques. Notre ADN s'écrit avec **quatre bases**, A, T, C et G. Leur enchaînement forme notre [[genoms]], le plan de construction de notre corps. Une erreur dans ce texte peut suffire à déclencher une maladie, et la corriger peut, en principe, la guérir."
+          "text": "Iespēja rediģēt DNS paver durvis daudzu ģenētisku slimību ārstēšanai. Mūsu DNS raksta ar **četrām bāzēm**: A, T, C un G. Šo bāzu secība ir mūsu [[genoms]], ķermeņa būvplāns. Viena kļūda šajā tekstā var izraisīt slimību, un tās labošana principā var to izārstēt."
         },
         {
           "type": "image",
           "asset": "sickle_cell_red_blood_cells_micrograph",
           "ratio": "3:2",
-          "caption": "Coupe de foie d'un malade de la drépanocytose, vue au microscope : la première maladie traitée par CRISPR."
+          "caption": "Sirpjveida šūnu anēmijas slimnieka aknu griezums mikroskopā: pirmā slimība, ko ārstēja ar CRISPR."
         },
         {
           "type": "paragraph",
-          "text": "En **2023**, le Royaume-Uni devient le premier pays à autoriser un médicament fondé sur CRISPR. Il vise deux maladies héréditaires du sang, la [[sirpjveida šūnu anēmija]] et la bêta-thalassémie. Le traitement modifie les cellules qui fabriquent le sang pour qu'elles produisent davantage d'[[augļa hemoglobīns]], une forme d'hémoglobine normalement produite avant la naissance."
+          "text": "**2023**. gadā Apvienotā Karaliste kļūst par pirmo valsti, kas atļauj uz CRISPR balstītas zāles. Tās vērstas pret divām iedzimtām asins slimībām: [[sirpjveida šūnu anēmija]] un beta talasēmiju. Ārstēšana maina asinis veidojošās šūnas tā, lai tās ražotu vairāk hemoglobīna formas, kas parasti veidojas pirms dzimšanas: [[augļa hemoglobīns]]."
         },
         {
           "type": "funFact",
-          "text": "Une faute de frappe peut tuer. Une seule lettre erronée dans l'ADN, un T à la place d'un C par exemple, suffit parfois à provoquer une maladie génétique mortelle. Remettre la bonne lettre pourrait, en théorie, la guérir."
+          "text": "Drukas kļūda var nogalināt. Pietiek ar vienu kļūdainu burtu DNS, piemēram, T C vietā, lai reizēm izraisītu nāvējošu ģenētisku slimību. Atgriežot pareizo burtu, slimību teorētiski varētu izārstēt."
         },
         {
           "type": "paragraph",
-          "text": "Et ce n'est qu'un début. Des essais cliniques testent aujourd'hui CRISPR contre des cancers, des troubles du métabolisme, des maladies auto-immunes, des maladies cardiovasculaires ou encore des dystrophies musculaires. La liste est longue. Les maladies génétiques appartiendront-elles bientôt au passé ?"
+          "text": "Un tas ir tikai sākums. Klīniskie pētījumi šobrīd pārbauda CRISPR pret vēzi, vielmaiņas traucējumiem, autoimūnām slimībām, sirds un asinsvadu slimībām un muskuļu distrofijām. Saraksts ir garš. Vai ģenētiskās slimības drīz kļūs par pagātni?"
         }
       ]
     },
     {
       "id": "course_274_peut_on_modifier_l_adn_d_un_etre_humain_p3",
-      "title": "Pourquoi on ne guérira pas tout",
+      "title": "Kāpēc mēs neizārstēsim visu",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ce n'est pas si simple. D'abord, la façon dont un gène s'exprime ne dépend pas seulement de l'héritage reçu des parents : l'environnement l'influence aussi. Ensuite, une maladie n'est pas forcément le fait d'un seul gène défectueux. Plusieurs gènes peuvent être impliqués, et la réparation devient alors bien plus compliquée."
+          "text": "Tas nav tik vienkārši. Pirmkārt, tas, kā gēns izpaužas, nav atkarīgs tikai no mantojuma no vecākiem: to ietekmē arī vide. Otrkārt, slimību ne vienmēr izraisa viens bojāts gēns. Var būt iesaistīti vairāki gēni, un tad labošana kļūst daudz sarežģītāka."
         },
         {
           "type": "paragraph",
-          "text": "CRISPR lui-même peut se tromper. Il arrive que les ciseaux coupent au mauvais endroit, ou que les deux extrémités coupées ne se ressoudent pas correctement. Cet ADN altéré peut créer de nouveaux problèmes sans corriger le premier. Malgré tout, la médecine avance à grands pas vers l'élimination de certaines des pires maladies génétiques."
+          "text": "Arī pats CRISPR var kļūdīties. Gadās, ka šķēres griež nepareizā vietā vai ka abi pārgrieztie gali pareizi nesaaug kopā. Šī izmainītā DNS var radīt jaunas problēmas, neizlabojot pirmo. Tomēr medicīna ar lieliem soļiem tuvojas dažu smagāko ģenētisko slimību izskaušanai."
         }
       ]
     },
     {
       "id": "course_274_peut_on_modifier_l_adn_d_un_etre_humain_p4",
-      "title": "Bébés sur mesure : où placer la limite ?",
+      "title": "Bērni pēc pasūtījuma: kur novilkt robežu?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Soigner des maladies invalidantes ou mortelles, tout le monde en voit l'intérêt. Mais où la science doit-elle tracer la limite ? Faut-il s'en servir pour créer l'« humain parfait » ? La question se pose avec une acuité nouvelle depuis que l'on sait couper l'ADN à volonté."
+          "text": "Ikviens saprot, kāpēc vajag ārstēt invalidizējošas vai nāvējošas slimības. Taču kur zinātnei jānovelk robeža? Vai to drīkst izmantot, lai radītu „ideālu cilvēku“? Jautājums kļuvis neparasti ass, kopš mēs protam griezt DNS pēc vēlēšanās."
         },
         {
           "type": "image",
           "asset": "ivf_embryo_icsi_microinjection_micrograph",
           "ratio": "16:9",
-          "caption": "Un ovocyte humain maintenu par une pipette pendant une micro-injection en laboratoire."
+          "caption": "Cilvēka oocīts, ko laboratorijā mikroinjekcijas laikā notur pipete."
         },
         {
           "type": "funFact",
-          "text": "L'expression « bébé sur mesure » n'est pas née avec CRISPR. On l'emploie depuis l'arrivée de la [[in vitro apaugļošana]], qui permet de concevoir un embryon en laboratoire avant de l'implanter."
+          "text": "Izteiciens „bērns pēc pasūtījuma“ nav radies līdz ar CRISPR. To lieto kopš laika, kad radās [[in vitro apaugļošana]], kas ļauj embriju radīt laboratorijā pirms tā implantēšanas."
         },
         {
           "type": "paragraph",
-          "text": "L'[[dzimumšūnu rediģēšana]] modifie l'ADN des cellules reproductrices : spermatozoïdes, ovules ou embryons aux tout premiers stades. La différence avec un traitement classique est de taille : ces modifications se transmettent ensuite de génération en génération. Aujourd'hui, l'édition germinale est interdite dans tous les pays. Mais pour combien de temps ? À quel moment l'édition génétique à visée médicale basculera-t-elle vers des lignées génétiques à la demande ?"
+          "text": "Vēl viens veids ir [[dzimumšūnu rediģēšana]]: tā maina reproduktīvo šūnu DNS, proti, spermatozoīdu, olšūnu vai pašos agrīnākajos posmos esošu embriju. Atšķirība no parastas ārstēšanas ir ievērojama: šīs izmaiņas pēc tam tiek nodotas no paaudzes paaudzē. Šodien dzimumšūnu rediģēšana ir aizliegta visās valstīs. Bet cik ilgi? Kurā brīdī medicīniskas nozīmes gēnu rediģēšana pāries uz ģenētiskām līnijām pēc pasūtījuma?"
         },
         {
           "type": "takeaway",
-          "text": "Depuis 2012, les ciseaux CRISPR permettent de corriger l'ADN humain, avec de premières guérisons autorisées en 2023, mais les erreurs restent possibles, beaucoup de maladies impliquent plusieurs gènes, et l'édition germinale reste interdite partout."
+          "text": "Kopš 2012. gada CRISPR šķēres ļauj labot cilvēka DNS, ar pirmajām 2023. gadā atļautajām izārstēšanām, taču kļūdas joprojām iespējamas, daudzas slimības skar vairākus gēnus, un dzimumšūnu rediģēšana visur joprojām ir aizliegta."
         }
       ]
     }

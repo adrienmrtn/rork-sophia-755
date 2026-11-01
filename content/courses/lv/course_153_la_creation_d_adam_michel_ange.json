@@ -1,124 +1,124 @@
 {
   "id": "course_153_la_creation_d_adam_michel_ange",
-  "title": "La Création d'Adam, Michel-Ange",
+  "title": "Ādama radīšana, Mikelandželo",
   "subtitle": "1508-1512",
   "subject": "art",
-  "subcategory": "Cinéma, photo & architecture + œuvres iconiques",
-  "description": "Sur le plafond de la Sixtine, Michel-Ange peint Dieu et Adam dont les doigts presque se touchent. Chef-d'œuvre de la fresque et du Cinquecento.",
+  "subcategory": "Kino, foto, arhitektūra un ikoniski darbi",
+  "description": "Siksta kapelas griestos Mikelandželo uzglezno Dievu un Ādamu, kuru pirksti gandrīz saskaras. Freskas un Činkvečento šedevrs.",
   "hero": {
     "image": "la_creation_d_adam_michel_ange",
     "ratio": "16:9",
-    "hook": "Deux doigts séparés par un souffle : l'image la plus citée de la Renaissance."
+    "hook": "Divi pirksti, ko šķir elpas vilciens: renesanses citētākais tēls."
   },
   "sections": [
     {
       "id": "course_153_la_creation_d_adam_michel_ange_intro",
-      "title": "Introduction",
+      "title": "Ievads",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Entre **1508** et **1512**, **Michel-Ange** peint le plafond de la Chapelle Sixtine à Rome. Au centre, *La Création d'Adam* : Dieu tend la main, Adam s'éveille."
+          "text": "No **1508**. līdz **1512**. gadam **Mikelandželo** glezno Siksta kapelas griestus Romā. Centrā ir *Ādama radīšana*: Dievs pastiepj roku, Ādams mostas."
         },
         {
           "type": "paragraph",
-          "text": "C'est le sommet du [[Činkvečento]], le XVIe siècle italien."
+          "text": "Tā ir Itālijas sešpadsmitā gadsimta, jeb [[Činkvečento]], virsotne."
         }
       ]
     },
     {
       "id": "course_153_la_creation_d_adam_michel_ange_p1",
-      "title": "Une commande papale",
+      "title": "Pāvesta pasūtījums",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le pape Jules II veut un plafond grandiose. Michel-Ange, surtout sculpteur, proteste… puis accepte. [[Bramante]], rival architecte, aurait poussé la commande pour le mettre en difficulté."
+          "text": "Pāvests Jūlijs II vēlas grandiozus griestus. Mikelandželo, galvenokārt tēlnieks, protestē… bet piekrīt. [[Bramante]], arhitekts un viņa sāncensis, esot veicinājis šo pasūtījumu, lai nostādītu Mikelandželo grūtībās."
         },
         {
           "type": "paragraph",
-          "text": "Le plafond entier raconte la Genèse. *La Création d'Adam* n'est qu'un panneau, mais le plus photographié. Michel-Ange y condense tension anatomique et théologie."
+          "text": "Visi griesti vēsta Pirmās Mozus grāmatas stāstu. *Ādama radīšana* ir tikai viens panelis, taču visvairāk fotografētais. Mikelandželo tajā sakausē anatomisko spriedzi un teoloģiju."
         },
         {
           "type": "image",
           "asset": "sistine_chapel_ceiling_overview",
           "ratio": "4:3",
-          "caption": "La Sixtine : un ciel peint de bout en bout."
+          "caption": "Siksta kapela: debesis, nogleznotas no gala līdz galam."
         }
       ]
     },
     {
       "id": "course_153_la_creation_d_adam_michel_ange_p2",
-      "title": "La fresque, un combat",
+      "title": "Freska kā cīņa",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La [[freska]] exige de peindre sur l'enduit frais. Dos courbé, mois après mois. La [[Teorija par „apmetni smadzeņu formā“]] voit dans le manteau de Dieu la forme d'un cerveau : hypothèse moderne séduisante, non prouvée."
+          "text": "Tā ir [[freska]]: jāglezno uz svaiga apmetuma, ar saliektu muguru, mēnesi pēc mēneša. [[Teorija par „mantiju smadzeņu formā“]] saskata Dieva mantijā smadzeņu formu: pievilcīga mūsdienu hipotēze, taču nepierādīta."
         },
         {
           "type": "funFact",
-          "text": "Michel-Ange a peint de nombreux personnages nus : le corps humain comme louange."
+          "text": "Mikelandželo ir uzgleznojis daudz kailu tēlu: cilvēka ķermenis kā slavinājums."
         },
         {
           "type": "paragraph",
-          "text": "Ses études d'anatomie, proches de la [[anatomiskā sekcija]], donnent aux muscles une vérité rare."
+          "text": "Viņa anatomijas studijas ir tuvas vienai pētniecības metodei: [[anatomiskā sekcija]]. Tās piešķir muskuļiem retu patiesumu."
         },
         {
           "type": "paragraph",
-          "text": "Travailler allongé sous la voûte épuise. Les lettres de l'artiste parlent de souffrance physique. Le sublime a un coût corporel."
+          "text": "Strādāt guļus zem velves ir nogurdinoši. Mākslinieka vēstulēs ir runa par fiziskām mokām. Cildenajam ir ķermeņa cena."
         }
       ]
     },
     {
       "id": "course_153_la_creation_d_adam_michel_ange_p3",
-      "title": "Doigts qui ne se touchent pas",
+      "title": "Pirksti, kas nesaskaras",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L'espace entre les deux index crée la tension. Adam est beau, mais passif ; Dieu, entouré d'anges, apporte l'énergie. La [[mollezza]] (douceur vivante des chairs) rivalise avec la force."
+          "text": "Telpa starp abiem rādītājpirkstiem rada spriedzi. Ādams ir skaists, bet pasīvs; Dievs, ko ieskauj eņģeļi, ienes enerģiju. Miesas dzīvā maigums, [[mollezza]], sacenšas ar spēku."
         },
         {
           "type": "paragraph",
-          "text": "Adam touche presque Dieu, mais l'écart reste. Ce millimètre a nourri des siècles d'interprétations : grâce, désir, science, humanisme."
+          "text": "Ādams gandrīz pieskaras Dievam, bet atstarpe paliek. Šis milimetrs gadsimtiem barojis interpretācijas: žēlastība, vēlme, zinātne, humānisms."
         },
         {
           "type": "image",
           "asset": "creation_of_adam_hands_detail",
           "ratio": "4:3",
-          "caption": "Le millimètre le plus célèbre de l'histoire de l'art."
+          "caption": "Slavenākais milimetrs mākslas vēsturē."
         }
       ]
     },
     {
       "id": "course_153_la_creation_d_adam_michel_ange_p4",
-      "title": "Héritage",
+      "title": "Mantojums",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Reprise en pubs, films, mèmes : le geste survit hors du Vatican. Il reste surtout une leçon de [[manière moderne]] : le génie peut transformer une voûte en théâtre de l'origine."
+          "text": "Atkārtots reklāmās, filmās un mēmos: šis žests dzīvo ārpus Vatikāna. Galvenā mācība ir [[manière moderne]]: ģēnijs var pārvērst velvi par izcelsmes teātri."
         },
         {
           "type": "paragraph",
-          "text": "Pour bien saisir La Création d'Adam, Michel-Ange, il faut garder une chose en tête : chaque détail technique sert une émotion ou une idée. L'œuvre n'est jamais seulement décorative."
+          "text": "Lai labi izprastu Mikelandželo „Ādama radīšanu“, jāatceras viena lieta: katra tehniska detaļa kalpo emocijai vai idejai. Darbs nekad nav tikai dekoratīvs."
         },
         {
           "type": "paragraph",
-          "text": "Le contexte compte autant que le style. Dates, lieux, commanditaires, public : tout cela explique pourquoi une forme apparaît à un moment précis, et pas avant."
+          "text": "Konteksts ir tikpat svarīgs kā stils. Datumi, vietas, pasūtītāji, publika: tas viss izskaidro, kāpēc kāda forma parādās tieši noteiktā brīdī, nevis agrāk."
         },
         {
           "type": "paragraph",
-          "text": "Enfin, l'héritage se mesure dans le temps long. Ce que nous voyons aujourd'hui dans les musées, les films ou la musique populaire porte encore la trace de ces inventions."
+          "text": "Visbeidzot, mantojums atklājas ilgā laika posmā. Tas, ko šodien redzam muzejos, filmās vai populārajā mūzikā, joprojām nes šo atklājumu pēdas."
         },
         {
           "type": "paragraph",
-          "text": "Restaurée, commentée, parodiée, la scène survit hors contexte religieux. Elle reste le geste par lequel l'art occidental imagine l'origine."
+          "text": "Restaurēta, komentēta, parodēta, aina pārdzīvo ārpus reliģiskā konteksta. Tā paliek žests, ar kuru Rietumu māksla iztēlojas izcelsmi."
         },
         {
           "type": "takeaway",
-          "text": "Avec La Création d'Adam, Michel-Ange a condensé la Genesis en un geste : deux doigts, et l'humanité s'éveille."
+          "text": "Ar „Ādama radīšanu“ Mikelandželo ir saspiedis Pirmās Mozus grāmatas stāstu vienā žestā: divi pirksti, un cilvēce mostas."
         }
       ]
     }

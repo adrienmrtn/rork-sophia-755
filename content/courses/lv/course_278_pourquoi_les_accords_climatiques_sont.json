@@ -1,119 +1,119 @@
 {
   "id": "course_278_pourquoi_les_accords_climatiques_sont",
-  "title": "Pourquoi les accords climatiques sont-ils si peu respectés ?",
-  "subtitle": "De Kyoto à Paris",
+  "title": "Kāpēc klimata nolīgumus tik reti ievēro?",
+  "subtitle": "No Kioto līdz Parīzei",
   "subject": "comprendreLeMonde",
-  "subcategory": "Environnement & avenir",
-  "description": "Kyoto imposait des objectifs contraignants, Paris a misé sur des promesses volontaires : dans les deux cas, de grands émetteurs se sont dérobés. Pourquoi des États qui reconnaissent le danger n'arrivent-ils pas à tenir leurs engagements ?",
+  "subcategory": "Vide un nākotne",
+  "description": "Kioto noteica saistošus mērķus, Parīze liek uz brīvprātīgiem solījumiem: abos gadījumos lielie emisiju radītāji ir izvairījušies. Kāpēc valstis, kas atzīst apdraudējumu, nespēj pildīt savas saistības?",
   "author": "mark-n-hoffman",
   "hero": {
     "image": "cop21_paris_agreement_adoption_2015_fabius_gavel",
     "ratio": "4:3",
-    "hook": "Les États signent, applaudissent, puis se retirent : aucun tribunal ne peut forcer un pays à tenir sa promesse climatique."
+    "hook": "Valstis paraksta, aplaudē, tad izstājas: neviena tiesa nevar piespiest valsti turēt savu klimata solījumu."
   },
   "sections": [
     {
       "id": "course_278_pourquoi_les_accords_climatiques_sont_intro",
-      "title": "Introduction",
+      "title": "Ievads",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "À l'été **2022**, la chaleur extrême a tué environ **38 000 personnes** en Europe. Si les émissions de [[siltumnīcefekta gāzes]] ne baissent pas, le continent pourrait compter plus de **120 000 morts** par an d'ici 2050. En moins de vingt-cinq ans, la montée des mers pourrait inonder chaque année des côtes entières et déplacer des centaines de millions de personnes, sans compter les récoltes perdues et les maladies dues aux fumées d'incendie et aux eaux polluées."
+          "text": "**2022**. gada vasarā ekstrēmais karstums Eiropā nogalināja aptuveni **38 000 cilvēku**. Ja emisijas, proti, [[siltumnīcefekta gāzes]], nesamazināsies, līdz 2050. gadam kontinentā varētu būt vairāk nekā **120 000 nāves gadījumu** gadā. Mazāk nekā divdesmit piecu gadu laikā jūras līmeņa celšanās varētu katru gadu appludināt veselus krastus un pārvietot simtiem miljonu cilvēku, nerunājot par zaudētajām ražām un slimībām, ko izraisa ugunsgrēku dūmi un piesārņots ūdens."
         },
         {
           "type": "paragraph",
-          "text": "On pourrait croire que des morts par milliers, des maisons perdues et des pénuries d'eau et de nourriture pousseraient les gouvernements à coopérer. Pourtant, certains des plus gros émetteurs refusent de signer les accords mondiaux sur le climat. D'autres s'en retirent, ou restent loin des réductions nécessaires pour ralentir le réchauffement."
+          "text": "Varētu domāt, ka tūkstošiem bojāgājušo, zaudētas mājas un ūdens un pārtikas trūkums mudinātu valdības sadarboties. Tomēr daži no lielākajiem emisiju radītājiem atsakās parakstīt pasaules klimata nolīgumus. Citi no tiem izstājas vai paliek tālu no samazinājumiem, kas vajadzīgi, lai bremzētu sasilšanu."
         }
       ]
     },
     {
       "id": "course_278_pourquoi_les_accords_climatiques_sont_p1",
-      "title": "Kyoto, 1997 : le prix de la coopération",
+      "title": "Kioto, 1997: sadarbības cena",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Certains gouvernements ont pourtant tenté une réponse collective. En **1997**, le [[Kioto protokols]] fixe des objectifs de réduction juridiquement contraignants aux pays qui ont le plus contribué au réchauffement. Les pays en développement, eux, n'ont aucun objectif contraignant. Les États-Unis refusent de ratifier le texte : ces pays, jugent-ils, ne supportent pas assez le coût. Le Canada le ratifie en **2002**, puis s'en retire dix ans plus tard."
+          "text": "Dažas valdības tomēr mēģināja rast kolektīvu atbildi. **1997**. gadā tiek pieņemts [[Kioto protokols]], kas nosaka juridiski saistošus samazināšanas mērķus valstīm, kuras visvairāk veicinājušas sasilšanu. Jaunattīstības valstīm saistošu mērķu nav. ASV atsakās ratificēt tekstu: pēc to domām, šīs valstis nenes pietiekamu izmaksu daļu. Kanāda to ratificē **2002**. gadā un desmit gadus vēlāk izstājas."
         },
         {
           "type": "image",
           "asset": "factory_chimneys_greenhouse_gas_emissions",
           "ratio": "4:3",
-          "caption": "Réduire ses émissions coûte d'abord aux industries les plus polluantes, face à des concurrentes étrangères sans contrainte."
+          "caption": "Emisiju samazināšana vispirms izmaksā visvairāk piesārņojošajām nozarēm, kas konkurē ar ārvalstu uzņēmumiem bez ierobežojumiem."
         },
         {
           "type": "funFact",
-          "text": "Kyoto prévoyait bel et bien des sanctions. Un pays qui dépassait son quota d'émissions sur la première période voyait le surplus déduit de son quota suivant, devait présenter un plan de mise en conformité et pouvait se voir interdire de vendre ses droits d'émission à d'autres pays."
+          "text": "Kioto sankcijas tiešām paredzēja. Valstij, kas pirmajā periodā pārsniedza emisiju kvotu, pārsniegums tika atskaitīts no nākamās kvotas, tai bija jāiesniedz atbilstības plāns, un tai varēja aizliegt pārdot savas emisiju tiesības citām valstīm."
         },
         {
           "type": "paragraph",
-          "text": "Réduire ses émissions impose aux industries nationales les plus émettrices des contraintes et des coûts que leurs concurrentes étrangères n'ont pas, tandis que les bénéfices profitent aussi aux pays qui n'ont rien fait. Chaque gouvernement a donc intérêt à attendre que les autres agissent, même si le retard aggrave les conséquences. C'est un [[kolektīvās rīcības problēma]]. Les négociateurs ont besoin d'engagements qui changent vraiment les comportements, mais plus ils exigent, moins les États veulent participer."
+          "text": "Emisiju samazināšana uzliek valsts augstāko emisiju nozarēm ierobežojumus un izmaksas, kādu to ārvalstu konkurentiem nav, kamēr ieguvumi tiek arī valstīm, kas neko nav darījušas. Tāpēc katrai valdībai ir izdevīgi gaidīt, līdz rīkosies citas, pat ja kavēšanās pasliktina sekas. Tā ir [[kolektīvās rīcības problēma]]. Sarunu dalībniekiem vajadzīgas saistības, kas patiešām maina uzvedību, bet jo vairāk viņi prasa, jo mazāk valstis grib piedalīties."
         }
       ]
     },
     {
       "id": "course_278_pourquoi_les_accords_climatiques_sont_p2",
-      "title": "Paris, 2015 : des promesses sans sanction",
+      "title": "Parīze, 2015: solījumi bez sankcijām",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En **2015**, l'[[Parīzes nolīgums]] choisit une autre voie pour attirer les participants : chaque pays fixe lui-même ses objectifs de réduction. Il doit présenter un nouvel engagement tous les **cinq ans**, agir chez lui pour l'atteindre et rendre compte de ses progrès. Ces engagements sont juridiquement contraignants, mais le comité de suivi de l'accord n'a aucun pouvoir de sanction contre un pays qui manque ses objectifs."
+          "text": "**2015**. gadā tiek pieņemts [[Parīzes nolīgums]]. Tas izvēlas citu ceļu dalībnieku piesaistei: katra valsts pati nosaka savus samazināšanas mērķus. Ik pēc **pieciem gadiem** tai jāiesniedz jauns solījums, jārīkojas savā valstī, lai to sasniegtu, un jāatskaitās par progresu. Šīs saistības ir juridiski saistošas, taču nolīguma uzraudzības komitejai nav nekādu sankciju pilnvaru pret valsti, kas mērķus nesasniedz."
         },
         {
           "type": "paragraph",
-          "text": "Ce suivi par déclaration devait créer la confiance et inciter chacun à tenir parole. Mais il ne s'accompagne d'aucun mécanisme de contrainte, et n'importe quel pays peut se retirer à tout moment. Les États-Unis quittent complètement l'accord en **2026**. La souplesse de Paris a bien attiré davantage de gouvernements ; elle n'a pas garanti qu'ils respectent durablement leurs engagements."
+          "text": "Šai uzraudzībai ar paziņojumiem vajadzēja radīt uzticību un likt katram turēt vārdu. Taču tai nav pievienots neviens piespiešanas mehānisms, un jebkura valsts var izstāties jebkurā brīdī. ASV pilnībā izstājas no nolīguma **2026**. gadā. Parīzes elastība tiešām piesaistīja vairāk valdību; tā negarantēja, ka tās ilgstoši ievēros savas saistības."
         }
       ]
     },
     {
       "id": "course_278_pourquoi_les_accords_climatiques_sont_p3",
-      "title": "Le poids de la politique intérieure",
+      "title": "Iekšpolitikas svars",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En **1987**, le [[Monreālas protokols]] impose aux États d'interdire une série de produits chimiques qui détruisent la couche d'ozone. Certains pays reçoivent une aide financière pour convertir leurs usines à des produits de remplacement. Cette fois, l'engagement est tenu."
+          "text": "**1987**. gadā tiek pieņemts [[Monreālas protokols]], kas valstīm uzliek pienākumu aizliegt virkni ķīmisku vielu, kuras iznīcina ozona slāni. Dažas valstis saņem finansiālu palīdzību, lai pārveidotu savas rūpnīcas aizstājējproduktu ražošanai. Šoreiz saistības tiek izpildītas."
         },
         {
           "type": "image",
           "asset": "montreal_protocol_1987_signing_ceremony",
           "ratio": "4:3",
-          "caption": "La cérémonie de signature du protocole de Montréal, en septembre 1987."
+          "caption": "Monreālas protokola parakstīšanas ceremonija 1987. gada septembrī."
         },
         {
           "type": "funFact",
-          "text": "En 2023, près de 99 % des substances interdites par le protocole de Montréal avaient disparu. Si les politiques actuelles tiennent, la couche d'ozone devrait retrouver son niveau de 1980 vers 2040 sur la majeure partie du globe, et vers 2066 au-dessus de l'Antarctique."
+          "text": "2023. gadā bija izzudušas gandrīz 99% Monreālas protokola aizliegto vielu. Ja pašreizējā politika saglabāsies, ozona slānim vajadzētu atgūt 1980. gada līmeni ap 2040. gadu lielākajā daļā zemeslodes un ap 2066. gadu virs Antarktīdas."
         },
         {
           "type": "paragraph",
-          "text": "Même quand un gouvernement s'est fixé un objectif contraignant, l'appliquer reste difficile. Fermer une mine de charbon, par exemple, dresse contre soi l'entreprise qui y a investi des sommes considérables et des ouvriers qui perdent leur emploi sans avoir le temps d'en retrouver un. Pour mettre en œuvre ce qui a été signé dans les conférences sur le climat, il faut gagner le soutien de ces groupes d'intérêt puissants."
+          "text": "Pat ja valdība ir noteikusi sev saistošu mērķi, to īstenot joprojām ir grūti. Piemēram, slēdzot ogļu raktuves, pret sevi tiek vērsts uzņēmums, kas tajās ieguldījis milzīgas summas, un strādnieki, kas zaudē darbu, nespējot laikus atrast citu. Lai īstenotu to, kas parakstīts klimata konferencēs, jāiegūst šo spēcīgo interešu grupu atbalsts."
         }
       ]
     },
     {
       "id": "course_278_pourquoi_les_accords_climatiques_sont_p4",
-      "title": "Coopérer dans un monde de rivaux",
+      "title": "Sadarbība sāncenšu pasaulē",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Les traités climatiques sont négociés par des gouvernements souverains, dont chacun est censé défendre les intérêts nationaux sur le marché mondial. Ils peuvent donc reconnaître un problème commun tout en refusant les mesures qui menacent une industrie puissante, des emplois ou un groupe influent. Les accords permettent la coopération ; ils révèlent aussi l'inaction."
+          "text": "Klimata nolīgumus apspriež suverēnas valdības, no kurām katrai it kā jāaizstāv valsts intereses pasaules tirgū. Tāpēc tās var atzīt kopīgu problēmu, vienlaikus noraidot pasākumus, kas apdraud spēcīgu nozari, darbavietas vai ietekmīgu grupu. Nolīgumi ļauj sadarboties; tie arī atklāj bezdarbību."
         },
         {
           "type": "image",
           "asset": "garzweiler_lignite_open_pit_mine_germany",
           "ratio": "2:1",
-          "caption": "La mine de lignite à ciel ouvert de Garzweiler, en Rhénanie, en Allemagne."
+          "caption": "Garcveilera brūnogļu atklātā raktuve Reinzemē, Vācijā."
         },
         {
           "type": "paragraph",
-          "text": "Faire respecter ces accords plus strictement supposerait que les États acceptent des limites à leur [[suverenitāte]], c'est-à-dire à leur pouvoir de décider seuls. Le défi dépasse donc l'amélioration des textes : il faut changer les incitations à attendre, et les conditions dans lesquelles un gouvernement peut abandonner un engagement commun. Dans un système international ultra-compétitif d'États-nations, c'est difficile. Une chose est pourtant claire : sans coopération durable, la catastrophe environnementale attend au bout du chemin."
+          "text": "Stingrāka šo nolīgumu ievērošana prasītu, lai valstis piekristu ierobežojumiem jautājumā, kas saucas [[suverenitāte]] un nozīmē varu lemt vienatnē. Izaicinājums tātad pārsniedz tekstu uzlabošanu: jāmaina stimuli gaidīt un apstākļi, kādos valdība var atteikties no kopīgas saistības. Ultrakonkurējošā valstu starptautiskajā sistēmā tas ir grūti. Tomēr viena lieta ir skaidra: bez ilgstošas sadarbības ceļa galā mūs gaida vides katastrofa."
         },
         {
           "type": "takeaway",
-          "text": "De Kyoto à Paris, les accords climatiques échouent moins par manque de textes que parce que des États souverains, en concurrence, ont chacun intérêt à attendre que les autres paient le prix de l'effort."
+          "text": "No Kioto līdz Parīzei klimata nolīgumi cieš neveiksmi ne tik daudz tekstu trūkuma dēļ, cik tāpēc, ka konkurējošām suverēnām valstīm katrai ir izdevīgi gaidīt, līdz citas samaksā par pūlēm."
         }
       ]
     }

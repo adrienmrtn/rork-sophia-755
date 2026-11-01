@@ -1,139 +1,139 @@
 {
   "id": "course_246_qui_etait_le_vrai_roi_arthur",
-  "title": "Qui était le vrai roi Arthur ?",
-  "subtitle": "Une guerre devenue légende",
+  "title": "Kas bija īstais karalis Artūrs?",
+  "subtitle": "Karš, kas kļuva par leģendu",
   "subject": "mythologie",
-  "subcategory": "Légendes & créatures",
-  "description": "Aucun document de son vivant, et pas même son nom dans le plus ancien récit de sa plus grande victoire. Il faut attendre trois siècles pour qu'un texte nomme Arthur, et bien plus encore pour qu'on en fasse un roi.",
+  "subcategory": "Leģendas un radības",
+  "description": "Viņa dzīves laikā nav neviena dokumenta, un viņa vārda nav pat vecākajā stāstā par viņa lielāko uzvaru. Jāgaida trīs gadsimti, līdz kāds teksts nosauc Artūru, un vēl daudz ilgāk, līdz no viņa izveido karali.",
   "author": "angela-bouma",
   "hero": {
     "image": "tintagel_castle_ruins_cornwall_coast",
     "ratio": "4:3",
-    "hook": "L'histoire donne une guerre ; la légende en fait un roi."
+    "hook": "Vēsture dod karu, bet leģenda no tā izveido karali."
   },
   "sections": [
     {
       "id": "course_246_qui_etait_le_vrai_roi_arthur_intro",
-      "title": "Introduction",
+      "title": "Ievads",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Arthur n'a ni acte de naissance, ni document contemporain, ni la moindre ligne écrite de son vivant supposé. La tradition naît dans le chaos de la Grande-Bretagne d'après Rome : effondrement politique, migrations, guerre. Au **Ve siècle**, l'administration romaine ne gouverne plus l'île. Ses habitants, les Bretons, subissent la pression de peuples venus du continent, que les sources appelleront plus tard [[sakši]], Angles et Jutes."
+          "text": "Artūram nav ne dzimšanas apliecības, ne laikabiedru dokumentu, ne vienas rindiņas, kas rakstīta viņa it kā notikušās dzīves laikā. Tradīcija rodas haosā, kāds valdīja Lielbritānijā pēc Romas krišanas: sabrūk valsts vara, notiek migrācija, plosās karš. **5. gadsimtā** Romas pārvalde salu vairs nevalda. Tās iedzīvotāji, briti, cieš no tautu spiediena, kas nāk no kontinenta: tie ir [[sakši]], angļi un jūti, kā tos vēlāk dēvēs avoti."
         },
         {
           "type": "paragraph",
-          "text": "Des chefs locaux et des chefs de guerre prennent la relève pour défendre un territoire que Rome protégeait. Mais presque rien n'est écrit sur le moment. Celui qui deviendra **Arthur** doit être reconstitué à partir de fragments, rédigés des siècles plus tard par des gens qui transforment déjà le souvenir en légende."
+          "text": "Vietējie vadoņi un karavadoņi pārņem stafeti, lai aizstāvētu teritoriju, ko agrāk sargāja Roma. Taču tajā laikā gandrīz nekas netiek pierakstīts. Tas, kas kļūs par **Artūru**, jāizveido no fragmentiem, ko pēc gadsimtiem sarakstījuši cilvēki, kuri atmiņu jau pārvērš leģendā."
         }
       ]
     },
     {
       "id": "course_246_qui_etait_le_vrai_roi_arthur_p1",
-      "title": "Gildas et la bataille de Badon",
+      "title": "Gildass un Badona kauja",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La source la plus importante qui nous soit parvenue est [[Gildass]], un clerc breton du **VIe siècle**. Il décrit le chaos entre les Bretons et les Saxons envahisseurs, et mentionne une grande victoire bretonne : la [[Badona kauja]]. Il ne nomme jamais Arthur. Ce silence compte, car Badon deviendra plus tard le triomphe fondateur de la légende arthurienne. Le chef qu'il nomme est un autre homme : [[Ambrozijs Aurēliāns]]."
+          "text": "Vissvarīgākais līdz mums nonākušais avots ir [[Gildass]], **6. gadsimta** britu garīdznieks. Viņš apraksta haosu starp britiem un iebrukušajiem sakšiem un piemin lielu britu uzvaru: [[Badona kauja]]. Artūru viņš nenosauc nevienu reizi. Šis klusums ir svarīgs, jo Badona vēlāk kļūs par Artūra leģendas pamatā esošo triumfu. Vadonis, ko viņš nosauc, ir cits cilvēks: [[Ambrozijs Aurēliāns]]."
         },
         {
           "type": "image",
           "asset": "badbury_rings_hillfort_dorset_aerial",
           "ratio": "4:3",
-          "caption": "Les remparts de Badbury Rings, dans le Dorset, l'un des sites proposés pour la bataille de Badon."
+          "caption": "Badbury Rings valņi Dorsetā, viena no vietām, kas minēta kā iespējamā Badona kaujas norises vieta."
         },
         {
           "type": "paragraph",
-          "text": "Badon est l'ancre du récit. Gildas la situe dans la mémoire vivante de sa propre génération, vers la fin du **Ve siècle** ou le début du VIe, mais la date exacte et le lieu restent discutés. Au-delà des détails contestés, une chose tient : une source ancienne enregistre une vraie victoire bretonne."
+          "text": "Badona ir stāsta enkurs. Gildass to attiecina uz savas paaudzes dzīvo atmiņu, ap **5. gadsimta** beigām vai 6. gadsimta sākumu, taču precīzs datums un vieta joprojām ir strīdīgi. Neskatoties uz strīdīgajām detaļām, viens fakts paliek: sena liecība apliecina īstu britu uzvaru."
         }
       ]
     },
     {
       "id": "course_246_qui_etait_le_vrai_roi_arthur_p2",
-      "title": "Ambrosius, le candidat idéal",
+      "title": "Ambrozijs, ideālais kandidāts",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Gildas décrit **Ambrosius** comme l'héritier d'une grande famille romano-bretonne, dont les parents ont été tués dans les violences et qui compte parmi les rares survivants de la catastrophe. Les forces bretonnes dispersées se regroupent autour de lui et remportent une première victoire. Puis la guerre s'éternise pendant des années, oscillant entre succès bretons et saxons, jusqu'à Badon."
+          "text": "Gildass attēlo **Ambroziju** kā lielas romāņu un britu dzimtas pēcteci, kura vecāki nogalināti vardarbībā un kurš ir viens no retajiem katastrofas izdzīvojušajiem. Izklīdušie britu spēki pulcējas ap viņu un izcīna pirmo uzvaru. Pēc tam karš velkas gadiem, svārstoties starp britu un sakšu panākumiem, līdz pat Badonai."
         },
         {
           "type": "paragraph",
-          "text": "Gildas ne dit jamais si Ambrosius commande à Badon ou si quelqu'un d'autre a pris le relais. Des auteurs plus tardifs le relient pourtant à Arthur, mais rien dans les témoignages les plus anciens n'en fait le même homme. Il est simplement un **candidat séduisant** pour la légende : un chef prestigieux, de la bonne époque, associé à une victoire fameuse que Gildas n'attribue à personne en particulier."
+          "text": "Gildass nekad neizsaka, vai Ambrozijs vada karaspēku Badonā, vai arī stafeti pārņēmis kāds cits. Vēlāki autori viņu tomēr saista ar Artūru, taču nekas vecākajās liecībās neliecina, ka tas būtu viens un tas pats cilvēks. Viņš vienkārši ir **pievilcīgs kandidāts** leģendai: slavens vadonis no īstā laikmeta, kas saistīts ar slavenu uzvaru, ko Gildass nepiedēvē nevienam konkrētam."
         }
       ]
     },
     {
       "id": "course_246_qui_etait_le_vrai_roi_arthur_p3",
-      "title": "Arthur apparaît, trois siècles plus tard",
+      "title": "Artūrs parādās trīs gadsimtus vēlāk",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Arthur apparaît pour la première fois sous son nom dans l'*Historia Brittonum*, un texte latin du **IXe siècle** souvent attribué à un écrivain gallois, [[Nennijs]]. Il n'y est pas roi. On l'appelle *dux bellorum*, « chef des batailles » : il combat aux côtés des rois bretons et bat les Saxons dans une série de batailles, dont la dernière est Badon."
+          "text": "Artūrs pirmo reizi ar savu vārdu parādās *Historia Brittonum*, latīņu tekstā no **9. gadsimta**, ko bieži piedēvē velsiešu rakstniekam vārdā [[Nennijs]]. Tur viņš nav karalis. Viņu sauc par *dux bellorum*, „kauju vadoni“: viņš cīnās līdzās britu karaļiem un sakauj sakšus virknē kauju, no kurām pēdējā ir Badona."
         },
         {
           "type": "paragraph",
-          "text": "Pas de Camelot. Pas de Table ronde. Pas d'épée dans le rocher. Cet Arthur est un chef de guerre, pas un monarque, plus proche d'Ambrosius que du roi que l'on imagine aujourd'hui. L'écart dans le temps pèse lourd : Gildas, bien plus proche des événements, ne le mentionne jamais. L'*Historia Brittonum* arrive **trois cents ans** plus tard, exactement le genre de distance qui rend une histoire difficile à croire."
+          "text": "Nav Kamelotas. Nav Apaļā galda. Nav zobena akmenī. Šis Artūrs ir karavadonis, nevis monarhs, daudz tuvāks Ambrozijam nekā karalim, ko mūsdienās iztēlojamies. Laika atstarpe ir ļoti nozīmīga: Gildass, kurš notikumiem bija daudz tuvāk, viņu nemin nekad. *Historia Brittonum* parādās **trīssimt gadu** vēlāk, un tieši tāds attālums padara stāstu grūti ticamu."
         },
         {
           "type": "funFact",
-          "text": "Le Graal, la quête que l'on associe le plus au roi Arthur, n'apparaît dans aucune des sources les plus anciennes. Il entre dans la légende des siècles plus tard, sous la plume des romanciers français, la même tradition qui donnera un jour les chevaux en noix de coco des Monty Python."
+          "text": "Grāls, meklējumi, ko visbiežāk saista ar karali Artūru, neparādās nevienā no vecākajiem avotiem. Tas leģendā ienāk gadsimtus vēlāk, franču romānistu spalvā, tajā pašā tradīcijā, kas kādreiz dāvās Monty Python kokosriekstu zirgus."
         }
       ]
     },
     {
       "id": "course_246_qui_etait_le_vrai_roi_arthur_p4",
-      "title": "Un roi pour légitimer les Normands",
+      "title": "Karalis normaņu varas attaisnošanai",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La Grande-Bretagne a besoin d'un héros, alors elle s'en fabrique un, et le calendrier explique pourquoi. [[Džefrijs no Monmutas]] écrit son Arthur couronné, un vrai roi, au **XIIe siècle**, quelques décennies après la [[normaņu iekarojums]]. Les nouveaux maîtres de l'Angleterre doivent alors prouver leur droit à un trône qu'ils viennent de prendre par la force."
+          "text": "Lielbritānijai vajag varoni, tāpēc tā izgatavo sev vienu, un kalendārs izskaidro, kāpēc. [[Džefrijs no Monmutas]] uzraksta savu kronēto Artūru, īstu karali, **divpadsmitajā gadsimtā**, dažas desmitgades pēc tam, kad bija noticis [[normaņu iekarojums]]. Anglijas jaunajiem kungiem tagad jāpierāda sava tiesība uz troni, ko tikko ieguvuši ar varu."
         },
         {
           "type": "image",
           "asset": "king_arthur_enthroned_royal_ms_20_a_ii",
           "ratio": "5:4",
-          "caption": "Le roi Arthur affronte Mordred, épisode déjà raconté par Geoffroy de Monmouth. Peinture de William Hatherell, début du XXe siècle."
+          "caption": "Karalis Artūrs cīnās ar Mordredu, epizode, ko jau bija aprakstījis Džefrijs no Monmutas. Viljama Hezerela (William Hatherell) glezna, divdesmitā gadsimta sākums."
         },
         {
           "type": "paragraph",
-          "text": "Arthur, roi breton d'avant les Saxons, vainqueur des envahisseurs et souverain glorieux, offre à l'Angleterre normande la **légitimité ancienne** que la conquête seule ne donne pas : un ancêtre légendaire dont personne au pouvoir n'a à répondre, et un âge d'or que leur règne peut prétendre restaurer. La plupart des légendes fondatrices fonctionnent ainsi : un mince fil de faits, et un besoin politique assez précis pour expliquer quel héros on fabrique, et pourquoi."
+          "text": "Artūrs, britu karalis pirms sakšiem, iebrucēju uzvarētājs un slavens valdnieks, dod normaņu Anglijai **seno leģitimitāti**, ko ar iekarojumu vien iegūt nevar: leģendārs sencis, par kuru nevienam pie varas nav jāatskaitās, un zelta laikmets, ko viņu valdīšana var apgalvot atjaunojam. Lielākā daļa dibināšanas leģendu darbojas tāpat: plāns faktu pavediens un pietiekami konkrēta politiska vajadzība, lai izskaidrotu, kādu varoni izgatavo un kāpēc."
         },
         {
           "type": "timeline",
           "events": [
             {
-              "date": "Ve siècle",
-              "title": "Rome quitte la Grande-Bretagne",
-              "detail": "Les chefs locaux défendent seuls l'île."
+              "date": "5. gadsimts",
+              "title": "Roma atstāj Lielbritāniju",
+              "detail": "Vietējie vadoņi salu aizsargā vieni paši."
             },
             {
-              "date": "vers 500",
-              "title": "Bataille de Badon",
-              "detail": "Une vraie victoire bretonne, sans nom de chef."
+              "date": "ap 500",
+              "title": "Badona kauja",
+              "detail": "Īsta britu uzvara, vadoņa vārds nav minēts."
             },
             {
-              "date": "VIe siècle",
-              "title": "Gildas écrit",
-              "detail": "Il nomme Ambrosius, jamais Arthur."
+              "date": "6. gadsimts",
+              "title": "Gildass raksta",
+              "detail": "Viņš nosauc Ambroziju, nekad Artūru."
             },
             {
-              "date": "IXe siècle",
+              "date": "9. gadsimts",
               "title": "Historia Brittonum",
-              "detail": "Arthur apparaît, « chef des batailles »."
+              "detail": "Parādās Artūrs, „kauju vadonis“."
             },
             {
-              "date": "XIIe siècle",
-              "title": "Geoffroy de Monmouth",
-              "detail": "Arthur devient roi, après la conquête normande."
+              "date": "Divpadsmitais gadsimts",
+              "title": "Džefrijs no Monmutas",
+              "detail": "Artūrs kļūst par karali pēc normaņu iekarojuma."
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "Derrière le roi Arthur, il y a une vraie guerre et une vraie victoire, mais son nom n'apparaît que trois siècles plus tard, et sa couronne vient d'une Angleterre normande en quête de légitimité."
+          "text": "Aiz karaļa Artūra slēpjas īsts karš un īsta uzvara, taču viņa vārds parādās tikai trīs gadsimtus vēlāk, un viņa kronis nāk no normaņu Anglijas, kas meklēja leģitimitāti."
         }
       ]
     }

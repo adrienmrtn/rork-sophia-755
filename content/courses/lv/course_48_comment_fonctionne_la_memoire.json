@@ -1,104 +1,104 @@
 {
   "id": "course_48_comment_fonctionne_la_memoire",
-  "title": "Comment fonctionne la mémoire ?",
-  "subtitle": "Cerveau",
+  "title": "Kā darbojas atmiņa?",
+  "subtitle": "Smadzenes",
   "subject": "sciences",
-  "subcategory": "Notre quotidien expliqué",
-  "description": "La mémoire n'est pas une caméra. Chaque souvenir est reconstruit. Voici comment le cerveau encode, stocke… et parfois invente.",
+  "subcategory": "Mūsu ikdiena izskaidrota",
+  "description": "Atmiņa nav kamera. Katra atmiņa tiek rekonstruēta. Lūk, kā smadzenes kodē, glabā… un reizēm izdomā.",
   "hero": {
     "image": "comment_fonctionne_la_memoire",
     "ratio": "16:9",
-    "hook": "Te souvenir, ce n'est pas relire un fichier. C'est reconstruire une scène."
+    "hook": "Atcerēties nenozīmē pārlasīt failu. Tā ir ainas rekonstruēšana."
   },
   "sections": [
     {
       "id": "course_48_comment_fonctionne_la_memoire_intro",
-      "title": "Introduction",
+      "title": "Ievads",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "On imagine souvent la mémoire comme un disque dur : on enregistre, on range, on relit. Le cerveau ne marche pas comme ça. À chaque fois que tu te souviens, tu **reconstruis** une scène à partir de fragments."
+          "text": "Atmiņu bieži iztēlojas kā cieto disku: ieraksta, noliek plauktiņā, pārlasa. Smadzenes tā nedarbojas. Katru reizi, kad tu atceries, tu no fragmentiem **rekonstruē** ainu."
         },
         {
           "type": "paragraph",
-          "text": "C'est puissant… et faillible. Comprendre cela, c'est comprendre pourquoi on oublie, pourquoi on se trompe, et pourquoi on apprend."
+          "text": "Tā ir spēcīga, bet kļūdīga. Izprast to nozīmē izprast, kāpēc cilvēki aizmirst, kāpēc kļūdās un kāpēc mācās."
         }
       ]
     },
     {
       "id": "course_48_comment_fonctionne_la_memoire_p1",
-      "title": "Plusieurs mémoires, pas une seule",
+      "title": "Vairākas atmiņas, nevis viena",
       "free": false,
       "blocks": [
         {
           "type": "image",
           "asset": "human_brain_anatomy",
           "ratio": "4:3",
-          "caption": "Différentes zones du cerveau gèrent différentes formes de mémoire."
+          "caption": "Dažādi smadzeņu apgabali apstrādā dažādus atmiņas veidus."
         },
         {
           "type": "paragraph",
-          "text": "Il y a d'abord la [[darba atmiņa]] : ce que tu tiens « en tête » quelques secondes, comme un numéro de téléphone. Elle est limitée, environ **7 éléments** en moyenne. Ensuite, la **mémoire à long terme** : faits, souvenirs d'événements, savoir-faire comme faire du vélo."
+          "text": "Vispirms ir [[darba atmiņa]]: tas, ko tu dažas sekundes tur prātā, piemēram, tālruņa numuru. Tā ir ierobežota, vidēji ap **7 elementiem**. Tālāk ir **ilgtermiņa atmiņa**: fakti, notikumu atmiņas un prasmes, piemēram, braukšana ar velosipēdu."
         },
         {
           "type": "paragraph",
-          "text": "Ces systèmes n'habitent pas tous au même endroit du cerveau. Le **cortex préfrontal**, la partie avant du cerveau derrière le front, aide beaucoup à la mémoire de travail. D'autres régions, comme le **néocortex**, la couche externe du cerveau, stockent le long terme."
+          "text": "Šīs sistēmas neatrodas vienā un tajā pašā smadzeņu vietā. **Prefrontālā garoza**, smadzeņu priekšējā daļa aiz pieres, ļoti palīdz darba atmiņai. Citi apgabali, piemēram, **neokortekss**, smadzeņu ārējais slānis, glabā ilgtermiņa atmiņu."
         }
       ]
     },
     {
       "id": "course_48_comment_fonctionne_la_memoire_p2",
-      "title": "Comment un souvenir se fixe",
+      "title": "Kā atmiņa nostiprinās",
       "free": false,
       "blocks": [
         {
           "type": "image",
           "asset": "hippocampus_brain_anatomy_scan",
           "ratio": "4:3",
-          "caption": "L'hippocampe, une structure profonde, aide à former de nouveaux souvenirs."
+          "caption": "Hipokamps, dziļi novietota struktūra, palīdz veidot jaunas atmiņas."
         },
         {
           "type": "paragraph",
-          "text": "Pour qu'une info passe du fragile au durable, le cerveau doit renforcer des connexions entre **neurones**, les cellules nerveuses. On parle de **consolidation**, la transformation d'un souvenir récent en trace durable. Une petite structure appelée **hippocampe**, en forme de cheval de mer dans le lobe temporal, joue un rôle clé pour les souvenirs d'événements."
+          "text": "Lai informācija no trauslas kļūtu paliekoša, smadzenēm jānostiprina savienojumi starp **neironiem**, nervu šūnām. To sauc par **konsolidāciju**: nesenas atmiņas pārvēršanu paliekošā pēdā. Neliela struktūra, ko sauc par **hipokampu** un kas deniņu daivā atgādina jūras zirdziņu, spēlē galveno lomu notikumu atmiņās."
         },
         {
           "type": "funFact",
-          "text": "Le sommeil, surtout certaines phases, aide à consolider ce qu'on a appris dans la journée. Réviser puis dormir marche souvent mieux que réviser jusqu'à 3 h du matin."
+          "text": "Miegs, īpaši dažas tā fāzes, palīdz nostiprināt dienā apgūto. Atkārtot un tad gulēt bieži darbojas labāk nekā atkārtot līdz 3 naktī."
         },
         {
           "type": "paragraph",
-          "text": "Une règle célèbre, liée au chercheur **Donald Hebb** : les neurones qui s'activent ensemble tendent à se connecter plus fort. En résumé : « ce qui s'allume ensemble se lie ensemble ». C'est le principe de la **neuroplasticité**, la capacité du cerveau à modifier ses connexions."
+          "text": "Slavens likums, ko saista ar pētnieku **Donaldu Hebu**: neironi, kas aktivizējas kopā, mēdz savienoties stiprāk. Īsi sakot: „kas iedegas kopā, tas saistās kopā“. Tas ir **neiroplasticitātes** princips, smadzeņu spēja mainīt savus savienojumus."
         }
       ]
     },
     {
       "id": "course_48_comment_fonctionne_la_memoire_p3",
-      "title": "Se souvenir, c'est modifier",
+      "title": "Atcerēties nozīmē mainīt",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Quand tu rappelles un souvenir, il devient temporairement **malléable**, modifiable. Des détails du présent peuvent s'y glisser. Puis le cerveau le stocke à nouveau. C'est pour ça que deux témoins d'un même accident peuvent raconter des versions différentes."
+          "text": "Kad tu atsauc atmiņu, tā uz laiku kļūst **elastīga**, grozāma. Tajā var iepludināties šodienas detaļas. Tad smadzenes to saglabā no jauna. Tāpēc viena negadījuma divi aculiecinieki var stāstīt atšķirīgas versijas."
         },
         {
           "type": "paragraph",
-          "text": "On peut même créer de **faux souvenirs** : des scènes que l'on croit vraies, mais qui n'ont jamais eu lieu, ou pas comme ça. Le cerveau comble les trous avec ce qu'il connaît déjà."
+          "text": "Var pat radīt **viltus atmiņas**: ainas, kuras uzskata par patiesām, bet kuru nekad nav bijis vai kuras notikušas citādi. Smadzenes aizpilda robus ar to, ko jau pazīst."
         }
       ]
     },
     {
       "id": "course_48_comment_fonctionne_la_memoire_p4",
-      "title": "Oublier, ce n'est pas toujours un échec",
+      "title": "Aizmirst ne vienmēr ir neveiksme",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Si tu te souvenais de chaque détail inutile, tu serais saturé. L'oubli aide à généraliser, à décider, à garder l'essentiel. Une bonne mémoire trie autant qu'elle conserve."
+          "text": "Ja tu atcerētos katru nevajadzīgu sīkumu, tev būtu pārpildīta galva. Aizmiršana palīdz vispārināt, izlemt, paturēt būtisko. Laba atmiņa atlasa tikpat daudz, cik glabā."
         },
         {
           "type": "takeaway",
-          "text": "La mémoire est une reconstruction active, pas un enregistrement parfait. Elle s'appuie sur plusieurs systèmes, se consolide surtout pendant le sommeil, et peut se déformer à chaque rappel."
+          "text": "Atmiņa ir aktīva rekonstrukcija, nevis ideāls ieraksts. Tā balstās uz vairākām sistēmām, nostiprinās galvenokārt miega laikā un var izkropļoties katrā atsaukšanas reizē."
         }
       ]
     }

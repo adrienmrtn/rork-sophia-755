@@ -1,122 +1,122 @@
 {
   "id": "course_19_la_bataille_de_stalingrad_1942_1943",
-  "title": "La bataille de Stalingrad",
+  "title": "Staļingradas kauja",
   "subtitle": "1942-1943",
   "subject": "histoire",
-  "subcategory": "Révolutions & conflits modernes",
-  "description": "De l'été 1942 à février 1943, Allemands et Soviétiques s'entretuent dans les ruines d'une ville sur la Volga. Stalingrad devient le tournant de la Seconde Guerre mondiale.",
+  "subcategory": "Revolūcijas un mūsdienu konflikti",
+  "description": "No 1942. gada vasaras līdz 1943. gada februārim vācieši un padomju karavīri iznīcina cits citu drupās kādā pilsētā pie Volgas. Staļingrada kļūst par Otrā pasaules kara pagrieziena punktu.",
   "hero": {
     "image": "la_bataille_de_stalingrad",
     "ratio": "16:9",
-    "hook": "Dans les ruines d'une ville, l'armée jugée invincible se brise pour de bon."
+    "hook": "Pilsētas drupās galīgi sabrūk armija, ko uzskatīja par neuzvaramu."
   },
   "sections": [
     {
       "id": "course_19_la_bataille_de_stalingrad_1942_1943_intro",
-      "title": "Introduction",
+      "title": "Ievads",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "De l'été **1942** au **2 février 1943**, le monde regarde une bande de ruines sur la **Volga**, un grand fleuve de Russie. À **Stalingrad** (aujourd'hui Volgograd), l'armée allemande se heurte à une résistance soviétique prête à tous les sacrifices."
+          "text": "No **1942**. gada vasaras līdz **1943. gada 2. februārim** pasaule vēro drupu joslu pie **Volgas**, lielas Krievijas upes. **Staļingradā** (tagad Volgogradā) Vācijas armija sastopas ar padomju pretestību, kas gatava jebkuriem upuriem."
         },
         {
           "type": "paragraph",
-          "text": "Avec plus d'**un million** de morts, c'est la bataille la plus meurtrière de l'histoire… et le point de bascule de la Seconde Guerre mondiale."
+          "text": "Ar vairāk nekā **miljonu** bojāgājušo tā ir vēstures asiņainākā kauja… un Otrā pasaules kara pagrieziena punkts."
         }
       ]
     },
     {
       "id": "course_19_la_bataille_de_stalingrad_1942_1943_p1",
-      "title": "Hitler vise le pétrole du sud",
+      "title": "Hitlers tēmē uz dienvidu naftu",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Après l'échec devant Moscou en 1941, Hitler lance [[Operācija „Blau“]], une offensive d'été vers le sud. Le but : le pétrole du **Caucase**. **Stalingrad**, nœud ferroviaire et fluvial sur la Volga, n'est d'abord qu'un objectif secondaire. Puis le symbole l'emporte : prendre la ville qui porte le nom de **Staline** devient une obsession."
+          "text": "Pēc neveiksmes pie Maskavas 1941. gadā Hitlers sāk vasaras uzbrukumu uz dienvidiem: [[Operācija „Blau“]]. Mērķis ir **Kaukāza** nafta. **Staļingrada**, dzelzceļa un upju satiksmes mezgls pie Volgas, sākumā ir tikai otršķirīgs mērķis. Tad uzvar simbols: ieņemt pilsētu, kas nes **Staļina** vārdu, kļūst par apsēstību."
         },
         {
           "type": "image",
           "asset": "battle_of_stalingrad_ruins",
           "ratio": "4:3",
-          "caption": "Stalingrad en ruines : un champ de bataille urbain sans merci."
+          "caption": "Staļingrada drupās: nesaudzīga kauja pilsētas ielās."
         },
         {
           "type": "funFact",
-          "text": "Hitler était si sûr de vaincre qu'il aurait fait imprimer des invitations pour un banquet de victoire à l'hôtel Lux de Stalingrad."
+          "text": "Hitlers bija tik pārliecināts par uzvaru, ka, pēc dažām ziņām, licis izdrukāt ielūgumus uz uzvaras banketu Staļingradas viesnīcā Lux."
         },
         {
           "type": "paragraph",
-          "text": "La **6e Armée** allemande, commandée par le général [[Frīdrihs Pauluss]], est détournée vers la ville. Les bombardements de la [[Luftwaffe]], l'aviation allemande, en août 1942 laissent un paysage de cratères… parfait pour la défense soviétique."
+          "text": "Vācijas **6. armija**, kuru komandē ģenerālis [[Frīdrihs Pauluss]], tiek novirzīta uz pilsētu. [[Luftwaffe]], Vācijas aviācija, 1942. gada augustā bombardē pilsētu un atstāj krāteru ainavu… ideālu padomju aizsardzībai."
         }
       ]
     },
     {
       "id": "course_19_la_bataille_de_stalingrad_1942_1943_p2",
-      "title": "Combattre maison par maison",
+      "title": "Cīņa par katru māju",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le général soviétique **Vassili Tchouïkov** impose une tactique simple : rester à moins de **30 mètres** de l'ennemi. Ainsi, l'artillerie et l'aviation allemandes ne peuvent pas frapper sans tuer leurs propres hommes. Les Allemands appellent cela la **Rattenkrieg**, la « guerre des rats » : on se bat dans les caves, les égouts, les immeubles en ruine."
+          "text": "Padomju ģenerālis **Vasilijs Čuikovs** ievieš vienkāršu taktiku: palikt ne tālāk kā **30 metru** no ienaidnieka. Tā vācu artilērija un aviācija nevar sist, nenogalinot savus pašu vīrus. Vācieši to sauc par **Rattenkrieg**, „žurku karu“: cīnās pagrabos, kanalizācijā, drupās guļošās mājās."
         },
         {
           "type": "paragraph",
-          "text": "La **Maison Pavlov**, un immeuble tenu par une poignée de soldats, résiste **58 jours**. Dans l'usine **Dzerjinski**, on fabrique des chars sous les bombes et on les conduit droit au front. L'**Ordre 227** de Staline résume la consigne : **« Pas un pas en arrière »**."
+          "text": "**Pavlova māja**, ēka, ko tur saujiņa karavīru, pretojas **58 dienas**. **Dzeržinska** rūpnīcā zem bumbām ražo tankus un nekavējoties sūta tos uz fronti. Staļina **227. pavēle** šo rīkojumu izsaka īsi: **„Ne soli atpakaļ“**."
         }
       ]
     },
     {
       "id": "course_19_la_bataille_de_stalingrad_1942_1943_p3",
-      "title": "La pince qui referme le piège",
+      "title": "Knaibles, kas noslēdz slazdu",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Pendant que Paulus s'use dans les décombres, le maréchal soviétique **Gueorgui Joukov** prépare l'[[Operācija „Urāns“]]. Les flancs allemands, gardés par des alliés mal équipés (Roumains, Italiens, Hongrois), cèdent. Le **19 novembre 1942**, la pince se referme : environ **300 000** hommes sont encerclés."
+          "text": "Kamēr Pauluss izsīkst starp drupām, padomju maršals **Georgijs Žukovs** gatavo plānu: [[Operācija „Urāns“]]. Vācu flangi, ko sargā slikti apgādāti sabiedrotie (rumāņi, itālieši, ungāri), neiztur. **1942. gada 19. novembrī** knaibles aizveras: ielenkti apmēram **300 000** vīru."
         },
         {
           "type": "funFact",
-          "text": "Les Soviétiques diffusaient par haut-parleurs le tic-tac d'une horloge, puis un message : un soldat allemand mourait toutes les **7 secondes** en URSS."
+          "text": "Padomju spēki skaļruņos pārraidīja pulksteņa tikšķēšanu, tad paziņojumu: PSRS ik pēc **7 sekundēm** mirst viens vācu karavīrs."
         },
         {
           "type": "paragraph",
-          "text": "Hitler interdit la sortie. [[Hermanis Gērings]], chef de la Luftwaffe, promet un pont aérien. Il échoue. Faim, typhus, **-30 °C** : le « chaudron » devient un piège mortel."
+          "text": "Hitlers aizliedz izlaušanos. [[Hermanis Gērings]], Luftwaffe vadītājs, sola gaisa tiltu. Tas neizdodas. Bads, tīfs, **-30 °C**: „katls“ kļūst par nāvējošu slazdu."
         }
       ]
     },
     {
       "id": "course_19_la_bataille_de_stalingrad_1942_1943_p4",
-      "title": "La capitulation qui change la guerre",
+      "title": "Kapitulācija, kas maina karu",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le **30 janvier 1943**, Hitler nomme Paulus **feld-maréchal**, le grade le plus élevé, pour l'inciter à mourir plutôt qu'à se rendre. Paulus capitule le **2 février**. Sur 300 000 encerclés, **91 000** partent prisonniers. Pour la première fois, la propagande nazie doit avouer une défaite totale. L'armée jugée invincible a été brisée."
+          "text": "**1943. gada 30. janvārī** Hitlers piešķir Paulusam augstāko pakāpi, **feldmaršala**, lai mudinātu viņu drīzāk mirt nekā padoties. Pauluss kapitulē **2. februārī**. No 300 000 ielenktajiem **91 000** dodas gūstā. Pirmoreiz nacistu propaganda spiesta atzīt pilnīgu sakāvi. Armija, ko uzskatīja par neuzvaramu, ir sagrauta."
         },
         {
           "type": "timeline",
           "events": [
             {
-              "date": "été 1942",
-              "title": "Case Blue",
-              "detail": "Offensive allemande vers le Caucase et Stalingrad."
+              "date": "1942. gada vasara",
+              "title": "Operācija „Blau“",
+              "detail": "Vācijas uzbrukums Kaukāza un Staļingradas virzienā."
             },
             {
-              "date": "19 nov. 1942",
-              "title": "Opération Uranus",
-              "detail": "Encerclement de la 6e Armée."
+              "date": "1942. gada 19. novembris",
+              "title": "Operācija „Urāns“",
+              "detail": "6. armijas ielenkšana."
             },
             {
-              "date": "2 fév. 1943",
-              "title": "Capitulation",
-              "detail": "Paulus se rend ; tournant de la guerre."
+              "date": "1943. gada 2. februāris",
+              "title": "Kapitulācija",
+              "detail": "Pauluss padodas; kara pagrieziena punkts."
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "**Stalingrad** (**1942-1943**) anéantit la 6e Armée allemande et brise le mythe de l'invincibilité nazie, lors de la bataille la plus meurtrière de l'histoire."
+          "text": "**Staļingrada** (**1942-1943**) iznīcina Vācijas 6. armiju un sagrauj nacistu neuzvaramības mītu vēstures asiņainākajā kaujā."
         }
       ]
     }

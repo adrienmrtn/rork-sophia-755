@@ -1,98 +1,98 @@
 {
   "id": "course_56_la_decouverte_de_la_radioactivite_marie",
-  "title": "La découverte de la radioactivité",
-  "subtitle": "Marie Curie",
+  "title": "Radioaktivitātes atklāšana",
+  "subtitle": "Marija Kirī",
   "subject": "sciences",
-  "subcategory": "Découvertes qui ont changé le monde",
-  "description": "Marie Curie, avec Pierre Curie et Henri Becquerel, ouvre le chapitre de la radioactivité. Deux prix Nobel, un travail écrasant, et un héritage immense.",
+  "subcategory": "Atklājumi, kas mainīja pasauli",
+  "description": "Marija Kirī kopā ar Pjēru Kirī un Anrī Bekerelu atver radioaktivitātes nodaļu zinātnē. Divas Nobela prēmijas, nogurdinošs darbs un milzīgs mantojums.",
   "hero": {
     "image": "la_decouverte_de_la_radioactivite_marie_curie",
     "ratio": "16:9",
-    "hook": "Elle a pesé des tonnes de minerai pour isoler quelques grammes d'un élément invisible."
+    "hook": "Viņa nosvēra tonnas rūdas, lai izdalītu dažus gramus neredzama elementa."
   },
   "sections": [
     {
       "id": "course_56_la_decouverte_de_la_radioactivite_marie_intro",
-      "title": "Introduction",
+      "title": "Ievads",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Marie Curie** (née Maria Skłodowska) est la première femme à recevoir un prix Nobel. Elle reste la seule personne à en avoir reçu **deux** dans deux sciences différentes : physique, puis chimie."
+          "text": "**Marija Kirī** (dzimusi Marija Sklodovska) ir pirmā sieviete, kas saņēmusi Nobela prēmiju. Viņa joprojām ir vienīgā persona, kas saņēmusi **divas** Nobela prēmijas divās dažādās zinātnēs: vispirms fizikā, pēc tam ķīmijā."
         },
         {
           "type": "paragraph",
-          "text": "Son sujet : la **radioactivité**, c'est-à-dire le fait que certains atomes envoient spontanément de l'énergie et des particules."
+          "text": "Viņas pētījumu priekšmets ir **radioaktivitāte**, tas ir, parādība, ka daži atomi paši no sevis izstaro enerģiju un daļiņas."
         }
       ]
     },
     {
       "id": "course_56_la_decouverte_de_la_radioactivite_marie_p1",
-      "title": "Une porte étroite vers la science",
+      "title": "Šaurs ceļš uz zinātni",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Née en Pologne, elle part étudier à Paris car les universités locales ferment beaucoup de portes aux femmes. Elle travaille dur, souvent dans des conditions précaires."
+          "text": "Dzimusi Polijā, viņa dodas studēt uz Parīzi, jo vietējās universitātēs sievietēm daudzas durvis ir aizvērtas. Viņa strādā smagi, bieži trūcīgos apstākļos."
         },
         {
           "type": "paragraph",
-          "text": "Elle épouse **Pierre Curie**, physicien. Ensemble, ils forment un duo de laboratoire rare pour l'époque."
+          "text": "Viņa apprecas ar fiziķi **Pjēru Kirī**. Kopā viņi veido laboratorijas duetu, kas tolaik bija retums."
         }
       ]
     },
     {
       "id": "course_56_la_decouverte_de_la_radioactivite_marie_p2",
-      "title": "Nommer l'invisible",
+      "title": "Dot vārdu neredzamajam",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En **1896**, **Henri Becquerel** remarque que l'uranium voile des plaques photographiques sans lumière. Marie Curie décide d'étudier ce phénomène en détail. Elle invente le mot **radioactivité**."
+          "text": "**1896**. gadā **Anrī Bekerels** pamana, ka urāns tumsā aizmiglo fotoplates. Marija Kirī nolemj šo parādību izpētīt sīki. Viņa izdomā vārdu **radioaktivitāte**."
         },
         {
           "type": "image",
           "asset": "marie_curie_pitchblende_radioactivity",
           "ratio": "4:3",
-          "caption": "Des tonnes de pechblende pour isoler le radium et le polonium."
+          "caption": "Tonnas urāna piķa rūdas rādija un polonija izdalīšanai."
         },
         {
           "type": "paragraph",
-          "text": "Avec Pierre, elle découvre deux nouveaux éléments : le **polonium** (nommé d'après la Pologne) et le **radium**. Pour les isoler, il faut traiter d'énormes quantités de minerai, la pechblende."
+          "text": "Kopā ar Pjēru viņa atklāj divus jaunus elementus: **poloniju** (nosaukts Polijas vārdā) un **rādiju**. Lai tos izdalītu, jāpārstrādā milzīgi daudz rūdas, proti, urāna piķa rūdas."
         },
         {
           "type": "funFact",
-          "text": "Le radium brille faiblement dans le noir. On s'en est d'abord émerveillé… avant de comprendre sa dangerosité."
+          "text": "Rādijs tumsā vāji spīd. Sākumā to apbrīnoja… līdz atklājās, cik tas bīstams."
         }
       ]
     },
     {
       "id": "course_56_la_decouverte_de_la_radioactivite_marie_p3",
-      "title": "Gloire et prix à payer",
+      "title": "Slava un tās cena",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En **1903**, Marie, Pierre et Becquerel reçoivent le Nobel de physique. En **1911**, Marie reçoit seule le Nobel de chimie. Pierre meurt accidentellement en 1906. Elle continue."
+          "text": "**1903**. gadā Marija, Pjērs un Bekerels saņem Nobela prēmiju fizikā. **1911**. gadā Marija viena saņem Nobela prēmiju ķīmijā. Pjērs iet bojā nelaimes gadījumā 1906. gadā. Viņa turpina."
         },
         {
           "type": "paragraph",
-          "text": "Pendant la Première Guerre mondiale, elle organise des unités mobiles de radiographie pour soigner les blessés. Elle expose son corps à des doses que l'on saurait aujourd'hui inacceptables."
+          "text": "Pirmā pasaules kara laikā viņa organizē mobilās rentgena vienības, lai palīdzētu ievainotajiem. Viņa pakļauj savu ķermeni devām, kuras mūsdienās uzskatītu par nepieņemamām."
         }
       ]
     },
     {
       "id": "course_56_la_decouverte_de_la_radioactivite_marie_p4",
-      "title": "Un héritage à double face",
+      "title": "Mantojums ar divām sejām",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La radioactivité a permis la radiothérapie contre certains cancers… et aussi les armes nucléaires. Le savoir est neutre ; ses usages ne le sont pas."
+          "text": "Radioaktivitāte ļāva izveidot staru terapiju pret dažiem vēža veidiem… un arī kodolieročus. Zināšanas ir neitrālas, bet to izmantošana nav."
         },
         {
           "type": "takeaway",
-          "text": "Marie Curie a transformé une observation étrange en science nouvelle : la radioactivité. Son travail a ouvert la physique moderne… au prix de risques alors mal compris."
+          "text": "Marija Kirī dīvainu novērojumu pārvērta jaunā zinātnē: radioaktivitātē. Viņas darbs atvēra ceļu modernajai fizikai… taču par cenu riskiem, kurus toreiz vēl slikti izprata."
         }
       ]
     }

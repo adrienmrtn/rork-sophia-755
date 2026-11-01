@@ -1,124 +1,124 @@
 {
   "id": "course_148_le_bauhaus",
-  "title": "Pourquoi le Bauhaus est-il partout autour de nous ?",
+  "title": "Kāpēc Bauhaus ir visapkārt mums?",
   "subtitle": "1919-1933",
   "subject": "art",
-  "subcategory": "Cinéma, photo & architecture",
-  "description": "Entre **1919** et **1933**, l'école du **Bauhaus** fusionne art, artisanat et industrie en Allemagne. Fermée par les nazis, elle diffuse pourtant le design moderne dans le monde entier.",
+  "subcategory": "Kino, fotogrāfija un arhitektūra",
+  "description": "No **1919**. līdz **1933**. gadam Vācijas skola **Bauhaus** savieno mākslu, amatniecību un rūpniecību. Nacisti to slēdz, tomēr tā izplata modernu dizainu visā pasaulē.",
   "hero": {
     "image": "le_bauhaus",
     "ratio": "16:9",
-    "hook": "Une école allemande de 14 ans a dessiné le monde moderne, de la chaise au smartphone."
+    "hook": "14 gadus pastāvējusī vācu skola ir uzzīmējusi mūsdienu pasauli, no krēsla līdz viedtālrunim."
   },
   "sections": [
     {
       "id": "course_148_le_bauhaus_intro",
-      "title": "Introduction",
+      "title": "Ievads",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le **Bauhaus** (1919-1933) est l'école d'art et de design la plus influente du XXe siècle. Fondée en Allemagne juste après la Première Guerre mondiale, elle refuse le décor inutile du XIXe siècle. Son but : inventer un langage simple, adapté à l'âge industriel."
+          "text": "**Bauhaus** (1919-1933) ir divdesmitā gadsimta ietekmīgākā mākslas un dizaina skola. Dibināta Vācijā uzreiz pēc Pirmā pasaules kara, tā noraida deviņpadsmitā gadsimta lieko rotājumu. Tās mērķis ir izgudrot vienkāršu valodu, kas der industriālajam laikmetam."
         },
         {
           "type": "paragraph",
-          "text": "En fusionnant art, artisanat et technique, elle pose les bases du [[Funkcionālisms dizainā]] moderne. Sa vie est brève. Son héritage, lui, est partout."
+          "text": "Savienojot mākslu, amatniecību un tehniku, skola liek pamatus mūsdienu virzienam: [[Funkcionālisms dizainā]]. Tās mūžs ir īss, bet mantojums ir visur."
         }
       ]
     },
     {
       "id": "course_148_le_bauhaus_p1",
-      "title": "Weimar 1919 : abolir la hiérarchie des arts",
+      "title": "Veimāra 1919: mākslu hierarhijas atcelšana",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En **1919**, l'architecte **Walter Gropius** fonde le Bauhaus à **Weimar**. Son manifeste est clair : le but final de toute création, c'est l'architecture. Plus de frontière entre « beaux-arts » nobles et « arts appliqués » secondaires. L'artisanat devient la base de tout."
+          "text": "**1919**. gadā arhitekts **Valters Gropiuss** nodibina Bauhaus **Veimārā**. Viņa manifests ir skaidrs: katras radošas darbības galamērķis ir arhitektūra. Vairs nav robežas starp cildenajām „tēlotājmākslām“ un otršķirīgajām „lietišķajām mākslām“. Amatniecība kļūst par visa pamatu."
         },
         {
           "type": "image",
           "asset": "bauhaus_weimar_1919_walter_gropius_building",
           "ratio": "4:3",
-          "caption": "Le Bauhaus : une école où l'on apprend en fabriquant."
+          "caption": "Bauhaus: skola, kurā mācās darot."
         },
         {
           "type": "paragraph",
-          "text": "Chaque atelier a deux maîtres : un artiste et un artisan. Des figures comme [[Vasilijs Kandinskis]], peintre abstrait russe, y enseignent. L'école dialogue aussi avec [[De Stijl]], mouvement néerlandais obsédé par le rectangle et les couleurs pures."
+          "text": "Katrā darbnīcā ir divi meistari: mākslinieks un amatnieks. Tur māca tādas personības kā krievu abstraktais gleznotājs [[Vasilijs Kandinskis]]. Skola sadarbojas arī ar [[De Stijl]], nīderlandiešu virzienu, kas apsēsts ar taisnstūri un tīrām krāsām."
         }
       ]
     },
     {
       "id": "course_148_le_bauhaus_p2",
-      "title": "La forme suit la fonction",
+      "title": "Forma seko funkcijai",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Installée ensuite à **Dessau**, l'école se tourne vers la production en série. Slogan célèbre : **« la forme suit la fonction »**. L'ornement est jugé inutile. On cherche des objets simples, beaux et fabriquables en usine."
+          "text": "Pārcēlusies uz **Desavu**, skola pievēršas sērijveida ražošanai. Slavenais sauklis: **„forma seko funkcijai“**. Rotājumu uzskata par lieku. Tiek meklēti vienkārši, skaisti priekšmeti, ko var izgatavot rūpnīcā."
         },
         {
           "type": "funFact",
-          "text": "**Marcel Breuer**, enseignant au Bauhaus, recycle l'acier tubulaire des bicyclettes pour inventer des chaises légères. Un matériau d'usine devient du mobilier de salon."
+          "text": "**Marsels Brojers**, Bauhaus pasniedzējs, pārstrādā velosipēdu tērauda caurules, lai izgudrotu vieglus krēslus. Rūpnīcas materiāls kļūst par viesistabas mēbeli."
         },
         {
           "type": "paragraph",
-          "text": "Les ateliers testent le métal, le verre, le textile, la typographie. Le but n'est plus l'objet unique de luxe. C'est l'objet type, accessible au plus grand nombre."
+          "text": "Darbnīcās izmēģina metālu, stiklu, tekstilu, tipogrāfiju. Mērķis vairs nav unikāls greznuma priekšmets. Tas ir tipveida priekšmets, kas pieejams pēc iespējas plašākam cilvēku lokam."
         }
       ]
     },
     {
       "id": "course_148_le_bauhaus_p3",
-      "title": "Fermée par les nazis, sauvée par l'exil",
+      "title": "Nacistu slēgta, trimdas glābta",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L'école dérange. On l'accuse d'être trop moderne, trop internationale, trop à gauche. Après un passage à Berlin sous **Mies van der Rohe**, survient [[Nacistu slēgšana (1933)]]. Le régime y voit du « bolchevisme culturel »."
+          "text": "Skola traucē. To vaino pārlieku modernumā, internacionālismā un kreisumā. Pēc pārcelšanās uz Berlīni **Mīsa van der Roes** vadībā skolu piemeklē [[Nacistu slēgšana (1933)]]. Režīms tajā saskata „kultūras boļševismu“."
         },
         {
           "type": "image",
           "asset": "mies_van_der_rohe_modernist_architecture",
           "ratio": "4:3",
-          "caption": "Mies van der Rohe : dernière direction du Bauhaus, puis exil américain."
+          "caption": "Mīss van der Roe: pēdējais Bauhaus vadītājs, pēc tam trimda Amerikā."
         },
         {
           "type": "paragraph",
-          "text": "La fermeture devient une diffusion. Les maîtres partent aux États-Unis, en Grande-Bretagne, en Palestine. À Tel-Aviv, leurs idées nourrissent la [[Telavivas Baltā pilsēta]], vaste ensemble d'architecture moderne blanche."
+          "text": "Slēgšana kļūst par izplatīšanu. Meistari dodas uz ASV, Lielbritāniju un Palestīnu. Telavivā viņu idejas rada pamatu pilsētai: [[Telavivas Baltā pilsēta]] ir plašs modernās baltās arhitektūras ansamblis."
         }
       ]
     },
     {
       "id": "course_148_le_bauhaus_p4",
-      "title": "Un design devenu invisible à force d'évidence",
+      "title": "Dizains, kas kļuvis neredzams savas pašsaprotamības dēļ",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Aujourd'hui, l'héritage du Bauhaus est partout : meubles en kit, immeubles simples, interfaces claires, typographies [[bezserifu šrifts]] sans empattements. IKEA, les aéroports, nos téléphones : la clarté géométrique du Bauhaus est devenue le décor ordinaire du monde."
+          "text": "Šodien Bauhaus mantojums ir visur: saliekamās mēbeles, vienkāršas ēkas, skaidras saskarnes, burtu veids bez serifiem: [[bezserifu šrifts]]. IKEA, lidostas, mūsu telefoni: Bauhaus ģeometriskā skaidrība ir kļuvusi par pasaules ierasto ainavu."
         },
         {
           "type": "timeline",
           "events": [
             {
               "date": "1919",
-              "title": "Fondation à Weimar",
-              "detail": "Gropius lance l'école art-artisanat-industrie."
+              "title": "Dibināšana Veimārā",
+              "detail": "Gropiuss sāk skolu „māksla, amatniecība, rūpniecība“."
             },
             {
               "date": "1925",
-              "title": "Dessau",
-              "detail": "Virage vers la production en série."
+              "title": "Desava",
+              "detail": "Pavērsiens uz sērijveida ražošanu."
             },
             {
               "date": "1933",
-              "title": "Fermeture nazie",
-              "detail": "L'exil diffuse le Bauhaus dans le monde."
+              "title": "Nacistu slēgšana",
+              "detail": "Trimda izplata Bauhaus pasaulē."
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "En 14 ans seulement, le Bauhaus a inventé l'idée moderne du design : moins d'ornement, plus de fonction, des objets beaux parce qu'utiles. Sa fermeture politique n'a fait qu'accélérer sa conquête du quotidien."
+          "text": "Tikai 14 gadu laikā Bauhaus izgudroja mūsdienu dizaina ideju: mazāk rotājumu, vairāk funkcijas, priekšmeti, kas ir skaisti, jo noder. Politiskā slēgšana tikai paātrināja tā iekarojumu ikdienā."
         }
       ]
     }

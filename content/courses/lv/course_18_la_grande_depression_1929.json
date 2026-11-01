@@ -1,133 +1,133 @@
 {
   "id": "course_18_la_grande_depression_1929",
-  "title": "La Grande Dépression",
+  "title": "Lielā depresija",
   "subtitle": "1929",
   "subject": "histoire",
-  "subcategory": "Révolutions & conflits modernes",
-  "description": "Le **24 octobre 1929**, Wall Street s'effondre. En trois ans, le chômage touche **25 %** des Américains et la crise ouvre la voie aux extrêmes en Europe.",
+  "subcategory": "Revolūcijas un mūsdienu konflikti",
+  "description": "**1929. gada 24. oktobrī** sabrūk Volstrīta. Trīs gados bezdarbs skar **25%** amerikāņu, un krīze Eiropā paver ceļu galējībām.",
   "hero": {
     "image": "la_grande_depression_1929",
     "ratio": "16:9",
-    "hook": "Un jeudi à Wall Street, et le monde bascule dans une décennie de misère."
+    "hook": "Ceturtdiena Volstrītā, un pasaule iegrimst nelaimes desmitgadē."
   },
   "sections": [
     {
       "id": "course_18_la_grande_depression_1929_intro",
-      "title": "Introduction",
+      "title": "Ievads",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le **24 octobre 1929**, le **Jeudi noir**, la Bourse de New York s'effondre. Ce n'est pas qu'un accident financier. C'est le début de la **Grande Dépression**, une paralysie économique mondiale."
+          "text": "**1929. gada 24. oktobrī**, **Melnajā ceturtdienā**, sabrūk Ņujorkas birža. Tā nav tikai finanšu nelaime. Tas ir **Lielās depresijas** sākums, pasaules mēroga ekonomikas paralīze."
         },
         {
           "type": "paragraph",
-          "text": "En trois ans, la richesse produite dans le monde chute d'environ **15 %**. Le chômage touche **25 %** des Américains. Les démocraties européennes vacillent. Voici comment une bulle a tout emporté."
+          "text": "Trīs gados pasaulē saražotais bagātums sarūk aptuveni par **15%**. Bezdarbs skar **25%** amerikāņu. Eiropas demokrātijas grīļojas. Lūk, kā viens burbulis visu aizrāva sev līdzi."
         }
       ]
     },
     {
       "id": "course_18_la_grande_depression_1929_p1",
-      "title": "Les Années folles et la bulle",
+      "title": "Trakie gadi un burbulis",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Dans les **Années folles** (les années 1920), l'Amérique consomme à crédit : auto, radio, électroménager. Entre 1920 et 1929, le **Dow Jones**, l'indice qui mesure le prix des grandes actions américaines, est multiplié par six. Le moteur de la bulle : l'[[Akciju pirkšana uz kredīta]]. On emprunte pour acheter des titres, en misant sur leur hausse."
+          "text": "**Trakajos gados** (1920. gados) Amerika pērk uz kredīta: auto, radio, sadzīves tehniku. No 1920. līdz 1929. gadam **Dow Jones** indekss, kas mēra lielāko Amerikas akciju cenu, aug sešas reizes. Burbuļa dzinējspēks: [[akciju pirkšana uz kredīta]]. Cilvēki aizņemas, lai pirktu vērtspapīrus, cerot uz to cenu kāpumu."
         },
         {
           "type": "image",
           "asset": "roaring_twenties_jazz_1920s",
           "ratio": "4:3",
-          "caption": "Les Années folles : euphorie, crédit et spéculation."
+          "caption": "Trakie gadi: eiforija, kredīts un spekulācijas."
         },
         {
           "type": "funFact",
-          "text": "Le jour du krach, à la Bourse de Chicago, des courtiers auraient pendu une cigogne virtuelle… accusée d'avoir apporté le malheur au lieu de la prospérité."
+          "text": "Krahas dienā Čikāgas biržā brokeri esot pakāruši virtuālu stārķi… apsūdzētu, ka tas atnesis nelaimi, nevis labklājību."
         },
         {
           "type": "paragraph",
-          "text": "Dès 1928, la production stagne et les prix agricoles chutent. Les usines fabriquent plus que les gens ne peuvent acheter : c'est la [[pārprodukcija]]. Le marché est [[pārvērtēts]], trop cher par rapport à la réalité. Quand le doute gagne, tout le monde vend en même temps."
+          "text": "Jau no 1928. gada ražošana stagnē un lauksaimniecības cenas krīt. Rūpnīcas ražo vairāk, nekā cilvēki spēj nopirkt: tā ir [[pārprodukcija]]. Tirgus ir [[pārvērtēts]], pārāk dārgs salīdzinājumā ar īstenību. Kad šaubas pieņemas spēkā, visi pārdod vienlaikus."
         }
       ]
     },
     {
       "id": "course_18_la_grande_depression_1929_p2",
-      "title": "Du krach à la faillite des banques",
+      "title": "No krahas līdz banku bankrotiem",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le **24 octobre**, onze millions d'ordres de vente. Le **29**, « Mardi noir », la chute s'accélère. Entre 1929 et 1932, le marché perd **89 %** de sa valeur. Puis viennent les [[banku panika]] : des vagues de clients qui retirent leur argent en panique. Environ **9 000** banques américaines font faillite."
+          "text": "**24. oktobrī** tiek iesniegti vienpadsmit miljoni pārdošanas rīkojumu. **29**. oktobrī, „Melnajā otrdienā“, krišana kļūst straujāka. No 1929. līdz 1932. gadam tirgus zaudē **89%** savas vērtības. Tad sākas [[banku panika]]: klientu viļņi panikā izņem savu naudu. Aptuveni **9000** Amerikas banku bankrotē."
         },
         {
           "type": "image",
           "asset": "unemployed_queue_great_depression",
           "ratio": "4:3",
-          "caption": "Files de chômeurs : le visage social de la crise."
+          "caption": "Bezdarbnieku rindas: krīzes sociālais vaigs."
         },
         {
           "type": "funFact",
-          "text": "Des Américains ruinés attelaient des chevaux à leurs voitures pour économiser l'essence. On les appelait les « Hoover Cars », du nom du président [[Herberts Hūvers]], jugé trop passif face à la crise."
+          "text": "Izputināti amerikāņi iejūdza zirgus savos automobiļos, lai ietaupītu benzīnu. Tos dēvēja par „Hoover Cars“, jo prezidents [[Herberts Hūvers]] tika uzskatīts par pārāk pasīvu krīzes laikā."
         },
         {
           "type": "paragraph",
-          "text": "Sans crédit, les usines ferment. La production chute d'environ **46 %**. Sans protection sociale digne de ce nom, des millions de personnes dépendent des soupes populaires."
+          "text": "Bez kredīta rūpnīcas aizveras. Ražošana sarūk aptuveni par **46%**. Bez cienīgas sociālās aizsardzības miljoni cilvēku ir atkarīgi no zupas virtuvēm."
         }
       ]
     },
     {
       "id": "course_18_la_grande_depression_1929_p3",
-      "title": "La crise gagne l'Europe",
+      "title": "Krīze pārņem Eiropu",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Les États-Unis rapatrient leurs prêts. L'Europe s'asphyxie. L'[[zelta standarts]], un système où les monnaies sont liées à l'or, propage la crise : pour garder l'or, les banques centrales montent les taux d'intérêt, ce qui freine encore l'économie."
+          "text": "ASV atsauc savus aizdevumus. Eiropa smok. Krīzi izplata [[zelta standarts]], sistēma, kurā valūtas ir piesaistītas zeltam: lai noturētu zeltu, centrālās bankas paaugstina procentu likmes, un tas vēl vairāk bremzē ekonomiku."
         },
         {
           "type": "paragraph",
-          "text": "Les politiques de [[deflācija]] (baisser les prix et les salaires pour « assainir ») échouent. En Allemagne, le chômage atteint **30 %**. Adolf Hitler exploite le désespoir contre [[Veimāras republika]], la fragile république allemande. En **janvier 1933**, il arrive au pouvoir. La crise économique ouvre la porte à la catastrophe politique."
+          "text": "Tiek izmēģināta [[deflācija]]: cenu un algu pazemināšana, lai „sakoptu“ ekonomiku. Tā cieš neveiksmi. Vācijā bezdarbs sasniedz **30%**. Ādolfs Hitlers izmanto izmisumu, vēršoties pret trauslo Vācijas republiku: [[Veimāras republika]]. **1933. gada janvārī** viņš nonāk pie varas. Ekonomiskā krīze atver durvis politiskajai katastrofai."
         }
       ]
     },
     {
       "id": "course_18_la_grande_depression_1929_p4",
-      "title": "Roosevelt et le New Deal",
+      "title": "Rūzvelts un Jaunais kurss",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Élu en **1932**, **Franklin D. Roosevelt** lance le [[Jaunais kurss (1933)]]. Fin du [[laissez-faire]] pur, l'idée que l'État ne doit pas toucher au marché. L'État mise sur la [[ekonomikas stimulēšana]] : grands travaux, régulation des banques, début de protection sociale. La reprise reste fragile… jusqu'à la mobilisation de 1941."
+          "text": "**1932**. gadā prezidentu ievēl **Franklinu D. Rūzveltu**, un sākas [[Jaunais kurss (1933)]]. Beidzas tīrā [[laissez-faire]] laiks, kad valstij nedrīkstēja aiztikt tirgu. Valsts ceļš ir [[ekonomikas stimulēšana]]: lieli būvdarbi, banku regulēšana, sociālās aizsardzības aizsākumi. Atlabšana paliek trausla… līdz pat 1941. gada mobilizācijai."
         },
         {
           "type": "timeline",
           "events": [
             {
-              "date": "24 oct. 1929",
-              "title": "Jeudi noir",
-              "detail": "Effondrement de Wall Street."
+              "date": "1929. gada 24. oktobris",
+              "title": "Melnā ceturtdiena",
+              "detail": "Volstrītas sabrukums."
             },
             {
               "date": "1929-1933",
-              "title": "Faillites bancaires",
-              "detail": "Environ 9 000 banques américaines disparaissent."
+              "title": "Banku bankroti",
+              "detail": "Aptuveni 9000 Amerikas banku izzūd."
             },
             {
               "date": "1933",
-              "title": "New Deal",
-              "detail": "Roosevelt impose l'intervention de l'État."
+              "title": "Jaunais kurss",
+              "detail": "Rūzvelts ievieš valsts iejaukšanos."
             },
             {
-              "date": "janv. 1933",
-              "title": "Hitler au pouvoir",
-              "detail": "La crise allemande nourrit le nazisme."
+              "date": "1933. gada janvāris",
+              "title": "Hitlers pie varas",
+              "detail": "Vācijas krīze baro nacismu."
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "Après le krach de **1929**, le Dow Jones perd **89 %** de sa valeur, **25 %** des Américains sont au chômage, et la crise favorise l'arrivée d'Hitler au pouvoir en **1933**."
+          "text": "Pēc **1929**. gada krahas Dow Jones zaudē **89%** savas vērtības, **25%** amerikāņu paliek bez darba, un krīze veicina Hitlera nonākšanu pie varas **1933**. gadā."
         }
       ]
     }

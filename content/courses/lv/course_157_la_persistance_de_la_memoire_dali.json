@@ -1,120 +1,120 @@
 {
   "id": "course_157_la_persistance_de_la_memoire_dali",
-  "title": "La Persistance de la mémoire, Dalí",
+  "title": "Atmiņas neatlaidība, Dalī",
   "subtitle": "1931",
   "subject": "art",
-  "subcategory": "Cinéma, photo & architecture + œuvres iconiques",
-  "description": "Montres molles sur la côte catalane : Dalí peint le temps qui fond. Icône surréaliste entrée au MoMA et dans la culture pop.",
+  "subcategory": "Kino, foto, arhitektūra un ikoniski darbi",
+  "description": "Mīkstie pulksteņi Katalonijas krastā: Dalī glezno kūstošo laiku. Sirreālisma ikona, kas nonākusi MoMA un popkultūrā.",
   "hero": {
     "image": "la_persistance_de_la_memoire_dali",
     "ratio": "16:9",
-    "hook": "Et si le temps coulait comme un fromage au soleil ?"
+    "hook": "Ko, ja laiks tecētu kā siers saulē?"
   },
   "sections": [
     {
       "id": "course_157_la_persistance_de_la_memoire_dali_intro",
-      "title": "Introduction",
+      "title": "Ievads",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En **1931**, **Salvador Dalí** peint *La Persistance de la mémoire* : des montres molles dans un paysage désertique. Petit format, immense postérité."
+          "text": "**1931**. gadā **Salvadors Dalī** glezno *Atmiņas neatlaidību*: mīkstus pulksteņus tuksnesīgā ainavā. Mazs formāts, milzīga ietekme."
         },
         {
           "type": "paragraph",
-          "text": "Le surréalisme trouve là l'une de ses images les plus claires."
+          "text": "Sirreālisms šajā gleznā atrod vienu no saviem skaidrākajiem tēliem."
         }
       ]
     },
     {
       "id": "course_157_la_persistance_de_la_memoire_dali_p1",
-      "title": "Port Lligat et le temps mou",
+      "title": "Portlligata un mīkstais laiks",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le décor rappelle le [[Kreusa rags]] et Port Lligat, en Catalogne, où Dalí vit avec [[Gala]]. Les montres illustrent [[Mīkstais laiks un Bergsona filozofija]] : le temps vécu n'est pas celui des horloges."
+          "text": "Ainavā atpazīstams [[Kreusa rags]] un Portlligata Katalonijā, kur dzīvo Dalī un [[Gala]]. Pulksteņi atsaucas uz tēmu: [[Mīkstais laiks un Bergsona filozofija]]. Pārdzīvotais laiks nav pulksteņu laiks."
         },
         {
           "type": "paragraph",
-          "text": "Dalí affirme peindre des « photographies de rêves ». La côte catalane fournit les rochers ; l'inconscient fournit les montres. Le mélange rend le cauchemar familier."
+          "text": "Dalī apgalvo, ka glezno „sapņu fotogrāfijas“. Katalonijas krasts dod klintis, zemapziņa dod pulksteņus. Šis sajaukums padara murgu pazīstamu."
         },
         {
           "type": "image",
           "asset": "dali_persistence_of_memory_moma",
           "ratio": "4:3",
-          "caption": "Le temps qui fond sur les rochers."
+          "caption": "Laiks, kas kūst uz klintīm."
         }
       ]
     },
     {
       "id": "course_157_la_persistance_de_la_memoire_dali_p2",
-      "title": "Technique de maître",
+      "title": "Meistara tehnika",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Dalí peint l'impossible avec un fini digne de la [[renesanse]]. Ce contraste (délire + précision) rend l'image crédible… donc troublante."
+          "text": "Dalī glezno neiespējamo ar tādu apdari, kādu pazina [[renesanse]]. Šis kontrasts (murgs un precizitāte) padara tēlu ticamu… un tāpēc satraucošu."
         },
         {
           "type": "paragraph",
-          "text": "La fourmi, l'olive, le visage mou : chaque détail ouvre une piste. Dalí refuse pourtant une lecture unique. Il préfère le trouble productif."
+          "text": "Skudra, olīva, mīkstā seja: katra detaļa atver jaunu pēdu. Tomēr Dalī noraida vienu vienīgu nolasījumu. Viņam labāk patīk auglīgs nemiers."
         },
         {
           "type": "funFact",
-          "text": "Il prétendit s'être inspiré d'un camembert trop fait. Blague ou méthode ? Chez Dalí, les deux se mêlent."
+          "text": "Viņš apgalvoja, ka iedvesmojies no pārgatavojušā kamambera siera. Joks vai metode? Dalī gadījumā abi sajaucas."
         }
       ]
     },
     {
       "id": "course_157_la_persistance_de_la_memoire_dali_p3",
-      "title": "Au MoMA et dans la pop",
+      "title": "MoMA un popkultūrā",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Acquise par le [[MoMA]], l'œuvre entre dans la [[Populārā kultūra]] : pubs, clips, parodies. Les montres molles sont devenues synonymes de « rêve étrange »."
+          "text": "Gleznu iegādājas [[MoMA]], un darbs nonāk tur, kur valda [[Populārā kultūra]]: reklāmās, klipos, parodijās. Mīkstie pulksteņi kļuvuši par sinonīmu „dīvainam sapnim“."
         },
         {
           "type": "paragraph",
-          "text": "Entrée tôt dans une grande collection américaine, l'œuvre voyage dans les magazines. Le surréalisme gagne le grand public par cette image simple à mémoriser."
+          "text": "Agri nonākusi lielā Amerikas kolekcijā, glezna ceļo pa žurnāliem. Sirreālisms iekaro plašu publiku ar šo viegli iegaumējamo, vienkāršo tēlu."
         },
         {
           "type": "image",
           "asset": "cap_de_creus_catalonia_landscape",
           "ratio": "4:3",
-          "caption": "La Catalogne : décor réel du rêve peint."
+          "caption": "Katalonija: gleznotā sapņa īstā dekorācija."
         }
       ]
     },
     {
       "id": "course_157_la_persistance_de_la_memoire_dali_p4",
-      "title": "Héritage",
+      "title": "Mantojums",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Au-delà du gadget visuel, le tableau pose une question simple : que vaut une horloge quand la mémoire et le désir déforment le temps ?"
+          "text": "Aiz vizuālā efekta glezna uzdod vienkāršu jautājumu: kāda ir pulksteņa vērtība, kad atmiņa un vēlme izkropļo laiku?"
         },
         {
           "type": "paragraph",
-          "text": "Pour bien saisir La Persistance de la mémoire, Dalí, il faut garder une chose en tête : chaque détail technique sert une émotion ou une idée. L'œuvre n'est jamais seulement décorative."
+          "text": "Lai labi izprastu Dalī Atmiņas neatlaidību, jāatceras viena lieta: katra tehniskā detaļa kalpo emocijai vai idejai. Darbs nekad nav tikai dekoratīvs."
         },
         {
           "type": "paragraph",
-          "text": "Le contexte compte autant que le style. Dates, lieux, commanditaires, public : tout cela explique pourquoi une forme apparaît à un moment précis, et pas avant."
+          "text": "Konteksts ir tikpat svarīgs kā stils. Datumi, vietas, pasūtītāji, publika: tas viss izskaidro, kāpēc forma parādās tieši konkrētā brīdī, nevis agrāk."
         },
         {
           "type": "paragraph",
-          "text": "Enfin, l'héritage se mesure dans le temps long. Ce que nous voyons aujourd'hui dans les musées, les films ou la musique populaire porte encore la trace de ces inventions."
+          "text": "Visbeidzot, mantojumu mēra ilgā laikā. Tas, ko mēs šodien redzam muzejos, filmās vai populārajā mūzikā, joprojām nes šo jaunievedumu pēdas."
         },
         {
           "type": "paragraph",
-          "text": "On peut la réduire à un gadget. On peut aussi y lire une angoisse moderne : nos instruments de mesure fondent dès que la mémoire et le désir s'en mêlent."
+          "text": "To var reducēt līdz trikam. Tajā var nolasīt arī mūsdienu trauksmi: mūsu mērinstrumenti kūst, tiklīdz iejaucas atmiņa un vēlme."
         },
         {
           "type": "takeaway",
-          "text": "En 1931, Dalí a donné au surréalisme son icône : des montres molles pour dire que le temps intérieur n'obéit pas aux aiguilles."
+          "text": "1931. gadā Dalī sirreālismam sniedza tā ikonu: mīkstus pulksteņus, lai pateiktu, ka iekšējais laiks neklausa rādītājiem."
         }
       ]
     }
