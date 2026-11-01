@@ -1,145 +1,145 @@
 {
   "id": "course_280_pourquoi_le_dollar_domine_t_il_le_monde",
-  "title": "Pourquoi le dollar domine-t-il le monde ?",
-  "subtitle": "Bretton Woods, 1944",
+  "title": "Kāpēc dolārs valda pār pasauli?",
+  "subtitle": "Bretonvuda, 1944",
   "subject": "comprendreLeMonde",
   "subcategory": "Ekonomika un sabiedrība",
-  "description": "En 2022, faute de dollars, le Sri Lanka ne peut plus payer son carburant et des lycéens restent chez eux. Comment la monnaie d'un seul pays est-elle devenue l'argent de toute la planète ?",
+  "description": "2022. gadā dolāru trūkuma dēļ Šrilanka vairs nevar samaksāt par degvielu, un vidusskolēni paliek mājās. Kā vienas valsts nauda kļuva par visas planētas naudu?",
   "author": "mark-n-hoffman",
   "hero": {
     "image": "us_hundred_dollar_bills_stack_close_up",
     "ratio": "4:3",
-    "hook": "Quand un pays manque de dollars, ses camionnettes scolaires s'arrêtent : la monnaie d'une seule nation est devenue l'argent du monde entier."
+    "hook": "Kad valstij pietrūkst dolāru, tās skolas mikroautobusi apstājas: vienas valsts nauda ir kļuvusi par visas pasaules naudu."
   },
   "sections": [
     {
       "id": "course_280_pourquoi_le_dollar_domine_t_il_le_monde_intro",
-      "title": "Introduction",
+      "title": "Ievads",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En **avril 2022**, la camionnette scolaire de Jithmini n'a plus de carburant. À **17 ans**, la jeune Sri-Lankaise ne peut plus aller au lycée. La banque centrale de son pays réserve ses rares dollars aux importations essentielles, à commencer par le carburant. Baisses d'impôts et effondrement du tourisme ont provoqué une crise monétaire."
+          "text": "**2022. gada aprīlī** Džitmini skolas mikroautobusam beidzas degviela. **17 gadu** vecumā jaunā šrilankiete vairs nevar nokļūt vidusskolā. Valsts centrālā banka retos dolārus atvēl būtiskākajam importam, pirmām kārtām degvielai. Nodokļu samazinājumi un tūrisma sabrukums izraisīja valūtas krīzi."
         },
         {
           "type": "paragraph",
-          "text": "Hors des États-Unis, beaucoup d'entreprises facturent en dollars, les banques prêtent en dollars, et les gouvernements gardent des [[valūtas rezerves]] en dollars pour payer l'étranger et parer aux urgences. L'importateur sri-lankais qui doit des dollars à son fournisseur doit les trouver avant que la cargaison ne parte. Pourquoi tant de vendeurs n'acceptent-ils que des dollars ? C'est une longue histoire."
+          "text": "Ārpus ASV daudzi uzņēmumi izraksta rēķinus dolāros, bankas aizdod dolāros, un valdības tur dolāros [[valūtas rezerves]], lai maksātu ārzemēm un sagatavotos ārkārtas situācijām. Šrilankas importētājam, kam piegādātājam jāmaksā dolāros, tie jāatrod, pirms krava dodas ceļā. Kāpēc tik daudzi pārdevēji pieņem tikai dolārus? Tas ir ilgs stāsts."
         }
       ]
     },
     {
       "id": "course_280_pourquoi_le_dollar_domine_t_il_le_monde_p1",
-      "title": "1944 : l'Amérique a l'or, les biens et l'argent",
+      "title": "1944: Amerikai ir zelts, preces un nauda",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La Seconde Guerre mondiale donne aux États-Unis un poids inédit sur les règles monétaires du monde. Leurs usines produisent des excédents au moment où celles d'Europe, comme ses routes et ses ports, sont détruites. Pendant et après la guerre, ils détiennent **la majeure partie de l'or** qui sert aux paiements internationaux, et sont le grand créancier de la planète."
+          "text": "Otrais pasaules karš dod ASV nebijušu ietekmi uz pasaules monetārajiem noteikumiem. Tās rūpnīcas ražo pārpalikumus laikā, kad Eiropas rūpnīcas, tāpat kā tās ceļi un ostas, ir sagrautas. Kara laikā un pēc tā ASV pieder **lielākā daļa zelta**, ko izmanto starptautiskiem maksājumiem, un tās ir planētas lielākais kreditors."
         },
         {
           "type": "image",
           "asset": "gold_bars_federal_reserve_new_york_vault",
           "ratio": "3:2",
-          "caption": "Lingot d'or de 12,5 kilos, le format standard des réserves des banques centrales, exposé dans un musée suisse."
+          "caption": "12,5 kilogramu zelta stienis, centrālo banku rezervju standarta formāts, izstādīts Šveices muzejā."
         },
         {
           "type": "paragraph",
-          "text": "L'Europe a besoin de nourriture, de carburant et de machines. Les entreprises américaines peuvent les vendre, mais veulent des dollars, que les pays européens, aux industries dévastées, peinent à gagner en exportant. Prêts et aides combleront plus tard une partie du vide. Quand **44 délégations** se réunissent en **1944** dans le New Hampshire, elles écrivent les règles d'un monde où l'Amérique a les biens, l'or et l'argent à prêter."
+          "text": "Eiropai vajadzīga pārtika, degviela un mašīnas. Amerikas uzņēmumi tās var pārdot, taču vēlas dolārus, ko Eiropas valstis ar izpostītu rūpniecību eksportā grūti nopelna. Aizdevumi un palīdzība vēlāk aizpildīs daļu šī tukšuma. Kad **1944**. gadā Ņūhempšīrā sanāk **44 delegācijas**, tās raksta noteikumus pasaulei, kurā Amerikai ir preces, zelts un nauda, ko aizdot."
         }
       ]
     },
     {
       "id": "course_280_pourquoi_le_dollar_domine_t_il_le_monde_p2",
-      "title": "Bretton Woods : le dollar, l'or et Keynes",
+      "title": "Bretonvuda: dolārs, zelts un Keinss",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "À la [[Bretonvudas konference]], les délégués s'engagent à maintenir leur monnaie à une valeur fixe face au dollar, ajustable en cas de graves difficultés. Les États-Unis promettent d'échanger contre de l'or les dollars détenus par les gouvernements étrangers, à **35 dollars l'once**. Les autres monnaies sont arrimées au dollar, et le dollar à l'or."
+          "text": "[[Bretonvudas konference]] noslēdzas ar šādu vienošanos: delegāti apņemas uzturēt savu valūtu fiksētā vērtībā pret dolāru, ar iespēju to pielāgot nopietnu grūtību gadījumā. ASV sola pret zeltu apmainīt ārvalstu valdību rīcībā esošos dolārus par **35 dolāriem par unci**. Pārējās valūtas ir piesaistītas dolāram, bet dolārs zeltam."
         },
         {
           "type": "image",
           "asset": "keynes_harry_dexter_white_bretton_woods_1944",
           "ratio": "2:1",
-          "caption": "Salle de conférence du Mount Washington Hotel, à Bretton Woods, où se tint la conférence de juillet 1944 (photo récente)."
+          "caption": "Mount Washington viesnīcas konferenču zāle Bretonvudā, kur 1944. gada jūlijā notika konference (nesena fotogrāfija)."
         },
         {
           "type": "paragraph",
-          "text": "[[Džons Meinards Keinss]], qui négocie pour la Grande-Bretagne, veut aller plus loin : les pays régleraient leurs dettes mutuelles dans une nouvelle unité, le [[bankors]], et ceux qui vendent beaucoup plus qu'ils n'achètent seraient poussés à corriger le tir, tout comme ceux qui achètent trop. L'équipe américaine, forte de son or, préfère un fonds qui prête des monnaies nationales. L'accord crée le [[Starptautiskais Valūtas fonds]] ; le bancor et l'essentiel de la pression sur les pays excédentaires restent sur le papier."
+          "text": "[[Džons Meinards Keinss]], kurš sarunās pārstāv Lielbritāniju, vēlas iet tālāk: valstis savstarpējos parādus dzēstu jaunā vienībā, kuras nosaukums būtu [[bankors]], un tās, kas pārdod daudz vairāk, nekā pērk, tiktu spiestas labot situāciju, tāpat kā tās, kas pērk pārāk daudz. Amerikāņu komanda, kuru stiprina zelta krājumi, dod priekšroku fondam, kas aizdod nacionālās valūtas. Vienošanās rezultātā rodas [[Starptautiskais Valūtas fonds]]; bankors un lielākā daļa spiediena uz valstīm ar pārpalikumu paliek uz papīra."
         }
       ]
     },
     {
       "id": "course_280_pourquoi_le_dollar_domine_t_il_le_monde_p3",
-      "title": "1971 : la fin de l'âge d'or",
+      "title": "1971: zelta laikmeta beigas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "À la fin des années 1960, les étrangers détiennent plus de dollars que l'or américain ne peut en couvrir au prix fixé. Certains gouvernements demandent à convertir leurs dollars en or. En **août 1971**, le président Nixon cesse d'honorer la promesse. En **1973**, les grandes monnaies sont passées aux [[peldošie valūtas kursi]] : leur valeur varie désormais au gré du marché."
+          "text": "1960. gadu beigās ārzemniekiem pieder vairāk dolāru, nekā ASV zelts spēj nosegt par noteikto cenu. Dažas valdības prasa dolārus mainīt pret zeltu. **1971. gada augustā** prezidents Niksons pārtrauc pildīt solījumu. **1973**. gadā lielās valūtas tiek atstātas tirgus ziņā: sāk darboties [[peldošie valūtas kursi]], un to vērtība turpmāk mainās atkarībā no tirgus."
         },
         {
           "type": "image",
           "asset": "richard_nixon_televised_address_august_1971",
           "ratio": "4:3",
-          "caption": "Richard Nixon à la télévision en 1952, près de vingt ans avant sa décision d'août 1971 sur le dollar."
+          "caption": "Ričards Niksons televīzijā 1952. gadā, gandrīz divdesmit gadus pirms 1971. gada augusta lēmuma par dolāru."
         },
         {
           "type": "paragraph",
-          "text": "Pourtant, les factures arrivent toujours en dollars, et les banques veulent être remboursées en dollars. Les gouvernements gardent des dollars dans leurs réserves, souvent sous forme de [[ASV Valsts kases obligācijas]], des prêts à l'État américain faciles à acheter et à revendre. Chaque usage du dollar rend le suivant plus prévisible, plus sûr et plus simple. Plus besoin d'une promesse d'or pour recouvrer un ancien prêt : le contrat exige des dollars, et les nouveaux contrats aussi."
+          "text": "Tomēr rēķini joprojām tiek izrakstīti dolāros, un bankas vēlas, lai tām atmaksā dolāros. Valdības savās rezervēs turpina turēt dolārus, bieži vien tie ir [[ASV Valsts kases obligācijas]]: aizdevumi ASV valstij, ko viegli nopirkt un pārdot. Katrs dolāra lietojums nākamo padara paredzamāku, drošāku un vienkāršāku. Vairs nav vajadzīgs zelta solījums, lai atgūtu vecu aizdevumu: līgums prasa dolārus, un jaunie līgumi arī."
         },
         {
           "type": "funFact",
-          "text": "En mars 2020, la Réserve fédérale a ouvert des lignes temporaires pour fournir des dollars à neuf banques centrales étrangères de plus. Un demi-siècle après la fin de la promesse d'or, la demande de dollars bondit encore en temps de crise."
+          "text": "2020. gada martā Federālo rezervju sistēma atvēra pagaidu līnijas, lai nodrošinātu dolārus vēl deviņām ārvalstu centrālajām bankām. Pusgadsimtu pēc zelta solījuma beigām pieprasījums pēc dolāriem krīzes laikā joprojām strauji aug."
         }
       ]
     },
     {
       "id": "course_280_pourquoi_le_dollar_domine_t_il_le_monde_p4",
-      "title": "Une domination qui s'entretient d'elle-même",
+      "title": "Valdīšana, kas uztur pati sevi",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Les banques centrales détiennent toujours des dollars, environ **57 %** des réserves de change déclarées début 2026 selon le FMI, et les entreprises facturent et empruntent toujours en dollars. Si le dollar perdait peu à peu son avance, les nouveaux contrats pourraient être libellés en euros ou dans une autre monnaie, les banques centrales déplaceraient leurs avoirs, et l'État américain, moins sollicité par les prêteurs étrangers, paierait plus cher pour emprunter. Les anciens prêts en dollars, eux, resteraient dus en dollars."
+          "text": "Centrālās bankas joprojām tur dolārus, aptuveni **57%** no 2026. gada sākumā deklarētajām valūtas rezervēm pēc SVF datiem, un uzņēmumi joprojām izraksta rēķinus un aizņemas dolāros. Ja dolārs pamazām zaudētu savu pārsvaru, jaunos līgumus varētu izteikt eiro vai citā valūtā, centrālās bankas pārvietotu savus aktīvus, un ASV valsts, ko ārvalstu aizdevēji mazāk pieprasītu, par aizņemšanos maksātu vairāk. Vecie dolāru aizdevumi tomēr joprojām būtu jāatmaksā dolāros."
         },
         {
           "type": "timeline",
           "events": [
             {
-              "date": "Juillet 1944",
-              "title": "Bretton Woods",
-              "detail": "44 délégations arriment leurs monnaies au dollar, et le dollar à l'or."
+              "date": "1944. gada jūlijs",
+              "title": "Bretonvuda",
+              "detail": "44 delegācijas piesaista savas valūtas dolāram, bet dolāru zeltam."
             },
             {
-              "date": "Août 1971",
-              "title": "Fin de la promesse d'or",
-              "detail": "Nixon cesse de convertir en or les dollars des gouvernements étrangers."
+              "date": "1971. gada augusts",
+              "title": "Zelta solījuma beigas",
+              "detail": "Niksons pārtrauc ārvalstu valdību dolārus mainīt pret zeltu."
             },
             {
               "date": "1973",
-              "title": "Changes flottants",
-              "detail": "Les grandes monnaies flottent face au dollar."
+              "title": "Peldošie valūtas kursi",
+              "detail": "Lielās valūtas peld pret dolāru."
             },
             {
-              "date": "Mars 2020",
-              "title": "Lignes de dollars",
-              "detail": "La Réserve fédérale fournit des dollars à neuf banques centrales de plus."
+              "date": "2020. gada marts",
+              "title": "Dolāru līnijas",
+              "detail": "Federālo rezervju sistēma nodrošina dolārus vēl deviņām centrālajām bankām."
             },
             {
-              "date": "Avril 2022",
-              "title": "Crise au Sri Lanka",
-              "detail": "Faute de dollars, le carburant manque et les camionnettes scolaires s'arrêtent."
+              "date": "2022. gada aprīlis",
+              "title": "Krīze Šrilankā",
+              "detail": "Dolāru trūkuma dēļ pietrūkst degvielas, un skolas mikroautobusi apstājas."
             }
           ]
         },
         {
           "type": "paragraph",
-          "text": "Changer la monnaie inscrite sur la facture de carburant du Sri Lanka n'aurait pas rempli le réservoir de la camionnette de Jithmini. Le pays aurait encore eu besoin d'un argent que le vendeur accepte, tiré de ses exportations, de ses réserves ou d'un emprunt. Le nom de la monnaie peut changer, le problème demeure : en réunir assez pour payer ce que l'on importe."
+          "text": "Mainīt valūtu, kurā izrakstīts Šrilankas degvielas rēķins, nebūtu piepildījis Džitmini mikroautobusa tvertni. Valstij joprojām būtu vajadzīga nauda, ko pārdevējs pieņem un ko var iegūt no eksporta, no rezervēm vai ar aizņēmumu. Valūtas nosaukums var mainīties, problēma paliek: sakrāt tās pietiekami, lai samaksātu par to, ko importē."
         },
         {
           "type": "takeaway",
-          "text": "Le dollar domine parce que l'Amérique de 1944 avait l'or, les biens et l'argent, puis parce que chaque facture et chaque prêt en dollars ont rendu le suivant plus naturel : la promesse d'or a disparu en 1971, l'habitude est restée."
+          "text": "Dolārs valda tāpēc, ka 1944. gada Amerikai bija zelts, preces un nauda, un pēc tam tāpēc, ka katrs rēķins un katrs aizdevums dolāros nākamo padarīja dabiskāku: zelta solījums izzuda 1971. gadā, ieradums palika."
         }
       ]
     }

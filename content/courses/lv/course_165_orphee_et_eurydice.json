@@ -1,118 +1,118 @@
 {
   "id": "course_165_orphee_et_eurydice",
-  "title": "Orphée et Eurydice",
-  "subtitle": "L'amour qui défie la mort",
+  "title": "Orfejs un Eiridika",
+  "subtitle": "Mīlestība, kas met izaicinājumu nāvei",
   "subject": "mythologie",
   "subcategory": "Grieķija: dievi",
-  "description": "Orphée descend aux Enfers pour ramener Eurydice. Sa musique fléchit la mort. Un seul regard interdit suffit à tout perdre.",
+  "description": "Orfejs nolaižas pazemes valstībā, lai atvestu Eiridiku atpakaļ. Viņa mūzika atmaigina nāvi. Pietiek ar vienu aizliegtu skatienu, lai zaudētu visu.",
   "hero": {
     "image": "orphee_et_eurydice",
     "ratio": "16:9",
-    "hook": "Sa lyre apaise les Enfers. Son doute, lui, rend Eurydice pour toujours."
+    "hook": "Viņa lira nomierina pazemes valstību. Viņa šaubas savukārt uz visiem laikiem atdod Eiridiku nāvei."
   },
   "sections": [
     {
       "id": "course_165_orphee_et_eurydice_intro",
-      "title": "Introduction",
+      "title": "Ievads",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Orphée** est un musicien dont la lyre émeut même les pierres. Quand sa femme **Eurydice** meurt, il refuse le deuil. Il descend vivant chez les morts pour la ramener."
+          "text": "**Orfejs** ir mūziķis, kura lira aizkustina pat akmeņus. Kad mirst viņa sieva **Eiridika**, viņš atsakās sērot. Viņš dzīvs nolaižas pie mirušajiem, lai viņu atvestu atpakaļ."
         },
         {
           "type": "paragraph",
-          "text": "Les poètes latins [[Vergīlijs]] et [[Ovidijs]] ont fixé ce récit. Au-delà de l'amour tragique, c'est une histoire sur le doute, l'impatience et le pouvoir de l'art face à la mort."
+          "text": "Latīņu dzejnieki [[Vergīlijs]] un [[Ovidijs]] šim stāstam piešķīruši galīgo veidu. Aiz traģiskās mīlestības tas ir stāsts par šaubām, nepacietību un mākslas spēku pretī nāvei."
         }
       ]
     },
     {
       "id": "course_165_orphee_et_eurydice_p1",
-      "title": "Un musicien plus fort que les armes",
+      "title": "Mūziķis, kas stiprāks par ieročiem",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Orphée est fils de la Muse **Calliope**. Sa **lyre**, cadeau d'**Apollon**, dieu des arts, ne sert pas seulement à plaire. Elle apaise les bêtes, déplace les arbres, calme la nature sauvage. Là où d'autres héros vainquent par la force, Orphée triomphe par l'harmonie."
+          "text": "Orfejs ir mūzas **Kaliopes** dēls. Viņa **lira**, mākslu dieva **Apolona** dāvana, kalpo ne tikai tam, lai patiktu. Tā nomierina zvērus, pārvieto kokus, remdē mežonīgo dabu. Kur citi varoņi uzvar ar spēku, Orfejs triumfē ar harmoniju."
         },
         {
           "type": "image",
           "asset": "orpheus_lyre_painting_ancient_myth",
           "ratio": "4:3",
-          "caption": "Orphée et sa lyre : l'art comme pouvoir sur le monde."
+          "caption": "Orfejs un viņa lira: māksla kā vara pār pasauli."
         },
         {
           "type": "paragraph",
-          "text": "Lors de l'expédition des **Argonautes**, menée par le héros [[Jāsons]], les Sirènes tentent d'attirer l'équipage. Orphée chante plus fort et sauve ses compagnons. Puis il épouse la dryade **Eurydice**, nymphe des bois. Le bonheur est bref."
+          "text": "**Argonautu** ekspedīcijas laikā, ko vada varonis [[Jāsons]], sirēnas mēģina pievilināt apkalpi. Orfejs dzied skaļāk un izglābj biedrus. Pēc tam viņš apprecē driādi **Eiridiku**, mežu nimfu. Laime ir īsa."
         },
         {
           "type": "funFact",
-          "text": "Le jour des noces, Eurydice fuit le berger [[Aristajs]]. Elle marche sur un serpent. Le venin la tue. Son ombre part vers le [[Stikss]], fleuve des Enfers."
+          "text": "Kāzu dienā Eiridika bēg, jo viņu vajā gans [[Aristajs]]. Viņa uzkāpj čūskai. Inde viņu nogalina. Pazemes valstības upe ir [[Stikss]], un uz turieni dodas viņas ēna."
         }
       ]
     },
     {
       "id": "course_165_orphee_et_eurydice_p2",
-      "title": "Descendre vivant chez les morts",
+      "title": "Dzīvam nolaisties pie mirušajiem",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Orphée tente une [[katabāze]] : une descente aux Enfers. Pas d'armes. Seulement sa musique. Elle endort [[Kerbers]], le chien à trois têtes qui garde l'entrée. Elle fléchit [[Harons]], le batelier des morts."
+          "text": "Orfeja ceļš uz pazemes valstību ir [[katabāze]]. Nekādu ieroču. Tikai mūzika. Pie ieejas stāv trīsgalvainais suns [[Kerbers]], un mūzika to iemidzina. Mirušo pārcēlājs [[Harons]] atmaigst."
         },
         {
           "type": "paragraph",
-          "text": "Devant **Hadès** et **Perséphone**, souverains du monde souterrain, Orphée joue l'air le plus bouleversant de sa vie. Les Enfers s'arrêtent un instant. **Sisyphe** et **Tantale** oublient leur supplice. Les [[Erīnijas]], déesses de la vengeance, versent des larmes."
+          "text": "**Hadesa** un **Persefones**, pazemes pasaules valdnieku, priekšā Orfejs spēlē savas dzīves aizkustinošāko meldiju. Pazemes valstība uz brīdi apstājas. **Sīzifs** un **Tantals** aizmirst savas mokas. [[Erīnijas]], atriebības dievietes, lej asaras."
         },
         {
           "type": "funFact",
-          "text": "Dans certaines versions, Orphée touche Perséphone en lui rappelant son propre enlèvement par Hadès. La reine des morts reconnaît sa douleur."
+          "text": "Dažās versijās Orfejs aizkustina Persefoni, atgādinot viņai pašas nolaupīšanu, ko veica Hadess. Mirušo karaliene atpazīst viņa sāpes."
         },
         {
           "type": "paragraph",
-          "text": "Hadès accepte l'impossible : Eurydice peut remonter. Mais une condition absolue. Orphée doit marcher devant elle sans se retourner tant qu'ils n'ont pas atteint la lumière."
+          "text": "Hadess piekrīt neiespējamajam: Eiridika drīkst atgriezties augšā. Taču ar absolūtu nosacījumu. Orfejam jāiet viņai pa priekšu, neatskatoties, kamēr viņi nav sasnieguši gaismu."
         }
       ]
     },
     {
       "id": "course_165_orphee_et_eurydice_p3",
-      "title": "Le regard qui perd tout",
+      "title": "Skatiens, kas zaudē visu",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La remontée est un calvaire. Derrière lui, le silence. Les ombres ne font aucun bruit. Près de la sortie, le doute l'emporte. Et si Hadès l'avait trompé ? Orphée **se retourne**."
+          "text": "Ceļš augšup ir moku ceļš. Aiz viņa valda klusums. Ēnas neizdod ne skaņas. Pie izejas šaubas gūst virsroku. Un ja Hadess viņu piekrāpis? Orfejs **atskatās**."
         },
         {
           "type": "paragraph",
-          "text": "Leurs regards se croisent une seconde. Puis Eurydice est happée par les ténèbres. Cette fois, la perte vient d'une erreur humaine. Le passage se referme. Orphée erre, puis se retire en Thrace."
+          "text": "Viņu skatieni krustojas uz sekundi. Tad Eiridiku aizrauj tumsa. Šoreiz zaudējuma iemesls ir cilvēka kļūda. Ceļš aizveras. Orfejs klīst un pēc tam noslēdzas Trāķijā."
         },
         {
           "type": "funFact",
-          "text": "Après sa mort, la tête d'Orphée, jetée dans le fleuve [[Hebra]], aurait dérivé jusqu'à Lesbos. Elle y serait devenue un oracle, si puissant qu'**Apollon** lui-même aurait exigé son silence."
+          "text": "Pēc Orfeja nāves viņa galvu iemeta upē. Upes nosaukums ir [[Hebra]]. Pēc teikas galva aizpeldējusi līdz Lesbai. Tur tā kļuvusi par orākulu, tik varenu, ka pats **Apolons** pieprasījis tai klusēt."
         },
         {
           "type": "paragraph",
-          "text": "Son refus de tout nouvel amour provoque la fureur des [[menādes]], prêtresses de **Dionysos** prises d'un délire rituel. Elles le déchirent. Sa lyre continue pourtant de chanter, emportée par le courant."
+          "text": "Viņa atteikšanās no jebkuras jaunas mīlestības sadusmo **Dionīsa** priesteres [[menādes]], kuras pārņēmis rituāls delīrijs. Tās viņu saplosa. Viņa lira tomēr turpina dziedāt, straumes nesta."
         }
       ]
     },
     {
       "id": "course_165_orphee_et_eurydice_p4",
-      "title": "Ce que le mythe a transmis",
+      "title": "Ko mīts nodevis tālāk",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "De la mort d'Orphée naît l'[[orfisms]], courant religieux qui promettait un salut de l'âme par des rites de purification. La mort n'y est plus une fin morne, mais un passage à préparer."
+          "text": "No Orfeja nāves dzimst [[orfisms]], reliģiska kustība, kas solīja dvēseles glābšanu ar šķīstīšanas rituāliem. Nāve tajā vairs nav drūms gals, bet pāreja, kurai jāsagatavojas."
         },
         {
           "type": "paragraph",
-          "text": "Le « regard d'Orphée » inspire encore l'opéra, le cinéma, notamment chez [[Žans Kokto]], et la littérature. Pour [[Moriss Blanšo]], l'artiste est celui qui regarde l'obscurité, même au prix de perdre ce qu'il aime. Les dieux placent enfin la lyre dans le ciel, en constellation : l'art dure plus longtemps que l'artiste."
+          "text": "„Orfeja skatiens“ joprojām iedvesmo operu, kino un literatūru. Kino to īpaši attīstījis [[Žans Kokto]]. [[Moriss Blanšo]] uzskata, ka mākslinieks ir tas, kurš skatās tumsā, pat ja zaudē to, ko mīl. Dievi visbeidzot ievieto liru debesīs zvaigznāja veidā: māksla pastāv ilgāk nekā mākslinieks."
         },
         {
           "type": "takeaway",
-          "text": "**Orphée** charme les Enfers par sa musique, puis perd **Eurydice** en se retournant trop tôt. L'art peut fléchir la mort ; le doute humain, lui, a le dernier mot."
+          "text": "**Orfejs** savā mūzikā apbur pazemes valstību, pēc tam zaudē **Eiridiku**, atskatoties pārāk agri. Māksla var atmaigināt nāvi, bet cilvēka šaubām ir pēdējais vārds."
         }
       ]
     }

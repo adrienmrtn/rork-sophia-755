@@ -1,135 +1,135 @@
 {
   "id": "course_23_la_guerre_d_algerie_1954_1962",
-  "title": "La guerre d'Algérie",
+  "title": "Alžīrijas karš",
   "subtitle": "1954-1962",
   "subject": "histoire",
   "subcategory": "Aukstais karš un mūsdienas",
-  "description": "Pendant **huit ans**, la France combat une insurrection indépendantiste sur un territoire qu'elle considère comme le sien. La guerre d'Algérie fait chuter la IVe République et laisse des cicatrices durables.",
+  "description": "**Astoņus gadus** Francija cīnās pret neatkarības nemieriem teritorijā, ko uzskata par savu. Alžīrijas karš gāž Ceturto republiku un atstāj paliekošas rētas.",
   "hero": {
     "image": "la_guerre_d_algerie",
     "ratio": "16:9",
-    "hook": "Huit ans de guerre que la France a longtemps refusé d'appeler une guerre."
+    "hook": "Astoņus gadus ilgs karš, ko Francija ilgi atteicās saukt par karu."
   },
   "sections": [
     {
       "id": "course_23_la_guerre_d_algerie_1954_1962_intro",
-      "title": "Introduction",
+      "title": "Ievads",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La guerre d'Algérie (**1954-1962**) est l'un des chapitres les plus douloureux de l'histoire française du XXe siècle. Ce n'est pas seulement une décolonisation. Pour Paris, l'Algérie n'est pas une colonie lointaine : c'est une partie de la France."
+          "text": "Alžīrijas karš (**1954-1962**) ir viena no sāpīgākajām nodaļām Francijas divdesmitā gadsimta vēsturē. Tā nav tikai dekolonizācija. Parīzei Alžīrija nav tāla kolonija, bet daļa no Francijas."
         },
         {
           "type": "paragraph",
-          "text": "Pendant huit ans, l'État affronte le **FLN**, le Front de libération nationale, qui veut l'indépendance. La crise fait tomber la IVe République et donne naissance à la Ve. Longtemps appelée « événements » ou « maintien de l'ordre », cette guerre laisse des mémoires déchirées des deux côtés de la Méditerranée."
+          "text": "Astoņus gadus valsts cīnās ar **FLN**, Nacionālo atbrīvošanas fronti, kas vēlas neatkarību. Krīze gāž Ceturto republiku un dod dzimšanu Piektajai. Šo karu ilgi dēvēja par „notikumiem“ vai „kārtības uzturēšanu“, un tas atstāj sašķeltu atmiņu abpus Vidusjūrai."
         }
       ]
     },
     {
       "id": "course_23_la_guerre_d_algerie_1954_1962_p1",
-      "title": "Une Algérie française… sur le papier",
+      "title": "Franču Alžīrija… uz papīra",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Conquise à partir de **1830**, l'Algérie est découpée dès **1848** en [[Francijas departamenti]]. Quitter l'Algérie, pour beaucoup, c'est amputer le territoire national. En **1954**, on compte environ **9 millions** de musulmans et **1 million** d'Européens, les [[Melnkājas]]."
+          "text": "Alžīrija, kas iekarota no **1830**. gada, jau **1848**. gadā tiek sadalīta pēc Francijas parauga, un rodas [[Francijas departamenti]]. Daudziem pamest Alžīriju nozīmē sakropļot valsts teritoriju. **1954**. gadā tur dzīvo apmēram **9 miljoni** musulmaņu un **1 miljons** eiropiešu, kas pazīstami kā [[Melnkājas]]."
         },
         {
           "type": "funFact",
-          "text": "Jusqu'en **1999**, l'État français refuse légalement le mot « guerre ». On parle d'opérations de « maintien de l'ordre », pour ne pas reconnaître aux combattants du FLN le statut de prisonniers de guerre."
+          "text": "Līdz **1999**. gadam Francijas valsts juridiski atsakās lietot vārdu „karš“. Runā par „kārtības uzturēšanas“ operācijām, lai nepiešķirtu FLN kaujiniekiem karagūstekņu statusu."
         },
         {
           "type": "image",
           "asset": "algerian_war_fln_fighters",
           "ratio": "4:3",
-          "caption": "Combattants du FLN durant la guerre d'Algérie."
+          "caption": "FLN kaujinieki Alžīrijas kara laikā."
         },
         {
           "type": "paragraph",
-          "text": "Le **8 mai 1945**, alors que l'Europe célèbre la victoire, la répression de manifestations à Sétif et Guelma, dans l'est de l'Algérie, fait des milliers de morts. Le **1er novembre 1954**, la « Toussaint rouge » : le FLN lance une soixantaine d'attentats. **François Mitterrand**, alors ministre de l'Intérieur, résume la ligne officielle : « L'Algérie, c'est la France. »"
+          "text": "**1945. gada 8. maijā**, kad Eiropa svin uzvaru, demonstrāciju apspiešana Setifā un Gelmā Alžīrijas austrumos prasa tūkstošiem dzīvību. **1954. gada 1. novembrī** notiek „Sarkanā Visu svēto diena“: FLN veic apmēram sešdesmit uzbrukumu. **Fransuā Miterāns**, tolaik iekšlietu ministrs, formulē oficiālo līniju: „Alžīrija ir Francija.“"
         }
       ]
     },
     {
       "id": "course_23_la_guerre_d_algerie_1954_1962_p2",
-      "title": "La bataille d'Alger",
+      "title": "Alžīras kauja",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En 1956, le Parlement vote les [[ārkārtējās pilnvaras]] : l'armée reçoit les pouvoirs de police. Près de **400 000** soldats, dont beaucoup d'appelés, quadrillent le pays face à la [[partizānu karš]] du FLN, une guerre d'embuscades et d'attentats."
+          "text": "1956. gadā parlaments piešķir [[ārkārtējās pilnvaras]]: armija saņem policijas pilnvaras. Gandrīz **400 000** karavīru, no kuriem daudzi iesaukti, kontrolē valsti. Pretī stāv FLN ar savu taktiku: [[partizānu karš]], kurā ir slazdi un teroraktu viļņi."
         },
         {
           "type": "image",
           "asset": "battle_of_algiers_1957",
           "ratio": "4:3",
-          "caption": "Alger, 1957 : la guerre urbaine au cœur de la capitale."
+          "caption": "Alžīra, 1957. gads: pilsētas karš galvaspilsētas sirdī."
         },
         {
           "type": "paragraph",
-          "text": "En **1957**, lors de la **bataille d'Alger**, les parachutistes du général **Jacques Massu** démantèlent les réseaux de poseurs de bombes. Victoire militaire, défaite morale : la torture devient un outil courant pour obtenir des renseignements. En métropole, le scandale grandit. La France se déchire sur la légitimité de sa propre guerre."
+          "text": "**1957**. gadā **Alžīras kaujas** laikā ģenerāļa **Žaka Masī** desantnieki likvidē spridzinātāju tīklus. Militāra uzvara, morāla sakāve: spīdzināšana kļūst par ierastu līdzekli informācijas iegūšanai. Metropolē skandāls aug. Francija sašķeļas jautājumā par sava kara likumību."
         }
       ]
     },
     {
       "id": "course_23_la_guerre_d_algerie_1954_1962_p3",
-      "title": "De Gaulle et le tournant",
+      "title": "De Golls un pavērsiens",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le **13 mai 1958**, Alger s'insurge pour garder l'« Algérie française ». **Charles de Gaulle** revient au pouvoir et fonde la Ve République. D'abord vu comme un sauveur de la souveraineté française, il comprend vite que le maintien est intenable. Il oriente le pays vers l'autodétermination : laisser les Algériens choisir leur avenir."
+          "text": "**1958. gada 13. maijā** Alžīra sacelsies, lai paturētu „franču Alžīriju“. **Šarls de Golls** atgriežas pie varas un nodibina Piekto republiku. Sākumā viņu uzskata par Francijas suverenitātes glābēju, taču drīz viņš saprot, ka Alžīrijas saglabāšana nav noturama. Viņš virza valsti uz pašnoteikšanos: ļaut alžīriešiem izvēlēties savu nākotni."
         },
         {
           "type": "image",
           "asset": "de_gaulle_speech_algeria",
           "ratio": "4:3",
-          "caption": "De Gaulle face à la question algérienne."
+          "caption": "De Golls un Alžīrijas jautājums."
         },
         {
           "type": "paragraph",
-          "text": "En avril **1961**, le [[Ģenerāļu pučs (1961. gada aprīlis)]] tente de le renverser. Après l'échec, l'[[OAS]], Organisation de l'armée secrète, multiplie les attentats pour bloquer toute négociation."
+          "text": "**1961**. gada aprīlī [[ģenerāļu pučs]] mēģina gāzt De Golu. Pēc neveiksmes [[OAS]], Slepenās armijas organizācija, vairo teroraktus, lai bloķētu jebkādas sarunas."
         }
       ]
     },
     {
       "id": "course_23_la_guerre_d_algerie_1954_1962_p4",
-      "title": "Évian, l'indépendance, les mémoires",
+      "title": "Evjana, neatkarība, atmiņa",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Les **accords d'Évian** du **18 mars 1962** fixent le [[pamiers]]. Le 1er juillet, l'indépendance est plébiscitée. La violence ne s'arrête pas. Les [[harki]], musulmans engagés aux côtés de la France, sont abandonnés et massacrés par milliers. Près d'un million de pieds-noirs fuient vers la métropole."
+          "text": "Pēc **Evjanas vienošanās**, kas noslēgta **1962. gada 18. martā**, sākas [[pamiers]]. 1. jūlijā neatkarību apstiprina plebiscītā. Vardarbība nebeidzas: [[harki]], musulmaņi, kas karoja Francijas pusē, tiek pamesti likteņa varā un nogalināti tūkstošiem. Gandrīz miljons melnkāju bēg uz metropoli."
         },
         {
           "type": "timeline",
           "events": [
             {
-              "date": "1er nov. 1954",
-              "title": "Toussaint rouge",
-              "detail": "Le FLN déclenche l'insurrection."
+              "date": "1954. gada 1. nov.",
+              "title": "Sarkanā Visu svēto diena",
+              "detail": "FLN sāk sacelšanos."
             },
             {
               "date": "1957",
-              "title": "Bataille d'Alger",
-              "detail": "Victoire militaire française, scandale de la torture."
+              "title": "Alžīras kauja",
+              "detail": "Franču militāra uzvara, spīdzināšanas skandāls."
             },
             {
-              "date": "13 mai 1958",
-              "title": "Crise d'Alger",
-              "detail": "Retour de De Gaulle et naissance de la Ve République."
+              "date": "1958. gada 13. maijs",
+              "title": "Alžīras krīze",
+              "detail": "De Golla atgriešanās un Piektās republikas dzimšana."
             },
             {
-              "date": "18 mars 1962",
-              "title": "Accords d'Évian",
-              "detail": "Cessez-le-feu puis indépendance en juillet."
+              "date": "1962. gada 18. marts",
+              "title": "Evjanas vienošanās",
+              "detail": "Pamiers, pēc tam neatkarība jūlijā."
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "La guerre d'Algérie (**1954-1962**) termine l'empire colonial français. Elle laisse un héritage mémoriel douloureux : torture, exode des pieds-noirs, abandon des harkis."
+          "text": "Alžīrijas karš (**1954-1962**) noslēdz Francijas koloniālo impēriju. Tas atstāj smagu atmiņu mantojumu: spīdzināšana, melnkāju bēgšana, harku pamešana likteņa varā."
         }
       ]
     }

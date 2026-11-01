@@ -1,118 +1,118 @@
 {
   "id": "course_186_les_valkyries_et_le_valhalla",
-  "title": "Valkyries : que faisaient les guerriers morts au Valhalla ?",
-  "subtitle": "Mythologie nordique",
+  "title": "Valkīras: ko Valhallā darīja kritušie karotāji?",
+  "subtitle": "Ziemeļvalstu mitoloģija",
   "subject": "mythologie",
   "subcategory": "Citas mitoloģijas",
-  "description": "Dans le ciel nordique, des guerrières choisissent les morts pour peupler le Valhalla. Leur armée doit affronter le crépuscule des dieux.",
+  "description": "Ziemeļvalstu debesīs karotājas izvēlas mirušos, lai apdzīvotu Valhallu. Viņu armijai jāsastopas ar dievu mijkrēsli.",
   "hero": {
     "image": "les_valkyries_et_le_valhalla",
     "ratio": "16:9",
-    "hook": "Mourir l'épée à la main n'est pas une fin : c'est une sélection pour la dernière guerre du monde."
+    "hook": "Mirt ar zobenu rokā nav gals: tā ir atlase pēdējam pasaules karam."
   },
   "sections": [
     {
       "id": "course_186_les_valkyries_et_le_valhalla_intro",
-      "title": "Introduction",
+      "title": "Ievads",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Dans la mythologie nordique, la mort au combat n'est pas une fin. C'est une **sélection**. Les **Valkyries**, dont le nom signifie « celles qui choisissent les occis », parcourent les champs de bataille pour Odin, le dieu souverain."
+          "text": "Ziemeļvalstu mitoloģijā nāve kaujā nav gals. Tā ir **atlase**. **Valkīras**, kuru vārds nozīmē „tās, kas izvēlas kritušos“, apstaigā kaujaslaukus Odina, augstākā dieva, vajadzībām."
         },
         {
           "type": "paragraph",
-          "text": "Leur mission : emmener les plus braves au **Valhalla**, la « salle des occis ». Ce palais n'est pas un paradis de repos. C'est une caserne céleste. Car Odin prépare une armée pour le [[Ragnaroks]], la bataille finale qui doit détruire le monde et tuer les dieux."
+          "text": "Viņu uzdevums ir aizvest drosmīgākos uz **Valhallu**, „kritušo zāli“. Šī pils nav atpūtas paradīze. Tā ir debesu kazarma. Jo Odins gatavo armiju pēdējai kaujai, kas iznīcinās pasauli un nogalinās dievus. To sauc [[Ragnaroks]]."
         }
       ]
     },
     {
       "id": "course_186_les_valkyries_et_le_valhalla_p1",
-      "title": "Odin recrute pour le Ragnarök",
+      "title": "Odins vervē karotājus Ragnarökam",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Odin** connaît la prophétie. Au [[Ragnaroks]], les géants et les monstres fondront sur [[Asgarda]], la demeure des dieux. Pour retarder l'inévitable, il lui faut des soldats d'élite : les **Einherjar**, « ceux qui combattent seuls »."
+          "text": "**Odins** zina pareģojumu. Kad pienāks [[Ragnaroks]], milži un briesmoņi uzbruks. Viņu mērķis būs dievu mājvieta [[Asgarda]]. Lai aizkavētu neizbēgamo, viņam vajag elites karavīrus: **Einherjar**, „tos, kas cīnās vieni“."
         },
         {
           "type": "image",
           "asset": "odin_norse_god_ravens_throne_painting",
           "ratio": "4:3",
-          "caption": "Odin, maître des dieux, hanté par la fin du monde."
+          "caption": "Odins, dievu valdnieks, kuru vajā pasaules gals."
         },
         {
           "type": "funFact",
-          "text": "Le Valhalla n'accueillait que **la moitié** des guerriers morts au combat. L'autre moitié rejoignait le Fólkvangr, domaine de la déesse **Freyja**. Même après une mort héroïque, les héros étaient partagés."
+          "text": "Valhalla uzņēma tikai **pusi** kaujā kritušo karotāju. Otra puse nonāca Fólkvangrā, dievietes **Freijas** valstībā. Pat pēc varonīgas nāves varoņi tika sadalīti."
         },
         {
           "type": "paragraph",
-          "text": "Le Valhalla, en Asgard, compte **540 portes**. Chacune est assez large pour que huit cents combattants passent de front. Seuls ceux tombés courageusement, l'épée à la main, y ont droit. Les Valkyries font le tri depuis le ciel."
+          "text": "Valhallai Asgardā ir **540 vārtu**. Katri ir tik plati, ka pa tiem vienlaikus var iziet astoņi simti kaujinieku vienā rindā. Tiesības tur nokļūt ir tikai tiem, kas krita drosmīgi, ar zobenu rokā. Valkīras atlasi veic no debesīm."
         }
       ]
     },
     {
       "id": "course_186_les_valkyries_et_le_valhalla_p2",
-      "title": "Des guerrières plus sombres qu'on ne croit",
+      "title": "Tumšākas karotājas, nekā domā",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L'image moderne des Valkyries vient souvent du romantisme du XIXe siècle : de douces vierges à cheval. Les textes anciens, comme l'[[Dzejas Edda]], peignent des figures bien plus dures. Elles sont liées aux corbeaux, oiseaux des cadavres. Certains poèmes les montrent en fileuses macabres : leurs fils sont des boyaux, leurs poids des têtes."
+          "text": "Valkīru mūsdienu tēls bieži nāk no deviņpadsmitā gadsimta romantisma: maigas jaunavas zirgos. Senajos tekstos, piemēram, [[Dzejas Edda]], redzamas daudz skarbākas figūras. Viņas saistītas ar kraukļiem, līķu putniem. Dažos dzejoļos viņas parādītas kā drūmas vērpējas: viņu diegi ir zarnas, viņu atsvari galvas."
         },
         {
           "type": "image",
           "asset": "valkyrie_riding_winged_horse_norse_art",
           "ratio": "4:3",
-          "caption": "Valkyrie en vol : messagère d'Odin et pourvoyeuse de héros."
+          "caption": "Valkīra lidojumā: Odina vēstnese un varoņu sagādātāja."
         },
         {
           "type": "paragraph",
-          "text": "Des figures comme **Brynhildr** ou [[Sigruna]] ont aussi un visage humain : elles hésitent entre les ordres d'Odin et leurs sentiments pour des mortels. Au Valhalla, leur rôle change. Elles quittent l'armure pour servir l'hydromel aux héros. Le geste dit la reconnaissance : le mort brave est devenu l'élite d'Asgard."
+          "text": "Tādām figūrām kā **Brynhildr** vai [[Sigruna]] ir arī cilvēciska seja: viņas svārstās starp Odina pavēlēm un jūtām pret mirstīgajiem. Valhallā viņu loma mainās. Viņas noliek bruņas, lai pasniegtu varoņiem medalu. Šis žests pauž atzinību: drosmīgais mirušais ir kļuvis par Asgardas eliti."
         }
       ]
     },
     {
       "id": "course_186_les_valkyries_et_le_valhalla_p3",
-      "title": "Chaque jour se battre, chaque soir festoyer",
+      "title": "Katru dienu cīnīties, katru vakaru dzīrot",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Au Valhalla, pas de retraite paisible. Au chant du coq [[Gullinkambi]], les Einherjar s'arment et s'entretuent sur la plaine d'[[Idavella]]. Le soir, les blessures se ferment. Les morts se relèvent. Puis vient le festin."
+          "text": "Valhallā nav mierīgas pensijas. Kad iedziedas gailis [[Gullinkambi]], Einherjar bruņojas un cērt cits citu uz līdzenuma [[Idavella]]. Vakarā brūces aizveras. Miroņi piecelas. Tad sākas dzīres."
         },
         {
           "type": "image",
           "asset": "valhalla_feast_norse_warriors_einherjar_painting",
           "ratio": "4:3",
-          "caption": "Le festin des Einherjar : combat le jour, banquets la nuit."
+          "caption": "Einherju dzīres: cīņa dienā, mielasts naktī."
         },
         {
           "type": "funFact",
-          "text": "Le sanglier **Sæhrímnir** est bouilli chaque jour par le cuisinier [[Andhrimnirs]], puis renaît. L'hydromel coule des pis de la chèvre [[Heidruna]]. Le paradis viking est une salle d'entraînement permanente."
+          "text": "Mežacūku **Sæhrímnir** katru dienu izvāra pavārs [[Andhrimnirs]], un tā atdzimst. Medalus tek no kazas [[Heidruna]] tesmeņiem. Vikingu paradīze ir pastāvīga treniņu zāle."
         },
         {
           "type": "paragraph",
-          "text": "Ce cycle de violence et de plaisir soude l'armée d'Odin. Des siècles de batailles amicales avant le vrai ennemi."
+          "text": "Šis vardarbības un baudas cikls saliedē Odina armiju. Gadsimtiem ilgas draudzīgas cīņas pirms īstā ienaidnieka."
         }
       ]
     },
     {
       "id": "course_186_les_valkyries_et_le_valhalla_p4",
-      "title": "Une mort digne plutôt que la « mort de paille »",
+      "title": "Cienīga nāve, nevis „salmu nāve“",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Cette vision de l'au-delà a marqué la Scandinavie viking. On valorisait le courage physique. Mourir de vieillesse ou de maladie, la « mort de paille », menait à **Hel**, un royaume terne. Mieux valait tomber les armes à la main."
+          "text": "Šis priekšstats par aizsauli ir iezīmējis vikingu Skandināviju. Augstu vērtēja fizisku drosmi. Mirt vecumdienās vai no slimības, „salmu nāvē“, nozīmēja nokļūt **Helā**, blāvā valstī. Labāk bija krist ar ieročiem rokās."
         },
         {
           "type": "paragraph",
-          "text": "La Valkyrie a traversé les siècles. Richard Wagner l'a fixée dans la mémoire européenne avec la [[Valkīru jāšana]]. Aujourd'hui, elle est devenue un archétype de femme puissante, souvent loin de sa fonction première : pourvoyeuse de cadavres pour un dieu qui prépare sa propre fin."
+          "text": "Valkīra ir izturējusi gadsimtus. Rihards Vāgners iespiedis viņu Eiropas atmiņā ar fragmentu [[Valkīru jāšana]]. Mūsdienās viņa kļuvusi par stipras sievietes arhetipu, bieži vien tālu no savas sākotnējās funkcijas: līķu sagādātāja dievam, kas gatavo savu galu."
         },
         {
           "type": "takeaway",
-          "text": "Les **Valkyries** recrutent les meilleurs morts pour le **Valhalla**. Là, les Einherjar combattent et festoient sans fin, en vue du [[Ragnaroks]]. Le paradis nordique est une caserne, pas un refuge."
+          "text": "**Valkīras** vervē labākos mirušos **Valhallai**. Tur Einherjar bez gala cīnās un dzīrojas, gaidot pēdējo kauju: [[Ragnaroks]]. Ziemeļvalstu paradīze ir kazarma, nevis patvērums."
         }
       ]
     }

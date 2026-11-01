@@ -1,98 +1,98 @@
 {
   "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee",
-  "title": "Pourquoi l'eau de mer est-elle salée ?",
-  "subtitle": "Océans",
+  "title": "Kāpēc jūras ūdens ir sāļš?",
+  "subtitle": "Okeāni",
   "subject": "sciences",
   "subcategory": "Mūsu ikdiena izskaidrota",
-  "description": "Un litre d'eau de mer contient environ 35 grammes de sel. Ce sel s'est accumulé pendant des milliards d'années. Voici d'où il vient.",
+  "description": "Litrā jūras ūdens ir apmēram 35 grami sāls. Šis sāls krājies miljardiem gadu. Lūk, no kurienes tas nāk.",
   "hero": {
     "image": "pourquoi_l_eau_de_mer_est_salee",
     "ratio": "16:9",
-    "hook": "Les fleuves sont doux. Les océans sont salés. Le secret, c'est le temps et l'évaporation."
+    "hook": "Upes ir saldūdens, okeāni ir sāļi. Noslēpums slēpjas laikā un iztvaikošanā."
   },
   "sections": [
     {
       "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_intro",
-      "title": "Introduction",
+      "title": "Ievads",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Les océans couvrent plus de **70 %** de la planète. En moyenne, un litre d'eau de mer contient environ **35 grammes de sel**. Ce n'est pas un hasard : c'est le résultat d'un très long processus."
+          "text": "Okeāni sedz vairāk nekā **70%** planētas. Vidēji litrā jūras ūdens ir apmēram **35 grami sāls**. Tā nav nejaušība, bet ļoti ilga procesa rezultāts."
         },
         {
           "type": "paragraph",
-          "text": "Le sel ne « tombe » pas du ciel tout fait. Il voyage depuis les continents, puis reste piégé dans l'océan."
+          "text": "Sāls nekrīt no debesīm gatavs. Tas ceļo no kontinentiem un pēc tam paliek ieslodzīts okeānā."
         }
       ]
     },
     {
       "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_p1",
-      "title": "Le sel vient d'abord de la terre",
+      "title": "Sāls vispirms nāk no sauszemes",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La pluie, en traversant l'air, se charge un peu de gaz carbonique. Elle devient légèrement acide. En tombant sur les roches, elle les attaque doucement : c'est l'**érosion chimique**."
+          "text": "Lietus, krītot cauri gaisam, uzņem nedaudz oglekļa dioksīda un kļūst viegli skābs. Uzkrītot akmeņiem, tas tos lēnām noārda: tā ir **ķīmiskā erozija**."
         },
         {
           "type": "image",
           "asset": "ocean_sea_salt_evaporation",
           "ratio": "auto",
-          "caption": "Marais salants : l'évaporation concentre le sel dissous dans l'eau de mer."
+          "caption": "Sāls ieguves baseini: iztvaikošana koncentrē jūras ūdenī izšķīdušo sāli."
         },
         {
           "type": "paragraph",
-          "text": "Les rivières emportent alors des minéraux dissous, surtout du **sodium** et du **chlore**, les deux ingrédients du sel de table. Elles les déversent dans la mer."
+          "text": "Upes tad aiznes izšķīdušus minerālus, galvenokārt **nātriju** un **hloru**, abas galda sāls sastāvdaļas. Tās minerālus ieplūdina jūrā."
         },
         {
           "type": "funFact",
-          "text": "Les volcans sous-marins et les sources chaudes au fond des océans ajoutent aussi des sels. Mais l'essentiel vient encore des continents."
+          "text": "Zemūdens vulkāni un karstie avoti okeānu dibenā arī pievieno sāļus. Taču lielākā daļa joprojām nāk no kontinentiem."
         }
       ]
     },
     {
       "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_p2",
-      "title": "Pourquoi les fleuves ne sont pas salés",
+      "title": "Kāpēc upes nav sāļas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Bonne question : si les fleuves apportent du sel, pourquoi l'eau du Rhône ou de la Seine n'est-elle pas salée ? Parce que le sel y est très dilué, et parce que l'eau des fleuves est constamment renouvelée."
+          "text": "Laba jautājuma vērts: ja upes ienes sāli, kāpēc Ronas vai Sēnas ūdens nav sāļš? Tāpēc, ka sāls tur ir ļoti atšķaidīts un upju ūdens nemitīgi atjaunojas."
         },
         {
           "type": "paragraph",
-          "text": "Dans l'océan, c'est différent. Sous le Soleil, l'eau s'**évapore** et repart dans le ciel. Le sel, lui, **reste**. Année après année, siècle après siècle, il s'accumule. On appelle cela le [[hidroloģiskais cikls un sāļu uzkrāšanās]]."
+          "text": "Okeānā ir citādi. Saules staros ūdens **iztvaiko** un atgriežas debesīs. Sāls savukārt **paliek**. Gadu pēc gada, gadsimtu pēc gadsimta tas krājas. Tas viss ir [[hidroloģiskais cikls un sāļu uzkrāšanās]]."
         }
       ]
     },
     {
       "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_p3",
-      "title": "Le sel fait aussi circuler les océans",
+      "title": "Sāls liek kustēties arī okeāniem",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L'eau salée est plus **dense** (plus « lourde » pour le même volume) que l'eau douce. Aux pôles, quand l'eau de surface gèle, le sel est en partie rejeté dans l'eau liquide autour. Cette eau devient encore plus dense et plonge vers le fond."
+          "text": "Sālsūdens ir **blīvāks** (tajā pašā tilpumā smagāks) nekā saldūdens. Pie poliem, kad virsmas ūdens sasalst, daļa sāls tiek izspiesta apkārtējā šķidrajā ūdenī. Šis ūdens kļūst vēl blīvāks un grimst dziļumā."
         },
         {
           "type": "paragraph",
-          "text": "Ce mouvement aide à entraîner de grands courants océaniques. Ces courants transportent chaleur et nutriments autour du globe. Le sel n'est pas qu'une affaire de goût : il fait partie du moteur climatique de la planète."
+          "text": "Šī kustība palīdz radīt lielas okeāna straumes. Tās pārnes siltumu un barības vielas apkārt zemeslodei. Sāls nav tikai garšas jautājums: tas ir daļa no planētas klimata dzinēja."
         }
       ]
     },
     {
       "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_p4",
-      "title": "Pas partout le même sel",
+      "title": "Sāls ne visur vienāds",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La salinité n'est pas la même partout. Près de l'équateur, l'évaporation forte peut concentrer le sel. Près des grands fleuves ou des banquises qui fondent, l'eau est plus douce. La mer Morte, elle, est un cas extrême : très peu d'eau part, beaucoup de sel reste."
+          "text": "Sāļums nav vienāds visur. Pie ekvatora spēcīga iztvaikošana var sāli koncentrēt. Pie lielām upēm vai kūstošiem ledus laukiem ūdens ir saldāks. Nāves jūra ir galējs piemērs: ļoti maz ūdens aiziet, daudz sāls paliek."
         },
         {
           "type": "takeaway",
-          "text": "L'eau de mer est salée parce que les fleuves apportent des minéraux depuis les continents, et que l'évaporation laisse le sel dans l'océan. Cette accumulation dure depuis des milliards d'années."
+          "text": "Jūras ūdens ir sāļš tāpēc, ka upes no kontinentiem atnes minerālus un iztvaikošana sāli atstāj okeānā. Šī uzkrāšanās ilgst jau miljardiem gadu."
         }
       ]
     }

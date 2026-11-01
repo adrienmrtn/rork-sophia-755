@@ -1,100 +1,100 @@
 {
   "id": "course_54_la_decouverte_du_micro_ondes_par_acciden",
-  "title": "La découverte du micro-ondes",
-  "subtitle": "Par accident",
+  "title": "Mikroviļņu krāsns atklāšana",
+  "subtitle": "Nejauši",
   "subject": "sciences",
   "subcategory": "Atklājumi, kas mainīja pasauli",
-  "description": "En 1945, un ingénieur remarque que sa barre chocolatée a fondu près d'un radar. De cette observation naîtra le four à micro-ondes.",
+  "description": "1945. gadā inženieris pamana, ka viņa šokolādes batoniņš ir izkusis radara tuvumā. No šī novērojuma dzims mikroviļņu krāsns.",
   "hero": {
     "image": "la_decouverte_du_micro_ondes",
     "ratio": "16:9",
-    "hook": "Une barre chocolatée fondue… et la cuisine moderne change."
+    "hook": "Izkusis šokolādes batoniņš, un mūsdienu virtuve mainās."
   },
   "sections": [
     {
       "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_intro",
-      "title": "Introduction",
+      "title": "Ievads",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En **1945**, aux États-Unis, l'ingénieur **Percy Spencer** travaille sur des radars. Un jour, il remarque que la barre chocolatée dans sa poche a fondu. Pas à cause de la chaleur du corps : à cause des ondes du radar."
+          "text": "**1945**. gadā Amerikas Savienotajās Valstīs inženieris **Persijs Spensers** strādā pie radariem. Kādu dienu viņš pamana, ka šokolādes batoniņš viņa kabatā ir izkusis. Ne ķermeņa siltuma dēļ, bet radara viļņu dēļ."
         },
         {
           "type": "paragraph",
-          "text": "Il teste avec du maïs : le pop-corn éclate. L'idée d'un four qui chauffe autrement est née."
+          "text": "Viņš izmēģina ar kukurūzu, un popkorns uzsprāgst. Dzimusi ideja par krāsni, kas silda citādi."
         }
       ]
     },
     {
       "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p1",
-      "title": "Du radar à la cuisine",
+      "title": "No radara līdz virtuvei",
       "free": false,
       "blocks": [
         {
           "type": "image",
           "asset": "percy_spencer_microwave_discovery_radar",
           "ratio": "4:3",
-          "caption": "Les radars de la Seconde Guerre mondiale utilisaient déjà les micro-ondes."
+          "caption": "Otrā pasaules kara radari jau izmantoja mikroviļņus."
         },
         {
           "type": "paragraph",
-          "text": "Les **micro-ondes** sont des ondes électromagnétiques, comme la lumière radio, mais plus « énergétiques » que beaucoup d'ondes radio classiques. Pendant la guerre, elles servent surtout aux radars pour détecter avions et bateaux."
+          "text": "**Mikroviļņi** ir elektromagnētiskie viļņi, tāpat kā radioviļņi, bet daudz „enerģiskāki“ nekā daudzi parastie radioviļņi. Kara laikā tos galvenokārt izmanto radaros, lai atklātu lidmašīnas un kuģus."
         },
         {
           "type": "paragraph",
-          "text": "Spencer comprend qu'elles peuvent aussi agiter l'eau et les graisses dans les aliments… et donc les chauffer."
+          "text": "Spensers saprot, ka tie var kustināt arī ūdeni un taukus produktos un tādējādi tos sildīt."
         }
       ]
     },
     {
       "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p2",
-      "title": "Le premier four est énorme",
+      "title": "Pirmā krāsns ir milzīga",
       "free": false,
       "blocks": [
         {
           "type": "image",
           "asset": "first_microwave_oven_radarange_1947",
           "ratio": "4:3",
-          "caption": "Le premier four à micro-ondes commercial est grand comme une armoire."
+          "caption": "Pirmā komerciālā mikroviļņu krāsns ir liela kā skapis."
         },
         {
           "type": "paragraph",
-          "text": "Le premier modèle commercial, le **Radarange**, sort vers **1947**. Il est immense, cher, et plutôt destiné aux restaurants ou aux bateaux. Il faudra des décennies pour le miniaturiser et le rendre abordable pour les foyers."
+          "text": "Pirmais komerciālais modelis **Radarange** parādās ap **1947**. gadu. Tas ir milzīgs, dārgs un drīzāk paredzēts restorāniem vai kuģiem. Būs vajadzīgi vairāki gadu desmiti, lai to samazinātu un padarītu pieejamu mājsaimniecībām."
         },
         {
           "type": "funFact",
-          "text": "Au début, certains avaient peur que le four « rende les aliments radioactifs ». Faux : les micro-ondes chauffent, elles ne rendent pas radioactif."
+          "text": "Sākumā daži baidījās, ka krāsns „padara ēdienu radioaktīvu“. Tā nav: mikroviļņi silda, bet radioaktīvu nepadara."
         }
       ]
     },
     {
       "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p3",
-      "title": "Comment ça chauffe vraiment",
+      "title": "Kā tas īsti silda",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Les micro-ondes font surtout vibrer les molécules d'eau (et un peu les graisses et sucres). Cette agitation crée de la chaleur **à l'intérieur** de l'aliment, pas seulement en surface comme une poêle."
+          "text": "Mikroviļņi galvenokārt liek vibrēt ūdens molekulām (un nedaudz taukiem un cukuriem). Šī kustība rada siltumu **produkta iekšienē**, ne tikai virspusē kā pannā."
         },
         {
           "type": "paragraph",
-          "text": "C'est pour ça qu'un plat peut être brûlant dehors et tiède au centre s'il est épais : les ondes ne pénètrent pas infiniment profond."
+          "text": "Tāpēc biezs ēdiens var būt ārpusē karsts, bet vidū remdens: viļņi neiekļūst bezgalīgi dziļi."
         }
       ]
     },
     {
       "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p4",
-      "title": "Un objet du quotidien",
+      "title": "Ikdienas priekšmets",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "À partir des années 1970-1980, le four à micro-ondes entre dans des millions de cuisines. Il change les habitudes : réchauffer vite, plats préparés, vie plus rapide."
+          "text": "Sākot ar 1970.-1980. gadiem, mikroviļņu krāsns nonāk miljoniem virtuvju. Tā maina ieradumus: ātra uzsildīšana, gatavie ēdieni, straujāka dzīve."
         },
         {
           "type": "takeaway",
-          "text": "Le micro-ondes naît d'un hasard observé par Percy Spencer près d'un radar. Les ondes agitent surtout l'eau des aliments et les chauffent de l'intérieur."
+          "text": "Mikroviļņu krāsns dzimst no nejaušības, ko Persijs Spensers novēroja radara tuvumā. Viļņi galvenokārt kustina produktu ūdeni un silda to no iekšpuses."
         }
       ]
     }

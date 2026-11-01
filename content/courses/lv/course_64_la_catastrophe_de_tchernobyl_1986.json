@@ -1,118 +1,118 @@
 {
   "id": "course_64_la_catastrophe_de_tchernobyl_1986",
-  "title": "Que s'est-il passé à Tchernobyl le 26 avril 1986 ?",
-  "subtitle": "26 avril 1986",
+  "title": "Kas notika Černobiļā 1986. gada 26. aprīlī?",
+  "subtitle": "1986. gada 26. aprīlis",
   "subject": "sciences",
   "subcategory": "Zeme un Visums",
-  "description": "Le 26 avril 1986, le réacteur n°4 de Tchernobyl explose. C'est le plus grave accident nucléaire civil de l'histoire. Voici ce qui s'est passé, sans sensationnalisme.",
+  "description": "1986. gada 26. aprīlī Černobiļas 4. reaktors eksplodē. Tā ir vēstures smagākā civilā kodolavārija. Lūk, kas notika, bez sensācijām.",
   "hero": {
     "image": "la_catastrophe_de_tchernobyl_1986",
     "ratio": "16:9",
-    "hook": "Une nuit d'avril 1986, un test de sécurité tourne au désastre. L'Europe entière en subira les retombées."
+    "hook": "1986. gada aprīļa naktī drošības tests pārvēršas katastrofā. Radioaktīvo nokrišņu sekas izjutīs visa Eiropa."
   },
   "sections": [
     {
       "id": "course_64_la_catastrophe_de_tchernobyl_1986_intro",
-      "title": "Introduction",
+      "title": "Ievads",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le **26 avril 1986**, à 1 h 23 du matin, le réacteur n°4 de la centrale de **Tchernobyl**, alors en Ukraine soviétique, est le théâtre du plus grave accident nucléaire civil connu. Sur l'échelle [[INES]], qui classe les événements nucléaires de 1 à 7, il atteint le niveau maximal, comme Fukushima en 2011."
+          "text": "**1986. gada 26. aprīlī** plkst. 1.23 naktī **Černobiļas** atomelektrostacijas 4. reaktors, kas toreiz atradās padomju Ukrainā, kļūst par smagākās zināmās civilās kodolavārijas vietu. Pēc [[INES]] skalas, kas kodolnotikumus iedala no 1 līdz 7, avārija sasniedz augstāko līmeni, tāpat kā Fukušima 2011. gadā."
         },
         {
           "type": "paragraph",
-          "text": "Des matières radioactives sont projetées dans l'atmosphère. Le nuage traverse une grande partie de l'Europe. Au-delà du drame humain, Tchernobyl change durablement le regard sur l'énergie nucléaire et révèle les failles du système soviétique."
+          "text": "Atmosfērā tiek izmesti radioaktīvi materiāli. Mākonis šķērso lielu daļu Eiropas. Papildus cilvēku traģēdijai Černobiļa uz ilgu laiku maina skatījumu uz kodolenerģiju un atklāj padomju sistēmas plaisas."
         }
       ]
     },
     {
       "id": "course_64_la_catastrophe_de_tchernobyl_1986_p1",
-      "title": "Un test qui dérape",
+      "title": "Tests, kas aiziet greizi",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Tout commence par un test de sécurité. Les ingénieurs veulent vérifier si, en cas de coupure de courant, les turbines encore en rotation peuvent alimenter les pompes de refroidissement le temps que les générateurs diesel démarrent. L'idée est bonne. Les conditions du test, elles, ne le sont pas."
+          "text": "Viss sākas ar drošības testu. Inženieri grib pārbaudīt, vai strāvas padeves pārtraukuma gadījumā vēl rotējošās turbīnas var darbināt dzesēšanas sūkņus, līdz ieslēdzas dīzeļģeneratori. Ideja ir laba. Taču testa apstākļi gan nav."
         },
         {
           "type": "image",
           "asset": "pripyat_abandoned_city_chernobyl",
           "ratio": "auto",
-          "caption": "Le dôme de confinement du réacteur n°4, entouré par les immeubles abandonnés de Pripyat."
+          "caption": "4. reaktora norobežojošais kupols, ko ieskauj pamestās Pripjatas daudzstāvu ēkas."
         },
         {
           "type": "paragraph",
-          "text": "L'équipe de nuit travaille à faible puissance. Or le [[RBMK reaktors]], un modèle refroidi à l'eau et modéré au graphite, devient alors très instable. Chez ce type de réacteur, la formation de bulles de vapeur peut accélérer la réaction au lieu de la freiner."
+          "text": "Nakts maiņa strādā ar nelielu jaudu. Tad [[Padomju RBMK reaktors]], ar ūdeni dzesēts un ar grafītu moderēts modelis, kļūst ļoti nestabils. Šāda tipa reaktorā tvaika burbuļu veidošanās var paātrināt reakciju, nevis to bremzēt."
         },
         {
           "type": "paragraph",
-          "text": "Quand l'opérateur active l'arrêt d'urgence, les barres de contrôle, destinées à stopper la réaction, provoquent d'abord une brève surtension à cause de leur conception. La puissance s'emballe. La vapeur fait exploser le cœur. La dalle de protection, d'environ **1 000 tonnes**, est projetée. Le réacteur est à l'air libre."
+          "text": "Kad operators ieslēdz avārijas apturēšanu, vadības stieņi, kas paredzēti reakcijas apturēšanai, savas konstrukcijas dēļ vispirms izraisa īslaicīgu jaudas pieaugumu. Jauda pieaug neapturami. Tvaiks uzspridzina kodolu. Aizsargplāksne, aptuveni **1000 tonnu** smaga, tiek aizsviesta. Reaktors ir zem klajas debess."
         },
         {
           "type": "funFact",
-          "text": "Dans les sous-sols, un magma nucléaire surnommé le « Pied d'éléphant » s'est formé. En 1986, s'en approcher trop longtemps était mortel en quelques jours."
+          "text": "Pagrabos ir izveidojusies kodolmagma, ko dēvē par „Ziloņa kāju“. 1986. gadā, ilgi tai tuvojoties, dažu dienu laikā varēja iet bojā."
         }
       ]
     },
     {
       "id": "course_64_la_catastrophe_de_tchernobyl_1986_p2",
-      "title": "Déni, évacuation, liquidateurs",
+      "title": "Noliegums, evakuācija, likvidatori",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Dans les premières heures, beaucoup croient à un simple incendie de toiture. Des pompiers interviennent sans protection adaptée. Certains manipulent du graphite radioactif sans le savoir. Les symptômes du syndrome aigu des radiations apparaissent vite : nausées, brûlures."
+          "text": "Pirmajās stundās daudzi tic, ka ir vienkāršs jumta ugunsgrēks. Ugunsdzēsēji ierodas bez piemērotas aizsardzības. Daži, to nezinot, rīkojas ar radioaktīvu grafītu. Akūtās staru slimības simptomi parādās ātri: slikta dūša, apdegumi."
         },
         {
           "type": "paragraph",
-          "text": "La ville voisine de **Pripiat**, construite pour les employés de la centrale, continue sa vie normale pendant environ **36 heures**. Les enfants jouent dehors. Ce n'est que le **27 avril** que ses **50 000** habitants sont évacués en quelques heures, souvent sans pouvoir emporter grand-chose."
+          "text": "Kaimiņpilsēta **Pripjata**, uzcelta stacijas darbiniekiem, turpina normālu dzīvi aptuveni **36 stundas**. Bērni spēlējas ārā. Tikai **27. aprīlī** tās **50 000** iedzīvotāju tiek evakuēti dažu stundu laikā, bieži vien nespējot paņemt līdzi daudz ko."
         },
         {
           "type": "paragraph",
-          "text": "Pour contenir le désastre, l'URSS mobilise près de **600 000** personnes : les [[likvidatori]]. Pilotes d'hélicoptères, ouvriers, soldats. Certains n'ont que quelques dizaines de secondes sur le toit pour dégager des débris : les robots électroniques tombent en panne sous les radiations."
+          "text": "Lai ierobežotu katastrofu, PSRS mobilizē gandrīz **600 000** cilvēku: tie ir [[likvidatori]]. Helikopteru piloti, strādnieki, karavīri. Dažiem uz jumta ir tikai pāris desmitu sekunžu, lai novāktu gružus: elektroniskie roboti starojuma ietekmē sabojājas."
         },
         {
           "type": "funFact",
-          "text": "Certains liquidateurs ont reçu une médaille montrant une goutte de sang traversée par des rayons. Une décoration rare, créée pour un danger invisible."
+          "text": "Daži likvidatori saņēma medaļu ar asins pilienu, kam cauri iet stari. Reta apbalvojuma zīme, radīta neredzamām briesmām."
         }
       ]
     },
     {
       "id": "course_64_la_catastrophe_de_tchernobyl_1986_p3",
-      "title": "Conséquences humaines et environnementales",
+      "title": "Sekas cilvēkiem un videi",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le nuage dépose notamment de l'iode et du césium radioactifs sur de vastes territoires. L'OMS reconnaît environ **4 000** cas de cancer de la thyroïde, surtout chez des enfants exposés via le lait contaminé. Le bilan total des décès liés à long terme reste débattu selon les études."
+          "text": "Mākonis uz plašām teritorijām nogulda, cita starpā, radioaktīvu jodu un cēziju. PVO atzīst aptuveni **4000** vairogdziedzera vēža gadījumu, galvenokārt bērniem, kuri tika pakļauti starojumam, lietojot piesārņoto pienu. Kopējais ilgtermiņa nāves gadījumu skaits joprojām ir strīdīgs, un pētījumos tas atšķiras."
         },
         {
           "type": "paragraph",
-          "text": "Autour du site, une [[aizlieguma zona (30 km)]] a été évacuée. Quarante ans plus tard, sans agriculture ni villes, la faune y est souvent abondante : loups, élans, chevaux de Przewalski. La radioactivité reste un danger, mais l'absence humaine a paradoxalement laissé de la place à la nature."
+          "text": "Ap staciju tika evakuēta [[aizlieguma zona (30 km)]]. Četrdesmit gadus vēlāk, bez lauksaimniecības un pilsētām, tur savvaļas dzīvnieku bieži ir daudz: vilki, alņi, Prževaļska zirgi. Radioaktivitāte joprojām ir drauds, taču cilvēku trūkums paradoksālā kārtā devis vietu dabai."
         },
         {
           "type": "paragraph",
-          "text": "En 1986, un premier sarcophage de béton isole le réacteur. Fragilisé, il est recouvert en **2016** par une immense arche d'acier, le Nouveau confinement de sécurité, conçue pour durer environ **100 ans** et assemblée puis glissée pour limiter l'exposition des ouvriers."
+          "text": "1986. gadā reaktoru izolē pirmais betona sarkofāgs. Tam novājinoties, **2016**. gadā to pārsedz milzīga tērauda arka, Jaunais drošais norobežojums, kas paredzēta kalpošanai aptuveni **100 gadu** un tika samontēta, tad pabīdīta, lai samazinātu strādnieku apstarošanu."
         }
       ]
     },
     {
       "id": "course_64_la_catastrophe_de_tchernobyl_1986_p4",
-      "title": "Un héritage politique et technique",
+      "title": "Politisks un tehnisks mantojums",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Pour [[Mihails Gorbačovs]], alors dirigeant de l'URSS, Tchernobyl a mis à nu le secret bureaucratique et les négligences industrielles. L'accident pousse à plus de transparence (la Glasnost) et accélère la crise du régime soviétique."
+          "text": "[[Mihails Gorbačovs]], toreizējais PSRS vadītājs, uzskatīja, ka Černobiļa atklāja birokrātisko slepenību un rūpnieciskās nolaidības. Avārija mudina uz lielāku atklātību (glasnost) un paātrina padomju režīma krīzi."
         },
         {
           "type": "paragraph",
-          "text": "Dans le monde, l'idée d'un nucléaire sans risque grave est ébranlée. En **1989** naît la [[WANO]], l'Association mondiale des exploitants nucléaires, pour partager les bonnes pratiques de sécurité entre pays. Plusieurs États freinent ou revoient leurs programmes."
+          "text": "Pasaulē tiek satricināta ideja par kodolenerģiju bez nopietna riska. **1989**. gadā rodas [[WANO]], Pasaules kodolenerģijas operatoru asociācija, lai valstu starpā apmainītos ar labāko drošības praksi. Vairākas valstis bremzē vai pārskata savas programmas."
         },
         {
           "type": "takeaway",
-          "text": "Tchernobyl (1986) reste le symbole d'un accident nucléaire majeur : défaut technique, erreurs humaines et opacité. La zone d'exclusion est toujours inhabitée, tandis que la sécurité nucléaire mondiale a dû se réinventer."
+          "text": "Černobiļa (1986) joprojām ir smagas kodolavārijas simbols: tehnisks defekts, cilvēku kļūdas un slepenība. Aizlieguma zona joprojām ir neapdzīvota, savukārt pasaules kodoldrošībai nācies sevi pārveidot."
         }
       ]
     }

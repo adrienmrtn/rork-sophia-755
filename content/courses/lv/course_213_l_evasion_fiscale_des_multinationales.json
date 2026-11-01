@@ -1,102 +1,102 @@
 {
   "id": "course_213_l_evasion_fiscale_des_multinationales",
-  "title": "Comment les GAFAM paient-ils si peu d'impôts ?",
-  "subtitle": "Comment les GAFAM paient si peu d'impôts",
+  "title": "Kā GAFAM maksā tik maz nodokļu?",
+  "subtitle": "Kā GAFAM maksā tik maz nodokļu",
   "subject": "comprendreLeMonde",
   "subcategory": "Ekonomika un sabiedrība",
-  "description": "Les géants du numérique paient souvent des impôts dérisoires comparés à leurs profits. Ce n'est pas toujours illégal : c'est le résultat de failles dans le droit international.",
+  "description": "Digitālie milži bieži maksā niecīgus nodokļus, salīdzinot ar savu peļņu. Tas ne vienmēr ir nelikumīgi: tas ir plaisu starptautiskajās tiesībās rezultāts.",
   "hero": {
     "image": "l_evasion_fiscale_des_multinationales",
     "ratio": "16:9",
-    "hook": "En 2014, Apple a payé un taux d'impôt effectif proche de 0,005% en Irlande. Comment est-ce possible ?"
+    "hook": "2014. gadā Apple Īrijā maksāja faktisko nodokļa likmi, kas bija tuvu 0,005%. Kā tas ir iespējams?"
   },
   "sections": [
     {
       "id": "course_213_l_evasion_fiscale_des_multinationales_intro",
-      "title": "Introduction",
+      "title": "Ievads",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Les GAFAM, c'est-à-dire Google, Apple, Facebook (Meta), Amazon et Microsoft, comptent parmi les entreprises les plus riches du monde. Pourtant, en proportion de leurs profits, elles paient souvent bien moins d'impôts qu'une PME classique."
+          "text": "GAFAM, proti, Google, Apple, Facebook (Meta), Amazon un Microsoft, ir starp pasaules bagātākajiem uzņēmumiem. Tomēr, salīdzinot ar peļņu, tie bieži maksā ievērojami mazāk nodokļu nekā parasts mazais vai vidējais uzņēmums."
         },
         {
           "type": "paragraph",
-          "text": "Ce n'est pas de la fraude au sens strict : c'est de l'**optimisation fiscale**, c'est-à-dire l'exploitation habile des failles du droit international. Ce mécanisme prive les États de centaines de milliards de dollars chaque année. Voici comment il fonctionne, et comment le monde tente d'y répondre."
+          "text": "Tā nav krāpšana šā vārda šaurā nozīmē, bet **nodokļu optimizācija**, proti, veikla starptautisko tiesību plaisu izmantošana. Šī shēma katru gadu atņem valstīm simtiem miljardu dolāru. Lūk, kā tā darbojas un kā pasaule mēģina ar to cīnīties."
         }
       ]
     },
     {
       "id": "course_213_l_evasion_fiscale_des_multinationales_p1",
-      "title": "Un impôt pensé pour les usines, pas pour le numérique",
+      "title": "Nodoklis, kas radīts rūpnīcām, nevis digitālajai ekonomikai",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le système fiscal international a été conçu au début du XXe siècle pour une économie industrielle : une entreprise devait posséder des usines ou des bureaux dans un pays, ce qu'on appelle un [[pastāvīgā pārstāvniecība]], pour y être imposée."
+          "text": "Starptautiskā nodokļu sistēma tika izveidota XX gadsimta sākumā rūpniecības ekonomikai: lai valstī tiktu aplikts ar nodokli, uzņēmumam tur bija jābūt rūpnīcām vai birojiem. Šādu klātbūtni sauc: [[pastāvīgā pārstāvniecība]]."
         },
         {
           "type": "paragraph",
-          "text": "Le numérique a brisé ce lien avec le territoire. Une entreprise peut aujourd'hui dominer un marché, capter les données de millions d'utilisateurs et gagner énormément d'argent dans un pays, sans y posséder le moindre bâtiment. Elle peut alors séparer le lieu où elle gagne son argent du lieu où elle le déclare."
+          "text": "Digitālā ekonomika ir pārrāvusi šo saikni ar teritoriju. Uzņēmums šodien var dominēt tirgū, iegūt miljoniem lietotāju datus un pelnīt milzum daudz naudas kādā valstī, tur neturot nevienu ēku. Tad tas var nošķirt vietu, kur nauda tiek nopelnīta, no vietas, kur to deklarē."
         },
         {
           "type": "funFact",
-          "text": "En 2014, le fisc américain a découvert que Microsoft avait transféré 39 milliards de dollars de bénéfices vers Porto Rico grâce à des droits de propriété intellectuelle, économisant plus de 6,5 milliards de dollars d'impôts."
+          "text": "2014. gadā ASV nodokļu iestāde atklāja, ka Microsoft ar intelektuālā īpašuma tiesību palīdzību bija pārvedis 39 miljardus dolāru peļņas uz Puertoriko un tā ietaupījis vairāk nekā 6,5 miljardus dolāru nodokļos."
         }
       ]
     },
     {
       "id": "course_213_l_evasion_fiscale_des_multinationales_p2",
-      "title": "Un manque à gagner de centaines de milliards",
+      "title": "Simtiem miljardu zaudētu ieņēmumu",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Selon l'OCDE, ces pratiques coûtent entre 100 et 240 milliards de dollars par an aux budgets publics du monde entier, soit 4 à 10% de tous les impôts sur les sociétés collectés sur la planète."
+          "text": "Pēc ESAO datiem, šāda prakse valstu budžetiem visā pasaulē izmaksā no 100 līdz 240 miljardiem dolāru gadā, tas ir 4 līdz 10% no visiem pasaulē iekasētajiem uzņēmumu ienākuma nodokļiem."
         },
         {
           "type": "image",
           "asset": "multinational_corporate_tax_avoidance_structure",
           "ratio": "16:9",
-          "caption": "Les sièges européens des géants du numérique sont souvent installés dans les pays où l'impôt est le plus faible."
+          "caption": "Digitālo milžu Eiropas galvenie biroji bieži atrodas valstīs, kur nodoklis ir viszemākais."
         },
         {
           "type": "paragraph",
-          "text": "Ce manque à gagner force les États à choisir entre augmenter les impôts des ménages et des PME, ou réduire les dépenses publiques comme la santé ou l'éducation. Une entreprise locale paie en moyenne un taux d'imposition bien plus élevé qu'une multinationale, ce qui crée une concurrence injuste."
+          "text": "Šie zaudētie ieņēmumi spiež valstis izvēlēties: palielināt nodokļus mājsaimniecībām un mazajiem un vidējiem uzņēmumiem vai samazināt valsts izdevumus, piemēram, veselības aprūpei un izglītībai. Vietējais uzņēmums vidēji maksā ievērojami augstāku nodokļa likmi nekā starptautisks koncerns, un tā rodas negodīga konkurence."
         }
       ]
     },
     {
       "id": "course_213_l_evasion_fiscale_des_multinationales_p3",
-      "title": "La riposte : un impôt minimum mondial",
+      "title": "Atbilde: pasaules minimālais nodoklis",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En 2021, sous l'égide de l'OCDE et du G20, un accord historique a instauré un [[globālais 15% minimālais nodoklis]]. Il vise les entreprises dont le chiffre d'affaires dépasse 750 millions d'euros : si elles ne paient que 5% d'impôts dans un pays, leur pays d'origine peut désormais réclamer les 10% manquants."
+          "text": "2021. gadā ESAO un G20 aizgādībā tika panākta vēsturiska vienošanās, un sāka darboties [[globālais 15% minimālais nodoklis]]. Tas attiecas uz uzņēmumiem, kuru apgrozījums pārsniedz 750 miljonus eiro: ja kādā valstī tie maksā tikai 5% nodokļu, to izcelsmes valsts tagad var pieprasīt trūkstošos 10%."
         },
         {
           "type": "paragraph",
-          "text": "Certains pays, comme la France, ont aussi créé une taxe nationale ciblant directement le chiffre d'affaires des géants du numérique. En parallèle, les multinationales doivent désormais publier, pays par pays, où se trouvent leurs employés, leurs bénéfices et leurs impôts : une transparence qui permet de repérer les décalages les plus flagrants."
+          "text": "Dažas valstis, piemēram, Francija, ir ieviesušas arī valsts nodokli, kas tieši vērsts pret digitālo milžu apgrozījumu. Vienlaikus starptautiskajiem uzņēmumiem tagad jāpublisko pa valstīm, kur atrodas to darbinieki, peļņa un nodokļi. Šī pārredzamība ļauj pamanīt visredzamākās neatbilstības."
         }
       ]
     },
     {
       "id": "course_213_l_evasion_fiscale_des_multinationales_p4",
-      "title": "L'Irlande, capitale européenne de l'optimisation",
+      "title": "Īrija, Eiropas nodokļu optimizācijas galvaspilsēta",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L'Irlande, avec son taux d'imposition officiel de 12,5% et ses accords secrets appelés [[nodokļu nolēmumi]], est devenue le pivot européen de l'optimisation fiscale. Grâce à une structure complexe, Apple a payé un taux d'impôt effectif proche de 0,005% en 2014."
+          "text": "Īrijā oficiālā nodokļa likme ir 12,5%, un darbojas slepenas vienošanās jeb [[nodokļu nolēmumi]]. Tā ir kļuvusi par Eiropas nodokļu optimizācijas mezglu. Pateicoties sarežģītai struktūrai, Apple 2014. gadā samaksāja faktisko nodokļa likmi, kas bija tuvu 0,005%."
         },
         {
           "type": "paragraph",
-          "text": "La Commission européenne a réclamé à l'Irlande 13 milliards d'euros d'impôts impayés par Apple, mais le pays a longtemps refusé de les percevoir : il craint que des règles trop strictes ne fassent fuir les sièges sociaux vers d'autres régions du monde. Les défenseurs de la justice fiscale rappellent aussi que ce taux de 15% reste plus bas que la moyenne des pays développés, et que les pays les plus pauvres, souvent les plus touchés par l'évasion fiscale, n'en récupéreront qu'une infime part."
+          "text": "Eiropas Komisija pieprasīja Īrijai 13 miljardus eiro Apple nesamaksāto nodokļu, taču valsts ilgi atteicās tos iekasēt: tā baidās, ka pārāk stingri noteikumi varētu padzīt uzņēmumu galvenos birojus uz citiem pasaules reģioniem. Nodokļu taisnīguma aizstāvji arī atgādina, ka šī 15% likme joprojām ir zemāka nekā attīstīto valstu vidējā un ka nabadzīgākās valstis, kuras nodokļu apiešana skar visvairāk, atgūs tikai niecīgu daļu."
         },
         {
           "type": "takeaway",
-          "text": "Les GAFAM ont longtemps profité de failles du droit international pour payer des impôts dérisoires, coûtant jusqu'à 240 milliards de dollars par an aux budgets publics. Depuis 2021, un impôt minimum mondial de 15% tente de corriger ce déséquilibre, mais la bataille pour une fiscalité plus juste continue."
+          "text": "GAFAM ilgu laiku izmantoja starptautisko tiesību plaisas, lai maksātu niecīgus nodokļus, kas valstu budžetiem izmaksāja līdz 240 miljardiem dolāru gadā. Kopš 2021. gada pasaules 15% minimālais nodoklis mēģina labot šo nelīdzsvarotību, taču cīņa par taisnīgāku nodokļu sistēmu turpinās."
         }
       ]
     }

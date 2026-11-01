@@ -1,112 +1,112 @@
 {
   "id": "course_279_pourquoi_accepter_une_armee_etrangere",
-  "title": "Pourquoi accepter une armée étrangère sur son sol ?",
-  "subtitle": "De Mers el-Kébir à Guantánamo",
+  "title": "Kāpēc pieņemt svešu armiju savā zemē?",
+  "subtitle": "No Merselkebīras līdz Gvantanamo",
   "subject": "comprendreLeMonde",
   "subcategory": "Konflikti un ģeopolitika",
-  "description": "Des dizaines de pays hébergent des soldats étrangers, et les États-Unis comptent à eux seuls plusieurs centaines de bases dans le monde. Comment un État souverain en vient-il à accepter l'armée d'un plus puissant que lui ?",
+  "description": "Desmitiem valstu uzņem svešus karavīrus, un tikai ASV vien ir vairāki simti bāzu visā pasaulē. Kā suverēna valsts nonāk līdz tam, ka pieņem sev stiprākas valsts armiju?",
   "author": "mark-n-hoffman",
   "hero": {
     "image": "subic_bay_naval_base_philippines_aerial_us_navy",
     "ratio": "4:3",
-    "hook": "Un État est censé être maître chez lui, et pourtant des dizaines de pays laissent une armée étrangère s'installer sur leur sol."
+    "hook": "Valstij vajadzētu būt pašai savas zemes noteicējai, tomēr desmitiem valstu ļauj svešai armijai apmesties savā teritorijā."
   },
   "sections": [
     {
       "id": "course_279_pourquoi_accepter_une_armee_etrangere_intro",
-      "title": "Introduction",
+      "title": "Ievads",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Un État moderne revendique la [[suverenitāte]] : l'autorité exclusive sur son territoire et sa population. Pourtant, des dizaines de pays hébergent des bases militaires étrangères, et certains en comptent plusieurs. Quelques puissances y entretiennent des troupes loin de chez elles. Les **États-Unis** en possèdent à eux seuls plusieurs centaines : environ **750 sites** dans **80 pays** et territoires, selon un décompte de 2021."
+          "text": "Mūsdienu valsts uzstāj uz vienu principu: [[suverenitāte]], ekskluzīva vara pār savu teritoriju un iedzīvotājiem. Tomēr desmitiem valstu uzņem svešas militārās bāzes, un dažās to ir vairākas. Dažas lielvalstis uztur karaspēku tālu no savām robežām. Tikai **ASV** vien to ir vairāki simti: pēc 2021. gada aplēsēm aptuveni **750 objektu** **80 valstīs** un teritorijās."
         },
         {
           "type": "paragraph",
-          "text": "Pourquoi un État accepterait-il l'armée d'un pays plus puissant que lui à l'intérieur de ses frontières ? Pour répondre, il faut regarder au-delà de la carte des États indépendants, vers les empires, anciens et nouveaux, dans lesquels ils vivent. L'histoire commence sur la côte algérienne."
+          "text": "Kāpēc valsts pieņemtu sev stiprākas valsts armiju savās robežās? Lai atbildētu, jāpaskatās tālāk par neatkarīgo valstu karti, uz impērijām, vecajām un jaunajām, kurās tās dzīvo. Stāsts sākas Alžīrijas piekrastē."
         }
       ]
     },
     {
       "id": "course_279_pourquoi_accepter_une_armee_etrangere_p1",
-      "title": "Mers el-Kébir : l'empreinte coloniale",
+      "title": "Merselkebīra: koloniālās varas pēdas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En **1830**, la France entreprend la conquête de l'Algérie. Ses troupes occupent aussitôt la rade de [[Merselkebīra]], près d'Oran, un mouillage abrité que la marine française utilisera pendant les **130 ans** de la colonisation. Dans les années 1930, la France y construit une base navale moderne, à portée des routes maritimes entre Gibraltar et Suez."
+          "text": "**1830**. gadā Francija sāk Alžīrijas iekarošanu. Tās karaspēks tūlīt ieņem aizsargātu enkurvietu pie Oranas: tā ir [[Merselkebīra]], ko Francijas flote izmantos visus **130 gadus**, kamēr ilgst kolonizācija. 1930. gados Francija tur uzbūvē modernu kara flotes bāzi netālu no jūras ceļiem starp Gibraltāru un Suecu."
         },
         {
           "type": "image",
           "asset": "mers_el_kebir_naval_base_algeria_harbour",
           "ratio": "3:2",
-          "caption": "La rade de Mers el-Kébir, près d'Oran, sur la côte algérienne."
+          "caption": "Merselkebīras osta netālu no Oranas, Alžīrijas piekrastē."
         },
         {
           "type": "paragraph",
-          "text": "L'Algérie obtient son indépendance en **1962**. La marine française, elle, reste. Les [[Eviānas līgumi]], qui mettent fin à la guerre d'Algérie, reconnaissent que la base est en territoire algérien, mais autorisent la France à l'utiliser **15 ans** de plus. Le texte qui consacre la souveraineté algérienne préserve donc un point d'appui militaire français. Le cas est loin d'être unique : partout, d'anciennes installations coloniales sont devenues des bases durables."
+          "text": "**1962**. gadā Alžīrija iegūst neatkarību. Francijas flote tomēr paliek. [[Eviānas līgumi]], kas izbeidz Alžīrijas karu, atzīst, ka bāze atrodas Alžīrijas teritorijā, taču ļauj Francijai to izmantot vēl **15 gadu**. Tātad dokuments, kas nostiprina Alžīrijas suverenitāti, vienlaikus saglabā Francijas militāro balsta punktu. Tas nebūt nav vienīgais gadījums: daudzviet bijušās koloniālās iekārtas ir kļuvušas par ilgstošām bāzēm."
         }
       ]
     },
     {
       "id": "course_279_pourquoi_accepter_une_armee_etrangere_p2",
-      "title": "1940 : cinquante destroyers contre des bases",
+      "title": "1940: piecdesmit esminči pret bāzēm",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En **1940**, la Grande-Bretagne est en guerre contre l'Allemagne. Les États-Unis, pas encore en guerre, cherchent déjà un accès militaire aux territoires de l'Empire britannique. L'[[vienošanās „esminči pret bāzēm“]] scelle l'échange : Washington livre **cinquante** vieux navires de guerre. En retour, Londres concède pour **99 ans** des bases navales et aériennes dans ses colonies des Caraïbes et en Guyane britannique, et y ajoute des sites à Terre-Neuve et aux Bermudes."
+          "text": "**1940**. gadā Lielbritānija karo ar Vāciju. ASV, kas vēl nekaro, jau meklē militāru piekļuvi Britu impērijas teritorijām. Apmaiņu nostiprina [[vienošanās „esminči pret bāzēm“]]: Vašingtona piegādā **piecdesmit** vecus kara kuģus. Pretī Londona uz **99 gadiem** nodod jūras un gaisa spēku bāzes savās Karību jūras kolonijās un Britu Gviānā, un klāt pieliek vietas Ņūfaundlendā un Bermudu salās."
         },
         {
           "type": "paragraph",
-          "text": "Ces bases étendent la portée de l'armée américaine à travers l'Atlantique. Si la Grande-Bretagne peut les offrir, c'est qu'elle contrôle des terres bien au-delà de ses côtes. La coopération de guerre ouvre ainsi aux États-Unis les possessions d'un autre empire, et le réseau qui en résulte traverse les frontières de futurs pays indépendants."
+          "text": "Šīs bāzes paplašina ASV armijas darbības rādiusu pāri Atlantijas okeānam. Ja Lielbritānija tās var piedāvāt, tas nozīmē, ka tā kontrolē zemes, kas stiepjas tālu aiz tās krastiem. Kara laika sadarbība tā paver ASV citas impērijas īpašumus, un no tā izaugušais tīkls šķērso nākamo neatkarīgo valstu robežas."
         },
         {
           "type": "funFact",
-          "text": "Roosevelt a présenté l'accord de 1940 comme le plus important renforcement de la défense nationale depuis l'achat de la Louisiane, l'une des plus grandes acquisitions territoriales de l'histoire du pays."
+          "text": "Rūzvelts 1940. gada vienošanos nodēvēja par vērienīgāko valsts aizsardzības stiprinājumu kopš Luiziānas iegādes, kas bija viens no lielākajiem teritoriālajiem ieguvumiem valsts vēsturē."
         }
       ]
     },
     {
       "id": "course_279_pourquoi_accepter_une_armee_etrangere_p3",
-      "title": "Décolonisation et rivalité de la guerre froide",
+      "title": "Dekolonizācija un aukstā kara sāncensība",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En **1898**, les États-Unis prennent les Philippines à l'Espagne et y installent des sites militaires dans tout l'archipel. L'indépendance vient en **1946**, mais un accord de **1947** conserve aux Américains l'accès aux bases de Clark et de la baie de Subic. Elles rejoignent le réseau de Washington en Asie, tandis que se durcit la [[aukstais karš]], la rivalité qui oppose les États-Unis à l'Union soviétique."
+          "text": "**1898**. gadā ASV atņem Filipīnas Spānijai un izveido militārus objektus visā arhipelāgā. Neatkarība pienāk **1946**. gadā, bet **1947**. gada vienošanās amerikāņiem saglabā piekļuvi Klārkas un Subikas līča bāzēm. Tās iekļaujas Vašingtonas tīklā Āzijā, kamēr saasinās [[aukstais karš]], ASV un Padomju Savienības sāncensība."
         },
         {
           "type": "paragraph",
-          "text": "Les Soviétiques se dotent eux aussi de bases outre-mer. En **1979**, le Vietnam leur ouvre la baie de Cam Ranh, agrandie par les Américains pendant la guerre du Vietnam. À mesure que les anciennes colonies deviennent des États, chaque superpuissance cherche à les attirer dans son camp. La décolonisation n'a pas mis fin à la compétition impériale pour leurs territoires."
+          "text": "Padomju Savienība arī iegūst bāzes aiz jūrām. **1979**. gadā Vjetnama tai atver Camranas līci, ko amerikāņi bija paplašinājuši Vjetnamas kara laikā. Tā kā bijušās kolonijas kļūst par valstīm, katra lielvara cenšas tās pievilināt savā pusē. Dekolonizācija nav izbeigusi impēriju sāncensību par to teritorijām."
         },
         {
           "type": "timeline",
           "events": [
             {
               "date": "1830",
-              "title": "La France à Mers el-Kébir",
-              "detail": "Les troupes françaises occupent la rade dès la conquête de l'Algérie."
+              "title": "Francija Merselkebīrā",
+              "detail": "Francijas karaspēks ieņem ostu jau Alžīrijas iekarošanas laikā."
             },
             {
               "date": "1940",
-              "title": "Destroyers contre bases",
-              "detail": "Cinquante navires américains contre des bases britanniques louées pour 99 ans."
+              "title": "Esminči pret bāzēm",
+              "detail": "Piecdesmit amerikāņu kuģu apmaiņā pret britu bāzēm, kas iznomātas uz 99 gadiem."
             },
             {
               "date": "1947",
-              "title": "Clark et Subic Bay",
-              "detail": "Un an après l'indépendance, les Philippines maintiennent l'accès américain."
+              "title": "Klārka un Subikas līcis",
+              "detail": "Gadu pēc neatkarības Filipīnas saglabā amerikāņu piekļuvi."
             },
             {
               "date": "1962",
-              "title": "Accords d'Évian",
-              "detail": "L'Algérie indépendante laisse Mers el-Kébir à la France pour 15 ans."
+              "title": "Eviānas līgumi",
+              "detail": "Neatkarīgā Alžīrija atstāj Merselkebīru Francijai uz 15 gadiem."
             },
             {
               "date": "1979",
-              "title": "Cam Ranh",
-              "detail": "Le Vietnam ouvre la baie à la marine soviétique."
+              "title": "Camrana",
+              "detail": "Vjetnama atver līci Padomju flotei."
             }
           ]
         }
@@ -114,30 +114,30 @@
     },
     {
       "id": "course_279_pourquoi_accepter_une_armee_etrangere_p4",
-      "title": "Guantánamo et la police du monde",
+      "title": "Gvantanamo un pasaules policists",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Quand l'Union soviétique s'effondre en **1991**, les États-Unis disposent déjà d'un réseau militaire mondial et restent seuls au sommet : c'est le « moment unipolaire ». Après les attentats du **11 septembre 2001**, ce réseau sert à mener la [[karš pret terorismu]] et à poursuivre des suspects par-delà les frontières."
+          "text": "Kad **1991**. gadā sabrūk Padomju Savienība, ASV jau ir pasaules mēroga militārais tīkls, un tās paliek vienīgās virsotnē: tas ir „unipolārais brīdis“. Pēc uzbrukumiem **2001. gada 11. septembrī** sākas [[karš pret terorismu]], un šis tīkls palīdz vajāt aizdomās turamos pāri robežām."
         },
         {
           "type": "image",
           "asset": "camp_x_ray_guantanamo_detainees_january_2002",
           "ratio": "3:2",
-          "caption": "Les vestiges du camp X-Ray, à Guantánamo, en 2021 : ouvert en janvier 2002, il n'a servi que quelques mois."
+          "caption": "Nometnes X-Ray drupas Gvantanamo 2021. gadā: atvērta 2002. gada janvārī, tā darbojās tikai dažus mēnešus."
         },
         {
           "type": "paragraph",
-          "text": "En **2002**, les États-Unis ouvrent le tristement célèbre camp de détention de [[Gvantanamo]], à Cuba, sur une base navale louée depuis **1903**, au lendemain de la guerre hispano-américaine. On y enferme des personnes capturées à l'étranger, d'abord en Afghanistan. Le Pentagone découpe aujourd'hui la planète entière en **six** commandements géographiques, et ses bases servent d'avant-postes à une police mondiale d'un genre nouveau, qui exerce un pouvoir impérial sur le territoire souverain d'autres États."
+          "text": "**2002**. gadā ASV atver bēdīgi slaveno aizturēšanas nometni [[Gvantanamo]] Kubā, jūras bāzē, kas iznomāta kopš **1903**. gada, tūlīt pēc Spānijas un Amerikas kara. Tur ieslodzī ārzemēs sagūstītus cilvēkus, vispirms Afganistānā. Pentagons mūsdienās sadala visu planētu **sešās** ģeogrāfiskās pavēlniecībās, un tā bāzes kalpo kā priekšposteņi jauna veida pasaules policijai, kas īsteno impērisku varu citu valstu suverēnajā teritorijā."
         },
         {
           "type": "funFact",
-          "text": "La carte des commandements ne s'arrête pas à la Terre : le commandement de l'espace est lui aussi classé géographique. Sa zone commence à 100 kilomètres au-dessus du niveau de la mer et s'étend au-delà de la Lune."
+          "text": "Pavēlniecību karte nebeidzas pie Zemes: arī kosmosa pavēlniecība ir ģeogrāfiska. Tās zona sākas 100 kilometru augstumā virs jūras līmeņa un stiepjas tālāk par Mēnesi."
         },
         {
           "type": "takeaway",
-          "text": "Les bases étrangères sont l'héritage des empires : conquêtes coloniales, marchandages de guerre et rivalités entre superpuissances ont laissé des armées sur le sol d'États pourtant souverains."
+          "text": "Ārzemju bāzes ir impēriju mantojums: koloniālie iekarojumi, kara laika darījumi un lielvaru sāncensība ir atstājuši armijas valstīs, kas tomēr ir suverēnas."
         }
       ]
     }

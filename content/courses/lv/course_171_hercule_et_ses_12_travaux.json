@@ -1,116 +1,116 @@
 {
   "id": "course_171_hercule_et_ses_12_travaux",
-  "title": "Hercule et ses 12 travaux",
-  "subtitle": "Du chaos à l'Olympe",
+  "title": "Herkuless un viņa 12 darbi",
+  "subtitle": "No haosa līdz Olimpam",
   "subject": "mythologie",
   "subcategory": "Grieķija: varoņi",
-  "description": "Héraclès, fils de Zeus, tue sa famille dans un accès de folie. Ses Douze Travaux sont une pénitence : tuer des monstres, puis vaincre la mort elle-même.",
+  "description": "Hērakls, Zeva dēls, trakuma lēkmē nogalina savu ģimeni. Viņa Divpadsmit darbi ir grēku izpirkšana: nogalināt briesmoņus, tad uzvarēt pašu nāvi.",
   "hero": {
     "image": "hercule_et_ses_12_travaux",
     "ratio": "16:9",
-    "hook": "Douze épreuves pour laver un crime. Un demi-dieu qui finit parmi les dieux."
+    "hook": "Divpadsmit pārbaudījumi, lai nomazgātu noziegumu. Pusdievs, kas nonāk starp dieviem."
   },
   "sections": [
     {
       "id": "course_171_hercule_et_ses_12_travaux_intro",
-      "title": "Introduction",
+      "title": "Ievads",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Héraclès**, appelé **Hercule** par les Romains, est le plus grand héros grec. Fils de [[Zevs]], roi des dieux, et de la mortelle **Alcmène**, il n'est pas seulement un colosse. Il incarne la force, mais aussi la violence et la rédemption."
+          "text": "**Hērakls**, ko romieši sauc par **Herkulesu**, ir lielākais grieķu varonis. Viņa tēvs ir dievu valdnieks [[Zevs]], bet māte mirstīgā **Alkmēne**. Viņš nav tikai milzis. Viņš iemieso spēku, bet arī vardarbību un atpestīšanos."
         },
         {
           "type": "paragraph",
-          "text": "Ses **Douze Travaux** ne sont pas une quête de gloire volontaire. C'est une pénitence pour un crime atroce. En purgeant le monde des monstres, Héraclès ouvre la voie à la civilisation… et gagne, rare privilège, l'immortalité."
+          "text": "Viņa **Divpadsmit darbi** nav brīvprātīga slavas meklēšana. Tā ir grēku izpirkšana par drausmīgu noziegumu. Šķīstīdams pasauli no briesmoņiem, Hērakls paver ceļu civilizācijai… un iegūst retu privilēģiju, nemirstību."
         }
       ]
     },
     {
       "id": "course_171_hercule_et_ses_12_travaux_p1",
-      "title": "La folie d'Héra, le crime, la pénitence",
+      "title": "Hēras trakums, noziegums, izpirkšana",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "[[Hēra]], épouse légitime de Zeus, hait l'enfant né d'une infidélité. Dès le berceau, elle envoie deux serpents. Le nourrisson les étouffe à mains nues. Plus tard, Héraclès épouse **Mégara**, fille du roi de Thèbes. Héra le frappe alors de folie : il massacre sa femme et ses enfants."
+          "text": "[[Hēra]], Zeva likumīgā sieva, ienīst bērnu, kas dzimis no neuzticības. Jau šūpulī viņa sūta divas čūskas. Zīdainis tās nožņaudz ar kailām rokām. Vēlāk Hērakls apprecas ar **Megaru**, Tēbu karaļa meitu. Tad Hēra viņu sit ar trakumu: viņš nogalina sievu un bērnus."
         },
         {
           "type": "paragraph",
-          "text": "Ce crime de sang, un [[Miasma]], le place hors de la société. L'oracle de Delphes lui ordonne de servir son cousin, le roi **Eurysthée**. Ce souverain peureux, guidé par Héra, lui impose dix travaux, puis douze, car il refuse d'en compter certains."
+          "text": "Šis asins noziegums ir [[Miasma]], un tas izstumj viņu no sabiedrības. Delfu orākuls pavēl viņam kalpot savam brālēnam, karalim **Eiristejam**. Šis gļēvais valdnieks, Hēras vadīts, uzliek viņam desmit darbus, tad divpadsmit, jo atsakās ieskaitīt dažus."
         },
         {
           "type": "funFact",
-          "text": "Selon la légende, le lait d'Héra, jailli de son sein alors qu'elle allaitait Héraclès par ruse, aurait formé la **Voie lactée** dans le ciel."
+          "text": "Pēc leģendas, Hēras piens, kas izšļācies no viņas krūts, kad viņa ar viltu zīdīja Hēraklu, debesīs izveidojis **Piena Ceļu**."
         }
       ]
     },
     {
       "id": "course_171_hercule_et_ses_12_travaux_p2",
-      "title": "Lions, hydres et écuries",
+      "title": "Lauvas, hidras un staļļi",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le premier défi est le **Lion de Némée**, à la peau impénétrable. Héraclès l'étrangle, puis le dépouille avec ses propres griffes. Cette peau, la [[Leonte]], devient son armure. Vient ensuite l'**Hydre de Lerne**, serpent à plusieurs têtes : pour chaque tête coupée, deux repoussent. Avec son neveu Iolaos, il cautérise les cous au feu."
+          "text": "Pirmais uzdevums ir **Nemejas lauva** ar necaurejamu ādu. Hērakls to nožņaudz, tad nodīra ar paša nagiem. Šī āda ir [[Leonte]], un tā kļūst par viņa bruņām. Tālāk seko **Lernas hidra**, čūska ar vairākām galvām: katras nocirstās galvas vietā izaug divas. Kopā ar brāļadēlu Iolaju viņš piededzina kaklus ar uguni."
         },
         {
           "type": "image",
           "asset": "hercules_nemean_lion_hydra_labours_painting",
           "ratio": "4:3",
-          "caption": "Héraclès face au Lion de Némée et à l'Hydre."
+          "caption": "Hērakls pret Nemejas lauvu un hidru."
         },
         {
           "type": "funFact",
-          "text": "Les Anciens disaient que Zeus avait placé le Lion de Némée parmi les étoiles : la constellation du **Lion**."
+          "text": "Senie ļaudis teica, ka Zevs ievietojis Nemejas lauvu starp zvaigznēm: tas ir **Lauvas** zvaigznājs."
         },
         {
           "type": "paragraph",
-          "text": "Les **Écuries d'Augias** changent de registre. Des milliers de bœufs n'ont pas été nettoyés depuis trente ans. Eurysthée veut humilier le héros. Héraclès détourne les fleuves [[Alfejs]] et Pénée : en un jour, le courant emporte le fumier. L'intelligence vaut autant que les muscles."
+          "text": "**Augeja staļļi** ir cita veida pārbaudījums. Tūkstošiem vēršu staļļi nav tīrīti trīsdesmit gadus. Eiristejs grib pazemot varoni. Hērakls novirza divas upes: [[Alfejs]] un Pēnejs. Vienā dienā straume aizskalo mēslus. Prāts ir tikpat vērts kā muskuļi."
         }
       ]
     },
     {
       "id": "course_171_hercule_et_ses_12_travaux_p3",
-      "title": "Jusqu'aux confins du monde",
+      "title": "Līdz pasaules malai",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Les travaux l'éloignent de la Grèce : Taureau de Crète, juments mangeuses d'hommes, ceinture d'**Hippolyte**, reine des Amazones. Pour le troupeau du géant **Géryon**, à l'extrême Occident, Héraclès ouvre un passage entre Méditerranée et Atlantique : les [[Herkulesa stabi]], aujourd'hui le détroit de Gibraltar."
+          "text": "Darbi aizved viņu tālu no Grieķijas: Krētas bullis, cilvēkēdājas ķēves, amazoņu karalienes **Hipolītas** josta. Pēc milža **Gērijona** ganāmpulka, tālu rietumos, Hērakls atver ejumu starp Vidusjūru un Atlantijas okeānu: tās ir [[Herkulesa stabi]], mūsdienu Gibraltāra šaurums."
         },
         {
           "type": "paragraph",
-          "text": "Il vole les **pommes d'or** des Hespérides en rusant avec le titan [[Atlants]], qui porte le ciel. Le dernier travail est le plus terrible : descendre aux Enfers et en ramener **Cerbère**, le chien à plusieurs têtes. En ressortir vivant, c'est symboliquement vaincre la mort."
+          "text": "Viņš nozog Hesperīdu **zelta ābolus**, pārmānot titānu. Tas ir [[Atlants]], kas tur debesis. Pēdējais darbs ir visbriesmīgākais: nokāpt pazemē un izvest no turienes **Cerberu**, daudzgalvaino suni. Atgriezties dzīvam nozīmē simboliski uzvarēt nāvi."
         },
         {
           "type": "funFact",
-          "text": "L'explorateur Orellana aurait nommé le fleuve **Amazone** après avoir cru voir des guerrières sur ses rives, en écho aux Amazones du mythe."
+          "text": "Pētnieks Oreljana esot nosaucis upi par **Amazoni**, kad krastos šķitis redzam sievietes karotājas, tāpat kā mītā par amazonēm."
         }
       ]
     },
     {
       "id": "course_171_hercule_et_ses_12_travaux_p4",
-      "title": "L'apothéose : un héros devient dieu",
+      "title": "Apoteoze: varonis kļūst par dievu",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Les Travaux finissent, mais pas les tragédies. Sa femme **Déjanire** lui fait porter une tunique imbibée du sang empoisonné du [[kentaurs]] Nessus. Brûlé vif, Héraclès monte sur un bûcher au mont Œta. Sa part mortelle brûle. Son essence divine monte vers l'Olympe : c'est l'**apothéose**."
+          "text": "Darbi beidzas, bet traģēdijas ne. Viņa sieva **Dejanīra** liek viņam uzvilkt tuniku, kas piesūcināta ar indīgām asinīm. Tās ir atstājis [[kentaurs]] vārdā Ness. Dzīvs degdams, Hērakls uzkāpj uz sārta Etas kalnā. Viņa mirstīgā daļa sadeg. Viņa dievišķā būtība paceļas uz Olimpu: tā ir **apoteoze**."
         },
         {
           "type": "image",
           "asset": "hercules_olympus_divinization_rubens_painting",
           "ratio": "4:3",
-          "caption": "L'apothéose d'Héraclès : le héros rejoint les dieux."
+          "caption": "Hēraklā apoteoze: varonis pievienojas dieviem."
         },
         {
           "type": "paragraph",
-          "text": "Réconcilié avec Héra, il épouse **Hébé**, l'éternelle jeunesse. Les Romains adoptent sa figure sous le nom d'**Hercule**. Un « travail herculéen » désigne encore une tâche immense. Héraclès n'est pas qu'un tueur de monstres : il est un architecte de l'ordre."
+          "text": "Izlīdzis ar Hēru, viņš apprecas ar **Hēbi**, mūžīgo jaunību. Romieši pieņem viņa tēlu ar vārdu **Herkuless**. „Herkulesa darbs“ joprojām nozīmē milzīgu uzdevumu. Hērakls nav tikai briesmoņu slepkava: viņš ir kārtības arhitekts."
         },
         {
           "type": "takeaway",
-          "text": "**Héraclès** (Hercule) accomplit douze travaux pour expier le meurtre de sa famille. Du Lion de Némée à Cerbère, il passe du chaos à la civilisation… et gagne l'immortalité."
+          "text": "**Hērakls** (Herkuless) paveic divpadsmit darbus, lai izpirktu savas ģimenes slepkavību. No Nemejas lauvas līdz Cerberam viņš no haosa nonāk civilizācijā… un iegūst nemirstību."
         }
       ]
     }

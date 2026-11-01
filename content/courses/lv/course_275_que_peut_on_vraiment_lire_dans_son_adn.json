@@ -1,123 +1,123 @@
 {
   "id": "course_275_que_peut_on_vraiment_lire_dans_son_adn",
-  "title": "Que peut-on vraiment lire dans son ADN ?",
-  "subtitle": "Gènes et destin",
+  "title": "Ko tu patiešām vari nolasīt savā DNS?",
+  "subtitle": "Gēni un liktenis",
   "subject": "sciences",
   "subcategory": "Mūsu ikdiena izskaidrota",
-  "description": "Goûts, caractère, risques de maladie, origines lointaines : notre ADN en dit long sur nous. Mais une prédisposition n'a jamais été un destin.",
+  "description": "Gaume, raksturs, slimību riski, tāla izcelsme: mūsu DNS par mums stāsta daudz. Taču nosliece nekad nav bijusi liktenis.",
   "author": "kate-waddams",
   "hero": {
     "image": "dna_double_helix_3d_render_blue",
     "ratio": "4:3",
-    "hook": "Votre ADN raconte d'où vous venez, ce que vous aimez et ce qui vous menace, mais il ne décide pas de tout."
+    "hook": "Tava DNS stāsta, no kurienes tu nāc, ko tu mīli un kas tev draud, taču tā nenosaka visu."
   },
   "sections": [
     {
       "id": "course_275_que_peut_on_vraiment_lire_dans_son_adn_intro",
-      "title": "Introduction",
+      "title": "Ievads",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Notre ADN en dit énormément sur nous : d'où nous venons, de quoi notre corps est capable, et peut-être même ce qui nous attend. C'est notre histoire et notre plan de construction. Mais de quoi s'agit-il exactement ? L'ADN se trouve dans presque toutes les cellules du corps. Enroulé en **double hélice**, il porte les instructions génétiques qui règlent notre fonctionnement, notre croissance, notre développement et notre reproduction."
+          "text": "Mūsu DNS par mums pastāsta ļoti daudz: no kurienes mēs nākam, ko spēj mūsu ķermenis un varbūt pat to, kas mūs sagaida. Tas ir mūsu stāsts un mūsu būvplāns. Bet kas tā īsti ir? DNS atrodas gandrīz visās ķermeņa šūnās. Satīta **dubultspirālē**, tā satur ģenētiskās instrukcijas, kas regulē mūsu darbību, augšanu, attīstību un vairošanos."
         },
         {
           "type": "paragraph",
-          "text": "Ses brins ne sont faits que de **quatre petites unités**, les nucléotides, notées A, T, C et G. C'est l'enchaînement de ces quatre lettres qui forme notre [[genoms]], un plan génétique unique pour chacun de nous. Que peut-on vraiment y lire ? Nos goûts, nos risques de maladie, nos origines. Et jusqu'où ce texte écrit-il notre avenir ?"
+          "text": "Tās virknes veido tikai **četras sīkas vienības**, nukleotīdi, ko apzīmē ar burtiem A, T, C un G. Šo četru burtu secība ir mūsu [[genoms]], katram no mums unikāls ģenētiskais plāns. Ko tur patiešām var izlasīt? Mūsu gaumi, slimību riskus, izcelsmi. Un cik tālu šis teksts raksta mūsu nākotni?"
         }
       ]
     },
     {
       "id": "course_275_que_peut_on_vraiment_lire_dans_son_adn_p1",
-      "title": "Vos gènes façonnent vos goûts et votre caractère",
+      "title": "Tavi gēni veido tavu gaumi un raksturu",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Un [[gēns]] est un morceau de ce texte. Il agit comme une notice biologique : il dit au corps comment fabriquer ses **protéines**, qui à leur tour construisent et font tourner nos cellules. De là naissent nos traits visibles. Mais les gènes jouent un rôle bien plus profond que l'apparence."
+          "text": "Šī teksta fragments ir [[gēns]]. Tas darbojas kā bioloģiska instrukcija: tas pasaka ķermenim, kā izgatavot **olbaltumvielas**, kas savukārt būvē un darbina mūsu šūnas. No tām rodas mūsu redzamās īpašības. Taču gēnu loma ir daudz dziļāka nekā izskats."
         },
         {
           "type": "image",
           "asset": "identical_twins_sisters_portrait_nature_nurture",
           "ratio": "5:4",
-          "caption": "« Les Compagnes de voyage », d'Augustus Egg (1862) : deux jeunes femmes semblables en tout, l'une dort, l'autre lit."
+          "caption": "„Ceļabiedrenes“, Augustuss Egs (1862): divas jaunas sievietes, kas ir pilnīgi līdzīgas, viena guļ, otra lasa."
         },
         {
           "type": "paragraph",
-          "text": "Un [[ģenētiskais variants]] est une version légèrement différente d'un gène. Récemment, des scientifiques en ont relié plusieurs à la **personnalité**. De subtils réglages génétiques peuvent orienter nos préférences : adorer le sport ou le détester, être extraverti, collectionner les passe-temps. Notre ADN pèserait sur notre quotidien bien plus qu'on ne l'imagine. D'où une question : quelle part de notre comportement est déjà écrite dans notre biologie ?"
+          "text": "Gēna nedaudz atšķirīga versija ir [[ģenētiskais variants]]. Nesen zinātnieki vairākus no tiem ir saistījuši ar **personību**. Smalkas ģenētiskas korekcijas var virzīt mūsu izvēles: dievināt sportu vai to ienīst, uzvesties ekstraverti, krāt vaļaspriekus. Iespējams, mūsu DNS ietekmē ikdienu daudz vairāk, nekā mēs iedomājamies. No šejienes jautājums: cik liela daļa mūsu uzvedības jau ir ierakstīta mūsu bioloģijā?"
         },
         {
           "type": "funFact",
-          "text": "Thé ou café ? Même cette préférence toute simple pourrait tenir à de subtiles variations de nos gènes, selon les travaux qui relient l'ADN à la personnalité."
+          "text": "Tēja vai kafija? Pat šī pavisam vienkāršā izvēle varētu būt atkarīga no smalkām gēnu variācijām, ja ticam pētījumiem, kas saista DNS ar personību."
         },
         {
           "type": "paragraph",
-          "text": "Et ce n'est peut-être pas tout. L'ADN donne aussi des indices sur les personnes qui présentent une [[ģenētiskā nosliece]] à certains troubles de **santé mentale**, comme la dépression. Il ne renseigne donc pas seulement sur ce que nous aimons, mais aussi sur ce qui peut nous fragiliser."
+          "text": "Un tas, iespējams, vēl nav viss. DNS sniedz norādes arī par cilvēkiem, kuriem ir [[ģenētiskā nosliece]] uz dažiem **garīgās veselības** traucējumiem, piemēram, depresiju. Tātad tā stāsta ne tikai par to, kas mums patīk, bet arī par to, kas mūs var padarīt ievainojamus."
         }
       ]
     },
     {
       "id": "course_275_que_peut_on_vraiment_lire_dans_son_adn_p2",
-      "title": "Ce que l'ADN révèle des risques de maladie",
+      "title": "Ko DNS atklāj par slimību riskiem",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La santé mentale n'est pas la seule concernée. La composition de notre ADN peut nous rendre plus vulnérables à d'autres maladies, dont certaines « courent dans les familles ». Exemple connu : des variants hérités des gènes [[BRCA1 un BRCA2]] prédisposent certaines femmes à un **cancer du sein précoce**."
+          "text": "Garīgā veselība nav vienīgā. Mūsu DNS sastāvs var padarīt mūs neaizsargātākus pret citām slimībām, no kurām dažas „vijas cauri dzimtām“. Zināms piemērs ir [[BRCA1 un BRCA2]]: šo gēnu mantoti varianti dažām sievietēm palielina risku saslimt ar **agrīnu krūts vēzi**."
         },
         {
           "type": "image",
           "asset": "dna_sequencing_chromatogram_sanger_readout",
           "ratio": "2:1",
-          "caption": "Chromatogramme de séquençage : chaque pic coloré est une lettre de l'ADN. C'est sur cette lecture qu'un test repère un variant."
+          "caption": "Sekvencēšanas hromatogramma: katra krāsainā smaile ir viens DNS burts. Tieši pēc šī nolasījuma tests atrod variantu."
         },
         {
           "type": "paragraph",
-          "text": "C'est là que le [[ģenētiskais tests]] prend toute sa valeur, pour le système de santé comme pour les personnes concernées. Repérer un risque héréditaire permet d'agir tôt : **dépistage** plus précoce, suivi rapproché, médicaments ou autre traitement préventif. Cette avance peut sauver des vies et réduire les coûts médicaux."
+          "text": "Tieši šeit visvairāk noder [[ģenētiskais tests]], gan veselības sistēmai, gan pašiem cilvēkiem. Iedzimta riska atklāšana ļauj rīkoties agri: agrāks **skrīnings**, ciešāka novērošana, zāles vai cita profilaktiska ārstēšana. Šāds apsteidzošais solis var glābt dzīvības un samazināt medicīnas izmaksas."
         }
       ]
     },
     {
       "id": "course_275_que_peut_on_vraiment_lire_dans_son_adn_p3",
-      "title": "Une machine à remonter le temps : d'où venez-vous ?",
+      "title": "Laika mašīna: no kurienes tu nāc?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Notre ADN se transmet de génération en génération. Il garde des indices sur nos ancêtres : d'où ils venaient, ce qu'ils mangeaient, comment ils vivaient. C'est une véritable machine à remonter le temps. En comparant les **motifs génétiques** des populations actuelles, les scientifiques ont pu retracer le chemin parcouru par les humains à travers le globe."
+          "text": "Mūsu DNS tiek nodota no paaudzes paaudzē. Tā glabā norādes par mūsu senčiem: no kurienes viņi nāca, ko ēda, kā dzīvoja. Tā ir īsta laika mašīna. Salīdzinot mūsdienu iedzīvotāju **ģenētiskos rakstus**, zinātnieki ir spējuši izsekot ceļam, ko cilvēki veikuši pāri zemeslodei."
         },
         {
           "type": "image",
           "asset": "early_human_migrations_out_of_africa_map",
           "ratio": "5:4",
-          "caption": "Les premières lignées d'Homo sapiens en Afrique et leur sortie vers l'Eurasie, reconstituées par la génétique des populations."
+          "caption": "Pirmās Homo sapiens līnijas Āfrikā un to izceļošana uz Eirāziju, atjaunotas ar populāciju ģenētikas palīdzību."
         },
         {
           "type": "paragraph",
-          "text": "Un exemple. Les sources écrites racontent que des populations d'**Afrique du Nord** se sont installées dans la [[Ibērijas pussala]] entre **700 et 1200**. L'ADN confirme le récit : les habitants actuels de la péninsule portent encore la trace génétique de ces rencontres."
+          "text": "Piemērs ir [[Ibērijas pussala]]. Rakstītie avoti vēsta, ka starp **700**. un **1200**. gadu tur apmetušies **Ziemeļāfrikas** iedzīvotāji. DNS šo stāstu apstiprina: pussalas mūsdienu iedzīvotāji joprojām nes sevī ģenētiskas pēdas no šīm tikšanās reizēm."
         },
         {
           "type": "funFact",
-          "text": "Même nos origines les plus lointaines sont plus compliquées qu'un simple arbre généalogique. Une étude fondée sur des génomes complets a trouvé la trace de deux populations humaines anciennes, séparées il y a environ **1,5 million d'années**, qui se sont ensuite mélangées à nouveau."
+          "text": "Pat mūsu tālākā izcelsme ir sarežģītāka par vienkāršu ciltskoku. Pētījums, kura pamatā ir pilni genomi, atklājis divu senu cilvēku populāciju pēdas, kas atdalījušās apmēram pirms **1,5 miljona gadu** un vēlāk atkal sajaukušās."
         }
       ]
     },
     {
       "id": "course_275_que_peut_on_vraiment_lire_dans_son_adn_p4",
-      "title": "Prédisposition n'est pas destin",
+      "title": "Nosliece nav liktenis",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Votre ADN influence donc beaucoup de vos caractéristiques. Mais être prédisposé à quelque chose ne veut pas dire que votre sort est scellé. Porter un risque génétique de **dépression** ne signifie pas que vous développerez une dépression. Un risque génétique n'est pas une certitude."
+          "text": "Tava DNS tātad ietekmē daudzas tavas īpašības. Taču nosliece uz kaut ko nenozīmē, ka tavs liktenis ir zīmogots. Ja tev ir ģenētisks **depresijas** risks, tas nenozīmē, ka tev attīstīsies depresija. Ģenētisks risks nav noteiktība."
         },
         {
           "type": "paragraph",
-          "text": "Les gènes ouvrent des possibilités, ils ne les imposent pas. Nos expériences, nos choix et nos circonstances comptent tout autant. Lire son ADN, c'est lire une partie de soi : une partie précieuse, parfois décisive pour la santé, mais une partie seulement."
+          "text": "Gēni paver iespējas, bet tās nenosaka. Mūsu pieredze, mūsu izvēles un apstākļi nozīmē tikpat daudz. Izlasīt savu DNS nozīmē izlasīt daļu no sevis: vērtīgu daļu, kas dažkārt ir izšķirīga veselības ziņā, bet tikai daļu."
         },
         {
           "type": "takeaway",
-          "text": "L'ADN raconte nos goûts, nos risques et nos origines, mais une prédisposition n'est jamais une certitude : votre ADN n'est qu'une partie de vous."
+          "text": "DNS stāsta par mūsu gaumi, riskiem un izcelsmi, taču nosliece nekad nav noteiktība: tava DNS ir tikai daļa no tevis."
         }
       ]
     }

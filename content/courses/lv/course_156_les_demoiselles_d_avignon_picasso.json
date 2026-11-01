@@ -1,124 +1,124 @@
 {
   "id": "course_156_les_demoiselles_d_avignon_picasso",
-  "title": "Les Demoiselles d'Avignon, Picasso",
+  "title": "Avinjonas jaunkundzes, Pikaso",
   "subtitle": "1907",
   "subject": "art",
   "subcategory": "Kino, foto, arhitektūra un ikoniski darbi",
-  "description": "Cinq nus aux facettes et masques : Les Demoiselles d'Avignon brisent la mimesis et ouvrent le cubisme. Scandale même chez les amis de Picasso.",
+  "description": "Pieci akti ar skaldnēm un maskām: Avinjonas jaunkundzes sagrauj mimesi un atver ceļu kubismam. Skandāls pat Pikaso draugu vidū.",
   "hero": {
     "image": "les_demoiselles_d_avignon_picasso",
     "ratio": "16:9",
-    "hook": "Le tableau que Picasso a gardé retourné contre le mur… avant qu'il ne change l'art."
+    "hook": "Glezna, ko Pikaso turēja pagrieztu pret sienu… pirms tā mainīja mākslu."
   },
   "sections": [
     {
       "id": "course_156_les_demoiselles_d_avignon_picasso_intro",
-      "title": "Introduction",
+      "title": "Ievads",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En **1907**, à Montmartre, **Picasso** acheve *Les Demoiselles d'Avignon*. Cinq femmes, des corps cassés, des visages-masques. Le [[kubisms]] est en germe."
+          "text": "**1907**. gadā Monmartrā **Pikaso** pabeidz *Avinjonas jaunkundzes*. Piecas sievietes, salauzti ķermeņi, sejas kā maskas. Dīgst [[kubisms]]."
         },
         {
           "type": "paragraph",
-          "text": "Même ses proches sont choqués. La [[mimesis]], l'imitation douce du réel, est morte."
+          "text": "Pat viņa tuvinieki ir šokēti. Beigusies [[mimesis]], maigā īstenības atdarināšana."
         }
       ]
     },
     {
       "id": "course_156_les_demoiselles_d_avignon_picasso_p1",
-      "title": "Au Bateau-Lavoir",
+      "title": "Bateau-Lavoir namā",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Picasso travaille au [[Bateau-Lavoir (Monmartrā)]], cite d'artistes pauvres. Le titre renvoie à une rue de Barcelone liée à la prostitution. Le nu n'est plus idéal grec : il est frontal, inquiétant."
+          "text": "Pikaso strādā nabadzīgu mākslinieku kolonijā: [[Bateau-Lavoir (Monmartrā)]]. Nosaukums norāda uz Barselonas ielu, kas saistīta ar prostitūciju. Akts vairs nav grieķu ideāls: tas ir frontāls, nemierīgs."
         },
         {
           "type": "paragraph",
-          "text": "Des dizaines d'études précèdent la toile. Picasso hésite, corrige, durcit. Le résultat n'est pas une improvisation : c'est une attaque calculée contre le goût."
+          "text": "Pirms audekla top desmitiem etīžu. Pikaso šaubās, labo, kļūst skarbāks. Rezultāts nav improvizācija, tas ir pārdomāts uzbrukums labajai gaumei."
         },
         {
           "type": "image",
           "asset": "picasso_demoiselles_avignon_moma",
           "ratio": "4:3",
-          "caption": "Cinq regards qui ne caressent plus."
+          "caption": "Pieci skatieni, kas vairs nemīlina."
         }
       ]
     },
     {
       "id": "course_156_les_demoiselles_d_avignon_picasso_p2",
-      "title": "Masques et primitivisme",
+      "title": "Maskas un primitīvisms",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Les visages de droite s'inspirent des [[pirmatnējā māksla]] africains et ibériques. C'est le [[Primitīvisms modernajā mākslā]] : chercher une force hors du canon académique européen."
+          "text": "Labās puses sejās ir jūtama Āfrikas un Ibērijas [[pirmatnējā māksla]]. Tas ir [[Primitīvisms modernajā mākslā]]: meklēt spēku ārpus Eiropas akadēmiskā kanona."
         },
         {
           "type": "paragraph",
-          "text": "Les deux figures de droite, plus masquées, marquent la rupture. On passe du nu occidental à une autre logique du visage, plus conceptuelle que charnelle."
+          "text": "Divas labās puses figūras, vēl vairāk maskētas, iezīmē pārrāvumu. Pāreja no Rietumu akta uz citādu sejas loģiku, konceptuālāku nekā miesīgu."
         },
         {
           "type": "funFact",
-          "text": "Picasso a longtemps hésité à montrer le tableau, conscient de sa violence."
+          "text": "Pikaso ilgi šaubījās, vai rādīt gleznu, apzinoties tās vardarbību."
         }
       ]
     },
     {
       "id": "course_156_les_demoiselles_d_avignon_picasso_p3",
-      "title": "Vers le cubisme analytique",
+      "title": "Ceļā uz analītisko kubismu",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Les facettes annoncent le [[analītiskais kubisms]]. Braque, d'abord stupéfait, rejoindra bientôt Picasso dans la déconstruction de l'espace."
+          "text": "Skaldnes vēsta nākamo soli: [[analītiskais kubisms]]. Braks, sākumā satriekts, drīz pievienosies Pikaso telpas dekonstrukcijā."
         },
         {
           "type": "paragraph",
-          "text": "Resté longtemps peu montré, le tableau influence pourtant Braque et la suite cubiste. Sa violence a besoin de temps pour devenir « classique »."
+          "text": "Ilgi maz rādīta glezna tomēr ietekmē Braku un kubistu turpinājumu. Tās vardarbībai vajag laiku, lai kļūtu par „klasiku“."
         },
         {
           "type": "image",
           "asset": "african_mask_influence_cubism",
           "ratio": "4:3",
-          "caption": "Du masque rituel à la grille moderne."
+          "caption": "No rituālās maskas līdz modernajam režģim."
         }
       ]
     },
     {
       "id": "course_156_les_demoiselles_d_avignon_picasso_p4",
-      "title": "Héritage",
+      "title": "Mantojums",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Aujourd'hui au MoMA, l'œuvre reste le « big bang » de l'art du XXe siècle. Tout ce qui fragmente le visible lui doit quelque chose."
+          "text": "Šodien MoMA darbs joprojām ir divdesmitā gadsimta mākslas „lielais sprādziens“. Viss, kas sadrumstalo redzamo, tam kaut ko pateicas."
         },
         {
           "type": "paragraph",
-          "text": "Pour bien saisir Les Demoiselles d'Avignon, Picasso, il faut garder une chose en tête : chaque détail technique sert une émotion ou une idée. L'œuvre n'est jamais seulement décorative."
+          "text": "Lai labi izprastu Pikaso Avinjonas jaunkundzes, jāatceras viena lieta: katra tehniskā detaļa kalpo emocijai vai idejai. Darbs nekad nav tikai dekoratīvs."
         },
         {
           "type": "paragraph",
-          "text": "Le contexte compte autant que le style. Dates, lieux, commanditaires, public : tout cela explique pourquoi une forme apparaît à un moment précis, et pas avant."
+          "text": "Konteksts ir tikpat svarīgs kā stils. Datumi, vietas, pasūtītāji, publika: tas viss izskaidro, kāpēc forma parādās tieši konkrētā brīdī, nevis agrāk."
         },
         {
           "type": "paragraph",
-          "text": "Enfin, l'héritage se mesure dans le temps long. Ce que nous voyons aujourd'hui dans les musées, les films ou la musique populaire porte encore la trace de ces inventions."
+          "text": "Visbeidzot, mantojumu mēra ilgā laikā. Tas, ko mēs šodien redzam muzejos, filmās vai populārajā mūzikā, joprojām nes šo jaunievedumu pēdas."
         },
         {
           "type": "paragraph",
-          "text": "Au MoMA, il est aujourd'hui une étape obligée. On oublie parfois qu'il a d'abord été un objet de scandale même pour l'avant-garde."
+          "text": "MoMA tā šodien ir obligāta pietura. Mēdz aizmirst, ka sākumā tā bija skandāla objekts pat avangardam."
         },
         {
           "type": "paragraph",
-          "text": "Pour bien saisir Les Demoiselles d'Avignon, Picasso, il faut garder une chose en tête : chaque détail technique sert une émotion ou une idée. L'œuvre n'est jamais seulement décorative."
+          "text": "Lai labi izprastu Pikaso Avinjonas jaunkundzes, jāatceras viena lieta: katra tehniskā detaļa kalpo emocijai vai idejai. Darbs nekad nav tikai dekoratīvs."
         },
         {
           "type": "takeaway",
-          "text": "En 1907, Les Demoiselles d'Avignon ont brisé le nu classique et ouvert la voie au cubisme."
+          "text": "1907. gadā Avinjonas jaunkundzes sagrāva klasisko aktu un atvēra ceļu kubismam."
         }
       ]
     }

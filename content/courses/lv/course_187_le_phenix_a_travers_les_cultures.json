@@ -1,122 +1,122 @@
 {
   "id": "course_187_le_phenix_a_travers_les_cultures",
-  "title": "Pourquoi tant de cultures rêvent-elles d'un Phénix ?",
-  "subtitle": "Renaissance et immortalité",
+  "title": "Kāpēc tik daudzas kultūras sapņo par Fēniksu?",
+  "subtitle": "Atdzimšana un nemirstība",
   "subject": "mythologie",
   "subcategory": "Citas mitoloģijas",
-  "description": "De l'Égypte à la Chine, l'oiseau qui renaît de ses cendres traverse les civilisations. Un même rêve : que la destruction ne soit jamais définitive.",
+  "description": "No Ēģiptes līdz Ķīnai putns, kas atdzimst no pelniem, šķērso civilizācijas. Viens sapnis: lai iznīcība nekad nebūtu galīga.",
   "hero": {
     "image": "le_phenix_a_travers_les_cultures",
     "ratio": "16:9",
-    "hook": "Un oiseau meurt dans le feu et revient. Pourquoi tant de cultures ont-elles inventé le même rêve ?"
+    "hook": "Putns mirst ugunī un atgriežas. Kāpēc tik daudzas kultūras radījušas vienu un to pašu sapni?"
   },
   "sections": [
     {
       "id": "course_187_le_phenix_a_travers_les_cultures_intro",
-      "title": "Introduction",
+      "title": "Ievads",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le **Phénix** est l'oiseau de feu qui renaît de ses propres cendres. Plus qu'une créature de conte, il porte un rêve humain : la **résurrection**, le renouveau, le triomphe de la vie sur la mort."
+          "text": "**Fēnikss** ir uguns putns, kas atdzimst no saviem pelniem. Vairāk nekā pasaku radījums, tas nes cilvēcisku sapni: **augšāmcelšanos**, atjaunošanos, dzīvības uzvaru pār nāvi."
         },
         {
           "type": "paragraph",
-          "text": "De la vallée du Nil aux palais de Chine, la figure change de forme. Mais l'idée reste : ce qui brûle peut recommencer. Voici comment le mythe voyage, de l'Égypte antique jusqu'à nos villes rebâties."
+          "text": "No Nīlas ielejas līdz Ķīnas pilīm figūra maina formu. Bet ideja paliek: tas, kas dedzis, var sākties no jauna. Lūk, kā mīts ceļo no senās Ēģiptes līdz mūsu atjaunotajām pilsētām."
         }
       ]
     },
     {
       "id": "course_187_le_phenix_a_travers_les_cultures_p1",
-      "title": "Le Bénou égyptien, ancêtre solaire",
+      "title": "Ēģiptiešu Benu, saules sencis",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L'ancêtre du Phénix est égyptien : le **Bénou**. Son nom vient d'un verbe qui signifie « briller » ou « s'élever ». On le représentait souvent comme un héron, pas comme un rapace en flammes."
+          "text": "Fēniksa sencis ir ēģiptiešu **Benu**. Viņa vārds cēlies no darbības vārda, kas nozīmē „spīdēt“ vai „celties“. Viņu bieži attēloja kā gārni, nevis kā liesmojošu plēsējputnu."
         },
         {
           "type": "image",
           "asset": "bennu_bird_egyptian_heron_sun_god",
           "ratio": "4:3",
-          "caption": "Le Bénou, héron sacré lié au soleil et à la création."
+          "caption": "Benu, svētais gārnis, kas saistīts ar sauli un radīšanu."
         },
         {
           "type": "paragraph",
-          "text": "Selon les prêtres d'[[Heliopole]], cité du culte solaire, le Bénou fut le premier être vivant sur la **Pierre Benben**, colline sortie du chaos liquide. Son cri ouvrit le temps. Lié au dieu soleil **Rê**, puis à **Osiris**, dieu des morts, il promettait le cycle : le soleil meurt chaque soir et renaît chaque matin."
+          "text": "Pēc priesteru teiktā pilsētā [[Heliopole]], saules kulta centrā, Benu bija pirmā dzīvā būtne uz **Benben akmens**, kalna, kas izcēlās no šķidrā haosa. Viņa sauciens atvēra laiku. Saistīts ar saules dievu **Ra**, vēlāk ar mirušo dievu **Osirisu**, viņš solīja ciklu: saule mirst katru vakaru un atdzimst katru rītu."
         },
         {
           "type": "funFact",
-          "text": "Le héron cendré, modèle probable du Bénou, se tient souvent immobile face au soleil levant. Les Égyptiens y ont vu un geste d'adoration solaire."
+          "text": "Pelēkais gārnis, Benu iespējamais prototips, bieži stāv nekustīgi pret lecošo sauli. Ēģiptieši tajā saskatīja saules pielūgsmes žestu."
         }
       ]
     },
     {
       "id": "course_187_le_phenix_a_travers_les_cultures_p2",
-      "title": "Les Grecs et les Romains inventent le bûcher",
+      "title": "Grieķi un romieši izdomā sārtu",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L'historien grec **Hérodote** transforme le Bénou en **Phénix** : oiseau rare aux plumes rouges et dorées, qui revient tous les **500 ans**. Les Romains, dont le poète **Ovide** et le naturaliste **Pline l'Ancien**, fixent la fin spectaculaire."
+          "text": "Grieķu vēsturnieks **Hērodots** pārvērš Benu par **Fēniksu**: retu putnu ar sarkanām un zeltainām spalvām, kas atgriežas ik pēc **500 gadiem**. Romieši, to vidū dzejnieks **Ovidijs** un dabaszinātnieks **Plīnijs Vecākais**, nostiprina tā spožo galu."
         },
         {
           "type": "image",
           "asset": "phoenix_rising_ashes_flames_mythology",
           "ratio": "4:3",
-          "caption": "Le Phénix s'embrase : destruction et renaissance en un seul geste."
+          "caption": "Fēnikss uzliesmo: iznīcība un atdzimšana vienā kustībā."
         },
         {
           "type": "paragraph",
-          "text": "Le Phénix est unique. Quand il faiblit, il bâtit un nid d'épices, cannelle, myrrhe, nard. Le soleil ou le battement de ses ailes met le feu. Des cendres naît un jeune oiseau. Il porte les restes de son aîné vers l'autel du soleil en Égypte."
+          "text": "Fēnikss ir vienīgais. Kad tas novājē, tas ceļ ligzdu no garšvielām: kanēļa, mirres, nardas. Saule vai spārnu vēzieni to aizdedzina. No pelniem dzimst jauns putns. Tas nes sava vecākā atliekas uz saules altāri Ēģiptē."
         },
         {
           "type": "paragraph",
-          "text": "Pour Rome, l'oiseau devient symbole de l'**Aeternitas**, l'éternité de l'Empire. Plus tard, les chrétiens y liront l'image de la résurrection."
+          "text": "Romai putns kļūst par **Aeternitas** simbolu, Impērijas mūžību. Vēlāk kristieši tajā saskatīs augšāmcelšanās tēlu."
         }
       ]
     },
     {
       "id": "course_187_le_phenix_a_travers_les_cultures_p3",
-      "title": "En Asie, un autre oiseau de vertu",
+      "title": "Āzijā cits tikuma putns",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En Chine, [[Ķīniešu fenhuans]] n'est pas vraiment un oiseau qui brûle. C'est une créature d'harmonie, souvent liée à l'**impératrice**. Son apparition annonce un souverain juste ou une ère de paix."
+          "text": "Ķīnā ir cits putns: [[Ķīniešu fenhuans]]. Tas nav īsti degošs putns, bet harmonijas radījums, bieži saistīts ar **ķeizarieni**. Tā parādīšanās vēsta taisnīgu valdnieku vai miera laikmetu."
         },
         {
           "type": "image",
           "asset": "fenghuang_chinese_phoenix_empress_symbol_art",
           "ratio": "4:3",
-          "caption": "Le Fenghuang : présage de paix et symbole impérial."
+          "caption": "Fenhuans: miera zīme un impērijas simbols."
         },
         {
           "type": "paragraph",
-          "text": "Au Japon, le **Hōō** joue un rôle voisin. On le voit sur les toits de temples à [[Kioto]], et sur les billets de **10 000 yens**. Ici, l'oiseau parle moins de survie après la mort que d'équilibre moral et cosmique."
+          "text": "Japānā līdzīgu lomu spēlē **Hōō**. To var redzēt uz tempļu jumtiem pilsētā [[Kioto]] un uz **10 000 jenu** banknotēm. Šeit putns vairāk runā par morālu un kosmisku līdzsvaru nekā par izdzīvošanu pēc nāves."
         }
       ]
     },
     {
       "id": "course_187_le_phenix_a_travers_les_cultures_p4",
-      "title": "Des alchimistes aux villes qui renaissent",
+      "title": "No alķīmiķiem līdz atdzimstošām pilsētām",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Au Moyen Âge, les alchimistes font du Phénix une métaphore. La [[transmutācija]] des métaux, et surtout la phase sombre appelée [[nigredo]], rappelle son cycle : il faut détruire pour purifier. Le [[fēnikss viduslaiku alķīmijā]] devient image de l'esprit qui renaît."
+          "text": "Viduslaikos alķīmiķi no Fēniksa izveido metaforu. Metālu [[transmutācija]] un jo īpaši tumšā fāze, ko sauc [[nigredo]], atgādina tā ciklu: jāiznīcina, lai šķīstītu. [[Fēnikss viduslaiku alķīmijā]] kļūst par gara atdzimšanas tēlu."
         },
         {
           "type": "funFact",
-          "text": "La ville de **Phoenix**, en Arizona, a été nommée ainsi en **1867** : elle s'élevait sur les canaux et ruines de la civilisation Hohokam, disparue des siècles plus tôt."
+          "text": "Fīniksas pilsēta Arizonā tika nosaukta šādi **1867**. gadā: tā cēlās uz Hohokamu civilizācijas, kas gadsimtiem agrāk bija izzudusi, kanāliem un drupām."
         },
         {
           "type": "paragraph",
-          "text": "D'autres oiseaux cousins peuplent le monde : le **Simorgh** perse, l'**Anqa** des traditions islamiques. Partout, le même besoin : croire que la destruction n'est pas définitive."
+          "text": "Citi radniecīgi putni apdzīvo pasauli: persiešu **Simurgs**, islāma tradīciju **Anka**. Visur tā pati vajadzība: ticēt, ka iznīcība nav galīga."
         },
         {
           "type": "takeaway",
-          "text": "Du **Bénou** égyptien au Phénix gréco-romain et au **Fenghuang** asiatique, l'oiseau de renouveau relie soleil, feu et immortalité. Un mythe universel pour dire que l'on peut renaître après l'incendie."
+          "text": "No ēģiptiešu **Benu** līdz grieķu-romiešu Fēniksam un Āzijas **fenhuanam** atjaunošanās putns saista sauli, uguni un nemirstību. Universāls mīts, kas saka, ka pēc ugunsgrēka var atdzimt."
         }
       ]
     }

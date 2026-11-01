@@ -1,118 +1,118 @@
 {
   "id": "course_196_merlin_l_enchanteur",
-  "title": "Qui était vraiment Merlin l'Enchanteur ?",
-  "subtitle": "Le mage d'Arthur",
+  "title": "Kas patiesībā bija burvis Merlins?",
+  "subtitle": "Artūra burvis",
   "subject": "mythologie",
   "subcategory": "Citas mitoloģijas",
-  "description": "Merlin, conseiller d'Arthur, prophète et mage : une figure née d'un démon et d'un baptême, architecte de Camelot, prisonnier de son propre amour.",
+  "description": "Merlins, Artūra padomnieks, pravietis un burvis: tēls, kas dzimis no dēmona un kristībām, Kamelota arhitekts, paša mīlestības gūsteknis.",
   "hero": {
     "image": "merlin_l_enchanteur",
     "ratio": "16:9",
-    "hook": "Fils d'un démon, baptisé dès le berceau : Merlin sert le bien avec des pouvoirs nés du mal."
+    "hook": "Dēmona dēls, kristīts jau šūpulī: Merlins kalpo labajam ar spēkiem, kas dzimuši no ļaunā."
   },
   "sections": [
     {
       "id": "course_196_merlin_l_enchanteur_intro",
-      "title": "Introduction",
+      "title": "Ievads",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Merlin** est le magicien le plus célèbre du Moyen Âge occidental. Barde, prophète, conseiller du roi **Arthur** : il se tient à la frontière entre le monde celte ancien et la chevalerie chrétienne."
+          "text": "**Merlins** ir slavenākais burvis Rietumeiropas viduslaikos. Bards, pravietis, karaļa **Artūra** padomnieks: viņš stāv uz robežas starp seno ķeltu pasauli un kristīgo bruņniecību."
         },
         {
           "type": "paragraph",
-          "text": "Sa nature est paradoxale. Une part de lui vient des démons, l'autre du ciel. Son histoire n'est pas celle d'un spectacle de magie : c'est la lutte d'un être hybride qui choisit de servir le bien, jusqu'à ce que l'amour le retire du monde."
+          "text": "Viņa daba ir paradoksāla. Viena daļa nāk no dēmoniem, otra no debesīm. Viņa stāsts nav stāsts par burvju trikiem, bet par hibrīdas būtnes cīņu, kas izvēlas kalpot labajam, līdz mīlestība viņu aizvelk prom no pasaules."
         }
       ]
     },
     {
       "id": "course_196_merlin_l_enchanteur_p1",
-      "title": "L'origine hybride entre démon et baptême",
+      "title": "Hibrīda izcelsme starp dēmonu un kristībām",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Chez le poète **Robert de Boron** (XIIe siècle), les démons veulent créer un antéchrist. Un [[dēmons inkubs]], esprit qui s'unit à une femme endormie, séduit une jeune chrétienne pieuse. Le plan échoue : la mère se confesse et fait baptiser l'enfant."
+          "text": "Dzejnieka **Roberta de Borona** (divpadsmitais gadsimts) darbā dēmoni grib radīt antikristu. Kādu jaunu dievbijīgu kristieti pavedina [[dēmons inkubs]], gars, kas savienojas ar guļošu sievieti. Plāns izjūk: māte nokārto grēksūdzi un liek bērnu nokristīt."
         },
         {
           "type": "image",
           "asset": "merlin_wizard_medieval_manuscript_illumination",
           "ratio": "4:3",
-          "caption": "Merlin, figure du mage médiéval entre forêt et cour."
+          "caption": "Merlins, viduslaiku burvja tēls starp mežu un galmu."
         },
         {
           "type": "funFact",
-          "text": "Le nom « Merlin » vient du gallois **Myrddin**. Geoffroy de Monmouth changea le « d » en « l » pour éviter un jeu de mots trop proche du latin *merda*."
+          "text": "Vārds „Merlins“ cēlies no velsiešu **Myrddin**. Džefrijs Monmutietis nomainīja „d“ pret „l“, lai izvairītos no vārdu spēles, kas pārāk atgādinātu latīņu *merda*."
         },
         {
           "type": "paragraph",
-          "text": "Le [[kristības]] efface la malédiction, mais laisse les pouvoirs : connaissance du passé (héritage démoniaque) et don de [[pareģojumi viduslaiku kultūrā]]. Merlin peut se métamorphoser. Derrière lui, on retrouve **Myrddin Wyllt**, barde gallois du VIe siècle qui, fou après une bataille, s'enfuit dans la forêt de [[Celyddon]]."
+          "text": "[[Kristības]] noņem lāstu, bet atstāj spējas: zināšanas par pagātni (dēmonu mantojums) un pareģošanas dāvanu ([[pareģojumi viduslaiku kultūrā]]). Merlins prot pārvērsties. Viņa aizmugurē slēpjas **Myrddin Wyllt**, 6. gadsimta velsiešu bards, kas pēc kaujas, zaudējis prātu, bēg uz Celyddon mežu: [[Celyddon]]."
         }
       ]
     },
     {
       "id": "course_196_merlin_l_enchanteur_p2",
-      "title": "L'architecte du destin arthurien",
+      "title": "Artūra likteņa arhitekts",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Merlin n'est pas un illusionniste. Il est le garant du royaume. Il aide le roi [[Uters Pendragons]] à prendre les traits du duc de Cornouailles pour rejoindre la duchesse **Igerne**. De cette nuit naît **Arthur**."
+          "text": "Merlins nav iluzionists. Viņš ir valstības garants. Karalis [[Uters Pendragons]] ar viņa palīdzību pieņem Kornvolas hercoga izskatu, lai nokļūtu pie hercogienes **Igernas**. No šīs nakts piedzimst **Artūrs**."
         },
         {
           "type": "image",
           "asset": "merlin_arthur_camelot_medieval_illustration",
           "ratio": "4:3",
-          "caption": "Merlin guide Arthur vers le trône et Camelot."
+          "caption": "Merlins ved Artūru uz troni un Kamelotu."
         },
         {
           "type": "paragraph",
-          "text": "Il élève l'enfant en secret, orchestre l'épée dans l'enclume, puis conduit Arthur vers la Dame du Lac pour obtenir [[Ekskalibūrs]], dont le fourreau protège des blessures mortelles. À **Camelot**, il conçoit la **Table Ronde** et place le [[Bīstamais krēsls]], siège vacant réservé au chevalier le plus pur. Il voit les dangers venir. Il sait aussi que le destin finit toujours par passer."
+          "text": "Viņš slepus audzina bērnu, noorganizē zobena izvilkšanu no laktas, pēc tam ved Artūru pie Ezera Dāmas, kuras dāvana ir [[Ekskalibūrs]]; tā maksts pasargā no nāvējošām brūcēm. **Kamelotā** viņš izveido **Apaļo galdu**. Tajā ir arī [[Bīstamais krēsls]], tukšs sēdeklis, kas paredzēts tīrākajam bruņiniekam. Viņš redz tuvojamies briesmas. Viņš zina arī, ka liktenis galu galā vienmēr iet savu gaitu."
         }
       ]
     },
     {
       "id": "course_196_merlin_l_enchanteur_p3",
-      "title": "La chute de l'enchanteur : l'amour et l'oubli",
+      "title": "Burvja krišana: mīlestība un aizmirstība",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Merlin connaît sa fin. Il tombe pourtant amoureux de **Viviane**, la Dame du Lac, près de la fontaine de Barenton. Il lui enseigne ses sortilèges les plus secrets, même s'il sait qu'elle le perdra."
+          "text": "Merlins zina savu galu. Tomēr viņš iemīlas **Viviānā**, Ezera Dāmā, pie Barentonas avota. Viņš māca viņai savus slepenākos buramvārdus, lai gan zina, ka viņa viņu pazudinās."
         },
         {
           "type": "image",
           "asset": "viviane_lady_of_the_lake_merlin_medieval_art",
           "ratio": "4:3",
-          "caption": "Viviane enferme Merlin : la fin du temps des mages."
+          "caption": "Viviāna ieslēdz Merlinu: burvju laikmeta beigas."
         },
         {
           "type": "funFact",
-          "text": "Selon les versions, Viviane l'enferme dans un buisson d'aubépine, une tour de verre ou une cavité de **Brocéliande**. Immortel, Merlin n'est pas mort : il dort hors du monde."
+          "text": "Dažādos variantos Viviāna ieslēdz viņu vilkābeļu krūmā, stikla tornī vai **Broseliandes** alā. Nemirstīgais Merlins nav miris: viņš guļ ārpus pasaules."
         },
         {
           "type": "paragraph",
-          "text": "Quand les chevaliers partent vers le Graal, la magie de Merlin n'a plus de place. Son retrait marque le passage du temps des mythes au temps de la foi."
+          "text": "Kad bruņinieki dodas pēc Grāla, Merlina burvībai vairs nav vietas. Viņa aiziešana iezīmē pāreju no mītu laikmeta uz ticības laikmetu."
         }
       ]
     },
     {
       "id": "course_196_merlin_l_enchanteur_p4",
-      "title": "Héritage littéraire et figure de l'archimage",
+      "title": "Literārais mantojums un arhimaga tēls",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Merlin a fixé l'image du vieux sage : barbe, bâton, énigmes. De lui descendent **Gandalf** chez Tolkien et **Dumbledore** chez Rowling. Il est l'adjuvant qui sait, mais ne peut agir à la place du héros."
+          "text": "Merlins iedibināja vecā gudrā tēlu: bārda, spieķis, mīklas. No viņa cēlušies **Gendalfs** Tolkina grāmatās un **Dumbldors** Roulingas romānos. Viņš ir palīgs, kas zina, bet nevar rīkoties varoņa vietā."
         },
         {
           "type": "paragraph",
-          "text": "Pont entre la forêt sauvage et la cour, il garde une empreinte [[druīdu]] tout en conseillant les rois. Aujourd'hui encore, il murmure que les empires sont fragiles, et que la sagesse ne protège pas toujours de soi-même."
+          "text": "Tilts starp mežonīgo mežu un galmu, viņš saglabā [[druīdu]] zīmogu, vienlaikus dodams padomus karaļiem. Vēl šodien viņš čukst, ka impērijas ir trauslas un ka gudrība ne vienmēr pasargā no sevis paša."
         },
         {
           "type": "takeaway",
-          "text": "**Merlin**, né d'un démon et sauvé par le baptême, bâtit le destin d'**Arthur** puis disparaît, prisonnier de **Viviane** : le modèle durable de l'enchanteur occidental."
+          "text": "**Merlins**, dēmona dēls, kristību izglābts, veido **Artūra** likteni un pēc tam pazūd kā **Viviānas** gūsteknis: Rietumu burvja paliekošais paraugs."
         }
       ]
     }

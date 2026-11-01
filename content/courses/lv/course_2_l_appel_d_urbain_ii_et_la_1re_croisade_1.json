@@ -1,121 +1,121 @@
 {
   "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1",
-  "title": "Qu'est-ce qui a causé la Première Croisade ?",
+  "title": "Kas izraisīja Pirmo krusta karu?",
   "subtitle": "1095",
   "subject": "histoire",
   "subcategory": "Antīkā pasaule un viduslaiki",
-  "description": "En novembre 1095, à Clermont, le pape Urbain II lance un appel qui envoie des dizaines de milliers d'Européens vers Jérusalem. Naissance des Croisades.",
+  "description": "1095. gada novembrī Klermonā pāvests Urbāns II izsludina aicinājumu, kas uz Jeruzalemi aizsūta desmitiem tūkstošu eiropiešu. Tā sākas krusta karu laikmets.",
   "hero": {
     "image": "l_appel_d_urbain_ii_et_la_1re_croisade",
     "ratio": "16:9",
-    "hook": "Un discours de vingt minutes, et l'Occident se met en marche vers Jérusalem."
+    "hook": "Divdesmit minūšu runa, un Rietumi dodas ceļā uz Jeruzalemi."
   },
   "sections": [
     {
       "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_intro",
-      "title": "Introduction",
+      "title": "Ievads",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En novembre **1095**, en Auvergne, le pape **Urbain II** s'adresse à une foule. Son appel est simple : partez libérer Jérusalem et secourir les chrétiens d'Orient. En échange, le pardon des péchés."
+          "text": "**1095**. gada novembrī Overņā pāvests **Urbāns II** uzrunā pūli. Viņa aicinājums ir vienkāršs: atbrīvot Jeruzalemi un palīdzēt Austrumu kristiešiem. Pretī tiek solīta grēku piedošana."
         },
         {
           "type": "paragraph",
-          "text": "Personne n'imagine encore ce que ce discours va déclencher. Des dizaines de milliers d'hommes vont s'élancer vers l'Est. La papauté invente une guerre sacrée. Elle changera pour longtemps les rapports entre les chrétiens d'Occident (souvent appelés Latins), l'Empire byzantin d'Orient, et le monde musulman."
+          "text": "Neviens vēl neiedomājas, ko šī runa izraisīs. Desmitiem tūkstošu vīru drīz dosies uz austrumiem. Pāvesta vara izgudro svēto karu. Tas uz ilgu laiku mainīs attiecības starp Rietumu kristiešiem (tos bieži sauc par latīņiem), Austrumu Bizantijas impēriju un musulmaņu pasauli."
         }
       ]
     },
     {
       "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_p1",
-      "title": "Byzance appelle à l'aide",
+      "title": "Bizantija sauc palīgā",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Depuis le VIIe siècle, Jérusalem est sous domination musulmane. Les pèlerins chrétiens y passent encore. Tout bascule avec les **Turcs Seldjoukides**, un peuple guerrier venu d'Asie. En **1071**, à la [[Manzikertas kauja]], en Asie Mineure, ils écrasent l'armée de l'Empire byzantin, l'Empire romain d'Orient. Ils ouvrent ainsi l'Anatolie, le cœur de ce qui est aujourd'hui la Turquie."
+          "text": "Jau kopš 7. gadsimta Jeruzaleme atrodas musulmaņu varā. Kristiešu svētceļnieki tur joprojām nokļūst. Viss mainās līdz ar **seldžuku turkiem**, karojošu tautu no Āzijas. **1071**. gadā Mazāzijā notiek [[Manzikertas kauja]]: seldžuki sagrauj Bizantijas impērijas, Austrumromas impērijas, armiju. Tā viņiem paveras Anatolija, tagadējās Turcijas sirds."
         },
         {
           "type": "image",
           "asset": "seljuk_turks_battle_of_manzikert",
           "ratio": "4:3",
-          "caption": "Mantzikert, 1071 : Byzance perd l'Anatolie face aux Seldjoukides."
+          "caption": "Manzikerta, 1071: Bizantija zaudē Anatoliju seldžukiem."
         },
         {
           "type": "paragraph",
-          "text": "Acculé, l'empereur de Byzance, [[Aleksijs I Komnins]], demande de l'aide à Rome. Pourtant, depuis le [[1054. gada šķelšanās]], l'Église catholique d'Occident et l'Église orthodoxe d'Orient sont séparées. Pour Urbain II, l'occasion est parfaite : affirmer le pouvoir du pape, et détourner la violence des chevaliers vers une cause extérieure. L'Église avait déjà tenté de limiter ces combats privés avec la [[Dieva miers]], un mouvement pour protéger les non-combattants."
+          "text": "Spiests stūrī, Bizantijas imperators [[Aleksijs I Komnins]] lūdz palīdzību Romai. Taču ir notikusi [[1054. gada šķelšanās]], un Rietumu katoļu baznīca un Austrumu pareizticīgo baznīca ir šķirtas. Urbānam II tā ir lieliska izdevība: apstiprināt pāvesta varu un novirzīt bruņinieku vardarbību pret ārēju mērķi. Baznīca jau bija mēģinājusi ierobežot šīs privātās kaujas. Tās kustība nekaujošo aizsardzībai saucās [[Dieva miers]]."
         },
         {
           "type": "funFact",
-          "text": "À Mantzikert, le sultan Alp Arslan captura l'empereur byzantin. Au lieu de le tuer, il le traita avec les honneurs avant de le libérer."
+          "text": "Pie Manzikertas sultāns Alps Arslans sagūstīja Bizantijas imperatoru. Tā vietā, lai viņu nogalinātu, sultāns izturējās pret viņu ar godu un tad atbrīvoja."
         }
       ]
     },
     {
       "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_p2",
-      "title": "Clermont : « Dieu le veut ! »",
+      "title": "Klermona: „Dievs to grib!“",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le **27 novembre 1095**, au [[Klermonas koncils]], une grande assemblée d'Église, Urbain II promet une [[Pilnā indulgence]] à ceux qui partiront : le pardon total des peines dues aux péchés. L'expédition devient un pèlerinage armé. Le cri **« Dieu le veut ! »** se répand. Les volontaires cousent une croix rouge sur leur épaule : on « se croise »."
+          "text": "**1095. gada 27. novembrī** notiek [[Klermonas koncils]], liela baznīcas sapulce. Tiem, kas dosies ceļā, Urbāns II apsola atlīdzību: [[pilnā indulgence]], proti, pilnīgu grēku radīto sodu atlaidi. Ekspedīcija kļūst par bruņotu svētceļojumu. Izplatās sauciens **„Dievs to grib!“**. Brīvprātīgie uz pleca uzšuj sarkanu krustu: viņi „uzņemas krustu“."
         },
         {
           "type": "image",
           "asset": "council_of_clermont_1095",
           "ratio": "4:3",
-          "caption": "Le concile de Clermont, 1095 : l'appel qui lance la Première Croisade."
+          "caption": "Klermonas koncils, 1095: aicinājums, kas aizsāk Pirmo krusta karu."
         },
         {
           "type": "paragraph",
-          "text": "La ferveur échappe vite au pape. Avant les seigneurs, [[Pēteris Vientuļnieks]], un prédicateur populaire, entraîne une foule de pauvres vers l'Est. Sans discipline ni ravitaillement, cette « Croisade des pauvres » pille en chemin et est décimée en Anatolie. La ferveur seule ne fait pas une armée."
+          "text": "Pāvests drīz zaudē kontroli pār jūsmu. Pirms bruņiniekiem trūcīgu pūli uz austrumiem ved tautas sludinātājs [[Pēteris Vientuļnieks]]. Bez disciplīnas un apgādes šis „nabagu krusta karš“ ceļā laupa un Anatolijā tiek gandrīz iznīdēts. Ar dedzību vien armiju nesaformē."
         }
       ]
     },
     {
       "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_p3",
-      "title": "D'Antioche à Jérusalem",
+      "title": "No Antiohijas līdz Jeruzalemei",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En **1096**, part la Croisade des barons : **Godefroy de Bouillon**, un seigneur lorrain, [[Bohemunds no Tarentas]], un prince normand d'Italie du Sud, et d'autres chefs. Alexis leur exige des serments. Après le long siège d'**Antioche** (1097-1098), une grande ville de Syrie, les survivants atteignent Jérusalem. Le **15 juillet 1099**, la ville tombe. Le massacre marque durablement la mémoire musulmane."
+          "text": "**1096**. gadā sākas baronu krusta karš. Ceļā dodas **Gotfrīds no Būljonas**, Lotringas muižnieks, [[Bohemunds no Tarentas]], normāņu princis no Itālijas dienvidiem, un citi vadoņi. Aleksijs no viņiem pieprasa zvērestus. Pēc ilgās **Antiohijas** (1097-1098), lielas Sīrijas pilsētas, aplenkuma izdzīvojušie sasniedz Jeruzalemi. **1099. gada 15. jūlijā** pilsēta krīt. Slaktiņš uz ilgu laiku iezīmē musulmaņu atmiņu."
         },
         {
           "type": "funFact",
-          "text": "Godefroy de Bouillon refuse le titre de roi. Il se fait appeler [[Svētā kapa aizstāvis]], protecteur du tombeau du Christ : trop humble, dit-il, pour porter une couronne d'or là où le Christ a porté des épines."
+          "text": "Gotfrīds no Būljonas atsakās no karaļa titula. Savu titulu viņš nosauc šādi: [[Svētā kapa aizstāvis]], Kristus kapa sargs. Esot pārāk pazemīgs, saka viņš, lai nestu zelta kroni tur, kur Kristus nesa ērkšķu kroni."
         },
         {
           "type": "paragraph",
-          "text": "Les croisés fondent les [[Latīņu valstis Austrumos]], quatre petits États chrétiens au Proche-Orient. Plus tard, les [[tamplieri]], moines-soldats, protègent les pèlerins. En **1187**, [[Saladīns]], un sultan musulman, reprend Jérusalem. D'autres croisades suivront, jusqu'à la chute de Saint-Jean-d'Acre, dernier bastion latin, en **1291**."
+          "text": "Krustnešu iekarojumu rezultātā rodas [[Latīņu valstis Austrumos]], četras mazas kristiešu valstis Tuvajos Austrumos. Vēlāk svētceļniekus sargā [[tamplieri]], mūki karotāji. **1187**. gadā Jeruzalemi atkaro [[Saladīns]], musulmaņu sultāns. Sekos vēl citi krusta kari, līdz **1291**. gadā krīt Akra, pēdējais latīņu cietoksnis."
         },
         {
           "type": "timeline",
           "events": [
             {
               "date": "1071",
-              "title": "Mantzikert",
-              "detail": "Byzance perd l'Anatolie face aux Seldjoukides."
+              "title": "Manzikerta",
+              "detail": "Bizantija zaudē Anatoliju seldžukiem."
             },
             {
               "date": "1095",
-              "title": "Concile de Clermont",
-              "detail": "Urbain II lance l'appel à la croisade."
+              "title": "Klermonas koncils",
+              "detail": "Urbāns II izsludina aicinājumu uz krusta karu."
             },
             {
               "date": "1099",
-              "title": "Prise de Jérusalem",
-              "detail": "Les croisés fondent les États latins d'Orient."
+              "title": "Jeruzalemes ieņemšana",
+              "detail": "Krustneši izveido latīņu valstis Austrumos."
             },
             {
               "date": "1187",
-              "title": "Saladin reprend Jérusalem",
-              "detail": "La reconquête musulmane relance les croisades."
+              "title": "Saladīns atkaro Jeruzalemi",
+              "detail": "Musulmaņu atkarojums no jauna uzjundī krusta karus."
             },
             {
               "date": "1291",
-              "title": "Chute de Saint-Jean-d'Acre",
-              "detail": "Fin de la présence latine en Terre sainte."
+              "title": "Akras krišana",
+              "detail": "Beidzas latīņu klātbūtne Svētajā zemē."
             }
           ]
         }
@@ -123,20 +123,20 @@
     },
     {
       "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_p4",
-      "title": "Un fossé durable",
+      "title": "Ilgstoša plaisa",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Sur le plan militaire, l'aventure finit mal. Sur le plan culturel, elle rapproche pourtant Orient et Occident : science grecque transmise par les Arabes, techniques, produits, finance des ordres militaires. L'Europe apprend à se mobiliser sous une même bannière."
+          "text": "Militāri šis pasākums beidzas slikti. Kultūras ziņā tas tomēr tuvina Austrumus un Rietumus: arābu tālāk nodotā grieķu zinātne, tehnoloģijas, preces, militāro ordeņu finanses. Eiropa mācās pulcēties zem kopīga karoga."
         },
         {
           "type": "paragraph",
-          "text": "L'héritage reste ambigu. L'appel d'Urbain II a forgé une identité chrétienne d'Occident commune. Mais il a aussi creusé une méfiance durable entre religions. Un discours de quelques minutes a ouvert deux siècles de guerres et d'échanges."
+          "text": "Mantojums paliek divējāds. Urbāna II aicinājums izveidoja kopēju Rietumu kristiešu identitāti. Taču tas arī radīja ilgstošu neuzticību starp reliģijām. Dažu minūšu runa pavēra divus gadsimtus karu un apmaiņas."
         },
         {
           "type": "takeaway",
-          "text": "En **1095**, Urbain II transforme une demande d'aide byzantine en pèlerinage armé. En **1099**, Jérusalem tombe ; en **1291**, la présence latine s'effondre. Les Croisades ont uni l'Occident et durablement divisé les mémoires."
+          "text": "**1095**. gadā Urbāns II pārvērš Bizantijas lūgumu pēc palīdzības bruņotā svētceļojumā. **1099**. gadā krīt Jeruzaleme; **1291**. gadā sabrūk latīņu klātbūtne. Krusta kari vienoja Rietumus un uz ilgu laiku sašķēla atmiņas."
         }
       ]
     }

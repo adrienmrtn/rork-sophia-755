@@ -1,114 +1,114 @@
 {
   "id": "course_198_sindbad_le_marin",
-  "title": "Que cachent les sept voyages de Sindbad le marin ?",
-  "subtitle": "Sept voyages",
+  "title": "Ko slēpj jūrasbraucēja Sindbada septiņi ceļojumi?",
+  "subtitle": "Septiņi ceļojumi",
   "subject": "mythologie",
   "subcategory": "Citas mitoloģijas",
-  "description": "Sindbad le marin : sept voyages, monstres et trésors. Derrière le merveilleux, le portrait du marchand-aventurier de l'âge d'or islamique.",
+  "description": "Jūrasbraucējs Sindbads: septiņi ceļojumi, briesmoņi un dārgumi. Aiz brīnumiem slēpjas islāma zelta laikmeta tirgotāja piedzīvojumu meklētāja portrets.",
   "hero": {
     "image": "sindbad_le_marin",
     "ratio": "16:9",
-    "hook": "Sept fois, il part riche ou curieux. Sept fois, la mer le brise. Sept fois, il revient plus riche encore."
+    "hook": "Septiņas reizes viņš dodas ceļā bagāts vai ziņkārīgs. Septiņas reizes jūra viņu salauž. Septiņas reizes viņš atgriežas vēl bagātāks."
   },
   "sections": [
     {
       "id": "course_198_sindbad_le_marin_intro",
-      "title": "Introduction",
+      "title": "Ievads",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Sindbad le marin** appartient aux **Mille et Une Nuits**, mais pas au vieux noyau perse du recueil. Son cycle de sept voyages s'est fixé plus tard, en Égypte, vers le XVe siècle."
+          "text": "**Jūrasbraucējs Sindbads** ir **Tūkstoš un vienas nakts** varonis, bet nepieder krājuma vecajam persiešu kodolam. Viņa septiņu ceļojumu cikls nostiprinājās vēlāk, Ēģiptē, ap piecpadsmito gadsimtu."
         },
         {
           "type": "paragraph",
-          "text": "Il incarne le voyageur-marchand de l'**âge d'or islamique** : piété, cupidité, courage, et l'incapacité de rester tranquille une fois riche. Derrière les monstres, on lit une allégorie de la fortune qui monte et qui tombe."
+          "text": "Viņš iemieso ceļotāju tirgotāju no **islāma zelta laikmeta**: dievbijību, alkatību, drosmi un nespēju nosēdēt mierā, tiklīdz kļuvis bagāts. Aiz briesmoņiem var nolasīt alegoriju par laimi, kas ceļas un krīt."
         }
       ]
     },
     {
       "id": "course_198_sindbad_le_marin_p1",
-      "title": "La structure cyclique de l'aventure",
+      "title": "Piedzīvojuma cikliskā uzbūve",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le récit s'ouvre à Bagdad. **Sindbad le Marin**, désormais âgé et fortuné, raconte ses épreuves à un porteur nommé lui aussi Sindbad (parfois Hindbad). Le contraste de classe est immédiat."
+          "text": "Stāsts sākas Bagdādē. **Jūrasbraucējs Sindbads**, tagad vecs un turīgs, stāsta par saviem pārbaudījumiem nesējam, kuru arī sauc Sindbads (dažkārt Hindbads). Šķiru kontrasts ir acīmredzams."
         },
         {
           "type": "image",
           "asset": "baghdad_medieval_islamic_golden_age_trade",
           "ratio": "4:3",
-          "caption": "Bagdad, point de départ et de retour des voyages de Sindbad."
+          "caption": "Bagdāde, Sindbada ceļojumu sākuma un atgriešanās vieta."
         },
         {
           "type": "paragraph",
-          "text": "Chaque voyage suit la même mécanique : lassitude de la vie sédentaire, départ du port de [[Basra]], naufrage, survie dans une terre inconnue, retour chargé de trésors. Le chiffre sept, chargé de sens dans la [[islāma kosmoloģija]], donne à la série une dimension initiatique : de l'imprudence à la sagesse."
+          "text": "Katrs ceļojums seko vienai shēmai: nogurums no mazkustīgas dzīves, izbraukšana no [[Basra]] ostas, kuģa avārija, izdzīvošana nepazīstamā zemē, atgriešanās ar dārgumiem. Skaitlim septiņi ir īpaša nozīme, kā to māca [[islāma kosmoloģija]], un tas piešķir sērijai iniciācijas dimensiju: no neapdomības līdz gudrībai."
         }
       ]
     },
     {
       "id": "course_198_sindbad_le_marin_p2",
-      "title": "Un bestiaire fantastique entre mythe et réalité",
+      "title": "Fantastisks bestiārijs starp mītu un īstenību",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le **Roc** (ou Rokh), oiseau dont l'envergure occulte le soleil, a marqué l'imaginaire mondial. On y voit l'écho de récits de voyageurs arabes sur les côtes d'Afrique de l'Est."
+          "text": "**Roks** (jeb Rohs), putns, kura plētums aizsedz sauli, ir atstājis pēdas pasaules iztēlē. Tajā saskata arābu ceļotāju stāstu atbalsi par Austrumāfrikas krastiem."
         },
         {
           "type": "image",
           "asset": "sinbad_roc_giant_bird_illustration",
           "ratio": "4:3",
-          "caption": "Le Roc, oiseau géant des voyages de Sindbad."
+          "caption": "Roks, milzu putns Sindbada ceļojumos."
         },
         {
           "type": "funFact",
-          "text": "Le Roc s'inspire probablement de l'**Aepyornis**, oiseau-éléphant de Madagascar disparu vers l'an 1000. Ses œufs faisaient jusqu'à 150 fois le volume d'un œuf de poule."
+          "text": "Roks, iespējams, iedvesmots no **Epiornisa**, ziloņputna no Madagaskaras, kas izzudis ap 1000. gadu. Tā olas bija līdz pat 150 reižu lielākas par vistas olu."
         },
         {
           "type": "paragraph",
-          "text": "Sindbad affronte aussi le **Vieillard de la mer**, qui s'accroche à son dos, et l'**île-tortue**, sol trompeur. La **vallée des diamants**, où l'on jette de la viande pour coller les gemmes, circule déjà chez les Anciens. Le merveilleux sédimente des siècles de [[viduslaiku arābu tirdzniecības ceļi]]."
+          "text": "Sindbads sastopas arī ar **Jūras večuku**, kas pieķeras viņa mugurai, un **bruņurupuču salu**, maldinošu zemi. **Dimantu ielejas** stāsts, kur met gaļu, lai pie tās pielipinātu dārgakmeņus, ir zināms jau senajiem autoriem. Brīnumu stāstos nogulsnējušies gadsimti, kuros šo pasauli veidoja [[viduslaiku arābu tirdzniecības ceļi]]."
         }
       ]
     },
     {
       "id": "course_198_sindbad_le_marin_p3",
-      "title": "Le miroir de l'Âge d'or du commerce arabe",
+      "title": "Arābu tirdzniecības zelta laikmeta spogulis",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le cadre est historique. Aux VIIIe et IXe siècles, les marins de Bassora et de Siraf dominent l'océan Indien. Les escales de Sindbad évoquent des lieux réels : [[Serendiba]] (Ceylan) pour les épices, l'Asie du Sud-Est pour le camphre, les côtes pour les perles."
+          "text": "Ietvars ir vēsturisks. 8. un 9. gadsimtā Basras un Sīrāfas jūrnieki valda Indijas okeānā. Sindbada pieturas atgādina īstas vietas: [[Serendiba]] (Cejlona) garšvielu dēļ, Dienvidaustrumāzija kampara dēļ, krasti pērļu dēļ."
         },
         {
           "type": "image",
           "asset": "arab_indian_ocean_trade_routes_medieval_ship",
           "ratio": "4:3",
-          "caption": "Navires arabes sur les routes de l'océan Indien."
+          "caption": "Arābu kuģi Indijas okeāna ceļos."
         },
         {
           "type": "paragraph",
-          "text": "Sindbad n'est pas un guerrier : c'est un marchand-aventurier, statut prestigieux dans une société qui valorise le commerce. On y trouve la mousson, des navires cousus de fibres de coco plutôt que cloués. Parallèle occidental : [[Marko Polo (Rietumu paralēle)]], qui décrit l'Asie en faits, là où Sindbad la peint en merveilles."
+          "text": "Sindbads nav karotājs, viņš ir tirgotājs piedzīvojumu meklētājs, prestiža statuss sabiedrībā, kas augstu vērtē tirdzniecību. Stāstā ir musons un kuģi, kas ar kokosšķiedrām sašūti, nevis sakalti naglām. Rietumu paralēle: [[Marko Polo (Rietumu paralēle)]], kas Āziju apraksta faktos, kur Sindbads to glezno brīnumos."
         }
       ]
     },
     {
       "id": "course_198_sindbad_le_marin_p4",
-      "title": "L'héritage universel : de l'Orient à l'Occident",
+      "title": "Universāls mantojums: no Austrumiem uz Rietumiem",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Traduits au XVIIIe siècle par **Antoine Galland**, les voyages nourrissent le [[piedzīvojumu romāns]] européen, de Defoe à Jules Verne. Le cinéma en fait souvent un corsaire au service de princesses. Erreur : Sindbad est d'abord un citadin de Bagdad, survivant par la foi et l'ingéniosité."
+          "text": "**Antuāna Galāna** astoņpadsmitajā gadsimtā tulkotie ceļojumi iedvesmo veselu žanru: [[piedzīvojumu romāns]] Eiropā, no Defo līdz Žilam Vernam. Kino bieži vien viņu pārvērš par korsāru princešu kalpībā. Tā ir kļūda: Sindbads vispirms ir Bagdādes pilsētnieks, kas izdzīvo ar ticību un atjautību."
         },
         {
           "type": "funFact",
-          "text": "Le nom de Sindbad évoquerait le « prince du fleuve Sindh », l'Indus, au carrefour des mondes arabe et indien."
+          "text": "Sindbada vārds varētu nozīmēt „Sindhas upes princis“, proti, Indas, kas atrodas arābu un indiešu pasaules krustcelēs."
         },
         {
           "type": "takeaway",
-          "text": "**Sindbad** incarne l'âge d'or maritime islamique en **sept** voyages cycliques : le Roc et les diamants masquent une réalité, celle des marchands arabes maîtres de l'océan Indien."
+          "text": "**Sindbads** iemieso islāma jūrniecības zelta laikmetu **septiņos** cikliskos ceļojumos: Roks un dimanti slēpj realitāti, proti, arābu tirgotājus, Indijas okeāna saimniekus."
         }
       ]
     }

@@ -1,137 +1,137 @@
 {
   "id": "course_39_la_democratie_athenienne",
-  "title": "Qui avait vraiment le pouvoir dans la démocratie athénienne ?",
-  "subtitle": "Ve siècle av. J.-C.",
+  "title": "Kam patiesībā piederēja vara Atēnu demokrātijā?",
+  "subtitle": "5. gadsimts p.m.ē.",
   "subject": "histoire",
   "subcategory": "Aukstais karš un mūsdienas",
-  "description": "Au Ve siècle avant J.-C., Athènes invente un système où les citoyens gouvernent directement. Tirage au sort, égalité de parole… et exclusion massive.",
+  "description": "5. gadsimtā p.m.ē. Atēnas izgudro sistēmu, kurā pilsoņi pārvalda valsti tieši. Izloze, vienlīdzīga runas tiesība… un masveida izslēgšana.",
   "hero": {
     "image": "la_democratie_athenienne",
     "ratio": "16:9",
-    "hook": "Comment une cité grecque a inventé le pouvoir du peuple, et ses limites."
+    "hook": "Kā viena Grieķijas pilsēta izgudroja tautas varu un tās robežas."
   },
   "sections": [
     {
       "id": "course_39_la_democratie_athenienne_intro",
-      "title": "Introduction",
+      "title": "Ievads",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Au Ve siècle avant J.-C., Athènes invente quelque chose de radical : la **[[politika]]** au sens où les citoyens ne sont plus sujets d'un roi, mais acteurs de leur destin. Le pouvoir (*kratos*) appartient au peuple (*demos*). D'où le mot démocratie."
+          "text": "5. gadsimtā p.m.ē. Atēnas izgudro kaut ko radikālu: **[[politika]]** tajā nozīmē, ka pilsoņi vairs nav ķēniņa pavalstnieki, bet sava likteņa veidotāji. Vara (*kratos*) pieder tautai (*demos*). No šejienes vārds demokrātija."
         },
         {
           "type": "paragraph",
-          "text": "Cette démocratie directe, née de crises et de réformes, reste une référence pour la pensée politique occidentale, avec ses forces et ses angles morts."
+          "text": "Šī tiešā demokrātija, kas dzimusi no krīzēm un reformām, joprojām ir atskaites punkts Rietumu politiskajā domā ar saviem stiprajiem un aklajiem punktiem."
         }
       ]
     },
     {
       "id": "course_39_la_democratie_athenienne_p1",
-      "title": "Des réformes qui ouvrent la cité",
+      "title": "Reformas, kas atver pilsētu",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Au VIIe siècle avant J.-C., Athènes est déchirée entre aristocrates et paysans endettés. **[[Solons]]**, homme d'État élu en **594 av. J.-C.**, abolit l'esclavage pour dettes et ouvre les magistratures selon la fortune, pas seulement le sang."
+          "text": "7. gadsimtā p.m.ē. Atēnas plosa pretruna starp aristokrātiem un parādos nonākušiem zemniekiem. **[[Solons]]**, valstsvīrs, kas ievēlēts **594**. gadā p.m.ē., atceļ parādu verdzību un atver amatus pēc bagātības, ne tikai pēc asinīm."
         },
         {
           "type": "paragraph",
-          "text": "Le vrai tournant, c'est **[[Kleistens]]** (**508-507**). Ce réformateur crée **10 tribus** mixtes pour casser les clans, et institue la **[[Bule]]**, Conseil des Cinq Cents tirés au sort. Chaque citoyen peut servir la cité."
+          "text": "Īstais pagrieziens ir **[[Kleistens]]** (**508-507**). Šis reformators izveido **10** jauktas filas, lai sagrautu dzimtu varu, un nodibina padomi: **[[Bule]]**, Piecu simtu padome, kuras locekļus izlozē. Katrs pilsonis var kalpot pilsētai."
         },
         {
           "type": "image",
           "asset": "athens_agora_ancient_ruins",
           "ratio": "4:3",
-          "caption": "L'Agora d'Athènes, cœur de la vie civique."
+          "caption": "Atēnu agora, pilsoniskās dzīves sirds."
         },
         {
           "type": "funFact",
-          "text": "Pour écarter un homme trop puissant, les Athéniens votaient l'**[[ostrakisms]]** sur un tesson de céramique : exil de dix ans, avec un quorum de **6 000** votants."
+          "text": "Lai atstumtu pārāk varenu cilvēku, atēnieši balsoja uz keramikas lauskas. Tas bija **[[ostrakisms]]**: desmit gadu trimda ar **6000** balsotāju kvorumu."
         }
       ]
     },
     {
       "id": "course_39_la_democratie_athenienne_p2",
-      "title": "Comment ça marche sous Périclès",
+      "title": "Kā tas darbojās Perikla laikā",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Au milieu du Ve siècle, sous **Périclès**, stratège réélu quinze fois et figure de l'âge d'or athénien, le système devient plus ouvert. L'**Ecclésia**, assemblée des citoyens, se réunit environ **40 fois** par an sur la colline de la Pnyx. Elle vote les lois, la guerre, la paix, le budget."
+          "text": "5. gadsimta vidū, **Perikla**, piecpadsmit reižu pārvēlēta stratēga un Atēnu zelta laikmeta spilgtākās personības, vadībā sistēma kļūst atvērtāka. **Ekklēsija**, pilsoņu sapulce, pulcējas aptuveni **40 reižu** gadā Pnikas kalnā. Tā balso par likumiem, karu, mieru un budžetu."
         },
         {
           "type": "image",
           "asset": "pericles_bust_sculpture",
           "ratio": "1:1",
-          "caption": "Périclès, stratège réélu quinze fois, figure de l'âge d'or athénien."
+          "caption": "Periklis, piecpadsmit reižu pārvēlēts stratēgs, Atēnu zelta laikmeta simbols."
         },
         {
           "type": "paragraph",
-          "text": "L'**[[Isēgorija]]** garantit l'égalité de parole. Le **[[Mistoss]]**, indemnité journalière, permet aux plus pauvres de siéger. La justice passe par l'**[[Hēlieja]]** : **6 000** jurés tirés au sort. Le tirage au sort limite l'accaparement du pouvoir, sauf pour les stratèges militaires."
+          "text": "**[[Isēgorija]]** nodrošina vienlīdzīgu runas tiesību. **[[Mistoss]]**, dienas atlīdzība, ļauj nabadzīgākajiem piedalīties sēdēs. Tiesas darbu veic **[[Hēlieja]]**: **6000** zvērināto, kurus izlozē. Izloze ierobežo varas uzkrāšanu, izņemot militāros stratēģus."
         }
       ]
     },
     {
       "id": "course_39_la_democratie_athenienne_p3",
-      "title": "Une démocratie qui exclut beaucoup",
+      "title": "Demokrātija, kas izslēdz daudzus",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Sur environ **300 000** habitants, seuls **30 000 à 50 000** citoyens mâles votent. Femmes, esclaves et métèques (étrangers résidents) sont exclus. En **451**, Périclès durcit même la règle : il faut deux parents citoyens."
+          "text": "No aptuveni **300 000** iedzīvotāju balso tikai **30 000 līdz 50 000** vīriešu kārtas pilsoņu. Sievietes, vergi un metoiki (pastāvīgie ārzemnieki) ir izslēgti. **451**. gadā Perikls pat pastiprina noteikumu: vajadzīgi divi pilsoņi vecāki."
         },
         {
           "type": "paragraph",
-          "text": "Paradoxe fondateur : l'égalité entre pairs repose sur l'esclavage et l'exclusion. Une démocratie de face-à-face, intense, mais fermée."
+          "text": "Pamatparadokss: vienlīdzība starp līdzīgajiem balstās uz verdzību un izslēgšanu. Demokrātija aci pret aci, intensīva, bet slēgta."
         },
         {
           "type": "funFact",
-          "text": "Celui qui se désintéressait de la vie publique était appelé *idiotes* (« particulier »). Le mot a donné « idiot » : se couper du bien commun passait pour un manque de raison."
+          "text": "Cilvēku, kurš nerūpējās par sabiedrisko dzīvi, sauca par *idiotes* („privātpersona“). No šī vārda cēlies vārds „idiots“: atrauties no kopējā labuma tika uzskatīts par saprāta trūkumu."
         }
       ]
     },
     {
       "id": "course_39_la_democratie_athenienne_p4",
-      "title": "Fragilités et héritage",
+      "title": "Vājās vietas un mantojums",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Un [[Demagogs]], orateur qui flatte les passions, peut emporter l'assemblée par l'émotion. **Platon**, philosophe marqué par la mort de son maître **Socrate** (**399 av. J.-C.**), voit dans la démocratie le règne de l'opinion contre la vérité, et l'exemple type de la tyrannie de la majorité."
+          "text": "[[Demagogs]], runātājs, kas glaimo kaislībām, var ar emocijām pārņemt sapulci. **Platons**, filozofs, kuru ietekmējusi skolotāja **Sokrata** nāve (**399**. gadā p.m.ē.), demokrātijā redz viedokļa valdīšanu pār patiesību un tipisku vairākuma tirānijas piemēru."
         },
         {
           "type": "paragraph",
-          "text": "Malgré ses failles, Athènes lègue des idées durables : responsabilité des gouvernants, égalité devant la loi, débat contradictoire. Aujourd'hui, le tirage au sort et la démocratie directe reviennent même dans les discussions contemporaines."
+          "text": "Neraugoties uz trūkumiem, Atēnas atstāj ilgtspējīgas idejas: valdītāju atbildība, vienlīdzība likuma priekšā, dažādu viedokļu debates. Mūsdienās izloze un tiešā demokrātija pat atgriežas aktuālajās diskusijās."
         },
         {
           "type": "timeline",
           "events": [
             {
-              "date": "594 av. J.-C.",
-              "title": "Solon",
-              "detail": "Fin de l'esclavage pour dettes."
+              "date": "594. g. p.m.ē.",
+              "title": "Solons",
+              "detail": "Parādu verdzības beigas."
             },
             {
-              "date": "508 av. J.-C.",
-              "title": "Clisthène",
-              "detail": "Tribus mixtes et Boulé."
+              "date": "508. g. p.m.ē.",
+              "title": "Kleistens",
+              "detail": "Jauktās filas un Bule."
             },
             {
-              "date": "Ve siècle",
-              "title": "Périclès",
-              "detail": "Misthos et démocratie radicale."
+              "date": "5. gadsimts",
+              "title": "Periklis",
+              "detail": "Mistoss un radikālā demokrātija."
             },
             {
-              "date": "399 av. J.-C.",
-              "title": "Mort de Socrate",
-              "detail": "Face sombre de la souveraineté populaire."
+              "date": "399. g. p.m.ē.",
+              "title": "Sokrata nāve",
+              "detail": "Tautas suverenitātes tumšā puse."
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "La démocratie athénienne est un gouvernement direct des citoyens mâles libres, fondé sur le tirage au sort et l'égalité de parole. Elle excluait environ **85 %** de la population, mais a inventé le débat public occidental."
+          "text": "Atēnu demokrātija ir brīvu vīriešu kārtas pilsoņu tieša pārvalde, kuras pamatā ir izloze un vienlīdzīga runas tiesība. Tā izslēdza aptuveni **85%** iedzīvotāju, taču izgudroja Rietumu publisko debašu tradīciju."
         }
       ]
     }

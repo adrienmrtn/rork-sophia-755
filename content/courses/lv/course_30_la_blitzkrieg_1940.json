@@ -1,133 +1,133 @@
 {
   "id": "course_30_la_blitzkrieg_1940",
-  "title": "La Blitzkrieg",
+  "title": "Zibenskarš",
   "subtitle": "1940",
   "subject": "histoire",
   "subcategory": "Aukstais karš un mūsdienas",
-  "description": "En **six semaines**, du **10 mai** au **22 juin 1940**, l'armée allemande conquiert la France et le Benelux. La « guerre éclair » révolutionne l'art de la guerre par la vitesse.",
+  "description": "**Sešās nedēļās**, no **10. maija** līdz **1940. gada 22. jūnijam**, Vācijas armija iekaro Franciju un Beniluksu. „Zibenskarš“ ar ātrumu revolucionizē kara mākslu.",
   "hero": {
     "image": "la_blitzkrieg_1940",
     "ratio": "16:9",
-    "hook": "Six semaines pour faire tomber ce que l'on croyait la première armée d'Europe."
+    "hook": "Sešas nedēļas, lai nogāztu to, ko uzskatīja par Eiropas spēcīgāko armiju."
   },
   "sections": [
     {
       "id": "course_30_la_blitzkrieg_1940_intro",
-      "title": "Introduction",
+      "title": "Ievads",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Du **10 mai** au **22 juin 1940**, en seulement six semaines, l'armée allemande conquiert la France, les Pays-Bas, la Belgique et le Luxembourg. La première puissance militaire européenne s'effondre sous les yeux du monde."
+          "text": "No **10. maija** līdz **1940. gada 22. jūnijam**, vien sešās nedēļās, Vācijas armija iekaro Franciju, Nīderlandi, Beļģiju un Luksemburgu. Eiropas spēcīgākā militārā lielvalsts sabrūk visas pasaules acu priekšā."
         },
         {
           "type": "paragraph",
-          "text": "La **Blitzkrieg** (guerre éclair) n'est pas seulement une série de victoires. C'est une révolution : la vitesse et la désorganisation de l'ennemi comptent plus que sa destruction physique immédiate."
+          "text": "**Blitzkrieg** (zibenskarš) nav tikai uzvaru virkne. Tā ir revolūcija: ātrums un pretinieka dezorganizēšana ir svarīgāki par tūlītēju fizisku iznīcināšanu."
         }
       ]
     },
     {
       "id": "course_30_la_blitzkrieg_1940_p1",
-      "title": "Frapper fort, frapper vite",
+      "title": "Sist spēcīgi, sist ātri",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le mot Blitzkrieg n'est pas officiel dans la [[vērmahts]], l'armée allemande de 1935 à 1945. C'est la presse anglo-saxonne qui l'invente. Les Allemands parlent de guerre de mouvement. Le principe du [[Schwerpunkt]] : concentrer tous les moyens sur un point étroit pour briser le front."
+          "text": "Vārds Blitzkrieg nav oficiāls termins Vācijas armijā, kas no 1935. līdz 1945. gadam saucās [[vērmahts]]. To izdomā angloamerikāņu prese. Vācieši runā par manevru karu. Viens jēdziens: [[Schwerpunkt]], proti, visu līdzekļu koncentrēšana šaurā posmā, lai pārrautu fronti."
         },
         {
           "type": "funFact",
-          "text": "Les sirènes des Stukas, ces bombardiers en piqué surnommés « trompettes de Jéricho », n'ont aucune utilité militaire réelle. Elles servent uniquement à terroriser soldats et civils."
+          "text": "Stuku, šo pikējošo bumbvedēju, ko dēvē par „Jērikas bazūnēm“, sirēnām nav nekādas reālas militāras nozīmes. Tās kalpo tikai karavīru un civiliedzīvotāju iebiedēšanai."
         },
         {
           "type": "paragraph",
-          "text": "Là où les Français dispersent les chars en appui d'infanterie, les Allemands les regroupent en divisions blindées autonomes, reliées par radio. Les Stukas agissent comme une artillerie volante. Pendant ce temps, la France croit encore à [[Mažino līnija]], cette chaîne de fortins le long de la frontière allemande."
+          "text": "Kur franči izkaisa tankus kājnieku atbalstam, vācieši tos apvieno patstāvīgās tanku divīzijās, kas savienotas ar radio. Stuki darbojas kā lidojoša artilērija. Pa to laiku Francija joprojām tic fortu ķēdei gar Vācijas robežu: tā ir [[Mažino līnija]]."
         }
       ]
     },
     {
       "id": "course_30_la_blitzkrieg_1940_p2",
-      "title": "Le coup de faucille",
+      "title": "Sirpja cirtiens",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Sur les conseils du général **Erich von Manstein**, Hitler adopte le [[Sichelschnitt]], le « coup de faucille » : attirer les Alliés en Belgique, pendant que le gros des panzers, les chars allemands, traverse les **Ardennes**, jugées infranchissables. Le **13 mai**, le général **Heinz Guderian** franchit la Meuse à **Sedan**. La route de la Manche est ouverte."
+          "text": "Pēc ģenerāļa **Ēriha fon Manšteina** ieteikuma Hitlers apstiprina plānu [[Sichelschnitt]], „sirpja cirtienu“: ievilināt sabiedrotos Beļģijā, kamēr lielākā daļa panzeru, vācu tanku, šķērso **Ardēnas**, kuras uzskata par neizbraucamām. **13. maijā** ģenerālis **Heincs Guderians** šķērso Māzu pie **Sedanas**. Ceļš uz Lamanšu ir vaļā."
         },
         {
           "type": "image",
           "asset": "german_tanks_blitzkrieg_1940",
           "ratio": "4:3",
-          "caption": "Chars allemands pendant la campagne de 1940."
+          "caption": "Vācu tanki 1940. gada kampaņas laikā."
         },
         {
           "type": "paragraph",
-          "text": "En une semaine, les armées alliées sont encerclées, dos à la mer. À Dunkerque, [[Operācija Dinamo (Denkerka)]] évacue **338 000** soldats franco-britanniques. La Grande-Bretagne sauve son armée. La France reste seule."
+          "text": "Nedēļas laikā sabiedroto armijas ir ielenktas, ar muguru pret jūru. Denkerkā notiek [[operācija Dinamo (Denkerka)]]: tiek evakuēti **338 000** franču un britu karavīru. Lielbritānija izglābj savu armiju. Francija paliek viena."
         },
         {
           "type": "image",
           "asset": "dunkirk_evacuation_beach_1940",
           "ratio": "4:3",
-          "caption": "Évacuation de Dunkerque, mai-juin 1940."
+          "caption": "Denkerkas evakuācija, 1940. gada maijs-jūnijs."
         }
       ]
     },
     {
       "id": "course_30_la_blitzkrieg_1940_p3",
-      "title": "L'armistice et l'appel",
+      "title": "Pamiers un aicinājums",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Privée de ses meilleures divisions, la France s'effondre. Paris est déclarée ville ouverte le **14 juin**. Le maréchal **Philippe Pétain** demande l'armistice, signé le **22 juin** à Compiègne, dans le même wagon qu'en **1918** : Hitler met en scène la revanche."
+          "text": "Zaudējusi labākās divīzijas, Francija sabrūk. Parīze tiek pasludināta par atklātu pilsētu **14. jūnijā**. Maršals **Filips Petēns** lūdz pamieru, kas tiek parakstīts **22. jūnijā** Kompjeņā, tajā pašā vagonā kā **1918**. gadā: Hitlers inscenē revanšu."
         },
         {
           "type": "funFact",
-          "text": "Pour la cérémonie, Hitler fait sortir le wagon du musée de Compiègne et le replace exactement là où l'Allemagne avait capitulé 22 ans plus tôt."
+          "text": "Ceremonijai Hitlers liek izvest vagonu no Kompjeņas muzeja un novietot to tieši tajā vietā, kur Vācija bija kapitulējusi 22 gadus agrāk."
         },
         {
           "type": "paragraph",
-          "text": "Le **18 juin**, depuis Londres, le **général de Gaulle** lance son appel à la BBC : la France a perdu une bataille, pas la guerre. L'impact immédiat est faible. Les bases de la France libre sont posées."
+          "text": "**18. jūnijā** no Londonas **ģenerālis de Golls** pa BBC radio raida savu aicinājumu: Francija ir zaudējusi kauju, bet ne karu. Tūlītējā ietekme ir neliela. Brīvās Francijas pamati tomēr ir ielikti."
         }
       ]
     },
     {
       "id": "course_30_la_blitzkrieg_1940_p4",
-      "title": "Une victoire à double tranchant",
+      "title": "Abpusgriezīga uzvara",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "1940 consacre l'Allemagne maîtresse de l'Europe. Mais la Blitzkrieg est une stratégie de guerre courte : carburant limité, logistique fragile. En **1941**, face à l'immensité soviétique, elle s'enlise. L'historien **Marc Bloch** parlera d'« Étrange Défaite » : un échec intellectuel français autant que matériel."
+          "text": "1940. gads padara Vāciju par Eiropas noteicēju. Taču Blitzkrieg ir īsa kara stratēģija: ierobežota degviela, trausla loģistika. **1941**. gadā, saskaroties ar padomju plašumiem, tā iestrēgst. Vēsturnieks **Marks Bloks** vēlāk runās par „Dīvaino sakāvi“: franču intelektuālu neveiksmi tikpat lielā mērā kā materiālu."
         },
         {
           "type": "timeline",
           "events": [
             {
-              "date": "10 mai 1940",
-              "title": "Offensive à l'Ouest",
-              "detail": "Attaque simultanée du Benelux et percée des Ardennes."
+              "date": "1940. gada 10. maijs",
+              "title": "Ofensīva Rietumos",
+              "detail": "Vienlaicīgs uzbrukums Beniluksam un izrāviens cauri Ardēnām."
             },
             {
-              "date": "13 mai 1940",
-              "title": "Percée de Sedan",
-              "detail": "Les panzers franchissent la Meuse."
+              "date": "1940. gada 13. maijs",
+              "title": "Sedanas izrāviens",
+              "detail": "Panzeri šķērso Māzu."
             },
             {
-              "date": "mai-juin 1940",
-              "title": "Dunkerque",
-              "detail": "338 000 soldats évacués vers l'Angleterre."
+              "date": "1940. gada maijs-jūnijs",
+              "title": "Denkerka",
+              "detail": "338 000 karavīru evakuēti uz Angliju."
             },
             {
-              "date": "22 juin 1940",
-              "title": "Armistice",
-              "detail": "La France cesse le combat à Compiègne."
+              "date": "1940. gada 22. jūnijs",
+              "title": "Pamiers",
+              "detail": "Francija pārtrauc cīņu Kompjeņā."
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "En six semaines, la Blitzkrieg combine blindés, aviation et radio pour pulvériser une doctrine défensive. La vitesse et la concentration des forces l'emportent sur la ligne Maginot."
+          "text": "Sešās nedēļās Blitzkrieg apvieno tankus, aviāciju un radio, lai sagrautu aizsardzības doktrīnu. Ātrums un spēku koncentrācija gūst virsroku pār Mažino līniju."
         }
       ]
     }

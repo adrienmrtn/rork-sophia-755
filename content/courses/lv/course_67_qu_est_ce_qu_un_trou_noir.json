@@ -1,118 +1,118 @@
 {
   "id": "course_67_qu_est_ce_qu_un_trou_noir",
-  "title": "Qu'est-ce qu'un trou noir ?",
-  "subtitle": "Gravité extrême",
+  "title": "Kas ir melnais caurums?",
+  "subtitle": "Ārkārtēja gravitācija",
   "subject": "sciences",
   "subcategory": "Zeme un Visums",
-  "description": "Un trou noir n'est pas un aspirateur cosmique. C'est une région où la gravité est si forte que même la lumière ne peut s'en échapper.",
+  "description": "Melnais caurums nav kosmisks putekļsūcējs. Tas ir apgabals, kur gravitācija ir tik spēcīga, ka no tā nevar izbēgt pat gaisma.",
   "hero": {
     "image": "qu_est_ce_qu_un_trou_noir",
     "ratio": "16:9",
-    "hook": "Rien n'en sort, pas même la lumière. Pourtant, on a fini par en photographier l'ombre."
+    "hook": "Nekas no tā neizkļūst, pat ne gaisma. Tomēr beidzot izdevies nofotografēt tā ēnu."
   },
   "sections": [
     {
       "id": "course_67_qu_est_ce_qu_un_trou_noir_intro",
-      "title": "Introduction",
+      "title": "Ievads",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Un trou noir est une région de l'**espace-temps**, le tissu qui unit l'espace et le temps, où la gravité est si intense que la vitesse nécessaire pour s'échapper dépasse celle de la lumière. Rien n'en sort : ni matière, ni signal lumineux."
+          "text": "Melnais caurums ir apgabals **telplaikā**, audumā, kas vieno telpu un laiku. Tur gravitācija ir tik spēcīga, ka izbēgšanai vajadzīgais ātrums pārsniedz gaismas ātrumu. Nekas no tā neizkļūst: ne viela, ne gaismas signāls."
         },
         {
           "type": "paragraph",
-          "text": "Ce n'est pas un « trou » au sens d'un tunnel. C'est une concentration extrême de matière qui courbe très fort ce tissu. Longtemps pure théorie issue des équations d'Einstein, les trous noirs sont aujourd'hui observés de plusieurs façons."
+          "text": "Tas nav „caurums“ tuneļa nozīmē. Tā ir ārkārtīgi blīva matērijas koncentrācija, kas ļoti stipri izliec šo audumu. Ilgi tā bija tīra teorija, kas izriet no Einšteina vienādojumiem, bet tagad melnos caurumus novēro vairākos veidos."
         }
       ]
     },
     {
       "id": "course_67_qu_est_ce_qu_un_trou_noir_p1",
-      "title": "Quand une étoile s'effondre",
+      "title": "Kad zvaigzne sabrūk",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Un trou noir stellaire naît souvent de la mort d'une étoile très massive, au moins **20 à 25 fois** la masse du Soleil. Pendant sa vie, l'étoile tient grâce à un équilibre : la gravité tire vers le centre, la pression de la **fusion nucléaire** pousse vers l'extérieur. Au cœur de l'étoile, l'hydrogène se transforme en hélium."
+          "text": "Zvaigžņu melnais caurums bieži rodas ļoti masīvas zvaigznes nāves rezultātā, ja tās masa ir vismaz **20 līdz 25 reižu** lielāka par Saules masu. Zvaigzne dzīves laikā turas līdzsvarā: gravitācija velk uz centru, **kodolsintēzes** spiediens spiež uz āru. Zvaigznes kodolā ūdeņradis pārvēršas hēlijā."
         },
         {
           "type": "image",
           "asset": "black_hole_accretion_disk_galaxy",
           "ratio": "auto",
-          "caption": "Un trou noir entouré de son disque d'accrétion incandescent."
+          "caption": "Melnais caurums, ko ieskauj kvēlojošs akrēcijas disks."
         },
         {
           "type": "paragraph",
-          "text": "Quand le combustible est épuisé, la pression s'effondre. Le cœur de l'étoile s'écrase. Une explosion de **supernova** peut alors illuminer la galaxie. Si le cœur restant est assez massif, plus rien ne stoppe la compression."
+          "text": "Kad degviela ir izsīkusi, spiediens sabrūk. Zvaigznes kodols tiek saspiests. Tad **supernovas** sprādziens var apgaismot galaktiku. Ja atlikušais kodols ir pietiekami masīvs, saspiešanu vairs nekas neapturēs."
         },
         {
           "type": "paragraph",
-          "text": "Au centre, la théorie décrit une [[Gravitācijas singularitāte]] : un point où densité et courbure deviennent extrêmes, et où nos équations actuelles cessent de bien fonctionner. Autour, on trouve l'[[notikumu horizonts]] : une frontière invisible. Une fois franchie, plus de retour possible vers le reste de l'univers."
+          "text": "Centrā, pēc teorijas, ir [[Gravitācijas singularitāte]]: punkts, kur blīvums un izliekums kļūst ekstrēmi un kur mūsu pašreizējie vienādojumi vairs labi nedarbojas. Ap to ir [[notikumu horizonts]]: neredzama robeža. Kad to šķērso, atpakaļceļa uz pārējo Visumu vairs nav."
         },
         {
           "type": "funFact",
-          "text": "Si vous tombiez vers un trou noir, la gravité tirerait bien plus fort sur vos pieds que sur votre tête. On appelle cet étirement la « spaghettification »."
+          "text": "Ja tu kristu melnajā caurumā, gravitācija vilktu daudz stiprāk pie tavām kājām nekā pie galvas. Šo izstiepšanos sauc par „spagetifikāciju“."
         }
       ]
     },
     {
       "id": "course_67_qu_est_ce_qu_un_trou_noir_p2",
-      "title": "Pas un aspirateur cosmique",
+      "title": "Nevis kosmisks putekļsūcējs",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Contrairement à l'idée reçue, un trou noir n'aspire pas tout ce qui passe au loin. Sa gravité dépend de sa masse et de la distance, comme pour n'importe quel objet. Si le Soleil était remplacé par un trou noir de même masse, la Terre continuerait à orbiter. Mais sans lumière ni chaleur, nous gèlerions."
+          "text": "Pretēji izplatītam uzskatam, melnais caurums neiesūc visu, kas atrodas tālāk. Tā gravitācija ir atkarīga no masas un attāluma, tāpat kā jebkuram citam objektam. Ja Sauli aizstātu melnais caurums ar tādu pašu masu, Zeme turpinātu riņķot. Bet bez gaismas un siltuma mēs sasaltu."
         },
         {
           "type": "paragraph",
-          "text": "Il existe aussi des **trous noirs supermassifs**, de millions à milliards de masses solaires, au cœur de presque toutes les galaxies. Dans la Voie lactée, c'est **Sagittarius A***, environ **4 millions** de masses solaires."
+          "text": "Ir arī **supermasīvi melnie caurumi** ar miljoniem līdz miljardiem Saules masu, gandrīz visu galaktiku centros. Piena Ceļā tas ir **Strēlnieks A***, apmēram **4 miljoni** Saules masu."
         },
         {
           "type": "paragraph",
-          "text": "On les repère souvent grâce au [[akrēcijas disks]] : un anneau de gaz et de poussière qui tourne très vite autour d'eux. Les frottements chauffent cette matière jusqu'à la rendre extrêmement brillante en rayons X ou en ondes radio. On voit alors l'ombre du trou noir sur ce fond lumineux."
+          "text": "Tos bieži pamana pēc tā, ka ap tiem ir [[akrēcijas disks]]: gāzes un putekļu gredzens, kas ļoti ātri griežas. Berze sakarsē šo vielu tik ļoti, ka tā kļūst ārkārtīgi spoža rentgenstaros vai radioviļņos. Tad uz šī spožā fona redzama melnā cauruma ēna."
         }
       ]
     },
     {
       "id": "course_67_qu_est_ce_qu_un_trou_noir_p3",
-      "title": "2019 : la première image",
+      "title": "2019: pirmais attēls",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En **avril 2019**, le projet Event Horizon Telescope publie la première image d'un trou noir. En combinant huit radiotélescopes grâce à l'[[interferometrija]], les chercheurs créent un télescope virtuel de la taille de la Terre."
+          "text": "**2019. gada aprīlī** projekts Event Horizon Telescope publicē pirmo melnā cauruma attēlu. Pētnieki apvieno astoņus radioteleskopus, un palīdz [[interferometrija]]: tā ļauj izveidot virtuālu teleskopu Zemes lielumā."
         },
         {
           "type": "paragraph",
-          "text": "La cible est **M87***, le trou noir supermassif de la galaxie Messier 87, à **55 millions** d'années-lumière. On y voit un anneau lumineux autour d'une zone sombre : la silhouette de l'horizon des événements. En **2022**, une image de notre voisin Sagittarius A* suit."
+          "text": "Mērķis ir **M87***, supermasīvais melnais caurums Mesjē 87 galaktikā, **55 miljonu** gaismas gadu attālumā. Redzams spīdošs gredzens ap tumšu apgabalu: notikumu horizonta siluets. **2022**. gadā seko mūsu kaimiņa Strēlnieka A* attēls."
         },
         {
           "type": "funFact",
-          "text": "Depuis **2015**, les observatoires LIGO et Virgo détectent aussi des **ondes gravitationnelles** : de petites vibrations de l'espace-temps produites quand deux trous noirs fusionnent."
+          "text": "Kopš **2015**. gada observatorijas LIGO un Virgo atklāj arī **gravitācijas viļņus**: nelielas telplaika vibrācijas, kas rodas, kad saplūst divi melnie caurumi."
         }
       ]
     },
     {
       "id": "course_67_qu_est_ce_qu_un_trou_noir_p4",
-      "title": "Hawking et l'évaporation lente",
+      "title": "Hokings un lēnā iztvaikošana",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En **1974**, le physicien britannique **Stephen Hawking** montre qu'un trou noir ne serait pas totalement noir. À cause d'effets quantiques près de l'horizon, il émettrait un rayonnement très faible : la [[Hokinga izstarojums]]."
+          "text": "**1974**. gadā britu fiziķis **Stīvens Hokings** parāda, ka melnais caurums varētu nebūt pilnīgi melns. Kvantu efektu dēļ pie horizonta tas izstarotu ļoti vāju starojumu: [[Hokinga starojums]]."
         },
         {
           "type": "paragraph",
-          "text": "Résultat : un trou noir isolé perdrait lentement de la masse et finirait par s'évaporer. Pour un trou noir stellaire, cela prendrait des durées fantastiquement plus longues que l'âge actuel de l'univers. Cette idée soulève aussi le paradoxe de l'information : que devient l'information de ce qui est tombé dedans si le trou noir disparaît ?"
+          "text": "Rezultāts: izolēts melnais caurums pamazām zaudētu masu un galu galā iztvaikotu. Zvaigžņu melnajam caurumam tas prasītu neiedomājami ilgāku laiku nekā Visuma pašreizējais vecums. Šī ideja rada arī informācijas paradoksu: kas notiek ar informāciju par to, kas iekritis iekšā, ja melnais caurums pazūd?"
         },
         {
           "type": "paragraph",
-          "text": "Près d'un trou noir, le temps s'écoule aussi plus lentement pour un observateur lointain, un effet relativiste de **dilatation du temps**. Ces objets restent parmi les meilleurs laboratoires pour tester les limites de la physique."
+          "text": "Tuvu melnajam caurumam tālam vērotājam laiks arī plūst lēnāk, tas ir relativitātes efekts, **laika dilatācija**. Šie objekti joprojām ir viena no labākajām laboratorijām, lai pārbaudītu fizikas robežas."
         },
         {
           "type": "takeaway",
-          "text": "Un trou noir se forme souvent par l'effondrement d'une étoile massive. Il est délimité par l'horizon des événements, frontière photographiée pour la première fois en **2019** autour de M87*."
+          "text": "Melnais caurums bieži veidojas masīvas zvaigznes sabrukšanas rezultātā. To norobežo notikumu horizonts, robeža, kas pirmoreiz nofotografēta **2019**. gadā ap M87*."
         }
       ]
     }

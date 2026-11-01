@@ -1,143 +1,143 @@
 {
   "id": "course_135_mozart_enfant_prodige_et_vie_tragique",
-  "title": "Qui était Mozart, au-delà de l'enfant prodige ?",
+  "title": "Kas bija Mocarts ārpus brīnumbērna tēla?",
   "subtitle": "1756-1791",
   "subject": "art",
   "subcategory": "Mūzika",
-  "description": "Wolfgang Amadeus Mozart, génie précoce de Salzbourg à Vienne, invente l'indépendance du compositeur et laisse un Requiem inachevé.",
+  "description": "Volfgangs Amadeuss Mocarts, agrīns ģēnijs no Zalcburgas līdz Vīnei, izgudro komponista neatkarību un atstāj nepabeigtu Rekviēmu.",
   "hero": {
     "image": "mozart_enfant_prodige_et_vie_tragique",
     "ratio": "16:9",
-    "hook": "Six cents œuvres en trente-cinq ans : le météore de Salzbourg."
+    "hook": "Seši simti darbu trīsdesmit piecos gados: Zalcburgas meteors."
   },
   "sections": [
     {
       "id": "course_135_mozart_enfant_prodige_et_vie_tragique_intro",
-      "title": "Introduction",
+      "title": "Ievads",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Wolfgang Amadeus Mozart** (**1756**-**1791**) incarne le génie précoce. Né à **Salzbourg**, il produit plus de **600** œuvres en trente-cinq ans et transforme la musique occidentale."
+          "text": "**Volfgangs Amadeuss Mocarts** (**1756**-**1791**) ir agrīnā ģēnija iemiesojums. Dzimis **Zalcburgā**, viņš trīsdesmit piecos gados radījis vairāk nekā **600** darbu un pārveidojis Rietumu mūziku."
         },
         {
           "type": "paragraph",
-          "text": "Son parcours raconte aussi un basculement social : du musicien serviteur de cour à l'artiste indépendant. Cette quête, coûteuse et fragile, annonce le [[romantisms]] et la figure moderne du compositeur libre."
+          "text": "Viņa dzīvesceļš stāsta arī par sociālu pavērsienu: no galma mūziķa kalpa uz neatkarīgu mākslinieku. Šī dārgā un trauslā tiekšanās ir pirmais solis uz laikmetu, kurā valda [[romantisms]], un uz brīva komponista mūsdienu tēlu."
         }
       ]
     },
     {
       "id": "course_135_mozart_enfant_prodige_et_vie_tragique_p1",
-      "title": "L'enfant prodige sur les routes d'Europe",
+      "title": "Brīnumbērns Eiropas ceļos",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Né le **27 janvier 1756**, Wolfgang montre dès trois ans des dons hors normes. Son père **Leopold**, violoniste et pédagogue ambitieux, organise dès six ans des tournées : Vienne, Versailles, Londres, Rome. Ces voyages forgent son oreille : il absorbe toutes les grammaires musicales du continent."
+          "text": "Dzimis **1756. gada 27. janvārī**, Volfgangs jau trīs gadu vecumā uzrāda neparastas dāvanas. Viņa tēvs **Leopolds**, vijolnieks un godkārīgs pedagogs, jau no sešu gadu vecuma organizē turnejas: Vīne, Versaļa, Londona, Roma. Šie ceļojumi izkopj viņa ausi: viņš uzsūc visas kontinenta mūzikas valodas."
         },
         {
           "type": "image",
           "asset": "young_mozart_performing_european_tour_painting",
           "ratio": "4:3",
-          "caption": "Le jeune Mozart en tournée : un prodige exhibé devant les cours d'Europe."
+          "caption": "Jaunais Mocarts turnejā: brīnumbērns, ko rāda Eiropas galmiem."
         },
         {
           "type": "paragraph",
-          "text": "En Italie, en **1770**, un exploit frappe les esprits : après une seule audition du *Miserere* de [[Gregorio Allegri]] à la Chapelle Sixtine, il le retranscrit de mémoire. Partition protégée, menace d'excommunication : le prodige contourne l'interdit. Mais cette enfance en carrosse le prive de repères stables."
+          "text": "Itālijā **1770**. gadā kāds varoņdarbs pārsteidz visus: pēc vienas vienīgas *Miserere* noklausīšanās Siksta kapelā viņš no galvas pārraksta [[Gregorio Allegri]] sacerēto darbu. Partitūra bija aizsargāta, draudēja izslēgšana no baznīcas: brīnumbērns apiet aizliegumu. Taču šī bērnība ratos viņam atņem stabilu atbalstu."
         },
         {
           "type": "funFact",
-          "text": "À Londres en 1764, un savant de la Royal Society examine l'enfant : il soupçonne une supercherie sur son âge, tant l'improvisation paraît surhumaine."
+          "text": "Londonā 1764. gadā kāds Karaliskās biedrības zinātnieks izmeklē bērnu: viņš aizdomājas par krāpšanu attiecībā uz zēna vecumu, tik pārcilvēcīga šķiet improvizācija."
         }
       ]
     },
     {
       "id": "course_135_mozart_enfant_prodige_et_vie_tragique_p2",
-      "title": "Vienne : la rupture avec la cour",
+      "title": "Vīne: šķiršanās no galma",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En **1781**, Mozart ne supporte plus [[Mūziķa stāvoklis 18. gadsimtā]] sous l'**archevêque Colloredo**. Après une dispute célèbre (un « coup de pied au derrière » du secrétaire), il s'installe à **Vienne**. Acte historique : il devient l'un des premiers compositeurs « free-lance »."
+          "text": "**1781**. gadā Mocarts vairs nepanes savu stāvokli **arhibīskapa Kolloredo** dienestā, tipisku tā laika mūziķim: [[Mūziķa stāvoklis 18. gadsimtā]]. Pēc slavena strīda (sekretāra spēriens pa pēcpusi) viņš apmetas **Vīnē**. Vēsturisks solis: viņš kļūst par vienu no pirmajiem „brīvmākslinieku“ komponistiem."
         },
         {
           "type": "image",
           "asset": "mozart_marriage_of_figaro_vienna_opera",
           "ratio": "4:3",
-          "caption": "Les Noces de Figaro : l'opéra gagne une psychologie moderne."
+          "caption": "Figaro kāzas: opera iegūst modernu psiholoģiju."
         },
         {
           "type": "paragraph",
-          "text": "Son génie dramatique explose avec *Les Noces de Figaro* (**1786**). Il fréquente la [[brīvmūrniecība]] (loge « La Bienfaisance », **1784**), influence visible dans *[[Burvju flauta]]*. Ses **27** concertos pour piano dialoguent entre soliste et orchestre : sommet du [[klasicisms]]. Mais sa gestion financière est désastreuse."
+          "text": "Viņa dramatiskais ģēnijs uzliesmo ar *Figaro kāzām* (**1786**). Viņu piesaista [[brīvmūrniecība]] (loža „Labdarība“, **1784**), un tās ietekme redzama operā *[[Burvju flauta]]*. Viņa **27** klavierkoncerti veido dialogu starp solistu un orķestri un sasniedz laikmeta virsotni. Šis laikmets ir [[klasicisms]]. Taču viņa finanšu vadība ir katastrofāla."
         },
         {
           "type": "funFact",
-          "text": "Mozart aimait le billard au point d'avoir sa propre table : un luxe rare. Il composait parfois entre deux coups de queue."
+          "text": "Mocarts tik ļoti mīlēja biljardu, ka iegādājās savu galdu: reta greznība. Viņš dažkārt komponēja starp diviem kijas grūdieniem."
         }
       ]
     },
     {
       "id": "course_135_mozart_enfant_prodige_et_vie_tragique_p3",
-      "title": "1791 : la Flûte enchantée et le Requiem",
+      "title": "1791: Burvju flauta un Rekviēms",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L'année **1791** est un paradoxe : déclin physique, apogée créatrice. Il achève *La Flûte enchantée*, qui vulgarise des thèmes maçonniques pour le grand public. Puis un émissaire mystérieux commande un **Requiem** sous le sceau du secret. Malade, Mozart se persuade qu'il écrit sa propre messe funèbre."
+          "text": "**1791**. gads ir paradokss: fiziska pagrimšana, radošs apogejs. Viņš pabeidz *Burvju flautu*, kas plašai publikai populārizē brīvmūrnieku tēmas. Tad kāds noslēpumains sūtnis pasūta **Rekviēmu** ar noteikumu glabāt noslēpumu. Slimais Mocarts iestāstās, ka raksta savu bēru misi."
         },
         {
           "type": "image",
           "asset": "mozart_requiem_manuscript_last_work",
           "ratio": "4:3",
-          "caption": "Le Requiem : une commande secrète, une œuvre inachevée."
+          "caption": "Rekviēms: slepens pasūtījums, nepabeigts darbs."
         },
         {
           "type": "paragraph",
-          "text": "Il meurt le **5 décembre 1791**, à 35 ans. La légende d'un empoisonnement par **Antonio Salieri** est romantique ; les historiens parlent plutôt d'infection ou de fièvre rhumatismale. Son élève **Franz Xaver Süssmayr** termine le *Requiem* pour que la veuve **Constance** touche le solde de la commande."
+          "text": "Viņš mirst **1791. gada 5. decembrī**, 35 gadu vecumā. Leģenda par **Antonio Saljēri** veiktu saindēšanu ir romantiska; vēsturnieki drīzāk runā par infekciju vai reimatisko drudzi. Viņa skolnieks **Francs Ksavers Zīsmairs** pabeidz *Rekviēmu*, lai atraitne **Konstance** saņemtu atlikušo maksu par pasūtījumu."
         },
         {
           "type": "funFact",
-          "text": "Le commanditaire secret était le comte von Walsegg, qui faisait passer pour siennes des œuvres achetées à des compositeurs."
+          "text": "Slepenais pasūtītājs bija grāfs fon Valzegs, kurš par savējiem izdeva darbus, ko bija nopircis no komponistiem."
         }
       ]
     },
     {
       "id": "course_135_mozart_enfant_prodige_et_vie_tragique_p4",
-      "title": "Mythe de la fosse commune et héritage",
+      "title": "Kopkapa mīts un mantojums",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Mozart est inhumé dans une tombe communautaire, pratique imposée par l'empereur **Joseph II** pour des raisons d'hygiène. Ce n'était pas un affront : c'était la norme pour une grande part de la bourgeoisie viennoise. **Beethoven** et **Schubert** bâtiront ensuite sur ses fondations."
+          "text": "Mocarts tiek apglabāts kopējā kapā, ko higiēnas apsvērumu dēļ noteica imperators **Jozefs II**. Tas nebija apvainojums: tā bija norma lielai daļai Vīnes buržuāzijas. **Bēthovens** un **Šūberts** vēlāk būvēs uz viņa pamatiem."
         },
         {
           "type": "timeline",
           "events": [
             {
               "date": "1756",
-              "title": "Naissance à Salzbourg",
-              "detail": "Le prodige commence sous la tutelle de Leopold."
+              "title": "Dzimšana Zalcburgā",
+              "detail": "Brīnumbērns sāk savu ceļu Leopolda uzraudzībā."
             },
             {
               "date": "1781",
-              "title": "Rupture avec Colloredo",
-              "detail": "Mozart s'installe à Vienne en indépendant."
+              "title": "Šķiršanās no Kolloredo",
+              "detail": "Mocarts apmetas Vīnē kā neatkarīgs mākslinieks."
             },
             {
               "date": "1786",
-              "title": "Les Noces de Figaro",
-              "detail": "L'opéra gagne une psychologie moderne."
+              "title": "Figaro kāzas",
+              "detail": "Opera iegūst modernu psiholoģiju."
             },
             {
               "date": "1791",
-              "title": "Mort et Requiem",
-              "detail": "Une œuvre inachevée devient mythe."
+              "title": "Nāve un Rekviēms",
+              "detail": "Nepabeigts darbs kļūst par mītu."
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "En 35 ans, Mozart a révolutionné symphonie, opéra et concerto, s'émancipant de la cour avant de mourir en laissant un Requiem inachevé."
+          "text": "Mocarts 35 gados ir pārveidojis simfoniju, operu un koncertu, atbrīvojies no galma un miris, atstājot nepabeigtu Rekviēmu."
         }
       ]
     }

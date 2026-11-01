@@ -1,60 +1,60 @@
 {
   "id": "course_88_la_poetique_aristote",
-  "title": "« La Poétique » d'Aristote : à quoi sert la tragédie ?",
-  "subtitle": "IVe siècle av. J.-C.",
+  "title": "Aristoteļa „Poētika“: kam kalpo traģēdija?",
+  "subtitle": "4. gadsimts p.m.ē.",
   "subject": "litterature",
   "subcategory": "Grieķi un antīkie filozofi",
-  "description": "Aristote analyse la tragédie grecque et invente des mots encore partout : mimèsis, catharsis, péripétie. La Poétique est le premier grand mode d'emploi du récit.",
+  "description": "Aristotelis analizē grieķu traģēdiju un izgudro vārdus, kas joprojām ir visur: mimēsis, katarse, peripetija. *Poētika* ir pirmā lielā stāsta lietošanas pamācība.",
   "hero": {
     "image": "la_poetique_aristote",
     "ratio": "16:9",
-    "hook": "Avant les manuels de scénario, il y avait Aristote et la tragédie grecque."
+    "hook": "Pirms scenāriju rokasgrāmatām bija Aristotelis un grieķu traģēdija."
   },
   "sections": [
     {
       "id": "course_88_la_poetique_aristote_intro",
-      "title": "Introduction",
+      "title": "Ievads",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Au **IVe siècle avant J.-C.**, **Aristote**, élève de Platon puis penseur autonome, fondateur du **Lycée** à Athènes, écrit la **Poétique**. Ce n'est pas un poème. C'est une analyse de la poésie, surtout de la **tragédie**, genre théâtral grec qui met en scène la chute d'un héros. Comment une histoire fait-elle peur et pitié ? Pourquoi cela nous fait-il du bien ?"
+          "text": "**4. gadsimtā** p.m.ē. **Aristotelis**, Platona skolnieks, vēlāk patstāvīgs domātājs un **Liceja** dibinātājs Atēnās, uzraksta **Poētiku**. Tā nav dzeja. Tā ir dzejas analīze, galvenokārt par **traģēdiju**, grieķu teātra žanru, kas rāda varoņa krišanu. Kā stāsts izraisa bailes un žēlumu? Kāpēc tas mums nāk par labu?"
         },
         {
           "type": "paragraph",
-          "text": "Le texte qui nous est parvenu est partiel, parfois sec, rédigé sous forme de notes. Pourtant il a façonné le théâtre, le roman, puis le cinéma. Beaucoup de règles de « bon récit » y trouvent une ancêtre grecque. Aristote observe ce qui fonctionne sur scène, puis en tire des principes."
+          "text": "Teksts, kas mums nonācis, ir nepilnīgs, vietumis sauss, sarakstīts piezīmju veidā. Tomēr tas ir veidojis teātri, romānu, vēlāk kino. Daudzi „laba stāsta“ noteikumi tur atrod grieķu priekšteci. Aristotelis vēro, kas darbojas uz skatuves, un tad no tā izsecina principus."
         }
       ]
     },
     {
       "id": "course_88_la_poetique_aristote_p1",
-      "title": "Imiter n'est pas tricher",
+      "title": "Atdarināt nenozīmē krāpties",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Platon se méfiait des images, qu'il comparait à des ombres trompeuses. Aristote réhabilite la [[aristoteliskā mimēsis]]. Pour lui, l'art imite la nature de façon sélective. Il montre les choses non telles qu'elles sont, mais telles qu'elles pourraient être. Représenter des actions humaines, ce n'est pas mentir. C'est apprendre. L'enfant imite pour comprendre. L'art aussi."
+          "text": "Platons neuzticējās attēliem, ko salīdzināja ar mānīgām ēnām. Aristotelis atdarināšanu reabilitē: viņa jēdziens ir [[aristoteliskā mimēsis]]. Pēc viņa domām, māksla atdarina dabu selektīvi. Tā rāda lietas nevis tādas, kādas tās ir, bet tādas, kādas tās varētu būt. Attēlot cilvēku darbības nenozīmē melot. Tas nozīmē mācīties. Bērns atdarina, lai saprastu. Māksla arī."
         },
         {
           "type": "image",
           "asset": "aristotle_portrait_bust_sculpture",
           "ratio": "1:1",
-          "caption": "Aristote : classer le monde, y compris les histoires qu'on se raconte."
+          "caption": "Aristotelis: klasificēt pasauli, arī stāstus, ko pastāstām cits citam."
         },
         {
           "type": "paragraph",
-          "text": "La tragédie imite des actions graves, complètes, d'une certaine ampleur. Le critère n'est pas le documentaire exact. C'est le **vraisemblable** et le **nécessaire** : ce qui devait arriver dans cette histoire, selon la logique interne du récit. Aristote distingue aussi épopée, récit long en vers, et tragédie, action théâtrale en un temps limité."
+          "text": "Traģēdija atdarina nopietnas, pilnīgas darbības ar zināmu apjomu. Kritērijs nav precīzs dokumentālisms. Tas ir **ticamais** un **nepieciešamais**: tas, kam šajā stāstā bija jānotiek pēc stāsta iekšējās loģikas. Aristotelis nošķir arī eposu, garu stāstījumu pantos, un traģēdiju, uz skatuves notiekošu darbību ierobežotā laikā."
         }
       ]
     },
     {
       "id": "course_88_la_poetique_aristote_p2",
-      "title": "La catharsis : peur, pitié, soulagement",
+      "title": "Katarse: bailes, žēlums, atvieglojums",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Aristote dit que la tragédie accomplit la [[Katarse]] des émotions de pitié et de crainte. Le sens exact du mot est débattu depuis vingt-cinq siècles : purification, évacuation, clarification ? L'idée centrale reste : le spectacle violent n'excite pas seulement. Il **ordonne** nos affects. On pleure et on tremble en sécurité, dans le théâtre."
+          "text": "Aristotelis uzskata, ka traģēdijas mērķis ir žēluma un bailju jūtu [[katarse]]. Šī vārda precīza nozīme tiek apspriesta jau divdesmit piecus gadsimtus: šķīstīšanās, izvadīšana, noskaidrošana? Galvenā doma paliek: vardarbīgs uzvedums ne tikai uzbudina. Tas **sakārto** mūsu jūtas. Teātrī var raudāt un trīcēt drošībā."
         },
         {
           "type": "funFact",
@@ -64,28 +64,28 @@
           "type": "image",
           "asset": "ancient_greek_theater_epidaurus",
           "ratio": "16:9",
-          "caption": "Le théâtre d'Épidaure : l'espace où la cité grecque regardait ses mythes."
+          "caption": "Epidauras teātris: telpa, kurā grieķu pilsēta skatījās uz saviem mītiem."
         }
       ]
     },
     {
       "id": "course_88_la_poetique_aristote_p3",
-      "title": "Intrigue, retournement, reconnaissance",
+      "title": "Sižets, pavērsiens, atpazīšana",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Pour Aristote, le cœur du drame est le *muthos*, l'intrigue, l'enchaînement des actions. Il valorise la **péripétie**, le retournement soudain de situation, et la **reconnaissance**, l'*anagnorisis*, moment où un personnage passe de l'ignorance à la connaissance. **Œdipe Roi** de Sophocle est son exemple star : le héros découvre trop tard qui il est."
+          "text": "Pēc Aristoteļa drāmas sirds ir *muthos*, sižets, darbību saistība. Viņš augstu vērtē **peripetiju**, pēkšņu situācijas pavērsienu, un **atpazīšanu**, *anagnorisis*, brīdi, kad tēls no nezināšanas nonāk pie zināšanas. Sofokla **Oidips ķēniņš** ir viņa spilgtākais piemērs: varonis par vēlu uzzina, kas viņš ir."
         },
         {
           "type": "paragraph",
-          "text": "Il préfère une **erreur**, l'*hamartia*, faute involontaire ou jugement faussé, à une méchanceté pure. Le héros n'est ni parfaitement bon ni monstrueux. Sa chute doit sembler logique, donc terrible. C'est ce mélange qui provoque pitié : on reconnaît une faiblesse humaine, pas seulement un méchant caricatural."
+          "text": "Viņš dod priekšroku **kļūdai**, *hamartia*, netīšai vainai vai sagrozītam spriedumam, nevis tīrai ļaunprātībai. Varonis nav ne pilnīgi labs, ne briesmonīgs. Viņa krišanai jāizskatās loģiskai, tātad šausmīgai. Šis sajaukums izraisa žēlumu: mēs atpazīstam cilvēcisku vājumu, ne tikai karikatūrisku ļaundari."
         }
       ]
     },
     {
       "id": "course_88_la_poetique_aristote_p4",
-      "title": "Un mode d'emploi qui a survécu",
+      "title": "Lietošanas pamācība, kas izdzīvojusi",
       "free": false,
       "blocks": [
         {
@@ -94,11 +94,11 @@
         },
         {
           "type": "paragraph",
-          "text": "Aristote rappelle aussi que la poésie dit le **général**, tandis que l'histoire dit le **particulier**. Une intrigue bien faite montre ce qui aurait pu arriver selon le vraisemblable. C'est pourquoi Œdipe reste un modèle : chaque révélation semble à la fois surprenante et inévitable. Les auteurs de théâtre classiques, puis les scénaristes modernes, ont repris cette exigence de nécessité narrative."
+          "text": "Aristotelis atgādina arī, ka dzeja runā par **vispārīgo**, bet vēsture par **atsevišķo**. Labi uzbūvēts sižets rāda to, kas varēja notikt pēc ticamā. Tāpēc Oidips paliek paraugs: katra atklāsme šķiet reizē pārsteidzoša un neizbēgama. Klasiskie teātra autori, vēlāk mūsdienu scenāristi ir pārņēmuši šo stāstījuma nepieciešamības prasību."
         },
         {
           "type": "takeaway",
-          "text": "La **Poétique** d'Aristote donne à l'Occident son premier grand vocabulaire du récit : imiter, émouvoir, retourner la situation. Avant d'écrire une histoire, beaucoup la pensent encore avec lui."
+          "text": "Aristoteļa **Poētika** Rietumiem dod pirmo lielo stāsta vārdu krājumu: atdarināt, aizkustināt, apgriezt situāciju. Pirms uzrakstīt stāstu, daudzi to joprojām domā kopā ar viņu."
         }
       ]
     }

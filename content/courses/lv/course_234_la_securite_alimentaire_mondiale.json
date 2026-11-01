@@ -1,123 +1,123 @@
 {
   "id": "course_234_la_securite_alimentaire_mondiale",
-  "title": "Comment nourrir huit milliards d'humains ?",
-  "subtitle": "Produire mieux, gaspiller moins",
+  "title": "Kā pabarot astoņus miljardus cilvēku?",
+  "subtitle": "Ražot labāk, izšķērdēt mazāk",
   "subject": "comprendreLeMonde",
   "subcategory": "Vide un nākotne",
-  "description": "La planète produit plus de nourriture que jamais, et pourtant la faim progresse. Le problème n'est pas la quantité, mais la façon dont on produit, transporte et gaspille ce que l'on mange.",
+  "description": "Planēta ražo vairāk pārtikas nekā jebkad, un tomēr bads pieaug. Problēma nav daudzumā, bet veidā, kā to, ko ēdam, ražo, pārvadā un izšķērdē.",
   "author": "kate-waddams",
   "hero": {
     "image": "combine_harvester_wheat_field_aerial",
     "ratio": "4:3",
-    "hook": "Nous produisons assez pour nourrir tout le monde. Le problème, c'est ce que nous faisons de cette nourriture."
+    "hook": "Mēs ražojam pietiekami, lai pabarotu visus. Problēma ir tā, ko mēs darām ar šo pārtiku."
   },
   "sections": [
     {
       "id": "course_234_la_securite_alimentaire_mondiale_intro",
-      "title": "Introduction",
+      "title": "Ievads",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Avec la montée de la faim et de la [[nepietiekams uzturs]] dans le monde, on pourrait croire que la Terre ne produit plus assez pour une population qui grossit. C'est faux. Depuis les années **1960**, la production agricole augmente plus vite que le nombre d'humains. Ce qui coince, c'est la manière dont cette nourriture est produite et distribuée."
+          "text": "Pasaulē pieaug bads un [[nepietiekams uzturs]], tāpēc var šķist, ka Zeme vairs neražo pietiekami augošam iedzīvotāju skaitam. Tā nav taisnība. Kopš **1960**. gadiem lauksaimniecības produkcija aug ātrāk nekā cilvēku skaits. Problēma ir tajā, kā šī pārtika tiek ražota un izplatīta."
         },
         {
           "type": "paragraph",
-          "text": "Les chiffres sont contradictoires. **7 %** des enfants de moins de cinq ans souffrent de malnutrition, alors que **40 %** des adultes sont en surpoids. Et aujourd'hui, une mauvaise alimentation tue plus d'adultes que le tabac. Nourrir huit milliards de personnes n'a rien de simple : la [[piegādes ķēde]] a des trous, nous gaspillons énormément, et beaucoup de pratiques agricoles ne sont plus tenables."
+          "text": "Skaitļi ir pretrunīgi. **7%** bērnu līdz piecu gadu vecumam cieš no nepietiekama uztura, bet **40%** pieaugušo ir liekais svars. Un šodien nepilnvērtīgs uzturs nogalina vairāk pieaugušo nekā tabaka. Astoņu miljardu cilvēku pabarošana nebūt nav vienkārša: [[piegādes ķēde]] ir pilna ar robiem, mēs izšķērdējam milzīgus daudzumus, un daudzas lauksaimniecības prakses vairs nav ilgtspējīgas."
         }
       ]
     },
     {
       "id": "course_234_la_securite_alimentaire_mondiale_p1",
-      "title": "Les fermes transforment le soleil en nourriture",
+      "title": "Saimniecības pārvērš sauli pārtikā",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Une ferme capte la lumière du soleil et la transforme en nourriture. Ce travail, ce sont les plantes qui le font : cultivées, elles donnent des aliments comestibles. Le bétail au pâturage, lui, convertit l'herbe en viande et en lait. Pourtant, les fermes ont mauvaise presse : sols dégradés, pollution, déforestation, animaux qui concurrencent les humains pour la nourriture et l'espace."
+          "text": "Saimniecība uztver saules gaismu un pārvērš to pārtikā. Šo darbu veic augi: tos audzējot, iegūst ēdamus produktus. Ganībās turētie lopi savukārt pārvērš zāli gaļā un pienā. Tomēr saimniecībām ir slikta slava: noplicināta augsne, piesārņojums, mežu izciršana, dzīvnieki, kas ar cilvēkiem sacenšas par barību un vietu."
         },
         {
           "type": "image",
           "asset": "dairy_cows_grazing_green_pasture",
           "ratio": "3:2",
-          "caption": "Des vaches au pâturage : de l'herbe transformée en lait et en viande."
+          "caption": "Govis ganībās: zāle, kas pārvērsta pienā un gaļā."
         },
         {
           "type": "paragraph",
-          "text": "Ces problèmes viennent en partie de pratiques agricoles non durables. C'est cela qu'il faut changer. Une idée reçue veut que produire toujours plus oblige à injecter toujours plus dans les systèmes de production. C'est faux. Produire davantage n'exige pas forcément plus de pesticides, d'engrais, de terres ou de main-d'œuvre. Cela peut même signifier l'inverse."
+          "text": "Šīs problēmas daļēji rodas no neilgtspējīgas lauksaimniecības prakses. Tieši to vajag mainīt. Pastāv maldīgs priekšstats, ka ražot arvien vairāk nozīmē arvien vairāk ieguldīt ražošanas sistēmās. Tā nav taisnība. Ražot vairāk nebūt neprasa vairāk pesticīdu, mēslojuma, zemes vai darbaspēka. Tas pat var nozīmēt pretējo."
         },
         {
           "type": "paragraph",
-          "text": "Tout tient dans un mot : l'efficacité. Avec des méthodes agricoles plus efficaces, on peut produire plus de nourriture pour des milliards de personnes tout en utilisant moins d'[[ražošanas resursi]], c'est-à-dire moins d'engrais, de pesticides, d'énergie et de main-d'œuvre, et en occupant moins de terres."
+          "text": "Viss ir vienā vārdā: efektivitāte. Ar efektīvākām lauksaimniecības metodēm var saražot vairāk pārtikas miljardiem cilvēku un tērēt mazāk. Runa ir par [[ražošanas resursi]]: mazāk mēslojuma, pesticīdu, enerģijas un darbaspēka, un arī mazāk zemes."
         }
       ]
     },
     {
       "id": "course_234_la_securite_alimentaire_mondiale_p2",
-      "title": "Un tiers de la nourriture n'arrive jamais dans l'assiette",
+      "title": "Trešdaļa pārtikas nekad nenonāk uz šķīvja",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Produire assez n'est que la moitié du chemin. Encore faut-il acheminer la nourriture jusqu'aux consommateurs, un tout autre défi. Le chiffre donne le vertige : **un tiers** de la nourriture produite dans le monde est perdu ou gaspillé, soit **1,3 milliard de tonnes** chaque année."
+          "text": "Saražot pietiekami ir tikai puse ceļa. Vēl pārtika jānogādā līdz patērētājiem, un tas ir pavisam cits izaicinājums. Skaitlis reibina galvu: **trešdaļa** pasaulē saražotās pārtikas tiek zaudēta vai izšķērdēta, tas ir, **1,3 miljardi tonnu** gadā."
         },
         {
           "type": "image",
           "asset": "discarded_fruit_vegetables_food_waste_dumpster",
           "ratio": "3:2",
-          "caption": "Campagne anti-gaspillage américaine de la Première Guerre mondiale : des enfants apprennent aux adultes à mettre fruits et légumes en conserve."
+          "caption": "ASV kampaņa pret pārtikas izšķērdēšanu Pirmā pasaules kara laikā: bērni māca pieaugušajiem konservēt augļus un dārzeņus."
         },
         {
           "type": "funFact",
-          "text": "Le [[pārtikas izšķērdēšana]] coûte plus qu'il n'y paraît. Jeter une pomme, c'est aussi jeter le temps, l'énergie et l'argent qu'il a fallu pour la faire pousser, la récolter et la transporter."
+          "text": "Vēl viena problēma ir [[pārtikas izšķērdēšana]]. Tā izmaksā vairāk, nekā šķiet. Izmest ābolu nozīmē izmest arī laiku, enerģiju un naudu, kas vajadzīga, lai to izaudzētu, novāktu un pārvadātu."
         },
         {
           "type": "paragraph",
-          "text": "Avec la [[globalizācija]] de l'agriculture, le commerce entre continents et l'ouverture des marchés, les pays ne dépendent plus de leur propre production pour nourrir leur population. Certains produits ne sont plus saisonniers : on les importe des quatre coins du monde. Mais cet accès élargi allonge les chaînes d'approvisionnement, et plus une chaîne est longue, plus elle compte de maillons fragiles."
+          "text": "Lauksaimniecībā notiek [[globalizācija]]: tirdzniecība starp kontinentiem un tirgu atvēršana nozīmē, ka valstis vairs nav atkarīgas tikai no savas ražošanas, lai pabarotu iedzīvotājus. Daži produkti vairs nav sezonāli: tos ieved no visiem pasaules nostūriem. Taču šī plašākā pieejamība pagarina piegādes ķēdes, un jo garāka ķēde, jo vairāk tajā vāju posmu."
         }
       ]
     },
     {
       "id": "course_234_la_securite_alimentaire_mondiale_p3",
-      "title": "Produire plus avec moins",
+      "title": "Ražot vairāk ar mazāk",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Augmenter les intrants pour suivre la demande n'est ni durable ni réaliste. Les agriculteurs doivent adopter de meilleures pratiques, et la démographie n'est pas la seule à les y pousser. Ils subissent déjà le changement climatique : une météo erratique et imprévisible les force à sortir des sentiers battus."
+          "text": "Palielināt resursu izlietojumu, lai tiktu līdzi pieprasījumam, nav ne ilgtspējīgi, ne reāli. Lauksaimniekiem jāievieš labāka prakse, un uz to viņus mudina ne tikai demogrāfija. Viņi jau izjūt klimata pārmaiņas: neprognozējami svārstīgie laikapstākļi spiež meklēt jaunus ceļus."
         },
         {
           "type": "paragraph",
-          "text": "Améliorer la santé des sols, optimiser les performances des animaux, planter des cultures résistantes au climat, pratiquer l'[[precīzā lauksaimniecība]] : autant de façons de tirer plus de moins. Plutôt que d'épandre de l'engrais sur tout un champ, un robot analyse le sol en temps réel et ne délivre que la dose exacte nécessaire à cette parcelle. Résultat : des coûts réduits, un impact environnemental limité et des rendements optimisés."
+          "text": "Ir vairāki veidi, kā iegūt vairāk no mazāk: uzlabot augsnes veselību, optimizēt dzīvnieku produktivitāti, stādīt klimatam izturīgas kultūras. Vēl viens veids ir [[precīzā lauksaimniecība]]. Tā vietā, lai izkliedētu mēslojumu uz visu lauku, robots reāllaikā analizē augsni un izdala tikai precīzu devu, kāda nepieciešama konkrētajam gabalam. Rezultāts: zemākas izmaksas, ierobežota ietekme uz vidi un optimizēta raža."
         },
         {
           "type": "image",
           "asset": "agricultural_drone_precision_farming_field",
           "ratio": "4:3",
-          "caption": "Vue aérienne d'un champ de céréales et de ses passages de tracteur, près de Dülmen (Allemagne), en 2024."
+          "caption": "Graudu lauka un traktoru brauktuvju skats no augšas pie Dülmen (Vācija), 2024. gadā."
         },
         {
           "type": "paragraph",
-          "text": "Ces technologies font partie de la solution et pèsent de plus en plus dans la recherche agricole. Pour nourrir huit milliards de personnes, il ne faut pas forcément plus de terres, plus d'animaux ni plus d'hectares de cultures. Il faut tirer davantage de ce que nous utilisons déjà."
+          "text": "Šīs tehnoloģijas ir daļa no risinājuma, un lauksaimniecības pētniecībā tām ir arvien lielāks svars. Lai pabarotu astoņus miljardus cilvēku, nav obligāti vajadzīgs vairāk zemes, vairāk dzīvnieku vai vairāk kultūraugu hektāru. Jāiegūst vairāk no tā, ko jau izmantojam."
         }
       ]
     },
     {
       "id": "course_234_la_securite_alimentaire_mondiale_p4",
-      "title": "Un problème partagé, de la ferme au consommateur",
+      "title": "Kopīga problēma, no saimniecības līdz patērētājam",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Les agriculteurs sont souvent montrés du doigt. Ce sont pourtant eux qui nourrissent nos enfants, et ils sont aussi les gardiens des campagnes et de l'environnement. Mais nourrir la planète n'est pas leur affaire à eux seuls : cela demande bien plus que de faire pousser des aliments."
+          "text": "Lauksaimniekus bieži rāda ar pirkstu. Tomēr tieši viņi baro mūsu bērnus, un viņi ir arī lauku un vides sargi. Taču planētas pabarošana nav tikai viņu darīšana: tai vajag daudz vairāk nekā pārtikas audzēšanu."
         },
         {
           "type": "paragraph",
-          "text": "Cela nous demande des choix durables : préférer des produits plus sains et d'origine responsable, et n'acheter que ce que nous mangerons vraiment. Toute la filière alimentaire, transformateurs, emballeurs, transporteurs, distributeurs et nous, les consommateurs, peut aussi changer ses habitudes. L'avenir de l'alimentation est un problème partagé. L'alimentation de huit milliards de personnes façonne la planète entière, et vous en faites partie."
+          "text": "Tas no mums prasa ilgtspējīgas izvēles: dot priekšroku veselīgākiem un atbildīgas izcelsmes produktiem un pirkt tikai to, ko patiešām apēdīsim. Visa pārtikas nozare, pārstrādātāji, iepakotāji, pārvadātāji, izplatītāji un mēs, patērētāji, var mainīt savus ieradumus. Pārtikas nākotne ir kopīga problēma. Astoņu miljardu cilvēku uzturs veido visu planētu, un tu esi tās daļa."
         },
         {
           "type": "takeaway",
-          "text": "La Terre produit assez pour tous : nourrir huit milliards d'humains suppose de gaspiller moins, de produire plus avec moins d'intrants et de terres, et de changer nos choix, de la ferme à l'assiette."
+          "text": "Zeme ražo pietiekami visiem: lai pabarotu astoņus miljardus cilvēku, jāizšķērdē mazāk, jāražo vairāk ar mazāk resursu un zemes un jāmaina mūsu izvēles, no saimniecības līdz šķīvim."
         }
       ]
     }

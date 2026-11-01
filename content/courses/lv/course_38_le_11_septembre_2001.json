@@ -1,133 +1,133 @@
 {
   "id": "course_38_le_11_septembre_2001",
-  "title": "Qu'est-ce que le 11 septembre 2001 a changé dans le monde ?",
+  "title": "Ko 2001. gada 11. septembris mainīja pasaulē?",
   "subtitle": "2001",
   "subject": "histoire",
   "subcategory": "Aukstais karš un mūsdienas",
-  "description": "Le **11 septembre 2001**, dix-neuf terroristes d'Al-Qaïda détournent quatre avions. L'attentat le plus meurtrier de l'histoire américaine ouvre l'ère de la guerre contre le terrorisme.",
+  "description": "**2001. gada 11. septembrī** deviņpadsmit Al Kaida teroristi nolaupa četras lidmašīnas. Amerikas vēsturē nāvējošākais uzbrukums sāk kara pret terorismu laikmetu.",
   "hero": {
     "image": "le_11_septembre_2001",
     "ratio": "16:9",
-    "hook": "Un matin de septembre qui referme l'après-Guerre froide et ouvre un siècle de guerres."
+    "hook": "Septembra rīts, kas noslēdz laiku pēc aukstā kara un ievada karu gadsimtu."
   },
   "sections": [
     {
       "id": "course_38_le_11_septembre_2001_intro",
-      "title": "Introduction",
+      "title": "Ievads",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le mardi **11 septembre 2001**, dix-neuf membres d'**[[Al Kaida]]**, organisation terroriste fondée par **Oussama Ben Laden**, détournent quatre avions. Deux frappent le **World Trade Center** à New York, un troisième le **Pentagone**, siège de la défense américaine. Le quatrième s'écrase en Pennsylvanie après la révolte des passagers."
+          "text": "Otrdien, **2001. gada 11. septembrī**, deviņpadsmit cilvēki no teroristiskās organizācijas **[[Al Kaida]]**, ko dibināja **Osama bin Ladens**, nolaupa četras lidmašīnas. Divas ietriecas **Pasaules tirdzniecības centrā** Ņujorkā, trešā **Pentagonā**, ASV aizsardzības resora mītnē. Ceturtā pēc pasažieru sacelšanās ietriecas zemē Pensilvānijā."
         },
         {
           "type": "paragraph",
-          "text": "Bilan : **2 977** morts. Au-delà du drame, l'attentat clôt l'espoir d'un ordre mondial apaisé et déclenche une série de conflits qui façonnent encore le XXIe siècle."
+          "text": "Bilance: **2977** bojāgājušie. Papildus traģēdijai uzbrukums apglabā cerību uz mierīgu pasaules kārtību un izraisa konfliktu virkni, kas vēl šodien veido mūsu gadsimtu."
         }
       ]
     },
     {
       "id": "course_38_le_11_septembre_2001_p1",
-      "title": "D'où vient Al-Qaïda ?",
+      "title": "Kā radās Al Kaida?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Oussama Ben Laden**, milliardaire saoudien devenu chef djihadiste, fonde **[[Al Kaida]]** à la fin des années **1980**, dans le sillage de la **[[padomju–Afganistānas karš (1979–1989)]]**. Après le retrait soviétique, il dénonce la présence américaine en **[[Saūda Arābija]]** et décide de frapper l'Occident."
+          "text": "**Osama bin Ladens**, saūdiešu miljardieris, kas kļuvis par džihādistu vadoni, dibina **[[Al Kaida]]** **1980**. gadu beigās, tūlīt pēc kara Afganistānā: **[[padomju–Afganistānas karš (1979–1989)]]**. Pēc padomju izstāšanās viņš nosoda amerikāņu klātbūtni valstī **[[Saūda Arābija]]** un nolemj uzbrukt Rietumiem."
         },
         {
           "type": "image",
           "asset": "osama_bin_laden_portrait",
           "ratio": "1:1",
-          "caption": "Oussama Ben Laden, fondateur d'Al-Qaïda."
+          "caption": "Osama bin Ladens, organizācijas Al Kaida dibinātājs."
         },
         {
           "type": "paragraph",
-          "text": "Les signes s'accumulent : attentat au World Trade Center en **1993**, ambassades d'Afrique de l'Est en **1998**, destroyer USS Cole en **2000**. Le cloisonnement entre la CIA et le FBI, services de renseignement américains, empêche pourtant de relier les fils à temps."
+          "text": "Pazīmes krājas: uzbrukums Pasaules tirdzniecības centram **1993**. gadā, uzbrukumi Austrumāfrikas vēstniecībām **1998**. gadā, uzbrukums kuģim USS Cole **2000**. gadā. Tomēr šķērsļi starp CIP un FIB, ASV izlūkdienestiem, neļauj laikus savilkt pavedienus kopā."
         },
         {
           "type": "funFact",
-          "text": "Les 19 pirates de l'air ont dépensé environ **400 000** dollars pour une attaque dont le coût économique global dépassera les **2 000 milliards**."
+          "text": "Uzbrukumam, kura kopējās ekonomiskās izmaksas pārsniegs **2000 miljardus**, 19 gaisa pirāti iztērēja aptuveni **400 000** dolāru."
         }
       ]
     },
     {
       "id": "course_38_le_11_septembre_2001_p2",
-      "title": "La chronologie du 11 septembre",
+      "title": "11. septembra hronoloģija",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "À **8 h 46**, le vol American 11 percute la Tour Nord. À **9 h 03**, United 175 frappe la Tour Sud en direct à la télévision. À **9 h 37**, American 77 touche le Pentagone. À **10 h 03**, United 93 s'écrase en Pennsylvanie."
+          "text": "Plkst. **8:46** lidojums American 11 ietriecas Ziemeļu tornī. Plkst. **9:03** United 175 trāpa Dienvidu tornim tiešraidē televīzijā. Plkst. **9:37** American 77 trāpa Pentagonam. Plkst. **10:03** United 93 ietriecas zemē Pensilvānijā."
         },
         {
           "type": "image",
           "asset": "world_trade_center_twin_towers_september_11_2001",
           "ratio": "16:9",
-          "caption": "Les Twin Towers du World Trade Center, cibles centrales des attentats."
+          "caption": "Pasaules tirdzniecības centra dvīņu torņi, uzbrukumu galvenie mērķi."
         },
         {
           "type": "paragraph",
-          "text": "Les tours s'effondrent : Sud à **9 h 59**, Nord à **10 h 28**. L'espace aérien américain est fermé pour la première fois. Ces images deviennent le traumatisme fondateur d'une génération."
+          "text": "Torņi sabrūk: Dienvidu plkst. **9:59**, Ziemeļu plkst. **10:28**. ASV gaisa telpa tiek slēgta pirmo reizi. Šie attēli kļūst par vienas paaudzes pamattraumu."
         }
       ]
     },
     {
       "id": "course_38_le_11_septembre_2001_p3",
-      "title": "La guerre contre le terrorisme",
+      "title": "Karš pret terorismu",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En octobre **2001**, l'opération **[[Enduring Freedom]]** vise l'Afghanistan : détruire Al-Qaïda et renverser les **[[Talibi]]**, mouvement islamiste qui abritait Ben Laden. Kaboul tombe vite. La guerre dure vingt ans."
+          "text": "**2001**. gada oktobrī operācija **[[Enduring Freedom]]** vēršas pret Afganistānu: iznīcināt Al Kaida un gāzt islāmistu kustību **[[Talibi]]**, kas slēpa bin Ladenu. Kabula krīt ātri. Karš ilgst divdesmit gadus."
         },
         {
           "type": "paragraph",
-          "text": "En mars **2003**, sans mandat de l'ONU, les États-Unis lancent [[Irākas karš (2003)]], accusant le dictateur **[[Saddams Huseins]]** d'armes de destruction massive. L'accusation est fausse ; le pays bascule dans le chaos. À **[[Gvantanamo]]**, base américaine à Cuba, des détenus restent hors du droit classique. Ben Laden est tué le **1er mai 2011** au Pakistan."
+          "text": "**2003**. gada martā bez ANO mandāta ASV iebrūk Irākā, un sākas [[Irākas karš (2003)]]. ASV apgalvo, ka diktators **[[Saddams Huseins]]** glabā masu iznīcināšanas ieročus. Apsūdzība ir nepatiesa, un valsts iegrimst haosā. ASV bāzē Kubā, **[[Gvantanamo]]**, ieslodzītie paliek ārpus parastajām tiesībām. Bin Ladens tiek nogalināts **2011. gada 1. maijā** Pakistānā."
         }
       ]
     },
     {
       "id": "course_38_le_11_septembre_2001_p4",
-      "title": "Un monde sous surveillance",
+      "title": "Pasaule zem uzraudzības",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Aux États-Unis, le **PATRIOT Act**, loi d'urgence, élargit massivement la surveillance. L'Europe suit. Les aéroports changent pour toujours. Ground Zero, site des tours effondrées, devient mémorial et symbole de résilience."
+          "text": "ASV **PATRIOT Act**, ārkārtas likums, ievērojami paplašina uzraudzību. Eiropa seko. Lidostas mainās uz visiem laikiem. Ground Zero, sabrukušo torņu vieta, kļūst par memoriālu un noturības simbolu."
         },
         {
           "type": "paragraph",
-          "text": "Les guerres qui suivent causent des centaines de milliers de morts et des millions de déplacés. Le terrorisme global, plus décentralisé, utilise les outils de la mondialisation pour la combattre."
+          "text": "Karos, kas seko, iet bojā simtiem tūkstošu cilvēku, un miljoniem ir spiesti pamest mājas. Globālais terorisms, kļuvis decentralizētāks, izmanto globalizācijas rīkus, lai ar to cīnītos."
         },
         {
           "type": "timeline",
           "events": [
             {
-              "date": "11 sept. 2001",
-              "title": "Attentats",
-              "detail": "2 977 morts aux États-Unis."
+              "date": "2001. gada 11. septembris",
+              "title": "Uzbrukumi",
+              "detail": "2977 bojāgājušie ASV."
             },
             {
-              "date": "oct. 2001",
-              "title": "Afghanistan",
-              "detail": "Opération Enduring Freedom."
+              "date": "2001. gada oktobris",
+              "title": "Afganistāna",
+              "detail": "Operācija Enduring Freedom."
             },
             {
               "date": "2003",
-              "title": "Irak",
-              "detail": "Invasion sans mandat de l'ONU."
+              "title": "Irāka",
+              "detail": "Iebrukums bez ANO mandāta."
             },
             {
               "date": "2011",
-              "title": "Mort de Ben Laden",
-              "detail": "Raid américain au Pakistan."
+              "title": "Bin Ladena nāve",
+              "detail": "Amerikāņu reids Pakistānā."
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "Le **11 septembre 2001** transforme une menace en guerre globale : interventions en Afghanistan et en Irak, et un virage sécuritaire durable dans les démocraties."
+          "text": "**2001. gada 11. septembris** pārvērš draudus globālā karā: iejaukšanās Afganistānā un Irākā un ilgstošs drošības pavērsiens demokrātijās."
         }
       ]
     }

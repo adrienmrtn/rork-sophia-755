@@ -1,100 +1,100 @@
 {
   "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859",
-  "title": "La théorie de l'évolution de Darwin",
+  "title": "Darvina evolūcijas teorija",
   "subtitle": "1859",
   "subject": "sciences",
   "subcategory": "Atklājumi, kas mainīja pasauli",
-  "description": "En 1859, Darwin publie L'Origine des espèces. L'idée centrale : le vivant change au fil du temps par sélection naturelle.",
+  "description": "1859. gadā Darvins publicē darbu „Sugu izcelšanās“. Galvenā doma: dzīvā daba laika gaitā mainās dabiskās izlases ceļā.",
   "hero": {
     "image": "la_theorie_de_l_evolution_de_darwin",
     "ratio": "16:9",
-    "hook": "Les espèces ne sont pas figées. Elles changent. Lentement. Mais sûrement."
+    "hook": "Sugas nav nemainīgas. Tās mainās. Lēnām. Bet droši."
   },
   "sections": [
     {
       "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_intro",
-      "title": "Introduction",
+      "title": "Ievads",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En **1859**, **Charles Darwin** publie *De l'origine des espèces*. Le livre choque, passionne, divise. Son idée centrale est pourtant simple à formuler."
+          "text": "**1859**. gadā **Čārlzs Darvins** publicē grāmatu *Sugu izcelšanās*. Grāmata šokē, aizrauj, šķeļ sabiedrību. Tomēr tās galveno ideju ir viegli formulēt."
         },
         {
           "type": "paragraph",
-          "text": "Les êtres vivants varient. Certaines variations aident à survivre et à se reproduire. Ces variations se transmettent. Au fil des générations, les populations changent."
+          "text": "Dzīvās būtnes atšķiras cita no citas. Dažas atšķirības palīdz izdzīvot un vairoties. Šīs atšķirības tiek mantotas. Paaudzēm mijoties, populācijas mainās."
         }
       ]
     },
     {
       "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_p1",
-      "title": "Le voyage qui ouvre les yeux",
+      "title": "Ceļojums, kas atver acis",
       "free": false,
       "blocks": [
         {
           "type": "image",
           "asset": "charles_darwin_portrait",
           "ratio": "4:3",
-          "caption": "Darwin, naturaliste britannique du XIXe siècle."
+          "caption": "Darvins, deviņpadsmitā gadsimta britu dabaszinātnieks."
         },
         {
           "type": "paragraph",
-          "text": "Jeune, Darwin part sur le navire **Beagle**. Pendant des années, il observe plantes, fossiles, oiseaux. Aux îles Galápagos, il remarque que des oiseaux proches ont des becs différents selon leur nourriture."
+          "text": "Jaunībā Darvins dodas ceļojumā ar kuģi **Beagle**. Vairākus gadus viņš pēta augus, fosilijas, putnus. Galapagu salās viņš pamana, ka radniecīgiem putniem knābji atšķiras atkarībā no barības."
         },
         {
           "type": "image",
           "asset": "darwin_finches_galapagos_beaks",
           "ratio": "4:3",
-          "caption": "Des becs adaptés à des régimes différents : un indice fort."
+          "caption": "Dažādam uzturam pielāgoti knābji: spēcīga norāde."
         }
       ]
     },
     {
       "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_p2",
-      "title": "La sélection naturelle, en clair",
+      "title": "Dabiskā izlase vienkāršoti",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Imagine une population d'animaux. Certains courent un peu plus vite, digèrent un peu mieux, résistent un peu plus au froid. Si cela aide à survivre et à avoir des petits, ces traits deviennent plus fréquents."
+          "text": "Iedomājies dzīvnieku populāciju. Daži skrien mazliet ātrāk, mazliet labāk sagremo barību, mazliet labāk iztur aukstumu. Ja tas palīdz izdzīvot un radīt mazuļus, šīs īpašības kļūst arvien biežākas."
         },
         {
           "type": "paragraph",
-          "text": "Ce n'est pas que les individus « veulent » évoluer. C'est un filtre : le milieu garde plutôt ce qui marche. Darwin appelle cela la **sélection naturelle**."
+          "text": "Nav tā, ka indivīdi „grib“ evolucionēt. Tas ir filtrs: vide drīzāk saglabā to, kas darbojas. Darvins to sauc par **dabisko izlasi**."
         },
         {
           "type": "funFact",
-          "text": "Darwin a attendu longtemps avant de publier. Il craignait le scandale. Un autre naturaliste, **Alfred Russel Wallace**, arrive à des idées proches : cela pousse Darwin à sortir son livre."
+          "text": "Darvins ilgi gaidīja ar publicēšanu. Viņš baidījās no skandāla. Cits dabaszinātnieks **Alfrēds Rasels Volless** nonāk pie līdzīgām domām, un tas pamudina Darvinu laist grāmatu klajā."
         }
       ]
     },
     {
       "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_p3",
-      "title": "Le choc des idées",
+      "title": "Ideju sadursme",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Au XIXe siècle, beaucoup croient que les espèces ont été créées telles quelles. Dire qu'elles changent, et que l'humain partage une histoire avec d'autres animaux, bouscule la religion et la société."
+          "text": "Deviņpadsmitajā gadsimtā daudzi tic, ka sugas radītas tieši tādas, kādas tās ir. Apgalvojums, ka tās mainās un ka cilvēkam ir kopīga vēsture ar citiem dzīvniekiem, satricina reliģiju un sabiedrību."
         },
         {
           "type": "paragraph",
-          "text": "La science, elle, progresse : les fossiles, la géographie des espèces, puis plus tard la génétique, confirment l'idée générale."
+          "text": "Zinātne savukārt virzās uz priekšu: fosilijas, sugu ģeogrāfija un vēlāk ģenētika apstiprina vispārējo ideju."
         }
       ]
     },
     {
       "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_p4",
-      "title": "Et aujourd'hui ?",
+      "title": "Un šodien?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "On sait maintenant que l'ADN porte les variations. On observe l'évolution en labo (bactéries, virus) et dans la nature. On combat aussi les bactéries résistantes aux antibiotiques : c'est de l'évolution en direct."
+          "text": "Tagad ir zināms, ka DNS nes šīs atšķirības. Evolūciju novēro laboratorijā (baktērijas, vīrusi) un dabā. Cīnās arī pret baktērijām, kas ir izturīgas pret antibiotikām: tā ir evolūcija tiešraidē."
         },
         {
           "type": "takeaway",
-          "text": "Darwin a montré que le vivant évolue par sélection naturelle : les traits utiles à la survie et à la reproduction se répandent. La génétique moderne a confirmé et précisé ce cadre."
+          "text": "Darvins parādīja, ka dzīvā daba mainās dabiskās izlases ceļā: izdzīvošanai un vairošanai noderīgas īpašības izplatās. Mūsdienu ģenētika šo ietvaru ir apstiprinājusi un precizējusi."
         }
       ]
     }

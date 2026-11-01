@@ -1,127 +1,127 @@
 {
   "id": "course_15_la_belle_epoque_1871_1914",
-  "title": "Qu'est-ce que la Belle Époque ?",
+  "title": "Kas bija Belle Époque?",
   "subtitle": "1871-1914",
   "subject": "histoire",
   "subcategory": "Revolūcijas un mūsdienu konflikti",
-  "description": "Entre la fin de la guerre de 1870 et août 1914, l'Europe croit au progrès. Électricité, expositions, arts nouveaux… et fractures qui mènent à la catastrophe.",
+  "description": "No 1870. gada kara beigām līdz 1914. gada augustam Eiropa tic progresam. Elektrība, izstādes, jauni mākslas virzieni... un plaisas, kas ved uz katastrofu.",
   "hero": {
     "image": "la_belle_epoque",
     "ratio": "16:9",
-    "hook": "Quarante ans de foi dans le progrès… avant que tout bascule en 1914."
+    "hook": "Četrdesmit gadu ticība progresam... pirms 1914. gadā viss apvēršas."
   },
   "sections": [
     {
       "id": "course_15_la_belle_epoque_1871_1914_intro",
-      "title": "Introduction",
+      "title": "Ievads",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La **Belle Époque** désigne la période de paix relative entre la fin de la [[Francijas-Prūsijas karš]] (**1871**) et le déclenchement de la [[Pirmais pasaules karš]] (**1914**). On y croit à la science, au progrès, à la raison."
+          "text": "**Belle Époque** ir relatīvā miera laiks, kas sākas, kad beidzas [[Francijas-Prūsijas karš]] (**1871**), un beidzas, kad sākas [[Pirmais pasaules karš]] (**1914**). Tolaik tic zinātnei, progresam, saprātam."
         },
         {
           "type": "paragraph",
-          "text": "Pour les classes aisées d'Europe occidentale, ce sont quatre décennies de confort et d'inventions. Mais sous le vernis brillent déjà des fractures sociales et des rivalités qui feront tout exploser."
+          "text": "Rietumeiropas turīgajām aprindām tās ir četras komforta un izgudrojumu desmitgades. Taču zem spožā laka jau redzamas sociālas plaisas un sāncensība, kas visu uzspridzinās."
         }
       ]
     },
     {
       "id": "course_15_la_belle_epoque_1871_1914_p1",
-      "title": "Quand la technique transforme le quotidien",
+      "title": "Kad tehnika maina ikdienu",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Une deuxième révolution industrielle apporte l'**électricité**, le **pétrole**, la chimie. Le tramway et le métro (Paris, **1900**) changent la ville. L'automobile et l'avion naissent. Le téléphone raccourcit les distances."
+          "text": "Otrā industriālā revolūcija atnes **elektrību**, **naftu**, ķīmiju. Tramvajs un metro (Parīze, **1900**) maina pilsētu. Dzimst automobilis un lidmašīna. Telefons saīsina attālumus."
         },
         {
           "type": "image",
           "asset": "paris_universal_exhibition_1900",
           "ratio": "4:3",
-          "caption": "L'Exposition universelle de 1900 à Paris, vitrine du progrès."
+          "caption": "1900. gada Pasaules izstāde Parīzē, progresa vitrīna."
         },
         {
           "type": "funFact",
-          "text": "Le nom « Belle Époque » n'apparaît qu'après **1914**. Les contemporains ne vivaient pas « la Belle Époque » : ce sont les survivants des tranchées qui ont inventé ce paradis perdu."
+          "text": "Nosaukums „Belle Époque“ parādās tikai pēc **1914**. gada. Tā laika cilvēki nedzīvoja „Belle Époque“: šo zudušo paradīzi izdomāja tranšeju izdzīvojušie."
         },
         {
           "type": "paragraph",
-          "text": "L'**Exposition universelle de 1900** attire **50 millions** de visiteurs. Le cinéma des frères Lumière et le Moulin Rouge font de Paris une capitale du spectacle. [[Ogista Konta pozitīvisms]], une philosophie très influente, résume l'optimisme : la science résoudra tout."
+          "text": "**1900. gada Pasaules izstāde** piesaista **50 miljonus** apmeklētāju. Brāļu Limjēru kino un Moulin Rouge padara Parīzi par izklaides galvaspilsētu. Ļoti ietekmīgā filozofija [[Ogista Konta pozitīvisms]] apkopo to optimismu: zinātne atrisinās visu."
         }
       ]
     },
     {
       "id": "course_15_la_belle_epoque_1871_1914_p2",
-      "title": "L'envers du décor",
+      "title": "Dekorāciju otra puse",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Derrière les boulevards, les ouvriers travaillent souvent **10 à 12 heures** par jour, sans vraie protection. La misère urbaine nourrit les tensions entre classes."
+          "text": "Aiz bulvāriem strādnieki bieži strādā **10 līdz 12 stundas** dienā bez reālas aizsardzības. Pilsētu nabadzība veicina spriedzi starp šķirām."
         },
         {
           "type": "image",
           "asset": "eiffel_tower_1889",
           "ratio": "4:3",
-          "caption": "La tour Eiffel (1889), icône d'une modernité qui ne profite pas à tous."
+          "caption": "Eifela tornis (1889), modernitātes ikona, kas nenāk par labu visiem."
         },
         {
           "type": "paragraph",
-          "text": "À l'échelle du monde, l'Europe se partage l'Afrique. La [[Berlīnes konference]] (**1884-1885**) fixe des frontières sans consulter les peuples concernés. En France, l'[[Dreifusa lieta]] déchire la République : un officier juif, Alfred Dreyfus, est condamné à tort pour espionnage, et l'antisémitisme éclate au grand jour."
+          "text": "Pasaules mērogā Eiropa sadala Āfriku. [[Berlīnes konference]] (**1884-1885**) nosaka robežas, neprasot attiecīgajām tautām. Francijā republiku šķeļ [[Dreifusa lieta]]: ebreju izcelsmes virsnieks Alfrēds Dreifuss tiek nepamatoti notiesāts par spiegošanu, un antisemītisms izvirst atklātībā."
         }
       ]
     },
     {
       "id": "course_15_la_belle_epoque_1871_1914_p3",
-      "title": "Arts nouveaux, puis la chute",
+      "title": "Jauni mākslas virzieni, tad krišana",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Les arts explosent. L'[[jūgendstils]] courbes les façades. Le [[fovisms]] et le [[kubisms]] bousculent la peinture. Le médecin [[Zigmunds Freids]] explore l'inconscient. Albert Einstein publie la [[relativitāte]] en **1905** : l'espace et le temps ne sont plus ce qu'on croyait."
+          "text": "Māksla uzsprāgst. [[jūgendstils]] izliec fasādes līkumos. [[fovisms]] un [[kubisms]] sagrauj ierasto glezniecību. Ārsts [[Zigmunds Freids]] pēta zemapziņu. **1905**. gadā Alberts Einšteins ievieš jaunu jēdzienu: [[relativitāte]]. Telpa un laiks vairs nav tas, ko domāja agrāk."
         },
         {
           "type": "funFact",
-          "text": "En **1913**, le ballet *Le Sacre du printemps* d'Igor Stravinsky provoque un tel scandale à Paris que des spectateurs en viennent aux mains."
+          "text": "**1913**. gadā Igora Stravinska balets *Pavasara rituāls* Parīzē izraisa tādu skandālu, ka skatītāji sakaujas."
         },
         {
           "type": "paragraph",
-          "text": "Puis tout bascule. Le **28 juin 1914**, l'archiduc **François-Ferdinand**, héritier d'Autriche-Hongrie, est assassiné à Sarajevo. L'engrenage des alliances se déclenche. Le **4 août**, le Royaume-Uni entre en guerre. La foi dans le progrès meurt dans les tranchées."
+          "text": "Tad viss apvēršas. **1914. gada 28. jūnijā** Sarajevā noslepkavo erchercogu **Francu Ferdinandu**, Austroungārijas troņmantnieku. Sāk darboties savienību mehānisms. **4. augustā** Apvienotā Karaliste iestājas karā. Ticība progresam mirst tranšejās."
         },
         {
           "type": "timeline",
           "events": [
             {
               "date": "1871",
-              "title": "Fin de la guerre franco-prussienne",
-              "detail": "Naissance d'une Allemagne unifiée, ressentiment français."
+              "title": "Francijas-Prūsijas kara beigas",
+              "detail": "Dzimst vienotā Vācija, franču aizvainojums."
             },
             {
               "date": "1889",
-              "title": "Tour Eiffel",
-              "detail": "Symbole de la modernité technique."
+              "title": "Eifela tornis",
+              "detail": "Tehniskās modernitātes simbols."
             },
             {
               "date": "1894-1906",
-              "title": "Affaire Dreyfus",
-              "detail": "La République se déchire."
+              "title": "Dreifusa lieta",
+              "detail": "Republika šķeļas."
             },
             {
               "date": "1900",
-              "title": "Exposition universelle",
-              "detail": "Paris vitrine du monde."
+              "title": "Pasaules izstāde",
+              "detail": "Parīze, pasaules vitrīna."
             },
             {
-              "date": "août 1914",
-              "title": "Grande Guerre",
-              "detail": "La Belle Époque s'achève brutalement."
+              "date": "1914. gada augusts",
+              "title": "Lielais karš",
+              "detail": "Belle Époque strauji beidzas."
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "La Belle Époque (**1871-1914**) allie progrès technique et fractures profondes, avant de sombrer dans le chaos de la Grande Guerre."
+          "text": "Belle Époque (**1871-1914**) savieno tehnisko progresu un dziļas plaisas, pirms nogrimst Lielā kara haosā."
         }
       ]
     }

@@ -1,118 +1,118 @@
 {
   "id": "course_176_achille_le_talon_et_l_invulnerabilite",
-  "title": "D'où vient l'expression « talon d'Achille » ?",
-  "subtitle": "La gloire et le point faible",
+  "title": "No kurienes cēlies izteiciens „Ahileja papēdis“?",
+  "subtitle": "Slava un vājā vieta",
   "subject": "mythologie",
   "subcategory": "Grieķija: varoņi",
-  "description": "Achille, héros de l'Iliade, semble invincible. Un talon, une flèche, et le mythe invente la métaphore universelle du point faible fatal.",
+  "description": "Ahillejs, Iliādas varonis, šķiet neuzvarams. Papēdis, bulta, un mīts izgudro vispārzināmo liktenīgas vājās vietas metaforu.",
   "hero": {
     "image": "achille_le_talon_et_l_invulnerabilite",
     "ratio": "16:9",
-    "hook": "Le plus grand guerrier de Troie. Une peau presque impénétrable. Et un talon qui change le sens du mot « faiblesse »."
+    "hook": "Lielākais Trojas karotājs. Gandrīz neizcaurdurama āda. Un papēdis, kas maina vārda „vājums“ nozīmi."
   },
   "sections": [
     {
       "id": "course_176_achille_le_talon_et_l_invulnerabilite_intro",
-      "title": "Introduction",
+      "title": "Ievads",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Achille** est le héros central de l'**Iliade**, le poème d'Homère sur la guerre de Troie. Fils de la nymphe **Thétis** et du mortel **Pélée**, il incarne le guerrier parfait : rapide, féroce, obsédé par le [[Kleoss]], la gloire qui survit après la mort."
+          "text": "**Ahillejs** ir **Iliādas**, Homēra poēmas par Trojas karu, centrālais varonis. Nimfas **Tetidas** un mirstīgā **Peleja** dēls, viņš ir ideāls karotājs: ātrs, mežonīgs un apsēsts ar vienu jēdzienu: [[Kleoss]], slavu, kas pārdzīvo nāvi."
         },
         {
           "type": "paragraph",
-          "text": "Son histoire mêle puissance quasi divine et mortalité certaine. Un détail du corps, le talon, est devenu le symbole universel de la faille cachée au cœur de la force."
+          "text": "Viņa stāsts apvieno gandrīz dievišķu spēku un neizbēgamu mirstību. Viena ķermeņa detaļa, papēdis, ir kļuvis par vispārzināmu simbolu plaisai, kas slēpjas spēka sirdī."
         }
       ]
     },
     {
       "id": "course_176_achille_le_talon_et_l_invulnerabilite_p1",
-      "title": "Plongé dans le Styx",
+      "title": "Iegremdēts Stiksā",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Une prophétie annonce qu'Achille sera plus puissant que son père. **Zeus** et **Poséidon** renoncent donc à Thétis et la marient à Pélée. Pour protéger l'enfant, Thétis le plonge dans le **Styx**, fleuve des Enfers dont l'eau rendrait la peau impénétrable."
+          "text": "Pareģojums vēsta, ka Ahillejs būs varenāks par savu tēvu. Tāpēc **Zevs** un **Poseidons** atsakās no Tetidas un izprecina viņu Pelejam. Lai pasargātu bērnu, Tetida iegremdē viņu **Stiksā**, pazemes upē, kuras ūdenim piedēvē spēju padarīt ādu neizcaurdurāmu."
         },
         {
           "type": "image",
           "asset": "thetis_dipping_achilles_styx_baby_painting",
           "ratio": "4:3",
-          "caption": "Thétis plonge Achille dans le Styx, en le tenant par le talon."
+          "caption": "Tetida iegremdē Ahilleju Stiksā, turot viņu aiz papēža."
         },
         {
           "type": "funFact",
-          "text": "Cette version magique de l'invulnérabilité apparaît tard, chez le poète [[Stacijs]] (Ier siècle). Chez Homère, Achille n'est pas protégé par un sort : il est simplement le meilleur combattant, et donc toujours mortel."
+          "text": "Šī burvju neievainojamības versija parādās vēlu, 1. gadsimtā, un tās autors ir dzejnieks [[Stacijs]]. Homēram Ahillejs nav aizsargāts ar buramvārdiem: viņš vienkārši ir labākais cīnītājs, tātad joprojām mirstīgs."
         },
         {
           "type": "paragraph",
-          "text": "Elle le tient par le **talon**. Cette zone reste sèche, donc vulnérable. Le détail technique devient le cœur du mythe."
+          "text": "Tetida tur viņu aiz **papēža**. Šī vieta paliek sausa, tātad ievainojama. Tehniskā detaļa kļūst par mīta sirdi."
         }
       ]
     },
     {
       "id": "course_176_achille_le_talon_et_l_invulnerabilite_p2",
-      "title": "Colère, Patrocle, Hector",
+      "title": "Dusmas, Patrokls, Hektors",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Devant Troie, Achille se retire du combat après un affront d'**Agamemnon**, chef des Grecs, qui lui prend sa captive [[Brīsēida]]. Sans lui, l'armée achéenne s'effondre. C'est la mort de **Patrocle**, son compagnon le plus cher, qui le ramène au front."
+          "text": "Pie Trojas Ahillejs atkāpjas no cīņas pēc grieķu vadoņa **Agamemnona** aizvainojuma, kas atņem viņam gūstekni vārdā [[Brīsēida]]. Bez viņa ahaju armija sabrūk. Viņu atgriež frontē **Patrokla**, viņa visdārgākā biedra, nāve."
         },
         {
           "type": "image",
           "asset": "achilles_hector_battle_troy_ancient_vase",
           "ratio": "4:3",
-          "caption": "Achille face à Hector, duel décisif sous les murs de Troie."
+          "caption": "Ahillejs pret Hektoru, izšķirošs duelis zem Trojas mūriem."
         },
         {
           "type": "paragraph",
-          "text": "Il revêt une armure forgée par [[Hēfaists]], dieu forgeron, et lance une [[aristeja]], une suite d'exploits guerriers hors norme. Il tue **Hector**, prince de Troie, puis traîne son corps derrière son char. Cet [[hibrīss]], cet excès orgueilleux, choque. Seule la visite nocturne du vieux roi **Priam** ramène Achille à l'humanité : il rend enfin le corps pour les funérailles."
+          "text": "Viņš apvelk bruņas, ko darinājis kalējdievs [[Hēfaists]], un viņam sākas [[aristeja]], neparastu karotāja varoņdarbu virkne. Viņš nogalina **Hektoru**, Trojas princi, tad velk viņa līķi aiz saviem kara ratiem. Šis [[hibrīss]], lepna pārmērība, satriec. Tikai vecā karaļa **Priama** nakts vizīte atgriež Ahilleju cilvēcībā: viņš beidzot atdod līķi bērēm."
         },
         {
           "type": "funFact",
-          "text": "Achille aurait eu le choix : une vie longue et oubliée, ou une vie courte et célèbre à jamais. Il choisit la gloire. Ce choix définit l'héroïsme tragique grec."
+          "text": "Ahillejam esot bijusi izvēle: ilga un aizmirsta dzīve vai īsa un uz mūžiem slavena. Viņš izvēlas slavu. Šī izvēle definē grieķu traģisko varonību."
         }
       ]
     },
     {
       "id": "course_176_achille_le_talon_et_l_invulnerabilite_p3",
-      "title": "La flèche au talon",
+      "title": "Bulta papēdī",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Sous les murs de Troie, **Pâris**, prince archer peu estimé pour sa bravoure, décoche une flèche. Guidé par **Apollon**, le projectile atteint le talon d'Achille. Le plus grand guerrier tombe par le moins vaillant des combattants."
+          "text": "Pie Trojas mūriem **Parīds**, princis strēlnieks, kuru par drosmi augstu nevērtē, izšauj bultu. **Apolona** vadīta, bulta trāpa Ahileja papēdī. Lielākais karotājs krīt no mazāk drosmīgā cīnītāja rokas."
         },
         {
           "type": "image",
           "asset": "achilles_death_heel_arrow_paris_ancient_art",
           "ratio": "4:3",
-          "caption": "La mort d'Achille : la flèche de Pâris atteint le talon."
+          "caption": "Ahileja nāve: Parīda bulta trāpa papēdī."
         },
         {
           "type": "paragraph",
-          "text": "Ses cendres sont mêlées à celles de Patrocle. Même mort, Achille reste un enjeu : on se dispute ses armes. L'ère des héros commence à se fermer."
+          "text": "Viņa pelni tiek sajaukti ar Patrokla pelniem. Arī miris Ahillejs paliek strīda objekts: ap viņa ieročiem izceļas ķildas. Varoņu laikmets sāk beigties."
         }
       ]
     },
     {
       "id": "course_176_achille_le_talon_et_l_invulnerabilite_p4",
-      "title": "Un talon dans notre langue",
+      "title": "Papēdis mūsu valodā",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L'expression « **talon d'Achille** » désigne encore aujourd'hui la faille d'un système apparemment solide. En anatomie, le [[Ahileja cīpsla (anatomijā)]] rappelle le même mythe. En politique, en informatique ou en stratégie, l'idée reste la même : rien n'est plus fort que son maillon le plus faible."
+          "text": "Izteiciens „**Ahileja papēdis**“ vēl šodien apzīmē šķietami stipras sistēmas vājo vietu. Anatomijā to pašu mītu atgādina [[Ahileja cīpsla (anatomijā)]]. Politikā, informātikā vai stratēģijā doma paliek tā pati: nekas nav stiprāks par savu vājāko posmu."
         },
         {
           "type": "paragraph",
-          "text": "Au-delà de la métaphore, Achille incarne le dilemme grec : vivre longtemps dans l'ombre, ou briller peu et rester immortel dans les récits. En choisissant le combat, il a gagné l'immortalité littéraire."
+          "text": "Aiz metaforas Ahillejs iemieso grieķu dilemmu: dzīvot ilgi ēnā vai spīdēt neilgi un palikt nemirstīgam stāstos. Izvēloties cīņu, viņš ieguva literāro nemirstību."
         },
         {
           "type": "takeaway",
-          "text": "Presque invulnérable grâce au Styx, Achille meurt à Troie d'une flèche au talon. Le mythe laisse à la postérité le [[Ahileja cīpsla (anatomijā)]] et l'image universelle du point faible fatal."
+          "text": "Pateicoties Stiksam, gandrīz neievainojamais Ahillejs mirst Trojā no bultas papēdī. Mīts atstāj pēcnācējiem anatomijas jēdzienu [[Ahileja cīpsla (anatomijā)]] un vispārzināmo liktenīgās vājās vietas tēlu."
         }
       ]
     }

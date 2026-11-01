@@ -1,118 +1,118 @@
 {
   "id": "course_172_thesee_et_le_minotaure",
-  "title": "Comment Thésée a-t-il vaincu le Minotaure ?",
-  "subtitle": "Le fil, le monstre, les voiles",
+  "title": "Kā Tēsejs uzvarēja Minotauru?",
+  "subtitle": "Pavediens, briesmonis, buras",
   "subject": "mythologie",
   "subcategory": "Grieķija: varoņi",
-  "description": "Thésée tue le Minotaure grâce au fil d'Ariane. Mais il oublie de changer les voiles : son père Égée se jette à la mer, qui porte encore son nom.",
+  "description": "Tēsejs nogalina Minotauru ar Ariadnes pavedienu. Taču viņš aizmirst nomainīt buras: tēvs Egejs metas jūrā, kas joprojām nes viņa vārdu.",
   "hero": {
     "image": "thesee_et_le_minotaure",
     "ratio": "16:9",
-    "hook": "Un monstre dans un labyrinthe. Un fil pour en sortir. Des voiles oubliées qui baptisent une mer."
+    "hook": "Briesmonis labirintā. Pavediens, lai tiktu ārā. Aizmirstas buras, kas dod vārdu jūrai."
   },
   "sections": [
     {
       "id": "course_172_thesee_et_le_minotaure_intro",
-      "title": "Introduction",
+      "title": "Ievads",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Thésée**, héros fondateur d'Athènes, affronte le **Minotaure**, créature mi-homme mi-taureau cachée dans le [[Labirints]] de Crète. Le récit mêle courage, ruse amoureuse et tragédie familiale."
+          "text": "Krētā ir [[Labirints]], un tajā slēpjas **Minotaurs**, pusvīrs un pusbullis. Pretī tam stājas **Tēsejs**, Atēnu dibinātājs varonis. Stāsts savij drosmi, mīlas viltu un ģimenes traģēdiju."
         },
         {
           "type": "paragraph",
-          "text": "En tuant le monstre, Thésée libère Athènes d'un tribut sanglant. Mais un détail oublié, des voiles noires au lieu de blanches, coûtera la vie à son père et donnera son nom à la mer Égée."
+          "text": "Nogalinot briesmoni, Tēsejs atbrīvo Atēnas no asiņainas nodevas. Taču aizmirsta sīkumā, melnas buras baltu vietā, maksās dzīvību viņa tēvam un dos vārdu Egejas jūrai."
         }
       ]
     },
     {
       "id": "course_172_thesee_et_le_minotaure_p1",
-      "title": "Le Minotaure et le tribut d'Athènes",
+      "title": "Minotaurs un Atēnu nodeva",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le roi **Minos** de Crète refuse de sacrifier un taureau blanc à **Poséidon**, dieu des mers. Pour se venger, Poséidon inspire à la reine **Pasiphaé** une passion pour l'animal. Naît le Minotaure. Minos charge l'inventeur [[Daidals]] de bâtir une prison sans issue : le Labyrinthe."
+          "text": "Krētas karalis **Minoss** atsakās upurēt baltu vērsi jūru dievam **Poseidonam**. Atriebjoties Poseidons liek karalienei **Pasifajai** iemīlēt šo dzīvnieku. Piedzimst Minotaurs. Minoss pavēl uzbūvēt cietumu bez izejas. To izdara izgudrotājs [[Daidals]]: tas ir Labirints."
         },
         {
           "type": "image",
           "asset": "theseus_minotaur_cretan_labyrinth_painting",
           "ratio": "4:3",
-          "caption": "Le Minotaure, enfermé dans le Labyrinthe crétois."
+          "caption": "Minotaurs, ieslodzīts Krētas Labirintā."
         },
         {
           "type": "paragraph",
-          "text": "La Crète domine alors la mer : une [[Talasokrātija]]. Après une guerre perdue, Athènes doit livrer tous les neuf ans **sept jeunes hommes et sept jeunes filles** en pâture au monstre. À la troisième livraison, **Thésée**, fils du roi **Égée**, se porte volontaire."
+          "text": "Krēta tolaik valda pār jūru: tā ir [[Talasokrātija]]. Pēc zaudēta kara Atēnām ik pēc deviņiem gadiem jānodod briesmonim par laupījumu **septiņi jaunekļi un septiņas jaunavas**. Trešajā reizē **Tēsejs**, karaļa **Egeja** dēls, pieteicas brīvprātīgi."
         },
         {
           "type": "funFact",
-          "text": "Égée et Thésée conviennent d'un signal : voiles **blanches** si le héros revient vivant, voiles **noires** s'il est mort. Ce détail décidera d'un drame."
+          "text": "Egejs un Tēsejs vienojas par signālu: **baltas** buras, ja varonis atgriežas dzīvs, **melnas** buras, ja miris. Šī detaļa novedīs pie drāmas."
         }
       ]
     },
     {
       "id": "course_172_thesee_et_le_minotaure_p2",
-      "title": "Le fil d'Ariane",
+      "title": "Ariadnes pavediens",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En Crète, **Ariane**, fille de Minos, s'éprend de Thésée. Elle sait que la force ne suffit pas dans le Labyrinthe. Avec l'aide de Dédale, elle lui remet une pelote de laine : [[Ariadnes pavediens]]. Il l'attache à l'entrée et déroule le fil en avançant."
+          "text": "Krētā **Ariadne**, Minosa meita, iemīlas Tēsejā. Viņa zina, ka ar spēku Labirintā nepietiek. Ar Daidala palīdzību viņa dod viņam vilnas kamolu: [[Ariadnes pavediens]]. Viņš to piesien pie ieejas un, virzoties uz priekšu, attin pavedienu."
         },
         {
           "type": "image",
           "asset": "ariadne_thread_theseus_labyrinth_painting",
           "ratio": "4:3",
-          "caption": "Ariane remet à Thésée le fil qui sauvera sa vie."
+          "caption": "Ariadne dod Tēsejam pavedienu, kas izglābs viņa dzīvību."
         },
         {
           "type": "paragraph",
-          "text": "Thésée tue le Minotaure, puis rembobine le fil pour sortir. Il fuit avec les jeunes Athéniens et Ariane. Mais sur l'île de **Naxos**, il l'abandonne endormie. Certains disent que le dieu **Dionysos** la voulait pour épouse. Ariane, désespérée puis divinisée, reçoit une couronne d'or devenue constellation."
+          "text": "Tēsejs nogalina Minotauru, tad uztin pavedienu atpakaļ, lai tiktu ārā. Viņš bēg kopā ar jaunajiem atēniešiem un Ariadni. Taču uz **Naksas** salas viņš pamet viņu aizmigušu. Daži saka, ka dievs **Dionīss** vēlējies viņu par sievu. Ariadne, izmisusi un pēc tam dievināta, saņem zelta kroni, kas kļūst par zvaigznāju."
         }
       ]
     },
     {
       "id": "course_172_thesee_et_le_minotaure_p3",
-      "title": "Les voiles noires du Cap Sounion",
+      "title": "Melnās buras pie Sunijas raga",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le retour devrait être une fête. Grisé par la victoire ou troublé par l'abandon d'Ariane, Thésée oublie de hisser les voiles blanches. Le navire approche d'Athènes sous voiles noires."
+          "text": "Atgriešanās vajadzētu būt svētkiem. Uzvaras apreibināts vai satraukts par Ariadnes pamešanu, Tēsejs aizmirst uzvilkt baltās buras. Kuģis tuvojas Atēnām zem melnām burām."
         },
         {
           "type": "image",
           "asset": "cape_sounion_aegean_sea_cliff_sunset",
           "ratio": "4:3",
-          "caption": "Le Cap Sounion, d'où Égée guettait le retour de son fils."
+          "caption": "Sunijas rags, no kurienes Egejs gaidīja dēla atgriešanos."
         },
         {
           "type": "paragraph",
-          "text": "Au **Cap Sounion**, le vieux roi Égée scrute l'horizon. Il ne voit que le noir du deuil. Persuadé que son fils est mort, il se jette de la falaise. La mer porte depuis son nom : la **mer Égée**. Thésée débarque roi… et orphelin par sa propre négligence."
+          "text": "Pie **Sunijas raga** vecais karalis Egejs vēro apvārsni. Viņš redz tikai sēru melnumu. Pārliecināts, ka dēls miris, viņš metas no klints. Kopš tā laika jūra nes viņa vārdu: **Egejas jūra**. Tēsejs piestāj kā karalis… un bārenis pats savas nolaidības dēļ."
         },
         {
           "type": "funFact",
-          "text": "Le « navire de Thésée » est devenu un paradoxe philosophique : si l'on remplace toutes les planches une à une, est-ce encore le même bateau ?"
+          "text": "„Tēseja kuģis“ ir kļuvis par filozofisku paradoksu: ja visus dēļus nomaina pa vienam, vai tas joprojām ir tas pats kuģis?"
         }
       ]
     },
     {
       "id": "course_172_thesee_et_le_minotaure_p4",
-      "title": "Thésée, roi d'Athènes",
+      "title": "Tēsejs, Atēnu karalis",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Couronné, Thésée devient un roi organisateur. On lui attribue le [[Sinoikisms]] : l'unification des bourgades de l'Attique autour d'Athènes. Il institue les [[Panatēnajas]], grandes fêtes de la cité. La force s'allie au droit."
+          "text": "Kronēts, Tēsejs kļūst par karali organizatoru. Viņa nopelns ir [[Sinoikisms]]: Atikas ciematu apvienošana ap Atēnām. Viņš ievieš pilsētas lielos svētkus: tie ir [[Panatēnajas]]. Spēks savienojas ar tiesībām."
         },
         {
           "type": "paragraph",
-          "text": "Son règne compte d'autres aventures, comme le combat contre les [[Amazones]]. Mais le Labyrinthe reste sa marque : savoir dénouer l'inextricable, tout en restant vulnérable à l'oubli. Thésée forge la grandeur d'Athènes sur les cendres d'un drame familial."
+          "text": "Viņa valdīšanā ir arī citi piedzīvojumi, piemēram, kauja, kurā pretī stājas [[Amazones]]. Taču Labirints paliek viņa zīme: prasme atšķetināt neatšķetināmo, vienlaikus paliekot neaizsargātam pret aizmāršību. Tēsejs veido Atēnu diženumu uz ģimenes drāmas pelniem."
         },
         {
           "type": "takeaway",
-          "text": "**Thésée** tue le **Minotaure** grâce au fil d'**Ariane**. En oubliant de changer les voiles, il provoque le suicide de son père **Égée**, qui donne son nom à la mer Égée."
+          "text": "**Tēsejs** nogalina **Minotauru** ar **Ariadnes** pavedienu. Aizmirsdams nomainīt buras, viņš izraisa tēva **Egeja** pašnāvību, un Egejs dod savu vārdu Egejas jūrai."
         }
       ]
     }

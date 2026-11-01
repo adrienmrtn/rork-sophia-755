@@ -1,145 +1,145 @@
 {
   "id": "course_57_l_invention_d_internet",
-  "title": "Comment Internet est-il né de la Guerre froide ?",
-  "subtitle": "D'ARPANET au Web",
+  "title": "Kā internets radās no aukstā kara?",
+  "subtitle": "No ARPANET līdz tīmeklim",
   "subject": "sciences",
   "subcategory": "Atklājumi, kas mainīja pasauli",
-  "description": "Un réseau militaire pensé pour résister à une attaque soviétique, des dizaines de petits réseaux, puis le modem et le Web. En cinquante ans, un projet de la Guerre froide est devenu notre quotidien.",
+  "description": "Militārs tīkls, kas radīts, lai pārdzīvotu padomju uzbrukumu, desmitiem nelielu tīklu, pēc tam modems un tīmeklis. Piecdesmit gadu laikā aukstā kara projekts ir kļuvis par mūsu ikdienu.",
   "author": "myra-houser",
   "hero": {
     "image": "ibm_mainframe_computer_room_1960s_operators",
     "ratio": "4:3",
-    "hook": "Avant de relier la planète, Internet devait surtout survivre à une attaque soviétique."
+    "hook": "Pirms internets savienoja planētu, tam galvenokārt bija jāpārdzīvo padomju uzbrukums."
   },
   "sections": [
     {
       "id": "course_57_l_invention_d_internet_intro",
-      "title": "Introduction",
+      "title": "Ievads",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Comme Rome, Internet ne s'est pas fait en un jour. À ses débuts, le réseau n'est qu'une poignée d'ordinateurs du **ministère américain de la Défense**. Il naît du progrès technique, mais aussi des ambitions d'espionnage des deux superpuissances de la [[Aukstais karš]]. À la fin du XXe siècle, la connexion par ligne téléphonique entre dans la plupart des foyers américains, et la navigation sur le Web suit de près."
+          "text": "Tāpat kā Roma, arī internets netika uzbūvēts vienā dienā. Sākumā tīkls ir tikai sauja **ASV Aizsardzības departamenta** datoru. Tas dzimst no tehnikas progresa, bet arī no abu lielvalstu spiegošanas ambīcijām laikā, kad norisinās [[Aukstais karš]]. divdesmitā gadsimta beigās savienojums pa telefona līniju nonāk lielākajā daļā ASV mājsaimniecību, un tīmekļa pārlūkošana tūlīt seko."
         },
         {
           "type": "paragraph",
-          "text": "À la fin du millénaire, la technologie est à la fois si répandue et si neuve que des analystes annoncent une panne mondiale si les calendriers des ordinateurs ne passent pas correctement l'**an 2000** : c'est la peur du [[2000. gada problēma]]. Au XXIe siècle, messageries instantanées, réseaux sociaux et intelligence artificielle transforment encore la façon de communiquer en ligne. Comment un projet militaire est-il devenu le quotidien du monde entier ?"
+          "text": "Tūkstošgades beigās tehnoloģija ir vienlaikus tik izplatīta un tik jauna, ka analītiķi brīdina par globālu atteici, ja datoru kalendāri nepāries pareizi uz **2000**. gadu. Šo baiļu cēlonis ir [[2000. gada problēma]]. divdesmit pirmajā gadsimtā tūlītējā ziņapmaiņa, sociālie tīkli un mākslīgais intelekts vēl vairāk maina saziņu tiešsaistē. Kā militārs projekts kļuva par visas pasaules ikdienu?"
         }
       ]
     },
     {
       "id": "course_57_l_invention_d_internet_p1",
-      "title": "Un réseau capable de survivre à une attaque",
+      "title": "Tīkls, kas spēj pārdzīvot uzbrukumu",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le projet commence dans les **années 1950**. Les ordinateurs sont alors énormes et coûteux : une seule machine occupe une pièce entière. Seuls des bureaux du gouvernement et quelques universités en possèdent. Quand la tension avec l'URSS monte, les dirigeants américains cherchent un réseau de communication que les agents soviétiques ne pourraient pas intercepter. Première étape : le temps partagé, qui permet à plusieurs utilisateurs de travailler sur le même ordinateur."
+          "text": "Projekts sākas **1950**. gados. Datori tolaik ir milzīgi un dārgi: viena mašīna aizņem veselu istabu. Tādi ir tikai valdības iestādēm un dažām universitātēm. Kad spriedze ar PSRS pieaug, ASV vadītāji meklē sakaru tīklu, ko padomju aģenti nevarētu pārtvert. Pirmais solis ir laika dalīšana, kas ļauj vairākiem lietotājiem strādāt ar vienu datoru."
         },
         {
           "type": "paragraph",
-          "text": "Au début des **années 1960**, un ingénieur nommé [[Pols Barans]] expérimente la [[pakešu komutācija]] : au lieu d'envoyer un message d'un bloc, on le découpe en petits paquets de données qui circulent séparément sur le réseau. Baran et ses collègues font le pari que des données voyageant ainsi sur les lignes téléphoniques survivraient à une attaque soviétique. De ces travaux naît [[ARPANET]], un programme du ministère américain de la Défense."
+          "text": "**1960**. gadu sākumā inženieris vārdā [[Pols Barans]] eksperimentē: viņa ideja ir [[pakešu komutācija]]. Tā vietā, lai sūtītu ziņu vienā gabalā, to sadala mazās datu paketēs, kas pa tīklu ceļo atsevišķi. Barans un viņa kolēģi liek likmi uz to, ka šādi pa telefona līnijām ceļojoši dati pārdzīvotu padomju uzbrukumu. No šiem darbiem dzimst [[ARPANET]], ASV Aizsardzības departamenta programma."
         },
         {
           "type": "image",
           "asset": "arpanet_1969_computer_ucla",
           "ratio": "4:3",
-          "caption": "Le SDS Sigma 7 de l'UCLA, premier ordinateur relié à ARPANET en 1969."
+          "caption": "UCLA dators SDS Sigma 7, pirmais ar ARPANET savienotais dators 1969. gadā."
         }
       ]
     },
     {
       "id": "course_57_l_invention_d_internet_p2",
-      "title": "D'ARPANET aux « internets » : la commutation de paquets",
+      "title": "No ARPANET līdz „internetiem“: pakešu komutācija",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Pour acheminer ces paquets, ARPANET reprend une technique développée par des scientifiques britanniques : le [[maršrutētājs]], un équipement du réseau téléphonique qui collecte les paquets et les expédie vers d'autres machines. En **1969**, les premiers ordinateurs sont reliés, à commencer par celui de l'université de Californie à Los Angeles. À Hawaï, des informaticiens testent une idée voisine, **ALOHAnet**, où les paquets voyagent par ondes radio."
+          "text": "Lai nogādātu šīs paketes, ARPANET pārņem britu zinātnieku izstrādātu risinājumu: [[maršrutētājs]] ir telefona tīkla iekārta, kas savāc paketes un pārsūta tās uz citiem datoriem. **1969**. gadā tiek savienoti pirmie datori, sākot ar Kalifornijas Universitātes Losandželosā datoru. Havajās datorzinātnieki izmēģina līdzīgu ideju, **ALOHAnet**, kurā paketes ceļo pa radioviļņiem."
         },
         {
           "type": "image",
           "asset": "arpanet_logical_map_1977_network_diagram",
           "ratio": "3:2",
-          "caption": "La carte logique d'ARPANET au 25 août 1983, dressée par BBN : universités, laboratoires et sites militaires reliés entre eux."
+          "caption": "ARPANET loģiskā karte 1983. gada 25. augustā, ko sastādījis BBN: savā starpā savienotas universitātes, laboratorijas un militāras vietas."
         },
         {
           "type": "paragraph",
-          "text": "Dans les **années 1970** et au début des années 1980, des dizaines d'équipes dans le monde font circuler de l'information par lignes téléphoniques et par radio. Résultat : une multitude de petits réseaux séparés. En **1974**, un article scientifique abrège « internetwork », réseau de réseaux, en « internet ». C'est la première trace connue du mot."
+          "text": "**1970**. gados un 1980. gadu sākumā desmitiem komandu visā pasaulē pārraida informāciju pa telefona līnijām un radio. Rezultāts ir daudz nelielu, atsevišķu tīklu. **1974**. gadā kādā zinātniskā rakstā vārds „internetwork“, tas ir, tīklu tīkls, tiek saīsināts līdz „internet“. Tas ir pirmais zināmais šī vārda pieminējums."
         }
       ]
     },
     {
       "id": "course_57_l_invention_d_internet_p3",
-      "title": "Modems, abonnements et naissance du Web au CERN",
+      "title": "Modemi, abonementi un tīmekļa dzimšana CERN",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Jusqu'au milieu des **années 1980**, ces « internets » vivent chacun de leur côté. Aux États-Unis, la National Science Foundation, l'agence fédérale qui finance la recherche, investit massivement dans des superordinateurs et les relie aux universités. Puis, de **1989** à **1995**, le législateur américain lève peu à peu les restrictions qui interdisaient les services commerciaux sur Internet."
+          "text": "Līdz **1980**. gadu vidum šie „interneti“ dzīvo katrs savā pasaulē. ASV Nacionālais zinātnes fonds (National Science Foundation), federālā aģentūra, kas finansē pētniecību, iegulda lielus līdzekļus superdatoros un savieno tos ar universitātēm. Pēc tam no **1989**. līdz **1995**. gadam ASV likumdevējs pakāpeniski atceļ ierobežojumus, kas aizliedza komerciālus pakalpojumus internetā."
         },
         {
           "type": "paragraph",
-          "text": "En 1995, de grandes compagnies comme **Sprint** et **AT&T** proposent des connexions par ligne téléphonique : l'abonné branche son modem sur la prise et compose un numéro. Pendant ce temps, en **1990**, l'informaticien britannique Tim Berners-Lee lance le [[World Wide Web]] au CERN, le laboratoire européen de physique installé près de Genève. Le Web rassemble les données dispersées sur les serveurs et relie les pages entre elles par des hyperliens."
+          "text": "1995. gadā lielas kompānijas, piemēram, **Sprint** un **AT&T**, piedāvā savienojumu pa telefona līniju: abonents pievieno modemu pie rozetes un sastāda numuru. Tikmēr **1990**. gadā britu datorzinātnieks Tims Bērnerss-Lī CERN, Eiropas fizikas laboratorijā netālu no Ženēvas, piedāvā jaunu sistēmu: [[World Wide Web]]. Tīmeklis apkopo uz serveriem izkaisītos datus un sasaista lapas savā starpā ar hipersaitēm."
         },
         {
           "type": "image",
           "asset": "tim_berners_lee_next_computer_cern_first_web_server",
           "ratio": "3:2",
-          "caption": "Le NeXT de Tim Berners-Lee au CERN, premier serveur web en 1990 : une étiquette demande de ne jamais l'éteindre."
+          "caption": "Tima Bērnersa-Lī NeXT dators CERN, pirmais tīmekļa serveris 1990. gadā: uz uzlīmes rakstīts, lai to nekad neizslēdz."
         },
         {
           "type": "funFact",
-          "text": "Dans les années 1990, beaucoup d'abonnés paient leur connexion à la minute. Chaque page qui se charge lentement coûte de l'argent, et le téléphone de la maison reste occupé tant que le modem est en ligne."
+          "text": "1990. gados daudzi abonenti par savienojumu maksā pa minūtēm. Katra lēni ielādējama lapa maksā naudu, un mājas telefons paliek aizņemts, kamēr modems ir tiešsaistē."
         }
       ]
     },
     {
       "id": "course_57_l_invention_d_internet_p4",
-      "title": "Du courriel à l'iPhone : Internet au quotidien",
+      "title": "No e-pasta līdz iPhone: internets ikdienā",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "À partir du milieu des années 1990, Internet grandit à toute vitesse et chacun élargit son cercle de correspondants. Le courriel, les salons de discussion et la messagerie instantanée permettent d'échanger en temps réel. En **2000**, plus de la **moitié** du trafic de télécommunications passe déjà par Internet. Au début des années 2000, les blogs et les premiers réseaux sociaux, MySpace puis TheFacebook.com, se multiplient."
+          "text": "Sākot ar 1990. gadu vidu, internets aug ar lielu ātrumu, un ikviens paplašina savu korespondentu loku. E-pasts, tērzētavas un tūlītējā ziņapmaiņa ļauj sazināties reāllaikā. **2000**. gadā vairāk nekā **puse** telekomunikāciju datplūsmas jau iet caur internetu. 2000. gadu sākumā vairojas blogi un pirmie sociālie tīkli, MySpace un pēc tam TheFacebook.com."
         },
         {
           "type": "paragraph",
-          "text": "Le réseau sort ensuite des bureaux et des salons. Dès **2005**, les téléphones BlackBerry permettent d'envoyer des messages sur leurs réseaux. À partir de **2007**, l'iPhone met Internet dans la poche : on navigue désormais depuis un téléphone mobile. Né comme une stratégie de défense pendant la Guerre froide, le réseau des réseaux fait aujourd'hui partie de la vie de tous les jours."
+          "text": "Pēc tam tīkls iziet ārpus birojiem un viesistabām. Jau **2005**. gadā BlackBerry tālruņi ļauj sūtīt ziņas savos tīklos. Sākot ar **2007**. gadu, iPhone ieliek internetu kabatā: tagad pārlūkot var no mobilā tālruņa. Dzimis kā aizsardzības stratēģija aukstā kara laikā, tīklu tīkls šodien ir daļa no ikdienas dzīves."
         },
         {
           "type": "timeline",
           "events": [
             {
               "date": "1969",
-              "title": "Premières machines reliées",
-              "detail": "ARPANET connecte ses premiers ordinateurs, dont celui de l'UCLA."
+              "title": "Pirmās savienotās iekārtas",
+              "detail": "ARPANET savieno pirmos datorus, tostarp UCLA datoru."
             },
             {
               "date": "1974",
-              "title": "Le mot « internet »",
-              "detail": "Un article abrège « internetwork » : première trace connue du terme."
+              "title": "Vārds „internet“",
+              "detail": "Kādā rakstā „internetwork“ tiek saīsināts: pirmais zināmais termina pieminējums."
             },
             {
               "date": "1990",
-              "title": "Naissance du Web",
-              "detail": "Tim Berners-Lee lance le World Wide Web au CERN."
+              "title": "Tīmekļa dzimšana",
+              "detail": "Tims Bērnerss-Lī CERN izveido World Wide Web."
             },
             {
               "date": "1995",
-              "title": "Internet s'ouvre au public",
-              "detail": "Fin des restrictions commerciales, connexions par modem chez Sprint et AT&T."
+              "title": "Internets atveras sabiedrībai",
+              "detail": "Beidzas komerciālie ierobežojumi, parādās modema savienojumi no Sprint un AT&T."
             },
             {
               "date": "2007",
-              "title": "Internet dans la poche",
-              "detail": "L'iPhone permet de naviguer depuis un téléphone mobile."
+              "title": "Internets kabatā",
+              "detail": "iPhone ļauj pārlūkot internetu no mobilā tālruņa."
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "Conçu pendant la Guerre froide pour résister à une attaque, Internet est passé des ordinateurs militaires aux universités, puis aux foyers grâce au modem et au Web, avant de tenir dans un téléphone."
+          "text": "Aukstā kara laikā radīts, lai izturētu uzbrukumu, internets no militārajiem datoriem nonāca universitātēs, pēc tam mājokļos, pateicoties modemam un tīmeklim, līdz beidzot ietilpa tālrunī."
         }
       ]
     }

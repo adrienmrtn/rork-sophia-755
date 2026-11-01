@@ -1,106 +1,106 @@
 {
   "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve",
-  "title": "Comment le cerveau stocke-t-il les souvenirs ?",
-  "subtitle": "Mémoire & neurones",
+  "title": "Kā smadzenes glabā atmiņas?",
+  "subtitle": "Atmiņa un neironi",
   "subject": "sciences",
   "subcategory": "Zeme un Visums",
-  "description": "La mémoire n'est pas une bibliothèque de tiroirs. C'est un réseau vivant de neurones qui se renforcent, se reconstruisent et parfois se trompent.",
+  "description": "Atmiņa nav atvilktņu bibliotēka. Tas ir dzīvs neironu tīkls, kas nostiprinās, pārbūvējas un dažkārt kļūdās.",
   "hero": {
     "image": "comment_le_cerveau_stocke_les_souvenirs",
     "ratio": "16:9",
-    "hook": "Un souvenir n'est pas un fichier : c'est un chemin que le cerveau a appris à refaire."
+    "hook": "Atmiņa nav fails: tas ir ceļš, ko smadzenes ir iemācījušās atkal izstaigāt."
   },
   "sections": [
     {
       "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve_intro",
-      "title": "Introduction",
+      "title": "Ievads",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "On imagine souvent la mémoire comme un disque dur. En réalité, c'est un réseau vivant. Des milliards de **neurones**, cellules nerveuses, se reconnectent, se renforcent ou s'affaiblissent selon ce qu'on vit."
+          "text": "Atmiņu bieži iedomājas kā cieto disku. Patiesībā tas ir dzīvs tīkls. Miljardi **neironu**, nervu šūnu, atkal savienojas, nostiprinās vai vājinās atkarībā no piedzīvotā."
         },
         {
           "type": "paragraph",
-          "text": "Rien n'est stocké en un seul endroit. Un souvenir, c'est une trace répartie, fragile au début, plus solide après le sommeil, et toujours un peu reconstruit quand on s'en souvient."
+          "text": "Nekas netiek glabāts vienā vietā. Atmiņa ir izkliedēta pēda, sākumā trausla, pēc miega stiprāka, un vienmēr mazliet pārbūvēta, kad to atceras."
         }
       ]
     },
     {
       "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve_p1",
-      "title": "Des connexions qui se renforcent",
+      "title": "Savienojumi, kas nostiprinās",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Entre deux neurones, le point de contact s'appelle une **synapse**, la jonction où passe le signal nerveux. Le cerveau humain compte environ **86 milliards** de neurones et plus de **100 000 milliards** de synapses."
+          "text": "Saskares punktu starp diviem neironiem sauc par **sinapsi**, savienojumu, caur kuru iet nervu signāls. Cilvēka smadzenēs ir aptuveni **86 miljardi** neironu un vairāk nekā **100 000 miljardu** sinapšu."
         },
         {
           "type": "image",
           "asset": "hippocampus_memory_brain",
           "ratio": "auto",
-          "caption": "L'hippocampe joue un rôle central dans la formation des souvenirs."
+          "caption": "Hipokamps spēlē galveno lomu atmiņu veidošanā."
         },
         {
           "type": "paragraph",
-          "text": "Quand une info est répétée ou liée à une émotion forte, les mêmes neurones s'activent ensemble. Leur lien devient plus facile à déclencher : c'est la [[ilglaicīgā potenciācija]], le renforcement durable des synapses. Plus un circuit est utilisé, plus le chemin devient « large ». Un souvenir n'est donc pas un objet rangé, mais une **trace** dans le réseau."
+          "text": "Kad informācija tiek atkārtota vai saistīta ar spēcīgu emociju, tie paši neironi aktivizējas kopā. Šo savienojumu kļūst vieglāk izraisīt: tā ir [[ilglaicīgā potenciācija]], sinapšu ilgstoša stiprināšanās. Jo vairāk ķēde tiek izmantota, jo „platāks“ kļūst ceļš. Tātad atmiņa nav noliktavā nolikts priekšmets, bet **pēda** tīklā."
         },
         {
           "type": "funFact",
-          "text": "La capacité de stockage du cerveau est estimée à environ **2,5 pétaoctets**, l'équivalent de millions d'heures de vidéo. Mais ce n'est pas un disque : c'est un tissu vivant qui se réorganise."
+          "text": "Smadzeņu glabāšanas ietilpība tiek lēsta aptuveni **2,5 petabaitu** apmērā, kas līdzinās miljoniem stundu video. Taču tas nav disks: tie ir dzīvi audi, kas pārkārtojas."
         }
       ]
     },
     {
       "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve_p2",
-      "title": "L'hippocampe, chef de gare des souvenirs",
+      "title": "Hipokamps, atmiņu stacijas priekšnieks",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L'**hippocampe**, petite structure du [[deniņu daiva]], région derrière les tempes, ne garde pas les souvenirs pour toujours. Il les reçoit, les **encode**, les transforme en trace mémorielle, puis les redistribue vers le **cortex**, la couche externe du cerveau. Ce transfert s'appelle la **consolidation**."
+          "text": "**Hipokamps** ir neliela struktūra, kuras atrašanās vieta ir [[deniņu daiva]], apgabals aiz deniņiem. Tas neglabā atmiņas uz visiem laikiem. Tas tās saņem, **kodē**, pārvērš atmiņas pēdā un pēc tam pārdala uz **garozu**, smadzeņu ārējo slāni. Šo pārnesi sauc par **konsolidāciju**."
         },
         {
           "type": "paragraph",
-          "text": "Elle se fait surtout pendant le **sommeil**. Sans hippocampe fonctionnel, on peut vivre l'instant présent, mais on ne fixe plus de nouveaux souvenirs conscients. On reste coincé dans un présent sans passé récent."
+          "text": "Tā notiek galvenokārt **miega** laikā. Bez darbspējīga hipokampa var dzīvot šobrīd, bet jaunas apzinātas atmiņas vairs nenostiprinās. Paliek iesprostots tagadnē bez nesenās pagātnes."
         },
         {
           "type": "funFact",
-          "text": "Le patient **H.M.**, opéré en 1953, ne formait plus de nouveaux souvenirs. Pourtant, il progressait chaque jour à dessiner dans un miroir, sans se souvenir d'avoir déjà essayé : sa mémoire des gestes était intacte."
+          "text": "Pacients **H.M.**, operēts 1953. gadā, vairs neveidoja jaunas atmiņas. Tomēr katru dienu viņš arvien labāk zīmēja spoguļattēlā, neatceroties, ka jau ir mēģinājis: viņa kustību atmiņa bija neskarta."
         }
       ]
     },
     {
       "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve_p3",
-      "title": "Se souvenir, c'est reconstruire",
+      "title": "Atcerēties nozīmē pārbūvēt",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Rappeler un souvenir n'est pas rejouer une vidéo. Chaque fois qu'on le sort, il redevient **malléable**, modifiable. Nos émotions du moment, nos connaissances nouvelles ou une suggestion peuvent le modifier avant qu'il soit « réenregistré »."
+          "text": "Atsaukt atmiņu nav tas pats, kas atskaņot video. Katru reizi, kad to izvelk, tā kļūst **plastiska**, grozāma. Tā brīža emocijas, jaunas zināšanas vai kāds ieteikums var to izmainīt, pirms tā tiek „pārsaglabāta“."
         },
         {
           "type": "paragraph",
-          "text": "La psychologue **Elizabeth Loftus** a montré qu'on peut implanter de **faux souvenirs** avec de simples questions. D'où la prudence aujourd'hui face aux témoignages oculaires : de bonne foi, le cerveau comble les trous."
+          "text": "Psiholoģe **Elizabete Loftusa** pierādīja, ka ar vienkāršiem jautājumiem var ieaudzināt **maldīgas atmiņas**. Tādēļ mūsdienās jāuzmanās no aculiecinieku liecībām: pilnīgā labticībā smadzenes aizpilda robus."
         }
       ]
     },
     {
       "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve_p4",
-      "title": "Plusieurs mémoires dans un seul cerveau",
+      "title": "Vairākas atmiņas vienās smadzenēs",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La mémoire des faits et des épisodes de vie, ce qu'on peut raconter, passe surtout par l'hippocampe. La [[procedurālā atmiņa]], celle du vélo ou de la nage, dépend plutôt du **cervelet**, structure à l'arrière du cerveau, et d'autres structures plus anciennes."
+          "text": "Faktu un dzīves epizožu atmiņa, tas, ko var izstāstīt, galvenokārt ir saistīta ar hipokampu. [[Procedurālā atmiņa]], kas atbild par riteņbraukšanu vai peldēšanu, drīzāk ir atkarīga no **smadzenītēm**, struktūras smadzeņu aizmugurē, un citām senākām struktūrām."
         },
         {
           "type": "paragraph",
-          "text": "C'est pourquoi certains patients amnésiques oublient leur propre nom mais jouent encore du piano. La mémoire n'est pas un tiroir unique : c'est une mosaïque de systèmes."
+          "text": "Tāpēc daži amnēzijas pacienti aizmirst pat savu vārdu, bet joprojām spēlē klavieres. Atmiņa nav viena atvilktne: tā ir sistēmu mozaīka."
         },
         {
           "type": "takeaway",
-          "text": "Un souvenir est une trace dynamique : des synapses renforcées, consolidées surtout la nuit, et reconstruites à chaque rappel. Ce n'est jamais un fichier figé."
+          "text": "Atmiņa ir dinamiska pēda: nostiprinātas sinapses, konsolidētas galvenokārt naktī un pārbūvētas ik reizi, kad atmiņu atsauc. Tas nekad nav nemainīgs fails."
         }
       ]
     }

@@ -1,115 +1,115 @@
 {
   "id": "course_281_comment_meurt_une_etoile",
-  "title": "Comment meurt une étoile ?",
-  "subtitle": "Géante rouge ou supernova",
+  "title": "Kā mirst zvaigzne?",
+  "subtitle": "Sarkanais milzis vai pārnova",
   "subject": "sciences",
   "subcategory": "Zeme un Visums",
-  "description": "Pendant des milliards d'années, une étoile tient en équilibre entre la gravité et la fusion de son cœur. Quand le carburant manque, elle enfle, s'effondre ou explose, et sa fin dépend d'une seule chose : sa masse.",
+  "description": "Miljardiem gadu zvaigzne turas līdzsvarā starp gravitāciju un kodolā notiekošo sintēzi. Kad degviela beidzas, tā uzpūšas, sabrūk vai eksplodē, un tās gals ir atkarīgs no vienas lietas: masas.",
   "author": "muhammad-zaheer",
   "hero": {
     "image": "crab_nebula_supernova_remnant_hubble",
     "ratio": "4:3",
-    "hook": "Une étoile peut s'éteindre en douceur ou exploser avec une violence inimaginable : tout se joue sur sa masse."
+    "hook": "Zvaigzne var izdziest lēnām vai eksplodēt neiedomājamā spēkā: viss ir atkarīgs no masas."
   },
   "sections": [
     {
       "id": "course_281_comment_meurt_une_etoile_intro",
-      "title": "Introduction",
+      "title": "Ievads",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Qu'est-ce qui fait mourir une étoile ? Elle commence à mourir quand elle ne parvient plus à résister à sa propre gravité. Pendant l'essentiel de sa vie, la gravité tire sa matière vers le centre. Au même moment, l'énergie produite dans son cœur crée une pression qui pousse vers l'extérieur. Ces deux effets se compensent, et l'étoile reste stable."
+          "text": "Kas liek zvaigznei mirt? Tā sāk mirt, kad vairs nespēj pretoties pašas gravitācijai. Lielāko mūža daļu gravitācija velk vielu uz centru. Tai pašā laikā kodolā radītā enerģija rada spiedienu, kas stumj uz āru. Šie divi efekti līdzsvaro viens otru, un zvaigzne paliek stabila."
         },
         {
           "type": "paragraph",
-          "text": "Cette énergie vient de la [[kodolsintēze]] : des noyaux d'hydrogène s'assemblent pour former de l'hélium et libèrent une énergie colossale. L'équilibre peut durer des millions, des milliards, voire des milliers de milliards d'années. Tout dépend de la masse. Les petites étoiles consomment leur carburant lentement, les étoiles massives le brûlent bien plus vite. Un jour, l'équilibre se rompt. La suite dépend de la masse de l'étoile."
+          "text": "Šīs enerģijas avots ir [[kodolsintēze]]: ūdeņraža kodoli savienojas, veidojot hēliju, un atbrīvo milzīgu enerģiju. Līdzsvars var ilgt miljoniem, miljardiem, pat tūkstošiem miljardu gadu. Viss atkarīgs no masas. Mazās zvaigznes savu degvielu patērē lēnām, masīvās to sadedzina daudz ātrāk. Kādu dienu līdzsvars izjūk. Tālākais atkarīgs no zvaigznes masas."
         }
       ]
     },
     {
       "id": "course_281_comment_meurt_une_etoile_p1",
-      "title": "L'étoile enfle en géante rouge",
+      "title": "Zvaigzne uzpūšas par sarkano milzi",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Pendant la plus grande partie de sa vie, l'étoile transforme l'hydrogène de son cœur, sa région centrale, en hélium. Quand cet hydrogène vient à manquer, la fusion ralentit au centre. Le cœur se contracte et devient plus chaud. Autour de lui, une couche d'hydrogène continue de fusionner et de libérer de l'énergie. Sous cette poussée, les couches externes de l'étoile gonflent énormément."
+          "text": "Lielāko mūža daļu zvaigzne savā kodolā, tās centrālajā apgabalā, esošo ūdeņradi pārvērš hēlijā. Kad šī ūdeņraža sāk pietrūkt, sintēze centrā palēninās. Kodols saraujas un kļūst karstāks. Ap to ūdeņraža slānis turpina saplūst un atbrīvot enerģiju. Šī spiediena ietekmē zvaigznes ārējie slāņi ļoti uzpūšas."
         },
         {
           "type": "paragraph",
-          "text": "Le résultat est une [[sarkanais milzis]] : une étoile bien plus grande qu'avant, à la surface plus froide. Une étoile qui meurt commence donc par grossir, au lieu de s'éteindre doucement. Le Soleil devrait entrer dans cette phase dans environ **5 milliards d'années**."
+          "text": "Rezultātā rodas [[sarkanais milzis]]: daudz lielāka zvaigzne nekā agrāk, ar vēsāku virsmu. Tātad mirstoša zvaigzne sākumā palielinās, nevis maigi izdziest. Saule šajā fāzē, domājams, ieies aptuveni pēc **5 miljardiem gadu**."
         },
         {
           "type": "funFact",
-          "text": "Devenu géante rouge, le Soleil pourrait grossir au point d'engloutir Mercure et Vénus. Le sort exact de la Terre, lui, reste incertain."
+          "text": "Kļuvusi par sarkano milzi, Saule varētu izaugt tik liela, ka aprītu Merkuru un Venēru. Zemes precīzais liktenis gan paliek neskaidrs."
         }
       ]
     },
     {
       "id": "course_281_comment_meurt_une_etoile_p2",
-      "title": "Une naine blanche grosse comme la Terre",
+      "title": "Baltais punduris Zemes lielumā",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Une étoile comme le Soleil ne peut pas gonfler indéfiniment. En vieillissant, elle perd ses couches externes, qui s'échappent dans l'espace. Ce gaz se disperse et forme un nuage lumineux, une [[planētu miglājs]]. Au centre reste une [[baltais punduris]] : le cœur chaud et dense de l'étoile, mis à nu une fois les couches externes parties."
+          "text": "Tāda zvaigzne kā Saule nevar uzpūsties bezgalīgi. Novecojot, tā zaudē ārējos slāņus, kas aizplūst kosmosā. Šī gāze izkliedējas un veido gaišu mākoni. Tas ir [[planētu miglājs]]. Centrā paliek [[baltais punduris]]: zvaigznes karstais un blīvais kodols, kas atsegts, kad ārējie slāņi ir aizgājuši."
         },
         {
           "type": "image",
           "asset": "helix_nebula_planetary_nebula_white_dwarf_hubble",
           "ratio": "1:1",
-          "caption": "La nébuleuse de l'Hélice : le gaz expulsé par une étoile mourante, avec la naine blanche visible au centre."
+          "caption": "Spirāles miglājs: mirstošas zvaigznes izmestā gāze, centrā redzams baltais punduris."
         },
         {
           "type": "paragraph",
-          "text": "Une naine blanche n'est pas plus grosse que la **Terre**, mais elle contient encore une grande partie de la masse de l'étoile d'origine. La fusion s'y est arrêtée : elle ne produit plus d'énergie. Si elle brille, c'est seulement parce qu'elle est encore extrêmement chaude. Pendant une durée immense, elle refroidit et pâlit peu à peu."
+          "text": "Baltais punduris nav lielāks par **Zemi**, taču tajā joprojām ir liela daļa sākotnējās zvaigznes masas. Sintēze tajā ir apstājusies: tas vairs neražo enerģiju. Ja tas spīd, tad vienīgi tāpēc, ka vēl ir ārkārtīgi karsts. Milzīgu laiku tas atdziest un pamazām kļūst blāvāks."
         }
       ]
     },
     {
       "id": "course_281_comment_meurt_une_etoile_p3",
-      "title": "Supernova, étoile à neutrons ou trou noir",
+      "title": "Pārnova, neitronu zvaigzne vai melnais caurums",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Une étoile beaucoup plus massive ne s'arrête pas là. Elle continue d'assembler des éléments légers en éléments plus lourds : l'hélium donne du carbone, puis des réactions plus poussées créent des éléments encore plus lourds. Peu à peu se forme un cœur riche en **fer**. Or, avec le fer, la fusion ne fournit plus l'énergie nécessaire pour soutenir l'étoile face à la gravité. Le cœur s'effondre en un instant."
+          "text": "Daudz masīvāka zvaigzne ar to nebeidzas. Tā turpina vieglus elementus savienot smagākos: hēlijs dod oglekli, pēc tam vēl spēcīgākas reakcijas rada vēl smagākus elementus. Pamazām izveidojas ar **dzelzi** bagāts kodols. Taču ar dzelzi sintēze vairs nedod enerģiju, kas vajadzīga, lai zvaigzni noturētu pret gravitāciju. Kodols sabrūk vienā mirklī."
         },
         {
           "type": "paragraph",
-          "text": "Cet effondrement peut déclencher une [[pārnova]], une explosion gigantesque qui projette une grande partie de l'étoile dans l'espace. Le cœur effondré, lui, reste. S'il n'est pas trop massif, il devient une [[neitronu zvaigzne]], un objet d'une densité extrême, pas plus grand qu'une ville. S'il est assez massif, la gravité continue de l'écraser jusqu'à former un [[melnais caurums]], où l'attraction est si forte que même la lumière ne s'en échappe pas."
+          "text": "Sabrukumam var sekot [[pārnova]]: milzīgs sprādziens, kas lielu daļu zvaigznes izsviež kosmosā. Sabrukušais kodols paliek. Ja tas nav pārāk masīvs, rodas [[neitronu zvaigzne]]: ārkārtīga blīvuma objekts, ne lielāks par pilsētu. Ja tas ir pietiekami masīvs, gravitācija to turpina saspiest, līdz rodas [[melnais caurums]]. Tajā pievilkšanas spēks ir tik liels, ka pat gaisma no tā neizbēg."
         },
         {
           "type": "image",
           "asset": "m87_black_hole_event_horizon_telescope_2019",
           "ratio": "16:9",
-          "caption": "Le trou noir de M87 : la première image de 2019 (à gauche) et sa version affinée par l'algorithme PRIMO (2023)."
+          "caption": "M87 melnais caurums: pirmais attēls 2019. gadā (pa kreisi) un tā precizētā versija, ko 2023. gadā izveidoja PRIMO algoritms."
         }
       ]
     },
     {
       "id": "course_281_comment_meurt_une_etoile_p4",
-      "title": "Nous sommes poussière d'étoiles",
+      "title": "Mēs esam zvaigžņu putekļi",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Une étoile qui meurt ne disparaît pas. Elle rend à l'espace une partie de sa matière, chargée des éléments fabriqués pendant sa vie. Avec le temps, cette matière peut entrer dans la composition de nouvelles étoiles, de planètes et d'autres mondes."
+          "text": "Mirstoša zvaigzne nepazūd. Tā atdod kosmosam daļu savas vielas, kas piesātināta ar elementiem, kuri radīti zvaigznes dzīves laikā. Ar laiku šī viela var iekļūt jaunu zvaigžņu, planētu un citu pasauļu sastāvā."
         },
         {
           "type": "image",
           "asset": "pillars_of_creation_eagle_nebula_jwst_2022",
           "ratio": "2:3",
-          "caption": "Les Piliers de la création, vus par le télescope James Webb en 2022 : de nouvelles étoiles y naissent."
+          "caption": "Radīšanas pīlāri, kā tos 2022. gadā redzēja Džeimsa Veba teleskops: tur dzimst jaunas zvaigznes."
         },
         {
           "type": "paragraph",
-          "text": "Le **carbone** en est le meilleur exemple. Il est indispensable à la vie sur Terre, y compris dans nos propres corps. Or, l'essentiel de ce carbone a été fabriqué dans des générations d'étoiles aujourd'hui disparues. Voilà pourquoi on dit parfois que nous sommes faits de poussière d'étoiles. La formule est poétique, mais la science derrière elle est bien réelle. La mort d'une étoile est donc aussi un commencement : sa matière formera peut-être un jour une autre étoile, une autre planète, ou même un monde vivant."
+          "text": "Labākais piemērs ir **ogleklis**. Tas ir nepieciešams dzīvībai uz Zemes, arī mūsu pašu ķermeņos. Taču lielākā daļa šī oglekļa ir radīta zvaigžņu paaudzēs, kuru jau sen nav. Tāpēc dažkārt saka, ka mēs esam veidoti no zvaigžņu putekļiem. Šis izteiciens ir poētisks, bet zinātne aiz tā ir pavisam īsta. Tātad zvaigznes nāve ir arī sākums: tās viela varbūt kādreiz veidos citu zvaigzni, citu planētu vai pat dzīvu pasauli."
         },
         {
           "type": "takeaway",
-          "text": "Privée de fusion, une étoile cède à la gravité : les petites s'éteignent en naine blanche, les massives explosent en supernova et laissent une étoile à neutrons ou un trou noir, et leur matière dispersée nourrit les étoiles, les planètes et les vivants à venir."
+          "text": "Zaudējusi sintēzi, zvaigzne padodas gravitācijai: mazās izdziest kā baltie punduri, masīvās eksplodē kā pārnovas un atstāj neitronu zvaigzni vai melno caurumu, un to izkliedētā viela baro nākotnes zvaigznes, planētas un dzīvās būtnes."
         }
       ]
     }

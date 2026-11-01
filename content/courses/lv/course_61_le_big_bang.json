@@ -1,114 +1,114 @@
 {
   "id": "course_61_le_big_bang",
-  "title": "Qu'est-ce que le Big Bang ?",
-  "subtitle": "13,8 milliards d'années",
+  "title": "Kas ir Lielais sprādziens?",
+  "subtitle": "13,8 miljardi gadu",
   "subject": "sciences",
   "subcategory": "Zeme un Visums",
-  "description": "Il y a 13,8 milliards d'années, l'univers commence à s'étendre. Ce n'est pas une bombe dans le vide : c'est l'espace lui-même qui grandit.",
+  "description": "Pirms 13,8 miljardiem gadu Visums sāk izplesties. Tas nav bumbas sprādziens tukšumā: tā aug pati telpa.",
   "hero": {
     "image": "le_big_bang",
     "ratio": "16:9",
-    "hook": "Le Big Bang n'est pas une explosion dans l'espace. C'est l'espace qui se met à grandir."
+    "hook": "Lielais sprādziens nav sprādziens telpā. Tā ir telpa, kas sāk augt."
   },
   "sections": [
     {
       "id": "course_61_le_big_bang_intro",
-      "title": "Introduction",
+      "title": "Ievads",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Il y a **13,8 milliards d'années**, tout ce qui existe aujourd'hui était concentré dans un état extrêmement dense et chaud. Les scientifiques appellent parfois ce début une [[singularitāte]] : un point où densité et température sont si extrêmes que nos lois habituelles ne suffisent plus à décrire la situation."
+          "text": "Pirms **13,8 miljardiem gadu** viss, kas pastāv šodien, bija sakoncentrēts ārkārtīgi blīvā un karstā stāvoklī. Zinātnieki šim sākumam dažkārt lieto jēdzienu: [[singularitāte]]. Tas ir punkts, kurā blīvums un temperatūra ir tik ekstrēmi, ka mūsu ierastie likumi vairs nespēj aprakstīt situāciju."
         },
         {
           "type": "paragraph",
-          "text": "Puis l'univers se met à s'étendre. Ce n'est pas une bombe qui jette de la matière dans un vide déjà là. C'est l'**espace-temps**, le tissu qui unit l'espace et le temps, qui grandit, emportant la matière avec lui. Cette histoire continue encore aujourd'hui."
+          "text": "Pēc tam Visums sāk izplesties. Tā nav bumba, kas met vielu jau esošā tukšumā. Izplešas **telpa-laiks**, audums, kas savieno telpu un laiku, un velk vielu sev līdzi. Šis stāsts turpinās vēl šodien."
         }
       ]
     },
     {
       "id": "course_61_le_big_bang_p1",
-      "title": "Pas une explosion dans le vide",
+      "title": "Nevis sprādziens tukšumā",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le nom **« Big Bang »** prête à confusion. On imagine souvent un feu d'artifice au milieu d'une pièce vide. Or avant cet événement, il n'y a ni pièce, ni dehors. Espace et temps tels que nous les connaissons commencent avec lui. Demander « qu'y avait-il avant ? » devient donc très délicat : le « avant » n'a plus le même sens."
+          "text": "Nosaukums „**Lielais sprādziens**“ rada pārpratumus. Bieži iedomājas uguņošanu tukšas istabas vidū. Taču pirms šī notikuma nav ne istabas, ne ārpuses. Telpa un laiks tādi, kādus mēs tos pazīstam, sākas kopā ar to. Tāpēc jautājums „kas bija pirms tam?“ kļūst ļoti sarežģīts: vārdam „pirms“ vairs nav tās pašas nozīmes."
         },
         {
           "type": "image",
           "asset": "big_bang_universe_expansion_galaxies",
           "ratio": "auto",
-          "caption": "L'expansion de l'Univers depuis le Big Bang."
+          "caption": "Visuma izplešanās kopš Lielā sprādziena."
         },
         {
           "type": "funFact",
-          "text": "Le terme « Big Bang » a été inventé en **1949** par l'astrophysicien britannique **Fred Hoyle**, qui n'y croyait pas. Il voulait se moquer de l'idée. Le surnom est resté."
+          "text": "Terminu „Lielais sprādziens“ **1949**. gadā izdomāja britu astrofiziķis **Freds Hoils**, kurš tajā neticēja. Viņš gribēja izzobot šo ideju. Iesauka palika."
         },
         {
           "type": "paragraph",
-          "text": "Pour se représenter l'expansion, imaginez des points dessinés sur un ballon. Quand on gonfle le ballon, chaque point s'éloigne des autres. Aucun point à la surface n'est « le centre ». Dans l'univers, c'est un peu la même idée : les **galaxies**, immenses ensembles d'étoiles, s'éloignent les unes des autres parce que l'espace entre elles s'étire."
+          "text": "Lai iztēlotos izplešanos, iedomājies uz balona uzzīmētus punktus. Kad balonu piepūš, katrs punkts attālinās no pārējiem. Neviens punkts uz virsmas nav „centrs“. Visumā ideja ir apmēram tāda pati: **galaktikas**, milzīgi zvaigžņu kopumi, attālinās cita no citas, jo telpa starp tām stiepjas."
         }
       ]
     },
     {
       "id": "course_61_le_big_bang_p2",
-      "title": "Trois grandes preuves",
+      "title": "Trīs lieli pierādījumi",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En **1929**, l'astronome américain **Edwin Hubble** observe que plus une galaxie est loin, plus elle s'éloigne vite. L'univers n'est donc pas figé : il grandit. C'est la **loi de Hubble**, la relation entre distance et vitesse de fuite des galaxies."
+          "text": "**1929**. gadā amerikāņu astronoms **Edvins Habls** novēro: jo tālāk ir galaktika, jo ātrāk tā attālinās. Tātad Visums nav nekustīgs: tas aug. Tas ir **Habla likums**, sakarība starp attālumu un galaktiku bēgšanas ātrumu."
         },
         {
           "type": "paragraph",
-          "text": "En **1965**, deux ingénieurs, **Arno Penzias** et **Robert Wilson**, captent un grésillement radio qui vient de partout. C'est le [[kosmiskais mikroviļņu fona starojums]] : une sorte d'écho thermique du jeune univers, émis quand la lumière a pu circuler librement pour la première fois, environ **380 000 ans** après le début."
+          "text": "**1965**. gadā divi inženieri, **Arno Penzijs** un **Roberts Vilsons**, uztver radiosprakšķus, kas nāk no visām pusēm. Tas ir [[kosmiskais mikroviļņu fona starojums]]: sava veida jaunā Visuma siltuma atbalss, kas izstarota, kad gaisma pirmoreiz varēja brīvi izplatīties, apmēram **380 000 gadu** pēc sākuma."
         },
         {
           "type": "funFact",
-          "text": "Une petite partie du « neige » des vieux téléviseurs analogiques mal réglés venait de ce fond diffus cosmologique."
+          "text": "Neliela daļa no „sniega“ vecos, slikti noskaņotos analogajos televizoros nāca no šī kosmiskā mikroviļņu fona starojuma."
         },
         {
           "type": "paragraph",
-          "text": "Troisième pilier : les proportions des éléments légers. Les calculs prévoient environ **75 %** d'hydrogène et **25 %** d'hélium formés dans les premières minutes. Les observations confirment ces chiffres. C'est la [[pirmatnējā nukleosintēze]], la fabrique des premiers noyaux atomiques dans les minutes qui suivent le Big Bang."
+          "text": "Trešais pīlārs: vieglo elementu proporcijas. Aprēķini paredz aptuveni **75%** ūdeņraža un **25%** hēlija, kas izveidojušies pirmajās minūtēs. Novērojumi šos skaitļus apstiprina. Tā ir [[pirmatnējā nukleosintēze]]: pirmo atomkodolu izveidošanās minūtēs, kas seko Lielajam sprādzienam."
         }
       ]
     },
     {
       "id": "course_61_le_big_bang_p3",
-      "title": "Une chronologie en accéléré",
+      "title": "Hronoloģija paātrinātā tempā",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Juste après le début, l'univers traverse une phase d'**inflation**, une expansion extrêmement rapide en une fraction de seconde. Puis, vers **3 minutes**, **protons** et **neutrons**, particules qui composent les noyaux atomiques, s'assemblent en premiers noyaux. Pendant longtemps, l'univers reste comme un brouillard opaque : la lumière ne voyage pas librement."
+          "text": "Tūlīt pēc sākuma Visums piedzīvo **inflācijas** fāzi, ārkārtīgi straujo izplešanos sekundes daļā. Pēc tam, kad Visumam ir apmēram **3 minūtes**, **protoni** un **neitroni**, daļiņas, kas veido atomkodolus, savienojas pirmajos kodolos. Ilgi Visums paliek kā necaurspīdīga migla: gaisma nevar brīvi ceļot."
         },
         {
           "type": "paragraph",
-          "text": "Vers **380 000 ans**, les **électrons**, particules légères qui orbitent autour des noyaux, rejoignent les noyaux pour former des atomes neutres. La lumière se libère : c'est l'émission du fond diffus. Les premières étoiles naissent bien plus tard, environ **200 millions d'années** après. Notre Soleil, lui, n'apparaît qu'il y a **4,6 milliards d'années**, à partir de matière recyclée par d'anciennes étoiles."
+          "text": "Kad Visumam ir apmēram **380 000 gadu**, **elektroni**, vieglas daļiņas, kas riņķo ap kodoliem, savienojas ar kodoliem un veido neitrālus atomus. Gaisma atbrīvojas: tā ir fona starojuma izstarošana. Pirmās zvaigznes dzimst daudz vēlāk, apmēram **200 miljonus gadu** vēlāk. Mūsu Saule parādās tikai pirms **4,6 miljardiem gadu**, no vielas, ko pārstrādājušas senās zvaigznes."
         },
         {
           "type": "funFact",
-          "text": "Si l'histoire de l'univers tenait en une année, le Big Bang aurait lieu le 1er janvier à minuit, et l'humanité n'apparaîtrait que le **31 décembre à 23 h 52**."
+          "text": "Ja Visuma vēsture ietilptu vienā gadā, Lielais sprādziens notiktu 1. janvārī pusnaktī, un cilvēce parādītos tikai **31. decembrī plkst. 23:52**."
         }
       ]
     },
     {
       "id": "course_61_le_big_bang_p4",
-      "title": "Et demain ?",
+      "title": "Un rīt?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Longtemps, on s'est demandé si la gravité finirait par ralentir l'expansion. En **1998**, l'observation de [[pārnovas]] lointaines, des explosions d'étoiles utilisées comme balises de distance, montre l'inverse : l'[[paātrinātā Visuma izplešanās]]. Une mystérieuse **énergie sombre**, force répulsive qui pousse les galaxies à s'éloigner, semblerait pousser cet éloignement, et représenterait environ **68 %** du contenu de l'univers. La matière ordinaire, celle dont nous sommes faits, n'en ferait qu'environ **5 %**."
+          "text": "Ilgi domāja, vai gravitācija galu galā palēninās izplešanos. **1998**. gadā tiek novērotas tālas [[pārnovas]], zvaigžņu sprādzieni, ko izmanto kā attāluma bākas. Tās parāda pretējo: notiek [[paātrinātā Visuma izplešanās]]. Noslēpumainā **tumšā enerģija**, atgrūdošs spēks, kas liek galaktikām attālināties, šķiet, veicina šo attālināšanos un varētu veidot apmēram **68%** Visuma satura. Parastā viela, no kuras esam veidoti mēs, varētu veidot tikai apmēram **5%**."
         },
         {
           "type": "paragraph",
-          "text": "Si cette accélération continue, l'univers pourrait tendre vers un refroidissement extrême, parfois surnommé **Big Freeze**, la fin par le froid. Une chose est sûre : ce que nous voyons n'est qu'une portion de l'ensemble. Pendant que la lumière voyage vers nous, l'espace continue de s'étirer."
+          "text": "Ja šī paātrināšanās turpināsies, Visums varētu virzīties uz ārkārtēju atdzišanu, ko dažkārt dēvē par **Big Freeze**, galu aukstumā. Viena lieta ir droša: tas, ko mēs redzam, ir tikai daļa no kopuma. Kamēr gaisma ceļo uz mums, telpa turpina stiepties."
         },
         {
           "type": "takeaway",
-          "text": "Le Big Bang, il y a **13,8 milliards d'années**, n'est pas une explosion dans un espace vide : c'est l'expansion de l'espace lui-même, confirmée par la fuite des galaxies, le fond diffus cosmologique et les proportions d'hydrogène et d'hélium."
+          "text": "Lielais sprādziens pirms **13,8 miljardiem gadu** nav sprādziens tukšā telpā: tā ir pašas telpas izplešanās, ko apstiprina galaktiku bēgšana, kosmiskais mikroviļņu fona starojums un ūdeņraža un hēlija proporcijas."
         }
       ]
     }

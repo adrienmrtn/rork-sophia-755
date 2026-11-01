@@ -1,126 +1,126 @@
 {
   "id": "course_228_la_sante_mentale_comme_enjeu_de_societe",
-  "title": "Comment la santé mentale est-elle devenue un enjeu de société ?",
-  "subtitle": "L'épidémie silencieuse",
+  "title": "Kā garīgā veselība kļuva par sabiedrības problēmu?",
+  "subtitle": "Klusā epidēmija",
   "subject": "comprendreLeMonde",
   "subcategory": "Vide un nākotne",
-  "description": "La santé mentale représente **20% des maladies dans le monde**, mais ne reçoit que 2% des budgets de santé. Voici pourquoi cette cause longtemps oubliée devient un enjeu de société majeur.",
+  "description": "Ar garīgo veselību saistītas **20% no visām slimībām pasaulē**, bet tā saņem tikai 2% no veselības budžetiem. Lūk, kāpēc šis ilgi aizmirstais jautājums kļūst par nozīmīgu sabiedrības problēmu.",
   "hero": {
     "image": "la_sante_mentale_comme_enjeu_de_societe",
     "ratio": "16:9",
-    "hook": "Une maladie sur cinq dans le monde touche l'esprit, mais reçoit à peine 2% des budgets de santé."
+    "hook": "Katra piektā slimība pasaulē skar prātu, taču saņem tikai 2% no veselības budžetiem."
   },
   "sections": [
     {
       "id": "course_228_la_sante_mentale_comme_enjeu_de_societe_intro",
-      "title": "Introduction",
+      "title": "Ievads",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Longtemps laissée de côté par la médecine, la santé mentale devient l'un des grands défis du XXIe siècle. Elle ne se limite pas à l'absence de troubles psychiatriques : c'est un état de bien-être qui permet à chacun de réaliser son potentiel et de faire face aux difficultés de la vie."
+          "text": "Ilgi medicīnas atstāta novārtā, garīgā veselība kļūst par vienu no divdesmit pirmā gadsimta lielākajiem izaicinājumiem. Tā nav tikai psihisku traucējumu neesamība, bet stāvoklis, kad cilvēks jūtas labi, var īstenot savu potenciālu un tikt galā ar dzīves grūtībām."
         },
         {
           "type": "paragraph",
-          "text": "Un paradoxe frappant persiste pourtant : ces troubles représentent environ 20% des maladies dans le monde, mais ne reçoivent que 2% des budgets de santé. Ce cours explore les racines de cette crise silencieuse."
+          "text": "Tomēr joprojām pastāv uzkrītošs paradokss: šie traucējumi veido aptuveni 20% no slimībām pasaulē, bet saņem tikai 2% no veselības budžetiem. Šajā kursā aplūkojam šīs klusās krīzes saknes."
         }
       ]
     },
     {
       "id": "course_228_la_sante_mentale_comme_enjeu_de_societe_p1",
-      "title": "Une crise sanitaire sous-estimée",
+      "title": "Nepietiekami novērtēta veselības krīze",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La **dépression** est aujourd'hui la première cause mondiale de handicap, devant les maladies cardiaques ou le diabète. Cette maladie, marquée par une tristesse durable et une perte d'intérêt pour tout, touche toutes les catégories de population, mais reste sous-diagnostiquée dans de nombreuses régions du monde."
+          "text": "**Depresija** mūsdienās ir pasaulē galvenais invaliditātes cēlonis, apsteidzot sirds slimības vai diabētu. Šī slimība izpaužas kā ilgstošas skumjas un intereses zudums par visu, tā skar visas iedzīvotāju grupas, taču daudzos pasaules reģionos tiek diagnosticēta nepietiekami."
         },
         {
           "type": "image",
           "asset": "depression_mental_health_person_dark",
           "ratio": "4:3",
-          "caption": "La dépression est aujourd'hui la première cause mondiale de handicap."
+          "caption": "Depresija mūsdienās ir pasaulē galvenais invaliditātes cēlonis."
         },
         {
           "type": "paragraph",
-          "text": "L'anxiété généralisée touche environ 300 millions de personnes dans le monde. Ces souffrances mènent parfois au suicide, responsable de 700 000 décès par an, un chiffre supérieur au nombre de victimes des guerres et des catastrophes naturelles réunies."
+          "text": "Ģeneralizētais trauksmes traucējums skar aptuveni 300 miljonus cilvēku visā pasaulē. Šīs ciešanas dažkārt beidzas ar pašnāvību, kas katru gadu paņem 700 000 dzīvību. Tas ir vairāk nekā karu un dabas katastrofu upuru skaits kopā."
         },
         {
           "type": "funFact",
-          "text": "Le mot « mélancolie » vient du grec ancien et signifie littéralement « bile noire ». Dans l'Antiquité, on pensait que la dépression était causée par un excès de ce liquide dans le corps."
+          "text": "Vārds „melanholija“ cēlies no sengrieķu valodas un burtiski nozīmē „melnā žults“. Senatnē uzskatīja, ka depresiju izraisa šī šķidruma pārpalikums organismā."
         },
         {
           "type": "paragraph",
-          "text": "En 2019, l'Organisation mondiale de la santé a franchi une étape symbolique en reconnaissant le [[Izdegšana (profesionālā izdegšana)]] comme un phénomène lié au travail. Cette reconnaissance déplace la responsabilité de l'individu seul vers son environnement de travail."
+          "text": "2019. gadā Pasaules Veselības organizācija spēra simbolisku soli: [[Izdegšana (profesionālā izdegšana)]] tika atzīta par ar darbu saistītu parādību. Šis atzinums novirza atbildību no atsevišķa cilvēka uz viņa darba vidi."
         }
       ]
     },
     {
       "id": "course_228_la_sante_mentale_comme_enjeu_de_societe_p2",
-      "title": "Une jeunesse particulièrement touchée",
+      "title": "Īpaši cietusī jaunatne",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Si toute la population est concernée, les adolescents et jeunes adultes inquiètent particulièrement. Aux États-Unis, l'anxiété et la dépression chez les 12-25 ans ont presque doublé en une décennie, avec un tournant clair vers 2012."
+          "text": "Lai gan problēma skar visus, visvairāk raižu rada pusaudži un jaunieši. ASV trauksme un depresija 12-25 gadu vecuma grupā desmitgades laikā gandrīz divkāršojusies, un skaidrs pavērsiens vērojams ap 2012. gadu."
         },
         {
           "type": "image",
           "asset": "teenagers_smartphones_social_media_anxiety",
           "ratio": "16:9",
-          "caption": "L'explosion des réseaux sociaux coïncide avec une hausse marquée de l'anxiété chez les jeunes."
+          "caption": "Sociālo tīklu uzplaukums sakrīt ar manāmu jauniešu trauksmes pieaugumu."
         },
         {
           "type": "paragraph",
-          "text": "Cette date correspond à la généralisation du smartphone et des réseaux sociaux. La psychologue Jean Twenge pense que ce changement a bouleversé la sociabilité des jeunes : la [[Augšupvērsta sociālā salīdzināšana]], où l'on se compare à des standards de vie irréalistes, crée un sentiment profond d'inadéquation."
+          "text": "Šis laiks sakrīt ar viedtālruņu un sociālo tīklu masveida izplatīšanos. Psiholoģe Džīna Tvenge uzskata, ka šīs pārmaiņas ir izjaukušas jauniešu saskarsmi: [[Augšupvērsta sociālā salīdzināšana]], kad cilvēks sevi salīdzina ar nereāliem dzīves standartiem, rada dziļu nepietiekamības sajūtu."
         },
         {
           "type": "paragraph",
-          "text": "S'ajoutent la [[Kibervardarbība]] et le manque de sommeil causé par la lumière des écrans. Les réseaux sociaux fonctionnent sur des boucles de [[Dopamīna pastiprinājums]] qui peuvent devenir addictives et détourner les jeunes du sport ou du sommeil réparateur."
+          "text": "Klāt nāk [[Kibervardarbība]] un miega trūkums ekrānu gaismas dēļ. Sociālo tīklu pamatā ir [[Dopamīna pastiprinājums]]: atkārtoti cikli, kas var kļūt atkarību izraisoši un novērst jauniešus no sporta vai atjaunojoša miega."
         }
       ]
     },
     {
       "id": "course_228_la_sante_mentale_comme_enjeu_de_societe_p3",
-      "title": "Un coût économique très concret",
+      "title": "Ļoti konkrētas ekonomiskās izmaksas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La santé mentale ne concerne pas que la vie privée : elle affecte aussi directement la productivité. Le coût annuel du burn-out et de la souffrance au travail est estimé à 300 milliards de dollars par an, rien qu'aux États-Unis, entre absences, départs répétés et employés présents mais incapables de travailler efficacement."
+          "text": "Garīgā veselība neskar tikai privāto dzīvi, tā tieši ietekmē arī ražīgumu. Izdegšanas un ciešanu darbā gada izmaksas tiek lēstas 300 miljardu dolāru apmērā, un tas tikai ASV vien. Tajā ietilpst kavējumi, biežas darbinieku aiziešanas un darbinieki, kas ir klāt, bet nespēj strādāt efektīvi."
         },
         {
           "type": "image",
           "asset": "workplace_burnout_stress_mental_health",
           "ratio": "4:3",
-          "caption": "Le coût du burn-out se chiffre en centaines de milliards de dollars chaque année."
+          "caption": "Izdegšanas izmaksas gadā sasniedz simtiem miljardu dolāru."
         },
         {
           "type": "paragraph",
-          "text": "Face à ce coût, les entreprises développent des programmes de prévention, mais le défi reste entier dans les pays pauvres, où consulter un psychiatre est presque impossible. L'un des leviers les plus puissants reste la déstigmatisation : quand une personnalité publique comme l'athlète Simone Biles parle ouvertement de ses difficultés, elle contribue à transformer une source de honte en un vrai sujet de santé."
+          "text": "Šo izmaksu priekšā uzņēmumi izstrādā profilakses programmas, taču nabadzīgajās valstīs problēma paliek neatrisināta, jo tur pie psihiatra tikt gandrīz neiespējami. Viens no spēcīgākajiem līdzekļiem joprojām ir stigmas mazināšana: kad sabiedrībā pazīstama personība, piemēram, sportiste Simona Bailza, atklāti runā par savām grūtībām, tā palīdz kauna avotu pārvērst par īstu veselības tematu."
         }
       ]
     },
     {
       "id": "course_228_la_sante_mentale_comme_enjeu_de_societe_p4",
-      "title": "Vers une approche préventive",
+      "title": "Ceļā uz profilaktisku pieeju",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L'avenir de la santé mentale dépend de notre capacité à passer d'une médecine qui traite la crise une fois arrivée, à une approche préventive. Cela suppose de repenser l'urbanisme, l'école et le rythme de travail pour réduire les sources de stress avant qu'elles n'aient un impact."
+          "text": "Garīgās veselības nākotne ir atkarīga no mūsu spējas pāriet no medicīnas, kas krīzi ārstē tikai tad, kad tā jau iestājusies, uz profilaktisku pieeju. Tam jāpārdomā pilsētplānošana, skola un darba ritms, lai mazinātu stresa avotus, pirms tie sāk ietekmēt cilvēku."
         },
         {
           "type": "paragraph",
-          "text": "De nouvelles pistes émergent, comme les thérapies numériques ou l'intelligence artificielle, pour pallier le manque de praticiens, bien que ces outils posent aussi des questions sur la confidentialité des données."
+          "text": "Rodas jauni risinājumi, piemēram, digitālā terapija vai mākslīgais intelekts, kas palīdz kompensēt speciālistu trūkumu, lai gan šie rīki rada arī jautājumus par datu konfidencialitāti."
         },
         {
           "type": "paragraph",
-          "text": "La santé mentale est aussi liée aux grandes crises actuelles : le concept d'éco-anxiété montre bien comment les menaces globales, comme le climat, affectent directement notre équilibre psychologique. Reconnaître la santé mentale comme un pilier essentiel de nos sociétés devient une condition pour affronter les crises à venir."
+          "text": "Garīgā veselība ir saistīta arī ar mūsdienu lielajām krīzēm: ekotrauksmes jēdziens labi parāda, kā globāli draudi, piemēram, klimats, tieši ietekmē mūsu psiholoģisko līdzsvaru. Garīgās veselības atzīšana par mūsu sabiedrību būtisku pīlāru kļūst par nosacījumu, lai varētu stāties pretī nākamajām krīzēm."
         },
         {
           "type": "takeaway",
-          "text": "La santé mentale représente 20% des maladies dans le monde mais seulement 2% des budgets de santé. Entre dépression, burn-out et impact du numérique sur les jeunes, elle devient un enjeu de société aussi urgent qu'économique."
+          "text": "Garīgā veselība veido 20% no slimībām pasaulē, bet tikai 2% no veselības budžetiem. Depresija, izdegšana un digitālās vides ietekme uz jauniešiem padara to par tikpat steidzamu, cik ekonomisku sabiedrības problēmu."
         }
       ]
     }
