@@ -1,96 +1,96 @@
 {
   "id": "course_59_la_decouverte_de_l_anesthesie",
-  "title": "La découverte de l'anesthésie",
-  "subtitle": "Médecine",
+  "title": "麻酔の発見：痛みのない手術の始まり",
+  "subtitle": "医学",
   "subject": "sciences",
-  "subcategory": "Découvertes qui ont changé le monde",
-  "description": "Avant 1846, une opération se faisait souvent conscient et dans une douleur extrême. L'anesthésie transforme la chirurgie en soin, pas en torture.",
+  "subcategory": "世界を変えた発見",
+  "description": "1846年より前、手術は意識があるまま、極度の痛みのなかで行われることがよくありました。麻酔は、外科を拷問ではなく治療に変えたのです。",
   "hero": {
     "image": "la_decouverte_de_l_anesthesie",
     "ratio": "16:9",
-    "hook": "Un jour de 1846, à Boston, la chirurgie cesse d'être une course contre la douleur."
+    "hook": "1846年のある日、ボストンで、外科は痛みとの競走ではなくなります。"
   },
   "sections": [
     {
       "id": "course_59_la_decouverte_de_l_anesthesie_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Imagine une amputation sans endormissement. Avant le milieu du XIXe siècle, c'est la norme. On attache le patient, on va vite, on prie."
+          "text": "眠らされないまま手足を切断される場面を想像してみてください。十九世紀半ばより前、それが当たり前でした。患者を縛りつけ、急いで切り、祈るしかありません。"
         },
         {
           "type": "paragraph",
-          "text": "L'**anesthésie** change tout : elle permet d'opérer sans conscience de la douleur. La chirurgie moderne peut enfin prendre son temps."
+          "text": "**麻酔**がすべてを変えました。痛みを感じないまま手術ができるようになり、現代の外科はようやく時間をかけられるようになったのです。"
         }
       ]
     },
     {
       "id": "course_59_la_decouverte_de_l_anesthesie_p1",
-      "title": "Avant : la vitesse contre la souffrance",
+      "title": "麻酔以前の外科：苦痛と引き換えの速さ",
       "free": false,
       "blocks": [
         {
           "type": "image",
           "asset": "surgery_without_anesthesia_19th_century",
           "ratio": "4:3",
-          "caption": "Sans anesthésie, le chirurgien devait être extrêmement rapide."
+          "caption": "麻酔がなければ、外科医は極めて手早くなければなりませんでした。"
         },
         {
           "type": "paragraph",
-          "text": "Les chirurgiens étaient jugés sur leur vitesse. On utilisait alcool, opium, ou la force brute pour immobiliser. Beaucoup de patients mouraient du choc, de l'infection, ou de l'hémorragie."
+          "text": "外科医は手術の速さで評価されました。体を押さえつけるために、酒やアヘン、あるいは力ずくが使われました。多くの患者が、ショックや感染症、出血で亡くなりました。"
         }
       ]
     },
     {
       "id": "course_59_la_decouverte_de_l_anesthesie_p2",
-      "title": "1846 : le jour de l'éther",
+      "title": "1846年：エーテルの日",
       "free": false,
       "blocks": [
         {
           "type": "image",
           "asset": "ether_anesthesia_first_demonstration_1846",
           "ratio": "4:3",
-          "caption": "À Boston, une démonstration publique convainc le monde médical."
+          "caption": "ボストンで行われた公開実験が、医学界の人々を納得させました。"
         },
         {
           "type": "paragraph",
-          "text": "Le **16 octobre 1846**, à Boston, le dentiste **William Morton** fait inhaler de l'**éther** à un patient. Le chirurgien **John Warren** opère une tumeur du cou. Le patient ne hurle pas. La salle est stupéfaite."
+          "text": "**1846年十月十六日**、ボストンで、歯科医の**ウィリアム・モートン**が患者に**エーテル**を吸入させます。外科医の**ジョン・ウォーレン**が首の腫瘍を手術します。患者は叫びません。会場は驚きに包まれます。"
         },
         {
           "type": "funFact",
-          "text": "Warren aurait déclaré : « Messieurs, ceci n'est pas une humbug » (pas une arnaque). La phrase est restée célèbre."
+          "text": "ウォーレンは「皆さん、これはペテン（humbug）ではありません」と述べたとされています。この言葉は有名になりました。"
         }
       ]
     },
     {
       "id": "course_59_la_decouverte_de_l_anesthesie_p3",
-      "title": "Ensuite : chloroforme et débats",
+      "title": "その後：クロロホルムと論争",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "D'autres produits suivent, comme le **chloroforme**, popularisé notamment en Grande-Bretagne. Des rivalités éclatent sur qui a « inventé » quoi. Peu importe le brevet : l'idée se répand dans le monde entier."
+          "text": "ほかの薬品も続きます。たとえば**クロロホルム**は、とくにイギリスで広まりました。だれが何を「発明した」のかをめぐって、対立も起こります。特許がだれのものかに関係なく、この考えは世界中に広まります。"
         },
         {
           "type": "paragraph",
-          "text": "Il reste un problème : endormir sans tuer. Il faut doser, surveiller la respiration, le cœur. Une nouvelle spécialité naît."
+          "text": "まだ問題が残っています。患者を死なせずに眠らせることです。量を調節し、呼吸や心臓を見守らなければなりません。こうして、新しい専門分野が生まれます。"
         }
       ]
     },
     {
       "id": "course_59_la_decouverte_de_l_anesthesie_p4",
-      "title": "L'anesthésie aujourd'hui",
+      "title": "現代の麻酔",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Aujourd'hui, l'anesthésiste utilise des gaz et des médicaments précis, des machines qui mesurent tout. On peut endormir tout le corps ou seulement une zone (anesthésie locale ou locorégionale)."
+          "text": "今日、麻酔科医は精密なガスや薬を使い、あらゆるものを測定する機械を備えています。全身を眠らせることも、体の一部だけを眠らせることもできます（局所麻酔や区域麻酔）。"
         },
         {
           "type": "takeaway",
-          "text": "Depuis la démonstration de l'éther en **1846**, l'anesthésie a transformé la chirurgie : moins de douleur, plus de temps, plus de précision… et une sécurité devenue une science à part entière."
+          "text": "**1846年**にエーテルの公開実験が行われて以来、麻酔は外科を変えました。痛みは減り、時間をかけられ、精度も上がり、安全性は独立した一つの科学にまでなりました。"
         }
       ]
     }

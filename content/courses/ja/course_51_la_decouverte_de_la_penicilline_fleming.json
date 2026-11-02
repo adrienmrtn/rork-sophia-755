@@ -1,104 +1,104 @@
 {
   "id": "course_51_la_decouverte_de_la_penicilline_fleming",
-  "title": "La découverte de la pénicilline",
-  "subtitle": "Fleming, 1928",
+  "title": "ペニシリンはどうやって発見されたの？",
+  "subtitle": "フレミング、1928年",
   "subject": "sciences",
-  "subcategory": "Découvertes qui ont changé le monde",
-  "description": "En 1928, Alexander Fleming remarque qu'une moisissure a tué des bactéries sur une boîte de culture. De ce hasard naîtra le premier grand antibiotique.",
+  "subcategory": "世界を変えた発見",
+  "description": "1928年、アレクサンダー・フレミングは、培養皿の上でカビが細菌を殺していることに気づきます。この偶然から、最初の本格的な抗生物質が生まれました。",
   "hero": {
     "image": "la_decouverte_de_la_penicilline",
     "ratio": "16:9",
-    "hook": "Une boîte oubliée, une moisissure, et la médecine bascule."
+    "hook": "置き忘れた培養皿、一つのカビ。そして医学が大きく動きます。"
   },
   "sections": [
     {
       "id": "course_51_la_decouverte_de_la_penicilline_fleming_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Avant les antibiotiques, une simple infection pouvait tuer. Une coupure, une pneumonie, une blessure de guerre : le corps combattait souvent seul."
+          "text": "抗生物質がなかった時代、ちょっとした感染症でも命を落とすことがありました。切り傷、肺炎、戦場での負傷。体はたいてい自力で戦うしかなかったのです。"
         },
         {
           "type": "paragraph",
-          "text": "En **1928**, le médecin écossais **Alexander Fleming** découvre par hasard une substance capable de tuer des bactéries. Elle s'appellera la **pénicilline**. Mais il faudra encore des années pour en faire un vrai médicament."
+          "text": "**1928年**、スコットランド出身の医師**アレクサンダー・フレミング**は、細菌を殺す物質を偶然見つけます。のちに**ペニシリン**と呼ばれる物質です。ただ、これを本物の薬にするには、まだ何年もかかりました。"
         }
       ]
     },
     {
       "id": "course_51_la_decouverte_de_la_penicilline_fleming_p1",
-      "title": "Une boîte oubliée",
+      "title": "置き忘れた培養皿",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Fleming étudie des bactéries à Londres. En rentrant de vacances, il regarde d'anciennes boîtes de culture. Sur l'une d'elles, une **moisissure** a poussé. Autour d'elle, les bactéries sont mortes."
+          "text": "フレミングはロンドンで細菌を研究していました。休暇から戻って古い培養皿を見ていると、そのうちの一枚に**カビ**が生えています。そのまわりでは、細菌が死んでいました。"
         },
         {
           "type": "image",
           "asset": "alexander_fleming_penicillin_petri_dish",
           "ratio": "4:3",
-          "caption": "Fleming et l'idée clé : quelque chose dans la moisissure arrête les bactéries."
+          "caption": "フレミングと発見のカギ：カビの中の何かが細菌の増殖を止めている。"
         },
         {
           "type": "paragraph",
-          "text": "La moisissure appartient au genre **Penicillium**. Fleming comprend qu'elle produit une substance antibactérienne. Il l'appelle pénicilline. Mais il n'arrive pas à la purifier assez pour soigner des malades."
+          "text": "このカビは**アオカビ属**（**Penicillium**）の仲間です。フレミングは、カビが抗菌作用のある物質を出していると考え、それをペニシリンと名づけました。けれども、患者の治療に使えるほど純粋な形には精製できませんでした。"
         },
         {
           "type": "funFact",
-          "text": "Fleming a dit plus tard que s'il avait été plus ordonné, il aurait jeté la boîte. Le désordre du labo a aidé la découverte."
+          "text": "フレミングは後に、もう少し整理整頓のできる人間だったら培養皿を捨てていただろう、と語っています。実験室が散らかっていたことが、発見を助けたのです。"
         }
       ]
     },
     {
       "id": "course_51_la_decouverte_de_la_penicilline_fleming_p2",
-      "title": "Oxford transforme l'idée en remède",
+      "title": "オックスフォードで薬に変わる",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Au début des années **1940**, à Oxford, **Howard Florey** et **Ernst Chain** reprennent le travail. Avec leur équipe, ils isolent, concentrent et testent la pénicilline sur des animaux, puis sur des humains."
+          "text": "**1940年代**の初め、オックスフォードで**ハワード・フローリー**と**エルンスト・チェーン**がこの研究を引き継ぎます。二人はチームとともに、ペニシリンを取り出して濃縮し、動物で、続いて人間で試しました。"
         },
         {
           "type": "paragraph",
-          "text": "La Seconde Guerre mondiale rend la chose urgente : il faut soigner les soldats infectés. La pénicilline passe du labo à un enjeu stratégique."
+          "text": "第二次世界大戦によって、事態は急を要するようになります。感染した兵士を治療しなければならなかったのです。ペニシリンは、実験室の成果から戦略的に重要な物資へと変わりました。"
         }
       ]
     },
     {
       "id": "course_51_la_decouverte_de_la_penicilline_fleming_p3",
-      "title": "Produire en masse",
+      "title": "大量生産へ",
       "free": false,
       "blocks": [
         {
           "type": "image",
           "asset": "penicillin_antibiotic_production_laboratory",
           "ratio": "4:3",
-          "caption": "Il a fallu inventer des façons industrielles de faire pousser la moisissure."
+          "caption": "カビを工業的に育てる方法を、新しく考え出さなければなりませんでした。"
         },
         {
           "type": "paragraph",
-          "text": "Pour soigner des millions de personnes, il faut des quantités énormes. Les États-Unis industrialisent la production pendant la guerre. Des cuves géantes font manquer la moisissure comme une bière."
+          "text": "何百万人もの人を治療するには、膨大な量のペニシリンが必要です。アメリカは戦時中に生産を工業化し、巨大なタンクの中で、ビールをつくるときのようにカビを発酵させて大量に育てました。"
         },
         {
           "type": "paragraph",
-          "text": "En **1945**, Fleming, Florey et Chain reçoivent le prix Nobel. La médecine entre dans l'âge des antibiotiques."
+          "text": "**1945年**、フレミング、フローリー、チェーンの3人はノーベル賞を受けます。医学は抗生物質の時代に入りました。"
         }
       ]
     },
     {
       "id": "course_51_la_decouverte_de_la_penicilline_fleming_p4",
-      "title": "L'ombre de la résistance",
+      "title": "忍び寄る耐性",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Aujourd'hui, trop d'antibiotiques mal utilisés ont permis à certaines bactéries de devenir **résistantes** : les médicaments ne les tuent plus. Fleming avait déjà prévenu ce risque."
+          "text": "現在では、抗生物質が不適切に使われすぎたせいで、一部の細菌が**耐性**をもつようになりました。薬が効かなくなったのです。フレミングは、このリスクをすでに警告していました。"
         },
         {
           "type": "takeaway",
-          "text": "La pénicilline naît d'un hasard observé par Fleming en **1928**, puis devient un médicament grâce à Florey, Chain et l'industrie de guerre. Elle a sauvé des millions de vies… à condition de ne pas l'userer."
+          "text": "ペニシリンは、1928年にフレミングが観察した偶然から生まれ、フローリー、チェーン、そして戦時の産業の力で薬になりました。何百万人もの命を救ってきましたが、それは使いすぎない限りの話です。"
         }
       ]
     }

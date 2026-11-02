@@ -1,108 +1,108 @@
 {
   "id": "course_113_le_seigneur_des_anneaux_tolkien",
-  "title": "Le Seigneur des Anneaux, Tolkien",
+  "title": "『指輪物語』、J・R・R・トールキン",
   "subtitle": "1954-1955",
   "subject": "litterature",
-  "subcategory": "Anglo-saxons & littérature mondiale",
-  "description": "Frodon doit détruire l'Anneau Unique au Mont Destin. Tolkien invente la Terre du Milieu et redéfinit la fantasy moderne.",
+  "subcategory": "英米と世界の文学",
+  "description": "フロドは、滅びの山で一つの指輪を破壊しなければなりません。トールキンは中つ国を創り出し、現代のファンタジーを塗り替えました。",
   "hero": {
     "image": "le_seigneur_des_anneaux_tolkien",
     "ratio": "16:9",
-    "hook": "Un anneau pour les dominer tous : l'épopée qui a inventé la fantasy telle qu'on la connaît."
+    "hook": "すべてを統べる一つの指輪：いま私たちが知るファンタジーの形を作り上げた叙事詩。"
   },
   "sections": [
     {
       "id": "course_113_le_seigneur_des_anneaux_tolkien_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Le Seigneur des Anneaux**, publié entre **1954** et **1955**, est l'acte de naissance de la [[ハイ・ファンタジー]]. Ce sous-genre de la fantasy se déroule dans un monde totalement imaginaire. Les enjeux sont épiques, entre le bien et le mal. **J.R.R. Tolkien**, né en **1892** et mort en **1973**, y crée la **Terre du Milieu**, un univers d'une profondeur historique, linguistique et mythologique sans précédent."
+          "text": "**1954年**から**1955年**にかけて刊行された**『指輪物語』**は、[[ハイ・ファンタジー]]の誕生を告げる作品です。ハイ・ファンタジーはファンタジーの一分野で、完全に架空の世界を舞台にします。善と悪をめぐる壮大な戦いが描かれます。**J・R・R・トールキン**（**1892年**生まれ、**1973年**没）は、ここで**中つ国**を創りました。歴史、言語、神話のどれをとっても、前例のない深みをもつ世界です。"
         },
         {
           "type": "paragraph",
-          "text": "Fruit de plusieurs décennies de travail, ce récit médite sur le pouvoir, l'héroïsme ordinaire et la perte. Tolkien ne se contente pas de raconter une aventure : il instaure un monde cohérent où chaque peuple possède sa langue, sa culture et son histoire. Hobbits, elfes, nains et hommes y coexistent."
+          "text": "数十年にわたる仕事の成果であるこの物語は、権力、普通の人の英雄的な行い、そして喪失について思索します。トールキンは、ただ冒険を語るだけではありません。どの民族にも固有の言語、文化、歴史がある、筋の通った世界を築き上げます。ホビット、エルフ、ドワーフ、人間が、その世界でともに暮らしています。"
         }
       ]
     },
     {
       "id": "course_113_le_seigneur_des_anneaux_tolkien_p1",
-      "title": "Tolkien : le philologue créateur de mondes",
+      "title": "トールキン：言葉から世界を創り出した文献学者",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Tolkien était professeur de [[古英語]] à **Oxford**. Le vieil anglais est la forme ancienne de l'anglais, parlée entre le **Ve** et le **XIe** siècle. Sa spécialité, la **philologie**, étudie les langues et leurs évolutions. C'est la base de son univers. Il invente d'abord des langues, quenya et sindarin, puis imagine les peuples qui les parlent."
+          "text": "トールキンは**オックスフォード**で[[古英語]]の教授をしていました。古英語は英語の古い形で、**五世紀**から**十一世紀**にかけて話されました。専門の**文献学**は、言語とその変化を研究する学問で、これが彼の世界の土台です。まずクウェンヤやシンダール語といった言語を作り、それを話す民族を後から思い描きました。"
         },
         {
           "type": "image",
           "asset": "j_r_r_tolkien_portrait_photograph",
           "ratio": "4:3",
-          "caption": "J.R.R. Tolkien, philologue d'Oxford devenu père de la fantasy moderne."
+          "caption": "J・R・R・トールキン：オックスフォードの文献学者から、現代ファンタジーの父へ。"
         },
         {
           "type": "paragraph",
-          "text": "En s'appuyant sur les [[北欧神話とアングロ・サクソン神話]], il cherche à offrir à l'Angleterre une mythologie propre. Beowulf, l'Edda nordique et le Kalevala finlandais nourrissent son imagination. Ce processus de [[準創造]] vise une cohérence si forte que le lecteur accepte les lois de ce monde comme des vérités. L'écrivain crée un monde secondaire avec ses propres règles."
+          "text": "トールキンは[[北欧神話とアングロ・サクソン神話]]を土台に、イングランドに固有の神話を贈ろうとしました。『ベーオウルフ』、北欧の『エッダ』、フィンランドの『カレワラ』が、その想像力を養いました。この[[準創造]]の営みは、読者がその世界の法則を真実として受け入れるほど、強い一貫性を目指します。作家は、独自の規則をもつ第二の世界を創り出すのです。"
         },
         {
           "type": "funFact",
-          "text": "Tolkien a réécrit le chapitre « Le Conseil d'Elrond » plus de dix fois pour que les arbres généalogiques et les nuances linguistiques restent parfaitement cohérents."
+          "text": "トールキンは、家系図や言語のニュアンスが少しも食い違わず、完全に筋が通るように、「エルロンドの会議」の章を十回以上も丁寧に書き直しました。"
         }
       ]
     },
     {
       "id": "course_113_le_seigneur_des_anneaux_tolkien_p2",
-      "title": "La quête de l'Unique : une épopée de la fragilité",
+      "title": "一つの指輪をめぐる探索の旅：もろさをめぐる叙事詩",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L'**Anneau Unique**, forgé par le [[マイア]] déchu **Sauron**, concentre sa puissance. Sauron est un esprit divin de rang inférieur aux Valar, les « dieux » de la mythologie tolkienienne. **Frodon Sacquet**, simple hobbit de la Comté, doit le détruire au **Mont Destin**, au cœur du **Mordor**, royaume de l'ombre."
+          "text": "**一つの指輪**は、堕落した[[マイア]]の**サウロン**が鍛え、自らの力を注ぎ込んだものです。サウロンは、ヴァラールより下の位にある神的な霊で、ヴァラールはトールキンの神話でいう「神々」にあたります。ホビット庄の素朴なホビット、**フロド・バギンズ**は、これを、闇の王国**モルドール**の中心にある**滅びの山**で破壊しなければなりません。"
         },
         {
           "type": "image",
           "asset": "lord_of_the_rings_middle_earth_illustration",
           "ratio": "16:9",
-          "caption": "La Terre du Milieu : de la Comté au Mordor, une épopée à travers des paysages mythiques."
+          "caption": "中つ国：ホビット庄からモルドールまで、神話のような風景をめぐる壮大な叙事詩。"
         },
         {
           "type": "paragraph",
-          "text": "La **Communauté de l'Anneau** réunit neuf représentants des peuples libres. Tandis qu'**Aragorn**, héritier de [[ゴンドール]], mène des batailles héroïques, Frodon et **Sam** avancent seuls dans la solitude. Gondor est le principal royaume des Hommes au sud. L'Anneau corrompt progressivement Frodon. Le pouvoir absolu détruit même les plus vertueux."
+          "text": "**旅の仲間**は、自由の民の代表九人からなります。[[ゴンドール]]の世継ぎ**アラゴルン**が英雄的な戦いを率いる一方、フロドと**サム**は孤独のなか二人だけで進みます。ゴンドールは、南にある人間の主要な王国です。指輪は、少しずつフロドを蝕んでいきます。絶対的な力は、もっとも高潔な者さえ堕落させるのです。"
         }
       ]
     },
     {
       "id": "course_113_le_seigneur_des_anneaux_tolkien_p3",
-      "title": "Théologie et philosophie : le refus de l'allégorie",
+      "title": "神学と哲学：寓意を拒んだトールキンの姿勢",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Tolkien refuse l'allégorie explicite, où chaque personnage représenterait une idée fixe. Son œuvre explore pourtant la **corruption par le pouvoir**. L'Anneau attaque la volonté de son porteur. Un hobbit sans ambition politique est le candidat idéal pour ce fardeau, car il n'a rien à gagner au pouvoir."
+          "text": "トールキンは、登場人物がそれぞれ一つの固定した観念を表すような、あからさまな寓意を拒みました。それでも作品は、**権力による堕落**を探っています。指輪は持ち主の意志を攻撃します。政治的な野心をもたないホビットは、この重荷を負うのにうってつけです。権力から得るものが何もないからです。"
         },
         {
           "type": "paragraph",
-          "text": "Des actes de pitié passés produisent des conséquences majeures. **Gollum**, corrompu par l'anneau, est épargné par compassion à plusieurs reprises. Sans le savoir, il permet l'accomplissement final de la quête quand Frodon, à son tour, échoue à jeter l'anneau dans le feu. La providence semble agir à travers la pitié, non la force."
+          "text": "過去の憐れみの行いが、大きな結果を生みます。指輪に堕ちた**ゴラム**は、何度も同情から命を助けられます。そしてフロドが最後に火の中へ指輪を投げ入れられなくなったとき、ゴラムは知らずに旅の完成を助けることになります。摂理は、力ではなく憐れみを通じて働くかのようです。"
         }
       ]
     },
     {
       "id": "course_113_le_seigneur_des_anneaux_tolkien_p4",
-      "title": "Héritage et révolution culturelle",
+      "title": "後世への遺産と、文化にもたらした革命",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Publié entre **1954** et **1955**, le roman devient l'un des livres les plus vendus du XXe siècle. Il fixe les codes de la fantasy moderne : elfes, nains, quête en groupe, monde secondaire cohérent. L'adaptation cinématographique de **Peter Jackson**, de **2001** à **2003**, renforce son impact planétaire."
+          "text": "**1954年**から**1955年**にかけて出版されたこの小説は、二十世紀でもっとも売れた本の一つになりました。エルフ、ドワーフ、集団での探索の旅、筋の通った第二の世界など、現代ファンタジーの約束事を確立しました。**ピーター・ジャクソン**による**2001年**から**2003年**の映画化は、世界的な影響力をいっそう強めました。"
         },
         {
           "type": "paragraph",
-          "text": "Tolkien influence aussi le jeu de rôle *Dungeons & Dragons*, la musique et l'écologie. Sa vision d'une nature menacée par la démesure technologique résonne encore aujourd'hui. Les forges de Saruman et les machines de Sauron en sont l'image. Il a consacré plus d'un demi-siècle à la Terre du Milieu."
+          "text": "トールキンは、ロールプレイングゲーム*『ダンジョンズ&ドラゴンズ』*、音楽、環境保護の考え方にも影響を与えました。技術の行き過ぎに脅かされる自然という彼の見方は、今日もなお響きます。サルマンの鍛冶場やサウロンの機械が、その象徴です。彼は半世紀以上を、中つ国に捧げました。"
         },
         {
           "type": "takeaway",
-          "text": "Tolkien a créé des langues et un univers d'une cohérence absolue dont **Le Seigneur des Anneaux** reste le chef-d'œuvre incontesté, fondateur de la [[ハイ・ファンタジー]] moderne."
+          "text": "トールキンは、言語と、絶対的な一貫性をもつ世界を創り出しました。その代表作**『指輪物語』**は今も揺るがぬ傑作であり、現代の[[ハイ・ファンタジー]]の礎です。"
         }
       ]
     }

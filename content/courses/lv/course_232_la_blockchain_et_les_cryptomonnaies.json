@@ -1,110 +1,110 @@
 {
   "id": "course_232_la_blockchain_et_les_cryptomonnaies",
-  "title": "Comment fonctionnent la blockchain et les cryptomonnaies ?",
-  "subtitle": "Depuis 2009",
+  "title": "Kā darbojas blokķēde un kriptovalūtas?",
+  "subtitle": "Kopš 2009. gada",
   "subject": "comprendreLeMonde",
-  "subcategory": "Environnement & avenir",
-  "description": "La **blockchain** a inventé un registre que personne ne peut falsifier seul, ouvrant la voie à une nouvelle économie numérique.",
+  "subcategory": "Vide un nākotne",
+  "description": "**Blokķēde** ir izgudrojusi reģistru, ko neviens nespēj viens pats viltot, un tā ir pavērusi ceļu jaunai digitālajai ekonomikai.",
   "hero": {
     "image": "la_blockchain_et_les_cryptomonnaies",
     "ratio": "16:9",
-    "hook": "Un cahier de comptes que personne ne possède, mais que des milliers d'ordinateurs surveillent ensemble."
+    "hook": "Rēķinu burtnīca, kas nepieder nevienam, bet ko kopā uzrauga tūkstošiem datoru."
   },
   "sections": [
     {
       "id": "course_232_la_blockchain_et_les_cryptomonnaies_intro",
-      "title": "Introduction",
+      "title": "Ievads",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Imaginez un cahier de comptes que personne ne possède seul, mais que des milliers d'ordinateurs tiennent à jour en même temps, partout dans le monde, et qu'il est presque impossible de falsifier. C'est l'idée de départ de la **blockchain**, une technologie souvent réduite à sa première application, le **Bitcoin**."
+          "text": "Iedomājies rēķinu burtnīcu, kas nepieder nevienam vienam, bet ko tūkstošiem datoru visā pasaulē vienlaikus uztur atjauninātu un ko gandrīz neiespējami viltot. Tāda ir **blokķēdes** pamatideja. Šo tehnoloģiju bieži saista tikai ar tās pirmo pielietojumu, **bitkoinu**."
         },
         {
           "type": "paragraph",
-          "text": "En permettant d'échanger de la valeur sans passer par une banque, cette invention a fait naître toute une économie parallèle, entre promesses de liberté financière et critiques sévères sur son coût énergétique."
+          "text": "Ļaujot apmainīties ar vērtību bez bankas starpniecības, šis izgudrojums ir radījis veselu paralēlu ekonomiku, kurā sastopas solījumi par finansiālo brīvību un bargi pārmetumi par tās enerģijas patēriņu."
         }
       ]
     },
     {
       "id": "course_232_la_blockchain_et_les_cryptomonnaies_p1",
-      "title": "Un registre que personne ne contrôle seul",
+      "title": "Reģistrs, ko neviens nekontrolē viens pats",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Au cœur de la blockchain se trouve une idée simple : le **registre distribué**. Contrairement à une banque, qui garde ses comptes sur ses propres serveurs, la blockchain s'appuie sur un réseau de [[vienādranga dalībnieki]], c'est-à-dire des milliers d'ordinateurs qui conservent chacun une copie identique de toutes les transactions."
+          "text": "Blokķēdes pamatā ir vienkārša ideja: **sadalītais reģistrs**. Atšķirībā no bankas, kas glabā savus kontus savos serveros, blokķēde balstās uz tīklu, ko veido [[vienādranga dalībnieki]]: tūkstošiem datoru, no kuriem katrs glabā identisku visu darījumu kopiju."
         },
         {
           "type": "funFact",
-          "text": "Le tout premier bloc de la blockchain Bitcoin, appelé « bloc de genèse », contenait un message caché : la une d'un journal britannique du 3 janvier 2009, qui parlait du sauvetage des banques par l'État. Un clin d'œil politique de son créateur."
+          "text": "Bitkoina blokķēdes pats pirmais bloks, ko sauc par „ģenēzes bloku“, saturēja slēptu vēstījumu: kāda Lielbritānijas laikraksta 2009. gada 3. janvāra pirmo lappusi, kurā rakstīts par banku glābšanu ar valsts līdzekļiem. Tas bija veidotāja politisks mājiens."
         },
         {
           "type": "paragraph",
-          "text": "Chaque transaction est d'abord vérifiée par le réseau, puis regroupée avec d'autres dans un **bloc**. Ce bloc est ensuite relié au précédent grâce à un calcul mathématique appelé [[jaukšana]] : une sorte d'empreinte numérique unique. Résultat, une chaîne ininterrompue de blocs, d'où le nom blockchain. Pour modifier une seule transaction ancienne, il faudrait recalculer toute la chaîne et convaincre plus de la moitié du réseau, ce qui est quasiment impossible à grande échelle."
+          "text": "Katru darījumu vispirms pārbauda tīkls, tad to apvieno ar citiem **blokā**. Šo bloku pēc tam ar iepriekšējo sasaista matemātisks aprēķins: [[jaukšana]], savdabīgs unikāls digitālais nospiedums. Rezultātā rodas nepārtraukta bloku ķēde, no tā arī nosaukums blokķēde. Lai mainītu kaut vienu senu darījumu, vajadzētu pārrēķināt visu ķēdi un pārliecināt vairāk nekā pusi tīkla, un lielā mērogā tas ir gandrīz neiespējami."
         }
       ]
     },
     {
       "id": "course_232_la_blockchain_et_les_cryptomonnaies_p2",
-      "title": "Bitcoin et Ethereum : du paiement au programme",
+      "title": "Bitkoins un Ethereum: no maksājuma līdz programmai",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le **Bitcoin**, lancé en **2009** par une personne (ou un groupe) resté anonyme sous le nom de [[Satoši Nakamoto]], a prouvé qu'un système monétaire pouvait fonctionner sans banque centrale. Pour garantir sa rareté, son créateur a fixé un plafond strict : jamais plus de **21 millions de bitcoins** ne pourront exister, un peu comme l'or est limité sur Terre."
+          "text": "**Bitkoins**, ko **2009**. gadā palaida anonīms autors (vai autoru grupa) ar vārdu [[Satoši Nakamoto]], pierādīja, ka monetārā sistēma var darboties bez centrālās bankas. Lai nodrošinātu tā retumu, veidotājs noteica stingru griestu: nekad nevarēs pastāvēt vairāk par **21 miljonu bitkoinu**, tāpat kā zelta daudzums uz Zemes ir ierobežots."
         },
         {
           "type": "image",
           "asset": "blockchain_technology_distributed_ledger_visualization",
           "ratio": "4:3",
-          "caption": "Chaque transaction est vérifiée par un réseau d'ordinateurs avant d'être ajoutée à la chaîne."
+          "caption": "Katru darījumu pārbauda datoru tīkls, pirms to pievieno ķēdei."
         },
         {
           "type": "paragraph",
-          "text": "En 2015, une seconde génération de blockchain est apparue avec l'**Ethereum**. Sa grande innovation : les **contrats intelligents**. Ce sont des programmes qui s'exécutent automatiquement dès qu'une condition est remplie, par exemple un remboursement automatique en cas de retard de train, sans besoin de passer par un intermédiaire."
+          "text": "2015. gadā ar **Ethereum** parādījās otrā blokķēžu paaudze. Tās lielākais jauninājums ir **viedie līgumi**. Tās ir programmas, kas izpildās automātiski, tiklīdz ir izpildīts kāds nosacījums, piemēram, automātiska atlīdzība par vilciena kavēšanos, bez nepieciešamības iesaistīt starpnieku."
         }
       ]
     },
     {
       "id": "course_232_la_blockchain_et_les_cryptomonnaies_p3",
-      "title": "Les critiques : énergie et instabilité",
+      "title": "Kritika: enerģija un nestabilitāte",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le succès des cryptomonnaies ne va pas sans problèmes. Le plus discuté concerne la **consommation d'énergie** du réseau Bitcoin : sa dépense électrique annuelle est aujourd'hui comparable à celle d'un pays entier comme l'Argentine."
+          "text": "Kriptovalūtu panākumi nenāk bez problēmām. Visvairāk apspriestā ir bitkoina tīkla **enerģijas patēriņš**: tā gada elektroenerģijas izmantojums mūsdienās ir salīdzināms ar veselas valsts, piemēram, Argentīnas, patēriņu."
         },
         {
           "type": "paragraph",
-          "text": "Le marché souffre aussi d'une **volatilité** extrême : le prix du Bitcoin peut varier de 10 ou 20 % en quelques heures. Cette instabilité l'empêche pour l'instant de devenir une vraie monnaie du quotidien."
+          "text": "Tirgu mocī arī galēja **svārstīgums**: bitkoina cena dažu stundu laikā var mainīties par 10 vai 20%. Šī nestabilitāte pagaidām liedz tam kļūt par īstu ikdienas naudu."
         },
         {
           "type": "paragraph",
-          "text": "Enfin, l'anonymat relatif des transactions a parfois servi à des activités illégales. Mais la blockchain reste en réalité totalement transparente : les autorités peuvent suivre les flux d'argent, ce qui rend le blanchiment plus difficile que dans le système classique de la monnaie en liquide."
+          "text": "Visbeidzot, darījumu relatīvā anonimitāte reizēm ir izmantota nelikumīgām darbībām. Taču patiesībā blokķēde ir pilnīgi caurskatāma: iestādes var izsekot naudas plūsmām, un tas apgrūtina naudas atmazgāšanu salīdzinājumā ar klasisko skaidrās naudas sistēmu."
         }
       ]
     },
     {
       "id": "course_232_la_blockchain_et_les_cryptomonnaies_p4",
-      "title": "Vers une intégration institutionnelle",
+      "title": "Ceļā uz institucionālo integrāciju",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Aujourd'hui, les cryptomonnaies quittent la marge pour entrer dans la finance traditionnelle. De grandes banques proposent désormais de garder des actifs numériques pour leurs clients, et plusieurs États réfléchissent à créer leur propre monnaie numérique officielle, une **[[CBDC]]** (monnaie numérique de banque centrale)."
+          "text": "Šodien kriptovalūtas pamet malu un ienāk tradicionālajās finansēs. Lielas bankas tagad piedāvā glabāt digitālos aktīvus savu klientu vārdā, un vairākas valstis apsver izveidot savu oficiālo digitālo valūtu, **[[CBDC]]** (centrālās bankas digitālā valūta)."
         },
         {
           "type": "paragraph",
-          "text": "Les **stablecoins**, des cryptomonnaies dont le prix est stabilisé grâce à une réserve de dollars ou d'euros, servent de pont entre les deux mondes. Au-delà de la finance, des secteurs comme le luxe (pour lutter contre la contrefaçon), la logistique (pour suivre des conteneurs) ou la santé (pour sécuriser des dossiers médicaux) adoptent aussi la blockchain pour sa fiabilité."
+          "text": "**Stabilās kriptovalūtas**, kuru cena tiek stabilizēta ar dolāru vai eiro rezervi, kalpo kā tilts starp abām pasaulēm. Ārpus finansēm blokķēdi tās uzticamības dēļ pieņem arī tādas nozares kā luksusa preces (cīņai pret viltojumiem), loģistika (konteineru izsekošanai) vai veselības aprūpe (medicīnisko datu drošībai)."
         },
         {
           "type": "funFact",
-          "text": "En 2021, le Salvador est devenu le premier pays au monde à adopter le Bitcoin comme monnaie légale, au côté du dollar américain, obligeant chaque commerçant à l'accepter s'il en a les moyens techniques."
+          "text": "2021. gadā Salvadora kļuva par pirmo valsti pasaulē, kas pieņēma bitkoinu kā likumīgu maksāšanas līdzekli līdzās ASV dolāram, uzliekot katram tirgotājam pienākumu to pieņemt, ja viņam ir tehniskas iespējas."
         },
         {
           "type": "takeaway",
-          "text": "Créée en 2009, la blockchain est un registre partagé et quasi impossible à falsifier, dont l'offre maximale de bitcoins est fixée à 21 millions d'unités. Elle a posé les bases d'une nouvelle économie numérique aujourd'hui en pleine intégration institutionnelle."
+          "text": "Blokķēde, kas radīta 2009. gadā, ir kopīgs reģistrs, ko gandrīz neiespējami viltot un kurā maksimālais bitkoinu piedāvājums ir noteikts 21 miljona vienību apmērā. Tā lika pamatus jaunai digitālajai ekonomikai, kas šobrīd strauji integrējas institucionālajā sistēmā."
         }
       ]
     }

@@ -1,127 +1,127 @@
 {
   "id": "course_276_pourquoi_les_antibiotiques_cessent_ils",
-  "title": "Pourquoi les antibiotiques cessent-ils d'agir ?",
-  "subtitle": "Les bactéries contre-attaquent",
+  "title": "抗生物質はなぜ、だんだん効かなくなるのか",
+  "subtitle": "細菌はこうして反撃してくる",
   "subject": "sciences",
-  "subcategory": "Notre quotidien expliqué",
-  "description": "Une angine, une infection urinaire, une opération de routine : sans antibiotiques efficaces, tout redevient dangereux. Et à force d'en abuser, nous apprenons aux bactéries à leur survivre.",
+  "subcategory": "暮らしの解説",
+  "description": "咽頭炎、尿路感染症、ごく普通の手術。効く抗生物質がなければ、どれも再び危険になります。使いすぎるうちに、私たちは細菌に、抗生物質を生き延びる方法を教えてしまっているのです。",
   "author": "kate-waddams",
   "hero": {
     "image": "antibiogram_petri_dish_inhibition_zones",
     "ratio": "4:3",
-    "hook": "À force de les combattre, nous avons entraîné les bactéries à survivre à nos médicaments."
+    "hook": "細菌と戦い続けるうちに、私たちは細菌を、薬を生き延びるように鍛えてしまいました。"
   },
   "sections": [
     {
       "id": "course_276_pourquoi_les_antibiotiques_cessent_ils_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Quand des bactéries envahissent notre corps, le système immunitaire riposte : les **globules blancs** attaquent l'infection et nous allons vite mieux. Mais si nos défenses sont affaiblies, ou débordées, il faut un renfort : les antibiotiques. Un antibiotique [[殺菌性]] détruit la bactérie en s'attaquant à sa paroi et à son contenu ; un bactériostatique l'empêche seulement de se multiplier."
+          "text": "細菌が体に侵入すると、免疫系が反撃します。**白血球**が感染と戦い、たいていはすぐによくなります。けれども、体の防御が弱っていたり、押し切られたりしたときには、助っ人が必要です。それが抗生物質です。[[殺菌性]]の抗生物質は、細菌の壁や中身を攻撃して死滅させます。静菌性の抗生物質は、細菌が増えるのを止めるだけです。"
         },
         {
           "type": "funFact",
-          "text": "L'antibiotique n'est pas une invention moderne : des indices montrent que des humains en utilisaient déjà il y a plus de 1 500 ans, sans rien savoir des bactéries."
+          "text": "抗生物質は現代の発明ではありません。1,500年以上前にすでに人間が使っていたことを示す手がかりがあり、そのころは細菌のことなど何も知られていませんでした。"
         },
         {
           "type": "paragraph",
-          "text": "Selon l'infection, le médecin choisit un antibiotique à **large spectre**, actif contre de nombreuses espèces, ou à spectre étroit, réservé à quelques-unes. Efficaces, peu coûteux, faciles à obtenir, ces médicaments couvrent une immense gamme d'infections. C'est ce succès même qui a conduit le monde moderne à en abuser. Et les bactéries ont commencé à répliquer."
+          "text": "感染症に応じて、医師は、多くの種類の菌に効く**広域スペクトル**の抗生物質か、少数の菌に限って使う狭域スペクトルの抗生物質を選びます。効果が高く、安価で、手に入れやすいため、こうした薬はきわめて幅広い感染症をカバーします。まさにこの成功が、現代社会に抗生物質の乱用を招きました。そして、細菌は反撃を始めたのです。"
         }
       ]
     },
     {
       "id": "course_276_pourquoi_les_antibiotiques_cessent_ils_p1",
-      "title": "Comment les bactéries apprennent à résister",
+      "title": "細菌はどうやって耐性を身につけるのか",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Les antibiotiques comptent parmi les plus grandes avancées de la médecine moderne. Ils ont sauvé d'innombrables vies et nous en dépendons. Mais leur usage massif a créé un problème : l'[[抗生物質耐性]]. Des antibiotiques qui tuaient une bactérie ou bloquaient sa croissance ne font plus effet. La bactérie a évolué pour déjouer le traitement."
+          "text": "抗生物質は、現代医学の最も大きな進歩の一つです。数えきれない命を救い、私たちはそれに頼っています。しかし、大量に使われた結果、ある問題が生まれました。[[抗生物質耐性]]です。以前は細菌を殺したり、増殖を止めたりできた抗生物質が、効かなくなっています。細菌が進化して、治療をかわしたのです。"
         },
         {
           "type": "image",
           "asset": "alexander_fleming_penicillin_petri_dish",
           "ratio": "4:3",
-          "caption": "Alexander Fleming, découvreur de la pénicilline, dans son laboratoire."
+          "caption": "研究室にいる、ペニシリンの発見者アレクサンダー・フレミング。"
         },
         {
           "type": "paragraph",
-          "text": "L'évolution est un processus naturel, que les agressions du milieu accélèrent. Traiter sans cesse des bactéries avec des molécules conçues pour les tuer revient à sélectionner celles qui savent survivre. Leurs parades sont variées : **mutations** génétiques, enzymes qui dissolvent l'antibiotique, changements de fonctionnement, et même de minuscules [[排出ポンプ]] qui rejettent le médicament hors de la cellule."
+          "text": "進化は自然な過程ですが、環境からの攻撃によって、それがさらに加速します。細菌を殺すためにつくられた分子で絶えず治療することは、生き延びる術をもつ細菌を選び出すことにほかなりません。その対抗手段はさまざまです。遺伝子の**突然変異**、抗生物質を分解する酵素、働き方の変化、さらには薬を細胞の外へ追い出す小さな[[排出ポンプ]]まであります。"
         },
         {
           "type": "paragraph",
-          "text": "Ces parades sont inscrites dans les gènes. Quand une bactérie résistante se divise, elle les transmet à ses descendantes, qui les transmettent à leur tour. Une seule survivante peut fonder toute une lignée de résistantes. C'est ainsi que la résistance se propage."
+          "text": "こうした対抗手段は遺伝子に書き込まれています。耐性菌が分裂すると、その遺伝子は子孫に伝わり、子孫もまた次に伝えます。生き残った一つの細菌から、耐性菌の系統がまるごと生まれることもあります。こうして耐性は広がっていきます。"
         }
       ]
     },
     {
       "id": "course_276_pourquoi_les_antibiotiques_cessent_ils_p2",
-      "title": "Des gènes qui voyagent : le cas du SARM",
+      "title": "旅をする遺伝子：MRSAを例に見る",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Une bactérie résistante voyage comme n'importe quel microbe. La pandémie de **Covid** a montré à quelle vitesse un virus passe d'une personne, puis d'un pays, à l'autre. Les bactéries circulent de la même façon : par contact humain, dans des milieux favorables, par manque d'hygiène, ou des animaux vers l'homme."
+          "text": "耐性菌も、ほかの微生物と同じように旅をします。**新型コロナ**の流行は、ウイルスが人から人へ、国から国へといかに速く広がるかを示しました。細菌もまったく同じように広がっていきます。人と人との接触、好条件の環境、衛生の不足、動物から人へ、といった経路です。"
         },
         {
           "type": "paragraph",
-          "text": "Elles disposent en plus d'un raccourci : le [[遺伝子の水平伝播]]. Une bactérie résistante peut céder directement ses gènes de résistance à une voisine, sans attendre de se diviser. En très peu de temps, une population entière de bactéries résistantes se forme."
+          "text": "細菌には、さらに近道があります。[[遺伝子の水平伝播]]です。耐性菌は、分裂して増えるのを待たなくても、耐性をもたらす遺伝子を隣り合った細菌に直接渡すことができます。ごく短い間に、耐性菌ばかりの集団ができあがってしまいます。"
         },
         {
           "type": "image",
           "asset": "mrsa_staphylococcus_aureus_electron_micrograph_cdc",
           "ratio": "5:4",
-          "caption": "Amas de staphylocoques dorés résistants à la méticilline, vus au microscope électronique."
+          "caption": "メチシリン耐性黄色ブドウ球菌が集まっている様子を、電子顕微鏡で撮影したもの。"
         },
         {
           "type": "paragraph",
-          "text": "La plus connue est le [[MRSA]], le staphylocoque doré résistant à la méticilline. Il tient tête à de nombreux antibiotiques courants, d'où son surnom de « superbactérie ». L'usage massif d'antibiotiques a éliminé les souches fragiles et laissé le champ libre à celles qui, comme lui, ont appris à résister. Les conséquences peuvent être mortelles."
+          "text": "いちばん有名なのが[[MRSA]]、つまりメチシリン耐性黄色ブドウ球菌です。多くのありふれた抗生物質に屈せず、「スーパー細菌」とも呼ばれます。抗生物質の大量使用で弱い菌株が消え、MRSAのように耐性を身につけた菌株が幅を利かせるようになりました。その結果、命にかかわることもあります。"
         }
       ]
     },
     {
       "id": "course_276_pourquoi_les_antibiotiques_cessent_ils_p3",
-      "title": "1,27 million de morts par an : l'alerte de l'OMS",
+      "title": "年間1.27百万人の死者という、WHOの警告",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Que signifie cette résistance pour nous ? L'[[WHO]], l'Organisation mondiale de la santé, classe la résistance aux antimicrobiens, les médicaments qui combattent les microbes, antibiotiques compris, parmi les **trois** principales menaces de santé publique dans le monde. Avec de moins en moins de médicaments efficaces contre les infections bactériennes, c'est toute la médecine moderne qui perd du terrain."
+          "text": "この耐性は、私たちにとって何を意味するのでしょうか。[[WHO]]（世界保健機関）は、抗菌薬耐性、つまり抗生物質を含め、微生物と戦う薬が効かなくなることを、世界の公衆衛生を脅かす**3大**脅威の一つに数えています。細菌感染症に効く薬がどんどん減っていくなかで、現代医学そのものが、少しずつ足場を失いつつあります。それほど深刻な事態だと受け止められているのです。"
         },
         {
           "type": "paragraph",
-          "text": "Les chiffres donnent la mesure du danger. Pour la seule année 2019, **1,27 million** de décès dans le monde ont été attribués à la résistance aux antimicrobiens. Et la courbe monte : les projections tablent sur **10 millions** de morts par an d'ici **2050**."
+          "text": "数字が危険の大きさを物語っています。2019年だけで、世界で**1.27百万人**の死亡が抗菌薬耐性によるものとされました。しかも曲線は上向きで、予測では**2050年**までに年間**1000万人**が亡くなるとされています。"
         },
         {
           "type": "paragraph",
-          "text": "Les scientifiques ne restent pas les bras croisés. Ils mettent au point des traitements nouveaux et plus précis, qui visent les bactéries résistantes. Ils cherchent aussi à restaurer l'efficacité des antibiotiques existants et à réduire les prescriptions inutiles : chaque traitement évité est une occasion de moins, pour les bactéries, de s'adapter."
+          "text": "科学者たちも手をこまねいてはいません。耐性菌を狙った、新しくてより的確な治療法を開発しています。さらに、既存の抗生物質の効き目を取り戻すことや、不要な処方を減らすことにも取り組んでいます。治療を一つ避ければ、それだけ細菌が薬に適応する機会も一つ減る、という考え方です。薬を使わずに済む場面を増やすことも、重要な対策になります。"
         }
       ]
     },
     {
       "id": "course_276_pourquoi_les_antibiotiques_cessent_ils_p4",
-      "title": "Un monde sans antibiotiques efficaces",
+      "title": "効く抗生物質がない世界は、どうなるか",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Nous avalons nos antibiotiques sans y réfléchir. Ils sont bon marché, efficaces et disponibles partout. Sans eux, une infection banale, **angine** bactérienne ou infection urinaire, deviendrait bien plus difficile à soigner. Un genou écorché pourrait dégénérer en [[敗血症]], une infection généralisée qui met la vie en danger."
+          "text": "私たちは抗生物質を、何も考えずに飲んでいます。安くて、よく効いて、どこでも手に入るからです。抗生物質がなければ、細菌性の**咽頭炎**や尿路感染症のようなありふれた感染症でも、治すのがずっと難しくなります。すりむいた膝が[[敗血症]]、つまり命を脅かす全身感染症に悪化することもありえます。"
         },
         {
           "type": "image",
           "asset": "hospital_operating_room_surgery_team",
           "ratio": "3:2",
-          "caption": "Un bloc opératoire moderne : sans antibiotiques, les opérations de routine redeviendraient risquées."
+          "caption": "現代の手術室。抗生物質がなければ、ごく普通の手術も、再び危険なものになってしまいます。"
         },
         {
           "type": "paragraph",
-          "text": "Les opérations courantes, **césarienne** ou pose d'une prothèse de hanche, comporteraient un risque bien plus élevé. Les antibiotiques sont en effet souvent prescrits après une chirurgie pour prévenir une infection. Sans eux, des interventions qui sauvent ou améliorent des vies deviendraient trop dangereuses pour être pratiquées."
+          "text": "**帝王切開**や人工股関節の手術といった一般的な手術でも、リスクはずっと高くなります。抗生物質は、感染を防ぐために手術のあとによく処方されているからです。それがなければ、命を救ったり暮らしをよくしたりする手術も、危険が大きすぎて行えなくなってしまうでしょう。今は当たり前に受けられる医療が、手の届かないものになりかねません。"
         },
         {
           "type": "takeaway",
-          "text": "L'avenir de la médecine moderne dépend d'une seule chose : garder aux antibiotiques leur efficacité, donc cesser d'en abuser."
+          "text": "現代医学の未来は、ただ一つのことにかかっています。抗生物質の効き目を保つこと、つまり使いすぎをやめることです。"
         }
       ]
     }

@@ -1,106 +1,106 @@
 {
   "id": "course_74_pourquoi_certaines_especes_sont_elles_im",
-  "title": "Pourquoi certaines espèces sont-elles immortelles ?",
-  "subtitle": "Biologie & longévité",
+  "title": "Kodėl kai kurios rūšys nemirtingos?",
+  "subtitle": "Biologija ir ilgaamžiškumas",
   "subject": "sciences",
-  "subcategory": "La Terre et l'Univers",
-  "description": "Certaines espèces semblent défier la mort. Méduses qui rajeunissent, hydres sans vieillissement : le secret est dans la réparation cellulaire.",
+  "subcategory": "Žemė ir Visata",
+  "description": "Kai kurios rūšys lyg ir meta iššūkį mirčiai. Medūzos, kurios atjaunėja, hidros, kurios nesensta: visa paslaptis slypi ląstelių taisyme.",
   "hero": {
     "image": "pourquoi_certaines_especes_sont_immortelles",
     "ratio": "16:9",
-    "hook": "Vieillir n'est pas une loi absolue du vivant. Certaines espèces ont trouvé la faille."
+    "hook": "Senėjimas nėra besąlygiškas gyvybės dėsnis. Kai kurios rūšys rado spragą."
   },
   "sections": [
     {
       "id": "course_74_pourquoi_certaines_especes_sont_elles_im_intro",
-      "title": "Introduction",
+      "title": "Įvadas",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Nous vieillissons, puis nous mourons. Pourtant, la méduse [[Turritopsis dohrnii]] peut revenir à un stade juvénile et recommencer. La palourde **Ming** a vécu **507 ans**. Le vieillissement n'est donc pas une règle universelle : c'est un processus que certaines espèces contournent."
+          "text": "Mes senstame, paskui mirštame. Tačiau medūza [[Turritopsis dohrnii]] gali sugrįžti į jauną stadiją ir pradėti iš naujo. Moliuskas **Ming** gyveno **507 metus**. Taigi senėjimas nėra visuotinė taisyklė: kai kurios rūšys šio proceso išvengia."
         },
         {
           "type": "paragraph",
-          "text": "En étudiant ces exceptions, les chercheurs cherchent moins l'immortalité de science-fiction que les astuces du vivant pour mieux réparer les cellules."
+          "text": "Tyrinėdami šias išimtis, mokslininkai ieško ne fantastinio nemirtingumo, o gyvosios gamtos gudrybių, padedančių geriau taisyti ląsteles."
         }
       ]
     },
     {
       "id": "course_74_pourquoi_certaines_especes_sont_elles_im_p1",
-      "title": "Pourquoi nos cellules s'usent",
+      "title": "Kodėl dyla mūsų ląstelės",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Vieillir, ce n'est pas seulement « s'user » comme une machine. C'est un déséquilibre : les dommages s'accumulent plus vite que les réparations."
+          "text": "Senėti nereiškia vien dėvėtis kaip mašinai. Tai pusiausvyros sutrikimas: pažeidimų kaupiasi greičiau, nei jie pataisomi."
         },
         {
           "type": "image",
           "asset": "chromosome_dna_telomere_aging_cell",
           "ratio": "auto",
-          "caption": "Les télomères, aux extrémités des chromosomes, raccourcissent à chaque division cellulaire."
+          "caption": "Chromosomų galuose esantys telomerai su kiekvienu ląstelės dalijimusi trumpėja."
         },
         {
           "type": "paragraph",
-          "text": "Aux bouts de nos chromosomes, les [[telomerai]] agissent comme des embouts de lacets. À chaque division cellulaire, ils raccourcissent. Trop courts, la cellule arrête de se diviser. En parallèle, le métabolisme produit des molécules agressives qui abîment protéines et ADN. Des cellules « zombies » s'accumulent alors et enflamment les tissus autour d'elles."
+          "text": "Mūsų chromosomų galuose [[telomerai]] veikia kaip batraiščių galiukai. Kiekvieną kartą ląstelei dalijantis, jie trumpėja. Kai pasidaro per trumpi, ląstelė nustoja dalytis. Tuo pat metu medžiagų apykaita gamina agresyvių molekulių, kurios žaloja baltymus ir DNR. Tada kaupiasi „zombių“ ląstelės ir uždega aplinkinius audinius."
         },
         {
           "type": "funFact",
-          "text": "Le tardigrade, minuscule « ourson d'eau », peut presque s'arrêter de vivre en se desséchant. Son métabolisme chute à **99,99 %**, et il survit au vide spatial ou à des radiations extrêmes sans vraiment vieillir."
+          "text": "Tardigradas, mažytis „vandens lokiukas“, išdžiūvęs gali beveik nustoti gyventi. Jo medžiagų apykaita sumažėja **99,99 %**, ir jis išgyvena kosminį vakuumą ar ekstremalią spinduliuotę, iš tikrųjų nesenėdamas."
         }
       ]
     },
     {
       "id": "course_74_pourquoi_certaines_especes_sont_elles_im_p2",
-      "title": "Les champions qui contournent la mort",
+      "title": "Čempionai, apgaunantys mirtį",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La [[Turritopsis dohrnii]] blessée ou affamée transforme ses cellules adultes en cellules « vierges », puis redevient un polype, le stade de départ. Ce retour en arrière, appelé transdifférenciation, lui donne une forme d'**immortalité biologique**."
+          "text": "Sužeista ar išbadėjusi [[Turritopsis dohrnii]] suaugusias ląsteles paverčia „nesubrendusiomis“ ir vėl tampa polipu, pradine stadija. Šis sugrįžimas atgal, vadinamas transdiferenciacija, suteikia jai savotišką **biologinį nemirtingumą**."
         },
         {
           "type": "paragraph",
-          "text": "L'**hydre**, petit polype d'eau douce, renouvelle tout son corps grâce à un stock presque illimité de [[kamieninės ląstelės]]. Elle ne montre aucun signe de vieillissement mesurable. La baleine boréale, elle, peut dépasser **200 ans** grâce à une réparation d'ADN ultra-efficace et une forte résistance au cancer."
+          "text": "**Hidra**, mažas gėlavandenis polipas, atnaujina visą kūną, nes turi beveik neribotą atsargą: [[kamieninės ląstelės]]. Išmatuojamų senėjimo požymių ji nerodo. Grenlandinis banginis gali gyventi ilgiau nei **200 metų** dėl itin veiksmingo DNR taisymo ir stipraus atsparumo vėžiui."
         },
         {
           "type": "funFact",
-          "text": "Les homards fabriquent de la télomérase partout dans leur corps : leurs télomères ne raccourcissent pas. Ils grandissent toute leur vie et meurent surtout quand la mue devient trop coûteuse."
+          "text": "Omarai visame kūne gamina telomerazę, todėl jų telomerai netrumpėja. Jie auga visą gyvenimą ir miršta daugiausia tada, kai senojo kiauto keitimas pareikalauja per daug jėgų."
         }
       ]
     },
     {
       "id": "course_74_pourquoi_certaines_especes_sont_elles_im_p3",
-      "title": "Ce que la médecine en retient",
+      "title": "Ką iš to perima medicina",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L'idée n'est plus seulement de soigner Alzheimer ou l'arthrose une par une, mais d'attaquer le vieillissement lui-même. Les **sénolytiques** visent à éliminer les cellules zombies. Chez l'animal, cela a déjà rajeuni certaines fonctions."
+          "text": "Siekiama jau ne vien gydyti Alzheimerio ligą ar artrozę po vieną, o spręsti patį senėjimą. **Senolitikai** skirti pašalinti zombių ląstelėms. Gyvūnams tai jau atjaunino kai kurias funkcijas."
         },
         {
           "type": "paragraph",
-          "text": "Limiter les calories sans malnutrition active aussi des voies de réparation, notamment en freinant [[mTOR]], une protéine qui accélère la croissance… et parfois le déclin. D'autres labos tentent de « remonter l'horloge » des cellules, comme la méduse, sans les transformer en tumeurs."
+          "text": "Ribojant kalorijas, bet nesukeliant nepakankamos mitybos, aktyvuojami ir taisymo keliai, ypač slopinant [[mTOR]], baltymą, kuris greitina augimą… o kartais ir nykimą. Kitos laboratorijos bando „atsukti ląstelių laikrodį“ kaip medūza, jų nepaversdamos navikais."
         }
       ]
     },
     {
       "id": "course_74_pourquoi_certaines_especes_sont_elles_im_p4",
-      "title": "Immortel, mais pas invincible",
+      "title": "Nemirtingas, bet ne nepažeidžiamas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Même une espèce biologiquement immortelle meurt de prédateurs, de maladie ou de catastrophe. La mort reste un moteur de l'évolution : elle laisse place à de nouvelles générations mieux adaptées."
+          "text": "Net biologiškai nemirtinga rūšis žūva nuo plėšrūnų, ligų ar katastrofų. Mirtis lieka evoliucijos variklis: ji palieka vietos naujoms, geriau prisitaikiusioms kartoms."
         },
         {
           "type": "paragraph",
-          "text": "Pour l'humain, l'enjeu réaliste n'est pas vivre éternellement, mais allonger les années **en bonne santé**. Une longévité devenue technologie soulèverait aussi d'énormes questions d'équité et de ressources."
+          "text": "Žmogui realus tikslas ne gyventi amžinai, o pailginti **sveikai** nugyventus metus. Technologija tapęs ilgaamžiškumas taip pat keltų didžiulių lygybės ir išteklių klausimų."
         },
         {
           "type": "takeaway",
-          "text": "L'immortalité biologique repose sur la réparation ou la réinitialisation des cellules. La méduse Turritopsis dohrnii rajeunit ; l'hydre se renouvelle sans cesse. Vieillir n'est pas une fatalité universelle."
+          "text": "Biologinis nemirtingumas remiasi ląstelių taisymu ar perkrovimu. Medūza Turritopsis dohrnii atjaunėja, hidra nuolat atsinaujina. Senėjimas nėra visuotinis likimas."
         }
       ]
     }

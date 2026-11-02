@@ -1,115 +1,115 @@
 {
   "id": "course_306_pourquoi_rit_on_quand_on_nous_chatouille",
-  "title": "Pourquoi rit-on quand on nous chatouille ?",
-  "subtitle": "Knismesis et gargalesis",
+  "title": "Kāpēc cilvēks smejas, kad viņu kutina?",
+  "subtitle": "Knismēze un gargalēze",
   "subject": "sciences",
-  "subcategory": "Notre quotidien expliqué",
-  "description": "Un frôlement de plume agace, une main sous les aisselles fait éclater de rire. Ce que la peau, le cerveau et le jeu fabriquent ensemble, et pourquoi tu ne peux pas te chatouiller toi-même.",
+  "subcategory": "Mūsu ikdiena izskaidrota",
+  "description": "Spalvas pieskāriens kaitina, roka zem padusēm izraisa smieklu lēkmi. Ko kopā rada āda, smadzenes un rotaļa un kāpēc sevi nevar iekutināt pašam.",
   "author": "stacy-jankowski",
   "hero": {
     "image": "parent_tickling_laughing_child_bed",
     "ratio": "4:3",
-    "hook": "Aristote et Darwin s'y sont cassé la tête : pourquoi un simple contact déclenche-t-il un rire que personne ne contrôle ?"
+    "hook": "Aristotelis un Darvins lauzīja par to galvu: kāpēc vienkāršs pieskāriens izraisa smieklus, ko neviens nespēj kontrolēt?"
   },
   "sections": [
     {
       "id": "course_306_pourquoi_rit_on_quand_on_nous_chatouille_intro",
-      "title": "Introduction",
+      "title": "Ievads",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Une main s'approche des côtes, et c'est parti : on se tortille, on supplie d'arrêter, et pourtant on rit. Ce petit mystère intrigue les penseurs depuis l'Antiquité. Socrate, Aristote, puis Francis Bacon, Galilée, René Descartes et **Charles Darwin** s'y sont tous intéressés."
+          "text": "Roka tuvojas ribām, un sākas: cilvēks locās, lūdz beigt, un tomēr smejas. Šis mazais noslēpums nodarbina domātājus kopš antīkās pasaules. Tas ir interesējis Sokratu, Aristoteli, pēc tam Frānsisu Bēkonu, Galileo Galileju, Renē Dekartu un **Čārlzu Darvinu**."
         },
         {
           "type": "paragraph",
-          "text": "Le chatouillement a l'air d'un jeu sans importance. C'est en réalité un mécanisme complexe, où se combinent la peau qui sent, le corps qui réagit, l'émotion et plusieurs circuits du cerveau. Le résultat est un **rire involontaire**, que l'on ne commande pas."
+          "text": "Kutināšana šķiet nenozīmīga rotaļa. Patiesībā tas ir sarežģīts mehānisms, kurā savijas ādas sajūtas, ķermeņa reakcija, emocijas un vairākas smadzeņu ķēdes. Rezultāts ir **piespiedu smiekli**, ko nevar pavēlēt."
         }
       ]
     },
     {
       "id": "course_306_pourquoi_rit_on_quand_on_nous_chatouille_p1",
-      "title": "Deux chatouilles : knismesis et gargalesis",
+      "title": "Divi kutināšanas veidi: knismēze un gargalēze",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Les chercheurs distinguent **deux sortes** de chatouilles. La première est légère, « comme une plume » : c'est la [[knismēze]]. Elle ressemble à une démangeaison, peut se ressentir presque partout sur le corps et ne fait pas rire. Un insecte qui court sur le bras : on frissonne, mais on ne s'esclaffe pas."
+          "text": "Pētnieki izšķir **divus veidus** kutināšanas. Pirmā ir viegla, „kā spalviņa“: tā ir [[knismēze]]. Tā atgādina niezi, to var sajust gandrīz jebkur uz ķermeņa, un tā nerosina smieties. Kukainis skrien pa roku: pārskrien trīsas, bet smieklos neizplūst."
         },
         {
           "type": "image",
           "asset": "feather_light_touch_skin_knismesis",
           "ratio": "3:2",
-          "caption": "Un doigt effleure le dos d'un enfant : la knismesis, une chatouille légère qui agace plus qu'elle ne fait rire."
+          "caption": "Pirksts viegli skar bērna muguru: knismēze, viegla kutināšana, kas vairāk kaitina nekā liek smieties."
         },
         {
           "type": "paragraph",
-          "text": "Celle qui déclenche le rire s'appelle la [[gargalēze]]. Elle demande des mouvements **rapides et appuyés**, et provoque tortillements, contorsions et vocalisations proches du rire, impossibles à retenir. Le corps la traite un peu comme un jeu. Elle ne marche que sur certaines zones : aisselles, cou, torse, ventre et pieds."
+          "text": "Tā, kas izraisa smieklus, saucas [[gargalēze]]. Tai vajadzīgas **ātras un spēcīgas** kustības, un tā izraisa locīšanos, vīšanos un smiekliem tuvas balss izpausmes, ko nav iespējams apturēt. Ķermenis to uztver mazliet kā rotaļu. Tā iedarbojas tikai noteiktās vietās: padusēs, kaklā, krūškurvī, vēderā un pēdās."
         },
         {
           "type": "funFact",
-          "text": "Pour étudier la gargalesis, les chercheurs chatouillent des **rats** : leurs vocalisations et leur comportement de jeu sont bien documentés, ce qui en fait un modèle de choix."
+          "text": "Lai pētītu gargalēzi, pētnieki kutina **žurkas**: to balss izpausmes un rotaļu uzvedība ir labi dokumentētas, tāpēc tās ir ļoti piemērots modelis."
         }
       ]
     },
     {
       "id": "course_306_pourquoi_rit_on_quand_on_nous_chatouille_p2",
-      "title": "Du toucher au rire : le circuit du cerveau",
+      "title": "No pieskāriena līdz smiekliem: smadzeņu ķēde",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Tout commence dans la peau. Le toucher y est capté par des [[mehānoreceptori]], des capteurs sensoriels qui réagissent à une pression ou à un mouvement. Leur signal remonte vers le cerveau et s'y mêle aux **signaux du jeu**, émotionnels et comportementaux : ce mélange allume plusieurs circuits à la fois."
+          "text": "Viss sākas ādā. Tur ir [[mehānoreceptori]], jutekļu sensori, kas reaģē uz spiedienu vai kustību un uztver pieskārienu. Šo receptoru signāls virzās uz smadzenēm un tur saplūst ar emocionālajiem un uzvedības **rotaļas signāliem**: šis maisījums reizē ieslēdz vairākas ķēdes."
         },
         {
           "type": "image",
           "asset": "human_brain_anatomy",
           "ratio": "4:3",
-          "caption": "Coupe d'un cerveau humain : les régions profondes de la récompense et le cortex frontal participent au circuit du rire."
+          "caption": "Cilvēka smadzeņu griezums: dziļie atlīdzības reģioni un frontālā garoza piedalās smieklu ķēdē."
         },
         {
           "type": "paragraph",
-          "text": "Des régions profondes liées à la **récompense** libèrent de la [[dopamīns]] : la chatouille devient une expérience agréable. S'y ajoutent les zones qui traitent l'humour et les émotions, et une partie du [[nozīmīguma tīkls]], qui trie ce qui mérite notre attention. Le rire lui-même part d'ailleurs encore : de l'[[frontālais operkuls]] et de l'[[papildu motorā zona]]."
+          "text": "Dziļajos, ar **atlīdzību** saistītajos reģionos tiek atbrīvots [[dopamīns]]: kutināšana kļūst par patīkamu pārdzīvojumu. Tiem pievienojas humora un emociju apstrādes zonas un daļa no sistēmas, kas šķiro, kam pelnījusi uzmanība: [[nozīmīguma tīkls]]. Pats smiekls tomēr sākas citur: tie ir [[frontālais operkuls]] un [[papildu motorā zona]]."
         }
       ]
     },
     {
       "id": "course_306_pourquoi_rit_on_quand_on_nous_chatouille_p3",
-      "title": "Pourquoi ne peut-on pas se chatouiller soi-même ?",
+      "title": "Kāpēc sevi nevar iekutināt?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Malgré tous ces circuits, impossible de se faire rire en se chatouillant les pieds. Première explication : la **prévisibilité**. Quand le cerveau sait d'avance ce que la peau va sentir, comme tes propres doigts qui glissent sur ta plante de pied, il atténue le signal."
+          "text": "Lai gan ir visas šīs ķēdes, sevi nevar nosmīdināt, kutinot pēdas. Pirmais izskaidrojums: **paredzamība**. Kad smadzenes jau iepriekš zina, ko āda sajutīs, tāpat kā tavi paši pirksti, kas slīd pa tavu pēdas apakšu, tās vājina signālu."
         },
         {
           "type": "paragraph",
-          "text": "Deuxième explication : il manque l'autre. La gargalesis est liée au jeu, donc à une **situation sociale**. Quand on se chatouille soi-même, il n'y a ni partenaire ni échange : toute la part émotionnelle et comportementale de la réaction disparaît. Il reste un contact sur la peau, mais plus de jeu, et donc pas de rire."
+          "text": "Otrais izskaidrojums: trūkst otra cilvēka. Gargalēze ir saistīta ar rotaļu, tātad ar **sociālu situāciju**. Kad cilvēks kutina pats sevi, nav ne partnera, ne apmaiņas: izzūd visa reakcijas emocionālā un uzvedības daļa. Paliek pieskāriens ādai, bet vairs nav rotaļas, un tāpēc nav smieklu."
         }
       ]
     },
     {
       "id": "course_306_pourquoi_rit_on_quand_on_nous_chatouille_p4",
-      "title": "À quoi servent les chatouilles ?",
+      "title": "Kam kalpo kutināšana?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Personne ne sait vraiment pourquoi le chatouillement est apparu au cours de l'évolution. Une première piste en fait une affaire de **survie** : lors de fausses bagarres, les chatouilles apprennent où se trouvent les zones vulnérables du corps, et l'on met au point des stratégies de défense utiles le jour d'un vrai combat."
+          "text": "Neviens īsti nezina, kāpēc evolūcijas gaitā radusies kutināšana. Pirmā versija to uzskata par **izdzīvošanas** lietu: rotaļu cīņās kutināšana iemāca, kur ir ķermeņa ievainojamās vietas, un tiek izstrādātas aizsardzības stratēģijas, kas noder īstas cīņas dienā."
         },
         {
           "type": "image",
           "asset": "young_chimpanzees_play_fighting_laughing",
           "ratio": "3:2",
-          "caption": "Un chimpanzé de la forêt de Kibale, en Ouganda : chez nos cousins aussi, le jeu tisse des liens."
+          "caption": "Šimpanze Kibales mežā Ugandā: arī mūsu radiniekiem rotaļa veido saites."
         },
         {
           "type": "paragraph",
-          "text": "L'autre piste est plus douce : les chatouilles seraient simplement un jeu, un comportement qui rapproche. Le rire partagé entre parents et enfants, entre frères et sœurs, entre amis, crée et entretient le **lien**. Entraînement au combat ou ciment du groupe : la question reste ouverte."
+          "text": "Otra versija ir maigāka: kutināšana vienkārši būtu rotaļa, uzvedība, kas tuvina. Kopīgi smiekli starp vecākiem un bērniem, brāļiem un māsām, draugiem rada un uztur **saikni**. Cīņas treniņš vai grupas saliedētājs: jautājums paliek atklāts."
         },
         {
           "type": "takeaway",
-          "text": "Le rire des chatouilles naît d'une chatouille appuyée, la gargalesis, que la peau, les circuits de la récompense et le contexte du jeu transforment ensemble en un rire involontaire, impossible à reproduire sur soi-même."
+          "text": "Kutināšanas smiekli rodas no spēcīgas kutināšanas, gargalēzes, kuru āda, atlīdzības ķēdes un rotaļas konteksts kopā pārvērš piespiedu smieklos, ko nav iespējams izraisīt pašam sev."
         }
       ]
     }

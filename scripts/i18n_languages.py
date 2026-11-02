@@ -35,12 +35,15 @@ NON_FR_LANGS: list[str] = [
     "he",
     "fi",
     "et",
+    "lt",
+    "lv",
+    "ja",
 ]
 
 # Languages being added: seeded with the French text (scripts/seed_new_language.py)
 # and post-edited surface by surface. They join NON_FR_LANGS, the apps and the gate
 # once every surface is translated.
-PENDING_LANGS: list[str] = ["lt", "lv", "ja"]
+PENDING_LANGS: list[str] = []
 
 # Source language of every machine-translation call. French is the product
 # source; translating from the English table or through an English pivot took

@@ -1,100 +1,100 @@
 {
   "id": "course_55_la_theorie_de_la_gravitation_newton_1687",
-  "title": "La théorie de la gravitation",
-  "subtitle": "Newton, 1687",
+  "title": "Gravitācijas teorija",
+  "subtitle": "Ņūtons, 1687",
   "subject": "sciences",
-  "subcategory": "Découvertes qui ont changé le monde",
-  "description": "En 1687, Newton publie une idée simple et immense : la même force fait tomber une pomme et tourner la Lune. Voici ce que cela change.",
+  "subcategory": "Atklājumi, kas mainīja pasauli",
+  "description": "1687. gadā Ņūtons publicē vienkāršu un milzīgu ideju: viens un tas pats spēks liek ābolam krist un Mēnesim riņķot. Lūk, ko tas maina.",
   "hero": {
     "image": "la_theorie_de_la_gravitation_newton",
     "ratio": "16:9",
-    "hook": "Une pomme, la Lune, les planètes : une seule force pour tout expliquer."
+    "hook": "Ābols, Mēness, planētas: viens spēks, kas izskaidro visu."
   },
   "sections": [
     {
       "id": "course_55_la_theorie_de_la_gravitation_newton_1687_intro",
-      "title": "Introduction",
+      "title": "Ievads",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Avant Newton, on savait déjà beaucoup sur les planètes grâce à **Galilée**, physicien italien du XVIIe siècle, et **[[Johanness Keplers]]**, astronome qui décrivit les orbites elliptiques. Mais il manquait un lien clair entre ce qui tombe sur Terre et ce qui tourne dans le ciel."
+          "text": "Pirms Ņūtona par planētām jau zināja daudz, un šīs zināšanas nāca no diviem zinātniekiem: **Galilejs**, septiņpadsmitā gadsimta itāļu fiziķis, un **[[Johanness Keplers]]**, astronoms, kurš aprakstīja eliptiskās orbītas. Taču trūka skaidras saiknes starp to, kas krīt uz Zemes, un to, kas griežas debesīs."
         },
         {
           "type": "paragraph",
-          "text": "En **1687**, **Isaac Newton** publie les *[[Philosophiae Naturalis Principia Mathematica]]*, les *Principia*, ouvrage fondateur de la physique classique. Il y affirme que la gravitation est **universelle** : elle agit partout, de la même façon."
+          "text": "**1687**. gadā **Īzaks Ņūtons** publicē *[[Philosophiae Naturalis Principia Mathematica]]*, saīsināti *Principia*, klasiskās fizikas pamatdarbu. Tajā viņš apgalvo, ka gravitācija ir **universāla**: tā darbojas visur un vienādi."
         }
       ]
     },
     {
       "id": "course_55_la_theorie_de_la_gravitation_newton_1687_p1",
-      "title": "Le monde avant la synthèse",
+      "title": "Pasaule pirms sintēzes",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kepler avait décrit les orbites des planètes avec des lois précises : orbites en **ellipse**, aires balayées égales en temps égal. Galilée avait étudié la chute des corps. Mais pourquoi les planètes restent-elles sur leur trajectoire ? Qu'est-ce qui les « tire » ?"
+          "text": "Keplers bija aprakstījis planētu orbītas ar precīziem likumiem: orbītas ir **elipses**, vienādos laikos aplaistie laukumi ir vienādi. Galilejs bija pētījis ķermeņu krišanu. Bet kāpēc planētas paliek savā trajektorijā? Kas tās „velk“?"
         },
         {
           "type": "paragraph",
-          "text": "Newton répond : une **attraction gravitationnelle**, une force qui tire deux masses l'une vers l'autre. La Terre attire la Lune. Le Soleil attire la Terre. Et toi, tu attires aussi un peu la Terre… même si c'est minuscule."
+          "text": "Ņūtons atbild: tā ir **gravitācijas pievilkšanās**, spēks, kas velk divas masas viena pret otru. Zeme pievelk Mēnesi. Saule pievelk Zemi. Un tu arī nedaudz pievelc Zemi… kaut gan tas ir niecīgi."
         }
       ]
     },
     {
       "id": "course_55_la_theorie_de_la_gravitation_newton_1687_p2",
-      "title": "La loi en une phrase",
+      "title": "Likums vienā teikumā",
       "free": false,
       "blocks": [
         {
           "type": "image",
           "asset": "isaac_newton_apple_tree_woolsthorpe",
           "ratio": "4:3",
-          "caption": "L'histoire de la pomme est surtout un récit. L'idée, elle, est réelle."
+          "caption": "Ābola stāsts ir drīzāk leģenda. Bet ideja ir īsta."
         },
         {
           "type": "paragraph",
-          "text": "Deux corps s'attirent avec une force qui augmente avec leur **masse**, la quantité de matière, et diminue quand on les éloigne. Plus précisément : la force faiblit avec le **carré de la distance**. Doubler la distance divise l'attraction par quatre. Plus tu es loin, plus l'attraction faiblit vite."
+          "text": "Divi ķermeņi pievelkas ar spēku, kas pieaug, palielinoties to **masai**, tas ir, vielas daudzumam, un samazinās, kad tos attālina. Precīzāk: spēks vājinās proporcionāli **attāluma kvadrātam**. Dubultojot attālumu, pievilkšanās kļūst četras reizes mazāka. Jo tālāk tu esi, jo straujāk pievilkšanās vājinās."
         },
         {
           "type": "image",
           "asset": "planets_orbit_solar_system_gravity",
           "ratio": "16:9",
-          "caption": "Les planètes « tombent » sans cesse vers le Soleil… et le ratent : c'est l'orbite."
+          "caption": "Planētas nemitīgi „krīt“ uz Sauli… un to netrāpa: tā ir orbīta."
         },
         {
           "type": "funFact",
-          "text": "La Lune « tombe » vers la Terre en permanence. Comme elle a aussi une grande vitesse latérale, elle tourne autour au lieu de s'écraser."
+          "text": "Mēness nepārtraukti „krīt“ uz Zemi. Tā kā tam ir arī liels sānu ātrums, tas riņķo apkārt, nevis ietriecas Zemē."
         }
       ]
     },
     {
       "id": "course_55_la_theorie_de_la_gravitation_newton_1687_p3",
-      "title": "Les lois du mouvement",
+      "title": "Kustības likumi",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Newton donne aussi trois **lois du mouvement**. En résumé : un objet garde sa vitesse s'il n'y a pas de force, le principe d'**inertie** ; une force change la vitesse ; toute action a une réaction opposée."
+          "text": "Ņūtons formulē arī trīs **kustības likumus**. Īsumā: ķermenis saglabā savu ātrumu, ja nav spēka, un tas ir **inerces** princips; spēks maina ātrumu; katrai darbībai ir pretēja reakcija."
         },
         {
           "type": "paragraph",
-          "text": "Avec cela, on peut calculer trajectoires, **marées**, les montées et descentes des océans sous l'effet de la Lune et du Soleil, et les orbites. La physique devient un outil de prédiction."
+          "text": "Ar to var aprēķināt trajektorijas, **plūdmaiņas**, tas ir, okeānu līmeņa celšanos un krišanos Mēness un Saules ietekmē, kā arī orbītas. Fizika kļūst par prognozēšanas rīku."
         }
       ]
     },
     {
       "id": "course_55_la_theorie_de_la_gravitation_newton_1687_p4",
-      "title": "Puissant… mais pas le dernier mot",
+      "title": "Spēcīga… bet ne pēdējais vārds",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Deux siècles plus tard, **[[Alberts Einšteins]]** corrigera Newton pour les cas extrêmes, très grandes vitesses et très fortes gravités, avec la [[Relativistiskā gravitācija (Einšteins)]]. La gravité devient alors une courbure de l'espace-temps, et non plus une force invisible. Mais pour lancer une fusée ou comprendre les marées, Newton reste excellent."
+          "text": "Pēc diviem gadsimtiem **[[Alberts Einšteins]]** precizēs Ņūtona teoriju ekstrēmiem gadījumiem, ļoti lielam ātrumam un ļoti spēcīgai gravitācijai. Viņa jaunā teorija ir [[Relativistiskā gravitācija (Einšteins)]]. Gravitācija tad kļūst par telpas-laika izliekumu, nevis vairs neredzamu spēku. Taču, lai palaistu raķeti vai izprastu plūdmaiņas, Ņūtona teorija joprojām ir lieliska."
         },
         {
           "type": "takeaway",
-          "text": "Newton unifie ciel et Terre : la gravitation attire les masses partout. C'est l'une des plus grandes synthèses scientifiques de l'histoire."
+          "text": "Ņūtons apvieno debesis un Zemi: gravitācija pievelk masas visur. Tā ir viena no vēstures lielākajām zinātniskajām sintēzēm."
         }
       ]
     }

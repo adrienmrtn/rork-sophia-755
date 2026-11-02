@@ -1,127 +1,127 @@
 {
   "id": "course_15_la_belle_epoque_1871_1914",
-  "title": "Qu'est-ce que la Belle Époque ?",
-  "subtitle": "1871-1914",
+  "title": "ベル・エポックとは、どんな時代か",
+  "subtitle": "1871〜1914年",
   "subject": "histoire",
-  "subcategory": "Révolutions & conflits modernes",
-  "description": "Entre la fin de la guerre de 1870 et août 1914, l'Europe croit au progrès. Électricité, expositions, arts nouveaux… et fractures qui mènent à la catastrophe.",
+  "subcategory": "革命と近現代の紛争",
+  "description": "1870年の戦争が終わってから1914年8月までの間、ヨーロッパは進歩を信じていました。電気、万国博覧会、新しい芸術。そして、破局へつながる亀裂もありました。",
   "hero": {
     "image": "la_belle_epoque",
     "ratio": "16:9",
-    "hook": "Quarante ans de foi dans le progrès… avant que tout bascule en 1914."
+    "hook": "四十年にわたって進歩を信じた時代。それは1914年にすべて崩れ去ります。"
   },
   "sections": [
     {
       "id": "course_15_la_belle_epoque_1871_1914_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La **Belle Époque** désigne la période de paix relative entre la fin de la [[普仏戦争]] (**1871**) et le déclenchement de la [[第一次世界大戦]] (**1914**). On y croit à la science, au progrès, à la raison."
+          "text": "**ベル・エポック**とは、[[普仏戦争]]の終結（**1871年**）から[[第一次世界大戦]]の開戦（**1914年**）までの、比較的平和だった時代を指します。人々は科学、進歩、理性を信じていました。"
         },
         {
           "type": "paragraph",
-          "text": "Pour les classes aisées d'Europe occidentale, ce sont quatre décennies de confort et d'inventions. Mais sous le vernis brillent déjà des fractures sociales et des rivalités qui feront tout exploser."
+          "text": "西ヨーロッパの裕福な階級にとって、それは四十年にわたる快適さと発明の時代でした。けれども、華やかな表面の下には、やがてすべてを吹き飛ばす社会の亀裂や国どうしの対立がすでに潜んでいました。"
         }
       ]
     },
     {
       "id": "course_15_la_belle_epoque_1871_1914_p1",
-      "title": "Quand la technique transforme le quotidien",
+      "title": "技術が日々の暮らしを大きく変えていく",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Une deuxième révolution industrielle apporte l'**électricité**, le **pétrole**, la chimie. Le tramway et le métro (Paris, **1900**) changent la ville. L'automobile et l'avion naissent. Le téléphone raccourcit les distances."
+          "text": "第二次産業革命によって、**電気**、**石油**、化学工業が生まれます。路面電車と地下鉄（パリ、**1900年**）が街を変えました。自動車と飛行機が誕生し、電話が距離を縮めます。"
         },
         {
           "type": "image",
           "asset": "paris_universal_exhibition_1900",
           "ratio": "4:3",
-          "caption": "L'Exposition universelle de 1900 à Paris, vitrine du progrès."
+          "caption": "1900年のパリ万国博覧会：進歩のショーウィンドウ"
         },
         {
           "type": "funFact",
-          "text": "Le nom « Belle Époque » n'apparaît qu'après **1914**. Les contemporains ne vivaient pas « la Belle Époque » : ce sont les survivants des tranchées qui ont inventé ce paradis perdu."
+          "text": "「ベル・エポック」という呼び名が現れたのは、**1914年**以降のことです。当時の人々は「ベル・エポック」を生きていたわけではありません。この失われた楽園を作り上げたのは、塹壕を生き延びた人々でした。"
         },
         {
           "type": "paragraph",
-          "text": "L'**Exposition universelle de 1900** attire **50 millions** de visiteurs. Le cinéma des frères Lumière et le Moulin Rouge font de Paris une capitale du spectacle. [[オーギュスト・コントの実証主義]], une philosophie très influente, résume l'optimisme : la science résoudra tout."
+          "text": "**1900年のパリ万国博覧会**には、**5千万人**の来場者が訪れました。リュミエール兄弟の映画やムーラン・ルージュによって、パリは娯楽の都になります。大きな影響力をもった哲学である[[オーギュスト・コントの実証主義]]は、この楽観を表していました。科学がすべてを解決する、という考えです。"
         }
       ]
     },
     {
       "id": "course_15_la_belle_epoque_1871_1914_p2",
-      "title": "L'envers du décor",
+      "title": "舞台裏の現実",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Derrière les boulevards, les ouvriers travaillent souvent **10 à 12 heures** par jour, sans vraie protection. La misère urbaine nourrit les tensions entre classes."
+          "text": "大通りの裏側では、労働者がしばしば1日**10〜12時間**も働き、まともな保護はありませんでした。都市の貧困が、階級間の対立をあおります。"
         },
         {
           "type": "image",
           "asset": "eiffel_tower_1889",
           "ratio": "4:3",
-          "caption": "La tour Eiffel (1889), icône d'une modernité qui ne profite pas à tous."
+          "caption": "エッフェル塔（1889年）：すべての人に恩恵が及ぶわけではない近代の象徴"
         },
         {
           "type": "paragraph",
-          "text": "À l'échelle du monde, l'Europe se partage l'Afrique. La [[ベルリン会議]] (**1884-1885**) fixe des frontières sans consulter les peuples concernés. En France, l'[[ドレフュス事件]] déchire la République : un officier juif, Alfred Dreyfus, est condamné à tort pour espionnage, et l'antisémitisme éclate au grand jour."
+          "text": "世界に目を向けると、ヨーロッパはアフリカを分け合っていました。[[ベルリン会議]]（**1884〜1885年**）は、当事者の民族に相談もせずに国境を決めます。フランスでは[[ドレフュス事件]]が共和国を引き裂きました。ユダヤ人の将校アルフレッド・ドレフュスがスパイ罪で不当に有罪とされ、反ユダヤ主義があからさまに噴き出したのです。"
         }
       ]
     },
     {
       "id": "course_15_la_belle_epoque_1871_1914_p3",
-      "title": "Arts nouveaux, puis la chute",
+      "title": "新しい芸術、そしてその崩壊",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Les arts explosent. L'[[アール・ヌーヴォー]] courbes les façades. Le [[フォーヴィスム]] et le [[キュビスム]] bousculent la peinture. Le médecin [[ジークムント・フロイト]] explore l'inconscient. Albert Einstein publie la [[相対性理論]] en **1905** : l'espace et le temps ne sont plus ce qu'on croyait."
+          "text": "芸術が爆発的に広がります。[[アール・ヌーヴォー]]は建物の正面を曲線で飾りました。[[フォーヴィスム]]と[[キュビスム]]は絵画をゆさぶります。医師の[[ジークムント・フロイト]]は無意識を探究しました。アルベルト・アインシュタインは**1905年**に[[相対性理論]]を発表し、空間と時間はそれまで思われていたものとは違うことを示します。"
         },
         {
           "type": "funFact",
-          "text": "En **1913**, le ballet *Le Sacre du printemps* d'Igor Stravinsky provoque un tel scandale à Paris que des spectateurs en viennent aux mains."
+          "text": "**1913年**、イーゴリ・ストラヴィンスキーのバレエ*『春の祭典』*はパリで大きなスキャンダルを起こし、観客がつかみ合いのけんかを始めるほどでした。"
         },
         {
           "type": "paragraph",
-          "text": "Puis tout bascule. Le **28 juin 1914**, l'archiduc **François-Ferdinand**, héritier d'Autriche-Hongrie, est assassiné à Sarajevo. L'engrenage des alliances se déclenche. Le **4 août**, le Royaume-Uni entre en guerre. La foi dans le progrès meurt dans les tranchées."
+          "text": "そして、すべてが一変します。**1914年6月28日**、オーストリア＝ハンガリー帝国の皇位継承者である**フランツ・フェルディナント**大公が、サラエヴォで暗殺されました。同盟関係の連鎖が動き出し、**8月4日**にはイギリスが参戦します。進歩への信頼は、塹壕の中で死にました。"
         },
         {
           "type": "timeline",
           "events": [
             {
-              "date": "1871",
-              "title": "Fin de la guerre franco-prussienne",
-              "detail": "Naissance d'une Allemagne unifiée, ressentiment français."
+              "date": "1871年",
+              "title": "フランスとプロイセンの戦争が終結",
+              "detail": "統一ドイツが誕生し、フランスには恨みが残りました。"
             },
             {
-              "date": "1889",
-              "title": "Tour Eiffel",
-              "detail": "Symbole de la modernité technique."
+              "date": "1889年",
+              "title": "エッフェル塔",
+              "detail": "技術がもたらした近代の象徴です。"
             },
             {
               "date": "1894-1906",
-              "title": "Affaire Dreyfus",
-              "detail": "La République se déchire."
+              "title": "ドレフュス事件",
+              "detail": "共和国が分裂しました。"
             },
             {
-              "date": "1900",
-              "title": "Exposition universelle",
-              "detail": "Paris vitrine du monde."
+              "date": "1900年",
+              "title": "万国博覧会",
+              "detail": "パリが世界のショーウィンドウになりました。"
             },
             {
-              "date": "août 1914",
-              "title": "Grande Guerre",
-              "detail": "La Belle Époque s'achève brutalement."
+              "date": "1914年8月",
+              "title": "第一次世界大戦",
+              "detail": "ベル・エポックは突然終わりました。"
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "La Belle Époque (**1871-1914**) allie progrès technique et fractures profondes, avant de sombrer dans le chaos de la Grande Guerre."
+          "text": "ベル・エポック（**1871〜1914年**）は、技術の進歩と深い亀裂を併せもち、やがて第一次世界大戦の混乱に沈んでいきました。"
         }
       ]
     }

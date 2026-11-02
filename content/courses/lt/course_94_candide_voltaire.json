@@ -1,133 +1,133 @@
 {
   "id": "course_94_candide_voltaire",
-  "title": "« Candide » : pourquoi faut-il cultiver notre jardin ?",
+  "title": "„Kandidas“: kodėl reikia dirbti savo sodą?",
   "subtitle": "1759",
   "subject": "litterature",
-  "subcategory": "Classiques français & européens",
-  "description": "Candide traverse un monde cruel en croyant que tout va pour le mieux. Voltaire démolit l'optimisme de Leibniz avec une ironie implacable.",
+  "subcategory": "Prancūzų ir Europos klasika",
+  "description": "Kandidas keliauja po žiaurų pasaulį, tikėdamas, kad viskas klostosi kuo geriausiai. Voltaire'as negailestinga ironija sugriauna Leibnizo optimizmą.",
   "hero": {
     "image": "candide_voltaire",
     "ratio": "16:9",
-    "hook": "Trente chapitres, une ironie corrosive, et une phrase finale qui change tout."
+    "hook": "Trisdešimt skyrių, ėdanti ironija ir paskutinis sakinys, keičiantis viską."
   },
   "sections": [
     {
       "id": "course_94_candide_voltaire_intro",
-      "title": "Introduction",
+      "title": "Įvadas",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Publié en **1759**, **Candide ou l'Optimisme** est le chef-d'œuvre du conte philosophique, récit court mêlant aventure et réflexion. **Voltaire**, de son vrai nom **François-Marie Arouet**, y démolit l'idée d'un monde parfaitement ordonné par la providence, la volonté de Dieu guidant tout."
+          "text": "**1759** m. išleistas **Kandidas, arba Optimizmas** yra filosofinės apysakos šedevras, trumpas pasakojimas, jungiantis nuotykį ir mąstymą. **Voltaire'as**, tikruoju vardu **François-Marie Arouet**, jame sugriauna mintį, kad pasaulį tobulai sutvarko apvaizda, Dievo valia, vedanti viską."
         },
         {
           "type": "paragraph",
-          "text": "En trente chapitres rapides, le récit appartient aux **[[Apšvietos filosofija]]**, mouvement du XVIIIe siècle fondé sur la raison et la critique des préjugés. L'homme doit agir concrètement, pas seulement spéculer sur le sens du monde. Voltaire utilise l'humour et l'exagération pour faire réfléchir le lecteur sans le sermonner."
+          "text": "Pasakojimo, sudėto iš trisdešimties greitų skyrių, dvasia yra **[[Apšvietos filosofija]]**, XVIII a. judėjimas, grįstas protu ir išankstinių nuostatų kritika. Žmogus turi veikti konkrečiai, o ne vien svarstyti apie pasaulio prasmę. Voltaire'as naudoja humorą ir perdėjimą, kad priverstų skaitytoją mąstyti, nemoralizuodamas."
         }
       ]
     },
     {
       "id": "course_94_candide_voltaire_p1",
-      "title": "1755 : le séisme qui bouleverse Voltaire",
+      "title": "1755 m.: Voltaire'ą sukrėtęs žemės drebėjimas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Voltaire écrit Candide après la **[[Septynerių metų karas]]**, grand conflit européen de 1756 à 1763, et surtout le tremblement de terre de **Lisbonne**, le 1er novembre **1755**. Environ 60 000 personnes meurent ce jour de fête religieuse. Comment croire encore que tout mal sert un bien supérieur ?"
+          "text": "Voltaire'as rašo Kandidą, kai jau pasibaigęs **[[Septynerių metų karas]]**, didelis Europos konfliktas 1756-1763 m., o ypač kai įvykęs **Lisabonos** žemės drebėjimas **1755** m. lapkričio 1 d. Tą dieną, per religinę šventę, žūva apie 60 000 žmonių. Kaip dar galima tikėti, kad kiekviena blogybė tarnauja aukštesniam gėriui?"
         },
         {
           "type": "image",
           "asset": "lisbon_earthquake_1755_engraving",
           "ratio": "4:3",
-          "caption": "Le séisme de Lisbonne : catastrophe qui brise la confiance en un monde parfait."
+          "caption": "Lisabonos žemės drebėjimas: katastrofa, sugriovusi tikėjimą tobulu pasauliu."
         },
         {
           "type": "paragraph",
-          "text": "Voltaire attaque l'**[[Optimizmas pagal Leibnizą]]**. Selon cette philosophie, Dieu a créé le meilleur des mondes possibles. Tout mal apparent servirait un bien supérieur. Candide naît de ce refus. Le conte philosophique mêle fiction légère et réflexion profonde pour toucher un large public, pas seulement les spécialistes."
+          "text": "Voltaire'o taikinys: **[[Optimizmas pagal Leibnizą]]**. Pagal šią filosofiją Dievas sukūrė geriausią iš galimų pasaulių. Kiekvienas akivaizdus blogis esą tarnauja aukštesniam gėriui. Kandidas gimsta iš šio atmetimo. Filosofinė apysaka sujungia lengvą išmonę ir gilų mąstymą, kad pasiektų plačią publiką, ne tik specialistus."
         },
         {
           "type": "image",
           "asset": "voltaire_portrait_painting",
           "ratio": "4:3",
-          "caption": "Voltaire : ironie, lucidité et combat pour la raison."
+          "caption": "Voltaire'as: ironija, aiškiaregystė ir kova už protą."
         }
       ]
     },
     {
       "id": "course_94_candide_voltaire_p2",
-      "title": "Pangloss et l'ironie dévastatrice",
+      "title": "Panglosas ir naikinanti ironija",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Candide**, jeune naïf, est élevé dans le château du baron de **Thunder-ten-tronckh** par **Pangloss**, caricature de **[[Leibnizas]]**, philosophe allemand du XVIIe siècle. Le précepteur prétend que tout événement, aussi atroce soit-il, a une cause bénéfique dans un plan divin."
+          "text": "**Kandidą**, naivų jaunuolį, barono **Thunder-ten-tronckh** pilyje augina **Panglosas**. Tai karikatūra, kurios originalas yra **[[Leibnizas]]**, XVII a. vokiečių filosofas. Mokytojas tvirtina, kad bet kuris įvykis, kad ir koks žiaurus, turi naudingą priežastį dieviškame plane."
         },
         {
           "type": "funFact",
-          "text": "Malgré l'interdiction par le Parlement de Paris, le livre circule en clandestinité : on estime plus de 20 000 exemplaires dès la première année."
+          "text": "Nepaisant Paryžiaus parlamento draudimo, knyga slaptai sklinda: manoma, kad jau pirmaisiais metais išplatinta daugiau nei 20 000 egzempliorių."
         },
         {
           "type": "paragraph",
-          "text": "Chassé de son château pour avoir aimé **Cunégonde**, fille du baron, le héros est confronté aux horreurs du monde : l'enrôlement forcé dans l'armée, la tempête, la maladie et l'**[[Inkvizicija]]**, tribunal ecclésiastique qui pourchassait l'hérésie. L'Inquisition pratique l'**[[Autodafė]]**, cérémonie publique où l'on brûle parfois des condamnés, pour empêcher de nouveaux séismes."
+          "text": "Išvarytas iš pilies už tai, kad pamilo **Kunigundą**, barono dukterį, herojus susiduria su pasaulio siaubais. Štai jų sąrašas: prievartinis paėmimas į kariuomenę, audra, liga ir **[[Inkvizicija]]**, bažnytinis teismas, persekiojęs ereziją. Inkvizicijos metodas yra **[[Autodafė]]**, vieša ceremonija, per kurią kartais sudeginami nuteistieji, siekiant išvengti naujų žemės drebėjimų."
         },
         {
           "type": "paragraph",
-          "text": "L'absurdité culmine quand Pangloss explique que la syphilis est indispensable pour le chocolat. Voltaire force le lecteur à rejeter la spéculation abstraite pour embrasser le constat lucide. Chaque catastrophe devient une leçon d'ironie. Le conte avance vite, comme une suite de coups de massue comiques visant la bêtise humaine."
+          "text": "Absurdas pasiekia viršūnę, kai Panglosas aiškina, kad sifilis būtinas šokoladui. Voltaire'as verčia skaitytoją atmesti abstrakčią spekuliaciją ir priimti blaivų žvilgsnį į tikrovę. Kiekviena katastrofa tampa ironijos pamoka. Apysaka juda greitai, tarsi komiškų smūgių vėzdu virtinė, nukreipta į žmogaus kvailumą."
         }
       ]
     },
     {
       "id": "course_94_candide_voltaire_p3",
-      "title": "L'Eldorado et le nègre de Surinam",
+      "title": "Eldoradas ir Surinamo negras",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L'**Eldorado**, utopie sud-américaine imaginaire, prouve que l'optimisme peut tenir dans une société rationnelle et pacifique. Pourtant Candide la quitte pour retrouver **Cunégonde**. La perfection statique ne convient pas à l'homme : il veut agir, aimer, bouger. Voltaire suggère que le bonheur n'est pas un état, mais une activité."
+          "text": "**Eldoradas**, įsivaizduojama Pietų Amerikos utopija, įrodo, kad optimizmas gali tilpti racionalioje ir taikioje visuomenėje. Vis dėlto Kandidas ją palieka, kad vėl rastų **Kunigundą**. Statiška tobulybė žmogui netinka: jis nori veikti, mylėti, judėti. Voltaire'as užsimena, kad laimė yra ne būsena, o veikla."
         },
         {
           "type": "quote",
-          "text": "C'est à ce prix que vous mangez du sucre en Europe.",
-          "attribution": "Voltaire, Candide — le nègre de Surinam"
+          "text": "Štai už kokią kainą Europoje valgomas cukrus.",
+          "attribution": "Voltaire'as, Kandidas (Surinamo negras)"
         },
         {
           "type": "paragraph",
-          "text": "Le **nègre de Surinam**, esclave mutilé pour le sucre européen, pousse Candide à définir l'optimisme : « c'est la rage de soutenir que tout est bien quand on est mal ». Le récit parodique du roman d'apprentissage, où un héros apprend la vie par l'expérience, force le lecteur au constat lucide face aux injustices coloniales."
+          "text": "**Surinamo negras**, Europos cukraus labui sužalotas vergas, priverčia Kandidą apibrėžti optimizmą: „tai pamišimas tvirtinti, kad viskas gerai, kai tau blogai“. Parodinis brandos romano pasakojimas, kuriame herojus gyvenimo mokosi iš patirties, verčia skaitytoją blaiviai pažvelgti į kolonijines neteisybes."
         }
       ]
     },
     {
       "id": "course_94_candide_voltaire_p4",
-      "title": "Cultiver notre jardin",
+      "title": "Dirbti savo sodą",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le dénouement se joue dans une métairie turque, petite ferme, avec **Pangloss**, **Cunégonde** et d'autres compagnons d'infortune. Candide conclut : « **Il faut cultiver notre jardin** ». Fini la spéculation métaphysique sur Dieu et le sens du monde : seule l'action concrète compte. Voltaire refuse toute réponse globale au mal du monde, mais propose un pragmatisme lucide."
+          "text": "Pabaiga vyksta turkų sodyboje, mažame ūkyje, kur susiburia **Panglosas**, **Kunigunda** ir kiti bendranelaimiai. Kandidas daro išvadą: „**Reikia dirbti savo sodą**“. Metafizinių svarstymų apie Dievą ir pasaulio prasmę nebelieka: svarbus tik konkretus veiksmas. Voltaire'as atsisako visuotinio atsakymo į pasaulio blogį, bet siūlo blaivų pragmatizmą."
         },
         {
           "type": "timeline",
           "events": [
             {
               "date": "1755",
-              "title": "Séisme de Lisbonne",
-              "detail": "Choc qui alimente l'écriture du conte."
+              "title": "Lisabonos žemės drebėjimas",
+              "detail": "Sukrėtimas, pastūmėjęs rašyti apysaką."
             },
             {
               "date": "1759",
-              "title": "Publication",
-              "detail": "Candide paraît sans nom d'auteur."
+              "title": "Leidimas",
+              "detail": "Kandidas išeina be autoriaus vardo."
             },
             {
-              "date": "Fin",
-              "title": "Le jardin",
-              "detail": "Travail et action remplacent l'optimisme."
+              "date": "Pabaiga",
+              "title": "Sodas",
+              "detail": "Darbas ir veiksmas pakeičia optimizmą."
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "**Candide**, paru en **1759**, ridiculise l'**[[Optimizmas pagal Leibnizą]]** par l'ironie et conclut que seule l'action concrète, « cultiver notre jardin », donne un sens à l'existence."
+          "text": "**Kandidas**, išleistas **1759** m., ironija išjuokia šią mintį: **[[Optimizmas pagal Leibnizą]]**. Išvada: tik konkretus veiksmas, „dirbti savo sodą“, suteikia gyvenimui prasmę."
         }
       ]
     }

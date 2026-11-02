@@ -1,118 +1,118 @@
 {
   "id": "course_66_y_a_t_il_de_la_vie_ailleurs_dans_l_unive",
-  "title": "Sommes-nous seuls dans l'Univers ?",
-  "subtitle": "Exobiologie",
+  "title": "Vai esam vieni Visumā?",
+  "subtitle": "Eksobioloģija",
   "subject": "sciences",
-  "subcategory": "La Terre et l'Univers",
-  "description": "Des milliers de milliards de planètes, et pourtant un silence radio. La science cherche la vie ailleurs sans promettre de petits hommes verts.",
+  "subcategory": "Zeme un Visums",
+  "description": "Tūkstošiem miljardu planētu, un tomēr radioklusums. Zinātne meklē dzīvību citur, neapsolot nekādus zaļos cilvēciņus.",
   "hero": {
     "image": "y_a_t_il_de_la_vie_ailleurs_dans_l_univers",
     "ratio": "16:9",
-    "hook": "L'univers est immense. Alors pourquoi personne ne répond ?"
+    "hook": "Visums ir milzīgs. Kāpēc tad neviens neatsaucas?"
   },
   "sections": [
     {
       "id": "course_66_y_a_t_il_de_la_vie_ailleurs_dans_l_unive_intro",
-      "title": "Introduction",
+      "title": "Ievads",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L'univers observable contient environ **2 000 milliards** de galaxies, immenses ensembles d'étoiles, chacune avec des centaines de milliards d'étoiles. Statistiques aidant, les planètes potentiellement habitables devraient être innombrables. Pourtant, depuis le début de l'astronomie moderne, nous n'avons aucun contact confirmé."
+          "text": "Novērojamajā Visumā ir aptuveni **2000 miljardu** galaktiku, milzīgu zvaigžņu kopu, un katrā no tām ir simtiem miljardu zvaigžņu. Pēc statistikas dzīvošanai piemērotu planētu vajadzētu būt neskaitāmām. Tomēr kopš mūsdienu astronomijas sākuma mums nav neviena apstiprināta kontakta."
         },
         {
           "type": "paragraph",
-          "text": "Cette contradiction porte un nom : le **paradoxe de Fermi**, d'après le physicien **Enrico Fermi**. La question n'est plus seulement de la science-fiction. Elle relève de l'[[Eksobioloģija]] : la science qui étudie les conditions d'apparition de la vie ailleurs, et les moyens de la détecter."
+          "text": "Šī pretruna ir nosaukta par **Fermi paradoksu**, par godu fiziķim **Enriko Fermi**. Jautājums vairs nav tikai zinātniskā fantastika. Par to rūpējas zinātne ar nosaukumu [[Eksobioloģija]]: tā pēta, kādos apstākļos citur var rasties dzīvība un kā to var atklāt."
         }
       ]
     },
     {
       "id": "course_66_y_a_t_il_de_la_vie_ailleurs_dans_l_unive_p1",
-      "title": "Ce que la vie semble demander",
+      "title": "Ko dzīvībai, šķiet, vajag",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Pour chercher ailleurs, on part du seul exemple connu : la vie terrestre. Elle repose surtout sur la chimie du **carbone**, atome qui forme des molécules complexes, et sur l'**eau liquide**, qui permet aux réactions chimiques de bien se dérouler."
+          "text": "Lai meklētu citur, izmanto vienīgo zināmo piemēru: zemes dzīvību. Tā galvenokārt balstās uz **oglekļa** ķīmiju (ogleklis veido sarežģītas molekulas) un uz **šķidru ūdeni**, kurā ķīmiskās reakcijas norit labi."
         },
         {
           "type": "image",
           "asset": "radio_telescope_seti",
           "ratio": "auto",
-          "caption": "Les radiotélescopes scrutent le ciel, à l'écoute d'un éventuel signal."
+          "caption": "Radioteleskopi pēta debesis, cerot uztvert iespējamu signālu."
         },
         {
           "type": "paragraph",
-          "text": "Une planète candidate doit souvent se trouver dans la [[apdzīvojamā zona]] de son étoile : ni trop près, sinon l'eau s'évapore, ni trop loin, sinon l'eau gèle. Depuis les années 1990, on a découvert plus de **5 500 exoplanètes**, planètes autour d'autres étoiles que le Soleil. Presque chaque étoile de notre galaxie en aurait au moins une."
+          "text": "Svarīgs nosacījums planētai kandidātei ir zvaigznes [[apdzīvojamā zona]]: ne pārāk tuvu, citādi ūdens iztvaiko, ne pārāk tālu, citādi ūdens sasalst. Kopš pagājušā gadsimta deviņdesmitajiem gadiem atklātas vairāk nekā **5500 eksoplanetu**, planētu, kas riņķo ap citām zvaigznēm, nevis ap Sauli. Šķiet, ka ap gandrīz katru mūsu galaktikas zvaigzni riņķo vismaz viena."
         },
         {
           "type": "funFact",
-          "text": "Il y a plus d'étoiles dans l'univers observable que de grains de sable sur toutes les plages de la Terre."
+          "text": "Novērojamajā Visumā zvaigžņu ir vairāk nekā smilšu graudu visās Zemes pludmalēs."
         },
         {
           "type": "paragraph",
-          "text": "En **1961**, l'astronome **Frank Drake** propose l'[[Dreika formula]] : une formule qui multiplie des facteurs — étoiles, planètes habitables, durée des civilisations — pour estimer le nombre de civilisations capables de communiquer dans la Voie lactée. Les chiffres restent très incertains. La formule sert surtout à structurer le débat."
+          "text": "**1961**. gadā astronoms **Frenks Dreiks** izvirza ideju, kas pazīstama kā [[Dreika vienādojums]]: formula, kas reizina vairākus faktorus, proti, zvaigznes, dzīvībai derīgas planētas un civilizāciju pastāvēšanas ilgumu, lai novērtētu, cik Piena Ceļā ir civilizāciju, kas spēj sazināties. Skaitļi ir ļoti neskaidri. Formula galvenokārt palīdz sakārtot diskusiju."
         }
       ]
     },
     {
       "id": "course_66_y_a_t_il_de_la_vie_ailleurs_dans_l_unive_p2",
-      "title": "Des oasis dans le système solaire",
+      "title": "Oāzes Saules sistēmā",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Pas besoin d'aller tout de suite vers d'autres étoiles. Dans notre système solaire, plusieurs mondes intriguent. **Europa**, une lune de Jupiter, abrite probablement un océan d'eau liquide sous une croûte de glace. Cet océan resterait liquide grâce aux [[Plūdmaiņu spēki]] : l'énorme attraction de Jupiter déforme Europa et chauffe son intérieur par frottement."
+          "text": "Nav jālido uzreiz pie citām zvaigznēm. Mūsu Saules sistēmā ir vairākas intriģējošas pasaules. **Eiropa**, viens no Jupitera pavadoņiem, visticamāk, slēpj šķidra ūdens okeānu zem ledus garozas. Šķidru to, šķiet, uztur [[plūdmaiņu spēki]]: Jupitera milzīgā pievilkšanās deformē Eiropu un berzes dēļ sasilda tās iekšieni."
         },
         {
           "type": "paragraph",
-          "text": "**Encelade**, une petite lune de Saturne, éjecte des **geysers**, des jets de vapeur et de matière. La sonde **Cassini** y a trouvé des indices d'activité **hydrothermale**, un chauffage par réactions chimiques au fond de l'océan, capable en principe de nourrir des microbes sans soleil."
+          "text": "**Enkelāds**, neliels Saturna pavadonis, izsvaida **geizerus**, tvaika un vielas strūklas. Zonde **Kasīni** tur atradusi pazīmes par **hidrotermālu** darbību, proti, ķīmisku reakciju radītu sildīšanu okeāna dibenā, kas principā spētu uzturēt mikrobus bez saules."
         },
         {
           "type": "paragraph",
-          "text": "Sur **Mars**, de l'eau liquide a autrefois coulé en surface. Les robots y cherchent des [[Biosignatūras]] : traces fossiles ou chimiques d'une vie passée, avant que la planète ne perde une grande partie de son atmosphère et de son eau."
+          "text": "Uz **Marsa** reiz uz virsmas tecējis šķidrs ūdens. Roboti tur meklē [[biosignatūras]]: fosilas vai ķīmiskas pagātnes dzīvības pēdas, pirms planēta zaudēja lielu daļu atmosfēras un ūdens."
         }
       ]
     },
     {
       "id": "course_66_y_a_t_il_de_la_vie_ailleurs_dans_l_unive_p3",
-      "title": "Le grand silence",
+      "title": "Lielais klusums",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En **1950**, Fermi demande : si des civilisations avancées existent par milliers, pourquoi n'en voyons-nous aucune trace ? L'univers est vieux. Une civilisation avec seulement un million d'années d'avance aurait eu le temps de se faire remarquer, même sans voyager à la vitesse de la lumière."
+          "text": "**1950**. gadā Fermi jautā: ja attīstītu civilizāciju ir tūkstošiem, kāpēc mēs neredzam nevienas to pēdas? Visums ir vecs. Civilizācija, kas apsteidz mūs vien par miljonu gadu, būtu paguvusi sevi pieteikt, pat nelidojot ar gaismas ātrumu."
         },
         {
           "type": "paragraph",
-          "text": "Une hypothèse est celle du [[Lielais filtrs]] : une étape presque impossible à franchir dans l'évolution, par exemple le passage à une vie complexe, ou l'autodestruction technologique. Soit nous l'avons déjà passée, soit elle est devant nous."
+          "text": "Viena no hipotēzēm ir [[Lielais filtrs]]: evolūcijas posms, ko gandrīz neiespējami pārvarēt, piemēram, pāreja uz sarežģītu dzīvību vai tehnoloģiskā pašiznīcināšanās. Vai nu mēs to jau esam pārvarējuši, vai tas vēl ir mums priekšā."
         },
         {
           "type": "paragraph",
-          "text": "D'autres pistes : nous n'écoutons peut-être pas les bons signaux. Le programme **SETI**, Search for Extraterrestrial Intelligence, scrute surtout les ondes radio. Ou les civilisations sont trop brèves et trop éloignées pour se croiser. Ou encore l'[[zoodārza hipotēze]] : la Terre serait volontairement laissée à l'écart, comme une réserve."
+          "text": "Ir arī citi skaidrojumi: iespējams, mēs klausāmies nepareizos signālos. Programma **SETI** (Search for Extraterrestrial Intelligence, ārpuszemes saprāta meklēšana) galvenokārt pēta radioviļņus. Vai arī civilizācijas ir pārāk īslaicīgas un pārāk tālu viena no otras, lai satiktos. Vai vēl viena doma: [[zoodārza hipotēze]]. Zeme tīši turēta malā kā rezervāts."
         }
       ]
     },
     {
       "id": "course_66_y_a_t_il_de_la_vie_ailleurs_dans_l_unive_p4",
-      "title": "Comment on cherche aujourd'hui",
+      "title": "Kā meklē šodien",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le télescope spatial **James Webb** analyse la lumière qui traverse l'atmosphère de planètes lointaines grâce à la [[spektroskopija]], le découpage de la lumière pour identifier les gaz présents. On y cherche des gaz comme l'oxygène ou le méthane en quantités étranges, possibles indices de vie."
+          "text": "Kosmiskais teleskops **Džeimss Vebs** pēta gaismu, kas iet cauri tālu planētu atmosfērai. Palīdz [[spektroskopija]]: gaismas sadalīšana, lai noteiktu tajā esošās gāzes. Tur meklē tādas gāzes kā skābekli vai metānu dīvainos daudzumos, iespējamas dzīvības pazīmes."
         },
         {
           "type": "funFact",
-          "text": "Si quelqu'un dans la galaxie d'Andromède nous observait « maintenant », il verrait la Terre telle qu'elle était il y a **2,5 millions d'années** : la lumière met ce temps à faire le trajet."
+          "text": "Ja kāds Andromēdas galaktikā mūs vērotu „tagad“, viņš redzētu Zemi tādu, kāda tā bija pirms **2,5 miljoniem gadu**: gaismai šis ceļš prasa tik ilgu laiku."
         },
         {
           "type": "paragraph",
-          "text": "Même une vie microbienne changerait tout : elle prouverait que le vivant n'est pas un accident unique. En attendant, les sondes **Voyager** emportent depuis **1977** des disques d'or avec des sons et images de la Terre. Probabilité d'interception : quasi nulle. Besoin de ne pas se sentir seuls : intact."
+          "text": "Pat mikrobu dzīvība mainītu visu: tā pierādītu, ka dzīvā daba nav vienreizēja nejaušība. Pa to laiku zondes **Voyager** kopš **1977**. gada nes līdzi zelta diskus ar Zemes skaņām un attēliem. Iespēja, ka tos kāds pārtvers: gandrīz nulle. Vajadzība nejusties vieniem: neskarta."
         },
         {
           "type": "takeaway",
-          "text": "Les planètes sont innombrables et la vie paraît statistiquement plausible. Mais l'absence de contact, le paradoxe de Fermi, rappelle que l'intelligence technologique pourrait être très rare, ou très brève."
+          "text": "Planētu ir neskaitāmi daudz, un dzīvība statistiski šķiet iespējama. Tomēr kontakta trūkums, Fermi paradokss, atgādina, ka tehnoloģisks saprāts varētu būt ļoti rets vai ļoti īslaicīgs."
         }
       ]
     }

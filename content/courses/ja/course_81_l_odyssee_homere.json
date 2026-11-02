@@ -1,133 +1,133 @@
 {
   "id": "course_81_l_odyssee_homere",
-  "title": "« L'Odyssée » : pourquoi Ulysse met-il dix ans à rentrer ?",
-  "subtitle": "VIIIe siècle av. J.-C.",
+  "title": "『オデュッセイア』：オデュッセウスはなぜ帰るのに十年もかかるのか？",
+  "subtitle": "紀元前8世紀",
   "subject": "litterature",
-  "subcategory": "Grecs & Philosophes antiques",
-  "description": "Après Troie, le roi d'Ithaque Ulysse met dix ans à rentrer chez lui. Monstres, dieux et tentations jalonnent ce voyage qui invente le héros rusé de la littérature occidentale.",
+  "subcategory": "ギリシア人と古代の哲学者",
+  "description": "トロイア戦争のあと、イタケの王オデュッセウスは故郷に帰るまでに十年かかります。怪物、神々、誘惑が待つこの旅は、西洋文学に知恵者の英雄を生み出しました。",
   "hero": {
     "image": "l_odyssee_homere",
     "ratio": "16:9",
-    "hook": "Dix ans pour rentrer chez soi : le plus grand voyage de retour de la littérature."
+    "hook": "故郷に帰るまでに十年もかかる。文学史上もっとも長い、帰郷の旅の物語。"
   },
   "sections": [
     {
       "id": "course_81_l_odyssee_homere_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Vers le **VIIIe siècle avant J.-C.**, un long poème grec raconte le retour d'un homme. Cet homme s'appelle **Ulysse**, roi de la petite île d'**Ithaque**, au large des côtes de la Grèce. En grec, on dit *Odysseus*. La **guerre de Troie** est finie depuis dix ans. C'était un conflit légendaire entre Grecs et Troyens pour la reine Hélène. Ses compagnons veulent rentrer. Mais le voyage dure encore **dix ans**. C'est l'**Odyssée**, l'autre grand pilier de la culture européenne, aux côtés de l'Iliade."
+          "text": "**紀元前8世紀**ごろ、ギリシアの長い詩が、ひとりの男の帰郷を語ります。男の名は**オデュッセウス**、ギリシアの沖合に浮かぶ小さな島**イタケ**の王です。ギリシア語では*Odysseus*と呼ばれます。**トロイア戦争**が終わって十年がたちました。王妃ヘレネをめぐる、ギリシア人とトロイア人の伝説的な戦いでした。仲間たちは帰りたがっています。ところが旅は、さらに**十年**続きます。これが**『オデュッセイア』**、『イリアス』と並ぶヨーロッパ文化のもうひとつの大きな柱です。"
         },
         {
           "type": "paragraph",
-          "text": "Ici, on ne chante plus seulement la fureur des armes. On suit un héros qui survit par la **ruse**, la *mètis* grecque, le langage et l'endurance. Pour rentrer, Ulysse devra parfois accepter de n'être « **Personne** ». En grec, on dit *Outis*. Ce mot de passe sauve ses compagnons face au Cyclope. L'Odyssée invente ainsi le voyage comme épreuve intérieure, pas seulement comme aventure."
+          "text": "ここでは、もう武器の怒りだけが歌われるわけではありません。物語が追うのは、**策略**、ギリシア語でいう*mètis*、言葉、そして忍耐によって生き延びる英雄です。故郷に帰るため、オデュッセウスは時に「**だれでもない者**」になることも受け入れなければなりません。ギリシア語では*Outis*といいます。この名が、キュクロプスを前にした仲間たちを救います。こうして『オデュッセイア』は、旅を単なる冒険ではなく、内面の試練として描き出しました。"
         }
       ]
     },
     {
       "id": "course_81_l_odyssee_homere_p1",
-      "title": "Homère, ou comment on chantait avant d'écrire",
+      "title": "ホメロス、あるいは文字になる前の歌の世界",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "On attribue le poème à **Homère**, figure semi-légendaire dont on ne connaît presque rien avec certitude. Était-ce un seul poète, ou le nom d'une longue tradition ? La recherche moderne, avec [[ミルマン・パリー]], philologue américain du XXe siècle, montre que le texte vient surtout d'une [[口承伝統]]. Pendant des siècles, des [[アオイドス]] composaient en direct. Ces poètes-chanteurs improvisaient en s'accompagnant d'une lyre. Ils utilisaient des [[formule homérique]] toutes prêtes : « Ulysse aux mille ruses », « l'Aurore aux doigts de rose ». Ces formules répétées facilitaient la mémorisation et la composition."
+          "text": "この詩は**ホメロス**の作とされますが、彼は半ば伝説上の人物で、確かなことはほとんど分かっていません。ひとりの詩人だったのか、それとも長い伝統につけられた名前なのか。二十世紀アメリカの文献学者[[ミルマン・パリー]]らの現代の研究によれば、このテキストは主に[[口承伝統]]から生まれたとされます。何世紀ものあいだ、[[アオイドス]]がその場で詩を作っていました。この吟唱詩人たちは、竪琴を奏でながら即興で歌いました。「知略に富むオデュッセウス」「バラ色の指をもつ曙」のような出来合いの[[ホメロスの定型句]]を使ったのです。こうした繰り返しの表現が、記憶と作詩を助けました。"
         },
         {
           "type": "funFact",
-          "text": "En grec, le nom *Homeros* peut évoquer « celui qui ne voit pas ». D'où la légende d'un poète aveugle allant de cité en cité, portant l'épopée dans sa mémoire plutôt que sur un rouleau."
+          "text": "ギリシア語では、*Homeros*という名は「見えない者」を思わせることがあります。そこから、巻物ではなく記憶の中に叙事詩を宿して、町から町へ旅する盲目の詩人という伝説が生まれました。"
         },
         {
           "type": "paragraph",
-          "text": "L'épopée compte environ **12 000 vers** en [[ホメロスのギリシア語]] et **24 chants**. Le grec homérique est une langue littéraire archaïque, jamais parlée telle quelle. Le vers utilisé est l'**hexamètre dactylique**, un vers long de six pieds. Il est rythmé par des [[ダクテュロス（長短短格）]], unités métriques qui imitent le galop. Une fois écrite, le poème fixe une langue artificielle qui donne au récit un air sacré, hors du temps. C'est ce qu'on appelle la [[ホメロス問題]] : un seul auteur, ou une tradition collective fixée tardivement ?"
+          "text": "この叙事詩は約**12,000行**、**24巻**からなり、[[ホメロスのギリシア語]]で書かれています。ホメロスのギリシア語は古風な文学の言葉で、そのまま話されたことはありません。使われる詩形は**六脚韻**（ヘクサメトロス）で、六つの脚からなる長い詩行です。詩行は[[ダクテュロス（長短短格）]]で刻まれます。これは馬の駆け足をまねた韻律の単位です。文字に書き留められると、詩は人工的な言語を固定し、物語に時を超えた神聖な趣を与えます。これが[[ホメロス問題]]と呼ばれるものです。作者はひとりなのか、それとも後になってまとめられた集団の伝統なのか。"
         }
       ]
     },
     {
       "id": "course_81_l_odyssee_homere_p2",
-      "title": "L'errance : monstres, oubli et hospitalité",
+      "title": "放浪の旅：怪物、忘却、そして客人へのもてなし",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le récit commence [[イン・メディアス・レス]]. L'expression latine signifie « au milieu des choses ». Ulysse est retenu par la nymphe **Calypso**, déesse qui l'accueille sur son île. Les aventures célèbres arrivent ensuite en flashback. C'est une [[後説法（アナレプシス）]], un retour en arrière dans le récit. Le héros les raconte aux **Phéaciens**, peuple accueillant qui l'escorte vers Ithaque. Le guerrier devient conteur de sa propre légende."
+          "text": "物語は[[イン・メディアス・レス]]で始まります。このラテン語の表現は「事のただ中へ」という意味です。オデュッセウスは、ニュンペーの**カリュプソ**に引き留められています。女神は彼を自分の島に迎え入れていました。有名な冒険は、このあとフラッシュバックで語られます。これが[[後説法（アナレプシス）]]、物語を過去にさかのぼらせる手法です。英雄はその冒険を、もてなしの厚い民**パイアケス人**に語ります。彼らはオデュッセウスをイタケへ送り届けます。戦士は、自分自身の伝説の語り手になるのです。"
         },
         {
           "type": "image",
           "asset": "odysseus_cyclops_polyphemus_ancient_vase",
           "ratio": "4:3",
-          "caption": "Ulysse face au Cyclope Polyphème, sur un vase grec antique."
+          "caption": "古代ギリシアの壺に描かれた、オデュッセウスと一つ目の巨人ポリュペモス。"
         },
         {
           "type": "paragraph",
-          "text": "Tout bascule après le **Cyclope Polyphème**. C'est un géant à un seul œil, fils du dieu Poséidon. Pour sauver ses hommes, Ulysse l'aveugle, puis crie son vrai nom. **Poséidon**, dieu de la mer et père du géant, le poursuit ensuite sur toutes les mers. Chez les **Lotophages**, il arrache ses compagnons à l'oubli provoqué par une plante enivrante. Chez **Circé**, magicienne qui transforme les hommes en bêtes, il leur rend forme humaine. Chaque étape teste l'**hospitalité**, la *xenia*, valeur fondamentale du monde grec antique. La [[ネキュイア]], la descente aux Enfers pour interroger les morts, le confronte à sa propre limite : parler aux ombres, accepter ce qui est perdu."
+          "text": "すべてが傾くのは、**キュクロプスのポリュペモス**との出会いのあとです。ポリュペモスは一つ目の巨人で、海神ポセイドンの息子です。仲間を救うため、オデュッセウスは巨人の目をつぶし、そのうえで自分の本当の名を叫びます。すると海の神で巨人の父である**ポセイドン**が、あらゆる海でオデュッセウスを追い回します。**ロートスを食べる人々**の国では、酔わせる植物のせいで故郷を忘れかけた仲間たちを、連れ戻します。魔女**キルケ**は人間を獣に変えますが、オデュッセウスは仲間を人間の姿に戻させます。どの寄港地も、**もてなし**、ギリシア語でいう*xenia*を試します。古代ギリシア世界の根本的な価値です。死者に問うために冥界へ下る[[ネキュイア]]は、彼を自らの限界に向き合わせます。死者の影に語りかけ、失われたものを受け入れることです。"
         }
       ]
     },
     {
       "id": "course_81_l_odyssee_homere_p3",
-      "title": "Ithaque : le retour et le lit d'olivier",
+      "title": "イタケでの帰還とオリーブの木の寝台",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Pendant ce temps, à Ithaque, la reine **Pénélope**, épouse fidèle d'Ulysse, résiste aux **prétendants**. Ce sont cent nobles qui pillent le palais en espérant l'épouser. Elle promet de se remarier quand le linceul de **Laërte**, beau-père d'Ulysse, sera fini, puis le défait chaque nuit. C'est la ruse au féminin, miroir de celle du héros."
+          "text": "そのころイタケでは、オデュッセウスの貞淑な妻、王妃**ペネロペイア**が**求婚者たち**に抵抗しています。求婚者とは、彼女との結婚をねらって宮殿を荒らす百人の貴族です。ペネロペイアは、**ラエルテス**（オデュッセウスの父）の死装束が織り上がったら再婚すると約束し、それを毎晩ほどいてしまいます。これは女性版の策略、英雄の知恵を映す鏡です。"
         },
         {
           "type": "image",
           "asset": "penelope_weaving_tapestry_painting",
           "ratio": "4:3",
-          "caption": "Pénélope tissant le jour, défaisant la nuit : gagner du temps contre les prétendants."
+          "caption": "ペネロペイアは昼に織り、夜にほどきます：求婚者たちを前に、時間を稼ぐために"
         },
         {
           "type": "funFact",
-          "text": "Ulysse est reconnu d'abord par son vieux chien **Argos**, puis par sa nourrice **Euryclée**, avant que Pénélope ne le teste avec le secret de leur lit, sculpté dans un olivier vivant. Ce détail intime prouve qu'il est bien le roi, pas un imposteur."
+          "text": "オデュッセウスの正体に最初に気づくのは老いた犬**アルゴス**、次に乳母**エウリュクレイア**です。そのあとペネロペイアが、生きたオリーブの木から削り出した二人の寝台の秘密で、彼を試します。この内輪だけの細部が、彼が偽者ではなく本物の王であることを証明します。"
         },
         {
           "type": "paragraph",
-          "text": "Déguisé en mendiant grâce à **Athéna**, déesse de la sagesse et protectrice d'Ulysse, le héros observe, puis frappe. Le concours à l'arc reste célèbre : seul Ulysse peut bander l'arc du roi. Viennent ensuite le massacre des prétendants et la restauration de l'ordre du palais. Le **nostos**, le retour au foyer, n'est pas seulement un voyage géographique. Le foyer n'est pas une maison : c'est un lien qu'on prouve, une identité qu'on reconquiert."
+          "text": "女神**アテナ**は知恵の神で、オデュッセウスの守護者です。その助けで物乞いに変装した英雄は、様子をうかがい、やがて襲いかかります。弓の競技は有名で、王の弓を引けるのはオデュッセウスだけです。続いて、求婚者たちの殺戮と、宮殿の秩序の回復が起こります。**ノストス**、つまり故郷への帰還は、単なる地理上の旅ではありません。帰るべき場所は建物ではなく、人が証明する絆であり、取り戻すアイデンティティなのです。"
         }
       ]
     },
     {
       "id": "course_81_l_odyssee_homere_p4",
-      "title": "Pourquoi Ulysse nous parle encore",
+      "title": "なぜ今もオデュッセウスは語りかけるのか",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ulysse n'est pas un demi-dieu invincible comme **Achille**. Son arme, c'est l'adaptation. Il accepte l'humiliation, ment quand il le faut, pleure, doute. Au XXe siècle, [[ジェイムズ・ジョイス]] transpose cette errance dans une seule journée à Dublin avec son roman **Ulysse**, publié en 1922. Du poète **Du Bellay** à « Heureux qui comme Ulysse… » au cinéma, le naufragé qui cherche sa patrie reste un moteur de récit. L'Odyssée pose une question simple : vaut-il mieux l'immortalité sans risque, ou une vie humaine, fragile et choisie ?"
+          "text": "オデュッセウスは、**アキレウス**のような不死身の半神ではありません。武器は適応力です。屈辱を受け入れ、必要なら嘘をつき、泣き、迷います。二十世紀には、[[ジェイムズ・ジョイス]]が小説**『ユリシーズ』**（1922年刊）で、この放浪をダブリンのたった一日に移し替えました。詩人**デュ・ベレー**の「幸せなるかな、オデュッセウスのごとく旅した者は……」から映画まで、故郷を探す漂流者は物語の原動力であり続けています。『オデュッセイア』は単純な問いを投げかけます。危険のない不死と、壊れやすく自分で選んだ人間の人生と、どちらがよいのか。"
         },
         {
           "type": "timeline",
           "events": [
             {
-              "date": "VIIIe s. av. J.-C.",
-              "title": "Composition orale",
-              "detail": "L'épopée se fixe dans la tradition grecque, puis par l'écrit."
+              "date": "紀元前8世紀",
+              "title": "口承での成立",
+              "detail": "叙事詩はギリシアの伝統の中で固まり、のちに文字に記されます。"
             },
             {
-              "date": "10 ans",
-              "title": "Le nostos",
-              "detail": "Le retour d'Ulysse après Troie, épreuve autant que voyage."
+              "date": "10年",
+              "title": "ノストス",
+              "detail": "トロイア後のオデュッセウスの帰還。旅であると同時に試練。"
             },
             {
-              "date": "24 chants",
-              "title": "Forme écrite",
-              "detail": "Le poème tel qu'il nous est parvenu, structuré en livres."
+              "date": "24巻",
+              "title": "書かれた形",
+              "detail": "現代まで伝わっている詩の形で、巻ごとに構成されています。"
             },
             {
-              "date": "1922",
-              "title": "Ulysse de Joyce",
-              "detail": "L'épopée devient une journée moderne à Dublin."
+              "date": "1922年",
+              "title": "ジョイスの『ユリシーズ』",
+              "detail": "叙事詩が、ダブリンの現代の一日になります。"
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "L'**Odyssée** invente le héros qui rentre chez lui par la ruse et l'endurance. Le but du voyage n'est pas l'immortalité promise par Calypso, mais une vie humaine, fragile et choisie, retrouvée à Ithaque."
+          "text": "**『オデュッセイア』**は、策略と忍耐によって故郷へ帰る英雄を生み出しました。旅の目的は、カリュプソが約束する不死ではなく、イタケで取り戻す、壊れやすく自分で選んだ人間の人生です。"
         }
       ]
     }

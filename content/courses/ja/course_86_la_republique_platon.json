@@ -1,104 +1,104 @@
 {
   "id": "course_86_la_republique_platon",
-  "title": "« La République » de Platon : qui doit gouverner ?",
-  "subtitle": "IVe siècle av. J.-C.",
+  "title": "プラトンの『国家』：国はだれが治めるべきか",
+  "subtitle": "紀元前4世紀",
   "subject": "litterature",
-  "subcategory": "Grecs & Philosophes antiques",
-  "description": "Pour définir la justice, Platon imagine une cité idéale et le mythe de la caverne. La République n'est pas un programme électoral : c'est une enquête sur l'âme et le pouvoir.",
+  "subcategory": "ギリシア人と古代の哲学者",
+  "description": "正義とは何かを定義するため、プラトンは理想の都市を思い描き、洞窟の神話を語ります。『国家』は選挙公約のようなものではなく、魂と権力をめぐる探究なのです。",
   "hero": {
     "image": "la_republique_platon",
     "ratio": "16:9",
-    "hook": "Et si la justice se comprenait mieux en dessinant une cité entière ?"
+    "hook": "都市まるごとを描いてみれば、正義がもっとよく分かるのでは？"
   },
   "sections": [
     {
       "id": "course_86_la_republique_platon_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Vers **380 avant J.-C.**, **Platon**, philosophe grec et fondateur de l'Académie à Athènes, écrit la **République**. En grec, on dit *Politeia*. Le dialogue part d'une question simple : qu'est-ce que la **justice** ? Pour y répondre, **Socrate**, personnage central des dialogues de Platon, propose un détour étonnant : construire en paroles une cité idéale, la [[カリポリス]], la « belle cité »."
+          "text": "**紀元前380年**ごろ、ギリシアの哲学者でアテナイのアカデメイアの創設者である**プラトン**が、『**国家**』を書きました。ギリシア語では*ポリテイア*といいます。対話は、単純な問いから始まります。**正義**とは何か。答えるために、プラトンの対話篇の中心人物**ソクラテス**は、意外な回り道を提案します。言葉の上で理想の都市、「美しい都市」を意味する[[カリポリス]]をつくることです。"
         },
         {
           "type": "paragraph",
-          "text": "Ce n'est pas un roman d'anticipation. C'est une **analogie** : comprendre la cité pour comprendre l'âme, et l'âme pour juger le pouvoir. [[アルフレッド・ノース・ホワイトヘッド]], philosophe et mathématicien britannique, dira plus tard que toute la philosophie occidentale n'est qu'une série de notes en bas de page à Platon. Ce livre explique pourquoi."
+          "text": "これは未来を描く小説ではありません。**類比**なのです。都市を理解して魂を理解し、魂を理解して権力を判断する。イギリスの哲学者で数学者の[[アルフレッド・ノース・ホワイトヘッド]]は、のちに、西洋哲学のすべてはプラトンへの一連の脚注にすぎないと言いました。この本は、その理由を教えてくれます。"
         }
       ]
     },
     {
       "id": "course_86_la_republique_platon_p1",
-      "title": "L'âme et la cité, même plan",
+      "title": "魂と都市は同じ設計図でできている",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Platon découpe l'âme en trois parties. Le désir, l'[[エピテュミア]], est lié aux appétits matériels. Le courage, le [[テューモス]], est le siège de la colère noble et de la force de caractère. La raison, le [[ロゴス]], est capable d'accéder à la vérité. La cité idéale a trois classes : producteurs, **gardiens** soldats, dirigeants. La justice, c'est que chaque partie fasse son travail sans empiéter sur les autres."
+          "text": "プラトンは魂を三つの部分に分けます。欲望の部分である[[エピテュミア]]は、物質的な欲求と結びついています。勇気の部分である[[テューモス]]は、気高い怒りと気骨の座です。理性の部分である[[ロゴス]]は、真理に近づくことができます。理想の都市には三つの階級があります。生産者、**守護者**である戦士、そして統治者です。正義とは、各部分が他の部分に踏み込まず、自分の仕事をはたすことです。"
         },
         {
           "type": "image",
           "asset": "plato_academy_athens_painting",
           "ratio": "4:3",
-          "caption": "L'Académie de Platon à Athènes : penser la cité pour éduquer l'âme."
+          "caption": "プラトンのアカデメイア（アテナイ）：魂を育てるために都市を考える。"
         },
         {
           "type": "paragraph",
-          "text": "L'idée choque encore : elle lie morale privée et organisation politique. Pour Platon, une cité injuste fabrique des âmes tordues. Et une âme désordonnée produit une cité corrompue. La justice n'est pas seulement un décret. C'est un équilibre intérieur et collectif."
+          "text": "この考えは今でも衝撃的です。個人の道徳と政治の仕組みを結びつけているからです。プラトンによれば、不正な都市はゆがんだ魂を生み、乱れた魂は腐敗した都市を生みます。正義は、単なる法令ではありません。内面と共同体の両方における均衡なのです。"
         }
       ]
     },
     {
       "id": "course_86_la_republique_platon_p2",
-      "title": "Qui doit gouverner ?",
+      "title": "だれが統治すべきか",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Les dirigeants idéaux sont les [[哲人王]], ceux qui aiment le vrai plus que le pouvoir. Ils vivent sans propriété privée excessive. Ils sont formés longtemps aux mathématiques et à la **dialectique**, l'art du dialogue qui cherche la vérité. Platon méfie la démocratie athénienne, qui a condamné Socrate à boire la ciguë en 399."
+          "text": "理想の統治者は[[哲人王]]、権力よりも真理を愛する人々です。彼らは、行き過ぎた私有財産を持たずに暮らします。長い年月をかけて数学と**問答法**、つまり真理を求める対話の技術を学びます。プラトンは、紀元前399年にソクラテスに毒ニンジンの杯をあおらせたアテナイの民主制に、不信を抱いていました。"
         },
         {
           "type": "funFact",
-          "text": "[[カール・ポパー]], philosophe du XXe siècle, accusera la République d'annoncer les totalitarismes. D'autres y voient une utopie éducative, pas un manuel de police. Le débat reste ouvert depuis vingt-cinq siècles."
+          "text": "二十世紀の哲学者[[カール・ポパー]]は、『国家』は全体主義の先駆けだと非難しました。一方で、これは教育のためのユートピアであって、警察国家の手引きではないと見る人もいます。この論争は、二十五世紀にわたって続いています。"
         },
         {
           "type": "paragraph",
-          "text": "Derrière le schéma politique, il y a [[プラトンのイデア論]]. Le monde sensible, celui qu'on voit et touche, n'est qu'ombre. Gouverner bien, c'est voir le **Bien**, l'Idée suprême, pas seulement gérer des opinions passagères."
+          "text": "政治の枠組みの背後には、[[プラトンのイデア論]]があります。感覚の世界、つまり見たり触れたりできる世界は、影にすぎません。よく統治するとは、最高のイデアである**善**を見ることであり、移ろいやすい意見をただ管理することではありません。"
         }
       ]
     },
     {
       "id": "course_86_la_republique_platon_p3",
-      "title": "La caverne : sortir de l'illusion",
+      "title": "洞窟の神話：幻想から抜け出す道",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le **mythe de la caverne** est le passage le plus célèbre du livre. Des prisonniers enchaînés ne voient que des ombres sur un mur, projetées par un feu derrière eux. L'un est libéré, sort au soleil, revient prévenir les autres. On le traite de fou. L'éducation, dit Platon, n'est pas remplir un vase. C'est tourner le regard vers la lumière."
+          "text": "**洞窟の神話**は、この本でもっとも有名な一節です。鎖につながれた囚人たちは、背後の火に照らされて壁に映る影しか見えません。一人が解放され、太陽の下に出て、ほかの人々に知らせに戻ります。人々は彼を愚か者扱いします。教育とは、容器に水を満たすことではない、とプラトンは言います。まなざしを光のほうへ向けさせることです。"
         },
         {
           "type": "image",
           "asset": "plato_portrait_bust_sculpture",
           "ratio": "1:1",
-          "caption": "Platon : penser, c'est accepter de quitter les ombres familières."
+          "caption": "プラトン：考えるとは、見慣れた影を離れる覚悟を持つこと。"
         },
         {
           "type": "paragraph",
-          "text": "Cette image a traversé les siècles : médias, idéologies, confort intellectuel. Sortir de la caverne coûte. Rester dedans rassure. Platon suggère que le philosophe doit revenir éclairer les autres, même s'il est moqué. La connaissance n'est pas un luxe privé. C'est une responsabilité."
+          "text": "このイメージは、メディア、イデオロギー、知的な心地よさと、時代を超えて受け継がれてきました。洞窟を出るには代償がいります。中にとどまれば安心です。プラトンは、哲学者は嘲られても戻ってほかの人々を照らすべきだと示唆します。知識は個人の贅沢ではありません。責任なのです。"
         }
       ]
     },
     {
       "id": "course_86_la_republique_platon_p4",
-      "title": "Des régimes qui pourrissent, une œuvre qui reste",
+      "title": "腐っていく政体と、残り続けるひとつの作品",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Platon décrit aussi le déclin des régimes : aristocratie, timocratie, oligarchie, démocratie, tyrannie. Chaque régime naît des vices du précédent. La leçon n'est pas le fatalisme. C'est la vigilance : les institutions suivent le caractère des citoyens."
+          "text": "プラトンは、政体の衰退も描きます。貴族制、名誉支配制、寡頭制、民主制、僭主制です。それぞれの政体は、前の政体の悪徳から生まれます。ここから得る教訓は、あきらめではありません。警戒です。制度は市民の性格に従うからです。"
         },
         {
           "type": "takeaway",
-          "text": "La **République** lie justice personnelle et justice politique. Par la cité idéale et la caverne, Platon demande : que vaut un pouvoir qui ne cherche pas le vrai ?"
+          "text": "**『国家』**は、個人の正義と政治の正義を結びつけます。理想の都市と洞窟を通して、プラトンは問いかけます。真理を求めない権力に、どれほどの価値があるのでしょうか。"
         }
       ]
     }

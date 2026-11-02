@@ -1,122 +1,122 @@
 {
   "id": "course_170_meduse_et_persee",
-  "title": "Comment Persée a-t-il vaincu le regard de Méduse ?",
-  "subtitle": "Le regard qui pétrifie",
+  "title": "ペルセウスはメドゥーサの視線をどう破ったのか？",
+  "subtitle": "石に変える視線",
   "subject": "mythologie",
-  "subcategory": "Grèce : les dieux",
-  "description": "Méduse pétrifie d'un regard. Persée la vainc grâce à un bouclier miroir, puis sauve Andromède. La tête de la Gorgone devient un symbole protecteur.",
+  "subcategory": "ギリシア：神々",
+  "description": "メドゥーサは、ひとにらみで相手を石に変えます。ペルセウスは鏡のような盾で彼女を倒し、続いてアンドロメダを救います。ゴルゴンの首は、守りの象徴になりました。",
   "hero": {
     "image": "meduse_et_persee",
     "ratio": "16:9",
-    "hook": "Un regard qui change la vie en pierre. Un héros qui n'ose regarder que le reflet."
+    "hook": "生きものを石に変えてしまう視線と、映った姿しかおそるおそる見つめない英雄。"
   },
   "sections": [
     {
       "id": "course_170_meduse_et_persee_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le mythe de **Persée** et **Méduse** est l'une des grandes aventures grecques. Ce n'est pas seulement un combat contre un monstre. C'est aussi l'histoire d'une beauté transformée en horreur, et d'un héros qui gagne par la ruse."
+          "text": "**ペルセウス**と**メドゥーサ**の神話は、ギリシアを代表する冒険譚の一つです。怪物との戦いというだけではありません。美しさが恐ろしさに変えられた物語であり、英雄が知恵で勝つ物語でもあります。"
         },
         {
           "type": "paragraph",
-          "text": "Méduse, une [[ゴルゴン]], pétrifie quiconque croise son regard. Persée, pour survivre, accepte de ne voir le danger qu'à travers un miroir."
+          "text": "メドゥーサは[[ゴルゴン]]の一人で、その視線に出会った者はだれでも石になります。ペルセウスは生き延びるため、危険を鏡越しにしか見ないことにします。"
         }
       ]
     },
     {
       "id": "course_170_meduse_et_persee_p1",
-      "title": "De prêtresse à monstre",
+      "title": "巫女から怪物へ",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Selon les [[『変身物語』]] d'Ovide, Méduse n'est d'abord pas un monstre. C'est une jeune femme à la chevelure éclatante, prêtresse dans le temple d'**Athéna**, déesse de la sagesse. Sa beauté attire **Poséidon**, dieu des mers, qui la viole dans le sanctuaire."
+          "text": "オウィディウスの[[『変身物語』]]によれば、メドゥーサは初めから怪物だったわけではありません。輝く髪をもつ若い女性で、知恵の女神**アテナ**の神殿に仕える巫女でした。その美しさに海神**ポセイドン**が引かれ、神殿の聖域で彼女を犯します。"
         },
         {
           "type": "paragraph",
-          "text": "Dans une logique tragique antique, Athéna punit la victime. Les cheveux de Méduse deviennent des serpents. Son regard **pétrifie**. Bannies aux confins du monde avec ses sœurs Sthéno et Euryale, elle vit dans une caverne entourée de statues : les malheureux qui l'ont vue."
+          "text": "古代悲劇のような理不尽な筋立てで、アテナは被害者のほうを罰します。メドゥーサの髪は蛇に変わり、その視線は**石に変える**力をもつようになります。姉妹のステンノ、エウリュアレとともに世界の果てへ追放され、洞窟で暮らします。まわりには、彼女を見てしまった不運な人々の石像が並んでいます。"
         },
         {
           "type": "image",
           "asset": "medusa_gorgon_snakes_hair_caravaggio_painting",
           "ratio": "4:3",
-          "caption": "Méduse, Gorgone au regard mortel."
+          "caption": "死をもたらす視線のゴルゴン、メドゥーサ"
         },
         {
           "type": "funFact",
-          "text": "Le sang du côté gauche de Méduse était un poison mortel. Celui du côté droit pouvait ressusciter les morts : un secret qu'Athéna confia plus tard à **Asclépios**, dieu de la médecine."
+          "text": "メドゥーサの体の左側の血は猛毒でした。右側の血は死者をよみがえらせることができました。アテナはのちにこの秘密を、医術の神**アスクレピオス**に授けます。"
         }
       ]
     },
     {
       "id": "course_170_meduse_et_persee_p2",
-      "title": "Persée s'arme contre l'impossible",
+      "title": "ペルセウス、不可能な挑戦に備える",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le roi **Polydectès** veut éloigner Persée pour séduire sa mère **Danaé**. Il lui impose un défi suicidaire : rapporter la tête de Méduse. Persée est fils de **Zeus**. Les dieux l'aident."
+          "text": "**ポリュデクテス**王は、**ダナエ**に言い寄るため、その息子ペルセウスを遠ざけようとします。そこで、メドゥーサの首を持ち帰るという、死にに行くような課題を課しました。ペルセウスは**ゼウス**の子です。神々が力を貸します。"
         },
         {
           "type": "paragraph",
-          "text": "**Hermès** lui donne des sandales ailées et une [[harpe]], épée courbe ultra tranchante. **Hadès** lui prête le [[キュネエ（隠れ兜）]], casque d'invisibilité. Athéna offre le conseil décisif : son bouclier de bronze poli, à utiliser comme **miroir**."
+          "text": "**ヘルメス**は翼のあるサンダルと、よく切れる湾曲した剣[[ハルペー]]を授けます。**ハデス**は姿を消せる兜[[キュネエ（隠れ兜）]]を貸します。アテナは決め手となる助言として、磨いた青銅の盾を**鏡**として使うよう教えます。"
         },
         {
           "type": "image",
           "asset": "perseus_mirror_shield_medusa_painting",
           "ratio": "4:3",
-          "caption": "Persée approche Méduse en ne regardant que son reflet."
+          "caption": "ペルセウスは、映った姿だけを見ながらメドゥーサに近づく"
         },
         {
           "type": "paragraph",
-          "text": "Persée surprend Méduse endormie. Guidé par le reflet, il tranche sa tête. De l'encolure jaillissent [[メドゥーサの血から生まれたペガソス]] et le géant [[クリュサオル]]. Méduse était encore enceinte de Poséidon."
+          "text": "ペルセウスは眠っているメドゥーサに忍び寄ります。映った姿を頼りに、その首を切り落とすと、首の切り口からは[[メドゥーサの血から生まれたペガソス]]と巨人[[クリュサオル]]が飛び出します。メドゥーサはまだポセイドンの子を身ごもっていたのです。"
         }
       ]
     },
     {
       "id": "course_170_meduse_et_persee_p3",
-      "title": "Andromède et le retour",
+      "title": "アンドロメダと帰路",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La tête garde son pouvoir. Persée la range dans la [[キビシス]], une besace magique. En survolant l'Éthiopie, il voit la princesse **Andromède** enchaînée à un rocher. Elle est offerte à **Cétos**, monstre marin envoyé par Poséidon pour punir l'orgueil de sa mère Cassiopée."
+          "text": "切り落とされた首も、力を保ったままです。ペルセウスはそれを魔法の袋[[キビシス]]にしまいます。エチオピアの上空を飛んでいると、王女**アンドロメダ**が岩に鎖でつながれているのが見えます。ポセイドンが送った海の怪物**ケートス**への生けにえにされたのです。母カシオペイアの高慢を罰するためでした。"
         },
         {
           "type": "image",
           "asset": "perseus_rescue_andromeda_sea_monster_painting",
           "ratio": "4:3",
-          "caption": "Persée délivre Andromède grâce à la tête de Méduse."
+          "caption": "ペルセウスは、メドゥーサの首の力でアンドロメダを救う"
         },
         {
           "type": "funFact",
-          "text": "Certaines légendes disent que Persée a créé le corail rouge en posant la tête de Méduse sur des algues : le sang aurait durci les végétaux."
+          "text": "伝説によっては、ペルセウスがメドゥーサの首を海藻の上に置いたために赤いサンゴが生まれたとされます。血が植物を固くしたというのです。"
         },
         {
           "type": "paragraph",
-          "text": "Persée pétrifie le monstre, épouse Andromède, puis rentre à Sériphos. Face à Polydectès et sa cour, il sort la tête. Ses ennemis deviennent statues. La tyrannie s'arrête."
+          "text": "ペルセウスは怪物を石に変え、アンドロメダと結婚して、セリポス島へ戻ります。ポリュデクテスとその廷臣たちの前で、首を取り出します。敵はみな石像になり、暴政は終わります。"
         }
       ]
     },
     {
       "id": "course_170_meduse_et_persee_p4",
-      "title": "Le Gorgoneion, visage protecteur",
+      "title": "ゴルゴネイオン、守護のしるしとなる顔",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Persée remet la tête à Athéna. Elle la fixe sur son **égide**, son bouclier divin. Méduse passe du monstre à abattre à une puissance protectrice. Cette effigie, le [[ゴルゴネイオン]], orne temples, monnaies et boucliers grecs."
+          "text": "ペルセウスは首をアテナに渡します。アテナはそれを神の盾、**アイギス**に取りつけます。こうしてメドゥーサは、退治すべき怪物から、守護の力をもつ存在へと変わります。この像が[[ゴルゴネイオン]]で、ギリシアの神殿や硬貨、盾を飾りました。"
         },
         {
           "type": "paragraph",
-          "text": "Sa fonction est [[アポトロパイック（魔除けの）]] : détourner le mal par l'horreur même du visage. Au fil des siècles, Méduse devient aussi une figure tragique, puis une icône moderne : traumatisme, pouvoir, fascination. Même la maison Versace a choisi sa tête pour « pétrifier » le regard."
+          "text": "その役目は[[アポトロパイック（魔除けの）]]、つまり顔の恐ろしさそのものによって災いを遠ざけることです。長い年月のうちに、メドゥーサは悲劇的な存在ともみなされ、やがて現代のアイコンにもなりました。トラウマ、力、魅惑の象徴です。ヴェルサーチでさえ、見る人を「石に変える」ためにその顔をブランドの印に選びました。"
         },
         {
           "type": "takeaway",
-          "text": "**Persée** vainc **Méduse** grâce au reflet d'un bouclier. La tête, remise à **Athéna**, devient le **Gorgoneion**, symbole protecteur de la Grèce antique."
+          "text": "**ペルセウス**は、盾に映った姿を頼りに**メドゥーサ**を倒します。その首は**アテナ**に渡され、古代ギリシアの守りの象徴**ゴルゴネイオン**になります。"
         }
       ]
     }

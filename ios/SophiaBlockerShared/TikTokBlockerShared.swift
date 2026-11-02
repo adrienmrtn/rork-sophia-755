@@ -461,6 +461,36 @@ enum TikTokBlockerShared {
                 notificationTitle: "Enne kursus, siis kerimine",
                 notificationBody: "Puuduta siin: sinu päeva kursus avab TikToki."
             )
+        case "lt":
+            return ShieldCopy(
+                title: "Pasimokyk prieš skrolindamas",
+                subtitle: "Baik šiandienos kursą Sophia programoje, ir TikTok bus atrakintas iki rytojaus.",
+                pendingSubtitle: "Supratau! Atidaryk Sophia dabar: tavo kursas laukia.",
+                primaryButton: "Atidaryti Sophia",
+                secondaryButton: "Uždaryti",
+                notificationTitle: "Pirmiausia kursas, paskui skrolinimas",
+                notificationBody: "Paliesk čia: šiandienos kursas atrakina TikTok."
+            )
+        case "lv":
+            return ShieldCopy(
+                title: "Papildini zināšanas, pirms ritini",
+                subtitle: "Pabeidz šodienas kursu Sophia, un TikTok būs pieejams līdz rītdienai.",
+                pendingSubtitle: "Sapratu! Atver Sophia tūlīt: tavs kurss gaida.",
+                primaryButton: "Atvērt Sophia",
+                secondaryButton: "Aizvērt",
+                notificationTitle: "Vispirms kurss, tad ritināšana",
+                notificationBody: "Pieskaries šeit: šodienas kurss atbloķē TikTok."
+            )
+        case "ja":
+            return ShieldCopy(
+                title: "スクロールする前に教養を",
+                subtitle: "Sophiaで今日のコースを終えると、明日までTikTokが使えるようになります。",
+                pendingSubtitle: "了解です！今すぐSophiaを開いてください。コースが待っています。",
+                primaryButton: "Sophiaを開く",
+                secondaryButton: "閉じる",
+                notificationTitle: "まずコース、それからスクロール",
+                notificationBody: "ここをタップ：今日のコースでTikTokのブロックが解除されます。"
+            )
         default:
             return ShieldCopy(
                 title: "Learn something before you scroll",

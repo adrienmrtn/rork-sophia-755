@@ -1,133 +1,133 @@
 {
   "id": "course_38_le_11_septembre_2001",
-  "title": "Qu'est-ce que le 11 septembre 2001 a changé dans le monde ?",
+  "title": "Ką pasaulyje pakeitė 2001 m. rugsėjo 11-oji?",
   "subtitle": "2001",
   "subject": "histoire",
-  "subcategory": "Guerre froide & monde contemporain",
-  "description": "Le **11 septembre 2001**, dix-neuf terroristes d'Al-Qaïda détournent quatre avions. L'attentat le plus meurtrier de l'histoire américaine ouvre l'ère de la guerre contre le terrorisme.",
+  "subcategory": "Šaltasis karas ir dabartinis pasaulis",
+  "description": "**2001 m. rugsėjo 11 d.** devyniolika „Al Kaidos“ teroristų užgrobia keturis lėktuvus. Pražūtingiausias JAV istorijoje išpuolis pradeda karo prieš terorizmą erą.",
   "hero": {
     "image": "le_11_septembre_2001",
     "ratio": "16:9",
-    "hook": "Un matin de septembre qui referme l'après-Guerre froide et ouvre un siècle de guerres."
+    "hook": "Rugsėjo rytas, kuris užvėrė pošaltojo karo laikotarpį ir atvėrė karų amžių."
   },
   "sections": [
     {
       "id": "course_38_le_11_septembre_2001_intro",
-      "title": "Introduction",
+      "title": "Įvadas",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le mardi **11 septembre 2001**, dix-neuf membres d'**[[Al Kaida]]**, organisation terroriste fondée par **Oussama Ben Laden**, détournent quatre avions. Deux frappent le **World Trade Center** à New York, un troisième le **Pentagone**, siège de la défense américaine. Le quatrième s'écrase en Pennsylvanie après la révolte des passagers."
+          "text": "Antradienį, **2001 m. rugsėjo 11 d.**, keturis lėktuvus užgrobia devyniolika teroristų. Juos siuntė **[[Al Kaida]]**, teroristinė organizacija, kurią įkūrė **Osama bin Ladenas**. Du lėktuvai rėžiasi į **Pasaulio prekybos centrą** Niujorke, trečiasis į **Pentagoną**, JAV gynybos būstinę. Ketvirtasis sudūžta Pensilvanijoje po keleivių sukilimo."
         },
         {
           "type": "paragraph",
-          "text": "Bilan : **2 977** morts. Au-delà du drame, l'attentat clôt l'espoir d'un ordre mondial apaisé et déclenche une série de conflits qui façonnent encore le XXIe siècle."
+          "text": "Iš viso žuvo **2977** žmonės. Be paties tragedijos masto, išpuolis palaidoja viltį dėl taikios pasaulio tvarkos ir paleidžia konfliktų virtinę, kuri tebeformuoja XXI a."
         }
       ]
     },
     {
       "id": "course_38_le_11_septembre_2001_p1",
-      "title": "D'où vient Al-Qaïda ?",
+      "title": "Iš kur atsirado Al Kaida?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Oussama Ben Laden**, milliardaire saoudien devenu chef djihadiste, fonde **[[Al Kaida]]** à la fin des années **1980**, dans le sillage de la **[[sovietų karas Afganistane (1979-1989)]]**. Après le retrait soviétique, il dénonce la présence américaine en **[[Saudo Arabija]]** et décide de frapper l'Occident."
+          "text": "**Osama bin Ladenas**, milijardierius saudas, tapęs džihadistų vadu, **1980**-ųjų pabaigoje įkuria organizaciją, vadinamą **[[Al Kaida]]**. Jos šaknys: **[[sovietų karas Afganistane (1979-1989)]]**. Sovietams pasitraukus, jis pasmerkia amerikiečių buvimą šalyje, vadinamoje **[[Saudo Arabija]]**, ir nusprendžia smogti Vakarams."
         },
         {
           "type": "image",
           "asset": "osama_bin_laden_portrait",
           "ratio": "1:1",
-          "caption": "Oussama Ben Laden, fondateur d'Al-Qaïda."
+          "caption": "Osama bin Ladenas, Al Kaidos įkūrėjas."
         },
         {
           "type": "paragraph",
-          "text": "Les signes s'accumulent : attentat au World Trade Center en **1993**, ambassades d'Afrique de l'Est en **1998**, destroyer USS Cole en **2000**. Le cloisonnement entre la CIA et le FBI, services de renseignement américains, empêche pourtant de relier les fils à temps."
+          "text": "Ženklų daugėja: išpuolis prieš Pasaulio prekybos centrą (**1993**), Rytų Afrikos ambasadų atakos (**1998**), minininkas USS Cole (**2000**). Tačiau pertvaros tarp CŽV ir FTB, JAV žvalgybos tarnybų, neleidžia laiku sujungti gijų."
         },
         {
           "type": "funFact",
-          "text": "Les 19 pirates de l'air ont dépensé environ **400 000** dollars pour une attaque dont le coût économique global dépassera les **2 000 milliards**."
+          "text": "19 lėktuvų grobikų išleido apie **400 000** dolerių išpuoliui, kurio bendra ekonominė žala viršys **2000 milijardų**."
         }
       ]
     },
     {
       "id": "course_38_le_11_septembre_2001_p2",
-      "title": "La chronologie du 11 septembre",
+      "title": "Rugsėjo 11-osios chronologija",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "À **8 h 46**, le vol American 11 percute la Tour Nord. À **9 h 03**, United 175 frappe la Tour Sud en direct à la télévision. À **9 h 37**, American 77 touche le Pentagone. À **10 h 03**, United 93 s'écrase en Pennsylvanie."
+          "text": "**8:46** American 11 reisas rėžiasi į Šiaurės bokštą. **9:03** United 175 tiesioginėje televizijos transliacijoje smogia Pietų bokštui. **9:37** American 77 trenkiasi į Pentagoną. **10:03** United 93 sudūžta Pensilvanijoje."
         },
         {
           "type": "image",
           "asset": "world_trade_center_twin_towers_september_11_2001",
           "ratio": "16:9",
-          "caption": "Les Twin Towers du World Trade Center, cibles centrales des attentats."
+          "caption": "Pasaulio prekybos centro dvyniai bokštai, pagrindiniai išpuolių taikiniai."
         },
         {
           "type": "paragraph",
-          "text": "Les tours s'effondrent : Sud à **9 h 59**, Nord à **10 h 28**. L'espace aérien américain est fermé pour la première fois. Ces images deviennent le traumatisme fondateur d'une génération."
+          "text": "Bokštai griūva: Pietų **9:59**, Šiaurės **10:28**. Pirmą kartą uždaroma JAV oro erdvė. Šie vaizdai tampa vienos kartos pamatine trauma."
         }
       ]
     },
     {
       "id": "course_38_le_11_septembre_2001_p3",
-      "title": "La guerre contre le terrorisme",
+      "title": "Karas prieš terorizmą",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En octobre **2001**, l'opération **[[Enduring Freedom]]** vise l'Afghanistan : détruire Al-Qaïda et renverser les **[[Talibai]]**, mouvement islamiste qui abritait Ben Laden. Kaboul tombe vite. La guerre dure vingt ans."
+          "text": "**2001** m. spalį prasideda operacija **[[Enduring Freedom]]**: Afganistane siekiama sunaikinti Al Kaidą ir nuversti jos globėjus. Tai islamistų judėjimas **[[Talibai]]**, slėpęs bin Ladeną. Kabulas greitai krenta. Karas trunka dvidešimt metų."
         },
         {
           "type": "paragraph",
-          "text": "En mars **2003**, sans mandat de l'ONU, les États-Unis lancent [[Irako karas (2003)]], accusant le dictateur **[[Saddamas Husseinas]]** d'armes de destruction massive. L'accusation est fausse ; le pays bascule dans le chaos. À **[[Gvantanamas]]**, base américaine à Cuba, des détenus restent hors du droit classique. Ben Laden est tué le **1er mai 2011** au Pakistan."
+          "text": "**2003** m. kovą, be JTO mandato, prasideda [[Irako karas (2003)]]. JAV skelbia, kad diktatorius **[[Saddamas Husseinas]]** turi masinio naikinimo ginklų. Kaltinimas pasirodo melagingas, o šalis grimzta į chaosą. **[[Gvantanamas]]**, JAV bazė Kuboje, laiko kalinius už įprastos teisės ribų. Bin Ladenas nužudomas **2011 m. gegužės 1 d.** Pakistane."
         }
       ]
     },
     {
       "id": "course_38_le_11_septembre_2001_p4",
-      "title": "Un monde sous surveillance",
+      "title": "Stebimas pasaulis",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Aux États-Unis, le **PATRIOT Act**, loi d'urgence, élargit massivement la surveillance. L'Europe suit. Les aéroports changent pour toujours. Ground Zero, site des tours effondrées, devient mémorial et symbole de résilience."
+          "text": "JAV skubos įstatymas **PATRIOT Act** smarkiai išplečia sekimą. Europa seka pavyzdžiu. Oro uostai pasikeičia visam laikui. Ground Zero, sugriuvusių bokštų vieta, tampa memorialu ir atsparumo simboliu."
         },
         {
           "type": "paragraph",
-          "text": "Les guerres qui suivent causent des centaines de milliers de morts et des millions de déplacés. Le terrorisme global, plus décentralisé, utilise les outils de la mondialisation pour la combattre."
+          "text": "Vėlesni karai nusineša šimtus tūkstančių gyvybių, milijonai žmonių netenka namų. Pasaulinis, labiau decentralizuotas terorizmas globalizacijos priemones panaudoja kovai su pačia globalizacija."
         },
         {
           "type": "timeline",
           "events": [
             {
-              "date": "11 sept. 2001",
-              "title": "Attentats",
-              "detail": "2 977 morts aux États-Unis."
+              "date": "2001 m. rugsėjo 11 d.",
+              "title": "Išpuoliai",
+              "detail": "2977 žuvusieji JAV."
             },
             {
-              "date": "oct. 2001",
-              "title": "Afghanistan",
-              "detail": "Opération Enduring Freedom."
+              "date": "2001 m. spalis",
+              "title": "Afganistanas",
+              "detail": "Operacija Enduring Freedom."
             },
             {
               "date": "2003",
-              "title": "Irak",
-              "detail": "Invasion sans mandat de l'ONU."
+              "title": "Irakas",
+              "detail": "Invazija be JTO mandato."
             },
             {
               "date": "2011",
-              "title": "Mort de Ben Laden",
-              "detail": "Raid américain au Pakistan."
+              "title": "Bin Ladeno žūtis",
+              "detail": "JAV reidas Pakistane."
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "Le **11 septembre 2001** transforme une menace en guerre globale : interventions en Afghanistan et en Irak, et un virage sécuritaire durable dans les démocraties."
+          "text": "Išpuolis **2001 m. rugsėjo 11 d.** grėsmę paverčia pasauliniu karu: intervencijos Afganistane ir Irake, ilgalaikis posūkis į saugumą demokratijose."
         }
       ]
     }

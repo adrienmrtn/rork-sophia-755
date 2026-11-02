@@ -1,104 +1,104 @@
 {
   "id": "course_43_pourquoi_la_glace_flotte_t_elle",
-  "title": "Pourquoi la glace flotte-t-elle ?",
-  "subtitle": "Eau & molécules",
+  "title": "Kodėl ledas plūduriuoja?",
+  "subtitle": "Vanduo ir molekulės",
   "subject": "sciences",
-  "subcategory": "Notre quotidien expliqué",
-  "description": "La glace flotte sur l'eau. Cela paraît normal, mais c'est en réalité très rare. Et heureusement pour la vie sur Terre.",
+  "subcategory": "Kasdienybė paaiškinta",
+  "description": "Ledas plūduriuoja ant vandens. Tai atrodo savaime suprantama, bet iš tikrųjų yra labai reta. Ir gerai, kad taip yra gyvybei Žemėje.",
   "hero": {
     "image": "pourquoi_la_glace_flotte",
     "ratio": "16:9",
-    "hook": "Si la glace coulait, les lacs gèleraient jusqu'au fond. Et la vie dans l'eau aurait du mal à survivre."
+    "hook": "Jei ledas skęstų, ežerai užšaltų iki dugno. O gyvybei vandenyje būtų sunku išgyventi."
   },
   "sections": [
     {
       "id": "course_43_pourquoi_la_glace_flotte_t_elle_intro",
-      "title": "Introduction",
+      "title": "Įvadas",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Un glaçon dans un verre, un iceberg dans l'océan : la glace **flotte**. On trouve ça banal. Pourtant, pour la plupart des substances, le solide est plus **dense**, donc plus lourd pour un même volume : il coule."
+          "text": "Ledo kubelis stiklinėje, ledkalnis vandenyne: ledas **plūduriuoja**. Tai atrodo savaime suprantama. Tačiau daugumos medžiagų kietoji būsena yra **tankesnė**, taigi to paties tūrio sunkesnė: ji skęsta."
         },
         {
           "type": "paragraph",
-          "text": "L'eau fait l'inverse. Cette exception vient de la forme de sa molécule. Et elle a sauvé bien des lacs, l'hiver."
+          "text": "Vanduo elgiasi priešingai. Šią išimtį lemia jo molekulės forma. Ir ji žiemą išgelbėjo daugybę ežerų."
         }
       ]
     },
     {
       "id": "course_43_pourquoi_la_glace_flotte_t_elle_p1",
-      "title": "Une molécule en forme de V",
+      "title": "V formos molekulė",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Une molécule d'eau, c'est un atome d'**oxygène** relié à deux atomes d'**hydrogène**. Elle n'est pas droite : elle forme un **V**. À cause de cette forme, les charges électriques ne sont pas réparties également : la molécule est **polaire**, avec un bout légèrement négatif et l'autre légèrement positif."
+          "text": "Vandens molekulę sudaro vienas **deguonies** atomas, sujungtas su dviem **vandenilio** atomais. Ji nėra tiesi: ji sudaro **V** raidę. Dėl šios formos elektros krūviai pasiskirsto netolygiai: molekulė yra **poliarinė**, vienas jos galas truputį neigiamas, o kitas truputį teigiamas."
         },
         {
           "type": "image",
           "asset": "water_molecule_model_crystal",
           "ratio": "4:3",
-          "caption": "La molécule d'eau : un V qui attire et repousse ses voisines."
+          "caption": "Vandens molekulė: V, kuris traukia ir stumia kaimynes."
         },
         {
           "type": "paragraph",
-          "text": "Résultat : les molécules d'eau s'attirent entre elles par des [[vandeniliniai ryšiai]], comme de petits aimants. Dans le liquide, elles restent proches mais bougent encore. Dans la glace, elles se figent autrement."
+          "text": "Dėl to vandens molekulės viena kitą traukia tarsi mažyčiai magnetai: jas jungia [[vandeniliniai ryšiai]]. Skystyje jos lieka arti viena kitos, bet vis dar juda. Lede jos įsitvirtina kitaip."
         }
       ]
     },
     {
       "id": "course_43_pourquoi_la_glace_flotte_t_elle_p2",
-      "title": "Quand l'eau se fige, elle prend de la place",
+      "title": "Kai vanduo sustingsta, jis užima daugiau vietos",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Vers **0 °C**, l'eau se solidifie. Pour former la glace, les molécules s'organisent en un réseau **hexagonal**, une sorte de nids d'abeilles à six côtés. Elles laissent alors plus de **vide** entre elles qu'à l'état liquide."
+          "text": "Apie **0 °C** vanduo kietėja. Kad susidarytų ledas, molekulės išsidėsto **šešiakampiu** tinkleliu, panašiu į šešiakampius bičių korius. Tada tarp jų lieka daugiau **tuštumos** nei skystoje būsenoje."
         },
         {
           "type": "funFact",
-          "text": "C'est pour ça qu'une bouteille d'eau pleine peut **éclater** au congélateur : la glace occupe plus de volume que l'eau liquide."
+          "text": "Todėl pilnas vandens butelis šaldiklyje gali **sprogti**: ledas užima daugiau tūrio nei skystas vanduo."
         },
         {
           "type": "paragraph",
-          "text": "Moins de matière dans le même volume, cela veut dire : **moins dense**. Or un objet moins dense que le liquide autour remonte. La glace flotte donc sur l'eau. C'est ce qu'on appelle l'**anomalie de dilatation de l'eau** : contrairement à presque toutes les substances, l'eau se dilate en refroidissant sous **4 °C**."
+          "text": "Mažiau medžiagos tame pačiame tūryje reiškia: **mažesnis tankis**. O už aplinkinį skystį mažiau tankus kūnas kyla į viršų. Todėl ledas plūduriuoja ant vandens. Tai vadinama **vandens plėtimosi anomalija**: skirtingai nei beveik visos medžiagos, vanduo atvėsdamas žemiau **4 °C** plečiasi."
         },
         {
           "type": "image",
           "asset": "iceberg_floating_arctic_ocean",
           "ratio": "16:9",
-          "caption": "Un iceberg flotte parce que la glace est moins dense que l'eau liquide."
+          "caption": "Ledkalnis plūduriuoja, nes ledas yra mažiau tankus nei skystas vanduo."
         }
       ]
     },
     {
       "id": "course_43_pourquoi_la_glace_flotte_t_elle_p3",
-      "title": "Pourquoi c'est vital pour les lacs",
+      "title": "Kodėl tai gyvybiškai svarbu ežerams",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Imagine si la glace coulait. Elle se formerait en surface, puis tomberait au fond. Le lac gèlerait couche après couche, jusqu'en bas. L'été ne suffirait souvent pas à tout faire fondre."
+          "text": "Įsivaizduok, kad ledas skęstų. Jis formuotųsi paviršiuje, o paskui kristų į dugną. Ežeras užšaltų sluoksnis po sluoksnio iki pat apačios. Vasaros dažnai nepakaktų viskam ištirpdyti."
         },
         {
           "type": "paragraph",
-          "text": "Heureusement, la glace reste en haut. Elle forme un **couvercle isolant**. Sous la surface gelée, l'eau liquide peut rester autour de **4 °C**, température où l'eau liquide est la plus dense, assez pour que poissons et plantes aquatiques survivent."
+          "text": "Laimei, ledas lieka viršuje. Jis sudaro **izoliuojantį dangtį**. Po užšalusiu paviršiumi skystas vanduo gali likti maždaug **4 °C** temperatūros, kai skystas vanduo yra tankiausias, ir to pakanka, kad žuvys ir vandens augalai išgyventų."
         }
       ]
     },
     {
       "id": "course_43_pourquoi_la_glace_flotte_t_elle_p4",
-      "title": "Et pour le climat aussi",
+      "title": "Ir klimatui",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La banquise blanche renvoie une grande partie de la lumière du Soleil vers l'espace grâce à son **albédo** élevé, son pouvoir réfléchissant. Si elle disparaît, l'océan sombre absorbe plus de chaleur. Cela accélère le réchauffement : un cercle vicieux."
+          "text": "Baltoji jūros ledo danga atspindi didelę Saulės šviesos dalį atgal į kosmosą dėl didelio **albedo**, atspindėjimo gebos. Jei ji išnyks, tamsus vandenynas sugers daugiau šilumos. Tai pagreitina atšilimą: užburtas ratas."
         },
         {
           "type": "takeaway",
-          "text": "La glace flotte parce que, en se solidifiant, l'eau forme un réseau plus « aéré » : elle devient moins dense que l'eau liquide. Cette exception protège la vie aquatique l'hiver."
+          "text": "Ledas plūduriuoja todėl, kad kietėdamas vanduo sudaro „purų“ tinklelį: jis tampa mažiau tankus nei skystas vanduo. Ši išimtis žiemą saugo vandens gyvybę."
         }
       ]
     }

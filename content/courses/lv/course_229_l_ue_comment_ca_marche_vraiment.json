@@ -1,128 +1,128 @@
 {
   "id": "course_229_l_ue_comment_ca_marche_vraiment",
-  "title": "Qui décide vraiment dans l'Union européenne ?",
-  "subtitle": "Dans les coulisses de Bruxelles",
+  "title": "Kas patiesībā lemj Eiropas Savienībā?",
+  "subtitle": "Briseles aizkulisēs",
   "subject": "comprendreLeMonde",
-  "subcategory": "Environnement & avenir",
-  "description": "L'Union européenne gouverne **450 millions de citoyens**, mais son fonctionnement passe souvent pour une boîte noire. Voici comment une loi européenne naît vraiment, et qui décide quoi.",
+  "subcategory": "Vide un nākotne",
+  "description": "Eiropas Savienība pārvalda **450 miljonus iedzīvotāju**, taču tās darbība bieži šķiet kā melnā kaste. Lūk, kā patiesībā rodas ES likums un kurš ko izlemj.",
   "hero": {
     "image": "l_ue_comment_ca_marche",
     "ratio": "16:9",
-    "hook": "27 pays, une seule règle commune : plonger dans la mécanique la plus complexe de la politique mondiale."
+    "hook": "27 valstis, viens kopīgs noteikums. Ieskats pasaules politikas sarežģītākajā mehānismā."
   },
   "sections": [
     {
       "id": "course_229_l_ue_comment_ca_marche_vraiment_intro",
-      "title": "Introduction",
+      "title": "Ievads",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L'**Union européenne** est l'expérience d'union entre pays la plus poussée de l'histoire moderne. Elle a transformé un continent ravagé par les guerres en un vaste espace économique et politique commun."
+          "text": "**Eiropas Savienība** ir vistālāk aizgājušais valstu apvienošanās eksperiments jaunāko laiku vēsturē. Tā karu izpostītu kontinentu ir pārvērtusi par plašu kopēju ekonomisko un politisko telpu."
         },
         {
           "type": "paragraph",
-          "text": "Pourtant, son fonctionnement reste souvent perçu comme une boîte noire par les 450 millions de citoyens qu'elle concerne. Comprendre comment une décision naît à Bruxelles permet de mieux suivre les grands sujets européens, de l'écologie à la sécurité numérique."
+          "text": "Tomēr 450 miljoni iedzīvotāju, ko tā skar, bieži uztver tās darbību kā melno kasti. Izprotot, kā lēmums top Briselē, var labāk sekot līdzi svarīgām Eiropas tēmām, sākot no ekoloģijas līdz digitālajai drošībai."
         }
       ]
     },
     {
       "id": "course_229_l_ue_comment_ca_marche_vraiment_p1",
-      "title": "Trois pouvoirs, aucun seul aux commandes",
+      "title": "Trīs varas, neviena nevada viena pati",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L'UE fonctionne sur un système de trois institutions qui doivent se mettre d'accord entre elles. Le **Conseil européen**, composé des chefs d'État des pays membres, fixe les grandes orientations politiques lors de sommets, sans écrire de lois lui-même."
+          "text": "ES darbojas pēc sistēmas, kurā trim iestādēm jāvienojas savā starpā. **Eiropadome**, ko veido dalībvalstu valsts vadītāji, sammitos nosaka galvenos politiskos virzienus, paši neradot likumus."
         },
         {
           "type": "image",
           "asset": "European_Council_leaders_Brussels_summit",
           "ratio": "16:9",
-          "caption": "Les chefs d'État se réunissent au Conseil européen pour fixer les grandes orientations."
+          "caption": "Valstu vadītāji tiekas Eiropadomē, lai noteiktu galvenos virzienus."
         },
         {
           "type": "paragraph",
-          "text": "Le pouvoir de faire les lois est partagé entre le [[ES Padome]], qui représente les 27 gouvernements, et le **Parlement européen**, seule institution élue directement par les citoyens. Ce dernier assure la légitimité démocratique du système."
+          "text": "Likumus pieņem divas iestādes: [[ES Padome]], kas pārstāv 27 valdības, un **Eiropas Parlaments**, vienīgā iestāde, ko tieši ievēl pilsoņi. Pēdējā nodrošina sistēmas demokrātisko leģitimitāti."
         },
         {
           "type": "paragraph",
-          "text": "Enfin, la [[Eiropas Komisija]] joue le rôle d'exécutif. Elle est la seule à pouvoir proposer une nouvelle loi, une exclusivité appelée [[Eiropas Komisija un likumdošanas iniciatīvas monopols]]. Elle veille aussi à ce que les pays respectent bien les règles communes."
+          "text": "Visbeidzot, izpildvaras lomu spēlē [[Eiropas Komisija]]. Tikai Komisija var ierosināt jaunu likumu, un tā ir ekskluzivitāte, kas pazīstama kā [[Eiropas Komisija un likumdošanas iniciatīvas monopols]]. Tā arī pārrauga, lai valstis ievērotu kopējos noteikumus."
         },
         {
           "type": "funFact",
-          "text": "Le Parlement européen siège officiellement dans deux villes : Bruxelles et Strasbourg. Chaque mois, ses 705 députés et tout leur personnel prennent un train spécial pour rejoindre l'Alsace, un rituel coûteux mais symbolique de la réconciliation franco-allemande."
+          "text": "Eiropas Parlaments oficiāli atrodas divās pilsētās: Briselē un Strasbūrā. Katru mēnesi tā 705 deputāti un viss personāls speciālā vilcienā brauc uz Elzasu, kas ir dārgs, taču simbolisks franču un vācu samierināšanās rituāls."
         }
       ]
     },
     {
       "id": "course_229_l_ue_comment_ca_marche_vraiment_p2",
-      "title": "Comment naît une loi européenne",
+      "title": "Kā rodas Eiropas likums",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Une loi européenne suit un chemin précis, appelé procédure législative ordinaire. Tout commence par une proposition de la Commission, souvent après une longue phase de consultation d'experts et de [[interešu grupas]]."
+          "text": "Eiropas likums iet pa noteiktu ceļu, ko sauc par parasto likumdošanas procedūru. Viss sākas ar Komisijas priekšlikumu, un pirms tā bieži notiek ilga konsultāciju fāze, kurā uzklausa ekspertus un [[interešu grupas]]."
         },
         {
           "type": "paragraph",
-          "text": "Le texte est ensuite examiné par le Parlement et le Conseil de l'UE. S'ils ne sont pas d'accord, une navette s'organise entre les deux institutions. En dernier recours, un [[samierināšanas komiteja]] est réuni pour trouver un compromis."
+          "text": "Tekstu pēc tam izskata Parlaments un ES Padome. Ja tās nevienojas, teksts vairākkārt ceļo turp un atpakaļ starp abām iestādēm. Kā pēdējais līdzeklis tiek sasaukta [[samierināšanas komiteja]], lai rastu kompromisu."
         },
         {
           "type": "paragraph",
-          "text": "Une fois adoptée, la loi peut prendre deux formes : le **règlement**, qui s'applique directement et de la même façon dans tous les pays, ou la **directive**, qui fixe un objectif mais laisse chaque pays choisir comment l'atteindre."
+          "text": "Pieņemtais likums var būt divējāds: **regula**, kas tieši un vienādi piemērojama visās valstīs, vai **direktīva**, kas nosaka mērķi, bet katrai valstij ļauj izvēlēties, kā to sasniegt."
         },
         {
           "type": "funFact",
-          "text": "La Cour de justice de l'UE a dû trancher des conflits parfois insolites, comme la fameuse « guerre de la banane », un litige sur les tarifs douaniers des fruits tropicaux qui a duré plus de vingt ans."
+          "text": "Eiropas Savienības Tiesai ir nācies izšķirt dažkārt neparastus strīdus, piemēram, slaveno „banānu karu“, strīdu par tropisko augļu muitas tarifiem, kas ilga vairāk nekā divdesmit gadus."
         }
       ]
     },
     {
       "id": "course_229_l_ue_comment_ca_marche_vraiment_p3",
-      "title": "Ce que l'UE peut faire, et ce qu'elle ne peut pas",
+      "title": "Ko ES var darīt un ko ne",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L'UE n'a pas un pouvoir sans limite : elle ne peut agir que dans les domaines que les pays lui ont confiés. Certaines compétences lui appartiennent en propre, comme la gestion de la monnaie unique ou les règles du commerce international."
+          "text": "ES vara nav neierobežota: tā drīkst rīkoties tikai tajās jomās, ko valstis tai uzticējušas. Dažas kompetences pieder tikai tai, piemēram, vienotās valūtas pārvaldība vai starptautiskās tirdzniecības noteikumi."
         },
         {
           "type": "image",
           "asset": "EU_flag_stars_Brussels_institutions",
           "ratio": "4:3",
-          "caption": "L'Union européenne partage ses pouvoirs entre plusieurs niveaux de décision."
+          "caption": "Eiropas Savienība sadala savu varu starp vairākiem lēmumu pieņemšanas līmeņiem."
         },
         {
           "type": "paragraph",
-          "text": "D'autres compétences sont partagées avec les pays, comme l'environnement ou les transports : c'est là que l'UE agit le plus souvent, mais seulement quand son action est plus efficace que celle de chaque pays isolé."
+          "text": "Citas kompetences ir dalītas ar valstīm, piemēram, vide vai transports. Tieši šajās jomās ES rīkojas visbiežāk, bet tikai tad, ja tās rīcība ir efektīvāka nekā katras atsevišķas valsts."
         },
         {
           "type": "paragraph",
-          "text": "Enfin, des sujets sensibles comme la fiscalité, la santé ou la défense restent presque entièrement gérés par chaque pays, et demandent souvent l'accord unanime de tous les membres via [[Vienprātība ES Padomē]]. C'est ce blocage qui explique pourquoi l'UE peut sanctionner facilement une grande entreprise, mais peine parfois à s'accorder sur une position commune face à une crise internationale."
+          "text": "Visbeidzot, jutīgas tēmas, piemēram, nodokļi, veselība vai aizsardzība, gandrīz pilnībā paliek katras valsts pārziņā, un tām bieži vajadzīga visu dalībvalstu vienošanās, ko nodrošina šāds mehānisms: [[Vienprātība ES Padomē]]. Šis bloķējums izskaidro, kāpēc ES var viegli sodīt lielu uzņēmumu, bet dažkārt grūti vienoties par kopēju nostāju starptautiskas krīzes priekšā."
         }
       ]
     },
     {
       "id": "course_229_l_ue_comment_ca_marche_vraiment_p4",
-      "title": "Un système imparfait, mais en évolution",
+      "title": "Nepilnīga, bet mainīga sistēma",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L'image d'une Europe dirigée par des « technocrates non élus » mérite d'être nuancée. Les responsables de la Commission sont nommés par des gouvernements élus démocratiquement, puis validés par le Parlement. L'administration européenne reste d'ailleurs modeste : environ 60 000 agents pour gérer un continent entier, moins que la seule ville de Paris."
+          "text": "Priekšstats par Eiropu, ko pārvalda „neievēlēti tehnokrāti“, ir jāprecizē. Komisijas vadītājus ieceļ demokrātiski ievēlētas valdības, un pēc tam tos apstiprina Parlaments. Eiropas administrācija turklāt ir samērā neliela: apmēram 60 000 ierēdņu, lai pārvaldītu veselu kontinentu, mazāk nekā Parīzes pilsētā vien."
         },
         {
           "type": "paragraph",
-          "text": "Le défi du sentiment de distance avec les citoyens reste réel. Pour y répondre, l'UE a créé l'Initiative citoyenne européenne, qui permet à un million de citoyens de demander à la Commission d'étudier une nouvelle loi."
+          "text": "Izaicinājums, ka pilsoņi jūt distanci, joprojām ir reāls. Lai to risinātu, ES izveidoja Eiropas pilsoņu iniciatīvu, kas ļauj miljonam pilsoņu lūgt Komisiju izskatīt jaunu likumu."
         },
         {
           "type": "paragraph",
-          "text": "La pandémie de 2020 a marqué un tournant : pour la première fois, les pays membres ont accepté d'emprunter ensemble sur les marchés financiers avec le plan Next Generation EU. Ce passage d'une union de marchés à une union plus solidaire montre une Europe qui continue d'évoluer."
+          "text": "2020. gada pandēmija kļuva par pagrieziena punktu: pirmo reizi dalībvalstis piekrita kopīgi aizņemties finanšu tirgos ar plānu Next Generation EU. Šī pāreja no tirgu savienības uz solidārāku savienību rāda, ka Eiropa turpina mainīties."
         },
         {
           "type": "takeaway",
-          "text": "L'Union européenne repose sur un partage du pouvoir entre 27 pays et trois institutions, aucune ne pouvant décider seule. Ce système complexe garantit la paix et la stabilité, mais reste souvent lent face aux crises rapides."
+          "text": "Eiropas Savienības pamatā ir varas dalīšana starp 27 valstīm un trim iestādēm, un neviena no tām nevar lemt viena pati. Šī sarežģītā sistēma garantē mieru un stabilitāti, taču bieži vien ir lēna, saskaroties ar straujām krīzēm."
         }
       ]
     }

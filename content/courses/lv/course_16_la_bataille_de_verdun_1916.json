@@ -1,138 +1,138 @@
 {
   "id": "course_16_la_bataille_de_verdun_1916",
-  "title": "Qu'est-ce qui fait de Verdun le symbole de la Grande Guerre ?",
+  "title": "Kas Verdenu padarīja par Lielā kara simbolu?",
   "subtitle": "1916",
   "subject": "histoire",
-  "subcategory": "Révolutions & conflits modernes",
-  "description": "Pendant **299 jours**, Français et Allemands s'entre-déchirent autour de Verdun. **700 000** pertes pour un gain territorial quasi nul : le symbole de l'horreur des tranchées.",
+  "subcategory": "Revolūcijas un mūsdienu konflikti",
+  "description": "**299 dienas** franči un vācieši plosa viens otru ap Verdenu. **700 000** zaudējumu, teritoriāli gandrīz nekā: ierakumu šausmu simbols.",
   "hero": {
     "image": "la_bataille_de_verdun_1916",
     "ratio": "16:9",
-    "hook": "299 jours pour quelques kilomètres de boue et 700 000 hommes hors de combat."
+    "hook": "299 dienas par dažiem dubļu kilometriem un 700 000 vīru ārpus ierindas."
   },
   "sections": [
     {
       "id": "course_16_la_bataille_de_verdun_1916_intro",
-      "title": "Introduction",
+      "title": "Ievads",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En **1916**, pendant **299 jours**, Français et Allemands s'affrontent sur quelques kilomètres carrés autour de **Verdun**, une place forte de l'est de la France. Ce n'est pas une percée brillante. C'est une bataille d'usure, avec environ **700 000** morts ou blessés."
+          "text": "**1916**. gadā franči un vācieši **299 dienas** cīnās par dažiem kvadrātkilometriem ap **Verdenu**, Francijas austrumu cietoksni. Tas nav spožs izrāviens. Tā ir izsīkuma kauja, kurā krīt vai tiek ievainoti aptuveni **700 000** cilvēku."
         },
         {
           "type": "paragraph",
-          "text": "Verdun devient le symbole de l'horreur des tranchées. Des décennies plus tard, il devient aussi celui de la réconciliation franco-allemande."
+          "text": "Verdena kļūst par ierakumu šausmu simbolu. Pēc desmitgadēm tā kļūst arī par Francijas un Vācijas samierināšanās simbolu."
         }
       ]
     },
     {
       "id": "course_16_la_bataille_de_verdun_1916_p1",
-      "title": "Le plan allemand : saigner la France",
+      "title": "Vācu plāns: noasiņot Franciju",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Depuis 1914, le front occidental est figé dans la [[Ierakumu karš]] : des lignes de fossés de la mer du Nord à la Suisse. Le général allemand **Erich von Falkenhayn** veut « saigner la France à blanc ». Il choisit Verdun, une place que Paris ne peut abandonner sans perdre la face. L'opération s'appelle [[Gericht]], « le tribunal »."
+          "text": "Kopš 1914. gada Rietumu frontē valda [[Ierakumu karš]]: ierakumu līnijas stiepjas no Ziemeļjūras līdz Šveicei. Vācu ģenerālis **Ērihs fon Falkenhains** grib „noasiņot Franciju līdz pēdējam pilienam“. Viņš izvēlas Verdenu, cietoksni, ko Parīze nevar atstāt, nezaudējot prestižu. Operācijas nosaukums ir [[Gericht]], „tiesa“."
         },
         {
           "type": "image",
           "asset": "battle_of_verdun_trenches_1916",
           "ratio": "4:3",
-          "caption": "Les tranchées de Verdun : un paysage dévoré par l'artillerie."
+          "caption": "Verdenas ierakumi: ainava, ko aprijusi artilērija."
         },
         {
           "type": "funFact",
-          "text": "Le bombardement d'ouverture du **21 février 1916** était si violent qu'on l'entendait jusque dans les Vosges, à plus de **150 km**."
+          "text": "Atklāšanas apšaude **1916. gada 21. februārī** bija tik spēcīga, ka to dzirdēja līdz pat Vogēziem, vairāk nekā **150 km** attālumā."
         },
         {
           "type": "paragraph",
-          "text": "Le **21 février**, **1 200 canons** pilonnent les lignes françaises. Le **25**, le **fort de Douaumont**, clé de la défense, tombe presque sans combat. Paris doit désormais tout miser sur Verdun : le piège de Falkenhayn fonctionne."
+          "text": "**21. februārī** Francijas pozīcijas apšauda **1200 lielgabalu**. **25**. februārī gandrīz bez cīņas krīt **Duomonas forts**, aizsardzības atslēga. Tagad Parīzei jāliek uz spēles viss Verdenas dēļ: Falkenhaina lamatas darbojas."
         }
       ]
     },
     {
       "id": "course_16_la_bataille_de_verdun_1916_p2",
-      "title": "Pétain, la Voie Sacrée et la rotation des troupes",
+      "title": "Petēns, Svētais ceļš un karaspēka rotācija",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le général **Philippe Pétain** organise la survie du secteur. La **Voie Sacrée** relie [[Barledika]], une ville à l'arrière, à Verdun : près de **6 000 camions** par jour, un véhicule toutes les **14 secondes**. En panne, on pousse le camion dans le fossé pour ne pas bloquer la route."
+          "text": "Ģenerālis **Filips Petēns** nodrošina sektora izdzīvošanu. Aizmugurē ir [[Barledika]], un no turienes uz Verdenu ved **Svētais ceļš**: gandrīz **6000 kravas auto** dienā, viena mašīna ik pēc **14 sekundēm**. Ja mašīna salūzt, to iegrūž grāvī, lai nebloķētu ceļu."
         },
         {
           "type": "image",
           "asset": "voie_sacree_verdun_trucks",
           "ratio": "4:3",
-          "caption": "La Voie Sacrée, artère vitale du ravitaillement français."
+          "caption": "Svētais ceļš, Francijas apgādes dzīvībai svarīgā artērija."
         },
         {
           "type": "paragraph",
-          "text": "Avec la [[Norija]], Pétain fait tourner les divisions rapidement : on reste peu de temps au front, puis on est relevé. Résultat : environ **70 %** de l'armée française combat à Verdun à un moment ou un autre. La bataille devient une expérience nationale."
+          "text": "Darbojas [[Norija]]: Petēns ātri rotē divīzijas, tāpēc frontē uzturas neilgi un tad tiek nomainīti. Rezultātā aptuveni **70%** Francijas armijas kādā brīdī ir cīnījusies pie Verdenas. Kauja kļūst par nacionālu pieredzi."
         }
       ]
     },
     {
       "id": "course_16_la_bataille_de_verdun_1916_p3",
-      "title": "L'enfer des canons, presque sans gain",
+      "title": "Lielgabalu elle un gandrīz nekāda ieguvuma",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L'été, la [[Sommas kauja (1916)]], une offensive franco-britannique plus au nord, soulage Verdun. Sous le général **Robert Nivelle**, les Français reprennent Douaumont puis le fort de Vaux. La bataille s'achève le **18 décembre 1916**. Les lignes n'ont presque pas bougé."
+          "text": "Vasarā sākas [[Sommas kauja (1916)]], franču un britu uzbrukums tālāk ziemeļos, un tā atslogo Verdenu. Ģenerāļa **Roberta Nivela** vadībā franči atgūst Duomonas un pēc tam Vo fortu. Kauja beidzas **1916. gada 18. decembrī**. Līnijas gandrīz nav pavirzījušās."
         },
         {
           "type": "funFact",
-          "text": "Fleury-devant-Douaumont fut pris et repris **16 fois** en deux mois, puis rayé de la carte. Il fait partie des « villages morts pour la France », encore administrés sans habitants."
+          "text": "Ciems Flerī pie Duomonas divos mēnešos tika ieņemts un atkal atņemts **16 reizes**, pēc tam izdzēsts no kartes. Tas ir viens no ciemiem, kas „miruši Francijas dēļ“ un kurus joprojām pārvalda, kaut gan tajos neviens nedzīvo."
         },
         {
           "type": "paragraph",
-          "text": "Environ **370 000** Français et **330 000** Allemands tombent ou sont mutilés. L'[[Lielā kara smagā artilērija]] tue plus que le corps à corps. Des [[Sarkanās zonas]] restent impropres à toute vie civile : trop de munitions non explosées, trop de sol empoisonné."
+          "text": "Apmēram **370 000** franču un **330 000** vāciešu krīt vai tiek sakropļoti. [[Lielā kara smagā artilērija]] nogalina vairāk nekā tuvcīņa. [[Sarkanās zonas]] joprojām nav derīgas civilai dzīvei: pārāk daudz nesprāgušas munīcijas, pārāk daudz saindētas zemes."
         }
       ]
     },
     {
       "id": "course_16_la_bataille_de_verdun_1916_p4",
-      "title": "De l'ossuaire à la poignée de main",
+      "title": "No kaulu glabātavas līdz rokasspiedienam",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L'**ossuaire de Douaumont** (1932) abrite les restes de **130 000** soldats français et allemands mêlés. Le **22 septembre 1984**, le président français **François Mitterrand** et le chancelier allemand **Helmut Kohl** se tiennent la main devant le monument. Verdun devient symbole de paix européenne."
+          "text": "**Duomonas kaulu glabātavā** (1932) kopā glabājas **130 000** franču un vācu karavīru mirstīgās atliekas. **1984. gada 22. septembrī** Francijas prezidents **Fransuā Miterāns** un Vācijas kanclers **Helmuts Kols** tur viens otru aiz rokas pie pieminekļa. Verdena kļūst par Eiropas miera simbolu."
         },
         {
           "type": "timeline",
           "events": [
             {
-              "date": "21 fév. 1916",
-              "title": "Ouverture de Gericht",
-              "detail": "Barrage d'artillerie sans précédent."
+              "date": "1916. g. 21. febr.",
+              "title": "Operācijas Gericht sākums",
+              "detail": "Vēl nebijusi artilērijas uguns."
             },
             {
-              "date": "25 fév. 1916",
-              "title": "Chute de Douaumont",
-              "detail": "Choc politique à Paris."
+              "date": "1916. g. 25. febr.",
+              "title": "Duomonas krišana",
+              "detail": "Politisks trieciens Parīzē."
             },
             {
-              "date": "été 1916",
-              "title": "Somme",
-              "detail": "Les Alliés soulagent le front de Verdun."
+              "date": "1916. gada vasara",
+              "title": "Somma",
+              "detail": "Sabiedrotie atslogo Verdenas fronti."
             },
             {
-              "date": "18 déc. 1916",
-              "title": "Fin de la bataille",
-              "detail": "Presque aucun gain territorial."
+              "date": "1916. g. 18. dec.",
+              "title": "Kaujas beigas",
+              "detail": "Gandrīz nekāda teritoriāla ieguvuma."
             },
             {
-              "date": "22 sept. 1984",
-              "title": "Mitterrand-Kohl",
-              "detail": "Geste de réconciliation franco-allemande."
+              "date": "1984. g. 22. sept.",
+              "title": "Miterāns un Kols",
+              "detail": "Francijas un Vācijas samierināšanās žests."
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "**Verdun** (**1916**) : **299** jours de guerre industrielle, environ **700 000** pertes pour un gain territorial nul, et plus tard le symbole de la réconciliation franco-allemande."
+          "text": "**Verdena** (**1916**): **299** dienas rūpnieciska kara, aptuveni **700 000** zaudējumu bez teritoriāliem ieguvumiem un vēlāk Francijas un Vācijas samierināšanās simbols."
         }
       ]
     }

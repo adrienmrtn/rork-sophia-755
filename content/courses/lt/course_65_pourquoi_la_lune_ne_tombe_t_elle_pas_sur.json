@@ -1,118 +1,118 @@
 {
   "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur",
-  "title": "Pourquoi la Lune ne tombe-t-elle pas sur Terre ?",
-  "subtitle": "Orbite & gravité",
+  "title": "Kodėl Mėnulis nenukrenta ant Žemės?",
+  "subtitle": "Orbita ir gravitacija",
   "subject": "sciences",
-  "subcategory": "La Terre et l'Univers",
-  "description": "La Lune tombe vers la Terre en permanence. Elle la rate simplement à chaque fois. C'est exactement ça, une orbite.",
+  "subcategory": "Žemė ir Visata",
+  "description": "Mėnulis nuolat krenta Žemės link. Jis tiesiog kaskart ją praleidžia. Būtent tai ir yra orbita.",
   "hero": {
     "image": "pourquoi_la_lune_ne_tombe_pas",
     "ratio": "16:9",
-    "hook": "La Lune tombe vers nous. Elle rate juste la Terre à chaque tour."
+    "hook": "Mėnulis krenta link mūsų. Jis tik kiekvieną ratą praleidžia Žemę."
   },
   "sections": [
     {
       "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur_intro",
-      "title": "Introduction",
+      "title": "Įvadas",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Si la gravité terrestre attire la Lune, pourquoi ne s'écrase-t-elle pas sur nous ? La réponse paraît bizarre : la Lune **tombe** bel et bien vers la Terre. Elle la rate seulement à chaque instant."
+          "text": "Jei Žemės gravitacija traukia Mėnulį, kodėl jis nenukrenta ant mūsų? Atsakymas atrodo keistas: Mėnulis iš tikrųjų **krenta** Žemės link. Jis ją tiesiog kiekvieną akimirką praleidžia."
         },
         {
           "type": "paragraph",
-          "text": "Cet équilibre entre chute et vitesse latérale, c'est une **orbite**, une trajectoire courbe autour d'un astre. Le physicien anglais **Isaac Newton** fut le premier à unifier la chute d'une pomme et le mouvement des astres avec la même idée."
+          "text": "Ši pusiausvyra tarp kritimo ir šoninio greičio yra **orbita**, lenkta trajektorija aplink dangaus kūną. Anglų fizikas **Isaacas Newtonas** pirmasis tą pačią idėją pritaikė ir krintančiam obuoliui, ir dangaus kūnų judėjimui."
         },
         {
           "type": "funFact",
-          "text": "Si vous pesiez **60 kg** sur Terre, vous n'en pèseriez qu'environ **10** sur la Lune : sa gravité est six fois plus faible."
+          "text": "Jei Žemėje sveri **60 kg**, Mėnulyje svertum tik apie **10**: jo gravitacija šešis kartus silpnesnė."
         }
       ]
     },
     {
       "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur_p1",
-      "title": "Le canon imaginaire de Newton",
+      "title": "Įsivaizduojama Newtono patranka",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Newton imagine un canon au sommet d'une montagne si haute qu'elle sortirait de l'atmosphère. On tire un boulet horizontalement. Avec peu de puissance, il retombe vite. Avec plus de force, il va plus loin."
+          "text": "Newtonas įsivaizduoja patranką tokio aukšto kalno viršūnėje, kad jis išlįstų iš atmosferos. Sviedinys iššaunamas horizontaliai. Su mažai jėgos jis greitai nukrenta. Su didesne jėga nuskrieja toliau."
         },
         {
           "type": "image",
           "asset": "newton_cannonball_orbit_thought_experiment",
           "ratio": "auto",
-          "caption": "L'expérience de pensée du boulet de canon de Newton : la clé pour comprendre l'orbite."
+          "caption": "Newtono minties eksperimentas su patrankos sviediniu: raktas suprasti orbitą."
         },
         {
           "type": "paragraph",
-          "text": "À une vitesse précise, appelée [[Pirmasis kosminis greitis]], quelque chose de remarquable arrive. Pendant que le boulet tombe, la Terre, qui est ronde, se courbe sous lui à la même allure. Le projectile tombe… sans jamais toucher le sol. Il est en **chute libre permanente**, tiré par la gravité sans s'écraser."
+          "text": "Yra vienas tikslus greitis: [[Pirmasis kosminis greitis]]. Jį pasiekus, nutinka kai kas nepaprasta. Kol sviedinys krenta, apvali Žemė tuo pačiu tempu lenkiasi po juo. Sviedinys krenta… niekada nepaliesdamas žemės. Jis yra **nuolatiniame laisvame kritime**, gravitacijos traukiamas, bet nenukrisdamas."
         },
         {
           "type": "paragraph",
-          "text": "La Lune fait la même chose. Elle a assez de vitesse sur le côté pour transformer une chute en boucle. Sans cette vitesse, elle plongerait droit sur nous."
+          "text": "Mėnulis daro tą patį. Jo šoninio greičio pakanka, kad kritimas virstų ratu. Be šio greičio jis kristų tiesiai ant mūsų."
         }
       ]
     },
     {
       "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur_p2",
-      "title": "Deux forces, un équilibre",
+      "title": "Dvi jėgos, viena pusiausvyra",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La Lune orbite à environ **384 000 km**. Sa vitesse latérale est d'environ **1 km/s**. Si elle s'arrêtait net, elle s'écraserait en quelques jours. Si la gravité disparaissait d'un coup, elle partirait en ligne droite dans l'espace, selon le principe d'[[Inercija]] : un corps garde sa vitesse s'il n'est pas freiné."
+          "text": "Mėnulis skrieja maždaug **384 000 km** atstumu nuo Žemės. Jo šoninis greitis siekia maždaug **1 km/s**. Jei jis staiga sustotų, per kelias dienas nukristų. Jei gravitacija staiga išnyktų, jis lėktų tiesia linija per kosmosą pagal tokį principą: [[Inercija]]. Kūnas išlaiko savo greitį, jei nėra stabdomas."
         },
         {
           "type": "paragraph",
-          "text": "La [[Newtono visuotinė trauka]] dit que toute masse attire toute autre masse, et que l'attraction diminue avec la distance, plus précisément avec le carré de la distance. Plus un satellite est proche, plus il doit aller vite pour ne pas tomber."
+          "text": "Čia veikia [[Newtono visuotinė trauka]]: kiekviena masė traukia kiekvieną kitą masę, o trauka mažėja didėjant atstumui, tiksliau, atstumo kvadratu. Kuo palydovas arčiau, tuo greičiau jis turi skristi, kad nenukristų."
         },
         {
           "type": "funFact",
-          "text": "La Station spatiale internationale, à seulement **400 km** d'altitude, file à environ **28 000 km/h**. Elle fait le tour de la Terre en **90 minutes**. La Lune, plus loin, met **27,3 jours**."
+          "text": "Tarptautinė kosminė stotis vos **400 km** aukštyje skrieja maždaug **28 000 km/h** greičiu. Aplink Žemę ji apsisuka per **90 minučių**. Tolimesniam Mėnuliui reikia **27,3 dienos**."
         },
         {
           "type": "paragraph",
-          "text": "L'orbite n'est donc pas magique. C'est un compromis permanent entre « je tombe » et « j'avance trop vite pour toucher »."
+          "text": "Taigi orbita nėra magija. Tai nuolatinis kompromisas tarp „krentu“ ir „skrendu per greitai, kad paliesčiau“."
         }
       ]
     },
     {
       "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur_p3",
-      "title": "Les marées éloignent la Lune",
+      "title": "Potvyniai tolina Mėnulį",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L'orbite n'est pas figée. Les [[Potvynių jėgos]] entrent en jeu. La gravité de la Lune tire plus fort sur le côté de la Terre qui lui fait face qu'au centre. Elle déforme les océans et crée un bourrelet d'eau."
+          "text": "Orbita nėra nekintama. Į žaidimą įsijungia [[potvynių jėgos]]. Mėnulio gravitacija stipriau traukia į jį atsuktą Žemės pusę nei jos centrą. Ji deformuoja vandenynus ir sukuria vandens iškilimą."
         },
         {
           "type": "paragraph",
-          "text": "Comme la Terre tourne sur elle-même plus vite que la Lune ne tourne autour d'elle, ce bourrelet avance un peu devant la Lune. Le frottement ralentit très légèrement la rotation terrestre : nos journées s'allongent d'environ **1,4 milliseconde** par siècle. En échange, la Lune s'éloigne d'environ **3,8 cm** par an."
+          "text": "Kadangi Žemė apie savo ašį sukasi greičiau, nei Mėnulis skrieja aplink ją, šis iškilimas šiek tiek aplenkia Mėnulį. Trintis labai nežymiai lėtina Žemės sukimąsi: mūsų paros ilgėja maždaug **1,4 milisekundės** per šimtmetį. Mainais Mėnulis tolsta maždaug **3,8 cm** per metus."
         },
         {
           "type": "paragraph",
-          "text": "Il y a des milliards d'années, la Lune était bien plus proche. Les marées étaient énormes. Ce brassage d'eau et de chimie a peut-être aidé les premières formes de vie. Et les dinosaures, eux, vivaient sur une Terre où les journées ne duraient que **22 ou 23 heures**."
+          "text": "Prieš milijardus metų Mėnulis buvo gerokai arčiau. Potvyniai buvo milžiniški. Šis vandens ir chemijos maišymasis galbūt padėjo atsirasti pirmosioms gyvybės formoms. O dinozaurai gyveno Žemėje, kurioje paros trukdavo vos **22 ar 23 valandas**."
         }
       ]
     },
     {
       "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur_p4",
-      "title": "Des éclipses… pour l'instant",
+      "title": "Užtemimai… kol kas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Aujourd'hui, par une coïncidence géométrique, le Soleil est environ **400 fois** plus grand que la Lune, mais aussi **400 fois** plus loin. Les deux ont donc la même **taille apparente**, l'angle sous lequel on les voit dans le ciel. Les éclipses totales de Soleil sont possibles."
+          "text": "Šiandien dėl geometrinio sutapimo Saulė yra maždaug **400 kartų** didesnė už Mėnulį, bet ir **400 kartų** toliau. Todėl abu atrodo vienodo **regimojo dydžio**: tokiu kampu juos matome danguje. Dėl to galimi visiški Saulės užtemimai."
         },
         {
           "type": "paragraph",
-          "text": "Dans environ **600 millions d'années**, la Lune sera trop loin pour cacher entièrement le Soleil. Il ne restera que des éclipses annulaires : un anneau de lumière autour du disque lunaire. À très long terme, la Terre et la Lune pourraient se synchroniser : chaque corps montrerait toujours la même face à l'autre. Mais le Soleil, en devenant **géante rouge**, phase finale d'une étoile comme le nôtre, transformera le système bien avant."
+          "text": "Maždaug po **600 milijonų metų** Mėnulis bus per toli, kad visiškai uždengtų Saulę. Liks tik žiediniai užtemimai: šviesos žiedas aplink Mėnulio diską. Labai tolimoje ateityje Žemė ir Mėnulis gali sinchronizuotis: abu kūnai visada būtų atsukę vienas kitam tą pačią pusę. Bet Saulė, tapdama **raudonąja milžine** (tokios žvaigždės kaip mūsų baigtine fazė), sistemą pakeis gerokai anksčiau."
         },
         {
           "type": "takeaway",
-          "text": "La Lune ne s'écrase pas parce que sa vitesse latérale équilibre l'attraction terrestre : elle est en chute libre permanente. Et elle s'éloigne encore d'environ **3,8 cm** par an."
+          "text": "Mėnulis nenukrenta todėl, kad jo šoninis greitis atsveria Žemės trauką: jis nuolat laisvai krenta. Ir jis vis dar tolsta maždaug **3,8 cm** per metus."
         }
       ]
     }

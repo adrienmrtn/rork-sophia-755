@@ -1,98 +1,98 @@
 {
   "id": "course_45_pourquoi_y_a_t_il_des_saisons",
-  "title": "Pourquoi y a-t-il des saisons ?",
-  "subtitle": "Terre & Soleil",
+  "title": "なぜ季節があるのでしょうか",
+  "subtitle": "地球と太陽",
   "subject": "sciences",
-  "subcategory": "Notre quotidien expliqué",
-  "description": "Les saisons ne viennent pas du fait que la Terre est plus près ou plus loin du Soleil. La vraie cause, c'est l'inclinaison de l'axe de la Terre.",
+  "subcategory": "暮らしの解説",
+  "description": "季節ができるのは、地球が太陽に近づいたり遠ざかったりするからではありません。本当の原因は、地球の自転軸である地軸の傾きです。",
   "hero": {
     "image": "pourquoi_y_a_t_il_des_saisons",
     "ratio": "16:9",
-    "hook": "Non, l'été n'arrive pas parce que la Terre se rapproche du Soleil."
+    "hook": "いいえ、夏が来るのは、地球が太陽に近づくからではありません。"
   },
   "sections": [
     {
       "id": "course_45_pourquoi_y_a_t_il_des_saisons_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Beaucoup de gens pensent que l'été arrive quand la Terre est plus **proche** du Soleil, et l'hiver quand elle est plus **loin**. C'est faux. Et on le voit tout de suite : quand c'est l'été en France, c'est l'hiver en Australie."
+          "text": "夏は地球が太陽にいちばん**近い**とき、冬は**遠い**ときだと思っている人は多いものです。でも、それは間違いです。すぐに確かめられます。フランスが夏のとき、オーストラリアは冬だからです。"
         },
         {
           "type": "paragraph",
-          "text": "La vraie explication tient à une chose : l'axe de rotation de la Terre est **incliné**, penché par rapport au plan de son orbite autour du Soleil."
+          "text": "本当の理由はひとつだけです。地球の自転軸が**傾いて**いて、太陽のまわりを回る軌道の面に対して、斜めになっていることです。"
         }
       ]
     },
     {
       "id": "course_45_pourquoi_y_a_t_il_des_saisons_p1",
-      "title": "La Terre penche",
+      "title": "地球は傾いている",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La Terre tourne sur elle-même en **24 heures** : c'est le jour et la nuit. Elle tourne aussi autour du Soleil en **un an** sur une orbite en forme d'**ellipse**, un cercle légèrement aplati. Mais son axe, la ligne imaginaire du pôle Nord au pôle Sud, n'est pas droit par rapport à son orbite. Il penche d'environ **23,5 degrés** : c'est l'[[地軸の傾き（23.5°）]]."
+          "text": "地球は**24時間**で自転します。これが昼と夜です。また**1年**かけて、少しつぶれた円である**楕円**の軌道で太陽のまわりを回ります。ところが、北極と南極を結ぶ想像上の線である地軸は、軌道に対してまっすぐではありません。地軸は約**23.5度**傾いています。これが[[地軸の傾き（23.5°）]]です。"
         },
         {
           "type": "image",
           "asset": "earth_summer_winter_seasons_illustration",
           "ratio": "auto",
-          "caption": "L'inclinaison de l'axe de la Terre explique le cycle des saisons."
+          "caption": "地軸の傾きが、季節の移り変わりを生み出しているのです。"
         },
         {
           "type": "paragraph",
-          "text": "Cette inclinaison reste à peu près dans la même direction toute l'année. Elle pointe toujours vers la même région du ciel, près de l'étoile Polaire. Résultat : selon où la Terre se trouve sur son orbite, un hémisphère « regarde » plus le Soleil, l'autre moins."
+          "text": "この傾きは、1年を通じてほぼ同じ方向を保ちます。いつも空の同じあたり、北極星の近くを指しています。その結果、地球が軌道のどこにいるかによって、一方の半球は太陽のほうをより向き、もう一方はあまり向かなくなります。"
         }
       ]
     },
     {
       "id": "course_45_pourquoi_y_a_t_il_des_saisons_p2",
-      "title": "Plus de lumière, plus de chaleur",
+      "title": "光がたくさん届くと、暑くなる",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En été dans l'hémisphère nord, le pôle Nord penche vers le Soleil. Les journées sont plus longues : la **photopériode**, le rapport entre durée du jour et de la nuit, augmente. Les rayons arrivent aussi plus « droit » sur le sol : l'énergie se concentre sur une plus petite surface. Il fait donc plus chaud."
+          "text": "北半球が夏のとき、北極は太陽のほうへ傾いています。昼が長くなり、昼と夜の長さの比である**光周期**が大きくなります。また、光は地面に垂直に近い角度で当たるので、エネルギーが小さな面積に集中します。そのため地面があたたまりやすく、気温が上がって暑くなります。夏の日差しが強く感じられるのは、このためです。"
         },
         {
           "type": "funFact",
-          "text": "En janvier, la Terre est même un peu **plus proche** du Soleil qu'en juillet : c'est le **périhélie**, le point le plus proche de l'orbite. Et pourtant, c'est l'hiver chez nous. Preuve que la distance n'explique pas les saisons."
+          "text": "1月には、地球は7月よりむしろ少し**太陽に近く**なります。これが**近日点**、軌道上でいちばん太陽に近い点です。それでも、フランスは冬です。距離では季節を説明できないことの証拠です。"
         },
         {
           "type": "paragraph",
-          "text": "En hiver, c'est l'inverse : jours courts, rayons plus obliques, énergie étalée sur une surface plus grande. Moins de chaleur reçue. Les **solstices**, moments où le Soleil atteint sa position la plus au nord ou au sud, marquent le début de l'été ou de l'hiver."
+          "text": "冬はその逆です。昼は短く、光は斜めに差し、エネルギーは広い面積に散らばってしまいます。そのぶん、受け取る熱は少なくなります。**至点**は、太陽が最も北または最も南に達する瞬間で、夏または冬の始まりを告げます。"
         }
       ]
     },
     {
       "id": "course_45_pourquoi_y_a_t_il_des_saisons_p3",
-      "title": "Et près de l'équateur ?",
+      "title": "赤道付近ではどうなる？",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Près de l'**équateur**, la ligne imaginaire qui partage la Terre en deux hémisphères, l'inclinaison change peu la durée du jour. Il n'y a pas vraiment quatre saisons comme en Europe, mais plutôt des périodes plus sèches et plus humides."
+          "text": "**赤道**は、地球を二つの半球に分ける想像上の線です。その付近では、傾きによる昼の長さの変化はわずかです。ヨーロッパのようなはっきりした四季はなく、むしろ乾燥した時期と湿った時期があります。"
         },
         {
           "type": "paragraph",
-          "text": "Aux **pôles**, l'effet est extrême : plusieurs mois de jour continu en été, plusieurs mois de nuit en hiver. Le contraste y est bien plus fort qu'en France."
+          "text": "**極**では、影響が極端です。夏は何か月も昼が続き、冬は何か月も夜が続きます。その差は、フランスよりはるかに大きくなります。"
         }
       ]
     },
     {
       "id": "course_45_pourquoi_y_a_t_il_des_saisons_p4",
-      "title": "Une planète sans inclinaison",
+      "title": "もし地軸が傾いていなかったら",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Si l'axe de la Terre était parfaitement droit, chaque lieu recevrait à peu près la même quantité de soleil toute l'année. Plus de vrai été, plus de vrai hiver. Le climat, les cultures, les migrations d'animaux : tout serait différent."
+          "text": "もし地軸が完全にまっすぐなら、どの場所も1年を通じてほぼ同じ量の日光を受けることになります。本当の夏も、本当の冬もなくなります。気候も、作物も、動物の移動も、すべてが違うものになるでしょう。"
         },
         {
           "type": "takeaway",
-          "text": "Les saisons viennent de l'**inclinaison** de l'axe de la Terre, environ **23,5°**, pas de la distance au Soleil. Un hémisphère penche vers le Soleil : c'est l'été. L'autre penche à l'opposé : c'est l'hiver."
+          "text": "季節が生まれるのは、太陽までの距離ではなく、地軸の約**23.5°**の**傾き**のためです。一方の半球が太陽のほうへ傾くと夏になり、もう一方が反対側へ傾くと冬になります。"
         }
       ]
     }

@@ -143,6 +143,9 @@ def same_placeholders(key: str, value: str, fr_value: str) -> bool:
 
 
 PLURAL_FORMS = (".zero", ".two", ".few", ".many", ".other")
+# Languages whose only plural category is "other" (CLDR): the French ".one" has no counterpart,
+# and PluralStringsTest on Android rejects a ".one" variant that ICU would never select.
+NO_ONE_FORM = {"ja"}
 
 
 def _plural_reference(key: str, fr: dict[str, str]) -> str | None:
@@ -170,6 +173,8 @@ def check_cles(langs: list[str]) -> list[str]:
             for key, fr_value in fr.items():
                 if key.startswith(UNTRANSLATED_PREFIXES):
                     continue
+                if key not in cur and lang in NO_ONE_FORM and key.endswith(".one") and key[:-4] + ".other" in cur:
+                    continue  # Japanese has a single plural category: ".one" would be unreachable
                 if key not in cur:
                     out.append(f"cles|{lang}|{platform}|{key}|clé absente")
                 elif not same_placeholders(key, cur[key], fr_value):

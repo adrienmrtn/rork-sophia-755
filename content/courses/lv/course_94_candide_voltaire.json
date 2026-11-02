@@ -1,133 +1,133 @@
 {
   "id": "course_94_candide_voltaire",
-  "title": "« Candide » : pourquoi faut-il cultiver notre jardin ?",
+  "title": "„Kandids“: kāpēc mums jākopj savs dārzs?",
   "subtitle": "1759",
   "subject": "litterature",
-  "subcategory": "Classiques français & européens",
-  "description": "Candide traverse un monde cruel en croyant que tout va pour le mieux. Voltaire démolit l'optimisme de Leibniz avec une ironie implacable.",
+  "subcategory": "Franču un Eiropas klasika",
+  "description": "Kandids šķērso nežēlīgu pasauli, ticot, ka viss notiek uz labu. Voltērs ar nepielūdzamu ironiju sagrauj Leibnica optimismu.",
   "hero": {
     "image": "candide_voltaire",
     "ratio": "16:9",
-    "hook": "Trente chapitres, une ironie corrosive, et une phrase finale qui change tout."
+    "hook": "Trīsdesmit nodaļas, kodīga ironija un pēdējais teikums, kas maina visu."
   },
   "sections": [
     {
       "id": "course_94_candide_voltaire_intro",
-      "title": "Introduction",
+      "title": "Ievads",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Publié en **1759**, **Candide ou l'Optimisme** est le chef-d'œuvre du conte philosophique, récit court mêlant aventure et réflexion. **Voltaire**, de son vrai nom **François-Marie Arouet**, y démolit l'idée d'un monde parfaitement ordonné par la providence, la volonté de Dieu guidant tout."
+          "text": "**1759**. gadā izdotais **Kandids jeb Optimisms** ir filozofiskā stāsta šedevrs, īss stāstījums, kas apvieno piedzīvojumus un pārdomas. **Voltērs**, īstajā vārdā **Fransuā Marī Arue**, tajā sagrauj priekšstatu par pasauli, ko pilnīgi sakārtojusi providence, Dieva griba, kas visu vada."
         },
         {
           "type": "paragraph",
-          "text": "En trente chapitres rapides, le récit appartient aux **[[Apgaismības filozofija]]**, mouvement du XVIIIe siècle fondé sur la raison et la critique des préjugés. L'homme doit agir concrètement, pas seulement spéculer sur le sens du monde. Voltaire utilise l'humour et l'exagération pour faire réfléchir le lecteur sans le sermonner."
+          "text": "Trīsdesmit ātrās nodaļās šis stāsts pārstāv vienu virzienu: **[[apgaismības filozofija]]**. Tā ir astoņpadsmitā gadsimta kustība, kas balstīta uz prātu un aizspriedumu kritiku. Cilvēkam jārīkojas konkrēti, nevis tikai jāspekulē par pasaules jēgu. Voltērs izmanto humoru un pārspīlējumu, lai liktu lasītājam aizdomāties, nemācot viņu."
         }
       ]
     },
     {
       "id": "course_94_candide_voltaire_p1",
-      "title": "1755 : le séisme qui bouleverse Voltaire",
+      "title": "1755: zemestrīce, kas satricina Voltēru",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Voltaire écrit Candide après la **[[Septiņgadu karš]]**, grand conflit européen de 1756 à 1763, et surtout le tremblement de terre de **Lisbonne**, le 1er novembre **1755**. Environ 60 000 personnes meurent ce jour de fête religieuse. Comment croire encore que tout mal sert un bien supérieur ?"
+          "text": "Voltērs raksta Kandidu, kad aiz muguras ir **[[Septiņgadu karš]]**, liels Eiropas konflikts no 1756. līdz 1763. gadam, un galvenokārt **Lisabonas** zemestrīce **1755**. gada 1. novembrī. Aptuveni 60 000 cilvēku iet bojā šajā reliģiskajos svētkos. Kā vēl ticēt, ka katrs ļaunums kalpo augstākam labumam?"
         },
         {
           "type": "image",
           "asset": "lisbon_earthquake_1755_engraving",
           "ratio": "4:3",
-          "caption": "Le séisme de Lisbonne : catastrophe qui brise la confiance en un monde parfait."
+          "caption": "Lisabonas zemestrīce: katastrofa, kas sagrauj ticību ideālai pasaulei."
         },
         {
           "type": "paragraph",
-          "text": "Voltaire attaque l'**[[optimisms Leibnica izpratnē]]**. Selon cette philosophie, Dieu a créé le meilleur des mondes possibles. Tout mal apparent servirait un bien supérieur. Candide naît de ce refus. Le conte philosophique mêle fiction légère et réflexion profonde pour toucher un large public, pas seulement les spécialistes."
+          "text": "Voltēra uzbrukuma mērķis ir **[[Leibnica optimisms]]**. Pēc šīs filozofijas Dievs ir radījis labāko no iespējamām pasaulēm. Katrs šķietamais ļaunums kalpotu augstākam labumam. No šī noraidījuma dzimst Kandids. Filozofiskais stāsts apvieno vieglu izdomu un dziļu pārdomu, lai uzrunātu plašu publiku, ne tikai speciālistus."
         },
         {
           "type": "image",
           "asset": "voltaire_portrait_painting",
           "ratio": "4:3",
-          "caption": "Voltaire : ironie, lucidité et combat pour la raison."
+          "caption": "Voltērs: ironija, skaidrs skats un cīņa par saprātu."
         }
       ]
     },
     {
       "id": "course_94_candide_voltaire_p2",
-      "title": "Pangloss et l'ironie dévastatrice",
+      "title": "Panglosss un graujošā ironija",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Candide**, jeune naïf, est élevé dans le château du baron de **Thunder-ten-tronckh** par **Pangloss**, caricature de **[[Leibnics]]**, philosophe allemand du XVIIe siècle. Le précepteur prétend que tout événement, aussi atroce soit-il, a une cause bénéfique dans un plan divin."
+          "text": "**Kandidu**, jaunu naivuli, barona **Tundertentronka** pilī audzina **Panglosss**. Viņš ir karikatūra, kuras prototips ir septiņpadsmitā gadsimta vācu filozofs **[[Leibnics]]**. Audzinātājs apgalvo, ka katram notikumam, lai cik šausmīgs tas būtu, ir labvēlīgs cēlonis dievišķajā plānā."
         },
         {
           "type": "funFact",
-          "text": "Malgré l'interdiction par le Parlement de Paris, le livre circule en clandestinité : on estime plus de 20 000 exemplaires dès la première année."
+          "text": "Neraugoties uz Parīzes parlamenta aizliegumu, grāmata slepeni apgrozās: lēš, ka jau pirmajā gadā to iespieda vairāk nekā 20 000 eksemplāru."
         },
         {
           "type": "paragraph",
-          "text": "Chassé de son château pour avoir aimé **Cunégonde**, fille du baron, le héros est confronté aux horreurs du monde : l'enrôlement forcé dans l'armée, la tempête, la maladie et l'**[[Inkvizīcija]]**, tribunal ecclésiastique qui pourchassait l'hérésie. L'Inquisition pratique l'**[[Autodafe]]**, cérémonie publique où l'on brûle parfois des condamnés, pour empêcher de nouveaux séismes."
+          "text": "Padzīts no pils par to, ka iemīlējis **Kunegundu**, barona meitu, varonis saskaras ar pasaules šausmām: piespiedu iesaukšana armijā, vētra, slimība un **[[Inkvizīcija]]**, baznīcas tiesa, kas vajāja ķecerību. Inkvizīcija pielieto šādu paņēmienu: **[[Autodafe]]**, publiska ceremonija, kurā reizēm sadedzina notiesātos, lai novērstu jaunas zemestrīces."
         },
         {
           "type": "paragraph",
-          "text": "L'absurdité culmine quand Pangloss explique que la syphilis est indispensable pour le chocolat. Voltaire force le lecteur à rejeter la spéculation abstraite pour embrasser le constat lucide. Chaque catastrophe devient une leçon d'ironie. Le conte avance vite, comme une suite de coups de massue comiques visant la bêtise humaine."
+          "text": "Absurds sasniedz kulmināciju, kad Panglosss skaidro, ka sifiliss ir nepieciešams šokolādei. Voltērs liek lasītājam atmest abstrakto spekulāciju un pieņemt skaidru patiesību. Katra katastrofa kļūst par ironijas mācību. Stāsts rit ātri, kā komisku vāli sitienu virkne pret cilvēku muļķību."
         }
       ]
     },
     {
       "id": "course_94_candide_voltaire_p3",
-      "title": "L'Eldorado et le nègre de Surinam",
+      "title": "Eldorado un melnādainais vergs no Surinamas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L'**Eldorado**, utopie sud-américaine imaginaire, prouve que l'optimisme peut tenir dans une société rationnelle et pacifique. Pourtant Candide la quitte pour retrouver **Cunégonde**. La perfection statique ne convient pas à l'homme : il veut agir, aimer, bouger. Voltaire suggère que le bonheur n'est pas un état, mais une activité."
+          "text": "**Eldorado**, izdomāta Dienvidamerikas utopija, pierāda, ka optimisms var pastāvēt racionālā un mierīgā sabiedrībā. Tomēr Kandids to pamet, lai atkal atrastu **Kunegundu**. Statiska pilnība cilvēkam neder: viņš grib rīkoties, mīlēt, kustēties. Voltērs liek domāt, ka laime nav stāvoklis, bet darbība."
         },
         {
           "type": "quote",
-          "text": "C'est à ce prix que vous mangez du sucre en Europe.",
-          "attribution": "Voltaire, Candide — le nègre de Surinam"
+          "text": "Par šādu cenu Eiropā tiek ēsts cukurs.",
+          "attribution": "Voltērs, „Kandids“, melnādainais vergs no Surinamas"
         },
         {
           "type": "paragraph",
-          "text": "Le **nègre de Surinam**, esclave mutilé pour le sucre européen, pousse Candide à définir l'optimisme : « c'est la rage de soutenir que tout est bien quand on est mal ». Le récit parodique du roman d'apprentissage, où un héros apprend la vie par l'expérience, force le lecteur au constat lucide face aux injustices coloniales."
+          "text": "**Melnādainais vergs no Surinamas**, Eiropas cukura dēļ sakropļots vergs, pamudina Kandidu definēt optimismu: „tas ir neprāts apgalvot, ka viss ir labi, kad klājas slikti.“ Stāsts, kas parodē audzināšanas romānu, kurā varonis mācās dzīvi pieredzē, liek lasītājam skaidri ieraudzīt koloniālo netaisnību."
         }
       ]
     },
     {
       "id": "course_94_candide_voltaire_p4",
-      "title": "Cultiver notre jardin",
+      "title": "Kopt savu dārzu",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le dénouement se joue dans une métairie turque, petite ferme, avec **Pangloss**, **Cunégonde** et d'autres compagnons d'infortune. Candide conclut : « **Il faut cultiver notre jardin** ». Fini la spéculation métaphysique sur Dieu et le sens du monde : seule l'action concrète compte. Voltaire refuse toute réponse globale au mal du monde, mais propose un pragmatisme lucide."
+          "text": "Atrisinājums norisinās Turcijas saimniecībā, nelielā fermā, kopā ar **Panglossu**, **Kunegundu** un citiem nelaimes biedriem. Kandids secina: „**Mums jākopj savs dārzs**.“ Beigas metafiziskām spekulācijām par Dievu un pasaules jēgu: svarīga ir tikai konkrēta rīcība. Voltērs atsakās no jebkādas vispārīgas atbildes uz pasaules ļaunumu, bet piedāvā skaidru pragmatismu."
         },
         {
           "type": "timeline",
           "events": [
             {
               "date": "1755",
-              "title": "Séisme de Lisbonne",
-              "detail": "Choc qui alimente l'écriture du conte."
+              "title": "Lisabonas zemestrīce",
+              "detail": "Trieciens, kas baro stāsta tapšanu."
             },
             {
               "date": "1759",
-              "title": "Publication",
-              "detail": "Candide paraît sans nom d'auteur."
+              "title": "Izdošana",
+              "detail": "Kandids iznāk bez autora vārda."
             },
             {
-              "date": "Fin",
-              "title": "Le jardin",
-              "detail": "Travail et action remplacent l'optimisme."
+              "date": "Beigas",
+              "title": "Dārzs",
+              "detail": "Darbs un rīcība aizstāj optimismu."
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "**Candide**, paru en **1759**, ridiculise l'**[[optimisms Leibnica izpratnē]]** par l'ironie et conclut que seule l'action concrète, « cultiver notre jardin », donne un sens à l'existence."
+          "text": "**Kandids**, kas iznāca **1759**. gadā, ar ironiju izsmej vienu uzskatu: **[[Leibnica optimisms]]**. Voltērs secina, ka dzīvei jēgu dod tikai konkrēta rīcība, tas ir, „kopt savu dārzu“."
         }
       ]
     }

@@ -1,104 +1,104 @@
 {
   "id": "course_83_dipe_roi_sophocle",
-  "title": "Œdipe Roi, Sophocle",
-  "subtitle": "Ve siècle av. J.-C.",
+  "title": "Karalis Edips, Sofokls",
+  "subtitle": "5. gadsimts p.m.ē.",
   "subject": "litterature",
-  "subcategory": "Grecs & Philosophes antiques",
-  "description": "Œdipe veut sauver Thèbes d'une peste. En enquêtant, il découvre qu'il est lui-même le coupable. Sophocle invente la tragédie où savoir, c'est se perdre.",
+  "subcategory": "Grieķi un antīkie filozofi",
+  "description": "Edips grib glābt Tēbas no mēra. Izmeklējot viņš atklāj, ka pats ir vainīgais. Sofokls izgudro traģēdiju, kurā zināt nozīmē sevi pazaudēt.",
   "hero": {
     "image": "oedipe_roi_sophocle",
     "ratio": "16:9",
-    "hook": "Il cherche le meurtrier de la ville. Le meurtrier, c'est lui."
+    "hook": "Viņš meklē pilsētas slepkavu. Slepkava ir viņš pats."
   },
   "sections": [
     {
       "id": "course_83_dipe_roi_sophocle_intro",
-      "title": "Introduction",
+      "title": "Ievads",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "À Athènes, au **Ve siècle avant J.-C.**, le dramaturge **Sophocle** crée **Œdipe Roi**. **Aristote**, philosophe grec et élève de Platon, y verra plus tard le modèle de la tragédie parfaite dans sa **Poétique**. En une soirée de théâtre, un roi mène une enquête. Chaque réponse le rapproche du gouffre."
+          "text": "Atēnās **5. gadsimtā p.m.ē.** dramaturgs **Sofokls** radīja **Karali Edipu**. **Aristotelis**, grieķu filozofs un Platona skolnieks, vēlāk savā **Poētikā** redzēs tajā ideālas traģēdijas paraugu. Vienā teātra vakarā karalis veic izmeklēšanu. Katra atbilde viņu tuvina bezdibenim."
         },
         {
           "type": "paragraph",
-          "text": "La ville de **Thèbes** est frappée par une peste. L'**oracle**, réponse des dieux rendue par le sanctuaire de Delphes, demande de punir le meurtrier de l'ancien roi **Laïos**. **Œdipe**, roi actuel de Thèbes, promet de le trouver. Il ne sait pas encore que le destin l'a déjà placé au centre du crime."
+          "text": "Tēbu pilsētu piemeklē mēris. **Orākuls**, dievu atbilde, ko dod Delfu svētnīca, pieprasa sodīt bijušā karaļa **Laija** slepkavu. **Edips**, tagadējais Tēbu karalis, apsola viņu atrast. Viņš vēl nezina, ka liktenis jau ir licis viņu noziedzības centrā."
         }
       ]
     },
     {
       "id": "course_83_dipe_roi_sophocle_p1",
-      "title": "Sophocle et la tragédie grecque",
+      "title": "Sofokls un grieķu traģēdija",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Avant Sophocle, la tragédie athénienne évolue déjà avec **Eschyle**, premier des trois grands tragiques. Sophocle affine le genre : plus de personnages, plus de tension psychologique. Il introduit le **tritagoniste**, le troisième acteur sur scène. Sur scène, le **chœur** accompagne et commente l'action. Mais le vrai moteur, c'est l'homme face à ce qu'il ignore."
+          "text": "Pirms Sofokla Atēnu traģēdija jau attīstās ar **Eshilu**, pirmo no trim lielajiem traģēdijas autoriem. Sofokls pilnveido žanru: vairāk personāžu, vairāk psiholoģiska sasprindzinājuma. Viņš ievieš **tritagonistu**, trešo aktieri uz skatuves. Uz skatuves **koris** pavada un komentē darbību. Taču īstais dzinējspēks ir cilvēks pret to, ko viņš nezina."
         },
         {
           "type": "image",
           "asset": "oedipe_et_le_sphinx",
           "ratio": "4:3",
-          "caption": "Œdipe face au Sphinx : résoudre l'énigme, c'est déjà entrer dans le piège."
+          "caption": "Edips Sfinksas priekšā: mīklas atrisināšana jau nozīmē iekrist lamatās."
         },
         {
           "type": "paragraph",
-          "text": "Le mythe d'Œdipe était connu avant la pièce. On se souvient du **Sphinx**, monstre à tête de femme et corps de lion. Son **ainigma**, mot grec pour « énigme », demandait : « Quel est l'animal qui marche sur quatre pattes le matin, deux le midi, trois le soir ? » Œdipe répond : l'homme. Il devient roi de Thèbes. Sophocle ne surprend pas par l'intrigue seule. Il surprend par la façon dont le héros découvre la vérité **en public**, pas à pas, sans pouvoir s'arrêter."
+          "text": "Edipa mīts bija zināms pirms lugas. Atceramies **Sfinksu**, briesmoni ar sievietes galvu un lauvas ķermeni. Tās **ainigma**, grieķu vārds, kas nozīmē mīklu, jautāja: „Kurš dzīvnieks no rīta iet uz četrām kājām, dienas vidū uz divām, vakarā uz trijām?“ Edips atbild: cilvēks. Viņš kļūst par Tēbu karali. Sofokls pārsteidz nevis tikai ar sižetu. Viņš pārsteidz ar to, kā varonis atklāj patiesību **publiski**, soli pa solim, nespēdams apstāties."
         }
       ]
     },
     {
       "id": "course_83_dipe_roi_sophocle_p2",
-      "title": "L'enquête qui se retourne contre l'enquêteur",
+      "title": "Izmeklēšana, kas vēršas pret izmeklētāju",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Œdipe interroge le devin [[Tīresijs]], prophète aveugle de Thèbes qui voit le passé et l'avenir. Puis il interroge sa femme **Jocaste**, veuve de Laïos. Les indices s'accumulent. L'homme qu'il a tué sur une route, la femme qu'il a épousée, les enfants qu'il a eus : tout coïncide avec l'oracle qu'il croyait fuir en quittant Corinthe, la ville où il pensait avoir grandi."
+          "text": "Edips griežas pie zīlnieka: tas ir [[Tīresijs]], Tēbu aklais pravietis, kas redz pagātni un nākotni. Pēc tam viņš iztaujā savu sievu **Jokasti**, Laija atraitni. Pierādījumi krājas. Vīrs, ko viņš nogalinājis uz ceļa, sieva, ko apprecējis, bērni, kas viņam piedzimuši: viss sakrīt ar orākulu, no kura viņš domāja bēgt, pametot Korintu, pilsētu, kur, kā viņš domāja, bija uzaudzis."
         },
         {
           "type": "funFact",
-          "text": "Aristote admire surtout deux effets dans cette pièce : la [[peripetija]], renversement brutal de situation, et l'[[anagnorīze]], moment où Œdipe comprend enfin qui il est."
+          "text": "Aristotelis visvairāk apbrīno divus efektus šajā lugā: [[peripetija]] (pēkšņs situācijas apvērsums) un [[anagnorīze]] (brīdis, kad Edips beidzot saprot, kas viņš ir)."
         },
         {
           "type": "paragraph",
-          "text": "C'est l'**ironie tragique** : plus Œdipe veut être juste et lucide, plus il accélère sa chute. Le savoir n'apaise pas. Il brûle. Chaque question posée au nom de la cité rapproche le roi de sa propre condamnation. Sophocle montre qu'une intelligence brillante peut devenir l'instrument de sa propre perte."
+          "text": "Tā ir **traģiskā ironija**: jo vairāk Edips grib būt taisnīgs un skaidrredzīgs, jo straujāk tuvina savu krišanu. Zināšanas nenomierina. Tās dedzina. Katrs jautājums, kas uzdots pilsētas vārdā, tuvina karali paša notiesāšanai. Sofokls rāda, ka spožs prāts var kļūt par paša bojāejas instrumentu."
         }
       ]
     },
     {
       "id": "course_83_dipe_roi_sophocle_p3",
-      "title": "Voir trop clair, puis s'aveugler",
+      "title": "Redzēt pārāk skaidri, tad pašam kļūt aklam",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Quand la vérité éclate, Jocaste se suicide. Œdipe se crève les yeux. Le roi qui voyait pour la cité devient un homme qui refuse de regarder le monde. Sophocle lie le [[Liktenis un brīvā griba grieķu traģēdijā]] : Œdipe a agi librement à chaque étape, et pourtant chaque pas réalisait l'oracle. Fuir le destin, c'est parfois l'accomplir."
+          "text": "Kad patiesība nāk gaismā, Jokaste izdara pašnāvību. Edips izdurā sev acis. Karalis, kas redzēja pilsētas labā, kļūst par cilvēku, kurš atsakās skatīties uz pasauli. Sofokls savij kopā likteni un brīvo gribu. Tā ir tēma [[Liktenis un brīvā griba grieķu traģēdijā]]: Edips katrā posmā rīkojās brīvi, un tomēr katrs solis piepildīja orākulu. Bēgt no likteņa nereti nozīmē to piepildīt."
         },
         {
           "type": "image",
           "asset": "oedipus_sphinx_riddle_painting",
           "ratio": "4:3",
-          "caption": "L'énigme du Sphinx : le savoir qui sauve Thèbes prépare la catastrophe."
+          "caption": "Sfinksas mīkla: zināšanas, kas glābj Tēbas, sagatavo katastrofu."
         },
         {
           "type": "paragraph",
-          "text": "La peste, le [[loimos]], n'était pas seulement une maladie. C'était la souillure religieuse qui frappe une cité en punition d'un crime. Œdipe devient le [[farmakos]], bouc émissaire expulsé pour purifier la cité. Il quitte Thèbes en mendiant, portant le mal qu'il ignorait avoir commis."
+          "text": "Mēris, [[loimos]], nebija tikai slimība. Tā bija reliģiskā apgānīšana, kas pilsētu piemeklē kā sodu par noziegumu. Edips kļūst par grēkāzi, kas tiek padzīts, lai attīrītu pilsētu: tas ir [[farmaks]]. Viņš atstāj Tēbas kā ubags, nesot ļaunumu, par kura izdarīšanu pat nenojauta."
         }
       ]
     },
     {
       "id": "course_83_dipe_roi_sophocle_p4",
-      "title": "De Freud à nos enquêtes modernes",
+      "title": "No Freida līdz mūsdienu izmeklēšanām",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Au XXe siècle, **Freud**, fondateur de la psychanalyse, lit dans le mythe le [[Edipa komplekss (Freids)]]. Ce concept psychanalytique est très éloigné de la réflexion de Sophocle sur le destin. Au-delà de la psychanalyse, la pièce reste le modèle de l'enquête où le détective découvre qu'il est coupable. Polar, théâtre, cinéma : la structure tient toujours."
+          "text": "Divdesmitajā gadsimtā **Freids**, psihoanalīzes pamatlicējs, mītā saskatīja pamatu jēdzienam: [[Edipa komplekss (Freids)]]. Šis psihoanalītiskais jēdziens ir ļoti tāls no Sofokla pārdomām par likteni. Ārpus psihoanalīzes luga paliek izmeklēšanas paraugs, kurā detektīvs atklāj, ka ir vainīgs. Detektīvromāns, teātris, kino: šī struktūra joprojām darbojas."
         },
         {
           "type": "takeaway",
-          "text": "**Œdipe Roi** montre qu'on peut vouloir le bien de tous et détruire sa vie en cherchant la vérité. Chez Sophocle, voir clair n'est pas une victoire. C'est une épreuve qui laisse la cité sauvée, mais l'homme brisé."
+          "text": "**Karalis Edips** rāda, ka var gribēt visu labu un sagraut savu dzīvi, meklējot patiesību. Pie Sofokla skaidri redzēt nav uzvara. Tas ir pārbaudījums, kas pilsētu atstāj izglābtu, bet cilvēku salauztu."
         }
       ]
     }

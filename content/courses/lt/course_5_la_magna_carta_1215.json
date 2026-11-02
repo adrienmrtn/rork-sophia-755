@@ -1,110 +1,110 @@
 {
   "id": "course_5_la_magna_carta_1215",
-  "title": "Qu'est-ce que la Magna Carta, la charte la plus importante de l'Histoire ?",
+  "title": "Kas yra Magna Carta, svarbiausia istorijos chartija?",
   "subtitle": "1215",
   "subject": "histoire",
-  "subcategory": "Antiquité & Moyen Âge",
-  "description": "En juin 1215, Jean sans Terre appose son sceau sur une charte imposée par ses barons. Un texte féodal devient, au fil des siècles, le symbole de la loi au-dessus du roi.",
+  "subcategory": "Antika ir viduramžiai",
+  "description": "1215 m. birželį Jonas Bežemis uždeda savo antspaudą ant chartijos, kurią jam primeta baronai. Feodalinis tekstas laikui bėgant tampa simboliu, kad įstatymas yra aukščiau karaliaus.",
   "hero": {
     "image": "la_magna_carta_1215",
     "ratio": "16:9",
-    "hook": "Un roi acculé signe. Huit siècles plus tard, le monde entier en parle encore."
+    "hook": "Prispaustas karalius pasirašo. Po aštuonių šimtmečių apie tai vis dar kalba visas pasaulis."
   },
   "sections": [
     {
       "id": "course_5_la_magna_carta_1215_intro",
-      "title": "Introduction",
+      "title": "Įvadas",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En juin **1215**, dans la prairie de **Runnymede**, près de Londres, le roi d'Angleterre **Jean sans Terre** appose son sceau sur la **Magna Carta**, la « Grande Charte ». Ce n'est pas un geste de générosité. C'est un bras de fer : les barons, grands seigneurs du royaume, veulent briser l'arbitraire royal."
+          "text": "**1215** m. birželį **Runnymede** pievoje netoli Londono Anglijos karalius **Jonas Bežemis** uždeda antspaudą ant **Magna Carta**, „Didžiosios chartijos“. Tai ne dosnumo gestas, o jėgų išmėginimas: baronai, aukšti karalystės didikai, nori sutramdyti karaliaus savivalę."
         },
         {
           "type": "paragraph",
-          "text": "Le texte naît pour éviter une guerre civile. Son application immédiate échoue. Pourtant, il devient peu à peu le symbole d'une idée explosive : même le roi est sous la loi."
+          "text": "Tekstas atsiranda tam, kad būtų išvengta pilietinio karo. Iš karto jo įgyvendinti nepavyksta. Vis dėlto pamažu jis tampa sprogstamos minties simboliu: net karalius pavaldus įstatymui."
         }
       ]
     },
     {
       "id": "course_5_la_magna_carta_1215_p1",
-      "title": "Jean sans Terre au bord du gouffre",
+      "title": "Jonas Bežemis prie bedugnės krašto",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Roi depuis **1199**, Jean enchaîne les catastrophes. Face au roi de France [[Pilypas II Augustas]], il subit la [[Normandijos netekimas (1204)]]. Pour reconquérir ses terres, il presse le [[feodalinė santvarka]] : le roi donne des terres en échange de fidélité et de service militaire, mais Jean multiplie taxes, otages et amendes arbitraires. Les coutumes qui le liaient à ses vassaux volent en éclats."
+          "text": "Jonas karaliauja nuo **1199** m., ir nelaimės seka viena paskui kitą. Prancūzijos karalius [[Pilypas II Augustas]] atima jo valdas, ir įvyksta [[Normandijos netekimas (1204)]]. Norėdamas susigrąžinti žemes, Jonas iki ribos spaudžia vasalus. Čia veikia [[feodalinė santvarka]]: karalius duoda žemių mainais už ištikimybę ir karinę tarnybą, bet Jonas daugina mokesčius, įkaitus ir savavališkas baudas. Papročiai, kurie jį siejo su vasalais, subyra."
         },
         {
           "type": "paragraph",
-          "text": "Le conflit avec le pape [[Inocentas III]] l'isole encore. Après la défaite de [[Buvinas]] (**1214**), où Philippe Auguste bat une coalition incluant l'Angleterre, les barons se rebellent et prennent Londres. Jean n'a plus le choix : négocier, ou perdre la couronne."
+          "text": "Popiežius [[Inocentas III]] su juo susipyksta, ir karalius dar labiau izoliuojamas. Paskui – pralaimėjimas: [[Buvinas]] (**1214**), kur Pilypas Augustas sutriuškina koaliciją, kuriai priklausė ir Anglija. Baronai sukyla ir užima Londoną. Jonui nebelieka pasirinkimo: arba derėtis, arba prarasti karūną."
         },
         {
           "type": "funFact",
-          "text": "Le surnom « Sans Terre » ne vient pas de ses défaites françaises. Dernier fils d'Henri II, il n'avait tout simplement reçu aucun apanage à sa naissance."
+          "text": "Pravardė „Bežemis“ atsirado ne dėl pralaimėjimų Prancūzijoje. Būdamas jauniausias Henriko II sūnus, jis tiesiog gimdamas negavo jokios žemių valdos."
         }
       ]
     },
     {
       "id": "course_5_la_magna_carta_1215_p2",
-      "title": "Runnymede, 63 clauses",
+      "title": "Runnymede, 63 straipsniai",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le **15 juin 1215**, les parties se rencontrent à Runnymede. Influencé par l'archevêque de Cantorbéry [[Stephenas Langtonas]], le document compte **63 clauses**. Deux d'entre elles changent tout. La **clause 39** : aucun homme libre ne peut être arrêté sans un jugement de ses pairs. La **clause 40** : le roi ne peut ni vendre ni retarder la justice."
+          "text": "**1215 m. birželio 15 d.** šalys susitinka Runnymede. Dokumentui didelę įtaką daro Kenterberio arkivyskupas [[Stephenas Langtonas]]; jame yra **63 straipsniai**. Du iš jų pakeičia viską. **39 straipsnis**: joks laisvas žmogus negali būti suimtas be lygiųjų nuosprendžio. **40 straipsnis**: karalius negali nei parduoti, nei vilkinti teisingumo."
         },
         {
           "type": "image",
           "asset": "magna_carta_1215_manuscript",
           "ratio": "4:3",
-          "caption": "La Magna Carta de 1215, parchemin devenu mythe politique."
+          "caption": "1215 m. Magna Carta, pergamentas, tapęs politiniu mitu."
         },
         {
           "type": "paragraph",
-          "text": "Ce n'est pas encore la démocratie. La charte parle surtout aux « hommes libres », pas aux serfs, paysans liés à la terre. C'est d'abord un traité de paix entre le roi et ses barons. Mais l'idée est posée : le pouvoir a des limites écrites."
+          "text": "Tai dar ne demokratija. Chartija kalba daugiausia apie „laisvus žmones“, o ne apie baudžiauninkus, prie žemės pririštus valstiečius. Visų pirma tai taikos sutartis tarp karaliaus ir jo baronų. Bet mintis jau iškelta: valdžia turi užrašytas ribas."
         }
       ]
     },
     {
       "id": "course_5_la_magna_carta_1215_p3",
-      "title": "D'un échec à un mythe",
+      "title": "Nuo nesėkmės iki mito",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Dès août, Jean fait annuler le texte par le pape. La guerre civile reprend. La charte survit grâce à la mort du roi en **1216** : le jeune **Henri III** la réémet pour apaiser le royaume. Confirmée encore et encore, elle entre dans le droit anglais."
+          "text": "Jau rugpjūtį Jonas pasiekia, kad popiežius panaikintų tekstą. Pilietinis karas atsinaujina. Chartija išlieka dėl karaliaus mirties **1216** m.: jaunasis **Henrikas III** ją išleidžia iš naujo, kad nuramintų karalystę. Vėl ir vėl patvirtinama, ji tampa Anglijos teisės dalimi."
         },
         {
           "type": "funFact",
-          "text": "Il n'existe pas d'original unique de 1215, mais plusieurs copies envoyées dans les comtés. Quatre seulement ont survécu."
+          "text": "Vienintelio 1215 m. originalo nėra, buvo daug nuorašų, išsiųstų į grafystes. Išliko tik keturi."
         },
         {
           "type": "paragraph",
-          "text": "Au XVIIe siècle, des juristes comme [[Edwardas Coke'as]] la ressortent contre l'absolutisme des Stuarts, ces rois qui voulaient gouverner sans limites. Un parchemin médiéval devient l'ancêtre revendiqué des libertés parlementaires."
+          "text": "XVII a. tokie teisininkai kaip [[Edwardas Coke'as]] ją vėl iškelia prieš Stiuartų absoliutizmą, tų karalių, kurie norėjo valdyti be ribų. Viduramžių pergamentas tampa parlamentinių laisvių protėviu, kuriuo remiamasi."
         },
         {
           "type": "timeline",
           "events": [
             {
               "date": "1204",
-              "title": "Perte de la Normandie",
-              "detail": "Jean sans Terre perd ses revenus continentaux."
+              "title": "Normandijos netekimas",
+              "detail": "Jonas Bežemis netenka pajamų iš žemyninių valdų."
             },
             {
               "date": "1214",
-              "title": "Bouvines",
-              "detail": "La défaite isole définitivement le roi."
+              "title": "Buvino mūšis",
+              "detail": "Pralaimėjimas galutinai izoliuoja karalių."
             },
             {
               "date": "1215",
               "title": "Magna Carta",
-              "detail": "Sceau apposé à Runnymede sous la pression des barons."
+              "detail": "Antspaudas uždėtas Runnymede baronų spaudimu."
             },
             {
               "date": "1216",
-              "title": "Réémission",
-              "detail": "Henri III sauve le texte pour stabiliser le trône."
+              "title": "Pakartotinis išleidimas",
+              "detail": "Henrikas III išgelbsti tekstą, kad sustiprintų sostą."
             }
           ]
         }
@@ -112,20 +112,20 @@
     },
     {
       "id": "course_5_la_magna_carta_1215_p4",
-      "title": "Un héritage mondial",
+      "title": "Pasaulinis palikimas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Les colons britanniques emportent la charte en Amérique. Les Pères fondateurs s'en inspirent pour le [[Teisių bilis]], les premiers amendements de la Constitution américaine. Le [[Habeas corpus]], principe qui interdit les arrestations arbitraires, prolonge la clause 39. En **1948**, [[Eleanor Roosevelt]] y voit une « Grande Charte » pour toute l'humanité."
+          "text": "Britų kolonistai chartiją pasiima į Ameriką. Steigėjai tėvai semiasi iš jos įkvėpimo: [[Teisių bilis]] – pirmosios JAV Konstitucijos pataisos. [[Habeas corpus]], principas, draudžiantis savavališkus suėmimus, tęsia 39 straipsnį. **1948** m. [[Eleanor Roosevelt]] joje mato „Didžiąją chartiją“ visai žmonijai."
         },
         {
           "type": "paragraph",
-          "text": "Aujourd'hui, seules trois clauses restent en vigueur en Angleterre. Peu importe. La Magna Carta compte moins comme loi vivante que comme symbole : nul n'est au-dessus du droit."
+          "text": "Šiandien Anglijoje galioja tik trys straipsniai. Tai nesvarbu. Magna Carta reikšminga ne kaip gyvas įstatymas, o kaip simbolis: niekas nestovi aukščiau teisės."
         },
         {
           "type": "takeaway",
-          "text": "Arrachée à Jean sans Terre en **1215**, la Magna Carta affirme que le roi aussi est sous la loi. D'un traité entre barons et roi est né l'un des mythes fondateurs des libertés modernes."
+          "text": "Iš Jono Bežemio **1215** m. išplėšta Magna Carta teigia, kad ir karalius pavaldus įstatymui. Iš sutarties tarp baronų ir karaliaus gimė vienas iš šiuolaikinių laisvių pagrindinių mitų."
         }
       ]
     }

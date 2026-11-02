@@ -1,129 +1,129 @@
 {
   "id": "course_82_l_iliade_homere",
-  "title": "L'Iliade, Homère",
-  "subtitle": "VIIIe siècle av. J.-C.",
+  "title": "Iliada, Homeras",
+  "subtitle": "VIII a. pr. Kr.",
   "subject": "litterature",
-  "subcategory": "Grecs & Philosophes antiques",
-  "description": "Pas toute la guerre de Troie : 51 jours de colère. Achille se retire, Patrocle meurt, Hector tombe. Homère montre comment la gloire peut devenir bestiale, puis humaine.",
+  "subcategory": "Graikai ir antikos filosofai",
+  "description": "Ne visas Trojos karas, o 51 diena rūstybės. Achilas pasitraukia, Patroklas žūva, Hektoras krinta. Homeras parodo, kaip šlovė gali tapti žvėriška, o paskui vėl žmogiška.",
   "hero": {
     "image": "l_iliade_homere",
     "ratio": "16:9",
-    "hook": "Un seul mot ouvre le poème : la colère. Et toute la guerre bascule."
+    "hook": "Poemą pradeda vienas žodis: rūstybė. Ir visas karas pasisuka."
   },
   "sections": [
     {
       "id": "course_82_l_iliade_homere_intro",
-      "title": "Introduction",
+      "title": "Įvadas",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "On croit souvent que l'**Iliade** raconte toute la **guerre de Troie**. En réalité, le poème attribué à **Homère** se concentre sur **51 jours** seulement, au cœur de la dixième année du siège. La guerre oppose une coalition grecque à la ville troyenne. Elle a été déclenchée par l'enlèvement d'Hélène. Son premier thème n'est pas Troie : c'est la **colère** d'**Achille**, le meilleur guerrier grec."
+          "text": "Dažnai manoma, kad **Iliada** pasakoja visą **Trojos karą**. Iš tikrųjų **Homerui** priskiriama poema aprėpia tik **51 dieną**, dešimtųjų apgulties metų viduryje. Kare graikų koalicija kovoja prieš trojiečių miestą. Jį sukėlė Elenos pagrobimas. Pirmoji poemos tema yra ne Troja, o **Achilo**, geriausio graikų karžygio, **rūstybė**."
         },
         {
           "type": "paragraph",
-          "text": "Le titre vient d'**Ilion**, autre nom de Troie, cité située sur la côte de l'actuelle Turquie. Sous les dieux, les duels et la violence, Homère pose une question simple : que vaut la gloire quand tout le monde meurt ? Le poème ne célèbre pas la guerre sans nuance. Il en montre le coût humain."
+          "text": "Pavadinimas kilo iš **Iliono**, kito Trojos vardo, miesto dabartinės Turkijos pakrantėje. Po dievais, dvikovomis ir smurtu Homeras kelia paprastą klausimą: kokia šlovės vertė, kai miršta visi? Poema negarbina karo be išlygų. Ji rodo jo žmogiškąją kainą."
         }
       ]
     },
     {
       "id": "course_82_l_iliade_homere_p1",
-      "title": "Pourquoi Achille quitte le combat",
+      "title": "Kodėl Achilas palieka mūšį",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le prétexte mythique est connu : **Pâris**, prince troyen, a enlevé **Hélène**, reine de Sparte. **Agamemnon**, roi de Mycènes et chef des Grecs, mène la coalition. Mais le poème s'ouvre sur une crise interne. Agamemnon humilie Achille en lui prenant **Briséis**, sa captive. Pour Achille, c'est une atteinte à sa [[timė]], l'honneur public dû au mérite guerrier. Sans timè, le héros n'a plus de raison de combattre."
+          "text": "Mitinis pretekstas žinomas: Trojos princas **Paridas** pagrobė Spartos karalienę **Eleną**. Mikėnų karalius ir graikų vadas **Agamemnonas** vadovauja koalicijai. Bet poema prasideda vidine krize. Agamemnonas pažemina Achilą, atimdamas iš jo belaisvę **Briseidę**. Achilui tai smūgis jo garbei. Graikai ją vadina [[timė]]: viešas pripažinimas, priklausantis už karo nuopelnus. Be timės karžygys nebeturi priežasties kovoti."
         },
         {
           "type": "image",
           "asset": "achilles_agamemnon_quarrel_painting",
           "ratio": "4:3",
-          "caption": "La dispute entre Achille et Agamemnon, point de départ de toute l'Iliade."
+          "caption": "Achilo ir Agamemnono ginčas, visos Iliados pradžios taškas."
         },
         {
           "type": "paragraph",
-          "text": "Achille se retire sous sa tente. Pire : il demande à sa mère **Thétis**, déesse marine, d'obtenir de **Zeus**, roi des dieux, une défaite grecque. Il veut prouver qu'on ne peut pas se passer de lui. Son ressentiment passe avant la survie de ses compagnons. La guerre devient d'abord une affaire d'ego, pas seulement de conquête. Homère montre ainsi que la colère d'un seul homme peut faire basculer le destin d'une armée entière."
+          "text": "Achilas pasitraukia į savo palapinę. Dar blogiau: jis prašo motiną **Tetidę**, jūrų deivę, kad ši iš **Dzeuso**, dievų karaliaus, išprašytų graikų pralaimėjimo. Jis nori įrodyti, kad be jo apsieiti neįmanoma. Jo pyktis svarbesnis už bendražygių išgyvenimą. Karas pirmiausia tampa ego reikalu, o ne vien užkariavimu. Taip Homeras parodo, kad vieno žmogaus rūstybė gali pakreipti visos armijos likimą."
         }
       ]
     },
     {
       "id": "course_82_l_iliade_homere_p2",
-      "title": "Patrocle meurt, la colère change de nature",
+      "title": "Patroklas žūva, rūstybė keičia prigimtį",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Sans leur champion, les Grecs plient. Les Troyens, menés par le prince **Hector**, fils du roi Priam et héros défenseur de Troie, menacent même les navires grecs. **Patrocle**, compagnon le plus proche d'Achille, emprunte son armure pour faire peur à l'ennemi. Achille accepte, mais lui interdit d'aller trop loin et de poursuivre jusqu'aux murs de Troie."
+          "text": "Netekę čempiono, graikai ima trauktis. Trojiečiai, kuriuos veda princas **Hektoras**, karaliaus Priamo sūnus ir Trojos gynėjas, net grasina graikų laivams. **Patroklas**, artimiausias Achilo bendražygis, pasiskolina jo šarvus, kad įbaugintų priešą. Achilas sutinka, bet draudžia jam eiti per toli ir vytis iki pat Trojos sienų."
         },
         {
           "type": "funFact",
-          "text": "Dans l'Iliade, les dieux se blessent aussi. Le guerrier **Diomède** blesse **Aphrodite**, déesse de l'amour, à la main. Le dieu de la guerre **Arès** doit fuir en hurlant. Même l'Olympe connaît la violence du champ de bataille."
+          "text": "Iliadoje žeidžiami ir dievai. Karys **Diomedas** sužeidžia meilės deivę **Afroditę** į ranką. Karo dievas **Aresas** turi bėgti rėkdamas. Net Olimpas pažįsta mūšio lauko žiaurumą."
         },
         {
           "type": "paragraph",
-          "text": "Patrocle désobéit. Hector le tue, aidé par **Apollon**, dieu archer. La colère d'Achille, d'abord sociale, change de nature. Ce n'est plus la timè qui le pousse : c'est le deuil qui arme le héros. Homère montre comment une émotion peut devenir destructrice."
+          "text": "Patroklas neklauso. Hektoras jį nužudo, padedamas **Apolono**, dievo lankininko. Achilo rūstybė, iš pradžių socialinė, keičia prigimtį. Dabar jį skatina jau ne timė: karžygį ginkluoja gedulas. Homeras parodo, kaip emocija gali tapti griaunanti."
         }
       ]
     },
     {
       "id": "course_82_l_iliade_homere_p3",
-      "title": "Achille contre Hector : la gloire devient bestiale",
+      "title": "Achilas prieš Hektorą: šlovė tampa žvėriška",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Achille revient. Armé par **Héphaïstos**, dieu forgeron, il entre dans son [[Homero aristija]]. C'est une longue séquence où un héros accomplit des exploits surhumains. Il tue Hector devant les murs de Troie. Puis il attache le corps à son char et le traîne dans la poussière, sous les yeux de la famille du prince. C'est une humiliation extrême."
+          "text": "Achilas sugrįžta. Dievo kalvio **Hefaisto** apginkluotas, jis stoja į kovą. Dabar prasideda jo [[Homero aristija]]: ilga scena, kurioje karžygys atlieka antžmogiškus žygdarbius. Jis nužudo Hektorą prie Trojos sienų. Paskui pririša kūną prie savo vežimo ir tempia dulkėse, princo šeimos akivaizdoje. Tai kraštutinis pažeminimas."
         },
         {
           "type": "image",
           "asset": "trojan_war_ancient_greek_vase_painting",
           "ratio": "4:3",
-          "caption": "La guerre de Troie sur un vase grec : gloire, violence et destin mêlés."
+          "caption": "Trojos karas ant graikų vazos: šlovė, smurtas ir likimas susipynę."
         },
         {
           "type": "paragraph",
-          "text": "Pour les Grecs, refuser les **rites funéraires**, c'est sortir de l'humain. Honorer les morts par la sépulture est une obligation sacrée. Achille, héros absolu, devient presque une bête. Homère montre le prix de [[Menis (rūstybė) graikų kultūroje]]. Le premier mot du poème, *Mênis*, annonce un thème quasi-cosmique. La colère d'Achille déstabilise l'ordre du monde autant que la guerre elle-même."
+          "text": "Graikams atsisakyti **laidotuvių apeigų** reiškia išeiti iš žmogiškumo ribų. Mirusiųjų pagerbimas laidojant yra šventa pareiga. Achilas, absoliutus karžygys, tampa beveik žvėrimi. Homeras parodo, kiek kainuoja [[Menis (rūstybė) graikų kultūroje]]. Pirmasis poemos žodis, *Menis*, skelbia beveik kosminę temą. Achilo rūstybė ardo pasaulio tvarką tiek pat, kiek ir pats karas."
         }
       ]
     },
     {
       "id": "course_82_l_iliade_homere_p4",
-      "title": "Priam devant Achille : l'humanité revient",
+      "title": "Priamas prieš Achilą: sugrįžta žmogiškumas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le vieux roi **Priam**, père d'Hector, traverse seul les lignes ennemies pour baiser les mains qui ont tué son fils. Face à ce père brisé, Achille pense à son propre père, **Pélée**, qu'il ne reverra jamais. Il rend le corps et accorde une trêve pour les funérailles. Le poème s'achève sur les funérailles d'Hector. Le [[Trojos arklys]], stratagème d'Ulysse pour pénétrer dans Troie, n'y figure pas du tout."
+          "text": "Senasis karalius **Priamas**, Hektoro tėvas, vienas kerta priešo linijas, kad pabučiuotų rankas, nužudžiusias jo sūnų. Žvelgdamas į šį palūžusį tėvą, Achilas pagalvoja apie savo tėvą **Pelėją**, kurio daugiau niekada nebepamatys. Jis grąžina kūną ir skiria paliaubas laidotuvėms. Poema baigiasi Hektoro laidotuvėmis. [[Trojos arklys]], Odisėjo gudrybė patekti į Troją, joje visai nepasirodo."
         },
         {
           "type": "timeline",
           "events": [
             {
-              "date": "Jour 1",
-              "title": "Dispute Achille-Agamemnon",
-              "detail": "Achille se retire du combat, faute de timè."
+              "date": "1 diena",
+              "title": "Achilo ir Agamemnono ginčas",
+              "detail": "Achilas pasitraukia iš kovos, nes pažeista jo timė."
             },
             {
-              "date": "Milieu",
-              "title": "Mort de Patrocle",
-              "detail": "La vengeance remplace l'honneur blessé."
+              "date": "Viduryje",
+              "title": "Patroklo mirtis",
+              "detail": "Kerštas pakeičia įžeistą garbę."
             },
             {
-              "date": "Duel",
-              "title": "Mort d'Hector",
-              "detail": "Achille triomphe, puis profane le corps."
+              "date": "Dvikova",
+              "title": "Hektoro mirtis",
+              "detail": "Achilas triumfuoja, paskui išniekina kūną."
             },
             {
-              "date": "Fin",
-              "title": "Priam et Achille",
-              "detail": "Le deuil commun ramène un peu d'humain."
+              "date": "Pabaiga",
+              "title": "Priamas ir Achilas",
+              "detail": "Bendras gedulas sugrąžina truputį žmogiškumo."
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "L'**Iliade** n'est pas un manuel de gloire. En **51 jours**, Homère montre comment la colère détruit, puis comment deux ennemis se reconnaissent dans la même douleur. Le poème se termine sur la paix des morts, pas sur la victoire."
+          "text": "**Iliada** nėra šlovės vadovėlis. Per **51 dieną** Homeras parodo, kaip rūstybė griauna, o paskui kaip du priešai atpažįsta vienas kitą savo bendrame skausme. Poema baigiasi mirusiųjų ramybe, o ne pergale."
         }
       ]
     }

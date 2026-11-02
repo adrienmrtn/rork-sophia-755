@@ -1,145 +1,145 @@
 {
   "id": "course_57_l_invention_d_internet",
-  "title": "Comment Internet est-il né de la Guerre froide ?",
-  "subtitle": "D'ARPANET au Web",
+  "title": "インターネットは冷戦からどう生まれたのか",
+  "subtitle": "ARPANETからウェブまで",
   "subject": "sciences",
-  "subcategory": "Découvertes qui ont changé le monde",
-  "description": "Un réseau militaire pensé pour résister à une attaque soviétique, des dizaines de petits réseaux, puis le modem et le Web. En cinquante ans, un projet de la Guerre froide est devenu notre quotidien.",
+  "subcategory": "世界を変えた発見",
+  "description": "ソ連の攻撃に耐えるように考えられた軍用ネットワーク、数十の小さなネットワーク、そしてモデムとウェブ。半世紀のあいだに、冷戦期のプロジェクトは私たちの日常になりました。",
   "author": "myra-houser",
   "hero": {
     "image": "ibm_mainframe_computer_room_1960s_operators",
     "ratio": "4:3",
-    "hook": "Avant de relier la planète, Internet devait surtout survivre à une attaque soviétique."
+    "hook": "地球をつなぐ前に、インターネットはまずソ連の攻撃を生き延びる必要がありました。"
   },
   "sections": [
     {
       "id": "course_57_l_invention_d_internet_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Comme Rome, Internet ne s'est pas fait en un jour. À ses débuts, le réseau n'est qu'une poignée d'ordinateurs du **ministère américain de la Défense**. Il naît du progrès technique, mais aussi des ambitions d'espionnage des deux superpuissances de la [[冷戦]]. À la fin du XXe siècle, la connexion par ligne téléphonique entre dans la plupart des foyers américains, et la navigation sur le Web suit de près."
+          "text": "ローマと同じように、インターネットも一日にしてできたものではありません。初めのころのネットワークは、**アメリカ国防総省**のコンピューター数台にすぎませんでした。技術の進歩から生まれたものですが、[[冷戦]]の二つの超大国によるスパイ活動の思惑も背景にありました。二十世紀の終わりには、電話回線を使った接続がアメリカのほとんどの家庭に入り、ウェブの閲覧もすぐあとに続きます。"
         },
         {
           "type": "paragraph",
-          "text": "À la fin du millénaire, la technologie est à la fois si répandue et si neuve que des analystes annoncent une panne mondiale si les calendriers des ordinateurs ne passent pas correctement l'**an 2000** : c'est la peur du [[2000年問題]]. Au XXIe siècle, messageries instantanées, réseaux sociaux et intelligence artificielle transforment encore la façon de communiquer en ligne. Comment un projet militaire est-il devenu le quotidien du monde entier ?"
+          "text": "千年紀の終わりごろ、技術は広く普及していながら新しいものでもあったため、コンピューターのカレンダーが**2000年**にうまく切り替わらなければ世界規模の障害が起きると、専門家たちは警告しました。これが[[2000年問題]]への不安です。二十一世紀に入ると、メッセージアプリやSNS、人工知能が、オンラインでのコミュニケーションをさらに変えています。軍事プロジェクトはどのようにして、世界中の人の日常になったのでしょうか。"
         }
       ]
     },
     {
       "id": "course_57_l_invention_d_internet_p1",
-      "title": "Un réseau capable de survivre à une attaque",
+      "title": "攻撃に耐えられるネットワークをつくる",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le projet commence dans les **années 1950**. Les ordinateurs sont alors énormes et coûteux : une seule machine occupe une pièce entière. Seuls des bureaux du gouvernement et quelques universités en possèdent. Quand la tension avec l'URSS monte, les dirigeants américains cherchent un réseau de communication que les agents soviétiques ne pourraient pas intercepter. Première étape : le temps partagé, qui permet à plusieurs utilisateurs de travailler sur le même ordinateur."
+          "text": "このプロジェクトは**1950年代**に始まります。当時のコンピューターは巨大で高価で、1台で部屋ひとつをまるごと占めるほどでした。持っていたのは政府の部署と一部の大学だけです。ソ連との緊張が高まるなか、アメリカの指導者たちは、ソ連の工作員に傍受される心配のない通信網を探していました。最初の一歩は、複数の利用者が同じコンピューターで同時に作業できるタイムシェアリング（時分割方式）でした。"
         },
         {
           "type": "paragraph",
-          "text": "Au début des **années 1960**, un ingénieur nommé [[ポール・バラン]] expérimente la [[パケット交換]] : au lieu d'envoyer un message d'un bloc, on le découpe en petits paquets de données qui circulent séparément sur le réseau. Baran et ses collègues font le pari que des données voyageant ainsi sur les lignes téléphoniques survivraient à une attaque soviétique. De ces travaux naît [[ARPANET]], un programme du ministère américain de la Défense."
+          "text": "**1960年代**初め、技術者の[[ポール・バラン]]が[[パケット交換]]を試みます。メッセージをひとかたまりで送る代わりに、小さなデータの「パケット」に分け、それぞれ別々にネットワークを通すしくみです。バランらは、こうして電話回線を行き交うデータなら、ソ連の攻撃を生き延びられると見込みました。この研究から、アメリカ国防総省の計画として[[ARPANET]]が生まれます。"
         },
         {
           "type": "image",
           "asset": "arpanet_1969_computer_ucla",
           "ratio": "4:3",
-          "caption": "Le SDS Sigma 7 de l'UCLA, premier ordinateur relié à ARPANET en 1969."
+          "caption": "1969年にARPANETへ最初につながったコンピューター、UCLAのSDS Sigma 7。"
         }
       ]
     },
     {
       "id": "course_57_l_invention_d_internet_p2",
-      "title": "D'ARPANET aux « internets » : la commutation de paquets",
+      "title": "ARPANETから複数の「インターネット」へ：パケット交換",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Pour acheminer ces paquets, ARPANET reprend une technique développée par des scientifiques britanniques : le [[ルーター]], un équipement du réseau téléphonique qui collecte les paquets et les expédie vers d'autres machines. En **1969**, les premiers ordinateurs sont reliés, à commencer par celui de l'université de Californie à Los Angeles. À Hawaï, des informaticiens testent une idée voisine, **ALOHAnet**, où les paquets voyagent par ondes radio."
+          "text": "これらのパケットを届けるために、ARPANETはイギリスの科学者が開発した技術を取り入れました。それが[[ルーター]]で、電話網の機器としてパケットを集め、ほかの機器へ送り出します。**1969年**には最初のコンピューターが接続され、その第一号がカリフォルニア大学ロサンゼルス校のものでした。ハワイでは研究者が似た発想の**ALOHAnet**を試し、こちらはパケットが電波で飛びます。"
         },
         {
           "type": "image",
           "asset": "arpanet_logical_map_1977_network_diagram",
           "ratio": "3:2",
-          "caption": "La carte logique d'ARPANET au 25 août 1983, dressée par BBN : universités, laboratoires et sites militaires reliés entre eux."
+          "caption": "1983年8月25日時点のARPANETの論理マップ（BBN作成）。大学、研究所、軍事拠点が互いにつながっています。"
         },
         {
           "type": "paragraph",
-          "text": "Dans les **années 1970** et au début des années 1980, des dizaines d'équipes dans le monde font circuler de l'information par lignes téléphoniques et par radio. Résultat : une multitude de petits réseaux séparés. En **1974**, un article scientifique abrège « internetwork », réseau de réseaux, en « internet ». C'est la première trace connue du mot."
+          "text": "**1970年代**から1980年代初めにかけて、世界中の数十のチームが、電話回線や無線で情報をやり取りしていました。その結果、互いに分離した小さなネットワークがいくつもできます。**1974年**、ある学術論文が「internetwork」（ネットワークのネットワーク）を略して「internet」と書きました。これが、この言葉の最初の記録として知られています。"
         }
       ]
     },
     {
       "id": "course_57_l_invention_d_internet_p3",
-      "title": "Modems, abonnements et naissance du Web au CERN",
+      "title": "モデム、接続契約、そしてCERNでのウェブ誕生",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Jusqu'au milieu des **années 1980**, ces « internets » vivent chacun de leur côté. Aux États-Unis, la National Science Foundation, l'agence fédérale qui finance la recherche, investit massivement dans des superordinateurs et les relie aux universités. Puis, de **1989** à **1995**, le législateur américain lève peu à peu les restrictions qui interdisaient les services commerciaux sur Internet."
+          "text": "**1980年代**なかばまで、こうした「インターネット」はそれぞれ独立して存在していました。アメリカでは、研究に資金を出す連邦機関の全米科学財団がスーパーコンピューターに大きく投資し、大学とつないでいきます。その後、**1989年**から**1995年**にかけて、アメリカの議会は、インターネット上の商用サービスを禁じていた規制を少しずつ緩めていきました。"
         },
         {
           "type": "paragraph",
-          "text": "En 1995, de grandes compagnies comme **Sprint** et **AT&T** proposent des connexions par ligne téléphonique : l'abonné branche son modem sur la prise et compose un numéro. Pendant ce temps, en **1990**, l'informaticien britannique Tim Berners-Lee lance le [[ワールド・ワイド・ウェブ]] au CERN, le laboratoire européen de physique installé près de Genève. Le Web rassemble les données dispersées sur les serveurs et relie les pages entre elles par des hyperliens."
+          "text": "1995年には、**Sprint**や**AT&T**といった大手企業が電話回線によるネット接続を提供し始めます。利用者はモデムを電話の差込口につなぎ、電話番号をダイヤルしました。一方、**1990年**には、イギリスのコンピューター科学者ティム・バーナーズ＝リーが、ジュネーブ近郊にあるヨーロッパの物理学研究所CERNで[[ワールド・ワイド・ウェブ]]を始めます。ウェブは、サーバー上に散らばったデータをまとめ、ページ同士をハイパーリンクでつなぎました。"
         },
         {
           "type": "image",
           "asset": "tim_berners_lee_next_computer_cern_first_web_server",
           "ratio": "3:2",
-          "caption": "Le NeXT de Tim Berners-Lee au CERN, premier serveur web en 1990 : une étiquette demande de ne jamais l'éteindre."
+          "caption": "CERNにあるティム・バーナーズ＝リーのNeXT。1990年の最初のウェブサーバーで、「電源を切らないこと」と書いた札が貼られています。"
         },
         {
           "type": "funFact",
-          "text": "Dans les années 1990, beaucoup d'abonnés paient leur connexion à la minute. Chaque page qui se charge lentement coûte de l'argent, et le téléphone de la maison reste occupé tant que le modem est en ligne."
+          "text": "1990年代、多くの利用者は接続料金を分単位で払っていました。そのためページの表示が遅いとお金がかかり、さらにモデムがつながっているあいだは、家の電話もずっと話し中になってしまいました。"
         }
       ]
     },
     {
       "id": "course_57_l_invention_d_internet_p4",
-      "title": "Du courriel à l'iPhone : Internet au quotidien",
+      "title": "メールからiPhoneへ：暮らしの中のインターネット",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "À partir du milieu des années 1990, Internet grandit à toute vitesse et chacun élargit son cercle de correspondants. Le courriel, les salons de discussion et la messagerie instantanée permettent d'échanger en temps réel. En **2000**, plus de la **moitié** du trafic de télécommunications passe déjà par Internet. Au début des années 2000, les blogs et les premiers réseaux sociaux, MySpace puis TheFacebook.com, se multiplient."
+          "text": "1990年代なかば以降、インターネットは猛スピードで成長し、だれもが連絡を取り合う相手を広げていきます。メール、チャットルーム、インスタントメッセージのおかげで、リアルタイムのやり取りができるようになりました。**2000年**には、通信トラフィックの**半分**以上がすでにインターネットを通っています。2000年代初めには、ブログと最初のSNS、MySpaceやTheFacebook.comが次々に広がりました。"
         },
         {
           "type": "paragraph",
-          "text": "Le réseau sort ensuite des bureaux et des salons. Dès **2005**, les téléphones BlackBerry permettent d'envoyer des messages sur leurs réseaux. À partir de **2007**, l'iPhone met Internet dans la poche : on navigue désormais depuis un téléphone mobile. Né comme une stratégie de défense pendant la Guerre froide, le réseau des réseaux fait aujourd'hui partie de la vie de tous les jours."
+          "text": "ネットワークは、やがてオフィスやリビングを出ていきます。**2005年**には早くも、BlackBerryの携帯電話でメッセージを送れるようになりました。**2007年**以降は、iPhoneがインターネットをポケットに入れてくれます。携帯電話から閲覧できる時代です。冷戦期に防衛戦略として生まれたネットワークのネットワークは、今では日常生活の一部になっています。"
         },
         {
           "type": "timeline",
           "events": [
             {
-              "date": "1969",
-              "title": "Premières machines reliées",
-              "detail": "ARPANET connecte ses premiers ordinateurs, dont celui de l'UCLA."
+              "date": "1969年",
+              "title": "最初のマシンどうしが接続",
+              "detail": "ARPANETが最初のコンピューターを接続します。UCLAのものもその一つです。"
             },
             {
-              "date": "1974",
-              "title": "Le mot « internet »",
-              "detail": "Un article abrège « internetwork » : première trace connue du terme."
+              "date": "1974年",
+              "title": "「internet」という言葉",
+              "detail": "ある論文が「internetwork」を略して使いました。この語の最初の記録として知られています。"
             },
             {
-              "date": "1990",
-              "title": "Naissance du Web",
-              "detail": "Tim Berners-Lee lance le World Wide Web au CERN."
+              "date": "1990年",
+              "title": "ウェブの誕生",
+              "detail": "ティム・バーナーズ＝リーがCERNでワールド・ワイド・ウェブを始めます。"
             },
             {
-              "date": "1995",
-              "title": "Internet s'ouvre au public",
-              "detail": "Fin des restrictions commerciales, connexions par modem chez Sprint et AT&T."
+              "date": "1995年",
+              "title": "インターネットが一般に開かれる",
+              "detail": "商用利用の制限が終わり、SprintとAT&Tがモデム接続を提供します。"
             },
             {
-              "date": "2007",
-              "title": "Internet dans la poche",
-              "detail": "L'iPhone permet de naviguer depuis un téléphone mobile."
+              "date": "2007年",
+              "title": "ポケットの中のインターネット",
+              "detail": "iPhoneで、携帯電話からネットを閲覧できるようになりました。"
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "Conçu pendant la Guerre froide pour résister à une attaque, Internet est passé des ordinateurs militaires aux universités, puis aux foyers grâce au modem et au Web, avant de tenir dans un téléphone."
+          "text": "冷戦中に攻撃に耐えるよう設計されたインターネットは、軍のコンピューターから大学へ、そしてモデムとウェブのおかげで家庭へと広がり、ついには電話の中に収まるまでになりました。"
         }
       ]
     }

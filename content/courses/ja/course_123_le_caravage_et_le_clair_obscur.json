@@ -1,142 +1,142 @@
 {
   "id": "course_123_le_caravage_et_le_clair_obscur",
-  "title": "Le Caravage et le clair-obscur",
+  "title": "カラヴァッジョと、明暗法の革命",
   "subtitle": "1571-1610",
   "subject": "art",
-  "subcategory": "Peinture & mouvements",
-  "description": "**Michelangelo Merisi**, dit Le Caravage, révolutionne la peinture avec un réalisme brutal et un contraste lumière-ombre extrême : le clair-obscur.",
+  "subcategory": "絵画と芸術運動",
+  "description": "**ミケランジェロ・メリージ**、通称カラヴァッジョは、荒々しい写実と、光と影の極端な対比、つまり明暗法で絵画に革命を起こしました。",
   "hero": {
     "image": "le_caravage_et_le_clair_obscur",
     "ratio": "16:9",
-    "hook": "Des saints aux pieds sales, une lumière de projecteur : l'art ne sera plus jamais le même."
+    "hook": "足の汚れた聖人たちと、スポットライトのような光。美術はもう、それまでと同じではいられません。"
   },
   "sections": [
     {
       "id": "course_123_le_caravage_et_le_clair_obscur_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Michelangelo Merisi**, dit **Le Caravage** (1571-1610), brise les codes de la beauté idéale hérités de la Renaissance. Il confronte le sacré et le quotidien : mendiants, tavernes, corps fatigués."
+          "text": "**ミケランジェロ・メリージ**、通称**カラヴァッジョ**（1571〜1610年）は、ルネサンスから受け継がれた理想の美のきまりを打ち壊しました。聖なるものと日常を向き合わせ、物乞いや居酒屋、疲れ切った体を描きます。"
         },
         {
           "type": "paragraph",
-          "text": "Son arme : un clair-obscur radical. Les corps surgissent du noir comme sous un projecteur. Cette rupture annonce l'esprit du [[バロック絵画]] et transforme le spectateur en témoin d'un drame."
+          "text": "彼の武器は、徹底した明暗法です。体はスポットライトを浴びたように闇から浮かび上がります。この断絶が[[バロック絵画]]の精神を先取りし、見る人をドラマの目撃者に変えます。"
         },
         {
           "type": "image",
           "asset": "caravaggio_self_portrait",
           "ratio": "4:3",
-          "caption": "Le Caravage, peintre de génie et figure de la vie romaine turbulente."
+          "caption": "才能あふれる画家で、騒がしいローマの暮らしを象徴する人物、カラヴァッジョ。"
         }
       ]
     },
     {
       "id": "course_123_le_caravage_et_le_clair_obscur_p1",
-      "title": "Génie, violence et exil",
+      "title": "天才、暴力、亡命",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Né près de Milan, Le Caravage arrive à Rome vers **1593**. Sa carrière bascule en **1600** avec les toiles de la chapelle Contarelli, à l'église Saint-Louis-des-Français. *La Vocation de saint Matthieu* sidère Rome : le sacré y a le visage de la rue."
+          "text": "ミラノ近郊に生まれたカラヴァッジョは、**1593年**ごろローマに出ます。**1600年**、サン・ルイジ・デイ・フランチェージ教会にあるコンタレッリ礼拝堂の作品群で、キャリアが一気に転換します。*『聖マタイの召命』*はローマを驚かせます。聖なる場面に、街の人々の顔があるからです。"
         },
         {
           "type": "funFact",
-          "text": "À Malte, il est fait chevalier de l'Ordre, puis jeté en prison pour avoir agressé un supérieur. Il s'évade d'un fort réputé imprenable avec une corde de chanvre."
+          "text": "マルタ島で騎士団の騎士に叙せられますが、上官に暴力をふるって投獄されます。脱出は不可能と言われた要塞から、麻縄を使って逃げ出します。"
         },
         {
           "type": "paragraph",
-          "text": "Sa vie est aussi violente que ses tableaux. En **1606**, lors d'une rixe, il tue **Ranuccio Tomassoni**. Condamné à mort, il fuit vers Naples, Malte, puis la Sicile. Traqué et blessé, il meurt à **38 ans** à [[ポルト・エルコレ]], quelques jours avant une grâce papale."
+          "text": "生涯は作品と同じくらい暴力的です。**1606年**、乱闘のなかで**ラヌッチョ・トマッソーニ**を殺してしまいます。死刑を宣告され、ナポリ、マルタ、シチリアへと逃げます。追われ、傷を負った末に、教皇の恩赦が出る数日前、**38歳**のとき[[ポルト・エルコレ]]で亡くなります。"
         }
       ]
     },
     {
       "id": "course_123_le_caravage_et_le_clair_obscur_p2",
-      "title": "Le ténébrisme : une lumière qui frappe",
+      "title": "テネブリズム：打ちつけるような光",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le Caravage invente le **ténébrisme**, une forme extrême du clair-obscur. Plus de lumière douce qui caresse les formes : une obscurité opaque, et des corps qui en jaillissent avec une force sculpturale. La lumière est artificielle, comme un projecteur de scène."
+          "text": "カラヴァッジョは、明暗法をさらに極端にした**テネブリズム**（暗闇主義）を生み出します。形をやさしくなでる柔らかな光はもうありません。あるのは濃い闇と、そこから彫刻のような力強さで浮かび上がる体です。光は人工的で、舞台のスポットライトのようです。"
         },
         {
           "type": "image",
           "asset": "caravaggio_tenebrism_chiaroscuro_painting",
           "ratio": "4:3",
-          "caption": "Dans le ténébrisme, le noir concentre le regard sur le drame."
+          "caption": "テネブリズムでは、黒が見る人の視線をドラマに集中させます。"
         },
         {
           "type": "funFact",
-          "text": "Pour obtenir cet éclairage, il travaillait dans un atelier aux murs noirs, percé d'une seule petite lucarne en hauteur."
+          "text": "この照明を得るため、彼は壁を黒く塗り、高い位置に小さな天窓を一つだけ開けたアトリエで制作していました。"
         },
         {
           "type": "paragraph",
-          "text": "En supprimant décors et paysages, il force le regard vers les visages et les gestes. Cette lumière sert aussi la [[対抗宗教改革]] : l'Église catholique veut émouvoir les fidèles. Chez lui, la lumière devient la grâce qui frappe l'âme sans prévenir."
+          "text": "背景や風景を省くことで、視線は顔と身ぶりに向かいます。この光は[[対抗宗教改革]]にも役立ちます。カトリック教会は、信者の心を揺さぶりたいのです。彼の絵では、光は予告なく魂を打つ恩寵になります。この光が見る人の胸に直接届きます。"
         }
       ]
     },
     {
       "id": "course_123_le_caravage_et_le_clair_obscur_p3",
-      "title": "Des saints qui ressemblent à la rue",
+      "title": "街の人々のような姿の聖人たち",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ce qui scandalise le plus, c'est son refus d'idéaliser. Il choisit ses modèles dans la rue : ouvriers, mendiants, courtisanes. La Vierge et les apôtres ont des rides, des pieds sales, des corps fatigués."
+          "text": "いちばんの物議をかもしたのは、理想化を拒んだことです。モデルは街で選びます。労働者、物乞い、娼婦などです。聖母や使徒にも、しわがあり、足は汚れ、体は疲れ切っています。"
         },
         {
           "type": "image",
           "asset": "caravaggio_madonna_dei_pellegrini_painting",
           "ratio": "4:3",
-          "caption": "La Madone des Pèlerins : des pieds nus et sales au premier plan."
+          "caption": "『ロレートの聖母』：画面の手前に描かれた、汚れた裸足。"
         },
         {
           "type": "paragraph",
-          "text": "*La Mort de la Vierge* est refusée : on dit qu'il aurait pris pour modèle une femme noyée. *La Madone des Pèlerins* choque par les pieds sales des pauvres agenouillés. Il refuse les artifices du [[マニエリスム]], ce style gracieux et déformé qui l'a précédé. Pour lui, le salut s'adresse d'abord aux humbles."
+          "text": "*『聖母の死』*は、受け取りを拒まれます。溺死した女性をモデルにしたと言われています。*『ロレートの聖母』*は、ひざまずく貧しい人々の汚れた足で人々に衝撃を与えます。彼は、先行していた優美でゆがんだ様式、[[マニエリスム]]のわざとらしさを拒みます。彼にとって、救いはまず謙虚な人々に向けられるものでした。"
         },
         {
           "type": "funFact",
-          "text": "Sa première version de *Saint Matthieu et l'Ange* montrait un évangéliste aux pieds sales, l'air inculte. Les commanditaires exigèrent qu'il la repeigne."
+          "text": "*『聖マタイと天使』*の最初の版には、足が汚れ、教養のなさそうな顔をした福音書記者が描かれていました。注文主は描き直しを求めました。"
         }
       ]
     },
     {
       "id": "course_123_le_caravage_et_le_clair_obscur_p4",
-      "title": "Le caravagisme : une Europe sous influence",
+      "title": "カラヴァッジズム：影響を受けたヨーロッパ",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Il n'a pas fondé d'école, mais son style se répand : le **caravagisme**. [[アルテミジア・ジェンティレスキ]] en Italie, Georges de La Tour en France, Zurbarán en Espagne, Rubens dans les Flandres. Plus tard, **Rembrandt** héritera de sa poésie de l'ombre, **Vélasquez** de sa dignité du peuple."
+          "text": "彼は画派をつくったわけではありませんが、その作風は広まります。これが**カラヴァッジズム**です。イタリアの[[アルテミジア・ジェンティレスキ]]、フランスのジョルジュ・ド・ラ・トゥール、スペインのスルバラン、フランドルのルーベンスなどがいます。のちに**レンブラント**は影の詩情を、**ベラスケス**は庶民の尊厳を受け継ぎます。"
         },
         {
           "type": "timeline",
           "events": [
             {
               "date": "1600",
-              "title": "Chapelle Contarelli",
-              "detail": "Rome découvre La Vocation de saint Matthieu."
+              "title": "コンタレッリ礼拝堂",
+              "detail": "ローマが『聖マタイの召命』に出会います。"
             },
             {
               "date": "1606",
-              "title": "Meurtre et exil",
-              "detail": "Le Caravage fuit Rome, condamné à mort."
+              "title": "殺人と亡命",
+              "detail": "死刑を宣告され、カラヴァッジョはローマから逃げます。"
             },
             {
               "date": "1610",
-              "title": "Mort à Porto Ercole",
-              "detail": "Il meurt à 38 ans, juste avant la grâce."
+              "title": "ポルト・エルコレで死去",
+              "detail": "38歳で亡くなります。恩赦の直前でした。"
             }
           ]
         },
         {
           "type": "paragraph",
-          "text": "Oublié pendant deux siècles, il est redécouvert au XXe. Son cadrage serré et sa lumière influencent encore le cinéma et la photographie."
+          "text": "2世紀のあいだ忘れられていましたが、二十世紀に再発見されます。人物に迫る構図と光は、今も映画や写真に影響を与えています。"
         },
         {
           "type": "takeaway",
-          "text": "Le Caravage (1571-1610) impose le ténébrisme et un réalisme social radical. En peignant le sacré avec des modèles de la rue, il devient le père spirituel de la peinture baroque."
+          "text": "カラヴァッジョ（1571〜1610年）は、テネブリズムと、徹底した社会的な写実を確立しました。街のモデルを使って聖なる世界を描くことで、バロック絵画の精神的な父になります。"
         }
       ]
     }

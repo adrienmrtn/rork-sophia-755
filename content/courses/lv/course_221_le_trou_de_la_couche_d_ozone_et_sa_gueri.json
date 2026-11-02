@@ -1,136 +1,136 @@
 {
   "id": "course_221_le_trou_de_la_couche_d_ozone_et_sa_gueri",
-  "title": "Comment le monde s'est-il uni pour guérir la couche d'ozone ?",
+  "title": "Kā pasaule vienojās, lai dziedinātu ozona slāni?",
   "subtitle": "1985-2065",
   "subject": "comprendreLeMonde",
-  "subcategory": "Environnement & avenir",
-  "description": "Un trou géant repéré au-dessus de l'Antarctique, un traité signé par 197 pays, et une planète qui guérit. Voici **la seule grande crise écologique** que l'humanité a déjà résolue.",
+  "subcategory": "Vide un nākotne",
+  "description": "Milzīgs caurums, kas pamanīts virs Antarktīdas, 197 valstu parakstīts līgums un planēta, kas dziedē brūces. Lūk, **vienīgā lielā ekoloģiskā krīze**, ko cilvēce līdz šim ir atrisinājusi.",
   "hero": {
     "image": "le_trou_de_la_couche_d_ozone",
     "ratio": "16:9",
-    "hook": "Un trou dans le ciel, découvert par hasard, et refermé par un traité signé par le monde entier."
+    "hook": "Caurums debesīs, atklāts nejauši un aizvērts ar līgumu, ko parakstīja visa pasaule."
   },
   "sections": [
     {
       "id": "course_221_le_trou_de_la_couche_d_ozone_et_sa_gueri_intro",
-      "title": "Introduction",
+      "title": "Ievads",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En 1985, des scientifiques britanniques postés en Antarctique n'en croient pas leurs mesures : une partie du ciel semble avoir perdu sa protection contre le Soleil. Ce n'était pas une erreur d'appareil, mais un vrai trou dans la couche d'ozone, ce bouclier invisible qui nous protège tous. Ce cours raconte comment le monde a découvert ce danger et, fait rare, comment il a réussi à le réparer."
+          "text": "1985. gadā Antarktīdā izvietotie britu zinātnieki netic saviem mērījumiem: šķiet, ka kādai debess daļai ir zudusi aizsardzība pret Sauli. Tā nebija ierīces kļūda, bet īsts caurums ozona slānī, šajā neredzamajā vairogā, kas sargā mūs visus. Šis kurss stāsta, kā pasaule atklāja šīs briesmas un, kas ir reti, kā tai izdevās tās novērst."
         }
       ]
     },
     {
       "id": "course_221_le_trou_de_la_couche_d_ozone_et_sa_gueri_p1",
-      "title": "Un bouclier fragile, un poison bien pratique",
+      "title": "Trausls vairogs un ērta inde",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La **couche d'ozone** se trouve entre 15 et 35 kilomètres d'altitude, dans la [[Stratosfēra]], et absorbe la plupart des **UV-B**, ces rayons du Soleil assez puissants pour abîmer notre peau et l'ADN des cellules vivantes. Dans les années 1930, l'industrie invente les **chlorofluorocarbures**, ou [[Hlorfluorogļūdeņraži (HFO)]] : des gaz jugés parfaits, pas chers, qu'on met partout, dans les réfrigérateurs, les climatiseurs et les bombes aérosols."
+          "text": "**Ozona slānis** atrodas 15 līdz 35 kilometru augstumā: tā ir [[Stratosfēra]]. Tas absorbē lielāko daļu **UV-B** staru, kas ir pietiekami spēcīgi, lai bojātu mūsu ādu un dzīvo šūnu DNS. 1930. gados rūpniecība izgudro jaunu gāzu grupu: **[[hlorfluorogļūdeņraži]]**, jeb CFC. Tās uzskatīja par ideālām un lētām, un lietoja visur: ledusskapjos, gaisa kondicionieros un aerosola baloniņos."
         },
         {
           "type": "paragraph",
-          "text": "Le problème, c'est que ces gaz sont trop stables : au lieu de se dégrader près du sol, ils montent jusqu'à la stratosphère. En 1974, les chimistes Mario Molina et Frank Sherwood Rowland alertent : sous l'effet du Soleil, les CFC libèrent du chlore, qui détruit l'ozone. Ils recevront le prix Nobel en 1995, mais presque personne ne les écoute alors."
+          "text": "Problēma ir tā, ka šīs gāzes ir pārāk stabilas: tā vietā, lai noārdītos tuvu zemei, tās paceļas līdz stratosfērai. 1974. gadā ķīmiķi Mario Molina un Frenks Šervuds Roulends brīdina: Saules ietekmē CFC atbrīvo hloru, kas iznīcina ozonu. Nobela prēmiju viņi saņems 1995. gadā, bet tolaik gandrīz neviens viņus neklausa."
         }
       ]
     },
     {
       "id": "course_221_le_trou_de_la_couche_d_ozone_et_sa_gueri_p2",
-      "title": "1985 : le choc, puis l'accord mondial",
+      "title": "1985. gads: šoks un pasaules vienošanās",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En 1985, le British Antarctic Survey confirme la nouvelle : chaque printemps, un trou spectaculaire s'ouvre dans la couche d'ozone au-dessus de l'[[Antarktīda]]. Les satellites de la NASA avaient déjà ces données, mais leurs logiciels les avaient écartées comme trop extrêmes pour être vraies."
+          "text": "1985. gadā British Antarctic Survey apstiprina ziņu: katru pavasari ozona slānī atveras iespaidīgs caurums. Notikuma vieta ir [[Antarktīda]]. NASA satelītiem šie dati jau bija, taču to programmatūra bija tos izmetusi kā pārāk ekstremālus, lai būtu patiesi."
         },
         {
           "type": "image",
           "asset": "ozone_hole_antarctica_satellite_image_nasa",
           "ratio": "16:9",
-          "caption": "Le trou d'ozone au-dessus de l'Antarctique, vu par satellite."
+          "caption": "Ozona caurums virs Antarktīdas satelīta attēlā."
         },
         {
           "type": "paragraph",
-          "text": "La menace pour la santé humaine est prise très au sérieux, et le monde réagit vite. En 1987, les pays signent le [[Monreālas protokols (1987)]], un traité qui organise l'arrêt progressif des CFC. Il ne compte que 24 pays au départ ; aujourd'hui, il en réunit **197**, la totalité des membres des Nations unies."
+          "text": "Draudus cilvēku veselībai uztver ļoti nopietni, un pasaule reaģē ātri. 1987. gadā valstis paraksta līgumu: [[Monreālas protokols (1987)]]. Tas paredz CFC pakāpenisku izbeigšanu. Sākumā to parakstīja tikai 24 valstis, bet tagad tajā ir **197**, visi Apvienoto Nāciju Organizācijas dalībnieki."
         },
         {
           "type": "funFact",
-          "text": "Le Protocole de Montréal est le seul traité de l'histoire des Nations unies ratifié par tous les pays du monde, sans exception."
+          "text": "Monreālas protokols ir vienīgais ANO vēsturē līgums, ko ratificējušas absolūti visas pasaules valstis."
         },
         {
           "type": "paragraph",
-          "text": "Ce succès tient à une règle claire pour tous et à un fonds commun aidant les pays pauvres à changer leurs machines. Même les industriels, d'abord contre, ont fini par suivre en trouvant des produits de remplacement rentables."
+          "text": "Šie panākumi balstās uz visiem skaidru noteikumu un kopīgu fondu, kas palīdz nabadzīgākām valstīm nomainīt savas iekārtas. Pat rūpnieki, kas sākumā bija pret, galu galā pievienojās, atrodot ienesīgus aizstājējproduktus."
         }
       ]
     },
     {
       "id": "course_221_le_trou_de_la_couche_d_ozone_et_sa_gueri_p3",
-      "title": "Pourquoi le climat, c'est plus dur",
+      "title": "Kāpēc klimata gadījumā ir grūtāk",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "On cite souvent ce succès pour dire qu'on pourrait résoudre le changement climatique de la même façon. Mais les deux problèmes diffèrent : le trou d'ozone venait d'un petit nombre de gaz fabriqués par un petit nombre d'usines, facile à cibler. Le [[Oglekļa dioksīds (CO₂)]], lui, sort de presque tout ce que fait notre société moderne, se déplacer, chauffer, cultiver, construire : réduire le CO₂ demande de changer toute l'économie mondiale, pas juste une poignée d'usines chimiques."
+          "text": "Šos panākumus bieži min kā pierādījumu, ka klimata pārmaiņas varētu atrisināt tāpat. Taču abas problēmas atšķiras: ozona caurums radās no neliela skaita gāzu, ko ražoja neliels skaits rūpnīcu, un tās bija viegli apkarot. Savukārt [[Oglekļa dioksīds (CO₂)]] rodas gandrīz no visa, ko dara mūsu mūsdienu sabiedrība: pārvietošanās, apkure, lauksaimniecība, būvniecība. Lai samazinātu CO₂, jāpārveido visa pasaules ekonomika, nevis tikai dažas ķīmiskās rūpnīcas."
         },
         {
           "type": "paragraph",
-          "text": "Bonne nouvelle au passage : les CFC étaient aussi de puissants gaz à effet de serre. En les interdisant, le Protocole de Montréal a donc aussi freiné le réchauffement climatique, sans que ce soit son but premier."
+          "text": "Starp citu, ir arī laba ziņa: CFC bija arī spēcīgas siltumnīcefekta gāzes. Tās aizliedzot, Monreālas protokols palīdzēja bremzēt arī globālo sasilšanu, lai gan tas nebija tā galvenais mērķis."
         },
         {
           "type": "funFact",
-          "text": "Sans ce traité, les CFC auraient pu ajouter environ 1°C de réchauffement supplémentaire à la Terre d'ici 2050, uniquement à cause de leur effet de serre."
+          "text": "Bez šī līguma CFC līdz 2050. gadam varēja pievienot Zemei vēl aptuveni 1°C sasilšanas, vienīgi sava siltumnīcefekta dēļ."
         }
       ]
     },
     {
       "id": "course_221_le_trou_de_la_couche_d_ozone_et_sa_gueri_p4",
-      "title": "Une guérison lente, mais bien réelle",
+      "title": "Lēna, bet īsta dziedēšana",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le chlore déjà monté dans l'atmosphère met du temps à disparaître : il a fallu attendre le milieu des années 1990 pour voir les niveaux de gaz nocifs se stabiliser. Depuis le début des années 2000, la guérison est claire et mesurable."
+          "text": "Atmosfērā jau uzkāpušajam hloram vajag laiku, lai izzustu: kaitīgo gāzu līmenis stabilizējās tikai 1990. gadu vidū. Kopš 2000. gadu sākuma dziedēšana ir skaidra un izmērāma."
         },
         {
           "type": "timeline",
           "events": [
             {
               "date": "1974",
-              "title": "L'alerte scientifique",
-              "detail": "Molina et Rowland découvrent le lien entre CFC et ozone."
+              "title": "Zinātniskais brīdinājums",
+              "detail": "Molina un Roulends atklāj sakarību starp CFC un ozonu."
             },
             {
               "date": "1985",
-              "title": "Le trou est confirmé",
-              "detail": "Le British Antarctic Survey publie ses données."
+              "title": "Caurums apstiprināts",
+              "detail": "British Antarctic Survey publicē savus datus."
             },
             {
               "date": "1987",
-              "title": "Protocole de Montréal",
-              "detail": "Signature du traité, aujourd'hui ratifié par 197 pays."
+              "title": "Monreālas protokols",
+              "detail": "Līguma parakstīšana; tagad to ratificējušas 197 valstis."
             },
             {
               "date": "2000",
-              "title": "Début de la guérison",
-              "detail": "Les niveaux de gaz nocifs se stabilisent enfin."
+              "title": "Dziedēšanas sākums",
+              "detail": "Kaitīgo gāzu līmenis beidzot stabilizējas."
             },
             {
               "date": "2065",
-              "title": "Retour à la normale (prévu)",
-              "detail": "La couche d'ozone devrait retrouver son niveau de 1980."
+              "title": "Atgriešanās pie normas (prognoze)",
+              "detail": "Ozona slānim vajadzētu atgūt 1980. gada līmeni."
             }
           ]
         },
         {
           "type": "paragraph",
-          "text": "Si le traité continue d'être respecté, la couche d'ozone devrait retrouver son état de 1980 vers **2065-2070**, évitant des millions de cancers de la peau et de cataractes. Il faut rester vigilant : des émissions clandestines de CFC ont été repérées en Asie de l'Est il y a quelques années, preuve qu'un accord mondial ne fonctionne que s'il est surveillé en permanence."
+          "text": "Ja līgumu turpinās ievērot, ozona slānim vajadzētu atgūt 1980. gada stāvokli ap **2065-2070**. gadu, novēršot miljoniem ādas vēža un kataraktas gadījumu. Jāpaliek modriem: pirms dažiem gadiem Austrumāzijā konstatētas slepenas CFC emisijas, un tas pierāda, ka pasaules vienošanās darbojas tikai tad, ja to nepārtraukti uzrauga."
         },
         {
           "type": "takeaway",
-          "text": "Le trou d'ozone reste la seule grande crise environnementale entièrement résolue par une coopération mondiale : un traité signé en 1987 par 197 pays, aux résultats scientifiquement mesurables."
+          "text": "Ozona caurums joprojām ir vienīgā lielā vides krīze, ko pilnībā atrisinājusi pasaules sadarbība: 1987. gadā 197 valstu parakstīts līgums ar zinātniski izmērāmiem rezultātiem."
         }
       ]
     }

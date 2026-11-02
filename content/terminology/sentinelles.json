@@ -1,5 +1,5 @@
 {
- "_readme": "Chaînes témoins : les 30 textes d'interface qui ont le plus trahi pendant l'audit (docs/audit-traductions-naturel.md), avec leur traduction attendue dans chaque langue, relue par un relecteur natif puis un contradicteur (30/10/2026). scripts/i18n_gate.py refuse tout écart, sur iOS comme sur Android. Pour changer une valeur volontairement : la modifier ici dans le même commit que le texte, en disant pourquoi (docs/processus-traduction.md).",
+ "_readme": "Chaînes témoins : les 30 textes d'interface qui ont le plus trahi pendant l'audit (docs/audit-traductions-naturel.md), avec leur traduction attendue dans chaque langue, relue par un relecteur natif puis un contradicteur (30/10/2026). scripts/i18n_gate.py refuse tout écart, sur iOS comme sur Android. Pour changer une valeur volontairement : la modifier ici dans le même commit que le texte, en disant pourquoi (docs/processus-traduction.md). Lituanien, letton et japonais ajoutés le 01/11/2026 : leurs 30 chaînes étaient restées en français dans les tables d'interface ; elles ont été traduites en même temps que les chaînes témoins.",
  "cles": {
   "paywall.error.unavailable": {
    "fr": "Impossible de charger l'offre",
@@ -28,7 +28,10 @@
    "ar": "تعذّر تحميل العرض",
    "he": "לא ניתן לטעון את ההצעה",
    "fi": "Tarjousta ei voitu ladata",
-   "et": "Pakkumist ei saa laadida"
+   "et": "Pakkumist ei saa laadida",
+   "lt": "Nepavyko įkelti pasiūlymo",
+   "lv": "Nevar ielādēt piedāvājumu",
+   "ja": "オファーを読み込めませんでした"
   },
   "onboarding.trial.trialEnds": {
    "fr": "Fin de l'essai",
@@ -57,7 +60,10 @@
    "ar": "نهاية التجربة",
    "he": "סיום תקופת הניסיון",
    "fi": "Kokeilu päättyy",
-   "et": "Prooviperiood lõpeb"
+   "et": "Prooviperiood lõpeb",
+   "lt": "Bandomojo laikotarpio pabaiga",
+   "lv": "Izmēģinājuma beigas",
+   "ja": "無料トライアル終了"
   },
   "onboardingV2.trial.step2.detail": {
    "fr": "On te préviendra par notification. Annulable en 15 secondes.",
@@ -86,7 +92,10 @@
    "ar": "سنذكّرك بإشعار. الإلغاء لا يستغرق سوى 15 ثانية.",
    "he": "נזכיר לך בהתראה. הביטול לוקח 15 שניות.",
    "fi": "Saat muistutuksen ilmoituksena. Peruminen onnistuu 15 sekunnissa.",
-   "et": "Tuletame sulle märguandega meelde. Tühistamine võtab vaid 15 sekundit."
+   "et": "Tuletame sulle märguandega meelde. Tühistamine võtab vaid 15 sekundit.",
+   "lt": "Gausi pranešimą. Atšaukti galima per 15 sekundžių.",
+   "lv": "Mēs tevi brīdināsim ar paziņojumu. Atcelt var 15 sekundēs.",
+   "ja": "通知でお知らせします。解約は15秒で完了します。"
   },
   "onboarding.premiumTrial.cta": {
    "fr": "Débloquer mon essai",
@@ -115,7 +124,10 @@
    "ar": "ابدأ تجربتك المجانية",
    "he": "התחל ניסיון חינם",
    "fi": "Aloita kokeilujakso",
-   "et": "Alusta prooviperioodi"
+   "et": "Alusta prooviperioodi",
+   "lt": "Atrakinti bandomąjį laikotarpį",
+   "lv": "Atbloķēt manu izmēģinājumu",
+   "ja": "無料トライアルを解放"
   },
   "onboarding.wasted.daysComplete": {
    "fr": "Soit %@ complets.",
@@ -144,7 +156,10 @@
    "ar": "أي %@ كاملة.",
    "he": "כלומר %@ שלמים.",
    "fi": "Eli kokonaiset %@.",
-   "et": "See on tervelt %@."
+   "et": "See on tervelt %@.",
+   "lt": "Tai pilnos %@.",
+   "lv": "Tas ir %@ bez pārtraukuma.",
+   "ja": "つまり、丸%@です。"
   },
   "onboarding.phone.intensity.light": {
    "fr": "Léger",
@@ -173,7 +188,10 @@
    "ar": "خفيف",
    "he": "קל",
    "fi": "Kevyt",
-   "et": "Kerge"
+   "et": "Kerge",
+   "lt": "Žemas",
+   "lv": "Zema",
+   "ja": "少なめ"
   },
   "onboarding.showcase.courses.quizCount": {
    "fr": "%d quiz",
@@ -202,7 +220,10 @@
    "ar": "%d اختبارات",
    "he": "%d חידונים",
    "fi": "%d visaa",
-   "et": "%d viktoriini"
+   "et": "%d viktoriini",
+   "lt": "Viktorinų: %d",
+   "lv": "Viktorīnas: %d",
+   "ja": "%d個のクイズ"
   },
   "paywall.benefit.quiz": {
    "fr": "Tous les quiz pour mémoriser",
@@ -231,7 +252,10 @@
    "ar": "كل الاختبارات لتتذكر أكثر",
    "he": "כל החידונים, כדי לזכור יותר",
    "fi": "Kaikki visat, jotta muistat paremmin",
-   "et": "Kõik viktoriinid, et õpitu meelde jätta"
+   "et": "Kõik viktoriinid, et õpitu meelde jätta",
+   "lt": "Visos viktorinos, kad įsimintum",
+   "lv": "Visas viktorīnas, lai iegaumētu",
+   "ja": "すべてのクイズで、しっかり記憶に残す"
   },
   "onboarding.trial.badge": {
    "fr": "Offre de bienvenue",
@@ -260,7 +284,10 @@
    "ar": "عرض ترحيبي",
    "he": "הטבת הצטרפות",
    "fi": "Tervetuliaistarjous",
-   "et": "Tervituspakkumine"
+   "et": "Tervituspakkumine",
+   "lt": "Pasveikinimo pasiūlymas",
+   "lv": "Sveiciena piedāvājums",
+   "ja": "ウェルカムオファー"
   },
   "offer.expiresIn": {
    "fr": "Expire dans",
@@ -289,7 +316,10 @@
    "ar": "تنتهي خلال",
    "he": "פג תוקף בעוד",
    "fi": "Aikaa jäljellä",
-   "et": "Lõpeb"
+   "et": "Lõpeb",
+   "lt": "Baigiasi po",
+   "lv": "Beidzas pēc",
+   "ja": "終了まで"
   },
   "paywall.premiumColumn": {
    "fr": "Premium",
@@ -318,7 +348,10 @@
    "ar": "Premium",
    "he": "Premium",
    "fi": "Premium",
-   "et": "Premium"
+   "et": "Premium",
+   "lt": "Premium",
+   "lv": "Premium",
+   "ja": "Premium"
   },
   "paywall.unlock.unlimited": {
    "fr": "Cours illimités",
@@ -347,7 +380,10 @@
    "ar": "دروس غير محدودة",
    "he": "קורסים ללא הגבלה",
    "fi": "Rajattomasti kursseja",
-   "et": "Piiramatult kursusi"
+   "et": "Piiramatult kursusi",
+   "lt": "Neriboti kursai",
+   "lv": "Neierobežoti kursi",
+   "ja": "コース無制限"
   },
   "onboardingV2.pw.startTrial": {
    "fr": "Démarrer mon essai de {n} jours",
@@ -376,7 +412,10 @@
    "ar": "ابدأ تجربتك المجانية لمدة {n} أيام",
    "he": "התחל {n} ימי ניסיון חינם",
    "fi": "Aloita {n} päivän kokeilu",
-   "et": "Alusta {n}-päevast prooviperioodi"
+   "et": "Alusta {n}-päevast prooviperioodi",
+   "lt": "Pradėti {n} d. bandomąjį laikotarpį",
+   "lv": "Sākt {n} dienu izmēģinājumu",
+   "ja": "{n}日間のトライアルを始める"
   },
   "collections.path": {
    "fr": "Ton parcours",
@@ -405,7 +444,10 @@
    "ar": "مسارك",
    "he": "המסלול שלך",
    "fi": "Polkusi",
-   "et": "Sinu teekond"
+   "et": "Sinu teekond",
+   "lt": "Tavo kelias",
+   "lv": "Tavs ceļš",
+   "ja": "あなたの学習ルート"
   },
   "paywall.plan.monthly": {
    "fr": "Mensuel",
@@ -434,7 +476,10 @@
    "ar": "شهري",
    "he": "חודשי",
    "fi": "Kuukausittain",
-   "et": "Igakuine"
+   "et": "Igakuine",
+   "lt": "Mėnesinė",
+   "lv": "Mēneša",
+   "ja": "月額"
   },
   "onboarding.trial.allQuizzes": {
    "fr": "Tous les quiz",
@@ -463,7 +508,10 @@
    "ar": "جميع الاختبارات",
    "he": "כל החידונים",
    "fi": "Kaikki visat",
-   "et": "Kõik viktoriinid"
+   "et": "Kõik viktoriinid",
+   "lt": "Visos viktorinos",
+   "lv": "Visas viktorīnas",
+   "ja": "すべてのクイズ"
   },
   "paywall.unlock.quiz": {
    "fr": "Quiz personnalisés",
@@ -492,7 +540,10 @@
    "ar": "اختبارات مخصصة",
    "he": "חידונים מותאמים אישית",
    "fi": "Yksilölliset visat",
-   "et": "Isikupärastatud viktoriinid"
+   "et": "Isikupärastatud viktoriinid",
+   "lt": "Personalizuotos viktorinos",
+   "lv": "Personalizētas viktorīnas",
+   "ja": "パーソナライズされたクイズ"
   },
   "path.quiz.title": {
    "fr": "Quiz du niveau %d",
@@ -521,7 +572,10 @@
    "ar": "اختبار المستوى %d",
    "he": "חידון רמה %d",
    "fi": "Tason %d visa",
-   "et": "Taseme %d viktoriin"
+   "et": "Taseme %d viktoriin",
+   "lt": "%d lygio viktorina",
+   "lv": "%d. līmeņa viktorīna",
+   "ja": "レベル%dのクイズ"
   },
   "trial.endingSoon.banner": {
    "fr": "Dans 1 jour, tu perds l'accès à Sophia Premium.",
@@ -550,7 +604,10 @@
    "ar": "بعد يوم واحد، ستفقد وصولك إلى Sophia Premium.",
    "he": "בעוד יום אחד תאבד את הגישה ל-Sophia Premium.",
    "fi": "Yhden päivän kuluttua menetät pääsyn Sophia Premiumiin.",
-   "et": "1 päeva pärast kaotad juurdepääsu Sophia Premiumile."
+   "et": "1 päeva pärast kaotad juurdepääsu Sophia Premiumile.",
+   "lt": "Po 1 dienos prarasi prieigą prie Sophia Premium.",
+   "lv": "Pēc 1 dienas tu zaudēsi piekļuvi Sophia Premium.",
+   "ja": "あと1日で、Sophia Premiumを利用できなくなります。"
   },
   "onboarding.trial.notifyTitle": {
    "fr": "On te préviendra\n1 jour avant la fin\nde ton essai gratuit",
@@ -579,7 +636,10 @@
    "ar": "سنُذكّرك\nقبل يوم من نهاية\nتجربتك المجانية",
    "he": "תקבל תזכורת\nיום לפני סיום\nתקופת הניסיון החינמית",
    "fi": "Saat muistutuksen\npäivää ennen\nilmaisen kokeilusi päättymistä",
-   "et": "Saad meeldetuletuse\n1 päev enne tasuta\nprooviperioodi lõppu"
+   "et": "Saad meeldetuletuse\n1 päev enne tasuta\nprooviperioodi lõppu",
+   "lt": "Priminsime tau likus\n1 dienai iki nemokamo\nbandomojo laikotarpio pabaigos",
+   "lv": "Mēs tevi brīdināsim\n1 dienu pirms bezmaksas\nizmēģinājuma beigām",
+   "ja": "無料トライアル終了の\n1日前に\nお知らせします"
   },
   "paywall.freeSubjects": {
    "fr": "Tes 3 matières gratuites",
@@ -608,7 +668,10 @@
    "ar": "3 مواد مجانية لك",
    "he": "3 התחומים החינמיים שלך",
    "fi": "3 ilmaista aihettasi",
-   "et": "Sinu 3 tasuta ainet"
+   "et": "Sinu 3 tasuta ainet",
+   "lt": "Tavo 3 nemokami dalykai",
+   "lv": "Tavi 3 bezmaksas priekšmeti",
+   "ja": "無料の3科目"
   },
   "offer.feature2": {
    "fr": "Quiz interactifs illimités",
@@ -637,7 +700,10 @@
    "ar": "اختبارات تفاعلية غير محدودة",
    "he": "חידונים אינטראקטיביים ללא הגבלה",
    "fi": "Rajattomasti interaktiivisia visoja",
-   "et": "Piiramatult interaktiivseid viktoriine"
+   "et": "Piiramatult interaktiivseid viktoriine",
+   "lt": "Neribotos interaktyvios viktorinos",
+   "lv": "Neierobežotas interaktīvas viktorīnas",
+   "ja": "インタラクティブなクイズが無制限"
   },
   "quiz.correctAnswers": {
    "fr": "bonnes réponses",
@@ -666,7 +732,10 @@
    "ar": "الإجابات الصحيحة",
    "he": "תשובות נכונות",
    "fi": "oikeaa vastausta",
-   "et": "õiget vastust"
+   "et": "õiget vastust",
+   "lt": "teisingi atsakymai",
+   "lv": "pareizās atbildes",
+   "ja": "正解"
   },
   "collections.badge.complete": {
    "fr": "TERMINÉE",
@@ -695,7 +764,10 @@
    "ar": "مكتملة",
    "he": "הושלם",
    "fi": "VALMIS",
-   "et": "LÄBITUD"
+   "et": "LÄBITUD",
+   "lt": "BAIGTAS",
+   "lv": "PABEIGTA",
+   "ja": "完了"
   },
   "onboarding.graph.tagline": {
    "fr": "Sophia accélère ta culture\nde manière exponentielle.",
@@ -724,7 +796,10 @@
    "ar": "تنمّي Sophia ثقافتك\nبوتيرة متسارعة.",
    "he": "Sophia מגדילה את הידע הכללי שלך\nבקצב אקספוננציאלי.",
    "fi": "Sophia kasvattaa sivistystäsi\neksponentiaalisesti.",
-   "et": "Sophia kasvatab sinu teadmisi\nhüppeliselt."
+   "et": "Sophia kasvatab sinu teadmisi\nhüppeliselt.",
+   "lt": "Sophia eksponentiškai\ndidina tavo žinias.",
+   "lv": "Sophia eksponenciāli\nveicina tavas zināšanas.",
+   "ja": "Sophiaなら、教養が\n加速度的に伸びていきます。"
   },
   "onboarding.intro.title": {
    "fr": "Deviens cultivé\nen 10 minutes\npar jour",
@@ -753,7 +828,10 @@
    "ar": "كن أكثر ثقافة\nفي 10 دقائق\nيوميًا",
    "he": "הפוך למשכיל\nב-10 דקות\nביום",
    "fi": "Sivisty\n10 minuutissa\npäivässä",
-   "et": "Avarda silmaringi\n10 minutiga\npäevas"
+   "et": "Avarda silmaringi\n10 minutiga\npäevas",
+   "lt": "Plėsk akiratį\nper 10 minučių\nper dieną",
+   "lv": "Paplašini zināšanas\n10 minūtēs\ndienā",
+   "ja": "1日10分で\n教養を\n身につけよう"
   },
   "onboarding.welcome.title": {
    "fr": "Sophia est ton partenaire pour maîtriser",
@@ -782,7 +860,10 @@
    "ar": "Sophia شريكك لإتقان",
    "he": "Sophia היא השותפה שלך ללימוד",
    "fi": "Sophia on kumppanisi, kun otat haltuun",
-   "et": "Sophia aitab sul tundma õppida"
+   "et": "Sophia aitab sul tundma õppida",
+   "lt": "Sophia padeda išmanyti šias sritis:",
+   "lv": "Sophia palīdz apgūt šādas jomas:",
+   "ja": "Sophiaと一緒に極めよう："
   },
   "paywall.cancelAnytime": {
    "fr": "Annule à tout moment, sans frais.",
@@ -811,7 +892,10 @@
    "ar": "يمكنك الإلغاء في أي وقت، بلا رسوم.",
    "he": "אפשר לבטל בכל רגע, ללא עלות.",
    "fi": "Peruuta milloin tahansa, maksutta.",
-   "et": "Tühista igal ajal tasuta."
+   "et": "Tühista igal ajal tasuta.",
+   "lt": "Atšauk bet kada, be papildomų mokesčių.",
+   "lv": "Atcel jebkurā laikā bez maksas.",
+   "ja": "いつでも無料で解約できます。"
   },
   "paywall.error.network": {
    "fr": "Pas de connexion. Vérifie ton réseau et réessaie.",
@@ -840,7 +924,10 @@
    "ar": "لا يوجد اتصال. تحقق من الشبكة وحاول مرة أخرى.",
    "he": "אין חיבור לאינטרנט. בדוק את הרשת ונסה שוב.",
    "fi": "Ei verkkoyhteyttä. Tarkista yhteys ja yritä uudelleen.",
-   "et": "Ühendus puudub. Kontrolli võrku ja proovi uuesti."
+   "et": "Ühendus puudub. Kontrolli võrku ja proovi uuesti.",
+   "lt": "Nėra ryšio. Patikrink tinklą ir bandyk dar kartą.",
+   "lv": "Nav savienojuma. Pārbaudi tīklu un mēģini vēlreiz.",
+   "ja": "接続できません。ネットワークを確認して、もう一度お試しください。"
   },
   "onboarding.graph.title": {
    "fr": "Ta progression\nculturelle",
@@ -869,7 +956,10 @@
    "ar": "تقدّمك\nالثقافي",
    "he": "ההתקדמות שלך\nבידע כללי",
    "fi": "Sivistyksesi\nkehitys",
-   "et": "Sinu edenemine\nüldteadmistes"
+   "et": "Sinu edenemine\nüldteadmistes",
+   "lt": "Tavo žinių\npažanga",
+   "lv": "Tavs zināšanu\nprogress",
+   "ja": "あなたの\n教養の伸び"
   }
  }
 }

@@ -1,104 +1,104 @@
 {
   "id": "course_85_le_banquet_platon",
-  "title": "« Le Banquet » de Platon : d'où vient l'idée d'âme sœur ?",
-  "subtitle": "IVe siècle av. J.-C.",
+  "title": "Platono „Puota“: iš kur kilo antrosios pusės idėja?",
+  "subtitle": "IV a. pr. Kr.",
   "subject": "litterature",
-  "subcategory": "Grecs & Philosophes antiques",
-  "description": "Autour d'un repas athénien, des convives définissent l'amour. Aristophane raconte les androgynes, Socrate élève le désir vers le Beau. Platon transforme la fête en philosophie.",
+  "subcategory": "Graikai ir antikos filosofai",
+  "description": "Atėniečių puotoje svečiai bando apibrėžti meilę. Aristofanas pasakoja apie androginus, Sokratas troškimą kelia link Grožio. Platonas šventę paverčia filosofija.",
   "hero": {
     "image": "le_banquet_platon",
     "ratio": "16:9",
-    "hook": "Une soirée trop arrosée. Et soudain, la plus belle définition de l'amour."
+    "hook": "Vakaras, kuriame išgerta per daug. Ir staiga pasigirsta gražiausias meilės apibrėžimas."
   },
   "sections": [
     {
       "id": "course_85_le_banquet_platon_intro",
-      "title": "Introduction",
+      "title": "Įvadas",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "À Athènes, au **IVe siècle avant J.-C.**, **Platon**, philosophe grec et disciple de Socrate, écrit le **Banquet**. En grec, on dit *Symposion*. Le cadre est un [[Atėniečių simposionas]], repas masculin après le dîner où l'on mêle vin dilué et discussions intellectuelles. Ce soir-là, le thème imposé est **[[Erosas]]**, la force qui pousse l'âme vers le beau."
+          "text": "Atėnuose, **IV a. pr. Kr.**, graikų filosofas **Platonas**, Sokrato mokinys, parašo **Puotą**. Graikiškai ji vadinasi *Simposionas*. Veiksmo vieta – [[Atėniečių simposionas]]: vyrų puota po vakarienės, kurioje atskiestas vynas maišosi su intelektualiais pokalbiais. Tą vakarą nustatyta tema – **[[Erosas]]**, jėga, kuri traukia sielą link grožio."
         },
         {
           "type": "paragraph",
-          "text": "Chaque convive propose une théorie de l'amour. Le dialogue devient une montée : du corps au beau, du beau aux **Idées**, formes parfaites et éternelles selon Platon. Et **Socrate**, maître de Platon, condamné à mort en 399, comme souvent dans les dialogues platoniciens, a le dernier mot."
+          "text": "Kiekvienas svečias pateikia savo meilės teoriją. Pokalbis virsta kopimu: nuo kūno prie grožio, nuo grožio prie **Idėjų**, tobulų ir amžinų formų, pasak Platono. O **Sokratas**, Platono mokytojas, kuris 399 m. buvo nuteistas mirti, kaip dažnai Platono dialoguose, pasako paskutinį žodį."
         }
       ]
     },
     {
       "id": "course_85_le_banquet_platon_p1",
-      "title": "Boire, parler, rivaliser",
+      "title": "Gerti, kalbėti, varžytis",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le banquet célèbre la victoire du poète **Agathon**, auteur tragique et hôte de la soirée. Les gueules de bois sont encore là, mais on décide de louer Éros plutôt que de trop boire. Les discours s'enchaînent : médecins, poètes, hommes politiques. Chacun projette sa vision du désir. **Phèdre** parle de l'amour comme moteur du courage. **Pausanias** distingue amour noble et amour grossier."
+          "text": "Puota švenčia poeto **Agatono**, tragedijų autoriaus ir vakaro šeimininko, pergalę. Pagirių dar nepraėjo, tačiau nusprendžiama šlovinti Erosą, o ne gerti per daug. Kalbos seka viena paskui kitą: gydytojų, poetų, politikų. Kiekvienas pateikia savo troškimo viziją. **Faidras** kalba apie meilę kaip drąsos variklį. **Pausanijas** skiria kilnią ir žemą meilę."
         },
         {
           "type": "image",
           "asset": "ancient_greek_symposium_banquet_painting",
           "ratio": "4:3",
-          "caption": "Le symposion grec : vin, couronnes et parole comme sport social."
+          "caption": "Graikų simposionas: vynas, vainikai ir žodis kaip socialinis sportas."
         },
         {
           "type": "paragraph",
-          "text": "Platon utilise la fête pour faire de la philosophie sans cours magistral. On rit, on provoque, on se corrige. L'idée avance avec le vin, mais aussi grâce à la règle du jeu : chacun doit défendre Éros devant les autres. La compétition d'éloquence, l'*agon* grec, devient une école de pensée."
+          "text": "Platonas pasitelkia šventę, kad filosofuotų be paskaitos iš katedros. Juokiamasi, provokuojama, vieni kitus taisoma. Mintis vystosi su vynu, bet ir dėl žaidimo taisyklės: kiekvienas turi apginti Erosą kitų akivaizdoje. Iškalbos varžytuvės, graikiškasis *agonas*, tampa mąstymo mokykla."
         }
       ]
     },
     {
       "id": "course_85_le_banquet_platon_p2",
-      "title": "Le mythe des androgynes",
+      "title": "Androginų mitas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le discours le plus célèbre est celui d'**Aristophane**, auteur comique athénien connu pour ses satires. Autrefois, dit-il, les humains étaient doubles. Les [[androginai]] mêlaient caractères masculins et féminins. D'autres couples étaient soudés. **Zeus**, roi des dieux, les a coupés en deux pour les punir. Depuis, chacun cherche sa moitié perdue."
+          "text": "Garsiausia kalba yra **Aristofano**, atėniečių komedijų autoriaus, žinomo dėl satyrų. Kadaise, sako jis, žmonės buvo dvigubi. Tarp jų buvo [[androginai]], jungę vyriškas ir moteriškas savybes. Kitos poros buvo suaugusios. **Dzeusas**, dievų karalius, juos perpjovė pusiau, norėdamas nubausti. Nuo tada kiekvienas ieško savo prarastosios pusės."
         },
         {
           "type": "funFact",
-          "text": "Cette histoire a donné au français l'expression « âme sœur ». Platon la met dans la bouche d'un comique, puis la dépasse : l'amour ne s'arrête pas à retrouver un corps perdu."
+          "text": "Iš šios istorijos prancūzų kalboje atsirado posakis „âme sœur“ (giminingoji siela). Platonas jį įdeda komiko lūpomis, o paskui pranoksta: meilė nesibaigia prarasto kūno radimu."
         },
         {
           "type": "paragraph",
-          "text": "Le mythe est beau, tendre, un peu triste. Il explique le **manque**, ce sentiment d'incomplétude qui pousse à chercher l'autre. Mais Socrate va ailleurs : aimer, ce n'est pas seulement coller deux moitiés. C'est monter vers quelque chose de plus grand que soi."
+          "text": "Mitas gražus, švelnus, truputį liūdnas. Jis paaiškina **trūkumą**, nepilnumo jausmą, kuris verčia ieškoti kito. Tačiau Sokratas žengia toliau: mylėti nereiškia vien sulipdyti dvi puses. Tai kilti link to, kas didesnis už save."
         }
       ]
     },
     {
       "id": "course_85_le_banquet_platon_p3",
-      "title": "Diotime et l'échelle des amours",
+      "title": "Diotima ir meilės kopėčios",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Socrate rapporte l'enseignement de **Diotime**, prêtresse étrangère et figure de sagesse dans le dialogue. Éros n'est ni dieu plein, ni mortel pauvre : c'est un [[daimonas]], être intermédiaire entre dieux et hommes. Il désire ce qui lui manque. L'amoureux part du beau corps, passe aux belles âmes, puis aux belles actions, jusqu'au **Beau en soi**, l'Idée parfaite de la beauté."
+          "text": "Sokratas atpasakoja **Diotimos**, svetimšalės kunigės ir dialogo išminties įsikūnijimo, mokymą. Erosas nėra nei pilnas dievas, nei vargšas mirtingasis: tai [[daimonas]], tarpinė būtybė tarp dievų ir žmonių. Jis trokšta to, ko jam trūksta. Mylintysis pradeda nuo gražaus kūno, pereina prie gražių sielų, paskui prie gražių poelgių, kol pasiekia **patį Grožį**, tobulą grožio Idėją."
         },
         {
           "type": "image",
           "asset": "socrates_alcibiades_banquet_painting",
           "ratio": "4:3",
-          "caption": "Socrate et Alcibiade : le désir peut aussi être une école de l'âme."
+          "caption": "Sokratas ir Alkibiadas: troškimas gali būti ir sielos mokykla."
         },
         {
           "type": "paragraph",
-          "text": "C'est l'[[Platono erosas]], un désir qui éduque. Plus tard, [[Alkibiadas]], jeune homme politique athénien, beau et instable, ivre, fait irruption et loue Socrate comme un Satyre troublant. L'amour philosophique n'abolit pas le trouble charnel. Il le transforme en quête de vérité."
+          "text": "Tai ir yra [[Platono erosas]], troškimas, kuris ugdo. Vėliau įsiveržia girtas [[Alkibiadas]], jaunas atėniečių politikas, gražus ir nepastovus, ir šlovina Sokratą kaip jaudinantį satyrą. Filosofinė meilė nepanaikina kūniško jaudulio. Ji paverčia jį tiesos paieška."
         }
       ]
     },
     {
       "id": "course_85_le_banquet_platon_p4",
-      "title": "Ce que « platonique » a fini par vouloir dire",
+      "title": "Ką galiausiai ėmė reikšti „platoniškas“",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Dans le langage courant, un amour « platonique » signifie sans relation charnelle. Chez Platon, c'est plus riche : le corps est un point de départ, pas une honte. Le Banquet a marqué la théologie chrétienne, la poésie amoureuse de Petrarque ou Ronsard, et la psychologie du désir. Il montre qu'aimer, c'est aussi apprendre à voir."
+          "text": "Kasdienėje kalboje „platoniška“ meilė reiškia meilę be kūniško ryšio. Pas Platoną prasmė turtingesnė: kūnas yra pradžios taškas, o ne gėda. *Puota* paveikė krikščioniškąją teologiją, Petrarkos ar Ronsard'o meilės poeziją ir troškimo psichologiją. Ji rodo, kad mylėti reiškia ir mokytis matyti."
         },
         {
           "type": "takeaway",
-          "text": "Dans le **Banquet**, Platon fait d'une soirée athénienne une échelle : on part du désir sensible pour viser une beauté plus vaste. Aimer, ici, c'est apprendre à voir plus loin que soi."
+          "text": "Veikale **Puota** Platonas atėniečių vakaronę paverčia kopėčiomis: pradedama nuo juslinio troškimo, siekiant platesnio grožio. Mylėti čia reiškia mokytis matyti toliau už save."
         }
       ]
     }

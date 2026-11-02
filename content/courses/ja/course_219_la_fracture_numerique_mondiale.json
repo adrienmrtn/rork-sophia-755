@@ -1,102 +1,102 @@
 {
   "id": "course_219_la_fracture_numerique_mondiale",
-  "title": "Pourquoi un tiers de l'humanité vit-il encore sans Internet ?",
-  "subtitle": "Un tiers de l'humanité hors ligne",
+  "title": "なぜ人類の3分の1は、いまもインターネットを使えないのか？",
+  "subtitle": "人類の3分の1がオフラインの世界",
   "subject": "comprendreLeMonde",
-  "subcategory": "Économie & société",
-  "description": "2,7 milliards de personnes n'ont toujours pas accès à Internet. Dans un monde de plus en plus numérique, cette absence de connexion devient une nouvelle forme d'exclusion.",
+  "subcategory": "経済と社会",
+  "description": "二十七億人が、いまもインターネットを使えずにいます。世界がますますデジタル化するなかで、つながっていないことは、新しい形の排除になりつつあります。",
   "hero": {
     "image": "la_fracture_numerique_mondiale",
     "ratio": "16:9",
-    "hook": "Le Kenya a inventé le paiement par téléphone dix ans avant l'Europe, faute d'agences bancaires."
+    "hook": "ケニアは銀行の支店が足りなかったため、ヨーロッパより十年も早く、携帯電話での決済を生み出しました。"
   },
   "sections": [
     {
       "id": "course_219_la_fracture_numerique_mondiale_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Alors que les sociétés développées vivent une révolution portée par l'intelligence artificielle, une réalité brutale persiste : **2,7 milliards de personnes**, soit environ un tiers de l'humanité, n'ont toujours pas accès à Internet."
+          "text": "先進国の社会が人工知能による大きな変革を経験しているいっぽうで、厳しい現実が残っています。**二十七億人**、つまり人類のおよそ3分の1が、いまもインターネットを使えないままの状態にあるのです。"
         },
         {
           "type": "paragraph",
-          "text": "Cette **fracture numérique** n'est pas qu'un retard technique : elle est devenue une véritable barrière, qui éloigne des millions de personnes de l'éducation, de la santé et de l'économie mondiale. Voici pourquoi elle persiste, et comment certains pays tentent de la combler."
+          "text": "この**デジタル格差**は、単なる技術の遅れではありません。何百万人もの人々を、教育や医療、世界経済から遠ざける、本物の壁になっています。なぜこの格差が続いているのか、そして一部の国がどのように埋めようとしているのかを見ていきましょう。"
         }
       ]
     },
     {
       "id": "course_219_la_fracture_numerique_mondiale_p1",
-      "title": "Une carte du monde à deux vitesses",
+      "title": "世界地図に表れる、二つの速度の世界",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En 2024, environ 5,4 milliards de personnes sont connectées à Internet dans le monde, mais la progression stagne dans les régions les plus pauvres. L'Europe et l'Amérique du Nord dépassent les 90% de connexion, alors que l'Afrique subsaharienne reste à seulement 37%."
+          "text": "2024年、世界でインターネットにつながっている人はおよそ五十四億人ですが、最も貧しい地域では伸びが止まっています。ヨーロッパと北米は接続率が90%を超える一方で、サハラ以南のアフリカは、わずか37%にとどまっています。"
         },
         {
           "type": "paragraph",
-          "text": "Cette exclusion tient à plusieurs causes. D'abord, l'absence d'infrastructures : installer la fibre optique dans certaines régions isolées est jugé trop coûteux par les opérateurs. Ensuite, le prix : dans certains pays, un simple [[スマートフォン]] d'entrée de gamme représente plusieurs mois de salaire. Enfin, la barrière de la langue (environ 70% du contenu du web est en anglais) et le manque de formation numérique limitent l'usage même quand une connexion existe."
+          "text": "この排除には、いくつかの原因があります。まず、インフラが整っていないことです。人里離れた地域に光ファイバーを敷くのは、通信事業者にとって費用がかかりすぎると考えられています。次に、価格の問題です。国によっては、いちばん安い入門機種の[[スマートフォン]]でさえ、数か月分の給料に相当します。そして、言葉の壁（ウェブのコンテンツの約70%は英語です）とデジタル教育の不足のために、接続があっても、実際の利用は限られてしまいます。"
         }
       ]
     },
     {
       "id": "course_219_la_fracture_numerique_mondiale_p2",
-      "title": "Quand le manque d'infrastructure force l'innovation",
+      "title": "インフラの不足が、かえってイノベーションを促すとき",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Cette fracture agit comme un multiplicateur d'inégalités. Dans un monde où le télétravail, le commerce en ligne et l'éducation en ligne (les [[MOOC]]) deviennent la norme, ne pas être connecté revient à devenir invisible pour l'économie mondiale."
+          "text": "この格差は、不平等を何倍にも広げる働きをします。テレワークやネット通販、オンライン教育（[[MOOC]]）が当たり前になる世界では、つながっていないことは、世界経済から見えない存在になることを意味します。"
         },
         {
           "type": "image",
           "asset": "digital_divide_africa_rural_village_smartphone",
           "ratio": "16:9",
-          "caption": "Dans de nombreuses régions rurales, le téléphone mobile reste le seul point d'accès à Internet."
+          "caption": "農村部の多くの地域では、携帯電話がいまもインターネットへの唯一の入り口です。"
         },
         {
           "type": "paragraph",
-          "text": "Le Kenya illustre une autre voie : faute d'agences bancaires suffisantes, le pays a massivement adopté dès 2007 un système de paiement par simple SMS, le [[エムペサ（M-Pesa）]], devançant l'Europe de dix ans. Ce système a permis à des millions de personnes sans compte bancaire de réaliser des transactions sécurisées avec un simple téléphone."
+          "text": "ケニアは、別の道を示しています。銀行の支店が足りなかったため、2007年から、SMSだけで使える決済の仕組み[[エムペサ（M-Pesa）]]が一気に広まり、ヨーロッパより十年早く普及しました。この仕組みのおかげで、銀行口座を持たない何百万人もの人が、携帯電話1台で安全な取引をできるようになりました。"
         },
         {
           "type": "funFact",
-          "text": "Le Kenya a surnommé cette stratégie le « saut-de-mouton » technologique : plutôt que d'installer des infrastructures coûteuses et dépassées, le pays est directement passé à une solution plus moderne et moins chère."
+          "text": "ケニアはこの戦略を、技術の「リープフロッグ（かえる跳び）」と呼びました。高くて時代遅れになったインフラを整えるかわりに、より新しくて安い方法へ、一足飛びに直接移ったのです。"
         }
       ]
     },
     {
       "id": "course_219_la_fracture_numerique_mondiale_p3",
-      "title": "Internet par satellite : une solution sous conditions",
+      "title": "衛星インターネット：条件がそろえば役立つ解決策",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Pour connecter les villages les plus isolés, de nouveaux acteurs misent sur l'espace. Le projet [[スターリンク]] envoie des milliers de satellites en orbite basse, permettant une connexion rapide même dans les déserts ou les hautes montagnes, sans avoir à poser le moindre câble."
+          "text": "最も孤立した村々をつなぐために、新しい担い手たちが宇宙に賭けています。[[スターリンク]]のプロジェクトは、数千機もの衛星を低軌道に打ち上げることで、砂漠や高山でも、ケーブルを1本も敷くことなく、高速の接続を可能にします。"
         },
         {
           "type": "paragraph",
-          "text": "Mais le coût de l'abonnement et du matériel reste aligné sur les standards occidentaux, ce qui rend ces solutions inaccessibles aux populations rurales les plus pauvres sans aide extérieure. Résoudre la fracture numérique ne pourra donc pas se faire par la seule technologie : cela demande aussi une volonté politique pour faire d'Internet un bien accessible à tous."
+          "text": "しかし、利用料金と機器の価格は欧米の水準のままで、外部からの支援がなければ、最も貧しい農村の人々にはとても手が届きません。したがって、デジタル格差の解消は、技術の力だけでは実現できません。インターネットを誰もが使えるものにしようという、政治的な意志も同時に必要になります。それがなければ、問題は解けないのです。"
         }
       ]
     },
     {
       "id": "course_219_la_fracture_numerique_mondiale_p4",
-      "title": "L'intelligence artificielle, un nouveau fossé",
+      "title": "人工知能がもたらす、もう一つの新たな溝",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L'essor rapide de l'intelligence artificielle menace d'aggraver encore cette fracture. Elle exige d'immenses puissances de calcul et de données, des ressources concentrées entre les mains de quelques pays et entreprises. Les populations déconnectées risquent alors de devenir dépendantes d'outils conçus sans tenir compte de leur culture ou de leur langue."
+          "text": "人工知能の急速な発展は、この格差をさらに広げるおそれがあります。人工知能には巨大な計算能力とデータが必要ですが、その資源は少数の国や企業の手に集中しているからです。つながっていない人々は、自分たちの文化や言語が考慮されないまま作られた道具に、頼らざるをえなくなってしまうおそれがあります。"
         },
         {
           "type": "paragraph",
-          "text": "L'écart de compétences entre élèves connectés et non connectés pourrait aussi se creuser très rapidement. L'enjeu des prochaines années ne sera donc plus seulement d'apporter une connexion, mais de garantir un accès juste à la création de valeur numérique, en combinant baisse des coûts, contenus locaux et formation."
+          "text": "つながっている生徒とつながっていない生徒との間の能力差も、急速に広がるかもしれません。これからの課題は、接続を届けることだけではなく、デジタルが生む価値に公平にアクセスできるようにすることです。そのためには、コストの引き下げ、地元に根ざしたコンテンツ、教育を組み合わせる必要があります。"
         },
         {
           "type": "takeaway",
-          "text": "2,7 milliards de personnes restent aujourd'hui exclues d'Internet, une fracture qui risque de s'aggraver avec l'intelligence artificielle. Réduire cet écart demande de transformer la connectivité en un véritable bien accessible à tous, et pas seulement en un produit à vendre."
+          "text": "二十七億人が、いまもインターネットから取り残されており、人工知能の登場でこの格差はさらに深刻になるおそれがあります。この差を縮めるには、接続環境を、売るための商品にとどめず、誰もが使える本物の社会基盤にしていく必要があります。"
         }
       ]
     }

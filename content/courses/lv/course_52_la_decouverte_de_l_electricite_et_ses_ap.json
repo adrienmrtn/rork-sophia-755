@@ -1,106 +1,106 @@
 {
   "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap",
-  "title": "Comment a-t-on découvert l'électricité ?",
-  "subtitle": "De Franklin à Tesla",
+  "title": "Kā tika atklāta elektrība?",
+  "subtitle": "No Franklina līdz Teslam",
   "subject": "sciences",
-  "subcategory": "Découvertes qui ont changé le monde",
-  "description": "L'électricité n'a pas été inventée d'un coup. On l'a d'abord observée, puis comprise, puis domestiquée. Voici les étapes clés.",
+  "subcategory": "Atklājumi, kas mainīja pasauli",
+  "description": "Elektrība netika izgudrota uzreiz. Vispirms to novēroja, tad izprata, tad pieradināja. Lūk, galvenie posmi.",
   "hero": {
     "image": "la_decouverte_de_l_electricite",
     "ratio": "16:9",
-    "hook": "De la foudre au smartphone : deux siècles pour apprivoiser l'invisible."
+    "hook": "No zibens līdz viedtālrunim: divi gadsimti, lai pieradinātu neredzamo."
   },
   "sections": [
     {
       "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_intro",
-      "title": "Introduction",
+      "title": "Ievads",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L'électricité existe dans la nature : foudre, poissons électriques, frottements. Ce qui a changé le monde, c'est d'apprendre à la **produire**, la **transporter** et s'en servir."
+          "text": "Elektrība pastāv dabā: zibens, elektriskās zivis, berze. Pasauli mainīja tas, ka cilvēki iemācījās to **ražot**, **pārvadīt** un izmantot."
         },
         {
           "type": "paragraph",
-          "text": "Cette histoire s'étale sur plus de deux siècles, avec des expériences risquées et de grandes rivalités."
+          "text": "Šis stāsts stiepjas pāri diviem gadsimtiem, ar riskantiem eksperimentiem un lielu sāncensību."
         }
       ]
     },
     {
       "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p1",
-      "title": "Comprendre la foudre",
+      "title": "Zibens izpratne",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Au XVIIIe siècle, **Benjamin Franklin** montre que la foudre est un phénomène électrique. Son expérience du cerf-volant (souvent racontée de façon romancée) vise à prouver que le ciel et la machine à frottement jouent avec la même force."
+          "text": "Astoņpadsmitajā gadsimtā **Bendžamins Franklins** parāda, ka zibens ir elektriska parādība. Viņa pūķa eksperiments (to bieži stāsta pārspīlēti) bija paredzēts, lai pierādītu, ka debesīs un berzes mašīnā darbojas viens un tas pats spēks."
         },
         {
           "type": "image",
           "asset": "benjamin_franklin_kite_lightning_experiment",
           "ratio": "4:3",
-          "caption": "Franklin relie foudre et électricité : une idée dangereuse, mais fondatrice."
+          "caption": "Franklins savieno zibeni un elektrību: bīstama, bet pamatā esoša ideja."
         },
         {
           "type": "paragraph",
-          "text": "On invente aussi le **paratonnerre**, une tige métallique qui offre à la foudre un chemin sûr vers le sol. L'électricité sort du mystère pour entrer dans l'ingénierie."
+          "text": "Tiek izgudrots arī **zibensnovedējs**, metāla stienis, kas zibenim piedāvā drošu ceļu uz zemi. Elektrība iziet no noslēpuma un ienāk inženierijā."
         }
       ]
     },
     {
       "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p2",
-      "title": "Faraday : produire du courant",
+      "title": "Faradejs: strāvas iegūšana",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Au XIXe siècle, **Michael Faraday** montre qu'un aimant en mouvement près d'un fil peut créer un courant électrique. C'est l'**induction**. Sans cette idée, pas de dynamo, pas d'alternateur, pas de centrale électrique moderne."
+          "text": "Deviņpadsmitajā gadsimtā **Maikls Faradejs** parāda, ka kustīgs magnēts pie vada var radīt elektrisko strāvu. Tā ir **indukcija**. Bez šīs idejas nebūtu ne dinamo, ne ģeneratora, ne mūsdienu elektrostacijas."
         },
         {
           "type": "image",
           "asset": "faraday_electromagnetic_induction_experiment",
           "ratio": "4:3",
-          "caption": "Faraday transforme le mouvement et le magnétisme en courant."
+          "caption": "Faradejs pārvērš kustību un magnētismu strāvā."
         },
         {
           "type": "funFact",
-          "text": "Faraday venait d'un milieu modeste et a commencé comme relieur de livres. Il a appris la science en lisant ce qu'il reliaba."
+          "text": "Faradejs nāca no necilas vides un sāka kā grāmatsējējs. Zinātni viņš apguva, lasot to, ko iesēja."
         }
       ]
     },
     {
       "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p3",
-      "title": "Edison contre Tesla",
+      "title": "Edisons pret Teslu",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "À la fin du XIXe siècle, deux camps s'affrontent. **Thomas Edison** pousse le courant continu. **Nikola Tesla** (et la société Westinghouse) défendent le courant alternatif, plus facile à transporter sur de longues distances."
+          "text": "Deviņpadsmitā gadsimta beigās sadursmē saiet divas nometnes. **Tomass Edisons** virza līdzstrāvu. **Nikola Tesla** (un uzņēmums Westinghouse) aizstāv maiņstrāvu, kuru vieglāk pārvadīt lielos attālumos."
         },
         {
           "type": "image",
           "asset": "tesla_edison_electric_power_station",
           "ratio": "4:3",
-          "caption": "Le courant alternatif gagne pour alimenter les villes."
+          "caption": "Maiņstrāva uzvar pilsētu apgādē."
         },
         {
           "type": "paragraph",
-          "text": "Le courant alternatif l'emporte pour les réseaux urbains. Les villes s'allument. Les usines changent de rythme."
+          "text": "Maiņstrāva gūst virsroku pilsētu tīklos. Pilsētas iedegas. Rūpnīcas maina ritmu."
         }
       ]
     },
     {
       "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p4",
-      "title": "Un monde branché",
+      "title": "Pasaule ar strāvu",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Aujourd'hui, l'électricité fait tourner hôpitaux, trains, internet, frigos. Le défi n'est plus seulement de la produire, mais de le faire proprement et de façon fiable."
+          "text": "Mūsdienās elektrība darbina slimnīcas, vilcienus, internetu, ledusskapjus. Izaicinājums vairs nav tikai to ražot, bet darīt to tīri un droši."
         },
         {
           "type": "takeaway",
-          "text": "L'électricité a été comprise puis domestiquée : Franklin pour la foudre, Faraday pour produire le courant, Tesla et le courant alternatif pour l'amener dans les maisons. Notre quotidien en dépend encore."
+          "text": "Elektrība tika izprasta un pēc tam pieradināta: Franklins ar zibeni, Faradejs ar strāvas ražošanu, Tesla un maiņstrāva, lai to ievestu mājās. Mūsu ikdiena no tās atkarīga vēl joprojām."
         }
       ]
     }

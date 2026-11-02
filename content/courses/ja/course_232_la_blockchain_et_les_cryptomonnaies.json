@@ -1,110 +1,110 @@
 {
   "id": "course_232_la_blockchain_et_les_cryptomonnaies",
-  "title": "Comment fonctionnent la blockchain et les cryptomonnaies ?",
-  "subtitle": "Depuis 2009",
+  "title": "ブロックチェーンと暗号資産は、どんなしくみなのか",
+  "subtitle": "2009年から",
   "subject": "comprendreLeMonde",
-  "subcategory": "Environnement & avenir",
-  "description": "La **blockchain** a inventé un registre que personne ne peut falsifier seul, ouvrant la voie à une nouvelle économie numérique.",
+  "subcategory": "環境と未来",
+  "description": "**ブロックチェーン**は、ひとりでは改ざんできない台帳を生み出し、新しいデジタル経済への道を開きました。",
   "hero": {
     "image": "la_blockchain_et_les_cryptomonnaies",
     "ratio": "16:9",
-    "hook": "Un cahier de comptes que personne ne possède, mais que des milliers d'ordinateurs surveillent ensemble."
+    "hook": "だれのものでもない帳簿を、何千台ものコンピューターがいっしょになって見張っています。"
   },
   "sections": [
     {
       "id": "course_232_la_blockchain_et_les_cryptomonnaies_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Imaginez un cahier de comptes que personne ne possède seul, mais que des milliers d'ordinateurs tiennent à jour en même temps, partout dans le monde, et qu'il est presque impossible de falsifier. C'est l'idée de départ de la **blockchain**, une technologie souvent réduite à sa première application, le **Bitcoin**."
+          "text": "ひとりの人が持つのではなく、世界中の何千台ものコンピューターが同時に最新の状態に保っていて、しかもほとんど改ざんできない帳簿を想像してみてください。これが**ブロックチェーン**の出発点となる発想です。この技術は、最初の応用例である**ビットコイン**だけのものと思われがちです。"
         },
         {
           "type": "paragraph",
-          "text": "En permettant d'échanger de la valeur sans passer par une banque, cette invention a fait naître toute une économie parallèle, entre promesses de liberté financière et critiques sévères sur son coût énergétique."
+          "text": "銀行を通さずに価値をやり取りできるようになったことで、この発明はひとつの並行経済を生み出しました。そこには、金融の自由への期待と、消費電力の大きさに対する厳しい批判の両方があります。"
         }
       ]
     },
     {
       "id": "course_232_la_blockchain_et_les_cryptomonnaies_p1",
-      "title": "Un registre que personne ne contrôle seul",
+      "title": "だれもひとりでは支配できない共有の台帳",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Au cœur de la blockchain se trouve une idée simple : le **registre distribué**. Contrairement à une banque, qui garde ses comptes sur ses propres serveurs, la blockchain s'appuie sur un réseau de [[ピア]], c'est-à-dire des milliers d'ordinateurs qui conservent chacun une copie identique de toutes les transactions."
+          "text": "ブロックチェーンの中心にあるのは、単純な発想の**分散型台帳**です。銀行は自分のサーバーで口座を管理しますが、ブロックチェーンは[[ピア]]のネットワークに支えられています。つまり、何千台ものコンピューターがそれぞれ、すべての取引の同じコピーを持っているのです。"
         },
         {
           "type": "funFact",
-          "text": "Le tout premier bloc de la blockchain Bitcoin, appelé « bloc de genèse », contenait un message caché : la une d'un journal britannique du 3 janvier 2009, qui parlait du sauvetage des banques par l'État. Un clin d'œil politique de son créateur."
+          "text": "ビットコインのブロックチェーンのいちばん最初のブロックは「ジェネシスブロック」と呼ばれ、隠されたメッセージを含んでいました。それは2009年1月3日付の英国の新聞の1面で、国家による銀行救済を報じる記事でした。作者による政治的な皮肉です。"
         },
         {
           "type": "paragraph",
-          "text": "Chaque transaction est d'abord vérifiée par le réseau, puis regroupée avec d'autres dans un **bloc**. Ce bloc est ensuite relié au précédent grâce à un calcul mathématique appelé [[ハッシュ化]] : une sorte d'empreinte numérique unique. Résultat, une chaîne ininterrompue de blocs, d'où le nom blockchain. Pour modifier une seule transaction ancienne, il faudrait recalculer toute la chaîne et convaincre plus de la moitié du réseau, ce qui est quasiment impossible à grande échelle."
+          "text": "取引はまずネットワークで検証され、ほかの取引といっしょに**ブロック**にまとめられます。そのブロックは、[[ハッシュ化]]という数学的な計算によって前のブロックとつながれます。ハッシュ化とは、固有のデジタルの指紋のようなものです。その結果、ブロックが途切れなく連なった鎖ができます。ブロックチェーンという名前の由来です。過去の取引をひとつ書き換えるだけでも、鎖全体を計算し直し、ネットワークの半数以上を納得させなければなりません。大規模なネットワークでは、ほぼ不可能です。"
         }
       ]
     },
     {
       "id": "course_232_la_blockchain_et_les_cryptomonnaies_p2",
-      "title": "Bitcoin et Ethereum : du paiement au programme",
+      "title": "ビットコインとイーサリアム：送金からプログラムへ",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le **Bitcoin**, lancé en **2009** par une personne (ou un groupe) resté anonyme sous le nom de [[サトシ・ナカモト]], a prouvé qu'un système monétaire pouvait fonctionner sans banque centrale. Pour garantir sa rareté, son créateur a fixé un plafond strict : jamais plus de **21 millions de bitcoins** ne pourront exister, un peu comme l'or est limité sur Terre."
+          "text": "**ビットコイン**は**2009年**に、正体を明かさない人物（またはグループ）[[サトシ・ナカモト]]によって公開されました。中央銀行がなくても通貨のしくみは成り立つと、証明した存在です。希少性を保つため、作者は厳格な上限を決めました。存在できるビットコインは**2千1百万枚**まで。地球上の金に限りがあるのと似ています。"
         },
         {
           "type": "image",
           "asset": "blockchain_technology_distributed_ledger_visualization",
           "ratio": "4:3",
-          "caption": "Chaque transaction est vérifiée par un réseau d'ordinateurs avant d'être ajoutée à la chaîne."
+          "caption": "取引は、チェーンに加えられる前に、コンピューターのネットワークで検証されます。"
         },
         {
           "type": "paragraph",
-          "text": "En 2015, une seconde génération de blockchain est apparue avec l'**Ethereum**. Sa grande innovation : les **contrats intelligents**. Ce sont des programmes qui s'exécutent automatiquement dès qu'une condition est remplie, par exemple un remboursement automatique en cas de retard de train, sans besoin de passer par un intermédiaire."
+          "text": "2015年には、**イーサリアム**とともにブロックチェーンの第2世代が登場しました。最大の革新は**スマートコントラクト**です。これは、ある条件が満たされると自動的に実行されるプログラムです。たとえば、電車が遅れたら仲介者を通さずに自動で払い戻される、といった使い方があります。"
         }
       ]
     },
     {
       "id": "course_232_la_blockchain_et_les_cryptomonnaies_p3",
-      "title": "Les critiques : énergie et instabilité",
+      "title": "批判される点：エネルギーと不安定さ",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le succès des cryptomonnaies ne va pas sans problèmes. Le plus discuté concerne la **consommation d'énergie** du réseau Bitcoin : sa dépense électrique annuelle est aujourd'hui comparable à celle d'un pays entier comme l'Argentine."
+          "text": "暗号資産の成功には、問題もつきまといます。最も議論されるのは、ビットコインのネットワークの**エネルギー消費**です。年間の消費電力は、今ではアルゼンチンのような国一つ分の電力に匹敵します。"
         },
         {
           "type": "paragraph",
-          "text": "Le marché souffre aussi d'une **volatilité** extrême : le prix du Bitcoin peut varier de 10 ou 20 % en quelques heures. Cette instabilité l'empêche pour l'instant de devenir une vraie monnaie du quotidien."
+          "text": "市場は、極端な**価格変動**にも悩まされています。ビットコインの価格は、数時間で10〜20%動くことがあります。この不安定さのせいで、今のところ日常で使える本物の通貨にはなれていません。"
         },
         {
           "type": "paragraph",
-          "text": "Enfin, l'anonymat relatif des transactions a parfois servi à des activités illégales. Mais la blockchain reste en réalité totalement transparente : les autorités peuvent suivre les flux d'argent, ce qui rend le blanchiment plus difficile que dans le système classique de la monnaie en liquide."
+          "text": "最後に、取引の匿名性が比較的高いことから、違法な活動に使われたことも何度かあります。しかし実際には、ブロックチェーンは完全に透明です。当局はお金の流れを追跡できるので、現金という従来のしくみよりも、マネーロンダリングはむずかしくなります。"
         }
       ]
     },
     {
       "id": "course_232_la_blockchain_et_les_cryptomonnaies_p4",
-      "title": "Vers une intégration institutionnelle",
+      "title": "制度の中へ組み込まれていく流れへ",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Aujourd'hui, les cryptomonnaies quittent la marge pour entrer dans la finance traditionnelle. De grandes banques proposent désormais de garder des actifs numériques pour leurs clients, et plusieurs États réfléchissent à créer leur propre monnaie numérique officielle, une **[[CBDC]]** (monnaie numérique de banque centrale)."
+          "text": "今日、暗号資産は周辺から抜け出し、従来の金融の世界に入りつつあります。大手銀行は、顧客のためにデジタル資産を預かるサービスを始めました。いくつもの国が、公式のデジタル通貨を自分たちでつくることを検討しています。それが**[[CBDC]]**（中央銀行デジタル通貨）です。"
         },
         {
           "type": "paragraph",
-          "text": "Les **stablecoins**, des cryptomonnaies dont le prix est stabilisé grâce à une réserve de dollars ou d'euros, servent de pont entre les deux mondes. Au-delà de la finance, des secteurs comme le luxe (pour lutter contre la contrefaçon), la logistique (pour suivre des conteneurs) ou la santé (pour sécuriser des dossiers médicaux) adoptent aussi la blockchain pour sa fiabilité."
+          "text": "**ステーブルコイン**は、ドルやユーロの準備金を裏付けにして価格を安定させた暗号資産で、従来の金融と暗号資産という二つの世界をつなぐ橋渡し役を果たしています。金融の外でも、ぜいたく品の業界（偽造品を防ぐため）、物流（コンテナを追跡するため）、医療（カルテを安全に守るため）などが、その信頼性を評価して、ブロックチェーンを取り入れています。"
         },
         {
           "type": "funFact",
-          "text": "En 2021, le Salvador est devenu le premier pays au monde à adopter le Bitcoin comme monnaie légale, au côté du dollar américain, obligeant chaque commerçant à l'accepter s'il en a les moyens techniques."
+          "text": "2021年、エルサルバドルは世界で初めて、米ドルと並べてビットコインを法定通貨に採用した国になりました。技術的に可能な店は、どこでも受け入れることが義務づけられました。"
         },
         {
           "type": "takeaway",
-          "text": "Créée en 2009, la blockchain est un registre partagé et quasi impossible à falsifier, dont l'offre maximale de bitcoins est fixée à 21 millions d'unités. Elle a posé les bases d'une nouvelle économie numérique aujourd'hui en pleine intégration institutionnelle."
+          "text": "2009年に生まれたブロックチェーンは、共有されていて、ほとんど改ざんできない台帳です。ビットコインの発行上限は2千1百万枚と決められています。ブロックチェーンは新しいデジタル経済の土台となり、その経済は今、制度の中へ本格的に組み込まれつつあります。"
         }
       ]
     }

@@ -1,143 +1,143 @@
 {
   "id": "course_184_romulus_et_remus_la_fondation_de_rome",
-  "title": "Pourquoi Romulus a-t-il tué son frère Rémus ?",
-  "subtitle": "Mythologie romaine",
+  "title": "Kāpēc Romuls nogalināja brāli Remu?",
+  "subtitle": "Romiešu mitoloģija",
   "subject": "mythologie",
-  "subcategory": "Autres mythologies",
-  "description": "Allaités par une louve, fondateurs de Rome… et fratricides. Un mythe qui place la loi et la frontière avant le sang.",
+  "subcategory": "Citas mitoloģijas",
+  "description": "Vilcene viņus zīdīja, viņi nodibināja Romu… un kļuva par brāļu slepkavām. Mīts, kas likumu un robežu liek augstāk par asinīm.",
   "hero": {
     "image": "romulus_et_remus_la_fondation_de_rome",
     "ratio": "16:9",
-    "hook": "Rome ne naît pas d'un pacte doux. Elle naît d'une louve, d'un sillon sacré… et d'un frère tué."
+    "hook": "Roma nerodas no maiga līguma. Tā dzimst no vilcenes, svētas vagas… un nogalināta brāļa."
   },
   "sections": [
     {
       "id": "course_184_romulus_et_remus_la_fondation_de_rome_intro",
-      "title": "Introduction",
+      "title": "Ievads",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le récit de **Romulus** et **Rémus** est le mythe fondateur de Rome. Ce n'est pas un conte pour enfants. C'est l'histoire d'une double rupture : une [[vestāliete]] qui brise son vœu de chasteté, puis un **fratricide** qui place la loi avant le sang."
+          "text": "**Romula** un **Rema** stāsts ir Romas dibināšanas mīts. Tā nav pasaka bērniem. Tas ir stāsts par divkāršu lūzumu. Vispirms [[vestāliete]] pārkāpj šķīstības solījumu, tad **brāļu slepkavība** nostāda likumu augstāk par asinīm."
         },
         {
           "type": "paragraph",
-          "text": "La tradition romaine ne cache pas ce crime. Elle en fait le socle d'une cité bâtie sur la frontière sacrée et la survie de l'État, plus que sur la famille."
+          "text": "Romiešu tradīcija šo noziegumu neslēpj. Tā padara to par pamatu pilsētai, kas celta uz svēto robežu un valsts izdzīvošanu, nevis uz ģimeni."
         }
       ]
     },
     {
       "id": "course_184_romulus_et_remus_la_fondation_de_rome_p1",
-      "title": "La louve du Tibre",
+      "title": "Tibras vilcene",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "À Albe la Longue, cité des descendants d'Énée, l'usurpateur **Amulius** chasse son frère Numitor. Pour éteindre la lignée, il force sa nièce **Rhéa Silvia** à devenir vestale. Mais **Mars**, dieu de la guerre, s'unit à elle. Naissent des jumeaux."
+          "text": "Albalongā, Enneja pēcteču pilsētā, uzurpators **Amūlijs** padzen savu brāli Numitoru. Lai iznīcinātu dzimtu, viņš piespiež savu brāļameitu **Reju Silviju** kļūt par vestālieti. Tomēr **Marss**, kara dievs, savienojas ar viņu. Piedzimst dvīņi."
         },
         {
           "type": "image",
           "asset": "mars_rhea_silvia_roman_mythology_painting",
           "ratio": "4:3",
-          "caption": "Mars et Rhéa Silvia : la naissance divine des jumeaux."
+          "caption": "Marss un Reja Silvija: dvīņu dievišķā dzimšana."
         },
         {
           "type": "paragraph",
-          "text": "Amulius ordonne de les noyer dans le Tibre. Le fleuve en crue dépose le berceau près du **Palatin**, sous le figuier [[Ficus Ruminalis]]. Une **louve** les allaite ; un pivert, oiseau de Mars, les nourrit. Le berger Faustulus et sa femme Acca Larentia les élèvent."
+          "text": "Amūlijs pavēl dvīņus noslīcināt Tibrā. Plūdu uzsvaidītā upe nolaiž šūpuli pie **Palatīna**, zem vīģes [[Ficus Ruminalis]]. Viņus zīda **vilcene**, bet dzenis, Marsa putns, baro. Gans Faustuls un viņa sieva Akka Larentija tos izaudzina."
         },
         {
           "type": "image",
           "asset": "capitoline_wolf_romulus_remus_bronze_sculpture",
           "ratio": "1:1",
-          "caption": "La louve capitoline, image de Rome orpheline et prédatrice."
+          "caption": "Kapitolija vilcene: Roma kā bārene un plēsone."
         },
         {
           "type": "funFact",
-          "text": "En latin, « lupa » signifie louve… et prostituée. Des auteurs anciens suggéraient déjà qu'Acca Larentia, surnommée ainsi, était la vraie « louve » de la légende."
+          "text": "Latīņu valodā „lupa“ nozīmē vilcene… un prostitūta. Senie autori jau minēja, ka Akka Larentija, kuru tā dēvēja, bijusi leģendas īstā „vilcene“."
         }
       ]
     },
     {
       "id": "course_184_romulus_et_remus_la_fondation_de_rome_p2",
-      "title": "Le sillon et le meurtre",
+      "title": "Vaga un slepkavība",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Adultes, les jumeaux renversent Amulius et rétablissent Numitor. Puis ils veulent fonder leur propre cité. Romulus choisit le **Palatin** ; Rémus, l'Aventin. Pour trancher, ils prennent les [[augurijas]] : Rémus voit six vautours le premier ; Romulus en voit douze ensuite."
+          "text": "Kļuvuši pieauguši, dvīņi gāž Amūliju un atjauno Numitora varu. Pēc tam grib dibināt savu pilsētu. Romuls izvēlas **Palatīnu**, Rems Aventīnu. Lai izšķirtu strīdu, viņi vēro [[augurijas]]: Rems pirmais ierauga sešus grifus, Romuls pēc tam ierauga divpadsmit."
         },
         {
           "type": "image",
           "asset": "palatine_hill_rome_founding_myth",
           "ratio": "4:3",
-          "caption": "Le Palatin : la colline où Romulus trace Rome."
+          "caption": "Palatīns: pakalns, kur Romuls iezīmē Romu."
         },
         {
           "type": "paragraph",
-          "text": "Romulus trace le [[pomērijs]], sillon sacré de l'enceinte, et promet la mort à qui le franchira. Rémus saute par-dessus, par défi. Romulus (ou son lieutenant Celer) le tue. Rome est fondée le **21 avril 753 av. J.-C.**, an I du calendrier [[Ab Urbe Condita (753. g. p.m.ē.)]]."
+          "text": "Romuls iezīmē svēto mūra vagu, [[pomērijs]], un apsola nāvi tam, kas to pārkāps. Rems pārlec tai pāri, izaicinājumam. Romuls (vai viņa palīgs Celers) viņu nogalina. Roma tiek dibināta **753. gada 21. aprīlī p.m.ē.**, tas ir pirmais gads kalendārā [[Ab Urbe Condita (753. g. p.m.ē.)]]."
         },
         {
           "type": "funFact",
-          "text": "Le 21 avril reste le « Natale di Roma ». À midi, le soleil frappe l'entrée du Panthéon : un effet que les architectes antiques auraient conçu pour magnifier le pouvoir."
+          "text": "21. aprīlis joprojām ir „Natale di Roma“. Pusdienlaikā saule trāpa Panteona ieejai: tas ir efekts, ko, kā domājams, senie arhitekti radījuši, lai izceltu varu."
         }
       ]
     },
     {
       "id": "course_184_romulus_et_remus_la_fondation_de_rome_p3",
-      "title": "Le rapt des Sabines",
+      "title": "Sabīniešu nolaupīšana",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Premier problème : la cité manque de femmes. Romulus organise des jeux et invite les voisins. Au milieu de la fête, les Romains enlèvent les jeunes filles : le **Rapt des Sabines**. Les **Sabins**, menés par Titus Tatius, déclarent la guerre."
+          "text": "Pirmā problēma: pilsētai trūkst sieviešu. Romuls sarīko spēles un uzaicina kaimiņus. Svētku vidū romieši nolaupa jaunās meitenes: tā ir **sabīniešu nolaupīšana**. **Sabīni** Tita Tācija vadībā pieteic karu."
         },
         {
           "type": "paragraph",
-          "text": "Sur le champ de bataille, les femmes sabines, déjà mères d'enfants romains, s'interposent entre pères et maris. La guerre s'arrête. Les deux peuples fusionnent. Romulus et Titus Tatius règnent ensemble. Les Romains prennent le nom de [[Kvirīti]]. Rome devient une société qui intègre l'ennemi."
+          "text": "Kaujas laukā sabīnietes, jau romiešu bērnu mātes, nostājas starp tēviem un vīriem. Karš apstājas. Abas tautas saplūst. Romuls un Tits Tācijs valda kopā. Romieši pieņem nosaukumu [[Kvirīti]]. Roma kļūst par sabiedrību, kas uzņem ienaidnieku."
         }
       ]
     },
     {
       "id": "course_184_romulus_et_remus_la_fondation_de_rome_p4",
-      "title": "Romulus devient Quirinus",
+      "title": "Romuls kļūst par Kvirīnu",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Après trente-sept ans de règne et la création d'un Sénat de cent « pères », Romulus disparaît lors d'une tempête au Champ de Mars. La version officielle dit que Mars l'enlève au ciel : il devient le dieu **Quirinus**. Une autre version murmure que les sénateurs l'ont assassiné."
+          "text": "Pēc trīsdesmit septiņu gadu valdīšanas un simt „tēvu“ Senāta izveides Romuls pazūd vētrā Marsa laukā. Oficiālā versija vēsta, ka Marss viņu paceļ debesīs: viņš kļūst par dievu **Kvirīnu**. Cita versija čukst, ka senatori viņu nogalinājuši."
         },
         {
           "type": "paragraph",
-          "text": "Reste l'image de [[Kapitolija vilcene]] : une cité orpheline, nourrie par la sauvagerie, capable de transformer des marginaux en maîtres du monde."
+          "text": "Paliek [[Kapitolija vilcene]] kā tēls: bāreņu pilsēta, ko baro mežonība un kas spēj atstumtos pārvērst par pasaules valdniekiem."
         },
         {
           "type": "timeline",
           "events": [
             {
-              "date": "Mythe",
-              "title": "Naissance des jumeaux",
-              "detail": "Mars et Rhéa Silvia ; la louve du Tibre."
+              "date": "Mīts",
+              "title": "Dvīņu dzimšana",
+              "detail": "Marss un Reja Silvija; Tibras vilcene."
             },
             {
-              "date": "753 av. J.-C.",
-              "title": "Fondation de Rome",
-              "detail": "Romulus tue Rémus et trace le pomoerium."
+              "date": "753. g. p.m.ē.",
+              "title": "Romas dibināšana",
+              "detail": "Romuls nogalina Remu un iezīmē pomēriju."
             },
             {
-              "date": "Suite",
-              "title": "Rapt des Sabines",
-              "detail": "Guerre, puis fusion des peuples."
+              "date": "Turpinājums",
+              "title": "Sabīniešu nolaupīšana",
+              "detail": "Karš, tad tautu saplūšana."
             },
             {
-              "date": "+37 ans",
-              "title": "Apothéose",
-              "detail": "Romulus disparaît et devient Quirinus."
+              "date": "+37 gadi",
+              "title": "Apoteoze",
+              "detail": "Romuls pazūd un kļūst par Kvirīnu."
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "Fondée sur un fratricide et un enlèvement, Rome tire de son mythe une idée claire : la survie de l'État et le respect de la frontière sacrée passent avant les liens du sang."
+          "text": "Dibināta uz brāļu slepkavības un nolaupīšanas, Roma no sava mīta izsecina skaidru domu: valsts izdzīvošana un svētās robežas ievērošana ir svarīgāka par asinssaitēm."
         }
       ]
     }

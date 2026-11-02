@@ -1,152 +1,152 @@
 {
   "id": "course_161_la_naissance_des_dieux_grecs_cronos_zeus",
-  "title": "Du Chaos à Zeus : comment sont nés les dieux grecs ?",
-  "subtitle": "Cronos, Zeus, l'Olympe",
+  "title": "No Haosa līdz Zevam: kā radās grieķu dievi?",
+  "subtitle": "Krons, Zevs, Olimps",
   "subject": "mythologie",
-  "subcategory": "Grèce : les dieux",
-  "description": "Avant Zeus, son père Cronos dévorait ses enfants. Voici comment le vide a donné naissance aux dieux de l'Olympe.",
+  "subcategory": "Grieķija: dievi",
+  "description": "Pirms Zeva viņa tēvs Krons aprija savus bērnus. Lūk, kā tukšums deva dzimšanu Olimpa dieviem.",
   "hero": {
     "image": "la_naissance_des_dieux_grecs",
     "ratio": "16:9",
-    "hook": "Avant l'Olympe, le monde naît dans le vide, la violence et les coups d'État familiaux."
+    "hook": "Pirms Olimpa pasaule dzimst tukšumā, vardarbībā un ģimenes apvērsumos."
   },
   "sections": [
     {
       "id": "course_161_la_naissance_des_dieux_grecs_cronos_zeus_intro",
-      "title": "Introduction",
+      "title": "Ievads",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Avant que les dieux de l'**Olympe** ne règnent, la mythologie grecque imagine un vide originel : le **Chaos**. Ce n'est pas un désordre bruyant. C'est une béance, un abîme d'où surgit la vie."
+          "text": "Pirms valdīt sāka **Olimpa** dievi, grieķu mitoloģija iztēlojas sākotnējo tukšumu: **Haosu**. Tas nav skaļš juceklis. Tā ir plaisa, bezdibenis, no kura izceļas dzīvība."
         },
         {
           "type": "paragraph",
-          "text": "La naissance des dieux n'est pas douce. C'est une suite de crises et de prises de pouvoir. Le poète **Hésiode**, au VIIIe siècle avant notre ère, la raconte dans la [[Hēsioda „Teogonija“ (poēma)]]. Voici comment le monde passe du vide à la cour de **Zeus**."
+          "text": "Dievu dzimšana nav maiga. Tā ir krīžu un varas sagrābšanas virkne. Dzejnieks **Hēsiods** 8. gadsimtā p.m.ē. to izstāsta poēmā: [[Hēsioda „Teogonija“ (poēma)]]. Lūk, kā pasaule no tukšuma nonāk līdz **Zeva** galmam."
         }
       ]
     },
     {
       "id": "course_161_la_naissance_des_dieux_grecs_cronos_zeus_p1",
-      "title": "Du Chaos naissent la Terre et le Ciel",
+      "title": "No Haosa dzimst Zeme un Debesis",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Du **Chaos** naissent d'abord des forces sans visage humain. **Gaïa**, la Terre, offre un sol solide. Le **Tartare** est une prison profonde sous le monde. **Éros**, le désir, permet aux êtres de s'unir."
+          "text": "No **Haosa** vispirms dzimst spēki bez cilvēka sejas. **Gaja**, Zeme, dod stingru pamatu. **Tartars** ir dziļš cietums zem pasaules. **Erots**, tieksme, ļauj būtnēm savienoties."
         },
         {
           "type": "image",
           "asset": "gaia_primordial_goddess_greek_mythology",
           "ratio": "4:3",
-          "caption": "Gaïa, la Terre, première puissance du monde grec."
+          "caption": "Gaja, Zeme, grieķu pasaules pirmā vara."
         },
         {
           "type": "paragraph",
-          "text": "Gaïa engendre seule **Ouranos**, le Ciel étoilé. De leur couple naissent les **Titans**, dieux de la force brute, et des monstres : les **Cyclopes** et les **Hécatonchires**, géants aux cent bras."
+          "text": "Gaja viena pati dzemdē **Uranu**, zvaigžņoto Debesi. No viņu pāra dzimst **titāni**, brutālā spēka dievi, un briesmoņi: **kiklopi** un **hekatonheiri**, simtroku milži."
         },
         {
           "type": "funFact",
-          "text": "Pour les Grecs, le monde ne naît pas du néant. Il naît d'une séparation : l'espace entre Ciel et Terre laisse enfin place à la vie."
+          "text": "Grieķiem pasaule nedzimst no nekā. Tā dzimst no atdalīšanās: telpa starp Debesi un Zemi beidzot ļauj rasties dzīvībai."
         },
         {
           "type": "paragraph",
-          "text": "Ouranos hait ses enfants. Il les enferme dans le ventre de Gaïa. La Terre étouffe. La première révolution du cosmos se prépare."
+          "text": "Urans ienīst savus bērnus. Viņš tos ieslēdz Gajas vēderā. Zeme smok. Briest kosmosa pirmā revolūcija."
         }
       ]
     },
     {
       "id": "course_161_la_naissance_des_dieux_grecs_cronos_zeus_p2",
-      "title": "Cronos renverse son père",
+      "title": "Krons gāž savu tēvu",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Gaïa forge une faucille d'[[adamants]], un métal légendaire d'une dureté absolue. Seul le plus jeune des Titans, le rusé **Cronos**, accepte d'agir. Caché dans le flanc de sa mère, il castre Ouranos et sépare pour toujours le Ciel de la Terre."
+          "text": "Gaja izkaļ sirpi no leģendāra metāla ar absolūtu cietību: [[adamants]]. Tikai jaunākais no titāniem, viltīgais **Krons**, piekrīt rīkoties. Paslēpies mātes sānos, viņš kastrē Uranu un uz visiem laikiem atdala Debesi no Zemes."
         },
         {
           "type": "paragraph",
-          "text": "Cronos devient roi. Mais le sang d'Ouranos fertilise encore le monde : naissent les **Érinyes**, déesses de la vengeance familiale, et **Aphrodite**, déesse de l'amour, sortie de l'écume de mer."
+          "text": "Krons kļūst par karali. Bet Urana asinis joprojām apaugļo pasauli: dzimst **erīnijas**, ģimenes atriebības dievietes, un **Afrodīte**, mīlestības dieviete, kas izcēlusies no jūras putām."
         },
         {
           "type": "funFact",
-          "text": "Le nom d'**Aphrodite** vient du grec « aphros », « écume ». Sa naissance rappelle le crime qui a ouvert le règne de Cronos."
+          "text": "**Afrodītes** vārds nāk no grieķu „aphros“, „putas“. Viņas dzimšana atgādina noziegumu, ar kuru sākās Krona valdīšana."
         },
         {
           "type": "paragraph",
-          "text": "Une prophétie menace Cronos : un de ses fils le détrônera. Pour l'éviter, il dévore ses enfants dès leur naissance, **Hestia**, **Déméter**, **Héra**, **Hadès**, **Poséidon**. Les dieux grecs ont des peurs très humaines : c'est l'[[grieķu dievu antropomorfisms]]."
+          "text": "Pareģojums apdraud Kronu: kāds no viņa dēliem viņu gāzīs no troņa. Lai to novērstu, viņš aprij savus bērnus tūlīt pēc dzimšanas: **Hestiju**, **Dēmetru**, **Hēru**, **Hadesu**, **Poseidonu**. Grieķu dieviem ir ļoti cilvēciskas bailes. Tas ir [[grieķu dievu antropomorfisms]]."
         }
       ]
     },
     {
       "id": "course_161_la_naissance_des_dieux_grecs_cronos_zeus_p3",
-      "title": "Zeus libère ses frères et sœurs",
+      "title": "Zevs atbrīvo brāļus un māsas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Rhéa**, épouse de Cronos, refuse de perdre son dernier enfant. Elle lui tend une pierre emmaillotée. Le vrai bébé, **Zeus**, grandit en secret dans la grotte de [[Dikte]], en Crète. Les [[kurēti]], guerriers sacrés, couvrent ses pleurs de leurs cris. La chèvre **Amalthée** le nourrit."
+          "text": "**Reja**, Krona sieva, atsakās zaudēt savu pēdējo bērnu. Viņa tam pasniedz autiņos ietītu akmeni. Īstais mazulis **Zevs** slepus aug Krētā, alā, kuras nosaukums ir [[Dikte]]. [[kurēti]], svētie karotāji, apslāpē viņa raudas ar saviem kliedzieniem. Kaza **Amalteja** viņu baro."
         },
         {
           "type": "paragraph",
-          "text": "Adulte, Zeus force Cronos à régurgiter sa fratrie. Les enfants ressortent prêts au combat. Commence la **Titanomachie**, une guerre de dix ans entre Titans et futurs Olympiens. Les Cyclopes offrent à Zeus l'arme décisive : la **foudre**."
+          "text": "Pieaudzis, Zevs liek Kronam izvemt savus brāļus un māsas. Bērni iznāk gatavi cīņai. Sākas **titanomahija**, desmit gadus ilgs karš starp titāniem un nākamajiem olimpiešiem. Kiklopi dāvā Zevam izšķirošo ieroci: **zibeni**."
         },
         {
           "type": "timeline",
           "events": [
             {
               "date": "1",
-              "title": "Chaos",
-              "detail": "Le vide originel ouvre l'espace du monde."
+              "title": "Haoss",
+              "detail": "Sākotnējais tukšums atver pasaules telpu."
             },
             {
               "date": "2",
-              "title": "Gaïa et Ouranos",
-              "detail": "La Terre et le Ciel engendrent les Titans."
+              "title": "Gaja un Urans",
+              "detail": "Zeme un Debesis dzemdē titānus."
             },
             {
               "date": "3",
-              "title": "Cronos roi",
-              "detail": "Il castre son père, puis dévore ses enfants."
+              "title": "Krons karalis",
+              "detail": "Viņš kastrē savu tēvu, tad aprij savus bērnus."
             },
             {
               "date": "4",
-              "title": "Victoire de Zeus",
-              "detail": "La foudre décide la Titanomachie."
+              "title": "Zeva uzvara",
+              "detail": "Zibens izšķir titanomahiju."
             },
             {
               "date": "5",
-              "title": "L'Olympe",
-              "detail": "Zeus, Poséidon et Hadès se partagent le monde."
+              "title": "Olimps",
+              "detail": "Zevs, Poseidons un Hadess sadala pasauli."
             }
           ]
         },
         {
           "type": "paragraph",
-          "text": "Les Titans sont jetés dans le Tartare. **Zeus** prend le Ciel, **Poséidon** les mers, **Hadès** le monde des morts. L'**Olympe** devient une cour divine, plus ordonnée que la force des Titans."
+          "text": "Titāni tiek iemesti Tartarā. **Zevs** ņem Debesis, **Poseidons** jūras, **Hadess** miroņu valstību. **Olimps** kļūst par dievišķu galmu, sakārtotāku nekā titānu spēks."
         }
       ]
     },
     {
       "id": "course_161_la_naissance_des_dieux_grecs_cronos_zeus_p4",
-      "title": "Un ordre fragile, très humain",
+      "title": "Trausla, ļoti cilvēciska kārtība",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Même vainqueur, Zeus reste inquiet. Il épouse **Métis**, la Sagesse, puis l'avale par peur d'un fils plus fort. De cet acte naît **Athéna**, sortie tout armée du crâne de son père : la stratégie devient le pilier du pouvoir."
+          "text": "Arī kā uzvarētājs Zevs paliek nemierīgs. Viņš apprecē **Mētīdu**, Gudrību, un tad to aprij, baidoties no stiprāka dēla. No šī akta dzimst **Atēna**, kas pilnā bruņojumā izkāpj no tēva galvaskausa: stratēģija kļūst par varas pamatu."
         },
         {
           "type": "funFact",
-          "text": "Le mot **panique** vient du dieu **Pan**. Lors d'une guerre contre les Géants, son cri aurait semé une terreur soudaine et irrationnelle."
+          "text": "Vārds **panika** nāk no dieva **Pāna**. Karā pret milžiem viņa kliedziens it kā radījis pēkšņas, neprātīgas šausmas."
         },
         {
           "type": "paragraph",
-          "text": "Ces mythes ne font pas des dieux des modèles de vertu. Ils en font des miroirs : jalousie, peur de la succession, soif de règne. Du Chaos à l'Olympe, les Grecs racontent comment la civilisation tente de maîtriser la violence brute."
+          "text": "Šie mīti neveido no dieviem tikumības paraugus. Tie veido no tiem spoguļus: greizsirdība, bailes no pēctecības, kāre pēc varas. No Haosa līdz Olimpam grieķi stāsta, kā civilizācija mēģina pārvaldīt kailo vardarbību."
         },
         {
           "type": "takeaway",
-          "text": "La mythologie grecque passe du **Chaos** à l'ordre de l'**Olympe** par des coups de force successifs. Les dieux partagent nos passions, mais pas notre mortalité."
+          "text": "Grieķu mitoloģija no **Haosa** līdz **Olimpa** kārtībai nonāk ar secīgiem varas apvērsumiem. Dievi dalās mūsu kaislībās, bet ne mūsu mirstībā."
         }
       ]
     }

@@ -1,118 +1,118 @@
 {
   "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur",
-  "title": "Pourquoi la Lune ne tombe-t-elle pas sur Terre ?",
-  "subtitle": "Orbite & gravité",
+  "title": "月はなぜ地球に落ちてこないのか？その理由",
+  "subtitle": "軌道と重力",
   "subject": "sciences",
-  "subcategory": "La Terre et l'Univers",
-  "description": "La Lune tombe vers la Terre en permanence. Elle la rate simplement à chaque fois. C'est exactement ça, une orbite.",
+  "subcategory": "地球と宇宙",
+  "description": "月は、絶えず地球に向かって落ちています。ただ、そのたびに地球をはずしているだけです。軌道とは、まさにそういうものです。",
   "hero": {
     "image": "pourquoi_la_lune_ne_tombe_pas",
     "ratio": "16:9",
-    "hook": "La Lune tombe vers nous. Elle rate juste la Terre à chaque tour."
+    "hook": "月は地球に向かって落ちています。ただ、一周するたびに地球をはずしているだけです。"
   },
   "sections": [
     {
       "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Si la gravité terrestre attire la Lune, pourquoi ne s'écrase-t-elle pas sur nous ? La réponse paraît bizarre : la Lune **tombe** bel et bien vers la Terre. Elle la rate seulement à chaque instant."
+          "text": "地球の重力が月を引きつけているなら、なぜ月は地球に衝突しないのでしょうか？答えは意外に思えるかもしれません。月は実際に地球に向かって**落ちて**います。ただ、一瞬一瞬、地球をはずし続けているのです。"
         },
         {
           "type": "paragraph",
-          "text": "Cet équilibre entre chute et vitesse latérale, c'est une **orbite**, une trajectoire courbe autour d'un astre. Le physicien anglais **Isaac Newton** fut le premier à unifier la chute d'une pomme et le mouvement des astres avec la même idée."
+          "text": "落下と横向きの速さがつり合った状態が**軌道**で、天体のまわりを描く曲がった道筋です。イギリスの物理学者**アイザック・ニュートン**は、りんごの落下と天体の運動を、同じ考えで結びつけた最初の人です。"
         },
         {
           "type": "funFact",
-          "text": "Si vous pesiez **60 kg** sur Terre, vous n'en pèseriez qu'environ **10** sur la Lune : sa gravité est six fois plus faible."
+          "text": "地球で体重が**60kg**なら、月では約**10kg**にしかなりません。月の重力は、地球の6分の1だからです。"
         }
       ]
     },
     {
       "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur_p1",
-      "title": "Le canon imaginaire de Newton",
+      "title": "ニュートンの想像上の大砲",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Newton imagine un canon au sommet d'une montagne si haute qu'elle sortirait de l'atmosphère. On tire un boulet horizontalement. Avec peu de puissance, il retombe vite. Avec plus de force, il va plus loin."
+          "text": "ニュートンは、大気圏を突き抜けるほど高い山の頂上に大砲があると想像しました。砲弾を水平に撃ちます。力が弱ければ、砲弾はすぐ落ちます。力を強くすれば、もっと遠くまで届きます。"
         },
         {
           "type": "image",
           "asset": "newton_cannonball_orbit_thought_experiment",
           "ratio": "auto",
-          "caption": "L'expérience de pensée du boulet de canon de Newton : la clé pour comprendre l'orbite."
+          "caption": "ニュートンの大砲の砲弾を使った思考実験は、軌道を理解するための鍵になります。"
         },
         {
           "type": "paragraph",
-          "text": "À une vitesse précise, appelée [[第一宇宙速度]], quelque chose de remarquable arrive. Pendant que le boulet tombe, la Terre, qui est ronde, se courbe sous lui à la même allure. Le projectile tombe… sans jamais toucher le sol. Il est en **chute libre permanente**, tiré par la gravité sans s'écraser."
+          "text": "ある決まった速さ、つまり[[第一宇宙速度]]に達すると、驚くべきことが起こります。砲弾が落ちているあいだ、丸い地球が同じペースで砲弾の下側へ曲がっていくのです。砲弾は落ち続けるのに、地面に触れることがありません。**永久に続く自由落下**の状態で、重力に引かれながら、墜落しません。"
         },
         {
           "type": "paragraph",
-          "text": "La Lune fait la même chose. Elle a assez de vitesse sur le côté pour transformer une chute en boucle. Sans cette vitesse, elle plongerait droit sur nous."
+          "text": "月も同じことをしています。月には、落下を周回に変えるだけの横向きの速さがあります。この速さがなければ、月はまっすぐ地球に落ちてくるでしょう。"
         }
       ]
     },
     {
       "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur_p2",
-      "title": "Deux forces, un équilibre",
+      "title": "二つの力、一つのつり合い",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La Lune orbite à environ **384 000 km**. Sa vitesse latérale est d'environ **1 km/s**. Si elle s'arrêtait net, elle s'écraserait en quelques jours. Si la gravité disparaissait d'un coup, elle partirait en ligne droite dans l'espace, selon le principe d'[[慣性]] : un corps garde sa vitesse s'il n'est pas freiné."
+          "text": "月は約**384,000km**の距離を回っています。横向きの速さは約**秒速1km**です。もし月が急に止まれば、数日で地球に衝突します。もし重力が突然なくなれば、月は宇宙空間をまっすぐ飛び去ります。これは[[慣性]]の原理によるもので、物体は、ブレーキがかからなければ速度を保ち続けます。"
         },
         {
           "type": "paragraph",
-          "text": "La [[ニュートンの万有引力]] dit que toute masse attire toute autre masse, et que l'attraction diminue avec la distance, plus précisément avec le carré de la distance. Plus un satellite est proche, plus il doit aller vite pour ne pas tomber."
+          "text": "[[ニュートンの万有引力]]は、あらゆる質量がほかのあらゆる質量を引きつけ、その引力は距離とともに、正確には距離の二乗に応じて弱まると述べています。衛星は、近いほど、落ちないためにより速く動かなければなりません。"
         },
         {
           "type": "funFact",
-          "text": "La Station spatiale internationale, à seulement **400 km** d'altitude, file à environ **28 000 km/h**. Elle fait le tour de la Terre en **90 minutes**. La Lune, plus loin, met **27,3 jours**."
+          "text": "国際宇宙ステーションは、わずか**400km**の高度を、時速約**28,000km**で飛んでいます。地球を一周するのに**90分**かかります。もっと遠くにある月は**27.3日**かかります。"
         },
         {
           "type": "paragraph",
-          "text": "L'orbite n'est donc pas magique. C'est un compromis permanent entre « je tombe » et « j'avance trop vite pour toucher »."
+          "text": "つまり、軌道は魔法ではありません。「落ちている」と「速く進みすぎて地面に届かない」のあいだの、絶え間ないバランスなのです。"
         }
       ]
     },
     {
       "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur_p3",
-      "title": "Les marées éloignent la Lune",
+      "title": "潮汐によって月が遠ざかっていく",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L'orbite n'est pas figée. Les [[潮汐力]] entrent en jeu. La gravité de la Lune tire plus fort sur le côté de la Terre qui lui fait face qu'au centre. Elle déforme les océans et crée un bourrelet d'eau."
+          "text": "軌道は固定されたものではありません。ここで[[潮汐力]]が働きます。月の重力は、地球の月に面した側を、中心よりも強く引っ張ります。そのため海がゆがみ、水の盛り上がりができます。"
         },
         {
           "type": "paragraph",
-          "text": "Comme la Terre tourne sur elle-même plus vite que la Lune ne tourne autour d'elle, ce bourrelet avance un peu devant la Lune. Le frottement ralentit très légèrement la rotation terrestre : nos journées s'allongent d'environ **1,4 milliseconde** par siècle. En échange, la Lune s'éloigne d'environ **3,8 cm** par an."
+          "text": "地球の自転は、月が地球のまわりを回る速さより速いので、この盛り上がりは月より少し先に進みます。摩擦によって地球の自転がごくわずかに遅くなり、私たちの1日は1世紀あたり約**1.4ミリ秒**長くなっています。その代わり、月は年に約**3.8cm**ずつ遠ざかっています。"
         },
         {
           "type": "paragraph",
-          "text": "Il y a des milliards d'années, la Lune était bien plus proche. Les marées étaient énormes. Ce brassage d'eau et de chimie a peut-être aidé les premières formes de vie. Et les dinosaures, eux, vivaient sur une Terre où les journées ne duraient que **22 ou 23 heures**."
+          "text": "数十億年前、月は今よりずっと近くにありました。潮汐は巨大でした。この水と化学物質のかき混ぜが、最初の生命の誕生を助けたのかもしれません。そして恐竜たちは、1日がわずか**22〜23時間**しかない地球で暮らしていました。"
         }
       ]
     },
     {
       "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur_p4",
-      "title": "Des éclipses… pour l'instant",
+      "title": "日食が見られるのは今のうちだけ",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Aujourd'hui, par une coïncidence géométrique, le Soleil est environ **400 fois** plus grand que la Lune, mais aussi **400 fois** plus loin. Les deux ont donc la même **taille apparente**, l'angle sous lequel on les voit dans le ciel. Les éclipses totales de Soleil sont possibles."
+          "text": "今日、幾何学的な偶然によって、太陽は月の約**400倍**大きく、同時に約**400倍**遠くにあります。そのため両者の**見かけの大きさ**、つまり空で見たときの角度が同じになります。だから、太陽が月にすっぽり隠される皆既日食が起こりえるのです。"
         },
         {
           "type": "paragraph",
-          "text": "Dans environ **600 millions d'années**, la Lune sera trop loin pour cacher entièrement le Soleil. Il ne restera que des éclipses annulaires : un anneau de lumière autour du disque lunaire. À très long terme, la Terre et la Lune pourraient se synchroniser : chaque corps montrerait toujours la même face à l'autre. Mais le Soleil, en devenant **géante rouge**, phase finale d'une étoile comme le nôtre, transformera le système bien avant."
+          "text": "約**6億年**後には、月は遠くなりすぎて、太陽を完全には隠せなくなります。残るのは金環日食だけで、月の円盤のまわりに光の輪が見える現象です。はるか先の未来には、地球と月が同期して、それぞれが相手にいつも同じ面を向けるようになるかもしれません。ただしその前に、太陽が、私たちの太陽のような星の最終段階である**赤色巨星**になり、この系を大きく変えてしまうでしょう。"
         },
         {
           "type": "takeaway",
-          "text": "La Lune ne s'écrase pas parce que sa vitesse latérale équilibre l'attraction terrestre : elle est en chute libre permanente. Et elle s'éloigne encore d'environ **3,8 cm** par an."
+          "text": "月が墜落しないのは、横向きの速さが地球の引力とつり合っているからです。月は永久に続く自由落下の状態にあります。しかも、今も年に約**3.8cm**ずつ遠ざかっています。"
         }
       ]
     }

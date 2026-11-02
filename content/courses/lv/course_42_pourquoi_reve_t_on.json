@@ -1,112 +1,112 @@
 {
   "id": "course_42_pourquoi_reve_t_on",
-  "title": "Pourquoi rêve-t-on ?",
-  "subtitle": "Cerveau & sommeil",
+  "title": "Kāpēc mēs sapņojam?",
+  "subtitle": "Smadzenes un miegs",
   "subject": "sciences",
-  "subcategory": "Notre quotidien expliqué",
-  "description": "Chaque nuit, tu rêves environ deux heures. La plupart des rêves s'effacent au réveil. Voici ce que la science comprend aujourd'hui de ce mystère.",
+  "subcategory": "Mūsu ikdiena izskaidrota",
+  "description": "Katru nakti tu sapņo apmēram divas stundas. Lielākā daļa sapņu pēc pamošanās izgaist. Lūk, ko zinātne šodien saprot par šo noslēpumu.",
   "hero": {
     "image": "pourquoi_reve_t_on",
     "ratio": "16:9",
-    "hook": "Tu rêves environ six ans de ta vie. Et tu en oublies presque tout."
+    "hook": "Tu sapņo apmēram sešus gadus savā mūžā. Un gandrīz visu aizmirsti."
   },
   "sections": [
     {
       "id": "course_42_pourquoi_reve_t_on_intro",
-      "title": "Introduction",
+      "title": "Ievads",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Chaque nuit, tu passes environ **deux heures** à rêver. Sur une vie, cela fait près de **six ans**. Pourtant, au réveil, la plupart de ces histoires disparaissent en quelques secondes."
+          "text": "Katru nakti tu apmēram **divas stundas** pavadi sapņojot. Visā mūžā tas sasniedz gandrīz **sešus gadus**. Tomēr pēc pamošanās lielākā daļa šo stāstu pazūd dažās sekundēs."
         },
         {
           "type": "paragraph",
-          "text": "Les scientifiques ne sont pas tous d'accord sur le « pourquoi ». Mais ils savent de mieux en mieux **quand** on rêve, et ce que le cerveau fait pendant ce temps : il réorganise les souvenirs, teste des scénarios et digère les émotions."
+          "text": "Zinātnieki nav vienisprātis par to, „kāpēc“. Taču viņi arvien labāk zina, **kad** sapņo, un ko smadzenes šajā laikā dara: tās pārkārto atmiņas, izmēģina scenārijus un pārstrādā emocijas."
         }
       ]
     },
     {
       "id": "course_42_pourquoi_reve_t_on_p1",
-      "title": "Le sommeil, ce n'est pas « éteint »",
+      "title": "Miegs nav „izslēgts“",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le sommeil n'est pas une coupure totale. Il avance par **cycles** d'environ **90 minutes**, plusieurs fois par nuit. Dans chaque cycle, le cerveau passe par des phases différentes : un sommeil léger, un sommeil profond utile pour récupérer le corps, puis une phase très particulière."
+          "text": "Miegs nav pilnīgs pārtraukums. Tas noris **cikliem** pa apmēram **90 minūtēm**, vairākas reizes nakts laikā. Katrā ciklā smadzenes iziet cauri dažādām fāzēm: viegls miegs, dziļš miegs, kas palīdz atpūsties ķermenim, un tad ļoti īpaša fāze."
         },
         {
           "type": "image",
           "asset": "sleeping_person_rem_dream",
           "ratio": "4:3",
-          "caption": "Pendant le sommeil paradoxal, les yeux bougent sous les paupières."
+          "caption": "Paradoksālā miega laikā acis kustas zem plakstiem."
         },
         {
           "type": "paragraph",
-          "text": "Cette phase s'appelle le [[paradoksālais miegs]]. Le cerveau est presque aussi actif qu'éveillé, mais le corps est paralysé par l'[[Muskuļu atonija]]. C'est surtout là que naissent les rêves longs et narratifs. Cette paralysie évite de « jouer » physiquement ce qu'on rêve."
+          "text": "Šīs fāzes nosaukums ir [[paradoksālais miegs]]. Smadzenes ir gandrīz tikpat aktīvas kā nomodā, bet ķermenis ir paralizēts: to nodrošina [[Muskuļu atonija]]. Tieši šajā fāzē galvenokārt rodas garie, stāstošie sapņi. Šī paralīze neļauj fiziski „izspēlēt“ to, ko sapņo."
         },
         {
           "type": "funFact",
-          "text": "On rêve **4 à 6 fois** par nuit. On en oublie environ **95 %** dans les dix minutes après le réveil. Si tu te souviens d'un rêve, c'est souvent parce que tu t'es réveillé pile pendant ou juste après."
+          "text": "Nakts laikā sapņo **4 līdz 6 reizes**. Apmēram **95%** sapņu aizmirstas desmit minūšu laikā pēc pamošanās. Ja atceries kādu sapni, tas bieži ir tāpēc, ka pamošanās iekrita tieši sapņa laikā vai tūlīt pēc tā."
         }
       ]
     },
     {
       "id": "course_42_pourquoi_reve_t_on_p2",
-      "title": "À quoi ça sert de rêver ?",
+      "title": "Kam vajadzīgi sapņi?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Freud** pensait que le rêve révélait surtout des désirs cachés. Aujourd'hui, les chercheurs préfèrent des explications plus concrètes, basées sur l'**imagerie cérébrale**, des techniques qui visualisent l'activité du cerveau. Le rêve active surtout le **système limbique**, l'ensemble de structures profondes liées aux émotions."
+          "text": "**Freids** uzskatīja, ka sapņi galvenokārt atklāj apslēptas vēlmes. Mūsdienās pētnieki dod priekšroku konkrētākiem skaidrojumiem, kas balstīti uz **smadzeņu attēlveidi**, metodēm, kas parāda smadzeņu darbību. Sapņošanas laikā visvairāk aktivizējas **limbiskā sistēma**, dziļo struktūru kopums, kas saistīts ar emocijām."
         },
         {
           "type": "image",
           "asset": "brain_activity_dreaming_scan",
           "ratio": "4:3",
-          "caption": "Pendant le rêve, le cerveau travaille : émotions, images, souvenirs."
+          "caption": "Sapņa laikā smadzenes strādā: emocijas, tēli, atmiņas."
         },
         {
           "type": "paragraph",
-          "text": "Trois grandes pistes dominent. Première : **trier la mémoire**, garder l'utile, laisser partir le reste. Deuxième : **s'entraîner au danger** dans un monde sans risque réel. Troisième : **digérer les émotions** : pendant le rêve, le cerveau revisite des moments forts avec moins de **noradrénaline**, un neurotransmetteur lié au stress et à l'éveil."
+          "text": "Dominē trīs galvenie skaidrojumi. Pirmais: **šķirot atmiņu**, paturēt noderīgo, ļaut pārējam aiziet. Otrais: **trenēties briesmām** pasaulē bez reāla riska. Trešais: **pārstrādāt emocijas**. Sapņojot smadzenes atkal pārdzīvo spēcīgus brīžus ar mazāku **noradrenalīna** daudzumu, neirotransmitera, kas saistīts ar stresu un nomodu."
         }
       ]
     },
     {
       "id": "course_42_pourquoi_reve_t_on_p3",
-      "title": "Pourquoi on oublie ses rêves",
+      "title": "Kāpēc sapņus aizmirst",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Pour stocker un souvenir durablement, le cerveau a besoin de certaines substances chimiques. Or, pendant le sommeil paradoxal, le niveau de noradrénaline chute. Résultat : le rêve reste dans une mémoire très fragile."
+          "text": "Lai atmiņu saglabātu ilgstoši, smadzenēm vajadzīgas noteiktas ķīmiskās vielas. Taču paradoksālā miega laikā noradrenalīna līmenis pazeminās. Tāpēc sapnis paliek ļoti trauslā atmiņā."
         },
         {
           "type": "paragraph",
-          "text": "Dès que tu ouvres les yeux, la lumière, les sons et les pensées de la journée écrasent ce souvenir fragile. Le meilleur moyen de le garder ? Noter le rêve **tout de suite**, avant même de bouger."
+          "text": "Tiklīdz atver acis, dienas gaisma, skaņas un domas pārklāj šo trauslo atmiņu. Labākais veids, kā to saglabāt? Pierakstīt sapni **uzreiz**, pat nepakustoties."
         },
         {
           "type": "funFact",
-          "text": "Avant la télévision couleur, peu de gens disaient rêver en couleur. Aujourd'hui, la plupart le font. Notre environnement visuel influence même la texture de nos rêves."
+          "text": "Pirms krāsu televīzijas maz cilvēku teica, ka sapņo krāsās. Šodien to dara lielākā daļa. Mūsu vizuālā vide pat ietekmē mūsu sapņu faktūru."
         }
       ]
     },
     {
       "id": "course_42_pourquoi_reve_t_on_p4",
-      "title": "Et le rêve lucide ?",
+      "title": "Un lucīdais sapnis?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Parfois, on se rend compte **qu'on rêve**, tout en restant endormi : c'est le **rêve lucide**. Une zone du cerveau liée à la logique et à l'auto-réflexion, le **cortex préfrontal**, se rallume alors un peu."
+          "text": "Dažkārt var apjaust, **ka sapņo**, turpinot gulēt: tas ir **lucīdais sapnis**. Tad nedaudz atkal ieslēdzas smadzeņu zona, kas saistīta ar loģiku un pašrefleksiju, **prefrontālā garoza**."
         },
         {
           "type": "paragraph",
-          "text": "Certains peuvent alors influencer le décor ou transformer un cauchemar. Des chercheurs étudient même ce phénomène pour aider des sportifs à répéter mentalement des gestes, ou pour soigner des cauchemars répétitifs."
+          "text": "Daži tad var ietekmēt sapņa vidi vai pārvērst murgu. Pētnieki šo parādību pat pēta, lai palīdzētu sportistiem garā atkārtot kustības vai lai ārstētu atkārtotus murgus."
         },
         {
           "type": "takeaway",
-          "text": "On rêve surtout pendant le [[paradoksālais miegs]], une phase où le cerveau est actif et le corps paralysé. Le rêve aide probablement à gérer la mémoire et les émotions, même si on en oublie presque tout au réveil."
+          "text": "Galvenais sapņu laiks ir [[paradoksālais miegs]], fāze, kad smadzenes ir aktīvas, bet ķermenis paralizēts. Sapnis, iespējams, palīdz sakārtot atmiņu un emocijas, kaut arī pēc pamošanās gandrīz visu aizmirst."
         }
       ]
     }

@@ -1,119 +1,119 @@
 {
   "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie",
-  "title": "L'IA consomme-t-elle beaucoup d'énergie ?",
-  "subtitle": "Derrière chaque réponse",
+  "title": "Vai MI patērē daudz enerģijas?",
+  "subtitle": "Aiz katras atbildes",
   "subject": "comprendreLeMonde",
-  "subcategory": "Environnement & avenir",
-  "description": "Chaque réponse d'une IA sort d'un bâtiment rempli de machines qui tournent jour et nuit. Combien d'électricité cela coûte-t-il vraiment, de l'entraînement du modèle jusqu'au réseau qui l'alimente ?",
+  "subcategory": "Vide un nākotne",
+  "description": "Katra MI atbilde nāk no ēkas, kas pilna ar mašīnām, kuras strādā dienu un nakti. Cik daudz elektrības tas patiesībā maksā, sākot ar modeļa apmācību un beidzot ar tīklu, kas to apgādā?",
   "author": "rana-abdalla",
   "hero": {
     "image": "data_center_server_racks_aisle_blue_lights",
     "ratio": "4:3",
-    "hook": "L'IA ressemble à un logiciel, mais chaque réponse est fabriquée dans un bâtiment bien réel, branché sur le même réseau que votre maison."
+    "hook": "MI izskatās pēc programmatūras, taču katra atbilde tiek radīta pavisam īstā ēkā, kas pieslēgta tam pašam tīklam kā tava māja."
   },
   "sections": [
     {
       "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie_intro",
-      "title": "Introduction",
+      "title": "Ievads",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Vous posez une question à une IA en ligne, la réponse s'affiche en quelques secondes. Le travail, lui, n'a pas lieu dans votre téléphone. Il se fait dans un [[datu centrs]], un bâtiment rempli de machines qui traitent et stockent l'information. Ces machines consomment de l'électricité en continu, même si personne ne les voit."
+          "text": "Tu uzdod jautājumu tiešsaistes MI, un atbilde parādās dažās sekundēs. Taču darbs notiek nevis tavā tālrunī. Tas notiek tur, kur ir [[datu centrs]]: ēka, pilna ar mašīnām, kas apstrādā un glabā informāciju. Šīs mašīnas patērē elektrību nepārtraukti, pat ja neviens tās neredz."
         },
         {
           "type": "paragraph",
-          "text": "En 2025, selon l'[[Starptautiskā Enerģētikas aģentūra]], l'ensemble des centres de données a utilisé environ **1,5 %** de l'électricité mondiale. Ce chiffre couvre tous les services en ligne, pas seulement l'IA. Mais les installations dédiées à l'IA se multiplient vite. Une réponse courte coûte peu à elle seule. Reste que des machines tournent pour chacune d'elles, et que plusieurs systèmes tirent du courant en même temps pour la produire."
+          "text": "2025. gadā, kā norāda [[Starptautiskā Enerģētikas aģentūra]], visi datu centri kopā izmantoja aptuveni **1,5%** pasaules elektroenerģijas. Šis skaitlis aptver visus tiešsaistes pakalpojumus, ne tikai MI. Taču MI paredzētās iekārtas strauji vairojas. Īsa atbilde pati par sevi maksā maz. Tomēr katrai atbildei darbojas mašīnas, un, lai to radītu, vienlaikus strāvu velk vairākas sistēmas."
         }
       ]
     },
     {
       "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie_p1",
-      "title": "Les serveurs, premiers consommateurs",
+      "title": "Serveri, galvenie patērētāji",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Un [[serveris]] est un ordinateur qui traite des données et fait tourner des services en ligne. Dans un centre de données, ce sont les serveurs qui font l'essentiel du calcul : ils sont donc les premiers consommateurs d'électricité. Si l'on découpe la facture d'un centre de données moderne, les serveurs en prennent en moyenne **60 %**. Ce chiffre vaut pour les centres de données en général, pas pour les seules installations d'IA."
+          "text": "Viens no datu centra pamatelementiem ir [[serveris]]: dators, kas apstrādā datus un uztur tiešsaistes pakalpojumus. Datu centrā tieši serveri veic lielāko daļu skaitļošanas, tāpēc tie ir galvenie elektrības patērētāji. Ja sadala mūsdienīga datu centra rēķinu, serveri vidēji aizņem **60%**. Šis skaitlis attiecas uz datu centriem kopumā, nevis tikai uz MI iekārtām."
         },
         {
           "type": "image",
           "asset": "data_center_cooling_pipes_chillers",
           "ratio": "3:2",
-          "caption": "Des rangées de serveurs dans un centre de données : ce sont eux qui consomment l'essentiel de l'électricité."
+          "caption": "Serveru rindas datu centrā: tieši tie patērē lielāko daļu elektrības."
         },
         {
           "type": "paragraph",
-          "text": "Le reste sert à stocker et déplacer les données, à refroidir les équipements et à faire vivre le bâtiment. Le refroidissement compte, parce qu'un ordinateur produit de la chaleur en travaillant. Sans un système pour l'évacuer, les machines finiraient par surchauffer. L'électricité derrière une réponse d'IA alimente donc bien plus que les ordinateurs qui la produisent."
+          "text": "Pārējais tiek tērēts datu glabāšanai un pārvietošanai, iekārtu dzesēšanai un ēkas darbības uzturēšanai. Dzesēšanai ir nozīme, jo dators darbojoties rada siltumu. Bez sistēmas, kas to aizvada, mašīnas galu galā pārkarstu. Tāpēc elektrība, kas stāv aiz MI atbildes, baro daudz vairāk nekā tikai datorus, kas to rada."
         },
         {
           "type": "funFact",
-          "text": "Selon l'AIE, la consommation d'électricité des centres de données dédiés à l'IA a augmenté de 50 % sur la seule année 2025."
+          "text": "Pēc Starptautiskās Enerģētikas aģentūras datiem MI paredzēto datu centru elektroenerģijas patēriņš tikai 2025. gadā pieaudzis par 50%."
         }
       ]
     },
     {
       "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie_p2",
-      "title": "Entraîner, puis répondre",
+      "title": "Vispirms apmācīt, tad atbildēt",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Avant de pouvoir répondre, un service d'IA a besoin d'un modèle : un système qui a appris des régularités à partir d'exemples. Le créer passe par l'[[apmācība]], une phase où des ordinateurs passent au crible d'énormes quantités de données. Ce travail peut occuper des machines très puissantes pendant de longues périodes."
+          "text": "Lai varētu atbildēt, MI pakalpojumam vajadzīgs modelis: sistēma, kas no piemēriem ir apguvusi likumsakarības. Tā radīšanas pamatā ir [[apmācība]]: posms, kurā datori izlaiž cauri milzīgus datu apjomus. Šis darbs var ilgstoši aizņemt ļoti jaudīgas mašīnas."
         },
         {
           "type": "image",
           "asset": "frontier_supercomputer_oak_ridge_cabinets",
           "ratio": "4:3",
-          "caption": "Les armoires du supercalculateur Columbia de la NASA : le genre de machines mobilisées pour entraîner un modèle."
+          "caption": "NASA superdatora Columbia skapji: tādas mašīnas tiek iesaistītas modeļa apmācībā."
         },
         {
           "type": "paragraph",
-          "text": "Une fois le modèle entraîné, un autre travail commence. L'[[secināšana]] est le calcul qui produit une réponse à votre demande. L'entraînement ne recommence pas en entier à chaque question ; l'inférence, elle, se répète à chaque requête. Laquelle pèse le plus au fil du temps ? Cela dépend de la façon dont le service est construit et du nombre de personnes qui l'utilisent. Un service très fréquenté garde ses ordinateurs occupés à répondre, même entre deux grandes phases d'entraînement."
+          "text": "Kad modelis ir apmācīts, sākas cits darbs: tā ir [[secināšana]], aprēķins, kas rada atbildi uz tavu pieprasījumu. Apmācība netiek visa atkārtota pēc katra jautājuma, bet secināšana atkārtojas ar katru pieprasījumu. Kura laika gaitā nosver vairāk? Tas atkarīgs no tā, kā pakalpojums ir uzbūvēts un cik cilvēku to izmanto. Ļoti noslogots pakalpojums patur savus datorus aizņemtus ar atbildēšanu pat starp divām lielām apmācības fāzēm."
         }
       ]
     },
     {
       "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie_p3",
-      "title": "Une requête sans coût fixe",
+      "title": "Pieprasījums bez nemainīgām izmaksām",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Combien d'électricité consomme une seule requête texte ? Les estimations publiées ne donnent pas la même réponse. Google, en mesurant son service en fonctionnement, situe sa requête texte médiane à **0,24 Wh**. Le [[vatstunda]] (Wh) est l'unité qui mesure une quantité d'énergie. Une autre étude arrive, elle, à une médiane de **0,31 Wh**, la moitié centrale de ses requêtes standard se situant entre **0,16 et 0,60 Wh**."
+          "text": "Cik daudz elektrības patērē viens teksta pieprasījums? Publicētie aprēķini nedod vienādu atbildi. Google, mērot savu darbojošos pakalpojumu, mediānas teksta pieprasījumu nosaka ar **0,24 Wh**. Enerģijas daudzuma mērvienība ir [[vatstunda]] (Wh). Cits pētījums nonāk pie mediānas **0,31 Wh**, un tā standarta pieprasījumu vidējā puse ir robežās no **0,16 līdz 0,60 Wh**."
         },
         {
           "type": "paragraph",
-          "text": "Ces chiffres ne se contredisent pas : ils décrivent des systèmes et des méthodes différents, pas deux mesures opposées d'une même tâche. Ils laissent aussi de côté les travaux bien plus lourds. Demander à une IA de raisonner en plusieurs étapes avant de répondre occupe ses ordinateurs bien plus longtemps. L'énergie par requête dépend donc du système, de la façon de la mesurer et du travail demandé."
+          "text": "Šie skaitļi viens otram nepretrunā: tie raksturo atšķirīgas sistēmas un metodes, nevis divus pretējus viena un tā paša uzdevuma mērījumus. Tie arī atstāj ārpusē daudz smagākus darbus. Ja MI lūdz pirms atbildes spriest vairākos soļos, tā datori ir aizņemti ievērojami ilgāk. Enerģija uz vienu pieprasījumu tādēļ ir atkarīga no sistēmas, mērīšanas veida un pieprasītā darba."
         },
         {
           "type": "funFact",
-          "text": "Dans la même étude, une requête de raisonnement long, où le modèle détaille ses étapes avant de conclure, atteint une médiane de 3,91 Wh, plus de dix fois la requête standard."
+          "text": "Tajā pašā pētījumā ilgas spriešanas pieprasījums, kurā modelis pirms secinājuma izklāsta savus soļus, sasniedz mediānu 3,91 Wh, vairāk nekā desmit reižu vairāk nekā standarta pieprasījums."
         }
       ]
     },
     {
       "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie_p4",
-      "title": "Des réseaux électriques sous pression",
+      "title": "Elektrotīkli zem spiediena",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le [[elektrotīkls]] est le maillage de lignes qui transporte le courant des centrales jusqu'aux maisons et aux entreprises. Les grandes installations d'IA se branchent sur ce même réseau. Pour donner un ordre de grandeur, l'AIE compare la consommation annuelle d'un centre de données dédié à l'IA, un bâtiment construit surtout pour faire tourner ces services, à celle d'environ **100 000 foyers**."
+          "text": "Strāvu no spēkstacijām līdz mājām un uzņēmumiem pārvada [[elektrotīkls]], līniju tīklojums. Lielās MI iekārtas pieslēdzas tam pašam tīklam. Lai dotu priekšstatu par apjomu, Starptautiskā Enerģētikas aģentūra salīdzina viena MI paredzēta datu centra, ēkas, kas celta galvenokārt šo pakalpojumu darbināšanai, gada patēriņu ar aptuveni **100 000 mājsaimniecību** patēriņu."
         },
         {
           "type": "image",
           "asset": "high_voltage_power_lines_data_center_virginia",
           "ratio": "4:3",
-          "caption": "Pylônes d'une ligne à très haute tension (750 kV) : les centres de données se branchent sur ce même réseau."
+          "caption": "Īpaši augstsprieguma līnijas (750 kV) pīlāri: datu centri pieslēdzas tam pašam tīklam."
         },
         {
           "type": "paragraph",
-          "text": "Ces installations ont aussi tendance à se regrouper aux mêmes endroits. Quand plusieurs grands sites réclament du courant dans la même zone, ils se partagent le réseau local, et les lignes existantes peuvent avoir besoin d'être renforcées. Une région qui dispose de capacités en réserve accueille plus facilement de nouveaux sites qu'une région déjà proche de ses limites. L'endroit où l'on construit l'infrastructure de l'IA change donc quelque chose pour ses voisins."
+          "text": "Šīs iekārtas arī mēdz grupēties vienās un tajās pašās vietās. Kad vairākas lielas vietas vienā zonā pieprasa strāvu, tās dala vietējo tīklu, un esošās līnijas var būt jāpastiprina. Reģions ar rezerves jaudām jaunas vietas uzņem vieglāk nekā reģions, kas jau ir tuvu savām robežām. Tāpēc tas, kur tiek būvēta MI infrastruktūra, kaut ko maina arī tās kaimiņiem."
         },
         {
           "type": "takeaway",
-          "text": "L'électricité de l'IA se dépense à plusieurs étages, des serveurs à refroidir jusqu'au réseau local, et le coût d'une requête dépend du système, de la mesure et du travail demandé."
+          "text": "MI elektrība tiek tērēta vairākos posmos, sākot ar dzesējamiem serveriem un beidzot ar vietējo tīklu, un pieprasījuma izmaksas ir atkarīgas no sistēmas, mērījuma un pieprasītā darba."
         }
       ]
     }

@@ -1,118 +1,118 @@
 {
   "id": "course_186_les_valkyries_et_le_valhalla",
-  "title": "Valkyries : que faisaient les guerriers morts au Valhalla ?",
-  "subtitle": "Mythologie nordique",
+  "title": "ワルキューレとヴァルハラ：死んだ戦士たちはヴァルハラで何をしていたのか？",
+  "subtitle": "北欧神話",
   "subject": "mythologie",
-  "subcategory": "Autres mythologies",
-  "description": "Dans le ciel nordique, des guerrières choisissent les morts pour peupler le Valhalla. Leur armée doit affronter le crépuscule des dieux.",
+  "subcategory": "世界の神話",
+  "description": "北欧の空では、戦う女たちが死者を選び、ヴァルハラを満たします。その軍勢は、ラグナロクに立ち向かわなければなりません。",
   "hero": {
     "image": "les_valkyries_et_le_valhalla",
     "ratio": "16:9",
-    "hook": "Mourir l'épée à la main n'est pas une fin : c'est une sélection pour la dernière guerre du monde."
+    "hook": "剣を手にして死ぬことは、終わりではありません。この世界最後の戦いのための選抜なのです。"
   },
   "sections": [
     {
       "id": "course_186_les_valkyries_et_le_valhalla_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Dans la mythologie nordique, la mort au combat n'est pas une fin. C'est une **sélection**. Les **Valkyries**, dont le nom signifie « celles qui choisissent les occis », parcourent les champs de bataille pour Odin, le dieu souverain."
+          "text": "北欧神話では、戦いのなかでの死は終わりではありません。それは**選抜**です。**ワルキューレ**の名は「戦死者を選ぶ者」という意味で、彼女たちは主神オーディンのために戦場を駆けめぐっています。"
         },
         {
           "type": "paragraph",
-          "text": "Leur mission : emmener les plus braves au **Valhalla**, la « salle des occis ». Ce palais n'est pas un paradis de repos. C'est une caserne céleste. Car Odin prépare une armée pour le [[ラグナロク]], la bataille finale qui doit détruire le monde et tuer les dieux."
+          "text": "彼女たちの使命は、もっとも勇敢な者を**ヴァルハラ**、つまり「戦死者の館」に連れていくことです。この宮殿は、のんびり休める楽園ではありません。天上の兵営です。オーディンは、世界を滅ぼし神々を殺す最後の戦い[[ラグナロク]]に備えて、軍勢を整えているからです。"
         }
       ]
     },
     {
       "id": "course_186_les_valkyries_et_le_valhalla_p1",
-      "title": "Odin recrute pour le Ragnarök",
+      "title": "オーディン、ラグナロクに備えて兵を集める",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Odin** connaît la prophétie. Au [[ラグナロク]], les géants et les monstres fondront sur [[アースガルズ]], la demeure des dieux. Pour retarder l'inévitable, il lui faut des soldats d'élite : les **Einherjar**, « ceux qui combattent seuls »."
+          "text": "**オーディン**は予言を知っています。[[ラグナロク]]のとき、巨人たちや怪物たちは、神々の住まいである[[アースガルズ]]に襲いかかります。避けられない運命を少しでも遅らせるため、精鋭の兵が必要です。それが**エインヘリャル**、「ひとりで戦う者たち」です。"
         },
         {
           "type": "image",
           "asset": "odin_norse_god_ravens_throne_painting",
           "ratio": "4:3",
-          "caption": "Odin, maître des dieux, hanté par la fin du monde."
+          "caption": "オーディン、神々の主。世界の終わりにとりつかれている。"
         },
         {
           "type": "funFact",
-          "text": "Le Valhalla n'accueillait que **la moitié** des guerriers morts au combat. L'autre moitié rejoignait le Fólkvangr, domaine de la déesse **Freyja**. Même après une mort héroïque, les héros étaient partagés."
+          "text": "ヴァルハラが迎えたのは、戦死者の**半分**だけでした。残りの半分は、女神**フレイヤ**の領地フォールクヴァングに行きました。英雄的な死を遂げても、英雄たちは二つに分けられたのです。"
         },
         {
           "type": "paragraph",
-          "text": "Le Valhalla, en Asgard, compte **540 portes**. Chacune est assez large pour que huit cents combattants passent de front. Seuls ceux tombés courageusement, l'épée à la main, y ont droit. Les Valkyries font le tri depuis le ciel."
+          "text": "アースガルズにあるヴァルハラには、**540の門**があります。どの門も、八百人の戦士が横一列で通れるほどの広さです。ここに入る資格があるのは、剣を手に勇敢に倒れた者だけです。ワルキューレたちが空からふるい分けます。"
         }
       ]
     },
     {
       "id": "course_186_les_valkyries_et_le_valhalla_p2",
-      "title": "Des guerrières plus sombres qu'on ne croit",
+      "title": "思われているよりずっと暗い影をもつ戦う女たち",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L'image moderne des Valkyries vient souvent du romantisme du XIXe siècle : de douces vierges à cheval. Les textes anciens, comme l'[[古エッダ]], peignent des figures bien plus dures. Elles sont liées aux corbeaux, oiseaux des cadavres. Certains poèmes les montrent en fileuses macabres : leurs fils sont des boyaux, leurs poids des têtes."
+          "text": "現代のワルキューレ像は、十九世紀のロマン主義に由来することが多く、馬に乗るやさしい乙女の姿です。ところが[[『古エッダ』]]のような古い文献は、もっと厳しい姿を描いています。彼女たちはカラスと結びつけられます。カラスは死体の鳥です。詩のなかには、彼女たちを不気味な糸紡ぎとして描くものもあります。糸は腸、重りは首です。"
         },
         {
           "type": "image",
           "asset": "valkyrie_riding_winged_horse_norse_art",
           "ratio": "4:3",
-          "caption": "Valkyrie en vol : messagère d'Odin et pourvoyeuse de héros."
+          "caption": "空を駆けるワルキューレ：オーディンの使者であり、英雄の調達者。"
         },
         {
           "type": "paragraph",
-          "text": "Des figures comme **Brynhildr** ou [[シグルーン]] ont aussi un visage humain : elles hésitent entre les ordres d'Odin et leurs sentiments pour des mortels. Au Valhalla, leur rôle change. Elles quittent l'armure pour servir l'hydromel aux héros. Le geste dit la reconnaissance : le mort brave est devenu l'élite d'Asgard."
+          "text": "**ブリュンヒルド**や[[シグルーン]]のような存在には、人間らしい一面もあります。オーディンの命令と、死すべき人間への思いのあいだで迷うのです。ヴァルハラでは、彼女たちの役割が変わります。鎧を脱ぎ、英雄たちに蜂蜜酒をふるまいます。この所作は敬意の表れです。勇敢な死者は、アースガルズの精鋭になったのです。"
         }
       ]
     },
     {
       "id": "course_186_les_valkyries_et_le_valhalla_p3",
-      "title": "Chaque jour se battre, chaque soir festoyer",
+      "title": "毎日は戦いに明け暮れ、毎晩は宴で盛り上がる",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Au Valhalla, pas de retraite paisible. Au chant du coq [[グリンカムビ]], les Einherjar s'arment et s'entretuent sur la plaine d'[[イザヴェル]]. Le soir, les blessures se ferment. Les morts se relèvent. Puis vient le festin."
+          "text": "ヴァルハラには、穏やかな隠居生活はありません。雄鶏[[グリンカムビ]]が鳴くと、エインヘリャルは武装し、[[イザヴェル]]の野で互いに殺し合います。夕方になると傷はふさがり、死者は起き上がります。そして宴が始まります。"
         },
         {
           "type": "image",
           "asset": "valhalla_feast_norse_warriors_einherjar_painting",
           "ratio": "4:3",
-          "caption": "Le festin des Einherjar : combat le jour, banquets la nuit."
+          "caption": "エインヘリャルの宴：昼は戦い、夜は酒盛りの毎日。"
         },
         {
           "type": "funFact",
-          "text": "Le sanglier **Sæhrímnir** est bouilli chaque jour par le cuisinier [[アンドフリームニル]], puis renaît. L'hydromel coule des pis de la chèvre [[ヘイズルーン]]. Le paradis viking est une salle d'entraînement permanente."
+          "text": "猪**セーフリームニル**は、毎日料理人[[アンドフリームニル]]に煮られ、また生き返ります。蜂蜜酒は、ヤギ[[ヘイズルーン]]の乳房から流れ出ます。ヴァイキングの楽園は、いつも開かれている訓練場なのです。"
         },
         {
           "type": "paragraph",
-          "text": "Ce cycle de violence et de plaisir soude l'armée d'Odin. Des siècles de batailles amicales avant le vrai ennemi."
+          "text": "暴力と楽しみのこの繰り返しが、オーディンの軍勢をまとめあげます。本当の敵が現れるまで、何世紀も続く友好的な戦いです。"
         }
       ]
     },
     {
       "id": "course_186_les_valkyries_et_le_valhalla_p4",
-      "title": "Une mort digne plutôt que la « mort de paille »",
+      "title": "「藁の死」ではなく、武器を手にした立派な死を",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Cette vision de l'au-delà a marqué la Scandinavie viking. On valorisait le courage physique. Mourir de vieillesse ou de maladie, la « mort de paille », menait à **Hel**, un royaume terne. Mieux valait tomber les armes à la main."
+          "text": "こうした来世観は、ヴァイキング時代のスカンディナヴィアに大きな影響を与えました。肉体的な勇気が重んじられたのです。老衰や病気で死ぬこと、つまり「藁の死」は、**ヘル**という薄暗い国に行くことを意味しました。武器を手にして倒れるほうがましだったのです。"
         },
         {
           "type": "paragraph",
-          "text": "La Valkyrie a traversé les siècles. Richard Wagner l'a fixée dans la mémoire européenne avec la [[ワルキューレの騎行]]. Aujourd'hui, elle est devenue un archétype de femme puissante, souvent loin de sa fonction première : pourvoyeuse de cadavres pour un dieu qui prépare sa propre fin."
+          "text": "ワルキューレは何世紀も生き続けてきました。リヒャルト・ワーグナーは[[ワルキューレの騎行]]によって、彼女をヨーロッパの記憶に刻みつけました。今では、力強い女性の原型になっていますが、本来の役目からはしばしば遠く離れています。もとは、自らの終わりを準備する神のために死者を調達する存在でした。"
         },
         {
           "type": "takeaway",
-          "text": "Les **Valkyries** recrutent les meilleurs morts pour le **Valhalla**. Là, les Einherjar combattent et festoient sans fin, en vue du [[ラグナロク]]. Le paradis nordique est une caserne, pas un refuge."
+          "text": "**ワルキューレ**は、最良の死者を**ヴァルハラ**に集めます。そこでエインヘリャルは、[[ラグナロク]]に備えて、果てしなく戦い、宴を開きます。北欧の楽園は、避難所ではなく兵営なのです。"
         }
       ]
     }

@@ -1,122 +1,122 @@
 {
   "id": "course_187_le_phenix_a_travers_les_cultures",
-  "title": "Pourquoi tant de cultures rêvent-elles d'un Phénix ?",
-  "subtitle": "Renaissance et immortalité",
+  "title": "なぜこれほど多くの文化が不死鳥を夢見るのか？",
+  "subtitle": "よみがえりと、終わらない命",
   "subject": "mythologie",
-  "subcategory": "Autres mythologies",
-  "description": "De l'Égypte à la Chine, l'oiseau qui renaît de ses cendres traverse les civilisations. Un même rêve : que la destruction ne soit jamais définitive.",
+  "subcategory": "世界の神話",
+  "description": "エジプトから中国まで、灰のなかからよみがえる鳥は、さまざまな文明を渡ってきました。共通する夢は、破壊が決して最後ではないことです。",
   "hero": {
     "image": "le_phenix_a_travers_les_cultures",
     "ratio": "16:9",
-    "hook": "Un oiseau meurt dans le feu et revient. Pourquoi tant de cultures ont-elles inventé le même rêve ?"
+    "hook": "一羽の鳥が炎のなかで死に、よみがえります。なぜこれほど多くの文化が、同じ夢を生み出したのでしょうか。"
   },
   "sections": [
     {
       "id": "course_187_le_phenix_a_travers_les_cultures_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le **Phénix** est l'oiseau de feu qui renaît de ses propres cendres. Plus qu'une créature de conte, il porte un rêve humain : la **résurrection**, le renouveau, le triomphe de la vie sur la mort."
+          "text": "**不死鳥**は、自らの灰からよみがえる炎の鳥です。おとぎ話の生き物以上の存在で、人間の夢を背負っています。それは**復活**、再生、死に対する生命の勝利です。"
         },
         {
           "type": "paragraph",
-          "text": "De la vallée du Nil aux palais de Chine, la figure change de forme. Mais l'idée reste : ce qui brûle peut recommencer. Voici comment le mythe voyage, de l'Égypte antique jusqu'à nos villes rebâties."
+          "text": "ナイルの谷から中国の宮殿まで、その姿は形を変えます。それでも、燃えたものは再び始められるという考えは変わりません。神話がどう旅をしたのか、古代エジプトから、建て直された現代の街までたどってみましょう。"
         }
       ]
     },
     {
       "id": "course_187_le_phenix_a_travers_les_cultures_p1",
-      "title": "Le Bénou égyptien, ancêtre solaire",
+      "title": "エジプトのベンヌ、太陽の祖先",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L'ancêtre du Phénix est égyptien : le **Bénou**. Son nom vient d'un verbe qui signifie « briller » ou « s'élever ». On le représentait souvent comme un héron, pas comme un rapace en flammes."
+          "text": "不死鳥の祖先はエジプトの**ベンヌ**です。その名は「輝く」や「昇る」を意味する動詞に由来します。炎に包まれた猛禽ではなく、サギの姿で表されることが多くありました。"
         },
         {
           "type": "image",
           "asset": "bennu_bird_egyptian_heron_sun_god",
           "ratio": "4:3",
-          "caption": "Le Bénou, héron sacré lié au soleil et à la création."
+          "caption": "ベンヌ：太陽や創造と深く結びついた聖なるサギ。"
         },
         {
           "type": "paragraph",
-          "text": "Selon les prêtres d'[[ヘリオポリス]], cité du culte solaire, le Bénou fut le premier être vivant sur la **Pierre Benben**, colline sortie du chaos liquide. Son cri ouvrit le temps. Lié au dieu soleil **Rê**, puis à **Osiris**, dieu des morts, il promettait le cycle : le soleil meurt chaque soir et renaît chaque matin."
+          "text": "太陽信仰の都市[[ヘリオポリス]]の神官たちによれば、ベンヌは、混沌とした水から現れた丘、**ベンベン石**の上に立った最初の生き物でした。その鳴き声が時間を開いたといいます。太陽神**ラー**、のちに死者の神**オシリス**と結びつき、ベンヌは循環を約束しました。太陽は毎晩死に、毎朝よみがえるのです。"
         },
         {
           "type": "funFact",
-          "text": "Le héron cendré, modèle probable du Bénou, se tient souvent immobile face au soleil levant. Les Égyptiens y ont vu un geste d'adoration solaire."
+          "text": "ベンヌのモデルと考えられるアオサギは、昇る太陽に向かってじっと立っていることがよくあります。エジプト人は、これを太陽を拝む姿と見ました。"
         }
       ]
     },
     {
       "id": "course_187_le_phenix_a_travers_les_cultures_p2",
-      "title": "Les Grecs et les Romains inventent le bûcher",
+      "title": "ギリシア人とローマ人が生んだ炎の最期",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L'historien grec **Hérodote** transforme le Bénou en **Phénix** : oiseau rare aux plumes rouges et dorées, qui revient tous les **500 ans**. Les Romains, dont le poète **Ovide** et le naturaliste **Pline l'Ancien**, fixent la fin spectaculaire."
+          "text": "ギリシアの歴史家**ヘロドトス**は、ベンヌを**不死鳥**に変えました。赤と金の羽をもつめずらしい鳥で、**500年**ごとに戻ってきます。詩人**オウィディウス**や博物学者**大プリニウス**らローマ人が、その壮絶な最期を定着させました。"
         },
         {
           "type": "image",
           "asset": "phoenix_rising_ashes_flames_mythology",
           "ratio": "4:3",
-          "caption": "Le Phénix s'embrase : destruction et renaissance en un seul geste."
+          "caption": "燃え上がる不死鳥：破壊と再生が一つの動きに重なる瞬間。"
         },
         {
           "type": "paragraph",
-          "text": "Le Phénix est unique. Quand il faiblit, il bâtit un nid d'épices, cannelle, myrrhe, nard. Le soleil ou le battement de ses ailes met le feu. Des cendres naît un jeune oiseau. Il porte les restes de son aîné vers l'autel du soleil en Égypte."
+          "text": "不死鳥は一羽しかいません。力が衰えると、シナモン、没薬、ナルドなどの香料で巣をつくります。太陽の熱か、翼の羽ばたきが火をつけます。灰のなかから若い鳥が生まれます。その鳥は、先代の遺骸を、エジプトにある太陽の祭壇へと運びます。"
         },
         {
           "type": "paragraph",
-          "text": "Pour Rome, l'oiseau devient symbole de l'**Aeternitas**, l'éternité de l'Empire. Plus tard, les chrétiens y liront l'image de la résurrection."
+          "text": "ローマにとって、この鳥は**アエテルニタス**、つまり帝国の永遠のシンボルになりました。のちにキリスト教徒は、そこに復活のイメージを読み取ります。"
         }
       ]
     },
     {
       "id": "course_187_le_phenix_a_travers_les_cultures_p3",
-      "title": "En Asie, un autre oiseau de vertu",
+      "title": "アジアにいるもう一羽の徳の鳥",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En Chine, [[中国の鳳凰]] n'est pas vraiment un oiseau qui brûle. C'est une créature d'harmonie, souvent liée à l'**impératrice**. Son apparition annonce un souverain juste ou une ère de paix."
+          "text": "[[中国の鳳凰]]は、実は燃える鳥ではありません。調和を体現する生き物で、しばしば**皇后**と結びつけられます。その姿が現れることは、正しい君主や平和な時代の到来を告げるとされました。"
         },
         {
           "type": "image",
           "asset": "fenghuang_chinese_phoenix_empress_symbol_art",
           "ratio": "4:3",
-          "caption": "Le Fenghuang : présage de paix et symbole impérial."
+          "caption": "鳳凰：平和の前ぶれであり、皇帝権力の象徴でもある。"
         },
         {
           "type": "paragraph",
-          "text": "Au Japon, le **Hōō** joue un rôle voisin. On le voit sur les toits de temples à [[京都]], et sur les billets de **10 000 yens**. Ici, l'oiseau parle moins de survie après la mort que d'équilibre moral et cosmique."
+          "text": "日本では、**鳳凰**が似た役割を果たしています。[[京都]]の寺の屋根の上や、**1万円**札に描かれています。ここでは、鳥が語るのは死後の生存よりも、道徳と宇宙の均衡です。"
         }
       ]
     },
     {
       "id": "course_187_le_phenix_a_travers_les_cultures_p4",
-      "title": "Des alchimistes aux villes qui renaissent",
+      "title": "錬金術師から、再びよみがえる街まで",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Au Moyen Âge, les alchimistes font du Phénix une métaphore. La [[変成]] des métaux, et surtout la phase sombre appelée [[ニグレド]], rappelle son cycle : il faut détruire pour purifier. Le [[中世錬金術の不死鳥]] devient image de l'esprit qui renaît."
+          "text": "中世、錬金術師たちは不死鳥を比喩に用いました。金属の[[変成]]と、とくに[[ニグレド]]と呼ばれる暗い段階は、不死鳥の周期を思わせます。清めるためには、まず壊さなければなりません。[[中世錬金術の不死鳥]]は、よみがえる精神の象徴になりました。"
         },
         {
           "type": "funFact",
-          "text": "La ville de **Phoenix**, en Arizona, a été nommée ainsi en **1867** : elle s'élevait sur les canaux et ruines de la civilisation Hohokam, disparue des siècles plus tôt."
+          "text": "アメリカ・アリゾナ州の**フェニックス**の街は、**1867年**にこう名づけられました。数世紀前に姿を消したホホカム文明の水路や遺跡の上に築かれたからです。"
         },
         {
           "type": "paragraph",
-          "text": "D'autres oiseaux cousins peuplent le monde : le **Simorgh** perse, l'**Anqa** des traditions islamiques. Partout, le même besoin : croire que la destruction n'est pas définitive."
+          "text": "ほかにも親戚にあたる鳥が世界各地にいます。ペルシアの**シムルグ**、イスラームの伝承の**アンカー**です。どこでも、破壊は決定的なものではないと信じたい思いは同じです。"
         },
         {
           "type": "takeaway",
-          "text": "Du **Bénou** égyptien au Phénix gréco-romain et au **Fenghuang** asiatique, l'oiseau de renouveau relie soleil, feu et immortalité. Un mythe universel pour dire que l'on peut renaître après l'incendie."
+          "text": "エジプトの**ベンヌ**から、ギリシア・ローマの不死鳥、アジアの**鳳凰**まで、再生の鳥は太陽、火、不死を結びつけます。火事のあとでも生まれ変われることを語る、普遍的な神話です。"
         }
       ]
     }

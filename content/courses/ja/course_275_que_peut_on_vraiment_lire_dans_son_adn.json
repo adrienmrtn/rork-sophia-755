@@ -1,123 +1,123 @@
 {
   "id": "course_275_que_peut_on_vraiment_lire_dans_son_adn",
-  "title": "Que peut-on vraiment lire dans son ADN ?",
-  "subtitle": "Gènes et destin",
+  "title": "DNAから、本当は何が読み取れるのか",
+  "subtitle": "遺伝子と運命",
   "subject": "sciences",
-  "subcategory": "Notre quotidien expliqué",
-  "description": "Goûts, caractère, risques de maladie, origines lointaines : notre ADN en dit long sur nous. Mais une prédisposition n'a jamais été un destin.",
+  "subcategory": "暮らしの解説",
+  "description": "好み、性格、病気のリスク、遠い祖先のルーツ。DNAは私たちについて多くのことを語ります。でも、なりやすさは運命そのものではありません。",
   "author": "kate-waddams",
   "hero": {
     "image": "dna_double_helix_3d_render_blue",
     "ratio": "4:3",
-    "hook": "Votre ADN raconte d'où vous venez, ce que vous aimez et ce qui vous menace, mais il ne décide pas de tout."
+    "hook": "DNAは、どこから来たのか、何が好きか、何に気をつけるべきかを教えてくれます。でも、すべてを決めるわけではありません。"
   },
   "sections": [
     {
       "id": "course_275_que_peut_on_vraiment_lire_dans_son_adn_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Notre ADN en dit énormément sur nous : d'où nous venons, de quoi notre corps est capable, et peut-être même ce qui nous attend. C'est notre histoire et notre plan de construction. Mais de quoi s'agit-il exactement ? L'ADN se trouve dans presque toutes les cellules du corps. Enroulé en **double hélice**, il porte les instructions génétiques qui règlent notre fonctionnement, notre croissance, notre développement et notre reproduction."
+          "text": "DNAは、私たちについて驚くほど多くのことを語ります。どこから来たのか、体には何ができるのか、もしかするとこれから先に待っていることまで。DNAは私たちの歴史であり、体の設計図でもあります。では、DNAとはそもそも何でしょう。DNAは体のほぼすべての細胞の中にあります。**二重らせん**の形に巻かれていて、体の働き、成長、発達、生殖を支える遺伝情報を運んでいます。"
         },
         {
           "type": "paragraph",
-          "text": "Ses brins ne sont faits que de **quatre petites unités**, les nucléotides, notées A, T, C et G. C'est l'enchaînement de ces quatre lettres qui forme notre [[ゲノム]], un plan génétique unique pour chacun de nous. Que peut-on vraiment y lire ? Nos goûts, nos risques de maladie, nos origines. Et jusqu'où ce texte écrit-il notre avenir ?"
+          "text": "DNAの鎖は、A、T、C、Gと表される**4種類の小さな単位**（ヌクレオチド）だけでできています。この4つの文字の並びが[[ゲノム]]をつくり、人それぞれに固有の遺伝的な設計図になります。ここから本当は何が読み取れるのでしょうか。好み、病気のリスク、ルーツ。そして、この文章は未来をどこまで書いているのでしょうか。"
         }
       ]
     },
     {
       "id": "course_275_que_peut_on_vraiment_lire_dans_son_adn_p1",
-      "title": "Vos gènes façonnent vos goûts et votre caractère",
+      "title": "遺伝子は、好みや性格をかたちづくっています",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Un [[遺伝子]] est un morceau de ce texte. Il agit comme une notice biologique : il dit au corps comment fabriquer ses **protéines**, qui à leur tour construisent et font tourner nos cellules. De là naissent nos traits visibles. Mais les gènes jouent un rôle bien plus profond que l'apparence."
+          "text": "[[遺伝子]]は、この文章の一節です。生物学の取扱説明書のように、体に**タンパク質**のつくり方を指示し、そのタンパク質が細胞をつくり、動かしています。こうして目に見える特徴が生まれます。でも、遺伝子の役割は外見よりずっと奥深いものです。"
         },
         {
           "type": "image",
           "asset": "identical_twins_sisters_portrait_nature_nurture",
           "ratio": "5:4",
-          "caption": "« Les Compagnes de voyage », d'Augustus Egg (1862) : deux jeunes femmes semblables en tout, l'une dort, l'autre lit."
+          "caption": "『旅の道連れ』（オーガスタス・エッグ、1862年）：そっくりな二人の若い女性。一人は眠り、一人は本を読んでいます。"
         },
         {
           "type": "paragraph",
-          "text": "Un [[遺伝的変異]] est une version légèrement différente d'un gène. Récemment, des scientifiques en ont relié plusieurs à la **personnalité**. De subtils réglages génétiques peuvent orienter nos préférences : adorer le sport ou le détester, être extraverti, collectionner les passe-temps. Notre ADN pèserait sur notre quotidien bien plus qu'on ne l'imagine. D'où une question : quelle part de notre comportement est déjà écrite dans notre biologie ?"
+          "text": "[[遺伝的変異]]とは、遺伝子がほんの少し違うバージョンのことです。最近、科学者たちは、いくつかの変異を**性格**と関連づけました。遺伝子のささいな調整が、好みを方向づけることがあります。スポーツが大好きか大嫌いか、外向的か、趣味をいくつも集めたがるか。DNAは、思っている以上に日々の暮らしに影響しているのかもしれません。そこで疑問が浮かびます。行動のどれくらいが、すでに生物学的に書き込まれているのでしょうか。"
         },
         {
           "type": "funFact",
-          "text": "Thé ou café ? Même cette préférence toute simple pourrait tenir à de subtiles variations de nos gènes, selon les travaux qui relient l'ADN à la personnalité."
+          "text": "紅茶かコーヒーか。こんな単純な好みでさえ、遺伝子のささいな違いで決まるのかもしれません。DNAと性格を結びつける研究は、そう示しています。"
         },
         {
           "type": "paragraph",
-          "text": "Et ce n'est peut-être pas tout. L'ADN donne aussi des indices sur les personnes qui présentent une [[遺伝的素因]] à certains troubles de **santé mentale**, comme la dépression. Il ne renseigne donc pas seulement sur ce que nous aimons, mais aussi sur ce qui peut nous fragiliser."
+          "text": "まだあります。DNAからは、うつ病など**心の健康**に関わる不調の[[遺伝的素因]]をもつ人についても、手がかりが得られる可能性があります。つまりDNAは、自分が何を好むかだけでなく、何が自分の弱点になりうるかまで教えてくれるのです。"
         }
       ]
     },
     {
       "id": "course_275_que_peut_on_vraiment_lire_dans_son_adn_p2",
-      "title": "Ce que l'ADN révèle des risques de maladie",
+      "title": "DNAが明らかにする、病気になるリスク",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La santé mentale n'est pas la seule concernée. La composition de notre ADN peut nous rendre plus vulnérables à d'autres maladies, dont certaines « courent dans les familles ». Exemple connu : des variants hérités des gènes [[BRCA1とBRCA2]] prédisposent certaines femmes à un **cancer du sein précoce**."
+          "text": "心の健康だけではありません。DNAの構成によって、ほかの病気にもかかりやすくなることがあり、なかには「家系に多い」病気もあります。よく知られた例が、遺伝子[[BRCA1とBRCA2]]の受け継いだ変異です。これがあると、一部の女性は**若くして乳がん**になりやすくなります。"
         },
         {
           "type": "image",
           "asset": "dna_sequencing_chromatogram_sanger_readout",
           "ratio": "2:1",
-          "caption": "Chromatogramme de séquençage : chaque pic coloré est une lettre de l'ADN. C'est sur cette lecture qu'un test repère un variant."
+          "caption": "シーケンシングのクロマトグラム：色のついた山の一つ一つがDNAの文字にあたります。検査では、この読み取りをもとに変異を見つけます。"
         },
         {
           "type": "paragraph",
-          "text": "C'est là que le [[遺伝子検査]] prend toute sa valeur, pour le système de santé comme pour les personnes concernées. Repérer un risque héréditaire permet d'agir tôt : **dépistage** plus précoce, suivi rapproché, médicaments ou autre traitement préventif. Cette avance peut sauver des vies et réduire les coûts médicaux."
+          "text": "ここで[[遺伝子検査]]が真価を発揮します。医療制度にとっても、当事者にとってもです。遺伝性のリスクがわかれば、早めに手を打てます。**検診**を早く始める、経過をこまめに見る、薬やほかの予防的な治療を使う、といった対応です。この先手が命を救い、医療費を減らすこともあります。"
         }
       ]
     },
     {
       "id": "course_275_que_peut_on_vraiment_lire_dans_son_adn_p3",
-      "title": "Une machine à remonter le temps : d'où venez-vous ?",
+      "title": "タイムマシンとしてのDNA：どこから来たのか",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Notre ADN se transmet de génération en génération. Il garde des indices sur nos ancêtres : d'où ils venaient, ce qu'ils mangeaient, comment ils vivaient. C'est une véritable machine à remonter le temps. En comparant les **motifs génétiques** des populations actuelles, les scientifiques ont pu retracer le chemin parcouru par les humains à travers le globe."
+          "text": "DNAは世代から世代へ受け継がれます。そこには、祖先の手がかりが残っています。どこから来たのか、何を食べていたのか、どんな暮らしをしていたのか。まさにタイムマシンです。現代の人々の**遺伝的なパターン**を比べることで、科学者たちは人類が世界中に広がった道筋をたどれるようになりました。"
         },
         {
           "type": "image",
           "asset": "early_human_migrations_out_of_africa_map",
           "ratio": "5:4",
-          "caption": "Les premières lignées d'Homo sapiens en Afrique et leur sortie vers l'Eurasie, reconstituées par la génétique des populations."
+          "caption": "アフリカにいた最初期のホモ・サピエンスの系統と、ユーラシアへの旅立ち。集団遺伝学によって復元されたものです。"
         },
         {
           "type": "paragraph",
-          "text": "Un exemple. Les sources écrites racontent que des populations d'**Afrique du Nord** se sont installées dans la [[イベリア半島]] entre **700 et 1200**. L'ADN confirme le récit : les habitants actuels de la péninsule portent encore la trace génétique de ces rencontres."
+          "text": "一つ例を挙げましょう。文字の記録によれば、**北アフリカ**の人々が**700年から1200年**のあいだに[[イベリア半島]]へ移り住みました。DNAはこの記録を裏づけています。現在の半島の住民には、こうした出会いの遺伝的な痕跡が今も残っているのです。"
         },
         {
           "type": "funFact",
-          "text": "Même nos origines les plus lointaines sont plus compliquées qu'un simple arbre généalogique. Une étude fondée sur des génomes complets a trouvé la trace de deux populations humaines anciennes, séparées il y a environ **1,5 million d'années**, qui se sont ensuite mélangées à nouveau."
+          "text": "遠い祖先のルーツでさえ、単純な家系図で描けるよりずっと複雑です。ゲノム全体を調べたある研究によって、約**1.5百万年**前に分かれた二つの古代人類集団が、その後ふたたび混ざり合ったことを示す痕跡が、はっきりと見つかっています。これは、人類の歴史が一本の枝分かれの図では語りきれないことを物語っています。"
         }
       ]
     },
     {
       "id": "course_275_que_peut_on_vraiment_lire_dans_son_adn_p4",
-      "title": "Prédisposition n'est pas destin",
+      "title": "なりやすさと運命は別のもの",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Votre ADN influence donc beaucoup de vos caractéristiques. Mais être prédisposé à quelque chose ne veut pas dire que votre sort est scellé. Porter un risque génétique de **dépression** ne signifie pas que vous développerez une dépression. Un risque génétique n'est pas une certitude."
+          "text": "DNAは、さまざまな特徴に大きく影響します。けれども、何かになりやすいことは、行く末が決まっているという意味ではありません。**うつ病**の遺伝的リスクをもっていても、うつ病になるとは限りません。遺伝的なリスクは、確実なものではないのです。"
         },
         {
           "type": "paragraph",
-          "text": "Les gènes ouvrent des possibilités, ils ne les imposent pas. Nos expériences, nos choix et nos circonstances comptent tout autant. Lire son ADN, c'est lire une partie de soi : une partie précieuse, parfois décisive pour la santé, mais une partie seulement."
+          "text": "遺伝子は可能性を開きますが、それを押しつけはしません。経験も、選択も、置かれた状況も、同じくらい大切です。自分のDNAを読むことは、自分の一部を読むことです。大切で、ときに健康を左右することもありますが、あくまで一部にすぎません。"
         },
         {
           "type": "takeaway",
-          "text": "L'ADN raconte nos goûts, nos risques et nos origines, mais une prédisposition n'est jamais une certitude : votre ADN n'est qu'une partie de vous."
+          "text": "DNAは好みやリスク、ルーツを語りますが、なりやすさは決して確実なものではありません。DNAは、自分の一部にすぎないのです。"
         }
       ]
     }

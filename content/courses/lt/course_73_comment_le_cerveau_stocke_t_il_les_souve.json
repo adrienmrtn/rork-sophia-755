@@ -1,106 +1,106 @@
 {
   "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve",
-  "title": "Comment le cerveau stocke-t-il les souvenirs ?",
-  "subtitle": "Mémoire & neurones",
+  "title": "Kaip smegenys saugo prisiminimus?",
+  "subtitle": "Atmintis ir neuronai",
   "subject": "sciences",
-  "subcategory": "La Terre et l'Univers",
-  "description": "La mémoire n'est pas une bibliothèque de tiroirs. C'est un réseau vivant de neurones qui se renforcent, se reconstruisent et parfois se trompent.",
+  "subcategory": "Žemė ir Visata",
+  "description": "Atmintis nėra stalčių biblioteka. Tai gyvas neuronų tinklas, kuris stiprėja, persikuria ir kartais suklysta.",
   "hero": {
     "image": "comment_le_cerveau_stocke_les_souvenirs",
     "ratio": "16:9",
-    "hook": "Un souvenir n'est pas un fichier : c'est un chemin que le cerveau a appris à refaire."
+    "hook": "Prisiminimas nėra failas: tai kelias, kurį smegenys išmoko nutiesti iš naujo."
   },
   "sections": [
     {
       "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve_intro",
-      "title": "Introduction",
+      "title": "Įvadas",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "On imagine souvent la mémoire comme un disque dur. En réalité, c'est un réseau vivant. Des milliards de **neurones**, cellules nerveuses, se reconnectent, se renforcent ou s'affaiblissent selon ce qu'on vit."
+          "text": "Atmintis dažnai įsivaizduojama kaip kietasis diskas. Iš tikrųjų tai gyvas tinklas. Milijardai **neuronų**, nervinių ląstelių, iš naujo jungiasi, stiprėja ar silpnėja pagal tai, kas išgyvenama."
         },
         {
           "type": "paragraph",
-          "text": "Rien n'est stocké en un seul endroit. Un souvenir, c'est une trace répartie, fragile au début, plus solide après le sommeil, et toujours un peu reconstruit quand on s'en souvient."
+          "text": "Niekas nesaugoma vienoje vietoje. Prisiminimas yra paskirstytas pėdsakas, iš pradžių trapus, po miego tvirtesnis ir visada šiek tiek perkuriamas, kai jį prisimenama."
         }
       ]
     },
     {
       "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve_p1",
-      "title": "Des connexions qui se renforcent",
+      "title": "Stiprėjančios jungtys",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Entre deux neurones, le point de contact s'appelle une **synapse**, la jonction où passe le signal nerveux. Le cerveau humain compte environ **86 milliards** de neurones et plus de **100 000 milliards** de synapses."
+          "text": "Dviejų neuronų sąlyčio taškas vadinamas **sinapse**, tai jungtis, per kurią eina nervinis signalas. Žmogaus smegenyse yra apie **86 milijardus** neuronų ir daugiau nei **100 000 milijardų** sinapsių."
         },
         {
           "type": "image",
           "asset": "hippocampus_memory_brain",
           "ratio": "auto",
-          "caption": "L'hippocampe joue un rôle central dans la formation des souvenirs."
+          "caption": "Hipokampas atlieka svarbų vaidmenį formuojantis prisiminimams."
         },
         {
           "type": "paragraph",
-          "text": "Quand une info est répétée ou liée à une émotion forte, les mêmes neurones s'activent ensemble. Leur lien devient plus facile à déclencher : c'est la [[ilgalaikė potenciacija]], le renforcement durable des synapses. Plus un circuit est utilisé, plus le chemin devient « large ». Un souvenir n'est donc pas un objet rangé, mais une **trace** dans le réseau."
+          "text": "Kai informacija kartojama arba susijusi su stipria emocija, tie patys neuronai aktyvuojasi kartu. Jų ryšį pasidaro lengviau suaktyvinti: tai ir yra [[ilgalaikė potenciacija]], ilgalaikis sinapsių sustiprėjimas. Kuo dažniau grandine naudojamasi, tuo „platesnis“ tampa kelias. Todėl prisiminimas nėra sudėtas daiktas, o **pėdsakas** tinkle."
         },
         {
           "type": "funFact",
-          "text": "La capacité de stockage du cerveau est estimée à environ **2,5 pétaoctets**, l'équivalent de millions d'heures de vidéo. Mais ce n'est pas un disque : c'est un tissu vivant qui se réorganise."
+          "text": "Smegenų talpa vertinama maždaug **2,5 petabaito**, tai milijonų valandų vaizdo įrašų atitikmuo. Bet tai ne diskas: tai gyvas audinys, kuris persitvarko."
         }
       ]
     },
     {
       "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve_p2",
-      "title": "L'hippocampe, chef de gare des souvenirs",
+      "title": "Hipokampas, prisiminimų stoties viršininkas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L'**hippocampe**, petite structure du [[smilkininė skiltis]], région derrière les tempes, ne garde pas les souvenirs pour toujours. Il les reçoit, les **encode**, les transforme en trace mémorielle, puis les redistribue vers le **cortex**, la couche externe du cerveau. Ce transfert s'appelle la **consolidation**."
+          "text": "Už smilkinių yra sritis, vadinamoji [[smilkininė skiltis]]. Joje glūdintis nedidelis **hipokampas** neišlaiko prisiminimų amžinai. Jis juos priima, **užkoduoja**, paverčia atminties pėdsaku, o paskui paskirsto į **smegenų žievę**, išorinį smegenų sluoksnį. Šis perkėlimas vadinamas **konsolidacija**."
         },
         {
           "type": "paragraph",
-          "text": "Elle se fait surtout pendant le **sommeil**. Sans hippocampe fonctionnel, on peut vivre l'instant présent, mais on ne fixe plus de nouveaux souvenirs conscients. On reste coincé dans un présent sans passé récent."
+          "text": "Konsolidacija vyksta daugiausia **miego** metu. Be veikiančio hipokampo galima gyventi dabarties akimirka, bet nauji sąmoningi prisiminimai nebeįsitvirtina. Lieka įstrigti dabartyje be artimos praeities."
         },
         {
           "type": "funFact",
-          "text": "Le patient **H.M.**, opéré en 1953, ne formait plus de nouveaux souvenirs. Pourtant, il progressait chaque jour à dessiner dans un miroir, sans se souvenir d'avoir déjà essayé : sa mémoire des gestes était intacte."
+          "text": "Pacientas **H. M.**, operuotas 1953 m., nebesudarė naujų prisiminimų. Vis dėlto jis kasdien darėsi vis geresnis piešdamas veidrodyje, nors neprisimindavo, kad jau bandė: jo judesių atmintis buvo nepažeista."
         }
       ]
     },
     {
       "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve_p3",
-      "title": "Se souvenir, c'est reconstruire",
+      "title": "Prisiminti reiškia perkurti",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Rappeler un souvenir n'est pas rejouer une vidéo. Chaque fois qu'on le sort, il redevient **malléable**, modifiable. Nos émotions du moment, nos connaissances nouvelles ou une suggestion peuvent le modifier avant qu'il soit « réenregistré »."
+          "text": "Prisiminti nėra tas pat, kas iš naujo paleisti vaizdo įrašą. Kiekvieną kartą jį ištraukus, jis vėl tampa **lankstus**, keičiamas. Tuometinės emocijos, naujos žinios ar sufleravimas gali jį pakeisti, kol jis dar nėra „įrašytas iš naujo“."
         },
         {
           "type": "paragraph",
-          "text": "La psychologue **Elizabeth Loftus** a montré qu'on peut implanter de **faux souvenirs** avec de simples questions. D'où la prudence aujourd'hui face aux témoignages oculaires : de bonne foi, le cerveau comble les trous."
+          "text": "Psichologė **Elizabeth Loftus** parodė, kad paprastais klausimais galima įdiegti **klaidingus prisiminimus**. Todėl šiandien į liudininkų parodymus žiūrima atsargiai: visiškai nuoširdžiai smegenys užpildo spragas."
         }
       ]
     },
     {
       "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve_p4",
-      "title": "Plusieurs mémoires dans un seul cerveau",
+      "title": "Kelios atmintys vienose smegenyse",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La mémoire des faits et des épisodes de vie, ce qu'on peut raconter, passe surtout par l'hippocampe. La [[procedūrinė atmintis]], celle du vélo ou de la nage, dépend plutôt du **cervelet**, structure à l'arrière du cerveau, et d'autres structures plus anciennes."
+          "text": "Faktų ir gyvenimo epizodų atmintis, tai, ką galima papasakoti, daugiausia remiasi hipokampu. [[Procedūrinė atmintis]], dviračio ar plaukimo įgūdžių atmintis, labiau priklauso nuo **smegenėlių**, struktūros smegenų gale, ir kitų senesnių struktūrų."
         },
         {
           "type": "paragraph",
-          "text": "C'est pourquoi certains patients amnésiques oublient leur propre nom mais jouent encore du piano. La mémoire n'est pas un tiroir unique : c'est une mosaïque de systèmes."
+          "text": "Todėl kai kurie amnezija sergantys pacientai pamiršta savo vardą, bet vis dar groja pianinu. Atmintis nėra vienas stalčius: tai sistemų mozaika."
         },
         {
           "type": "takeaway",
-          "text": "Un souvenir est une trace dynamique : des synapses renforcées, consolidées surtout la nuit, et reconstruites à chaque rappel. Ce n'est jamais un fichier figé."
+          "text": "Prisiminimas yra dinamiškas pėdsakas: sustiprintos sinapsės, įtvirtintos daugiausia naktį ir perkuriamos kiekvieną kartą prisimenant. Tai niekada nėra sustingęs failas."
         }
       ]
     }

@@ -1,137 +1,137 @@
 {
   "id": "course_264_qui_a_vraiment_construit_les_pyramides",
-  "title": "Qui a vraiment construit les pyramides ?",
-  "subtitle": "Ni esclaves ni extraterrestres",
+  "title": "ピラミッドを本当に造ったのはだれか",
+  "subtitle": "奴隷でも宇宙人でもありません",
   "subject": "histoire",
-  "subcategory": "Antiquité & Moyen Âge",
-  "description": "Esclaves, Atlantes ou extraterrestres : on a tout dit sur les bâtisseurs de Gizeh. Un journal de bord vieux de 4 500 ans et une ville d'ouvriers sortie du sable donnent enfin la réponse.",
+  "subcategory": "古代と中世",
+  "description": "奴隷、アトランティスの民、宇宙人。ギザの建設者をめぐって、ありとあらゆる説が語られてきました。四千五百年前の業務日誌と、砂の中から現れた労働者の街が、ようやく答えを示します。",
   "author": "ezgi-gizem-berkay",
   "hero": {
     "image": "giza_pyramids_khufu_khafre_menkaure_wide_view",
     "ratio": "4:3",
-    "hook": "Des outils en cuivre, des cordes et près de six millions de tonnes de pierre : le carnet de bord d'un inspecteur raconte enfin qui a fait le travail."
+    "hook": "銅の道具とロープ、そして六百万トン近い石。ある監督官が書き残した日誌が、ついに「だれが仕事をやり遂げたのか」を教えてくれます。"
   },
   "sections": [
     {
       "id": "course_264_qui_a_vraiment_construit_les_pyramides_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Depuis **quarante-cinq siècles**, les pyramides de Gizeh se dressent à la vue de tous. Et depuis presque aussi longtemps, on se demande qui les a bâties. Les réponses vont de la rêverie romantique aux théories du complot : extraterrestres, Atlantes, civilisation perdue. Toutes partent de la même idée : sans machines modernes, des hommes n'auraient jamais pu y arriver."
+          "text": "**四千五百年**ものあいだ、ギザのピラミッドは人々の目の前にそびえてきました。そして、ほぼ同じ長さにわたって、だれが造ったのかが問われ続けています。答えはロマンあふれる空想から陰謀論まで幅広く、宇宙人、アトランティスの民、失われた文明などが挙げられます。どれも出発点は同じで、現代の機械がなければ人間にはとても無理だという考えです。"
         },
         {
           "type": "paragraph",
-          "text": "Les pyramides sont pourtant des **tombeaux royaux**, pensés comme des portes vers l'au-delà, où le pharaon commence son règne éternel. Elles ont été planifiées et exécutées avec un soin et une précision à la mesure de cette fonction. Et depuis la découverte des papyrus d'un inspecteur nommé [[メレル]], la question du « qui » a en grande partie trouvé sa réponse."
+          "text": "ところがピラミッドは**王の墓**で、ファラオが永遠の統治を始める場所である来世への門として考えられていました。その役目にふさわしい入念さと正確さで、計画され、実際に造られたのです。そして、[[メレル]]という名の監督官が残したパピルスが見つかってからは、「だれが」という問いにも、ほぼ答えが出ています。"
         }
       ]
     },
     {
       "id": "course_264_qui_a_vraiment_construit_les_pyramides_p1",
-      "title": "Le chantier de Khéops : deux millions de blocs",
+      "title": "クフ王の大工事：二百万個もの石材を積む",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La Grande Pyramide est élevée pour le pharaon [[クフ王]]. Elle compte plus de **deux millions** de blocs de pierre, de deux à quinze tonnes chacun. Pour la chambre funéraire, des poutres de granit pesant jusqu'à **80 tonnes** sont acheminées depuis [[アスワン]], à 900 kilomètres au sud. Haute d'environ **146 mètres**, elle domine tout le plateau."
+          "text": "大ピラミッドは、ファラオの[[クフ王]]のために築かれました。石材は**二百万個**を超え、1個あたり二〜十五トンあります。玄室の梁には重さ最大**80トン**の花崗岩が使われ、南へ900キロ離れた[[アスワン]]から運ばれます。高さは約**146メートル**で、台地全体を見下ろしています。"
         },
         {
           "type": "image",
           "asset": "great_pyramid_khufu_limestone_blocks_close_up",
           "ratio": "5:4",
-          "caption": "Le mastaba d'Iteti dans la nécropole orientale de Gizeh, fouillé par Schiaparelli en 1903, les pyramides en arrière-plan."
+          "caption": "ギザ東墓地にあるイテティのマスタバ（1903年にスキャパレッリが発掘）。背後にピラミッドが見えます。"
         },
         {
           "type": "funFact",
-          "text": "La Grande Pyramide est restée la plus haute construction de la planète pendant près de quatre mille ans."
+          "text": "この大ピラミッドは、四千年近くものあいだ、地球上で最も高い建造物の座を守り続けました。"
         },
         {
           "type": "paragraph",
-          "text": "Un tel chantier exige une main-d'œuvre nombreuse et bien ravitaillée : des dizaines de milliers d'hommes, par équipes qui se relaient sur le site. Pour les loger et les nourrir, une ville de quelque **sept hectares** est bâtie exprès au pied du [[ギザ台地]]. Films et romans ont longtemps montré des esclaves poussés au travail. Ceux qui ont vraiment bâti la pyramide étaient des Égyptiens libres."
+          "text": "これほどの工事には、食料が十分に行き渡った大勢の働き手が欠かせません。数万人の男たちが、交代制で現場に入ります。彼らを住まわせ食べさせるため、[[ギザ台地]]のふもとには、約**7ヘクタール**の街がこのために造られます。映画や小説では、長いあいだ、追い立てられて働く奴隷の姿が描かれてきました。しかし、ピラミッドを実際に造ったのは、自由なエジプト人でした。"
         }
       ]
     },
     {
       "id": "course_264_qui_a_vraiment_construit_les_pyramides_p2",
-      "title": "Le journal de Merer et la ville des ouvriers",
+      "title": "メレルの日誌と、ピラミッドを築いた労働者たちの街",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Longtemps, on ignore comment le chantier s'organisait. En **2013**, une équipe française qui fouille [[ワディ・エル・ジャルフ]], un ancien port sur la mer Rouge, met au jour les plus vieux papyrus inscrits jamais trouvés en Égypte, scellés dans une galerie creusée dans la roche. Ce sont les carnets de bord de Merer, un inspecteur de rang intermédiaire."
+          "text": "長いあいだ、工事がどのように運営されていたかは分かっていませんでした。**2013年**、フランスの調査隊が、紅海沿いの古い港[[ワディ・エル・ジャルフ]]を発掘し、岩を掘った坑道に封じられていた、エジプトで見つかった中で最古の文字入りパピルスを発見します。それは、中堅クラスの監督官メレルの日誌でした。"
         },
         {
           "type": "paragraph",
-          "text": "Merer y note, jour après jour, le travail de son équipe d'une quarantaine d'hommes, membres d'un groupe d'environ **deux cents**. Leur mission : descendre le Nil avec le calcaire fin des carrières de [[トゥーラ]] jusqu'à Gizeh, pour le revêtement qui faisait briller la pyramide. Deux ou trois allers-retours par semaine égyptienne de dix jours."
+          "text": "メレルはそこに、約四十人の自分のチームの仕事を毎日書き留めています。チームは、約**二百人**の集団の一部でした。任務は、[[トゥーラ]]の石切り場でとれる上質な石灰岩を、ナイル川を下ってギザまで運ぶこと。ピラミッドを輝かせる化粧石に使うためです。十日間を1週とするエジプトの暦で、1週に2、3往復しました。"
         },
         {
           "type": "paragraph",
-          "text": "L'autre moitié du tableau sort de terre au pied du plateau. Depuis **1988**, l'archéologue [[マーク・レーナー]] fouille la ville des ouvriers. Elle date surtout des règnes des successeurs de Khéops, Khéphren et Mykérinos, et montre des travailleurs logés et bien traités."
+          "text": "絵のもう半分は、台地のふもとの地中から現れています。**1988年**から、考古学者[[マーク・レーナー]]が労働者の街を発掘してきました。街の大半は、クフ王の後継者であるカフラー王とメンカウラー王の時代のもので、働き手がきちんと住まいを与えられ、丁重に扱われていたことが分かります。"
         }
       ]
     },
     {
       "id": "course_264_qui_a_vraiment_construit_les_pyramides_p3",
-      "title": "Bœufs, bière, dortoirs : des ouvriers bien traités",
+      "title": "牛、ビール、宿舎：手厚く世話された労働者たち",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Nourrir une main-d'œuvre d'environ **dix mille** personnes est une entreprise colossale. Selon une estimation, on abat chaque jour près de **onze bœufs** et **trente-sept moutons ou chèvres**, sans compter de grandes quantités de grain, de pain, de bière et de poisson. La masse de poterie retrouvée dit à elle seule la taille du campement et la qualité de son ravitaillement."
+          "text": "約**1万人**の働き手を食べさせるのは、途方もない大事業です。ある推定によれば、毎日**牛十一頭**近くと**羊かヤギ三十七頭**近くがほふられ、そのほかに、穀物、パン、ビール、魚も大量に必要でした。出土した土器の山だけでも、野営地がどれほど大きく、食料の補給がどれほど行き届いていたかがよく分かります。"
         },
         {
           "type": "funFact",
-          "text": "Au menu figurent aussi des dattes, de l'huile d'olive et du miel : des produits recherchés, qu'on imagine mal servis à des esclaves."
+          "text": "献立には、ナツメヤシの実、オリーブ油、蜂蜜も並びました。どれも貴重な品で、奴隷に出されたとは考えにくいものです。"
         },
         {
           "type": "paragraph",
-          "text": "Les archéologues ont aussi dégagé le plan de longues galeries d'environ **35 mètres**, aux murs épais portant un toit plat, alignées côte à côte. Chacune pouvait abriter une quarantaine de personnes, à peu près la taille de l'équipe de Merer. Une façon efficace de loger une main-d'œuvre nombreuse."
+          "text": "考古学者たちは、長さ約**35メートル**の細長い建物の平面も明らかにしました。壁は厚く屋根は平らで、横にずらりと並んでいます。1棟におよそ四十人が泊まれ、これはメレルのチームとほぼ同じ人数です。大勢の働き手を住まわせる、効率のよい方法でした。"
         }
       ]
     },
     {
       "id": "course_264_qui_a_vraiment_construit_les_pyramides_p4",
-      "title": "Un bras du Nil disparu et beaucoup d'ingénierie",
+      "title": "消えたナイル川の支流と、高度な工学技術",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Si Gizeh a été choisi, c'est d'abord parce que le **calcaire** y abonde. Des canaux sont creusés et des ports aménagés pour amener les blocs par voie d'eau, du Nil jusqu'au pied du chantier. Les ouvriers taillent et nivellent aussi la base de la Grande Pyramide directement dans la roche naturelle."
+          "text": "ギザが選ばれたのは、まず**石灰岩**が豊富にあったからです。運河が掘られ、港が整えられて、ナイル川から工事現場のふもとまで、石を水路で運べるようになりました。労働者たちは、大ピラミッドの土台も、自然の岩盤をそのまま削って平らにならしています。"
         },
         {
           "type": "image",
           "asset": "giza_plateau_nile_valley_satellite_view_nasa",
           "ratio": "3:2",
-          "caption": "Vue satellite : les pyramides à la lisière du désert, la vallée verte du Nil et Le Caire tout proche."
+          "caption": "衛星写真：砂漠の縁に立つピラミッドと、緑のナイル川流域。すぐ近くにはカイロの街が広がります。"
         },
         {
           "type": "paragraph",
-          "text": "Il y a **4 500 ans**, le plateau est plus vert et plus humide qu'aujourd'hui. Un bras occidental du Nil, disparu depuis, coule assez près pour que les lourdes pierres flottent presque jusqu'au chantier. Des animaux ont pu aider à tirer les charges. Mais la seule « force secrète » derrière les pyramides, c'est l'ingénierie et le travail des hommes."
+          "text": "**四千五百年前**、台地は今よりも緑が多く、湿潤でした。その後に消えたナイル川の西の支流が、重い石がほとんど現場まで浮かんで運べるほど近くを流れていました。荷を引くのを、家畜が助けたかもしれません。それでも、ピラミッドの背後にある唯一の「秘密の力」は、技術と人間の労働なのです。"
         },
         {
           "type": "timeline",
           "events": [
             {
-              "date": "v. 2500 av. J.-C.",
-              "title": "Le chantier de Khéops",
-              "detail": "Des dizaines de milliers d'Égyptiens libres élèvent la Grande Pyramide."
+              "date": "紀元前2500年ごろ",
+              "title": "クフ王の工事",
+              "detail": "数万人の自由なエジプト人たちが、大ピラミッドを築き上げます。"
             },
             {
-              "date": "1988",
-              "title": "La ville des ouvriers",
-              "detail": "Mark Lehner commence à fouiller le campement au pied du plateau."
+              "date": "1988年",
+              "title": "労働者の街",
+              "detail": "マーク・レーナーが、台地のふもとの野営地の発掘を始めます。"
             },
             {
-              "date": "2013",
-              "title": "Les papyrus de Merer",
-              "detail": "Une équipe française découvre les carnets de bord à Ouadi al-Jarf."
+              "date": "2013年",
+              "title": "メレルのパピルス",
+              "detail": "フランスの調査隊が、ワディ・エル・ジャルフで日誌を発見します。"
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "Ni extraterrestres ni civilisation perdue : les pyramides sont l'œuvre d'Égyptiens libres, qualifiés et bien nourris, avec leurs quartiers, leurs vivres et leurs métiers. Leur seul secret est l'ingénierie."
+          "text": "宇宙人でも失われた文明でもなく、ピラミッドは自由なエジプト人の仕事です。技能を持ち、食事に恵まれ、自分たちの居住区、食料、職分を持っていました。秘密があるとすれば、それは技術だけです。"
         }
       ]
     }

@@ -1,110 +1,110 @@
 {
   "id": "course_80_pourquoi_les_saisons_existent_sur_d_autr",
-  "title": "Pourquoi les saisons existent sur d'autres planètes ?",
-  "subtitle": "Planètes & orbites",
+  "title": "Kodėl metų laikai būna ir kitose planetose?",
+  "subtitle": "Planetos ir orbitos",
   "subject": "sciences",
-  "subcategory": "La Terre et l'Univers",
-  "description": "Sur Terre, les saisons viennent de l'inclinaison de l'axe. Ailleurs, ce même principe donne des hivers de 42 ans… ou presque aucune saison du tout.",
+  "subcategory": "Žemė ir Visata",
+  "description": "Žemėje metų laikus lemia ašies posvyris. Kitur tas pats principas sukuria 42 metų žiemas… arba beveik jokių metų laikų.",
   "hero": {
     "image": "pourquoi_les_saisons_existent_sur_d_autres_planetes",
     "ratio": "16:9",
-    "hook": "Nos quatre saisons sont un cas modéré. Ailleurs, un été peut durer des décennies."
+    "hook": "Mūsų keturi metų laikai yra švelnus atvejis. Kitur vasara gali trukti dešimtmečius."
   },
   "sections": [
     {
       "id": "course_80_pourquoi_les_saisons_existent_sur_d_autr_intro",
-      "title": "Introduction",
+      "title": "Įvadas",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Sur Terre, l'été et l'hiver naissent surtout de l'**inclinaison** de l'axe : environ **23,5°**. Le Soleil tape plus fort sur un hémisphère, puis sur l'autre. Ce modèle paraît évident. Dans le Système solaire, c'est plutôt une version modérée."
+          "text": "Žemėje vasarą ir žiemą daugiausia lemia ašies **posvyris**: apie **23,5°**. Saulė stipriau kaitina vieną pusrutulį, paskui kitą. Šis modelis atrodo savaime suprantamas. Saulės sistemoje jis veikiau švelnesnė versija."
         },
         {
           "type": "paragraph",
-          "text": "Chaque planète combine son inclinaison et la forme de son orbite. Résultat : des mondes sans saisons, d'autres aux contrastes extrêmes, et des hivers qui durent des décennies."
+          "text": "Kiekviena planeta derina savo posvyrį ir orbitos formą. Rezultatas: pasauliai be metų laikų, kiti su kraštutiniais kontrastais ir dešimtmečius trunkančios žiemos."
         }
       ]
     },
     {
       "id": "course_80_pourquoi_les_saisons_existent_sur_d_autr_p1",
-      "title": "L'inclinaison, moteur des contrastes",
+      "title": "Posvyris, kontrastų variklis",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L'[[Ašies posvyris]], c'est l'angle entre l'axe de rotation d'une planète et la perpendiculaire à son orbite. Plus il est grand, plus les saisons sont marquées."
+          "text": "[[Ašies posvyris]] yra kampas tarp planetos sukimosi ašies ir statmens jos orbitai. Kuo jis didesnis, tuo ryškesni metų laikai."
         },
         {
           "type": "image",
           "asset": "uranus_planet_nasa",
           "ratio": "auto",
-          "caption": "Uranus, inclinée à environ 98°, connaît des saisons extrêmes de 42 ans."
+          "caption": "Uranas, pasviręs apie 98°, išgyvena kraštutinius 42 metų trukmės metų laikus."
         },
         {
           "type": "paragraph",
-          "text": "**Uranus** est le cas extrême : inclinaison d'environ **98°**, presque couchée. Elle met **84 ans** à faire le tour du Soleil. Chaque pôle reçoit alors près de **42 ans** de jour continu, puis **42 ans** de nuit totale. **Mars**, à **25,2°**, ressemble à la Terre, mais son année dure **687 jours** terrestres : printemps et automnes de six mois. **Jupiter** et **Mercure**, presque droits, n'ont quasi pas de saisons."
+          "text": "**Uranas** yra kraštutinis atvejis: posvyris apie **98°**, beveik gulintis. Aplink Saulę jis apsisuka per **84 metus**. Todėl kiekvienas ašigalis gauna beveik **42 metus** nuolatinės dienos, paskui **42 metus** visiškos nakties. **Marsas**, pasviręs **25,2°**, panašus į Žemę, bet jo metai trunka **687 Žemės dienas**: šešių mėnesių pavasariai ir rudenys. **Jupiteris** ir **Merkurijus**, beveik status, metų laikų beveik neturi."
         },
         {
           "type": "funFact",
-          "text": "Sur Uranus et Neptune, les pressions extrêmes pourraient faire « pleuvoir » des diamants formés à partir du carbone atmosphérique."
+          "text": "Dėl kraštutinio slėgio Urane ir Neptūne galėtų „lyti“ deimantais, susidariusiais iš atmosferos anglies."
         }
       ]
     },
     {
       "id": "course_80_pourquoi_les_saisons_existent_sur_d_autr_p2",
-      "title": "Quand la distance au Soleil compte aussi",
+      "title": "Kai svarbus ir atstumas iki Saulės",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Sur Terre, l'orbite est presque circulaire : la distance au Soleil varie peu. Ce n'est donc pas elle qui fait l'été ou l'hiver, mais l'angle des rayons."
+          "text": "Žemėje orbita beveik apskrita: atstumas iki Saulės mažai kinta. Todėl vasarą ar žiemą lemia ne jis, o spindulių kampas."
         },
         {
           "type": "paragraph",
-          "text": "Sur **Mars**, l'orbite est bien plus ovale, plus **excentrique** : de **207 à 249 millions de km**. Dans l'hémisphère sud, l'été tombe près du [[perihelis]], le point le plus proche du Soleil. Étés plus courts, mais plus chauds. Ce choc thermique déclenche parfois des **tempêtes de poussière** planétaires qui occultent le ciel."
+          "text": "**Marso** orbita gerokai labiau pailga, **ekscentriškesnė**: nuo **207 iki 249 mln. km**. Pietiniame pusrutulyje vasara ateina arti artimiausio Saulei taško: [[perihelis]]. Vasaros trumpesnės, bet karštesnės. Šis šiluminis šokas kartais sukelia planetos mastu siaučiančias **dulkių audras**, užstojančias dangų."
         },
         {
           "type": "funFact",
-          "text": "En **2018**, une tempête saisonnière martienne a définitivement arrêté le rover Opportunity en lui masquant le Soleil."
+          "text": "**2018** m. sezoninė Marso audra visam laikui sustabdė marsaeigį Opportunity, užstojusi jam Saulę."
         }
       ]
     },
     {
       "id": "course_80_pourquoi_les_saisons_existent_sur_d_autr_p3",
-      "title": "Vénus, Mercure, Saturne : d'autres règles",
+      "title": "Venera, Merkurijus, Saturnas: kitos taisyklės",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Mercure**, sans vraie atmosphère ni inclinaison, vit surtout des extrêmes **quotidiens** : **430 °C** au Soleil, **-180 °C** la nuit. **Vénus** tourne en sens inverse, en [[Retrogradinis sukimasis]] d'est en ouest, avec une inclinaison extrême, mais son **effet de serre** monstrueux piège la chaleur dans l'atmosphère et égalise la température vers **460 °C** partout, tout le temps."
+          "text": "**Merkurijus**, neturintis tikros atmosferos ir posvyrio, daugiausia išgyvena **paros** kraštutinumus: **430 °C** saulėje, **-180 °C** naktį. **Venera** sukasi priešinga kryptimi iš rytų į vakarus: tai [[Retrogradinis sukimasis]]. Jos posvyris kraštutinis, tačiau monstriškas **šiltnamio efektas** sulaiko šilumą atmosferoje ir išlygina temperatūrą iki maždaug **460 °C** visur ir visą laiką."
         },
         {
           "type": "paragraph",
-          "text": "**Saturne**, inclinée comme la Terre, a des saisons d'environ **7 ans**. L'angle des [[Saturno žiedai]] change la lumière reçue par chaque hémisphère et modifie même la couleur des nuages."
+          "text": "**Saturnas**, pasviręs kaip Žemė, turi apie **7 metus** trunkančius metų laikus. [[Saturno žiedai]] atsigręžia vis kitu kampu: tai keičia kiekvieno pusrutulio gaunamą šviesą ir net debesų spalvą."
         },
         {
           "type": "funFact",
-          "text": "Sur Vénus, un jour, sa rotation, dure plus longtemps qu'une année, sa révolution : **243** jours terrestres contre **225**."
+          "text": "Veneroje para, tai jos apsisukimas aplink ašį, trunka ilgiau nei metai, jos apsisukimas aplink Saulę: **243** Žemės paros, o ne **225**."
         }
       ]
     },
     {
       "id": "course_80_pourquoi_les_saisons_existent_sur_d_autr_p4",
-      "title": "Pourquoi la Terre a des saisons stables",
+      "title": "Kodėl Žemės metų laikai stabilūs",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Sans la **Lune**, l'inclinaison terrestre oscillerait de façon chaotique entre 0° et plus de 80° sur des millions d'années. Des saisons type Uranus rendraient le climat presque inhabitable. La Lune agit comme un **stabilisateur gravitationnel**."
+          "text": "Be **Mėnulio** Žemės ašies posvyris per milijonus metų chaotiškai svyruotų nuo 0° iki daugiau nei 80°. Urano tipo metų laikai padarytų klimatą beveik netinkamą gyventi. Mėnulis veikia kaip **gravitacinis stabilizatorius**."
         },
         {
           "type": "paragraph",
-          "text": "En cherchant des [[egzoplanetos]] habitables, les astronomes regardent donc aussi la stabilité de l'axe. Des saisons douces et régulières ne sont pas un détail : elles font partie des conditions d'une vie durable."
+          "text": "Todėl astronomai, ieškodami tinkamų gyventi pasaulių, tai yra [[egzoplanetos]], tiria ir ašies stabilumą. Švelnūs ir reguliarūs metų laikai nėra smulkmena: jie priklauso ilgalaikės gyvybės sąlygoms."
         },
         {
           "type": "takeaway",
-          "text": "Les saisons naissent surtout de l'inclinaison de l'axe. Sur Uranus, elles durent des décennies ; sur Mars, l'orbite ovale les rend asymétriques. La Lune protège celles de la Terre."
+          "text": "Metų laikai kyla daugiausia dėl ašies posvyrio. Urane jie trunka dešimtmečius; Marse pailga orbita daro juos nesimetriškus. Mėnulis saugo Žemės metų laikus."
         }
       ]
     }

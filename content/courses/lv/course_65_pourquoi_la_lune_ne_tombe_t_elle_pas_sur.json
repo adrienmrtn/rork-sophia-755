@@ -1,118 +1,118 @@
 {
   "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur",
-  "title": "Pourquoi la Lune ne tombe-t-elle pas sur Terre ?",
-  "subtitle": "Orbite & gravité",
+  "title": "Kāpēc Mēness nekrīt uz Zemi?",
+  "subtitle": "Orbīta un gravitācija",
   "subject": "sciences",
-  "subcategory": "La Terre et l'Univers",
-  "description": "La Lune tombe vers la Terre en permanence. Elle la rate simplement à chaque fois. C'est exactement ça, une orbite.",
+  "subcategory": "Zeme un Visums",
+  "description": "Mēness nepārtraukti krīt uz Zemi. Tas to katru reizi vienkārši netrāpa. Tieši tāda ir orbīta.",
   "hero": {
     "image": "pourquoi_la_lune_ne_tombe_pas",
     "ratio": "16:9",
-    "hook": "La Lune tombe vers nous. Elle rate juste la Terre à chaque tour."
+    "hook": "Mēness krīt uz mums. Tas tikai katrā apgriezienā Zemi netrāpa."
   },
   "sections": [
     {
       "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur_intro",
-      "title": "Introduction",
+      "title": "Ievads",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Si la gravité terrestre attire la Lune, pourquoi ne s'écrase-t-elle pas sur nous ? La réponse paraît bizarre : la Lune **tombe** bel et bien vers la Terre. Elle la rate seulement à chaque instant."
+          "text": "Ja Zemes gravitācija pievelk Mēnesi, kāpēc tas neietriecas mūsos? Atbilde šķiet dīvaina: Mēness **krīt** uz Zemi pavisam noteikti. Tas to tikai katru mirkli netrāpa."
         },
         {
           "type": "paragraph",
-          "text": "Cet équilibre entre chute et vitesse latérale, c'est une **orbite**, une trajectoire courbe autour d'un astre. Le physicien anglais **Isaac Newton** fut le premier à unifier la chute d'une pomme et le mouvement des astres avec la même idée."
+          "text": "Šis līdzsvars starp krišanu un sānu ātrumu ir **orbīta**, liekta trajektorija ap debess ķermeni. Angļu fiziķis **Īzaks Ņūtons** bija pirmais, kas ar vienu un to pašu ideju apvienoja ābola krišanu un debess ķermeņu kustību."
         },
         {
           "type": "funFact",
-          "text": "Si vous pesiez **60 kg** sur Terre, vous n'en pèseriez qu'environ **10** sur la Lune : sa gravité est six fois plus faible."
+          "text": "Ja uz Zemes tu sver **60 kg**, uz Mēness tu svērtu tikai aptuveni **10 kg**: tā gravitācija ir sešas reizes vājāka."
         }
       ]
     },
     {
       "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur_p1",
-      "title": "Le canon imaginaire de Newton",
+      "title": "Ņūtona iedomātais lielgabals",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Newton imagine un canon au sommet d'une montagne si haute qu'elle sortirait de l'atmosphère. On tire un boulet horizontalement. Avec peu de puissance, il retombe vite. Avec plus de force, il va plus loin."
+          "text": "Ņūtons iztēlojas lielgabalu kalna virsotnē, kas ir tik augsts, ka sniedzas ārpus atmosfēras. Lielgabala lodi izšauj horizontāli. Ar mazu jaudu tā ātri nokrīt. Ar lielāku spēku tā aizlido tālāk."
         },
         {
           "type": "image",
           "asset": "newton_cannonball_orbit_thought_experiment",
           "ratio": "auto",
-          "caption": "L'expérience de pensée du boulet de canon de Newton : la clé pour comprendre l'orbite."
+          "caption": "Ņūtona domu eksperiments ar lielgabala lodi: atslēga orbītas izpratnei."
         },
         {
           "type": "paragraph",
-          "text": "À une vitesse précise, appelée [[Orbitālais ātrums]], quelque chose de remarquable arrive. Pendant que le boulet tombe, la Terre, qui est ronde, se courbe sous lui à la même allure. Le projectile tombe… sans jamais toucher le sol. Il est en **chute libre permanente**, tiré par la gravité sans s'écraser."
+          "text": "Pie noteikta ātruma, kas ir [[Orbitālais ātrums]], notiek kas ievērojams. Kamēr lode krīt, Zeme, būdama apaļa, tai apakšā izliecas tādā pašā tempā. Lode krīt… nekad neskarot zemi. Tas atrodas **pastāvīgā brīvā kritienā**, gravitācijas vilkts un neietriecoties."
         },
         {
           "type": "paragraph",
-          "text": "La Lune fait la même chose. Elle a assez de vitesse sur le côté pour transformer une chute en boucle. Sans cette vitesse, elle plongerait droit sur nous."
+          "text": "Mēness dara to pašu. Tam ir pietiekami liels sānu ātrums, lai kritienu pārvērstu cilpā. Bez šī ātruma tas nogāztos taisni uz mums."
         }
       ]
     },
     {
       "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur_p2",
-      "title": "Deux forces, un équilibre",
+      "title": "Divi spēki, viens līdzsvars",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La Lune orbite à environ **384 000 km**. Sa vitesse latérale est d'environ **1 km/s**. Si elle s'arrêtait net, elle s'écraserait en quelques jours. Si la gravité disparaissait d'un coup, elle partirait en ligne droite dans l'espace, selon le principe d'[[Inerce]] : un corps garde sa vitesse s'il n'est pas freiné."
+          "text": "Mēness riņķo aptuveni **384 000 km** attālumā. Tā sānu ātrums ir aptuveni **1 km/s**. Ja tas pēkšņi apstātos, tas ietriektos dažās dienās. Ja gravitācija pēkšņi izzustu, tas aizlidotu pa taisnu līniju kosmosā. Tā darbojas [[Inerce]]: ķermenis saglabā ātrumu, ja to nebremzē."
         },
         {
           "type": "paragraph",
-          "text": "La [[Ņūtona universālā gravitācija]] dit que toute masse attire toute autre masse, et que l'attraction diminue avec la distance, plus précisément avec le carré de la distance. Plus un satellite est proche, plus il doit aller vite pour ne pas tomber."
+          "text": "[[Ņūtona universālā gravitācija]] vēsta, ka katra masa pievelk katru citu masu un ka pievilkšanās samazinās līdz ar attālumu, precīzāk, atbilstoši attāluma kvadrātam. Jo tuvāk ir pavadonis, jo ātrāk tam jālido, lai nekristu."
         },
         {
           "type": "funFact",
-          "text": "La Station spatiale internationale, à seulement **400 km** d'altitude, file à environ **28 000 km/h**. Elle fait le tour de la Terre en **90 minutes**. La Lune, plus loin, met **27,3 jours**."
+          "text": "Starptautiskā kosmosa stacija, atrodoties tikai **400 km** augstumā, lido ar aptuveni **28 000 km/h**. Apkārt Zemei tā apriņķo **90 minūtēs**. Mēness, kas ir tālāk, to veic **27,3 dienās**."
         },
         {
           "type": "paragraph",
-          "text": "L'orbite n'est donc pas magique. C'est un compromis permanent entre « je tombe » et « j'avance trop vite pour toucher »."
+          "text": "Orbīta tātad nav maģija. Tas ir pastāvīgs kompromiss starp „es krītu“ un „es virzos pārāk ātri, lai pieskartos“."
         }
       ]
     },
     {
       "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur_p3",
-      "title": "Les marées éloignent la Lune",
+      "title": "Plūdmaiņas attālina Mēnesi",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L'orbite n'est pas figée. Les [[Plūdmaiņu spēki]] entrent en jeu. La gravité de la Lune tire plus fort sur le côté de la Terre qui lui fait face qu'au centre. Elle déforme les océans et crée un bourrelet d'eau."
+          "text": "Orbīta nav iesaldēta. Spēlē iesaistās [[plūdmaiņu spēki]]. Mēness gravitācija spēcīgāk velk Zemes pusi, kas vērsta pret to, nekā Zemes centru. Tā deformē okeānus un rada ūdens izvirzījumu."
         },
         {
           "type": "paragraph",
-          "text": "Comme la Terre tourne sur elle-même plus vite que la Lune ne tourne autour d'elle, ce bourrelet avance un peu devant la Lune. Le frottement ralentit très légèrement la rotation terrestre : nos journées s'allongent d'environ **1,4 milliseconde** par siècle. En échange, la Lune s'éloigne d'environ **3,8 cm** par an."
+          "text": "Tā kā Zeme ap savu asi griežas ātrāk, nekā Mēness riņķo ap Zemi, šis izvirzījums mazliet apsteidz Mēnesi. Berze ļoti nedaudz palēnina Zemes griešanos: mūsu dienas pagarinās aptuveni par **1,4 milisekundēm** gadsimtā. Pretī Mēness attālinās aptuveni par **3,8 cm** gadā."
         },
         {
           "type": "paragraph",
-          "text": "Il y a des milliards d'années, la Lune était bien plus proche. Les marées étaient énormes. Ce brassage d'eau et de chimie a peut-être aidé les premières formes de vie. Et les dinosaures, eux, vivaient sur une Terre où les journées ne duraient que **22 ou 23 heures**."
+          "text": "Pirms miljardiem gadu Mēness bija daudz tuvāk. Plūdmaiņas bija milzīgas. Šī ūdens un ķīmisko vielu maisīšanās, iespējams, palīdzēja rasties pirmajām dzīvības formām. Savukārt dinozauri dzīvoja uz Zemes, kur diennakts ilga tikai **22 vai 23 stundas**."
         }
       ]
     },
     {
       "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur_p4",
-      "title": "Des éclipses… pour l'instant",
+      "title": "Aptumsumi… pagaidām",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Aujourd'hui, par une coïncidence géométrique, le Soleil est environ **400 fois** plus grand que la Lune, mais aussi **400 fois** plus loin. Les deux ont donc la même **taille apparente**, l'angle sous lequel on les voit dans le ciel. Les éclipses totales de Soleil sont possibles."
+          "text": "Mūsdienās ģeometriskas sakritības dēļ Saule ir aptuveni **400 reižu** lielāka par Mēnesi, bet arī **400 reižu** tālāk. Tāpēc abiem ir vienāds **šķietamais izmērs**: leņķis, kādā tos redz debesīs. Pilni Saules aptumsumi ir iespējami."
         },
         {
           "type": "paragraph",
-          "text": "Dans environ **600 millions d'années**, la Lune sera trop loin pour cacher entièrement le Soleil. Il ne restera que des éclipses annulaires : un anneau de lumière autour du disque lunaire. À très long terme, la Terre et la Lune pourraient se synchroniser : chaque corps montrerait toujours la même face à l'autre. Mais le Soleil, en devenant **géante rouge**, phase finale d'une étoile comme le nôtre, transformera le système bien avant."
+          "text": "Aptuveni pēc **600 miljoniem gadu** Mēness būs pārāk tālu, lai pilnībā aizsegtu Sauli. Paliks tikai gredzenveida aptumsumi: gaismas gredzens ap Mēness disku. Ļoti tālā nākotnē Zeme un Mēness varētu sinhronizēties: katrs ķermenis vienmēr rādītu otram vienu un to pašu pusi. Taču Saule, kļūstot par **sarkano milzi**, mūsu zvaigznei līdzīgas zvaigznes noslēguma posmu, pārveidos sistēmu daudz agrāk."
         },
         {
           "type": "takeaway",
-          "text": "La Lune ne s'écrase pas parce que sa vitesse latérale équilibre l'attraction terrestre : elle est en chute libre permanente. Et elle s'éloigne encore d'environ **3,8 cm** par an."
+          "text": "Mēness neietriecas, jo tā sānu ātrums līdzsvaro Zemes pievilkšanu: tas atrodas pastāvīgā brīvā kritienā. Un tas joprojām attālinās aptuveni par **3,8 cm** gadā."
         }
       ]
     }

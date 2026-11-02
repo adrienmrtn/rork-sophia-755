@@ -1,104 +1,104 @@
 {
   "id": "course_89_les_travaux_et_les_jours_hesiode",
-  "title": "Les Travaux et les Jours, Hésiode",
-  "subtitle": "VIIIe siècle av. J.-C.",
+  "title": "Darbai ir dienos, Hesiodas",
+  "subtitle": "VIII a. pr. Kr.",
   "subject": "litterature",
-  "subcategory": "Grecs & Philosophes antiques",
-  "description": "Hésiode parle à son frère Persès : travaille, sois juste, méfie-toi de l'excès. Entre mythe de Pandore et calendrier agricole, naît une éthique du labeur.",
+  "subcategory": "Graikai ir antikos filosofai",
+  "description": "Hesiodas kreipiasi į savo brolį Persą: dirbk, būk teisingas, saugokis kraštutinumų. Tarp Pandoros mito ir žemės ūkio kalendoriaus gimsta darbo etika.",
   "hero": {
     "image": "les_travaux_et_les_jours_hesiode",
     "ratio": "16:9",
-    "hook": "Avant les manuels de sagesse, un fermier-poète sermonne son frère."
+    "hook": "Prieš išminties vadovėlius ūkininkas poetas bara savo brolį."
   },
   "sections": [
     {
       "id": "course_89_les_travaux_et_les_jours_hesiode_intro",
-      "title": "Introduction",
+      "title": "Įvadas",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Vers le **VIIIe siècle avant J.-C.**, en [[Bojotija]], région de Grèce centrale au nord de l'Attique, le poète **Hésiode** écrit les **Travaux et les Jours**. Ce n'est pas une épopée de héros guerriers. C'est un poème adressé à son frère **Persès**, accusé d'avoir triché sur un héritage familial avec l'aide de juges corrompus."
+          "text": "Apie **VIII a. pr. Kr.** Centrinės Graikijos regione į šiaurę nuo Atikos – [[Bojotija]] – poetas **Hesiodas** rašo poemą **Darbai ir dienos**. Tai ne karių herojų epas. Tai poema, skirta jo broliui **Persui**, kaltinamam apgavus dalijantis šeimos palikimą, padedant papirktiems teisėjams."
         },
         {
           "type": "paragraph",
-          "text": "Hésiode mélange mythe, morale et conseils agricoles. Travailler la terre, respecter la justice, éviter l'orgueil : le quotidien devient matière poétique. Avec Homère, ses textes fondent une grande partie de la mythologie et de la réflexion grecques."
+          "text": "Hesiodas maišo mitą, moralę ir ūkininkavimo patarimus. Dirbti žemę, gerbti teisingumą, vengti puikybės: kasdienybė tampa poezijos medžiaga. Kartu su Homeru jo kūriniai padeda pamatus didelei graikų mitologijos ir mąstysenos daliai."
         }
       ]
     },
     {
       "id": "course_89_les_travaux_et_les_jours_hesiode_p1",
-      "title": "Un poète qui parle depuis son champ",
+      "title": "Poetas, kalbantis iš savo lauko",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Contrairement à **Homère**, figure semi-légendaire du poème épique, Hésiode se met en scène. Il dit son village, **Ascra**, localité béotienne, son père venu d'Asie Mineure, région de l'actuelle Turquie, son procès contre Persès. La **Muse**, déesse inspiratrice des arts, le choisit, dit-il. Mais le ton reste concret : semer, moissonner, naviguer au bon moment."
+          "text": "Skirtingai nei **Homeras**, pusiau legendinė epinės poemos figūra, Hesiodas pats atsiranda tekste. Jis pasakoja apie savo kaimą **Askrą**, Bojotijos gyvenvietę, apie tėvą, atvykusį iš Mažosios Azijos, dabartinės Turkijos regiono, apie savo bylą su Persu. **Mūza**, menų įkvėpėja deivė, esą jį išrinko. Bet tonas lieka konkretus: sėti, pjauti, plaukti tinkamu metu."
         },
         {
           "type": "image",
           "asset": "hesiod_ancient_greek_poet_illustration",
           "ratio": "4:3",
-          "caption": "Hésiode : la poésie grecque descend aussi dans les champs."
+          "caption": "Hesiodas: graikų poezija nusileidžia ir į laukus."
         },
         {
           "type": "paragraph",
-          "text": "Cette voix personnelle annonce quelque chose de moderne : l'auteur qui s'implique, pas seulement le barde anonyme. Hésiode parle depuis la terre, pas depuis le palais ou le champ de bataille. Il invente une poésie didactique, une poésie qui enseigne."
+          "text": "Šis asmeninis balsas skelbia kai ką modernaus: autorių, kuris pats įsitraukia, o ne vien anonimą bardą. Hesiodas kalba iš žemės, ne iš rūmų ar mūšio lauko. Jis sukuria didaktinę poeziją, poeziją, kuri moko."
         }
       ]
     },
     {
       "id": "course_89_les_travaux_et_les_jours_hesiode_p2",
-      "title": "Prométhée, Pandore et le déclin",
+      "title": "Prometėjas, Pandora ir nuosmukis",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Pour expliquer la dureté de la vie, Hésiode raconte **Prométhée**, titan qui vole le feu pour les hommes, et **Pandora**, première femme dont la jarre libère les maux sur le monde. Il ajoute les [[penki žmonijos amžiai]] : or, argent, bronze, héros, fer. Nous vivons l'**âge de fer**, le pire, où la justice vacille et où le travail est pénible."
+          "text": "Norėdamas paaiškinti gyvenimo sunkumą, Hesiodas pasakoja apie **Prometėją**, titaną, vogiantį žmonėms ugnį, ir **Pandorą**, pirmąją moterį, kurios ąsotis paleidžia pasaulį kamuoti nelaimes. Jis priduria dar vieną pasakojimą: [[penki žmonijos amžiai]] – aukso, sidabro, bronzos, herojų ir geležies. Gyvename **geležies amžiuje**, pačiame blogiausiame, kai teisingumas svyruoja, o darbas sunkus."
         },
         {
           "type": "funFact",
-          "text": "[[Hesiodo „Teogonija“]], autre grand poème du même auteur, raconte la naissance des dieux depuis le **Chaos**, le vide originel. Les Travaux, eux, descendent du ciel vers la charrue."
+          "text": "[[Hesiodo „Teogonija“]], kita didi to paties autoriaus poema, pasakoja apie dievų gimimą iš **Chaoso**, pirmapradės tuštumos. O Darbai nusileidžia iš dangaus prie arklo."
         },
         {
           "type": "image",
           "asset": "prometheus_fire_myth_painting",
           "ratio": "4:3",
-          "caption": "Prométhée et le feu : le progrès technique a un prix, chez Hésiode."
+          "caption": "Prometėjas ir ugnis: pas Hesiodą technikos pažanga turi kainą."
         }
       ]
     },
     {
       "id": "course_89_les_travaux_et_les_jours_hesiode_p3",
-      "title": "Dikè contre l'hybris",
+      "title": "Dikė prieš Hibrį",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le cœur moral du poème oppose *Dikè*, la justice, l'ordre juste, à l'[[Hibris]], la démesure qui pousse l'homme à se croire l'égal des dieux. Les rois injustes sont menacés par **Zeus**, roi des dieux. Le paysan honnête, lui, a une chance. Hésiode ne promet pas le paradis. Il promet que l'effort vaut mieux que la fraude."
+          "text": "Moralinės poemos šerdyje susiremia dvi jėgos: *Dikė* – teisingumas, teisinga tvarka – ir [[Hibris]] – nesaikingumas, verčiantis žmogų save laikyti dievų lygiu. Neteisingiems karaliams grasina **Zeusas**, dievų valdovas. O sąžiningas valstietis turi šansą. Hesiodas nežada rojaus. Jis žada, kad pastangos yra vertingesnės už sukčiavimą."
         },
         {
           "type": "paragraph",
-          "text": "Le **calendrier des travaux** rythme le texte : quand labourer, quand vendanger, quand se méfier de la mer. La sagesse est saisonnière. Connaître les rythmes de la nature, c'est aussi respecter un ordre plus vaste que l'appétit du moment. Persès est sermonné comme un frère paresseux, pas comme un roi."
+          "text": "Tekstą ritmingai skaido **darbų kalendorius**: kada arti, kada skinti vynuoges, kada saugotis jūros. Išmintis sezoninė. Pažinti gamtos ritmus reiškia kartu gerbti tvarką, platesnę už akimirkos apetitą. Persas barinamas kaip tingus brolis, o ne kaip karalius."
         }
       ]
     },
     {
       "id": "course_89_les_travaux_et_les_jours_hesiode_p4",
-      "title": "L'ancêtre des poèmes de la terre",
+      "title": "Žemės poemų protėvis",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Virgile**, poète latin du Ier siècle av. J.-C., s'en souviendra dans les [[Georgikos]], poème didactique sur l'agriculture. Les moralistes, d'[[Erazmas Roterdamietis]], humaniste de la Renaissance, aux modernes, y lisent une éthique du labeur. Hésiode n'est pas tendre. Il est clair : sans travail et sans justice, la communauté pourrit."
+          "text": "**Vergilijus**, I a. pr. Kr. romėnų poetas, tai prisimins didaktinėje poemoje apie žemdirbystę – [[Georgikos]]. Moralistai, tarp jų Renesanso humanistas [[Erazmas Roterdamietis]], o vėliau ir šiuolaikiniai, joje įžvelgia darbo etiką. Hesiodas nėra švelnus. Jis aiškus: be darbo ir be teisingumo bendruomenė pūva."
         },
         {
           "type": "paragraph",
-          "text": "Hésiode parle aussi de la **bonne Eris**, déesse de la rivalité utile qui pousse le voisin à mieux travailler, contre la **mauvaise Eris**, déesse de la haine et du procès. Dans un monde dur, cette distinction compte : l'émulation n'est pas la guerre. Le poème devient ainsi un art de vivre ensemble, ancré dans les saisons et la mesure."
+          "text": "Hesiodas kalba ir apie **gerąją Eridą**, naudingų varžybų deivę, skatinančią kaimyną geriau dirbti, ir apie **blogąją Eridą**, neapykantos ir bylinėjimosi deivę. Žiauriame pasaulyje šis skirtumas svarbus: varžymasis nėra karas. Taip poema tampa bendro gyvenimo menu, įsišaknijusiu metų laikuose ir saikingume."
         },
         {
           "type": "takeaway",
-          "text": "Les **Travaux et les Jours** inventent une poésie du quotidien agricole. Hésiode dit à son frère, et à nous : cultive ton champ, fuis l'excès, car l'âge de fer ne pardonne pas la paresse ni l'injustice."
+          "text": "**Darbai ir dienos** sukuria žemdirbiškos kasdienybės poeziją. Hesiodas sako savo broliui, o kartu ir mums: dirbk savo lauką, venk kraštutinumų, nes geležies amžius neatleidžia nei tingumo, nei neteisybės."
         }
       ]
     }

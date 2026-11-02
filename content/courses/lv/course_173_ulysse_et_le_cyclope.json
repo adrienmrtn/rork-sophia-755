@@ -1,114 +1,114 @@
 {
   "id": "course_173_ulysse_et_le_cyclope",
-  "title": "Ulysse et le Cyclope",
-  "subtitle": "La ruse contre la force",
+  "title": "Odisejs un Kiklops",
+  "subtitle": "Viltība pret spēku",
   "subject": "mythologie",
-  "subcategory": "Grèce : les héros",
-  "description": "Dans l'Odyssée, Ulysse affronte le Cyclope Polyphème. Sa [[metis]] le sauve, mais son orgueil attire la colère de Poséidon.",
+  "subcategory": "Grieķija: varoņi",
+  "description": "Odisejas stāstā Odisejs stājas pretī kiklopam Polifēmam. Viņu glābj [[metis]], taču lepnība izraisa Poseidona dusmas.",
   "hero": {
     "image": "ulysse_et_le_cyclope",
     "ratio": "16:9",
-    "hook": "Un géant à un seul œil dévore ses hommes. Ulysse ne peut pas vaincre par la force. Alors il invente un nom : Personne."
+    "hook": "Vienacains milzis aprij viņa biedrus. Odisejs nevar uzvarēt ar spēku. Tāpēc viņš izdomā vārdu: Neviens."
   },
   "sections": [
     {
       "id": "course_173_ulysse_et_le_cyclope_intro",
-      "title": "Introduction",
+      "title": "Ievads",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Après la guerre de Troie, **Ulysse**, roi de l'île d'Ithaque, tente de rentrer chez lui. Homère raconte son périple dans l'**Odyssée**. Au chant IX, il aborde une île fertile où vivent les [[Kiklopi]], géants solitaires à un seul œil."
+          "text": "Pēc Trojas kara **Odisejs**, Itakas salas valdnieks, mēģina atgriezties mājās. Homērs savu ceļojumu apraksta **Odisejā**. Devītajā dziesmā viņš nonāk auglīgā salā, kur dzīvo [[kiklopi]], vientuļi vienacaini milži."
         },
         {
           "type": "paragraph",
-          "text": "Là, il rencontre **Polyphème**, fils du dieu de la mer **Poséidon**. L'épisode n'est pas seulement un conte de monstre. C'est une leçon : la [[metis]], l'intelligence rusée, peut battre la force brute. Mais l'[[hibrīss]], l'orgueil excessif, peut tout gâcher."
+          "text": "Tur viņš sastop **Polifēmu**, jūras dieva **Poseidona** dēlu. Šis atgadījums nav tikai pasaka par briesmoni. Tā ir mācība: [[metis]], viltīgs saprāts, var uzvarēt rupju spēku. Taču [[hibrīss]], pārmērīga lepnība, var visu sabojāt."
         }
       ]
     },
     {
       "id": "course_173_ulysse_et_le_cyclope_p1",
-      "title": "Hospitalité espérée, barbarie trouvée",
+      "title": "Cerēta viesmīlība, atrasts mežonīgums",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ulysse débarque avec douze compagnons. Les Cyclopes n'ont ni assemblées, ni lois, ni vraie agriculture. Ils vivent dans des grottes. Les Grecs, eux, croient à la [[ksenija]] : le devoir sacré d'accueillir l'étranger, sous la protection de Zeus."
+          "text": "Odisejs izkāpj krastā ar divpadsmit biedriem. Kiklopiem nav ne sapulču, ne likumu, ne īstas lauksaimniecības. Viņi dzīvo alās. Grieķiem savukārt ir [[ksenija]]: svēts pienākums uzņemt svešinieku Zeva aizsardzībā."
         },
         {
           "type": "image",
           "asset": "cyclops_polyphemus_one_eye_greek_myth",
           "ratio": "4:3",
-          "caption": "Polyphème, le Cyclope, figure de la force sans loi."
+          "caption": "Polifēms, kiklops, bezlikumīga spēka tēls."
         },
         {
           "type": "paragraph",
-          "text": "Dans la caverne, les hommes voient des fromages et du bétail. Les compagnons veulent partir. Ulysse insiste pour attendre le maître, espérant un cadeau d'hôte. Erreur. Polyphème revient, bloque l'entrée avec un rocher immense, et dévore deux Grecs. La force ne suffira pas. Il faut ruser."
+          "text": "Alā vīri redz sierus un lopus. Biedri grib iet prom. Odisejs uzstāj, ka jāgaida saimnieks, cerot uz viesa dāvanu. Kļūda. Polifēms atgriežas, aizsprosto ieeju ar milzīgu klinti un aprij divus grieķus. Ar spēku nepietiks. Jāizmanto viltība."
         }
       ]
     },
     {
       "id": "course_173_ulysse_et_le_cyclope_p2",
-      "title": "Le vin, le pieu et « Personne »",
+      "title": "Vīns, miets un „Neviens“",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ulysse taille un pieu d'olivier, bois cher à Athéna, déesse de la sagesse. Il le cache. Puis il offre à Polyphème un vin très fort, presque pur. Le géant s'enivre. Avant de s'endormir, il demande le nom de son invité."
+          "text": "Odisejs izcērt olīvkoka mietu, koku, kas mīļš gudrības dievietei Atēnai. Viņš to paslēpj. Tad pasniedz Polifēmam ļoti stipru, gandrīz tīru vīnu. Milzis piedzeras. Pirms aizmigšanas viņš pajautā viesa vārdu."
         },
         {
           "type": "funFact",
-          "text": "En grec, Ulysse dit s'appeler **Outis**, « Personne ». Ce mot évoque aussi **métis**, la ruse. Homère joue sur le double sens : c'est bien la ruse qui vainc le géant."
+          "text": "Grieķu valodā Odisejs saka, ka viņu sauc **Outis**, „Neviens“. Šis vārds atgādina arī **metis**, viltību. Homērs spēlējas ar divējādo nozīmi: milzi tiešām uzvar viltība."
         },
         {
           "type": "image",
           "asset": "ulysses_cyclops_blinding_stake_ancient_vase",
           "ratio": "4:3",
-          "caption": "Ulysse et ses hommes aveuglent Polyphème, scène célèbre des vases grecs."
+          "caption": "Odisejs un viņa vīri apžilbina Polifēmu, slavena aina uz grieķu vāzēm."
         },
         {
           "type": "paragraph",
-          "text": "Ulysse répond : « Je m'appelle **Personne**. » Puis ses hommes enfoncent le pieu brûlant dans l'œil unique. Les autres Cyclopes accourent. « Qui te tue ? » demandent-ils. « Personne ! » répond Polyphème. Ils s'éloignent, pensant à un mal divin."
+          "text": "Odisejs atbild: „Mani sauc **Neviens**.“ Tad viņa vīri iedur kvēlojošo mietu vienīgajā acī. Pārējie kiklopi pieskrien. „Kas tevi nogalina?“ viņi jautā. „Neviens!“ atbild Polifēms. Viņi aiziet, domādami, ka tā ir dievu sūtīta kaite."
         }
       ]
     },
     {
       "id": "course_173_ulysse_et_le_cyclope_p3",
-      "title": "Sortir sous les moutons",
+      "title": "Izkļūšana zem aitām",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le lendemain, Polyphème aveugle garde la sortie. Il palpe le dos de chaque mouton. Ulysse attache ses compagnons sous le ventre des bêtes les plus laineuses. Lui-même se suspend sous le plus gros bélier. Le géant caresse l'animal sans sentir l'ennemi juste en dessous."
+          "text": "Nākamajā dienā aklais Polifēms sargā izeju. Viņš taustīdams pārbauda katras aitas muguru. Odisejs piesien savus biedrus zem vilnainākajām aitām. Pats pakaras zem lielākā auna. Milzis glauda dzīvnieku, nenojauzdams ienaidnieku tieši zem tā."
         },
         {
           "type": "paragraph",
-          "text": "Une fois en mer, Ulysse ne résiste pas. Il crie son vrai nom, sa lignée, sa cité. Il veut le [[kleoss]], la gloire qui survit par le nom. Polyphème peut enfin maudire une cible précise auprès de son père Poséidon."
+          "text": "Jau jūrā Odisejs nenocieš. Viņš izkliedz savu īsto vārdu, dzimtu, pilsētu. Viņš grib slavu, kas pārdzīvo cilvēku caur vārdu: [[kleoss]]. Tagad Polifēms beidzot var nolādēt konkrētu mērķi, lūdzot savu tēvu Poseidonu."
         }
       ]
     },
     {
       "id": "course_173_ulysse_et_le_cyclope_p4",
-      "title": "La malédiction qui ouvre l'Odyssée",
+      "title": "Lāsts, kas sāk Odiseju",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Polyphème prie Poséidon : qu'Ulysse n'arrive jamais chez lui, ou alors tard, seul, après avoir perdu tous ses compagnons. Cette malédiction structure les dix ans d'errance qui suivent. La mer devient un châtiment."
+          "text": "Polifēms lūdz Poseidonu: lai Odisejs nekad nenonāk mājās, bet, ja nonāk, tad vēlu, viens, pazaudējis visus biedrus. Šis lāsts nosaka desmit klejošanas gadus, kas seko. Jūra kļūst par sodu."
         },
         {
           "type": "image",
           "asset": "poseidon_god_sea_trident_greek",
           "ratio": "4:3",
-          "caption": "Poséidon, dieu de la mer, venge son fils Polyphème."
+          "caption": "Jūras dievs Poseidons atriebj savu dēlu Polifēmu."
         },
         {
           "type": "paragraph",
-          "text": "Le mythe oppose deux héroïsmes. Dans l'Iliade, on gagne par la force et la renommée. Dans l'Odyssée, on survit par la retenue. Ulysse a gagné par l'esprit. Il a perdu par l'orgueil de vouloir être reconnu."
+          "text": "Mīts pretstata divu veidu varonību. Iliādā uzvar ar spēku un slavu. Odisejā izdzīvo ar atturību. Odisejs uzvarēja ar prātu. Viņš zaudēja lepnuma dēļ, jo gribēja tikt atpazīts."
         },
         {
           "type": "takeaway",
-          "text": "Face à Polyphème, Ulysse triomphe grâce à la [[metis]] et au nom « Personne ». En révélant son identité pour le [[kleoss]], il déclenche la colère de Poséidon et prolonge son exil."
+          "text": "Pretī Polifēmam Odisejs uzvar ar viltību ([[metis]]) un vārdu „Neviens“. Atklājot savu identitāti slavas dēļ ([[kleoss]]), viņš izraisa Poseidona dusmas un pagarina trimdu."
         }
       ]
     }

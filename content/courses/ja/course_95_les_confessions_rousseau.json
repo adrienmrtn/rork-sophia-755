@@ -1,112 +1,112 @@
 {
   "id": "course_95_les_confessions_rousseau",
-  "title": "Qu'ose avouer Rousseau dans « Les Confessions » ?",
+  "title": "ルソーは『告白』で何をあえて打ち明けたのか",
   "subtitle": "1782-1789",
   "subject": "litterature",
-  "subcategory": "Classiques français & européens",
-  "description": "Rousseau raconte sa vie avec une sincérité inédite. Les Confessions inventent l'autobiographie moderne et ouvrent la voie au romantisme.",
+  "subcategory": "フランス・ヨーロッパの古典",
+  "description": "ルソーは前例のない誠実さで自分の人生を語ります。『告白』は近代の自伝を生み出し、ロマン主義への道を開きました。",
   "hero": {
     "image": "les_confessions_rousseau",
     "ratio": "16:9",
-    "hook": "« Je forme une entreprise qui n'eut jamais d'exemple » : ainsi commence l'autobiographie moderne."
+    "hook": "「私は、いまだかつて前例のない企てを始めようとしている」。近代の自伝は、こうして幕を開けます。"
   },
   "sections": [
     {
       "id": "course_95_les_confessions_rousseau_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Les **Confessions** de **Jean-Jacques Rousseau**, publiées à titre posthume entre **1782** et **1789**, marquent l'acte de naissance de l'autobiographie moderne. Rousseau raconte sa propre vie. Le « moi » devient objet d'investigation littéraire, pas seulement un prétexte pour parler de l'Histoire."
+          "text": "**ジャン＝ジャック・ルソー**の**『告白』**は、**1782年**から**1789年**にかけて死後に出版され、近代自伝の誕生を告げる作品です。ルソーは自分自身の人生を語ります。「私」は文学的な探究の対象となり、歴史を語るための口実にとどまりません。"
         },
         {
           "type": "paragraph",
-          "text": "Rousseau rompt avec les mémoires aristocratiques, récits de grands personnages glorifiant leur action, et les confessions religieuses, aveux faits à Dieu. Il cherche la compréhension de soi, pas seulement le pardon. Le livre couvre son enfance à Genève, ses années d'errance et sa carrière d'écrivain philosophe."
+          "text": "ルソーは、偉人たちが自分の行いを称えた貴族の回想録や、神に向けてなされる宗教的な告白とは一線を画します。求めるのは赦しだけでなく、自分自身を理解することです。この本は、ジュネーヴで過ごした幼少期、放浪の歳月、そして哲学者・作家として活動した時期を扱っています。"
         }
       ]
     },
     {
       "id": "course_95_les_confessions_rousseau_p1",
-      "title": "Le pacte autobiographique",
+      "title": "自伝契約",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "« Je forme une entreprise qui n'eut jamais d'exemple » : Rousseau définit le **[[自伝契約]]**, engagement de l'auteur à dire la vérité sur lui-même, théorisé plus tard par Philippe Lejeune. Il raconte sa vie pour elle-même, pas pour glorifier l'Histoire à travers lui."
+          "text": "「私は、前例のない企てを始める」。ルソーはここで**[[自伝契約]]**を打ち立てます。これは、自分自身について真実を語るという作者の約束で、のちにフィリップ・ルジュンヌが理論化しました。ルソーは、自分を通して歴史を称えるためではなく、人生そのもののために語ります。"
         },
         {
           "type": "image",
           "asset": "jean_jacques_rousseau_portrait_painting",
           "ratio": "4:3",
-          "caption": "Jean-Jacques Rousseau : sincérité radicale et solitude."
+          "caption": "ジャン＝ジャック・ルソー：徹底した誠実さと孤独。"
         },
         {
           "type": "funFact",
-          "text": "Obsédé par la sécurité de son manuscrit, Rousseau voyageait souvent avec les feuillets des Confessions serrés contre lui dans un sac de toile."
+          "text": "原稿の安全に取りつかれていたルソーは、『告白』の原稿の束を布袋に入れ、体に押しつけるようにして旅することがよくありました。"
         },
         {
           "type": "paragraph",
-          "text": "Contrairement aux **Confessions de saint Augustin**, modèle chrétien de l'aveu au IVe siècle, le juge n'est plus Dieu mais le lecteur. Rousseau laïcise l'aveu et invente l'authenticité comme valeur suprême. La vérité réside dans la fidélité aux sentiments, pas seulement aux faits objectifs."
+          "text": "4世紀のキリスト教における告白の手本、**聖アウグスティヌスの『告白』**と違い、裁き手はもう神ではなく読者です。ルソーは告白を世俗化し、真正さを最高の価値として打ち立てました。真実は、客観的な事実だけでなく、感情への忠実さの中にあります。"
         }
       ]
     },
     {
       "id": "course_95_les_confessions_rousseau_p2",
-      "title": "Transparence, enfance et nature",
+      "title": "包み隠さない告白、幼少期、そして自然",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Rousseau confesse le vol d'un ruban, son goût pour la flagellation chez **Mlle Lambercier**, sa relation avec **[[ヴァランス夫人]]**, femme qui l'accueille à 16 ans et devient sa protectrice, qu'il appelle « Maman ». Il avoue aussi l'abandon de ses cinq enfants aux **Enfants-Trouvés**, hospice parisien."
+          "text": "ルソーは、リボンを盗んだこと、**ランベルシエ嬢**のもとで鞭打たれることを好んだこと、そして**[[ヴァランス夫人]]**との関係を告白します。夫人は16歳のルソーを迎え入れて庇護者となり、ルソーは彼女を「ママン」と呼びました。また、パリの養育院、**アンファン・トルヴェ**に5人の子どもを預けたことも打ち明けます。"
         },
         {
           "type": "image",
           "asset": "rousseau_nature_landscape_painting",
           "ratio": "4:3",
-          "caption": "La nature chez Rousseau : miroir d'une âme solitaire."
+          "caption": "ルソーにとっての自然：孤独な魂をそのまま映し出す鏡。"
         },
         {
           "type": "paragraph",
-          "text": "En disant tout le mal de lui-même, il retire à ses ennemis le pouvoir de le dénoncer. Le paysage devient le miroir d'une sensibilité nouvelle, socle du **[[ロマン主義]]**, mouvement qui exalte les sentiments et la nature, et de la nostalgie du temps perdu."
+          "text": "自分についてあらゆる悪を語ることで、ルソーは敵から自分を告発する力を奪います。風景は新しい感受性を映す鏡となります。それが、感情と自然をたたえる運動、**[[ロマン主義]]**の土台であり、失われた時への郷愁の土台でもあります。"
         }
       ]
     },
     {
       "id": "course_95_les_confessions_rousseau_p3",
-      "title": "Écrire sous persécution",
+      "title": "迫害のなかで書く",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Rousseau écrit la seconde partie en exil, ses livres brûlés à Paris et Genève. Persuadé d'un complot universel contre lui, il cherche à réhabiliter sa mémoire face à ses détracteurs, dont **Voltaire**."
+          "text": "ルソーは後半部分を亡命先で書きます。著作はパリでもジュネーヴでも焼かれていました。自分に対する世界規模の陰謀を信じ込み、**ヴォルテール**をはじめとする中傷者たちに対して、自分の名誉を回復しようとします。"
         },
         {
           "type": "paragraph",
-          "text": "Il se présente comme l'homme du **[[ルソー思想と「善良な未開人」]]** : naturellement bon, perverti par une société hypocrite. Rousseau pensait que l'homme est bon par nature et que c'est la société qui le corrompt. Le lecteur devient complice d'une défense passionnée. Voltaire, dans un pamphlet anonyme, avait révélé l'abandon de ses enfants, forçant Rousseau à l'aveu public et à assumer ses contradictions."
+          "text": "ルソーは、**[[ルソー思想と「善良な未開人」]]**に通じる人間として自分を描きます。生まれつき善良なのに、偽善的な社会に堕落させられた人間です。ルソーは、人間は生まれつき善であり、人間を堕落させるのは社会だと考えていました。読者は、情熱的な弁明の共犯者になっていきます。ヴォルテールは匿名のパンフレットでルソーが子どもたちを捨てたことを暴露し、ルソーに公然と認めさせ、自分の矛盾を引き受けさせることになりました。"
         }
       ]
     },
     {
       "id": "course_95_les_confessions_rousseau_p4",
-      "title": "De Chateaubriand à Freud",
+      "title": "シャトーブリアンからフロイトまで",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L'influence est immense : **Chateaubriand**, **Stendhal**, **George Sand**, **Goethe**, **Tolstoï**. Rousseau préfigure **Freud**, fondateur de la psychanalyse, en montrant que l'enfance et la sexualité forgent le caractère de l'adulte."
+          "text": "影響は計り知れません。**シャトーブリアン**、**スタンダール**、**ジョルジュ・サンド**、**ゲーテ**、**トルストイ**。ルソーは、幼少期と性が大人の性格をつくることを示した点で、精神分析の創始者**フロイト**を先取りしています。"
         },
         {
           "type": "paragraph",
-          "text": "Il sacralise l'individu : chaque vie, même modeste, mérite d'être racontée. Cette démocratisation du sujet nourrit le journal intime et, plus tard, l'exposition de soi contemporaine sur les réseaux sociaux."
+          "text": "ルソーは個人を神聖なものにしました。ささやかな人生であっても、語られるに値します。主体のこうした民主化が日記を育て、のちにはSNS上の現代的な自己表現へとつながっていきます。"
         },
         {
           "type": "paragraph",
-          "text": "En osant dire « je » sans masque héroïque, Rousseau ouvre la voie aux journaux intimes et aux romans à la première personne. L'aveu devient un genre à part entière, et la vérité personnelle une valeur littéraire. Même ses contradictions, défenseur de l'enfance mais père absent, font partie du projet : montrer un homme réel, pas un modèle."
+          "text": "英雄の仮面をかぶらず「私」と言うことにあえて踏み込んだルソーは、日記や一人称の小説への道を開きます。告白は独立した一つのジャンルとなり、個人的な真実は文学的な価値になりました。子どもの擁護者でありながら不在の父だったという矛盾さえ、この企ての一部です。目指したのは、模範ではなく実在の人間を見せることでした。"
         },
         {
           "type": "takeaway",
-          "text": "Les **Confessions** inventent l'autobiographie moderne en plaçant la sincérité psychologique et l'enfance au cœur de la littérature, face à une société jugée corruptrice."
+          "text": "**『告白』**は、心理的な誠実さと幼少期を文学の中心に据えることで、近代の自伝を生み出しました。その背景には、人を堕落させると見なされた社会があります。"
         }
       ]
     }

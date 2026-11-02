@@ -1,116 +1,116 @@
 {
   "id": "course_3_la_prise_de_rome_par_les_wisigoths_410",
-  "title": "Comment Rome a-t-elle pu être pillée et conquise ?",
+  "title": "Kaip Roma galėjo būti apiplėšta ir užkariauta?",
   "subtitle": "410",
   "subject": "histoire",
-  "subcategory": "Antiquité & Moyen Âge",
-  "description": "En août 410, les Wisigoths d'Alaric pillent Rome pendant trois jours. Pour la première fois depuis huit siècles, une armée ennemie entre dans la Ville éternelle.",
+  "subcategory": "Antika ir viduramžiai",
+  "description": "410 m. rugpjūtį Alariko vestgotai tris dienas plėšia Romą. Pirmą kartą per aštuonis šimtmečius priešo kariuomenė įžengia į Amžinąjį miestą.",
   "hero": {
     "image": "la_prise_de_rome_par_les_wisigoths",
     "ratio": "16:9",
-    "hook": "En 410, Rome tombe. Et avec elle, l'idée d'un empire invincible."
+    "hook": "410 m. Roma krenta. Kartu su ja žlunga ir nenugalimos imperijos idėja."
   },
   "sections": [
     {
       "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_intro",
-      "title": "Introduction",
+      "title": "Įvadas",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En août **410**, l'inimaginable arrive. Menés par leur roi **Alaric**, les **Wisigoths**, un peuple germanique, forcent les portes de Rome. Pour la première fois depuis le sac gaulois de **390 av. J.-C.**, soit près de **800 ans**, une armée ennemie pille la Ville éternelle."
+          "text": "**410** m. rugpjūtį įvyksta neįsivaizduojamas dalykas. Karaliaus **Alariko** vedami **vestgotai**, germanų tauta, įsiveržia pro Romos vartus. Pirmą kartą nuo galų įvykdyto Romos apiplėšimo **390 m. pr. Kr.**, tai yra po beveik **800 metų**, priešo kariuomenė plėšia Amžinąjį miestą."
         },
         {
           "type": "paragraph",
-          "text": "Rome n'est plus la capitale politique de l'Empire, mais elle reste son cœur symbolique. Ce choc révèle une vérité que personne ne voulait voir : l'Occident romain agonise."
+          "text": "Roma nebėra politinė imperijos sostinė, bet tebėra jos simbolinė širdis. Šis smūgis atskleidžia tiesą, kurios niekas nenorėjo matyti: Romos Vakarai merdi."
         }
       ]
     },
     {
       "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_p1",
-      "title": "Un empire qui se vide",
+      "title": "Imperija, kuri tuštėja",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Au début du Ve siècle, l'Empire romain d'Occident manque d'argent et de soldats. Pour tenir les frontières, il multiplie les traités du type [[Romos foedus]] : des peuples dits « barbares » s'installent sur le territoire en échange d'un service militaire. La machine romaine tient encore, mais elle dépend de ceux qu'elle peinait autrefois à contenir."
+          "text": "V a. pradžioje Vakarų Romos imperijai trūksta pinigų ir karių. Siekdama išlaikyti sienas, ji vis dažniau sudaro sutartis, žinomas kaip [[Romos foedus]]: vadinamosios „barbarų“ tautos apsigyvena jos žemėse mainais už karinę tarnybą. Romos valstybės mašina dar laikosi, bet priklauso nuo tų, kuriuos kadaise vos sugebėdavo sulaikyti."
         },
         {
           "type": "paragraph",
-          "text": "En **402**, l'empereur d'Occident [[Honorijus]] abandonne Rome pour [[Ravena]], une ville d'Italie protégée par ses marais. Pendant que la cour se terre, l'aristocratie romaine continue de vivre comme si rien n'avait changé. Le pouvoir réel glisse vers des généraux d'origine germanique."
+          "text": "**402** m. Vakarų imperatorius [[Honorijus]] palieka Romą dėl pelkių saugomo Italijos miesto, žinomo kaip [[Ravena]]. Kol dvaras slepiasi, Romos aristokratija toliau gyvena taip, tarsi niekas nebūtų pasikeitę. Tikroji valdžia slysta į germanų kilmės karvedžių rankas."
         },
         {
           "type": "funFact",
-          "text": "À l'annonce de la chute de « Rome », Honorius aurait paniqué : il croyait qu'on parlait de sa poule préférée, baptisée ainsi. Soulagé, dit-on, d'apprendre qu'il ne s'agissait « que » de la ville."
+          "text": "Žinią apie „Romos“ žlugimą išgirdęs Honorijus esą išsigando: pamanė, kad kalbama apie jo mėgstamą vištą, taip pavadintą. Sakoma, kad jam palengvėjo sužinojus, jog tai „tik“ miestas."
         }
       ]
     },
     {
       "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_p2",
-      "title": "Alaric, un Romain déçu",
+      "title": "Alarikas, nusivylęs romėnas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "[[Alarikas I]] n'est pas un sauvage venu du néant. Ancien officier de l'armée romaine, poussé vers l'Ouest par [[Hunai]], un peuple nomade venu d'Asie, il veut des terres et un titre officiel pour son peuple. Face au mépris de Ravenne, il utilise Rome comme otage. Deux sièges, des rançons, puis l'assaut."
+          "text": "[[Alarikas I]] nėra laukinis, atslinkęs iš niekur. Buvęs Romos kariuomenės karininkas, kurį į Vakarus stumia klajoklių tauta iš Azijos, [[Hunai]], nori žemių ir oficialaus titulo savo tautai. Susidūręs su Ravenos panieka, jis naudoja Romą kaip įkaitą. Dvi apgultys, išpirkos, tada šturmas."
         },
         {
           "type": "image",
           "asset": "alaric_king_visigoths",
           "ratio": "4:3",
-          "caption": "Alaric Ier, roi des Wisigoths et ancien officier romain."
+          "caption": "Alarikas I, vestgotų karalius ir buvęs Romos karininkas."
         },
         {
           "type": "paragraph",
-          "text": "Le **24 août 410**, la porte Salaria s'ouvre. Le pillage dure **trois jours**. Chrétien de confession [[arijonizmas]] (un courant qui ne voyait pas le Christ comme l'égal de Dieu le Père), Alaric ordonne de respecter l'asile des églises. Violence réelle, mais pas destruction totale : il se veut héritier de Rome, pas fossoyeur."
+          "text": "**410 m. rugpjūčio 24 d.** atsiveria Salario vartai. Plėšimas trunka **tris dienas**. Alarikas, krikščionis, išpažįstantis tikėjimą, vadinamą [[arijonizmas]] (srovė, kuri nelaikė Kristaus lygiu Dievui Tėvui), įsako gerbti bažnyčių prieglobstį. Smurtas tikras, bet ne visiškas sunaikinimas: jis nori būti Romos paveldėtoju, o ne jos duobkasiu."
         },
         {
           "type": "funFact",
-          "text": "Selon la légende, à sa mort, ses hommes auraient détourné le fleuve Busento pour enterrer Alaric et son trésor, puis remis l'eau dans son lit."
+          "text": "Pasak legendos, po jo mirties vyrai esą nukreipė Busento upę, kad palaidotų Alariką su lobiu, o paskui vandenį grąžino į vagą."
         }
       ]
     },
     {
       "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_p3",
-      "title": "Le choc et La Cité de Dieu",
+      "title": "Smūgis ir Dievo valstybė",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Depuis la Palestine, [[Šventasis Jeronimas]], un Père de l'Église, s'écrie : « En une seule ville, c'est l'univers entier qui a péri. » Les païens accusent le christianisme d'avoir affaibli Rome. Pour répondre, **Saint Augustin** écrit [[Dievo valstybė]] : les empires terrestres passent ; l'Église, elle, demeure."
+          "text": "Iš Palestinos [[Šventasis Jeronimas]], Bažnyčios Tėvas, šaukia: „Viename mieste pražuvo visa visata.“ Pagonys kaltina krikščionybę, kad ji susilpnino Romą. Atsakydamas **Šventasis Augustinas** parašo veikalą, vadinamą [[Dievo valstybė]]: žemiškosios imperijos praeina, o Bažnyčia išlieka."
         },
         {
           "type": "image",
           "asset": "sack_of_rome_410_alaric",
           "ratio": "4:3",
-          "caption": "Le sac de Rome en 410, choc pour tout le monde antique."
+          "caption": "Romos apiplėšimas 410 m., smūgis visam antikos pasauliui."
         },
         {
           "type": "paragraph",
-          "text": "Le signal est clair pour d'autres peuples germaniques, comme les [[Vandalai]] et les [[Frankai]] : l'Occident est une proie. En **455**, les Vandales pillent Rome bien plus durement. En **476**, le chef [[Herulai]] [[Odoakras]] dépose le dernier empereur d'Occident, [[Romulas Augustulas]]. Les insignes du pouvoir partent à Constantinople. L'Empire d'Occident s'éteint."
+          "text": "Kitoms germanų tautoms signalas aiškus: Vakarai yra grobis. Tai pastebi ir [[Vandalai]], ir [[Frankai]]. **455** m. vandalai Romą apiplėšia daug žiauriau. **476** m. [[Odoakras]], vadas iš tautos, vadinamos [[Herulai]], nuverčia paskutinį Vakarų imperatorių, kurio vardas [[Romulas Augustulas]]. Valdžios ženklai iškeliauja į Konstantinopolį. Vakarų imperija užgęsta."
         },
         {
           "type": "timeline",
           "events": [
             {
               "date": "402",
-              "title": "Ravenne, nouvelle capitale",
-              "detail": "Honorius abandonne Rome pour une ville mieux défendue."
+              "title": "Ravena, naujoji sostinė",
+              "detail": "Honorijus palieka Romą dėl geriau ginamo miesto."
             },
             {
               "date": "410",
-              "title": "Sac de Rome",
-              "detail": "Alaric et les Wisigoths pillent la ville trois jours."
+              "title": "Romos apiplėšimas",
+              "detail": "Alarikas ir vestgotai tris dienas plėšia miestą."
             },
             {
               "date": "455",
-              "title": "Sac vandale",
-              "detail": "Rome est pillée de façon bien plus destructrice."
+              "title": "Vandalų plėšimas",
+              "detail": "Roma apiplėšiama gerokai niokojančiau."
             },
             {
               "date": "476",
-              "title": "Fin de l'Empire d'Occident",
-              "detail": "Odoacre dépose Romulus Augustule."
+              "title": "Vakarų imperijos pabaiga",
+              "detail": "Odoakras nuverčia Romulą Augustulą."
             }
           ]
         }
@@ -118,20 +118,20 @@
     },
     {
       "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_p4",
-      "title": "La bascule vers le Moyen Âge",
+      "title": "Posūkis į viduramžius",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Les Wisigoths finissent par s'installer en Aquitaine, puis en Hispanie (l'Espagne actuelle). Ils ne détruisent pas toute la culture classique : ils en deviennent les passeurs, mêlant droit romain, foi chrétienne et traditions germaniques."
+          "text": "Vestgotai galiausiai įsikuria Akvitanijoje, o vėliau Hispanijoje (dabartinėje Ispanijoje). Jie nesunaikina visos klasikinės kultūros: tampa jos perdavėjais, sujungdami romėnų teisę, krikščionių tikėjimą ir germanų tradicijas."
         },
         {
           "type": "paragraph",
-          "text": "Le sac de **410** reste la rupture dans les mémoires. Ce n'est pas encore la fin administrative de l'Empire, mais c'est la fin de l'illusion. L'Europe médiévale commence dans les décombres d'un mythe."
+          "text": "**410** m. Romos apiplėšimas atmintyje lieka lūžiu. Tai dar ne administracinė imperijos pabaiga, bet iliuzijos pabaiga. Viduramžių Europa prasideda mito griuvėsiuose."
         },
         {
           "type": "takeaway",
-          "text": "En **410**, Rome tombe pour la première fois depuis **800 ans**. Des Wisigoths formés à la romaine y pillent pendant trois jours. Le choc ouvre la voie à **476** et à l'Europe médiévale."
+          "text": "**410** m. Roma krenta pirmą kartą per **800 metų**. Romėniškai išauklėti vestgotai tris dienas ją plėšia. Šis smūgis atveria kelią į **476** m. ir viduramžių Europą."
         }
       ]
     }

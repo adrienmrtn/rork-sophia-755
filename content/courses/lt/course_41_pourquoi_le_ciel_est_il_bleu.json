@@ -1,112 +1,112 @@
 {
   "id": "course_41_pourquoi_le_ciel_est_il_bleu",
-  "title": "Pourquoi le ciel est-il bleu ?",
-  "subtitle": "Lumière & atmosphère",
+  "title": "Kodėl dangus mėlynas?",
+  "subtitle": "Šviesa ir atmosfera",
   "subject": "sciences",
-  "subcategory": "Notre quotidien expliqué",
-  "description": "Regarder le ciel bleu est si banal qu'on oublie de se demander pourquoi. La réponse tient à la lumière du Soleil et à l'air que l'on traverse pour la voir.",
+  "subcategory": "Kasdienybė paaiškinta",
+  "description": "Žvelgti į mėlyną dangų taip įprasta, kad pamirštame paklausti, kodėl jis toks. Atsakymas slypi Saulės šviesoje ir ore, per kurį ji atkeliauja.",
   "hero": {
     "image": "pourquoi_le_ciel_est_il_bleu",
     "ratio": "16:9",
-    "hook": "Le ciel n'est pas peint en bleu : c'est un tour de magie de la lumière et de l'air."
+    "hook": "Dangus nenudažytas mėlynai: tai šviesos ir oro magijos triukas."
   },
   "sections": [
     {
       "id": "course_41_pourquoi_le_ciel_est_il_bleu_intro",
-      "title": "Introduction",
+      "title": "Įvadas",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Lever les yeux vers le ciel bleu est si banal qu'on oublie de se demander pourquoi il l'est. L'**atmosphère**, la couche de gaz qui entoure la Terre, n'a pourtant aucune couleur propre. Cette teinte vient d'une rencontre très précise entre la lumière du Soleil et les molécules de gaz qui flottent autour de nous."
+          "text": "Pakelti akis į mėlyną dangų taip įprasta, kad nė nepagalvojame, kodėl jis mėlynas. **Atmosfera**, dujų sluoksnis aplink Žemę, juk neturi savo spalvos. Šis atspalvis atsiranda labai tiksliai susitikus Saulės šviesai ir dujų molekulėms, sklandančioms aplink mus."
         },
         {
           "type": "paragraph",
-          "text": "Comprendre ce bleu, c'est comprendre comment la lumière voyage et se **disperse**, c'est-à-dire se renvoie dans toutes les directions au lieu de filer tout droit. Et bonne surprise : c'est exactement le même phénomène qui colore le ciel en rouge et orange au coucher du soleil."
+          "text": "Suprasti šią mėlynę reiškia suprasti, kaip šviesa keliauja ir **sklaidosi**, tai yra atsimuša į visas puses, užuot lėkusi tiesiai. Ir maloni staigmena: būtent tas pats reiškinys saulėlydžio metu nuspalvina dangų raudonai ir oranžiškai."
         }
       ]
     },
     {
       "id": "course_41_pourquoi_le_ciel_est_il_bleu_p1",
-      "title": "La lumière blanche cache toutes les couleurs",
+      "title": "Balta šviesa slepia visas spalvas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La lumière du Soleil nous paraît blanche, mais elle contient en réalité toutes les couleurs de l'arc-en-ciel : c'est le [[regimasis šviesos spektras]]. Chaque couleur correspond à une **longueur d'onde**, la taille de sa « vague » lumineuse. Le bleu et le violet ont des ondes courtes ; le rouge a des ondes longues."
+          "text": "Saulės šviesa mums atrodo balta, bet iš tikrųjų joje yra visos vaivorykštės spalvos: tai [[regimasis šviesos spektras]]. Kiekviena spalva atitinka tam tikrą **bangos ilgį**, šviesos „bangos“ dydį. Mėlynos ir violetinės bangos yra trumpos, o raudonos ilgos."
         },
         {
           "type": "funFact",
-          "text": "Sur la Lune, il n'y a pas d'air pour disperser la lumière. Résultat : là-bas, le ciel reste **noir en plein jour**, même quand le Soleil brille. La preuve que la couleur du ciel vient de l'air, pas du Soleil."
+          "text": "Mėnulyje nėra oro, kuris išsklaidytų šviesą. Todėl ten dangus **dieną lieka juodas**, net kai šviečia Saulė. Tai įrodo, kad dangaus spalva priklauso nuo oro, o ne nuo Saulės."
         },
         {
           "type": "paragraph",
-          "text": "Car entre le Soleil et nos yeux, l'air n'est pas vide : il est rempli de minuscules **molécules de gaz**, surtout de l'azote, environ **78 %** de l'air, et de l'oxygène, environ **21 %**. Elles sont bien plus petites que les ondes de lumière. Quand un rayon les percute, il ne file plus tout droit : il est renvoyé dans toutes les directions. Ce petit rebond est le point de départ de la couleur du ciel."
+          "text": "Nes tarp Saulės ir mūsų akių oras nėra tuščias: jis pilnas mažyčių **dujų molekulių**, daugiausia azoto, maždaug **78 %** oro, ir deguonies, maždaug **21 %**. Jos kur kas mažesnės už šviesos bangas. Kai spindulys į jas atsitrenkia, jis nebesklinda tiesiai: jis atmušamas į visas puses. Šis mažas atšokimas ir yra dangaus spalvos pradžia."
         }
       ]
     },
     {
       "id": "course_41_pourquoi_le_ciel_est_il_bleu_p2",
-      "title": "La diffusion : pourquoi le bleu l'emporte",
+      "title": "Sklaida: kodėl laimi mėlyna",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En **1871**, le physicien britannique **Lord Rayleigh** met ce phénomène en équation. Il découvre que plus une couleur a une onde courte, plus elle est renvoyée dans tous les sens par les molécules d'air. C'est la [[Rėjaus šviesos sklaida]]."
+          "text": "**1871** m. britų fizikas **lordas Rėjus** užrašo šį reiškinį lygtimi. Jis atranda, kad kuo trumpesnė spalvos banga, tuo stipriau oro molekulės ją išsklaido į visas puses. Tai yra [[Rėjaus šviesos sklaida]]."
         },
         {
           "type": "funFact",
-          "text": "Le ciel de Mars fait l'inverse du nôtre : sa poussière riche en fer le rend rosé en journée, mais ses couchers de soleil, eux, sont **bleus**. Tout dépend de ce que contient l'air."
+          "text": "Marso dangus elgiasi priešingai nei mūsiškis: dėl geležies turtingų dulkių jis dieną rausvas, bet saulėlydžiai ten **mėlyni**. Viskas priklauso nuo to, kas sudaro orą."
         },
         {
           "type": "image",
           "asset": "blue_sky_sunlight_scattering_atmosphere",
           "ratio": "4:3",
-          "caption": "La lumière bleue est dispersée dans toutes les directions par l'air."
+          "caption": "Mėlyną šviesą oras išsklaido į visas puses."
         },
         {
           "type": "paragraph",
-          "text": "Concrètement, la lumière bleue est dispersée environ **9 fois plus** que la rouge. Le rouge traverse l'air presque en ligne droite, alors que le bleu ricoche partout. Voilà pourquoi, où que vous regardiez dans le ciel, du bleu finit toujours par arriver à vos yeux : le ciel entier semble « briller » de ce bleu éparpillé."
+          "text": "Konkrečiai, mėlyna šviesa išsklaidoma maždaug **9 kartus stipriau** nei raudona. Raudona beveik tiesia linija praeina orą, o mėlyna atšoka visur. Todėl kur bežiūrėtum į dangų, mėlyna šviesa vis tiek pasiekia tavo akis: visas dangus tarsi „švyti“ šiuo išsklaidytu mėlynumu."
         }
       ]
     },
     {
       "id": "course_41_pourquoi_le_ciel_est_il_bleu_p3",
-      "title": "Alors, pourquoi pas violet ?",
+      "title": "Tai kodėl ne violetinis?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Une question logique se pose : si les ondes les plus courtes sont les plus dispersées, le violet devrait gagner, car son onde est encore plus courte que celle du bleu. Le ciel contient d'ailleurs beaucoup de violet dispersé."
+          "text": "Kyla logiškas klausimas: jei trumpiausios bangos išsklaidomos stipriausiai, turėtų laimėti violetinė, nes jos banga dar trumpesnė nei mėlynos. Be to, danguje išsklaidytos violetinės šviesos iš tikrųjų yra daug."
         },
         {
           "type": "paragraph",
-          "text": "La réponse n'est pas dans le ciel, mais dans notre œil. Nous captons les couleurs grâce à des capteurs appelés **cônes**, des cellules de la rétine sensibles à la lumière. Ils sont bien plus sensibles au bleu qu'au violet. En plus, le Soleil envoie plus de lumière bleue que violette. Notre cerveau fait alors une sorte de moyenne et voit un beau bleu. Un animal sensible à d'autres couleurs verrait sans doute un tout autre ciel."
+          "text": "Atsakymas slypi ne danguje, o mūsų akyje. Spalvas gaudome specialiais jutikliais, vadinamais **kūgeliais**, tai šviesai jautrios tinklainės ląstelės. Jie kur kas jautresni mėlynai nei violetinei. Be to, Saulė skleidžia daugiau mėlynos nei violetinės šviesos. Tada mūsų smegenys tarsi pasiskaičiuoja vidurkį ir mato gražų mėlyną atspalvį. Gyvūnas, jautrus kitoms spalvoms, tikriausiai matytų visai kitokį dangų."
         }
       ]
     },
     {
       "id": "course_41_pourquoi_le_ciel_est_il_bleu_p4",
-      "title": "Et le rouge du soir ?",
+      "title": "O vakaro raudonis?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le coucher de soleil suit les mêmes règles, mais change une chose : la distance. À midi, la lumière traverse une fine couche d'air. Le soir, quand le Soleil est bas, ses rayons doivent traverser **beaucoup plus d'air** avant de nous atteindre."
+          "text": "Saulėlydis paklūsta toms pačioms taisyklėms, tik pasikeičia viena: atstumas. Vidurdienį šviesa praeina ploną oro sluoksnį. Vakare, kai Saulė žemai, jos spinduliai turi praeiti **kur kas daugiau oro**, kol mus pasiekia."
         },
         {
           "type": "image",
           "asset": "sunset_red_orange_sky_atmosphere",
           "ratio": "16:9",
-          "caption": "Au ras de l'horizon, la lumière traverse une épaisseur d'air bien plus grande."
+          "caption": "Prie pat horizonto šviesa praeina kur kas storesnį oro sluoksnį."
         },
         {
           "type": "paragraph",
-          "text": "Sur ce long trajet, tout le bleu est dispersé bien avant d'arriver jusqu'à nous : il est comme filtré par l'épaisseur de l'air. Il ne reste alors que les couleurs les plus résistantes, les rouges et les oranges. S'il y a de la poussière ou de la pollution, la [[Mie sklaida]] entre en jeu : des particules plus grosses que les molécules d'air rendent le ciel laiteux ou renforcent ces teintes orangées."
+          "text": "Per šį ilgą kelią visa mėlyna išsklaidoma dar anksčiau, nei pasiekia mus: ji tarsi išfiltruojama oro storymės. Lieka tik atspariausios spalvos, raudona ir oranžinė. Jei yra dulkių ar taršos, įsijungia [[Mie sklaida]]: už oro molekules didesnės dalelės dangų padaro pieniškai baltą arba sustiprina šiuos oranžinius atspalvius."
         },
         {
           "type": "takeaway",
-          "text": "Le ciel est bleu parce que les ondes courtes sont environ **9 fois plus dispersées** par l'air que les ondes longues. Au coucher du soleil, la lumière traverse tellement d'air que seul le rouge nous parvient encore."
+          "text": "Dangus mėlynas todėl, kad trumpos bangos oro išsklaidomos maždaug **9 kartus stipriau** nei ilgos. Saulėlydžio metu šviesa praeina tiek daug oro, kad mus dar pasiekia tik raudona."
         }
       ]
     }

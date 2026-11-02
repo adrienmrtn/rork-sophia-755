@@ -1,108 +1,108 @@
 {
   "id": "course_113_le_seigneur_des_anneaux_tolkien",
-  "title": "Le Seigneur des Anneaux, Tolkien",
+  "title": "Gredzenu pavēlnieks, Tolkīns",
   "subtitle": "1954-1955",
   "subject": "litterature",
-  "subcategory": "Anglo-saxons & littérature mondiale",
-  "description": "Frodon doit détruire l'Anneau Unique au Mont Destin. Tolkien invente la Terre du Milieu et redéfinit la fantasy moderne.",
+  "subcategory": "Angļu valodas un pasaules literatūra",
+  "description": "Frodo jāiznīcina Vienais Gredzens Likteņa kalnā. Tolkīns izgudro Viduszemi un no jauna definē mūsdienu fantāziju.",
   "hero": {
     "image": "le_seigneur_des_anneaux_tolkien",
     "ratio": "16:9",
-    "hook": "Un anneau pour les dominer tous : l'épopée qui a inventé la fantasy telle qu'on la connaît."
+    "hook": "Viens gredzens, lai tos visus pārvaldītu: eposs, kas radīja fantāzijas žanru tādu, kādu to pazīstam."
   },
   "sections": [
     {
       "id": "course_113_le_seigneur_des_anneaux_tolkien_intro",
-      "title": "Introduction",
+      "title": "Ievads",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Le Seigneur des Anneaux**, publié entre **1954** et **1955**, est l'acte de naissance de la [[Augstā fantāzija]]. Ce sous-genre de la fantasy se déroule dans un monde totalement imaginaire. Les enjeux sont épiques, entre le bien et le mal. **J.R.R. Tolkien**, né en **1892** et mort en **1973**, y crée la **Terre du Milieu**, un univers d'une profondeur historique, linguistique et mythologique sans précédent."
+          "text": "**Gredzenu pavēlnieks**, kas iznāca no **1954**. līdz **1955**. gadam, ir dzimšanas akts vienam žanram: [[Augstā fantāzija]]. Šis fantāzijas apakšžanrs norisinās pilnībā izdomātā pasaulē. Tajā notiek episka cīņa starp labo un ļauno. **Dž. R. R. Tolkīns**, dzimis **1892**. un miris **1973**. gadā, tajā rada **Viduszemi**, pasauli ar vēsturisku, valodniecisku un mitoloģisku dziļumu, kam nav precedenta."
         },
         {
           "type": "paragraph",
-          "text": "Fruit de plusieurs décennies de travail, ce récit médite sur le pouvoir, l'héroïsme ordinaire et la perte. Tolkien ne se contente pas de raconter une aventure : il instaure un monde cohérent où chaque peuple possède sa langue, sa culture et son histoire. Hobbits, elfes, nains et hommes y coexistent."
+          "text": "Daudzu gadu desmitu darba auglis, šis stāsts pārdomā varu, ikdienišķo varonību un zaudējumu. Tolkīnam nepietiek ar piedzīvojuma izstāstīšanu: viņš rada saskanīgu pasauli, kurā katrai tautai ir sava valoda, kultūra un vēsture. Hobiti, elfi, rūķi un cilvēki tajā līdzās pastāv."
         }
       ]
     },
     {
       "id": "course_113_le_seigneur_des_anneaux_tolkien_p1",
-      "title": "Tolkien : le philologue créateur de mondes",
+      "title": "Tolkīns: filologs, kas radīja pasaules",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Tolkien était professeur de [[senangļu valoda]] à **Oxford**. Le vieil anglais est la forme ancienne de l'anglais, parlée entre le **Ve** et le **XIe** siècle. Sa spécialité, la **philologie**, étudie les langues et leurs évolutions. C'est la base de son univers. Il invente d'abord des langues, quenya et sindarin, puis imagine les peuples qui les parlent."
+          "text": "Tolkīns mācīja **Oksfordā** vienu valodu: [[senangļu valoda]]. Senangļu valoda ir angļu valodas senā forma, ko runāja no **piektā** līdz **vienpadsmitā** gadsimtam. Viņa specialitāte, **filoloģija**, pēta valodas un to attīstību. Tā ir viņa pasaules pamats. Viņš vispirms izgudro valodas, kvenju un sindarinu, un tikai tad iztēlojas tautas, kas tajās runā."
         },
         {
           "type": "image",
           "asset": "j_r_r_tolkien_portrait_photograph",
           "ratio": "4:3",
-          "caption": "J.R.R. Tolkien, philologue d'Oxford devenu père de la fantasy moderne."
+          "caption": "Dž. R. R. Tolkīns, Oksfordas filologs, kas kļuva par mūsdienu fantāzijas tēvu."
         },
         {
           "type": "paragraph",
-          "text": "En s'appuyant sur les [[ziemeļu un anglosakšu mitoloģijas]], il cherche à offrir à l'Angleterre une mythologie propre. Beowulf, l'Edda nordique et le Kalevala finlandais nourrissent son imagination. Ce processus de [[apakšradīšana]] vise une cohérence si forte que le lecteur accepte les lois de ce monde comme des vérités. L'écrivain crée un monde secondaire avec ses propres règles."
+          "text": "Viņu iedvesmo [[ziemeļu un anglosakšu mitoloģijas]], un viņš cenšas Anglijai radīt savu mitoloģiju. Beovulfs, ziemeļu Edda un somu Kalevala baro viņa iztēli. Šim procesam ir nosaukums: [[Tolkīna apakšradīšana]]. Tās mērķis ir tik spēcīga saskanība, ka lasītājs pieņem šīs pasaules likumus kā patiesības. Rakstnieks rada sekundāru pasauli ar saviem noteikumiem."
         },
         {
           "type": "funFact",
-          "text": "Tolkien a réécrit le chapitre « Le Conseil d'Elrond » plus de dix fois pour que les arbres généalogiques et les nuances linguistiques restent parfaitement cohérents."
+          "text": "Tolkīns pārrakstīja nodaļu „Elronda padome“ vairāk nekā desmit reižu, lai ciltskoki un valodas niances paliktu pilnīgi saskanīgi."
         }
       ]
     },
     {
       "id": "course_113_le_seigneur_des_anneaux_tolkien_p2",
-      "title": "La quête de l'Unique : une épopée de la fragilité",
+      "title": "Gredzena meklējumi: trauslības eposs",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L'**Anneau Unique**, forgé par le [[Maija]] déchu **Sauron**, concentre sa puissance. Sauron est un esprit divin de rang inférieur aux Valar, les « dieux » de la mythologie tolkienienne. **Frodon Sacquet**, simple hobbit de la Comté, doit le détruire au **Mont Destin**, au cœur du **Mordor**, royaume de l'ombre."
+          "text": "**Vienais Gredzens** koncentrē sava kalēja spēku. Kalējs bija kritušais [[Maija]] **Saurons**. Saurons ir dievišķs gars, kas rangā zemāks par valariem, Tolkīna mitoloģijas „dieviem“. Gredzens jāiznīcina **Frodo Beginsam**, vienkāršam hobitam no Šīras, **Likteņa kalnā**, **Mordora** sirdī, ēnu valstībā."
         },
         {
           "type": "image",
           "asset": "lord_of_the_rings_middle_earth_illustration",
           "ratio": "16:9",
-          "caption": "La Terre du Milieu : de la Comté au Mordor, une épopée à travers des paysages mythiques."
+          "caption": "Viduszeme: no Šīras līdz Mordoram, eposs pa mītiskām ainavām."
         },
         {
           "type": "paragraph",
-          "text": "La **Communauté de l'Anneau** réunit neuf représentants des peuples libres. Tandis qu'**Aragorn**, héritier de [[Gondora]], mène des batailles héroïques, Frodon et **Sam** avancent seuls dans la solitude. Gondor est le principal royaume des Hommes au sud. L'Anneau corrompt progressivement Frodon. Le pouvoir absolu détruit même les plus vertueux."
+          "text": "**Gredzena brālība** vieno deviņus brīvo tautu pārstāvjus. Kamēr **Aragorns**, mantinieks valstij vārdā [[Gondora]], vada varonīgas kaujas, Frodo un **Sems** soļo uz priekšu vieni, vientulībā. Gondora ir galvenā Cilvēku valstība dienvidos. Gredzens pakāpeniski samaitā Frodo. Absolūta vara iznīcina pat visgodīgākos."
         }
       ]
     },
     {
       "id": "course_113_le_seigneur_des_anneaux_tolkien_p3",
-      "title": "Théologie et philosophie : le refus de l'allégorie",
+      "title": "Teoloģija un filozofija: alegorijas noraidīšana",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Tolkien refuse l'allégorie explicite, où chaque personnage représenterait une idée fixe. Son œuvre explore pourtant la **corruption par le pouvoir**. L'Anneau attaque la volonté de son porteur. Un hobbit sans ambition politique est le candidat idéal pour ce fardeau, car il n'a rien à gagner au pouvoir."
+          "text": "Tolkīns noraida tiešu alegoriju, kurā katrs tēls pārstāvētu vienu nemainīgu ideju. Tomēr viņa darbs pēta **varas izraisīto samaitātību**. Gredzens uzbrūk nēsātāja gribai. Hobits bez politiskām ambīcijām ir ideāls kandidāts šai nastai, jo viņam varā nav ko gūt."
         },
         {
           "type": "paragraph",
-          "text": "Des actes de pitié passés produisent des conséquences majeures. **Gollum**, corrompu par l'anneau, est épargné par compassion à plusieurs reprises. Sans le savoir, il permet l'accomplissement final de la quête quand Frodon, à son tour, échoue à jeter l'anneau dans le feu. La providence semble agir à travers la pitié, non la force."
+          "text": "Agrāk izrādīts žēlums rada lielas sekas. **Gollams**, gredzena samaitātais, vairākkārt tiek saudzēts līdzjūtības dēļ. To neapzinoties, viņš ļauj piepildīties meklējumu noslēgumam, kad Frodo savukārt nespēj iemest gredzenu ugunī. Likteņa vadība šķiet darbojamies caur žēlumu, nevis spēku."
         }
       ]
     },
     {
       "id": "course_113_le_seigneur_des_anneaux_tolkien_p4",
-      "title": "Héritage et révolution culturelle",
+      "title": "Mantojums un kultūras revolūcija",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Publié entre **1954** et **1955**, le roman devient l'un des livres les plus vendus du XXe siècle. Il fixe les codes de la fantasy moderne : elfes, nains, quête en groupe, monde secondaire cohérent. L'adaptation cinématographique de **Peter Jackson**, de **2001** à **2003**, renforce son impact planétaire."
+          "text": "Romāns, kas izdots no **1954**. līdz **1955**. gadam, kļūst par vienu no divdesmitā gadsimta visvairāk pārdotajām grāmatām. Tas nosaka mūsdienu fantāzijas kodus: elfi, rūķi, grupas meklējumi, saskanīga sekundārā pasaule. **Pītera Džeksona** kinoadaptācija, no **2001**. līdz **2003**. gadam, pastiprina tā pasaules mēroga ietekmi."
         },
         {
           "type": "paragraph",
-          "text": "Tolkien influence aussi le jeu de rôle *Dungeons & Dragons*, la musique et l'écologie. Sa vision d'une nature menacée par la démesure technologique résonne encore aujourd'hui. Les forges de Saruman et les machines de Sauron en sont l'image. Il a consacré plus d'un demi-siècle à la Terre du Milieu."
+          "text": "Tolkīns ietekmē arī lomu spēli *Dungeons & Dragons*, mūziku un ekoloģiju. Viņa redzējums par dabu, ko apdraud tehnoloģiju pārmērība, joprojām atbalsojas. Sarumana kalves un Saurona mašīnas to labi attēlo. Viduszemei viņš veltīja vairāk nekā pusgadsimtu."
         },
         {
           "type": "takeaway",
-          "text": "Tolkien a créé des langues et un univers d'une cohérence absolue dont **Le Seigneur des Anneaux** reste le chef-d'œuvre incontesté, fondateur de la [[Augstā fantāzija]] moderne."
+          "text": "Tolkīns radīja valodas un pasauli ar absolūtu saskanību, un **Gredzenu pavēlnieks** joprojām ir tās neapstrīdamais meistardarbs, kas lika pamatus mūsdienu žanram: [[Augstā fantāzija]]."
         }
       ]
     }

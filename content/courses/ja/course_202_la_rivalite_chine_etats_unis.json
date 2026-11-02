@@ -1,118 +1,118 @@
 {
   "id": "course_202_la_rivalite_chine_etats_unis",
-  "title": "Qu'est-ce qui oppose la Chine et les États-Unis ?",
-  "subtitle": "XXIe siècle",
+  "title": "中国とアメリカは何をめぐって対立しているのか？",
+  "subtitle": "二十一世紀",
   "subject": "comprendreLeMonde",
-  "subcategory": "Conflits & géopolitique",
-  "description": "Deux modèles politiques, deux ambitions technologiques, une même planète. Pourquoi la rivalité entre **Pékin** et **Washington** structure tout le siècle.",
+  "subcategory": "紛争と地政学",
+  "description": "二つの政治モデル、二つの技術的野心、一つの地球。**北京**と**ワシントン**の対立が、なぜ二十一世紀全体の姿を左右しているのかを見ていきます。",
   "hero": {
     "image": "la_rivalite_chine_etats_unis",
     "ratio": "16:9",
-    "hook": "En quarante ans, un pays plus pauvre que ses voisins est devenu le seul rival crédible des États-Unis."
+    "hook": "四十年のあいだに、近隣の国々より貧しかった一つの国が、アメリカにとって唯一の現実的なライバルへと成長しました。"
   },
   "sections": [
     {
       "id": "course_202_la_rivalite_chine_etats_unis_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La rivalité entre la **Chine** et les **États-Unis** est devenue la relation la plus importante du XXIe siècle. Ce n'est pas seulement une course économique : elle oppose deux modèles politiques, deux ambitions technologiques et deux visions de l'ordre mondial."
+          "text": "**中国**と**アメリカ**の対立は、二十一世紀でもっとも重要な関係になりました。これは単なる経済競争ではありません。二つの政治モデル、二つの技術的野心、そして世界秩序についての二つの異なる見方がぶつかり合っているのです。"
         },
         {
           "type": "paragraph",
-          "text": "Après la **Guerre froide**, les États-Unis semblaient sans rival sérieux. L'ascension fulgurante de la Chine a changé la donne. Certains chercheurs parlent aujourd'hui du **[[Piège de Thucydide]]** : cette situation, observée plusieurs fois dans l'histoire, où une puissance montante menace de dépasser une puissance installée, rendant la confrontation presque inévitable."
+          "text": "**冷戦**が終わったあと、アメリカには手ごわいライバルがいないように見えました。しかし中国が目覚ましい勢いで台頭し、状況は一変します。今では、研究者のなかに**[[トゥキディデスの罠]]**を指摘する人もいます。歴史上たびたび見られた状況で、台頭する大国が既存の大国を追い抜こうとし、衝突がほとんど避けられなくなるというものです。"
         }
       ]
     },
     {
       "id": "course_202_la_rivalite_chine_etats_unis_p1",
-      "title": "De l'isolement à l'usine du monde",
+      "title": "孤立から「世界の工場」への道",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En 1978, la Chine sort épuisée de décennies de troubles intérieurs. Sous l'impulsion de **Deng Xiaoping**, le pays change de cap et lance les « Quatre Modernisations », rompant avec l'orthodoxie communiste pour adopter une forme de capitalisme encadré par le Parti."
+          "text": "1978年、中国は長年にわたる国内の混乱で疲れ果てた状態にありました。**鄧小平**の主導のもとで国は進路を変え、「四つの近代化」を打ち出します。共産主義の教条から離れ、党が管理する一種の資本主義を採り入れていったのです。"
         },
         {
           "type": "paragraph",
-          "text": "La stratégie repose sur l'ouverture au capital étranger. Des zones économiques spéciales, dont **Shenzhen** devient le symbole, attirent les entreprises grâce à des avantages fiscaux et une main-d'œuvre bon marché. La Chine devient ainsi « l'usine du monde »."
+          "text": "この戦略の柱は、外国資本を受け入れることでした。各地に経済特区が設けられ、**深圳**がその象徴になります。税制上の優遇措置と安い労働力に引かれて、たくさんの企業が集まってきました。こうして中国は「世界の工場」と呼ばれるようになったのです。"
         },
         {
           "type": "funFact",
-          "text": "La Chine est le plus grand créancier des États-Unis : elle détient environ 800 milliards de dollars de dette américaine. Une rupture brutale ruinerait donc les deux économies à la fois."
+          "text": "中国はアメリカ最大の債権国で、アメリカの債務を約8千億ドルも保有しています。そのため、関係を急に断ち切れば、両国の経済がともに大きな打撃を受けることになります。"
         },
         {
           "type": "paragraph",
-          "text": "Son entrée dans l'Organisation mondiale du commerce en 2001 marque le début d'une expansion sans précédent. En 2010, elle dépasse le Japon et devient la deuxième économie mondiale."
+          "text": "2001年に世界貿易機関に加盟したことが、前例のない規模の拡大の始まりでした。そして2010年には日本を抜いて、世界第2位の経済大国になります。"
         }
       ]
     },
     {
       "id": "course_202_la_rivalite_chine_etats_unis_p2",
-      "title": "Guerre commerciale, guerre technologique",
+      "title": "貿易をめぐる戦いと技術をめぐる戦い",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le passage d'une coopération à une franche rivalité se cristallise sous les présidences de **Donald Trump** et **Xi Jinping**. Washington accuse Pékin de pratiques commerciales déloyales et de vol de technologies, et impose des droits de douane massifs sur les produits chinois."
+          "text": "協力から、はっきりとした対立へ。この転換が決定的になったのは、**ドナルド・トランプ**と**習近平**の両政権のもとでした。ワシントンは、北京が不公正な商慣行や技術の盗用を行っていると非難し、中国製品に大幅な関税をかけます。"
         },
         {
           "type": "paragraph",
-          "text": "Le vrai cœur du conflit se déplace vers la haute technologie. Les Américains cherchent à isoler la Chine des **semi-conducteurs**, ces puces indispensables à l'intelligence artificielle et à l'armement moderne. C'est ce qu'on appelle le [[技術の「デカップリング（切り離し）」]]."
+          "text": "対立の本当の中心は、ハイテク分野に移っています。アメリカは、中国を**半導体**から締め出そうとしています。半導体は、人工知能や現代の兵器に欠かせないチップです。これが[[技術の「デカップリング（切り離し）」]]と呼ばれるものです。"
         },
         {
           "type": "paragraph",
-          "text": "Des entreprises comme Huawei ou TikTok sont vues par Washington comme des menaces pour la sécurité nationale. Cette politique se poursuit même après le départ de Trump, preuve que la rivalité dépasse les clivages politiques américains."
+          "text": "ファーウェイやTikTokのような企業は、ワシントンから国家安全保障上の脅威と見なされています。この政策はトランプの退任後も続いており、この対立がアメリカ国内の政治的な立場の違いを超えたものであることがわかります。"
         }
       ]
     },
     {
       "id": "course_202_la_rivalite_chine_etats_unis_p3",
-      "title": "Taïwan et la mer de Chine",
+      "title": "台湾と南シナ海",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Sur le plan militaire, la confrontation se déplace vers l'Asie du Sud-Est. Pékin revendique la quasi-totalité de la mer de Chine méridionale, une zone essentielle pour le commerce mondial et riche en ressources. Pour affirmer sa souveraineté, la Chine transforme des récifs en îles artificielles militarisées."
+          "text": "軍事面では、対立の舞台が東南アジアに広がっています。北京は南シナ海のほぼ全域の領有を主張しています。ここは世界の貿易にとって欠かせない海域で、資源も豊富です。主権を示すために、中国は海の岩礁を埋め立てて、軍事拠点を備えた人工島へと造り変えているのです。"
         },
         {
           "type": "image",
           "asset": "south_china_sea_artificial_islands_disputes",
           "ratio": "16:9",
-          "caption": "Taïwan et la mer de Chine méridionale sont devenues le principal point de friction militaire entre Pékin et Washington."
+          "caption": "台湾と南シナ海は、今では北京とワシントンの軍事的な対立がもっとも激しくなる、最大の火種になっています。"
         },
         {
           "type": "paragraph",
-          "text": "Le point le plus sensible reste **Taïwan**. Pékin considère l'île comme une province rebelle à réunifier. Taïwan bénéficie pourtant d'un soutien croissant des États-Unis. Un conflit dans le détroit paralyserait le commerce maritime mondial et la production de puces électroniques, dont l'île assure la fabrication haut de gamme."
+          "text": "いちばん敏感な問題は、今も**台湾**です。北京は台湾を、いずれ統一すべき反抗的な省と見なしています。それでも台湾は、アメリカから強まる支援を受けています。海峡で紛争が起きれば、世界の海上貿易が止まり、台湾が高性能品を製造している電子チップの生産も止まってしまいます。"
         },
         {
           "type": "paragraph",
-          "text": "Face à cet encerclement ressenti, Xi Jinping déploie les « Nouvelles Routes de la Soie », un projet d'investissements dans plus de 140 pays qui permet à la Chine de sécuriser ses approvisionnements et de construire un réseau d'influence alternatif face à l'Occident."
+          "text": "包囲されているという意識から、習近平は「一帯一路」構想を進めています。140か国以上に投資するというこの計画によって、中国は資源の調達先を確保し、西側に対抗できる独自の影響力のネットワークを築こうとしているのです。"
         }
       ]
     },
     {
       "id": "course_202_la_rivalite_chine_etats_unis_p4",
-      "title": "Deux modèles, un même monde",
+      "title": "二つのモデル、一つの世界",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Au-delà des chiffres, cette rivalité est aussi idéologique. Elle oppose le modèle libéral occidental, fondé sur la démocratie et les droits humains, au modèle chinois d'un développement économique rapide dirigé par un parti unique."
+          "text": "数字の先には、思想の対立もあります。民主主義と人権を土台にした西側の自由主義モデルと、一党体制のもとで急速な経済発展を進めてきた中国のモデルとが、真正面から向かい合っているのです。この対立は、経済の数字だけでは説明できません。"
         },
         {
           "type": "paragraph",
-          "text": "Pour de nombreux pays en développement, l'efficacité chinoise offre une alternative séduisante aux aides occidentales, souvent conditionnées au respect de la démocratie. La Chine ne se contente plus d'intégrer le système international : elle cherche désormais à le réformer pour qu'il reflète davantage sa puissance."
+          "text": "発展途上国の多くにとって、中国の効率のよさは、民主主義を尊重することを条件にしがちな西側の援助に代わる、魅力的な選択肢です。中国はもう国際システムに加わるだけでは満足せず、自国の力をもっと反映するようにシステムそのものを変えようとしています。いまやルールを受け入れる側から、つくる側に回ろうとしているのです。"
         },
         {
           "type": "paragraph",
-          "text": "Cette relation entre dans une phase de compétition systémique. Les deux pays évitent pour l'instant la guerre ouverte, mais l'émergence d'une nouvelle **[[冷戦]]** technologique semble difficile à éviter, forçant le reste du monde à se positionner entre ces deux blocs de puissance."
+          "text": "両国の関係は、体制どうしの競争の段階に入っています。今のところ両国は全面的な戦争を避けていますが、技術をめぐる新たな**[[冷戦]]**は避けがたいように見えます。世界のほかの国々は、二つの勢力圏のどちらに付くかを迫られることになります。"
         },
         {
           "type": "takeaway",
-          "text": "En 1978, la Chine était plus pauvre que de nombreux pays en développement. Quarante ans de croissance record plus tard, elle est devenue la seule puissance capable de défier les États-Unis sur tous les terrains : économique, militaire et technologique."
+          "text": "1978年の中国は、多くの発展途上国より貧しい国でした。それから四十年にわたって記録的な成長を続けた結果、経済、軍事、技術のあらゆる分野でアメリカに正面から挑むことのできる、世界で唯一の大国になったのです。"
         }
       ]
     }

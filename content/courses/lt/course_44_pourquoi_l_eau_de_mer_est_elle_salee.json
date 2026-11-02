@@ -1,98 +1,98 @@
 {
   "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee",
-  "title": "Pourquoi l'eau de mer est-elle salée ?",
-  "subtitle": "Océans",
+  "title": "Kodėl jūros vanduo sūrus?",
+  "subtitle": "Vandenynai",
   "subject": "sciences",
-  "subcategory": "Notre quotidien expliqué",
-  "description": "Un litre d'eau de mer contient environ 35 grammes de sel. Ce sel s'est accumulé pendant des milliards d'années. Voici d'où il vient.",
+  "subcategory": "Kasdienybė paaiškinta",
+  "description": "Viename litre jūros vandens yra maždaug 35 gramai druskos. Ta druska kaupėsi milijardus metų. Štai iš kur ji atsiranda.",
   "hero": {
     "image": "pourquoi_l_eau_de_mer_est_salee",
     "ratio": "16:9",
-    "hook": "Les fleuves sont doux. Les océans sont salés. Le secret, c'est le temps et l'évaporation."
+    "hook": "Upės gėlos, vandenynai sūrūs. Paslaptis slypi laike ir garavime."
   },
   "sections": [
     {
       "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_intro",
-      "title": "Introduction",
+      "title": "Įvadas",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Les océans couvrent plus de **70 %** de la planète. En moyenne, un litre d'eau de mer contient environ **35 grammes de sel**. Ce n'est pas un hasard : c'est le résultat d'un très long processus."
+          "text": "Vandenynai dengia daugiau nei **70 %** planetos paviršiaus. Vidutiniškai viename litre jūros vandens yra apie **35 gramai druskos**. Tai ne atsitiktinumas, o labai ilgo proceso rezultatas."
         },
         {
           "type": "paragraph",
-          "text": "Le sel ne « tombe » pas du ciel tout fait. Il voyage depuis les continents, puis reste piégé dans l'océan."
+          "text": "Druska iš dangaus gatava nenukrenta. Ji keliauja iš žemynų, o paskui lieka įstrigusi vandenyne."
         }
       ]
     },
     {
       "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_p1",
-      "title": "Le sel vient d'abord de la terre",
+      "title": "Druska pirmiausia ateina iš sausumos",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La pluie, en traversant l'air, se charge un peu de gaz carbonique. Elle devient légèrement acide. En tombant sur les roches, elle les attaque doucement : c'est l'**érosion chimique**."
+          "text": "Lietus, kirsdamas orą, sugeria šiek tiek anglies dioksido ir tampa silpnai rūgštus. Kritęs ant uolienų, jis jas palengva ardo. Tai **cheminė erozija**."
         },
         {
           "type": "image",
           "asset": "ocean_sea_salt_evaporation",
           "ratio": "auto",
-          "caption": "Marais salants : l'évaporation concentre le sel dissous dans l'eau de mer."
+          "caption": "Druskos tvenkiniai: garavimas koncentruoja jūros vandenyje ištirpusią druską."
         },
         {
           "type": "paragraph",
-          "text": "Les rivières emportent alors des minéraux dissous, surtout du **sodium** et du **chlore**, les deux ingrédients du sel de table. Elles les déversent dans la mer."
+          "text": "Upės nuneša ištirpusius mineralus, ypač **natrį** ir **chlorą**, du valgomosios druskos sandus. Jos juos išplauna į jūrą."
         },
         {
           "type": "funFact",
-          "text": "Les volcans sous-marins et les sources chaudes au fond des océans ajoutent aussi des sels. Mais l'essentiel vient encore des continents."
+          "text": "Povandeniniai ugnikalniai ir karštieji šaltiniai vandenynų dugne taip pat prideda druskų. Tačiau didžioji dalis vis tiek ateina iš žemynų."
         }
       ]
     },
     {
       "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_p2",
-      "title": "Pourquoi les fleuves ne sont pas salés",
+      "title": "Kodėl upių vanduo nesūrus",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Bonne question : si les fleuves apportent du sel, pourquoi l'eau du Rhône ou de la Seine n'est-elle pas salée ? Parce que le sel y est très dilué, et parce que l'eau des fleuves est constamment renouvelée."
+          "text": "Geras klausimas: jei upės neša druską, kodėl Ronos ar Senos vanduo nesūrus? Todėl, kad druskos jame labai mažai, ir todėl, kad upių vanduo nuolat atsinaujina."
         },
         {
           "type": "paragraph",
-          "text": "Dans l'océan, c'est différent. Sous le Soleil, l'eau s'**évapore** et repart dans le ciel. Le sel, lui, **reste**. Année après année, siècle après siècle, il s'accumule. On appelle cela le [[hidrologinis ciklas ir druskų kaupimasis]]."
+          "text": "Vandenyne kitaip. Saulėje vanduo **garuoja** ir kyla atgal į dangų. O druska **lieka**. Metai po metų, amžius po amžiaus ji kaupiasi. Tai vadinama taip: [[hidrologinis ciklas ir druskų kaupimasis]]."
         }
       ]
     },
     {
       "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_p3",
-      "title": "Le sel fait aussi circuler les océans",
+      "title": "Druska verčia cirkuliuoti ir vandenynus",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L'eau salée est plus **dense** (plus « lourde » pour le même volume) que l'eau douce. Aux pôles, quand l'eau de surface gèle, le sel est en partie rejeté dans l'eau liquide autour. Cette eau devient encore plus dense et plonge vers le fond."
+          "text": "Sūrus vanduo **tankesnis** (to paties tūrio jis „sunkesnis“) nei gėlas. Prie ašigalių, kai paviršiaus vanduo užšąla, dalis druskos išstumiama į aplinkinį skystą vandenį. Šis vanduo tampa dar tankesnis ir grimzta į gilumą."
         },
         {
           "type": "paragraph",
-          "text": "Ce mouvement aide à entraîner de grands courants océaniques. Ces courants transportent chaleur et nutriments autour du globe. Le sel n'est pas qu'une affaire de goût : il fait partie du moteur climatique de la planète."
+          "text": "Šis judėjimas padeda sukelti didžiąsias vandenynų sroves. Tos srovės neša šilumą ir maistines medžiagas aplink visą Žemės rutulį. Druska ne tik skonio reikalas: ji priklauso planetos klimato varikliui."
         }
       ]
     },
     {
       "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_p4",
-      "title": "Pas partout le même sel",
+      "title": "Ne visur vienodai sūru",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La salinité n'est pas la même partout. Près de l'équateur, l'évaporation forte peut concentrer le sel. Près des grands fleuves ou des banquises qui fondent, l'eau est plus douce. La mer Morte, elle, est un cas extrême : très peu d'eau part, beaucoup de sel reste."
+          "text": "Druskingumas ne visur vienodas. Netoli pusiaujo stiprus garavimas gali padidinti druskos koncentraciją. Prie didelių upių ar tirpstančių jūros ledynų vanduo gėlesnis. O Negyvoji jūra yra kraštutinis atvejis: išgaruoja labai mažai vandens, o druskos lieka daug."
         },
         {
           "type": "takeaway",
-          "text": "L'eau de mer est salée parce que les fleuves apportent des minéraux depuis les continents, et que l'évaporation laisse le sel dans l'océan. Cette accumulation dure depuis des milliards d'années."
+          "text": "Jūros vanduo sūrus todėl, kad upės neša mineralus iš žemynų, o garavimas palieka druską vandenyne. Šis kaupimasis tęsiasi jau milijardus metų."
         }
       ]
     }

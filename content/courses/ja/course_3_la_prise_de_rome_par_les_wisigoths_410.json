@@ -1,116 +1,116 @@
 {
   "id": "course_3_la_prise_de_rome_par_les_wisigoths_410",
-  "title": "Comment Rome a-t-elle pu être pillée et conquise ?",
-  "subtitle": "410",
+  "title": "ローマはどうして略奪され、征服されたのか？",
+  "subtitle": "410年",
   "subject": "histoire",
-  "subcategory": "Antiquité & Moyen Âge",
-  "description": "En août 410, les Wisigoths d'Alaric pillent Rome pendant trois jours. Pour la première fois depuis huit siècles, une armée ennemie entre dans la Ville éternelle.",
+  "subcategory": "古代と中世",
+  "description": "410年8月、アラリック率いる西ゴート族がローマを3日間にわたって略奪します。八百年ぶりに、敵の軍隊が永遠の都に足を踏み入れました。",
   "hero": {
     "image": "la_prise_de_rome_par_les_wisigoths",
     "ratio": "16:9",
-    "hook": "En 410, Rome tombe. Et avec elle, l'idée d'un empire invincible."
+    "hook": "410年、ローマ陥落。そして、無敵の帝国という幻想も崩れ去りました。"
   },
   "sections": [
     {
       "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En août **410**, l'inimaginable arrive. Menés par leur roi **Alaric**, les **Wisigoths**, un peuple germanique, forcent les portes de Rome. Pour la première fois depuis le sac gaulois de **390 av. J.-C.**, soit près de **800 ans**, une armée ennemie pille la Ville éternelle."
+          "text": "**410年**8月、想像もできなかったことが起きます。王**アラリック**に率いられた、ゲルマン系の民族**西ゴート族**が、ローマの門を破りました。**紀元前390年**のガリア人による略奪から、およそ**800年**ぶりに、敵の軍隊が永遠の都を略奪したのです。"
         },
         {
           "type": "paragraph",
-          "text": "Rome n'est plus la capitale politique de l'Empire, mais elle reste son cœur symbolique. Ce choc révèle une vérité que personne ne voulait voir : l'Occident romain agonise."
+          "text": "ローマはもはや帝国の政治的な首都ではありませんでしたが、象徴としての中心であり続けていました。この衝撃は、だれも見ようとしなかった現実を突きつけます。西ローマは死にかけていたのです。"
         }
       ]
     },
     {
       "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_p1",
-      "title": "Un empire qui se vide",
+      "title": "空洞化する帝国",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Au début du Ve siècle, l'Empire romain d'Occident manque d'argent et de soldats. Pour tenir les frontières, il multiplie les traités du type [[フォエドゥス（同盟条約）]] : des peuples dits « barbares » s'installent sur le territoire en échange d'un service militaire. La machine romaine tient encore, mais elle dépend de ceux qu'elle peinait autrefois à contenir."
+          "text": "5世紀初め、西ローマ帝国は資金も兵士も足りなくなっていました。国境を守るため、帝国は[[フォエドゥス（同盟条約）]]と呼ばれる条約を次々に結びます。いわゆる「蛮族」が、兵役を引き受ける代わりに帝国の領内に住みつくというものです。ローマという機構はまだ動いていましたが、かつて抑えるのに苦労した相手に頼るようになっていました。"
         },
         {
           "type": "paragraph",
-          "text": "En **402**, l'empereur d'Occident [[ホノリウス]] abandonne Rome pour [[ラヴェンナ]], une ville d'Italie protégée par ses marais. Pendant que la cour se terre, l'aristocratie romaine continue de vivre comme si rien n'avait changé. Le pouvoir réel glisse vers des généraux d'origine germanique."
+          "text": "**402年**、西ローマ皇帝の[[ホノリウス]]はローマを捨て、沼地に守られたイタリアの都市[[ラヴェンナ]]に移りました。宮廷が閉じこもっているあいだも、ローマの貴族たちは何も変わらなかったかのように暮らし続けます。実権は、ゲルマン系出身の将軍たちへと移っていきました。"
         },
         {
           "type": "funFact",
-          "text": "À l'annonce de la chute de « Rome », Honorius aurait paniqué : il croyait qu'on parlait de sa poule préférée, baptisée ainsi. Soulagé, dit-on, d'apprendre qu'il ne s'agissait « que » de la ville."
+          "text": "「ローマ」陥落の知らせを受けて、ホノリウスはうろたえたといいます。「ローマ」という名をつけた、お気に入りの雌鶏のことだと思ったからです。陥落したのが「ただの」都市だと知って、ほっとしたと伝えられています。"
         }
       ]
     },
     {
       "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_p2",
-      "title": "Alaric, un Romain déçu",
+      "title": "アラリック、失望したローマ人",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "[[アラリック1世]] n'est pas un sauvage venu du néant. Ancien officier de l'armée romaine, poussé vers l'Ouest par [[フン族]], un peuple nomade venu d'Asie, il veut des terres et un titre officiel pour son peuple. Face au mépris de Ravenne, il utilise Rome comme otage. Deux sièges, des rançons, puis l'assaut."
+          "text": "[[アラリック1世]]は、どこからともなく現れた野蛮人ではありません。もとはローマ軍の将校で、アジアから来た遊牧民[[フン族]]に西へ追われ、自分の民のために土地と公式の称号を求めていました。ラヴェンナの宮廷に見下されたアラリックは、ローマを人質に取ります。二度の包囲、身代金の支払い、そして総攻撃へと進みました。"
         },
         {
           "type": "image",
           "asset": "alaric_king_visigoths",
           "ratio": "4:3",
-          "caption": "Alaric Ier, roi des Wisigoths et ancien officier romain."
+          "caption": "西ゴート族の王で、元ローマ軍将校のアラリック1世。"
         },
         {
           "type": "paragraph",
-          "text": "Le **24 août 410**, la porte Salaria s'ouvre. Le pillage dure **trois jours**. Chrétien de confession [[アリウス派]] (un courant qui ne voyait pas le Christ comme l'égal de Dieu le Père), Alaric ordonne de respecter l'asile des églises. Violence réelle, mais pas destruction totale : il se veut héritier de Rome, pas fossoyeur."
+          "text": "**410年8月24日**、サラリア門が開かれます。略奪は**3日間**続きました。[[アリウス派]]（キリストを父なる神と同等とは見ない教派）のキリスト教徒だったアラリックは、教会の避難権を尊重するよう命じます。暴力は現実のものでしたが、全面的な破壊ではありませんでした。アラリックはローマの継承者であろうとし、ローマの墓掘り人になるつもりはなかったのです。"
         },
         {
           "type": "funFact",
-          "text": "Selon la légende, à sa mort, ses hommes auraient détourné le fleuve Busento pour enterrer Alaric et son trésor, puis remis l'eau dans son lit."
+          "text": "伝説によれば、アラリックが亡くなると、部下たちはブセント川の流れを変えてアラリックと財宝を埋葬し、そのあと川を元の流れに戻したといいます。"
         }
       ]
     },
     {
       "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_p3",
-      "title": "Le choc et La Cité de Dieu",
+      "title": "ローマ陥落の衝撃と『神の国』",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Depuis la Palestine, [[聖ヒエロニムス]], un Père de l'Église, s'écrie : « En une seule ville, c'est l'univers entier qui a péri. » Les païens accusent le christianisme d'avoir affaibli Rome. Pour répondre, **Saint Augustin** écrit [[『神の国』]] : les empires terrestres passent ; l'Église, elle, demeure."
+          "text": "パレスチナにいた教父の[[聖ヒエロニムス]]は、「一つの都市とともに、全世界が滅びた」と叫びました。異教徒たちは、キリスト教がローマを弱らせたと非難します。これに答えるため、**聖アウグスティヌス**は[[『神の国』]]を著しました。その主張は、地上の帝国は過ぎ去るが、教会は残る、というものでした。"
         },
         {
           "type": "image",
           "asset": "sack_of_rome_410_alaric",
           "ratio": "4:3",
-          "caption": "Le sac de Rome en 410, choc pour tout le monde antique."
+          "caption": "410年のローマ略奪。古代世界全体にとっての衝撃でした。"
         },
         {
           "type": "paragraph",
-          "text": "Le signal est clair pour d'autres peuples germaniques, comme les [[ヴァンダル族]] et les [[フランク族]] : l'Occident est une proie. En **455**, les Vandales pillent Rome bien plus durement. En **476**, le chef [[ヘルール族]] [[オドアケル]] dépose le dernier empereur d'Occident, [[ロムルス・アウグストゥルス]]. Les insignes du pouvoir partent à Constantinople. L'Empire d'Occident s'éteint."
+          "text": "ほかのゲルマン系の民族、たとえば[[ヴァンダル族]]や[[フランク族]]にとって、合図は明らかでした。西方は獲物だ、と。**455年**、ヴァンダル族はローマをはるかに激しく略奪します。**476年**には、[[ヘルール族]]の首領[[オドアケル]]が、最後の西ローマ皇帝[[ロムルス・アウグストゥルス]]を退位させました。皇帝権力の印はコンスタンティノープルへ送られます。西ローマ帝国は幕を閉じました。"
         },
         {
           "type": "timeline",
           "events": [
             {
-              "date": "402",
-              "title": "Ravenne, nouvelle capitale",
-              "detail": "Honorius abandonne Rome pour une ville mieux défendue."
+              "date": "402年",
+              "title": "ラヴェンナが新しい首都に",
+              "detail": "ホノリウスが、より守りやすい都市のためにローマを捨てる。"
             },
             {
-              "date": "410",
-              "title": "Sac de Rome",
-              "detail": "Alaric et les Wisigoths pillent la ville trois jours."
+              "date": "410年",
+              "title": "ローマ略奪",
+              "detail": "アラリックと西ゴート族が、3日間にわたって都市を略奪する。"
             },
             {
-              "date": "455",
-              "title": "Sac vandale",
-              "detail": "Rome est pillée de façon bien plus destructrice."
+              "date": "455年",
+              "title": "ヴァンダル族の略奪",
+              "detail": "ローマは、はるかに破壊的なかたちで略奪される。"
             },
             {
-              "date": "476",
-              "title": "Fin de l'Empire d'Occident",
-              "detail": "Odoacre dépose Romulus Augustule."
+              "date": "476年",
+              "title": "西ローマ帝国の終わりのとき",
+              "detail": "オドアケルがロムルス・アウグストゥルスを退位させる。"
             }
           ]
         }
@@ -118,20 +118,20 @@
     },
     {
       "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_p4",
-      "title": "La bascule vers le Moyen Âge",
+      "title": "中世へと大きく移り変わる",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Les Wisigoths finissent par s'installer en Aquitaine, puis en Hispanie (l'Espagne actuelle). Ils ne détruisent pas toute la culture classique : ils en deviennent les passeurs, mêlant droit romain, foi chrétienne et traditions germaniques."
+          "text": "西ゴート族は、やがてアクィタニア、続いてヒスパニア（現在のスペイン）に定住します。古典文化をすべて壊したわけではなく、むしろその伝え手となり、ローマ法、キリスト教の信仰、ゲルマンの伝統を混ぜ合わせました。"
         },
         {
           "type": "paragraph",
-          "text": "Le sac de **410** reste la rupture dans les mémoires. Ce n'est pas encore la fin administrative de l'Empire, mais c'est la fin de l'illusion. L'Europe médiévale commence dans les décombres d'un mythe."
+          "text": "**410年**の略奪は、人々の記憶の中で、断絶の出来事であり続けています。帝国の行政的な終わりはまだでしたが、幻想は終わりました。中世ヨーロッパは、一つの神話の瓦礫の中から始まります。"
         },
         {
           "type": "takeaway",
-          "text": "En **410**, Rome tombe pour la première fois depuis **800 ans**. Des Wisigoths formés à la romaine y pillent pendant trois jours. Le choc ouvre la voie à **476** et à l'Europe médiévale."
+          "text": "**410年**、ローマは**800年**ぶりに陥落しました。ローマ式の軍事訓練を受けた西ゴート族が、3日間にわたって略奪を行います。この衝撃が**476年**、そして中世ヨーロッパへの道を開きました。"
         }
       ]
     }

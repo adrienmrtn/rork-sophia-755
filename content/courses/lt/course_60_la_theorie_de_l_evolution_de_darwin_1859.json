@@ -1,100 +1,100 @@
 {
   "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859",
-  "title": "La théorie de l'évolution de Darwin",
+  "title": "Darwino evoliucijos teorija",
   "subtitle": "1859",
   "subject": "sciences",
-  "subcategory": "Découvertes qui ont changé le monde",
-  "description": "En 1859, Darwin publie L'Origine des espèces. L'idée centrale : le vivant change au fil du temps par sélection naturelle.",
+  "subcategory": "Atradimai, pakeitę pasaulį",
+  "description": "1859 m. Darwinas išleidžia knygą „Rūšių atsiradimas“. Pagrindinė mintis: gyvoji gamta laikui bėgant keičiasi dėl natūraliosios atrankos.",
   "hero": {
     "image": "la_theorie_de_l_evolution_de_darwin",
     "ratio": "16:9",
-    "hook": "Les espèces ne sont pas figées. Elles changent. Lentement. Mais sûrement."
+    "hook": "Rūšys nėra nekintamos. Jos keičiasi. Lėtai. Bet užtikrintai."
   },
   "sections": [
     {
       "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_intro",
-      "title": "Introduction",
+      "title": "Įvadas",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En **1859**, **Charles Darwin** publie *De l'origine des espèces*. Le livre choque, passionne, divise. Son idée centrale est pourtant simple à formuler."
+          "text": "**1859** m. **Charlesas Darwinas** išleidžia knygą *Rūšių atsiradimas*. Ji šokiruoja, žadina aistras, skaldo visuomenę. Vis dėlto pagrindinę jos mintį paprasta suformuluoti."
         },
         {
           "type": "paragraph",
-          "text": "Les êtres vivants varient. Certaines variations aident à survivre et à se reproduire. Ces variations se transmettent. Au fil des générations, les populations changent."
+          "text": "Gyvos būtybės skiriasi viena nuo kitos. Kai kurie skirtumai padeda išgyventi ir daugintis. Šie skirtumai perduodami. Per kartas populiacijos keičiasi."
         }
       ]
     },
     {
       "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_p1",
-      "title": "Le voyage qui ouvre les yeux",
+      "title": "Kelionė, atverianti akis",
       "free": false,
       "blocks": [
         {
           "type": "image",
           "asset": "charles_darwin_portrait",
           "ratio": "4:3",
-          "caption": "Darwin, naturaliste britannique du XIXe siècle."
+          "caption": "Darwinas, XIX a. britų gamtininkas."
         },
         {
           "type": "paragraph",
-          "text": "Jeune, Darwin part sur le navire **Beagle**. Pendant des années, il observe plantes, fossiles, oiseaux. Aux îles Galápagos, il remarque que des oiseaux proches ont des becs différents selon leur nourriture."
+          "text": "Dar jaunas Darwinas išplaukia laivu **Beagle**. Daugelį metų jis stebi augalus, fosilijas, paukščius. Galapagų salose pastebi, kad artimi paukščiai turi skirtingus snapus, priklausomai nuo maisto."
         },
         {
           "type": "image",
           "asset": "darwin_finches_galapagos_beaks",
           "ratio": "4:3",
-          "caption": "Des becs adaptés à des régimes différents : un indice fort."
+          "caption": "Snapai, pritaikyti skirtingai mitybai: stiprus įrodymas."
         }
       ]
     },
     {
       "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_p2",
-      "title": "La sélection naturelle, en clair",
+      "title": "Natūralioji atranka paprastais žodžiais",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Imagine une population d'animaux. Certains courent un peu plus vite, digèrent un peu mieux, résistent un peu plus au froid. Si cela aide à survivre et à avoir des petits, ces traits deviennent plus fréquents."
+          "text": "Įsivaizduok gyvūnų populiaciją. Vieni bėga šiek tiek greičiau, kiti kiek geriau virškina, treti truputį labiau atsparūs šalčiui. Jei tai padeda išgyventi ir susilaukti jauniklių, šių bruožų tampa vis daugiau."
         },
         {
           "type": "paragraph",
-          "text": "Ce n'est pas que les individus « veulent » évoluer. C'est un filtre : le milieu garde plutôt ce qui marche. Darwin appelle cela la **sélection naturelle**."
+          "text": "Tai ne todėl, kad individai „nori“ keistis. Tai filtras: aplinka veikiau palieka tai, kas veikia. Darwinas tai vadina **natūraliąja atranka**."
         },
         {
           "type": "funFact",
-          "text": "Darwin a attendu longtemps avant de publier. Il craignait le scandale. Un autre naturaliste, **Alfred Russel Wallace**, arrive à des idées proches : cela pousse Darwin à sortir son livre."
+          "text": "Darwinas ilgai delsė skelbti. Bijojo skandalo. Kitas gamtininkas, **Alfredas Russelas Wallace'as**, prieina prie panašių idėjų, ir tai paskatina Darwiną išleisti knygą."
         }
       ]
     },
     {
       "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_p3",
-      "title": "Le choc des idées",
+      "title": "Idėjų susidūrimas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Au XIXe siècle, beaucoup croient que les espèces ont été créées telles quelles. Dire qu'elles changent, et que l'humain partage une histoire avec d'autres animaux, bouscule la religion et la société."
+          "text": "XIX a. daugelis tiki, kad rūšys sukurtos tokios, kokios yra. Sakyti, kad jos keičiasi ir kad žmogus turi bendrą istoriją su kitais gyvūnais, sukrečia religiją ir visuomenę."
         },
         {
           "type": "paragraph",
-          "text": "La science, elle, progresse : les fossiles, la géographie des espèces, puis plus tard la génétique, confirment l'idée générale."
+          "text": "Mokslas tuo tarpu žengia pirmyn: fosilijos, rūšių geografija, vėliau ir genetika patvirtina bendrą idėją."
         }
       ]
     },
     {
       "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_p4",
-      "title": "Et aujourd'hui ?",
+      "title": "O šiandien?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "On sait maintenant que l'ADN porte les variations. On observe l'évolution en labo (bactéries, virus) et dans la nature. On combat aussi les bactéries résistantes aux antibiotiques : c'est de l'évolution en direct."
+          "text": "Dabar žinoma, kad variacijas perduoda DNR. Evoliucija stebima laboratorijose (bakterijos, virusai) ir gamtoje. Kovojama ir su antibiotikams atspariomis bakterijomis: tai evoliucija gyvai."
         },
         {
           "type": "takeaway",
-          "text": "Darwin a montré que le vivant évolue par sélection naturelle : les traits utiles à la survie et à la reproduction se répandent. La génétique moderne a confirmé et précisé ce cadre."
+          "text": "Darwinas parodė, kad gyvoji gamta evoliucionuoja per natūraliąją atranką: bruožai, naudingi išgyventi ir daugintis, plinta. Šiuolaikinė genetika šį pagrindą patvirtino ir patikslino."
         }
       ]
     }

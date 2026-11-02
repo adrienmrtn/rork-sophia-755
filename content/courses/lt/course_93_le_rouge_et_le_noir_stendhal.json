@@ -1,124 +1,124 @@
 {
   "id": "course_93_le_rouge_et_le_noir_stendhal",
-  "title": "« Le Rouge et le Noir » : jusqu'où ira Julien Sorel ?",
+  "title": "„Raudona ir juoda“: kiek toli nueis Julien Sorel?",
   "subtitle": "1830",
   "subject": "litterature",
-  "subcategory": "Classiques français & européens",
-  "description": "Julien Sorel, fils de charpentier, veut s'élever dans une France fermée. Stendhal invente le roman psychologique moderne.",
+  "subcategory": "Prancūzų ir Europos klasika",
+  "description": "Julien Sorel, dailidės sūnus, nori pakilti aukštyn uždaroje Prancūzijoje. Stendhal'is sukuria šiuolaikinį psichologinį romaną.",
   "hero": {
     "image": "le_rouge_et_le_noir_stendhal",
     "ratio": "16:9",
-    "hook": "Rouge pour l'uniforme, noir pour la soutane : deux couleurs, une seule ambition."
+    "hook": "Raudona kariuomenės uniformai, juoda sutanai: dvi spalvos, viena ambicija."
   },
   "sections": [
     {
       "id": "course_93_le_rouge_et_le_noir_stendhal_intro",
-      "title": "Introduction",
+      "title": "Įvadas",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Publié en **1830**, **Le Rouge et le Noir** est l'acte de naissance du roman psychologique, centré sur les pensées intérieures du personnage. **Stendhal**, de son vrai nom **Henri Beyle**, suit **Julien Sorel**, jeune roturier sans titre noble, dévoré par l'ambition dans la **[[Prancūzijos restauracija (1815-1830)]]**, période où les Bourbons sont revenus au pouvoir après Napoléon."
+          "text": "**1830** m. išleista **Raudona ir juoda** yra psichologinio romano gimimo aktas, sutelktas į veikėjo vidines mintis. **Stendhal'is**, tikruoju vardu **Henri Beyle**, pasakoja apie **Julien'ą Sorel'į**, jauną prasčioką be bajoro titulo, ambicijos graužiamą. Veiksmo laikas: **[[Prancūzijos restauracija (1815-1830)]]**, kai po Napoleono į valdžią sugrįžo Burbonai."
         },
         {
           "type": "paragraph",
-          "text": "Entre nostalgie napoléonienne et société étouffante, le roman analyse l'hypocrisie sociale et les tourments d'une âme qui cherche sa place. Julien regrette l'époque où le talent pouvait s'élever par l'armée. Stendhal décrit avec lucidité comment on calcule ses sentiments pour avancer. Julien devient le modèle du héros romantique moderne : intelligent, fier, mais piégé par son époque."
+          "text": "Tarp napoleoniškos nostalgijos ir dusinančios visuomenės romanas nagrinėja socialinį veidmainiavimą ir sielos, ieškančios savo vietos, kančias. Julien gailisi laikų, kai talentas galėjo kilti per armiją. Stendhal'is skaidriai aprašo, kaip skaičiuojami jausmai, kad būtų galima kilti. Julien tampa šiuolaikinio romantinio herojaus pavyzdžiu: protingas, išdidus, bet savo laikmečio pinklių pagautas."
         }
       ]
     },
     {
       "id": "course_93_le_rouge_et_le_noir_stendhal_p1",
-      "title": "Stendhal et le beylisme",
+      "title": "Stendhal'is ir beilizmas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Stendhal revendique un style sec, influencé par sa carrière militaire sous Napoléon. Il appelle cela le **[[Beilizmas]]** : clarté, sincérité, refus de l'emphase romantique. Pour lui, écrire, c'est analyser froidement les passions humaines."
+          "text": "Stendhal'is skelbiasi esąs sauso stiliaus šalininkas, paveiktas karinės karjeros Napoleono laikais. Tam jis turi pavadinimą: **[[Beilizmas]]**. Tai aiškumas, nuoširdumas, romantinio pakylėtumo atmetimas. Jam rašyti reiškia šaltai analizuoti žmogaus aistras."
         },
         {
           "type": "image",
           "asset": "stendhal_henri_beyle_portrait",
           "ratio": "4:3",
-          "caption": "Stendhal : l'analyste implacable des passions."
+          "caption": "Stendhal'is: negailestingas aistrų analitikas."
         },
         {
           "type": "funFact",
-          "text": "Stendhal lisait chaque matin quelques pages du Code civil pour garder un ton naturel et dénué d'emphase."
+          "text": "Stendhal'is kiekvieną rytą paskaitydavo keletą Civilinio kodekso puslapių, kad išlaikytų natūralų, be pakilumo toną."
         },
         {
           "type": "paragraph",
-          "text": "Le sous-titre, **[[1830 m. kronika]]**, rappelle la double ambition du livre : peindre l'âme avec précision et dresser le portrait d'une France sclérosée, figée et incapable de changer. Le roman paraît peu avant les **Trois Glorieuses**, révolution de juillet 1830 qui renverse Charles X."
+          "text": "Paantraštė yra **[[1830 m. kronika]]**. Ji primena dvigubą knygos ambiciją: tiksliai nutapyti sielą ir pavaizduoti sustabarėjusią, sustingusią, pokyčiams nepajėgią Prancūziją. Romanas pasirodo prieš pat **Tris šlovingąsias dienas**, 1830 m. liepos revoliuciją, nuvertusią Karolį X."
         }
       ]
     },
     {
       "id": "course_93_le_rouge_et_le_noir_stendhal_p2",
-      "title": "Julien Sorel : l'énergie contre le système",
+      "title": "Julien Sorel: energija prieš sistemą",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Fils de charpentier méprisé, Julien possède une intelligence rare. Il récite la **[[Vulgata]]**, traduction latine de la Bible, en latin. En **1830**, le « rouge » de l'uniforme militaire, la carrière sous Napoléon, a cédé au « noir » de la robe ecclésiastique, seul vecteur de pouvoir pour un roturier instruit."
+          "text": "Niekinamas dailidės sūnus Julien turi retą protą. Jis lotyniškai deklamuoja lotynišką Biblijos vertimą: **[[Vulgata]]**. **1830** m. karinės uniformos „raudona“, karjera Napoleono laikais, užleido vietą dvasininko sutanos „juodai“, vienintelei galios priemonei išsilavinusiam prasčiokui."
         },
         {
           "type": "image",
           "asset": "french_restoration_era_1830_painting",
           "ratio": "4:3",
-          "caption": "La France de la Restauration : une société où l'ambition doit se cacher."
+          "caption": "Restauracijos Prancūzija: visuomenė, kurioje ambicija turi slėptis."
         },
         {
           "type": "paragraph",
-          "text": "Julien entre au séminaire, école de prêtres, puis devient précepteur chez les **de Rênal** à **Verrières**, en Franche-Comté. Sa conquête de **Mme de Rênal** est d'abord une opération de guerre, pas un coup de cœur. L'hypocrisie devient son outil de survie. L'intrigue s'inspire de l'affaire **Antoine Berthet**, séminariste condamné à mort en **1827**."
+          "text": "Julien įstoja į seminariją, kunigų mokyklą, o paskui tampa namų mokytoju pas **de Rênal** šeimą **Verrières** mieste, Franš Konte krašte. **Ponios de Rênal** užkariavimas iš pradžių yra karinė operacija, o ne širdies pasirinkimas. Veidmainystė tampa jo išgyvenimo įrankiu. Siužetas paremtas **Antoine'o Berthet** byla: seminaristas, **1827** m. nuteistas mirti."
         }
       ]
     },
     {
       "id": "course_93_le_rouge_et_le_noir_stendhal_p3",
-      "title": "De la province aux salons parisiens",
+      "title": "Nuo provincijos iki Paryžiaus salonų",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "À Paris, Julien devient secrétaire du **marquis de La Mole**, grand aristocrate. Il séduit **Mathilde de La Mole**, jeune femme fière qui aime le danger et le scandale. Julien la voit comme le trophée ultime de son ascension sociale."
+          "text": "Paryžiuje Julien tampa **markizo de La Mole**, didelio aristokrato, sekretoriumi. Jis suvilioja **Mathilde'ą de La Mole**, išdidžią jauną moterį, mėgstančią pavojų ir skandalą. Julien ją laiko galutiniu savo socialinio kilimo trofėjumi."
         },
         {
           "type": "paragraph",
-          "text": "Chez Stendhal, l'amour est souvent une mise en scène où l'on s'observe plus qu'on ne s'abandonne. Julien obtient un titre de noblesse et l'accord pour épouser Mathilde, mais une lettre de **Mme de Rênal** dénonce ses mensonges. Le **[[Raudonos ir juodos simbolika]]** oppose l'uniforme militaire à la robe ecclésiastique, seuls leviers d'ascension pour un roturier dans cette société fermée."
+          "text": "Stendhal'iui meilė dažnai yra spektaklis, kuriame žmonės labiau save stebi, nei atsiduoda. Julien gauna bajorystės titulą ir sutikimą vesti Mathilde'ą, bet **ponios de Rênal** laiškas atskleidžia jo melus. **[[Raudonos ir juodos simbolika]]** supriešina karinę uniformą ir dvasininko sutaną, vienintelius kilimo svertus prasčiokui šioje uždaroje visuomenėje."
         }
       ]
     },
     {
       "id": "course_93_le_rouge_et_le_noir_stendhal_p4",
-      "title": "La vérité au pied de l'échafaud",
+      "title": "Tiesa ešafoto papėdėje",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Julien tire sur Mme de Rênal dans l'église de Verrières, après qu'elle ait écrit une lettre compromettante. En prison, il cesse de calculer. Face à la mort, l'ambition s'efface devant le regret du bonheur vécu avec elle. Il refuse de sauver sa tête par l'intrigue ou les protections aristocratiques. **Mathilde** emporte sa tête tranchée dans un geste théâtral, fidèle à son caractère. Stendhal montre ainsi que seule la vérité des sentiments survit au théâtre social."
+          "text": "Julien iššauna į ponią de Rênal Verrières bažnyčioje, kai ši parašo kompromituojantį laišką. Kalėjime jis nustoja skaičiuoti. Akis į akį su mirtimi ambicija užleidžia vietą gailesčiui dėl su ja išgyventos laimės. Jis atsisako gelbėti galvą intrigomis ar aristokratų globa. **Mathilde** pasiima jo nukirstą galvą teatraliu gestu, ištikima savo charakteriui. Stendhal'is taip parodo, kad tik jausmų tiesa išgyvena socialinį teatrą."
         },
         {
           "type": "timeline",
           "events": [
             {
               "date": "1827",
-              "title": "Fait divers",
-              "detail": "L'affaire Antoine Berthet inspire le roman."
+              "title": "Kriminalinė kronika",
+              "detail": "Antoine'o Berthet byla įkvepia romaną."
             },
             {
               "date": "1830",
-              "title": "Publication",
-              "detail": "Le roman paraît peu avant les Trois Glorieuses."
+              "title": "Leidimas",
+              "detail": "Romanas pasirodo prieš pat Tris šlovingąsias dienas."
             },
             {
-              "date": "Fin",
-              "title": "Exécution",
-              "detail": "Mathilde emporte la tête tranchée de Julien."
+              "date": "Pabaiga",
+              "title": "Egzekucija",
+              "detail": "Mathilde pasiima nukirstą Julien'o galvą."
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "Dans **Le Rouge et le Noir**, paru en **1830**, Stendhal montre comment l'ambition sociale et le bonheur sincère s'opposent dans une société fondée sur l'hypocrisie."
+          "text": "Romane **Raudona ir juoda**, išleistame **1830** m., Stendhal'is parodo, kaip socialinė ambicija ir nuoširdi laimė priešinasi viena kitai visuomenėje, grįstoje veidmainyste."
         }
       ]
     }

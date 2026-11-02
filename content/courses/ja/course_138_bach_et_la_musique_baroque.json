@@ -1,143 +1,143 @@
 {
   "id": "course_138_bach_et_la_musique_baroque",
-  "title": "Bach et la musique baroque",
+  "title": "バッハとバロック音楽の世界",
   "subtitle": "1685-1750",
   "subject": "art",
-  "subcategory": "Musique",
-  "description": "Johann Sebastian Bach, cantor à Leipzig, porte la fugue et le contrepoint à leur sommet et devient l'architecte du baroque.",
+  "subcategory": "音楽",
+  "description": "ライプツィヒのカントル、ヨハン・ゼバスティアン・バッハは、フーガと対位法を頂点にまで高め、バロックの建築家と呼ばれる存在になりました。",
   "hero": {
     "image": "bach_et_la_musique_baroque",
     "ratio": "16:9",
-    "hook": "Un cantor de Leipzig construit la cathédrale sonore de l'Occident."
+    "hook": "ライプツィヒのカントルが、西洋の「音の大聖堂」を築き上げました。"
   },
   "sections": [
     {
       "id": "course_138_bach_et_la_musique_baroque_intro",
-      "title": "Introduction",
+      "title": "はじめに",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Johann Sebastian Bach** (**1685**-**1750**) est souvent tenu pour le sommet de la musique occidentale. Architecte des sons, il porte à perfection l'art de la **fugue** et du [[対位法]] : plusieurs lignes mélodiques indépendantes qui s'entrelacent."
+          "text": "**ヨハン・ゼバスティアン・バッハ**（**1685年**〜**1750年**）は、西洋音楽の頂点とされることの多い人物です。音の建築家として、**フーガ**と[[対位法]]の技法を完成の域に高めました。対位法とは、独立した複数の旋律が絡み合う書き方のことです。"
         },
         {
           "type": "paragraph",
-          "text": "Sa vie n'est pas celle d'une star de cour. C'est celle d'un artisan de génie, au service de l'Église et des princes, dont l'œuvre ne sera pleinement redécouverte qu'au XIXe siècle."
+          "text": "バッハの人生は、宮廷のスターのものではありませんでした。教会と君主に仕えた天才的な職人の生涯で、作品が本当の意味で再発見されたのは、十九世紀になってからです。"
         }
       ]
     },
     {
       "id": "course_138_bach_et_la_musique_baroque_p1",
-      "title": "Le baroque : église, cour et scène",
+      "title": "バロックの音楽：教会、宮廷、そして舞台",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L'ère **baroque** va environ de **1600** à la mort de Bach. Elle aime contraste, mouvement, ornement. **Vivaldi** en Italie, **Haendel** en Allemagne puis en Angleterre, dominent le paysage. La musique sert trois missions : l'église (orgue et chant sacré), la chambre des princes, et la scène (opéra)."
+          "text": "**バロック**の時代は、おおよそ**1600年**からバッハの死までです。対比、動き、装飾が好まれました。イタリアの**ヴィヴァルディ**や、ドイツからイギリスへ渡った**ヘンデル**が、この時代を代表します。音楽の役割は三つ。教会（オルガンと宗教歌）、君主の室内、そして舞台（オペラ）です。"
         },
         {
           "type": "paragraph",
-          "text": "Bach n'écrit pas d'opéra, mais il injecte le drame lyrique dans ses Passions et oratorios. Il synthétise mesure française, lyrisme italien et rigueur allemande. Pour lui, la musique reflète un ordre divin, pas seulement un agrément."
+          "text": "バッハはオペラを書きませんでしたが、叙情的なドラマを受難曲やオラトリオに注ぎ込みました。フランスの節度、イタリアの歌心、ドイツの厳格さを一つにまとめあげています。バッハにとって音楽は、単なる楽しみではなく、神の秩序を映すものでした。"
         },
         {
           "type": "funFact",
-          "text": "En 1717 à Weimar, Bach passe un mois en prison pour avoir insisté trop fort à démissionner : le duc refusait de le laisser partir pour Köthen."
+          "text": "1717年、ヴァイマルでバッハは、辞職を強く求めすぎたために1か月間投獄されました。公爵が、ケーテンへ移ることを認めようとしなかったのです。"
         }
       ]
     },
     {
       "id": "course_138_bach_et_la_musique_baroque_p2",
-      "title": "Leipzig : le cantor et ses cantates",
+      "title": "ライプツィヒ：カントルとカンタータ",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Né à **Eisenach** en **1685** dans une dynastie de musiciens, Bach s'installe en **1723** à **Leipzig** comme [[カントル]] de l'église Saint-Thomas. Charge écrasante : une nouvelle [[カンタータ]] presque chaque semaine, plus l'enseignement à la [[トーマス学校]]."
+          "text": "**1685年**、音楽家の家系に**アイゼナハ**で生まれたバッハは、**1723年**に**ライプツィヒ**へ移り、聖トーマス教会の[[カントル]]になります。仕事は過酷で、ほぼ毎週新しい[[カンタータ]]を書き、さらに[[トーマス学校]]で教えました。"
         },
         {
           "type": "image",
           "asset": "bach_eisenach_birthplace_portrait",
           "ratio": "4:3",
-          "caption": "Bach, héritier d'une lignée de musiciens allemands."
+          "caption": "音楽家一族の系譜を受け継ぐ、ドイツの作曲家バッハ"
         },
         {
           "type": "image",
           "asset": "leipzig_st_thomas_church_bach_cantor",
           "ratio": "4:3",
-          "caption": "Saint-Thomas de Leipzig : le quotidien du cantor Bach."
+          "caption": "ライプツィヒの聖トーマス教会：カントル・バッハの日常"
         },
         {
           "type": "paragraph",
-          "text": "On estime environ **300** cantates composées, dont quelque **200** nous sont parvenues. Il a **20** enfants de deux mariages ; **Carl Philipp Emanuel** et **Johann Christian** deviennent eux-mêmes des compositeurs majeurs. Le soir, il dirige le [[コレギウム・ムジクム]], ensemble pour lequel il écrit concertos et suites profanes."
+          "text": "作曲したカンタータは約**300**曲と推定され、そのうち約**200**曲が現代に伝わっています。子どもは二度の結婚で**20**人。**カール・フィリップ・エマヌエル**と**ヨハン・クリスティアン**は、のちに自身も大作曲家になりました。夜には[[コレギウム・ムジクム]]を指揮し、この楽団のために協奏曲や世俗的な組曲を書きました。"
         },
         {
           "type": "funFact",
-          "text": "En fin de vie, opéré des yeux par le chirurgien itinérant John Taylor, Bach devient aveugle peu avant de mourir."
+          "text": "晩年、バッハは旅の眼科医ジョン・テイラーに目の手術を受けましたが、亡くなる少し前に失明してしまいました。"
         }
       ]
     },
     {
       "id": "course_138_bach_et_la_musique_baroque_p3",
-      "title": "Le Clavier bien tempéré et la redécouverte",
+      "title": "『平均律クラヴィーア曲集』と再発見",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Avec le [[平均律]], système d'accordage qui unifie les intervalles, Bach prouve qu'un clavier peut jouer dans toutes les tonalités. *Le Clavier bien tempéré* (48 préludes et fugues) ouvre la voie à la musique moderne. Sa fugue superpose un thème repris par plusieurs voix : architecture mathématique."
+          "text": "[[平均律]]は、音程を均等にそろえる調律法です。これによってバッハは、一つの鍵盤楽器であらゆる調を弾けることを示しました。*『平均律クラヴィーア曲集』*（48の前奏曲とフーガ）は、近代音楽への道を開きます。フーガは一つの主題を複数の声部が追いかけて重ねていく形式で、数学的な建築のようです。"
         },
         {
           "type": "image",
           "asset": "bach_well_tempered_clavier_manuscript_fugue",
           "ratio": "4:3",
-          "caption": "Le Clavier bien tempéré : toutes les tonalités sur un seul clavier."
+          "caption": "『平均律クラヴィーア曲集』：一つの鍵盤で、すべての調を"
         },
         {
           "type": "paragraph",
-          "text": "À sa mort, la mode préfère le [[ギャラント様式]], plus léger. Bach paraît « gothique ». En **1829**, le jeune **Felix Mendelssohn** dirige à Berlin la *Passion selon Saint-Matthieu* : début de la « Renaissance Bach ». Sans lui, des centaines de partitions auraient pu disparaître."
+          "text": "バッハが亡くなると、流行は、より軽やかな[[ギャラント様式]]へ移りました。バッハは「ゴシック的」で古くさいと見られます。**1829年**、若き**フェリックス・メンデルスゾーン**がベルリンで*『マタイ受難曲』*を指揮し、「バッハ復興」が始まりました。メンデルスゾーンがいなければ、何百もの楽譜が失われていたかもしれません。"
         },
         {
           "type": "funFact",
-          "text": "Mendelssohn plaisantait : il fallait qu'un juif converti et un acteur (son ami Devrient) rendent au monde le plus grand chef-d'œuvre de la musique chrétienne."
+          "text": "メンデルスゾーンは冗談を言っていました。キリスト教音楽の最高傑作を世に返すのが、改宗したユダヤ人と俳優（友人のデフリエント）だったとは、と。"
         }
       ]
     },
     {
       "id": "course_138_bach_et_la_musique_baroque_p4",
-      "title": "SDG, Voyager et l'héritage universel",
+      "title": "SDG、ボイジャー、普遍的な遺産",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Fervent luthérien, Bach signe souvent **SDG** (*Soli Deo Gloria* : à Dieu seul la gloire). Il joue avec la [[数秘術]] et code son nom (B-A-C-H) en notes. En **1977**, la NASA place plusieurs de ses œuvres sur le [[ゴールデンレコード]] des sondes Voyager : ambassade sonore de l'humanité vers l'espace."
+          "text": "熱心なルター派だったバッハは、よく**SDG**と署名しました（*Soli Deo Gloria*、「神にのみ栄光あれ」）。[[数秘術]]を遊びのように取り入れ、自分の名前（B-A-C-H）を音符にして曲に仕込んでもいます。**1977年**、NASAはボイジャー探査機に載せた[[ゴールデンレコード]]に、バッハの作品を複数収めました。人類から宇宙へ向けた、音の使節です。"
         },
         {
           "type": "timeline",
           "events": [
             {
-              "date": "1685",
-              "title": "Naissance à Eisenach",
-              "detail": "Une dynastie de musiciens donne Bach au monde."
+              "date": "1685年",
+              "title": "アイゼナハで誕生",
+              "detail": "音楽家の家系から、バッハがこの世に生まれる"
             },
             {
-              "date": "1723",
-              "title": "Cantor à Leipzig",
-              "detail": "Cantates hebdomadaires et œuvre sacrée immense."
+              "date": "1723年",
+              "title": "ライプツィヒのカントル",
+              "detail": "毎週のように書かれたカンタータと、膨大な宗教作品"
             },
             {
               "date": "1722-1742",
-              "title": "Clavier bien tempéré",
-              "detail": "Toutes les tonalités, la fugue comme cathédrale."
+              "title": "『平均律クラヴィーア曲集』",
+              "detail": "あらゆる調に対応した曲集と、大聖堂のようなフーガ"
             },
             {
-              "date": "1829",
-              "title": "Mendelssohn",
-              "detail": "La Passion selon Saint-Matthieu revient à la lumière."
+              "date": "1829年",
+              "title": "メンデルスゾーン",
+              "detail": "『マタイ受難曲』が、ふたたび光のもとへ戻ってくる"
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "Cantor de Leipzig, Bach a porté le contrepoint et la fugue à leur sommet ; oublié puis ressuscité par Mendelssohn, il reste l'architecte du baroque."
+          "text": "ライプツィヒのカントル、バッハは、対位法とフーガを頂点にまで高めました。忘れられたのち、メンデルスゾーンによってよみがえり、今もバロックの建築家であり続けています。"
         }
       ]
     }

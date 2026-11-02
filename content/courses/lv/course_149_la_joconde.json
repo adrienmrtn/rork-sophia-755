@@ -1,149 +1,149 @@
 {
   "id": "course_149_la_joconde",
-  "title": "Pourquoi la Joconde est-elle aussi connue ?",
+  "title": "Kāpēc Mona Liza ir tik slavena?",
   "subtitle": "1503",
   "subject": "art",
-  "subcategory": "Œuvres iconiques",
-  "description": "C'est le tableau le plus célèbre du monde. Pourtant, en 1503, son propre auteur avait mieux à faire que le portrait d'une épouse de marchand.",
+  "subcategory": "Ikoniski darbi",
+  "description": "Tā ir pasaulē slavenākā glezna. Tomēr 1503. gadā tās pašam autoram bija svarīgākas lietas par kāda tirgotāja sievas portretu.",
   "author": "dusan-nikolic",
   "hero": {
     "image": "la_joconde",
     "ratio": "16:9",
-    "hook": "Le tableau le plus regardé de la planète a peut-être été, pour Léonard, un travail secondaire."
+    "hook": "Pasaulē visvairāk skatītā glezna Leonardo acīs, iespējams, bija blakusdarbs."
   },
   "sections": [
     {
       "id": "course_149_la_joconde_intro",
-      "title": "Introduction",
+      "title": "Ievads",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Pour l'un des tableaux les plus célèbres du monde, on sait très peu de choses sûres sur *La Joconde*. Les historiens de l'art s'accordent sur l'essentiel : Léonard de Vinci la peint à Florence entre **1503 et 1506**. En **1517**, il l'emporte avec lui en France, et le panneau finit dans la collection du roi [[Fransuā I]]."
+          "text": "Lai gan *Mona Liza* ir viena no pasaulē slavenākajām gleznām, par to droši zināms ļoti maz. Mākslas vēsturnieki ir vienisprātis par galveno: Leonardo da Vinči to gleznoja Florencē laikā no **1503**. līdz **1506**. gadam. **1517**. gadā viņš aizved to līdzi uz Franciju, un panelis nonāk karaļa kolekcijā; šis karalis ir [[Fransuā I]]."
         },
         {
           "type": "paragraph",
-          "text": "Le vide historique s'est rempli de légendes. On parle du tableau comme d'une femme, « elle ». Son demi-sourire est dit mystérieux. Après le vol de **1911**, on doute même de son authenticité. Toutes ces histoires ont fait sa gloire, mais elles ont effacé son contexte. Or, à l'époque où Léonard la peint, cette œuvre n'avait peut-être aucune importance à ses yeux."
+          "text": "Vēsturiskais tukšums ir piepildījies ar leģendām. Par gleznu runā kā par sievieti, „viņu“. Tās pussmaidu dēvē par noslēpumainu. Pēc **1911**. gada zādzības rodas šaubas pat par tās autentiskumu. Visi šie stāsti ir veidojuši tās slavu, bet aizēnojuši kontekstu. Taču tolaik, kad Leonardo to gleznoja, šis darbs viņam, iespējams, nemaz nelikās svarīgs."
         }
       ]
     },
     {
       "id": "course_149_la_joconde_p1",
-      "title": "Qui est la Joconde ?",
+      "title": "Kas ir Mona Liza?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Les historiens de l'art admettent largement que le modèle est [[Liza Gerardīni]], épouse de **Francesco del Giocondo**, marchand et petit notable du gouvernement florentin. D'où le nom de « Joconde ». Cette identification repose sur la biographie de Léonard publiée par [[Džordžo Vazāri]] en **1550** puis en **1568**, dans ses *Vies des meilleurs peintres, sculpteurs et architectes*."
+          "text": "Mākslas vēsturnieki lielākoties uzskata, ka modelis ir [[Liza Gerardīni]], **Frančesko del Džokondo** sieva. Viņš bija tirgotājs un neliela mēroga Florences valdības ierēdnis. No tā cēlies nosaukums „Džokonda“. Šī identifikācija balstās uz Leonardo biogrāfiju, ko [[Džordžo Vazāri]] publicēja **1550**. un pēc tam **1568**. gadā savā grāmatā *Slavenāko gleznotāju, tēlnieku un arhitektu dzīvesstāsti*."
         },
         {
           "type": "image",
           "asset": "vasari_lives_of_the_artists_1568_title_page",
           "ratio": "3:4",
-          "caption": "Les Vies de Vasari, édition florentine de 1568 : le texte qui donne un nom au modèle."
+          "caption": "Vazāri *Dzīvesstāsti*, Florences izdevums 1568. gadā: teksts, kas devis modelim vārdu."
         },
         {
           "type": "paragraph",
-          "text": "Pourquoi Francesco commande-t-il ce portrait ? On l'ignore. Léonard s'y met au début de **1503**. La suite reste débattue : pour les historiens, le récit de Vasari tient de l'invention littéraire, celle d'un biographe qui comble les blancs avec une belle histoire. Au milieu de **1506**, Léonard quitte Florence pour Milan, en quête d'un meilleur emploi. Le portrait, inachevé, part avec lui."
+          "text": "Kāpēc Frančesko pasūta šo portretu? Nav zināms. Leonardo ķeras pie tā **1503**. gada sākumā. Turpinājums ir strīdīgs: vēsturnieki uzskata, ka Vazāri stāsts ir literāra izdoma, biogrāfa darbs, kas tukšumus aizpilda ar skaistu stāstu. **1506**. gada vidū Leonardo atstāj Florenci un dodas uz Milānu, meklējot labāku darbu. Nepabeigtais portrets aizceļo kopā ar viņu."
         },
         {
           "type": "funFact",
-          "text": "Selon Vasari, Léonard aurait engagé des musiciens et des bouffons pour distraire son modèle pendant les séances de pose. Les historiens y voient une invention du biographe, mais c'est elle qui a lancé le mythe du « sourire de la Joconde »."
+          "text": "Pēc Vazāri teiktā, Leonardo esot nolīdzis mūziķus un jokdarus, lai izklaidētu modeli pozēšanas laikā. Vēsturnieki to uzskata par biogrāfa izdomājumu, taču tieši tas aizsāka mītu par „Mona Lizas smaidu“."
         }
       ]
     },
     {
       "id": "course_149_la_joconde_p2",
-      "title": "Anghiari : une commande plus prestigieuse",
+      "title": "Angjāri: prestižāks pasūtījums",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En octobre **1503**, le gouvernement florentin engage Léonard pour peindre la [[Angjāri kauja]] au [[Palaco Vekjo]], le siège de la République de Florence. La peinture murale doit célébrer la victoire de Florence sur Milan en **1440**. À la Renaissance, une scène d'histoire vaut bien plus qu'un portrait. Avec les sujets religieux, mythologiques et allégoriques, elle passe pour la forme la plus haute de l'art."
+          "text": "**1503**. gada oktobrī Florences valdība nolīgst Leonardo, lai viņš uzgleznotu sienas gleznojumu. Tēma: [[Angjāri kauja]]. Vieta: [[Palaco Vekjo]], Florences Republikas mītne. Gleznojumam jāslavina Florences uzvara pār Milānu **1440**. gadā. Renesansē vēstures aina ir daudz vērtīgāka par portretu. Kopā ar reliģiskiem, mitoloģiskiem un alegoriskiem sižetiem tā tiek uzskatīta par augstāko mākslas formu."
         },
         {
           "type": "image",
           "asset": "rubens_copy_battle_of_anghiari_louvre_drawing",
           "ratio": "16:9",
-          "caption": "La copie par Rubens de la mêlée centrale : seule trace du grand décor inachevé du Palazzo Vecchio."
+          "caption": "Rubensa kopija ar centrālo kaujas jūkli: vienīgā liecība par lielo nepabeigto Palaco Vekjo dekoru."
         },
         {
           "type": "paragraph",
-          "text": "Face à une grande commande publique, le portrait privé de l'épouse d'un petit fonctionnaire pèse peu. Dès décembre **1503**, Léonard consacre de plus en plus de temps à préparer la grande composition. Prestige et meilleure paie : la Joconde attend. À la fin de son second séjour florentin, le portrait n'est pas terminé. La *Bataille d'Anghiari* non plus : il n'en reste que des esquisses préparatoires et leurs copies."
+          "text": "Salīdzinājumā ar lielu publisku pasūtījumu nelielas amatpersonas sievas privātais portrets maz ko nozīmē. Sākot ar **1503**. gada decembri, Leonardo arvien vairāk laika velta lielās kompozīcijas sagatavošanai. Prestižs un labāks atalgojums: Mona Liza var pagaidīt. Otrās uzturēšanās Florencē beigās portrets nav pabeigts. *Angjāri kauja* arī ne: no tās saglabājušās tikai sagatavošanas skices un to kopijas."
         },
         {
           "type": "funFact",
-          "text": "Il est possible que seul le paysage de fond soit resté inachevé quand Léonard part pour Milan en 1506."
+          "text": "Iespējams, ka, Leonardo 1506. gadā dodoties uz Milānu, nepabeigta bija tikai fona ainava."
         }
       ]
     },
     {
       "id": "course_149_la_joconde_p3",
-      "title": "La fabrique d'une icône",
+      "title": "Ikonas tapšana",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Léonard meurt le **2 mai 1519** à Amboise, en France. *La Joconde* n'arrive jamais chez les Giocondo. Après la Révolution française, la collection royale devient publique et le tableau entre au **Louvre**. Depuis le début du XIXe siècle, son sourire est décrit de mille façons, de divin à sensuel."
+          "text": "Leonardo mirst **1519. gada 2. maijā** Amboazā, Francijā. *Mona Liza* nekad nenonāk pie Džokondo ģimenes. Pēc Franču revolūcijas karaliskā kolekcija kļūst publiska, un glezna nonāk **Luvrā**. Kopš deviņpadsmitā gadsimta sākuma tās smaidu apraksta tūkstoš veidos, no dievišķa līdz juteklīgam."
         },
         {
           "type": "image",
           "asset": "mona_lisa_stolen_1911_newspaper_headline",
           "ratio": "4:3",
-          "caption": "La une de l'Excelsior en janvier 1914 : le retour de La Joconde après le vol de 1911."
+          "caption": "Laikraksta Excelsior titullapa 1914. gada janvārī: Mona Lizas atgriešanās pēc 1911. gada zādzības."
         },
         {
           "type": "paragraph",
-          "text": "Le tournant est le vol du tableau au musée, en **1911**. Les journaux transforment Mona Lisa en sensation mondiale. Depuis, la presse populaire et les romans remettent régulièrement en cause l'authenticité de l'œuvre et l'identité du modèle, sans aucun fondement dans une vraie analyse historique. Le tableau est devenu le centre d'histoires toujours plus nombreuses, que l'on raconte encore aujourd'hui."
+          "text": "Pagrieziena punkts ir gleznas nozagšana no muzeja **1911**. gadā. Avīzes padara Mona Lizu par pasaules mēroga sensāciju. Kopš tā laika bulvāra prese un romāni regulāri apšauba darba autentiskumu un modeļa identitāti, bez jebkāda pamata patiesā vēstures analīzē. Glezna ir kļuvusi par arvien jaunu stāstu centru, ko cilvēki stāsta vēl šodien."
         }
       ]
     },
     {
       "id": "course_149_la_joconde_p4",
-      "title": "Un tableau qui a dépassé son auteur",
+      "title": "Glezna, kas pārsniegusi savu autoru",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Plus de **500 ans** après le début du portrait, Lisa del Giocondo attire plus que jamais. Placé sous verre blindé au Louvre, le tableau est coupé de son contexte historique. Libéré de lui, il a acquis le statut d'icône universelle. Ce statut a un prix : à l'époque moderne, plus aucune restauration n'est engagée."
+          "text": "Vairāk nekā **500 gadu** pēc portreta sākuma Liza del Džokondo pievelk vairāk nekā jebkad. Novietota zem bruņota stikla Luvrā, glezna ir atrauta no sava vēsturiskā konteksta. Atbrīvojusies no tā, tā ieguvusi universālas ikonas statusu. Šim statusam ir cena: jaunajos laikos vairs netiek uzsākta neviena restaurācija."
         },
         {
           "type": "timeline",
           "events": [
             {
               "date": "1503",
-              "title": "Début du portrait",
-              "detail": "Léonard commence le portrait de Lisa Gherardini à Florence."
+              "title": "Portreta sākums",
+              "detail": "Leonardo Florencē sāk Lizas Gerardīni portretu."
             },
             {
-              "date": "oct. 1503",
-              "title": "La commande d'Anghiari",
-              "detail": "Florence lui confie une grande peinture murale pour le Palazzo Vecchio."
+              "date": "1503. gada oktobris",
+              "title": "Angjāri pasūtījums",
+              "detail": "Florence uztic viņam lielu sienas gleznojumu Palaco Vekjo."
             },
             {
               "date": "1506",
-              "title": "Départ pour Milan",
-              "detail": "Léonard quitte Florence, le portrait inachevé sous le bras."
+              "title": "Aizbraukšana uz Milānu",
+              "detail": "Leonardo atstāj Florenci ar nepabeigto portretu zem rokas."
             },
             {
               "date": "1519",
-              "title": "Mort de Léonard",
-              "detail": "À Amboise, le 2 mai. Le tableau reste en France."
+              "title": "Leonardo nāve",
+              "detail": "Amboazā, 2. maijā. Glezna paliek Francijā."
             },
             {
               "date": "1911",
-              "title": "Le vol",
-              "detail": "La presse fait de Mona Lisa une sensation mondiale."
+              "title": "Zādzība",
+              "detail": "Prese padara Mona Lizu par pasaules mēroga sensāciju."
             }
           ]
         },
         {
           "type": "paragraph",
-          "text": "Retirer le [[laka]] jauni par les siècles, cette couche protectrice de la peinture à l'huile, risquerait d'abîmer l'œuvre. Et même si la restauration réussissait, on craint que *La Joconde* perde son pouvoir de fascination. La technique et les couleurs d'origine de Léonard comptent moins que l'image. Devenu réceptacle d'innombrables histoires, le tableau a dépassé son auteur et l'histoire de l'art."
+          "text": "Gadsimtu gaitā pageltējusī [[laka]] ir eļļas gleznas aizsargkārta. Tās noņemšana varētu sabojāt darbu. Un pat ja restaurācija izdotos, pastāv bažas, ka *Mona Liza* zaudētu savu valdzinājumu. Leonardo sākotnējā tehnika un krāsas ir mazāk svarīgas par tēlu. Kļuvusi par neskaitāmu stāstu trauku, glezna ir pārsniegusi savu autoru un mākslas vēsturi."
         },
         {
           "type": "takeaway",
-          "text": "Délaissée en 1503 pour une commande plus prestigieuse, *La Joconde* doit son statut d'icône à cinq siècles de légendes et à un vol, bien plus qu'au rang que lui donnait Léonard."
+          "text": "Pamesta 1503. gadā prestižāka pasūtījuma dēļ, *Mona Liza* savu ikonas statusu ir parādā piecu gadsimtu leģendām un zādzībai, daudz vairāk nekā rangam, ko tai piešķīra Leonardo."
         }
       ]
     }

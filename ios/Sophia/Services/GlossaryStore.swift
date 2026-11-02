@@ -245,6 +245,30 @@ enum GlossaryClassification: String, CaseIterable, Sendable {
             case .personnage: "Isik"
             case .lieuInstitution: "Koht"
             }
+        case .lithuanian:
+            switch self {
+            case .referenceHistorique: "Nuoroda"
+            case .concept: "Sąvoka"
+            case .evenementConnexe: "Įvykis"
+            case .personnage: "Asmuo"
+            case .lieuInstitution: "Vieta"
+            }
+        case .latvian:
+            switch self {
+            case .referenceHistorique: "Atsauce"
+            case .concept: "Jēdziens"
+            case .evenementConnexe: "Notikums"
+            case .personnage: "Persona"
+            case .lieuInstitution: "Vieta"
+            }
+        case .japanese:
+            switch self {
+            case .referenceHistorique: "参照"
+            case .concept: "概念"
+            case .evenementConnexe: "出来事"
+            case .personnage: "人物"
+            case .lieuInstitution: "場所"
+            }
         }
     }
     var pastel: Color {
