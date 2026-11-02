@@ -36,6 +36,9 @@ enum LegalDocumentContent {
         case .hebrew: termsHebrew
         case .finnish: termsFinnish
         case .estonian: termsEstonian
+        case .lithuanian: termsLithuanian
+        case .latvian: termsLatvian
+        case .japanese: termsJapanese
         }
     }
 
@@ -68,6 +71,9 @@ enum LegalDocumentContent {
         case .hebrew: privacyHebrew
         case .finnish: privacyFinnish
         case .estonian: privacyEstonian
+        case .lithuanian: privacyLithuanian
+        case .latvian: privacyLatvian
+        case .japanese: privacyJapanese
         }
     }
 
@@ -860,5 +866,95 @@ private static let privacyItalian: [LegalSection] = [
         LegalSection(id: "8", title: "8. Kasutaja õigused", body: "Isikuandmete kaitse üldmääruse (IKÜM) ja kohaldatavate seaduste kohaselt on sul järgmised õigused:\n\n- Õigus tutvuda oma andmetega\n- Õigus andmete parandamisele\n- Õigus andmete kustutamisele (lähtestamine seadetes)\n- Õigus andmete ülekandmisele\n- Õigus esitada vastuväiteid\n\nNende õiguste kasutamiseks võta meiega ühendust aadressil, mis on märgitud meie App Store'i lehel."),
         LegalSection(id: "9", title: "9. Alaealiste kaitse", body: "Sophia on hariv rakendus, mis on mõeldud igas vanuses kasutajatele. Me ei kogu teadlikult isikuandmeid alla 16-aastastelt alaealistelt. Rakendus ei sisalda sobimatut sisu."),
         LegalSection(id: "10", title: "10. Muudatused", body: "Jätame endale õiguse seda poliitikat igal ajal muuta. Kõikidest muudatustest teavitatakse rakenduse värskenduse kaudu.\n\nViimati värskendatud: september 2026"),
+    ]
+
+    // MARK: - Terms (LT)
+
+    private static let termsLithuanian: [LegalSection] = [
+        LegalSection(id: "1", title: "1. Sąlygų priėmimas", body: "Atsisiųsdamas, įdiegdamas ar naudodamas Sophia programėlę (toliau – Programėlė), sutinki laikytis šių Naudojimo sąlygų. Jei su šiomis sąlygomis nesutinki, Programėlės nenaudok."),
+        LegalSection(id: "2", title: "2. Paslaugos aprašymas", body: "Sophia yra mokomoji mobilioji programėlė, plečianti bendrąsias žinias: joje rasi kursų, viktorinų ir interaktyvaus turinio. Programėlė prieinama iOS įrenginiams, joje gali būti nemokamo turinio ir Premium prenumeratų."),
+        LegalSection(id: "3", title: "3. Paskyra ir naudojimas", body: "Paskyrą (per Apple arba Google) siūloma susikurti, kad tavo pažanga būtų išsaugota ir sinchronizuojama tarp tavo įrenginių. Nauji naudotojai prisijungia pirmosios pažinties metu; esami naudotojai paskyrą gali susikurti bet kada nustatymuose. Be paskyros tavo pažangos duomenys laikomi tik tavo įrenginyje, o iš naujo įdiegus Programėlę jie gali būti prarasti. Savo paskyrą gali ištrinti bet kada nustatymuose."),
+        LegalSection(id: "4", title: "4. Prenumeratos ir pirkiniai", body: "Sophia siūlo Premium prenumeratas (mėnesinę ir metinę) per Apple „App Store“ parduotuvę. Kainos rodomos Programėlėje ir gali skirtis priklausomai nuo tavo šalies. Mokestis nuskaitomas nuo tavo Apple ID paskyros, kai patvirtini pirkinį. Prenumerata atnaujinama automatiškai, nebent automatinis atnaujinimas išjungiamas likus bent 24 valandoms iki dabartinio laikotarpio pabaigos. Prenumeratas gali tvarkyti ir atšaukti savo „App Store“ paskyros nustatymuose."),
+        LegalSection(id: "5", title: "5. Nemokamas bandomasis laikotarpis", body: "Naujiems naudotojams gali būti siūlomas nemokamas bandomasis laikotarpis. Jam pasibaigus, prenumerata automatiškai tampa mokama, nebent ją anksčiau atšauki. Nepanaudota nemokamo bandomojo laikotarpio dalis prarandama, kai įsigyji prenumeratą."),
+        LegalSection(id: "6", title: "6. Intelektinė nuosavybė", body: "Visas Programėlės turinys (tekstai, iliustracijos, dizainas, logotipas, kursai, viktorinos) saugomas autorių teisių ir išlieka išimtine Sophia nuosavybe. Bet koks neleistinas atgaminimas, platinimas ar naudojimas griežtai draudžiamas."),
+        LegalSection(id: "7", title: "7. Atsakomybės apribojimas", body: "Programėlėje pateikiamas turinys skirtas mokymuisi ir informavimui. Sophia negarantuoja pateiktos informacijos tikslumo, išsamumo ar aktualumo. Programėlė teikiama „tokia, kokia yra“, be jokių garantijų."),
+        LegalSection(id: "8", title: "8. Sąlygų keitimas", body: "Sophia pasilieka teisę bet kada keisti šias Naudojimo sąlygas. Apie esminius pakeitimus naudotojai bus informuojami. Jei Programėlę toliau naudoji ir po pakeitimų, laikoma, kad naujoms sąlygoms pritari."),
+        LegalSection(id: "9", title: "9. Taikoma teisė", body: "Šioms Naudojimo sąlygoms taikoma Prancūzijos teisė. Bet kuris ginčas dėl šių sąlygų aiškinimo ar vykdymo bus perduotas nagrinėti kompetentingiems teismams."),
+        LegalSection(id: "10", title: "10. Kontaktai", body: "Jei turi klausimų dėl šių Naudojimo sąlygų, gali susisiekti su mumis per „App Store“ parduotuvę arba el. paštu adresu, nurodytu mūsų „App Store“ puslapyje."),
+    ]
+
+    // MARK: - Privacy (LT)
+
+    private static let privacyLithuanian: [LegalSection] = [
+        LegalSection(id: "1", title: "1. Įvadas", body: "Šioje Privatumo politikoje aprašoma, kaip Sophia (toliau – mes, mūsų arba Programėlė) renka, naudoja ir saugo tavo asmeninę informaciją. Įsipareigojame saugoti tavo privatumą ir tavo duomenis tvarkyti skaidriai."),
+        LegalSection(id: "2", title: "2. Renkami duomenys", body: "Sophia kuriama laikantis duomenų kiekio mažinimo principo. Programėlė tavo įrenginyje saugo:\n\n- tavo kursų ir viktorinų pažangą\n- tavo pasirinkimus (interesus, tikslus)\n- tavo dienų seriją (iš eilės einančias naudojimosi dienas)\n- tavo mėgstamus kursus\n\nŠie vietiniai duomenys į mūsų serverius neperduodami.\n\nJei atsiliepimą mums siunti per nustatymų formą, tavo žinutė ir, jei jį nurodai, el. pašto adresas perduodami „Formspree“, kad galėtume tau atsakyti. Techninė informacija (programėlės versija, kalba, įrenginys) pridedama automatiškai."),
+        LegalSection(id: "3", title: "3. Prenumeratos duomenys", body: "Jei užsisakai Premium prenumeratą, sandorį visiškai tvarko Apple per „App Store“ parduotuvę. Mes neturime prieigos prie tavo mokėjimo informacijos (kortelės numerio, atsiskaitymo adreso). Per „RevenueCat“, mūsų prenumeratų valdymo partnerį, gauname tik tavo prenumeratos būsenos patvirtinimą."),
+        LegalSection(id: "4", title: "4. RevenueCat", body: "Programėlės viduje pirktoms prenumeratoms valdyti naudojame „RevenueCat“. Tavo prenumeratos būsenai patikrinti „RevenueCat“ gali rinkti anoniminį įrenginio identifikatorių. Jokie asmenį identifikuojantys duomenys nepaskelbiami. Daugiau informacijos rasi „RevenueCat“ privatumo politikoje jų svetainėje."),
+        LegalSection(id: "5", title: "5. „Apple Analytics“ duomenys", body: "Programėlė taip pat gali naudotis anoniminiais Apple teikiamais statistikos duomenimis („App Analytics“). Šie duomenys yra sudėtiniai ir neleidžia tavęs asmeniškai identifikuoti. Dalijimąsi analitika gali išjungti savo „iPhone“ nustatymuose (Nustatymai > Privatumas ir sauga > Analizė ir patobulinimai)."),
+        LegalSection(id: "6", title: "6. Duomenų saugojimas", body: "Tavo pažangos duomenys saugomi vietoje, tavo įrenginyje (UserDefaults). Jei susikuri paskyrą (per Apple arba Google), jie taip pat saugiai išsaugomi mūsų „Supabase“ serveriuose (Europos Sąjungoje), kad galėtum sinchronizuoti įrenginius. Pašalinus Programėlę, vietiniai duomenys ištrinami; ištrynus paskyrą, su ja susiję duomenys serveryje ištrinami negrįžtamai."),
+        LegalSection(id: "7", title: "7. Duomenų dalijimasis", body: "Mes neparduodame, neišnuomojame ir su trečiosiomis šalimis nesidaliname jokiais asmens duomenimis komerciniais ar reklamos tikslais. Duomenys perduodami tik: Apple ir „RevenueCat“ (prenumeratos), „Formspree“ (atsiliepimai, kuriuos naudotojai savanoriškai siunčia per nustatymus)."),
+        LegalSection(id: "8", title: "8. Naudotojų teisės", body: "Pagal Bendrąjį duomenų apsaugos reglamentą (BDAR) ir taikomus teisės aktus turi šias teises:\n\n- teisę susipažinti su savo duomenimis\n- teisę reikalauti ištaisyti duomenis\n- teisę reikalauti ištrinti duomenis (atstatymas nustatymuose)\n- teisę į duomenų perkeliamumą\n- teisę nesutikti, kad duomenys būtų tvarkomi\n\nŠioms teisėms įgyvendinti susisiek su mumis adresu, nurodytu mūsų „App Store“ puslapyje."),
+        LegalSection(id: "9", title: "9. Nepilnamečių apsauga", body: "Sophia yra mokomoji programėlė, prieinama visų amžiaus grupių žmonėms. Sąmoningai nerenkame jokių asmens duomenų iš jaunesnių nei 16 metų nepilnamečių. Programėlėje nėra netinkamo turinio."),
+        LegalSection(id: "10", title: "10. Pakeitimai", body: "Pasiliekame teisę bet kada keisti šią politiką. Apie bet kokį pakeitimą pranešime Programėlės atnaujinimu.\n\nPaskutinį kartą atnaujinta: 2026 m. rugsėjis"),
+    ]
+
+    // MARK: - Terms (LV)
+
+    private static let termsLatvian: [LegalSection] = [
+        LegalSection(id: "1", title: "1. Noteikumu pieņemšana", body: "Lejupielādējot, instalējot vai izmantojot lietotni Sophia (turpmāk tekstā „Lietotne“), lietotājs piekrīt būt saistīts ar šiem Lietošanas noteikumiem („Noteikumi“). Ja lietotājs šiem noteikumiem nepiekrīt, lūdzam Lietotni neizmantot."),
+        LegalSection(id: "2", title: "2. Pakalpojuma apraksts", body: "Sophia ir izglītojoša mobilā lietotne vispārējām zināšanām, kas piedāvā kursus, viktorīnas un interaktīvu saturu. Lietotne ir pieejama operētājsistēmai iOS, un tajā var tikt piedāvāts gan bezmaksas saturs, gan Premium abonementi."),
+        LegalSection(id: "3", title: "3. Konts un lietošana", body: "Konta izveide (ar Apple vai Google) tiek piedāvāta, lai saglabātu lietotāja progresu un sinhronizētu to starp viņa ierīcēm. Jaunie lietotāji pierakstās pirmās palaišanas laikā; esošie lietotāji kontu var izveidot jebkurā laikā iestatījumos. Bez konta progresa dati tiek glabāti lokāli ierīcē, un Lietotnes pārinstalēšana var novest pie to zaudēšanas. Lietotājs var dzēst savu kontu jebkurā laikā iestatījumos."),
+        LegalSection(id: "4", title: "4. Abonementi un pirkumi", body: "Sophia piedāvā Premium abonementus (mēneša un gada) pakalpojumā App Store. Cenas tiek rādītas Lietotnē un var atšķirties atkarībā no valsts. Maksa tiek ieturēta no lietotāja Apple ID konta, apstiprinot pirkumu. Abonements tiek atjaunots automātiski, ja automātiskā atjaunošana nav izslēgta vismaz 24 stundas pirms kārtējā perioda beigām. Abonementus var pārvaldīt un atcelt sava App Store konta iestatījumos."),
+        LegalSection(id: "5", title: "5. Bezmaksas izmēģinājums", body: "Jaunajiem lietotājiem var tikt piedāvāts bezmaksas izmēģinājums. Izmēģinājuma perioda beigās abonements automātiski kļūs par maksas abonementu, ja tas iepriekš netiks atcelts. Neizmantotā bezmaksas izmēģinājuma perioda daļa tiek zaudēta, iegādājoties abonementu."),
+        LegalSection(id: "6", title: "6. Intelektuālais īpašums", body: "Visu Lietotnes saturu (tekstus, ilustrācijas, dizainu, logotipu, kursus, viktorīnas) aizsargā autortiesības, un tas paliek Sophia ekskluzīvā īpašumā. Jebkāda neatļauta pavairošana, izplatīšana vai izmantošana ir stingri aizliegta."),
+        LegalSection(id: "7", title: "7. Atbildības ierobežojums", body: "Lietotnē piedāvātais saturs tiek sniegts izglītojošiem un informatīviem nolūkiem. Sophia negarantē sniegtās informācijas precizitāti, pilnīgumu vai aktualitāti. Lietotne tiek sniegta „tāda, kāda tā ir“, bez jebkāda veida garantijām."),
+        LegalSection(id: "8", title: "8. Noteikumu grozīšana", body: "Sophia patur tiesības jebkurā laikā grozīt šos Noteikumus. Lietotāji tiks informēti par būtiskiem grozījumiem. Ja Lietotne tiek izmantota arī pēc grozījumiem, tas nozīmē jauno noteikumu pieņemšanu."),
+        LegalSection(id: "9", title: "9. Piemērojamie tiesību akti", body: "Uz šiem Noteikumiem attiecas Francijas tiesību akti. Visi strīdi par šo Noteikumu interpretāciju vai izpildi tiks nodoti kompetentajām tiesām."),
+        LegalSection(id: "10", title: "10. Kontakti", body: "Ar jautājumiem par šiem Noteikumiem var sazināties ar mums, izmantojot App Store vai e-pastu uz adresi, kas norādīta mūsu App Store lapā."),
+    ]
+
+    // MARK: - Privacy (LV)
+
+    private static let privacyLatvian: [LegalSection] = [
+        LegalSection(id: "1", title: "1. Ievads", body: "Šī Privātuma politika apraksta, kā Sophia (turpmāk „mēs“, „mūsu“ vai „Lietotne“) vāc, izmanto un aizsargā lietotāja personas informāciju. Mēs apņemamies aizsargāt privātumu un apstrādāt datus pārredzami."),
+        LegalSection(id: "2", title: "2. Vāktie dati", body: "Sophia ir izstrādāta pēc datu minimizēšanas principa. Lietotne ierīcē glabā:\n\n- Progresu kursos un viktorīnās\n- Preferences (intereses, mērķi)\n- Sēriju (secīgas lietošanas dienas)\n- Izlases kursus\n\nŠie lokālie dati netiek sūtīti uz mūsu serveriem.\n\nJa lietotājs nosūta atsauksmi, izmantojot iestatījumu veidlapu, ziņojums un, ja lietotājs to norāda, e-pasta adrese tiek nosūtīti uzņēmumam Formspree, lai mēs varētu atbildēt. Atsauksmei automātiski tiek pievienota tehniska informācija (lietotnes versija, valoda, ierīce)."),
+        LegalSection(id: "3", title: "3. Abonementa dati", body: "Ja lietotājs noformē Premium abonementu, darījumu pilnībā apstrādā Apple, izmantojot App Store. Mums nav piekļuves maksājumu informācijai (kartes numuram, norēķinu adresei). Mēs saņemam tikai apstiprinājumu par abonementa statusu, izmantojot RevenueCat, mūsu abonementu pārvaldības partneri."),
+        LegalSection(id: "4", title: "4. RevenueCat", body: "Mēs izmantojam RevenueCat lietotnes iekšējo abonementu pārvaldībai. RevenueCat var vākt anonīmu ierīces identifikatoru, lai pārbaudītu abonementa statusu. Netiek kopīgoti nekādi personu identificējoši dati. Plašāka informācija ir RevenueCat privātuma politikā to tīmekļa vietnē."),
+        LegalSection(id: "5", title: "5. Apple Analytics dati", body: "Lietotne var izmantot arī Apple sniegto anonīmo statistiku (App Analytics). Šie dati ir apkopoti un neļauj identificēt lietotāju. Analītikas datu kopīgošanu var izslēgt iPhone iestatījumos (Iestatījumi > Privātums un drošība > Analītika un uzlabojumi)."),
+        LegalSection(id: "6", title: "6. Datu glabāšana", body: "Progresa dati tiek glabāti lokāli ierīcē (UserDefaults). Ja lietotājs izveido kontu (Apple vai Google), tie tiek droši saglabāti arī mūsu Supabase serveros (kas atrodas Eiropas Savienībā), lai varētu sinhronizēt datus starp ierīcēm. Lietotnes atinstalēšana izdzēš lokālos datus; konta dzēšana neatgriezeniski izdzēš ar to saistītos datus serverī."),
+        LegalSection(id: "7", title: "7. Datu kopīgošana", body: "Mēs nepārdodam, neiznomājam un nekopīgojam personas datus ar trešajām personām komerciāliem vai reklāmas nolūkiem. Nosūtītie dati ir ierobežoti ar: Apple un RevenueCat (abonementi), Formspree (lietotāju atsauksmes, kas iestatījumos tiek sūtītas brīvprātīgi)."),
+        LegalSection(id: "8", title: "8. Lietotāju tiesības", body: "Saskaņā ar Vispārīgo datu aizsardzības regulu (VDAR) un piemērojamajiem tiesību aktiem lietotājam ir šādas tiesības:\n\n- Piekļuves tiesības saviem datiem\n- Tiesības labot datus\n- Tiesības uz dzēšanu (atiestatīšana iestatījumos)\n- Tiesības uz datu pārnesamību\n- Tiesības iebilst\n\nLai šīs tiesības izmantotu, jāsazinās ar mums, izmantojot adresi, kas norādīta mūsu App Store lapā."),
+        LegalSection(id: "9", title: "9. Nepilngadīgo aizsardzība", body: "Sophia ir izglītojoša lietotne, kas pieejama jebkura vecuma cilvēkiem. Mēs apzināti nevācam nekādus personas datus no nepilngadīgajiem, kas jaunāki par 16 gadiem. Lietotnē nav nepiemērota satura."),
+        LegalSection(id: "10", title: "10. Grozījumi", body: "Mēs paturam tiesības jebkurā laikā grozīt šo politiku. Par jebkuru grozījumu paziņosim, atjauninot Lietotni.\n\nPēdējo reizi atjaunināts: 2026. gada septembris"),
+    ]
+
+    // MARK: - Terms (JA)
+
+    private static let termsJapanese: [LegalSection] = [
+        LegalSection(id: "1", title: "1. 利用条件への同意について", body: "Sophiaアプリ（以下「本アプリ」）をダウンロード、インストール、または利用することにより、利用者は本利用規約（以下「本規約」）に拘束されることに同意したものとみなされます。本規約に同意しない場合は、本アプリを利用しないでください。"),
+        LegalSection(id: "2", title: "2. サービスの内容", body: "Sophiaは、教養をテーマにしたモバイル学習アプリで、コース、クイズ、インタラクティブなコンテンツを提供します。本アプリはiOSで利用でき、無料のコンテンツのほか、プレミアムのサブスクリプションを提供する場合があります。"),
+        LegalSection(id: "3", title: "3. アカウントと利用", body: "学習の進み具合を保存し、複数の端末間で同期できるよう、アカウント（AppleまたはGoogle経由）を作成できます。新規の利用者は初回のご案内の際にログインします。すでに本アプリを利用中の方は、設定の画面からいつでもアカウントを作成できます。アカウントを作成していない場合、学習の進み具合などのデータはお使いの端末内にのみ保存され、本アプリを再インストールすると失われることがあります。アカウントは、設定の画面からいつでも削除できます。"),
+        LegalSection(id: "4", title: "4. サブスクリプションと購入", body: "Sophiaは、AppleのApp Storeを通じて、プレミアムのサブスクリプション（月額プランと年額プラン）を提供します。料金は本アプリ内に表示され、お住まいの国によって異なる場合があります。購入を確定すると、Apple IDアカウントに料金が請求されます。サブスクリプションは、現在の期間が終了する24時間前までに自動更新をオフにしない限り、自動的に更新されます。サブスクリプションの管理と解約は、App Storeのアカウント設定から行えます。"),
+        LegalSection(id: "5", title: "5. 無料トライアル", body: "新規の利用者には、無料トライアルが提供される場合があります。トライアル期間が終了すると、事前に解約しない限り、サブスクリプションは自動的に有料に切り替わります。無料トライアル期間の未使用分は、サブスクリプションを購入した時点で失効します。"),
+        LegalSection(id: "6", title: "6. 知的財産権について", body: "本アプリに含まれるすべてのコンテンツ（テキスト、イラスト、デザイン、ロゴ、コース、クイズ）は、著作権法によって保護されており、その権利はSophiaに独占的に帰属します。許可のない複製、配布、利用は固く禁じます。"),
+        LegalSection(id: "7", title: "7. 責任の制限と免責について", body: "本アプリで提供するコンテンツは、教育および情報提供を目的としたものです。Sophiaは、掲載されている情報の正確性、網羅性、最新性について保証しません。本アプリは「現状有姿」で提供されるものであり、いかなる種類の保証も伴いません。"),
+        LegalSection(id: "8", title: "8. 利用規約の変更について", body: "Sophiaは、本規約をいつでも変更する権利を有します。重要な変更については、利用者にお知らせします。本規約が変更された後も本アプリを引き続き利用した場合は、新しい規約に同意したものとみなします。"),
+        LegalSection(id: "9", title: "9. 準拠法", body: "本規約は、フランス法に準拠するものとします。本規約の解釈または履行に関して生じた紛争は、すべて、管轄権を有する裁判所に委ねられます。"),
+        LegalSection(id: "10", title: "10. お問い合わせ", body: "本規約に関するご質問は、App Storeを通じて、またはApp Storeのページに記載のメールアドレスまでお問い合わせください。"),
+    ]
+
+    // MARK: - Privacy (JA)
+
+    private static let privacyJapanese: [LegalSection] = [
+        LegalSection(id: "1", title: "1. はじめに", body: "本プライバシーポリシーは、Sophia（以下「当社」または「本アプリ」）が利用者の個人情報をどのように収集、利用、保護するかを説明するものです。当社は、利用者のプライバシーを守り、データを透明性のある方法で取り扱うことをお約束します。"),
+        LegalSection(id: "2", title: "2. 収集するデータ", body: "Sophiaは、データ最小化の原則に基づいて設計されています。本アプリは、お使いの端末に次の情報を保存します。\n\n- コースとクイズの学習の進み具合\n- 設定内容（興味のあるテーマ、目標）\n- 連続記録（連続して利用した日数）\n- お気に入りのコース\n\nこれらの端末内のデータが、当社のサーバーに送信されることはありません。\n\n設定のフォームからご意見を送信された場合、メッセージと、入力された場合はメールアドレスが、返信のためにFormspreeへ送信されます。技術情報（アプリのバージョン、言語、端末）も自動的に添付されます。"),
+        LegalSection(id: "3", title: "3. サブスクリプションに関するデータ", body: "プレミアムのサブスクリプションに登録された場合、取引はすべてApp Storeを通じてAppleが処理します。当社は、カード番号や請求先住所といった支払い情報にアクセスできません。当社が受け取るのは、サブスクリプション管理のパートナーであるRevenueCatを通じた、サブスクリプションの状態の確認結果のみです。"),
+        LegalSection(id: "4", title: "4. RevenueCat", body: "当社は、アプリ内のサブスクリプションを管理するためにRevenueCatを利用しています。RevenueCatは、サブスクリプションの状態を確認するために、端末の匿名の識別子を収集することがあります。個人を特定できる情報は共有されません。詳しくは、RevenueCatのウェブサイトにあるプライバシーポリシーをご覧ください。"),
+        LegalSection(id: "5", title: "5. Apple Analyticsのデータ", body: "本アプリは、Appleが提供する匿名の統計情報（App Analytics）を利用する場合があります。これらのデータは集計されており、利用者個人を特定することはできません。分析データの共有は、iPhoneの設定（設定＞プライバシーとセキュリティ＞解析および改善）でオフにできます。"),
+        LegalSection(id: "6", title: "6. データの保存", body: "学習の進み具合のデータは、お使いの端末内（UserDefaults）に保存されます。アカウント（AppleまたはGoogle）を作成した場合は、端末間で同期できるよう、欧州連合内でホスティングされている当社のSupabaseサーバーにも安全に保存されます。本アプリをアンインストールすると端末内のデータは削除され、アカウントを削除すると、サーバー上の関連データは完全に消去されます。"),
+        LegalSection(id: "7", title: "7. データの共有", body: "当社は、商業目的や広告目的で、個人データを第三者に販売、貸与、共有することはありません。データの送信先は、AppleとRevenueCat（サブスクリプション）、およびFormspree（設定から利用者が自らの意思で送信するご意見）に限られます。"),
+        LegalSection(id: "8", title: "8. 利用者が持つ権利について", body: "一般データ保護規則（GDPR）および適用される法令に基づき、利用者には次の権利があります。\n\n- データへのアクセス権\n- 訂正を求める権利\n- 消去を求める権利（設定でのリセット）\n- データポータビリティの権利\n- 異議を申し立てる権利\n\nこれらの権利を行使するには、App Storeのページに記載の連絡先までご連絡ください。"),
+        LegalSection(id: "9", title: "9. 未成年者の保護", body: "Sophiaは、すべての年齢の方が使える学習アプリです。当社は、16歳未満の未成年者の個人データを、知りながら収集することはありません。本アプリには、不適切なコンテンツは含まれていません。"),
+        LegalSection(id: "10", title: "10. 変更", body: "当社は、本ポリシーをいつでも変更する権利を有します。変更があった場合は、本アプリのアップデートを通じて利用者にお知らせします。\n\n最終更新：2026年9月"),
     ]
 }
