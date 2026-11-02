@@ -122,10 +122,14 @@ ASC_LOCALE: dict[str, str | None] = {
     "el": "el",
     "he": "he",
     "ar": "ar-SA",
+    "ja": "ja",
     # Not offered by App Store Connect. The app speaks them; the store does not.
     "bg": None,
     "sr": None,
     "et": None,
+    # Lithuanian and Latvian are not among the locales App Store Connect offers either.
+    "lt": None,
+    "lv": None,
 }
 
 #: Regional variants that take a copy of their base locale, not a translation.
