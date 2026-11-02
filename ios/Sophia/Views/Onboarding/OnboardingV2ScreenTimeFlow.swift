@@ -431,14 +431,12 @@ struct OnboardingV2Transform: View {
     ]
 
     private var words: [String] {
-        languageManager.text("onboardingV2.transform.text")
-            .split(separator: " ")
-            .map(String.init)
+        TextSegmentation.animationWords(languageManager.text("onboardingV2.transform.text"), keepLastWhole: true)
     }
 
     private var swapWords: [String] {
         languageManager.text("onboardingV2.transform.words")
-            .split(separator: ",")
+            .split(whereSeparator: { $0 == "," || $0 == "、" })
             .map { $0.trimmingCharacters(in: .whitespaces) }
             .filter { !$0.isEmpty }
     }
@@ -447,7 +445,7 @@ struct OnboardingV2Transform: View {
         ZStack {
             OV2.bg.ignoresSafeArea()
 
-            OV2FlowLayout(spacing: 7, lineSpacing: 10) {
+            OV2FlowLayout(spacing: languageManager.current == .japanese ? 0 : 7, lineSpacing: 10) {
                 ForEach(Array(words.enumerated()), id: \.offset) { i, word in
                     if i == words.count - 1 {
                         swapCell(fallback: word)

@@ -519,7 +519,8 @@ private struct CourseInlineText: View {
                 chunk.append(text[index])
                 index = text.index(after: index)
             }
-            tokens.append(chunk)
+            // Japanese has no spaces: cut where a line may break, or the whole sentence is one block.
+            tokens.append(contentsOf: TextSegmentation.breakableChunks(chunk))
         }
         return tokens
     }
