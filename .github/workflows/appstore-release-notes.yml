@@ -1,10 +1,10 @@
-# Promotional Text and What's New, and nothing else, from the Actions tab.
+# Promotional Text, What's New and Description, and nothing else, from the Actions tab.
 #
-# The texts live in appstore/metadata/<locale>/promotional_text.txt and
-# whats_new.txt. This writes those two fields to the version being prepared in
-# App Store Connect and leaves the rest of the page alone: description,
-# keywords, name, subtitle, URLs and subscriptions are not sent at all, so text
-# finished by hand in App Store Connect stays as it is.
+# The texts live in appstore/metadata/<locale>/promotional_text.txt,
+# whats_new.txt and description.txt. This writes those three fields to the
+# version being prepared in App Store Connect and leaves the rest of the page
+# alone: keywords, name, subtitle, URLs and subscriptions are not sent at all,
+# so text finished by hand in App Store Connect stays as it is.
 #
 # Trigger: "Run workflow". It defaults to dry-run, which reads the live page and
 # lists, locale by locale, what a push would change. Writes nothing.
@@ -13,8 +13,11 @@
 #   push      write it.
 #
 # Both refuse to run unless the version being prepared is the one named below,
-# so notes written for 1.10 can never land on another release. Neither creates
+# so notes written for 1.11 can never land on another release. Neither creates
 # a localization: a language missing from the version is reported and skipped.
+# A language new to the page (Japanese for 1.11) first needs the "App Store
+# metadata" workflow, action push, locale ja, which creates its localization
+# (name, subtitle, keywords, URLs included); run this one after it.
 #
 # Same three secrets as "App Store metadata": ASC_KEY_ID, ASC_ISSUER_ID,
 # ASC_PRIVATE_KEY.
@@ -26,7 +29,7 @@ on:
       version:
         description: "Version being prepared in App Store Connect"
         type: string
-        default: "1.10"
+        default: "1.11"
       action:
         description: "What to do"
         type: choice
@@ -93,7 +96,7 @@ jobs:
           ASC_PRIVATE_KEY: ${{ secrets.ASC_PRIVATE_KEY }}
         run: |
           if [ -z "$VERSION" ]; then
-            echo "Give the version being prepared, e.g. 1.10." >&2
+            echo "Give the version being prepared, e.g. 1.11." >&2
             exit 1
           fi
 
@@ -109,12 +112,12 @@ jobs:
           esac
 
           {
-            echo "### \`$ACTION\` $VERSION: Promotional Text and What's New"
+            echo "### \`$ACTION\` $VERSION: Promotional Text, What's New and Description"
             echo '```'
           } >> "$GITHUB_STEP_SUMMARY"
           set +e
           python3 scripts/appstore_metadata.py push \
-            --fields promotional_text,whats_new \
+            --fields promotional_text,whats_new,description \
             --version "$VERSION" \
             "${mode[@]}" "${only[@]}" 2>&1 | tee -a "$GITHUB_STEP_SUMMARY"
           status=${PIPESTATUS[0]}

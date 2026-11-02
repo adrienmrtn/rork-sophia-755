@@ -146,7 +146,7 @@ live there is none, and every push stops with "No editable App Store version".
 the live version's text into it:
 
 ```bash
-python3 scripts/appstore_metadata.py create-version 1.10 --dry-run
+python3 scripts/appstore_metadata.py create-version 1.11 --dry-run
 ```
 
 The workflow offers it as the `create-version` action, with the version in its
@@ -157,11 +157,12 @@ own field. It refuses when another version is already being prepared.
 When the rest of the page is already finished in App Store Connect, a full
 `push` is the wrong tool: it rewrites the description, keywords, name and
 subscriptions with whatever this folder holds. **App Store release notes**
-(`.github/workflows/appstore-release-notes.yml`) writes `promotional_text.txt`
-and `whats_new.txt` and nothing else:
+(`.github/workflows/appstore-release-notes.yml`) writes `promotional_text.txt`,
+`whats_new.txt` and `description.txt` and nothing else (keywords, name,
+subtitle, URLs and subscriptions are not sent):
 
 ```bash
-python3 scripts/appstore_metadata.py push --fields promotional_text,whats_new --version 1.10 --dry-run
+python3 scripts/appstore_metadata.py push --fields promotional_text,whats_new,description --version 1.11 --dry-run
 ```
 
 It only updates: a language the version does not have yet is reported and
@@ -169,10 +170,16 @@ skipped, never created with release notes and no description. And it refuses to
 run unless the version being prepared is the one named, so one release's notes
 cannot land on the next.
 
-The 1.10 notes announce the two Portuguese editions (Brazilian, and the new
-European one), fixes in a few courses and quizzes, and minor bug fixes. The
-promotional text keeps 1.1.9's audio line everywhere except `pt-PT`, which
-announces its own edition.
+The 1.11 notes announce three more app languages (Lithuanian, Latvian and
+Japanese), fixes in a few courses and quizzes, and minor bug fixes. The
+promotional text ends with the same announcement in every locale.
+
+Japanese is new to the page, so the release-notes action would skip it. The order
+for 1.11 is therefore: `create-version` 1.11; **App Store metadata**, action
+`push` with locale `ja` (creates the Japanese page; no subscription entry exists
+for `ja` yet, so none is written); then **App Store release notes**, `dry-run`
+and `push`. Lithuanian and Latvian have no store page: App Store Connect does not
+offer those locales, so `LT` and `LV` stay `None` in `ASC_LOCALE`.
 
 ## Or from a terminal
 
