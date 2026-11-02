@@ -265,6 +265,19 @@ def check_copies(langs: list[str]) -> list[str]:
             for k in sorted(set(glossary) | set(g2)):
                 if glossary.get(k) != g2.get(k):
                     out.append(f"copies|{lang}|glossaire|{k}|iOS ≠ Android")
+        # The iOS loader (LocalizedContentLoader) decodes `lessons` as required: one course
+        # without it empties the whole catalog, and the library, the home feed and the path
+        # show nothing. The lessons are the id and title of each section of the course.
+        ci = IOS / "Locales" / f"courses.{lang}.json"
+        if lang != "fr" and ci.exists():
+            for c in _json(ci):
+                src = COURSES / lang / f"{c.get('id')}.json"
+                lessons = c.get("lessons")
+                if not lessons:
+                    out.append(f"copies|{lang}|courses|{c.get('id')}|catalogue iOS sans lessons (le catalogue entier ne se charge pas)")
+                elif src.exists() and [(x.get("id"), x.get("title")) for x in lessons] != \
+                        [(x["id"], x["title"]) for x in _json(src).get("sections", [])]:
+                    out.append(f"copies|{lang}|courses|{c['id']}|lessons iOS ≠ sections du cours")
         oi, oa = IOS / "Locales" / f"collections.{lang}.json", AND / "locales" / f"collections.{lang}.json"
         if oi.exists() and oa.exists():
             a = {c["id"]: c for c in _json(oa)}

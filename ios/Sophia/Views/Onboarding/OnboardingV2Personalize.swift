@@ -15,16 +15,14 @@ struct OnboardingV2Personalize: View {
     @State private var animTask: Task<Void, Never>?
 
     private var words: [String] {
-        languageManager.text("onboardingV2.personalize.text")
-            .split(separator: " ")
-            .map(String.init)
+        TextSegmentation.animationWords(languageManager.text("onboardingV2.personalize.text"))
     }
 
     var body: some View {
         ZStack {
             OV2.bg.ignoresSafeArea()
 
-            OV2FlowLayout(spacing: 7, lineSpacing: 10) {
+            OV2FlowLayout(spacing: languageManager.current == .japanese ? 0 : 7, lineSpacing: 10) {
                 ForEach(Array(words.enumerated()), id: \.offset) { i, word in
                     wordCell(word, bold: i < boldCount)
                 }
