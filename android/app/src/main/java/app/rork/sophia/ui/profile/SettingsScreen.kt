@@ -19,6 +19,11 @@ import androidx.compose.material.icons.automirrored.filled.Login
 import androidx.compose.material.icons.automirrored.filled.Logout
 import androidx.compose.material.icons.automirrored.filled.ArrowForwardIos
 import androidx.compose.material.icons.filled.Close
+import androidx.compose.material.icons.filled.LightMode
+import androidx.compose.material.icons.filled.DarkMode
+import androidx.compose.material.icons.filled.Check
+import androidx.compose.material.icons.filled.BrightnessMedium
+import androidx.compose.material.icons.filled.CreditCard
 import androidx.compose.material.icons.filled.DeleteForever
 import androidx.compose.material.icons.filled.Description
 import androidx.compose.material.icons.filled.Info
@@ -57,11 +62,13 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import app.rork.sophia.BuildConfig
 import app.rork.sophia.SophiaApplication
+import app.rork.sophia.billing.StoreViewModel
 import app.rork.sophia.audio.CourseAudioDownloads
 import androidx.compose.material.icons.filled.Download
 import app.rork.sophia.data.StringStore
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.UserProgress
+import app.rork.sophia.domain.locale
 import app.rork.sophia.ui.components.ShareSophiaSheet
 import app.rork.sophia.ui.components.CircleIconButton
 import app.rork.sophia.ui.components.ConfirmDialog
@@ -70,9 +77,14 @@ import app.rork.sophia.ui.components.SectionLabel
 import app.rork.sophia.ui.components.TintedIconBox
 import app.rork.sophia.ui.components.softPress
 import app.rork.sophia.ui.components.sophiaCard
+import app.rork.sophia.ui.theme.AppearancePreference
 import app.rork.sophia.ui.theme.DS
+import app.rork.sophia.ui.theme.SophiaAppearance
 import app.rork.sophia.ui.theme.SophiaTypography
 import kotlinx.coroutines.launch
+import android.content.Intent
+import android.net.Uri
+import java.text.DateFormat
 
 /**
  * Mirrors the iOS `SettingsView`: everything that is not identity or social lives here,
@@ -83,6 +95,8 @@ fun SettingsScreen(
     language: AppLanguage,
     progress: UserProgress,
     isPremium: Boolean,
+    /** The running subscription, `null` when there is none (see `StoreViewModel.SubscriptionStatus`). */
+    subscription: StoreViewModel.SubscriptionStatus? = null,
     onBack: () -> Unit,
     onLanguageChange: (AppLanguage) -> Unit,
     onShowPaywall: () -> Unit,
@@ -221,6 +235,52 @@ fun SettingsScreen(
             }
         }
 
+        SettingsSection(StringStore.text(context, "settings.section.appearance", language))
+        SettingsGroup {
+            AppearancePreference.entries.forEachIndexed { index, option ->
+                val selected = SophiaAppearance.preference == option
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .softPress(onClick = { SophiaAppearance.setPreference(context, option) })
+                        .background(if (selected) DS.accentTint else Color.Transparent)
+                        .padding(horizontal = 14.dp, vertical = 13.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.spacedBy(12.dp),
+                ) {
+                    Icon(
+                        imageVector = when (option) {
+                            AppearancePreference.LIGHT -> Icons.Filled.LightMode
+                            AppearancePreference.DARK -> Icons.Filled.DarkMode
+                            AppearancePreference.SYSTEM -> Icons.Filled.BrightnessMedium
+                        },
+                        contentDescription = null,
+                        tint = if (selected) DS.accentSoft else DS.inkSecondary,
+                        modifier = Modifier.size(20.dp),
+                    )
+                    Text(
+                        text = StringStore.text(context, option.labelKey, language),
+                        style = SophiaTypography.bodyLarge.copy(fontSize = 16.sp),
+                        modifier = Modifier.weight(1f),
+                    )
+                    if (selected) {
+                        Icon(
+                            Icons.Filled.Check,
+                            contentDescription = null,
+                            tint = DS.accentSoft,
+                            modifier = Modifier.size(18.dp),
+                        )
+                    }
+                }
+                if (index != AppearancePreference.entries.lastIndex) HorizontalDivider(color = DS.hairline)
+            }
+        }
+        Text(
+            text = StringStore.text(context, "settings.appearance.hint", language),
+            style = SophiaTypography.labelMedium,
+            modifier = Modifier.padding(start = 4.dp, top = 8.dp),
+        )
+
         SettingsSection(StringStore.text(context, "settings.section.progress", language))
         SettingsGroup {
             SettingsRow(
@@ -239,9 +299,19 @@ fun SettingsScreen(
             )
         }
 
-        if (!isPremium) {
-            SettingsSection(StringStore.text(context, "settings.section.premium", language))
-            SettingsGroup {
+        // Subscribers used to find nothing here: no sign of Premium, no date, no way to cancel
+        // (Play only lets a subscription be cancelled from its own page, linked below).
+        SettingsSection(StringStore.text(context, "settings.section.subscription", language))
+        SettingsGroup {
+            if (isPremium) {
+                SettingsRow(
+                    icon = Icons.Filled.WorkspacePremium,
+                    label = StringStore.text(context, "settings.subscription.active.title", language),
+                    subtitle = subscription?.let { subscriptionSubtitle(context, it, language) },
+                    showChevron = false,
+                    onClick = {},
+                )
+            } else {
                 SettingsRow(
                     icon = Icons.Filled.WorkspacePremium,
                     label = StringStore.text(context, "settings.premium.title", language),
@@ -249,6 +319,17 @@ fun SettingsScreen(
                     onClick = onShowPaywall,
                 )
             }
+            HorizontalDivider(color = DS.hairline)
+            SettingsRow(
+                icon = Icons.Filled.CreditCard,
+                label = StringStore.text(context, "settings.subscription.manage.title", language),
+                subtitle = StringStore.text(
+                    context,
+                    if (subscription?.isAppStore == true) "settings.subscription.otherStore" else "settings.subscription.manage.subtitle",
+                    language,
+                ),
+                onClick = { openPlaySubscriptions(context, subscription?.productId) },
+            )
         }
 
         val audioDownloads by CourseAudioDownloads.downloaded.collectAsState()
@@ -465,6 +546,36 @@ fun SettingsScreen(
             },
         )
     }
+}
+
+/** « Essai gratuit jusqu'au… », « Renouvellement le… » or « Se termine le… », with the store's date. */
+private fun subscriptionSubtitle(
+    context: android.content.Context,
+    subscription: StoreViewModel.SubscriptionStatus,
+    language: AppLanguage,
+): String? {
+    val date = subscription.expirationDate ?: return null
+    val formatted = DateFormat.getDateInstance(DateFormat.LONG, language.locale).format(date)
+    val key = when {
+        subscription.isTrial && subscription.willRenew -> "settings.subscription.trialUntil"
+        subscription.willRenew -> "settings.subscription.renewsOn"
+        else -> "settings.subscription.endsOn"
+    }
+    return StringStore.text(context, key, language, formatted)
+}
+
+/**
+ * Play's own subscriptions page, where a subscription is changed or cancelled. With the
+ * product id it opens straight on Sophia's; without one, on the list.
+ */
+private fun openPlaySubscriptions(context: android.content.Context, productId: String?) {
+    val url = if (productId.isNullOrBlank()) {
+        "https://play.google.com/store/account/subscriptions"
+    } else {
+        "https://play.google.com/store/account/subscriptions?sku=$productId&package=${context.packageName}"
+    }
+    val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url)).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+    runCatching { context.startActivity(intent) }
 }
 
 @Composable

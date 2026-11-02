@@ -21,9 +21,12 @@ pour l'instant.
   bouge que si le pod suivant sortirait de l'écran (un seul mouvement doux, jamais de saut en
   haut du niveau), et ne se recentre pas à la fin quand le pod à jouer est déjà visible.
 - **Déblocage linéaire.** Dans un niveau, les cours s'ouvrent l'un après l'autre. Un cours
-  déjà terminé ailleurs (accueil, Biblio) compte comme pod terminé. Le pod quiz s'ouvre
+  déjà terminé ailleurs (accueil, Biblio) compte comme pod terminé, et reste terminé et
+  relisible même dans un niveau encore verrouillé (le verrou du niveau est mémorisé à part,
+  clé `<collection>|level`, pour le rejeu de la bannière). Le pod quiz s'ouvre
   quand tous les cours du niveau sont terminés. Le niveau suivant s'ouvre quand le quiz
-  est réussi. Un pod verrouillé secoue la tête et affiche pourquoi (toast).
+  est réussi. Un pod verrouillé secoue la tête et affiche pourquoi (toast). Le toucher suit
+  l'état réel, même pendant le rejeu des animations, et la bulle « Commencer » ouvre le pod.
 - **Quiz de niveau** : 20 questions tirées au sort dans les cours du niveau, réparties
   entre les cours, nouveau tirage à chaque essai. Réussite à **11/20** (strictement plus de
   la moitié, `LearningPathRules.passMark`). Essais illimités. Gratuit pour tout le monde
