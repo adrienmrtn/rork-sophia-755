@@ -830,7 +830,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Sophia/Sophia.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 69;
+				CURRENT_PROJECT_VERSION = 70;
 				DEVELOPMENT_TEAM = K792T8TQ4X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -854,7 +854,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.10;
+				MARKETING_VERSION = 1.11;
 				PRODUCT_BUNDLE_IDENTIFIER = app.rork.assvmps5x7hpyq0ezcsut;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -874,7 +874,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Sophia/Sophia.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 69;
+				CURRENT_PROJECT_VERSION = 70;
 				DEVELOPMENT_TEAM = K792T8TQ4X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -898,7 +898,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.10;
+				MARKETING_VERSION = 1.11;
 				PRODUCT_BUNDLE_IDENTIFIER = app.rork.assvmps5x7hpyq0ezcsut;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -916,7 +916,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 69;
+				CURRENT_PROJECT_VERSION = 70;
 				DEVELOPMENT_TEAM = K792T8TQ4X;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
@@ -938,7 +938,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 69;
+				CURRENT_PROJECT_VERSION = 70;
 				DEVELOPMENT_TEAM = K792T8TQ4X;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
@@ -959,7 +959,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 69;
+				CURRENT_PROJECT_VERSION = 70;
 				DEVELOPMENT_TEAM = K792T8TQ4X;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0.3;
@@ -979,7 +979,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 69;
+				CURRENT_PROJECT_VERSION = 70;
 				DEVELOPMENT_TEAM = K792T8TQ4X;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0.3;
@@ -1000,7 +1000,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = SophiaShieldConfiguration/SophiaShieldConfiguration.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 69;
+				CURRENT_PROJECT_VERSION = 70;
 				DEVELOPMENT_TEAM = K792T8TQ4X;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SophiaShieldConfiguration/Info.plist;
@@ -1012,7 +1012,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.10;
+				MARKETING_VERSION = 1.11;
 				PRODUCT_BUNDLE_IDENTIFIER = app.rork.assvmps5x7hpyq0ezcsut.ShieldConfiguration;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1028,7 +1028,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = SophiaShieldConfiguration/SophiaShieldConfiguration.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 69;
+				CURRENT_PROJECT_VERSION = 70;
 				DEVELOPMENT_TEAM = K792T8TQ4X;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SophiaShieldConfiguration/Info.plist;
@@ -1040,7 +1040,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.10;
+				MARKETING_VERSION = 1.11;
 				PRODUCT_BUNDLE_IDENTIFIER = app.rork.assvmps5x7hpyq0ezcsut.ShieldConfiguration;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1056,7 +1056,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = SophiaShieldAction/SophiaShieldAction.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 69;
+				CURRENT_PROJECT_VERSION = 70;
 				DEVELOPMENT_TEAM = K792T8TQ4X;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SophiaShieldAction/Info.plist;
@@ -1068,7 +1068,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.10;
+				MARKETING_VERSION = 1.11;
 				PRODUCT_BUNDLE_IDENTIFIER = app.rork.assvmps5x7hpyq0ezcsut.ShieldAction;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1084,7 +1084,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = SophiaShieldAction/SophiaShieldAction.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 69;
+				CURRENT_PROJECT_VERSION = 70;
 				DEVELOPMENT_TEAM = K792T8TQ4X;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SophiaShieldAction/Info.plist;
@@ -1096,7 +1096,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.10;
+				MARKETING_VERSION = 1.11;
 				PRODUCT_BUNDLE_IDENTIFIER = app.rork.assvmps5x7hpyq0ezcsut.ShieldAction;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1112,7 +1112,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = SophiaDeviceActivityMonitor/SophiaDeviceActivityMonitor.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 69;
+				CURRENT_PROJECT_VERSION = 70;
 				DEVELOPMENT_TEAM = K792T8TQ4X;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SophiaDeviceActivityMonitor/Info.plist;
@@ -1124,7 +1124,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.10;
+				MARKETING_VERSION = 1.11;
 				PRODUCT_BUNDLE_IDENTIFIER = app.rork.assvmps5x7hpyq0ezcsut.DeviceActivityMonitor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1140,7 +1140,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = SophiaDeviceActivityMonitor/SophiaDeviceActivityMonitor.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 69;
+				CURRENT_PROJECT_VERSION = 70;
 				DEVELOPMENT_TEAM = K792T8TQ4X;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SophiaDeviceActivityMonitor/Info.plist;
@@ -1152,7 +1152,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.10;
+				MARKETING_VERSION = 1.11;
 				PRODUCT_BUNDLE_IDENTIFIER = app.rork.assvmps5x7hpyq0ezcsut.DeviceActivityMonitor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1168,7 +1168,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = SophiaWidget/SophiaWidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 69;
+				CURRENT_PROJECT_VERSION = 70;
 				DEVELOPMENT_TEAM = K792T8TQ4X;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SophiaWidget/Info.plist;
@@ -1180,7 +1180,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.10;
+				MARKETING_VERSION = 1.11;
 				PRODUCT_BUNDLE_IDENTIFIER = app.rork.assvmps5x7hpyq0ezcsut.DailyQuestionWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1196,7 +1196,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = SophiaWidget/SophiaWidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 69;
+				CURRENT_PROJECT_VERSION = 70;
 				DEVELOPMENT_TEAM = K792T8TQ4X;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SophiaWidget/Info.plist;
@@ -1208,7 +1208,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.10;
+				MARKETING_VERSION = 1.11;
 				PRODUCT_BUNDLE_IDENTIFIER = app.rork.assvmps5x7hpyq0ezcsut.DailyQuestionWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
