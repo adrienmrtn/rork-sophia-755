@@ -1,6 +1,5 @@
 package app.rork.sophia.ui.paywall
 
-import android.app.Activity
 import android.widget.Toast
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -47,7 +46,6 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
@@ -56,7 +54,6 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.core.view.WindowCompat
 import app.rork.sophia.SophiaApplication
 import app.rork.sophia.billing.StoreViewModel
 import app.rork.sophia.data.DiscountBucket
@@ -72,8 +69,10 @@ import app.rork.sophia.ui.legal.LegalDocumentScreen
 import app.rork.sophia.ui.onboarding.PhotoRow
 import app.rork.sophia.ui.onboarding.readableWidth
 import app.rork.sophia.ui.onboarding.studentPhotos
+import app.rork.sophia.ui.theme.ForceLightAppearance
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
+import app.rork.sophia.ui.theme.SophiaAppearance
 import app.rork.sophia.ui.theme.SophiaTypography
 import com.revenuecat.purchases.Package
 import com.revenuecat.purchases.PurchaseParams
@@ -121,6 +120,8 @@ fun OnboardingPaywallFlow(
     /** The package that was actually bought, so the caller can tell a trial from a plain sale. */
     onPurchased: (Package?) -> Unit,
 ) {
+    // Designed light-only, as on iOS: the night palette stays off while it is shown.
+    ForceLightAppearance()
     var showComparison by remember { mutableStateOf(false) }
     var legalDoc by remember { mutableStateOf<LegalDocKind?>(null) }
     LaunchedEffect(Unit) { storeViewModel.fetchOfferings() }
@@ -182,6 +183,8 @@ fun PaywallScreen(
     /** The course a free user wanted to hear, for the audio paywall's cover. */
     courseId: String? = null,
 ) {
+    // Designed light-only, as on iOS: the night palette stays off while it is shown.
+    ForceLightAppearance()
     var legalDoc by remember { mutableStateOf<LegalDocKind?>(null) }
     // iOS stacks a plan-comparison paywall when the first offer is dismissed, rather than
     // letting the user out on the first tap.
@@ -1064,20 +1067,12 @@ private fun DiscountPaywall(
     // edge to edge instead, and the bar icons are flipped to light for the dark gradient.
     val setFullBleed = LocalFullBleedBackground.current
     val gradient = remember { Brush.verticalGradient(listOf(DS.accent, DS.accentSoft)) }
-    val view = LocalView.current
     DisposableEffect(Unit) {
         setFullBleed(gradient)
-        val window = (view.context as? Activity)?.window
-        val controller = window?.let { WindowCompat.getInsetsController(it, view) }
-        val previousLightBars = controller?.isAppearanceLightStatusBars
-        controller?.isAppearanceLightStatusBars = false
-        controller?.isAppearanceLightNavigationBars = false
+        SophiaAppearance.darkBackdropBehindBars = true
         onDispose {
             setFullBleed(null)
-            previousLightBars?.let {
-                controller.isAppearanceLightStatusBars = it
-                controller.isAppearanceLightNavigationBars = it
-            }
+            SophiaAppearance.darkBackdropBehindBars = false
         }
     }
 

@@ -49,6 +49,7 @@ import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.CourseSummary
 import app.rork.sophia.domain.Subject
 import app.rork.sophia.ui.paywall.OnboardingPaywallFlow
+import app.rork.sophia.ui.theme.ForceLightAppearance
 import app.rork.sophia.ui.theme.DS
 import com.revenuecat.purchases.Package
 import kotlinx.coroutines.CancellationException
@@ -165,6 +166,8 @@ fun OnboardingV2Screen(
     onLanguageSelected: (AppLanguage) -> Unit,
     onComplete: () -> Unit,
 ) {
+    // Designed light-only, as on iOS: the night palette stays off while it is shown.
+    ForceLightAppearance()
     val context = LocalContext.current
     val app = context.applicationContext as SophiaApplication
     val isPremium by storeViewModel.isPremium.collectAsState()

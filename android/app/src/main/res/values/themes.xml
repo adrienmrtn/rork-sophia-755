@@ -7,9 +7,11 @@
         <item name="android:windowBackground">#F7F8FA</item>
         <!--
           Xiaomi, Oppo and OnePlus ship a system-wide "force dark" that inverts any app
-          which has not opted out. Sophia is a light-only design with its own palette, so
-          the inversion produced grey-on-grey body text and washed-out course covers.
-          Declaring the app light-only is what tells those layers to leave it alone.
+          which has not opted out. Sophia draws its own night palette (Settings > Appearance,
+          `SophiaAppearance`), and the inversion produced grey-on-grey body text and
+          washed-out course covers. Opting out is what tells those layers to leave it alone.
+          The window colours below are the light ones; MainActivity repaints the window with
+          the chosen canvas before the first frame.
         -->
         <item name="android:forceDarkAllowed">false</item>
     </style>

@@ -63,6 +63,8 @@ Debug APK uses the placeholder RevenueCat key (`goog_REPLACE_ME`) until you set 
 - **15 languages** (Phase A) + onboarding language scroll / scrollable profile (Phase B)
 - **Trial/no-trial paywalls**, RC impressions, quiz FAQ, lock overlay (Phase C)
 - **Legal docs** (Play-adapted), restore, Play store packs (Phase D)
+- **Appearance** (Settings): Light / Night / Automatic, the iOS night palette; onboarding and paywalls stay light, as on iOS
+- **Subscription** (Settings): Premium status with its trial-end / renewal date, and Play's « manage subscription » page
 
 ## Phase E QA (no APK)
 
