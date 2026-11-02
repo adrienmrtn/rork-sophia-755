@@ -22,12 +22,42 @@ object ContentCatalog {
      * no feed card, no library row, no collection slot, no lookup by id. Switching
      * language brings them back.
      */
+    // Sensitive subjects, decided on 02/11/2026 after reader complaints (same lists as iOS).
     private val withheldCourseIds: Map<AppLanguage, Set<String>> = mapOf(
-        AppLanguage.TURKISH to setOf("course_25_le_genocide_armenien_1915_1916"),
+        AppLanguage.TURKISH to setOf(
+            "course_25_le_genocide_armenien_1915_1916",
+            "course_1_la_naissance_de_l_islam_622",
+        ),
+        AppLanguage.ARABIC to setOf(
+            "course_1_la_naissance_de_l_islam_622",
+            "course_201_la_naissance_du_conflit_israelo_palestin",
+        ),
+        AppLanguage.HEBREW to setOf("course_201_la_naissance_du_conflit_israelo_palestin"),
+        AppLanguage.RUSSIAN to setOf(
+            "course_209_la_russie_de_poutine",
+            "course_210_la_guerre_en_ukraine_expliquee",
+        ),
+        AppLanguage.SERBIAN to setOf("course_270_pourquoi_la_yougoslavie_a_t_elle_eclate"),
+        AppLanguage.CROATIAN to setOf("course_270_pourquoi_la_yougoslavie_a_t_elle_eclate"),
     )
 
+    /**
+     * Courses withheld by the phone's region, whatever the app language: a reader in
+     * Türkiye with the app in English or French still saw the Armenian genocide course.
+     */
+    private val withheldCourseIdsByRegion: Map<String, Set<String>> = mapOf(
+        "TR" to setOf("course_25_le_genocide_armenien_1915_1916"),
+    )
+
+    /** Everything withheld for this language on this phone. */
+    private fun withheldIds(language: AppLanguage): Set<String> {
+        val byLanguage = withheldCourseIds[language].orEmpty()
+        val byRegion = withheldCourseIdsByRegion[java.util.Locale.getDefault().country].orEmpty()
+        return if (byRegion.isEmpty()) byLanguage else byLanguage + byRegion
+    }
+
     fun isWithheld(language: AppLanguage, courseId: String): Boolean =
-        withheldCourseIds[language]?.contains(courseId) == true
+        courseId in withheldIds(language)
 
     private val summaryCache = ConcurrentHashMap<String, List<CourseSummary>>()
     private val summaryById = ConcurrentHashMap<String, Map<String, CourseSummary>>()
@@ -207,7 +237,7 @@ object ContentCatalog {
         return withContext(Dispatchers.IO) {
             try {
                 context.assets.open("locales/courses.${language.code}.json").use {
-                    CatalogStream.countQuizQuestions(it, withheldCourseIds[language].orEmpty())
+                    CatalogStream.countQuizQuestions(it, withheldIds(language))
                 }.also { quizCountCache[language.code] = it }
             } catch (_: Exception) {
                 0
