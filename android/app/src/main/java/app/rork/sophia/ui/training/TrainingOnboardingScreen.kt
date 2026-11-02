@@ -43,6 +43,7 @@ import app.rork.sophia.data.StringStore
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.ui.onboarding.OnboardingCta
 import app.rork.sophia.ui.paywall.OnboardingPaywallFlow
+import app.rork.sophia.ui.theme.ForceLightAppearance
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.SophiaTypography
 import kotlinx.coroutines.delay
@@ -58,6 +59,8 @@ fun TrainingOnboardingScreen(
     onPurchased: () -> Unit,
     onClose: () -> Unit,
 ) {
+    // Designed light-only, as on iOS: the night palette stays off while it is shown.
+    ForceLightAppearance()
     var step by remember {
         mutableStateOf(if (startAtPaywall) TrainingObStep.Paywall else TrainingObStep.Welcome)
     }

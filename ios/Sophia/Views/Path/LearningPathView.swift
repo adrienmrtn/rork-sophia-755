@@ -293,8 +293,10 @@ struct LearningPathView: View {
     // MARK: - Taps
 
     private func handleTap(node: PathNode, in level: PathLevel) {
-        let shown = displayedStates[node.id] ?? node.state
-        switch shown {
+        // The real state decides, not the drawn one: while the replay runs (seconds per pod,
+        // restarted whenever the tab is left), a pod already open was still drawn locked and
+        // answered with a shake.
+        switch node.state {
         case .locked:
             UINotificationFeedbackGenerator().notificationOccurred(.error)
             withAnimation(.linear(duration: 0.45)) {
@@ -367,7 +369,13 @@ struct LearningPathView: View {
         let actual = fresh.nodeStates
         if !hasLoadedSeenStates {
             hasLoadedSeenStates = true
-            if let seen = LearningPathSeenStore.load() {
+            if var seen = LearningPathSeenStore.load() {
+                // Saved before levels had their own entry: the first pod told the lock.
+                for level in fresh.levels where seen[level.levelKey] == nil {
+                    if let first = level.nodes.first, let firstSeen = seen[first.id] {
+                        seen[level.levelKey] = firstSeen == .locked ? .locked : .available
+                    }
+                }
                 displayedStates = seen
             } else {
                 // First visit: nothing to replay, the path is shown as it is.
@@ -398,15 +406,18 @@ struct LearningPathView: View {
     /// staged animation while the screen is showing and uncovered (otherwise it waits).
     private func reconcile(with actual: [String: PathNodeState]) {
         var upgrades: [String] = []
-        for id in snapshot.orderedNodeIds {
+        let lockedLevelNodeIds = Set(snapshot.levels.filter { !$0.isUnlocked }.flatMap { $0.nodes.map(\.id) })
+        for id in snapshot.orderedRevealIds {
             guard let target = actual[id] else { continue }
             guard let shown = displayedStates[id] else {
                 displayedStates[id] = target
                 continue
             }
-            if shown < target {
+            if shown < target, !lockedLevelNodeIds.contains(id) {
                 upgrades.append(id)
             } else if shown != target {
+                // Includes a course finished elsewhere inside a level still locked: drawn
+                // completed at once, without a replay down into the locked levels.
                 displayedStates[id] = target
             }
         }
@@ -457,14 +468,19 @@ struct LearningPathView: View {
         var anchor: (levelId: String, row: Int)? = nil
         for id in upgrades {
             guard !Task.isCancelled else { return }
-            guard let target = actual[id],
-                  let level = snapshot.level(containing: id),
-                  let node = level.nodes.first(where: { $0.id == id }) else { continue }
-            let opensLevel = target == .available && level.nodes.first?.id == id
-            if opensLevel {
+            guard let target = actual[id] else { continue }
+            // Already drawn, by the level unlock that lit its first pod to play.
+            if displayedStates[id] == target { continue }
+            if let level = snapshot.level(withKey: id) {
                 // The level unlock brings its banner into view itself.
                 anchor = (level.id, 0)
-            } else if anchor == nil || anchor?.levelId != level.id || abs(node.index - (anchor?.row ?? 0)) >= 2 {
+                let entryId = level.nodes.first { displayedStates[$0.id] == .locked && actual[$0.id] == .available }?.id
+                await animateLevelUnlock(level, entryNodeId: entryId)
+                continue
+            }
+            guard let level = snapshot.level(containing: id),
+                  let node = level.nodes.first(where: { $0.id == id }) else { continue }
+            if anchor == nil || anchor?.levelId != level.id || abs(node.index - (anchor?.row ?? 0)) >= 2 {
                 await scrollToNode(id, anchor: PathScrollAnchor.revealFocus)
                 anchor = (level.id, node.index)
                 try? await Task.sleep(for: .milliseconds(250))
@@ -554,14 +570,8 @@ struct LearningPathView: View {
         try? await Task.sleep(for: .milliseconds(120))
     }
 
-    /// The pod's own lock rattles and gives way. When the pod opens a whole level, it is
-    /// the level's padlock that does so, on the banner, and the pod lights up with it.
+    /// The pod's own lock rattles and gives way.
     private func animateUnlock(of id: String) async {
-        if let level = snapshot.level(containing: id), level.nodes.first?.id == id {
-            await animateLevelUnlock(level, firstNodeId: id)
-            return
-        }
-
         withAnimation(.linear(duration: 0.45)) {
             shakeCounts[id, default: 0] += 1
         }
@@ -581,8 +591,9 @@ struct LearningPathView: View {
     }
 
     /// The padlock rattles on the level's artwork, then flies off as the artwork comes back
-    /// to life under a shower of confetti, and the level's first pod lights up.
-    private func animateLevelUnlock(_ level: PathLevel, firstNodeId id: String) async {
+    /// to life under a shower of confetti, and the level's first pod to play lights up (the
+    /// courses already finished elsewhere before it are drawn completed already).
+    private func animateLevelUnlock(_ level: PathLevel, entryNodeId id: String?) async {
         scrollTo(levelId: level.id)
         try? await Task.sleep(for: .milliseconds(750))
         guard !Task.isCancelled else { return }
@@ -600,8 +611,11 @@ struct LearningPathView: View {
 
         celebratingLevelId = level.id
         withAnimation(.spring(response: 0.6, dampingFraction: 0.7)) {
-            displayedStates[id] = .available
-            poppingNodeId = id
+            displayedStates[level.levelKey] = .available
+            if let id {
+                displayedStates[id] = .available
+                poppingNodeId = id
+            }
         }
         UINotificationFeedbackGenerator().notificationOccurred(.success)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
@@ -705,8 +719,8 @@ private struct PathLevelSection: View {
     }
 
     private var displayedUnlocked: Bool {
-        guard let first = level.nodes.first else { return level.isUnlocked }
-        return shownState(first) != .locked
+        guard let shown = displayedStates[level.levelKey] else { return level.isUnlocked }
+        return shown != .locked
     }
 
     private var displayedPassed: Bool {
@@ -809,6 +823,9 @@ private struct PathLevelSection: View {
                             text: languageManager.text("home.start").uppercased(with: languageManager.current.foundationLocale),
                             tint: tint
                         )
+                        // « COMMENCER » is what the eye goes to: it opens the pod too.
+                        .contentShape(Rectangle())
+                        .onTapGesture { onTapNode(node) }
                         .offset(y: -50)
                         .transition(.scale(scale: 0.7, anchor: .bottom).combined(with: .opacity))
                     }

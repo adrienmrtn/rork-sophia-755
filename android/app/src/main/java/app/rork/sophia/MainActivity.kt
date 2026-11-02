@@ -1,6 +1,7 @@
 package app.rork.sophia
 
 import android.content.Intent
+import android.graphics.drawable.ColorDrawable
 import android.graphics.Color.TRANSPARENT
 import android.os.Build
 import android.os.Bundle
@@ -17,7 +18,10 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import app.rork.sophia.billing.StoreViewModel
 import app.rork.sophia.ui.SophiaRoot
+import app.rork.sophia.ui.theme.DS
+import app.rork.sophia.ui.theme.SophiaAppearance
 import app.rork.sophia.ui.theme.SophiaTheme
+import androidx.compose.ui.graphics.toArgb
 
 class MainActivity : ComponentActivity() {
     private val storeViewModel: StoreViewModel by viewModels()
@@ -26,8 +30,13 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         capRefreshRate()
-        // The app is light-only. Without pinning the style, a phone in dark mode gets
-        // white system-bar icons on our light canvas.
+        // The chosen appearance is known before the first frame, and the window behind the
+        // content takes its canvas, so a night reader is not flashed with the light one.
+        SophiaAppearance.load(this)
+        window.setBackgroundDrawable(ColorDrawable(DS.canvas.toArgb()))
+        // Bars start with dark icons for the light canvas; `SophiaTheme` flips them for the
+        // night palette. Without pinning the style, a phone in dark mode got white icons on
+        // the light canvas.
         enableEdgeToEdge(
             statusBarStyle = SystemBarStyle.light(TRANSPARENT, TRANSPARENT),
             navigationBarStyle = SystemBarStyle.light(TRANSPARENT, TRANSPARENT),
