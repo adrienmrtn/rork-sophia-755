@@ -9,7 +9,7 @@
   "hero": {
     "image": "data_center_server_racks_aisle_blue_lights",
     "ratio": "4:3",
-    "hook": "Tekoäly näyttää ohjelmistolta, mutta jokainen vastaus valmistetaan hyvin todellisessa rakennuksessa, joka on kytketty samaan verkkoon kuin kotisi."
+    "hook": "Tekoäly näyttää ohjelmistolta, mutta jokainen vastaus syntyy aivan todellisessa rakennuksessa, joka on kytketty samaan sähköverkkoon kuin kotisi."
   },
   "sections": [
     {
@@ -23,18 +23,18 @@
         },
         {
           "type": "paragraph",
-          "text": "Vuonna 2025 kaikki datakeskukset käyttivät yhteensä noin **1,5 %** maailman sähköstä. Luvun on laskenut [[Kansainvälinen energiajärjestö]]. Se kattaa kaikki verkkopalvelut eikä pelkkää tekoälyä, mutta tekoälyä varten rakennetut laitokset lisääntyvät nopeasti. Yksittäinen lyhyt vastaus maksaa vähän. Silti koneet käyvät jokaisen vastauksen vuoksi, ja sen tuottamiseen ottaa virtaa samanaikaisesti useampi järjestelmä."
+          "text": "Vuonna 2025 kaikki datakeskukset käyttivät yhteensä noin **1,5 %** maailman sähköstä, arvioi [[Kansainvälinen energiajärjestö]] (IEA). Luku kattaa kaikki verkkopalvelut eikä pelkkää tekoälyä. Tekoälyä varten rakennetut laitokset kuitenkin lisääntyvät nopeasti. Yksittäinen lyhyt vastaus ei sinänsä vie paljon sähköä. Silti jokaista vastausta varten käy koneita, ja sen tuottamiseen ottaa virtaa samanaikaisesti useampi järjestelmä."
         }
       ]
     },
     {
       "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie_p1",
-      "title": "Palvelimet ensimmäisinä",
+      "title": "Palvelimet kuluttavat eniten",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Tietokone, joka käsittelee dataa ja pyörittää verkkopalveluja, on nimeltään [[palvelin]]. Datakeskuksessa palvelimet tekevät suurimman osan laskennasta, joten ne ovat myös suurimpia sähkönkuluttajia. Jos nykyaikaisen datakeskuksen sähkölasku pilkotaan osiin, palvelimien osuus on keskimäärin **60 %**. Luku koskee datakeskuksia yleensä eikä pelkästään tekoälylaitoksia."
+          "text": "Tietokone, joka käsittelee dataa ja pyörittää verkkopalveluja, on nimeltään [[palvelin]]. Datakeskuksessa palvelimet tekevät suurimman osan laskennasta, joten ne myös kuluttavat eniten sähköä. Jos nykyaikaisen datakeskuksen sähkölasku pilkotaan osiin, palvelimien osuus on keskimäärin **60 %**. Luku koskee datakeskuksia yleensä eikä pelkästään tekoälylaitoksia."
         },
         {
           "type": "image",
@@ -48,7 +48,7 @@
         },
         {
           "type": "funFact",
-          "text": "IEA:n mukaan tekoälyyn keskittyneiden datakeskusten sähkönkulutus kasvoi 50 % pelkästään vuonna 2025."
+          "text": "IEA:n mukaan tekoälykäyttöön rakennettujen datakeskusten sähkönkulutus kasvoi 50 % pelkästään vuonna 2025."
         }
       ]
     },
@@ -88,7 +88,7 @@
         },
         {
           "type": "funFact",
-          "text": "Samassa tutkimuksessa pitkän päättelyn pyyntö, jossa malli käy vaiheensa läpi ennen johtopäätöstä, yltää 3,91 Wh:n mediaaniin, yli kymmenkertaiseksi tavalliseen pyyntöön verrattuna."
+          "text": "Samassa tutkimuksessa pitkän päättelyn pyynnön, jossa malli käy vaiheensa läpi ennen johtopäätöstä, mediaani on 3,91 Wh: yli kymmenen kertaa enemmän kuin tavallisen pyynnön."
         }
       ]
     },

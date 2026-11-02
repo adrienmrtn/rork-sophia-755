@@ -4,11 +4,11 @@
   "subtitle": "Od leta 2009",
   "subject": "comprendreLeMonde",
   "subcategory": "Okolje in prihodnost",
-  "description": "**blockchain** je izumil knjigo, v katero nihče ne more posegati sam, in utira pot novemu digitalnemu gospodarstvu.",
+  "description": "**Blockchain** je prinesel register, ki ga nihče ne more sam ponarediti, in odprl pot novemu digitalnemu gospodarstvu.",
   "hero": {
     "image": "la_blockchain_et_les_cryptomonnaies",
     "ratio": "16:9",
-    "hook": "Knjiga računov, ki je nima nihče v lasti, a jo skupaj spremlja na tisoče računalnikov."
+    "hook": "Računovodska knjiga, ki ni last nikogar, a jo skupaj nadzoruje na tisoče računalnikov."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Predstavljajte si knjigo računov, ki je nima nihče v lasti, vendar jo na tisoče računalnikov hkrati posodablja po vsem svetu in jo je skoraj nemogoče ponarediti. To je začetna zamisel o **blockchain**, tehnologiji, ki je pogosto reducirana na svojo prvo uporabo, **Bitcoin**."
+          "text": "Predstavljaj si računovodsko knjigo, ki ni last nikogar posebej, a jo na tisoče računalnikov po vsem svetu hkrati sproti posodablja in jo je skoraj nemogoče ponarediti. To je izhodiščna zamisel **blockchaina**, tehnologije, ki jo pogosto enačijo z njeno prvo uporabo, **Bitcoinom**."
         },
         {
           "type": "paragraph",
-          "text": "S tem, ko je ta izum omogočil menjavo vrednosti, ne da bi šel prek banke, je povzročil celotno vzporedno gospodarstvo, med obljubami o finančni svobodi in ostro kritiko stroškov energije."
+          "text": "Ker ta izum omogoča izmenjavo vrednosti brez banke, je iz njega zraslo celo vzporedno gospodarstvo, ki niha med obljubami finančne svobode in ostrimi kritikami zaradi porabe energije."
         }
       ]
     },
@@ -33,15 +33,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "V središču blockchaina je preprosta ideja: **razdeljena knjiga**. Za razliko od banke, ki vodi svoje račune na svojih strežnikih, se blockchain opira na omrežje [[vrstniki]], torej na tisoče računalnikov, od katerih vsak hrani identično kopijo vseh transakcij."
+          "text": "V središču blockchaina je preprosta zamisel: **porazdeljeni register**. Banka vodi račune na lastnih strežnikih, blockchain pa se opira na omrežje enakovrednih računalnikov, ki jim pravijo [[vrstniki]]: na tisoče računalnikov, od katerih vsak hrani enako kopijo vseh transakcij."
         },
         {
           "type": "funFact",
-          "text": "Že prvi blok verige blokov Bitcoin, imenovan »genesis block«, je vseboval skrito sporočilo: naslovnico britanskega časopisa 3. januarja 2009, ki je govorila o državnem reševanju bank. Politično prikimavanje njegovega ustvarjalca."
+          "text": "Čisto prvi blok Bitcoinove verige, imenovan »izvorni blok«, je vseboval skrito sporočilo: naslovnico britanskega časopisa z dne 3. januarja 2009, ki je poročala, da država rešuje banke. Politični namig njegovega ustvarjalca."
         },
         {
           "type": "paragraph",
-          "text": "Vsako transakcijo najprej preveri omrežje in nato združi z drugimi v **blok**. Ta blok je nato povezan s prejšnjim po zaslugi matematičnega izračuna, imenovanega [[zgoščevanje]]: nekakšen edinstven digitalni prstni odtis. Rezultat je neprekinjena veriga blokov, od tod tudi ime blockchain. Če želite spremeniti eno samo staro transakcijo, bi morali preračunati celotno verigo in prepričati več kot polovico omrežja, kar je v velikem obsegu skoraj nemogoče."
+          "text": "Vsako transakcijo najprej preveri omrežje, nato pa se skupaj z drugimi združi v **blok**. Ta blok se s prejšnjim poveže z matematičnim izračunom, ki se imenuje [[zgoščevanje]]: to je nekakšen edinstven digitalni prstni odtis. Tako nastane neprekinjena veriga blokov, od tod tudi angleško ime blockchain. Kdor bi hotel spremeniti eno samo staro transakcijo, bi moral na novo izračunati vso verigo in prepričati več kot polovico omrežja, kar je v velikem obsegu skoraj nemogoče."
         }
       ]
     },
@@ -52,7 +52,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Bitcoin**, ki ga je leta **2009** lansirala anonimna oseba (ali skupina) pod imenom [[Satoshi Nakamoto]], je dokazal, da bi denarni sistem lahko deloval brez centralne banke. Da bi zagotovil njegovo pomanjkanje, je njegov ustvarjalec postavil strogo zgornjo mejo: nikoli ne more obstajati več kot **21 milijonov bitcoinov**, podobno kot je zlato na Zemlji omejeno."
+          "text": "**Bitcoin**, ki ga je leta **2009** zagnala oseba (ali skupina), ki je ostala anonimna pod imenom [[Satoshi Nakamoto]], je dokazal, da denarni sistem lahko deluje brez centralne banke. Da bi bil bitcoin redek, je njegov ustvarjalec določil strogo zgornjo mejo: nikoli ne bo obstajalo več kot **21 milijonov bitcoinov**, podobno kot je na Zemlji omejena količina zlata."
         },
         {
           "type": "image",
@@ -62,18 +62,18 @@
         },
         {
           "type": "paragraph",
-          "text": "Leta 2015 se je pojavila druga generacija blockchaina z **Ethereum**. Njegova velika inovacija: **pametne pogodbe**. To so programi, ki se samodejno zaženejo takoj, ko je izpolnjen pogoj, na primer avtomatsko povračilo stroškov v primeru zamude vlaka, ne da bi morali iti prek posrednika."
+          "text": "Leta 2015 se je z **Ethereumom** pojavila druga generacija blockchaina. Njegova velika novost so **pametne pogodbe**: programi, ki se samodejno izvedejo, takoj ko je izpolnjen določen pogoj, na primer samodejno vračilo denarja ob zamudi vlaka, ne da bi bil potreben posrednik."
         }
       ]
     },
     {
       "id": "course_232_la_blockchain_et_les_cryptomonnaies_p3",
-      "title": "Kritiki: energija in nestabilnost",
+      "title": "Kritike: energija in nestabilnost",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Uspeh kriptovalut ni brez težav. Največ razprav se nanaša na **energije** omrežja Bitcoin: njegova letna poraba električne energije je danes primerljiva s porabo celotne države, kot je Argentina."
+          "text": "Uspeh kriptovalut ni brez težav. Največ se razpravlja o **porabi energije** omrežja Bitcoin: njegova letna poraba elektrike je danes primerljiva s porabo cele države, kot je Argentina."
         },
         {
           "type": "paragraph",
@@ -81,7 +81,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Nazadnje je bila relativna anonimnost transakcij včasih uporabljena za nezakonite dejavnosti. A blockchain dejansko ostaja povsem transparenten: oblasti lahko sledijo denarnemu toku, zaradi česar je pranje težje kot v klasičnem gotovinskem sistemu."
+          "text": "Poleg tega so relativno anonimnost transakcij včasih izrabili za nezakonite dejavnosti. Toda blockchain je v resnici povsem pregleden: oblasti lahko sledijo denarnim tokovom, zato je pranje denarja težje kot v klasičnem sistemu gotovine."
         }
       ]
     },
@@ -92,19 +92,19 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Danes kriptovalute zapuščajo marže in vstopijo v tradicionalne finance. Velike banke zdaj ponujajo hrambo digitalnih sredstev za svoje stranke, več držav pa razmišlja o ustvarjanju lastne uradne digitalne valute, **[[CBDC]]** (digitalna valuta centralne banke)."
+          "text": "Danes kriptovalute z obrobja prehajajo v tradicionalne finance. Velike banke zdaj svojim strankam ponujajo hrambo digitalnih sredstev, več držav pa razmišlja o lastni uradni digitalni valuti, tako imenovani **[[CBDC]]** (digitalni valuti centralne banke)."
         },
         {
           "type": "paragraph",
-          "text": "**stable kovanci**, kriptovalute, katerih cena je stabilizirana zaradi rezerve dolarjev ali evrov, služijo kot most med obema svetovoma. Poleg financ, sektorji, kot so luksuz (za boj proti ponarejanju), logistika (za sledenje kontejnerjem) ali zdravstvo (za zavarovanje zdravstvenih kartotek), prav tako sprejemajo blockchain zaradi njegove zanesljivosti."
+          "text": "**Stabilni kovanci** so kriptovalute, katerih cena je stabilna zaradi rezerve dolarjev ali evrov, in služijo kot most med obema svetovoma. Blockchain zaradi zanesljivosti ne uvajajo le v financah: uvajajo ga tudi luksuzna industrija (za boj proti ponarejanju), logistika (za sledenje kontejnerjem) in zdravstvo (za varovanje zdravstvenih kartotek)."
         },
         {
           "type": "funFact",
-          "text": "Leta 2021 je Salvador postal prva država na svetu, ki je sprejela Bitcoin kot zakonito plačilno sredstvo, poleg ameriškega dolarja, kar zahteva, da ga vsak trgovec sprejme, če ima tehnična sredstva."
+          "text": "Leta 2021 je Salvador kot prva država na svetu poleg ameriškega dolarja sprejel Bitcoin za zakonito plačilno sredstvo: vsak trgovec ga mora sprejemati, če ima za to tehnične možnosti."
         },
         {
           "type": "takeaway",
-          "text": "Blockchain, ustvarjen leta 2009, je skupna knjiga, ki jo je skoraj nemogoče ponarediti, katere največja zaloga bitcoinov je določena na 21 milijonov enot. Postavila je temelje današnjega novega digitalnega gospodarstva v popolni institucionalni integraciji."
+          "text": "Blockchain, ustvarjen leta 2009, je skupni register, ki ga je skoraj nemogoče ponarediti, največje število bitcoinov pa je omejeno na 21 milijonov. Postavil je temelje novemu digitalnemu gospodarstvu, ki ga danes vse bolj sprejemajo tudi uradne ustanove."
         }
       ]
     }

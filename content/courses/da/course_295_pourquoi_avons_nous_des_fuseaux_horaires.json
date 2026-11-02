@@ -9,7 +9,7 @@
   "hero": {
     "image": "shepherd_gate_clock_royal_observatory_greenwich",
     "ratio": "4:3",
-    "hook": "Før togene var klokken tolv aldrig helt det samme fra den ene by til den næste."
+    "hook": "Før togene var klokken tolv aldrig helt samme tidspunkt fra den ene by til den næste."
   },
   "sections": [
     {
@@ -19,7 +19,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "I det meste af historien er tiden lokal. Hver by stiller sine ure for sig selv, og middag i én by kan falde flere minutter før eller efter middag i nabobyen. Det generer ingen: man rejser ikke hurtigt nok fra by til by til, at forskellen betyder noget."
+          "text": "I det meste af historien er tiden lokal. Hver by stiller sine ure for sig selv, og klokken tolv i én by kan falde flere minutter før eller efter klokken tolv i nabobyen. Det generer ingen: man rejser ikke hurtigt nok fra by til by til, at forskellen betyder noget."
         },
         {
           "type": "paragraph",
@@ -59,7 +59,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "I USA er den britiske opskrift ikke nok. Togene tilbagelægger langt større afstande: når klokken er tolv i Californien, er eftermiddagen allerede godt i gang i Washington. Løsningen er [[tidszoner]]: at dele landet op i **fem** bælter med en times forskel mellem hvert."
+          "text": "I USA er den britiske opskrift ikke nok. Togene tilbagelægger langt større afstande: når klokken er tolv i Californien, er eftermiddagen allerede godt i gang i Washington. Løsningen er [[tidszoner]]: at dele landet op i **fem** bælter med en times forskel fra bælte til bælte."
         },
         {
           "type": "image",
@@ -109,7 +109,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Selv når den nye tid er officielt indført, har den svært ved at slå rod. I årevis skaber den forvirring og hån, og lokal tid er stadig udbredt over hele verden. Det kræver årtier og redskaber som folkeskolen og radioens sendeplaner at viske den helt ud. I **1920'erne** lever de fleste lande endelig efter en tid afstemt efter Greenwich. Tiden er blevet lavet om, fordi jernbanerne ville det."
+          "text": "Selv når den nye tid er officielt indført, har den svært ved at slå rod. I årevis skaber den forvirring og hån, og lokal tid er stadig udbredt over hele verden. Det kræver årtier og redskaber som folkeskolen og radioens sendeplaner at viske den lokale tid helt ud. I **1920'erne** lever de fleste lande endelig efter en tid afstemt efter Greenwich. Tiden er blevet lavet om, fordi jernbanerne ville det."
         },
         {
           "type": "timeline",

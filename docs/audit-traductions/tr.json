@@ -1,0 +1,1909 @@
+{
+ "langue": "tr",
+ "synthese": {
+  "verdict": "La plainte est partiellement justifiée. Le turc est tutoyé, le balisage est préservé et les cours récents (Lascaux, frontières de l'Afrique, mort d'une étoile, hoquet) se lisent comme du turc natif. Mais les cours plus anciens (islam, Baudelaire, impressionnisme, Narcisse, 1929, paradis fiscaux) restent truffés de calques (« İşte … nasıl … », « dayatmak » pour imposer, « kocaman » enfantin) et de contresens embarrassants : Némésis traduite par « l'Ennemi », « bank runs » par « opérations bancaires », « offshore » par « haute mer », la relance par « guérir », Héra qualifiée de « bonne femme jalouse ». L'UI (relue en partie) garde des étiquettes bancales (« Süresi doluyor » pour « Expire dans », « Ödeme duvarı » paywall traduit mot à mot) et le signe % placé à la française après le nombre dans la moitié des cours.",
+  "scores": {
+   "ui": 3,
+   "cours": 3,
+   "global": 3
+  },
+  "top_issues": [
+   {
+    "title": "Némésis = « l'Ennemi »",
+    "where": "course_166_narcisse_et_echo/s3.b0.text",
+    "current": "haklı öcün tanrıçası [[Düşman]] adına yakarır",
+    "gloss_fr": "prie au nom de « l'Ennemi », déesse de la juste vengeance",
+    "fix": "haklı öcün tanrıçası [[Nemesis]]'e yakarır",
+    "severity": "bloquant"
+   },
+   {
+    "title": "« bank runs » = « opérations bancaires »",
+    "where": "course_18_la_grande_depression_1929/s2.b0.text",
+    "current": "Sonra [[banka işlemleri]] gelir",
+    "gloss_fr": "Puis viennent les opérations bancaires",
+    "fix": "Sonra [[banka hücumları]] gelir",
+    "severity": "bloquant"
+   },
+   {
+    "title": "« offshore » = « haute mer »",
+    "where": "course_212_les_paradis_fiscaux_expliques/s1.b0.text",
+    "current": "buna [[açık deniz]] ekonomisi denir",
+    "gloss_fr": "on appelle cela l'économie de haute mer",
+    "fix": "buna [[offshore]] ekonomi denir",
+    "severity": "bloquant"
+   },
+   {
+    "title": "Héra, « bonne femme jalouse »",
+    "where": "course_166_narcisse_et_echo/s1.b0.text",
+    "current": "kıskanç karı **Hera**'yı",
+    "gloss_fr": "la « bonne femme » jalouse Héra (registre vulgaire)",
+    "fix": "kıskanç eşi **Hera**'yı",
+    "severity": "bloquant"
+   },
+   {
+    "title": "« Expire dans » bancal avant un compte à rebours",
+    "where": "offer.expiresIn",
+    "current": "Süresi doluyor",
+    "gloss_fr": "« Est en train d'expirer »",
+    "fix": "Kalan süre",
+    "severity": "majeur"
+   },
+   {
+    "title": "« paywall » traduit mot à mot",
+    "where": "paywall.error.unavailable",
+    "current": "Ödeme duvarı yüklenemiyor",
+    "gloss_fr": "Le mur de paiement ne peut pas être chargé",
+    "fix": "Teklif yüklenemedi",
+    "severity": "majeur"
+   },
+   {
+    "title": "Signe % après le nombre",
+    "where": "cours : motif systématique",
+    "current": "25%",
+    "gloss_fr": "convention française ; le turc écrit %25",
+    "fix": "%25",
+    "severity": "majeur"
+   }
+  ],
+  "systematic": [
+   "« Voici comment… » rendu par une nominalisation « İşte … nasıl …-dığı » au lieu d'une phrase finie.",
+   "« imposer » systématiquement « dayatmak » (forcer, connoté) ; « énorme / minuscule » rendus par « kocaman / minicik » (registre enfantin).",
+   "Signe % après le nombre dans la moitié des cours (convention française).",
+   "Libellés de glossaire trop longs ou fléchis à l'intérieur des crochets.",
+   "Mots polysémiques pris dans le mauvais sens : Némésis, bank runs, offshore, relance."
+  ],
+  "action": "corrections_ciblees",
+  "effort": "UI : 0,5 jour ; cours anciens (islam, littérature, art, économie) : 1 semaine de relecture native ; % : script."
+ },
+ "scores_relecteur_par_surface": {
+  "courses": 3,
+  "ui": null
+ },
+ "justifications_relecteur": {
+  "courses": "Qualité très inégale selon les cours : les cours récents (Lascaux, frontières de l'Afrique, mort d'une étoile, hoquet) se lisent comme du turc natif, alors que les cours Islam, Baudelaire, impressionnisme, Narcisse, 1929, paradis fiscaux et Ulysse sont truffés de calques du français (« İşte … nasıl … », « dayatmak » pour imposer, « kocaman », « topraklar » pour territoires) et de plusieurs contresens embarrassants (Némésis traduit par « Düşman », bank runs par « banka işlemleri », offshore par « açık deniz », relance par « iyileşmek », « kıskanç karı Hera »). Le registre informel est respecté et le balisage globalement préservé, mais plusieurs libellés de glossaire trop longs ou fléchis à l'intérieur des crochets cassent les phrases, et le signe % est mal placé dans tout le cours 1929. Un lecteur turc comprend tout, mais sent nettement la traduction sur la moitié du corpus.",
+  "ui": "(liste partielle, relecteur interrompu)"
+ },
+ "constats_non_listes_par_le_relecteur": {
+  "courses": 12,
+  "ui": 0
+ },
+ "motifs_recurrents": [
+  {
+   "description": "« Voici comment / Voici ce que… » rendu par une nominalisation « İşte … nasıl …-dığı » au lieu d'une phrase finie (« İşte … böyle oldu »).",
+   "frequency": "fréquent",
+   "example": "İşte her şeyin nasıl başladığı. / İşte bir balonun her şeyi nasıl sürüklediği.",
+   "regex_fr": "\\bVoici (comment|pourquoi|ce qu[e'])",
+   "regex_target": "İşte\\b[^.]*\\b(nasıl|neden)\\b[^.]*(dığı|diği|duğu|düğü|tığı|tiği|tuğu|tüğü|dikleri|dıkları)\\.",
+   "pack": "courses"
+  },
+  {
+   "description": "« imposer » traduit systématiquement par « dayatmak » (forcer, connoté négativement) là où le turc dit « kabul ettirmek / yerleştirmek ».",
+   "frequency": "fréquent",
+   "example": "Grup yeni bir resim özgürlüğünü dayattı.",
+   "regex_fr": "\\bimpos(e|ent|é|ée|és|ées|er|ant)\\b",
+   "regex_target": "\\bdayat\\w*",
+   "pack": "courses"
+  },
+  {
+   "description": "Signe % placé après le nombre (convention française) au lieu de devant (%25), incohérent avec d'autres cours qui l'écrivent correctement.",
+   "frequency": "systématique",
+   "example": "Amerikalıların **25%**'ini vurur",
+   "regex_fr": "\\d+\\s?%",
+   "regex_target": "\\d+\\s?%",
+   "pack": "courses"
+  },
+  {
+   "description": "« énorme / massif / minuscule » rendus par les mots enfantins « kocaman / minicik », registre trop infantile pour un ado.",
+   "frequency": "fréquent",
+   "example": "Almanya … kocaman fonlar açar",
+   "regex_fr": "\\b(énorme|massif|massive|minuscule|colossal)",
+   "regex_target": "\\b(kocaman|minicik|küçücük)\\b",
+   "pack": "courses"
+  },
+  {
+   "description": "Libellés de glossaire trop longs (titres d'articles) ou fléchis à l'intérieur des crochets, qui cassent la phrase ou la clé de glossaire.",
+   "frequency": "fréquent",
+   "example": "[[Weimar'ın]] aleyhine / **[[Sembolizm ve Baudelaire'in mirası]]** yolunu açar",
+   "regex_target": "\\[\\[[^\\]]*('(nın|nin|nun|nün|ın|in|un|ün|ı|i|u|ü|sı|si|nı|ni)|\\s(ve|ile)\\s[^\\]]+)\\]\\]",
+   "pack": "courses"
+  },
+  {
+   "description": "Virgule avant « ve » calquée de la ponctuation française (« , et »).",
+   "frequency": "isolé",
+   "example": "Bir eleştirmenin hakareti, ve modern sanatın…",
+   "regex_fr": ", et ",
+   "regex_target": ", ve ",
+   "pack": "courses"
+  },
+  {
+   "description": "Opposition « Elle / Il » (Écho / Narcisse) rendue par « O … O », le turc n'ayant pas de genre : perte de référence.",
+   "frequency": "isolé",
+   "example": "Onun kendi sesi kalmamıştır. O yalnız kendine bakar.",
+   "regex_fr": "\\bElle\\b[^.]*\\.\\s*\\b(Il|Lui)\\b",
+   "regex_target": "\\bO(nun)?\\b[^.]*\\.\\s*O (ise|yalnız)",
+   "pack": "courses"
+  },
+  {
+   "description": "« territoires » traduit par « topraklar » (terres/sol) au lieu de « bölgeler », et « opaque/opacité » par « opak/opaklık » (terme de physique).",
+   "frequency": "fréquent",
+   "example": "opak topraklarda vergiden kaçar",
+   "regex_fr": "\\bterritoires?\\b|\\bopa(que|cité)\\b",
+   "regex_target": "\\btopraklar(da|ın|a)?\\b|\\bopak(lık)?\\b",
+   "pack": "courses"
+  },
+  {
+   "description": "« peindre » (faire de la peinture) rendu par « boyamak » (peindre un mur) au lieu de « resim yapmak ».",
+   "frequency": "isolé",
+   "example": "Keskin karşıtlıklarla boyar.",
+   "regex_fr": "\\bpein(t|dre|dra|gnait)\\b",
+   "regex_target": "\\bboya(r|mak|dı|rlar)\\b",
+   "pack": "courses"
+  },
+  {
+   "description": "Temps verbaux : anecdotes à l'imparfait français passées au présent turc, ou « jusque-là … dominait » rendu au présent ; mélange présent/passé dans un même paragraphe.",
+   "frequency": "fréquent",
+   "example": "Monet bazen … küçük bir kayık kiralar. / O zamana dek Romantizm hüküm sürer",
+   "regex_fr": "\\b(louait|dominait|étaient|était)\\b",
+   "pack": "courses"
+  },
+  {
+   "description": "Noms propres et titres d'œuvres laissés en forme française/anglaise là où le turc a une forme établie (Ovid → Ovidius, Le Spleen de Paris → Paris Sıkıntısı, Le Déjeuner sur l'herbe → Kırda Öğle Yemeği, jizya → cizye, Musée d'Orsay → Orsay Müzesi, Seine → Sen Nehri).",
+   "frequency": "fréquent",
+   "example": "[[Ovid]], [[Metamorfozlar]] adlı eserinde",
+   "regex_target": "\\b(Ovid|Le Spleen de Paris|Çimenler Üzerinde|jizya|Musée d'Orsay|Seine)\\b",
+   "pack": "courses"
+  }
+ ],
+ "constats": [
+  {
+   "location": "course_166_narcisse_et_echo/s3.b0.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "haklı öcün tanrıçası [[Düşman]] adına yakarır",
+   "gloss_fr": "prie au nom de « l'Ennemi », déesse de la juste vengeance",
+   "problem": "Le nom propre Némésis a été traduit par son sens commun « ennemi » ; le terme de glossaire devient absurde et « adına yakarır » (prier au nom de) est aussi faux.",
+   "fix": "Kurbanlarından biri, haklı öcün tanrıçası [[Nemesis]]'e yakarır: o da kendini sevsin ve sevdiğine asla kavuşamasın.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_18_la_grande_depression_1929/s2.b0.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Sonra [[banka işlemleri]] gelir: panikle parasını çeken müşteri dalgaları.",
+   "gloss_fr": "Puis viennent les « opérations bancaires » : des vagues de clients…",
+   "problem": "« bank runs » rendu par « opérations bancaires » ; le terme turc est « banka hücumu » / « mevduat kaçışı ».",
+   "fix": "Sonra [[banka hücumları]] gelir: panikle parasını çekmek için bankalara koşan müşteri dalgaları.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_18_la_grande_depression_1929/s4.b0.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Devlet [[iyileşmek]] yolunu tutar",
+   "gloss_fr": "L'État prend le chemin de « guérir » (infinitif)",
+   "problem": "« relance » (économique) traduit par le verbe « guérir » à l'infinitif : faux sens et phrase agrammaticale.",
+   "fix": "Devlet [[canlandırma]] politikasına yönelir: büyük bayındırlık işleri, bankaların denetimi, sosyal korumanın ilk adımları.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_212_les_paradis_fiscaux_expliques/s1.b0.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "buna [[açık deniz]] ekonomisi denir",
+   "gloss_fr": "on appelle cela l'économie « de haute mer »",
+   "problem": "« offshore » traduit littéralement par « pleine mer » ; le turc financier utilise « offshore » ou « kıyı ötesi ».",
+   "fix": "Bu bölgeler böylece dünyanın her yerinden sermaye çeker; buna [[offshore]] ekonomi denir.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_166_narcisse_et_echo/s1.b0.text",
+   "severity": "bloquant",
+   "category": "registre",
+   "current": "kıskanç karı **Hera**'yı",
+   "gloss_fr": "la « bonne femme » jalouse Héra",
+   "problem": "« karı » employé seul est vulgaire/péjoratif en turc ; il faut « eşi » ou « karısı » (sa femme).",
+   "fix": "Zeus başka perilerle buluşurken o, kıskanç eşi **Hera**'yı bitmek bilmez sohbetlerle oyalar.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire/s1.b0.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Zarafeti ve inceliği sever; dönemin adı **dandizm**dir.",
+   "gloss_fr": "Il aime l'élégance ; le nom de l'époque est « dandysme ».",
+   "problem": "« ce qu'on appelle le dandysme » a été compris comme « le nom de la période » : affirmation historique fausse.",
+   "fix": "Zarafete ve inceliğe düşkündür; buna **dandizm** denir. Ama düşkünlüğü ve borcu da tanır.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_174_ulysse_et_les_sirenes/s3.b2.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "ağları kilitleyen uygulamalar",
+   "gloss_fr": "des applications qui verrouillent les réseaux (informatiques)",
+   "problem": "« les réseaux » (sociaux) pris au sens de réseaux informatiques ; un Turc comprend « couper le réseau ».",
+   "fix": "sosyal medyayı engelleyen uygulamalar",
+   "surface": "courses"
+  },
+  {
+   "location": "onboarding.wasted.intro (+ hoursLost)",
+   "severity": "bloquant",
+   "category": "grammaire",
+   "current": "Günde %@ telefonda, bu + N + yılda kaybedilen saat.",
+   "gloss_fr": "« 2 h par jour au téléphone, ça [730] en années heures perdues »",
+   "problem": "Assemblé, « bu 730 yılda kaybedilen saat » se lit « heures perdues en 730 ans » : sens faux et phrase cassée.",
+   "fix": "intro: « Telefonda günde %@, yılda tam » / hoursLost: « saat kayıp demek. »",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.trial.step2.detail",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Bildirimle hatırlatırız. 15 saniye içinde iptal edebilirsin.",
+   "gloss_fr": "« On te rappelle par notification. Tu peux annuler dans les 15 secondes. »",
+   "problem": "« 15 saniye içinde » se lit comme un délai limite pour annuler, alors que le FR dit que l'annulation prend 15 secondes.",
+   "fix": "Bildirimle hatırlatırız. İptal etmek 15 saniye sürer.",
+   "surface": "ui"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/description",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "İslam'ın 1. yılını ve dünya çapında bir uygarlığın başlangıcını işaretler",
+   "gloss_fr": "marque (au sens de « tracer une marque ») l'an 1 de l'islam",
+   "problem": "« marquer » rendu par « işaretlemek » (tracer un signe) ; le turc dit « işaret eder » ou « başlangıcıdır ».",
+   "fix": "Bu yolculuk, Hicret, İslam takviminin 1. yılı ve dünya çapında bir uygarlığın başlangıcıdır.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/s2.title",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "M.S. 622: Hicret, her şey kayar",
+   "gloss_fr": "622 : l'Hégire, tout glisse",
+   "problem": "« tout bascule » traduit par « kaymak » (glisser), qui ne veut rien dire ici ; « M.S. » ajouté ici mais pas dans le titre « 630 ».",
+   "fix": "622: Hicret, her şey değişir",
+   "surface": "courses"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/s2.b3.text",
+   "severity": "majeur",
+   "category": "non_traduit",
+   "current": "Muhammed düşman kervanlarını kesmek için hızlı akınlar, [[razziler]] düzenler.",
+   "gloss_fr": "lance des raids rapides, des « razzis »",
+   "problem": "« razzia » n'existe pas en turc ; le terme établi est « gazve » (ou « akın ») et l'ordre explication/terme est inversé.",
+   "fix": "Muhammed düşman kervanlarının yolunu kesmek için [[gazveler]], yani hızlı akınlar düzenler.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/s4.b0.text",
+   "severity": "majeur",
+   "category": "nom_propre",
+   "current": "[[jizya]] vergisi karşılığında",
+   "gloss_fr": "en échange de l'impôt « jizya » (graphie arabe/anglaise)",
+   "problem": "Le terme a une forme turque établie, « cizye », connue de tout élève turc.",
+   "fix": "[[cizye]] vergisi karşılığında",
+   "surface": "courses"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/s4.b0.text",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Bu çerçeveli hoşgörü, Bizans'tan yorulmuş bölgelerde",
+   "gloss_fr": "Cette tolérance « encadrée » (avec un cadre autour), dans des régions fatiguées de Byzance",
+   "problem": "« encadrée » rendu par « çerçeveli » (muni d'un cadre) : contresens lexical ; « Bizans'tan yorulmuş » est aussi un calque.",
+   "fix": "Bu sınırlı hoşgörü, Bizans yönetiminden bıkmış bölgelerde yeni iktidarın yerleşmesini kolaylaştırır.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire/s3.b2.text",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "Bu poetika **[[Sembolizm ve Baudelaire'in mirası]]** yolunu açar",
+   "gloss_fr": "Cette poétique ouvre la voie « Symbolisme et héritage de Baudelaire »",
+   "problem": "Le libellé de glossaire (titre d'article) remplace le mot « symbolisme » dans la phrase et la rend illisible ; idem en s4.b4.",
+   "fix": "Bu poetika **[[Sembolizm]]**in yolunu açar; onu daha sonra Verlaine ve Mallarmé taşır.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire/s4.b1.text",
+   "severity": "majeur",
+   "category": "nom_propre",
+   "current": "**[[Le Spleen de Paris]]** kitabında geliştirir; Paris üzerine kısa düz yazı şiirlerdir",
+   "gloss_fr": "dans le livre « Le Spleen de Paris » (titre non traduit)",
+   "problem": "Le recueil a un titre turc établi, « Paris Sıkıntısı » ; « düz yazı » est en outre écrit différemment de « Düzyazı » quelques mots plus haut.",
+   "fix": "Baudelaire bu biçimi ölümünden sonra yayımlanan **[[Paris Sıkıntısı]]** adlı kitabında geliştirir: Paris üzerine kısa düzyazı şiirler.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_122_la_naissance_de_l_impressionnisme/s1.b1.text",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "Kamu orada **Édouard Manet**'nin *Çimenler Üzerinde Öğle Yemeği* tablosunu keşfeder",
+   "gloss_fr": "Le secteur public y découvre « Déjeuner sur les herbes » de Manet",
+   "problem": "« Le public » rendu par « kamu » (l'État, le secteur public) ; et le tableau porte en turc le titre établi « Kırda Öğle Yemeği » (aussi en s4.b1.e0.detail).",
+   "fix": "Halk orada **Édouard Manet**'nin *Kırda Öğle Yemeği* tablosunu keşfeder: çıplak bir kadın, modern giyimli iki erkekle yemek yer.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_122_la_naissance_de_l_impressionnisme/s4.b1.e0.detail",
+   "severity": "majeur",
+   "category": "nom_propre",
+   "current": "Manet Çimenler Üzerinde Öğle Yemeği ile skandal yaratır.",
+   "gloss_fr": "Manet fait scandale avec « Déjeuner sur les herbes »",
+   "problem": "Titre d'œuvre non conforme à la forme turque établie « Kırda Öğle Yemeği ».",
+   "fix": "Manet, Kırda Öğle Yemeği ile skandal yaratır.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_122_la_naissance_de_l_impressionnisme/s1.b4.text",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "Manet akademisyenlerin yumuşak modelesini reddeder. Keskin karşıtlıklarla boyar.",
+   "gloss_fr": "Manet refuse le modelé doux des universitaires. Il peint (comme on peint un mur) en contrastes.",
+   "problem": "« les académiques » (peintres) pris pour « akademisyen » (universitaire) ; « boyamak » signifie peindre un mur, pas faire de la peinture.",
+   "fix": "Manet akademik ressamların yumuşak ışık-gölge geçişlerini reddeder. Keskin kontrastlarla resim yapar.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_122_la_naissance_de_l_impressionnisme/s2.b3.text",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Kimyager [[Michel-Eugène Chevreul]] esin kaynağı olur: gölgelerden siyahı kovar ve [[tamamlayıcı renkler]] tercih edilir",
+   "gloss_fr": "Le chimiste devient source d'inspiration : chasse le noir des ombres et les couleurs complémentaires sont préférées",
+   "problem": "Changement de sujet en cours de phrase (actif sans sujet puis passif) : la phrase est cassée.",
+   "fix": "Kimyager [[Michel-Eugène Chevreul]]'den esinlenerek gölgelerden siyahı kaldırır ve [[tamamlayıcı renkler]]i seçerler: turuncu ışık alan bir nesnenin gölgesine mavi.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_166_narcisse_et_echo/hero.hook",
+   "severity": "majeur",
+   "category": "autre",
+   "current": "Onun kendi sesi kalmamıştır. O yalnız kendine bakar.",
+   "gloss_fr": "Il/elle n'a plus sa propre voix. Il/elle ne regarde que lui/elle-même.",
+   "problem": "Le turc n'a pas de genre : « Elle… Il… » devient « O… O… » et le lecteur ne sait plus de qui on parle.",
+   "fix": "Ekho'nun artık kendi sesi yok. Narkissos'un gözü ise yalnızca kendini görüyor. Kavuşmaları imkânsız.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_166_narcisse_et_echo/s0.b0.text",
+   "severity": "majeur",
+   "category": "nom_propre",
+   "current": "Latin şair [[Ovid]], [[Metamorfozlar]] adlı eserinde … O, kendi sözünden yoksun bir peridir. O ise görüntüsüne kapılmış bir delikanlıdır.",
+   "gloss_fr": "Le poète latin « Ovid » (forme anglaise) … Il/elle est une nymphe… Il/elle est un jeune homme.",
+   "problem": "La forme turque établie est « Ovidius » (et « Romalı şair ») ; de plus l'opposition Elle/Lui est perdue avec « O … O ise ».",
+   "fix": "Romalı şair [[Ovidius]], [[Metamorfozlar]] adlı eserinde **Narkissos** ile **Ekho**'nun kesişen yazgısını anlatır. Ekho kendi sözünden yoksun bir peridir. Narkissos ise kendi görüntüsüne kapılmış bir delikanlı.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_166_narcisse_et_echo/s0.b1.text",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "İmkânsız aşkı, kayıtsızlığı ve yalnız kendini arzulamanın tuzağını konuşur.",
+   "gloss_fr": "Il « parle » (konuşmak = converser) l'amour impossible…",
+   "problem": "« parler de » calqué avec « konuşmak », qui ne prend pas ce complément ; il faut « anlatır ».",
+   "fix": "İmkânsız aşkı, kayıtsızlığı ve yalnızca kendini arzulamanın tuzağını anlatır.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_166_narcisse_et_echo/s4.b0.text",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "sarı kalpli, beyaz taç yapraklı bir çiçek",
+   "gloss_fr": "une fleur « au cœur jaune » (kalp = cœur organe/sentiment)",
+   "problem": "Pour une fleur, le turc dit « ortası/göbeği sarı », jamais « kalpli » ; de plus « Naiad'lar / Dryad'lar » met une apostrophe fautive avant le pluriel.",
+   "fix": "Su perileri [[Naiadlar]] ve ağaç perileri [[Dryadlar]] cenazeye geldiğinde beden yok olmuştur. Yerinde ortası sarı, taç yaprakları beyaz bir çiçek biter: **nergis**, delikanlının kendi görüntüsüne eğildiği gibi suya eğik.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_166_narcisse_et_echo/s4.b1.text",
+   "severity": "majeur",
+   "category": "typographie",
+   "current": "geriye bedsiz bir ses ve ruhsuz bir çiçek kalır",
+   "gloss_fr": "il ne reste qu'une voix « bedsiz » (coquille) et une fleur sans âme",
+   "problem": "Faute de frappe : « bedensiz » (sans corps).",
+   "fix": "geriye bedensiz bir ses ve ruhsuz bir çiçek kalır",
+   "surface": "courses"
+  },
+  {
+   "location": "course_207_l_otan_a_quoi_ca_sert_encore/s1.b0.text",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "on iki ülke Washington'da **[[Kuzey Atlantik Antlaşması]]** imzalar",
+   "gloss_fr": "douze pays signent Traité de l'Atlantique Nord (sans marque d'accusatif)",
+   "problem": "Complément d'objet défini sans suffixe d'accusatif ; faute qu'un natif remarque immédiatement.",
+   "fix": "on iki ülke Washington'da **[[Kuzey Atlantik Antlaşması]]**'nı imzalar",
+   "surface": "courses"
+  },
+  {
+   "location": "course_207_l_otan_a_quoi_ca_sert_encore/s2.b1.text",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Vladimir Putin bunu bir kışkırtma ve Soğuk Savaş sonunda verilen sözlerin bozulması olarak suçlar",
+   "gloss_fr": "Poutine « accuse » cela comme une provocation",
+   "problem": "« dénoncer » rendu par « suçlar » qui ne se construit pas avec « olarak » : phrase agrammaticale.",
+   "fix": "Vladimir Putin bunu bir kışkırtma ve Soğuk Savaş'ın sonunda verilen sözlerin çiğnenmesi olarak nitelendirir.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_18_la_grande_depression_1929/description",
+   "severity": "majeur",
+   "category": "typographie",
+   "current": "işsizlik Amerikalıların **25%**'ini vurur",
+   "gloss_fr": "le chômage touche 25 % (signe % après le nombre)",
+   "problem": "En turc le signe % se place avant le nombre (« %25 ») ; erreur répétée dans tout le cours (15%, 89%, 46%, 30%) alors que le cours 212 écrit correctement « %10 ».",
+   "fix": "işsizlik Amerikalıların **%25**'ini vurur",
+   "surface": "courses"
+  },
+  {
+   "location": "course_18_la_grande_depression_1929/s4.b2.text",
+   "severity": "majeur",
+   "category": "typographie",
+   "current": "Dow Jones değerinin **89%**'unu yitirir, Amerikalıların **25%**'i işsiz kalır",
+   "gloss_fr": "perd 89% de sa valeur, 25% des Américains… (signe % mal placé)",
+   "problem": "Même erreur de position du signe % ; une récap de fin de cours doit être irréprochable.",
+   "fix": "Dow Jones değerinin **%89**'unu yitirir, Amerikalıların **%25**'i işsiz kalır",
+   "surface": "courses"
+  },
+  {
+   "location": "course_18_la_grande_depression_1929/s1.b2.text",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "brokerlar sanal bir leyleği asmış",
+   "gloss_fr": "des courtiers auraient pendu une cigogne « virtuelle » (numérique)",
+   "problem": "« virtuelle » (symbolique, en effigie) rendu par « sanal », qui évoque le numérique en 1929.",
+   "fix": "Çöküş günü Chicago Borsası'nda brokerlar sembolik olarak bir leylek asmış: refah yerine felaket getirdiği için suçlanmış.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_18_la_grande_depression_1929/s3.b1.text",
+   "severity": "majeur",
+   "category": "typographie",
+   "current": "kırılgan Alman cumhuriyeti [[Weimar'ın]] aleyhine",
+   "gloss_fr": "contre « Weimar'ın » (suffixe de génitif à l'intérieur des crochets du glossaire)",
+   "problem": "Le suffixe est entré dans le balisage [[…]] : la clé de glossaire ne correspond plus au terme.",
+   "fix": "Adolf Hitler umutsuzluğu kırılgan Alman cumhuriyeti [[Weimar]]'a karşı kullanır.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_18_la_grande_depression_1929/s4.b0.text",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "[[Roosevelt'in Yeni Anlaşması (1933)]] programını başlatır",
+   "gloss_fr": "lance le programme « Nouvel Accord de Roosevelt »",
+   "problem": "« New Deal » est traduit ici alors qu'il reste « New Deal » dans le titre de section et la frise ; en turc on dit « New Deal ».",
+   "fix": "**1932**'de seçilen **Franklin D. Roosevelt**, [[Roosevelt'in New Deal'i (1933)]] programını başlatır.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_107_crime_et_chatiment_dostoievski/s1.b0.text",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "**Semenovski** meydanında sahte bir idam mangası görür",
+   "gloss_fr": "il « voit » un faux peloton d'exécution sur la place Semenovski",
+   "problem": "« subit un simulacre de fusillade » : il est lui-même soumis à une fausse exécution, il ne la « voit » pas.",
+   "fix": "**1849**'da **[[Petraşevski Grubu]]** üyesi olarak **Semyonovski** Meydanı'nda sahte bir idamla yüz yüze gelir. Sonra Sibirya'daki **[[Omsk Kalesi]]**'nde dört yıl kürek cezasına gönderilir.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_212_les_paradis_fiscaux_expliques/subtitle",
+   "severity": "majeur",
+   "category": "autre",
+   "current": "Gizlenen 10.000 milyar",
+   "gloss_fr": "10 000 milliards planqués (le turc ne compte pas en milliers de milliards)",
+   "problem": "Le turc dit « 10 trilyon » (comme dans le titre) ; « 10.000 milyar » est un calque numérique incohérent avec le titre.",
+   "fix": "Gizlenen 10 trilyon dolar",
+   "surface": "courses"
+  },
+  {
+   "location": "course_212_les_paradis_fiscaux_expliques/s0.b0.text",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Orada yaklaşık 10.000 milyar dolar, yani dünya servetinin %8-10'u, durduğu tahmin edilir.",
+   "gloss_fr": "On estime qu'« environ 10 000 milliards » (sans génitif) « se tient » là",
+   "problem": "La proposition complétive exige le génitif (« doların … durduğu ») ; « durmak » est en outre impropre pour de l'argent logé.",
+   "fix": "Orada yaklaşık 10 trilyon doların, yani dünya servetinin %8-10'unun tutulduğu tahmin edilir.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_212_les_paradis_fiscaux_expliques/description",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "opak topraklarda vergiden kaçar",
+   "gloss_fr": "échappe à l'impôt dans des « terres opaques » (opak = terme de physique)",
+   "problem": "« opaque » au sens figuré ne se dit pas « opak » en turc, et « territoires » n'est pas « topraklar » ; calque répété dans tout le cours.",
+   "fix": "Dünya servetinin yaklaşık %10'u, gizliliğin hüküm sürdüğü bölgelerde vergiden kaçıyor.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_212_les_paradis_fiscaux_expliques/s1.b1.text",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "bir perde şirket kurmak mümkündür",
+   "gloss_fr": "créer une société « rideau »",
+   "problem": "Le terme turc établi pour « société écran » est « paravan şirket ».",
+   "fix": "Bu bölgelerin birçoğunda paravan şirket kurmak mümkündür: ofisi de çalışanı da olmayan, yalnızca kâğıt üstünde var olan bir şirket.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_174_ulysse_et_les_sirenes/hero.hook",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Odysseus duymak ister ve canlı kalmak.",
+   "gloss_fr": "Ulysse veut entendre et rester vivant (verbe rejeté après « et », structure impossible en turc)",
+   "problem": "Reproduction de la syntaxe française avec points de suspension : phrase agrammaticale en turc.",
+   "fix": "Odysseus hem dinlemek hem de hayatta kalmak ister.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_174_ulysse_et_les_sirenes/s0.b0.text",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "**Odysseia**'nın on ikinci şarkısında Odysseus **[[Sirenler]]** yanından geçmek zorundadır.",
+   "gloss_fr": "Dans la douzième « chanson » de l'Odyssée, Ulysse doit passer à côté « Sirènes » (sans génitif)",
+   "problem": "« chant » (division du poème) se dit « bölüm » en turc, pas « şarkı » ; et « Sirenlerin yanından » exige le génitif.",
+   "fix": "**Odysseia**'nın on ikinci bölümünde Odysseus **[[Sirenler]]**in yanından geçmek zorundadır.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_174_ulysse_et_les_sirenes/s2.b2.text",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Odysseus sakinliğini yitirir ve çözülmeyi bağırır.",
+   "gloss_fr": "Ulysse perd son calme et « crie l'être-détaché »",
+   "problem": "« crier qu'on le détache » calqué ; « çözülmeyi bağırmak » n'existe pas.",
+   "fix": "Odysseus sakinliğini yitirir ve kendisini çözmeleri için bağırır.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_174_ulysse_et_les_sirenes/s3.b1.text",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "1990'da NASA ve ESA bir sonda **Ulysses** adını verir.",
+   "gloss_fr": "la NASA et l'ESA donnent le nom Ulysses « une sonde » (sans datif)",
+   "problem": "« ad vermek » exige le datif : « bir sondaya ».",
+   "fix": "1990'da NASA ve ESA bir uzay sondasına **Ulysses** adını verir. Kahraman gibi o da bilinen yolların dışına çıkar ve Güneş'in kutuplarını keşfe gider.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_174_ulysse_et_les_sirenes/s3.b2.text",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "Ona [[Dürtmek]], “hafif bir itiş” ya da kendini kendinden koruyan kurallar gerekir",
+   "gloss_fr": "Il lui faut « pousser du coude » (infinitif), un « petit coup »…",
+   "problem": "Le concept « nudge » est connu en turc sous « dürtme » (titre du livre de Thaler) ; l'infinitif « Dürtmek » rend la phrase agrammaticale.",
+   "fix": "Ona bir [[Dürtme]], yani “hafif bir itiş” ya da onu kendisinden koruyan kurallar gerekir: tasarruf hesabına otomatik havale, sosyal medyayı engelleyen uygulamalar.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_174_ulysse_et_les_sirenes/s4.b0.text",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Kilise Sirenleri şehvet simgesi okur.",
+   "gloss_fr": "L'Église « lit » les Sirènes symbole de luxure",
+   "problem": "« lire comme » calqué avec « okumak », qui ne prend pas ce sens en turc.",
+   "fix": "Kilise, Sirenleri şehvetin simgesi olarak yorumlar. Odysseus'un direği bazen haça benzetilir: ayartmaya karşı bir siper.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_68_la_theorie_de_la_relativite_pour_tous/s3.b2.text",
+   "severity": "majeur",
+   "category": "mt_artefact",
+   "current": "GPS konum hatası günde yaklaşık **11 km**'ye çıkabilirdi, hızla.",
+   "gloss_fr": "l'erreur pourrait atteindre 11 km par jour, « rapidement » (mot ajouté en suspens)",
+   "problem": "« , hızla » est un résidu sans rapport avec la source qui casse la phrase.",
+   "fix": "Görelilik düzeltmeleri olmasa GPS'in konum hatası günde yaklaşık **11 km**'ye çıkabilirdi.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_68_la_theorie_de_la_relativite_pour_tous/s3.b3.text",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Bilanço, günde yaklaşık **38 mikrosaniye** net bir ilerlemedir. Minicik durur. Işık hızında bu, seyrüsefer için çoktan kocaman bir sapmadır.",
+   "gloss_fr": "Le « bilan comptable » est une avance… « Ça se tient tout petit ». À la vitesse de la lumière c'est « déjà énorme-énorme »",
+   "problem": "« Bilanço » (bilan comptable), « Minicik durur » et « kocaman » (registre enfantin) : trois calques en trois phrases.",
+   "fix": "Sonuçta günde yaklaşık **38 mikrosaniye** net bir ilerleme kalır. Kulağa çok küçük geliyor. Ama ışık hızında bu, konum bulma için şimdiden devasa bir fark.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_218_le_role_des_donnees_le_petrole_du_xxie_s/s2.b0.text",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Veri ekonomisi erdemli bir çemberle işler",
+   "gloss_fr": "L'économie des données fonctionne par un cercle « vertueux » (moralement)",
+   "problem": "« cercle vertueux » n'existe pas en turc ; on dit « kendini besleyen döngü » ou « olumlu döngü ».",
+   "fix": "Veri ekonomisi kendini besleyen bir döngüyle işler: bir şirketin verisi arttıkça hizmeti iyileşir, bu daha çok kullanıcı çeker, onlar da daha çok veri üretir.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_218_le_role_des_donnees_le_petrole_du_xxie_s/s4.b2.text",
+   "severity": "majeur",
+   "category": "autre",
+   "current": "…yanıt verir: GDPR. Mahremiyeti korumak, bu yeni iktidarın yurttaşı değil yalnızca müşteriyi görmesini engellemenin yolu haline gelir. Veriyi kim tutarsa, yarının pazarını da o çizer.",
+   "gloss_fr": "Deux phrases ajoutées (« Protéger la vie privée devient le moyen… Qui tient les données dessine le marché de demain ») absentes du français",
+   "problem": "La récap turque contient deux phrases inventées qui n'existent pas dans la source.",
+   "fix": "Veri, değerini davranışlarımızı tahmin etme gücünden alan stratejik bir varlık oldu. Bu ekonomi neredeyse rakipsiz teknoloji devlerini kayırır; Avrupa buna katı bir düzenlemeyle yanıt verir: GDPR.",
+   "surface": "courses"
+  },
+  {
+   "location": "offer.expiresIn",
+   "severity": "majeur",
+   "category": "mt_artefact",
+   "current": "Süresi doluyor",
+   "gloss_fr": "« Est en train d'expirer »",
+   "problem": "Étiquette suivie d'un compte à rebours : « Süresi doluyor » ne se construit pas avec une durée, et paywall.discount.endsIn dit déjà « Kalan süre ».",
+   "fix": "Kalan süre",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.loading.title",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "Yolunu hazırlıyoruz",
+   "gloss_fr": "« Nous préparons ta route »",
+   "problem": "« Yolunu hazırlamak » signifie « préparer le chemin à quelqu'un » ; le même écran dit « Yolculuğun hazırlanıyor » (step3).",
+   "fix": "Yolculuğunu hazırlıyoruz",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.objective.reduceScroll",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Daha az kaydırmak",
+   "gloss_fr": "« Faire glisser moins »",
+   "problem": "« kaydırmak » (geste de glisser) ne désigne pas en turc l'habitude de scroller ; en option de sondage, c'est incompréhensible.",
+   "fix": "Telefonda daha az vakit geçirmek",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.program.hoursSaved",
+   "severity": "majeur",
+   "category": "non_traduit",
+   "current": "%d h",
+   "gloss_fr": "« %d h »",
+   "problem": "« h » n'est pas une abréviation turque de l'heure (« sa » ou « saat ») ; l'unité voisine hoursUnit dit déjà « saat/yıl ».",
+   "fix": "%d saat",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.projection.its (+ newThings, inOneYear)",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Bu + %d + yeni şey öğreneceksin + — bir yılda.",
+   "gloss_fr": "« Ça [150] nouvelles choses tu apprendras — en un an. »",
+   "problem": "La phrase assemblée est agrammaticale : « Bu … öğreneceksin » ne se construit pas et le complément de temps traîne en fin.",
+   "fix": "its: « Yani » / newThings: « yeni şey öğrenmiş olacaksın » / inOneYear: « — bir yıl içinde. »",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.showcase.collections.title",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "Temalara göre⏎parkurları izle",
+   "gloss_fr": "« Suis les parcours (sportifs/d'obstacles) par thèmes »",
+   "problem": "« parkur » désigne un parcours sportif ; pour un parcours d'apprentissage le turc dit « rota » (déjà utilisé dans onboardingV2.intro.route).",
+   "fix": "Tematik⏎rotaları takip et",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.trial.notifyTitle",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "Ücretsiz denemen bitmeden⏎1 gün önce⏎haberin olsun",
+   "gloss_fr": "« Sache-le : 1 jour avant la fin de ton essai gratuit »",
+   "problem": "L'impératif « haberin olsun » (« tiens-le-toi pour dit ») transforme la promesse de notification en avertissement.",
+   "fix": "Ücretsiz denemen bitmeden⏎1 gün önce⏎sana haber veririz",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.weeks.title (+ .one, .other)",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Bu yılda %d hafta demektir",
+   "gloss_fr": "« Cette année, ça fait %d semaines »",
+   "problem": "« Bu yılda » se lit d'abord « cette année » ; l'anaphore « bu » + locatif est ambiguë.",
+   "fix": "Yani yılda %d hafta",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.exams.quote4",
+   "severity": "majeur",
+   "category": "mt_artefact",
+   "current": "Hareket halindeyken tekrar yapmak için mükemmel. Öğretmenlerim farkı fark etti.",
+   "gloss_fr": "« Parfait pour réviser en étant en mouvement. Mes profs ont remarqué la remarque. »",
+   "problem": "« hareket halindeyken » calque « on the go » et « farkı fark etti » est une répétition maladroite.",
+   "fix": "Yolda tekrar yapmak için mükemmel. Öğretmenlerim farkı gördü.",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.mission.body2",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "Profesörlerden ve tasarımcılardan oluşan ekibimiz…",
+   "gloss_fr": "« Notre équipe de professeurs d'université et de designers… »",
+   "problem": "« profs » = enseignants ; « profesör » est un titre universitaire en turc (surenchère héritée de l'anglais).",
+   "fix": "Öğretmenlerden ve tasarımcılardan oluşan ekibimiz, tek bir misyon için harika içerikler üretmeye devam etmek adına sana güveniyor: öğrenmeyi kolaylaştırmak.",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.review.t1.quote",
+   "severity": "majeur",
+   "category": "mt_artefact",
+   "current": "Daha az kaydırdığım ve Sophia'yı kullandığım için aslında çok daha fazlasını hatırladığımı hissediyorum.",
+   "gloss_fr": "« Parce que je fais moins glisser et que j'utilise Sophia, je sens qu'en fait je me souviens de beaucoup plus. »",
+   "problem": "« kaydırmak » pour scroller, « aslında » calqué de « actually », causale lourde : témoignage visiblement traduit.",
+   "fix": "Daha az scroll yapıp Sophia'yı kullanmaya başladığımdan beri çok daha fazlası aklımda kalıyor.",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.review.t2.quote",
+   "severity": "majeur",
+   "category": "mt_artefact",
+   "current": "Sabah trende 10 dakikam var ve akşam konuşacak bir şeyim var. Gerçekten bağlandım.",
+   "gloss_fr": "« Le matin dans le train j'ai 10 minutes et le soir j'ai quelque chose à dire. Je me suis vraiment connecté/attaché. »",
+   "problem": "« 10 dakikam var » est un contresens et « bağlandım » (connecté/attaché) ne veut pas dire « accro ».",
+   "fix": "Sabah metroda 10 dakika, akşam anlatacak bir şeyim oluyor. Açıkçası bağımlısı oldum.",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.review.t3.quote",
+   "severity": "majeur",
+   "category": "mt_artefact",
+   "current": "“Çalışmaktan” hep nefret ettim, ama bu kendiliğinden yerleşiyor.",
+   "gloss_fr": "« J'ai toujours détesté « travailler », mais ça s'installe tout seul. »",
+   "problem": "« çalışmak » seul = travailler ; « yerleşiyor » (s'installer) n'est pas l'idiome pour « ça rentre tout seul ».",
+   "fix": "“Ders çalışmaktan” hep nefret ettim ama bu kendiliğinden aklımda kalıyor. Hafızam beni şaşırtıyor.",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.review.t4.quote",
+   "severity": "majeur",
+   "category": "mt_artefact",
+   "current": "Sonsuz kaydırmamı bir dersle değiştiriyorum. Bir ay içinde çevremdeki insanlar farkı fark etti.",
+   "gloss_fr": "« Je change mon glissement infini avec une leçon. En un mois les gens autour ont remarqué la remarque. »",
+   "problem": "« sonsuz kaydırmam » et « farkı fark etti » sont des constructions machine.",
+   "fix": "Bitmek bilmeyen scroll yerine artık bir kurs okuyorum. Bir ayda çevremdekiler farkı gördü.",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.review.t6.quote",
+   "severity": "majeur",
+   "category": "registre",
+   "current": "Aralıklı testler sihirlidir: Haftalar önce öğrendiğim şeyleri denemeden bile hatırlıyorum.",
+   "gloss_fr": "« Les tests espacés sont magiques (vérité générale) : … sans même essayer. »",
+   "problem": "« -dir » encyclopédique dans un témoignage, « test » au lieu du terme produit « quiz », « denemeden bile » calque de « without even trying ».",
+   "fix": "Aralıklı quizler sihir gibi: haftalar önce öğrendiğim şeyleri hiç çabalamadan hatırlıyorum.",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.rightPlace.ofUsers (+ caption)",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "%d + kullanıcıların + …bu hedefi olan kullanıcılar Sophia ile gerçekten ilerliyor.",
+   "gloss_fr": "« 78 % des utilisateurs… les utilisateurs ayant cet objectif progressent »",
+   "problem": "Le génitif « kullanıcıların » reste en suspens et « kullanıcılar » est répété : l'assemblage ne forme pas une phrase turque.",
+   "fix": "ofUsers: « oranında » / caption: « …bu hedefi olan kullanıcı Sophia ile gerçekten ilerliyor. »",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.training.stat1.value (+ stat2.value)",
+   "severity": "majeur",
+   "category": "typographie",
+   "current": "+200% / 90%",
+   "gloss_fr": "« +200% / 90% »",
+   "problem": "En turc le signe % se place avant le nombre (« %70 », « %89 » ailleurs dans l'app).",
+   "fix": "+%200 / %90",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.training.stat1.label",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "aralıklı tekrarlama ile akılda kalıcılık, sadece yeniden okuma ile karşılaştırıldığında",
+   "gloss_fr": "« rétention avec répétition espacée, lorsque comparé à une simple relecture »",
+   "problem": "Phrase lourde et « aralıklı tekrarlama » diverge de « aralıklı tekrar » utilisé ailleurs.",
+   "fix": "daha fazla akılda kalıcılık: aralıklı tekrar, sadece yeniden okumaya göre",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.training.stat2.label",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "öğrendiklerimiz bir hafta içinde unutulur… tekrar olmadan",
+   "gloss_fr": "« ce que nous apprenons est oublié en une semaine… sans révision » (après « 90% »)",
+   "problem": "Assemblé « %90 öğrendiklerimiz … unutulur » manque le partitif ; il faudrait « öğrendiklerimizin %90'ı ».",
+   "fix": "oranında öğrenilen bilgi bir hafta içinde unutuluyor… tekrar yapılmazsa",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.training.footnote",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Aralıklı tekrar, bilginin kalması için en kanıtlı yöntem.",
+   "gloss_fr": "« …la méthode la plus prouvée »",
+   "problem": "« en kanıtlı » (adjectif non graduable) n'existe pas en turc.",
+   "fix": "Aralıklı tekrar, bilgiyi kalıcı hale getirmenin en iyi kanıtlanmış yöntemi.",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.blocker.subtitle (+ .noTrial, paywall.blocker.title)",
+   "severity": "majeur",
+   "category": "non_traduit",
+   "current": "Blocker'ı denemek için {n} gün ücretsiz deneme.",
+   "gloss_fr": "« {n} jours d'essai gratuit pour essayer le blocker »",
+   "problem": "« blocker » reste en anglais alors que l'app traduit « engelleyici » (TikTok engelleyici) ; « denemek… deneme » répété.",
+   "fix": "Engelleyiciyi denemek için {n} gün ücretsiz. / Engelleyiciyi Sophia PRO ile aç. / Engelleyici ile zamanının kontrolünü nihayet eline al.",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.cta.continueFor",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "%@ karşılığında devam et",
+   "gloss_fr": "« Continuer en contrepartie de %@ »",
+   "problem": "« karşılığında » (en échange de) alourdit un bouton ; un Turc attend « %@ ile devam et ».",
+   "fix": "%@ ile devam et",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.error.notAllowed",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Bu satın alma bu cihazda veya Google hesabında izinli değil.",
+   "gloss_fr": "« Cet achat n'est pas « en permission » sur cet appareil ou compte Google »",
+   "problem": "« izinli » qualifie une personne (en congé/autorisée), pas une action ; double « bu ».",
+   "fix": "Bu satın alma işlemine bu cihazda ya da bu Google hesabında izin verilmiyor.",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.error.unavailable",
+   "severity": "majeur",
+   "category": "mt_artefact",
+   "current": "Ödeme duvarı yüklenemiyor",
+   "gloss_fr": "« Impossible de charger le mur de paiement »",
+   "problem": "Jargon interne « paywall » traduit littéralement et exposé à l'utilisateur ; le FR dit « l'offre ».",
+   "fix": "Teklif yüklenemedi",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.review2.quote",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Sonunda kaydırmayı kültüre dönüştüren bir uygulama.",
+   "gloss_fr": "« Enfin une app qui transforme le glissement en culture. »",
+   "problem": "« kaydırma » n'évoque pas le scroll compulsif pour un Turc.",
+   "fix": "Sonunda scroll'u kültüre çeviren bir uygulama.",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.review3.quote",
+   "severity": "majeur",
+   "category": "mt_artefact",
+   "current": "Kurslar kısa ve eğlenceli, aslında onları hatırlıyorum.",
+   "gloss_fr": "« Les cours sont courts et amusants, en fait je me souviens d'eux. »",
+   "problem": "« aslında onları hatırlıyorum » calque mot à mot « I actually remember them ».",
+   "fix": "Kurslar kısa ve eğlenceli, üstelik gerçekten aklımda kalıyor.",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.reviews.r2.quote",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Abonelik bir haftada kendini çıkardı.",
+   "gloss_fr": "« L'abonnement s'est sorti lui-même en une semaine. »",
+   "problem": "« kendini çıkarmak » n'est pas l'idiome ; on dit « parasını çıkarmak ».",
+   "fix": "Abonelik bir haftada parasını çıkardı. Günde birkaç kurs okuyorum.",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.unlock.unlimited",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "Sınırsız ders",
+   "gloss_fr": "« Leçons illimitées »",
+   "problem": "Sur le même paywall, paywall.feature.unlimitedCourses dit « Sınırsız kurs » ; cours = kurs.",
+   "fix": "Sınırsız kurs",
+   "surface": "ui"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/s0.b0.text",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "bugünkü Suudi Arabistan'daki Mekke'nin bir tüccarı kentinden kaçmak zorunda kalır … Müslüman takviminin 1. yılı olur",
+   "gloss_fr": "un marchand « de La Mecque » (génitif lourd) … l'an 1 du « calendrier musulman »",
+   "problem": "« Mekke'nin bir tüccarı » est lourd (on dit « Mekkeli bir tüccar ») et le turc parle de « Hicri takvim », pas de « Müslüman takvimi ».",
+   "fix": "**622**'de, bugünkü Suudi Arabistan'daki Mekke'den bir tüccar kentinden kaçmak zorunda kalır. … Daha sonra bu tarih Hicri takvimin 1. yılı olur.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/s0.b1.text",
+   "severity": "mineur",
+   "category": "mt_artefact",
+   "current": "Henüz kimse görmez. … İşte her şeyin nasıl başladığı.",
+   "gloss_fr": "Personne ne voit encore (sans objet). … Voici le comment-tout-a-commencé (nominalisation).",
+   "problem": "« Voici comment… » calqué en nominalisation ; le turc idiomatique est « İşte her şey böyle başladı ». Motif récurrent.",
+   "fix": "Henüz kimse bunu fark etmez. … İşte her şey böyle başladı.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/s1.b0.text",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Çöl göçebeleri [[Bedeviler]], Mekke gibi birkaç ticaret kentine komşu olur. … Hacılar oraya akar, parayla birlikte.",
+   "gloss_fr": "Les Bédouins « deviennent voisins » de villes… Les pèlerins y affluent, « avec l'argent » (rejeté)",
+   "problem": "« côtoient » et « et avec eux l'argent » calqués mot à mot.",
+   "fix": "Çöl göçebeleri [[Bedeviler]], Mekke gibi birkaç ticaret kentiyle yan yana yaşar. … Hacılar oraya akın eder, onlarla birlikte para da.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/s1.b2.text",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "putlardan yaşayan Mekke ticaretini",
+   "gloss_fr": "le commerce de La Mecque « qui vit des idoles » (calque)",
+   "problem": "« vivre de » se dit « geçinmek » en turc.",
+   "fix": "putlarla geçinen Mekke ticaretini",
+   "surface": "courses"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/s2.b0.text",
+   "severity": "mineur",
+   "category": "nom_propre",
+   "current": "[[Medine Anayasası]] kaleme alınır",
+   "gloss_fr": "la « Constitution de Médine » est rédigée",
+   "problem": "Le document est connu en turc sous « Medine Sözleşmesi » (ou « Medine Vesikası ») ; à aligner avec la clé de glossaire.",
+   "fix": "Klanlar arasında bir sözleşme olan [[Medine Sözleşmesi]]'ni kaleme alır",
+   "surface": "courses"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/s2.b3.text",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Sayıca geride oldukları halde sadıkları **624**'te **Bedir**'de üstün gelir. Bu zafer bir mucize gibi yaşanır.",
+   "gloss_fr": "Bien qu'« en arrière en nombre », « ses fidèles (sadık = loyal) » l'emportent. Cette victoire « est vécue » comme un miracle.",
+   "problem": "« sadıkları » et « geride olmak » ne sont pas idiomatiques ; « est vécue comme » calqué.",
+   "fix": "Sayıca az olmalarına rağmen taraftarları **624**'te **Bedir**'de üstün gelir. Bu zafer bir mucize olarak görülür.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/s3.b3.e0.detail",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Medine'ye gidiş, Müslüman çağının başlangıcı.",
+   "gloss_fr": "Départ pour Médine, début de « l'âge musulman »",
+   "problem": "« ère musulmane » se dit « Hicri takvim » en turc.",
+   "fix": "Medine'ye göç, Hicri takvimin başlangıcı.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/s3.b3.e2.detail",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Topluluk direnir ve otoritesini dayatır.",
+   "gloss_fr": "La communauté résiste et « impose de force » son autorité",
+   "problem": "« imposer » systématiquement rendu par « dayatmak », connoté négativement (forcer) ; ici « kabul ettirir ».",
+   "fix": "Topluluk direnir ve otoritesini kabul ettirir.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/s4.b2.text",
+   "severity": "mineur",
+   "category": "typographie",
+   "current": "Hem öz çaba hem topluluğun savunması olan [[Cihat]] … Antikçağ yavaş yavaş kapanır.",
+   "gloss_fr": "le djihad, « effort propre »… « L'Antiquité » (écrit en un mot, contrairement au nom de catégorie)",
+   "problem": "« öz çaba » est obscur et « Antikçağ » diverge de « Antik Çağ » utilisé dans la catégorie.",
+   "fix": "Hem nefisle mücadele hem topluluğun savunması anlamına gelen [[Cihat]] idealiyle de taşınan İslam uygarlığı … Antik Çağ yavaş yavaş kapanır.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/s4.b3.text",
+   "severity": "mineur",
+   "category": "registre",
+   "current": "Muhammed tinsel bir mesajı gerçek bir siyasi güce çevirmiştir",
+   "gloss_fr": "a transformé un message « tinsel » (mot puriste rare pour spirituel)",
+   "problem": "« tinsel » est un néologisme puriste peu courant ; « manevi » est le mot naturel, surtout pour un ado.",
+   "fix": "Muhammed manevi bir mesajı gerçek bir siyasi güce dönüştürmüştür",
+   "surface": "courses"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire/s0.b0.text",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "O zamana dek **[[Romantizm]]** hüküm sürer: şairler doğayı ve büyük duyguları idealleştirir.",
+   "gloss_fr": "Jusque-là le Romantisme « domine » (présent) : les poètes idéalisent",
+   "problem": "« O zamana dek » appelle un passé (imparfait français) ; le présent est incohérent.",
+   "fix": "O zamana dek **[[Romantizm]]** hüküm sürüyordu: şairler doğayı ve büyük duyguları idealleştiriyordu.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire/s0.b1.text",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Baudelaire yine de sert bir fikri savunur",
+   "gloss_fr": "défend une idée « dure/sévère »",
+   "problem": "« idée forte » = « güçlü bir fikir » ; « sert » signifie dur.",
+   "fix": "Baudelaire yine de güçlü bir fikri savunur",
+   "surface": "courses"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire/s1.b0.text",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "**lanetli şair** tipini cisimleştirir: çağının kenarında duran, sevilmeyen bir yazar",
+   "gloss_fr": "« corporifie » le type du poète maudit : un écrivain « debout au bord » de son époque",
+   "problem": "« incarner » et « en marge » calqués ; formulation raide.",
+   "fix": "**lanetli şair**in ta kendisidir: çağının dışına itilmiş, sevilmeyen bir yazar",
+   "surface": "courses"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire/s1.b1.text",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "üvey baba General **Aupick** ile kavga eder",
+   "gloss_fr": "se dispute avec « beau-père Général Aupick » (sans possessif)",
+   "problem": "Le possessif « üvey babası » est nécessaire.",
+   "fix": "Servetinin bir kısmını elinde tutan üvey babası General **Aupick** ile kavga eder.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire/s2.b1.text",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "Geminin güvertesinde beceriksiz ve gülünç düşer.",
+   "gloss_fr": "Sur le pont il « tombe » maladroit et ridicule",
+   "problem": "« düşmek » ne se combine pas ainsi ; il faut « olur » ou « duruma düşer ».",
+   "fix": "Geminin güvertesinde ise beceriksiz ve gülünç bir hale düşer.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire/s3.b0.text",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Sık sık 14 dizelik **sone** yazar, ya da 12 hecelik **aleksandren**. Ama bu eski kalıplara yeni bir bakış sokar.",
+   "gloss_fr": "Il écrit souvent en sonnet, « ou en alexandrin » (rejeté après la virgule). Il « fourre » une vision neuve",
+   "problem": "Ordre des mots français conservé ; « sokmak » est familier/brutal.",
+   "fix": "Sık sık 14 dizelik **sone** ya da 12 heceli **aleksandren** ölçüsüyle yazar. Ama bu eski kalıplara yeni bir bakış katar.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire/s4.b2.e0.title",
+   "severity": "mineur",
+   "category": "autre",
+   "current": "Yayımlanış",
+   "gloss_fr": "« Publication » (nominalisation inhabituelle)",
+   "problem": "Forme rare ; « Yayımlanma » ou « Yayım » est le mot naturel.",
+   "fix": "Yayımlanma",
+   "surface": "courses"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire/s4.b3.text",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "toplumun gizlemek istediğini gören bir kenar figürü olur. **Kötülük Çiçekleri** önce skandal çıkarır, sonra sonraki yüzyılın referansı olur.",
+   "gloss_fr": "devient une « figure de bord »… puis « ensuite du suivant » siècle",
+   "problem": "« marginal » calqué en « kenar figürü » ; « sonra sonraki » répétition maladroite.",
+   "fix": "toplumun gizlemeyi tercih ettiğini gören bir marjinal olur. **Kötülük Çiçekleri** önce skandal yaratır, ardından bütün bir sonraki yüzyılın referansı olur.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_122_la_naissance_de_l_impressionnisme/hero.hook",
+   "severity": "mineur",
+   "category": "typographie",
+   "current": "Bir eleştirmenin hakareti, ve modern sanatın ilk büyük akımının bir adı olur.",
+   "gloss_fr": "Une insulte de critique, « virgule et » …",
+   "problem": "Pas de virgule avant « ve » en turc ; calque de la ponctuation française (aussi dans le hook du cours 1929).",
+   "fix": "Bir eleştirmenin hakareti ve modern sanatın ilk büyük akımının artık bir adı var.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_122_la_naissance_de_l_impressionnisme/s0.b0.text",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "[[Resmi Paris Salonu]] yüzünden usanmış otuz kadar sanatçı … eleştirmen Louis Leroy'nun alayını çeker",
+   "gloss_fr": "une trentaine d'artistes « lassés à cause du » Salon … « attire la moquerie » de Leroy (suffixe calculé sur la graphie)",
+   "problem": "« yüzünden usanmış » et « alayını çeker » sont calqués ; le suffixe doit suivre la prononciation « Lörua » : « Leroy'nın ».",
+   "fix": "[[Resmi Paris Salonu]]'ndan bıkmış otuz kadar sanatçı … eleştirmen Louis Leroy'nın alaylarına hedef olur",
+   "surface": "courses"
+  },
+  {
+   "location": "course_122_la_naissance_de_l_impressionnisme/s1.b2.caption",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Manet, nü ile çağdaş hayatı karıştırarak Salon'u şoke eder",
+   "gloss_fr": "Manet choque en « confondant » nu et vie contemporaine",
+   "problem": "« mêler » rendu par « karıştırmak » qui signifie aussi confondre/embrouiller.",
+   "fix": "Manet, nü ile çağdaş hayatı bir araya getirerek Salon'u şoke eder",
+   "surface": "courses"
+  },
+  {
+   "location": "course_122_la_naissance_de_l_impressionnisme/s2.b2.text",
+   "severity": "mineur",
+   "category": "nom_propre",
+   "current": "Monet bazen Seine'in ortasından, yansımalara daha yakın boyamak için atölyeye çevrilmiş küçük bir kayık kiralar.",
+   "gloss_fr": "Monet loue (présent) un bateau pour « peindre (boyamak) » depuis le milieu de « la Seine » (nom français)",
+   "problem": "Le fleuve se dit « Sen Nehri » en turc ; l'imparfait de l'anecdote devient un présent ; « boyamak » pour peindre un tableau.",
+   "fix": "Monet bazen, yansımalara daha yakından bakıp resim yapmak için atölyeye çevrilmiş küçük bir kayık kiralar ve Sen Nehri'nin ortasına açılırdı.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_122_la_naissance_de_l_impressionnisme/s3.b2.text",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Tacir [[Paul Durand-Ruel]] onları destekler … sekiz sergi yeni bir fikri dayatır: doğanın donmuş bir kopyasını değil, duyumu resmetmek.",
+   "gloss_fr": "Le « négociant » Durand-Ruel… huit expositions « imposent de force » une idée : peindre « la sensation (terme de psychologie) »",
+   "problem": "« marchand d'art » = « sanat tüccarı » ; « dayatmak » connoté ; « duyum » est trop technique pour un ado.",
+   "fix": "Sanat tüccarı [[Paul Durand-Ruel]] onları destekler ve Amerikan pazarını kazanır. 1874 ile 1886 arasında sekiz sergi yeni bir fikri yerleştirir: doğanın donmuş bir kopyasını değil, hissedileni resmetmek.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_122_la_naissance_de_l_impressionnisme/s4.b1.e1.detail",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Nadar'da Leroy “empresyonistler” sözcüğünü uydurur.",
+   "gloss_fr": "Leroy « invente de toutes pièces / bricole » le mot",
+   "problem": "« uydurmak » évoque un mensonge ou un bricolage ; « icat etmek » ou « ortaya atmak » convient.",
+   "fix": "Nadar'da Leroy “empresyonistler” sözcüğünü ortaya atar.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_122_la_naissance_de_l_impressionnisme/s4.b1.e2.detail",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Grup yeni bir resim özgürlüğünü dayattı.",
+   "gloss_fr": "Le groupe a « imposé de force » une nouvelle liberté",
+   "problem": "« imposer » → « dayatmak » (motif récurrent) ; contradictoire avec « liberté ».",
+   "fix": "Grup yeni bir resim özgürlüğünü kabul ettirdi.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_122_la_naissance_de_l_impressionnisme/s4.b2.text",
+   "severity": "mineur",
+   "category": "nom_propre",
+   "current": "[[Musée d'Orsay]] koleksiyonunun en çok ziyaret edilenlerindendir",
+   "gloss_fr": "parmi les plus « visitées » de la collection du « Musée d'Orsay » (nom français)",
+   "problem": "On dit « Orsay Müzesi » en turc ; et on ne « visite » pas un tableau, on le regarde.",
+   "fix": "Bugün bir zamanlar alay edilen bu tablolar, [[Orsay Müzesi]]'nin en çok görülen eserleri arasındadır.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_166_narcisse_et_echo/s1.b0.text",
+   "severity": "mineur",
+   "category": "nom_propre",
+   "current": "Yalın bir ses olayı olmadan önce **Ekho** bir [[Oread]], dağ perisidir",
+   "gloss_fr": "Avant d'être « un simple événement sonore », Écho est une « Oread » (forme anglaise)",
+   "problem": "La forme turque est « Oreas » / « Oreadlar » ; « ses olayı » est raide.",
+   "fix": "Sıradan bir yankıya dönüşmeden önce **Ekho** bir [[Oreas]], yani dağ perisidir ve çok konuşmasıyla ünlüdür.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_166_narcisse_et_echo/s3.b3.text",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Narkissos erir. Ekho, yine de sadık, son vedasını tekrarlar.",
+   "gloss_fr": "Narcisse « fond ». Écho, « quand même fidèle » (apposition française), répète…",
+   "problem": "Apposition à la française ; le turc demande une proposition.",
+   "fix": "Narkissos eriyip gider. Ekho yine de ona sadık kalır ve son vedasını tekrarlar.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_207_l_otan_a_quoi_ca_sert_encore/s0.b1.text",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "yararlılığına dair bütün kuşkuları kesti",
+   "gloss_fr": "a « coupé » tous les doutes sur son utilité",
+   "problem": "« mettre fin aux doutes » = « kuşkulara son verdi » ; « kesmek » est impropre.",
+   "fix": "yararlılığına dair bütün kuşkulara son verdi",
+   "surface": "courses"
+  },
+  {
+   "location": "course_207_l_otan_a_quoi_ca_sert_encore/s1.b2.text",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "Antlaşmanın özü **[[Kuzey Atlantik Antlaşması'nın 5. Maddesi]]**: … doğrudan bir çatışma denemeyecek kadar pahalı hale gelmiştir.",
+   "gloss_fr": "Le cœur du traité (est) « Article 5 du Traité de l'Atlantique Nord » (redondant, sans verbe)… trop coûteux pour « essayer » (voix active)",
+   "problem": "Libellé de glossaire redondant sans copule ; « denemeyecek » devrait être passif « denenemeyecek ».",
+   "fix": "Antlaşmanın özü **[[5. Madde]]**dir: bir üyeye saldırı, herkese saldırı sayılır. … doğrudan bir çatışma, göze alınamayacak kadar pahalı hale gelmiştir.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_207_l_otan_a_quoi_ca_sert_encore/s2.b0.text",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "iki eksende kendini yeniden icat etmeyi seçer. İlki doğuya kitlesel genişlemedir … olası bir Rus emperyalizmi dönüşüne karşı",
+   "gloss_fr": "choisit de « se réinventer » … élargissement « massif » … contre un « retour d'impérialisme russe possible » (génitif manquant)",
+   "problem": "« se réinventer » calqué ; « Rus emperyalizminin olası geri dönüşü » exige le génitif.",
+   "fix": "iki eksende kendini yeniden tanımlamayı seçer. İlki doğuya doğru büyük çaplı genişlemedir … Rus emperyalizminin olası geri dönüşüne karşı",
+   "surface": "courses"
+  },
+  {
+   "location": "course_207_l_otan_a_quoi_ca_sert_encore/s3.b2.text",
+   "severity": "mineur",
+   "category": "registre",
+   "current": "Almanya otuz yıldır ihmal edilmiş bir orduyu modernleştirmek için kocaman fonlar açar",
+   "gloss_fr": "l'Allemagne « ouvre d'énormes-énormes fonds »",
+   "problem": "« kocaman » est un mot enfantin ; « dev bütçeler ayırır » est le registre attendu.",
+   "fix": "Almanya otuz yıldır ihmal edilmiş ordusunu modernleştirmek için dev bütçeler ayırır",
+   "surface": "courses"
+  },
+  {
+   "location": "course_207_l_otan_a_quoi_ca_sert_encore/s4.b0.text",
+   "severity": "mineur",
+   "category": "typographie",
+   "current": "**[[Siberuzay]]** ve uzayı",
+   "gloss_fr": "« Cyberespace » écrit en un mot, puis « siber uzay » en deux mots en s4.b2",
+   "problem": "Graphie incohérente dans le même cours ; la forme usuelle est « siber uzay ».",
+   "fix": "**[[Siber uzay]]** ve uzayı resmi yeni harekât alanları olarak kabul etmiştir.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_18_la_grande_depression_1929/hero.hook",
+   "severity": "mineur",
+   "category": "typographie",
+   "current": "Wall Street'te bir perşembe, ve dünya on yıllık bir sefalete yuvarlanır.",
+   "gloss_fr": "Un jeudi à Wall Street, « virgule et » le monde « roule » dans la misère",
+   "problem": "Virgule avant « ve » calquée du français.",
+   "fix": "Wall Street'te bir perşembe ve dünya on yıllık bir sefalete sürüklenir.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_18_la_grande_depression_1929/s0.b1.text",
+   "severity": "mineur",
+   "category": "mt_artefact",
+   "current": "İşte bir balonun her şeyi nasıl sürüklediği.",
+   "gloss_fr": "Voici le comment-une-bulle-a-tout-emporté (nominalisation)",
+   "problem": "« Voici comment » calqué en nominalisation ; motif récurrent.",
+   "fix": "İşte bir balon her şeyi böyle alıp götürdü.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_18_la_grande_depression_1929/s2.b2.text",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "krize karşı fazla edilgen bulunan başkan [[Herbert Hoover]] adından.",
+   "gloss_fr": "du nom du président jugé trop « passif (terme de grammaire) »… « de son nom » (phrase suspendue)",
+   "problem": "« edilgen » est un terme de grammaire (voix passive) ; « adından » reste en suspens.",
+   "fix": "Bunlara, krize karşı fazla hareketsiz bulunan başkan [[Herbert Hoover]]'a atıfla “Hoover Cars” denirdi.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_18_la_grande_depression_1929/s2.b3.text",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Adına layık bir sosyal koruma olmadığından",
+   "gloss_fr": "Sans protection sociale « digne de son nom » (calque)",
+   "problem": "Expression française calquée ; le turc dit « gerçek anlamda ».",
+   "fix": "Gerçek anlamda bir sosyal güvenlik olmadığından milyonlarca kişi aşevlerine muhtaç kalır.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_18_la_grande_depression_1929/s3.b1.text",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "(fiyatları ve ücretleri “temizlemek” için düşürmek)",
+   "gloss_fr": "(baisser les prix pour « nettoyer »)",
+   "problem": "« assainir » (l'économie) ne se dit pas « temizlemek » ; « sağlıklı hale getirmek » ou « düzeltmek ».",
+   "fix": "(ekonomiyi “düzeltmek” için fiyatları ve ücretleri düşürmek)",
+   "surface": "courses"
+  },
+  {
+   "location": "course_107_crime_et_chatiment_dostoievski/s1.b0.text",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "**[[Petraşevski Çemberi]]** üyesi olarak",
+   "gloss_fr": "membre du « Cercle (géométrique) de Petrachevski »",
+   "problem": "« cercle » (groupe) se dit « grup » ou « çevre » en turc, pas « çember ».",
+   "fix": "**[[Petraşevski Grubu]]** üyesi olarak",
+   "surface": "courses"
+  },
+  {
+   "location": "course_107_crime_et_chatiment_dostoievski/s2.b2.text",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Vicdanı kana dayanamaz. Ateş onu yer.",
+   "gloss_fr": "Sa conscience ne supporte pas le sang. « Le feu le mange. »",
+   "problem": "« la fièvre le consume » calqué ; « Ateş onu yer » est bizarre.",
+   "fix": "Vicdanı kana dayanamaz; ateşler içinde kıvranır.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_107_crime_et_chatiment_dostoievski/s3.b1.text",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "O, başkalarını sevdiği için alçalmıştır.",
+   "gloss_fr": "Elle « s'est avilie » parce qu'elle aimait les autres",
+   "problem": "« alçalmak » signifie se dégrader moralement ; le sens voulu est l'humilité.",
+   "fix": "O ise başkalarına duyduğu sevgiyle alçakgönüllülüğü seçmiştir.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_107_crime_et_chatiment_dostoievski/s4.b0.text",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "yavaş ve zor bir **[[Acı çekerek kurtuluş]]** gösterir",
+   "gloss_fr": "montre une « rédemption-en-souffrant » lente (sans accusatif)",
+   "problem": "Le complément défini doit porter l'accusatif après le libellé de glossaire.",
+   "fix": "yavaş ve zor bir **[[Acı çekerek kurtuluş]]**u gösterir",
+   "surface": "courses"
+  },
+  {
+   "location": "course_212_les_paradis_fiscaux_expliques/hero.hook",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Hoş geldin vergi cennetleri dünyasına.",
+   "gloss_fr": "« Bienvenue au monde des paradis fiscaux » avec le verbe en tête (ordre français)",
+   "problem": "Ordre des mots français ; le turc met le complément avant « hoş geldin ».",
+   "fix": "Vergi cennetleri dünyasına hoş geldin.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_212_les_paradis_fiscaux_expliques/s0.b0.text",
+   "severity": "mineur",
+   "category": "registre",
+   "current": "Çoğu zaman minicik bazı topraklar",
+   "gloss_fr": "Certaines « terres » souvent « toutes petites-petites » (mot enfantin)",
+   "problem": "« minicik » est enfantin et « topraklar » calque « territoires » (répété dans tout le cours).",
+   "fix": "Çoğu zaman küçücük bazı bölgeler",
+   "surface": "courses"
+  },
+  {
+   "location": "course_212_les_paradis_fiscaux_expliques/s0.b1.text",
+   "severity": "mineur",
+   "category": "mt_artefact",
+   "current": "İşte bu sessiz sistem nasıl işler ve düzenleme denemelerine neden bu kadar direnir.",
+   "gloss_fr": "Voici comment ce système « silencieux » fonctionne et pourquoi il résiste (calque syntaxique)",
+   "problem": "« Voici comment » calqué ; « discret » rendu par « silencieux ».",
+   "fix": "İşte bu göze batmayan sistem böyle işliyor ve düzenleme girişimlerine bu yüzden direniyor.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_212_les_paradis_fiscaux_expliques/s1.b3.text",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "banka mevduatları için dünya beşincisi finans merkezidir",
+   "gloss_fr": "c'est « le cinquième-du-monde centre financier pour les dépôts »",
+   "problem": "Construction superlative maladroite.",
+   "fix": "banka mevduatlarında dünyanın beşinci büyük finans merkezidir",
+   "surface": "courses"
+  },
+  {
+   "location": "course_212_les_paradis_fiscaux_expliques/s2.b1.text",
+   "severity": "mineur",
+   "category": "registre",
+   "current": "kocaman meblağlar ödemek zorunda kalır",
+   "gloss_fr": "doivent payer des sommes « énormes-énormes » (enfantin)",
+   "problem": "« kocaman » (registre enfantin) pour « énormes ».",
+   "fix": "çok yüksek meblağlar ödemek zorunda kalır",
+   "surface": "courses"
+  },
+  {
+   "location": "course_212_les_paradis_fiscaux_expliques/s4.b0.text",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Bu da sağlık veya eğitim gibi kamu hizmetlerini, imkân yokluğundan, zayıflatır.",
+   "gloss_fr": "Cela affaiblit les services publics, « faute de moyens » (incise à la française)",
+   "problem": "Incise entre virgules calquée ; le turc place la cause en tête.",
+   "fix": "Bu da kaynak yetersizliği yüzünden sağlık ve eğitim gibi kamu hizmetlerini zayıflatır.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_212_les_paradis_fiscaux_expliques/s4.b1.text",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "Savaş bugün dijitale kayar: çevrimiçi platformların bir ülkede para kazanmak için ofise ihtiyacı kalmaz, vergi sınırlarını giderek daha geçirgen kılar.",
+   "gloss_fr": "La « guerre » glisse vers le numérique : … n'ont plus besoin de bureau, « rend » les frontières poreuses (sujet manquant)",
+   "problem": "La deuxième proposition n'a pas de sujet (« bu da ») ; « savaş » est trop fort pour « bataille ».",
+   "fix": "Mücadele bugün dijital alana kayıyor: çevrimiçi platformların bir ülkede para kazanmak için ofise ihtiyacı yok, bu da vergi sınırlarını giderek daha geçirgen kılıyor.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_242_pourquoi_a_t_on_le_hoquet/s1.b2.text",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Saniyenin küçük bir kesri sonra",
+   "gloss_fr": "« Une petite fraction de seconde après » (calque)",
+   "problem": "Expression calquée ; le turc dit « bir an sonra » ou « saniyenin çok küçük bir bölümü kadar sonra ».",
+   "fix": "Bir an sonra ses telleri arasındaki açıklık olan [[glottis]] sertçe kapanır.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_242_pourquoi_a_t_on_le_hoquet/s4.b0.text",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "bir torbaya nefes almak",
+   "gloss_fr": "« prendre sa respiration dans un sac »",
+   "problem": "On dit « torbaya nefes alıp vermek » ou « torbaya üflemek ».",
+   "fix": "Nefesini tutmak, soğuk su içmek, dilini çekmek, bir torbaya nefes alıp vermek...",
+   "surface": "courses"
+  },
+  {
+   "location": "course_174_ulysse_et_les_sirenes/description",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "kendini tutmanın modeli olmuş bir kurnazlık sayesinde",
+   "gloss_fr": "grâce à une ruse devenue modèle du « se retenir »",
+   "problem": "« maîtrise de soi » = « özdenetim / kendine hâkim olma » ; « kendini tutmak » signifie se retenir.",
+   "fix": "özdenetimin simgesi haline gelmiş bir hile sayesinde",
+   "surface": "courses"
+  },
+  {
+   "location": "course_174_ulysse_et_les_sirenes/s4.b2.text",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "Odysseus [[Sirenler]] şarkısından [[Ön taahhüt]] ile kurtulur",
+   "gloss_fr": "Ulysse survit au chant « Sirènes » (sans génitif)",
+   "problem": "Le génitif « Sirenlerin » est obligatoire ; le suffixe peut suivre le balisage.",
+   "fix": "Odysseus [[Sirenler]]in şarkısından [[Ön taahhüt]] sayesinde kurtulur: direğe bağlı dinler; kulakları balmumuyla tıkalı adamları rotayı korur.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_68_la_theorie_de_la_relativite_pour_tous/s0.b1.text",
+   "severity": "mineur",
+   "category": "typographie",
+   "current": "[[kara delikler]] ile [[Büyük patlama]] olgusunu açıklar",
+   "gloss_fr": "« Big bang » avec minuscule, puis « Büyük Patlama » avec majuscules en s4.b2",
+   "problem": "Capitalisation incohérente du même terme dans le cours.",
+   "fix": "[[kara delikler]]i ve [[Büyük Patlama]]'yı açıklar",
+   "surface": "courses"
+  },
+  {
+   "location": "course_68_la_theorie_de_la_relativite_pour_tous/s1.b1.caption",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Albert Einstein, görelilik kuramının yazarıdır",
+   "gloss_fr": "Einstein « est l'auteur (écrivain) » de la théorie (copule inutile dans une légende)",
+   "problem": "« auteur » d'une théorie ne se dit pas « yazar » ; la copule « -dır » alourdit la légende.",
+   "fix": "Albert Einstein, görelilik kuramının yaratıcısı",
+   "surface": "courses"
+  },
+  {
+   "location": "course_68_la_theorie_de_la_relativite_pour_tous/s1.b3.text",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Işık hızı olan **c** kocaman olduğu için … [[nükleer fizik]] için bir direktir.",
+   "gloss_fr": "comme c est « énorme-énorme » … c'est un « poteau » de la physique nucléaire",
+   "problem": "« kocaman » enfantin ; « pilier » calqué en « direk » (poteau) au lieu de « temel taşı ».",
+   "fix": "Işık hızı **c** çok büyük olduğu için küçücük bir kütle bile dev bir enerji açığa çıkarabilir. Bu, atom çekirdeklerini ve tepkimelerini inceleyen [[nükleer fizik]]in temel taşlarından biridir.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_68_la_theorie_de_la_relativite_pour_tous/s1.b4.text",
+   "severity": "mineur",
+   "category": "terminologie",
+   "current": "Bern patent ofisinde denetçi olarak çalışır",
+   "gloss_fr": "travaille comme « contrôleur/auditeur » au bureau des brevets",
+   "problem": "« examinateur de brevets » = « patent uzmanı » ; « denetçi » évoque un auditeur.",
+   "fix": "İsviçre'de, Bern'deki patent ofisinde patent uzmanı olarak çalışır.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_68_la_theorie_de_la_relativite_pour_tous/s3.b0.text",
+   "severity": "mineur",
+   "category": "terminologie",
+   "current": "Oysa iki göreli etki aynı anda işler.",
+   "gloss_fr": "Or deux effets « relatifs » jouent en même temps",
+   "problem": "« relativiste » se dit « görelilik etkisi » ; « göreli » signifie relatif (aussi « Göreli düzeltmeler » en s3.b2).",
+   "fix": "Oysa iki görelilik etkisi aynı anda devrededir.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_68_la_theorie_de_la_relativite_pour_tous/s4.b2.text",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "evreni sabit zorlamak için matematiksel bir terim olan bir **kozmolojik sabit** eklemişti",
+   "gloss_fr": "pour « forcer l'univers fixe » (construction incomplète)",
+   "problem": "« sabit zorlamak » est agrammatical ; il faut « sabit kalmaya zorlamak ».",
+   "fix": "evreni sabit kalmaya zorlamak için **kozmolojik sabit** adlı matematiksel bir terim eklemişti",
+   "surface": "courses"
+  },
+  {
+   "location": "course_256_pourquoi_a_t_on_peint_les_parois_de/s1.title",
+   "severity": "mineur",
+   "category": "terminologie",
+   "current": "Boğalar, kediler ve kuş başlı adam",
+   "gloss_fr": "Taureaux, « chats » et homme à tête d'oiseau",
+   "problem": "« félins » rendu par « kediler » (chats domestiques) ; idem « Kediler Odası » en s1.b2.",
+   "fix": "Boğalar, kedigiller ve kuş başlı adam",
+   "surface": "courses"
+  },
+  {
+   "location": "course_218_le_role_des_donnees_le_petrole_du_xxie_s/s0.b0.text",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "**veri** “21. yüzyılın petrolü”dür",
+   "gloss_fr": "les données « sont » le pétrole du XXIe siècle (affirmation ferme, le conditionnel « seraient » est perdu)",
+   "problem": "Le conditionnel de distance (« seraient ») disparaît ; il faut la forme rapportée.",
+   "fix": "**veri** “21. yüzyılın petrolü”ymüş",
+   "surface": "courses"
+  },
+  {
+   "location": "course_218_le_role_des_donnees_le_petrole_du_xxie_s/s2.b2.text",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "sağlık, finans veya bağlı arabaya yayar",
+   "gloss_fr": "s'étendent vers la santé, la finance ou « la voiture attachée »",
+   "problem": "« voiture connectée » se dit « bağlantılı/akıllı araç » ; « bağlı araba » est incompréhensible.",
+   "fix": "veri üstünlüklerini sağlığa, finansa veya bağlantılı otomobillere yayar",
+   "surface": "courses"
+  },
+  {
+   "location": "course_218_le_role_des_donnees_le_petrole_du_xxie_s/s3.b1.text",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "dünya çapında pratiklerini gözden geçirmeye zorladı",
+   "gloss_fr": "a forcé à revoir leurs « pratiques » (faux ami)",
+   "problem": "« pratiques » = « uygulamalar » ; « pratik » en turc signifie « commode ».",
+   "fix": "dünya çapında uygulamalarını gözden geçirmeye zorladı",
+   "surface": "courses"
+  },
+  {
+   "location": "course_310_qui_a_trace_les_frontieres_de_l_afrique/s4.title",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Pek çok eli olan sınırlar",
+   "gloss_fr": "Des frontières « qui ont beaucoup de mains »",
+   "problem": "Image non idiomatique ; la récap s4.b3 dit justement « birden çok yazarı ».",
+   "fix": "Birden çok yazarı olan sınırlar",
+   "surface": "courses"
+  },
+  {
+   "location": "course_281_comment_meurt_une_etoile/s0.b1.text",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "hatta binlerce milyar yıl sürebilir",
+   "gloss_fr": "voire des « milliers de milliards » d'années",
+   "problem": "Le turc compte en « trilyon ».",
+   "fix": "hatta trilyonlarca yıl sürebilir",
+   "surface": "courses"
+  },
+  {
+   "location": "offer.feature1",
+   "severity": "mineur",
+   "category": "terminologie",
+   "current": "240 genel bilgi kursu",
+   "gloss_fr": "« 240 cours de connaissances générales »",
+   "problem": "« Culture générale » se dit « genel kültür » (utilisé ailleurs dans l'app) ; « genel bilgi » est un calque de l'anglais.",
+   "fix": "240 genel kültür kursu",
+   "surface": "ui"
+  },
+  {
+   "location": "ambassador.form.presentation.placeholder",
+   "severity": "mineur",
+   "category": "terminologie",
+   "current": "Nelerden hoşlanırsın? Genel bilgi, içerik oluşturma…",
+   "gloss_fr": "« Qu'aimes-tu ? Connaissances générales, création de contenu… »",
+   "problem": "Même calque « genel bilgi » pour « culture générale ».",
+   "fix": "Nelerden hoşlanırsın? Genel kültür, içerik üretimi…",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.dailyGoal.title",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Her gün şu kadar öğrenmek istiyorsun...",
+   "gloss_fr": "« Chaque jour tu veux apprendre cette quantité-là... »",
+   "problem": "« şu kadar » est une béquille artificielle pour amener le sélecteur ; un Turc poserait simplement la question.",
+   "fix": "Her gün ne kadar öğrenmek istiyorsun?",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.graph.tagline",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Sophia, bildiğin şeyleri⏎hızla çoğaltır.",
+   "gloss_fr": "« Sophia multiplie rapidement les choses que tu sais. »",
+   "problem": "Traduit l'anglais plutôt que le français ; « bildiğin şeyleri çoğaltmak » n'est pas idiomatique.",
+   "fix": "Sophia genel kültürünü⏎katlayarak artırır.",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.graph.title",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Kültürel⏎ilerlemen",
+   "gloss_fr": "« Ta progression culturelle (d'une société) »",
+   "problem": "« kültürel ilerleme » évoque le progrès culturel collectif, pas la culture générale d'une personne.",
+   "fix": "Genel kültür⏎gelişimin",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.intro.title",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "Her gün⏎10 dakikada⏎daha bilgili",
+   "gloss_fr": "« Chaque jour en 10 minutes plus savant »",
+   "problem": "Phrase sans verbe ni impératif : « daha bilgili » reste en suspens.",
+   "fix": "Günde 10 dakikayla⏎daha kültürlü ol",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.objective.social",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "İnsanların arasında daha rahat olmak",
+   "gloss_fr": "« Être plus à l'aise parmi les gens (génitif) »",
+   "problem": "« insanların arasında » avec génitif est maladroit ; on dit « sosyal ortamlarda ».",
+   "fix": "Sosyal ortamlarda daha rahat olmak",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.phone.1to2h",
+   "severity": "mineur",
+   "category": "registre",
+   "current": "1 saat ila 2 saat",
+   "gloss_fr": "« 1 heure à 2 heures » (registre administratif)",
+   "problem": "« ila » est une tournure juridique ; une option de sondage s'écrit avec un tiret (idem onboarding.phone.2to4h).",
+   "fix": "1–2 saat",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.premiumGift.title",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "Sana hediye⏎Sophia Premium",
+   "gloss_fr": "« À toi cadeau Sophia Premium »",
+   "problem": "Ordre des mots calqué du français ; en turc le cadeau précède « hediye ».",
+   "fix": "Sophia Premium⏎sana hediyemiz",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.premiumTrial.title",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "Ücretsiz denemen⏎3 adımda",
+   "gloss_fr": "« Ton essai gratuit en 3 étapes » (ordre français)",
+   "problem": "Le complément « 3 adımda » doit précéder le nom en turc.",
+   "fix": "3 adımda⏎ücretsiz denemen",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.trial.title",
+   "severity": "mineur",
+   "category": "registre",
+   "current": "İlk 3 günün⏎bedava",
+   "gloss_fr": "« Tes 3 premiers jours gratos »",
+   "problem": "« bedava » est familier/argotique alors que toute l'app dit « ücretsiz ».",
+   "fix": "İlk 3 gün⏎ücretsiz",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.motivation.grow",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Bir insan olarak gelişmek için",
+   "gloss_fr": "« Pour me développer en tant qu'être humain »",
+   "problem": "Calque de l'anglais « grow as a person » ; le turc dit simplement « kendimi geliştirmek ».",
+   "fix": "Kendimi geliştirmek için",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.notifications.subtitle",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Bir kurs gerçekten zamanına değdiğinde sessiz bir hatırlatma. Başka hiçbir şey.",
+   "gloss_fr": "« Quand un cours vaut vraiment ton temps, un rappel silencieux. Rien d'autre. »",
+   "problem": "« zamanına değmek » calque « worth your time » ; le FR dit « peut vraiment t'intéresser ».",
+   "fix": "Gerçekten ilgini çekebilecek bir kurs olduğunda küçük bir hatırlatma. Başka hiçbir şey, asla.",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.notifications.bullet2",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Doğru anda, asla üst üste değil",
+   "gloss_fr": "« Au bon moment, jamais superposé »",
+   "problem": "« üst üste değil » reste elliptique ; « jamais en rafale » n'est pas rendu.",
+   "fix": "Doğru anda, asla art arda bildirim yok",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.phone.perDay",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "günlük",
+   "gloss_fr": "« quotidien »",
+   "problem": "Affiché après la durée (« 2 saat günlük ») ; le turc dit « günde 2 saat » ou « 2 saat / gün ».",
+   "fix": "/ gün",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.pw.viewAllPlans",
+   "severity": "mineur",
+   "category": "registre",
+   "current": "Tüm planları görüntüle",
+   "gloss_fr": "« Visualiser tous les plans »",
+   "problem": "« görüntüle » est un verbe technique ; l'app emploie « gör » (« Profilimi gör », « Sonucu gör »).",
+   "fix": "Tüm planları gör",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.questions.q5",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Kamu borcu nasıl çalışır?",
+   "gloss_fr": "« Comment la dette publique travaille-t-elle ? »",
+   "problem": "« çalışmak » vaut pour une machine ; pour un mécanisme abstrait on dit « işlemek ».",
+   "fix": "Kamu borcu nasıl işler?",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.review.quote",
+   "severity": "mineur",
+   "category": "typographie",
+   "current": "…Şimdi Sophia ile sadece 40 dakika, ve her hafta…",
+   "gloss_fr": "« …seulement 40 minutes, et chaque semaine… »",
+   "problem": "Virgule avant « ve » : ponctuation française/anglaise, pas turque.",
+   "fix": "Eskiden günde 7 saatimi telefonda geçirirdim. Şimdi Sophia ile sadece 40 dakika ve her hafta kendimi daha zeki hissediyorum.",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.training.how.step3",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Tam anında tekrarla, bir daha unutma",
+   "gloss_fr": "« Révise à l'instant pile, n'oublie plus »",
+   "problem": "« tam anında » n'est pas idiomatique ; on dit « tam zamanında » (comme training.how.step3).",
+   "fix": "Tam zamanında tekrarla, bir daha unutma",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.course.comeBack",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "Sonraki ücretsiz kurs",
+   "gloss_fr": "« Prochain cours gratuit » (sans « dans »)",
+   "problem": "Suivi d'un compte à rebours, il manque le lien vers la durée.",
+   "fix": "Sonraki ücretsiz kursa kalan süre",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.course.proPitch",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Hatırladıklarını en üst düzeye çıkarmak için tasarlanan Sophia PRO'yu aç.",
+   "gloss_fr": "« Débloque Sophia PRO, conçu pour porter au niveau maximal ce dont tu te souviens »",
+   "problem": "« en üst düzeye çıkarmak » est un calque de « maximiser », lourd pour un paywall.",
+   "fix": "Öğrendiklerin aklında kalsın diye tasarlanan Sophia PRO'yu aç.",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.course.subtitle (+ .named)",
+   "severity": "mineur",
+   "category": "typographie",
+   "current": "Yarın dön, ya da her şeyi şimdi aç.",
+   "gloss_fr": "« Reviens demain, ou débloque tout maintenant. »",
+   "problem": "Virgule avant « ya da », ponctuation calquée.",
+   "fix": "Bugünkü ücretsiz kursunu okudun. Yarın yine gel ya da her şeyi şimdi aç.",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.plan.billedYearly",
+   "severity": "mineur",
+   "category": "terminologie",
+   "current": "yılda %@ olarak tahsil edilir",
+   "gloss_fr": "« encaissé %@ par an »",
+   "problem": "« tahsil edilir » (registre bancaire) alors que toutes les autres clés disent « faturalandırılır ».",
+   "fix": "yıllık %@ olarak faturalandırılır",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.premiumHeadline",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "3 gün Premium'u aç⏎ÜCRETSİZ",
+   "gloss_fr": "« 3 jours débloque Premium GRATUIT »",
+   "problem": "Ordre calqué du FR ; l'adverbe isolé en fin de ligne sonne faux en turc.",
+   "fix": "Premium'u 3 gün⏎ÜCRETSİZ aç",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.quiz.chart.day",
+   "severity": "mineur",
+   "category": "typographie",
+   "current": "G%d",
+   "gloss_fr": "« J%d »",
+   "problem": "« G1, G2 » n'est pas une abréviation turque reconnue pour « jour ».",
+   "fix": "%d. gün",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.quiz.demo.chrono.i2",
+   "severity": "mineur",
+   "category": "typographie",
+   "current": "Ortaçağ",
+   "gloss_fr": "« Moyen Âge » (graphie non TDK)",
+   "problem": "Graphie officielle : « Orta Çağ » (comme « Antik Çağ » juste au-dessus).",
+   "fix": "Orta Çağ",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.quiz.demo.mcq.q",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Yıldızlı Gece'yi kim yaptı?",
+   "gloss_fr": "« Qui a fait La Nuit étoilée ? »",
+   "problem": "Pour un tableau on dit « çizdi » / « resmetti ».",
+   "fix": "Yıldızlı Gece'yi kim çizdi?",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.quiz.subtitle",
+   "severity": "mineur",
+   "category": "terminologie",
+   "current": "Etkileşimli quizler…",
+   "gloss_fr": "« quiz interactifs » (terme différent de offer.feature2 « interaktif quiz »)",
+   "problem": "Deux termes pour « interactif » dans l'app.",
+   "fix": "Etkileşimli quizler için Sophia PRO'yu aç, gerçekten kültürlü ol. (harmoniser « etkileşimli » dans offer.feature2)",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.benefit.quiz",
+   "severity": "mineur",
+   "category": "autre",
+   "current": "Hepsi aklında kalsın diye quizler",
+   "gloss_fr": "« Des quiz pour que tout reste dans ta tête »",
+   "problem": "Ordre inversé et « hepsi » sans référent ; une puce de paywall doit être directe.",
+   "fix": "Akılda kalsın diye tüm quizler",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.unlock.you (+ .also, .plus)",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "Açılır / Ayrıca açılır",
+   "gloss_fr": "« S'ouvre / S'ouvre aussi »",
+   "problem": "Verbe impersonnel isolé en titre de section ; le turc attend un nom.",
+   "fix": "Açılan özellikler / Ayrıca açılanlar",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.discount.subtitle",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Şu ana kadar sunduğumuz en düşük fiyata ömür boyu Premium bilgi.",
+   "gloss_fr": "« …du savoir Premium à vie »",
+   "problem": "« Premium bilgi » est un calque ; le sens est l'accès Premium à vie.",
+   "fix": "Ömür boyu Premium erişim, şimdiye kadarki en düşük fiyatla.",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.cta.activateTrial",
+   "severity": "mineur",
+   "category": "terminologie",
+   "current": "Ücretsiz denemeyi aç",
+   "gloss_fr": "« Ouvrir l'essai gratuit »",
+   "problem": "« Activer/Démarrer l'essai » rendu tantôt « aç » tantôt « başlat » (paywall.trialSheet.start, onboarding.premiumTrial.cta).",
+   "fix": "Ücretsiz denememi başlat",
+   "surface": "ui"
+  },
+  {
+   "location": "trial.endingSoon.banner",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "1 gün içinde Sophia Premium erişimini kaybedeceksin.",
+   "gloss_fr": "« D'ici 1 jour tu perdras l'accès… »",
+   "problem": "« içinde » = « d'ici » ; pour un repère temporel on dit « sonra ».",
+   "fix": "1 gün sonra Sophia Premium erişimin sona erecek.",
+   "surface": "ui"
+  }
+ ]
+}

@@ -6,6 +6,7 @@ enum FeedbackService {
         case bug
         case idea
         case content
+        case translation
         case other
 
         var id: String { rawValue }

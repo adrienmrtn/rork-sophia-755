@@ -4,11 +4,11 @@
   "subtitle": "Najdragocenejši digitalni vir",
   "subject": "comprendreLeMonde",
   "subcategory": "Gospodarstvo in družba",
-  "description": "Pravijo, da so podatki novo olje. Toda v nasprotju z nafto jih nikoli ne zmanjka in postajajo dragocenejši, čim pogosteje jih srečamo.",
+  "description": "Pravijo, da so podatki nova nafta. A za razliko od nafte jih nikoli ne zmanjka, njihova vrednost pa raste, bolj ko jih povezujejo med seboj.",
   "hero": {
     "image": "le_role_des_donnees",
     "ratio": "16:9",
-    "hook": "Facebook lahko ugane, da se nekdo poroči ali seli, preden se sploh zave."
+    "hook": "Facebook lahko ugane, da se bo nekdo poročil ali preselil, še preden se tega sploh zave."
   },
   "sections": [
     {
@@ -18,81 +18,81 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Od leta 2010 se je uveljavil izraz: **podatke** bi bilo »nafta 21. stoletja«. Ideja je preprosta: ko jih izpopolnijo algoritmi, postanejo motor rasti in globalne moči."
+          "text": "V desetletju po letu 2010 se je uveljavil rek: **podatki** naj bi bili »nafta 21. stoletja«. Ideja je preprosta: ko jih algoritmi prečistijo, postanejo gonilo rasti in svetovne moči."
         },
         {
           "type": "paragraph",
-          "text": "Toda za razliko od nafte, vira, ki ga zmanjka, se podatki nikoli ne porabijo: kopirati jih je mogoče neskončno in postanejo bolj dragoceni, ko se združijo z drugimi informacijami. Evo, zakaj je preoblikovala svetovno gospodarstvo."
+          "text": "A za razliko od nafte, ki je izčrpen vir, se podatki nikoli ne porabijo: kopirati jih je mogoče v nedogled, vrednejši pa so, bolj ko jih povezujejo z drugimi informacijami. Poglejmo, zakaj so preoblikovali svetovno gospodarstvo."
         }
       ]
     },
     {
       "id": "course_218_le_role_des_donnees_le_petrole_du_xxie_s_p1",
-      "title": "Napovedovanje našega vedenja pred nami samimi",
+      "title": "Naše vedenje napovejo prej kot mi sami",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Prava vrednost podatkov ni v preprostem seznamu imen ali naslovov, temveč v njihovi zmožnosti napovedovanja našega prihodnjega vedenja. Vsako iskanje, vsak premik, vsak klik pusti sled, ki jo tehnološka podjetja zberejo, da ustvarijo zelo natančen portret vsake osebe."
+          "text": "Prava vrednost podatkov ni v preprostem seznamu imen ali naslovov, temveč v tem, da lahko napovedo naše prihodnje vedenje. Vsako iskanje, vsaka pot, vsak klik pusti sled, ki jo tehnološka podjetja zbirajo, da bi o vsakem človeku sestavila zelo natančen portret."
         },
         {
           "type": "funFact",
-          "text": "Facebook lahko opazi velike življenjske spremembe, kot je bližajoča se poroka ali selitev, še preden se vpletena oseba tega sploh zaveda, tako da zazna majhne razlike v njihovih spletnih navadah."
+          "text": "Facebook lahko opazi pomembno življenjsko spremembo, na primer bližnjo poroko ali selitev, še preden se je oseba sama povsem zave, saj zazna drobne spremembe v njenih spletnih navadah."
         },
         {
           "type": "paragraph",
-          "text": "To sistematično izkoriščanje našega vedenja je povzročilo to, kar raziskovalka Shoshana Zuboff imenuje **nadzorni capitalizem**: ljudje niso več samo stranke, postanejo surovina sistema, ki prodaja napovedi najboljšemu ponudniku."
+          "text": "To sistematično izkoriščanje našega vedenja je rodilo pojav, ki ga raziskovalka Shoshana Zuboff imenuje **nadzorni kapitalizem**: človek ni več le stranka, temveč postane surovina sistema, ki napovedi prodaja najboljšemu ponudniku."
         }
       ]
     },
     {
       "id": "course_218_le_role_des_donnees_le_petrole_du_xxie_s_p2",
-      "title": "Zakaj je tem velikanom skoraj nemogoče tekmovati",
+      "title": "Zakaj ti velikani skoraj nimajo tekmecev",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Podatkovna ekonomija deluje v dobrem krogu: več kot ima podjetje podatkov, boljša je njegova storitev, kar pritegne več uporabnikov, ki ustvarijo še več podatkov. Umetna inteligenca je ta pojav pospešila: algoritem [[strojno učenje]], naučen na milijardah primerov, postane natančnejši in hitrejši za izboljšave kot konkurent z omejenimi viri."
+          "text": "Podatkovna ekonomija deluje kot krog, ki se sam krepi: več podatkov ko ima podjetje, boljša je njegova storitev, kar pritegne več uporabnikov, ti pa ustvarijo še več podatkov. Umetna inteligenca je ta pojav še pospešila: pri metodi, ki se imenuje [[strojno učenje]], postane algoritem, naučen na milijardah primerov, natančnejši in se hitreje izboljšuje kot tekmec z omejenimi viri."
         },
         {
           "type": "image",
           "asset": "artificial_intelligence_machine_learning_datacenter",
           "ratio": "16:9",
-          "caption": "Podatkovni centri porabijo toliko električne energije kot cela mesta za obdelavo teh ogromnih tokov informacij."
+          "caption": "Podatkovni centri za obdelavo teh ogromnih tokov informacij porabijo toliko elektrike kot cela mesta."
         },
         {
           "type": "paragraph",
-          "text": "Ta velikana, [[GAFAM]] v Združenih državah Amerike in BATX na Kitajskem, nista več zadovoljna s prevlado v svojem prvotnem sektorju: svojo vodilno vlogo pri podatkih uporabljata za širitev v zdravstvo, finance ali povezane avtomobile, kar blokira dostop do inovacij na številnih področjih."
+          "text": "Ti velikani, [[GAFAM]] v Združenih državah in BATX na Kitajskem, se ne zadovoljijo več s prevlado v svoji prvotni panogi: prednost pri podatkih izkoriščajo za širitev v zdravstvo, finance in povezane avtomobile ter tako na številnih področjih zapirajo pot inovacijam."
         }
       ]
     },
     {
       "id": "course_218_le_role_des_donnees_le_petrole_du_xxie_s_p3",
-      "title": "Evropa vrača udarec z GDPR",
+      "title": "Evropa vrne udarec z uredbo GDPR",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Soočena s to močjo je Evropska unija leta 2018 vzpostavila [[Evropska GDPR]], uredbo, ki v teoriji državljanom vrača moč nad njihovimi osebnimi podatki: preglednost, pravica do pozabe, obvezno soglasje."
+          "text": "Kot odgovor na to moč je Evropska unija leta 2018 sprejela predpis z imenom [[Splošna uredba o varstvu podatkov]] (GDPR), ki državljanom vsaj v teoriji vrača moč nad lastnimi osebnimi podatki: preglednost, pravica do pozabe, obvezno soglasje."
         },
         {
           "type": "paragraph",
-          "text": "Njegova moč izvira iz njegove ekstrateritorialnosti: vsako podjetje, ki obdeluje podatke evropskih državljanov, mora upoštevati zahteve, zagrožene pa so globe v višini do 4 % njegovega svetovnega prometa. To je prisililo velikane, kot sta Meta ali Amazon, da pregledajo svoje prakse po vsem svetu, zaradi česar je Evropa postala nepripravljen globalni regulator."
+          "text": "Moč uredbe izvira iz njene ekstrateritorialnosti: vsako podjetje, ki obdeluje podatke evropskih državljanov, jo mora upoštevati, sicer mu grozi globa do 4 % svetovnega prometa. To je velikane, kot sta Meta in Amazon, prisililo, da so svoje prakse spremenili po vsem svetu, Evropa pa je tako, ne da bi to hotela, postala svetovni regulator."
         },
         {
           "type": "funFact",
-          "text": "Pred zahtevo GDPR po jasnosti bi povprečna oseba potrebovala približno 76 delovnih dni, da bi v enem letu prebrala vse pogoje storitve za digitalne storitve, ki jih uporablja."
+          "text": "Preden je uredba GDPR uvedla obvezno jasnost, bi povprečen človek potreboval približno 76 delovnih dni, da bi prebral vse pogoje uporabe digitalnih storitev, ki jih uporablja v enem letu."
         }
       ]
     },
     {
       "id": "course_218_le_role_des_donnees_le_petrole_du_xxie_s_p4",
-      "title": "Podatki, vprašanje suverenosti",
+      "title": "Podatki kot vprašanje suverenosti",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Poleg gospodarstva so podatki postali orodje moči samih držav, ki jih lahko uporabljajo za spremljanje svojega prebivalstva ali usmerjanje javnega mnenja. Države, ki ne morejo zaščititi podatkov svojih državljanov, tvegajo obliko tehnološke odvisnosti, znano kot kršitev [[digitalna suverenost]]."
+          "text": "Podatki niso pomembni le za gospodarstvo: postali so orodje moči samih držav, ki jih lahko uporabljajo za nadzor nad prebivalstvom ali usmerjanje javnega mnenja. Države, ki podatkov svojih državljanov ne znajo zaščititi, tvegajo tehnološko odvisnost, in takrat pravijo, da je ogrožena njihova [[digitalna suverenost]]."
         },
         {
           "type": "paragraph",
@@ -100,7 +100,7 @@
         },
         {
           "type": "takeaway",
-          "text": "Podatki so postali strateška dobrina, katere vrednost izvira iz njihove zmožnosti napovedovanja našega vedenja. To gospodarstvo daje prednost tehnološkim velikanom, ki jim je skoraj nemogoče konkurirati, na kar Evropa odgovarja s strogo regulativo: GDPR."
+          "text": "Podatki so postali strateška dobrina, katere vrednost izvira iz tega, da lahko napovedo naše vedenje. To gospodarstvo daje prednost tehnološkim velikanom, ki jim je skoraj nemogoče konkurirati, na kar Evropa odgovarja s strogimi pravili: z uredbo GDPR."
         }
       ]
     }

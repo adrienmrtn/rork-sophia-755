@@ -1,0 +1,104 @@
+{
+  "id": "course_216_la_dette_mondiale",
+  "title": "Ar reikia bijoti pasaulinės skolos?",
+  "subtitle": "Daugiau nei 300 % pasaulio BVP",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Économie & société",
+  "description": "Pasaulinė skola dar niekada nebuvo tokia didelė. Ar tai kelia nerimą, ar tai įprastas įrankis augimui finansuoti ir krizėms įveikti?",
+  "hero": {
+    "image": "la_dette_mondiale",
+    "ratio": "16:9",
+    "hook": "Japonijos skola prilygsta 260 % jos BVP... ir niekas nesijaudina. Štai kodėl."
+  },
+  "sections": [
+    {
+      "id": "course_216_la_dette_mondiale_intro",
+      "title": "Įvadas",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pasaulinė skola, t. y. valstybių, įmonių ir namų ūkių skolos kartu, šiandien viršija **300 % pasaulio BVP**. Tai absoliutus rekordas ekonomikos istorijoje."
+        },
+        {
+          "type": "paragraph",
+          "text": "Už šio įspūdingo skaičiaus slypi sudėtingesnė tikrovė: skola padeda finansuoti augimą, reaguoti į sveikatos krizes ar pasirengti žaliajai pertvarkai. Tačiau ji kelia ir pasitikėjimo žlugimo riziką."
+        }
+      ]
+    },
+    {
+      "id": "course_216_la_dette_mondiale_p1",
+      "title": "Kaip valstybė įsiskolina",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Valstybė įsiskolina, kai jos išlaidos nuolat viršija mokestines pajamas. Šis biudžeto deficitas padengiamas skolinantis finansų rinkose. Pasak teorijos, kuri vadinama taip: [[keinsistinė teorija]], skolintis ekonomikai skatinti krizės metu yra pateisinama, jei grąžinama, kai augimas atsinaujina."
+        },
+        {
+          "type": "paragraph",
+          "text": "Praktikoje vyriausybės sunkiais laikais lengvai skolinasi, bet geraisiais retai grąžina. Todėl skola ilgam kaupiasi. Japonijos atvejis žavi: kai skola siekia apie 260 % BVP, šalis logiškai turėtų būti krizėje. Tačiau taip nėra, nes didžioji jos skolos dalis priklauso jos pačios bankams ir taupytojams, apsaugota nuo užsienio rinkų."
+        },
+        {
+          "type": "funFact",
+          "text": "Jungtinė Karalystė tik 2015 m. baigė grąžinti skolas, likusias nuo Napoleono karų ir 1720 m. finansinio burbulo."
+        }
+      ]
+    },
+    {
+      "id": "course_216_la_dette_mondiale_p2",
+      "title": "Ne visos skolos vienodos",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tikrasis skolos pavojus priklauso ne tik nuo jos dydžio, bet ir nuo valiutos, kuria skolinamasi. Turtingos šalys skolinasi savo valiuta, ir tai ramina investuotojus."
+        },
+        {
+          "type": "image",
+          "asset": "japan_government_debt_statistics_chart",
+          "ratio": "16:9",
+          "caption": "Pasaulinė valstybių skola šiandien viršija 300 % planetos BVP."
+        },
+        {
+          "type": "paragraph",
+          "text": "O besivystančios šalys dažnai turi skolintis doleriais, nes jų valiuta nelaikoma pakankamai stabili. Jei nacionalinė valiuta dolerio atžvilgiu nuvertėja, grąžintina suma per naktį išauga. Tokiose krizėse dažnai įsikiša [[TVF]], tačiau paprastai jis reikalauja griežto taupymo politikos, kuri skaudžiai paliečia gyventojus."
+        }
+      ]
+    },
+    {
+      "id": "course_216_la_dette_mondiale_p3",
+      "title": "Ar skola gali būti begalinė?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Susiduria du ekonomikos požiūriai. [[Šiuolaikinė pinigų teorija (MMT)]] teigia, kad valstybė negali bankrutuoti, kol skolinasi savo valiuta: tikroji riba yra ne savavališkas skaičius, kaip Mastrichto sutartimi Europoje nustatyti 60 %, o infliacijos lygis."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kiti, atsargesni ekonomistai baiminasi, kad per didelė skola gali sugriauti rinkų pasitikėjimą ir staigiai pakelti palūkanų normas. 2010-2012 m. euro zonos krizė parodė šią riziką: tokių šalių kaip Graikija, neturinčių savo centrinio banko, skolinimosi palūkanos šoktelėjo tiek, kad iškilo grėsmė pačiai Europos valiutai."
+        }
+      ]
+    },
+    {
+      "id": "course_216_la_dette_mondiale_p4",
+      "title": "Naujieji skolos veidai",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pasaulinė skola susijusi ne tik su valstybėmis: vis didesnė jos dalis tenka ir įmonėms bei namų ūkiams, kartais per menkai reguliuojamus finansų dalyvius. Kyla ir nauja diskusija apie klimato skolą: ar skolą, kuri finansuoja energetikos pertvarką, reikėtų vertinti kitaip nei tą, kuri finansuoja paprastą vartojimą?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Kartų teisingumo klausimas išlieka svarbiausias: skolintis šiandien reiškia imti iš rytdienos mokesčių. Tačiau jei šie pinigai finansuoja ilgalaikę infrastruktūrą ar gerą švietimą, juos galima laikyti ne našta, o dovana ateities kartoms."
+        },
+        {
+          "type": "takeaway",
+          "text": "Pasaulinė skola viršija 300 % planetos BVP, ir tai istorinis rekordas. Jos pavojingumas priklauso ne tiek nuo dydžio, kiek nuo valiutos, kuria skolinamasi: Japonija įrodo, kad 260 % skola gali išlikti stabili, jei ji priklauso vietiniams skolintojams."
+        }
+      ]
+    }
+  ]
+}

@@ -291,6 +291,8 @@ class AuthService(private val appContext: Context) {
                         // this RevenueCat user. Push the receipts across so a purchase made
                         // before signing in follows the account.
                         runCatching { Purchases.sharedInstance.syncPurchases() }
+                        // Attributes sent before logIn stayed on the anonymous customer.
+                        LanguageManager.reportToRevenueCat(appContext)
                     }
 
                     override fun onError(error: com.revenuecat.purchases.PurchasesError) {

@@ -1,0 +1,921 @@
+{
+ "langue": "nb",
+ "synthese": {
+  "verdict": "La plainte est justifiée pour le norvégien, et elle vise presque uniquement les cours. L'interface (4/5) a été relue : tutoiement naturel, boutons courts, guillemets « » corrects, bonnes idiomatisations (« Da kjører vi », « på T-banen ») ; il reste quelques fautes visibles sur le paywall et l'onboarding (« Et smugkikk », « Lås opp mine -70 % », « doktorer », « Du brenner ») et des flottements de terminologie (kurs / leksjon, prøve / prøveperiode, løype / rute / reise, blocker / blokkering). Les cours (2/5) sont, pour quatre leçons sur cinq, de la traduction automatique brute : « on » rendu par « vi » (90 segments, le plus haut de toutes les langues avec le danois), « 360 idoles » devenues le verbe « 360 idolâtrer », « reddition » devenue l'impératif « rends-toi », « une condamnation » « une conviction intime », le VIIe siècle devenu le VIIIe (« 700-tallet »), objets et abstractions repris par « hun/han » selon le genre français, guillemets anglais, temps verbaux qui alternent d'une phrase à l'autre, noms propres en forme anglaise (« Echo » pour Ekko).",
+  "scores": {
+   "ui": 4,
+   "cours": 2,
+   "global": 3
+  },
+  "top_issues": [
+   {
+    "title": "« on » rendu par « nous »",
+    "where": "course_1_la_naissance_de_l_islam_622/s0.b0.text (90 segments dans le corpus)",
+    "current": "Vi vil drepe ham.",
+    "gloss_fr": "Nous voulons le tuer.",
+    "fix": "Noen vil ta livet av ham.",
+    "severity": "bloquant"
+   },
+   {
+    "title": "Le VIIe siècle devenu le VIIIe",
+    "where": "course_1_la_naissance_de_l_islam_622/s1.b0.text",
+    "current": "På 700-tallet interesserte Arabia nesten ingen.",
+    "gloss_fr": "Au VIIIe siècle (700-tallet), l'Arabie n'intéressait presque personne",
+    "fix": "På 600-tallet er det nesten ingen som bryr seg om Arabia.",
+    "severity": "bloquant"
+   },
+   {
+    "title": "« 360 idoles » = « 360 idolâtrer »",
+    "where": "course_1_la_naissance_de_l_islam_622/s1.b0.text",
+    "current": "Kabaen huset omtrent **360 idolisere**",
+    "gloss_fr": "La Kaaba abritait environ 360 idolâtrer (verbe)",
+    "fix": "Kabaen huset rundt **360 avgudsbilder**",
+    "severity": "bloquant"
+   },
+   {
+    "title": "Reddition rendue à l'impératif",
+    "where": "course_1_la_naissance_de_l_islam_622/s3.b3 (timeline)",
+    "current": "Overgi deg uten kamp og generell benådning.",
+    "gloss_fr": "Rends-toi sans combat et grâce générale.",
+    "fix": "Overgivelse uten kamp og allmenn amnesti.",
+    "severity": "bloquant"
+   },
+   {
+    "title": "« une condamnation » = « une conviction intime »",
+    "where": "course_100_les_fleurs_du_mal_baudelaire/hero.hook",
+    "current": "Seks sensurerte dikt, en overbevisning og fødselen til…",
+    "gloss_fr": "Six poèmes censurés, une conviction (certitude) et la naissance de…",
+    "fix": "Seks sensurerte dikt, én domfellelse og den moderne poesiens fødsel.",
+    "severity": "bloquant"
+   },
+   {
+    "title": "Objets repris par « elle » selon le genre français",
+    "where": "course_1_la_naissance_de_l_islam_622/s4.b0.text (motif systématique)",
+    "current": "Utvidelsen er ikke bare militær. Hun er også organisert.",
+    "gloss_fr": "L'expansion n'est pas seulement militaire. Elle (une femme) est aussi organisée.",
+    "fix": "Ekspansjonen er ikke bare militær. Den er også organisert.",
+    "severity": "bloquant"
+   },
+   {
+    "title": "« Hégire » rendu « Hegira » et « départ » rendu « avgang » (train)",
+    "where": "course_1_la_naissance_de_l_islam_622/description",
+    "current": "Denne avgangen, Hegira, markerer år 1 av islam",
+    "gloss_fr": "Ce départ (de train), Hegira, marque l'an 1 de l'islam",
+    "fix": "Denne utvandringen, hijra, markerer år 1 i den islamske tidsregningen",
+    "severity": "majeur"
+   },
+   {
+    "title": "Possessif calqué sur le paywall",
+    "where": "offer.unlock",
+    "current": "Lås opp mine -70 %",
+    "gloss_fr": "Déverrouille mes -70 %",
+    "fix": "Hent rabatten på 70 %",
+    "severity": "majeur"
+   }
+  ],
+  "systematic": [
+   "« on » impersonnel rendu par « vi » : 90 segments sur 168, le maximum du corpus avec le danois.",
+   "Pronoms calqués sur le genre grammatical français : objets et abstractions deviennent « hun / han », genre des personnages inversé.",
+   "Faux sens de polysémie par pivot anglais : flâneur → stroller → barnevogn (poussette), condamnation → conviction → overbevisning, spleen → milt (la rate).",
+   "Guillemets droits anglais dans les cours (l'UI a les bons « »), parfois mélangés dans la même citation.",
+   "Noms propres, termes de glossaire et titres d'œuvres en forme anglaise, latine ou française (Echo, Hegira, Les Fleurs du Mal).",
+   "Temps verbaux instables : présent de narration et prétérit alternent d'une phrase à l'autre.",
+   "UI : terminologie kurs / leksjon, prøve / prøveperiode, løype / rute / reise, blocker / blokkering, rang / rangering."
+  ],
+  "action": "relecture_complete",
+  "effort": "UI : 0,5 jour ; cours, quiz et glossaire : relecture native complète, 2 à 3 semaines ; guillemets et « on » → tournure impersonnelle : relecteur."
+ },
+ "scores_relecteur_par_surface": {
+  "combined": 2.5,
+  "ui": null
+ },
+ "justifications_relecteur": {
+  "combined": "La plainte « ça ne sonne pas naturel » est justifiée pour le norvégien bokmål, mais elle vise presque exclusivement les cours. L'interface (note UI : 4/5) est visiblement relue par un humain : tutoiement naturel, boutons courts, guillemets « » corrects, bonnes idiomatisations (« Da kjører vi », « Jeg slår til », « på T-banen ») ; il reste une poignée de fautes visibles sur le paywall et l'onboarding (« Et smugkikk », « Lås opp mine -70 % », « doktorer », « personlig rute », « Du brenner ») et des flottements terminologiques (kurs/leksjon, prøve/prøveperiode, løype/rute/reise, blocker/blokkering, rang/rangering). Les cours (note : 2/5) sont, pour quatre leçons sur cinq, de la traduction automatique brute passée par un pivot anglais et jamais relue : « on » rendu par « vi », pronoms de genre calqués (« Hun er også organisert », « Kroppen hans » pour Écho), contresens de polysémie embarrassants (flâneur → « barnevogn » poussette, spleen → « milt » rate, Pan → « Bang », lumière → « lett » léger, espace → « plass », condamnation → « overbevisning »), titres d'œuvres inventés (« Print, stigende sol », « Lunsj på gresset »), noms propres en forme anglaise ou française (Hegira, Narcissus/Narcisse, Echo, Kalifs, Naiads), guillemets droits et temps verbaux instables. Seul le cours sur l'OTAN est à peu près lisible (environ 3,5/5) malgré deux contresens bloquants. La surface la plus dégradée est donc le contenu pédagogique, cœur du produit : il faut une retraduction humaine des cours, alors que l'UI ne demande qu'une passe d'harmonisation.",
+  "ui": "(liste partielle, relecteur interrompu)"
+ },
+ "constats_non_listes_par_le_relecteur": {
+  "combined": 80,
+  "ui": 0
+ },
+ "motifs_recurrents": [
+  {
+   "description": "Pronoms personnels calqués sur le genre grammatical français : un objet ou une abstraction devient « hun/han », ou le genre d'un personnage est inversé (Écho → hans, Narcisse → hennes).",
+   "frequency": "systématique",
+   "example": "Utvidelsen er ikke bare militær. Hun er også organisert.",
+   "regex_target": "\\b(Hun|Han) (er|ble) (også|dømt)\\b|\\b(Hans|Hennes) egne\\b",
+   "pack": "combined"
+  },
+  {
+   "description": "« On » impersonnel rendu par « vi » (nous), ce qui fait parler les auteurs à la première personne dans le récit historique.",
+   "frequency": "fréquent",
+   "example": "On veut le tuer → Vi vil drepe ham.",
+   "regex_fr": "\\bOn (veut|y vit|exige|prie)\\b",
+   "regex_target": "(?:^|\\. )Vi (vil|bor|krever) ",
+   "pack": "combined"
+  },
+  {
+   "description": "Faux sens de polysémie dus à un pivot par l'anglais : le mot français est traduit via son homonyme anglais le plus courant (flâneur→stroller→barnevogn, spleen→milt, Pan→Bang, lumière→light→lett, espace→plass, ruse→rusen, appelle→ringer, pouvoir→kraften, motif→mønsteret, prise→fangst, condamnation→conviction→overbevisning).",
+   "frequency": "systématique",
+   "example": "Baudelaire vandrer deretter som en **barnevogn**",
+   "regex_target": "\\b(barnevogn|[Mm]ilt|Bang|idolisere|Male rør|Print, stigende|overbevisning|Fangst av|Kraften går)\\b",
+   "pack": "combined"
+  },
+  {
+   "description": "Guillemets droits anglais \" \" dans les cours au lieu des guillemets norvégiens « », parfois mélangés dans la même citation (\"… »), alors que l'UI est correcte.",
+   "frequency": "systématique",
+   "example": "Omdøpt til \"profetens by\"",
+   "regex_target": "\"[^\"\\n]{2,}\"|\"[^\"\\n]*»",
+   "pack": "combined"
+  },
+  {
+   "description": "Noms propres, termes de glossaire et titres d'œuvres laissés en forme anglaise, latine ou française au lieu de la forme norvégienne établie, souvent avec plusieurs graphies dans le même cours.",
+   "frequency": "fréquent",
+   "example": "Narkissos (titre) / Narcissus / Narcisse ; Ekko / Echo ; Hegira ; [[Kalifs]] ; [[Naiads]] ; Lunsj på gresset ; USSR",
+   "regex_target": "\\b(Hegira|Hegiraen|Kalifs|Naiads|Oread|Narcissus|Narcisse|Echo|Tirésias|Cephisus|Byzantium|USSR|alexandrine|Baudelairian|Ummah)\\b",
+   "pack": "combined"
+  },
+  {
+   "description": "Temps verbaux instables : le présent de narration français alterne avec le prétérit norvégien d'une phrase à l'autre, parfois dans la même phrase.",
+   "frequency": "fréquent",
+   "example": "I **1857** publiserte **Charles Baudelaire** … Samlingen markerer et vendepunkt",
+   "pack": "combined"
+  },
+  {
+   "description": "Calques syntaxiques de l'anglais ou du français (« Her er hvordan », « Dette er hvordan », « bringe ned », « føde en stat », « er vertskap for », « i tjeneste for », « regner med deg for å »).",
+   "frequency": "fréquent",
+   "example": "Her er hvordan det hele startet.",
+   "regex_target": "\\b(Her|Dette) er hvordan\\b|\\bbringe ned\\b|\\ber vertskap for\\b|\\bi tjeneste for\\b",
+   "pack": "combined"
+  },
+  {
+   "description": "UI : « cours » traduit tantôt « kurs » (norme de l'app), tantôt « leksjon ».",
+   "frequency": "fréquent",
+   "example": "%@+ leksjoner skrevet av ekte forskere / Ubegrensede leksjoner",
+   "regex_target": "\\bleksjon(en|er|ene)?\\b",
+   "pack": "combined"
+  },
+  {
+   "description": "UI : l'essai gratuit est appelé « prøve » (test, examen) ou « prøveperiode » selon les écrans ; seul « prøveperiode » est idiomatique.",
+   "frequency": "fréquent",
+   "example": "Start prøven min / Aktiver den gratis prøven / 3 dagers gratis prøve",
+   "regex_target": "\\bprøven\\b|\\bgratis prøve\\b",
+   "pack": "combined"
+  },
+  {
+   "description": "UI : « parcours » rendu par trois mots différents (løype, rute, reise) alors que l'onglet s'appelle Løype.",
+   "frequency": "isolé",
+   "example": "personlig rute / kunnskapsreisen din / Løypa di",
+   "regex_target": "\\b(personlig rute|kunnskapsreise\\w*)\\b",
+   "pack": "combined"
+  },
+  {
+   "description": "UI : résiliation d'abonnement dite « avbryt/avslutt » (interrompre une action) au lieu de « si opp », utilisé ailleurs.",
+   "frequency": "fréquent",
+   "example": "Avbryt når som helst, gratis.",
+   "regex_target": "\\bAvbryt (når som helst|før)\\b|\\bavslutt når du vil\\b",
+   "pack": "combined"
+  },
+  {
+   "description": "Artefacts bruts de MT : tiret collé au gras, guillemet fermant orphelin, terme de glossaire perdu ou réécrit ([[razzias]] disparu, [[symbolisme]] → [[Symbolikk og Baudelaires arv]]).",
+   "frequency": "isolé",
+   "example": "motsto de **-beleiringen av Medina** / «Noen!» »",
+   "regex_target": "\\*\\*-|» »|\\[\\[Symbolikk og Baudelaires arv\\]\\]",
+   "pack": "combined"
+  },
+  {
+   "description": "UI : orthographe mixte fremgang/framgang et jobbet/jobba (deux normes bokmål valides mais mélangées dans la même app).",
+   "frequency": "isolé",
+   "example": "FRAMGANG PER EMNE vs Fremgang",
+   "regex_target": "\\b[Ff]ramgang\\b|FRAMGANG|\\bjobba\\b",
+   "pack": "combined"
+  },
+  {
+   "description": "Témoignages signés de prénoms français (Léa, Inès, Camille, Yanis, Malik) dans des écrans par ailleurs localisés (« T-banen », « bussen ») : léger décalage de crédibilité pour un lecteur norvégien.",
+   "frequency": "systématique",
+   "example": "Inès, 19 — «Jeg har alltid hatet å «pugge»…»",
+   "pack": "combined"
+  }
+ ],
+ "constats": [
+  {
+   "location": "courses:course_1_la_naissance_de_l_islam_622/s0.b0.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Vi vil drepe ham. Denne mannens navn er **Muhammed**. Hans avgang mot oasen Medina har et navn: **Hegira**.",
+   "gloss_fr": "« Nous voulons le tuer. Le nom de cet homme est Muhammad. Son départ (de train) vers l'oasis de Médine a un nom : Hegira. »",
+   "problem": "Le « on » impersonnel est rendu par « vi » (nous) : le texte dit que ce sont les auteurs qui veulent tuer Muhammad ; « avgang » (départ d'un train) et « Hegira » (forme anglo-latine, inexistante en norvégien) aggravent le premier paragraphe.",
+   "fix": "Noen vil ta livet av ham. Mannen heter **Muhammed**. Flukten hans til oasen Medina har fått et navn: **hijra**.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_1_la_naissance_de_l_islam_622/s1.b0.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "På 700-tallet interesserte Arabia nesten ingen. Vi bor der i stammer. […] Den kraftige [[Quraysh]]-stammen",
+   "gloss_fr": "« Au VIIIe siècle, l'Arabie n'intéressait presque personne. Nous y habitons en tribus. […] La tribu vigoureuse des Quraysh »",
+   "problem": "« VIIe siècle » devient le VIIIe (700-tallet = années 700), « on y vit » devient « nous y habitons », et « puissante » est rendu par « kraftig » (vigoureux, physique).",
+   "fix": "På 600-tallet er det nesten ingen som bryr seg om Arabia. Folk lever i stammer. […] Den mektige [[Quraysh]]-stammen",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_1_la_naissance_de_l_islam_622/s1.b1.text",
+   "severity": "bloquant",
+   "category": "mt_artefact",
+   "current": "Kabaen huset omtrent **360 idolisere**",
+   "gloss_fr": "« La Kaaba abritait environ 360 idolâtrer » (verbe à l'infinitif)",
+   "problem": "« idoles » est traduit par le verbe « idolisere » (idolâtrer) : phrase absurde, et « Kaaba »/« Kabaen » sont graphiés de deux façons dans le cours.",
+   "fix": "Kabaen huset rundt **360 avgudsbilder**, omtrent ett for hver dag i den arabiske månekalenderen.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_1_la_naissance_de_l_islam_622/s4.b0.text",
+   "severity": "bloquant",
+   "category": "mt_artefact",
+   "current": "Utvidelsen er ikke bare militær. Hun er også organisert. […] letter installasjonen av den nye kraften i slitne områder av Byzantium.",
+   "gloss_fr": "« L'expansion n'est pas seulement militaire. Elle (une femme) est aussi organisée. […] facilite l'installation de la nouvelle force dans des zones fatiguées de Byzantium. »",
+   "problem": "« Elle » (l'expansion) devient le pronom personnel féminin « hun », « pouvoir » devient « kraft » (force physique), « installation » et « Byzantium » sont des calques anglais.",
+   "fix": "Ekspansjonen er ikke bare militær. Den er også organisert. […] gjør det lettere for den nye makten å slå rot i områder som var lei av Bysants.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_1_la_naissance_de_l_islam_622/s4.b2.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "blir den islamske sivilisasjonen et veiskille mellom gresk, persisk og indisk kunnskap. Litt etter litt nærmer antikken seg.",
+   "gloss_fr": "« la civilisation islamique devient une bifurcation (séparation des routes) entre les savoirs grec, perse et indien. Peu à peu, l'Antiquité approche. »",
+   "problem": "« se referme » (s'achève) est traduit par son contraire « nærmer seg » (approche), et « carrefour » (lieu de rencontre) par « veiskille » (point de divergence).",
+   "fix": "blir den islamske sivilisasjonen et møtested for gresk, persisk og indisk kunnskap. Litt etter litt går antikken mot slutten.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_1_la_naissance_de_l_islam_622/s3.b3.e3.detail",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Overgi deg uten kamp og generell benådning.",
+   "gloss_fr": "« Rends-toi sans combat et grâce générale. »",
+   "problem": "Le substantif « Reddition » est rendu par un impératif adressé au lecteur ; le titre du même jalon, « Fangst av Mekka », signifie « capture (de pêche) de La Mecque ».",
+   "fix": "Overgivelse uten kamp og allmenn amnesti. (titre : Erobringen av Mekka)",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_100_les_fleurs_du_mal_baudelaire/hero.hook",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Seks sensurerte dikt, en overbevisning og fødselen til moderne poesi.",
+   "gloss_fr": "« Six poèmes censurés, une conviction (certitude intime) et la naissance de la poésie moderne. »",
+   "problem": "« condamnation » a transité par l'anglais « conviction » et ressort en « overbevisning » (conviction = croyance) : le sens juridique disparaît dès l'accroche.",
+   "fix": "Seks sensurerte dikt, én domfellelse og den moderne poesiens fødsel.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_100_les_fleurs_du_mal_baudelaire/s0.b1.text",
+   "severity": "bloquant",
+   "category": "mt_artefact",
+   "current": "Boken forårsaket en skandale. Han ble dømt for å ha \"fornærmet offentlig moral\".",
+   "gloss_fr": "« Le livre a provoqué un scandale. Il (un homme) a été condamné pour avoir \"insulté la morale publique\". »",
+   "problem": "« Il » (le livre) devient « han » (lui) : le lecteur comprend que c'est l'homme qui est condamné ; guillemets droits anglais au lieu de « ».",
+   "fix": "Boken vakte skandale. Den ble dømt for «krenkelse av offentlig moral».",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_100_les_fleurs_du_mal_baudelaire/s1.b1.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Foreldreløs av sin far på **6 år** krangler han med sin svigerfar, general **Aupick**",
+   "gloss_fr": "« Orphelin de son père à 6 ans, il se dispute avec son beau-père (le père de son épouse), le général Aupick »",
+   "problem": "« beau-père » est pris au sens de père de l'épouse (svigerfar) au lieu de second mari de la mère (stefar), ce qui est absurde pour un enfant de 6 ans ; « orphelin de père » est calqué mot à mot.",
+   "fix": "Han mister faren som **6-åring** og kommer på kant med stefaren, general **Aupick**",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_100_les_fleurs_du_mal_baudelaire/s2.b0.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "**\"Milt og ideelt\"**, den første store delen, motsetter seg to stater. **milt**, et ord lånt fra engelsk",
+   "gloss_fr": "« \"Rate (l'organe) et idéal\", la première grande section, s'oppose à deux États (pays). La rate, mot emprunté à l'anglais… »",
+   "problem": "« spleen » est traduit par l'organe (milt) et « états » (d'âme) par « stater » (États-nations) : le paragraphe clé du cours devient absurde.",
+   "fix": "**«Spleen og ideal»**, den første store delen, stiller to sinnstilstander opp mot hverandre. **Spleen**, et ord lånt fra engelsk, betegner en dyp livslede, et tungsinn uten årsak. **Idealet** er tørsten etter det opphøyde og den rene skjønnheten.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_100_les_fleurs_du_mal_baudelaire/s2.b3.text",
+   "severity": "bloquant",
+   "category": "mt_artefact",
+   "current": "gjør byen til en interiørdekor […] Baudelaire vandrer deretter som en **barnevogn**",
+   "gloss_fr": "« fait de la ville une décoration d'intérieur […] Baudelaire erre alors comme une **poussette** (landau de bébé) »",
+   "problem": "« flâneur » est passé par l'anglais « stroller » et ressort en « barnevogn » (poussette) ; « décor intérieur » (paysage intérieur) devient « interiørdekor » (décoration d'intérieur).",
+   "fix": "gjør byen til et indre landskap […] Baudelaire vandrer rundt som **flanør**, en som rusler gjennom byen og observerer uten noe bestemt mål",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_122_la_naissance_de_l_impressionnisme/s0.b1.text",
+   "severity": "bloquant",
+   "category": "nom_propre",
+   "current": "Ved å håne tittelen *Print, stigende sol*",
+   "gloss_fr": "« En se moquant du titre *Tirage d'imprimerie, soleil montant* »",
+   "problem": "Le titre du tableau fondateur est un calque absurde (impression → print = tirage) ; la forme norvégienne établie est « Impresjon, soloppgang ».",
+   "fix": "Ved å spotte tittelen *Impresjon, soloppgang* ga Leroy uten å ville det navn til den første store avantgardebevegelsen i moderne kunst. Slik endret **impresjonismen** måten vi ser virkeligheten på.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_122_la_naissance_de_l_impressionnisme/s2.b0.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Før malte maleren pigmentene sine i verkstedet. Med [[Male rør og friluft]] kan han endelig sitte ute foran mønsteret.",
+   "gloss_fr": "« Avant, le peintre peignait ses pigments à l'atelier. Avec [[Peindre tuyaux et plein air]], il peut enfin s'asseoir dehors devant le motif décoratif (pattern). »",
+   "problem": "« tubes de peinture » devient « tuyaux », « motif » (sujet) devient « mønster » (motif décoratif) et « broyait » devient « malte » (peignait) : la phrase technique centrale est fausse.",
+   "fix": "Før måtte maleren knuse pigmentene selv i atelieret. Med [[malingstuber og friluftsmaleri]] kan han endelig slå seg ned ute, rett foran motivet.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_122_la_naissance_de_l_impressionnisme/s4.b3.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "gjorde impresjonismen lett, fri berøring og personlig sensasjon til hjertet av moderne maleri",
+   "gloss_fr": "« l'impressionnisme a fait du léger (pas lourd), du toucher libre et de la sensation (événement sensationnel) personnelle le cœur de la peinture moderne »",
+   "problem": "« lumière » est pris comme « light » = léger (lett), « touche » comme toucher physique et « sensation » comme sensationnel : la phrase de conclusion du cours n'a plus de sens.",
+   "fix": "gjorde impresjonismen lyset, det frie penselstrøket og det personlige sanseinntrykket til kjernen i moderne maleri",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_122_la_naissance_de_l_impressionnisme/s4.title",
+   "severity": "bloquant",
+   "category": "grammaire",
+   "current": "Hvilken impresjonisme forandret",
+   "gloss_fr": "« Quel impressionnisme a changé » (interrogative tronquée, agrammaticale)",
+   "problem": "« Ce que » est rendu par l'interrogatif « Hvilken » (lequel) : le titre de section est agrammatical et incompréhensible.",
+   "fix": "Det impresjonismen forandret",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_166_narcisse_et_echo/s1.b3.text",
+   "severity": "bloquant",
+   "category": "nom_propre",
+   "current": "har guden **Bang**, rasende over å bli avvist, revet i stykker Echo",
+   "gloss_fr": "« le dieu **Boum** (onomatopée), furieux d'être repoussé, a déchiré en morceaux Echo »",
+   "problem": "Le dieu Pan est traduit comme l'onomatopée française « pan ! » (Bang) ; ordre des mots fautif et « Echo » en graphie anglaise.",
+   "fix": "lar guden **Pan**, rasende over å bli avvist, rive Ekko i stykker",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_166_narcisse_et_echo/s1.b2.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Når Hera oppdager rusen, straffer hun Echo. […] Hans egne ønsker har ikke lenger et språk.",
+   "gloss_fr": "« Quand Héra découvre l'ivresse (la drogue), elle punit Echo. […] Ses (à lui) propres désirs n'ont plus de langue. »",
+   "problem": "« ruse » est traduit par « rus » (ivresse) et les désirs d'Écho deviennent ceux d'un homme (« hans »).",
+   "fix": "Når Hera oppdager knepet, straffer hun Ekko. […] Hennes egne ønsker har ikke lenger noe språk.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_166_narcisse_et_echo/s2.b0.text",
+   "severity": "bloquant",
+   "category": "grammaire",
+   "current": "Skjønnheten hennes tiltrekker alle. Hans stolthet skyver alle vekk. Spåmannen **Tirésias** hadde advart sin mor",
+   "gloss_fr": "« Sa beauté (à elle) attire tout le monde. Son orgueil (à lui) repousse tout le monde. Le devin Tirésias avait prévenu sa propre mère (celle de Tirésias) »",
+   "problem": "Le genre de Narcisse est inversé (« hennes » = d'elle) dans une phrase et le réfléchi « sin » fait de la mère celle de Tirésias ; « Tirésias » garde la graphie française alors que « Teiresias » apparaît plus loin.",
+   "fix": "Skjønnheten hans tiltrekker alle. Hovmodet hans støter alle fra seg. Spåmannen **Teiresias** hadde advart moren hans",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_166_narcisse_et_echo/s2.b1.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Kan ikke snakke først, hun venter. Narcisse ringer: «Er det noen?» Hun svarer: «Noen!» »",
+   "gloss_fr": "« Ne peut pas parler en premier, elle attend. Narcisse téléphone : « Y a-t-il quelqu'un ? » Elle répond : « Quelqu'un ! » (guillemet fermant orphelin)",
+   "problem": "« appelle » devient « ringer » (téléphoner), le participe « incapable de » est calqué en phrase sans sujet, un guillemet fermant traîne et le nom reste en français (« Narcisse »).",
+   "fix": "Siden hun ikke kan snakke først, venter hun. Narkissos roper: «Er det noen her?» Hun svarer: «Noen her!»",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_166_narcisse_et_echo/s2.b2.text",
+   "severity": "bloquant",
+   "category": "grammaire",
+   "current": "Kroppen hans visner, knoklene blir til stein.",
+   "gloss_fr": "« Son corps (à lui) se dessèche, ses os deviennent pierre. »",
+   "problem": "Le corps d'Écho devient celui d'un homme (« hans ») : erreur de genre héritée du possessif français « son ».",
+   "fix": "Kroppen hennes tørker inn, knoklene blir til stein.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_207_l_otan_a_quoi_ca_sert_encore/s3.b3.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "NATO på engelsk og NATO på fransk.",
+   "gloss_fr": "« NATO en anglais et NATO en français. »",
+   "problem": "Le sigle français OTAN a été « traduit » en NATO : la phrase qui explique les deux formes inversées devient absurde.",
+   "fix": "NATO på engelsk og OTAN på fransk.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_207_l_otan_a_quoi_ca_sert_encore/s4.b0.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Den innlemmet **[[Cyberspace]]** og plass som nye offisielle operasjonsområder.",
+   "gloss_fr": "« Elle a intégré le cyberespace et la place (l'espace disponible, la place libre) comme nouveaux domaines d'opération officiels. »",
+   "problem": "« l'espace » (extra-atmosphérique) est traduit par « plass » (place, place libre).",
+   "fix": "Den har innlemmet **[[cyberspace]]** og verdensrommet som nye offisielle operasjonsdomener.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_1_la_naissance_de_l_islam_622/s0.b0.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Vi vil drepe ham. Denne mannens navn er **Muhammed**. Hans avgang mot oasen Medina har et navn: **Hegira**.",
+   "gloss_fr": "« Nous voulons le tuer. Le nom de cet homme est Muhammad. Son départ (de train) vers l'oasis de Médine a un nom : Hegira. »",
+   "problem": "Le « on » impersonnel est rendu par « vi » (nous) : le texte dit que ce sont les auteurs qui veulent tuer Muhammad ; « avgang » (départ d'un train) et « Hegira » (forme anglo-latine, inexistante en norvégien) aggravent le premier paragraphe.",
+   "fix": "Noen vil ta livet av ham. Mannen heter **Muhammed**. Flukten hans til oasen Medina har fått et navn: **hijra**.",
+   "surface": "ui"
+  },
+  {
+   "location": "courses:course_1_la_naissance_de_l_islam_622/s1.b0.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "På 700-tallet interesserte Arabia nesten ingen. Vi bor der i stammer. […] Den kraftige [[Quraysh]]-stammen",
+   "gloss_fr": "« Au VIIIe siècle, l'Arabie n'intéressait presque personne. Nous y habitons en tribus. […] La tribu vigoureuse des Quraysh »",
+   "problem": "« VIIe siècle » devient le VIIIe (700-tallet = années 700), « on y vit » devient « nous y habitons », et « puissante » est rendu par « kraftig » (vigoureux, physique).",
+   "fix": "På 600-tallet er det nesten ingen som bryr seg om Arabia. Folk lever i stammer. […] Den mektige [[Quraysh]]-stammen",
+   "surface": "ui"
+  },
+  {
+   "location": "courses:course_1_la_naissance_de_l_islam_622/s1.b1.text",
+   "severity": "bloquant",
+   "category": "mt_artefact",
+   "current": "Kabaen huset omtrent **360 idolisere**",
+   "gloss_fr": "« La Kaaba abritait environ 360 idolâtrer » (verbe à l'infinitif)",
+   "problem": "« idoles » est traduit par le verbe « idolisere » (idolâtrer) : phrase absurde, et « Kaaba »/« Kabaen » sont graphiés de deux façons dans le cours.",
+   "fix": "Kabaen huset rundt **360 avgudsbilder**, omtrent ett for hver dag i den arabiske månekalenderen.",
+   "surface": "ui"
+  },
+  {
+   "location": "courses:course_1_la_naissance_de_l_islam_622/s4.b0.text",
+   "severity": "bloquant",
+   "category": "mt_artefact",
+   "current": "Utvidelsen er ikke bare militær. Hun er også organisert. […] letter installasjonen av den nye kraften i slitne områder av Byzantium.",
+   "gloss_fr": "« L'expansion n'est pas seulement militaire. Elle (une femme) est aussi organisée. […] facilite l'installation de la nouvelle force dans des zones fatiguées de Byzantium. »",
+   "problem": "« Elle » (l'expansion) devient le pronom personnel féminin « hun », « pouvoir » devient « kraft » (force physique), « installation » et « Byzantium » sont des calques anglais.",
+   "fix": "Ekspansjonen er ikke bare militær. Den er også organisert. […] gjør det lettere for den nye makten å slå rot i områder som var lei av Bysants.",
+   "surface": "ui"
+  },
+  {
+   "location": "courses:course_1_la_naissance_de_l_islam_622/s4.b2.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "blir den islamske sivilisasjonen et veiskille mellom gresk, persisk og indisk kunnskap. Litt etter litt nærmer antikken seg.",
+   "gloss_fr": "« la civilisation islamique devient une bifurcation (séparation des routes) entre les savoirs grec, perse et indien. Peu à peu, l'Antiquité approche. »",
+   "problem": "« se referme » (s'achève) est traduit par son contraire « nærmer seg » (approche), et « carrefour » (lieu de rencontre) par « veiskille » (point de divergence).",
+   "fix": "blir den islamske sivilisasjonen et møtested for gresk, persisk og indisk kunnskap. Litt etter litt går antikken mot slutten.",
+   "surface": "ui"
+  },
+  {
+   "location": "courses:course_1_la_naissance_de_l_islam_622/s3.b3.e3.detail",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Overgi deg uten kamp og generell benådning.",
+   "gloss_fr": "« Rends-toi sans combat et grâce générale. »",
+   "problem": "Le substantif « Reddition » est rendu par un impératif adressé au lecteur ; le titre du même jalon, « Fangst av Mekka », signifie « capture (de pêche) de La Mecque ».",
+   "fix": "Overgivelse uten kamp og allmenn amnesti. (titre : Erobringen av Mekka)",
+   "surface": "ui"
+  },
+  {
+   "location": "courses:course_100_les_fleurs_du_mal_baudelaire/hero.hook",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Seks sensurerte dikt, en overbevisning og fødselen til moderne poesi.",
+   "gloss_fr": "« Six poèmes censurés, une conviction (certitude intime) et la naissance de la poésie moderne. »",
+   "problem": "« condamnation » a transité par l'anglais « conviction » et ressort en « overbevisning » (conviction = croyance) : le sens juridique disparaît dès l'accroche.",
+   "fix": "Seks sensurerte dikt, én domfellelse og den moderne poesiens fødsel.",
+   "surface": "ui"
+  },
+  {
+   "location": "courses:course_100_les_fleurs_du_mal_baudelaire/s0.b1.text",
+   "severity": "bloquant",
+   "category": "mt_artefact",
+   "current": "Boken forårsaket en skandale. Han ble dømt for å ha \"fornærmet offentlig moral\".",
+   "gloss_fr": "« Le livre a provoqué un scandale. Il (un homme) a été condamné pour avoir \"insulté la morale publique\". »",
+   "problem": "« Il » (le livre) devient « han » (lui) : le lecteur comprend que c'est l'homme qui est condamné ; guillemets droits anglais au lieu de « ».",
+   "fix": "Boken vakte skandale. Den ble dømt for «krenkelse av offentlig moral».",
+   "surface": "ui"
+  },
+  {
+   "location": "courses:course_100_les_fleurs_du_mal_baudelaire/s1.b1.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Foreldreløs av sin far på **6 år** krangler han med sin svigerfar, general **Aupick**",
+   "gloss_fr": "« Orphelin de son père à 6 ans, il se dispute avec son beau-père (le père de son épouse), le général Aupick »",
+   "problem": "« beau-père » est pris au sens de père de l'épouse (svigerfar) au lieu de second mari de la mère (stefar), ce qui est absurde pour un enfant de 6 ans ; « orphelin de père » est calqué mot à mot.",
+   "fix": "Han mister faren som **6-åring** og kommer på kant med stefaren, general **Aupick**",
+   "surface": "ui"
+  },
+  {
+   "location": "courses:course_100_les_fleurs_du_mal_baudelaire/s2.b0.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "**\"Milt og ideelt\"**, den første store delen, motsetter seg to stater. **milt**, et ord lånt fra engelsk",
+   "gloss_fr": "« \"Rate (l'organe) et idéal\", la première grande section, s'oppose à deux États (pays). La rate, mot emprunté à l'anglais… »",
+   "problem": "« spleen » est traduit par l'organe (milt) et « états » (d'âme) par « stater » (États-nations) : le paragraphe clé du cours devient absurde.",
+   "fix": "**«Spleen og ideal»**, den første store delen, stiller to sinnstilstander opp mot hverandre. **Spleen**, et ord lånt fra engelsk, betegner en dyp livslede, et tungsinn uten årsak. **Idealet** er tørsten etter det opphøyde og den rene skjønnheten.",
+   "surface": "ui"
+  },
+  {
+   "location": "courses:course_100_les_fleurs_du_mal_baudelaire/s2.b3.text",
+   "severity": "bloquant",
+   "category": "mt_artefact",
+   "current": "gjør byen til en interiørdekor […] Baudelaire vandrer deretter som en **barnevogn**",
+   "gloss_fr": "« fait de la ville une décoration d'intérieur […] Baudelaire erre alors comme une **poussette** (landau de bébé) »",
+   "problem": "« flâneur » est passé par l'anglais « stroller » et ressort en « barnevogn » (poussette) ; « décor intérieur » (paysage intérieur) devient « interiørdekor » (décoration d'intérieur).",
+   "fix": "gjør byen til et indre landskap […] Baudelaire vandrer rundt som **flanør**, en som rusler gjennom byen og observerer uten noe bestemt mål",
+   "surface": "ui"
+  },
+  {
+   "location": "courses:course_122_la_naissance_de_l_impressionnisme/s0.b1.text",
+   "severity": "bloquant",
+   "category": "nom_propre",
+   "current": "Ved å håne tittelen *Print, stigende sol*",
+   "gloss_fr": "« En se moquant du titre *Tirage d'imprimerie, soleil montant* »",
+   "problem": "Le titre du tableau fondateur est un calque absurde (impression → print = tirage) ; la forme norvégienne établie est « Impresjon, soloppgang ».",
+   "fix": "Ved å spotte tittelen *Impresjon, soloppgang* ga Leroy uten å ville det navn til den første store avantgardebevegelsen i moderne kunst. Slik endret **impresjonismen** måten vi ser virkeligheten på.",
+   "surface": "ui"
+  },
+  {
+   "location": "courses:course_122_la_naissance_de_l_impressionnisme/s2.b0.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Før malte maleren pigmentene sine i verkstedet. Med [[Male rør og friluft]] kan han endelig sitte ute foran mønsteret.",
+   "gloss_fr": "« Avant, le peintre peignait ses pigments à l'atelier. Avec [[Peindre tuyaux et plein air]], il peut enfin s'asseoir dehors devant le motif décoratif (pattern). »",
+   "problem": "« tubes de peinture » devient « tuyaux », « motif » (sujet) devient « mønster » (motif décoratif) et « broyait » devient « malte » (peignait) : la phrase technique centrale est fausse.",
+   "fix": "Før måtte maleren knuse pigmentene selv i atelieret. Med [[malingstuber og friluftsmaleri]] kan han endelig slå seg ned ute, rett foran motivet.",
+   "surface": "ui"
+  },
+  {
+   "location": "courses:course_122_la_naissance_de_l_impressionnisme/s4.b3.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "gjorde impresjonismen lett, fri berøring og personlig sensasjon til hjertet av moderne maleri",
+   "gloss_fr": "« l'impressionnisme a fait du léger (pas lourd), du toucher libre et de la sensation (événement sensationnel) personnelle le cœur de la peinture moderne »",
+   "problem": "« lumière » est pris comme « light » = léger (lett), « touche » comme toucher physique et « sensation » comme sensationnel : la phrase de conclusion du cours n'a plus de sens.",
+   "fix": "gjorde impresjonismen lyset, det frie penselstrøket og det personlige sanseinntrykket til kjernen i moderne maleri",
+   "surface": "ui"
+  },
+  {
+   "location": "courses:course_122_la_naissance_de_l_impressionnisme/s4.title",
+   "severity": "bloquant",
+   "category": "grammaire",
+   "current": "Hvilken impresjonisme forandret",
+   "gloss_fr": "« Quel impressionnisme a changé » (interrogative tronquée, agrammaticale)",
+   "problem": "« Ce que » est rendu par l'interrogatif « Hvilken » (lequel) : le titre de section est agrammatical et incompréhensible.",
+   "fix": "Det impresjonismen forandret",
+   "surface": "ui"
+  },
+  {
+   "location": "courses:course_166_narcisse_et_echo/s1.b3.text",
+   "severity": "bloquant",
+   "category": "nom_propre",
+   "current": "har guden **Bang**, rasende over å bli avvist, revet i stykker Echo",
+   "gloss_fr": "« le dieu **Boum** (onomatopée), furieux d'être repoussé, a déchiré en morceaux Echo »",
+   "problem": "Le dieu Pan est traduit comme l'onomatopée française « pan ! » (Bang) ; ordre des mots fautif et « Echo » en graphie anglaise.",
+   "fix": "lar guden **Pan**, rasende over å bli avvist, rive Ekko i stykker",
+   "surface": "ui"
+  },
+  {
+   "location": "courses:course_166_narcisse_et_echo/s1.b2.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Når Hera oppdager rusen, straffer hun Echo. […] Hans egne ønsker har ikke lenger et språk.",
+   "gloss_fr": "« Quand Héra découvre l'ivresse (la drogue), elle punit Echo. […] Ses (à lui) propres désirs n'ont plus de langue. »",
+   "problem": "« ruse » est traduit par « rus » (ivresse) et les désirs d'Écho deviennent ceux d'un homme (« hans »).",
+   "fix": "Når Hera oppdager knepet, straffer hun Ekko. […] Hennes egne ønsker har ikke lenger noe språk.",
+   "surface": "ui"
+  },
+  {
+   "location": "courses:course_166_narcisse_et_echo/s2.b0.text",
+   "severity": "bloquant",
+   "category": "grammaire",
+   "current": "Skjønnheten hennes tiltrekker alle. Hans stolthet skyver alle vekk. Spåmannen **Tirésias** hadde advart sin mor",
+   "gloss_fr": "« Sa beauté (à elle) attire tout le monde. Son orgueil (à lui) repousse tout le monde. Le devin Tirésias avait prévenu sa propre mère (celle de Tirésias) »",
+   "problem": "Le genre de Narcisse est inversé (« hennes » = d'elle) dans une phrase et le réfléchi « sin » fait de la mère celle de Tirésias ; « Tirésias » garde la graphie française alors que « Teiresias » apparaît plus loin.",
+   "fix": "Skjønnheten hans tiltrekker alle. Hovmodet hans støter alle fra seg. Spåmannen **Teiresias** hadde advart moren hans",
+   "surface": "ui"
+  },
+  {
+   "location": "courses:course_166_narcisse_et_echo/s2.b1.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Kan ikke snakke først, hun venter. Narcisse ringer: «Er det noen?» Hun svarer: «Noen!» »",
+   "gloss_fr": "« Ne peut pas parler en premier, elle attend. Narcisse téléphone : « Y a-t-il quelqu'un ? » Elle répond : « Quelqu'un ! » (guillemet fermant orphelin)",
+   "problem": "« appelle » devient « ringer » (téléphoner), le participe « incapable de » est calqué en phrase sans sujet, un guillemet fermant traîne et le nom reste en français (« Narcisse »).",
+   "fix": "Siden hun ikke kan snakke først, venter hun. Narkissos roper: «Er det noen her?» Hun svarer: «Noen her!»",
+   "surface": "ui"
+  },
+  {
+   "location": "courses:course_166_narcisse_et_echo/s2.b2.text",
+   "severity": "bloquant",
+   "category": "grammaire",
+   "current": "Kroppen hans visner, knoklene blir til stein.",
+   "gloss_fr": "« Son corps (à lui) se dessèche, ses os deviennent pierre. »",
+   "problem": "Le corps d'Écho devient celui d'un homme (« hans ») : erreur de genre héritée du possessif français « son ».",
+   "fix": "Kroppen hennes tørker inn, knoklene blir til stein.",
+   "surface": "ui"
+  },
+  {
+   "location": "courses:course_207_l_otan_a_quoi_ca_sert_encore/s3.b3.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "NATO på engelsk og NATO på fransk.",
+   "gloss_fr": "« NATO en anglais et NATO en français. »",
+   "problem": "Le sigle français OTAN a été « traduit » en NATO : la phrase qui explique les deux formes inversées devient absurde.",
+   "fix": "NATO på engelsk og OTAN på fransk.",
+   "surface": "ui"
+  },
+  {
+   "location": "courses:course_207_l_otan_a_quoi_ca_sert_encore/s4.b0.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Den innlemmet **[[Cyberspace]]** og plass som nye offisielle operasjonsområder.",
+   "gloss_fr": "« Elle a intégré le cyberespace et la place (l'espace disponible, la place libre) comme nouveaux domaines d'opération officiels. »",
+   "problem": "« l'espace » (extra-atmosphérique) est traduit par « plass » (place, place libre).",
+   "fix": "Den har innlemmet **[[cyberspace]]** og verdensrommet som nye offisielle operasjonsdomener.",
+   "surface": "ui"
+  },
+  {
+   "location": "courses:course_1_la_naissance_de_l_islam_622/description",
+   "severity": "majeur",
+   "category": "nom_propre",
+   "current": "Denne avgangen, Hegira, markerer år 1 av islam",
+   "gloss_fr": "« Ce départ (de train/avion), Hegira, marque l'an 1 de l'islam »",
+   "problem": "La forme norvégienne établie (SNL) est « hijra » ; « Hegira » n'existe pas en norvégien et revient dans tout le cours (titre de section, frise « Hegiraen »), et « avgangen » calque « départ » au sens horaire.",
+   "fix": "Denne utvandringen, hijra, markerer år 1 i den islamske tidsregningen",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_1_la_naissance_de_l_islam_622/hero.hook",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Hvordan en eksilert kjøpmann fødte en verdenssivilisasjon på tjue år.",
+   "gloss_fr": "« Comment un marchand exilé a accouché d'une civilisation mondiale en vingt ans. »",
+   "problem": "« a fait naître » est rendu par « fødte » (a accouché de), verbe réservé aux naissances biologiques ; « eksilert » est un calque rare.",
+   "fix": "Hvordan en landflyktig kjøpmann skapte en verdenssivilisasjon på tjue år.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_1_la_naissance_de_l_islam_622/s0.b1.text",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "ville budskapet som ble født i denne ørkenen bringe ned store imperier og føde en stat som strekker seg fra Spania til portene til India. Her er hvordan det hele startet.",
+   "gloss_fr": "« le message né dans ce désert allait \"amener vers le bas\" de grands empires et accoucher d'un État qui s'étend de l'Espagne aux portes de l'Inde. Voici comment tout a commencé. »",
+   "problem": "Trois calques de l'anglais en deux phrases (« bring down », « give birth to », « here is how ») : un natif repère immédiatement la traduction automatique dès l'introduction.",
+   "fix": "skulle budskapet fra denne ørkenen felle store riker og skape en stat som strakte seg fra Spania til Indias grenser. Slik begynte det hele.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_122_la_naissance_de_l_impressionnisme/hero.hook",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "En kritisk fornærmelse, og den første store bevegelsen innen moderne kunst har et navn.",
+   "gloss_fr": "« Une insulte critique (grave), et le premier grand mouvement de l'art moderne a un nom. »",
+   "problem": "« insulte de critique » (lancée par un critique d'art) devient « kritisk fornærmelse » (insulte critique/grave).",
+   "fix": "Et spottende ord fra en kritiker, og den første store bevegelsen i moderne kunst har fått et navn.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_122_la_naissance_de_l_impressionnisme/s0.b0.text",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "åpnet rundt tretti kunstnere lei av [[offisielle Paris-salong]] en privat utstilling i det tidligere studioet til fotografen Nadar. Blant maleriene tiltrekker et tåkete sjølandskap av **Claude Monet** kritikeren Louis Leroys hån.",
+   "gloss_fr": "« ouvrirent une trentaine d'artistes las de [[officiel Paris-salon]] (sans article) une exposition privée dans l'ancien studio du photographe Nadar. Parmi les tableaux attire une marine brumeuse de Claude Monet la moquerie du critique Louis Leroy. »",
+   "problem": "Article défini manquant autour du terme de glossaire et ordre des mots calqué du français : le premier paragraphe du cours est bancal et difficile à lire.",
+   "fix": "åpner rundt tretti kunstnere som er lei av den [[offisielle Paris-salongen]], en privat utstilling i fotografen Nadars gamle atelier. Blant bildene er det et tåkete sjøstykke av **Claude Monet** som vekker hån hos kritikeren Louis Leroy.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_166_narcisse_et_echo/s1.title",
+   "severity": "majeur",
+   "category": "nom_propre",
+   "current": "Echo mister stemmen",
+   "gloss_fr": "« Echo (graphie anglaise) perd la voix »",
+   "problem": "Les noms propres oscillent entre trois formes dans le même cours : Narkissos (titre) / Narcissus / Narcisse, Ekko / Echo, Tirésias / Teiresias, Cephisus, [[Oread]], [[Naiads]] ; les formes norvégiennes établies sont Narkissos, Ekko, Teiresias, Kefisos, oreade, najader.",
+   "fix": "Ekko mister stemmen",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_166_narcisse_et_echo/description",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "Ekko kan bare gjentas.",
+   "gloss_fr": "« Écho ne peut qu'être répétée. »",
+   "problem": "Voix passive erronée : Écho ne peut que répéter (actif), pas « être répétée ».",
+   "fix": "Ekko kan bare gjenta.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_166_narcisse_et_echo/s0.b0.text",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "forteller i sin [[Metamorfoser]] den kryssede skjebnen til **Narcissus** og **Ekko**. […] Ham, en ung mann betatt av hans bilde.",
+   "gloss_fr": "« raconte dans sa (singulier) Métamorphoses le destin croisé de Narcissus et Ekko. […] Lui (cas objet), un jeune homme captivé par l'image de lui (d'un autre). »",
+   "problem": "« sin » au singulier devant un titre pluriel, pronom objet « Ham » en position de sujet, « hans bilde » renvoie à un autre homme au lieu du réfléchi « sitt eget », et « kryssede skjebnen » est un calque.",
+   "fix": "forteller i sine [[Metamorfoser]] om de sammenflettede skjebnene til **Narkissos** og **Ekko**. […] Han er en ung mann som er betatt av sitt eget speilbilde.",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:paywall.teaserTitle",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Et smugkikk på det som venter",
+   "gloss_fr": "« Un (neutre) coup d'œil furtif sur ce qui attend » — accord de genre faux",
+   "problem": "« kikk » est masculin (en kikk) ; « et smugkikk » est une faute d'accord visible sur le paywall.",
+   "fix": "En smugtitt på det som venter",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:offer.unlock",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Lås opp mine -70 %",
+   "gloss_fr": "« Déverrouiller mes -70 % »",
+   "problem": "« mes -70 % » n'a pas de sens en norvégien ; le bouton doit dire ce qu'on débloque ou à quel prix.",
+   "fix": "Lås opp med -70 %",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:onboardingV2.intro.route.title",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "Sophia lager en **personlig rute** for deg, som du følger hver dag.",
+   "gloss_fr": "« Sophia crée un itinéraire routier (GPS) personnel pour toi, que tu suis chaque jour. »",
+   "problem": "« parcours » est rendu par « rute » (calque de l'anglais route, itinéraire) alors que tout le reste de l'app dit « løype » (onglet Parcours = Løype) ; ailleurs encore « kunnskapsreise ».",
+   "fix": "Sophia lager en **personlig løype** for deg, som du følger hver dag.",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:onboardingV2.intro.researchers.title",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "Skrevet av **ekte forskere** og doktorer. Ikke av KI.",
+   "gloss_fr": "« Écrit par de vrais chercheurs et des médecins. Pas par une IA. »",
+   "problem": "En norvégien courant « doktorer » désigne les médecins, pas les titulaires d'un doctorat.",
+   "fix": "Skrevet av **ekte forskere** med doktorgrad. Ikke av KI.",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:onboardingV2.mission.body2",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Teamet vårt av professorer og designere regner med deg for å fortsette å lage godt innhold, i tjeneste for ett eneste oppdrag",
+   "gloss_fr": "« Notre équipe de professeurs d'université et de designers compte sur toi pour continuer à créer du bon contenu, en service pour une seule mission »",
+   "problem": "« profs » devient « professeurs d'université » et la syntaxe française est reproduite mot à mot (« regner med deg for å », « i tjeneste for ») : phrase lourde et visiblement traduite.",
+   "fix": "Teamet vårt av lærere og designere er avhengige av deg for å kunne fortsette å lage godt innhold — alt for ett mål: å gjøre læring enkelt.",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:paywall.blocker.title",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "Ta endelig kontroll over tiden din med blockeren.",
+   "gloss_fr": "« Prends enfin le contrôle de ton temps avec le \"blocker\" (mot anglais décliné à la norvégienne) »",
+   "problem": "La même fonction s'appelle « blockeren » (anglais + suffixe défini), « TikTok-blokkering » et « sperre » selon les écrans (paywall.blocker.*, onboardingV2.features.row6, tiktokBlocker.*).",
+   "fix": "Ta endelig kontroll over tiden din med blokkeringen.",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:onboardingV2.features.row2",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "%@+ leksjoner skrevet av ekte forskere",
+   "gloss_fr": "« %@+ leçons écrites par de vrais chercheurs »",
+   "problem": "« cours » est traduit « kurs » dans toute l'app (onglets, bibliothèque, paywall) mais « leksjon » dans une dizaine de clés (features.row2/row5, age.subtitle, swipe.title, antiScroll.title, paywall.unlock.unlimited, share.message) : deux noms pour le même objet.",
+   "fix": "%@+ kurs skrevet av ekte forskere",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:onboarding.premiumTrial.cta",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "Start prøven min",
+   "gloss_fr": "« Commencer mon test / mon épreuve »",
+   "problem": "« prøve » seul signifie test ou examen ; l'essai gratuit se dit « prøveperiode », déjà utilisé ailleurs (« prøveperioden er over »), d'où une alternance prøve / prøveperiode dans tout le tunnel d'achat.",
+   "fix": "Start prøveperioden",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:onboardingV2.rightPlace.caption",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "…med det målet rykker merkbart med Sophia.",
+   "gloss_fr": "« …avec cet objectif bougent/se déplacent (verbe sans direction) sensiblement avec Sophia. »",
+   "problem": "« rykker » seul n'exprime pas la progression (il faut « rykker fram/videre » ou « gjør fremgang ») ; même défaut dans explain.collections.body (« så du rykker steg for steg »).",
+   "fix": "…med det målet gjør tydelig fremgang med Sophia.",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:profile.streak.good",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Flott jevnhet 👏",
+   "gloss_fr": "« Belle uniformité / planéité 👏 »",
+   "problem": "« jevnhet » désigne l'uniformité d'une surface ou d'une qualité, pas la régularité d'une habitude ; un natif grimace.",
+   "fix": "Jevnt og trutt 👏",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:profile.streak.great",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Du brenner 🔥",
+   "gloss_fr": "« Tu brûles (tu es en train de prendre feu) 🔥 »",
+   "problem": "« être en feu » est calqué littéralement ; en norvégien « du brenner » signifie que tu es en train de brûler.",
+   "fix": "Du er i siget 🔥",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:sync.conflict.title",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Vi fant to fremganger",
+   "gloss_fr": "« Nous avons trouvé deux progrès » (pluriel d'un indénombrable)",
+   "problem": "« fremgang » est indénombrable ; le pluriel « fremganger » sonne faux.",
+   "fix": "Vi fant to versjoner av fremgangen din",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:course.reads",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "%@ lesninger",
+   "gloss_fr": "« %@ lectures » (au sens d'interprétations, d'actes de lecture savante)",
+   "problem": "« lesninger » ne s'emploie pas pour un compteur de vues ; formulation typique de traduction automatique.",
+   "fix": "Lest %@ ganger",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:globalRank.newRank",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "Ny rangering!",
+   "gloss_fr": "« Nouveau classement ! »",
+   "problem": "« rang » (grade : Curieux, Érudit, Maître…) est rendu par « rangering » (classement, mise en ordre) ; idem « GLOBAL RANGERING » et « Global rangering ».",
+   "fix": "Ny rang! (et GLOBAL RANG / Global rang)",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_1_la_naissance_de_l_islam_622/s3.b1.text",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "Kraften går deretter over til [[Kalifs]], hans etterfølgere. Abu Bakr, den gang Umar, startet en rask ekspansjon mot Syria, Irak og Egypt.",
+   "gloss_fr": "« La force (physique) passe ensuite aux [[Kalifs]] (pluriel anglais), ses successeurs. Abu Bakr, à cette époque Umar, a lancé une expansion rapide »",
+   "problem": "« pouvoir » devient « kraft » (force), « puis » devient « den gang » (à l'époque), et le terme de glossaire porte un pluriel anglais.",
+   "fix": "Makten går deretter over til [[kalifene]], etterfølgerne hans. Abu Bakr og deretter Umar setter i gang en rask ekspansjon mot Syria, Irak og Egypt.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_1_la_naissance_de_l_islam_622/s2.b3.text",
+   "severity": "majeur",
+   "category": "mt_artefact",
+   "current": "Muhammed setter i gang raid, raske raid, for å kutte av fiendens karavaner. Likevel i undertall, hans trofaste vant på **Badr** i **624**. […] motsto de **-beleiringen av Medina** i **627**. Hans autoritet er hevdet.",
+   "gloss_fr": "« Muhammad lance des raids, des raids rapides… Pourtant en infériorité, ses fidèles ont gagné à Badr… ils ont résisté au -siège de Médine… Son autorité est affirmée. »",
+   "problem": "Le terme de glossaire [[razzias]] a disparu (« raid, raske raid »), l'ordre des mots viole la règle V2, un tiret parasite colle au gras et les temps alternent.",
+   "fix": "Muhammed setter i gang [[razziaer]], raske angrep, for å kutte av fiendens karavaner. Selv i undertall seirer tilhengerne hans ved **Badr** i **624**. […] står de imot **beleiringen av Medina** i **627**. Autoriteten hans blir stadig sterkere.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_100_les_fleurs_du_mal_baudelaire/s1.b0.text",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "**Charles Baudelaire** spiller den **forbannede poeten**: en forfatter i utkanten, uelsket av sin tid. Hans vanskelige liv gir næring til arbeidet hans.",
+   "gloss_fr": "« Charles Baudelaire joue (comme un acteur) le poète maudit… Sa vie difficile nourrit son travail (son boulot). »",
+   "problem": "« incarne » devient « joue le rôle de », et « œuvre » devient « arbeidet » (le travail) via l'anglais « work ».",
+   "fix": "**Charles Baudelaire** er selve bildet på den **fordømte dikteren**: en forfatter i utkanten, lite elsket av sin samtid. Det vanskelige livet hans gir næring til verket.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_122_la_naissance_de_l_impressionnisme/s1.b1.text",
+   "severity": "majeur",
+   "category": "nom_propre",
+   "current": "Publikum oppdager *Lunsj på gresset* av **Édouard Manet**: en naken kvinne spiser lunsj med to menn i moderne kostyme.",
+   "gloss_fr": "« Le public découvre *Déjeuner sur l'herbe* (titre inventé) de Manet : une femme nue déjeune avec deux hommes en déguisement moderne. »",
+   "problem": "Le titre norvégien établi est « Frokost i det grønne » (et il reste en français dans la frise s4.b1.e0.detail) ; « costume » devient « kostyme » (déguisement).",
+   "fix": "Publikum oppdager *Frokost i det grønne* av **Édouard Manet**: en naken kvinne spiser lunsj med to menn i moderne dress.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_122_la_naissance_de_l_impressionnisme/s3.b2.text",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "asymmetrisk innramming, utsikt over hodet. Kjøpmannen [[Paul Durand-Ruel]] […] påla åtte utstillinger en ny idé: å male sin sensasjon, ikke en frossen kopi av naturen.",
+   "gloss_fr": "« cadrage asymétrique, vue par-dessus la tête. Le commerçant Paul Durand-Ruel… huit expositions ont imposé (obligé) une idée : peindre sa sensation (son scoop), pas une copie congelée de la nature. »",
+   "problem": "« vues en plongée », « marchand (d'art) », « imposent » et « sensation » sont tous pris dans le mauvais sens.",
+   "fix": "asymmetrisk utsnitt, fugleperspektiv. Kunsthandleren [[Paul Durand-Ruel]] […] slår åtte utstillinger fast en ny idé: å male det man sanser, ikke en stivnet kopi av naturen.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_166_narcisse_et_echo/s4.b0.text",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "Når [[Naiads]], vannymfer og [[Dryader]], trenymfer, kommer til begravelsen, har liket forsvunnet. […] **påskelilje**, lener seg mot vannet som den unge mannen mot sitt bilde.",
+   "gloss_fr": "« Quand [[Naiads]] (anglais), nymphes des eaux… […] la jonquille (lis de Pâques), se penche vers l'eau comme le jeune homme vers son image. »",
+   "problem": "« narcisse » est traduit « påskelilje » (jonquille) : le lien fleur → narcissisme, objet même de la section « Fra blomsten til ordet narsissisme », disparaît ; [[Naiads]] reste en anglais.",
+   "fix": "Når [[najadene]], vannymfene, og [[dryadene]], trenymfene, kommer til gravferden, er liket borte. […] **narsissen**, som bøyer seg mot vannet slik den unge mannen bøyde seg mot sitt eget bilde.",
+   "surface": "combined"
+  }
+ ]
+}

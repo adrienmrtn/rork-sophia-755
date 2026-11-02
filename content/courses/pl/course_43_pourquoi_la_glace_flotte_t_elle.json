@@ -4,7 +4,7 @@
   "subtitle": "Woda i cząsteczki",
   "subject": "sciences",
   "subcategory": "Codzienność bez tajemnic",
-  "description": "Lód pływa po wodzie. Wydaje się to oczywiste, a jest bardzo rzadkie. I na szczęście dla życia na Ziemi.",
+  "description": "Lód pływa po wodzie. Wydaje się to normalne, ale w rzeczywistości to wielka rzadkość. I całe szczęście dla życia na Ziemi.",
   "hero": {
     "image": "pourquoi_la_glace_flotte",
     "ratio": "16:9",
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kostka w szklance, góra lodowa w oceanie: lód **pływa**. Wydaje ci się to banalne. A przecież dla większości substancji ciało stałe jest **gęstsze**, więc cięższe przy tej samej objętości: tonie."
+          "text": "Kostka lodu w szklance, góra lodowa w oceanie: lód **pływa**. Wydaje się to banalne. A przecież w większości substancji ciało stałe jest **gęstsze**, czyli cięższe przy tej samej objętości, więc tonie."
         },
         {
           "type": "paragraph",
-          "text": "Woda robi odwrotność. Ten wyjątek idzie z kształtu jej cząsteczki. I uratował niejeden staw zimą."
+          "text": "Woda zachowuje się odwrotnie. Ten wyjątek wynika z kształtu jej cząsteczki. I uratował już zimą niejedno jezioro."
         }
       ]
     },
@@ -33,28 +33,28 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Cząsteczka wody to atom **tlenu** związany z dwoma atomami **wodoru**. Nie jest prosta: tworzy **V**. Przez ten kształt ładunki elektryczne nie rozkładają się równo: cząsteczka jest **polarna**, z jednym końcem lekko ujemnym i drugim lekko dodatnim."
+          "text": "Cząsteczka wody to atom **tlenu** połączony z dwoma atomami **wodoru**. Nie jest prosta: ma kształt litery **V**. Przez ten kształt ładunki elektryczne nie rozkładają się równo: cząsteczka jest **polarna**, jeden jej koniec jest lekko ujemny, a drugi lekko dodatni."
         },
         {
           "type": "image",
           "asset": "water_molecule_model_crystal",
           "ratio": "4:3",
-          "caption": "Cząsteczka wody: V, które przyciąga i odpycha sąsiadki"
+          "caption": "Cząsteczka wody: V, które przyciąga i odpycha sąsiednie cząsteczki"
         },
         {
           "type": "paragraph",
-          "text": "Skutek: cząsteczki wody przyciągają się nawzajem przez [[wiązania wodorowe]], jak małe magnesy. W cieczy zostają blisko, ale wciąż się ruszają. W lodzie zastyga to inaczej."
+          "text": "Skutek: cząsteczki wody przyciągają się nawzajem, tworząc [[wiązania wodorowe]], jak małe magnesy. W cieczy pozostają blisko siebie, ale wciąż się poruszają. W lodzie zastygają w innym układzie."
         }
       ]
     },
     {
       "id": "course_43_pourquoi_la_glace_flotte_t_elle_p2",
-      "title": "Gdy woda zastyga, zajmuje miejsce",
+      "title": "Gdy woda zamarza, zajmuje więcej miejsca",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Koło **0°C** woda krzepnie. Żeby zrobić lód, cząsteczki układają się w sieć **heksagonalną**, coś jak plaster pszczół o sześciu bokach. Zostawiają wtedy więcej **pustki** między sobą niż w stanie ciekłym."
+          "text": "W okolicy **0°C** woda zamarza. Tworząc lód, cząsteczki układają się w sieć **heksagonalną**, coś w rodzaju sześciokątnego plastra miodu. Zostawiają wtedy między sobą więcej **pustej przestrzeni** niż w stanie ciekłym."
         },
         {
           "type": "funFact",
@@ -62,7 +62,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Mniej materii w tej samej objętości znaczy: **mniej gęsta**. A przedmiot mniej gęsty niż ciecz wokół idzie w górę. Lód więc pływa po wodzie. To właśnie **anomalna rozszerzalność wody**: wbrew niemal wszystkim substancjom woda rozszerza się, gdy stygnie poniżej **4°C**."
+          "text": "Mniej materii w tej samej objętości oznacza: **mniejsza gęstość**. A przedmiot o mniejszej gęstości niż otaczająca go ciecz wypływa na powierzchnię. Dlatego lód pływa po wodzie. To właśnie **anomalna rozszerzalność wody**: w przeciwieństwie do niemal wszystkich substancji woda rozszerza się, gdy ochładza się poniżej **4°C**."
         },
         {
           "type": "image",
@@ -79,11 +79,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Wyobraź sobie, że lód tonie. Tworzyłby się na powierzchni, a potem spadał na dno. Jezioro zamarzałoby warstwa po warstwie, aż do spodu. Lato często nie starczyłoby, żeby wszystko stopić."
+          "text": "Wyobraź sobie, że lód by tonął. Tworzyłby się na powierzchni, a potem opadał na dno. Jezioro zamarzałoby warstwa po warstwie, aż do samego dna. Lato często nie wystarczyłoby, żeby wszystko stopić."
         },
         {
           "type": "paragraph",
-          "text": "Na szczęście lód zostaje na górze. Tworzy **izolującą pokrywę**. Pod zamarzniętą taflą woda ciekła może zostać koło **4°C**, temperatury, w której jest najgęstsza, dość, by ryby i rośliny wodne przeżyły."
+          "text": "Na szczęście lód zostaje na górze. Tworzy **izolującą pokrywę**. Pod zamarzniętą taflą woda może utrzymać temperaturę około **4°C**, w której jest najgęstsza, a to wystarczy, by ryby i rośliny wodne przetrwały."
         }
       ]
     },
@@ -94,11 +94,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Biała kra oddaje w kosmos sporą część światła Słońca dzięki wysokiemu **albedo**, sile odbicia. Gdy znika, ciemny ocean łyka więcej ciepła. To przyspiesza ocieplenie: błędne koło."
+          "text": "Biały lód morski odbija w kosmos dużą część światła słonecznego dzięki wysokiemu **albedo**, czyli zdolności odbijania światła. Gdy znika, ciemny ocean pochłania więcej ciepła. To przyspiesza ocieplenie: powstaje błędne koło."
         },
         {
           "type": "takeaway",
-          "text": "Lód pływa, bo przy krzepnięciu woda buduje sieć bardziej „przewiewną”: staje się mniej gęsta niż woda ciekła. Ten wyjątek chroni życie wodne zimą."
+          "text": "Lód pływa, bo krzepnąc, woda tworzy bardziej „ażurową” sieć: staje się mniej gęsta niż woda w stanie ciekłym. Ten wyjątek chroni zimą życie w wodzie."
         }
       ]
     }

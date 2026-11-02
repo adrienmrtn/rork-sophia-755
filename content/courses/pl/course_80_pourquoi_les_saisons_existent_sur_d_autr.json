@@ -1,14 +1,14 @@
 {
   "id": "course_80_pourquoi_les_saisons_existent_sur_d_autr",
-  "title": "Dlaczego pory roku istnieją na innych planetach?",
+  "title": "Skąd się biorą pory roku na innych planetach?",
   "subtitle": "Planety i orbity",
   "subject": "sciences",
   "subcategory": "Ziemia i Wszechświat",
-  "description": "Na Ziemi pory roku biorą się z nachylenia osi. Gdzie indziej ta sama zasada daje zimy po 42 lata... albo prawie żadnej pory roku.",
+  "description": "Na Ziemi pory roku biorą się z nachylenia osi. Gdzie indziej ta sama zasada daje zimy trwające 42 lata... albo prawie żadnych pór roku.",
   "hero": {
     "image": "pourquoi_les_saisons_existent_sur_d_autres_planetes",
     "ratio": "16:9",
-    "hook": "Nasze cztery pory to przypadek umiarkowany. Gdzie indziej lato potrafi trwać dekady."
+    "hook": "Nasze cztery pory roku to łagodny przypadek. Gdzie indziej lato potrafi trwać dziesiątki lat."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Na Ziemi lato i zima rodzą się głównie z **nachylenia** osi: około **23,5°**. Słońce mocniej bije w jedną półkulę, potem w drugą. Ten model wygląda na oczywisty. W Układzie Słonecznym to raczej wersja umiarkowana."
+          "text": "Na Ziemi lato i zima biorą się głównie z **nachylenia** osi: około **23,5°**. Słońce mocniej grzeje raz jedną półkulę, raz drugą. Wydaje się to oczywiste. W Układzie Słonecznym to jednak raczej wersja umiarkowana."
         },
         {
           "type": "paragraph",
-          "text": "Każda planeta składa własne nachylenie i kształt orbity. Wynik: światy bez pór roku, inne o skrajnych kontrastach i zimy, które trwają dekady."
+          "text": "Na każdej planecie liczy się zarówno nachylenie, jak i kształt orbity. W efekcie są światy bez pór roku, inne o skrajnych kontrastach, a także zimy trwające dziesiątki lat."
         }
       ]
     },
@@ -33,7 +33,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "[[Pochyłość]] to kąt między osią obrotu planety a prostopadłą do jej orbity. Im ten kąt większy, tym ostrzejsze stają się pory roku."
+          "text": "[[Nachylenie osi]] to kąt między osią obrotu planety a prostopadłą do jej orbity. Im ten kąt większy, tym ostrzejsze stają się pory roku."
         },
         {
           "type": "image",
@@ -43,11 +43,11 @@
         },
         {
           "type": "paragraph",
-          "text": "**Uran** to przypadek skrajny: nachylenie około **98°**, niemal leżący. Obiega Słońce w **84 lata**. Każdy biegun dostaje wtedy blisko **42 lata** ciągłego dnia, potem **42 lata** całkowitej nocy. **Mars**, przy **25,2°**, przypomina Ziemię, ale jego rok trwa **687** ziemskich dni: wiosna i jesień po sześć miesięcy. **Jowisz** i **Merkury**, niemal proste, prawie nie mają pór roku."
+          "text": "**Uran** to przypadek skrajny: nachylenie około **98°**, czyli planeta niemal leży na boku. Obiega Słońce w **84 lata**. Każdy biegun ma więc blisko **42 lata** nieprzerwanego dnia, a potem **42 lata** całkowitej nocy. **Mars**, nachylony o **25,2°**, przypomina Ziemię, ale jego rok trwa **687** ziemskich dni: wiosna i jesień trwają tam po sześć miesięcy. **Jowisz** i **Merkury**, niemal pionowe, prawie nie mają pór roku."
         },
         {
           "type": "funFact",
-          "text": "Na Uranie i Neptunie skrajne ciśnienia mogłyby „deszczować” diamenty powstałe z węgla atmosferycznego tych gazowych olbrzymów."
+          "text": "Na Uranie i Neptunie skrajne ciśnienie mogłoby sprawiać, że „padają” diamenty powstałe z węgla zawartego w atmosferze."
         }
       ]
     },
@@ -58,15 +58,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Na Ziemi orbita jest niemal kołowa: odległość od Słońca zmienia się niewiele. To więc nie ona robi lato albo zimę, tylko kąt promieni."
+          "text": "Na Ziemi orbita jest niemal kołowa: odległość od Słońca zmienia się niewiele. To więc nie ona decyduje o lecie i zimie, tylko kąt padania promieni."
         },
         {
           "type": "paragraph",
-          "text": "Na **Marsie** orbita jest znacznie bardziej owalna, bardziej **ekscentryczna**: od **207 do 249 milionów km**. Na półkuli południowej lato wypada blisko [[peryhelium]], punktu najbliższego Słońcu. Lata krótsze, ale gorętsze. Ten wstrząs cieplny odpala czasem planetarne **burze pyłowe**, które zasłaniają niebo."
+          "text": "Na **Marsie** orbita jest znacznie bardziej owalna, bardziej **ekscentryczna**: od **207 do 249 milionów km**. Na półkuli południowej lato wypada blisko [[peryhelium]], punktu najbliższego Słońcu. Lata są tam krótsze, ale gorętsze. Te gwałtowne zmiany temperatury wywołują czasem **burze pyłowe** na skalę całej planety, które zasłaniają niebo."
         },
         {
           "type": "funFact",
-          "text": "W **2018** sezonowa burza na Marsie definitywnie zatrzymała łazik Opportunity, zasłaniając mu Słońce."
+          "text": "W **2018** roku sezonowa burza na Marsie na dobre unieruchomiła łazik Opportunity, bo zasłoniła mu Słońce."
         }
       ]
     },
@@ -77,11 +77,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Merkury**, bez prawdziwej atmosfery i bez nachylenia, żyje głównie skrajnościami **dobowymi**: **430°C** w Słońcu, **-180°C** w nocy. **Wenus** kręci się odwrotnie. Ta [[Rotacja wsteczna]] idzie ze wschodu na zachód, przy skrajnym nachyleniu, ale jej potworny **efekt cieplarniany** więzi ciepło w atmosferze i wyrównuje temperaturę do około **460°C** wszędzie, cały czas."
+          "text": "**Merkury**, bez prawdziwej atmosfery i bez nachylenia, zna głównie skrajności **dobowe**: **430°C** w słońcu, **-180°C** w nocy. **Wenus** obraca się w przeciwną stronę. [[Rotacja wsteczna]] sprawia, że kręci się ze wschodu na zachód, a jej nachylenie jest skrajne. Mimo to potworny **efekt cieplarniany** zatrzymuje ciepło w atmosferze i wyrównuje temperaturę do około **460°C** wszędzie i zawsze."
         },
         {
           "type": "paragraph",
-          "text": "**Saturn**, nachylony jak Ziemia, ma pory roku po około **7 lat**. Kąt, pod jakim widać [[pierścienie Saturna]], zmienia światło, które dostaje każda półkula, i nawet barwę chmur."
+          "text": "**Saturn**, nachylony podobnie jak Ziemia, ma pory roku trwające około **7 lat**. Kąt, pod jakim ustawione są [[pierścienie Saturna]], zmienia ilość światła docierającego do każdej półkuli, a nawet barwę chmur."
         },
         {
           "type": "funFact",
@@ -91,12 +91,12 @@
     },
     {
       "id": "course_80_pourquoi_les_saisons_existent_sur_d_autr_p4",
-      "title": "Dlaczego Ziemia ma pory roku stabilne",
+      "title": "Dlaczego Ziemia ma stabilne pory roku",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Bez **Księżyca** ziemskie nachylenie huśtałoby się chaotycznie między 0° a ponad 80° przez miliony lat. Pory roku typu uranowego zrobiłyby klimat niemal niezamieszkałym. Księżyc działa jak **stabilizator grawitacyjny**."
+          "text": "Bez **Księżyca** nachylenie osi Ziemi wahałoby się chaotycznie między 0° a ponad 80° w ciągu milionów lat. Pory roku jak na Uranie sprawiłyby, że klimat byłby prawie nie do życia. Księżyc działa jak **stabilizator grawitacyjny**."
         },
         {
           "type": "paragraph",
@@ -104,7 +104,7 @@
         },
         {
           "type": "takeaway",
-          "text": "Pory roku rodzą się głównie z nachylenia osi. Na Uranie trwają dekady; na Marsie owalna orbita robi je niesymetrycznymi. Księżyc chroni te ziemskie."
+          "text": "Pory roku biorą się głównie z nachylenia osi. Na Uranie trwają dziesiątki lat, a na Marsie owalna orbita sprawia, że są niesymetryczne. Ziemskie pory roku chroni Księżyc."
         }
       ]
     }

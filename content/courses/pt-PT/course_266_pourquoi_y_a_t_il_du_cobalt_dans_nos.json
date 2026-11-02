@@ -4,12 +4,12 @@
   "subtitle": "Elemento 27",
   "subject": "sciences",
   "subcategory": "O nosso quotidiano explicado",
-  "description": "Quase ninguém escava a terra à procura de cobalto, e mesmo assim ele está na bateria de todos os telemóveis. A história de um metal que a indústria não consegue substituir e que, ainda assim, tenta fazer desaparecer.",
+  "description": "Quase ninguém escava a terra à procura de cobalto e, no entanto, ele está na bateria de todos os telemóveis. A história de um metal que a indústria não consegue substituir e que, ainda assim, tenta fazer desaparecer.",
   "author": "guido-manuel-de-la-torre-olvera",
   "hero": {
     "image": "cobalt_copper_open_pit_mine_kolwezi_drc",
     "ratio": "4:3",
-    "hook": "O metal do qual os carros elétricos dependem quase nunca é extraído por si mesmo."
+    "hook": "O metal de que dependem os carros elétricos quase nunca é extraído por si só."
   },
   "sections": [
     {
@@ -23,7 +23,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Cerca de **99%** do cobalto do mundo sai da terra como subproduto: é recuperado de minérios explorados pelo cobre ou pelo níquel. A [[República Democrática do Congo]] fornece quase **três quartos** dele, quase tudo a partir de minas de cobre. A oferta de cobalto, portanto, não depende da procura de cobalto, mas sim da procura de cobre e níquel. Uma forma estranha de gerir o metal dos carros elétricos."
+          "text": "Cerca de **99%** do cobalto do mundo sai da terra como subproduto: é recuperado de minérios explorados por causa do cobre ou do níquel. A [[República Democrática do Congo]] fornece quase **três quartos** do total, quase tudo a partir de minas de cobre. A oferta de cobalto, portanto, não depende da procura de cobalto, mas sim da procura de cobre e níquel. Uma forma estranha de gerir o metal dos carros elétricos."
         }
       ]
     },
@@ -69,7 +69,7 @@
         },
         {
           "type": "paragraph",
-          "text": "O líquido que enche a célula é **inflamável**, e a própria bateria acabou de fornecer o oxigénio para o queimar. O calor acelera a decomposição, que liberta mais oxigénio, que gera mais calor. É a [[fuga térmica]]. Por isso não se apaga um incêndio de bateria de lítio abafando o fogo: o oxigénio já está lá dentro."
+          "text": "O líquido que enche a célula é **inflamável**, e a própria bateria acabou de fornecer o oxigénio para o queimar. O calor acelera a decomposição, que liberta mais oxigénio, que gera mais calor. É a [[fuga térmica]]. Por isso é que não adianta abafar um incêndio de bateria de lítio para o apagar: o oxigénio já está lá dentro."
         }
       ]
     },
@@ -80,7 +80,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Volta ao muro de tijolos. A cada carga e a cada utilização, os tijolos de lítio deslizam para fora e depois para dentro. O cobalto é o cimento que impede o muro de entortar ou desmoronar ao longo de centenas de ciclos. Os outros materiais não dão conta sozinhos: o **níquel** armazena mais energia, mas desgasta-se demasiado depressa, e o **manganês** é barato, mas tem pouca potência."
+          "text": "Volta ao muro de tijolos. A cada carga e a cada utilização, os tijolos de lítio deslizam para fora e depois para dentro. O cobalto é o cimento que impede o muro de se deformar ou de desmoronar ao longo de centenas de ciclos. Os outros materiais não o conseguem sozinhos: o **níquel** armazena mais energia, mas desgasta-se demasiado depressa, e o **manganês** é barato, mas tem pouca potência."
         },
         {
           "type": "paragraph",
@@ -95,7 +95,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "O problema do cobalto não é químico. Parte da produção congolesa vem da [[mineração artesanal]], cavada à mão em condições perigosas e, nalguns locais, por crianças. O preço sobe e desce depressa e com força, o que torna imprevisível qualquer bateria que dependa dele. E quase tudo sai de **um único país**."
+          "text": "O problema do cobalto não é químico. Parte da produção congolesa vem da [[mineração artesanal]]: minas cavadas à mão em condições perigosas e, nalguns locais, por crianças. O preço sobe e desce depressa e com força, o que torna imprevisível qualquer bateria que dependa dele. E quase tudo sai de **um único país**."
         },
         {
           "type": "image",
@@ -105,7 +105,7 @@
         },
         {
           "type": "paragraph",
-          "text": "A indústria tenta, então, criar baterias sem este metal. A principal resposta é o **LFP**, fosfato de ferro-lítio, que troca o cobalto por ferro e fósforo, dois dos elementos mais baratos e abundantes que existem. Aquece menos e é muito mais difícil de levar à fuga térmica."
+          "text": "A indústria tenta, então, criar baterias sem este metal. A principal resposta é o **LFP**, fosfato de ferro e lítio, que troca o cobalto por ferro e fósforo, dois dos elementos mais baratos e abundantes que existem. Aquece menos e é muito mais difícil de levar à fuga térmica."
         },
         {
           "type": "paragraph",
@@ -113,7 +113,7 @@
         },
         {
           "type": "takeaway",
-          "text": "O cobalto segura a estrutura das baterias de iões de lítio, mas vem quase todo de um único país, como subproduto do cobre: a indústria só se livra dele mudando de química, com o LFP, à custa de menos energia."
+          "text": "O cobalto segura a estrutura das baterias de iões de lítio, mas vem quase todo de um único país, como subproduto do cobre: a indústria só se livra dele se mudar de química, com o LFP, à custa de menos energia."
         }
       ]
     }

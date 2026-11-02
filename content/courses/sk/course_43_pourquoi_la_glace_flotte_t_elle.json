@@ -4,11 +4,11 @@
   "subtitle": "Voda a molekuly",
   "subject": "sciences",
   "subcategory": "Každodenný život pod lupou",
-  "description": "Ľad pláva na vode. Zdá sa to normálne, ale v skutočnosti je to veľmi zriedkavé. A našťastie pre život na Zemi.",
+  "description": "Ľad pláva na vode. Zdá sa to normálne, ale v skutočnosti je to veľmi zriedkavé. A pre život na Zemi je to šťastie.",
   "hero": {
     "image": "pourquoi_la_glace_flotte",
     "ratio": "16:9",
-    "hook": "Ak by ľad tiekol, jazerá by zamrzli na dno. A život vo vode by len ťažko prežil."
+    "hook": "Keby sa ľad potápal, jazerá by zamrzli až po dno. A život vo vode by len ťažko prežil."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kocka ľadu v pohári, ľadovec v oceáne: ľad **pláva**. Pripadá nám to banálne. Avšak pre väčšinu látok je tuhá látka viac **hustý**, teda ťažšia pri rovnakom objeme: klesá."
+          "text": "Kocka ľadu v pohári, ľadovec v oceáne: ľad **pláva**. Zdá sa to banálne. Pri väčšine látok je však pevné skupenstvo **hustejšie**, teda pri rovnakom objeme ťažšie: klesá ku dnu."
         },
         {
           "type": "paragraph",
-          "text": "Voda robí pravý opak. Táto výnimka pochádza z tvaru jeho molekuly. A v zime to zachránilo veľa jazier."
+          "text": "Voda robí pravý opak. Táto výnimka vyplýva z tvaru jej molekuly. A v zime zachránila nejedno jazero."
         }
       ]
     },
@@ -33,28 +33,28 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Molekula vody je atóm **kyslíka** spojený s dvoma atómami **vodka**. Nie je rovný: tvorí **V**. Kvôli tomuto tvaru nie sú elektrické náboje rozdelené rovnomerne: molekula je **polárna**, s jedným koncom mierne negatívnym a druhým mierne pozitívnym."
+          "text": "Molekula vody je atóm **kyslíka** spojený s dvoma atómami **vodíka**. Nie je rovná: má tvar **V**. Kvôli tomuto tvaru nie sú elektrické náboje rozdelené rovnomerne: molekula je **polárna**, jeden jej koniec je mierne záporný a druhý mierne kladný."
         },
         {
           "type": "image",
           "asset": "water_molecule_model_crystal",
           "ratio": "4:3",
-          "caption": "Molekula vody: V, ktorá priťahuje a odpudzuje svojich susedov."
+          "caption": "Molekula vody: tvar V, ktorý priťahuje a odpudzuje susedné molekuly."
         },
         {
           "type": "paragraph",
-          "text": "Výsledok: molekuly vody sa navzájom priťahujú [[Vodíkové väzby]], ako malé magnety. V kvapaline zostávajú blízko, ale stále sa pohybujú. V ľade mrznú inak."
+          "text": "Výsledok: medzi molekulami vody vznikajú [[vodíkové väzby]], ktoré ich k sebe priťahujú ako malé magnety. V kvapaline zostávajú blízko seba, ale stále sa pohybujú. V ľade znehybnejú v inom usporiadaní."
         }
       ]
     },
     {
       "id": "course_43_pourquoi_la_glace_flotte_t_elle_p2",
-      "title": "Keď voda zamrzne, zaberá miesto",
+      "title": "Keď voda zamrzne, zaberie viac miesta",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Okolo **0 °C** voda stuhne. Na vytvorenie ľadu sa molekuly organizujú do **šesťhrannej** siete, akéhosi šesťstranného plástu. Potom medzi sebou nechávajú viac **prázdny** ako v tekutom stave."
+          "text": "Okolo **0 °C** voda tuhne. Pri vzniku ľadu sa molekuly usporiadajú do **šesťuholníkovej** mriežky, akéhosi plástu so šesťhrannými bunkami. Nechávajú tak medzi sebou viac **voľného priestoru** ako v tekutom stave."
         },
         {
           "type": "funFact",
@@ -62,7 +62,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Menej materiálu v rovnakom objeme znamená: **menej husté**. Avšak objekt s menšou hustotou ako kvapalina okolo neho stúpa. Ľad preto pláva na vode. Toto sa nazýva **anomália expanzie vody**: na rozdiel od takmer všetkých látok sa voda pri ochladzovaní pod **4 °C** rozpína."
+          "text": "Menej hmoty v rovnakom objeme znamená **menšiu hustotu**. A predmet s menšou hustotou, ako má kvapalina okolo neho, stúpa nahor. Ľad preto pláva na vode. Tento jav sa nazýva **anomálna expanzia vody**: na rozdiel od takmer všetkých látok sa voda pri ochladzovaní pod **4 °C** rozpína."
         },
         {
           "type": "image",
@@ -74,31 +74,31 @@
     },
     {
       "id": "course_43_pourquoi_la_glace_flotte_t_elle_p3",
-      "title": "Prečo je životne dôležitý pre jazerá",
+      "title": "Prečo je to pre jazerá životne dôležité",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Predstavte si, že zmrzlina tiekla. Vytvoril by sa na povrchu, potom by klesol na dno. Jazero by zamrzlo vrstvu po vrstve, až po dno. Leto by často nestačilo na to, aby sa všetko roztopilo."
+          "text": "Predstav si, že by sa ľad potápal. Vytvoril by sa na povrchu a potom by klesol na dno. Jazero by zamŕzalo vrstvu po vrstve, až po dno. Leto by často nestačilo, aby sa všetko roztopilo."
         },
         {
           "type": "paragraph",
-          "text": "Našťastie ľad zostáva na vrchu. Tvorí **izolačný kryt**. Pod zamrznutým povrchom môže tekutá voda zostať okolo **4 °C**, čo je teplota, pri ktorej je tekutá voda najhustejšia, dostatočná na prežitie rýb a vodných rastlín."
+          "text": "Našťastie ľad zostáva navrchu. Tvorí **izolačné veko**. Pod zamrznutým povrchom môže tekutá voda zostať okolo **4 °C**, pri teplote, keď je tekutá voda najhustejšia. To stačí, aby ryby a vodné rastliny prežili."
         }
       ]
     },
     {
       "id": "course_43_pourquoi_la_glace_flotte_t_elle_p4",
-      "title": "A aj pre klímu",
+      "title": "A tiež pre klímu",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Biela ľadová kryha odráža veľkú časť slnečného svetla späť do vesmíru vďaka svojej vysokej odrazivosti **albedo**. Ak zmizne, tmavý oceán pohltí viac tepla. To urýchľuje otepľovanie: začarovaný kruh."
+          "text": "Biely morský ľad odráža veľkú časť slnečného svetla späť do vesmíru vďaka svojmu vysokému **albedu**, teda odrazivosti. Ak zmizne, tmavý oceán pohltí viac tepla. To urýchľuje otepľovanie: začarovaný kruh."
         },
         {
           "type": "takeaway",
-          "text": "Ľad pláva, pretože keď tuhne, voda vytvára „prevzdušnenejšiu“ sieť: je menej hustá ako tekutá voda. Táto výnimka chráni vodný život v zime."
+          "text": "Ľad pláva, pretože voda pri tuhnutí vytvára „vzdušnejšiu“ mriežku: stáva sa menej hustou ako tekutá voda. Táto výnimka v zime chráni život vo vode."
         }
       ]
     }

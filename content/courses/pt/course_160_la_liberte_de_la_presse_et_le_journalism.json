@@ -8,7 +8,7 @@
   "hero": {
     "image": "la_liberte_de_la_presse_et_le_journalisme_photographique",
     "ratio": "16:9",
-    "hook": "Uma foto pode parar uma guerra… ou mentir. Ainda é preciso poder publicá-la."
+    "hook": "Uma foto pode parar uma guerra… ou mentir. Mas, antes, é preciso poder publicá-la."
   },
   "sections": [
     {
@@ -18,7 +18,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "O jornalismo fotográfico nasce quando a imagem fixa a atualidade com a mesma força de um artigo. Uma só vista pode resumir uma guerra, uma fome, uma vitória."
+          "text": "O fotojornalismo nasce quando a imagem registra a notícia com a mesma força de um artigo. Uma só imagem pode resumir uma guerra, uma fome, uma vitória."
         },
         {
           "type": "paragraph",
@@ -33,17 +33,17 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "[[Henri Cartier-Bresson]] formula o “instante decisivo”: estar no lugar certo, na hora certa, com o enquadramento certo. [[Gerda Taro]], ao lado de Capa, morre cobrindo a Guerra da Espanha. O fotojornalismo tem seus mártires."
+          "text": "[[Henri Cartier-Bresson]] formula o “instante decisivo”: estar no lugar certo, na hora certa, com o enquadramento certo. [[Gerda Taro]], ao lado de Robert Capa, morre cobrindo a Guerra Civil Espanhola. O fotojornalismo tem seus mártires."
         },
         {
           "type": "paragraph",
-          "text": "O surgimento das revistas ilustradas e das agências de foto profissionaliza o ofício. O repórter sai com uma câmera como outros saem com um caderno. O risco é físico."
+          "text": "O surgimento das revistas ilustradas e das agências fotográficas profissionaliza o ofício. O repórter sai com uma câmera como outros saem com um bloco de notas. O risco é físico."
         },
         {
           "type": "image",
           "asset": "cartier_bresson_decisive_moment",
           "ratio": "4:3",
-          "caption": "A Leica no ombro: a rua como terreno"
+          "caption": "A Leica no ombro: a rua como campo de trabalho"
         }
       ]
     },
@@ -54,7 +54,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "No Vietnã, a foto de [[Nick Ut]] que mostra uma menina queimada por napalm abala a opinião. A imagem sozinha não “termina” a guerra, mas torna o custo humano impossível de negar."
+          "text": "No Vietnã, a foto de [[Nick Ut]] que mostra uma menina queimada por napalm abala a opinião pública. A imagem sozinha não “termina” a guerra, mas torna o custo humano impossível de negar."
         },
         {
           "type": "paragraph",
@@ -62,7 +62,7 @@
         },
         {
           "type": "funFact",
-          "text": "Muitas fotos célebres foram primeiro censuradas ou discutidas, antes de virar evidências históricas."
+          "text": "Muitas fotos célebres foram primeiro censuradas ou contestadas, antes de serem aceitas como verdades históricas."
         }
       ]
     },
@@ -98,19 +98,19 @@
         },
         {
           "type": "paragraph",
-          "text": "Para entender bem a liberdade de imprensa e o fotojornalismo, você precisa guardar uma coisa: cada detalhe técnico serve a uma emoção ou a uma ideia. A obra nunca é só decorativa."
+          "text": "Para entender bem a liberdade de imprensa e o fotojornalismo, tenha uma coisa em mente: cada detalhe técnico está a serviço de uma emoção ou de uma ideia. A obra nunca é só decorativa."
         },
         {
           "type": "paragraph",
-          "text": "O contexto conta tanto quanto o estilo. Datas, lugares, encomendas, público: tudo isso explica por que uma forma aparece num momento preciso, e não antes."
+          "text": "O contexto conta tanto quanto o estilo. Datas, lugares, mecenas, público: tudo isso explica por que uma forma aparece num momento específico, e não antes."
         },
         {
           "type": "paragraph",
-          "text": "Por fim, o legado se mede no tempo longo. O que vemos hoje nos museus, nos filmes ou na música popular ainda carrega a marca dessas invenções."
+          "text": "Por fim, o legado se mede a longo prazo. O que vemos hoje nos museus, nos filmes ou na música popular ainda traz a marca dessas invenções."
         },
         {
           "type": "paragraph",
-          "text": "Formar o olhar, defender os denunciantes, pagar o jornalismo de campo: sem isso, sobra só o fluxo. O legado do século XX é uma exigência, não uma nostalgia."
+          "text": "Formar o olhar, defender os denunciantes, financiar o jornalismo de campo: sem isso, só resta o fluxo. O legado do século XX é uma exigência, não uma nostalgia."
         },
         {
           "type": "takeaway",

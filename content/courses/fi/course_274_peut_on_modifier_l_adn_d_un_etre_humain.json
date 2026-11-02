@@ -9,7 +9,7 @@
   "hero": {
     "image": "genetics_lab_pipette_dna_samples_gloved_hands",
     "ratio": "4:3",
-    "hook": "Entä jos voisit korjata DNA:si kirjaimen kuin kirjoitusvirheen?"
+    "hook": "Entä jos DNA:n kirjaimen voisi korjata kuin kirjoitusvirheen?"
   },
   "sections": [
     {
@@ -19,7 +19,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Hiukset, silmät, ihonväri, vartalo: olemme kaikki erilaisia. Nämä ruumiilliset piirteet ovat perintöä: jokainen [[geeni]] on biologisilta vanhemmiltamme saatu DNA:n jakso. Myös ympäristöllä on tietysti merkitystä: sillä, mitä syömme, keiden kanssa vietämme aikaa ja mihin uskomme. Geenejämme pidämme kuitenkin itsestäänselvyytenä. Joskus toivoisimme olevamme pidempiä tai hoikempia, mutta elämme niiden kanssa ajattelematta asiaa sen kummemmin."
+          "text": "Hiukset, silmät, ihonväri, vartalo: olemme kaikki erilaisia. Nämä ruumiilliset piirteet ovat perintöä: jokainen [[geeni]] on biologisilta vanhemmiltamme saatu DNA:n jakso. Myös ympäristöllä on tietysti merkitystä: sillä, mitä syömme, keiden kanssa vietämme aikaa ja mihin uskomme. Geenejämme pidämme kuitenkin itsestäänselvyytenä. Joskus sitä toivoisi olevansa pidempi tai hoikempi, mutta geenien kanssa eletään ajattelematta asiaa sen kummemmin."
         },
         {
           "type": "paragraph",
@@ -34,7 +34,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "[[CRISPR]] ei ole ainoa työkalu, jolla DNA:ta voi muokata, mutta se on tunnetuin. Sen periaate havaittiin ensin mikrobeilla. Puolustautuakseen bakteeri tunnistaa sitä hyökkäävän viruksen DNA:n ja pilkkoo sen palasiksi. Siihen se käyttää CRISPR-nimisiä DNA-jaksoja ja entsyymiä nimeltä **Cas**, joka toimii saksina."
+          "text": "[[CRISPR]] ei ole ainoa työkalu, jolla DNA:ta voi muokata, mutta se on tunnetuin. Sen periaate havaittiin ensin mikrobeilla. Puolustautuakseen bakteeri tunnistaa sen kimppuun hyökkäävän viruksen DNA:n ja pilkkoo sen palasiksi. Siihen se käyttää CRISPR-nimisiä DNA-jaksoja ja entsyymiä nimeltä **Cas**, joka toimii saksina."
         },
         {
           "type": "image",
@@ -50,7 +50,7 @@
     },
     {
       "id": "course_274_peut_on_modifier_l_adn_d_un_etre_humain_p2",
-      "title": "Ensimmäiset parantumiset: sirppisoluanemia ja talassemia",
+      "title": "Ensimmäiset parantumiset: sirppisoluanemia ja beetatalassemia",
       "free": false,
       "blocks": [
         {
@@ -65,7 +65,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Vuonna **2023** Yhdistyneestä kuningaskunnasta tulee ensimmäinen maa, joka hyväksyy CRISPR-tekniikkaan perustuvan lääkkeen. Sen kohteena on kaksi perinnöllistä verisairautta: [[sirppisoluanemia]] ja beetatalassemia. Hoito muokkaa verta tuottavia soluja niin, että niiden tuottama [[sikiön hemoglobiini]] lisääntyy; tätä hemoglobiinin muotoa syntyy normaalisti ennen syntymää."
+          "text": "Vuonna **2023** Yhdistyneestä kuningaskunnasta tulee ensimmäinen maa, joka hyväksyy CRISPR-tekniikkaan perustuvan lääkkeen. Sen kohteena on kaksi perinnöllistä verisairautta: [[sirppisoluanemia]] ja beetatalassemia. Hoito muokkaa verta tuottavia soluja niin, että niiden tuottama [[sikiön hemoglobiini]] lisääntyy; tätä hemoglobiinin muotoa elimistö tuottaa normaalisti ennen syntymää."
         },
         {
           "type": "funFact",
@@ -88,7 +88,7 @@
         },
         {
           "type": "paragraph",
-          "text": "CRISPR voi myös itse erehtyä. Joskus sakset leikkaavat väärästä kohdasta, tai katkaistut päät eivät liity oikein takaisin yhteen. Tällainen muuttunut DNA voi luoda uusia ongelmia korjaamatta alkuperäistä. Siitä huolimatta lääketiede ottaa suuria askeleita kohti joidenkin pahimpien geneettisten sairauksien hävittämistä."
+          "text": "CRISPR voi myös itse erehtyä. Joskus sakset leikkaavat väärästä kohdasta, tai katkaistut päät eivät liity oikein takaisin yhteen. Tällainen muuttunut DNA voi luoda uusia ongelmia korjaamatta alkuperäistä. Siitä huolimatta lääketiede etenee harppauksin kohti joidenkin pahimpien geneettisten sairauksien hävittämistä."
         }
       ]
     },
@@ -99,7 +99,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Vammauttavien tai kuolemaan johtavien sairauksien hoitamisen hyödyn näkevät kaikki. Mutta mihin tieteen pitäisi vetää raja? Pitäisikö sitä käyttää ”täydellisen ihmisen” luomiseen? Kysymys on muuttunut entistä polttavammaksi, kun DNA:ta osataan leikata mielin määrin."
+          "text": "Kaikki ymmärtävät, miksi vammauttavia tai kuolemaan johtavia sairauksia kannattaa hoitaa. Mutta mihin tieteen pitäisi vetää raja? Pitäisikö sitä käyttää ”täydellisen ihmisen” luomiseen? Kysymys on muuttunut entistä polttavammaksi, kun DNA:ta osataan leikata mielin määrin."
         },
         {
           "type": "image",

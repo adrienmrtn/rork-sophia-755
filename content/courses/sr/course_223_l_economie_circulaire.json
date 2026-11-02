@@ -1,14 +1,14 @@
 {
   "id": "course_223_l_economie_circulaire",
   "title": "Cirkularna ekonomija: šta ako otpada više ne bi bilo?",
-  "subtitle": "Bežanje od svega što je jednokratno",
+  "subtitle": "Izaći iz kulture bacanja",
   "subject": "comprendreLeMonde",
   "subcategory": "Životna sredina i budućnost",
-  "description": "**Izvucite, napravite, bacite**: ovaj model iscrpljuje planetu. Cirkularna ekonomija predlaže suprotno: držanje predmeta i materijala u prometu što je duže moguće.",
+  "description": "**Izvući, proizvesti, baciti**: ovaj model iscrpljuje planetu. Cirkularna ekonomija predlaže suprotno: da se predmeti i materijali što duže zadrže u opticaju.",
   "hero": {
     "image": "l_economie_circulaire",
     "ratio": "16:9",
-    "hook": "Šta da otpad nije postojao? To je opklada na ekonomski model inspirisan prirodom."
+    "hook": "Šta ako otpad uopšte ne bi postojao? Na to se kladi ekonomski model inspirisan prirodom."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Od industrijske revolucije, naša ekonomija je radila u jednom pravcu: izvlačimo resurse, proizvodimo predmete, a zatim ih bacamo. Ovaj model pretpostavlja da su resursi beskonačni. nisu."
+          "text": "Od industrijske revolucije naša ekonomija funkcioniše u jednom smeru: izvlače se resursi, prave se predmeti, a onda se bacaju. Ovaj model pretpostavlja da su resursi beskonačni. A nisu."
         },
         {
           "type": "paragraph",
-          "text": "**Cirkularna ekonomija** nudi još jednu logiku, inspirisanu prirodom, gde ništa nije izgubljeno. Cilj mu je da što duže zadrži vrednost proizvoda i materijala u opticaju, umesto da ih pretvara u otpad."
+          "text": "**Cirkularna ekonomija** nudi drugačiju logiku, inspirisanu prirodom, u kojoj se ništa zaista ne gubi. Cilj joj je da vrednost proizvoda i materijala što duže zadrži u opticaju, umesto da ih pretvara u otpad."
         }
       ]
     },
@@ -33,17 +33,17 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Moderna ekonomija je izgrađena na modelu zvanom **linearni**: izvući, proizvesti, baciti. Sirovine uzimamo iz prirode, pravimo proizvode od njih, a kada se pohabaju ili izađu iz mode, ti proizvodi postaju otpad."
+          "text": "Moderna ekonomija izgrađena je na takozvanom **linearnom** modelu: izvući, proizvesti, baciti. Sirovine se uzimaju iz prirode, od njih se prave proizvodi, a kada se istroše ili izađu iz mode, ti proizvodi postaju otpad."
         },
         {
           "type": "image",
           "asset": "landfill_waste_garbage_linear_economy",
           "ratio": "16:9",
-          "caption": "Model „uzmi, napravi, baci“ pretpostavlja beskonačne resurse."
+          "caption": "Model „izvući, proizvesti, baciti“ pretpostavlja beskonačne resurse."
         },
         {
           "type": "paragraph",
-          "text": "Ovaj sistem se zasniva na ideji da su resursi neograničeni i da priroda može da apsorbuje sva zagađenja. Ali danas, globalna ekonomija troši resurse u ekvivalentu 1,7 planeta svake godine. Određene metale bitne za digitalne tehnologije, kao što je [[litijum]], moglo bi postati teško pronaći već 2040. godine."
+          "text": "Ovaj sistem se zasniva na ideji da su resursi neograničeni i da priroda može da upije sva zagađenja. Ali danas svetska ekonomija svake godine potroši resursa koliko ih ima na 1,7 planete. Neki metali ključni za digitalne tehnologije, kao što je [[litijum]], mogli bi da postanu teško dostupni već od 2040. godine."
         },
         {
           "type": "funFact",
@@ -57,26 +57,26 @@
     },
     {
       "id": "course_223_l_economie_circulaire_p2",
-      "title": "Popravite pre recikliranja",
+      "title": "Popraviti pre recikliranja",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kružna ekonomija nudi nekoliko petlji, i to uvek u istom redosledu prioriteta: najkraća petlja je bolja, jer troši manje energije i materijala. Sve počinje sa **eko-dizajn**, odnosno razmišljanjem o uticaju proizvoda na životnu sredinu od njegovog nastanka, odabirom materijala koji su izdržljivi i lako se rastavljaju."
+          "text": "Cirkularna ekonomija nudi nekoliko petlji, uvek po istom redu prioriteta: najbolja je najkraća petlja, jer se u njoj troši najmanje energije i materijala. Sve počinje **ekodizajnom**, odnosno razmišljanjem o uticaju proizvoda na životnu sredinu već od njegovog nastanka, uz izbor materijala koji su trajni i lako se rastavljaju."
         },
         {
           "type": "paragraph",
-          "text": "Zatim dolazi **ponovo koristiti** (objekat menja vlasništvo bez transformacije, kao na tržištu polovnih), zatim **popraviti**, koji produžava životni vek proizvoda. Ovi koraci direktno se bore protiv [[Planirana zastarelost]], ove prakse koja dobrovoljno skraćuje životni vek objekta."
+          "text": "Zatim dolazi **ponovna upotreba** (predmet menja vlasnika bez prerade, kao na pijaci polovne robe), pa **popravka**, koja produžava vek proizvoda. Ovi koraci se direktno bore protiv onoga što se zove [[planirano zastarevanje]], prakse kojom se namerno skraćuje vek trajanja predmeta."
         },
         {
           "type": "image",
           "asset": "recycling_sorting_waste_materials",
           "ratio": "4:3",
-          "caption": "Reciklaža dolazi kao poslednje sredstvo, nakon ponovne upotrebe i popravke."
+          "caption": "Reciklaža dolazi tek na kraju, posle ponovne upotrebe i popravke."
         },
         {
           "type": "paragraph",
-          "text": "**recikliranje** se javlja samo kao poslednje sredstvo. Ostaje korisno: reciklaža aluminijuma troši 95% manje energije nego vađenje iz sirove rude, [[boksit]]. Ali to je i dalje manje efikasno od jednostavnog ponovnog korišćenja objekta."
+          "text": "**Reciklaža** dolazi na red tek kao poslednje rešenje. I dalje je korisna: za reciklažu aluminijuma potrebno je 95% manje energije nego za njegovo dobijanje iz sirove rude, koja se zove [[boksit]]. Ali to je i dalje manje efikasno nego da se predmet jednostavno ponovo upotrebi."
         }
       ]
     },
@@ -87,7 +87,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Uprkos svom interesovanju, cirkularna ekonomija se suočava sa jednostavnim problemom: linearni model često ostaje **manje skup u kratkom roku**. Ekstrakcija novog materijala ponekad košta manje od sortiranja i reciklaže složenog otpada, posebno kada su sirovine jeftine."
+          "text": "Uprkos svim prednostima, cirkularna ekonomija nailazi na jednostavan problem: linearni model je često **jeftiniji na kratak rok**. Vađenje nove sirovine ponekad košta manje od sortiranja i reciklaže složenog otpada, naročito kada su sirovine jeftine."
         },
         {
           "type": "image",
@@ -97,34 +97,34 @@
         },
         {
           "type": "paragraph",
-          "text": "Suočeni sa ovim, državni organi sve više intervenišu. Evropska unija je 2020. godine pokrenula plan koji nameće stroža pravila održivosti. Jedna od glavnih osovina je „pravo na popravku“, koje obavezuje proizvođače elektronskih uređaja da više godina obezbeđuju rezervne delove."
+          "text": "Kao odgovor na to, vlasti sve češće intervenišu. Evropska unija je 2020. godine pokrenula plan koji uvodi stroža pravila o trajnosti proizvoda. Jedan od glavnih stubova je „pravo na popravku“, koje obavezuje proizvođače elektronskih uređaja da više godina obezbeđuju rezervne delove."
         },
         {
           "type": "paragraph",
-          "text": "Još jedna poluga: [[Proširena odgovornost proizvođača]], koja tera proizvođače da plaćaju za upravljanje otpadom svojih proizvoda. Ovo im daje finansijski podsticaj da dizajniraju objekte koji manje zagađuju i lakši za popravku."
+          "text": "Još jedna poluga: [[Proširena odgovornost proizvođača]], koja proizvođače obavezuje da plaćaju zbrinjavanje otpada od svojih proizvoda. To ih finansijski podstiče da prave predmete koji manje zagađuju i lakše se popravljaju."
         }
       ]
     },
     {
       "id": "course_223_l_economie_circulaire_p4",
-      "title": "Ka društvu resursa",
+      "title": "Ka društvu koje čuva resurse",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Cirkularna ekonomija nije samo pitanje reciklaže: to je projekat za trezvenije i otpornije društvo. Smanjenjem zavisnosti od uvoznih sirovina, država takođe dobija sigurnost u nestabilnijem svetu."
+          "text": "Cirkularna ekonomija nije samo pitanje reciklaže: to je projekat umerenijeg i otpornijeg društva. Kada manje zavisi od uvoza sirovina, zemlja postaje i bezbednija u svetu koji je sve nestabilniji."
         },
         {
           "type": "paragraph",
-          "text": "Uspeh ove transformacije zavisi i od nas, kao potrošača. 3R pravilo, smanji, ponovo upotrebi, recikliraj, počinje prvim korakom: smanji, odnosno zapitaj se da li je kupovina zaista neophodna. Upravo ova prva akcija ima najveći uticaj na klimu."
+          "text": "Uspeh ove promene zavisi i od nas, kao potrošača. Pravilo 3R, smanji, ponovo upotrebi, recikliraj, počinje prvim korakom: smanjiti, odnosno zapitati se da li je kupovina zaista neophodna. Upravo taj prvi potez ima najveći uticaj na klimu."
         },
         {
           "type": "funFact",
-          "text": "Danas ima više zlata u toni starih elektronskih ploča za pametne telefone nego u toni rude izvađene iz tradicionalnog rudnika zlata."
+          "text": "Danas u toni starih elektronskih ploča iz pametnih telefona ima više zlata nego u toni rude izvađene iz klasičnog rudnika zlata."
         },
         {
           "type": "takeaway",
-          "text": "Cirkularna ekonomija ima za cilj da prekine ciklus „izvucite, napravite, bacite” tako što će resurse zadržati u opticaju kroz eko-dizajn, popravku i reciklažu, kako bi se poštovala fizička ograničenja naše planete."
+          "text": "Cirkularna ekonomija želi da prekine ciklus „izvući, proizvesti, baciti“ tako što resurse zadržava u opticaju zahvaljujući ekodizajnu, popravci i reciklaži, kako bi se poštovale fizičke granice naše planete."
         }
       ]
     }

@@ -1,14 +1,14 @@
 {
   "id": "course_231_les_migrations_climatiques",
   "title": "Kliimaränne: kes kaitseb neid, kes peavad lahkuma?",
-  "subtitle": "2050. aastaks on ümberasustatud 216 miljonit inimest?",
+  "subtitle": "216 miljonit kodust lahkunut 2050. aastaks?",
   "subject": "comprendreLeMonde",
   "subcategory": "Keskkond ja tulevik",
   "description": "Kliima sunnib sadu miljoneid inimesi oma kodudest lahkuma, kuid ükski rahvusvaheline seadus neid veel ei kaitse.",
   "hero": {
     "image": "les_migrations_climatiques",
     "ratio": "16:9",
-    "hook": "Kliima ajab juba praegu välja rohkem inimesi kui sõda, kuid ükski seadus ei tea, kuidas neid nimetada."
+    "hook": "Kliima ajab juba praegu kodust minema rohkem inimesi kui sõda, kuid ükski seadus ei tea, kuidas neid nimetada."
   },
   "sections": [
     {
@@ -18,7 +18,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Veetaseme tõus ei anna endast alati teada suurejoonelise lainega: kõigepealt sööb see ära põllu, siis kaevu, siis terve küla. Mujal teeb äärmuslik kuumus õhku peaaegu võimatuks hingata. Mõlemal juhul peavad terved pered lahkuma mitte sõja, vaid kliima tõttu. Nendel sundlahkumistel on nimi: **klimaatilised rännanud**. Probleem on selles, et ükski rahvusvaheline õigus neid tegelikult ei tunnusta."
+          "text": "Veetõus ei anna end alati tunda suure lainega: alguses närib see ära põllu, siis kaevu, siis terve küla. Mujal muudab äärmuslik kuumus õhu peaaegu hingamiskõlbmatuks. Mõlemal juhul peavad terved pered lahkuma, mitte sõja, vaid kliima tõttu. Neil sunnitud lahkumistel on nimi: **kliimaränne**. Probleem on selles, et ükski rahvusvaheline seadus neid tegelikult ei tunnista."
         }
       ]
     },
@@ -29,51 +29,51 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Aastal **2022** tähistas üks arv pöördepunkti: kliimakatastroofid põhjustasid **60 miljonit riigisiseseid ümberpaiknemisi** ehk sunniviisilist lahkumist riigis endas. Esimest korda ületas see arv sõdade eest põgenejate oma."
+          "text": "Aastal **2022** sai üks arv pöördepunktiks: kliimakatastroofid põhjustasid **60 miljonit riigisisest ümberasumist**, see tähendab sunnitud lahkumist oma riigi piires. Esimest korda ületas see arv sõdade eest põgenenud inimeste arvu."
         },
         {
           "type": "funFact",
-          "text": "**2009** pidas [[Madalad saareriigid]] valitsus vee all hapnikupaakide ja tuukriülikondades ministrite nõukogu, et teavitada maailma selle saarestiku võimalikust kadumisest."
+          "text": "**2009**. aastal pidas Maldiivide valitsus ministrite nõukogu vee all, hapnikuballoonide ja tuukriülikondadega, et hoiatada maailma: see saarestik, nagu teisedki [[Madalad saareriigid]], võib kaduda."
         },
         {
           "type": "image",
           "asset": "2015_refugee_migration_crisis_europe_mediterranean",
           "ratio": "16:9",
-          "caption": "Migrandid ületavad Vahemerd: kliimakriis lisandub nüüd poliitilistele kriisidele kui lahkumist soodustav jõud."
+          "caption": "Migrandid ületavad Vahemerd: lisaks poliitilistele kriisidele ajab inimesi nüüd kodust minema ka kliimakriis."
         },
         {
           "type": "paragraph",
-          "text": "Muu tundub murettekitavam: **Maailmapank** hinnangul võib kliimamuutus ilma suurte jõupingutusteta sundida **216 miljonit inimest** **2050** võrra rändama. Bangladeshis sööb ookean põllumaad; Sahara-taguses Aafrikas on veepuudus; Vaikses ookeanis ähvardavad teatud saareriigid oma territooriumi täielikku kadumist."
+          "text": "Edasine tundub veelgi murettekitavam: **Maailmapanga** hinnangul võib kliimamuutus ilma suurte jõupingutusteta sundida **2050**. aastaks rändama **216 miljonit inimest**. Bangladeshis närib ookean põllumaad, Sahara-taguses Aafrikas napib vett ja Vaikses ookeanis võib mõne saareriigi territoorium täielikult kaduda."
         }
       ]
     },
     {
       "id": "course_231_les_migrations_climatiques_p2",
-      "title": "Kaks purunemiskiirust: löök ja kulumine",
+      "title": "Kaks kiirust: äkiline löök ja aeglane kulumine",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kliima tõrjub populatsioone kahel viisil. **Äkilised katastroofid**, nagu tormid, põhjustavad äkilisi, kuid sageli ajutisi lahkumisi, enne kui elanike tagasipöördumisvõime on kordamise tõttu ammendatud. **Aeglane degradeerumiin** muudab territooriumi igaveseks: veetaseme tõus muudab mullad soolaseks, tapab põllukultuure enne, kui vesi isegi kodudesse jõuab, samas kui kõrbestumine muudab karjamaad järk-järgult viljatuks, tõugates nomaadide kogukondi [[sundlahendus]] või ex-linna suunas."
+          "text": "Kliima saab inimesi minema ajada kahel viisil. **Äkilised katastroofid**, näiteks tormid, sunnivad inimesi järsult, kuid sageli ajutiselt lahkuma, kuni korduvad löögid kurnavad elanike taastumisvõime. **Aeglane keskkonna halvenemine** muudab aga maa-ala jäädavalt: veetõus muudab mulla soolaseks ja hävitab saagi juba enne, kui vesi majadeni jõuab, kõrbestumine aga muudab karjamaad järk-järgult viljatuks maaks. Rändkarjakasvatajatele jääb siis kaks teed: [[Sunniviisiline asustamine]] või lahkumine linna."
         },
         {
           "type": "paragraph",
-          "text": "Teadlastele teeb muret uus oht: **Niiske** kuumus. Kui temperatuur ja niiskus ületavad teatud läve, ei saa keha end enam higistamisega jahutada. Aastaks 2050 võivad mõned Pärsia lahe või Lõuna-Aasia osad muutuda surmavaks kõigile, kes viibivad väljas kauem kui paar tundi."
+          "text": "Teadlastele teeb muret uus oht: **niiske kuumus**. Kui temperatuur ja niiskus ületavad teatud piiri, ei suuda keha end enam higistamisega jahutada. 2050. aastaks võivad mõned Pärsia lahe või Lõuna-Aasia piirkonnad muutuda surmavaks igaühele, kes viibib väljas kauem kui paar tundi."
         }
       ]
     },
     {
       "id": "course_231_les_migrations_climatiques_p3",
-      "title": "Õiguslik vaakum ülemaailmse kriisi tingimustes",
+      "title": "Õiguslik vaakum ülemaailmse kriisi ees",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Vaatamata kriisi tõenditele langevad kliima tõttu ümberasustatud inimesed [[\"Kliimapagulase\" õiguslik vaakum]]. Meedias laialt levinud mõistel “kliimapagulane” ei ole rahvusvahelises õiguses mingit väärtust: 1951. aasta Genfi konventsioon kaitseb inimesi, keda kiusab nende oma riik, kuid kliimamuutused ei ole ühegi konkreetse tagakiusaja süü, see on ülemaailmne nähtus."
+          "text": "Kriis on ilmne, kuid kliima tõttu kodust lahkunud inimesi ootab [[„kliimapagulase“ õiguslik vaakum]]. Meedias laialt kasutatud mõistel „kliimapagulane“ pole rahvusvahelises õiguses mingit kaalu: 1951. aasta Genfi konventsioon kaitseb inimesi, keda nende oma riik taga kiusab, kuid kliimamuutuses pole süüdi ükski konkreetne tagakiusaja, see on ülemaailmne nähtus."
         },
         {
           "type": "paragraph",
-          "text": "Ilma ametliku staatuseta ei saa need inimesed kasu **[[mittetagasisaatmine]]** põhimõttest, mis keelab saata kedagi tagasi kohta, kus nende elu oleks ohus. Selline kaitse puudumine tekitab ebaõiglust: enim mõjutatud riigid on ajalooliselt kõige vähem saastanud, samas kui rikkad riigid sulgevad sageli oma piirid. Sellest ka idee **kliimavõlast**: tööstusriikide moraalne vastutus nende endi arengu tõttu haavatavaks muutunud elanikkonna ees."
+          "text": "Ilma ametliku staatuseta ei laiene neile **[[mittetagasisaatmine]]**: põhimõte, mis keelab saata kedagi tagasi sinna, kus tema elu oleks ohus. Kaitse puudumine on ebaõiglane: kõige rohkem kannatavad riigid on ajalooliselt kõige vähem saastanud, rikkad riigid aga sulgevad sageli oma piirid. Sellest ka mõte **kliimavõlast**: tööstusriikidel on moraalne vastutus nende inimeste ees, kelle on haavatavaks teinud tööstusriikide enda areng."
         }
       ]
     },
@@ -84,15 +84,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Mõned riigid otsivad juba uusi lahendusi. Väikesed saareriigid kaaluvad ÜRO tunnustatud riigiks jäämist isegi siis, kui nende saar on vee alla kadunud. Näiteks Kiribati ostis Fidžilt maad, et vajadusel valmistuda kogu oma elanikkonna ümberasumiseks."
+          "text": "Mõned riigid otsivad juba uudseid lahendusi. Väikesed saareriigid mõtlevad, kuidas jääda ÜRO tunnustatud riigiks ka siis, kui nende saar on vee alla kadunud. Näiteks Kiribati ostis Fidžilt maad, et vajaduse korral kogu oma rahvas sinna ümber asustada."
         },
         {
           "type": "paragraph",
-          "text": "2018. aastal hakkas **Ülemaailmne rändekokkulepe** arutlema lahkumiste keskkonnaalaste põhjuste üle. Kuid prioriteet jääb **Kohalik kohanemine**: tammid, soolakindlad põllukultuurid, hoiatussüsteemid, et inimesed saaksid võimalikult kaua kodus püsida. Kuna läbitud rännet kogetakse alati läbikukkumisena ning massilised ja korratud vood võivad õhutada pingeid vee ja elamiskõlbliku maa ümber."
+          "text": "2018. aastal hakkas **ülemaailmne rändekokkulepe** käsitlema ka rände keskkonnapõhjusi. Esikohal on siiski **kohalik kohanemine**: tammid, soolakindlad põllukultuurid, hoiatussüsteemid, et inimesed saaksid võimalikult kaua kodus püsida. Sunnitud rännet tajutakse ju alati läbikukkumisena ning massilised ja korratud rändevood võivad õhutada pingeid vee ja elamiskõlbliku maa pärast."
         },
         {
           "type": "takeaway",
-          "text": "Aastal 2022 põhjustavad kliimakatastroofid 60 miljonit riigisiseselt ümberasumist, ületades esimest korda sõjapõgenike arvu. Tunnustatud juriidilise staatuse puudumisel jäävad need elanikkonnad kaitsmata kriisi ees, mis võib 2050. aastaks mõjutada 216 miljonit inimest."
+          "text": "2022. aastal põhjustasid kliimakatastroofid 60 miljonit riigisisest ümberasumist ja ületasid esimest korda sõjapõgenike arvu. Kuna tunnustatud õiguslikku staatust pole, jäävad need inimesed kaitseta kriisis, mis võib 2050. aastaks puudutada 216 miljonit inimest."
         }
       ]
     }

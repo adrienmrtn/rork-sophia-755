@@ -1,14 +1,14 @@
 {
   "id": "course_224_pourquoi_les_abeilles_sont_elles_vitales",
   "title": "Mitä lautasellamme olisi jäljellä ilman mehiläisiä?",
-  "subtitle": "Ruokamme pienet työntekijät",
+  "subtitle": "Ruokamme pienet ahertajat",
   "subject": "comprendreLeMonde",
   "subcategory": "Ympäristö ja tulevaisuus",
-  "description": "Ilman mehiläisiä **75% mailman ruokakasveista** olisi vaarassa. Nämä pienet, huomaamattomat työntekijät tukevat ruokatarjontaamme, ja heidän väestönsä romahtaa.",
+  "description": "Ilman mehiläisiä **75 % maailman ruokakasveista** olisi vaarassa. Nämä pienet ja huomaamattomat ahertajat pitävät yllä ruokahuoltoamme, ja niiden kannat romahtavat.",
   "hero": {
     "image": "pourquoi_les_abeilles_sont_vitales",
     "ratio": "16:9",
-    "hook": "He eivät tee vain hunajaa: ilman niitä suuri osa ruoastamme katoaisi."
+    "hook": "Ne eivät tuota pelkkää hunajaa: ilman niitä suuri osa ruoastamme katoaisi."
   },
   "sections": [
     {
@@ -18,103 +18,103 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ajattelemme mehiläisiä usein vain hunajansa vuoksi. Todellisuudessa ne tarjoavat paljon paremman palvelun: ne antavat suurimman osan kukkivista kasveista lisääntyä. Tämän palvelun arvo on satoja miljardeja dollareita vuosittain."
+          "text": "Mehiläisiä ajatellaan usein vain hunajan vuoksi. Todellisuudessa niiden palvelus on paljon suurempi: ne auttavat useimpia kukkakasveja lisääntymään. Tämän palveluksen arvo on satoja miljardeja dollareita vuodessa."
         },
         {
           "type": "paragraph",
-          "text": "Viime vuosikymmeninä nämä välttämättömät hyönteiset ovat hävinneet huolestuttavalla nopeudella. Heidän roolinsa ja niiden vähenemisen syiden ymmärtäminen auttaa meitä ymmärtämään paremmin tulevan elintarvikehuollon välitöntä kysymystä."
+          "text": "Viime vuosikymmeninä nämä tärkeät hyönteiset ovat kadonneet huolestuttavaa vauhtia. Kun ymmärtää niiden tehtävän ja syyt niiden vähenemiseen, hahmottaa paremmin, miten suoraan asia koskee tulevaa ruokaamme."
         }
       ]
     },
     {
       "id": "course_224_pourquoi_les_abeilles_sont_elles_vitales_p1",
-      "title": "Pölytys, hienovarainen mutta välttämätön työ",
+      "title": "Pölytys, huomaamaton mutta välttämätön työ",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "[[pölytys]] on siitepölyn, yhden kukan urossolujen, kuljettamista saman lajin toisen kukan naaraselimiin. Tuuli tai vesi voivat joskus tehdä tämän, mutta suurin osa kukkivista kasveista suosii eläinkuljetuksia. Etsimällä mettä ja siitepölyä yhdyskuntaansa varten mehiläiset tarjoavat tämän kuljetuksen tietämättään."
+          "text": "Kasvien [[pölytys]] tarkoittaa siitepölyn eli kukan urospuolisten solujen siirtämistä toisen, samaa lajia olevan kukan emiin. Tuuli tai vesi voi joskus hoitaa tämän, mutta useimmat kukkakasvit suosivat eläinten apua. Kun mehiläiset etsivät mettä ja siitepölyä yhdyskunnalleen, ne hoitavat tämän kuljetuksen edes tietämättään."
         },
         {
           "type": "image",
           "asset": "honey_bee_pollinating_flower_closeup",
           "ratio": "4:3",
-          "caption": "Hakiessaan ruokaa mehiläinen kuljettaa siitepölyä kukasta kukkaan."
+          "caption": "Mettä kerätessään mehiläinen kuljettaa siitepölyä kukasta kukkaan."
         },
         {
           "type": "funFact",
-          "text": "Mehiläinen voi vierailla jopa 700 kukkaa päivässä. Tuottaakseen vain 500 grammaa hunajaa, kokonaisen pesäkkeen on lentää kolme kertaa maapallon ympäri."
+          "text": "Mehiläinen voi käydä jopa 700 kukassa päivässä. Jotta syntyisi vain 500 grammaa hunajaa, koko yhdyskunnan on lennettävä yhteensä kolmen maapallon kierroksen verran."
         },
         {
           "type": "paragraph",
-          "text": "Noin **75% mailman ruokakasveista** on ainakin jossain määrin riippuvaisia pölyttäjistä, kuten mehiläisistä. Tämä sisältää kahvin, kaakaon, omenat, mantelit tai avokadot. Pölytyksen vaikutus maailmantalouteen on arviolta 235-577 miljardia dollaria vuodessa."
+          "text": "Noin **75 % maailman ruokakasveista** on ainakin jossain määrin pölyttäjien, kuten mehiläisten, varassa. Näitä ovat esimerkiksi kahvi, kaakao, omenat, mantelit ja avokadot. Pölytyksen arvoksi maailmantaloudelle arvioidaan 235-577 miljardia dollaria vuodessa."
         }
       ]
     },
     {
       "id": "course_224_pourquoi_les_abeilles_sont_elles_vitales_p2",
-      "title": "Miksi siirtokunnat romahtavat",
+      "title": "Miksi yhdyskunnat romahtavat",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Mehiläisten vähenemisellä ei ole yhtä syytä: useita uhkia vaikuttaa samanaikaisesti. 1990-luvulta lähtien jotkut mehiläishoitajat ovat menettäneet jopa 30-50 prosenttia yhdyskunnistaan joka talvi, kun taas luonnollisen menetyksen pitäisi olla noin 10 prosenttia. Tätä äkillisen katoamisen ilmiötä kutsutaan joskus nimellä [[Pesäkkeiden romahdushäiriö]]."
+          "text": "Mehiläisten vähenemiselle ei ole yhtä ainoaa syytä: useat uhat vaikuttavat samaan aikaan. 1990-luvulta lähtien jotkut mehiläishoitajat ovat menettäneet jopa 30-50 % yhdyskunnistaan joka talvi, vaikka luonnollisen hävikin pitäisi olla noin 10 %. Tätä äkillistä katoamista kutsutaan joskus nimellä [[pesäkkeiden romahdushäiriö]]."
         },
         {
           "type": "image",
           "asset": "neonicotinoid_pesticide_spraying_field",
           "ratio": "4:3",
-          "caption": "Neonikotinoidit tunkeutuvat koko kasviin, mukaan lukien nektari ja siitepöly."
+          "caption": "Neonikotinoidit leviävät koko kasviin mettä ja siitepölyä myöten."
         },
         {
           "type": "paragraph",
-          "text": "[[Neonikotinoidit]], hyönteismyrkkyjen perhe, ovat erityisen vastuullisia. Ne läpäisevät koko kasvin, mukaan lukien sen nektari ja siitepöly. Pienilläkin annoksilla ne hajottavat mehiläisiä, jotka eivät enää löydä pesää, ja heikentävät heidän immuunijärjestelmää."
+          "text": "[[Neonikotinoidit]], eräs hyönteismyrkkyjen ryhmä, ovat erityisen suuri syyllinen. Ne kulkeutuvat koko kasviin mettä ja siitepölyä myöten. Pieninäkin annoksina ne sekoittavat mehiläisten suuntavaiston, jolloin ne eivät enää löydä pesäänsä, ja heikentävät niiden immuunijärjestelmää."
         },
         {
           "type": "paragraph",
-          "text": "Tähän lisätään tappavia viruksia levittävä loipunkki, luonnonvaraisten kukkien katoaminen monokulttuurien vuoksi ja ilmastonmuutos, joka siirtää kukinnan jaksoja suhteessa hyönteisten heräämiseen."
+          "text": "Lisäksi mehiläisiä uhkaavat tappavia viruksia levittävä loispunkki, luonnonkukkien katoaminen yksipuolisen viljelyn vuoksi ja ilmastonmuutos, joka siirtää kukinta-aikoja pois tahdista hyönteisten heräämisen kanssa."
         }
       ]
     },
     {
       "id": "course_224_pourquoi_les_abeilles_sont_elles_vitales_p3",
-      "title": "Ei ole vain yksi mehiläinen",
+      "title": "Mehiläisiä on monenlaisia",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kun sanomme \"mehiläinen\", ajattelemme melkein aina kotimaista mehiläistä, joka elää mehiläispesässä ja tuottaa hunajaa. Se on kuitenkin vain yksi laji yli **20 000** maailmassa, mukaan lukien kimalaiset ja osmia. Useimmat ovat yksinäisiä eivätkä tee hunajaa, mutta niillä on yhtä tärkeä ekologinen rooli."
+          "text": "Kun sanotaan ”mehiläinen”, ajatellaan lähes aina tarhamehiläistä, joka elää pesässä ja tuottaa hunajaa. Se on kuitenkin vain yksi maailman yli **20 000** mehiläislajista, joihin kuuluvat myös esimerkiksi kimalaiset ja muurarimehiläiset. Useimmat elävät yksin eivätkä tee hunajaa, mutta niiden ekologinen tehtävä on aivan yhtä tärkeä."
         },
         {
           "type": "funFact",
-          "text": "Tietyt kukat, kuten tomaatin kukat, vapauttavat siitepölyään vain tietyn tärinän vaikutuksesta. Hunajamehiläiset eivät osaa tehdä tätä, mutta kimalaiset osaavat sen sonication-nimisen tekniikan ansiosta."
+          "text": "Jotkin kukat, kuten tomaatin kukat, vapauttavat siitepölynsä vain tietynlaisesta värinästä. Tarhamehiläiset eivät siihen pysty, mutta kimalaiset pystyvät surinapölytykseksi kutsutun tekniikan ansiosta."
         },
         {
           "type": "paragraph",
-          "text": "Nämä luonnonvaraiset lajit ovat usein erikoistuneet tiettyyn kasveen, jota he ovat joskus ainoita, jotka pystyvät pölyttämään tehokkaasti. Ne ovat myös haavoittuvampia kuin kotimehiläiset, koska ne eivät hyödy ihmisen seurannasta tai hoidosta. Niiden katoaminen heikentää koko [[ravintoketju]], koska monet linnut ovat riippuvaisia tästä pölytyksestä syntyvistä hedelmistä ja siemenistä."
+          "text": "Nämä luonnonvaraiset lajit ovat usein erikoistuneet yhteen tiettyyn kasviin, ja joskus ne ovat ainoita, jotka pystyvät pölyttämään sen tehokkaasti. Ne ovat myös haavoittuvampia kuin tarhamehiläinen, koska kukaan ei seuraa tai hoida niitä. Niiden katoamisesta kärsii koko [[ravintoketju]], koska monet linnut ovat riippuvaisia tämän pölytyksen tuottamista hedelmistä ja siemenistä."
         }
       ]
     },
     {
       "id": "course_224_pourquoi_les_abeilles_sont_elles_vitales_p4",
-      "title": "Mitä voimme vielä muuttaa",
+      "title": "Mitä voidaan vielä muuttaa",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Torjunta-aineiden käytön vähentäminen on edelleen tehokkain keino. Euroopan unioni kielsi kolme suurta neonikotinoidia avopelloilla vuonna 2018. Samaan aikaan [[agroekologiset infrastruktuurit]], kuten pensasaidat tai kukkakaistaleet, palauttaminen paikoilleen luo uudelleen suojaalueita hyönteisille."
+          "text": "Torjunta-aineiden käytön vähentäminen on yhä tehokkain keino. Euroopan unioni kielsi vuonna 2018 avomaalla kolme keskeistä neonikotinoidia. Samaan aikaan [[agroekologiset infrastruktuurit]], kuten pensasaidat ja kukkivat pientareet, luovat hyönteisille uusia suojapaikkoja, kun ne palautetaan maisemaan."
         },
         {
           "type": "paragraph",
-          "text": "Jokainen voi toimia myös yksinkertaisesti: istuttaa paikallisia kukkia puutarhaansa tai jättää nurmikon vähän pidemmäksi ennen leikkaamista se tarjoaa mehiläisille todellisen suojan, kun kukkia on harvinainen."
+          "text": "Jokainen voi myös auttaa helposti: kun istuttaa puutarhaansa paikallisia kukkia tai antaa nurmikon kasvaa vähän pidemmäksi ennen leikkaamista, mehiläiset saavat todellisen turvapaikan silloin, kun kukkia on vähän."
         },
         {
           "type": "paragraph",
-          "text": "Pölyttäjien suojelu ei ole vain luonnonsuojelukysymys: se on pitkän tähtäimen selviytymisstrategia, sillä heidän työnsä tukee suoraan kasvien kykyä ruokkia meitä."
+          "text": "Pölyttäjien suojelu ei ole pelkkä luonnonsuojelukysymys: se on pitkän aikavälin selviytymisstrategia, sillä niiden työ tukee suoraan kasvien kykyä ruokkia meitä."
         },
         {
           "type": "takeaway",
-          "text": "Mehiläiset ja 20 000 luonnonvaraisten pölyttäjien lajia takaavat 75 %:n maailman ruokakasvien lisääntymisen. Niiden väheneminen, joka johtuu torjunta-aineista, loisista ja elinympäristöjen häviämisestä, uhkaa suoraan elintarvikehuoltoamme."
+          "text": "Mehiläiset ja 20 000 luonnonvaraista pölyttäjälajia varmistavat, että 75 % maailman ruokakasveista voi lisääntyä. Niiden väheneminen, jonka syinä ovat torjunta-aineet, loiset ja elinympäristöjen häviäminen, uhkaa suoraan ruokaamme."
         }
       ]
     }

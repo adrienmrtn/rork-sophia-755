@@ -4,11 +4,11 @@
   "subtitle": "Uhka vai uusi aalto?",
   "subject": "comprendreLeMonde",
   "subcategory": "Ympäristö ja tulevaisuus",
-  "description": "Jokainen teknologinen vallankumous on luonut pelkoa työllisyydestä. Mutta generatiivinen tekoäly vaikuttaa ensimmäistä kertaa **älykkyyttä** ammatteihin, ei vain fyysiseen vahvuuteen.",
+  "description": "Jokainen teknologinen vallankumous on herättänyt pelkoa työpaikkojen puolesta. Mutta generatiivinen tekoäly koskee ensimmäistä kertaa **älyllisiä** ammatteja, ei vain ruumiillista voimaa.",
   "hero": {
     "image": "l_ia_et_l_emploi",
     "ratio": "16:9",
-    "hook": "Koneet ovat jo vaihtaneet varret. Korvaavatko ne nyt aivot?"
+    "hook": "Koneet ovat jo korvanneet työkäsiä. Korvaavatko ne nyt aivot?"
   },
   "sections": [
     {
@@ -18,86 +18,86 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Tuhoaako tekoäly miljoonia työpaikkoja vai luoko uusia? Tämä kysymys on noussut esiin jokaisen suuren teknisen edistyksen yhteydessä viimeisen kahden vuosisadan aikana."
+          "text": "Tuhoaako tekoäly miljoonia työpaikkoja vai luoko se uusia? Sama kysymys on noussut esiin jokaisen suuren teknisen edistysaskeleen myötä kahden viime vuosisadan ajan."
         },
         {
           "type": "paragraph",
-          "text": "Tällä kertaa uutuus on muualla: tekoäly ei enää korvaa vain fyysistä voimaa, vaan tehtäviä, joiden luulimme olevan varattu ihmismielelle, kuten tekstin kirjoittaminen tai tiedoston analysointi. Tämä kurssi jäljittää tätä muinaista pelkoa ja tutkii, mikä todella muuttuu nykyään."
+          "text": "Tällä kertaa uutta on jokin muu: tekoäly ei enää korvaa vain ruumiillista voimaa vaan myös tehtäviä, joiden luultiin kuuluvan vain ihmismielelle, kuten tekstin kirjoittamista tai asiakirjojen analysointia. Tämä kurssi käy läpi tämän vanhan pelon historian ja tutkii, mikä nyt todella muuttuu."
         }
       ]
     },
     {
       "id": "course_226_l_ia_et_l_emploi_p1",
-      "title": "Pelko yhtä vanha kuin kone",
+      "title": "Koneiden ikäinen pelko",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Pelko siitä, että koneet korvaavat ihmiset, ei ole uutta. 1800-luvun alussa brittiläiset tekstiilityöläiset [[Luddiitit (1811-1816)]] tuhosivat heidän taitojaan uhkaavat mekaaniset kangaspuut."
+          "text": "Pelko siitä, että kone korvaa ihmisen, ei ole uusi. 1800-luvun alussa [[Luddiitit (1811-1816)]], brittiläiset tekstiilityöläiset, tuhosivat mekaanisia kangaspuita, jotka uhkasivat heidän ammattitaitoaan."
         },
         {
           "type": "image",
           "asset": "luddites_industrial_revolution_machine_breaking",
           "ratio": "4:3",
-          "caption": "1800-luvulla luddiitit hyökkäsivät koneisiin, jotka uhkasivat heidän ammattiaan."
+          "caption": "1800-luvulla luddiitit kävivät sellaisten koneiden kimppuun, jotka uhkasivat heidän ammattiaan."
         },
         {
           "type": "paragraph",
-          "text": "Jokainen suuri teknologinen aalto on noudattanut samaa logiikkaa: se tuhoaa tiettyjä työpaikkoja, mutta luo toisia muualle. Siirtyminen maataloudesta teollisuuteen vähensi viljelijöiden osuutta työssäkäyvästä väestöstä 40 prosentista 2 prosenttiin sadassa vuosisadassa aiheuttamatta pysyvää työttömyyttä näiden työntekijöiden siirtyessä uusille aloille."
+          "text": "Jokainen suuri teknologinen aalto on noudattanut samaa logiikkaa: se tuhoaa joitakin työpaikkoja mutta luo toisia muualle. Siirtymä maataloudesta teollisuuteen pudotti viljelijöiden osuuden työvoimasta 40 prosentista 2 prosenttiin sadassa vuodessa, eikä se johtanut pysyvään työttömyyteen, koska nämä työntekijät siirtyivät uusille aloille."
         },
         {
           "type": "funFact",
-          "text": "Sanan \"sabotaasi\" sanotaan tulevan ranskalaisilta työntekijöiltä, jotka heittivät puiset kenkänsä, sabotit, koneiden vaihteisiin estääkseen ne, vaikka sanan tarkka alkuperä on edelleen kiistanalainen."
+          "text": "Sanan ”sabotaasi” sanotaan tulevan ranskalaisista työläisistä, jotka heittivät puukenkänsä eli sabotit koneiden hammasrattaisiin pysäyttääkseen ne, vaikka sanan tarkasta alkuperästä kiistellään yhä."
         }
       ]
     },
     {
       "id": "course_226_l_ia_et_l_emploi_p2",
-      "title": "Läpimurto: tekoäly hyökkää tietoammatteja vastaan",
+      "title": "Murros: tekoäly käy tietotyön kimppuun",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "[[Generatiivinen tekoäly (AI)]] merkitsee todellista muutosta, koska se ei enää vain noudata etukäteen vahvistettuja sääntöjä: se luo alkuperäistä sisältöä. Klassinen tietojenkäsittely korvasi toistuvat tehtävät, kuten tietojen syöttämisen. Nykyaikainen tekoäly voi kirjoittaa, analysoida sopimusta, säveltää musiikkia tai jopa auttaa lääketieteellisen diagnoosin tekemisessä."
+          "text": "[[Generatiivinen tekoäly (AI)]] merkitsee todellista muutosta, koska se ei enää vain noudata ennalta asetettuja sääntöjä: se luo omaperäistä sisältöä. Perinteinen tietotekniikka korvasi toistuvia tehtäviä, kuten tietojen syöttämistä. Nykyaikainen tekoäly taas osaa kirjoittaa, analysoida sopimuksen, säveltää musiikkia ja jopa auttaa lääketieteellisen diagnoosin tekemisessä."
         },
         {
           "type": "image",
           "asset": "AI_generative_writing_artificial_intelligence",
           "ratio": "4:3",
-          "caption": "Generatiivinen tekoäly hoitaa tehtäviä, joiden uskottiin olevan varattu ihmismielelle."
+          "caption": "Generatiivinen tekoäly tarttuu tehtäviin, joiden uskottiin kuuluvan vain ihmismielelle."
         },
         {
           "type": "paragraph",
-          "text": "Tämä monipuolisuus paljastaa erityisesti [[toimihenkilöitä]], palvelualan ammatteja, joiden pääasiallinen työväline on analyysi. Viimeaikaisten raporttien mukaan lakimiehet, toimittajat ja talousanalyytikot ovat ammatteja, jotka ovat alttiimpia tälle muutokselle."
+          "text": "Tämä monipuolisuus uhkaa erityisesti [[toimihenkilöitä]] eli palvelualojen ammatteja, joissa tärkein työväline on analyysi. Tuoreiden raporttien mukaan juristit, kirjoittajat ja talousanalyytikot kuuluvat ammatteihin, joita muutos koskee eniten."
         },
         {
           "type": "funFact",
-          "text": "Vuonna 1950 Alan Turing ennusti, että kone voisi jonain päivänä huijata ihmistä simuloimalla heidän ajatteluaan. Jotkut tekoälyt on sittemmin tunnustettu todellisten tieteellisten patenttien tekijöiksi."
+          "text": "Vuonna 1950 Alan Turing ennusti, että kone voisi jonain päivänä huijata ihmistä jäljittelemällä tämän ajattelua. Joitakin tekoälyjä on sittemmin mainittu oikeiden tieteellisten patenttien kanssatekijöinä."
         }
       ]
     },
     {
       "id": "course_226_l_ia_et_l_emploi_p3",
-      "title": "Perämies ennemmin kuin korvaaja?",
+      "title": "Pikemminkin perämies kuin korvaaja?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Optimistisempi näkemys näkee tekoälyn avustajana eikä korvaajana. Automatisoimalla vähemmän kiinnostavia tehtäviä, kuten dokumenttitutkimusta tai yhteenvetoja, se jättäisi ammattilaisille enemmän aikaa työnsä inhimilliseen, eettiseen tai strategiseen puoleen."
+          "text": "Optimistisemman näkemyksen mukaan tekoäly on pikemminkin avustaja kuin korvaaja. Jos se automatisoi vähiten kiinnostavat tehtävät, kuten tiedonhaun tai yhteenvedot, ammattilaisille jäisi enemmän aikaa työn inhimilliselle, eettiselle tai strategiselle puolelle."
         },
         {
           "type": "paragraph",
-          "text": "Uusia ammatteja on jo ilmaantunut, kuten [[Nopea insinööri]], joka osaa muotoilla tarkat ohjeet saadakseen parhaan mahdollisen tekoälystä. Tekoälyn avustama lääkäri ei katoa: hän voi seurata useampia potilaita tarkemmin."
+          "text": "Uusia ammatteja on jo syntymässä, kuten [[kehoteinsinööri]], joka osaa muotoilla tarkkoja ohjeita ja saada tekoälystä parhaan irti. Tekoälyn avustama lääkäri ei katoa: hän voi seurata useampia potilaita tarkemmin."
         },
         {
           "type": "paragraph",
-          "text": "Huolenaihe on edelleen muutoksen nopeus. Aiemmat teolliset vallankumoukset kestivät vuosikymmeniä, mikä antoi aikaa sopeutua. Tekoälymuutos tapahtuu muutaman vuoden aikana, mikä voi luoda osaamisvajeen, jota monien työntekijöiden on vaikea korjata."
+          "text": "Huolenaiheena on yhä muutoksen nopeus. Aiemmat teolliset vallankumoukset etenivät vuosikymmenten mittaan, joten sopeutumiseen jäi aikaa. Tekoälyn vallankumous tapahtuu muutamassa vuodessa, mikä voi synnyttää osaamiskuilun, jota monien työntekijöiden on vaikea kuroa umpeen."
         }
       ]
     },
     {
       "id": "course_226_l_ia_et_l_emploi_p4",
-      "title": "Työn ja sen arvon uudelleen miettiminen",
+      "title": "Työn ja sen arvon uudelleenarviointi",
       "free": false,
       "blocks": [
         {
@@ -106,15 +106,15 @@
         },
         {
           "type": "paragraph",
-          "text": "Myös keskustelu koneiden tuottaman vaurauden uudelleenjaosta nostaa pintaan. Jos tekoäly mahdollistaa enemmän tuotannon vähemmillä työntekijöillä, miten voimme rahoittaa sosiaalijärjestelmämme? Juuri tässä yhteydessä ajatus [[yleinen perustulo (UBI)]] valtaa jalansijaa, ei utopiana, vaan todellisena turvaverkkona."
+          "text": "Myös keskustelu koneiden tuottaman vaurauden uudelleenjaosta nousee taas pintaan. Jos tekoälyn avulla voidaan tuottaa enemmän vähemmällä työvoimalla, miten sosiaaliturvajärjestelmämme rahoitetaan? Tässä tilanteessa [[yleinen perustulo (UBI)]] saa yhä enemmän kannatusta, ei utopiana vaan todellisena turvaverkkona."
         },
         {
           "type": "paragraph",
-          "text": "Jotkut ehdottavat myös tekoälyn käyttöveroa kompensoidakseen työhön liittyvien maksujen alenemista. Tekoäly saa meidät viime kädessä ajattelemaan uudelleen itse työn paikkaa elämässämme."
+          "text": "Jotkut ehdottavat myös tekoälyn käytölle veroa, joka korvaisi työhön sidottujen maksujen vähenemisen. Lopulta tekoäly pakottaa meidät miettimään uudelleen työn paikkaa elämässämme."
         },
         {
           "type": "takeaway",
-          "text": "Aiemmat teolliset vallankumoukset tuhosivat työpaikkoja ja loivat niitä muualle. Generatiivinen tekoäly on ensimmäinen, joka uhkaa kognitiivisia ja luovia tehtäviä samanaikaisesti, mikä tekee sopeutumisesta kiireellisempää kuin koskaan."
+          "text": "Aiemmat teolliset vallankumoukset tuhosivat työpaikkoja mutta loivat samalla uusia muualle. Generatiivinen tekoäly on ensimmäinen, joka uhkaa yhtä aikaa sekä kognitiivisia että luovia tehtäviä, ja siksi sopeutuminen on kiireellisempää kuin koskaan."
         }
       ]
     }

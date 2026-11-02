@@ -1,0 +1,126 @@
+{
+  "id": "course_148_le_bauhaus",
+  "title": "Kodėl Bauhauzas yra visur aplink mus?",
+  "subtitle": "1919-1933",
+  "subject": "art",
+  "subcategory": "Cinéma, photo & architecture",
+  "description": "**1919-1933** m. Vokietijoje **Bauhauzo** mokykla sujungia meną, amatus ir pramonę. Naciai ją uždaro, tačiau modernusis dizainas iš jos vis tiek pasklinda po visą pasaulį.",
+  "hero": {
+    "image": "le_bauhaus",
+    "ratio": "16:9",
+    "hook": "Vokiečių mokykla, gyvavusi vos 14 metų, sukūrė modernų pasaulį: nuo kėdės iki išmaniojo telefono."
+  },
+  "sections": [
+    {
+      "id": "course_148_le_bauhaus_intro",
+      "title": "Įžanga",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Bauhauzas** (1919-1933) yra įtakingiausia XX a. meno ir dizaino mokykla. Ji įkurta Vokietijoje iškart po Pirmojo pasaulinio karo ir atmeta nereikalingą XIX a. puošybą. Jos tikslas: sukurti paprastą kalbą, tinkančią pramonės amžiui."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sujungusi meną, amatus ir techniką, mokykla padeda pamatus, ant kurių išauga modernusis [[Funkcionalizmas dizaine]]. Jos gyvenimas trumpas. Užtat jos palikimas yra visur."
+        }
+      ]
+    },
+    {
+      "id": "course_148_le_bauhaus_p1",
+      "title": "Veimaras, 1919: panaikinti menų hierarchiją",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**1919** m. architektas **Walteris Gropiusas** įkuria Bauhauzą **Veimare**. Jo manifestas aiškus: galutinis bet kokios kūrybos tikslas yra architektūra. Nebelieka ribos tarp kilniųjų „dailiųjų menų“ ir antraeilių „taikomųjų menų“. Amatas tampa visko pagrindu."
+        },
+        {
+          "type": "image",
+          "asset": "bauhaus_weimar_1919_walter_gropius_building",
+          "ratio": "4:3",
+          "caption": "Bauhauzas: mokykla, kurioje mokomasi gaminant."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kiekviena dirbtuvė turi du meistrus: menininką ir amatininką. Čia dėsto tokios asmenybės kaip [[Vasilijus Kandinskis]], rusų abstrakčiosios tapybos kūrėjas. Mokykla bendradarbiauja ir su judėjimu [[De Stijl]], olandų kryptimi, apsėsta stačiakampių ir grynų spalvų."
+        }
+      ]
+    },
+    {
+      "id": "course_148_le_bauhaus_p2",
+      "title": "Forma seka funkciją",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vėliau persikėlusi į **Desau**, mokykla atsigręžia į serijinę gamybą. Garsus šūkis: **„forma seka funkciją“**. Ornamentas laikomas nereikalingu. Siekiama paprastų, gražių daiktų, kuriuos galima pagaminti gamykloje."
+        },
+        {
+          "type": "funFact",
+          "text": "**Marcelis Breueris**, Bauhauzo dėstytojas, panaudoja dviračių plieninius vamzdžius ir sukuria lengvas kėdes. Gamyklinė medžiaga virsta svetainės baldais."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dirbtuvėse bandomas metalas, stiklas, tekstilė, tipografija. Tikslas nebėra vienetinis prabangos daiktas. Tikslas yra standartinis daiktas, prieinamas kuo daugiau žmonių."
+        }
+      ]
+    },
+    {
+      "id": "course_148_le_bauhaus_p3",
+      "title": "Nacių uždaryta, tremties išgelbėta",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mokykla kelia nerimą. Ji kaltinama tuo, kad per daug moderni, per daug tarptautiška, per daug kairuoliška. Trumpai pabuvus Berlyne, kai jai vadovauja **Mies van der Rohe**, įvyksta [[Nacių įvykdytas uždarymas (1933)]]. Režimas joje mato „kultūrinį bolševizmą“."
+        },
+        {
+          "type": "image",
+          "asset": "mies_van_der_rohe_modernist_architecture",
+          "ratio": "4:3",
+          "caption": "Mies van der Rohe: paskutinis Bauhauzo vadovas, vėliau emigravęs į Ameriką."
+        },
+        {
+          "type": "paragraph",
+          "text": "Uždarymas virsta sklaida. Meistrai išvyksta į Jungtines Valstijas, Didžiąją Britaniją, Palestiną. Tel Avive iš jų idėjų išauga [[Baltasis Tel Avivo miestas]], didžiulis baltos modernios architektūros ansamblis."
+        }
+      ]
+    },
+    {
+      "id": "course_148_le_bauhaus_p4",
+      "title": "Dizainas, tapęs nematomu, nes savaime suprantamas",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Šiandien Bauhauzo palikimas yra visur: surenkami baldai, paprasti pastatai, aiškios sąsajos, [[beserifis šriftas]] be užraitų. IKEA, oro uostai, mūsų telefonai: geometrinis Bauhauzo aiškumas tapo įprastu pasaulio dekoru."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1919",
+              "title": "Įkūrimas Veimare",
+              "detail": "Gropiusas įkuria meno, amatų ir pramonės mokyklą."
+            },
+            {
+              "date": "1925",
+              "title": "Desau",
+              "detail": "Posūkis į serijinę gamybą."
+            },
+            {
+              "date": "1933",
+              "title": "Nacių uždaryta",
+              "detail": "Tremtis išplatina Bauhauzą po pasaulį."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Vos per 14 metų Bauhauzas sukūrė modernaus dizaino idėją: mažiau ornamentų, daugiau funkcijos, daiktai gražūs todėl, kad naudingi. Politinis uždarymas tik paspartino jo kasdienybės užkariavimą."
+        }
+      ]
+    }
+  ]
+}

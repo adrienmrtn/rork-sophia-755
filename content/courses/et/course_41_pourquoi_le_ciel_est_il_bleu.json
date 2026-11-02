@@ -1,14 +1,14 @@
 {
   "id": "course_41_pourquoi_le_ciel_est_il_bleu",
   "title": "Miks on taevas sinine?",
-  "subtitle": "Lumière ja atmosfäär",
+  "subtitle": "Valgus ja atmosfäär",
   "subject": "sciences",
   "subcategory": "Meie igapäevaelu lahti seletatud",
-  "description": "Sinise taeva vaatamine on nii tavaline, et unustame küsida, miks. Vastus peitub Päikese valguses ja õhus, mida me selle nägemiseks läbime.",
+  "description": "Sinise taeva vaatamine on nii tavaline, et küsimus „miks?“ ei tulegi pähe. Vastus peitub päikesevalguses ja õhus, mille kaudu seda nähakse.",
   "hero": {
     "image": "pourquoi_le_ciel_est_il_bleu",
     "ratio": "16:9",
-    "hook": "Taevast ei värvita siniseks: see on valguse ja õhu võlutrikk."
+    "hook": "Taevas pole siniseks värvitud: see on valguse ja õhu võlutrikk."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Vaatamine üles sinisele taevale on nii tavaline, et unustame küsida, miks see nii on. Maad ümbritseval gaasikihil **õhkkond** aga pole oma värvi. See värv tuleneb Päikese valguse ja meie ümber hõljuvate gaasimolekulide väga täpsest kohtumisest."
+          "text": "Sinise taeva poole vaatamine on nii tavaline, et küsimus, miks see sinine on, ei tulegi pähe. Ometi pole **atmosfääril**, Maad ümbritseval gaasikihil, omaenda värvi. See toon tekib päikesevalguse ja meie ümber hõljuvate gaasimolekulide väga kindlat laadi kohtumisest."
         },
         {
           "type": "paragraph",
-          "text": "Selle sinise värvi mõistmine tähendab arusaamist, kuidas valgus liigub ja **hajub**, st see pöördub otse liikumise asemel tagasi igas suunas. Ja tore üllatus: see on täpselt sama nähtus, mis värvib päikeseloojangul taeva punaseks ja oranžiks."
+          "text": "Selle sinise mõistmiseks tuleb aru saada, kuidas valgus liigub ja **hajub** ehk paiskub igas suunas laiali, selle asemel et otse edasi söösta. Ja meeldiv üllatus: täpselt sama nähtus värvib päikeseloojangul taeva punaseks ja oranžiks."
         }
       ]
     },
@@ -33,80 +33,80 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Päikesevalgus tundub meile valge, kuid tegelikult sisaldab see kõiki vikerkaare värve: see on [[Nähtava valguse spekter]]. Iga värv vastab **woolpikkusele**, selle valguse laine suurusele. Sinisel ja violetsel on lühikesed lained; punasel on pikad lained."
+          "text": "Päikesevalgus tundub meile valge, kuid tegelikult sisaldab see kõiki vikerkaare värve: see on [[nähtava valguse spekter]]. Igale värvile vastab oma **lainepikkus** ehk tema valguslaine suurus. Sinisel ja violetsel on lühikesed lained, punasel pikad."
         },
         {
           "type": "funFact",
-          "text": "Kuul pole õhku valguse hajutamiseks. Tulemus: seal jääb taevas päevavalges **mustaks** isegi siis, kui päike paistab. Tõestus, et taeva värv tuleb õhust, mitte Päikesest."
+          "text": "Kuul pole õhku, mis valgust hajutaks. Tulemus: seal on taevas ka **keset päeva must**, isegi kui Päike paistab. See tõestab, et taeva värv tuleb õhust, mitte Päikesest."
         },
         {
           "type": "paragraph",
-          "text": "Sest Päikese ja meie silmade vahel ei ole õhk tühi: see on täidetud pisikeste **gaasi molekulidega, eriti lämmastikuga, umbes** Z78**%** õhust ja hapnikuga, umbes **21%**. Need on palju väiksemad kui valguslained. Kui kiir neid tabab, ei lähe see enam otse: see saadetakse igas suunas tagasi. See väike põrge on taeva värvi lähtepunkt."
+          "text": "Päikese ja meie silmade vahel ei ole ju tühjus: õhk on täis pisikesi **gaasimolekule**, peamiselt lämmastikku, mida on õhus umbes **78%**, ja hapnikku, umbes **21%**. Need on valguslainetest palju väiksemad. Kui kiir neid tabab, ei söösta see enam otse edasi: see paiskub igas suunas laiali. See väike põrge on taeva värvi lähtepunkt."
         }
       ]
     },
     {
       "id": "course_41_pourquoi_le_ciel_est_il_bleu_p2",
-      "title": "Difusioon: miks sinine võidab",
+      "title": "Hajumine: miks sinine võidab",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Raamatus **1871** pani Briti füüsik **Lord Rayleigh** selle nähtuse võrrandisse. Ta avastas, et mida lühem on värv, seda rohkem peegelduvad õhumolekulid igas suunas. See on [[Rayleighi hajumine]]."
+          "text": "Aastal **1871** kirjeldas Briti füüsik **lord Rayleigh** seda nähtust võrrandiga. Ta avastas, et mida lühem on värvi lainepikkus, seda rohkem hajutavad õhumolekulid seda igas suunas. See on [[Rayleigh' hajumine]]."
         },
         {
           "type": "funFact",
-          "text": "Marsi taevas on vastupidine meie omale: selle rauarikas tolm muudab selle päeval roosaks, päikeseloojangud on aga **sinised**. Kõik sõltub sellest, mida õhk sisaldab."
+          "text": "Marsi taevas on meie omale vastupidine: rauarikas tolm teeb selle päeval roosakaks, kuid päikeseloojangud on seal hoopis **sinised**. Kõik sõltub sellest, mida õhk sisaldab."
         },
         {
           "type": "image",
           "asset": "blue_sky_sunlight_scattering_atmosphere",
           "ratio": "4:3",
-          "caption": "Sinine valgus hajub õhu kaudu igas suunas."
+          "caption": "Õhk hajutab sinist valgust igas suunas."
         },
         {
           "type": "paragraph",
-          "text": "Konkreetselt hajub sinine valgus umbes **9 korda rohkem** kui punane. Punane liigub läbi õhu peaaegu sirgjooneliselt, samas kui sinine rikošeteerib kõikjal. See on põhjus, miks kõikjal, kus te taevasse vaatate, jõuab sinine alati teie silmadeni: kogu taevas näib \"hõõguvat\" selle hajutatud sinisega."
+          "text": "Täpsemalt hajub sinine valgus umbes **9 korda rohkem** kui punane. Punane läbib õhu peaaegu sirgjooneliselt, sinine aga põrkub igale poole. Seepärast jõuab silmadeni sinist valgust, kuhu iganes taevas ka ei vaataks: kogu taevas näib selle laiali paisatud sinisega „helendavat“."
         }
       ]
     },
     {
       "id": "course_41_pourquoi_le_ciel_est_il_bleu_p3",
-      "title": "Miks siis mitte lilla?",
+      "title": "Miks siis mitte violetne?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Tekib loogiline küsimus: kui kõige lühemad lained on kõige hajutatumad, peaks võitma violetne, sest selle laine on isegi lühem kui sinisel. Taevas sisaldab ka palju laialivalguvat lillat."
+          "text": "Tekib loogiline küsimus: kui kõige lühemad lained hajuvad kõige rohkem, peaks võitma violetne, sest selle laine on sinisest veelgi lühem. Taevas ongi tegelikult palju hajunud violetset valgust."
         },
         {
           "type": "paragraph",
-          "text": "Vastus pole taevas, vaid meie silmades. Jäädvustame värve, kasutades andureid nimega **koonused** - võrkkesta rakke, mis on valgustundlikud. Nad on palju tundlikumad sinise kui violetse suhtes. Lisaks saadab Päike välja rohkem sinist kui violetset valgust. Meie aju teeb siis mingi keskmise ja näeb ilusat sinist. Teiste värvide suhtes tundlik loom näeks kahtlemata hoopis teistsugust taevast."
+          "text": "Vastus pole taevas, vaid meie silmas. Värve tajume andurite abil, mida nimetatakse **kolvikesteks**: need on võrkkesta valgustundlikud rakud. Need on sinise suhtes palju tundlikumad kui violetse suhtes. Lisaks saadab Päike välja rohkem sinist kui violetset valgust. Aju teeb siis omamoodi keskmise ja näeb ilusat sinist. Teistele värvidele tundlik loom näeks ilmselt hoopis teistsugust taevast."
         }
       ]
     },
     {
       "id": "course_41_pourquoi_le_ciel_est_il_bleu_p4",
-      "title": "Ja õhtune punane?",
+      "title": "Aga õhtupuna?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Päikeseloojang järgib samu reegleid, kuid muudab ühte asja: vahemaad. Keskpäeval läbib valgus õhukese õhukihi. Õhtul, kui Päike on madalal, peavad selle kiired enne meieni jõudmist **palju rohkem õhku** läbima."
+          "text": "Päikeseloojangul kehtivad samad reeglid, muutub vaid üks asi: vahemaa. Keskpäeval läbib valgus õhukese õhukihi. Õhtul, kui Päike on madalal, peavad selle kiired enne meieni jõudmist läbima **palju rohkem õhku**."
         },
         {
           "type": "image",
           "asset": "sunset_red_orange_sky_atmosphere",
           "ratio": "16:9",
-          "caption": "Horisondi tasemel läbib valgus palju suurema paksusega õhku."
+          "caption": "Horisondi kohal läbib valgus palju paksema õhukihi."
         },
         {
           "type": "paragraph",
-          "text": "Sellel pikal teekonnal hajub kogu sinine hästi enne meieni jõudmist: seda filtreerib õhu paksus. Alles jäävad vaid kõige vastupidavamad värvid, punased ja oranžid. Tolmu või saaste korral tuleb mängu [[Mie hajutamine]]: õhumolekulidest suuremad osakesed muudavad taeva piimjaks või tugevdavad neid oranže toone."
+          "text": "Sellel pikal teekonnal hajub kogu sinine ammu enne meieni jõudmist: õhu paksus justkui filtreerib selle välja. Alles jäävad vaid kõige vastupidavamad värvid, punased ja oranžid. Kui õhus on tolmu või saastet, tuleb mängu [[Mie hajumine]]: õhumolekulidest suuremad osakesed muudavad taeva piimjaks või tugevdavad neid oranže toone."
         },
         {
           "type": "takeaway",
-          "text": "Taevas on sinine, kuna lühikesed lained on umbes **Z9** korda rohkem õhu kaudu hajutatud kui pikad lained. Päikeseloojangul läbib valgust nii palju õhku, et meieni jõuab veel ainult punane."
+          "text": "Taevas on sinine, sest õhk hajutab lühikesi laineid umbes **9 korda rohkem** kui pikki. Päikeseloojangul läbib valgus nii palju õhku, et meieni jõuab veel ainult punane."
         }
       ]
     }

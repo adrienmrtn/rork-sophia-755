@@ -1,0 +1,155 @@
+{
+  "id": "course_243_pourquoi_a_t_on_invente_les_vampires",
+  "title": "Kodėl buvo išgalvoti vampyrai?",
+  "subtitle": "1645-1897",
+  "subject": "mythologie",
+  "subcategory": "Légendes & créatures",
+  "description": "Prieš tapdamas aristokratu su apsiaustu, vampyras buvo per anksti miręs kaimynas, kaltinamas, kad nusineša į kapą savo šeimą. Tai istorija apie baimę, kuri gavo vardą.",
+  "author": "angela-bouma",
+  "hero": {
+    "image": "foggy_village_graveyard_night_balkans",
+    "ratio": "4:3",
+    "hook": "Mirtis gąsdina. Dar labiau gąsdina negalėjimas jos paaiškinti."
+  },
+  "sections": [
+    {
+      "id": "course_243_pourquoi_a_t_on_invente_les_vampires_intro",
+      "title": "Įžanga",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**1645** m. Romoje gyvenantis graikų mokslininkas [[Leo Allatius]] aprašo būtybę, kurios bijo jo krašto kaimiečiai: tai [[vrikolakas]]. Tai mirusysis, kuris naktimis išeina iš kapo ir grįžta kankinti savo paties šeimos, nes buvo palaidotas be paskutiniųjų sakramentų. Sunaikinti jį gali tik ugnis."
+        },
+        {
+          "type": "paragraph",
+          "text": "Du šimtmečius šį tikėjimą palaiko epidemijos ir nepaaiškinamos mirtys tuose pačiuose namuose. Kiekvienas naujas netinkamai palaidotas velionis gali pagimdyti kitą. Kaip ši kaimo panika virto romanų ir kino vampyru su vakariniu kostiumu?"
+        }
+      ]
+    },
+    {
+      "id": "course_243_pourquoi_a_t_on_invente_les_vampires_p1",
+      "title": "Mirusysis, kuris reikalauja savo batų",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**1725** m. Serbijos kaime Kisiljeve, tuo metu valdytame Austrijos, miršta valstietis, vardu [[Petaras Blagojevičius]]. Per kelias dienas miršta dar devyni kaimynai. Prieš mirtį visi jie kaltina jį, kad naktimis ateidavo jų smaugti. Jo našlė pasakoja, kad jis grįžo pareikalauti savo batų, ir palieka kaimą."
+        },
+        {
+          "type": "image",
+          "asset": "edvard_munch_vampire_painting_1895",
+          "ratio": "auto",
+          "caption": "Edvardo Muncho „Vampyras“ (1895). Prieš tapdamas dailininkų ir rašytojų tema, vampyras buvo kaimo reikalas."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kaimiečiai atkasa kūną. Jis atrodo stebėtinai nepakitęs: oda šviežia, burnoje kraujas, plaukai ir nagai tarsi ataugę. To užtenka kaip įrodymo. Jie įsmeigia jam į širdį kuolą ir sudegina palaikus. Scenoje dalyvauja austrų valdininkas ir surašo ataskaitą. Žodis „vampyras“ pasklinda po Europos laikraščius."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tai, ką kaimiečiai laikė antgamtiniais ženklais, yra įprasti irimo padariniai. Bakterijų išskiriamos dujos išpučia pilvą ir veidą, o pro burną ir nosį išstumia tamsų skystį, panašų į kraują. Oda susitraukia ir apnuogina nagų bei plaukų šaknis, todėl jie atrodo ilgesni."
+        }
+      ]
+    },
+    {
+      "id": "course_243_pourquoi_a_t_on_invente_les_vampires_p2",
+      "title": "Liga už legendos",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "XIX a. Naujojoje Anglijoje kita baimė įgauna tą pačią formą. Ten siaučia [[tuberkuliozė]], tuomet vadinta „džiova“: jos aukos mėnesių mėnesius liesėja ir kosti. Liga užkrečiama ir pereina nuo vieno šeimos nario prie kito. Iš šalies atrodo, kad mirusysis grįžta ir vieną po kito siurbia artimųjų gyvybę. Tačiau ji nepaaiškina senosios Balkanų tradicijos: tai du lygiagretūs tikėjimai, atsiradę skirtingais laikais ir skirtingose vietose, bet atsakantys į tą patį nerimą."
+        },
+        {
+          "type": "image",
+          "asset": "mercy_brown_grave_exeter_rhode_island",
+          "ratio": "3:4",
+          "caption": "Mercy Brown kapas Exeteryje (Rod Ailandas), lankomas iki šiol."
+        },
+        {
+          "type": "paragraph",
+          "text": "**1892** m. Exeteryje, Rod Ailando valstijoje, po motinos ir sesers nuo tuberkuliozės miršta 19 metų [[Mercy Brown]]. Kai suserga jos brolis Edwinas, kaimynai atkasa visus tris kūnus. Viduržiemį palaidotos Mercy kūnas gerai išsilaikęs, o jos širdyje dar yra kraujo. Širdį sudegina, o pelenus kaip vaistą duoda išgerti Edwinui. Jis miršta po dviejų mėnesių."
+        },
+        {
+          "type": "funFact",
+          "text": "Vrikolakas nėra vien graikų išradimas. Senovės Mesopotamija turėjo kraują geriančių demonų, Rusija savo *upyr*, o Kinija *jiangshi*: sustingusį lavoną, kuris juda šokinėdamas ištiestomis rankomis."
+        }
+      ]
+    },
+    {
+      "id": "course_243_pourquoi_a_t_on_invente_les_vampires_p3",
+      "title": "Vampyras tampa aristokratu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**1819** m. jaunas anglų gydytojas [[Johnas Polidori]] išleidžia *Vampyrą*, pirmąjį angliškai parašytą prozos kūrinį apie šią būtybę. Idėja gimė prieš trejus metus, tą garsiąją lietingą vasarą prie Ženevos ežero, kai Mary Shelley sugalvojo *Frankenšteiną*. Jo veikėjas **lordas Ruthvenas** nebeturi nieko bendra su iš kapo išlindusiu valstiečiu: jis turtingas, paslaptingas, žavus ir medžioja Londono salonuose."
+        },
+        {
+          "type": "image",
+          "asset": "bram_stoker_dracula_1897_first_edition_cover",
+          "ratio": "3:4",
+          "caption": "Pirmasis „Drakulos“ leidimas (1897), įrištas geltonu audeklu, raudonomis raidėmis."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kūrinys perleidžiamas, verčiamas, statomas teatre. Pasaulietiškas vampyras tampa pavyzdžiu gotikos autoriams. **1897** m. [[Bramas Stokeris]] išleidžia *Drakulą* ir šimtmečiui nustato modelį: grafas, pilis, iltys, česnakas ir kryžiai. Beveik viskas, ką vėliau parodys kinas, čia jau yra."
+        },
+        {
+          "type": "funFact",
+          "text": "Stokeris niekada nebuvo Transilvanijoje. *Drakulą* jis parašė remdamasis kelionių vadovais ir knygomis iš Whitby bibliotekos. Whitby yra mažas Anglijos miestelis, kuriame romane išsilaipina grafas."
+        }
+      ]
+    },
+    {
+      "id": "course_243_pourquoi_a_t_on_invente_les_vampires_p4",
+      "title": "Baimė turi daug vardų",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vampyrų tradicijos iš tiesų kalba ne apie antgamtiškumą. Kol mokslas dar nepaaiškino irimo, užkrato ar staigios mirties, bendruomenei reikia suteikti prasmę tam, ką ji mato. Grįžtantis mirusysis baimei suteikia formą ir vardą. Ir kaltininką, kurį galima sudeginti."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1645",
+              "title": "Aprašomas vrikolakas",
+              "detail": "Leo Allatius užrašo graikų tikėjimą."
+            },
+            {
+              "date": "1725",
+              "title": "Blagojevičiaus byla",
+              "detail": "Žodis „vampyras“ patenka į laikraščius."
+            },
+            {
+              "date": "1819",
+              "title": "Polidori „Vampyras“",
+              "detail": "Vampyras tampa aristokratu."
+            },
+            {
+              "date": "1892",
+              "title": "Mercy Brown ekshumacija",
+              "detail": "Paskutinė didelė vampyrų byla JAV."
+            },
+            {
+              "date": "1897",
+              "title": "„Drakula“",
+              "detail": "Bramas Stokeris nustato šiuolaikinį modelį."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Tas pats mechanizmas sukuria graikų vrikolaką, slavų *upyr* ir kinų *jiangshi*: kiekvienas jų yra vietinis atsakas į tą patį klausimą be atsakymo. Vilkolakių legendos seka ta pačia schema ir užpildo tą pačią tuštumą, tik vietoj kraujo čia virsmas."
+        },
+        {
+          "type": "takeaway",
+          "text": "Susidūrusi su tomis pačiomis baimėmis, kiekviena kultūra pasakoja savą tos pačios istorijos versiją. Su pabaisa gyventi lengviau nei su klausimu be atsakymo."
+        }
+      ]
+    }
+  ]
+}

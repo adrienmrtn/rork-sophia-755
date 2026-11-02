@@ -136,7 +136,7 @@ literal:
 | *La Ferme des animaux* | *A Revolução dos Bichos* |
 | *Le Rouge et le Noir* | *O Vermelho e o Negro* |
 | *À la recherche du temps perdu* | *Em Busca do Tempo Perdido* |
-| *Le Déjeuner sur l'herbe* | *O Almoço sobre a Relva* |
+| *Le Déjeuner sur l'herbe* | *O Almoço na Relva* |
 | *Les Demoiselles d'Avignon* | *Les Demoiselles d'Avignon* (fica) |
 | *Les Fleurs du Mal* | *As Flores do Mal* |
 | *Les Misérables* | *Os Miseráveis* |

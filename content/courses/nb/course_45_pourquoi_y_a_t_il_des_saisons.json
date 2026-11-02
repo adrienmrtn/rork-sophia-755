@@ -1,10 +1,10 @@
 {
   "id": "course_45_pourquoi_y_a_t_il_des_saisons",
   "title": "Hvorfor er det årstider?",
-  "subtitle": "Jord og sol",
+  "subtitle": "Jorden og solen",
   "subject": "sciences",
   "subcategory": "Hverdagen forklart",
-  "description": "Årstidene kommer ikke fra at jorden er nærmere eller lenger fra solen. Den virkelige årsaken er helningen av jordaksen.",
+  "description": "Årstidene skyldes ikke at jorden er nærmere eller lenger fra solen. Den egentlige årsaken er jordaksens helning.",
   "hero": {
     "image": "pourquoi_y_a_t_il_des_saisons",
     "ratio": "16:9",
@@ -18,22 +18,22 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Mange tror at sommeren kommer når jorden er **nærmere** til solen, og vinteren kommer når den er **langt**. Dette er usant. Og vi ser det med en gang: når det er sommer i Frankrike, er det vinter i Australia."
+          "text": "Mange tror at det blir sommer når jorden er **nærmere** solen, og vinter når den er **lenger unna**. Det stemmer ikke. Og det ser man med en gang: når det er sommer i Frankrike, er det vinter i Australia."
         },
         {
           "type": "paragraph",
-          "text": "Den virkelige forklaringen ligger i én ting: Jordens rotasjonsakse er **vippet**, skråstilt i forhold til planet i banen rundt solen."
+          "text": "Den egentlige forklaringen handler om én ting: jordens rotasjonsakse er **skråstilt**, den heller i forhold til planet for banen rundt solen."
         }
       ]
     },
     {
       "id": "course_45_pourquoi_y_a_t_il_des_saisons_p1",
-      "title": "Jorden vipper",
+      "title": "Jorden heller",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Jorden roterer rundt sin akse i **24 timer**: det er dag og natt. Den kretser også rundt solen i **år år** i en bane formet som en **ellipse**, en litt flatere sirkel. Men dens akse, den imaginære linjen fra Nordpolen til Sydpolen, er ikke rett i forhold til banen. Den tilter omtrent **23,5 karakter**: dette er [[Jordens aksiale tilt (23,5°)]]."
+          "text": "Jorden snurrer rundt sin egen akse på **24 timer**: det gir dag og natt. Den går også rundt solen på **ett år**, i en bane formet som en **ellipse**, en litt flattrykt sirkel. Men aksen, den tenkte linjen fra nordpolen til sydpolen, står ikke rett i forhold til banen. Den heller omtrent **23,5 grader**: dette kalles [[Jordaksens helning (23,5°)]]."
         },
         {
           "type": "image",
@@ -43,7 +43,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Denne tilten holder seg i omtrent samme retning hele året. Den peker alltid til samme region på himmelen, nær Nordstjernen. Resultat: avhengig av hvor jorden er i sin bane, \"ser\" den ene halvkulen mer på solen, den andre mindre."
+          "text": "Helningen holder seg omtrent i samme retning hele året. Aksen peker alltid mot samme område på himmelen, nær Nordstjernen. Resultatet: avhengig av hvor jorden befinner seg i banen, «ser» den ene halvkulen mer mot solen og den andre mindre."
         }
       ]
     },
@@ -54,15 +54,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Om sommeren på den nordlige halvkule vipper nordpolen mot solen. Dagene er lengre: **fotoperioden**, forholdet mellom lengden på dag og natt, øker. Strålene kommer også mer \"rett\" til bakken: energien er konsentrert på en mindre overflate. Så det er varmere."
+          "text": "Om sommeren på den nordlige halvkule heller nordpolen mot solen. Dagene blir lengre: **fotoperioden**, forholdet mellom dagens og nattens lengde, øker. Strålene treffer også bakken mer «rett»: energien samles på et mindre område. Derfor blir det varmere."
         },
         {
           "type": "funFact",
-          "text": "I januar er jorden til og med litt **nærmere** til solen enn i juli: det er **perihelium**, det nærmeste punktet i banen. Og likevel er det vinter her. Bevis på at avstanden ikke forklarer årstidene."
+          "text": "I januar er jorden faktisk litt **nærmere** solen enn i juli: dette kalles **perihel**, punktet i banen som ligger nærmest solen. Likevel er det vinter hos oss. Et bevis på at avstanden ikke forklarer årstidene."
         },
         {
           "type": "paragraph",
-          "text": "Om vinteren er det motsatt: korte dager, mer skrå stråler, energi spredt over en større overflate. Mindre varme mottatt. **solverv**, tider når solen når sin nordligste eller sørligste posisjon, markerer starten på sommeren eller vinteren."
+          "text": "Om vinteren er det motsatt: korte dager, mer skrå stråler, energien spres over et større område. Mindre varme når frem. **Solvervene**, tidspunktene da solen står på sitt nordligste eller sørligste, markerer begynnelsen på sommeren eller vinteren."
         }
       ]
     },
@@ -73,26 +73,26 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Nær **ekvator**, den imaginære linjen som deler jorden i to halvkuler, endrer helningen lite i lengden på dagen. Det er egentlig ikke fire årstider som i Europa, men heller tørrere og våtere perioder."
+          "text": "Nær **ekvator**, den tenkte linjen som deler jorden i to halvkuler, endrer helningen dagslengden lite. Der er det egentlig ikke fire årstider som i Europa, men heller tørrere og fuktigere perioder."
         },
         {
           "type": "paragraph",
-          "text": "Hos **stolper** er effekten ekstrem: flere måneder med sammenhengende dag om sommeren, flere måneder med natt om vinteren. Kontrasten er mye sterkere der enn i Frankrike."
+          "text": "Ved **polene** er virkningen ekstrem: flere måneder med sammenhengende dag om sommeren, flere måneder med natt om vinteren. Kontrasten er mye sterkere der enn i Frankrike."
         }
       ]
     },
     {
       "id": "course_45_pourquoi_y_a_t_il_des_saisons_p4",
-      "title": "En planet uten tilt",
+      "title": "En planet uten helning",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Hvis jordaksen var helt rett, ville hvert sted mottat omtrent samme mengde sollys hele året. Ikke mer ekte sommer, ikke mer ekte vinter. Klimaet, kulturene, dyrevandringene: alt ville vært annerledes."
+          "text": "Hvis jordaksen sto helt rett, ville hvert sted fått omtrent like mye sol hele året. Ingen ekte sommer lenger, ingen ekte vinter. Klimaet, avlingene, dyrenes vandringer: alt ville vært annerledes."
         },
         {
           "type": "takeaway",
-          "text": "Årstidene kommer fra helningen på jordaksen, omtrent **23,5°**, ikke fra avstanden fra solen. En halvkule lener seg mot solen: det er sommer. Den andre lener seg mot det motsatte: det er vinter."
+          "text": "Årstidene skyldes jordaksens **helning**, omtrent **23,5°**, ikke avstanden til solen. Den ene halvkulen heller mot solen: der er det sommer. Den andre heller bort fra solen: der er det vinter."
         }
       ]
     }

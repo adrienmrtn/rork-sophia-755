@@ -4,11 +4,11 @@
   "subtitle": "Egyptisk mytologi",
   "subject": "mythologie",
   "subcategory": "Andre mytologier",
-  "description": "Drap, lemlesting, mumie og hevn: Osiris og Sets syklus grunnla egyptiske kongelige og håpet om liv etter døden.",
+  "description": "Drap, lemlestelse, mumie og hevn: myten om Osiris og Set legger grunnlaget for det egyptiske kongedømmet og håpet om et liv etter døden.",
   "hero": {
     "image": "osiris_et_set_mythologie_egyptienne",
     "ratio": "16:9",
-    "hook": "En bror dreper kongen, kutter kroppen hans i fjorten stykker. En søster bringer ham sammen. En sønn hevner. Hele Egypt er på vei ut av denne forbrytelsen."
+    "hook": "En bror dreper kongen og deler kroppen hans i fjorten stykker. En søster samler ham igjen. En sønn tar hevn. Hele Egypt springer ut av denne forbrytelsen."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Syklusen til **Osiris** og **Sett** er den store historien om det gamle Egypt. Dette er ikke bare en familietragedie. Det er kampen mellom orden ([[Ma'at]], harmoni) og sterilt kaos."
+          "text": "Myten om **Osiris** og **Set** er den store fortellingen i det gamle Egypt. Det er ikke bare en familietragedie. Det er kampen mellom orden ([[Ma'at]], harmonien) og ufruktbart kaos."
         },
         {
           "type": "paragraph",
-          "text": "Gjennom drapet, lemlestelsen og gjenoppstandelsen av Osiris tenker egypterne på kongedømmet, Nilens fruktbarhet og livet etter døden. Hver levende farao er en **Horus**. Hver døde konge blir en **Osiris**."
+          "text": "Gjennom drapet på Osiris, lemlestelsen og gjenoppstandelsen hans forstår egypterne kongemakten, Nilens fruktbarhet og livet etter døden. Hver levende farao er en **Horus**. Hver død konge blir en **Osiris**."
         }
       ]
     },
@@ -33,21 +33,21 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Osiris** er en siviliserende konge. Sammen med sin søster-kone **Isis** underviser han i landbruk og lover. Broren hans **Sett**, ørkenens og voldens gud, hater ham. På en bankett presenterer Set en praktfull kiste: han vil tilby den til den som passer perfekt til den."
+          "text": "**Osiris** er en konge som bringer sivilisasjon. Sammen med sin søster og hustru **Isis** lærer han folket jordbruk og lover. Broren hans, **Set**, ørkenens og voldens gud, hater ham. Under et gjestebud viser Set frem en praktfull kiste: han skal gi den til den som passer nøyaktig i den."
         },
         {
           "type": "image",
           "asset": "osiris_egyptian_god_green_skin_painting",
           "ratio": "4:3",
-          "caption": "Osiris med grønn hud: ikke død, men vegetasjon gjenfødt."
+          "caption": "Osiris med grønn hud: ikke døden, men vegetasjonen som blir født på nytt."
         },
         {
           "type": "paragraph",
-          "text": "Etter å ha tatt Osiris mål i hemmelighet, får Set ham til å legge seg ned, låser brystet, forsegler det med bly og kaster ham inn i Nilen. Senere, når Isis finner liket, kutter Set den i **14 biter** og sprer dem utover dalen. Uten en intakt kropp er det ingen fred i etterlivet."
+          "text": "Set har i all hemmelighet tatt mål av Osiris. Han får ham til å legge seg i kisten, låser den, forsegler den med bly og kaster den i Nilen. Senere, når Isis finner liket, deler Set det i **14 biter** og sprer dem utover dalen. Uten en hel kropp er det ingen fred i livet etter døden."
         },
         {
           "type": "funFact",
-          "text": "Osiris er ofte malt grønn. Denne fargen sier ikke råte: den sier gjenfødelse, som åkrene etter Nilflommen."
+          "text": "Osiris blir ofte malt grønn. Fargen står ikke for forråtnelse, men for gjenfødelse, som åkrene etter Nilflommen."
         }
       ]
     },
@@ -58,7 +58,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Isis**, stor tryllekunstner, går på leting etter fragmentene. Hjulpet av søsteren Nephthys og guden [[Anubis]], reiser hun et fristed på hvert sted hvor hun finner en brikke. Ett problem gjenstår: fallosen ble slukt av fisken [[Oxyrhynchus]]. Isis moter en erstatning."
+          "text": "**Isis**, en mektig trollkvinne, drar ut for å lete etter bitene. Med hjelp fra søsteren Nephthys og guden [[Anubis]] reiser hun en helligdom på hvert sted der hun finner en bit. Ett problem gjenstår: fallosen er blitt slukt av fisken [[Oxyrhynchus]]. Isis lager en erstatning."
         },
         {
           "type": "image",
@@ -68,11 +68,11 @@
         },
         {
           "type": "paragraph",
-          "text": "Ved å samle bitene og pakke dem inn i strimler, lager Isis og Anubis den første **-mumien**. Med et vingeslag blåste Isis kort liv i Osiris. Det var da hun unnfanget **Horus**, arvingen som var bestemt til å gjenopprette orden."
+          "text": "Ved å samle bitene og vikle dem inn i bind skaper Isis og Anubis den **første mumien**. Med et vingeslag har Isis blåst et kort liv inn i Osiris. Det er da hun unnfanger **Horus**, arvingen som skal gjenopprette ordenen."
         },
         {
           "type": "funFact",
-          "text": "I følge noen tekster var tårene til Isis under hennes søken så rikelig at egypterne så i dem den mytiske opprinnelsen til den årlige flom av Nilen."
+          "text": "Ifølge noen tekster gråt Isis så mye under letingen at egypterne så tårene hennes som den mytiske opprinnelsen til Nilens årlige flom."
         }
       ]
     },
@@ -83,17 +83,17 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Oppvokst i det skjulte i sumpene til [[Khemmis]], vokser **Horus** til haukens form. Som voksen krever han tronen for gudenes domstol, ledet av [[Ra]]. Konflikten med Set varer i flere tiår: dueller, triks, skader. Horus mister et øye; Set mister fruktbarheten."
+          "text": "**Horus** vokser opp i skjul i sumpene ved [[Khemmis]], i skikkelse av en falk. Som voksen krever han tronen foran gudenes domstol, ledet av [[Ra]]. Konflikten med Set varer i flere tiår: tvekamper, knep, sår. Horus mister et øye; Set mister fruktbarheten."
         },
         {
           "type": "image",
           "asset": "eye_of_horus_egyptian_symbol_protection",
           "ratio": "4:3",
-          "caption": "The Eye of Horus (Oudjat): integritet gjenvunnet fra kaos."
+          "caption": "Horus' øye (udjat): helheten, vunnet tilbake fra kaoset."
         },
         {
           "type": "paragraph",
-          "text": "Øyet, rekomponert av [[Thoth]], blir symbolet på helbredelse og beskyttelse. Gudene bestemmer: Set blir dømt til å tjene, spesielt ved å kjempe mot slangen [[Apophis]] på solbåten. Horus er kronet. Hver farao vil heretter være en \"levende Horus\"."
+          "text": "Øyet, satt sammen igjen av [[Thoth]], blir et symbol på helbredelse og beskyttelse. Gudene feller sin dom: Set må tjene, blant annet ved å bekjempe slangen [[Apophis]] fra solbåten. Horus blir kronet. Fra nå av skal hver farao være en «levende Horus»."
         }
       ]
     },
@@ -104,15 +104,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Mumifisert, Osiris kan ikke lenger regjere på jorden. Han blir hersker over **Amenti**, de dødes rike. Under hans blikk foregår **veiing av hjertet**, beskrevet i [[De dødes bok]]. Hjertet til den avdøde er plassert på en vekt som vender mot fjæren til Ma'at."
+          "text": "Som mumie kan Osiris ikke lenger herske på jorden. Han blir hersker over **Amenti**, de dødes rike. Under hans blikk foregår **veiingen av hjertet**, beskrevet i [[De dødes bok]]. Den dødes hjerte legges i den ene vektskålen, med Ma'ats fjær i den andre."
         },
         {
           "type": "paragraph",
-          "text": "Hvis hjertet er lett, er den avdøde \"rett i stemmen\" og går inn i evigheten til Osiris. Hvis det er fullt av feil, sluker monsteret [[Ammit]] det: definitiv glemsel. Konge og bonde dømmes etter samme kriterier. Horus forvalter nåtiden; Osiris tar seg av resten."
+          "text": "Er hjertet lett, er den døde «rettferdig av røst» og går inn i Osiris' evighet. Er det tungt av synder, sluker uhyret [[Ammit]] det: endelig glemsel. Konge og bonde dømmes etter de samme kriteriene. Horus styrer nåtiden; Osiris sørger for det som kommer etter."
         },
         {
           "type": "takeaway",
-          "text": "Myten om **Osiris** og **Sett** etablerer tre pilarer i Egypt: kongelige (levende Horus), mumifisering (intakt kropp for livet etter døden) og håpet om rettferdighet etter døden under Osiris blikk."
+          "text": "Myten om **Osiris** og **Set** legger grunnlaget for tre bærebjelker i Egypt: kongedømmet (den levende Horus), mumifiseringen (en hel kropp for livet etter døden) og håpet om rettferdighet etter døden under Osiris' blikk."
         }
       ]
     }

@@ -4,11 +4,11 @@
   "subtitle": "Uçuş fiziği",
   "subject": "sciences",
   "subcategory": "Gündelik hayatın sırları",
-  "description": "Yüzlerce tonluk bir uçak uçar. Bu sihir değildir: kanadın biçimi, hız ve birbirini dengeleyen kuvvetler işidir.",
+  "description": "Yüzlerce tonluk bir uçak uçabiliyor. Bu sihir değil: kanat biçimi, hız ve birbirini dengeleyen kuvvetlerle ilgili bir mesele.",
   "hero": {
     "image": "comment_les_avions_volent",
     "ratio": "16:9",
-    "hook": "Bir kamyondan ağırdır, yine de havada kalır. İşte nasıl."
+    "hook": "Bir kamyondan ağır, ama yine de havada kalıyor. İşte sırrı."
   },
   "sections": [
     {
@@ -22,7 +22,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Dört ana kuvvet işe karışır: **itki** (ileri doğru), **sürükleme** (havanın frenlemesi), **ağırlık** (aşağı doğru) ve **kaldırma** (yukarı doğru)."
+          "text": "Dört ana kuvvet devrededir: **itki** (ileri doğru), **sürükleme** (havanın frenlemesi), **ağırlık** (aşağı doğru) ve **kaldırma** (yukarı doğru)."
         }
       ]
     },
@@ -33,7 +33,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Yandan bakınca uçak kanadı düz değildir. Üstü alttan daha bombelidir. Uçak hızlı giderken hava bu biçimin etrafından dolaşmak zorundadır."
+          "text": "Yandan bakıldığında uçak kanadı düz değildir. Üst yüzü alt yüzünden daha kavislidir. Uçak hızla ilerlerken hava bu biçimin çevresinden dolaşmak zorunda kalır."
         },
         {
           "type": "image",
@@ -43,7 +43,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Üstten geçen hava biraz hızlanır. Basıncı düşer. Kanadın altında basınç daha yüksek kalır. Bu fark kanadı yukarı iter: buna **kaldırma** denir. Açıklama çoğu kez 18. yüzyıl bilgininin adını taşıyan **Bernoulli** ilkesiyle ve kanadın havayı aşağı saptırmasıyla yapılır."
+          "text": "Kanadın üstünden geçen hava biraz hızlanır. Basıncı düşer. Kanadın altında ise basınç daha yüksek kalır. Bu fark kanadı yukarı iter: buna **kaldırma** denir. Bu olay genellikle, adını 18. yüzyılda yaşamış bir bilginden alan **Bernoulli** ilkesiyle ve kanadın havayı aşağı doğru da saptırmasıyla açıklanır."
         }
       ]
     },
@@ -62,33 +62,33 @@
         },
         {
           "type": "paragraph",
-          "text": "Seyir uçuşunda kaldırma ağırlığı dengeler. Motor itkisi havanın sürüklemesini dengeler. Uçak o zaman aşağı yukarı sabit hızla gider."
+          "text": "Seyir uçuşunda kaldırma ağırlığı dengeler. Motorların itkisi de havanın sürüklemesini dengeler. Böylece uçak aşağı yukarı sabit bir hızla ilerler."
         }
       ]
     },
     {
       "id": "course_46_comment_les_avions_volent_ils_p3",
-      "title": "Çıkmak, inmek, dönmek",
+      "title": "Tırmanmak, alçalmak, dönmek",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Çıkmak için pilot (veya uçuş bilgisayarı) burnu biraz yukarı eğer ve itkiyi ayarlar. İnmek için çoğu kez itki azaltılır. Dönmek için kanatların hareketli parçaları olan kanatçıklarla uçak yana yatırılır."
+          "text": "Tırmanmak için pilot (ya da uçuş bilgisayarı) burnu biraz yukarı kaldırır ve itkiyi ayarlar. Alçalmak için genellikle itki azaltılır. Dönmek için uçak, kanatların hareketli parçaları olan kanatçıklar sayesinde yana yatırılır."
         },
         {
           "type": "paragraph",
-          "text": "İnişte yavaşlanır. Düşük hızda kaldırmayı artırmak için kanattan flaplar çıkar. Sonra tekerlekler yere değer ve frenler (bazen itki geri çeviricileri de) uçağı durdurur."
+          "text": "İnişte uçak yavaşlar. Düşük hızda kaldırmayı artırmak için kanattan flaplar açılır. Sonra tekerlekler yere değer ve frenler (bazen ters itki sistemleri de) uçağı durdurur."
         }
       ]
     },
     {
       "id": "course_46_comment_les_avions_volent_ils_p4",
-      "title": "Bu “havadan hafif” değildir",
+      "title": "Mesele “havadan hafif” olmak değil",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Helyum balonu yüzer çünkü havadan daha az yoğundur. Uçak değil: ondan çok daha yoğundur. Uçar çünkü hızı ve kanat biçimi sayesinde havayı kendini **taşımaya** zorlar."
+          "text": "Helyum balonu havada süzülür, çünkü havadan daha az yoğundur. Uçak öyle değildir: havadan çok daha yoğundur. Hızı ve kanatlarının biçimi sayesinde havayı kendisini taşımaya **zorladığı** için uçar."
         },
         {
           "type": "takeaway",

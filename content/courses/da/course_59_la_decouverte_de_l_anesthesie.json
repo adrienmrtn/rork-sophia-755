@@ -4,11 +4,11 @@
   "subtitle": "Medicin",
   "subject": "sciences",
   "subcategory": "Opdagelser, der ændrede verden",
-  "description": "Før 1846 blev en operation ofte udført bevidst og med ekstrem smerte. Anæstesi forvandler kirurgi til pleje, ikke tortur.",
+  "description": "Før 1846 blev man ofte opereret ved fuld bevidsthed og under ekstrem smerte. Anæstesien gør kirurgi til behandling, ikke tortur.",
   "hero": {
     "image": "la_decouverte_de_l_anesthesie",
     "ratio": "16:9",
-    "hook": "En dag i 1846, i Boston, ophørte operation med at være et kapløb mod smerte."
+    "hook": "En dag i 1846 i Boston holder kirurgien op med at være et kapløb mod smerten."
   },
   "sections": [
     {
@@ -18,17 +18,17 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Forestil dig en amputation uden at falde i søvn. Før midten af 1800-tallet var dette normen. Vi spænder patienten fast, vi bevæger os hurtigt, vi beder."
+          "text": "Forestil dig en amputation uden bedøvelse. Før midten af 1800-tallet er det normen. Man spænder patienten fast, man skynder sig, man beder."
         },
         {
           "type": "paragraph",
-          "text": "**anæstesi** ændrer alt: det giver dig mulighed for at operere uden bevidsthed om smerte. Moderne kirurgi kan endelig tage sin tid."
+          "text": "**Anæstesien** ændrer alt: den gør det muligt at operere, uden at patienten mærker smerten. Den moderne kirurgi kan endelig tage sig god tid."
         }
       ]
     },
     {
       "id": "course_59_la_decouverte_de_l_anesthesie_p1",
-      "title": "Før: fart versus lidelse",
+      "title": "Før: hurtighed mod lidelse",
       "free": false,
       "blocks": [
         {
@@ -39,43 +39,43 @@
         },
         {
           "type": "paragraph",
-          "text": "Kirurger blev bedømt på deres hastighed. Alkohol, opium eller rå magt blev brugt til at immobilisere folk. Mange patienter døde af chok, infektion eller blødning."
+          "text": "Kirurger blev bedømt på deres hurtighed. Man brugte alkohol, opium eller rå styrke til at holde patienten i ro. Mange patienter døde af chok, infektion eller blødning."
         }
       ]
     },
     {
       "id": "course_59_la_decouverte_de_l_anesthesie_p2",
-      "title": "1846: Æterens dag",
+      "title": "1846: æterens dag",
       "free": false,
       "blocks": [
         {
           "type": "image",
           "asset": "ether_anesthesia_first_demonstration_1846",
           "ratio": "4:3",
-          "caption": "I Boston overbeviste en offentlig demonstration lægeverdenen."
+          "caption": "I Boston overbeviser en offentlig demonstration lægeverdenen."
         },
         {
           "type": "paragraph",
-          "text": "**16. oktober 1846** i Boston får tandlægen **William Morton** en patient til at inhalere **ether**. Kirurg **John Warren** opererer på en halstumor. Patienten skriger ikke. Værelset er lamslået."
+          "text": "Den **16. oktober 1846** i Boston får tandlægen **William Morton** en patient til at indånde **æter**. Kirurgen **John Warren** opererer en svulst på halsen. Patienten skriger ikke. Tilskuerne i salen er lamslåede."
         },
         {
           "type": "funFact",
-          "text": "Warren sagde efter sigende: \"Mine herrer, dette er ikke en humbug.\" Udtrykket er forblevet berømt."
+          "text": "Warren skulle have sagt: »Mine herrer, dette er ikke humbug« (ikke fup). Sætningen er blevet berømt."
         }
       ]
     },
     {
       "id": "course_59_la_decouverte_de_l_anesthesie_p3",
-      "title": "Næste: chloroform og debatter",
+      "title": "Derefter: kloroform og debatter",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Andre produkter fulgte efter, såsom **chloroform**, som især blev populært i Storbritannien. Der opstår rivalisering om, hvem der \"opfandt\" hvad. Patentet er ligegyldigt: Ideen breder sig over hele verden."
+          "text": "Andre stoffer følger, som **kloroform**, der især bliver populær i Storbritannien. Der opstår strid om, hvem der »opfandt« hvad. Patentet er underordnet: idéen breder sig til hele verden."
         },
         {
           "type": "paragraph",
-          "text": "Der er et problem tilbage: at falde i søvn uden at slå ihjel. Du skal dosere det, overvåge din vejrtrækning og dit hjerte. Et nyt speciale er født."
+          "text": "Der er stadig et problem: at bedøve uden at slå ihjel. Man skal dosere og holde øje med vejrtrækningen og hjertet. Et nyt speciale opstår."
         }
       ]
     },
@@ -86,11 +86,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "I dag bruger anæstesilægen præcise gasser og lægemidler, maskiner, der måler alt. Du kan lægge hele kroppen til at sove eller bare et område (lokal eller lokalbedøvelse)."
+          "text": "I dag bruger anæstesilægen præcise gasser og lægemidler og maskiner, der måler alt. Man kan bedøve hele kroppen eller kun et område (lokal- eller regionalbedøvelse)."
         },
         {
           "type": "takeaway",
-          "text": "Siden demonstrationen af ether i **1846** har anæstesi forvandlet kirurgi: mindre smerte, mere tid, mere præcision... og sikkerhed er blevet en videnskab i sig selv."
+          "text": "Siden demonstrationen af æter i **1846** har anæstesien forvandlet kirurgien: mindre smerte, mere tid, mere præcision … og en sikkerhed, der er blevet en videnskab i sig selv."
         }
       ]
     }

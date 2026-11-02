@@ -1,0 +1,2131 @@
+{
+ "langue": "ar",
+ "synthese": {
+  "verdict": "La plainte est justifiée. L'interface arabe (3/5) est hétérogène : les écrans récents (onboarding v2, bloqueur TikTok, parcours, audio) sont naturels, mais l'onboarding v1 et le paywall gardent des contresens que tout utilisateur voit : « Gratuit » rendu « libre » (حر), « Premium » « cher » (غالي), « Fin de l'essai » « le procès se termine », « Léger » « lumière », « Reprends du temps pour toi » « prends ton temps vers l'arrière ». La marque est tantôt « صوفيا » tantôt « Sophia », « cours » a trois mots (دورة / درس / دورة تدريبية), « quiz » deux, et les tics de traduction automatique (قم بـ, الخاص بك, يرجى) raidissent le texte. Les cours (2/5) sont, hors deux cours scientifiques, de la traduction brute passée par l'anglais : « on » rendu par « nous » (37 segments), « spleen » rendu « la rate », « flâneur » « poussette », « s'oppose à deux états (d'âme) » devenu « s'oppose à la solution à deux États », « Hégire » rendu par un adjectif, résidus techniques (« **ز** » en gras à la place d'un segment perdu), noms propres en latin ou translittérés à l'anglaise, genres inversés.",
+  "scores": {
+   "ui": 3,
+   "cours": 2,
+   "global": 2.5
+  },
+  "top_issues": [
+   {
+    "title": "« Gratuit » = « libre »",
+    "where": "paywall.freeColumn",
+    "current": "حر",
+    "gloss_fr": "libre (au sens de liberté)",
+    "fix": "مجاني",
+    "severity": "bloquant"
+   },
+   {
+    "title": "« Premium » = « cher »",
+    "where": "paywall.premiumColumn",
+    "current": "غالي",
+    "gloss_fr": "cher, coûteux",
+    "fix": "Premium",
+    "severity": "bloquant"
+   },
+   {
+    "title": "« Fin de l'essai » = « le procès se termine »",
+    "where": "onboarding.trial.trialEnds",
+    "current": "تنتهي المحاكمة",
+    "gloss_fr": "le procès (judiciaire) se termine",
+    "fix": "نهاية التجربة",
+    "severity": "bloquant"
+   },
+   {
+    "title": "« Léger » = « lumière »",
+    "where": "onboarding.phone.intensity.light",
+    "current": "ضوء",
+    "gloss_fr": "lumière",
+    "fix": "خفيف",
+    "severity": "bloquant"
+   },
+   {
+    "title": "« Reprends du temps pour toi » = « prends ton temps vers l'arrière »",
+    "where": "onboardingV2.screenTime.title",
+    "current": "خذ وقتك إلى الوراء",
+    "gloss_fr": "prends ton temps vers l'arrière",
+    "fix": "استعد وقتك لنفسك",
+    "severity": "bloquant"
+   },
+   {
+    "title": "« on » rendu par « nous »",
+    "where": "course_1_la_naissance_de_l_islam_622/s0.b0.text (37 segments dans le corpus)",
+    "current": "نريد قتله.",
+    "gloss_fr": "Nous voulons le tuer.",
+    "fix": "كان هناك من يريد قتله.",
+    "severity": "bloquant"
+   },
+   {
+    "title": "« deux états d'âme » = « la solution à deux États »",
+    "where": "course_100_les_fleurs_du_mal_baudelaire/s2.b0.text",
+    "current": "يعارض حل الدولتين",
+    "gloss_fr": "s'oppose à la solution à deux États (Israël-Palestine)",
+    "fix": "يقابل بين حالتين نفسيتين",
+    "severity": "bloquant"
+   },
+   {
+    "title": "« Spleen » = « la rate »",
+    "where": "course_100_les_fleurs_du_mal_baudelaire/s2.b0.text",
+    "current": "**\"الطحال والمثالية\"**",
+    "gloss_fr": "« La Rate et l'Idéalisme »",
+    "fix": "**«سأم ومثال»**",
+    "severity": "bloquant"
+   },
+   {
+    "title": "Résidu technique en gras",
+    "where": "course_1_la_naissance_de_l_islam_622/s1.b2.text (et autres cours)",
+    "current": "فكرته عن إله واحد **ز** تهدد",
+    "gloss_fr": "son idée d'un dieu unique **z** menace",
+    "fix": "فكرته عن **الإله الواحد** تهدد",
+    "severity": "bloquant"
+   },
+   {
+    "title": "Marque translittérée « Sofia »",
+    "where": "onboardingV2.welcome.title, témoignages, ambassadeur",
+    "current": "مرحبًا بك في صوفيا",
+    "gloss_fr": "Bienvenue dans « Sofia »",
+    "fix": "مرحبًا بك في Sophia",
+    "severity": "majeur"
+   }
+  ],
+  "systematic": [
+   "« on » impersonnel rendu par « nous » : 37 segments sur 168.",
+   "Faux sens de polysémie via l'anglais : spleen → la rate, loan shark → requin, conviction → croyance, flâneur → poussette, Némésis → l'ennemi, deux états → deux États.",
+   "Résidu technique « **ز** » à la place d'un segment en gras perdu : 72 occurrences dans 58 cours ; termes [[glossaire]] doublés par leur traduction ou balisage perdu.",
+   "Noms propres et titres d'œuvres en latin ou translittérés d'après l'anglais, graphie instable d'un même nom.",
+   "Genres inversés (Écho au masculin, Narcisse au féminin).",
+   "UI : marque صوفيا / Sophia, Premium / بريميوم / المميز, cours = دورة / درس / دورة تدريبية, essai gratuit = تجربة / نسخة تجريبية / محاكمة ; périphrases قم بـ au lieu de l'impératif."
+  ],
+  "action": "relecture_complete",
+  "effort": "UI : 1 jour (onboarding v1, paywall, terminologie) ; cours, quiz et glossaire : relecture native complète, 3 semaines ; résidus « **ز** » : script."
+ },
+ "scores_relecteur_par_surface": {
+  "ui": 3,
+  "courses": 2,
+  "combined": 2.5
+ },
+ "justifications_relecteur": {
+  "ui": "Le corpus est hétérogène : les clés récentes (onboardingV2, tiktokBlocker, path, audio) sont souvent naturelles, mais les écrans d'onboarding v1 et le paywall contiennent des contresens embarrassants (« Gratuit » → حر « libre », « Premium » → غالي « cher », « Trial ends » → تنتهي المحاكمة « le procès se termine », « paywall » traduit littéralement) et des phrases visiblement machine-traduites. Les termes produit sont instables (Sophia/صوفيا, Premium/بريميوم/المميز, cours = دورة/درس/دورة تدريبية, essai gratuit = تجربة/نسخة/إصدار تجريبي, quiz = اختبار/مسابقة) et des tics de TA (قم بـ, الخاص بك, نحن + verbe, يرجى) rendent le chrome de l'app raide. Compréhensible, mais un locuteur natif voit immédiatement qu'il s'agit d'une traduction.",
+  "courses": "L'échantillon est très hétérogène : les deux cours scientifiques (hoquet, mort d'une étoile) sont d'une qualité quasi native, mais les six autres (islam, Baudelaire, impressionnisme, Narcisse, Grande Dépression, Dostoïevski, paradis fiscaux, OTAN) portent toutes les marques d'une traduction automatique passée par l'anglais : « on » rendu par « nous », faux sens de polysémie (spleen → la rate, usurière → requin, conviction → croyance, flâneur → poussette, Némésis → l'ennemi, « deux états » → la solution à deux États), noms propres laissés en latin ou translittérés à l'anglaise, genre d'Écho inversé, résidus techniques (**ز**, ززكسج0زز) et balisage perdu. Un lecteur arabophone repère immédiatement ces cours comme traduits par machine, et plusieurs phrases sont embarrassantes ou fausses ; l'ensemble n'est pas publiable en l'état.",
+  "combined": "La plainte « pas naturel » est justifiée pour l'arabe. L'interface (3/5) est hétérogène : les écrans récents (onboarding V2, bloqueur TikTok, parcours, audio, entraînement) sont rédigés dans un arabe naturel, mais l'onboarding V1, l'offre et le paywall gardent des contresens que chaque utilisateur rencontre (« Gratuit » → libre, « Premium » → cher, « Fin de l'essai » → fin du procès, « Léger » → lumière, « paywall » → « système de blocage de l'abonnement non payé ») et les termes produit ne sont pas stabilisés (Sophia/صوفيا, Premium/بريميوم/المميز, cours = دورة/درس/دورة تدريبية, quiz = اختبار/مسابقة, essai = تجربة/نسخة تجريبية/محاكمة, parcours = مسار/رحلة). Les cours (2/5) sont coupés en deux : les deux cours scientifiques (hoquet, mort d'une étoile) sont d'une qualité quasi native, alors que les six cours d'histoire, de littérature, d'art, de mythologie et d'actualité sont de la traduction automatique brute passée par l'anglais : « on » rendu par « nous », faux sens de polysémie (spleen → la rate, usurière → requin, flâneur → poussette, Pan → explosion, Némésis → l'ennemi, bank runs → « la banque fonctionne », condamnation → conviction), noms propres laissés en latin ou translittérés à l'anglaise, genre d'Écho inversé dans tout le cours, résidus techniques (**ز**, ززكسج0زز) et balisage de glossaire altéré. Ce qui domine est donc la TA non relue sur les contenus anciens, une relecture native n'étant visible que sur les contenus récents ; la surface la plus dégradée est le corps des cours de sciences humaines, suivie du paywall et de l'onboarding V1."
+ },
+ "constats_non_listes_par_le_relecteur": {
+  "ui": 71,
+  "courses": 66,
+  "combined": 95
+ },
+ "motifs_recurrents": [
+  {
+   "description": "Marque « Sophia » translittérée en « صوفيا » (surtout clés onboarding v1, témoignages, ambassadeur, footer) alors qu'elle reste en latin ailleurs.",
+   "frequency": "fréquent",
+   "example": "onboardingV2.welcome.title : مرحبًا بك في صوفيا",
+   "regex_fr": "Sophia",
+   "regex_target": "صوفيا",
+   "pack": "ui"
+  },
+  {
+   "description": "« Premium » translittéré (بريميوم) ou traduit par un adjectif (المميز، متميزة) au lieu d'être conservé.",
+   "frequency": "fréquent",
+   "example": "settings.premium.title : الترقية إلى بريميوم",
+   "regex_fr": "Premium",
+   "regex_target": "بريميوم|الوصول المميز|الميزات المميزة|معرفة متميزة|الدورات المتميزة",
+   "pack": "ui"
+  },
+  {
+   "description": "Terme « cours » instable : دورة (v1, paywall, library), درس (V2, path, tiktokBlocker) et « دورة تدريبية » (stage de formation) dans 11 clés.",
+   "frequency": "systématique",
+   "example": "paywall.course.title : الدورة التدريبية المجانية",
+   "regex_fr": "\\bcours\\b",
+   "regex_target": "دورة تدريبية|الدورة التدريبية|دورات تدريبية",
+   "pack": "ui"
+  },
+  {
+   "description": "« Essai gratuit » rendu par « version bêta/démo » (النسخة التجريبية، الإصدار التجريبي) ou « procès » (المحاكمة) au lieu de التجربة المجانية.",
+   "frequency": "fréquent",
+   "example": "onboardingV2.trial.title : كيف تعمل النسخة التجريبية المجانية",
+   "regex_fr": "essai",
+   "regex_target": "النسخة التجريبية|نسخة تجريبية|الإصدار التجريبي|المحاكمة",
+   "pack": "ui"
+  },
+  {
+   "description": "« Débloquer » systématiquement traduit par « ouvrir » (افتح/فتح), ambigu avec l'ouverture d'un écran ou d'une app (« افتح Sophia PRO »).",
+   "frequency": "systématique",
+   "example": "paywall.course.proPitch : افتح Sophia PRO، المصمَّم…",
+   "regex_fr": "[Dd]ébloqu",
+   "regex_target": "(^|\\s)(افتح|فتح|تفتح)(\\s|$)",
+   "pack": "ui"
+  },
+  {
+   "description": "« Quiz » rendu par « مسابقة » (concours) dans quelques clés alors que le reste de l'app utilise « اختبار ».",
+   "frequency": "isolé",
+   "example": "offer.feature2 : مسابقات تفاعلية غير محدودة",
+   "regex_fr": "[Qq]uiz",
+   "regex_target": "مسابق",
+   "pack": "ui"
+  },
+  {
+   "description": "Périphrase « قم بـ + nom d'action » à la place de l'impératif direct.",
+   "frequency": "fréquent",
+   "example": "paywall.trial.startsDetail : قم بالإلغاء قبل ذلك",
+   "regex_target": "(^|\\s)قم ب|(^|\\s)قمت ب|(^|\\s)يقوم ب|(^|\\s)تقوم ",
+   "pack": "ui"
+  },
+  {
+   "description": "Possessif calqué « الخاص بك / الخاصة بك / الخاص بي » au lieu du suffixe possessif.",
+   "frequency": "fréquent",
+   "example": "profile.mastery.title : خريطة المعرفة الخاصة بك",
+   "regex_fr": "\\b(ton|ta|tes|mon|ma|mes)\\b",
+   "regex_target": "الخاصة? ب(ك|ي|ه|ها|هم|كم)\\b",
+   "pack": "ui"
+  },
+  {
+   "description": "Pronom sujet explicite « نحن / أنت » calqué de l'anglais « we / you » (le français « on » ne l'impose pas).",
+   "frequency": "fréquent",
+   "example": "onboarding.premiumGift.title : نحن نقدم لك Sophia Premium",
+   "regex_fr": "^On\\b|\\bon te\\b",
+   "regex_target": "(^|\\s)نحن ن\\S+|(^|\\s)أنت ت\\S+",
+   "pack": "ui"
+  },
+  {
+   "description": "Registre administratif « يرجى » (il est prié de) dans les messages d'erreur, contraire au tutoiement direct.",
+   "frequency": "fréquent",
+   "example": "auth.error.generic : يرجى المحاولة مرة أخرى",
+   "regex_fr": "Réessaie",
+   "regex_target": "يرجى",
+   "pack": "ui"
+  },
+  {
+   "description": "Libellés de navigation (onglets, titres d'écran, sections de réglages, champs de formulaire) sans article défini, incohérents avec les voisins qui en ont un.",
+   "frequency": "fréquent",
+   "example": "tab.library : مكتبة (vs tab.home : الرئيسية)",
+   "regex_target": "^(مكتبة|إعدادات|بيانات|مساعدة|قانوني|تقدم|مظهر|خصوصية|شروط|حساب|عمر|دخل|وقت|طلب|سفير|فئة|رسالة|لغة|إصدار|متطلبات|سمات)$",
+   "pack": "ui"
+  },
+  {
+   "description": "Typographie ASCII : guillemets droits \" \" au lieu de « » ou ”“, trait d'union « - » en guise de tiret, « ... » au lieu de « … ».",
+   "frequency": "fréquent",
+   "example": "paywall.course.subtitle.named : افتح \"%@\" وكل دورة تدريبية الآن",
+   "regex_fr": "«|—|…",
+   "regex_target": "\"[^\"]+\"|\\s-\\s|\\.\\.\\.",
+   "pack": "ui"
+  },
+  {
+   "description": "« cultivé » traduit via l'anglais « smarter » par « أذكى / أكثر ذكاءً » (plus intelligent) au lieu de « أكثر ثقافة ».",
+   "frequency": "fréquent",
+   "example": "onboardingV2.welcome.subtitle : كن أكثر ذكاءً قليلاً كل يوم",
+   "regex_fr": "cultivé",
+   "regex_target": "أذكى|أكثر ذكاء|ذكاءً",
+   "pack": "ui"
+  },
+  {
+   "description": "« vraiment / actually » rendu par « بالفعل » (déjà, effectivement), qui change le sens.",
+   "frequency": "fréquent",
+   "example": "paywall.review3.quote : وأنا أتذكرها بالفعل",
+   "regex_fr": "vraiment",
+   "regex_target": "بالفعل",
+   "pack": "ui"
+  },
+  {
+   "description": "Fragments assemblés par le code (nombre + libellé, « C'est … d'ici un an ») traduits isolément : article défini après un nombre, verbe au singulier, placeholder mal placé.",
+   "frequency": "fréquent",
+   "example": "onboarding.wasted.hoursLost : الساعات الضائعة في السنة",
+   "regex_fr": "^[a-zéèà][^.]*$",
+   "regex_target": "^(ال\\S+ \\S+ في السنة|هذه أيام %@|مسابقات %d)",
+   "pack": "ui"
+  },
+  {
+   "description": "« Comment ça marche » rendu « كيف يعمل » (comment il fonctionne) sans sujet, en titre et en bouton.",
+   "frequency": "fréquent",
+   "example": "paywall.training.how.title : كيف يعمل",
+   "regex_fr": "[Cc]omment ça marche|COMMENT ÇA MARCHE",
+   "regex_target": "^كيف يعمل$",
+   "pack": "ui"
+  },
+  {
+   "description": "« Appuie / Toucher » tantôt « انقر » (cliquer) tantôt « اضغط » (appuyer) ; sur mobile « اضغط » est attendu et un seul terme devrait être retenu.",
+   "frequency": "fréquent",
+   "example": "course.funFact.hint : انقر للكشف vs course.sources.hint : اضغط لعرض المراجع",
+   "regex_fr": "[Aa]ppuie|[Tt]ouche|[Tt]ape",
+   "regex_target": "انقر",
+   "pack": "ui"
+  },
+  {
+   "description": "Tanwin omis de façon aléatoire (يوميا / يوميًا, لاحقا / لاحقًا, مجانا / مجانًا) d'une clé à l'autre.",
+   "frequency": "fréquent",
+   "example": "onboarding.language.subtitle : لاحقا vs onboarding.dailyGoal.subtitle : لاحقًا",
+   "regex_target": "(^|\\s)(يوميا|لاحقا|مجانا|حقا|قريبا|تماما|بعيدا|سنويا|أسبوعيا|شهريا|فضولا)(\\s|[.!،]|$)",
+   "pack": "ui"
+  },
+  {
+   "description": "Boutons alternant nom d'action (تفعيل، فتح، متابعة، استعادة) et impératif (ابدأ، اشترك، جرب) sur un même écran ; un seul mode devrait être choisi.",
+   "frequency": "fréquent",
+   "example": "paywall.cta.activateTrial : تفعيل تجربتي المجانية vs onboarding.premiumTrial.cta : ابدأ تجربتي",
+   "pack": "ui"
+  },
+  {
+   "description": "Prénoms des témoignages translittérés (توماس، إيناس، يانيس) au lieu d'être laissés en français, et de façon incohérente (Camille → كميل dans onboardingV2.exams.author3, كاميل ailleurs).",
+   "frequency": "isolé",
+   "example": "onboardingV2.exams.author3 : كميل، الجامعة",
+   "regex_target": "كميل|كاميل|توماس|إيناس|يانيس|ليا",
+   "pack": "ui"
+  },
+  {
+   "description": "Le « on » impersonnel français est rendu par « nous » / un verbe à la 1re personne du pluriel, ce qui fait parler l'app à la place des Arabes du VIIe siècle, des boursiers de 1929, etc.",
+   "frequency": "fréquent",
+   "example": "On veut le tuer → نريد قتله ; On y vit en tribus → نحن نعيش هناك في القبائل ; On emprunte → نحن نقترض",
+   "regex_fr": "\\b[Oo]n\\s+(?:y\\s+|en\\s+|les?\\s+|le\\s+|la\\s+)?(?:veut|vit|prie|exige|emprunte|appelle|parle|peut|estime|dit|a\\b)",
+   "regex_target": "(?:^|[\\s،:])(?:نحن\\s+\\S+|نريد|نسمي(?:ه|ها)?|نقترض|نتحدث عن|نحن بحاجة|يمكننا|نستطيع أن)",
+   "pack": "courses"
+  },
+  {
+   "description": "Résidu technique « **ز** » (lettre zayn en gras) inséré là où un segment en gras a été perdu.",
+   "frequency": "fréquent",
+   "example": "فكرته عن إله واحد **ز** تهدد (course_1), لكلود مونيه **ز** (course_122), الكساد الكبير **ز** (course_18), في يناير 1933، **ز** (course_18)",
+   "regex_target": "\\*\\*ز\\*\\*",
+   "pack": "courses"
+  },
+  {
+   "description": "Chaînes parasites ou caractères latins laissés dans le texte arabe : noms propres non translittérés, possessif anglais, titre d'œuvre en français, garbage collé à un terme de glossaire.",
+   "frequency": "fréquent",
+   "example": "Seurat's [[الانطباعية الجديدة]] ; ابن إله النهر Cephisus ; ل Raskolnikov ; منطقة Batignolles ; [[أوراق بنما]]ززكسج0زز",
+   "regex_target": "(?<![\\[*A-Za-z])[A-Za-zÀ-ÿ'’]{4,}(?!\\]\\])|\\]\\][\\u0600-\\u06FF0-9]{3,}",
+   "pack": "courses"
+  },
+  {
+   "description": "Faux sens de polysémie trahissant un pivot par l'anglais : spleen → la rate, usurière (loan shark) → requin, condamnation (conviction) → croyance, flâneur → poussette, Némésis (nemesis) → l'ennemi, bank run → la banque travaille, réhabilitation → rééducation, sanctuaire → refuge, source → origine, claquement → transaction, les États → les États fédérés.",
+   "frequency": "fréquent",
+   "example": "الطحال والمثالية (Spleen et Idéal) ; قتل أحد أسماك القرش (tue une usurière) ; عربة أطفال (flâneur) ; [[العدو]] (Némésis)",
+   "regex_target": "الطحال|أسماك القرش|سمكة قرش|عربة أطفال|\\[\\[العدو\\]\\]|يعمل البنك|إعادة التأهيل|قناعة واحدة|سوبرمان|حل الدولتين",
+   "pack": "courses"
+  },
+  {
+   "description": "Terme de glossaire [[…]] doublé par sa propre traduction placée juste avant, ou balisage [[…]] / **…** perdu (New Deal, relance, 360 idoles, 22 ans, 25 %, siège de Médine, escalade nucléaire, paradis fiscaux, optimisation fiscale, nihilisme).",
+   "frequency": "fréquent",
+   "example": "بدو الصحراء [[البدو]] ; مقهى [[مقهى جربوا]] ; أنابيب الطلاء والهواء [[أنابيب الطلاء والهواء الطلق]] ; خلفائه [[الخليفة]] ; صفقة روزفلت الجديدة (1933) sans [[ ]]",
+   "regex_target": "(\\S{3,})\\s+(?:\\S+\\s+)?\\[\\[[^\\]]*\\1",
+   "pack": "courses"
+  },
+  {
+   "description": "Accords de genre et de nombre fautifs, surtout autour des personnages mythologiques et des pronoms de reprise : Écho au masculin, Narcisse au féminin, pronom masculin pour Jeanne Duval, féminin pour l'expansion (التوسع), numéral mal accordé.",
+   "frequency": "fréquent",
+   "example": "إيكو يفقد صوته ; جمالها يجذب الجميع (Narcisse) ; نارسيس تنادي ; إنه يلهم (Jeanne) ; وهي منظمة أيضًا (التوسع) ; ستة قصائد",
+   "regex_target": "إيكو\\s+ي\\S+|نارسيس\\s+ت\\S+|يموت \\*\\*صدى|يتراجع إيكو|يراه إيكو",
+   "pack": "courses"
+  },
+  {
+   "description": "Noms propres français et titres d'œuvres translittérés d'après l'anglais ou rendus hors de leur forme arabe établie, et graphie instable d'un même nom au sein d'un cours.",
+   "frequency": "fréquent",
+   "example": "تشارلز بودلير / شارل بودلير ; زهور الشر / زهور ملز ; نادر / نادار ; راسكولنيكوف / راسكولينكوف ; نرسيس / نرجس / نارسيس ; متحف دورسيه ; الاستيلاء على مكة",
+   "regex_target": "تشارلز|جين دوفال|إدوارد مانيه|بيرث موريسوت|ليروي|دورسيه|زهور ملز|راسكولينكوف|نارسيس|هوجو",
+   "pack": "courses"
+  },
+  {
+   "description": "Phrases nominales ou passives calquées (« يتم / تم + nom d'action », sujet avant verbe, « بواسطة » pour « par ») et calques lexicaux (ciment → أسمنت, architecture du recueil → الهندسة المعمارية, contact → الاتصال, chez Hugo → في هوجو, rapatrier → إعادة إلى الوطن).",
+   "frequency": "fréquent",
+   "example": "تم تأكيد سلطته ; يتم عكس الوضع ; أسمنت الإمبراطورية ; الهندسة المعمارية للمجموعة ; في هوجو ; بواسطة إدوارد مانيه",
+   "regex_target": "\\b(?:تم|تمت|يتم)\\s+\\S+|بواسطة\\s|الهندسة المعمارية للمجموعة|أسمنت",
+   "pack": "courses"
+  },
+  {
+   "description": "Typographie incohérente des guillemets (\" \", “ ”, « ») d'un cours à l'autre et même dans un paragraphe, chevron « » orphelin après un guillemet fermant, espace avant la ponctuation, signe ٪ vs %.",
+   "frequency": "fréquent",
+   "example": "فتجيب: «أحد!» » ; بـ”مدينة النبي” (مدينة النبي) ; الملاذات الضريبية . ; 8 إلى 10٪ vs 15%",
+   "regex_target": "[“”\"]|»\\s*»|\\s[.،:]|٪",
+   "pack": "courses"
+  },
+  {
+   "description": "Fracture de qualité : les cours scientifiques (hoquet, étoile) sont d'un arabe natif, idiomatique et tutoient correctement, tandis que les cours d'histoire, de littérature, d'art et de mythologie sont de la traduction automatique brute non relue.",
+   "frequency": "systématique",
+   "example": "course_242 : يقولون لك: احبس أنفاسك، أو اشرب ورأسك منكّس (naturel) vs course_1 : نريد قتله / يُصلى عليه الكثير من الأصنام (MT brute)",
+   "pack": "courses"
+  },
+  {
+   "description": "Sensibilité culturelle : le cours sur l'islam nomme le Prophète « تاجر من مكة يُدعى محمد » sans aucune formule d'usage (النبي محمد / ﷺ) et dit « نريد قتله » ; même si cela suit le ton neutre du français, un lecteur arabophone musulman le remarquera immédiatement comme déplacé.",
+   "frequency": "isolé",
+   "example": "تاجر من مكة يُدعى محمد ... نريد قتله ; وفاة محمد (frise)",
+   "regex_target": "(?<!النبي )محمد(?! ﷺ)",
+   "pack": "courses"
+  },
+  {
+   "description": "« on » impersonnel français rendu par « nous » (نحن نعيش، نريد قتله، نحن نقترض، نحن نسمي، نحن بحاجة) dans les cours traduits automatiquement : l'app parle à la première personne du pluriel à la place des acteurs historiques.",
+   "frequency": "systématique",
+   "example": "courses:course_1/s0.b0.text — نريد قتله",
+   "regex_fr": "\\bon\\s+(?:veut|vit|prie|exige|emprunte|appelle|parle|estime)\\b",
+   "regex_target": "(?:^|[\\s،:])(?:نحن\\s+(?:ن\\w+|بحاجة)|نريد\\s+قتله)",
+   "pack": "combined"
+  },
+  {
+   "description": "Résidus techniques : segment en gras remplacé par **ز**, ou chaîne parasite collée à un terme de glossaire (ززكسج0زز).",
+   "frequency": "fréquent",
+   "example": "courses:course_18/s0.b0.text — بداية الكساد الكبير **ز**",
+   "regex_target": "\\*\\*ز\\*\\*|زز\\w*زز",
+   "pack": "combined"
+  },
+  {
+   "description": "Faux sens de polysémie via un pivot anglais : spleen → la rate, usurière → requin, condamnation → conviction, flâneur → poussette, Pan → explosion, Némésis → l'ennemi, bank runs → la banque fonctionne, deux états → solution à deux États, Léger → lumière, Gratuit → libre, Premium → cher, essai → procès, paywall → système de blocage.",
+   "frequency": "fréquent",
+   "example": "courses:course_100/s2.b3.text — **عربة أطفال** pour flâneur",
+   "regex_target": "الطحال|سمكة قرش|أسماك القرش|عربة أطفال|حل الدولتين|المحاكمة|نظام حظر الاشتراك|يعمل البنك|الإله \\*\\*انفجار",
+   "pack": "combined"
+  },
+  {
+   "description": "Noms propres et titres d'œuvres laissés en latin ou translittérés à l'anglaise, graphie instable d'un même nom (تشارلز/شارل, إيكو/صدى, نرسيس/نرجس/نارسيس, راسكولينكوف/راسكولنيكوف, Batignolles, Cephisus, Liriope, Seurat's, Raskolnikov, Le Déjeuner sur l'herbe).",
+   "frequency": "fréquent",
+   "example": "courses:course_166/s2.b0.text — ابن إله النهر Cephisus والحورية Liriope",
+   "regex_target": "\\b(?!Sophia|Premium|PRO|Pro|XP|TikTok|Google|Apple|WhatsApp|DEBUG|M87|PRIMO)[A-Za-zÀ-ÿ']{4,}\\b",
+   "pack": "combined"
+  },
+  {
+   "description": "Accords de genre et de nombre défaillants : Écho au masculin et Narcisse au féminin, هذا المغادرة, التوسع… وهي, مستوحاة pour des peintres, اليوم هو pour الناتو, ساعاتين, الوقت المحفوظة, ست قصائد → ستة قصائد.",
+   "frequency": "fréquent",
+   "example": "courses:course_166/s2.b2.text — يتراجع إيكو مهينًا… ييبس جسده",
+   "regex_target": "هذا المغادرة|ساعاتين|الوقت المحفوظة|ستة قصائد|اليوم هو أكبر",
+   "pack": "combined"
+  },
+  {
+   "description": "Termes produit et marque instables dans l'UI : صوفيا/Sophia ; Premium/بريميوم/المميز ; cours = دورة/درس/دورة تدريبية ; quiz = اختبار/مسابقة ; essai gratuit = تجربة/نسخة تجريبية/الفترة التجريبية/المحاكمة ; parcours = مسار/رحلة.",
+   "frequency": "systématique",
+   "example": "ui:paywall.course.stat.caption — أعضاء صوفيا بريميوم",
+   "regex_target": "صوفيا|بريميوم|دورة تدريبية|الدورة التدريبية|الدورات التدريبية|مسابق|نسخة تجريبية|النسخة التجريبية|الإصدار التجريبي|المحاكمة",
+   "pack": "combined"
+  },
+  {
+   "description": "Tics de traduction automatique dans l'UI : périphrase قم بـ + nom d'action au lieu de l'impératif, possessif lourd الخاص بك, يرجى, من قبل, « هو كل ما يتطلبه الأمر ».",
+   "frequency": "fréquent",
+   "example": "ui:onboardingV2.notifications.bullet3 — قم بإيقاف تشغيله بنقرة واحدة",
+   "regex_target": "\\bقم ب|الخاص(?:ة)? ب(?:ك|ه|ها)\\b|\\bيرجى\\b|\\bمن قبل\\b|كل ما يتطلبه الأمر",
+   "pack": "combined"
+  },
+  {
+   "description": "Boutons et messages tantôt à l'impératif (افتح، ابدأ، سجّل), tantôt au nom d'action nominal (فتح مجانا، تسجيل الدخول للمتابعة، إلغاء في أي وقت), ce qui casse la voix « tu » directe du produit.",
+   "frequency": "fréquent",
+   "example": "ui:paywall.cta.unlockFree — فتح مجانا (vs paywall.course.proPitch — افتح Sophia PRO)",
+   "regex_target": "^(?:فتح|تسجيل الدخول|إلغاء|تقليل|توسيع)\\s",
+   "pack": "combined"
+  },
+  {
+   "description": "Balisage de glossaire altéré : terme doublé par sa traduction (مقهى [[مقهى جربوا]], أنابيب الطلاء والهواء [[أنابيب…]]), libellé du terme modifié ([[الرمزية وإرث بودلير]] pour [[symbolisme]], [[حلف شمال الأطلسي]] déplacé sur l'organisation au lieu du traité), balisage perdu (New Deal, relance, **paradis fiscaux**, **optimisation fiscale**).",
+   "frequency": "fréquent",
+   "example": "courses:course_122/s3.b0.text — في مقهى [[مقهى جربوا]]",
+   "regex_target": "مقهى \\[\\[مقهى|والهواء \\[\\[أنابيب|\\[\\[الرمزية وإرث",
+   "pack": "combined"
+  },
+  {
+   "description": "Typographie : guillemets mêlés (” “ \" «»), » orphelin après une citation, espace avant la ponctuation (الضريبية ., الضرائب ،), point comme séparateur de milliers (10.000), virgule parasite dans un titre en italique.",
+   "frequency": "fréquent",
+   "example": "courses:course_166/s2.b1.text — «أحد!» » / course_212/subtitle — 10.000 مليار",
+   "regex_target": "[”“]|\\s[،.؛]|!»\\s»|\\.\\s»|\\d\\.\\d{3}\\b|\\*،",
+   "pack": "combined"
+  },
+  {
+   "description": "Calques de l'anglais mot à mot dans l'UI et les cours : في الغرفة (in the room), خذ وقتك إلى الوراء, دعنا نذهب (let's go), ويلتصق (it sticks), أخذت الفقاعة كل شيء بعيدًا, بعيدة المنال (far from won), هذا دائم (this is permanent).",
+   "frequency": "fréquent",
+   "example": "ui:common.letsGoShort — دعنا نذهب",
+   "regex_target": "دعنا نذهب|في الغرفة|إلى الوراء|ويلتصق|كل شيء بعيدًا|بعيدة المنال|هذا دائم",
+   "pack": "combined"
+  }
+ ],
+ "constats": [
+  {
+   "location": "paywall.freeColumn",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "حر",
+   "gloss_fr": "libre (au sens de liberté)",
+   "problem": "« Gratuit » est rendu par « حر » (libre, non captif) dans l'en-tête du tableau comparatif ; le mot attendu est « مجاني » (utilisé dans onboardingV2.pw.free).",
+   "fix": "مجاني",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.premiumColumn",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "غالي",
+   "gloss_fr": "cher, coûteux",
+   "problem": "L'en-tête de colonne « Premium » est traduit par « cher/coûteux », ce qui ridiculise le tableau comparatif et viole la règle de conservation de la marque.",
+   "fix": "Premium",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.trial.trialEnds",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "تنتهي المحاكمة",
+   "gloss_fr": "le procès (judiciaire) se termine",
+   "problem": "« Trial » a été pris au sens de procès devant un tribunal au lieu d'essai gratuit.",
+   "fix": "نهاية التجربة",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.phone.intensity.light",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "ضوء",
+   "gloss_fr": "lumière",
+   "problem": "« Léger » (niveau d'usage du téléphone) est rendu par « lumière », faux sens issu de l'anglais « light » ; les autres niveaux (معتدل، شديد) sont corrects.",
+   "fix": "خفيف",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.error.unavailable",
+   "severity": "bloquant",
+   "category": "mt_artefact",
+   "current": "غير قادر على تحميل نظام حظر الاشتراك غير المدفوع",
+   "gloss_fr": "incapable de charger le système de blocage de l'abonnement non payé",
+   "problem": "Le terme technique anglais « paywall » a été traduit littéralement en une périphrase absurde affichée à l'utilisateur ; le français dit simplement « Impossible de charger l'offre ».",
+   "fix": "تعذّر تحميل العرض",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.discount.perYear",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "سنويا، أي التزام",
+   "gloss_fr": "par an, n'importe quel engagement",
+   "problem": "La négation « sans » a sauté : la ligne de prix annuelle dit l'inverse du français (comparer paywall.discount.perMonth qui est correct).",
+   "fix": "سنويًا، دون أي التزام",
+   "surface": "ui"
+  },
+  {
+   "location": "friends.add.success",
+   "severity": "bloquant",
+   "category": "mt_artefact",
+   "current": "وأضاف صديق!",
+   "gloss_fr": "et il a ajouté un ami !",
+   "problem": "Le participe « ajouté » a été lu comme un verbe au passé précédé de « et » : le toast de succès n'a aucun sens.",
+   "fix": "تمت إضافة الصديق!",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.screenTime.title",
+   "severity": "bloquant",
+   "category": "calque",
+   "current": "خذ وقتك إلى الوراء",
+   "gloss_fr": "prends ton temps vers l'arrière",
+   "problem": "Calque mot à mot de l'anglais « take your time back » qui donne une phrase absurde en titre d'écran (« reprends du temps pour toi »).",
+   "fix": "استعد وقتك لنفسك",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.trial.step2.detail",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "قم بالإلغاء في أي وقت خلال 15 ثانية.",
+   "gloss_fr": "annule à tout moment dans un délai de 15 secondes",
+   "problem": "Le texte laisse entendre qu'on ne dispose que de 15 secondes pour annuler, alors que le français dit que l'annulation prend 15 secondes.",
+   "fix": "سنذكّرك بإشعار. الإلغاء لا يستغرق سوى 15 ثانية.",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.graph.tagline",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "تقوم صوفيا بتركيب ما تعرفه⏎— بسرعة.",
+   "gloss_fr": "Sophia assemble/compose ce que tu sais — vite",
+   "problem": "« compounds » a été pris au sens d'« assembler » : l'accroche du graphique est incompréhensible, et la marque est translittérée.",
+   "fix": "Sophia تنمّي ثقافتك⏎بوتيرة متسارعة.",
+   "surface": "ui"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/s0.b0.text",
+   "severity": "bloquant",
+   "category": "mt_artefact",
+   "current": "نريد قتله.",
+   "gloss_fr": "Nous voulons le tuer.",
+   "problem": "« On veut le tuer » est rendu par un « nous » : le texte dit que c'est nous (l'app) qui voulons tuer Muhammad.",
+   "fix": "كان هناك من يريد قتله.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/s0.b0.text (idem s2.b0.text, s3.b3.e0.title)",
+   "severity": "bloquant",
+   "category": "terminologie",
+   "current": "له اسم: **هجرية**",
+   "gloss_fr": "porte un nom : « hégirien(ne) » (adjectif)",
+   "problem": "L'Hégire se dit الهجرة ; « هجرية » est l'adjectif (calendrier hégirien) et ne désigne pas l'événement, erreur répétée dans s2.b0 et dans le titre de la frise (الهجرية).",
+   "fix": "له اسم: **الهجرة** (s2.b0 : هذا الرحيل هو **الهجرة** ; frise : الهجرة)",
+   "surface": "courses"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/s1.b0.text",
+   "severity": "bloquant",
+   "category": "mt_artefact",
+   "current": "نحن نعيش هناك في القبائل.",
+   "gloss_fr": "Nous y vivons dans les tribus.",
+   "problem": "« On y vit en tribus » rendu par « nous », comme si l'app parlait d'elle-même au VIIe siècle.",
+   "fix": "كان الناس يعيشون فيها في قبائل.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/s1.b0.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "الدين هناك شركي: يُصلى عليه الكثير من الأصنام.",
+   "gloss_fr": "La religion y est polythéiste : on fait la prière des morts sur lui beaucoup d'idoles.",
+   "problem": "« On prie de nombreuses idoles » devient une phrase sans sujet ni sens (يُصلّى عليه = prière funéraire).",
+   "fix": "كان الدين هناك وثنيًا: يعبد الناس أصنامًا كثيرة.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/s1.b2.text (idem course_122/s0.b0.text, course_18/s0.b0.text, course_18/s3.b1.text)",
+   "severity": "bloquant",
+   "category": "mt_artefact",
+   "current": "فكرته عن إله واحد **ز** تهدد",
+   "gloss_fr": "son idée d'un dieu unique **z** menace",
+   "problem": "Une lettre « ز » en gras parasite apparaît à la place du gras perdu (Dieu unique, Claude Monet, Grande Dépression, janvier 1933) : résidu technique visible à l'écran dans quatre cours.",
+   "fix": "فكرته عن **الإله الواحد** تهدد تجارة مكة (et : لـ**كلود مونيه** / بداية **الكساد الكبير** / في **يناير 1933**)",
+   "surface": "courses"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/s2.b3.text",
+   "severity": "bloquant",
+   "category": "non_traduit",
+   "current": "محمد يشن [[رازياس]]، غارات سريعة",
+   "gloss_fr": "Muhammad lance des « raziyas » (translittération du mot français)",
+   "problem": "« razzia » est un mot d'origine arabe (غزوة) ; le translittérer en lettres arabes est absurde pour un arabophone.",
+   "fix": "يشن محمد [[الغزوات]]، وهي غارات سريعة، لقطع طريق قوافل العدو.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire/hero.hook",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "وقناعة واحدة",
+   "gloss_fr": "et une conviction (au sens de croyance)",
+   "problem": "« condamnation » traduit via l'anglais conviction pris au sens « croyance ».",
+   "fix": "ست قصائد ممنوعة، وحكم بالإدانة، وولادة الشعر الحديث.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire/s2.b0.text",
+   "severity": "bloquant",
+   "category": "mt_artefact",
+   "current": "يعارض حل الدولتين",
+   "gloss_fr": "s'oppose à la solution à deux États",
+   "problem": "« oppose deux états » (d'âme) a été lu comme « deux États » : on parle de géopolitique israélo-palestinienne dans un cours sur Baudelaire.",
+   "fix": "يقابل بين حالتين نفسيتين",
+   "surface": "courses"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire/s2.b0.text (idem s2.b2.caption, s4.b1.text)",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "**\"الطحال والمثالية\"** ... **الطحال**، كلمة مستعارة من اللغة الإنجليزية",
+   "gloss_fr": "« La Rate et l'Idéalisme »… la rate (organe), mot emprunté à l'anglais",
+   "problem": "« Spleen » est rendu partout par l'organe (الطحال), y compris dans la légende (« la position de la rate baudelairienne ») et dans le titre « Le Spleen de Paris » ; les formes établies sont « سأم ومثال » et « سأم باريس ».",
+   "fix": "**«سأم ومثال»**، القسم الكبير الأول، يقابل بين حالتين. **السأم (Spleen)**، كلمة مستعارة من الإنجليزية، تعني مللًا عميقًا وكآبة بلا سبب. أما **المثال** فهو التعطش إلى السمو والجمال الخالص. (légende : مسرح السأم البودليري ; s4.b1 : **[[سأم باريس]]**)",
+   "surface": "courses"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire/s2.b3.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "ثم يتجول بودلير باعتباره **عربة أطفال**",
+   "gloss_fr": "Baudelaire se promène alors en tant que poussette (landau)",
+   "problem": "« flâneur » rendu par « poussette » : non-sens comique.",
+   "fix": "ثم يهيم بودلير في المدينة **متسكّعًا** (flâneur)، أي متجوّلًا يراقب المدينة بلا هدف محدد.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire/s4.b3.text (idem s4.b4.text)",
+   "severity": "bloquant",
+   "category": "nom_propre",
+   "current": "**زهور ملز**",
+   "gloss_fr": "« Fleurs du Melz » (titre translittéré et déformé)",
+   "problem": "Le titre de l'œuvre devient un charabia translittéré alors qu'il est traduit ailleurs ; la forme établie est أزهار الشر.",
+   "fix": "**أزهار الشر**",
+   "surface": "courses"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire/s1.b1.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "يتشاجر مع والد زوجته، الجنرال **أوبيك**",
+   "gloss_fr": "il se dispute avec le père de son épouse, le général Aupick",
+   "problem": "« beau-père » pris au sens « père de l'épouse » ; Aupick est le second mari de sa mère.",
+   "fix": "ويتخاصم مع زوج أمه، الجنرال **أوبيك**",
+   "surface": "courses"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire/s4.b0.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "تتكون رواية **[[الحداثة]]** من التقاط ما يمر",
+   "gloss_fr": "le roman « Modernité » consiste à saisir ce qui passe",
+   "problem": "Le mot « roman » (رواية) a été inventé : la Modernité n'est pas un roman.",
+   "fix": "تقوم **[[الحداثة]]** عند بودلير على التقاط ما يمرّ: حياة المدينة، والعابر، واليومي.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_122_la_naissance_de_l_impressionnisme/s4.b0.text",
+   "severity": "bloquant",
+   "category": "non_traduit",
+   "current": "يقوم Seurat's [[الانطباعية الجديدة]] بتنظيم اللمس إلى نقاط",
+   "gloss_fr": "Le Seurat's néo-impressionnisme organise le toucher en points",
+   "problem": "Possessif anglais « Seurat's » laissé en caractères latins au milieu de la phrase arabe, et « touche » rendu par « toucher ».",
+   "fix": "ثم تأتي [[الانطباعية الجديدة]] عند سورا لتحوّل اللمسة إلى نقاط منهجية.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_122_la_naissance_de_l_impressionnisme/s4.b1.e0.detail",
+   "severity": "bloquant",
+   "category": "non_traduit",
+   "current": "مانيه فضيحة مع Le Déjeuner sur l'herbe.",
+   "gloss_fr": "Manet scandale avec Le Déjeuner sur l'herbe.",
+   "problem": "Titre laissé en français et phrase sans verbe, alors que le titre est traduit en s1.b1 (الغداء على العشب).",
+   "fix": "مانيه يفجّر فضيحة بلوحة «الغداء على العشب».",
+   "surface": "courses"
+  },
+  {
+   "location": "course_122_la_naissance_de_l_impressionnisme/s2.title",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "الطلاء الخارجي: الضوء واللون",
+   "gloss_fr": "Peinture pour extérieur (revêtement de façade) : lumière et couleur",
+   "problem": "« Peindre dehors » rendu comme « peinture d'extérieur » au sens bâtiment, dans un titre de section.",
+   "fix": "الرسم في الهواء الطلق: الضوء واللون",
+   "surface": "courses"
+  },
+  {
+   "location": "course_166_narcisse_et_echo/description",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "الصدى يمكن أن يتكرر فقط.",
+   "gloss_fr": "L'écho (le phénomène) ne peut qu'être répété.",
+   "problem": "Écho la nymphe devient le nom commun « l'écho » et « répéter » passe au passif.",
+   "fix": "إيكو لا تستطيع إلا أن تكرر. ونرسيس لا يحب إلا انعكاس صورته.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_166_narcisse_et_echo/s1.title (idem s1.b1.caption, s1.b2, s2.b1, s2.b2, s3.b3, s4.b2)",
+   "severity": "bloquant",
+   "category": "grammaire",
+   "current": "إيكو يفقد صوته",
+   "gloss_fr": "Écho (masculin) perd sa voix (à lui)",
+   "problem": "Écho est une nymphe : le masculin est employé dans le titre et dans la moitié des phrases (يراه إيكو ويقع في حبه / يتراجع إيكو مهينًا / رغباته / يموت صدى), ce qui change le sens du mythe.",
+   "fix": "إيكو تفقد صوتها (et au féminin partout : تراه إيكو وتقع في حبه / تنسحب إيكو مهانةً إلى الكهوف / رغباتها / تموت **إيكو**)",
+   "surface": "courses"
+  },
+  {
+   "location": "course_166_narcisse_et_echo/s1.b3.text",
+   "severity": "bloquant",
+   "category": "nom_propre",
+   "current": "قام الإله **انفجار**، الغاضب من رفضه",
+   "gloss_fr": "le dieu Explosion, furieux d'être éconduit",
+   "problem": "Le dieu Pan a été traduit comme un nom commun (« bang / explosion »).",
+   "fix": "في رواية أخرى، يمزّق الإله **بان**، الغاضب من رفضها له، إيكو إربًا.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_166_narcisse_et_echo/s2.b0.text",
+   "severity": "bloquant",
+   "category": "non_traduit",
+   "current": "ابن إله النهر Cephisus والحورية Liriope",
+   "gloss_fr": "fils du dieu-fleuve Cephisus et de la nymphe Liriope (en caractères latins)",
+   "problem": "Deux noms propres laissés en latin (forme anglaise) au milieu du texte arabe.",
+   "fix": "**نرسيس** هو ابن إله النهر كيفيسوس والحورية ليريوبي.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_166_narcisse_et_echo/s3.b0.text",
+   "severity": "bloquant",
+   "category": "nom_propre",
+   "current": "يصلي أحد ضحاياه إلى [[العدو]]، إلهة الانتقام العادل",
+   "gloss_fr": "une de ses victimes prie « l'Ennemi », déesse de la juste vengeance",
+   "problem": "Némésis a été traduite par le nom commun anglais nemesis = « ennemi » ; le terme de glossaire lui-même est faux.",
+   "fix": "يدعو أحد ضحاياه [[نيميسيس]]، إلهة الانتقام العادل",
+   "surface": "courses"
+  },
+  {
+   "location": "course_18_la_grande_depression_1929/s2.b0.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "ثم يأتي [[يعمل البنك]]: موجات من العملاء",
+   "gloss_fr": "Puis vient « la banque travaille » : des vagues de clients",
+   "problem": "« bank runs » traduit mot à mot comme « la banque fonctionne ».",
+   "fix": "ثم يأتي [[التهافت على سحب الودائع]]: موجات من العملاء يسحبون أموالهم في ذعر.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_18_la_grande_depression_1929/s2.b0.text",
+   "severity": "bloquant",
+   "category": "grammaire",
+   "current": "حول **9,000** البنوك الأمريكية ستفلس.",
+   "gloss_fr": "Autour de 9 000 les banques américaines feront faillite.",
+   "problem": "« Environ » rendu par « autour » (spatial), annexion cassée et futur injustifié : la phrase est incompréhensible.",
+   "fix": "ويفلس نحو **9000** بنك أمريكي.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_107_crime_et_chatiment_dostoievski/description (idem s2.b0.text)",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "قتل راسكولنيكوف أحد أسماك القرش / قام بقتل سمكة قرش قديمة",
+   "gloss_fr": "Raskolnikov tue un requin / il tue un vieux requin",
+   "problem": "« usurière » (loan shark en anglais) est devenu « requin » : le crime fondateur du roman n'a plus de sens.",
+   "fix": "يقتل راسكولنيكوف مرابيةً عجوزًا ليثبت أنه إنسان أعلى. / يقتل مرابيةً عجوزًا يراها عديمة النفع وضارّة بالمجتمع",
+   "surface": "courses"
+  },
+  {
+   "location": "course_107_crime_et_chatiment_dostoievski/s1.b2.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "قبل أن يبدأ مرة أخرى بضمير المخاطب",
+   "gloss_fr": "avant de recommencer à la deuxième personne",
+   "problem": "« troisième personne » traduit par « deuxième personne » : le fait rapporté est faux.",
+   "fix": "قبل أن يعيد كتابتها بضمير الغائب ليكسب مسافة سردية.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_107_crime_et_chatiment_dostoievski/s4.b2.text",
+   "severity": "bloquant",
+   "category": "non_traduit",
+   "current": "العقوبة الحقيقية ل Raskolnikov ليست السجن",
+   "gloss_fr": "Le vrai châtiment de Raskolnikov (en latin) n'est pas la prison",
+   "problem": "Nom du héros laissé en caractères latins dans la conclusion du cours.",
+   "fix": "عقاب راسكولنيكوف الحقيقي ليس السجن، بل عزلة الروح.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_212_les_paradis_fiscaux_expliques/s2.b2.text",
+   "severity": "bloquant",
+   "category": "mt_artefact",
+   "current": "الكلمة الفرنسية \"الملاذ الضريبي\" تأتي من خطأ في الترجمة: تقول الإنجليزية \"الملاذ الضريبي\"، ملاذ آمن للمال (ملاذ)، وليس جنة (الجنة).",
+   "gloss_fr": "Le mot français « refuge fiscal » vient d'une erreur de traduction : l'anglais dit « refuge fiscal », un refuge sûr (refuge), pas un paradis (paradis).",
+   "problem": "L'anecdote repose sur le jeu paradis / haven / heaven ; en traduisant tout par ملاذ le texte devient tautologique et incompréhensible.",
+   "fix": "التعبير الفرنسي «paradis fiscal» (الجنّة الضريبية) جاء من خطأ في الترجمة: فالإنجليزية تقول «tax haven»، أي مرفأ آمن للمال (haven)، لا جنّة (heaven). تشابهٌ في النطق غيّر معنى الكلمة.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_212_les_paradis_fiscaux_expliques/s3.b0.text",
+   "severity": "bloquant",
+   "category": "mt_artefact",
+   "current": "[[أوراق بنما]]ززكسج0زز في عام 2016",
+   "gloss_fr": "[[Panama Papers]]zzksj0zz en 2016",
+   "problem": "Chaîne de caractères parasites collée au terme de glossaire, visible à l'écran.",
+   "fix": "نشر [[أوراق بنما]] في عام 2016",
+   "surface": "courses"
+  },
+  {
+   "location": "course_212_les_paradis_fiscaux_expliques/s0.b1.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "فهي تحرم الولايات من 600 مليار دولار سنويا",
+   "gloss_fr": "elle prive les États fédérés (comme les États américains) de 600 milliards par an",
+   "problem": "« les États » (pays) traduit par الولايات, qui désigne des États fédérés / les États-Unis.",
+   "fix": "فهي تحرم الدول من 600 مليار دولار سنويًا",
+   "surface": "courses"
+  },
+  {
+   "location": "ui:paywall.freeColumn",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "حر",
+   "gloss_fr": "libre (non captif)",
+   "problem": "« Gratuit » est rendu par le mot « libre » dans l'en-tête du comparatif du paywall, alors que onboardingV2.pw.free utilise déjà مجاني.",
+   "fix": "مجاني",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:paywall.premiumColumn",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "غالي",
+   "gloss_fr": "cher, coûteux",
+   "problem": "« Premium » (terme de marque à conserver) est traduit par « cher » en tête de la colonne payante du paywall.",
+   "fix": "Premium",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:onboarding.trial.trialEnds",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "تنتهي المحاكمة",
+   "gloss_fr": "le procès (judiciaire) se termine",
+   "problem": "« essai » a été pris au sens de « procès » : l'étiquette de fin d'essai parle d'un tribunal.",
+   "fix": "نهاية التجربة",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:onboarding.phone.intensity.light",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "ضوء",
+   "gloss_fr": "lumière",
+   "problem": "« Léger » (intensité d'usage du téléphone) est rendu par le substantif « lumière ».",
+   "fix": "خفيف",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:onboardingV2.screenTime.title",
+   "severity": "bloquant",
+   "category": "calque",
+   "current": "خذ وقتك إلى الوراء",
+   "gloss_fr": "prends ton temps vers l'arrière",
+   "problem": "Calque mot à mot de « Take your time back », incompréhensible en arabe sur un titre d'écran d'onboarding.",
+   "fix": "استعد وقتك لنفسك",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:paywall.error.unavailable",
+   "severity": "bloquant",
+   "category": "mt_artefact",
+   "current": "غير قادر على تحميل نظام حظر الاشتراك غير المدفوع",
+   "gloss_fr": "incapable de charger le système de blocage de l'abonnement non payé",
+   "problem": "« paywall » a été traduit littéralement en une périphrase technique absurde pour l'utilisateur.",
+   "fix": "تعذّر تحميل العرض",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:paywall.discount.perYear",
+   "severity": "bloquant",
+   "category": "grammaire",
+   "current": "سنويا، أي التزام",
+   "gloss_fr": "par an, tout engagement",
+   "problem": "La négation « sans » a disparu : la mention légale sous le prix n'a plus de sens ou dit l'inverse (perMonth est correct).",
+   "fix": "سنويًا، دون أي التزام",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:onboarding.graph.tagline",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "تقوم صوفيا بتركيب ما تعرفه⏎— بسرعة.",
+   "gloss_fr": "Sofia assemble/installe ce que tu sais — vite.",
+   "problem": "« compounds » (fait fructifier) a été pris au sens de « monter/installer » : l'accroche du graphique de progression n'a aucun sens.",
+   "fix": "Sophia تضاعف ثقافتك⏎بسرعة مذهلة.",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:friends.add.success",
+   "severity": "bloquant",
+   "category": "mt_artefact",
+   "current": "وأضاف صديق!",
+   "gloss_fr": "et un ami a ajouté !",
+   "problem": "Le toast de confirmation est un verbe narratif au passé précédé d'un « et », symptôme de TA brute ; risible pour un natif.",
+   "fix": "تمت إضافة الصديق!",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_1_la_naissance_de_l_islam_622/s0.b0.text",
+   "severity": "bloquant",
+   "category": "mt_artefact",
+   "current": "نريد قتله.",
+   "gloss_fr": "Nous voulons le tuer.",
+   "problem": "« On veut le tuer » rendu par un « nous » : le texte fait dire à l'app qu'elle veut tuer Muhammad.",
+   "fix": "كان هناك من يريد قتله.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_1_la_naissance_de_l_islam_622/s0.b0.text (idem s2.b0.text, s3.b3.e0.title)",
+   "severity": "bloquant",
+   "category": "nom_propre",
+   "current": "له اسم: **هجرية**",
+   "gloss_fr": "porte un nom : « hégirienne » (adjectif)",
+   "problem": "L'Hégire est rendue par l'adjectif هجرية (comme dans « année hégirienne ») au lieu du nom établi الهجرة, pourtant utilisé en s2.title.",
+   "fix": "له اسم: **الهجرة**",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_1_la_naissance_de_l_islam_622/s1.b0.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "نحن نعيش هناك في القبائل. [...] الدين هناك شركي: يُصلى عليه الكثير من الأصنام. قلب العبادة هو ملاذ مكعب",
+   "gloss_fr": "Nous y vivons dans les tribus. [...] on prie sur lui beaucoup d'idoles. Le cœur du culte est un refuge cubique",
+   "problem": "« on » → « nous », et « on prie de nombreuses idoles » devient يُصلى عليه, formule réservée à la prière sur le Prophète ou sur un défunt : contresens embarrassant dans un cours sur l'islam.",
+   "fix": "كان الناس يعيشون هناك في قبائل. [...] وكان الدين وثنيًا: تُعبد فيه أصنام كثيرة. وقلب العبادة معبد مكعب الشكل",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_1_la_naissance_de_l_islam_622/s1.b2.text (idem course_122/s0.b0.text, course_18/s0.b0.text et s3.b1.text)",
+   "severity": "bloquant",
+   "category": "mt_artefact",
+   "current": "فكرته عن إله واحد **ز** تهدد",
+   "gloss_fr": "son idée d'un dieu unique **z** menace",
+   "problem": "Résidu technique : un segment en gras a été remplacé par la lettre ز ; visible dans quatre segments de l'échantillon, dont deux premiers paragraphes.",
+   "fix": "فكرته عن **الإله الواحد** تهدد",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_1_la_naissance_de_l_islam_622/s2.b3.text",
+   "severity": "bloquant",
+   "category": "non_traduit",
+   "current": "محمد يشن [[رازياس]]، غارات سريعة",
+   "gloss_fr": "Muhammad lance des « raziass » (translittération)",
+   "problem": "« razzia » vient de l'arabe غزوة ; le terme de glossaire est une translittération illisible au lieu du mot arabe d'origine.",
+   "fix": "يشنّ محمد [[الغزوات]]، وهي غارات سريعة",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_1_la_naissance_de_l_islam_622/s3.b3.e1.detail",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "أول انتصار كبير، فاق العدد.",
+   "gloss_fr": "Première grande victoire, a dépassé le nombre.",
+   "problem": "« en infériorité numérique » est rendu par son contraire (« ayant surpassé en nombre »).",
+   "fix": "أول انتصار كبير رغم قلة العدد.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_1_la_naissance_de_l_islam_622/s4.b2.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "شيئًا فشيئًا، تقترب العصور القديمة.",
+   "gloss_fr": "Peu à peu, l'Antiquité s'approche.",
+   "problem": "« se referme » a été lu comme « se rapproche » : la chute du paragraphe dit l'inverse du source.",
+   "fix": "وشيئًا فشيئًا تُطوى صفحة العصور القديمة.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_100_les_fleurs_du_mal_baudelaire/hero.hook",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "وقناعة واحدة",
+   "gloss_fr": "et une conviction (opinion)",
+   "problem": "« condamnation » est passé par l'anglais « conviction » et traduit au sens de « conviction intime » : l'accroche du cours n'a plus de sens.",
+   "fix": "وحكم بالإدانة",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_100_les_fleurs_du_mal_baudelaire/s2.b0.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "يعارض حل الدولتين",
+   "gloss_fr": "s'oppose à la solution à deux États",
+   "problem": "« oppose deux états (d'âme) » est devenu la solution à deux États du conflit israélo-palestinien.",
+   "fix": "يقابل بين حالتين نفسيتين",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_100_les_fleurs_du_mal_baudelaire/s2.b0.text (idem s2.b2.caption, s4.b1.text)",
+   "severity": "bloquant",
+   "category": "nom_propre",
+   "current": "**\"الطحال والمثالية\"** [...] **الطحال**، كلمة مستعارة من اللغة الإنجليزية",
+   "gloss_fr": "« La Rate et l'Idéalisme » [...] « la rate », mot emprunté à l'anglais",
+   "problem": "« Spleen » est traduit par l'organe (la rate) dans le titre de section, dans la légende (« la rate baudelairienne ») et dans le titre du Spleen de Paris, alors que l'arabe a la forme établie سأم.",
+   "fix": "**«سأم ومثال»** [...] **السأم (Spleen)**، كلمة مستعارة من الإنجليزية — et [[سأم باريس]] pour Le Spleen de Paris",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_100_les_fleurs_du_mal_baudelaire/s2.b3.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "يتجول بودلير باعتباره **عربة أطفال**",
+   "gloss_fr": "Baudelaire se promène en tant que « poussette »",
+   "problem": "« flâneur » a été pris au sens anglais de « stroller » (poussette).",
+   "fix": "يتجوّل بودلير **متسكّعًا** (flâneur)، أي متنزّهًا يراقب المدينة بلا هدف محدد",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_100_les_fleurs_du_mal_baudelaire/s4.b3.text (idem s4.b4.text)",
+   "severity": "bloquant",
+   "category": "nom_propre",
+   "current": "**زهور ملز**",
+   "gloss_fr": "« Fleurs Malz » (titre déformé)",
+   "problem": "Le titre du recueil est corrompu dans les deux paragraphes de conclusion, alors qu'il est زهور الشر ailleurs ; la forme établie en arabe est أزهار الشر.",
+   "fix": "**أزهار الشر**",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_100_les_fleurs_du_mal_baudelaire/s1.b1.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "تيتم من قبل والده في **6 سنوات**، وهو يتشاجر مع والد زوجته [...] إنه يلهم",
+   "gloss_fr": "orphelin par son père dans 6 ans, il se dispute avec le père de sa femme [...] il (masc.) inspire",
+   "problem": "« beau-père » (mari de sa mère) est rendu par « père de son épouse », l'âge est mal construit et Jeanne Duval devient masculine.",
+   "fix": "فقد أباه في السادسة من عمره، ويتشاجر مع زوج أمه، الجنرال **أوبيك** [...] يحب **جان دوفال** [...] وهي تلهم",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_122_la_naissance_de_l_impressionnisme/s2.title",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "الطلاء الخارجي: الضوء واللون",
+   "gloss_fr": "Peinture (enduit) d'extérieur : lumière et couleur",
+   "problem": "« Peindre dehors » est devenu « peinture extérieure » au sens de revêtement de façade ; le titre de section est risible.",
+   "fix": "الرسم في الهواء الطلق: الضوء واللون",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_122_la_naissance_de_l_impressionnisme/s4.b0.text",
+   "severity": "bloquant",
+   "category": "non_traduit",
+   "current": "يقوم Seurat's [[الانطباعية الجديدة]] بتنظيم اللمس إلى نقاط",
+   "gloss_fr": "Le Seurat's néo-impressionnisme organise le toucher en points",
+   "problem": "Possessif anglais « Seurat's » laissé tel quel au milieu de la phrase arabe ; preuve d'un pivot par l'anglais.",
+   "fix": "ثم تنظّم [[الانطباعية الجديدة]] عند سورا اللمسة في نقاط",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_122_la_naissance_de_l_impressionnisme/s4.b1.e0.detail",
+   "severity": "bloquant",
+   "category": "non_traduit",
+   "current": "مانيه فضيحة مع Le Déjeuner sur l'herbe.",
+   "gloss_fr": "Manet scandale avec Le Déjeuner sur l'herbe.",
+   "problem": "Titre laissé en français dans la frise et verbe absent, alors que le même titre est traduit en s1.b1.",
+   "fix": "مانيه يثير الفضيحة بلوحة «الغداء على العشب».",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_166_narcisse_et_echo/s1.title (idem s1.b1.caption, s1.b2, s2.b1, s2.b2, s3.b3, s4.b2)",
+   "severity": "bloquant",
+   "category": "grammaire",
+   "current": "إيكو يفقد صوته",
+   "gloss_fr": "Écho (masc.) perd sa voix",
+   "problem": "La nymphe Écho est conjuguée au masculin dans tout le cours (يفقد، يراه ويقع في حبه، يتراجع مهينًا، ييبس جسده، يموت) et son nom oscille entre إيكو، صدى et الصدى.",
+   "fix": "إيكو تفقد صوتها (et au féminin partout : تراه إيكو وتقع في حبه، تنسحب إيكو مهانة، ييبس جسدها، تموت **إيكو**)",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_166_narcisse_et_echo/s1.b3.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "قام الإله **انفجار**",
+   "gloss_fr": "le dieu « Explosion »",
+   "problem": "Le dieu Pan a été traduit comme le nom commun anglais « bang ».",
+   "fix": "قام الإله **بان**",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_166_narcisse_et_echo/s3.b0.text",
+   "severity": "bloquant",
+   "category": "nom_propre",
+   "current": "يصلي أحد ضحاياه إلى [[العدو]]، إلهة الانتقام العادل",
+   "gloss_fr": "prie « l'Ennemi », déesse de la juste vengeance",
+   "problem": "Némésis (nom propre, entrée de glossaire) est rendue par le nom commun « l'ennemi ».",
+   "fix": "يدعو أحد ضحاياه [[نيميسيس]]، إلهة الانتقام العادل",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_18_la_grande_depression_1929/s1.b0.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "ضرب مؤشر **داو جونز** [...] بستة. [...] نحن نقترض لشراء الأوراق المالية",
+   "gloss_fr": "l'indice Dow Jones a frappé [...] par six. [...] Nous empruntons pour acheter des titres",
+   "problem": "« est multiplié par six » devient « a frappé par six » et le « on » impersonnel devient « nous ».",
+   "fix": "تضاعف مؤشر **داو جونز** [...] ست مرات. [...] كان الناس يقترضون لشراء الأسهم",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_18_la_grande_depression_1929/s2.b0.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "ثم يأتي [[يعمل البنك]]: موجات من العملاء [...] حول **9,000** البنوك الأمريكية ستفلس.",
+   "gloss_fr": "Puis vient « la banque fonctionne » : des vagues de clients [...] Autour de 9 000 les banques américaines feront faillite.",
+   "problem": "« bank runs » traduit comme « la banque marche » (terme de glossaire inutilisable) et la phrase sur les faillites est agrammaticale.",
+   "fix": "ثم يأتي [[التهافت على البنوك]]: موجات من العملاء [...] ويفلس نحو **9000** بنك أمريكي.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_107_crime_et_chatiment_dostoievski/description (idem s2.b0.text, s1.b3.text)",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "قتل راسكولنيكوف أحد أسماك القرش ليثبت أنه سوبرمان",
+   "gloss_fr": "Raskolnikov a tué un requin pour prouver qu'il est Superman",
+   "problem": "« usurière » est passé par « loan shark » et devient un requin ; « surhomme » devient le super-héros Superman.",
+   "fix": "يقتل راسكولنيكوف مرابية عجوزًا ليثبت أنه إنسان متفوق",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_107_crime_et_chatiment_dostoievski/s1.b2.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "بضمير المتكلم قبل أن يبدأ مرة أخرى بضمير المخاطب",
+   "gloss_fr": "à la première personne avant de recommencer à la deuxième personne",
+   "problem": "« troisième personne » est rendue par « deuxième personne » (ضمير المخاطب) : l'anecdote devient fausse.",
+   "fix": "بضمير المتكلم قبل أن يعيد كتابتها بضمير الغائب",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_212_les_paradis_fiscaux_expliques/s0.b1.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "فهي تحرم الولايات من 600 مليار دولار",
+   "gloss_fr": "elle prive les États (fédérés, au sens américain) de 600 milliards",
+   "problem": "« les États » (pays) est traduit par الولايات, qui désigne les États fédérés des États-Unis.",
+   "fix": "فهي تحرم الدول من 600 مليار دولار",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_212_les_paradis_fiscaux_expliques/s3.b0.text",
+   "severity": "bloquant",
+   "category": "mt_artefact",
+   "current": "[[أوراق بنما]]ززكسج0زز في عام 2016",
+   "gloss_fr": "[[Panama Papers]]zzksj0zz en 2016",
+   "problem": "Chaîne de caractères parasite collée au terme de glossaire, visible à l'écran.",
+   "fix": "[[أوراق بنما]] في عام 2016",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_212_les_paradis_fiscaux_expliques/s2.b2.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "الكلمة الفرنسية \"الملاذ الضريبي\" تأتي من خطأ في الترجمة: تقول الإنجليزية \"الملاذ الضريبي\"، ملاذ آمن للمال (ملاذ)، وليس جنة (الجنة)",
+   "gloss_fr": "Le mot français « refuge fiscal » vient d'une erreur de traduction : l'anglais dit « refuge fiscal », un refuge sûr (refuge), pas un paradis (le paradis)",
+   "problem": "L'anecdote repose sur paradis/haven/heaven ; les deux expressions ont été traduites par le même mot arabe et le paragraphe devient absurde.",
+   "fix": "التعبير الفرنسي «paradis fiscal» (حرفيًا: جنة ضريبية) جاء من خطأ في الترجمة: فالإنجليزية تقول «tax haven»، أي مرفأ آمن للمال (haven)، لا جنة (heaven). التباس في الأصوات غيّر معنى الكلمة.",
+   "surface": "combined"
+  },
+  {
+   "location": "onboardingV2.welcome.title (+ onboarding.graph.subtitle/withSophia/withoutSophia, onboarding.objectives.title, onboarding.wasted.transform, onboarding.welcome.title, onboardingV2.objectiveIntro.title, onboardingV2.questions.title, onboardingV2.transform.text, onboardingV2.review.quote, onboardingV2.review.t1.quote, onboardingV2.rightPlace.caption, onboardingV2.exams.quote1, paywall.quiz.reviews.title, paywall.quiz.faq.a1, paywall.course.stat.caption, ambassador.intro, ambassador.program.heading, settings.ambassador.banner.subtitle, settings.footer, training.ob.recall.legend.sophia)",
+   "severity": "majeur",
+   "category": "nom_propre",
+   "current": "مرحبًا بك في صوفيا",
+   "gloss_fr": "Bienvenue dans « Sofia » (marque translittérée)",
+   "problem": "La marque Sophia est translittérée « صوفيا » dans une vingtaine de clés alors qu'elle reste « Sophia » partout ailleurs ; incohérent et contraire à la charte (brand terms kept as they are).",
+   "fix": "مرحبًا بك في Sophia",
+   "surface": "ui"
+  },
+  {
+   "location": "settings.section.premium (+ settings.premium.title, settings.ambassador.banner.badge, ambassador.bonus, paywall.course.stat.caption « صوفيا بريميوم » ; et onboarding.premiumTrial.step1.title, paywall.trial.todayDetail, paywall.discount.subtitle où Premium devient « المميز/متميزة »)",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "بريميوم",
+   "gloss_fr": "Premium translittéré",
+   "problem": "Premium est translittéré (بريميوم) dans 5 clés et traduit par l'adjectif « distingué » (الوصول المميز، الميزات المميزة) dans 3 autres, alors qu'il doit rester « Premium » comme dans tiktokBlocker.premium.badge.",
+   "fix": "Premium",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.trial.todayDetail",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "الوصول إلى جميع الميزات المميزة.",
+   "gloss_fr": "accès à toutes les fonctionnalités distinguées",
+   "problem": "« Premium » traduit par un adjectif, ce qui efface la marque et crée une cacophonie (الميزات المميزة).",
+   "fix": "الوصول إلى جميع ميزات Premium.",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.trial.step1.title",
+   "severity": "majeur",
+   "category": "nom_propre",
+   "current": "اليوم: جرب صوفيا برو",
+   "gloss_fr": "Aujourd'hui : essaie Sofia Bro",
+   "problem": "Le nom du produit « Sophia Pro » est translittéré ; il doit rester en caractères latins comme dans paywall.quiz.faq.a2.",
+   "fix": "اليوم: جرّب Sophia Pro",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.course.title (+ paywall.course.subtitle, paywall.course.subtitle.named, explain.collections.body, explain.home.body, favorites.empty.subtitle, notification.courseNudge.bodyFallback, profile.quiz.emptySubtitle, paywall.training.how.step1, training.how.step1, training.locked.message)",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "لقد قرأت بالفعل الدورة التدريبية المجانية اليوم",
+   "gloss_fr": "tu as déjà lu la session de formation gratuite aujourd'hui",
+   "problem": "« cours » devient « دورة تدريبية » (stage de formation professionnelle) dans 11 clés : registre corporate absurde pour un cours de 10 minutes, et troisième variante du terme après دورة et درس.",
+   "fix": "لقد قرأت درسك المجاني لهذا اليوم",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.unlock.unlimited (vs paywall.feature.unlimitedCourses, onboarding.trial.unlimitedCourses, onboardingV2.pw.feature.unlimited)",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "دروس غير محدودة",
+   "gloss_fr": "leçons illimitées",
+   "problem": "Le même libellé « Cours illimités » est rendu « دروس » ici et « دورات » dans trois autres clés ; dans toute l'app « cours » oscille entre درس (V2, path, tiktokBlocker) et دورة (v1, paywall, library), ce qu'un utilisateur perçoit comme deux objets différents.",
+   "fix": "دورات غير محدودة",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.showcase.courses.quizCount (+ offer.feature2 « مسابقات تفاعلية », paywall.feature.miniQuiz « مسابقة صغيرة » vs common.miniQuiz « اختبار قصير »)",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "مسابقات %d",
+   "gloss_fr": "concours %d",
+   "problem": "« quiz » est rendu « مسابقة » (concours/compétition) dans trois clés alors que toute l'app utilise « اختبار », et le nombre est placé après le nom alors qu'en arabe le chiffre précède.",
+   "fix": "%d اختبارات",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.trial.title (+ paywall.discount.noTrial, paywall.price.trialThenYearly, paywall.quiz.faq.a3, paywall.trial.reminderDetail, paywall.trialSheet.start, profile.unlock.trial)",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "كيف تعمل النسخة التجريبية المجانية",
+   "gloss_fr": "comment fonctionne la version démo/bêta gratuite",
+   "problem": "« essai gratuit » est rendu « النسخة التجريبية » (version bêta/démo du logiciel) dans 7 clés, alors que « التجربة المجانية » / « الفترة التجريبية » sont utilisés ailleurs.",
+   "fix": "كيف تعمل تجربتك المجانية",
+   "surface": "ui"
+  },
+  {
+   "location": "profile.quiz.lockedSubtitle",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "متوفر مع الإصدار التجريبي المجاني - 3 أيام مجانًا",
+   "gloss_fr": "disponible (masc.) avec l'édition bêta gratuite - 3 jours gratuits",
+   "problem": "Quatrième variante pour « essai gratuit » (« الإصدار التجريبي » = version bêta), accord masculin alors que « quiz » est au pluriel, trait d'union en guise de tiret.",
+   "fix": "متاحة مع التجربة المجانية — 3 أيام مجانًا",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.trialSheet.title",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "ابدأ تجربة⏎المجانية لمدة 3 أيام",
+   "gloss_fr": "commence essai [indéfini] la-gratuite [défini] de 3 jours",
+   "problem": "Nom indéfini suivi d'un adjectif défini : faute d'accord évidente dans le titre de la feuille d'achat (le possessif « ton » a été perdu).",
+   "fix": "ابدأ تجربتك⏎المجانية لمدة 3 أيام",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.featureColumn",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "سمات",
+   "gloss_fr": "traits, attributs (de caractère)",
+   "problem": "« Fonctionnalités » rendu par « traits/attributs » ; le terme d'interface attendu est « الميزات » (déjà utilisé dans paywall.trial.todayDetail).",
+   "fix": "الميزات",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.header",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "كن الشخص⏎الأكثر إثارة للاهتمام⏎في الغرفة.",
+   "gloss_fr": "deviens la personne la plus intéressante dans la chambre",
+   "problem": "L'idiome anglais « in the room » est calqué ; en arabe « في الغرفة » évoque une chambre et n'a pas ce sens social.",
+   "fix": "كن الشخص⏎الأكثر إثارة للاهتمام⏎في أي مجلس.",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.lockedSubjects",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "3 مواضيع لفتح",
+   "gloss_fr": "3 sujets pour ouvrir [quoi ?]",
+   "problem": "Préposition suspendue sans complément : phrase inachevée (la variante lockedSubjectsWithPremium est, elle, complète).",
+   "fix": "3 مواضيع مقفلة",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.loading.title",
+   "severity": "majeur",
+   "category": "mt_artefact",
+   "current": "نحن نستعد لرحلتك",
+   "gloss_fr": "nous nous préparons pour ton voyage",
+   "problem": "« On prépare ton parcours » devient « nous nous apprêtons à ton voyage » (استعد لـ = se préparer à) ; la version V2 (نجهّز رحلتك) est correcte.",
+   "fix": "نجهّز رحلتك",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.program.topPick (+ onboarding.program.title « هنا برنامجك » = « ici ton programme »)",
+   "severity": "majeur",
+   "category": "mt_artefact",
+   "current": "اختيار الأعلى",
+   "gloss_fr": "le choix du plus haut",
+   "problem": "« Coup de cœur » / « Top pick » rendu par une suite de mots sans sens ; sur le même écran « Voici ton programme » est calqué par l'adverbe de lieu « ici » (à corriger en « إليك برنامجك »).",
+   "fix": "الأنسب لك",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.program.hoursSavedCaption (+ onboarding.program.hoursUnit « ح / سنة »)",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "من الوقت المحفوظة",
+   "gloss_fr": "du temps sauvegardé (adjectif au féminin)",
+   "problem": "Adjectif féminin pour un nom masculin, « محفوظ » signifie « stocké » et non « gagné », et l'unité « h/an » est abrégée avec la lettre « ح » qui n'abrège pas « heure » (hoursSaved utilise « س »).",
+   "fix": "من الوقت الموفَّر",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.program.nickname.comprendreLeMonde",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "المراقب العالمي",
+   "gloss_fr": "l'observateur international/mondial",
+   "problem": "« Observateur du monde » devient « observateur mondial », comme un observateur de l'ONU.",
+   "fix": "مراقب العالم",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.showcase.collections.title",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "اتبع مسارات⏎موضوعية",
+   "gloss_fr": "suis des parcours objectifs (impartiaux)",
+   "problem": "« thématiques » est rendu par « موضوعية », dont le premier sens est « objectif, impartial ».",
+   "fix": "اتبع مسارات⏎حسب الموضوع",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.phone.1to2h (+ onboarding.phone.2to4h)",
+   "severity": "majeur",
+   "category": "non_traduit",
+   "current": "1h إلى 2h",
+   "gloss_fr": "1h à 2h (abréviation latine)",
+   "problem": "L'abréviation française « h » est laissée telle quelle dans une option de réponse en arabe, alors que les options voisines sont traduites (أقل من 1 ساعة).",
+   "fix": "من ساعة إلى ساعتين",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.phone.hours.2",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "ساعاتين",
+   "gloss_fr": "deux heures (mal orthographié)",
+   "problem": "Faute d'orthographe sur le duel : la forme correcte est « ساعتان/ساعتين ».",
+   "fix": "ساعتان",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.wasted.daysComplete",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "هذه أيام %@ كاملة.",
+   "gloss_fr": "ce sont jours « 23 jours » complets",
+   "problem": "Le placeholder contient déjà « 23 يوما » : la phrase assemblée répète « jours » et casse la syntaxe (« Soit %@ complets »).",
+   "fix": "أي %@ كاملة.",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.wasted.hoursLost (+ onboarding.wasted.intro « وهذا هو »)",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "الساعات الضائعة في السنة.",
+   "gloss_fr": "les heures perdues par an",
+   "problem": "Fragment affiché après un nombre : l'article défini rend l'assemblage « 365 les-heures-perdues » agrammatical, et l'intro se termine par « وهذا هو » (et ceci est) qui ne s'enchaîne pas.",
+   "fix": "ساعة ضائعة في السنة.",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.welcome.rotating.art (+ rotating.histoire « تاريخ », rotating.sciences « علوم », subject.art, subject.histoire, subject.sciences ; vs litterature « الأدب », mythologie « الأساطير »)",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "فن",
+   "gloss_fr": "art (sans article)",
+   "problem": "Mots tournants et noms de matières tantôt avec article (الأدب، الأساطير) tantôt sans (فن، تاريخ، علوم) ; après « شريكك لإتقان » l'absence d'article est fautive, et « le monde actuel » donne « الشؤون الحالية » ici mais « الشؤون الجارية » dans subject.comprendreLeMonde.short.",
+   "fix": "الفن",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.exams.quote1",
+   "severity": "majeur",
+   "category": "mt_artefact",
+   "current": "ارتفع متوسط تاريخي بمقدار 3 نقاط",
+   "gloss_fr": "ma moyenne historique a augmenté de 3 points",
+   "problem": "« متوسط تاريخي » se lit « moyenne historique » (adjectif) et non « ma moyenne en histoire » ; témoignage incompréhensible.",
+   "fix": "ارتفع معدّلي في مادة التاريخ 3 نقاط هذا الفصل",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.rightPlace.caption",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "...مع هذا الهدف، حقق تقدمًا حقيقيًا مع صوفيا.",
+   "gloss_fr": "…avec cet objectif, réalise (impératif / passé singulier) un vrai progrès avec Sofia",
+   "problem": "Le verbe est à l'impératif ou au passé singulier alors que le sujet assemblé est « X % des utilisateurs » : il faut un pluriel au présent ; marque translittérée et points de suspension ASCII.",
+   "fix": "…ممّن لديهم هذا الهدف يحققون تقدمًا ملحوظًا مع Sophia.",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.weeks.title (+ .few, .many, .one, .other, .two)",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "هذا هو %d أسابيع في السنة",
+   "gloss_fr": "ceci est %d semaines par an",
+   "problem": "« Soit » / « That's » calqué par « هذا هو » (ceci est) dans toutes les formes plurielles ; l'arabe dit « أي ».",
+   "fix": "أي %d أسبوعًا في السنة",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.transform.words",
+   "severity": "majeur",
+   "category": "autre",
+   "current": "المعرفة والفن والفلسفة والعلوم والتاريخ والأدب",
+   "gloss_fr": "la connaissance et l'art et la philosophie et les sciences et l'histoire et la littérature",
+   "problem": "La liste source est séparée par des virgules (mots qui défilent) ; la version arabe les relie par « و », donc si le code découpe sur la virgule, l'animation affiche la phrase entière d'un bloc ; « culture » devient aussi « معرفة » au lieu de « ثقافة ».",
+   "fix": "الثقافة، الفن، الفلسفة، العلوم، التاريخ، الأدب",
+   "surface": "ui"
+  },
+  {
+   "location": "account.create.subtitle (+ account.signedOut.headline)",
+   "severity": "majeur",
+   "category": "mt_artefact",
+   "current": "قم بعمل نسخة احتياطية من التقدم المحرز الخاص بك إلى السحابة",
+   "gloss_fr": "effectue la réalisation d'une copie de sauvegarde du progrès réalisé qui t'appartient vers le nuage",
+   "problem": "Dix mots pour « Sauvegarde ta progression dans le cloud » : périphrases « قم بعمل », « المحرز », « الخاص بك » typiques de la TA, alors qu'account.signOut.message montre le bon mot (تقدمك).",
+   "fix": "احفظ تقدمك في السحابة",
+   "surface": "ui"
+  },
+  {
+   "location": "account.delete.message",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "هذا دائم.",
+   "gloss_fr": "ceci est permanent / durable",
+   "problem": "Calque de l'anglais « This is permanent » dans une boîte de dialogue destructive ; en arabe on annonce une action définitive et irréversible.",
+   "fix": "هذا الإجراء نهائي ولا يمكن التراجع عنه. سيتم حذف حسابك والبيانات المرتبطة به.",
+   "surface": "ui"
+  },
+  {
+   "location": "cards.globalXP",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "+%d XP العالمية",
+   "gloss_fr": "+N XP mondiaux",
+   "problem": "« XP globaux » (= au total) pris au sens « mondial/international », et adjectif défini après un nom indéfini.",
+   "fix": "+%d XP إجمالية",
+   "surface": "ui"
+  },
+  {
+   "location": "common.letsGoShort",
+   "severity": "majeur",
+   "category": "mt_artefact",
+   "current": "دعنا نذهب",
+   "gloss_fr": "laisse-nous partir (quelque part)",
+   "problem": "« C'est parti » calqué de « let's go » au sens de se déplacer ; toutes les autres occurrences (common.letsGo, path.quiz.go, onboardingV2.profile.cta) utilisent « لنبدأ ».",
+   "fix": "لنبدأ",
+   "surface": "ui"
+  },
+  {
+   "location": "friends.error.alreadyFriends (+ friends.error.notFriends « أنتم لستم أصدقاء », friends.request.autoAccepted « أنتم الآن أصدقاء! »)",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "أنتم بالفعل أصدقاء.",
+   "gloss_fr": "vous (pluriel, trois personnes ou plus) êtes déjà amis",
+   "problem": "Pluriel employé pour deux personnes ; l'arabe exige le duel (أنتما) dans ces trois messages.",
+   "fix": "أنتما صديقان بالفعل.",
+   "surface": "ui"
+  },
+  {
+   "location": "favorites.empty.title",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "لا يوجد مفضلة",
+   "gloss_fr": "il n'existe (masc.) favorite (fém.)",
+   "problem": "Désaccord de genre entre le verbe et le nom, et singulier là où l'on attend un pluriel.",
+   "fix": "لا مفضلات بعد",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.quiz.review1.quote (+ paywall.quiz.review2.quote « وأخيرا التطبيق حيث أتذكر », paywall.quiz.review3.quote « الاختبارات ترسيخ كل شيء »)",
+   "severity": "majeur",
+   "category": "mt_artefact",
+   "current": "5 دقائق ويلتصق.",
+   "gloss_fr": "5 minutes et ça se colle",
+   "problem": "Les trois témoignages de cet écran sont visiblement machine-traduits : « it sticks » pris au sens physique de coller, article défini + « حيث » calqués dans review2, nom verbal (ترسيخ) à la place du verbe conjugué (ترسّخ) dans review3.",
+   "fix": "5 دقائق وتبقى المعلومة في ذهني.",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.quiz.demo.badge.chrono",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "الجدول الزمني",
+   "gloss_fr": "l'emploi du temps, le calendrier",
+   "problem": "Le type de quiz « Chronologie » (remettre des périodes dans l'ordre) est rendu par « emploi du temps » ; quiz.chronological.* utilise correctement « الترتيب الزمني ».",
+   "fix": "ترتيب زمني",
+   "surface": "ui"
+  },
+  {
+   "location": "path.quiz.rule.questions",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "%d سؤالًا مختلطًا من دروس المستوى الـ%d",
+   "gloss_fr": "N questions mélangées tirées des cours du niveau n° N",
+   "problem": "Le second nombre (nombre de cours du niveau) est rattaché au niveau : la règle affiche « du niveau 4 » au lieu de « des 4 cours du niveau ».",
+   "fix": "%d سؤالًا متنوّعًا من الدروس الـ%d في هذا المستوى",
+   "surface": "ui"
+  },
+  {
+   "location": "training.how.step2 (vs paywall.training.how.step2 « تدريبك »)",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "أسئلتها تنضم إلى ممارستك",
+   "gloss_fr": "ses questions rejoignent ta pratique / ton exercice",
+   "problem": "« Entraînement », nom de la fonctionnalité traduit « التدريب » partout (tab.training, training.title), devient ici « ممارسة » ; la même phrase est correcte dans paywall.training.how.step2.",
+   "fix": "تنضم أسئلته إلى تدريبك",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.blocker.subtitle (+ onboardingV2.features.row6 « حاجب », onboardingV2.pw.feature.tiktokBlocker et tiktokBlocker.card.premium.title « مانع TikTok », paywall.blocker.title « أداة الحظر »)",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "{n} أيام تجربة مجانية لتجربة أداة الحظر.",
+   "gloss_fr": "N jours d'essai gratuit pour essayer l'outil de blocage",
+   "problem": "« blocker » est rendu par trois termes différents (أداة الحظر، حاجب، مانع) et la phrase répète « تجربة » deux fois.",
+   "fix": "{n} أيام مجانية لتجرّب مانع التطبيقات.",
+   "surface": "ui"
+  },
+  {
+   "location": "friends.title (+ friends.add.subtitle « تصنيفك », onboarding.showcase.xp.title « تصنيف », globalRank.badge « الترتيب العالمي », globalRank.title « المرتبة العالمية », globalRank.newRank « رتبة »)",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "تصنيف الأصدقاء",
+   "gloss_fr": "classification / catégorisation des amis",
+   "problem": "« classement » rendu par « تصنيف » (catégorisation) ; classement/rang oscillent entre تصنيف، ترتيب، مرتبة، رتبة selon les écrans.",
+   "fix": "ترتيب الأصدقاء",
+   "surface": "ui"
+  },
+  {
+   "location": "celebration.collectionAdvanced",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "لقد انتقلت إلى أعلى في المجموعة!",
+   "gloss_fr": "tu t'es déplacé vers le haut dans la collection !",
+   "problem": "Calque de l'anglais « you moved up » ; l'écran de célébration sonne faux alors qu'un simple « tu as progressé » suffit.",
+   "fix": "تقدّمت في المجموعة!",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.blocker.subtitle.noTrial (+ paywall.course.proPitch « افتح Sophia PRO », paywall.quiz.subtitle, paywall.unlock.you « تفتح », paywall.cta.unlockFree « فتح مجانا », library.unlock « فتح », course.unlock.cta)",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "افتح أداة الحظر مع Sophia PRO.",
+   "gloss_fr": "ouvre l'outil de blocage avec Sophia PRO",
+   "problem": "« Débloquer » est systématiquement rendu par « ouvrir » (افتح/فتح) : « افتح Sophia PRO » se lit « lance l'application Sophia PRO » et « تفتح » (tu ouvres) ne dit pas « tu débloques ».",
+   "fix": "فعّل مانع التطبيقات مع Sophia PRO.",
+   "surface": "ui"
+  },
+  {
+   "location": "tab.library (+ library.title « مكتبة », settings.title « إعدادات », settings.section.data/help/legal/progress/appearance, legal.privacy.title, legal.terms.title, paywall.privacy, paywall.terms, account.title, account.email, language.section, feedback.category.label, feedback.message.label, settings.about.version, ambassador.stat.income/time)",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "مكتبة",
+   "gloss_fr": "bibliothèque (sans article : « une bibliothèque »)",
+   "problem": "Les onglets, titres d'écran et sections sont tantôt définis (الرئيسية، المسار، الصوت، الاشتراك) tantôt indéfinis (مكتبة، إعدادات، بيانات، مساعدة، خصوصية، شروط) ; en arabe un libellé de navigation prend l'article et l'incohérence saute aux yeux dans la barre d'onglets et les réglages.",
+   "fix": "المكتبة",
+   "surface": "ui"
+  },
+  {
+   "location": "notification.courseNudge.bodyFallback (+ notification.courseNudge.body)",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "هناك دورة تدريبية جديدة في انتظارك - خمس دقائق هي كل ما يتطلبه الأمر.",
+   "gloss_fr": "il y a une nouvelle session de formation qui t'attend - cinq minutes est tout ce que la chose nécessite",
+   "problem": "Notification push calquée de l'anglais (« all it takes ») avec « دورة تدريبية », guillemets ASCII dans la variante body et trait d'union en guise de tiret.",
+   "fix": "درس جديد في انتظارك — 5 دقائق تكفي.",
+   "surface": "ui"
+  },
+  {
+   "location": "training.ob.recall.title",
+   "severity": "majeur",
+   "category": "mt_artefact",
+   "current": "نحن نختبرك حتى يظل ما تعلمته ثابتًا بالفعل.",
+   "gloss_fr": "nous, nous te testons pour que ce que tu as appris reste fixe effectivement",
+   "problem": "Traduit depuis l'anglais et non du français (qui parle de mémorisation active), pronom explicite « نحن » et « ثابتًا بالفعل » calqué de « actually sticks ».",
+   "fix": "هنا نستخدم الاستدعاء النشط لمساعدتك على تذكّر دروسك فعلًا.",
+   "surface": "ui"
+  },
+  {
+   "location": "offer.billed (+ onboardingV2.pw.monthlyBilling « فاتورة شهرية », weeklyBilling, yearlyBilling)",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "فاتورة",
+   "gloss_fr": "facture (nom)",
+   "problem": "« facturé » (participe sous le prix) est rendu par le nom « facture » ; paywall.plan.billedYearly montre la bonne forme « يُفوتر ».",
+   "fix": "يُفوتر",
+   "surface": "ui"
+  },
+  {
+   "location": "offer.feature1",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "240 دورة المعرفة العامة",
+   "gloss_fr": "240 cours la-connaissance-générale",
+   "problem": "Annexion impossible après un nombre (il faut une préposition) et « culture générale » se dit « الثقافة العامة » (cf. onboardingV2.knowledge.title), pas « المعرفة العامة ».",
+   "fix": "240 دورة في الثقافة العامة",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.objective.curious (+ onboarding.objective.impress « أبهر », learnNew « تعلم », social « كن » vs reduceScroll « خفض وقت التمرير »)",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "كن أكثر فضولا",
+   "gloss_fr": "sois plus curieux (impératif)",
+   "problem": "Sous la question « Ton objectif avec Sophia ? », quatre options sont à l'impératif (ordres donnés à l'utilisateur) et une est un nom d'action ; la V2 (onboardingV2.objective.*) utilise uniformément des noms d'action.",
+   "fix": "أن أصبح أكثر فضولًا",
+   "surface": "ui"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/s2.b3.text (idem s3.b3.e1.detail)",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "ومع ذلك، فقد فاز أتباعه في **بدر** / أول انتصار كبير، فاق العدد.",
+   "gloss_fr": "Pourtant ses fidèles gagnent à Badr / Première grande victoire, il a dépassé en nombre.",
+   "problem": "« en infériorité numérique » est omis dans le texte et devient son contraire (« a surpassé en nombre ») dans la frise.",
+   "fix": "ورغم قلّة عددهم، ينتصر أتباعه في **بدر** عام **624**. / أول انتصار كبير رغم قلة العدد.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/s3.b3.e3.title",
+   "severity": "majeur",
+   "category": "nom_propre",
+   "current": "الاستيلاء على مكة",
+   "gloss_fr": "La mainmise sur La Mecque",
+   "problem": "L'événement a un nom consacré en arabe (فتح مكة) ; « الاستيلاء » connote une prise de force, ce qui contredit la reddition sans combat.",
+   "fix": "فتح مكة",
+   "surface": "courses"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/s4.b0.text",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "التوسع ليس عسكريا فقط. وهي منظمة أيضًا. ... تركيب القوة الجديدة في المناطق المتعبة في بيزنطة",
+   "gloss_fr": "L'expansion n'est pas que militaire. Elle (fém.) est aussi organisée… le montage du nouveau pouvoir dans les régions fatiguées en Byzance",
+   "problem": "Pronom au mauvais genre, « installation » rendu par « montage / assemblage » et « fatiguées de Byzance » devenu « fatiguées en Byzance ».",
+   "fix": "التوسع ليس عسكريًا فقط، بل هو منظَّم أيضًا. ... يسهّل هذا التسامح المنظَّم استقرار السلطة الجديدة في مناطق سئمت حكم بيزنطة.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/s4.b2.text",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "اللغة العربية تصبح أسمنت الإمبراطورية ... شيئًا فشيئًا، تقترب العصور القديمة.",
+   "gloss_fr": "L'arabe devient le ciment (matériau de construction) de l'empire… Peu à peu, l'Antiquité s'approche.",
+   "problem": "« ciment » traduit littéralement (أسمنت = matériau) et « se referme » traduit par « s'approche » : la phrase finale dit le contraire.",
+   "fix": "تصبح اللغة العربية اللُّحمة التي تشدّ الإمبراطورية ... وشيئًا فشيئًا، تُطوى صفحة العصور القديمة.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire/title (idem s0.b0.text, s2.b3.text)",
+   "severity": "majeur",
+   "category": "nom_propre",
+   "current": "زهور الشر، بودلير",
+   "gloss_fr": "Fleurs du Mal (graphie زهور)",
+   "problem": "La forme établie en arabe du titre est أزهار الشر ; le titre varie en plus avec « زهور ملز » plus loin.",
+   "fix": "أزهار الشر، بودلير",
+   "surface": "courses"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire/s0.b1.text (idem s3.title)",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "يقارن الشاعر بالكيميائي / المراسلات والكيمياء الشعرية",
+   "gloss_fr": "Il compare le poète au chimiste / Correspondances et chimie poétique",
+   "problem": "« alchimiste / alchimie » rendu par « chimiste / chimie » ; l'arabe distingue الخيميائي / الخيمياء.",
+   "fix": "يشبّه الشاعر بالخيميائي / التجاوبات والخيمياء الشعرية",
+   "surface": "courses"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire/s1.b1.text",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "تيتم من قبل والده في **6 سنوات** ... إنه يلهم العديد من القصائد",
+   "gloss_fr": "Orphelin par son père en 6 ans… Il (masc.) inspire plusieurs poèmes",
+   "problem": "« Orphelin de père à 6 ans » est rendu de façon agrammaticale, et le pronom renvoyant à Jeanne Duval est au masculin.",
+   "fix": "فقد أباه في **السادسة** من عمره ... وهي تلهم عددًا من قصائد الديوان.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire/s3.title (idem s3.b0.text, s3.b1.attribution)",
+   "severity": "majeur",
+   "category": "nom_propre",
+   "current": "«المراسلات»",
+   "gloss_fr": "« Les Correspondances » (au sens courrier)",
+   "problem": "Le poème « Correspondances » est connu en arabe sous « تجاوبات » ; المراسلات évoque le courrier.",
+   "fix": "«تجاوبات»",
+   "surface": "courses"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire/s3.b2.text (idem s4.b4.text)",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "تفتح هذه الشعرية الطريق أمام **[[الرمزية وإرث بودلير]]**، التي حملها لاحقًا فيرلين",
+   "gloss_fr": "ouvre la voie au « Symbolisme et héritage de Baudelaire », porté ensuite par Verlaine",
+   "problem": "Le libellé arabe du terme de glossaire « symbolisme » contient un sous-titre entier, illisible au milieu d'une phrase.",
+   "fix": "تفتح هذه الشعرية الطريق أمام **[[الرمزية]]**، التي حملها لاحقًا فيرلين ومالارميه.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire/s4.title (idem s4.b2.e2.date)",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "الحداثة والأجيال القادمة",
+   "gloss_fr": "Modernité et générations futures",
+   "problem": "« Postérité » (héritage, influence) traduit par « générations à venir », y compris comme étiquette de frise.",
+   "fix": "الحداثة والإرث (frise : الإرث)",
+   "surface": "courses"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire/s4.b2.e1.title (idem s4.b2.e1.detail)",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "إعادة التأهيل / تم أخيرًا رفع القصائد الست الخاضعة للرقابة.",
+   "gloss_fr": "Rééducation (médicale) / Les six poèmes censurés sont enfin soulevés.",
+   "problem": "La « réhabilitation » judiciaire se dit رد الاعتبار, et « levés » (la censure) est devenu « soulevés » (les poèmes).",
+   "fix": "رد الاعتبار / يُرفع الحظر أخيرًا عن القصائد الست.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_100/s0.b0.text (تشارلز), s1.b1.text (جين دوفال), s4.b3.text (هوجو) ; course_122/s0.b0.text (ليروي), s1.b1.text (إدوارد مانيه), s3.b0.text (بيرث موريسوت، جربوا), s2.b3.text (شيفريول)",
+   "severity": "majeur",
+   "category": "nom_propre",
+   "current": "تشارلز بودلير / جين دوفال / إدوارد مانيه / بيرث موريسوت / لويس ليروي",
+   "gloss_fr": "Charles prononcé à l'anglaise (Tcharlz), Jane Duval, Edward Manet, Berth Morisott, Leroy lu « Liroy »",
+   "problem": "Les noms français sont translittérés d'après la prononciation anglaise alors que l'arabe a des formes établies (شارل est d'ailleurs employé en s3.b1.attribution du même cours).",
+   "fix": "شارل بودلير / جان دوفال / فيكتور هوغو / إدوار مانيه / بيرت موريزو / لويس لوروا / مقهى غيربوا / شيفرول",
+   "surface": "courses"
+  },
+  {
+   "location": "course_122_la_naissance_de_l_impressionnisme/s1.b0.text",
+   "severity": "majeur",
+   "category": "mt_artefact",
+   "current": "لكي يبقى الرسام على قيد الحياة، يجب أن يعرض ... نحن بحاجة إلى رسم دقيق",
+   "gloss_fr": "Pour que le peintre reste en vie, il doit exposer… Nous avons besoin d'un dessin précis",
+   "problem": "« Pour exister » devenu « pour survivre », et « On exige » rendu par « nous avons besoin ».",
+   "fix": "ولكي يكون للرسام وجود، عليه أن يعرض في الصالون. ويُشترط رسمٌ دقيق وسطحٌ أملس لا أثر فيه لضربات الفرشاة.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_122_la_naissance_de_l_impressionnisme/s1.b1.text",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "رفضت هيئة المحلفين أكثر من لوحات **3,000**",
+   "gloss_fr": "le jury d'assises refuse plus de tableaux 3 000",
+   "problem": "Le jury du Salon est rendu par le jury de tribunal (هيئة المحلفين) alors que s1.b3 dit correctement لجنة التحكيم, et l'ordre des mots est cassé.",
+   "fix": "في **1863**، ترفض لجنة التحكيم أكثر من **3000** لوحة.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_122_la_naissance_de_l_impressionnisme/s0.b1.text",
+   "severity": "majeur",
+   "category": "nom_propre",
+   "current": "السخرية من عنوان *، الانطباع، الشمس المشرقة*، عمد ليروي عن غير قصد إلى تعميد",
+   "gloss_fr": "en se moquant du titre *, l'impression, le soleil brillant*, Leroy a baptisé (sacrement)",
+   "problem": "Virgule parasite dans l'italique, titre du tableau non conforme à la forme établie (انطباع، شروق الشمس) et « baptiser » pris au sens religieux (تعميد).",
+   "fix": "وبسخريته من عنوان *انطباع، شروق الشمس*، أطلق لوروا من دون قصد اسمًا على أول حركة طليعية كبرى في الفن الحديث.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_122/s2.b0.text, s3.b0.text (idem course_1/s1.b0.text بدو الصحراء [[البدو]], course_1/s3.b1.text خلفائه [[الخليفة]])",
+   "severity": "majeur",
+   "category": "mt_artefact",
+   "current": "مع أنابيب الطلاء والهواء [[أنابيب الطلاء والهواء الطلق]] / من منطقة Batignolles في مقهى [[مقهى جربوا]]",
+   "gloss_fr": "avec les tubes de peinture et l'air [[tubes de peinture et plein air]] / du quartier Batignolles au café [[café Guerbois]]",
+   "problem": "Le terme de glossaire est doublé par sa propre traduction juste avant, et « Batignolles » reste en caractères latins.",
+   "fix": "مع [[أنابيب الطلاء والهواء الطلق]]، يمكنه أخيرًا أن ينصب حامله في الخارج أمام المشهد. / يجتمع رسامو حي باتينيول في [[مقهى غيربوا]].",
+   "surface": "courses"
+  },
+  {
+   "location": "course_122_la_naissance_de_l_impressionnisme/s3.b1.caption",
+   "severity": "majeur",
+   "category": "nom_propre",
+   "current": "تستضيف ورشة المصور نادر المعرض الانطباعي الأول.",
+   "gloss_fr": "L'atelier (workshop) du photographe « rare » accueille la première exposition.",
+   "problem": "Nadar est écrit نادر (= « rare » en arabe) ici et نادار dans la frise ; « atelier » est rendu par ورشة (workshop) au lieu de مرسم.",
+   "fix": "يستضيف مرسم المصوّر نادار المعرض الانطباعي الأول.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_122_la_naissance_de_l_impressionnisme/s4.title",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "ما تغيرت الانطباعية",
+   "gloss_fr": "Ce que l'impressionnisme a été changé",
+   "problem": "Verbe intransitif sans objet : le titre de section est agrammatical.",
+   "fix": "ما الذي غيّرته الانطباعية",
+   "surface": "courses"
+  },
+  {
+   "location": "course_122_la_naissance_de_l_impressionnisme/s4.b2.text",
+   "severity": "majeur",
+   "category": "nom_propre",
+   "current": "[[متحف دورسيه]]",
+   "gloss_fr": "musée « Dorsay »",
+   "problem": "Le musée d'Orsay s'écrit متحف أورسيه en arabe ; « دورسيه » agglutine la particule d'.",
+   "fix": "[[متحف أورسيه]]",
+   "surface": "courses"
+  },
+  {
+   "location": "course_166_narcisse_et_echo/title, s0.b0.text, s2.b1.text, s3.b1.text, s3.b3.text, s4.b2.text",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "نرسيس / نرجس / نارسيس ; صدى / الصدى / إيكو",
+   "gloss_fr": "trois graphies pour Narcisse (dont « narcisse » la fleur), trois pour Écho (dont « l'écho » nom commun)",
+   "problem": "Les deux héros changent de nom d'un paragraphe à l'autre ; نرجس et صدى sont les noms communs (fleur, écho) et brouillent le récit.",
+   "fix": "نرسيس partout pour Narcisse, إيكو partout pour Écho (garder النرجس seulement pour la fleur en s4.b0)",
+   "surface": "courses"
+  },
+  {
+   "location": "course_166_narcisse_et_echo/s3.b3.text",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "نرجس مستهلك. الصدى، المؤمن رغم كل شيء، يكرر وداعه الأخير.",
+   "gloss_fr": "Narcisse est consommé (ou : consommateur). L'écho, le croyant malgré tout, répète son dernier adieu.",
+   "problem": "« se consume » rendu par « consommé » et « fidèle » par « croyant », avec Écho au masculin.",
+   "fix": "يذوي نرسيس. أما إيكو، الوفيّة رغم كل شيء، فتردد وداعه الأخير.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_207_l_otan_a_quoi_ca_sert_encore/s1.b0.text",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "وُلد **[[حلف شمال الأطلسي]]** رسميًا ... وقعت اثنتا عشرة دولة على اتفاقية لحلف شمال الأطلسي",
+   "gloss_fr": "Le [[Traité de l'Atlantique Nord]] naît officiellement… douze pays signent une convention pour l'OTAN",
+   "problem": "Le terme de glossaire « Traité de l'Atlantique Nord » a été déplacé sur l'organisation, et le traité lui-même devient une vague « convention ».",
+   "fix": "وُلد الناتو رسميًا في 4 أبريل 1949، حين وقّعت اثنتا عشرة دولة **[[معاهدة شمال الأطلسي]]** في واشنطن.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_207_l_otan_a_quoi_ca_sert_encore/s3.b3.text",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "الناتو باللغة الإنجليزية وحلف شمال الأطلسي بالفرنسية",
+   "gloss_fr": "« Nato » en anglais et « Alliance de l'Atlantique Nord » en français",
+   "problem": "L'anecdote porte sur les sigles inversés NATO / OTAN ; en les traduisant, elle perd tout son sens.",
+   "fix": "يوجد اختصار المنظمة بشكلين معكوسين في لغتيها الرسميتين: NATO بالإنجليزية وOTAN بالفرنسية.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_18_la_grande_depression_1929/s1.b0.text (idem s1.title, s1.b1.caption)",
+   "severity": "majeur",
+   "category": "mt_artefact",
+   "current": "في عشرينيات القرن الماضي ... ضرب مؤشر **داو جونز** ... بستة. ... نحن نقترض لشراء الأوراق المالية",
+   "gloss_fr": "Dans les années 20 du siècle dernier… le Dow Jones a été frappé par six… Nous empruntons pour acheter des titres",
+   "problem": "« Années folles » perd son gras et prend trois formes (العشرينيات الصاخبة / العشرينات الهادرة / عشرينيات القرن الماضي), « multiplié par six » devient « frappé par six », et « On emprunte » devient « nous ».",
+   "fix": "في **العشرينيات الصاخبة** (سنوات 1920)، كانت أمريكا تستهلك بالدَّين ... تضاعف مؤشر **داو جونز** ست مرات ... يقترض الناس لشراء الأسهم مراهنين على ارتفاعها.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_18_la_grande_depression_1929/s4.b0.text",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "وأطلق صفقة روزفلت الجديدة (1933). ... وتعتمد الدولة على التعافي: الأعمال الكبرى",
+   "gloss_fr": "et lance la nouvelle affaire de Roosevelt (1933)… L'État compte sur la guérison : les grandes affaires",
+   "problem": "Les termes de glossaire [[New Deal]] et [[relance]] ont perdu leur balisage, « relance » est traduit par « reprise » et « grands travaux » par « grandes affaires ».",
+   "fix": "يطلق [[الصفقة الجديدة (نيو ديل)، 1933]]. ... وتراهن الدولة على [[الإنعاش الاقتصادي]]: أشغال كبرى، وتنظيم للبنوك، وبداية للحماية الاجتماعية.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_18_la_grande_depression_1929/s4.b1.e1.title",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "فشل البنوك",
+   "gloss_fr": "L'échec des banques",
+   "problem": "« Faillites bancaires » se dit إفلاس البنوك ; فشل signifie « échec ».",
+   "fix": "إفلاس البنوك",
+   "surface": "courses"
+  },
+  {
+   "location": "course_107_crime_et_chatiment_dostoievski/description (idem s1.b3.text ; nom : s0.b0, s2.b0, s4.b0)",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "ليثبت أنه سوبرمان / روديون راسكولينكوف",
+   "gloss_fr": "pour prouver qu'il est Superman / Rodion Raskolinkov",
+   "problem": "« surhomme » rendu par le super-héros Superman alors que le corps du cours dit الرجل الخارق, et le nom du héros alterne entre راسكولنيكوف et راسكولينكوف.",
+   "fix": "ليثبت أنه إنسان أعلى (et راسكولنيكوف partout)",
+   "surface": "courses"
+  },
+  {
+   "location": "course_107_crime_et_chatiment_dostoievski/s3.b1.text",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "امرأة شابة ضحت بالدعارة لإطعام أسرتها. تقرأ حلقة **[[قيامة لعازر]]**",
+   "gloss_fr": "une jeune femme qui a sacrifié la prostitution pour nourrir sa famille. Elle lit l'épisode (de série TV) de la Résurrection de Lazare",
+   "problem": "« sacrifiée à la prostitution » est inversé (elle sacrifie la prostitution), et « épisode » est rendu par le terme télévisuel حلقة.",
+   "fix": "شابة دُفعت إلى الدعارة لإعالة أسرتها. تقرأ عليه قصة **[[قيامة لعازر]]**",
+   "surface": "courses"
+  },
+  {
+   "location": "course_212_les_paradis_fiscaux_expliques/hero.hook",
+   "severity": "majeur",
+   "category": "registre",
+   "current": "مرحبا بكم في عالم الملاذات الضريبية.",
+   "gloss_fr": "Bienvenue à vous (pluriel) dans le monde des paradis fiscaux.",
+   "problem": "Adresse au pluriel alors que la voix de l'app tutoie au singulier (cf. course_242 : احبس أنفاسك).",
+   "fix": "مرحبًا بك في عالم الملاذات الضريبية.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_212_les_paradis_fiscaux_expliques/s2.title",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "فن تحقيق الربح يختفي",
+   "gloss_fr": "L'art de réaliser le profit disparaît",
+   "problem": "« faire disparaître un profit » devient une phrase cassée dont le sujet est « l'art » et le verbe « disparaît ».",
+   "fix": "فنّ إخفاء الأرباح",
+   "surface": "courses"
+  },
+  {
+   "location": "course_242_pourquoi_a_t_on_le_hoquet/s1.b2.text",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "وهذه الصفقة هي التي تُحدث صوت «هِك»",
+   "gloss_fr": "et c'est cette transaction (deal) qui produit le « hic »",
+   "problem": "« claquement » rendu par صفقة, que tout lecteur lit comme « transaction / marché conclu ».",
+   "fix": "وهذا الانصفاق المفاجئ هو الذي يُحدث صوت «هِك».",
+   "surface": "courses"
+  },
+  {
+   "location": "ui:onboardingV2.welcome.title (idem onboarding.graph.*, onboarding.wasted.transform, onboardingV2.questions.title, témoignages, ambassador.*, settings.footer)",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "مرحبًا بك في صوفيا",
+   "gloss_fr": "Bienvenue dans « Sofia » (marque translittérée)",
+   "problem": "La marque, à conserver telle quelle, est translittérée صوفيا sur l'écran d'accueil et dans une trentaine de chaînes, alors que les écrans récents écrivent Sophia.",
+   "fix": "مرحبًا بك في Sophia",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:paywall.course.subtitle (idem explain.*, training.how.step1, training.locked.message, favorites.empty.subtitle)",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "لقد استخدمت الدورة التدريبية المجانية لهذا اليوم",
+   "gloss_fr": "tu as utilisé le stage de formation gratuit d'aujourd'hui",
+   "problem": "« cours » a trois rendus concurrents : دورة (onglets, bibliothèque), درس (onboarding V2, parcours, bloqueur) et دورة تدريبية (« stage de formation ») ; pour une leçon de 10 minutes, درس est le terme naturel.",
+   "fix": "لقد قرأت درسك المجاني لهذا اليوم (et درس/دروس partout)",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:settings.premium.title (idem settings.section.premium, ambassador.bonus, onboarding.premiumTrial.step1.title, paywall.trial.todayDetail, paywall.teaserSubtitle)",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "الترقية إلى بريميوم",
+   "gloss_fr": "passer à « Brimyoum »",
+   "problem": "« Premium » apparaît sous trois formes : Premium, بريميوم (translittéré) et المميز/المتميزة (traduit « distingué »).",
+   "fix": "الترقية إلى Premium",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:paywall.trialSheet.start (idem paywall.price.trialThenYearly, paywall.discount.noTrial, onboardingV2.trial.title, profile.unlock.trial, profile.quiz.lockedSubtitle)",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "ابدأ النسخة التجريبية المجانية",
+   "gloss_fr": "commence la version d'essai (bêta) gratuite",
+   "problem": "« essai gratuit » est rendu tantôt تجربة مجانية, tantôt نسخة/إصدار تجريبي (« version bêta »), tantôt الفترة التجريبية, tantôt المحاكمة.",
+   "fix": "ابدأ تجربتك المجانية",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:offer.feature2 (idem paywall.feature.miniQuiz, onboarding.showcase.courses.quizCount)",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "مسابقات تفاعلية غير محدودة",
+   "gloss_fr": "concours interactifs illimités",
+   "problem": "« quiz » est اختبار dans toute l'app (onglet, quiz, paywall) mais مسابقة (« concours ») dans l'offre et le mini-quiz du paywall.",
+   "fix": "اختبارات تفاعلية غير محدودة",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:tab.library (idem library.title)",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "مكتبة",
+   "gloss_fr": "une bibliothèque (indéfini)",
+   "problem": "Seul onglet à l'indéfini (الرئيسية، المسار، التدريب، المجموعات sont définis) ; path.end.body écrit bien المكتبة.",
+   "fix": "المكتبة",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:collections.badge.path (idem collections.path, collections.pathComplete, onboarding.loading.step3)",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "رحلة",
+   "gloss_fr": "voyage",
+   "problem": "« Parcours » est المسار dans l'onglet et l'écran Parcours, mais رحلة (« voyage », calqué sur l'anglais journey) sur les badges de collection.",
+   "fix": "مسار",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:paywall.featureColumn",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "سمات",
+   "gloss_fr": "traits, attributs (de caractère)",
+   "problem": "« Fonctionnalités » est traduit par un mot qui désigne des traits de personnalité ; الميزات est le terme attendu (cf. paywall.trial.todayDetail).",
+   "fix": "الميزات",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:offer.feature1",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "240 دورة المعرفة العامة",
+   "gloss_fr": "240 cours la connaissance générale",
+   "problem": "Annexion cassée (il manque في ou l'état construit) et « culture générale » rendu « connaissance générale » alors que l'app dit ثقافة عامة ailleurs.",
+   "fix": "240 درسًا في الثقافة العامة",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:onboarding.wasted.intro (+ onboarding.wasted.hoursLost, onboarding.wasted.daysComplete)",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "%@ يوميا على هاتفك، وهذا هو / الساعات الضائعة في السنة. / هذه أيام %@ كاملة.",
+   "gloss_fr": "%@ par jour sur ton téléphone, et c'est cela / les heures perdues par an. / ce sont des jours %@ complets.",
+   "problem": "Les trois fragments assemblés à l'écran ne forment pas une phrase arabe et le chiffre est mal placé par rapport au nom.",
+   "fix": "%@ يوميًا على هاتفك تعني / ساعة ضائعة في السنة. / أي %@ كاملة.",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:account.create.subtitle (idem account.signedOut.headline)",
+   "severity": "majeur",
+   "category": "mt_artefact",
+   "current": "قم بعمل نسخة احتياطية من التقدم المحرز الخاص بك إلى السحابة",
+   "gloss_fr": "effectue la réalisation d'une copie de sauvegarde du progrès réalisé qui t'appartient vers le nuage",
+   "problem": "Périphrase de dix mots (قم بـ, المحرز, الخاص بك) pour « Sauvegarde ta progression dans le cloud ».",
+   "fix": "احفظ تقدمك في السحابة",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_100_les_fleurs_du_mal_baudelaire/s0.b0.text (idem s1.b0.text, s1.b2.caption)",
+   "severity": "majeur",
+   "category": "nom_propre",
+   "current": "نشر **تشارلز بودلير** [...] كان الشعراء مثاليين للطبيعة والمشاعر العظيمة",
+   "gloss_fr": "Tcharlz Baudelaire a publié [...] les poètes étaient idéaux pour la nature et les grands sentiments",
+   "problem": "Prénom translittéré à l'anglaise (l'attribution en s3.b1 écrit correctement شارل) et « idéalisaient la nature » rendu par « étaient idéaux pour la nature » dès le premier paragraphe.",
+   "fix": "نشر **شارل بودلير** [...] كان الشعراء يمجّدون الطبيعة والمشاعر الكبرى",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_122_la_naissance_de_l_impressionnisme/s0.b1.text",
+   "severity": "majeur",
+   "category": "nom_propre",
+   "current": "من خلال السخرية من عنوان *، الانطباع، الشمس المشرقة*، عمد ليروي عن غير قصد إلى تعميد",
+   "gloss_fr": "en se moquant du titre *, l'Impression, le Soleil brillant*, Leroy a procédé sans le vouloir au baptême (sacrement)",
+   "problem": "Titre du tableau déformé (virgule parasite, « soleil levant » devenu « brillant ») et « baptiser » pris au sens religieux (تعميد).",
+   "fix": "بسخريته من عنوان *انطباع، شروق الشمس*، أطلق ليروي دون أن يقصد اسمًا على",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_166_narcisse_et_echo/subtitle (idem hero.hook, description)",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "الحب الذي لا يمكن تلبيته [...] ليس لديه سوى عيون لنفسه. اجتماعهم مستحيل.",
+   "gloss_fr": "L'amour qu'on ne peut satisfaire [...] Il n'a que des yeux pour lui-même. Leur réunion est impossible.",
+   "problem": "Le sous-titre contredit le sens (« se rencontrer » ≠ « être satisfait ») et l'accroche calque « n'avoir d'yeux que pour » mot à mot.",
+   "fix": "حب لا سبيل إلى لقائه [...] وهو لا يرى سوى نفسه. لقاؤهما مستحيل.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_107_crime_et_chatiment_dostoievski/s0.b0.text",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "الكتاب أكثر من مجرد فيلم تشويق نفسي",
+   "gloss_fr": "le livre est plus qu'un simple film à suspense psychologique",
+   "problem": "« polar » devient un « film » dans le premier paragraphe d'un cours sur un roman.",
+   "fix": "والكتاب أكثر من مجرد رواية بوليسية نفسية",
+   "surface": "combined"
+  },
+  {
+   "location": "paywall.training.how.step3 (+ paywall.trial.startsDetail, onboardingV2.notifications.bullet3, onboarding.premiumTrial.step3.title, auth.onboarding.subtitle, friends.signedOut.body, training.how.step3, training.ob.algo.body « قمت بإجرائها », paywall.discount.noTrial)",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "قم بالمراجعة في اللحظة المثالية حتى لا تنسى أبدًا",
+   "gloss_fr": "effectue la révision au moment idéal",
+   "problem": "Périphrase « قم بـ + nom d'action » à la place de l'impératif direct, tic de traduction automatique présent dans une dizaine de clés et qui alourdit le ton « tu » court et direct.",
+   "fix": "راجع في اللحظة المثالية كي لا تنسى أبدًا",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.final.subjects (+ onboarding.loading.step2, onboardingV2.loading.step2/step3, onboardingV2.personalize.text, onboardingV2.weeks.subtitle, onboardingV2.trial.step0.detail, profile.mastery.title, profile.quiz.unlock, friends.handle.edit.title/subtitle, friends.handle.saved, paywall.training.subtitle)",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "المواضيع الخاصة بك",
+   "gloss_fr": "les sujets qui t'appartiennent",
+   "problem": "Possessif rendu par la périphrase « الخاص بك » au lieu du suffixe possessif naturel (موادك), dans une quinzaine de clés ; en badge majuscule (TES MATIÈRES) c'est en plus trop long.",
+   "fix": "موادك",
+   "surface": "ui"
+  },
+  {
+   "location": "account.delete.error (+ auth.error.generic, auth.error.token, ambassador.form.error.generic, feedback.error.generic)",
+   "severity": "mineur",
+   "category": "registre",
+   "current": "فشل الحذف. يرجى المحاولة مرة أخرى.",
+   "gloss_fr": "la suppression a échoué. Il est prié de réessayer.",
+   "problem": "« يرجى » (formule de politesse administrative, « il est prié de ») dans les messages d'erreur contredit la voix « tu » directe ; friends.error.generic et paywall.restore.error utilisent correctement l'impératif.",
+   "fix": "فشل الحذف. حاول مرة أخرى.",
+   "surface": "ui"
+  }
+ ]
+}

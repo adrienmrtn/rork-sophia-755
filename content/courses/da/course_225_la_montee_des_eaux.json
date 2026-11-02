@@ -1,14 +1,14 @@
 {
   "id": "course_225_la_montee_des_eaux",
-  "title": "Hvor meget stiger havet?",
+  "title": "Hvor højt vil havet stige?",
   "subtitle": "Havniveauet stiger",
   "subject": "comprendreLeMonde",
   "subcategory": "Miljø og fremtid",
-  "description": "I 2100 kan havniveauet stige med **en meter**. For hele lande og kystmegabyer er dette ikke længere en fjern hypotese, men et spørgsmål om planlægning.",
+  "description": "Frem mod 2100 kan havniveauet stige med **en meter**. For hele lande og kystnære megabyer er det ikke længere en fjern hypotese, men et spørgsmål om planlægning.",
   "hero": {
     "image": "la_montee_des_eaux",
     "ratio": "16:9",
-    "hook": "Havet bliver lidt højere hvert år, og nogle lande planlægger allerede deres flytning."
+    "hook": "Havet stiger lidt mere hvert år, og nogle lande planlægger allerede at flytte."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "I tusinder af år har havniveauet været nogenlunde stabilt. Siden den industrielle æra har den været stigende, og hastigheden af denne stigning accelererer fra år til år."
+          "text": "I tusinder af år lå havniveauet nogenlunde stabilt. Siden industrialiseringen er det steget, og stigningen går hurtigere år for år."
         },
         {
           "type": "paragraph",
-          "text": "I 2100 kan havene stige med 30 centimeter til en meter afhængigt af vores emissionsvalg. For mange kyststrækninger er dette ikke længere en fjern trussel, men et meget konkret planlægningsproblem."
+          "text": "Frem mod 2100 kan havene stige med 30 centimeter til en meter, alt efter hvor meget vi vælger at udlede. For mange kyster er det ikke længere en fjern trussel, men et helt konkret planlægningsproblem."
         }
       ]
     },
@@ -33,21 +33,21 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Havniveauet stiger af to forskellige fysiske årsager. Den første er [[Termisk ekspansion]]: Når vand opvarmes, bevæger dets molekyler sig mere, og dets volumen øges lidt, ligesom enhver væske. Havene har absorberet mere end 90 % af den overskydende varme, der er genereret af menneskelig aktivitet siden 1970, og denne varme øger deres volumen."
+          "text": "Havniveauet stiger af to forskellige fysiske årsager. Den første er [[termisk udvidelse]]: Når vandet bliver varmere, bevæger molekylerne sig mere, og vandet fylder lidt mere, ligesom enhver anden væske. Havene har siden 1970 optaget over 90 % af den overskudsvarme, menneskers aktiviteter har skabt, og den varme får dem til at svulme op."
         },
         {
           "type": "paragraph",
-          "text": "Den anden grund er smeltningen af is placeret på tørt land. Pas på ikke at forveksle det med den arktiske isflage, som allerede flyder på vandet, og hvis afsmeltning ikke får havniveauet til at stige. Det er [[Indlandsis]], disse enorme iskapper placeret på Grønland og Antarktis, som virkelig får havene til at flyde over ved at tilføje ferskvand."
+          "text": "Den anden årsag er, at isen på fast land smelter. Forveksl den ikke med havisen i Arktis: Den flyder allerede på vandet, og når den smelter, stiger havniveauet ikke. Det er [[indlandsis]], de enorme iskapper på Grønland og Antarktis, der for alvor får havene til at stige, fordi den tilfører ferskvand."
         },
         {
           "type": "image",
           "asset": "greenland_ice_sheet_melting_glacier",
           "ratio": "16:9",
-          "caption": "Afsmeltningen af Grønland, hvis den var fuldstændig, ville hæve havene med 7 meter."
+          "caption": "Hvis hele Grønlands is smeltede, ville havene stige med 7 meter."
         },
         {
           "type": "funFact",
-          "text": "Grønland mister omkring 280 milliarder tons is hvert år, eller nok vand til at dække hele Frankrig med et lag på 50 centimeter."
+          "text": "Grønland mister hvert år omkring 280 milliarder tons is, nok vand til at dække hele Frankrig med et lag på 50 centimeter."
         }
       ]
     },
@@ -58,21 +58,21 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Siden 1880 er det globale havniveau steget med omkring 20 centimeter. Det er frem for alt den aktuelle hastighed, der alarmerer forskere: den var omkring 1,4 mm om året i det 20. århundrede sammenlignet med **3,6 mm i enden** i dag, en acceleration på mere end 150 %."
+          "text": "Siden 1880 er det globale havniveau steget med omkring 20 centimeter. Det er især den nuværende hastighed, der bekymrer forskerne: Den lå på omkring 1,4 mm om året i det 20. århundrede, mod **3,6 mm om året** i dag, altså en acceleration på mere end 150 %."
         },
         {
           "type": "paragraph",
-          "text": "[[IPCC]] eksperter vurderer, at denne tendens vil fortsætte i årtier, selvom vi drastisk reducerer emissionerne nu, fordi havene tager tid at reagere på temperaturændringer."
+          "text": "Eksperterne i [[IPCC]] vurderer, at udviklingen vil fortsætte i årtier, selv hvis man skar drastisk ned på udledningerne allerede nu, fordi havene er længe om at reagere på temperaturændringer."
         },
         {
           "type": "image",
           "asset": "coastal_flooding_sea_level_rise_city",
           "ratio": "4:3",
-          "caption": "En stigning på 50 cm kan gøre en 100-års oversvømmelse til en årlig begivenhed."
+          "caption": "En stigning på 50 cm kan gøre en hundredårsoversvømmelse til en årlig begivenhed."
         },
         {
           "type": "paragraph",
-          "text": "Den reelle fare er ikke kun lidt højere hav i gennemsnit, men multiplikationen af stormfloder: En stigning på 50 centimeter kan være nok til at forvandle en forventet katastrofe, der en gang i et århundrede, til en næsten årlig begivenhed."
+          "text": "Den virkelige fare er ikke kun et hav, der i gennemsnit står lidt højere, men at der kommer langt flere [[stormfloder og hundredårsoversvømmelser]]: En stigning på 50 centimeter kan være nok til, at en katastrofe, man venter én gang pr. århundrede, bliver en næsten årlig begivenhed."
         }
       ]
     },
@@ -83,44 +83,44 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Stigende vandstand påvirker hovedsageligt regioner, der har bidraget mindst til den globale opvarmning. De store floddeltaer, såsom dem ved Nilen, Mekong eller Ganges, er i frontlinjen. I Bangladesh, hvor der bor 170 millioner indbyggere, kan en stigning på en meter forårsage tab af 17 % af territoriet."
+          "text": "Havstigningen rammer især de regioner, der har bidraget mindst til den globale opvarmning. De store floddeltaer, som Nilens, Mekongs og Ganges', er i frontlinjen. I Bangladesh, hvor der bor 170 millioner mennesker, kan en stigning på en meter koste 17 % af landets areal."
         },
         {
           "type": "paragraph",
-          "text": "For små østater som Maldiverne eller Kiribati er det at forsvinde helt under vandet ikke længere en science fiction-hypotese, men et reelt emne for politisk planlægning. Omvendt investerer rige megabyer som Miami eller New York milliarder i diger og pumper."
+          "text": "For små østater som Maldiverne og Kiribati er det ikke længere science fiction at forsvinde helt under vandet, men et reelt emne i den politiske planlægning. Omvendt investerer rige megabyer som Miami og New York milliarder i diger og pumper."
         },
         {
           "type": "image",
           "asset": "jakarta_indonesia_sinking_flooding_maldives",
           "ratio": "16:9",
-          "caption": "Jakarta kombinerer stigende vand og nedsynkning af jorden, en dobbelt trussel."
+          "caption": "Jakarta rammes både af havstigning og af, at jorden synker: en dobbelt trussel."
         },
         {
           "type": "funFact",
-          "text": "I 2009 holdt Maldivernes regering et undervandskabinetsmøde i våddragter for at advare verden forud for en større klimakonference."
+          "text": "I 2009 holdt Maldivernes regering et ministermøde under vandet, iført dykkerdragter, for at advare verden før en stor klimakonference."
         },
         {
           "type": "paragraph",
-          "text": "I **Jakarta**, Indonesien, synker byen længere ned i jorden på grund af overdreven pumpning af grundvand. Stillet over for denne dobbelte trussel tog landet den radikale beslutning om at bygge en helt ny hovedstad, Nusantara, på øen Borneo."
+          "text": "I **Jakarta** i Indonesien synker byen desuden ned i jorden, fordi der pumpes alt for meget grundvand op. Over for denne dobbelte trussel har landet truffet den radikale beslutning at bygge en helt ny hovedstad, Nusantara, på øen Borneo."
         }
       ]
     },
     {
       "id": "course_225_la_montee_des_eaux_p4",
-      "title": "Tilpas dig, eller gå tilbage",
+      "title": "Tilpasse sig eller trække sig tilbage",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "To strategier supplerer hinanden i lyset af denne udfordring. Den første er at begrænse opvarmningen for at bremse stigningen efter 2100. Den anden er at tilpasse sig det, der allerede er uundgåeligt, ved at styrke naturlige forsvar som [[Mangroves]] eller klitter, eller med tungere løsninger som de store værker i Holland."
+          "text": "To strategier supplerer hinanden over for denne udfordring. Den første er at begrænse opvarmningen for at bremse stigningen efter 2100. Den anden er at tilpasse sig det, der allerede er uundgåeligt, ved at styrke naturlige forsvarsværker som [[mangrover]] og klitter eller med tungere løsninger som de store anlæg i Holland."
         },
         {
           "type": "paragraph",
-          "text": "I nogle tilfælde vil den eneste løsning være at bevæge sig baglæns: at flytte mennesker og aktiviteter ind i landet, før katastrofer gentager sig for ofte. Dette er en reel ændring af vane for samfund, der har været knyttet til kysten i århundreder."
+          "text": "I nogle tilfælde bliver den eneste løsning at trække sig tilbage: at flytte beboere og erhverv længere ind i landet, før katastroferne gentager sig for ofte. Det er et stort skift for samfund, der i århundreder har levet tæt på kysten."
         },
         {
           "type": "takeaway",
-          "text": "Havniveauet stiger med 3,6 mm om året under den kombinerede effekt af termisk ekspansion og smeltning af landis. I 2100 kan denne stigning nå en meter og tvinge hundreder af millioner af mennesker på flugt."
+          "text": "Havniveauet stiger med 3,6 mm om året, fordi vandet udvider sig, når det bliver varmere, og fordi isen på land smelter. Frem mod 2100 kan stigningen nå en meter og tvinge hundreder af millioner af mennesker til at flytte."
         }
       ]
     }

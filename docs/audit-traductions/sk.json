@@ -1,0 +1,694 @@
+{
+ "langue": "sk",
+ "synthese": {
+  "verdict": "La plainte est justifiée, surtout pour les cours. L'interface slovaque (4/5) est dans l'ensemble naturelle et visiblement relue : tutoiement, boutons courts, pluriels gérés. Restent quelques vrais accrocs visibles dès l'onboarding : « Ta progression culturelle » rendue « Voici comment grandit ta conscience » (vedomie = conscience), le bouton d'essai « Spustiť skúšku » (« Lancer l'examen »), un bohémisme (« Rádi »), des témoignages féminins conjugués au masculin et une terminologie flottante (kurz / lekcia, pokrok / postup, blocker / blokátor). Les cours (2/5) sont de la traduction automatique brute : « on » rendu par « nous » (« Chceme ho zabiť », 60 segments dans le corpus), « En 622 » rendu « V 622 » sans « roku » (138 phrases), termes de glossaire et noms propres laissés au nominatif, mots polysémiques pris dans le mauvais sens (spleen → rate, flâneur → poussette, condamnation → conviction), accords de genre perdus (Écho au masculin), et des phrases qui ne veulent plus rien dire (« facilite l'installation d'une nouvelle énergie dans des régions fatiguées »).",
+  "scores": {
+   "ui": 4,
+   "cours": 2,
+   "global": 3
+  },
+  "top_issues": [
+   {
+    "title": "Bouton d'essai = « Lancer l'examen »",
+    "where": "onboarding.premiumTrial.cta",
+    "current": "Spustiť skúšku",
+    "gloss_fr": "Lancer l'examen (skúška = examen)",
+    "fix": "Vyskúšať zadarmo",
+    "severity": "bloquant"
+   },
+   {
+    "title": "« progression culturelle » = « ta conscience grandit »",
+    "where": "onboarding.graph.title",
+    "current": "Takto rastie⏎tvoje vedomie",
+    "gloss_fr": "Voici comment grandit ta conscience",
+    "fix": "Takto rastie⏎tvoj rozhľad",
+    "severity": "bloquant"
+   },
+   {
+    "title": "« on » rendu par « nous »",
+    "where": "course_1_la_naissance_de_l_islam_622/s0.b0.text (60 segments dans le corpus)",
+    "current": "Chceme ho zabiť.",
+    "gloss_fr": "Nous voulons le tuer.",
+    "fix": "Chcú ho zabiť.",
+    "severity": "bloquant"
+   },
+   {
+    "title": "« En 622 » rendu « V 622 » sans « roku »",
+    "where": "cours : 138 phrases sur 244",
+    "current": "V **622** …",
+    "gloss_fr": "calque ; le slovaque dit « V roku 622 »",
+    "fix": "V roku **622** …",
+    "severity": "majeur"
+   },
+   {
+    "title": "Phrase vidée de sens par la machine",
+    "where": "course_1_la_naissance_de_l_islam_622/s4.b0.text",
+    "current": "uľahčuje inštaláciu novej energie v unavených oblastiach",
+    "gloss_fr": "facilite l'installation d'une nouvelle énergie dans des régions fatiguées",
+    "fix": "uľahčuje nástup novej moci v oblastiach vyčerpaných vojnou",
+    "severity": "bloquant"
+   },
+   {
+    "title": "« une condamnation » = « une conviction (opinion) »",
+    "where": "course_100_les_fleurs_du_mal_baudelaire/description",
+    "current": "jedno presvedčenie",
+    "gloss_fr": "une conviction, une croyance",
+    "fix": "jeden súdny rozsudok",
+    "severity": "bloquant"
+   },
+   {
+    "title": "Forme tchèque dans un écran slovaque",
+    "where": "onboardingV2.existingAccount.title",
+    "current": "Rádi ťa znova vidíme",
+    "gloss_fr": "« Rádi » est la forme tchèque",
+    "fix": "Radi ťa znova vidíme",
+    "severity": "majeur"
+   },
+   {
+    "title": "Témoignage féminin au masculin",
+    "where": "onboardingV2.review.quote",
+    "current": "Predtým som na telefóne trávil 7 hodín denne…",
+    "gloss_fr": "Léa parle au masculin",
+    "fix": "Predtým som na telefóne trávila 7 hodín denne…",
+    "severity": "majeur"
+   }
+  ],
+  "systematic": [
+   "« on » impersonnel rendu par « nous » : 60 segments sur 168.",
+   "« En <année> » rendu « V <année> » sans « roku » : 138 phrases sur 244, en alternance avec la forme correcte.",
+   "Noms propres, titres et termes [[glossaire]] laissés au nominatif après préposition ou verbe (le slovaque décline).",
+   "Mots polysémiques pris dans le mauvais sens : spleen → rate, flâneur → poussette, source → ressource, pouvoir → énergie, condamnation → conviction.",
+   "Accords de genre perdus (Écho, le recueil) ; masculin par défaut dans l'UI et les témoignages féminins.",
+   "« Essai gratuit » rendu par « skúška » (examen) en concurrence avec « skúšobné obdobie » ; terminologie kurz / lekcia, blocker / blokátor."
+  ],
+  "action": "relecture_complete",
+  "effort": "UI : 0,5 jour (essai, conscience, bohémisme, féminin) ; cours, quiz et glossaire : relecture native complète, 2 à 3 semaines."
+ },
+ "scores_relecteur_par_surface": {
+  "combined": 3
+ },
+ "justifications_relecteur": {
+  "combined": "Oui, la plainte « pas naturel » est justifiée pour le slovaque, mais elle vise surtout les cours. L'interface (UI : 4/5) est dans l'ensemble un slovaque naturel, visiblement relu par un humain, avec quelques vrais accrocs : « vedomie » (conscience) pour culture, « skúška » (= examen) pour l'essai gratuit, un bohémisme « Rádi », des témoignages signés Léa/Inès conjugués au masculin, quelques calques (« Rasti v úrovniach », « Horíš », « 10 minút kultúry ») et une terminologie flottante kurz/lekcia, pokrok/postup, priateľ/kamarát, blocker/blokátor. Les cours (2/5) sont au contraire de la traduction automatique brute non relue : « on » impersonnel rendu par « nous » (« Chceme ho zabiť »), mots polysémiques pris au mauvais sens (spleen → rate, flâneur → poussette, Pan → Bang, Impression → imprimerie, condamnation → conviction, pouvoir → énergie), noms propres et termes de glossaire laissés au nominatif ou en français, accords de genre faux qui changent le sens (Écho devient masculin, le livre condamné devient Baudelaire), contresens sur « infériorité numérique » et balisage [[…]] perdu. Quatre cours sur cinq (islam, Baudelaire, impressionnisme, Narcisse) sont à ce niveau ; le cours OTAN est nettement meilleur mais garde des accords instables (NATO tantôt féminin, tantôt neutre) et une anecdote rendue absurde. La surface la plus dégradée est donc le lecteur de cours, c'est-à-dire le cœur du produit : un lycéen slovaque y rirait ou décrocherait. Note globale 3, portée par l'UI ; les cours seuls justifieraient 2."
+ },
+ "constats_non_listes_par_le_relecteur": {
+  "combined": 110
+ },
+ "motifs_recurrents": [
+  {
+   "description": "« On » impersonnel français rendu par la 1re personne du pluriel (« nous ») dans les cours, ce qui fait parler Sophia à la place des personnages.",
+   "frequency": "fréquent",
+   "example": "On veut le tuer → Chceme ho zabiť ; On y vit en tribus → Žijeme tam v kmeňoch ; On exige → Požadujeme",
+   "regex_fr": "\\bOn (veut|exige|y vit|prie|peut)\\b",
+   "regex_target": "\\b(Chceme|Žijeme|Požadujeme|Modlíme sa)\\b",
+   "pack": "combined"
+  },
+  {
+   "description": "Année introduite par « V » sans « roku » (calque de « En 622 ») : en slovaque il faut « V roku 622 ».",
+   "frequency": "systématique",
+   "example": "En **622** → V **622** ; En **1857** → V **1857** ; En **1874** → V **1874**",
+   "regex_fr": "\\bEn \\*{0,2}\\d{3,4}\\b",
+   "regex_target": "\\b[Vv] (\\*\\*)?\\d{3,4}(\\*\\*)?(?! rok)",
+   "pack": "combined"
+  },
+  {
+   "description": "Noms propres, titres d'œuvres et termes [[glossaire]] laissés au nominatif après une préposition ou un verbe, alors que le slovaque les décline (Zeus → Diovi, Monet → Monetovi, Akadémia → Akadémiou).",
+   "frequency": "systématique",
+   "example": "Pomáha **Zeus** ; unavených [[Oficiálny salón v Paríži]] ; Pod **[[Barón Haussmann]]** ; Skupina združuje **Monet**, **Renoir** ; Prvým **muezín** islamu",
+   "regex_target": "\\b(so|s|v|na|do|k|pod|od|za|pre) (\\*\\*|\\[\\[)[A-ZÁČĎÉÍĽŇÓŠŤÚÝŽ][^\\]*]*(\\]\\]|\\*\\*)",
+   "pack": "combined"
+  },
+  {
+   "description": "Mot polysémique pris au mauvais sens par le moteur (spleen → rate, flâneur → poussette, source → ressource, pouvoir → force/énergie, condamnation → conviction, Impression → imprimerie, touche → toucher physique, estampes → tirages d'imprimante, costume → déguisement, postérité → descendance, Pan → Bang).",
+   "frequency": "fréquent",
+   "example": "Spleen et Idéal → Slezina a ideálne ; flâneur → kočík ; Le reflet dans la source → Odraz v zdroji ; touches de couleur pure → dotyky čistej farby",
+   "regex_target": "\\b(slezin\\w*|kočík\\w*|Tlač,|presvedčeni\\w*|výtlačk\\w*|dotyk\\w*|v zdroji|energi\\w*|potomstv\\w*|Bang)\\b",
+   "pack": "combined"
+  },
+  {
+   "description": "Accords de genre ou de nombre faux qui changent le sens : sujet féminin ou neutre repris au masculin (le livre devient Baudelaire, Écho devient masculin, Narcisse devient féminin), pluriels (Kvety zla, Freud + pluriel, Stovky + singulier, NATO féminin/neutre).",
+   "frequency": "fréquent",
+   "example": "Kniha vyvolala škandál. Bol odsúdený ; Jeho telo chradne (Écho) ; **Freud** publikovali ; Stovky… čaká ; NATO, ktorá bola založená",
+   "regex_target": "(Kvety zla\\*{0,2} (prináša|škandalizoval|sa stal)|Freud\\*{0,2} publikovali|Stovky [^.]* čaká|NATO\\*{0,2}, ktorá)",
+   "pack": "combined"
+  },
+  {
+   "description": "« Essai (gratuit) » traduit par « skúška », qui signifie d'abord « examen » ; concurrence avec « skúšobné obdobie » dans les mêmes écrans.",
+   "frequency": "fréquent",
+   "example": "Spustiť skúšku ; Aktivovať bezplatnú skúšku ; pred koncom skúšky ; Odomkni bezplatnou skúškou",
+   "regex_target": "\\b[Ss]kúšk(a|u|y|ou|e)\\b",
+   "pack": "combined"
+  },
+  {
+   "description": "Témoignages signés d'un prénom féminin (Léa, Inès) mais conjugués au masculin ; les prénoms français conservés (Léa, Inès, Camille, Yanis) rendent déjà les avis peu crédibles pour un public slovaque, et l'erreur d'accord aggrave l'impression de faux.",
+   "frequency": "isolé",
+   "example": "Léa, 24 : « Predtým som na telefóne trávil… cítim múdrejší » ; Inès, 25 : « cítim rozhľadenejší » (mais « rozhľadenejšia » dans paywall.reviews.r3.quote)",
+   "regex_target": "\\b(trávil|múdrejší|rozhľadenejší|zapamätal|nenaučil)\\b",
+   "pack": "combined"
+  },
+  {
+   "description": "Terminologie produit flottante dans l'UI : cours = kurz / lekcia ; progression = pokrok / postup ; ami = priateľ / kamarát ; appuyer = ťukni / klepni ; notification = oznámenie / notifikácia ; blocker / blokátor ; série = séria / dni v rade ; mode audio = Audio režim / Zvukový režim ; terminés = Hotové / Dokončené.",
+   "frequency": "fréquent",
+   "example": "paywall.unlock.unlimited « Neobmedzené lekcie » vs paywall.feature.unlimitedCourses « Neobmedzené kurzy » ; account.createLater.title « pokrok » vs account.create.subtitle « postup »",
+   "regex_target": "\\b(lekci\\w+|klepni|notifikáci\\w+|blocker\\w*|Zvukový režim)\\b",
+   "pack": "combined"
+  },
+  {
+   "description": "Formes françaises ou anglaises laissées telles quelles dans les cours au lieu de la forme slovaque établie (Hegire/hidžra, Narcisse/Narcis, Tirésias/Teiresias, Oread/oreáda, La Oumma/umma, Le Spleen de Paris/Parížsky splín, Le Déjeuner sur l'herbe/Raňajky v tráve, Salón des Refusés hybride, Musée d'Orsay).",
+   "frequency": "fréquent",
+   "example": "Narcisse volá: \"Je tu niekto?\" ; Manet škandalizuje s Le Déjeuner sur l'herbe ; rozvinul v **[[Le Spleen de Paris]]**",
+   "regex_target": "\\b(Hegire|Narcisse|Tirésias|Oread|La Oumma|Le Spleen de Paris|Le Déjeuner sur l'herbe|Salón des Refusés)\\b",
+   "pack": "combined"
+  },
+  {
+   "description": "Typographie non slovaque dans les cours : guillemets droits \"…\" au lieu de „…“, point comme séparateur de milliers (10.000, 3.000), trait d'union au lieu du tiret pour les plages (610-632, 30-100 €), « cenzúrovaných » pour « cenzurovaných », majuscules fautives (Kresťania, Narcis la fleur).",
+   "frequency": "fréquent",
+   "example": "so **10.000 mužmi** ; Narcisse volá: \"Je tu niekto?\" ; **\"Korespondencia\"** ; 30-100 € / mesiac",
+   "regex_target": "\"[^\"\\n]+\"|\\b\\d{1,3}\\.\\d{3}\\b|\\b\\d+-\\d+\\b|cenzúrovan",
+   "pack": "combined"
+  },
+  {
+   "description": "Temps verbaux instables : le présent historique français est rendu tantôt au passé, tantôt au présent, parfois au conditionnel ou au futur dans un même paragraphe, y compris pour des faits passés.",
+   "frequency": "fréquent",
+   "example": "by posolstvo… zničilo veľké impériá (conditionnel) ; povedal, že dostane zjavenia (futur) ; Fínsko sa pripojí k aliancii v roku 2023 (futur pour un fait de 2023) ; V 7. storočí Arábia takmer nikoho nezaujímala. Žijeme tam v kmeňoch.",
+   "regex_target": "\\b(sa pripojí k aliancii|dostane zjavenia|by posolstvo)\\b",
+   "pack": "combined"
+  },
+  {
+   "description": "Boutons et CTA aux formes verbales mélangées (infinitif « Spustiť », impératif « Vyskúšaj zadarmo », 1re personne « Beriem to hneď », « Prihlasujem sa ») et trois rendus différents de « C'est parti » (Poďme na to / Ideme na to / Idem do toho).",
+   "frequency": "fréquent",
+   "example": "onboardingV2.reminder.cta « Vyskúšaj zadarmo » vs paywall.trialSheet.start « Spustiť bezplatnú skúšku » ; onboardingV2.trial.cta « Idem do toho » vs path.quiz.go « Poďme na to »",
+   "regex_target": "^(Vyskúšaj|Beriem|Prihlasujem|Idem do toho|Ideme na to|Poďme na to)\\b",
+   "pack": "combined"
+  },
+  {
+   "description": "Balisage [[glossaire]] perdu, tronqué ou rempli par un autre libellé que le terme (razzias sans balises, La Oumma sans balises, [[Medinskú]] ústavu coupé, [[kalif]] au singulier non décliné, [[symbolisme]] remplacé par « Symbolizmus a Baudelairov odkaz »).",
+   "frequency": "isolé",
+   "example": "lance des [[razzias]] → podniká nájazdy, rýchle nájazdy ; fonde [[La Oumma]] → založil La Oumma ; **[[symbolisme]]** → **[[Symbolizmus a Baudelairov odkaz]]**",
+   "regex_fr": "\\[\\[[^\\]]+\\]\\]",
+   "regex_target": "\\[\\[Symbolizmus a Baudelairov odkaz\\]\\]|\\[\\[Medinskú\\]\\]|\\[\\[kalif\\]\\],",
+   "pack": "combined"
+  }
+ ],
+ "constats": [
+  {
+   "location": "ui:onboarding.graph.title",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Takto rastie⏎tvoje vedomie",
+   "gloss_fr": "« Voici comment grandit ta conscience » (vedomie = conscience, pas culture)",
+   "problem": "« vedomie » signifie « conscience », pas « culture/connaissances » : l'écran d'onboarding promet de faire grandir la conscience de l'utilisateur.",
+   "fix": "Takto rastie⏎tvoj rozhľad",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:onboarding.premiumTrial.cta",
+   "severity": "bloquant",
+   "category": "terminologie",
+   "current": "Spustiť skúšku",
+   "gloss_fr": "« Lancer l'examen »",
+   "problem": "« skúška » veut d'abord dire « examen » ; dans une app d'apprentissage avec quiz, le bouton d'essai gratuit se lit « Démarrer l'examen » (même problème dans onboarding.premiumTrial.badge/title, paywall.cta.activateTrial, paywall.trialSheet.start/title, profile.quiz.lockedSubtitle, profile.unlock.trial).",
+   "fix": "Vyskúšať zadarmo",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_1_la_naissance_de_l_islam_622/s0.b0.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Chceme ho zabiť.",
+   "gloss_fr": "« Nous voulons le tuer. »",
+   "problem": "Le « on » impersonnel (« On veut le tuer ») est rendu par « nous » : le cours annonce que nous voulons tuer Muhammad.",
+   "fix": "Chcú ho zabiť.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_1_la_naissance_de_l_islam_622/s1.b0.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Žijeme tam v kmeňoch. [[beduínov]], púštni nomádi, žijú vedľa",
+   "gloss_fr": "« Nous y vivons en tribus. Des Bédouins (génitif pluriel), nomades du désert, vivent à côté »",
+   "problem": "« On y vit en tribus » devient « nous y vivons », et le terme de glossaire « Bédouins » est au génitif pluriel au lieu du nominatif, ce qui rend la phrase agrammaticale (idem « kmeň [[Kurajšovci]] » non décliné).",
+   "fix": "Ľudia tam žijú v kmeňoch. [[Beduíni]], púštni kočovníci, žijú popri niekoľkých obchodných mestách, ako je Mekka.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_1_la_naissance_de_l_islam_622/s2.b3.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Mohamed podniká nájazdy, rýchle nájazdy… Napriek presile jeho verných vyhrali na **Badr**",
+   "gloss_fr": "« …lance des raids, des raids rapides… Malgré la supériorité numérique de ses fidèles, ils gagnent à Badr »",
+   "problem": "Le sens est inversé (« en infériorité numérique » devient « malgré leur supériorité »), le terme de glossaire [[razzias]] a perdu son balisage et devient « raids, raids rapides », et « na Badr » n'est pas décliné.",
+   "fix": "Mohamed podniká [[razzie]], rýchle nájazdy, aby odrezal nepriateľské karavány. Hoci sú v menšine, jeho verní zvíťazia pri **Badre** v roku **624**.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_1_la_naissance_de_l_islam_622/s3.b3.e1.detail",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Prvé veľké víťazstvo v prevahe.",
+   "gloss_fr": "« Première grande victoire en supériorité numérique. »",
+   "problem": "« en infériorité numérique » est traduit par son contraire dans la frise chronologique.",
+   "fix": "Prvé veľké víťazstvo napriek presile nepriateľa.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_1_la_naissance_de_l_islam_622/s4.b0.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "uľahčuje inštaláciu novej energie v unavených oblastiach Byzancie",
+   "gloss_fr": "« facilite l'installation d'une nouvelle énergie dans les régions fatiguées de Byzance (= qui appartiennent à Byzance) »",
+   "problem": "« pouvoir » est pris au sens d'« énergie » et « régions fatiguées de Byzance » devient « régions fatiguées appartenant à Byzance » ; la phrase n'a plus de sens historique (même bloc : « Rozšírenie… Je tiež organizovaná », accord faux).",
+   "fix": "Táto usmernená tolerancia uľahčuje nástup novej moci v oblastiach unavených Byzanciou.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_100_les_fleurs_du_mal_baudelaire/hero.hook",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "jedno presvedčenie",
+   "gloss_fr": "« une conviction (= opinion, croyance) »",
+   "problem": "« condamnation » est rendu par « presvedčenie » (conviction au sens de croyance) ; l'accroche du cours perd son sens.",
+   "fix": "Šesť cenzurovaných básní, jeden súdny rozsudok a zrod modernej poézie.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_100_les_fleurs_du_mal_baudelaire/s1.b0.text",
+   "severity": "bloquant",
+   "category": "mt_artefact",
+   "current": "**Charles Baudelaire** hrá **základne prekliateho**",
+   "gloss_fr": "« Charles Baudelaire joue basiquement du maudit »",
+   "problem": "« incarne le poète maudit » est devenu une suite de mots sans sens dans la première phrase de la section.",
+   "fix": "**Charles Baudelaire** stelesňuje **prekliateho básnika**: spisovateľa na okraji, ktorého jeho doba nemala rada.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_100_les_fleurs_du_mal_baudelaire/s1.b1.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "pohádal sa so svojím svokrom, generálom **Aupick**… Miluje **Jeanne Duvalová**",
+   "gloss_fr": "« il se dispute avec son beau-père (= père de son épouse), le général Aupick (non décliné)… Il aime Jeanne Duvalová (nominatif) »",
+   "problem": "« beau-père » est traduit par « svokor » (père de l'épouse) au lieu de « nevlastný otec » (second mari de la mère) ; Baudelaire n'a jamais été marié, et les noms ne sont pas déclinés.",
+   "fix": "pohádal sa so svojím nevlastným otcom, generálom **Aupickom**… Miluje **Jeanne Duvalovú**, herečku a speváčku.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_100_les_fleurs_du_mal_baudelaire/s2.b0.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "**„Slezina a ideálne“**, prvá hlavná časť, je proti dvom stavom. **slezina**, slovo prevzaté z angličtiny",
+   "gloss_fr": "« “Rate et idéalement”, la première grande section, est contre deux états. La rate, mot emprunté à l'anglais »",
+   "problem": "« Spleen » est traduit par l'organe (la rate), « Idéal » par l'adverbe « idéalement », « oppose deux états » par « est contre deux états » ; le titre établi en slovaque est « Splín a ideál » (aussi « Baudelaire tam sleduje pokrok » pour « trace une progression »).",
+   "fix": "**„Splín a ideál“**, prvá veľká časť, stavia proti sebe dva stavy. **Splín**, slovo prevzaté z angličtiny, označuje hlbokú nudu, melanchóliu bez príčiny. **Ideál** je zasa túžba po povznesení a čistej kráse.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_100_les_fleurs_du_mal_baudelaire/s2.b2.caption",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "prostredie baudelairovskej sleziny",
+   "gloss_fr": "« décor de la rate baudelairienne »",
+   "problem": "Même erreur : « spleen » rendu par « rate » (organe) dans une légende d'image.",
+   "fix": "kulisa baudelairovského splínu",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_100_les_fleurs_du_mal_baudelaire/s2.b3.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "**„Parížske maľby“**… Pod **[[Barón Haussmann]]**… Baudelaire potom putuje ako **kočík**",
+   "gloss_fr": "« “Peintures parisiennes”… Sous Baron Haussmann (non décliné)… Baudelaire erre alors comme une poussette »",
+   "problem": "« flâneur » est traduit par « kočík » (poussette/landau) ; « Tableaux parisiens » est rendu « Parížske maľby » au lieu du titre établi « Parížske obrazy », et « Pod [[Barón Haussmann]] » n'est pas décliné.",
+   "fix": "**„Parížske obrazy“**… Za **[[baróna Haussmanna]]**… Baudelaire sa potom túla ako **flâneur**, teda chodec, ktorý pozoruje mesto bez konkrétneho cieľa.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_122_la_naissance_de_l_impressionnisme/s0.b1.text",
+   "severity": "bloquant",
+   "category": "nom_propre",
+   "current": "názvu *Tlač, vychádzajúce slnko*",
+   "gloss_fr": "« du titre *Impression (= imprimerie, tirage), soleil levant* »",
+   "problem": "« Impression » est pris au sens d'« impression (imprimerie) » ; le titre établi du tableau de Monet est « Impresia, východ slnka » et le jeu de mots avec « impresionizmus » disparaît.",
+   "fix": "názvu *Impresia, východ slnka*",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_122_la_naissance_de_l_impressionnisme/s1.b0.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "sa umenie vo Francúzsku riadilo **Akadémia výtvarných umení**… Požadujeme presnú kresbu a hladký povrch",
+   "gloss_fr": "« l'art en France obéissait Académie des beaux-arts (non décliné)… Nous exigeons un dessin précis et une surface lisse »",
+   "problem": "« On exige » devient « nous exigeons » : Sophia semble imposer les règles de l'Académie ; de plus le nom de l'Académie n'est pas décliné.",
+   "fix": "sa umenie vo Francúzsku riadilo **Akadémiou výtvarných umení**… Vyžaduje sa presná kresba a hladký povrch bez stôp po štetci.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_166_narcisse_et_echo/s1.b3.text",
+   "severity": "bloquant",
+   "category": "nom_propre",
+   "current": "boh **Bang**",
+   "gloss_fr": "« le dieu Bang »",
+   "problem": "Le dieu Pan est devenu « Bang » (le moteur a pris « Pan » pour une onomatopée).",
+   "fix": "boh **Pan**",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_207_l_otan_a_quoi_ca_sert_encore/s3.b3.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "NATO v angličtine a NATO vo francúzštine",
+   "gloss_fr": "« NATO en anglais et NATO en français »",
+   "problem": "Le « saviez-vous » explique que le sigle s'inverse selon la langue, mais le texte slovaque répète NATO deux fois ; l'anecdote devient absurde.",
+   "fix": "NATO v angličtine a OTAN vo francúzštine",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_166_narcisse_et_echo/s2.b0.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Jej krása priťahuje každého… Veštec **Tirésias** varoval svoju matku",
+   "gloss_fr": "« Sa beauté (à elle) attire tout le monde… Le devin Tirésias avait prévenu sa propre mère »",
+   "problem": "La beauté est attribuée à une femme (jej) alors qu'il s'agit de Narcisse, et « svoju matku » signifie que Tirésias prévient sa propre mère ; le nom garde la graphie française alors que le texte utilise ensuite « Teiresiovo ».",
+   "fix": "Jeho krása priťahuje každého. Jeho pýcha však všetkých odháňa. Veštec **Teiresias** varoval jeho matku",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:onboardingV2.existingAccount.title",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Rádi ťa znova vidíme",
+   "gloss_fr": "« (forme tchèque) Contents de te revoir »",
+   "problem": "« Rádi » est la forme tchèque ; en slovaque c'est « Radi ».",
+   "fix": "Radi ťa znova vidíme",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:onboardingV2.review.quote",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Predtým som na telefóne trávil 7 hodín denne… každý týždeň sa cítim múdrejší",
+   "gloss_fr": "« (au masculin) je passais 7 h par jour… je me sens plus intelligent »",
+   "problem": "Le témoignage est signé Léa (24 ans) mais verbe et adjectif sont au masculin ; un lecteur slovaque voit tout de suite que la citation est inventée ou mal traduite.",
+   "fix": "Predtým som na telefóne trávila 7 hodín denne. Teraz len 40 minút so Sophiou a každý týždeň sa cítim múdrejšia.",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:offer.unlock",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Odomknúť mojich -70 %",
+   "gloss_fr": "« Déverrouiller mes -70 % »",
+   "problem": "Calque de l'anglais « Unlock my -70% », agrammatical en slovaque (« mojich » ne se rapporte à rien).",
+   "fix": "Chcem zľavu -70 %",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:onboarding.showcase.xp.title",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Rasti v úrovniach⏎a vyšvihni sa medzi⏎najrozhľadenejších",
+   "gloss_fr": "« Grandis dans les niveaux et hisse-toi parmi les plus cultivés »",
+   "problem": "« Rasti v úrovniach » (« grandir dans les niveaux ») n'existe pas en slovaque ; on dit « postupovať na vyššie úrovne ».",
+   "fix": "Postupuj na vyššie úrovne⏎a vyšvihni sa medzi⏎najrozhľadenejších",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:paywall.teaserSubtitle",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Stovky prémiových kurzov čaká na odomknutie",
+   "gloss_fr": "« Des centaines de cours premium attend (singulier) d'être déverrouillées »",
+   "problem": "Le sujet pluriel « stovky » exige le verbe au pluriel « čakajú ».",
+   "fix": "Stovky prémiových kurzov čakajú na odomknutie",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:paywall.quiz.subtitle",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Odomkni Sophia PRO pre interaktívne kvízy a staň sa vzdelaným.",
+   "gloss_fr": "« Déverrouille Sophia PRO pour (préposition calquée) quiz interactifs et deviens instruit. »",
+   "problem": "« pre » calque le « pour/for » et « staň sa vzdelaným » est raide ; un natif dirait « získaj ».",
+   "fix": "Odomkni Sophia PRO, získaj interaktívne kvízy a rozšír si obzory.",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:paywall.trial.reminderDetail",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "Oznámenie 1 deň pred koncom skúšky.",
+   "gloss_fr": "« Notification 1 jour avant la fin de l'examen. »",
+   "problem": "« skúška » = examen ; les écrans voisins disent « skúšobné obdobie » (onboarding.trial.trialEnds, onboardingV2.reminder.title) : terminologie incohérente et ambiguë.",
+   "fix": "Oznámenie 1 deň pred koncom skúšobného obdobia.",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:paywall.blocker.title",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "Prevezmi konečne kontrolu nad svojím časom s blockerom.",
+   "gloss_fr": "« Prends enfin le contrôle de ton temps avec le “blocker” (mot anglais décliné à la slovaque) »",
+   "problem": "« blocker » est laissé en anglais et décliné (blockera, blockerom) alors que l'app l'appelle ailleurs « Blokátor TikToku » (onboardingV2.pw.feature.tiktokBlocker, tiktokBlocker.card.premium.title).",
+   "fix": "Prevezmi konečne kontrolu nad svojím časom s blokátorom.",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:onboardingV2.intro.route.title",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Sophia ti vytvorí **personalizovanú cestu**, ktorú sleduješ každý deň.",
+   "gloss_fr": "« Sophia te crée un parcours personnalisé que tu regardes/observes chaque jour »",
+   "problem": "« suivre un parcours » est calqué en « sledovať cestu », qui signifie « observer une route » ; même calque dans onboardingV2.intro.route.subtitle et onboarding.showcase.collections.title (« Sleduj tematické cesty »).",
+   "fix": "Nevieš, čo sa učiť? Sophia ti zostaví **cestu na mieru**, ktorou pôjdeš každý deň.",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:onboardingV2.mission.body2",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Náš tím profesorov a dizajnérov počíta s tebou, aby mohol ďalej tvoriť skvelý obsah v službách jedinej misie",
+   "gloss_fr": "« Notre équipe de professeurs (titre universitaire) et de designers compte sur toi pour pouvoir continuer… au service (mot à mot) d'une seule mission »",
+   "problem": "Structure française mot à mot (« v službách jedinej misie »), « profs » rendu par « profesorov » (titre universitaire) et « misia » au lieu de « poslanie ».",
+   "fix": "Náš tím učiteľov a dizajnérov sa na teba spolieha, aby mohol ďalej tvoriť kvalitný obsah s jediným poslaním: urobiť učenie ľahkým.",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:paywall.unavailable.message",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Túto ponuku sa teraz nedá načítať.",
+   "gloss_fr": "« Cette offre (accusatif) ne se peut pas charger. »",
+   "problem": "Mélange de constructions : avec « nedá sa » réfléchi, le sujet doit être au nominatif ; la forme actuelle est une faute courante que le slovaque standard rejette.",
+   "fix": "Táto ponuka sa teraz nedá načítať.",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:paywall.quiz.review3.quote",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Každý týždeň sa cítim rozhľadenejší.",
+   "gloss_fr": "« (au masculin) je me sens plus cultivé »",
+   "problem": "Signé Inès (prénom féminin) mais adjectif au masculin, alors que paywall.reviews.r3.quote (même Inès, 25 ans) est au féminin « rozhľadenejšia » — incohérence visible sur le même paywall.",
+   "fix": "Každý týždeň sa cítim rozhľadenejšia. Kvízy mi všetko ukotvia.",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:onboardingV2.notifications.bullet2",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "V správnej chvíli, nikdy v sérii",
+   "gloss_fr": "« Au bon moment, jamais en série »",
+   "problem": "« jamais en rafale » est rendu par « nikdy v sérii », peu compréhensible et en collision avec « séria » (= streak) utilisé ailleurs dans l'app.",
+   "fix": "V správnej chvíli, nikdy hromadne",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:friends.requests.title",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "PRIJATÉ ŽIADOSTI",
+   "gloss_fr": "« DEMANDES ACCEPTÉES » (ou « reçues » — ambigu)",
+   "problem": "« prijaté » signifie d'abord « acceptées » ; au-dessus de boutons Accepter/Refuser, le titre est contradictoire.",
+   "fix": "ŽIADOSTI O PRIATEĽSTVO",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:course.streak.onTrack",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "Séria je na spadnutie!",
+   "gloss_fr": "« La série est sur le point de s'effondrer ! »",
+   "problem": "« na spadnutie » évoque d'abord une chute imminente : l'utilisateur comprend que sa série va se casser, le contraire de l'encouragement voulu.",
+   "fix": "Séria je na dosah!",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:profile.streak.great",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Horíš 🔥",
+   "gloss_fr": "« Tu brûles (littéralement) »",
+   "problem": "« Tu es en feu » n'a pas d'équivalent littéral en slovaque ; « Horíš » se lit « tu es en train de brûler ».",
+   "fix": "Ide ti to skvele 🔥",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:share.card.subtitle",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Daruj kamarátovi 10 minút kultúry",
+   "gloss_fr": "« Offre à un ami 10 minutes de culture (= arts, vie culturelle) »",
+   "problem": "Faux ami : « kultúra » désigne la culture artistique, pas la culture générale ; ailleurs l'app traduit correctement par « vedomosti » (paywall.review2.quote).",
+   "fix": "Daruj kamarátovi 10 minút vedomostí",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:library.filter.todo",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Na urobenie",
+   "gloss_fr": "« À faire (nominalisation lourde) »",
+   "problem": "Nominalisation inhabituelle pour un filtre de bibliothèque ; un natif attend « Nezačaté » ou « Neprečítané ».",
+   "fix": "Nezačaté",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:training.sessionComplete.summary",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "%d správne z %d",
+   "gloss_fr": "« %d correctes (forme pour 2–4) sur %d »",
+   "problem": "À partir de 5 le slovaque exige le génitif « správnych » ; « 7 správne z 10 » est fautif, alors que « Správne: 7 z 10 » évite l'accord.",
+   "fix": "Správne: %d z %d",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:audio.browse.empty",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Žiadny audio kurz nezodpovedá.",
+   "gloss_fr": "« Aucun cours audio ne correspond. » (verbe sans complément, phrase tronquée)",
+   "problem": "Calque du français ; « nezodpovedá » sans complément est incomplet en slovaque.",
+   "fix": "Žiadna nahrávka nezodpovedá hľadaniu.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_1_la_naissance_de_l_islam_622/s0.b1.text",
+   "severity": "majeur",
+   "category": "mt_artefact",
+   "current": "za menej ako storočie by posolstvo… zničilo veľké impériá… Tu je návod, ako to všetko začalo.",
+   "gloss_fr": "« en moins d'un siècle le message aurait détruit (conditionnel) de grands empires… Voici le mode d'emploi de la façon dont tout a commencé. »",
+   "problem": "Le futur « fera tomber » devient un conditionnel, et « Voici comment » est rendu par « Tu je návod » (« voici le mode d'emploi »), formule de notice technique au milieu d'un récit.",
+   "fix": "Ale za necelé storočie posolstvo zrodené v tejto púšti zvrhne veľké ríše a dá vzniknúť štátu siahajúcemu od Španielska až po brány Indie. Takto sa to všetko začalo.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_1_la_naissance_de_l_islam_622/s1.b2.text",
+   "severity": "majeur",
+   "category": "mt_artefact",
+   "current": "povedal, že dostane zjavenia od **610**… Jeho myšlienka **O jedného Boha** ohrozuje",
+   "gloss_fr": "« il a dit qu'il recevra des révélations à partir de 610… Son idée “Sur un seul Dieu” menace »",
+   "problem": "« dit recevoir des révélations » devient un futur, et « Dieu unique » est devenu « O jedného Boha », bribe agrammaticale avec majuscule en milieu de phrase.",
+   "fix": "Práve v tomto vákuu **Mohamed**, narodený okolo roku **570**, tvrdí, že od roku **610** dostáva zjavenia v jaskyni na hore Hira. Jeho myšlienka **jediného Boha** ohrozuje obchod Mekky, ktorá žije z modiel.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_1_la_naissance_de_l_islam_622/s2.b0.text",
+   "severity": "majeur",
+   "category": "non_traduit",
+   "current": "Muhammad… Tento odchod je **Hegire**… Napísal [[Medinskú]] ústavu… a založil La Oumma",
+   "gloss_fr": "« Muhammad (ailleurs Mohamed)… Ce départ est “Hegire” (graphie française)… Il a écrit la [[Médinoise]] constitution… et a fondé La Oumma (article français, balisage perdu) »",
+   "problem": "Dans le même paragraphe le prophète s'appelle Muhammad (Mohamed ailleurs), l'Hégire garde la graphie française, le balisage [[…]] de la Constitution de Médine est tronqué et celui de la Oumma a disparu avec l'article français conservé.",
+   "fix": "Mohamed, ohrozený smrťou, prijíma pozvanie oázy Jasrib… Tento odchod je **hidžra**. … Spisuje [[Medinskú ústavu]], dohodu medzi klanmi, a zakladá [[ummu]], spoločenstvo veriacich, ktoré presahuje pokrvné zväzky.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_100_les_fleurs_du_mal_baudelaire/s0.b1.text",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Kniha vyvolala škandál. Bol odsúdený za „urážku verejnej morálky“.",
+   "gloss_fr": "« Le livre (féminin en slovaque) a fait scandale. Il (masculin = Baudelaire) a été condamné pour… »",
+   "problem": "« kniha » est féminin : « Bol odsúdený » au masculin fait comprendre que c'est Baudelaire, pas le recueil, qui est condamné.",
+   "fix": "Kniha vyvolá škandál. Je odsúdená za „urážku verejnej morálky“.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_122_la_naissance_de_l_impressionnisme/description",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Kritik sa vysmieva Monet a nevedomky to nazýva **impresionizmus**.",
+   "gloss_fr": "« Un critique se moque Monet (non décliné) et sans le savoir appelle cela impressionnisme (nominatif). »",
+   "problem": "Le nom propre n'est pas décliné (Monetovi) et « baptise l'impressionnisme » est mal construit ; c'est la description visible dans la bibliothèque.",
+   "fix": "Kritik sa vysmieva Monetovi a nechtiac dá meno **impresionizmu**.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_122_la_naissance_de_l_impressionnisme/s1.b1.text",
+   "severity": "majeur",
+   "category": "nom_propre",
+   "current": "viac ako **3.000** obrazov… *Obed v tráve*… s dvoma mužmi v modernom kostýme",
+   "gloss_fr": "« plus de 3.000 (point) tableaux… *Déjeuner (repas de midi) dans l'herbe*… avec deux hommes en costume (de scène) »",
+   "problem": "Le tableau de Manet est connu en slovaque sous le titre « Raňajky v tráve » ; « costume » est un faux ami (« kostým » = déguisement/tailleur, ici « oblek ») ; le séparateur de milliers slovaque est l'espace.",
+   "fix": "viac ako **3 000** obrazov… *Raňajky v tráve* od **Édouarda Maneta**: nahá žena obeduje s dvoma mužmi v moderných oblekoch.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_166_narcisse_et_echo/description",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "Echo sa môže len opakovať.",
+   "gloss_fr": "« Écho ne peut que se répéter (elle-même). »",
+   "problem": "Le réfléchi « sa » fait dire qu'Écho se répète, alors qu'elle répète les paroles des autres.",
+   "fix": "Echo môže len opakovať slová druhých.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_166_narcisse_et_echo/hero.hook",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "Už nemá vlastný hlas. Oči má len pre seba.",
+   "gloss_fr": "« (Il/elle) n'a plus de voix propre. (Il/elle) n'a d'yeux que pour soi. »",
+   "problem": "Le slovaque ne marque pas le genre dans ces verbes : sans « ona/on », le lecteur ne sait plus qui a perdu sa voix et qui ne regarde que lui-même.",
+   "fix": "Ona už nemá vlastný hlas. On má oči len pre seba. Ich stretnutie je nemožné.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_166_narcisse_et_echo/s1.b0.text",
+   "severity": "majeur",
+   "category": "nom_propre",
+   "current": "je [[Oread]]… Pomáha **Zeus**… ona si udrží **Hera**, žiarlivú manželku, s nekonečnými rozhovormi",
+   "gloss_fr": "« elle est [[Oread]] (forme anglaise)… Elle aide Zeus (non décliné)… elle garde pour elle Héra (non déclinée) avec des conversations interminables »",
+   "problem": "« Oréade » apparaît sous sa forme anglaise, Zeus et Héra ne sont pas déclinés, et « retient Héra » devient « si udrží » (garde pour elle).",
+   "fix": "je [[oreáda]], horská nymfa známa svojou výrečnosťou. Pomáha **Diovi**, kráľovi bohov, skrývať nevery. Kým on odchádza za inými nymfami, ona zdržiava **Héru**, žiarlivú manželku, nekonečnými rozhovormi.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_207_l_otan_a_quoi_ca_sert_encore/description",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "**NATO**, ktorá bola založená… mala zaniknúť… Dnes je väčšia a aktívnejšia",
+   "gloss_fr": "« L'OTAN, qui a été fondée (féminin)… aurait dû disparaître (fém.)… Aujourd'hui elle est plus grande (fém.) »",
+   "problem": "En slovaque NATO est neutre (« NATO bolo založené ») ; le cours alterne féminin (description, s4.b0 « Začlenila ») et neutre (hero.hook, s1.b0, s4.b2), ce qui saute aux yeux.",
+   "fix": "**NATO**, založené v roku 1949 proti ZSSR, malo zaniknúť spolu so studenou vojnou. Dnes je väčšie a aktívnejšie než kedykoľvek predtým.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_100_les_fleurs_du_mal_baudelaire/s4.b1.text",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "Túto pozornosť mestu pripravuje **[[Prozaická báseň]]**… rozvinul v **[[Le Spleen de Paris]]**",
+   "gloss_fr": "« Cette attention à la ville est préparée par le poème en prose (sujet/objet inversés)… développé dans *Le Spleen de Paris* (titre laissé en français) »",
+   "problem": "Sujet et objet sont inversés (c'est l'attention à la ville qui prépare le poème en prose), le terme établi est « báseň v próze », et le recueil a un titre slovaque, « Parížsky splín ».",
+   "fix": "Táto pozornosť venovaná mestu pripravuje pôdu pre **[[báseň v próze]]**, poetický text bez veršov a rýmov. Baudelaire ju rozvinie v **[[Parížskom splíne]]**, posmrtne vydanej zbierke krátkych básní v próze o Paríži.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_1_la_naissance_de_l_islam_622/s3.b3.e3.title",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "Zachytenie Mekky",
+   "gloss_fr": "« Capture (au sens saisie/enregistrement) de La Mecque »",
+   "problem": "« Prise » (conquête d'une ville) est traduit par « zachytenie » (capter une image) ; le terme historique est « dobytie » ; le détail suivant « Vzdanie sa bez boja a generálneho pardonu » est lui aussi faux (= « sans combat ni pardon général ») et doit devenir « Kapitulácia bez boja a všeobecná milosť ».",
+   "fix": "Dobytie Mekky",
+   "surface": "combined"
+  }
+ ]
+}

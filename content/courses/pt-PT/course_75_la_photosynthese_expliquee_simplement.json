@@ -4,11 +4,11 @@
   "subtitle": "Plantas e energia",
   "subject": "sciences",
   "subcategory": "A Terra e o Universo",
-  "description": "As plantas fazem uma coisa extraordinária: cozinham açúcar com luz, água e ar. E ainda nos dão o oxigénio de presente.",
+  "description": "As plantas fazem uma coisa extraordinária: cozinham açúcar com luz, água e ar. E ainda nos oferecem o oxigénio.",
   "hero": {
     "image": "la_photosynthese_expliquee_simplement",
     "ratio": "16:9",
-    "hook": "Uma folha é uma cozinha solar: luz, água, ar, e pronto, açúcar."
+    "hook": "Uma folha é uma cozinha solar: luz, água, ar… e eis o açúcar."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Imagina uma fábrica minúscula em cada folha. Ela usa três ingredientes banais: a **luz do Sol**, a **água** das raízes e o **CO₂** do ar. Dela saem **açúcar** para crescer e **oxigénio** deitado fora."
+          "text": "Imagina uma fábrica minúscula em cada folha. Usa três ingredientes banais: a **luz do Sol**, a **água** das raízes e o **CO₂** do ar. Produz **açúcar** para crescer e liberta **oxigénio**."
         },
         {
           "type": "paragraph",
-          "text": "Esse feito chama-se **fotossíntese**. Sem ele, sem florestas, sem oxigénio respirável, quase sem vida complexa na Terra."
+          "text": "Esta proeza chama-se **fotossíntese**. Sem ela, não haveria florestas nem oxigénio respirável, e quase não haveria vida complexa na Terra."
         }
       ]
     },
@@ -33,7 +33,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Na célula vegetal, uns organelos verdes, os **cloroplastos**, abrigam a [[clorofila]]. Esse pigmento capta sobretudo o azul e o vermelho da luz. Já o verde é refletido: por isso, as folhas parecem-nos verdes."
+          "text": "Na célula vegetal, uns organelos verdes, os **cloroplastos**, abrigam a [[clorofila]]. Este pigmento capta sobretudo o azul e o vermelho da luz. O verde, esse, é refletido: é por isso que as folhas nos parecem verdes."
         },
         {
           "type": "image",
@@ -43,11 +43,11 @@
         },
         {
           "type": "paragraph",
-          "text": "A equação simples: CO₂ + água + luz → açúcar + oxigénio. O gás entra por poros minúsculos, os [[estomas]]. A água sobe das raízes. O açúcar transforma-se em madeira, frutos, raízes; o oxigénio parte para o ar."
+          "text": "A equação simples: CO₂ + água + luz → açúcar + oxigénio. O gás entra por poros minúsculos, os [[estomas]]. A água sobe das raízes. O açúcar transforma-se em madeira, frutos, raízes; o oxigénio é libertado para o ar."
         },
         {
           "type": "funFact",
-          "text": "A clorofila «recusa» o verde. Prefere o azul e o vermelho, mais eficazes para excitar os seus eletrões e ligar a máquina de energia."
+          "text": "A clorofila «recusa» o verde. Prefere o azul e o vermelho, mais eficazes para excitar os seus eletrões e pôr em marcha a máquina energética."
         }
       ]
     },
@@ -62,7 +62,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Depois, a **fase de fabricação**, o [[ciclo de Calvin]], nomeado em homenagem ao químico **Melvin Calvin**. Com a energia das pilhas, a planta monta o carbono do CO₂ em glicose. Não precisa de sol direto nessa etapa, mas ela depende por completo do que a luz produziu antes."
+          "text": "Depois, a **fase de fabrico**, o [[ciclo de Calvin]], assim chamado em homenagem ao químico **Melvin Calvin**. Com a energia das pilhas, a planta junta o carbono do CO₂ para formar glicose. Esta etapa não precisa de sol direto, mas depende por completo do que a luz produziu antes."
         },
         {
           "type": "funFact",
@@ -77,7 +77,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Há cerca de **2,4 mil milhões de anos**, bactérias fotossintéticas, as **cianobactérias**, passam a libertar oxigénio em massa. É a **Grande Oxidação**. Para muitos organismos da época, aquilo era um veneno."
+          "text": "Há cerca de **2,4 mil milhões de anos**, bactérias fotossintéticas, as **cianobactérias**, passam a libertar oxigénio em massa. É a **Grande Oxidação**. Para muitos organismos da época, era um veneno."
         },
         {
           "type": "paragraph",
@@ -96,11 +96,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Uma folha converte só **1 a 3%** da energia solar recebida em biomassa. À escala do planeta, isso ainda assim basta para alimentar as cadeias alimentares e absorver enormes quantidades de CO₂."
+          "text": "Uma folha converte só **1 a 3%** da energia solar recebida em biomassa. À escala do planeta, porém, isso basta para alimentar as cadeias alimentares e absorver enormes quantidades de CO₂."
         },
         {
           "type": "paragraph",
-          "text": "Daí o interesse das florestas, dos oceanos e até da fotossíntese artificial para o clima. Uma lesma-do-mar, *Elysia chlorotica*, chega a «roubar» cloroplastos às algas para viver um pouco de energia solar."
+          "text": "Daí a importância das florestas, dos oceanos… e até da fotossíntese artificial para o clima. Uma lesma-do-mar, *Elysia chlorotica*, chega a «roubar» cloroplastos às algas para viver, em parte, de energia solar."
         },
         {
           "type": "takeaway",

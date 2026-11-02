@@ -1,14 +1,14 @@
 {
   "id": "course_116_la_metamorphose_kafka",
-  "title": "Metamorfoza, Kafka",
+  "title": "Preobražaj, Kafka",
   "subtitle": "1915",
   "subject": "litterature",
   "subcategory": "Anglofona i svetska književnost",
-  "description": "Gregor Samsa se budi pretvoren u insekta. Kafka pokazuje kako porodica i društvo odbacuju one koji više ne mogu da rade.",
+  "description": "Gregor Samsa se budi pretvoren u insekta. Kafka pokazuje kako porodica i društvo odbacuju onoga ko više ne može da radi.",
   "hero": {
     "image": "la_metamorphose_kafka",
     "ratio": "16:9",
-    "hook": "Jednog jutra, Gregor Samsa se budi preobražen: fraza koja sumira čitavu eru."
+    "hook": "Jednog jutra Gregor Samsa se budi preobražen: rečenica koja sažima čitavu jednu epohu."
   },
   "sections": [
     {
@@ -18,36 +18,36 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Objavljeno u **1915**, [[The Metamorphosis]] otvara se jednim od najpoznatijih uvoda u literaturi: „Jednog jutra, izišavši iz mučnog sna, Gregor Samsa se probudio pretvoren u monstruoznog insekta.“ Originalni naslov na nemačkom jeziku je Z. **Franc Kafka**, rođen u **1883** i umro u **1924**, ne nudi fantastičnu priču, već arhetip moderne dehumanizacije."
+          "text": "Pripovetka [[Preobražaj]], objavljena **1915. godine**, počinje jednom od najpoznatijih uvodnih rečenica u književnosti: „Jednog jutra, posle nemirnih snova, Gregor Samsa se probudio pretvoren u čudovišnog insekta.“ Originalni naslov na nemačkom je *Die Verwandlung*. **Franc Kafka**, rođen **1883. godine**, umro **1924. godine**, ne nudi fantastičnu bajku, već arhetip moderne dehumanizacije."
         },
         {
           "type": "paragraph",
-          "text": "Napisano u rekordnom roku u novembru **1912**, delo istražuje šta se dešava kada pojedinac prestane da bude produktivan. On momentalno gubi svoj ljudski status u očima svog naroda. Apsurdna transformacija otkriva otuđenje koje je već na delu pre fizičke promene."
+          "text": "Napisana u rekordnom roku, u novembru **1912. godine**, pripovetka istražuje šta se dešava kada pojedinac prestane da bude produktivan. U očima svojih bližnjih on istog trenutka gubi status čoveka. Apsurdni preobražaj otkriva otuđenje koje je postojalo i pre fizičke promene."
         }
       ]
     },
     {
       "id": "course_116_la_metamorphose_kafka_p1",
-      "title": "Geneza apsurdnog remek-dela",
+      "title": "Nastanak remek-dela apsurda",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kafka je napisao kratku priču u **1912**, tokom perioda intenzivnog stvaralaštva u Pragu. On tretira transformaciju sa **Clinic realizam**: bez natprirodnog objašnjenja, bez traženja uzroka. Fokus je u potpunosti na materijalnim i porodičnim posledicama."
+          "text": "Kafka piše pripovetku **1912. godine**, u periodu snažnog stvaralaštva u Pragu. Preobražaj opisuje sa **kliničkim realizmom**: bez natprirodnog objašnjenja, bez traganja za uzrokom. Pažnja je u potpunosti usmerena na materijalne i porodične posledice."
         },
         {
           "type": "image",
           "asset": "giant_insect_metamorphosis_kafka_illustration",
           "ratio": "4:3",
-          "caption": "Gregorova metamorfoza: Kafka je zabranio da se insekt prikaže na koricama."
+          "caption": "Gregorov preobražaj: Kafka je zabranio da se insekt prikaže na koricama."
         },
         {
           "type": "funFact",
-          "text": "Kafka je strogo zabranio svom izdavaču da nacrta insekta na koricama, preferirajući da čitalac zamisli svoju verziju horora."
+          "text": "Kafka je izričito zabranio izdavaču da nacrta insekta na koricama, jer je hteo da svaki čitalac sam zamisli svoju verziju užasa."
         },
         {
           "type": "paragraph",
-          "text": "Njegov prijatelj [[Maks Brod]] nije poslušao poslednje Kafkine želje. Kafka je zahtevao uništenje njegovih rukopisa. Brod ih je posthumno objavio i tako sačuvao delo koje je postalo [[kafkijanski]] par ekcellence. Pridev označava apsurdnu, opresivnu i nelogičnu situaciju."
+          "text": "Njegov prijatelj [[Maks Brod]] nije poslušao Kafkinu poslednju volju. Kafka je tražio da se njegovi rukopisi unište. Brod ih je objavio posle njegove smrti i tako spasao delo koje je postalo najbolji primer za pridev [[kafkijanski]]. Taj pridev označava apsurdnu, tegobnu i nelogičnu situaciju."
         }
       ]
     },
@@ -58,11 +58,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Pre svoje transformacije, **Gregor Samsa** je bio **putujući prodavac**, putujući prodajni predstavnik. On je jedina finansijska podrška svoje porodice. Njegov život je niz iscrpljujućih putovanja i potčinjavanja tiranskom vođi. Tajno sanja da podnese ostavku, ali ga u tome sprečava porodični dug."
+          "text": "Pre preobražaja **Gregor Samsa** je **trgovački putnik**, prodavac koji stalno putuje. On jedini izdržava porodicu. Život mu je niz iscrpljujućih putovanja i pokornosti tiranskom šefu. Potajno mašta o otkazu, ali ga porodični dug u tome sprečava."
         },
         {
           "type": "paragraph",
-          "text": "Postavši „štetočina“, Gregor čini vidljivom dehumanizaciju koja je već na delu. Nemački izraz *Ungeziefer* označava nečistu, odbačenu, bezvrednu životinju. Paradoksalno, ovaj monstruozni oblik ga konačno oslobađa od voza u 5 ujutro: on više ne mora da ide na posao."
+          "text": "Kada postane „gamad“, Gregor čini vidljivom dehumanizaciju koja je već bila na delu. Nemačka reč *Ungeziefer* označava nečistu, odbačenu, bezvrednu životinju. Paradoksalno, to čudovišno obličje ga najzad oslobađa voza u 5 ujutru: više ne mora da ide na posao."
         }
       ]
     },
@@ -73,11 +73,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "U početku, sestra **Grete** hrani Gregora i predano čisti njegovu sobu. Ali vreme nagriza ovu solidarnost. Da bi preživeo, svaki član porodice ponovo radi: otac nađe posao, majka šije, Grete postaje prodavačica. Gregor postaje sramno breme."
+          "text": "U početku sestra **Greta** hrani Gregora i predano mu čisti sobu. Ali vreme nagriza tu solidarnost. Da bi preživeli, svi članovi porodice ponovo počinju da rade: otac nalazi posao, majka šije, Greta postaje prodavačica. Gregor postaje sramotan teret."
         },
         {
           "type": "paragraph",
-          "text": "Samsas iznajmljuje sobe [[boarders]], stanarima koji obroke uzimaju u kući. Gregor se svodi na život u skrivanju. Kada Grete izjavi da ga se moraju \"otarasiti\", Gregor umire od gladi. On shvata da više nema svoje mesto u ovoj porodici koja je ponovo postala „normalna“."
+          "text": "Porodica Samsa izdaje sobe stanarima na pansionu ([[podstanari]]), koji se i hrane u kući. Gregor je primoran da živi skriven. Kada Greta kaže da moraju „da ga se otarase“, Gregor se prepušta smrti od gladi. Shvata da više nema mesta u toj porodici koja je ponovo postala „normalna“."
         }
       ]
     },
@@ -88,7 +88,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Gregorova smrt nije tragedija za porodicu, već **izbavljenje**. Odlaze na vožnju tramvajem, već razmišljaju o Gretinom venčanju. Gregor je potpuno izbrisan iz njihovog sećanja za nekoliko nedelja. Ponovo otkrivena normalnost pokazuje se strašnijom od same metamorfoze."
+          "text": "Gregorova smrt za porodicu nije tragedija, već **izbavljenje**. Odlaze tramvajem na izlet i već misle na Gretinu udaju. Za nekoliko nedelja Gregor potpuno nestaje iz njihovog sećanja. Povraćena normalnost pokazuje se strašnijom od samog preobražaja."
         },
         {
           "type": "image",
@@ -98,11 +98,11 @@
         },
         {
           "type": "paragraph",
-          "text": "Kratka priča ilustruje kako posao i porodična struktura uništavaju pojedinca čim on ili ona prestane da bude ekonomski koristan. Kafka opisuje birokratski svet u kome je čovek samo funkcija. Porodična ljubav zavisi od produktivnosti. Apsurd nije u samoj metamorfozi, već u reakciji njemu bliskih, koji više vole brisanje pacijenta nego saosećanje."
+          "text": "Pripovetka pokazuje kako posao i porodična struktura melju pojedinca čim prestane da bude ekonomski koristan. Kafka opisuje birokratski svet u kome je čovek samo funkcija. Porodična ljubav zavisi od produktivnosti. Apsurd nije u samom preobražaju, već u reakciji bližnjih, kojima je draže da bolesnik nestane nego da prema njemu pokažu saosećanje."
         },
         {
           "type": "takeaway",
-          "text": "[[The Metamorphosis]] koristi apsurdnu transformaciju čoveka u insekta da osudi otuđenje kroz rad i krhkost veza zasnovanih na ekonomskoj korisnosti."
+          "text": "[[Preobražaj]] kroz apsurdno pretvaranje čoveka u insekta osuđuje otuđenje koje donosi rad i krhkost veza zasnovanih na ekonomskoj koristi."
         }
       ]
     }

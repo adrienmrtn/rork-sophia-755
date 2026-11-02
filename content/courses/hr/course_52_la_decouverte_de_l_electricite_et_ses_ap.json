@@ -4,11 +4,11 @@
   "subtitle": "Od Franklina do Tesle",
   "subject": "sciences",
   "subcategory": "Otkrića koja su promijenila svijet",
-  "description": "Električna energija nije izumljena odjednom. Prvo je uočeno, zatim shvaćeno, a zatim pripitomljeno. Evo ključnih koraka.",
+  "description": "Elektricitet nije izumljen odjednom. Najprije su ga promatrali, zatim shvatili, a onda ukrotili. Evo ključnih koraka.",
   "hero": {
     "image": "la_decouverte_de_l_electricite",
     "ratio": "16:9",
-    "hook": "Od munje do pametnog telefona: dva stoljeća da ukrotimo nevidljivo."
+    "hook": "Od munje do mobitela: dva stoljeća da se ukroti nevidljivo."
   },
   "sections": [
     {
@@ -18,7 +18,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Elektricitet postoji u prirodi: munje, električne ribe, trenje. Ono što je promijenilo svijet bilo je učenje **proizvodnje**, **transportiran** i njegove upotrebe."
+          "text": "Elektricitet postoji u prirodi: munje, električne ribe, trenje. Svijet je promijenilo nešto drugo: kad se naučilo kako ga **proizvesti**, **prenijeti** i koristiti."
         },
         {
           "type": "paragraph",
@@ -33,7 +33,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "U 18. stoljeću **Benjamin Franklin** pokazao je da je munja električni fenomen. Njegov eksperiment s puštanjem zmaja (često ispričan na izmišljen način) ima za cilj dokazati da nebo i stroj za trenje djeluju istom snagom."
+          "text": "U 18. stoljeću **Benjamin Franklin** pokazuje da je munja električna pojava. Pokusom sa zmajem (koji se često prepričava uljepšano) želi dokazati da u nebu i u stroju na trenje djeluje ista sila."
         },
         {
           "type": "image",
@@ -43,7 +43,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Također smo izumili **grmljavina**, metalnu šipku koja munji nudi siguran put do tla. Elektricitet napušta misteriju da bi ušao u inženjerstvo."
+          "text": "Izumljen je i **gromobran**, metalna šipka koja munji nudi siguran put do tla. Elektricitet izlazi iz područja tajne i ulazi u inženjerstvo."
         }
       ]
     },
@@ -54,7 +54,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "U 19. stoljeću **Michael Faraday** pokazao je da magnet koji se kreće u blizini žice može stvoriti električnu struju. Ovo je **indukcija**. Bez ove ideje nema dinama, nema alternatora, nema moderne elektrane."
+          "text": "U 19. stoljeću **Michael Faraday** pokazuje da magnet koji se giba blizu žice može stvoriti električnu struju. To je **indukcija**. Bez te ideje nema dinama, nema alternatora, nema moderne elektrane."
         },
         {
           "type": "image",
@@ -64,7 +64,7 @@
         },
         {
           "type": "funFact",
-          "text": "Faraday je došao iz skromne sredine i počeo je kao knjigoveža. Naučio je znanost čitajući ono što je vjerovao."
+          "text": "Faraday je potjecao iz skromne obitelji i počeo je kao knjigoveža. Znanost je naučio čitajući knjige koje je uvezivao."
         }
       ]
     },
@@ -75,32 +75,32 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Krajem 19. stoljeća sukobila su se dva tabora. **Thomas Edison** gura istosmjernu struju. **Nikola Tesla** (i tvrtka Westinghouse) brane izmjeničnu struju koja se lakše prenosi na velike udaljenosti."
+          "text": "Krajem 19. stoljeća sukobljavaju se dva tabora. **Thomas Edison** zagovara istosmjernu struju. **Nikola Tesla** (i tvrtka Westinghouse) brane izmjeničnu struju, koju je lakše prenositi na velike udaljenosti."
         },
         {
           "type": "image",
           "asset": "tesla_edison_electric_power_station",
           "ratio": "4:3",
-          "caption": "Izmjenična struja dobiva na snazi u gradovima."
+          "caption": "U opskrbi gradova pobjeđuje izmjenična struja."
         },
         {
           "type": "paragraph",
-          "text": "Izmjenična struja pobjeđuje u urbanim mrežama. Gradovi svijetle. Tvornice mijenjaju tempo."
+          "text": "Izmjenična struja pobjeđuje u gradskim mrežama. Gradovi dobivaju svjetlo. Tvornice mijenjaju ritam."
         }
       ]
     },
     {
       "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p4",
-      "title": "Povezani svijet",
+      "title": "Svijet na struji",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Danas struja pokreće bolnice, vlakove, internet, hladnjake. Izazov više nije samo proizvesti ga, već to učiniti čisto i pouzdano."
+          "text": "Danas struja pokreće bolnice, vlakove, internet, hladnjake. Izazov više nije samo proizvesti je, nego to činiti čisto i pouzdano."
         },
         {
           "type": "takeaway",
-          "text": "Električna energija je shvaćena, a zatim udomaćena: Franklin za munju, Faraday za proizvodnju struje, Tesla i izmjenična struja za unos u domove. Naš svakodnevni život još uvijek ovisi o tome."
+          "text": "Elektricitet je najprije shvaćen, a zatim ukroćen: Franklin je objasnio munju, Faraday je pokazao kako proizvesti struju, a Tesla ju je izmjeničnom strujom doveo u domove. Naša svakodnevica i danas ovisi o njemu."
         }
       ]
     }

@@ -1,0 +1,145 @@
+{
+  "id": "course_131_la_naissance_de_la_musique_electronique",
+  "title": "Iš kur kilo elektroninė muzika, gerokai prieš klubus?",
+  "subtitle": "1920-1990",
+  "subject": "art",
+  "subcategory": "Musique",
+  "description": "Nuo teremeno iki Čikagos ir Detroito klubų: elektroninė muzika išranda garsus be orkestro ir pakeičia viso pasaulio šokius.",
+  "hero": {
+    "image": "la_naissance_de_la_musique_electronique",
+    "ratio": "16:9",
+    "hook": "Iš laboratorijų į šokių aikšteles: kaip mašinos sukūrė naują muziką."
+  },
+  "sections": [
+    {
+      "id": "course_131_la_naissance_de_la_musique_electronique_intro",
+      "title": "Įvadas",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Elektroninė muzika prasideda ne naktiniame klube. Ji gimsta laboratorijose, kai išradėjai ieško garsų, kurių neišgausi iš smuiko ar fortepijono."
+        },
+        {
+          "type": "paragraph",
+          "text": "1920-aisiais sukurtas [[Teremenas]], vėliau [[Čikagos house]] ir [[Detroito techno]]: visą šimtmetį juos sieja viena idėja, kad mašina gali kurti, o ne tik įrašinėti. Šiandien ji formuoja didelę pasaulio popmuzikos dalį ir daug ką iš to, ką rodo [[topai]]."
+        }
+      ]
+    },
+    {
+      "id": "course_131_la_naissance_de_la_musique_electronique_p1",
+      "title": "Pionieriai: nuo teremeno iki konkrečiosios muzikos",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**1920** m. rusų išradėjas **Leonas Tereminas** (Levas Termenas) sukuria naują instrumentą. Tai [[Teremenas]]: juo grojama neliečiant. Rankos juda prie antenų elektromagnetiniame lauke. Garsas slysta, beveik kaip balsas, ir netrukus ima šiurpinti mokslinės fantastikos filmuose."
+        },
+        {
+          "type": "image",
+          "asset": "theremin_instrument_leon_theremin_1920",
+          "ratio": "4:3",
+          "caption": "Teremenas: instrumentas, kuriuo grojama ore, neliečiant stygų."
+        },
+        {
+          "type": "paragraph",
+          "text": "Po 1945 m. tyrimai persikelia kitur. Paryžiuje, visuomeniniame radijuje, **Pierre'as Schaefferis** ir **Pierre'as Henry** išranda konkrečiąją muziką: įrašyti kasdienius garsus, paskui juos karpyti, apversti, sukti kilpomis magnetinėje juostoje. Kelne kitos studijos renkasi grynąją sintezę: garsus, gimusius iš osciliatorių, be akustinio šaltinio. Šie du keliai iki šiol yra muzikos kūrimo pagrindas: vienoje pusėje [[semplingas]], kitoje sintezė."
+        },
+        {
+          "type": "funFact",
+          "text": "Tereminas pristatė savo instrumentą Leninui. Sužavėtas sovietų vadovas esą užsakė šimtus egzempliorių, kad skleistų technikos modernumą SSRS."
+        }
+      ]
+    },
+    {
+      "id": "course_131_la_naissance_de_la_musique_electronique_p2",
+      "title": "Moogas, Wendy Carlos ir Kraftwerk",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "1960-aisiais amerikiečių inžinierius **Robertas Moogas**, pasitelkęs tranzistorius, gerokai sumažina sintezatorių. **1968** m. **Wendy Carlos** albumas *Switched-On Bach* įrodo, kad elektronika gali perteikti klasikinės muzikos sudėtingumą. Žaisliukas tampa instrumentu."
+        },
+        {
+          "type": "image",
+          "asset": "moog_synthesizer_robert_moog_1960s",
+          "ratio": "4:3",
+          "caption": "Moogo sintezatorius: mašina iš laboratorijos persikelia į studiją."
+        },
+        {
+          "type": "paragraph",
+          "text": "Diuseldorfe vokiečių grupė **Kraftwerk**, kurią įkūrė **Ralfas Hütteris** ir **Florianas Schneideris**, įtvirtina šaltą, pasikartojantį popą. Albumuose *Autobahn* (**1974**) ir *The Man-Machine* (**1978**) jie dainuoja apie greitkelį, robotą, miestą. Jų ritmas vėliau maitins amerikiečių hiphopą ir Europos šokių muziką."
+        },
+        {
+          "type": "image",
+          "asset": "kraftwerk_band_dusseldorf_1970s",
+          "ratio": "4:3",
+          "caption": "Kraftwerk: žmogus mašina kaip meninė persona."
+        },
+        {
+          "type": "funFact",
+          "text": "Per kai kuriuos turus Kraftwerk į spaudos konferencijas siųsdavo į save panašius manekenus ir taip iki galo išplėtojo žmogaus mašinos idėją."
+        }
+      ]
+    },
+    {
+      "id": "course_131_la_naissance_de_la_musique_electronique_p3",
+      "title": "Čikaga ir Detroitas: elektroniniai šokiai",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "1980-aisiais įperkamos mašinos, tokios kaip ritmo mašina **Roland TR-808**, viską pakeičia. Čikagoje, juodaodžių ir gėjų bendruomenių lankomuose klubuose, didžėjaus **Frankie Knuckleso** rankose bręsta [[Čikagos house]]: pastovus 4/4 ritmas ir iš disko paveldėta šiluma."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Detroite**, mieste, kurį paženklino automobilių gamyklų nuosmukis, trys universiteto draugai (**Juanas Atkinsas**, **Derrickas May**, **Kevinas Saundersonas**) sukuria tamsesnę estetiką: tai [[Detroito techno]]. Pasiekusi Europą, ji sulaukia stipraus atgarsio Berlyne po Berlyno sienos griuvimo."
+        },
+        {
+          "type": "funFact",
+          "text": "TR-808 buvo komercinė nesėkmė: profesionalai ją laikė „nerealistiška“. Pigiai parduodama iš antrų rankų, ji tapo neturtingų Čikagos didžėjų ginklu."
+        }
+      ]
+    },
+    {
+      "id": "course_131_la_naissance_de_la_musique_electronique_p4",
+      "title": "Kompiuteris: kiekvieno studija",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nuo 1990-ųjų [[kompiuterinės muzikos programos]] paprastą asmeninį kompiuterį paverčia studija. Elektronika iš klubo persikelia į reklamą, kiną ir beveik visą popmuziką. [[Čikagos house ir Detroito techno muzika]] lieka pasaulinės kalbos šaknimis."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1920",
+              "title": "Teremenas",
+              "detail": "Leonas Tereminas išranda instrumentą, kuriuo grojama neliečiant."
+            },
+            {
+              "date": "1948-1950",
+              "title": "Konkrečioji muzika",
+              "detail": "Schaefferis ir Henry Paryžiuje apdoroja įrašytus garsus."
+            },
+            {
+              "date": "1968-1978",
+              "title": "Moogas ir Kraftwerk",
+              "detail": "Sintezatorius įžengia į masinę kultūrą."
+            },
+            {
+              "date": "1980-ieji",
+              "title": "House ir techno",
+              "detail": "Čikaga ir Detroitas sukuria šiuolaikinę elektroninę šokių muziką."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Gimusi 1950-ųjų laboratorijose, elektroninė muzika šiandien formuoja didelę pasaulio muzikos produkcijos dalį, nuo klubų iki hitų sąrašų."
+        }
+      ]
+    }
+  ]
+}

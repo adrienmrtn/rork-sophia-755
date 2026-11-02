@@ -4,12 +4,12 @@
   "subtitle": "Iga vastuse taga",
   "subject": "comprendreLeMonde",
   "subcategory": "Keskkond ja tulevik",
-  "description": "Iga tehisintellekti vastus sünnib hoones, mis on täis ööpäevaringselt töötavaid masinaid. Kui palju elektrit see tegelikult maksab, alates mudeli treenimisest kuni seda toitva võrguni?",
+  "description": "Iga tehisintellekti vastus sünnib hoones, mis on täis ööpäevaringselt töötavaid masinaid. Kui palju elektrit see tegelikult maksab, mudeli treenimisest seda toitva elektrivõrguni?",
   "author": "rana-abdalla",
   "hero": {
     "image": "data_center_server_racks_aisle_blue_lights",
     "ratio": "4:3",
-    "hook": "Tehisintellekt näib olevat tarkvara, kuid iga vastus valmib täiesti päris hoones, mis on ühendatud samasse võrku kui sinu kodu."
+    "hook": "Tehisintellekt näib olevat tarkvara, kuid iga vastus valmib päris hoones, mis on ühendatud samasse elektrivõrku kui sinu kodu."
   },
   "sections": [
     {
@@ -34,7 +34,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Mis on [[server]]? Lihtsalt arvuti, mis töötleb andmeid ja käitab veebiteenuseid. Andmekeskuses teevad suurema osa arvutustööst serverid, seega on nemad ka suurimad elektritarbijad. Kui tänapäevase andmekeskuse elektriarve osadeks jagada, moodustavad serverid sellest keskmiselt **60%**. See arv kehtib andmekeskuste kohta üldiselt, mitte ainult tehisintellekti rajatiste kohta."
+          "text": "Andmeid töötlev ja veebiteenuseid käitav arvuti on [[server]]. Andmekeskuses teevad suurema osa arvutustööst serverid, seega on nemad ka suurimad elektritarbijad. Kui tänapäevase andmekeskuse elektriarve osadeks jagada, moodustavad serverid sellest keskmiselt **60%**. See arv kehtib andmekeskuste kohta üldiselt, mitte ainult tehisintellekti rajatiste kohta."
         },
         {
           "type": "image",
@@ -48,7 +48,7 @@
         },
         {
           "type": "funFact",
-          "text": "Rahvusvahelise Energiaagentuuri andmetel kasvas tehisintellektile pühendatud andmekeskuste elektritarbimine ainuüksi 2025. aastal 50%."
+          "text": "Rahvusvahelise Energiaagentuuri andmetel kasvas tehisintellekti jaoks mõeldud andmekeskuste elektritarbimine ainuüksi 2025. aastal 50%."
         }
       ]
     },
@@ -80,15 +80,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kui palju elektrit kulutab üks tekstipäring? Avaldatud hinnangud ei anna ühesugust vastust. Google, mõõtes oma töötavat teenust, paigutab oma mediaanse tekstipäringu tasemele **0,24 Wh**. Energiahulka mõõdetakse ühikuga, mille nimi on [[vatt-tund]] (Wh). Üks teine uuring jõuab mediaanini **0,31 Wh**, kusjuures tema tavapäringute keskmine pool jääb vahemikku **0,16 kuni 0,60 Wh**."
+          "text": "Kui palju elektrit kulutab üks tekstipäring? Avaldatud hinnangud ei anna ühesugust vastust. Google mõõdab oma töötavat teenust ja leiab, et tema mediaanne tekstipäring kulutab **0,24 Wh**. Energiahulka mõõdetakse ühikuga, mille nimi on [[vatt-tund]] (Wh). Teine uuring jõuab mediaanini **0,31 Wh** ja selle tavapäringute keskmine pool jääb vahemikku **0,16-0,60 Wh**."
         },
         {
           "type": "paragraph",
-          "text": "Need arvud ei ole omavahel vastuolus: need kirjeldavad eri süsteeme ja meetodeid, mitte sama ülesande kahte vastandlikku mõõtmist. Samuti jätavad need kõrvale palju raskemad tööd. Kui palud tehisintellektil enne vastamist mitmes etapis arutleda, hoiab see tema arvuteid hõivatuna palju kauem. Energia päringu kohta sõltub seega süsteemist, mõõtmisviisist ja nõutud tööst."
+          "text": "Need arvud ei ole omavahel vastuolus: need kirjeldavad eri süsteeme ja meetodeid, mitte sama ülesande kahte vastandlikku mõõtmist. Samuti jätavad need kõrvale palju raskemad tööd. Kui palud tehisintellektil enne vastamist mitmes etapis arutleda, hoiab see tema arvuteid hõivatuna palju kauem. Ühe päringu energiakulu sõltub seega süsteemist, mõõtmisviisist ja nõutud tööst."
         },
         {
           "type": "funFact",
-          "text": "Samas uuringus ulatub pika arutluskäiguga päringu, kus mudel kirjutab enne järelduseni jõudmist oma sammud lahti, mediaan 3,91 Wh-ni, mis on üle kümne korra rohkem kui tavapäringul."
+          "text": "Samas uuringus on pika arutluskäiguga päringu mediaan 3,91 Wh ehk üle kümne korra rohkem kui tavapäringul: sellises päringus kirjutab mudel enne järelduseni jõudmist oma sammud lahti."
         }
       ]
     },
@@ -99,7 +99,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Elektrijaamadest kodudesse ja ettevõtetesse kannab voolu [[elektrivõrk]], liinide võrgustik. Suured tehisintellekti rajatised ühendatakse samasse võrku. Suurusjärgu andmiseks võrdleb Rahvusvaheline Energiaagentuur tehisintellektile pühendatud andmekeskuse, peamiselt nende teenuste käitamiseks ehitatud hoone, aastast elektritarbimist umbes **100 000 leibkonna** tarbimisega."
+          "text": "Liinide võrgustik, mis kannab voolu elektrijaamadest kodudesse ja ettevõtetesse, on [[elektrivõrk]]. Suured tehisintellekti rajatised ühendatakse samasse võrku. Suurusjärgu andmiseks võrdleb Rahvusvaheline Energiaagentuur tehisintellekti andmekeskuse, mis on ehitatud peamiselt nende teenuste käitamiseks, aastast elektritarbimist umbes **100 000 leibkonna** tarbimisega."
         },
         {
           "type": "image",

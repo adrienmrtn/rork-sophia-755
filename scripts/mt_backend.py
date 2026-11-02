@@ -15,8 +15,11 @@ every row after the first bad one.
 
 Usage:
     from mt_backend import translate_batch, translate_one
-    translate_batch(["Hello", "Goodbye"], target="da")          # -> [str, str]
-    translate_one("Hello", target="ru")                          # -> str
+    translate_batch(["Bonjour", "Au revoir"], target="da")      # -> [str, str]
+    translate_one("Bonjour", target="ru")                        # -> str
+
+The source language defaults to French (``MT_SOURCE_LANG``): every caller
+translates from the French product text, never from the English table.
 """
 
 from __future__ import annotations
@@ -30,6 +33,7 @@ import urllib.error
 import urllib.parse
 import urllib.request
 
+from i18n_languages import MT_SOURCE_LANG
 from serbian_script import repair_sentinels, to_latin
 
 GOOGLE = "https://clients5.google.com/translate_a/t?client=dict-chrome-ex"
@@ -181,7 +185,7 @@ def _pack(texts: list[str]) -> list[list[int]]:
 def translate_batch(
     texts: list[str],
     target: str,
-    source: str = "en",
+    source: str = MT_SOURCE_LANG,
     timeout: int = 90,
 ) -> list[str]:
     """Translates `texts` and returns exactly as many strings, in the same order.
@@ -217,14 +221,14 @@ def translate_batch(
     return [texts[i] if v is None else v for i, v in enumerate(result)]
 
 
-def translate_one(text: str, target: str, source: str = "en", timeout: int = 90) -> str:
+def translate_one(text: str, target: str, source: str = MT_SOURCE_LANG, timeout: int = 90) -> str:
     return translate_batch([text], target, source, timeout)[0]
 
 
 class GoogleTranslator:
     """Drop-in stand-in for ``deep_translator.GoogleTranslator``."""
 
-    def __init__(self, source: str = "en", target: str = "en") -> None:
+    def __init__(self, source: str = MT_SOURCE_LANG, target: str = "en") -> None:
         self.source = source
         self.target = target
 

@@ -1,14 +1,14 @@
 {
   "id": "course_160_la_liberte_de_la_presse_et_le_journalism",
   "title": "Môže fotožurnalistika zmeniť pohľad na vojnu?",
-  "subtitle": "20. storočia",
+  "subtitle": "20. storočie",
   "subject": "art",
   "subcategory": "Film, fotografia a architektúra + veľdiela",
-  "description": "Od Cartier-Bressona po Nicka Uta, tlačová fotografia zachytáva históriu na jednom obrázku. Sloboda, etika a sila médií v rovnakom hľadáčiku.",
+  "description": "Od Cartier-Bressona po Nicka Uta: novinová fotografia zachytí dejiny v jedinej snímke. Sloboda, etika a moc médií v jednom hľadáčiku.",
   "hero": {
     "image": "la_liberte_de_la_presse_et_le_journalisme_photographique",
     "ratio": "16:9",
-    "hook": "Fotografia môže zastaviť vojnu... alebo klamať. Musíme to ešte zverejniť."
+    "hook": "Fotografia môže zastaviť vojnu… alebo klamať. Najprv ju však treba môcť zverejniť."
   },
   "sections": [
     {
@@ -18,26 +18,26 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Fotografická žurnalistika sa rodí, keď obraz zafixuje správy tak silno ako článok. Jediný pohľad môže zhrnúť vojnu, hladomor, víťazstvo."
+          "text": "Fotožurnalistika vzniká vo chvíli, keď snímka zachytí aktuálne dianie rovnako silno ako článok. Jediný záber dokáže zhrnúť vojnu, hladomor či víťazstvo."
         },
         {
           "type": "paragraph",
-          "text": "Ale bez slobody tlače zostávajú tieto obrázky v zásuvke."
+          "text": "No bez slobody tlače ostanú tieto snímky v zásuvke."
         }
       ]
     },
     {
       "id": "course_160_la_liberte_de_la_presse_et_le_journalism_p1",
-      "title": "Rozhodujúci moment",
+      "title": "Rozhodujúci okamih",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "[[Henri Cartier-Bresson]] teoretizuje „rozhodujúci moment“: byť na správnom mieste, v správnom čase a so správnym rámovaním. [[Gerda Taro]] spolu s Capom zomrel pri španielskej občianskej vojne. Fotožurnalistika má svojich mučeníkov."
+          "text": "[[Henri Cartier-Bresson]] formuluje teóriu „rozhodujúceho okamihu“: byť na správnom mieste v správnej chvíli a so správnym záberom. [[Gerda Taro]], ktorá pracuje po boku Capu, zahynie pri reportáži zo španielskej občianskej vojny. Fotožurnalistika má svojich mučeníkov."
         },
         {
           "type": "paragraph",
-          "text": "Vzhľad ilustrovaných časopisov a fotoagentúr profesionalizoval túto profesiu. Reportér odchádza so zariadením ako ostatní s notebookom. Riziko je fyzické."
+          "text": "Vznik ilustrovaných časopisov a fotografických agentúr urobí z tejto práce profesiu. Reportér vyráža s fotoaparátom tak, ako iní so zápisníkom. Riziko je fyzické."
         },
         {
           "type": "image",
@@ -49,20 +49,20 @@
     },
     {
       "id": "course_160_la_liberte_de_la_presse_et_le_journalism_p2",
-      "title": "Obrázky, ktoré menia diskusiu",
+      "title": "Snímky, ktoré menia debatu",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Vo Vietname fotografia [[Nick Ut]] zobrazujúca malé dievčatko popálené napalmom otriasa verejnou mienkou. Tento obraz „neukončí“ vojnu sám, ale znemožňuje poprieť ľudské náklady."
+          "text": "Vo Vietname zachytí [[Nick Ut]] malé dievča popálené napalmom a jeho snímka otrasie verejnou mienkou. Fotografia sama vojnu „neukončí“, ale znemožní poprieť jej ľudskú cenu."
         },
         {
           "type": "paragraph",
-          "text": "Veľké demokracie teoreticky chránia tlač. Diktatúry ovládajú hľadáčik. Sloboda zverejniť obrázok sa stáva politickým barometrom."
+          "text": "Veľké demokracie tlač teoreticky chránia. Diktatúry zasa hľadáčik kontrolujú. Sloboda zverejniť snímku sa stáva politickým barometrom."
         },
         {
           "type": "funFact",
-          "text": "Mnohé slávne fotografie boli najprv cenzurované alebo diskutované, kým sa stali historickými dôkazmi."
+          "text": "Mnohé slávne snímky boli najprv cenzurované alebo spochybňované, kým sa stali samozrejmou súčasťou dejín."
         }
       ]
     },
@@ -73,17 +73,17 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "[[Etika fotožurnalistiky]] kladie otázky: môžeme utrpenie zarámovať? Retušovať? Slobodný pohľad ohrozuje aj [[Koncentrácia médií a redakčná nezávislosť]]."
+          "text": "[[Etika fotožurnalistiky]] kladie otázky: smie sa utrpenie vložiť do záberu? Smie sa retušovať? Slobodný pohľad ohrozuje aj [[Koncentrácia médií a redakčná nezávislosť]]."
         },
         {
           "type": "paragraph",
-          "text": "V digitálnom veku je verifikácia nevyhnutná: metadáta, spätné vyhľadávanie obrázkov, kontext. Fotografia zostáva výkonná, ale dá sa s ňou manipulovať rýchlejšie ako kedykoľvek predtým."
+          "text": "V digitálnej dobe je overovanie nevyhnutné: metadáta, spätné vyhľadávanie obrázkov (reverse image search), kontext. Fotografia má stále veľkú moc, no dá sa s ňou manipulovať rýchlejšie než kedykoľvek predtým."
         },
         {
           "type": "image",
           "asset": "photojournalism_war_correspondent_camera",
           "ratio": "4:3",
-          "caption": "Reportér: svedok vyzbrojený cieľom."
+          "caption": "Reportér: svedok vyzbrojený objektívom."
         }
       ]
     },
@@ -94,27 +94,27 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "V dobe sietí fotí každý. Potreba spoľahlivých, kontextualizovaných obrázkov, chránených právom na informácie, nebola nikdy taká silná."
+          "text": "V ére sociálnych sietí fotí každý. Potreba spoľahlivých snímok, zasadených do kontextu a chránených právom informovať, nebola nikdy väčšia."
         },
         {
           "type": "paragraph",
-          "text": "Ak chcete plne pochopiť slobodu tlače a fotografickú žurnalistiku, musíte mať na pamäti jednu vec: každý technický detail slúži emócii alebo nápadu. Dielo nikdy nie je len dekoratívne."
+          "text": "Ak chceš dobre pochopiť slobodu tlače a fotožurnalistiku, maj na pamäti jednu vec: každý technický detail slúži emócii alebo myšlienke. Dielo nie je nikdy len ozdobou."
         },
         {
           "type": "paragraph",
-          "text": "Kontext je dôležitý rovnako ako štýl. Dátumy, miesta, sponzori, verejnosť: to všetko vysvetľuje, prečo sa formulár objaví v konkrétnom okamihu a nie skôr."
+          "text": "Kontext je rovnako dôležitý ako štýl. Dátumy, miesta, objednávatelia, publikum: to všetko vysvetľuje, prečo sa určitá forma objaví práve v danom čase, a nie skôr."
         },
         {
           "type": "paragraph",
-          "text": "Napokon, dedičstvo sa meria z dlhodobého hľadiska. To, čo dnes vidíme v múzeách, filmoch či populárnej hudbe, stále nesie stopy týchto vynálezov."
+          "text": "Napokon, odkaz sa ukáže až s odstupom času. To, čo dnes vidíme v múzeách, filmoch či populárnej hudbe, stále nesie stopy týchto objavov."
         },
         {
           "type": "paragraph",
-          "text": "Cvičte oko, obhajujte informátorov, zaplaťte za žurnalistiku v teréne: bez toho zostáva len tok. Dedičstvo 20. storočia je požiadavka, nie nostalgia."
+          "text": "Vychovávať oko, brániť oznamovateľov, platiť žurnalistiku v teréne: bez toho ostane len nekonečný prúd obsahu. Odkaz 20. storočia je záväzok, nie nostalgia."
         },
         {
           "type": "takeaway",
-          "text": "Od Cartier-Bressonovej Leica po vojnové fotografie, fotožurnalistika dokázala, že voľný obrázok môže mať rovnakú váhu ako úvodník."
+          "text": "Od Leiky Cartier-Bressona po vojnové snímky dokázala fotožurnalistika, že slobodná fotografia môže mať rovnakú váhu ako úvodník."
         }
       ]
     }

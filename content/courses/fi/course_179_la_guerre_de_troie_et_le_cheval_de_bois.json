@@ -4,11 +4,11 @@
   "subtitle": "Kreikkalainen mytologia",
   "subject": "mythologie",
   "subcategory": "Kreikan sankarit",
-  "description": "Kymmenen vuotta piiritystä, jumalat molemmin puolin, sitten puuhevonen. Suurin eeppinen tarina antiikin Kreikasta ja sotilaallisen huijauksen arkkityyppi.",
+  "description": "Kymmenen vuotta piiritystä, jumalia molemmin puolin, sitten puuhevonen. Antiikin Kreikan suurin eeppinen kertomus ja sotajuonen arkkityyppi.",
   "hero": {
     "image": "la_guerre_de_troie_et_le_cheval_de_bois",
     "ratio": "16:9",
-    "hook": "Kultainen omena, kidnapattu nainen, sitten kymmenen vuotta sotaa: Troija ei kaadu aseiden alle, vaan puuhevosen alle."
+    "hook": "Kultainen omena, ryöstetty nainen ja kymmenen vuotta sotaa: Troija ei kaadu aseisiin vaan puuhevoseen."
   },
   "sections": [
     {
@@ -18,30 +18,30 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Troijalainen sota** on muinaisen Kreikan suuri tarina, jonka Homer ikuisti Iliadissa. Kreikkalaisten kaupunkien liittouma piiritti [[Ilium]], toinen nimi Troijalle, **kymmenen vuoden**. Jumalat ottavat puolensa. Sankarit kuolevat kunnian tähden."
+          "text": "**Troijan sota** on antiikin Kreikan suuri kertomus, jonka Homeros ikuisti Iliaassa. Kreikkalaisten kaupunkivaltioiden liittouma piirittää Troijaa, toiselta nimeltään [[Ilion]], **kymmenen vuotta**. Jumalat asettuvat puolelle tai toiselle. Sankarit kuolevat kunnian vuoksi."
         },
         {
           "type": "paragraph",
-          "text": "Kaupunki ei anna periksi pakolle. Hän kaatuu juonen: **puuhevonen**. Tästä juonnosta on tullut yleinen symboli taistelukentältä nykypäivän tietokoneviruksiin."
+          "text": "Kaupunki ei taivu voimalle. Se kaatuu sotajuoneen: **puuhevoseen**. Juonesta on tullut yleismaailmallinen symboli taistelukentiltä nykypäivän tietokoneviruksiin."
         }
       ]
     },
     {
       "id": "course_179_la_guerre_de_troie_et_le_cheval_de_bois_p1",
-      "title": "Kultainen omena aloittaa kaiken",
+      "title": "Kultainen omena panee kaiken alulle",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kaikki alkaa Peleuksen ja nymfi Thetisin häistä. **Eris**, epäsopujen jumalatar, ei ole kutsuttu. Raivoissaan hän heittää kultaisen omenan, johon on kaiverrettu \"To the fairest\". Kolme jumalatarta vaati hänet: **Hera**, **Athena** ja **Aphrodite**."
+          "text": "Kaikki alkaa Peleuksen ja Thetis-nymfin häistä. Riidan jumalatar **Eris** ei saa kutsua. Raivoissaan hän heittää kultaisen omenan, johon on kaiverrettu ”Kauneimmalle”. Kolme jumalatarta vaatii sitä itselleen: **Hera**, **Athene** ja **Afrodite**."
         },
         {
           "type": "paragraph",
-          "text": "Zeus kysyy mielipidettä kuolevaiselta: **Pariisi**, Troijan prinssi. Hera lupaa hänelle voimaa, Athena voiton taistelussa, Aphrodite kauneimman naisen rakkauden. Hän valitsee Afroditen. Hän tarjoaa hänelle **Hélène**:n, Spartan kuninkaan **Menelaus**:n vaimoa. Paris vie hänet Troijaan. Kreikka seisoo saadakseen sen takaisin."
+          "text": "Zeus kysyy ratkaisua kuolevaiselta: Troijan prinssiltä **Parikselta**. Hera lupaa hänelle vallan, Athene voiton taistelussa ja Afrodite maailman kauneimman naisen rakkauden. Paris valitsee Afroditen. Jumalatar antaa hänelle **Helenan**, Spartan kuninkaan **Menelaoksen** vaimon. Paris vie Helenan Troijaan. Kreikka nousee hakemaan hänet takaisin."
         },
         {
           "type": "funFact",
-          "text": "Hisarlikista Turkista arkeologit löysivät palaneen kaupungin noin **1184 eKr**.: mahdollinen historiallisen Troijan paikka myytin takana."
+          "text": "Turkin Hisarlikista arkeologit ovat löytäneet kaupungin, joka paloi noin vuonna **1184 eKr.**: se voi olla myytin takana oleva historiallinen Troija."
         }
       ]
     },
@@ -52,82 +52,82 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Agamemnon**, Menelaoksen veli ja Mykenen kuningas, ottaa komennon. Valtava laivasto lähtee: Akhilleus, Ajax, viisas Nestor, ovela **Odysseus**. Kreikkalaiset eli akhaialaiset laskeutuvat [[Troad]]:lle, Troijan alueelle, ja piiritys alkaa."
+          "text": "**Agamemnon**, Menelaoksen veli ja Mykenen kuningas, ottaa johdon. Valtava laivasto lähtee matkaan: Akhilleus, Aias, viisas Nestor ja ovela **Odysseus**. Kreikkalaiset eli akhaialaiset nousevat maihin Troijan ympäristössä, alueella nimeltä [[Troas]], ja piiritys alkaa."
         },
         {
           "type": "image",
           "asset": "greek_fleet_trojan_war_thousand_ships_painting",
           "ratio": "4:3",
-          "caption": "Kreikan laivasto: legenda puhuu tuhannesta laivasta."
+          "caption": "Kreikkalaisten laivasto: tarun mukaan siinä oli tuhat laivaa."
         },
         {
           "type": "paragraph",
-          "text": "Troijan muurien sanotaan olevan tuhoutumattomia, ja ne rakennettiin Poseidonin ja Apollon avulla. Taistelimme kymmenen vuoden ajan [[Huijari]]:n tasangolla ilman päätöstä. Maan päällä ihmisiä kuolee. Olympuksella Hera ja Athena auttavat kreikkalaisia; Aphrodite ja Apollo suojelevat [[Priam]]:n, Troijan vanhan kuninkaan, poikia."
+          "text": "Troijan muureja pidetään tuhoutumattomina, sillä ne rakennettiin Poseidonin ja Apollonin avulla. Kymmenen vuoden ajan taistellaan [[Skamandros]]-joen tasangolla ilman ratkaisua. Maan päällä miehet kuolevat. Olympoksella Hera ja Athene auttavat kreikkalaisia; Afrodite ja Apollon suojelevat Troijan vanhan [[Priamos]]-kuninkaan poikia."
         }
       ]
     },
     {
       "id": "course_179_la_guerre_de_troie_et_le_cheval_de_bois_p3",
-      "title": "Puinen hevonen",
+      "title": "Puuhevonen",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Voima ei riitä. **Odysseus**, Ithacan kuningas ja [[Metis]] (älykäs juoni) mestari, keksii ansan. Kreikkalaiset polttavat leirinsä, teeskentelevät lähtevänsä ja piiloutuvat lähellä [[Tenedos]]. Rannalle he jättävät valtavan onton **puuhevosen**, joka on täynnä sotilaita."
+          "text": "Voima ei riitä. Ansan keksii **Odysseus**, Ithakan kuningas, jonka vahvuus on [[metis]] (ovela äly). Kreikkalaiset polttavat leirinsä, teeskentelevät lähtevänsä ja piiloutuvat [[Tenedos]]-saaren lähelle. Rannalle he jättävät valtavan onton **puuhevosen**, joka on täynnä sotilaita."
         },
         {
           "type": "image",
           "asset": "trojan_horse_wooden_troy_ancient_painting",
           "ratio": "4:3",
-          "caption": "Troijan hevonen: petollinen uhri, sotilaat sisällä."
+          "caption": "Troijan hevonen: petollinen uhrilahja, sisällä sotilaita."
         },
         {
           "type": "paragraph",
-          "text": "Kreikkalainen vakooja **Muuten** vakuuttaa troijalaiset, että hevonen on uhri Athenalle. Pappi **Laocoon** huutaa ansa: jätämme hänet huomiotta. Osa valleista purettiin, jotta hevonen pääsi sisään. Yöllä kreikkalaiset tulivat ulos, avasivat portit, ja palaava armeija päätti kaupungin."
+          "text": "Kreikkalainen vakooja **Sinon** uskottelee troijalaisille, että hevonen on uhrilahja Athenelle. Pappi **Laokoon** varoittaa ansasta, mutta häntä ei kuunnella. Osa muureista puretaan, jotta hevonen saadaan sisään. Yöllä kreikkalaiset tulevat ulos ja avaavat portit, ja palannut armeija tuhoaa kaupungin lopullisesti."
         },
         {
           "type": "funFact",
-          "text": "Helenin ilmaisu \"kasvot, jotka laskivat vesille tuhat laivaa\", tulee runoilija Christopher Marlowelta. Keksimme jopa vitsillä \"helenin\", kauneuden yksikön, joka vastaa tuhatta laivaa."
+          "text": "Helenaa kuvaava ilmaus ”kasvot, jotka lähettivät tuhat laivaa matkaan” on peräisin runoilija Christopher Marlowelta. Leikillään on jopa keksitty ”helena”, kauneuden yksikkö, joka vastaa tuhatta laivaa."
         }
       ]
     },
     {
       "id": "course_179_la_guerre_de_troie_et_le_cheval_de_bois_p4",
-      "title": "Syksy ja perintö",
+      "title": "Kukistuminen ja perintö",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Troy palaa. Priam tapetaan. Selviytyneistä tulee orjia. Vain prinssi **Aeneas** pakeni isänsä ja jumaliensa kanssa [[Lares]]; myöhemmin roomalainen legenda teki hänestä Rooman esi-isän. Voittajia ei säästy: heidän vaaralliset paluunsa ([[Sankarien paluu (Nostoi)]]) ovat usein traagisia. Agamemnon murhataan. Odysseus vaeltelee vielä kymmenen vuotta."
+          "text": "Troija palaa. Priamos surmataan. Eloonjääneistä tulee orjia. Vain prinssi **Aineias** pääsee pakoon isänsä ja [[Lares]]-kotijumaliensa kanssa; myöhemmin roomalainen taru tekee hänestä Rooman kantaisän. Voittajiakaan ei säästetä: heidän vaaralliset kotimatkansa ([[Sankarien paluu (Nostoi)]]) päättyvät usein traagisesti. Agamemnon murhataan. Odysseus harhailee vielä kymmenen vuotta."
         },
         {
           "type": "timeline",
           "events": [
             {
               "date": "Myytti",
-              "title": "Pariisin tuomio",
-              "detail": "Kultainen omena, Helene kidnapattu, sota alkaa."
+              "title": "Pariksen tuomio",
+              "detail": "Kultainen omena, Helenan ryöstö, sota alkaa."
             },
             {
               "date": "10 vuotta",
               "title": "Troijan piiritys",
-              "detail": "Vallit pitävät; jumalat ja sankarit kohtaavat."
+              "detail": "Muurit kestävät; jumalat ja sankarit ottavat yhteen."
             },
             {
               "date": "Kohtalokas yö",
-              "title": "puinen hevonen",
+              "title": "Puuhevonen",
               "detail": "Odysseuksen juoni avaa valloittamattoman kaupungin."
             },
             {
-              "date": "Jälkeen",
+              "date": "Myöhemmin",
               "title": "Nostoi",
-              "detail": "Voittajien paluu muuttuu usein onnettomuudeksi."
+              "detail": "Voittajien kotimatkat päättyvät usein onnettomasti."
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "Troijan sota, joka syntyi jumalallisesta kiistasta kultaisesta omenasta, päättyi vasta kymmenen vuoden kuluttua: ei voimalla, vaan Odysseuksen ovelalla ja puisella hevosella, joka tuhosi kaupungin yhdessä yössä."
+          "text": "Jumalten kiistasta kultaisen omenan vuoksi syntynyt Troijan sota päättyy vasta **kymmenen vuoden** jälkeen: ei voimaan vaan Odysseuksen juoneen ja puuhevoseen, joka tuhoaa kaupungin yhdessä yössä."
         }
       ]
     }

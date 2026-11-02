@@ -4,11 +4,11 @@
   "subtitle": "1859",
   "subject": "sciences",
   "subcategory": "Descobertas que mudaram o mundo",
-  "description": "Em 1859, Darwin publica A Origem das Espécies. A ideia central: o vivo muda com o tempo por seleção natural.",
+  "description": "Em 1859, Darwin publica A Origem das Espécies. A ideia central: os seres vivos mudam ao longo do tempo por seleção natural.",
   "hero": {
     "image": "la_theorie_de_l_evolution_de_darwin",
     "ratio": "16:9",
-    "hook": "As espécies não estão paradas. Elas mudam. Devagar. Mas com certeza."
+    "hook": "As espécies não são imutáveis. Mudam. Devagar. Mas seguramente."
   },
   "sections": [
     {
@@ -39,19 +39,19 @@
         },
         {
           "type": "paragraph",
-          "text": "Jovem, Darwin embarca no navio **Beagle**. Durante anos, observa plantas, fósseis, pássaros. Nas ilhas Galápagos, percebe que aves próximas têm bicos diferentes conforme a comida."
+          "text": "Ainda jovem, Darwin parte a bordo do navio **Beagle**. Durante anos, observa plantas, fósseis, aves. Nas ilhas Galápagos, repara que aves aparentadas têm bicos diferentes consoante a alimentação."
         },
         {
           "type": "image",
           "asset": "darwin_finches_galapagos_beaks",
           "ratio": "4:3",
-          "caption": "Bicos adaptados a dietas diferentes: um indício forte"
+          "caption": "Bicos adaptados a regimes alimentares diferentes: um indício forte"
         }
       ]
     },
     {
       "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_p2",
-      "title": "A seleção natural, sem rodeios",
+      "title": "A seleção natural, explicada",
       "free": false,
       "blocks": [
         {
@@ -60,11 +60,11 @@
         },
         {
           "type": "paragraph",
-          "text": "Não é que os indivíduos «queiram» evoluir. É um filtro: o meio guarda de preferência o que funciona. Darwin chama-lhe **seleção natural**."
+          "text": "Não é que os indivíduos «queiram» evoluir. É um filtro: o meio tende a conservar o que funciona. Darwin chama-lhe **seleção natural**."
         },
         {
           "type": "funFact",
-          "text": "Darwin esperou muito tempo antes de publicar. Tinha medo do escândalo. Outro naturalista, **Alfred Russel Wallace**, chega a ideias próximas: isso empurra Darwin a lançar o livro."
+          "text": "Darwin esperou muito tempo antes de publicar. Tinha medo do escândalo. Outro naturalista, **Alfred Russel Wallace**, chega a ideias semelhantes: é isso que leva Darwin a publicar o livro."
         }
       ]
     },
@@ -90,11 +90,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Hoje sabemos que o ADN transporta as variações. Observamos a evolução no laboratório (bactérias, vírus) e na natureza. Também combatemos bactérias resistentes aos antibióticos: é evolução ao vivo."
+          "text": "Sabe-se hoje que é o ADN que transporta as variações. Observa-se a evolução em laboratório (bactérias, vírus) e na natureza. Também se combatem bactérias resistentes aos antibióticos: é a evolução em direto."
         },
         {
           "type": "takeaway",
-          "text": "Darwin mostrou que o vivo evolui por seleção natural: os traços úteis à sobrevivência e à reprodução espalham-se. A genética moderna confirmou e precisou esse quadro."
+          "text": "Darwin mostrou que os seres vivos evoluem por seleção natural: os traços úteis à sobrevivência e à reprodução espalham-se. A genética moderna confirmou e tornou mais preciso esse quadro."
         }
       ]
     }

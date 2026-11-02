@@ -4,11 +4,11 @@
   "subtitle": "Fleming, 1928",
   "subject": "sciences",
   "subcategory": "Opdagelser, der ændrede verden",
-  "description": "I 1928 bemærkede Alexander Fleming, at en skimmelsvamp havde dræbt bakterier på en kulturskål. Fra denne chance blev det første store antibiotikum født.",
+  "description": "I 1928 opdager Alexander Fleming, at en skimmelsvamp har dræbt bakterier i en petriskål. Ud af det tilfælde kommer det første store antibiotikum.",
   "hero": {
     "image": "la_decouverte_de_la_penicilline",
     "ratio": "16:9",
-    "hook": "En glemt æske, en form, og medicinen vender på hovedet."
+    "hook": "En glemt skål, en skimmelsvamp, og lægevidenskaben vender på en tallerken."
   },
   "sections": [
     {
@@ -18,22 +18,22 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Før antibiotika kunne en simpel infektion dræbe. Et snit, lungebetændelse, et krigssår: kroppen kæmpede ofte alene."
+          "text": "Før antibiotika kunne en helt almindelig infektion slå ihjel. Et snitsår, en lungebetændelse, et sår fra krigen: kroppen kæmpede ofte alene."
         },
         {
           "type": "paragraph",
-          "text": "I **1928** opdagede den skotske læge **Alexander Fleming** ved et uheld et stof, der er i stand til at dræbe bakterier. Den kommer til at hedde **penicillin**. Men det vil stadig tage år at gøre det til en rigtig medicin."
+          "text": "I **1928** opdager den skotske læge **Alexander Fleming** ved et tilfælde et stof, der kan dræbe bakterier. Det kommer til at hedde **penicillin**. Men der går stadig flere år, før det bliver et rigtigt lægemiddel."
         }
       ]
     },
     {
       "id": "course_51_la_decouverte_de_la_penicilline_fleming_p1",
-      "title": "En glemt kasse",
+      "title": "En glemt skål",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Fleming studerer bakterier i London. Når han kommer tilbage fra ferie, kigger han på gamle kulturkasser. På en af dem voksede der en **skimmelsvamp**. Omkring hende er bakterierne døde."
+          "text": "Fleming forsker i bakterier i London. Da han kommer hjem fra ferie, kigger han på nogle gamle petriskåle. I en af dem er der vokset en **skimmelsvamp**. Rundt om den er bakterierne døde."
         },
         {
           "type": "image",
@@ -43,62 +43,62 @@
         },
         {
           "type": "paragraph",
-          "text": "Skimmelsvampen tilhører slægten **Penicillium**. Fleming forstår, at det producerer et antibakterielt stof. Han kalder det penicillin. Men han kan ikke rense det nok til at behandle de syge."
+          "text": "Skimmelsvampen hører til slægten **Penicillium**. Fleming forstår, at den danner et stof, der dræber bakterier. Han kalder det penicillin. Men han kan ikke rense det godt nok til at behandle syge mennesker."
         },
         {
           "type": "funFact",
-          "text": "Fleming sagde senere, at hvis han havde været mere ordentlig, ville han have smidt kassen væk. Rodet i laboratoriet hjalp med opdagelsen."
+          "text": "Fleming fortalte senere, at hvis han havde været mere ordentlig, ville han have smidt skålen ud. Rodet i laboratoriet hjalp opdagelsen på vej."
         }
       ]
     },
     {
       "id": "course_51_la_decouverte_de_la_penicilline_fleming_p2",
-      "title": "Oxford forvandler idé til kur",
+      "title": "Oxford gør idéen til medicin",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "I begyndelsen af **1940**-årene, i Oxford, vendte **Howard Florey** og **Ernst kæde** tilbage til arbejdet. Sammen med deres hold isolerede, koncentrerede og testede de penicillin på dyr og derefter på mennesker."
+          "text": "I begyndelsen af **1940'erne** tager **Howard Florey** og **Ernst Chain** arbejdet op igen i Oxford. Sammen med deres hold isolerer, koncentrerer og afprøver de penicillin, først på dyr og siden på mennesker."
         },
         {
           "type": "paragraph",
-          "text": "Anden Verdenskrig gjorde tingene presserende: inficerede soldater skulle behandles. Penicillin flytter fra laboratoriet til et strategisk spørgsmål."
+          "text": "Anden Verdenskrig gør det hele presserende: de inficerede soldater skal behandles. Penicillin går fra at være et laboratoriefund til at være et strategisk spørgsmål."
         }
       ]
     },
     {
       "id": "course_51_la_decouverte_de_la_penicilline_fleming_p3",
-      "title": "Masseprodukter",
+      "title": "Masseproduktion",
       "free": false,
       "blocks": [
         {
           "type": "image",
           "asset": "penicillin_antibiotic_production_laboratory",
           "ratio": "4:3",
-          "caption": "Det var nødvendigt at opfinde industrielle måder at dyrke skimmel på."
+          "caption": "Man måtte opfinde industrielle metoder til at dyrke skimmelsvampen."
         },
         {
           "type": "paragraph",
-          "text": "For at behandle millioner af mennesker er der brug for enorme mængder. USA industrialiserede produktionen under krigen. Kæmpe kar får skimmelsvamp til at savne som øl."
+          "text": "For at behandle millioner af mennesker skal der enorme mængder til. USA industrialiserer produktionen under krigen. I kæmpestore kar dyrkes skimmelsvampen, som når man brygger øl."
         },
         {
           "type": "paragraph",
-          "text": "I **1945** modtog Fleming, Florey og Chain Nobelprisen. Medicin er på vej ind i antibiotikaalderen."
+          "text": "I **1945** får Fleming, Florey og Chain Nobelprisen. Lægevidenskaben træder ind i antibiotikaens tidsalder."
         }
       ]
     },
     {
       "id": "course_51_la_decouverte_de_la_penicilline_fleming_p4",
-      "title": "Modstandens skygge",
+      "title": "Resistensens skygge",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "I dag har for mange misbrugte antibiotika gjort det muligt for visse bakterier at blive **modstandsdygtig**: stofferne dræber dem ikke længere. Fleming havde allerede advaret om denne risiko."
+          "text": "I dag har for meget og forkert brug af antibiotika gjort visse bakterier **resistente**: medicinen dræber dem ikke længere. Fleming havde allerede advaret om den risiko."
         },
         {
           "type": "takeaway",
-          "text": "Penicillin blev født fra en tilfældighed observeret af Fleming i **1928**, og blev derefter et lægemiddel takket være Florey, Chain og krigsindustrien. Det har reddet millioner af liv... så længe du ikke slider det op."
+          "text": "Penicillin opstår ved et tilfælde, som Fleming opdager i **1928**, og bliver derefter et lægemiddel takket være Florey, Chain og krigsindustrien. Det har reddet millioner af liv… så længe man ikke bruger det for meget."
         }
       ]
     }

@@ -4,11 +4,11 @@
   "subtitle": "Nevidljivi kozmos",
   "subject": "sciences",
   "subcategory": "Zemlja i svemir",
-  "description": "Nikada je nismo vidjeli. Ipak, bez toga bi se galaksije raspale. Tamna materija je nevidljivo ljepilo svemira.",
+  "description": "Nitko je nikad nije vidio. Ipak, bez nje bi se galaksije raspale. Tamna tvar nevidljivo je ljepilo svemira.",
   "hero": {
     "image": "qu_est_ce_que_la_matiere_noire",
     "ratio": "16:9",
-    "hook": "Zamislite nevidljivo ljepilo koje drži galaksije zajedno. Ne vidimo je, ali vidimo što ona skriva."
+    "hook": "Zamisli nevidljivo ljepilo koje drži galaksije na okupu. Ono se ne vidi, ali se vidi što drži."
   },
   "sections": [
     {
@@ -18,32 +18,32 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Osjećaš vjetar, a da ga ne vidiš: grane se pomiču, kosa leti. **tamna materija** je pomalo slična na ljestvici kozmosa. Ne sjaji, ne odbija svjetlost, ne blokira nikakve zrake. \"Vidimo\" ga samo po onome što pokreće."
+          "text": "Osjećaš vjetar, a da ga ne vidiš: grane se njišu, kosa leprša. **Tamna tvar** je nešto slično, ali u razmjerima svemira. Ne sjaji, ne odbija svjetlost, ne zaustavlja nikakve zrake. „Vidi” se samo po onome što pokreće."
         },
         {
           "type": "paragraph",
-          "text": "Predstavljao bi otprilike **27%** Svemira, pet puta više od sve obične materije: zvijezda, planeta, plina. Bez toga, galaksije bi se vrtjele prebrzo da bi se držale zajedno."
+          "text": "Procjenjuje se da čini otprilike **27%** svemira, pet puta više od sve obične tvari: zvijezda, planeta i plinova. Bez nje bi se galaksije vrtjele prebrzo da bi ostale na okupu."
         }
       ]
     },
     {
       "id": "course_77_qu_est_ce_que_la_matiere_noire_p1",
-      "title": "Zvijezde prebrze na periferiji",
+      "title": "Prebrze zvijezde na rubu galaksije",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "U godinama **1970**, američki astronom **Vera Rubin** mjerio je brzinu zvijezda u spiralnim galaksijama. U Sunčevom sustavu, što smo dalje od Sunca, to sporije rotiramo. Očekivala je isti obrazac."
+          "text": "Tijekom **1970-ih** američka astronomka **Vera Rubin** mjerila je brzinu zvijezda u spiralnim galaksijama. U Sunčevu sustavu, što je tijelo dalje od Sunca, to sporije kruži. Očekivala je isti obrazac."
         },
         {
           "type": "image",
           "asset": "dark_matter_galaxy_cluster",
           "ratio": "auto",
-          "caption": "Tamna tvar odaje svoju prisutnost svojim gravitacijskim učinkom na klastere galaksija."
+          "caption": "Tamna tvar odaje svoju prisutnost gravitacijskim djelovanjem na skupove galaksija."
         },
         {
           "type": "paragraph",
-          "text": "Sada su se zvijezde na rubu okretale **kao brzo** kao one u središtu. Sa samo vidljivom masom, trebali su odletjeti. Stoga je bilo potrebno imati nevidljivu masu, **halo**, nevidljivi sferični omotač oko galaksije, da ih zadrži. [[Krivulja rotacije galaksije]] postala je glavni dokaz tamne tvari."
+          "text": "No zvijezde na rubu okretale su se **jednako brzo** kao one u središtu. Da postoji samo vidljiva masa, odletjele bi. Morala je, dakle, postojati nevidljiva masa koja ih drži: **halo**, nevidljiva kuglasta ovojnica oko galaksije. [[Krivulja rotacije galaksije]] postala je glavni dokaz postojanja tamne tvari."
         },
         {
           "type": "funFact",
@@ -53,46 +53,46 @@
     },
     {
       "id": "course_77_qu_est_ce_que_la_matiere_noire_p2",
-      "title": "Od čega je napravljen? Još uvijek tražimo",
+      "title": "Od čega se sastoji? Još se traži",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "To nije obična materija, nazvana **barionska**, sastavljena od protona i neutrona: ona ne stupa u interakciju sa svjetlom. Prelazi Zemlju i nas ne ostavljajući vidljiv trag."
+          "text": "Nije riječ o običnoj, takozvanoj **barionskoj** tvari, građenoj od protona i neutrona: tamna tvar ne reagira sa svjetlošću. Prolazi kroz Zemlju i kroz nas, a ne ostavlja vidljiv trag."
         },
         {
           "type": "paragraph",
-          "text": "Dugo omiljeno olovo, **WIMP**, masivna čestica sa slabom interakcijom, bila bi teška čestica izvan [[Standardni model fizike]], teorije koja opisuje poznate elementarne čestice. **tekućixeon** detektori, zakopani pod zemljom, nadaju se rijetkom šoku. Trenutno bez jasnog uspjeha. Drugi se oslanjaju na **aksion**, ultra-laku česticu, ili na gravitaciju koju treba pregledati. U međuvremenu tamna tvar savija prostor i stvara [[gravitacijske leće]], koje iskrivljuju svjetlost masivnog objekta."
+          "text": "Dugo je glavni kandidat bio **WIMP**, masivna čestica sa slabim međudjelovanjem. Bila bi to teška čestica koju ne predviđa [[Standardni model fizike]], teorija koja opisuje poznate elementarne čestice. Detektori s **tekućim ksenonom**, zakopani pod zemljom, čekaju rijedak sudar. Zasad bez jasnog uspjeha. Drugi se klade na **aksion**, iznimno laganu česticu, ili na novo shvaćanje gravitacije. U međuvremenu tamna tvar zakrivljuje prostor i stvara [[gravitacijske leće]], koje iskrivljuju svjetlost masivnog objekta."
         }
       ]
     },
     {
       "id": "course_77_qu_est_ce_que_la_matiere_noire_p3",
-      "title": "I tamna energija, druga misterija",
+      "title": "I tamna energija, druga zagonetka",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Tamna materija privlači. [[Tamna energija]], otkrivena u **1998**, čini suprotno: ona ubrzava **širenje Svemira**, povećanje udaljenosti galaksija. Galaksije se sve brže udaljavaju, a gravitacija bi trebala usporiti kretanje."
+          "text": "Tamna tvar privlači. [[Tamna energija]], otkrivena **1998. godine**, čini suprotno: ubrzava **širenje svemira**, to jest sve veće udaljavanje galaksija. Galaksije se udaljavaju sve brže, iako bi ih gravitacija trebala kočiti."
         },
         {
           "type": "paragraph",
-          "text": "Težio bi otprilike **68%** kozmosa. S tamnom tvari, to čini **95%** nevidljivog svemira. Sve što vidimo, atomi i svjetlost, samo je pjena od **5 %**."
+          "text": "Procjenjuje se da čini otprilike **68%** kozmosa. Zajedno s tamnom tvari to je **95%** nevidljivog svemira. Sve što vidimo, atomi i svjetlost, tek je pjena od **5%**."
         },
         {
           "type": "funFact",
-          "text": "U vrlo dalekoj budućnosti, tamna energija mogla bi odgurnuti druge galaksije do te mjere da ih učini nevidljivima s Mliječne staze: gotovo prazno nebo."
+          "text": "U vrlo dalekoj budućnosti tamna energija mogla bi toliko udaljiti druge galaksije da postanu nevidljive s Mliječnog puta: nebo bi ostalo gotovo prazno."
         }
       ]
     },
     {
       "id": "course_77_qu_est_ce_que_la_matiere_noire_p4",
-      "title": "Masivni dokazi, čestica nije pronađena",
+      "title": "Mnoštvo dokaza, neuhvatljiva čestica",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "S jedne strane gomilaju se neizravni dokazi: galaktičke rotacije, **kozmička mikrovalna pozadina**, fosilno zračenje iz mladog svemira, filamentna struktura Svemira. S druge strane, nema izravne detekcije čestica."
+          "text": "S jedne strane gomilaju se neizravni dokazi: rotacija galaksija, **kozmičko mikrovalno pozadinsko zračenje**, to jest fosilno zračenje mladog svemira, i nitasta struktura svemira. S druge strane, nijedna čestica još nije izravno otkrivena."
         },
         {
           "type": "paragraph",
@@ -100,7 +100,7 @@
         },
         {
           "type": "takeaway",
-          "text": "Tamna tvar tvori **27 %** svemira. To dokazuje njegova gravitacija na zvijezdama i svjetlosti, iako je nikada nismo izravno vidjeli."
+          "text": "Tamna tvar čini **27%** svemira. Njezino postojanje dokazuje njezino gravitacijsko djelovanje na zvijezde i svjetlost, iako je nitko nikad nije izravno vidio."
         }
       ]
     }

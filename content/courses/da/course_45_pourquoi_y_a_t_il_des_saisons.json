@@ -4,7 +4,7 @@
   "subtitle": "Jord & Sol",
   "subject": "sciences",
   "subcategory": "Hverdagen forklaret",
-  "description": "Årstiderne kommer ikke fra Jorden er tættere på eller længere fra Solen. Den egentlige årsag er hældningen af Jordens akse.",
+  "description": "Årstiderne skyldes ikke, at Jorden er tættere på eller længere fra Solen. Den egentlige årsag er hældningen af Jordens akse.",
   "hero": {
     "image": "pourquoi_y_a_t_il_des_saisons",
     "ratio": "16:9",
@@ -18,7 +18,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Mange mennesker tror, at sommeren kommer, når Jorden er **tættere på** til Solen, og vinteren kommer, når den er **langt**. Dette er falsk. Og vi ser det med det samme: Når det er sommer i Frankrig, er det vinter i Australien."
+          "text": "Mange tror, at sommeren kommer, når Jorden er **tættere på** Solen, og vinteren, når den er **længere væk**. Det er forkert. Og det kan man se med det samme: når det er sommer i Frankrig, er det vinter i Australien."
         },
         {
           "type": "paragraph",
@@ -28,12 +28,12 @@
     },
     {
       "id": "course_45_pourquoi_y_a_t_il_des_saisons_p1",
-      "title": "Jorden vipper",
+      "title": "Jorden hælder",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Jorden roterer om sin akse i **24 timer**: det er dag og nat. Den kredser også om Solen i **år år** i en bane formet som en **ellipse**, en let fladtrykt cirkel. Men dens akse, den imaginære linje fra Nordpolen til Sydpolen, er ikke lige i forhold til dens bane. Den hælder cirka **23,5 karakter**: dette er [[Jordens aksiale hældning (23,5°)]]."
+          "text": "Jorden drejer om sig selv på **24 timer**: det giver dag og nat. Den kredser også om Solen på **et år** i en bane formet som en **ellipse**, en let fladtrykt cirkel. Men dens akse, den tænkte linje fra Nordpolen til Sydpolen, står ikke lodret i forhold til banen. Den hælder cirka **23,5 grader**: det er [[Jordens aksiale hældning (23,5°)]]."
         },
         {
           "type": "image",
@@ -43,7 +43,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Denne tilt forbliver i nogenlunde samme retning hele året rundt. Det peger altid på det samme område på himlen, nær Nordstjernen. Resultat: afhængigt af hvor Jorden er i sin bane, \"kigger\" den ene halvkugle mere på Solen, den anden mindre."
+          "text": "Hældningen peger stort set i samme retning hele året. Aksen peger altid mod det samme område på himlen, nær Nordstjernen. Resultat: afhængigt af hvor Jorden er i sin bane, »kigger« den ene halvkugle mere mod Solen og den anden mindre."
         }
       ]
     },
@@ -54,15 +54,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Om sommeren på den nordlige halvkugle hælder Nordpolen mod Solen. Dagene er længere: **fotoperiode**, forholdet mellem længden af dag og nat, øges. Strålerne kommer også mere \"lige\" til jorden: Energien er koncentreret på en mindre overflade. Så det er varmere."
+          "text": "Om sommeren på den nordlige halvkugle hælder Nordpolen mod Solen. Dagene er længere: **fotoperioden**, forholdet mellem dagens og nattens længde, vokser. Strålerne rammer også jorden mere »lodret«: energien samles på en mindre flade. Derfor bliver det varmere."
         },
         {
           "type": "funFact",
-          "text": "I januar er Jorden endda en lille smule **tættere på** til Solen end i juli: det er **perihelion**, det nærmeste punkt i kredsløbet. Og alligevel er det vinter her. Et bevis på, at afstanden ikke forklarer årstiderne."
+          "text": "I januar er Jorden faktisk lidt **tættere på** Solen end i juli: det er **perihelium**, det punkt i banen, der ligger nærmest Solen. Og alligevel er det vinter hos os. Et bevis på, at afstanden ikke forklarer årstiderne."
         },
         {
           "type": "paragraph",
-          "text": "Om vinteren er det modsat: korte dage, mere skrå stråler, energi spredt over en større overflade. Mindre varme modtaget. **solhverv**, tidspunkter hvor Solen når sin nordligste eller sydligste position, markerer starten på sommeren eller vinteren."
+          "text": "Om vinteren er det omvendt: korte dage, mere skrå stråler, energi spredt over en større flade. Der kommer mindre varme ind. **Solhvervene**, de tidspunkter hvor Solen når sin nordligste eller sydligste position, markerer begyndelsen på sommeren eller vinteren."
         }
       ]
     },
@@ -73,11 +73,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "I nærheden af **ækvator**, den imaginære linje, der deler Jorden i to halvkugler, ændrer hældningen kun lidt i løbet af dagen. Der er ikke rigtig fire årstider som i Europa, men derimod mere tørre og vådere perioder."
+          "text": "Nær **ækvator**, den tænkte linje, der deler Jorden i to halvkugler, ændrer hældningen ikke meget på dagens længde. Der er ikke rigtig fire årstider som i Europa, men snarere tørre og våde perioder."
         },
         {
           "type": "paragraph",
-          "text": "Hos **stænger** er effekten ekstrem: flere måneders sammenhængende dag om sommeren, flere måneders nat om vinteren. Kontrasten er meget stærkere der end i Frankrig."
+          "text": "Ved **polerne** er virkningen ekstrem: flere måneder med uafbrudt dag om sommeren og flere måneder med nat om vinteren. Kontrasten er meget større der end i Frankrig."
         }
       ]
     },
@@ -88,11 +88,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Hvis Jordens akse var helt lige, ville hvert sted modtage nogenlunde den samme mængde sollys året rundt. Ikke mere rigtig sommer, ikke mere rigtig vinter. Klimaet, kulturerne, dyrevandringerne: alt ville være anderledes."
+          "text": "Hvis Jordens akse stod helt lodret, ville hvert sted få nogenlunde lige meget sol året rundt. Ingen rigtig sommer, ingen rigtig vinter. Klimaet, afgrøderne, dyrenes vandringer: alt ville være anderledes."
         },
         {
           "type": "takeaway",
-          "text": "Årstiderne kommer fra hældningen på Jordens akse, cirka **23.5°**, ikke fra afstanden fra Solen. En halvkugle hælder mod Solen: det er sommer. Den anden hælder mod det modsatte: det er vinter."
+          "text": "Årstiderne skyldes **hældningen** af Jordens akse, cirka **23,5°**, ikke afstanden til Solen. Den ene halvkugle hælder mod Solen: det er sommer. Den anden hælder væk fra den: det er vinter."
         }
       ]
     }

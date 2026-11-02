@@ -1,14 +1,14 @@
 {
   "id": "course_49_pourquoi_a_t_on_des_frissons",
-  "title": "Hvorfor får vi frysninger?",
+  "title": "Hvorfor får man frysninger?",
   "subtitle": "Kropp og følelser",
   "subject": "sciences",
   "subcategory": "Hverdagen forklart",
-  "description": "Kulde, frykt, musikk: skjelvinger har flere årsaker. De passerer alle gjennom nervesystemet, men ikke av de samme grunnene.",
+  "description": "Kulde, frykt, musikk: frysninger har flere årsaker. Alle går via nervesystemet, men av ulike grunner.",
   "hero": {
     "image": "pourquoi_a_t_on_des_frissons",
     "ratio": "16:9",
-    "hook": "Et gys av kulde og et gys av musikk forteller ikke den samme historien."
+    "hook": "Et kuldegys og et musikkgys forteller ikke samme historie."
   },
   "sections": [
     {
@@ -18,17 +18,17 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Du skjelver når du går ut i regnet. Du grøsser også når du hører en sang som gjør deg opprørt. Samme ord, forskjellige mekanismer."
+          "text": "Du får frysninger når du går ut i regnet. Du får også frysninger når du hører en sang som rører deg dypt. Samme ord, ulike mekanismer."
         },
         {
           "type": "paragraph",
-          "text": "I begge tilfeller reagerer kroppen raskt. Men den ene brukes hovedsakelig til å varme opp, den andre handler mer om nytelse og følelser."
+          "text": "I begge tilfeller reagerer kroppen raskt. Men det ene handler mest om å varme seg opp, det andre mer om nytelse og følelser."
         }
       ]
     },
     {
       "id": "course_49_pourquoi_a_t_on_des_frissons_p1",
-      "title": "Kuldens spenning: en minikjele",
+      "title": "Frysninger av kulde: en liten fyrkjele",
       "free": false,
       "blocks": [
         {
@@ -39,22 +39,22 @@
           "type": "image",
           "asset": "goosebumps_cold_skin",
           "ratio": "4:3",
-          "caption": "Gåsehud: en gammel refleks for å heve hår."
+          "caption": "Gåsehud: en gammel refleks som får hårene til å reise seg."
         },
         {
           "type": "paragraph",
-          "text": "Musklene trekker seg sammen veldig raskt og gjentatte ganger: dette er skjelvingen. Disse sammentrekningene produserer varme. \"Gåsehud\" kommer fra en gammel refleks: å heve hårene for å isolere bedre. Hjemme, med lite pels, fungerer den hovedsakelig som en rest."
+          "text": "Musklene trekker seg sammen veldig raskt, om og om igjen: det er skjelving. Sammentrekningene lager varme. «Gåsehud» kommer av en gammel refleks: hårene reiser seg for å isolere bedre. Hos oss mennesker, med lite pels, er dette mest en rest fra fortiden."
         }
       ]
     },
     {
       "id": "course_49_pourquoi_a_t_on_des_frissons_p2",
-      "title": "Spenningen av frykt",
+      "title": "Frysninger av frykt",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Stilt overfor en trussel aktiveres det [[sympatisk nervesystem]] (den \"varslende\" grenen av nervesystemet). Den gir ut **adrenalin**. Musklene spenner seg, hjertet raser, huden kan skjelve."
+          "text": "[[Det sympatiske nervesystemet]] (nervesystemets «alarmgren») slår seg på når du står overfor en trussel. Det skiller ut **adrenalin**. Musklene spenner seg, hjertet slår raskere, og du kan få frysninger."
         },
         {
           "type": "image",
@@ -64,22 +64,22 @@
         },
         {
           "type": "funFact",
-          "text": "Det samme systemet forklarer hvorfor du kan få gåsehud mens du ser på en skrekkfilm... mens du er koselig på sofaen."
+          "text": "Det samme systemet forklarer hvorfor du kan få gåsehud av en skrekkfilm … selv om du sitter varmt og godt i sofaen."
         }
       ]
     },
     {
       "id": "course_49_pourquoi_a_t_on_des_frissons_p3",
-      "title": "Spenningen ved musikk",
+      "title": "Frysninger av musikk",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Visse spenninger, noen ganger kalt \"frysninger\", kommer med sterke følelser: musikk, tale, film. De aktiverer hjernens **belønninger**-krets, med **dopamin**, et stoff knyttet til nytelse."
+          "text": "Noen frysninger, av og til kalt «chills», kommer sammen med en sterk følelse: musikk, en tale, en film. De aktiverer hjernens **belønningssystem**, med **dopamin**, et stoff som er knyttet til nytelse."
         },
         {
           "type": "paragraph",
-          "text": "Dette er ikke nyttig for umiddelbar overlevelse. Snarere er det kroppen som reagerer på en intens følelse, som en forbigående bølge."
+          "text": "Dette hjelper deg ikke å overleve her og nå. Det er heller kroppen som reagerer på en sterk følelse, som en bølge som skyller forbi."
         }
       ]
     },
@@ -90,11 +90,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Frysninger med høy feber kan signalisere en infeksjon. Konstante frysninger uten klar grunn fortjener legehjelp. Men mesteparten av tiden er en skjelving fra kulde, stress eller musikk ganske enkelt at kroppen gjør jobben sin."
+          "text": "Frysninger med høy feber kan være tegn på en infeksjon. Stadige frysninger uten noen tydelig grunn bør sjekkes av lege. Men som regel er frysninger av kulde, stress eller musikk ganske enkelt kroppen som gjør jobben sin."
         },
         {
           "type": "takeaway",
-          "text": "Kaldt skjelv produserer varme. De med frykt forbereder seg på å reagere. De av musikk berører følelsesmessig nytelse. Samme følelse, forskjellige årsaker."
+          "text": "Frysninger av kulde lager varme. De som skyldes frykt, gjør deg klar til å reagere. De som skyldes musikk, handler om følelsesmessig nytelse. Samme fornemmelse, ulike årsaker."
         }
       ]
     }

@@ -1,0 +1,106 @@
+{
+  "id": "course_48_comment_fonctionne_la_memoire",
+  "title": "Kaip veikia atmintis?",
+  "subtitle": "Smegenys",
+  "subject": "sciences",
+  "subcategory": "Notre quotidien expliqué",
+  "description": "Atmintis nėra vaizdo kamera. Kiekvienas prisiminimas atkuriamas iš naujo. Sužinok, kaip smegenys užkoduoja, saugo… ir kartais išgalvoja.",
+  "hero": {
+    "image": "comment_fonctionne_la_memoire",
+    "ratio": "16:9",
+    "hook": "Prisiminti nereiškia vėl perskaityti failą. Tai reiškia iš naujo sukurti sceną."
+  },
+  "sections": [
+    {
+      "id": "course_48_comment_fonctionne_la_memoire_intro",
+      "title": "Įvadas",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Atmintis dažnai įsivaizduojama kaip kietasis diskas: įrašai, sudedi į vietas, perskaitai. Smegenys taip neveikia. Kiekvieną kartą, kai ką nors prisimeni, tu **atkuri** sceną iš nuotrupų."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tai galinga… ir klystanti sistema. Supratęs tai, suprasi, kodėl pamirštame, kodėl klystame ir kodėl išmokstame."
+        }
+      ]
+    },
+    {
+      "id": "course_48_comment_fonctionne_la_memoire_p1",
+      "title": "Ne viena atmintis, o kelios",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "human_brain_anatomy",
+          "ratio": "4:3",
+          "caption": "Skirtingos smegenų sritys valdo skirtingas atminties rūšis."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pirmiausia yra [[darbinė atmintis]]: tai, ką keletą sekundžių laikai „galvoje“, pavyzdžiui, telefono numerį. Ji ribota, vidutiniškai apie **7 elementus**. Toliau eina **ilgalaikė atmintis**: faktai, įvykių prisiminimai, įgūdžiai, pavyzdžiui, kaip važiuoti dviračiu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Šios sistemos gyvena ne vienoje smegenų vietoje. **Prefrontalinė žievė**, priekinė smegenų dalis už kaktos, labai padeda darbinei atminčiai. Kitos sritys, pavyzdžiui, **neokorteksas**, išorinis smegenų sluoksnis, saugo ilgalaikius prisiminimus."
+        }
+      ]
+    },
+    {
+      "id": "course_48_comment_fonctionne_la_memoire_p2",
+      "title": "Kaip įsitvirtina prisiminimas",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "hippocampus_brain_anatomy_scan",
+          "ratio": "4:3",
+          "caption": "Hipokampas, giliai esanti struktūra, padeda formuoti naujus prisiminimus."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kad informacija iš trapios taptų patvaria, smegenys turi sustiprinti ryšius tarp **neuronų**, nervinių ląstelių. Tai vadinama **konsolidacija**: neseniai įgytas prisiminimas virsta patvariu pėdsaku. Maža struktūra, vadinama **hipokampu**, panaši į jūrų arkliuką ir esanti smilkininėje skiltyje, atlieka svarbiausią vaidmenį įsimenant įvykius."
+        },
+        {
+          "type": "funFact",
+          "text": "Miegas, ypač tam tikros jo fazės, padeda įtvirtinti tai, kas išmokta per dieną. Pakartoti ir eiti miegoti dažnai veiksmingiau nei kartoti iki 3 val. nakties."
+        },
+        {
+          "type": "paragraph",
+          "text": "Garsi taisyklė, susijusi su mokslininku **Donaldu Hebbu**: kartu suaktyvėjantys neuronai linkę stipriau susijungti. Trumpai tariant: „kas kartu užsidega, tas kartu susijungia“. Tai **neuroplastiškumo** principas: smegenų gebėjimas keisti savo ryšius."
+        }
+      ]
+    },
+    {
+      "id": "course_48_comment_fonctionne_la_memoire_p3",
+      "title": "Prisiminti reiškia pakeisti",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kai prisimeni kokį nors įvykį, prisiminimas laikinai tampa **plastiškas**, jį galima pakeisti. Į jį gali įsiskverbti dabarties detalių. Tada smegenys jį vėl išsaugo. Todėl du to paties eismo įvykio liudininkai gali papasakoti skirtingas versijas."
+        },
+        {
+          "type": "paragraph",
+          "text": "Galima net susikurti **netikrų prisiminimų**: scenų, kurios atrodo tikros, bet niekada neįvyko arba įvyko ne taip. Smegenys užpildo spragas tuo, ką jau žino."
+        }
+      ]
+    },
+    {
+      "id": "course_48_comment_fonctionne_la_memoire_p4",
+      "title": "Pamiršti ne visada reiškia nesėkmę",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Jei prisimintum kiekvieną nereikalingą detalę, tavo galva būtų perpildyta. Užmarštis padeda apibendrinti, apsispręsti, išlaikyti esmę. Gera atmintis tiek pat atsijoja, kiek ir išsaugo."
+        },
+        {
+          "type": "takeaway",
+          "text": "Atmintis yra aktyvus atkūrimas, o ne tobulas įrašas. Ji remiasi keliomis sistemomis, įsitvirtina daugiausia miegant ir gali iškrypti kiekvieną kartą, kai ką nors prisimeni."
+        }
+      ]
+    }
+  ]
+}

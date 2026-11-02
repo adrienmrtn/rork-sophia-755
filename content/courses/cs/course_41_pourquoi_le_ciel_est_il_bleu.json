@@ -4,7 +4,7 @@
   "subtitle": "Světlo a atmosféra",
   "subject": "sciences",
   "subcategory": "Věda všedního dne",
-  "description": "Dívat se na modrou oblohu je tak běžné, že zapomeneš zeptat se proč. Odpověď drží sluneční světlo a vzduch, kterým ho vidíš.",
+  "description": "Na modrou oblohu se díváš tak často, že tě ani nenapadne zeptat se proč. Odpověď skrývá sluneční světlo a vzduch, přes který se na ni díváš.",
   "hero": {
     "image": "pourquoi_le_ciel_est_il_bleu",
     "ratio": "16:9",
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Zvednout oči k modré obloze je tak běžné, že zapomeneš zeptat se, proč vlastně taková je. **Atmosféra**, vrstva plynů, která obklopuje Zemi, přitom žádnou vlastní barvu nemá. Ten odstín vznikne z velmi přesného setkání slunečního světla a molekul plynů, které kolem nás plavou."
+          "text": "Zvednout oči k modré obloze je tak běžné, že tě ani nenapadne zeptat se, proč je vlastně modrá. **Atmosféra**, vrstva plynů, která obklopuje Zemi, přitom žádnou vlastní barvu nemá. Ten odstín vzniká díky velmi přesnému setkání slunečního světla s molekulami plynů, které se kolem nás vznášejí."
         },
         {
           "type": "paragraph",
-          "text": "Pochopit tu modř znamená pochopit, jak světlo cestuje a **rozptyluje se**, tedy se vrací do všech směrů, místo aby letělo rovně dál. A příjemné překvapení: přesně tentýž jev obarví oblohu na červeno a oranžovo, když slunce zapadá."
+          "text": "Pochopit tu modř znamená pochopit, jak světlo putuje a **rozptyluje se**, tedy odráží se do všech směrů, místo aby letělo rovně. A příjemné překvapení: přesně tentýž jev barví oblohu do červena a oranžova při západu slunce."
         }
       ]
     },
@@ -33,30 +33,30 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Sluneční světlo ti připadá bílé, ale ve skutečnosti nese všechny barvy duhy: to je [[spektrum viditelného světla]]. Každá barva odpovídá **vlnové délce**, tedy velikosti své světelné „vlny”. Modrá a fialová mají krátké vlny; červená má naopak vlny dlouhé."
+          "text": "Sluneční světlo ti připadá bílé, ale ve skutečnosti obsahuje všechny barvy duhy: to je [[spektrum viditelného světla]]. Každá barva odpovídá určité **vlnové délce**, tedy velikosti své světelné „vlny“. Modrá a fialová mají krátké vlny, červená dlouhé."
         },
         {
           "type": "funFact",
-          "text": "Na Měsíci není vzduch, který by světlo rozptýlil. Výsledek: tam zůstane obloha **černá i v poledne**, i když Slunce svítí. Důkaz, že barva oblohy jde ze vzduchu, ne ze Slunce."
+          "text": "Na Měsíci není vzduch, který by světlo rozptýlil. Výsledek: obloha tam zůstává **černá i za bílého dne**, i když svítí Slunce. Důkaz, že barva oblohy pochází ze vzduchu, ne ze Slunce."
         },
         {
           "type": "paragraph",
-          "text": "Mezi Sluncem a tvýma očima totiž vzduch není prázdný: je plný drobných **molekul plynů**, hlavně dusíku, který tvoří zhruba **78%** vzduchu, a kyslíku, zhruba **21%**. Ty molekuly jsou mnohem menší než vlny světla. Když je paprsek trefí, už neletí rovně dál: odrazí se do všech směrů. Ten malý odraz je právě začátek barvy oblohy."
+          "text": "Mezi Sluncem a tvýma očima totiž vzduch není prázdný: je plný drobných **molekul plynů**, hlavně dusíku, který tvoří zhruba **78%** vzduchu, a kyslíku, zhruba **21%**. Ty molekuly jsou mnohem menší než vlny světla. Když do nich paprsek narazí, už neletí rovně: odrazí se do všech směrů. Právě tenhle malý odraz je začátkem barvy oblohy."
         }
       ]
     },
     {
       "id": "course_41_pourquoi_le_ciel_est_il_bleu_p2",
-      "title": "Rozptyl: proč vyhraje modrá",
+      "title": "Rozptyl: proč vyhrává modrá",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "V roce **1871** britský fyzik **Lord Rayleigh** ten jev zapsal do rovnice. Zjistil, že čím kratší vlnu nějaká barva má, tím víc ji molekuly vzduchu posílají do všech stran. Právě to je [[Rayleighův rozptyl]]."
+          "text": "V roce **1871** popsal britský fyzik **lord Rayleigh** tento jev rovnicí. Zjistil, že čím kratší vlnu barva má, tím víc ji molekuly vzduchu rozptylují do všech stran. Právě tomu se říká [[Rayleighův rozptyl]]."
         },
         {
           "type": "funFact",
-          "text": "Martská obloha dělá opak té naší: prach bohatý na železo ji přes den udělá narůžovělou, ale západy slunce tam jsou **modré**. Záleží na tom, co vzduch nese."
+          "text": "Na Marsu je to s oblohou naopak: prach bohatý na železo ji přes den barví do růžova, ale západy slunce tam jsou **modré**. Všechno záleží na tom, co je ve vzduchu."
         },
         {
           "type": "image",
@@ -66,7 +66,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Konkrétně se modré světlo rozptýlí zhruba **9krát víc** než červené. Červená vzduch projde skoro rovně, zatímco modrá se odráží všude kolem. Proto, kamkoli se na obloze podíváš, k očím ti vždycky dorazí nějaká modř: celá obloha jako by „svítila” tou rozházenou modří."
+          "text": "Konkrétně se modré světlo rozptyluje zhruba **9krát víc** než červené. Červené projde vzduchem skoro rovně, zatímco modré se odráží všude kolem. Proto ať se na obloze podíváš kamkoli, k očím ti vždycky dorazí nějaká modř: celá obloha jako by „svítila“ tou rozptýlenou modří."
         }
       ]
     },
@@ -77,11 +77,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Nabízí se logická otázka: když se nejkratší vlny rozptýlí nejvíc, měla by vyhrát fialová, protože její vlna je ještě kratší než vlna modré. Obloha mimochodem nese hodně rozptýlené fialové."
+          "text": "Nabízí se logická otázka: když se nejkratší vlny rozptylují nejvíc, měla by vyhrát fialová, protože její vlna je ještě kratší než vlna modré. Na obloze je ostatně i hodně rozptýleného fialového světla."
         },
         {
           "type": "paragraph",
-          "text": "Odpověď není na obloze, ale v našem oku. Barvy chytáme díky čidlům, kterým se říká **čípky**, buněk sítnice citlivých na světlo. Na modrou jsou mnohem citlivější než na fialovou. Navíc Slunce posílá víc modrého světla než fialového. Mozek z toho pak udělá jakýsi průměr a uvidí pěknou modř. Zvíře citlivé na jiné barvy by bezpochyby vidělo úplně jinou oblohu."
+          "text": "Odpověď není na obloze, ale v našem oku. Barvy vnímáme díky receptorům zvaným **čípky**, buňkám sítnice citlivým na světlo. Na modrou jsou mnohem citlivější než na fialovou. Navíc Slunce vysílá víc modrého světla než fialového. Mozek z toho pak udělá jakýsi průměr a vidí krásnou modř. Zvíře citlivé na jiné barvy by nejspíš vidělo úplně jinou oblohu."
         }
       ]
     },
@@ -92,7 +92,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Západ slunce jede podle týchž pravidel, ale změní jednu věc: vzdálenost. V poledne světlo projde jen tenkou vrstvou vzduchu. Večer, když je Slunce nízko, musí jeho paprsky projít **mnohem víc vzduchu**, než k tobě dojdou."
+          "text": "Západ slunce se řídí stejnými pravidly, jen jedna věc se mění: vzdálenost. V poledne světlo projde jen tenkou vrstvou vzduchu. Večer, když je Slunce nízko, musí jeho paprsky projít **mnohem větším množstvím vzduchu**, než k tobě dorazí."
         },
         {
           "type": "image",
@@ -102,7 +102,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Na té dlouhé cestě se všechna modř rozptýlí dávno předtím, než k tobě dojde: tloušťka vzduchu ji jako by odfiltruje. Zbudou pak jen nejodolnější barvy, červené a oranžové. Když je ve vzduchu prach nebo znečištění, nastoupí jev [[Mie rozptyluje]]: částice větší než molekuly vzduchu udělají oblohu mléčnou, nebo ty oranžové tóny ještě posílí."
+          "text": "Na té dlouhé cestě se všechna modř rozptýlí dávno předtím, než k tobě dorazí: jako by ji silná vrstva vzduchu odfiltrovala. Zbudou jen nejodolnější barvy, červené a oranžové. Když je ve vzduchu prach nebo znečištění, nastoupí jev [[Mieův rozptyl]]: částice větší než molekuly vzduchu zbarví oblohu do mléčna, nebo ty oranžové tóny ještě zesílí."
         },
         {
           "type": "takeaway",

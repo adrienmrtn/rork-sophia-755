@@ -1,14 +1,14 @@
 {
   "id": "course_198_sindbad_le_marin",
-  "title": "Mida varjavad meremees Sindbadi seitse reisi?",
+  "title": "Mida peidavad meremees Sindbadi seitse reisi?",
   "subtitle": "Seitse reisi",
   "subject": "mythologie",
   "subcategory": "Muud mütoloogiad",
-  "description": "Meremees Sindbad: seitse reisi, koletised ja aarded. Imelise taga islami kuldajastu kaupmees-seikleja portree.",
+  "description": "Meremees Sindbad: seitse reisi, koletised ja aarded. Imelise taga peitub islami kuldajastu kaupmehest seikleja portree.",
   "hero": {
     "image": "sindbad_le_marin",
     "ratio": "16:9",
-    "hook": "Seitse korda lahkub ta rikka või uudishimulikuna. Seitse korda murrab meri selle. Seitse korda tuleb ta tagasi veelgi rikkamana."
+    "hook": "Seitse korda asub ta teele, rikka või uudishimulikuna. Seitse korda murrab meri ta. Seitse korda naaseb ta veel rikkamana."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Meremees Sindbad** kuulub **Arabia öödess**, kuid mitte kollektsiooni vanasse Pärsia tuumasse. Tema seitsmest rännakust koosnev tsükkel leidis aset hiljem, Egiptuses, umbes 15. sajandil."
+          "text": "**Meremees Sindbad** kuulub kogumikku **Tuhat ja üks ööd**, kuid mitte selle vanasse Pärsia tuuma. Tema seitsme reisi tsükkel kujunes välja hiljem, Egiptuses, umbes 15. sajandil."
         },
         {
           "type": "paragraph",
-          "text": "Ta kehastab **Islami kuldajastu rändurit**: vagadust, ahnust, julgust ja võimetust kunagi rikkana paigal istuda. Koletiste taga loeme allegooriat varanduse tõusust ja langusest."
+          "text": "Ta kehastab **islami kuldajastu** reisivat kaupmeest: vagadus, ahnus, julgus ja võimetus rikkaks saanuna paigal püsida. Koletiste taga peitub allegooria õnnest, mis tõuseb ja langeb."
         }
       ]
     },
@@ -33,28 +33,28 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Lugu algab Bagdadis. **Sindbad, meremees**, nüüd vana ja jõukas, jutustab oma katsumustest portjeele, kelle nimi on ka Sindbad (mõnikord Hindbad). Klassikontrast on kohene."
+          "text": "Lugu algab Bagdadis. **Meremees Sindbad**, nüüd vana ja jõukas, jutustab oma katsumustest pakikandjale, kelle nimi on samuti Sindbad (mõnikord Hindbad). Klassivahe torkab kohe silma."
         },
         {
           "type": "image",
           "asset": "baghdad_medieval_islamic_golden_age_trade",
           "ratio": "4:3",
-          "caption": "Bagdad, Sindbadi reiside lähte- ja tagasisõidupunkt."
+          "caption": "Bagdad, Sindbadi reiside lähte- ja naasmispaik."
         },
         {
           "type": "paragraph",
-          "text": "Iga teekond järgib sama mehaanikat: istuva elu väsimus, [[Basra]] sadamast lahkumine, laevahukk, ellujäämine tundmatul maal, tagasitulek aaretega. [[Islami kosmoloogia]] tähendusega laetud number seitse annab sarjale initsiatiivmõõtme: ettevaatamatusest tarkuseni."
+          "text": "Iga reis järgib sama skeemi: tüdimus paiksest elust, lahkumine [[Basra]] sadamast, laevahukk, ellujäämine tundmatul maal, naasmine aaretega koormatuna. Arv seitse, mida laeb tähendusega [[Islami kosmoloogia]], muudab sarja initsiatsiooniteekonnaks: kergemeelsusest tarkuseni."
         }
       ]
     },
     {
       "id": "course_198_sindbad_le_marin_p2",
-      "title": "Fantastiline bestiaaria müüdi ja tegelikkuse vahel",
+      "title": "Fantastiline bestiaarium müüdi ja tegelikkuse vahel",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Rock** (või Rokh), lind, kelle tiibade siruulatus varjab päikest, on maailma kujutlusvõimet tähistanud. Näeme Ida-Aafrika rannikul araabia reisijate lugude kaja."
+          "text": "**Roc** (ehk Rokh), lind, mille tiivad varjavad päikese, on jätnud jälje kogu maailma kujutlusvõimesse. Selles nähakse Ida-Aafrika rannikul käinud araabia rändurite lugude kaja."
         },
         {
           "type": "image",
@@ -64,11 +64,11 @@
         },
         {
           "type": "funFact",
-          "text": "Tõenäoliselt on Roc inspireeritud Madagaskari elevandilinnust **Aepyornis**, mis kadus umbes aastal 1000. Tema munad olid kuni 150 korda suuremad kui kanamunadel."
+          "text": "Roci eeskujuks oli tõenäoliselt **Aepyornis**, Madagaskari elevantlind, mis suri välja umbes aastal 1000. Selle munade maht oli kuni 150 korda suurem kui kanamunal."
         },
         {
           "type": "paragraph",
-          "text": "Sindbad seisab silmitsi ka **Mere vanamehega**, kes klammerdub selja külge, ja **Kilpkonn saarega**, mis on petlik maa. **Teemantide org**, kuhu kalliskivide kleepimiseks liha visatakse, ringleb juba iidsete seas. Sajanditepikkused imelised setted [[Keskaegsed araabia kaubateed]]."
+          "text": "Sindbad seisab silmitsi ka **Mere Vanamehega**, kes klammerdub ta selga, ja **kilpkonnasaarega**, mille pind on petlik. **Teemantide org**, kuhu visatakse liha, et kalliskivid selle külge kleepuksid, oli tuttav juba antiikautoritele. Imelise all on kihtidena settinud sajandid, mille on andnud [[keskaegsed araabia kaubateed]]."
         }
       ]
     },
@@ -79,17 +79,17 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Sündmus on ajalooline. 8. ja 9. sajandil domineerisid India ookeanil Basra ja Sirafi meremehed. Sindbadi peatused kutsuvad esile tõelised kohad: [[Serendib]] (Tseilon) vürtse, Kagu-Aasia kamprit, rannikud pärleid."
+          "text": "Taust on ajalooline. 8. ja 9. sajandil valitsevad India ookeani Basra ja Sirafi meremehed. Sindbadi peatuspaigad meenutavad tõelisi kohti: [[Serendib]] (Tseilon) oma vürtsidega, Kagu-Aasia kampriga, rannikud pärlitega."
         },
         {
           "type": "image",
           "asset": "arab_indian_ocean_trade_routes_medieval_ship",
           "ratio": "4:3",
-          "caption": "Araabia laevad India ookeani liinidel."
+          "caption": "Araabia laevad India ookeani kaubateedel."
         },
         {
           "type": "paragraph",
-          "text": "Sindbad ei ole sõdalane: ta on kaupmees-seikleja, prestiižne staatus kaubandust väärtustavas ühiskonnas. Seal leiame mussooni, laevad, mis on pigem kookoskiududega õmmeldud kui naelutatud. Lääne paralleel: [[Marco Polo (lääne paralleel)]], mis kirjeldab Aasiat faktidena, kus Sindbad maalib seda imede kaupa."
+          "text": "Sindbad ei ole sõdalane: ta on kaupmees-seikleja, kellel on kaubandust väärtustavas ühiskonnas kõrge staatus. Lugudes kohtab mussooni ja laevu, mille plangud on naelte asemel kookoskiuga kokku õmmeldud. Lääne paralleel: [[Marco Polo (lääne paralleel)]], kes kirjeldab Aasiat faktide kaudu, samas kui Sindbad maalib seda imedena."
         }
       ]
     },
@@ -100,15 +100,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "18. sajandil tõlkinud **Antoine Galland**, reisimine toidab Euroopa [[Seiklusromaan]] Defoest Jules Verne'i. Kino teeb temast sageli printsesside teenistuses eraisiku. Viga: Sindbad on algselt Bagdadist pärit linnaelanik, kes jääb ellu usu ja leidlikkuse kaudu."
+          "text": "18. sajandil tõlkis reisid **Antoine Galland** ja neist ammutas ainest Euroopa [[seiklusromaan]] Defoest Jules Verne'ini. Filmides tehakse temast sageli printsesse teeniv korsaar. See on viga: Sindbad on eelkõige Bagdadi linlane, kes jääb ellu usu ja leidlikkuse abil."
         },
         {
           "type": "funFact",
-          "text": "Nimi Sindbad kutsuks esile \"Sindi jõe printsi\", Induse, Araabia ja India maailma ristumiskohas."
+          "text": "Nimi Sindbad võib tähendada „Sindhi ehk Induse jõe printsi“: see jõgi asub araabia ja India maailma ristteel."
         },
         {
           "type": "takeaway",
-          "text": "**Sinbad** kehastab islami merenduse kuldaega **seitse** tsüklilistel reisidel: kalju ja teemandid varjavad reaalsust - India ookeani araabia kaupmeeste meistrite oma."
+          "text": "**Sindbad** kehastab **seitsme** tsüklilise reisi kaudu islami merenduse kuldaega: Roc ja teemandid varjavad tegelikkust, milles araabia kaupmehed valitsesid India ookeani."
         }
       ]
     }

@@ -1,14 +1,14 @@
 {
   "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup",
   "title": "Miks vulkaanid purskavad?",
-  "subtitle": "Magma ja plaadid",
+  "subtitle": "Magma ja laamad",
   "subject": "sciences",
   "subcategory": "Maa ja universum",
-  "description": "Vulkaan on avaus maakoores. Surve all olev magma tõuseb seal üles ja muutub laaks. Sellepärast Maa \"sülitab\".",
+  "description": "Vulkaan on ava maakoores. Selle kaudu tõuseb üles surve all olev magma, millest saab laava. Vaata, miks Maa „sülitab“.",
   "hero": {
     "image": "pourquoi_les_volcans_entrent_en_eruption",
     "ratio": "16:9",
-    "hook": "Meie jalge all pole Maa külmunud. Mõnikord avab ta tuleakna."
+    "hook": "Meie jalge all ei ole Maa tardunud. Mõnikord avab see tulise akna."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Vulkaan ei ole lihtsalt tuld hingav mägi. See on avaus Maa välimises ümbrises. Nii tõuseb **magma**: sulakivimite ja kõrge rõhu all oleva gaasi segu. Vabas õhus olles muutub see magma **pestud**."
+          "text": "Vulkaan ei ole lihtsalt tuld purskav mägi. See on ava Maa välimises kestas. Selle kaudu tõuseb üles **magma**: sulanud kivimite ja suure rõhu all olevate gaaside segu. Kui magma jõuab vabasse õhku, saab sellest **laava**."
         },
         {
           "type": "paragraph",
-          "text": "Purske mõistmiseks peate vaatama pinna alla: soojust planeedi sees, plaatide liikumist ja seda, kuidas gaasid tekitavad rõhku, mis on umbes nagu soodapudeli raputamine."
+          "text": "Purske mõistmiseks tuleb vaadata maapinna alla: planeedi sisemist soojust, laamade liikumist ja seda, kuidas gaasid rõhku tõstavad, umbes nagu raputatud karastusjoogipudelis."
         }
       ]
     },
@@ -33,7 +33,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Maa koosneb kihtidest. Pealtnäha on **koorik** jäik ümbris, **5 kuni 70 km paksune. Allpool asub** mantli umbes **2 900 km** sügavuseni. Karvkate on enamasti tahke, kuid väga pika aja jooksul võib see väga aeglaselt voolata, nagu ülipaks mesi."
+          "text": "Maa koosneb kihtidest. Pinnal on **maakoor**, jäik kest, mille paksus on **5-70 km**. Selle all ulatub **vahevöö** umbes **2 900 km** sügavuseni. Vahevöö on enamasti tahke, kuid väga pika aja jooksul võib see voolata väga aeglaselt, nagu ülipaks mesi."
         },
         {
           "type": "image",
@@ -43,15 +43,15 @@
         },
         {
           "type": "paragraph",
-          "text": "See sisemine soojus põhjustab aine tõusu ja langust: need on **konvektsioonivoolud**. Nad suruvad välja suured koorikutükid, mida nimetatakse naastudeks. See on [[Laamtektoonika]]: maapind lõigatakse plaatideks, mis liiguvad lahku, põrkuvad või libisevad üksteise vastu."
+          "text": "See sisemine soojus paneb aine tõusma ja uuesti laskuma: need on **konvektsioonivoolud**. Need lükkavad suuri maakoore tükke, mida nimetatakse laamadeks. [[Laamtektoonika]] ongi see: maapind on jagatud laamadeks, mis eemalduvad üksteisest, põrkuvad või libisevad üksteise vastu."
         },
         {
           "type": "funFact",
-          "text": "Teatud väga kiired tõusud toovad tagasi rohkem kui **150 km** sügavusel tekkinud teemandid. Neil pole aega teel ümber vahetada."
+          "text": "Mõned väga kiired magmatõusud toovad pinnale teemante, mis on tekkinud enam kui **150 km** sügavusel. Teel üles ei jõua need muunduda."
         },
         {
           "type": "paragraph",
-          "text": "[[harjad]] juures liiguvad plaadid lahku ja magma kerkib kergesti. [[Subduktsioon]] piirkonnas sukeldub üks plaat teise alla ja kannab endaga vett. See vesi alandab kivimite sulamistemperatuuri: magma moodustub, seejärel tõuseb."
+          "text": "Ookeanipõhjas paiknevad [[ookeani keskahelikud]]: seal eemalduvad laamad üksteisest ja magma tõuseb kergesti üles. Kus toimub [[subduktsioon]], sukeldub üks laam teise alla ja viib endaga kaasa vett. See vesi alandab kivimite sulamistemperatuuri: tekib magma, mis seejärel tõuseb üles."
         }
       ]
     },
@@ -62,53 +62,53 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Rock ei sula ainult \"sest see on kuum\". Päästikuid on kolm: temperatuuri tõus, rõhu langus või vee lisamine. Kui magma on moodustunud, on see vähem tihe kui seda ümbritsev kivi. Seetõttu püüab see tõusta, nagu õhumull vees."
+          "text": "Kivim ei sula ainult sellepärast, et „on kuum“. Olulised on kolm päästikut: temperatuuri tõus, rõhu langus või vee lisandumine. Tekkinud magma on ümbritsevast kivimist väiksema tihedusega. Seepärast püüab see üles tõusta, umbes nagu õhumull vees."
         },
         {
           "type": "paragraph",
-          "text": "Sageli peatub see kõigepealt **kambris magma**, veehoidlas, mis asub mõni kilomeeter maapinnast allpool. Seal moodustavad lahustunud gaasid rõhu langemisel mullid. Kui ülaltoodud kivi \"pistik\" enam vastu ei pea, algab purse."
+          "text": "Sageli peatub see kõigepealt **magmakambris**, mõne kilomeetri sügavusel asuvas reservuaaris. Seal moodustavad lahustunud gaasid rõhu langedes mulle. Kui selle kohal olev kivimist „kork“ enam vastu ei pea, algab purse."
         },
         {
           "type": "funFact",
-          "text": "**Tambora** purse Indoneesias **1815**-s oli nii võimas, et jahutas globaalset kliimat. **1816** sai hüüdnime \"suveta aasta\", mille saak Euroopas ja Põhja-Ameerikas oli katastroofiline."
+          "text": "**1815**. aastal Indoneesias toimunud **Tambora** purse oli nii võimas, et jahutas kogu maailma kliimat. **1816**. aastat hakati kutsuma „suveta aastaks“: Euroopas ja Põhja-Ameerikas oli katastroofiline ikaldus."
         }
       ]
     },
     {
       "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup_p3",
-      "title": "Vedelik või plahvatusohtlik?",
+      "title": "Voolav või plahvatuslik?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kõik katkestused ei ole ühesugused. Kõik sõltub magma **viskoossusest**, st kas see on pigem vedel või kleepuv. Vedel magma, nagu **Hawaii** või Piton de la Fournaise (Reunioni saar), laseb gaasidel välja pääseda. Laavavoolud: purse **effusiivne**."
+          "text": "Kõik pursked ei ole ühesugused. Kõik sõltub magma **viskoossusest** ehk sellest, kas see on pigem vedel või kleepuv. Vedel magma, nagu **Hawaiil** või Réunioni saarel asuval Piton de la Fournaise'il, laseb gaasidel välja pääseda. Laava voolab: see on **efusiivne** purse."
         },
         {
           "type": "paragraph",
-          "text": "Kleepuv magma püüab gaase kinni. Surve kasvab, siis kõik plahvatab. Tuhk, plokid ja [[püroklastilised voolud]] (põlevad gaasi- ja tuhapilved, mis veerevad nõlvadel alla) võivad ümbritsevat ala laastada. See on vulkaanide stiil, nagu Mount **Püha Helenid** (Ameerika Ühendriigid) või **Pinatubo** (Filipiinid)."
+          "text": "Kleepuv magma hoiab gaase lõksus. Rõhk kasvab ja siis plahvatab kõik. Tuhk, kivirahnud ja [[püroklastilised voolud]] (tulised gaasi- ja tuhapilved, mis tormavad mööda nõlvu alla) võivad siis ümbruse laastada. Nii purskavad näiteks **St. Helensi** mägi (Ameerika Ühendriigid) ja **Pinatubo** (Filipiinid)."
         },
         {
           "type": "paragraph",
-          "text": "Vulkaan võib ka sajandeid rahulikuks jääda. **79** pärast. eKr, **Vesuuvius**, Napoli lähedal, mattis Pompei tuha alla. Umbes **80%** maailma vulkaanilisest tegevusest toimub ookeanide all, meie silmadest kaugel."
+          "text": "Vulkaan võib ka sajandeid vaikselt püsida. Aastal **79** pKr mattis Napoli lähedal asuv **Vesuuv** Pompei tuha alla. Umbes **80%** maailma vulkaanilisest tegevusest toimub ookeanide all, meie silme eest varjatult."
         }
       ]
     },
     {
       "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup_p4",
-      "title": "Oht, viljakus, kuristiku elu",
+      "title": "Oht, viljakus, süvamere elu",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Vulkaanid kujundasid Maa varajase atmosfääri gaase eraldades. Nende tuhk rikastab ka mulda: paljud viljakad põllumajanduspiirkonnad elavad aktiivsete vulkaanide jalamil. Kuid väga suur purse võib saata väävliosakesed kõrgele atmosfääri ja jahutada kliimat kuudeks."
+          "text": "Vulkaanid kujundasid gaase välja paisates Maa algset atmosfääri. Nende tuhk rikastab ka mulda: paljud viljakad põllumajanduspiirkonnad asuvad aktiivsete vulkaanide jalamil. Kuid väga suur purse võib paisata väävliosakesi kõrgele atmosfääri ja jahutada kliimat mitmeks kuuks."
         },
         {
           "type": "paragraph",
-          "text": "Mõnda saiti, nagu Yellowstone'i [[supervulkaan]] USA-s, jälgitakse tähelepanelikult. Mere all, mäeharjade lähedal pritsivad [[mustad suitsetajad]] mineraalirikkaid põletusvedelikke. Ökosüsteemid elavad seal ilma päikesevalguseta, toitudes kuumaveeallikate keemiast."
+          "text": "Mõned paigad on pideva valve all, näiteks Yellowstone'i [[supervulkaan]] USA-s. Mere all, ookeani keskahelike lähedal, purskavad [[mustad suitsetajad]] tuliseid mineraalirikkaid vedelikke. Seal elavad ökosüsteemid ilma päikesevalguseta, toitudes kuumaveeallikate keemiast."
         },
         {
           "type": "takeaway",
-          "text": "Vulkaanid ajavad magmat rõhu all välja, eriti tektooniliste plaatide piiridel. Magma viskoossus otsustab, kas purse voolab vaikselt või plahvatab."
+          "text": "Vulkaanid paiskavad välja surve all olevat magmat, peamiselt tektooniliste laamade piiridel. Magma viskoossusest sõltub, kas purse voolab rahulikult või plahvatab."
         }
       ]
     }

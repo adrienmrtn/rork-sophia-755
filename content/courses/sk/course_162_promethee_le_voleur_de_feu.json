@@ -1,14 +1,14 @@
 {
   "id": "course_162_promethee_le_voleur_de_feu",
   "title": "Prečo Prometheus ukradol bohom oheň?",
-  "subtitle": "Titán, ktorý vzdoruje Zeusovi",
+  "subtitle": "Titan, ktorý vzdoruje Diovi",
   "subject": "mythologie",
   "subcategory": "Grécki bohovia",
-  "description": "Prometheus kradne oheň od bohov pre ľudí, potom znáša nekonečné muky. Mýtus o pokroku, prefíkanosti a cene slobody.",
+  "description": "Prometheus ukradne bohom oheň pre ľudí a potom znáša nekonečné muky. Mýtus o pokroku, ľsti a cene slobody.",
   "hero": {
     "image": "promethee_le_voleur_de_feu",
     "ratio": "16:9",
-    "hook": "Titán kradne oheň z Olympu. Muži získavajú civilizáciu. Získa orla a reťaz."
+    "hook": "Titan ukradne oheň z Olympu. Ľudia získajú civilizáciu. On získa orla a reťaz."
   },
   "sections": [
     {
@@ -18,63 +18,63 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Prometheus** je Titan, boh predchádzajúcej generácie. Jeho názov evokuje toho, kto predvída. V gréckych mýtoch formuje prvých mužov, chráni ich pred **Zeus**, kráľom Olympu, a za túto voľbu platí krutým trestom."
+          "text": "**Prometheus** je Titan, boh zo staršej generácie. Jeho meno odkazuje na toho, kto predvída. V gréckych mýtoch modeluje prvých ľudí, chráni ich pred **Diom**, kráľom Olympu, a za toto rozhodnutie zaplatí krutým trestom."
         },
         {
           "type": "paragraph",
-          "text": "Tým, že kradne oheň pre smrteľníkov, dáva ľuďom techniku a vedomosti. Jeho mučenie na Kaukaze sa stáva symbolom génia, ktorý sa odváži postaviť sa moci."
+          "text": "Keď ukradne oheň pre smrteľníkov, dá ľuďom techniku a vedomosti. Jeho muky na Kaukaze sa stanú symbolom génia, ktorý sa odváži vzoprieť moci."
         }
       ]
     },
     {
       "id": "course_162_promethee_le_voleur_de_feu_p1",
-      "title": "Človek sa rodí nahý, Prometheov trik",
+      "title": "Nahý človek a Prometheova lesť",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Hovorí sa, že Prometheus vymodeloval prvých mužov z hliny a vody. Jeho brat [[Epimetheus]] koná príliš rýchlo. Zodpovedný za vybavenie zvierat, dáva všetko: pazúry, krídla, srsť, rýchlosť. Keď príde rad na muža, nezostane nič. Ľudia sa rodia krehkí a bezbranní."
+          "text": "Hovorí sa, že Prometheus modeluje prvých ľudí z hliny a vody. Jeho brat [[Epimetheus]] však koná príliš rýchlo. Má rozdeliť dary zvieratám a rozdá všetko: pazúry, krídla, srsť, rýchlosť. Keď príde rad na človeka, nezostane už nič. Človek sa rodí krehký a bezbranný."
         },
         {
           "type": "paragraph",
-          "text": "Prometheus sa rozhodne odškodniť. Počas obetovania [[Mecone]] rozreže vola na dve časti. Pod škaredou šupkou ukrýva dobré mäso. Pod chutným tukom skrýva kosti. **Zeus** volí dobrý vzhľad. Odvtedy ľudia jedli mäso a kosti obetovali bohom."
+          "text": "Prometheus sa rozhodne to vyvážiť. Pri obeti v meste [[Mekone]] rozdelí vola na dve časti. Pod škaredú kožu ukryje dobré mäso. Pod lákavý tuk ukryje kosti. **Zeus** si vyberie pekný vzhľad. Odvtedy ľudia jedia mäso a kosti obetujú bohom."
         },
         {
           "type": "funFact",
-          "text": "Na skrytie ohňa používa Prometheus tyč [[Ferule]]. Jeho dreň horí veľmi pomaly: stredomorskí pastieri ho skutočne používali ako prenosný zapaľovač."
+          "text": "Na ukrytie ohňa použije Prometheus stonku rastliny [[ferula]]. Jej dreň horí veľmi pomaly: stredomorskí pastieri ju naozaj používali ako prenosný zapaľovač."
         },
         {
           "type": "paragraph",
-          "text": "Zeus, zúrivý z toho, že bol oklamaný, berie ľuďom oheň. Bez tepla a svetla upadajú späť do takmer zvieracieho života."
+          "text": "Zeus zúri, že ho oklamali, a vezme ľuďom oheň. Bez tepla a svetla upadnú späť do takmer zvieracieho života."
         }
       ]
     },
     {
       "id": "course_162_promethee_le_voleur_de_feu_p2",
-      "title": "Krádež ohňa a mučenie",
+      "title": "Krádež ohňa a muky",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Prometheus vstupuje na Olymp. V závislosti od verzie ukradne iskru z voza Slnka alebo z vyhne **Hefaistos**, boha kováčov. Skryje ho vo svojej dutej stonke a prináša späť smrteľníkom."
+          "text": "Prometheus prenikne na Olymp. Podľa niektorých verzií ukradne iskru zo Slnkovho voza, podľa iných z vyhne **Héfaista**, boha kováčov. Skryje ju vo svojej dutej stonke a prinesie ju smrteľníkom."
         },
         {
           "type": "image",
           "asset": "prometheus_steal_fire_ancient_greek_painting",
           "ratio": "4:3",
-          "caption": "Prometheus prináša ľuďom oheň, zakladajúci akt technológie."
+          "caption": "Prometheus prináša ľuďom oheň: týmto činom sa začína technika."
         },
         {
           "type": "paragraph",
-          "text": "Pre Grékov oheň nie je len plameň. Stelesňuje techniku má**reason**, ktorá umožňuje človeku pretvárať svet. Zeus sa pomstí. Proti ľudskosti neskôr pošle Pandoru. Proti Prometheovi je trest priamy."
+          "text": "Pre Grékov nie je oheň len plameň. Stelesňuje **techniku** a **rozum**, teda to, čo človeku umožňuje pretvárať svet. Zeus vráti úder. Na ľudstvo neskôr pošle Pandoru. Prometheus dostane trest priamo."
         },
         {
           "type": "funFact",
-          "text": "V starovekej medicíne sa **pečeň** považovala za sídlo emócií a vitality. Zeus si vybral tento orgán, aby zlomil vôľu Titána."
+          "text": "V starovekej medicíne sa **pečeň** považovala za sídlo emócií a životnej sily. Zeus si vyberie práve tento orgán, aby zlomil vôľu Titana."
         },
         {
           "type": "paragraph",
-          "text": "Titan je pripútaný k stene **Kaukazu**. Každý deň mu orol zožerie pečeň. Každú noc sa orgán znovu narodí. Mučenie začína znova za úsvitu, bez konca."
+          "text": "Titan je prikovaný ku skalnej stene **Kaukazu**. Každý deň mu orol vyžerie pečeň. Každú noc pečeň znova dorastie. Za úsvitu sa muky začínajú odznova, bez konca."
         }
       ]
     },
@@ -85,34 +85,34 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Po stáročia sa Prometheus odmietal podvoliť. Pozná nebezpečné tajomstvo: ktorá žena porodí syna silnejšieho ako Zeus. Napriek mučeniu mlčí. Stáva sa symbolom odporu tvárou v tvár tyranii."
+          "text": "Prometheus sa celé stáročia odmieta podvoliť. Pozná nebezpečné tajomstvo: ktorá žena porodí syna silnejšieho než Zeus. Napriek mučeniu mlčí. Stáva sa symbolom odporu proti tyranii."
         },
         {
           "type": "paragraph",
-          "text": "Hrdina **Herakles**, syn Dia, nakoniec prichádza na Kaukaz. Zabije orla šípom a oslobodí väzňa. Zeus prijíma milosť: Prometheus konečne odhalí tajomstvo o nymfe **Thétis**. Kráľ bohov sa tak vyhne vlastnému pádu."
+          "text": "Hrdina **Herakles**, Diov syn, nakoniec príde na Kaukaz. Zastrelí orla šípom a oslobodí väzňa. Zeus s milosťou súhlasí: Prometheus mu konečne prezradí tajomstvo o nymfe **Thetis**. Kráľ bohov sa tak vyhne vlastnému pádu."
         },
         {
           "type": "paragraph",
-          "text": "Aby rešpektoval prísahu, ktorá ho spájala so skalou, nosí Prometheus prsteň vyrobený zo železa jeho reťazí a úlomku kameňa. Zostáva „spojený“ s horou, ale slobodný."
+          "text": "Aby dodržal prísahu, ktorá ho viazala ku skale, nosí Prometheus prsteň zo železa svojich reťazí s úlomkom kameňa. Zostáva „pripútaný“ k hore, no je slobodný."
         }
       ]
     },
     {
       "id": "course_162_promethee_le_voleur_de_feu_p4",
-      "title": "Mýtus, ktorý nikdy nevyjde",
+      "title": "Mýtus, ktorý nevyhasína",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "V 5. storočí pred Kristom tragéd [[Aischylus]] inscenoval „Prometheus v reťaziach“. Neskôr mýtus inšpiruje vedu a pokrok. Mary Shelley v titulkoch „Frankenstein“ „Moderný Prometheus“: Vytváranie života bez múdrosti môže tiež zničiť."
+          "text": "V 5. storočí pred n. l. uviedol tragik [[Aischylos]] hru *Spútaný Prometheus*. Neskôr mýtus inšpiruje vedu a pokrok. Mary Shelleyová dala *Frankensteinovi* podtitul *Moderný Prometheus*: kto tvorí život bez múdrosti, môže aj ničiť."
         },
         {
           "type": "paragraph",
-          "text": "Filozof [[Gaston Bachelard]] dokonca hovorí o „komplexe Prometheus“: tejto túžbe poznať viac ako svojich majstrov. Dnes často prirovnávame umelú inteligenciu alebo genetiku k novému ohňu: k obrovskej sile, stále zle ovládanej."
+          "text": "Filozof [[Gaston Bachelard]] dokonca hovorí o „Prometheovom komplexe“: o túžbe vedieť viac než vlastní učitelia. Dnes sa umelá inteligencia alebo genetika často prirovnáva k novému ohňu: k obrovskej moci, ktorú zatiaľ nikto dobre neovláda."
         },
         {
           "type": "takeaway",
-          "text": "**Prometheus** ponúka mužom civilizáciu prostredníctvom krádeže ohňa, znáša tisícročné muky a potom ho doručí **Herakles**. Pokrok má svoju cenu a rovnako aj božská moc."
+          "text": "**Prometheus** daruje ľuďom civilizáciu tým, že ukradne oheň, znáša tisícročné muky a napokon ho oslobodí **Herakles**. Pokrok má svoju cenu, a božská moc tiež."
         }
       ]
     }

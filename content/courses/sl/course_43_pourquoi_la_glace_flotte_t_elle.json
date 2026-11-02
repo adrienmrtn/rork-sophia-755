@@ -3,12 +3,12 @@
   "title": "Zakaj led plava?",
   "subtitle": "Voda in molekule",
   "subject": "sciences",
-  "subcategory": "Vsakdanjik pod drobnogledom",
-  "description": "Led plava na vodi. To se zdi normalno, vendar je v resnici zelo redko. In na srečo življenja na Zemlji.",
+  "subcategory": "Vsakdan pod drobnogledom",
+  "description": "Led plava na vodi. To se zdi normalno, v resnici pa je zelo redko. In za življenje na Zemlji je to prava sreča.",
   "hero": {
     "image": "pourquoi_la_glace_flotte",
     "ratio": "16:9",
-    "hook": "Če bi led tekel, bi jezera zmrznila do dna. In življenje v vodi bi težko preživelo."
+    "hook": "Če bi led potonil, bi jezera zmrznila do dna. In življenje v vodi bi le stežka preživelo."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kocka ledu v kozarcu, ledena gora v oceanu: led **lebdi**. Zdi se nam banalno. Vendar pa je pri večini snovi trdna snov bolj **gosta**, torej težja pri enaki prostornini: potone."
+          "text": "Kocka ledu v kozarcu, ledena gora v oceanu: led **plava**. Zdi se nam samoumevno. Vendar je pri večini snovi trdna snov **gostejša**, torej pri enaki prostornini težja: potone."
         },
         {
           "type": "paragraph",
-          "text": "Voda naredi nasprotno. Ta izjema izhaja iz oblike njegove molekule. In pozimi je rešil številna jezera."
+          "text": "Voda naredi ravno nasprotno. Ta izjema izhaja iz oblike njene molekule. In pozimi je rešila že marsikatero jezero."
         }
       ]
     },
@@ -33,7 +33,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Molekula vode je atom **oksigena**, ki je povezan z dvema atomoma **vodika**. Ni ravno: tvori **V**. Zaradi te oblike električni naboji niso enakomerno porazdeljeni: molekula je **polarna**, z enim koncem rahlo negativnim in drugim rahlo pozitivnim."
+          "text": "Molekula vode je atom **kisika**, povezan z dvema atomoma **vodika**. Ni ravna: ima obliko črke **V**. Zaradi te oblike električni naboji niso enakomerno porazdeljeni: molekula je **polarna**, en konec je rahlo negativen, drugi rahlo pozitiven."
         },
         {
           "type": "image",
@@ -43,18 +43,18 @@
         },
         {
           "type": "paragraph",
-          "text": "Rezultat: molekule vode se privlačijo z [[Vodikove vezi]], kot majhni magneti. V tekočini ostanejo blizu, vendar se še vedno premikajo. V ledu zmrznejo drugače."
+          "text": "Posledica: molekule vode se med seboj privlačijo kot majhni magneti, to privlačnost pa ustvarjajo [[vodikove vezi]]. V tekočini ostanejo blizu skupaj, a se še premikajo. V ledu se razporedijo drugače in otrdijo."
         }
       ]
     },
     {
       "id": "course_43_pourquoi_la_glace_flotte_t_elle_p2",
-      "title": "Ko voda zmrzne, zavzame prostor",
+      "title": "Ko voda zmrzne, potrebuje več prostora",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Okoli **0 °C** se voda strdi. Za tvorbo ledu se molekule organizirajo v mrežo **heksagonalno**, nekakšno šeststrano satovje. Nato med seboj pustijo več **prazno** kot v tekočem stanju."
+          "text": "Pri približno **0 °C** voda zmrzne. Ko nastaja led, se molekule uredijo v **šesterokotno** mrežo, nekakšno satovje s šestimi stranicami. Med seboj tako pustijo več **praznega prostora** kot v tekočem stanju."
         },
         {
           "type": "funFact",
@@ -62,7 +62,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Manj materiala v isti prostornini pomeni: **manj gosto**. Vendar se objekt, ki je manj gost kot tekočina okoli njega, dvigne. Led torej plava na vodi. To se imenuje **anomalija raztezanja vode**: za razliko od skoraj vseh snovi se voda razteza, ko se ohlaja pod **4 °C**."
+          "text": "Manj snovi v isti prostornini pomeni: **manjša gostota**. Predmet, ki je manj gost od tekočine okoli sebe, pa se dvigne. Led zato plava na vodi. Temu pravimo **anomalno raztezanje vode**: v nasprotju s skoraj vsemi snovmi se voda pod **4 °C** pri ohlajanju razteza."
         },
         {
           "type": "image",
@@ -74,16 +74,16 @@
     },
     {
       "id": "course_43_pourquoi_la_glace_flotte_t_elle_p3",
-      "title": "Zakaj je ključnega pomena za jezera",
+      "title": "Zakaj je to ključno za jezera",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Predstavljajte si, če bi sladoled tekel. Nastala bi na površini, nato pa potonila na dno. Jezero bi zamrznilo plast za plastjo, vse do dna. Poletje pogosto ne bi bilo dovolj, da bi se vse stopilo."
+          "text": "Predstavljaj si, da bi led potonil. Nastal bi na površini in nato padel na dno. Jezero bi zamrzovalo plast za plastjo, vse do dna. Poletje pogosto ne bi bilo dovolj, da bi se vse stopilo."
         },
         {
           "type": "paragraph",
-          "text": "Na srečo led ostaja na vrhu. Tvori **izolacijski pokrov**. Pod zmrznjeno površino lahko tekoča voda ostane okoli **4 °C**, temperature, kjer je tekoča voda najgostejša, dovolj za preživetje rib in vodnih rastlin."
+          "text": "Na srečo led ostane na vrhu. Tvori **izolacijski pokrov**. Pod zamrznjeno površino lahko tekoča voda ostane pri približno **4 °C**, temperaturi, pri kateri je tekoča voda najgostejša: dovolj toplo, da preživijo ribe in vodne rastline."
         }
       ]
     },
@@ -94,11 +94,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Bela ledena plošča odbija velik del Sončeve svetlobe nazaj v vesolje zahvaljujoč visoki **albedo**, svoji odbojni moči. Če izgine, temni ocean absorbira več toplote. To pospešuje segrevanje: začaran krog."
+          "text": "Bel morski led zaradi visokega **albeda**, torej odbojnosti, odbije velik del sončne svetlobe nazaj v vesolje. Če izgine, temni ocean vpije več toplote. To pospeši segrevanje: začaran krog."
         },
         {
           "type": "takeaway",
-          "text": "Led plava, ker voda, ko se strdi, tvori bolj \"prezračeno\" mrežo: postane manj gosta kot tekoča voda. Ta izjema ščiti vodno življenje pozimi."
+          "text": "Led plava, ker voda, ko zmrzne, tvori bolj »zračno« mrežo: postane manj gosta od tekoče vode. Ta izjema pozimi ščiti življenje v vodi."
         }
       ]
     }

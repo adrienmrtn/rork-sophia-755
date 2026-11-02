@@ -1,0 +1,138 @@
+{
+  "id": "course_234_la_securite_alimentaire_mondiale",
+  "title": "Kaip išmaitinti aštuonis milijardus žmonių?",
+  "subtitle": "Gaminti geriau, švaistyti mažiau",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environnement & avenir",
+  "description": "Planeta pagamina daugiau maisto nei bet kada, tačiau badas plinta. Problema ne kiekis, o tai, kaip maistas gaminamas, gabenamas ir švaistomas.",
+  "author": "kate-waddams",
+  "hero": {
+    "image": "combine_harvester_wheat_field_aerial",
+    "ratio": "4:3",
+    "hook": "Pagaminame pakankamai, kad visi būtų sotūs. Problema ta, ką darome su tuo maistu."
+  },
+  "sections": [
+    {
+      "id": "course_234_la_securite_alimentaire_mondiale_intro",
+      "title": "Įvadas",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pasaulyje daugėja bado, plinta ir [[netinkama mityba]], todėl galima pagalvoti, kad Žemė nebepagamina pakankamai augančiai populiacijai. Tai netiesa. Nuo **1960**-ųjų žemės ūkio produkcija auga sparčiau nei žmonių skaičius. Bėda slypi kitur: tame, kaip tas maistas gaminamas ir paskirstomas."
+        },
+        {
+          "type": "paragraph",
+          "text": "Skaičiai prieštaringi. **7 %** jaunesnių nei penkerių metų vaikų kenčia nuo netinkamos mitybos, o **40 %** suaugusiųjų turi antsvorio. Šiandien prasta mityba nusineša daugiau suaugusiųjų gyvybių nei tabakas. Išmaitinti aštuonis milijardus žmonių nėra paprasta: [[tiekimo grandinė]] turi spragų, mes labai daug švaistome, o daugelis ūkininkavimo praktikų nebėra tvarios."
+        }
+      ]
+    },
+    {
+      "id": "course_234_la_securite_alimentaire_mondiale_p1",
+      "title": "Ūkiai saulę paverčia maistu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ūkis sugauna saulės šviesą ir paverčia ją maistu. Šį darbą atlieka augalai: auginami jie duoda valgomų produktų. Ganyklose besiganantys gyvuliai žolę paverčia mėsa ir pienu. Vis dėlto ūkių reputacija prasta: nualinta dirva, tarša, miškų kirtimas, gyvuliai, kurie su žmonėmis konkuruoja dėl maisto ir erdvės."
+        },
+        {
+          "type": "image",
+          "asset": "dairy_cows_grazing_green_pasture",
+          "ratio": "3:2",
+          "caption": "Karvės ganykloje: žolė, paversta pienu ir mėsa."
+        },
+        {
+          "type": "paragraph",
+          "text": "Šios problemos iš dalies kyla dėl netvarių ūkininkavimo praktikų. Būtent tai ir reikia keisti. Paplitęs įsitikinimas, kad norint pagaminti vis daugiau, į gamybą reikia vis daugiau ir įdėti. Tai netiesa. Pagaminti daugiau nebūtinai reiškia daugiau pesticidų, trąšų, žemės ar darbo jėgos. Gali būti net atvirkščiai."
+        },
+        {
+          "type": "paragraph",
+          "text": "Viskas telpa į vieną žodį: efektyvumas. Taikant efektyvesnius ūkininkavimo metodus, galima pagaminti daugiau maisto milijardams žmonių, o [[gamybos sąnaudos]] tuo pat metu mažėja: reikia mažiau trąšų, pesticidų, energijos ir darbo jėgos, be to, užimama mažiau žemės."
+        }
+      ]
+    },
+    {
+      "id": "course_234_la_securite_alimentaire_mondiale_p2",
+      "title": "Trečdalis maisto taip ir nepasiekia lėkštės",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pagaminti pakankamai yra tik pusė darbo. Dar reikia maistą pristatyti vartotojams, o tai visai kitas iššūkis. Skaičius svaigina: **trečdalis** pasaulyje pagaminto maisto prarandama arba iššvaistoma, t. y. **1,3 milijardo tonų** kasmet."
+        },
+        {
+          "type": "image",
+          "asset": "discarded_fruit_vegetables_food_waste_dumpster",
+          "ratio": "3:2",
+          "caption": "Pirmojo pasaulinio karo JAV kampanija prieš švaistymą: vaikai moko suaugusiuosius konservuoti vaisius ir daržoves."
+        },
+        {
+          "type": "funFact",
+          "text": "Apskritai [[maisto švaistymas]] kainuoja brangiau, nei atrodo. Išmesti obuolį reiškia išmesti ir laiką, energiją bei pinigus, kurių prireikė jam užauginti, nuskinti ir atgabenti."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kai žemės ūkį apėmė [[globalizacija]], atsirado prekyba tarp žemynų ir atsivėrė rinkos, todėl šalys nebepriklauso vien nuo savo produkcijos, kad išmaitintų gyventojus. Kai kurie produktai nebėra sezoniniai: jie importuojami iš viso pasaulio. Tačiau platesnė prieiga ilgina tiekimo grandines, o kuo grandinė ilgesnė, tuo daugiau joje trapių grandžių."
+        }
+      ]
+    },
+    {
+      "id": "course_234_la_securite_alimentaire_mondiale_p3",
+      "title": "Pagaminti daugiau su mažiau",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Didinti sąnaudas, kad būtų patenkinta paklausa, nėra nei tvaru, nei realu. Ūkininkai turi pereiti prie geresnių praktikų, ir ne vien dėl demografijos. Juos jau dabar veikia klimato kaita: permainingi ir nenuspėjami orai verčia ieškoti naujų kelių."
+        },
+        {
+          "type": "paragraph",
+          "text": "Gerinti dirvožemio būklę, optimizuoti gyvulių produktyvumą, sodinti klimatui atsparias kultūras, taikyti metodą, kuris vadinamas [[tikslusis ūkininkavimas]]: visa tai būdai iš mažiau gauti daugiau. Užuot tręšus visą lauką, robotas realiuoju laiku analizuoja dirvą ir paskleidžia tik tiek trąšų, kiek reikia tam sklypui. Rezultatas: mažesnės išlaidos, mažesnis poveikis aplinkai ir didesnis derlius."
+        },
+        {
+          "type": "image",
+          "asset": "agricultural_drone_precision_farming_field",
+          "ratio": "4:3",
+          "caption": "Grūdų lauko su traktoriaus vėžėmis vaizdas iš oro netoli Diulmeno (Vokietija), 2024 m."
+        },
+        {
+          "type": "paragraph",
+          "text": "Šios technologijos yra sprendimo dalis ir vis daugiau reiškia žemės ūkio moksliniuose tyrimuose. Kad išmaitintume aštuonis milijardus žmonių, nebūtinai reikia daugiau žemės, daugiau gyvulių ar daugiau hektarų pasėlių. Reikia daugiau išgauti iš to, ką jau naudojame."
+        }
+      ]
+    },
+    {
+      "id": "course_234_la_securite_alimentaire_mondiale_p4",
+      "title": "Bendra problema nuo ūkio iki vartotojo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ūkininkai dažnai kaltinami. Tačiau būtent jie maitina mūsų vaikus ir saugo kaimo vietoves bei aplinką. Vis dėlto išmaitinti planetą nėra vien jų reikalas: tam reikia kur kas daugiau nei užauginti maisto."
+        },
+        {
+          "type": "paragraph",
+          "text": "Iš mūsų tai reikalauja tvarių pasirinkimų: rinktis sveikesnius ir atsakingai pagamintus produktus ir pirkti tik tiek, kiek iš tikrųjų suvalgysime. Visa maisto grandinė (perdirbėjai, pakuotojai, vežėjai, prekybininkai ir mes, vartotojai) taip pat gali keisti savo įpročius. Maisto ateitis yra bendra problema. Tai, kaip maitinasi aštuoni milijardai žmonių, formuoja visą planetą, ir tu esi šios istorijos dalis."
+        },
+        {
+          "type": "takeaway",
+          "text": "Žemė pagamina pakankamai visiems: norint išmaitinti aštuonis milijardus žmonių, reikia mažiau švaistyti, gaminti daugiau naudojant mažiau sąnaudų ir žemės bei keisti savo pasirinkimus nuo ūkio iki lėkštės."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "United Nations, Department of Economic and Social Affairs, « Can we feed the billions? ».",
+      "url": "https://www.un.org/en/desa/can-we-feed-billions"
+    },
+    {
+      "text": "H. Ritchie, « No, growing more food does not mean we always need more and more inputs », Sustainability by Numbers.",
+      "url": "https://hannahritchie.substack.com/p/agricultural-total-factor-productivity"
+    },
+    {
+      "text": "J. Gustavsson, C. Cederberg, U. Sonesson, R. van Otterdijk et A. Meybeck, Global Food Losses and Food Waste: Extent, Causes and Prevention, FAO, Rome, 2011."
+    }
+  ]
+}

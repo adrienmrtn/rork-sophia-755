@@ -1,0 +1,130 @@
+{
+  "id": "course_191_enee_et_la_fondation_de_rome_virgile",
+  "title": "Enėjas ir Romos įkūrimas (Vergilijus)",
+  "subtitle": "Eneida",
+  "subject": "mythologie",
+  "subcategory": "Autres mythologies",
+  "description": "Poemoje „Eneida“ Vergilijus pasakoja, kaip iš Trojos išsigelbėjęs princas Enėjas perplaukia Viduržemio jūrą ir pradeda giminę, iš kurios kils Roma.",
+  "hero": {
+    "image": "enee_et_la_fondation_de_rome",
+    "ratio": "16:9",
+    "hook": "Bėgantis trojėnas neša tėvą ant pečių: iš šios tremties gimsta Roma."
+  },
+  "sections": [
+    {
+      "id": "course_191_enee_et_la_fondation_de_rome_virgile_intro",
+      "title": "Įvadas",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Eneida** yra didžioji **Vergilijaus** poema. Ji pasakoja apie **Enėjo**, iš žlugusios Trojos išsigelbėjusio Trojos princo, klajones. Dievų vedamas, jis perplaukia Viduržemio jūrą, kad Italijoje pradėtų giminę, iš kurios kils Roma."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tai ne vien nuotykis. Tai Romos galybės gimimo mitas, parašytas tam, kad Roma turėtų Homero vertą praeitį."
+        }
+      ]
+    },
+    {
+      "id": "course_191_enee_et_la_fondation_de_rome_virgile_p1",
+      "title": "Vergilijus rašo Augustui",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I a. pr. Kr. pabaigoje, po pilietinių karų, imperatorius **Augustas** nori įtvirtinti savo valdžią. Jis užsako Vergilijui Homero vertą epą. Kūrinys kartu yra ir [[Augusto propaganda]]: jis sieja valdovą su dievišku herojumi."
+        },
+        {
+          "type": "image",
+          "asset": "dido_aeneas_carthage_painting",
+          "ratio": "4:3",
+          "caption": "Vergilijus, „Eneidos“ poetas, likimo lemtos Romos dainius."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vergilijus prie jo dirba vienuolika metų (29-19 m. pr. Kr.). Pirmosios šešios giesmės pasakoja apie klajones jūroje. Kitos šešios pasakoja apie karą Italijoje. Jo eilėdara yra [[daktiliniai hegzametrai]], didžiųjų antikos epų eilutė."
+        },
+        {
+          "type": "funFact",
+          "text": "Vergilijus miršta **19** m. pr. Kr. ir prašo sudeginti rankraštį, kurį laiko nebaigtu. Augustas uždraudžia paklusti. Nacionalinis Romos epas išleidžiamas prieš autoriaus valią."
+        }
+      ]
+    },
+    {
+      "id": "course_191_enee_et_la_fondation_de_rome_virgile_p2",
+      "title": "Bėgimas iš Trojos ir meilė Kartaginoje",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Baigiasi [[Trojos karas]], Troja dega, ir Enėjas, deivės **Veneros** ir mirtingojo Anchizo sūnus, gauna įsakymą bėgti. Jis išeina nešdamas tėvą ant pečių ir vesdamas už rankos sūnų Askanijų. Su juo keliauja ir [[Penatai]], namų židinio dievai. Toks poelgis ir yra [[romėnų pietas]]: pareiga šeimai, dievams ir likimui."
+        },
+        {
+          "type": "image",
+          "asset": "aeneas_fleeing_burning_troy_anchises_painting",
+          "ratio": "4:3",
+          "caption": "Enėjas bėga iš liepsnojančios Trojos su tėvu ir sūnumi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kartaginoje jis pamilsta karalienę **Didoną**. Bet romėnų dievų karalius [[Jupiteris]] primena jam jo misiją. Enėjas išplaukia. Didona nusižudo ir prakeikia jo giminę: taip mitas paaiškina būsimą Romos ir Kartaginos neapykantą, kol dar neprasidėjo [[Pūnų karai]]."
+        },
+        {
+          "type": "funFact",
+          "text": "Enėjo sūnus Askanijus dar vadinamas Julu. Giminė [[Julijai]], kuriai priklauso Julijus Cezaris ir Augustas, per Venerą kildina save iš dievų."
+        }
+      ]
+    },
+    {
+      "id": "course_191_enee_et_la_fondation_de_rome_virgile_p3",
+      "title": "Karas Lacijuje",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nusileidęs į požemių pasaulį, Enėjas išsilaipina **Lacijuje**, Vidurio Italijoje. Karalius **Latinas** pažada jam savo dukterį **Laviniją**. Bet princą **Turną** remia [[Junona]], trojėnams priešiška deivė, ir jis pradeda karą."
+        },
+        {
+          "type": "paragraph",
+          "text": "Enėjas nugali Turną ir įkuria **Lavinijų**. Vėliau jo sūnus įkurs miestą, kurio vardas [[Alba Longa]], ir iš ten kils Romulas ir Remas. Taip mitas sujungia Troją ir Romą į vieną grandinę."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "Troja",
+              "title": "Enėjo bėgimas",
+              "detail": "Jis išgelbsti tėvą, sūnų ir namų dievus."
+            },
+            {
+              "date": "Kartagina",
+              "title": "Didona",
+              "detail": "Sudužusi meilė, prakeiksmas Romai."
+            },
+            {
+              "date": "Lacijus",
+              "title": "Pergalė prieš Turną",
+              "detail": "Lavinijaus įkūrimas, Romos užuomazga."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_191_enee_et_la_fondation_de_rome_virgile_p4",
+      "title": "Pareigos herojus",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Viduramžiais Vergilijus tampa beveik pranašišku išminčiumi. Dantė jį paverčia savo vedliu poemoje, kurios vardas [[Dieviškoji komedija]]. Tačiau Enėjas nėra linksmas herojus: jis neša likimo naštą. Roma gimsta iš tremties, paaukotos meilės ir karo."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Eneidoje** Vergilijus iš Trojos išsigelbėjusį **Enėją** paverčia mitiniu Romos protėviu. Herojus įkūnija **pietas**: pareiga svarbiau už troškimą, likimas svarbiau už asmeninę laimę."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,137 @@
+{
+  "id": "course_23_la_guerre_d_algerie_1954_1962",
+  "title": "Alžyro karas",
+  "subtitle": "1954-1962",
+  "subject": "histoire",
+  "subcategory": "Guerre froide & monde contemporain",
+  "description": "**Aštuonerius metus** Prancūzija kovoja su nepriklausomybės siekiančiu sukilimu teritorijoje, kurią laiko savo. Alžyro karas nuverčia Ketvirtąją Respubliką ir palieka ilgalaikių randų.",
+  "hero": {
+    "image": "la_guerre_d_algerie",
+    "ratio": "16:9",
+    "hook": "Aštuoneri karo metai, kurių Prancūzija ilgai nenorėjo vadinti karu."
+  },
+  "sections": [
+    {
+      "id": "course_23_la_guerre_d_algerie_1954_1962_intro",
+      "title": "Įvadas",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Alžyro karas (**1954-1962**) yra vienas skaudžiausių XX a. Prancūzijos istorijos skyrių. Tai ne vien dekolonizacija. Paryžiui Alžyras nėra tolima kolonija: tai Prancūzijos dalis."
+        },
+        {
+          "type": "paragraph",
+          "text": "Aštuonerius metus valstybė kovoja su **FLN**, Nacionalinio išsivadavimo frontu, siekiančiu nepriklausomybės. Krizė nuverčia Ketvirtąją Respubliką ir pagimdo Penktąją. Ilgai vadintas „įvykiais“ arba „viešosios tvarkos palaikymu“, šis karas palieka susiskaldžiusią atmintį abiejose Viduržemio jūros pusėse."
+        }
+      ]
+    },
+    {
+      "id": "course_23_la_guerre_d_algerie_1954_1962_p1",
+      "title": "Prancūziškas Alžyras… popieriuje",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nuo **1830** m. užkariautą Alžyrą jau **1848** m. sudaro [[Prancūzijos departamentai]]. Daugeliui palikti Alžyrą reiškia amputuoti nacionalinę teritoriją. **1954** m. ten gyvena apie **9 milijonai** musulmonų ir **1 milijonas** europiečių, vadinamieji [[Juodakojai]]."
+        },
+        {
+          "type": "funFact",
+          "text": "Iki **1999** m. Prancūzijos valstybė teisiškai atsisako vartoti žodį „karas“. Kalbama apie „viešosios tvarkos palaikymo“ operacijas, kad FLN kovotojams nereikėtų pripažinti karo belaisvių statuso."
+        },
+        {
+          "type": "image",
+          "asset": "algerian_war_fln_fighters",
+          "ratio": "4:3",
+          "caption": "FLN kovotojai Alžyro karo metu."
+        },
+        {
+          "type": "paragraph",
+          "text": "**1945 m. gegužės 8 d.**, kai Europa švenčia pergalę, demonstracijų malšinimas Setife ir Gelmoje, rytiniame Alžyre, nusineša tūkstančius gyvybių. **1954 m. lapkričio 1 d.** ateina „Raudonoji Visų šventųjų diena“: FLN surengia apie šešiasdešimt išpuolių. Tuometinis vidaus reikalų ministras **François Mitterrand'as** taip apibendrina oficialią poziciją: „Alžyras yra Prancūzija.“"
+        }
+      ]
+    },
+    {
+      "id": "course_23_la_guerre_d_algerie_1954_1962_p2",
+      "title": "Alžyro mūšis",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "1956 m. parlamente patvirtinami [[ypatingieji įgaliojimai]]: kariuomenė gauna policijos galias. Beveik **400 000** karių, tarp jų daug šauktinių, šukuoja šalį. Jiems priešinasi FLN, kurio ginklas yra [[partizaninis karas]]: pasalos ir išpuoliai."
+        },
+        {
+          "type": "image",
+          "asset": "battle_of_algiers_1957",
+          "ratio": "4:3",
+          "caption": "Alžyras, 1957 m.: miesto karas sostinės širdyje."
+        },
+        {
+          "type": "paragraph",
+          "text": "**1957** m., per **Alžyro mūšį**, generolo **Jacques'o Massu** parašiutininkai sunaikina bombų sprogdintojų tinklus. Karinė pergalė, moralinis pralaimėjimas: kankinimai tampa įprasta priemone informacijai išgauti. Metropolijoje skandalas auga. Prancūzija susiskaldo dėl savo pačios karo teisėtumo."
+        }
+      ]
+    },
+    {
+      "id": "course_23_la_guerre_d_algerie_1954_1962_p3",
+      "title": "De Gaulle'is ir lūžis",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**1958 m. gegužės 13 d.** Alžyras sukyla, kad išsaugotų „prancūzišką Alžyrą“. **Charles'is de Gaulle'is** grįžta į valdžią ir įkuria Penktąją Respubliką. Iš pradžių laikomas Prancūzijos suvereniteto gelbėtoju, jis greitai supranta, kad Alžyro išlaikyti neįmanoma. Jis kreipia šalį apsisprendimo link: tegul alžyriečiai patys renkasi savo ateitį."
+        },
+        {
+          "type": "image",
+          "asset": "de_gaulle_speech_algeria",
+          "ratio": "4:3",
+          "caption": "De Gaulle'is ir Alžyro klausimas."
+        },
+        {
+          "type": "paragraph",
+          "text": "**1961** m. balandį jį bando nuversti [[Generolų pučas (1961 m. balandis)]]. Po nesėkmės [[OAS]], Slaptosios armijos organizacija, rengia vis daugiau išpuolių, kad sužlugdytų bet kokias derybas."
+        }
+      ]
+    },
+    {
+      "id": "course_23_la_guerre_d_algerie_1954_1962_p4",
+      "title": "Evianas, nepriklausomybė, atmintis",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**1962 m. kovo 18 d.** pasirašius **Eviano susitarimus**, įsigalioja [[paliaubos]]. Liepos 1 d. nepriklausomybė patvirtinama referendumu. Smurtas nesiliauja. Likimo valiai palikti ir tūkstančiais žudomi [[harkiai]], Prancūzijos pusėje kovoję musulmonai. Beveik milijonas juodakojų pabėga į metropoliją."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1954 m. lapkričio 1 d.",
+              "title": "Raudonoji Visų šventųjų diena",
+              "detail": "FLN pradeda sukilimą."
+            },
+            {
+              "date": "1957",
+              "title": "Alžyro mūšis",
+              "detail": "Prancūzijos karinė pergalė, kankinimų skandalas."
+            },
+            {
+              "date": "1958 m. gegužės 13 d.",
+              "title": "Alžyro krizė",
+              "detail": "De Gaulle'is grįžta, gimsta Penktoji Respublika."
+            },
+            {
+              "date": "1962 m. kovo 18 d.",
+              "title": "Eviano susitarimai",
+              "detail": "Paliaubos, o liepą nepriklausomybė."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Alžyro karas (**1954-1962**) užbaigia Prancūzijos kolonijinę imperiją. Jis palieka skaudų atminties paveldą: kankinimai, juodakojų išvykimas, paliktieji harkiai."
+        }
+      ]
+    }
+  ]
+}

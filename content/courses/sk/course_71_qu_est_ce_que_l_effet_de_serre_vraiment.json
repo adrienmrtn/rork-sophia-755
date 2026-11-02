@@ -4,11 +4,11 @@
   "subtitle": "Klíma a atmosféra",
   "subject": "sciences",
   "subcategory": "Zem a vesmír",
-  "description": "Skleníkový efekt nie je primárne problém: je to neviditeľný plášť, ktorý zabraňuje zamrznutiu Zeme. Skutočný problém je, keď ho zahustíte príliš rýchlo.",
+  "description": "Skleníkový efekt nie je v prvom rade problém: je to neviditeľný plášť, ktorý chráni Zem pred zamrznutím. Skutočný problém nastáva, keď ho ľudia zahusťujú príliš rýchlo.",
   "hero": {
     "image": "qu_est_ce_que_l_effet_de_serre",
     "ratio": "16:9",
-    "hook": "Bez skleníkového efektu by bola Zem ľadovou púšťou. Pri príliš veľkom množstve sa prehrieva."
+    "hook": "Bez skleníkového efektu by bola Zem ľadovou púšťou. Keď je ho priveľa, prehrieva sa."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Predstavte si zatvorené auto na slnku: okná prepúšťajú svetlo dovnútra, ale teplo sa len ťažko dostáva von. Priestor pre cestujúcich sa zahrieva. Trochu takto funguje pozemský [[skleníkový efekt]] so vzduchom namiesto skla."
+          "text": "Predstav si zatvorené auto na slnku: okná púšťajú dnu svetlo, ale teplo sa len ťažko dostáva von. Interiér sa zohrieva. Pozemský [[skleníkový efekt]] funguje trochu podobne, len namiesto skla je tu vzduch."
         },
         {
           "type": "paragraph",
-          "text": "Tento jav je **prirodzený** a životne dôležitý. Bez nej by priemerná teplota zemegule klesla smerom k **-18 °C**. S ním sme okolo **+15 °C**. Aktuálnym problémom nie je jeho existencia, ale jeho rýchle **zosilnenie** našimi aktivitami."
+          "text": "Tento jav je **prirodzený** a pre život nevyhnutný. Bez neho by priemerná teplota na Zemi klesla asi na **-18 °C**. Vďaka nemu je okolo **+15 °C**. Dnešným problémom nie je to, že existuje, ale jeho rýchle **zosilnenie** našou činnosťou."
         }
       ]
     },
@@ -33,7 +33,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Slnko vysiela hlavne viditeľné svetlo. Atmosféra to nechá prejsť. Zem a oceány sa zahrievajú a potom túto energiu vyžarujú späť vo forme **infračerveného tepla**, vĺn, ktoré sú „dlhšie“ ako viditeľné svetlo."
+          "text": "Slnko vysiela hlavne viditeľné svetlo. Atmosféra ho prepúšťa. Pevnina a oceány sa zohrievajú a potom túto energiu vyžarujú späť ako **infračervené teplo**, teda vlny „dlhšie“ ako viditeľné svetlo."
         },
         {
           "type": "image",
@@ -43,11 +43,11 @@
         },
         {
           "type": "paragraph",
-          "text": "Určité plyny, [[Skleníkové plyny]], absorbujú toto teplo a vyžarujú ho všetkými smermi, vrátane smerom k zemi. Dusík a kyslík, ktorých väčšina je vo vzduchu, túto prácu len ťažko vykonávajú. Vodná para, **CO₂** a **metán** to robia veľmi dobre."
+          "text": "Toto teplo pohlcuje niekoľko plynov, takzvaných [[skleníkových plynov]], ktoré ho vyžarujú všetkými smermi, aj späť k zemi. Dusík a kyslík, ktoré tvoria väčšinu vzduchu, túto prácu takmer nerobia. Vodná para, **CO₂** a **metán** ju robia veľmi dobre."
         },
         {
           "type": "funFact",
-          "text": "Názov „skleníkový efekt“ je trochu zavádzajúci. Skutočný skleník vykuruje najmä blokovaním stúpajúceho horúceho vzduchu. Atmosféra zachytáva teplo absorbovaním infračervených lúčov."
+          "text": "Názov „skleníkový efekt“ je trochu zavádzajúci. Skutočný skleník sa zohrieva hlavne preto, že zadržiava stúpajúci teplý vzduch. Atmosféra však zachytáva teplo tak, že pohlcuje infračervené lúče."
         }
       ]
     },
@@ -58,49 +58,49 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Od priemyselnej revolúcie sa spaľuje uhlie, ropa a plyn. Tento uhlík, pochovaný pod zemou po milióny rokov, sa vracia do vzduchu. Odlesňovanie tiež znižuje lesy, ktoré absorbovali CO₂. Pestovanie dobytka a ryže pridáva metán, približne **80-krát** viac „zahrievania“ ako CO₂ za 20 rokov."
+          "text": "Od priemyselnej revolúcie sa spaľuje uhlie, ropa a plyn. Tento uhlík, ukrytý pod zemou milióny rokov, sa vracia do vzduchu. Odlesňovaním navyše miznú lesy, ktoré pohlcovali CO₂. Chov dobytka a pestovanie ryže pridávajú metán, ktorý v horizonte 20 rokov „zohrieva“ asi **80-krát** viac ako CO₂."
         },
         {
           "type": "paragraph",
-          "text": "Výsledok: Koncentrácia CO₂ sa zvýšila z približne **280** na viac ako **420** častí na milión. Takáto hladina nebola zaznamenaná od [[pliocén]], asi pred **3 milióny dolárov**, keď boli moria vyššie."
+          "text": "Výsledok: koncentrácia CO₂ stúpla z približne **280** na viac ako **420** častíc na milión. Takú úroveň Zem nezažila od obdobia známeho ako [[pliocén]], teda asi pred **3 miliónmi rokov**, keď boli moria vyššie."
         }
       ]
     },
     {
       "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment_p3",
-      "title": "Aké energickejšie klimatické zmeny",
+      "title": "Čo prináša energickejšia klíma",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "[[IPCC]], ktorý syntetizuje prácu tisícov klimatológov, hovorí jasne: otepľovanie od roku 1950 je bezprecedentné počas tisícročí a jeho ľudský pôvod je preukázaný."
+          "text": "[[IPCC]], ktorý zhŕňa prácu tisícov klimatológov, hovorí jasne: otepľovanie od roku 1950 nemá za celé tisícročia obdobu a jeho ľudský pôvod je preukázaný."
         },
         {
           "type": "paragraph",
-          "text": "Viac energie vo vzduchu a oceánoch znamená viac extrémov: suchšie suchá, prudšie dažde, topiace sa ľadovce a ľadové čiapky, stúpajúca hladina morí. A urýchľovač: keď biely ľad zmizne, tmavá pôda a voda absorbujú viac slnečného svetla. [[Pozemské albedo]] klesá a planéta sa otepľuje ešte rýchlejšie."
+          "text": "Viac energie vo vzduchu a oceánoch znamená výraznejšie extrémy: suchšie suchá, prudšie dažde, topiace sa ľadovce a ľadové čiapky, stúpajúca hladina morí. A k tomu urýchľovač: keď biely ľad zmizne, tmavá pôda a voda pohltia viac slnečného svetla. [[Pozemské albedo]] klesá a planéta sa otepľuje ešte rýchlejšie."
         },
         {
           "type": "funFact",
-          "text": "Venuša ukazuje „nabitý“ skleníkový efekt: atmosféra s 96 % CO₂ a približne **460 °C** na zemi, čo je dosť na roztavenie olova."
+          "text": "Venuša ukazuje skleníkový efekt, ktorý sa „vymkol spod kontroly“: atmosféra zo 96 % CO₂ a na povrchu okolo **460 °C**, dosť na roztavenie olova."
         }
       ]
     },
     {
       "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment_p4",
-      "title": "Obmedzte nárast, prispôsobte sa zvyšku",
+      "title": "Obmedziť nárast, prispôsobiť sa zvyšku",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Cieľom medzinárodného cieľa je zostať pod **+1,5°C** alebo **+2°C** v porovnaní s predindustriálnym obdobím, aby sa predišlo nebezpečným prahom, ako je rozmrazovanie [[permafrost]], ktoré by uvoľnilo ešte viac metánu."
+          "text": "Medzinárodný cieľ je zostať pod hranicou **+1,5 °C** alebo **+2 °C** v porovnaní s predindustriálnou érou, aby sa neprekročili nebezpečné prahy: keby sa rozmrazil [[permafrost]], uvoľnil by ešte viac metánu."
         },
         {
           "type": "paragraph",
-          "text": "Dve páky: **redukovať** emisií (čistá energia, triezvosť, lesy) a **prispôsobené** na to, čo je už zaviazané. CO₂ zostáva vo vzduchu po stáročia: to, čo dnes vypúšťame, trvá dlho."
+          "text": "Dve páky: **znížiť** emisie (čistá energia, striedmosť, lesy) a **prispôsobiť sa** tomu, čo sa už rozbehlo. CO₂ zostáva vo vzduchu stáročia: to, čo sa vypustí dnes, pôsobí ešte dlho."
         },
         {
           "type": "takeaway",
-          "text": "Bez prirodzeného skleníkového efektu by Zem zamrzla okolo **-18 °C**. Jeho zosilnenie fosílnymi palivami tlačí CO₂ na úrovne, ktoré neboli zaznamenané **3 milióny rokov**."
+          "text": "Bez prirodzeného skleníkového efektu by Zem zamrzla pri teplote okolo **-18 °C**. Fosílne palivá ho zosilňujú a tlačia CO₂ na úroveň, akú Zem nezažila **3 milióny rokov**."
         }
       ]
     }

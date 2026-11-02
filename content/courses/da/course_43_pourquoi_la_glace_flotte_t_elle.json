@@ -4,11 +4,11 @@
   "subtitle": "Vand og molekyler",
   "subject": "sciences",
   "subcategory": "Hverdagen forklaret",
-  "description": "Is flyder på vandet. Dette virker normalt, men det er faktisk meget sjældent. Og heldigvis for livet på Jorden.",
+  "description": "Is flyder på vand. Det virker normalt, men det er faktisk meget sjældent. Og godt det samme for livet på Jorden.",
   "hero": {
     "image": "pourquoi_la_glace_flotte",
     "ratio": "16:9",
-    "hook": "Hvis isen flød, ville søerne fryse til bunden. Og livet i vandet ville have svært ved at overleve."
+    "hook": "Hvis isen sank, ville søerne fryse til bunds. Og livet i vandet ville have svært ved at overleve."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En isterning i et glas, et isbjerg i havet: isen **flyder**. Vi finder det banalt. Men for de fleste stoffer er det faste stof mere **tæt**, derfor tungere for samme volumen: det synker."
+          "text": "En isterning i et glas, et isbjerg i havet: isen **flyder**. Det synes man er banalt. Men for de fleste stoffer er den faste form **tættere**, altså tungere ved samme rumfang: den synker."
         },
         {
           "type": "paragraph",
-          "text": "Vand gør det modsatte. Denne undtagelse kommer fra formen af dets molekyle. Og det reddede mange søer om vinteren."
+          "text": "Vand gør det modsatte. Undtagelsen skyldes formen på vandmolekylet. Og den har reddet mange søer om vinteren."
         }
       ]
     },
@@ -33,7 +33,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Et vandmolekyle er et atom af **ilt** forbundet med to atomer af **brint**. Den er ikke lige: den danner en **V**. På grund af denne form er de elektriske ladninger ikke fordelt ligeligt: Molekylet er **polar**, med den ene ende svagt negativ og den anden let positiv."
+          "text": "Et vandmolekyle består af ét atom **ilt**, der er bundet til to atomer **brint**. Det er ikke lige: det danner et **V**. På grund af den form er de elektriske ladninger ikke jævnt fordelt: molekylet er **polært**, med den ene ende svagt negativ og den anden svagt positiv."
         },
         {
           "type": "image",
@@ -43,26 +43,26 @@
         },
         {
           "type": "paragraph",
-          "text": "Resultat: vandmolekyler tiltrækker hinanden gennem [[Hydrogenbindinger]], som små magneter. I væsken forbliver de tæt, men bevæger sig stadig. I is fryser de forskelligt."
+          "text": "Resultat: vandmolekylerne tiltrækker hinanden via [[hydrogenbindinger]], som små magneter. I væsken holder de sig tæt sammen, men bevæger sig stadig. I isen låses de fast på en anden måde."
         }
       ]
     },
     {
       "id": "course_43_pourquoi_la_glace_flotte_t_elle_p2",
-      "title": "Når vandet fryser, fylder det",
+      "title": "Når vandet fryser, fylder det mere",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Omkring **0 °C** størkner vandet. For at danne is organiserer molekylerne sig i et **sekskantet** netværk, en slags sekssidet bikage. De efterlader derefter mere **tom** mellem sig end i flydende tilstand."
+          "text": "Ved omkring **0 °C** bliver vand til is. For at danne is ordner molekylerne sig i et **sekskantet** gitter, en slags bikage med seks sider. Der bliver så mere **tom plads** mellem dem end i flydende form."
         },
         {
           "type": "funFact",
-          "text": "Dette er grunden til, at en fuld flaske vand kan **briste** i fryseren: is fylder mere end flydende vand."
+          "text": "Derfor kan en fuld vandflaske **springe** i fryseren: is fylder mere end flydende vand."
         },
         {
           "type": "paragraph",
-          "text": "Mindre materiale i samme volumen betyder: **mindre tæt**. Men et objekt, der er mindre tæt end væsken omkring det, stiger. Is flyder derfor på vandet. Dette kaldes **vandekspansionsanomali**: I modsætning til næsten alle stoffer udvider vand sig, når det afkøles under **4 °C**."
+          "text": "Mindre stof i samme rumfang betyder: **mindre tæt**. Og en genstand, der er mindre tæt end væsken omkring den, stiger op. Derfor flyder is på vand. Det kaldes **vands anomale udvidelse**: i modsætning til næsten alle andre stoffer udvider vand sig, når det afkøles under **4 °C**."
         },
         {
           "type": "image",
@@ -74,16 +74,16 @@
     },
     {
       "id": "course_43_pourquoi_la_glace_flotte_t_elle_p3",
-      "title": "Hvorfor det er vigtigt for søer",
+      "title": "Hvorfor det er livsvigtigt for søerne",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Tænk hvis isen flød. Det ville dannes på overfladen og derefter synke til bunden. Søen ville fryse lag for lag, helt ned til bunden. Sommeren ville ofte ikke være nok til at smelte alt væk."
+          "text": "Forestil dig, at isen sank. Den ville dannes ved overfladen og derefter synke til bunds. Søen ville fryse lag på lag, helt ned til bunden. Sommeren ville ofte ikke være nok til at smelte det hele."
         },
         {
           "type": "paragraph",
-          "text": "Heldigvis forbliver isen på toppen. Den danner et **isolere dæksel**. Under den frosne overflade kan flydende vand forblive omkring **4 °C**, den temperatur, hvor flydende vand er tættest, nok til at fisk og vandplanter kan overleve."
+          "text": "Heldigvis bliver isen liggende øverst. Den danner et **isolerende låg**. Under den frosne overflade kan det flydende vand holde sig omkring **4 °C**, den temperatur, hvor flydende vand er tættest, og det er nok til, at fisk og vandplanter kan overleve."
         }
       ]
     },
@@ -94,11 +94,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Den hvide isflage reflekterer en stor del af Solens lys tilbage i rummet takket være dens høje **albedo**, dens reflekterende kraft. Hvis det forsvinder, optager det mørke hav mere varme. Dette fremskynder opvarmningen: en ond cirkel."
+          "text": "Den hvide havis kaster en stor del af sollyset tilbage ud i rummet takket være sin høje **albedo**, altså evnen til at reflektere lys. Hvis den forsvinder, optager det mørke hav mere varme. Det sætter fart på opvarmningen: en ond cirkel."
         },
         {
           "type": "takeaway",
-          "text": "Is flyder, fordi vandet, efterhånden som det størkner, danner et mere \"luftet\" netværk: det bliver mindre tæt end flydende vand. Denne undtagelse beskytter livet i vand om vinteren."
+          "text": "Is flyder, fordi vand danner et mere »luftigt« gitter, når det størkner: det bliver mindre tæt end flydende vand. Denne undtagelse beskytter livet i vandet om vinteren."
         }
       ]
     }

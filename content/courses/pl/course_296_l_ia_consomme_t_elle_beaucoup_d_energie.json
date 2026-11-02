@@ -34,7 +34,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Komputer, który przetwarza dane i obsługuje usługi internetowe, to [[serwer]]. W centrum danych to serwery wykonują większość obliczeń, więc to one zużywają najwięcej prądu. Gdyby rozbić rachunek nowoczesnego centrum danych, serwery pochłaniają średnio **60%**. Ta liczba dotyczy centrów danych w ogóle, nie tylko obiektów AI."
+          "text": "Komputer, który przetwarza dane i obsługuje usługi internetowe, to [[serwer]]. W centrum danych to serwery wykonują większość obliczeń, więc to one zużywają najwięcej prądu. W rachunku za prąd nowoczesnego centrum danych serwery odpowiadają średnio za **60%**. Ta liczba dotyczy centrów danych w ogóle, nie tylko obiektów AI."
         },
         {
           "type": "image",
@@ -69,7 +69,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Gdy model jest już wytrenowany, zaczyna się inna praca. Tą pracą jest [[inferencja]], czyli obliczenia, które dają odpowiedź na twoje pytanie. Trenowanie nie zaczyna się od nowa przy każdym pytaniu, a inferencja powtarza się przy każdym zapytaniu. Które z nich waży więcej z biegiem czasu? To zależy od tego, jak zbudowana jest usługa i ile osób z niej korzysta. Bardzo popularna usługa trzyma swoje komputery zajęte odpowiadaniem nawet między dużymi etapami trenowania."
+          "text": "Gdy model jest już wytrenowany, zaczyna się inna praca. Tą pracą jest [[inferencja]], czyli obliczenia, które dają odpowiedź na twoje pytanie. Trenowanie nie zaczyna się od nowa przy każdym pytaniu, natomiast inferencja powtarza się przy każdym zapytaniu. Które z nich z czasem waży więcej? To zależy od tego, jak zbudowana jest usługa i ile osób z niej korzysta. W bardzo popularnej usłudze komputery są zajęte odpowiadaniem nawet między dużymi etapami trenowania."
         }
       ]
     },
@@ -80,7 +80,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ile prądu zużywa jedno zapytanie tekstowe? Opublikowane szacunki nie dają tej samej odpowiedzi. Google, mierząc swoją działającą usługę, podaje dla mediany zapytania tekstowego **0,24 Wh**. Jednostką, która mierzy ilość energii, jest [[watogodzina]] (Wh). Inne badanie dochodzi do mediany **0,31 Wh**, a środkowa połowa jego standardowych zapytań mieści się między **0,16 a 0,60 Wh**."
+          "text": "Ile prądu zużywa jedno zapytanie tekstowe? Opublikowane szacunki nie dają tej samej odpowiedzi. Google, mierząc swoją działającą usługę, szacuje medianę zapytania tekstowego na **0,24 Wh**. Jednostką, która mierzy ilość energii, jest [[watogodzina]] (Wh). Inne badanie dochodzi do mediany **0,31 Wh**, a środkowa połowa jego standardowych zapytań mieści się między **0,16 a 0,60 Wh**."
         },
         {
           "type": "paragraph",
@@ -109,11 +109,11 @@
         },
         {
           "type": "paragraph",
-          "text": "Takie obiekty mają też skłonność do skupiania się w tych samych miejscach. Gdy kilka dużych ośrodków potrzebuje prądu na tym samym obszarze, dzielą lokalną sieć, a istniejące linie mogą wymagać wzmocnienia. Region z zapasem mocy łatwiej przyjmie nowe ośrodki niż region, który jest już blisko swoich granic. To, gdzie buduje się infrastrukturę AI, ma więc znaczenie dla jej sąsiadów."
+          "text": "Takie obiekty mają też skłonność do skupiania się w tych samych miejscach. Gdy kilka dużych ośrodków potrzebuje prądu na tym samym obszarze, dzielą lokalną sieć, a istniejące linie mogą wymagać wzmocnienia. Region z zapasem mocy łatwiej przyjmie nowe ośrodki niż region, który już zbliża się do granic swoich możliwości. To, gdzie buduje się infrastrukturę AI, ma więc znaczenie dla sąsiadów."
         },
         {
           "type": "takeaway",
-          "text": "Prąd dla AI wydaje się na kilku piętrach, od serwerów i chłodzenia aż po lokalną sieć, a koszt zapytania zależy od systemu, pomiaru i zleconej pracy."
+          "text": "AI zużywa prąd na kilku poziomach, od serwerów i chłodzenia aż po lokalną sieć, a koszt zapytania zależy od systemu, pomiaru i zleconej pracy."
         }
       ]
     }

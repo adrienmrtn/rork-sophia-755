@@ -1,14 +1,14 @@
 {
   "id": "course_172_thesee_et_le_minotaure",
-  "title": "Kuidas võitis Theseus Minotauruse?",
-  "subtitle": "Niit, koletis, purjed",
+  "title": "Kuidas võitis Theseus Minotaurose?",
+  "subtitle": "Lõng, koletis, purjed",
   "subject": "mythologie",
   "subcategory": "Kreeka kangelased",
-  "description": "Theseus tapab Minotauruse, kasutades Ariadne niiti. Kuid ta unustab purjed vahetada: tema isa Aegeus viskab merre, mis kannab siiani tema nime.",
+  "description": "Theseus tapab Minotaurose Ariadne lõnga abil. Kuid ta unustab purjed vahetada: tema isa Aigeus heidab end merre, mis kannab siiani tema nime.",
   "hero": {
     "image": "thesee_et_le_minotaure",
     "ratio": "16:9",
-    "hook": "Koletis labürindis. Lõng välja pääsemiseks. Unustatud purjed, mis ristivad merd."
+    "hook": "Koletis labürindis. Lõng, mis juhatab välja. Unustatud purjed, mis annavad merele nime."
   },
   "sections": [
     {
@@ -18,82 +18,82 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ateena asutajakangelane **Theseus** astub vastamisi Kreeta [[Labürint]] pooleldi mehest ja härjast olendiga **Minotaurus**. Loos on ühendatud julgus, romantiline kavalus ja perekondlik traagika."
+          "text": "Ateena rajajakangelane **Theseus** astub vastamisi **Minotaurosega**, kes on pooleldi inimene ja pooleldi härg. Seda olendit varjab Kreetal [[Labürint]]. Lugu põimib kokku julguse, armastusest sündinud kavaluse ja perekonnatragöödia."
         },
         {
           "type": "paragraph",
-          "text": "Koletise tapmisega vabastab Theseus Ateena verisest austusavaldusest. Kuid unustatud detail, valgete asemel mustad purjed, maksab isale elu ja annab tema nime Egeuse merele."
+          "text": "Koletise tapmisega vabastab Theseus Ateena verisest andamist. Kuid üks unustatud pisiasi, valgete asemel mustad purjed, maksab tema isale elu ja isa nime saab Egeuse meri."
         }
       ]
     },
     {
       "id": "course_172_thesee_et_le_minotaure_p1",
-      "title": "Minotauros ja Ateena austusavaldus",
+      "title": "Minotauros ja Ateena andam",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kreeta kuningas **Minos** keeldub ohverdamast valget härga merejumalale **Poseidon**. Kättemaksuks inspireerib Poseidon kuningannas **Pasiphaé** kirge looma vastu. Minotaurus on sündinud. Minos annab leiutajale [[Labürint]] ülesandeks ehitada vangla, millelt pole põgenemist: labürint."
+          "text": "Kreeta kuningas **Minos** keeldub ohverdamast valget härga merejumal **Poseidonile**. Kättemaksuks sisendab Poseidon kuninganna **Pasiphaele** kire looma vastu. Nii sünnib Minotauros. Minos käsib ehitada vangla, millest pole väljapääsu. Selle rajab leiutaja [[Daidalos]]: nii sünnib Labürint."
         },
         {
           "type": "image",
           "asset": "theseus_minotaur_cretan_labyrinth_painting",
           "ratio": "4:3",
-          "caption": "Minotauros, lukustatud Kreeta labürinti."
+          "caption": "Minotauros, Kreeta labürinti suletud."
         },
         {
           "type": "paragraph",
-          "text": "Kreeta domineerib siis mere üle: [[Talassokraatia]]. Pärast kaotatud sõda peab Ateena iga üheksa aasta järel **seitse noormeest ja seitse noort tüdrukut** koletisele toiduks üle andma. Kolmandal sünnitusel on **Theseus**, kuninga **Egeuse** poeg, vabatahtlik."
+          "text": "Kreeta valitseb sel ajal merd: see on [[Talassokraatia]]. Pärast kaotatud sõda peab Ateena iga üheksa aasta järel andma koletisele toiduks **seitse noormeest ja seitse neidu**. Kolmandal korral astub vabatahtlikuna ette **Theseus**, kuningas **Aigeuse** poeg."
         },
         {
           "type": "funFact",
-          "text": "Aegeus ja Theseus lepivad kokku signaalis: **org** purjetab, kui kangelane naaseb elusana, **peab purjetab**, kui ta on surnud. See detail otsustab draama."
+          "text": "Aigeus ja Theseus lepivad kokku märguandes: **valged** purjed, kui kangelane naaseb elusalt, **mustad** purjed, kui ta on surnud. See pisiasi viib tragöödiani."
         }
       ]
     },
     {
       "id": "course_172_thesee_et_le_minotaure_p2",
-      "title": "Riivsai",
+      "title": "Ariadne lõng",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kreetal armub Minose tütar **Ariane** Theseusesse. Ta teab, et labürindis jõud ei piisa. Daedaluse abiga kingib ta talle villakera: [[Ariadne niit]]. Ta kinnitab selle sissepääsu külge ja kerib edasi liikudes niidi lahti."
+          "text": "Kreetal armub Minose tütar **Ariadne** Theseusesse. Ta teab, et labürindis ei piisa jõust. Daidalose abiga annab ta Theseusele lõngakera: see on [[Ariadne lõng]]. Theseus seob lõnga sissepääsu juurde kinni ja kerib seda edasi liikudes lahti."
         },
         {
           "type": "image",
           "asset": "ariadne_thread_theseus_labyrinth_painting",
           "ratio": "4:3",
-          "caption": "Ariadne annab Theseusele niidi, mis päästab tema elu."
+          "caption": "Ariadne annab Theseusele lõnga, mis päästab tema elu."
         },
         {
           "type": "paragraph",
-          "text": "Theseus tapab Minotauruse ja kerib seejärel niidi tagasi, et välja pääseda. Ta põgeneb koos noorte ateenlaste ja Ariadnega. Kuid **Naksoos** saarele jätab ta naise magama. Mõned ütlevad, et jumal **Dionysos** tahtis teda oma naiseks. Meeleheitel ja seejärel jumalikuks saanud Ariadne saab kuldse krooni, millest on saanud tähtkuju."
+          "text": "Theseus tapab Minotaurose ja kerib lõnga tagasi, et välja pääseda. Ta põgeneb koos noorte ateenlaste ja Ariadnega. Kuid **Naxose** saarel jätab ta magava Ariadne maha. Mõnede sõnul tahtis jumal **Dionysos** teda endale naiseks. Algul meeleheitel ja siis jumalannaks saanud Ariadne saab kuldse krooni, millest saab tähtkuju."
         }
       ]
     },
     {
       "id": "course_172_thesee_et_le_minotaure_p3",
-      "title": "Cape Sounioni mustad purjed",
+      "title": "Sounioni neeme mustad purjed",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Tagasitulek peaks olema pidu. Võidujoovastuses või Ariadne hülgamisest muretuna unustab Theseus valged purjed heisata. Laev läheneb mustade purjede all Ateenale."
+          "text": "Kojutulek peaks olema pidu. Võidujoovastuses või Ariadne mahajätmisest rahutu Theseus unustab valged purjed heisata. Laev läheneb Ateenale mustade purjede all."
         },
         {
           "type": "image",
           "asset": "cape_sounion_aegean_sea_cliff_sunset",
           "ratio": "4:3",
-          "caption": "Sounioni neem, kust Aegeus jälgis oma poja naasmist."
+          "caption": "Sounioni neem, kust Aigeus ootas pingsalt poja naasmist."
         },
         {
           "type": "paragraph",
-          "text": "**Sounioni neem**-s uurib vana kuningas Aegeus horisonti. Ta näeb ainult leina mustust. Olles veendunud, et poeg on surnud, viskab ta kaljult alla. Sellest ajast alates on meri kandnud nime: **Egeuse meri**. Theseus saabub kuningaks... ja jääb oma hooletuse tõttu orvuks."
+          "text": "**Sounioni neemel** silmitseb vana kuningas Aigeus silmapiiri. Ta näeb ainult leina musta värvi. Veendunud, et poeg on surnud, heidab ta end kaljult alla. Sellest ajast kannab meri tema nime: **Egeuse meri**. Theseus astub kaldale kuningana… ja omaenda hooletuse tõttu orvuna."
         },
         {
           "type": "funFact",
-          "text": "“Teseuse laevast” on saanud filosoofiline paradoks: kui kõik plangud ükshaaval välja vahetada, kas see on ikka sama paat?"
+          "text": "„Theseuse laevast“ on saanud filosoofiline paradoks: kui kõik plangud ükshaaval välja vahetada, kas see on ikka sama laev?"
         }
       ]
     },
@@ -104,15 +104,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kroonitud Theseusest saab organiseeriv kuningas. [[Sünoetsism]] omistatakse talle: Ateena ümber asuvate Atika linnade ühendamine. Ta asutas suuremad linnafestivalid [[Panathenaia]]. Võib kombineerida õigega."
+          "text": "Kroonitud Theseusest saab korda loov kuningas. Talle omistatakse [[Sünoikism]]: Atika asulate ühendamine Ateena ümber. Tema rajatud on ka [[Panathenaia]], linna suured pidustused. Jõud ühineb õigusega."
         },
         {
           "type": "paragraph",
-          "text": "Tema valitsemisaeg hõlmab muid seiklusi, näiteks võitlust [[Amazonid]] vastu. Kuid Labürint jääb selle märgiks: teadmine, kuidas lahti harutada lahutamatut, jäädes samas haavatavaks unustuse suhtes. Theseus sepistab perekondliku tragöödia tuhast Ateena suuruse."
+          "text": "Tema valitsemisaega kuulub teisigi seiklusi, näiteks sõda, kus vastas on [[Amatsoonid]]. Kuid tema tunnusmärgiks jääb Labürint: oskus harutada lahti lahendamatut, jäädes samas unustamisele haavatavaks. Theseus rajab Ateena suuruse perekonnatragöödia tuhale."
         },
         {
           "type": "takeaway",
-          "text": "**Theseus** tapab **Minotaurus** tänu **Ariane** lõimele. Unustades purjed vahetada, põhjustab ta oma isa **Egeuse** enesetapu, kes annab oma nime Egeuse merele."
+          "text": "**Theseus** tapab **Ariadne** lõnga abil **Minotaurose**. Purjede vahetamise unustades põhjustab ta oma isa **Aigeuse** enesetapu ja isa nime saab Egeuse meri."
         }
       ]
     }

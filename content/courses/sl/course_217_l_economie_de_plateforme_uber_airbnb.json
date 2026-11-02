@@ -8,7 +8,7 @@
   "hero": {
     "image": "l_economie_de_plateforme",
     "ratio": "16:9",
-    "hook": "Uber nikoli ni imel v lasti niti enega avtomobila, vendar je motil prevoz po vsem svetu."
+    "hook": "Uber ni nikoli imel niti enega avtomobila, pa je vseeno postavil na glavo prevoz po vsem svetu."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Uber, Airbnb, Amazon ali Deliveroo spadajo v novo kategorijo podjetij: **digitalna platforma**. Ne digitalizirajo samo storitev, ki so že obstajale: spremenijo sam način lastništva, delovanja in zaščite."
+          "text": "Uber, Airbnb, Amazon in Deliveroo spadajo v novo vrsto podjetij: **digitalne platforme**. Ne digitalizirajo le storitev, ki so že obstajale: spreminjajo sam način, kako ljudje nekaj posedujejo, kako delajo in kako so zaščiteni."
         },
         {
           "type": "paragraph",
-          "text": "Ta model je izumil novo obliko kapitalizma, ki postavlja pod vprašaj našo družbeno pogodbo. Razumejmo, kako deluje in zakaj se o njem toliko razpravlja."
+          "text": "Ta model je ustvaril novo obliko kapitalizma, ki postavlja pod vprašaj našo družbeno pogodbo. Poglejmo, kako deluje in zakaj sproža toliko razprav."
         }
       ]
     },
@@ -33,26 +33,26 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Tradicionalno podjetje ima v lasti tovarne, vozila, zaloge in zaposluje zaposlene. Platforma poruši ta model: postane preprosta digitalna infrastruktura, ki povezuje ponudbo in povpraševanje, ne da bi sama karkoli proizvedla."
+          "text": "Klasično podjetje ima tovarne, vozila in zaloge ter zaposluje delavce. Platforma ta model poruši: postane zgolj digitalna infrastruktura, ki povezuje ponudbo in povpraševanje, sama pa ne proizvaja ničesar."
         },
         {
           "type": "paragraph",
-          "text": "Ta sistem temelji na [[Mrežni učinek]]: več kot ima platforma uporabnikov, bolj uporabna postaja, kar pritegne še več uporabnikov. Pri prevozni storitvi velja, da je več voznikov na voljo, krajše je čakanje, kar pritegne več strank, te pa več voznikov. Ta krog skoraj vedno vodi v kvazimonopolne situacije."
+          "text": "Ta sistem temelji na pojavu, ki se imenuje [[mrežni učinek]]: več uporabnikov ko ima platforma, bolj je uporabna, kar pritegne še več uporabnikov. Pri prevozni storitvi velja: več ko je voznikov na voljo, krajše je čakanje, kar pritegne več strank, te pa privabijo še več voznikov. Ta krog skoraj vedno pripelje do skoraj monopolnega položaja."
         },
         {
           "type": "funFact",
-          "text": "Uber je porabil milijarde dolarjev za raziskovanje samovozečih avtomobilov, s čimer se je končno želel znebiti svojega zadnjega velikega stroška: človeškega voznika."
+          "text": "Uber je porabil milijarde dolarjev za raziskave samovozečih avtomobilov, da bi se sčasoma znebil svojega zadnjega velikega stroška: človeškega voznika."
         }
       ]
     },
     {
       "id": "course_217_l_economie_de_plateforme_uber_airbnb_p2",
-      "title": "Delo brez zaščite zaposlitve",
+      "title": "Delo brez varnosti redne zaposlitve",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "To tehnično novost spremlja bolj sporna pravna novost. V [[gig gospodarstvo in uberizacija]] platforma zavrača status delodajalca, da bi se predstavila kot preprost tehnološki posrednik, ki se izogiba plačilu socialnih prispevkov, minimalne plače ali plačanega dopusta."
+          "text": "To tehnično novost spremlja pravna novost, ki je bolj sporna. V modelu, znanem kot [[gig ekonomija in uberizacija]], platforma zavrača vlogo delodajalca in se predstavlja kot zgolj tehnološki posrednik, s čimer se izogne plačilu socialnih prispevkov, minimalne plače ali plačanega dopusta."
         },
         {
           "type": "image",
@@ -62,7 +62,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Delavec postane samostojni delavec, ki sam nosi vsa tveganja: bolezen, nesreča, padec povpraševanja. Vendar pogosto ostaja podvržen pravilom aplikacije (uvedene cene, ocena, sankcije), kar imenujemo **algoritemska podrejenost**. Soočena s tem so sodišča v več državah začela vsiljevati [[Prerazvrstitev]] teh pogodb v realno zaposlitev."
+          "text": "Delavec postane samozaposlen in sam nosi vsa tveganja: bolezen, nesrečo, upad povpraševanja. Vendar pogosto ostaja podrejen pravilom aplikacije (vsiljene cene, ocenjevanje, sankcije), čemur pravijo **algoritemska podrejenost**. Zato so sodišča v več državah začela odrejati [[prerazvrstitev]] teh pogodb v prava delovna razmerja."
         }
       ]
     },
@@ -73,15 +73,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Vpliv teh platform presega svet dela: spreminja tudi mesta. Airbnb z omogočanjem kratkoročnih turističnih najemov tekmuje s tradicionalnimi hoteli, hkrati pa zmanjšuje število nastanitev, ki so na voljo prebivalcem."
+          "text": "Vpliv teh platform sega dlje od sveta dela: spreminja tudi mesta. Airbnb, ki olajša kratkoročno oddajanje turistom, konkurira klasičnim hotelom, obenem pa zmanjšuje število stanovanj, ki so na voljo domačinom."
         },
         {
           "type": "paragraph",
-          "text": "Rezultat: najemnine v mestnih središčih rastejo, metropole, kot sta Pariz ali Barcelona, pa so morale uvesti stroga pravila, kot so kvote za najemnine. Države si prav tako prizadevajo vzpostaviti **digitalno obdavčitev**, tako da te platforme plačajo svoj delež davkov tam, kjer dejansko zaslužijo svoj denar."
+          "text": "Posledica: najemnine v mestnih središčih rastejo, velika mesta, kot sta Pariz in Barcelona, pa so morala uvesti stroga pravila, na primer omejeno število dni, ko se stanovanje sme oddajati. Države poskušajo uvesti tudi **digitalno obdavčitev**, da bi te platforme plačale svoj delež davkov tam, kjer res zaslužijo denar."
         },
         {
           "type": "funFact",
-          "text": "V New Yorku je stroga ureditev proti Airbnbju leta 2023 povzročila, da se je število zakonitih oglasov v nekaj mesecih zmanjšalo za 80 %."
+          "text": "V New Yorku so stroga pravila proti Airbnbju leta 2023 v nekaj mesecih zmanjšala število zakonitih oglasov za 80 %."
         }
       ]
     },
@@ -96,11 +96,11 @@
         },
         {
           "type": "paragraph",
-          "text": "Trenutna razprava se nanaša na oblikovanje vmesnega statusa med zaposlenim in samozaposlenim s prenosljivostjo pravic: vsak delavec bi pridobil socialno zaščito, ne glede na število platform, za katere dela. Prihodnost tega modela bo odvisna od sposobnosti regulatorjev, da ga regulirajo, ne da bi zavirali inovacije."
+          "text": "Danes se razpravlja o uvedbi vmesnega statusa med zaposlenim in samozaposlenim, s prenosljivimi pravicami: vsak delavec bi si nabiral socialno zaščito ne glede na to, za koliko platform dela. Prihodnost tega modela bo odvisna od tega, ali ga bodo regulatorji znali urediti, ne da bi zadušili inovacije."
         },
         {
           "type": "takeaway",
-          "text": "Ekonomija platforme temelji na kapitalizmu brez tovarn, ki izkorišča mrežni učinek, svoje delavce pa spreminja v pogosto prekarne svobodnjake. Bitka za boljšo socialno zaščito, ne da bi razbili ta model, se je šele začela."
+          "text": "Ekonomija platform temelji na kapitalizmu brez tovarn, ki izkorišča mrežni učinek, svoje delavce pa spreminja v samozaposlene, ki so pogosto v negotovem položaju. Boj za boljšo socialno zaščito, ne da bi pri tem uničili ta model, se šele začenja."
         }
       ]
     }

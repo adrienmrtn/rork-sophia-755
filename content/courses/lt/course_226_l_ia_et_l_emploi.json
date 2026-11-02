@@ -1,0 +1,122 @@
+{
+  "id": "course_226_l_ia_et_l_emploi",
+  "title": "Ar DI pakeis žinių darbuotojus?",
+  "subtitle": "Grėsmė ar nauja banga?",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environnement & avenir",
+  "description": "Kiekviena technologinė revoliucija kėlė baimę dėl darbo vietų. Tačiau generatyvinis DI pirmą kartą paliečia **intelektines** profesijas, ne vien fizinę jėgą.",
+  "hero": {
+    "image": "l_ia_et_l_emploi",
+    "ratio": "16:9",
+    "hook": "Mašinos jau pakeitė rankas. Ar dabar jos pakeis ir smegenis?"
+  },
+  "sections": [
+    {
+      "id": "course_226_l_ia_et_l_emploi_intro",
+      "title": "Įvadas",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ar dirbtinis intelektas sunaikins milijonus darbo vietų, ar sukurs naujų? Šis klausimas iškyla su kiekvienu dideliu technologiniu šuoliu jau du šimtmečius."
+        },
+        {
+          "type": "paragraph",
+          "text": "Šįkart naujovė kitur: DI pakeičia ne tik fizinę jėgą, bet ir užduotis, kurios atrodė skirtos tik žmogaus protui, pavyzdžiui, parašyti tekstą ar išnagrinėti bylą. Šis kursas apžvelgia šią seną baimę ir aiškinasi, kas iš tikrųjų keičiasi šiandien."
+        }
+      ]
+    },
+    {
+      "id": "course_226_l_ia_et_l_emploi_p1",
+      "title": "Baimė, sena kaip pati mašina",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Baimė, kad mašina pakeis žmogų, nėra nauja. XIX a. pradžioje britų tekstilės darbininkai, vadinamieji [[Ludistai (1811-1816)]], laužė mechanines audimo stakles, kurios grėsė jų amatui."
+        },
+        {
+          "type": "image",
+          "asset": "luddites_industrial_revolution_machine_breaking",
+          "ratio": "4:3",
+          "caption": "XIX a. ludistai puldinėjo mašinas, kurios kėlė grėsmę jų amatui."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kiekviena didelė technologijų banga vyko pagal tą pačią logiką: vienas darbo vietas naikino, bet kitur kūrė naujų. Perėjus nuo žemės ūkio prie pramonės, ūkininkų dalis tarp dirbančiųjų per šimtmetį sumažėjo nuo 40 % iki 2 %, tačiau ilgalaikio nedarbo tai nesukėlė, nes šie žmonės perėjo į naujus sektorius."
+        },
+        {
+          "type": "funFact",
+          "text": "Žodis „sabotažas“ esą kilęs iš prancūzų darbininkų, kurie mėtydavo savo medines klumpes (sabots) į mašinų krumpliaračius, kad jas sustabdytų, nors tiksli žodžio kilmė tebėra ginčytina."
+        }
+      ]
+    },
+    {
+      "id": "course_226_l_ia_et_l_emploi_p2",
+      "title": "Lūžis: DI taikosi į žinių darbą",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tikrą pokytį žymi [[Generatyvinis dirbtinis intelektas (DI)]], nes jis nebesilaiko vien iš anksto nustatytų taisyklių: jis kuria originalų turinį. Klasikinė informatika pakeisdavo pasikartojančias užduotis, pavyzdžiui, duomenų įvedimą. Šiuolaikinis DI moka rašyti, analizuoti sutartį, kurti muziką ir net padėti nustatyti medicininę diagnozę."
+        },
+        {
+          "type": "image",
+          "asset": "AI_generative_writing_artificial_intelligence",
+          "ratio": "4:3",
+          "caption": "Generatyvinis DI imasi užduočių, kurios atrodė skirtos tik žmogaus protui."
+        },
+        {
+          "type": "paragraph",
+          "text": "Toks universalumas labiausiai gresia vienai grupei: tai [[baltosios apykaklės]], paslaugų sektoriaus darbuotojai, kurių pagrindinis darbo įrankis yra analizė. Naujausių ataskaitų duomenimis, teisininkai, tekstų rašytojai ir finansų analitikai priklauso labiausiai šio pokyčio paveiktoms profesijoms."
+        },
+        {
+          "type": "funFact",
+          "text": "1950 m. Alanas Turingas pranašavo, kad mašina kada nors galės apgauti žmogų, imituodama jo mąstymą. Nuo tada kai kurie DI net buvo nurodyti kaip tikrų mokslinių patentų bendraautoriai."
+        }
+      ]
+    },
+    {
+      "id": "course_226_l_ia_et_l_emploi_p3",
+      "title": "Antrasis pilotas, o ne pakaitalas?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Optimistiškesnis požiūris DI laiko ne pakaitalu, o padėjėju. Automatizuodamas mažiausiai įdomias užduotis, pavyzdžiui, informacijos paiešką ar santraukas, jis paliktų specialistams daugiau laiko žmogiškajai, etinei ar strateginei darbo pusei."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jau atsiranda naujų profesijų. Viena jų yra [[Užklausų inžinierius]], kuris moka suformuluoti tikslias instrukcijas, kad iš DI gautų geriausią rezultatą. DI padedamas gydytojas neišnyksta: jis gali prižiūrėti daugiau pacientų ir tiksliau."
+        },
+        {
+          "type": "paragraph",
+          "text": "Didžiausią nerimą tebekelia pokyčio greitis. Ankstesnės pramonės revoliucijos truko dešimtmečius, todėl buvo laiko prisitaikyti. DI revoliucija vyksta per kelerius metus, todėl daugeliui darbuotojų gali atsirasti sunkiai įveikiama įgūdžių spraga."
+        }
+      ]
+    },
+    {
+      "id": "course_226_l_ia_et_l_emploi_p4",
+      "title": "Iš naujo apmąstyti darbą ir jo vertę",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Šio pokyčio baigtis labiausiai priklausys nuo jį lydinčių politinių sprendimų. Tęstinis mokymasis tampa būtinas, kad darbuotojai galėtų įgyti naujų įgūdžių."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vėl atgimsta ir diskusija apie mašinų sukurtos gerovės perskirstymą. Jei DI leis pagaminti daugiau su mažiau darbuotojų, kaip finansuoti mūsų socialines sistemas? Todėl vis daugiau šalininkų turi viena idėja: [[Visuotinės bazinės pajamos (VBP)]], ne kaip utopija, o kaip tikras saugumo tinklas."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kai kas siūlo ir dirbtinio intelekto naudojimo mokestį, kuris kompensuotų mažėjančias su darbu susijusias įmokas. Galiausiai DI verčia mus iš naujo apmąstyti, kokią vietą mūsų gyvenime užima pats darbas."
+        },
+        {
+          "type": "takeaway",
+          "text": "Ankstesnės pramonės revoliucijos naikino darbo vietas, bet kitur kūrė naujų. Generatyvinis DI pirmasis vienu metu kelia grėsmę ir pažintinėms, ir kūrybinėms užduotims, todėl prisitaikyti reikia skubiau nei bet kada."
+        }
+      ]
+    }
+  ]
+}

@@ -1,14 +1,14 @@
 {
   "id": "course_158_la_tragedie_grecque_et_le_theatre_antiqu",
-  "title": "Milleks oli kreeka tragöödia?",
+  "title": "Milleks oli kreeka tragöödiat vaja?",
   "subtitle": "5. sajand eKr",
   "subject": "art",
   "subcategory": "Film, fotograafia ja arhitektuur + meistriteosed",
-  "description": "Ateenas leiutasid Aischylos, Sophokles ja Euripides tragöödia. Koor, hubris, katarsis: teater linnale mõtlemiseks.",
+  "description": "Ateenas loovad Aischylos, Sophokles ja Euripides tragöödia. Koor, hübris, katarsis: teater, mis aitab linnriigil iseenda üle mõelda.",
   "hero": {
     "image": "la_tragedie_grecque_et_le_theatre_antique",
     "ratio": "16:9",
-    "hook": "Maskid päikese all, et ravida linna läbi šoki."
+    "hook": "Maskid päikese all, et ravida linnriiki šokiga."
   },
   "sections": [
     {
@@ -18,66 +18,66 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "5. sajandil eKr sündis Ateenas **tragöödia**. See ei ole privaatne meelelahutus: see on kodanikuriitus, mida tehakse tuhandete kodanike ees."
+          "text": "5. sajandil eKr sünnib Ateenas **tragöödia**. See ei ole eraviisiline meelelahutus, vaid kodanikuriitus, mida etendatakse tuhandete kodanike ees."
         },
         {
           "type": "paragraph",
-          "text": "Aischylos, Sophokles, Euripides leiutasid kunsti, mis segas jumalaid, poliitikat ja kirgi."
+          "text": "Aischylos, Sophokles ja Euripides loovad kunstivormi, milles põimuvad jumalad, poliitika ja kired."
         }
       ]
     },
     {
       "id": "course_158_la_tragedie_grecque_et_le_theatre_antiqu_p1",
-      "title": "Koor ja orkester",
+      "title": "Koor ja orkestra",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "[[Koor kreeka tragöödias]] laulab, tantsib, kommenteerib. Näitlejad, maskeeritud, kehastavad kangelasi ja jumalaid. Saadet rahastab rikas kodanik: see on [[koreegia]]."
+          "text": "[[Koor kreeka tragöödias]] laulab, tantsib ja kommenteerib. Näitlejad kannavad maske ning kehastavad kangelasi ja jumalaid. Etendust rahastab rikas kodanik: see on [[koreegia]]."
         },
         {
           "type": "paragraph",
-          "text": "Dionysose festivalid korraldavad võistlusi. Tragöödia tekib selles usulises ja kodanikuraamistikus. Võitmine tähendab linna austamist sama palju kui jumalat."
+          "text": "Dionüüsiatel, Dionysose pidustustel, peetakse võistlusi. Tragöödia sünnib selles usulises ja kodanikuraamistikus. Võita tähendab austada linnriiki sama palju kui jumalat."
         },
         {
           "type": "image",
           "asset": "epidaurus_ancient_theatre",
           "ratio": "4:3",
-          "caption": "Epidaurose teater: akustika kui kivi ime."
+          "caption": "Epidaurose teater: akustika kui kivist ime."
         }
       ]
     },
     {
       "id": "course_158_la_tragedie_grecque_et_le_theatre_antiqu_p2",
-      "title": "Hubris ja sügis",
+      "title": "Hübris ja langus",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Traagiline kangelane annab sageli järele [[hubris]], liialdusele, mis trotsib korda. Järgnev langus ei ole tasuta: see seab kahtluse alla õigluse, saatuse, vastutuse."
+          "text": "Traagilist kangelast valdab sageli [[hübris]]: mõõdutundetus, mis trotsib maailmakorda. Sellele järgnev langus ei ole põhjuseta: see paneb küsima õigluse, saatuse ja vastutuse järele."
         },
         {
           "type": "paragraph",
-          "text": "Aischylos lisab näitlejaid; Sophokles täiustab psühholoogiat; Euripides segab kindlust. Kolm stiili sama masina jaoks: paneb inimesed liikudes mõtlema."
+          "text": "Aischylos lisab näitlejaid, Sophokles lihvib psühholoogiat, Euripides raputab kindlaid tõdesid. Kolm stiili, üks ja sama masin: panna mõtlema, liigutades tundeid."
         },
         {
           "type": "funFact",
-          "text": "[[deus ex machina]] lasi mõnikord maatüki lahendamiseks kraana alla lasta... juba kritiseeriti selle mugavuse pärast."
+          "text": "Mõnikord tõi [[deus ex machina]] jumala kraanaga lavale, et sõlm lahti harutada… Juba siis kritiseeriti seda võtet liigse mugavuse pärast."
         }
       ]
     },
     {
       "id": "course_158_la_tragedie_grecque_et_le_theatre_antiqu_p3",
-      "title": "katarsis",
+      "title": "Katarsis",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Aristotelese järgi põhjustab tragöödia [[katarsis]]: puhastus haletsuse ja hirmu kaudu. Lahkume raputatud, kuid rahumeelselt. Teater ravib linna, lavastades selle hirme."
+          "text": "Aristotelese järgi sünnib tragöödiast [[katarsis]]: hingepuhastus kaastunde ja hirmu kaudu. Teatrist lahkutakse vapustatuna, kuid rahunenult. Teater ravib linnriiki, tuues selle hirmud lavale."
         },
         {
           "type": "paragraph",
-          "text": "Avalikkus tunneb müüti sageli. Huvi ei seisne keerutamises, vaid viisis. Kuidas Oidipus kukub? Kuidas ütleb Antigone ei?"
+          "text": "Publik tunneb müüti sageli juba ette. Huvitav pole ootamatu pööre, vaid esitusviis. Kuidas Oidipus langeb? Kuidas Antigone ütleb „ei“?"
         },
         {
           "type": "image",
@@ -94,15 +94,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Shakespeare, ooper, kino: kreeka tragöödia jääb laval saatuse grammatikaks. Meie kaasaegsed antikangelased võlgnevad oma allakäigud endiselt talle."
+          "text": "Shakespeare, ooper, kino: kreeka tragöödia on endiselt saatuse grammatika laval. Meie moodsad antikangelased võlgnevad oma languse ikka veel just sellele."
         },
         {
           "type": "paragraph",
-          "text": "Kreeka tragöödia ja iidse teatri täielikuks mõistmiseks peate meeles pidama üht: iga tehniline detail teenib emotsiooni või ideed. Töö pole kunagi lihtsalt dekoratiivne."
+          "text": "Et kreeka tragöödiat ja antiikteatrit hästi mõista, tasub meeles pidada üht: iga tehniline detail teenib mingit emotsiooni või ideed. Teos ei ole kunagi pelgalt dekoratiivne."
         },
         {
           "type": "paragraph",
-          "text": "Kontekst on sama oluline kui stiil. Kuupäevad, kohad, sponsorid, avalikkus: see kõik selgitab, miks vorm ilmub konkreetsel hetkel, mitte varem."
+          "text": "Kontekst on sama oluline kui stiil. Kuupäevad, kohad, tellijad, publik: kõik see selgitab, miks mingi vorm tekib just teatud hetkel, mitte varem."
         },
         {
           "type": "paragraph",
@@ -110,11 +110,11 @@
         },
         {
           "type": "paragraph",
-          "text": "Wagneri ooperist katastroofikinoni jääb traagiline struktuur ellu. Oleme muutnud jumalaid; alati ei kuku."
+          "text": "Wagneri ooperist katastroofifilmideni elab traagiline struktuur edasi. Jumalaid oleme vahetanud, langusi mitte alati."
         },
         {
           "type": "takeaway",
-          "text": "Ateenas leiutas tragöödia kodanikuteatri, kus huumor, koor ja katarsis õpetavad linna endasse vaatama."
+          "text": "Ateenas lõi tragöödia kodanikuteatri, kus hübris, koor ja katarsis õpetavad linnriiki iseennast vaatama."
         }
       ]
     }

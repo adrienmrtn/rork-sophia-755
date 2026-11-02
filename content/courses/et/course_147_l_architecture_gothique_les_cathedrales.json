@@ -1,14 +1,14 @@
 {
   "id": "course_147_l_architecture_gothique_les_cathedrales",
-  "title": "Kuidas lasevad gooti katedraalid valguse sisse?",
-  "subtitle": "12.-16.sajand",
+  "title": "Kuidas gooti katedraalid valgust sisse lasevad?",
+  "subtitle": "12.-16. sajand",
   "subject": "art",
   "subcategory": "Film, fotograafia ja arhitektuur + meistriteosed",
-  "description": "12.-16. sajandil tõstsid gooti stiilis katedraalid kivi taeva poole. Teravvõlv, ribivõlv, vitraažaknad: tehniline revolutsioon valguse teenistuses.",
+  "description": "12.-16. sajandil tõstavad gooti katedraalid kivi taeva poole. Teravkaar, ribivõlvid, vitraažid: tehniline revolutsioon valguse teenistuses.",
   "hero": {
     "image": "l_architecture_gothique_les_cathedrales",
     "ratio": "16:9",
-    "hook": "Kuidas keskaeg pani kivi lendama, et Jumal valgusesse lasta."
+    "hook": "Kuidas keskaeg pani kivi lendama, et Jumal saaks valgusena sisse tulla."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "12.-16. sajandil oli Euroopa kaetud **gooti stiilis katedraalidega**. See pole ainult kirikud. Need on inseneri väljakutsed: kivist anumad, mis näivad trotsivat gravitatsiooni, et valgust sisse lasta."
+          "text": "12.-16. sajandil täitub Euroopa **gooti katedraalidega**. Need ei ole lihtsalt kirikud. Need on insenerikunsti väljakutsed: kivist laevad, mis näivad trotsivat raskusjõudu, et valgust sisse lasta."
         },
         {
           "type": "paragraph",
-          "text": "Sõna \"gootika\" tõusis hiljem esile solvanguna, \"gootide kunstina\". Selles stiilis on aga ühendatud usk, linnalik õitseng ja tehniline jultumus. See domineerib endiselt meie linnakeskustes."
+          "text": "Sõna „gooti“ tekib alles hiljem ja on algul sõimusõna: „gootide kunst“. Ometi ühendab see stiil usu, linnade jõukuse ja tehnilise julguse. Siiani valitseb see meie linnasüdameid."
         }
       ]
     },
@@ -33,17 +33,17 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Gothic sündis **Île-de-France**-s **1140** paiku. Asutamisšokk on [[Saint-Denis' basiilika]] koor, mida kannab [[Abt Suger]]. Tumedate paksude seintega romaani kirikutega silmitsi seistes soovis Suger ühtsemat, heledamat ja kõrgemat ruumi."
+          "text": "Gootika sünnib **Île-de-France**'is umbes **1140**. aastal. Esimese suure tõuke annab [[Saint-Denis' basiilika]] koor, mille eestvedaja on [[abt Suger]]. Romaani stiilis kirikud on paksude müüridega ja pimedad, Suger aga tahab ühtsemat, valgemat ja kõrgemat ruumi."
         },
         {
           "type": "image",
           "asset": "saint_denis_basilica_gothic_abbot_suger",
           "ratio": "4:3",
-          "caption": "Saint-Denis: labor, kus gooti õpib sõitma."
+          "caption": "Saint-Denis: labor, kus gootika õpib kõrgusse tõusma."
         },
         {
           "type": "paragraph",
-          "text": "Kolm leiutist töötavad koos: terav kaar, kõrgem ja kitsam; **ribbed võlv**, mis koondab raskuse kindlatele punktidele; ja [[lendav kontpuu]], väline kaar, mis neutraliseerib tõukejõude. Üheskoos vabastavad [[Lendav kontpuu ja ribivõlv]] seinad: suured aknad on avatavad."
+          "text": "Kolm leiutist töötavad koos: **teravkaar**, mis on kõrgem ja kitsam; **ribivõlv**, mis koondab raskuse kindlatesse punktidesse; ja [[tugikaar]], väline kaar, mis tasakaalustab külgsurvet. Üheskoos vabastavad [[tugikaar ja ribivõlv]] seinad: neisse saab teha suuri aknaid."
         }
       ]
     },
@@ -54,11 +54,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Sugeri jaoks ei ole valgus dekoratiivne detail. [[Valguse teoloogia (abt Suger)]] järgi aitavad värvilised kiired hingel tõusta Jumala poole. Seintest saab **vitraaž**. Ühiskonnas, kus paljud ei oska lugeda, jutustavad need pildid Piiblist ja linnaelust."
+          "text": "Sugeri jaoks ei ole valgus pelgalt kaunistus. [[Valguse teoloogia (abt Suger)]] järgi aitavad värvilised kiired hingel Jumala juurde tõusta. Seintest saavad **vitraažid**. Ühiskonnas, kus paljud ei oska lugeda, jutustavad need pildid Piiblist ja linna elust."
         },
         {
           "type": "funFact",
-          "text": "**Chartres**-is on teatud 13. sajandi vitraažaknad säilitanud nii intensiivse sinise tooni, et me räägime endiselt Chartresi sinisest: värvist, millest on saanud signatuur."
+          "text": "**Chartres**'is on mõned 13. sajandi vitraažid säilitanud nii intensiivse sinise, et räägitakse tänini „Chartres'i sinisest“: värvist on saanud tunnusmärk."
         },
         {
           "type": "paragraph",
@@ -68,18 +68,18 @@
     },
     {
       "id": "course_147_l_architecture_gothique_les_cathedrales_p3",
-      "title": "Projekt, mis kestab sajandeid",
+      "title": "Sajandeid kestev ehitus",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Katedraali ehitamine võtab sageli rohkem kui **kaks sajandit**. Sõjad, epideemiad, rahapuudus: projekt edeneb kramplikult. **Pariisi Notre Dame** algab **1163**-st ja leiab oma kuju umbes 180 aasta pärast **1345** ümber."
+          "text": "Katedraali ehitamine võtab sageli üle **kahe sajandi**. Sõjad, epideemiad, rahapuudus: ehitus edeneb jõnksudega. **Pariisi Notre-Dame** hakkab kerkima **1163**. aastal ja saab oma kuju umbes **1345**. aastal, ligikaudu 180 aastaga."
         },
         {
           "type": "image",
           "asset": "notre_dame_de_paris_cathedral_facade",
           "ratio": "4:3",
-          "caption": "Notre-Dame de Paris: keskaegne ehitusplats, millest on saanud rahvuslik sümbol."
+          "caption": "Pariisi Notre-Dame: keskaegne ehitusplats, millest on saanud rahvuslik sümbol."
         },
         {
           "type": "paragraph",
@@ -89,12 +89,12 @@
     },
     {
       "id": "course_147_l_architecture_gothique_les_cathedrales_p4",
-      "title": "Toretsevast gootikast neogootikani",
+      "title": "Leekgootikast neogootikani",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Stiil arenes välja: klassikaline gooti (Chartres, Amiens), siis särav (Sainte-Chapelle), siis toretsev, dekoratiivsem. 19. sajandil avastas Euroopa selle uuesti **neogooti** abil. Lõpetamata projektid jätkuvad, nt **Köln**, lõpetatud **1880**."
+          "text": "Stiil areneb: klassikaline gootika (Chartres, Amiens), seejärel kiirgav gootika (Sainte-Chapelle) ja lõpuks dekoratiivsem leekgootika. 19. sajandil avastab Euroopa gootika uuesti **neogootika** kaudu. Pooleli jäänud ehitused jätkuvad, näiteks **Kölni** katedraal, mis valmib **1880**. aastal."
         },
         {
           "type": "timeline",
@@ -102,28 +102,28 @@
             {
               "date": "1140",
               "title": "Saint-Denis",
-              "detail": "Suger käivitab koori, mis avab gooti ajastu."
+              "detail": "Suger alustab koori ehitust ja avab gooti ajastu."
             },
             {
               "date": "1163",
-              "title": "Pariisi Notre Dame",
-              "detail": "Ligi kaks sajandit kestnud projekti algus."
+              "title": "Pariisi Notre-Dame",
+              "detail": "Ligi kaks sajandit kestva ehituse algus."
             },
             {
-              "date": "13. sajand.",
-              "title": "Apogee",
+              "date": "13. sajand",
+              "title": "Hiilgeaeg",
               "detail": "Chartres, Amiens, Reims kehtestavad klassikalise mudeli."
             },
             {
-              "date": "19. sajandil.",
+              "date": "19. sajand",
               "title": "Neogootika",
-              "detail": "Euroopa taastab ja leiutab keskaegse stiili."
+              "detail": "Euroopa taastab keskaegse stiili ja mõtleb selle uuesti välja."
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "Gootika muutis katedraali valguse anumaks. Tänu teravale kaarele ja lendavale kontpuule müüre vabastades leiutas keskaeg arhitektuuri, mis kõnetab meie linnu siiani."
+          "text": "Gootika muutis katedraali valguse laevaks. Kui ribivõlv ja tugikaar müürid vabastasid, lõi keskaeg arhitektuuri, mis kõnetab meie linnu tänini."
         }
       ]
     }

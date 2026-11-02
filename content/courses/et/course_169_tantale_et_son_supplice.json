@@ -1,14 +1,14 @@
 {
   "id": "course_169_tantale_et_son_supplice",
   "title": "Mis on Tantalose piin?",
-  "subtitle": "Sulge, mitte kunagi piisavalt lähedal",
+  "subtitle": "Nii lähedal, kuid mitte kunagi küllalt",
   "subject": "mythologie",
   "subcategory": "Kreeka jumalad",
-  "description": "Tantalus teenib oma poega jumalatele. Tema karistus: vesi ja puuvili alati kättesaamatus kohas. Pettumuse müüt, mis nimetas isegi keemilise elemendi.",
+  "description": "Tantalos pakub jumalatele söögiks oma poja. Tema karistus: vesi ja viljad on alati käeulatusest väljas. Müüt frustratsioonist, mille järgi on nimetatud isegi keemiline element.",
   "hero": {
     "image": "tantale_et_son_supplice",
     "ratio": "16:9",
-    "hook": "Vesi kuni lõuani. Viljad pea kohal. Ja mitte kunagi lonksu, mitte kunagi hammustust."
+    "hook": "Vesi lõuani. Viljad pea kohal. Ja mitte ainsatki lonksu, mitte ainsatki suutäit."
   },
   "sections": [
     {
@@ -18,72 +18,72 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Tantaal** kehastab karistatud liialdust. Jumalate laua taha kutsutud privilegeeritud kuningas julgeb neile väljakutse esitada. Tema karistus on rafineeritud: tal on silme ees see, mida ta soovib, ilma et ta saaks sellest kunagi aru."
+          "text": "**Tantalos** kehastab karistatud ülbust. Jumalate lauda kutsutud eelisseisundis kuningas julgeb neid trotsida. Tema karistus on peen: näha silme ees seda, mida ta ihaldab, ilma et saaks seda kunagi kätte."
         },
         {
           "type": "paragraph",
-          "text": "Müüt on läbinud keele, psühholoogia ja isegi keemia. \"Tantaluse piinamise all kannatamine\" on tänapäevalgi absoluutse frustratsiooni nimi."
+          "text": "Müüt on jätnud jälje keelde, psühholoogiasse ja isegi keemiasse. „Kannatada Tantalose piinu“ tähendab tänapäevalgi täielikku frustratsiooni."
         }
       ]
     },
     {
       "id": "course_169_tantale_et_son_supplice_p1",
-      "title": "Kuningas on jumalatele liiga lähedal",
+      "title": "Kuningas, kes oli jumalatele liiga lähedal",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Tantalus on Väike-Aasia Lydia kuningas. **Zeus** ja nümfi poeg jagab mõnikord Olümposel nektarit ja ambroosiat. See tuttavlikkus muudab ta ülemeelikuks. Esmalt varastab ta jumalikke toite, et neid teistele surelikele pakkuda."
+          "text": "Tantalos on Lüüdia kuningas Väike-Aasias. **Zeusi** ja ühe nümfi pojana jagab ta mõnikord Olümposel nektarit ja ambroosiat. See lähedus teeb ta ülbeks. Kõigepealt varastab ta jumalikke roogasid, et neid teistele surelikele pakkuda."
         },
         {
           "type": "paragraph",
-          "text": "Siis tuleb õudus. Et kontrollida, kas jumalad tõesti kõike näevad, kutsub ta panteoni banketile. Ta tapab omaenda poja **Pelops**, lõikab ta tükkideks ja serveerib talle roana. Jumalad taganevad. Ainult **Demeter**, saagikoristuse jumalanna, keda segab oma tütre [[Persephone]] leina, hammustab tükki oma õlast."
+          "text": "Siis tuleb õudus. Et kontrollida, kas jumalad tõesti kõike näevad, kutsub ta kogu jumalapere pidusöögile. Ta tapab oma poja **Pelopsi**, tükeldab ta ja pakub roana lauale. Jumalad tõmbuvad eemale. Ainult lõikusjumalanna **Demeter**, kelle tütar [[Persephone]] on kadunud ja kes on leinast hajevil, hammustab tüki õlast."
         },
         {
           "type": "image",
           "asset": "tantalus_feast_gods_punishment_myth",
           "ratio": "4:3",
-          "caption": "Tantaluse neetud pidusöök."
+          "caption": "Tantalose neetud pidusöök."
         },
         {
           "type": "funFact",
-          "text": "Zeus äratab Pelopsi ellu. Söödud õlg asendub tükiga [[elevandiluust]]. Tantaluse suguvõsa, **Atrides**, jääb neetud: Agamemnon ja Orestes pärivad selle."
+          "text": "Zeus äratab Pelopsi ellu. Söödud õla asemele tuleb [[elevandiluust]] tükk. Tantalose suguvõsa, **Atreiidid**, jääb neetuks: needuse pärivad Agamemnon ja Orestes."
         }
       ]
     },
     {
       "id": "course_169_tantale_et_son_supplice_p2",
-      "title": "Lekkiv vesi, lendlevad puuviljad",
+      "title": "Taganev vesi, eemalduvad viljad",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Sügaval maailma all asuvas vanglas [[Tartarus]] pöörab Tantaluse karistus tema kuriteo tagasi. Ta on solvanud püha pidusööki: ta ei söö enam kunagi. Sukeldudes lõuani järve, suri ta janu."
+          "text": "Sügaval maailma all asub vangla [[Tartaros]]. Seal on Tantalose karistus tema kuriteo pöördpilt. Ta solvas püha pidusööki: nüüd ei saa ta enam kunagi süüa. Ta seisab lõuani järves, kuid vaevleb janus."
         },
         {
           "type": "image",
           "asset": "tantalus_lake_fruits_unreachable_painting",
           "ratio": "4:3",
-          "caption": "Tantal, ümbritsetud veest ja kättesaamatud puuviljadest."
+          "caption": "Tantalos, keda ümbritsevad vesi ja kättesaamatud viljad."
         },
         {
           "type": "paragraph",
-          "text": "Niipea, kui ta pead kallutab, vajub vesi maasse. Ülal painduvad oksad viigimarjade, pirnide, granaatõuna all. Niipea kui ta käe välja sirutab, puhub tuul nad minema. Mitte puudumine ei piina: see on petlik lähedus."
+          "text": "Niipea kui ta pead kallutab, imbub vesi maasse. Tema kohal painduvad oksad viigimarjade, pirnide ja granaatõunte raskuse all. Niipea kui ta käe välja sirutab, kannab tuul need eemale. Piinab mitte puudus, vaid petlik lähedus."
         },
         {
           "type": "funFact",
-          "text": "Variatsioon lisab kolmanda ohu: tema pea kohal rippus tohutu kivi, mis on valmis kokku kukkuma. Ei mingit puhkust, isegi ilma näljata."
+          "text": "Üks variant lisab kolmanda ohu: tema pea kohal ripub tohutu kivirahn, mis võib iga hetk alla kukkuda. Puhkust pole, isegi kui nälga poleks."
         }
       ]
     },
     {
       "id": "course_169_tantale_et_son_supplice_p3",
-      "title": "Müüdist perioodilisuse tabelini",
+      "title": "Müüdist perioodilisustabelini",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Rootsi keemik **Anders Ekeberg** avastas dokumendis **1802** metalli. Ta andis sellele nimeks **tantaal** (aatomnumber **73**): hapetesse sukeldatud metall ei ima peaaegu mitte midagi. Nagu janune kuningas keset järve."
+          "text": "Aastal **1802** avastab Rootsi keemik **Anders Ekeberg** uue metalli. Ta annab sellele nimeks **tantaal** (aatomnumber **73**): hapetesse kastetuna ei ima see metall neist peaaegu midagi endasse. Nagu janune kuningas keset järve."
         },
         {
           "type": "image",
@@ -93,11 +93,11 @@
         },
         {
           "type": "paragraph",
-          "text": "Tänapäeval on [[Keemiline element tantaal (Ta, 73)]] strateegiline: nutitelefoni kondensaatorid, korrosioonikindlad proteesid. Inglise keeles tähendab *meelitada* soovi äratada, hoides objekti kättesaamatus kohas. Prantsuse keeles jääb võrdlusväljendiks \"Tantaluse piinamine\"."
+          "text": "Tänapäeval on [[keemiline element tantaal (Ta, 73)]] strateegilise tähtsusega: seda kasutatakse nutitelefonide kondensaatorites ja korrosioonikindlates proteesides. Inglise keeles tähendab *to tantalize* ihaluse õhutamist nii, et ihaldatu jääb kättesaamatuks. Prantsuse keeles on „Tantalose piinad“ endiselt tavapärane väljend."
         },
         {
           "type": "funFact",
-          "text": "[[\"ahvatlev karistus\" kui arhetüüp]] viitab igale olukorrale, kus eesmärk tundub käeulatuses, kuid siis viimasel hetkel eemaldub."
+          "text": "[[Tantalose piinad arhetüübina]] viitab igale olukorrale, kus eesmärk tundub käeulatuses, kuid siis viimasel hetkel eemaldub."
         }
       ]
     },
@@ -108,15 +108,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Psühholoogias illustreerib Tantalus soovi, mis ei kustu kunagi: mida lähemal on objekt, seda põletavam on ebaõnnestumine. Poliitikas kasutatakse pilti lubaduste puhul, mis kaovad kohe, kui neile läheneme."
+          "text": "Psühholoogias kujutab Tantalos ihalust, mis ei kustu kunagi: mida lähemal on ihaldatu, seda valusamalt läbikukkumine põletab. Poliitikas kasutatakse seda kujundit lubaduste kohta, mis kaugenevad kohe, kui neile lähemale jõutakse."
         },
         {
           "type": "paragraph",
-          "text": "Tema kuritegu ei olnud lihtsalt mõrv. See oli katse petta jumalaid. Vastutasuks petavad teda igavesti tema enda meeled: vee nägemine, vilja nägemine ja mitte midagi omamine."
+          "text": "Tema kuritegu ei olnud pelgalt mõrv. See oli katse jumalaid petta. Vastutasuks petavad teda igavesti tema enda meeled: ta näeb vett, näeb vilju, kuid ei saa midagi."
         },
         {
           "type": "takeaway",
-          "text": "**Tantalus**, Lydia kuningas, teenib oma poega **Pelops** jumalatele. Tartarosesse hukka mõistetuna on tal vesi ja vili silme ees, ilma et ta kunagi nendeni jõuaks. Tema nimi elab endiselt keeles ja elemendis **73**."
+          "text": "**Tantalos**, Lüüdia kuningas, pakub jumalatele söögiks oma poja **Pelopsi**. Tartarosesse mõistetuna on tal vesi ja viljad silme ees, kuid ta ei ulatu nendeni kunagi. Tema nimi elab edasi keeles ja elemendis **73**."
         }
       ]
     }

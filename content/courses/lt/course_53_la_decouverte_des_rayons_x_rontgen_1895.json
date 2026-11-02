@@ -1,0 +1,98 @@
+{
+  "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895",
+  "title": "Kaip buvo atrasti rentgeno spinduliai?",
+  "subtitle": "Röntgenas, 1895",
+  "subject": "sciences",
+  "subcategory": "Découvertes qui ont changé le monde",
+  "description": "1895 m. Wilhelmas Röntgenas atranda nematomą spinduliuotę, kuri gali prasiskverbti pro medžiagą. Per kelis mėnesius medicina joje įžvelgia revoliuciją.",
+  "hero": {
+    "image": "la_decouverte_des_rayons_x_rontgen",
+    "ratio": "16:9",
+    "hook": "Ranka, kaulai, nuotrauka. Medicina daugiau niekada nebebus akla."
+  },
+  "sections": [
+    {
+      "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_intro",
+      "title": "Įvadas",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**1895 m. lapkričio 8 d.** Viurcburge (Vokietija) fizikas **Wilhelmas Röntgenas** pastebi švytintį ekraną… nors į jį nekrinta matoma šviesa. Kažkas nematomo sklinda per kambarį."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jis tai pavadina **X spinduliais**: „X“ reiškia „nežinomas“. Po kelių savaičių jis nufotografuoja savo žmonos rankos kaulus. Gimsta radiologija."
+        }
+      ]
+    },
+    {
+      "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_p1",
+      "title": "Laboratorijos atsitiktinumas",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Röntgenas dirba su vamzdžiu, kuriame elektronai atsitrenkia į taikinį. Vamzdį jis apdengė juodu kartonu. Vis dėlto atokiau esantis fluorescencinis ekranas švyti. Jis supranta, kad iš vamzdžio sklinda nematoma spinduliuotė."
+        },
+        {
+          "type": "image",
+          "asset": "wilhelm_rontgen_x_ray_hand_1895",
+          "ratio": "4:3",
+          "caption": "Garsusis vaizdas: rankos kaulai ir vestuvinis žiedas."
+        },
+        {
+          "type": "funFact",
+          "text": "Röntgenas niekada nepatentavo rentgeno spindulių. Jis norėjo, kad visas mokslas galėtų jais laisvai naudotis."
+        }
+      ]
+    },
+    {
+      "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_p2",
+      "title": "Medicina perima įrankį",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "early_x_ray_medical_radiograph",
+          "ratio": "4:3",
+          "caption": "Labai greitai rentgeno spindulius ima naudoti gydytojai ir kariuomenės."
+        },
+        {
+          "type": "paragraph",
+          "text": "Anksčiau, norint „pamatyti“ lūžį ar kulką, dažnai tekdavo pjauti. Su rentgeno spinduliais vidaus vaizdą galima gauti nepjaunant. Ligoninės ir kariuomenės šį metodą perima stulbinamu greičiu."
+        }
+      ]
+    },
+    {
+      "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_p3",
+      "title": "Ilgai nepaisytas pavojus",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Iš pradžių apie pavojus nežinoma. Operatoriai ištisas valandas daro rentgeno nuotraukas. Atsiranda nudegimų, paskui vėžio atvejų. Prireiks laiko suprasti, kad rentgeno spinduliai galingi… ir pavojingi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Šiandien pacientai ir medikai saugomi: ribojamos dozės, naudojamos švino prijuostės, taikoma griežta kontrolė."
+        }
+      ]
+    },
+    {
+      "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_p4",
+      "title": "Palikimas",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Rentgeno spinduliai atvėrė kelią visiems šiuolaikiniams vaizdinimo metodams: tomografijai, pramoninei kontrolei ir net kristalų sandaros tyrimams (vėliau praversusiems tiriant DNR)."
+        },
+        {
+          "type": "takeaway",
+          "text": "**1895** m. Röntgenas atranda rentgeno spindulius, nematomą spinduliuotę, kuri prasiskverbia pro medžiagą. Medicina įgyja naują žvilgsnį… jei tik suvaldo pavojus."
+        }
+      ]
+    }
+  ]
+}

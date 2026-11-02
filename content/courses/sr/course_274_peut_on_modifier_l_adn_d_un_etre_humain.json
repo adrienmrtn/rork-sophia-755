@@ -4,12 +4,12 @@
   "subtitle": "Makaze CRISPR",
   "subject": "sciences",
   "subcategory": "Otkrića koja su promenila svet",
-  "description": "Od 2012. „molekularne makaze“ pozajmljene od bakterija omogućavaju da se DNK iseče tačno na željenom mestu. Prva izlečenja, moguće greške i bebe po narudžbini: dokle ćemo stići?",
+  "description": "Od 2012. „molekularne makaze“ pozajmljene od bakterija omogućavaju da se DNK iseče tačno na željenom mestu. Prva izlečenja, moguće greške i bebe po narudžbini: dokle će se ići?",
   "author": "kate-waddams",
   "hero": {
     "image": "genetics_lab_pipette_dna_samples_gloved_hands",
     "ratio": "4:3",
-    "hook": "Šta ako biste slovo u svojoj DNK mogli da ispravite kao slovnu grešku?"
+    "hook": "Šta kad bi se jedno slovo tvoje DNK moglo ispraviti kao greška u kucanju?"
   },
   "sections": [
     {
@@ -19,11 +19,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kosa, oči, boja kože, građa: svi se razlikujemo. Te telesne osobine su nasleđe: svaki [[gen]] je deo DNK koji smo dobili od bioloških roditelja. Naravno, važna je i sredina: šta jedemo, s kim se družimo, u šta verujemo. Ali svoje gene uzimamo zdravo za gotovo. Ponekad bismo voleli da smo viši ili vitkiji, ali živimo s njima i ne razmišljamo mnogo o tome."
+          "text": "Kosa, oči, boja kože, građa: svi se razlikujemo. Te telesne osobine potiču od nasleđa: svaki [[gen]] je deo DNK koji smo dobili od bioloških roditelja. Naravno, važna je i sredina: šta jedemo, s kim se družimo, u šta verujemo. Ali svoje gene uzimamo zdravo za gotovo. Čovek bi ponekad voleo da je viši ili vitkiji, ali s tim se živi, bez mnogo razmišljanja."
         },
         {
           "type": "paragraph",
-          "text": "Šta biste promenili kada biste mogli da prepravite svoju DNK? To pitanje više nije teorijsko. **2012. godine** američka biohemičarka **Dženifer Daudna** i francuska mikrobiološkinja **Emanuel Šarpantje** razvijaju način da se programira protein koji seče DNK. Od tada mogu da uklone neželjeni gen i tako, u teoriji, izmene DNK čoveka."
+          "text": "Kada bi mogao/la da prepraviš svoju DNK, šta bi promenio/la? To pitanje više nije teorijsko. **2012. godine** američka biohemičarka **Dženifer Daudna** i francuska mikrobiološkinja **Emanuel Šarpantje** razvijaju način da se programira protein koji seče DNK. Od tada mogu da uklone neželjeni gen i tako, u teoriji, izmene DNK čoveka."
         }
       ]
     },
@@ -55,7 +55,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Mogućnost uređivanja DNK otvara vrata lečenju mnogih genetskih bolesti. Naša DNK je ispisana sa **četiri baze**, A, T, C i G. Njihov redosled čini naš [[genom]], plan po kome je izgrađeno naše telo. Jedna greška u tom tekstu može biti dovoljna da izazove bolest, a njeno ispravljanje može je, u principu, izlečiti."
+          "text": "Mogućnost uređivanja DNK otvara vrata lečenju mnogih genetskih bolesti. Naša DNK ispisana je pomoću **četiri baze**: A, T, C i G. Njihov redosled čini naš [[genom]], plan po kome se gradi naše telo. Jedna greška u tom tekstu može biti dovoljna da izazove bolest, a njeno ispravljanje može je, u principu, izlečiti."
         },
         {
           "type": "image",
@@ -79,7 +79,7 @@
     },
     {
       "id": "course_274_peut_on_modifier_l_adn_d_un_etre_humain_p3",
-      "title": "Zašto nećemo izlečiti sve",
+      "title": "Zašto se ne može izlečiti sve",
       "free": false,
       "blocks": [
         {
@@ -99,7 +99,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Lečenje teških ili smrtonosnih bolesti svima ima smisla. Ali gde nauka treba da povuče granicu? Treba li je koristiti za stvaranje „savršenog čoveka“? To pitanje postaje sve hitnije otkako znamo da DNK sečemo po volji."
+          "text": "Lečenje teških ili smrtonosnih bolesti svima ima smisla. Ali gde nauka treba da povuče granicu? Treba li je koristiti za stvaranje „savršenog čoveka“? To pitanje se postavlja oštrije nego ikad otkako se DNK može seći po volji."
         },
         {
           "type": "image",
@@ -113,11 +113,11 @@
         },
         {
           "type": "paragraph",
-          "text": "[[Germinativno editovanje]] menja DNK polnih ćelija: spermatozoida, jajnih ćelija ili embriona u najranijim fazama. Razlika u odnosu na klasično lečenje je velika: te izmene se zatim prenose s generacije na generaciju. Danas je germinativno editovanje zabranjeno u svim zemljama. Ali dokle? U kom trenutku će se genetsko uređivanje u medicinske svrhe pretvoriti u genetske loze po narudžbini?"
+          "text": "[[Germinativno uređivanje]] menja DNK polnih ćelija: spermatozoida, jajnih ćelija ili embriona u najranijim fazama. Razlika u odnosu na klasično lečenje je velika: te izmene se zatim prenose s generacije na generaciju. Danas je germinativno uređivanje zabranjeno u svim zemljama. Ali dokle? U kom trenutku će se genetsko uređivanje u medicinske svrhe pretvoriti u genetske loze po narudžbini?"
         },
         {
           "type": "takeaway",
-          "text": "Od 2012. makaze CRISPR omogućavaju ispravljanje ljudske DNK, a prva izlečenja odobrena su 2023, ali greške su i dalje moguće, mnoge bolesti zavise od više gena, a germinativno editovanje je svuda zabranjeno."
+          "text": "Od 2012. makaze CRISPR omogućavaju ispravljanje ljudske DNK i prva izlečenja odobrena su 2023. godine, ali greške su i dalje moguće, mnoge bolesti zavise od više gena, a germinativno uređivanje je i dalje svuda zabranjeno."
         }
       ]
     }

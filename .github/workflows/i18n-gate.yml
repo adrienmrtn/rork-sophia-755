@@ -1,0 +1,74 @@
+# Translation gate: refuses any change that makes a language regress.
+#
+# Runs scripts/i18n_gate.py on every push and pull request that touches a displayed
+# text (UI tables, courses, quizzes, glossary, catalog, legal, App Store page) or the
+# gate itself. Needs no secrets and no network.
+#
+# What it checks, and how to fix a red run: docs/processus-traduction.md.
+# Run it locally before pushing: python3 scripts/i18n_gate.py
+name: Translation gate
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "content/**"
+      - "ios/Sophia/Utilities/AppLocalizable.swift"
+      - "ios/Sophia/Utilities/AppLanguage.swift"
+      - "ios/Sophia/Utilities/LegalDocumentContent.swift"
+      - "ios/Sophia/Services/GlossaryData.swift"
+      - "ios/Sophia/Resources/**"
+      - "ios/Sophia/*.lproj/**"
+      - "android/app/src/main/assets/**"
+      - "appstore/**"
+      - "scripts/i18n_gate.py"
+      - "scripts/i18n_languages.py"
+      - "scripts/check_course_translation.py"
+      - "scripts/check_terminology.py"
+      - "scripts/check_quiz_structure.py"
+      - "scripts/course_translation_io.py"
+      - "scripts/appstore_metadata.py"
+      - "scripts/*.json"
+      - ".github/workflows/i18n-gate.yml"
+  pull_request:
+    paths:
+      - "content/**"
+      - "ios/Sophia/Utilities/AppLocalizable.swift"
+      - "ios/Sophia/Utilities/AppLanguage.swift"
+      - "ios/Sophia/Utilities/LegalDocumentContent.swift"
+      - "ios/Sophia/Services/GlossaryData.swift"
+      - "ios/Sophia/Resources/**"
+      - "ios/Sophia/*.lproj/**"
+      - "android/app/src/main/assets/**"
+      - "appstore/**"
+      - "scripts/i18n_gate.py"
+      - "scripts/i18n_languages.py"
+      - "scripts/check_course_translation.py"
+      - "scripts/check_terminology.py"
+      - "scripts/check_quiz_structure.py"
+      - "scripts/course_translation_io.py"
+      - "scripts/appstore_metadata.py"
+      - "scripts/*.json"
+      - ".github/workflows/i18n-gate.yml"
+
+concurrency:
+  group: i18n-gate-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  gate:
+    name: i18n gate (26 languages)
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run the gate
+        run: python3 scripts/i18n_gate.py

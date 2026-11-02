@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Imagina um caderno de contas que ninguém possui sozinho, mas que milhares de computadores atualizam ao mesmo tempo, em todo o mundo, e que é quase impossível falsificar. Essa é a ideia de partida da **blockchain**, uma tecnologia muitas vezes reduzida à sua primeira aplicação, o **Bitcoin**."
+          "text": "Imagina um caderno de contas que ninguém possui sozinho, mas que milhares de computadores atualizam ao mesmo tempo, em todo o mundo, e que é quase impossível falsificar. É esta a ideia original da **blockchain**, uma tecnologia muitas vezes reduzida à sua primeira aplicação, o **Bitcoin**."
         },
         {
           "type": "paragraph",
-          "text": "Ao permitir trocar valor sem passar por um banco, essa invenção fez nascer toda uma economia paralela, entre promessas de liberdade financeira e críticas duras ao custo energético."
+          "text": "Ao permitir trocar valor sem passar por um banco, esta invenção deu origem a toda uma economia paralela, entre promessas de liberdade financeira e críticas duras ao seu custo energético."
         }
       ]
     },
@@ -52,13 +52,13 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "O **Bitcoin**, lançado em **2009** por uma pessoa (ou um grupo) que ficou anónima sob o nome de [[Satoshi Nakamoto]], provou que um sistema monetário podia funcionar sem banco central. Para garantir a escassez, o criador fixou um teto rígido: nunca poderão existir mais de **21 milhões de bitcoins**, um pouco como o ouro é limitado na Terra."
+          "text": "O **Bitcoin**, lançado em **2009** por uma pessoa (ou um grupo) que se manteve no anonimato sob o nome de [[Satoshi Nakamoto]], provou que um sistema monetário podia funcionar sem banco central. Para garantir a sua escassez, o criador fixou um limite rígido: nunca poderão existir mais de **21 milhões de bitcoins**, um pouco como a quantidade de ouro na Terra é limitada."
         },
         {
           "type": "image",
           "asset": "blockchain_technology_distributed_ledger_visualization",
           "ratio": "4:3",
-          "caption": "Cada transação é verificada por uma rede de computadores antes de ser acrescentada à cadeia"
+          "caption": "Cada transação é verificada por uma rede de computadores antes de ser acrescentada à cadeia."
         },
         {
           "type": "paragraph",
@@ -73,7 +73,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "O sucesso das criptomoedas não vem sem problemas. O mais discutido é o **consumo de energia** da rede Bitcoin: o gasto elétrico anual compara-se hoje ao de um país inteiro como a Argentina."
+          "text": "O sucesso das criptomoedas não está isento de problemas. O mais discutido é o **consumo de energia** da rede Bitcoin: o seu gasto elétrico anual é hoje comparável ao de um país inteiro como a Argentina."
         },
         {
           "type": "paragraph",
@@ -81,7 +81,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Por fim, o anonimato relativo das transações serviu por vezes para atividades ilegais. Mas a blockchain é, na verdade, totalmente transparente: as autoridades podem seguir os fluxos de dinheiro, o que torna o branqueamento mais difícil do que no sistema clássico do dinheiro em numerário."
+          "text": "Por fim, o relativo anonimato das transações serviu por vezes para atividades ilegais. Mas a blockchain é, na verdade, totalmente transparente: as autoridades podem seguir os fluxos de dinheiro, o que torna o branqueamento mais difícil do que no sistema clássico do dinheiro em numerário."
         }
       ]
     },
@@ -92,7 +92,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Hoje, as criptomoedas saem da margem e entram nas finanças tradicionais. Grandes bancos já se oferecem para guardar ativos digitais dos clientes, e vários Estados pensam em criar a sua própria moeda digital oficial, uma **[[MNBC]]** (moeda digital de banco central)."
+          "text": "Hoje, as criptomoedas saem da marginalidade e entram nas finanças tradicionais. Grandes bancos propõem agora guardar ativos digitais dos seus clientes, e vários Estados pensam em criar a sua própria moeda digital oficial, uma **[[CBDC]]** (moeda digital de banco central)."
         },
         {
           "type": "paragraph",
@@ -100,7 +100,7 @@
         },
         {
           "type": "funFact",
-          "text": "Em 2021, El Salvador tornou-se o primeiro país do mundo a adotar o Bitcoin como moeda legal, a par do dólar americano, obrigando cada comerciante a aceitá-lo se tiver os meios técnicos."
+          "text": "Em 2021, El Salvador tornou-se o primeiro país do mundo a adotar o Bitcoin como moeda com curso legal, a par do dólar americano, obrigando cada comerciante a aceitá-lo se tiver os meios técnicos para isso."
         },
         {
           "type": "takeaway",

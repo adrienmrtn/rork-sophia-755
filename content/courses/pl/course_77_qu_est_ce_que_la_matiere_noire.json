@@ -8,7 +8,7 @@
   "hero": {
     "image": "qu_est_ce_que_la_matiere_noire",
     "ratio": "16:9",
-    "hook": "Wyobraź sobie niewidzialny klej, który trzyma galaktyki. Nie widać go, widać to, co zatrzymuje."
+    "hook": "Wyobraź sobie niewidzialny klej, który trzyma galaktyki. Nie widać go, ale widać to, co utrzymuje."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Czujesz wiatr, choć go nie widzisz: gałęzie się ruszają, włosy fruwają. **Ciemna materia** to trochę to samo w skali kosmosu. Nie świeci, nie odbija światła, nie zasłania żadnego promienia. „Widzimy” ją tylko po tym, co wprawia w ruch."
+          "text": "Czujesz wiatr, choć go nie widzisz: gałęzie się ruszają, włosy fruwają. **Ciemna materia** to trochę to samo w skali kosmosu. Nie świeci, nie odbija światła, nie zasłania żadnego promienia. „Widać” ją tylko po tym, co wprawia w ruch."
         },
         {
           "type": "paragraph",
-          "text": "Ma stanowić około **27%** Wszechświata, pięć razy więcej niż cała zwykła materia: gwiazdy, planety, gaz. Bez niej galaktyki kręciłyby się zbyt szybko, by trzymać się razem."
+          "text": "Według szacunków stanowi około **27%** Wszechświata, pięć razy więcej niż cała zwykła materia: gwiazdy, planety, gaz. Bez niej galaktyki obracałyby się zbyt szybko, by utrzymać się w całości."
         }
       ]
     },
@@ -33,36 +33,36 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "W latach **1970** amerykańska astronomka **Vera Rubin** mierzy prędkość gwiazd w galaktykach spiralnych. W Układzie Słonecznym im dalej od Słońca, tym wolniejszy obrót. Spodziewała się tego samego schematu."
+          "text": "W latach **siedemdziesiątych** XX wieku amerykańska astronomka **Vera Rubin** mierzyła prędkość gwiazd w galaktykach spiralnych. W Układzie Słonecznym im dalej od Słońca, tym wolniej się krąży. Spodziewała się tego samego schematu."
         },
         {
           "type": "image",
           "asset": "dark_matter_galaxy_cluster",
           "ratio": "auto",
-          "caption": "Ciemna materia zdradza obecność grawitacyjnym wpływem na gromady galaktyk."
+          "caption": "Ciemna materia zdradza swoją obecność grawitacyjnym wpływem na gromady galaktyk."
         },
         {
           "type": "paragraph",
-          "text": "Tymczasem gwiazdy na brzegu kręciły się **równie szybko** jak te w środku. Przy samej masie widocznej powinny były odlecieć. Potrzebna była więc masa niewidzialna, **halo**, kulista otoczka wokół galaktyki, żeby je zatrzymać. [[Krzywa rotacji galaktyki]] stała się sztandarowym dowodem ciemnej materii."
+          "text": "Tymczasem gwiazdy na obrzeżach krążyły **równie szybko** jak te w środku. Gdyby liczyła się tylko widoczna masa, powinny były odlecieć. Potrzebna była więc niewidzialna masa, **halo**, czyli kulista, niewidzialna otoczka wokół galaktyki, która je utrzymuje. [[Krzywa rotacji galaktyki]] stała się koronnym dowodem na istnienie ciemnej materii."
         },
         {
           "type": "funFact",
-          "text": "Vera Rubin długo musiała walczyć o to, by ją traktowano poważnie. Princeton długo odmawiał jej doktoratu z astronomii, bo była kobietą, aż do 1975."
+          "text": "Vera Rubin długo musiała walczyć o to, by traktowano ją poważnie. Princeton długo nie dopuszczał jej do doktoratu z astronomii, bo była kobietą. Tak było aż do 1975 roku."
         }
       ]
     },
     {
       "id": "course_77_qu_est_ce_que_la_matiere_noire_p2",
-      "title": "Z czego jest zrobiona? Wciąż szukamy",
+      "title": "Z czego się składa? Poszukiwania trwają",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "To nie zwykła materia, zwana **barionową**, złożona z protonów i neutronów: nie reaguje ze światłem. Przechodzi przez Ziemię i przez nas bez widocznego śladu."
+          "text": "To nie zwykła materia, zwana **barionową**, złożona z protonów i neutronów: ciemna materia nie oddziałuje ze światłem. Przechodzi przez Ziemię i przez nas, nie zostawiając widocznego śladu."
         },
         {
           "type": "paragraph",
-          "text": "Długo faworyzowany trop, **WIMP**, masywna cząstka o słabym oddziaływaniu, miałby być ciężką cząstką poza [[Standardowy model fizyki]], teorią znanych cząstek elementarnych. Detektory **ciekłego ksenonu**, schowane pod ziemią, liczą na rzadkie zderzenie. Na razie bez wyraźnego sukcesu. Inni stawiają na **aksjon**, ultralekką cząstkę, albo na grawitację do poprawki. Tymczasem ciemna materia wygina przestrzeń i daje [[Soczewkowanie grawitacyjne]], które zniekształca światło masywnego obiektu."
+          "text": "Długo faworytem był **WIMP**, masywna cząstka o słabym oddziaływaniu: ciężka cząstka spoza tego, co opisuje [[Standardowy model fizyki]], czyli teoria znanych cząstek elementarnych. Detektory z **ciekłym ksenonem**, ukryte pod ziemią, czekają na rzadkie zderzenie. Na razie bez wyraźnego sukcesu. Inni stawiają na **aksjon**, ultralekką cząstkę, albo na poprawioną teorię grawitacji. Tymczasem ciemna materia zakrzywia przestrzeń. [[Soczewkowanie grawitacyjne]], które w ten sposób powstaje, zniekształca światło masywnego obiektu."
         }
       ]
     },
@@ -73,11 +73,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ciemna materia przyciąga. [[Ciemna energia]], odkryta w **1998**, robi odwrotnie: przyspiesza **ekspansję Wszechświata**, rosnące oddalanie się galaktyk. Galaktyki uciekają coraz szybciej, choć grawitacja powinna hamować ruch."
+          "text": "Ciemna materia przyciąga. [[Ciemna energia]], odkryta w **1998** roku, działa odwrotnie: przyspiesza **ekspansję Wszechświata**, czyli coraz większe oddalanie się galaktyk. Galaktyki oddalają się coraz szybciej, choć grawitacja powinna ten ruch hamować."
         },
         {
           "type": "paragraph",
-          "text": "Miała ważyć około **68%** kosmosu. Razem z ciemną materią to **95%** niewidzialnego Wszechświata. Wszystko, co widzimy, atomy i światło, to tylko piana **5%**."
+          "text": "Według szacunków stanowi około **68%** kosmosu. Razem z ciemną materią daje to **95%** niewidzialnego Wszechświata. Wszystko, co widzimy, atomy i światło, to tylko piana, zaledwie **5%**."
         },
         {
           "type": "funFact",
@@ -87,20 +87,20 @@
     },
     {
       "id": "course_77_qu_est_ce_que_la_matiere_noire_p4",
-      "title": "Masywne dowody, nieuchwytna cząstka",
+      "title": "Mnóstwo dowodów, nieuchwytna cząstka",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Z jednej strony rosną dowody pośrednie: obroty galaktyk, **kosmiczne mikrofalowe tło**, skamieniałe promieniowanie młodego wszechświata, struktura Wszechświata w nitkach. Z drugiej strony żadna bezpośrednia detekcja cząstki."
+          "text": "Z jednej strony przybywa dowodów pośrednich: obroty galaktyk, **mikrofalowe promieniowanie tła**, czyli reliktowe promieniowanie młodego Wszechświata, włóknista struktura Wszechświata. Z drugiej strony brak jakiejkolwiek bezpośredniej detekcji cząstki."
         },
         {
           "type": "paragraph",
-          "text": "XXI wiek będzie musiał rozstrzygnąć: nowa rodzina cząstek albo nowy sposób myślenia o grawitacji. Ciemna materia to nie szczegół nieba. To laboratorium, w którym wymyśla się fizykę jutra."
+          "text": "XXI wiek będzie musiał rozstrzygnąć: nowa rodzina cząstek czy nowy sposób myślenia o grawitacji. Ciemna materia to nie drobny szczegół na niebie. To laboratorium, w którym powstaje fizyka jutra."
         },
         {
           "type": "takeaway",
-          "text": "Ciemna materia to **27%** Wszechświata. Dowodzimy jej grawitacją na gwiazdy i światło, choć nigdy nie zobaczono jej wprost."
+          "text": "Ciemna materia to **27%** Wszechświata. Jej istnienie potwierdza jej grawitacyjny wpływ na gwiazdy i światło, choć nikt nigdy nie zobaczył jej bezpośrednio."
         }
       ]
     }

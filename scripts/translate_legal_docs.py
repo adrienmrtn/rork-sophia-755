@@ -20,13 +20,21 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
 import mt_backend
-from i18n_languages import GT_TARGETS, NON_FR_LANGS, SWIFT_CASE_BY_CODE
+from i18n_languages import GT_TARGETS, MT_SOURCE_LANG, NON_FR_LANGS, SWIFT_CASE_BY_CODE
 
 ROOT = Path(__file__).resolve().parents[1]
 LEGAL_SWIFT = ROOT / "ios/Sophia/Utilities/LegalDocumentContent.swift"
-EN_PACK = ROOT / "content/locales/en/legal.json"
-CACHE_DIR = ROOT / "content/locales/_legal_mt_cache"
+FR_PACK = ROOT / "content/locales/fr/legal.json"
+CACHE_DIR = ROOT / "content/locales/_legal_mt_cache_fr"
 NEW_LANGS = [c for c in NON_FR_LANGS if c not in {"en", "es", "de", "pt", "it"}]
+
+SECTION_RE = re.compile(
+    r'LegalSection\(id:\s*"((?:\\.|[^"\\])*)",\s*title:\s*"((?:\\.|[^"\\])*)",\s*body:\s*"((?:\\.|[^"\\])*)"\)'
+)
+
+
+def _swift_unescape(value: str) -> str:
+    return value.replace('\\"', '"').replace("\\n", "\n").replace("\\\\", "\\")
 
 # Derived from the canonical case map so a new language is added in one place.
 CASE_NAME = {code: name for code, name in SWIFT_CASE_BY_CODE.items() if code != "fr"}
@@ -63,16 +71,34 @@ def _restore_names(text: str, kept: list[str]) -> str:
 
 def _translate_one(target: str, text: str) -> str:
     protected, kept = _protect_names(text)
-    out = mt_backend.translate_one(protected, target, source="en")
+    out = mt_backend.translate_one(protected, target, source=MT_SOURCE_LANG)
     if out == protected and re.search(r"[A-Za-zÀ-ÿ]", text) and len(text) > 40:
         raise RuntimeError(f"MT returned the source unchanged: {text[:60]!r}")
     return _restore_names(out, kept)
 
 
 def load_en() -> dict:
-    if EN_PACK.exists():
-        return json.loads(EN_PACK.read_text(encoding="utf-8"))
-    raise SystemExit(f"Missing {EN_PACK} — extract EN legal first")
+    """The French legal text, the source of every translation.
+
+    Read from the Swift arrays ``termsFrench`` / ``privacyFrench`` and mirrored
+    to ``content/locales/fr/legal.json`` for traceability. The name is kept so
+    the callers' diff stays small; the English pack is a target like any other.
+    """
+    source = LEGAL_SWIFT.read_text(encoding="utf-8")
+    pack: dict[str, list[dict]] = {}
+    for kind, name in (("terms", "termsFrench"), ("privacy", "privacyFrench")):
+        array = extract_existing_swift_array(source, name)
+        if array is None:
+            raise SystemExit(f"{name} not found in {LEGAL_SWIFT}")
+        pack[kind] = [
+            {"id": _swift_unescape(i), "title": _swift_unescape(t), "body": _swift_unescape(b)}
+            for i, t, b in SECTION_RE.findall(array)
+        ]
+        if not pack[kind]:
+            raise SystemExit(f"no LegalSection parsed from {name}")
+    FR_PACK.parent.mkdir(parents=True, exist_ok=True)
+    FR_PACK.write_text(json.dumps(pack, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    return pack
 
 
 def pack_path(lang: str) -> Path:

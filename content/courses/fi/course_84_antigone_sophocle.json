@@ -1,14 +1,14 @@
 {
   "id": "course_84_antigone_sophocle",
   "title": "Antigone: pitääkö totella lakia vai omaatuntoa?",
-  "subtitle": "5. vuosisadalla eKr",
+  "subtitle": "5. vuosisata eKr.",
   "subject": "litterature",
   "subcategory": "Antiikin kreikkalaiset ja filosofit",
-  "description": "Antigone hautaa veljensä vastoin kuningas Kreonin käskyä. Sofokles synnyttää kaupunkilain ja perhevelvollisuuden välille konfliktin, joka ei ole koskaan vanhentunut.",
+  "description": "Antigone hautaa veljensä kuningas Kreonin käskyä uhmaten. Kaupungin lain ja suvun velvoitteiden välille Sofokles rakentaa ristiriidan, joka ei ole koskaan vanhentunut.",
   "hero": {
     "image": "antigone_sophocle",
     "ratio": "16:9",
-    "hook": "Nuori nainen, kielletty hauta ja vapisevan kaupungin laki."
+    "hook": "Nuori nainen, kielletty hauta ja kaupungin laki, joka horjuu."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "[[Seitsemän Thebea vastaan]] sodan jälkeen kaksi veljestä kuoli tappaen toisiaan: **Eteocles**, Theban puolustaja, ja **Polyneices**, hyökkääjä. Uusi kuningas **Creon**, Antigonen setä, käskee toista kunnioittaa ja toisen jättää hautaamatta. **Antigone**, Oidipuksen tytär ja kahden veljen sisar, kieltäytyy. Hän hautaa ruumiin. Sophokles tekee siitä yhden länsimaisen teatterin keskusteltuimmista näytelmistä."
+          "text": "[[Seitsemän Thebaa vastaan]] -sodan jälkeen kaksi veljestä on kuollut toistensa käsiin: Theban puolustaja **Eteokles** ja hyökkääjä **Polyneikes**. Uusi kuningas **Kreon**, Antigonen eno, käskee kunnioittaa toista ja jättää toisen hautaamatta. **Antigone**, Oidipuksen tytär ja molempien veljesten sisar, kieltäytyy. Hän hautaa ruumiin. Sofokles tekee tästä yhden länsimaisen teatterin eniten keskustelua herättäneistä näytelmistä."
         },
         {
           "type": "paragraph",
-          "text": "Konflikti on selvä: toisella puolella kaupungin **kirjoitettu laki**, toisella velvollisuudet kuolleita ja perhettä kohtaan. Kukaan ei ole täysin väärässä. Tästä syystä näytelmästä keskustellaan edelleen Ateenan teattereista modernin filosofian luokkiin."
+          "text": "Ristiriita on selvä: toisaalla on kaupungin **kirjoitettu laki**, toisaalla velvollisuudet vainajia ja sukua kohtaan. Kukaan ei ole täysin väärässä. Siksi näytelmästä väitellään yhä, Ateenan teattereista nykyajan filosofian tunneille."
         }
       ]
     },
@@ -33,53 +33,53 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Antigone on Theban kuninkaan **Oidipus**:n tytär, joka tietämättään tappoi isänsä ja meni naimisiin äitinsä kanssa. Hänen perheensä on jo kirottu. Thebassa jokainen sukupolvi maksaa edellisen. Kreon, setä, josta tuli kuningas sisällissodan jälkeen, haluaa palauttaa järjestyksen. Hänelle petturi ei ansaitse hautajaisriittejä. Polyneikeksen kunnioittaminen on pelastetun kaupungin kavaltamista."
+          "text": "Antigone on **Oidipuksen** tytär. Oidipus oli Theban kuningas, joka tietämättään surmasi isänsä ja nai äitinsä. Suku on jo valmiiksi kirottu. Thebassa jokainen sukupolvi maksaa edellisen teoista. Kreon, eno, josta tuli kuningas sisällissodan jälkeen, haluaa palauttaa järjestyksen. Hänen mielestään petturi ei ansaitse hautajaisriittejä. Polyneikeen kunnioittaminen olisi pelastetun kaupungin pettämistä."
         },
         {
           "type": "image",
           "asset": "antigone_creon_greek_tragedy_painting",
           "ratio": "4:3",
-          "caption": "Antigone Kreonin edessä: kaksi tuomaria, jotka eivät puhu samaa kieltä."
+          "caption": "Antigone ja Kreon: kaksi oikeuskäsitystä, jotka eivät puhu samaa kieltä."
         },
         {
           "type": "paragraph",
-          "text": "Mutta ruumiin jättäminen ilman hautaa tarkoittaa myös kuolleiden jumalien loukkaamista, mukaan lukien [[Hades]], kreikkalaisen mytologian sielujen asuinpaikka. Antigone toimii lain nimissä, joka on vanhempi kuin sen päivän asetus. Hän ei taistele vallasta. Hän taistelee yksinkertaisesta eleestä: ruumiin peittämisestä maalla, kuten perheen hurskaus määrää."
+          "text": "Ruumiin jättäminen ilman hautaa loukkaa kuitenkin myös kuolleiden jumalia, mukaan lukien [[Hades]], kreikkalaisen mytologian sielujen asuinsija. Antigone toimii päivän asetusta vanhemman lain nimissä. Hän ei taistele vallasta. Hän taistelee yksinkertaisen eleen puolesta: ruumis on peitettävä mullalla, kuten suvun hurskaus vaatii."
         }
       ]
     },
     {
       "id": "course_84_antigone_sophocle_p2",
-      "title": "Tottelemattomuus on myös sanomista \"minä\"",
+      "title": "Uhmata on myös sanoa ”minä”",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Antigone ei toimi pitkään salassa. Hän olettaa. Créonin edessä hän vastustaa [[Luonnonlaki vs. positiivinen laki]]. Toisaalta, mikä näyttää oikealta luonnostaan tai jumalien mielestä. Toisaalta positiivinen laki, suvereenin inhimillinen määräys. Hänen sisarensa **Ismène** epäröi peloissaan. Antigone valitsee teon. Hän hyväksyy rangaistuksensa pysymisestä uskollisena sille, mitä hän pitää pyhänä."
+          "text": "Antigone ei toimi kauan salassa. Hän ottaa tekonsa vastuulleen. Kreonin edessä hän vetoaa kahden oikeuden ristiriitaan: [[Luonnonoikeus vs. positiivinen oikeus]]. Toisaalla on se, mikä tuntuu oikealta luonnostaan tai jumalten mukaan. Toisaalla on positiivinen laki, hallitsijan säätämä inhimillinen asetus. Hänen sisarensa **Ismene** epäröi peloissaan. Antigone puolestaan valitsee teon. Hän hyväksyy rangaistuksen pysyäkseen uskollisena sille, mitä pitää pyhänä."
         },
         {
           "type": "funFact",
-          "text": "1900-luvulla **Anouilh**:n näytelmä vuonna 1944 käsittelee Antigonea natsimiehityksen alaisina. Yleisö lukee sen vastustukseksi auktoriteettia kohtaan. Sophokles oli epäselvämpi: Kreonilla on myös syynsä, eikä näytelmä ratkaise selkeästi."
+          "text": "1900-luvulla **Anouilh'n** näytelmä vuodelta 1944 kertoo Antigonen tarinan uudelleen natsimiehityksen aikana. Yleisö näkee siinä vastarintaa vallanpitäjiä kohtaan. Sofokles oli monitulkintaisempi: myös Kreonilla on syynsä, eikä näytelmä ota selvää kantaa."
         },
         {
           "type": "image",
           "asset": "antigone_burying_polynices_painting",
           "ratio": "4:3",
-          "caption": "Antigone hautaa Polyneicesin: yksinkertainen ele, arvojen sota."
+          "caption": "Antigone hautaa Polyneikeen: yksinkertainen ele, arvojen sota."
         }
       ]
     },
     {
       "id": "course_84_antigone_sophocle_p3",
-      "title": "Kreon kestää liian kauan: vallan hurskaus",
+      "title": "Kreonin jääräpäisyys: vallan hybris",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kreon määrää Antigonen haudattavaksi elävältä. Hänen poikansa **Haemon**, Antigonen sulhanen, anoo häntä. Kuningas on itsepäinen. Se on [[Hybris kreikkalaisessa tragediassa]], ylilyönti, joka saa ihmisen uskomaan olevansa jumalien yläpuolella. Kun hän lopulta antaa periksi, on liian myöhäistä. Antigone, Haemon ja sitten kuningatar **Eurydice** kuolevat. Kreon jää yksin, rikki."
+          "text": "Kreon tuomitsee Antigonen haudattavaksi elävältä. Hänen poikansa **Haimon**, Antigonen sulhanen, anoo häntä. Kuningas pysyy jääräpäisenä. Tämä on [[Hybris kreikkalaisessa tragediassa]], kohtuuttomuus, joka saa ihmisen uskomaan olevansa jumalten yläpuolella. Kun hän lopulta antaa periksi, on liian myöhäistä. Antigone, Haimon ja sitten kuningatar **Eurydike** kuolevat. Kreon jää yksin, murtuneena."
         },
         {
           "type": "paragraph",
-          "text": "[[seikkailu]] kääntää kaiken päälaelleen. Se on tilanteen äkillinen muutos kohti lopputulosta. Kreon halusi pelastaa kaupungin. Hän tuhoaa oman talonsa. Sofokles osoittaa, että rajoilleen kuurosta vallasta tulee katastrofi. Yleinen järjestys ilman toimenpiteitä johtaa kaaosseen, jonka se väitti välttävänsä."
+          "text": "Kaiken kääntää [[peripeteia]]. Se on äkillinen tilanteen muutos, joka vie kohti loppuratkaisua. Kreon halusi pelastaa kaupungin. Hän tuhoaa oman sukunsa. Sofokles näyttää, että rajoista piittaamattomasta vallasta tulee katastrofi. Kohtuuton yleinen järjestys tuottaa lopulta saman kaaoksen, jota se väitti estävänsä."
         }
       ]
     },
@@ -90,11 +90,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Antigone ei ole vain tottelemattomuuden sankaritar. Kreon ei ole vain tyranni. Näytelmässä kohtaa kaksi hyvää: yleistä järjestystä ja perhejumalaisuutta. **Hegel**, 1800-luvun saksalainen filosofi, piti tätä laillisten oikeuksien ristiriidana. Kumpikin puoli on oikeassa periaatteensa mukaan. Nykyaikaisissa lukemissa nähdään kansalaisrohkeus, sukupuolikysymys, valtion ja omantunnon välinen jännite."
+          "text": "Antigone ei ole pelkkä tottelemattomuuden sankaritar. Kreon ei ole pelkkä tyranni. Näytelmässä ovat vastakkain kaksi hyvää asiaa: yleinen järjestys ja suvun hurskaus. **Hegel**, 1800-luvun saksalainen filosofi, näkee siinä myöhemmin kahden oikeutetun oikeuden ristiriidan. Kumpikin osapuoli on oikeassa oman periaatteensa mukaan. Nykyiset tulkinnat näkevät siinä kansalaisrohkeuden, sukupuolikysymyksen sekä valtion ja omantunnon välisen jännitteen."
         },
         {
           "type": "takeaway",
-          "text": "**Antigone** esittää aina ajankohtaisen kysymyksen: mitä tehdä, kun kaupungin laki loukkaa sitä, mitä pidämme pyhänä? Sofokles kieltäytyy yksinkertaisesta vastauksesta. Se näyttää molempien leirien hinnan vapauttamatta ketään."
+          "text": "**Antigone** esittää yhä ajankohtaisen kysymyksen: mitä tehdä, kun kaupungin laki törmää siihen, mitä pitää pyhänä? Sofokles ei tyydy helppoon vastaukseen. Hän näyttää molempien osapuolten hinnan vapauttamatta ketään syyllisyydestä."
         }
       ]
     }

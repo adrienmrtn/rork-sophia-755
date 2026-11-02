@@ -1,14 +1,14 @@
 {
   "id": "course_45_pourquoi_y_a_t_il_des_saisons",
   "title": "Zakaj obstajajo letni časi?",
-  "subtitle": "Zemlja & Sonce",
+  "subtitle": "Zemlja in Sonce",
   "subject": "sciences",
-  "subcategory": "Vsakdanjik pod drobnogledom",
-  "description": "Letni časi ne izvirajo iz tega, da je Zemlja bližje ali dlje od Sonca. Pravi vzrok je nagnjenost zemeljske osi.",
+  "subcategory": "Vsakdan pod drobnogledom",
+  "description": "Letni časi ne nastanejo zato, ker je Zemlja bližje Soncu ali dlje od njega. Pravi vzrok je nagib Zemljine osi.",
   "hero": {
     "image": "pourquoi_y_a_t_il_des_saisons",
     "ratio": "16:9",
-    "hook": "Ne, poletje ne prihaja, ker se Zemlja približuje Soncu."
+    "hook": "Ne, poletje ne pride zato, ker se Zemlja približa Soncu."
   },
   "sections": [
     {
@@ -18,32 +18,32 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Mnogi mislijo, da pride poletje, ko je Zemlja **bližje** Soncu, zima pa, ko je **daleč**. To je laž. In to vidimo takoj: ko je v Franciji poletje, je v Avstraliji zima."
+          "text": "Mnogi mislijo, da je poletje, ko je Zemlja **bližje** Soncu, zima pa, ko je **dlje** od njega. To ne drži. In to se takoj vidi: ko je v Franciji poletje, je v Avstraliji zima."
         },
         {
           "type": "paragraph",
-          "text": "Prava razlaga je v eni stvari: Zemljina vrtilna os je **nagnjena**, nagnjena glede na ravnino njene orbite okoli Sonca."
+          "text": "Prava razlaga je ena sama: Zemljina vrtilna os je **nagnjena**, poševna glede na ravnino njenega tira okoli Sonca."
         }
       ]
     },
     {
       "id": "course_45_pourquoi_y_a_t_il_des_saisons_p1",
-      "title": "Zemlja se nagne",
+      "title": "Zemlja je nagnjena",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Zemlja se zavrti okoli svoje osi v **24 ur**: je dan in noč. Prav tako kroži okoli Sonca v **leto leto** v orbiti v obliki **elipsa**, rahlo sploščenega kroga. Toda njegova os, namišljena črta od severnega tečaja do južnega tečaja, ni ravna glede na njegovo orbito. Nagnjena je približno na **23,5 stopinj**: to je [[Nagib Zemljine osi (23,5°)]]."
+          "text": "Zemlja se v **24 urah** zavrti okoli svoje osi: tako nastaneta dan in noč. V **enem letu** pa obkroži Sonce po tiru v obliki **elipse**, rahlo sploščenega kroga. Toda njena os, namišljena črta od severnega do južnega tečaja, ni pokončna glede na tir. Nagnjena je za približno **23,5 stopinje**: to je [[Nagib Zemljine osi (23,5°)]]."
         },
         {
           "type": "image",
           "asset": "earth_summer_winter_seasons_illustration",
           "ratio": "auto",
-          "caption": "Nagib zemeljske osi pojasnjuje cikel letnih časov."
+          "caption": "Nagib Zemljine osi pojasni menjavanje letnih časov."
         },
         {
           "type": "paragraph",
-          "text": "Ta nagib ostane vse leto v približno isti smeri. Vedno kaže na isti del neba, blizu zvezde Severnice. Rezultat: odvisno od tega, kje je Zemlja v svoji orbiti, ena polobla \"gleda\" bolj v Sonce, druga manj."
+          "text": "Ta nagib je vse leto približno v isti smeri. Os vedno kaže proti istemu delu neba, blizu Severnice. Posledica: glede na to, kje na svojem tiru je Zemlja, ena polobla bolj »gleda« proti Soncu, druga manj."
         }
       ]
     },
@@ -54,15 +54,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Poleti se na severni polobli severni tečaj nagne proti Soncu. Dnevi so daljši: podaljša se **fotoperioda**, razmerje med dolžino dneva in noči. Žarki prihajajo tudi bolj »naravnost« na tla: energija je skoncentrirana na manjši površini. Torej je topleje."
+          "text": "Poleti je na severni polobli severni tečaj nagnjen proti Soncu. Dnevi so daljši: podaljša se **fotoperioda**, razmerje med dolžino dneva in noči. Žarki padajo na tla tudi bolj »naravnost«: energija se zbere na manjši površini. Zato je topleje."
         },
         {
           "type": "funFact",
-          "text": "Januarja je Zemlja celo nekoliko **bližje** Soncu kot julija: to je **perihelij**, najbližja točka v orbiti. Pa vendar je tukaj zima. Dokaz, da razdalja ne pojasni letnih časov."
+          "text": "Januarja je Zemlja celo nekoliko **bližje** Soncu kot julija: to je **perihelij**, najbližja točka tira. Pa vendar je pri nas takrat zima. To dokazuje, da letnih časov ne pojasni razdalja."
         },
         {
           "type": "paragraph",
-          "text": "Pozimi je ravno nasprotno: kratki dnevi, več poševnih žarkov, energija razpršena na večji površini. Manj prejete toplote. **solsticij**, časi, ko Sonce doseže svoj najsevernejši ali najjužnejši položaj, označujejo začetek poletja ali zime."
+          "text": "Pozimi je ravno nasprotno: kratki dnevi, bolj poševni žarki, energija se razporedi na večjo površino. Manj prejete toplote. **Solsticija**, trenutka, ko Sonce doseže najsevernejšo ali najjužnejšo lego, označujeta začetek poletja ali zime."
         }
       ]
     },
@@ -73,11 +73,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Blizu **ekvatorja**, namišljene črte, ki deli Zemljo na dve polobli, se nagib malo spremeni glede na dolžino dneva. V bistvu niso štirje letni časi kot v Evropi, ampak bolj suha in mokra obdobja."
+          "text": "Blizu **ekvatorja**, namišljene črte, ki deli Zemljo na dve polobli, nagib le malo vpliva na dolžino dneva. Tam ni pravih štirih letnih časov kot v Evropi, temveč bolj suha in bolj vlažna obdobja."
         },
         {
           "type": "paragraph",
-          "text": "Pri **drogovi** je učinek izjemen: več mesecev neprekinjenega dneva poleti, več mesecev noči pozimi. Kontrast je tam veliko močnejši kot v Franciji."
+          "text": "Na **tečajih** je učinek skrajen: poleti več mesecev neprekinjenega dneva, pozimi več mesecev noči. Razlika je tam veliko večja kot v Franciji."
         }
       ]
     },
@@ -88,11 +88,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Če bi bila Zemljina os popolnoma ravna, bi bilo vsako mesto skozi vse leto deležno približno enake količine sončne svetlobe. Nič več pravega poletja, nič več prave zime. Podnebje, kulture, selitve živali: vse bi bilo drugače."
+          "text": "Če bi bila Zemljina os popolnoma pokončna, bi vsak kraj vse leto dobival približno enako količino sončne svetlobe. Ne bi bilo več pravega poletja ne prave zime. Podnebje, poljščine, selitve živali: vse bi bilo drugače."
         },
         {
           "type": "takeaway",
-          "text": "Letni časi izhajajo iz nagiba Zemljine osi, približno **23,5°**, ne pa iz oddaljenosti od Sonca. Ena polobla se nagiba proti Soncu: poletje je. Drugi se nagiba k nasprotnemu: zima je."
+          "text": "Letni časi nastanejo zaradi **nagiba** Zemljine osi, približno **23,5°**, ne zaradi oddaljenosti od Sonca. Ena polobla je nagnjena proti Soncu: tam je poletje. Druga je nagnjena stran od njega: tam je zima."
         }
       ]
     }

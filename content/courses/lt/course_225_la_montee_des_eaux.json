@@ -1,0 +1,128 @@
+{
+  "id": "course_225_la_montee_des_eaux",
+  "title": "Kiek pakils jūrų lygis?",
+  "subtitle": "Jūrų lygis kyla",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environnement & avenir",
+  "description": "Iki 2100 m. vandenynų lygis gali pakilti **vienu metru**. Ištisoms šalims ir pakrančių megapoliams tai jau ne tolima prielaida, o planavimo klausimas.",
+  "hero": {
+    "image": "la_montee_des_eaux",
+    "ratio": "16:9",
+    "hook": "Jūra kasmet pakyla vis aukščiau, o kai kurios šalys jau planuoja persikraustymą."
+  },
+  "sections": [
+    {
+      "id": "course_225_la_montee_des_eaux_intro",
+      "title": "Įvadas",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tūkstančius metų vandenynų lygis buvo beveik stabilus. Nuo pramonės eros pradžios jis kyla, o kilimas kasmet spartėja."
+        },
+        {
+          "type": "paragraph",
+          "text": "Iki 2100 m. vandenynai gali pakilti nuo 30 centimetrų iki vieno metro, priklausomai nuo to, kiek teršalų išmesime. Daugeliui pakrančių tai jau ne tolima grėsmė, o labai konkreti teritorijų planavimo problema."
+        }
+      ]
+    },
+    {
+      "id": "course_225_la_montee_des_eaux_p1",
+      "title": "Du mechanizmai, viena kryptis",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Jūrų lygis kyla dėl dviejų skirtingų fizikinių priežasčių. Pirmoji yra [[Šiluminis plėtimasis]]: šylant vandeniui, jo molekulės juda greičiau, o tūris šiek tiek padidėja, kaip ir bet kurio skysčio. Nuo 1970 m. vandenynai sugėrė daugiau nei 90 % žmogaus veiklos sukurto šilumos pertekliaus, ir ši šiluma didina jų tūrį."
+        },
+        {
+          "type": "paragraph",
+          "text": "Antroji priežastis yra ant sausumos gulinčio ledo tirpimas. Nesupainiok su Arkties jūros ledu: jis jau plūduriuoja vandenyje, todėl jam tirpstant jūrų lygis nekyla. Vandenynų lygį iš tikrųjų kelia [[Ledynų skydas]]: milžiniškos ledo kepurės ant Grenlandijos ir Antarktidos žemės, kurios tirpdamos papildo vandenynus gėlu vandeniu."
+        },
+        {
+          "type": "image",
+          "asset": "greenland_ice_sheet_melting_glacier",
+          "ratio": "16:9",
+          "caption": "Jei Grenlandijos ledas ištirptų visas, vandenynai pakiltų 7 metrais."
+        },
+        {
+          "type": "funFact",
+          "text": "Grenlandija kasmet netenka apie 280 milijardų tonų ledo. Tokio vandens kiekio užtektų visai Prancūzijai padengti 50 centimetrų sluoksniu."
+        }
+      ]
+    },
+    {
+      "id": "course_225_la_montee_des_eaux_p2",
+      "title": "Greitis, kuris neramina mokslininkus",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nuo 1880 m. pasaulio jūrų lygis pakilo maždaug 20 centimetrų. Tyrėjus labiausiai neramina dabartinis greitis: XX a. jis buvo apie 1,4 mm per metus, o dabar siekia **3,6 mm per metus**, t. y. išaugo daugiau nei 150 %."
+        },
+        {
+          "type": "paragraph",
+          "text": "[[IPCC]] ekspertai mano, kad ši tendencija išliks dar kelis dešimtmečius, net jei išmetamųjų teršalų kiekis būtų drastiškai sumažintas jau dabar, nes vandenynai į temperatūros pokyčius reaguoja lėtai."
+        },
+        {
+          "type": "image",
+          "asset": "coastal_flooding_sea_level_rise_city",
+          "ratio": "4:3",
+          "caption": "Jūrai pakilus 50 cm, kartą per šimtmetį pasitaikantis potvynis gali tapti kasmetiniu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tikrasis pavojus yra ne tik kiek aukštesnis vidutinis jūros lygis. Dažnėja ir [[Audrų bangos ir šimtmečio potvyniai]]: vos 50 centimetrų pakilimo gali užtekti, kad kartą per šimtmetį laukiama katastrofa taptų beveik kasmetiniu įvykiu."
+        }
+      ]
+    },
+    {
+      "id": "course_225_la_montee_des_eaux_p3",
+      "title": "Geografinė neteisybė",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kylantis vanduo labiausiai smogia regionams, kurie mažiausiai prisidėjo prie klimato atšilimo. Pirmose linijose yra didžiosios upių deltos, pavyzdžiui, Nilo, Mekongo ar Gango. Bangladešas, kuriame gyvena 170 milijonų žmonių, jūrai pakilus metru galėtų netekti 17 % teritorijos."
+        },
+        {
+          "type": "paragraph",
+          "text": "Mažoms salų valstybėms, tokioms kaip Maldyvai ar Kiribatis, visiškai atsidurti po vandeniu jau ne mokslinės fantastikos scenarijus, o tikras politinio planavimo klausimas. O turtingi megapoliai, tokie kaip Majamis ar Niujorkas, investuoja milijardus į pylimus ir siurblius."
+        },
+        {
+          "type": "image",
+          "asset": "jakarta_indonesia_sinking_flooding_maldives",
+          "ratio": "16:9",
+          "caption": "Džakartai gresia dvigubas pavojus: kylantis vanduo ir grimztanti žemė."
+        },
+        {
+          "type": "funFact",
+          "text": "2009 m. Maldyvų vyriausybė, apsivilkusi narų kostiumus, surengė ministrų posėdį po vandeniu, kad prieš didelę klimato konferenciją įspėtų pasaulį."
+        },
+        {
+          "type": "paragraph",
+          "text": "Indonezijos sostinė **Džakarta** dar ir grimzta į žemę, nes per daug išsiurbiama požeminio vandens. Susidūrusi su šia dviguba grėsme, šalis priėmė radikalų sprendimą: Borneo saloje statyti visiškai naują sostinę Nusantarą."
+        }
+      ]
+    },
+    {
+      "id": "course_225_la_montee_des_eaux_p4",
+      "title": "Prisitaikyti arba trauktis",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Šiam iššūkiui įveikti dvi strategijos viena kitą papildo. Pirmoji yra riboti atšilimą, kad lygio kilimas sulėtėtų po 2100 m. Antroji yra prisitaikyti prie to, ko jau neišvengsime: stiprinti gamtinę apsaugą, kurią teikia [[Mangrovės]] ar kopos, arba imtis didesnių sprendimų, kaip didieji Nyderlandų inžineriniai darbai."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kai kur vienintelė išeitis bus trauktis: perkelti gyventojus ir veiklą gilyn į žemyną, kol katastrofos nepradėjo kartotis per dažnai. Tai tikras įpročių pokytis visuomenėms, šimtmečius gyvenusioms prie jūros."
+        },
+        {
+          "type": "takeaway",
+          "text": "Jūrų lygis kyla 3,6 mm per metus dėl šiluminio plėtimosi ir sausumos ledo tirpimo. Iki 2100 m. šis kilimas gali pasiekti metrą ir priversti persikelti šimtus milijonų žmonių."
+        }
+      ]
+    }
+  ]
+}

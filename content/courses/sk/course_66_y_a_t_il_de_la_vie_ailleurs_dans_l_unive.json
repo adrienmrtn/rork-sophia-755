@@ -4,11 +4,11 @@
   "subtitle": "Exobiológia",
   "subject": "sciences",
   "subcategory": "Zem a vesmír",
-  "description": "Tisíce miliárd planét a napriek tomu rádiové ticho. Veda hľadá život inde bez sľubných zelených mužíčkov.",
+  "description": "Tisíce miliárd planét, a predsa rádiové ticho. Veda hľadá život inde a nesľubuje malých zelených mužíčkov.",
   "hero": {
     "image": "y_a_t_il_de_la_vie_ailleurs_dans_l_univers",
     "ratio": "16:9",
-    "hook": "Vesmír je obrovský. Tak prečo nikto nereaguje?"
+    "hook": "Vesmír je obrovský. Prečo teda nikto neodpovedá?"
   },
   "sections": [
     {
@@ -18,32 +18,32 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Pozorovateľný vesmír obsahuje približne **2 bilióny** galaxií, obrovské zbierky hviezd, z ktorých každá obsahuje stovky miliárd hviezd. S pomocou štatistík by potenciálne obývateľných planét malo byť nespočetné množstvo. Od začiatku modernej astronómie sme však nemali žiadne potvrdené kontakty."
+          "text": "Pozorovateľný vesmír obsahuje približne **2 bilióny** galaxií, obrovských zoskupení hviezd, a v každej z nich sú stovky miliárd hviezd. Podľa štatistiky by potenciálne obývateľných planét malo byť nespočetne veľa. Od začiatku modernej astronómie však nemáme žiadny potvrdený kontakt."
         },
         {
           "type": "paragraph",
-          "text": "Tento rozpor má názov: paradox **Fermi** podľa fyzika **Enrica Fermi**. Otázka už nie je len sci-fi. Patrí pod [[exobiológiu]]: vedu, ktorá študuje podmienky pre vznik života inde a prostriedky na jeho zisťovanie."
+          "text": "Tento rozpor má svoje meno: **Fermiho paradox**, podľa fyzika **Enrica Fermiho**. Otázka už nie je len vedecká fantastika. Spadá pod [[exobiológiu]]: vedu, ktorá skúma podmienky vzniku života inde a spôsoby, ako ho odhaliť."
         }
       ]
     },
     {
       "id": "course_66_y_a_t_il_de_la_vie_ailleurs_dans_l_unive_p1",
-      "title": "Čo sa zdá, že život sa pýta",
+      "title": "Čo život zrejme potrebuje",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Aby sme sa pozreli inde, vychádzame z jediného známeho príkladu: pozemského života. Je založený hlavne na chémii **uhlíka**, atómu, ktorý tvorí zložité molekuly, a na **tekutej vode**, ktorá umožňuje dobre prebiehať chemické reakcie."
+          "text": "Pri hľadaní inde sa vychádza z jediného známeho príkladu: zo života na Zemi. Stojí najmä na chémii **uhlíka**, atómu, ktorý tvorí zložité molekuly, a na **kvapalnej vode**, v ktorej môžu chemické reakcie dobre prebiehať."
         },
         {
           "type": "image",
           "asset": "radio_telescope_seti",
           "ratio": "auto",
-          "caption": "Rádiové teleskopy skenujú oblohu a počúvajú možný signál."
+          "caption": "Rádioteleskopy skúmajú oblohu a načúvajú, či nezachytia nejaký signál."
         },
         {
           "type": "paragraph",
-          "text": "Kandidátska planéta sa často musí nachádzať v [[obývateľnej oblasti]] svojej hviezdy: ani príliš blízko, inak sa voda vyparí, ani príliš ďaleko, inak voda zamrzne. Od 90. rokov 20. storočia bolo objavených viac ako **5.500 exoplanét**, planét okolo hviezd iných ako Slnko. Takmer každá hviezda v našej galaxii by mala aspoň jednu."
+          "text": "Kandidátska planéta sa často musí nachádzať v [[obývateľnej oblasti]] svojej hviezdy: ani príliš blízko, inak sa voda vyparí, ani príliš ďaleko, inak voda zamrzne. Od 90. rokov 20. storočia sa objavilo viac ako **5.500 exoplanét**, teda planét, ktoré obiehajú okolo iných hviezd ako Slnko. Takmer každá hviezda v našej galaxii má zrejme aspoň jednu."
         },
         {
           "type": "funFact",
@@ -51,7 +51,7 @@
         },
         {
           "type": "paragraph",
-          "text": "V **1961** astronóm **Frank Drake** navrhol [[Drakeova rovnica]]: vzorec, ktorý násobí faktory - hviezdy, obývateľné planéty, trvanie civilizácií - na odhad počtu civilizácií schopných komunikovať v Mliečnej dráhe. Čísla zostávajú veľmi neisté. Vzorec sa používa hlavne na štruktúrovanie diskusie."
+          "text": "V roku **1961** astronóm **Frank Drake** navrhol vzorec známy ako [[Drakeova rovnica]]. Násobí faktory ako hviezdy, obývateľné planéty či trvanie civilizácií, a tak odhaduje počet civilizácií v Mliečnej dráhe, ktoré sú schopné komunikovať. Čísla ostávajú veľmi neisté. Vzorec slúži najmä na to, aby dal diskusii poriadok."
         }
       ]
     },
@@ -62,15 +62,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Netreba ísť hneď k iným hviezdam. V našej slnečnej sústave je zaujímavých niekoľko svetov. **Európe**, mesiac Jupitera, pravdepodobne skrýva oceán tekutej vody pod kôrou ľadu. Tento oceán by zostal tekutý vďaka [[Slapové sily]]: obrovská príťažlivosť Jupitera deformuje Európu a ohrieva jej vnútro trením."
+          "text": "Netreba hneď letieť k iným hviezdam. V našej slnečnej sústave vzbudzuje zvedavosť hneď niekoľko svetov. **Európa**, mesiac Jupitera, pod ľadovou kôrou pravdepodobne skrýva oceán kvapalnej vody. [[Slapové sily]] ho zrejme udržujú v kvapalnom stave: obrovská príťažlivosť Jupitera deformuje Európu a trením jej ohrieva vnútro."
         },
         {
           "type": "paragraph",
-          "text": "**Enceladus**, malý mesiac Saturna, vyvrhuje **gejzíry**, výtrysky pary a hmoty. Sonda **Cassini** našla známky **hydrotermálnej** aktivity, zahrievania chemickými reakciami na dne oceánu, ktorá je v princípe schopná živiť mikróby bez slnečného žiarenia."
+          "text": "**Enceladus**, malý mesiac Saturna, vyvrhuje **gejzíry**, výtrysky pary a hmoty. Sonda **Cassini** tam našla známky **hydrotermálnej** aktivity, teda ohrevu chemickými reakciami na dne oceánu, ktorý by v princípe mohol živiť mikróby aj bez slnka."
         },
         {
           "type": "paragraph",
-          "text": "Na **marca** kedysi tiekla na povrch tekutá voda. Roboty hľadajú [[Biologické podpisy]]: fosílne alebo chemické stopy minulého života predtým, ako planéta stratila veľkú časť atmosféry a vody."
+          "text": "Na **Marse** kedysi po povrchu tiekla kvapalná voda. Roboty tam hľadajú [[biosignatúry]]: fosílne alebo chemické stopy dávneho života z čias, keď planéta ešte nestratila veľkú časť svojej atmosféry a vody."
         }
       ]
     },
@@ -81,38 +81,38 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "V **1950** sa Fermi pýta: Ak vyspelé civilizácie existujú v tisícoch, prečo po nich nevidíme ani stopy? Vesmír je starý. Civilizácia len o milión rokov dopredu by mala čas vyniknúť aj bez cestovania rýchlosťou svetla."
+          "text": "V roku **1950** sa Fermi pýta: ak existujú tisíce vyspelých civilizácií, prečo po žiadnej z nich nevidíme ani stopu? Vesmír je starý. Civilizácia s náskokom len milióna rokov by mala dosť času, aby na seba upozornila, aj keby necestovala rýchlosťou svetla."
         },
         {
           "type": "paragraph",
-          "text": "Jednou z hypotéz je hypotéza Veľkého [[filtra]]: takmer nemožný krok v evolúcii, napríklad prechod ku komplexnému životu alebo technologická sebazničenie. Buď sme ho už prešli, alebo je pred nami."
+          "text": "Jednou z hypotéz je [[Veľký filter]]: krok v evolúcii, ktorý sa takmer nedá prekonať, napríklad prechod ku zložitému životu alebo technologické sebazničenie. Buď sme ho už prekonali, alebo nás ešte len čaká."
         },
         {
           "type": "paragraph",
-          "text": "Ďalšie nápady: možno nepočúvame správne signály. Program **SETI**, Search for Extraterrestrial Intelligence, skenuje hlavne rádiové vlny. Alebo sú civilizácie príliš krátke a príliš ďaleko na to, aby sa skrížili cesty. Alebo [[Hypotéza zoo]]: Zem by bola dobrovoľne ponechaná bokom, ako rezerva."
+          "text": "Ďalšie možnosti: možno nepočúvame tie správne signály. Program **SETI**, Search for Extraterrestrial Intelligence, sleduje najmä rádiové vlny. Alebo civilizácie trvajú príliš krátko a sú od seba príliš ďaleko, aby sa stretli. Alebo platí [[hypotéza zoo]]: Zem je možno zámerne ponechaná bokom ako rezervácia."
         }
       ]
     },
     {
       "id": "course_66_y_a_t_il_de_la_vie_ailleurs_dans_l_unive_p4",
-      "title": "Ako dnes hľadáme",
+      "title": "Ako sa hľadá dnes",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Vesmírny teleskop **James Webb** analyzuje svetlo prechádzajúce atmosférou vzdialených planét pomocou [[spektroskopie]], rezania svetla na identifikáciu prítomných plynov. Hľadáme plyny ako kyslík alebo metán v podivných množstvách, možné známky života."
+          "text": "Vesmírny teleskop **James Webb** skúma svetlo, ktoré prechádza atmosférou vzdialených planét, pomocou [[spektroskopie]], teda rozkladu svetla, ktorý prezradí prítomné plyny. Hľadajú sa tak plyny ako kyslík alebo metán v nezvyčajných množstvách, ktoré by mohli byť známkou života."
         },
         {
           "type": "funFact",
-          "text": "Ak by sa na nás niekto v galaxii Andromeda pozrel „práve teraz“, videl by Zem takú, aká bola pred **2,5 milióna dolárov**: tak dlho trvá, kým sa svetlo pohybuje."
+          "text": "Keby sa na nás niekto z galaxie Andromeda pozrel „práve teraz“, videl by Zem takú, aká bola pred **2,5 milióna rokov**: tak dlho trvá svetlu, kým túto cestu prekoná."
         },
         {
           "type": "paragraph",
-          "text": "Dokonca aj mikrobiálny život by všetko zmenil: dokázal by, že živé veci nie sú ojedinelou náhodou. Medzitým sondy **Na cestovanie** nesú zlaté disky so zvukmi a obrazmi Zeme od **1977**. Pravdepodobnosť odpočúvania: takmer nulová. Netreba sa cítiť sám: nedotknutý."
+          "text": "Aj mikrobiálny život by všetko zmenil: dokázal by, že život nie je jedinečná náhoda. Sondy **Voyager** zatiaľ od roku **1977** vezú zlaté platne so zvukmi a obrázkami Zeme. Pravdepodobnosť, že ich niekto zachytí: takmer nulová. Potreba necítiť sa sami: nezmenená."
         },
         {
           "type": "takeaway",
-          "text": "Planét je nespočetné množstvo a život sa zdá byť štatisticky pravdepodobný. Ale absencia kontaktu, Fermiho paradox, nám pripomína, že technologická inteligencia môže byť veľmi zriedkavá alebo veľmi krátka."
+          "text": "Planét je nespočetne veľa a život sa štatisticky zdá pravdepodobný. Lenže chýbajúci kontakt, teda Fermiho paradox, pripomína, že technologická inteligencia by mohla byť veľmi vzácna alebo veľmi krátkodobá."
         }
       ]
     }

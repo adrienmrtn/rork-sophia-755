@@ -4,11 +4,11 @@
   "subtitle": "Orbiit ja gravitatsioon",
   "subject": "sciences",
   "subcategory": "Maa ja universum",
-  "description": "Kuu langeb pidevalt Maa poole. Ta lihtsalt igatseb seda iga kord. Täpselt selline on orbiit.",
+  "description": "Kuu kukub pidevalt Maa poole. See lihtsalt läheb igal korral Maast mööda. Täpselt see ongi orbiit.",
   "hero": {
     "image": "pourquoi_la_lune_ne_tombe_pas",
     "ratio": "16:9",
-    "hook": "Kuu langeb meie poole. Ta lihtsalt igatseb Maad igal sammul."
+    "hook": "Kuu kukub meie poole. See lihtsalt läheb igal tiirul Maast mööda."
   },
   "sections": [
     {
@@ -18,26 +18,26 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kui Maa gravitatsioon tõmbab Kuud, siis miks see meile vastu ei kuku? Vastus tundub veider: Kuu **langeb tõesti** Maa poole. Ta lihtsalt igatseb seda iga hetk."
+          "text": "Kui Maa gravitatsioon tõmbab Kuud, miks see siis meile kaela ei kuku? Vastus tundub veider: Kuu tõepoolest **kukub** Maa poole. See lihtsalt läheb igal hetkel Maast mööda."
         },
         {
           "type": "paragraph",
-          "text": "See tasakaal kukkumise ja külgsuunalise kiiruse vahel on **orbitaal**, kõverjooneline trajektoor tähe ümber. Inglise füüsik **Isaac Newton** oli esimene, kes ühendas õuna kukkumise ja tähtede liikumise sama ideega."
+          "text": "See tasakaal kukkumise ja külgsuunalise kiiruse vahel on **orbiit**: kõver trajektoor ümber taevakeha. Inglise füüsik **Isaac Newton** ühendas esimesena ühe ja sama mõttega õuna kukkumise ja taevakehade liikumise."
         },
         {
           "type": "funFact",
-          "text": "Kui kaaluksite Maal **60 kg**, kaaluksite Kuul ainult umbes **10**: selle gravitatsioon on kuus korda nõrgem."
+          "text": "Kui kaaluksid Maal **60 kg**, kaaluksid Kuul vaid umbes **10**: Kuu gravitatsioon on kuus korda nõrgem."
         }
       ]
     },
     {
       "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur_p1",
-      "title": "Newtoni kujuteldav kaanon",
+      "title": "Newtoni kujuteldav kahur",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Newton kujutab ette kahurit nii kõrge mäe otsas, et see atmosfäärist välja tuleks. Tulistame palli horisontaalselt. Vähese võimsusega kukub see kiiresti. Suurema jõuga läheb ta kaugemale."
+          "text": "Newton kujutleb kahurit nii kõrge mäe tipus, et see ulatuks atmosfäärist välja. Kahurikuul lastakse horisontaalselt välja. Väikese jõuga kukub see kiiresti maha. Suurema jõuga lendab see kaugemale."
         },
         {
           "type": "image",
@@ -47,11 +47,11 @@
         },
         {
           "type": "paragraph",
-          "text": "Konkreetsel kiirusel, nimega [[Orbiidi kiirus]], juhtub midagi tähelepanuväärset. Kui pall langeb, kõverdub Maa, mis on ümmargune, selle all sama kiirusega. Mürsk kukub ... maad puudutamata. Ta on **vabalanguse pumbad**, mida tõmbab gravitatsioon kokkupõrketa."
+          "text": "[[Orbiidi kiirus]] on see kindel kiirus, mille juures juhtub midagi tähelepanuväärset. Sel ajal kui kuul kukub, kaardub ümmargune Maa selle all samas tempos. Mürsk kukub… kuid ei puuduta kunagi maad. See on **pidevas vabalanguses**: gravitatsioon tõmbab seda, kuid see ei kuku alla."
         },
         {
           "type": "paragraph",
-          "text": "Kuu teeb sama asja. Tal on piisavalt külgkiirust, et muuta kukkumine silmuseks. Ilma selle kiiruseta sukelduks see otse meie poole."
+          "text": "Kuu teeb sedasama. Sellel on piisavalt külgsuunalist kiirust, et muuta kukkumine ringiks. Ilma selle kiiruseta sööstaks see otse meie peale."
         }
       ]
     },
@@ -62,19 +62,19 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kuu tiirleb umbes **384 000 km**. Selle külgkiirus on ligikaudu **1 km/s**. Kui see ootamatult peatuks, kukub see mõne päevaga kokku. Kui gravitatsioon järsku kaoks, läheks see ruumis sirgjooneliselt [[Inerts]] põhimõtte kohaselt: keha säilitab kiiruse, kui seda ei aeglustata."
+          "text": "Kuu tiirleb umbes **384 000 km** kaugusel. Selle külgsuunaline kiirus on umbes **1 km/s**. Kui see järsku seiskuks, kukuks see mõne päevaga Maale. Kui gravitatsioon äkki kaoks, lendaks see sirgjooneliselt kosmosesse. [[Inerts]] on põhimõte, et keha säilitab oma kiiruse, kui miski seda ei pidurda."
         },
         {
           "type": "paragraph",
-          "text": "[[Newtoni universaalse gravitatsiooni seadus]] ütleb, et iga mass tõmbab iga teist massi ja külgetõmme väheneb koos vahemaa, täpsemalt kauguse ruuduga. Mida lähemal on satelliit, seda kiiremini peab see kukkumise vältimiseks liikuma."
+          "text": "[[Newtoni universaalse gravitatsiooni seadus]] ütleb, et iga mass tõmbab ligi iga teist massi ja külgetõmme nõrgeneb kauguse kasvades, täpsemalt pöördvõrdeliselt kauguse ruuduga. Mida lähemal on satelliit, seda kiiremini peab see liikuma, et mitte alla kukkuda."
         },
         {
           "type": "funFact",
-          "text": "Rahvusvaheline kosmosejaam, mis asub vaid **400 km** kõrgusel, liigub umbes **28 000 km/h**. See teeb ümber Maa **90 minutit**. Kaugemal asuval Kuul kulub **27,3 päeva**."
+          "text": "Rahvusvaheline kosmosejaam, mis tiirleb vaid **400 km** kõrgusel, kihutab umbes **28 000 km/h**. See teeb tiiru ümber Maa **90 minutiga**. Kaugemal asuval Kuul kulub selleks **27,3 päeva**."
         },
         {
           "type": "paragraph",
-          "text": "Seega pole orbiit maagia. See on pidev kompromiss \"ma kukun\" ja \"ma liigun liiga kiiresti, et tabada\" vahel."
+          "text": "Seega pole orbiit mingi maagia. See on pidev kompromiss „ma kukun“ ja „ma liigun maa puudutamiseks liiga kiiresti“ vahel."
         }
       ]
     },
@@ -85,11 +85,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Orbiit pole fikseeritud. Mängu tulevad [[Loodete jõud]]. Kuu gravitatsioon tõmbab Maa enda poole jäävat külge tugevamini kui keskpunkti. See deformeerib ookeane ja tekitab veepunni."
+          "text": "Orbiit ei ole muutumatu. Mängu tulevad [[loodete jõud]]. Kuu gravitatsioon tõmbab Maa enda poole jäävat külge tugevamini kui Maa keskpunkti. See muudab ookeanide kuju ja tekitab veekühmu."
         },
         {
           "type": "paragraph",
-          "text": "Kuna Maa pöörleb ümber oma telje kiiremini kui Kuu selle ümber, nihkub see hari Kuust veidi ettepoole. Hõõrdumine aeglustab Maa pöörlemist väga veidi: meie päevad pikenevad umbes **1,4 millisekundit** sajandis. Vastutasuks eemaldub Kuu umbes **3,8 cm** aastas."
+          "text": "Kuna Maa pöörleb ümber oma telje kiiremini, kui Kuu tiirleb ümber Maa, liigub see veekühm Kuust veidi ette. Hõõrdumine aeglustab Maa pöörlemist väga vähesel määral: meie ööpäevad pikenevad umbes **1,4 millisekundit** sajandis. Vastutasuks kaugeneb Kuu umbes **3,8 cm** aastas."
         },
         {
           "type": "paragraph",
@@ -99,20 +99,20 @@
     },
     {
       "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur_p4",
-      "title": "Varjutused… praegu",
+      "title": "Varjutused… esialgu",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Tänapäeval on Päike geomeetrilise juhuse tõttu umbes **400 korda** suurem kui Kuu, aga ka **400 korda** kaugemal. Seetõttu on neil kahel sama **ilmne suurus**, nurk, mille all me neid taevas näeme. Võimalikud on täielikud päikesevarjutused."
+          "text": "Praegu on Päike geomeetrilise juhuse tõttu umbes **400 korda** suurem kui Kuu, aga ka **400 korda** kaugemal. Seetõttu on neil sama **näiv suurus** ehk nurk, mille all neid taevas nähakse. Nii on täielikud päikesevarjutused võimalikud."
         },
         {
           "type": "paragraph",
-          "text": "Umbes **600 miljonit aastat** pärast on Kuu liiga kaugel, et Päikest täielikult varjata. Alles jäävad vaid rõngakujulised varjutused: valgusrõngas ümber kuuketta. Väga pikas perspektiivis võivad Maa ja Kuu sünkroniseerida: kumbki keha näitaks alati teisele sama nägu. Kuid Päike, saades **redi hiiglaseks**, meiesuguse tähe lõppfaasiks, muudab süsteemi palju varem."
+          "text": "Umbes **600 miljoni aasta** pärast on Kuu liiga kaugel, et Päikest täielikult varjata. Alles jäävad vaid rõngakujulised varjutused: valgusrõngas ümber Kuu ketta. Väga pikas plaanis võivad Maa ja Kuu sünkroniseeruda: kumbki näitaks teisele alati sama poolt. Kuid Päike muudab süsteemi juba palju varem, kui sellest saab **punane hiiglane**, meie Päikese sarnase tähe viimane eluetapp."
         },
         {
           "type": "takeaway",
-          "text": "Kuu ei kuku alla, sest selle külgkiirus tasakaalustab Maa külgetõmbejõudu: see on püsivas vabalanguses. Ja see kaob endiselt umbes **3,8 cm** aastas."
+          "text": "Kuu ei kuku alla, sest selle külgsuunaline kiirus tasakaalustab Maa külgetõmmet: see on pidevas vabalanguses. Ja see kaugeneb meist ikka umbes **3,8 cm** aastas."
         }
       ]
     }

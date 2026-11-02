@@ -4,11 +4,11 @@
   "subtitle": "Lanka, hirviö, purjeet",
   "subject": "mythologie",
   "subcategory": "Kreikan sankarit",
-  "description": "Theseus tappaa Minotauroksen Ariadnen langalla. Mutta hän unohtaa vaihtaa purjeet: hänen isänsä Aegeus heittäytyy mereen, joka edelleen kantaa hänen nimeään.",
+  "description": "Theseus surmaa Minotauroksen Ariadnen langan avulla. Mutta hän unohtaa vaihtaa purjeet: hänen isänsä Aigeus syöksyy mereen, joka on yhä nimetty hänen mukaansa.",
   "hero": {
     "image": "thesee_et_le_minotaure",
     "ratio": "16:9",
-    "hook": "Hirviö sokkelossa. Lanka ulos. Unohdetut purjeet, jotka kastavat merta."
+    "hook": "Hirviö labyrintissa. Lanka, jota pitkin pääsee ulos. Unohdetut purjeet, jotka antavat nimen merelle."
   },
   "sections": [
     {
@@ -18,82 +18,82 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Theseus**, Ateenan perustajasankari, kohtaa **Minotauruksen**, puoliksi mies, puoliksi härkä olennon, joka on piilotettu Kreetan [[Labyrintti]]. Tarinassa yhdistyvät rohkeus, romanttinen viekkaus ja perhetragedia."
+          "text": "**Theseus**, Ateenan perustajasankari, kohtaa **Minotauroksen**, puoliksi ihmisen ja puoliksi härän, jonka piilopaikka on Kreetan [[labyrintti]]. Tarinassa yhdistyvät rohkeus, rakastuneen juoni ja perhetragedia."
         },
         {
           "type": "paragraph",
-          "text": "Tappamalla hirviön Theseus vapauttaa Ateenan verisestä kunnianosoituksesta. Mutta unohdettu yksityiskohta, mustat purjeet valkoisten sijasta, maksaa isälleen hänen henkensä ja antaa hänen nimensä Egeanmerelle."
+          "text": "Surmaamalla hirviön Theseus vapauttaa Ateenan verisestä verosta. Mutta yksi unohdettu yksityiskohta, mustat purjeet valkoisten sijaan, maksaa hänen isänsä hengen ja antaa nimen Egeanmerelle."
         }
       ]
     },
     {
       "id": "course_172_thesee_et_le_minotaure_p1",
-      "title": "Minotauros ja Ateenan kunnianosoitus",
+      "title": "Minotauros ja Ateenan vero",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kreetan kuningas **Minos** kieltäytyy uhraamasta valkoista härkää **Poseidonilla**, merten jumalalle. Kostaakseen Poseidon inspiroi Queen **Pasiphaé** intohimoa eläintä kohtaan. Minotaurus syntyy. Minos antaa keksijälle [[Daedalus]] tehtäväksi rakentaa vankilan, josta ei ole uloskäyntiä: Labyrintin."
+          "text": "Kreetan kuningas **Minos** kieltäytyy uhraamasta valkoista härkää **Poseidonille**, merten jumalalle. Kostoksi Poseidon saa kuningatar **Pasifaen** himoitsemaan eläintä. Syntyy Minotauros. Keksijä [[Daidalos]] saa Minokselta tehtävän rakentaa vankila, josta ei pääse ulos: labyrintti."
         },
         {
           "type": "image",
           "asset": "theseus_minotaur_cretan_labyrinth_painting",
           "ratio": "4:3",
-          "caption": "Minotaurus, lukittu Kreetan labyrintiin."
+          "caption": "Minotauros suljettuna Kreetan labyrinttiin."
         },
         {
           "type": "paragraph",
-          "text": "Kreeta hallitsee sitten merta: [[Thalassokratia]]. Kadonneen sodan jälkeen Ateenan on luovutettava yhdeksän vuoden välein **seitsemän nuorta miestä ja seitsemän nuorta tyttöä** hirviölle ruoaksi. Kolmannella toimituksella **Theseus**, kuninkaan **Egeanmeren** poika, toimii vapaaehtoisena."
+          "text": "Kreeta hallitsee tuolloin merta: se on [[talassokratia]]. Hävityn sodan jälkeen Ateenan on yhdeksän vuoden välein luovutettava hirviön ruoaksi **seitsemän nuorukaista ja seitsemän neitoa**. Kolmannella kerralla **Theseus**, kuningas **Aigeuksen** poika, ilmoittautuu vapaaehtoiseksi."
         },
         {
           "type": "funFact",
-          "text": "Aegeus ja Theseus sopivat signaalista: **valkoinen** purjehtii, jos sankari palaa elossa, **Musta purjehtii**, jos hän on kuollut. Tämä yksityiskohta ratkaisee draaman."
+          "text": "Aigeus ja Theseus sopivat merkistä: **valkoiset** purjeet, jos sankari palaa elävänä, **mustat** purjeet, jos hän on kuollut. Tästä yksityiskohdasta syntyy murhenäytelmä."
         }
       ]
     },
     {
       "id": "course_172_thesee_et_le_minotaure_p2",
-      "title": "korppujauhoja",
+      "title": "Ariadnen lanka",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kreetalla **Ariane**, Minoksen tytär, rakastuu Theseukseen. Hän tietää, että voima ei riitä labyrinttiin. Daedaluksen avulla hän antaa hänelle villapallon: [[Ariadnen lanka]]. Hän kiinnittää sen sisäänkäyntiin ja purkaa langan liikkuessaan eteenpäin."
+          "text": "Kreetalla Minoksen tytär **Ariadne** rakastuu Theseukseen. Hän tietää, ettei voima riitä labyrintissa. Daidaloksen avulla hän antaa Theseukselle lankakerän: [[Ariadnen lanka]]. Theseus kiinnittää sen sisäänkäyntiin ja purkaa lankaa edetessään."
         },
         {
           "type": "image",
           "asset": "ariadne_thread_theseus_labyrinth_painting",
           "ratio": "4:3",
-          "caption": "Ariadne antaa Theseukselle langan, joka pelastaa hänen henkensä."
+          "caption": "Ariadne antaa Theseukselle langan, joka pelastaa tämän hengen."
         },
         {
           "type": "paragraph",
-          "text": "Theseus tappaa Minotauroksen ja kelaa sitten lankaa taaksepäin päästäkseen ulos. Hän pakenee nuorten ateenalaisten ja Ariadnen kanssa. Mutta **Naxos** saarelle hän jättää hänet nukkumaan. Jotkut sanovat, että jumala **Dionysos** halusi hänet vaimokseen. Epätoivoinen ja sitten jumalallinen Ariadne saa kultaisen kruunun, josta on tullut tähtikuvio."
+          "text": "Theseus surmaa Minotauroksen ja kelaa sitten langan takaisin päästäkseen ulos. Hän pakenee nuorten ateenalaisten ja Ariadnen kanssa. Mutta **Naxoksen** saarelle hän jättää Ariadnen nukkumaan. Joidenkin mukaan jumala **Dionysos** halusi hänet vaimokseen. Epätoivoinen Ariadne korotetaan jumalaksi, ja hän saa kultaisen kruunun, josta tulee tähdistö."
         }
       ]
     },
     {
       "id": "course_172_thesee_et_le_minotaure_p3",
-      "title": "Cape Sounionin mustat purjeet",
+      "title": "Sunionin niemen mustat purjeet",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Paluu tulee olemaan juhlaa. Voitosta päihtyneenä tai Ariadnen hylkäämisen vaivaamana Theseus unohtaa nostaa valkoiset purjeet. Laiva lähestyy Ateenaa mustien purjeiden alla."
+          "text": "Paluun pitäisi olla juhlaa. Voitosta huumaantuneena tai Ariadnen hylkäämisestä järkyttyneenä Theseus unohtaa nostaa valkoiset purjeet. Laiva lähestyy Ateenaa mustin purjein."
         },
         {
           "type": "image",
           "asset": "cape_sounion_aegean_sea_cliff_sunset",
           "ratio": "4:3",
-          "caption": "Cape Sounion, josta Aegeus katseli poikansa paluuta."
+          "caption": "Sunionin niemi, jolta Aigeus tähysti poikansa paluuta."
         },
         {
           "type": "paragraph",
-          "text": "**Cape Sounion**:ssä vanha kuningas Aegeus tutkii horisonttia. Hän näkee vain surun mustuuden. Vakuutettuna, että hänen poikansa on kuollut, hän heittäytyy kalliolta. Meri on sittemmin saanut nimensä: **Egeanmeren meri**. Theseus saapuu kuninkaaksi... ja jäi orvoksi oman huolimattomuutensa vuoksi."
+          "text": "**Sunionin niemellä** vanha kuningas Aigeus tähyilee horisonttia. Hän näkee vain surun mustaa. Varmana siitä, että hänen poikansa on kuollut, hän syöksyy jyrkänteeltä. Siitä lähtien meri on kantanut hänen nimeään: **Egeanmeri**. Theseus nousee maihin kuninkaana… ja orpona oman huolimattomuutensa vuoksi."
         },
         {
           "type": "funFact",
-          "text": "\"Teseuksen laivasta\" on tullut filosofinen paradoksi: jos vaihdamme kaikki lankut yksitellen, onko se edelleen sama vene?"
+          "text": "”Theseuksen laivasta” on tullut filosofinen paradoksi: jos kaikki laudat vaihdetaan yksi kerrallaan, onko se yhä sama laiva?"
         }
       ]
     },
@@ -104,15 +104,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kruunattu Theseuksesta tulee organisoiva kuningas. [[Synoekismi]] johtuu hänestä: Attikan kaupunkien yhdistämisestä Ateenan ympärillä. Hän perusti [[Panathenaia]], suuret kaupunkifestivaalit. Voi yhdistää oikean kanssa."
+          "text": "Kruunun saatuaan Theseus osoittautuu taitavaksi järjestäjäksi. Hänen ansiokseen luetaan [[synoikismos]]: Attikan kylien yhdistäminen Ateenan ympärille. Hän perustaa [[Panathenaia]]-juhlat, kaupungin suuren yhteisen juhlan. Voima ja oikeus kulkevat käsi kädessä."
         },
         {
           "type": "paragraph",
-          "text": "Hänen hallituskautensa sisältää muita seikkailuja, kuten taistelun [[Amazonit]] vastaan. Mutta Labyrintti pysyy sen jäljessä: tietää kuinka purkaa erottamaton, samalla kun se on alttiina unohdukselle. Theseus takoo Ateenan suuruuden perhetragedian tuhkasta."
+          "text": "Hänen hallituskauteensa kuuluu muitakin seikkailuja, kuten sota, jossa vastassa ovat [[amatsonit]]. Mutta labyrintti on hänen tunnusmerkkinsä: kyky selvittää mahdoton vyyhti, mutta silti alttius unohdukselle. Theseus rakentaa Ateenan suuruuden perhetragedian tuhkalle."
         },
         {
           "type": "takeaway",
-          "text": "**Theseus** tappaa **Minotauruksen** **Ariane**:n langan ansiosta. Unohtamalla purjeiden vaihdon hän tekee itsemurhan isänsä **Egeanmeren**, joka antaa nimensä Egeanmerelle."
+          "text": "**Theseus** surmaa **Minotauroksen** käyttäen apunaan **Ariadnen** lankaa. Kun hän unohtaa vaihtaa purjeet, hänen isänsä **Aigeus** tekee itsemurhan ja antaa nimensä Egeanmerelle."
         }
       ]
     }

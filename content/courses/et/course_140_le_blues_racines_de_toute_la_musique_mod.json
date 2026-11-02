@@ -1,14 +1,14 @@
 {
   "id": "course_140_le_blues_racines_de_toute_la_musique_mod",
-  "title": "Kas blues on kogu kaasaegse muusika juur?",
+  "title": "Kas bluus on moodsa muusika juur?",
   "subtitle": "1870-1960",
   "subject": "art",
   "subcategory": "Muusika",
-  "description": "Mississippi puuvillaväljadel sündinud bluus leiutas 12-mõõdulise ruudustiku ning toitis jazzi, rokki, souli ja hip-hopi.",
+  "description": "Mississippi puuvillapõldudel sündinud bluus loob 12-taktilise struktuuri ja sellest toituvad džäss, rokk, soul ning hip-hop.",
   "hero": {
     "image": "le_blues_racines_de_toute_la_musique_moderne",
     "ratio": "16:9",
-    "hook": "Nutt puuvillapõldudel ja kogu moodsal muusikal on juur."
+    "hook": "Üks hüüe puuvillapõldudel annab kogu moodsale muusikale juure."
   },
   "sections": [
     {
@@ -18,30 +18,30 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Blues pole lihtsalt žanr. See on suure osa 20. sajandi lääne levimuusika maatriks. See sündis 19. sajandi lõpus **Mississippi** puuvillapõldude vaesuses kui afroameeriklaste vastupanu ja väljendus."
+          "text": "Bluus ei ole lihtsalt žanr. See on alusvorm, millest kasvas välja suur osa 20. sajandi lääne populaarmuusikast. Bluus sünnib 19. sajandi lõpus **Mississippi** puuvillapõldude vaesuses afroameeriklaste vastupanu ja eneseväljendusena."
         },
         {
           "type": "paragraph",
-          "text": "Jazzist rock'n'rollini, soulist hip-hopini, selle struktuurid ja emotsioon ärritavad siiani meie kõrvu. Bluusi mõistmine tähendab naasmist kunstiks muudetud hüüatuse allika juurde."
+          "text": "Džässist rock'n'rollini, soulist hip-hopini: bluusi struktuurid ja tunne kõlavad meie kõrvus tänini. Bluusi mõistmine tähendab minna tagasi allikani, kus hüüdest sai kunst."
         }
       ]
     },
     {
       "id": "course_140_le_blues_racines_de_toute_la_musique_mod_p1",
-      "title": "Puuvillapõllud, hollerid ja 12 mõõtu",
+      "title": "Puuvillapõllud, põlluhõiked ja 12 takti",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**1870** ja **1890** vahel, [[Sügav lõuna]]-s, mida iseloomustab eraldatus ja jagajate viletsus, sünteesib bluus Aafrika suulisi traditsioone. [[põlluhüüdjad]] (üksi tööhüüded) ja [[Töölaulud]] (pingutuste sünkroniseerimiseks ajastatud laulud) kohtuvad [[spirituaalid]], usulaulud, mis mõnikord kannavad vabaduse sõnumeid."
+          "text": "Aastatel **1870**-**1890** on [[Sügav Lõuna]] segregatsiooni ja poolrentnike viletsuse küüsis. Seal sulatab bluus kokku Aafrika suulisi traditsioone. Kokku saavad [[põlluhõiked]] oma üksildaste tööhüüetega, [[töölaulud]] (rütmilised laulud, mis ühtlustavad pingutust) ja [[spirituaalid]], vaimulikud laulud, mis kannavad mõnikord vabaduse sõnumit."
         },
         {
           "type": "paragraph",
-          "text": "Suurim uuendus: [[12-barne struktuur]], kolmest akordist koosnev ruudustik, mis toimib improvisatsiooni lõuendina. [[Sinised noodid]], käänulised noodid, jäljendavad hääle valu. Kitarr, sageli [[Pudelikael]] (klaasist või metalltoru libises üle keelte), dialoogid lauljaga."
+          "text": "Suurim uuendus on [[12-taktiline struktuur]]: kolmest akordist koosnev skeem, mis on improvisatsiooni aluseks. Valust murduvat häält jäljendavad [[bluusinoodid]] ehk painutatud noodid. Kitarr vestleb lauljaga ja keeltel libiseb sageli [[pudelikael]] (klaas- või metalltoru)."
         },
         {
           "type": "funFact",
-          "text": "Laulusõnades kodeeris sõna \"rattur\" sageli väljavalitu, et käsitleda tabuteemasid teadmata publiku ees."
+          "text": "Laulusõnades tähistas sõna „rider“ (ratsanik) sageli armukest. Nii sai tabuteemadel laulda ka asjasse pühendamata publiku ees."
         }
       ]
     },
@@ -52,23 +52,23 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Mississippi delta, Edit**, mis asub Memphise ja Vicksburgi vahel, on **Delta bluesi** häll, selle žanri toores vorm. **Robert Johnson** (**1911**-**1938**) mängib rändmuusikut: ainult **29** salvestused, tohutu mõju. Tema [[sõrmede valimine]] kohtleb kitarri nagu miniatuurset orkestrit."
+          "text": "**Mississippi delta** Memphise ja Vicksburgi vahel on **deltabluusi** häll: see on žanri toorem vorm. **Robert Johnson** (**1911**-**1938**) on rändmuusiku võrdkuju: ainult **29** salvestust, kuid tohutu mõju. Tema tehnika on [[sõrmedega näppimine]]: ta kohtleb kitarri nagu miniatuurset orkestrit."
         },
         {
           "type": "image",
           "asset": "mississippi_delta_blues_cotton_fields",
           "ratio": "4:3",
-          "caption": "Mississippi delta: maaelu bluusi häll."
+          "caption": "Mississippi delta: maabluusi häll."
         },
         {
           "type": "image",
           "asset": "robert_johnson_blues_guitarist_crossroads",
           "ratio": "4:3",
-          "caption": "Robert Johnson: 29 tiitlit, igavene legend."
+          "caption": "Robert Johnson: 29 lugu, igavene legend."
         },
         {
           "type": "paragraph",
-          "text": "Legend räägib, et ta müüs oma hinge kuradile [[ristteel]] (ristteel) vastutasuks oma meisterlikkuse eest. Bluusi nimetati siis sageli \"kuradimuusikaks\", võrreldes kirikulauludega. Johnson suri noores eas mürgistusse. *Cross Road Blues* ja *Sweet Home Chicago* on muutumas standarditeks."
+          "text": "Legendi järgi sõlmis ta kuradiga tehingu kohas, mille nimi on [[risttee]]: ta müüs oma hinge, et saada vastu meisterlikkus. Bluusi kutsuti tollal sageli „kuradi muusikaks“, vastandina kirikulauludele. Johnson sureb noorelt mürgitatuna. *Cross Road Blues* ja *Sweet Home Chicago* saavad standarditeks."
         },
         {
           "type": "funFact",
@@ -78,12 +78,12 @@
     },
     {
       "id": "course_140_le_blues_racines_de_toute_la_musique_mod_p3",
-      "title": "Chicago: bluus läheb elektriliseks",
+      "title": "Chicago: bluus muutub elektriliseks",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Aastatel **1940** viis suur ränne miljoneid afroameeriklasi tööstuslikule põhjaosale. **Chicagos**-is elektriseerub bluus, et summutada tehaste müra. **Muddy Waters** ja **Hulgav hunt** esitavad elektrikitarri, bassi ja trumme."
+          "text": "**1940**. aastatel viib suur ränne miljoneid afroameeriklasi tööstuslikku põhja. **Chicagos** muutub bluus elektriliseks, et tehaste mürast üle kosta. **Muddy Waters** ja **Howlin' Wolf** teevad standardiks elektrikitarri, bassi ja trummid."
         },
         {
           "type": "image",
@@ -93,30 +93,30 @@
         },
         {
           "type": "paragraph",
-          "text": "See elektrifitseerimine viib rock'n'rollini. **Chuck Berry** ja **Bo Diddley** kiirendavad tempot. 1960. aastatel eksportisid **Rolling Stones** (nimi võetud Muddy Watersi laulust) ja **Led Zeppelin** need juured uuesti valgele publikule, sageli ilma algsete loojate varanduseta."
+          "text": "See elektrifitseerimine viib rock'n'rollini. **Chuck Berry** ja **Bo Diddley** kiirendavad tempot. 1960. aastatel viivad **Rolling Stones** (nimi on võetud Muddy Watersi loost) ja **Led Zeppelin** need juured tagasi valge publikuni, sageli ilma et algsed loojad sellest rikkaks saaksid."
         },
         {
           "type": "funFact",
-          "text": "Muddy Watersi \"avastas\" muusikateadlane Alan Lomax, kui ta veel puuvillaistanduses traktoriga sõitis."
+          "text": "Muddy Watersi „avastas“ muusikateadlane Alan Lomax ajal, mil Waters sõitis veel puuvillaistanduses traktoriga."
         }
       ]
     },
     {
       "id": "course_140_le_blues_racines_de_toute_la_musique_mod_p4",
-      "title": "B.B. Kingist proovivõtmiseni",
+      "title": "B.B. Kingist sämplimiseni",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Jazz laenab sealt struktuure ja improvisatsiooni. Soul ja R&B hoiavad ta hääle vistseraalsena. Hip-hop taaskasutab oma pärandit vanade vinüülide [[Proovide võtmine]] kaudu. **B.B. kuningas** populariseeris meloodilise kitarrisoolo. Rohkem kui ajalooline stiil on bluus endiselt keel kaotatud armastusest, ebaõiglusest ja lootusest."
+          "text": "Džäss laenab bluusilt struktuure ja improvisatsiooni. Soul ja R&B säilitavad selle sügavalt hingest tuleva hääle. Hip-hop taaskasutab bluusi pärandit ja selle tööriist on [[sämplimine]] vanadelt vinüülplaatidelt. **B.B. King** populariseerib meloodilise kitarrisoolo. Bluus on rohkem kui ajalooline stiil: see on endiselt keel, mis räägib kaotatud armastusest, ebaõiglusest ja lootusest."
         },
         {
           "type": "timeline",
           "events": [
             {
               "date": "1870-1890",
-              "title": "Sünd sügavas lõunas",
-              "detail": "Hollerid, spirituaalid ja ruudustik 12 mõõdus."
+              "title": "Sünd Sügavas Lõunas",
+              "detail": "Põlluhõiked, spirituaalid ja 12-taktiline struktuur."
             },
             {
               "date": "1930. aastad",
@@ -126,7 +126,7 @@
             {
               "date": "1940.-1950. aastad",
               "title": "Elektriline Chicago",
-              "detail": "Muddy Waters sillutab teed rockile."
+              "detail": "Muddy Waters sillutab teed rokile."
             },
             {
               "date": "1960. aastad",
@@ -137,7 +137,7 @@
         },
         {
           "type": "takeaway",
-          "text": "Mississippi mustanahaliste kogukondade kannatustest sündinud bluus andis maailmale 12 takti edetabeli ning Chicago kaudu roki ja palju muud."
+          "text": "Mississippi mustanahaliste kogukondade kannatustest sündinud bluus andis maailmale 12-taktilise struktuuri ning Chicago kaudu roki ja palju muudki."
         }
       ]
     }

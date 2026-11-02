@@ -4,7 +4,7 @@
   "subtitle": "Newton, 1687",
   "subject": "sciences",
   "subcategory": "Objavy, ktoré zmenili svet",
-  "description": "V roku 1687 Newton zverejnil jednoduchú a obrovskú myšlienku: tá istá sila spôsobí pád jablka a rotáciu Mesiaca. Tu je to, čo sa mení.",
+  "description": "V roku 1687 Newton zverejňuje jednoduchú, a pritom obrovskú myšlienku: tá istá sila spôsobuje pád jablka aj obeh Mesiaca. Pozri sa, čo to mení.",
   "hero": {
     "image": "la_theorie_de_la_gravitation_newton",
     "ratio": "16:9",
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Pred Newtonom sme už o planétach vedeli veľa vďaka **Galileo**, talianskemu fyzikovi zo 17. storočia, a **[[Johannes Kepler]]**, astronómovi, ktorý opísal eliptické dráhy. Chýbala však jasná súvislosť medzi tým, čo padá na Zem a čo sa točí na oblohe."
+          "text": "Pred Newtonom sa o planétach už vedelo veľa: zaslúžil sa o to **Galileo Galilei**, taliansky fyzik zo 17. storočia, aj **[[Johannes Kepler]]**, astronóm, ktorý opísal eliptické dráhy. Chýbala však jasná súvislosť medzi tým, čo padá na Zem, a tým, čo sa točí na oblohe."
         },
         {
           "type": "paragraph",
-          "text": "V **1687** **Isaac Newton** publikoval *[[Philosophiae Naturalis Principia Mathematica]]*, *Principia*, zakladajúce dielo klasickej fyziky. Tvrdí, že gravitácia je **univerzálna**: pôsobí všade rovnakým spôsobom."
+          "text": "V roku **1687** vydáva **Isaac Newton** dielo *[[Philosophiae Naturalis Principia Mathematica]]*, skrátene *Principia*, základný kameň klasickej fyziky. Tvrdí v ňom, že gravitácia je **univerzálna**: pôsobí všade a rovnako."
         }
       ]
     },
@@ -33,11 +33,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kepler opísal obežné dráhy planét s presnými zákonmi: obežné dráhy v **elipsa**, rovnaké plochy za rovnaký čas. Galileo študoval pád tiel. Prečo však planéty zostávajú na svojej trajektórii? Čo ich „ťahá“?"
+          "text": "Kepler opísal dráhy planét presnými zákonmi: dráhy majú tvar **elipsy** a za rovnaký čas opíšu rovnaké plochy. Galilei skúmal pád telies. Prečo však planéty ostávajú na svojej dráhe? Čo ich „ťahá“?"
         },
         {
           "type": "paragraph",
-          "text": "Newton odpovedá: **gravitačná príťažlivosť**, sila, ktorá priťahuje dve hmoty k sebe. Zem priťahuje Mesiac. Slnko priťahuje Zem. A pritiahnete aj kúsok Zeme... aj keď je malinká."
+          "text": "Newton odpovedá: je to **gravitačná príťažlivosť**, sila, ktorá k sebe priťahuje dve hmotné telesá. Zem priťahuje Mesiac. Slnko priťahuje Zem. A aj ty trošku priťahuješ Zem… hoci len nepatrne."
         }
       ]
     },
@@ -50,21 +50,21 @@
           "type": "image",
           "asset": "isaac_newton_apple_tree_woolsthorpe",
           "ratio": "4:3",
-          "caption": "Príbeh jablka je predovšetkým príbeh. Myšlienka je skutočná."
+          "caption": "Historka o jablku je skôr legenda. Myšlienka je však skutočná."
         },
         {
           "type": "paragraph",
-          "text": "Dve telesá sa navzájom priťahujú silou, ktorá sa zvyšuje s ich **hmotnosť**, množstvom hmoty, a klesá, keď sa vzďaľujú. Presnejšie: sila slabne so štvorcom **vzdialenosti**. Zdvojnásobenie vzdialenosti delí atrakciu štyrmi. Čím ďalej ste, tým rýchlejšie príťažlivosť slabne."
+          "text": "Dve telesá sa priťahujú silou, ktorá rastie s ich **hmotnosťou**, teda s množstvom hmoty, a klesá, keď sa od seba vzďaľujú. Presnejšie: sila slabne s **druhou mocninou vzdialenosti**. Pri dvojnásobnej vzdialenosti je príťažlivosť štyrikrát slabšia. Čím si ďalej, tým rýchlejšie príťažlivosť slabne."
         },
         {
           "type": "image",
           "asset": "planets_orbit_solar_system_gravity",
           "ratio": "16:9",
-          "caption": "Planéty neustále „padajú“ k Slnku... a chýbajú im: toto je dráha."
+          "caption": "Planéty neustále „padajú“ k Slnku… a minú ho: to je obežná dráha."
         },
         {
           "type": "funFact",
-          "text": "Mesiac neustále „padá“ k Zemi. Keďže má aj vysokú bočnú rýchlosť, namiesto nárazu sa točí."
+          "text": "Mesiac neustále „padá“ k Zemi. Keďže má aj veľkú bočnú rýchlosť, namiesto toho, aby do nej narazil, obieha okolo nej."
         }
       ]
     },
@@ -75,26 +75,26 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Newton tiež dáva tri **zákony pohybu**. Stručne povedané: objekt si zachováva svoju rýchlosť, ak nepôsobí žiadna sila, princíp **zotrvačnosť**; sila mení rýchlosť; každá akcia má opačnú reakciu."
+          "text": "Newton formuluje aj tri **zákony pohybu**. Stručne: teleso si zachováva svoju rýchlosť, ak naň nepôsobí žiadna sila, to je princíp **zotrvačnosti**; sila mení rýchlosť; každá akcia vyvolá opačnú reakciu."
         },
         {
           "type": "paragraph",
-          "text": "Pomocou toho môžeme vypočítať trajektórie, **príliv a odliv**, vzostupy a zostupy oceánov pod vplyvom Mesiaca a Slnka a obežné dráhy. Fyzika sa stáva nástrojom predikcie."
+          "text": "Vďaka nim sa dajú vypočítať trajektórie, **príliv a odliv**, teda stúpanie a klesanie hladiny oceánov pod vplyvom Mesiaca a Slnka, aj obežné dráhy. Fyzika sa stáva nástrojom na predpovedanie."
         }
       ]
     },
     {
       "id": "course_55_la_theorie_de_la_gravitation_newton_1687_p4",
-      "title": "Silný...ale nie posledné slovo",
+      "title": "Mocná teória… no nie posledné slovo",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "O dve storočia neskôr by **[[Albert Einstein]]** opravil Newtona pre extrémne prípady, veľmi vysoké rýchlosti a veľmi silné gravitácie, pomocou [[Relativistická gravitácia (Einstein)]]. Gravitácia sa potom stáva zakrivením časopriestoru a už nie neviditeľnou silou. Ale na vypustenie rakety alebo pochopenie prílivu a odlivu zostáva Newton vynikajúci."
+          "text": "O dve storočia neskôr opravil **[[Albert Einstein]]** Newtona pre extrémne prípady, veľmi vysoké rýchlosti a veľmi silnú gravitáciu, teóriou známou ako [[Relativistická gravitácia (Einstein)]]. Gravitácia potom už nie je neviditeľná sila, ale zakrivenie časopriestoru. No na vypustenie rakety alebo pochopenie prílivu a odlivu Newton stále výborne poslúži."
         },
         {
           "type": "takeaway",
-          "text": "Newton zjednocuje nebo a Zem: gravitácia priťahuje masy všade. Je to jedna z najväčších vedeckých syntéz v histórii."
+          "text": "Newton spája nebo a Zem: gravitácia všade priťahuje hmotné telesá. Je to jedna z najväčších vedeckých syntéz v dejinách."
         }
       ]
     }

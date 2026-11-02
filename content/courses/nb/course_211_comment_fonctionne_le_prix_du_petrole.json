@@ -1,14 +1,14 @@
 {
   "id": "course_211_comment_fonctionne_le_prix_du_petrole",
   "title": "Hvem fastsetter oljeprisen?",
-  "subtitle": "Nerven til verdensøkonomien",
+  "subtitle": "Nerven i verdensøkonomien",
   "subject": "comprendreLeMonde",
   "subcategory": "Økonomi og samfunn",
-  "description": "Prisen på olje er ikke satt av en enkelt selger. Den er født fra en **dragkamp** mellom produserende land, finansmarkeder og plutselige kriser, noen ganger til det absurde.",
+  "description": "Oljeprisen fastsettes ikke av én enkelt selger. Den oppstår i en **dragkamp** mellom produsentland, finansmarkeder og plutselige kriser, noen ganger helt til det absurde.",
   "hero": {
     "image": "comment_fonctionne_le_prix_du_petrole",
     "ratio": "16:9",
-    "hook": "I 2020 betalte oljeselgerne sine kjøpere for å bli kvitt dem. Her er hvorfor."
+    "hook": "I 2020 betalte oljeselgere kjøperne for å bli kvitt oljen. Her er forklaringen."
   },
   "sections": [
     {
@@ -18,26 +18,26 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Olje kalles noen ganger «økonomiens blod». Prisen påvirker inflasjonen, prisen på bensin og til og med stabiliteten i visse land. Det er imidlertid ingen som setter denne prisen med et stempel."
+          "text": "Olje blir noen ganger kalt «økonomiens blod». Prisen påvirker inflasjonen, bensinprisen og til og med stabiliteten i enkelte land. Likevel er det ingen som bestemmer denne prisen med et pennestrøk."
         },
         {
           "type": "paragraph",
-          "text": "Det oppstår fra et møte mellom tre krefter: landene som utvinner oljen, finansmarkedene som handler med den før den i det hele tatt forlater bakken, og krisene som får alle til å få panikk. Dra til Arabias ørkener, Texas-slettene og Chicago-skjermene."
+          "text": "Prisen oppstår der tre krefter møtes: landene som utvinner oljen, finansmarkedene som handler med den før den i det hele tatt er pumpet opp, og krisene som får alle til å gå i panikk. Bli med til ørkenene i Arabia, slettene i Texas og skjermene i Chicago."
         }
       ]
     },
     {
       "id": "course_211_comment_fonctionne_le_prix_du_petrole_p1",
-      "title": "OPEC versus amerikansk skifer: kampen om forsyning",
+      "title": "OPEC mot amerikansk skiferolje: kampen om tilbudet",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Oljemarkedet har en særegenhet: På kort sikt faller nesten ikke etterspørselen når prisene stiger. Biler, fabrikker og fly kan ikke endre energi over natten. Økonomer kaller dette etterspørselens **uelastisitet**."
+          "text": "Oljemarkedet har en særegenhet: på kort sikt faller etterspørselen nesten ikke når prisene stiger. Biler, fabrikker og fly kan ikke bytte energikilde over natten. Økonomer kaller dette etterspørselens **uelastisitet**."
         },
         {
           "type": "paragraph",
-          "text": "Siden 1960 har en gruppe produserende land organisert seg for å påvirke dette markedet: [[OPEC]]. Ved å avtale produksjonskvoter søker medlemmene å opprettholde høye priser. Siden 2016 har Russland sluttet seg til alliansen og dannet OPEC+. Til sammen kontrollerer disse landene rundt 40 % av verdens olje."
+          "text": "Siden 1960 har en gruppe produsentland samarbeidet for å påvirke dette markedet: [[OPEC]]. Ved å bli enige om produksjonskvoter prøver medlemmene å holde prisene høye. Siden 2016 har Russland vært med i alliansen, som dermed ble OPEC+. Til sammen kontrollerer disse landene rundt 40 % av verdens olje."
         },
         {
           "type": "funFact",
@@ -45,18 +45,18 @@
         },
         {
           "type": "paragraph",
-          "text": "Men denne makten har blitt ristet opp. Takket være en teknikk kalt hydraulisk frakturering ble USA verdens største oljeprodusent på ti år, og gikk forbi Saudi-Arabia. Dette nye tilbudet, som er raskere å justere, har gjort markedet mer konkurransedyktig og vanskeligere for OPEC+ å kontrollere."
+          "text": "Men denne makten har fått seg en knekk. Takket være en teknikk som kalles hydraulisk frakturering, ble USA på ti år verdens største oljeprodusent, forbi Saudi-Arabia. Dette nye tilbudet, som raskere kan justeres, har gjort markedet mer konkurranseutsatt og vanskeligere for OPEC+ å kontrollere."
         }
       ]
     },
     {
       "id": "course_211_comment_fonctionne_le_prix_du_petrole_p2",
-      "title": "\"Papir\" olje: når finans blir involvert",
+      "title": "«Papirolje»: når finansen blander seg inn",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Utover de faktiske fatene som leveres med skip eller rørledning, handles olje også på finansmarkedene. De fleste transaksjoner går gjennom et futuresmarked: vi kjøper et fat i dag som bare vil bli levert om én, tre eller seks måneder."
+          "text": "I tillegg til de fysiske fatene som fraktes med skip eller rørledning, handles olje også på finansmarkedene. De fleste handler går gjennom et terminmarked: der kjøper man i dag et fat som først blir levert om én, tre eller seks måneder."
         },
         {
           "type": "image",
@@ -66,7 +66,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Banker og hedgefond kjøper og selger disse kontraktene uten noen gang å ønske å røre et eneste fat: de satser rett og slett på om prisene vil stige eller falle. Dette bringer penger til markedet, men gjør også prisene mer nervøse. To priser tjener som referanse i verden: [[Brent]], olje fra Nordsjøen, og WTI, olje fra Texas. Gapet mellom de to gjenspeiler forskjeller i kvalitet og transport."
+          "text": "Banker og hedgefond kjøper og selger disse kontraktene uten noen gang å ville røre et eneste fat: de vedder rett og slett på at prisene skal stige eller falle. Det tilfører markedet penger, men gjør også prisene mer urolige. To priser brukes som referanse i verden: [[Brent]], olje fra Nordsjøen, og WTI, olje fra Texas. Forskjellen mellom dem skyldes ulik kvalitet og transport."
         }
       ]
     },
@@ -77,19 +77,19 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Oljemarkedet opererer i brutale sykluser. Når prisene stiger over lang tid, investerer produsentene i dyre forekomster, noe som til slutt skaper et overtilbud. Når prisene forblir lave, skjer det motsatte: vi utforsker mindre, noe som forbereder seg på neste mangel."
+          "text": "Oljemarkedet går i brutale sykluser. Når prisene stiger lenge, investerer produsentene i dyre forekomster, og det skaper etter hvert et overtilbud. Når prisene holder seg lave, skjer det motsatte: man leter mindre, og det legger grunnlaget for neste mangel."
         },
         {
           "type": "paragraph",
-          "text": "Covid-19-krisen har vist dette spektakulært. I april 2020 stoppet den globale økonomien plutselig: ingen fløy eller kjørte, men brønnene fortsatte å produsere. Lagertankene var fylt til randen. Prisen på WTI falt deretter til minus $37: selgere betalte kjøperne sine for å tømme aksjene."
+          "text": "Covid-19-krisen viste dette på spektakulært vis. I april 2020 stoppet verdensøkonomien brått: ingen fløy eller kjørte bil lenger, men brønnene fortsatte å produsere. Lagertankene ble fylt til randen. Prisen på WTI falt da til minus 37 dollar: selgere betalte kjøperne for å ta lagrene fra dem."
         },
         {
           "type": "paragraph",
-          "text": "Motsatt, i 2022, vakte Russlands invasjon av Ukraina frykt for mangel: Russland som den nest største eksportøren i verden, oversteg Brent $130 på noen få uker. Olje forblir derfor et nervøst barometer for verdens spenninger."
+          "text": "I 2022 skjedde det motsatte: Russlands invasjon av Ukraina vakte frykt for mangel, og siden Russland er verdens nest største eksportør, steg Brent over 130 dollar på noen få uker. Olje er altså fortsatt et nervøst barometer for spenningene i verden."
         },
         {
           "type": "funFact",
-          "text": "Det går med rundt 7 liter olje for å lage en enkelt smarttelefon, mellom utvinning av materialer, plastdeler og transport."
+          "text": "Det går med rundt 7 liter olje til å lage én enkelt smarttelefon, medregnet utvinning av materialer, plastdeler og transport."
         }
       ]
     },
@@ -100,15 +100,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "På lang sikt står olje overfor en ny utfordring: overgangen til ren energi. Hvis elbiler reduserer den globale etterspørselen, kan produserende land delta i en priskrig for å selge reservene sine før de mister sin verdi."
+          "text": "På lang sikt står olje overfor en ny utfordring: overgangen til ren energi. Hvis elbiler reduserer den globale etterspørselen, kan produsentlandene gå til priskrig for å selge reservene sine før de mister verdi."
         },
         {
           "type": "paragraph",
-          "text": "Et paradoks truer imidlertid markedet: Når investorer forlater nye oljeprosjekter av klimamessige årsaker, kan tilbudet falle raskere enn etterspørselen, og forårsake nye prisstigninger. Olje vil ikke forsvinne plutselig: den er fortsatt viktig for plast, gjødsel og tung transport som luftfart."
+          "text": "Et paradoks truer likevel markedet: fordi investorer vender ryggen til nye oljeprosjekter av klimahensyn, kan tilbudet falle raskere enn etterspørselen og gi nye prishopp. Olje vil ikke forsvinne over natten: den er fortsatt uunnværlig for plast, gjødsel og tungtransport som luftfart."
         },
         {
           "type": "takeaway",
-          "text": "Oljeprisen er et resultat av en strid mellom OPEC+, amerikansk skiferproduksjon og spekulative finansmarkeder. Resultat: priser som kan kollapse eller eksplodere ved det minste geopolitiske sjokk."
+          "text": "Oljeprisen er resultatet av en dragkamp mellom OPEC+, amerikansk skiferoljeproduksjon og spekulative finansmarkeder. Resultatet: priser som kan stupe eller eksplodere ved det minste geopolitiske sjokk."
         }
       ]
     }

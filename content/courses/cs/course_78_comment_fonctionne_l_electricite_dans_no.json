@@ -4,7 +4,7 @@
   "subtitle": "Nervy a ionty",
   "subject": "sciences",
   "subcategory": "Země a vesmír",
-  "description": "Myslet, tlouct srdcem, zvednout paži: to všechno nejdřív proudí jako živá elektřina, nesená ne elektrony, ale ionty.",
+  "description": "Myšlenka, tlukot srdce, zvednutá paže: to všechno nejdřív proudí jako živá elektřina. Nenesou ji elektrony, ale ionty.",
   "hero": {
     "image": "comment_fonctionne_l_electricite_dans_notre_corps",
     "ratio": "16:9",
@@ -18,7 +18,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "V zásuvce na zdi jsou proud **elektrony**, které obíhají. V těle je to jinak: jsou to **ionty**, nabité atomy, které do buněk vcházejí a z nich vycházejí. Ten tok tvoří signály, které dávají myslet, tlouct srdce a stahovat sval."
+          "text": "V zásuvce ve zdi tvoří proud **elektrony**, které se pohybují. V těle je to jinak: proud tvoří **ionty**, tedy nabité atomy, které vstupují do buněk a vystupují z nich. Tento tok vytváří signály, které umožňují myšlení, tlukot srdce i stah svalu."
         },
         {
           "type": "paragraph",
@@ -33,7 +33,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Neuron** v klidu neposílá žádnou zprávu, ale „nabíjí se”. Jeho membrána oddělí vnitřek a vnějšek buňky. Pomocí [[sodíkovo-draselné pumpy]] drží [[odpočinkový potenciál]] asi **-70 milivoltů**: vnitřek je zápornější než vnějšek."
+          "text": "**Neuron** v klidu neposílá žádnou zprávu, ale „nabíjí se“. Jeho membrána odděluje vnitřek buňky od vnějšku. Díky tomu, že pracují [[sodno-draselné pumpy]], udržuje [[klidový potenciál]] asi **-70 milivoltů**: uvnitř je náboj zápornější než venku."
         },
         {
           "type": "image",
@@ -43,11 +43,11 @@
         },
         {
           "type": "paragraph",
-          "text": "Když přijde podnět, kanály se otevřou. Sodík naráz vejde. Polarita se obrátí: je to [[akční potenciál]], signál všechno-nebo-nic, který letí podél axonu, někdy i metr. Jako elektrická vlna."
+          "text": "Když přijde podnět, otevřou se kanály. Dovnitř naráz vtrhne sodík. Polarita se obrátí: vzniká [[akční potenciál]], signál typu všechno, nebo nic, který se žene podél axonu, někdy až metr daleko. Jako elektrická vlna."
         },
         {
           "type": "funFact",
-          "text": "Bdělý mozek vyrobí asi **20 wattů**, dost na malou LED. Přesto spálí skoro **20%** kalorií těla."
+          "text": "Bdělý mozek má výkon asi **20 wattů**, to stačí na malou LED diodu. Přesto spotřebuje skoro **20%** kalorií celého těla."
         }
       ]
     },
@@ -58,15 +58,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Neurony se vlastně nedotýkají. Mezi nimi je drobná propast: **synapse**. Elektrický signál ji přeskočit nemůže. Tak konec axonu uvolní [[neurotransmitery]], poselské molekuly jako acetylcholin nebo [[glutamát]]."
+          "text": "Neurony se ve skutečnosti nedotýkají. Mezi nimi je nepatrná mezera: **synapse**. Elektrický signál ji přeskočit nedokáže. Proto konec axonu uvolní [[neurotransmitery]], molekuly, které nesou zprávu, jako acetylcholin nebo [[glutamát]]."
         },
         {
           "type": "paragraph",
-          "text": "Ti posli se na další neuron přichytí jako klíč do zámku. Podle zprávy budí, nebo tlumí. Tisíce takových rozhodnutí naráz tvoří samotnou myšlenku."
+          "text": "Tito poslové se navážou na další neuron jako klíč do zámku. Podle zprávy ho buď vybudí, nebo utlumí. Tisíce takových současných rozhodnutí tvoří myšlení."
         },
         {
           "type": "funFact",
-          "text": "Některé nervové signály jedou **120 m/s** (víc než **430 km/h**). Dost na to, abys na spálený prst na noze zareagoval ve zlomku sekundy."
+          "text": "Některé nervové signály se šíří rychlostí **120 m/s** (víc než **430 km/h**). To stačí, abys na popálený prst u nohy zareagoval ve zlomku sekundy."
         }
       ]
     },
@@ -77,34 +77,34 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Srdce na každý úder nečeká žádný rozkaz z mozku. V pravé síni **sinusový uzel** vyrábí vlastní impulzy, v klidu asi **60 až 100** za minutu. Signál se šíří, stáhne nejdřív síně, pak komory."
+          "text": "Srdce nečeká u každého úderu na povel z mozku. V pravé síni vytváří **sinusový uzel** vlastní impulzy, v klidu asi **60 až 100** za minutu. Signál se šíří a stáhne nejdřív síně, pak komory."
         },
         {
           "type": "paragraph",
-          "text": "Ta aktivita je dost silná, aby se četla na kůži: je to **elektrokardiogram (EKG)**. Když se rytmus rozhází, říká se tomu **arytmie**. Srdce pak bije neuspořádaně a špatně pumpuje."
+          "text": "Tato aktivita je tak silná, že se dá snímat z kůže: to je **elektrokardiogram (EKG)**. Když se rytmus rozhází, mluví se o **arytmii**. Srdce pak bije nepravidelně a špatně pumpuje."
         },
         {
           "type": "funFact",
-          "text": "Elektrický úhoř používá stejný princip vzrušivých buněk, ale v sérii: až **600 voltů**, dost na ochromení kořisti."
+          "text": "Elektrický úhoř využívá stejný princip dráždivých buněk, jen zapojených za sebou: až **600 voltů**, dost na to, aby ochromil kořist."
         }
       ]
     },
     {
       "id": "course_78_comment_fonctionne_l_electricite_dans_no_p4",
-      "title": "Od úmyslného gesta k defibrilátoru",
+      "title": "Od vědomého pohybu k defibrilátoru",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Abys zvedl paži nahoru, akční potenciál sjede až ke svalu. Acetylcholin spustí místní elektrickou vlnu a pak uvolnění vápníku. Bílkoviny svalu sklouznou jedna po druhé: stah."
+          "text": "Když chceš zvednout paži, sjede akční potenciál až ke svalu. Acetylcholin spustí místní elektrickou vlnu a pak uvolnění vápníku. Bílkoviny ve svalu po sobě sklouznou: sval se stáhne."
         },
         {
           "type": "paragraph",
-          "text": "**Defibrilace** použije stejný princip naruby: vnější šok všechny buňky „vynuluje”, aby sinusový uzel znovu chytil tempo. Bionické protézy ty slabé signály taky chytají a řídí umělou ruku pacienta."
+          "text": "**Defibrilace** využívá stejný princip obráceně: vnější výboj všechny buňky „vynuluje“, aby sinusový uzel znovu převzal rytmus. Bionické protézy tyto slabé signály také zachycují a ovládají jimi umělou ruku."
         },
         {
           "type": "takeaway",
-          "text": "Živé mluví tokem iontů a akčními potenciály. Myšlenka, srdce i svaly sdílejí tentýž elektrický jazyk."
+          "text": "Živé organismy mluví jazykem toků iontů a akčních potenciálů. Myšlení, srdce i svaly sdílejí tentýž elektrický jazyk."
         }
       ]
     }

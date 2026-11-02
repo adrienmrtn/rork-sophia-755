@@ -9,7 +9,7 @@
   "hero": {
     "image": "tintagel_castle_ruins_cornwall_coast",
     "ratio": "4:3",
-    "hook": "Historien giver os en krig; legenden gør den til en konge."
+    "hook": "Historien giver os en krig, og legenden gør en konge ud af den."
   },
   "sections": [
     {
@@ -55,11 +55,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Gildas beskriver **Ambrosius** som arving til en fornem romersk-britisk slægt, hvis forældre blev dræbt i volden, og som en af de få, der overlevede katastrofen. De spredte britiske styrker samler sig om ham og vinder en første sejr. Derefter trækker krigen ud i årevis, med skiftevis britiske og saksiske fremgange, helt frem til Badon."
+          "text": "Gildas beskriver **Ambrosius** som arving til en fornem romersk-britisk slægt: hans forældre blev dræbt i volden, og han er en af de få, der overlevede katastrofen. De spredte britiske styrker samler sig om ham og vinder en første sejr. Derefter trækker krigen ud i årevis, med skiftevis britiske og saksiske sejre, helt frem til Badon."
         },
         {
           "type": "paragraph",
-          "text": "Gildas siger aldrig, om det er Ambrosius, der fører an ved Badon, eller om en anden har overtaget. Senere forfattere forbinder ham alligevel med Arthur, men intet i de ældste vidnesbyrd gør dem til samme mand. Han er blot en **tillokkende kandidat** for legenden: en anset leder fra den rette tid, knyttet til en berømt sejr, som Gildas ikke tilskriver nogen bestemt."
+          "text": "Gildas siger aldrig, om det er Ambrosius, der fører an ved Badon, eller om en anden har overtaget. Senere forfattere forbinder ham alligevel med Arthur, men intet i de ældste vidnesbyrd gør dem til samme mand. Han er blot en **fristende kandidat** for legenden: en anset leder fra den rette tid, knyttet til en berømt sejr, som Gildas ikke tilskriver nogen bestemt."
         }
       ]
     },
@@ -74,11 +74,11 @@
         },
         {
           "type": "paragraph",
-          "text": "Intet Camelot. Intet rundbord. Intet sværd i stenen. Denne Arthur er krigsleder, ikke monark, og står Ambrosius nærmere end den konge, vi forestiller os i dag. Tidsafstanden vejer tungt: Gildas, der skrev langt tættere på begivenhederne, nævner ham aldrig. *Historia Brittonum* kommer **tre hundrede år** senere, præcis den slags afstand, der gør en historie svær at tro på."
+          "text": "Intet Camelot. Intet Runde Bord. Intet sværd i stenen. Denne Arthur er krigsleder, ikke monark, og står Ambrosius nærmere end den konge, man forestiller sig i dag. Tidsafstanden vejer tungt: Gildas, der skrev langt tættere på begivenhederne, nævner ham aldrig. *Historia Brittonum* kommer **tre hundrede år** senere, præcis den slags afstand, der gør en historie svær at tro på."
         },
         {
           "type": "funFact",
-          "text": "Gralen, den søgen, de fleste forbinder med kong Arthur, findes ikke i nogen af de ældste kilder. Den kommer først ind i legenden århundreder senere, i hænderne på franske ridderromanforfattere, den samme tradition, der en dag skulle give os kokosnødderne, som erstatter heste hos Monty Python."
+          "text": "Gralen, den søgen, man oftest forbinder med kong Arthur, findes ikke i nogen af de ældste kilder. Den kommer først ind i legenden århundreder senere, hos franske ridderromanforfattere, den samme tradition, der en dag skulle give os kokosnødderne, som erstatter heste hos Monty Python."
         }
       ]
     },
@@ -89,17 +89,17 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Britannien har brug for en helt, så den bliver skabt, og tidspunktet siger alt. [[Geoffrey af Monmouth]] skriver om sin kronede Arthur, en rigtig konge, i **1100-tallet**, få årtier efter [[normannernes erobring]]. Englands nye herrer skal dengang bevise deres ret til en trone, de netop har taget med magt."
+          "text": "Britannien har brug for en helt, så det skaber sig en, og tidspunktet forklarer hvorfor. [[Geoffrey af Monmouth]] skriver om sin kronede Arthur, en rigtig konge, i **1100-tallet**, få årtier efter [[normannernes erobring]]. Englands nye herrer skal på det tidspunkt bevise deres ret til en trone, de netop har taget med magt."
         },
         {
           "type": "image",
           "asset": "king_arthur_enthroned_royal_ms_20_a_ii",
           "ratio": "5:4",
-          "caption": "Kong Arthur kæmper mod Mordred, en episode som Geoffrey af Monmouth allerede fortalte. Maleri af William Hatherell, begyndelsen af 1900-tallet."
+          "caption": "Kong Arthur kæmper mod Mordred, en episode, som allerede findes hos Geoffrey af Monmouth. Maleri af William Hatherell, begyndelsen af 1900-tallet."
         },
         {
           "type": "paragraph",
-          "text": "Arthur, en britisk konge fra før sakserne, sejrherre over angriberne og glorværdig hersker, giver det normanniske England den **gamle legitimitet**, som erobring alene ikke kan skaffe: en legendarisk forfader, som ingen ved magten skal stå til regnskab over for, og en guldalder, som deres eget styre kan påstå at genoprette. Sådan fungerer de fleste grundlæggende myter: en tynd tråd af fakta og et politisk behov, der er præcist nok til at forklare, hvilken helt der bliver skabt, og hvorfor."
+          "text": "Arthur, en britisk konge fra før sakserne, sejrherre over angriberne og glorværdig hersker, giver det normanniske England den **gamle legitimitet**, som erobring alene ikke kan skaffe: en legendarisk forfader, som ingen ved magten skal stå til regnskab over for, og en guldalder, som deres eget styre kan påstå at genoprette. Sådan fungerer de fleste grundlæggelsesmyter: en tynd tråd af fakta og et politisk behov, der er præcist nok til at forklare, hvilken helt der bliver skabt, og hvorfor."
         },
         {
           "type": "timeline",
@@ -127,7 +127,7 @@
             {
               "date": "1100-tallet",
               "title": "Geoffrey af Monmouth",
-              "detail": "Arthur bliver konge, efter normannernes erobring."
+              "detail": "Arthur bliver konge efter normannernes erobring."
             }
           ]
         },

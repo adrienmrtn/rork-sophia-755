@@ -4,7 +4,7 @@
   "subtitle": "Rostliny a energie",
   "subject": "sciences",
   "subcategory": "Země a vesmír",
-  "description": "Rostliny dělají něco mimořádného: vaří cukr ze světla, vody a vzduchu. A kyslík nám dají darem.",
+  "description": "Rostliny dělají něco mimořádného: vaří cukr ze světla, vody a vzduchu. A k tomu nám darují kyslík.",
   "hero": {
     "image": "la_photosynthese_expliquee_simplement",
     "ratio": "16:9",
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Představ si miniaturní továrnu v každém listu. Vezme tři banální suroviny: **sluneční světlo**, **vodu** z kořenů a **CO₂** ze vzduchu. Vyjde z ní **cukr** k růstu a odchází **kyslík** do vzduchu."
+          "text": "Představ si miniaturní továrnu v každém listu. Vezme tři obyčejné suroviny: **sluneční světlo**, **vodu** z kořenů a **CO₂** ze vzduchu. Vyrobí z nich **cukr**, díky kterému rostlina roste, a vypouští **kyslík**."
         },
         {
           "type": "paragraph",
-          "text": "Tomu kousku se říká **fotosyntéza**. Bez ní žádné lesy, žádný dýchatelný kyslík, skoro žádný složitý život na Zemi, jak ho známe."
+          "text": "Tomuhle kousku se říká **fotosyntéza**. Bez ní by nebyly lesy, dýchatelný kyslík ani skoro žádný složitý život na Zemi."
         }
       ]
     },
@@ -33,7 +33,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "V rostlinné buňce zelené organely, **chloroplasty**, hostí [[chlorofyl]]. Ten pigment chytá hlavně modré a červené světlo. Zelené odrazí: proto nám listy připadají zelené na pohled."
+          "text": "V rostlinné buňce sídlí [[chlorofyl]] v zelených organelách, **chloroplastech**. Tento pigment zachytává hlavně modrou a červenou složku světla. Zelenou odráží, a proto nám listy připadají zelené."
         },
         {
           "type": "image",
@@ -43,30 +43,30 @@
         },
         {
           "type": "paragraph",
-          "text": "Jednoduchá rovnice: CO₂ + voda + světlo → cukr + kyslík. Plyn vejde drobnými póry, [[průduchy]]. Voda stoupá z kořenů. Cukr se stane dřevem, plody, kořeny; kyslík odejde do vzduchu."
+          "text": "Jednoduchá rovnice: CO₂ + voda + světlo → cukr + kyslík. Plyn vstupuje drobnými póry, [[průduchy]]. Voda stoupá z kořenů. Z cukru se stává dřevo, plody a kořeny. Kyslík odchází do vzduchu."
         },
         {
           "type": "funFact",
-          "text": "Chlorofyl „odmítá” zelenou. Preferuje modrou a červenou, účinnější k vybuzení elektronů a nastartování energetického stroje."
+          "text": "Chlorofyl „odmítá“ zelenou. Dává přednost modré a červené, které líp vybudí jeho elektrony a nastartují energetický stroj."
         }
       ]
     },
     {
       "id": "course_75_la_photosynthese_expliquee_simplement_p2",
-      "title": "Dva časy: zachytit, pak vyrobit",
+      "title": "Dvě fáze: zachytit, pak vyrobit",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Nejdřív **světelná fáze**. Světlo rozbije molekuly vody. Kyslík unikne. Energie se uloží do dvou chemických „baterií”, **ATP** a **NADPH**."
+          "text": "Nejdřív **světelná fáze**. Světlo rozbije molekuly vody. Kyslík unikne. Energie se uloží do dvou chemických „baterií“, **ATP** a **NADPH**."
         },
         {
           "type": "paragraph",
-          "text": "Pak **fáze výroby**, [[Calvinův cyklus]], pojmenovaný po chemikovi **Melvinu Calvinovi**. Energií z baterií rostlina složí uhlík z CO₂ do glukózy. Přímé slunce v tom kroku nepotřebuje, ale závisí úplně na tom, co světlo vyrobilo předtím."
+          "text": "Pak přichází **fáze výroby**, [[Calvinův cyklus]], pojmenovaný po chemikovi **Melvinu Calvinovi**. S energií z baterií rostlina skládá uhlík z CO₂ do glukózy. Přímé slunce v tomto kroku nepotřebuje, ale zcela závisí na tom, co světlo vyrobilo předtím."
         },
         {
           "type": "funFact",
-          "text": "Aby sledoval cestu uhlíku v listu, Calvin použil radioaktivní izotopy z výzkumu atomové bomby. Nobelova cena roku **1961**."
+          "text": "Aby mohl sledovat cestu uhlíku v listu, použil Calvin radioaktivní izotopy z výzkumu atomové bomby. Nobelovu cenu dostal v roce **1961**."
         }
       ]
     },
@@ -77,15 +77,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Asi před **2,4 miliardy let** začaly fotosyntetické bakterie, **sinice**, chrlit kyslík do vzduchu ve velkém. Je to **velká oxidace**. Pro mnoho tehdejších organismů to byl jed."
+          "text": "Asi před **2,4 miliardy let** začaly fotosyntetické bakterie, **sinice**, ve velkém vypouštět kyslík. Říká se tomu **Velká oxidační událost**. Pro mnoho tehdejších organismů to byl jed."
         },
         {
           "type": "paragraph",
-          "text": "Pak kyslík dovolil ozonovou vrstvu a mnohem účinnější dýchání. Vzduch, který dýcháme, je v hrubých rysech „odpad” miliard let fotosyntézy rostlin a bakterií, nejen lesů."
+          "text": "Kyslík pak umožnil vznik ozonové vrstvy a mnohem účinnější dýchání. Vzduch, který dýcháme, je zhruba řečeno „odpad“ miliard let fotosyntézy."
         },
         {
           "type": "funFact",
-          "text": "Asi **polovina** pozemského kyslíku jde z oceánského fytoplanktonu, ne jen z lesů."
+          "text": "Asi **polovina** kyslíku na Zemi pochází z oceánského fytoplanktonu, ne jen z lesů."
         }
       ]
     },
@@ -96,15 +96,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "List přemění jen **1 až 3%** přijaté sluneční energie na biomasu. V měřítku planety to ale stačí krmit potravní řetězce a pohltit obrovské množství CO₂ ze vzduchu."
+          "text": "List přemění na biomasu jen **1 až 3%** sluneční energie, kterou přijme. V měřítku planety to ale stačí k tomu, aby uživil potravní řetězce a pohltil obrovské množství CO₂."
         },
         {
           "type": "paragraph",
-          "text": "Odtud zájem o lesy, oceány… a i o umělou fotosyntézu pro klima. Mořský plž *Elysia chlorotica* jde tak daleko, že „krade” chloroplasty řasám, aby chvíli žil ze sluneční energie jako rostlina."
+          "text": "Proto jsou pro klima tak důležité lesy, oceány… a dokonce i umělá fotosyntéza. Mořský plž *Elysia chlorotica* jde tak daleko, že řasám „krade“ chloroplasty, aby mohl chvíli žít ze sluneční energie."
         },
         {
           "type": "takeaway",
-          "text": "Fotosyntéza mění světlo, vodu a CO₂ v cukr a obnovuje kyslík. Je to sluneční kuchyně na základně skoro všeho života."
+          "text": "Fotosyntéza mění světlo, vodu a CO₂ v cukr a obnovuje kyslík. Je to sluneční kuchyně, na které stojí skoro veškerý život."
         }
       ]
     }

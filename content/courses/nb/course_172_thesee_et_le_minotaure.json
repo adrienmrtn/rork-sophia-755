@@ -4,11 +4,11 @@
   "subtitle": "Tråden, monsteret, seilene",
   "subject": "mythologie",
   "subcategory": "Greske helter",
-  "description": "Theseus dreper Minotauren ved å bruke Ariadnes tråd. Men han glemmer å bytte seil: faren Aegeus kaster seg i havet, som fortsatt bærer navnet hans.",
+  "description": "Thesevs dreper Minotauren ved hjelp av Ariadnes tråd. Men han glemmer å bytte seil: faren Aigevs kaster seg i havet, som fortsatt bærer navnet hans.",
   "hero": {
     "image": "thesee_et_le_minotaure",
     "ratio": "16:9",
-    "hook": "Et monster i en labyrint. En tråd å komme ut av. Glemte seil som døper et hav."
+    "hook": "Et monster i en labyrint. En tråd som viser veien ut. Glemte seil som gir navn til et hav."
   },
   "sections": [
     {
@@ -18,22 +18,22 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Theseus**, grunnleggerhelten i Athen, konfronterer **Minotaurus**, en skapning av halvt menneske, halvt okse gjemt i [[Labyrint]] på Kreta. Historien kombinerer mot, romantisk list og familietragedie."
+          "text": "**Thesevs**, Athens grunnleggerhelt, tar opp kampen mot **Minotauren**, et vesen som er halvt menneske og halvt okse, skjult i [[Labyrinten i Knossos på Kreta]]. Historien blander mot, list født av kjærlighet og en familietragedie."
         },
         {
           "type": "paragraph",
-          "text": "Ved å drepe monsteret frigjør Theseus Athen fra en blodig hyllest. Men en glemt detalj, svarte seil i stedet for hvite, vil koste faren hans livet og gi navnet hans til Egeerhavet."
+          "text": "Ved å drepe monsteret befrir Thesevs Athen fra en blodig tributt. Men en glemt detalj, svarte seil i stedet for hvite, skal koste faren hans livet og gi Egeerhavet navnet hans."
         }
       ]
     },
     {
       "id": "course_172_thesee_et_le_minotaure_p1",
-      "title": "Minotauren og Athens hyllest",
+      "title": "Minotauren og Athens tributt",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kong **Minos** av Kreta nekter å ofre en hvit okse til **Poseidon**, havets gud. For å ta hevn inspirerer Poseidon dronning **Pasiphaé** til en lidenskap for dyret. Minotauren er født. Minos gir oppfinneren [[Labyrint]] i oppdrag å bygge et fengsel uten utgang: Labyrinten."
+          "text": "Kong **Minos** på Kreta nekter å ofre en hvit okse til **Poseidon**, havets gud. Som hevn vekker Poseidon hos dronning **Pasifae** en lidenskap for dyret. Slik blir Minotauren født. Minos gir oppfinneren [[Daidalos]] i oppdrag å bygge et fengsel uten utgang: Labyrinten."
         },
         {
           "type": "image",
@@ -43,76 +43,76 @@
         },
         {
           "type": "paragraph",
-          "text": "Kreta dominerer da havet: en [[Thalassokrati]]. Etter en tapt krig, må Athen overlevere hvert niende år **syv unge menn og syv unge jenter** som mat til monsteret. På den tredje leveringen melder **Theseus**, sønn av kong **Egeerhavet**, seg frivillig."
+          "text": "Kreta hersker da over havet: et [[Thalassokrati]]. Etter en tapt krig må Athen hvert niende år sende **sju unge menn og sju unge kvinner** som føde til monsteret. Den tredje gangen melder **Thesevs**, sønn av kong **Aigevs**, seg frivillig."
         },
         {
           "type": "funFact",
-          "text": "Aegeus og Theseus er enige om et signal: **hvit** seiler hvis helten kommer tilbake i live, **svart seiler** hvis han er død. Denne detaljen vil avgjøre et drama."
+          "text": "Aigevs og Thesevs avtaler et signal: **hvite** seil hvis helten kommer levende tilbake, **svarte** seil hvis han er død. Denne detaljen skal utløse et drama."
         }
       ]
     },
     {
       "id": "course_172_thesee_et_le_minotaure_p2",
-      "title": "Brødsmuler",
+      "title": "Ariadnes tråd",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "På Kreta blir **Ariane**, datter av Minos, forelsket i Theseus. Hun vet at styrke ikke er nok i labyrinten. Ved hjelp av Daedalus gir hun ham en ullkule: [[Ariadnes tråd]]. Han fester den til inngangen og vikler av tråden mens han beveger seg fremover."
+          "text": "På Kreta blir **Ariadne**, datter av Minos, forelsket i Thesevs. Hun vet at styrke ikke er nok i Labyrinten. Med hjelp fra Daidalos gir hun ham et garnnøste: [[Ariadnes tråd]]. Han fester enden ved inngangen og ruller ut tråden mens han går innover."
         },
         {
           "type": "image",
           "asset": "ariadne_thread_theseus_labyrinth_painting",
           "ratio": "4:3",
-          "caption": "Ariadne gir Theseus tråden som vil redde livet hans."
+          "caption": "Ariadne gir Thesevs tråden som skal redde livet hans."
         },
         {
           "type": "paragraph",
-          "text": "Theseus dreper Minotauren, og spoler deretter tråden tilbake for å komme seg ut. Han flykter med de unge athenerne og Ariadne. Men på øya **Naxos** lar han henne sove. Noen sier at guden **Dionysos** ville ha henne som sin kone. Ariadne, desperat og deretter guddommeliggjort, mottar en gyllen krone som har blitt et stjernebilde."
+          "text": "Thesevs dreper Minotauren og spoler så tråden inn igjen for å komme ut. Han flykter med de unge athenerne og Ariadne. Men på øya **Naxos** forlater han henne mens hun sover. Noen sier at guden **Dionysos** ville ha henne til kone. Ariadne, først fortvilet og så guddommeliggjort, får en gullkrone som ble et stjernebilde."
         }
       ]
     },
     {
       "id": "course_172_thesee_et_le_minotaure_p3",
-      "title": "De svarte seilene til Cape Sounion",
+      "title": "De svarte seilene ved Kapp Sunion",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Returen skal være en feiring. Beruset av seier eller plaget av Ariadnes forlatte glemmer Theseus å heise de hvite seilene. Skipet nærmer seg Athen under svarte seil."
+          "text": "Hjemkomsten burde vært en fest. Beruset av seieren eller urolig fordi han har forlatt Ariadne, glemmer Thesevs å heise de hvite seilene. Skipet nærmer seg Athen med svarte seil."
         },
         {
           "type": "image",
           "asset": "cape_sounion_aegean_sea_cliff_sunset",
           "ratio": "4:3",
-          "caption": "Cape Sounion, hvorfra Aegeus så på sønnens retur."
+          "caption": "Kapp Sunion, der Aigevs speidet etter sønnen."
         },
         {
           "type": "paragraph",
-          "text": "På **Kapp Sounion** skanner den gamle kongen Aegeus horisonten. Han ser bare sorgens mørke. Overbevist om at sønnen er død, kaster han seg fra stupet. Havet har siden fått navnet: **Egeerhavet**. Theseus kommer til konge... og foreldreløs av sin egen uaktsomhet."
+          "text": "På **Kapp Sunion** speider den gamle kongen Aigevs mot horisonten. Han ser bare sorgens svarte farge. Han er overbevist om at sønnen er død, og kaster seg utfor klippen. Siden har havet båret navnet hans: **Egeerhavet**. Thesevs går i land som konge… og som farløs, på grunn av sin egen skjødesløshet."
         },
         {
           "type": "funFact",
-          "text": "«Theseus-skipet» har blitt et filosofisk paradoks: Hvis vi bytter ut alle plankene én etter én, er det fortsatt samme båt?"
+          "text": "«Thesevs' skip» har blitt et filosofisk paradoks: hvis man bytter ut alle plankene én etter én, er det fortsatt den samme båten?"
         }
       ]
     },
     {
       "id": "course_172_thesee_et_le_minotaure_p4",
-      "title": "Theseus, konge av Athen",
+      "title": "Thesevs, konge i Athen",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kronet blir Thesevs en organiserende konge. [[Synoecisme]] tilskrives ham: foreningen av byene Attika rundt Athen. Han etablerte [[Panathenaia]], store byfestivaler. Kan kombineres med høyre."
+          "text": "Etter kroningen blir Thesevs en konge som organiserer staten. Han tilskrives [[Synoikisme]]: samlingen av landsbyene i Attika rundt Athen. Han innstifter [[Panathenaia]], byens store høytider. Styrke går sammen med lov og rett."
         },
         {
           "type": "paragraph",
-          "text": "Hans regjeringstid inkluderer andre eventyr, for eksempel kampen mot [[Amazoner]]. Men labyrinten forblir sitt merke: å vite hvordan man løser opp det uløselige, samtidig som det forblir sårbart for glemselen. Theseus forfalsker Athens storhet fra asken etter en familietragedie."
+          "text": "Regjeringstiden hans byr på flere eventyr, som kampen mot [[amasoner]]. Men Labyrinten forblir kjennemerket hans: evnen til å løse opp det uløselige, samtidig som han er sårbar for glemselen. Thesevs smir Athens storhet på asken etter en familietragedie."
         },
         {
           "type": "takeaway",
-          "text": "**Theseus** dreper **Minotaurus** takket være **Ariane** sin tråd. Ved å glemme å bytte seil forårsaker han selvmordet til faren **Egeerhavet**, som gir navnet sitt til Egeerhavet."
+          "text": "**Thesevs** dreper **Minotauren** takket være tråden til **Ariadne**. Ved å glemme å bytte seil driver han faren **Aigevs** til selvmord, og Egeerhavet får navnet sitt etter ham."
         }
       ]
     }

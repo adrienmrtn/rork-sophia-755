@@ -1,10 +1,10 @@
 {
   "id": "course_200_re_et_la_creation_du_monde_egypte",
   "title": "Mida teeb Ra igal ööl, et maailma päästa?",
-  "subtitle": "Loominguline päike",
+  "subtitle": "Päike kui looja",
   "subject": "mythologie",
   "subcategory": "Muud mütoloogiad",
-  "description": "Re, Egiptuse päikesejumal: ta loob maailma, ületab iga päev taeva, võitleb öösel kaosega ja karistab inimesi oma Silmaga.",
+  "description": "Ra, Egiptuse päikesejumal: ta loob maailma, sõidab iga päev üle taeva, võitleb öösel kaosega ja karistab inimesi oma Silmaga.",
   "hero": {
     "image": "re_et_la_creation_du_monde_egypte",
     "ratio": "16:9",
@@ -18,36 +18,36 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**D** (või Râ) ei ole ainult päike. Tänapäeva Kairo lähedal asuva päikesekummardamise linna **Heliopolis** egiptlaste jaoks on see eksistentsi põhimõte: luua maailm, seejärel kaitsta seda igal õhtul olematuse vastu."
+          "text": "**Ra** (ka Re) ei ole ainult päike. **Heliopolise**, tänapäeva Kairo lähedal asunud päikesekultuse linna egiptlaste jaoks on ta olemasolu enda alus: luua maailm ja seejärel kaitsta seda igal ööl olematuse eest."
         },
         {
           "type": "paragraph",
-          "text": "Kolm aastatuhandet ületas tema kuju riigireligiooni. Re-i mõistmine tähendab mõistmist, kuidas Egiptus mõtles universumi sünnist, korra haprusest ja miks iga koit on võit, mis tuleb uuesti vallutada."
+          "text": "Kolm aastatuhandet läbib tema kuju riigiusundit. Ra mõistmine tähendab mõista, kuidas Egiptus mõtestas universumi sündi ja korra haprust ning miks iga koit on võit, mis tuleb uuesti välja võidelda."
         }
       ]
     },
     {
       "id": "course_200_re_et_la_creation_du_monde_egypte_p1",
-      "title": "Maailma tekkimine: ürgne tumul",
+      "title": "Maailma tekkimine: ürgküngas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Enne aega on seal **Nimisõna**: tume, lõpmatu vesi, täis mikroobe. [[Heliopoliitne kosmogoonia]] kirjeldab **Atum** välimust, \"selle, kes on valmis\". See loob ise ja ilmub **Pierre Benben**, esimene kindel punkt."
+          "text": "Enne aega on **Nun**: pime, lõputu vesi, täis eluidusid. [[Heliopolise kosmogoonia]] kirjeldab, kuidas ilmub **Atum**, „see, kes on täielik“. Ta sünnitab iseennast ja kerkib **Benbeni kivile**, esimesele kindlale pinnale."
         },
         {
           "type": "image",
           "asset": "atum_primordial_egyptian_creation_benben",
           "ratio": "4:3",
-          "caption": "Atum tuleneb nimisõnast Benbeni kivil."
+          "caption": "Atum kerkib Nunist Benbeni kivile."
         },
         {
           "type": "funFact",
-          "text": "Heliopolises hoidsid preestrid püha lindu **Bénou** (fööniksi esivanem), mis pidi olema Ra hing ja maanduma Benbenile, et kuulutada välja uus tsükkel."
+          "text": "Heliopolises pidasid preestrid püha lindu **Bennut** (fööniksi eellast), keda peeti Ra hingeks ja kes pidi laskuma Benbenile, et kuulutada uue tsükli algust."
         },
         {
           "type": "paragraph",
-          "text": "Üksinda loob Atoum **Kapsas** (õhk) ja **Tefnut** (niiskus), seejärel **Geb** (Maa) ja **Pähkel** (taevas), mis eraldatakse, et jätta elamispind. **Osiris**, **Isis**, **Seth** ja **Nephthys** on sündinud: koos Atumiga on **kohta Ennead** (üheksa). [[Egiptuse jumalik sünkretism]] liidab hiljem Atumi ja Re ühtseks loominguliseks figuuriks."
+          "text": "Üksinda loob Atum **Šu** (õhu) ja **Tefnuti** (niiskuse), seejärel **Gebi** (Maa) ja **Nuti** (Taeva), kes lahutatakse, et jätta ruumi elule. Sünnivad **Osiris**, **Isis**, **Seth** ja **Nephthys**: koos Atumiga moodustavad nad **suure Enneaadi** (üheksiku). [[Egiptuse jumalik sünkretism]] sulatab hiljem Atumi ja Ra üheks loojakujuks."
         }
       ]
     },
@@ -58,21 +58,21 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Päeval sõidab Re paadiga **Mandjet**. Õhtuhämaruses läbib ta **Mesekteti** ja läbib [[Duat]], surnute maailma, kaksteist tundi. See ei ole puhkus: see on sõda **Isfet**, korratuse vastu."
+          "text": "Päeval sõidab Ra päikesepaadis **Mandjet**. Hämaruses läheb ta üle paati **Mesektet** ja rändab kaksteist tundi läbi allilma: see on [[Duat]], surnute maailm. See pole puhkus: see on sõda korratuse, **Isfeti** vastu."
         },
         {
           "type": "image",
           "asset": "ra_solar_barque_egyptian_hieroglyphics",
           "ratio": "4:3",
-          "caption": "Re päikesepaat, aja igapäevane mootor."
+          "caption": "Ra päikesepaat, aja igapäevane mootor."
         },
         {
           "type": "funFact",
-          "text": "Alates 4. dünastiast oli peaaegu kõigi vaaraode nimes “Re”: nad nimetasid end “Re poegadeks”, päikeseringi tagajateks."
+          "text": "Alates 4. dünastiast kannavad peaaegu kõik vaaraod oma nimes „Ra“: nad nimetavad end „Ra poegadeks“, päikesetsükli tagajateks."
         },
         {
           "type": "paragraph",
-          "text": "Madu **Apopis** püüab paati ümber lükata või taevase Niiluse vett juua. **Seth** ise kaitseb mõnikord vibu. Kui Re sünnib koidikul uuesti skarabeuse **Khépri** varjus, võidab taas **Maât** (tasakaal). Varjutus? Apopis peaaegu võitis."
+          "text": "Madu **Apopis** püüab paati ümber lükata või taevase Niiluse vee ära juua. Mõnikord kaitseb paadi vööri **Seth** ise. Kui Ra koidikul skarabeus **Khepri** kujul uuesti sünnib, võidab taas **Maat** (tasakaal). Varjutus? Siis oli Apopis peaaegu võitnud."
         }
       ]
     },
@@ -83,36 +83,36 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Isegi Ra hakkab vanaks jääma. \"Inimeste hävitamise\" loos muutuvad tema luud hõbedaseks ja inimkond seab tema vastu vandenõu. Solvununa laseb ta valla oma tulise Silma: jumalanna [[Sekhmet]], verejanuline lõvi."
+          "text": "Isegi Ra jääb vanaks. Loos „Inimkonna hävitamine“ muutuvad tema luud hõbedaks ja inimkond peab tema vastu vandenõu. Solvunud Ra päästab valla oma tulise Silma: jumalanna [[Sekhmet]], verejanuline emalõvi."
         },
         {
           "type": "image",
           "asset": "sekhmet_hathor_lioness_egyptian_goddess",
           "ratio": "4:3",
-          "caption": "Sekhmet, Re silm, enne kui temast sai uuesti Hathor."
+          "caption": "Sekhmet, Ra Silm, enne kui temast saab taas Hathor."
         },
         {
           "type": "paragraph",
-          "text": "Veresaun ähvardab loomingu kustutada. Rê pruulib tuhandeid punase ookriga toonitud õllepurke, mis kallatakse põldudele. Sekhmet, kes usub, et joob verd, jääb purju ja rahuneb: temast saab armas **Hathor**. Müüt selgitab kurjust ja õigustab joobmispüha, kus inimesed jõid inimeste päästmise tähistamiseks."
+          "text": "Veresaun ähvardab hävitada kogu loodu. Ra laseb pruulida tuhandeid kannutäisi punase ookriga värvitud õlut, mis valatakse põldudele. Sekhmet arvab, et joob verd, jääb purju ja rahuneb: temast saab lahke **Hathor**. Müüt seletab kurja olemasolu ja põhjendab joobepüha, mil joodi inimkonna päästmise tähistamiseks."
         }
       ]
     },
     {
       "id": "course_200_re_et_la_creation_du_monde_egypte_p4",
-      "title": "Järelpõlved ja sulandumine: avatar Amon-Re",
+      "title": "Pärand ja ühinemine: Amon-Ra",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Uues kuningriigis ühines Teeba jumal **Amon** Re-ga: sündis **Amon-Rê**, \"jumalate kuningas\", nähtamatu looja ja nähtav päike. Tema jaoks kerkivad suurimad pühamud, nagu [[Karnaki tempel]]."
+          "text": "Uue riigi ajal sulandub Teeba jumal **Amon** Raga: sünnib **Amon-Ra**, „jumalate kuningas“, nähtamatu looja ja nähtav päike. Tema auks kerkivad suurimad pühamud, nagu [[Karnaki tempel]]."
         },
         {
           "type": "paragraph",
-          "text": "Püramiidid ja obeliskid kivistavad päikesekiiri, et tõsta vaarao oma taevase isa poole. Isegi **Ehnatoni** reform, mis kehtestas **Aten** (ketta) kultuse, radikaliseeris juba päikeselise idee. Ra on endiselt Egiptuse stabiilsuse ületamatu sümbol."
+          "text": "Püramiidid ja obeliskid kivistavad päikesekiired, et tõsta vaarao tema taevase isa juurde. Isegi **Ehnatoni** reform, mis kehtestas **Atoni** (päikeseketta) kultuse, viis lihtsalt äärmuseni idee, mis oli niigi päikeseline. Ra jääb Egiptuse stabiilsuse ületamatuks sümboliks."
         },
         {
           "type": "takeaway",
-          "text": "**D** loob Heliopolisest maailma, kaitseb seda igal õhtul oma paadis **Apopis** vastu ja karistab ning päästab inimkonna silmaga **Sekhmet**. Saades **Amon-Rê**-ks, valitseb ta vaaraode Egiptuse tipus."
+          "text": "**Ra** loob Heliopolises maailma, kaitseb seda igal ööl oma paadis **Apopise** eest ning karistab inimkonda ja päästab selle siis Silma, **Sekhmeti** abil. Kui temast saab **Amon-Ra**, valitseb ta vaaraode Egiptuse tipus."
         }
       ]
     }

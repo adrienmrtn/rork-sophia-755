@@ -1,0 +1,102 @@
+{
+  "id": "course_49_pourquoi_a_t_on_des_frissons",
+  "title": "Kodėl mus krečia šiurpuliai?",
+  "subtitle": "Kūnas ir emocijos",
+  "subject": "sciences",
+  "subcategory": "Notre quotidien expliqué",
+  "description": "Šaltis, baimė, muzika: šiurpulių priežasčių yra kelios. Visi jie kyla per nervų sistemą, bet dėl skirtingų priežasčių.",
+  "hero": {
+    "image": "pourquoi_a_t_on_des_frissons",
+    "ratio": "16:9",
+    "hook": "Šiurpulys nuo šalčio ir šiurpulys nuo muzikos pasakoja skirtingas istorijas."
+  },
+  "sections": [
+    {
+      "id": "course_49_pourquoi_a_t_on_des_frissons_intro",
+      "title": "Įvadas",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Išėjus į lietų tave nukrečia šiurpas. Šiurpas nukrečia ir išgirdus dainą, kuri tave sujaudina. Žodis tas pats, mechanizmai skirtingi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Abiem atvejais kūnas reaguoja greitai. Tačiau vienas šiurpulys pirmiausia padeda sušilti, o kitas labiau susijęs su malonumu ir emocijomis."
+        }
+      ]
+    },
+    {
+      "id": "course_49_pourquoi_a_t_on_des_frissons_p1",
+      "title": "Šiurpulys nuo šalčio: mažas katilas",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kūnas stengiasi išlaikyti apie **37 °C** temperatūrą. Kai oda pajunta šaltį, ji praneša smegenų sričiai, vadinamai **pagumburiu**, kuri veikia kaip termostatas."
+        },
+        {
+          "type": "image",
+          "asset": "goosebumps_cold_skin",
+          "ratio": "4:3",
+          "caption": "Žąsies oda: senas refleksas pastatyti plaukelius."
+        },
+        {
+          "type": "paragraph",
+          "text": "Raumenys susitraukinėja labai greitai ir pakartotinai: tai ir yra drebulys. Šie susitraukimai gamina šilumą. „Žąsies oda“ kilusi iš seno reflekso: pastatyti plaukelius, kad geriau izoliuotų. Mums, turintiems mažai kailio, tai daugiausia tik liekana."
+        }
+      ]
+    },
+    {
+      "id": "course_49_pourquoi_a_t_on_des_frissons_p2",
+      "title": "Baimės šiurpulys",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Iškilus grėsmei, įsijungia [[simpatinė nervų sistema]] (nervų sistemos „pavojaus“ šaka). Ji išskiria **adrenaliną**. Raumenys įsitempia, širdis plaka greičiau, odą gali nukrėsti šiurpas."
+        },
+        {
+          "type": "image",
+          "asset": "adrenaline_stress_response_body",
+          "ratio": "4:3",
+          "caption": "Adrenalinas paruošia kūną greitai reaguoti."
+        },
+        {
+          "type": "funFact",
+          "text": "Ta pati sistema paaiškina, kodėl žiūrint siaubo filmą gali pašiurpti oda… nors sėdi šiltai ant savo sofos."
+        }
+      ]
+    },
+    {
+      "id": "course_49_pourquoi_a_t_on_des_frissons_p3",
+      "title": "Muzikos šiurpulys",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kai kurie šiurpuliai, kartais vadinami angliškai „chills“, atsiranda kartu su stipria emocija: muzika, kalba, filmu. Jie suaktyvina smegenų **atlygio** grandinę, išsiskiria **dopaminas**, su malonumu susijusi medžiaga."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tai nepadeda išgyventi čia ir dabar. Greičiau tai kūnas, reaguojantis į stiprią emociją, tarsi pro šalį praeinanti banga."
+        }
+      ]
+    },
+    {
+      "id": "course_49_pourquoi_a_t_on_des_frissons_p4",
+      "title": "Kada verta sunerimti?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Šiurpuliai su aukšta temperatūra gali signalizuoti infekciją. Nuolatiniai šiurpuliai be aiškios priežasties yra rimta priežastis pasitarti su gydytoju. Tačiau dažniausiai šiurpulys nuo šalčio, streso ar muzikos tėra kūnas, atliekantis savo darbą."
+        },
+        {
+          "type": "takeaway",
+          "text": "Šiurpuliai nuo šalčio gamina šilumą. Baimės šiurpuliai paruošia reaguoti. Muzikos šiurpuliai susiję su emociniu malonumu. Pojūtis tas pats, priežastys skirtingos."
+        }
+      ]
+    }
+  ]
+}

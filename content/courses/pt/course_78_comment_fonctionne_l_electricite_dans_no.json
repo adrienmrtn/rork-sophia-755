@@ -4,7 +4,7 @@
   "subtitle": "Nervos e íons",
   "subject": "sciences",
   "subcategory": "A Terra e o Universo",
-  "description": "Pensar, bater o coração, levantar um braço: tudo isso circula primeiro como eletricidade viva, carregada não por elétrons, e sim por íons.",
+  "description": "Pensar, fazer o coração bater, levantar um braço: tudo isso circula primeiro como eletricidade viva, transportada não por elétrons, mas por íons.",
   "hero": {
     "image": "comment_fonctionne_l_electricite_dans_notre_corps",
     "ratio": "16:9",
@@ -18,7 +18,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Numa tomada da parede, a corrente são **elétrons** que circulam. No seu corpo é diferente: são **íons**, átomos carregados, que entram e saem das células. Esse fluxo cria os sinais que fazem pensar, bater o coração e contrair um músculo."
+          "text": "Na tomada da parede, a corrente são **elétrons** que circulam. No seu corpo é diferente: são **íons**, átomos carregados, que entram e saem das células. Esse fluxo cria os sinais que nos fazem pensar, que fazem o coração bater e um músculo se contrair."
         },
         {
           "type": "paragraph",
@@ -33,13 +33,13 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Um **neurônio** em repouso não manda mensagem, mas ele se “carrega”. A membrana separa o dentro e o fora da célula. Graças às [[bombas de sódio-potássio]], ele mantém um [[potencial de repouso]] de cerca de **-70 milivolts**: o interior fica mais negativo que o exterior."
+          "text": "Um **neurônio** em repouso não manda mensagens, mas se “carrega”. Sua membrana separa o interior do exterior da célula. Graças às [[bombas de sódio-potássio]], ele mantém um [[potencial de repouso]] de cerca de **-70 milivolts**: o interior fica mais negativo que o exterior."
         },
         {
           "type": "image",
           "asset": "neuron_electrical_signal_brain",
           "ratio": "auto",
-          "caption": "Os neurônios se comunicam por impulsos elétricos bem curtos"
+          "caption": "Os neurônios se comunicam por breves impulsos elétricos."
         },
         {
           "type": "paragraph",
@@ -58,7 +58,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Os neurônios não se tocam de verdade. Entre eles, um fosso minúsculo: a **sinapse**. O sinal elétrico não consegue pular esse fosso. Então a ponta do axônio libera [[neurotransmissores]], moléculas mensageiras como a acetilcolina ou o [[glutamato]]."
+          "text": "Os neurônios não se tocam de verdade. Entre eles há uma fenda minúscula: a **sinapse**. O sinal elétrico não consegue saltar essa fenda. Então a ponta do axônio libera [[neurotransmissores]], moléculas mensageiras como a acetilcolina ou o [[glutamato]]."
         },
         {
           "type": "paragraph",
@@ -66,7 +66,7 @@
         },
         {
           "type": "funFact",
-          "text": "Alguns sinais nervosos viajam a **120 m/s** (mais de **430 km/h**). O bastante para reagir a uma queimadura no dedão numa fração de segundo."
+          "text": "Alguns sinais nervosos viajam a **120 m/s** (mais de **430 km/h**). O bastante para reagir a uma queimadura no dedo do pé numa fração de segundo."
         }
       ]
     },
@@ -81,7 +81,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Essa atividade é forte o bastante para ser lida na pele: é o **eletrocardiograma (ECG)**. Se o ritmo desanda, fala-se de **arritmia**. O coração então bate de modo desordenado e bombeia mal."
+          "text": "Essa atividade é forte o bastante para ser lida na pele: é o **eletrocardiograma (ECG)**. Se o ritmo se desregula, fala-se em **arritmia**. O coração então bate de modo desordenado e bombeia mal."
         },
         {
           "type": "funFact",
@@ -104,7 +104,7 @@
         },
         {
           "type": "takeaway",
-          "text": "O ser vivo fala em fluxos de íons e em potenciais de ação. Pensamento, coração e músculos compartilham a mesma linguagem elétrica."
+          "text": "Os seres vivos falam por meio de fluxos de íons e potenciais de ação. Pensamento, coração e músculos compartilham a mesma linguagem elétrica."
         }
       ]
     }

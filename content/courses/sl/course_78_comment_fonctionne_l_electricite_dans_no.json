@@ -8,7 +8,7 @@
   "hero": {
     "image": "comment_fonctionne_l_electricite_dans_notre_corps",
     "ratio": "16:9",
-    "hook": "Vaše telo je električno omrežje. Toda tukaj so tok ioni, ne elektroni."
+    "hook": "Tvoje telo je električno omrežje. Le da tok tu sestavljajo ioni, ne elektroni."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "V stenski vtičnici je tok **elektronika**, ki krožijo. V vašem telesu je drugače: to so **ioni**, nabiti atomi, ki vstopajo v celice in iz njih izstopajo. Ta tok ustvarja signale, zaradi katerih srce razmišlja, utripa in krči mišice."
+          "text": "V stenski vtičnici tok sestavljajo **elektroni**, ki se gibljejo. V tvojem telesu je drugače: tok so **ioni**, nabiti atomi, ki vstopajo v celice in iz njih izstopajo. Ta tok ustvarja signale, zaradi katerih razmišljaš, ti bije srce in se krči mišica."
         },
         {
           "type": "paragraph",
-          "text": "Brez te žive elektrike ni nobene misli, nobene geste, nobenega utripa. Razumevanje telesa pomeni tudi razumevanje tega jezika nabojev."
+          "text": "Brez te žive elektrike ni nobene misli, nobenega giba, nobenega utripa. Razumeti telo pomeni razumeti tudi ta jezik nabojev."
         }
       ]
     },
@@ -33,7 +33,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**nevron** v mirovanju ne pošlje sporočila, vendar se \"polni\". Njena membrana ločuje notranjost in zunanjost celice. Zahvaljujoč [[natrijevo-kalijeve črpalke]] vzdržuje [[potencial počitka]] približno **-70 milivoltov**: notranjost je bolj negativna kot zunanjost."
+          "text": "**Nevron** v mirovanju ne pošilja sporočil, a se »polni«. Njegova membrana ločuje notranjost celice od zunanjosti. Ker v njej delujejo [[natrijevo-kalijeve črpalke]], nevron vzdržuje [[mirovni potencial]] približno **-70 milivoltov**: notranjost je bolj negativna kot zunanjost."
         },
         {
           "type": "image",
@@ -43,11 +43,11 @@
         },
         {
           "type": "paragraph",
-          "text": "Ko pride dražljaj, se kanali odprejo. Natrij pride ves naenkrat. Polarnost je obrnjena: gre za [[akcijski potencial]], signal vse ali nič, ki teče vzdolž aksona, včasih več kot meter. Kot električni val."
+          "text": "Ko pride dražljaj, se kanali odprejo. Natrij naenkrat vdre v celico. Polarnost se obrne: nastane [[akcijski potencial]], signal po načelu »vse ali nič«, ki potuje vzdolž aksona, včasih po dolžini celega metra. Kot električni val."
         },
         {
           "type": "funFact",
-          "text": "Budni možgani proizvedejo približno **20 vatov**, kar je dovolj za majhno LED. Vendar pa porabi skoraj **20%** telesnih kalorij."
+          "text": "Budni možgani proizvedejo približno **20 vatov**, dovolj za majhno svetlečo diodo. Kljub temu porabijo skoraj **20 %** telesnih kalorij."
         }
       ]
     },
@@ -58,53 +58,53 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Nevroni se pravzaprav ne dotikajo drug drugega. Med njima majhna vrzel: **sinapsa**. Električni signal ga ne more preskočiti. Nato konec aksona sprosti [[Nevrotransmiterji]], posredne molekule, kot sta acetilholin ali [[glutamat]]."
+          "text": "Nevroni se v resnici ne dotikajo. Med njimi je drobna reža: **sinapsa**. Električni signal je ne more preskočiti. Zato se s konca aksona sprostijo [[nevrotransmiterji]], molekule glasnice, kot sta acetilholin ali [[glutamat]]."
         },
         {
           "type": "paragraph",
-          "text": "Ti glasniki se pritrdijo na naslednji nevron kot ključ v ključavnici. Odvisno od sporočila vznemirjajo ali zavirajo. Na tisoče teh sočasnih odločitev tvori misel."
+          "text": "Ti glasniki se pritrdijo na naslednji nevron kot ključ v ključavnico. Glede na sporočilo ga vzburijo ali zavrejo. Iz tisočev takih sočasnih odločitev nastane misel."
         },
         {
           "type": "funFact",
-          "text": "Nekateri živčni signali potujejo s hitrostjo **120 m/s** (več kot **430 km/h**). Dovolj, da se v delčku sekunde odzove na opeklino prsta na nogi."
+          "text": "Nekateri živčni signali potujejo s hitrostjo **120 m/s** (več kot **430 km/h**). Dovolj hitro, da se na opeklino na prstu na nogi odzoveš v delčku sekunde."
         }
       ]
     },
     {
       "id": "course_78_comment_fonctionne_l_electricite_dans_no_p3",
-      "title": "Srce ima svoj srčni spodbujevalnik",
+      "title": "Srce ima lasten spodbujevalnik",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Srce ne čaka na ukaz možganov za vsak utrip. V desnem atriju **sinusno vozlišče** ustvarja lastne impulze, približno **60 do 100**-krat na minuto v mirovanju. Signal se širi, najprej skrči atrije, nato ventrikle."
+          "text": "Srce za vsak utrip ne čaka na ukaz možganov. V desnem preddvoru **sinusni vozel** ustvarja lastne impulze, v mirovanju približno **60 do 100**-krat na minuto. Signal se širi in najprej skrči preddvora, nato prekata."
         },
         {
           "type": "paragraph",
-          "text": "Ta aktivnost je dovolj močna, da jo lahko preberemo na koži: to je **elektrokardiogram (EKG)**. Če pride do motenj ritma, govorimo o **Aritmiji**. Srce takrat bije neurejeno in slabo črpa."
+          "text": "Ta aktivnost je dovolj močna, da jo je mogoče zaznati na koži: to je **elektrokardiogram (EKG)**. Če se ritem poruši, govorimo o **aritmiji**. Srce takrat bije neurejeno in slabo črpa."
         },
         {
           "type": "funFact",
-          "text": "Električna jegulja uporablja isti princip vzdražljivih celic, vendar zaporedno: do **600 voltov**, kar je dovolj, da ohromi plen."
+          "text": "Električna jegulja uporablja isto načelo vzdražljivih celic, le da so vezane zaporedno: do **600 voltov**, dovolj, da ohromi plen."
         }
       ]
     },
     {
       "id": "course_78_comment_fonctionne_l_electricite_dans_no_p4",
-      "title": "Od prostovoljne geste do defibrilatorja",
+      "title": "Od hotenega giba do defibrilatorja",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Za dvig roke akcijski potencial potuje navzdol do mišice. Acetilholin sproži lokalno električno valovanje, nato sproščanje kalcija. Mišični proteini drsijo drug čez drugega: krčenje."
+          "text": "Ko dvigneš roko, akcijski potencial potuje do mišice. Acetilholin sproži lokalni električni val, nato se sprosti kalcij. Beljakovine v mišici zdrsnejo druga ob drugi: mišica se skrči."
         },
         {
           "type": "paragraph",
-          "text": "**defibrilacija** uporablja isto načelo v obratni smeri: zunanji sunek ponastavi vse celice \"na nič\", tako da sinusni vozel nadaljuje s tempo. Bionična protetika prav tako zajame te šibke signale za nadzor umetne roke."
+          "text": "**Defibrilacija** deluje po istem načelu, le obratno: zunanji električni sunek vse celice »ponastavi na nič«, da sinusni vozel spet prevzame takt. Bionične proteze prav tako zaznavajo te šibke signale in z njimi upravljajo umetno roko."
         },
         {
           "type": "takeaway",
-          "text": "Živa bitja govorijo v ionskih tokovih in akcijskih potencialih. Misel, srce in mišice imajo isti električni jezik."
+          "text": "Živa bitja govorijo z ionskimi tokovi in akcijskimi potenciali. Misel, srce in mišice si delijo isti električni jezik."
         }
       ]
     }

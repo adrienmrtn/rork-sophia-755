@@ -4,11 +4,11 @@
   "subtitle": "Siden 2009",
   "subject": "comprendreLeMonde",
   "subcategory": "Miljø og fremtid",
-  "description": "**blockchain** opfandt en hovedbog, som ingen kan pille ved alene, hvilket banede vejen for en ny digital økonomi.",
+  "description": "**Blockchain** har skabt en hovedbog, som ingen kan forfalske på egen hånd, og banet vejen for en ny digital økonomi.",
   "hero": {
     "image": "la_blockchain_et_les_cryptomonnaies",
     "ratio": "16:9",
-    "hook": "En bog med konti, som ingen ejer, men som tusindvis af computere overvåger sammen."
+    "hook": "En regnskabsbog, som ingen ejer, men som tusindvis af computere holder øje med sammen."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Forestil dig en bog med konti, som ingen person ejer, men som tusindvis af computere opdaterer på samme tid, over hele verden, og som det er næsten umuligt at forfalske. Dette er den oprindelige idé med **blockchain**, en teknologi, der ofte reduceres til dens første applikation, **Bitcoin**."
+          "text": "Forestil dig en regnskabsbog, som ingen ejer alene, men som tusindvis af computere over hele verden opdaterer samtidig, og som næsten er umulig at forfalske. Det er grundidéen bag **blockchain**, en teknologi, som tit bliver reduceret til sin første anvendelse, **Bitcoin**."
         },
         {
           "type": "paragraph",
-          "text": "Ved at gøre det muligt at udveksle værdi uden at gå gennem en bank, gav denne opfindelse anledning til en hel paralleløkonomi, mellem løfter om økonomisk frihed og alvorlig kritik af dens energiomkostninger."
+          "text": "Ved at gøre det muligt at udveksle værdi uden om bankerne har opfindelsen skabt en hel paralleløkonomi, der svinger mellem løfter om økonomisk frihed og skarp kritik af dens energiforbrug."
         }
       ]
     },
@@ -33,15 +33,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kernen i blockchain er en simpel idé: **distributoret hovedbog**. I modsætning til en bank, der fører sine konti på sine egne servere, er blockchain afhængig af et netværk af [[jævnaldrende]], det vil sige tusindvis af computere, som hver holder en identisk kopi af alle transaktioner."
+          "text": "Kernen i blockchain er en enkel idé: den **distribuerede hovedbog**. I modsætning til en bank, der opbevarer sit regnskab på sine egne servere, bygger blockchain på et netværk af [[peers]], det vil sige tusindvis af ligestillede computere, som hver gemmer en identisk kopi af alle transaktioner."
         },
         {
           "type": "funFact",
-          "text": "Den allerførste blok af Bitcoin-blokkæden, kaldet \"genesis-blokken\", indeholdt et skjult budskab: Forsiden af en britisk avis den 3. januar 2009, som talte om statens redning af bankerne. Et politisk nik fra dens skaber."
+          "text": "Den allerførste blok i Bitcoins blockchain, kaldet »genesis-blokken«, indeholdt et skjult budskab: forsiden af en britisk avis fra 3. januar 2009, der handlede om statens redning af bankerne. En politisk hentydning fra skaberen."
         },
         {
           "type": "paragraph",
-          "text": "Hver transaktion verificeres først af netværket og grupperes derefter med andre i en **blok**. Denne blok er derefter knyttet til den forrige takket være en matematisk beregning kaldet [[hashing]]: et slags unikt digitalt fingeraftryk. Resultatet er en uafbrudt kæde af blokke, deraf navnet blockchain. For at ændre en enkelt gammel transaktion skal du genberegne hele kæden og overbevise mere end halvdelen af netværket, hvilket næsten er umuligt i stor skala."
+          "text": "Hver transaktion bliver først kontrolleret af netværket og derefter samlet med andre i en **blok**. Blokken bliver så koblet til den foregående med en matematisk beregning kaldet [[hashing]]: en slags unikt digitalt fingeraftryk. Resultatet er en ubrudt kæde af blokke, deraf navnet blockchain. For at ændre en eneste gammel transaktion skulle man beregne hele kæden igen og overbevise over halvdelen af netværket, og det er næsten umuligt i stor skala."
         }
       ]
     },
@@ -52,7 +52,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Bitcoin**, lanceret i **2009** af en anonym person (eller gruppe) under navnet [[Satoshi Nakamoto]], beviste, at et monetært system kunne fungere uden en centralbank. For at garantere dens knaphed har dens skaber sat et strengt loft: der kan aldrig eksistere mere end **21 millioner bitcoins**, lidt ligesom guld er begrænset på Jorden."
+          "text": "**Bitcoin**, som blev lanceret i **2009** af en person (eller en gruppe), der forblev anonym under navnet [[Satoshi Nakamoto]], beviste, at et pengesystem kunne fungere uden en centralbank. For at sikre knapheden satte skaberen et strengt loft: der vil aldrig kunne findes mere end **21 millioner bitcoins**, lidt ligesom der kun findes en begrænset mængde guld på Jorden."
         },
         {
           "type": "image",
@@ -62,26 +62,26 @@
         },
         {
           "type": "paragraph",
-          "text": "I 2015 dukkede en anden generation af blockchain op med **Ethereum**. Dens store innovation: **smart kontakt**. Det er programmer, der kører automatisk, så snart en betingelse er opfyldt, for eksempel automatisk refusion ved togforsinkelse, uden at man behøver at gå gennem en mellemmand."
+          "text": "I 2015 kom anden generation af blockchain med **Ethereum**. Den store nyskabelse var **smarte kontrakter**: programmer, der kører automatisk, så snart en betingelse er opfyldt, for eksempel en automatisk refusion ved togforsinkelse, uden at der skal en mellemmand ind over."
         }
       ]
     },
     {
       "id": "course_232_la_blockchain_et_les_cryptomonnaies_p3",
-      "title": "Kritikere: energi og ustabilitet",
+      "title": "Kritikken: energi og ustabilitet",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kryptovalutaernes succes er ikke uden problemer. Det mest diskuterede vedrører **energiforbruget** i Bitcoin-netværket: dets årlige elforbrug er i dag sammenligneligt med et helt land som Argentina."
+          "text": "Kryptovalutaernes succes er ikke uden problemer. Det mest omdiskuterede er Bitcoin-netværkets **energiforbrug**: det bruger i dag lige så meget strøm om året som et helt land som Argentina."
         },
         {
           "type": "paragraph",
-          "text": "Markedet lider også af ekstrem **volatilitet**: prisen på Bitcoin kan variere med 10 eller 20 % på få timer. Denne ustabilitet forhindrer i øjeblikket, at den bliver en rigtig hverdagsvaluta."
+          "text": "Markedet lider også af ekstrem **volatilitet**: Bitcoins kurs kan svinge 10 eller 20 % på få timer. Den ustabilitet forhindrer indtil videre Bitcoin i at blive en rigtig valuta til hverdagsbrug."
         },
         {
           "type": "paragraph",
-          "text": "Endelig er den relative anonymitet af transaktioner nogle gange blevet brugt til ulovlige aktiviteter. Men blockchainen forbliver faktisk fuldstændig gennemsigtig: Myndighederne kan følge pengestrømmen, hvilket gør hvidvask sværere end i det klassiske kontantsystem."
+          "text": "Endelig er transaktionernes relative anonymitet nogle gange blevet brugt til ulovlige aktiviteter. Men i virkeligheden er blockchainen fuldstændig gennemsigtig: myndighederne kan følge pengestrømmene, og det gør hvidvask sværere end i det klassiske system med kontanter."
         }
       ]
     },
@@ -92,19 +92,19 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "I dag forlader kryptovalutaer marginerne for at komme ind i traditionel finansiering. Store banker tilbyder nu at holde digitale aktiver for deres kunder, og flere stater overvejer at skabe deres egen officielle digitale valuta, en **[[CBDC]]** (centralbanks digital valuta)."
+          "text": "I dag bevæger kryptovalutaerne sig fra kanten og ind i den traditionelle finansverden. Store banker tilbyder nu at opbevare digitale aktiver for deres kunder, og flere stater overvejer at skabe deres egen officielle digitale valuta, en **[[CBDC]]** (digitale centralbankpenge)."
         },
         {
           "type": "paragraph",
-          "text": "**stablecoins**, kryptovalutaer, hvis pris er stabiliseret takket være en reserve på dollars eller euro, fungerer som en bro mellem de to verdener. Ud over finanssektoren anvender sektorer som luksus (for at bekæmpe forfalskning), logistik (for at spore containere) eller sundhed (for at sikre medicinske journaler) også blockchain for dets pålidelighed."
+          "text": "**Stablecoins**, kryptovalutaer, hvis kurs holdes stabil af en reserve af dollars eller euro, fungerer som bro mellem de to verdener. Uden for finansverdenen tager brancher som luksus (mod forfalskninger), logistik (til at spore containere) og sundhed (til at beskytte patientjournaler) også blockchain i brug, fordi den er pålidelig."
         },
         {
           "type": "funFact",
-          "text": "I 2021 blev El Salvador det første land i verden til at adoptere Bitcoin som lovligt betalingsmiddel sammen med den amerikanske dollar, hvilket kræver, at alle købmænd accepterer det, hvis de har de tekniske midler."
+          "text": "I 2021 blev El Salvador det første land i verden, der indførte Bitcoin som lovligt betalingsmiddel ved siden af den amerikanske dollar, og alle handlende skal tage imod den, hvis de har de tekniske muligheder."
         },
         {
           "type": "takeaway",
-          "text": "Blockchain blev oprettet i 2009 og er en delt og næsten umuligt at forfalske hovedbog, hvis maksimale udbud af bitcoins er sat til 21 millioner enheder. Det lagde grundlaget for en ny digital økonomi i dag i fuld institutionel integration."
+          "text": "Blockchain, der blev skabt i 2009, er en delt hovedbog, som næsten ikke kan forfalskes, og det maksimale antal bitcoins er sat til 21 millioner. Den har lagt grunden til en ny digital økonomi, som i dag er godt på vej ind i de etablerede institutioner."
         }
       ]
     }

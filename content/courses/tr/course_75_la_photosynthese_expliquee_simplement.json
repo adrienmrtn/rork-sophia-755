@@ -1,10 +1,10 @@
 {
   "id": "course_75_la_photosynthese_expliquee_simplement",
-  "title": "Fotosentez, yalın anlatım",
+  "title": "Basit anlatımla fotosentez",
   "subtitle": "Bitkiler ve enerji",
   "subject": "sciences",
   "subcategory": "Dünya ve evren",
-  "description": "Bitkiler olağanüstü bir şey yapar: ışık, su ve havayla şeker pişirirler. Üstüne bir de oksijeni hediye ederler.",
+  "description": "Bitkiler olağanüstü bir şey yapar: ışık, su ve havayla şeker pişirirler. Üstüne bir de oksijeni bize hediye ederler.",
   "hero": {
     "image": "la_photosynthese_expliquee_simplement",
     "ratio": "16:9",
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Her yaprakta minik bir fabrika düşün. Üç sıradan malzeme alır: **Güneş ışığı**, köklerden gelen **su** ve havadaki **CO₂**. Büyümek için **şeker** çıkarır ve **oksijen** salar."
+          "text": "Her yaprakta minik bir fabrika olduğunu düşün. Bu fabrika üç sıradan malzeme kullanır: **Güneş ışığı**, köklerden gelen **su** ve havadaki **CO₂**. Bunlardan büyümek için **şeker** üretir ve dışarıya **oksijen** salar."
         },
         {
           "type": "paragraph",
-          "text": "Bu hünerin adı **fotosentez**tir. O olmasa orman olmaz, solunacak oksijen olmaz, Dünya'da neredeyse karmaşık yaşam olmaz."
+          "text": "Bu hünerin adı **fotosentez**. O olmasa ne orman olurdu ne solunabilir oksijen; Dünya'da karmaşık yaşam da neredeyse hiç olmazdı."
         }
       ]
     },
@@ -33,27 +33,27 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Bitki hücresinde yeşil organeller, **kloroplastlar**, [[klorofil]] barındırır. Bu pigment ışığın özellikle mavisini ve kırmızısını yakalar. Yeşil geri yansır: yapraklar bu yüzden bize yeşil görünür."
+          "text": "Bitki hücresinde **kloroplast** denen yeşil organeller [[klorofil]] barındırır. Bu pigment ışığın özellikle mavisini ve kırmızısını yakalar. Yeşil ise geri yansıtılır: yapraklar bu yüzden bize yeşil görünür."
         },
         {
           "type": "image",
           "asset": "leaf_photosynthesis_sunlight_chloroplasts",
           "ratio": "auto",
-          "caption": "Yapraklar fotosentez için Güneş'in ışığını yakalar"
+          "caption": "Yapraklar fotosentez için Güneş ışığını yakalar."
         },
         {
           "type": "paragraph",
-          "text": "Yalın denklem: CO₂ + su + ışık → şeker + oksijen. Gaz, minik gözenekler [[stomalar]] yoluyla girer. Su köklerden yükselir. Şeker odun, meyve, kök olur; oksijen havaya gider."
+          "text": "Basit denklem şu: CO₂ + su + ışık → şeker + oksijen. Gaz, [[stomalar]] denen minik gözeneklerden girer. Su köklerden yükselir. Şeker odun, meyve ve kök olur; oksijen havaya karışır."
         },
         {
           "type": "funFact",
-          "text": "Klorofil yeşili “redder”. Mavi ve kırmızıyı yeğler; elektronlarını uyarıp enerji makinesini başlatmak için daha etkilidirler."
+          "text": "Klorofil yeşili “reddeder”. Mavi ve kırmızıyı yeğler, çünkü bu renkler elektronlarını uyarıp enerji makinesini çalıştırmakta daha etkilidir."
         }
       ]
     },
     {
       "id": "course_75_la_photosynthese_expliquee_simplement_p2",
-      "title": "İki tempo: yakalamak, sonra üretmek",
+      "title": "İki aşama: önce yakala, sonra üret",
       "free": false,
       "blocks": [
         {
@@ -62,22 +62,22 @@
         },
         {
           "type": "paragraph",
-          "text": "Sonra **üretim evresi** gelir, kimyacı **Melvin Calvin**'in adını taşıyan [[Calvin döngüsü]]. Bitki, pillerin enerjisiyle CO₂'deki karbonu glikoza dizer. Bu adımda doğrudan güneş gerekmez, ama bütünüyle ışığın önce ürettiğine bağlıdır."
+          "text": "Sonra **üretim evresi** gelir: adını kimyacı **Melvin Calvin**'den alan [[Calvin döngüsü]]. Bitki, pillerdeki enerjiyle CO₂'deki karbonu birleştirip glikoz yapar. Bu aşamada doğrudan güneş ışığı gerekmez, ama her şey ışığın daha önce ürettiklerine bağlıdır."
         },
         {
           "type": "funFact",
-          "text": "Karbonun yapraktaki yolunu izlemek için Calvin, atom bombası araştırmalarından çıkan radyoaktif izotoplar kullandı. Nobel Ödülü **1961**."
+          "text": "Calvin, karbonun yaprak içindeki yolunu izlemek için atom bombası araştırmalarından çıkan radyoaktif izotopları kullandı. **1961**'de Nobel Ödülü'nü aldı."
         }
       ]
     },
     {
       "id": "course_75_la_photosynthese_expliquee_simplement_p3",
-      "title": "Oksijen gezegeni nasıl değiştirdi",
+      "title": "Oksijen gezegeni değiştirince",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Yaklaşık **2,4 milyar yıl** önce fotosentetik bakteriler, **siyanobakteriler**, kitlesel olarak oksijen salmaya başlar. Bu **Büyük Oksidasyon**dur. Dönemin birçok organizması için bu bir zehirdi."
+          "text": "Yaklaşık **2,4 milyar yıl** önce, fotosentez yapan bakteriler olan **siyanobakteriler** büyük miktarda oksijen salmaya başladı. Buna **Büyük Oksijenlenme Olayı** denir. O dönemin birçok canlısı için oksijen bir zehirdi."
         },
         {
           "type": "paragraph",
@@ -96,11 +96,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Bir yaprak aldığı güneş enerjisinin yalnızca **%1 ile 3**'ünü biyokütleye çevirir. Gezegen ölçeğinde bu yine de besin zincirlerini doyurmaya ve kocaman CO₂ miktarlarını yutmaya yeter."
+          "text": "Bir yaprak, aldığı güneş enerjisinin yalnızca **%1 ila %3**'ünü biyokütleye dönüştürür. Yine de gezegen ölçeğinde bu, besin zincirlerini beslemeye ve muazzam miktarda CO₂ emmeye yeter."
         },
         {
           "type": "paragraph",
-          "text": "Bu yüzden ormanlar, okyanuslar… ve iklim için yapay fotosentez de önemlidir. Bir deniz salyangozu, *Elysia chlorotica*, alglerden kloroplast “çalacak” kadar ileri gider; biraz güneş enerjisiyle yaşamak için."
+          "text": "Ormanlar, okyanuslar… hatta yapay fotosentez de bu yüzden iklim için önemlidir. *Elysia chlorotica* adlı bir deniz sümüklüböceği, biraz da güneş enerjisiyle yaşayabilmek için alglerden kloroplast “çalacak” kadar ileri gider."
         },
         {
           "type": "takeaway",

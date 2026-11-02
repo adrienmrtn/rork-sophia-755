@@ -4,11 +4,11 @@
   "subtitle": "Fleming, 1928",
   "subject": "sciences",
   "subcategory": "Objavy, ktoré zmenili svet",
-  "description": "V roku 1928 si Alexander Fleming všimol, že pleseň zabila baktérie na kultivačnej miske. Z tejto príležitosti sa zrodilo prvé veľké antibiotikum.",
+  "description": "V roku 1928 si Alexander Fleming všimne, že pleseň na kultivačnej miske zabila baktérie. Z tejto náhody sa zrodí prvé veľké antibiotikum.",
   "hero": {
     "image": "la_decouverte_de_la_penicilline",
     "ratio": "16:9",
-    "hook": "Zabudnutá škatuľka, pleseň a liek sa obráti hore nohami."
+    "hook": "Zabudnutá miska, pleseň a v medicíne nastane prevrat."
   },
   "sections": [
     {
@@ -18,36 +18,36 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Pred antibiotikami mohla zabiť jednoduchá infekcia. Rez, zápal pľúc, vojnová rana: telo často bojovalo samo."
+          "text": "Pred antibiotikami mohla zabiť aj obyčajná infekcia. Porezanie, zápal pľúc, zranenie z vojny: telo často bojovalo samo."
         },
         {
           "type": "paragraph",
-          "text": "V **1928** škótsky lekár **Alexander Fleming** náhodou objavil látku schopnú zabíjať baktérie. Bude sa volať **penicilín**. Ale ešte bude trvať roky, kým sa z neho stane skutočný liek."
+          "text": "V roku **1928** škótsky lekár **Alexander Fleming** náhodou objaví látku, ktorá dokáže zabíjať baktérie. Bude sa volať **penicilín**. No potrvá ešte roky, kým sa z neho stane skutočný liek."
         }
       ]
     },
     {
       "id": "course_51_la_decouverte_de_la_penicilline_fleming_p1",
-      "title": "Zabudnutá krabica",
+      "title": "Zabudnutá miska",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Fleming študuje baktérie v Londýne. Po návrate z dovolenky si prezerá staré kultúrne krabice. Na jednom z nich vyrástol **plesnivec**. Okolo nej sú baktérie mŕtve."
+          "text": "Fleming skúma baktérie v Londýne. Po návrate z dovolenky si prezerá staré kultivačné misky. Na jednej z nich vyrástla **pleseň**. Okolo nej sú baktérie mŕtve."
         },
         {
           "type": "image",
           "asset": "alexander_fleming_penicillin_petri_dish",
           "ratio": "4:3",
-          "caption": "Fleming a kľúčová myšlienka: niečo v plesni zastaví baktérie."
+          "caption": "Fleming a kľúčová myšlienka: niečo v plesni zastavuje baktérie."
         },
         {
           "type": "paragraph",
-          "text": "Pleseň patrí do rodu **Penicillium**. Fleming chápe, že produkuje antibakteriálnu látku. Nazýva to penicilín. Ale nedokáže ho dostatočne očistiť, aby mohol liečiť chorých."
+          "text": "Pleseň patrí do rodu **Penicillium**. Fleming pochopí, že vytvára antibakteriálnu látku. Nazve ju penicilín. Nedarí sa mu ju však vyčistiť natoľko, aby ňou mohol liečiť chorých."
         },
         {
           "type": "funFact",
-          "text": "Fleming neskôr povedal, že keby bol viac poriadkumilovný, krabicu by vyhodil. Neporiadok v laboratóriu pomohol objavu."
+          "text": "Fleming neskôr povedal, že keby bol poriadnejší, misku by vyhodil. Neporiadok v laboratóriu objavu pomohol."
         }
       ]
     },
@@ -58,11 +58,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Na začiatku rokov **1940** sa v Oxforde **Howard Florey** a **Ernst Chain** vrátili do práce. So svojím tímom izolovali, koncentrovali a testovali penicilín na zvieratách, potom na ľuďoch."
+          "text": "Začiatkom **štyridsiatych rokov** nadväzujú v Oxforde na túto prácu **Howard Florey** a **Ernst Chain**. So svojím tímom penicilín izolujú, zahustia a otestujú na zvieratách, potom na ľuďoch."
         },
         {
           "type": "paragraph",
-          "text": "Druhá svetová vojna urobila veci naliehavou: infikovaní vojaci museli byť liečení. Penicilín sa presúva z laboratória k strategickej otázke."
+          "text": "Druhá svetová vojna dodá veci naliehavosť: treba liečiť infikovaných vojakov. Penicilín sa z laboratória stáva strategickou otázkou."
         }
       ]
     },
@@ -75,30 +75,30 @@
           "type": "image",
           "asset": "penicillin_antibiotic_production_laboratory",
           "ratio": "4:3",
-          "caption": "Bolo potrebné vymyslieť priemyselné spôsoby pestovania plesní."
+          "caption": "Bolo treba vymyslieť priemyselné spôsoby, ako pestovať pleseň."
         },
         {
           "type": "paragraph",
-          "text": "Na liečbu miliónov ľudí sú potrebné obrovské množstvá. Spojené štáty industrializovali výrobu počas vojny. Obrie kade spôsobujú, že pleseň mizne ako pivo."
+          "text": "Na liečbu miliónov ľudí treba obrovské množstvá. Spojené štáty počas vojny prechádzajú na priemyselnú výrobu. V obrích kadiach sa pleseň pestuje podobne ako pri varení piva."
         },
         {
           "type": "paragraph",
-          "text": "V roku **1945** dostali Fleming, Florey a Chain Nobelovu cenu. Medicína vstupuje do doby antibiotík."
+          "text": "V roku **1945** dostávajú Fleming, Florey a Chain Nobelovu cenu. Medicína vstupuje do éry antibiotík."
         }
       ]
     },
     {
       "id": "course_51_la_decouverte_de_la_penicilline_fleming_p4",
-      "title": "Tieň odporu",
+      "title": "Tieň rezistencie",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Dnes príliš veľa nesprávne používaných antibiotík umožnilo určitým baktériám stať sa **odpor**: lieky ich už nezabíjajú. Fleming už pred týmto rizikom varoval."
+          "text": "Nesprávne a nadmerné používanie antibiotík dnes umožnilo niektorým baktériám stať sa **odolnými**: lieky ich už nezabíjajú. Fleming na toto riziko upozorňoval už vtedy."
         },
         {
           "type": "takeaway",
-          "text": "Penicilín sa zrodil z náhody, ktorú pozoroval Fleming v **1928**, potom sa stal liekom vďaka Florey, Chain a vojnovému priemyslu. Zachránilo to milióny životov... pokiaľ ho neopotrebujete."
+          "text": "Penicilín sa rodí z náhody, ktorú Fleming spozoroval v roku **1928**, a liekom sa stáva vďaka Floreymu, Chainovi a vojnovému priemyslu. Zachránil milióny životov… pokiaľ sa nebude nadužívať."
         }
       ]
     }

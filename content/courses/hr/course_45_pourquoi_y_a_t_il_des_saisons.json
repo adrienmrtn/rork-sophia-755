@@ -1,14 +1,14 @@
 {
   "id": "course_45_pourquoi_y_a_t_il_des_saisons",
   "title": "Zašto postoje godišnja doba?",
-  "subtitle": "Zemlja & Sunce",
+  "subtitle": "Zemlja i Sunce",
   "subject": "sciences",
   "subcategory": "Svakodnevica pod povećalom",
-  "description": "Godišnja doba ne dolaze od toga što je Zemlja bliža ili dalje od Sunca. Pravi uzrok je nagib Zemljine osi.",
+  "description": "Godišnja doba nisu posljedica toga što je Zemlja bliže ili dalje od Sunca. Pravi uzrok je nagib Zemljine osi.",
   "hero": {
     "image": "pourquoi_y_a_t_il_des_saisons",
     "ratio": "16:9",
-    "hook": "Ne, ljeto neće doći jer je Zemlja sve bliže Suncu."
+    "hook": "Ne, ljeto ne dolazi zato što se Zemlja približi Suncu."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Mnogi misle da ljeto dolazi kada je Zemlja **bliže** Suncu, a zima kada je **daleko**. Ovo je laž. I to odmah vidimo: kad je ljeto u Francuskoj, u Australiji je zima."
+          "text": "Mnogi misle da ljeto dolazi kad je Zemlja **bliže** Suncu, a zima kad je **dalje**. To nije točno. I to se odmah vidi: kad je u Francuskoj ljeto, u Australiji je zima."
         },
         {
           "type": "paragraph",
-          "text": "Pravo objašnjenje leži u jednoj stvari: os rotacije Zemlje je **nagnuta**, nagnuta u odnosu na ravninu orbite oko Sunca."
+          "text": "Pravo objašnjenje svodi se na jedno: Zemljina os vrtnje je **nagnuta**, odnosno ukošena u odnosu na ravninu njezine orbite oko Sunca."
         }
       ]
     },
@@ -33,7 +33,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Zemlja se okrene oko svoje osi za **24 sata**: dan je i noć. Također kruži oko Sunca u **godina godina** u orbiti u obliku **elipsa**, blago spljoštenog kruga. Ali njegova os, zamišljena linija od Sjevernog pola do Južnog pola, nije ravna u odnosu na njegovu orbitu. Naginje se približno **23,5 stupnjeva**: to je [[Zemljin aksijalni nagib (23,5°)]]."
+          "text": "Zemlja se okreće oko svoje osi za **24 sata**: tako nastaju dan i noć. Oko Sunca obiđe za **godinu dana**, po orbiti u obliku **elipse**, blago spljoštene kružnice. No njezina os, zamišljena crta od Sjevernog do Južnog pola, nije uspravna u odnosu na orbitu. Nagnuta je za otprilike **23,5 stupnjeva**: to je [[Zemljin aksijalni nagib (23,5°)]]."
         },
         {
           "type": "image",
@@ -43,7 +43,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Ovaj nagib ostaje u približno istom smjeru tijekom cijele godine. Uvijek pokazuje na isti dio neba, blizu Sjevernjače. Rezultat: ovisno o tome gdje se Zemlja nalazi u orbiti, jedna hemisfera više \"gleda\" u Sunce, druga manje."
+          "text": "Taj nagib cijele godine ostaje usmjeren otprilike u istom smjeru. Uvijek pokazuje prema istom dijelu neba, blizu Sjevernjače. Zato, ovisno o tome gdje se Zemlja nalazi na orbiti, jedna polutka više „gleda” prema Suncu, a druga manje."
         }
       ]
     },
@@ -54,15 +54,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ljeti se na sjevernoj hemisferi Sjeverni pol naginje prema Suncu. Dani su duži: povećava se **fotoperiod**, omjer duljine dana i noći. Zrake također dolaze više \"ravno\" na tlo: energija je koncentrirana na manjoj površini. Tako da je toplije."
+          "text": "Kad je ljeto na sjevernoj polutki, Sjeverni pol nagnut je prema Suncu. Dani su duži: raste **fotoperiod**, omjer trajanja dana i noći. Zrake k tome padaju „ravnije” na tlo, pa se energija koncentrira na manju površinu. Zato je toplije."
         },
         {
           "type": "funFact",
-          "text": "U siječnju je Zemlja čak malo **bliža** Suncu nego u srpnju: to je **perihelij**, najbliža točka u orbiti. Pa ipak, ovdje je zima. Dokaz da udaljenost ne objašnjava godišnja doba."
+          "text": "U siječnju je Zemlja čak malo **bliže** Suncu nego u srpnju: to je **perihel**, najbliža točka orbite. Pa ipak, kod nas je tada zima. To dokazuje da udaljenost ne objašnjava godišnja doba."
         },
         {
           "type": "paragraph",
-          "text": "Zimi je suprotno: kratki dani, više kosih zraka, energija rasprostranjena na većoj površini. Manje primljene topline. **solsticij**, vrijeme kada Sunce dosegne svoj najsjeverniji ili najjužniji položaj, označava početak ljeta ili zime."
+          "text": "Zimi je obrnuto: dani su kratki, zrake padaju koso, a energija se raspoređuje na veću površinu. Stiže manje topline. **Solsticiji**, trenuci kad Sunce dosegne najsjeverniji ili najjužniji položaj, označavaju početak ljeta ili zime."
         }
       ]
     },
@@ -73,26 +73,26 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "U blizini **neki**, zamišljene linije koja dijeli Zemlju na dvije hemisfere, nagib malo mijenja duljinu dana. Ne postoje zapravo četiri godišnja doba kao u Europi, već suša i vlažnija razdoblja."
+          "text": "Blizu **ekvatora**, zamišljene crte koja dijeli Zemlju na dvije polutke, nagib malo mijenja duljinu dana. Tamo zapravo nema četiri godišnja doba kao u Europi, nego se izmjenjuju sušnija i vlažnija razdoblja."
         },
         {
           "type": "paragraph",
-          "text": "Na **motke**, učinak je ekstreman: nekoliko mjeseci neprekidnog dana ljeti, nekoliko mjeseci noći zimi. Tamo je kontrast mnogo jači nego u Francuskoj."
+          "text": "Na **polovima** je učinak ekstreman: nekoliko mjeseci neprekidnog dana ljeti, nekoliko mjeseci noći zimi. Ondje je razlika mnogo veća nego u Francuskoj."
         }
       ]
     },
     {
       "id": "course_45_pourquoi_y_a_t_il_des_saisons_p4",
-      "title": "Planeta bez nagiba",
+      "title": "Planet bez nagiba",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kad bi Zemljina os bila savršeno ravna, svako bi mjesto dobilo približno jednaku količinu sunčeve svjetlosti tijekom cijele godine. Nema više pravog ljeta, nema više prave zime. Klima, kulture, migracije životinja: sve bi bilo drugačije."
+          "text": "Kad bi Zemljina os bila savršeno uspravna, svako bi mjesto cijele godine dobivalo otprilike jednaku količinu sunca. Ne bi bilo pravog ljeta ni prave zime. Klima, usjevi, selidbe životinja: sve bi bilo drukčije."
         },
         {
           "type": "takeaway",
-          "text": "Godišnja doba dolaze od nagiba Zemljine osi, približno **23,5°**, a ne od udaljenosti od Sunca. Jedna polutka naginje prema Suncu: ljeto je. Drugi naginje suprotnom: zima je."
+          "text": "Godišnja doba posljedica su **nagiba** Zemljine osi, otprilike **23,5°**, a ne udaljenosti od Sunca. Jedna polutka nagnuta je prema Suncu: ondje je ljeto. Druga je nagnuta od njega: ondje je zima."
         }
       ]
     }

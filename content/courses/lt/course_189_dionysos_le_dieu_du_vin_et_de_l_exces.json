@@ -1,0 +1,140 @@
+{
+  "id": "course_189_dionysos_le_dieu_du_vin_et_de_l_exces",
+  "title": "Kas sieja vyno dievą Dionisą ir teatrą?",
+  "subtitle": "Vynas, teatras, ribų peržengimas",
+  "subject": "mythologie",
+  "subcategory": "Autres mythologies",
+  "description": "Vyno ir ekstazės dievas Dionisas kartu yra ir graikų teatro globėjas. Gimęs du kartus, jis panaikina ribas tarp tvarkos ir chaoso.",
+  "hero": {
+    "image": "dionysos_le_dieu_du_vin",
+    "ratio": "16:9",
+    "hook": "Vyno dievas atneša ne tik apsvaigimą: jis sukuria ir teatrą."
+  },
+  "sections": [
+    {
+      "id": "course_189_dionysos_le_dieu_du_vin_et_de_l_exces_intro",
+      "title": "Įvadas",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Dionisas** yra paradoksaliausias graikų dievas. Vyno, vynmedžių ir apsvaigimo dievas, jis visų pirma yra virsmo dievas. Kitaip nei savo viršūnėje sustingę olimpiečiai, jis klajoja, lydimas triukšmingos palydos."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jis panaikina ribas tarp dieviško ir žmogiško, tvarkos ir chaoso, gyvenimo ir mirties. Iš jo švenčių gims [[teatras]], vienas didžiausių Graikijos palikimų."
+        }
+      ]
+    },
+    {
+      "id": "course_189_dionysos_le_dieu_du_vin_et_de_l_exces_p1",
+      "title": "Gimęs du kartus: nuo Semelės iki Dzeuso šlaunies",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dionisas gimsta iš dramos. Dievų karaliaus **Dzeuso** mylimoji yra mirtingoji [[Semelė]], Tėbų karalaitė. **Hera**, pavydi Dzeuso žmona, įkalba ją paprašyti, kad mylimasis pasirodytų tikru dievišku pavidalu."
+        },
+        {
+          "type": "image",
+          "asset": "dionysus_greek_god_wine_grapes_painting",
+          "ratio": "4:3",
+          "caption": "Dionisas, vyno, ekstazės ir virsmo dievas."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dzeusas paklūsta. Žaibas nužudo Semelę. Kad išgelbėtų vaiką, Dzeusas įdeda jį į savo paties šlaunį ir laiko ten iki gimimo. Taigi Dionisas yra „du kartus gimęs“, o jam skirta giesmė vadinasi [[Ditirambas]]."
+        },
+        {
+          "type": "funFact",
+          "text": "Šis mitas paaiškina, kodėl Dionisas yra ir mirtingas, ir dieviškas: jo motina buvo žmogus, o tėvas olimpietis, kuris jį „išnešiojo“."
+        }
+      ]
+    },
+    {
+      "id": "course_189_dionysos_le_dieu_du_vin_et_de_l_exces_p2",
+      "title": "Menadžių ekstazė",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Užaugęs Dionisas keliauja po pasaulį ir skleidžia savo kultą. Jo sekėjos, daugiausia moterys, vadinamos **menadėmis** arba bakchantėmis, palieka miestą ir traukia į kalnus. Ten šokiai, muzika ir vynas sukelia transą, kai žmogų „apsėda dievas“."
+        },
+        {
+          "type": "paragraph",
+          "text": "Šios apeigos, vadinamosios [[misterijos]], apverčia visuomenės tvarką. Vieną naktį protas nusileidžia. Dievas žada išsilaisvinimą, bet tiems, kurie jį atstumia, siunčia beprotybę."
+        },
+        {
+          "type": "image",
+          "asset": "maenads_bacchantes_frenzy_dance_ancient_vase",
+          "ratio": "4:3",
+          "caption": "Bakchantės transe: kultas, kuris apverčia miesto tvarką."
+        },
+        {
+          "type": "funFact",
+          "text": "Kartą piratai pagrobia Dionisą, norėdami jį parduoti. Jis paverčia irklus gyvatėmis, o ant stiebo užaugina vynmedį. Persigandę vyrai šoka į jūrą ir virsta delfinais."
+        }
+      ]
+    },
+    {
+      "id": "course_189_dionysos_le_dieu_du_vin_et_de_l_exces_p3",
+      "title": "Iš chaoso gimsta teatras",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Atėnuose šis saiko nepažįstantis dievas tampa pilietinio meno, teatro, globėju. VI a. pr. Kr. **Didžiosiose Dionisijose** rengiamos dramos varžybos. Viskas prasideda nuo ditirambo, chorinės giesmės dievo garbei."
+        },
+        {
+          "type": "image",
+          "asset": "dionysus_greek_god_wine_theater",
+          "ratio": "4:3",
+          "caption": "Didžiosios Dionisijos: kultas virsta miesto reginiu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kai dainininkas atsiskiria nuo choro ir ima jam atsakinėti, gimsta aktorius. Tragedija tampa vieta, kur miestas stebi savo baimes ir konfliktus, nenugrimzdamas į tikrą chaosą. Tai ir yra [[katarsis]]: apsivalymas nuo emocijų jas stebint."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "Gimimas",
+              "title": "Dvigubas gimimas",
+              "detail": "Semelė miršta, vaiką išnešioja Dzeusas."
+            },
+            {
+              "date": "Kultas",
+              "title": "Menadžių apeigos",
+              "detail": "Ekstazė, vynas, tvarkos apvertimas."
+            },
+            {
+              "date": "VI a. pr. Kr.",
+              "title": "Didžiosios Dionisijos",
+              "detail": "Teatro gimimas Atėnuose."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_189_dionysos_le_dieu_du_vin_et_de_l_exces_p4",
+      "title": "Dionisas ir Apolonas",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "XIX a. filosofas **Nietzsche** supriešina dvi jėgas: [[Apolonas]], saiko ir aiškumo dievas, ir Dionisas, apsvaigimo ir kūrybinio chaoso jėga. Ši įtampa, [[apoloniškasis ir dioniziškasis pradai (Nietzsche)]], jo manymu, paaiškina graikų tragedijos didybę."
+        },
+        {
+          "type": "paragraph",
+          "text": "Taigi Dionisas lieka dievu, primenančiu paprastą tiesą: be truputėlio netvarkos nėra nei meno, nei šventės, nei išradimų."
+        },
+        {
+          "type": "takeaway",
+          "text": "Du kartus gimęs vyno ir ekstazės dievas **Dionisas** įkvepia apeigas, iš kurių gimsta graikų **teatras**. Jis įkūnija vaisingą saiko ir pertekliaus įtampą."
+        }
+      ]
+    }
+  ]
+}

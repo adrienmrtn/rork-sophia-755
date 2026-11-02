@@ -4,7 +4,7 @@
   "subtitle": "Eksobiologija",
   "subject": "sciences",
   "subcategory": "Zemlja in vesolje",
-  "description": "Na tisoče milijard planetov, pa radijska tišina. Znanost išče življenje drugje brez obetavnih zelenih možic.",
+  "description": "Na tisoče milijard planetov, pa vendar radijska tišina. Znanost išče življenje drugje, ne da bi obljubljala zelene možice.",
   "hero": {
     "image": "y_a_t_il_de_la_vie_ailleurs_dans_l_univers",
     "ratio": "16:9",
@@ -18,40 +18,40 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Opazljivo vesolje vsebuje približno **2 bilijonova** galaksij, ogromne zbirke zvezd, od katerih ima vsaka na stotine milijard zvezd. S pomočjo statistike bi moralo biti potencialno naseljivih planetov nešteto. Vendar od začetka moderne astronomije nismo imeli potrjenih stikov."
+          "text": "Opazljivo vesolje vsebuje približno **2000 milijard** galaksij, ogromnih skupin zvezd, in vsaka ima na stotine milijard zvezd. Statistično gledano bi moralo biti planetov, ki so morda primerni za življenje, nešteto. Vendar od začetka moderne astronomije nimamo nobenega potrjenega stika."
         },
         {
           "type": "paragraph",
-          "text": "To protislovje ima ime: paradoks **Fermi**, po fiziku **Enricu Fermi**. Vprašanje ni več le znanstvena fantastika. Spada pod [[Eksobiologija]]: vedo, ki preučuje pogoje za pojav življenja drugje in načine za njegovo odkrivanje."
+          "text": "To protislovje ima ime: **Fermijev paradoks**, po fiziku **Enricu Fermiju**. Vprašanje ni več le znanstvena fantastika. Z njim se ukvarja [[Eksobiologija]]: veda, ki preučuje, v kakšnih pogojih bi drugje lahko nastalo življenje in kako bi ga lahko zaznali."
         }
       ]
     },
     {
       "id": "course_66_y_a_t_il_de_la_vie_ailleurs_dans_l_unive_p1",
-      "title": "Kaj se zdi, da življenje sprašuje",
+      "title": "Kaj življenje, kot kaže, potrebuje",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Če pogledamo drugje, izhajamo iz edinega znanega primera: zemeljskega življenja. Temelji predvsem na kemiji **ogljika**, atoma, ki tvori kompleksne molekule, in na **tekoči vodi**, ki omogoča dobro potek kemičnih reakcij."
+          "text": "Pri iskanju življenja drugje se izhaja iz edinega znanega primera: življenja na Zemlji. To temelji predvsem na kemiji **ogljika**, atoma, ki tvori zapletene molekule, in na **tekoči vodi**, ki omogoča, da kemične reakcije dobro potekajo."
         },
         {
           "type": "image",
           "asset": "radio_telescope_seti",
           "ratio": "auto",
-          "caption": "Radijski teleskopi pregledujejo nebo in poslušajo morebiten signal."
+          "caption": "Radijski teleskopi pregledujejo nebo in iščejo morebiten signal."
         },
         {
           "type": "paragraph",
-          "text": "Planet kandidat se mora pogosto nahajati v [[Bivalno območje]] svoje zvezde: niti preblizu, sicer voda izhlapi, niti predaleč, sicer voda zmrzne. Od devetdesetih let prejšnjega stoletja je bilo odkritih več kot **5.500 eksoplanetov**, planetov okoli zvezd, ki niso Sonce. Skoraj vsaka zvezda v naši galaksiji bi imela vsaj enega."
+          "text": "Planet kandidat mora pogosto krožiti tam, kjer je [[bivalno območje]] njegove zvezde: ne preblizu, sicer voda izhlapi, in ne predaleč, sicer voda zmrzne. Od devetdesetih let prejšnjega stoletja so odkrili več kot **5.500 eksoplanetov**, planetov, ki krožijo okoli drugih zvezd, ne okoli Sonca. Skoraj vsaka zvezda v naši galaksiji naj bi imela vsaj enega."
         },
         {
           "type": "funFact",
-          "text": "V opazovanem vesolju je več zvezd, kot je zrn peska na vseh plažah Zemlje."
+          "text": "V opazljivem vesolju je več zvezd, kot je zrn peska na vseh plažah na Zemlji."
         },
         {
           "type": "paragraph",
-          "text": "V **1961** je astronom **Frank Drake** predlagal [[Drakova enačba]]: formulo, ki pomnoži faktorje - zvezde, naseljive planete, trajanje civilizacij - za oceno števila civilizacij, ki so sposobne komunicirati v Mlečni cesti. Številke ostajajo zelo negotove. Formula se uporablja predvsem za strukturiranje razprave."
+          "text": "Leta **1961** astronom **Frank Drake** predlaga formulo z imenom [[Drakova enačba]]: pomnoži dejavnike, kot so zvezde, bivalni planeti in trajanje civilizacij, da bi ocenila, koliko civilizacij v Rimski cesti je sposobnih komunicirati. Številke ostajajo zelo negotove. Formula predvsem pomaga urediti razpravo."
         }
       ]
     },
@@ -62,15 +62,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ni vam treba takoj iti k drugim zvezdam. V našem sončnem sistemu je več svetov zanimivih. **Evropi**, Jupitrova luna, verjetno skriva ocean tekoče vode pod ledeno skorjo. Ta ocean bi ostal tekoč zaradi [[Plimne sile]]: ogromna privlačnost Jupitra deformira Evropo in s trenjem segreje njeno notranjost."
+          "text": "Ni treba takoj k drugim zvezdam. V našem sončnem sistemu je več svetov, ki zbujajo radovednost. **Evropa**, Jupitrova luna, pod ledeno skorjo verjetno skriva ocean tekoče vode. Ta ocean naj bi ostal tekoč, ker delujejo [[plimske sile]]: ogromna privlačnost Jupitra deformira Evropo in s trenjem segreva njeno notranjost."
         },
         {
           "type": "paragraph",
-          "text": "**Enceladus**, majhna Saturnova luna, izstreljuje **gejzirje**, curke pare in snovi. Sonda **Cassini** je odkrila znake **hidrotermalne** aktivnosti, segrevanja s kemičnimi reakcijami na dnu oceana, ki načeloma lahko hrani mikrobe brez sončne svetlobe."
+          "text": "**Enkelad**, majhna Saturnova luna, bruha **gejzirje**, curke pare in snovi. Sonda **Cassini** je tam našla znake **hidrotermalne** dejavnosti, torej segrevanja s kemičnimi reakcijami na dnu oceana, ki bi načeloma lahko hranila mikrobe brez sonca."
         },
         {
           "type": "paragraph",
-          "text": "Na **Marsu** je tekoča voda nekoč tekla po površini. Roboti iščejo [[Biopodpisi]]: fosilne ali kemične sledi preteklega življenja, preden je planet izgubil velik del ozračja in vode."
+          "text": "Po površju **Marsa** je nekoč tekla tekoča voda. Roboti tam iščejo, ali so ostali [[biopodpisi]]: fosilne ali kemične sledi življenja iz časa, preden je planet izgubil velik del ozračja in vode."
         }
       ]
     },
@@ -81,38 +81,38 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "V **1950** Fermi sprašuje: če obstaja na tisoče naprednih civilizacij, zakaj ne vidimo nobene sledi o njih? Vesolje je staro. Civilizacija le milijon let pred nami bi imela čas, da izstopa, tudi če ne bi potovala s svetlobno hitrostjo."
+          "text": "Leta **1950** Fermi vpraša: če obstaja na tisoče naprednih civilizacij, zakaj ne vidimo nobene njihove sledi? Vesolje je staro. Civilizacija, ki bi nas prehitela le za milijon let, bi imela dovolj časa, da bi nase opozorila, tudi če ne bi potovala s svetlobno hitrostjo."
         },
         {
           "type": "paragraph",
-          "text": "Ena od hipotez je [[Velik filter]]: skoraj nemogoč korak v evoluciji, na primer prehod v kompleksno življenje ali tehnološko samouničenje. Ali smo jo že pretekli ali pa je pred nami."
+          "text": "Ena od hipotez je [[veliki filter]]: korak v evoluciji, ki ga je skoraj nemogoče prestati, na primer prehod do zapletenega življenja ali tehnološko samouničenje. Ali smo ga že prestali ali pa je še pred nami."
         },
         {
           "type": "paragraph",
-          "text": "Druge ideje: morda ne poslušamo pravih signalov. Program **SETI**, Search for Extraterrestrial Intelligence, v glavnem skenira radijske valove. Ali pa so civilizacije prekratke in predaleč, da bi se križale. Ali celo [[živalski vrt hipoteza]]: Zemljo bi prostovoljno pustili ob strani, kot rezervat."
+          "text": "Druge možnosti: morda ne poslušamo pravih signalov. Program **SETI**, Search for Extraterrestrial Intelligence, spremlja predvsem radijske valove. Ali pa civilizacije trajajo prekratko in so preveč oddaljene, da bi se srečale. Ali pa drži [[Hipoteza živalskega vrta]]: Zemljo naj bi namenoma pustili ob strani, kot rezervat."
         }
       ]
     },
     {
       "id": "course_66_y_a_t_il_de_la_vie_ailleurs_dans_l_unive_p4",
-      "title": "Kako iščemo danes",
+      "title": "Kako poteka iskanje danes",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Vesoljski teleskop **James Webb** analizira svetlobo, ki prehaja skozi atmosfero oddaljenih planetov, z [[Spektroskopija]], rezanjem svetlobe za prepoznavanje prisotnih plinov. Iščemo pline, kot sta kisik ali metan, v nenavadnih količinah, možne znake življenja."
+          "text": "Vesoljski teleskop **James Webb** analizira svetlobo, ki prehaja skozi ozračje oddaljenih planetov, pri tem pa mu pomaga [[spektroskopija]], razklon svetlobe, s katerim prepoznajo prisotne pline. Iščejo pline, kot sta kisik ali metan, v nenavadnih količinah, saj bi lahko bili znaki življenja."
         },
         {
           "type": "funFact",
-          "text": "Če bi nas nekdo v galaksiji Andromeda pogledal \"zdaj\", bi videl Zemljo, kakršna je bila pred **2,5 milijona**: toliko časa traja, da potuje svetloba."
+          "text": "Če bi nas kdo v galaksiji Andromeda opazoval »zdaj«, bi videl Zemljo, kakršna je bila pred **2,5 milijona let**: toliko časa potrebuje svetloba za to pot."
         },
         {
           "type": "paragraph",
-          "text": "Tudi življenje mikrobov bi spremenilo vse: dokazalo bi, da živa bitja niso edinstvena nesreča. Medtem so sonde **Za potovanje** nosile zlate diske z zvoki in slikami Zemlje od leta **1977**. Verjetnost prestrezanja: skoraj nič. Ne potrebujete občutka samega: nedotaknjenega."
+          "text": "Tudi mikrobno življenje bi spremenilo vse: dokazalo bi, da življenje ni enkratno naključje. Medtem sondi **Voyager** od leta **1977** nosita zlati plošči z zvoki in slikami Zemlje. Verjetnost, da ju kdo prestreže: skoraj nič. Potreba, da se ne bi počutili sami: nedotaknjena."
         },
         {
           "type": "takeaway",
-          "text": "Planetov je nešteto in življenje se zdi statistično verjetno. Toda odsotnost stika, Fermijev paradoks, nas opominja, da je tehnološka inteligenca lahko zelo redka ali zelo kratka."
+          "text": "Planetov je nešteto in življenje se zdi statistično verjetno. Toda odsotnost stika, Fermijev paradoks, nas opominja, da je tehnološka inteligenca morda zelo redka ali zelo kratkotrajna."
         }
       ]
     }

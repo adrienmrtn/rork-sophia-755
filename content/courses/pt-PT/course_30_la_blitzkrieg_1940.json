@@ -8,7 +8,7 @@
   "hero": {
     "image": "la_blitzkrieg_1940",
     "ratio": "16:9",
-    "hook": "Seis semanas para derrubar o que se acreditava ser o primeiro exército da Europa."
+    "hook": "Seis semanas para derrubar aquele que se julgava o primeiro exército da Europa."
   },
   "sections": [
     {
@@ -28,7 +28,7 @@
     },
     {
       "id": "course_30_la_blitzkrieg_1940_p1",
-      "title": "Bater forte, bater rápido",
+      "title": "Golpear com força, golpear depressa",
       "free": false,
       "blocks": [
         {
@@ -41,7 +41,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Onde os franceses dispersam os tanques em apoio à infantaria, os alemães reúnem-nos em divisões blindadas autónomas, ligadas por rádio. Os Stukas agem como uma artilharia voadora. Entretanto, a França ainda acredita em [[A linha Maginot]], essa cadeia de fortes ao longo da fronteira alemã."
+          "text": "Onde os franceses dispersam os tanques em apoio à infantaria, os alemães reúnem-nos em divisões blindadas autónomas, ligadas por rádio. Os Stukas agem como uma artilharia voadora. Entretanto, a França ainda acredita na sua barreira defensiva: a [[linha Maginot]], essa cadeia de fortins ao longo da fronteira alemã."
         }
       ]
     },
@@ -52,23 +52,23 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Por conselho do general **Erich von Manstein**, Hitler adota o [[Sichelschnitt]], o «golpe de foice»: atrair os Aliados para a Bélgica, enquanto o grosso dos panzers, os tanques alemães, atravessa as **Ardenas**, tidas como intransitáveis. A **13 de maio**, o general **Heinz Guderian** atravessa o Mosa em **Sedan**. A estrada para o canal da Mancha está aberta."
+          "text": "Por conselho do general **Erich von Manstein**, Hitler adota o [[Sichelschnitt]], o «golpe de foice»: atrair os Aliados para a Bélgica, enquanto o grosso dos panzers, os tanques alemães, atravessa as **Ardenas**, tidas como intransponíveis. A **13 de maio**, o general **Heinz Guderian** atravessa o Mosa em **Sedan**. A estrada para o canal da Mancha está aberta."
         },
         {
           "type": "image",
           "asset": "german_tanks_blitzkrieg_1940",
           "ratio": "4:3",
-          "caption": "Tanques alemães durante a campanha de 1940"
+          "caption": "Tanques alemães durante a campanha de 1940."
         },
         {
           "type": "paragraph",
-          "text": "Numa semana, os exércitos aliados ficam cercados, de costas para o mar. Em Dunquerque, [[A operação Dynamo (Dunquerque)]] evacua **338.000** soldados franco-britânicos. A Grã-Bretanha salva o seu exército. A França fica sozinha."
+          "text": "Numa semana, os exércitos aliados ficam cercados, de costas para o mar. Em Dunquerque, a [[operação Dynamo]] evacua **338.000** soldados franco-britânicos. A Grã-Bretanha salva o seu exército. A França fica sozinha."
         },
         {
           "type": "image",
           "asset": "dunkirk_evacuation_beach_1940",
           "ratio": "4:3",
-          "caption": "Evacuação de Dunquerque, maio-junho de 1940"
+          "caption": "Evacuação de Dunquerque, maio-junho de 1940."
         }
       ]
     },
@@ -79,7 +79,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Privada das suas melhores divisões, a França desaba. Paris é declarada cidade aberta a **14 de junho**. O marechal **Philippe Pétain** pede o armistício, assinado a **22 de junho** em Compiègne, na mesma carruagem de **1918**: Hitler encena a desforra."
+          "text": "Privada das suas melhores divisões, a França desaba. Paris é declarada cidade aberta a **14 de junho**. O marechal **Philippe Pétain** pede o armistício, assinado a **22 de junho** em Compiègne, na mesma carruagem que em **1918**: Hitler encena a desforra."
         },
         {
           "type": "funFact",
@@ -98,7 +98,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "1940 consagra a Alemanha senhora da Europa. Mas a Blitzkrieg é uma estratégia de guerra curta: combustível limitado, logística frágil. Em **1941**, perante a imensidão soviética, atola-se. O historiador **Marc Bloch** falará de *A Estranha Derrota*: um fracasso intelectual francês tanto quanto material."
+          "text": "1940 faz da Alemanha a senhora da Europa. Mas a Blitzkrieg é uma estratégia de guerra curta: combustível limitado, logística frágil. Em **1941**, perante a imensidão soviética, atola-se. O historiador **Marc Bloch** falará de *A Estranha Derrota*: um fracasso intelectual francês tanto quanto material."
         },
         {
           "type": "timeline",
@@ -116,7 +116,7 @@
             {
               "date": "maio-junho de 1940",
               "title": "Dunquerque",
-              "detail": "338.000 soldados evacuados para a Inglaterra."
+              "detail": "338.000 soldados evacuados para Inglaterra."
             },
             {
               "date": "22 de junho de 1940",

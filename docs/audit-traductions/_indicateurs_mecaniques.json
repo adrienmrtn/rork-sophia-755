@@ -1,0 +1,2064 @@
+{
+ "ui_et_validateur": {
+  "en": {
+   "ui_same_as_en": [
+    "course.unlock.free",
+    "course.quiz.access",
+    "course.unlock.cta",
+    "tab.home",
+    "tab.library",
+    "tab.profile",
+    "tab.training",
+    "training.title",
+    "training.readyTitle",
+    "training.dueCount",
+    "training.emptyTitle",
+    "training.emptyMessage",
+    "training.locked.title",
+    "training.locked.message",
+    "training.locked.tagline",
+    "training.unlock",
+    "training.discover",
+    "training.how.title",
+    "training.how.step1",
+    "training.how.step2",
+    "training.how.step3",
+    "training.emptyCta",
+    "training.ob.welcome.line",
+    "training.ob.recall.title",
+    "training.ob.recall.legend.sophia",
+    "training.ob.recall.legend.reread",
+    "training.ob.recall.stat.prefix",
+    "training.ob.recall.stat.highlight",
+    "training.ob.recall.stat.suffix",
+    "training.ob.recall.cta",
+    "training.ob.algo.title",
+    "training.ob.algo.body",
+    "training.ob.algo.highlight.value",
+    "training.ob.algo.highlight.label",
+    "training.ob.cta.last",
+    "training.start",
+    "training.finish",
+    "training.backToTraining",
+    "training.sessionComplete.title",
+    "training.sessionComplete.summary",
+    "library.title",
+    "library.tab.courses",
+    "library.search.placeholder",
+    "language.section",
+    "onboarding.intro.cta",
+    "onboarding.language.title",
+    "onboarding.language.subtitle",
+    "discount.sideTab.label",
+    "auth.error.token",
+    "auth.error.generic",
+    "auth.continueWithApple",
+    "auth.continueWithGoogle",
+    "auth.onboarding.title",
+    "auth.onboarding.subtitle",
+    "auth.legal.prefix",
+    "account.title",
+    "account.signedIn.title",
+    "account.manage.subtitle",
+    "account.create.title",
+    "account.create.subtitle",
+    "account.signedOut.headline",
+    "account.signedOut.body",
+    "account.email",
+    "account.provider",
+    "account.signOut.action",
+    "account.signOut.title",
+    "account.signOut.message",
+    "account.signOut.confirm",
+    "account.delete.action",
+    "account.delete.title",
+    "account.delete.message",
+    "account.delete.confirm",
+    "account.delete.error",
+    "sync.conflict.title",
+    "sync.conflict.body",
+    "sync.conflict.local",
+    "sync.conflict.remote",
+    "sync.conflict.summary",
+    "onboardingV2.welcome.title",
+    "onboardingV2.welcome.subtitle",
+    "onboardingV2.welcome.cta",
+    "onboardingV2.language.title",
+    "onboardingV2.language.subtitle",
+    "onboardingV2.language.scrollHint",
+    "onboardingV2.objective.title",
+    "onboardingV2.objective.subtitle",
+    "onboardingV2.objective.cultivate",
+    "onboardingV2.objective.reduceScreen",
+    "onboardingV2.objective.exams",
+    "onboardingV2.objective.impress",
+    "onboardingV2.objective.curiosity",
+    "onboardingV2.objectiveIntro.title",
+    "onboardingV2.tapToContinue",
+    "onboardingV2.questions.title",
+    "onboardingV2.questions.q1",
+    "onboardingV2.questions.q2",
+    "onboardingV2.questions.q3",
+    "onboardingV2.questions.q4",
+    "onboardingV2.questions.q5",
+    "onboardingV2.questions.q6",
+    "onboardingV2.questions.q7",
+    "onboardingV2.questions.q8",
+    "onboardingV2.questions.q9",
+    "onboardingV2.questions.q10",
+    "onboardingV2.screenTime.title",
+    "onboardingV2.phoneTime.title",
+    "onboardingV2.yearsGrid.title",
+    "onboardingV2.yearsGrid.caption",
+    "onboardingV2.transform.text",
+    "onboardingV2.transform.words",
+    "onboardingV2.transform.tapHint",
+    "onboardingV2.exams.title",
+    "onboardingV2.exams.quote1",
+    "onboardingV2.exams.author1",
+    "onboardingV2.exams.quote2",
+    "onboardingV2.exams.author2",
+    "onboardingV2.exams.quote3",
+    "onboardingV2.exams.author3",
+    "onboardingV2.exams.quote4",
+    "onboardingV2.exams.author4",
+    "onboardingV2.rightPlace.title",
+    "onboardingV2.rightPlace.ofUsers",
+    "onboardingV2.rightPlace.caption",
+    "onboardingV2.swipe.title",
+    "onboardingV2.swipe.subtitle",
+    "onboardingV2.swipe.like",
+    "onboardingV2.swipe.nope",
+    "onboardingV2.swipe.noted",
+    "onboardingV2.phone.title",
+    "onboardingV2.phone.perDay",
+    "onboardingV2.weeks.title",
+    "onboardingV2.weeks.subtitle",
+    "onboardingV2.weeks.caption",
+    "onboardingV2.review.title",
+    "onboardingV2.review.appStore",
+    "onboardingV2.review.quote",
+    "onboardingV2.review.t1.quote",
+    "onboardingV2.review.t2.quote",
+    "onboardingV2.review.t3.quote",
+    "onboardingV2.review.t4.quote",
+    "onboardingV2.review.t5.quote",
+    "onboardingV2.review.t6.quote",
+    "onboardingV2.personalize.text",
+    "onboardingV2.personalize.tapHint",
+    "onboardingV2.profile.eyebrow",
+    "onboardingV2.profile.objectiveTitle",
+    "onboardingV2.profile.coursesTitle",
+    "onboardingV2.profile.cta",
+    "onboardingV2.profile.nickname.cultivate",
+    "onboardingV2.profile.nickname.reduceScreen",
+    "onboardingV2.profile.nickname.exams",
+    "onboardingV2.profile.nickname.impress",
+    "onboardingV2.profile.nickname.curiosity",
+    "onboardingV2.profile.tagline.cultivate",
+    "onboardingV2.profile.tagline.reduceScreen",
+    "onboardingV2.profile.tagline.exams",
+    "onboardingV2.profile.tagline.impress",
+    "onboardingV2.profile.tagline.curiosity",
+    "onboardingV2.loading.title",
+    "onboardingV2.loading.step1",
+    "onboardingV2.loading.step2",
+    "onboardingV2.loading.step3",
+    "onboardingV2.loading.cta",
+    "onboardingV2.login.title",
+    "onboardingV2.login.subtitle",
+    "onboardingV2.trial.title",
+    "onboardingV2.trial.cta",
+    "onboardingV2.trial.step0.title",
+    "onboardingV2.trial.step0.detail",
+    "onboardingV2.trial.step1.title",
+    "onboardingV2.trial.step2.title",
+    "onboardingV2.trial.step2.detail",
+    "onboardingV2.trial.step3.title",
+    "onboardingV2.trial.step3.detail",
+    "onboardingV2.reminder.title",
+    "onboardingV2.reminder.cta",
+    "onboardingV2.notifications.title",
+    "onboardingV2.notifications.subtitle",
+    "onboardingV2.notifications.bullet1",
+    "onboardingV2.notifications.bullet2",
+    "onboardingV2.notifications.bullet3",
+    "onboardingV2.notifications.cta",
+    "onboardingV2.notifications.skip",
+    "notification.courseNudge.title",
+    "notification.courseNudge.body",
+    "notification.courseNudge.bodyFallback",
+    "onboardingV2.pw.tryFree",
+    "onboardingV2.pw.thenPrice",
+    "onboardingV2.pw.priceNoTrial",
+    "onboardingV2.pw.viewAllPlans",
+    "onboardingV2.pw.twoTaps",
+    "onboardingV2.pw.startTrial",
+    "onboardingV2.pw.subscribe",
+    "onboardingV2.pw.compare.title",
+    "onboardingV2.pw.free",
+    "onboardingV2.pw.yearly",
+    "onboardingV2.pw.monthly",
+    "onboardingV2.pw.weekly",
+    "onboardingV2.pw.monthlyBilling",
+    "onboardingV2.pw.weeklyBilling",
+    "onboardingV2.pw.trialBadge",
+    "onboardingV2.pw.save",
+    "onboardingV2.pw.feature.allSubjects",
+    "onboardingV2.pw.feature.unlimited",
+    "onboardingV2.pw.feature.quiz",
+    "onboardingV2.pw.feature.favorites",
+    "onboardingV2.pw.feature.noAds",
+    "onboardingV2.pw.feature.weekly",
+    "settings.title",
+    "settings.section.progress",
+    "settings.section.data",
+    "settings.section.help",
+    "settings.section.legal",
+    "settings.section.about",
+    "settings.section.developer",
+    "settings.section.appearance",
+    "settings.appearance.light",
+    "settings.appearance.dark",
+    "settings.appearance.automatic",
+    "settings.appearance.hint",
+    "settings.courses.completed",
+    "settings.courses.available",
+    "settings.streak.title",
+    "settings.streak.subtitle",
+    "settings.premium.title",
+    "settings.premium.subtitle",
+    "settings.reset.title",
+    "settings.feedback.title",
+    "settings.feedback.subtitle",
+    "settings.ambassador.banner.badge",
+    "settings.ambassador.banner.title",
+    "settings.ambassador.banner.subtitle",
+    "settings.terms.title",
+    "settings.privacy.title",
+    "settings.restore.title",
+    "settings.about.courses",
+    "settings.debug.resetOnboarding",
+    "settings.debug.resetDaily",
+    "settings.debug.daily.done",
+    "settings.debug.daily.pending",
+    "settings.debug.premium.subtitle",
+    "settings.reset.alert.title",
+    "settings.reset.alert.cancel",
+    "settings.reset.alert.confirm",
+    "settings.reset.alert.message",
+    "settings.onboarding.alert.title",
+    "settings.onboarding.alert.confirm",
+    "settings.onboarding.alert.message",
+    "feedback.title",
+    "feedback.subtitle",
+    "feedback.category.label",
+    "feedback.category.idea",
+    "feedback.category.content",
+    "feedback.category.other",
+    "feedback.message.placeholder",
+    "feedback.email.label",
+    "feedback.email.placeholder",
+    "feedback.technicalNote",
+    "feedback.submit",
+    "feedback.error.generic",
+    "feedback.success.title",
+    "feedback.success.body",
+    "feedback.success.close",
+    "ambassador.title",
+    "ambassador.step.program",
+    "ambassador.step.apply",
+    "ambassador.program.heading",
+    "ambassador.how.title",
+    "ambassador.how.step2",
+    "ambassador.how.step3",
+    "ambassador.roles.title",
+    "ambassador.stat.income",
+    "ambassador.stat.time",
+    "ambassador.discover.cta",
+    "ambassador.intro",
+    "ambassador.cta48h",
+    "ambassador.bonus",
+    "ambassador.role.slideshow.title",
+    "ambassador.role.slideshow.income",
+    "ambassador.role.slideshow.time",
+    "ambassador.role.slideshow.body",
+    "ambassador.role.ugc.title",
+    "ambassador.role.ugc.income",
+    "ambassador.role.ugc.time",
+    "ambassador.role.ugc.body",
+    "ambassador.conditions.title",
+    "ambassador.conditions.countries",
+    "ambassador.form.title",
+    "ambassador.form.roles.label",
+    "ambassador.form.role.slideshow",
+    "ambassador.form.role.ugc",
+    "ambassador.form.age.label",
+    "ambassador.form.presentation.label",
+    "ambassador.form.presentation.placeholder",
+    "ambassador.form.presentation.hint",
+    "ambassador.form.country.confirm",
+    "ambassador.form.submit",
+    "ambassador.form.hint",
+    "ambassador.form.error.generic",
+    "ambassador.success.title",
+    "ambassador.success.body",
+    "ambassador.success.close",
+    "legal.terms.title",
+    "legal.privacy.title",
+    "subject.histoire",
+    "subject.sciences",
+    "subject.litterature",
+    "subject.mythologie",
+    "subject.comprendreLeMonde",
+    "subject.histoire.short",
+    "subject.sciences.short",
+    "subject.litterature.short",
+    "subject.mythologie.short",
+    "subject.comprendreLeMonde.short",
+    "home.skip",
+    "home.swipe.title",
+    "home.swipe.subtitle",
+    "course.reads",
+    "explain.tapToClose",
+    "explain.home.title",
+    "explain.home.body",
+    "explain.course.title",
+    "explain.course.body",
+    "explain.course.termBody",
+    "explain.collections.title",
+    "explain.collections.body",
+    "explain.training.title",
+    "explain.training.body",
+    "home.bravo",
+    "home.allCompleted",
+    "discount.gift.title",
+    "discount.gift.tapToOpen",
+    "discount.gift.keepTapping",
+    "discount.gift.almost",
+    "home.locked",
+    "home.start",
+    "library.empty.title",
+    "library.empty.subtitle",
+    "library.seeMore",
+    "library.section.featured",
+    "library.featured.badge",
+    "library.section.continue",
+    "library.section.recommended",
+    "library.unlock",
+    "library.lockedBadge",
+    "collections.subtitle",
+    "collections.complete",
+    "collections.progress",
+    "collections.badge.complete",
+    "collections.badge.path",
+    "collections.xpAtEnd",
+    "collections.pathComplete",
+    "collections.path",
+    "collections.featured",
+    "collections.reward",
+    "subject.courses.count",
+    "subject.completed.singular",
+    "subject.completed.plural",
+    "subject.level",
+    "subject.progress.stats",
+    "subject.next",
+    "subject.filter.empty",
+    "library.filter.all",
+    "library.filter.todo",
+    "library.filter.inProgress",
+    "library.filter.done",
+    "library.filter.favorites",
+    "library.status.done",
+    "library.status.inProgress",
+    "favorites.badge.count",
+    "favorites.empty.title",
+    "favorites.empty.subtitle",
+    "course.funFact",
+    "paywall.error.unavailable",
+    "paywall.error.retry",
+    "cards.successRate",
+    "cards.globalXP",
+    "course.keyTakeaway",
+    "common.continue",
+    "celebration.collectionAdvanced",
+    "celebration.coursesCompleted",
+    "celebration.collectionComplete",
+    "common.next",
+    "common.letsGo",
+    "common.letsGoShort",
+    "common.close",
+    "common.processing",
+    "common.startLearning",
+    "common.backHome",
+    "common.retryQuiz",
+    "common.seeMoreArrow",
+    "common.streak.day",
+    "common.streak.days",
+    "common.levelShort",
+    "common.increaseGoal",
+    "common.decreaseGoal",
+    "common.xpEarned",
+    "common.xpBeforeNext",
+    "onboarding.welcome.title",
+    "onboarding.welcome.rotating.histoire",
+    "onboarding.welcome.rotating.sciences",
+    "onboarding.welcome.rotating.litterature",
+    "onboarding.welcome.rotating.art",
+    "onboarding.welcome.rotating.mythologie",
+    "onboarding.welcome.rotating.comprendreLeMonde",
+    "onboarding.phone.title",
+    "onboarding.phone.subtitle",
+    "onboarding.phone.intensity.light",
+    "onboarding.phone.intensity.moderate",
+    "onboarding.phone.intensity.high",
+    "onboarding.wasted.intro",
+    "onboarding.wasted.hoursLost",
+    "onboarding.wasted.daysComplete",
+    "onboarding.wasted.transform",
+    "onboarding.objectives.title",
+    "onboarding.objectives.subtitle",
+    "onboarding.objective.curious",
+    "onboarding.objective.learnNew",
+    "onboarding.objective.impress",
+    "onboarding.objective.social",
+    "onboarding.objective.reduceScroll",
+    "onboarding.interests.title",
+    "onboarding.interests.subtitle",
+    "onboarding.dailyGoal.title",
+    "onboarding.dailyGoal.subtitle",
+    "onboarding.dailyGoal.perDay",
+    "onboarding.dailyGoal.singular",
+    "onboarding.dailyGoal.plural",
+    "onboarding.loading.title",
+    "onboarding.loading.subtitle",
+    "onboarding.loading.step1",
+    "onboarding.loading.step3",
+    "onboarding.program.badge",
+    "onboarding.program.title",
+    "onboarding.program.profileLabel",
+    "onboarding.program.nickname.default",
+    "onboarding.program.nickname.histoire",
+    "onboarding.program.nickname.sciences",
+    "onboarding.program.nickname.litterature",
+    "onboarding.program.nickname.art",
+    "onboarding.program.nickname.mythologie",
+    "onboarding.program.nickname.comprendreLeMonde",
+    "onboarding.program.dailyGoalCaption",
+    "onboarding.program.hoursUnit",
+    "onboarding.program.hoursSavedCaption",
+    "onboarding.program.topPick",
+    "onboarding.program.coursesTitle",
+    "onboarding.projection.line1",
+    "onboarding.projection.line2",
+    "onboarding.projection.its",
+    "onboarding.projection.newThings",
+    "onboarding.projection.inOneYear",
+    "onboarding.showcase.courses.title",
+    "onboarding.showcase.courses.swipe",
+    "onboarding.showcase.courses.lessons",
+    "onboarding.showcase.courses.quizCount",
+    "onboarding.showcase.quiz.title",
+    "onboarding.showcase.quiz.question",
+    "onboarding.showcase.quiz.option.0",
+    "onboarding.showcase.quiz.option.1",
+    "onboarding.showcase.quiz.option.2",
+    "onboarding.showcase.quiz.option.3",
+    "onboarding.showcase.collections.title",
+    "onboarding.showcase.xp.title",
+    "onboarding.showcase.xp.level",
+    "onboarding.graph.title",
+    "onboarding.graph.subtitle",
+    "onboarding.graph.culture",
+    "onboarding.graph.withSophia",
+    "onboarding.graph.withoutSophia",
+    "onboarding.graph.today",
+    "onboarding.graph.tagline",
+    "onboarding.final.title",
+    "onboarding.final.subtitle",
+    "onboarding.final.subjects",
+    "onboarding.trial.badge",
+    "onboarding.trial.unlimitedCourses",
+    "onboarding.trial.allQuizzes",
+    "onboarding.trial.noSurprise",
+    "onboarding.trial.notifyTitle",
+    "onboarding.trial.cancelAnytime",
+    "onboarding.trial.fullAccess",
+    "onboarding.trial.notificationSent",
+    "onboarding.trial.trialEnds",
+    "onboarding.premiumGift.badge",
+    "onboarding.premiumGift.title",
+    "onboarding.premiumTrial.badge",
+    "onboarding.premiumTrial.step1.label",
+    "onboarding.premiumTrial.step1.title",
+    "onboarding.premiumTrial.step2.title",
+    "onboarding.premiumTrial.step3.title",
+    "onboarding.premiumTrial.cancelAnytime",
+    "onboarding.premiumTrial.cta",
+    "paywall.cancelAnytime",
+    "paywall.header",
+    "paywall.header.highlight",
+    "paywall.weaponHeadline",
+    "paywall.weaponHeadline.highlight",
+    "paywall.benefit.conversations",
+    "paywall.benefit.curiosity",
+    "paywall.benefit.confidence",
+    "paywall.benefit.screenTime",
+    "paywall.premiumHeadline.highlight",
+    "paywall.teaserTitle",
+    "paywall.teaserSubtitle",
+    "paywall.featureColumn",
+    "paywall.freeColumn",
+    "paywall.feature.allSubjects",
+    "paywall.feature.unlimitedCourses",
+    "paywall.feature.fullLibrary",
+    "paywall.plan.yearly",
+    "paywall.plan.monthly",
+    "paywall.plan.yearlySubtitle",
+    "paywall.plan.monthlySubtitle",
+    "paywall.plan.perYear",
+    "paywall.plan.perMonth",
+    "paywall.plan.perWeek",
+    "paywall.plan.billedYearly",
+    "paywall.trialBadge",
+    "paywall.restoreRow",
+    "paywall.restore",
+    "paywall.quiz.title",
+    "paywall.quiz.subtitle",
+    "paywall.quiz.faq.a3",
+    "paywall.quiz.faq.a3.noTrial",
+    "paywall.quiz.faq.q3",
+    "paywall.quiz.faq.q3.noTrial",
+    "paywall.quiz.faq.a2",
+    "paywall.quiz.faq.q2",
+    "paywall.quiz.faq.a1",
+    "paywall.quiz.faq.q1",
+    "paywall.course.title",
+    "paywall.course.subtitle",
+    "paywall.course.subtitle.named",
+    "paywall.course.comeBack",
+    "paywall.course.stat.label",
+    "paywall.course.stat.caption",
+    "paywall.rating",
+    "paywall.reviews.r1.quote",
+    "paywall.reviews.r2.quote",
+    "paywall.reviews.r3.quote",
+    "paywall.benefit.unlimited",
+    "paywall.benefit.quiz",
+    "paywall.benefit.allSubjects",
+    "paywall.cta.unlockFree",
+    "paywall.cta.subscribe",
+    "paywall.cta.activateTrial",
+    "paywall.price.trialThenYearly",
+    "paywall.price.yearlyNoTrial",
+    "paywall.training.title",
+    "paywall.training.subtitle",
+    "paywall.training.stat1.label",
+    "paywall.training.stat2.label",
+    "paywall.training.how.title",
+    "paywall.training.how.step1",
+    "paywall.training.how.step2",
+    "paywall.training.how.step3",
+    "paywall.training.footnote",
+    "paywall.quiz.rating",
+    "paywall.quiz.demo.title",
+    "paywall.quiz.demo.badge.mcq",
+    "paywall.quiz.demo.badge.trueFalse",
+    "paywall.quiz.demo.badge.slider",
+    "paywall.quiz.demo.badge.chrono",
+    "paywall.quiz.demo.mcq.q",
+    "paywall.quiz.demo.tf.q",
+    "paywall.quiz.demo.tf.true",
+    "paywall.quiz.demo.tf.false",
+    "paywall.quiz.demo.slider.q",
+    "paywall.quiz.demo.chrono.q",
+    "paywall.quiz.demo.chrono.i1",
+    "paywall.quiz.demo.chrono.i2",
+    "paywall.quiz.reviews.title",
+    "paywall.quiz.review2.quote",
+    "paywall.quiz.review3.quote",
+    "paywall.discount.endsIn",
+    "paywall.discount.title",
+    "paywall.discount.subtitle",
+    "paywall.discount.perYear",
+    "paywall.discount.perMonth",
+    "paywall.discount.cta",
+    "paywall.discount.noTrial",
+    "paywall.terms",
+    "paywall.privacy",
+    "paywall.trialSheet.title",
+    "paywall.trialSheet.start",
+    "paywall.trial.today",
+    "paywall.trial.noPayment",
+    "paywall.trial.todayDetail",
+    "paywall.trial.reminder",
+    "paywall.trial.starts",
+    "paywall.trial.startsDetail",
+    "paywall.review1.quote",
+    "paywall.review2.quote",
+    "paywall.review3.quote",
+    "paywall.review4.quote",
+    "paywall.review5.quote",
+    "offer.unique",
+    "offer.perMonth",
+    "offer.billed",
+    "offer.expiresIn",
+    "offer.restore",
+    "offer.feature2",
+    "offer.feature3",
+    "profile.title",
+    "profile.streak.start",
+    "profile.streak.beginning",
+    "profile.streak.good",
+    "profile.streak.great",
+    "profile.favorites",
+    "profile.favorites.count",
+    "profile.quiz.recent",
+    "profile.quiz.locked",
+    "profile.quiz.lockedSubtitle",
+    "profile.quiz.unlock",
+    "profile.quiz.emptyTitle",
+    "profile.quiz.emptySubtitle",
+    "profile.progress.bySubject",
+    "profile.stats.coursesDone",
+    "profile.mastery.title",
+    "profile.mastery.details",
+    "profile.mastery.hide",
+    "profile.unlock.trial",
+    "profile.quiz.retry",
+    "profile.quiz.all",
+    "profile.quiz.none",
+    "profile.progress.max",
+    "profile.progress.toNext",
+    "friends.title",
+    "friends.you",
+    "friends.add.short",
+    "friends.add.title",
+    "friends.add.subtitle",
+    "friends.add.requestSubtitle",
+    "friends.request.send",
+    "friends.request.sent",
+    "friends.request.autoAccepted",
+    "friends.requests.title",
+    "friends.requests.accept",
+    "friends.requests.decline",
+    "friends.error.alreadyFriends",
+    "friends.error.requestAlreadySent",
+    "friends.error.requestNotFound",
+    "friends.add.action",
+    "friends.add.success",
+    "friends.handle.placeholder",
+    "friends.handle.edit.title",
+    "friends.handle.edit.subtitle",
+    "friends.handle.save",
+    "friends.handle.rules",
+    "friends.period.all",
+    "friends.empty.title",
+    "friends.empty.body",
+    "friends.signedOut.title",
+    "friends.signedOut.body",
+    "friends.remove",
+    "friends.remove.title",
+    "friends.remove.message",
+    "friends.remove.confirm",
+    "friends.stats.streak",
+    "friends.stats.quizzes",
+    "friends.error.generic",
+    "friends.error.notSignedIn",
+    "friends.error.invalidHandle",
+    "friends.error.handleTaken",
+    "friends.error.userNotFound",
+    "friends.error.cannotAddSelf",
+    "friends.error.notFriends",
+    "quiz.feedback.correct",
+    "quiz.feedback.excellent",
+    "quiz.feedback.amazing",
+    "quiz.feedback.wrong",
+    "quiz.completed",
+    "quiz.correctAnswers",
+    "quiz.xpProgress",
+    "quiz.levelUp",
+    "quiz.breakdown.correct",
+    "quiz.breakdown.completed",
+    "quiz.xpProgress.max",
+    "quiz.xpProgress.toNext",
+    "quiz.pointsEarned",
+    "quiz.feedback.close",
+    "quiz.feedback.far",
+    "quiz.trueFalse.true",
+    "quiz.trueFalse.false",
+    "quiz.chronological.instruction",
+    "quiz.chronological.remaining",
+    "quiz.chronological.emptySlot",
+    "quiz.chronological.validate",
+    "quiz.chronological.correctOrder",
+    "quiz.slider.validate",
+    "quiz.slider.yourGuess",
+    "quiz.slider.correctAnswer",
+    "course.completed",
+    "course.dailyFreeDone",
+    "course.streak.day",
+    "course.streak.days",
+    "course.streak.message",
+    "course.streak.onTrack",
+    "levelUp.title",
+    "globalRank.curieux",
+    "globalRank.erudit",
+    "globalRank.maitre",
+    "globalRank.legende",
+    "globalRank.title",
+    "globalRank.badge",
+    "globalRank.maxLevel",
+    "globalRank.xpBefore",
+    "globalRank.newRank",
+    "globalRank.reachedLevel",
+    "paywall.unavailable.title",
+    "paywall.unavailable.message",
+    "course.finish",
+    "course.funFact.hint",
+    "notification.channel.name",
+    "notification.channel.description",
+    "paywall.quiz.faq.a1.play",
+    "paywall.quiz.faq.a3.noTrial.play",
+    "paywall.manageSubscription",
+    "purchase.pending",
+    "paywall.restore.success",
+    "paywall.restore.none",
+    "paywall.restore.error",
+    "auth.continueWithoutAccount",
+    "auth.withoutAccount.note",
+    "auth.unavailable.body",
+    "account.createLater.title",
+    "account.createLater.body",
+    "account.createLater.later",
+    "paywall.error.network",
+    "paywall.error.notAllowed",
+    "course.continue",
+    "quiz.validate",
+    "home.allCaughtUp",
+    "friends.handle.saved",
+    "feedback.error.email",
+    "settings.courses.completed.one",
+    "settings.courses.completed.other",
+    "subject.courses.count.one",
+    "subject.courses.count.other",
+    "profile.favorites.count.one",
+    "profile.favorites.count.other",
+    "training.dueCount.one",
+    "training.dueCount.other",
+    "settings.streak.title.one",
+    "settings.streak.title.other",
+    "favorites.badge.count.one",
+    "favorites.badge.count.other",
+    "onboardingV2.weeks.title.one",
+    "onboardingV2.weeks.title.other",
+    "myCourses.title",
+    "myCourses.tab.inProgress",
+    "myCourses.tab.completed",
+    "myCourses.empty.title",
+    "myCourses.empty.cta",
+    "myCourses.progress",
+    "myCourses.quizScore",
+    "course.author.by",
+    "course.author.writtenBy",
+    "course.sources.hint",
+    "course.sources.open",
+    "author.otherCourses",
+    "author.courses.title",
+    "author.courses.many",
+    "author.currentCourse",
+    "audio.playNow",
+    "audio.suggestions.title",
+    "audio.browse",
+    "audio.browse.title",
+    "audio.browse.search",
+    "audio.browse.all",
+    "audio.browse.empty",
+    "audio.choice.title",
+    "audio.cancel",
+    "audio.listen",
+    "audio.nowPlaying",
+    "audio.playNext",
+    "audio.addToQueue",
+    "audio.removeFromQueue",
+    "audio.download",
+    "audio.downloading",
+    "audio.downloaded",
+    "audio.deleteDownload",
+    "audio.speed",
+    "audio.language",
+    "audio.upNext",
+    "audio.next",
+    "audio.play",
+    "audio.close",
+    "audio.error",
+    "audio.retry",
+    "audio.queue.title",
+    "audio.queue.empty",
+    "audio.queue.clear",
+    "audio.downloads.title",
+    "audio.downloads.subtitle",
+    "audio.downloads.used",
+    "audio.downloads.footer",
+    "audio.downloads.empty",
+    "audio.downloads.deleteAll",
+    "audio.downloads.deleteAll.confirm",
+    "paywall.audio.title",
+    "paywall.audio.subtitle",
+    "paywall.audio.feature1",
+    "paywall.audio.feature2",
+    "paywall.audio.feature3",
+    "paywall.audio.feature4",
+    "onboardingV2.intro.lessons.title",
+    "onboardingV2.intro.researchers.title",
+    "onboardingV2.intro.researchers.subtitle",
+    "onboardingV2.intro.quizzes.title",
+    "onboardingV2.intro.quizzes.subtitle",
+    "onboardingV2.intro.social.title",
+    "onboardingV2.intro.social.cta",
+    "onboardingV2.name.title",
+    "onboardingV2.name.subtitle",
+    "onboardingV2.name.placeholder",
+    "onboardingV2.age.title",
+    "onboardingV2.age.subtitle",
+    "onboardingV2.age.18to24",
+    "onboardingV2.age.25to34",
+    "onboardingV2.age.35to44",
+    "onboardingV2.age.45to54",
+    "onboardingV2.knowledge.title",
+    "onboardingV2.knowledge.subtitle",
+    "onboardingV2.knowledge.level1",
+    "onboardingV2.knowledge.level2",
+    "onboardingV2.knowledge.level3",
+    "onboardingV2.knowledge.level4",
+    "onboardingV2.motivation.title",
+    "onboardingV2.motivation.subtitle",
+    "onboardingV2.motivation.grow",
+    "onboardingV2.motivation.conversations",
+    "onboardingV2.motivation.career",
+    "onboardingV2.motivation.sharp",
+    "onboardingV2.motivation.world",
+    "onboardingV2.topics.title",
+    "onboardingV2.topics.subtitle",
+    "onboardingV2.objectiveIntro.titleNamed",
+    "onboardingV2.profile.eyebrowNamed",
+    "onboardingV2.loading.titleNamed",
+    "onboardingV2.name.skip",
+    "onboardingV2.mission.title",
+    "onboardingV2.mission.body1",
+    "onboardingV2.mission.body2",
+    "onboardingV2.mission.signature",
+    "onboardingV2.yearsGrid.sleep",
+    "onboardingV2.yearsGrid.work",
+    "onboardingV2.yearsGrid.free",
+    "onboardingV2.yearsGrid.screen",
+    "onboardingV2.yearsGrid.captionFree",
+    "onboardingV2.notifications.boost",
+    "onboardingV2.aboard.title",
+    "onboardingV2.aboard.titleNamed",
+    "onboardingV2.aboard.subtitle",
+    "onboardingV2.features.title",
+    "onboardingV2.features.titleNamed",
+    "onboardingV2.features.row1",
+    "onboardingV2.features.row2",
+    "onboardingV2.features.row3",
+    "onboardingV2.features.row4",
+    "onboardingV2.features.row5",
+    "onboardingV2.features.noCommitment",
+    "onboardingV2.loading.social.body",
+    "onboardingV2.loading.social.join",
+    "onboardingV2.yearsGrid.years",
+    "onboardingV2.yearsGrid.years.one",
+    "onboardingV2.yearsGrid.years.other",
+    "paywall.cta.continueFor",
+    "paywall.course.or",
+    "paywall.course.proPitch",
+    "paywall.quiz.chart.axis",
+    "paywall.quiz.chart.day",
+    "paywall.quiz.chart.with",
+    "paywall.quiz.chart.without",
+    "paywall.unlock.also",
+    "paywall.unlock.you",
+    "paywall.unlock.audio",
+    "paywall.unlock.unlimited",
+    "paywall.unlock.quiz",
+    "onboardingV2.pw.feature.audio",
+    "tab.path",
+    "path.title",
+    "path.levelCaption",
+    "path.allPassed",
+    "path.quizPod",
+    "path.status.locked",
+    "path.status.passed",
+    "path.courses.count",
+    "path.locked.course",
+    "path.locked.quiz",
+    "path.locked.level",
+    "path.unlocked.toast",
+    "path.end.title",
+    "path.end.body",
+    "path.end.doneTitle",
+    "path.end.doneBody",
+    "explain.path.title",
+    "explain.path.body",
+    "path.quiz.title",
+    "path.quiz.rule.questions",
+    "path.quiz.rule.pass",
+    "path.quiz.rule.retries",
+    "path.quiz.bestScore",
+    "path.quiz.go",
+    "path.quiz.later",
+    "path.quiz.seeResult",
+    "path.quiz.correctSoFar",
+    "path.quiz.passed.title",
+    "path.quiz.passed.next",
+    "path.quiz.passed.last",
+    "path.quiz.passed.again",
+    "path.quiz.failed.title",
+    "path.quiz.failed.body",
+    "path.quiz.retry",
+    "path.quiz.review",
+    "path.quiz.leave.title",
+    "path.quiz.leave.body",
+    "path.quiz.leave.confirm",
+    "path.quiz.leave.cancel",
+    "onboardingV2.intro.route.title",
+    "onboardingV2.intro.route.subtitle",
+    "onboardingV2.welcome.existingAccount",
+    "onboardingV2.existingAccount.title",
+    "onboardingV2.existingAccount.subtitle",
+    "share.card.title",
+    "share.title",
+    "share.subtitle",
+    "share.message",
+    "share.copy",
+    "share.copied",
+    "share.more"
+   ],
+   "ui_same_as_fr": [],
+   "placeholder_mismatch": [],
+   "validator": "Checked 309 course(s) in 'en'.\nClean."
+  },
+  "es": {
+   "ui_same_as_en": [
+    "settings.section.legal",
+    "feedback.category.idea",
+    "onboarding.showcase.courses.quizCount",
+    "myCourses.quizScore",
+    "paywall.quiz.chart.day"
+   ],
+   "ui_same_as_fr": [],
+   "placeholder_mismatch": [],
+   "validator": "Checked 309 course(s) in 'es'.\nClean."
+  },
+  "de": {
+   "ui_same_as_en": [
+    "home.bravo",
+    "myCourses.quizScore",
+    "path.levelCaption"
+   ],
+   "ui_same_as_fr": [
+    "tab.profile",
+    "subject.mythologie",
+    "subject.mythologie.short",
+    "profile.title"
+   ],
+   "placeholder_mismatch": [],
+   "validator": [
+    2,
+    2
+   ]
+  },
+  "pt": {
+   "ui_same_as_en": [
+    "onboarding.showcase.courses.quizCount",
+    "myCourses.quizScore",
+    "paywall.quiz.chart.day"
+   ],
+   "ui_same_as_fr": [
+    "account.email"
+   ],
+   "placeholder_mismatch": [],
+   "validator": "Checked 309 course(s) in 'pt'.\nClean."
+  },
+  "pt-PT": {
+   "ui_same_as_en": [
+    "home.bravo",
+    "onboarding.showcase.courses.quizCount",
+    "myCourses.quizScore",
+    "paywall.quiz.chart.day"
+   ],
+   "ui_same_as_fr": [
+    "account.email"
+   ],
+   "placeholder_mismatch": [],
+   "validator": "Checked 309 course(s) in 'pt-PT'.\nClean."
+  },
+  "it": {
+   "ui_same_as_en": [
+    "tab.home",
+    "account.title",
+    "account.email",
+    "feedback.category.idea",
+    "legal.privacy.title",
+    "home.bravo",
+    "paywall.privacy",
+    "myCourses.quizScore"
+   ],
+   "ui_same_as_fr": [
+    "onboarding.showcase.courses.quizCount"
+   ],
+   "placeholder_mismatch": [],
+   "validator": "Checked 309 course(s) in 'it'.\nClean."
+  },
+  "tr": {
+   "ui_same_as_en": [
+    "home.bravo",
+    "myCourses.quizScore"
+   ],
+   "ui_same_as_fr": [
+    "tab.profile",
+    "onboarding.showcase.courses.quizCount",
+    "profile.title"
+   ],
+   "placeholder_mismatch": [
+    "globalRank.xpBefore",
+    "path.quiz.rule.questions",
+    "path.quiz.failed.body"
+   ],
+   "validator": "Checked 309 course(s) in 'tr'.\nClean."
+  },
+  "pl": {
+   "ui_same_as_en": [
+    "onboardingV2.exams.author1",
+    "myCourses.quizScore",
+    "paywall.quiz.chart.day"
+   ],
+   "ui_same_as_fr": [
+    "tab.profile",
+    "account.email",
+    "profile.title"
+   ],
+   "placeholder_mismatch": [],
+   "validator": [
+    1,
+    1
+   ]
+  },
+  "ro": {
+   "ui_same_as_en": [
+    "onboardingV2.exams.author1",
+    "settings.section.legal",
+    "home.bravo"
+   ],
+   "ui_same_as_fr": [
+    "tab.profile",
+    "account.email",
+    "onboardingV2.pw.free",
+    "paywall.freeColumn",
+    "profile.title",
+    "globalRank.title",
+    "globalRank.badge"
+   ],
+   "placeholder_mismatch": [],
+   "validator": "Checked 309 course(s) in 'ro'.\nClean."
+  },
+  "nl": {
+   "ui_same_as_en": [
+    "tab.home",
+    "account.title",
+    "legal.privacy.title",
+    "home.bravo",
+    "home.start",
+    "paywall.plan.perWeek",
+    "paywall.privacy",
+    "myCourses.quizScore",
+    "paywall.quiz.chart.day",
+    "path.quiz.later"
+   ],
+   "ui_same_as_fr": [
+    "account.email",
+    "ambassador.title",
+    "subject.mythologie",
+    "subject.mythologie.short",
+    "subject.level",
+    "onboarding.showcase.xp.level",
+    "path.levelCaption"
+   ],
+   "placeholder_mismatch": [],
+   "validator": "Checked 309 course(s) in 'nl'.\nClean."
+  },
+  "el": {
+   "ui_same_as_en": [],
+   "ui_same_as_fr": [
+    "account.email"
+   ],
+   "placeholder_mismatch": [],
+   "validator": [
+    44,
+    22
+   ]
+  },
+  "sv": {
+   "ui_same_as_en": [
+    "onboardingV2.exams.author1",
+    "settings.section.data",
+    "home.bravo",
+    "globalRank.legende",
+    "myCourses.quizScore",
+    "paywall.quiz.chart.day"
+   ],
+   "ui_same_as_fr": [
+    "tab.profile",
+    "onboarding.showcase.courses.quizCount",
+    "profile.title"
+   ],
+   "placeholder_mismatch": [],
+   "validator": [
+    1,
+    1
+   ]
+  },
+  "hu": {
+   "ui_same_as_en": [],
+   "ui_same_as_fr": [
+    "tab.profile",
+    "account.email",
+    "profile.title"
+   ],
+   "placeholder_mismatch": [
+    "path.quiz.failed.body"
+   ],
+   "validator": [
+    1,
+    1
+   ]
+  },
+  "bg": {
+   "ui_same_as_en": [],
+   "ui_same_as_fr": [],
+   "placeholder_mismatch": [],
+   "validator": [
+    1,
+    1
+   ]
+  },
+  "cs": {
+   "ui_same_as_en": [
+    "onboardingV2.exams.author1",
+    "settings.section.data",
+    "home.bravo",
+    "paywall.quiz.chart.day"
+   ],
+   "ui_same_as_fr": [
+    "tab.profile",
+    "account.email",
+    "profile.title"
+   ],
+   "placeholder_mismatch": [],
+   "validator": [
+    1,
+    1
+   ]
+  },
+  "da": {
+   "ui_same_as_en": [
+    "training.start",
+    "settings.section.data",
+    "settings.feedback.title",
+    "feedback.submit",
+    "home.bravo",
+    "home.start",
+    "myCourses.quizScore",
+    "audio.download",
+    "paywall.quiz.chart.day"
+   ],
+   "ui_same_as_fr": [
+    "tab.profile",
+    "account.email",
+    "subject.level",
+    "onboarding.showcase.xp.level",
+    "profile.title",
+    "friends.requests.accept",
+    "path.levelCaption"
+   ],
+   "placeholder_mismatch": [],
+   "validator": [
+    33,
+    17
+   ]
+  },
+  "nb": {
+   "ui_same_as_en": [
+    "training.start",
+    "onboardingV2.exams.author1",
+    "settings.section.data",
+    "feedback.submit",
+    "home.bravo",
+    "home.start",
+    "myCourses.quizScore",
+    "paywall.quiz.chart.day"
+   ],
+   "ui_same_as_fr": [
+    "tab.profile",
+    "profile.title"
+   ],
+   "placeholder_mismatch": [],
+   "validator": [
+    15,
+    8
+   ]
+  },
+  "ru": {
+   "ui_same_as_en": [],
+   "ui_same_as_fr": [],
+   "placeholder_mismatch": [],
+   "validator": [
+    68,
+    33
+   ]
+  },
+  "hr": {
+   "ui_same_as_en": [
+    "onboardingV2.exams.author1",
+    "home.bravo",
+    "paywall.quiz.chart.day"
+   ],
+   "ui_same_as_fr": [
+    "tab.profile",
+    "account.email",
+    "profile.title"
+   ],
+   "placeholder_mismatch": [],
+   "validator": [
+    7,
+    4
+   ]
+  },
+  "sl": {
+   "ui_same_as_en": [
+    "home.bravo",
+    "paywall.quiz.chart.day"
+   ],
+   "ui_same_as_fr": [
+    "tab.profile",
+    "profile.title"
+   ],
+   "placeholder_mismatch": [],
+   "validator": [
+    16,
+    9
+   ]
+  },
+  "sk": {
+   "ui_same_as_en": [
+    "home.bravo",
+    "paywall.quiz.chart.day"
+   ],
+   "ui_same_as_fr": [
+    "tab.profile",
+    "account.email",
+    "profile.title"
+   ],
+   "placeholder_mismatch": [],
+   "validator": [
+    53,
+    25
+   ]
+  },
+  "sr": {
+   "ui_same_as_en": [
+    "home.bravo",
+    "paywall.quiz.chart.day"
+   ],
+   "ui_same_as_fr": [
+    "tab.profile",
+    "profile.title"
+   ],
+   "placeholder_mismatch": [],
+   "validator": [
+    31,
+    16
+   ]
+  },
+  "ar": {
+   "ui_same_as_en": [],
+   "ui_same_as_fr": [],
+   "placeholder_mismatch": [
+    "settings.courses.completed.one",
+    "subject.courses.count.one",
+    "profile.favorites.count.one",
+    "training.dueCount.one",
+    "settings.streak.title.one",
+    "favorites.badge.count.one",
+    "onboardingV2.weeks.title.one",
+    "onboardingV2.yearsGrid.years.one"
+   ],
+   "validator": [
+    113,
+    53
+   ]
+  },
+  "he": {
+   "ui_same_as_en": [
+    "onboardingV2.age.18to24",
+    "onboardingV2.age.25to34",
+    "onboardingV2.age.35to44",
+    "onboardingV2.age.45to54"
+   ],
+   "ui_same_as_fr": [],
+   "placeholder_mismatch": [
+    "settings.courses.completed.one",
+    "subject.courses.count.one",
+    "profile.favorites.count.one",
+    "training.dueCount.one",
+    "settings.streak.title.one",
+    "favorites.badge.count.one",
+    "onboardingV2.weeks.title.one",
+    "onboardingV2.yearsGrid.years.one"
+   ],
+   "validator": [
+    86,
+    41
+   ]
+  },
+  "fi": {
+   "ui_same_as_en": [
+    "feedback.category.idea",
+    "home.bravo"
+   ],
+   "ui_same_as_fr": [],
+   "placeholder_mismatch": [],
+   "validator": [
+    25,
+    13
+   ]
+  },
+  "et": {
+   "ui_same_as_en": [
+    "globalRank.legende"
+   ],
+   "ui_same_as_fr": [],
+   "placeholder_mismatch": [],
+   "validator": [
+    11,
+    6
+   ]
+  }
+ },
+ "on_vers_nous": {
+  "en": {
+   "hits": 28,
+   "of": 168,
+   "example": [
+    "course_104_romeo_et_juliette_shakespeare",
+    "s0.b0.text",
+    ". We",
+    ". We know it as the greatest love story of the stage. It is also a sav"
+   ]
+  },
+  "es": {
+   "hits": 0,
+   "of": 168,
+   "example": null
+  },
+  "de": {
+   "hits": 5,
+   "of": 168,
+   "example": [
+    "course_146_hitchcock_et_le_suspense",
+    "s1.b0.text",
+    ". Wir",
+    ". Wir werden zu Komplizen, und wir können nichts tun."
+   ]
+  },
+  "pt": {
+   "hits": 0,
+   "of": 168,
+   "example": null
+  },
+  "pt-PT": {
+   "hits": 0,
+   "of": 168,
+   "example": null
+  },
+  "it": {
+   "hits": 0,
+   "of": 168,
+   "example": null
+  },
+  "tr": {
+   "hits": 0,
+   "of": 168,
+   "example": null
+  },
+  "pl": {
+   "hits": 0,
+   "of": 168,
+   "example": null
+  },
+  "ro": {
+   "hits": 0,
+   "of": 168,
+   "example": null
+  },
+  "nl": {
+   "hits": 13,
+   "of": 168,
+   "example": [
+    "course_180_thor_et_loki_mythologie_nordique",
+    "s1.b0.text",
+    ". We",
+    ". We kennen ze vooral via late IJslandse teksten, geschreven toen de s"
+   ]
+  },
+  "el": {
+   "hits": 0,
+   "of": 168,
+   "example": null
+  },
+  "sv": {
+   "hits": 26,
+   "of": 168,
+   "example": [
+    "course_145_kubrick_2001_l_odyssee_de_l_espace",
+    "s3.b0.text",
+    ". Vi",
+    ". Vi ser den nästan bara som ett rött öga. HAL ska genomföra uppdraget"
+   ]
+  },
+  "hu": {
+   "hits": 0,
+   "of": 168,
+   "example": null
+  },
+  "bg": {
+   "hits": 0,
+   "of": 168,
+   "example": null
+  },
+  "cs": {
+   "hits": 13,
+   "of": 168,
+   "example": [
+    "course_145_kubrick_2001_l_odyssee_de_l_espace",
+    "s3.b0.text",
+    ". Vidíme",
+    ". Vidíme ho skoro jen jako červené oko. HAL má splnit misi a přitom po"
+   ]
+  },
+  "da": {
+   "hits": 90,
+   "of": 168,
+   "example": [
+    "course_100_les_fleurs_du_mal_baudelaire",
+    "s3.b2.text",
+    ". Vi",
+    ". Vi kan \"lugte\" en farve eller \"se\" en parfume. Verden bliver et netv"
+   ]
+  },
+  "nb": {
+   "hits": 90,
+   "of": 168,
+   "example": [
+    "course_100_les_fleurs_du_mal_baudelaire",
+    "s3.b2.text",
+    ". Vi",
+    ". Vi kan \"lukte\" en farge eller \"se\" en parfyme. Verden blir et nettve"
+   ]
+  },
+  "ru": {
+   "hits": 74,
+   "of": 168,
+   "example": [
+    "course_100_les_fleurs_du_mal_baudelaire",
+    "s3.b2.text",
+    ". Мы",
+    ". Мы можем «понюхать» цвет или «увидеть» аромат. Мир становится сетью "
+   ]
+  },
+  "hr": {
+   "hits": 57,
+   "of": 168,
+   "example": [
+    "course_100_les_fleurs_du_mal_baudelaire",
+    "s3.b2.text",
+    ". Možemo",
+    ". Možemo \"namirisati\" boju ili \"vidjeti\" parfem. Svijet postaje mreža "
+   ]
+  },
+  "sl": {
+   "hits": 49,
+   "of": 168,
+   "example": [
+    "course_119_le_petit_prince_saint_exupery",
+    "s2.b0.text",
+    ". Izruvamo",
+    ". Izruvamo [[baobabi]], velikanska drevesa, ki simbolizirajo nevarnost"
+   ]
+  },
+  "sk": {
+   "hits": 60,
+   "of": 168,
+   "example": [
+    "course_100_les_fleurs_du_mal_baudelaire",
+    "s3.b2.text",
+    ". Môžeme",
+    ". Môžeme „cítiť“ farbu alebo „vidieť“ parfum. Svet sa stáva sieťou zna"
+   ]
+  },
+  "sr": {
+   "hits": 56,
+   "of": 168,
+   "example": [
+    "course_100_les_fleurs_du_mal_baudelaire",
+    "s3.b2.text",
+    ". Možemo",
+    ". Možemo da „pomirišemo” boju ili „vidimo” parfem. Svet postaje mreža "
+   ]
+  },
+  "ar": {
+   "hits": 37,
+   "of": 168,
+   "example": [
+    "course_119_le_petit_prince_saint_exupery",
+    "s3.b1.text",
+    "نحن",
+    "نحن لا نرى بوضوح إلا بالقلب. الأساسي غير مرئي للعيون."
+   ]
+  },
+  "he": {
+   "hits": 68,
+   "of": 168,
+   "example": [
+    "course_100_les_fleurs_du_mal_baudelaire",
+    "s3.b2.text",
+    ". אנחנו",
+    ". אנחנו יכולים \"להריח\" צבע או \"לראות\" בושם. העולם הופך לרשת של סימנים "
+   ]
+  },
+  "fi": {
+   "hits": 76,
+   "of": 168,
+   "example": [
+    "course_100_les_fleurs_du_mal_baudelaire",
+    "s3.b2.text",
+    ". Voimme",
+    ". Voimme \"haistaa\" värin tai \"nähdä\" hajuveden. Maailmasta tulee merkk"
+   ]
+  },
+  "et": {
+   "hits": 74,
+   "of": 168,
+   "example": [
+    "course_100_les_fleurs_du_mal_baudelaire",
+    "s3.b2.text",
+    ". Me",
+    ". Me võime “nuusutada” värvi või “näha” parfüümi. Maailm muutub märkid"
+   ],
+   "note": "pronom + verbes en -me sans pronom"
+  }
+ },
+ "en_annee": {
+  "en": [
+   [
+    "In … ,",
+    223
+   ],
+   [
+    "In … ",
+    15
+   ],
+   [
+    "By … ,",
+    4
+   ],
+   [
+    "<no match>",
+    1
+   ],
+   [
+    "By … ",
+    1
+   ]
+  ],
+  "es": [
+   [
+    "En … ,",
+    216
+   ],
+   [
+    "En … ",
+    27
+   ],
+   [
+    "Hacia … ,",
+    1
+   ]
+  ],
+  "de": [
+   [
+    "<year first> … ",
+    133
+   ],
+   [
+    "Im Jahr … ",
+    86
+   ],
+   [
+    "<no match>",
+    13
+   ],
+   [
+    "Im Jahr … ,",
+    6
+   ],
+   [
+    "<year first> … ,",
+    6
+   ]
+  ],
+  "pt": [
+   [
+    "Em … ,",
+    240
+   ],
+   [
+    "Em … ",
+    4
+   ]
+  ],
+  "pt-PT": [
+   [
+    "Em … ,",
+    240
+   ],
+   [
+    "Em … ",
+    4
+   ]
+  ],
+  "it": [
+   [
+    "Nel … ",
+    168
+   ],
+   [
+    "Nel … ,",
+    76
+   ]
+  ],
+  "tr": [
+   [
+    "<year first> … 'de",
+    96
+   ],
+   [
+    "<year first> … 'da",
+    55
+   ],
+   [
+    "<year first> … 'te",
+    49
+   ],
+   [
+    "<year first> … ",
+    22
+   ],
+   [
+    "<year first> … 'de,",
+    6
+   ],
+   [
+    "<no match>",
+    4
+   ]
+  ],
+  "pl": [
+   [
+    "W … ",
+    220
+   ],
+   [
+    "W … ,",
+    21
+   ],
+   [
+    "Do … ",
+    2
+   ],
+   [
+    "<no match>",
+    1
+   ]
+  ],
+  "ro": [
+   [
+    "În … ,",
+    233
+   ],
+   [
+    "În … ",
+    11
+   ]
+  ],
+  "nl": [
+   [
+    "In … ",
+    227
+   ],
+   [
+    "In … ,",
+    17
+   ]
+  ],
+  "el": [
+   [
+    "Το … ,",
+    147
+   ],
+   [
+    "Το … ",
+    95
+   ],
+   [
+    "Ως το … ,",
+    2
+   ]
+  ],
+  "sv": [
+   [
+    "År … ",
+    176
+   ],
+   [
+    "<year first> … ",
+    46
+   ],
+   [
+    "År … ,",
+    17
+   ],
+   [
+    "<year first> … ,",
+    5
+   ]
+  ],
+  "hu": [
+   [
+    "<year first> … -ben",
+    130
+   ],
+   [
+    "<year first> … -ban",
+    52
+   ],
+   [
+    "<no match>",
+    36
+   ],
+   [
+    "<year first> … -ben,",
+    17
+   ],
+   [
+    "<year first> … -ban,",
+    5
+   ],
+   [
+    "<year first> … -ra",
+    2
+   ]
+  ],
+  "bg": [
+   [
+    "През … ",
+    220
+   ],
+   [
+    "През … ,",
+    22
+   ],
+   [
+    "До … ",
+    2
+   ]
+  ],
+  "cs": [
+   [
+    "V … ",
+    107
+   ],
+   [
+    "V roce … ",
+    83
+   ],
+   [
+    "Roku … ",
+    41
+   ],
+   [
+    "V … ,",
+    10
+   ],
+   [
+    "V letech … ",
+    1
+   ],
+   [
+    "V roce … ,",
+    1
+   ]
+  ],
+  "da": [
+   [
+    "I … ",
+    227
+   ],
+   [
+    "I … ,",
+    17
+   ]
+  ],
+  "nb": [
+   [
+    "I … ",
+    218
+   ],
+   [
+    "I … ,",
+    25
+   ],
+   [
+    "Innen … ",
+    1
+   ]
+  ],
+  "ru": [
+   [
+    "В … ",
+    190
+   ],
+   [
+    "<no match>",
+    31
+   ],
+   [
+    "В … ,",
+    17
+   ],
+   [
+    "В деле … ",
+    2
+   ],
+   [
+    "К … ",
+    2
+   ],
+   [
+    "В альбоме … ",
+    1
+   ]
+  ],
+  "hr": [
+   [
+    "U … ,",
+    112
+   ],
+   [
+    "Godine … .",
+    73
+   ],
+   [
+    "U … ",
+    21
+   ],
+   [
+    "<no match>",
+    15
+   ],
+   [
+    "Godine … ,",
+    12
+   ],
+   [
+    "Godine … ",
+    7
+   ]
+  ],
+  "sl": [
+   [
+    "Leta … ",
+    148
+   ],
+   [
+    "V … ",
+    79
+   ],
+   [
+    "V … ,",
+    7
+   ],
+   [
+    "Leta … ,",
+    6
+   ],
+   [
+    "V albumu … ",
+    1
+   ],
+   [
+    "Pri … ",
+    1
+   ]
+  ],
+  "sk": [
+   [
+    "V … ",
+    111
+   ],
+   [
+    "V roku … ",
+    102
+   ],
+   [
+    "V … ,",
+    27
+   ],
+   [
+    "V roku … ,",
+    2
+   ],
+   [
+    "Vo filme … ",
+    1
+   ],
+   [
+    "V rokoch … ",
+    1
+   ]
+  ],
+  "sr": [
+   [
+    "U … ,",
+    136
+   ],
+   [
+    "Godine … .",
+    37
+   ],
+   [
+    "<no match>",
+    26
+   ],
+   [
+    "U … ",
+    12
+   ],
+   [
+    "Godine … ",
+    11
+   ],
+   [
+    "Godine … .,",
+    2
+   ]
+  ],
+  "ar": [
+   [
+    "في … ،",
+    140
+   ],
+   [
+    "في عام … ،",
+    36
+   ],
+   [
+    "وفي عام … ،",
+    24
+   ],
+   [
+    "ففي عام … ،",
+    14
+   ],
+   [
+    "<no match>",
+    8
+   ],
+   [
+    "في … ",
+    4
+   ]
+  ],
+  "he": [
+   [
+    "ב- … ,",
+    143
+   ],
+   [
+    "ב- … ",
+    95
+   ],
+   [
+    "בשנת … ,",
+    3
+   ],
+   [
+    "ב … ,",
+    3
+   ]
+  ],
+  "fi": [
+   [
+    "Vuonna … ",
+    105
+   ],
+   [
+    "<year first> … :ssa",
+    32
+   ],
+   [
+    "<year first> … :ssä",
+    22
+   ],
+   [
+    "Teoksessa … ",
+    14
+   ],
+   [
+    "Kirjassa … ",
+    13
+   ],
+   [
+    "Elokuvassa … ",
+    11
+   ]
+  ],
+  "et": [
+   [
+    "<no match>",
+    57
+   ],
+   [
+    "<year first> … ",
+    34
+   ],
+   [
+    "Aastal … ",
+    32
+   ],
+   [
+    "Filmis … ",
+    30
+   ],
+   [
+    "<year first> … .",
+    18
+   ],
+   [
+    "<year first> … -s",
+    14
+   ]
+  ]
+ }
+}

@@ -4,11 +4,11 @@
   "subtitle": "Aju",
   "subject": "sciences",
   "subcategory": "Meie igapäevaelu lahti seletatud",
-  "description": "Mälu ei ole kaamera. Iga mälestus rekonstrueeritakse. Nii aju kodeerib, salvestab… ja mõnikord leiutab.",
+  "description": "Mälu ei ole kaamera. Iga mälestus pannakse uuesti kokku. Vaata, kuidas aju kodeerib, talletab… ja vahel ka välja mõtleb.",
   "hero": {
     "image": "comment_fonctionne_la_memoire",
     "ratio": "16:9",
-    "hook": "Mäletamine ei ole faili uuesti lugemine. See on stseeni rekonstrueerimine."
+    "hook": "Mäletamine ei ole faili uuesti lugemine. See on stseeni uuesti kokkupanemine."
   },
   "sections": [
     {
@@ -18,17 +18,17 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Sageli kujutame mälu ette kõvakettana: salvestame, salvestame, loeme uuesti. Aju ei tööta nii. Iga kord, kui mäletate, **konstrueerite** fragmentidest stseeni."
+          "text": "Mälu kujutatakse sageli ette kõvakettana: midagi salvestatakse, pannakse paika ja loetakse hiljem uuesti. Aju nii ei tööta. Iga kord, kui midagi meenutad, paned stseeni killukestest **uuesti kokku**."
         },
         {
           "type": "paragraph",
-          "text": "See on võimas… ja ekslik. Selle mõistmine tähendab mõistmist, miks me unustame, miks me teeme vigu ja miks me õpime."
+          "text": "See on võimas… ja eksimisaldis. Kui sellest aru saad, mõistad, miks inimene unustab, miks ta eksib ja miks ta õpib."
         }
       ]
     },
     {
       "id": "course_48_comment_fonctionne_la_memoire_p1",
-      "title": "Mitu mälestust, mitte ainult üks",
+      "title": "Mitu mälu, mitte üks",
       "free": false,
       "blocks": [
         {
@@ -39,51 +39,51 @@
         },
         {
           "type": "paragraph",
-          "text": "Esiteks on [[Töömälu]]: see, mida te mõne sekundi \"silmas\" hoiate, näiteks telefoninumber. See on piiratud, keskmiselt umbes **7 elementi**. Järgmiseks **Pikaajaline mälu**: faktid, mälestused sündmustest, oskused nagu rattasõit."
+          "text": "Kõigepealt on olemas [[töömälu]]: see, mida hoiad mõne sekundi „peas“, näiteks telefoninumber. Selle maht on piiratud, keskmiselt umbes **7 üksust**. Seejärel tuleb **pikaajaline mälu**: faktid, mälestused sündmustest ja oskused, näiteks rattasõit."
         },
         {
           "type": "paragraph",
-          "text": "Kõik need süsteemid ei ela ajus samas kohas. **prefrontaalne ajukoor**, otsmiku taga asuv aju esiosa, aitab palju töömälu. Teised piirkonnad, nagu **neokortex**, aju välimine kiht, salvestavad pikaajaliselt."
+          "text": "Need süsteemid ei asu kõik ajus ühes ja samas kohas. **Prefrontaalne ajukoor**, otsmiku taga asuv aju eesosa, aitab palju kaasa töömälule. Teised piirkonnad, näiteks **neokorteks** ehk aju välimine kiht, talletavad pikaajalist mälu."
         }
       ]
     },
     {
       "id": "course_48_comment_fonctionne_la_memoire_p2",
-      "title": "Kuidas mälu fikseeritakse",
+      "title": "Kuidas mälestus kinnistub",
       "free": false,
       "blocks": [
         {
           "type": "image",
           "asset": "hippocampus_brain_anatomy_scan",
           "ratio": "4:3",
-          "caption": "Hipokampus, sügav struktuur, aitab moodustada uusi mälestusi."
+          "caption": "Hipokampus, sügaval ajus asuv struktuur, aitab luua uusi mälestusi."
         },
         {
           "type": "paragraph",
-          "text": "Selleks, et teave muutuks habrast vastupidavaks, peab aju tugevdama sidemeid **neuroniit** ehk närvirakkude vahel. Me räägime **konsolideerimisest**, hiljutise mälestuse muutmisest püsivaks jäljeks. Väike struktuur nimega **merihobune**, mis on oimusagaras nagu merihobune, mängib sündmuste mälestustes võtmerolli."
+          "text": "Et teave muutuks haprast püsivaks, peab aju tugevdama ühendusi **neuronite** ehk närvirakkude vahel. Seda nimetatakse **konsolideerimiseks**: hiljutine mälestus muutub püsivaks jäljeks. Väike merihobuse kujuline struktuur oimusagaras, mille nimi on **hipokampus**, mängib sündmuste mäletamisel võtmerolli."
         },
         {
           "type": "funFact",
-          "text": "Uni, eriti teatud faasid, aitab kinnistada päeva jooksul õpitut. Ülevaatamine ja seejärel magamine toimib sageli paremini kui kella 3-ni öösel vaatamine."
+          "text": "Uni, eriti mõned une faasid, aitab kinnistada päeva jooksul õpitut. Kui kordad ja lähed siis magama, toimib see sageli paremini kui kordamine kella 3-ni öösel."
         },
         {
           "type": "paragraph",
-          "text": "Kuulus reegel, mis on seotud **-uurija Donald Hebb**-ga: koos süttivad neuronid ühendavad end tugevamini. Kokkuvõttes: \"mis tuled koos seob kokku\". See on **neuroplastilisuse** põhimõte, aju võime muuta oma ühendusi."
+          "text": "Kuulus reegel on seotud teadlase **Donald Hebbi** nimega: neuronid, mis aktiveeruvad koos, kipuvad omavahel tugevamini ühenduma. Lühidalt: „mis koos süttib, see koos seostub“. See on **neuroplastilisuse** põhimõte: aju võime oma ühendusi muuta."
         }
       ]
     },
     {
       "id": "course_48_comment_fonctionne_la_memoire_p3",
-      "title": "Meeles jätmine tähendab muutmist",
+      "title": "Meenutamine tähendab muutmist",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kui meenutate mälestust, muutub see ajutiselt redigeeritavaks **tempermalmist**. Üksikasjad olevikust võivad sisse lipsata. Siis salvestab aju selle uuesti. Seetõttu võivad kaks sama õnnetuse tunnistajat rääkida erinevaid versioone."
+          "text": "Kui mälestust meenutad, muutub see ajutiselt **vormitavaks** ehk muudetavaks. Sinna võivad sisse pugeda olevikust pärit üksikasjad. Seejärel talletab aju selle uuesti. Seepärast võivad sama õnnetuse kaks pealtnägijat jutustada erinevaid versioone."
         },
         {
           "type": "paragraph",
-          "text": "Võime isegi luua **valemälestusi**: stseene, mida me usume olevat tõesed, kuid mis kunagi aset ei leidnud või mitte. Aju täidab tühimikud sellega, mida ta juba teab."
+          "text": "Isegi **valemälestusi** saab tekitada: stseene, mida peetakse tõeseks, kuigi neid pole kunagi juhtunud või need ei juhtunud nii. Aju täidab lüngad sellega, mida ta juba teab."
         }
       ]
     },
@@ -94,11 +94,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kui mäletaksite kõiki mittevajalikke detaile, oleksite küllastunud. Unustamine aitab meil üldistada, otsustada, säilitada põhiline. Hea mälu sorteerib nii palju, kui palju ta säilitab."
+          "text": "Kui mäletaksid iga tarbetut detaili, oleksid üle koormatud. Unustamine aitab üldistada, otsustada ja olulise alles hoida. Hea mälu sorteerib sama palju, kui säilitab."
         },
         {
           "type": "takeaway",
-          "text": "Mälu on aktiivne rekonstruktsioon, mitte täiuslik salvestus. See tugineb mitmele süsteemile, on konsolideeritud eriti une ajal ja võib iga meeldetuletusega moonduda."
+          "text": "Mälu on aktiivne rekonstrueerimine, mitte täiuslik salvestus. See tugineb mitmele süsteemile, kinnistub peamiselt une ajal ja võib iga meenutamisega moonduda."
         }
       ]
     }

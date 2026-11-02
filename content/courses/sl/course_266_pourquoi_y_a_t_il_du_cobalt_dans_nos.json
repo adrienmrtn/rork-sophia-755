@@ -3,8 +3,8 @@
   "title": "Zakaj je v naših baterijah kobalt?",
   "subtitle": "Element 27",
   "subject": "sciences",
-  "subcategory": "Vsakdanjik pod drobnogledom",
-  "description": "Skoraj nihče ne koplje zaradi kobalta, pa vendar ga najdemo v bateriji vsakega telefona. Zgodba o kovini, ki je industrija ne zna nadomestiti, a se je kljub temu skuša znebiti.",
+  "subcategory": "Vsakdan pod drobnogledom",
+  "description": "Skoraj nihče ne koplje zaradi kobalta, pa vendar je v bateriji vsakega telefona. Zgodba o kovini, ki je industrija ne zna nadomestiti, a se je kljub temu skuša znebiti.",
   "author": "guido-manuel-de-la-torre-olvera",
   "hero": {
     "image": "cobalt_copper_open_pit_mine_kolwezi_drc",
@@ -19,7 +19,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kobalt je element **27** periodnega sistema, stisnjen med železo in nikelj. Je v bateriji telefona, ki ga držite v roki, v magnetih in v zlitinah, dovolj trdnih, da zdržijo v letalskem motorju. In skoraj nihče ne koplje zaradi njega."
+          "text": "Kobalt je element **27** periodnega sistema, stisnjen med železo in nikelj. Je v bateriji telefona, ki ga držiš v roki, v magnetih in v zlitinah, dovolj trdnih, da zdržijo v letalskem motorju. In skoraj nihče ne koplje zaradi njega."
         },
         {
           "type": "paragraph",
@@ -44,7 +44,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Svet nato čaka več kot deset let. Leta **1991** Sony začne prodajati prvo komercialno litij-ionsko baterijo, v kateri je katoda iz LCO. Vse do približno leta **2010** so skoraj vse litij-ionske katode izdelane tako. LCO še vedno prevladuje v potrošniški elektroniki: zato je v vašem telefonu nekaj gramov kovine, ki se je nihče ni namenil kopati."
+          "text": "Svet nato čaka več kot deset let. Leta **1991** Sony začne prodajati prvo komercialno litij-ionsko baterijo, v kateri je katoda iz LCO. Vse do približno leta **2010** tako izdelujejo skoraj vse litij-ionske katode. LCO še vedno prevladuje v potrošniški elektroniki: zato je v tvojem telefonu nekaj gramov kovine, ki se je nihče ni namenil kopati."
         },
         {
           "type": "funFact",
@@ -59,7 +59,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Predstavljajte si katodo kot zid iz opek. Plasti kobaltovega oksida so police, litijevi ioni pa opeke, ki ležijo med njimi. Če baterijo napolnite premočno, odstranite preveč opek in zid postane nestabilen. Nad približno **130 °C** ali ob prenapolnjenosti se struktura začne sesedati, kisik, ujet v kobaltovem oksidu, pa uide kot plin."
+          "text": "Predstavljaj si katodo kot zid iz opek. Plasti kobaltovega oksida so police, litijevi ioni pa opeke, ki ležijo med njimi. Če baterijo napolniš premočno, odstraniš preveč opek in zid postane nestabilen. Nad približno **130 °C** ali ob prenapolnjenosti se struktura začne sesedati, kisik, ujet v kobaltovem oksidu, pa uide kot plin."
         },
         {
           "type": "image",
@@ -69,7 +69,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Tekočina, ki polni celico, je **vnetljiva**, baterija pa je sama pravkar priskrbela kisik, da zagori. Toplota pospeši razpad, ta sprosti več kisika, kisik pa ustvari še več toplote. To je [[termični pobeg]]. Zato požara litijeve baterije ne moremo preprosto zadušiti: kisik je že v njej."
+          "text": "Tekočina, ki polni celico, je **vnetljiva**, baterija pa je sama pravkar priskrbela kisik za gorenje. Toplota pospeši razpad, ta sprosti več kisika, kisik pa ustvari še več toplote. To je [[termični pobeg]]. Zato požara litijeve baterije ni mogoče pogasiti z dušenjem: kisik je že v njej."
         }
       ]
     },
@@ -80,11 +80,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Vrnimo se k zidu iz opek. Ob vsakem polnjenju in vsaki uporabi litijeve opeke zdrsnejo ven in nato nazaj. Kobalt je malta, ki zidu preprečuje, da bi se v stotinah ciklov zvil ali sesul. Drugi materiali tega sami ne zmorejo: **nikelj** shrani več energije, a se prehitro obrabi, **mangan** je poceni, a mu manjka moči."
+          "text": "Spet si predstavljaj zid iz opek. Ob vsakem polnjenju in vsaki uporabi litijeve opeke zdrsnejo ven in nato nazaj. Kobalt je malta, ki zidu preprečuje, da bi se v stotinah ciklov zvil ali sesul. Drugi materiali tega sami ne zmorejo: **nikelj** shrani več energije, a se prehitro obrabi, **mangan** je poceni, a mu manjka moči."
         },
         {
           "type": "paragraph",
-          "text": "Zato mešanice v večini električnih avtomobilov, na primer katode **NMC** (nikelj, mangan, kobalt) in **NCA** (nikelj, kobalt, aluminij), delež kobalta zmanjšujejo, nikoli pa ga ne odpravijo. Inženirji ga že petnajst let odvzemajo, da bi znižali stroške, a za povezavo celote ga še vedno potrebujejo ščepec. Edina, ki ga povsem opusti, [[baterija LFP]], to doseže tako, da zid zavrže in zgradi povsem drugačno notranjo strukturo."
+          "text": "Zato mešanice v večini električnih avtomobilov, na primer katode **NMC** (nikelj, mangan, kobalt) in **NCA** (nikelj, kobalt, aluminij), delež kobalta zmanjšujejo, nikoli pa ga ne odpravijo. Inženirji ga že petnajst let odvzemajo, da bi znižali stroške, a ščepec ga še vedno potrebujejo, da celota drži skupaj. Edina, ki gre povsem brez njega, [[baterija LFP]], to doseže tako, da zid zavrže in zgradi povsem drugačno notranjo strukturo."
         }
       ]
     },
@@ -95,7 +95,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Težava kobalta ni kemijska. Del kongoške proizvodnje izvira iz dejavnosti, ki ji pravimo [[obrtno rudarjenje]]: kopljejo na roke, v nevarnih razmerah in ponekod tudi otroci. Njegova cena hitro in močno niha, zato je vsaka baterija, ki je od njega odvisna, nepredvidljiva. In skoraj vse prihaja iz **ene same države**."
+          "text": "Težava kobalta ni kemijska. Del kongoške proizvodnje izvira iz dejavnosti, ki se imenuje [[obrtno rudarjenje]]: kopljejo na roke, v nevarnih razmerah in ponekod tudi otroci. Njegova cena hitro in močno niha, zato je vsaka baterija, ki je od njega odvisna, nepredvidljiva. In skoraj vse prihaja iz **ene same države**."
         },
         {
           "type": "image",
@@ -105,15 +105,15 @@
         },
         {
           "type": "paragraph",
-          "text": "Industrija zato skuša zasnovati baterije brez te kovine. Glavni odgovor je **LFP**, litijev železov fosfat, ki kobalt nadomesti z železom in fosforjem, dvema najcenejšima in najbolj razširjenima elementoma. Manj se segreva in veliko teže ga pripeljemo do termičnega pobega."
+          "text": "Industrija zato skuša zasnovati baterije brez te kovine. Glavni odgovor je **LFP**, litijev železov fosfat, ki kobalt nadomesti z železom in fosforjem, dvema najcenejšima in najbolj razširjenima elementoma. Manj se segreva in veliko teže ga je pognati v termični pobeg."
         },
         {
           "type": "paragraph",
-          "text": "Cena za to je energija: pri **enaki teži** celica LFP shrani manj energije. Zato jo vaš avtomobil morda že uporablja, vaš telefon pa še ni prešel nanjo: v žepu šteje vsak gram."
+          "text": "Cena za to je energija: pri **enaki teži** celica LFP shrani manj energije. Zato jo tvoj avtomobil morda že uporablja, tvoj telefon pa še ni prešel nanjo: v žepu šteje vsak gram."
         },
         {
           "type": "takeaway",
-          "text": "Kobalt drži strukturo litij-ionskih baterij skupaj, a skoraj v celoti prihaja iz ene same države, kot stranski proizvod bakra: industrija se ga reši le s spremembo kemije, z LFP, za ceno manjše energije."
+          "text": "Kobalt drži strukturo litij-ionskih baterij skupaj, a skoraj v celoti prihaja iz ene same države, kot stranski proizvod bakra: industrija se ga znebi le tako, da spremeni kemijo in preide na LFP, za ceno manjše energije."
         }
       ]
     }

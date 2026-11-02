@@ -1,14 +1,14 @@
 {
   "id": "course_177_dipe_et_le_sphinx",
   "title": "Akú hádanku Oidipus vyriešil pred Sfingou?",
-  "subtitle": "Záhada a slepota",
+  "subtitle": "Hádanka a zaslepenosť",
   "subject": "mythologie",
   "subcategory": "Grécki hrdinovia",
-  "description": "Oidipus zachráni Théby vyriešením hádanky o Sfinge. Toto víťazstvo ducha však otvára dvere tej najstrašnejšej tragédii.",
+  "description": "Oidipus zachráni Téby, keď vyrieši hádanku Sfingy. Toto víťazstvo rozumu však otvára dvere najstrašnejšej z tragédií.",
   "hero": {
     "image": "oedipe_et_le_sphinx",
     "ratio": "16:9",
-    "hook": "Monštrum predstavuje hádanku. Oidipus odpovedá „Človek“. Zachráni mesto... a kráča v ústrety vlastnému nešťastiu."
+    "hook": "Netvor kladie hádanku. Oidipus odpovie: „Človek“. Zachráni mesto… a kráča v ústrety vlastnému nešťastiu."
   },
   "sections": [
     {
@@ -18,87 +18,87 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Predtým, ako sa **Oidipus** stane tragickým hrdinom, ktorý zabije svojho otca a ožení sa s jeho matkou, je najprv záchranca. Pred **Théby**, mestom Boeotia v strednom Grécku, sa stretne so **Sfinga**, monštrom, ktoré zožerie každého, kto neuspeje v jeho hádanke."
+          "text": "Predtým, ako sa z **Oidipa** stane tragický hrdina, ktorý zabije svojho otca a ožení sa s vlastnou matkou, je najprv záchranca. Pred bránami **Téb**, mesta v Bojótii v strednom Grécku, sa postaví **Sfinge**, netvorovi, ktorý zožerie každého, kto nerozlúšti jeho hádanku."
         },
         {
           "type": "paragraph",
-          "text": "Víťazí rozumom, nie mečom. Ale toto víťazstvo ho postaví na trón, kde bude musieť čeliť tomu, čo o sebe nevie. Mýtus je proti poznaniu človeka vo všeobecnosti... a tragickej neznalosti seba samého."
+          "text": "Víťazí rozumom, nie mečom. Toto víťazstvo ho však posadí na trón, kde bude musieť čeliť tomu, čo o sebe nevie. Mýtus stavia proti sebe poznanie človeka vo všeobecnosti… a tragickú nevedomosť o sebe samom."
         }
       ]
     },
     {
       "id": "course_177_dipe_et_le_sphinx_p1",
-      "title": "Monštrum na ceste do Théb",
+      "title": "Monštrum na ceste do Téb",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Sfinga je boží trest, ktorý sa často spája so **Hera**. Telo leva, busta ženy, krídla vtáka, chvost hada: hybridný tvor. Inštalovaný v blízkosti mesta prerezáva cesty. Kráľ **Laios** zmizol, zabil ho neznámy človek na križovatke. Mesto je bez skutočného lídra."
+          "text": "Sfinga je trest bohov, často spájaný s **Hérou**. Telo leva, ženské poprsie, vtáčie krídla, hadí chvost: tvor zložený z viacerých zvierat. Usadila sa pri meste a odrezáva cesty. Kráľ **Laios** zmizol, na križovatke ho zabil neznámy muž. Mesto nemá skutočného vládcu."
         },
         {
           "type": "image",
           "asset": "sphinx_greek_mythology_thebes_monster",
           "ratio": "4:3",
-          "caption": "Tébska sfinga, strážkyňa smrtiacej záhady."
+          "caption": "Tébska Sfinga, strážkyňa smrteľnej hádanky."
         },
         {
           "type": "paragraph",
-          "text": "Každý okoloidúci musí reagovať. Neúspech znamená smrť. Dokonca aj regent [[Creon]] zlyhá. Monštrum stelesňuje triumf záhady nad rozumom... až do príchodu cudzinca menom Oidipus."
+          "text": "Každý pocestný musí odpovedať. Neúspech znamená smrť. Zlyhá dokonca aj regent [[Kreón]]. Netvor stelesňuje víťazstvo hádanky nad rozumom… až kým nepríde cudzinec menom Oidipus."
         }
       ]
     },
     {
       "id": "course_177_dipe_et_le_sphinx_p2",
-      "title": "\"Ktorá bytosť má štyri, dve, potom tri nohy?\"",
+      "title": "„Ktorá bytosť má štyri, dve, potom tri nohy?“",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Oidipus uteká z Korintu. Orákulum mu predpovedalo, že zabije svojho otca a ožení sa s jeho matkou. Verí, že sa vyhýba osudu. Na ceste do Théb si Sfinga kladie otázku: ktorá bytosť má štyri nohy ráno, dve na poludnie, tri večer?"
+          "text": "Oidipus uteká z Korintu. Veštba mu predpovedala, že zabije svojho otca a ožení sa s vlastnou matkou. Myslí si, že osudu unikne. Na ceste do Téb mu Sfinga položí otázku: ktorá bytosť má ráno štyri nohy, na poludnie dve a večer tri?"
         },
         {
           "type": "image",
           "asset": "oedipus_answering_sphinx_ingres_painting",
           "ratio": "4:3",
-          "caption": "Oidipus tvárou v tvár Sfinge, víťazstvo inteligencie."
+          "caption": "Oidipus pred Sfingou: víťazstvo inteligencie."
         },
         {
           "type": "funFact",
-          "text": "Slovo **Sfinga** pochádza z gréckeho *sfinga*, „stláčať“ alebo „škrtiť“. Označuje spôsob, akým monštrum zabíja... aj spôsob, akým záhada paralyzuje myseľ."
+          "text": "Slovo **Sfinga** pochádza z gréckeho *sphingein*, „zvierať“ alebo „škrtiť“. Označuje spôsob, akým netvor zabíja… aj spôsob, akým hádanka ochromí myseľ."
         },
         {
           "type": "paragraph",
-          "text": "Oidipus odpovedá: **„Človek“**. Ako dieťa sa plazí po štyroch; v dospelosti chodí po dvoch nohách; starý, opiera sa o palicu. Porazená Sfinga sa vrhá zo skaly. Je to brutálny [[dejový zvrat]]. Théby sú zadarmo. Ako sľúbil, Oidipus dostane korunu a ruku ovdovenej kráľovnej **Jocasta**."
+          "text": "Oidipus odpovedá: **„Človek“**. Ako dieťa lezie po štyroch, v dospelosti chodí po dvoch nohách, v starobe sa opiera o palicu. Porazená Sfinga sa vrhne zo skaly. Je to prudký [[dejový zvrat]]. Téby sú slobodné. Ako bolo sľúbené, Oidipus dostane korunu a ruku ovdovenej kráľovnej **Iokasty**."
         }
       ]
     },
     {
       "id": "course_177_dipe_et_le_sphinx_p3",
-      "title": "Vedieť všetko... okrem toho, kto si",
+      "title": "Poznať všetko… okrem samého seba",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Oidipus vládne. Mesto prosperuje. Neskôr však zasiahne mor. **Apollo** odhaľuje: pohroma skončí, keď sa nájde vrah Laius. Oidipus začína vyšetrovanie s rovnakou energiou ako predtým, keď čelil Sfinge."
+          "text": "Oidipus vládne. Mesto prekvitá. Neskôr však udrie mor. **Apolón** zjaví: pohroma sa skončí, keď sa nájde Laiov vrah. Oidipus začne vyšetrovanie s rovnakým zápalom ako kedysi pred Sfingou."
         },
         {
           "type": "paragraph",
-          "text": "Irónia je krutá. Ktokoľvek definoval „človek“, nevie, kým je. Vyhral verejnú [[dialektika]], súboj argumentov, ale zostáva slepý k svojej identite. V **Sofokles**, v *Kráľ Oidipus* je jadrom tragédie."
+          "text": "Irónia je krutá. Ten, kto definoval „Človeka“, nevie, kým je. Vyhral verejný súboj argumentov, akým je [[dialektika]], no k vlastnej identite zostáva slepý. U **Sofokla**, v hre *Kráľ Oidipus*, je to jadro tragédie."
         }
       ]
     },
     {
       "id": "course_177_dipe_et_le_sphinx_p4",
-      "title": "Pravda a zaslepené oči",
+      "title": "Pravda a vypichnuté oči",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Pravda vyjde najavo: Oidipus zabil Laia, svojho otca, a oženil sa s Jocastou, jeho matkou. Jocasta spácha samovraždu. Oidipus si vypichol oči. Keď oslepne, konečne „vidí“. Putuje, podporovaný svojou dcérou Antigonou, sám sa stáva trojnohým starcom záhady."
+          "text": "Pravda vyjde najavo: Oidipus zabil Laia, svojho otca, a oženil sa s Iokastou, svojou matkou. Iokasta spácha samovraždu. Oidipus si vypichne oči. Až keď oslepne, konečne „vidí“. Blúdi svetom, opiera sa o svoju dcéru Antigonu a sám sa stáva starcom o troch nohách z hádanky."
         },
         {
           "type": "funFact",
-          "text": "**Freud** pomenoval komplex [[Oidipov komplex]] podľa tohto mýtu: nie urobiť z Oidipa monštrum, ale hovoriť o nevedomých túžbach, ktoré sa civilizácia učí potláčať."
+          "text": "**Freud** pomenoval [[Oidipov komplex]] podľa tohto mýtu: nechcel z Oidipa urobiť netvora, ale hovoriť o nevedomých túžbach, ktoré sa civilizácia učí potláčať."
         },
         {
           "type": "paragraph",
@@ -106,7 +106,7 @@
         },
         {
           "type": "takeaway",
-          "text": "Oidipus oslobodzuje Téby tým, že na hádanku o Sfinge odpovie „Človek“. Táto brilantnosť mu nebráni v realizácii, bez toho, aby o tom vedel, proroctvo: mýtus o sebaklame."
+          "text": "Oidipus oslobodí Téby, keď na hádanku Sfingy odpovie „Človek“. Jeho bystrosť mu však nezabráni, aby nevedomky naplnil proroctvo: je to mýtus o slepote voči sebe samému."
         }
       ]
     }

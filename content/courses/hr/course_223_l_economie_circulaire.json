@@ -1,14 +1,14 @@
 {
   "id": "course_223_l_economie_circulaire",
   "title": "Kružno gospodarstvo: što kad otpada više ne bi bilo?",
-  "subtitle": "Bijeg od svega što je jednokratno",
+  "subtitle": "Izlaz iz kulture bacanja",
   "subject": "comprendreLeMonde",
   "subcategory": "Okoliš i budućnost",
   "description": "**Izvadi, proizvedi, baci**: ovaj model iscrpljuje planet. Kružno gospodarstvo predlaže suprotno: predmete i materijale držati u optjecaju što je duže moguće.",
   "hero": {
     "image": "l_economie_circulaire",
     "ratio": "16:9",
-    "hook": "Što ako otpad ne postoji? To je ulog ekonomskog modela inspiriranog prirodom."
+    "hook": "Što ako otpad ne bi postojao? Na to se kladi gospodarski model nadahnut prirodom."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Od industrijske revolucije naše gospodarstvo radilo je u jednom smjeru: izvlačimo resurse, proizvodimo predmete, a zatim ih bacamo. Ovaj model pretpostavlja da su resursi beskonačni. Oni nisu."
+          "text": "Od industrijske revolucije naše gospodarstvo funkcionira u samo jednom smjeru: iz prirode se vade sirovine, od njih se izrađuju predmeti, a onda se bacaju. Taj model pretpostavlja da su resursi beskonačni. A nisu."
         },
         {
           "type": "paragraph",
-          "text": "**cirkularna ekonomija** nudi drugu logiku, inspiriranu prirodom, gdje zapravo ništa nije izgubljeno. Cilj mu je zadržati vrijednost proizvoda i materijala u optjecaju što je duže moguće, umjesto da ih pretvara u otpad."
+          "text": "**Kružno gospodarstvo** nudi drugačiju logiku, nadahnutu prirodom, u kojoj se ništa zapravo ne gubi. Cilj mu je što dulje zadržati vrijednost proizvoda i materijala u optjecaju, umjesto da postanu otpad."
         }
       ]
     },
@@ -33,50 +33,50 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Moderno gospodarstvo izgrađeno je na modelu zvanom **linearni**: izvuci, proizvedi, baci. Sirovine uzimamo iz prirode, od njih izrađujemo proizvode, a nakon što dotraju ili izađu iz mode, ti proizvodi postaju otpad."
+          "text": "Moderno gospodarstvo izgrađeno je na takozvanom **linearnom** modelu: izvadi, proizvedi, baci. Iz prirode se uzimaju sirovine, od njih se izrađuju proizvodi, a kad se istroše ili izađu iz mode, ti proizvodi postaju otpad."
         },
         {
           "type": "image",
           "asset": "landfill_waste_garbage_linear_economy",
           "ratio": "16:9",
-          "caption": "Model “uzmi, napravi, baci” pretpostavlja beskonačne resurse."
+          "caption": "Model „izvadi, proizvedi, baci” pretpostavlja beskonačne resurse."
         },
         {
           "type": "paragraph",
-          "text": "Ovaj sustav temelji se na ideji da su resursi neograničeni i da priroda može apsorbirati sve onečišćenje. Ali danas globalna ekonomija svake godine troši resurse ekvivalentne 1,7 planeta. Određene metale bitne za digitalne tehnologije, kao što je [[Litij]], moglo bi postati teško pronaći već 2040."
+          "text": "Taj sustav počiva na ideji da su resursi neograničeni i da priroda može upiti svo onečišćenje. No svjetsko gospodarstvo danas svake godine potroši resursa koliko ih ima na 1,7 planeta. Neki metali ključni za digitalne tehnologije, kao što je [[Litij]], mogli bi već 2040. godine postati teško dostupni."
         },
         {
           "type": "funFact",
-          "text": "Samo 9% sve plastike koju je čovječanstvo ikada proizvelo je reciklirano. Ostatak završi u prirodi ili na odlagalištu, gdje može ostati 450 godina."
+          "text": "Od sve plastike koju je čovječanstvo ikad proizvelo reciklirano je samo 9%. Ostatak završava u prirodi ili na odlagalištima, gdje može ostati i 450 godina."
         },
         {
           "type": "paragraph",
-          "text": "Trošak čišćenja i gospodarenja otpadom gotovo nikada nije uključen u prodajnu cijenu proizvoda. To je skriveni trošak, koji kasnije plaćaju svi."
+          "text": "Trošak čišćenja i gospodarenja otpadom gotovo nikad nije uključen u prodajnu cijenu proizvoda. To je skriveni trošak koji kasnije plaćaju svi."
         }
       ]
     },
     {
       "id": "course_223_l_economie_circulaire_p2",
-      "title": "Popravite prije recikliranja",
+      "title": "Prvo popraviti, onda reciklirati",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kružna ekonomija nudi nekoliko petlji, i uvijek u istom redoslijedu prioriteta: najkraća petlja je bolja, jer gubi manje energije i materijala. Sve počinje s **eko-dizajnom**, odnosno razmišljanjem o utjecaju proizvoda na okoliš od njegovog nastanka, odabirom materijala koji su izdržljivi i lako se rastavljaju."
+          "text": "Kružno gospodarstvo nudi nekoliko petlji, uvijek istim redoslijedom prioriteta: najbolja je najkraća petlja, jer rasipa najmanje energije i materijala. Sve počinje **ekodizajnom**, odnosno promišljanjem utjecaja proizvoda na okoliš već od njegova nastanka, uz odabir izdržljivih materijala koji se lako rastavljaju."
         },
         {
           "type": "paragraph",
-          "text": "Zatim dolazi **ponovno koristiti** (predmet mijenja vlasništvo bez transformacije, kao na tržištu rabljenih stvari), zatim **popravak**, koji produljuje vijek trajanja proizvoda. Ovi se koraci izravno bore protiv [[Planirano zastarijevanje]], ove prakse kojom se dobrovoljno smanjuje životni vijek predmeta."
+          "text": "Zatim dolazi **ponovna uporaba** (predmet mijenja vlasnika, a da se ne prerađuje, kao na tržnici rabljenih stvari), pa **popravak**, koji produljuje vijek proizvoda. Ti se koraci izravno bore protiv pojave koja se zove [[planirano zastarijevanje]], prakse kojom se namjerno skraćuje vijek trajanja predmeta."
         },
         {
           "type": "image",
           "asset": "recycling_sorting_waste_materials",
           "ratio": "4:3",
-          "caption": "Recikliranje dolazi kao posljednje sredstvo, nakon ponovne uporabe i popravka."
+          "caption": "Recikliranje je posljednje rješenje, nakon ponovne uporabe i popravka."
         },
         {
           "type": "paragraph",
-          "text": "**recikliranje** se javlja samo kao posljednje sredstvo. Ostaje koristan: recikliranje aluminija troši 95% manje energije nego njegovo izdvajanje iz sirove rude, [[Boksit]]. Ali još uvijek je manje učinkovito od jednostavnog ponovnog korištenja objekta."
+          "text": "**Recikliranje** dolazi tek na kraju. I dalje je korisno: recikliranje aluminija troši 95% manje energije nego njegovo dobivanje iz sirove rude koja se zove [[Boksit]]. Ali i dalje je manje učinkovito od jednostavne ponovne uporabe predmeta."
         }
       ]
     },
@@ -87,44 +87,44 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Unatoč svom interesu, kružna ekonomija suočava se s jednostavnim problemom: linearni model često ostaje **bezkupan u kratkom roku**. Ekstrakcija novog materijala ponekad košta manje od razvrstavanja i recikliranja složenog otpada, pogotovo kada su sirovine jeftine."
+          "text": "Koliko god bilo korisno, kružno gospodarstvo nailazi na jednostavan problem: linearni model često je **jeftiniji u kratkom roku**. Vađenje novog materijala katkad stoji manje od razvrstavanja i recikliranja složenog otpada, osobito kad su sirovine jeftine."
         },
         {
           "type": "image",
           "asset": "repair_right_electronics_reuse",
           "ratio": "4:3",
-          "caption": "“Pravo na popravak” zahtijeva od proizvođača da osiguraju rezervne dijelove."
+          "caption": "„Pravo na popravak” obvezuje proizvođače da osiguraju rezervne dijelove."
         },
         {
           "type": "paragraph",
-          "text": "Suočene s tim, javna tijela sve češće interveniraju. Europska unija pokrenula je plan 2020. koji nameće stroža pravila održivosti. Jedna od glavnih osovina je “pravo na popravak”, koje obvezuje proizvođače elektroničkih uređaja da nekoliko godina osiguravaju rezervne dijelove."
+          "text": "Zato vlasti sve češće interveniraju. Europska unija pokrenula je 2020. godine plan koji uvodi stroža pravila o trajnosti proizvoda. Jedan od glavnih stupova je „pravo na popravak”, koje proizvođače elektroničkih uređaja obvezuje da nekoliko godina osiguravaju rezervne dijelove."
         },
         {
           "type": "paragraph",
-          "text": "Još jedna poluga: [[Proširena odgovornost proizvođača]], kojom proizvođači plaćaju zbrinjavanje otpada svojih proizvoda. To im daje financijski poticaj za projektiranje objekata koji manje zagađuju okoliš i koji se lakše popravljaju."
+          "text": "Druga je poluga [[Proširena odgovornost proizvođača]], prema kojoj proizvođači plaćaju zbrinjavanje otpada od svojih proizvoda. Tako imaju financijski poticaj da osmišljavaju predmete koji manje zagađuju i lakše se popravljaju."
         }
       ]
     },
     {
       "id": "course_223_l_economie_circulaire_p4",
-      "title": "Prema društvu resursa",
+      "title": "Prema društvu koje čuva resurse",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kružno gospodarstvo nije samo pitanje recikliranja: to je projekt za trezvenije i otpornije društvo. Time što manje ovisi o uvoznim sirovinama, zemlja također dobiva sigurnost u nestabilnijem svijetu."
+          "text": "Kružno gospodarstvo nije samo pitanje recikliranja: to je projekt umjerenijeg i otpornijeg društva. Što manje ovisi o uvozu sirovina, to je zemlja sigurnija u sve nestabilnijem svijetu."
         },
         {
           "type": "paragraph",
-          "text": "Uspjeh ove transformacije ovisi i o nama, kao potrošačima. Pravilo 3R, reduciraj, ponovno upotrijebi, recikliraj, počinje prvim korakom: reduciraj, odnosno zapitaj se je li kupnja doista potrebna. Upravo ta prva radnja ima najveći učinak na klimu."
+          "text": "Uspjeh te preobrazbe ovisi i o nama kao potrošačima. Pravilo 3R (smanji, ponovno upotrijebi, recikliraj) počinje prvim korakom: smanji, odnosno zapitaj se je li ti ta kupnja doista potrebna. Upravo taj prvi korak najviše utječe na klimu."
         },
         {
           "type": "funFact",
-          "text": "Danas ima više zlata u toni starih elektroničkih ploča pametnih telefona nego u toni rude izvađene iz tradicionalnog rudnika zlata."
+          "text": "Danas u toni starih elektroničkih pločica iz pametnih telefona ima više zlata nego u toni rude iz klasičnog rudnika zlata."
         },
         {
           "type": "takeaway",
-          "text": "Kružno gospodarstvo ima za cilj prekinuti ciklus \"izvadi, napravi, baci\" održavanjem resursa u optjecaju kroz eko-dizajn, popravke i recikliranje, kako bi se poštivala fizička ograničenja našeg planeta."
+          "text": "Kružno gospodarstvo želi prekinuti ciklus „izvadi, proizvedi, baci” tako da resurse drži u optjecaju zahvaljujući ekodizajnu, popravku i recikliranju, kako bi se poštovale fizičke granice našeg planeta."
         }
       ]
     }

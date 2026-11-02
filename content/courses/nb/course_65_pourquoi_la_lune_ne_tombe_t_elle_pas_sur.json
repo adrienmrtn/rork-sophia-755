@@ -1,14 +1,14 @@
 {
   "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur",
-  "title": "Hvorfor faller ikke månen til jorden?",
+  "title": "Hvorfor faller ikke månen ned på jorden?",
   "subtitle": "Bane og tyngdekraft",
   "subject": "sciences",
   "subcategory": "Jorden og universet",
-  "description": "Månen faller stadig mot jorden. Hun bare savner det hver gang. Det er akkurat det en bane er.",
+  "description": "Månen faller hele tiden mot jorden. Den bommer bare hver gang. Det er nettopp det en bane er.",
   "hero": {
     "image": "pourquoi_la_lune_ne_tombe_pas",
     "ratio": "16:9",
-    "hook": "Månen faller mot oss. Hun savner bare jorden hver tur."
+    "hook": "Månen faller mot oss. Den bommer bare på jorden hver eneste runde."
   },
   "sections": [
     {
@@ -18,15 +18,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Hvis jordens tyngdekraft trekker månen, hvorfor krasjer den ikke inn i oss? Svaret virker bisarrt: Månen **faller virkelig** mot jorden. Hun savner det hvert øyeblikk."
+          "text": "Hvis jordens tyngdekraft trekker på månen, hvorfor styrter den ikke ned på oss? Svaret høres rart ut: månen **faller** faktisk mot jorden. Den bommer bare på den i hvert eneste øyeblikk."
         },
         {
           "type": "paragraph",
-          "text": "Denne balansen mellom fall- og sidehastighet er en **orbital**, en buet bane rundt en stjerne. Den engelske fysikeren **Isaac Newton** var den første til å forene et eplefall og stjernenes bevegelse med samme idé."
+          "text": "Denne balansen mellom fall og fart sidelengs er en **bane**, en krum vei rundt et himmellegeme. Den engelske fysikeren **Isaac Newton** var den første som forklarte både et eple som faller og himmellegemenes bevegelser med én og samme idé."
         },
         {
           "type": "funFact",
-          "text": "Hvis du veide **60 kg** på jorden, ville du bare veid omtrent **10** på månen: gravitasjonen er seks ganger svakere."
+          "text": "Hvis du veide **60 kg** på jorden, ville du bare veid rundt **10** på månen: tyngdekraften der er seks ganger svakere."
         }
       ]
     },
@@ -37,21 +37,21 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Newton ser for seg en kanon på toppen av et fjell så høyt at den ville dukke opp fra atmosfæren. Vi skyter en ball horisontalt. Med lite kraft faller den raskt. Med mer kraft går han lenger."
+          "text": "Newton ser for seg en kanon på toppen av et fjell som er så høyt at det rager over atmosfæren. Man skyter ut en kule vannrett. Med et svakt skudd faller den raskt ned. Med et kraftigere skudd kommer den lenger."
         },
         {
           "type": "image",
           "asset": "newton_cannonball_orbit_thought_experiment",
           "ratio": "auto",
-          "caption": "Newtons kanonkule-tankeeksperiment: nøkkelen til å forstå bane."
+          "caption": "Newtons tankeeksperiment med kanonkulen: nøkkelen til å forstå hva en bane er."
         },
         {
           "type": "paragraph",
-          "text": "Ved en bestemt hastighet, kalt [[Likevektshastighet]], skjer noe bemerkelsesverdig. Når ballen faller, krummer jorden, som er rund, under den i samme hastighet. Prosjektilet faller ... uten å berøre bakken. Han er i **permanent fritt fall**, trukket av tyngdekraften uten å krasje."
+          "text": "Ved en bestemt fart, kalt [[Likevektshastighet]], skjer noe bemerkelsesverdig. Mens kulen faller, krummer den runde jorden seg bort under den i samme tempo. Kulen faller… uten noen gang å treffe bakken. Den er i **konstant fritt fall**, trukket av tyngdekraften uten å styrte."
         },
         {
           "type": "paragraph",
-          "text": "Månen gjør det samme. Hun har nok sidehastighet til å gjøre et fall til en løkke. Uten denne farten ville den dykke rett mot oss."
+          "text": "Månen gjør det samme. Den har nok fart sidelengs til å gjøre fallet om til en sløyfe. Uten denne farten ville den stupt rett ned på oss."
         }
       ]
     },
@@ -62,15 +62,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Månen går i bane rundt **384 000 km**. Dens sidehastighet er omtrent **1 km/s**. Hvis det stoppet plutselig, ville det krasje i løpet av dager. Hvis tyngdekraften plutselig forsvant, ville den gå i en rett linje i rommet, i henhold til prinsippet til [[Treghet]]: et legeme holder farten hvis den ikke bremses ned."
+          "text": "Månen går i bane omtrent **384 000 km** unna. Farten sidelengs er omtrent **1 km/s**. Hvis den stoppet brått, ville den styrte ned i løpet av noen få dager. Hvis tyngdekraften plutselig forsvant, ville den fortsette i rett linje ut i verdensrommet, etter prinsippet om [[Treghet]]: et legeme beholder farten sin hvis ingenting bremser det."
         },
         {
           "type": "paragraph",
-          "text": "[[Newtons lov om universell gravitasjon]] sier at hver masse tiltrekker seg annenhver masse, og at tiltrekningen avtar med avstanden, mer presist med kvadratet på avstanden. Jo nærmere en satellitt er, jo raskere må den gå for å unngå å falle."
+          "text": "[[Newtons lov om universell gravitasjon]] sier at all masse tiltrekker all annen masse, og at tiltrekningen avtar med avstanden, nærmere bestemt med kvadratet av avstanden. Jo nærmere en satellitt er, desto fortere må den gå for ikke å falle ned."
         },
         {
           "type": "funFact",
-          "text": "Den internasjonale romstasjonen, på bare **400 km** høyde, reiser med rundt **28.000 km/t**. Den går rundt jorden på **90 minutter**. Månen, lenger unna, tar **27,3 dager**."
+          "text": "Den internasjonale romstasjonen, som går i bare **400 km** høyde, suser av gårde i rundt **28 000 km/t**. Den kommer seg rundt jorden på **90 minutter**. Månen, som er lenger unna, bruker **27,3 dager**."
         },
         {
           "type": "paragraph",
@@ -85,34 +85,34 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Banen er ikke fast. [[Tidevannskrefter]] kommer inn i bildet. Månens tyngdekraft trekker hardere på den siden av jorden som vender mot den enn på midten. Det deformerer havene og skaper en bule av vann."
+          "text": "Banen ligger ikke fast. [[Tidevannskrefter]] spiller også inn. Månens tyngdekraft trekker hardere i den siden av jorden som vender mot den, enn i midten. Den drar havene ut av form og lager en bule av vann."
         },
         {
           "type": "paragraph",
-          "text": "Når jorden roterer om sin akse raskere enn månen roterer rundt den, går denne ryggen litt foran månen. Friksjon bremser jordens rotasjon veldig litt: våre dager forlenges med omtrent **1,4 millisekunder** per århundre. Til gjengjeld beveger månen seg bort med omtrent **3,8 cm** per år."
+          "text": "Siden jorden roterer om seg selv fortere enn månen går rundt den, ligger denne bulen litt foran månen. Friksjonen bremser jordrotasjonen ørlite grann: dagene våre blir omtrent **1,4 millisekunder** lengre per århundre. Til gjengjeld fjerner månen seg omtrent **3,8 cm** i året."
         },
         {
           "type": "paragraph",
-          "text": "For milliarder av år siden var månen mye nærmere. Tidevannet var enormt. Denne blandingen av vann og kjemi kan ha hjulpet tidlige livsformer. Og dinosaurene levde på en jord der dagene bare varte **22 eller 23 timer**."
+          "text": "For milliarder av år siden var månen mye nærmere. Tidevannet var enormt. Denne omrøringen av vann og kjemi kan ha hjulpet de første livsformene. Og dinosaurene levde på en jord der dagene bare varte **22 eller 23 timer**."
         }
       ]
     },
     {
       "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur_p4",
-      "title": "Formørkelser ... for nå",
+      "title": "Formørkelser… inntil videre",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "I dag, ved geometrisk tilfeldighet, er solen omtrent **400 gjeng** større enn månen, men også **400 gjeng** lenger unna. De to har derfor samme **tilsynelatende størrelse**, vinkelen vi ser dem på himmelen. Totale solformørkelser er mulig."
+          "text": "I dag er solen, ved et geometrisk sammentreff, omtrent **400 ganger** større enn månen, men også **400 ganger** lenger unna. De to har derfor samme **tilsynelatende størrelse**, altså vinkelen de ses under på himmelen. Derfor er totale solformørkelser mulige."
         },
         {
           "type": "paragraph",
-          "text": "Om omtrent **600 millioner år** vil månen være for langt unna til å skjule solen fullstendig. Alt som gjenstår er ringformørkelser: en ring av lys rundt måneskiven. På svært lang sikt kunne Jorden og Månen synkroniseres: hver kropp ville alltid vise det samme ansiktet til den andre. Men Solen, ved å bli **rød kjempe**, sluttfasen av en stjerne som vår, vil transformere systemet mye tidligere."
+          "text": "Om omtrent **600 millioner år** vil månen være for langt unna til å dekke hele solen. Da blir det bare ringformørkelser: en ring av lys rundt måneskiven. På svært lang sikt kan jorden og månen bli synkronisert: begge vil alltid vende samme side mot hverandre. Men solen blir en **rød kjempe**, sluttfasen for en stjerne som vår, og vil forandre systemet lenge før det."
         },
         {
           "type": "takeaway",
-          "text": "Månen krasjer ikke fordi dens sidehastighet balanserer jordens attraksjon: den er i permanent fritt fall. Og den beveger seg fortsatt bort med omtrent **3,8 cm** per år."
+          "text": "Månen styrter ikke ned fordi farten sidelengs balanserer jordens tiltrekning: den er i konstant fritt fall. Og den fjerner seg fortsatt omtrent **3,8 cm** i året."
         }
       ]
     }

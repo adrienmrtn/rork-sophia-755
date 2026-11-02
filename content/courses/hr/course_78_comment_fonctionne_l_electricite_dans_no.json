@@ -4,11 +4,11 @@
   "subtitle": "Živci i ioni",
   "subject": "sciences",
   "subcategory": "Zemlja i svemir",
-  "description": "Razmišljanje, otkucaji srca, podizanje ruke: sve to najprije kola kao živa struja, nošena ne elektronima, nego ionima.",
+  "description": "Razmišljanje, otkucaji srca, podizanje ruke: sve to najprije teče kao živa struja koju ne nose elektroni, nego ioni.",
   "hero": {
     "image": "comment_fonctionne_l_electricite_dans_notre_corps",
     "ratio": "16:9",
-    "hook": "Vaše tijelo je električna mreža. Ali ovdje su struja ioni, a ne elektroni."
+    "hook": "Tvoje tijelo je električna mreža. No ovdje struju čine ioni, a ne elektroni."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "U zidnoj utičnici struja je **elektronika** koji cirkulira. U vašem tijelu je drugačije: to su **ioni**, nabijeni atomi, koji ulaze i izlaze iz stanica. Ovaj protok stvara signale koji potiču srce na razmišljanje, otkucaje srca i kontrakciju mišića."
+          "text": "U zidnoj utičnici struju čine **elektroni** koji teku. U tvom tijelu je drugačije: struju čine **ioni**, nabijeni atomi koji ulaze u stanice i izlaze iz njih. Taj tok stvara signale koji omogućuju misao, otkucaje srca i stezanje mišića."
         },
         {
           "type": "paragraph",
-          "text": "Bez ovog živog elektriciteta, nema misli, nema gesta, nema pulsa. Razumijevanje tijela također znači razumijevanje ovog jezika naboja."
+          "text": "Bez tog živog elektriciteta nema misli, pokreta ni pulsa. Razumjeti tijelo znači razumjeti i taj jezik naboja."
         }
       ]
     },
@@ -33,7 +33,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**neuron** u mirovanju ne šalje poruku, ali se \"puni\". Njegova membrana odvaja unutrašnjost i vanjštinu stanice. Zahvaljujući [[natrij-kalijeve pumpe]], održava [[potencijal mirovanja]] od približno **-70 milivolta**: unutrašnjost je negativnija nego izvana."
+          "text": "**Neuron** u mirovanju ne šalje poruku, ali se „puni”. Njegova membrana dijeli unutrašnjost stanice od vanjštine. Njegove [[natrij-kalijeve pumpe]] održavaju [[potencijal mirovanja]] od oko **-70 milivolta**: unutrašnjost je negativnija od vanjštine."
         },
         {
           "type": "image",
@@ -43,7 +43,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Kad stigne podražaj, kanali se otvaraju. Natrij dolazi sav odjednom. Polaritet je obrnut: to je [[akcijski potencijal]], signal sve ili ništa koji se proteže duž aksona, ponekad preko jednog metra. Kao električni val."
+          "text": "Kad stigne podražaj, kanali se otvaraju. Natrij naglo navire unutra. Polaritet se obrće: to je [[akcijski potencijal]], signal po načelu „sve ili ništa” koji juri duž aksona, katkad i metar daleko. Poput električnog vala."
         },
         {
           "type": "funFact",
@@ -58,53 +58,53 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Neuroni se zapravo ne dodiruju. Između njih, mali jaz: **sinapsa**. Električni signal ga ne može preskočiti. Zatim kraj aksona oslobađa [[neurotransmitera]], glasničke molekule kao što su acetilkolin ili [[glutamat]]."
+          "text": "Neuroni se zapravo ne dodiruju. Između njih je sićušna pukotina: **sinapsa**. Električni signal ne može je preskočiti. Zato kraj aksona otpušta molekule glasnike iz skupine [[neurotransmitera]], na primjer acetilkolin ili [[glutamat]]."
         },
         {
           "type": "paragraph",
-          "text": "Ti se glasnici vežu za sljedeći neuron poput ključa u bravi. Ovisno o poruci, uzbuđuju ili koče. Tisuće tih istodobnih odluka oblikuju misao."
+          "text": "Ti se glasnici vežu za sljedeći neuron poput ključa u bravi. Ovisno o poruci, pobuđuju ga ili koče. Tisuće takvih istodobnih odluka tvore misao."
         },
         {
           "type": "funFact",
-          "text": "Neki živčani signali putuju brzinom **120 m/s** (više od **430 km/h**). Dovoljno da reagira na opeklinu nožnog prsta u djeliću sekunde."
+          "text": "Neki živčani signali putuju brzinom od **120 m/s** (više od **430 km/h**). Dovoljno da na opeklinu na nožnom prstu reagiraš u djeliću sekunde."
         }
       ]
     },
     {
       "id": "course_78_comment_fonctionne_l_electricite_dans_no_p3",
-      "title": "Srce ima svoj vlastiti pejsmejker",
+      "title": "Srce ima vlastiti pejsmejker",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Srce ne čeka naredbu iz mozga za svaki otkucaj. U desnom atriju, **sinni čvor** stvara vlastite impulse, otprilike **60 do 100** puta u minuti u mirovanju. Signal se širi, prvo kontrahira atrije, zatim klijetke."
+          "text": "Srce ne čeka naredbu iz mozga za svaki otkucaj. U desnoj pretklijetki **sinusni čvor** stvara vlastite impulse, u mirovanju otprilike **60 do 100** puta u minuti. Signal se širi i steže najprije pretklijetke, a zatim klijetke."
         },
         {
           "type": "paragraph",
-          "text": "Ova aktivnost je dovoljno jaka da se očitava na koži: to je **elektrokardiogram (EKG)**. Ako se ritam poremeti, govorimo o **aritmiji**. Srce tada neuredno kuca i slabo pumpa."
+          "text": "Ta je aktivnost dovoljno jaka da se može očitati na koži: to je **elektrokardiogram (EKG)**. Ako se ritam poremeti, govori se o **aritmiji**. Srce tada kuca neuredno i slabo pumpa."
         },
         {
           "type": "funFact",
-          "text": "Električna jegulja koristi isti princip ekscitabilnih stanica, ali u nizu: do **600 volti**, dovoljno da paralizira plijen."
+          "text": "Električna jegulja koristi isto načelo podražljivih stanica, ali povezanih u niz: do **600 volti**, dovoljno da paralizira plijen."
         }
       ]
     },
     {
       "id": "course_78_comment_fonctionne_l_electricite_dans_no_p4",
-      "title": "Od dobrovoljne geste do defibrilatora",
+      "title": "Od voljnog pokreta do defibrilatora",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Za podizanje ruke, akcijski potencijal putuje dolje do mišića. Acetilkolin pokreće lokalni električni val, a zatim oslobađanje kalcija. Mišićni proteini klize jedan preko drugog: kontrakcija."
+          "text": "Kad podižeš ruku, akcijski potencijal putuje sve do mišića. Acetilkolin pokreće lokalni električni val, a zatim oslobađanje kalcija. Mišićne bjelančevine klize jedna preko druge: kontrakcija."
         },
         {
           "type": "paragraph",
-          "text": "**defibrilacija** koristi isti princip obrnuto: vanjski šok vraća sve stanice \"na nulu\" tako da sinusni čvor nastavlja tempo. Bionička protetika također hvata te slabe signale za kontrolu umjetne ruke."
+          "text": "**Defibrilacija** koristi isto načelo, samo obrnuto: vanjski udar vraća sve stanice „na nulu” kako bi sinusni čvor ponovno preuzeo ritam. Bioničke proteze također hvataju te slabe signale da bi upravljale umjetnom šakom."
         },
         {
           "type": "takeaway",
-          "text": "Živa bića govore u ionskim tokovima i akcijskim potencijalima. Misao, srce i mišići dijele isti električni jezik."
+          "text": "Živa bića govore jezikom ionskih tokova i akcijskih potencijala. Misao, srce i mišići dijele isti električni jezik."
         }
       ]
     }

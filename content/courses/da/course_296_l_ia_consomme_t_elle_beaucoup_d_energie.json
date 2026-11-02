@@ -9,7 +9,7 @@
   "hero": {
     "image": "data_center_server_racks_aisle_blue_lights",
     "ratio": "4:3",
-    "hook": "AI ligner software, men hvert svar bliver lavet i en helt virkelig bygning, koblet til det samme elnet som dit hjem."
+    "hook": "AI ligner software, men hvert svar bliver lavet i en helt konkret bygning, koblet til det samme elnet som dit hjem."
   },
   "sections": [
     {
@@ -23,7 +23,7 @@
         },
         {
           "type": "paragraph",
-          "text": "I 2025 brugte verdens datacentre tilsammen omkring **1,5 %** af den globale elektricitet ifølge [[Det Internationale Energiagentur]]. Tallet dækker alle slags onlinetjenester, ikke kun AI. Men anlæg bygget til AI skyder hurtigt op. Et kort svar koster ikke meget i sig selv. Alligevel kører der maskiner for hvert eneste, og flere systemer trækker strøm på samme tid for at levere det."
+          "text": "I 2025 brugte alle verdens datacentre tilsammen omkring **1,5 %** af verdens strøm ifølge [[Det Internationale Energiagentur]] (IEA). Tallet dækker alle slags onlinetjenester, ikke kun AI. Men anlæg bygget til AI skyder hurtigt op. Et kort svar koster ikke meget i sig selv. Alligevel kører der maskiner for hvert eneste svar, og flere systemer trækker strøm på samme tid for at levere det."
         }
       ]
     },
@@ -48,7 +48,7 @@
         },
         {
           "type": "funFact",
-          "text": "Ifølge IEA steg strømforbruget i datacentre dedikeret til AI med 50 % alene i 2025."
+          "text": "Ifølge IEA steg strømforbruget i datacentre bygget til AI med 50 % alene i 2025."
         }
       ]
     },
@@ -59,7 +59,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Før en AI-tjeneste kan svare, skal den have en model: et system, der har lært mønstre ud fra eksempler. Den skabes gennem [[træning]], en fase hvor computere gennemtygger enorme mængder data. Arbejdet kan lægge beslag på meget kraftige maskiner i lange perioder."
+          "text": "Før en AI-tjeneste kan svare, skal den have en model: et system, der har lært mønstre ud fra eksempler. Den skabes gennem [[træning]], en fase, hvor computere gennemtygger enorme mængder data. Arbejdet kan lægge beslag på meget kraftige maskiner i lange perioder."
         },
         {
           "type": "image",
@@ -80,7 +80,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Hvor meget strøm bruger en enkelt tekstforespørgsel? De offentliggjorte skøn giver ikke det samme svar. Google, der har målt på sin tjeneste i drift, anslår sin mediane tekstforespørgsel til **0,24 Wh**. En [[watttime]] (Wh) er den enhed, der måler en mængde energi. En anden undersøgelse når frem til en median på **0,31 Wh**, hvor den midterste halvdel af dens standardforespørgsler ligger mellem **0,16 og 0,60 Wh**."
+          "text": "Hvor meget strøm bruger en enkelt tekstforespørgsel? De offentliggjorte skøn giver ikke det samme svar. Google har målt på sin tjeneste i drift og sætter medianen for en tekstforespørgsel til **0,24 Wh**. En [[watttime]] (Wh) er den enhed, der måler en mængde energi. En anden undersøgelse når frem til en median på **0,31 Wh**, hvor den midterste halvdel af dens standardforespørgsler ligger mellem **0,16 og 0,60 Wh**."
         },
         {
           "type": "paragraph",
@@ -99,13 +99,13 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "[[Elnettet]] er det net af ledninger, der fører strømmen fra kraftværkerne ud til hjem og virksomheder. De store AI-anlæg kobler sig på det samme net. For at give en idé om størrelsesordenen sammenligner IEA det årlige strømforbrug i et datacenter dedikeret til AI, en bygning opført primært til at køre disse tjenester, med forbruget i omkring **100.000 husstande**."
+          "text": "[[Elnettet]] er det net af ledninger, der fører strømmen fra kraftværkerne ud til hjem og virksomheder. De store AI-anlæg kobler sig på det samme net. For at give en idé om størrelsesordenen sammenligner IEA det årlige strømforbrug i et datacenter bygget til AI, altså en bygning opført primært til at køre disse tjenester, med forbruget i omkring **100.000 husstande**."
         },
         {
           "type": "image",
           "asset": "high_voltage_power_lines_data_center_virginia",
           "ratio": "4:3",
-          "caption": "Master på en ekstra højspændingsledning (750 kV): datacentrene kobler sig på det samme net."
+          "caption": "Master på en højspændingsledning på 750 kV: datacentrene kobler sig på det samme net."
         },
         {
           "type": "paragraph",

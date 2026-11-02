@@ -4,11 +4,11 @@
   "subtitle": "Spomin in nevroni",
   "subject": "sciences",
   "subcategory": "Zemlja in vesolje",
-  "description": "Pomnilnik ni knjižnica predalov. Je živa mreža nevronov, ki se medsebojno krepijo, obnavljajo in včasih delajo napake.",
+  "description": "Spomin ni knjižnica s predali. Je živa mreža nevronov, ki se krepijo, preoblikujejo in se včasih motijo.",
   "hero": {
     "image": "comment_le_cerveau_stocke_les_souvenirs",
     "ratio": "16:9",
-    "hook": "Spomin ni datoteka: je pot, ki so se jo možgani naučili ponavljati."
+    "hook": "Spomin ni datoteka: je pot, ki so se jo možgani naučili prehoditi znova."
   },
   "sections": [
     {
@@ -18,17 +18,17 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Pomnilnik si pogosto predstavljamo kot trdi disk. V resnici je to živo omrežje. Milijarde **nevronov**, živčnih celic, se ponovno povežejo, okrepijo ali oslabijo, odvisno od tega, kaj doživljamo."
+          "text": "Spomin si ljudje pogosto predstavljajo kot trdi disk. V resnici je živa mreža. Milijarde **nevronov**, živčnih celic, se na novo povezujejo, krepijo ali slabijo, odvisno od tega, kar človek doživlja."
         },
         {
           "type": "paragraph",
-          "text": "Nič ni shranjeno na enem mestu. Spomin je porazdeljena sled, na začetku krhka, po spanju trdnejša in vedno nekoliko rekonstruirana, ko se je spomnimo."
+          "text": "Nič ni shranjeno na enem samem mestu. Spomin je razpršena sled, na začetku krhka, po spanju trdnejša in ob vsakem priklicu vedno malo sestavljena na novo."
         }
       ]
     },
     {
       "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve_p1",
-      "title": "Povezave, ki krepijo",
+      "title": "Povezave, ki se krepijo",
       "free": false,
       "blocks": [
         {
@@ -39,68 +39,68 @@
           "type": "image",
           "asset": "hippocampus_memory_brain",
           "ratio": "auto",
-          "caption": "Hipokampus igra osrednjo vlogo pri oblikovanju spominov."
+          "caption": "Hipokampus ima osrednjo vlogo pri nastajanju spominov."
         },
         {
           "type": "paragraph",
-          "text": "Ko se informacija ponavlja ali je povezana z močnim čustvom, se isti nevroni aktivirajo skupaj. Njihova povezava postane lažje sprožilna: to je [[Dolgoročno potenciranje]], trajno krepitev sinaps. Bolj kot je vezje uporabljeno, »širša« postane pot. Pomnilnik torej ni shranjen predmet, ampak **sani** v omrežju."
+          "text": "Ko se informacija ponavlja ali je povezana z močnim čustvom, se isti nevroni aktivirajo skupaj. Njihovo povezavo je vse lažje sprožiti: to je [[dolgoročno potenciranje]], trajna krepitev sinaps. Čim pogosteje se vezje uporablja, tem »širša« postane pot. Spomin torej ni pospravljen predmet, temveč **sled** v omrežju."
         },
         {
           "type": "funFact",
-          "text": "Zmogljivost shranjevanja možganov je ocenjena na približno **2,5 petabajta**, kar je enako milijonom ur videa. Vendar to ni disk: je živo tkivo, ki se reorganizira."
+          "text": "Zmogljivost možganov za shranjevanje ocenjujejo na približno **2,5 petabajta**, kar ustreza milijonom ur videa. Vendar možgani niso disk: so živo tkivo, ki se preureja."
         }
       ]
     },
     {
       "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve_p2",
-      "title": "Morski konjiček, vodja postaje spominov",
+      "title": "Hipokampus, postajenačelnik spominov",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**morski konjiček**, majhna struktura v [[temporalni reženj]], regiji za templji, ne hrani večnih spominov. Sprejme jih, **kodirati**, jih pretvori v spominske sledi, nato pa jih prerazporedi v **korteks**, zunanjo plast možganov. Ta prenos se imenuje **konsolidacija**."
+          "text": "**Hipokampus**, majhna struktura v predelu za senci, ki se imenuje [[temporalni reženj]], spominov ne hrani za vedno. Sprejme jih, jih **zakodira** v spominsko sled, nato pa jih prenese v **korteks**, zunanjo plast možganov. Ta prenos se imenuje **konsolidacija**."
         },
         {
           "type": "paragraph",
-          "text": "Večinoma se izvaja med **spanjem**. Brez delujočega hipokampusa lahko živimo v sedanjem trenutku, vendar nimamo več novih zavestnih spominov. Ostajamo obtičali v sedanjosti brez bližnje preteklosti."
+          "text": "Poteka predvsem med **spanjem**. Brez delujočega hipokampusa lahko človek živi v sedanjem trenutku, ne more pa si več vtisniti novih zavestnih spominov. Obtiči v sedanjosti brez bližnje preteklosti."
         },
         {
           "type": "funFact",
-          "text": "Bolnik **H.M.**, operiran leta 1953, ni več ustvarjal novih spominov. Vendar pa je vsak dan napredoval pri risanju v ogledalu, ne da bi se spomnil, da je že poskusil: njegov spomin na kretnje je bil nedotaknjen."
+          "text": "Bolnik **H.M.**, operiran leta 1953, si ni več ustvarjal novih spominov. Kljub temu je bil vsak dan boljši pri risanju v ogledalu, čeprav se ni spomnil, da je to že poskusil: spomin za gibe mu je ostal nedotaknjen."
         }
       ]
     },
     {
       "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve_p3",
-      "title": "Zapomniti si pomeni obnoviti",
+      "title": "Spominjati se pomeni sestavljati na novo",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Priklic spomina ni ponovno predvajanje videa. Vsakič, ko ga vzamete ven, postane **kohljiv**, spremenljiv. Naša trenutna čustva, naše novo znanje ali predlog ga lahko spremenijo, preden se »ponovno posname«."
+          "text": "Priklic spomina ni ponovno predvajanje videa. Ob vsakem priklicu spomin spet postane **gnetljiv**, torej spremenljiv. Naša trenutna čustva, novo znanje ali namig ga lahko spremenijo, preden se »ponovno shrani«."
         },
         {
           "type": "paragraph",
-          "text": "Psihologinja **Elizabeth Loftus** je pokazala, da lahko s preprostimi vprašanji vsadiš **lažne spamine**. Od tod današnja previdnost glede na pričevanja očividcev: v dobri veri možgani zapolnijo vrzeli."
+          "text": "Psihologinja **Elizabeth Loftus** je pokazala, da je s preprostimi vprašanji mogoče vsaditi **lažne spomine**. Zato so danes do pričevanj očividcev previdni: možgani v dobri veri zapolnijo vrzeli."
         }
       ]
     },
     {
       "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve_p4",
-      "title": "Več spominov v enih možganih",
+      "title": "Več vrst spomina v enih možganih",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Spomin na dejstva in življenjske epizode, kar lahko povemo, poteka predvsem skozi hipokampus. [[proceduralni spomin]], tisti pri kolesarjenju ali plavanju, je namesto tega odvisen od **mali možgani**, strukture v zadnjem delu možganov, in drugih starejših struktur."
+          "text": "Spomin na dejstva in doživetja, torej tisto, kar je mogoče pripovedovati, je odvisen predvsem od hipokampusa. Drugače je [[proceduralni spomin]], tisti za kolo ali plavanje: ta je bolj odvisen od **malih možganov**, strukture v zadnjem delu možganov, in drugih, starejših struktur."
         },
         {
           "type": "paragraph",
-          "text": "Zato nekateri bolniki z amnezijo pozabijo svoje ime, a vseeno igrajo klavir. Pomnilnik ni en sam predal: je mozaik sistemov."
+          "text": "Zato nekateri bolniki z amnezijo pozabijo svoje ime, a še vedno igrajo klavir. Spomin ni en sam predal: je mozaik sistemov."
         },
         {
           "type": "takeaway",
-          "text": "Spomin je dinamična sled: sinapse se okrepijo, utrdijo zlasti ponoči in znova zgradijo z vsakim opominom. Nikoli ni fiksna datoteka."
+          "text": "Spomin je dinamična sled: okrepljene sinapse, ki se utrdijo predvsem ponoči in se ob vsakem priklicu znova sestavijo. Nikoli ni negibna datoteka."
         }
       ]
     }

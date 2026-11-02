@@ -4,7 +4,7 @@
   "subtitle": "Meretase tõuseb",
   "subject": "comprendreLeMonde",
   "subcategory": "Keskkond ja tulevik",
-  "description": "Aastaks 2100 võib ookeanide tase tõusta **Tsooni** meetri võrra. Tervete riikide ja rannikumegalinnade jaoks pole see enam kauge hüpotees, vaid planeerimise küsimus.",
+  "description": "Aastaks 2100 võib ookeanide tase tõusta **ühe meetri** võrra. Tervete riikide ja rannikuäärsete megalinnade jaoks pole see enam kauge oletus, vaid planeerimise küsimus.",
   "hero": {
     "image": "la_montee_des_eaux",
     "ratio": "16:9",
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Tuhandeid aastaid on ookeanide tase püsinud ligikaudu stabiilsena. Alates tööstusajast on see tõusnud ja selle tõusu kiirus kiireneb aasta-aastalt."
+          "text": "Tuhandeid aastaid püsis ookeanide tase enam-vähem samal kõrgusel. Tööstusajastust alates on see tõusnud ja tõus kiireneb aasta-aastalt."
         },
         {
           "type": "paragraph",
-          "text": "Aastaks 2100 võivad ookeanid tõusta 30 sentimeetrit ühe meetri võrra olenevalt meie heitkoguste valikutest. Paljude rannajoonte jaoks pole see enam kauge oht, vaid väga konkreetne planeerimisprobleem."
+          "text": "Aastaks 2100 võivad ookeanid tõusta 30 sentimeetrist ühe meetrini, olenevalt sellest, milliseid heitkoguste valikuid me teeme. Paljude rannikute jaoks pole see enam kauge oht, vaid väga konkreetne planeerimisprobleem."
         }
       ]
     },
@@ -33,17 +33,17 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Mere tase tõuseb kahel erineval füüsilisel põhjusel. Esimene on [[Soojuspaisumine]]: kui vesi soojeneb, liiguvad selle molekulid rohkem ja selle maht suureneb veidi nagu iga vedeliku puhul. Ookeanid on alates 1970. aastast neelanud üle 90% inimtegevusest tekkinud liigsest soojusest ja see soojus suurendab nende mahtu."
+          "text": "Meretase tõuseb kahel eri füüsikalisel põhjusel. [[Soojuspaisumine]] on neist esimene: kui vesi soojeneb, liiguvad selle molekulid kiiremini ja ruumala suureneb veidi, nagu igal vedelikul. Ookeanid on alates 1970. aastast neelanud üle 90% inimtegevuse tekitatud liigsest soojusest ja see soojus paisutab nende ruumala."
         },
         {
           "type": "paragraph",
-          "text": "Teine põhjus on kuivale maale paigutatud jää sulamine. Olge ettevaatlik, et mitte segi ajada arktilise jäätükiga, mis juba ujub veepinnal ja mille sulamine ei põhjusta merepinna tõusu. Need on [[Jääleht]], need tohutud Gröönimaa ja Antarktika maapinnale asetatud jäämütsid, mis panevad magedat vett lisades ookeanid üle ajama."
+          "text": "Teine põhjus on maismaal lasuva jää sulamine. Ära aja seda segamini Arktika merejääga, mis ujub juba vee peal ja mille sulamine meretaset ei tõsta. [[Mandrijää]], tohutu jääkilp, mis katab Gröönimaad ja Antarktikat, on see, mis ookeane tõesti üle kallaste ajab, sest lisab neisse magevett."
         },
         {
           "type": "image",
           "asset": "greenland_ice_sheet_melting_glacier",
           "ratio": "16:9",
-          "caption": "Gröönimaa sulamine, kui see oleks täielik, tõstaks ookeane 7 meetri võrra."
+          "caption": "Kui Gröönimaa jää sulaks täielikult, tõuseks ookeanide tase 7 meetrit."
         },
         {
           "type": "funFact",
@@ -58,21 +58,21 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Alates 1880. aastast on maailmamere tase tõusnud umbes 20 sentimeetrit. Eelkõige tekitab teadlasi ärevust praegune kiirus: 20. sajandil oli see umbes 1,4 mm aastas, võrreldes **3,6 mm aastat** tänapäeval, mis on üle 150% kiirenduse."
+          "text": "Alates 1880. aastast on maailmamere tase tõusnud umbes 20 sentimeetrit. Teadlasi teeb ärevaks eelkõige praegune kiirus: 20. sajandil oli see umbes 1,4 mm aastas, tänapäeval aga **3,6 mm aastas**, seega on tõus kiirenenud üle 150%."
         },
         {
           "type": "paragraph",
-          "text": "[[IPCC]] ekspertide hinnangul jätkub see suundumus aastakümneid, isegi kui vähendame heitkoguseid praegu drastiliselt, sest ookeanidel kulub temperatuurimuutustele reageerimiseks aega."
+          "text": "[[IPCC]] eksperdid hindavad, et see suundumus jätkub aastakümneid, isegi kui heitkoguseid kohe järsult vähendataks, sest ookeanid reageerivad temperatuurimuutustele aeglaselt."
         },
         {
           "type": "image",
           "asset": "coastal_flooding_sea_level_rise_city",
           "ratio": "4:3",
-          "caption": "50 cm tõus võib muuta 100-aastase üleujutuse iga-aastaseks sündmuseks."
+          "caption": "50 cm tõus võib muuta kord sajandis juhtuva üleujutuse iga-aastaseks."
         },
         {
           "type": "paragraph",
-          "text": "Tõeline oht pole mitte ainult keskmiselt veidi kõrgem meri, vaid [[Tormid ja saja-aastased üleujutused]] paljunemine: 50 sentimeetrist tõusust võib piisata, et muuta oodatav kord sajandis katastroof peaaegu iga-aastaseks sündmuseks."
+          "text": "Tõeline oht pole ainult keskmiselt veidi kõrgem meri. [[Tormiajud ja saja-aastased üleujutused]] muutuvad üha sagedasemaks: 50 sentimeetrist tõusust võib piisata, et kord sajandis oodatav katastroof muutuks peaaegu iga-aastaseks."
         }
       ]
     },
@@ -83,40 +83,40 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Veetaseme tõus mõjutab peamiselt piirkondi, mis on globaalsele soojenemisele kõige vähem kaasa aidanud. Suured jõedeltad, nagu Niiluse, Mekongi või Gangese jõe deltad, on eesliinil. Bangladeshis, kus elab 170 miljonit elanikku, võib ühe meetri võrra suurenemine põhjustada 17% territooriumi kaotuse."
+          "text": "Veetõus tabab eelkõige piirkondi, mis on kliima soojenemisele kõige vähem kaasa aidanud. Eesliinil on suured jõgede deltad, näiteks Niiluse, Mekongi ja Gangese delta. Bangladesh, kus elab 170 miljonit inimest, võib ühe meetri suuruse tõusu korral kaotada 17% oma territooriumist."
         },
         {
           "type": "paragraph",
-          "text": "Väikeste saareriikide jaoks, nagu Maldiivid või Kiribati, ei ole täielikult vee alla kadumine enam ulme hüpotees, vaid tõeline poliitilise planeerimise teema. Seevastu rikkad megalinnad nagu Miami või New York investeerivad miljardeid tammidele ja pumpadesse."
+          "text": "Väikeste saareriikide, näiteks Maldiivide või Kiribati jaoks pole täielikult vee alla kadumine enam ulmekirjanduse oletus, vaid tõsine poliitilise planeerimise teema. Seevastu rikkad megalinnad, nagu Miami või New York, investeerivad miljardeid tammidesse ja pumpadesse."
         },
         {
           "type": "image",
           "asset": "jakarta_indonesia_sinking_flooding_maldives",
           "ratio": "16:9",
-          "caption": "Jakarta ühendab endas veetõusu ja maapinna vajumise, mis on kahekordne oht."
+          "caption": "Jakartas liituvad veetõus ja maapinna vajumine kahekordseks ohuks."
         },
         {
           "type": "funFact",
-          "text": "2009. aastal pidas Maldiivide valitsus veealuse kabinetinõupidamise märgülikondades, et hoiatada maailma enne suurt kliimakonverentsi."
+          "text": "2009. aastal pidas Maldiivide valitsus sukeldumisülikondades veealuse ministrite istungi, et enne suurt kliimakonverentsi maailma hoiatada."
         },
         {
           "type": "paragraph",
-          "text": "Indoneesias **Jakarta** linn vajub põhjavee liigse pumpamise tõttu sügavamale maasse. Selle kahekordse ohuga silmitsi seistes võttis riik vastu radikaalse otsuse rajada Borneo saarele uhiuus pealinn Nusantara."
+          "text": "Indoneesias asuv **Jakarta** vajub lisaks veel maasse, sest põhjavett pumbatakse liiga palju. Selle kahekordse ohu tõttu tegi riik radikaalse otsuse: rajada Borneo saarele täiesti uus pealinn Nusantara."
         }
       ]
     },
     {
       "id": "course_225_la_montee_des_eaux_p4",
-      "title": "Kohane või astu tagasi",
+      "title": "Kohaneda või taanduda",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kaks strateegiat täiendavad üksteist selle väljakutsega silmitsi seistes. Esimene on soojenemise piiramine, et aeglustada kasvu pärast 2100. aastat. Teine on kohanemine sellega, mis on juba vältimatu, tugevdades looduslikke kaitsemehhanisme, nagu [[Mangroovid]] või luited, või raskemate lahendustega, nagu Hollandi peamised tööd."
+          "text": "Selle väljakutse puhul täiendavad teineteist kaks strateegiat. Esimene on piirata soojenemist, et pidurdada tõusu pärast 2100. aastat. Teine on kohaneda sellega, mis on juba vältimatu: tugevdada looduslikku kaitset, mida pakuvad [[Mangroovid]] või luited, või kasutada raskemaid lahendusi, nagu Hollandi suured ehitustööd."
         },
         {
           "type": "paragraph",
-          "text": "Mõnel juhul on ainus lahendus liikuda tagasi: inimeste ja tegevuste viimine sisemaale, enne kui katastroofid liiga sageli korduvad. See on tõeline harjumuste muutus ühiskondadele, mis on sajandeid rannikuga seotud."
+          "text": "Mõnel juhul jääb ainsaks lahenduseks taandumine: elanikud ja majandustegevus tuleb viia sisemaale, enne kui katastroofid liiga sageli korduma hakkavad. See on tõsine harjumuste muutus ühiskondadele, mis on sajandeid rannikuga seotud olnud."
         },
         {
           "type": "takeaway",

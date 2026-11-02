@@ -1,14 +1,14 @@
 {
   "id": "course_45_pourquoi_y_a_t_il_des_saisons",
-  "title": "Miks on aastaajad?",
+  "title": "Miks on aastaajad olemas?",
   "subtitle": "Maa & Päike",
   "subject": "sciences",
   "subcategory": "Meie igapäevaelu lahti seletatud",
-  "description": "Aastaajad ei tule sellest, et Maa on Päikesele lähemal või kaugemal. Tegelik põhjus on Maa telje kaldenurk.",
+  "description": "Aastaajad ei teki sellest, et Maa on Päikesele vahel lähemal ja vahel kaugemal. Tegelik põhjus on Maa telje kalle.",
   "hero": {
     "image": "pourquoi_y_a_t_il_des_saisons",
     "ratio": "16:9",
-    "hook": "Ei, suvi ei tule, sest Maa läheneb Päikesele."
+    "hook": "Ei, suvi ei tule sellepärast, et Maa jõuab Päikesele lähemale."
   },
   "sections": [
     {
@@ -18,22 +18,22 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Paljud inimesed arvavad, et suvi tuleb siis, kui Maa on Päikese suhtes **lähedal**, ja talv tuleb siis, kui see on **kaugele**. See on vale. Ja me näeme seda kohe: kui Prantsusmaal on suvi, siis Austraalias on talv."
+          "text": "Paljud arvavad, et suvi tuleb siis, kui Maa on Päikesele **lähemal**, ja talv siis, kui see on **kaugemal**. See on vale. Ja seda on kohe näha: kui Prantsusmaal on suvi, on Austraalias talv."
         },
         {
           "type": "paragraph",
-          "text": "Tõeline seletus peitub ühes: Maa pöörlemistelg on **kallutatud**, kallutatud Päikese orbiidi tasandi suhtes."
+          "text": "Tegelik seletus peitub ühes asjas: Maa pöörlemistelg on **kaldu**, see on viltu tasandi suhtes, millel Maa ümber Päikese tiirleb."
         }
       ]
     },
     {
       "id": "course_45_pourquoi_y_a_t_il_des_saisons_p1",
-      "title": "Maa kaldub",
+      "title": "Maa on kaldu",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Maa pöörleb ümber oma telje **24 tunniga**: see on päev ja öö. Samuti tiirleb see ümber Päikese **aniis ja**-s **ellips**-kujulise orbiidiga, mis on veidi lapik ring. Kuid selle telg, mõtteline joon põhjapoolusest lõunapoolusele, ei ole selle orbiidi suhtes sirge. See kaldub umbes **23,5 kraadi**: see on [[Maa aksiaalne kalle (23,5°)]]."
+          "text": "Maa pöörleb ümber oma telje **24 tunniga**: nii tekivad päev ja öö. Samuti tiirleb see **aastaga** ümber Päikese. Orbiit on **ellipsi** kujuline, see on veidi lapik ring. Kuid Maa telg, mõtteline joon põhjapoolusest lõunapooluseni, ei ole orbiidi suhtes püsti. See on kaldu umbes **23,5 kraadi**: see on [[Maa telje kalle (23,5°)]]."
         },
         {
           "type": "image",
@@ -43,7 +43,7 @@
         },
         {
           "type": "paragraph",
-          "text": "See kalle püsib aastaringselt ligikaudu samas suunas. See osutab alati samale taevapiirkonnale, Põhjatähe lähedale. Tulemus: olenevalt sellest, kus Maa orbiidil asub, “vaatab” üks poolkera rohkem Päikese poole, teine vähem."
+          "text": "See kalle püsib terve aasta peaaegu samas suunas. Telg osutab alati samale taevapiirkonnale, Põhjanaela lähedale. Tulemus: olenevalt sellest, kus Maa orbiidil parajasti asub, „vaatab“ üks poolkera rohkem Päikese poole ja teine vähem."
         }
       ]
     },
@@ -54,15 +54,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Suvel põhjapoolkeral kaldub põhjapoolus Päikese poole. Päevad on pikemad: **fotoperiood**, päeva ja öö pikkuse suhe, suureneb. Kiired jõuavad ka maapinnale “sirgemalt”: energia koondub väiksemale pinnale. Seega on soojem."
+          "text": "Kui põhjapoolkeral on suvi, on põhjapoolus kaldu Päikese poole. Päevad on pikemad: **fotoperiood**, päeva ja öö pikkuse suhe, kasvab. Kiired langevad maapinnale ka „otsemalt“: energia koondub väiksemale pinnale. Seepärast on soojem."
         },
         {
           "type": "funFact",
-          "text": "Jaanuaris on Maa Päikesest isegi veidi **lähedal** kui juulis: see on **periheel**, orbiidi lähim punkt. Ja ometi on siin talv. Tõestus, et vahemaa ei selgita aastaaegu."
+          "text": "Jaanuaris on Maa Päikesele isegi veidi **lähemal** kui juulis: see on **periheel**, orbiidi lähim punkt. Ja ometi on meil siis talv. See tõestab, et kaugus aastaaegu ei seleta."
         },
         {
           "type": "paragraph",
-          "text": "Talvel on vastupidi: lühikesed päevad, viltusemad kiired, energia levib suuremale pinnale. Vähem soojust vastu võetud. **pööripäevad**, ajad, mil Päike jõuab kõige põhja- või lõunapoolsemasse asendisse, tähistavad suve või talve algust."
+          "text": "Talvel on vastupidi: päevad on lühikesed, kiired langevad viltusemalt ja energia jaotub suuremale pinnale. Soojust jõuab kohale vähem. Suve või talve algust tähistavad **pööripäevad**: hetked, mil Päike jõuab oma kõige põhjapoolsemasse või lõunapoolsemasse asendisse."
         }
       ]
     },
@@ -73,11 +73,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**ekvaatori**, kujuteldava joone, mis jagab Maa kaheks poolkeraks, lähedal muudab kalle päeva pikkust vähe. Tegelikult ei ole neli aastaaega nagu Euroopas, vaid pigem kuivemad ja niiskemad perioodid."
+          "text": "**Ekvaator** on mõtteline joon, mis jagab Maa kaheks poolkeraks. Selle lähedal muudab telje kalle päeva pikkust vähe. Seal pole päriselt nelja aastaaega nagu Euroopas, vaid pigem kuivemad ja niiskemad perioodid."
         },
         {
           "type": "paragraph",
-          "text": "Ettevõttes **poolused** on efekt äärmuslik: mitu kuud pidevat päeva suvel, mitu kuud ööd talvel. Kontrast on seal palju tugevam kui Prantsusmaal."
+          "text": "**Poolustel** on mõju äärmuslik: suvel kestab päev järjest mitu kuud, talvel kestab mitu kuud öö. Vahe on seal palju suurem kui Prantsusmaal."
         }
       ]
     },
@@ -88,11 +88,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kui Maa telg oleks täiesti sirge, saaks iga koht aastaringselt ligikaudu sama palju päikesevalgust. Pole enam päris suve, pole enam päris talve. Kliima, kultuurid, loomade ränne: kõik oleks teisiti."
+          "text": "Kui Maa telg oleks täiesti püsti, saaks iga paik aasta läbi umbes sama palju päikest. Poleks enam päris suve ega päris talve. Kliima, põllukultuurid, loomade ränne: kõik oleks teistsugune."
         },
         {
           "type": "takeaway",
-          "text": "Aastaajad pärinevad Maa telje kaldest, ligikaudu **23,5°**, mitte kaugusest Päikesest. Üks poolkera kaldub Päikese poole: käes on suvi. Teine kaldub vastupidise poole: käes on talv."
+          "text": "Aastaajad tulenevad Maa telje **kaldest**, mis on umbes **23,5°**, mitte kaugusest Päikesest. Üks poolkera on kaldu Päikese poole: seal on suvi. Teine on Päikesest eemale kaldu: seal on talv."
         }
       ]
     }

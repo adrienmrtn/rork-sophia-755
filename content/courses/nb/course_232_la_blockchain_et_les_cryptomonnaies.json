@@ -1,14 +1,14 @@
 {
   "id": "course_232_la_blockchain_et_les_cryptomonnaies",
-  "title": "Hvordan fungerer blokkjede og kryptovalutaer?",
+  "title": "Hvordan fungerer blokkjeder og kryptovalutaer?",
   "subtitle": "Siden 2009",
   "subject": "comprendreLeMonde",
   "subcategory": "Miljø og fremtid",
-  "description": "**blokkjede** oppfant en hovedbok som ingen kan tukle med alene, og banet vei for en ny digital økonomi.",
+  "description": "**Blokkjeden** har skapt et register som ingen kan forfalske på egen hånd, og åpnet veien for en ny digital økonomi.",
   "hero": {
     "image": "la_blockchain_et_les_cryptomonnaies",
     "ratio": "16:9",
-    "hook": "En bok med kontoer som ingen eier, men som tusenvis av datamaskiner overvåker sammen."
+    "hook": "En regnskapsbok som ingen eier, men som tusenvis av datamaskiner holder øye med sammen."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Se for deg en bok med kontoer som ingen eier, men som tusenvis av datamaskiner oppdateres samtidig, over hele verden, og som det er nesten umulig å forfalske. Dette er den første ideen til **blokkjede**, en teknologi som ofte er redusert til sin første applikasjon, **Bitcoin**."
+          "text": "Se for deg en regnskapsbok som ingen eier alene, men som tusenvis av datamaskiner over hele verden oppdaterer samtidig, og som er nesten umulig å forfalske. Det er grunnideen bak **blokkjeden**, en teknologi som ofte blir redusert til sin første anvendelse, **Bitcoin**."
         },
         {
           "type": "paragraph",
-          "text": "Ved å gjøre det mulig å bytte verdi uten å gå gjennom en bank, ga denne oppfinnelsen opphav til en hel parallell økonomi, mellom løfter om økonomisk frihet og alvorlig kritikk av energikostnadene."
+          "text": "Fordi den gjør det mulig å overføre verdier uten å gå via en bank, har denne oppfinnelsen skapt en hel parallell økonomi, med løfter om økonomisk frihet på den ene siden og skarp kritikk av energiforbruket på den andre."
         }
       ]
     },
@@ -33,15 +33,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "I hjertet av blockchain er en enkel idé: **distribuert hovedbok**. I motsetning til en bank, som holder sine kontoer på sine egne servere, er blokkjeden avhengig av et nettverk av [[jevnaldrende]], det vil si tusenvis av datamaskiner som hver holder en identisk kopi av alle transaksjoner."
+          "text": "Kjernen i blokkjeden er en enkel idé: **det distribuerte registeret**. I motsetning til en bank, som har kontoene sine på egne servere, bygger blokkjeden på et nettverk av [[likeverdige noder]], altså tusenvis av datamaskiner som hver lagrer en identisk kopi av alle transaksjonene."
         },
         {
           "type": "funFact",
-          "text": "Den aller første blokken av Bitcoin-blokkjeden, kalt \"genesis-blokken\", inneholdt en skjult melding: forsiden til en britisk avis 3. januar 2009, som snakket om statens redningsaksjon for bankene. Et politisk nikk fra skaperen."
+          "text": "Den aller første blokken i Bitcoin-blokkjeden, kalt «genesisblokken», inneholdt en skjult melding: forsiden av en britisk avis fra 3. januar 2009, som handlet om at staten reddet bankene. Et lite politisk stikk fra skaperen."
         },
         {
           "type": "paragraph",
-          "text": "Hver transaksjon blir først verifisert av nettverket og deretter gruppert med andre i en **blokkere**. Denne blokken blir så knyttet til den forrige takket være en matematisk beregning kalt [[hashing]]: et slags unikt digitalt fingeravtrykk. Resultatet er en uavbrutt kjede av blokker, derav navnet blokkjede. For å endre en enkelt gammel transaksjon, må du beregne hele kjeden på nytt og overbevise mer enn halvparten av nettverket, noe som er nesten umulig i stor skala."
+          "text": "Hver transaksjon blir først kontrollert av nettverket og deretter samlet med andre i en **blokk**. Blokken blir så koblet til den forrige ved hjelp av en matematisk beregning som kalles [[hashing]]: et slags unikt digitalt fingeravtrykk. Resultatet er en ubrutt kjede av blokker, derav navnet blokkjede. For å endre én eneste gammel transaksjon måtte man ha regnet ut hele kjeden på nytt og overbevist mer enn halve nettverket, noe som er nesten umulig i stor skala."
         }
       ]
     },
@@ -52,7 +52,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Bitcoin**, lansert i **2009** av en anonym person (eller gruppe) under navnet [[Satoshi Nakamoto]], beviste at et pengesystem kunne fungere uten en sentralbank. For å garantere dens knapphet, har skaperen satt et strengt tak: aldri mer enn **21 millioner bitcoins** kan eksistere, litt som gull er begrenset på jorden."
+          "text": "**Bitcoin**, lansert i **2009** av en person (eller en gruppe) som har holdt seg anonym under navnet [[Satoshi Nakamoto]], viste at et pengesystem kan fungere uten en sentralbank. For å sikre at bitcoin forblir knapp, satte skaperen et strengt tak: det vil aldri kunne finnes mer enn **21 millioner bitcoins**, litt som at mengden gull på jorden er begrenset."
         },
         {
           "type": "image",
@@ -62,26 +62,26 @@
         },
         {
           "type": "paragraph",
-          "text": "I 2015 dukket en andre generasjon blokkjede opp med **Ethereum**. Dens store innovasjon: **smart kontakt**. Dette er programmer som kjører automatisk så snart et vilkår er oppfylt, for eksempel automatisk refusjon ved togforsinkelse, uten at man trenger å gå gjennom en mellommann."
+          "text": "I 2015 kom en ny generasjon blokkjeder med **Ethereum**. Den store nyvinningen var **smarte kontrakter**: programmer som kjører automatisk så snart et vilkår er oppfylt, for eksempel automatisk refusjon når toget er forsinket, uten at man trenger å gå via en mellommann."
         }
       ]
     },
     {
       "id": "course_232_la_blockchain_et_les_cryptomonnaies_p3",
-      "title": "Kritikere: energi og ustabilitet",
+      "title": "Kritikken: energi og ustabilitet",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Suksessen til kryptovalutaer er ikke uten problemer. Det mest diskuterte gjelder **energi-forbruket** til Bitcoin-nettverket: dets årlige strømutgifter er i dag sammenlignbare med et helt land som Argentina."
+          "text": "Suksessen til kryptovalutaene har ikke kommet uten problemer. Det mest omdiskuterte er **energiforbruket** til Bitcoin-nettverket: det årlige strømforbruket er i dag på nivå med et helt land som Argentina."
         },
         {
           "type": "paragraph",
-          "text": "Markedet lider også av ekstrem **volatilitet**: prisen på Bitcoin kan variere med 10 eller 20 % på noen få timer. Denne ustabiliteten hindrer den i å bli en ekte hverdagsvaluta."
+          "text": "Markedet preges også av ekstrem **volatilitet**: prisen på Bitcoin kan svinge med 10 eller 20 % på noen få timer. Denne ustabiliteten gjør at den foreløpig ikke kan bli en ekte hverdagsvaluta."
         },
         {
           "type": "paragraph",
-          "text": "Endelig har den relative anonymiteten til transaksjoner noen ganger blitt brukt til ulovlige aktiviteter. Men blokkjeden forblir faktisk helt gjennomsiktig: myndighetene kan følge pengestrømmen, noe som gjør hvitvasking vanskeligere enn i det klassiske kontantsystemet."
+          "text": "Til slutt har den relative anonymiteten i transaksjonene noen ganger blitt brukt til ulovlig virksomhet. Men i virkeligheten er blokkjeden helt gjennomsiktig: myndighetene kan følge pengestrømmene, og det gjør hvitvasking vanskeligere enn i det klassiske systemet med kontanter."
         }
       ]
     },
@@ -92,19 +92,19 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "I dag forlater kryptovaluta marginene for å gå inn i tradisjonell finans. Store banker tilbyr nå å holde digitale eiendeler for kundene sine, og flere stater vurderer å lage sin egen offisielle digitale valuta, en **[[CBDC]]** (digital valuta fra sentralbanken)."
+          "text": "I dag beveger kryptovalutaene seg fra utkanten og inn i den tradisjonelle finansverdenen. Store banker tilbyr nå å oppbevare digitale eiendeler for kundene sine, og flere stater vurderer å lage sin egen offisielle digitale valuta, en **[[CBDC]]** (digitale sentralbankpenger)."
         },
         {
           "type": "paragraph",
-          "text": "**stabile mynter**, kryptovalutaer hvis pris er stabilisert takket være en reserve på dollar eller euro, fungerer som en bro mellom de to verdenene. Utover finans, tar sektorer som luksus (for å bekjempe forfalskning), logistikk (for å spore containere) eller helse (for å sikre medisinske journaler) også blokkjede for sin pålitelighet."
+          "text": "**Stablecoins**, kryptovalutaer der prisen holdes stabil ved hjelp av en reserve i dollar eller euro, fungerer som en bro mellom de to verdenene. Også utenfor finans tar bransjer som luksusvarer (mot forfalskninger), logistikk (for å spore containere) og helse (for å sikre pasientjournaler) i bruk blokkjeden fordi den er pålitelig."
         },
         {
           "type": "funFact",
-          "text": "I 2021 ble El Salvador det første landet i verden som tok i bruk Bitcoin som lovlig betalingsmiddel, sammen med amerikanske dollar, og krever at alle selgere godtar det hvis de har de tekniske midlene."
+          "text": "I 2021 ble El Salvador det første landet i verden som innførte Bitcoin som lovlig betalingsmiddel, side om side med amerikanske dollar. Alle næringsdrivende måtte godta det, så sant de hadde det tekniske utstyret."
         },
         {
           "type": "takeaway",
-          "text": "Blokkkjeden ble opprettet i 2009, og er en delt og nesten umulig å forfalske hovedbok, den maksimale tilgangen på bitcoins er satt til 21 millioner enheter. Det la grunnlaget for en ny digital økonomi i dag i full institusjonell integrering."
+          "text": "Blokkjeden ble skapt i 2009 og er et delt register som nesten ikke kan forfalskes, der det største mulige antallet bitcoins er satt til 21 millioner enheter. Den la grunnlaget for en ny digital økonomi som nå er i ferd med å bli en del av de etablerte institusjonene."
         }
       ]
     }

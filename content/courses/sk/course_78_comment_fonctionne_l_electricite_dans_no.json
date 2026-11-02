@@ -4,11 +4,11 @@
   "subtitle": "Nervy a ióny",
   "subject": "sciences",
   "subcategory": "Zem a vesmír",
-  "description": "Myslenie, tlkot srdca, zdvihnutie ruky: to všetko najprv cirkuluje ako živá elektrina, ktorá nie je prenášaná elektrónmi, ale iónmi.",
+  "description": "Myslenie, tlkot srdca, zdvihnutie ruky: to všetko najprv prúdi ako živá elektrina, ktorú nenesú elektróny, ale ióny.",
   "hero": {
     "image": "comment_fonctionne_l_electricite_dans_notre_corps",
     "ratio": "16:9",
-    "hook": "Vaše telo je elektrická sieť. Ale tu sú prúd ióny, nie elektróny."
+    "hook": "Tvoje telo je elektrická sieť. Lenže prúd tu tvoria ióny, nie elektróny."
   },
   "sections": [
     {
@@ -18,22 +18,22 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "V zásuvke je prúd **Elektronika**, ktoré cirkulujú. Vo vašom tele je to iné: sú to **ióny**, nabité atómy, ktoré vstupujú do buniek a opúšťajú ich. Tento tok vytvára signály, ktoré nútia srdce premýšľať, biť srdce a sťahovať svaly."
+          "text": "V zásuvke na stene tvoria prúd **elektróny**, ktoré sa pohybujú. V tvojom tele je to inak: sú to **ióny**, nabité atómy, ktoré vstupujú do buniek a vystupujú z nich. Tento tok vytvára signály, vďaka ktorým premýšľaš, bije ti srdce a sťahujú sa svaly."
         },
         {
           "type": "paragraph",
-          "text": "Bez tejto živej elektriny, bez myšlienky, bez gesta, bez pulzu. Pochopenie tela znamená aj pochopenie tohto jazyka poplatkov."
+          "text": "Bez tejto živej elektriny by nebola žiadna myšlienka, žiadny pohyb, žiadny pulz. Pochopiť telo znamená pochopiť aj tento jazyk nábojov."
         }
       ]
     },
     {
       "id": "course_78_comment_fonctionne_l_electricite_dans_no_p1",
-      "title": "Elektrické kliknutie neurónu",
+      "title": "Elektrické cvaknutie neurónu",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**neurón** v pokoji neodošle správu, ale „nabíja“. Jeho membrána oddeľuje vnútro a vonkajšok bunky. Vďaka sodíkovo-[[draselným pumpám]] si zachováva pokojový [[potenciál]] približne **-70 milivoltov**: vnútro je negatívnejšie ako zvonka."
+          "text": "**Neurón** v pokoji nevysiela správy, ale „nabíja sa“. Jeho membrána oddeľuje vnútro bunky od okolia. Vďaka tomu, že pracujú [[sodno-draselné pumpy]], si neurón udržiava pokojový [[potenciál]] približne **-70 milivoltov**: vnútro je zápornejšie ako okolie."
         },
         {
           "type": "image",
@@ -43,11 +43,11 @@
         },
         {
           "type": "paragraph",
-          "text": "Keď príde podnet, kanály sa otvoria. Sodík prichádza naraz. Polarita je obrátená: je to [[akčný potenciál]], signál všetko alebo nič, ktorý prebieha pozdĺž axónu, niekedy aj cez meter. Ako elektrická vlna."
+          "text": "Keď príde podnet, otvoria sa kanály. Sodík naraz vtrhne dnu. Polarita sa obráti: to je [[akčný potenciál]], signál typu všetko alebo nič, ktorý sa šíri pozdĺž axónu, niekedy až na vzdialenosť jedného metra. Ako elektrická vlna."
         },
         {
           "type": "funFact",
-          "text": "Bdelý mozog produkuje približne **20 wattov**, čo je dosť pre malú LED diódu. Spotrebuje však takmer **20%** telesných kalórií."
+          "text": "Bdelý mozog produkuje približne **20 wattov**, čo stačí na malú LED diódu. Spotrebúva však takmer **20 %** kalórií tela."
         }
       ]
     },
@@ -58,53 +58,53 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Neuróny sa v skutočnosti navzájom nedotýkajú. Medzi nimi je malá medzera: **synapsia**. Elektrický signál ho nemôže preskočiť. Potom koniec axónu uvoľní [[Neurotransmitery]], mediátorové molekuly ako acetylcholín alebo [[glutamát]]."
+          "text": "Neuróny sa v skutočnosti navzájom nedotýkajú. Medzi nimi je drobná medzera: **synapsia**. Elektrický signál ju nedokáže preskočiť. Preto koniec axónu uvoľní [[neurotransmitery]], signálne molekuly ako acetylcholín alebo [[glutamát]]."
         },
         {
           "type": "paragraph",
-          "text": "Títo poslovia sa pripájajú k ďalšiemu neurónu ako kľúč v zámku. V závislosti od správy vzrušujú alebo inhibujú. Tisíce týchto súčasných rozhodnutí tvoria myšlienky."
+          "text": "Títo poslovia sa naviažu na ďalší neurón ako kľúč do zámky. Podľa správy ho buď vybudia, alebo utlmia. Tisíce takých súčasných rozhodnutí tvoria myslenie."
         },
         {
           "type": "funFact",
-          "text": "Niektoré nervové signály sa šíria rýchlosťou **120 m/s** (viac ako **430 km/h**). Dosť na to, aby reagoval na popálenie na palci v zlomku sekundy."
+          "text": "Niektoré nervové signály sa šíria rýchlosťou **120 m/s** (viac ako **430 km/h**). To stačí, aby telo zareagovalo na popálený prst na nohe v zlomku sekundy."
         }
       ]
     },
     {
       "id": "course_78_comment_fonctionne_l_electricite_dans_no_p3",
-      "title": "Srdce má svoj vlastný kardiostimulátor",
+      "title": "Srdce má vlastný kardiostimulátor",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Srdce nečaká na príkaz z mozgu pri každom údere. V pravej predsieni generuje **sínusový uzol** svoje vlastné impulzy, približne **60 až 100**-krát za minútu v pokoji. Signál sa šíri, najskôr stiahne predsiene, potom komory."
+          "text": "Srdce nečaká pri každom údere na príkaz mozgu. V pravej predsieni vytvára **sínusový uzol** vlastné impulzy, v pokoji približne **60 až 100** ráz za minútu. Signál sa šíri a najprv stiahne predsiene, potom komory."
         },
         {
           "type": "paragraph",
-          "text": "Táto aktivita je dostatočne silná na to, aby sa dala prečítať na koži: je to **Elektrokardiogram** (EKG). Ak dôjde k narušeniu rytmu, hovoríme o **aarytmii**. Srdce potom bije nepravidelne a zle pumpuje."
+          "text": "Táto aktivita je dosť silná na to, aby sa dala zachytiť na koži: to je **elektrokardiogram (EKG)**. Keď sa rytmus rozladí, hovorí sa o **arytmii**. Srdce potom bije neusporiadane a zle pumpuje."
         },
         {
           "type": "funFact",
-          "text": "Elektrický úhor využíva rovnaký princíp excitovateľných článkov, ale v sérii: až **600 voltov**, čo stačí na paralyzovanie koristi."
+          "text": "Elektrický úhor využíva ten istý princíp dráždivých buniek, ale zapojených za sebou: až **600 voltov**, čo stačí na ochromenie koristi."
         }
       ]
     },
     {
       "id": "course_78_comment_fonctionne_l_electricite_dans_no_p4",
-      "title": "Od dobrovoľného gesta k defibrilátoru",
+      "title": "Od vôľového pohybu k defibrilátoru",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ak chcete zdvihnúť ruku, akčný potenciál putuje dole do svalu. Acetylcholín spúšťa lokálnu elektrickú vlnu a potom uvoľňuje vápnik. Svalové proteíny kĺžu po sebe: kontrakcia."
+          "text": "Keď chceš zdvihnúť ruku, akčný potenciál zbehne až k svalu. Acetylcholín spustí miestnu elektrickú vlnu a potom uvoľnenie vápnika. Bielkoviny svalu sa po sebe posúvajú: sval sa stiahne."
         },
         {
           "type": "paragraph",
-          "text": "**defibrilácia** využíva rovnaký princíp v opačnom poradí: externý výboj vynuluje všetky bunky „na nulu“, takže sínusový uzol obnoví tempo. Bionická protetika tiež zachytáva tieto slabé signály na ovládanie umelej ruky."
+          "text": "**Defibrilácia** využíva ten istý princíp naopak: vonkajší výboj „vynuluje“ všetky bunky, aby sínusový uzol znova udal tempo. Bionické protézy tiež zachytávajú tieto slabé signály a ovládajú nimi umelú ruku."
         },
         {
           "type": "takeaway",
-          "text": "Živé veci hovoria v iónových tokoch a akčných potenciáloch. Myšlienka, srdce a svaly zdieľajú rovnaký elektrický jazyk."
+          "text": "Živé organizmy hovoria jazykom iónových tokov a akčných potenciálov. Myslenie, srdce a svaly majú ten istý elektrický jazyk."
         }
       ]
     }

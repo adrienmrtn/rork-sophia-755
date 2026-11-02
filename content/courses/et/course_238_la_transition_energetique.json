@@ -1,14 +1,14 @@
 {
   "id": "course_238_la_transition_energetique",
   "title": "Energiapööre: mis seda veel takistab?",
-  "subtitle": "Süsinikneutraalsuse poole",
+  "subtitle": "Süsinikuneutraalsuse poole",
   "subject": "comprendreLeMonde",
   "subcategory": "Keskkond ja tulevik",
-  "description": "Maailm püüab asendada fossiilkütuseid puhtamate allikatega. Muutus nii vajalik kui raske.",
+  "description": "Maailm püüab asendada fossiilkütuseid puhtamate allikatega. See muutus on sama vajalik kui raske.",
   "hero": {
     "image": "la_transition_energetique",
     "ratio": "16:9",
-    "hook": "Päikeseenergiast on saanud ajaloo odavaim energia. Jääb üle vaid hoiustada."
+    "hook": "Päikeseenergiast on saanud ajaloo odavaim energia. Jääb üle õppida seda salvestama."
   },
   "sections": [
     {
@@ -18,7 +18,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Inimkond muutis pikka aega energiaallikaid efektiivsuse valikul: puidust kivisöeks, seejärel kivisöest naftale. Praegune **ENergeetika üleminek** on teistsugune: esimest korda kehtestab selle ellujäämispiirang, kliimamuutus."
+          "text": "Pikka aega vahetas inimkond energiaallikaid tõhususe pärast: puidult kivisöele, seejärel kivisöelt naftale. Praegune **energiapööre** on teistsugune: esimest korda sunnib seda peale ellujäämise vajadus, sest kliima on tasakaalust väljas."
         },
         {
           "type": "paragraph",
@@ -33,7 +33,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Raamistik, mis juhib kogu energiapoliitikat tänapäeval, kannab nimetust **[[Pariisi leping (2015)]]**, mis allkirjastati 2015. aastal. See leping kohustab maailma riike piirama globaalset soojenemist konkreetse eesmärgiga: hoida temperatuur võimaluse korral alla 1,5 °C tööstusajastu eelsest tasemest kõrgemal. Iga täiendav kümnendik kraadist muudab äärmuslikud ilmastikunähtused hullemaks."
+          "text": "Raamistik, mis suunab tänapäeval kogu energiapoliitikat, on **[[Pariisi kokkulepe (2015)]]**, mis allkirjastati 2015. aastal. See kokkulepe kohustab maailma riike piirama kliima soojenemist kindla eesmärgiga: jääda võimaluse korral alla 1,5 °C üle tööstusajastu eelse taseme. Iga lisanduv kraadikümnendik muudab äärmuslikud ilmastikunähtused hullemaks."
         },
         {
           "type": "image",
@@ -43,72 +43,72 @@
         },
         {
           "type": "paragraph",
-          "text": "Selle eesmärgi saavutamiseks seavad riigid eesmärgiks **[[süsinikuneutraalsus]]**: tasakaalu inimtegevusest eralduvate kasvuhoonegaaside ja nende neeldumise vahel metsadesse, muldadesse, ookeanidesse või püüdmistehnoloogiate vahel. See eeldab, et globaalsed heitkogused peatuvad enne 2025. aastat ja langevad seejärel järsult järgmistel aastatel."
+          "text": "Selle eesmärgi täitmiseks on riikide siht **[[süsinikuneutraalsus]]**: tasakaal inimtegevusest eralduvate kasvuhoonegaaside ja selle vahel, mida metsad, mullad, ookeanid või süsinikupüüdmise tehnoloogiad neelavad. Selleks peavad ülemaailmsed heitkogused lõpetama kasvu enne 2025. aastat ning järgnevatel aastatel tuntavalt vähenema."
         },
         {
           "type": "funFact",
-          "text": "Päikeseenergia hind langes aastatel 2010-2020 90%, mis on kiirem langus kui peaaegu ükski teine tehnoloogia majandusajaloos. Aastal 2023 saab päikeseenergiast paljudes maailma paikades isegi kõige odavam elektrienergia allikas, mis eales toodetud."
+          "text": "Päikeseenergia hind langes aastatel 2010-2020 90%, kiiremini kui peaaegu ühegi teise tehnoloogia oma majandusajaloos. 2023. aastal sai päikeseenergiast paljudes maailma piirkondades isegi kõigi aegade odavaim elektriallikas."
         }
       ]
     },
     {
       "id": "course_238_la_transition_energetique_p2",
-      "title": "Suurepärane hinnalangus",
+      "title": "Hüppeline hinnalangus",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ülemineku peamine tõukejõud on majanduslik. Varem satelliitidele mõeldud fotogalvaaniline päikesepatarei on tänu tehnika arengule ja mastaabisäästule jaganud selle hind viieteistkümne aastaga kümnega. **Z**, mis on paigaldatud eriti merele, kus tuuled on tugevamad ja korrapärasemad, on samuti saavutanud tõelise tööstusliku küpsuse. Aastal 2023 pärineb juba peaaegu 90% kogu maailmas paigaldatud uutest elektrivõimsustest taastuvenergiast."
+          "text": "Ülemineku peamine tõukejõud on majanduslik. **Fotoelektrilise päikeseenergia** hind, mida kunagi kasutati vaid satelliitidel, on tänu tehnika arengule ja mastaabisäästule viieteistkümne aastaga langenud kümme korda. Ka **tuuleenergia**, eriti merre rajatud tuulepargid, kus tuuled on tugevamad ja ühtlasemad, on jõudnud tõelise tööstusliku küpsuseni. 2023. aastal pärines juba peaaegu 90% kogu maailmas paigaldatud uuest elektritootmisvõimsusest taastuvenergiast."
         },
         {
           "type": "paragraph",
-          "text": "Endiselt on suur väljakutse: päikese- ja tuuleenergia kannatab **catkendlikkuse**, see tähendab, et nad ei tooda pidevalt elektrit. Sellest tuleneb ka suure mahutavusega akude tähtsus, mille hind on järgnenud sama suurejoonelisele langusele kui päikeseenergia oma, muutes elektriautod üha konkurentsivõimelisemaks."
+          "text": "Üks suur väljakutse jääb siiski: päikese- ja tuuleenergia kannatavad **katkendlikkuse** all, see tähendab, et need ei tooda elektrit pidevalt. Sellest ka suure mahutavusega akude tähtsus: nende hind on langenud sama hüppeliselt kui päikeseenergia oma, mis muudab elektriautod üha konkurentsivõimelisemaks."
         },
         {
           "type": "funFact",
-          "text": "Hiina toodab praegu enam kui 80% maailma päikesepaneelidest ja üle 70% elektrisõidukite liitiumioonakudest. Lääne energiaüleminek sõltub seetõttu suuresti Hiina tootmisahelast."
+          "text": "Hiina toodab praegu enam kui 80% maailma päikesepaneelidest ja üle 70% elektrisõidukite liitiumioonakudest. Lääne energiapööre sõltub seetõttu suuresti Hiina tootmisahelast."
         }
       ]
     },
     {
       "id": "course_238_la_transition_energetique_p3",
-      "title": "Uued takistused: ladustamine ja haruldased metallid",
+      "title": "Uued takistused: salvestamine ja haruldased metallid",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Hoolimata sellest entusiasmist on üleminekul väga reaalsed piirid. Erinevalt gaasist või kivisöest, mida saab oma äranägemise järgi põletada, vajavad taastuvad energiaallikad paindlikumaid elektrivõrke, millel on salvestus- või varuallikad, nagu vesinik või tuumaenergia."
+          "text": "Hoolimata sellest vaimustusest põrkub üleminek täiesti tõelistele piirangutele. Erinevalt gaasist või kivisöest, mida saab põletada just siis, kui vaja, vajavad taastuvenergiaallikad paindlikumaid elektrivõrke, kus on energiasalvestid või varuallikad, nagu vesinik või tuumaenergia."
         },
         {
           "type": "paragraph",
-          "text": "Teine takistus on üleminek sõltuvuselt naftast sõltuvusele **[[haruldased muldmetallid]]** ja muudest metallidest, nagu liitium või koobalt, mida on vaja akude ja tuuleturbiinide valmistamiseks. Hiina kontrollib tohutut osa nende materjalide ülemaailmsest rafineerimisest, luues Euroopa ja USA jaoks uusi haavatavust."
+          "text": "Teine takistus on see, et sõltuvus naftast asendub sõltuvusega teistest toorainetest. Nende seas on **[[haruldased muldmetallid]]** ja muud metallid, nagu liitium või koobalt, mida on vaja akude ja tuuleturbiinide valmistamiseks. Hiina kontrollib nende materjalide ülemaailmsest rafineerimisest tohutut osa, mis tekitab Euroopale ja USA-le uusi nõrku kohti."
         },
         {
           "type": "paragraph",
-          "text": "Lõpuks kogeb üleminek sotsiaalset vastupanu: fossiilkütuste tööstuses töötab endiselt miljoneid inimesi ja nende töökohtade muutmine ilma neid hävitamata on oluline tingimus, et kõik üleminekuga nõustuksid."
+          "text": "Lõpuks põrkub üleminek ühiskonna vastupanule: fossiilkütuste tööstuses töötab endiselt miljoneid inimesi ning nende töökohtade ümberkujundamine ilma neid hävitamata on hädavajalik, et kõik üleminekuga lepiksid."
         }
       ]
     },
     {
       "id": "course_238_la_transition_energetique_p4",
-      "title": "Uue energiakombinatsiooni poole",
+      "title": "Uue energiamiksi poole",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Energia tulevik ei põhine kahtlemata ühel lahendusel, vaid mitme lahenduse segul. **[[Roheline vesinik]]** näib olevat võtmeosa kõige keerulisemate sektorite, näiteks terase tootmise või lennunduse, süsinikdioksiidi heitkoguste vähendamisel, kus elektrist üksi ei piisa."
+          "text": "Energia tulevik ei toetu ilmselt ühele lahendusele, vaid mitme lahenduse segule. **[[Roheline vesinik]]** paistab olevat võtmetähtsusega, et vähendada süsinikuheidet kõige raskemates sektorites, nagu terasetootmine või lennundus, kus elektrist üksi ei piisa."
         },
         {
           "type": "paragraph",
-          "text": "Üleminek nõuab ka **kainus**: vähem ja parem tarbimine, hoonete soojustamine või tööstusjäätmete vähendamine, jääb sageli kõige tõhusamaks ja kõige odavamaks hoovaks."
+          "text": "Üleminek nõuab ka **säästlikkust**: vähem ja targemini tarbida, näiteks hooneid soojustades või tööstuse raiskamist vähendades, on sageli kõige tõhusam ja odavam hoob."
         },
         {
           "type": "funFact",
-          "text": "Mõned eksperimentaalsed akud töötavad gravitatsiooni abil: nad tõstavad raskeid betoonplokke päeva liigse päikeseenergiaga ja lasevad neil õhtul alla tulla, et turbiini kaudu elektrit toota."
+          "text": "Mõned katselised akud töötavad gravitatsiooni abil: päevase päikeseelektri ülejäägiga tõstavad need raskeid betoonplokke üles ja lasevad neil õhtul alla laskuda, et turbiini abil elektrit toota."
         },
         {
           "type": "takeaway",
-          "text": "Päikeseenergia hind on viieteistkümne aastaga langenud 90%, muutudes ajaloo odavaimaks elektriallikaks. Kuid energia salvestamine ja haruldaste metallide tarnimine jäävad energia ülemineku peamisteks väljakutseteks."
+          "text": "Päikeseenergia hind on viieteistkümne aastaga langenud 90% ja sellest on saanud ajaloo odavaim elektriallikas. Kuid energia salvestamine ja haruldaste metallidega varustamine on endiselt energiapöörde suurimad väljakutsed."
         }
       ]
     }

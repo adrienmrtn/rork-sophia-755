@@ -1,14 +1,14 @@
 {
   "id": "course_49_pourquoi_a_t_on_des_frissons",
-  "title": "Miks meil külmavärinad tekivad?",
+  "title": "Miks tekivad külmavärinad?",
   "subtitle": "Keha ja emotsioonid",
   "subject": "sciences",
   "subcategory": "Meie igapäevaelu lahti seletatud",
-  "description": "Külm, hirm, muusika: külmavärinatel on mitu põhjust. Kõik nad läbivad närvisüsteemi, kuid mitte samadel põhjustel.",
+  "description": "Külm, hirm, muusika: külmavärinatel on mitu põhjust. Kõik need kulgevad läbi närvisüsteemi, aga eri põhjustel.",
   "hero": {
     "image": "pourquoi_a_t_on_des_frissons",
     "ratio": "16:9",
-    "hook": "Külmavärin ja muusikavärin ei räägi sama lugu."
+    "hook": "Külmast tekkinud värin ja muusikast tekkinud värin räägivad eri lugu."
   },
   "sections": [
     {
@@ -18,43 +18,43 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Sa värised vihma kätte minnes. Judinad tekivad ka, kui kuuled laulu, mis sind häirib. Sama sõna, erinevad mehhanismid."
+          "text": "Sa värised, kui lähed vihma kätte. Sa värised ka siis, kui kuuled laulu, mis sind sügavalt liigutab. Sama sõna, erinevad mehhanismid."
         },
         {
           "type": "paragraph",
-          "text": "Mõlemal juhul reageerib keha kiiresti. Aga üht kasutatakse peamiselt soojendamiseks, teises on rohkem naudingut ja emotsioone."
+          "text": "Mõlemal juhul reageerib keha kiiresti. Kuid üks aitab peamiselt sooja saada, teine on pigem seotud naudingu ja emotsioonidega."
         }
       ]
     },
     {
       "id": "course_49_pourquoi_a_t_on_des_frissons_p1",
-      "title": "Külma põnevus: miniboiler",
+      "title": "Külmavärin: väike küttekatel",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Keha soovib püsida umbes **37 °C**. Kui nahk tuvastab külma, annab see märku ajupiirkonnast **hüpotalamus**, mis toimib nagu termostaat."
+          "text": "Keha tahab püsida umbes **37 °C** juures. Kui nahk tunnetab külma, annab see märku ühele ajupiirkonnale, **hüpotalamusele**, mis toimib nagu termostaat."
         },
         {
           "type": "image",
           "asset": "goosebumps_cold_skin",
           "ratio": "4:3",
-          "caption": "Hanenahk: vana refleks karvade tõstmiseks."
+          "caption": "Kananahk: vana refleks, mis ajab karvad püsti."
         },
         {
           "type": "paragraph",
-          "text": "Lihased tõmbuvad väga kiiresti ja korduvalt kokku: see on värin. Need kokkutõmbed toodavad soojust. \"Hanenahk\" tuleneb vanast refleksist: karvade tõstmisest paremaks isoleerimiseks. Kodus, vähese karvaga, toimib see peamiselt jäänukina."
+          "text": "Lihased tõmbuvad väga kiiresti ja korduvalt kokku: see ongi värisemine. Need kokkutõmbed toodavad soojust. „Kananahk“ on vana refleks: karvad tõusevad püsti, et keha paremini soojustada. Inimesel, kellel on vähe karvu, on see pigem jäänuk."
         }
       ]
     },
     {
       "id": "course_49_pourquoi_a_t_on_des_frissons_p2",
-      "title": "Hirmu põnevus",
+      "title": "Hirmuvärin",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ohuga silmitsi seistes aktiveerub [[Sümpaatiline närvisüsteem]] (närvisüsteemi „ärksus“ haru). See annab välja **adrenaliin**. Lihased on pinges, süda lööb, nahk võib väriseda."
+          "text": "Ohu korral lülitub sisse [[sümpaatiline närvisüsteem]] (närvisüsteemi „häireharu“). See vabastab **adrenaliini**. Lihased pingulduvad, süda hakkab kiiremini lööma ja nahk võib värista."
         },
         {
           "type": "image",
@@ -64,22 +64,22 @@
         },
         {
           "type": "funFact",
-          "text": "See sama süsteem selgitab, miks võite õudusfilmi vaadates... kui olete mõnusalt diivanil."
+          "text": "Seesama süsteem selgitab, miks võib sul õudusfilmi vaadates kananahk ihule tulla… kuigi istud mõnusalt soojas diivanil."
         }
       ]
     },
     {
       "id": "course_49_pourquoi_a_t_on_des_frissons_p3",
-      "title": "Muusika põnevus",
+      "title": "Muusikavärin",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Teatud põnevused, mida mõnikord nimetatakse külmavärinateks, saabuvad tugeva emotsiooniga: muusika, kõne, film. Need aktiveerivad aju **preemiad** ahela koos **dopamiiniga**, naudinguga seotud ainega."
+          "text": "Mõned värinad, mida vahel nimetatakse ingliskeelse sõnaga „chills“, tekivad tugeva emotsiooni ajal: muusika, kõne, film. Need aktiveerivad aju **tasusüsteemi** ja mängu tuleb **dopamiin**, naudinguga seotud aine."
         },
         {
           "type": "paragraph",
-          "text": "See ei ole koheseks ellujäämiseks kasulik. Pigem on keha see, mis reageerib intensiivsele emotsioonile nagu mööduvale lainele."
+          "text": "See ei aita otseselt ellu jääda. Pigem reageerib keha nii tugevale emotsioonile, nagu üle veereks laine."
         }
       ]
     },
@@ -90,11 +90,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kõrge palavikuga külmavärinad võivad viidata infektsioonile. Pidevad külmavärinad ilma selge põhjuseta väärivad arstiabi. Kuid enamasti on külmast, stressist või muusikast tulenev värisemine lihtsalt keha oma töö tegemine."
+          "text": "Kõrge palavikuga külmavärinad võivad viidata infektsioonile. Kui külmavärinad ei kao ja selget põhjust pole, tasub arstiga nõu pidada. Kuid enamasti on külmast, stressist või muusikast tekkinud värin lihtsalt keha, mis teeb oma tööd."
         },
         {
           "type": "takeaway",
-          "text": "Külmad külmavärinad toodavad soojust. Hirmu tundjad valmistuvad reageerima. Muusika puudutab emotsionaalset naudingut. Sama tunne, erinevad põhjused."
+          "text": "Külmast tekkinud värinad toodavad soojust. Hirmuvärinad valmistavad keha reageerima. Muusikavärinad on seotud emotsionaalse naudinguga. Sama aisting, erinevad põhjused."
         }
       ]
     }

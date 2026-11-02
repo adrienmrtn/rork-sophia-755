@@ -9,7 +9,7 @@
   "hero": {
     "image": "shepherd_gate_clock_royal_observatory_greenwich",
     "ratio": "4:3",
-    "hook": "Pred vlaki poldne od mesta do mesta nikoli ni bilo povsem ob isti uri."
+    "hook": "Preden so prišli vlaki, je poldne v vsakem mestu nastopilo ob malce drugačni uri."
   },
   "sections": [
     {
@@ -19,7 +19,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Večji del zgodovine je čas krajeven. Vsako mesto ure naravnava po svoje, in poldne v enem kraju lahko nastopi nekaj minut pred poldnevom v sosednjem ali za njim. Nikogar to ne moti: med mesti ne potujemo dovolj hitro, da bi razlika kaj pomenila."
+          "text": "Večji del zgodovine je čas krajeven. Vsako mesto ure naravnava po svoje in poldne v enem kraju lahko nastopi nekaj minut pred poldnevom v sosednjem ali za njim. Nikogar to ne moti: ljudje med mesti ne potujejo dovolj hitro, da bi razlika kaj pomenila."
         },
         {
           "type": "paragraph",
@@ -34,7 +34,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Časovne razlike med mesti so za vozne rede prava mora. So tudi nevarne: več železniških nesreč povzročijo slabo usklajeni vozni redi. Družbe spoznajo, da potrebujejo skupni čas. Leta **1840** prva najde rešitev britanska železniška družba [[Great Western Railway]]: vozne rede uskladi s časom kraljevega observatorija v Greenwichu, ki mu pravimo [[greenwiški čas]]. Vse njene postaje odtlej živijo po isti uri."
+          "text": "Časovne razlike med mesti so za vozne rede prava mora. So tudi nevarne: več železniških nesreč povzročijo slabo usklajeni vozni redi. Družbe spoznajo, da potrebujejo skupni čas. Leta **1840** prva najde rešitev britanska železniška družba [[Great Western Railway]]: vozne rede uskladi s časom kraljevega observatorija v Greenwichu, to je [[greenwiški čas]]. Vse njene postaje odtlej živijo po isti uri."
         },
         {
           "type": "image",
@@ -84,7 +84,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Leta **1884** ameriški predsednik Chester A. Arthur v Washingtonu skliče konferenco, ki naj bi vprašanje rešila. Predstavniki **25 držav**, skoraj vsi iz Amerike ali Evrope, se zberejo na srečanju, ki ga poznamo kot [[Mednarodna meridianska konferenca]]. Odločijo, da bo greenwiški poldnevnik izhodiščni poldnevnik, njegov čas pa univerzalni čas, z 24-urnim dnem, ki se začne ob polnoči po greenwiškem času."
+          "text": "Leta **1884** ameriški predsednik Chester A. Arthur v Washingtonu skliče konferenco, ki naj bi vprašanje rešila. Predstavniki **25 držav**, skoraj vsi iz Amerike ali Evrope, se zberejo na srečanju, ki se imenuje [[Mednarodna meridianska konferenca]]. Odločijo, da bo greenwiški poldnevnik izhodiščni poldnevnik, njegov čas pa univerzalni čas, z 24-urnim dnem, ki se začne ob polnoči po greenwiškem času."
         },
         {
           "type": "image",
@@ -125,7 +125,7 @@
               "detail": "Greenwiški čas postane uradni čas Velike Britanije."
             },
             {
-              "date": "Nov. 1883",
+              "date": "november 1883",
               "title": "Pet severnoameriških pasov",
               "detail": "Ameriške in kanadske družbe sprejmejo razdelitev Williama Allena."
             },

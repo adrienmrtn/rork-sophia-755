@@ -1,0 +1,120 @@
+{
+  "id": "course_165_orphee_et_eurydice",
+  "title": "Orfėjas ir Euridikė",
+  "subtitle": "Meilė, metanti iššūkį mirčiai",
+  "subject": "mythologie",
+  "subcategory": "Grèce : les dieux",
+  "description": "Orfėjas nusileidžia į požemių karalystę parsivesti Euridikės. Jo muzika suminkština mirtį. Užtenka vieno draudžiamo žvilgsnio, kad viskas būtų prarasta.",
+  "hero": {
+    "image": "orphee_et_eurydice",
+    "ratio": "16:9",
+    "hook": "Jo lyra nuramina požemių karalystę. O dėl jo abejonės Euridikė ten grįžta amžiams."
+  },
+  "sections": [
+    {
+      "id": "course_165_orphee_et_eurydice_intro",
+      "title": "Įžanga",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Orfėjas** yra muzikantas, kurio lyra sujaudina net akmenis. Kai miršta jo žmona **Euridikė**, jis nesusitaiko su netektimi. Jis gyvas nusileidžia pas mirusiuosius, kad ją parsivestų."
+        },
+        {
+          "type": "paragraph",
+          "text": "Šį pasakojimą įtvirtino Romos poetai [[Vergilijus]] ir [[Ovidijus]]. Tai ne tik tragiška meilės istorija: tai pasakojimas apie abejonę, nekantrumą ir meno galią prieš mirtį."
+        }
+      ]
+    },
+    {
+      "id": "course_165_orphee_et_eurydice_p1",
+      "title": "Muzikantas, galingesnis už ginklus",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Orfėjas yra mūzos **Kaliopės** sūnus. Jo **lyra**, **Apolono**, menų dievo, dovana, skirta ne vien džiuginti. Ji ramina žvėris, judina medžius, malšina laukinę gamtą. Ten, kur kiti didvyriai laimi jėga, Orfėjas triumfuoja harmonija."
+        },
+        {
+          "type": "image",
+          "asset": "orpheus_lyre_painting_ancient_myth",
+          "ratio": "4:3",
+          "caption": "Orfėjas ir jo lyra: menas kaip galia pasauliui."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Argonautų** žygyje, kuriam vadovauja didvyris [[Jasonas]], sirenos bando suvilioti įgulą. Orfėjas užgieda garsiau ir išgelbsti draugus. Paskui jis veda driadę **Euridikę**, miško nimfą. Laimė trunka neilgai."
+        },
+        {
+          "type": "funFact",
+          "text": "Vestuvių dieną Euridikę persekioja piemuo [[Aristėjas]], ir ji bėga. Ji užlipa ant gyvatės. Nuodai ją nužudo. Jos šešėlis iškeliauja ten, kur teka [[Stiksas]], požemių upė."
+        }
+      ]
+    },
+    {
+      "id": "course_165_orphee_et_eurydice_p2",
+      "title": "Gyvam nusileisti pas mirusiuosius",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Orfėjo laukia [[katabasis]]: nusileidimas į požemių karalystę. Jokių ginklų. Tik muzika. Nuo jos užmiega [[Kerberis]], trigalvis šuo, saugantis įėjimą. Nuo jos suminkštėja ir [[Charonas]], mirusiųjų keltininkas."
+        },
+        {
+          "type": "paragraph",
+          "text": "Prieš **Hadą** ir **Persefonę**, požemių pasaulio valdovus, Orfėjas groja jaudinančiausią savo gyvenimo melodiją. Požemių karalystė akimirkai sustingsta. **Sizifas** ir **Tantalas** pamiršta savo kančias. Net [[Erinijos]], keršto deivės, pravirksta."
+        },
+        {
+          "type": "funFact",
+          "text": "Kai kuriose versijose Orfėjas sujaudina Persefonę, primindamas, kaip ją pačią pagrobė Hadas. Mirusiųjų karalienė atpažįsta jo skausmą."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hadas sutinka su neįmanomu: Euridikė gali grįžti. Bet su viena griežta sąlyga. Orfėjas turi eiti priekyje ir neatsigręžti, kol jie nepasieks šviesos."
+        }
+      ]
+    },
+    {
+      "id": "course_165_orphee_et_eurydice_p3",
+      "title": "Žvilgsnis, pražudęs viską",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kelias aukštyn virsta kančia. Už jo tyla. Šešėliai nekelia jokio garso. Prie pat išėjimo nugali abejonė. O jei Hadas jį apgavo? Orfėjas **atsigręžia**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jų žvilgsniai akimirkai susitinka. Tada Euridikę praryja tamsa. Šįkart netektį lemia žmogaus klaida. Praėjimas užsiveria. Orfėjas klajoja, o paskui pasitraukia į Trakiją."
+        },
+        {
+          "type": "funFact",
+          "text": "Po Orfėjo mirties jo galvą nunešė upė [[Hebras]], ir ji esą nuplaukė iki Lesbo. Ten ji tapusi tokiu galingu orakulu, kad net **Apolonas** pareikalavęs jos tylos."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jis atsisako bet kokios naujos meilės, ir įsiunta [[Menadės]], ritualinio pakvaišimo apimtos **Dioniso** žynės. Jos jį sudrasko. Tačiau jo lyra, nešama srovės, toliau gieda."
+        }
+      ]
+    },
+    {
+      "id": "course_165_orphee_et_eurydice_p4",
+      "title": "Ką mitas perdavė",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Iš Orfėjo mirties gimsta [[Orfizmas]], religinė srovė, žadėjusi sielos išganymą per apsivalymo apeigas. Mirtis čia nebėra niūri pabaiga, o perėjimas, kuriam reikia ruoštis."
+        },
+        {
+          "type": "paragraph",
+          "text": "„Orfėjo žvilgsnis“ iki šiol įkvepia operą, kiną ir literatūrą; jam ištikimas liko ir [[Jeanas Cocteau]]. Rašytojas [[Maurice'as Blanchot]] teigia, kad menininkas yra tas, kuris žvelgia į tamsą, net jei dėl to praranda tai, ką myli. Galiausiai dievai iškelia lyrą į dangų, ir ji tampa žvaigždynu: menas gyvuoja ilgiau nei menininkas."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Orfėjas** muzika užburia požemių karalystę, bet per anksti atsigręžęs praranda **Euridikę**. Menas gali suminkštinti mirtį, tačiau paskutinis žodis lieka žmogaus abejonei."
+        }
+      ]
+    }
+  ]
+}

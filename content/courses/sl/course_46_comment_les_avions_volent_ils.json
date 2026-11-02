@@ -3,12 +3,12 @@
   "title": "Kako letijo letala?",
   "subtitle": "Fizika letenja",
   "subject": "sciences",
-  "subcategory": "Vsakdanjik pod drobnogledom",
+  "subcategory": "Vsakdan pod drobnogledom",
   "description": "Letalo, težko nekaj sto ton, leti. To ni čarovnija: gre za obliko kril, hitrost in sile, ki se uravnotežijo.",
   "hero": {
     "image": "comment_les_avions_volent",
     "ratio": "16:9",
-    "hook": "Težji od tovornjaka, a kljub temu ostane v zraku. Evo kako."
+    "hook": "Težje od tovornjaka, pa vseeno ostane v zraku. Takole mu uspe."
   },
   "sections": [
     {
@@ -18,22 +18,22 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Veliko potniško letalo lahko tehta **stotine tvojih**. Kako lahko nekaj tako težkega ostane v zraku? Odgovor se skriva v obliki kril in hitrosti letala."
+          "text": "Veliko potniško letalo lahko tehta **več sto ton**. Kako lahko nekaj tako težkega ostane v zraku? Odgovor se skriva v obliki kril in hitrosti letala."
         },
         {
           "type": "paragraph",
-          "text": "V igri so štiri glavne sile: **potisk** (naprej), **vlečenje** (zračno zaviranje), **težo** (navzdol) in **dvig** (navzgor)."
+          "text": "Delujejo štiri glavne sile: **potisk** (naprej), **upor** (zaviranje zraka), **teža** (navzdol) in **vzgon** (navzgor)."
         }
       ]
     },
     {
       "id": "course_46_comment_les_avions_volent_ils_p1",
-      "title": "Krilo, inteligentna oblika",
+      "title": "Krilo, pametna oblika",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Gledano s strani, krilo letala ni ravno. Zgornji del je bolj zaobljen kot spodnji. Ko se letalo hitro premika, mora zrak krožiti okoli te oblike."
+          "text": "Gledano s strani krilo letala ni ploščato. Zgornja stran je bolj izbočena kot spodnja. Ko letalo hitro leti, mora zrak obtekati to obliko."
         },
         {
           "type": "image",
@@ -43,56 +43,56 @@
         },
         {
           "type": "paragraph",
-          "text": "Zrak, ki teče zgoraj, se nekoliko pospeši. Njegov pritisk pade. Pod krilom ostaja pritisk močnejši. Ta razlika potiska krilo navzgor: to je **dvig**. Pogosto ga razlagajo s principom **Bernoulli**, poimenovanim po učenjaku iz 18. stoletja, in s tem, da krilo odbija tudi zrak navzdol."
+          "text": "Zrak, ki teče nad krilom, se nekoliko pospeši. Njegov tlak se zniža. Pod krilom ostane tlak višji. Ta razlika potiska krilo navzgor: to je **vzgon**. Pogosto ga razlagajo z **Bernoullijevim** načelom, imenovanim po učenjaku iz 18. stoletja, in s tem, da krilo odklanja zrak tudi navzdol."
         }
       ]
     },
     {
       "id": "course_46_comment_les_avions_volent_ils_p2",
-      "title": "Potrebujete hitrost",
+      "title": "Brez hitrosti ne gre",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Brez hitrosti, premalo zraka, ki prehaja čez krilo, premalo vzgona. Zato potrebuje letalo dolgo stezo za vzlet: motorji ga morajo dovolj pospešiti."
+          "text": "Brez hitrosti čez krilo ne teče dovolj zraka in ni dovolj vzgona. Zato letalo za vzlet potrebuje dolgo stezo: motorji ga morajo dovolj pospešiti."
         },
         {
           "type": "funFact",
-          "text": "Ptice uporabljajo isto splošno idejo: njihova krila ustvarjajo dvig. Vendar zamahnejo s krili, da gredo naprej. Letalo se premika naprej zahvaljujoč svojim motorjem."
+          "text": "Ptice uporabljajo isto osnovno zamisel: njihova krila ustvarjajo vzgon. Toda one mahajo s krili, da se premikajo naprej. Letalo pa naprej poganjajo motorji."
         },
         {
           "type": "paragraph",
-          "text": "Pri križarjenju dvigalo uravnava težo. Potisk motorjev uravnava zračni upor. Letalo se nato premika naprej s približno konstantno hitrostjo."
+          "text": "Med potovalnim letom vzgon uravnoteži težo. Potisk motorjev uravnoteži zračni upor. Letalo tako leti s približno stalno hitrostjo."
         }
       ]
     },
     {
       "id": "course_46_comment_les_avions_volent_ils_p3",
-      "title": "Pojdi gor, dol, zavij",
+      "title": "Vzpenjanje, spuščanje, zavijanje",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Za vzpenjanje pilot (ali računalnik na vozilu) nekoliko nagne nos in prilagodi potisk. Za sestop pogosto zmanjšamo odriv. Za obračanje se letalo nagne vstran s pomočjo gibljivih delov kril, krilc."
+          "text": "Za vzpenjanje pilot (ali računalnik na krovu) nekoliko dvigne nos in prilagodi potisk. Za spuščanje se potisk pogosto zmanjša. Za zavijanje se letalo nagne vstran z gibljivimi deli kril, krilci."
         },
         {
           "type": "paragraph",
-          "text": "Pri pristajanju upočasnimo. Zavihki segajo od krila za povečanje vzgona pri nizkih hitrostih. Takrat se kolesa dotaknejo tal in zavore (včasih tudi reverzerji potiska) ustavijo letalo."
+          "text": "Pri pristajanju letalo upočasni. Iz krila se izvlečejo zakrilca, ki pri nizki hitrosti povečajo vzgon. Nato se kolesa dotaknejo tal, zavore (včasih tudi obračalniki potiska) pa ustavijo letalo."
         }
       ]
     },
     {
       "id": "course_46_comment_les_avions_volent_ils_p4",
-      "title": "Ni \"lažji od zraka\"",
+      "title": "Ni »lažje od zraka«",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Helijev balon lebdi, ker je manj gost kot zrak. Letalo, ne: je veliko gostejše. Leti, ker je **moč** videti, kot da ga nosi, zahvaljujoč njegovi hitrosti in obliki kril."
+          "text": "Balon s helijem lebdi, ker je manj gost od zraka. Letalo ne: je veliko gostejše. Leti, ker zaradi svoje hitrosti in oblike kril zrak **prisili**, da ga nosi."
         },
         {
           "type": "takeaway",
-          "text": "Letalo leti zahvaljujoč **dvigalo**, ki ga ustvarijo njegova krila, ki se premikajo po zraku. Hitrost je bistvena: brez nje krilo ne \"potisne\" več dovolj navzgor, da bi nadomestilo težo."
+          "text": "Letalo leti zaradi **vzgona**, ki ga ustvarjajo krila med gibanjem skozi zrak. Hitrost je nujna: brez nje krilo ne »potiska« več dovolj navzgor, da bi izravnalo težo."
         }
       ]
     }

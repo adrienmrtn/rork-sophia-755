@@ -1,0 +1,2894 @@
+{
+ "langue": "et",
+ "synthese": {
+  "verdict": "La plainte est justifiée : l'estonien est une traduction automatique brute partout sauf dans l'ossature de l'app (onglets, réglages, bloqueur TikTok) et dans les cours les plus récents. Les contresens dominent et ils sont visibles dès l'onboarding : « Débloquer mon essai » est devenu « Commence mon procès (au tribunal) », « Expire dans » « Expire en l'an… », « Léger » « Lumière », Premium « supplément ». Dans les cours, « En 622 » est rendu « Dans la ville 622 », « En 1984 » « Dans le film 1984 » (32 phrases), le « on » impersonnel devient « nous », « New Deal » « nouvelle transaction », « bank runs » « la banque court ». Le catalogue contient des dates fausses (Waterloo le 18 juillet), des titres d'œuvres traduits littéralement alors qu'ils ont une forme estonienne établie, et des jetons corrompus (« Z69 », « ZPea »). S'y ajoutent un vouvoiement résiduel dans l'onboarding et les quiz alors que l'app tutoie, et des cas grammaticaux faux après les nombres et autour des termes de glossaire. Les cours 241 à 311 sont en revanche d'un estonien natif.",
+  "scores": {
+   "ui": 2.5,
+   "cours": 2,
+   "quiz_glossaire": 2.5,
+   "catalogue": 2,
+   "global": 2
+  },
+  "top_issues": [
+   {
+    "title": "Bouton d'essai = « Commence mon procès »",
+    "where": "onboarding.premiumTrial.cta",
+    "current": "Alusta minu kohtuprotsessi",
+    "gloss_fr": "Commence mon procès (au tribunal)",
+    "fix": "Alusta prooviperioodi",
+    "severity": "bloquant"
+   },
+   {
+    "title": "« Fin de l'essai » = « Le procès se termine »",
+    "where": "onboarding.trial.trialEnds",
+    "current": "Kohtuprotsess lõppeb",
+    "gloss_fr": "Le procès se termine",
+    "fix": "Prooviperiood lõppeb",
+    "severity": "bloquant"
+   },
+   {
+    "title": "« Expire dans » = « Expire en l'an… »",
+    "where": "offer.expiresIn",
+    "current": "Aegub aastal",
+    "gloss_fr": "Expire en l'an…",
+    "fix": "Lõpeb",
+    "severity": "bloquant"
+   },
+   {
+    "title": "« Léger » = « Lumière »",
+    "where": "onboarding.phone.intensity.light",
+    "current": "Valgus",
+    "gloss_fr": "Lumière",
+    "fix": "Kerge",
+    "severity": "bloquant"
+   },
+   {
+    "title": "Prix Premium présenté comme un « supplément »",
+    "where": "onboardingV2.pw.priceNoTrial",
+    "current": "Lisatasu %@ (iga-aastane arve).",
+    "gloss_fr": "Supplément %@ (facture annuelle)",
+    "fix": "Premium hinnaga %@ (arveldatakse kord aastas).",
+    "severity": "bloquant"
+   },
+   {
+    "title": "« En 622 » = « Dans la ville 622 » ; « En 1984 » = « Dans le film 1984 »",
+    "where": "course_1_la_naissance_de_l_islam_622/s0.b0.text (6 « Linnas », 32 « Filmis », 11 « Raamatus » dans le corpus)",
+    "current": "Linnas **622** peab … kaupmees oma linnast põgenema.",
+    "gloss_fr": "Dans la ville 622, un marchand doit fuir sa ville",
+    "fix": "Aastal **622** peab … kaupmees oma linnast põgenema.",
+    "severity": "bloquant"
+   },
+   {
+    "title": "« on » impersonnel rendu par « nous »",
+    "where": "course_1_la_naissance_de_l_islam_622/s0.b0.text (74 segments dans le corpus)",
+    "current": "Me tahame teda tappa.",
+    "gloss_fr": "Nous voulons le tuer.",
+    "fix": "Teda tahetakse tappa.",
+    "severity": "bloquant"
+   },
+   {
+    "title": "Date fausse sur la carte Waterloo",
+    "where": "course_13_la_bataille_de_waterloo_1815/description",
+    "current": "**18. juuli 1815. a** varises Belgias",
+    "gloss_fr": "Le 18 juillet 1815, en Belgique…",
+    "fix": "**18. juunil 1815** varises Belgias",
+    "severity": "bloquant"
+   },
+   {
+    "title": "Santiago, « chien de berger andalou »",
+    "where": "course_120_l_alchimiste_paulo_coelho/description",
+    "current": "Andaluusia lambakoer Santiago",
+    "gloss_fr": "Santiago, chien de berger andalou",
+    "fix": "Andaluusia lambakarjus Santiago",
+    "severity": "bloquant"
+   },
+   {
+    "title": "« caravanes » = « camping-cars » dans le quiz",
+    "where": "course_1_la_naissance_de_l_islam_622_q6",
+    "current": "Kaupmehe haagissuvilate maks",
+    "gloss_fr": "Une taxe sur les camping-cars du marchand",
+    "fix": "Kaubakaravanide maks",
+    "severity": "bloquant"
+   }
+  ],
+  "systematic": [
+   "« En <année> » lu comme un contenant : « Filmis » (dans le film) 32 fois, « Raamatus » (dans le livre) 11, « Linnas » (dans la ville) 6, « Mängus » 5 ; seules 32 phrases sur 244 ont la forme naturelle « Aastal ».",
+   "« on » impersonnel rendu par « nous » (me / verbes en -me) : 74 segments sur 168 ; l'estonien veut l'impersonnel en -takse.",
+   "Mots polysémiques pris dans le mauvais sens via l'anglais : spleen → organe, flâneur → poussette, correspondances → courrier, caravanes → camping-cars, gravité → sérieux, rater → avoir la nostalgie.",
+   "Vouvoiement ou impératif pluriel (teie, -ge) dans l'onboarding, le profil, les consignes de quiz et les collections, alors que l'app tutoie.",
+   "Cas grammaticaux faux : nominatif après un nombre (partitif attendu), « minu » au lieu du réfléchi « oma », termes de glossaire laissés au nominatif, désinences collées par trait d'union (« 624-s »).",
+   "Noms propres et titres instables (trois graphies de Muhammad, cinq de Narcisse) et titres d'œuvres littéraux à la place de la forme estonienne établie (Kurja lilled, Vihakobarad, Öine vahtkond).",
+   "Terminologie produit flottante : parcours = teekond / reis / rada ; matière = aine / teema / objekt ; réviser = üle vaatama (inspecter) au lieu de kordama."
+  ],
+  "action": "relecture_complete",
+  "effort": "UI : 1,5 jour (onboarding, paywall, tutoiement, cas) ; catalogue : 2 jours ; cours 1 à 240, quiz et glossaire : relecture native complète, 3 semaines ; les cours 241 à 311 peuvent rester."
+ },
+ "scores_relecteur_par_surface": {
+  "ui": 2.5,
+  "courses": 2,
+  "content": 2.5,
+  "catalog": 2
+ },
+ "justifications_relecteur": {
+  "ui": "Le fichier ui_b (chrome de l'app, réglages, parcours, bloqueur TikTok) est globalement en estonien correct et lisible, mais l'onboarding et le paywall (ui_a) accumulent des erreurs qu'un natif remarque immédiatement : « essai » traduit par « procès » sur le bouton d'achat, « Léger » rendu par « Lumière », Premium traduit par « supplément », vouvoiement ou pluriel dans une dizaine d'écrans alors que l'app tutoie, et de nombreux cas grammaticaux faux après les nombres ou avec les impératifs (« minu » au lieu de « oma »). S'y ajoutent des calques de l'anglais (« current affairs », « on fire », « commute », « anecdotes ») et une terminologie flottante (parcours = teekond/reis, matière = aine/teema/objekt, réviser = üle vaatama/kordama, audio = helid). Le texte est compréhensible mais visiblement traduit automatiquement sur les écrans les plus vus.",
+  "courses": "Échantillon très hétérogène : deux cours (hoquet, mort d'une étoile) sont d'un niveau natif, mais les sept autres relèvent d'une traduction automatique non relue. On y trouve des contresens embarrassants (« En 622 » rendu « dans la ville 622 », « spleen » traduit par l'organe, « flâneur » par « poussette », « New Deal » par « nouvelle transaction », « bank runs » par « la banque court », « prix de transfert » remplacé par « Big data »), le « on » impersonnel rendu par « nous », des noms propres instables (trois graphies de Muhammad, cinq de Narcisse) et des titres d'œuvres hors de leur forme estonienne établie (Kurja lilled, Madame Bovary, Kuritöö ja karistus). Un lecteur estonien repère la machine dès les premières lignes des cours concernés.",
+  "content": "L'échantillon est très hétérogène : le cours sur le hoquet, les collections récentes (c_*) et les libellés de rubriques sont d'un estonien naturel, mais les quiz sur l'islam et Baudelaire, le glossaire et les descriptions de collections g_* sont visiblement issus d'une traduction automatique non relue. On y trouve des faux sens embarrassants (« Spleen » rendu par l'organe « põrn », « Correspondances » par « échange de lettres », « caravanes » par « camping-cars », « Shakespea »), des fautes de cas, des titres d'œuvres non adaptés et un impératif pluriel/vouvoiement systématique dans les appels à l'action. Dans l'état, un utilisateur estonien repère la machine dès les premières questions.",
+  "catalog": "Le catalogue est très inégal : les fiches 241-311 se lisent comme de l'estonien natif, mais les fiches 1-240 portent des symptômes massifs de traduction automatique non relue : jetons corrompus (« Z69 », « ZPea », « Tsooni », « Etm. », « 10.tagumik », « 7. nüüd »), mots polysémiques pris dans le mauvais sens via l'anglais (gravité → sérieux, failles → erreurs, rater → avoir la nostalgie, spectacle → émission, juger → essayer, nordique → norvégien, État → État fédéré), dates fausses (18 juin → 18 juillet) et titres d'œuvres rendus littéralement alors qu'ils ont une forme estonienne établie (Tappa laulurästast, Vihakobarad, Öine vahtkond, Impressioon. Tõusev päike). Les noms mythologiques changent de forme entre titre et description sur une même carte, et la syntaxe des dates est systématiquement calquée sur le français. Un utilisateur estonien repère la machine dès la première page de la bibliothèque."
+ },
+ "constats_non_listes_par_le_relecteur": {
+  "ui": 85,
+  "courses": 85,
+  "content": 45,
+  "catalog": 105
+ },
+ "motifs_recurrents": [
+  {
+   "description": "Vouvoiement ou impératif pluriel (teie, -ge/-te) alors que la voix produit est le tutoiement « sina » ; concentré dans l'onboarding et le profil.",
+   "frequency": "fréquent",
+   "example": "onboarding.program.profileLabel : « TEIE PROFIIL »",
+   "regex_target": "(?i)\\b(teie|teid|teil|teile|järgige|täiustage|lugege|jätke|veedate|võiksite)\\b",
+   "pack": "ui"
+  },
+  {
+   "description": "« mon/ma/mes » + verbe sur un bouton rendu par « minu » avec un impératif, alors que l'estonien exige le possessif réfléchi « oma » (« minu » désigne le locuteur).",
+   "frequency": "fréquent",
+   "example": "onboardingV2.loading.cta : « Vaata minu profiili »",
+   "regex_fr": "^(Voir|Débloquer|Démarrer|Supprimer|Gérer|Activer)\\s+(mon|ma|mes)\\b",
+   "regex_target": "\\b(Ava|Vaata|Alusta|Kustuta|Halda|Aktiveeri)\\s+minu\\b",
+   "pack": "ui"
+  },
+  {
+   "description": "« essai » (période d'essai) traduit par « kohtuprotsess » (procès).",
+   "frequency": "isolé",
+   "example": "onboarding.premiumTrial.cta : « Alusta minu kohtuprotsessi »",
+   "regex_fr": "\\bessai\\b",
+   "regex_target": "kohtuprotsess",
+   "pack": "ui"
+  },
+  {
+   "description": "« réviser / révision » rendu par « üle vaatama / ülevaatamine » (inspecter, passer en revue) au lieu de « kordama / kordamine » ; les deux coexistent dans la section Entraînement.",
+   "frequency": "fréquent",
+   "example": "training.readyTitle : « Aeg üle vaadata »",
+   "regex_fr": "\\brévis(e|er|es|ion|ions)\\b",
+   "regex_target": "üle\\s*vaa(ta|da)|ülevaatami",
+   "pack": "ui"
+  },
+  {
+   "description": "Nom au nominatif pluriel après un nombre ou un placeholder numérique, là où l'estonien exige le partitif singulier.",
+   "frequency": "fréquent",
+   "example": "onboarding.showcase.courses.quizCount : « %d viktoriinid »",
+   "regex_target": "%(d|@|lld)\\s+[a-zõäöü]+(id|ed)\\b",
+   "pack": "ui"
+  },
+  {
+   "description": "« parcours » traduit tantôt « teekond » (terme produit), tantôt « reis » (voyage), « rada », « õppetee ».",
+   "frequency": "fréquent",
+   "example": "collections.badge.path : « REIS »",
+   "regex_fr": "\\bparcours\\b",
+   "regex_target": "(?i)\\b(reis|reisi|rada|raja|õppete)\\w*",
+   "pack": "ui"
+  },
+  {
+   "description": "« matière » / « sujet » rendus indifféremment par « aine », « teema » ou même « objekt » ; l'estonien distingue aine (matière scolaire) et teema (sujet).",
+   "frequency": "fréquent",
+   "example": "paywall.lockedSubjects : « 3 avatavat objekti »",
+   "regex_fr": "\\b(matière|matières|sujet|sujets)\\b",
+   "regex_target": "\\b(ainet|ained|aine|teemat|teemad|teema|objekti)\\b",
+   "pack": "ui"
+  },
+  {
+   "description": "« culture / cultivé » (au sens de culture générale) calqué en « kultuur / kultuurne », qui en estonien ne signifie pas « savoir » ; il faut « teadmised / haritud / silmaring ».",
+   "frequency": "fréquent",
+   "example": "paywall.review2.quote : « muudab kerimise kultuuriks »",
+   "regex_fr": "\\bcultur(e|é|és|ée|elle)\\b",
+   "regex_target": "kultuur",
+   "pack": "ui"
+  },
+  {
+   "description": "« audio(s) » (cours audio) traduit par « helid » (sons, bruits).",
+   "frequency": "fréquent",
+   "example": "audio.browse.title : « Kõik helid »",
+   "regex_fr": "\\baudios?\\b",
+   "regex_target": "\\bheli(d|sid|de)\\b|\\bhelina\\b",
+   "pack": "ui"
+  },
+  {
+   "description": "« Terminé(s) » rendu par quatre mots différents selon l'écran (Valmis, Tehtud, Lõpetatud, Läbitud) ; « läbitud » est le terme à unifier pour un cours/niveau.",
+   "frequency": "fréquent",
+   "example": "library.filter.done : « Valmis » vs myCourses.tab.completed : « Lõpetatud »",
+   "regex_fr": "\\btermin(é|és|ée)\\b",
+   "regex_target": "(?i)\\b(valmis|tehtud|lõpetatud|läbitud)\\b",
+   "pack": "ui"
+  },
+  {
+   "description": "« notification » rendu tantôt « märguanne », tantôt « teavitus », tantôt « teade » ; le standard iOS/Android estonien est « märguanne ».",
+   "frequency": "fréquent",
+   "example": "settings.reminder.subtitle : « Sinu teavituse kellaaeg »",
+   "regex_fr": "\\bnotifications?\\b",
+   "regex_target": "\\b(teavitus\\w*|teade|teated|märguan\\w*)\\b",
+   "pack": "ui"
+  },
+  {
+   "description": "Guillemets anglais droits ou courbes (\" “ ”) au lieu des guillemets estoniens „ “ ; seuls les écrans TikTok blocker utilisent la bonne typographie.",
+   "frequency": "fréquent",
+   "example": "notification.courseNudge.body : « Tule avasta “%@” »",
+   "regex_target": "[\"“”]",
+   "pack": "ui"
+  },
+  {
+   "description": "Objectifs à l'infinitif en français rendus par des impératifs (« Ole uudishimulikum », « Õpi uusi asju ») ou par des formes mixtes ; en estonien une liste de choix d'objectifs se formule à l'infinitif -da ou en « Et … ».",
+   "frequency": "fréquent",
+   "example": "onboarding.objective.impress : « Jäta muljet ümbritsevatele inimestele »",
+   "regex_fr": "^(Être|Impressionner|Apprendre|Réduire|Renforcer|Me cultiver|Réussir)\\b",
+   "pack": "ui"
+  },
+  {
+   "description": "« Premium » tantôt soudé par trait d'union au nom suivant (Premium-juurdepääs, Premium-liikmetele), tantôt non (Premium funktsioonidele) ; l'orthographe estonienne demande le trait d'union.",
+   "frequency": "fréquent",
+   "example": "paywall.trial.todayDetail : « Premium funktsioonidele »",
+   "regex_target": "Premium\\s+[a-zõäöü]",
+   "pack": "ui"
+  },
+  {
+   "description": "« progression » traduit tantôt « edusammud » tantôt « edenemine » (y compris dans la même section Compte) ; les deux sont corrects mais devraient être unifiés.",
+   "frequency": "fréquent",
+   "example": "account.createLater.title : « Kas salvestame su edenemise? » vs account.create.subtitle : « Varunda oma edusammud »",
+   "regex_fr": "\\bprogression\\b",
+   "regex_target": "\\b(edenemi\\w*|edusamm\\w*)\\b",
+   "pack": "ui"
+  },
+  {
+   "description": "Prénoms des témoignages conservés en français (Léa, Camille, Inès, Yanis…) sauf « Sarah » estonisé en « Saara » à deux endroits : l'incohérence se remarque plus que les prénoms eux-mêmes, qui restent crédibles pour un public estonien.",
+   "frequency": "isolé",
+   "example": "onboardingV2.review.t5.author / paywall.review5.author : « Saara, 26 »",
+   "regex_target": "\\bSaara\\b",
+   "pack": "ui"
+  },
+  {
+   "description": "« En <année> » (ou « le 29 », « chez Nadar », « chez Hugo ») rendu comme un lieu ou un contenant : Linnas (dans la ville), Kohtuasjas (dans l'affaire judiciaire), Ajakirjas (dans la revue), Saates (dans l'émission), « 630 puhul », Nadaris, Hugos. Présent dans tous les cours traduits automatiquement.",
+   "frequency": "systématique",
+   "example": "Linnas **622** peab ... kaupmees oma linnast põgenema. / Kohtuasjas **1857** / Ajakirjas **1866** avaldatud",
+   "regex_fr": "\\b[Ee]n\\s+\\*{0,2}\\d{3,4}\\*{0,2}\\b|\\b[Cc]hez\\s+[A-Z]",
+   "regex_target": "\\b(Linnas|Kohtuasjas|Ajakirjas|Saates)\\s+\\*{0,2}\\d{2,4}\\b|\\*{0,2}\\d{3,4}\\*{0,2}\\s+puhul\\b|\\b(Nadaris|Hugos)\\b",
+   "pack": "courses"
+  },
+  {
+   "description": "Le « on » impersonnel français traduit par « nous » (me/meie, 1re personne du pluriel) au lieu de l'impersonnel estonien (-takse) : « nous voulons le tuer », « nous vivons en tribus », « nous avons besoin », « nous empruntons », « nous les appelons ».",
+   "frequency": "fréquent",
+   "example": "On veut le tuer → Me tahame teda tappa. / On y vit en tribus → Me elame seal hõimudena.",
+   "regex_fr": "\\b[Oo]n\\s+(veut|vit|peut|appelle|parle|exige|emprunte|estime|dit|prie)\\b",
+   "regex_target": "\\b[Mm]e\\s+(tahame|elame|saame|räägime|võime|kutsume)\\b|\\b(Vajame|Laename|Nimetame)\\b",
+   "pack": "courses"
+  },
+  {
+   "description": "Mot polysémique pris dans le mauvais sens, souvent via l'anglais : spleen → põrn (organe), flâneur → jalutuskäru (poussette), condamnation → veendumus (croyance), réhabilitation → taastusravi (rééducation), appelle → helistab (téléphone), Pan → Pauk (détonation), chute → sügis (automne), offshore → avamerel (en haute mer), bank runs → pank jookseb, lance → toob turule (commercialise), sensation → sensatsioon (scandale), touche → puudutus (contact), peindre → värvimine (peinture en bâtiment), espace → ruum (pièce), ruinés → katkised (déchirés), image → imago.",
+   "frequency": "systématique",
+   "example": "Baudelaire erre en flâneur → eksleb Baudelaire kui **jalutuskäru**",
+   "regex_target": "\\b(põrn\\w*|jalutuskäru|Pauk|veendumus|taastusravi|helistab|sügis kiireneb|avamerel|pank jookseb|uus tehing|toob turule|sensatsiooni?|puudutus\\w*|värvimine|imagost|katkised)\\b",
+   "pack": "courses"
+  },
+  {
+   "description": "Années et noms propres portant une désinence casuelle collée par trait d'union (« 624-s », « 632-s », « 610-lt », « 1874-i », « Aupick-ga », « Zeus-l », « Badr-l », « [[kaliif]]-dele ») ou laissés nus sans « aastal » (« **1857** avaldas », « **1932** valiti »). Un natif écrit « 624. aastal », « Aupickiga », « Zeusil ».",
+   "frequency": "fréquent",
+   "example": "võitsid **Badr**-l **624**-s / Pärast tema surma **632**-s / **1874**-i salongivastase mässu",
+   "regex_fr": "\\b(en|à partir de|dès)\\s+\\*{0,2}\\d{3,4}\\b",
+   "regex_target": "\\*{0,2}\\d{3,4}\\*{0,2}-(s|l|lt|le|i|st|ga)\\b|\\b[A-ZÉ][a-zé]+-(ga|l|le|lt|st|dele|s)\\b|\\]\\]-[a-z]+\\b|(?<![\\d.])\\*\\*\\d{4}\\*\\*\\s+(avaldas|valiti|puhul)",
+   "pack": "courses"
+  },
+  {
+   "description": "Noms propres et titres d'œuvres instables ou hors de leur forme estonienne établie : Muhammed/Muhamed/Muhammad, Narcissus/Nartsiss/Narcisse/Narkissos, Kaja/Echo, Hegira (hidžra), Medina/Mediina, Kurjuse lilled (Kurja lilled), Proua Bovary (Madame Bovary), Le Spleen de Paris (Pariisi spliin), Kuritegevus ja karistus (Kuritöö ja karistus), Saint-Peterburi, Poulcheria/Dounia/Sonya/Sonia, Tirésias/Teiresias, Cephisus, Roaring Twenties/Möirgavad kahekümnendad, uus tehing (New Deal), Salong des Refusés, Musée d'Orsay, Trükkimine (Impressioon), superinimene/supermees/ülimees/üliinimene.",
+   "frequency": "systématique",
+   "example": "Kurjuse lilled (titre établi : Kurja lilled) ; Narcissus armastab… **Nartsiss** on… Narcisse helistab… Narkissos on…",
+   "regex_target": "\\b(Muhamm?[ae]d\\w*|Narcissus|Narcisse|Nartsiss\\b|Kurjuse lilled|Kuritegevus ja karistus|Saint-Peterburi\\w*|Poulcheria|Dounia|Sonya|Hegira\\w*|Proua Bovary|Le Spleen de Paris|Roaring Twenties|Möirgava\\w+|Tirésias|Cephisus\\w*|uus tehing|Salong des Refusés|Trükkimine)\\b",
+   "pack": "courses"
+  },
+  {
+   "description": "Terme de glossaire [[…]] laissé au nominatif (ou avec une majuscule) là où la phrase exige un cas, souvent après une postposition ou devant un nom : « tänu [[Jaapani trükised]] », « [[Varssavi pakt]] riigid », « [[deflatsioon]] poliitika », « võitleb ta [[…nihilism]] », « hõlmas [[Küberruum]] ja ruumi », « valmistab ette [[Proosaluuletus]] ». Le balisage est conservé mais la phrase devient agrammaticale.",
+   "frequency": "fréquent",
+   "example": "Kuid rühm katsetab ka tänu [[Jaapani trükised]]: asümmeetriline kadreering",
+   "regex_target": "\\b(tänu|vastu|poole|all|ette)\\s+\\[\\[|\\[\\[[^\\]]+\\]\\]\\s+(hõim|riigid|poliitika|ideaal|meister|osa|kuju)\\b",
+   "pack": "courses"
+  },
+  {
+   "description": "Terme de glossaire remplacé ou étendu par rapport au glossaire source (mauvais appariement) : [[Suured andmed]] (Big data) pour « prix de transfert », [[Sümbolism ja Baudelaire'i pärand]] pour [[symbolisme]], [[Roosevelti uus tehing (1933)]], [[pank jookseb]], [[avamerel]], [[Kohtuekspertiisi psühholoogia]].",
+   "frequency": "fréquent",
+   "example": "Peamine tööriist kannab nime [[Suured andmed]] (FR : le prix de transfert)",
+   "regex_target": "\\[\\[(Suured andmed|Sümbolism ja Baudelaire'i pärand|Roosevelti uus tehing[^\\]]*|pank jookseb|avamerel|Kohtuekspertiisi psühholoogia)\\]\\]",
+   "pack": "courses"
+  },
+  {
+   "description": "Alternance présent / passé à l'intérieur d'un même paragraphe alors que le français est au présent de narration (« võtab vastu … Ta koostas … ja asutas » ; « avas … tõmbab » ; « ei huvitanud … elame »).",
+   "frequency": "fréquent",
+   "example": "Surmaähvardusel võtab Muhammad vastu kutse … Ta koostas klannidevahelise pakti … ja asutas [[Ummah]]",
+   "pack": "courses"
+  },
+  {
+   "description": "Pronom personnel « ta / tema / nad » (réservé aux personnes) employé pour un référent inanimé (livre, expansion, poèmes, organisation) à la place de « see / need ».",
+   "frequency": "fréquent",
+   "example": "Laienemine ei ole ainult sõjaline. Ta on ka organiseeritud. / Raamat tekitas skandaali. Ta mõisteti süüdi",
+   "regex_target": "\\.\\s+(Ta|Nad|Tema) (on ka|mõisteti|rehabiliteeriti|vastase|positsioneeris)\\b",
+   "pack": "courses"
+  },
+  {
+   "description": "Guillemets hétérogènes (\" \", “ ”, „ ”, „ “) d'un cours à l'autre et parfois dans un même paragraphe ; la norme estonienne est „…“. Les deux cours de qualité native utilisent correctement „…“.",
+   "frequency": "fréquent",
+   "example": "**“Albatross”** võrdleb luuletaja / Ta peab teda \"hingevennaks\" / „Nartsissismi tutvustamiseks”",
+   "regex_target": "[“”\"]",
+   "pack": "courses"
+  },
+  {
+   "description": "Majuscule indue sur des noms communs en milieu de phrase, surtout dans les termes en gras ou de glossaire : **Muezzin**, **Tuumaeskalatsiooni**, [[Beduiinid]], **Maksu optimeerimisest**, [[Dryaadid]], [[Neoimpressionism]], Suur Depressioon, Kaunite Kunstide Akadeemia.",
+   "frequency": "fréquent",
+   "example": "Islami esimene **Muezzin**, kes kutsub palvele / et vältida **Tuumaeskalatsiooni**",
+   "regex_target": "\\*\\*(Muezzin|Tuumaeskalatsiooni|Maksu optimeerimisest|Neetud luule|Üks jumalast)\\*\\*|\\[\\[(Beduiinid|Dryaadid|Neoimpressionism|Küberruum|Dhimma|Džihaad|Kohvik Guerbois|Pariisi ametlik salong|Jaapani trükised|Varssavi pakt)\\]\\]|\\b(Suur Depressioon\\w*|Kaunite Kunstide Akadeemia)\\b",
+   "pack": "courses"
+  },
+  {
+   "description": "Calques syntaxiques du français : « Voici comment » → « Siin on, kuidas », « X poolt unustatud/keeldutud » (agent en poolt), « digne de ce nom » → « oma nime vääriline », « se réinventer » → « end uuesti leiutada », « Au sommet » → « Ülaosas ». Compréhensibles mais reconnaissables comme traduits.",
+   "frequency": "fréquent",
+   "example": "Voici comment tout a commencé → Siin on, kuidas see kõik algas. / Une Arabie oubliée du monde → Maailma poolt unustatud Araabia",
+   "regex_fr": "\\bVoici (comment|ce que)\\b|\\bdigne de ce nom\\b",
+   "regex_target": "\\bSiin on,? (kuidas|see)\\b|\\bpoolt (unustatud|keeldutud)\\b|\\boma nime vääril\\w+|\\bend uuesti leiutada\\b",
+   "pack": "courses"
+  },
+  {
+   "description": "Impératif pluriel/vouvoiement (-ge) dans les appels à l'action des collections et consignes de quiz, alors que l'app tutoie.",
+   "frequency": "systématique",
+   "example": "Tutvuge jumalate ja kangelastega → Tutvu jumalate ja kangelastega",
+   "regex_target": "\\b(?:Avasta|Tutvu|Sukeldu|Jälgi|Pan|Uuri|Õpi|Vaata|Proovi|Leia|Vali|Alusta|Mõtle)ge\\b",
+   "regex_fr": "\\b(?:Découvrez|Explorez|Plongez|Suivez|Rencontrez|Remettez|Apprenez|Choisissez|Essayez)\\b",
+   "pack": "content"
+  },
+  {
+   "description": "Mot polysémique pris dans le mauvais sens (artefact MT) : spleen → organe, correspondances → courrier, caravanes → camping-cars, flâneur → charrette, mouvements → gestes, recueil/recueillement → collection, figures → personnages, touche → toucher.",
+   "frequency": "fréquent",
+   "example": "jaotises \"Põrn ja ideaal\" → osas „Spliin ja ideaal“",
+   "regex_target": "\\b(?:haagissuvila\\w*|[Pp]õrn\\w*|[Kk]irjavahetus\\w*|vankrina|liigutused|[Kk]ollektsioon\\w*|tegelased|arestimis\\w*|puudutus\\w*)\\b",
+   "pack": "content"
+  },
+  {
+   "description": "Noms propres et translittérations incohérents ou non estoniens (Muhammad/Muhamed, Medina/Mediina, Hegira/Hijra/hidžra, Umma/Ummah, Sasani/Sassaniidid, Salong des Refusés, Ulysses/Odysseus, Shakespea).",
+   "frequency": "fréquent",
+   "example": "Muhamedi surm Medinas → Muhamedi surm Mediinas",
+   "regex_target": "\\b(?:Muhammad\\w*|Medina\\w*|Hegira\\w*|Hijra|Ummah|Sasani|Salong des|Ulysse\\w*|Shakespea)\\b",
+   "pack": "content"
+  },
+  {
+   "description": "Guillemets droits \"…\" ou anglais “…” au lieu des guillemets estoniens „…“ ; mélange des trois dans le même cours (le cours sur le hoquet est correct).",
+   "frequency": "fréquent",
+   "example": "\"Pariisi maalid\" / “Põrn ja ideaal” → „Pariisi pildid“ / „Spliin ja ideaal“",
+   "regex_target": "\"[^\"\\n]+\"|“[^”\\n]+”",
+   "pack": "content"
+  },
+  {
+   "description": "Titres d'œuvres laissés en français, entre crochets, ou rendus littéralement alors qu'un titre estonien établi existe (Les Fleurs du Mal → Kurja lilled, Le Déjeuner sur l'herbe → Eine murul, Tableaux parisiens → Pariisi pildid).",
+   "frequency": "fréquent",
+   "example": "kelle maal [Le Déjeuner sur l'herbe] → kelle maal „Eine murul“",
+   "regex_target": "\\[[^\\]\\n]+\\]|\\bLes? [A-ZÉ][\\w'’]+(?: [\\w'’]+)*",
+   "pack": "content"
+  },
+  {
+   "description": "Nominalisation calquée des titres français à l'infinitif (« Comprendre… », « Étude de… », « Exploration de… ») en « …mõistmine », « …uurimine », au lieu d'une phrase ou d'un syntagme naturel.",
+   "frequency": "fréquent",
+   "example": "Mõistmine, kuidas nafta on kujundanud geopoliitikat → Kuidas nafta on kujundanud geopoliitikat",
+   "regex_target": "\\b(?:[Mm]õistmine|[Uu]urimine|dekodeerimiseks)\\b",
+   "regex_fr": "(?:^|— )(?:Comprendre|Étude|Exploration|Initiation)\\b",
+   "pack": "content"
+  },
+  {
+   "description": "Définitions de glossaire avec verbe conjugué ou fragment détaché au lieu d'une relative (« näitus esitleb… », « staatus antakse… », « mille andis välja…, reguleeris… », « juhiks Georges Seurat »).",
+   "frequency": "fréquent",
+   "example": "\"Kaitstud\" õiguslik staatus antakse … → „Kaitsealuse“ õiguslik staatus, mis anti …",
+   "regex_target": "^\\s*- [^:\\n]+: [^.\\n]*\\b(?:antakse|esitleb|andis välja|reguleeris|juhiks)\\b",
+   "pack": "content"
+  },
+  {
+   "description": "Construction redondante « Alates X kuni Y-ni » calquée de « De X à Y » là où l'estonien dit simplement « X-st Y-ni ».",
+   "frequency": "fréquent",
+   "example": "Alates gravitatsioonist kuni DNA-ni → Gravitatsioonist DNA-ni",
+   "regex_target": "\\bAlates\\b[^.\\n]*\\bkuni\\b",
+   "regex_fr": "\\bDe (?:la |l'|les |l’)?[^—:\\n]+? (?:à|au|aux) ",
+   "pack": "content"
+  },
+  {
+   "description": "Complément d'agent « X poolt » calqué du passif français « par X » au lieu du génitif ou d'une tournure active.",
+   "frequency": "fréquent",
+   "example": "Muhamedi poolt Medinas asutatud Umma → Muhamedi Mediinas asutatud umma",
+   "regex_target": "\\b\\w+ poolt\\b",
+   "regex_fr": "\\bpar (?:les|le|la|l')\\b",
+   "pack": "content"
+  },
+  {
+   "description": "Mot polysémique pris dans le mauvais sens en passant par l'anglais : gravité → sérieux, failles → erreurs, rater → avoir la nostalgie (miss), spectacle → émission, juger → essayer (try), pistes → leaders (leads), mensonge → couché (lying), tout près → fermer (close), berger → chien de berger, marine → marine de guerre, Impression → tirage, raison → cause, État → État fédéré, peuples → personnes, tribut → hommage, nordique → norvégien, pétrole → huile.",
+   "frequency": "fréquent",
+   "example": "course_67 subtitle « Äärmuslik tõsidus » pour « Gravité extrême »",
+   "regex_target": "\\b(tõsidus|osariigi|Norra mütoloogia|lambakoer|merevägi|austusavaldus|Lamades|igatseb seda|proovis \\w+ üle|\\böli\\b)",
+   "regex_fr": "\\b(gravité|failles?|rate|spectacle|juge|pistes|mensonge|berger|marine|tribut|nordique|pétrole)\\b",
+   "pack": "catalog"
+  },
+  {
+   "description": "Jetons corrompus ou noms de mois disparus dans les descriptions : Z69, ZPea, Tsooni, Etm., « 10.tagumik », « 7. nüüd » (mai).",
+   "frequency": "fréquent",
+   "example": "course_222 « vähenenud **Z69**% »",
+   "regex_target": "\\bZ[A-Z]?[a-z0-9]+\\b|Tsooni|\\bEtm\\.|\\d{1,2}\\.\\s?(tagumik|nüüd)\\b",
+   "pack": "catalog"
+  },
+  {
+   "description": "« Voici … » calqué en « Siin on … » (ou « Nii … ») en tête de phrase ; l'estonien préfère une phrase pleine (« Vaatame, … », « Sellepärast … »).",
+   "frequency": "fréquent",
+   "example": "course_55 « Siin on, mida see muudab. »",
+   "regex_target": "\\bSiin on\\b",
+   "regex_fr": "\\bVoici\\b",
+   "pack": "catalog"
+  },
+  {
+   "description": "Date ou année calquée sur le français : date au nominatif suivie d'une virgule (« **24. oktoober 1929**, Wall Street variseb »), année nue sans « aastal » (« **1945** ja **1946**, **24** natside »), abréviation « 1815. a » dans une date complète, et « Entre X et Y » → « X ja Y vahel » au lieu de « aastatel X–Y ».",
+   "frequency": "systématique",
+   "example": "course_18 « **24. oktoober 1929**, Wall Street variseb kokku. »",
+   "regex_target": "\\*\\*\\d{1,2}\\. [a-zõäöü]+ \\d{4}(\\. a)?\\*\\*,|\\d{4}\\. a\\b|\\*{0,2}\\d{4}\\*{0,2} ja \\*{0,2}\\d{4}\\*{0,2} vahel|-s\\b",
+   "regex_fr": "^(Le|En|Entre) \\*{0,2}\\d",
+   "pack": "catalog"
+  },
+  {
+   "description": "Nom propre incohérent entre titre et description sur la même carte, ou forme latine/anglaise au lieu de la forme grecque/estonienne établie (Narcissus, Daedalus, Icarus, Sisyphus, Tantalus, Jason/Medea, Columbus, Scheherazade, Cronos, Aegeus, Patroclus, Hector, Hesiod, Olympus, Kandinski, Re).",
+   "frequency": "systématique",
+   "example": "course_166 titre « Narkissose », description « Narcissus »",
+   "regex_target": "\\b(Narcissus|Daedalus|Icarus|Sisyphus|Tantalus|Jason|Medea\\w*|Columbus|Scheherazade|Cronos|Aegeus|Patroclus|Hector|Hesiod|Olympus\\w*|Kandinski|Hercules\\w*)\\b",
+   "pack": "catalog"
+  },
+  {
+   "description": "Titre d'œuvre rendu littéralement alors qu'une forme estonienne établie existe (Tapa pilkav lind, Viha viinamarjad, Kurjuse lilled, Öine vahetus, Print, Liikide päritolu, Vabariik, Ülestunnistused, inimkomöödia, Les Demoiselles d'Avignon, Tähteline öö).",
+   "frequency": "fréquent",
+   "example": "course_60 « Liikide päritolu » pour « Liikide tekkimine »",
+   "regex_target": "Tapa pilkav lind|Viha viinamarjad|Kurjuse lilled|Öine vahetus|\\bPrint\\b|Liikide päritolu|\\bVabariik\\b|Ülestunnistused|inimkomöödia|Tähteline öö|Tähisöös",
+   "pack": "catalog"
+  },
+  {
+   "description": "« On » impersonnel rendu par un pronom personnel (« Nad ütlevad », « Me ei näinud », « kui te … paksendate ») ou vouvoiement « teie » dans une app qui tutoie.",
+   "frequency": "fréquent",
+   "example": "course_218 « Nad ütlevad, et andmed on uus õli. »",
+   "regex_target": "\\bNad ütlevad\\b|\\bMe ei näinud\\b|\\b(teie|te) \\w+|\\w+ke ilma",
+   "regex_fr": "\\bon (dit|ne l'a|l'épaissit)\\b|\\bvotre\\b",
+   "pack": "catalog"
+  },
+  {
+   "description": "Nombre suivi d'un nom non mis au partitif singulier, ou nom propre en apposition laissé au nominatif (« 51 riigid », « 80 riike », « 700 000 kaotused », « neli nooruki », « Bauhaus kool », « Deng Xiaoping pööre », « Peking ja Washington rivaalitsemine »).",
+   "frequency": "fréquent",
+   "example": "course_26 « **51** riigid kirjutavad »",
+   "regex_target": "\\*{0,2}\\d[\\d ]*\\*{0,2} (riigid|riike|kaotused|natside)|neli nooruki|\\*\\*Bauhaus\\*\\* kool|\\*\\*Deng Xiaoping\\*\\* |\\*\\*Peking\\*\\* ja \\*\\*Washington\\*\\* rivaal",
+   "pack": "catalog"
+  },
+  {
+   "description": "Agent du passif calqué avec « X poolt » (« Salongi poolt keeldutud », « Natside poolt suletud », « Keelatud armastuse poolt hävitatud ») au lieu d'une construction active ou du génitif.",
+   "frequency": "fréquent",
+   "example": "course_148 « Natside poolt suletud »",
+   "regex_target": "\\b\\w+ poolt\\b",
+   "regex_fr": "\\bpar (les|le|la|l')\\b",
+   "pack": "catalog"
+  },
+  {
+   "description": "Guillemets mélangés : „…“ (correct), “…” et \"…\" dans le même catalogue.",
+   "frequency": "fréquent",
+   "example": "course_103 « “Olla või mitte olla” » ; course_50 « \"maagia\" »",
+   "regex_target": "[\"“]",
+   "pack": "catalog"
+  },
+  {
+   "description": "« moderne » rendu par « kaasaegne » (contemporain) au lieu de « moodne / tänapäevane » (kaasaegne romaan, kaasaegne luule, kaasaegne fantaasia).",
+   "frequency": "fréquent",
+   "example": "course_109 « leiutab kaasaegse romaani »",
+   "regex_target": "\\bkaasaeg\\w*",
+   "regex_fr": "\\bmoderne\\b",
+   "pack": "catalog"
+  },
+  {
+   "description": "Terme de genre/style inconstant entre titre et description : džäss/jazz, blues/bluus, hiphop/hip-hop, folk/rahvalaul, tehisintellekt/AI, massväljasuremine/massiline väljasuremine, holokaust/Shoah.",
+   "frequency": "fréquent",
+   "example": "course_139 titre « džäss », description « jazz »",
+   "regex_target": "\\b(jazz\\w*|blues\\b|hip-hop\\w*|\\bAI\\b|Shoah)",
+   "pack": "catalog"
+  }
+ ],
+ "constats": [
+  {
+   "location": "onboarding.premiumTrial.cta",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Alusta minu kohtuprotsessi",
+   "gloss_fr": "« Commence mon procès (au tribunal) »",
+   "problem": "« Essai » (période d'essai) a été pris au sens juridique de « procès », sur le bouton principal du paywall.",
+   "fix": "Alusta prooviperioodi",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.trial.trialEnds",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Kohtuprotsess lõppeb",
+   "gloss_fr": "« Le procès se termine »",
+   "problem": "Même contresens : « essai » rendu par « procès ».",
+   "fix": "Prooviperiood lõppeb",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.phone.intensity.light",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Valgus",
+   "gloss_fr": "« Lumière »",
+   "problem": "« Léger » (intensité d'usage faible) a été traduit par le substantif « lumière » ; l'échelle Léger/Modéré/Élevé/Intense devient absurde.",
+   "fix": "Kerge",
+   "surface": "ui"
+  },
+  {
+   "location": "offer.expiresIn",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Aegub aastal",
+   "gloss_fr": "« Expire en l'an… »",
+   "problem": "« dans » (délai) a été traduit comme « en l'année », ce qui n'a aucun sens devant un compte à rebours.",
+   "fix": "Lõpeb",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.pw.priceNoTrial",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Lisatasu %@ (iga-aastane arve).",
+   "gloss_fr": "« Supplément / frais additionnel %@ (facture annuelle). »",
+   "problem": "Le terme de marque Premium a été traduit par « lisatasu » (supplément), ce qui fausse l'information de prix.",
+   "fix": "Premium hinnaga %@ (arveldatakse kord aastas).",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.welcome.title",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Sophia on sinu partner, keda meisterdada",
+   "gloss_fr": "« Sophia est ton partenaire, que tu bricoles/fabriques »",
+   "problem": "« maîtriser » rendu par « meisterdada » (bricoler) et le relatif « keda » renvoie à Sophia ; la phrase d'accueil est incompréhensible.",
+   "fix": "Sophia on sinu partner, kellega omandada",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.welcome.rotating.comprendreLeMonde",
+   "severity": "bloquant",
+   "category": "mt_artefact",
+   "current": "jooksvad asjad",
+   "gloss_fr": "« les choses qui courent / courantes »",
+   "problem": "Calque mot à mot de l'anglais « current affairs », sans aucun sens en estonien.",
+   "fix": "tänapäeva maailma",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.exams.quote1",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "sel ametiajal",
+   "gloss_fr": "« pendant ce mandat (électoral) »",
+   "problem": "« trimestre » scolaire rendu par « ametiaeg » (mandat politique), ridicule dans un témoignage d'élève.",
+   "fix": "sel veerandil",
+   "surface": "ui"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/s0.b0.text",
+   "severity": "bloquant",
+   "category": "mt_artefact",
+   "current": "Linnas **622** peab tänapäeva Saudi Araabiast Mekast pärit kaupmees oma linnast põgenema.",
+   "gloss_fr": "Dans la ville 622, un marchand originaire de La Mecque, d'Arabie saoudite actuelle, doit fuir sa ville.",
+   "problem": "« En 622 » a été rendu comme un lieu (« dans la ville 622 »), symptôme classique de traduction automatique, dès la première phrase du cours.",
+   "fix": "Aastal **622** peab Mekast – tänapäeva Saudi Araabias – pärit kaupmees oma linnast põgenema.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/s0.b0.text",
+   "severity": "bloquant",
+   "category": "mt_artefact",
+   "current": "Me tahame teda tappa.",
+   "gloss_fr": "Nous voulons le tuer.",
+   "problem": "Le « on » impersonnel est devenu « nous » : le texte dit que nous voulons tuer Muhammad.",
+   "fix": "Teda tahetakse tappa.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/s1.b0.text",
+   "severity": "bloquant",
+   "category": "mt_artefact",
+   "current": "Me elame seal hõimudena.",
+   "gloss_fr": "Nous y vivons en tribus.",
+   "problem": "« On y vit en tribus » est rendu à la première personne du pluriel, comme si le lecteur vivait en Arabie au VIIe siècle.",
+   "fix": "Seal elatakse hõimudena.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/s1.b2.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "**Muhamed**, kes on sündinud umbes **570**, sai Hira mäel asuvas koopas ilmutusi **610**-lt. Tema idee **Üks jumalast** ohustab",
+   "gloss_fr": "Muhammad, né vers 570, reçut des révélations « de la part de 610 ». Son idée « Un de dieu » menace",
+   "problem": "« Dieu unique » devient un syntagme agrammatical sans sens (« un de dieu ») et « à partir de 610 » porte un ablatif comme si 610 était une personne.",
+   "fix": "Selles tühimikus hakkab umbes **570**. aastal sündinud **Muhamed** alates **610**. aastast Hira mäe koopas ilmutusi saama. Tema idee **ainsast Jumalast** ohustab Meka kaubandust, mis elatub ebajumalatest.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/s2.b3.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Tema usklikud võitsid **Badr**-l **624**-s, kuid ülekaalus. [...] pidasid nad vastu Medina **piiramisele** linnas **627**.",
+   "gloss_fr": "Ses fidèles ont gagné à Badr en 624, mais en supériorité numérique. [...] ils ont résisté au siège de Médine dans la ville 627.",
+   "problem": "« En infériorité numérique » est inversé en « en supériorité », « en 627 » devient « dans la ville 627 », et les années portent des désinences collées par trait d'union.",
+   "fix": "Kuigi vastane on arvulises ülekaalus, võidavad tema järgijad **624**. aastal **Badri** lahingu. Seda võitu kogetakse imena. Vaatamata kaotusele Uhudi all peavad nad **627**. aastal vastu **Mediina piiramisele**. Tema võim kinnistub.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/s3.b3.e1.detail",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Esimene suur võit, arvulises ülekaalus.",
+   "gloss_fr": "Première grande victoire, en supériorité numérique.",
+   "problem": "Le sens est inversé : « ülekaal » signifie supériorité, non infériorité.",
+   "fix": "Esimene suur võit, kuigi vastane oli arvulises ülekaalus.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/s3.b3.e3.detail",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Alistumine ilma võitluseta ja üldise armuandmiseta.",
+   "gloss_fr": "Reddition sans combat et sans pardon général.",
+   "problem": "Le suffixe abessif (« sans ») a été appliqué aussi au pardon : le texte affirme qu'il n'y a pas eu de pardon général.",
+   "fix": "Alistumine ilma võitluseta ja üldine armuandmine.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/s4.b2.text",
+   "severity": "bloquant",
+   "category": "mt_artefact",
+   "current": "Islami tsivilisatsioonist sai ka [[Džihaad]] ideaal, nii enesepüüdlus kui ka kogukonna kaitse, ristteeks Kreeka, Pärsia ja India teadmiste vahel.",
+   "gloss_fr": "La civilisation islamique est devenue aussi l'idéal du djihad, effort sur soi et défense de la communauté, un carrefour entre les savoirs grec, perse et indien.",
+   "problem": "La phrase est cassée : la civilisation « devient l'idéal du djihad » au lieu d'être portée par lui, et le reste flotte sans verbe cohérent.",
+   "fix": "Kantuna ka [[džihaad]]i ideaalist – ühtaegu pingutus iseenda kallal ja kogukonna kaitse – saab islami tsivilisatsioonist Kreeka, Pärsia ja India teadmiste ristmik. Vähehaaval saab antiikaeg läbi.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire/hero.hook",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Kuus tsenseeritud luuletust, üks veendumus ja moodsa luule sünd.",
+   "gloss_fr": "Six poèmes censurés, une conviction (= une croyance intime) et la naissance de la poésie moderne.",
+   "problem": "« Condamnation » a été pris au sens de l'anglais « conviction » (croyance) : « veendumus » n'a rien de judiciaire.",
+   "fix": "Kuus tsenseeritud luuletust, üks kohtuotsus ja moodsa luule sünd.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire/s1.b0.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "**Charles Baudelaire** mängib **Neetud luule**: ääremail olevat kirjanikku, keda tema aeg ei armastanud. Tema raske elu toidab tema tööd.",
+   "gloss_fr": "Charles Baudelaire joue la « Poésie maudite » : un écrivain en marge... Sa vie difficile nourrit son travail (emploi).",
+   "problem": "« Incarne le poète maudit » devient « joue la Poésie maudite », formulation absurde et agrammaticale, et « œuvre » est traduit par « travail ».",
+   "fix": "**Charles Baudelaire** kehastab **neetud poeeti**: kirjanikku ääremaal, keda tema aeg ei armastanud. Tema raske elu toidab tema loomingut. Ta armastab elegantsi ja rafineeritust – seda nimetatakse **dändismiks** –, kuid tunneb ka allakäiku ja võlgu.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire/s1.b1.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Oma isa orvuks jäänud **6 aastat** läheb ta tülli oma äia kindral **Aupick**-ga",
+   "gloss_fr": "Orphelin de son père « 6 ans », il se dispute avec son beau-père (= père de son épouse) le général Aupick",
+   "problem": "« Beau-père » est traduit par « äi » (père de l'épouse) au lieu de « kasuisa » (second mari de la mère), et « à 6 ans » est devenu « 6 ans ».",
+   "fix": "**6**-aastaselt isast orvuks jäänud Baudelaire läheb tülli oma kasuisa, kindral **Aupickiga**, kes kontrollib osa tema varandusest.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire/s1.b4.text",
+   "severity": "bloquant",
+   "category": "mt_artefact",
+   "current": "Kohtuasjas **1857**, samal aastal kui kohtuprotsess **[[Proua Bovary]]** üle, läks ka **Kurjuse lilled** kohtu ette.",
+   "gloss_fr": "Dans l'affaire judiciaire 1857, la même année que le procès de « Madame Bovary » (titre traduit), Les Fleurs du Mal passèrent aussi devant le tribunal.",
+   "problem": "« En 1857 » est rendu « dans l'affaire judiciaire 1857 », et « Madame Bovary » est traduit alors que l'édition estonienne garde le titre « Madame Bovary ».",
+   "fix": "Aastal **1857**, samal aastal kui **[[Madame Bovary]]** kohtuprotsess, satub ka **Kurja lilled** kohtu ette.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire/s2.b0.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "**\"Põrn ja ideaalne\"**, esimene suurem osa, on kahe riigi vastu. **põrn**, inglise keelest laenatud sõna, tähistab sügavat igavust",
+   "gloss_fr": "« Rate (l'organe) et idéal », la première grande section, est contre deux États (pays). La rate, mot emprunté à l'anglais, désigne un ennui profond",
+   "problem": "« Spleen » est traduit par l'organe (põrn) et « oppose deux états » par « est contre deux pays » ; l'estonien possède le mot « spliin ».",
+   "fix": "**„Spliin ja ideaal“**, esimene suur osa, vastandab kaht hingeseisundit. **Spliin**, inglise keelest laenatud sõna, tähistab sügavat tüdimust, põhjuseta melanhooliat. **Ideaal** on aga janu ülenduse ja puhta ilu järele.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire/s2.b2.caption",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Öine Pariis 1850. aastatel: Baudelairi põrn.",
+   "gloss_fr": "Paris nocturne des années 1850 : la rate (organe) de Baudelaire.",
+   "problem": "Même erreur « spleen » = organe, dans une légende d'image très visible, avec en plus une graphie fautive du nom (Baudelairi au lieu de Baudelaire'i).",
+   "fix": "Öine Pariis 1850. aastatel: Baudelaire'i spliini kulissid.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire/s2.b3.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Seejärel eksleb Baudelaire kui **jalutuskäru**, see tähendab jalutajana",
+   "gloss_fr": "Baudelaire erre alors comme une poussette (landau), c'est-à-dire en promeneur",
+   "problem": "« Flâneur » est traduit par « poussette » ; l'estonien connaît « flanöör ».",
+   "fix": "Baudelaire uitab siis linnas **flanöörina** ehk jalutajana, kes vaatleb linna ilma kindla sihita.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire/s3.title (+ s3.b0.text, s3.b1.attribution)",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Kirjavahetus ja poeetiline alkeemia / **“Kirjavahetused”** / Charles Baudelaire, \"Kirjavahetus\"",
+   "gloss_fr": "Correspondance (échange de lettres) et alchimie poétique / « Les courriers »",
+   "problem": "Le titre du poème « Correspondances » (analogies entre les sens) est pris au sens de « courrier » ; l'édition estonienne l'intitule « Vastavused ».",
+   "fix": "Vastavused ja poeetiline alkeemia (s3.b0: **„Vastavused“**; attribution: Charles Baudelaire, „Vastavused“)",
+   "surface": "courses"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire/s4.b2.e1.title",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Taastusravi",
+   "gloss_fr": "Rééducation (médicale, kinésithérapie)",
+   "problem": "« Réhabilitation » judiciaire est traduite par la rééducation médicale.",
+   "fix": "Rehabiliteerimine",
+   "surface": "courses"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire/s4.b2.e1.detail",
+   "severity": "bloquant",
+   "category": "mt_artefact",
+   "current": "Kuus tsenseeritud luuletust tõstetakse lõpuks üles.",
+   "gloss_fr": "Les six poèmes censurés sont enfin soulevés (physiquement).",
+   "problem": "« Sont enfin levés » (la censure est levée) est traduit par « sont soulevés » ; la phrase n'a pas de sens.",
+   "fix": "Kuue tsenseeritud luuletuse keeld lõpuks tühistatakse.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_122_la_naissance_de_l_impressionnisme/s0.b1.text",
+   "severity": "bloquant",
+   "category": "nom_propre",
+   "current": "Pilgates pealkirja *Trükkimine, tõusev päike*",
+   "gloss_fr": "En se moquant du titre « Impression (imprimerie), soleil levant »",
+   "problem": "« Impression » est pris au sens de l'imprimerie ; le tableau de Monet s'appelle en estonien « Impressioon. Tõusev päike ».",
+   "fix": "Pilgates pealkirja *Impressioon. Tõusev päike*, ristis Leroy tahtmatult moodsa kunsti esimese suure avangardivoolu.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_122_la_naissance_de_l_impressionnisme/s0.b1.text",
+   "severity": "bloquant",
+   "category": "typographie",
+   "current": "Nii muutis **Zimpressionism** seda, kuidas me reaalsust vaatame.",
+   "gloss_fr": "Voici comment le « Zimpressionnisme » a changé notre façon de regarder le réel.",
+   "problem": "Coquille (Z parasite) sur le mot-clé du cours, en gras, dans l'introduction.",
+   "fix": "Nii muutis **impressionism** seda, kuidas me tegelikkust vaatame.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_122_la_naissance_de_l_impressionnisme/s1.b1.text",
+   "severity": "bloquant",
+   "category": "mt_artefact",
+   "current": "Kohtuasjas **1863** keeldus žürii enam kui **3 000** maalidest.",
+   "gloss_fr": "Dans l'affaire judiciaire 1863, le jury a refusé (de faire) plus de 3 000 tableaux.",
+   "problem": "« En 1863 » devient « dans l'affaire judiciaire 1863 », et « refuser des tableaux » est rendu avec le verbe « keelduma » (refuser de faire) au lieu de « tagasi lükkama ».",
+   "fix": "Aastal **1863** lükkab žürii tagasi üle **3000** maali.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_122_la_naissance_de_l_impressionnisme/s3.b0.text",
+   "severity": "bloquant",
+   "category": "mt_artefact",
+   "current": "Linnas **1874** korraldavad nad oma näituse. Grupp koondab **Monet**, **Renoir**, **Pissarro**, **Degas** ja **Berthe Morisot**",
+   "gloss_fr": "Dans la ville 1874, ils organisent leur exposition. Le groupe réunit Monet, Renoir... (noms au nominatif, non déclinés)",
+   "problem": "« En 1874 » est à nouveau rendu comme un lieu, et les noms des peintres ne sont pas déclinés au partitif comme l'exige le verbe.",
+   "fix": "Aastal **1874** korraldavad nad oma näituse. Rühma kuuluvad **Monet**, **Renoir**, **Pissarro**, **Degas** ja **Berthe Morisot**, kelle anne lööb tolleaegsetest eelarvamustest hoolimata läbi.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_122_la_naissance_de_l_impressionnisme/s4.b1.e0.detail",
+   "severity": "bloquant",
+   "category": "mt_artefact",
+   "current": "Manet skandaalitseb ajakirjaga Le Déjeuner sur l'herbe.",
+   "gloss_fr": "Manet fait scandale avec le magazine « Le Déjeuner sur l'herbe ».",
+   "problem": "Le tableau est devenu « un magazine » (ajakiri) et son titre reste en français alors qu'il est traduit « Lõunasöök murul » plus haut dans le cours.",
+   "fix": "Manet šokeerib maaliga *Lõunasöök murul*.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_166_narcisse_et_echo/s1.b3.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "jumal **Pauk**",
+   "gloss_fr": "le dieu « Détonation » (pauk = coup de feu, bang)",
+   "problem": "Le dieu Pan est rendu par « Pauk » (bruit d'explosion) ; la forme estonienne est « Paan ».",
+   "fix": "jumal **Paan**",
+   "surface": "courses"
+  },
+  {
+   "location": "course_166_narcisse_et_echo/s1.b3.text",
+   "severity": "bloquant",
+   "category": "mt_artefact",
+   "current": "kus teda tarbitakse armastusega",
+   "gloss_fr": "où elle est consommée (comme un produit) avec de l'amour",
+   "problem": "« Elle se consume d'amour » est traduit avec le verbe « consommer un produit » au passif, ce qui est absurde.",
+   "fix": "kus ta armastusest hääbub",
+   "surface": "courses"
+  },
+  {
+   "location": "course_166_narcisse_et_echo/s2.b1.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Narcisse helistab: \"Kas seal on kedagi?\" Ta vastab: \"Keegi!\"",
+   "gloss_fr": "Narcisse téléphone : « Y a-t-il quelqu'un ? » Il/elle répond : « Quelqu'un ! »",
+   "problem": "« Appelle » est pris au sens de « téléphoner » (helistama) ; un héros grec passe un coup de fil.",
+   "fix": "Narkissos hüüab: „Kas siin on keegi?“ Echo vastab: „Keegi!“",
+   "surface": "courses"
+  },
+  {
+   "location": "course_166_narcisse_et_echo/s3.b3.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Narkissos on ära kulunud. Kaja, kõigele vaatamata truu, kordab oma viimast hüvastijätt.",
+   "gloss_fr": "Narcisse est usé (comme un vêtement). Écho, fidèle malgré tout, répète son propre dernier adieu.",
+   "problem": "« Se consume » est traduit par « est usé », et « son dernier adieu » (celui de Narcisse) devient « son propre adieu » (oma) avec un cas fautif.",
+   "fix": "Narkissos hääbub. Echo, kõigele vaatamata truu, kordab tema viimast hüvastijättu.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_207_l_otan_a_quoi_ca_sert_encore/hero.hook",
+   "severity": "bloquant",
+   "category": "mt_artefact",
+   "current": "NATO-l ei ole kunagi olnud nii palju liikmeid, mis on loodud vastu astuma vaenlasele, mida pole eksisteerinud alates 1991. aastast.",
+   "gloss_fr": "L'OTAN n'a jamais eu autant de membres, lesquels ont été créés pour affronter un ennemi qui n'existe plus depuis 1991.",
+   "problem": "La relative « créée pour affronter » se rattache aux membres et non à l'OTAN : la logique de la phrase d'accroche est cassée.",
+   "fix": "Loodud vastu astuma vaenlasele, keda pole 1991. aastast enam olemas, pole NATO-l kunagi olnud nii palju liikmeid kui praegu.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_207_l_otan_a_quoi_ca_sert_encore/s3.b3.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Organisatsiooni akronüüm on kahes ametlikus keeles kahes ümberpööratud kujul: inglise keeles NATO ja prantsuse keeles NATO.",
+   "gloss_fr": "Le sigle existe sous deux formes inversées : NATO en anglais et NATO en français.",
+   "problem": "La forme française OTAN a été « traduite » en NATO : l'anecdote devient absurde (deux fois le même sigle).",
+   "fix": "Organisatsiooni lühend on tema kahes ametlikus keeles peegelpildis: inglise keeles NATO, prantsuse keeles OTAN.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_18_la_grande_depression_1929/s2.b0.text",
+   "severity": "bloquant",
+   "category": "mt_artefact",
+   "current": "Saates **29** “Must teisipäev” sügis kiireneb.",
+   "gloss_fr": "Dans l'émission 29 « Mardi noir », l'automne s'accélère.",
+   "problem": "« Le 29 » devient « dans l'émission 29 » et « la chute » est pris au sens d'« automne » (sügis).",
+   "fix": "**29.** oktoobril, mustal teisipäeval, kukkumine kiireneb.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_18_la_grande_depression_1929/s2.b0.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Siis tulevad [[pank jookseb]]: klientide lained, kes paaniliselt oma raha välja võtavad. Umbes **9000** USA pangad lähevad pankrotti.",
+   "gloss_fr": "Puis viennent « la banque court » : des vagues de clients... Environ 9000 banques (nominatif pluriel fautif) font faillite.",
+   "problem": "« Bank runs » est traduit mot à mot comme une phrase verbale (« la banque court ») au lieu du terme « pangajooks », et « 9000 panka » est mal accordé.",
+   "fix": "Siis tulevad [[pangajooksud]]: paanikas kliendid võtavad lainetena oma raha välja. Umbes **9000** USA panka läheb pankrotti.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_18_la_grande_depression_1929/s4.title (+ s4.b0.text glossaire, s4.b1.e2.title)",
+   "severity": "bloquant",
+   "category": "nom_propre",
+   "current": "Roosevelt ja uus tehing / [[Roosevelti uus tehing (1933)]] / Uus tehing",
+   "gloss_fr": "Roosevelt et la nouvelle transaction",
+   "problem": "« New Deal » est traduit littéralement par « nouvelle transaction » alors que l'estonien garde « New Deal » ; aucun lecteur ne reconnaîtra le programme.",
+   "fix": "Roosevelt ja New Deal (s4.b0: [[Roosevelti New Deal (1933)]]; s4.b1.e2.title: New Deal)",
+   "surface": "courses"
+  },
+  {
+   "location": "course_18_la_grande_depression_1929/s4.b0.text",
+   "severity": "bloquant",
+   "category": "mt_artefact",
+   "current": "**1932** valiti, **Franklin D. Roosevelt** toob turule [[Roosevelti uus tehing (1933)]]. Lõpp puhas [[laissez-faire]], idee, et riik ei peaks turgu puudutama. Riik pangandab [[taastumine]]: suuremad tööd",
+   "gloss_fr": "1932 fut élu, Franklin D. Roosevelt met sur le marché la nouvelle transaction. Fin pur laissez-faire... L'État « banque » (verbe inexistant) la reprise : des travaux plus grands",
+   "problem": "« Lance » devient « commercialise », « mise sur » devient un verbe inventé (pangandab), « grands travaux » devient « travaux plus grands » et les débuts de phrase sont agrammaticaux.",
+   "fix": "**1932**. aastal valitud **Franklin D. Roosevelt** käivitab [[Roosevelti New Deali (1933)]]. Lõpp puhtale [[laissez-faire]]'ile ehk ideele, et riik ei tohi turgu puutuda. Riik panustab [[majanduse elavdamisele]]: suured ehitustööd, pankade reguleerimine, sotsiaalkaitse algus. Taastumine jääb hapraks... kuni 1941. aasta mobilisatsioonini.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_107_crime_et_chatiment_dostoievski/s0.b0.text",
+   "severity": "bloquant",
+   "category": "mt_artefact",
+   "current": "Ajakirjas **1866** avaldatud **[[Kuritöö ja karistus]]**",
+   "gloss_fr": "Publié dans la revue « 1866 », Crime et Châtiment",
+   "problem": "« Publié en 1866 » est rendu « publié dans la revue 1866 ».",
+   "fix": "**1866**. aastal ilmunud **[[Kuritöö ja karistus]]** on **Fjodor Dostojevski** üks suurimaid romaane.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_107_crime_et_chatiment_dostoievski/s1.b0.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "kannatas ta **Semenovski** väljakul pilkupüüdmise all",
+   "gloss_fr": "il a souffert sur la place Semenovski du fait d'« attirer les regards »",
+   "problem": "« Simulacre de fusillade » (fausse exécution) est devenu « pilkupüüdmine » (le fait d'être accrocheur) ; l'épisode central de la biographie est perdu, et le nom de la place est mal translittéré.",
+   "fix": "elas ta **Semjonovski** väljakul üle näilise mahalaskmise",
+   "surface": "courses"
+  },
+  {
+   "location": "course_107_crime_et_chatiment_dostoievski/s3.b0.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Kohtunik **Porfiri Petrovitš** [...] teab, et on süüdi, kuid laseb end süüdistada.",
+   "gloss_fr": "Le juge Porfiri Petrovitch sait qu'il (lui-même) est coupable mais se laisse accuser.",
+   "problem": "Le sujet « il » (Raskolnikov) est perdu : le juge semble se savoir coupable et se laisser accuser.",
+   "fix": "Uurija **Porfiri Petrovitš**, **[[kohtupsühholoogia]]** meister, teab, et Raskolnikov on süüdi, kuid laseb tal end ise paljastada.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_107_crime_et_chatiment_dostoievski/s1.b3.text (+ s4.b2.text)",
+   "severity": "bloquant",
+   "category": "nom_propre",
+   "current": "**Kuritegevus ja karistus** näitab",
+   "gloss_fr": "« Criminalité et châtiment » montre",
+   "problem": "Le titre du roman, correct dans le titre du cours (« Kuritöö ja karistus »), devient « Criminalité et châtiment » dans deux segments.",
+   "fix": "**Kuritöö ja karistus** näitab",
+   "surface": "courses"
+  },
+  {
+   "location": "course_212_les_paradis_fiscaux_expliques/s1.b0.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "mida nimetatakse [[avamerel]] majanduseks",
+   "gloss_fr": "ce qu'on appelle l'économie « en haute mer »",
+   "problem": "« Offshore » (financier) est traduit par « en haute mer » ; l'estonien emploie « offshore ».",
+   "fix": "mida nimetatakse [[offshore]]-majanduseks",
+   "surface": "courses"
+  },
+  {
+   "location": "course_212_les_paradis_fiscaux_expliques/s1.b1.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "on võimalik luua koorefirma",
+   "gloss_fr": "il est possible de créer une « entreprise de crème / d'écorce »",
+   "problem": "« Société écran » est rendu par un mot inexistant (calque de « shell » = coquille) ; le terme estonien est « variettevõte » ou « riiulifirma ».",
+   "fix": "on võimalik luua variettevõte: firma, millel pole kontorit ega töötajaid ja mis eksisteerib vaid paberil.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_212_les_paradis_fiscaux_expliques/s2.title",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Kasumi teenimise kunst kaob",
+   "gloss_fr": "L'art de faire du profit disparaît",
+   "problem": "Le titre dit le contraire du français : ce n'est pas l'art qui disparaît, c'est le profit qu'on fait disparaître.",
+   "fix": "Kunst kasumit kaduma panna",
+   "surface": "courses"
+  },
+  {
+   "location": "course_212_les_paradis_fiscaux_expliques/s2.b0.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Peamine tööriist kannab nime [[Suured andmed]]: ettevõte määrab ise oma tütarettevõtete vahelise börsi hinna",
+   "gloss_fr": "Le principal outil s'appelle « Big data » : l'entreprise fixe elle-même le prix de bourse entre ses filiales",
+   "problem": "« Prix de transfert » est remplacé par le terme de glossaire « Big data », et « échanges » devient « bourse » (börs).",
+   "fix": "Peamine tööriist on [[siirdehind]]: ettevõte määrab ise oma tütarettevõtete vaheliste tehingute hinna, et näidata kasumit seal, kus maks on madalaim.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_212_les_paradis_fiscaux_expliques/s2.b2.text",
+   "severity": "bloquant",
+   "category": "mt_artefact",
+   "current": "Prantsuskeelne sõna “tax haven” tuleneb tõlkeveast: inglise keeles öeldakse “tax haven”, turvaline rahasadam (haven), mitte paradiis (taevas).",
+   "gloss_fr": "Le mot français « tax haven » vient d'une erreur de traduction : l'anglais dit « tax haven »... pas un paradis (« ciel », traduit).",
+   "problem": "L'anecdote est devenue absurde : le « mot français » est donné en anglais, et « heaven » est traduit, ce qui détruit le jeu de sonorités expliqué.",
+   "fix": "Prantsuse väljend „paradis fiscal“ (maksuparadiis) tuleneb tõlkeveast: inglise keeles öeldakse „tax haven“ – turvaline sadam (haven) raha jaoks, mitte paradiis (heaven). Kahe sarnase kõlaga sõna segiajamine muutis väljendi tähendust.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622_q6 (option correcte)",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Staatus, mis võimaldab kristlastel ja juutidel maksuvabalt oma religiooni säilitada",
+   "gloss_fr": "Le statut permettant aux chrétiens et aux juifs de garder leur religion sans payer d'impôt",
+   "problem": "« contre un impôt » a été inversé en « sans impôt » (maksuvabalt), ce qui rend la bonne réponse fausse.",
+   "fix": "Staatus, mis lubas kristlastel ja juutidel maksu eest oma usku säilitada",
+   "surface": "content"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622_q6 (option 3)",
+   "severity": "bloquant",
+   "category": "mt_artefact",
+   "current": "Kaupmehe haagissuvilate maks",
+   "gloss_fr": "Une taxe sur les caravanes de camping du marchand",
+   "problem": "« caravanes marchandes » est rendu par « haagissuvila » (caravane de camping), faux sens risible.",
+   "fix": "Kaubakaravanide maks",
+   "surface": "content"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622_q1 (Q)",
+   "severity": "bloquant",
+   "category": "mt_artefact",
+   "current": "Mida kujutab Hegira numbris 622?",
+   "gloss_fr": "Que représente l'Hégire dans le numéro 622 ?",
+   "problem": "« en 622 » est rendu par « numbris 622 » (dans le nombre 622) au lieu de « aastal 622 », et « Hegira » n'est pas la forme estonienne (hidžra).",
+   "fix": "Mida tähendab hidžra aastal 622?",
+   "surface": "content"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire_q4 (Q) + q6 (option 3)",
+   "severity": "bloquant",
+   "category": "mt_artefact",
+   "current": "jaotises \"Põrn ja ideaal\" / \"Põrn\"",
+   "gloss_fr": "dans la section « Rate (l'organe) et Idéal » / « Rate »",
+   "problem": "« Spleen » (mélancolie baudelairienne, en estonien « spliin ») a été traduit par l'organe « põrn ».",
+   "fix": "osas „Spliin ja ideaal“ / „Spliin“",
+   "surface": "content"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire_q6 (option correcte + explanation)",
+   "severity": "bloquant",
+   "category": "mt_artefact",
+   "current": "\"Kirjavahetus\"",
+   "gloss_fr": "« Correspondance » au sens d'échange de lettres",
+   "problem": "Le poème « Correspondances » (en estonien « Vastavused ») a été pris au sens épistolaire ; même erreur en q8 (« kirjavahetuse poeetika »).",
+   "fix": "„Vastavused“ (q8 : „vastavuste poeetika“)",
+   "surface": "content"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire_q6 (option 4)",
+   "severity": "bloquant",
+   "category": "mt_artefact",
+   "current": "\"Kollektsioon\"",
+   "gloss_fr": "« Collection »",
+   "problem": "Le poème « Recueillement » a été confondu avec « recueil » et rendu par « collection ».",
+   "fix": "„Mõtisklus“",
+   "surface": "content"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire_q5 (explanation)",
+   "severity": "bloquant",
+   "category": "mt_artefact",
+   "current": "Luuletaja rändab seal vankrina, Pariisi elu vaatlejana Haussmanni käe all.",
+   "gloss_fr": "Le poète y erre en tant que charrette, observateur de la vie parisienne sous la main de Haussmann.",
+   "problem": "« en flâneur » est devenu « vankrina » (comme une charrette) et « sous Haussmann » est calqué en « sous la main de Haussmann ».",
+   "fix": "Luuletaja uitab seal flanöörina, Haussmanni-aegse Pariisi elu vaatlejana.",
+   "surface": "content"
+  },
+  {
+   "location": "g_mpzqlws4_afvtk",
+   "severity": "bloquant",
+   "category": "nom_propre",
+   "current": "Teatri suurepärased nimed — Dramaatilisest Kreeka tragöödiast Shakespea draamadeni.",
+   "gloss_fr": "Les noms formidables du théâtre — De la tragédie grecque dramatique aux drames de « Shakespea ».",
+   "problem": "Shakespeare est mal orthographié (« Shakespea ») et « grands noms » est rendu par « suurepärased » (formidables).",
+   "fix": "Teatri suurnimed — Kreeka tragöödiast Shakespeare'i draamadeni.",
+   "surface": "content"
+  },
+  {
+   "location": "g_mpzqlws4_7r1yy",
+   "severity": "bloquant",
+   "category": "mt_artefact",
+   "current": "Suurepärased režissöörid ja liigutused, mis muutsid liikuvas pildis pöörde.",
+   "gloss_fr": "Des réalisateurs formidables et des gestes corporels qui ont changé un tournant dans l'image animée.",
+   "problem": "« mouvements » (courants cinématographiques) est traduit par « liigutused » (gestes du corps) et la fin de phrase est agrammaticale.",
+   "fix": "Suured režissöörid ja voolud, mis tegid liikuvas pildis pöörde.",
+   "surface": "content"
+  },
+  {
+   "location": "course_13_la_bataille_de_waterloo_1815/description",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "**18. juuli 1815. a** varises Belgias",
+   "gloss_fr": "Le 18 juillet 1815, en Belgique...",
+   "problem": "La date est fausse : juin (juuni) est devenu juillet (juuli), et l'abréviation « 1815. a » n'a pas sa place dans une date complète.",
+   "fix": "**18. juunil 1815** varises Belgias ühel vihmasel päeval Napoleoni impeerium kokku.",
+   "surface": "catalog"
+  },
+  {
+   "location": "course_120_l_alchimiste_paulo_coelho/description",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Andaluusia lambakoer Santiago läheb püramiidide juurest aardeid otsima",
+   "gloss_fr": "Santiago, chien de berger andalou, part chercher des trésors depuis les Pyramides",
+   "problem": "« berger » a été rendu par « chien de berger » et « aux Pyramides » par « depuis les Pyramides ».",
+   "fix": "Andaluusia lambakarjus Santiago läheb püramiidide juurde aaret otsima.",
+   "surface": "catalog"
+  },
+  {
+   "location": "course_124_rembrandt_et_l_ecole_flamande/description",
+   "severity": "bloquant",
+   "category": "nom_propre",
+   "current": "*Öine vahetus*",
+   "gloss_fr": "« L'équipe de nuit » (au sens du travail posté)",
+   "problem": "La Ronde de nuit s'appelle en estonien « Öine vahtkond » ; « öine vahetus » désigne le poste de nuit d'une usine.",
+   "fix": "*Öine vahtkond*",
+   "surface": "catalog"
+  },
+  {
+   "location": "course_146_hitchcock_et_le_suspense/description",
+   "severity": "bloquant",
+   "category": "nom_propre",
+   "current": "*Psühholoogia*, *Vertiigo* või *Tagaakna* abil",
+   "gloss_fr": "Avec « La Psychologie », « Vertiigo » ou « La Fenêtre sur cour »",
+   "problem": "Psycho est devenu « Psychologie » et Vertigo est mal orthographié ; les titres estoniens établis sont « Psühho », « Vertigo » et « Tagaaken ».",
+   "fix": "*Psühho*, *Vertigo* või *Tagaakna* abil",
+   "surface": "catalog"
+  },
+  {
+   "location": "course_154_impression_soleil_levant_monet/title",
+   "severity": "bloquant",
+   "category": "nom_propre",
+   "current": "Print, tõusev päike, Monet",
+   "gloss_fr": "« Tirage imprimé, soleil levant, Monet »",
+   "problem": "« Impression » a été pris au sens d'imprimerie ; le tableau s'appelle en estonien « Impressioon. Tõusev päike ».",
+   "fix": "Impressioon. Tõusev päike, Monet",
+   "surface": "catalog"
+  },
+  {
+   "location": "course_154_impression_soleil_levant_monet/description",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Le Havre'i merevägi maalis kiiresti, pilkav kriitik ja sõna \"impressionism\" sündis. Monet fikseerib tööstusliku ja valgusmomendi.",
+   "gloss_fr": "La marine de guerre du Havre a peint vite, un critique moqueur et le mot est né. Monet fixe l'industriel et le moment lumineux.",
+   "problem": "« marine » (tableau) est devenu « marine de guerre », la phrase est disloquée et les guillemets sont anglais.",
+   "fix": "Kiiresti maalitud Le Havre'i merevaade, pilkav kriitik – ja sõna „impressionism“ oligi sündinud. Monet jäädvustab tööstusliku, valgusküllase hetke.",
+   "surface": "catalog"
+  },
+  {
+   "location": "course_159_le_theatre_de_shakespeare/description",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Londonis kirjutas Shakespeare ajakirjale Globe.",
+   "gloss_fr": "À Londres, Shakespeare écrivait pour le magazine Globe.",
+   "problem": "Le Globe est un théâtre, pas une revue.",
+   "fix": "Londonis kirjutas Shakespeare Globe'i teatrile.",
+   "surface": "catalog"
+  },
+  {
+   "location": "course_15_la_belle_epoque_1871_1914/description",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "ja luumurrud, mis viivad katastroofini",
+   "gloss_fr": "et des fractures osseuses qui mènent à la catastrophe",
+   "problem": "« fractures » (sociales) a été rendu par des fractures d'os.",
+   "fix": "ja lõhed, mis viivad katastroofini",
+   "surface": "catalog"
+  },
+  {
+   "location": "course_169_tantale_et_son_supplice/subtitle",
+   "severity": "bloquant",
+   "category": "mt_artefact",
+   "current": "Sulge, mitte kunagi piisavalt lähedal",
+   "gloss_fr": "« Ferme ! (impératif), jamais assez près »",
+   "problem": "« Tout près » est passé par l'anglais « close » et a été traduit comme l'impératif du verbe fermer.",
+   "fix": "Nii lähedal, kuid mitte kunagi käeulatuses",
+   "surface": "catalog"
+  },
+  {
+   "location": "course_169_tantale_et_son_supplice/description",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Tantalus teenib oma poega jumalatele.",
+   "gloss_fr": "Tantale est au service de son fils pour les dieux.",
+   "problem": "« sert son fils » (comme repas) a été rendu avec « teenima » (être au service de / gagner) ; le nom grec est Tantalos comme dans le titre.",
+   "fix": "Tantalos pakub jumalatele söögiks oma poega.",
+   "surface": "catalog"
+  },
+  {
+   "location": "course_170_meduse_et_persee/subtitle + description",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Pilk, mis kivistub | Medusa kivistub pilguga.",
+   "gloss_fr": "Le regard qui se pétrifie | Méduse se pétrifie d'un regard.",
+   "problem": "Verbe intransitif « kivistuma » (devenir pierre) au lieu du transitif « kivistama » : le sens est inversé.",
+   "fix": "Pilk, mis kivistab | Medusa kivistab ühe pilguga.",
+   "surface": "catalog"
+  },
+  {
+   "location": "course_178_antigone_devoir_familial_vs_loi_de_l_eta/title",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Antigone: perekohustus vs osariigi seadus",
+   "gloss_fr": "devoir familial vs loi de l'État fédéré (comme un État américain)",
+   "problem": "« État » a été rendu par « osariik » (État fédéré) au lieu de « riik ».",
+   "fix": "Antigone: perekohustus vs riigi seadus",
+   "surface": "catalog"
+  },
+  {
+   "location": "course_180_thor_et_loki_mythologie_nordique/title+subtitle ; course_181_ragnarok_la_fin_du_monde_nordique/subtitle ; course_186_les_valkyries_et_le_valhalla/subtitle",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Norra mütoloogia",
+   "gloss_fr": "mythologie norvégienne",
+   "problem": "« nordique » est rendu par « norvégien » sur trois fiches ; l'estonien dit « Põhjala mütoloogia », et la fiche 181 utilise elle-même « Põhjamaade » dans sa description.",
+   "fix": "Põhjala mütoloogia (pealkirjas: Thor ja Loki (Põhjala mütoloogia))",
+   "surface": "catalog"
+  },
+  {
+   "location": "course_191_enee_et_la_fondation_de_rome_virgile/description",
+   "severity": "bloquant",
+   "category": "mt_artefact",
+   "current": "et leida Rooma joon",
+   "gloss_fr": "pour trouver la ligne de Rome",
+   "problem": "« fonder la lignée de Rome » a été traduit mot à mot en passant par « find the line ».",
+   "fix": "et panna alus Rooma kuningasoole",
+   "surface": "catalog"
+  },
+  {
+   "location": "course_197_les_mille_et_une_nuits_sheherazade/subtitle",
+   "severity": "bloquant",
+   "category": "mt_artefact",
+   "current": "Ütle ellu jääda",
+   "gloss_fr": "Dis survivre",
+   "problem": "Phrase agrammaticale ; « Raconter pour survivre » demande un infinitif et une finale. Le nom varie aussi entre titre (Šeherezade) et description (Scheherazade).",
+   "fix": "Jutustada, et ellu jääda",
+   "surface": "catalog"
+  },
+  {
+   "location": "course_199_les_titans_vs_les_dieux_la_titanomachie/description",
+   "severity": "bloquant",
+   "category": "non_traduit",
+   "current": "Siin on post-titanomachy: karistused, Gigantomachy, Olümpia kord.",
+   "gloss_fr": "Voici post-titanomachy : châtiments, Gigantomachy, ordre olympique (des Jeux)",
+   "problem": "Deux termes restés en anglais et « Olümpia » renvoie aux Jeux olympiques, pas à l'Olympe.",
+   "fix": "Nii näeb välja titanomahhia järelmäng: karistused, gigantomahhia ja Olümpose kord.",
+   "surface": "catalog"
+  },
+  {
+   "location": "course_201_la_naissance_du_conflit_israelo_palestin/description",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Üks maa, kaks inimest, Briti lubadus on võimatu täita.",
+   "gloss_fr": "Une terre, deux personnes, la promesse britannique est impossible à tenir.",
+   "problem": "« deux peuples » est devenu « deux personnes » et la relative a été perdue.",
+   "fix": "Üks maa, kaks rahvast ja Briti lubadus, mida on võimatu täita.",
+   "surface": "catalog"
+  },
+  {
+   "location": "course_205_le_petrole_comme_source_de_conflits/description",
+   "severity": "bloquant",
+   "category": "terminologie",
+   "current": "miks **õli** pole kunagi lihtsalt energia",
+   "gloss_fr": "pourquoi l'huile n'est jamais juste de l'énergie",
+   "problem": "« pétrole » est « nafta » (comme dans le titre de la fiche) ; « õli » signifie huile.",
+   "fix": "miks **nafta** pole kunagi lihtsalt energia",
+   "surface": "catalog"
+  },
+  {
+   "location": "course_211_comment_fonctionne_le_prix_du_petrole/description",
+   "severity": "bloquant",
+   "category": "mt_artefact",
+   "current": "See on sündinud **sõjalõksust** tootvate riikide, finantsturgude ja äkiliste kriiside vahel",
+   "gloss_fr": "Il est né d'un « piège de guerre » entre pays producteurs, marchés financiers et crises soudaines",
+   "problem": "« bras de fer » est devenu un mot inexistant (« piège de guerre »).",
+   "fix": "See sünnib tootjariikide, finantsturgude ja ootamatute kriiside **jõukatsumisest**, mis ulatub mõnikord absurdini.",
+   "surface": "catalog"
+  },
+  {
+   "location": "course_218_le_role_des_donnees_le_petrole_du_xxie_s/description",
+   "severity": "bloquant",
+   "category": "mt_artefact",
+   "current": "Nad ütlevad, et andmed on uus õli.",
+   "gloss_fr": "Ils disent que les données sont la nouvelle huile.",
+   "problem": "« On dit » rendu par « ils disent » et « pétrole » par « huile », en contradiction avec le titre (« nafta »).",
+   "fix": "Öeldakse, et andmed on uus nafta.",
+   "surface": "catalog"
+  },
+  {
+   "location": "course_222_la_crise_de_la_biodiversite/description",
+   "severity": "bloquant",
+   "category": "autre",
+   "current": "vähenenud **Z69**%",
+   "gloss_fr": "ont chuté de Z69 %",
+   "problem": "Jeton corrompu : « Z69 » n'est pas un nombre.",
+   "fix": "vähenenud **69% alates 1970. aastast**",
+   "surface": "catalog"
+  },
+  {
+   "location": "course_223_l_economie_circulaire/description",
+   "severity": "bloquant",
+   "category": "autre",
+   "current": "**Etm., valmista, viska minema**",
+   "gloss_fr": "« Etm., fabrique, jette »",
+   "problem": "« Extraire » est devenu l'abréviation inexistante « Etm. ».",
+   "fix": "**Kaeva, tooda, viska minema**",
+   "surface": "catalog"
+  },
+  {
+   "location": "course_225_la_montee_des_eaux/description",
+   "severity": "bloquant",
+   "category": "autre",
+   "current": "tõusta **Tsooni** meetri võrra",
+   "gloss_fr": "monter de « Tsooni » mètre",
+   "problem": "« un mètre » est devenu un mot sans sens (« Tsooni »).",
+   "fix": "tõusta **ühe meetri** võrra",
+   "surface": "catalog"
+  },
+  {
+   "location": "course_227_le_populisme_pourquoi_ca_monte_partout/description",
+   "severity": "bloquant",
+   "category": "autre",
+   "current": "**ZPea kõiki demokraatiaid**",
+   "gloss_fr": "« ZPea toutes les démocraties »",
+   "problem": "Jeton corrompu à la place de « peaaegu » (presque).",
+   "fix": "**peaaegu kõiki demokraatiaid**",
+   "surface": "catalog"
+  },
+  {
+   "location": "course_24_la_bataille_de_dien_bien_phu_1954/description",
+   "severity": "bloquant",
+   "category": "autre",
+   "current": "**13. märtsist** kuni **7. nüüd 1954** kapituleerus Põhja-Vietnami basseinis piiratud Prantsuse armee",
+   "gloss_fr": "Du 13 mars au « 7 maintenant 1954 », l'armée française assiégée dans une piscine du Nord-Vietnam capitule",
+   "problem": "« mai » est devenu « nüüd » (maintenant) et « cuvette » (relief) a été rendu par « bassin/piscine ».",
+   "fix": "**13. märtsist** **7. maini 1954** kapituleerus Põhja-Vietnami mägiorus piiratud Prantsuse armee Viet Minhi ees.",
+   "surface": "catalog"
+  },
+  {
+   "location": "course_30_la_blitzkrieg_1940/description",
+   "severity": "bloquant",
+   "category": "autre",
+   "current": "**kuue nädala jooksul**, **10.tagumik** kuni **22. juunini 1940. a**",
+   "gloss_fr": "en six semaines, du « 10.postérieur » au 22 juin 1940",
+   "problem": "« mai » est devenu « tagumik » (postérieur), la phrase commence en minuscule et l'abréviation « a » est déplacée.",
+   "fix": "**Kuue nädalaga**, **10. maist** **22. juunini 1940**, vallutas Saksa armee Prantsusmaa ja Beneluxi riigid.",
+   "surface": "catalog"
+  },
+  {
+   "location": "course_31_le_plan_marshall_1947_1952/description ; course_145_kubrick_2001_l_odyssee_de_l_espace/description",
+   "severity": "bloquant",
+   "category": "mt_artefact",
+   "current": "Filmis **1947** on Euroopa varemetes | Filmis **1968** muudab **Stanley Kubrick**",
+   "gloss_fr": "Dans le film 1947, l'Europe est en ruines | Dans le film 1968, Stanley Kubrick transforme",
+   "problem": "« En 1947 / En 1968 » a été rendu deux fois par « dans le film 1947/1968 ».",
+   "fix": "**1947.** aastal on Euroopa varemetes | **1968.** aastal muudab **Stanley Kubrick** ulme meeleliseks kogemuseks.",
+   "surface": "catalog"
+  },
+  {
+   "location": "course_143_orson_welles_et_citizen_kane/title + description",
+   "severity": "bloquant",
+   "category": "mt_artefact",
+   "current": "Orson Welles ja kodanik Kane | **25 aastat** juhib **Orson Welles** *Kodanik Kane* (**1941**).",
+   "gloss_fr": "Orson Welles et citoyen Kane | Pendant 25 ans, Orson Welles dirige (manage) Citizen Kane.",
+   "problem": "« À 25 ans » est devenu « pendant 25 ans », « réalise » est devenu « dirige », et le titre du film perd sa majuscule dans l'intitulé.",
+   "fix": "Orson Welles ja „Kodanik Kane“ | **25-aastaselt** lavastab **Orson Welles** filmi *Kodanik Kane* (**1941**).",
+   "surface": "catalog"
+  },
+  {
+   "location": "course_32_la_guerre_du_vietnam_1955_1975/description",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "USA andis kahekümne aasta jooksul Vietnamile tohutu jõu kommunismi ohjeldamiseks.",
+   "gloss_fr": "Pendant vingt ans, les États-Unis ont donné au Vietnam une force immense pour contenir le communisme.",
+   "problem": "« engager une force au Vietnam » est devenu « donner une force au Vietnam ».",
+   "fix": "Kakskümmend aastat paiskas USA Vietnami tohutu sõjajõu, et kommunismi ohjeldada.",
+   "surface": "catalog"
+  },
+  {
+   "location": "course_20_hiroshima_et_nagasaki_1945/title + description",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Miks pommitasid USA Hiroshimat ja Nagasakit? | **6. augustil 1945. a**, aatomipomm õhutas Hiroshima.",
+   "gloss_fr": "Pourquoi les USA ont-ils (pluriel) bombardé... | Le 6 août 1945, une bombe atomique a attisé Hiroshima.",
+   "problem": "« rase » est devenu « attise/ventile » (õhutas), USA se conjugue au singulier en estonien et la date est mal formatée.",
+   "fix": "Miks pommitas USA Hiroshimat ja Nagasakit? | **6. augustil 1945** pühib aatomipomm Hiroshima maa pealt.",
+   "surface": "catalog"
+  },
+  {
+   "location": "course_41_pourquoi_le_ciel_est_il_bleu/subtitle",
+   "severity": "bloquant",
+   "category": "non_traduit",
+   "current": "Lumière ja atmosfäär",
+   "gloss_fr": "Lumière (en français) et atmosphère",
+   "problem": "Le mot français est resté tel quel sur la carte.",
+   "fix": "Valgus ja atmosfäär",
+   "surface": "catalog"
+  },
+  {
+   "location": "course_42_pourquoi_reve_t_on/title",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Miks me unistame?",
+   "gloss_fr": "Pourquoi rêvassons-nous / avons-nous des aspirations ?",
+   "problem": "« unistama » signifie rêver éveillé ; rêver en dormant se dit « und nägema », comme la description le fait elle-même.",
+   "fix": "Miks me und näeme?",
+   "surface": "catalog"
+  },
+  {
+   "location": "course_47_pourquoi_baille_t_on/description",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Siin on kõige tugevamad juhid.",
+   "gloss_fr": "Voici les leaders les plus forts.",
+   "problem": "« pistes » (hypothèses) est devenu « leaders » via l'anglais « leads ».",
+   "fix": "Siin on kõige tõsiseltvõetavamad seletused.",
+   "surface": "catalog"
+  },
+  {
+   "location": "course_63_comment_se_forment_les_tremblements_de_t/subtitle",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Vead ja lained",
+   "gloss_fr": "Erreurs et ondes",
+   "problem": "« failles » (géologiques) a été traduit par « erreurs ».",
+   "fix": "Murrangud ja lained",
+   "surface": "catalog"
+  },
+  {
+   "location": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur/description",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Ta lihtsalt igatseb seda iga kord.",
+   "gloss_fr": "Elle en a simplement la nostalgie à chaque fois.",
+   "problem": "« rater » est passé par l'anglais « miss » puis « avoir la nostalgie de ».",
+   "fix": "Ta lihtsalt ei taba seda kunagi.",
+   "surface": "catalog"
+  },
+  {
+   "location": "course_67_qu_est_ce_qu_un_trou_noir/subtitle",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Äärmuslik tõsidus",
+   "gloss_fr": "Sérieux extrême",
+   "problem": "« gravité » pris au sens de sérieux et non de gravitation.",
+   "fix": "Äärmuslik gravitatsioon",
+   "surface": "catalog"
+  },
+  {
+   "location": "course_76_pourquoi_les_feuilles_changent_elles_de/description",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Saate taga ellujäämisstrateegia, et talv üle elada.",
+   "gloss_fr": "Derrière l'émission (télé), stratégie de survie pour passer l'hiver.",
+   "problem": "« spectacle » rendu par « émission » (saade) et la phrase n'a pas de verbe.",
+   "fix": "Selle vaatemängu taga peitub ellujäämisstrateegia, et talv üle elada.",
+   "surface": "catalog"
+  },
+  {
+   "location": "course_87_l_apologie_de_socrate_platon/description",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Aastal 399 eKr proovis Ateena Sokratese üle.",
+   "gloss_fr": "En 399 av. J.-C., Athènes a essayé par-dessus Socrate.",
+   "problem": "« juger » est passé par l'anglais « try » puis « essayer ».",
+   "fix": "Aastal 399 eKr mõistab Ateena Sokratese üle kohut.",
+   "surface": "catalog"
+  },
+  {
+   "location": "course_99_le_pere_goriot_balzac/description",
+   "severity": "bloquant",
+   "category": "mt_artefact",
+   "current": "Rastignac saab Pariisist teada isa ja süüdimõistetu seljas. Balzac leiutab inimkomöödia.",
+   "gloss_fr": "Rastignac apprend des nouvelles de Paris sur le dos (physique) d'un père et d'un condamné. Balzac invente la comédie-humaine.",
+   "problem": "« sur le dos de » est traduit littéralement, « bagnard » devient « condamné » et La Comédie humaine a un titre estonien.",
+   "fix": "Rastignac õpib Pariisi tundma ühe isa ja ühe sunnitöölise arvel. Balzac loob „Inimliku komöödia“.",
+   "surface": "catalog"
+  },
+  {
+   "location": "course_9_l_empire_azteque/description",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Nende austusavaldusele ja ohvritele rajatud impeerium lagunes kahe aastaga hispaanlaste vastu.",
+   "gloss_fr": "Leur empire fondé sur l'hommage et les victimes s'est désagrégé en deux ans contre les Espagnols.",
+   "problem": "« tribut » a été pris au sens d'hommage (austusavaldus) au lieu d'impôt (andam).",
+   "fix": "Nende andamitele ja inimohvritele rajatud impeerium varises hispaanlaste ees kahe aastaga kokku.",
+   "surface": "catalog"
+  },
+  {
+   "location": "course_153_la_creation_d_adam_michel_ange/title",
+   "severity": "bloquant",
+   "category": "grammaire",
+   "current": "Aadama, Michelangelo loomine",
+   "gloss_fr": "« D'Adam, de Michel-Ange la création »",
+   "problem": "Le génitif « Aadama » est séparé de son nom « loomine » par le nom de l'auteur : le titre est incompréhensible.",
+   "fix": "Aadama loomine, Michelangelo",
+   "surface": "catalog"
+  },
+  {
+   "location": "course_111_to_kill_a_mockingbird_harper_lee/title",
+   "severity": "bloquant",
+   "category": "nom_propre",
+   "current": "Tapa pilkav lind, Harper Lee",
+   "gloss_fr": "« Tue oiseau moqueur » (traduction littérale)",
+   "problem": "Le roman a un titre estonien célèbre : « Tappa laulurästast ».",
+   "fix": "Tappa laulurästast, Harper Lee",
+   "surface": "catalog"
+  },
+  {
+   "location": "course_173_ulysse_et_le_cyclope/title + subtitle + description",
+   "severity": "bloquant",
+   "category": "nom_propre",
+   "current": "Odysseus ja kükloobid | Kaval versus jõud | vastamisi kükloopide polüfeemusega",
+   "gloss_fr": "Ulysse et les cyclopes | Rusé versus force | face au « polyphémus des cyclopes »",
+   "problem": "Le Cyclope est au singulier, Polyphème devient un nom commun mal décliné, et « Kaval » est un adjectif là où il faut le nom « kavalus ».",
+   "fix": "Odysseus ja kükloop | Kavalus jõu vastu | Odüsseias astub Odysseus vastamisi kükloop Polyphemosega.",
+   "surface": "catalog"
+  },
+  {
+   "location": "paywall.lockedSubjects / paywall.lockedSubjectsWithPremium",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "3 avatavat objekti / Premiumiga avamiseks 3 objekti",
+   "gloss_fr": "« 3 objets à ouvrir » / « 3 objets pour ouvrir avec Premium »",
+   "problem": "« matières » traduit par « objekt » (objet, chose physique) ; ailleurs l'app dit « aine » ou « teema ».",
+   "fix": "3 ainet, mida avada / 3 ainet, mida Premiumiga avada",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.review4.quote",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "kust ma kõik need anekdoodid võtan",
+   "gloss_fr": "« d'où je sors toutes ces blagues »",
+   "problem": "Faux ami : « anekdoot » signifie « blague » en estonien, pas « anecdote ».",
+   "fix": "Mu sõbrad küsivad, kust ma kõik need põnevad faktid võtan.",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.final.subjects",
+   "severity": "majeur",
+   "category": "registre",
+   "current": "TEIE TEEMAD",
+   "gloss_fr": "« VOS MATIÈRES » (vouvoiement)",
+   "problem": "Vouvoiement alors que toute l'app tutoie ; « matière » devrait en outre être « aine ».",
+   "fix": "SINU AINED",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.program.profileLabel",
+   "severity": "majeur",
+   "category": "registre",
+   "current": "TEIE PROFIIL",
+   "gloss_fr": "« VOTRE PROFIL » (vouvoiement)",
+   "problem": "Vouvoiement sur l'écran de profil alors que l'app tutoie partout.",
+   "fix": "SINU PROFIIL",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.phone.title",
+   "severity": "majeur",
+   "category": "registre",
+   "current": "Kui palju aega⏎telefoniga veedate?",
+   "gloss_fr": "« Combien de temps passez-vous avec le téléphone ? »",
+   "problem": "Verbe au pluriel/vouvoiement « veedate » dans une question d'onboarding tutoyée.",
+   "fix": "Kui palju aega⏎veedad telefonis?",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.phone.title",
+   "severity": "majeur",
+   "category": "registre",
+   "current": "Kui palju aega veedate telefonis?",
+   "gloss_fr": "« Combien de temps passez-vous sur le téléphone ? »",
+   "problem": "Vouvoiement ; la clé voisine onboardingV2.phoneTime.title tutoie correctement (« veedad »).",
+   "fix": "Kui palju aega veedad telefonis?",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.showcase.collections.title",
+   "severity": "majeur",
+   "category": "registre",
+   "current": "Järgige temaatilisi⏎õppeteid",
+   "gloss_fr": "« Suivez (vous) des chemins d'apprentissage thématiques »",
+   "problem": "Impératif pluriel « Järgige » ; « parcours » devrait aussi reprendre le terme « teekond » utilisé ailleurs.",
+   "fix": "Järgi temaatilisi⏎teekondi",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.showcase.quiz.title",
+   "severity": "majeur",
+   "category": "registre",
+   "current": "Täiustage⏎viktoriinidega",
+   "gloss_fr": "« Perfectionnez (vous, quelque chose) avec les quiz »",
+   "problem": "Impératif pluriel et verbe transitif « täiustama » sans complément ; « Améliore-toi » n'est pas rendu.",
+   "fix": "Arene⏎viktoriinidega",
+   "surface": "ui"
+  },
+  {
+   "location": "profile.streak.start",
+   "severity": "majeur",
+   "category": "registre",
+   "current": "Alustamiseks lugege kursust!",
+   "gloss_fr": "« Pour commencer, lisez (vous) un cours ! »",
+   "problem": "Impératif pluriel « lugege » sur l'écran de profil tutoyé.",
+   "fix": "Alustamiseks loe üks kursus!",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.premiumTrial.step3.title",
+   "severity": "majeur",
+   "category": "registre",
+   "current": "Jätke see alles või tühista",
+   "gloss_fr": "« Gardez-le (vous) ou annule (tu) »",
+   "problem": "Mélange de vouvoiement et de tutoiement dans la même phrase.",
+   "fix": "Jäta alles või tühista",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.weeks.caption",
+   "severity": "majeur",
+   "category": "registre",
+   "current": "Kujuta ette, mida võiksite murdosa sellest ajast õppida.",
+   "gloss_fr": "« Imagine (tu) ce que vous pourriez apprendre fraction de ce temps. »",
+   "problem": "« Kujuta » (tu) suivi de « võiksite » (vous), et « murdosa sellest ajast » n'est pas décliné.",
+   "fix": "Kujuta ette, mida sa võiksid õppida murdosaga sellest ajast.",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.loading.title / onboarding.loading.step3",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "Valmistame sinu reisi ette / Reisi ettevalmistamine",
+   "gloss_fr": "« Nous préparons ton voyage » / « Préparation du voyage »",
+   "problem": "« parcours » rendu par « reis » (voyage touristique) alors que l'app utilise « teekond » partout ailleurs.",
+   "fix": "Valmistame sinu teekonda ette / Sinu teekonna ettevalmistamine",
+   "surface": "ui"
+  },
+  {
+   "location": "collections.badge.path",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "REIS",
+   "gloss_fr": "« VOYAGE »",
+   "problem": "Badge « PARCOURS » traduit par « voyage » ; le terme produit est « teekond » (collections.path, tab.path).",
+   "fix": "TEEKOND",
+   "surface": "ui"
+  },
+  {
+   "location": "collections.badge.complete",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "TÄIELIK",
+   "gloss_fr": "« COMPLET / ENTIER »",
+   "problem": "« Terminée » rendu par l'adjectif « entier » ; le badge ne dit plus que la collection est finie.",
+   "fix": "LÄBITUD",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.graph.tagline",
+   "severity": "majeur",
+   "category": "mt_artefact",
+   "current": "Sophia ühendab selle, mida sa tead⏎– kiiresti.",
+   "gloss_fr": "« Sophia relie/connecte ce que tu sais – vite. »",
+   "problem": "L'anglais « compounds » (fait croître) a été pris au sens de « combine » ; le message du graphique est perdu.",
+   "fix": "Sophia kasvatab sinu teadmisi⏎hüppeliselt.",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.loading.subtitle",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "Vaid paar sekundit, luba.",
+   "gloss_fr": "« Juste quelques secondes, permission / permets. »",
+   "problem": "« promis » traduit par « luba » (autorisation, ou impératif « permets »).",
+   "fix": "Vaid paar sekundit, ausõna.",
+   "surface": "ui"
+  },
+  {
+   "location": "offer.feature2",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Piiramatu arv interaktiivseid viktoriinid",
+   "gloss_fr": "« Nombre illimité de quiz interactifs » (nom au nominatif pluriel)",
+   "problem": "Après « piiramatu arv » le nom doit être au partitif pluriel (« viktoriine ») comme l'adjectif.",
+   "fix": "Piiramatult interaktiivseid viktoriine",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.showcase.courses.quizCount",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "%d viktoriinid",
+   "gloss_fr": "« %d quiz » (nominatif pluriel)",
+   "problem": "Après un nombre, l'estonien exige le partitif singulier.",
+   "fix": "%d viktoriini",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.premiumGift.title",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Anname sulle⏎Sophia Premium",
+   "gloss_fr": "« Nous te donnons Sophia Premium » (objet non décliné)",
+   "problem": "L'objet doit être décliné (« Premiumi ») et « anname » (donner) est plat pour « on t'offre ».",
+   "fix": "Kingime sulle⏎Sophia Premiumi",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.wasted.daysComplete",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "See on täis %@ päevi.",
+   "gloss_fr": "« C'est plein %@ jours. »",
+   "problem": "Ordre des mots et cas erronés ; la phrase est incompréhensible (le placeholder contient déjà « 23 päeva »).",
+   "fix": "See on tervelt %@.",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.wasted.hoursLost",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "kaotatud tunde aastas.",
+   "gloss_fr": "« heures (partitif pluriel) perdues par an »",
+   "problem": "Ce libellé suit un nombre : il faut le partitif singulier « tundi ».",
+   "fix": "kaotatud tundi aastas.",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.welcome.rotating.mythologie / onboarding.welcome.rotating.sciences",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "mütoloogia / teadus",
+   "gloss_fr": "« mythologie / science » (nominatif)",
+   "problem": "Les mots tournants sont tantôt au partitif (kunsti, kirjandust) tantôt au nominatif ; comme compléments de « maîtriser » ils doivent tous être au partitif.",
+   "fix": "mütoloogiat / teadust",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.exams.author2",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "Inès, vanem kursus",
+   "gloss_fr": "« Inès, cours supérieur / ancien »",
+   "problem": "« terminale » rendu par un calque de l'anglais « senior year » qui ne désigne rien en estonien.",
+   "fix": "Inès, 12. klass",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.exams.quote2",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "Ma vaatan 10 minutit päevas",
+   "gloss_fr": "« Je regarde 10 minutes par jour »",
+   "problem": "« réviser » traduit par « vaatama » (regarder) ; le témoignage perd son sens.",
+   "fix": "Kordan 10 minutit päevas ja mu hinded on tõesti hüppeliselt paranenud.",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.exams.quote4",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Ideaalne liikvel olles ülevaatamiseks. Minu õpetajad märkasid erinevust.",
+   "gloss_fr": "« Idéal pour inspecter en déplacement. Mes profs ont remarqué une différence. »",
+   "problem": "« réviser » rendu par « üle vaatama » (inspecter, passer en revue) et « remarquer la différence » calqué (« märkasid vahet » en estonien).",
+   "fix": "Ideaalne, et liikvel olles korrata. Mu õpetajad märkasid vahet.",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.login.subtitle",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Edusammude salvestamiseks ja sellele juurdepääsuks kõigis oma seadmetes.",
+   "gloss_fr": "« Pour sauvegarder les progrès et y accéder (pronom singulier) sur tous tes appareils. »",
+   "problem": "« sellele » (singulier) renvoie à « edusammud » (pluriel) ; double nominalisation lourde.",
+   "fix": "Et salvestada oma edusammud ja pääseda neile ligi kõigis oma seadmetes.",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.motivation.sharp",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Et hoida mõistus terav",
+   "gloss_fr": "« Pour garder esprit vif » (cas erronés)",
+   "problem": "« hoidma » exige le partitif et l'attribut à l'essif.",
+   "fix": "Et hoida mõistust teravana",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.rightPlace.caption",
+   "severity": "majeur",
+   "category": "mt_artefact",
+   "current": "…selle eesmärgi saavutamiseks tee Sophiaga tõelisi edusamme.",
+   "gloss_fr": "« …pour atteindre cet objectif, fais (impératif) de vrais progrès avec Sophia. »",
+   "problem": "La suite de « X % des utilisateurs » est devenue un ordre ; la phrase composée n'a plus de logique.",
+   "fix": "…, kellel on sama eesmärk, teeb Sophiaga tõelisi edusamme.",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.swipe.subtitle",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Pühi paremale sellel, mis sind huvitab.",
+   "gloss_fr": "« Glisse à droite sur-cela ce qui t'intéresse. »",
+   "problem": "« sellel » (adessif) est agrammatical ici.",
+   "fix": "Pühi paremale, kui kursus sind huvitab.",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.loading.cta",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Vaata minu profiili",
+   "gloss_fr": "« Regarde MON profil » (celui du locuteur, pas de l'utilisateur)",
+   "problem": "Avec un impératif à la 2e personne, l'estonien exige le possessif réfléchi « oma » ; même défaut dans offer.unlock et profile.quiz.unlock (« Ava minu … »).",
+   "fix": "Vaata oma profiili",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.trial.badge",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Tere tulemast pakkumine",
+   "gloss_fr": "« Bienvenue offre »",
+   "problem": "La formule de salutation « tere tulemast » ne peut pas servir d'adjectif ; calque de « welcome offer ».",
+   "fix": "Tervituspakkumine",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.freeSubjects",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "Sinu 3 vaba ainet",
+   "gloss_fr": "« Tes 3 matières libres / disponibles »",
+   "problem": "« gratuites » rendu par « vaba » (libre, inoccupé) au lieu de « tasuta ».",
+   "fix": "Sinu 3 tasuta ainet",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.error.unavailable",
+   "severity": "majeur",
+   "category": "non_traduit",
+   "current": "Paywalli ei saa laadida",
+   "gloss_fr": "« Impossible de charger le paywall »",
+   "problem": "Jargon développeur exposé à l'utilisateur ; le FR dit « l'offre ».",
+   "fix": "Pakkumist ei saa laadida",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.blocker.subtitle / paywall.blocker.subtitle.noTrial / paywall.blocker.title",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "et blockerit proovida / Ava blocker Sophia PRO-ga. / … kontrolli alla blockeriga.",
+   "gloss_fr": "« pour essayer le blocker » / « Débloque le blocker » (mot anglais décliné)",
+   "problem": "« blocker » laissé en anglais et décliné à l'estonienne, alors que l'app dit « blokeerija » partout ailleurs.",
+   "fix": "{n} päeva tasuta, et blokeerijat proovida. / Ava blokeerija Sophia PRO-ga. / Võta blokeerijaga lõpuks oma aeg kontrolli alla.",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.quiz.demo.mcq.q",
+   "severity": "majeur",
+   "category": "nom_propre",
+   "current": "Kes maalis \"Tähelise öö\"?",
+   "gloss_fr": "« Qui a peint “la Nuit étoilée” » (forme du titre inexistante)",
+   "problem": "Le titre estonien établi du Van Gogh est « Tähine öö » ; « täheline » n'existe pas, et les guillemets devraient être „ “.",
+   "fix": "Kes maalis „Tähise öö“?",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.quiz.review1.quote",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Viktoriinid panid mind meelde palju enamat kui lihtsalt lugemine. 5 min ja jääb külge.",
+   "gloss_fr": "« Les quiz m'ont mis en mémoire bien plus que simple lecture. 5 min et ça colle dessus. »",
+   "problem": "Construction agrammaticale (« panid mind meelde ») et « jääb külge » signifie « reste collé » (comme une saleté), pas « ça reste en tête ».",
+   "fix": "Viktoriinidega jäi mulle meelde palju rohkem kui lihtsalt lugedes. 5 min ja ongi peas.",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.quiz.review3.quote / paywall.reviews.r3.quote",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Tunnen end iga nädalaga kultuursemalt. Viktoriinid ankurdavad kõike.",
+   "gloss_fr": "« Je me sens de manière plus cultivée (adverbe) chaque semaine. Les quiz jettent l'ancre sur tout. »",
+   "problem": "« tundma end » demande l'essif « -na » (cf. onboardingV2.review.quote « targemana »), et « ankurdama » est l'ancre de bateau.",
+   "fix": "Tunnen end iga nädalaga haritumana. Viktoriinid kinnistavad kõik.",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.review1.quote",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Ideaalne minu edasi-tagasi sõitmiseks.",
+   "gloss_fr": "« Idéal pour mon conduire aller-retour. »",
+   "problem": "Calque de l'anglais « my commute » ; le FR dit simplement « dans les transports ».",
+   "fix": "Ideaalne bussis või rongis. Õpin iga päev ilma pingutuseta.",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.training.stat2.label",
+   "severity": "majeur",
+   "category": "mt_artefact",
+   "current": "see, mida me õpime, unustatakse nädalaga... ilma ülevaatamiseta",
+   "gloss_fr": "« 90 % | cela, ce que nous apprenons, est oublié en une semaine... sans inspection »",
+   "problem": "La suite de la valeur « 90% » ne se raccorde pas grammaticalement, « réviser » → « üle vaatama », et « ... » au lieu de « … ».",
+   "fix": "õpitust unustatakse nädalaga… kui seda ei korrata",
+   "surface": "ui"
+  },
+  {
+   "location": "training.how.step2",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "Selle küsimused ühinevad sinu praktikaga",
+   "gloss_fr": "« Ses questions s'unissent à ton stage / ta pratique »",
+   "problem": "La fonctionnalité « Entraînement » s'appelle « Harjutamine » partout ailleurs (paywall.training.how.step2) ; « praktika » évoque un stage.",
+   "fix": "Selle küsimused lisanduvad sinu Harjutamisse",
+   "surface": "ui"
+  },
+  {
+   "location": "tab.home / common.backHome",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Kodu / Tagasi koju",
+   "gloss_fr": "« Maison / foyer » / « Retour à la maison »",
+   "problem": "L'onglet d'accueil d'une app se dit « Avaleht » ; « kodu / koju » renvoie au domicile.",
+   "fix": "Avaleht / Tagasi avalehele",
+   "surface": "ui"
+  },
+  {
+   "location": "profile.progress.bySubject",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "EDU TEEMADE KOHTA",
+   "gloss_fr": "« SUCCÈS À PROPOS DES THÈMES »",
+   "problem": "« progression » → « edu » (succès) et « par » → « kohta » (à propos de) ; le titre de section est faux.",
+   "fix": "EDENEMINE TEEMADE KAUPA",
+   "surface": "ui"
+  },
+  {
+   "location": "profile.streak.great",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Sa oled leekides 🔥",
+   "gloss_fr": "« Tu es en flammes (tu brûles) »",
+   "problem": "L'idiome anglais « on fire » n'existe pas en estonien ; le natif lit « tu es en train de brûler ».",
+   "fix": "Sul on hoog sees 🔥",
+   "surface": "ui"
+  },
+  {
+   "location": "audio.browse / audio.browse.title / audio.downloads.title",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "Sirvi kõiki helisid / Kõik helid / Allalaaditud helid",
+   "gloss_fr": "« Parcourir tous les sons / Tous les sons / Sons téléchargés »",
+   "problem": "« audios » (cours audio) rendu par « helid » (= sons, bruits), alors que audio.browse.empty dit correctement « helikursus ».",
+   "fix": "Sirvi kõiki audiokursusi / Kõik audiokursused / Allalaaditud audio",
+   "surface": "ui"
+  },
+  {
+   "location": "ambassador.title / ambassador.program.heading / settings.ambassador.banner.title",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "Suursaadik / Hakka Sophia suursaadikuks / Saa suursaadikuks",
+   "gloss_fr": "« Ambassadeur (diplomate, chef d'ambassade) »",
+   "problem": "« suursaadik » désigne le diplomate ; pour une marque on dit « saadik » / « brändisaadik », sinon c'est involontairement comique.",
+   "fix": "Saadik / Hakka Sophia saadikuks / Hakka saadikuks",
+   "surface": "ui"
+  },
+  {
+   "location": "celebration.coursesCompleted",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "kursused läbitud",
+   "gloss_fr": "« cours (nominatif pluriel) terminés »",
+   "problem": "Libellé affiché après un compteur : il faut le partitif singulier (« 12 kursust läbitud »).",
+   "fix": "kursust läbitud",
+   "surface": "ui"
+  },
+  {
+   "location": "common.xpBeforeNext / profile.progress.toNext / quiz.xpProgress.toNext",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "· %d tasemeni %d",
+   "gloss_fr": "« · 120 jusqu'au-niveau 5 » (ordre inversé)",
+   "problem": "« tasemeni 5 » est agrammatical ; l'ordinal doit précéder le nom (« 5. tasemeni ») et « XP » manque.",
+   "fix": "· %d XP %d. tasemeni / %d XP · %d XP %d. tasemeni / %d XP %d. tasemeni",
+   "surface": "ui"
+  },
+  {
+   "location": "quiz.trueFalse.true / quiz.trueFalse.false",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "Tõene / Väär",
+   "gloss_fr": "« Vrai / Faux » (termes de logique formelle)",
+   "problem": "Trois variantes coexistent (Tõene/Väär, Tõsi/Vale dans paywall.quiz.demo.tf, Õige/vale dans le badge) ; « Väär » est livresque pour un bouton de quiz.",
+   "fix": "Tõsi / Vale",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.review.t6.quote",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Vahedega viktoriinid on maagilised: … nädalaid tagasi isegi proovimata.",
+   "gloss_fr": "« Les quiz avec des trous/intervalles sont magiques … même sans essayer. »",
+   "problem": "« quiz espacés » rendu par « quiz à trous », incompréhensible, et « sans forcer » calqué (« isegi proovimata »).",
+   "fix": "Intervallidega kordamine on maagiline: mäletan asju, mida õppisin nädalaid tagasi, ilma pingutamata.",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.quiz.subtitle",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Ava Sophia PRO interaktiivsete viktoriinide jaoks ja saa päriselt haritud.",
+   "gloss_fr": "« Débloque Sophia PRO pour les quiz interactifs et deviens vraiment cultivé (participe non décliné). »",
+   "problem": "« saama » exige le translatif « harituks » ; « … jaoks » est un calque lourd de « for ».",
+   "fix": "Ava Sophia PRO, saa interaktiivsed viktoriinid ja muutu päriselt harituks.",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.profile.tagline.exams",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Õpid meetodiga, valmis, kui see loeb.",
+   "gloss_fr": "« Tu apprends avec méthode, prêt, quand ça compte. »",
+   "problem": "Mot à mot de l'anglais « ready when it counts » ; phrase hachée, sans lien syntaxique.",
+   "fix": "Õpid süsteemselt, et olla valmis, kui see loeb.",
+   "surface": "ui"
+  },
+  {
+   "location": "quiz.correctAnswers",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "õiged vastused",
+   "gloss_fr": "« bonnes réponses » (nominatif pluriel)",
+   "problem": "Libellé placé sous/après le score : il faut le partitif singulier comme dans path.quiz.correctSoFar (« %d õiget vastust ») ; même défaut pour quiz.pointsEarned.",
+   "fix": "õiget vastust",
+   "surface": "ui"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/description (+ s0.b0, s1.b1, s2.b0, s3.b0, s3.b3.e4.title, s4.b3; Hegira partout; Medina/Mediinasse)",
+   "severity": "majeur",
+   "category": "nom_propre",
+   "current": "Muhammed / Muhamed / Muhammad ; Hegira ; Mediinasse / Medina",
+   "gloss_fr": "trois graphies de Muhammad, « Hegira » (forme latine) pour l'Hégire, deux graphies de Médine dans un seul cours",
+   "problem": "Le personnage principal est écrit de trois façons différentes, et « Hégire » et « Médine » ne sont pas dans leur forme estonienne établie (hidžra, Mediina).",
+   "fix": "Kogu kursuses ühtlaselt: Muhamed; hidžra; Mediina; Meka.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire/title (+ toutes les occurrences)",
+   "severity": "majeur",
+   "category": "nom_propre",
+   "current": "Kurjuse lilled, Baudelaire",
+   "gloss_fr": "« Les fleurs de la méchanceté » (forme non établie)",
+   "problem": "L'édition estonienne du recueil (trad. Tõnu Õnnepalu) s'intitule « Kurja lilled » ; la forme « Kurjuse lilled » ne sera reconnue par aucun lecteur.",
+   "fix": "Kurja lilled, Baudelaire (ja kogu kursuses „Kurja lilled“)",
+   "surface": "courses"
+  },
+  {
+   "location": "course_166_narcisse_et_echo/description (+ s0.b0, s2.title, s2.b1, s3.b0, s3.b1, s3.b3, s4.b2 ; Echo: s1.b2, s1.b3, s2.b1, s2.b2)",
+   "severity": "majeur",
+   "category": "nom_propre",
+   "current": "Narcissus / Nartsiss / Narcisse / Narkissose / Narkissuse ; Kaja / Echo / Echot",
+   "gloss_fr": "cinq graphies de Narcisse et deux noms différents pour Écho dans le même cours",
+   "problem": "Le héros change de nom presque à chaque paragraphe (forme latine, française, estonienne), et la nymphe est tantôt « Kaja » (le phénomène) tantôt « Echo ».",
+   "fix": "Kogu kursuses: Narkissos (Narkissose, Narkissost); nümf Echo (lill: nartsiss, nähtus: kaja).",
+   "surface": "courses"
+  },
+  {
+   "location": "course_18_la_grande_depression_1929/s1.title (+ s1.b0.text, s1.b1.caption)",
+   "severity": "majeur",
+   "category": "non_traduit",
+   "current": "Roaring Twenties ja mull / **Möirgavad kahekümnendad** (1920. aastad) tarbis Ameerika laenuga",
+   "gloss_fr": "« Roaring Twenties » (anglais) / « Les vingt rugissantes » (calque littéral) consommait l'Amérique à crédit",
+   "problem": "« Années folles » est rendu une fois en anglais, une fois par un calque littéral, et au nominatif là où il faut un adessif ; l'estonien dit « hullud kahekümnendad ».",
+   "fix": "Hullud kahekümnendad ja mull / **Hulludel kahekümnendatel** (1920. aastatel) tarbib Ameerika laenuga: autosid, raadioid, kodumasinaid. / Hullud kahekümnendad: eufooria, krediit ja spekulatsioon.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_212_les_paradis_fiscaux_expliques/s0.b1.text",
+   "severity": "majeur",
+   "category": "registre",
+   "current": "Siit saate teada, kuidas see diskreetne süsteem töötab",
+   "gloss_fr": "Ici vous (vouvoiement / pluriel) apprendrez comment ce système discret fonctionne",
+   "problem": "Vouvoiement/pluriel « saate » alors que l'app tutoie partout (« Sulle öeldakse » dans le cours sur le hoquet).",
+   "fix": "Vaatame, kuidas see diskreetne süsteem töötab ja miks see reguleerimiskatsetele nii hästi vastu peab.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_107_crime_et_chatiment_dostoievski/hero.hook",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "Ja andestamatu südametunnistus.",
+   "gloss_fr": "Et une conscience impardonnable.",
+   "problem": "« Andestamatu » signifie « impardonnable », non « qui ne pardonne pas ».",
+   "fix": "Ja südametunnistus, mis ei andesta.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_207_l_otan_a_quoi_ca_sert_encore/title",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Milleks on NATO veel pärast külma sõda?",
+   "gloss_fr": "Pour quoi l'OTAN est-elle encore après la Guerre froide ?",
+   "problem": "Il manque « vaja » : la phrase est bancale et ne dit pas « à quoi sert ».",
+   "fix": "Milleks on NATOt pärast külma sõda veel vaja?",
+   "surface": "courses"
+  },
+  {
+   "location": "course_207_l_otan_a_quoi_ca_sert_encore/s1.title",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "Genesis: kilp idabloki vastu",
+   "gloss_fr": "Genèse (le livre biblique / le groupe de rock) : un bouclier contre le bloc de l'Est",
+   "problem": "« La genèse » (les origines) est rendu par le nom propre « Genesis », qui n'évoque en estonien que la Bible ou le groupe.",
+   "fix": "Sünd: kilp idabloki vastu",
+   "surface": "courses"
+  },
+  {
+   "location": "course_166_narcisse_et_echo/s1.b2.text",
+   "severity": "majeur",
+   "category": "typographie",
+   "current": "Ta saab **korda ainult teiste viimaste sonu**.",
+   "gloss_fr": "Elle peut « fois seulement des autres derniers mots » (deux coquilles : korda/korrata, sonu/sõnu)",
+   "problem": "Deux fautes de frappe dans le passage en gras (« korda » pour « korrata », « sonu » sans õ pour « sõnu ») rendent la phrase-clé du mythe illisible.",
+   "fix": "Ta saab vaid **korrata teiste viimaseid sõnu**.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_122_la_naissance_de_l_impressionnisme/s2.title",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "Väljaspool värvimine: valgus ja värv",
+   "gloss_fr": "Peinture (en bâtiment / coloriage) à l'extérieur de : lumière et couleur",
+   "problem": "« Värvimine » désigne le fait de peindre un mur ou de colorier ; l'art pictural se dit « maalimine », et « väljaspool » (en dehors de) n'est pas « dehors ».",
+   "fix": "Maalimine õues: valgus ja värv",
+   "surface": "courses"
+  },
+  {
+   "location": "course_122_la_naissance_de_l_impressionnisme/description",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Salongi poolt keeldutud maalikunstnikud korraldasid oma näituse. Kriitik mõnitab Monet",
+   "gloss_fr": "Des peintres « ayant refusé » par le Salon ont organisé leur exposition. Un critique raille « Monet » (nominatif non décliné)",
+   "problem": "« Refusés par le Salon » est rendu avec un participe actif de « refuser de faire », et « Monet » n'est pas au partitif.",
+   "fix": "1874. aastal korraldavad Salongist tagasi lükatud maalikunstnikud oma näituse. Üks kriitik pilkab Monet'd ja annab voolule tahtmatult nime: **impressionism**.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_18_la_grande_depression_1929/description (+ s0.b0.text)",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "**24. oktoober 1929**, Wall Street variseb kokku.",
+   "gloss_fr": "« 24 octobre 1929 » (nominatif), Wall Street s'effondre.",
+   "problem": "La date est laissée au nominatif suivi d'une virgule, calque du français ; l'estonien exige l'adessif intégré à la phrase.",
+   "fix": "**24. oktoobril 1929** variseb Wall Street kokku. Kolme aastaga jääb **25%** ameeriklastest töötuks ja kriis avab Euroopas tee äärmuslastele.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_107_crime_et_chatiment_dostoievski/s0.b0.text",
+   "severity": "majeur",
+   "category": "nom_propre",
+   "current": "vaene tudeng **Saint-Peterburist**",
+   "gloss_fr": "pauvre étudiant de « Saint-Peterburi » (hybride franco-estonien)",
+   "problem": "Forme hybride inexistante ; l'estonien dit « Peterburi », comme d'ailleurs la légende s2.b1 du même cours.",
+   "fix": "vaene tudeng **Peterburist**",
+   "surface": "courses"
+  },
+  {
+   "location": "course_107_crime_et_chatiment_dostoievski/s3.b0.text (+ s3.b1.text, s4.b0.text)",
+   "severity": "majeur",
+   "category": "nom_propre",
+   "current": "oma ema **Poulcheria** ega õe **Dounia** [...] **Sonya Marmeladova** / Sonia",
+   "gloss_fr": "translittérations françaises (Poulcheria, Dounia) et anglaise (Sonya) des prénoms russes, puis « Sonia »",
+   "problem": "Les prénoms gardent la translittération française ou anglaise et changent d'un segment à l'autre ; l'estonien écrit Pulheria, Dunja, Sonja.",
+   "fix": "ema **Pulheria** ega õe **Dunja** [...] **Sonja Marmeladova** (kogu kursuses Sonja)",
+   "surface": "courses"
+  },
+  {
+   "location": "course_122_la_naissance_de_l_impressionnisme/s1.b1.text (+ s4.b1.e0.title)",
+   "severity": "majeur",
+   "category": "non_traduit",
+   "current": "andis keiser **Napoleon III** loa **Salong des Refusés**. [...] kahe moodsas kostüümis mehega",
+   "gloss_fr": "l'empereur autorisa le « Salong des Refusés » (à moitié traduit)... deux hommes en « costume » (déguisement) moderne",
+   "problem": "Le nom du Salon est à moitié traduit (Salong + des Refusés) et « costume » est pris au sens de déguisement (kostüüm) au lieu d'« ülikond ».",
+   "fix": "annab keiser **Napoleon III** loa **Tagasilükatute salongiks** (Salon des Refusés). Publik avastab seal **Édouard Manet'** *Lõunasöögi murul*: alasti naine einestab kahe moodsas ülikonnas mehega. Skandaal puhkeb otsekohe.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_122_la_naissance_de_l_impressionnisme/s0.b0.text",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "avas umbes kolmkümmend [[Pariisi ametlik salong]] fotograaf Nadari endises ateljees eranäituse. Maalide hulgas tõmbab kriitik Louis Leroy pilkama **Claude Monet** udune merevaade.",
+   "gloss_fr": "une trentaine de « Salon officiel de Paris » ouvrit une exposition privée... Parmi les toiles, attire le critique Louis Leroy à railler « Claude Monet » marine brumeuse (syntaxe cassée).",
+   "problem": "Les mots « artistes lassés du » ont disparu, le terme de glossaire est laissé au nominatif et la seconde phrase n'a ni sujet ni cas corrects.",
+   "fix": "Aprillis **1874** avab umbes kolmkümmend [[Pariisi ametlikust salongist]] tüdinud kunstnikku fotograaf Nadari endises ateljees eranäituse. Maalide seas tõmbab **Claude Monet'** udune merevaade kriitik Louis Leroy pilke.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_212_les_paradis_fiscaux_expliques/s4.title",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "Maksuõigus on endiselt habras",
+   "gloss_fr": "Le droit fiscal est encore fragile",
+   "problem": "« Justice fiscale » (équité) est confondue avec le droit fiscal (maksuõigus) ; le mot attendu est « maksuõiglus ».",
+   "fix": "Maksuõiglus on endiselt habras",
+   "surface": "courses"
+  },
+  {
+   "location": "course_18_la_grande_depression_1929/s4.b1.e1.title",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "Pangarikked",
+   "gloss_fr": "Pannes bancaires (défaillances techniques)",
+   "problem": "« Faillites bancaires » est rendu par « pannes » (rike = défaut technique) ; le terme est « pankrot ».",
+   "fix": "Pankade pankrotid",
+   "surface": "courses"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622_q6 (option 4)",
+   "severity": "majeur",
+   "category": "mt_artefact",
+   "current": "Kohus süüdistas uskmatute üle kohut mõistmises",
+   "gloss_fr": "Le tribunal a accusé dans le fait de juger les infidèles",
+   "problem": "Phrase sans logique : « chargé de juger » a été rendu par un verbe conjugué « süüdistas » (a accusé).",
+   "fix": "Kohus, mis mõistis kohut uskmatute üle",
+   "surface": "content"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622_q1 (explanation)",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Hijra on surmaohuga Muhamedi lahkumine Mekas Medina oaasi suunas.",
+   "gloss_fr": "La Hijra est le départ avec menace de mort de Muhammad à La Mecque (locatif) en direction de l'oasis de Médine.",
+   "problem": "« Mekas » (à La Mecque) au lieu de « Mekast » (de La Mecque), « surmaohuga » mal rattaché, et « Hijra » diffère du « Hegira » de la question.",
+   "fix": "Hidžra on Mekas surmaga ähvardatud Muhamedi lahkumine Mediina oaasi. Sellest kuupäevast saab moslemikalendri 1. aasta.",
+   "surface": "content"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622_q5 (Q)",
+   "severity": "majeur",
+   "category": "registre",
+   "current": "Pange need sündmused Muhamedi elus kronoloogilises järjekorras.",
+   "gloss_fr": "Mettez (vouvoiement/pluriel) ces événements dans la vie de Muhammad dans un ordre chronologique (cas locatif).",
+   "problem": "Impératif pluriel « Pange » alors que l'app tutoie, et « kronoloogilises järjekorras » (inessif) doit être à l'illatif.",
+   "fix": "Pane need Muhamedi elu sündmused kronoloogilisse järjekorda.",
+   "surface": "content"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622_q5 (items)",
+   "severity": "majeur",
+   "category": "mt_artefact",
+   "current": "Hegira: väljasõit Medinasse",
+   "gloss_fr": "Hégire : excursion vers Médine",
+   "problem": "« väljasõit » signifie sortie/excursion ; le départ de l'Hégire se dit « lahkumine » ou « ümberasumine ».",
+   "fix": "Hidžra: lahkumine Mediinasse",
+   "surface": "content"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622_q7 (Q)",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "Millised kaks suurt impeeriumit kurnasid 7. sajandil Araabia ümber peetud sõdades?",
+   "gloss_fr": "Quels deux grands empires ont épuisé (qui ?) dans les guerres menées autour de l'Arabie au VIIe siècle ?",
+   "problem": "« épuisés par leurs guerres » est devenu un verbe actif sans objet (« kurnasid » = ont épuisé) et « impeeriumit » n'est pas le partitif correct (impeeriumi).",
+   "fix": "Millised kaks suurt impeeriumi olid 7. sajandil Araabia ümber peetud sõdadest kurnatud?",
+   "surface": "content"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622_q7 (explanation)",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "lõid geopoliitilise vaakumi, millest Muhamedi uus sõnum ära kasutas",
+   "gloss_fr": "ont créé un vide géopolitique, duquel (élatif) le nouveau message de Muhammad a profité",
+   "problem": "« ära kasutama » exige le partitif « mida », pas l'élatif « millest » ; « Sassaniidide pärslaste » est aussi maladroit.",
+   "fix": "Lõputud sõjad Bütsantsi (Ida-Rooma impeeriumi) ja Sassaniidide Pärsia vahel lõid geopoliitilise tühimiku, mida Muhamedi uus sõnum ära kasutas.",
+   "surface": "content"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622_q8 (option 3)",
+   "severity": "majeur",
+   "category": "mt_artefact",
+   "current": "Armee tõusis Meka vastu",
+   "gloss_fr": "L'armée s'est soulevée contre La Mecque",
+   "problem": "« L'armée levée contre La Mecque » (participe) a été lu comme une phrase conjuguée « l'armée s'est levée ».",
+   "fix": "Meka vastu kogutud armee",
+   "surface": "content"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622 (q3, q4 vs q1, q5, q8, glossaire)",
+   "severity": "majeur",
+   "category": "nom_propre",
+   "current": "Muhammad / Muhamedi",
+   "gloss_fr": "Deux graphies du nom du Prophète dans le même cours",
+   "problem": "Le nom alterne entre « Muhammad » (q3, q4) et la forme estonienne établie « Muhamed » (q1, q5, q8, glossaire).",
+   "fix": "Muhamed (partout : Muhamed, Muhamedi)",
+   "surface": "content"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622 (q1 options/explanation, q2, glossaire « Medina põhiseadus »)",
+   "severity": "majeur",
+   "category": "nom_propre",
+   "current": "Mediinasse / Medinas / Medina elanikud / Medina põhiseadus",
+   "gloss_fr": "Médine écrite tantôt Mediina, tantôt Medina, y compris dans la même question",
+   "problem": "La forme estonienne établie est « Mediina » ; « Medina » apparaît dans les options de q1, q2, l'explication de q1 et le glossaire.",
+   "fix": "Mediina (Mediinas, Mediinasse, Mediina põhiseadus)",
+   "surface": "content"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622 (q1, q4, q5, glossaire « Medina põhiseadus »)",
+   "severity": "majeur",
+   "category": "nom_propre",
+   "current": "Hegira / Hegirat / Hijra",
+   "gloss_fr": "L'Hégire tantôt « Hegira », tantôt « Hijra »",
+   "problem": "Ni « Hegira » ni « Hijra » ne sont la forme estonienne ; l'ÕS et les manuels utilisent « hidžra ».",
+   "fix": "hidžra (hidžrat, pärast hidžrat)",
+   "surface": "content"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622_q2 (option 3)",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "Sasani pärslased",
+   "gloss_fr": "Les Perses de Sasan",
+   "problem": "La forme estonienne est « Sassaniidid » (utilisée en q7 et dans le glossaire) ; « Sasani » est incohérent et incorrect.",
+   "fix": "Sassaniidide Pärsia",
+   "surface": "content"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire_q1 (Q) — idem q2, q3 « Les Fleurs du Mali »",
+   "severity": "majeur",
+   "category": "nom_propre",
+   "current": "Kes on raamatu Les Fleurs du Mal autor?",
+   "gloss_fr": "Qui est l'auteur du livre Les Fleurs du Mal ?",
+   "problem": "Le recueil a un titre estonien établi, « Kurja lilled » (trad. T. Õnnepalu) ; le titre français est laissé partout et « raamat » (livre) remplace « luulekogu ».",
+   "fix": "Kes on luulekogu „Kurja lilled“ autor?",
+   "surface": "content"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire_q2 (option correcte)",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "\"Avaliku moraali pahameele eest\"",
+   "gloss_fr": "« Pour l'indignation de la morale publique »",
+   "problem": "« outrage à la morale publique » (atteinte) est rendu par « pahameel » (indignation) ; la bonne réponse devient incompréhensible.",
+   "fix": "„Avaliku kõlbluse solvamise eest“",
+   "surface": "content"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire_q2 (option 2)",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Plagiaati eest",
+   "gloss_fr": "Pour plagiat (partitif au lieu du génitif)",
+   "problem": "La postposition « eest » exige le génitif « plagiaadi », pas le partitif « plagiaati ».",
+   "fix": "Plagiaadi eest",
+   "surface": "content"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire_q2 (explanation) + q5 (Q « kollektsiooni osa »)",
+   "severity": "majeur",
+   "category": "mt_artefact",
+   "current": "Kollektsioon mõisteti hukka \"avaliku moraali pahameele\" pärast, mis on skandaaliga ametlikult tühistatud alles 1949. aastal.",
+   "gloss_fr": "La collection a été condamnée à cause de « l'indignation de la morale publique », qui est officiellement annulée avec un scandale seulement en 1949.",
+   "problem": "« recueil » est traduit par « kollektsioon » (ici et en q5) et la relative « mis on skandaaliga… tühistatud » n'a pas de sens.",
+   "fix": "Luulekogu mõisteti hukka „avaliku kõlbluse solvamise“ eest – skandaal, mis tühistati ametlikult alles 1949. aastal.",
+   "surface": "content"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire_q4 (explanation)",
+   "severity": "majeur",
+   "category": "mt_artefact",
+   "current": "kuid kunagi maapinnale asetatud naeruväärne, esindab poeeti",
+   "gloss_fr": "mais ridicule, jadis/jamais posé au sol, représente le poète",
+   "problem": "« une fois posé au sol » est calqué avec « kunagi » (jadis/jamais), ce qui casse le sens.",
+   "fix": "Albatross, lennul majesteetlik, kuid maapinnal naeruväärne, kehastab luuletajat maailmas, mis teda ei mõista.",
+   "surface": "content"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire_q8 (Q)",
+   "severity": "majeur",
+   "category": "mt_artefact",
+   "current": "Millise poeetilise liikumise leidis Baudelaire'i kirjavahetuse poeetika",
+   "gloss_fr": "Quel mouvement poétique la poétique de la correspondance (épistolaire) de Baudelaire a-t-elle trouvé",
+   "problem": "« fonde » (fonder) a été rendu par « leidis » (a trouvé) ; « kirjavahetuse » reprend le faux sens de « Correspondances ».",
+   "fix": "Millisele luulevoolule pani aluse Baudelaire'i vastavuste poeetika, mida hiljem kandsid edasi Verlaine ja Mallarmé?",
+   "surface": "content"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire_q8 (option correcte + explanation)",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "Sümboolika / pani aluse sümboolikale",
+   "gloss_fr": "La symbolique (ensemble de symboles)",
+   "problem": "Le mouvement littéraire se dit « sümbolism » ; « sümboolika » désigne un système de symboles.",
+   "fix": "Sümbolism / pani aluse sümbolismile",
+   "surface": "content"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire_q9 (Q)",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Millise Ameerika kirjaniku, keda kirjeldatakse kui \"hingevenna\", tõlkis Baudelaire?",
+   "gloss_fr": "Quel écrivain américain, qu'on décrit comme « du frère d'âme » (génitif), Baudelaire a-t-il traduit ?",
+   "problem": "« kui hingevenna » est au génitif au lieu du translatif, et « tõlkima » appelle l'objet partitif « millist kirjanikku ».",
+   "fix": "Millist Ameerika kirjanikku, keda ta nimetas „hingevennaks“, Baudelaire tõlkis?",
+   "surface": "content"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire_q9 (explanation)",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Baudelaire tõlkis Edgar Poe, keda ta pidas “hingevennaks”, kes jagas oma maitset õudsuse järele.",
+   "gloss_fr": "Baudelaire a traduit Edgar Poe (nominatif), qu'il considérait comme frère d'âme, qui partageait son propre goût pour l'horreur.",
+   "problem": "L'objet doit être « Edgar Poe'd » (partitif avec apostrophe) et « oma maitset » renvoie à Poe au lieu de Baudelaire.",
+   "fix": "Baudelaire tõlkis Edgar Poe'd, keda ta pidas „hingevennaks“ ja kellega teda ühendas huvi õõvastava vastu.",
+   "surface": "content"
+  },
+  {
+   "location": "glossary course_1 « razzias »",
+   "severity": "majeur",
+   "category": "non_traduit",
+   "current": "razzias: Hõimude juhitud kiired rünnakud ... kariloomade või kaupade arestimiseks.",
+   "gloss_fr": "razzias (terme français au pluriel) : attaques rapides dirigées par des tribus ... pour la saisie judiciaire de bétail ou de marchandises",
+   "problem": "Le terme est resté en français au pluriel et « arestimiseks » (saisie judiciaire) est un faux sens pour « s'emparer ».",
+   "fix": "rüüsteretked: Hõimude kiired rünnakud karavanide või vaenlase laagrite vastu kariloomade või kaupade röövimiseks.",
+   "surface": "content"
+  },
+  {
+   "location": "glossary course_1 « Medina põhiseadus »",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Muhamedi edikt, mille andis välja vahetult pärast Hegirat, reguleeris ...",
+   "gloss_fr": "Édit de Muhammad, que [sujet manquant] a émis juste après l'Hégire, régissait ...",
+   "problem": "La relative n'a pas de sujet et la définition enchaîne deux verbes conjugués sans lien.",
+   "fix": "Mediina põhiseadus: Muhamedi vahetult pärast hidžrat välja antud edikt, mis reguleeris monoteistide (moslemite ja juutide) ja Mediina oaasi klannide suhteid.",
+   "surface": "content"
+  },
+  {
+   "location": "glossary course_1 « Bütsantsi ja Sassaniidide impeeriumid »",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Sassaniidid (Zoroastria Pärsia impeerium) kurnasid end lõputus sõjas, vabastades teed araablaste vallutustele.",
+   "gloss_fr": "les Sassanides (empire perse de Zoroastria) s'épuisaient dans une guerre sans fin, libérant des routes aux conquêtes arabes",
+   "problem": "« Zoroastria » ressemble à un toponyme (il faut l'adjectif « zoroastristlik ») et « ouvrant la voie » est calqué en « vabastades teed ».",
+   "fix": "Sassaniidid (zoroastristlik Pärsia impeerium) kurnasid end lõputus sõjas, avades tee araablaste vallutustele.",
+   "surface": "content"
+  },
+  {
+   "location": "glossary course_1 « Dhimma »",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "\"Kaitstud\" õiguslik staatus antakse islami võimu all elavatele monoteistlikele mittemoslemitele.",
+   "gloss_fr": "Le statut juridique « protégé » est accordé aux non-musulmans monothéistes ...",
+   "problem": "Définition formulée comme une phrase au présent (« antakse ») au lieu d'un syntagme nominal avec relative ; guillemets non estoniens.",
+   "fix": "„Kaitsealuse“ õiguslik staatus, mis anti islami võimu all elavatele monoteistlikele mittemoslemitele.",
+   "surface": "content"
+  },
+  {
+   "location": "glossary course_122 « Värvitorud ja plein air » / « värvituubid ja plein air »",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "Värvitorud / Metallist värvitoru leiutamine",
+   "gloss_fr": "Les tuyaux de peinture",
+   "problem": "« tube de peinture » se dit « värvituub » ; « värvitoru » (tuyau) est erroné et contredit l'autre entrée « värvituubid ».",
+   "fix": "Värvituubid ja plenäär: Metallist värvituubi leiutamine 1841. aastal võimaldas maalritel töötada õues.",
+   "surface": "content"
+  },
+  {
+   "location": "glossary course_122 « avangardistlik »",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "avangardistlik [concept]: Kunstiline või intellektuaalne liikumine...",
+   "gloss_fr": "avant-gardiste (adjectif) : Mouvement artistique ou intellectuel...",
+   "problem": "Le terme est un adjectif alors que la définition décrit le nom « avangard ».",
+   "fix": "avangard",
+   "surface": "content"
+  },
+  {
+   "location": "glossary course_122 « täiendavad värvid » (+ entrée Chevreul)",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "täiendavad värvid",
+   "gloss_fr": "couleurs supplémentaires",
+   "problem": "Le terme estonien pour « couleurs complémentaires » est « komplementaarvärvid » (ou « vastandvärvid »), pas « täiendavad » (supplémentaires).",
+   "fix": "komplementaarvärvid: Värviringil vastakuti asuvad värvid (nt punane/roheline). Kõrvuti asetatuna võimendavad need teineteise erksust.",
+   "surface": "content"
+  },
+  {
+   "location": "glossary course_122 « Jaapani trükised »",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "puuplokkidest trükised (Ukiyo-e), mille asümmeetriline raamimine ja tasased värvialad paelusid Degast ja Monet'd",
+   "gloss_fr": "des imprimés faits de blocs de bois, dont l'encadrement asymétrique et les zones de couleur plates ont fasciné « Degast » et Monet",
+   "problem": "« gravures sur bois » = « puulõiked », « cadrage » = « kadreering », et « Degast » est une flexion erronée (il faut « Degas'd »).",
+   "fix": "Jaapani puulõiked: 19. sajandil Euroopasse jõudnud puulõiked (ukiyo-e), mille asümmeetriline kadreering ja ühtlased värvipinnad paelusid Degas'd ja Monet'd.",
+   "surface": "content"
+  },
+  {
+   "location": "glossary course_122 « Neoimpressionism »",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Liikumine, mis järgneb impressionismile, juhiks Georges Seurat, rakendades teaduslikult värvide lagunemist täppide kujul.",
+   "gloss_fr": "Mouvement qui suit l'impressionnisme, pour chef Georges Seurat, en appliquant scientifiquement la décomposition (pourrissement) des couleurs sous forme de points.",
+   "problem": "« juhiks Georges Seurat » est un fragment détaché et « värvide lagunemine » évoque une dégradation, pas la division de la couleur.",
+   "fix": "Impressionismile järgnenud vool eesotsas Georges Seurat'ga, mis rakendas teaduslikult värvi lahutamist punktideks.",
+   "surface": "content"
+  },
+  {
+   "location": "glossary course_122 « Salong des Refusés »",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Salong des Refusés: 1863. aastal korraldatud näitus esitleb Salongi ametliku žürii poolt tagasi lükatud töid, mis tähistab...",
+   "gloss_fr": "Salong des Refusés (hybride) : exposition organisée en 1863 présente les œuvres rejetées par le jury officiel du Salon, ce qui marque...",
+   "problem": "Nom hybride mi-estonien mi-français (ailleurs « Salon des Refusés'i ») et définition au présent conjugué (« esitleb ») au lieu d'une relative.",
+   "fix": "Salon des Refusés (Tagasilükatute salong): 1863. aastal korraldatud näitus, kus esitleti ametliku Salongi žürii tagasi lükatud töid; see tähistas lõhe algust moodsa ja akadeemilise kunsti vahel.",
+   "surface": "content"
+  },
+  {
+   "location": "glossary course_122 « Berthe Morisot »",
+   "severity": "majeur",
+   "category": "mt_artefact",
+   "current": "tuntud oma kodanliku elu stseenide ja selge puudutuse poolest",
+   "gloss_fr": "connue pour ses scènes de vie bourgeoise et son toucher (contact physique) clair",
+   "problem": "« touche » (coup de pinceau) a été pris au sens de « toucher/contact » (puudutus).",
+   "fix": "tuntud oma kodanliku elu stseenide ja kerge, selge pintslitöö poolest",
+   "surface": "content"
+  },
+  {
+   "location": "glossary course_122 « Édouard Manet »",
+   "severity": "majeur",
+   "category": "typographie",
+   "current": "kelle maal [Le Déjeuner sur l'herbe] põhjustas",
+   "gloss_fr": "dont le tableau [Le Déjeuner sur l'herbe] (crochets visibles) a provoqué",
+   "problem": "Crochets de balisage visibles autour du titre, et l'œuvre a un titre estonien établi.",
+   "fix": "kelle maal „Eine murul“ (Le Déjeuner sur l'herbe) põhjustas 1863. aastal suure skandaali",
+   "surface": "content"
+  },
+  {
+   "location": "glossary course_122 « Claude Monet »",
+   "severity": "majeur",
+   "category": "typographie",
+   "current": "nagu [Les Nymphéas] või [La Cathédrale de Rouen]",
+   "gloss_fr": "comme [Les Nymphéas] ou [La Cathédrale de Rouen] (crochets visibles)",
+   "problem": "Même artefact de crochets ; les séries ont des titres estoniens courants.",
+   "fix": "nagu „Vesiroosid“ või „Rouen'i katedraal“",
+   "surface": "content"
+  },
+  {
+   "location": "glossary course_207 « Vladimir Putin »",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Vene Föderatsiooni president alates 1999. aastast (peaministrina katkestusega), peab ta NATO laiendamist agressiooniks",
+   "gloss_fr": "Président de la Fédération de Russie depuis 1999 (avec interruption comme Premier ministre), considère-t-il l'élargissement de l'OTAN comme une agression",
+   "problem": "L'inversion « peab ta » calquée du français donne une tournure interrogative ; « laiendamist » contredit « laienemine » de l'entrée voisine.",
+   "fix": "Vene Föderatsiooni president alates 1999. aastast (vahepeal peaministrina), kes peab NATO laienemist agressiooniks Venemaa mõjuvõimu vastu.",
+   "surface": "content"
+  },
+  {
+   "location": "c_6870opqzamcf",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "Kuidas ehitatud struktuurid peegeldavad poliitika uskumusi ja süsteeme.",
+   "gloss_fr": "Comment les structures construites reflètent les croyances et les systèmes de la politique.",
+   "problem": "« les croyances et les systèmes politiques » est devenu « les croyances et systèmes de la politique » ; « ehitatud struktuurid » est un calque pour « ehitised ».",
+   "fix": "Kuidas ehitised peegeldavad uskumusi ja poliitilisi süsteeme.",
+   "surface": "content"
+  },
+  {
+   "location": "c_7etcora6amcf",
+   "severity": "majeur",
+   "category": "mt_artefact",
+   "current": "Tuleõpe mütoloogia, geoloogia ja tehnoloogia ajaloo kaudu.",
+   "gloss_fr": "« Enseignement-du-feu » (mot inventé) à travers la mythologie, la géologie et l'histoire de la technologie.",
+   "problem": "« Tuleõpe » est un mot inventé (õpe = enseignement) pour « étude du feu ».",
+   "fix": "Tuli: jumaliku karistuse ja energia vahel — Tule lugu mütoloogias, geoloogias ja tehnoloogia ajaloos.",
+   "surface": "content"
+  },
+  {
+   "location": "c_nuv73pnuamcf",
+   "severity": "majeur",
+   "category": "typographie",
+   "current": "genotsiidid ja mälu: mitte kunagi enam",
+   "gloss_fr": "génocides et mémoire (minuscule initiale dans un titre)",
+   "problem": "Titre de collection commençant par une minuscule.",
+   "fix": "Genotsiidid ja mälu: mitte kunagi enam",
+   "surface": "content"
+  },
+  {
+   "location": "c_9y3ap3px8kck",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "Läbiv teekond, millega austatakse naisi, kes lükkasid ümber ajaloo, ... või kirjanduse loomise kaudu.",
+   "gloss_fr": "Un parcours traversant honorant les femmes qui ont réfuté l'histoire ... ou par la création de la littérature.",
+   "problem": "« bouleversé l'histoire » devient « ümber lükkasid » (réfuter) et « littérature fondatrice » devient « création de la littérature ».",
+   "fix": "Valdkondadeülene teekond, mis austab naisi, kes muutsid ajaloo kulgu – suurte teadusavastuste, sotsiaalsete võitluste või teedrajava kirjanduse kaudu.",
+   "surface": "content"
+  },
+  {
+   "location": "g_mpzqlws4_0n3de",
+   "severity": "majeur",
+   "category": "registre",
+   "current": "Tutvuge jumalate ja kangelastega",
+   "gloss_fr": "Faites connaissance (vous/pluriel) avec les dieux et les héros",
+   "problem": "Impératif pluriel/vouvoiement alors que l'app tutoie.",
+   "fix": "Tutvu jumalate ja kangelastega, kes kujundasid lääne tsivilisatsiooni kujutlusilma.",
+   "surface": "content"
+  },
+  {
+   "location": "g_mpzqlws4_1j8bg",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "Alates gravitatsioonist kuni DNA-ni avastage läbimurded, mis muutsid meie arusaama elavatest.",
+   "gloss_fr": "De la gravitation à l'ADN, découvrez (vous) les percées qui ont changé notre compréhension des (personnes) vivantes.",
+   "problem": "« le vivant » est rendu par « elavatest » (les gens vivants) et l'impératif est au pluriel.",
+   "fix": "Gravitatsioonist DNA-ni: avasta läbimurded, mis muutsid meie arusaama elust.",
+   "surface": "content"
+  },
+  {
+   "location": "g_mpzqlws4_24n9h",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "Visuaalne teekond renessansi meistriteostest abstraktse kunsti purunemiseni.",
+   "gloss_fr": "Un voyage visuel des chefs-d'œuvre de la Renaissance jusqu'au bris de l'art abstrait.",
+   "problem": "« ruptures de l'art abstrait » devient « le bris de l'art abstrait », comme si l'art abstrait se cassait.",
+   "fix": "Visuaalne teekond renessansi meistriteostest abstraktse kunsti murranguteni.",
+   "surface": "content"
+  },
+  {
+   "location": "g_mpzqlws4_5kxjr",
+   "severity": "majeur",
+   "category": "registre",
+   "current": "Sukelduge 20. sajandi keskpaika tähistanud otsustavate vastasseisude keskmesse.",
+   "gloss_fr": "Plongez (vous/pluriel) au cœur des affrontements décisifs...",
+   "problem": "Impératif pluriel au lieu du tutoiement.",
+   "fix": "Sukeldu otsustavatesse lahingutesse, mis märkisid 20. sajandi keskpaika.",
+   "surface": "content"
+  },
+  {
+   "location": "g_mpzqlws4_6mt1o",
+   "severity": "majeur",
+   "category": "registre",
+   "current": "Avastage mälu, une ja teadvuse põnevaid mehhanisme.",
+   "gloss_fr": "Explorez (vous/pluriel) les mécanismes fascinants...",
+   "problem": "Impératif pluriel au lieu du tutoiement.",
+   "fix": "Avasta mälu, une ja teadvuse põnevad mehhanismid.",
+   "surface": "content"
+  },
+  {
+   "location": "g_mpzqlws4_8liwv",
+   "severity": "majeur",
+   "category": "nom_propre",
+   "current": "Ulyssese odüsseia — Jälgige Ithaka kangelase teekonda läbi müütide ja asutamistekstide.",
+   "gloss_fr": "L'odyssée d'Ulysses (forme anglo-latine) — Suivez (vous) le parcours du héros d'Ithaque à travers les mythes et les textes de fondation (statuts).",
+   "problem": "Le héros se nomme « Odysseus » en estonien, « asutamistekstid » évoque des statuts juridiques, et l'impératif est au pluriel.",
+   "fix": "Odysseuse eepos — Jälgi Ithaka kangelase teekonda müütides ja alustekstides.",
+   "surface": "content"
+  },
+  {
+   "location": "g_mpzqlws4_9zcsy",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Võtmed võimsuse dünaamika ja pingete dekodeerimiseks kaasaegses maailmas.",
+   "gloss_fr": "Des clés pour décoder la dynamique de la puissance (mécanique) et les tensions dans le monde contemporain.",
+   "problem": "« rapports de force » rendu par « võimsuse dünaamika » (puissance au sens physique) et « décrypter » par « dekodeerimine ».",
+   "fix": "Tänapäeva geopoliitika mõistmine — Võtmed, mis aitavad lahti mõtestada tänapäeva maailma jõuvahekordi ja pingeid.",
+   "surface": "content"
+  },
+  {
+   "location": "g_mpzqlws4_exr09",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Bachi rangusest Beethoveni raevuni, harmoonia arenguni.",
+   "gloss_fr": "De la rigueur de Bach à la fureur de Beethoven, jusqu'à l'évolution de l'harmonie.",
+   "problem": "L'apposition « l'évolution de l'harmonie » est transformée en troisième point d'arrivée (« arenguni »).",
+   "fix": "Bachi rangusest Beethoveni raevuni: harmoonia areng.",
+   "surface": "content"
+  },
+  {
+   "location": "g_mpzqlws4_fit77",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "Kodanikuliikumised ja tegelased, kes murdsid rõhumise ahelad.",
+   "gloss_fr": "Les mouvements civils et les personnages (de fiction) qui ont brisé les chaînes de l'oppression.",
+   "problem": "« figures » (personnalités) est rendu par « tegelased », qui désigne des personnages de fiction.",
+   "fix": "Kodanikuõiguste liikumised ja inimesed, kes purustasid rõhumise ahelad.",
+   "surface": "content"
+  },
+  {
+   "location": "g_mpzqlws4_ikf6h",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Maailmamajanduse sisemine töö",
+   "gloss_fr": "Le travail intérieur de l'économie mondiale",
+   "problem": "« rouages » est rendu par un calque de l'anglais « inner workings » qui ne veut rien dire en estonien.",
+   "fix": "Maailmamajanduse hammasrattad — Kapitalivood, kriisid ja uued töövormid lahti seletatud.",
+   "surface": "content"
+  },
+  {
+   "location": "g_mpzqlws4_jwtrk",
+   "severity": "majeur",
+   "category": "registre",
+   "current": "Loodusnähtused seletatud — Avastage teadus meie planeedi ilmingute taga.",
+   "gloss_fr": "Phénomènes naturels expliqués — Découvrez (vous) la science derrière les manifestations (symptômes) de notre planète.",
+   "problem": "Impératif pluriel, et « ilmingud » (manifestations abstraites) sonne faux pour des phénomènes naturels.",
+   "fix": "Loodusnähtused lahti seletatud — Avasta teadus meie planeedi nähtuste taga.",
+   "surface": "content"
+  },
+  {
+   "location": "subcategory label « Cinéma, photo & architecture »",
+   "severity": "majeur",
+   "category": "autre",
+   "current": "Film, fotograafia ja arhitektuur + meistriteosed",
+   "gloss_fr": "Cinéma, photo et architecture + chefs-d'œuvre (traduction de la clé combinée réutilisée)",
+   "problem": "L'étiquette simple a reçu la traduction de l'étiquette combinée « + œuvres iconiques ».",
+   "fix": "Film, fotograafia ja arhitektuur",
+   "surface": "content"
+  },
+  {
+   "location": "course_110_les_raisins_de_la_colere_steinbeck/title",
+   "severity": "majeur",
+   "category": "nom_propre",
+   "current": "Viha viinamarjad, Steinbeck",
+   "gloss_fr": "Les raisins de la colère (traduction littérale)",
+   "problem": "Titre estonien établi du roman : « Vihakobarad ».",
+   "fix": "Vihakobarad, Steinbeck",
+   "surface": "catalog"
+  },
+  {
+   "location": "course_101_1984_george_orwell/description",
+   "severity": "majeur",
+   "category": "nom_propre",
+   "current": "leiutab Big Brotheri, Newspeaki ja Tõeministeeriumi",
+   "gloss_fr": "invente Big Brother, le Newspeak (anglais) et le Ministère de la Vérité",
+   "problem": "Le titre dit « Suur Vend » mais la description garde l'anglais ; la traduction estonienne utilise « Suur Vend » et « uuskeel ».",
+   "fix": "leiutab Suure Venna, uuskeele ja Tõeministeeriumi",
+   "surface": "catalog"
+  },
+  {
+   "location": "course_102_la_ferme_des_animaux_george_orwell/description",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "kus loomad ajavad mehe minema ja näevad, kuidas sead taas võimu saavad. Selge allegooria Vene revolutsioonist ja revolutsioonilisest reetmisest.",
+   "gloss_fr": "où les animaux chassent un homme et voient les cochons reprendre (de nouveau) le pouvoir. Allégorie de la Révolution russe et de la trahison révolutionnaire.",
+   "problem": "« l'homme » (l'humain) est devenu « un homme », « taas » suppose que les cochons avaient déjà le pouvoir, et « trahison révolutionnaire » devait être « trahison de la révolution ».",
+   "fix": "kus loomad ajavad inimesed minema ja näevad siis, kuidas sead võimu haaravad. Selge allegooria Vene revolutsioonist ja revolutsiooni reetmisest.",
+   "surface": "catalog"
+  },
+  {
+   "location": "course_104_romeo_et_juliette_shakespeare/description",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "surid kaks Veronast pärit armukest",
+   "gloss_fr": "deux amants (au sens d'amant/maîtresse adultère) de Vérone meurent",
+   "problem": "« armuke » connote l'adultère ; les amoureux de Vérone sont « armastajad ».",
+   "fix": "surid kaks Verona noort armastajat vähem kui viie päevaga",
+   "surface": "catalog"
+  },
+  {
+   "location": "course_112_le_grand_gatsby_fitzgerald/description",
+   "severity": "majeur",
+   "category": "non_traduit",
+   "current": "Fitzgerald kirjeldab Roaring Twenties ja Ameerika unistuse korruptsiooni.",
+   "gloss_fr": "Fitzgerald décrit les Roaring Twenties (en anglais) et la corruption (pots-de-vin) du rêve américain.",
+   "problem": "Expression anglaise non traduite et « corruption » pris au sens pénal.",
+   "fix": "Fitzgerald kirjeldab möllavaid kahekümnendaid ja Ameerika unistuse mandumist.",
+   "surface": "catalog"
+  },
+  {
+   "location": "course_113_le_seigneur_des_anneaux_tolkien/description",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "Frodo peab hukatuse mäel hävitama ühe sõrmuse.",
+   "gloss_fr": "Frodon doit détruire une bague (quelconque) sur la montagne de la perdition.",
+   "problem": "« l'Anneau Unique » est devenu « une bague » et le nom du lieu perd ses majuscules.",
+   "fix": "Frodo peab Hukatuse Mäel hävitama Ainsa Sõrmuse.",
+   "surface": "catalog"
+  },
+  {
+   "location": "course_135_mozart_enfant_prodige_et_vie_tragique/title",
+   "severity": "majeur",
+   "category": "mt_artefact",
+   "current": "Kes oli Mozart imelapsest kaugemal?",
+   "gloss_fr": "Qui était Mozart plus loin que l'enfant prodige ?",
+   "problem": "« au-delà de » a été traduit spatialement ; la question n'a pas de sens.",
+   "fix": "Kes oli Mozart peale imelapse?",
+   "surface": "catalog"
+  },
+  {
+   "location": "course_138_bach_et_la_musique_baroque/title + description",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Bachi ja barokkmuusika | võttis fuuga ja kontrapunkti oma kõrgpunkti",
+   "gloss_fr": "De Bach et la musique baroque | a pris la fugue et le contrepoint à son apogée",
+   "problem": "« Bachi » est un génitif sans tête dans le titre, et « porter à leur sommet » est rendu par une construction inexistante.",
+   "fix": "Bach ja barokkmuusika | viis fuuga ja kontrapunkti nende tippu ning temast sai baroki arhitekt",
+   "surface": "catalog"
+  },
+  {
+   "location": "course_142_charlie_chaplin_et_le_cinema_muet/description",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "leiutab pallikübaras hulkuri Charloti ... Vaiksest rääkimiseni muudab ta naeru kunstiks.",
+   "gloss_fr": "invente le vagabond Charlot au chapeau-ballon ... Du silencieux au parler, il transforme le rire en art.",
+   "problem": "« chapeau melon » est « kõvakübar », et « du muet au parlant » désigne le cinéma, pas la parole.",
+   "fix": "leiutab kõvakübaraga Hulkuri ja temast saab esimene ülemaailmne filmitäht. Tummfilmist helifilmini muudab ta naeru kunstiks.",
+   "surface": "catalog"
+  },
+  {
+   "location": "course_150_la_nuit_etoilee_van_gogh/title + description",
+   "severity": "majeur",
+   "category": "nom_propre",
+   "current": "„Tähisöös“ | Saint-Rémy-de-Provence'i varjupaigast pärit **1889** maalis **Vincent Van Gogh** *Tähteline öö*.",
+   "gloss_fr": "« Tähisöö » (mot inventé) | Originaire du refuge de Saint-Rémy 1889, Van Gogh a peint « Nuit étoilée » (autre forme)",
+   "problem": "Deux titres différents pour le même tableau, aucun n'est la forme établie « Tähine öö » ; « asile » est devenu « refuge » et la date est détachée de la phrase.",
+   "fix": "Miks keerleb taevas „Tähises öös“? | **1889.** aastal maalib **Vincent van Gogh** Saint-Rémy-de-Provence'i vaimuhaiglas *Tähise öö*.",
+   "surface": "catalog"
+  },
+  {
+   "location": "course_156_les_demoiselles_d_avignon_picasso/title",
+   "severity": "majeur",
+   "category": "non_traduit",
+   "current": "Les Demoiselles d'Avignon, Picasso",
+   "gloss_fr": "titre laissé en français",
+   "problem": "Le tableau a un titre estonien établi.",
+   "fix": "Avignoni neiud, Picasso",
+   "surface": "catalog"
+  },
+  {
+   "location": "course_174_ulysse_et_les_sirenes/subtitle",
+   "severity": "majeur",
+   "category": "registre",
+   "current": "Kuulake ilma suremata",
+   "gloss_fr": "Écoutez (vouvoiement/pluriel) sans mourir",
+   "problem": "Impératif de politesse là où l'app tutoie ; le français est un infinitif.",
+   "fix": "Kuulata ilma suremata",
+   "surface": "catalog"
+  },
+  {
+   "location": "course_166_narcisse_et_echo, course_167_icare_et_dedale, course_168_sisyphe_punition_eternelle, course_169_tantale_et_son_supplice, course_175_jason_et_la_toison_d_or (title vs description)",
+   "severity": "majeur",
+   "category": "nom_propre",
+   "current": "Narkissose / Narcissus ; Daidalose, Ikarose / Daedalus, Icarus ; Sisyphos / Sisyphus ; Tantalose / Tantalus ; Iason, Medeia / Jason, Medea",
+   "gloss_fr": "forme grecque estonienne dans le titre, forme latine/anglaise dans la description",
+   "problem": "Sur cinq fiches, le même héros change de nom entre le titre et la description ; l'estonien utilise les formes grecques.",
+   "fix": "Kasuta kõikjal kreeka vorme: Narkissos, Daidalos, Ikaros, Sisyphos, Tantalos, Iason, Medeia (nt „Narkissos armastab ainult oma peegelpilti“).",
+   "surface": "catalog"
+  },
+  {
+   "location": "course_68_la_theorie_de_la_relativite_pour_tous/description ; course_71_qu_est_ce_que_l_effet_de_serre_vraiment/description",
+   "severity": "majeur",
+   "category": "registre",
+   "current": "oleks teie GPS mitme kilomeetri võrra vale | kui te seda liiga kiiresti paksendate",
+   "gloss_fr": "votre GPS (vouvoiement) | quand vous l'épaississez",
+   "problem": "Vouvoiement « teie/te » alors que l'app tutoie (« su hääl », « sa ei saa ») ; en 71 le « on » impersonnel est devenu « vous » et « manteau » est devenu « manteau terrestre » (vahevöö).",
+   "fix": "oleks su GPS mitme kilomeetri võrra vale | Tõeline probleem tekib siis, kui seda tekki liiga kiiresti paksemaks tehakse.",
+   "surface": "catalog"
+  },
+  {
+   "location": "course_59_la_decouverte_de_l_anesthesie/subtitle + description",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "Ravim | viidi operatsioon sageli läbi teadlikult ... muudab operatsiooni hoolduseks, mitte piinamiseks",
+   "gloss_fr": "Médicament | l'opération était souvent pratiquée délibérément ... transforme l'opération en entretien, pas en torture",
+   "problem": "« Médecine » devient « médicament », « conscient » devient « délibérément » et « soin » devient « entretien/maintenance ».",
+   "fix": "Meditsiin | Enne 1846. aastat opereeriti patsienti sageli täie teadvuse juures ja kohutavates valudes. Anesteesia muudab kirurgia raviks, mitte piinamiseks.",
+   "surface": "catalog"
+  },
+  {
+   "location": "course_43_pourquoi_la_glace_flotte_t_elle/title + description",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "Miks jää hõljub? | Jää hõljub vee peal. ... Ja õnneks elu Maal.",
+   "gloss_fr": "Pourquoi la glace lévite-t-elle ? | ... Et heureusement vie sur Terre.",
+   "problem": "« flotter » sur l'eau se dit « ujuma » (« hõljuma » = planer dans l'air), et la dernière phrase n'a ni verbe ni sens.",
+   "fix": "Miks jää ujub? | Jää ujub vee peal. See tundub normaalne, kuid tegelikult on see väga haruldane. Ja elu jaoks Maal on see suur õnn.",
+   "surface": "catalog"
+  },
+  {
+   "location": "course_308_quelle_a_ete_la_guerre_la_plus/title + description",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Milline oli ajaloo verisem sõda? ... ajaloo verisem konflikt",
+   "gloss_fr": "Quelle a été la guerre plus sanglante (comparatif) de l'histoire ?",
+   "problem": "Comparatif « verisem » au lieu du superlatif « veriseim », dans le titre et la description.",
+   "fix": "Milline oli ajaloo veriseim sõda? ... ajaloo veriseim konflikt",
+   "surface": "catalog"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622_q3 (Q)",
+   "severity": "mineur",
+   "category": "terminologie",
+   "current": "Tõsi või vale:",
+   "gloss_fr": "Vérité ou mensonge :",
+   "problem": "Le libellé standard des autres questions est « Õige või vale » ; « Tõsi või vale » est incohérent et moins idiomatique.",
+   "fix": "Õige või vale:",
+   "surface": "content"
+  }
+ ]
+}

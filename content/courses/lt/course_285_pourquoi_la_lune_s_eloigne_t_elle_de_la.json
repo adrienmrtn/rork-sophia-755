@@ -1,0 +1,131 @@
+{
+  "id": "course_285_pourquoi_la_lune_s_eloigne_t_elle_de_la",
+  "title": "Kodėl Mėnulis tolsta nuo Žemės?",
+  "subtitle": "3,8 cm per metus",
+  "subject": "sciences",
+  "subcategory": "La Terre et l'Univers",
+  "description": "Kasmet Mėnulis nutolsta nuo mūsų 3,8 cm, maždaug tokiu greičiu, kokiu auga nagai. Jį stumia mūsų vandenynai, o už tai mokame ilgėjančiomis dienomis ir visiškais užtemimais, kurie kada nors išnyks.",
+  "author": "muhammad-zaheer",
+  "hero": {
+    "image": "full_moon_rising_over_ocean_horizon",
+    "ratio": "4:3",
+    "hook": "Mėnulis tolsta nuo mūsų tokiu greičiu, kokiu auga nagai: kada nors visiški užtemimai taps nebeįmanomi."
+  },
+  "sections": [
+    {
+      "id": "course_285_pourquoi_la_lune_s_eloigne_t_elle_de_la_intro",
+      "title": "Įvadas",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kokiu atstumu yra Mėnulis? Jį galima išmatuoti lazeriu. Kai vyko [[Apollo misijos]], astronautai Mėnulio paviršiuje paliko specialius atšvaitus. Mokslininkai iš Žemės siunčia į juos lazerio impulsus ir matuoja, kiek laiko šviesa grįžta atgal. Rezultatas: Mėnulis vidutiniškai yra maždaug **385 000 km** nuo mūsų."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tačiau šis atstumas nėra pastovus. Kasmet Mėnulis nutolsta maždaug **3,8 cm**, beveik tokiu greičiu, kokiu auga mūsų nagai. Per metus pokytis menkutis. Per milijonus metų jis susideda. Tad kas gi stumia Mėnulį tolyn nuo mūsų?"
+        }
+      ]
+    },
+    {
+      "id": "course_285_pourquoi_la_lune_s_eloigne_t_elle_de_la_p1",
+      "title": "Mėnulis kilnoja vandenynus",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kaip ir Žemė, Mėnulis turi savo traukos jėgą: tai [[gravitacija]], jėga, traukianti objektus, taip pat ir Žemę, link jo. Tačiau ši trauka ne visur vienoda. Į Mėnulį atsuktą Žemės pusę jis traukia šiek tiek stipriau nei priešingą. Dėl šio skirtumo susidaro [[potvynių iškilimai]], du nedideli vandenynų išsipūtimai: vienas Mėnulio pusėje, kitas priešingoje."
+        },
+        {
+          "type": "image",
+          "asset": "mont_saint_michel_bay_high_tide_aerial",
+          "ratio": "3:2",
+          "caption": "Mont Sen Mišelis atoslūgio metu: jūra, kurią Mėnulis pakelia du kartus per parą, atsitraukė toli."
+        },
+        {
+          "type": "paragraph",
+          "text": "Šie iškilimai nėra tiksliai po Mėnuliu. Žemė apsisuka apie savo ašį per **24 valandas**, o Mėnuliui apskrieti aplink ją reikia maždaug mėnesio. Kadangi Žemė sukasi daug greičiau, ji nusineša iškilimus šiek tiek į priekį nuo Mėnulio. Šis nedidelis poslinkis labai svarbus: dėl jo iškilimas gali traukti Mėnulį į priekį, ir taip keičiasi jo [[orbita]]."
+        }
+      ]
+    },
+    {
+      "id": "course_285_pourquoi_la_lune_s_eloigne_t_elle_de_la_p2",
+      "title": "Žemė stumia Mėnulį",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vandenyno iškilimas turi masę, taigi ir savo gravitaciją. Kadangi jis yra šiek tiek priekyje Mėnulio, jo trauka truputį tempia Mėnulį į priekį, šiam skriejant aplink Žemę. Šis tempimas prideda energijos Mėnulio orbitai. Užuot greitėjęs ta pačia trajektorija, Mėnulis pereina į šiek tiek platesnę orbitą. Štai kodėl jo vidutinis atstumas kasmet padidėja maždaug **3,8 cm**."
+        },
+        {
+          "type": "image",
+          "asset": "apollo_11_lunar_laser_retroreflector_nasa_1969",
+          "ratio": "4:3",
+          "caption": "Apollo lazerinis atšvaitas (Nacionalinio aviacijos ir kosmonautikos muziejaus egzempliorius): toks pat modelis Mėnulyje guli nuo 1969 m. liepos."
+        },
+        {
+          "type": "paragraph",
+          "text": "Taigi jokia paslaptinga jėga Mėnulio nestumia. Energija gaunama iš Žemės sukimosi. Besisukdama mūsų planeta per potvynius pamažu atiduoda Mėnuliui dalį savo energijos. Ši atiduodama dalis yra [[sukimosi energija]]. Stūmimas menkutis, bet kartojasi kiekvieno apsisukimo metu."
+        }
+      ]
+    },
+    {
+      "id": "course_285_pourquoi_la_lune_s_eloigne_t_elle_de_la_p3",
+      "title": "Žemė irgi lėtėja",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mėnuliui atiduota energija turi kainą. Žemė pamažu netenka nedidelės dalies savo sukimosi energijos, todėl sukasi truputį lėčiau. Per žmogaus gyvenimą šis pokytis nepastebimas. Per milijonus metų jis kaupiasi."
+        },
+        {
+          "type": "funFact",
+          "text": "Tolimoje praeityje Žemė sukosi greičiau: para tada truko trumpiau nei šiandien įprastos **24 valandos**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Taigi potvyniai daro du dalykus vienu metu: tolina Mėnulį ir lėtina Žemės sukimąsi. Tai ne du atskiri reiškiniai, o dvi to paties Žemės ir Mėnulio mainų pusės. Šie mainai vyksta jau milijardus metų ir tęsiasi šiandien, su kiekvienu potvyniu."
+        }
+      ]
+    },
+    {
+      "id": "course_285_pourquoi_la_lune_s_eloigne_t_elle_de_la_p4",
+      "title": "Visiškų užtemimų pabaiga",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Šis lėtas tolimas galiausiai pakeis kai ką įspūdingo mūsų danguje. Šiandien Saulė yra maždaug **400 kartų** platesnė už Mėnulį. Ji taip pat maždaug 400 kartų toliau nuo Žemės. Dėl grynai atsitiktinio sutapimo abu dangaus kūnai atrodo beveik vienodo dydžio. Todėl Mėnulis gali visiškai uždengti Saulę, ir įvyksta [[visiškas Saulės užtemimas]]."
+        },
+        {
+          "type": "image",
+          "asset": "total_solar_eclipse_corona_2017_nasa",
+          "ratio": "3:2",
+          "caption": "Vaizdas iš erdvėlaivio „Artemis II“ 2026 m. balandį: Mėnulis uždengia Saulę ir atidengia jos vainiką."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tolstantis Mėnulis atrodys šiek tiek mažesnis. Maždaug po **600 milijonų metų**, o gal ir vėliau, jis nebeatrodys pakankamai didelis, kad visiškai uždengtų Saulę. Tada visiški užtemimai išnyks visam laikui. Mėnulis ištrūkti iš Žemės neketina. Tačiau jo lėtas tolimas primena, kad net toks įprastas reginys kaip naktinis dangus nėra amžinas."
+        },
+        {
+          "type": "takeaway",
+          "text": "Mėnulis tolsta **3,8 cm** per metus, nes potvyniai jam perduoda dalį Žemės sukimosi energijos: mūsų dienos ilgėja, o po 600 milijonų metų visiškų užtemimų nebeliks."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "NASA Jet Propulsion Laboratory, « The Apollo Experiment That Keeps on Giving », 2019."
+    },
+    {
+      "text": "A. Fraknoi, D. Morrison et S. C. Wolff, Astronomy 2e, OpenStax, 2022, section 4.6 « Ocean Tides and the Moon », p. 116-119."
+    },
+    {
+      "text": "NASA Science, « Tidal Locking »."
+    },
+    {
+      "text": "NASA Science, « Eclipses and the Moon »."
+    }
+  ]
+}

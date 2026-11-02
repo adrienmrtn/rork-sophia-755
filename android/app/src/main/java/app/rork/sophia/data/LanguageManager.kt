@@ -2,6 +2,7 @@ package app.rork.sophia.data
 
 import android.content.Context
 import app.rork.sophia.domain.AppLanguage
+import com.revenuecat.purchases.Purchases
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -52,5 +53,24 @@ class LanguageManager(context: Context) {
         GlossaryStore.clearCache()
         LegalDocumentStore.clearCache()
         _current.value = language
+        report(language)
+    }
+
+    companion object {
+        /**
+         * Tells RevenueCat which language this customer reads the app in, so trial starts and
+         * conversions can be compared language by language (customer attribute `app_language`).
+         * Sent at every launch and on every change; RevenueCat ignores unchanged values.
+         */
+        fun reportToRevenueCat(context: Context) {
+            val stored = context.getSharedPreferences("sophia_prefs", Context.MODE_PRIVATE)
+                .getString(AppLanguage.PREFS_KEY, null) ?: return
+            report(AppLanguage.fromCode(stored))
+        }
+
+        private fun report(language: AppLanguage) {
+            if (!Purchases.isConfigured) return
+            runCatching { Purchases.sharedInstance.setAttributes(mapOf("app_language" to language.code)) }
+        }
     }
 }

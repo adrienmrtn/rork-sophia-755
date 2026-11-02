@@ -1,14 +1,14 @@
 {
   "id": "course_171_hercule_et_ses_12_travaux",
   "title": "Herakles ja tema 12 tööd",
-  "subtitle": "Kaosest Olympuseni",
+  "subtitle": "Kaosest Olümposele",
   "subject": "mythologie",
   "subcategory": "Kreeka kangelased",
-  "description": "Zeusi poeg Herakles tapab hullushoos oma pere. Tema kaksteist tööd on meeleparandus: koletiste tapmine, seejärel surma enda võitmine.",
+  "description": "Zeusi poeg Herakles tapab hullushoos oma pere. Tema kaksteist tööd on patukahetsus: tappa koletisi ja võita lõpuks surm ise.",
   "hero": {
     "image": "hercule_et_ses_12_travaux",
     "ratio": "16:9",
-    "hook": "Kaksteist testi kuriteo selgitamiseks. Pooljumal, kes satub jumalate sekka."
+    "hook": "Kaksteist katsumust, et kuritegu lunastada. Pooljumal, kes jõuab lõpuks jumalate sekka."
   },
   "sections": [
     {
@@ -18,30 +18,30 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Herakles**, mida roomlased kutsusid **Herakles**, on Kreeka suurim kangelane. Jumalate kuninga [[Zeus]] ja sureliku **Alcmene** poeg, ta pole ainult koloss. Ta kehastab jõudu, aga ka vägivalda ja lunastust."
+          "text": "**Herakles**, keda roomlased kutsusid **Herculeseks**, on Kreeka suurim kangelane. Tema isa on jumalate kuningas [[Zeus]], ema surelik **Alkmene**. Ta pole ainult hiiglaslik jõumees. Ta kehastab jõudu, aga ka vägivalda ja lunastust."
         },
         {
           "type": "paragraph",
-          "text": "Tema **Kaksteist teost** ei ole vabatahtlik hiilgeotsing. See on karistus kohutava kuriteo eest. Puhastades maailma koletistest, avab Herakles tee tsivilisatsiooni... ja saavutab haruldase privileegi, surematuse."
+          "text": "Tema **kaksteist tööd** ei ole vabatahtlik kuulsuse otsing. Need on karistus jõhkra kuriteo eest. Koletistest maailma puhastades avab Herakles tee tsivilisatsioonile… ja pälvib haruldase privileegi: surematuse."
         }
       ]
     },
     {
       "id": "course_171_hercule_et_ses_12_travaux_p1",
-      "title": "Hera hullus, kuritegevus, patukahetsus",
+      "title": "Hera saadetud hullus, kuritegu ja patukahetsus",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "[[Hera]], Zeusi seaduslik naine, vihkab truudusetusest sündinud last. Hällist saadab ta kaks madu. Imik lämmatab need paljaste kätega. Hiljem abiellus Herakles Teeba kuninga tütre **Mégara**-ga. Hera ajab ta siis hulluks: ta tapab oma naise ja lapsed."
+          "text": "[[Hera]], Zeusi seaduslik abikaasa, vihkab truudusetusest sündinud last. Juba hälli saadab ta kaks madu. Imik kägistab need paljaste kätega. Hiljem abiellub Herakles Teeba kuninga tütre **Megaraga**. Siis lööb Hera teda hullusega: Herakles tapab oma naise ja lapsed."
         },
         {
           "type": "paragraph",
-          "text": "See verekuritegu, [[Miasma]], asetab ta ühiskonnast väljapoole. Delfi oraakel käsib tal teenida oma nõbu, kuningas **Eurystheus**. See hirmuäratav suverään, keda juhib Hera, paneb talle peale kümme ja seejärel kaksteist tööd, sest ta keeldub mõnda neist kokku lugemast."
+          "text": "See veresüü, [[Miasma]], tõukab ta ühiskonnast välja. Delfi oraakel käsib tal teenida oma nõbu, kuningas **Eurystheust**. Hera juhitud arg valitseja paneb talle peale kümme tööd, seejärel kaksteist, sest mõnda neist ta arvesse ei võta."
         },
         {
           "type": "funFact",
-          "text": "Legendi järgi moodustas Hera piim, mis väljus tema rinnast Heraklese imetamise ajal, taevas **Liimatee**."
+          "text": "Legendi järgi olevat Hera piim, mis purskus tema rinnast, kui ta pettuse tõttu Heraklest imetas, moodustanud taevasse **Linnutee**."
         }
       ]
     },
@@ -52,21 +52,21 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Esimene väljakutse on läbimatu nahaga **Nemeani lõvi**. Herakles kägistab ta, seejärel koorib ta enda küünistega. Sellest nahast, [[Leonte]], saab tema soomus. Järgmiseks tuleb **Lerni hüdra**, paljude peadega madu: iga äralõigatud pea kohta kasvab kaks tagasi. Koos oma vennapoja Iolaosega kaestab ta kaelasid tulega."
+          "text": "Esimene ülesanne on läbitungimatu nahaga **Nemea lõvi**. Herakles kägistab lõvi ja nülgib selle tema enda küünistega. See nahk, [[Leonte]], saab tema soomusrüüks. Järgmisena tuleb **Lerna hüdra**, mitmepäine madu: iga maharaiutud pea asemele kasvab kaks uut. Koos vennapoja Iolaosega kõrvetab ta kaelad tulega."
         },
         {
           "type": "image",
           "asset": "hercules_nemean_lion_hydra_labours_painting",
           "ratio": "4:3",
-          "caption": "Herakles silmitsi Nemeani lõvi ja hüdraga."
+          "caption": "Herakles Nemea lõvi ja hüdra vastu."
         },
         {
           "type": "funFact",
-          "text": "Muistsed ütlesid, et Zeus oli paigutanud Nemeuse lõvi tähtede hulka: **Lõvi** tähtkuju."
+          "text": "Antiikajal räägiti, et Zeus paigutas Nemea lõvi tähtede sekka: nii tekkis **Lõvi** tähtkuju."
         },
         {
           "type": "paragraph",
-          "text": "**Augiasis tallid** muudatuste register. Kolmkümmend aastat on puhastamata tuhandeid härgi. Eurystheus tahab kangelast alandada. Herakles suunab [[Alpheus]] ja Peneuse jõed kõrvale: ühe päevaga viib vool sõnniku minema. Intelligentsus on sama hea kui lihased."
+          "text": "**Augeiase tallid** on hoopis teist laadi ülesanne. Tuhandete härgade talle pole kolmkümmend aastat koristatud. Eurystheus tahab kangelast alandada. Herakles juhib kõrvale jõed [[Alpheios]] ja Peneios: ühe päevaga uhub vool sõnniku minema. Arukus on sama palju väärt kui lihased."
         }
       ]
     },
@@ -77,15 +77,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Teos viib ta Kreekast eemale: Kreeta härg, inimtoidulised märad, amatsoonide kuninganna **Hippolyte** vöö. Herakles avas kauges läänes asuva hiiglasliku **Géryon** karja jaoks käigu Vahemere ja Atlandi ookeani vahel: [[Heraklese sambad]], tänapäeval Gibraltari väin."
+          "text": "Tööd viivad ta Kreekast kaugele: Kreeta härg, inimsööjad märad, amatsoonide kuninganna **Hippolyte** vöö. Et saada kätte hiiglase **Geryoni** kari kaugel läänes, rajab Herakles läbipääsu Vahemere ja Atlandi ookeani vahele: [[Heraklese sambad]], tänapäeval Gibraltari väin."
         },
         {
           "type": "paragraph",
-          "text": "Ta varastab hesperiididest **kuldsed õunad**, pettes taevast kandva titaani [[Atlas]]. Viimane töö on kõige kohutavam: laskuda allmaailma ja tuua tagasi **Cerberus**, mitmepäine koer. Elus välja tulemine on sümboolselt surma võitmine."
+          "text": "Hesperiidide **kuldsed õunad** varastab ta kavalusega: taevast kannab titaan [[Atlas]], kelle Herakles üle kavaldab. Viimane töö on kõige kohutavam: laskuda allilma ja tuua sealt **Kerberos**, mitmepäine koer. Sealt elusalt väljuda tähendab sümboolselt surma võitmist."
         },
         {
           "type": "funFact",
-          "text": "Avastaja Orellana oleks andnud jõele nimeks **Amazon**, kuna uskus, et nägi selle kallastel sõdalasi, mis kordavad müüdi amatsoonide sõnu."
+          "text": "Maadeavastaja Orellana olevat andnud jõele nimeks **Amazonas**, sest arvas nägevat selle kallastel naissõdalasi, nagu müüdi amatsoonid."
         }
       ]
     },
@@ -96,7 +96,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Tööd lõpevad, aga mitte tragöödiad. Tema naine **Déjanire** sunnib teda kandma [[Kentaur]] Nessuse mürgise verega läbi imbunud tuunikat. Elusalt põlenud Herakles ronib Oeta mäel tulele. Tema surelik osa põleb. Selle jumalik olemus tõuseb Olümpose poole: see on **apotheoos**."
+          "text": "Tööd saavad läbi, kuid tragöödiad mitte. Tema naine **Deianeira** paneb talle selga tuunika, mis on immutatud [[kentaur]] Nessose mürgise verega. Elusalt põledes tõuseb Herakles Oita mäel tuleriidale. Tema surelik osa põleb ära. Tema jumalik olemus tõuseb Olümposele: see on **apoteoos**."
         },
         {
           "type": "image",
@@ -106,11 +106,11 @@
         },
         {
           "type": "paragraph",
-          "text": "Leppinud Heraga, abiellub ta igavese nooruse **Hebé**-ga. Roomlased võtsid ta figuuri üle nimega **Herakles**. \"Heraklese töö\" tähendab endiselt tohutut ülesannet. Herakles pole lihtsalt koletiste tapja: ta on korraarhitekt."
+          "text": "Heraga lepitatuna abiellub ta **Hebega**, igavese nooruse jumalannaga. Roomlased võtavad tema kuju üle nime all **Hercules**. „Heraklese töö“ tähendab tänini tohutut ülesannet. Herakles pole ainult koletiste tapja: ta on korra rajaja."
         },
         {
           "type": "takeaway",
-          "text": "**Herakles** (Hercules) teeb kaksteist tööd, et lepitada oma pere mõrva eest. Nemea lõvist Cerberuseni läheb ta kaosest tsivilisatsiooni... ja saavutab surematuse."
+          "text": "**Herakles** (Hercules) teeb kaksteist tööd, et lunastada oma pere tapmist. Nemea lõvist Kerberoseni liigub ta kaosest tsivilisatsiooni… ja saavutab surematuse."
         }
       ]
     }
