@@ -30,7 +30,10 @@ enum class AppLanguage(val code: String, val displayName: String, val flag: Stri
     ARABIC("ar", "العربية", "🇸🇦"),
     HEBREW("he", "עברית", "🇮🇱"),
     FINNISH("fi", "Suomi", "🇫🇮"),
-    ESTONIAN("et", "Eesti", "🇪🇪");
+    ESTONIAN("et", "Eesti", "🇪🇪"),
+    LITHUANIAN("lt", "Lietuvių", "🇱🇹"),
+    LATVIAN("lv", "Latviešu", "🇱🇻"),
+    JAPANESE("ja", "日本語", "🇯🇵");
 
     /**
      * Writing direction of the language. The app reads its language from its own

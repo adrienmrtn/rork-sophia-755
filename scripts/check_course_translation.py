@@ -160,7 +160,9 @@ ABBREVIATION_TAIL_RE = re.compile(
     # era and date abbreviations of the edited languages: eKr./jKr. (fi), eKr./pKr. (et),
     # f.Kr./e.Kr. (da, nb), н. э. / г. / в. (ru), and ordinal dates or centuries ("12.", "8.")
     # regnal ordinals of the Slavic languages ("Nikolaj II.", "Ludvik XIV.") and "pr. n. št." (sl)
-    r"|eKr|jKr|pKr|Kr|Hr|eaa|jaa|št|\b[IVXLC]+|\b[а-яё]|\d)\.$"
+    # lt: mln. / mlrd. / tūkst. (million, billion, thousand); lv: p.m.ē. / m.ē. (before / after
+    # the common era) and g. (year)
+    r"|mln|mlrd|tūkst|p\.m\.ē|m\.ē|\bg|eKr|jKr|pKr|Kr|Hr|eaa|jaa|št|\b[IVXLC]+|\b[а-яё]|\d)\.$"
 )
 
 # Articles that must not precede a glossary key that already carries one.
@@ -782,6 +784,65 @@ ESTONIAN_RULES = LanguageRules(
     allowed_chars=frozenset("„“"),  # Estonian quotes are „…“
 )
 
+LITHUANIAN_RULES = LanguageRules(
+    stranded_spaced=re.compile(
+        r"\b(be|per|po|prie|su|iš|už|ant|nuo|apie|virš|pagal|tarp|prieš|pas)"
+        r"\s+([,;:.!?])(?=\s|$)",
+        re.IGNORECASE,
+    ),
+    # Lithuanian strands a preposition at the end of a clause as freely as English,
+    # so a word against the mark says nothing; only the gap a deleted term leaves,
+    # caught above, counts.
+    stranded_tight=re.compile(r"(?!x)x"),
+    leading_articles=(),  # Lithuanian has no articles
+    # "du" is the numeral two ("du šimtmečiai"), not the French contraction.
+    leftover_extra_skip=frozenset({"du"}),
+    check_a_an=False,
+    flag_space_thousands=False,  # Lithuanian groups thousands with a space
+    thousands_hint="a space is the Lithuanian separator",
+    flag_decimal_comma=False,  # Lithuanian decimals are commas
+    century_hint="should be '15 a.'",
+    era_hint="should be pr. Kr. / po Kr.",
+    allowed_chars=frozenset("\u2013"),  # the en dash is the Lithuanian dash; quotes are „…“
+)
+
+LATVIAN_RULES = LanguageRules(
+    stranded_spaced=re.compile(
+        r"\b(bez|pēc|pie|ar|uz|par|pret|caur|starp|pirms|virs|zem|līdz)"
+        r"\s+([,;:.!?])(?=\s|$)",
+        re.IGNORECASE,
+    ),
+    # Same reasoning as Lithuanian: a clause may end on a preposition.
+    stranded_tight=re.compile(r"(?!x)x"),
+    leading_articles=(),  # Latvian has no articles
+    leftover_extra_skip=frozenset(),
+    check_a_an=False,
+    flag_space_thousands=False,  # Latvian groups thousands with a space
+    thousands_hint="a space is the Latvian separator",
+    flag_decimal_comma=False,  # Latvian decimals are commas
+    century_hint="should be '15. gadsimts'",
+    era_hint="should be p.m.ē. / m.ē.",
+    allowed_chars=frozenset("\u2013"),  # the en dash is the Latvian dash; quotes are „…“
+)
+
+JAPANESE_RULES = LanguageRules(
+    # Japanese writes no spaces between words and marks relations with particles
+    # glued to the word before; a function word cannot be stranded by a space.
+    stranded_spaced=re.compile(r"(?!x)x"),
+    stranded_tight=re.compile(r"(?!x)x"),
+    leading_articles=(),  # no articles
+    leftover_extra_skip=frozenset(),
+    check_a_an=False,
+    flag_space_thousands=True,
+    thousands_hint="should use a comma (30,000)",
+    flag_decimal_comma=True,
+    century_hint="should be '15世紀'",
+    era_hint="should be 紀元前 / 西暦",
+    # Full-width punctuation (、。「」『』：！？) is not in FORBIDDEN_CHARS, and the
+    # ASCII punctuation checks below never match it, so no character is exempted.
+    allowed_chars=frozenset(),
+)
+
 RULES_BY_LANG: dict[str, LanguageRules] = {
     "en": ENGLISH_RULES,
     "de": GERMAN_RULES,
@@ -809,6 +870,9 @@ RULES_BY_LANG: dict[str, LanguageRules] = {
     "he": HEBREW_RULES,
     "fi": FINNISH_RULES,
     "et": ESTONIAN_RULES,
+    "lt": LITHUANIAN_RULES,
+    "lv": LATVIAN_RULES,
+    "ja": JAPANESE_RULES,
 }
 
 

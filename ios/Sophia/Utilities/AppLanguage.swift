@@ -29,6 +29,9 @@ enum AppLanguage: String, CaseIterable, Identifiable, Codable, Sendable {
     case hebrew = "he"
     case finnish = "fi"
     case estonian = "et"
+    case lithuanian = "lt"
+    case latvian = "lv"
+    case japanese = "ja"
 
     var id: String { rawValue }
 
@@ -61,6 +64,9 @@ enum AppLanguage: String, CaseIterable, Identifiable, Codable, Sendable {
         case .hebrew: "he_IL"
         case .finnish: "fi_FI"
         case .estonian: "et_EE"
+        case .lithuanian: "lt_LT"
+        case .latvian: "lv_LV"
+        case .japanese: "ja_JP"
         }
     }
 
@@ -122,6 +128,9 @@ enum AppLanguage: String, CaseIterable, Identifiable, Codable, Sendable {
         case .hebrew: "🇮🇱"
         case .finnish: "🇫🇮"
         case .estonian: "🇪🇪"
+        case .lithuanian: "🇱🇹"
+        case .latvian: "🇱🇻"
+        case .japanese: "🇯🇵"
         }
     }
 
@@ -154,6 +163,9 @@ enum AppLanguage: String, CaseIterable, Identifiable, Codable, Sendable {
         case .hebrew: "עברית"
         case .finnish: "Suomi"
         case .estonian: "Eesti"
+        case .lithuanian: "Lietuvių"
+        case .latvian: "Latviešu"
+        case .japanese: "日本語"
         }
     }
 
