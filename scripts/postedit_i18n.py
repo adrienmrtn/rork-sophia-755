@@ -49,7 +49,7 @@ LOCALIZABLE = ROOT / "ios" / "Sophia" / "Utilities" / "AppLocalizable.swift"
 STORE = ROOT / "appstore" / "metadata"
 STORE_LOCALE = {"en": "en-US", "es": "es-ES", "de": "de-DE", "pt": "pt-BR", "pt-PT": "pt-PT", "it": "it", "tr": "tr",
                 "pl": "pl", "ro": "ro", "nl": "nl-NL", "el": "el", "sv": "sv", "hu": "hu", "cs": "cs", "da": "da",
-                "nb": "no", "ru": "ru", "hr": "hr", "sl": "sl-SI", "sk": "sk", "ar": "ar-SA", "he": "he", "fi": "fi"}
+                "nb": "no", "ru": "ru", "hr": "hr", "sl": "sl-SI", "sk": "sk", "ar": "ar-SA", "he": "he", "fi": "fi", "ja": "ja"}
 STORE_FIELDS = {"name": 30, "subtitle": 30, "promotional_text": 170, "keywords": 100, "description": 4000, "whats_new": 4000}
 UI_LOTS = [("ui1", ("onboardingV2.",)), ("ui2", ("onboarding.", "prepaywall.", "offer.", "discount.", "trial.", "purchase.")),
            ("ui3", ("paywall.",)), ("ui4", ())]
