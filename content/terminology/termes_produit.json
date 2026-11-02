@@ -29,7 +29,10 @@
   "ar",
   "he",
   "fi",
-  "et"
+  "et",
+  "lt",
+  "lv",
+  "ja"
  ],
  "termes": [
   {
@@ -289,6 +292,37 @@
       "\\bmälumäng\\w*"
      ],
      "note": "„viktoriin“ on eesti haridusrakendustes (Kahoot, Quizlet) kinnistunud vaste; „kviis“ on släng, „küsimustik“ tähendab ankeeti, „mälumäng“ on pubimäng."
+    },
+    "lt": {
+     "canon": "viktorina",
+     "variantes_a_signaler": [
+      "\\bquiz\\w*",
+      "\\bkviz\\w*",
+      "\\bklausimyn\\w*",
+      "\\bapklaus\\w*"
+     ],
+     "note": "„viktorina“ yra visoje programėlėje vartojamas terminas; „klausimynas“ ir „apklausa“ reiškia anketą."
+    },
+    "lv": {
+     "canon": "viktorīna",
+     "variantes_a_signaler": [
+      "\\bquiz\\w*",
+      "\\bkvīz\\w*",
+      "\\bkviz\\w*",
+      "\\banketa\\w*",
+      "\\baptauj\\w*"
+     ],
+     "note": "„viktorīna“ ir lietotnē vienotais termins; „anketa“ un „aptauja“ nozīmē sociālo aptauju."
+    },
+    "ja": {
+     "canon": "クイズ",
+     "variantes_a_signaler": [
+      "\\bquiz\\w*",
+      "クイッズ|クィズ",
+      "小テスト|ミニテスト|確認テスト",
+      "アンケート"
+     ],
+     "note": "「クイズ」で統一。「テスト」は成績評価の響きがあり、「アンケート」は意識調査を指す。"
     }
    }
   },
@@ -550,6 +584,30 @@
       "\\b(10|kümne)[-\\s]*minuti\\w*\\s+tund\\w*"
      ],
      "note": "„kursus“ on sisuüksuse nimi; „tund/õppetund“ = leçon (ja „tund“ tähendab ka tundi), „loeng“ = ülikooliloeng."
+    },
+    "lt": {
+     "canon": "kursas",
+     "variantes_a_signaler": [
+      "\\bpaskait\\w*",
+      "\\bužsiėm\\w*"
+     ],
+     "note": "„kursas“ – turinio vienetas; „paskaita“ – auditorijos paskaita, o „pamoka“ rezervuota žodžiui „leçon“."
+    },
+    "lv": {
+     "canon": "kurss",
+     "variantes_a_signaler": [
+      "\\blekcij\\w*",
+      "\\bmācību\\s+stund\\w*"
+     ],
+     "note": "„kurss“ – satura vienība; „nodarbība“ rezervēta vārdam „leçon“, „lekcija“ ir auditorijas lekcija."
+    },
+    "ja": {
+     "canon": "コース",
+     "variantes_a_signaler": [
+      "講座|授業|講義",
+      "カリキュラム"
+     ],
+     "note": "「コース」で統一。「レッスン」は leçon（1回分の内容）に使うため別語として扱う。"
     }
    }
   },
@@ -799,6 +857,30 @@
       "\\bparcours\\b"
      ],
      "note": "audit: „reis“ (= voyage) asendatakse „teekonnaga“; teekond kannab edenemise ja raja mõtet."
+    },
+    "lt": {
+     "canon": "Kelias (skirtukas „Kelias“)",
+     "variantes_a_signaler": [
+      "\\bmaršrut\\w*",
+      "\\btrasa\\w*"
+     ],
+     "note": "„kelias“ – pažangos kelias; „maršrutas“ reiškia kelionės maršrutą."
+    },
+    "lv": {
+     "canon": "Ceļš (cilne „Ceļš“)",
+     "variantes_a_signaler": [
+      "\\bmaršrut\\w*",
+      "\\btrase\\w*"
+     ],
+     "note": "„ceļš“ – attīstības ceļš; „maršruts“ nozīmē ceļojuma maršrutu."
+    },
+    "ja": {
+     "canon": "学習ルート",
+     "variantes_a_signaler": [
+      "ラーニングパス|学習パス",
+      "学習経路"
+     ],
+     "note": "「学習ルート」で統一。カタカナの「パス」は別の意味（通過・パスワード）と紛れる。"
     }
    }
   },
@@ -1057,6 +1139,29 @@
       "\\bsar[ij]\\w*(?=.{0,20}kursus)"
      ],
      "note": "„kogumik“ = temaatiline kursuste kogum; „kollektsioon“ on eesti keeles mood/kunst (ja auditis valesti Baudelaire’i luulekogu kohta)."
+    },
+    "lt": {
+     "canon": "rinkinys",
+     "variantes_a_signaler": [
+      "\\bkolekcij\\w*",
+      "\\bkolekcion\\w*"
+     ],
+     "note": "„rinkinys“ – teminis kursų rinkinys; „kolekcija“ skamba kaip daiktų kolekcija."
+    },
+    "lv": {
+     "canon": "kolekcija",
+     "variantes_a_signaler": [
+      "\\bkomplekt\\w*"
+     ],
+     "note": "„kolekcija“ – tematisks kursu kopums; „krājums“ un „komplekts“ ir nepiemēroti."
+    },
+    "ja": {
+     "canon": "コレクション",
+     "variantes_a_signaler": [
+      "シリーズ",
+      "特集"
+     ],
+     "note": "「コレクション」で統一。「シリーズ」「特集」は別の編集単位。"
     }
    }
   },
@@ -1319,6 +1424,27 @@
       "\\bast(e|me)\\w*\\s*\\d"
      ],
      "note": "„tase“ on mängustatud rakenduste standardsõna; „aste“ = degré, „nivoo“ on kõnekeelne laen."
+    },
+    "lt": {
+     "canon": "lygis (LYGIS 3)",
+     "variantes_a_signaler": [
+      "\\bpakop\\w*"
+     ],
+     "note": "„lygis“ – XP pažangos lygis; „pakopa“ ir „etapas“ nevartojami."
+    },
+    "lv": {
+     "canon": "līmenis",
+     "variantes_a_signaler": [
+      "\\bpakāp\\w*"
+     ],
+     "note": "„līmenis“ – XP progresijas līmenis; „pakāpe“ un „posms“ nevartojami."
+    },
+    "ja": {
+     "canon": "レベル",
+     "variantes_a_signaler": [
+      "ステージ"
+     ],
+     "note": "「レベル」で統一。"
     }
    }
   },
@@ -1585,6 +1711,29 @@
       "\\bjada\\b"
      ],
      "note": "„seeria“ (päevade seeria) on Duolingo jt eesti UI-s kinnistunud; „sari“ = telesari, „triip“ = rayure."
+    },
+    "lt": {
+     "canon": "serija / dienų iš eilės",
+     "variantes_a_signaler": [
+      "\\bstreak\\w*"
+     ],
+     "note": "„Streak“ nepaliekamas angliškai."
+    },
+    "lv": {
+     "canon": "sērija",
+     "variantes_a_signaler": [
+      "\\bstreak\\w*"
+     ],
+     "note": "„streak“ netiek atstāts angliski; „ķēde“ nav lietotnē lietots."
+    },
+    "ja": {
+     "canon": "連続記録（◯日連続）",
+     "variantes_a_signaler": [
+      "\\bstreak\\w*",
+      "ストリーク",
+      "継続日数"
+     ],
+     "note": "「連続記録」「◯日連続」で統一。"
     }
    }
   },
@@ -1847,6 +1996,34 @@
       "\\btasuta\\s+(proov|katse)\\b"
      ],
      "note": "„prooviperiood“ on App Store’i/Google Play eesti vaste; „kohtuprotsess“ = procès (audit), „katseaeg“ = période probatoire (töösuhe), „prooviversioon“ = démo."
+    },
+    "lt": {
+     "canon": "nemokamas bandomasis laikotarpis",
+     "variantes_a_signaler": [
+      "\\btrial\\w*",
+      "\\bdemo\\b",
+      "\\bbandomoji\\s+versij\\w*"
+     ],
+     "note": "„bandomasis laikotarpis“ – prenumeratos bandomasis laikotarpis, o ne „bandomoji versija“."
+    },
+    "lv": {
+     "canon": "bezmaksas izmēģinājums",
+     "variantes_a_signaler": [
+      "\\btrial\\w*",
+      "\\bdemo\\b",
+      "\\bizmēģinājuma\\s+versij\\w*",
+      "\\btesta\\s+period\\w*"
+     ],
+     "note": "„izmēģinājums“ – abonementa izmēģinājuma periods."
+    },
+    "ja": {
+     "canon": "無料トライアル",
+     "variantes_a_signaler": [
+      "\\btrial\\w*",
+      "お試し期間|体験期間",
+      "無料体験|無料お試し"
+     ],
+     "note": "「無料トライアル」で統一。"
     }
    }
   },
@@ -2112,6 +2289,23 @@
       "\\b(esmaklassiline|tipptase\\w*|tipp-?pakett|kõrgem\\s+pakett)\\b"
      ],
      "note": "kaubamärk jääb ladina kujul; käändelõpp liitub otse (Premiumi, Premiumiga); „preemia“/„lisatasu“ on kindlustus-/supplémenti tähendused."
+    },
+    "lt": {
+     "canon": "Premium",
+     "variantes_a_signaler": [
+      "\\bprėmium\\w*"
+     ],
+     "note": "Premium lieka lotyniškais ir neverčiamas."
+    },
+    "lv": {
+     "canon": "Premium",
+     "variantes_a_signaler": [],
+     "note": "Premium paliek latīņu burtiem; „prēmija“ nozīmē piemaksu."
+    },
+    "ja": {
+     "canon": "Premium／プレミアム",
+     "variantes_a_signaler": [],
+     "note": "日本語の表では「プレミアム」と書く箇所が既にあり、カタカナ表記も自然なため、変種としては検出しない（他言語の「そのまま残す」規則とは異なる扱い）。"
     }
    }
   },
@@ -2371,6 +2565,28 @@
       "\\bSofja\\w*|София"
      ],
      "note": "kaubamärk jääb muutmata; häälduv lõpuvokaal → käändelõpp ilma ülakomata (Sophiaga, Sophiat), seega „Sophia’ga“ on viga."
+    },
+    "lt": {
+     "canon": "Sophia",
+     "variantes_a_signaler": [
+      "\\bSofij\\w*"
+     ],
+     "note": "Prekės ženklas niekada netransliteruojamas; linksniuojama tik kai reikia („Sophią“)."
+    },
+    "lv": {
+     "canon": "Sophia",
+     "variantes_a_signaler": [
+      "\\bSofij\\w*",
+      "\\bSofi[jā]\\b"
+     ],
+     "note": "Zīmols netiek transliterēts."
+    },
+    "ja": {
+     "canon": "Sophia",
+     "variantes_a_signaler": [
+      "ソフィア|ソフィー"
+     ],
+     "note": "ブランド名はカタカナにしない。"
     }
    }
   },
@@ -2635,6 +2851,29 @@
       "\\btõkesti\\w*"
      ],
      "note": "audit: ingliskeelne „blocker“ oli käänatud eesti lõppudega; „blokeerija“ on läbipaistev tegijanimi."
+    },
+    "lt": {
+     "canon": "blokatorius (TikTok blokatorius)",
+     "variantes_a_signaler": [
+      "\\bblocker\\w*",
+      "\\bblokuotoj\\w*"
+     ],
+     "note": "„blokatorius“ – programą užrakinanti funkcija."
+    },
+    "lv": {
+     "canon": "bloķētājs (TikTok bloķētājs)",
+     "variantes_a_signaler": [
+      "\\bblocker\\w*"
+     ],
+     "note": "„bloķētājs“ – lietotni bloķējošā funkcija."
+    },
+    "ja": {
+     "canon": "ブロッカー（TikTokブロッカー）",
+     "variantes_a_signaler": [
+      "\\bblocker\\w*",
+      "ブロック機能|遮断"
+     ],
+     "note": "「ブロッカー」で統一。"
     }
    }
   },
@@ -2891,6 +3130,31 @@
       "\\btrenn\\w*"
      ],
      "note": "„Harjutamine“ (audit: „sinu Harjutamisse“) on neutraalne ja kooliline; „praktika“ = stage, „treening“ = sport."
+    },
+    "lt": {
+     "canon": "Treniruotė",
+     "variantes_a_signaler": [
+      "\\btreniravim\\w*",
+      "\\btrenažier\\w*",
+      "\\bpratim\\w*"
+     ],
+     "note": "„treniruotė“ – kartojimo skirtukas."
+    },
+    "lv": {
+     "canon": "Treniņš",
+     "variantes_a_signaler": [
+      "\\bvingrinājum\\w*",
+      "\\btrenažier\\w*"
+     ],
+     "note": "„treniņš“ – atkārtošanas cilne."
+    },
+    "ja": {
+     "canon": "トレーニング",
+     "variantes_a_signaler": [
+      "練習|演習",
+      "ドリル"
+     ],
+     "note": "「トレーニング」で統一。"
     }
    }
   },
@@ -3149,6 +3413,28 @@
       "\\bkorrigeeri\\w*"
      ],
      "note": "eesti koolikeeles „kordama“ = réviser; „üle vaatama“ = inspecter, „revideerima“ = auditer, „korrigeerima“ = corriger."
+    },
+    "lt": {
+     "canon": "kartoti (Kartoti / kartojimas)",
+     "variantes_a_signaler": [
+      "\\brepeti\\w*"
+     ],
+     "note": "„kartoti“ – pakartoti išmoktą."
+    },
+    "lv": {
+     "canon": "atkārtot (atkārtošana)",
+     "variantes_a_signaler": [
+      "\\brevid\\w*",
+      "\\brevīz\\w*"
+     ],
+     "note": "„atkārtot“ – pārlasīt apgūto."
+    },
+    "ja": {
+     "canon": "復習",
+     "variantes_a_signaler": [
+      "おさらい"
+     ],
+     "note": "「復習」で統一。"
     }
    }
   },
@@ -3399,6 +3685,29 @@
       "\\bülesanne\\w*(?=.{0,30}(vali|onboard|alusta))"
      ],
      "note": "„eesmärk“ on tavaline; „objektiiv“ on fotoobjektiiv, „sihtmärk“ = cible."
+    },
+    "lt": {
+     "canon": "tikslas",
+     "variantes_a_signaler": [
+      "\\bobjectiv\\w*",
+      "\\bsiekinys\\w*"
+     ],
+     "note": "„tikslas“ – įžangoje pasirinktas tikslas."
+    },
+    "lv": {
+     "canon": "mērķis",
+     "variantes_a_signaler": [
+      "\\bobjektīv\\w*",
+      "\\buzdevum\\w*"
+     ],
+     "note": "„mērķis“ – ievadā izvēlētais mērķis; „uzdevums“ ir task."
+    },
+    "ja": {
+     "canon": "目標",
+     "variantes_a_signaler": [
+      "\\bgoal\\w*"
+     ],
+     "note": "「目標」で統一。"
     }
    }
   },
@@ -3643,6 +3952,29 @@
       "\\bsubjekt\\w*"
      ],
      "note": "audit: „objekt“ (= objet) pro „aine“; „aine“ eristub „teemast“ (sujet), mida kasutatakse edenemise jaotuses."
+    },
+    "lt": {
+     "canon": "dalykas",
+     "variantes_a_signaler": [
+      "\\bdestom\\w*"
+     ],
+     "note": "„dalykas“ – mokomasis dalykas; „temа“ rezervuota „sujet“."
+    },
+    "lv": {
+     "canon": "priekšmets",
+     "variantes_a_signaler": [
+      "\\bmaterij\\w*",
+      "\\bdisciplīn\\w*"
+     ],
+     "note": "„priekšmets“ – mācību priekšmets; „tēma“ rezervēta vārdam „sujet“."
+    },
+    "ja": {
+     "canon": "科目",
+     "variantes_a_signaler": [
+      "教科",
+      "\\bmatière\\w*"
+     ],
+     "note": "「科目」で統一。「テーマ」は sujet に使う。"
     }
    }
   },
@@ -3906,6 +4238,28 @@
       "\\bfriend\\w*"
      ],
      "note": "„sõber“ on sotsiaalsete funktsioonide standard; „semu“ on liiga kõnekeelne, „kaaslane“ = compagnon."
+    },
+    "lt": {
+     "canon": "draugas (draugai)",
+     "variantes_a_signaler": [
+      "\\bkompanjon\\w*"
+     ],
+     "note": "„draugas“ – draugų funkcija ir reitingas."
+    },
+    "lv": {
+     "canon": "draugs (draugi)",
+     "variantes_a_signaler": [
+      "\\bbiedr\\w*"
+     ],
+     "note": "„draugs“ – draugu funkcija un reitings."
+    },
+    "ja": {
+     "canon": "友だち",
+     "variantes_a_signaler": [
+      "友達",
+      "フレンド"
+     ],
+     "note": "「友だち」で統一（ひらがな交じり）。"
     }
    }
   },
@@ -4168,6 +4522,29 @@
       "\\btellimine\\w*"
      ],
      "note": "„tellimus“ on rakenduste poe eesti termin; „abonement“ = teatri hooajapilet, „liikmesus“ = adhésion."
+    },
+    "lt": {
+     "canon": "prenumerata",
+     "variantes_a_signaler": [
+      "\\babonement\\w*"
+     ],
+     "note": "„prenumerata“ – mėnesinė / metinė."
+    },
+    "lv": {
+     "canon": "abonements",
+     "variantes_a_signaler": [
+      "\\bprenumerāt\\w*",
+      "\\bparakstīšan\\w*"
+     ],
+     "note": "„abonements“ – mēneša / gada."
+    },
+    "ja": {
+     "canon": "サブスクリプション",
+     "variantes_a_signaler": [
+      "サブスク(?!リプション)",
+      "会員プラン"
+     ],
+     "note": "「サブスクリプション」で統一。"
     }
    }
   },
@@ -4433,6 +4810,28 @@
       "\\b(eemalda|tühista)\\s+(blokeering|lukustus)\\w*"
      ],
      "note": "„Ava“ on lühike ja UI-s kinnistunud; „lukust lahti“ on füüsiline uks, „vabastama“ = libérer."
+    },
+    "lt": {
+     "canon": "atrakinti",
+     "variantes_a_signaler": [
+      "\\bišblokuo\\w*",
+      "\\batblokuo\\w*"
+     ],
+     "note": "„atrakinti“ – padaryti prieinamą."
+    },
+    "lv": {
+     "canon": "atbloķēt",
+     "variantes_a_signaler": [],
+     "note": "„atbloķēt“ – padarīt pieejamu."
+    },
+    "ja": {
+     "canon": "解放",
+     "variantes_a_signaler": [
+      "ロック解除",
+      "アンロック",
+      "開放"
+     ],
+     "note": "「解放」で統一。"
     }
    }
   },
@@ -4699,6 +5098,30 @@
       "\\bterminoloogia\\w*|\\bleksikon\\w*"
      ],
      "note": "„sõnastik“ = kursuse mõistete loend; „sõnaraamat“ = dictionnaire, „glossaar“ on võõrsõna."
+    },
+    "lt": {
+     "canon": "žodynėlis",
+     "variantes_a_signaler": [
+      "\\bglosarij\\w*",
+      "\\bleksikon\\w*"
+     ],
+     "note": "„žodynėlis“ – kurso sąvokų sąrašas."
+    },
+    "lv": {
+     "canon": "vārdnīca",
+     "variantes_a_signaler": [
+      "\\bglosārij\\w*",
+      "\\bleksikon\\w*"
+     ],
+     "note": "„vārdnīca“ – kursa jēdzienu saraksts."
+    },
+    "ja": {
+     "canon": "用語集",
+     "variantes_a_signaler": [
+      "グロッサリー",
+      "用語辞典"
+     ],
+     "note": "「用語集」で統一。"
     }
    }
   },
@@ -4962,6 +5385,30 @@
       "\\bexp\\b"
      ],
      "note": "XP jääb (mängustatud rakenduste tava); „kogemuspunktid“ on pikk ja ebatavaline UI-s."
+    },
+    "lt": {
+     "canon": "XP",
+     "variantes_a_signaler": [
+      "\\bpatirties\\s+taškai?\\w*",
+      "\\bexp\\b"
+     ],
+     "note": "XP lieka nepakeistas."
+    },
+    "lv": {
+     "canon": "XP",
+     "variantes_a_signaler": [
+      "\\bpieredzes\\s+punkt\\w*",
+      "\\bexp\\b"
+     ],
+     "note": "XP paliek nemainīts."
+    },
+    "ja": {
+     "canon": "XP",
+     "variantes_a_signaler": [
+      "経験値",
+      "\\bexp\\b"
+     ],
+     "note": "XPはそのまま。"
     }
    }
   },
@@ -5218,6 +5665,29 @@
       "\\bkogu\\b(?=\\s*(vahekaart|tab)\\b)"
      ],
      "note": "„Raamatukogu“ on kõigi kursuste vahekaardile arusaadav; „Teek“ (Apple) on lühike, kuid kõlab tehniliselt; „Biblio“ jääb prantsuse lühendiks."
+    },
+    "lt": {
+     "canon": "Biblioteka",
+     "variantes_a_signaler": [
+      "\\bbiblio\\b",
+      "\\blibrary\\w*"
+     ],
+     "note": "„Biblioteka“ – visų kursų skirtukas."
+    },
+    "lv": {
+     "canon": "Bibliotēka",
+     "variantes_a_signaler": [
+      "\\bbiblio\\b",
+      "\\blibrary\\w*"
+     ],
+     "note": "„Bibliotēka“ – visu kursu cilne."
+    },
+    "ja": {
+     "canon": "ライブラリ",
+     "variantes_a_signaler": [
+      "\\blibrary\\w*"
+     ],
+     "note": "「ライブラリ」で統一。"
     }
    }
   }
