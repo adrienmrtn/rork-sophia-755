@@ -61,9 +61,99 @@ NUM = re.compile(r"\d+")
 GROUP_SEP = re.compile(r"(?<=\d)[,.\u00a0\u202f ](?=\d{3}(?!\d))")
 
 
+CJK_UNITS = re.compile(r"(?:\d[\d,]*(?:兆|億|万))+(?:\d[\d,]*)?")
+_CJK_MULT = {"兆": 10**12, "億": 10**8, "万": 10**4, "": 1}
+
+
+def _expand_cjk_units(s: str) -> str:
+    """Japanese writes 130 millions as 1億3000万: expand to digits (130000000) to compare with the French."""
+    def one(m):
+        total = 0
+        for n, u in re.findall(r"(\d[\d,]*)(兆|億|万)?", m.group(0)):
+            total += int(n.replace(",", "")) * _CJK_MULT[u]
+        return str(total)
+    return CJK_UNITS.sub(one, s)
+
+
 def _nums(s: str) -> set[str]:
     """Numbers in a text, thousands separators removed (1 000, 1,000, 1.000 → 1000)."""
-    return set(NUM.findall(GROUP_SEP.sub("", s)))
+    return set(NUM.findall(GROUP_SEP.sub("", _expand_cjk_units(s))))
+
+
+ROMAN = re.compile(r"\b(M{0,3}(?:CM|CD|D?C{0,3})(?:XC|XL|L?X{0,3})(?:IX|IV|V?I{0,3}))(?:er|ère|re|e|ème|è)?\b")
+_ROMAN_VAL = {"I": 1, "V": 5, "X": 10, "L": 50, "C": 100, "D": 500, "M": 1000}
+_FR_UNITS = {"zéro": 0, "un": 1, "une": 1, "deux": 2, "trois": 3, "quatre": 4, "cinq": 5, "six": 6, "sept": 7,
+             "huit": 8, "neuf": 9, "dix": 10, "onze": 11, "douze": 12, "treize": 13, "quatorze": 14,
+             "quinze": 15, "seize": 16, "trente": 30, "quarante": 40, "cinquante": 50, "soixante": 60}
+
+
+_FR_MONTHS = {"janvier": "1", "février": "2", "mars": "3", "avril": "4", "mai": "5", "juin": "6", "juillet": "7",
+              "août": "8", "septembre": "9", "octobre": "10", "novembre": "11", "décembre": "12"}
+_FR_ANNIV = {"centenaire": "100", "bicentenaire": "200", "tricentenaire": "300", "millénaire": "1000",
+             "bimillénaire": "2000", "cinquantenaire": "50"}
+
+
+def _written_nums(s: str) -> set[str]:
+    """Numbers a French source writes as roman numerals (XVIe, XXe siècle) or in words
+    (vingt-cinq, deux mille) that a translation may write with digits."""
+    out: set[str] = set()
+    for m in ROMAN.finditer(s):
+        r = m.group(1)
+        if not r or (len(r) == 1 and r in "ICDLMV"):
+            continue
+        total = 0
+        for a, b in zip(r, r[1:] + " "):
+            v = _ROMAN_VAL[a]
+            total += -v if b != " " and _ROMAN_VAL[b] > v else v
+        out.add(str(total))
+    for m in re.finditer(r"(\d+)[,.](\d+)\s*(millions?|milliards?|billions?)", s.lower()):
+        mult = {"million": 10**6, "milliard": 10**9, "billion": 10**12}[m.group(3).rstrip("s")]
+        out.add(str(round(float(f"{m.group(1)}.{m.group(2)}") * mult)))
+    cur = tot = 0
+    seen = False
+
+    def flush():
+        nonlocal cur, tot, seen
+        if seen:
+            out.add(str(tot + cur))
+        cur = tot = 0
+        seen = False
+
+    for tok in re.findall(r"[a-zéèêûôîïàç]+|[^a-zéèêûôîïàç]+", s.lower()):
+        if not tok[0].isalpha():
+            if tok.strip(" -\u00a0\u202f") or tok.count("\n"):
+                flush()
+            continue
+        if tok in _FR_MONTHS:
+            out.add(_FR_MONTHS[tok])
+            flush()
+            continue
+        if tok in _FR_ANNIV:
+            out.add(_FR_ANNIV[tok])
+            flush()
+            continue
+        if seen and tok.startswith(("décenni", "siècle", "millénaire")):
+            out.add(str((tot + cur) * (10 if tok.startswith("décenni") else 100 if tok.startswith("siècle") else 1000)))
+            flush()
+            continue
+        if tok in _FR_UNITS:
+            cur += _FR_UNITS[tok]
+        elif tok in ("vingt", "vingts"):
+            cur += 76 if cur % 10 == 4 and cur >= 4 else 20
+        elif tok in ("cent", "cents"):
+            cur = (cur // 100 * 0 + (cur if cur else 1)) * 100 if cur < 10 else cur + 100
+        elif tok in ("mille", "milles"):
+            tot += (cur if cur else 1) * 1000
+            cur = 0
+        elif tok == "et":
+            continue
+        else:
+            flush()
+            continue
+        seen = True
+        out.add(str(tot + cur))
+    flush()
+    return out
 
 
 def _load(p: Path):
@@ -442,16 +532,18 @@ def check_edit(kind: str, old: str, new: str, fr: str | None, allowed: set[str] 
         if len(terms) < min(len(GLOSS.findall(old)), len(GLOSS.findall(fr or ""))):
             return "terme de glossaire perdu"
     nums_new = _nums(new)
-    allowed_nums = _nums(old) | _nums(fr or "")
+    allowed_nums = _nums(old) | _nums(fr or "") | _written_nums(old) | _written_nums(fr or "")
     # "100 ألف", "100 тыс." → 100000 is the same number written out
     allowed_nums |= {n + "000" for n in allowed_nums} | {n + "000000" for n in allowed_nums}
+    # milliards / billions, which Japanese writes 億 / 兆
+    allowed_nums |= {n + "000000000" for n in allowed_nums} | {n + "000000000000" for n in allowed_nums}
     extra = {n for n in nums_new - allowed_nums if len(n) >= 2}
     if extra:
         return "nombre nouveau : " + ", ".join(sorted(extra))[:40]
     ref = fr if fr and fr not in ("∅", "—") else old
     # Japanese is far shorter than French in characters (about 0.3 to 0.5)
     cjk = sum(1 for c in new if "\u3040" <= c <= "\u30ff" or "\u4e00" <= c <= "\u9fff")
-    low = 0.12 if cjk >= 0.3 * max(1, len(new)) else 0.4
+    low = 0.08 if cjk >= 0.3 * max(1, len(new)) else 0.4
     if len(ref) > 25 and not (low <= len(new) / max(1, len(ref)) <= 2.6):
         return "longueur"
     return None

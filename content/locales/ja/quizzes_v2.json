@@ -2586,7 +2586,7 @@
       {
         "id": "course_11_la_prise_de_la_bastille_1789_q3",
         "type": "mcq",
-        "question": "Pourquoi Louis XVI convoque-t-il les États généraux en mai 1789 ?",
+        "question": "ルイ16世が1789年5月に三部会を招集したのはなぜでしょう？",
         "explanation": "王国はアメリカ植民地への多額の支援などで財政が破綻しており、王は新たな税を求めていました。",
         "options": [
           "王国の破産に直面して、新たな税を集めるため",
@@ -2618,7 +2618,7 @@
           "人気のあった財務長官ジャック・ネッケルの罷免",
           "第三身分の逮捕",
           "ヴェルサイユの火災",
-          "La mort de Louis XVI"
+          "ルイ16世の死"
         ],
         "correctIndex": 0
       },
@@ -2626,7 +2626,7 @@
         "id": "course_11_la_prise_de_la_bastille_1789_q6",
         "type": "numericSlider",
         "question": "7月14日の朝、群衆はアンヴァリッドで何丁の銃を手に入れたでしょう？",
-        "explanation": "La foule s'empare d'environ 32 000 fusils aux Invalides, mais il lui manque encore la poudre.",
+        "explanation": "群衆はアンヴァリッドで約3万2000丁の銃を奪いましたが、火薬はまだ足りませんでした。",
         "correctValue": 32000.0,
         "sliderMin": 10000.0,
         "sliderMax": 50000.0,
@@ -3168,7 +3168,7 @@
         "id": "course_124_rembrandt_et_l_ecole_flamande_q1",
         "type": "mcq",
         "question": "市民階級の美術市場に支えられて、レンブラントが活動したのはどの国でしょう？",
-        "explanation": "Au XVIIe siècle, la bourgeoisie protestante hollandaise commande des tableaux pour ses maisons, sans passer par l'Église ou la cour.",
+        "explanation": "17世紀、プロテスタントのオランダの市民階級は、教会や宮廷を通さず、自分たちの家に飾る絵を注文しました。",
         "options": [
           "ネーデルラント連邦共和国（オランダ）",
           "フランス",
@@ -3231,7 +3231,7 @@
         "id": "course_124_rembrandt_et_l_ecole_flamande_q6",
         "type": "numericSlider",
         "question": "レンブラントは生涯でおよそ何点の自画像を描いたでしょう？",
-        "explanation": "Rembrandt a peint environ 80 à 90 autoportraits en près de quarante ans, un témoignage unique de son évolution.",
+        "explanation": "レンブラントは40年近くのあいだに約80〜90点の自画像を描き、自らの変化をたどる唯一無二の記録を残しました。",
         "correctValue": 85.0,
         "sliderMin": 50.0,
         "sliderMax": 120.0,
@@ -3241,7 +3241,7 @@
       {
         "id": "course_124_rembrandt_et_l_ecole_flamande_q7",
         "type": "mcq",
-        "question": "Quel peintre du XVIIe siècle influence le clair-obscur de Rembrandt ?",
+        "question": "レンブラントの明暗法に影響を与えた17世紀の画家はだれでしょう？",
         "explanation": "レンブラントは、カラヴァッジョから受け継いだ明暗法を、より内面的で感情に訴えるものに作り変えました。",
         "options": [
           "カラヴァッジョ",
@@ -3645,7 +3645,7 @@
       {
         "id": "course_128_l_expressionnisme_munch_et_le_cri_q2",
         "type": "mcq",
-        "question": "Quels deux groupes allemands structurent l'expressionnisme au début du XXe siècle ?",
+        "question": "20世紀初頭のドイツで、表現主義の柱となった二つのグループはどれですか？",
         "explanation": "より荒々しい「ブリュッケ」と、より精神性の強い「青騎士」が、ドイツで表現主義運動の柱となりました。",
         "options": [
           "ブリュッケと青騎士",
@@ -3866,7 +3866,7 @@
         "id": "course_12_la_strategie_de_napoleon_a_ulm_1805_q1",
         "type": "numericSlider",
         "question": "ウルム戦役が行われたのは何年ですか？",
-        "explanation": "La campagne d'Ulm se déroule en octobre 1805, quelques semaines avant la victoire d'Austerlitz.",
+        "explanation": "ウルム戦役は1805年10月、アウステルリッツの勝利の数週間前に行われました。",
         "correctValue": 1805.0,
         "sliderMin": 1780.0,
         "sliderMax": 1830.0,
@@ -3926,8 +3926,8 @@
       {
         "id": "course_12_la_strategie_de_napoleon_a_ulm_1805_q6",
         "type": "numericSlider",
-        "question": "Combien de soldats autrichiens se rendent lors de la capitulation d'Ulm, le 17 octobre 1805 ?",
-        "explanation": "Le 17 octobre 1805, 27 000 soldats autrichiens déposent les armes sur place à Ulm.",
+        "question": "1805年10月17日のウルムの降伏で、降伏したオーストリア兵は何人ですか？",
+        "explanation": "1805年10月17日、2万7000人のオーストリア兵がウルムでその場で武器を置きました。",
         "correctValue": 27000.0,
         "sliderMin": 10000.0,
         "sliderMax": 50000.0,
@@ -3951,7 +3951,7 @@
         "id": "course_12_la_strategie_de_napoleon_a_ulm_1805_q8",
         "type": "chronological",
         "question": "ウルムとアウステルリッツの戦役の各段階を時系列順に並べ替えましょう。",
-        "explanation": "Ces quatre étapes vont de fin septembre à décembre 1805 : le pivot vers l'Allemagne, l'encerclement, la reddition de Mack, puis la victoire décisive d'Austerlitz.",
+        "explanation": "この4段階は9月下旬から1805年12月にわたります。ドイツへの方向転換、包囲、マックの降伏、そして決定的なアウステルリッツの勝利です。",
         "items": [
           "大陸軍のライン川渡河",
           "マックの背後でのドナウ川渡河",
@@ -4069,7 +4069,7 @@
       {
         "id": "course_130_le_pop_art_warhol_et_lichtenstein_q8",
         "type": "numericSlider",
-        "question": "En quelle année un portrait de Marilyn par Warhol atteint 195 millions de dollars aux enchères ?",
+        "question": "ウォーホルが描いたマリリンの肖像画が、オークションで1億9500万ドルに達したのは何年ですか？",
         "explanation": "2022年、このマリリンの肖像画は、史上最も高額で売れたアメリカ美術作品の一つになりました。",
         "correctValue": 2022.0,
         "sliderMin": 1990.0,
@@ -4085,7 +4085,7 @@
         "items": [
           "リチャード・ハミルトンがポップ・アートを定義する",
           "ウォーホルとリキテンスタインがアメリカでポップの美学を確立する",
-          "Un portrait de Marilyn se vend 195 millions de dollars"
+          "マリリンの肖像画が1億9500万ドルで売れる"
         ]
       }
     ]
@@ -4255,7 +4255,7 @@
         "id": "course_132_bob_dylan_et_la_folk_protest_q3",
         "type": "trueFalse",
         "question": "正しい？まちがい？：1963年8月、ディランはワシントン大行進で、マーティン・ルーサー・キングの演説の直前に歌いました。",
-        "explanation": "Dylan se produit devant 250 000 personnes, peu avant le fameux discours de Martin Luther King.",
+        "explanation": "ディランは25万人の前で歌い、その少しあとにキングの有名な演説が行われました。",
         "options": [
           "正しい",
           "まちがい"
@@ -4532,7 +4532,7 @@
       {
         "id": "course_134_l_opera_de_verdi_q7",
         "type": "numericSlider",
-        "question": "En quelle année Verdi meurt-il, suivi par plus de 300 000 personnes à Milan ?",
+        "question": "ヴェルディは何年に亡くなり、ミラノで30万人以上の人々が葬列に続きましたか？",
         "explanation": "ヴェルディは1901年に亡くなり、葬儀では群衆が自然に『ナブッコ』を歌い出しました。",
         "correctValue": 1901.0,
         "sliderMin": 1850.0,
@@ -4544,7 +4544,7 @@
         "id": "course_134_l_opera_de_verdi_q8",
         "type": "chronological",
         "question": "ヴェルディのオペラを、初演の順に並べ替えましょう。",
-        "explanation": "De Nabucco en 1842 à Falstaff en 1893, Verdi traverse plus de cinquante ans de création lyrique.",
+        "explanation": "1842年の『ナブッコ』から1893年の『ファルスタッフ』まで、ヴェルディは50年以上にわたってオペラを書き続けました。",
         "items": [
           "『ナブッコ』が大成功し、「行け、わが想いよ」が賛歌になる",
           "『ラ・トラヴィアータ』で、人気三部作が完結する",
@@ -4555,7 +4555,7 @@
       {
         "id": "course_134_l_opera_de_verdi_q9",
         "type": "mcq",
-        "question": "Quel compositeur allemand incarne, face à Verdi, l'autre grande voie de l'opéra du XIXe siècle ?",
+        "question": "ヴェルディに対し、19世紀オペラのもう一つの大きな道を体現したドイツの作曲家はだれですか？",
         "explanation": "神話的な総合芸術を掲げるワーグナーに対して、ヴェルディはイタリアの旋律の明快さに忠実でありつづけました。",
         "options": [
           "リヒャルト・ワーグナー",
@@ -4637,7 +4637,7 @@
         "id": "course_135_mozart_enfant_prodige_et_vie_tragique_q6",
         "type": "numericSlider",
         "question": "モーツァルトがわずか35歳で亡くなったのは、何年ですか？",
-        "explanation": "Mozart meurt le 5 décembre 1791, laissant son Requiem inachevé.",
+        "explanation": "モーツァルトは1791年12月5日に亡くなり、『レクイエム』は未完のまま残されました。",
         "correctValue": 1791.0,
         "sliderMin": 1750.0,
         "sliderMax": 1820.0,
@@ -13192,7 +13192,7 @@
         "id": "course_203_les_tensions_autour_de_taiwan_q2",
         "type": "numericSlider",
         "question": "台湾の人口は、およそ何百万人くらいになりますか？",
-        "explanation": "台湾の人口はおよそ23,000,000人で、この島は外交的な孤立と向き合わなければなりません。",
+        "explanation": "台湾の人口は約2,300万人です。この人々は、島が外交的に孤立しているという現実のなかで暮らしています。",
         "correctValue": 23.0,
         "sliderMin": 5.0,
         "sliderMax": 60.0,
@@ -13986,7 +13986,7 @@
         "id": "course_20_hiroshima_et_nagasaki_1945_q1",
         "type": "mcq",
         "question": "1942年に始まり、最初の原子爆弾を開発したアメリカの計画はどれですか？",
-        "explanation": "1942年に始まったマンハッタン計画には、約130,000人と二十億ドルが投じられ、原子爆弾が開発されました。",
+        "explanation": "1942年に始まったマンハッタン計画には、原子爆弾の開発のために約13万人と20億ドルが投入されました。",
         "options": [
           "マンハッタン計画",
           "オーバーロード作戦",
@@ -14197,7 +14197,7 @@
         "id": "course_210_la_guerre_en_ukraine_expliquee_q9",
         "type": "chronological",
         "question": "ウクライナ戦争に関する出来事を、起きた順に並べてください。",
-        "explanation": "1991年の独立からNATOの拡大まで、これらの出来事は、ウクライナとロシアの三十年にわたる緊張の歴史をたどっています。",
+        "explanation": "1991年の独立からNATOの拡大まで、これらの節目はウクライナとロシアの30年にわたる緊張をたどっています。",
         "items": [
           "ウクライナの独立",
           "マイダン革命とクリミア併合",
@@ -14247,7 +14247,7 @@
         "id": "course_211_comment_fonctionne_le_prix_du_petrole_q4",
         "type": "mcq",
         "question": "アメリカがサウジアラビアを抜いて世界一の産油国になれたのは、どの技術のおかげですか？",
-        "explanation": "水圧破砕のおかげで、アメリカは十年で世界一の産油国になりました。",
+        "explanation": "水圧破砕のおかげで、アメリカは10年で世界一の産油国になりました。",
         "options": [
           "水圧破砕",
           "深海での海上掘削",
@@ -14380,7 +14380,7 @@
         "id": "course_212_les_paradis_fiscaux_expliques_q5",
         "type": "numericSlider",
         "question": "タックスヘイブンのせいで、各国は毎年およそいくらの税収を失っていますか？",
-        "explanation": "タックスヘイブンのせいで、各国は毎年およそ六千億ドルの税収を失っています。そのお金があれば、病院や学校の資金にできたはずです。",
+        "explanation": "タックスヘイブンのせいで、各国は毎年約6000億ドルの税収を失っています。病院や学校の費用をまかなえたはずのお金です。",
         "correctValue": 600.0,
         "sliderMin": 100.0,
         "sliderMax": 1500.0,
@@ -14403,8 +14403,8 @@
       {
         "id": "course_212_les_paradis_fiscaux_expliques_q7",
         "type": "numericSlider",
-        "question": "人口がわずか65,000人のケイマン諸島には、およそ何千社の企業が登記されていますか？",
-        "explanation": "ケイマン諸島には100,000社を超える企業が登記されています。面積はパリより小さいのに、預金額では世界で5番目に大きな金融センターです。",
+        "question": "人口がわずか6万5000人のケイマン諸島には、およそ何千社の企業が登記されていますか？",
+        "explanation": "ケイマン諸島には10万社を超える企業が登記されています。パリより小さな領土ですが、銀行預金では世界第5位の金融センターです。",
         "correctValue": 100.0,
         "sliderMin": 0.0,
         "sliderMax": 300.0,
@@ -14458,7 +14458,7 @@
       {
         "id": "course_213_l_evasion_fiscale_des_multinationales_q2",
         "type": "mcq",
-        "question": "二十世紀の初めに、工業中心の経済を前提として作られた国際的な税の仕組みは、どんな考え方にもとづいていましたか？",
+        "question": "20世紀初めに工業経済のために作られた国際的な税制は、どんな考え方に基づいていましたか？",
         "explanation": "ある国で課税されるには、企業がその国に工場や事務所、つまり恒久的施設を持っている必要がありました。工業経済のために考えられた仕組みで、デジタル経済には合っていなかったのです。",
         "options": [
           "ある国に恒久的施設があること",
@@ -14472,7 +14472,7 @@
         "id": "course_213_l_evasion_fiscale_des_multinationales_q3",
         "type": "numericSlider",
         "question": "マイクロソフトは2014年、知的財産権を利用して、いくらの利益をプエルトリコに移しましたか？",
-        "explanation": "2014年、マイクロソフトは三百九十億ドルの利益をプエルトリコに移し、六十五億ドル以上の税金を免れていました。",
+        "explanation": "2014年、マイクロソフトは390億ドルの利益をプエルトリコに移し、65億ドルを超える税金を節約していました。",
         "correctValue": 39.0,
         "sliderMin": 0.0,
         "sliderMax": 100.0,
@@ -14483,7 +14483,7 @@
         "id": "course_213_l_evasion_fiscale_des_multinationales_q4",
         "type": "percentageSlider",
         "question": "OECDによると、多国籍企業の租税回避によって、世界で徴収される法人税のうち毎年どれくらいの割合が失われていますか？",
-        "explanation": "OECDによると、こうしたやり方のせいで、世界の公的予算は年に千億〜二千四百億ドルを失っています。これは、世界じゅうで集められる法人税全体の4〜10%にあたります。",
+        "explanation": "OECDによると、こうした行為による損失は年に1000億〜2400億ドルで、世界で徴収される法人税全体の4〜10%にあたります。",
         "correctValue": 7.0,
         "sliderMin": 0.0,
         "sliderMax": 100.0,
@@ -14517,8 +14517,8 @@
       {
         "id": "course_213_l_evasion_fiscale_des_multinationales_q7",
         "type": "trueFalse",
-        "question": "正しい？まちがい？：欧州委員会は、アップルが払っていなかった百三十億ユーロの税金を、アイルランドにただちに徴収させることに成功した。",
-        "explanation": "アイルランドは、規則が厳しすぎると企業の本社が逃げてしまうのではないかと恐れて、この百三十億ユーロの徴収を長いあいだ拒みました。",
+        "question": "正しい？まちがい？：欧州委員会は、アップルが納めていなかった130億ユーロの税金を、アイルランドがすぐに徴収するよう実現させた。",
+        "explanation": "アイルランドは、この130億ユーロの徴収を長いあいだ拒んできました。厳しすぎる規則が本社の流出を招くことを恐れたためです。",
         "options": [
           "正しい",
           "まちがい"
@@ -14529,11 +14529,11 @@
         "id": "course_213_l_evasion_fiscale_des_multinationales_q8",
         "type": "mcq",
         "question": "世界共通の最低税率15%の対象になるには、企業の売上高がどのくらいの水準を超える必要がありますか？",
-        "explanation": "世界共通の最低税率は、売上高が七億五千万ユーロを超える企業を対象としています。",
+        "explanation": "世界共通の最低税率は、売上高が7億5000万ユーロを超える企業を対象としています。",
         "options": [
-          "七億五千万ユーロ",
-          "一千万ユーロ",
-          "十億ドル",
+          "7億5000万ユーロ",
+          "1000万ユーロ",
+          "10億ドル",
           "1億ユーロ"
         ],
         "correctIndex": 0
@@ -25196,7 +25196,7 @@
       {
         "id": "course_84_antigone_sophocle_q9",
         "type": "mcq",
-        "question": "十九世紀の哲学者のうち、『アンティゴネー』に、同じように正当な二つの権利の衝突を読み取ったのはだれですか？?",
+        "question": "『アンティゴネ』に、同じように正当な二つの権利の衝突を読み取った19世紀の哲学者はだれですか？",
         "explanation": "ヘーゲルはこの劇を、公の秩序と家族への敬愛という二つの正当な権利のぶつかり合いと捉え、どちらか一方が完全にまちがっているとは考えません。",
         "options": [
           "ヘーゲル",
@@ -25395,7 +25395,7 @@
       {
         "id": "course_86_la_republique_platon_q7",
         "type": "mcq",
-        "question": "二十世紀の哲学者のうち、『国家』は全体主義の到来を告げるものだと非難したのはだれですか？?",
+        "question": "『国家』は全体主義の到来を予告していると非難した20世紀の哲学者はだれですか？",
         "explanation": "カール・ポパーは、『国家』が全体主義への道を開いたと非難します。一方で、むしろ教育のためのユートピアと見る人もいます。",
         "options": [
           "カール・ポパー",
@@ -25780,7 +25780,7 @@
         "explanation": "都市の包囲と攻略を指揮したのは、若いオスマン帝国のスルタン、メフメト2世です。",
         "options": [
           "オスマン帝国のスルタン、メフメト2世",
-          "最後のビザンツ皇帝コンスタンティノス十一世",
+          "ビザンツ皇帝コンスタンティノス11世",
           "第4回十字軍の十字軍兵士たち",
           "フランス王シャルル7世"
         ],
@@ -25805,7 +25805,7 @@
         "options": [
           "1204年の第4回十字軍によるコンスタンティノープルの略奪",
           "天然痘の流行",
-          "大規模な地震",
+          "大地震",
           "エジプトの喪失"
         ],
         "correctIndex": 0
@@ -25826,8 +25826,8 @@
       {
         "id": "course_8_la_chute_de_constantinople_1453_q6",
         "type": "numericSlider",
-        "question": "最後のビザンツ皇帝コンスタンティノス十一世は、オスマン軍に対して何人の守備兵を並べますか？",
-        "explanation": "オスマン軍の大軍に対し、コンスタンティノス十一世が動かせる守備兵は約7000人にすぎません。",
+        "question": "最後のビザンツ皇帝コンスタンティノス11世は、オスマン軍に対して何人の守備兵で立ち向かいましたか？",
+        "explanation": "数万のオスマン軍に対して、コンスタンティノス11世の守備兵は約7,000人しかいませんでした。",
         "correctValue": 7000.0,
         "sliderMin": 1000.0,
         "sliderMax": 15000.0,
@@ -25985,8 +25985,8 @@
       {
         "id": "course_91_les_miserables_victor_hugo_q1",
         "type": "mcq",
-        "question": "ジャン・ヴァルジャンは、どんな罪で十九年間の徒刑に処されますか？",
-        "explanation": "ヴァルジャンはパン一切れを盗んだ罪で有罪となり、十九年間の徒刑ののちに釈放されます。",
+        "question": "ジャン・ヴァルジャンは、どんな罪で19年間の徒刑を言い渡されますか？",
+        "explanation": "ヴァルジャンはパン一切れを盗んだ罪で有罪となり、19年間を徒刑場で過ごしてから釈放されます。",
         "options": [
           "パン一切れの窃盗",
           "金銭の詐欺",
@@ -26096,8 +26096,8 @@
       {
         "id": "course_91_les_miserables_victor_hugo_q10",
         "type": "numericSlider",
-        "question": "十七年にわたる執筆の末、『レ・ミゼラブル』がついに刊行されたのは何年ですか？",
-        "explanation": "『レ・ミゼラブル』は、1845年に始まった十七年の執筆の末、1862年にブリュッセルで刊行されます。",
+        "question": "『レ・ミゼラブル』が、17年にわたる執筆の末についに出版されたのは何年ですか？",
+        "explanation": "『レ・ミゼラブル』は、1845年に書き始められてから17年の歳月をかけて、1862年にブリュッセルで出版されました。",
         "correctValue": 1862.0,
         "sliderMin": 1840.0,
         "sliderMax": 1880.0,
@@ -26373,7 +26373,7 @@
         "id": "course_94_candide_voltaire_q2",
         "type": "mcq",
         "question": "1755年に実際に起きた、ヴォルテールに衝撃を与え、『カンディード』の執筆の糧となった出来事は何ですか？",
-        "explanation": "1755年十一月一日のリスボン大地震は約6万人の命を奪い、完全に秩序づけられた世界へのヴォルテールの信頼を打ち砕きました。",
+        "explanation": "1755年11月1日のリスボン大地震では、約6万人が亡くなりました。この地震で、世界は完全に秩序立っているというヴォルテールの信頼はくだけ散りました。",
         "options": [
           "リスボン大地震",
           "フランス革命",
@@ -27233,9 +27233,9 @@
         "id": "course_241_pourquoi_voulait_on_demolir_la_tour_eiffel_q1",
         "type": "mcq",
         "question": "エッフェル塔は、どんな行事のために建てられましたか？",
-        "explanation": "エッフェル塔は、フランス革命百周年を記念して開かれた1889年パリ万国博覧会の入り口を飾るために建てられました。",
+        "explanation": "塔は、フランス革命100周年を記念して開かれた1889年の万国博覧会の入り口を飾りました。",
         "options": [
-          "1889年パリ万国博覧会（フランス革命百周年）",
+          "フランス革命100周年を記念する1889年の万国博覧会",
           "パリの地下鉄の開業",
           "1870年の勝利の記念",
           "パリ・オリンピック"
@@ -27269,8 +27269,8 @@
       {
         "id": "course_241_pourquoi_voulait_on_demolir_la_tour_eiffel_q4",
         "type": "trueFalse",
-        "question": "正しい？まちがい？：エッフェル塔は、二十年たったら解体されることになっていました。",
-        "explanation": "契約では、エッフェルに二十年間の運営が認められ、その後は塔が解体されることになっていました。国は1909年にこれを取りやめました。",
+        "question": "エッフェル塔は、20年後に解体されることになっていました。正しい？まちがい？",
+        "explanation": "契約でエッフェルに20年間の営業が認められ、その後は塔を解体することになっていました。国は1909年にこれを取りやめました。",
         "options": [
           "正しい",
           "まちがい"
@@ -27307,7 +27307,7 @@
         "id": "course_241_pourquoi_voulait_on_demolir_la_tour_eiffel_q7",
         "type": "numericSlider",
         "question": "エッフェル塔を毎年訪れる人は、今日、およそ何百万人ですか？",
-        "explanation": "毎年およそ7百万人が塔に登り、その人々は世界中から訪れています。",
+        "explanation": "毎年700万人近い人が世界中から訪れて、塔に登っています。",
         "correctValue": 7.0,
         "sliderMin": 1.0,
         "sliderMax": 15.0,
