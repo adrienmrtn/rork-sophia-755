@@ -221,7 +221,15 @@ def escape_inner_quotes(text: str) -> str:
             j = i + 1
             while j < n and text[j] in " \t\r\n":
                 j += 1
-            if j >= n or text[j] in ",}]:":
+            closing = j >= n or text[j] in "}]:"
+            if not closing and j < n and text[j] == ",":
+                # Une virgule ferme la chaîne seulement si ce qui suit ouvre une autre valeur ou une
+                # clé ; « "počítačem", a dále » est une citation suivie de texte.
+                k = j + 1
+                while k < n and text[k] in " \t\r\n":
+                    k += 1
+                closing = k >= n or text[k] in '"{[' or text[k].isdigit() or text.startswith(("true", "false", "null"), k)
+            if closing:
                 in_string = False
                 out.append(c)
             else:
@@ -242,6 +250,8 @@ def extract_json(text: str) -> dict:
         raise ProductionError("réponse du modèle sans objet JSON")
     candidates = [stripped, stripped[start:end + 1]]
     candidates += [escape_inner_quotes(c) for c in candidates]
+    # Virgules finales avant } ou ] : fréquentes aussi.
+    candidates += [re.sub(r",(\s*[}\]])", r"\1", c) for c in candidates]
     last: Exception | None = None
     for candidate in candidates:
         try:
@@ -920,17 +930,25 @@ def course_strings(course: dict, quiz: list[dict], glossary: dict[str, dict], co
 _RULES_CACHE: dict[str, list] = {}
 
 
+def terminology_exceptions() -> set[str]:
+    """Les constats de terminologie excusés (content/terminology/exceptions.json), mêmes clés que
+    la porte i18n : terminologie|<lang>|<surface>|<emplacement>|<type>:<id>."""
+    data = read_json(ROOT / "content" / "terminology" / "exceptions.json", {}) or {}
+    return set((data.get("constats") or {}).keys())
+
+
 def terminology_findings(lang: str, course: dict, quiz: list[dict], glossary: dict[str, dict], course_id: str) -> list[str]:
     from check_terminology import compile_rules, load_lists
     if lang not in _RULES_CACHE:
         _RULES_CACHE[lang] = compile_rules(lang, *load_lists())
+    excused = terminology_exceptions()
     out = []
     for surface, location, text in course_strings(course, quiz, glossary, course_id):
         for kind, ident, expected, pattern, surfaces in _RULES_CACHE[lang]:
             if surfaces is not None and surface not in surfaces:
                 continue
             match = pattern.search(text)
-            if match:
+            if match and f"terminologie|{lang}|{surface}|{location}|{kind}:{ident}" not in excused:
                 out.append(f"terminology {kind}:{ident} in {location}: found « {match.group(0)} », expected « {expected} »")
     return out
 
@@ -1258,6 +1276,26 @@ def import_images(ctx: Context, sb: Supabase | None, steps: Steps) -> dict:
             imported.append(slug)
         except Exception as e:  # noqa: BLE001
             errors.append(f"{slug}: {type(e).__name__}: {e}"[:200])
+    # La photo du créateur : le Studio donne une URL (souvent signée, à durée limitée) ; l'app en
+    # héberge sa propre copie et creators.photo_url pointe dessus.
+    creator = ctx.creator or {}
+    photo_url = str(creator.get("photo_url") or "")
+    if creator.get("slug") and photo_url.startswith("https://") and "/course-images/" not in photo_url:
+        slug = f"author_{re.sub(r'[^a-z0-9]+', '_', creator['slug'].lower()).strip('_')}"
+        try:
+            req = urllib.request.Request(photo_url, headers={"User-Agent": "sophia-usine/1.0"})
+            with urllib.request.urlopen(req, timeout=60) as resp:
+                raw = resp.read(25_000_000)
+            data, content_type = to_jpeg(raw, max_side=800)
+            hosted = f"{(sb.url if sb else DEFAULT_URL)}/storage/v1/object/public/{IMAGE_BUCKET}/{slug}.jpg"
+            if ctx.args.dry_run or sb is None:
+                log(f"  photo du créateur {slug} ({len(data)} octets) non téléversée (dry-run)")
+            else:
+                sb.upload(IMAGE_BUCKET, f"{slug}.jpg", data, content_type, cache_control="public, max-age=86400")
+                sb.update("creators", f"slug=eq.{creator['slug']}", {"photo_url": hosted, "updated_at": now_iso()})
+            imported.append(slug)
+        except Exception as e:  # noqa: BLE001
+            errors.append(f"{slug}: {type(e).__name__}: {e}"[:200])
     detail = {"cover": cover_slug, "imported": imported, "errors": errors}
     if errors and cover_slug in [e.split(":")[0] for e in errors]:
         steps.fail("cover", None, detail)
@@ -1268,7 +1306,7 @@ def import_images(ctx: Context, sb: Supabase | None, steps: Steps) -> dict:
     return detail
 
 
-def to_jpeg(raw: bytes) -> tuple[bytes, str]:
+def to_jpeg(raw: bytes, max_side: int = 1600) -> tuple[bytes, str]:
     """Recadre en JPEG (côté max 1600 px) quand Pillow est là ; sinon l'image telle quelle."""
     try:
         from PIL import Image
@@ -1276,7 +1314,7 @@ def to_jpeg(raw: bytes) -> tuple[bytes, str]:
         return raw, "image/jpeg"
     image = Image.open(io.BytesIO(raw))
     image = image.convert("RGB")
-    image.thumbnail((1600, 1600))
+    image.thumbnail((max_side, max_side))
     out = io.BytesIO()
     image.save(out, format="JPEG", quality=85, optimize=True)
     return out.getvalue(), "image/jpeg"
