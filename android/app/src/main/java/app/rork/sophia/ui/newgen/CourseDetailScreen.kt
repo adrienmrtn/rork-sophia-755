@@ -50,6 +50,7 @@ import app.rork.sophia.data.rememberCourseSummaries
 import app.rork.sophia.data.stripInlineMarkup
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.CourseSummary
+import app.rork.sophia.domain.readsCount
 import app.rork.sophia.domain.UserProgress
 import app.rork.sophia.ui.components.CourseImage
 import app.rork.sophia.ui.components.softPress
