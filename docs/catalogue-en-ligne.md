@@ -116,6 +116,19 @@ rafraîchissement.
   `sync_locale_catalog_titles.py`, `translate_locale_catalog.py`) ne sont plus dans la chaîne :
   leurs sorties n'existent plus dans les apps.
 
+## Le pont avec le Studio et l'usine
+
+Depuis le prompt 4, un cours peut aussi arriver par le Studio (sophia-culture.com) : l'Edge
+Function `publish-course` valide le cours dans sa langue d'origine, l'écrit en base
+(`catalog_upsert_course`) et crée un job de production (`production_jobs`, `production_steps`).
+`jobs_dispatch` (pg_cron toutes les cinq minutes, ou `POST /jobs-dispatch`) l'envoie à GitHub
+Actions (`.github/workflows/produce-course.yml`, `scripts/produce_course.py`), qui traduit, relit
+et vérifie chaque langue avec les mêmes portes que ce dépôt, écrit le quiz et le glossaire, publie
+langue par langue et pousse les fichiers produits dans `content/`. Le Studio suit l'avancement par
+`GET /publish-course?job_id` ou par webhook, et lit les chiffres dans `course-stats-export`.
+Contrat complet, secrets et essai de bout en bout : `docs/publish-contract.md` ; migration
+`supabase/migrations/20261108200000_production_pipeline.sql`.
+
 ## Points de vigilance
 
 - La progression d'un cours est indexée par position de section (`lastLessonIndex`) : réordonner

@@ -1,0 +1,87 @@
+# L'usine de production : exécute un job créé par l'Edge Function publish-course
+# (docs/publish-contract.md). Déclenché par repository_dispatch « produce-course » que la fonction
+# SQL jobs_dispatch envoie toutes les cinq minutes (ou tout de suite via POST /jobs-dispatch), ou à
+# la main avec l'id d'un job.
+#
+# Secrets du dépôt : SUPABASE_SERVICE_ROLE_KEY (lecture du job, écriture du cours, Storage),
+# ANTHROPIC_API_KEY (traductions, quiz, glossaire), ELEVENLABS_API_KEY (facultatif : narration).
+# Variables du dépôt (facultatives) : PRODUCTION_MODEL (défaut claude-opus-5-5),
+# ELEVENLABS_VOICE_FR, ELEVENLABS_VOICE_EN (identifiants de voix ; sans eux l'étape audio est sautée).
+#
+# Les fichiers produits dans content/ sont poussés sur main par le script (GITHUB_TOKEN). Si la
+# branche refuse le push, le script pousse une branche usine/<course_id> et ouvre une pull request.
+name: Produce course
+
+on:
+  repository_dispatch:
+    types: [produce-course]
+  workflow_dispatch:
+    inputs:
+      job_id:
+        description: "Id du job (production_jobs.id)"
+        required: true
+        type: string
+
+# Un job à la fois : ils écrivent tous dans content/ et poussent sur main.
+concurrency:
+  group: produce-course
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  produce:
+    name: ${{ github.event.client_payload.course_id || inputs.job_id }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install
+        run: pip install --quiet "anthropic>=2.6,<3" pillow
+
+      - name: Check the secrets are set
+        env:
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          missing=""
+          [ -n "$SUPABASE_SERVICE_ROLE_KEY" ] || missing="$missing SUPABASE_SERVICE_ROLE_KEY"
+          [ -n "$ANTHROPIC_API_KEY" ] || missing="$missing ANTHROPIC_API_KEY"
+          if [ -n "$missing" ]; then
+            echo "::error::Secrets manquants :$missing (Settings → Secrets and variables → Actions)"
+            exit 1
+          fi
+
+      - name: Produce
+        env:
+          SUPABASE_URL: https://afnmcoovdvbtkgohtdij.supabase.co
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          PRODUCTION_MODEL: ${{ vars.PRODUCTION_MODEL }}
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          ELEVENLABS_VOICE_FR: ${{ vars.ELEVENLABS_VOICE_FR }}
+          ELEVENLABS_VOICE_EN: ${{ vars.ELEVENLABS_VOICE_EN }}
+          PRODUCE_BRANCH: main
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          JOB="${{ github.event.client_payload.job_id || inputs.job_id }}"
+          [ -n "$JOB" ] || { echo "::error::job_id absent"; exit 1; }
+          [ -n "$PRODUCTION_MODEL" ] || unset PRODUCTION_MODEL
+          python3 scripts/produce_course.py --job "$JOB" || code=$?
+          # 2 = terminé, mais une langue au moins est retenue par la porte : le job est « partial »,
+          # pas un échec du workflow.
+          if [ "${code:-0}" = "2" ]; then exit 0; fi
+          exit "${code:-0}"

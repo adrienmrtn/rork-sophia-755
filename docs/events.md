@@ -98,7 +98,7 @@ enregistré comme `like` / `unlike`.
 | `like` / `unlike` | cœur sur un cours (bouton, ou double-tap sur la carte du fil) | `screen` : `home`, `home_following`, `course_detail`, `course_end`, `library`… |
 | `save` / `unsave` | enregistrer pour plus tard (marque-page) | `screen` |
 | `share` | partage d'un cours ou de l'app | `channel`, `target` (`course` ou `app`) |
-| `follow` / `unfollow` | suivre un créateur | `creator` (slug), `screen` : `creator`, `explore`, `course_detail`, `course_end`, `reader` |
+| `follow` / `unfollow` | suivre un créateur | `creator` (slug), `screen` : `creator`, `explore`, `course_detail`, `course_end`, `reader` ; depuis un cours (`course_detail`, `course_end`, `reader`) la colonne `course_id` est remplie : c'est elle qui donne les « abonnés gagnés » par cours dans `course-stats-export` |
 | `not_interested` | « pas intéressé » sur une carte | — |
 | `report` | signalement | `kind` (`course`, `translation`, `quiz_question`, `creator`), `target`, `reason` |
 
