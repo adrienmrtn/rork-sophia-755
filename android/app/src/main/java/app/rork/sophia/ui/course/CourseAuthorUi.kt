@@ -21,6 +21,7 @@ import androidx.compose.material.icons.automirrored.filled.MenuBook
 import androidx.compose.material.icons.automirrored.filled.OpenInNew
 import androidx.compose.material.icons.filled.ExpandMore
 import androidx.compose.material.icons.filled.Person
+import androidx.compose.material.icons.filled.Public
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -45,6 +46,8 @@ import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.ui.components.SophiaSecondaryButton
 import app.rork.sophia.ui.components.softPress
 import app.rork.sophia.ui.components.sophiaCard
+import app.rork.sophia.ui.newgen.FollowButton
+import app.rork.sophia.ui.newgen.VerifiedCheck
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
 import app.rork.sophia.ui.theme.SophiaTypography
@@ -131,13 +134,19 @@ fun AuthorByline(
     }
 }
 
-/** The signature at the end of the course, with the door to the author's other courses. */
+/**
+ * The signature at the end of the course, with the door to the author's other courses.
+ * [isFollowing] et [onFollow] ajoutent le bouton « Suivre » compact (maquette prompt 2) ;
+ * null quand le contexte ne les fournit pas.
+ */
 @Composable
 fun AuthorCard(
     author: CourseAuthor,
     language: AppLanguage,
     onOpenAuthor: () -> Unit,
     modifier: Modifier = Modifier,
+    isFollowing: Boolean? = null,
+    onFollow: (() -> Unit)? = null,
 ) {
     val context = LocalContext.current
     Column(
@@ -166,17 +175,24 @@ fun AuthorCard(
         Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(14.dp)) {
             AuthorAvatar(author = author, size = 56.dp)
             Column(modifier = Modifier.weight(1f)) {
-                Text(
-                    text = author.name,
-                    fontFamily = PlusJakartaSans,
-                    fontWeight = FontWeight.SemiBold,
-                    fontSize = 19.sp,
-                    color = DS.ink,
-                )
+                Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(5.dp)) {
+                    Text(
+                        text = author.name,
+                        fontFamily = PlusJakartaSans,
+                        fontWeight = FontWeight.SemiBold,
+                        fontSize = 19.sp,
+                        color = DS.ink,
+                        modifier = Modifier.weight(1f, fill = false),
+                    )
+                    if (author.isVerified) VerifiedCheck(language = language, size = 15.dp)
+                }
                 author.title(language)?.let { title ->
                     Spacer(Modifier.height(3.dp))
                     Text(text = title, style = SophiaTypography.bodyMedium, color = DS.inkSecondary)
                 }
+            }
+            if (isFollowing != null && onFollow != null) {
+                FollowButton(isFollowing = isFollowing, language = language, onClick = onFollow, compact = true)
             }
         }
         author.bio(language)?.let { bio ->
@@ -192,6 +208,57 @@ fun AuthorCard(
             text = StringStore.text(context, "author.otherCourses", language),
             onClick = onOpenAuthor,
         )
+    }
+}
+
+/**
+ * « Traduit · original en anglais » sous la signature d'un cours écrit dans une autre langue.
+ * Le texte original n'est pas encore livré avec les cours (prompt 3) : la ligne n'affiche le
+ * lien que lorsque [onShowOriginal] est fourni.
+ */
+@Composable
+fun TranslatedFromLine(
+    code: String,
+    language: AppLanguage,
+    modifier: Modifier = Modifier,
+    onShowOriginal: (() -> Unit)? = null,
+) {
+    val context = LocalContext.current
+    val name = AppLanguage.entries.firstOrNull { it.code.equals(code, ignoreCase = true) }?.displayName
+        ?: code.uppercase()
+    Row(
+        modifier = modifier
+            .fillMaxWidth()
+            .clip(androidx.compose.foundation.shape.RoundedCornerShape(14.dp))
+            .background(DS.accentTint)
+            .padding(horizontal = 12.dp, vertical = 10.dp),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.spacedBy(8.dp),
+    ) {
+        Icon(
+            imageVector = Icons.Filled.Public,
+            contentDescription = null,
+            tint = DS.accent,
+            modifier = Modifier.size(16.dp),
+        )
+        Text(
+            text = StringStore.text(context, "course.translatedFrom", language, name),
+            fontFamily = PlusJakartaSans,
+            fontWeight = FontWeight.SemiBold,
+            fontSize = 13.sp,
+            color = DS.ink,
+            modifier = Modifier.weight(1f),
+        )
+        if (onShowOriginal != null) {
+            Text(
+                text = StringStore.text(context, "course.seeOriginal", language),
+                fontFamily = PlusJakartaSans,
+                fontWeight = FontWeight.Bold,
+                fontSize = 13.sp,
+                color = DS.accentSoft,
+                modifier = Modifier.softPress(onClick = onShowOriginal),
+            )
+        }
     }
 }
 

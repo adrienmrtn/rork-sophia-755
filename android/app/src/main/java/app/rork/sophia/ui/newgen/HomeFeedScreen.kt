@@ -13,7 +13,6 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Search
@@ -208,7 +207,7 @@ fun HomeFeedScreen(
                     )
                 }
             }
-            itemsIndexed(forYouItems) { position, item ->
+            indexedItems(forYouItems) { position, item ->
                 when (item) {
                     is FeedItem.CourseCard -> {
                         val course = item.course
@@ -290,7 +289,7 @@ fun HomeFeedScreen(
                         )
                     }
                 }
-                itemsIndexed(followingCourses, key = { _, course -> "following:${course.id}" }) { position, course ->
+                indexedItems(followingCourses, key = { _, course -> "following:${course.id}" }) { position, course ->
                     val completed = progress.courseProgress[course.id]?.isCompleted == true
                     CourseFeedCard(
                         course = course,
@@ -309,15 +308,15 @@ fun HomeFeedScreen(
     }
 }
 
-/** `itemsIndexed` sans clé pour le fil « Pour toi » : les positions comptent dans les événements. */
-private fun androidx.compose.foundation.lazy.LazyListScope.itemsIndexed(
+/** Les éléments du fil « Pour toi », identifiés par leur id ; la position compte dans les événements. */
+private fun androidx.compose.foundation.lazy.LazyListScope.indexedItems(
     items: List<FeedItem>,
     content: @Composable (Int, FeedItem) -> Unit,
 ) {
     items(items.size, key = { items[it].id }) { index -> content(index, items[index]) }
 }
 
-private fun <T> androidx.compose.foundation.lazy.LazyListScope.itemsIndexed(
+private fun <T> androidx.compose.foundation.lazy.LazyListScope.indexedItems(
     items: List<T>,
     key: (Int, T) -> Any,
     content: @Composable (Int, T) -> Unit,

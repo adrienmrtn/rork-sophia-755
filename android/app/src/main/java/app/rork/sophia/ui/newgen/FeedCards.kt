@@ -13,7 +13,6 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
@@ -461,9 +460,3 @@ fun VideoFeedCard(title: String, modifier: Modifier = Modifier) {
         )
     }
 }
-
-/** Largeur d'une couverture de carte « Reprendre ». */
-internal val ResumeCardWidth = 220.dp
-
-@Suppress("unused")
-private fun Modifier.unusedWidth() = this.width(ResumeCardWidth)

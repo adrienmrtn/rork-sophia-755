@@ -27,6 +27,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.key
 import androidx.compose.runtime.mutableIntStateOf
@@ -60,6 +61,7 @@ import app.rork.sophia.ui.components.lockedContentBlur
 import app.rork.sophia.ui.components.CircleIconButton
 import app.rork.sophia.ui.audio.CourseReaderAudioButton
 import app.rork.sophia.ui.components.SophiaPrimaryButton
+import app.rork.sophia.ui.newgen.SegmentedProgressBar
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
 import app.rork.sophia.ui.theme.SophiaTypography
@@ -90,6 +92,8 @@ fun CourseScreen(
     onOpenAudio: () -> Unit = {},
 ) {
     val context = LocalContext.current
+    // Suivi pour le bouton « Suivre » de la carte auteur ; le reste lit `progress.value`.
+    val progressSnapshot by progressManager.progress.collectAsState()
     var showQuiz by remember { mutableStateOf(false) }
     var showCompleted by remember(course.id) { mutableStateOf(false) }
     var showCoachmark by remember { mutableStateOf(false) }
@@ -118,6 +122,8 @@ fun CourseScreen(
         if (index < 0) return
         trackedSection = -1
         val seconds = ((System.currentTimeMillis() - sectionEnteredAt) / 1000).toInt()
+        // Le temps passé sur la section nourrit le compteur « lecture » du profil (plafonné à une heure).
+        progressManager.addReadingSeconds(seconds)
         Analytics.log(
             "section_view",
             courseId = course.id,
@@ -265,10 +271,20 @@ fun CourseScreen(
                     onOpenPlayer = onOpenAudio,
                 )
             }
-            CalmProgressBar(
-                fraction = if (pages.isEmpty()) 0f else (pagerState.currentPage + 1).toFloat() / pages.size,
-                modifier = Modifier.padding(horizontal = DS.Space.l),
-            )
+            // Une capsule par section, remplies jusqu'à la courante (maquette) ; au-delà de douze
+            // sections les capsules deviendraient des pointillés, la barre continue reprend.
+            if (pages.size in 1..12) {
+                SegmentedProgressBar(
+                    count = pages.size,
+                    current = pagerState.currentPage,
+                    modifier = Modifier.padding(horizontal = DS.Space.l),
+                )
+            } else {
+                CalmProgressBar(
+                    fraction = if (pages.isEmpty()) 0f else (pagerState.currentPage + 1).toFloat() / pages.size,
+                    modifier = Modifier.padding(horizontal = DS.Space.l),
+                )
+            }
 
             if (!pagesReady) {
                 Box(
@@ -304,6 +320,12 @@ fun CourseScreen(
                                     onClick = { onOpenAuthor(author.slug) },
                                 )
                             }
+                            // Un cours écrit dans une autre langue le dit sous la signature.
+                            if (index == 0) {
+                                meta.originalLanguage?.takeIf { it != language.code }?.let { code ->
+                                    TranslatedFromLine(code = code, language = language)
+                                }
+                            }
                             Column(
                                 modifier = Modifier.lockedContentBlur(locked),
                                 verticalArrangement = Arrangement.spacedBy(DS.Space.m),
@@ -323,6 +345,17 @@ fun CourseScreen(
                                             author = author,
                                             language = language,
                                             onOpenAuthor = { onOpenAuthor(author.slug) },
+                                            isFollowing = author.slug in progressSnapshot.followedCreatorSlugs,
+                                            onFollow = {
+                                                val wasFollowing = progressManager.isFollowing(author.slug)
+                                                progressManager.toggleFollow(author.slug)
+                                                Analytics.log(
+                                                    if (wasFollowing) "unfollow" else "follow",
+                                                    courseId = course.id,
+                                                    screen = "reader",
+                                                    props = mapOf("creator" to author.slug),
+                                                )
+                                            },
                                         )
                                     }
                                     if (meta.sources.isNotEmpty()) {
@@ -440,8 +473,15 @@ private const val COURSE_COMPLETION_XP = 50
 
 private data class ReaderPage(val title: String, val blocks: List<ReaderBlock>)
 
-/** Author slug and references of a professor-authored course, read from the V2 root. */
-data class ReaderMeta(val authorSlug: String? = null, val sources: List<ReaderSource> = emptyList())
+/**
+ * Author slug, references and original language of a course, read from the V2 root.
+ * [originalLanguage] n'est posé que pour les cours traduits (`originalLanguage` du JSON).
+ */
+data class ReaderMeta(
+    val authorSlug: String? = null,
+    val sources: List<ReaderSource> = emptyList(),
+    val originalLanguage: String? = null,
+)
 
 private fun JsonObject.text(key: String): String? =
     (this[key] as? JsonPrimitive)?.contentOrNull?.takeIf { it.isNotBlank() }
@@ -459,7 +499,11 @@ private fun structuredMeta(
             val text = source.text("text") ?: return@mapNotNull null
             ReaderSource(text = text, url = source.text("url")?.takeIf { it.startsWith("http") })
         }
-        ReaderMeta(authorSlug = root.text("author"), sources = sources)
+        ReaderMeta(
+            authorSlug = root.text("author"),
+            sources = sources,
+            originalLanguage = root.text("originalLanguage"),
+        )
     } catch (_: Exception) {
         ReaderMeta()
     }

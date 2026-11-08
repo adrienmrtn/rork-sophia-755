@@ -33,6 +33,7 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
@@ -56,6 +57,7 @@ import app.rork.sophia.billing.StoreViewModel
 import app.rork.sophia.data.AuthorStore
 import app.rork.sophia.data.ContentCatalog
 import app.rork.sophia.data.DeviceCapabilities
+import app.rork.sophia.data.FeatureFlags
 import app.rork.sophia.data.ProgressManager
 import app.rork.sophia.data.StringStore
 import app.rork.sophia.data.analytics.Analytics
@@ -68,13 +70,16 @@ import app.rork.sophia.ui.components.softPress
 import app.rork.sophia.ui.components.ConfirmDialog
 import app.rork.sophia.ui.components.PostCompletionRewardFlow
 import app.rork.sophia.ui.components.TrialEndingMiniBanner
-import app.rork.sophia.ui.course.AuthorScreen
 import app.rork.sophia.ui.course.CourseScreen
 import app.rork.sophia.ui.home.DiscountGiftOverlay
 import app.rork.sophia.ui.home.DiscountSideTab
 import app.rork.sophia.ui.home.HomeTikTokScreen
 import app.rork.sophia.ui.library.LibraryScreen
 import app.rork.sophia.ui.library.MyCoursesScreen
+import app.rork.sophia.ui.newgen.CreatorPageScreen
+import app.rork.sophia.ui.newgen.NEWGEN_TAB_COUNT
+import app.rork.sophia.ui.newgen.NewGenRoute
+import app.rork.sophia.ui.newgen.NewGenTabs
 import app.rork.sophia.ui.path.LearningPathScreen
 import app.rork.sophia.ui.path.PathQuizScreen
 import app.rork.sophia.ui.paywall.PaywallContext
@@ -123,6 +128,12 @@ fun MainTabs(
     val progress by app.progressManager.progress.collectAsState()
     val discount by app.discountManager.state.collectAsState()
     var selectedTab by remember { mutableIntStateOf(0) }
+    // Variante de navigation (A/B « nouvelle génération »), lue une fois : un changement dans
+    // les réglages de debug vaut au prochain lancement, pas sous les doigts de l'utilisateur.
+    val newNavigation = remember { FeatureFlags.newNavigation(context) }
+    // Nouvelle navigation : une pile d'écrans poussés par onglet (fiche, créateur, événement…).
+    val routeStacks = remember { List(NEWGEN_TAB_COUNT) { mutableStateListOf<NewGenRoute>() } }
+    val currentRoutes = if (newNavigation) routeStacks.getOrNull(selectedTab) else null
     var selectedCourse by remember { mutableStateOf<Course?>(null) }
     // Professor page opened from a course's byline or "written by" card.
     var selectedAuthorSlug by remember { mutableStateOf<String?>(null) }
@@ -310,9 +321,17 @@ fun MainTabs(
     // Android users expect from a bottom bar.
     BackHandler(
         enabled = rewardSteps == null && paywall == null && overlay == null &&
-            selectedCourse == null && selectedTab != 0,
+            selectedCourse == null && selectedTab != 0 && currentRoutes.isNullOrEmpty(),
     ) {
         selectedTab = 0
+    }
+    // Nouvelle navigation : retour dépile d'abord l'écran poussé dans l'onglet courant.
+    BackHandler(
+        enabled = rewardSteps == null && paywall == null && overlay == null &&
+            selectedCourse == null && pathQuiz == null && !showAudioPlayer &&
+            !currentRoutes.isNullOrEmpty(),
+    ) {
+        currentRoutes?.let { if (it.isNotEmpty()) it.removeAt(it.lastIndex) }
     }
     // Registered last, so it takes precedence: the author page sits above the reader.
     BackHandler(enabled = selectedAuthorSlug != null) {
@@ -366,6 +385,38 @@ fun MainTabs(
                 )
             }
         } else {
+            if (newNavigation) {
+                // Les 4 onglets de la maquette ; le lecteur, les paywalls et les overlays
+                // ci-dessous restent les mêmes, `openCourse` reste la seule porte du lecteur.
+                NewGenTabs(
+                    language = language,
+                    storeViewModel = storeViewModel,
+                    progress = progress,
+                    progressManager = app.progressManager,
+                    isPremium = isPremium,
+                    selectedTab = selectedTab,
+                    onSelectTab = { selectedTab = it },
+                    routeStacks = routeStacks,
+                    pathCovered = pathQuiz != null || rewardSteps != null || paywall != null ||
+                        overlay != null || showAudioPlayer,
+                    onOpenCourse = { course, source -> openCourse(course.toStub(), source) },
+                    onOpenCourseById = { id, source -> openCourseById(id, source) },
+                    onOpenSettings = { overlay = OverlayScreen.Settings },
+                    onOpenFriends = {
+                        pendingFriendUserId = null
+                        overlay = OverlayScreen.Friends
+                    },
+                    onShowPaywall = { paywall = PaywallContext.DEBLOQUER_COURS },
+                    onOpenPathQuiz = { level, isLastLevel -> pathQuiz = level to isLastLevel },
+                    onOpenAudioPlayer = { showAudioPlayer = true },
+                    onBecomeCreator = {
+                        val url = AppConfig.creatorStudioUrl(language)
+                        val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+                            .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                        runCatching { context.startActivity(intent) }
+                    },
+                )
+            } else {
     // Autorenew is the Material twin of the iOS `arrow.triangle.2.circlepath`; RestartAlt
         // read as "reset", and it is also the icon of the reset rows in settings.
         val tabs = listOf(
@@ -486,6 +537,7 @@ fun MainTabs(
                     )
                 }
                 }
+            }
             }
 
             if (!isPremium && selectedCourse == null && paywall == null) {
@@ -620,17 +672,21 @@ fun MainTabs(
                 // An unknown slug (content ahead of the bundled authors file): nothing to show.
                 LaunchedEffect(slug) { selectedAuthorSlug = null }
             } else {
+                // La page créateur de la maquette (prompt 2), dans les deux variantes : depuis
+                // le lecteur, un autre de ses cours passe par la porte habituelle.
                 SophiaOverlayLayer {
-                    AuthorScreen(
+                    CreatorPageScreen(
                         author = author,
                         language = language,
                         progress = progress,
-                        currentCourseId = selectedCourse?.id,
-                        onOpenCourse = { id ->
-                            selectedAuthorSlug = null
-                            if (id != selectedCourse?.id) openCourseById(id, source = "author")
-                        },
+                        progressManager = app.progressManager,
                         onBack = { selectedAuthorSlug = null },
+                        onOpenCourse = { summary ->
+                            selectedAuthorSlug = null
+                            if (summary.id != selectedCourse?.id) openCourse(summary.toStub(), source = "author")
+                        },
+                        // Au-dessus du lecteur, l'annonce « en écriture » n'a nulle part où mener.
+                        onOpenCampaign = null,
                         modifier = Modifier.fillMaxSize(),
                     )
                 }

@@ -89,7 +89,7 @@ fun CourseDetailScreen(
     val hook = info?.hook ?: stripInlineMarkup(course.description)
     val introduction = info?.introduction ?: stripInlineMarkup(course.description)
     val otherCourses = remember(identity, summaries, course.id) {
-        val author = identity.author ?: return@remember emptyList()
+        val author = identity.author ?: return@remember emptyList<CourseSummary>()
         author.courseIds.filter { it != course.id }.mapNotNull { id -> summaries.firstOrNull { it.id == id } }
     }
 
