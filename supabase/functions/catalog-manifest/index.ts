@@ -54,6 +54,21 @@ Deno.serve(async (req: Request) => {
   }
 
   const manifest = data as Record<string, unknown>;
+  // Chaque entrée reçoit son URL : l'objet Storage quand il existe (CDN, cache immuable),
+  // sinon la fonction catalog-file qui produit le fichier depuis la base.
+  const base = Deno.env.get("SUPABASE_URL")!.replace(/\/$/, "");
+  type Entry = { hash: string; bytes?: number; path: string; storage?: boolean; url?: string };
+  const withUrl = (entries: Record<string, Entry>, kindFor: (key: string) => string, idFor?: (key: string) => string) => {
+    for (const [key, entry] of Object.entries(entries)) {
+      entry.url = entry.storage
+        ? `${base}/storage/v1/object/public/course-content/${entry.path}`
+        : `${base}/functions/v1/catalog-file?lang=${encodeURIComponent(lang)}&kind=${kindFor(key)}` +
+          (idFor ? `&id=${encodeURIComponent(idFor(key))}` : "") + `&h=${entry.hash}`;
+      delete entry.storage;
+    }
+  };
+  withUrl((manifest.files as Record<string, Entry>) ?? {}, (key) => key);
+  withUrl((manifest.courses as Record<string, Entry>) ?? {}, () => "course", (key) => key);
   const courses = Object.keys((manifest.courses as Record<string, unknown>) ?? {}).length;
   // L'ETag ne dépend que du contenu, pas de generated_at : deux manifestes identiques
   // donnent le même ETag et le client garde sa copie.

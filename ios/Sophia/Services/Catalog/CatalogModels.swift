@@ -89,7 +89,16 @@ struct CatalogManifest: Decodable {
     struct Entry: Decodable {
         let hash: String
         let bytes: Int?
+        /// Chemin dans le bucket `course-content` (quand l'objet y est).
         let path: String
+        /// L'adresse à télécharger : l'objet Storage, ou la fonction `catalog-file` qui produit le
+        /// fichier depuis la base. Absente des anciens manifestes : `path` sert alors de repli.
+        let url: String?
+
+        var downloadURL: URL? {
+            if let url, let absolute = URL(string: url) { return absolute }
+            return CatalogStore.objectURL(path: path)
+        }
     }
 
     let lang: String

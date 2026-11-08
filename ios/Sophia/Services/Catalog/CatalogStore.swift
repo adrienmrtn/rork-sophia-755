@@ -190,7 +190,7 @@ final class CatalogStore {
         var changed = false
         for kind in ["catalog", "quizzes", "glossary"] {
             guard let entry = manifest.files[kind], hashes[kind] != entry.hash,
-                  let fileURL = Self.objectURL(path: entry.path),
+                  let fileURL = entry.downloadURL,
                   let fileData = await fetch(fileURL),
                   Self.looksValid(kind: kind, data: fileData) else { continue }
             write(fileData, language: language, name: "\(kind).json")
@@ -244,7 +244,7 @@ final class CatalogStore {
         if let running = downloads[key] { return await running.value }
         let task = Task<CourseBundle?, Never> { [self] in
             guard let entry = manifests[language]?.courses[courseId],
-                  let url = Self.objectURL(path: entry.path),
+                  let url = entry.downloadURL,
                   let data = await fetch(url),
                   let bundle = try? JSONDecoder().decode(CourseBundle.self, from: data) else { return nil }
             write(data, language: language, name: "courses/\(courseId).json")
