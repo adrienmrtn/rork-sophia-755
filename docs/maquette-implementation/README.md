@@ -42,3 +42,17 @@ que dans `maquette/`.
    sur `newgen`, relancer l'app, `⌘S` sur chaque écran, enregistrer dans `ios/`.
 2. Android : émulateur Pixel 7 (412 × 915 dp), même réglage, capture depuis Android Studio,
    enregistrer dans `android/`.
+
+## Retouches après la première relecture (novembre 2026)
+
+- **Fil d'accueil paginé** : une carte par écran, défilement vertical avec snap (comme un
+  réseau vidéo), la carte suivante dépasse de 44 pt en bas. L'en-tête et le segment
+  « Pour toi / Abonnements » restent fixes au-dessus du fil. Un double-tap sur la carte
+  l'aime ; le cœur rebondit et lâche un éclat de particules à chaque « j'aime ».
+- **Fin de cours** : deux boutons sous la carte XP, « Aimer ce cours » et « Suivre {prénom} »
+  (événements `like` / `follow` avec `screen = course_end`).
+- **Explorer** : c'est la variante B « univers » de la maquette (`ExplorerB.dc.html`) qui est
+  retenue : chips « On cherche beaucoup cette semaine » (six titres courts tirés par semaine,
+  avec résultats sous la rangée), grille « Univers » (les six plus grandes sous-catégories de
+  la langue, couverture du cours le plus lu), carrousel « Créateurs à suivre ». La rangée
+  « En moins d'une minute » attend les vidéos (prompt 10).

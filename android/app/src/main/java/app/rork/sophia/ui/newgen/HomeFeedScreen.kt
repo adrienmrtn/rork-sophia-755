@@ -1,9 +1,12 @@
 package app.rork.sophia.ui.newgen
 
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -12,7 +15,9 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.pager.PageSize
+import androidx.compose.foundation.pager.VerticalPager
+import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Search
@@ -21,17 +26,20 @@ import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.runtime.setValue
+import androidx.compose.runtime.snapshotFlow
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -61,11 +69,16 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.withContext
 
 /**
- * L'accueil « nouvelle génération » : un seul fil vertical, « Pour toi » (le deck local de
- * [HomeDeckBuilder], avec l'événement en cours et l'invitation à créer glissés dedans) ou
- * « Abonnements » (les cours des créateurs suivis). Chaque carte compte une impression après
- * une seconde à l'écran, et un passage si elle disparaît sans avoir été ouverte.
+ * L'accueil « nouvelle génération » : un fil **paginé**, une carte par écran, qu'on fait
+ * défiler d'un geste vertical comme un réseau vidéo (la carte suivante dépasse un peu en bas
+ * pour dire qu'il y en a d'autres). L'en-tête et le segment « Pour toi / Abonnements » restent
+ * fixes en haut. « Pour toi » est le deck local de [HomeDeckBuilder], avec l'événement en cours
+ * et l'invitation à créer glissés dedans ; « Abonnements », les cours des créateurs suivis.
+ *
+ * La page courante compte une impression après une seconde, et un passage si on la quitte
+ * sans l'avoir ouverte (docs/events.md).
  */
+@OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun HomeFeedScreen(
     modifier: Modifier = Modifier,
@@ -82,6 +95,7 @@ fun HomeFeedScreen(
     val context = LocalContext.current
     val app = context.applicationContext as SophiaApplication
     val skipStore = remember { DeckSkipStore(context.applicationContext) }
+    val haptics = LocalHapticFeedback.current
     val completedCount = progress.courseProgress.count { it.value.isCompleted }
 
     var segment by remember { mutableIntStateOf(HomeFeedSession.segment) }
@@ -127,7 +141,8 @@ fun HomeFeedScreen(
     val authors = remember(deckReady) { AuthorStore.all(context.applicationContext) }
 
     /** Le deck, l'événement en troisième position et l'invitation en septième. */
-    val forYouItems = remember(deck, activeCampaign, inviteDismissed) {
+    val forYouItems = remember(deck, deckReady, activeCampaign, inviteDismissed) {
+        if (deckReady && deck.isEmpty()) return@remember listOf<FeedItem>(FeedItem.Notice(FeedNotice.ALL_CAUGHT_UP))
         val items = ArrayList<FeedItem>(deck.size + 2)
         deck.forEach { items += FeedItem.CourseCard(it) }
         if (activeCampaign != null) items.add(minOf(2, items.size), FeedItem.CampaignCard(activeCampaign))
@@ -149,205 +164,189 @@ fun HomeFeedScreen(
     val followingHasUnread = followedAuthors.isNotEmpty() &&
         followingCourses.any { progress.courseProgress[it.id]?.isCompleted != true }
 
+    /** Les pages de l'onglet Abonnements, précédées d'un mot quand tout est lu. */
+    val followingItems = remember(followedAuthors, followingCourses, progress.courseProgress) {
+        if (followedAuthors.isEmpty()) return@remember listOf<FeedItem>(FeedItem.Notice(FeedNotice.FOLLOWING_EMPTY))
+        val items = ArrayList<FeedItem>(followingCourses.size + 1)
+        if (followingCourses.all { progress.courseProgress[it.id]?.isCompleted == true }) {
+            items += FeedItem.Notice(FeedNotice.FOLLOWING_UP_TO_DATE)
+        }
+        followingCourses.forEach { items += FeedItem.CourseCard(it) }
+        items.toList()
+    }
+
+    val pages = if (segment == 0) forYouItems else followingItems
+    val screen = if (segment == 0) "home" else "home_following"
+    val latestPages = rememberUpdatedState(pages)
+    val pagerState = rememberPagerState { latestPages.value.size }
+
     fun open(course: CourseSummary, position: Int) {
         HomeFeedSession.opened.add(course.id)
         skipStore.clear(course.id)
         Analytics.log(
             "card_open",
             courseId = course.id,
-            screen = if (segment == 0) "home" else "home_following",
+            screen = screen,
             position = position,
             algoVersion = Analytics.ALGO_VERSION,
         )
         onOpenCourse(course)
     }
 
-    LazyColumn(
-        modifier = modifier.fillMaxSize().background(DS.canvas),
-        contentPadding = PaddingValues(bottom = 32.dp),
-        verticalArrangement = Arrangement.spacedBy(14.dp),
-    ) {
-        item(key = "header") {
-            FeedHeader(
-                language = language,
-                streak = progress.streak,
-                onSearch = onSearch,
-                modifier = Modifier.padding(start = 20.dp, end = 20.dp, top = 8.dp),
-            )
+    /** Vue puis quittée sans être ouverte : un passage, qui nourrit la fatigue du deck. */
+    fun cardLeft(courseId: String, position: Int) {
+        if (courseId in HomeFeedSession.impressed &&
+            courseId !in HomeFeedSession.opened &&
+            HomeFeedSession.skipped.add(courseId)
+        ) {
+            skipStore.registerSkip(courseId)
+            Analytics.log("card_skip", courseId = courseId, screen = screen, position = position, algoVersion = Analytics.ALGO_VERSION)
         }
-        item(key = "segments") {
-            SegmentedPills(
-                items = listOf(
-                    StringStore.text(context, "home.segment.forYou", language),
-                    StringStore.text(context, "home.segment.following", language),
-                ),
-                selection = segment,
-                onSelect = {
-                    segment = it
-                    HomeFeedSession.segment = it
-                },
-                dotOn = if (followingHasUnread) 1 else null,
-                modifier = Modifier.padding(horizontal = 20.dp).padding(bottom = 4.dp),
-            )
-        }
-        if (segment == 0) {
-            if (!deckReady) {
-                item(key = "loading") {
-                    Box(modifier = Modifier.fillMaxWidth().padding(vertical = 60.dp), contentAlignment = Alignment.Center) {
-                        CircularProgressIndicator(color = DS.accent)
-                    }
-                }
-            } else if (deck.isEmpty()) {
-                item(key = "caught-up") {
-                    Text(
-                        text = StringStore.text(context, "home.allCaughtUp", language),
-                        fontFamily = PlusJakartaSans,
-                        color = DS.ink,
-                        modifier = Modifier.fillMaxWidth().padding(40.dp),
-                    )
-                }
-            }
-            indexedItems(forYouItems) { position, item ->
-                when (item) {
-                    is FeedItem.CourseCard -> {
-                        val course = item.course
-                        TrackedCard(
-                            courseId = course.id,
-                            position = position,
-                            isPremium = isPremium,
-                            skipStore = skipStore,
-                        )
-                        val campaign = activeCampaign?.takeIf { course.id in it.courseIds }
-                        CourseFeedCard(
-                            course = course,
-                            language = language,
-                            progress = progress,
-                            progressManager = progressManager,
-                            tag = campaign?.title(language),
-                            tagStyle = TagPillStyle.WARM,
-                            onOpen = { open(course, position) },
-                            onOpenCreator = onOpenCreator,
-                            modifier = Modifier.padding(horizontal = 16.dp),
-                        )
-                    }
-                    is FeedItem.CampaignCard -> EventFeedCard(
-                        campaign = item.campaign,
-                        language = language,
-                        progress = progress,
-                        onOpen = { onOpenCampaign(item.campaign) },
-                        modifier = Modifier.padding(horizontal = 16.dp),
-                    )
-                    FeedItem.CreatorInvite -> CreatorInviteCard(
-                        language = language,
-                        authors = authors,
-                        onBecomeCreator = onBecomeCreator,
-                        onLater = {
-                            HomeFeedSession.dismissInvite(context)
-                            inviteDismissed = true
-                        },
-                        modifier = Modifier.padding(horizontal = 16.dp),
-                    )
-                    is FeedItem.Video -> VideoFeedCard(title = item.videoId, modifier = Modifier.padding(horizontal = 16.dp))
-                }
-            }
-        } else {
-            if (followedAuthors.isEmpty()) {
-                item(key = "following-empty") {
-                    NewGenEmptyCard(
-                        title = StringStore.text(context, "home.following.empty.title", language),
-                        body = StringStore.text(context, "home.following.empty.body", language),
-                        cta = StringStore.text(context, "home.following.discover", language),
-                        onClick = onSearch,
-                        modifier = Modifier.padding(horizontal = 16.dp),
-                    )
-                }
-            } else {
-                item(key = "followed-row") {
-                    FollowedCreatorsRow(
-                        authors = followedAuthors,
-                        language = language,
-                        onOpen = onOpenCreator,
-                        onDiscover = onSearch,
-                        modifier = Modifier.padding(horizontal = 20.dp),
-                    )
-                }
-                if (followingCourses.all { progress.courseProgress[it.id]?.isCompleted == true }) {
-                    item(key = "following-uptodate") {
-                        NewGenEmptyCard(
-                            title = StringStore.text(context, "home.following.upToDate.title", language),
-                            body = StringStore.text(context, "home.following.upToDate.body", language),
-                            cta = StringStore.text(context, "home.following.discover", language),
-                            onClick = onSearch,
-                            modifier = Modifier.padding(horizontal = 16.dp),
-                        )
-                    }
-                } else {
-                    item(key = "following-news") {
-                        NewGenSectionTitle(
-                            text = StringStore.text(context, "home.following.news", language),
-                            modifier = Modifier.padding(horizontal = 20.dp).padding(top = 6.dp),
-                        )
-                    }
-                }
-                indexedItems(followingCourses, key = { _, course -> "following:${course.id}" }) { position, course ->
-                    val completed = progress.courseProgress[course.id]?.isCompleted == true
-                    CourseFeedCard(
-                        course = course,
-                        language = language,
-                        progress = progress,
-                        progressManager = progressManager,
-                        tag = if (completed) StringStore.text(context, "common.read", language) else null,
-                        screen = "home_following",
-                        onOpen = { open(course, position) },
-                        onOpenCreator = onOpenCreator,
-                        modifier = Modifier.padding(horizontal = 16.dp),
-                    )
-                }
+    }
+
+    // Changement de segment : on repart de la première page.
+    LaunchedEffect(segment) {
+        if (pagerState.currentPage != 0) pagerState.scrollToPage(0)
+    }
+
+    // La page qui part sans avoir été ouverte est un passage ; une légère vibration accompagne
+    // chaque swipe.
+    LaunchedEffect(pages, screen) {
+        var previous = pagerState.settledPage
+        snapshotFlow { pagerState.settledPage }.collect { page ->
+            if (page != previous) {
+                pages.getOrNull(previous)?.courseId?.let { id -> cardLeft(id, previous) }
+                haptics.performHapticFeedback(HapticFeedbackType.TextHandleMove)
+                previous = page
             }
         }
     }
-}
 
-/** Les éléments du fil « Pour toi », identifiés par leur id ; la position compte dans les événements. */
-private fun androidx.compose.foundation.lazy.LazyListScope.indexedItems(
-    items: List<FeedItem>,
-    content: @Composable (Int, FeedItem) -> Unit,
-) {
-    items(items.size, key = { items[it].id }) { index -> content(index, items[index]) }
-}
-
-private fun <T> androidx.compose.foundation.lazy.LazyListScope.indexedItems(
-    items: List<T>,
-    key: (Int, T) -> Any,
-    content: @Composable (Int, T) -> Unit,
-) {
-    items(items.size, key = { key(it, items[it]) }) { index -> content(index, items[index]) }
-}
-
-/**
- * La mesure d'une carte de cours : une impression après une seconde à l'écran
- * (docs/events.md), un passage si elle quitte l'écran vue mais pas ouverte. Le gain par
- * balayage de l'offre découverte suit l'impression, comme sur iOS.
- */
-@Composable
-private fun TrackedCard(courseId: String, position: Int, isPremium: Boolean, skipStore: DeckSkipStore) {
-    val context = LocalContext.current
-    val app = context.applicationContext as SophiaApplication
-    LaunchedEffect(courseId) {
+    // La page qui arrive compte comme vue après une seconde (docs/events.md). Le gain par
+    // balayage de l'offre découverte suit l'impression, comme sur iOS.
+    val settledPage = pagerState.settledPage
+    LaunchedEffect(settledPage, pages, screen) {
+        val courseId = pages.getOrNull(settledPage)?.courseId ?: return@LaunchedEffect
         if (courseId in HomeFeedSession.impressed) return@LaunchedEffect
         delay(1000)
         if (!HomeFeedSession.impressed.add(courseId)) return@LaunchedEffect
-        Analytics.log("card_impression", courseId = courseId, screen = "home", position = position, algoVersion = Analytics.ALGO_VERSION)
+        Analytics.log("card_impression", courseId = courseId, screen = screen, position = settledPage, algoVersion = Analytics.ALGO_VERSION)
         if (!isPremium) app.discountManager.registerSwipe()
     }
-    DisposableEffect(courseId) {
-        onDispose {
-            if (courseId in HomeFeedSession.impressed &&
-                courseId !in HomeFeedSession.opened &&
-                HomeFeedSession.skipped.add(courseId)
-            ) {
-                skipStore.registerSkip(courseId)
-                Analytics.log("card_skip", courseId = courseId, screen = "home", position = position, algoVersion = Analytics.ALGO_VERSION)
+
+    Column(modifier = modifier.fillMaxSize().background(DS.canvas)) {
+        FeedHeader(
+            language = language,
+            streak = progress.streak,
+            onSearch = onSearch,
+            modifier = Modifier.padding(start = 20.dp, end = 20.dp, top = 8.dp),
+        )
+        SegmentedPills(
+            items = listOf(
+                StringStore.text(context, "home.segment.forYou", language),
+                StringStore.text(context, "home.segment.following", language),
+            ),
+            selection = segment,
+            onSelect = {
+                segment = it
+                HomeFeedSession.segment = it
+            },
+            dotOn = if (followingHasUnread) 1 else null,
+            modifier = Modifier.padding(horizontal = 20.dp).padding(top = 12.dp, bottom = 10.dp),
+        )
+        if (segment == 1 && followedAuthors.isNotEmpty()) {
+            FollowedCreatorsRow(
+                authors = followedAuthors,
+                language = language,
+                onOpen = onOpenCreator,
+                onDiscover = onSearch,
+                modifier = Modifier.padding(horizontal = 20.dp).padding(bottom = 6.dp),
+            )
+        }
+
+        if (segment == 0 && !deckReady) {
+            Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+                CircularProgressIndicator(color = DS.accent)
+            }
+        } else {
+            BoxWithConstraints(modifier = Modifier.fillMaxWidth().weight(1f)) {
+                // Ce que la carte suivante laisse voir en bas de l'écran.
+                val peek = 44.dp
+                val pageHeight = (maxHeight - peek).coerceAtLeast(320.dp)
+                // La couverture garde son 16:9 tant que la page est assez haute ; sur un petit
+                // écran elle se raccourcit pour laisser la place au texte et aux compteurs.
+                val coverHeight = minOf((maxWidth - 32.dp) * 9f / 16f, pageHeight * 0.42f)
+                VerticalPager(
+                    state = pagerState,
+                    modifier = Modifier.fillMaxSize(),
+                    pageSize = PageSize.Fixed(pageHeight),
+                    // L'espace de fin laisse la dernière page s'aligner en haut, et c'est dans
+                    // cette marge que la page suivante dépasse.
+                    contentPadding = PaddingValues(bottom = peek),
+                    beyondViewportPageCount = 1,
+                    key = { index -> latestPages.value.getOrNull(index)?.id ?: index },
+                ) { index ->
+                    val item = latestPages.value.getOrNull(index) ?: return@VerticalPager
+                    Box(modifier = Modifier.fillMaxSize().padding(start = 16.dp, end = 16.dp, bottom = 10.dp)) {
+                        when (item) {
+                            is FeedItem.CourseCard -> {
+                                val course = item.course
+                                val campaign = if (segment == 0) activeCampaign?.takeIf { course.id in it.courseIds } else null
+                                val completed = segment == 1 && progress.courseProgress[course.id]?.isCompleted == true
+                                CourseFeedCard(
+                                    course = course,
+                                    language = language,
+                                    progress = progress,
+                                    progressManager = progressManager,
+                                    tag = campaign?.title(language) ?: if (completed) StringStore.text(context, "common.read", language) else null,
+                                    tagStyle = if (campaign != null) TagPillStyle.WARM else TagPillStyle.ACCENT,
+                                    screen = screen,
+                                    fillsPage = true,
+                                    coverHeight = coverHeight,
+                                    onOpen = { open(course, index) },
+                                    onOpenCreator = onOpenCreator,
+                                )
+                            }
+                            is FeedItem.CampaignCard -> EventFeedCard(
+                                campaign = item.campaign,
+                                language = language,
+                                progress = progress,
+                                onOpen = { onOpenCampaign(item.campaign) },
+                                fillsPage = true,
+                            )
+                            FeedItem.CreatorInvite -> CreatorInviteCard(
+                                language = language,
+                                authors = authors,
+                                onBecomeCreator = onBecomeCreator,
+                                onLater = {
+                                    HomeFeedSession.dismissInvite(context)
+                                    inviteDismissed = true
+                                },
+                                fillsPage = true,
+                            )
+                            is FeedItem.Video -> VideoFeedCard(title = item.videoId, fillsPage = true)
+                            is FeedItem.Notice -> {
+                                val (title, body) = when (item.notice) {
+                                    FeedNotice.FOLLOWING_EMPTY ->
+                                        StringStore.text(context, "home.following.empty.title", language) to
+                                            StringStore.text(context, "home.following.empty.body", language)
+                                    FeedNotice.FOLLOWING_UP_TO_DATE ->
+                                        StringStore.text(context, "home.following.upToDate.title", language) to
+                                            StringStore.text(context, "home.following.upToDate.body", language)
+                                    FeedNotice.ALL_CAUGHT_UP ->
+                                        StringStore.text(context, "home.allCaughtUp", language) to
+                                            StringStore.text(context, "home.following.upToDate.body", language)
+                                }
+                                NewGenEmptyCard(
+                                    title = title,
+                                    body = body,
+                                    cta = StringStore.text(context, "home.following.discover", language),
+                                    onClick = onSearch,
+                                )
+                            }
+                        }
+                    }
+                }
             }
         }
     }

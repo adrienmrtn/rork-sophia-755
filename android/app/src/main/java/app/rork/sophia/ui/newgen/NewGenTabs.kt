@@ -65,6 +65,8 @@ sealed class NewGenRoute {
     data class Event(val slug: String) : NewGenRoute()
     data class CourseList(val kind: ProfileListKind) : NewGenRoute()
     data class SubjectCourses(val subject: Subject) : NewGenRoute()
+    /** Un « univers » de l'onglet Explorer : une sous-catégorie du catalogue, dans la langue courante. */
+    data class Universe(val subcategory: String) : NewGenRoute()
 
     /** L'ancien profil (rang, matières, quiz, amis), désormais page secondaire. */
     data object Progression : NewGenRoute()
@@ -196,7 +198,7 @@ fun NewGenTabs(
                     onOpenCourse = { push(NewGenRoute.CourseDetail(it.id, "search")) },
                     onOpenCreator = { push(NewGenRoute.Creator(it.slug)) },
                     onOpenCampaign = { push(NewGenRoute.Event(it.slug)) },
-                    onOpenSubject = { push(NewGenRoute.SubjectCourses(it)) },
+                    onOpenUniverse = { push(NewGenRoute.Universe(it)) },
                 )
                 2 -> LearnHubScreen(
                     modifier = tabModifier,
@@ -342,6 +344,14 @@ private fun RouteScreen(
             progress = progress,
             onBack = onBack,
             onOpenCourse = { push(NewGenRoute.CourseDetail(it.id, "profile")) },
+            modifier = modifier,
+        )
+        is NewGenRoute.Universe -> UniverseCoursesScreen(
+            subcategory = route.subcategory,
+            language = language,
+            progress = progress,
+            onBack = onBack,
+            onOpenCourse = { push(NewGenRoute.CourseDetail(it.id, "search")) },
             modifier = modifier,
         )
         is NewGenRoute.SubjectCourses -> SubjectCoursesScreen(

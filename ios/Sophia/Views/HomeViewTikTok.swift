@@ -5,7 +5,7 @@ import SwiftUI
 /// tap even while the scroll is still settling after a swipe — instead of the first tap being
 /// swallowed to stop the scroll. Also keeps `canCancelContentTouches` so vertical swiping that
 /// starts on the card still scrolls.
-private struct ImmediateTouchScrollFixer: UIViewRepresentable {
+struct ImmediateTouchScrollFixer: UIViewRepresentable {
     func makeUIView(context: Context) -> UIView {
         let probe = UIView(frame: .zero)
         probe.isUserInteractionEnabled = false

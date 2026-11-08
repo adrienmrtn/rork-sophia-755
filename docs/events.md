@@ -62,7 +62,7 @@ n'est qu'une photo sans dates).
 
 | Nom | Quand | `props` |
 | --- | --- | --- |
-| `card_impression` | une carte reste visible au moins 1 seconde | — (`course_id`, `position`, `algo_version`) |
+| `card_impression` | une carte reste visible au moins 1 seconde (dans le fil paginé : la page sur laquelle on s'arrête) | — (`course_id`, `position`, `algo_version`) |
 | `card_skip` | l'utilisateur passe à la carte suivante sans ouvrir | — (`course_id`, `position`) |
 | `card_open` | « Commencer » sur une carte | — (`course_id`, `position`) |
 
@@ -95,10 +95,10 @@ enregistré comme `like` / `unlike`.
 
 | Nom | Quand | `props` |
 | --- | --- | --- |
-| `like` / `unlike` | cœur sur un cours | `screen` : `home`, `home_following`, `course_detail`, `library`… |
+| `like` / `unlike` | cœur sur un cours (bouton, ou double-tap sur la carte du fil) | `screen` : `home`, `home_following`, `course_detail`, `course_end`, `library`… |
 | `save` / `unsave` | enregistrer pour plus tard (marque-page) | `screen` |
 | `share` | partage d'un cours ou de l'app | `channel`, `target` (`course` ou `app`) |
-| `follow` / `unfollow` | suivre un créateur | `creator` (slug), `screen` : `creator`, `explore`, `course_detail`, `reader` |
+| `follow` / `unfollow` | suivre un créateur | `creator` (slug), `screen` : `creator`, `explore`, `course_detail`, `course_end`, `reader` |
 | `not_interested` | « pas intéressé » sur une carte | — |
 | `report` | signalement | `kind` (`course`, `translation`, `quiz_question`, `creator`), `target`, `reason` |
 

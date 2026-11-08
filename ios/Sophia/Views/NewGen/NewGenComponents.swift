@@ -514,3 +514,105 @@ enum NewGenFormat {
         return minutes(max(0, seconds / 60), language: language)
     }
 }
+
+// MARK: - Le cœur animé
+
+extension DS {
+    /// Le rose des cœurs allumés (fil, fiche, fin de cours).
+    static var liked: Color { Color(red: 0.93, green: 0.35, blue: 0.45) }
+}
+
+/// Le cœur d'un bouton « j'aime » : il rebondit quand il s'allume et lâche un éclat de petites
+/// particules. `burst` est incrémenté par le parent à chaque nouveau « j'aime » pour rejouer
+/// l'éclat (jamais au retrait).
+struct LikeHeartIcon: View {
+    let liked: Bool
+    let burst: Int
+    var size: CGFloat = 15
+    var idleTint: Color = DS.inkSecondary
+
+    @State private var scale: CGFloat = 1
+    @State private var burstProgress: CGFloat = 0
+
+    var body: some View {
+        Image(systemName: liked ? "heart.fill" : "heart")
+            .font(.system(size: size, weight: .medium))
+            .foregroundStyle(liked ? DS.liked : idleTint)
+            .scaleEffect(scale)
+            .background {
+                HeartBurst(progress: burstProgress)
+                    .frame(width: size * 3.4, height: size * 3.4)
+            }
+            .onChange(of: burst) { _, _ in play() }
+    }
+
+    private func play() {
+        burstProgress = 0
+        withAnimation(.spring(response: 0.22, dampingFraction: 0.45)) { scale = 1.5 }
+        withAnimation(.spring(response: 0.35, dampingFraction: 0.6).delay(0.14)) { scale = 1 }
+        withAnimation(.easeOut(duration: 0.6)) { burstProgress = 1 }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.65) {
+            var transaction = Transaction()
+            transaction.disablesAnimations = true
+            withTransaction(transaction) { burstProgress = 0 }
+        }
+    }
+}
+
+/// Huit particules qui partent du centre, rose et or en alternance, et s'éteignent en route.
+/// `progress` va de 0 (rien n'est visible) à 1 (éclat terminé).
+struct HeartBurst: View {
+    let progress: CGFloat
+
+    var body: some View {
+        GeometryReader { geo in
+            let radius = min(geo.size.width, geo.size.height) / 2
+            let travel = 0.25 + 0.75 * progress
+            ZStack {
+                ForEach(0..<8, id: \.self) { index in
+                    let angle = Double(index) / 8 * 2 * .pi
+                    Circle()
+                        .fill(index.isMultiple(of: 2) ? DS.liked : DS.warm)
+                        .frame(width: 5, height: 5)
+                        .scaleEffect(1 - 0.6 * progress)
+                        .offset(x: cos(angle) * radius * travel, y: sin(angle) * radius * travel)
+                        .opacity(progress == 0 ? 0 : Double(1 - progress))
+                }
+            }
+            .frame(width: geo.size.width, height: geo.size.height)
+        }
+        .allowsHitTesting(false)
+    }
+}
+
+/// Le grand cœur blanc du double-tap, au centre de la carte : il surgit, puis s'efface.
+struct BigHeartOverlay: View {
+    let trigger: Int
+
+    @State private var visible = false
+    @State private var scale: CGFloat = 0.5
+
+    var body: some View {
+        Image(systemName: "heart.fill")
+            .font(.system(size: 96, weight: .bold))
+            .foregroundStyle(.white)
+            .shadow(color: .black.opacity(0.28), radius: 14, y: 4)
+            .scaleEffect(scale)
+            .opacity(visible ? 1 : 0)
+            .allowsHitTesting(false)
+            .accessibilityHidden(true)
+            .onChange(of: trigger) { _, _ in
+                var transaction = Transaction()
+                transaction.disablesAnimations = true
+                withTransaction(transaction) { scale = 0.5 }
+                withAnimation(.spring(response: 0.3, dampingFraction: 0.55)) {
+                    visible = true
+                    scale = 1.1
+                }
+                withAnimation(.easeIn(duration: 0.3).delay(0.55)) {
+                    visible = false
+                    scale = 1.3
+                }
+            }
+    }
+}

@@ -1,17 +1,19 @@
 import SwiftUI
 
-/// L'onglet Explorer : recherche (cours, créateurs, termes du glossaire), l'événement en
-/// cours, les créateurs à découvrir, les cours les plus aimés et les matières. La rangée
-/// vidéos n'apparaît que lorsqu'il y aura des vidéos (prompt 10).
+/// L'onglet Explorer, variante « univers » de la maquette : la recherche (cours, créateurs,
+/// termes du glossaire), les sujets qu'on cherche beaucoup cette semaine, la grille des univers
+/// (les grandes sous-catégories du catalogue, avec une couverture), et les créateurs à suivre
+/// en carrousel. La rangée « En moins d'une minute » arrivera avec les vidéos (prompt 10).
 struct ExploreView: View {
     @Environment(LanguageManager.self) private var languageManager
     let progressManager: ProgressManager
     let onOpenCourse: (Course) -> Void
     let onOpenCreator: (CourseAuthor) -> Void
     let onOpenCampaign: (Campaign) -> Void
-    let onOpenSubject: (Subject) -> Void
+    let onOpenUniverse: (String) -> Void
 
     @State private var query = ""
+    @State private var selectedTrend: String?
     @FocusState private var searchFocused: Bool
 
     private var language: AppLanguage { languageManager.current }
@@ -25,21 +27,22 @@ struct ExploreView: View {
                     .font(DS.title(.largeTitle, .heavy))
                     .foregroundStyle(DS.ink)
                     .padding(.top, 8)
+                    .padding(.horizontal, 20)
 
                 searchField
+                    .padding(.horizontal, 20)
 
                 if isSearching {
                     results
+                        .padding(.horizontal, 20)
                 } else {
-                    if let campaign = CampaignStore.active().first {
-                        campaignBanner(campaign)
-                    }
-                    creatorsSection
-                    topLikedSection
-                    subjectsSection
+                    trendingSection
+                    universesSection
+                        .padding(.horizontal, 20)
+                    creatorsCarousel
                 }
             }
-            .padding(20)
+            .padding(.vertical, 8)
             .padding(.bottom, 24)
         }
         .scrollIndicators(.hidden)
@@ -117,11 +120,7 @@ struct ExploreView: View {
             if !courses.isEmpty {
                 NewGenSectionTitle(text: languageManager.text("library.tab.courses"), trailing: "· \(courses.count)")
                 ForEach(courses.prefix(12)) { course in
-                    CompactCourseRow(
-                        course: course,
-                        meta: "\(CreatorIdentity.forCourse(course.id).name) · \(course.subject.localizedShortName(language: language))",
-                        onTap: { onOpenCourse(course) }
-                    )
+                    courseRow(course)
                 }
             }
             if !authors.isEmpty {
@@ -136,6 +135,19 @@ struct ExploreView: View {
                     glossaryRow(hit)
                 }
             }
+        }
+    }
+
+    private func courseRow(_ course: Course) -> some View {
+        CompactCourseRow(
+            course: course,
+            meta: "\(CreatorIdentity.forCourse(course.id).name) · \(NewGenFormat.minutes(ReadingTime.minutes(for: course, language: language), language: language))",
+            onTap: {
+                UIImpactFeedbackGenerator(style: .light).impactOccurred()
+                onOpenCourse(course)
+            }
+        ) {
+            if progressManager.courseStatus(for: course.id) == .completed { ReadCheck() }
         }
     }
 
@@ -176,59 +188,7 @@ struct ExploreView: View {
         .buttonStyle(.plain)
     }
 
-    // MARK: - Découverte
-
-    private func campaignBanner(_ campaign: Campaign) -> some View {
-        Button {
-            UIImpactFeedbackGenerator(style: .light).impactOccurred()
-            onOpenCampaign(campaign)
-        } label: {
-            HStack(spacing: 14) {
-                Image(systemName: campaign.symbol ?? "sparkles")
-                    .font(.system(size: 28, weight: .semibold))
-                    .foregroundStyle(DS.warm)
-                VStack(alignment: .leading, spacing: 3) {
-                    Text(campaign.title(for: language))
-                        .font(DS.title(.headline, .heavy))
-                        .foregroundStyle(.white)
-                    Text(bannerSubtitle(campaign))
-                        .font(DS.sans(.footnote))
-                        .foregroundStyle(.white.opacity(0.85))
-                        .lineLimit(2)
-                }
-                Spacer(minLength: 4)
-                Image(systemName: "chevron.forward")
-                    .font(.system(size: 14, weight: .bold))
-                    .foregroundStyle(.white)
-            }
-            .padding(.horizontal, 18)
-            .padding(.vertical, 16)
-            .background(RoundedRectangle(cornerRadius: 18, style: .continuous).fill(DS.accent))
-        }
-        .buttonStyle(.plain)
-    }
-
-    private func bannerSubtitle(_ campaign: Campaign) -> String {
-        var text = String(format: languageManager.text("event.card.summary"), campaign.courseIds.count, campaign.upcoming.count)
-        if let end = campaign.endDate {
-            text += " · " + String(format: languageManager.text("event.card.until"), NewGenFormat.shortDay(end, language: language)).lowercased()
-        }
-        return text
-    }
-
-    private var discoverableAuthors: [CourseAuthor] {
-        AuthorStore.all.sorted { LocalCounters.followers(creatorSlug: $0.slug) > LocalCounters.followers(creatorSlug: $1.slug) }
-    }
-
-    private var creatorsSection: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            NewGenSectionTitle(text: languageManager.text("explore.creators"))
-            ForEach(discoverableAuthors.prefix(7)) { author in
-                creatorRow(author)
-            }
-        }
-    }
-
+    /// Un créateur dans les résultats de recherche : avatar, nom avec coche, pedigree, abonnés, Suivre.
     private func creatorRow(_ author: CourseAuthor) -> some View {
         let following = progressManager.isFollowing(author.slug)
         return HStack(spacing: 12) {
@@ -249,7 +209,7 @@ struct ExploreView: View {
                                 .foregroundStyle(DS.inkSecondary)
                                 .lineLimit(1)
                         }
-                        Text("\((LocalCounters.followers(creatorSlug: author.slug) + (following ? 1 : 0)).compactCount) \(languageManager.text("creator.stat.followers"))")
+                        Text(followersLabel(author, following: following))
                             .font(DS.sans(.caption, .semibold))
                             .foregroundStyle(DS.inkSecondary)
                     }
@@ -258,91 +218,276 @@ struct ExploreView: View {
                 .contentShape(Rectangle())
             }
             .buttonStyle(.plain)
-            FollowButton(isFollowing: following, compact: true) {
-                progressManager.toggleFollow(author.slug)
-                AnalyticsService.shared.log(following ? .unfollow : .follow, screen: "explore", props: ["creator": .string(author.slug)])
-            }
+            FollowButton(isFollowing: following, compact: true) { toggleFollow(author) }
         }
         .padding(12)
         .background(RoundedRectangle(cornerRadius: 18, style: .continuous).fill(DS.surface))
         .overlay(RoundedRectangle(cornerRadius: 18, style: .continuous).strokeBorder(DS.hairline, lineWidth: 1))
     }
 
-    private var topLiked: [Course] {
-        Array(ContentCatalog.activeCourses
-            .sorted { $0.likesCount(liked: false) > $1.likesCount(liked: false) }
-            .prefix(3))
+    private func followersLabel(_ author: CourseAuthor, following: Bool) -> String {
+        "\((LocalCounters.followers(creatorSlug: author.slug) + (following ? 1 : 0)).compactCount) \(languageManager.text("creator.stat.followers"))"
     }
 
-    private var topLikedSection: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            NewGenSectionTitle(text: languageManager.text("explore.topLiked"))
-            ForEach(Array(topLiked.enumerated()), id: \.element.id) { index, course in
-                Button {
-                    UIImpactFeedbackGenerator(style: .light).impactOccurred()
-                    onOpenCourse(course)
-                } label: {
-                    HStack(spacing: 12) {
-                        Text("\(index + 1)")
-                            .font(DS.title(.title2, .heavy))
-                            .foregroundStyle(DS.ink)
-                            .frame(width: 22)
-                        CourseCover(course: course, cornerRadius: 14)
-                            .frame(width: 64, height: 64)
-                        VStack(alignment: .leading, spacing: 3) {
-                            Text(course.title.withoutInlineMarkup)
-                                .font(DS.sans(.subheadline, .bold))
-                                .foregroundStyle(DS.ink)
-                                .lineLimit(2)
-                                .multilineTextAlignment(.leading)
-                            Text("\(CreatorIdentity.forCourse(course.id).name) · \(course.likesCount(liked: progressManager.isLiked(course.id)).compactCount) \(languageManager.text("common.likes"))")
-                                .font(DS.sans(.caption))
-                                .foregroundStyle(DS.inkSecondary)
-                                .lineLimit(1)
+    private func toggleFollow(_ author: CourseAuthor) {
+        let following = progressManager.isFollowing(author.slug)
+        progressManager.toggleFollow(author.slug)
+        AnalyticsService.shared.log(following ? .unfollow : .follow, screen: "explore", props: ["creator": .string(author.slug)])
+    }
+
+    // MARK: - On cherche beaucoup cette semaine
+
+    /// Six cours au titre court, tirés une fois par semaine (graine = semaine ISO) parmi ceux
+    /// que le lecteur n'a pas encore lus. Ils tiennent lieu de « tendances » jusqu'à ce que le
+    /// serveur compte les vraies recherches.
+    private var trendingCourses: [Course] {
+        let calendar = Calendar(identifier: .iso8601)
+        let now = Date()
+        let seed = "\(calendar.component(.yearForWeekOfYear, from: now))-\(calendar.component(.weekOfYear, from: now))"
+        return Array(
+            ContentCatalog.activeCourses
+                .filter { $0.title.withoutInlineMarkup.count <= 22 && progressManager.courseStatus(for: $0.id) != .completed }
+                .sorted { LocalCounters.hash("\(seed)|\($0.id)") < LocalCounters.hash("\(seed)|\($1.id)") }
+                .prefix(6)
+        )
+    }
+
+    /// Le cours de la tendance choisie, puis deux voisins de la même sous-catégorie.
+    private func trendResults(for course: Course) -> [Course] {
+        let neighbours = ContentCatalog.activeCourses
+            .filter { $0.id != course.id && $0.subcategory == course.subcategory }
+            .sorted { $0.readsCount > $1.readsCount }
+            .prefix(2)
+        return [course] + neighbours
+    }
+
+    @ViewBuilder
+    private var trendingSection: some View {
+        let trends = trendingCourses
+        if !trends.isEmpty {
+            VStack(alignment: .leading, spacing: 10) {
+                Text(languageManager.text("explore.trending"))
+                    .font(DS.sans(.footnote, .bold))
+                    .foregroundStyle(DS.inkSecondary)
+                    .padding(.horizontal, 20)
+
+                ScrollView(.horizontal) {
+                    HStack(spacing: 8) {
+                        ForEach(trends) { course in
+                            let selected = selectedTrend == course.id
+                            Button {
+                                UISelectionFeedbackGenerator().selectionChanged()
+                                withAnimation(.spring(response: 0.3, dampingFraction: 0.85)) {
+                                    selectedTrend = selected ? nil : course.id
+                                }
+                            } label: {
+                                HStack(spacing: 6) {
+                                    Image(systemName: "chart.line.uptrend.xyaxis")
+                                        .font(.system(size: 12, weight: .bold))
+                                    Text(course.title.withoutInlineMarkup)
+                                        .font(DS.sans(.subheadline, .bold))
+                                        .lineLimit(1)
+                                }
+                                .foregroundStyle(selected ? .white : DS.ink)
+                                .padding(.horizontal, 14)
+                                .frame(height: 38)
+                                .background(Capsule().fill(selected ? DS.accent : DS.surface))
+                                .overlay(Capsule().strokeBorder(selected ? DS.accent : DS.hairline, lineWidth: 1))
+                            }
+                            .buttonStyle(.plain)
                         }
-                        Spacer(minLength: 0)
                     }
-                    .padding(10)
-                    .background(RoundedRectangle(cornerRadius: 18, style: .continuous).fill(DS.surface))
-                    .overlay(RoundedRectangle(cornerRadius: 18, style: .continuous).strokeBorder(DS.hairline, lineWidth: 1))
-                    .contentShape(Rectangle())
+                    .padding(.horizontal, 20)
                 }
-                .buttonStyle(.plain)
+                .scrollIndicators(.hidden)
+
+                if let selectedTrend, let course = trends.first(where: { $0.id == selectedTrend }) {
+                    VStack(spacing: 8) {
+                        ForEach(trendResults(for: course)) { result in
+                            courseRow(result)
+                        }
+                    }
+                    .padding(.horizontal, 20)
+                    .padding(.top, 4)
+                    .transition(.opacity.combined(with: .move(edge: .top)))
+                }
             }
         }
     }
 
-    private var subjectsSection: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            NewGenSectionTitle(text: languageManager.text("explore.subjects"))
-            LazyVGrid(columns: [GridItem(.flexible(), spacing: 12), GridItem(.flexible(), spacing: 12)], spacing: 12) {
-                ForEach(Subject.allCases, id: \.self) { subject in
-                    let count = ContentCatalog.activeCourses.filter { $0.subject == subject }.count
+    // MARK: - Univers
+
+    /// Une sous-catégorie du catalogue, avec la couverture de son cours le plus lu.
+    private struct Universe: Identifiable {
+        let name: String
+        let courses: [Course]
+        let cover: Course
+        var id: String { name }
+    }
+
+    /// Les six plus grandes sous-catégories de la langue courante.
+    private var universes: [Universe] {
+        let groups = Dictionary(grouping: ContentCatalog.activeCourses.filter { !$0.subcategory.isEmpty }, by: \.subcategory)
+        return Array(
+            groups.compactMap { name, courses -> Universe? in
+                guard let cover = courses.max(by: { $0.readsCount < $1.readsCount }) else { return nil }
+                return Universe(name: name, courses: courses, cover: cover)
+            }
+            .sorted { lhs, rhs in
+                lhs.courses.count != rhs.courses.count ? lhs.courses.count > rhs.courses.count : lhs.name < rhs.name
+            }
+            .prefix(6)
+        )
+    }
+
+    private var universesSection: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            NewGenSectionTitle(text: languageManager.text("explore.universes"))
+            LazyVGrid(columns: [GridItem(.flexible(), spacing: 10), GridItem(.flexible(), spacing: 10)], spacing: 10) {
+                ForEach(universes) { universe in
                     Button {
                         UIImpactFeedbackGenerator(style: .light).impactOccurred()
-                        onOpenSubject(subject)
+                        onOpenUniverse(universe.name)
                     } label: {
-                        VStack(alignment: .leading, spacing: 10) {
-                            Circle().fill(subject.color).frame(width: 12, height: 12)
-                            Text(subject.localizedShortName(language: language))
-                                .font(DS.title(.headline, .heavy))
-                                .foregroundStyle(DS.ink)
-                                .lineLimit(2)
-                                .multilineTextAlignment(.leading)
-                            Text(String(format: languageManager.text("subject.courses.count"), count))
-                                .font(DS.sans(.footnote))
-                                .foregroundStyle(DS.inkSecondary)
-                        }
-                        .padding(16)
-                        .frame(maxWidth: .infinity, minHeight: 112, alignment: .topLeading)
-                        .background(RoundedRectangle(cornerRadius: 18, style: .continuous).fill(DS.surface))
-                        .overlay(RoundedRectangle(cornerRadius: 18, style: .continuous).strokeBorder(DS.hairline, lineWidth: 1))
-                        .contentShape(Rectangle())
+                        universeTile(universe)
                     }
                     .buttonStyle(.plain)
                 }
             }
         }
+    }
+
+    private func universeTile(_ universe: Universe) -> some View {
+        ZStack(alignment: .bottomLeading) {
+            CourseCover(course: universe.cover, cornerRadius: 0)
+            VStack(alignment: .leading, spacing: 1) {
+                Text(universe.name)
+                    .font(DS.sans(.subheadline, .heavy))
+                    .foregroundStyle(.white)
+                    .lineLimit(2)
+                    .multilineTextAlignment(.leading)
+                Text(String(format: languageManager.text("subject.courses.count"), universe.courses.count))
+                    .font(DS.sans(.caption))
+                    .foregroundStyle(.white.opacity(0.88))
+            }
+            .padding(.horizontal, 12)
+            .padding(.vertical, 10)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .background(Color(red: 0.043, green: 0.07, blue: 0.125).opacity(0.62))
+        }
+        .frame(height: 128)
+        .frame(maxWidth: .infinity)
+        .background(DS.surfaceMuted)
+        .clipShape(RoundedRectangle(cornerRadius: 18, style: .continuous))
+        .contentShape(Rectangle())
+        .accessibilityElement(children: .combine)
+    }
+
+    // MARK: - Créateurs à suivre
+
+    private var discoverableAuthors: [CourseAuthor] {
+        AuthorStore.all.sorted { LocalCounters.followers(creatorSlug: $0.slug) > LocalCounters.followers(creatorSlug: $1.slug) }
+    }
+
+    private var creatorsCarousel: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            NewGenSectionTitle(text: languageManager.text("explore.creatorsToFollow"))
+                .padding(.horizontal, 20)
+            ScrollView(.horizontal) {
+                HStack(alignment: .top, spacing: 10) {
+                    ForEach(discoverableAuthors.prefix(8)) { author in
+                        creatorCard(author)
+                    }
+                }
+                .padding(.horizontal, 20)
+                .padding(.bottom, 8)
+            }
+            .scrollIndicators(.hidden)
+        }
+    }
+
+    /// La carte verticale de la maquette : avatar, nom, pedigree sur deux lignes, abonnés, Suivre.
+    private func creatorCard(_ author: CourseAuthor) -> some View {
+        let following = progressManager.isFollowing(author.slug)
+        return VStack(spacing: 6) {
+            Button { onOpenCreator(author) } label: {
+                VStack(spacing: 6) {
+                    AuthorAvatarView(author: author, size: 60)
+                    HStack(spacing: 4) {
+                        Text(author.name)
+                            .font(DS.sans(.subheadline, .heavy))
+                            .foregroundStyle(DS.ink)
+                            .lineLimit(1)
+                            .minimumScaleFactor(0.85)
+                        if author.isVerified { VerifiedCheck(size: 12) }
+                    }
+                    Text(author.title(for: language) ?? "")
+                        .font(DS.sans(.caption))
+                        .foregroundStyle(DS.inkSecondary)
+                        .multilineTextAlignment(.center)
+                        .lineLimit(2)
+                        .frame(height: 32, alignment: .top)
+                    Text(followersLabel(author, following: following))
+                        .font(DS.sans(.caption, .bold))
+                        .foregroundStyle(DS.inkSecondary)
+                        .lineLimit(1)
+                }
+                .contentShape(Rectangle())
+            }
+            .buttonStyle(.plain)
+            FollowButton(isFollowing: following, compact: true) { toggleFollow(author) }
+                .frame(maxWidth: .infinity)
+                .padding(.top, 4)
+        }
+        .padding(14)
+        .frame(width: 156)
+        .background(RoundedRectangle(cornerRadius: 18, style: .continuous).fill(DS.surface))
+        .overlay(RoundedRectangle(cornerRadius: 18, style: .continuous).strokeBorder(DS.hairline, lineWidth: 1))
+        .dsSoftShadow()
+    }
+}
+
+/// Les cours d'un univers (une sous-catégorie), ouverts depuis la grille de l'onglet Explorer.
+struct UniverseCoursesView: View {
+    @Environment(LanguageManager.self) private var languageManager
+    @Environment(\.dismiss) private var dismiss
+    let subcategory: String
+    let progressManager: ProgressManager
+    let onOpenCourse: (Course) -> Void
+
+    private var courses: [Course] {
+        ContentCatalog.activeCourses
+            .filter { $0.subcategory == subcategory }
+            .sorted { $0.readsCount > $1.readsCount }
+    }
+
+    var body: some View {
+        ScrollView {
+            VStack(alignment: .leading, spacing: 12) {
+                HStack(spacing: 12) {
+                    RoundIconButton(systemImage: "chevron.left", accessibilityLabel: languageManager.text("common.close")) { dismiss() }
+                    Text("\(subcategory) · \(courses.count)")
+                        .font(DS.title(.title2, .heavy))
+                        .foregroundStyle(DS.ink)
+                        .lineLimit(2)
+                    Spacer()
+                }
+                .padding(.bottom, 8)
+                ForEach(courses) { course in
+                    CompactCourseRow(
+                        course: course,
+                        meta: "\(CreatorIdentity.forCourse(course.id).name) · \(NewGenFormat.minutes(ReadingTime.minutes(for: course, language: languageManager.current), language: languageManager.current))",
+                        onTap: { onOpenCourse(course) }
+                    ) {
+                        if progressManager.courseStatus(for: course.id) == .completed { ReadCheck() }
+                    }
+                }
+            }
+            .padding(20)
+            .padding(.bottom, 24)
+        }
+        .scrollIndicators(.hidden)
+        .background(DS.canvas.ignoresSafeArea())
     }
 }
 
