@@ -228,7 +228,7 @@ def escape_inner_quotes(text: str) -> str:
                 k = j + 1
                 while k < n and text[k] in " \t\r\n":
                     k += 1
-                closing = k >= n or text[k] in '"{[' or text[k].isdigit() or text.startswith(("true", "false", "null"), k)
+                closing = k >= n or text[k] in '"{[}]' or text[k].isdigit() or text.startswith(("true", "false", "null"), k)
             if closing:
                 in_string = False
                 out.append(c)
