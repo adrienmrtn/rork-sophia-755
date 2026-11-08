@@ -253,8 +253,10 @@ class Sources:
             slugs.append(hero)
         for section in course.get("sections", []):
             for block in section.get("blocks", []):
-                if block.get("type") == "image" and block.get("image"):
-                    slugs.append(block["image"])
+                # Les blocs image nomment leur objet dans `asset` (format V2) ; `image` est l'ancien nom.
+                slug = block.get("asset") or block.get("image") if block.get("type") == "image" else None
+                if slug:
+                    slugs.append(slug)
         seen: set[str] = set()
         return [s for s in slugs if not (s in seen or seen.add(s))]
 
