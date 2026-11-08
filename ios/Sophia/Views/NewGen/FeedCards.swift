@@ -7,6 +7,8 @@ enum FeedItem: Identifiable, Equatable {
     case campaign(Campaign)
     case creatorInvite
     case video(id: String)
+    /// Une page de texte quand il n'y a rien à montrer (aucun abonnement, tout est lu…).
+    case notice(FeedNotice)
 
     var id: String {
         switch self {
@@ -14,13 +16,21 @@ enum FeedItem: Identifiable, Equatable {
         case .campaign(let campaign): "campaign:\(campaign.slug)"
         case .creatorInvite: "creator-invite"
         case .video(let id): "video:\(id)"
+        case .notice(let notice): "notice:\(notice.rawValue)"
         }
     }
 
-    var courseId: String? {
-        if case .course(let course) = self { return course.id }
+    /// Le cours derrière la page, s'il y en a un.
+    var asCourse: Course? {
+        if case .course(let course) = self { return course }
         return nil
     }
+
+    var courseId: String? { asCourse?.id }
+}
+
+enum FeedNotice: String, Equatable {
+    case followingEmpty, followingUpToDate, allCaughtUp
 }
 
 // MARK: - Carte cours
@@ -38,10 +48,16 @@ struct CourseFeedCard: View {
     var kicker: String? = nil
     /// Écran rapporté dans les événements `like` / `save`.
     var screen: String = "home"
+    /// Dans le fil paginé, la carte remplit sa page : les compteurs descendent en bas.
+    var fillsPage = false
+    /// Hauteur imposée à la couverture (fil paginé) ; sinon 16:9.
+    var coverHeight: CGFloat? = nil
     let onOpen: () -> Void
     let onOpenCreator: (CourseAuthor) -> Void
 
     @State private var minutes: Int?
+    @State private var likeBurst = 0
+    @State private var bigHeart = 0
 
     private var identity: CreatorIdentity { CreatorIdentity.forCourse(course.id) }
     private var liked: Bool { progressManager.isLiked(course.id) }
@@ -54,8 +70,13 @@ struct CourseFeedCard: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
-            Color.clear
-                .aspectRatio(16 / 9, contentMode: .fit)
+            Group {
+                if let coverHeight {
+                    Color.clear.frame(height: coverHeight)
+                } else {
+                    Color.clear.aspectRatio(16 / 9, contentMode: .fit)
+                }
+            }
                 .overlay { CourseCover(course: course, cornerRadius: 0) }
                 .overlay(alignment: .topLeading) {
                     HStack(spacing: 6) {
@@ -87,25 +108,52 @@ struct CourseFeedCard: View {
                 CreatorLine(identity: identity, onTap: identity.author.map { author in { onOpenCreator(author) } })
                     .padding(.top, 2)
 
+                if fillsPage { Spacer(minLength: 0) }
+
                 Rectangle().fill(DS.hairline).frame(height: 1)
 
                 statsRow
             }
             .padding(16)
+            .frame(maxHeight: fillsPage ? .infinity : nil, alignment: .top)
         }
+        .frame(maxHeight: fillsPage ? .infinity : nil, alignment: .top)
         .background(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous).fill(DS.surface))
         .clipShape(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
         .overlay(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous).strokeBorder(DS.hairline, lineWidth: 1))
+        .overlay { BigHeartOverlay(trigger: bigHeart) }
         .dsSoftShadow()
         .contentShape(Rectangle())
-        .onTapGesture {
-            UIImpactFeedbackGenerator(style: .light).impactOccurred()
-            onOpen()
-        }
+        // Un tap ouvre le cours, deux taps l'aiment (le simple tap attend donc un instant,
+        // le temps de savoir s'il est doublé).
+        .gesture(
+            TapGesture(count: 2)
+                .onEnded { toggleLike(fromDoubleTap: true) }
+                .exclusively(before: TapGesture().onEnded {
+                    UIImpactFeedbackGenerator(style: .light).impactOccurred()
+                    onOpen()
+                })
+        )
         .task(id: course.id) {
             minutes = ReadingTime.minutes(for: course, language: languageManager.current)
         }
         .accessibilityElement(children: .contain)
+    }
+
+    /// Le cœur : au bouton, il bascule ; au double-tap, il n'allume jamais vers l'éteint (comme
+    /// sur les réseaux vidéo), mais le grand cœur s'affiche quand même.
+    private func toggleLike(fromDoubleTap: Bool = false) {
+        UIImpactFeedbackGenerator(style: fromDoubleTap ? .medium : .light).impactOccurred()
+        let wasLiked = liked
+        if fromDoubleTap {
+            bigHeart += 1
+            if wasLiked { return }
+        }
+        progressManager.toggleLike(course.id)
+        if !wasLiked {
+            withAnimation(.spring(response: 0.3, dampingFraction: 0.7)) { likeBurst += 1 }
+        }
+        AnalyticsService.shared.log(wasLiked ? .unlike : .like, courseId: course.id, screen: screen)
     }
 
     private var statsRow: some View {
@@ -113,16 +161,16 @@ struct CourseFeedCard: View {
             StatChip(systemImage: "eye", text: course.readsCount.compactCount)
 
             Button {
-                UIImpactFeedbackGenerator(style: .light).impactOccurred()
-                let wasLiked = liked
-                progressManager.toggleLike(course.id)
-                AnalyticsService.shared.log(wasLiked ? .unlike : .like, courseId: course.id, screen: screen)
+                toggleLike()
             } label: {
-                StatChip(
-                    systemImage: liked ? "heart.fill" : "heart",
-                    text: course.likesCount(liked: liked).compactCount,
-                    tint: liked ? Color(red: 0.93, green: 0.35, blue: 0.45) : DS.inkSecondary
-                )
+                HStack(spacing: 5) {
+                    LikeHeartIcon(liked: liked, burst: likeBurst)
+                    Text(course.likesCount(liked: liked).compactCount)
+                        .font(DS.sans(.footnote, .semibold))
+                        .foregroundStyle(liked ? DS.liked : DS.inkSecondary)
+                        .monospacedDigit()
+                        .contentTransition(.numericText())
+                }
                 .padding(.vertical, 6)
                 .contentShape(Rectangle())
             }
@@ -161,6 +209,8 @@ struct EventFeedCard: View {
     @Environment(LanguageManager.self) private var languageManager
     let campaign: Campaign
     let progressManager: ProgressManager
+    /// Dans le fil paginé, la carte remplit sa page.
+    var fillsPage = false
     let onOpen: () -> Void
 
     private var courses: [Course] {
@@ -228,6 +278,8 @@ struct EventFeedCard: View {
                     .fixedSize()
             }
 
+            if fillsPage { Spacer(minLength: 0) }
+
             HStack(spacing: 4) {
                 Text(AppLocalizable.string("event.card.seeCollection", language: language))
                     .font(DS.sans(.subheadline, .bold))
@@ -238,6 +290,7 @@ struct EventFeedCard: View {
         }
         .padding(20)
         .frame(maxWidth: .infinity, alignment: .leading)
+        .frame(maxHeight: fillsPage ? .infinity : nil, alignment: .top)
         .background(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous).fill(DS.accent))
         .dsSoftShadow()
         .contentShape(Rectangle())
@@ -256,6 +309,8 @@ struct EventFeedCard: View {
 /// présents, la promesse en une phrase, trois atouts, et deux boutons.
 struct CreatorInviteCard: View {
     @Environment(LanguageManager.self) private var languageManager
+    /// Dans le fil paginé, la carte remplit sa page.
+    var fillsPage = false
     let onBecomeCreator: () -> Void
     let onLater: () -> Void
 
@@ -295,6 +350,8 @@ struct CreatorInviteCard: View {
                 perk("chart.bar", AppLocalizable.string("creator.invite.perk.paid", language: language))
             }
 
+            if fillsPage { Spacer(minLength: 0) }
+
             HStack(spacing: 10) {
                 Button {
                     UIImpactFeedbackGenerator(style: .light).impactOccurred()
@@ -326,6 +383,7 @@ struct CreatorInviteCard: View {
         }
         .padding(20)
         .frame(maxWidth: .infinity, alignment: .leading)
+        .frame(maxHeight: fillsPage ? .infinity : nil, alignment: .top)
         .background(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous).fill(DS.surface))
         .overlay(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous).strokeBorder(DS.hairline, lineWidth: 1))
         .dsSoftShadow()
@@ -373,6 +431,6 @@ struct VideoFeedCard: View {
                 .foregroundStyle(.white)
                 .padding(20)
         }
-        .frame(height: 420)
+        .frame(maxHeight: .infinity)
     }
 }

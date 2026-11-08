@@ -208,6 +208,8 @@ fun CourseScreen(
             } else {
                 null
             },
+            progress = progressSnapshot,
+            progressManager = progressManager,
             onClose = onDismiss,
             onQuiz = {
                 showCompleted = false

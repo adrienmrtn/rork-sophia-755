@@ -3,6 +3,7 @@ package app.rork.sophia.ui.course
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.spring
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -17,6 +18,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material3.Button
@@ -28,6 +30,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
@@ -41,14 +44,22 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import app.rork.sophia.data.ProgressManager
 import app.rork.sophia.data.StringStore
+import app.rork.sophia.data.analytics.Analytics
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.Course
+import app.rork.sophia.domain.UserProgress
 import app.rork.sophia.ui.components.AnimatedRewardBadge
 import app.rork.sophia.ui.components.RewardBadgeKind
 import app.rork.sophia.ui.components.CourseImage
+import app.rork.sophia.ui.components.softPress
+import app.rork.sophia.ui.newgen.CreatorIdentity
+import app.rork.sophia.ui.newgen.LikeHeartIcon
+import app.rork.sophia.ui.newgen.LikedTint
 import app.rork.sophia.ui.onboarding.readableWidth
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
@@ -69,6 +80,9 @@ fun CourseCompletedScreen(
     showQuizCta: Boolean,
     quizLocked: Boolean,
     freemiumNote: String? = null,
+    /** Quand ils sont fournis, la rangée « Aimer ce cours · Suivre le créateur » apparaît sous la carte XP. */
+    progress: UserProgress? = null,
+    progressManager: ProgressManager? = null,
     onClose: () -> Unit,
     onQuiz: () -> Unit,
 ) {
@@ -165,6 +179,10 @@ fun CourseCompletedScreen(
                 style = SophiaTypography.labelMedium,
             )
         }
+        if (progress != null && progressManager != null) {
+            Spacer(Modifier.height(12.dp))
+            CourseEndSocialRow(course = course, language = language, progress = progress, progressManager = progressManager)
+        }
         if (freemiumNote != null) {
             Spacer(Modifier.height(14.dp))
             Row(
@@ -224,6 +242,95 @@ fun CourseCompletedScreen(
                         fontSize = 16.sp,
                     )
                 }
+            }
+        }
+    }
+}
+
+/**
+ * Deux gestes à chaud, juste après la lecture : le cœur sur le cours, et l'abonnement au
+ * créateur. Rapportés avec l'écran `course_end`, comme sur iOS.
+ */
+@Composable
+private fun CourseEndSocialRow(
+    course: Course,
+    language: AppLanguage,
+    progress: UserProgress,
+    progressManager: ProgressManager,
+) {
+    val context = LocalContext.current
+    val author = remember(course.id) { CreatorIdentity.forCourse(context.applicationContext, course.id).author }
+    val liked = course.id in progress.likedCourseIds
+    var likeBurst by remember(course.id) { mutableIntStateOf(0) }
+    val shape = RoundedCornerShape(14.dp)
+
+    Row(
+        modifier = Modifier.fillMaxWidth(),
+        horizontalArrangement = Arrangement.spacedBy(10.dp),
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        Row(
+            modifier = Modifier
+                .weight(1f)
+                .height(48.dp)
+                .softPress(onClick = {
+                    val wasLiked = progressManager.isLiked(course.id)
+                    progressManager.toggleLike(course.id)
+                    if (!wasLiked) likeBurst++
+                    Analytics.log(if (wasLiked) "unlike" else "like", courseId = course.id, screen = "course_end")
+                })
+                .clip(shape)
+                .background(if (liked) LikedTint.copy(alpha = 0.1f) else DS.surface)
+                .border(1.dp, if (liked) LikedTint.copy(alpha = 0.45f) else DS.hairline, shape)
+                .padding(horizontal = 14.dp),
+            horizontalArrangement = Arrangement.spacedBy(8.dp, Alignment.CenterHorizontally),
+            verticalAlignment = Alignment.CenterVertically,
+        ) {
+            LikeHeartIcon(liked = liked, burst = likeBurst, size = 16.dp, idleTint = DS.ink)
+            Text(
+                text = StringStore.text(context, if (liked) "course.end.liked" else "course.end.like", language),
+                fontFamily = PlusJakartaSans,
+                fontWeight = FontWeight.Bold,
+                fontSize = 15.sp,
+                color = if (liked) LikedTint else DS.ink,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
+            )
+        }
+
+        if (author != null) {
+            val following = author.slug in progress.followedCreatorSlugs
+            val firstName = author.name.split(" ").firstOrNull()?.takeIf { it.isNotBlank() } ?: author.name
+            Row(
+                modifier = Modifier
+                    .weight(1f)
+                    .height(48.dp)
+                    .softPress(onClick = {
+                        val wasFollowing = progressManager.isFollowing(author.slug)
+                        progressManager.toggleFollow(author.slug)
+                        Analytics.log(if (wasFollowing) "unfollow" else "follow", screen = "course_end", props = mapOf("creator" to author.slug))
+                    })
+                    .clip(shape)
+                    .background(if (following) DS.surface else DS.accent)
+                    .then(if (following) Modifier.border(1.dp, DS.hairline, shape) else Modifier)
+                    .padding(horizontal = 14.dp),
+                horizontalArrangement = Arrangement.spacedBy(8.dp, Alignment.CenterHorizontally),
+                verticalAlignment = Alignment.CenterVertically,
+            ) {
+                AuthorAvatar(author = author, size = 24.dp)
+                Text(
+                    text = if (following) {
+                        StringStore.text(context, "creator.following", language)
+                    } else {
+                        StringStore.text(context, "course.end.follow", language, firstName)
+                    },
+                    fontFamily = PlusJakartaSans,
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 15.sp,
+                    color = if (following) DS.ink else Color.White,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
+                )
             }
         }
     }

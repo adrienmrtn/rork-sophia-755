@@ -1,13 +1,20 @@
 package app.rork.sophia.ui.newgen
 
+import androidx.compose.animation.core.animateFloatAsState
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.combinedClickable
+import androidx.compose.foundation.interaction.MutableInteractionSource
+import androidx.compose.foundation.interaction.collectIsPressedAsState
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.aspectRatio
+import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.offset
@@ -21,8 +28,6 @@ import androidx.compose.material.icons.filled.BarChart
 import androidx.compose.material.icons.filled.Bookmark
 import androidx.compose.material.icons.filled.BookmarkBorder
 import androidx.compose.material.icons.filled.Edit
-import androidx.compose.material.icons.filled.Favorite
-import androidx.compose.material.icons.filled.FavoriteBorder
 import androidx.compose.material.icons.filled.Language
 import androidx.compose.material.icons.filled.Schedule
 import androidx.compose.material.icons.filled.Visibility
@@ -30,15 +35,21 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import app.rork.sophia.data.CampaignStore
@@ -70,9 +81,13 @@ sealed class FeedItem(val id: String) {
     data class CampaignCard(val campaign: Campaign) : FeedItem("campaign:${campaign.slug}")
     data object CreatorInvite : FeedItem("creator-invite")
     data class Video(val videoId: String) : FeedItem("video:$videoId")
+    /** Une page de texte quand il n'y a rien à montrer (aucun abonnement, tout est lu…). */
+    data class Notice(val notice: FeedNotice) : FeedItem("notice:${notice.name}")
 
     val courseId: String? get() = (this as? CourseCard)?.course?.id
 }
+
+enum class FeedNotice { FOLLOWING_EMPTY, FOLLOWING_UP_TO_DATE, ALL_CAUGHT_UP }
 
 /** Rose des cœurs allumés, comme sur iOS. */
 internal val LikedTint = Color(0xFFED5973)
@@ -83,6 +98,7 @@ internal val LikedTint = Color(0xFFED5973)
  * La carte de cours de la maquette : couverture 16:9 avec la pastille de matière, titre,
  * accroche, ligne créateur, puis lectures · j'aime · enregistrer · durée.
  */
+@OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun CourseFeedCard(
     course: CourseSummary,
@@ -99,6 +115,10 @@ fun CourseFeedCard(
     kicker: String? = null,
     /** Écran rapporté dans les événements `like` / `save`. */
     screen: String = "home",
+    /** Dans le fil paginé, la carte remplit sa page : les compteurs descendent en bas. */
+    fillsPage: Boolean = false,
+    /** Hauteur imposée à la couverture (fil paginé) ; sinon 16:9. */
+    coverHeight: Dp? = null,
 ) {
     val context = LocalContext.current
     val identity = remember(course.id) { CreatorIdentity.forCourse(context.applicationContext, course.id) }
@@ -106,15 +126,54 @@ fun CourseFeedCard(
     val liked = course.id in progress.likedCourseIds
     val saved = course.id in progress.favoriteCourseIds
     val hook = info?.hook ?: stripInlineMarkup(course.description)
+    val haptics = LocalHapticFeedback.current
+    var likeBurst by remember(course.id) { mutableIntStateOf(0) }
+    var bigHeart by remember(course.id) { mutableIntStateOf(0) }
 
-    Column(
+    // Le cœur : au bouton, il bascule ; au double-tap, il n'éteint jamais (comme sur les
+    // réseaux vidéo), mais le grand cœur s'affiche quand même.
+    fun toggleLike(fromDoubleTap: Boolean) {
+        haptics.performHapticFeedback(if (fromDoubleTap) HapticFeedbackType.LongPress else HapticFeedbackType.TextHandleMove)
+        val wasLiked = progressManager.isLiked(course.id)
+        if (fromDoubleTap) {
+            bigHeart++
+            if (wasLiked) return
+        }
+        progressManager.toggleLike(course.id)
+        if (!wasLiked) likeBurst++
+        Analytics.log(if (wasLiked) "unlike" else "like", courseId = course.id, screen = screen)
+    }
+
+    // Un tap ouvre le cours, deux taps l'aiment (le simple tap attend donc un instant, le
+    // temps de savoir s'il est doublé). Même enfoncement doux que `softPress`.
+    val interaction = remember { MutableInteractionSource() }
+    val pressed by interaction.collectIsPressedAsState()
+    val pressScale by animateFloatAsState(targetValue = if (pressed) 0.98f else 1f, label = "feedCardPress")
+
+    Box(
         modifier = modifier
             .fillMaxWidth()
-            .softPress(onClick = onOpen)
+            .then(if (fillsPage) Modifier.fillMaxHeight() else Modifier)
+            .graphicsLayer {
+                scaleX = pressScale
+                scaleY = pressScale
+            }
+            .combinedClickable(
+                interactionSource = interaction,
+                indication = null,
+                onClick = onOpen,
+                onDoubleClick = { toggleLike(fromDoubleTap = true) },
+            )
             .sophiaCard(),
     ) {
-        Box(modifier = Modifier.fillMaxWidth().aspectRatio(16f / 9f)) {
-            CourseCover(courseId = course.id, modifier = Modifier.fillMaxWidth().aspectRatio(16f / 9f), cornerRadius = 0.dp, letterSize = 42.sp)
+    Column(modifier = Modifier.fillMaxWidth().then(if (fillsPage) Modifier.fillMaxHeight() else Modifier)) {
+        val coverModifier = if (coverHeight != null) {
+            Modifier.fillMaxWidth().height(coverHeight)
+        } else {
+            Modifier.fillMaxWidth().aspectRatio(16f / 9f)
+        }
+        Box(modifier = coverModifier) {
+            CourseCover(courseId = course.id, modifier = Modifier.fillMaxSize(), cornerRadius = 0.dp, letterSize = 42.sp)
             Row(
                 modifier = Modifier.padding(12.dp),
                 horizontalArrangement = Arrangement.spacedBy(6.dp),
@@ -124,7 +183,7 @@ fun CourseFeedCard(
             }
         }
         Column(
-            modifier = Modifier.padding(16.dp),
+            modifier = Modifier.padding(16.dp).then(if (fillsPage) Modifier.weight(1f) else Modifier),
             verticalArrangement = Arrangement.spacedBy(10.dp),
         ) {
             if (kicker != null) {
@@ -161,6 +220,7 @@ fun CourseFeedCard(
                 modifier = Modifier.padding(top = 2.dp),
                 onTap = identity.author?.let { author -> { onOpenCreator(author) } },
             )
+            if (fillsPage) Spacer(Modifier.weight(1f))
             Box(modifier = Modifier.fillMaxWidth().height(1.dp).background(DS.hairline))
             Row(
                 modifier = Modifier.fillMaxWidth(),
@@ -168,18 +228,22 @@ fun CourseFeedCard(
                 horizontalArrangement = Arrangement.spacedBy(18.dp),
             ) {
                 StatChip(icon = Icons.Filled.Visibility, text = course.readsCount.compactCount(language))
-                StatChip(
-                    icon = if (liked) Icons.Filled.Favorite else Icons.Filled.FavoriteBorder,
-                    text = LocalCounters.likesCount(course.id, liked).compactCount(language),
-                    tint = if (liked) LikedTint else DS.inkSecondary,
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.spacedBy(5.dp),
                     modifier = Modifier
-                        .softPress(onClick = {
-                            val wasLiked = progressManager.isLiked(course.id)
-                            progressManager.toggleLike(course.id)
-                            Analytics.log(if (wasLiked) "unlike" else "like", courseId = course.id, screen = screen)
-                        })
+                        .softPress(onClick = { toggleLike(fromDoubleTap = false) })
                         .padding(vertical = 6.dp),
-                )
+                ) {
+                    LikeHeartIcon(liked = liked, burst = likeBurst, size = 15.dp)
+                    Text(
+                        text = LocalCounters.likesCount(course.id, liked).compactCount(language),
+                        fontFamily = PlusJakartaSans,
+                        fontWeight = FontWeight.SemiBold,
+                        fontSize = 13.sp,
+                        color = if (liked) LikedTint else DS.inkSecondary,
+                    )
+                }
                 Icon(
                     imageVector = if (saved) Icons.Filled.Bookmark else Icons.Filled.BookmarkBorder,
                     contentDescription = StringStore.text(context, if (saved) "common.unsave" else "common.save", language),
@@ -203,6 +267,8 @@ fun CourseFeedCard(
             }
         }
     }
+    BigHeartOverlay(trigger = bigHeart, modifier = Modifier.align(Alignment.Center))
+    }
 }
 
 // MARK: - Carte événement
@@ -215,6 +281,8 @@ fun EventFeedCard(
     progress: UserProgress,
     onOpen: () -> Unit,
     modifier: Modifier = Modifier,
+    /** Dans le fil paginé, la carte remplit sa page. */
+    fillsPage: Boolean = false,
 ) {
     val context = LocalContext.current
     val done = CampaignStore.challengeProgress(campaign, progress)
@@ -222,6 +290,7 @@ fun EventFeedCard(
     Column(
         modifier = modifier
             .fillMaxWidth()
+            .then(if (fillsPage) Modifier.fillMaxHeight() else Modifier)
             .softPress(onClick = onOpen)
             .sophiaCard(fill = DS.accent, border = false)
             .padding(20.dp),
@@ -307,6 +376,7 @@ fun EventFeedCard(
                 maxLines = 1,
             )
         }
+        if (fillsPage) Spacer(Modifier.weight(1f))
         Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(4.dp)) {
             Text(
                 text = StringStore.text(context, "event.card.seeCollection", language),
@@ -338,12 +408,15 @@ fun CreatorInviteCard(
     onBecomeCreator: () -> Unit,
     onLater: () -> Unit,
     modifier: Modifier = Modifier,
+    /** Dans le fil paginé, la carte remplit sa page. */
+    fillsPage: Boolean = false,
 ) {
     val context = LocalContext.current
     val languagesCount = AppLanguage.entries.size
     Column(
         modifier = modifier
             .fillMaxWidth()
+            .then(if (fillsPage) Modifier.fillMaxHeight() else Modifier)
             .sophiaCard()
             .padding(20.dp),
         verticalArrangement = Arrangement.spacedBy(14.dp),
@@ -397,6 +470,7 @@ fun CreatorInviteCard(
             }
             InvitePerk(Icons.Filled.BarChart, StringStore.text(context, "creator.invite.perk.paid", language))
         }
+        if (fillsPage) Spacer(Modifier.weight(1f))
         Row(horizontalArrangement = Arrangement.spacedBy(10.dp), verticalAlignment = Alignment.CenterVertically) {
             NewGenPrimaryButton(
                 text = StringStore.text(context, "creator.invite.cta", language),
@@ -442,11 +516,11 @@ private fun InvitePerk(icon: ImageVector, text: String) {
  * montrée, elle fixe seulement la place et le gabarit (prompt 10).
  */
 @Composable
-fun VideoFeedCard(title: String, modifier: Modifier = Modifier) {
+fun VideoFeedCard(title: String, modifier: Modifier = Modifier, fillsPage: Boolean = false) {
     Box(
         modifier = modifier
             .fillMaxWidth()
-            .height(420.dp)
+            .then(if (fillsPage) Modifier.fillMaxHeight() else Modifier.height(420.dp))
             .clip(DS.cardShape)
             .background(DS.ink),
         contentAlignment = Alignment.BottomStart,

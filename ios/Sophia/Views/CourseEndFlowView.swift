@@ -39,6 +39,7 @@ struct CourseCompletedView: View {
     @State private var barFill: CGFloat = 0
     @State private var cachedThumb: UIImage?
     @State private var barFillStarted: Bool = false
+    @State private var likeBurst: Int = 0
 
     private enum EndFlowPhaseStep {
         case celebration, progression, actions
@@ -113,6 +114,13 @@ struct CourseCompletedView: View {
                                 progressionCard
                                     .padding(.horizontal, 20)
                                     .padding(.top, 22)
+                                    .opacity(showCard ? 1 : 0)
+                                    .offset(y: showCard ? 0 : 16)
+                                    .transition(.opacity.combined(with: .offset(y: 16)))
+
+                                socialRow
+                                    .padding(.horizontal, 20)
+                                    .padding(.top, 12)
                                     .opacity(showCard ? 1 : 0)
                                     .offset(y: showCard ? 0 : 16)
                                     .transition(.opacity.combined(with: .offset(y: 16)))
@@ -336,6 +344,68 @@ struct CourseCompletedView: View {
             .background(DS.accentTint, in: Capsule())
         }
         .dsCard()
+    }
+
+    // MARK: Aimer le cours, suivre le créateur
+
+    private var author: CourseAuthor? { CreatorIdentity.forCourse(course.id).author }
+
+    /// Deux gestes à chaud, juste après la lecture : le cœur sur le cours, et l'abonnement au
+    /// créateur. Rapportés avec l'écran `course_end`.
+    private var socialRow: some View {
+        let liked = progressManager.isLiked(course.id)
+        return HStack(spacing: 10) {
+            Button {
+                UIImpactFeedbackGenerator(style: .light).impactOccurred()
+                progressManager.toggleLike(course.id)
+                if !liked { likeBurst += 1 }
+                AnalyticsService.shared.log(liked ? .unlike : .like, courseId: course.id, screen: "course_end")
+            } label: {
+                HStack(spacing: 8) {
+                    LikeHeartIcon(liked: liked, burst: likeBurst, size: 16, idleTint: DS.ink)
+                    Text(languageManager.text(liked ? "course.end.liked" : "course.end.like"))
+                        .font(DS.sans(.subheadline, .bold))
+                        .foregroundStyle(liked ? DS.liked : DS.ink)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.8)
+                }
+                .padding(.horizontal, 14)
+                .frame(maxWidth: .infinity)
+                .frame(height: 48)
+                .background(RoundedRectangle(cornerRadius: 14, style: .continuous).fill(liked ? DS.liked.opacity(0.1) : DS.surface))
+                .overlay(RoundedRectangle(cornerRadius: 14, style: .continuous).strokeBorder(liked ? DS.liked.opacity(0.45) : DS.hairline, lineWidth: 1))
+                .contentShape(Rectangle())
+            }
+            .buttonStyle(SoftPressButtonStyle())
+            .accessibilityLabel(Text(languageManager.text(liked ? "common.unlike" : "common.like")))
+
+            if let author {
+                let following = progressManager.isFollowing(author.slug)
+                let firstName = author.name.split(separator: " ").first.map(String.init) ?? author.name
+                Button {
+                    UIImpactFeedbackGenerator(style: .light).impactOccurred()
+                    progressManager.toggleFollow(author.slug)
+                    AnalyticsService.shared.log(following ? .unfollow : .follow, screen: "course_end", props: ["creator": .string(author.slug)])
+                } label: {
+                    HStack(spacing: 8) {
+                        AuthorAvatarView(author: author, size: 24)
+                        Text(following ? languageManager.text("creator.following") : String(format: languageManager.text("course.end.follow"), firstName))
+                            .font(DS.sans(.subheadline, .bold))
+                            .foregroundStyle(following ? DS.ink : .white)
+                            .lineLimit(1)
+                            .minimumScaleFactor(0.8)
+                    }
+                    .padding(.horizontal, 14)
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 48)
+                    .background(RoundedRectangle(cornerRadius: 14, style: .continuous).fill(following ? DS.surface : DS.accent))
+                    .overlay(RoundedRectangle(cornerRadius: 14, style: .continuous).strokeBorder(following ? DS.hairline : .clear, lineWidth: 1))
+                    .contentShape(Rectangle())
+                }
+                .buttonStyle(SoftPressButtonStyle())
+                .accessibilityLabel(Text(following ? languageManager.text("creator.following") : languageManager.text("creator.follow")))
+            }
+        }
     }
 
     // MARK: Freemium note

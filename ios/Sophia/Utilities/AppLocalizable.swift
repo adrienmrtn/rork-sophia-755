@@ -1279,7 +1279,7 @@ enum AppLocalizable {
         "event.write.title": "Tu veux écrire pour %@ ?",
         "event.write.body": "Propose ton cours sur sophia-culture.com. Relu par l'équipe, publié dans %d langues, et tu suis ses lectures depuis ton tableau de bord.",
         "event.write.cta": "Proposer un cours",
-        "explore.search.placeholder": "Un cours, un créateur, un sujet",
+        "explore.search.placeholder": "Pose une question, cherche un sujet",
         "explore.creators": "Créateurs à découvrir",
         "explore.topLiked": "Les plus aimés cette semaine",
         "explore.subjects": "Matières",
@@ -1315,6 +1315,12 @@ enum AppLocalizable {
         "share.course.message": "Je lis « %@ » sur Sophia, l'app de culture générale en 10 minutes par jour.",
         "share.creator.message": "Découvre les cours de %@ sur Sophia, l'app de culture générale.",
         "settings.debug.navigation": "Navigation (A/B)",
+        "explore.trending": "On cherche beaucoup cette semaine",
+        "explore.universes": "Univers",
+        "explore.creatorsToFollow": "Créateurs à suivre",
+        "course.end.like": "Aimer ce cours",
+        "course.end.liked": "Aimé",
+        "course.end.follow": "Suivre %@",
     ]
     // MARK: - English
 
@@ -2470,7 +2476,7 @@ enum AppLocalizable {
         "event.write.title": "Want to write for %@?",
         "event.write.body": "Submit your course on sophia-culture.com. Reviewed by the team, published in %d languages, and you follow its reads from your dashboard.",
         "event.write.cta": "Submit a course",
-        "explore.search.placeholder": "A course, a creator, a topic",
+        "explore.search.placeholder": "Ask a question, look up a topic",
         "explore.creators": "Creators to discover",
         "explore.topLiked": "Most liked this week",
         "explore.subjects": "Subjects",
@@ -2506,6 +2512,12 @@ enum AppLocalizable {
         "share.course.message": "I'm reading \"%@\" on Sophia, the general-knowledge app in 10 minutes a day.",
         "share.creator.message": "Discover the courses by %@ on Sophia, the general-knowledge app.",
         "settings.debug.navigation": "Navigation (A/B)",
+        "explore.trending": "Trending this week",
+        "explore.universes": "Universes",
+        "explore.creatorsToFollow": "Creators to follow",
+        "course.end.like": "Like this course",
+        "course.end.liked": "Liked",
+        "course.end.follow": "Follow %@",
     ]
     // MARK: - Spanish
 
@@ -3662,7 +3674,7 @@ enum AppLocalizable {
         "event.write.title": "¿Quieres escribir para %@?",
         "event.write.body": "Propón tu curso en sophia-culture.com. Revisado por el equipo, publicado en %d idiomas, y sigues sus lecturas desde tu panel.",
         "event.write.cta": "Proponer un curso",
-        "explore.search.placeholder": "Un curso, un creador, un tema",
+        "explore.search.placeholder": "Haz una pregunta, busca un tema",
         "explore.creators": "Creadores por descubrir",
         "explore.topLiked": "Los más gustados esta semana",
         "explore.subjects": "Materias",
@@ -3698,6 +3710,12 @@ enum AppLocalizable {
         "share.course.message": "Estoy leyendo «%@» en Sophia, la app de cultura general en 10 minutos al día.",
         "share.creator.message": "Descubre los cursos de %@ en Sophia, la app de cultura general.",
         "settings.debug.navigation": "Navegación (A/B)",
+        "explore.trending": "Lo más buscado esta semana",
+        "explore.universes": "Universos",
+        "explore.creatorsToFollow": "Creadores para seguir",
+        "course.end.like": "Me gusta este curso",
+        "course.end.liked": "Te gusta",
+        "course.end.follow": "Seguir a %@",
     ]
     // MARK: - German
 
@@ -4854,7 +4872,7 @@ enum AppLocalizable {
         "event.write.title": "Willst du für %@ schreiben?",
         "event.write.body": "Reiche deinen Kurs auf sophia-culture.com ein. Vom Team gegengelesen, in %d Sprachen veröffentlicht, und du verfolgst seine Lesungen in deinem Dashboard.",
         "event.write.cta": "Kurs einreichen",
-        "explore.search.placeholder": "Ein Kurs, ein Autor, ein Thema",
+        "explore.search.placeholder": "Stell eine Frage, such ein Thema",
         "explore.creators": "Autoren zum Entdecken",
         "explore.topLiked": "Die beliebtesten dieser Woche",
         "explore.subjects": "Fächer",
@@ -4890,6 +4908,12 @@ enum AppLocalizable {
         "share.course.message": "Ich lese „%@“ auf Sophia, der Allgemeinbildungs-App in 10 Minuten pro Tag.",
         "share.creator.message": "Entdecke die Kurse von %@ auf Sophia, der Allgemeinbildungs-App.",
         "settings.debug.navigation": "Navigation (A/B)",
+        "explore.trending": "Diese Woche viel gesucht",
+        "explore.universes": "Welten",
+        "explore.creatorsToFollow": "Autoren zum Folgen",
+        "course.end.like": "Gefällt mir",
+        "course.end.liked": "Gefällt dir",
+        "course.end.follow": "%@ folgen",
     ]
     // MARK: - Portuguese (Brazil)
 
@@ -6046,7 +6070,7 @@ enum AppLocalizable {
         "event.write.title": "Quer escrever para %@?",
         "event.write.body": "Proponha seu curso em sophia-culture.com. Revisado pela equipe, publicado em %d idiomas, e você acompanha as leituras no seu painel.",
         "event.write.cta": "Propor um curso",
-        "explore.search.placeholder": "Um curso, um criador, um assunto",
+        "explore.search.placeholder": "Faça uma pergunta, busque um assunto",
         "explore.creators": "Criadores para descobrir",
         "explore.topLiked": "Os mais curtidos da semana",
         "explore.subjects": "Matérias",
@@ -6082,6 +6106,12 @@ enum AppLocalizable {
         "share.course.message": "Estou lendo “%@” no Sophia, o app de cultura geral em 10 minutos por dia.",
         "share.creator.message": "Descubra os cursos de %@ no Sophia, o app de cultura geral.",
         "settings.debug.navigation": "Navegação (A/B)",
+        "explore.trending": "Mais buscados esta semana",
+        "explore.universes": "Universos",
+        "explore.creatorsToFollow": "Criadores para seguir",
+        "course.end.like": "Curtir este curso",
+        "course.end.liked": "Curtido",
+        "course.end.follow": "Seguir %@",
     ]
 
     // MARK: - Portuguese (Portugal)
@@ -7239,7 +7269,7 @@ enum AppLocalizable {
         "event.write.title": "Queres escrever para %@?",
         "event.write.body": "Propõe o teu curso em sophia-culture.com. Revisto pela equipa, publicado em %d idiomas, e acompanhas as suas leituras no teu painel.",
         "event.write.cta": "Propor um curso",
-        "explore.search.placeholder": "Um curso, um criador, um tema",
+        "explore.search.placeholder": "Faz uma pergunta, procura um tema",
         "explore.creators": "Criadores a descobrir",
         "explore.topLiked": "Os mais gostados desta semana",
         "explore.subjects": "Matérias",
@@ -7275,6 +7305,12 @@ enum AppLocalizable {
         "share.course.message": "Estou a ler «%@» na Sophia, a app de cultura geral em 10 minutos por dia.",
         "share.creator.message": "Descobre os cursos de %@ na Sophia, a app de cultura geral.",
         "settings.debug.navigation": "Navegação (A/B)",
+        "explore.trending": "Mais procurados esta semana",
+        "explore.universes": "Universos",
+        "explore.creatorsToFollow": "Criadores a seguir",
+        "course.end.like": "Gosto deste curso",
+        "course.end.liked": "Gostaste",
+        "course.end.follow": "Seguir %@",
     ]
     // MARK: - Italian
 
@@ -8431,7 +8467,7 @@ enum AppLocalizable {
         "event.write.title": "Vuoi scrivere per %@?",
         "event.write.body": "Proponi il tuo corso su sophia-culture.com. Riletto dal team, pubblicato in %d lingue, e ne segui le letture dalla tua dashboard.",
         "event.write.cta": "Proponi un corso",
-        "explore.search.placeholder": "Un corso, un creatore, un argomento",
+        "explore.search.placeholder": "Fai una domanda, cerca un argomento",
         "explore.creators": "Creatori da scoprire",
         "explore.topLiked": "I più amati della settimana",
         "explore.subjects": "Materie",
@@ -8467,6 +8503,12 @@ enum AppLocalizable {
         "share.course.message": "Sto leggendo «%@» su Sophia, l'app di cultura generale in 10 minuti al giorno.",
         "share.creator.message": "Scopri i corsi di %@ su Sophia, l'app di cultura generale.",
         "settings.debug.navigation": "Navigazione (A/B)",
+        "explore.trending": "I più cercati questa settimana",
+        "explore.universes": "Universi",
+        "explore.creatorsToFollow": "Creatori da seguire",
+        "course.end.like": "Mi piace questo corso",
+        "course.end.liked": "Ti piace",
+        "course.end.follow": "Segui %@",
     ]
     // MARK: - Turkish
 
@@ -9623,7 +9665,7 @@ enum AppLocalizable {
         "event.write.title": "%@ için yazmak ister misin?",
         "event.write.body": "Kursunu sophia-culture.com üzerinden öner. Ekip kontrol eder, %d dilde yayımlanır ve okunmaları panelinden takip edersin.",
         "event.write.cta": "Kurs öner",
-        "explore.search.placeholder": "Bir kurs, bir üretici, bir konu",
+        "explore.search.placeholder": "Bir soru sor, bir konu ara",
         "explore.creators": "Keşfedilecek üreticiler",
         "explore.topLiked": "Bu haftanın en beğenilenleri",
         "explore.subjects": "Alanlar",
@@ -9659,6 +9701,12 @@ enum AppLocalizable {
         "share.course.message": "Günde 10 dakikalık genel kültür uygulaması Sophia'da “%@” kursunu okuyorum.",
         "share.creator.message": "Genel kültür uygulaması Sophia'da %@ adlı üreticinin kurslarını keşfet.",
         "settings.debug.navigation": "Gezinme (A/B)",
+        "explore.trending": "Bu hafta çok aranıyor",
+        "explore.universes": "Evrenler",
+        "explore.creatorsToFollow": "Takip edilecek üreticiler",
+        "course.end.like": "Bu kursu beğen",
+        "course.end.liked": "Beğenildi",
+        "course.end.follow": "Takip et: %@",
     ]
     // MARK: - Polish
 
@@ -10816,7 +10864,7 @@ enum AppLocalizable {
         "event.write.title": "Chcesz pisać na %@?",
         "event.write.body": "Zaproponuj swój kurs na sophia-culture.com. Sprawdzony przez zespół, opublikowany w %d językach, a odczyty śledzisz w swoim panelu.",
         "event.write.cta": "Zaproponuj kurs",
-        "explore.search.placeholder": "Kurs, twórca, temat",
+        "explore.search.placeholder": "Zadaj pytanie, poszukaj tematu",
         "explore.creators": "Twórcy do odkrycia",
         "explore.topLiked": "Najbardziej lubiane w tym tygodniu",
         "explore.subjects": "Przedmioty",
@@ -10852,6 +10900,12 @@ enum AppLocalizable {
         "share.course.message": "Czytam „%@” w Sophii – aplikacji do wiedzy ogólnej w 10 minut dziennie.",
         "share.creator.message": "Odkryj kursy twórcy %@ w Sophii – aplikacji do wiedzy ogólnej.",
         "settings.debug.navigation": "Nawigacja (A/B)",
+        "explore.trending": "Często szukane w tym tygodniu",
+        "explore.universes": "Światy",
+        "explore.creatorsToFollow": "Twórcy do obserwowania",
+        "course.end.like": "Lubię ten kurs",
+        "course.end.liked": "Polubiono",
+        "course.end.follow": "Obserwuj: %@",
     ]
     // MARK: - Romanian
 
@@ -12009,7 +12063,7 @@ enum AppLocalizable {
         "event.write.title": "Vrei să scrii pentru %@?",
         "event.write.body": "Propune-ți cursul pe sophia-culture.com. Recitit de echipă, publicat în %d limbi, iar citirile le urmărești din panoul tău.",
         "event.write.cta": "Propune un curs",
-        "explore.search.placeholder": "Un curs, un creator, o temă",
+        "explore.search.placeholder": "Pune o întrebare, caută o temă",
         "explore.creators": "Creatori de descoperit",
         "explore.topLiked": "Cele mai apreciate săptămâna asta",
         "explore.subjects": "Materii",
@@ -12045,6 +12099,12 @@ enum AppLocalizable {
         "share.course.message": "Citesc „%@” pe Sophia, aplicația de cultură generală în 10 minute pe zi.",
         "share.creator.message": "Descoperă cursurile lui %@ pe Sophia, aplicația de cultură generală.",
         "settings.debug.navigation": "Navigare (A/B)",
+        "explore.trending": "Căutate mult săptămâna aceasta",
+        "explore.universes": "Universuri",
+        "explore.creatorsToFollow": "Creatori de urmărit",
+        "course.end.like": "Îmi place acest curs",
+        "course.end.liked": "Îmi place",
+        "course.end.follow": "Urmărește: %@",
     ]
     // MARK: - Dutch
 
@@ -13201,7 +13261,7 @@ enum AppLocalizable {
         "event.write.title": "Wil je schrijven voor %@?",
         "event.write.body": "Dien je cursus in op sophia-culture.com. Nagelezen door het team, gepubliceerd in %d talen, en je volgt de lezers in je dashboard.",
         "event.write.cta": "Een cursus indienen",
-        "explore.search.placeholder": "Een cursus, een maker, een onderwerp",
+        "explore.search.placeholder": "Stel een vraag, zoek een onderwerp",
         "explore.creators": "Makers om te ontdekken",
         "explore.topLiked": "Meest geliked deze week",
         "explore.subjects": "Vakken",
@@ -13237,6 +13297,12 @@ enum AppLocalizable {
         "share.course.message": "Ik lees ‘%@’ op Sophia, de app voor algemene kennis in 10 minuten per dag.",
         "share.creator.message": "Ontdek de cursussen van %@ op Sophia, de app voor algemene kennis.",
         "settings.debug.navigation": "Navigatie (A/B)",
+        "explore.trending": "Veel gezocht deze week",
+        "explore.universes": "Werelden",
+        "explore.creatorsToFollow": "Makers om te volgen",
+        "course.end.like": "Vind ik leuk",
+        "course.end.liked": "Vind je leuk",
+        "course.end.follow": "%@ volgen",
     ]
     // MARK: - Greek
 
@@ -14393,7 +14459,7 @@ enum AppLocalizable {
         "event.write.title": "Θέλεις να γράψεις για %@;",
         "event.write.body": "Πρότεινε το μάθημά σου στο sophia-culture.com. Ελέγχεται από την ομάδα, δημοσιεύεται σε %d γλώσσες και παρακολουθείς τις αναγνώσεις του από τον πίνακά σου.",
         "event.write.cta": "Πρότεινε ένα μάθημα",
-        "explore.search.placeholder": "Ένα μάθημα, ένας δημιουργός, ένα θέμα",
+        "explore.search.placeholder": "Κάνε μια ερώτηση, ψάξε ένα θέμα",
         "explore.creators": "Δημιουργοί για ανακάλυψη",
         "explore.topLiked": "Τα πιο αγαπημένα της εβδομάδας",
         "explore.subjects": "Τομείς",
@@ -14429,6 +14495,12 @@ enum AppLocalizable {
         "share.course.message": "Διαβάζω «%@» στη Sophia, την εφαρμογή γενικής παιδείας σε 10 λεπτά τη μέρα.",
         "share.creator.message": "Ανακάλυψε τα μαθήματα του/της %@ στη Sophia, την εφαρμογή γενικής παιδείας.",
         "settings.debug.navigation": "Πλοήγηση (A/B)",
+        "explore.trending": "Αναζητούνται πολύ αυτή την εβδομάδα",
+        "explore.universes": "Κόσμοι",
+        "explore.creatorsToFollow": "Δημιουργοί για να ακολουθήσεις",
+        "course.end.like": "Μου αρέσει αυτό το μάθημα",
+        "course.end.liked": "Μου αρέσει",
+        "course.end.follow": "Ακολούθησε: %@",
     ]
     // MARK: - Swedish
 
@@ -15585,7 +15657,7 @@ enum AppLocalizable {
         "event.write.title": "Vill du skriva för %@?",
         "event.write.body": "Skicka in din kurs på sophia-culture.com. Granskad av teamet, publicerad på %d språk, och du följer läsningarna i din panel.",
         "event.write.cta": "Skicka in en kurs",
-        "explore.search.placeholder": "En kurs, en skapare, ett ämne",
+        "explore.search.placeholder": "Ställ en fråga, sök ett ämne",
         "explore.creators": "Skapare att upptäcka",
         "explore.topLiked": "Mest gillade den här veckan",
         "explore.subjects": "Ämnen",
@@ -15621,6 +15693,12 @@ enum AppLocalizable {
         "share.course.message": "Jag läser ”%@” på Sophia, allmänbildningsappen på 10 minuter om dagen.",
         "share.creator.message": "Upptäck kurserna av %@ på Sophia, allmänbildningsappen.",
         "settings.debug.navigation": "Navigering (A/B)",
+        "explore.trending": "Mycket sökt den här veckan",
+        "explore.universes": "Universum",
+        "explore.creatorsToFollow": "Skapare att följa",
+        "course.end.like": "Gilla den här kursen",
+        "course.end.liked": "Gillad",
+        "course.end.follow": "Följ %@",
     ]
     // MARK: - Hungarian
 
@@ -16777,7 +16855,7 @@ enum AppLocalizable {
         "event.write.title": "Írnál ehhez: %@?",
         "event.write.body": "Küldd be a kurzusod a sophia-culture.com oldalon. A csapat átnézi, %d nyelven jelenik meg, az olvasásokat pedig a saját irányítópultodon követed.",
         "event.write.cta": "Kurzus beküldése",
-        "explore.search.placeholder": "Kurzus, alkotó, téma",
+        "explore.search.placeholder": "Tegyél fel egy kérdést, keress egy témát",
         "explore.creators": "Felfedezésre váró alkotók",
         "explore.topLiked": "A hét legkedveltebbjei",
         "explore.subjects": "Tantárgyak",
@@ -16813,6 +16891,12 @@ enum AppLocalizable {
         "share.course.message": "Ezt olvasom a Sophián: „%@” – az általános műveltség appja napi 10 percben.",
         "share.creator.message": "Fedezd fel %@ kurzusait a Sophián, az általános műveltség appján.",
         "settings.debug.navigation": "Navigáció (A/B)",
+        "explore.trending": "Sokan keresik ezen a héten",
+        "explore.universes": "Világok",
+        "explore.creatorsToFollow": "Követésre érdemes alkotók",
+        "course.end.like": "Tetszik ez a kurzus",
+        "course.end.liked": "Tetszik",
+        "course.end.follow": "%@ követése",
     ]
     // MARK: - Bulgarian
 
@@ -17969,7 +18053,7 @@ enum AppLocalizable {
         "event.write.title": "Искаш ли да пишеш за %@?",
         "event.write.body": "Предложи курса си на sophia-culture.com. Прегледан от екипа, публикуван на %d езика, а прочитанията следиш от своето табло.",
         "event.write.cta": "Предложи курс",
-        "explore.search.placeholder": "Курс, автор, тема",
+        "explore.search.placeholder": "Задай въпрос, потърси тема",
         "explore.creators": "Автори за откриване",
         "explore.topLiked": "Най-харесвани тази седмица",
         "explore.subjects": "Теми",
@@ -18005,6 +18089,12 @@ enum AppLocalizable {
         "share.course.message": "Чета „%@“ в Sophia – приложението за обща култура за 10 минути на ден.",
         "share.creator.message": "Открий курсовете на %@ в Sophia – приложението за обща култура.",
         "settings.debug.navigation": "Навигация (A/B)",
+        "explore.trending": "Много търсено тази седмица",
+        "explore.universes": "Светове",
+        "explore.creatorsToFollow": "Автори за следване",
+        "course.end.like": "Харесвам този курс",
+        "course.end.liked": "Харесан",
+        "course.end.follow": "Следвай %@",
     ]
     // MARK: - Czech
 
@@ -19162,7 +19252,7 @@ enum AppLocalizable {
         "event.write.title": "Chcete psát pro %@?",
         "event.write.body": "Navrhněte svůj kurz na sophia-culture.com. Zkontrolovaný týmem, publikovaný v %d jazycích, a přečtení sledujete na svém panelu.",
         "event.write.cta": "Navrhnout kurz",
-        "explore.search.placeholder": "Kurz, tvůrce, téma",
+        "explore.search.placeholder": "Zeptej se, hledej téma",
         "explore.creators": "Tvůrci k objevení",
         "explore.topLiked": "Nejoblíbenější tohoto týdne",
         "explore.subjects": "Předměty",
@@ -19198,6 +19288,12 @@ enum AppLocalizable {
         "share.course.message": "Čtu „%@“ v Sophii, aplikaci pro všeobecný přehled za 10 minut denně.",
         "share.creator.message": "Objevte kurzy tvůrce %@ v Sophii, aplikaci pro všeobecný přehled.",
         "settings.debug.navigation": "Navigace (A/B)",
+        "explore.trending": "Tento týden se hodně hledá",
+        "explore.universes": "Světy",
+        "explore.creatorsToFollow": "Tvůrci ke sledování",
+        "course.end.like": "Líbí se mi tento kurz",
+        "course.end.liked": "Líbí se mi",
+        "course.end.follow": "Sledovat: %@",
     ]
 
     // MARK: - Danish
@@ -20355,7 +20451,7 @@ enum AppLocalizable {
         "event.write.title": "Vil du skrive til %@?",
         "event.write.body": "Indsend dit kursus på sophia-culture.com. Gennemlæst af holdet, udgivet på %d sprog, og du følger læsningerne fra dit dashboard.",
         "event.write.cta": "Indsend et kursus",
-        "explore.search.placeholder": "Et kursus, en skaber, et emne",
+        "explore.search.placeholder": "Stil et spørgsmål, søg et emne",
         "explore.creators": "Skabere at opdage",
         "explore.topLiked": "Mest likede i denne uge",
         "explore.subjects": "Fag",
@@ -20391,6 +20487,12 @@ enum AppLocalizable {
         "share.course.message": "Jeg læser ”%@” på Sophia, appen med almen viden på 10 minutter om dagen.",
         "share.creator.message": "Opdag kurserne af %@ på Sophia, appen med almen viden.",
         "settings.debug.navigation": "Navigation (A/B)",
+        "explore.trending": "Meget søgt i denne uge",
+        "explore.universes": "Universer",
+        "explore.creatorsToFollow": "Skabere at følge",
+        "course.end.like": "Synes godt om kurset",
+        "course.end.liked": "Du synes godt om",
+        "course.end.follow": "Følg %@",
     ]
 
     // MARK: - Norwegian
@@ -21548,7 +21650,7 @@ enum AppLocalizable {
         "event.write.title": "Vil du skrive for %@?",
         "event.write.body": "Send inn kurset ditt på sophia-culture.com. Lest gjennom av teamet, publisert på %d språk, og du følger lesningene fra dashbordet ditt.",
         "event.write.cta": "Send inn et kurs",
-        "explore.search.placeholder": "Et kurs, en skaper, et tema",
+        "explore.search.placeholder": "Still et spørsmål, søk etter et tema",
         "explore.creators": "Skapere å oppdage",
         "explore.topLiked": "Mest likt denne uken",
         "explore.subjects": "Fag",
@@ -21584,6 +21686,12 @@ enum AppLocalizable {
         "share.course.message": "Jeg leser «%@» på Sophia, allmenndannelsesappen på 10 minutter om dagen.",
         "share.creator.message": "Oppdag kursene til %@ på Sophia, allmenndannelsesappen.",
         "settings.debug.navigation": "Navigasjon (A/B)",
+        "explore.trending": "Mye søkt denne uken",
+        "explore.universes": "Univers",
+        "explore.creatorsToFollow": "Skapere å følge",
+        "course.end.like": "Lik dette kurset",
+        "course.end.liked": "Likt",
+        "course.end.follow": "Følg %@",
     ]
 
     // MARK: - Russian
@@ -22742,7 +22850,7 @@ enum AppLocalizable {
         "event.write.title": "Хочешь написать для %@?",
         "event.write.body": "Предложи свой курс на sophia-culture.com. Его проверит команда, он выйдет на %d языках, а прочтения ты увидишь в своей панели.",
         "event.write.cta": "Предложить курс",
-        "explore.search.placeholder": "Курс, автор, тема",
+        "explore.search.placeholder": "Задай вопрос или найди тему",
         "explore.creators": "Авторы, которых стоит узнать",
         "explore.topLiked": "Самые любимые за неделю",
         "explore.subjects": "Предметы",
@@ -22778,6 +22886,12 @@ enum AppLocalizable {
         "share.course.message": "Читаю «%@» в Sophia – приложении для общей эрудиции за 10 минут в день.",
         "share.creator.message": "Открой для себя курсы автора %@ в Sophia – приложении для общей эрудиции.",
         "settings.debug.navigation": "Навигация (A/B)",
+        "explore.trending": "Часто ищут на этой неделе",
+        "explore.universes": "Миры",
+        "explore.creatorsToFollow": "Авторы, на которых стоит подписаться",
+        "course.end.like": "Нравится этот курс",
+        "course.end.liked": "Нравится",
+        "course.end.follow": "Подписаться: %@",
     ]
 
     // MARK: - Croatian
@@ -23936,7 +24050,7 @@ enum AppLocalizable {
         "event.write.title": "Želiš pisati za %@?",
         "event.write.body": "Predloži svoj tečaj na sophia-culture.com. Pregledan od tima, objavljen na %d jezika, a čitanja pratiš na svojoj nadzornoj ploči.",
         "event.write.cta": "Predloži tečaj",
-        "explore.search.placeholder": "Tečaj, autor, tema",
+        "explore.search.placeholder": "Postavi pitanje, potraži temu",
         "explore.creators": "Autori koje vrijedi otkriti",
         "explore.topLiked": "Najdraži ovog tjedna",
         "explore.subjects": "Predmeti",
@@ -23972,6 +24086,12 @@ enum AppLocalizable {
         "share.course.message": "Čitam „%@“ na Sophiji, aplikaciji za opću kulturu u 10 minuta dnevno.",
         "share.creator.message": "Otkrij tečajeve autora %@ na Sophiji, aplikaciji za opću kulturu.",
         "settings.debug.navigation": "Navigacija (A/B)",
+        "explore.trending": "Ovaj tjedan se puno traži",
+        "explore.universes": "Svjetovi",
+        "explore.creatorsToFollow": "Autori koje vrijedi pratiti",
+        "course.end.like": "Sviđa mi se ovaj tečaj",
+        "course.end.liked": "Sviđa mi se",
+        "course.end.follow": "Prati: %@",
     ]
 
     // MARK: - Slovenian
@@ -25131,7 +25251,7 @@ enum AppLocalizable {
         "event.write.title": "Želiš pisati za %@?",
         "event.write.body": "Predlagaj svoj tečaj na sophia-culture.com. Ekipa ga pregleda, objavljen je v %d jezikih, branja pa spremljaš na svoji nadzorni plošči.",
         "event.write.cta": "Predlagaj tečaj",
-        "explore.search.placeholder": "Tečaj, ustvarjalec, tema",
+        "explore.search.placeholder": "Postavi vprašanje, poišči temo",
         "explore.creators": "Ustvarjalci, ki jih velja odkriti",
         "explore.topLiked": "Najbolj všečkani ta teden",
         "explore.subjects": "Predmeti",
@@ -25167,6 +25287,12 @@ enum AppLocalizable {
         "share.course.message": "Berem »%@« na Sophii, aplikaciji za splošno razgledanost v 10 minutah na dan.",
         "share.creator.message": "Odkrij tečaje ustvarjalca %@ na Sophii, aplikaciji za splošno razgledanost.",
         "settings.debug.navigation": "Navigacija (A/B)",
+        "explore.trending": "Ta teden veliko iskano",
+        "explore.universes": "Svetovi",
+        "explore.creatorsToFollow": "Ustvarjalci, ki jim velja slediti",
+        "course.end.like": "Všeč mi je ta tečaj",
+        "course.end.liked": "Všeč mi je",
+        "course.end.follow": "Sledi: %@",
     ]
 
     // MARK: - Slovak
@@ -26325,7 +26451,7 @@ enum AppLocalizable {
         "event.write.title": "Chceš písať pre %@?",
         "event.write.body": "Navrhni svoj kurz na sophia-culture.com. Skontrolovaný tímom, publikovaný v %d jazykoch a prečítania sleduješ vo svojom paneli.",
         "event.write.cta": "Navrhnúť kurz",
-        "explore.search.placeholder": "Kurz, tvorca, téma",
+        "explore.search.placeholder": "Opýtaj sa, hľadaj tému",
         "explore.creators": "Tvorcovia na objavenie",
         "explore.topLiked": "Najobľúbenejšie tento týždeň",
         "explore.subjects": "Predmety",
@@ -26361,6 +26487,12 @@ enum AppLocalizable {
         "share.course.message": "Čítam „%@“ v Sophii, aplikácii pre všeobecný prehľad za 10 minút denne.",
         "share.creator.message": "Objav kurzy tvorcu %@ v Sophii, aplikácii pre všeobecný prehľad.",
         "settings.debug.navigation": "Navigácia (A/B)",
+        "explore.trending": "Tento týždeň sa veľa hľadá",
+        "explore.universes": "Svety",
+        "explore.creatorsToFollow": "Tvorcovia na sledovanie",
+        "course.end.like": "Páči sa mi tento kurz",
+        "course.end.liked": "Páči sa mi",
+        "course.end.follow": "Sledovať: %@",
     ]
 
     // MARK: - Serbian
@@ -27519,7 +27651,7 @@ enum AppLocalizable {
         "event.write.title": "Želiš da pišeš za %@?",
         "event.write.body": "Predloži svoj kurs na sajtu Sophije. Pregledan od tima, objavljen na %d jezika, a čitanja pratiš na svojoj kontrolnoj tabli.",
         "event.write.cta": "Predloži kurs",
-        "explore.search.placeholder": "Kurs, autor, tema",
+        "explore.search.placeholder": "Postavi pitanje, potraži temu",
         "explore.creators": "Autori koje vredi otkriti",
         "explore.topLiked": "Najomiljeniji ove nedelje",
         "explore.subjects": "Oblasti",
@@ -27555,6 +27687,12 @@ enum AppLocalizable {
         "share.course.message": "Čitam „%@“ na Sophiji, aplikaciji za opštu kulturu za 10 minuta dnevno.",
         "share.creator.message": "Otkrij kurseve autora %@ na Sophiji, aplikaciji za opštu kulturu.",
         "settings.debug.navigation": "Navigacija (A/B)",
+        "explore.trending": "Ove nedelje se mnogo traži",
+        "explore.universes": "Svetovi",
+        "explore.creatorsToFollow": "Autori koje vredi pratiti",
+        "course.end.like": "Sviđa mi se ovaj kurs",
+        "course.end.liked": "Sviđa mi se",
+        "course.end.follow": "Prati: %@",
     ]
 
     // MARK: - Arabic
@@ -28714,7 +28852,7 @@ enum AppLocalizable {
         "event.write.title": "هل تريد الكتابة من أجل %@؟",
         "event.write.body": "اقترح درسك على sophia-culture.com. يراجعه الفريق ويُنشر بـ%d لغة، وتتابع قراءاته من لوحة التحكم الخاصة بك.",
         "event.write.cta": "اقترح درسًا",
-        "explore.search.placeholder": "درس، صانع محتوى، موضوع",
+        "explore.search.placeholder": "اطرح سؤالًا أو ابحث عن موضوع",
         "explore.creators": "صانعو محتوى لتكتشفهم",
         "explore.topLiked": "الأكثر إعجابًا هذا الأسبوع",
         "explore.subjects": "المواد",
@@ -28750,6 +28888,12 @@ enum AppLocalizable {
         "share.course.message": "أقرأ «%@» على Sophia، تطبيق الثقافة العامة في 10 دقائق يوميًا.",
         "share.creator.message": "اكتشف دروس %@ على Sophia، تطبيق الثقافة العامة.",
         "settings.debug.navigation": "التنقل (A/B)",
+        "explore.trending": "الأكثر بحثًا هذا الأسبوع",
+        "explore.universes": "عوالم",
+        "explore.creatorsToFollow": "صانعو محتوى للمتابعة",
+        "course.end.like": "أعجبني هذا الدرس",
+        "course.end.liked": "أعجبني",
+        "course.end.follow": "متابعة %@",
     ]
 
     // MARK: - Hebrew
@@ -29908,7 +30052,7 @@ enum AppLocalizable {
         "event.write.title": "רוצים לכתוב עבור %@?",
         "event.write.body": "הציעו את הקורס שלכם ב‑sophia-culture.com. הצוות עובר עליו, הוא מתפרסם ב‑%d שפות, ואתם עוקבים אחרי הקריאות מלוח הבקרה שלכם.",
         "event.write.cta": "להציע קורס",
-        "explore.search.placeholder": "קורס, יוצר, נושא",
+        "explore.search.placeholder": "שאלו שאלה, חפשו נושא",
         "explore.creators": "יוצרים לגלות",
         "explore.topLiked": "הכי אהובים השבוע",
         "explore.subjects": "תחומים",
@@ -29944,6 +30088,12 @@ enum AppLocalizable {
         "share.course.message": "אני קורא/ת את \"%@\" ב‑Sophia, אפליקציית הידע הכללי ב‑10 דקות ביום.",
         "share.creator.message": "גלו את הקורסים של %@ ב‑Sophia, אפליקציית הידע הכללי.",
         "settings.debug.navigation": "ניווט (A/B)",
+        "explore.trending": "מחפשים הרבה השבוע",
+        "explore.universes": "עולמות",
+        "explore.creatorsToFollow": "יוצרים למעקב",
+        "course.end.like": "אהבתי את הקורס",
+        "course.end.liked": "אהבתי",
+        "course.end.follow": "עקבו אחרי %@",
     ]
 
     // MARK: - Finnish
@@ -31101,7 +31251,7 @@ enum AppLocalizable {
         "event.write.title": "Haluatko kirjoittaa tapahtumaan %@?",
         "event.write.body": "Ehdota kurssiasi osoitteessa sophia-culture.com. Tiimi tarkistaa sen, se julkaistaan %d kielellä ja seuraat lukukertoja omasta näkymästäsi.",
         "event.write.cta": "Ehdota kurssia",
-        "explore.search.placeholder": "Kurssi, tekijä tai aihe",
+        "explore.search.placeholder": "Kysy jotain tai hae aihetta",
         "explore.creators": "Tekijöitä löydettäväksi",
         "explore.topLiked": "Viikon tykätyimmät",
         "explore.subjects": "Aiheet",
@@ -31137,6 +31287,12 @@ enum AppLocalizable {
         "share.course.message": "Luen kurssia ”%@” Sophiassa, yleissivistyssovelluksessa 10 minuutissa päivässä.",
         "share.creator.message": "Tutustu tekijän %@ kursseihin Sophiassa, yleissivistyssovelluksessa.",
         "settings.debug.navigation": "Navigointi (A/B)",
+        "explore.trending": "Haetuimmat tällä viikolla",
+        "explore.universes": "Maailmat",
+        "explore.creatorsToFollow": "Seurattavia tekijöitä",
+        "course.end.like": "Tykkää kurssista",
+        "course.end.liked": "Tykätty",
+        "course.end.follow": "Seuraa: %@",
     ]
 
     // MARK: - Estonian
@@ -32294,7 +32450,7 @@ enum AppLocalizable {
         "event.write.title": "Tahad kirjutada sündmusele %@?",
         "event.write.body": "Paku oma kursus välja aadressil sophia-culture.com. Meeskond kontrollib selle, see avaldatakse %d keeles ja sa jälgid lugemisi oma töölaualt.",
         "event.write.cta": "Paku kursus välja",
-        "explore.search.placeholder": "Kursus, looja või teema",
+        "explore.search.placeholder": "Küsi küsimus, otsi teemat",
         "explore.creators": "Loojad, keda avastada",
         "explore.topLiked": "Nädala meeldivaimad",
         "explore.subjects": "Ained",
@@ -32330,6 +32486,12 @@ enum AppLocalizable {
         "share.course.message": "Loen Sophias kursust „%@“ – üldteadmiste rakendus 10 minutit päevas.",
         "share.creator.message": "Avasta looja %@ kursused Sophias, üldteadmiste rakenduses.",
         "settings.debug.navigation": "Navigeerimine (A/B)",
+        "explore.trending": "Sel nädalal palju otsitud",
+        "explore.universes": "Maailmad",
+        "explore.creatorsToFollow": "Loojad, keda jälgida",
+        "course.end.like": "Meeldib see kursus",
+        "course.end.liked": "Meeldib",
+        "course.end.follow": "Jälgi: %@",
     ]
 
     // MARK: - lithuanian (copie du français, à post-éditer)
@@ -33487,7 +33649,7 @@ enum AppLocalizable {
         "event.write.title": "Nori rašyti renginiui %@?",
         "event.write.body": "Pasiūlyk savo kursą sophia-culture.com. Komanda peržiūri, kursas publikuojamas %d kalbų, o skaitymus stebi savo valdymo skydelyje.",
         "event.write.cta": "Pasiūlyti kursą",
-        "explore.search.placeholder": "Kursas, kūrėjas, tema",
+        "explore.search.placeholder": "Užduok klausimą, ieškok temos",
         "explore.creators": "Kūrėjai, kuriuos verta atrasti",
         "explore.topLiked": "Šios savaitės mėgstamiausi",
         "explore.subjects": "Dalykai",
@@ -33523,6 +33685,12 @@ enum AppLocalizable {
         "share.course.message": "Skaitau „%@“ programėlėje Sophia – bendrosios kultūros programėlė per 10 minučių per dieną.",
         "share.creator.message": "Atrask kūrėjo %@ kursus programėlėje Sophia – bendrosios kultūros programėlėje.",
         "settings.debug.navigation": "Navigacija (A/B)",
+        "explore.trending": "Daug ieškoma šią savaitę",
+        "explore.universes": "Pasauliai",
+        "explore.creatorsToFollow": "Kūrėjai, kuriuos verta sekti",
+        "course.end.like": "Patinka šis kursas",
+        "course.end.liked": "Patinka",
+        "course.end.follow": "Sekti: %@",
     ]
 
     // MARK: - latvian (copie du français, à post-éditer)
@@ -34681,7 +34849,7 @@ enum AppLocalizable {
         "event.write.title": "Gribi rakstīt pasākumam %@?",
         "event.write.body": "Piedāvā savu kursu vietnē sophia-culture.com. Komanda to pārskata, tas tiek publicēts %d valodās, un lasījumus tu seko savā panelī.",
         "event.write.cta": "Piedāvāt kursu",
-        "explore.search.placeholder": "Kurss, veidotājs, tēma",
+        "explore.search.placeholder": "Uzdod jautājumu, meklē tēmu",
         "explore.creators": "Veidotāji, ko atklāt",
         "explore.topLiked": "Šīs nedēļas iecienītākie",
         "explore.subjects": "Priekšmeti",
@@ -34717,6 +34885,12 @@ enum AppLocalizable {
         "share.course.message": "Es lasu “%@” lietotnē Sophia – vispārējo zināšanu lietotne 10 minūtēs dienā.",
         "share.creator.message": "Atklāj veidotāja %@ kursus lietotnē Sophia – vispārējo zināšanu lietotnē.",
         "settings.debug.navigation": "Navigācija (A/B)",
+        "explore.trending": "Šonedēļ daudz meklēts",
+        "explore.universes": "Pasaules",
+        "explore.creatorsToFollow": "Veidotāji, kam sekot",
+        "course.end.like": "Patīk šis kurss",
+        "course.end.liked": "Patīk",
+        "course.end.follow": "Sekot: %@",
     ]
 
     // MARK: - japanese (copie du français, à post-éditer)
@@ -35873,7 +36047,7 @@ enum AppLocalizable {
         "event.write.title": "%@に向けて書いてみませんか？",
         "event.write.body": "sophia-culture.comでコースを提案してください。チームが校閲し、%d言語で公開され、ダッシュボードで閲覧数を確認できます。",
         "event.write.cta": "コースを提案する",
-        "explore.search.placeholder": "コース、クリエイター、テーマ",
+        "explore.search.placeholder": "質問する、テーマを探す",
         "explore.creators": "注目のクリエイター",
         "explore.topLiked": "今週のいいね数トップ",
         "explore.subjects": "科目",
@@ -35909,5 +36083,11 @@ enum AppLocalizable {
         "share.course.message": "1日10分の教養アプリSophiaで「%@」を読んでいます。",
         "share.creator.message": "教養アプリSophiaで%@のコースを見てみよう。",
         "settings.debug.navigation": "ナビゲーション（A/B）",
+        "explore.trending": "今週よく検索されています",
+        "explore.universes": "テーマの世界",
+        "explore.creatorsToFollow": "フォローしたいクリエイター",
+        "course.end.like": "このコースにいいね",
+        "course.end.liked": "いいね済み",
+        "course.end.follow": "%@をフォロー",
     ]
 }

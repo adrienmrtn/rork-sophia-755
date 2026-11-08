@@ -9,6 +9,8 @@ enum NewGenRoute: Hashable {
     case campaign(slug: String)
     case courseList(ProfileListKind)
     case subject(Subject)
+    /// Un « univers » de l'onglet Explorer : une sous-catégorie du catalogue, dans la langue courante.
+    case universe(subcategory: String)
     /// L'ancien profil (rang, matières, quiz, amis, anti-scroll), désormais page secondaire.
     case progression
     case friends
@@ -70,7 +72,7 @@ struct NewGenTabsView: View {
                         onOpenCourse: { explorePath.append(.course(id: $0.id, source: .search)) },
                         onOpenCreator: { explorePath.append(.creator(slug: $0.slug)) },
                         onOpenCampaign: { explorePath.append(.campaign(slug: $0.slug)) },
-                        onOpenSubject: { explorePath.append(.subject($0)) }
+                        onOpenUniverse: { explorePath.append(.universe(subcategory: $0)) }
                     )
                     .toolbar(.hidden, for: .navigationBar)
                     .navigationDestination(for: NewGenRoute.self) { route in
@@ -172,6 +174,13 @@ struct NewGenTabsView: View {
                 kind: kind,
                 progressManager: progressManager,
                 onOpenCourse: { push(.course(id: $0.id, source: .profile)) }
+            )
+            .toolbar(.hidden, for: .navigationBar)
+        case .universe(let subcategory):
+            UniverseCoursesView(
+                subcategory: subcategory,
+                progressManager: progressManager,
+                onOpenCourse: { push(.course(id: $0.id, source: .search)) }
             )
             .toolbar(.hidden, for: .navigationBar)
         case .subject(let subject):
