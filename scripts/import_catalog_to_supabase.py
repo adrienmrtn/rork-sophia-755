@@ -212,8 +212,11 @@ class Sources:
         self.withheld_by_lang = {k: set(v) for k, v in withheld.get("by_language", {}).items()}
         self.collections = load_json(CONTENT / "collections" / "collections.json")
         self.course_ids = sorted(p.stem for p in (CONTENT / "courses" / "fr").glob("*.json"))
-        if len(self.course_ids) != EXPECTED_COURSES:
-            print(f"attention : {len(self.course_ids)} cours en français, {EXPECTED_COURSES} attendus")
+        # L'index est la liste de référence : un cours français hors index (ou l'inverse) est une erreur.
+        indexed = set(load_json(CONTENT / "courses" / "index.json").get("courses", []))
+        if indexed and indexed != set(self.course_ids):
+            print(f"attention : {len(self.course_ids)} cours en français, {len(indexed)} dans content/courses/index.json "
+                  f"(écart : {sorted(indexed ^ set(self.course_ids))[:5]})")
 
     def courses(self, lang: str) -> dict[str, dict]:
         out = {}
