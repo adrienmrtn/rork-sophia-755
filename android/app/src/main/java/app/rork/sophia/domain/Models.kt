@@ -113,6 +113,10 @@ data class Course(
  * dérivées d'un hash FNV-1a de l'identifiant (entre 7 000 et 250 000, arrondies à la
  * centaine), identiques sur iOS. Accessible sans `Course` pour les compteurs d'un créateur.
  */
+/** Même compteur pour une fiche du catalogue, qui n'est pas un [Course]. */
+val CourseSummary.readsCount: Int
+    get() = fakeReadsCount(id)
+
 fun fakeReadsCount(courseId: String): Int {
     var hash = 0xcbf29ce484222325UL
     for (byte in courseId.encodeToByteArray()) {

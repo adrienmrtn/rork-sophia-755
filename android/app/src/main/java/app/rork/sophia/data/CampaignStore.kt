@@ -7,7 +7,7 @@ import kotlinx.serialization.json.Json
 import java.time.LocalDate
 
 /**
- * Les événements embarqués (`assets/events/*.json`) et l'état local du lecteur vis-à-vis
+ * Les événements embarqués (les fichiers JSON de `assets/events`) et l'état local du lecteur vis-à-vis
  * d'eux : les cours annoncés pour lesquels il a demandé à être prévenu.
  *
  * Le serveur prendra le relais au prompt 6 (table `campaigns`, `campaign_progress`) ; l'API
