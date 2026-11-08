@@ -197,13 +197,16 @@ def detect_provider() -> str:
     return "anthropic"
 
 
+_LENIENT = json.JSONDecoder(strict=False)  # tolère les retours à la ligne bruts dans les chaînes
+
+
 def extract_json(text: str) -> dict:
     """Le premier objet JSON d'une réponse, avec ou sans clôture Markdown autour."""
     stripped = text.strip()
     stripped = re.sub(r"^```(?:json)?\s*", "", stripped)
     stripped = re.sub(r"\s*```$", "", stripped)
     try:
-        value = json.loads(stripped)
+        value = _LENIENT.decode(stripped)
         if isinstance(value, dict):
             return value
     except ValueError:
@@ -211,10 +214,36 @@ def extract_json(text: str) -> dict:
     start, end = stripped.find("{"), stripped.rfind("}")
     if start < 0 or end <= start:
         raise ProductionError("réponse du modèle sans objet JSON")
-    value = json.loads(stripped[start:end + 1])
+    value = _LENIENT.decode(stripped[start:end + 1])
     if not isinstance(value, dict):
         raise ProductionError("réponse du modèle : JSON qui n'est pas un objet")
     return value
+
+
+def merge_results(base: dict, patch: dict) -> dict:
+    """Fusionne une réponse partielle (relecture, réparation : seulement ce qui change) dans la
+    réponse complète précédente : segments par clé, quiz par id, glossaire par terme source."""
+    merged = {k: v for k, v in base.items()}
+    segments = {s["key"]: s for s in base.get("segments", []) if isinstance(s, dict) and s.get("key")}
+    for s in patch.get("segments", []) or []:
+        if isinstance(s, dict) and s.get("key") and isinstance(s.get("text"), str) and s["text"].strip():
+            segments[s["key"]] = s
+    merged["segments"] = list(segments.values())
+    quiz = {q["id"]: q for q in base.get("quiz", []) if isinstance(q, dict) and q.get("id")}
+    for q in patch.get("quiz", []) or []:
+        if isinstance(q, dict) and q.get("id"):
+            quiz[q["id"]] = {**quiz.get(q["id"], {}), **{k: v for k, v in q.items() if v is not None}}
+    merged["quiz"] = list(quiz.values())
+    glossary = {g["source_term"]: g for g in base.get("glossary", []) if isinstance(g, dict) and g.get("source_term")}
+    for g in patch.get("glossary", []) or []:
+        if isinstance(g, dict) and g.get("source_term") and str(g.get("term", "")).strip():
+            glossary[g["source_term"]] = g
+    merged["glossary"] = list(glossary.values())
+    if isinstance(patch.get("subcategory"), str) and patch["subcategory"].strip():
+        merged["subcategory"] = patch["subcategory"]
+    if patch.get("notes"):
+        merged["notes"] = patch["notes"]
+    return merged
 
 
 class LLM:
@@ -280,12 +309,28 @@ class LLM:
             "\n\nOUTPUT FORMAT. Answer with exactly one JSON object and nothing else: no prose before or after, no "
             "Markdown code fence. The object must match this JSON Schema (every required key present, no other key):\n"
             + json.dumps(schema, ensure_ascii=False)
+            + "\n\nJSON strictness: every string value is a valid JSON string. Inside texts, prefer the language's "
+            "typographic quotation marks (« », „ “, “ ”) to the ASCII double quote; any ASCII double quote or "
+            "backslash inside a string must be escaped (\\\" and \\\\). No trailing commas, no comments."
         )
         prompt = user + contract
         last_error = ""
-        for attempt in range(2):
-            payload = {"model": self.model, "prompt": prompt if not last_error else prompt + "\n\nYour previous answer was rejected: " + last_error + ". Return only the JSON object.",
-                       "system_prompt": system_text, "max_tokens": max_tokens, "priority": "throughput", "reasoning": False}
+        previous_output = ""
+        for attempt in range(3):
+            if not last_error:
+                attempt_prompt = prompt
+            elif previous_output:
+                # Réparer la réponse précédente coûte moins cher et dévie moins que tout refaire.
+                attempt_prompt = (
+                    "Your previous answer to a request was not accepted: " + last_error + ". Return the SAME content as "
+                    "one valid JSON object (same keys, same texts, only the JSON syntax fixed and the required keys present). "
+                    "No prose, no code fence.\n\nThe JSON Schema it must match:\n" + json.dumps(schema, ensure_ascii=False)
+                    + "\n\nYour previous answer:\n" + previous_output[:120000]
+                )
+            else:
+                attempt_prompt = prompt + "\n\nYour previous answer was rejected: " + last_error + ". Return only the JSON object."
+            payload = {"model": self.model, "prompt": attempt_prompt, "system_prompt": system_text if not previous_output else "You fix JSON syntax without changing content.",
+                       "max_tokens": max_tokens, "priority": "throughput", "reasoning": False}
             submitted = self._fal_request("POST", FAL_QUEUE, payload)
             status_url = submitted.get("status_url") or f"{FAL_QUEUE}/requests/{submitted.get('request_id')}/status"
             response_url = submitted.get("response_url") or f"{FAL_QUEUE}/requests/{submitted.get('request_id')}"
@@ -309,10 +354,12 @@ class LLM:
                 value = extract_json(output)
             except (ValueError, ProductionError) as e:
                 last_error = f"invalid JSON ({e})"
+                previous_output = output
                 continue
             missing = [k for k in schema.get("required", []) if k not in value]
             if missing:
                 last_error = f"missing keys {missing}"
+                previous_output = output
                 continue
             return value
         raise ProductionError(f"fal any-llm : {last_error}")
@@ -648,7 +695,9 @@ def ensure_quiz(ctx: Context, llm: LLM) -> list[dict]:
             normalized = normalize_question(q, ctx.course_id, i, ctx.origin)
             if normalized:
                 quiz.append(normalized)
-    if not quiz and not ctx.is_new:
+    if not quiz:
+        # Un quiz déjà dans content/ (mise à jour, ou relance d'un job) est gardé : ses ids tiennent
+        # l'Entraînement des lecteurs. Il est revérifié contre le texte ci-dessous.
         existing = read_json(ctx.quiz_path(ctx.origin), []) or []
         for entry in existing:
             if entry.get("courseId") == ctx.course_id and entry.get("quiz"):
@@ -787,7 +836,10 @@ def system_prompt(ctx: Context, lang: str) -> list[dict]:
         "Hard rules, enforced mechanically after you answer:\n"
         "- Keep every `**bold**` span and every `[[glossary term]]` marker: same count per segment, same position in the "
         "sentence; the text inside [[…]] is the translated glossary term, identical each time it appears and identical "
-        "to the `term` you give in `glossary`. Never park a term at the end of a sentence; never drop one.\n"
+        "to the `term` you give in `glossary`. Articles, prepositions and inflection particles stay OUTSIDE the "
+        "brackets (write `il [[saros]]`, never `[[il saros]]`). Never park a term at the end of a sentence; never drop one.\n"
+        "- A bold span holds the same words as in the source and never ends with a period or an abbreviation dot: "
+        "keep abbreviations such as BC/AD equivalents outside the bold (`**60** v.Chr.`), or write them without a final dot.\n"
         "- No em dash (—), no en dash (–), no curly quotes or apostrophes unless the guide requires them, no non-breaking "
         "or zero-width spaces. Follow the guide for quotation marks and number formats.\n"
         "- Translate every segment given, keep its key, change nothing structural. Years and bare numbers stay as they are.\n"
@@ -1013,19 +1065,9 @@ def translate_language(ctx: Context, llm: LLM, steps: Steps, lang: str) -> dict:
                 f"{name} glossary:\n{json.dumps([{'source_term': e['term'], 'term': k.split('|', 1)[1], 'explanation': v['explanation']} for e, (k, v) in zip(ctx.glossary, glossary.items())], ensure_ascii=False, indent=1)}"
             )
             review = llm.json_call(system, review_user, TRANSLATION_SCHEMA, max_tokens=24000)
-            review.setdefault("subcategory", course.get("subcategory", ""))
             if review.get("segments") or review.get("quiz") or review.get("glossary"):
-                merged_glossary = {g["source_term"]: g for g in result.get("glossary", []) if isinstance(g, dict)}
-                for g in review.get("glossary", []):
-                    if isinstance(g, dict) and g.get("source_term"):
-                        merged_glossary[g["source_term"]] = g
-                review["glossary"] = list(merged_glossary.values())
-                review_quiz = {q.get("id"): q for q in result.get("quiz", []) if isinstance(q, dict)}
-                for q in review.get("quiz", []):
-                    if isinstance(q, dict) and q.get("id"):
-                        review_quiz[q["id"]] = q
-                review["quiz"] = list(review_quiz.values())
-                course, quiz, glossary, problems = apply_translation(ctx, lang, review, course, quiz, memory)
+                result = merge_results(result, review)
+                course, quiz, glossary, problems = apply_translation(ctx, lang, result, None, None, memory)
             review_note = review.get("notes", "")
         else:
             review_note = ""
@@ -1054,8 +1096,8 @@ def translate_language(ctx: Context, llm: LLM, steps: Steps, lang: str) -> dict:
                 "Findings:\n" + "\n".join(f"- {f}" for f in findings[:80])
             )
             repair = llm.json_call(system, repair_user, TRANSLATION_SCHEMA, max_tokens=24000)
-            repair.setdefault("subcategory", course.get("subcategory", ""))
-            course, quiz, glossary, problems = apply_translation(ctx, lang, repair, course, quiz, memory)
+            result = merge_results(result, repair)
+            course, quiz, glossary, problems = apply_translation(ctx, lang, result, None, None, memory)
         ok = not findings
         detail = {"findings": findings[:60], "count": len(findings), "repairs": min(attempt, MAX_REPAIRS)}
         (steps.done if ok else steps.fail)("gate", lang, detail)
@@ -1114,11 +1156,13 @@ def update_shared_files(ctx: Context, cover_slug: str | None, credit) -> None:
 
 
 def update_withheld(ctx: Context, failed: list[str]) -> None:
+    """Les langues retenues de ce job entrent dans catalog_withheld.json, celles qui passent en
+    sortent ; les langues hors du job (relance partielle) ne sont pas touchées."""
     path = ctx.content_dir / "catalog_withheld.json"
     data = read_json(path, {"by_language": {}, "by_region": {}}) or {}
     by_lang = data.setdefault("by_language", {})
     changed = False
-    for lang in ALL_LANGS:
+    for lang in ctx.targets:
         ids = by_lang.get(lang, [])
         if lang in failed and ctx.course_id not in ids:
             by_lang[lang] = sorted(set(ids) | {ctx.course_id})
