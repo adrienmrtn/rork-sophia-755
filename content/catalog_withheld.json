@@ -1,0 +1,31 @@
+{
+  "_comment": "Cours non distribués dans une langue (by_language) ou dans une région du téléphone (by_region). Copie des listes ContentCatalog.withheldCourseIds ; l'import les porte dans course_contents.status = withheld.",
+  "by_language": {
+    "tr": [
+      "course_25_le_genocide_armenien_1915_1916",
+      "course_1_la_naissance_de_l_islam_622"
+    ],
+    "ar": [
+      "course_1_la_naissance_de_l_islam_622",
+      "course_201_la_naissance_du_conflit_israelo_palestin"
+    ],
+    "he": [
+      "course_201_la_naissance_du_conflit_israelo_palestin"
+    ],
+    "ru": [
+      "course_209_la_russie_de_poutine",
+      "course_210_la_guerre_en_ukraine_expliquee"
+    ],
+    "sr": [
+      "course_270_pourquoi_la_yougoslavie_a_t_elle_eclate"
+    ],
+    "hr": [
+      "course_270_pourquoi_la_yougoslavie_a_t_elle_eclate"
+    ]
+  },
+  "by_region": {
+    "TR": [
+      "course_25_le_genocide_armenien_1915_1916"
+    ]
+  }
+}

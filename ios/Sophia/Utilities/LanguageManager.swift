@@ -28,6 +28,7 @@ final class LanguageManager {
         UserDefaults.standard.set(language.rawValue, forKey: AppLanguage.userDefaultsKey)
         UserDefaults.standard.set(true, forKey: AppLanguage.portugueseSplitKey)
         LocalizedContentLoader.resetCache()
+        CatalogStore.shared.languageDidChange(to: language)
         Self.reportToRevenueCat(language)
     }
 

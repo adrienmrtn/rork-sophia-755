@@ -256,6 +256,7 @@ struct HomeFeedView: View {
         opened = []
         skipped = []
         CourseImageMap.preloadImages(for: Array(deck.prefix(6)).map(\.id))
+        CatalogStore.shared.prefetch(courseIds: Array(deck.prefix(8)).map(\.id), language: languageManager.current)
         restartAtTop()
     }
 

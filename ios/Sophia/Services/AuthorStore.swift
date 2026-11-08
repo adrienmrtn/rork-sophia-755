@@ -1,28 +1,20 @@
 import UIKit
 
-/// Bundled course authors (`Resources/authors.json`) and their portraits
-/// (`Resources/AuthorPhotos/<photo>.jpg`).
+/// Les créateurs de cours, lus dans le catalogue en ligne (`CatalogStore`, section `creators`),
+/// et leurs portraits embarqués (`Resources/AuthorPhotos/<photo>.jpg`).
 ///
-/// One file for every author: it is small, and it lets "other courses by this professor"
-/// be answered from the author's `courseIds` without decoding a single course.
+/// Chaque créateur porte les `courseIds` de ses cours publiés dans la langue : « les autres
+/// cours de ce professeur » se répond sans décoder un seul cours.
 enum AuthorStore {
-    private struct Payload: Decodable {
-        let authors: [CourseAuthor]
-    }
-
-    private static var loaded: [CourseAuthor]?
     private static let photoCache = NSCache<NSString, UIImage>()
 
     static func resetCache() {
-        loaded = nil
         photoCache.removeAllObjects()
+        CatalogStore.shared.resetMemory()
     }
 
     static var all: [CourseAuthor] {
-        if let loaded { return loaded }
-        let authors = load()
-        loaded = authors
-        return authors
+        CatalogStore.shared.snapshot(for: AppLanguage.currentPersisted()).authors
     }
 
     static func author(slug: String) -> CourseAuthor? {
@@ -33,28 +25,13 @@ enum AuthorStore {
         all.first { $0.courseIds.contains(courseId) }
     }
 
-    /// The author's portrait, or nil when the author has none (the views then draw initials).
+    /// Le portrait du créateur, ou nil quand il n'en a pas (les vues dessinent alors ses initiales).
     static func photo(for author: CourseAuthor) -> UIImage? {
         guard let name = author.photo, !name.isEmpty else { return nil }
         if let cached = photoCache.object(forKey: name as NSString) { return cached }
         guard let image = loadPhoto(named: name) else { return nil }
         photoCache.setObject(image, forKey: name as NSString)
         return image
-    }
-
-    // MARK: - Loading
-
-    private static func load() -> [CourseAuthor] {
-        guard let url = resourceURL(name: "authors", ext: "json", subdirectories: ["Resources", ""]) else {
-            return []
-        }
-        do {
-            let data = try Data(contentsOf: url)
-            return try JSONDecoder().decode(Payload.self, from: data).authors
-        } catch {
-            assertionFailure("Failed to decode authors.json: \(error)")
-            return []
-        }
     }
 
     private static func loadPhoto(named name: String) -> UIImage? {
@@ -68,8 +45,8 @@ enum AuthorStore {
         return UIImage(named: name)
     }
 
-    /// Same tolerance as the other bundled resources: Xcode may flatten the `Resources`
-    /// folder or keep it as a folder reference, so both layouts are tried.
+    /// Xcode peut aplatir le dossier `Resources` ou le garder en référence de dossier : les deux
+    /// dispositions sont essayées.
     private static func resourceURL(name: String, ext: String, subdirectories: [String]) -> URL? {
         let bundle = Bundle.main
         for subdirectory in subdirectories {
@@ -81,9 +58,7 @@ enum AuthorStore {
         }
         guard let root = bundle.resourceURL else { return nil }
         for subdirectory in subdirectories {
-            let candidate = root
-                .appendingPathComponent(subdirectory)
-                .appendingPathComponent("\(name).\(ext)")
+            let candidate = root.appendingPathComponent(subdirectory).appendingPathComponent("\(name).\(ext)")
             if FileManager.default.fileExists(atPath: candidate.path) { return candidate }
         }
         return nil

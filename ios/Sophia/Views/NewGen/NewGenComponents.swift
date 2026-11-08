@@ -308,6 +308,12 @@ struct CourseCover: View {
         .onAppear {
             if image == nil { image = CourseImageMap.loadImage(for: course.id) }
         }
+        .task(id: course.id) {
+            // Un cours arrivé en ligne après le build n'a pas sa couverture dans le bundle : le
+            // catalogue donne le nom de l'objet, le bucket `course-images` l'image.
+            guard image == nil, let slug = CatalogStore.shared.coverSlug(courseId: course.id) else { return }
+            image = await CourseImageLoader.image(for: slug)
+        }
         .accessibilityHidden(true)
     }
 }

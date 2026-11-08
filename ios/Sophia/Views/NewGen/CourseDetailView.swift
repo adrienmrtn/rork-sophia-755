@@ -14,6 +14,9 @@ struct CourseDetailView: View {
     let onOpenCourse: (Course) -> Void
 
     @State private var showOriginal = false
+    /// Incrémenté quand le paquet du cours arrive : la fiche se redessine avec l'accroche et
+    /// l'introduction du vrai contenu.
+    @State private var contentTick = 0
 
     private var language: AppLanguage { languageManager.current }
     private var content: CourseContentV2? { CourseContentStore.content(courseId: course.id, language: language) }
@@ -46,6 +49,7 @@ struct CourseDetailView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 0) {
+                let _ = contentTick
                 cover
                 VStack(alignment: .leading, spacing: 16) {
                     HStack(spacing: 10) {

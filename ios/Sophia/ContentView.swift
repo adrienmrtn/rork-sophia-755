@@ -285,6 +285,10 @@ struct ContentView: View {
                 await syncService.syncAtLaunch()
             }
         }
+        .task {
+            // Le catalogue en ligne : manifeste relu au lancement (puis toutes les six heures).
+            await CatalogStore.shared.refreshIfNeeded(language: languageManager.current)
+        }
         .onChange(of: auth.isSignedIn) { _, signedIn in
             guard signedIn else { return }
             // Seule une connexion faite à l'instant peut demander quelle progression garder.
@@ -328,6 +332,7 @@ struct ContentView: View {
                 return
             }
             guard phase == .active else { return }
+            Task { await CatalogStore.shared.refreshIfNeeded(language: languageManager.current) }
             AnalyticsService.shared.appDidBecomeActive()
             blocker.reconcileShield()
             openBlockerCourseIfNeeded()

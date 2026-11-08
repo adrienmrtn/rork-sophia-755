@@ -306,10 +306,6 @@ struct GlossaryEntry: Sendable, Identifiable {
 }
 
 enum GlossaryStore {
-    private static func frenchKey(courseTitle: String, displayTerm: String) -> String {
-        "\(courseTitle)|\(displayTerm)"
-    }
-
     private static func localizedKey(courseId: String, displayTerm: String) -> String {
         "\(courseId)|\(displayTerm)"
     }
@@ -318,13 +314,16 @@ enum GlossaryStore {
         value.lowercased().unicodeScalars.filter { CharacterSet.alphanumerics.contains($0) }.map(String.init).joined()
     }
 
+    /// Le glossaire du catalogue en ligne est indexé par id de cours dans toutes les langues (le
+    /// français l'était par titre quand il vivait en Swift). Un lien sans id de cours (anciens
+    /// liens) retrouve son cours par le titre.
     static func entry(courseId: String, courseTitle: String, displayTerm: String) -> GlossaryEntry? {
-        switch AppLanguage.currentPersisted() {
-        case .french:
-            return frenchEntry(courseTitle: courseTitle, displayTerm: displayTerm)
-        default:
-            return localizedEntry(courseId: courseId, displayTerm: displayTerm)
+        var resolvedId = courseId
+        if resolvedId.isEmpty, !courseTitle.isEmpty,
+           let course = ContentCatalog.activeCourses.first(where: { $0.title == courseTitle }) {
+            resolvedId = course.id
         }
+        return localizedEntry(courseId: resolvedId, displayTerm: displayTerm)
     }
 
     private static func localizedEntry(courseId: String, displayTerm: String) -> GlossaryEntry? {
@@ -334,13 +333,6 @@ enum GlossaryStore {
             return exact
         }
         return fuzzyEntry(displayTerm: displayTerm, in: entries, prefix: "\(courseId)|")
-    }
-
-    private static func frenchEntry(courseTitle: String, displayTerm: String) -> GlossaryEntry? {
-        if let exact = GlossaryData.entries[frenchKey(courseTitle: courseTitle, displayTerm: displayTerm)] {
-            return exact
-        }
-        return fuzzyEntry(displayTerm: displayTerm, in: GlossaryData.entries, prefix: "\(courseTitle)|")
     }
 
     private static func fuzzyEntry(

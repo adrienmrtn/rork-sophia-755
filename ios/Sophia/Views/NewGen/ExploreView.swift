@@ -491,8 +491,8 @@ struct UniverseCoursesView: View {
     }
 }
 
-/// Recherche dans le glossaire : les termes français de `GlossaryData`, ou la table
-/// localisée de la langue courante, avec le cours d'origine quand il est retrouvé.
+/// Recherche dans le glossaire de la langue courante (catalogue en ligne), avec le cours
+/// d'origine quand il est retrouvé.
 enum ExploreSearch {
     struct GlossaryHit: Identifiable {
         let entry: GlossaryEntry
@@ -509,25 +509,13 @@ enum ExploreSearch {
         guard needle.count >= 2 else { return [] }
         var hits: [GlossaryHit] = []
         var seen: Set<String> = []
-        if language == .french {
-            let coursesByTitle = Dictionary(ContentCatalog.courses(for: .french).map { ($0.title, $0) }, uniquingKeysWith: { first, _ in first })
-            for (key, entry) in GlossaryData.entries where normalize(entry.displayTerm).contains(needle) {
-                let courseTitle = String(key.split(separator: "|", maxSplits: 1).first ?? "")
-                let dedupe = normalize(entry.displayTerm) + "|" + courseTitle
-                guard !seen.contains(dedupe) else { continue }
-                seen.insert(dedupe)
-                hits.append(GlossaryHit(entry: entry, course: coursesByTitle[courseTitle]))
-                if hits.count >= limit { break }
-            }
-        } else {
-            for (key, entry) in LocalizedContentLoader.glossaryEntries(for: language) where normalize(entry.displayTerm).contains(needle) {
-                let courseId = String(key.split(separator: "|", maxSplits: 1).first ?? "")
-                let dedupe = normalize(entry.displayTerm) + "|" + courseId
-                guard !seen.contains(dedupe) else { continue }
-                seen.insert(dedupe)
-                hits.append(GlossaryHit(entry: entry, course: ContentCatalog.course(withId: courseId)))
-                if hits.count >= limit { break }
-            }
+        for (key, entry) in LocalizedContentLoader.glossaryEntries(for: language) where normalize(entry.displayTerm).contains(needle) {
+            let courseId = String(key.split(separator: "|", maxSplits: 1).first ?? "")
+            let dedupe = normalize(entry.displayTerm) + "|" + courseId
+            guard !seen.contains(dedupe) else { continue }
+            seen.insert(dedupe)
+            hits.append(GlossaryHit(entry: entry, course: ContentCatalog.course(withId: courseId)))
+            if hits.count >= limit { break }
         }
         return hits.sorted { $0.entry.displayTerm < $1.entry.displayTerm }
     }
