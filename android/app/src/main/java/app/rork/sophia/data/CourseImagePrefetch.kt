@@ -16,7 +16,7 @@ import kotlinx.coroutines.withContext
  * reader from showing.
  */
 object CourseImagePrefetch {
-    /** Matches only `image` blocks — no other block in `courses_v2` has an `asset`. */
+    /** Matches only `image` blocks — no other block of the V2 content has an `asset`. */
     private val assetPattern = Regex("\"asset\"\\s*:\\s*\"([^\"]+)\"")
 
     fun targetPx(context: Context): Int =

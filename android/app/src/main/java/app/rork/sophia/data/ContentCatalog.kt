@@ -1,6 +1,8 @@
 package app.rork.sophia.data
 
 import android.content.Context
+import app.rork.sophia.data.catalog.CatalogSnapshot
+import app.rork.sophia.data.catalog.CatalogStore
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.Course
 import app.rork.sophia.domain.CourseSummary
@@ -8,19 +10,21 @@ import app.rork.sophia.domain.LearningCollection
 import app.rork.sophia.domain.QuizQuestion
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
-import kotlinx.serialization.json.Json
 import java.util.concurrent.ConcurrentHashMap
 
+/**
+ * L'accès au catalogue de cours de la langue active, lu dans le snapshot du catalogue en ligne
+ * ([CatalogStore]) : le disque, sinon le pack de départ. L'API date des JSON embarqués par langue
+ * et n'a pas changé pour ses appelants ; aucune méthode synchrone n'attend le réseau.
+ *
+ * Les `cached*` ne lisent rien : elles répondent de la mémoire ou null, pour la composition.
+ */
 object ContentCatalog {
-    private val json = Json {
-        ignoreUnknownKeys = true
-        isLenient = true
-    }
-
     /**
      * Courses withheld from a language. Absent from the catalogue as if never bundled:
      * no feed card, no library row, no collection slot, no lookup by id. Switching
-     * language brings them back.
+     * language brings them back. Le serveur les exclut aussi du catalogue de la langue ;
+     * la liste locale reste pour la région du téléphone, qu'il ne connaît pas.
      */
     // Sensitive subjects, decided on 02/11/2026 after reader complaints (same lists as iOS).
     private val withheldCourseIds: Map<AppLanguage, Set<String>> = mapOf(
@@ -59,58 +63,65 @@ object ContentCatalog {
     fun isWithheld(language: AppLanguage, courseId: String): Boolean =
         courseId in withheldIds(language)
 
-    private val summaryCache = ConcurrentHashMap<String, List<CourseSummary>>()
-    private val summaryById = ConcurrentHashMap<String, Map<String, CourseSummary>>()
-    private val collectionCache = ConcurrentHashMap<String, List<LearningCollection>>()
-    private val singleCourseCache = ConcurrentHashMap<String, Course>()
-    private val quizCache = ConcurrentHashMap<String, List<QuizQuestion>>()
+    /**
+     * Le snapshot d'une langue vu par l'app : sans les cours retenus, les collections allégées
+     * d'autant. Reconstruit dès que [CatalogStore] remplace le snapshot (fichiers mis à jour).
+     */
+    private class LanguageView(
+        val snapshot: CatalogSnapshot,
+        val summaries: List<CourseSummary>,
+        val collections: List<LearningCollection>,
+    ) {
+        val summaryById: Map<String, CourseSummary> = summaries.associateBy { it.id }
+    }
+
+    private val views = ConcurrentHashMap<String, LanguageView>()
+
+    private fun view(language: AppLanguage): LanguageView = viewOf(language, CatalogStore.snapshot(language))
+
+    /** La vue en mémoire, ou null tant que le snapshot n'a pas été construit : ne lit rien. */
+    private fun cachedView(language: AppLanguage): LanguageView? =
+        CatalogStore.cachedSnapshot(language)?.let { viewOf(language, it) }
+
+    private fun viewOf(language: AppLanguage, snapshot: CatalogSnapshot): LanguageView {
+        views[language.code]?.takeIf { it.snapshot === snapshot }?.let { return it }
+        val withheld = withheldIds(language)
+        val summaries = if (withheld.isEmpty()) snapshot.summaries else snapshot.summaries.filterNot { it.id in withheld }
+        val collections = if (withheld.isEmpty()) {
+            snapshot.collections
+        } else {
+            snapshot.collections.map { collection ->
+                val kept = collection.courseIds.filterNot { it in withheld }
+                if (kept.size == collection.courseIds.size) collection else collection.copy(courseIds = kept)
+            }
+        }
+        return LanguageView(snapshot, summaries, collections).also { views[language.code] = it }
+    }
+
+    /** Un stub de lecteur : pas de leçons ni de questions, mais « a un quiz » d'après le catalogue. */
+    private fun stub(view: LanguageView, summary: CourseSummary): Course {
+        val quizCount = view.snapshot.entryById[summary.id]?.quizCount
+        return summary.toStub(quizAvailable = quizCount == null || quizCount > 0)
+    }
 
     fun cachedCourses(language: AppLanguage): List<Course>? = null
 
     fun cachedCollections(language: AppLanguage): List<LearningCollection>? =
-        collectionCache[language.code]
+        cachedView(language)?.collections
 
     fun cachedSummaries(language: AppLanguage): List<CourseSummary>? =
-        summaryCache[language.code]
+        cachedView(language)?.summaries
 
-    fun cachedCourse(language: AppLanguage, id: String): Course? =
-        singleCourseCache["${language.code}:$id"]
+    fun cachedCourse(language: AppLanguage, id: String): Course? = cachedStub(language, id)
 
-    /** In-memory stub from the ~80KB index. Never opens `courses.{lang}.json`. */
+    /** In-memory stub from the catalogue already loaded. Never reads a file. */
     fun cachedStub(language: AppLanguage, id: String): Course? {
-        cachedCourse(language, id)?.let { return it }
-        val byId = summaryById[language.code]
-            ?: summaryCache[language.code]?.associateBy { it.id }?.also {
-                summaryById[language.code] = it
-            }
-        return byId?.get(id)?.toStub()
+        val view = cachedView(language) ?: return null
+        return view.summaryById[id]?.let { stub(view, it) }
     }
 
-    fun summaries(context: Context, language: AppLanguage): List<CourseSummary> {
-        summaryCache[language.code]?.let { cached ->
-            summaryById.putIfAbsent(language.code, cached.associateBy { it.id })
-            return cached
-        }
-        val loaded = readSummaries(context, language)
-            .filterNot { isWithheld(language, it.id) }
-        summaryCache[language.code] = loaded
-        summaryById[language.code] = loaded.associateBy { it.id }
-        return loaded
-    }
-
-    private fun readSummaries(context: Context, language: AppLanguage): List<CourseSummary> {
-        val indexPath = "locales/course_index.${language.code}.json"
-        val catalogPath = "locales/courses.${language.code}.json"
-        return try {
-            context.assets.open(indexPath).use { CatalogStream.readSummaries(it) }
-        } catch (_: Exception) {
-            try {
-                context.assets.open(catalogPath).use { CatalogStream.readSummaries(it) }
-            } catch (_: Exception) {
-                emptyList()
-            }
-        }
-    }
+    /** Toutes les fiches de la langue. Construit le snapshot à la première demande (disque). */
+    fun summaries(context: Context, language: AppLanguage): List<CourseSummary> = view(language).summaries
 
     suspend fun summariesAsync(context: Context, language: AppLanguage): List<CourseSummary> =
         withContext(Dispatchers.IO) { summaries(context, language) }
@@ -119,7 +130,8 @@ object ContentCatalog {
      * Lightweight stubs only (no lessons/quiz). Feed/library never touch quiz JSON.
      */
     fun courses(context: Context, language: AppLanguage): List<Course> {
-        return summaries(context, language).map { it.toStub() }
+        val view = view(language)
+        return view.summaries.map { stub(view, it) }
     }
 
     suspend fun coursesAsync(context: Context, language: AppLanguage): List<Course> =
@@ -131,57 +143,23 @@ object ContentCatalog {
     suspend fun courseStubAsync(context: Context, language: AppLanguage, id: String): Course? =
         withContext(Dispatchers.IO) { course(context, language, id) }
 
-    fun collections(context: Context, language: AppLanguage): List<LearningCollection> {
-        return collectionCache.getOrPut(language.code) {
-            val loaded = loadList<LearningCollection>(context, "locales/collections.${language.code}.json")
-                .map { collection ->
-                    val kept = collection.courseIds.filterNot { isWithheld(language, it) }
-                    if (kept.size == collection.courseIds.size) collection else collection.copy(courseIds = kept)
-                }
-            if (language == AppLanguage.FRENCH || loaded.all { it.coverAssetName.isNotBlank() }) {
-                loaded
-            } else {
-                val covers = collectionCache.getOrPut(AppLanguage.FRENCH.code) {
-                    loadList(context, "locales/collections.fr.json")
-                }.associate { it.id to it.coverAssetName }
-                loaded.map { collection ->
-                    if (collection.coverAssetName.isBlank()) {
-                        collection.copy(coverAssetName = covers[collection.id].orEmpty())
-                    } else {
-                        collection
-                    }
-                }
-            }
-        }
-    }
+    fun collections(context: Context, language: AppLanguage): List<LearningCollection> = view(language).collections
 
     suspend fun collectionsAsync(context: Context, language: AppLanguage): List<LearningCollection> =
         withContext(Dispatchers.IO) { collections(context, language) }
 
     /**
-     * Reader metadata only. Quiz JSON (~1MB catalog) is loaded later via [quizQuestions].
+     * Reader metadata only. The quiz is loaded later via [quizQuestions].
      */
     fun course(context: Context, language: AppLanguage, id: String): Course? {
-        val key = "${language.code}:$id"
-        singleCourseCache[key]?.let { return it }
-        val loaded = summaries(context, language).firstOrNull { it.id == id }?.toStub()
-        if (loaded != null) singleCourseCache[key] = loaded
-        return loaded
+        val view = view(language)
+        return view.summaryById[id]?.let { stub(view, it) }
     }
 
+    /** Le quiz d'un cours : le fichier de la langue, sinon le paquet du cours. Lit le disque au besoin. */
     fun quizQuestions(context: Context, language: AppLanguage, id: String): List<QuizQuestion> {
         if (isWithheld(language, id)) return emptyList()
-        val key = "${language.code}:$id"
-        quizCache[key]?.let { return it }
-        val loaded = try {
-            context.assets.open("locales/courses.${language.code}.json").use { stream ->
-                CatalogStream.readQuizForCourse(stream, id)
-            }
-        } catch (_: Exception) {
-            emptyList()
-        }
-        quizCache[key] = loaded
-        return loaded
+        return CatalogStore.quiz(id, language)
     }
 
     suspend fun quizQuestionsAsync(
@@ -191,95 +169,49 @@ object ContentCatalog {
     ): List<QuizQuestion> = withContext(Dispatchers.IO) { quizQuestions(context, language, id) }
 
     /**
-     * Quizzes of [ids], from the cache where already read and in one pass over the
-     * catalogue for the rest. Withheld courses come back empty.
+     * Quizzes of [ids]. Withheld courses come back empty.
      */
     suspend fun quizQuestionsForCoursesAsync(
         context: Context,
         language: AppLanguage,
         ids: List<String>,
     ): Map<String, List<QuizQuestion>> = withContext(Dispatchers.IO) {
-        val result = HashMap<String, List<QuizQuestion>>()
-        val missing = HashSet<String>()
-        for (id in ids) {
-            if (isWithheld(language, id)) {
-                result[id] = emptyList()
-                continue
-            }
-            val cached = quizCache["${language.code}:$id"]
-            if (cached != null) result[id] = cached else missing += id
-        }
-        if (missing.isNotEmpty()) {
-            val loaded = try {
-                context.assets.open("locales/courses.${language.code}.json").use {
-                    CatalogStream.readQuizzesForCourses(it, missing)
-                }
-            } catch (_: Exception) {
-                emptyMap()
-            }
-            for (id in missing) {
-                val quiz = loaded[id].orEmpty()
-                quizCache["${language.code}:$id"] = quiz
-                result[id] = quiz
-            }
-        }
+        val result = HashMap<String, List<QuizQuestion>>(ids.size * 2)
+        for (id in ids) result[id] = quizQuestions(context, language, id)
         result
     }
 
-    private val quizCountCache = ConcurrentHashMap<String, Int>()
-
     /**
      * Quiz questions across the language's catalogue (withheld courses left out), or 0.
-     * Streams the whole `courses.{lang}.json` once per language, then answers from memory.
+     * Le catalogue porte le nombre de questions de chaque cours ; à défaut, le fichier des quiz.
      */
-    suspend fun quizQuestionCountAsync(context: Context, language: AppLanguage): Int {
-        quizCountCache[language.code]?.let { return it }
-        return withContext(Dispatchers.IO) {
-            try {
-                context.assets.open("locales/courses.${language.code}.json").use {
-                    CatalogStream.countQuizQuestions(it, withheldIds(language))
-                }.also { quizCountCache[language.code] = it }
-            } catch (_: Exception) {
-                0
+    suspend fun quizQuestionCountAsync(context: Context, language: AppLanguage): Int =
+        withContext(Dispatchers.IO) {
+            val view = view(language)
+            view.summaries.sumOf { summary ->
+                view.snapshot.entryById[summary.id]?.quizCount
+                    ?: view.snapshot.quizzes[summary.id]?.size
+                    ?: 0
             }
         }
-    }
 
+    /**
+     * Whether the course's structured content is on the phone (pack de départ or downloaded).
+     * Lit le disque à la première demande ; `CatalogStore.ensureContent` le télécharge sinon.
+     */
     fun hasStructuredContent(context: Context, language: AppLanguage, courseId: String): Boolean {
         if (isWithheld(language, courseId)) return false
-        return try {
-            context.assets.open("courses_v2/${language.code}/$courseId.json").close()
-            true
-        } catch (_: Exception) {
-            false
-        }
+        return CatalogStore.hasLocalContent(courseId, language)
     }
 
+    /** Le JSON V2 d'un cours en texte, s'il est sur le téléphone ; les lecteurs le parcourent eux-mêmes. */
     fun structuredContentJson(context: Context, language: AppLanguage, courseId: String): String? {
-        return try {
-            context.assets.open("courses_v2/${language.code}/$courseId.json")
-                .bufferedReader()
-                .use { it.readText() }
-        } catch (_: Exception) {
-            null
-        }
+        if (isWithheld(language, courseId)) return null
+        return CatalogStore.localContentJson(courseId, language)
     }
 
-    private inline fun <reified T> loadList(context: Context, path: String): List<T> {
-        return try {
-            val text = context.assets.open(path).bufferedReader().use { it.readText() }
-            json.decodeFromString<List<T>>(text)
-        } catch (_: Exception) {
-            emptyList()
-        }
-    }
-
+    /** Oublie les vues filtrées ; le snapshot lui-même appartient à [CatalogStore]. */
     fun clearCache() {
-        summaryCache.clear()
-        summaryById.clear()
-        collectionCache.clear()
-        singleCourseCache.clear()
-        quizCache.clear()
-        quizCountCache.clear()
+        views.clear()
     }
 }

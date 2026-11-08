@@ -17,6 +17,7 @@ import app.rork.sophia.data.SocialService
 import app.rork.sophia.data.TrialReminderScheduler
 import app.rork.sophia.data.TutorialFlags
 import app.rork.sophia.data.analytics.Analytics
+import app.rork.sophia.data.catalog.CatalogStore
 import coil.ImageLoader
 import coil.ImageLoaderFactory
 import coil.disk.DiskCache
@@ -48,6 +49,8 @@ class SophiaApplication : Application(), ImageLoaderFactory {
     override fun onCreate() {
         super.onCreate()
         instance = this
+        // Le catalogue en ligne a besoin du contexte (disque, assets, préférences) avant toute lecture.
+        CatalogStore.attach(this)
         languageManager = LanguageManager(this)
         progressManager = ProgressManager(this)
         onboardingStore = OnboardingStore(this)
@@ -65,7 +68,8 @@ class SophiaApplication : Application(), ImageLoaderFactory {
         Analytics.init(this, authService, languageManager, appScope)
         setUpAudio()
 
-        // Warm the slim course index (~70KB) + collections off the main thread.
+        // Construit le snapshot du catalogue (disque, sinon pack de départ) hors du fil principal,
+        // puis relit le manifeste en ligne s'il date de plus de `refresh_hours`.
         val lang = languageManager.current.value
         appScope.launch(Dispatchers.IO) {
             runCatching {
@@ -76,6 +80,7 @@ class SophiaApplication : Application(), ImageLoaderFactory {
                 ContentCatalog.collections(this@SophiaApplication, lang)
                 CourseCoverUrls.ensureMap(this@SophiaApplication)
             }
+            runCatching { CatalogStore.refreshIfNeeded(this@SophiaApplication, lang) }
         }
     }
 

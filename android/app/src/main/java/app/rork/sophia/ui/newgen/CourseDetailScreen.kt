@@ -28,6 +28,7 @@ import androidx.compose.material.icons.filled.Visibility
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -44,6 +45,7 @@ import app.rork.sophia.data.LocalCounters
 import app.rork.sophia.data.ProgressManager
 import app.rork.sophia.data.StringStore
 import app.rork.sophia.data.analytics.Analytics
+import app.rork.sophia.data.catalog.CatalogStore
 import app.rork.sophia.data.compactCount
 import app.rork.sophia.data.rememberCourseInfo
 import app.rork.sophia.data.rememberCourseSummaries
@@ -82,6 +84,12 @@ fun CourseDetailScreen(
     val summaries = rememberCourseSummaries(language)
     var showOriginal by remember { mutableStateOf(false) }
 
+    // L'accroche et l'introduction viennent du paquet du cours : s'il n'est pas encore sur le
+    // téléphone, on le télécharge ; `rememberCourseInfo` se relit quand il arrive.
+    LaunchedEffect(course.id, language) {
+        CatalogStore.ensureContent(course.id, language)
+    }
+
     val saved = course.id in progress.favoriteCourseIds
     val liked = course.id in progress.likedCourseIds
     val courseProgress = progress.courseProgress[course.id]
@@ -97,7 +105,8 @@ fun CourseDetailScreen(
     val ctaTitle = when {
         completed -> StringStore.text(context, "course.detail.reread", language)
         courseProgress != null -> {
-            val index = minOf(sectionCount, courseProgress.lastLessonIndex + 1)
+            // Borné par le nombre de sections : un cours raccourci en ligne ne dit pas « 7 sur 5 ».
+            val index = (courseProgress.lastLessonIndex + 1).coerceIn(1, sectionCount)
             StringStore.text(context, "common.resume", language) + " · " +
                 NewGenFormat.section(context, index, sectionCount, language)
         }

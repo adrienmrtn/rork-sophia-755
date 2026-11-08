@@ -2,6 +2,7 @@ package app.rork.sophia.data
 
 import android.content.Context
 import app.rork.sophia.AppConfig
+import app.rork.sophia.data.catalog.CatalogStore
 import kotlinx.serialization.json.Json
 import java.util.concurrent.ConcurrentHashMap
 
@@ -55,9 +56,17 @@ object CourseCoverUrls {
         }
     }
 
+    /**
+     * La couverture d'un cours : la carte embarquée d'abord, sinon le `cover` du catalogue en
+     * ligne (un cours publié après ce build). Le catalogue n'est consulté qu'en mémoire : cette
+     * méthode est appelée pendant la composition.
+     */
     fun url(context: Context, courseId: String): String? {
         ensureMap(context)
-        return publicUrl(slugByCourseId[courseId] ?: return null)
+        val slug = slugByCourseId[courseId]
+            ?: CatalogStore.coverSlug(courseId, LanguageManager.persisted(context))
+            ?: return null
+        return publicUrl(slug)
     }
 
     /** Cover for an inline `image` block, or null when the slug has no object. */

@@ -23,6 +23,7 @@ import androidx.compose.material.icons.filled.LightMode
 import androidx.compose.material.icons.filled.DarkMode
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.BrightnessMedium
+import androidx.compose.material.icons.filled.CloudDownload
 import androidx.compose.material.icons.filled.CreditCard
 import androidx.compose.material.icons.filled.DeleteForever
 import androidx.compose.material.icons.filled.Description
@@ -47,6 +48,7 @@ import androidx.compose.material3.SwitchDefaults
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -68,6 +70,7 @@ import app.rork.sophia.audio.CourseAudioDownloads
 import androidx.compose.material.icons.filled.Download
 import app.rork.sophia.data.FeatureFlags
 import app.rork.sophia.data.StringStore
+import app.rork.sophia.data.catalog.CatalogStore
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.UserProgress
 import app.rork.sophia.domain.locale
@@ -83,7 +86,9 @@ import app.rork.sophia.ui.theme.AppearancePreference
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.SophiaAppearance
 import app.rork.sophia.ui.theme.SophiaTypography
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import android.content.Intent
 import android.net.Uri
 import java.text.DateFormat
@@ -463,6 +468,28 @@ fun SettingsScreen(
                         }
                         FeatureFlags.setNavigationVariant(context, next)
                         navVariant = next
+                    },
+                )
+                // Le catalogue en ligne : d'où il vient, combien de cours sont sur le téléphone,
+                // quand il a été relu ; un tap force le rafraîchissement (manifeste + fichiers).
+                HorizontalDivider(color = DS.hairline)
+                val catalogVersion by CatalogStore.version.collectAsState()
+                var catalogSummary by remember { mutableStateOf("") }
+                LaunchedEffect(language, catalogVersion) {
+                    catalogSummary = withContext(Dispatchers.IO) { CatalogStore.debugSummary(language) }
+                }
+                SettingsRow(
+                    icon = Icons.Filled.CloudDownload,
+                    label = StringStore.text(context, "settings.debug.catalog", language),
+                    subtitle = catalogSummary.ifBlank {
+                        StringStore.text(context, "settings.debug.catalogRefresh", language)
+                    },
+                    showChevron = false,
+                    onClick = {
+                        scope.launch {
+                            CatalogStore.refresh(context.applicationContext, language, force = true)
+                            catalogSummary = withContext(Dispatchers.IO) { CatalogStore.debugSummary(language) }
+                        }
                     },
                 )
             }

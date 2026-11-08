@@ -54,6 +54,7 @@ import app.rork.sophia.data.DeckSkipStore
 import app.rork.sophia.data.ProgressManager
 import app.rork.sophia.data.StringStore
 import app.rork.sophia.data.analytics.Analytics
+import app.rork.sophia.data.catalog.CatalogStore
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.Campaign
 import app.rork.sophia.domain.CourseAffinity
@@ -135,6 +136,9 @@ fun HomeFeedScreen(
         deck = built
         deckReady = true
         CourseImagePrefetch.warmCovers(context.applicationContext, built.take(6).map { it.id })
+        // Les paquets des premières cartes se téléchargent en avance (huit au plus, comme sur
+        // iOS), pour que le lecteur s'ouvre sans attendre le réseau.
+        CatalogStore.prefetch(built.take(8).map { it.id }, language)
     }
 
     val activeCampaign = remember(deckReady) { CampaignStore.active(context.applicationContext).firstOrNull() }
