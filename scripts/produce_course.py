@@ -200,24 +200,59 @@ def detect_provider() -> str:
 _LENIENT = json.JSONDecoder(strict=False)  # tolère les retours à la ligne bruts dans les chaînes
 
 
+def escape_inner_quotes(text: str) -> str:
+    """Échappe les guillemets ASCII laissés nus à l'intérieur d'une chaîne JSON (la faute la plus
+    fréquente des modèles) : un guillemet suivi, espaces compris, d'autre chose que , } ] : ferme
+    rien et appartient au texte."""
+    out: list[str] = []
+    in_string = False
+    i, n = 0, len(text)
+    while i < n:
+        c = text[i]
+        if not in_string:
+            if c == '"':
+                in_string = True
+            out.append(c)
+        elif c == "\\":
+            out.append(text[i:i + 2])
+            i += 2
+            continue
+        elif c == '"':
+            j = i + 1
+            while j < n and text[j] in " \t\r\n":
+                j += 1
+            if j >= n or text[j] in ",}]:":
+                in_string = False
+                out.append(c)
+            else:
+                out.append('\\"')
+        else:
+            out.append(c)
+        i += 1
+    return "".join(out)
+
+
 def extract_json(text: str) -> dict:
     """Le premier objet JSON d'une réponse, avec ou sans clôture Markdown autour."""
     stripped = text.strip()
     stripped = re.sub(r"^```(?:json)?\s*", "", stripped)
     stripped = re.sub(r"\s*```$", "", stripped)
-    try:
-        value = _LENIENT.decode(stripped)
-        if isinstance(value, dict):
-            return value
-    except ValueError:
-        pass
     start, end = stripped.find("{"), stripped.rfind("}")
     if start < 0 or end <= start:
         raise ProductionError("réponse du modèle sans objet JSON")
-    value = _LENIENT.decode(stripped[start:end + 1])
-    if not isinstance(value, dict):
-        raise ProductionError("réponse du modèle : JSON qui n'est pas un objet")
-    return value
+    candidates = [stripped, stripped[start:end + 1]]
+    candidates += [escape_inner_quotes(c) for c in candidates]
+    last: Exception | None = None
+    for candidate in candidates:
+        try:
+            value = _LENIENT.decode(candidate)
+        except ValueError as e:
+            last = e
+            continue
+        if isinstance(value, dict):
+            return value
+        last = ProductionError("réponse du modèle : JSON qui n'est pas un objet")
+    raise ProductionError(f"réponse du modèle illisible : {last}")
 
 
 def merge_results(base: dict, patch: dict) -> dict:
