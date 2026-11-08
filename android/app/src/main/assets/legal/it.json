@@ -60,47 +60,52 @@
     {
       "id": "2",
       "title": "2. Dati raccolti",
-      "body": "Sophia è progettata secondo il principio della minimizzazione dei dati. L'Applicazione memorizza sul tuo dispositivo:\n\n- I tuoi progressi nei corsi e nei quiz\n- Le tue preferenze (interessi, obiettivi)\n- La tua serie (giorni consecutivi di utilizzo)\n- I tuoi corsi preferiti\n\nQuesti dati locali non vengono trasmessi ai nostri server.\n\nSe ci invii un feedback tramite il modulo nelle impostazioni, il tuo messaggio e, se fornito, il tuo indirizzo email vengono trasmessi a Formspree per consentirci di risponderti. Le informazioni tecniche (versione dell'app, lingua, dispositivo) vengono allegate automaticamente."
+      "body": "Sophia è progettata secondo il principio della minimizzazione dei dati. L'Applicazione memorizza sul tuo dispositivo:\n\n- I tuoi progressi nei corsi e nei quiz\n- Le tue preferenze (interessi, obiettivi)\n- La tua serie (giorni consecutivi di utilizzo)\n- I tuoi corsi preferiti\n\nQuesti dati locali non vengono trasmessi ai nostri server, salvo quanto descritto nelle sezioni «Dati di utilizzo» e «Conservazione dei dati».\n\nSe ci invii un feedback tramite il modulo nelle impostazioni, il tuo messaggio e, se fornito, il tuo indirizzo email vengono trasmessi a Formspree per consentirci di risponderti. Le informazioni tecniche (versione dell'app, lingua, dispositivo) vengono allegate automaticamente."
     },
     {
       "id": "3",
-      "title": "3. Dati di abbonamento",
-      "body": "Se sottoscrivi un abbonamento Premium, la transazione è gestita interamente da Google tramite il Play Store. Non abbiamo accesso alle tue informazioni di pagamento (numero della carta, indirizzo di fatturazione). Riceviamo solo la conferma del tuo stato di abbonamento tramite RevenueCat, il nostro partner per la gestione degli abbonamenti."
+      "title": "3. Dati di utilizzo",
+      "body": "Per capire quali corsi funzionano, migliorare i consigli del feed e, in prospettiva, remunerare i creatori di contenuti, l'Applicazione registra le tue azioni in Sophia e le trasmette ai nostri server Supabase (ospitati nell'Unione europea): schermate di onboarding percorse, schede mostrate, saltate o aperte, corsi aperti, sezioni lette e tempo trascorso, corsi completati, voci del glossario consultate, risposte ai quiz, corsi a cui hai messo «mi piace», offerte di abbonamento mostrate e acquisti avviati o conclusi, oltre al tuo stato di abbonamento (attivo, prova, a pagamento, data di scadenza) così come RevenueCat lo comunica all'Applicazione.\n\nOgni evento è associato al tuo account, a un identificativo di installazione proprio dell'Applicazione, alla versione dell'app, alla lingua scelta, alla piattaforma e al paese del tuo dispositivo. Non vengono raccolti dati di pagamento, contatti, posizione precisa né identificativi pubblicitari, e questi dati non vengono mai trasmessi a servizi di analisi o pubblicità di terze parti.\n\nGli eventi dettagliati vengono conservati per 90 giorni e poi eliminati; oltre tale termine restano solo statistiche aggregate per corso (numero di visualizzazioni, letture, quiz…), senza alcun collegamento con il tuo account. L'eliminazione del tuo account cancella immediatamente tutti i tuoi eventi."
     },
     {
       "id": "4",
-      "title": "4. RevenueCat",
-      "body": "Utilizziamo RevenueCat per gestire gli abbonamenti in-app. RevenueCat può raccogliere un identificatore anonimo del dispositivo per verificare il tuo stato di abbonamento. Non viene condivisa alcuna informazione personale identificabile. Per maggiori informazioni, consulta l'informativa sulla privacy di RevenueCat sul loro sito web."
+      "title": "4. Dati di abbonamento",
+      "body": "Se sottoscrivi un abbonamento Premium, la transazione è gestita interamente da Google tramite il Play Store. Non abbiamo accesso alle tue informazioni di pagamento (numero della carta, indirizzo di fatturazione). Riceviamo solo la conferma del tuo stato di abbonamento tramite RevenueCat, il nostro partner per la gestione degli abbonamenti."
     },
     {
       "id": "5",
-      "title": "5. Dati analitici di Google Play / Android",
-      "body": "L'Applicazione può inoltre avvalersi delle statistiche anonime fornite da Google (Play Console analytics). Questi dati sono aggregati e non consentono di identificarti personalmente. Puoi disattivare la condivisione dei dati analitici nelle impostazioni del tuo dispositivo Android (Google > Gestisci il tuo Account Google > Dati e privacy)."
+      "title": "5. RevenueCat",
+      "body": "Utilizziamo RevenueCat per gestire gli abbonamenti in-app. RevenueCat può raccogliere un identificatore anonimo del dispositivo per verificare il tuo stato di abbonamento. Non viene condivisa alcuna informazione personale identificabile. Per maggiori informazioni, consulta l'informativa sulla privacy di RevenueCat sul loro sito web."
     },
     {
       "id": "6",
-      "title": "6. Conservazione dei dati",
-      "body": "I dati sui tuoi progressi sono memorizzati in locale sul tuo dispositivo (memoria locale dell'app). Se crei un account (Google), vengono anche salvati in modo sicuro sui nostri server Supabase (ospitati nell'Unione europea) per consentire la sincronizzazione tra i tuoi dispositivi. La disinstallazione dell'Applicazione elimina i dati locali; l'eliminazione del tuo account cancella definitivamente i dati associati sul server."
+      "title": "6. Dati analitici di Google Play / Android",
+      "body": "L'Applicazione può inoltre avvalersi delle statistiche anonime fornite da Google (Play Console analytics). Questi dati sono aggregati e non consentono di identificarti personalmente. Puoi disattivare la condivisione dei dati analitici nelle impostazioni del tuo dispositivo Android (Google > Gestisci il tuo Account Google > Dati e privacy)."
     },
     {
       "id": "7",
-      "title": "7. Condivisione dei dati",
-      "body": "Non vendiamo, non affittiamo e non condividiamo alcun dato personale con terzi per finalità commerciali o pubblicitarie. I dati trasmessi si limitano a: Google e RevenueCat (abbonamenti), Formspree (feedback degli utenti inviati volontariamente dalle impostazioni)."
+      "title": "7. Conservazione dei dati",
+      "body": "I dati sui tuoi progressi sono memorizzati in locale sul tuo dispositivo (memoria locale dell'app). Se crei un account (Google), vengono anche salvati in modo sicuro sui nostri server Supabase (ospitati nell'Unione europea) per consentire la sincronizzazione tra i tuoi dispositivi. La disinstallazione dell'Applicazione elimina i dati locali; l'eliminazione del tuo account cancella definitivamente i dati associati sul server."
     },
     {
       "id": "8",
-      "title": "8. Diritti degli utenti",
-      "body": "Ai sensi del Regolamento generale sulla protezione dei dati (GDPR) e delle leggi applicabili, disponi dei seguenti diritti:\n\n- Diritto di accesso ai tuoi dati\n- Diritto di rettifica\n- Diritto alla cancellazione (ripristino nelle impostazioni)\n- Diritto alla portabilità\n- Diritto di opposizione\n\nPer esercitare questi diritti, contattaci all'indirizzo indicato sulla nostra pagina del Play Store."
+      "title": "8. Condivisione dei dati",
+      "body": "Non vendiamo, non affittiamo e non condividiamo alcun dato personale con terzi per finalità commerciali o pubblicitarie. I dati trasmessi si limitano a: Google e RevenueCat (abbonamenti), Formspree (feedback degli utenti inviati volontariamente dalle impostazioni)."
     },
     {
       "id": "9",
-      "title": "9. Protezione dei minori",
-      "body": "Sophia è un'applicazione educativa adatta a tutte le età. Non raccogliamo consapevolmente alcun dato personale di minori di 16 anni. L'Applicazione non contiene contenuti inappropriati."
+      "title": "9. Diritti degli utenti",
+      "body": "Ai sensi del Regolamento generale sulla protezione dei dati (GDPR) e delle leggi applicabili, disponi dei seguenti diritti:\n\n- Diritto di accesso ai tuoi dati\n- Diritto di rettifica\n- Diritto alla cancellazione (ripristino nelle impostazioni)\n- Diritto alla portabilità\n- Diritto di opposizione\n\nPer esercitare questi diritti, contattaci all'indirizzo indicato sulla nostra pagina del Play Store."
     },
     {
       "id": "10",
-      "title": "10. Modifiche",
-      "body": "Ci riserviamo il diritto di modificare la presente informativa in qualsiasi momento. Qualsiasi modifica sarà comunicata tramite un aggiornamento dell'Applicazione.\n\nUltimo aggiornamento: settembre 2026"
+      "title": "10. Protezione dei minori",
+      "body": "Sophia è un'applicazione educativa adatta a tutte le età. Non raccogliamo consapevolmente alcun dato personale di minori di 16 anni. L'Applicazione non contiene contenuti inappropriati."
+    },
+    {
+      "id": "11",
+      "title": "11. Modifiche",
+      "body": "Ci riserviamo il diritto di modificare la presente informativa in qualsiasi momento. Qualsiasi modifica sarà comunicata tramite un aggiornamento dell'Applicazione.\n\nUltimo aggiornamento: novembre 2026"
     }
   ]
 }

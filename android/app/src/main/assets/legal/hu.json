@@ -60,47 +60,52 @@
     {
       "id": "2",
       "title": "2. Összegyűjtött adatok",
-      "body": "A Sophia az adattakarékosság elvét követve készült. Az Alkalmazás a következőket tárolja az eszközödön:\n\n- A kurzusokban és a kvízekben elért előrehaladásod\n- A preferenciáid (érdeklődési körök, célok)\n- A sorozatod (egymást követő használati napok)\n- A kedvenc kurzusaid\n\nEzek a helyben tárolt adatok nem kerülnek a szervereinkre.\n\nHa a Beállításokban található űrlapon visszajelzést küldesz nekünk, az üzenetedet, valamint (ha megadod) az e-mail-címedet továbbítjuk a Formspree-nek, hogy válaszolni tudjunk. Az üzenethez automatikusan technikai információk is csatolódnak (az alkalmazás verziója, nyelv, eszköz)."
+      "body": "A Sophia az adattakarékosság elvét követve készült. Az Alkalmazás a következőket tárolja az eszközödön:\n\n- A kurzusokban és a kvízekben elért előrehaladásod\n- A preferenciáid (érdeklődési körök, célok)\n- A sorozatod (egymást követő használati napok)\n- A kedvenc kurzusaid\n\nEzek a helyben tárolt adatok nem kerülnek a szervereinkre, kivéve a „Használati adatok” és az „Adattárolás” szakaszban leírtakat.\n\nHa a Beállításokban található űrlapon visszajelzést küldesz nekünk, az üzenetedet, valamint (ha megadod) az e-mail-címedet továbbítjuk a Formspree-nek, hogy válaszolni tudjunk. Az üzenethez automatikusan technikai információk is csatolódnak (az alkalmazás verziója, nyelv, eszköz)."
     },
     {
       "id": "3",
-      "title": "3. Előfizetési adatok",
-      "body": "Ha Premium-előfizetést vásárolsz, a tranzakciót teljes egészében a Google bonyolítja le a Play Áruházon keresztül. Nem férünk hozzá a fizetési adataidhoz (kártyaszám, számlázási cím). Csak az előfizetésed állapotáról kapunk visszaigazolást a RevenueCaten, előfizetés-kezelő partnerünkön keresztül."
+      "title": "3. Használati adatok",
+      "body": "Annak érdekében, hogy megértsük, mely kurzusok működnek, javítsuk a hírfolyam ajánlásait, és idővel díjazhassuk a tartalomkészítőket, az Alkalmazás rögzíti a Sophiában végzett tevékenységeidet, és elküldi őket a Supabase-szervereinkre (amelyek az Európai Unióban találhatók): a végignézett bevezető képernyőket, a megjelenített, átugrott vagy megnyitott kártyákat, a megnyitott kurzusokat, az elolvasott szakaszokat és a rájuk fordított időt, a befejezett kurzusokat, a megtekintett szószedet-bejegyzéseket, a kvízválaszokat, a kedvelt kurzusokat, a megjelenített előfizetési ajánlatokat és az elkezdett vagy befejezett vásárlásokat, valamint az előfizetésed állapotát (aktív, próbaidőszak, fizetős, lejárati dátum) úgy, ahogy azt a RevenueCat az Alkalmazásnak jelenti.\n\nMinden esemény a fiókodhoz, az Alkalmazás saját telepítési azonosítójához, az alkalmazás verziójához, a választott nyelvhez, a platformhoz és az eszközöd országához kapcsolódik. Nem gyűjtünk fizetési adatokat, elérhetőségeket, pontos helyadatokat vagy hirdetési azonosítókat, és ezeket az adatokat soha nem adjuk át harmadik fél elemző- vagy hirdetési szolgáltatásának.\n\nA részletes eseményeket 90 napig őrizzük meg, majd töröljük; ezt követően csak kurzusonként összesített statisztikák maradnak meg (megtekintések, olvasások, kvízek száma…), a fiókodhoz nem köthető módon. A fiókod törlése azonnal törli az összes eseményedet."
     },
     {
       "id": "4",
-      "title": "4. RevenueCat",
-      "body": "Az alkalmazáson belüli előfizetések kezeléséhez a RevenueCatet használjuk. A RevenueCat névtelen eszközazonosítót gyűjthet, hogy ellenőrizze az előfizetésed állapotát. Személyazonosításra alkalmas adatok megosztására nem kerül sor. További információt a RevenueCat adatvédelmi szabályzatában találsz, a cég weboldalán."
+      "title": "4. Előfizetési adatok",
+      "body": "Ha Premium-előfizetést vásárolsz, a tranzakciót teljes egészében a Google bonyolítja le a Play Áruházon keresztül. Nem férünk hozzá a fizetési adataidhoz (kártyaszám, számlázási cím). Csak az előfizetésed állapotáról kapunk visszaigazolást a RevenueCaten, előfizetés-kezelő partnerünkön keresztül."
     },
     {
       "id": "5",
-      "title": "5. Google Play / Android analitikai adatok",
-      "body": "Az Alkalmazás a Google által biztosított névtelen statisztikákat (Play Console analytics) is felhasználhatja. Ezek az adatok összesítettek, így nem alkalmasak a személyes azonosításodra. Az elemzési adatok megosztását az Android-eszközöd beállításaiban kapcsolhatod ki (Google > Google-fiók kezelése > Adatok és adatvédelem)."
+      "title": "5. RevenueCat",
+      "body": "Az alkalmazáson belüli előfizetések kezeléséhez a RevenueCatet használjuk. A RevenueCat névtelen eszközazonosítót gyűjthet, hogy ellenőrizze az előfizetésed állapotát. Személyazonosításra alkalmas adatok megosztására nem kerül sor. További információt a RevenueCat adatvédelmi szabályzatában találsz, a cég weboldalán."
     },
     {
       "id": "6",
-      "title": "6. Adattárolás",
-      "body": "Az előrehaladási adataidat az Alkalmazás helyben, az eszközödön tárolja (helyi alkalmazástárhely). Ha fiókot hozol létre (Google-fiókkal), az adataidat biztonságosan a Supabase-szervereinkre is elmentjük (ezek az Európai Unióban működnek), hogy szinkronizálni lehessen őket az eszközeid között. Az Alkalmazás eltávolítása törli a helyi adatokat; a fiókod törlésével a hozzá tartozó adatok véglegesen törlődnek a szerverről."
+      "title": "6. Google Play / Android analitikai adatok",
+      "body": "Az Alkalmazás a Google által biztosított névtelen statisztikákat (Play Console analytics) is felhasználhatja. Ezek az adatok összesítettek, így nem alkalmasak a személyes azonosításodra. Az elemzési adatok megosztását az Android-eszközöd beállításaiban kapcsolhatod ki (Google > Google-fiók kezelése > Adatok és adatvédelem)."
     },
     {
       "id": "7",
-      "title": "7. Adatmegosztás",
-      "body": "Személyes adatot nem adunk el, nem adunk bérbe, és nem osztunk meg harmadik felekkel kereskedelmi vagy reklámcélból. Adatot kizárólag a következőknek továbbítunk: Google és RevenueCat (előfizetések), Formspree (a Beállításokból önkéntesen küldött felhasználói visszajelzések)."
+      "title": "7. Adattárolás",
+      "body": "Az előrehaladási adataidat az Alkalmazás helyben, az eszközödön tárolja (helyi alkalmazástárhely). Ha fiókot hozol létre (Google-fiókkal), az adataidat biztonságosan a Supabase-szervereinkre is elmentjük (ezek az Európai Unióban működnek), hogy szinkronizálni lehessen őket az eszközeid között. Az Alkalmazás eltávolítása törli a helyi adatokat; a fiókod törlésével a hozzá tartozó adatok véglegesen törlődnek a szerverről."
     },
     {
       "id": "8",
-      "title": "8. Felhasználói jogok",
-      "body": "Az általános adatvédelmi rendelet (GDPR) és a vonatkozó jogszabályok alapján a következő jogok illetnek meg:\n\n- Az adataidhoz való hozzáférés joga\n- Helyesbítéshez való jog\n- Törléshez való jog (alaphelyzetbe állítás a Beállításokban)\n- Adathordozhatósághoz való jog\n- Tiltakozáshoz való jog\n\nE jogok gyakorlásához a Play Áruház-oldalunkon megadott címen veheted fel velünk a kapcsolatot."
+      "title": "8. Adatmegosztás",
+      "body": "Személyes adatot nem adunk el, nem adunk bérbe, és nem osztunk meg harmadik felekkel kereskedelmi vagy reklámcélból. Adatot kizárólag a következőknek továbbítunk: Google és RevenueCat (előfizetések), Formspree (a Beállításokból önkéntesen küldött felhasználói visszajelzések)."
     },
     {
       "id": "9",
-      "title": "9. Kiskorúak védelme",
-      "body": "A Sophia minden korosztály számára elérhető oktatási alkalmazás. Tudatosan nem gyűjtünk személyes adatot 16 év alatti kiskorúaktól. Az Alkalmazás nem tartalmaz kifogásolható tartalmat."
+      "title": "9. Felhasználói jogok",
+      "body": "Az általános adatvédelmi rendelet (GDPR) és a vonatkozó jogszabályok alapján a következő jogok illetnek meg:\n\n- Az adataidhoz való hozzáférés joga\n- Helyesbítéshez való jog\n- Törléshez való jog (alaphelyzetbe állítás a Beállításokban)\n- Adathordozhatósághoz való jog\n- Tiltakozáshoz való jog\n\nE jogok gyakorlásához a Play Áruház-oldalunkon megadott címen veheted fel velünk a kapcsolatot."
     },
     {
       "id": "10",
-      "title": "10. Változások",
-      "body": "Fenntartjuk a jogot, hogy ezt a szabályzatot bármikor módosítsuk. A módosításokról az Alkalmazás frissítésén keresztül tájékoztatunk.\n\nUtolsó frissítés: 2026. szeptember"
+      "title": "10. Kiskorúak védelme",
+      "body": "A Sophia minden korosztály számára elérhető oktatási alkalmazás. Tudatosan nem gyűjtünk személyes adatot 16 év alatti kiskorúaktól. Az Alkalmazás nem tartalmaz kifogásolható tartalmat."
+    },
+    {
+      "id": "11",
+      "title": "11. Változások",
+      "body": "Fenntartjuk a jogot, hogy ezt a szabályzatot bármikor módosítsuk. A módosításokról az Alkalmazás frissítésén keresztül tájékoztatunk.\n\nUtolsó frissítés: 2026. november"
     }
   ]
 }

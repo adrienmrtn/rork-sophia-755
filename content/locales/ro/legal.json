@@ -60,47 +60,52 @@
     {
       "id": "2",
       "title": "2. Date colectate",
-      "body": "Sophia este concepută după principiul minimizării datelor. Aplicația stochează pe dispozitivul tău:\n\n- Progresul tău la cursuri și quizuri\n- Preferințele tale (interese, obiective)\n- Seria ta (zilele la rând în care ai folosit Aplicația)\n- Cursurile tale preferate\n\nAceste date locale nu sunt transmise către serverele noastre.\n\nDacă ne trimiți feedback prin formularul din Setări, mesajul tău și, dacă o completezi, adresa ta de e-mail sunt transmise către Formspree, ca să-ți putem răspunde. Informațiile tehnice (versiunea aplicației, limba, dispozitivul) sunt atașate automat."
+      "body": "Sophia este concepută după principiul minimizării datelor. Aplicația stochează pe dispozitivul tău:\n\n- Progresul tău la cursuri și quizuri\n- Preferințele tale (interese, obiective)\n- Seria ta (zilele la rând în care ai folosit Aplicația)\n- Cursurile tale preferate\n\nAceste date locale nu sunt transmise către serverele noastre, cu excepția celor descrise în secțiunile „Date de utilizare” și „Stocarea datelor”.\n\nDacă ne trimiți feedback prin formularul din Setări, mesajul tău și, dacă o completezi, adresa ta de e-mail sunt transmise către Formspree, ca să-ți putem răspunde. Informațiile tehnice (versiunea aplicației, limba, dispozitivul) sunt atașate automat."
     },
     {
       "id": "3",
-      "title": "3. Datele abonamentului",
-      "body": "Dacă îți faci un abonament Premium, tranzacția este gestionată în întregime de Apple, prin App Store. Nu avem acces la informațiile tale de plată (numărul cardului, adresa de facturare). Primim doar confirmarea stării abonamentului tău prin RevenueCat, partenerul nostru pentru gestionarea abonamentelor."
+      "title": "3. Date de utilizare",
+      "body": "Pentru a înțelege ce cursuri funcționează, a îmbunătăți recomandările din feed și, în timp, a remunera creatorii de conținut, Aplicația înregistrează acțiunile tale în Sophia și le transmite către serverele noastre Supabase (găzduite în Uniunea Europeană): ecranele de onboarding parcurse, cardurile afișate, sărite sau deschise, cursurile deschise, secțiunile citite și timpul petrecut, cursurile finalizate, intrările din glosar consultate, răspunsurile la quizuri, cursurile apreciate, ofertele de abonament afișate și achizițiile începute sau finalizate, precum și starea abonamentului tău (activ, perioadă de probă, plătit, data expirării) așa cum RevenueCat o comunică Aplicației.\n\nFiecare eveniment este asociat contului tău, unui identificator de instalare propriu Aplicației, versiunii aplicației, limbii alese, platformei (iOS sau Android) și țării dispozitivului tău. Nu sunt colectate date de plată, date de contact, locația precisă sau identificatori publicitari, iar aceste date nu sunt transmise niciodată unui serviciu de analiză sau de publicitate terț.\n\nEvenimentele detaliate sunt păstrate 90 de zile, apoi șterse; dincolo de acest termen se păstrează doar statistici agregate pe curs (număr de vizualizări, citiri, quizuri…), fără legătură cu contul tău. Ștergerea contului tău elimină imediat toate evenimentele tale."
     },
     {
       "id": "4",
-      "title": "4. RevenueCat",
-      "body": "Folosim RevenueCat pentru a gestiona abonamentele din aplicație. RevenueCat poate colecta un identificator anonim al dispozitivului pentru a verifica starea abonamentului tău. Nu este partajată nicio dată personală care te poate identifica. Pentru mai multe informații, consultă politica de confidențialitate publicată pe site-ul RevenueCat."
+      "title": "4. Datele abonamentului",
+      "body": "Dacă îți faci un abonament Premium, tranzacția este gestionată în întregime de Apple, prin App Store. Nu avem acces la informațiile tale de plată (numărul cardului, adresa de facturare). Primim doar confirmarea stării abonamentului tău prin RevenueCat, partenerul nostru pentru gestionarea abonamentelor."
     },
     {
       "id": "5",
-      "title": "5. Datele Apple Analytics",
-      "body": "Aplicația poate folosi și statisticile anonime furnizate de Apple (App Analytics). Aceste date sunt agregate și nu permit identificarea ta personală. Poți dezactiva partajarea datelor de analiză din setările iPhone-ului tău (Configurări > Confidențialitate > Analiză și îmbunătățiri)."
+      "title": "5. RevenueCat",
+      "body": "Folosim RevenueCat pentru a gestiona abonamentele din aplicație. RevenueCat poate colecta un identificator anonim al dispozitivului pentru a verifica starea abonamentului tău. Nu este partajată nicio dată personală care te poate identifica. Pentru mai multe informații, consultă politica de confidențialitate publicată pe site-ul RevenueCat."
     },
     {
       "id": "6",
-      "title": "6. Stocarea datelor",
-      "body": "Datele despre progresul tău sunt stocate local pe dispozitiv (UserDefaults). Dacă îți creezi un cont (Apple sau Google), ele sunt salvate în siguranță și pe serverele noastre Supabase (găzduite în Uniunea Europeană), pentru a permite sincronizarea între dispozitivele tale. Dezinstalarea Aplicației șterge datele locale; ștergerea contului elimină definitiv datele asociate de pe server."
+      "title": "6. Datele Apple Analytics",
+      "body": "Aplicația poate folosi și statisticile anonime furnizate de Apple (App Analytics). Aceste date sunt agregate și nu permit identificarea ta personală. Poți dezactiva partajarea datelor de analiză din setările iPhone-ului tău (Configurări > Confidențialitate > Analiză și îmbunătățiri)."
     },
     {
       "id": "7",
-      "title": "7. Partajarea datelor",
-      "body": "Nu vindem, nu închiriem și nu partajăm nicio dată personală cu terți în scopuri comerciale sau publicitare. Datele transmise se limitează la: Apple și RevenueCat (abonamente), Formspree (feedback trimis voluntar de utilizatori din Setări)."
+      "title": "7. Stocarea datelor",
+      "body": "Datele despre progresul tău sunt stocate local pe dispozitiv (UserDefaults). Dacă îți creezi un cont (Apple sau Google), ele sunt salvate în siguranță și pe serverele noastre Supabase (găzduite în Uniunea Europeană), pentru a permite sincronizarea între dispozitivele tale. Dezinstalarea Aplicației șterge datele locale; ștergerea contului elimină definitiv datele asociate de pe server."
     },
     {
       "id": "8",
-      "title": "8. Drepturile utilizatorilor",
-      "body": "În conformitate cu Regulamentul general privind protecția datelor (GDPR) și cu legislația aplicabilă, ai următoarele drepturi:\n\n- Dreptul de acces la datele tale\n- Dreptul la rectificare\n- Dreptul la ștergere (resetare din Setări)\n- Dreptul la portabilitatea datelor\n- Dreptul la opoziție\n\nPentru a-ți exercita aceste drepturi, contactează-ne la adresa indicată pe pagina noastră din App Store."
+      "title": "8. Partajarea datelor",
+      "body": "Nu vindem, nu închiriem și nu partajăm nicio dată personală cu terți în scopuri comerciale sau publicitare. Datele transmise se limitează la: Apple și RevenueCat (abonamente), Formspree (feedback trimis voluntar de utilizatori din Setări)."
     },
     {
       "id": "9",
-      "title": "9. Protecția minorilor",
-      "body": "Sophia este o aplicație educațională accesibilă tuturor vârstelor. Nu colectăm cu bună știință date personale de la minori sub 16 ani. Aplicația nu conține conținut nepotrivit."
+      "title": "9. Drepturile utilizatorilor",
+      "body": "În conformitate cu Regulamentul general privind protecția datelor (GDPR) și cu legislația aplicabilă, ai următoarele drepturi:\n\n- Dreptul de acces la datele tale\n- Dreptul la rectificare\n- Dreptul la ștergere (resetare din Setări)\n- Dreptul la portabilitatea datelor\n- Dreptul la opoziție\n\nPentru a-ți exercita aceste drepturi, contactează-ne la adresa indicată pe pagina noastră din App Store."
     },
     {
       "id": "10",
-      "title": "10. Modificări",
-      "body": "Ne rezervăm dreptul de a modifica oricând această politică. Orice modificare va fi comunicată printr-o actualizare a Aplicației.\n\nUltima actualizare: septembrie 2026"
+      "title": "10. Protecția minorilor",
+      "body": "Sophia este o aplicație educațională accesibilă tuturor vârstelor. Nu colectăm cu bună știință date personale de la minori sub 16 ani. Aplicația nu conține conținut nepotrivit."
+    },
+    {
+      "id": "11",
+      "title": "11. Modificări",
+      "body": "Ne rezervăm dreptul de a modifica oricând această politică. Orice modificare va fi comunicată printr-o actualizare a Aplicației.\n\nUltima actualizare: noiembrie 2026"
     }
   ]
 }

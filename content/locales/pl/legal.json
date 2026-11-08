@@ -60,47 +60,52 @@
     {
       "id": "2",
       "title": "2. Gromadzone dane",
-      "body": "Sophia została zaprojektowana zgodnie z zasadą minimalizacji danych. Aplikacja przechowuje na Twoim urządzeniu:\n\n- Twoje postępy w kursach i quizach\n- Twoje preferencje (zainteresowania, cele)\n- Twoją serię (kolejne dni korzystania z Aplikacji)\n- Twoje ulubione kursy\n\nTe dane lokalne nie są przesyłane na nasze serwery.\n\nJeśli wyślesz nam opinię za pomocą formularza w Ustawieniach, Twoja wiadomość oraz, jeśli go podasz, Twój adres e-mail zostaną przekazane do Formspree, abyśmy mogli Ci odpowiedzieć. Automatycznie dołączane są informacje techniczne (wersja aplikacji, język, urządzenie)."
+      "body": "Sophia została zaprojektowana zgodnie z zasadą minimalizacji danych. Aplikacja przechowuje na Twoim urządzeniu:\n\n- Twoje postępy w kursach i quizach\n- Twoje preferencje (zainteresowania, cele)\n- Twoją serię (kolejne dni korzystania z Aplikacji)\n- Twoje ulubione kursy\n\nTe dane lokalne nie są przesyłane na nasze serwery, z wyjątkiem przypadków opisanych w sekcjach „Dane o użytkowaniu” i „Przechowywanie danych”.\n\nJeśli wyślesz nam opinię za pomocą formularza w Ustawieniach, Twoja wiadomość oraz, jeśli go podasz, Twój adres e-mail zostaną przekazane do Formspree, abyśmy mogli Ci odpowiedzieć. Automatycznie dołączane są informacje techniczne (wersja aplikacji, język, urządzenie)."
     },
     {
       "id": "3",
-      "title": "3. Dane dotyczące subskrypcji",
-      "body": "Jeśli wykupisz subskrypcję Premium, transakcję w całości obsługuje Apple za pośrednictwem App Store. Nie mamy dostępu do Twoich danych płatniczych (numeru karty, adresu rozliczeniowego). Od RevenueCat, naszego partnera do zarządzania subskrypcjami, otrzymujemy wyłącznie potwierdzenie statusu Twojej subskrypcji."
+      "title": "3. Dane o użytkowaniu",
+      "body": "Aby zrozumieć, które kursy się sprawdzają, ulepszać rekomendacje w feedzie, a w przyszłości wynagradzać twórców treści, Aplikacja rejestruje Twoje działania w Sophii i przesyła je na nasze serwery Supabase (hostowane w Unii Europejskiej): przejrzane ekrany wprowadzenia, wyświetlone, pominięte lub otwarte karty, otwarte kursy, przeczytane sekcje i spędzony czas, ukończone kursy, otwarte hasła słowniczka, odpowiedzi w quizach, polubione kursy, wyświetlone oferty subskrypcji oraz rozpoczęte lub sfinalizowane zakupy, a także status Twojej subskrypcji (aktywna, okres próbny, płatna, data wygaśnięcia) w postaci, w jakiej RevenueCat przekazuje go Aplikacji.\n\nKażde zdarzenie jest powiązane z Twoim kontem, identyfikatorem instalacji właściwym dla Aplikacji, wersją aplikacji, wybranym językiem, platformą (iOS lub Android) i krajem Twojego urządzenia. Nie zbieramy żadnych danych płatniczych, danych kontaktowych, dokładnej lokalizacji ani identyfikatorów reklamowych, a dane te nigdy nie są przekazywane zewnętrznym usługom analitycznym ani reklamowym.\n\nSzczegółowe zdarzenia są przechowywane przez 90 dni, a następnie usuwane; po tym czasie zachowujemy wyłącznie zagregowane statystyki dla poszczególnych kursów (liczba wyświetleń, odczytów, quizów…), bez powiązania z Twoim kontem. Usunięcie konta natychmiast kasuje wszystkie Twoje zdarzenia."
     },
     {
       "id": "4",
-      "title": "4. RevenueCat",
-      "body": "Do zarządzania subskrypcjami w Aplikacji używamy RevenueCat. RevenueCat może zbierać anonimowy identyfikator urządzenia, aby sprawdzić status Twojej subskrypcji. Nie są udostępniane żadne dane umożliwiające ustalenie Twojej tożsamości. Więcej informacji znajdziesz w polityce prywatności RevenueCat na stronie internetowej tej firmy."
+      "title": "4. Dane dotyczące subskrypcji",
+      "body": "Jeśli wykupisz subskrypcję Premium, transakcję w całości obsługuje Apple za pośrednictwem App Store. Nie mamy dostępu do Twoich danych płatniczych (numeru karty, adresu rozliczeniowego). Od RevenueCat, naszego partnera do zarządzania subskrypcjami, otrzymujemy wyłącznie potwierdzenie statusu Twojej subskrypcji."
     },
     {
       "id": "5",
-      "title": "5. Dane z Apple Analytics",
-      "body": "Aplikacja może także korzystać z anonimowych statystyk udostępnianych przez Apple (App Analytics). Dane te mają charakter zbiorczy i nie pozwalają ustalić Twojej tożsamości. Udostępnianie danych analitycznych możesz wyłączyć w ustawieniach iPhone'a (Ustawienia > Prywatność i ochrona > Analizy i ulepszenia)."
+      "title": "5. RevenueCat",
+      "body": "Do zarządzania subskrypcjami w Aplikacji używamy RevenueCat. RevenueCat może zbierać anonimowy identyfikator urządzenia, aby sprawdzić status Twojej subskrypcji. Nie są udostępniane żadne dane umożliwiające ustalenie Twojej tożsamości. Więcej informacji znajdziesz w polityce prywatności RevenueCat na stronie internetowej tej firmy."
     },
     {
       "id": "6",
-      "title": "6. Przechowywanie danych",
-      "body": "Dane o Twoich postępach są przechowywane lokalnie na Twoim urządzeniu (UserDefaults). Jeśli utworzysz konto (Apple lub Google), są one również bezpiecznie zapisywane na naszych serwerach Supabase (hostowanych w Unii Europejskiej), aby umożliwić synchronizację między Twoimi urządzeniami. Odinstalowanie Aplikacji usuwa dane lokalne, a usunięcie konta trwale usuwa powiązane z nim dane z serwera."
+      "title": "6. Dane z Apple Analytics",
+      "body": "Aplikacja może także korzystać z anonimowych statystyk udostępnianych przez Apple (App Analytics). Dane te mają charakter zbiorczy i nie pozwalają ustalić Twojej tożsamości. Udostępnianie danych analitycznych możesz wyłączyć w ustawieniach iPhone'a (Ustawienia > Prywatność i ochrona > Analizy i ulepszenia)."
     },
     {
       "id": "7",
-      "title": "7. Udostępnianie danych",
-      "body": "Nie sprzedajemy, nie wynajmujemy ani nie udostępniamy żadnych danych osobowych podmiotom trzecim w celach handlowych ani reklamowych. Dane przekazujemy wyłącznie firmom Apple i RevenueCat (subskrypcje) oraz Formspree (opinie, które użytkownicy dobrowolnie wysyłają z Ustawień)."
+      "title": "7. Przechowywanie danych",
+      "body": "Dane o Twoich postępach są przechowywane lokalnie na Twoim urządzeniu (UserDefaults). Jeśli utworzysz konto (Apple lub Google), są one również bezpiecznie zapisywane na naszych serwerach Supabase (hostowanych w Unii Europejskiej), aby umożliwić synchronizację między Twoimi urządzeniami. Odinstalowanie Aplikacji usuwa dane lokalne, a usunięcie konta trwale usuwa powiązane z nim dane z serwera."
     },
     {
       "id": "8",
-      "title": "8. Prawa użytkownika",
-      "body": "Zgodnie z ogólnym rozporządzeniem o ochronie danych (RODO) i obowiązującymi przepisami przysługują Ci następujące prawa:\n\n- Prawo dostępu do swoich danych\n- Prawo do sprostowania danych\n- Prawo do usunięcia danych (resetowanie w Ustawieniach)\n- Prawo do przenoszenia danych\n- Prawo do sprzeciwu\n\nAby skorzystać z tych praw, skontaktuj się z nami pod adresem podanym na naszej stronie w App Store."
+      "title": "8. Udostępnianie danych",
+      "body": "Nie sprzedajemy, nie wynajmujemy ani nie udostępniamy żadnych danych osobowych podmiotom trzecim w celach handlowych ani reklamowych. Dane przekazujemy wyłącznie firmom Apple i RevenueCat (subskrypcje) oraz Formspree (opinie, które użytkownicy dobrowolnie wysyłają z Ustawień)."
     },
     {
       "id": "9",
-      "title": "9. Ochrona nieletnich",
-      "body": "Sophia to aplikacja edukacyjna odpowiednia dla wszystkich grup wiekowych. Nie zbieramy świadomie żadnych danych osobowych osób poniżej 16 lat. Aplikacja nie zawiera żadnych nieodpowiednich treści."
+      "title": "9. Prawa użytkownika",
+      "body": "Zgodnie z ogólnym rozporządzeniem o ochronie danych (RODO) i obowiązującymi przepisami przysługują Ci następujące prawa:\n\n- Prawo dostępu do swoich danych\n- Prawo do sprostowania danych\n- Prawo do usunięcia danych (resetowanie w Ustawieniach)\n- Prawo do przenoszenia danych\n- Prawo do sprzeciwu\n\nAby skorzystać z tych praw, skontaktuj się z nami pod adresem podanym na naszej stronie w App Store."
     },
     {
       "id": "10",
-      "title": "10. Zmiany",
-      "body": "Zastrzegamy sobie prawo do zmiany niniejszej Polityki prywatności w dowolnym momencie. O wszelkich zmianach poinformujemy w aktualizacji Aplikacji.\n\nOstatnia aktualizacja: wrzesień 2026 r."
+      "title": "10. Ochrona nieletnich",
+      "body": "Sophia to aplikacja edukacyjna odpowiednia dla wszystkich grup wiekowych. Nie zbieramy świadomie żadnych danych osobowych osób poniżej 16 lat. Aplikacja nie zawiera żadnych nieodpowiednich treści."
+    },
+    {
+      "id": "11",
+      "title": "11. Zmiany",
+      "body": "Zastrzegamy sobie prawo do zmiany niniejszej Polityki prywatności w dowolnym momencie. O wszelkich zmianach poinformujemy w aktualizacji Aplikacji.\n\nOstatnia aktualizacja: listopad 2026 r."
     }
   ]
 }

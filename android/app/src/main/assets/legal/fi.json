@@ -60,47 +60,52 @@
     {
       "id": "2",
       "title": "2. Kerätyt tiedot",
-      "body": "Sophia on suunniteltu tietojen minimoinnin periaatteen mukaisesti. Sovellus tallentaa laitteellesi:\n\n- Edistymisesi kursseissa ja visoissa\n- Mieltymyksesi (kiinnostuksen kohteet, tavoitteet)\n- Päiväputkesi (peräkkäiset käyttöpäivät)\n- Suosikkikurssisi\n\nNäitä laitteelle tallennettuja tietoja ei lähetetä palvelimillemme.\n\nJos lähetät meille palautetta asetusten palautelomakkeella, viestisi ja sähköpostiosoitteesi, jos annat sen, välitetään Formspreelle, jotta voimme vastata sinulle. Viestiin liitetään automaattisesti teknisiä tietoja (sovelluksen versio, kieli, laite)."
+      "body": "Sophia on suunniteltu tietojen minimoinnin periaatteen mukaisesti. Sovellus tallentaa laitteellesi:\n\n- Edistymisesi kursseissa ja visoissa\n- Mieltymyksesi (kiinnostuksen kohteet, tavoitteet)\n- Päiväputkesi (peräkkäiset käyttöpäivät)\n- Suosikkikurssisi\n\nNäitä laitteelle tallennettuja tietoja ei lähetetä palvelimillemme, lukuun ottamatta sitä, mitä kuvataan osioissa ”Käyttötiedot” ja ”Tietojen tallennus”.\n\nJos lähetät meille palautetta asetusten palautelomakkeella, viestisi ja sähköpostiosoitteesi, jos annat sen, välitetään Formspreelle, jotta voimme vastata sinulle. Viestiin liitetään automaattisesti teknisiä tietoja (sovelluksen versio, kieli, laite)."
     },
     {
       "id": "3",
-      "title": "3. Tilaustiedot",
-      "body": "Jos otat Premium-tilauksen, maksutapahtuman hoitaa kokonaan Google Play Storen kautta. Meillä ei ole pääsyä maksutietoihisi (kortin numero, laskutusosoite). Saamme ainoastaan vahvistuksen tilauksesi tilasta tilaustenhallintakumppanimme RevenueCatin kautta."
+      "title": "3. Käyttötiedot",
+      "body": "Jotta ymmärtäisimme, mitkä kurssit toimivat, voisimme parantaa syötteen suosituksia ja ajan myötä palkita sisällöntekijöitä, Sovellus tallentaa toimintasi Sophiassa ja lähettää ne Supabase-palvelimillemme (jotka sijaitsevat Euroopan unionissa): läpikäydyt perehdytysnäkymät, näytetyt, ohitetut tai avatut kortit, avatut kurssit, luetut osiot ja niihin käytetty aika, suoritetut kurssit, avatut sanastomerkinnät, visavastaukset, kurssit joista olet tykännyt, näytetyt tilaustarjoukset sekä aloitetut tai loppuun viedyt ostot, samoin kuin tilaustilasi (aktiivinen, kokeilujakso, maksullinen, päättymispäivä) sellaisena kuin RevenueCat ilmoittaa sen Sovellukselle.\n\nJokainen tapahtuma liitetään tiliisi, Sovelluksen omaan asennustunnisteeseen, sovelluksen versioon, valittuun kieleen, alustaan ja laitteesi maahan. Maksutietoja, yhteystietoja, tarkkaa sijaintia tai mainostunnisteita ei kerätä, eikä näitä tietoja koskaan välitetä kolmannen osapuolen analytiikka- tai mainospalvelulle.\n\nYksityiskohtaiset tapahtumat säilytetään 90 päivää ja poistetaan sen jälkeen; sen jälkeen säilytetään vain kurssikohtaisia koostetilastoja (katselu-, luku- ja visamäärät…), joita ei yhdistetä tiliisi. Tilisi poistaminen poistaa kaikki tapahtumasi välittömästi."
     },
     {
       "id": "4",
-      "title": "4. RevenueCat",
-      "body": "Käytämme RevenueCatia sovelluksen sisäisten tilausten hallintaan. RevenueCat voi kerätä anonyymin laitetunnisteen tarkistaakseen tilauksesi tilan. Tunnistettavia henkilötietoja ei jaeta. Lisätietoja saat RevenueCatin tietosuojakäytännöstä sen verkkosivustolla."
+      "title": "4. Tilaustiedot",
+      "body": "Jos otat Premium-tilauksen, maksutapahtuman hoitaa kokonaan Google Play Storen kautta. Meillä ei ole pääsyä maksutietoihisi (kortin numero, laskutusosoite). Saamme ainoastaan vahvistuksen tilauksesi tilasta tilaustenhallintakumppanimme RevenueCatin kautta."
     },
     {
       "id": "5",
-      "title": "5. Google Playn ja Androidin analytiikkatiedot",
-      "body": "Sovellus voi lisäksi hyödyntää Googlen tarjoamia anonyymejä tilastoja (Play Console -analytiikka). Tiedot ovat koostettuja, eikä niiden perusteella voida tunnistaa sinua henkilökohtaisesti. Voit poistaa analytiikkatietojen jakamisen käytöstä Android-laitteesi asetuksista (Google > Hallinnoi Google-tiliäsi > Data ja yksityisyys)."
+      "title": "5. RevenueCat",
+      "body": "Käytämme RevenueCatia sovelluksen sisäisten tilausten hallintaan. RevenueCat voi kerätä anonyymin laitetunnisteen tarkistaakseen tilauksesi tilan. Tunnistettavia henkilötietoja ei jaeta. Lisätietoja saat RevenueCatin tietosuojakäytännöstä sen verkkosivustolla."
     },
     {
       "id": "6",
-      "title": "6. Tietojen tallennus",
-      "body": "Edistymistietosi tallennetaan paikallisesti laitteellesi (sovelluksen paikallinen tallennustila). Jos luot tilin (Google), tiedot varmuuskopioidaan lisäksi turvallisesti Supabase-palvelimillemme (palvelimet sijaitsevat Euroopan unionissa), jotta ne voidaan synkronoida laitteidesi välillä. Sovelluksen poistaminen poistaa paikalliset tiedot; tilisi poistaminen poistaa siihen liittyvät tiedot palvelimelta pysyvästi."
+      "title": "6. Google Playn ja Androidin analytiikkatiedot",
+      "body": "Sovellus voi lisäksi hyödyntää Googlen tarjoamia anonyymejä tilastoja (Play Console -analytiikka). Tiedot ovat koostettuja, eikä niiden perusteella voida tunnistaa sinua henkilökohtaisesti. Voit poistaa analytiikkatietojen jakamisen käytöstä Android-laitteesi asetuksista (Google > Hallinnoi Google-tiliäsi > Data ja yksityisyys)."
     },
     {
       "id": "7",
-      "title": "7. Tietojen jakaminen",
-      "body": "Emme myy, vuokraa emmekä jaa henkilötietoja kolmansille osapuolille kaupallisiin tai mainostarkoituksiin. Tietoja välitetään ainoastaan seuraaville: Google ja RevenueCat (tilaukset) sekä Formspree (asetuksista vapaaehtoisesti lähetetty käyttäjäpalaute)."
+      "title": "7. Tietojen tallennus",
+      "body": "Edistymistietosi tallennetaan paikallisesti laitteellesi (sovelluksen paikallinen tallennustila). Jos luot tilin (Google), tiedot varmuuskopioidaan lisäksi turvallisesti Supabase-palvelimillemme (palvelimet sijaitsevat Euroopan unionissa), jotta ne voidaan synkronoida laitteidesi välillä. Sovelluksen poistaminen poistaa paikalliset tiedot; tilisi poistaminen poistaa siihen liittyvät tiedot palvelimelta pysyvästi."
     },
     {
       "id": "8",
-      "title": "8. Käyttäjän oikeudet",
-      "body": "Yleisen tietosuoja-asetuksen (GDPR) ja sovellettavien lakien mukaisesti sinulla on seuraavat oikeudet:\n\n- Oikeus saada pääsy tietoihisi\n- Oikeus tietojen oikaisemiseen\n- Oikeus tietojen poistamiseen (nollaus asetuksista)\n- Oikeus siirtää tiedot järjestelmästä toiseen\n- Oikeus vastustaa tietojen käsittelyä\n\nJos haluat käyttää näitä oikeuksia, ota meihin yhteyttä Play Store -sivullamme ilmoitettuun osoitteeseen."
+      "title": "8. Tietojen jakaminen",
+      "body": "Emme myy, vuokraa emmekä jaa henkilötietoja kolmansille osapuolille kaupallisiin tai mainostarkoituksiin. Tietoja välitetään ainoastaan seuraaville: Google ja RevenueCat (tilaukset) sekä Formspree (asetuksista vapaaehtoisesti lähetetty käyttäjäpalaute)."
     },
     {
       "id": "9",
-      "title": "9. Alaikäisten suojelu",
-      "body": "Sophia on kaikenikäisille sopiva opetussovellus. Emme tietoisesti kerää henkilötietoja alle 16-vuotiailta alaikäisiltä. Sovellus ei sisällä sopimatonta sisältöä."
+      "title": "9. Käyttäjän oikeudet",
+      "body": "Yleisen tietosuoja-asetuksen (GDPR) ja sovellettavien lakien mukaisesti sinulla on seuraavat oikeudet:\n\n- Oikeus saada pääsy tietoihisi\n- Oikeus tietojen oikaisemiseen\n- Oikeus tietojen poistamiseen (nollaus asetuksista)\n- Oikeus siirtää tiedot järjestelmästä toiseen\n- Oikeus vastustaa tietojen käsittelyä\n\nJos haluat käyttää näitä oikeuksia, ota meihin yhteyttä Play Store -sivullamme ilmoitettuun osoitteeseen."
     },
     {
       "id": "10",
-      "title": "10. Muutokset",
-      "body": "Pidätämme oikeuden muuttaa tätä tietosuojakäytäntöä milloin tahansa. Muutoksista ilmoitetaan sovelluksen päivityksen yhteydessä.\n\nViimeksi päivitetty: syyskuu 2026"
+      "title": "10. Alaikäisten suojelu",
+      "body": "Sophia on kaikenikäisille sopiva opetussovellus. Emme tietoisesti kerää henkilötietoja alle 16-vuotiailta alaikäisiltä. Sovellus ei sisällä sopimatonta sisältöä."
+    },
+    {
+      "id": "11",
+      "title": "11. Muutokset",
+      "body": "Pidätämme oikeuden muuttaa tätä tietosuojakäytäntöä milloin tahansa. Muutoksista ilmoitetaan sovelluksen päivityksen yhteydessä.\n\nViimeksi päivitetty: marraskuu 2026"
     }
   ]
 }

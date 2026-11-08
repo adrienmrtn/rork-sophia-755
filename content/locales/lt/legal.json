@@ -60,47 +60,52 @@
     {
       "id": "2",
       "title": "2. Renkami duomenys",
-      "body": "Sophia kuriama laikantis duomenų kiekio mažinimo principo. Programėlė tavo įrenginyje saugo:\n\n- tavo kursų ir viktorinų pažangą\n- tavo pasirinkimus (interesus, tikslus)\n- tavo dienų seriją (iš eilės einančias naudojimosi dienas)\n- tavo mėgstamus kursus\n\nŠie vietiniai duomenys į mūsų serverius neperduodami.\n\nJei atsiliepimą mums siunti per nustatymų formą, tavo žinutė ir, jei jį nurodai, el. pašto adresas perduodami „Formspree“, kad galėtume tau atsakyti. Techninė informacija (programėlės versija, kalba, įrenginys) pridedama automatiškai."
+      "body": "Sophia kuriama laikantis duomenų kiekio mažinimo principo. Programėlė tavo įrenginyje saugo:\n\n- tavo kursų ir viktorinų pažangą\n- tavo pasirinkimus (interesus, tikslus)\n- tavo dienų seriją (iš eilės einančias naudojimosi dienas)\n- tavo mėgstamus kursus\n\nŠie vietiniai duomenys į mūsų serverius neperduodami, išskyrus tai, kas aprašyta skyriuose „Naudojimo duomenys“ ir „Duomenų saugojimas“.\n\nJei atsiliepimą mums siunti per nustatymų formą, tavo žinutė ir, jei jį nurodai, el. pašto adresas perduodami „Formspree“, kad galėtume tau atsakyti. Techninė informacija (programėlės versija, kalba, įrenginys) pridedama automatiškai."
     },
     {
       "id": "3",
-      "title": "3. Prenumeratos duomenys",
-      "body": "Jei užsisakai Premium prenumeratą, sandorį visiškai tvarko Apple per „App Store“ parduotuvę. Mes neturime prieigos prie tavo mokėjimo informacijos (kortelės numerio, atsiskaitymo adreso). Per „RevenueCat“, mūsų prenumeratų valdymo partnerį, gauname tik tavo prenumeratos būsenos patvirtinimą."
+      "title": "3. Naudojimo duomenys",
+      "body": "Kad suprastume, kurie kursai veikia, pagerintume srauto rekomendacijas ir ilgainiui galėtume atlyginti turinio kūrėjams, Programėlė registruoja tavo veiksmus Sophia ir perduoda juos į mūsų Supabase serverius (esančius Europos Sąjungoje): peržiūrėtus pradžios ekranus, parodytas, praleistas ar atidarytas korteles, atidarytus kursus, perskaitytas dalis ir joms skirtą laiką, baigtus kursus, peržiūrėtus žodynėlio įrašus, viktorinų atsakymus, pamėgtus kursus, parodytus prenumeratos pasiūlymus ir pradėtus ar užbaigtus pirkimus, taip pat tavo prenumeratos būseną (aktyvi, bandomoji, mokama, galiojimo pabaigos data), kokią RevenueCat praneša Programėlei.\n\nKiekvienas įvykis susiejamas su tavo paskyra, tik Programėlei būdingu įdiegimo identifikatoriumi, programėlės versija, pasirinkta kalba, platforma (iOS arba Android) ir tavo įrenginio šalimi. Nerenkami jokie mokėjimo duomenys, kontaktai, tiksli buvimo vieta ar reklamos identifikatoriai, o šie duomenys niekada neperduodami trečiųjų šalių analitikos ar reklamos paslaugoms.\n\nIšsamūs įvykiai saugomi 90 dienų, po to ištrinami; vėliau saugoma tik pagal kursus apibendrinta statistika (peržiūrų, skaitymų, viktorinų skaičius…), nesusieta su tavo paskyra. Ištrynus paskyrą, visi tavo įvykiai iš karto ištrinami."
     },
     {
       "id": "4",
-      "title": "4. RevenueCat",
-      "body": "Programėlės viduje pirktoms prenumeratoms valdyti naudojame „RevenueCat“. Tavo prenumeratos būsenai patikrinti „RevenueCat“ gali rinkti anoniminį įrenginio identifikatorių. Jokie asmenį identifikuojantys duomenys nepaskelbiami. Daugiau informacijos rasi „RevenueCat“ privatumo politikoje jų svetainėje."
+      "title": "4. Prenumeratos duomenys",
+      "body": "Jei užsisakai Premium prenumeratą, sandorį visiškai tvarko Apple per „App Store“ parduotuvę. Mes neturime prieigos prie tavo mokėjimo informacijos (kortelės numerio, atsiskaitymo adreso). Per „RevenueCat“, mūsų prenumeratų valdymo partnerį, gauname tik tavo prenumeratos būsenos patvirtinimą."
     },
     {
       "id": "5",
-      "title": "5. „Apple Analytics“ duomenys",
-      "body": "Programėlė taip pat gali naudotis anoniminiais Apple teikiamais statistikos duomenimis („App Analytics“). Šie duomenys yra sudėtiniai ir neleidžia tavęs asmeniškai identifikuoti. Dalijimąsi analitika gali išjungti savo „iPhone“ nustatymuose (Nustatymai > Privatumas ir sauga > Analizė ir patobulinimai)."
+      "title": "5. RevenueCat",
+      "body": "Programėlės viduje pirktoms prenumeratoms valdyti naudojame „RevenueCat“. Tavo prenumeratos būsenai patikrinti „RevenueCat“ gali rinkti anoniminį įrenginio identifikatorių. Jokie asmenį identifikuojantys duomenys nepaskelbiami. Daugiau informacijos rasi „RevenueCat“ privatumo politikoje jų svetainėje."
     },
     {
       "id": "6",
-      "title": "6. Duomenų saugojimas",
-      "body": "Tavo pažangos duomenys saugomi vietoje, tavo įrenginyje (UserDefaults). Jei susikuri paskyrą (per Apple arba Google), jie taip pat saugiai išsaugomi mūsų „Supabase“ serveriuose (Europos Sąjungoje), kad galėtum sinchronizuoti įrenginius. Pašalinus Programėlę, vietiniai duomenys ištrinami; ištrynus paskyrą, su ja susiję duomenys serveryje ištrinami negrįžtamai."
+      "title": "6. „Apple Analytics“ duomenys",
+      "body": "Programėlė taip pat gali naudotis anoniminiais Apple teikiamais statistikos duomenimis („App Analytics“). Šie duomenys yra sudėtiniai ir neleidžia tavęs asmeniškai identifikuoti. Dalijimąsi analitika gali išjungti savo „iPhone“ nustatymuose (Nustatymai > Privatumas ir sauga > Analizė ir patobulinimai)."
     },
     {
       "id": "7",
-      "title": "7. Duomenų dalijimasis",
-      "body": "Mes neparduodame, neišnuomojame ir su trečiosiomis šalimis nesidaliname jokiais asmens duomenimis komerciniais ar reklamos tikslais. Duomenys perduodami tik: Apple ir „RevenueCat“ (prenumeratos), „Formspree“ (atsiliepimai, kuriuos naudotojai savanoriškai siunčia per nustatymus)."
+      "title": "7. Duomenų saugojimas",
+      "body": "Tavo pažangos duomenys saugomi vietoje, tavo įrenginyje (UserDefaults). Jei susikuri paskyrą (per Apple arba Google), jie taip pat saugiai išsaugomi mūsų „Supabase“ serveriuose (Europos Sąjungoje), kad galėtum sinchronizuoti įrenginius. Pašalinus Programėlę, vietiniai duomenys ištrinami; ištrynus paskyrą, su ja susiję duomenys serveryje ištrinami negrįžtamai."
     },
     {
       "id": "8",
-      "title": "8. Naudotojų teisės",
-      "body": "Pagal Bendrąjį duomenų apsaugos reglamentą (BDAR) ir taikomus teisės aktus turi šias teises:\n\n- teisę susipažinti su savo duomenimis\n- teisę reikalauti ištaisyti duomenis\n- teisę reikalauti ištrinti duomenis (atstatymas nustatymuose)\n- teisę į duomenų perkeliamumą\n- teisę nesutikti, kad duomenys būtų tvarkomi\n\nŠioms teisėms įgyvendinti susisiek su mumis adresu, nurodytu mūsų „App Store“ puslapyje."
+      "title": "8. Duomenų dalijimasis",
+      "body": "Mes neparduodame, neišnuomojame ir su trečiosiomis šalimis nesidaliname jokiais asmens duomenimis komerciniais ar reklamos tikslais. Duomenys perduodami tik: Apple ir „RevenueCat“ (prenumeratos), „Formspree“ (atsiliepimai, kuriuos naudotojai savanoriškai siunčia per nustatymus)."
     },
     {
       "id": "9",
-      "title": "9. Nepilnamečių apsauga",
-      "body": "Sophia yra mokomoji programėlė, prieinama visų amžiaus grupių žmonėms. Sąmoningai nerenkame jokių asmens duomenų iš jaunesnių nei 16 metų nepilnamečių. Programėlėje nėra netinkamo turinio."
+      "title": "9. Naudotojų teisės",
+      "body": "Pagal Bendrąjį duomenų apsaugos reglamentą (BDAR) ir taikomus teisės aktus turi šias teises:\n\n- teisę susipažinti su savo duomenimis\n- teisę reikalauti ištaisyti duomenis\n- teisę reikalauti ištrinti duomenis (atstatymas nustatymuose)\n- teisę į duomenų perkeliamumą\n- teisę nesutikti, kad duomenys būtų tvarkomi\n\nŠioms teisėms įgyvendinti susisiek su mumis adresu, nurodytu mūsų „App Store“ puslapyje."
     },
     {
       "id": "10",
-      "title": "10. Pakeitimai",
-      "body": "Pasiliekame teisę bet kada keisti šią politiką. Apie bet kokį pakeitimą pranešime Programėlės atnaujinimu.\n\nPaskutinį kartą atnaujinta: 2026 m. rugsėjis"
+      "title": "10. Nepilnamečių apsauga",
+      "body": "Sophia yra mokomoji programėlė, prieinama visų amžiaus grupių žmonėms. Sąmoningai nerenkame jokių asmens duomenų iš jaunesnių nei 16 metų nepilnamečių. Programėlėje nėra netinkamo turinio."
+    },
+    {
+      "id": "11",
+      "title": "11. Pakeitimai",
+      "body": "Pasiliekame teisę bet kada keisti šią politiką. Apie bet kokį pakeitimą pranešime Programėlės atnaujinimu.\n\nPaskutinį kartą atnaujinta: 2026 m. lapkritis"
     }
   ]
 }

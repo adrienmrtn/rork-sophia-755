@@ -60,47 +60,52 @@
     {
       "id": "2",
       "title": "2. Erhobene Daten",
-      "body": "Sophia ist nach dem Grundsatz der Datenminimierung konzipiert. Die App speichert auf deinem Gerät:\n\n- Deinen Fortschritt in Kursen und Quiz\n- Deine Präferenzen (Interessen, Ziele)\n- Deine Serie (aufeinanderfolgende Nutzungstage)\n- Deine Lieblingskurse\n\nDiese lokalen Daten werden nicht an unsere Server übertragen.\n\nWenn du uns über das Formular in den Einstellungen Feedback sendest, werden deine Nachricht und, sofern angegeben, deine E-Mail-Adresse an Formspree übermittelt, damit wir dir antworten können. Technische Informationen (App-Version, Sprache, Gerät) werden automatisch beigefügt."
+      "body": "Sophia ist nach dem Grundsatz der Datenminimierung konzipiert. Die App speichert auf deinem Gerät:\n\n- Deinen Fortschritt in Kursen und Quiz\n- Deine Präferenzen (Interessen, Ziele)\n- Deine Serie (aufeinanderfolgende Nutzungstage)\n- Deine Lieblingskurse\n\nDiese lokalen Daten werden nicht an unsere Server übertragen, abgesehen von dem, was in den Abschnitten „Nutzungsdaten“ und „Datenspeicherung“ beschrieben ist.\n\nWenn du uns über das Formular in den Einstellungen Feedback sendest, werden deine Nachricht und, sofern angegeben, deine E-Mail-Adresse an Formspree übermittelt, damit wir dir antworten können. Technische Informationen (App-Version, Sprache, Gerät) werden automatisch beigefügt."
     },
     {
       "id": "3",
-      "title": "3. Abonnementdaten",
-      "body": "Wenn du ein Premium-Abonnement abschließt, wird die Transaktion vollständig von Google über den Play Store abgewickelt. Wir haben keinen Zugriff auf deine Zahlungsinformationen (Kartennummer, Rechnungsadresse). Wir erhalten lediglich die Bestätigung deines Abonnementstatus über RevenueCat, unseren Partner für die Abonnementverwaltung."
+      "title": "3. Nutzungsdaten",
+      "body": "Um zu verstehen, welche Kurse funktionieren, die Empfehlungen des Feeds zu verbessern und die Autorinnen und Autoren der Inhalte künftig zu vergüten, zeichnet die App deine Aktionen in Sophia auf und überträgt sie an unsere Supabase-Server (gehostet in der Europäischen Union): durchlaufene Onboarding-Bildschirme, angezeigte, übersprungene oder geöffnete Karten, geöffnete Kurse, gelesene Abschnitte und die darauf verwendete Zeit, abgeschlossene Kurse, aufgerufene Glossareinträge, Quiz-Antworten, mit „Gefällt mir“ markierte Kurse, angezeigte Abo-Angebote sowie begonnene oder abgeschlossene Käufe, außerdem deinen Abonnementstatus (aktiv, Testphase, bezahlt, Ablaufdatum), so wie RevenueCat ihn der App meldet.\n\nJedes Ereignis ist mit deinem Konto, einer app-eigenen Installationskennung, der App-Version, der gewählten Sprache, der Plattform und dem Land deines Geräts verknüpft. Es werden keine Zahlungsdaten, keine Kontaktdaten, kein genauer Standort und keine Werbe-ID erhoben, und diese Daten werden niemals an einen Analyse- oder Werbedienst Dritter übermittelt.\n\nDie einzelnen Ereignisse werden 90 Tage lang aufbewahrt und dann gelöscht; darüber hinaus bleiben nur je Kurs zusammengefasste Statistiken (Anzahl der Aufrufe, Lesungen, Quiz …) erhalten, ohne Bezug zu deinem Konto. Mit der Löschung deines Kontos werden alle deine Ereignisse sofort gelöscht."
     },
     {
       "id": "4",
-      "title": "4. RevenueCat",
-      "body": "Wir nutzen RevenueCat zur Verwaltung von In-App-Abonnements. RevenueCat kann eine anonyme Gerätekennung erfassen, um deinen Abonnementstatus zu überprüfen. Es werden keine personenbezogenen Daten weitergegeben. Weitere Informationen findest du in der Datenschutzerklärung von RevenueCat auf deren Website."
+      "title": "4. Abonnementdaten",
+      "body": "Wenn du ein Premium-Abonnement abschließt, wird die Transaktion vollständig von Google über den Play Store abgewickelt. Wir haben keinen Zugriff auf deine Zahlungsinformationen (Kartennummer, Rechnungsadresse). Wir erhalten lediglich die Bestätigung deines Abonnementstatus über RevenueCat, unseren Partner für die Abonnementverwaltung."
     },
     {
       "id": "5",
-      "title": "5. Analysedaten von Google Play und Android",
-      "body": "Die App kann außerdem anonyme Statistiken nutzen, die Google bereitstellt (Play Console Analytics). Diese Daten sind aggregiert und lassen keine Rückschlüsse auf deine Person zu. Du kannst die Weitergabe von Analysedaten in den Einstellungen deines Android-Geräts deaktivieren (Google > Google-Konto verwalten > Daten & Datenschutz)."
+      "title": "5. RevenueCat",
+      "body": "Wir nutzen RevenueCat zur Verwaltung von In-App-Abonnements. RevenueCat kann eine anonyme Gerätekennung erfassen, um deinen Abonnementstatus zu überprüfen. Es werden keine personenbezogenen Daten weitergegeben. Weitere Informationen findest du in der Datenschutzerklärung von RevenueCat auf deren Website."
     },
     {
       "id": "6",
-      "title": "6. Datenspeicherung",
-      "body": "Deine Fortschrittsdaten werden lokal auf deinem Gerät gespeichert (lokaler App-Speicher). Wenn du ein Konto erstellst (Google), werden sie außerdem sicher auf unseren Supabase-Servern (gehostet in der Europäischen Union) gespeichert, damit sie zwischen deinen Geräten synchronisiert werden können. Beim Deinstallieren der App werden die lokalen Daten gelöscht; beim Löschen deines Kontos werden die zugehörigen Daten auf dem Server endgültig entfernt."
+      "title": "6. Analysedaten von Google Play und Android",
+      "body": "Die App kann außerdem anonyme Statistiken nutzen, die Google bereitstellt (Play Console Analytics). Diese Daten sind aggregiert und lassen keine Rückschlüsse auf deine Person zu. Du kannst die Weitergabe von Analysedaten in den Einstellungen deines Android-Geräts deaktivieren (Google > Google-Konto verwalten > Daten & Datenschutz)."
     },
     {
       "id": "7",
-      "title": "7. Weitergabe von Daten",
-      "body": "Wir verkaufen, vermieten oder übermitteln keine personenbezogenen Daten zu kommerziellen oder Werbezwecken an Dritte. Daten werden nur an folgende Empfänger übermittelt: Google und RevenueCat (Abonnements), Formspree (Feedback, das du freiwillig über die Einstellungen sendest)."
+      "title": "7. Datenspeicherung",
+      "body": "Deine Fortschrittsdaten werden lokal auf deinem Gerät gespeichert (lokaler App-Speicher). Wenn du ein Konto erstellst (Google), werden sie außerdem sicher auf unseren Supabase-Servern (gehostet in der Europäischen Union) gespeichert, damit sie zwischen deinen Geräten synchronisiert werden können. Beim Deinstallieren der App werden die lokalen Daten gelöscht; beim Löschen deines Kontos werden die zugehörigen Daten auf dem Server endgültig entfernt."
     },
     {
       "id": "8",
-      "title": "8. Rechte der Nutzer",
-      "body": "Gemäß der Datenschutz-Grundverordnung (DSGVO) und den geltenden Gesetzen stehen dir die folgenden Rechte zu:\n\n- Recht auf Auskunft über deine Daten\n- Recht auf Berichtigung\n- Recht auf Löschung (Zurücksetzen in den Einstellungen)\n- Recht auf Datenübertragbarkeit\n- Widerspruchsrecht\n\nUm diese Rechte auszuüben, kontaktiere uns über die auf unserer Play-Store-Seite angegebene Adresse."
+      "title": "8. Weitergabe von Daten",
+      "body": "Wir verkaufen, vermieten oder übermitteln keine personenbezogenen Daten zu kommerziellen oder Werbezwecken an Dritte. Daten werden nur an folgende Empfänger übermittelt: Google und RevenueCat (Abonnements), Formspree (Feedback, das du freiwillig über die Einstellungen sendest)."
     },
     {
       "id": "9",
-      "title": "9. Schutz von Minderjährigen",
-      "body": "Sophia ist eine Lern-App, die allen Altersgruppen offensteht. Wir erheben wissentlich keine personenbezogenen Daten von Minderjährigen unter 16 Jahren. Die App enthält keine unangemessenen Inhalte."
+      "title": "9. Rechte der Nutzer",
+      "body": "Gemäß der Datenschutz-Grundverordnung (DSGVO) und den geltenden Gesetzen stehen dir die folgenden Rechte zu:\n\n- Recht auf Auskunft über deine Daten\n- Recht auf Berichtigung\n- Recht auf Löschung (Zurücksetzen in den Einstellungen)\n- Recht auf Datenübertragbarkeit\n- Widerspruchsrecht\n\nUm diese Rechte auszuüben, kontaktiere uns über die auf unserer Play-Store-Seite angegebene Adresse."
     },
     {
       "id": "10",
-      "title": "10. Änderungen",
-      "body": "Wir behalten uns das Recht vor, diese Datenschutzerklärung jederzeit zu ändern. Alle Änderungen werden über ein App-Update mitgeteilt.\n\nZuletzt aktualisiert: September 2026"
+      "title": "10. Schutz von Minderjährigen",
+      "body": "Sophia ist eine Lern-App, die allen Altersgruppen offensteht. Wir erheben wissentlich keine personenbezogenen Daten von Minderjährigen unter 16 Jahren. Die App enthält keine unangemessenen Inhalte."
+    },
+    {
+      "id": "11",
+      "title": "11. Änderungen",
+      "body": "Wir behalten uns das Recht vor, diese Datenschutzerklärung jederzeit zu ändern. Alle Änderungen werden über ein App-Update mitgeteilt.\n\nZuletzt aktualisiert: November 2026"
     }
   ]
 }

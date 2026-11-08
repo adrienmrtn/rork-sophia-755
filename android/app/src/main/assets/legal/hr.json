@@ -60,47 +60,52 @@
     {
       "id": "2",
       "title": "2. Prikupljeni podaci",
-      "body": "Sophia je osmišljena prema načelu smanjenja količine podataka. Aplikacija na tvom uređaju pohranjuje:\n\n- Tvoj napredak u tečajevima i kvizovima\n- Tvoje preferencije (interesi, ciljevi)\n- Tvoj niz (dani korištenja zaredom)\n- Tvoje omiljene tečajeve\n\nTi se lokalni podaci ne šalju na naše poslužitelje.\n\nAko nam pošalješ povratnu informaciju putem obrasca u postavkama, tvoja poruka i, ako je upišeš, tvoja adresa e-pošte prosljeđuju se servisu Formspree kako bismo ti mogli odgovoriti. Tehnički podaci (verzija aplikacije, jezik, uređaj) prilažu se automatski."
+      "body": "Sophia je osmišljena prema načelu smanjenja količine podataka. Aplikacija na tvom uređaju pohranjuje:\n\n- Tvoj napredak u tečajevima i kvizovima\n- Tvoje preferencije (interesi, ciljevi)\n- Tvoj niz (dani korištenja zaredom)\n- Tvoje omiljene tečajeve\n\nTi se lokalni podaci ne šalju na naše poslužitelje, osim onoga što je opisano u odjeljcima „Podaci o korištenju“ i „Pohrana podataka“.\n\nAko nam pošalješ povratnu informaciju putem obrasca u postavkama, tvoja poruka i, ako je upišeš, tvoja adresa e-pošte prosljeđuju se servisu Formspree kako bismo ti mogli odgovoriti. Tehnički podaci (verzija aplikacije, jezik, uređaj) prilažu se automatski."
     },
     {
       "id": "3",
-      "title": "3. Podaci o pretplati",
-      "body": "Ako ugovoriš Premium pretplatu, transakcijom u cijelosti upravlja Google putem Play Storea. Nemamo pristup tvojim podacima o plaćanju (broj kartice, adresa za naplatu). Primamo samo potvrdu statusa tvoje pretplate, i to putem RevenueCata, našeg partnera za upravljanje pretplatama."
+      "title": "3. Podaci o korištenju",
+      "body": "Kako bismo razumjeli koji tečajevi funkcioniraju, poboljšali preporuke u feedu i s vremenom nagrađivali autore sadržaja, Aplikacija bilježi tvoje radnje u Sophiji i šalje ih na naše poslužitelje Supabase (smještene u Europskoj uniji): pregledane uvodne zaslone, prikazane, preskočene ili otvorene kartice, otvorene tečajeve, pročitane odjeljke i utrošeno vrijeme, završene tečajeve, otvorene natuknice pojmovnika, odgovore na kvizove, tečajeve koji su ti se svidjeli, prikazane ponude pretplate te započete ili dovršene kupnje, kao i status tvoje pretplate (aktivna, probno razdoblje, plaćena, datum isteka) onako kako ga RevenueCat javlja Aplikaciji.\n\nSvaki je događaj povezan s tvojim računom, identifikatorom instalacije koji pripada samo Aplikaciji, verzijom aplikacije, odabranim jezikom, platformom i državom tvog uređaja. Ne prikupljaju se podaci o plaćanju, kontakti, precizna lokacija ni oglašivački identifikatori, a ti se podaci nikada ne prosljeđuju analitičkim ili oglašivačkim uslugama trećih strana.\n\nDetaljni događaji čuvaju se 90 dana, a zatim brišu; nakon toga ostaju samo zbirne statistike po tečaju (broj prikaza, čitanja, kvizova…), koje nisu povezane s tvojim računom. Brisanjem računa odmah se brišu svi tvoji događaji."
     },
     {
       "id": "4",
-      "title": "4. RevenueCat",
-      "body": "RevenueCat koristimo za upravljanje pretplatama unutar aplikacije. RevenueCat može prikupljati anonimni identifikator uređaja kako bi provjerio status tvoje pretplate. Ne dijele se nikakvi osobni podaci na temelju kojih bi te se moglo identificirati. Više informacija potraži u pravilima o privatnosti tvrtke RevenueCat na njezinim mrežnim stranicama."
+      "title": "4. Podaci o pretplati",
+      "body": "Ako ugovoriš Premium pretplatu, transakcijom u cijelosti upravlja Google putem Play Storea. Nemamo pristup tvojim podacima o plaćanju (broj kartice, adresa za naplatu). Primamo samo potvrdu statusa tvoje pretplate, i to putem RevenueCata, našeg partnera za upravljanje pretplatama."
     },
     {
       "id": "5",
-      "title": "5. Analitički podaci Google Playa / Androida",
-      "body": "Aplikacija može koristiti i anonimne statističke podatke koje pruža Google (analitika u konzoli Play Console). Ti su podaci zbirni i ne omogućuju tvoju osobnu identifikaciju. Dijeljenje analitičkih podataka možeš isključiti u postavkama svog Android uređaja (Google > Upravljajte svojim Google računom > Podaci i privatnost)."
+      "title": "5. RevenueCat",
+      "body": "RevenueCat koristimo za upravljanje pretplatama unutar aplikacije. RevenueCat može prikupljati anonimni identifikator uređaja kako bi provjerio status tvoje pretplate. Ne dijele se nikakvi osobni podaci na temelju kojih bi te se moglo identificirati. Više informacija potraži u pravilima o privatnosti tvrtke RevenueCat na njezinim mrežnim stranicama."
     },
     {
       "id": "6",
-      "title": "6. Pohrana podataka",
-      "body": "Podaci o tvom napretku pohranjuju se lokalno na tvom uređaju (lokalna pohrana aplikacije). Ako otvoriš račun (Google), ti se podaci uz to sigurno spremaju i na naše Supabase poslužitelje (smještene u Europskoj uniji) kako bi se mogli sinkronizirati među tvojim uređajima. Deinstaliranjem Aplikacije brišu se lokalni podaci, a brisanjem računa trajno se uklanjaju povezani podaci na poslužitelju."
+      "title": "6. Analitički podaci Google Playa / Androida",
+      "body": "Aplikacija može koristiti i anonimne statističke podatke koje pruža Google (analitika u konzoli Play Console). Ti su podaci zbirni i ne omogućuju tvoju osobnu identifikaciju. Dijeljenje analitičkih podataka možeš isključiti u postavkama svog Android uređaja (Google > Upravljajte svojim Google računom > Podaci i privatnost)."
     },
     {
       "id": "7",
-      "title": "7. Dijeljenje podataka",
-      "body": "Ne prodajemo, ne iznajmljujemo i ne dijelimo nikakve osobne podatke s trećim stranama u komercijalne ili oglašivačke svrhe. Podaci se prenose samo ovim primateljima: Google i RevenueCat (pretplate), Formspree (povratne informacije koje korisnici dobrovoljno pošalju iz postavki)."
+      "title": "7. Pohrana podataka",
+      "body": "Podaci o tvom napretku pohranjuju se lokalno na tvom uređaju (lokalna pohrana aplikacije). Ako otvoriš račun (Google), ti se podaci uz to sigurno spremaju i na naše Supabase poslužitelje (smještene u Europskoj uniji) kako bi se mogli sinkronizirati među tvojim uređajima. Deinstaliranjem Aplikacije brišu se lokalni podaci, a brisanjem računa trajno se uklanjaju povezani podaci na poslužitelju."
     },
     {
       "id": "8",
-      "title": "8. Prava korisnika",
-      "body": "U skladu s Općom uredbom o zaštiti podataka (GDPR) i primjenjivim propisima imaš sljedeća prava:\n\n- Pravo na pristup svojim podacima\n- Pravo na ispravak\n- Pravo na brisanje (resetiranje u postavkama)\n- Pravo na prenosivost podataka\n- Pravo na prigovor\n\nZa ostvarivanje tih prava obrati nam se na adresu navedenu na našoj stranici u Play Storeu."
+      "title": "8. Dijeljenje podataka",
+      "body": "Ne prodajemo, ne iznajmljujemo i ne dijelimo nikakve osobne podatke s trećim stranama u komercijalne ili oglašivačke svrhe. Podaci se prenose samo ovim primateljima: Google i RevenueCat (pretplate), Formspree (povratne informacije koje korisnici dobrovoljno pošalju iz postavki)."
     },
     {
       "id": "9",
-      "title": "9. Zaštita maloljetnika",
-      "body": "Sophia je obrazovna aplikacija dostupna korisnicima svih uzrasta. Svjesno ne prikupljamo nikakve osobne podatke maloljetnika mlađih od 16 godina. Aplikacija ne sadrži neprimjeren sadržaj."
+      "title": "9. Prava korisnika",
+      "body": "U skladu s Općom uredbom o zaštiti podataka (GDPR) i primjenjivim propisima imaš sljedeća prava:\n\n- Pravo na pristup svojim podacima\n- Pravo na ispravak\n- Pravo na brisanje (resetiranje u postavkama)\n- Pravo na prenosivost podataka\n- Pravo na prigovor\n\nZa ostvarivanje tih prava obrati nam se na adresu navedenu na našoj stranici u Play Storeu."
     },
     {
       "id": "10",
-      "title": "10. Promjene",
-      "body": "Zadržavamo pravo izmjene ovih pravila u bilo kojem trenutku. O svakoj izmjeni obavijestit ćemo te putem ažuriranja Aplikacije.\n\nZadnje ažuriranje: rujan 2026."
+      "title": "10. Zaštita maloljetnika",
+      "body": "Sophia je obrazovna aplikacija dostupna korisnicima svih uzrasta. Svjesno ne prikupljamo nikakve osobne podatke maloljetnika mlađih od 16 godina. Aplikacija ne sadrži neprimjeren sadržaj."
+    },
+    {
+      "id": "11",
+      "title": "11. Promjene",
+      "body": "Zadržavamo pravo izmjene ovih pravila u bilo kojem trenutku. O svakoj izmjeni obavijestit ćemo te putem ažuriranja Aplikacije.\n\nZadnje ažuriranje: studeni 2026."
     }
   ]
 }
