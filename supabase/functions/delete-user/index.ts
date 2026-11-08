@@ -48,8 +48,22 @@ Deno.serve(async (req) => {
       return json({ error: "Invalid or expired session" }, 401);
     }
 
-    // Client admin : suppression effective (cascade sur profiles / user_progress).
+    // Client admin : suppression effective (cascade sur profiles / user_progress /
+    // subscriber_snapshots). Le journal d'événements et les événements d'abonnement
+    // n'ont pas de clé étrangère (table partitionnée, identifiants RevenueCat) : on les
+    // efface explicitement avant le compte.
     const adminClient = createClient(supabaseUrl, serviceRoleKey);
+    const { error: eventsError } = await adminClient.from("course_events").delete().eq("user_id", user.id);
+    if (eventsError) {
+      return json({ error: eventsError.message }, 500);
+    }
+    const { error: subscriptionsError } = await adminClient
+      .from("subscription_events")
+      .delete()
+      .or(`user_id.eq.${user.id},app_user_id.eq.${user.id}`);
+    if (subscriptionsError) {
+      return json({ error: subscriptionsError.message }, 500);
+    }
     const { error: deleteError } = await adminClient.auth.admin.deleteUser(user.id);
 
     if (deleteError) {

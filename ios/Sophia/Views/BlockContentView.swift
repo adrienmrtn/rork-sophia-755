@@ -815,8 +815,12 @@ struct FunFactCardV2: View {
         VStack(alignment: .leading, spacing: 0) {
             Button {
                 UIImpactFeedbackGenerator(style: .medium).impactOccurred()
+                let opening = !revealed
                 withAnimation(.spring(response: 0.42, dampingFraction: 0.78)) {
                     revealed.toggle()
+                }
+                if opening {
+                    AnalyticsService.shared.log(.funfactOpen, courseId: courseId)
                 }
             } label: {
                 HStack(spacing: 12) {

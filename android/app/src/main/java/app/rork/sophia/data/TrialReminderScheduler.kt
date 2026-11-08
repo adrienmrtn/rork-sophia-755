@@ -175,6 +175,7 @@ object TrialReminderScheduler {
             if (courseId != null) {
                 action = Intent.ACTION_VIEW
                 data = Uri.parse("sophia://course/$courseId")
+                putExtra(MainActivity.EXTRA_SOURCE, "notification")
             }
         }
         return PendingIntent.getActivity(

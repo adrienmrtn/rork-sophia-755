@@ -32,6 +32,8 @@ struct CourseView: View {
     /// paywall) fait disparaître puis réapparaître le lecteur : ce n'est pas une nouvelle
     /// visite, les tâches d'ouverture ne doivent pas repartir.
     @State private var isVisitActive = false
+    /// Quand la section affichée a commencé, pour le temps passé de `section_view`.
+    @State private var sectionEnteredAt = Date()
     @State private var coachmarkTerm: String? = nil
     /// Glossary term tapped in the lesson body. Shown as an in-app overlay (not a system
     /// sheet) so the course text stays perfectly still when a term is tapped.
@@ -167,6 +169,7 @@ struct CourseView: View {
             // back. An active visit means this is a return from a cover, not a new visit.
             guard !isVisitActive else { return }
             isVisitActive = true
+            sectionEnteredAt = Date()
             // Inline images come from the bucket: start fetching them now so paging forward
             // finds them on disk rather than in flight.
             CourseImageLoader.prefetch(courseId: course.id)
@@ -178,8 +181,13 @@ struct CourseView: View {
             // Covered, not closed: the reader is still the screen the user is on.
             guard !isCoveredByOverlay else { return }
             isVisitActive = false
+            // Fermé en cours de route : la section en cours compte, non lue jusqu'au bout.
+            if endPhase == .none {
+                logSectionView(index: currentIndex, reachedEnd: false)
+            }
         }
-        .onChange(of: currentIndex) { _, newIndex in
+        .onChange(of: currentIndex) { oldIndex, newIndex in
+            logSectionView(index: oldIndex, reachedEnd: newIndex > oldIndex)
             requestAppStoreReviewIfEligible(lessonIndex: newIndex)
             maybeShowTermCoachmark(lessonIndex: newIndex)
         }
@@ -432,6 +440,27 @@ struct CourseView: View {
     /// Surface a tapped glossary term as an in-app overlay. No course-text movement.
     private func showGlossary(_ entry: GlossaryEntry) {
         selectedGlossaryEntry = entry
+        AnalyticsService.shared.log(
+            .glossaryOpen,
+            courseId: course.id,
+            props: ["term": .string(entry.displayTerm), "section_index": .int(currentIndex)]
+        )
+    }
+
+    /// La section que l'on quitte, avec le temps qu'on y a passé (docs/events.md).
+    private func logSectionView(index: Int, reachedEnd: Bool) {
+        let seconds = Int(Date().timeIntervalSince(sectionEnteredAt).rounded())
+        AnalyticsService.shared.log(
+            .sectionView,
+            courseId: course.id,
+            props: [
+                "section_index": .int(index),
+                "section_count": .int(course.lessons.count),
+                "seconds": .int(max(0, seconds)),
+                "reached_end": .bool(reachedEnd),
+            ]
+        )
+        sectionEnteredAt = Date()
     }
 
     /// Another course picked on the author's page: close this reader, then ask the home
@@ -441,6 +470,7 @@ struct CourseView: View {
     private func openOtherCourse(_ target: Course) {
         onDismissToHome()
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
+            AnalyticsService.shared.pendingCourseOpenSource = .author
             DeepLinkRouter.shared.requestCourse(target.id)
         }
     }
@@ -553,6 +583,12 @@ struct CourseView: View {
                 previousSubjectCount = progressManager.completedCount(for: course.subject)
                 previousSubjectXP = progressManager.xp(for: course.subject)
                 progressManager.completeCourse(courseId: course.id, quizScore: 0)
+                logSectionView(index: currentIndex, reachedEnd: true)
+                AnalyticsService.shared.log(
+                    .courseComplete,
+                    courseId: course.id,
+                    props: ["first_time": .bool(!wasCompletedBefore)]
+                )
                 // The daily course is done: if TikTok was waiting on it, it opens now.
                 TikTokBlockerManager.shared.registerDailyCourseCompleted(courseId: course.id)
                 progressManager.addXP(subject: course.subject, amount: Self.courseCompletionXP)

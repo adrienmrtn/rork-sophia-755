@@ -45,6 +45,7 @@ import androidx.compose.ui.unit.sp
 import app.rork.sophia.SophiaApplication
 import app.rork.sophia.billing.StoreViewModel
 import app.rork.sophia.data.ProgressManager
+import app.rork.sophia.data.analytics.Analytics
 import app.rork.sophia.data.StringStore
 import app.rork.sophia.data.TutorialFlags
 import app.rork.sophia.domain.AppLanguage
@@ -429,6 +430,18 @@ private fun TrainingSession(
                             }
                         }
                         val ok = QuizScoring.isFullyCorrect(q, answer)
+                        Analytics.log(
+                            "quiz_answer",
+                            courseId = course.id,
+                            props = mapOf(
+                                "question_id" to q.id,
+                                "context" to "training",
+                                "correct" to ok,
+                                "points" to (if (ok) q.maxPoints else 0),
+                                "max_points" to q.maxPoints,
+                                "option_index" to (answer as? QuizAnswer.SingleChoice)?.index,
+                            ),
+                        )
                         lastCorrect = ok
                         if (ok) correctCount += 1
                         progressManager.recordTrainingAnswer(q.id, course.id, ok)

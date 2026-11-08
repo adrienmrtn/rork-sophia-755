@@ -58,6 +58,7 @@ import app.rork.sophia.data.ContentCatalog
 import app.rork.sophia.data.DeviceCapabilities
 import app.rork.sophia.data.ProgressManager
 import app.rork.sophia.data.StringStore
+import app.rork.sophia.data.analytics.Analytics
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.Course
 import app.rork.sophia.domain.PathLevel
@@ -176,39 +177,47 @@ fun MainTabs(
         overlayParent = null
     }
 
-    fun openCourse(course: Course) {
+    /**
+     * Seule porte d'entrée d'un cours. [source] dit d'où il s'ouvre (docs/events.md :
+     * `feed`, `library`, `path`, `profile`, `my_courses`, `author`, `notification`, `link`…).
+     */
+    fun openCourse(course: Course, source: String = "unknown") {
         if (!isPremium) {
             app.progressManager.incrementFreeCoursesOpened()
             app.progressManager.claimDailyFreeCourseIfNeeded(course.id)
         }
+        val unlocked = isPremium || app.progressManager.isDailyFreeCourse(course.id)
+        Analytics.log("course_open", courseId = course.id, props = mapOf("source" to source, "locked" to !unlocked))
         pendingCompletionCourseId = null
         levelBeforeCompletion = ProgressManager.globalLevelProgress(app.progressManager.progress.value.globalXP).level
         readerReady = false
         selectedCourse = course
     }
 
-    fun openCourseById(courseId: String) {
+    fun openCourseById(courseId: String, source: String = "unknown") {
         val stub = ContentCatalog.cachedStub(language, courseId)
         if (stub != null) {
-            openCourse(stub)
+            openCourse(stub, source)
             return
         }
         scope.launch {
             ContentCatalog.courseStubAsync(context.applicationContext, language, courseId)?.let {
-                openCourse(it)
+                openCourse(it, source)
             }
         }
     }
 
     LaunchedEffect(deepLinkCourseId, language) {
         val id = deepLinkCourseId ?: return@LaunchedEffect
+        // Posée par `MainActivity` à la réception de l'intent : `notification` ou `link`.
+        val source = Analytics.takeCourseOpenSource()
         val stub = ContentCatalog.cachedStub(language, id)
             ?: ContentCatalog.courseStubAsync(context.applicationContext, language, id)
         stub?.let {
             // Through the same door as a tap on home: setting `selectedCourse` directly
             // skipped claiming the daily free course, so a free user who arrived from a link
             // read a course and still had their free one taken by the next one they opened.
-            openCourse(it)
+            openCourse(it, source)
         }
         onDeepLinkConsumed()
     }
@@ -423,8 +432,12 @@ fun MainTabs(
                         favoriteIds = progress.favoriteCourseIds.toSet(),
                         autoSwipeCourseId = autoSwipeCourseId,
                         onAutoSwipeConsumed = { autoSwipeCourseId = null },
-                        onToggleFavorite = { app.progressManager.toggleFavorite(it) },
-                        onStartCourse = { openCourseById(it) },
+                        onToggleFavorite = { id ->
+                            val wasFavorite = app.progressManager.isFavorite(id)
+                            app.progressManager.toggleFavorite(id)
+                            Analytics.log(if (wasFavorite) "unlike" else "like", courseId = id, screen = "home")
+                        },
+                        onStartCourse = { openCourseById(it, source = "feed") },
                         onUserSwipe = {
                             if (!isPremium) app.discountManager.registerSwipe()
                         },
@@ -436,7 +449,7 @@ fun MainTabs(
                         modifier = tabModifier,
                         language = language,
                         progress = progress,
-                        onOpenCourse = { openCourseById(it) },
+                        onOpenCourse = { openCourseById(it, source = "library") },
                     )
                     2 -> LearningPathScreen(
                         modifier = tabModifier,
@@ -446,7 +459,7 @@ fun MainTabs(
                         // the level quiz, the rewards of a finished course, a paywall.
                         isCovered = pathQuiz != null || rewardSteps != null || paywall != null ||
                             overlay != null || showAudioPlayer,
-                        onOpenCourse = { openCourseById(it) },
+                        onOpenCourse = { openCourseById(it, source = "path") },
                         onOpenQuiz = { level, isLastLevel -> pathQuiz = level to isLastLevel },
                     )
                     3 -> TrainingScreen(
@@ -463,7 +476,7 @@ fun MainTabs(
                         language = language,
                         progress = progress,
                         isPremium = isPremium,
-                        onOpenCourse = { openCourseById(it) },
+                        onOpenCourse = { openCourseById(it, source = "profile") },
                         onOpenSettings = { overlay = OverlayScreen.Settings },
                         onShowPaywall = { paywall = PaywallContext.DEBLOQUER_COURS },
                         onOpenFriends = { friendUserId ->
@@ -578,7 +591,7 @@ fun MainTabs(
                             progress = progress,
                             onOpenCourse = { id ->
                                 overlay = null
-                                openCourseById(id)
+                                openCourseById(id, source = "my_courses")
                             },
                             onDiscover = {
                                 overlay = null
@@ -615,7 +628,7 @@ fun MainTabs(
                         currentCourseId = selectedCourse?.id,
                         onOpenCourse = { id ->
                             selectedAuthorSlug = null
-                            if (id != selectedCourse?.id) openCourseById(id)
+                            if (id != selectedCourse?.id) openCourseById(id, source = "author")
                         },
                         onBack = { selectedAuthorSlug = null },
                         modifier = Modifier.fillMaxSize(),

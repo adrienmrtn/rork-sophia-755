@@ -108,6 +108,13 @@ struct ContentView: View {
                     // course opened today is intro-only + locked.
                     progressManager.claimDailyFreeCourseIfNeeded(course.id)
                 }
+                let source = AnalyticsService.shared.takeCourseOpenSource()
+                let unlocked = storeVM.isPremium || progressManager.dailyFreeCourseId == course.id
+                AnalyticsService.shared.log(
+                    .courseOpen,
+                    courseId: course.id,
+                    props: ["source": .string(source.rawValue), "locked": .bool(!unlocked)]
+                )
                 pendingCourse = course
             }
             .fullScreenCover(item: $pendingCourse) { course in
@@ -206,6 +213,7 @@ struct ContentView: View {
                     // The sheet has to be gone before the reader is presented, or the two
                     // presentations race and neither appears.
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.35) {
+                        AnalyticsService.shared.pendingCourseOpenSource = .myCourses
                         selectedCourse = course
                     }
                 },
@@ -258,6 +266,9 @@ struct ContentView: View {
             .sophiaSheetChrome()
         }
         .task {
+            // Le premier affichage est un lancement : `scenePhase` ne signale que les
+            // changements suivants.
+            AnalyticsService.shared.appDidBecomeActive()
             // Une connexion faite pendant l'onboarding arrive ici comme un lancement.
             _ = auth.consumeInteractiveSignIn()
             if auth.isSignedIn {
@@ -311,9 +322,11 @@ struct ContentView: View {
         .onChange(of: scenePhase) { _, phase in
             if phase == .background {
                 syncService.flushPendingPush()
+                AnalyticsService.shared.appDidEnterBackground()
                 return
             }
             guard phase == .active else { return }
+            AnalyticsService.shared.appDidBecomeActive()
             blocker.reconcileShield()
             openBlockerCourseIfNeeded()
         }
@@ -454,6 +467,7 @@ struct ContentView: View {
         // Any cover that was up needs to be gone before the reader is presented, or the
         // two presentations race and neither appears (same delay as `MyCoursesView`).
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+            AnalyticsService.shared.pendingCourseOpenSource = .blocker
             selectedCourse = course
         }
     }
@@ -484,6 +498,7 @@ struct ContentView: View {
         guard let course = ContentCatalog.course(withId: courseId) else {
             // Unknown id: drop it rather than retry it on every appearance.
             router.discard()
+            AnalyticsService.shared.pendingCourseOpenSource = nil
             return
         }
         _ = router.consume()

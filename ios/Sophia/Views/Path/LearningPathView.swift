@@ -308,6 +308,7 @@ struct LearningPathView: View {
             if node.isQuiz {
                 quizLevel = level
             } else if let course = node.course {
+                AnalyticsService.shared.pendingCourseOpenSource = .path
                 selectedCourse = course
             }
         }

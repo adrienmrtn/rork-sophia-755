@@ -25,9 +25,12 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.key
+import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.mutableLongStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
@@ -41,6 +44,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import app.rork.sophia.data.AuthorStore
+import app.rork.sophia.data.analytics.Analytics
 import app.rork.sophia.data.ContentCatalog
 import app.rork.sophia.data.CourseCoverUrls
 import app.rork.sophia.data.CourseImagePrefetch
@@ -104,6 +108,31 @@ fun CourseScreen(
         rememberPagerState(pageCount = { pages.size.coerceAtLeast(1) })
     }
     val scope = rememberCoroutineScope()
+
+    // Temps passé par section (`section_view`, docs/events.md) : la section suivie et son
+    // heure d'entrée ; -1 quand rien n'est suivi (pages pas prêtes, cours terminé).
+    var trackedSection by remember(course.id, language) { mutableIntStateOf(-1) }
+    var sectionEnteredAt by remember(course.id, language) { mutableLongStateOf(0L) }
+    fun logSectionView(reachedEnd: Boolean) {
+        val index = trackedSection
+        if (index < 0) return
+        trackedSection = -1
+        val seconds = ((System.currentTimeMillis() - sectionEnteredAt) / 1000).toInt()
+        Analytics.log(
+            "section_view",
+            courseId = course.id,
+            props = mapOf(
+                "section_index" to index,
+                "section_count" to pages.size,
+                "seconds" to seconds,
+                "reached_end" to reachedEnd,
+            ),
+        )
+    }
+    // Lecteur refermé en cours de route : la section en cours compte comme quittée.
+    DisposableEffect(course.id, language) {
+        onDispose { logSectionView(reachedEnd = false) }
+    }
 
     LaunchedEffect(course.id, language) {
         val appContext = context.applicationContext
@@ -185,6 +214,12 @@ fun CourseScreen(
     LaunchedEffect(pagerState.currentPage, pagesReady) {
         if (!pagesReady) return@LaunchedEffect
         val pageIndex = pagerState.currentPage
+        if (trackedSection != pageIndex) {
+            // Page suivante : la précédente a été lue jusqu'au bout ; page précédente : non.
+            logSectionView(reachedEnd = pageIndex > trackedSection)
+            trackedSection = pageIndex
+            sectionEnteredAt = System.currentTimeMillis()
+        }
         progressManager.updateLessonIndex(course.id, pageIndex, lessonCount = pages.size)
         InAppReviewHelper.requestIfEligible(
             context = context,
@@ -328,6 +363,8 @@ fun CourseScreen(
                         }
                         if (isLast) {
                             if (FreemiumGate.canCompleteCourse(isPremium, isDailyFreeCourse)) {
+                                logSectionView(reachedEnd = true)
+                                Analytics.log("course_complete", courseId = course.id, props = mapOf("first_time" to !wasCompletedBefore))
                                 if (!wasCompletedBefore) {
                                     progressManager.markCourseCompleted(course.id)
                                     onCourseCompleted()

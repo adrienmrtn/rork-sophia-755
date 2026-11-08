@@ -39,7 +39,7 @@ struct FavoritesView: View {
                                         status: progressManager.courseStatus(for: course.id),
                                         onTap: {
                                             hapticTrigger += 1
-                                            selectedCourse = course
+                                            AnalyticsService.shared.pendingCourseOpenSource = .favorites; selectedCourse = course
                                         },
                                         progressManager: progressManager,
                                         showsAudio: false

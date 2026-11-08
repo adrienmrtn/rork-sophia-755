@@ -298,7 +298,7 @@ struct LibraryView: View {
                                 : nil,
                             onTap: {
                                 UIImpactFeedbackGenerator(style: .light).impactOccurred()
-                                selectedCourse = course
+                                AnalyticsService.shared.pendingCourseOpenSource = .library; selectedCourse = course
                             }
                         )
                         Spacer(minLength: 0)
@@ -348,7 +348,7 @@ struct LibraryView: View {
                             status: progressManager.courseStatus(for: course.id),
                             onTap: {
                                 UIImpactFeedbackGenerator(style: .light).impactOccurred()
-                                selectedCourse = course
+                                AnalyticsService.shared.pendingCourseOpenSource = .library; selectedCourse = course
                             },
                             progressManager: progressManager
                         )
@@ -374,7 +374,7 @@ struct LibraryView: View {
                             onTap: {
                                 let g = UIImpactFeedbackGenerator(style: .light)
                                 g.impactOccurred()
-                                selectedCourse = course
+                                AnalyticsService.shared.pendingCourseOpenSource = .library; selectedCourse = course
                             },
                             progressManager: progressManager
                         )
@@ -445,7 +445,7 @@ struct LibraryView: View {
                         onTap: {
                             let g = UIImpactFeedbackGenerator(style: .light)
                             g.impactOccurred()
-                            selectedCourse = course
+                            AnalyticsService.shared.pendingCourseOpenSource = .library; selectedCourse = course
                         },
                         progressManager: progressManager
                     )
@@ -651,7 +651,9 @@ struct LibraryCardView: View {
                         let g = UIImpactFeedbackGenerator(style: .light)
                         g.impactOccurred()
                         favTrigger += 1
+                        let liked = !pm.isFavorite(course.id)
                         pm.toggleFavorite(course.id)
+                        AnalyticsService.shared.log(liked ? .like : .unlike, courseId: course.id, screen: "library")
                     } label: {
                         Image(systemName: pm.isFavorite(course.id) ? "bookmark.fill" : "bookmark")
                             .font(.jakarta(size: 13, weight: .medium))

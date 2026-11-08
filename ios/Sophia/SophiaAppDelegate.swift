@@ -36,6 +36,7 @@ final class SophiaAppDelegate: NSObject, UIApplicationDelegate, UNUserNotificati
         let link = response.notification.request.content.userInfo["deepLink"] as? String
         DispatchQueue.main.async {
             if let link, let url = URL(string: link) {
+                AnalyticsService.shared.pendingCourseOpenSource = .notification
                 DeepLinkRouter.shared.open(url)
             }
             completionHandler()

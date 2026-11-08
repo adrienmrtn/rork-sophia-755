@@ -44,6 +44,51 @@ class StoreViewModel {
         trialExpiresInOneDay = Self.isTrialExpiringInOneDay(entitlement)
         willNotRenew = isPremium && entitlement?.willRenew == false
         expiresAt = entitlement?.expirationDate
+        reportToAnalytics(entitlement)
+    }
+
+    /// Chaque ligne du journal d'événements porte le statut Premium du moment, et le serveur
+    /// reçoit un instantané de l'abonnement dès qu'il change (docs/events.md).
+    private func reportToAnalytics(_ entitlement: EntitlementInfo?) {
+        let status = isPremium ? (isInFreeTrial ? "trial" : "paid") : "free"
+        let active = isPremium
+        let known = entitlement != nil
+        let periodType = entitlement.flatMap { Self.periodTypeName($0.periodType) }
+        let productId = entitlement?.productIdentifier
+        let store = entitlement.map { Self.storeName($0.store) }
+        let expires = entitlement?.expirationDate
+        let willRenew = entitlement?.willRenew
+        Task { @MainActor in
+            AnalyticsService.shared.premiumStatus = status
+            // Un compte qui n'a jamais eu de droit Premium n'a rien à déclarer.
+            guard known else { return }
+            AnalyticsService.shared.reportSubscription(
+                isActive: active,
+                periodType: periodType,
+                productId: productId,
+                store: store,
+                expiresAt: expires,
+                willRenew: willRenew
+            )
+        }
+    }
+
+    private static func periodTypeName(_ periodType: PeriodType) -> String? {
+        switch periodType {
+        case .trial: "trial"
+        case .intro: "intro"
+        case .normal: "normal"
+        default: nil
+        }
+    }
+
+    private static func storeName(_ store: Store) -> String {
+        switch store {
+        case .appStore, .macAppStore: "app_store"
+        case .playStore: "play_store"
+        case .promotional: "promotional"
+        default: "other"
+        }
     }
 
     /// Calendar-day check: trial is active and expires tomorrow.
@@ -89,21 +134,43 @@ class StoreViewModel {
     func purchase(package: Package) async -> Bool {
         isPurchasing = true
         defer { isPurchasing = false }
+        let product = package.storeProduct.productIdentifier
+        let offering = package.offeringIdentifier
+        await AnalyticsService.shared.log(
+            .purchaseStarted,
+            props: ["product": .string(product), "offering": .string(offering)]
+        )
         do {
             let result = try await Purchases.shared.purchase(package: package)
             if !result.userCancelled {
                 applyCustomerInfo(result.customerInfo)
+                if isPremium {
+                    await AnalyticsService.shared.log(.purchaseCompleted, props: ["product": .string(product)])
+                } else {
+                    await logPurchaseFailed(product: product, reason: "not_entitled")
+                }
                 return isPremium
             }
+            await logPurchaseFailed(product: product, reason: "cancelled")
             return false
         } catch ErrorCode.purchaseCancelledError {
+            await logPurchaseFailed(product: product, reason: "cancelled")
             return false
         } catch ErrorCode.paymentPendingError {
+            await logPurchaseFailed(product: product, reason: "pending")
             return false
         } catch {
             self.error = error.localizedDescription
+            await logPurchaseFailed(product: product, reason: "error")
             return false
         }
+    }
+
+    private func logPurchaseFailed(product: String, reason: String) async {
+        await AnalyticsService.shared.log(
+            .purchaseFailed,
+            props: ["product": .string(product), "reason": .string(reason)]
+        )
     }
 
     func restore() async {
@@ -284,16 +351,28 @@ class StoreViewModel {
         // same way the paywall picks its package.
         let resolved = offeringIdentifier.flatMap { displayedOffering(forContextIdentifier: $0) }
             ?? offerings?.current
-        trackPaywallImpression(paywallId: paywallId, offering: resolved)
+        trackPaywallImpression(paywallId: paywallId, offering: resolved, context: offeringIdentifier)
     }
 
     /// Same, for a paywall that knows exactly which offering it displays (the discount
     /// paywall, whose offering is never the current one).
     func trackPaywallImpression(paywallId: String, offering: Offering?) {
+        trackPaywallImpression(paywallId: paywallId, offering: offering, context: nil)
+    }
+
+    private func trackPaywallImpression(paywallId: String, offering: Offering?, context: String?) {
         guard let offering else { return }
         Purchases.shared.trackCustomPaywallImpression(
             CustomPaywallImpressionParams(paywallId: paywallId, offering: offering)
         )
+        var props: [String: AnalyticsValue] = [
+            "paywall_id": .string(paywallId),
+            "offering": .string(offering.identifier),
+        ]
+        if let context { props["context"] = .string(context) }
+        Task { @MainActor in
+            AnalyticsService.shared.log(.paywallView, props: props)
+        }
     }
     // MARK: - Discount (offre_discount) pricing
 

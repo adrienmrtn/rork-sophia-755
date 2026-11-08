@@ -148,6 +148,10 @@ struct OnboardingV2View: View {
         }
         .onAppear {
             restoreStepIndex()
+            AnalyticsService.shared.log(
+                .onboardingStep,
+                props: ["step": .string(current.analyticsName), "index": .int(stepIndex)]
+            )
         }
         .task {
             notificationsSettled = await NotificationPermission.isSettled()
@@ -257,6 +261,10 @@ struct OnboardingV2View: View {
         stepIndex = next
         // Remembered on every step, so the app being killed here resumes here.
         OnboardingResumeStore.step = list[next].analyticsName
+        AnalyticsService.shared.log(
+            .onboardingStep,
+            props: ["step": .string(list[next].analyticsName), "index": .int(next)]
+        )
     }
 
     private func finish() {

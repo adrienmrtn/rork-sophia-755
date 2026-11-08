@@ -10,6 +10,7 @@ import app.rork.sophia.SophiaApplication
 import app.rork.sophia.data.DiscountBucket
 import app.rork.sophia.data.LanguageManager
 import app.rork.sophia.data.TrialReminderScheduler
+import app.rork.sophia.data.analytics.Analytics
 import app.rork.sophia.domain.locale
 import com.revenuecat.purchases.CustomerInfo
 import com.revenuecat.purchases.LogLevel
@@ -110,6 +111,33 @@ class StoreViewModel(app: Application) : AndroidViewModel(app) {
         entitledPremium = active
         publishPremium()
         _isInFreeTrial.value = inTrial
+        // Statut porté par chaque événement, et instantané pour `subscriber_snapshots`
+        // (docs/events.md) : ce que RevenueCat dit au téléphone, sans le levier de debug.
+        Analytics.premiumStatus = when {
+            inTrial -> "trial"
+            active -> "paid"
+            else -> "free"
+        }
+        if (entitlement != null) {
+            Analytics.reportSubscription(
+                isActive = active,
+                periodType = when (entitlement.periodType) {
+                    PeriodType.TRIAL -> "trial"
+                    PeriodType.INTRO -> "intro"
+                    PeriodType.NORMAL -> "normal"
+                    else -> null
+                },
+                productId = entitlement.productIdentifier.substringBefore(':'),
+                store = when (entitlement.store) {
+                    Store.APP_STORE, Store.MAC_APP_STORE -> "app_store"
+                    Store.PLAY_STORE -> "play_store"
+                    Store.PROMOTIONAL -> "promotional"
+                    else -> "other"
+                },
+                expiresAt = entitlement.expirationDate,
+                willRenew = entitlement.willRenew,
+            )
+        }
         _subscriptionStatus.value = entitlement?.takeIf { active }?.let {
             SubscriptionStatus(
                 expirationDate = it.expirationDate,
@@ -374,10 +402,10 @@ class StoreViewModel(app: Application) : AndroidViewModel(app) {
 
     /** Same, for a paywall that knows exactly which offering it displays (the discount one). */
     fun trackPaywallImpressionForOffering(paywallId: String, offeringId: String?) {
+        val resolvedId = offeringId ?: runCatching { offering(null)?.identifier }.getOrNull()
+        Analytics.log("paywall_view", props = mapOf("paywall_id" to paywallId, "offering" to resolvedId))
         if (!Purchases.isConfigured) return
         try {
-            val resolvedId = offeringId
-                ?: offering(null)?.identifier
             Purchases.sharedInstance.trackCustomPaywallImpression(
                 CustomPaywallImpressionParams(
                     paywallId = paywallId,

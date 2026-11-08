@@ -16,6 +16,7 @@ import app.rork.sophia.data.ProgressSyncService
 import app.rork.sophia.data.SocialService
 import app.rork.sophia.data.TrialReminderScheduler
 import app.rork.sophia.data.TutorialFlags
+import app.rork.sophia.data.analytics.Analytics
 import coil.ImageLoader
 import coil.ImageLoaderFactory
 import coil.disk.DiskCache
@@ -60,6 +61,8 @@ class SophiaApplication : Application(), ImageLoaderFactory {
         discountManager = DiscountOfferManager(this)
         tutorialFlags = TutorialFlags(this)
         authService.start()
+        // Journal d'événements produit (docs/events.md) : mis en file ici, envoyé par lots.
+        Analytics.init(this, authService, languageManager, appScope)
         setUpAudio()
 
         // Warm the slim course index (~70KB) + collections off the main thread.
