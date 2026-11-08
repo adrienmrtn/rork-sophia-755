@@ -207,6 +207,9 @@ déclencheurs d'état et de webhook, fonctions de statistiques, cron `catalog-jo
 
 ## Essai de bout en bout
 
+Un corps de requête complet et valide : `docs/examples/publish-course-anticythere.json` (le cours
+de l'essai du 8 novembre 2026, cinq sections, glossaire, couverture importée par URL).
+
 ```bash
 curl -sS -X POST "https://afnmcoovdvbtkgohtdij.supabase.co/functions/v1/publish-course" \
   -H "x-api-key: $PUBLISH_API_KEY" -H "Content-Type: application/json" \
