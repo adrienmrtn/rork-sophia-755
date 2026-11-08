@@ -95,17 +95,7 @@ data class Course(
     val hasQuiz: Boolean get() = quizAvailable || quiz.isNotEmpty()
 
     val readsCount: Int
-        get() {
-            var hash = 0xcbf29ce484222325UL
-            for (byte in id.encodeToByteArray()) {
-                hash = hash xor byte.toULong()
-                hash *= 0x100000001b3UL
-            }
-            val lower = 7_000
-            val upper = 250_000
-            val value = lower + (hash % (upper - lower).toULong()).toInt()
-            return (value / 100) * 100
-        }
+        get() = fakeReadsCount(id)
 
     val readsCountShort: String
         get() {
@@ -116,6 +106,27 @@ data class Course(
                 "${count / 1000} k"
             }
         }
+}
+
+/**
+ * Lectures affichées d'un cours tant que le serveur ne les compte pas : fausses mais stables,
+ * dérivées d'un hash FNV-1a de l'identifiant (entre 7 000 et 250 000, arrondies à la
+ * centaine), identiques sur iOS. Accessible sans `Course` pour les compteurs d'un créateur.
+ */
+/** Même compteur pour une fiche du catalogue, qui n'est pas un [Course]. */
+val CourseSummary.readsCount: Int
+    get() = fakeReadsCount(id)
+
+fun fakeReadsCount(courseId: String): Int {
+    var hash = 0xcbf29ce484222325UL
+    for (byte in courseId.encodeToByteArray()) {
+        hash = hash xor byte.toULong()
+        hash *= 0x100000001b3UL
+    }
+    val lower = 7_000
+    val upper = 250_000
+    val value = lower + (hash % (upper - lower).toULong()).toInt()
+    return (value / 100) * 100
 }
 
 @Serializable
@@ -263,6 +274,12 @@ data class UserProgress(
      * the iPhone.
      */
     val pathLevelResults: Map<String, PathLevelResult> = emptyMap(),
+    /** Cours aimés (cœur des cartes et des fiches). Mêmes noms JSON qu'iOS, qui écrit la même ligne. */
+    val likedCourseIds: List<String> = emptyList(),
+    /** Créateurs suivis, par slug d'auteur. Local tant que les abonnements serveur n'existent pas. */
+    val followedCreatorSlugs: List<String> = emptyList(),
+    /** Temps de lecture cumulé en secondes : chaque section quittée ajoute le temps passé dessus. */
+    val readingSeconds: Int = 0,
 )
 
 /**

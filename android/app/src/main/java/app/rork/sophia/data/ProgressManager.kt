@@ -86,6 +86,44 @@ class ProgressManager(context: Context) {
         }
     }
 
+    // J'aime, abonnements et temps de lecture (écrans « nouvelle génération », prompt 2).
+
+    fun isLiked(courseId: String): Boolean =
+        courseId in _progress.value.likedCourseIds
+
+    fun toggleLike(courseId: String) {
+        mutate { current ->
+            val liked = current.likedCourseIds.toMutableList()
+            if (courseId in liked) liked.remove(courseId) else liked.add(courseId)
+            current.copy(likedCourseIds = liked)
+        }
+    }
+
+    fun isFollowing(creatorSlug: String): Boolean =
+        creatorSlug in _progress.value.followedCreatorSlugs
+
+    fun toggleFollow(creatorSlug: String) {
+        mutate { current ->
+            val followed = current.followedCreatorSlugs.toMutableList()
+            if (creatorSlug in followed) followed.remove(creatorSlug) else followed.add(creatorSlug)
+            current.copy(followedCreatorSlugs = followed)
+        }
+    }
+
+    val readingSeconds: Int
+        get() = _progress.value.readingSeconds
+
+    /**
+     * Ajoute le temps passé sur une section quittée. Plafonné à une heure par appel : un
+     * téléphone laissé ouvert sur une page ne compte pas comme une nuit de lecture.
+     */
+    fun addReadingSeconds(seconds: Int) {
+        if (seconds <= 0) return
+        mutate { current ->
+            current.copy(readingSeconds = current.readingSeconds + minOf(seconds, 3_600))
+        }
+    }
+
     fun incrementFreeCoursesOpened() {
         mutate { current ->
             current.copy(freeCoursesOpened = current.freeCoursesOpened + 1)

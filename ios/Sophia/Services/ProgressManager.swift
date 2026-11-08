@@ -651,6 +651,48 @@ class ProgressManager {
         save()
     }
 
+    // MARK: - J'aime, abonnements, temps de lecture (locaux jusqu'au prompt 6)
+
+    func isLiked(_ courseId: String) -> Bool {
+        progress.likedCourseIds.contains(courseId)
+    }
+
+    func toggleLike(_ courseId: String) {
+        if let index = progress.likedCourseIds.firstIndex(of: courseId) {
+            progress.likedCourseIds.remove(at: index)
+        } else {
+            progress.likedCourseIds.append(courseId)
+        }
+        save()
+    }
+
+    var likedCourses: [Course] {
+        ContentCatalog.activeCourses.filter { progress.likedCourseIds.contains($0.id) }
+    }
+
+    func isFollowing(_ creatorSlug: String) -> Bool {
+        progress.followedCreatorSlugs.contains(creatorSlug)
+    }
+
+    func toggleFollow(_ creatorSlug: String) {
+        if let index = progress.followedCreatorSlugs.firstIndex(of: creatorSlug) {
+            progress.followedCreatorSlugs.remove(at: index)
+        } else {
+            progress.followedCreatorSlugs.append(creatorSlug)
+        }
+        save()
+    }
+
+    var readingSeconds: Int { progress.readingSeconds }
+
+    /// Ajoute le temps passé sur une section quittée. Plafonné à une heure par appel : un
+    /// téléphone laissé ouvert sur une page ne compte pas comme une nuit de lecture.
+    func addReadingSeconds(_ seconds: Int) {
+        guard seconds > 0 else { return }
+        progress.readingSeconds += min(seconds, 3_600)
+        save()
+    }
+
     /// True if the user already completed (swiped to last slide + tapped Continuer) a course today.
     /// Used for the freemium daily gate — resets at local midnight.
     var hasCompletedCourseToday: Bool {
@@ -735,13 +777,6 @@ class ProgressManager {
 
     func incrementFreeCoursesOpened() {
         progress.freeCoursesOpened += 1
-        save()
-    }
-
-    var hasSeenSwipeTutorial: Bool { progress.hasSeenSwipeTutorial }
-
-    func markSwipeTutorialSeen() {
-        progress.hasSeenSwipeTutorial = true
         save()
     }
 

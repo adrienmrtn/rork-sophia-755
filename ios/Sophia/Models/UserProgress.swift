@@ -204,10 +204,17 @@ nonisolated struct UserProgress: Codable, Sendable {
     /// Learning path ("Parcours" tab): end-of-level quiz results keyed by collection id. A
     /// level counts as passed once its entry has a `passedAt`.
     var pathLevelResults: [String: PathLevelResult]
+    /// Cours aimés (cœur sur une carte, le lecteur ou le profil). Local tant que les likes
+    /// serveur n'existent pas (prompt 6) ; les favoris (`favoriteCourseIds`) sont « à lire ».
+    var likedCourseIds: [String]
+    /// Créateurs suivis, par slug d'auteur. Local tant que les abonnements serveur n'existent pas.
+    var followedCreatorSlugs: [String]
+    /// Temps de lecture cumulé en secondes : chaque section quittée ajoute le temps passé dessus.
+    var readingSeconds: Int
 
     static let empty = UserProgress(courseProgress: [:], streak: 0, lastActiveDate: nil, favoriteCourseIds: [], freeCoursesOpened: 0, hasSeenSwipeTutorial: false, hasSeenSpecialOffer: false, lastCourseCompletedDate: nil, lastStreakShownDate: nil, subjectXP: [:], globalXP: 0, globalCourseXPAwardedIds: [], globalQuizXPAwardedIds: [], globalCollectionXPAwardedIds: [], completedQuizCourseIds: [], pendingGlobalRankUp: nil, trainingQuestionStates: [:])
 
-    init(courseProgress: [String: CourseProgress], streak: Int, lastActiveDate: String?, favoriteCourseIds: [String] = [], freeCoursesOpened: Int = 0, hasSeenSwipeTutorial: Bool = false, hasSeenSpecialOffer: Bool = false, lastCourseCompletedDate: String? = nil, lastStreakShownDate: String? = nil, subjectXP: [String: Int] = [:], globalXP: Int = 0, globalCourseXPAwardedIds: [String] = [], globalQuizXPAwardedIds: [String] = [], globalCollectionXPAwardedIds: [String] = [], completedQuizCourseIds: [String] = [], pendingGlobalRankUp: PendingGlobalRankUp? = nil, trainingQuestionStates: [String: TrainingQuestionState] = [:], dailyFreeCourseId: String? = nil, dailyFreeCourseDate: String? = nil, xpUnlockedCourseIds: [String] = [], spentGlobalXP: Int = 0, pathLevelResults: [String: PathLevelResult] = [:]) {
+    init(courseProgress: [String: CourseProgress], streak: Int, lastActiveDate: String?, favoriteCourseIds: [String] = [], freeCoursesOpened: Int = 0, hasSeenSwipeTutorial: Bool = false, hasSeenSpecialOffer: Bool = false, lastCourseCompletedDate: String? = nil, lastStreakShownDate: String? = nil, subjectXP: [String: Int] = [:], globalXP: Int = 0, globalCourseXPAwardedIds: [String] = [], globalQuizXPAwardedIds: [String] = [], globalCollectionXPAwardedIds: [String] = [], completedQuizCourseIds: [String] = [], pendingGlobalRankUp: PendingGlobalRankUp? = nil, trainingQuestionStates: [String: TrainingQuestionState] = [:], dailyFreeCourseId: String? = nil, dailyFreeCourseDate: String? = nil, xpUnlockedCourseIds: [String] = [], spentGlobalXP: Int = 0, pathLevelResults: [String: PathLevelResult] = [:], likedCourseIds: [String] = [], followedCreatorSlugs: [String] = [], readingSeconds: Int = 0) {
         self.courseProgress = courseProgress
         self.streak = streak
         self.lastActiveDate = lastActiveDate
@@ -230,6 +237,9 @@ nonisolated struct UserProgress: Codable, Sendable {
         self.xpUnlockedCourseIds = xpUnlockedCourseIds
         self.spentGlobalXP = spentGlobalXP
         self.pathLevelResults = pathLevelResults
+        self.likedCourseIds = likedCourseIds
+        self.followedCreatorSlugs = followedCreatorSlugs
+        self.readingSeconds = readingSeconds
     }
 
     enum CodingKeys: String, CodingKey {
@@ -240,6 +250,7 @@ nonisolated struct UserProgress: Codable, Sendable {
         case trainingQuestionStates
         case xpUnlockedCourseIds, spentGlobalXP
         case pathLevelResults
+        case likedCourseIds, followedCreatorSlugs, readingSeconds
     }
 
     init(from decoder: Decoder) throws {
@@ -266,6 +277,9 @@ nonisolated struct UserProgress: Codable, Sendable {
         self.xpUnlockedCourseIds = try c.decodeIfPresent([String].self, forKey: .xpUnlockedCourseIds) ?? []
         self.spentGlobalXP = try c.decodeIfPresent(Int.self, forKey: .spentGlobalXP) ?? 0
         self.pathLevelResults = try c.decodeIfPresent([String: PathLevelResult].self, forKey: .pathLevelResults) ?? [:]
+        self.likedCourseIds = try c.decodeIfPresent([String].self, forKey: .likedCourseIds) ?? []
+        self.followedCreatorSlugs = try c.decodeIfPresent([String].self, forKey: .followedCreatorSlugs) ?? []
+        self.readingSeconds = try c.decodeIfPresent(Int.self, forKey: .readingSeconds) ?? 0
     }
 }
 
@@ -282,6 +296,8 @@ extension UserProgress {
             && globalXP == 0
             && streak == 0
             && pathLevelResults.isEmpty
+            && likedCourseIds.isEmpty
+            && followedCreatorSlugs.isEmpty
     }
 
     /// Score grossier « quantité de progression » utilisé pour arbitrer local vs cloud
@@ -296,6 +312,8 @@ extension UserProgress {
             + trainingQuestionStates.count
             + streak
             + pathLevelResults.values.filter(\.isPassed).count * 100
+            + likedCourseIds.count
+            + followedCreatorSlugs.count
     }
 }
 

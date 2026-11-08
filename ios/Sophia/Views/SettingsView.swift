@@ -12,6 +12,8 @@ struct SettingsView: View {
     var onResetOnboarding: (() -> Void)? = nil
     var onDismiss: (() -> Void)? = nil
     @State private var showAccount: Bool = false
+    /// Variante de navigation (A/B), modifiable ici en debug ; prend effet au prochain lancement.
+    @State private var navigationVariant: FeatureFlags.NavigationVariant = FeatureFlags.navigationVariant
     @State private var showResetAlert: Bool = false
     @State private var showResetOnboardingAlert: Bool = false
     @State private var showTerms: Bool = false
@@ -477,6 +479,16 @@ struct SettingsView: View {
                 ) {
                     hapticTrigger += 1
                     progressManager.resetDailyCourseFlag()
+                }
+                rowDivider
+                actionRow(
+                    icon: "square.grid.2x2",
+                    title: languageManager.text("settings.debug.navigation"),
+                    subtitle: navigationVariant == .newGen ? "newgen" : "classic"
+                ) {
+                    hapticTrigger += 1
+                    FeatureFlags.navigationVariant = navigationVariant == .newGen ? .classic : .newGen
+                    navigationVariant = FeatureFlags.navigationVariant
                 }
                 rowDivider
                 actionRow(

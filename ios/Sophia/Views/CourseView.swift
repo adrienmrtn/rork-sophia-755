@@ -191,17 +191,21 @@ struct CourseView: View {
             requestAppStoreReviewIfEligible(lessonIndex: newIndex)
             maybeShowTermCoachmark(lessonIndex: newIndex)
         }
-        .sheet(item: $presentedAuthor) { author in
-            AuthorView(
+        .fullScreenCover(item: $presentedAuthor) { author in
+            // La page créateur plein écran (prompt 2) ; depuis le lecteur, un autre de ses cours
+            // passe par la porte habituelle (`openOtherCourse`).
+            CreatorPageView(
                 author: author,
-                currentCourseId: course.id,
                 progressManager: progressManager,
                 onOpenCourse: { target in
                     presentedAuthor = nil
                     guard target.id != course.id else { return }
                     openOtherCourse(target)
-                }
+                },
+                onOpenCampaign: { _ in },
+                showsCampaignCard: false
             )
+            .sophiaColorScheme()
         }
         .fullScreenCover(isPresented: $showQuiz) {
             QuizView(
@@ -380,15 +384,29 @@ struct CourseView: View {
         showAudioPlayer = true
     }
 
+    /// Un segment par section, remplis jusqu'à la section courante (maquette) ; au-delà de
+    /// douze sections, une barre continue, sinon les segments deviennent des pointillés.
     private var progressBar: some View {
-        GeometryReader { geo in
-            ZStack(alignment: .leading) {
-                Capsule()
-                    .fill(DS.hairline)
-                Capsule()
-                    .fill(DS.accent)
-                    .frame(width: max(8, geo.size.width * progressValue))
-                    .animation(.spring(response: 0.4), value: progressValue)
+        Group {
+            if course.lessons.count <= 12 {
+                HStack(spacing: 4) {
+                    ForEach(0..<max(1, course.lessons.count), id: \.self) { index in
+                        Capsule()
+                            .fill(index <= currentIndex ? DS.accentSoft : DS.hairline)
+                            .animation(.easeInOut(duration: 0.25), value: currentIndex)
+                    }
+                }
+            } else {
+                GeometryReader { geo in
+                    ZStack(alignment: .leading) {
+                        Capsule()
+                            .fill(DS.hairline)
+                        Capsule()
+                            .fill(DS.accent)
+                            .frame(width: max(8, geo.size.width * progressValue))
+                            .animation(.spring(response: 0.4), value: progressValue)
+                    }
+                }
             }
         }
         .frame(height: 6)
@@ -417,7 +435,13 @@ struct CourseView: View {
                 courseTitle: course.title,
                 onGlossaryTap: showGlossary,
                 isLast: resolved.isLast,
-                onAuthorTap: { author in presentedAuthor = author }
+                onAuthorTap: { author in presentedAuthor = author },
+                isFollowingAuthor: { progressManager.isFollowing($0.slug) },
+                onFollowAuthor: { author in
+                    let wasFollowing = progressManager.isFollowing(author.slug)
+                    progressManager.toggleFollow(author.slug)
+                    AnalyticsService.shared.log(wasFollowing ? .unfollow : .follow, courseId: course.id, screen: "reader", props: ["creator": .string(author.slug)])
+                }
             )
         } else {
             VStack(alignment: .leading, spacing: 24) {
@@ -450,6 +474,7 @@ struct CourseView: View {
     /// La section que l'on quitte, avec le temps qu'on y a passé (docs/events.md).
     private func logSectionView(index: Int, reachedEnd: Bool) {
         let seconds = Int(Date().timeIntervalSince(sectionEnteredAt).rounded())
+        progressManager.addReadingSeconds(seconds)
         AnalyticsService.shared.log(
             .sectionView,
             courseId: course.id,

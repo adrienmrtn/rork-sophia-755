@@ -55,7 +55,7 @@ n'est qu'une photo sans dates).
 
 | Nom | Quand | `props` |
 | --- | --- | --- |
-| `app_open` | passage au premier plan (une fois par session) | `source` : `direct`, `notification`, `widget`, `link` |
+| `app_open` | passage au premier plan (une fois par session) | `source` : `direct`, `notification`, `widget`, `link` ; `nav` : `classic` ou `newgen`, la variante de navigation tirée au sort (A/B du prompt 2) |
 | `onboarding_step` | un écran d'onboarding s'affiche | `step` (nom analytique de l'écran, identique sur les deux plateformes ; Android émet `paywall` là où iOS distingue `paywall_annual` et `paywall_comparison`), `index` |
 
 ### Fil (cartes)
@@ -70,7 +70,7 @@ n'est qu'une photo sans dates).
 
 | Nom | Quand | `props` |
 | --- | --- | --- |
-| `course_open` | le lecteur s'ouvre | `source` : `feed`, `library`, `subject`, `path`, `favorites`, `profile`, `my_courses`, `notification`, `widget`, `blocker`, `author`, `search`, `unknown` ; `locked` (vrai si le cours est verrouillé pour un gratuit) |
+| `course_open` | le lecteur s'ouvre | `source` : `feed`, `library`, `subject`, `path`, `favorites`, `profile`, `my_courses`, `notification`, `widget`, `blocker`, `author`, `search`, `event`, `unknown` ; `locked` (vrai si le cours est verrouillé pour un gratuit) |
 | `section_view` | l'utilisateur quitte une section (page suivante, fin ou fermeture) | `section_index` (0 = intro), `section_count`, `seconds` (entier), `reached_end` (vrai si la section a été lue jusqu'au bout) |
 | `course_complete` | fin du cours validée (écran de félicitations) | `first_time` (vrai si première fois) |
 | `glossary_open` | une fiche de glossaire s'ouvre | `term`, `section_index` (iOS seulement : Android ne connaît pas la section depuis le texte) |
@@ -87,15 +87,18 @@ n'est qu'une photo sans dates).
 
 ### Gestes sociaux
 
-Tant que les likes et les abonnements n'existent pas côté serveur (prompt 6), le cœur
-sur une carte est un favori local : il est enregistré comme `like` / `unlike`.
+Tant que les likes et les abonnements n'existent pas côté serveur (prompt 6), les gestes
+sont locaux : le cœur est un « j'aime » (`likedCourseIds`), le marque-page un
+« enregistrer » (`favoriteCourseIds`, la liste « À lire »), « Suivre » un abonnement
+(`followedCreatorSlugs`). Dans la navigation classique, le marque-page de la carte reste
+enregistré comme `like` / `unlike`.
 
 | Nom | Quand | `props` |
 | --- | --- | --- |
-| `like` / `unlike` | cœur sur un cours | `screen` |
-| `save` / `unsave` | enregistrer pour plus tard | `screen` |
+| `like` / `unlike` | cœur sur un cours | `screen` : `home`, `home_following`, `course_detail`, `library`… |
+| `save` / `unsave` | enregistrer pour plus tard (marque-page) | `screen` |
 | `share` | partage d'un cours ou de l'app | `channel`, `target` (`course` ou `app`) |
-| `follow` / `unfollow` | suivre un créateur | `creator` |
+| `follow` / `unfollow` | suivre un créateur | `creator` (slug), `screen` : `creator`, `explore`, `course_detail`, `reader` |
 | `not_interested` | « pas intéressé » sur une carte | — |
 | `report` | signalement | `kind` (`course`, `translation`, `quiz_question`, `creator`), `target`, `reason` |
 

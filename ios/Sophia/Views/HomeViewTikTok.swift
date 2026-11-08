@@ -30,8 +30,8 @@ private struct ImmediateTouchScrollFixer: UIViewRepresentable {
 /// image + text, explicit CTA) paged one at a time with a vertical scroll-snap gesture
 /// (the "meta" of a TikTok/Reels feed: swipe up/down to move between courses), rather than
 /// a full-bleed video-style card. Swiping only browses — opening a course always goes
-/// through the explicit "Commencer" CTA on the card. Kept alongside `HomeViewLegacy`/
-/// `HomeViewTinder` for one-flag rollback via `HomeCardPresentation.style`.
+/// through the explicit "Commencer" CTA on the card. The classic home of the 5-tab
+/// navigation; the new-generation feed is `HomeFeedView`.
 struct HomeViewTikTok: View {
     @Environment(LanguageManager.self) private var languageManager
     let progressManager: ProgressManager
@@ -319,7 +319,6 @@ struct HomeViewTikTok: View {
     }
 
     private func maybeShowSwipeExplain() {
-        guard HomeCardPresentation.style == .tiktok else { return }
         guard !TutorialFlags.seen(.homeSwipe) else { return }
         guard cards.count > 1 else { return }
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {

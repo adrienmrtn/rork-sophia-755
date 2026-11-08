@@ -96,11 +96,13 @@ class ProgressSyncService(
 
     private fun isEmpty(p: UserProgress): Boolean =
         p.courseProgress.isEmpty() && p.globalXP == 0 && p.favoriteCourseIds.isEmpty() &&
-            p.pathLevelResults.isEmpty()
+            p.pathLevelResults.isEmpty() && p.likedCourseIds.isEmpty() && p.followedCreatorSlugs.isEmpty()
 
+    // Mêmes termes qu'iOS (`syncSignalScore`), j'aime et abonnements compris.
     private fun syncSignal(p: UserProgress): Int =
         p.globalXP + p.courseProgress.size * 3 + p.completedQuizCourseIds.size * 5 + p.streak +
-            p.pathLevelResults.values.count { it.isPassed } * 100
+            p.pathLevelResults.values.count { it.isPassed } * 100 +
+            p.likedCourseIds.size + p.followedCreatorSlugs.size
 
     @Serializable
     private data class UpsertProgressRow(

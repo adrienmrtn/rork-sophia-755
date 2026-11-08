@@ -24,7 +24,15 @@ data class CourseAuthor(
     val title: Map<String, String> = emptyMap(),
     val bio: Map<String, String> = emptyMap(),
     val courseIds: List<String> = emptyList(),
+    /**
+     * Expert vérifié (diplôme ou fonction contrôlés par l'équipe). Absent des fichiers
+     * actuels : tous les auteurs embarqués sont des universitaires, donc vérifiés par défaut.
+     * Le Studio (prompt 5) posera la valeur explicitement pour les nouveaux créateurs.
+     */
+    val verified: Boolean? = null,
 ) {
+    val isVerified: Boolean get() = verified ?: true
+
     fun title(language: AppLanguage): String? = localized(title, language)
 
     fun bio(language: AppLanguage): String? = localized(bio, language)

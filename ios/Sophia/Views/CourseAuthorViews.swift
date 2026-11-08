@@ -88,6 +88,9 @@ struct AuthorBylineV2: View {
 /// to the author's other courses.
 struct AuthorCardV2: View {
     let author: CourseAuthor
+    /// État « suivi » et geste « Suivre » ; nil quand le contexte ne les fournit pas.
+    var isFollowing: Bool? = nil
+    var onFollow: (() -> Void)? = nil
     let onTap: (CourseAuthor) -> Void
 
     private var language: AppLanguage { AppLanguage.currentPersisted() }
@@ -107,10 +110,13 @@ struct AuthorCardV2: View {
             HStack(alignment: .center, spacing: 14) {
                 AuthorAvatarView(author: author, size: 56)
                 VStack(alignment: .leading, spacing: 3) {
-                    Text(author.name)
-                        .font(DS.title(.title3, .semibold))
-                        .foregroundStyle(DS.ink)
-                        .fixedSize(horizontal: false, vertical: true)
+                    HStack(spacing: 5) {
+                        Text(author.name)
+                            .font(DS.title(.title3, .semibold))
+                            .foregroundStyle(DS.ink)
+                            .fixedSize(horizontal: false, vertical: true)
+                        if author.isVerified { VerifiedCheck(size: 15) }
+                    }
                     if let title = author.title(for: language) {
                         Text(title)
                             .font(DS.sans(.subheadline))
@@ -119,6 +125,9 @@ struct AuthorCardV2: View {
                     }
                 }
                 Spacer(minLength: 0)
+                if let isFollowing, let onFollow {
+                    FollowButton(isFollowing: isFollowing, compact: true, action: onFollow)
+                }
             }
 
             if let bio = author.bio(for: language) {
@@ -152,6 +161,41 @@ struct AuthorCardV2: View {
                 }
         }
         .dsSoftShadow()
+    }
+}
+
+// MARK: - Traduit de…
+
+/// « Traduit de l'anglais · Voir l'original » sous la signature d'un cours écrit dans une
+/// autre langue. Le texte original n'est pas encore livré avec les cours (prompt 3) : la ligne
+/// n'affiche le lien que lorsqu'il le sera.
+struct TranslatedFromLine: View {
+    let code: String
+    var onShowOriginal: (() -> Void)? = nil
+
+    private var language: AppLanguage { AppLanguage.currentPersisted() }
+
+    var body: some View {
+        HStack(spacing: 8) {
+            Image(systemName: "globe")
+                .font(.system(size: 15, weight: .medium))
+                .foregroundStyle(DS.accent)
+            Text(String(format: AppLocalizable.string("course.translatedFrom", language: language), AppLanguage(rawValue: code)?.displayName ?? code.uppercased()))
+                .font(DS.sans(.footnote, .semibold))
+                .foregroundStyle(DS.ink)
+            Spacer(minLength: 8)
+            if let onShowOriginal {
+                Button(action: onShowOriginal) {
+                    Text(AppLocalizable.string("course.seeOriginal", language: language))
+                        .font(DS.sans(.footnote, .bold))
+                        .foregroundStyle(DS.accentSoft)
+                }
+                .buttonStyle(.plain)
+            }
+        }
+        .padding(.horizontal, 12)
+        .padding(.vertical, 10)
+        .background(RoundedRectangle(cornerRadius: 14, style: .continuous).fill(DS.accentTint))
     }
 }
 

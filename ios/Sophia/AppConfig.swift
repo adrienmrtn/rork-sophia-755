@@ -14,6 +14,13 @@ enum AppConfig {
             : URL(string: "https://sophia-culture.com/en/creators/\(role)")
     }
 
+    /// Le Studio des créateurs de cours sur le site (prompt 5). Français et anglais seulement.
+    static func creatorStudioURL(language: AppLanguage) -> URL? {
+        language == .french
+            ? URL(string: "https://sophia-culture.com/fr/auteurs")
+            : URL(string: "https://sophia-culture.com/en/auteurs")
+    }
+
     // MARK: - Supabase (auth + sync)
     //
     // URL et clé publishable/anon sont publiques par design (clés client). La sécurité

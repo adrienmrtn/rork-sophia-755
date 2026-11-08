@@ -1,0 +1,516 @@
+import SwiftUI
+
+// Briques des écrans « Sophia nouvelle génération » (maquette prompt 2) : identité d'un
+// créateur, pastilles, compteurs, lignes de cours compactes, segments. Les prompts 6, 7 et
+// 10 n'ont qu'à brancher les vraies données dessus.
+
+// MARK: - Créateur
+
+/// Qui signe un cours sur une carte : un auteur de `AuthorStore`, ou l'équipe Sophia pour les
+/// cours maison (la majorité du catalogue n'a pas encore d'auteur nommé).
+enum CreatorIdentity: Hashable {
+    case author(CourseAuthor)
+    case house
+
+    static func forCourse(_ courseId: String) -> CreatorIdentity {
+        if let author = AuthorStore.author(forCourseId: courseId) { return .author(author) }
+        return .house
+    }
+
+    var author: CourseAuthor? {
+        if case .author(let author) = self { return author }
+        return nil
+    }
+
+    var slug: String? { author?.slug }
+
+    var name: String {
+        switch self {
+        case .author(let author): author.name
+        case .house: "Sophia"
+        }
+    }
+
+    var isVerified: Bool {
+        switch self {
+        case .author(let author): author.isVerified
+        case .house: true
+        }
+    }
+
+    func pedigree(language: AppLanguage) -> String? {
+        switch self {
+        case .author(let author): author.title(for: language)
+        case .house: AppLocalizable.string("creator.house.pedigree", language: language)
+        }
+    }
+
+    /// Les créateurs peuvent être suivis ; l'équipe Sophia n'a pas de page.
+    var isFollowable: Bool { author != nil }
+}
+
+/// Portrait ou initiales d'un auteur ; la marque Sophia pour les cours maison.
+struct CreatorAvatar: View {
+    let identity: CreatorIdentity
+    var size: CGFloat = 36
+
+    var body: some View {
+        switch identity {
+        case .author(let author):
+            AuthorAvatarView(author: author, size: size)
+        case .house:
+            ZStack {
+                Circle().fill(DS.accent)
+                Image("sophia_mark")
+                    .resizable()
+                    .renderingMode(.template)
+                    .scaledToFit()
+                    .foregroundStyle(.white)
+                    .padding(size * 0.24)
+            }
+            .frame(width: size, height: size)
+            .accessibilityHidden(true)
+        }
+    }
+}
+
+/// Coche bleue des experts vérifiés, à côté du nom.
+struct VerifiedCheck: View {
+    var size: CGFloat = 14
+
+    var body: some View {
+        Image(systemName: "checkmark.seal.fill")
+            .font(.system(size: size, weight: .semibold))
+            .foregroundStyle(DS.accentSoft)
+            .accessibilityLabel(Text(AppLocalizable.string("creator.badge.verified", language: AppLanguage.currentPersisted())))
+    }
+}
+
+/// « Expert vérifié » (bleu) ou « Créateur » (violet) : le statut d'un créateur, en capsule.
+struct CreatorBadge: View {
+    let verified: Bool
+
+    private var language: AppLanguage { AppLanguage.currentPersisted() }
+
+    var body: some View {
+        HStack(spacing: 6) {
+            Image(systemName: verified ? "checkmark.seal.fill" : "pencil.line")
+                .font(.system(size: 13, weight: .semibold))
+            Text(AppLocalizable.string(verified ? "creator.badge.verified" : "creator.badge.creator", language: language))
+                .font(DS.sans(.subheadline, .semibold))
+        }
+        .foregroundStyle(verified ? DS.accentSoft : Color(red: 0.30, green: 0.11, blue: 0.58))
+        .padding(.horizontal, 12)
+        .frame(height: 32)
+        .background(
+            Capsule().fill(verified ? DS.accentTint : Color(red: 0.95, green: 0.93, blue: 0.98))
+        )
+    }
+}
+
+/// Avatar, nom avec coche, pedigree : la ligne « qui a écrit ça » des cartes et des fiches.
+struct CreatorLine: View {
+    let identity: CreatorIdentity
+    var avatarSize: CGFloat = 36
+    var showsPedigree = true
+    var onTap: (() -> Void)? = nil
+
+    private var language: AppLanguage { AppLanguage.currentPersisted() }
+
+    var body: some View {
+        let content = HStack(spacing: 10) {
+            CreatorAvatar(identity: identity, size: avatarSize)
+            VStack(alignment: .leading, spacing: 1) {
+                HStack(spacing: 4) {
+                    Text(identity.name)
+                        .font(DS.sans(.subheadline, .bold))
+                        .foregroundStyle(DS.ink)
+                        .lineLimit(1)
+                    if identity.isVerified { VerifiedCheck(size: 13) }
+                }
+                if showsPedigree, let pedigree = identity.pedigree(language: language) {
+                    Text(pedigree)
+                        .font(DS.sans(.caption))
+                        .foregroundStyle(DS.inkSecondary)
+                        .lineLimit(1)
+                }
+            }
+            Spacer(minLength: 0)
+        }
+        .contentShape(Rectangle())
+
+        if let onTap, identity.isFollowable {
+            Button {
+                UIImpactFeedbackGenerator(style: .light).impactOccurred()
+                onTap()
+            } label: { content }
+            .buttonStyle(.plain)
+            .accessibilityLabel(Text(identity.name))
+        } else {
+            content
+        }
+    }
+}
+
+/// « Suivre » plein ou « Abonné » en contour. Le geste reste local jusqu'au prompt 6.
+struct FollowButton: View {
+    let isFollowing: Bool
+    var compact = false
+    let action: () -> Void
+
+    private var language: AppLanguage { AppLanguage.currentPersisted() }
+
+    var body: some View {
+        Button {
+            UIImpactFeedbackGenerator(style: .light).impactOccurred()
+            action()
+        } label: {
+            Text(AppLocalizable.string(isFollowing ? "creator.following" : "creator.follow", language: language))
+                .font(DS.sans(compact ? .footnote : .subheadline, .bold))
+                .foregroundStyle(isFollowing ? DS.accent : .white)
+                .padding(.horizontal, compact ? 14 : 18)
+                .frame(height: compact ? 34 : 44)
+                .frame(maxWidth: compact ? nil : .infinity)
+                .background {
+                    if isFollowing {
+                        RoundedRectangle(cornerRadius: compact ? 10 : 14, style: .continuous)
+                            .fill(DS.surface)
+                            .overlay {
+                                RoundedRectangle(cornerRadius: compact ? 10 : 14, style: .continuous)
+                                    .strokeBorder(DS.hairline, lineWidth: 1)
+                            }
+                    } else {
+                        RoundedRectangle(cornerRadius: compact ? 10 : 14, style: .continuous).fill(DS.accent)
+                    }
+                }
+        }
+        .buttonStyle(.plain)
+        .animation(.easeInOut(duration: 0.15), value: isFollowing)
+    }
+}
+
+// MARK: - Pastilles et chips
+
+/// Pastille blanche « ● Histoire » (point de la couleur de la matière), avec un complément
+/// optionnel (« · 1916 »).
+struct SubjectPill: View {
+    let subject: Subject
+    var extra: String? = nil
+
+    private var language: AppLanguage { AppLanguage.currentPersisted() }
+
+    var body: some View {
+        HStack(spacing: 6) {
+            Circle().fill(subject.color).frame(width: 8, height: 8)
+            Text(extra.map { "\(subject.localizedShortName(language: language)) · \($0)" } ?? subject.localizedShortName(language: language))
+                .font(DS.sans(.footnote, .bold))
+                .foregroundStyle(DS.ink)
+                .lineLimit(1)
+        }
+        .padding(.horizontal, 10)
+        .frame(height: 30)
+        .background(Capsule().fill(DS.surface))
+        .overlay(Capsule().strokeBorder(DS.hairline, lineWidth: 1))
+    }
+}
+
+/// Étiquette pleine : « Nouveau » (bleu nuit) ou le nom d'un événement (or).
+struct TagPill: View {
+    enum Style { case accent, warm }
+    let text: String
+    var style: Style = .accent
+
+    var body: some View {
+        Text(text)
+            .font(DS.sans(.footnote, .bold))
+            .foregroundStyle(style == .accent ? .white : DS.ink)
+            .padding(.horizontal, 10)
+            .frame(height: 30)
+            .background(Capsule().fill(style == .accent ? DS.accent : DS.warm))
+            .lineLimit(1)
+    }
+}
+
+/// Icône + valeur, pour les lignes de statistiques des cartes (lectures, j'aime, durée).
+struct StatChip: View {
+    let systemImage: String
+    let text: String
+    var tint: Color = DS.inkSecondary
+
+    var body: some View {
+        HStack(spacing: 5) {
+            Image(systemName: systemImage)
+                .font(.system(size: 14, weight: .medium))
+            Text(text)
+                .font(DS.sans(.footnote, .semibold))
+                .monospacedDigit()
+        }
+        .foregroundStyle(tint)
+    }
+}
+
+/// Les trois compteurs du profil : icône sur fond teinté, valeur, libellé.
+struct StatCounter: View {
+    let systemImage: String
+    let iconTint: Color
+    let iconBackground: Color
+    let value: String
+    let label: String
+
+    var body: some View {
+        HStack(spacing: 10) {
+            ZStack {
+                Circle().fill(iconBackground)
+                Image(systemName: systemImage)
+                    .font(.system(size: 15, weight: .semibold))
+                    .foregroundStyle(iconTint)
+            }
+            .frame(width: 36, height: 36)
+            VStack(alignment: .leading, spacing: 0) {
+                Text(value)
+                    .font(DS.title(.headline, .heavy))
+                    .foregroundStyle(DS.ink)
+                    .monospacedDigit()
+                    .lineLimit(1)
+                Text(label)
+                    .font(DS.sans(.caption))
+                    .foregroundStyle(DS.inkSecondary)
+                    .lineLimit(1)
+            }
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+    }
+}
+
+// MARK: - Cours
+
+/// Couverture d'un cours : l'image du catalogue, sinon l'icône de la matière sur fond doux.
+struct CourseCover: View {
+    let course: Course
+    var cornerRadius: CGFloat = 14
+
+    @State private var image: UIImage?
+
+    var body: some View {
+        ZStack {
+            RoundedRectangle(cornerRadius: cornerRadius, style: .continuous).fill(DS.surfaceMuted)
+            if let image {
+                Image(uiImage: image)
+                    .resizable()
+                    .scaledToFill()
+            } else {
+                Image(systemName: course.subject.icon)
+                    .font(.system(size: 22, weight: .medium))
+                    .foregroundStyle(course.subject.color)
+            }
+        }
+        .clipShape(RoundedRectangle(cornerRadius: cornerRadius, style: .continuous))
+        .onAppear {
+            if image == nil { image = CourseImageMap.loadImage(for: course.id) }
+        }
+        .accessibilityHidden(true)
+    }
+}
+
+/// Ligne compacte d'une liste de cours : couverture 64, titre sur deux lignes, une ligne de
+/// détail, et un ornement à droite (coche « lu », chevron…).
+struct CompactCourseRow<Trailing: View>: View {
+    let course: Course
+    let meta: String
+    var secondMeta: String? = nil
+    let onTap: () -> Void
+    @ViewBuilder var trailing: () -> Trailing
+
+    var body: some View {
+        Button {
+            UIImpactFeedbackGenerator(style: .light).impactOccurred()
+            onTap()
+        } label: {
+            HStack(spacing: 12) {
+                CourseCover(course: course, cornerRadius: 14)
+                    .frame(width: 64, height: 64)
+                VStack(alignment: .leading, spacing: 3) {
+                    Text(course.title.withoutInlineMarkup)
+                        .font(DS.sans(.subheadline, .bold))
+                        .foregroundStyle(DS.ink)
+                        .lineLimit(2)
+                        .multilineTextAlignment(.leading)
+                    Text(meta)
+                        .font(DS.sans(.caption))
+                        .foregroundStyle(DS.inkSecondary)
+                        .lineLimit(1)
+                    if let secondMeta {
+                        Text(secondMeta)
+                            .font(DS.sans(.caption, .semibold))
+                            .foregroundStyle(DS.inkSecondary)
+                            .lineLimit(1)
+                    }
+                }
+                Spacer(minLength: 6)
+                trailing()
+            }
+            .padding(10)
+            .background(
+                RoundedRectangle(cornerRadius: 18, style: .continuous).fill(DS.surface)
+            )
+            .overlay(
+                RoundedRectangle(cornerRadius: 18, style: .continuous).strokeBorder(DS.hairline, lineWidth: 1)
+            )
+            .contentShape(Rectangle())
+        }
+        .buttonStyle(.plain)
+    }
+}
+
+extension CompactCourseRow where Trailing == EmptyView {
+    init(course: Course, meta: String, secondMeta: String? = nil, onTap: @escaping () -> Void) {
+        self.course = course
+        self.meta = meta
+        self.secondMeta = secondMeta
+        self.onTap = onTap
+        self.trailing = { EmptyView() }
+    }
+}
+
+/// Disque vert avec une coche : « lu ».
+struct ReadCheck: View {
+    var body: some View {
+        ZStack {
+            Circle().fill(DS.successTint)
+            Image(systemName: "checkmark")
+                .font(.system(size: 13, weight: .bold))
+                .foregroundStyle(DS.success)
+        }
+        .frame(width: 32, height: 32)
+        .accessibilityLabel(Text(AppLocalizable.string("common.read", language: AppLanguage.currentPersisted())))
+    }
+}
+
+// MARK: - Segments et titres
+
+/// Sélecteur à segments sur fond bleu pâle, segment actif blanc avec ombre (« Pour toi /
+/// Abonnements », « Populaires / Récents / Séries », « À lire / Lus / Aimés »).
+struct SegmentedPills: View {
+    let items: [String]
+    @Binding var selection: Int
+    /// Un point bleu sur un segment : quelque chose de nouveau derrière.
+    var dotOn: Int? = nil
+
+    var body: some View {
+        HStack(spacing: 4) {
+            ForEach(Array(items.enumerated()), id: \.offset) { index, item in
+                Button {
+                    UISelectionFeedbackGenerator().selectionChanged()
+                    withAnimation(.spring(response: 0.3, dampingFraction: 0.85)) { selection = index }
+                } label: {
+                    HStack(spacing: 6) {
+                        Text(item)
+                            .font(DS.sans(.subheadline, .bold))
+                            .foregroundStyle(selection == index ? DS.ink : DS.inkSecondary)
+                            .lineLimit(1)
+                            .minimumScaleFactor(0.85)
+                        if dotOn == index, selection != index {
+                            Circle().fill(DS.accentSoft).frame(width: 7, height: 7)
+                        }
+                    }
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 40)
+                    .background {
+                        if selection == index {
+                            RoundedRectangle(cornerRadius: 12, style: .continuous)
+                                .fill(DS.surface)
+                                .shadow(color: .black.opacity(0.06), radius: 6, y: 2)
+                        }
+                    }
+                    .contentShape(Rectangle())
+                }
+                .buttonStyle(.plain)
+            }
+        }
+        .padding(4)
+        .background(RoundedRectangle(cornerRadius: 16, style: .continuous).fill(DS.surfaceMuted))
+    }
+}
+
+/// Titre de section des nouveaux écrans (20 pt, gras).
+struct NewGenSectionTitle: View {
+    let text: String
+    var trailing: String? = nil
+
+    var body: some View {
+        HStack(alignment: .firstTextBaseline) {
+            Text(text)
+                .font(DS.title(.title3, .heavy))
+                .foregroundStyle(DS.ink)
+            if let trailing {
+                Text(trailing)
+                    .font(DS.title(.title3, .heavy))
+                    .foregroundStyle(DS.inkTertiary)
+            }
+            Spacer(minLength: 0)
+        }
+    }
+}
+
+/// Bouton rond blanc (retour, fermer, partager) des nouveaux écrans.
+struct RoundIconButton: View {
+    let systemImage: String
+    var size: CGFloat = 44
+    var accessibilityLabel: String? = nil
+    let action: () -> Void
+
+    var body: some View {
+        Button {
+            UIImpactFeedbackGenerator(style: .light).impactOccurred()
+            action()
+        } label: {
+            Image(systemName: systemImage)
+                .font(.system(size: 16, weight: .semibold))
+                .foregroundStyle(DS.ink)
+                .frame(width: size, height: size)
+                .background(Circle().fill(DS.surface))
+                .overlay(Circle().strokeBorder(DS.hairline, lineWidth: 1))
+        }
+        .buttonStyle(.plain)
+        .accessibilityLabel(Text(accessibilityLabel ?? ""))
+    }
+}
+
+// MARK: - Formats
+
+enum NewGenFormat {
+    /// « 7 min » dans la langue de l'app.
+    static func minutes(_ minutes: Int, language: AppLanguage = AppLanguage.currentPersisted()) -> String {
+        String(format: AppLocalizable.string("common.minutesShort", language: language), minutes)
+    }
+
+    /// « section 3 sur 5 ».
+    static func section(_ index: Int, of count: Int, language: AppLanguage = AppLanguage.currentPersisted()) -> String {
+        String(format: AppLocalizable.string("common.sectionOf", language: language), index, count)
+    }
+
+    /// Jour et mois courts dans la langue de l'app : « 30 nov. ».
+    static func shortDay(_ date: Date, language: AppLanguage = AppLanguage.currentPersisted()) -> String {
+        let formatter = DateFormatter()
+        formatter.locale = language.foundationLocale
+        formatter.setLocalizedDateFormatFromTemplate("d MMM")
+        return formatter.string(from: date)
+    }
+
+    /// Jour et mois longs : « 30 novembre ».
+    static func longDay(_ date: Date, language: AppLanguage = AppLanguage.currentPersisted()) -> String {
+        let formatter = DateFormatter()
+        formatter.locale = language.foundationLocale
+        formatter.setLocalizedDateFormatFromTemplate("d MMMM")
+        return formatter.string(from: date)
+    }
+
+    /// « 6 h » ou « 45 min » de lecture cumulée.
+    static func readingTime(seconds: Int, language: AppLanguage = AppLanguage.currentPersisted()) -> String {
+        let hours = seconds / 3_600
+        if hours >= 1 {
+            return String(format: AppLocalizable.string("common.hoursShort", language: language), hours)
+        }
+        return minutes(max(0, seconds / 60), language: language)
+    }
+}
