@@ -202,7 +202,8 @@ struct CourseView: View {
                     guard target.id != course.id else { return }
                     openOtherCourse(target)
                 },
-                onOpenCampaign: { _ in }
+                onOpenCampaign: { _ in },
+                showsCampaignCard: false
             )
             .sophiaColorScheme()
         }

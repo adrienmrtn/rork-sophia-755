@@ -5,7 +5,6 @@ import SwiftUI
 /// amis, anti-scroll). L'ancien profil reste accessible comme page « Ma progression ».
 struct ProfileV2View: View {
     @Environment(LanguageManager.self) private var languageManager
-    @Environment(AuthService.self) private var auth
     let progressManager: ProgressManager
     let store: StoreViewModel
     let onOpenCourse: (Course) -> Void

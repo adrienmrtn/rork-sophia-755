@@ -182,6 +182,8 @@ struct NewGenTabsView: View {
                 selectedCourse: $selectedCourse
             )
             .toolbar(.hidden, for: .navigationBar)
+        // Les trois pages ci-dessous étaient des racines d'onglet : elles n'ont pas de bouton
+        // retour, c'est la barre de navigation système (et le geste de bord) qui le fournit.
         case .progression:
             ProfileView(
                 progressManager: progressManager,
@@ -191,13 +193,13 @@ struct NewGenTabsView: View {
                 onShowBlockerPaywall: { onShowPaywall(.blocker) },
                 onResetOnboarding: onResetOnboarding
             )
-            .toolbar(.hidden, for: .navigationBar)
+            .modifier(SystemBackBar())
         case .friends:
             FriendsHubView()
                 .toolbar(.hidden, for: .navigationBar)
         case .path:
             LearningPathView(progressManager: progressManager, selectedCourse: $selectedCourse)
-                .toolbar(.hidden, for: .navigationBar)
+                .modifier(SystemBackBar())
         case .training:
             TrainingView(
                 progressManager: progressManager,
@@ -205,7 +207,7 @@ struct NewGenTabsView: View {
                 isPremium: storeVM.isPremium,
                 onShowQuizPaywall: { onShowPaywall(.entrainement) }
             )
-            .toolbar(.hidden, for: .navigationBar)
+            .modifier(SystemBackBar())
         }
     }
 
@@ -229,6 +231,18 @@ struct NewGenTabsView: View {
     private func openCreatorStudio() {
         guard let url = AppConfig.creatorStudioURL(language: languageManager.current) else { return }
         openURL(url)
+    }
+}
+
+/// Barre de navigation système réduite à son bouton retour, sur le fond de l'app, pour les
+/// pages qui n'ont pas de bouton retour à elles.
+private struct SystemBackBar: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbarBackground(DS.canvas, for: .navigationBar)
+            .toolbarBackground(.visible, for: .navigationBar)
+            .tint(DS.accent)
     }
 }
 

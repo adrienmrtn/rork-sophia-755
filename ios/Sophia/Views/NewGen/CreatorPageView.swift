@@ -10,6 +10,9 @@ struct CreatorPageView: View {
     let progressManager: ProgressManager
     let onOpenCourse: (Course) -> Void
     let onOpenCampaign: (Campaign) -> Void
+    /// L'encart « En écriture pour … » mène à l'événement ; faux là où rien ne peut l'ouvrir
+    /// (la page présentée depuis le lecteur).
+    var showsCampaignCard = true
 
     @State private var segment = 0
 
@@ -95,7 +98,7 @@ struct CreatorPageView: View {
                         .fixedSize(horizontal: false, vertical: true)
                 }
 
-                if let writing = writingFor {
+                if showsCampaignCard, let writing = writingFor {
                     let campaign = writing.0
                     let upcoming = writing.1
                     Button {

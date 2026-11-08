@@ -780,13 +780,6 @@ class ProgressManager {
         save()
     }
 
-    var hasSeenSwipeTutorial: Bool { progress.hasSeenSwipeTutorial }
-
-    func markSwipeTutorialSeen() {
-        progress.hasSeenSwipeTutorial = true
-        save()
-    }
-
     var hasSeenSpecialOffer: Bool { progress.hasSeenSpecialOffer }
 
     func markSpecialOfferSeen() {

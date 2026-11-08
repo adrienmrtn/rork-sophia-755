@@ -64,25 +64,36 @@ enum CampaignStore {
 
     // MARK: - Loading
 
-    private static func load() -> [Campaign] {
+    private struct Index: Decodable {
+        let events: [String]
+    }
+
+    /// Xcode peut aplatir le dossier `Resources` dans le bundle : comme les autres chargeurs,
+    /// chaque fichier est cherché dans `Resources/Events`, `Events`, puis à la racine. Un
+    /// index (`index.json`) donne les noms de fichiers, puisqu'on ne peut pas lister la racine.
+    private static func resourceURL(name: String) -> URL? {
         let bundle = Bundle.main
-        var urls: [URL] = []
         for subdirectory in ["Resources/Events", "Events"] {
-            if let found = bundle.urls(forResourcesWithExtension: "json", subdirectory: subdirectory), !found.isEmpty {
-                urls = found
-                break
-            }
+            if let url = bundle.url(forResource: name, withExtension: "json", subdirectory: subdirectory) { return url }
         }
-        if urls.isEmpty, let root = bundle.resourceURL {
-            for subdirectory in ["Resources/Events", "Events"] {
-                let folder = root.appendingPathComponent(subdirectory)
-                if let found = try? FileManager.default.contentsOfDirectory(at: folder, includingPropertiesForKeys: nil) {
-                    urls = found.filter { $0.pathExtension == "json" }
-                    if !urls.isEmpty { break }
-                }
-            }
+        if let url = bundle.url(forResource: name, withExtension: "json") { return url }
+        guard let root = bundle.resourceURL else { return nil }
+        for subdirectory in ["Resources/Events", "Events", ""] {
+            let candidate = root.appendingPathComponent(subdirectory).appendingPathComponent("\(name).json")
+            if FileManager.default.fileExists(atPath: candidate.path) { return candidate }
         }
+        return nil
+    }
+
+    private static func load() -> [Campaign] {
         let decoder = JSONDecoder()
+        guard let indexURL = resourceURL(name: "index"),
+              let indexData = try? Data(contentsOf: indexURL),
+              let index = try? decoder.decode(Index.self, from: indexData) else {
+            assertionFailure("Events index.json missing from the bundle")
+            return []
+        }
+        let urls = index.events.compactMap { resourceURL(name: $0) }
         return urls.compactMap { url in
             guard let data = try? Data(contentsOf: url) else { return nil }
             do {
