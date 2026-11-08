@@ -34536,12 +34536,12 @@
       {
         "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q1",
         "type": "mcq",
-        "question": "Kdo si v roce 1902 všiml prvního ozubeného kola v bronzovém bloku?",
-        "explanation": "Byl to archeolog Valerios Stais, kdo si v roce 1902 všiml ozubeného kola zachyceného v korozi.",
+        "question": "Kdo si v roce 1902 všiml prvního ozubeného kolečka v bronzovém bloku?",
+        "explanation": "Byl to archeolog Valerios Stais, kdo si v roce 1902 všiml ozubeného kolečka zamrzlého v korozi.",
         "options": [
           "Valerios Stais",
           "Derek de Solla Price",
-          "Charalambos Karakalos",
+          "Charalampos Karakalos",
           "Velitel Cousteau"
         ],
         "correctIndex": 0
@@ -34549,10 +34549,10 @@
       {
         "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q2",
         "type": "mcq",
-        "question": "Kdy se potopila loď převážející antikythérský mechanismus?",
-        "explanation": "Loď se potopila kolem roku 60 př. n. l., naložená řeckými uměleckými díly určenými pravděpodobně římským kupujícím.",
+        "question": "Kdy se potopila loď, která vezla antikythérský mechanismus?",
+        "explanation": "Loď se potopila kolem 60 př. n. l. naložená řeckými uměleckými díly, pravděpodobně určenými pro římské kupce.",
         "options": [
-          "Kolem roku 60 př. n. l.",
+          "Kolem 60 př. n. l.",
           "Ve 2. století př. n. l.",
           "V roce 1900",
           "V roce 1976"
@@ -34562,20 +34562,20 @@
       {
         "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q3",
         "type": "chronological",
-        "question": "Seřaď chronologicky tyto etapy studia antikythérského mechanismu.",
-        "explanation": "Objev vraku proběhl v roce 1900, ozubeného kola si všiml v roce 1902, Derek de Solla Price publikoval svou první studii v roce 1959 a tomografické snímky umožnily rozluštit kód v roce 2006.",
+        "question": "Seřaď v časovém pořadí tyto etapy zkoumání antikythérského mechanismu.",
+        "explanation": "Objev vraku se uskutečnil v roce 1900, ozubeného kolečka si všimli v roce 1902, Derek de Solla Price publikoval svou první studii v roce 1959 a snímky z tomografie umožnily rozluštit kód v roce 2006.",
         "items": [
-          "Lovci hub ze Symi objevují vrak u pobřeží Antikythéry.",
-          "Valerios Stais si všímá převodu v zkorodovaném bloku v athénském muzeu.",
-          "Derek de Solla Price publikuje první podrobnou studii mechanismu.",
-          "Tomografické snímky umožňují přečíst nápisy a pochopit ciferníky."
+          "Lovci mořských hub ze Symi objevili vrak u Antikythéry.",
+          "Valerios Stais si všiml ozubení v korodovaném bloku v athénském muzeu.",
+          "Derek de Solla Price publikoval první detailní studii mechanismu.",
+          "Snímky z tomografie umožnily přečíst nápisy a pochopit ciferníky."
         ]
       },
       {
         "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q4",
         "type": "trueFalse",
         "question": "Antikythérský mechanismus dokázal předpovídat zatmění Slunce a Měsíce.",
-        "explanation": "Mechanismus měl ciferník sledující saros, který umožňoval předpovídat zatmění Slunce a Měsíce, včetně času a někdy i očekávané barvy.",
+        "explanation": "Mechanismus zahrnoval ciferník sledující saros, který umožňoval předpovídat zatmění Slunce a Měsíce s časem a občas i očekávanou barvou.",
         "options": [
           "Pravda",
           "Nepravda"
@@ -34585,8 +34585,8 @@
       {
         "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q5",
         "type": "mcq",
-        "question": "Který astronomický cyklus umožňoval sladit 19 slunečních roků a 235 měsíčních měsíců?",
-        "explanation": "Metonův cyklus slaďoval 19 slunečních roků a 235 měsíčních měsíců a byl znázorněn na jednom z velkých spirálových ciferníků vzadu na mechanismu.",
+        "question": "Který astronomický cyklus umožňoval spojit 19 slunečních roků a 235 měsíčních měsíců?",
+        "explanation": "Metonův cyklus spojoval 19 slunečních roků a 235 měsíčních měsíců a byl zobrazen na jednom z velkých spirálových ciferníků na zadní straně mechanismu.",
         "options": [
           "Metonův cyklus",
           "Saros",
@@ -34598,10 +34598,10 @@
       {
         "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q6",
         "type": "mcq",
-        "question": "Kolik času uplynulo, než se objevily předměty složitostí srovnatelné s antikythérským mechanismem?",
-        "explanation": "Žádný předmět takové složitosti není znám před astronomickými hodinami Evropy ze 14. století, tedy téměř o 1 500 let později.",
+        "question": "Kolik času uplynulo, než se našly předměty srovnatelné složitosti s antikythérským mechanismem?",
+        "explanation": "Žádný předmět takové složitosti není znám před astronomickými hodinami z Evropy 14. století, tedy skoro o 1 500 let později.",
         "options": [
-          "Téměř 1 500 let",
+          "Skoro 1 500 let",
           "500 let",
           "1 000 let",
           "2 000 let"
