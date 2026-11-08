@@ -23,6 +23,11 @@ on:
         description: "Id du job (production_jobs.id)"
         required: true
         type: string
+      languages:
+        description: "Relance partielle : langues cibles séparées par des virgules (vide = celles du job)"
+        required: false
+        type: string
+        default: ""
 
 # Un job à la fois : ils écrivent tous dans content/ et poussent sur main.
 concurrency:
@@ -86,7 +91,12 @@ jobs:
           [ -n "$JOB" ] || { echo "::error::job_id absent"; exit 1; }
           [ -n "$PRODUCTION_MODEL" ] || unset PRODUCTION_MODEL
           [ -n "$PRODUCTION_PROVIDER" ] || unset PRODUCTION_PROVIDER
-          python3 scripts/produce_course.py --job "$JOB" || code=$?
+          LANGS="${{ inputs.languages }}"
+          if [ -n "$LANGS" ]; then
+            python3 scripts/produce_course.py --job "$JOB" --languages "$LANGS" || code=$?
+          else
+            python3 scripts/produce_course.py --job "$JOB" || code=$?
+          fi
           # 2 = terminé, mais une langue au moins est retenue par la porte : le job est « partial »,
           # pas un échec du workflow.
           if [ "${code:-0}" = "2" ]; then exit 0; fi
