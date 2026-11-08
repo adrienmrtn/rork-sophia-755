@@ -116,22 +116,27 @@ def iter_texts(code: str):
             for i, item in enumerate(q.get("items") or []):
                 if isinstance(item, str):
                     yield "quiz", f"{qid}/item{i}", item
-    for key, entry in (_load(IOS_LOCALES / f"glossary.{code}.json") or {}).items():
+    # Glossaire et collections : une langue par fichier dans content/ (catalogue en ligne).
+    for key, entry in (_load(ROOT / "content" / "glossary" / f"{code}.json") or {}).items():
         for field in ("displayTerm", "explanation"):
             if entry.get(field):
                 yield "glossaire", f"{key}/{field}", entry[field]
-    for coll in _load(IOS_LOCALES / f"collections.{code}.json") or []:
+    for coll in _load(ROOT / "content" / "collections" / f"{code}.json") or []:
         for field in ("title", "description"):
             if coll.get(field):
                 yield "collections", f"{coll.get('id')}/{field}", coll[field]
-    for course in _load(IOS_LOCALES / f"courses.{code}.json") or []:
-        cid = course.get("id")
+    # Le « catalogue » (titre, sous-titre, description, sous-catégorie, titres de sections) est
+    # désormais dérivé des cours eux-mêmes ; on relit leurs champs d'en-tête sous cette étiquette
+    # pour garder les identifiants des constats et des exceptions.
+    for path in sorted((ROOT / "content" / "courses" / code).glob("*.json")):
+        course = _load(path) or {}
+        cid = course.get("id", path.stem)
         for field in ("title", "subtitle", "description", "subcategory"):
             if course.get(field):
                 yield "catalogue", f"{cid}/{field}", course[field]
-        for lesson in course.get("lessons") or []:
-            if lesson.get("title"):
-                yield "catalogue", f"{lesson.get('id')}/title", lesson["title"]
+        for section in course.get("sections") or []:
+            if section.get("title"):
+                yield "catalogue", f"{section.get('id')}/title", section["title"]
     locale = STORE_LOCALE.get(code)
     if locale and (STORE / locale).is_dir():
         for path in sorted((STORE / locale).glob("*.txt")):

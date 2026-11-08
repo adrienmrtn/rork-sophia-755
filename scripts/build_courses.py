@@ -28,6 +28,7 @@ from __future__ import annotations
 import argparse
 import fnmatch
 import json
+import subprocess
 import sys
 from pathlib import Path
 
@@ -177,14 +178,9 @@ def build(patterns: list[str], check_only: bool) -> int:
         for slug in missing_images(data, known):
             print(f"    image to provide: {slug}")
 
-        if check_only:
-            continue
+        built += 1
 
-        changed = write_json(BUNDLE_DIR / f"{course_id}.fr.json", data)
-        if changed:
-            built += 1
-
-        # Wire committed translations into the bundle when present.
+        # Les traductions sont validées avec la même grille que le français.
         for lang in LANGUAGES:
             if lang == "fr":
                 continue
@@ -194,36 +190,33 @@ def build(patterns: list[str], check_only: bool) -> int:
                     tdata = json.loads(translated.read_text(encoding="utf-8"))
                     validate_course(tdata, translated, authors)
                 except (json.JSONDecodeError, ValidationError) as error:
-                    print(f"    skip {lang}: {error}", file=sys.stderr)
-                    continue
-                if write_json(BUNDLE_DIR / f"{course_id}.{lang}.json", tdata):
-                    print(f"    + {lang}")
+                    print(f"    INVALID {lang}: {error}", file=sys.stderr)
+                    errors += 1
 
     if errors:
         print(f"\n{errors} course(s) failed validation.", file=sys.stderr)
         return 1
 
-    if authors and not check_only:
-        if write_authors_bundle(authors, sorted(fr_dir.glob("*.json"))):
-            print("  + authors.json")
-
-    stale = check_bundle_sync(sources)
-    if stale:
-        print(
-            f"\n{stale} CoursesV2 bundle file(s) are stale. "
-            "The iOS app loads CoursesV2, not content/courses — run this script.",
-            file=sys.stderr,
-        )
-        return 1
-
     if check_only:
-        print(f"\nValidated {len(sources)} course(s). Bundles are in sync.")
-    else:
-        print(f"\nBuilt/updated {built} bundle file(s) from {len(sources)} source(s).")
+        print(f"\nValidated {len(sources)} course(s).")
+        return 0
+
+    # Les apps ne compilent plus les cours : le catalogue vit dans Supabase
+    # (docs/catalogue-en-ligne.md). Ce qui reste embarqué, c'est le pack de départ, que
+    # l'import régénère ; l'import lui-même (tables + Storage) demande la clé service.
+    result = subprocess.run(
+        [sys.executable, str(ROOT / "scripts" / "import_catalog_to_supabase.py"), "--starter-pack-only"],
+        cwd=ROOT,
+    )
+    if result.returncode != 0:
+        print("\nLa génération des packs de départ a échoué.", file=sys.stderr)
+        return result.returncode
+    print(f"\nValidated {len(sources)} course(s); starter packs regenerated. "
+          "Run scripts/import_catalog_to_supabase.py to publish to Supabase.")
     return 0
 
 
-def write_authors_bundle(authors: dict[str, dict], fr_sources: list[Path]) -> bool:
+def _unused_write_authors_bundle(authors: dict[str, dict], fr_sources: list[Path]) -> bool:
     """Write the bundled authors file: content/authors.json plus each author's course ids.
 
     Course ids come from every French source (not only the ones being built), so the
@@ -250,7 +243,7 @@ def write_authors_bundle(authors: dict[str, dict], fr_sources: list[Path]) -> bo
     return True
 
 
-def check_bundle_sync(fr_sources: list[Path]) -> int:
+def _unused_check_bundle_sync(fr_sources: list[Path]) -> int:
     """Count translation (and French) bundles that do not match content/courses.
 
     iOS renders ``Resources/CoursesV2/<id>.<lang>.json``. Rewriting

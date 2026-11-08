@@ -1325,8 +1325,8 @@ enum AppLocalizable {
         "course.offline.title": "Ce cours n'est pas encore sur ton téléphone",
         "course.offline.body": "Connecte-toi à Internet une première fois pour l'ouvrir. Il restera ensuite lisible hors ligne.",
         "course.offline.retry": "Réessayer",
-        "settings.debug.catalog": "Catalogue en ligne",
-        "settings.debug.catalogRefresh": "Rafraîchir le catalogue",
+        "settings.debug.catalog": "Cours en ligne",
+        "settings.debug.catalogRefresh": "Recharger les cours",
     ]
     // MARK: - English
 
@@ -2528,8 +2528,8 @@ enum AppLocalizable {
         "course.offline.title": "This course isn't on your phone yet",
         "course.offline.body": "Connect to the Internet once to open it. It will then stay readable offline.",
         "course.offline.retry": "Try again",
-        "settings.debug.catalog": "Online catalog",
-        "settings.debug.catalogRefresh": "Refresh the catalog",
+        "settings.debug.catalog": "Online courses",
+        "settings.debug.catalogRefresh": "Reload the courses",
     ]
     // MARK: - Spanish
 
@@ -3732,8 +3732,8 @@ enum AppLocalizable {
         "course.offline.title": "Este curso aún no está en tu teléfono",
         "course.offline.body": "Conéctate a Internet una primera vez para abrirlo. Después seguirá disponible sin conexión.",
         "course.offline.retry": "Reintentar",
-        "settings.debug.catalog": "Catálogo en línea",
-        "settings.debug.catalogRefresh": "Actualizar el catálogo",
+        "settings.debug.catalog": "Cursos en línea",
+        "settings.debug.catalogRefresh": "Recargar los cursos",
     ]
     // MARK: - German
 
@@ -4936,8 +4936,8 @@ enum AppLocalizable {
         "course.offline.title": "Dieser Kurs ist noch nicht auf deinem Handy",
         "course.offline.body": "Verbinde dich einmal mit dem Internet, um ihn zu öffnen. Danach bleibt er offline lesbar.",
         "course.offline.retry": "Erneut versuchen",
-        "settings.debug.catalog": "Online-Katalog",
-        "settings.debug.catalogRefresh": "Katalog aktualisieren",
+        "settings.debug.catalog": "Online-Kurse",
+        "settings.debug.catalogRefresh": "Kurse neu laden",
     ]
     // MARK: - Portuguese (Brazil)
 
@@ -6140,8 +6140,8 @@ enum AppLocalizable {
         "course.offline.title": "Este curso ainda não está no seu celular",
         "course.offline.body": "Conecte-se à Internet uma primeira vez para abri-lo. Depois ele continuará disponível off-line.",
         "course.offline.retry": "Tentar de novo",
-        "settings.debug.catalog": "Catálogo on-line",
-        "settings.debug.catalogRefresh": "Atualizar o catálogo",
+        "settings.debug.catalog": "Cursos on-line",
+        "settings.debug.catalogRefresh": "Recarregar os cursos",
     ]
 
     // MARK: - Portuguese (Portugal)
@@ -7345,8 +7345,8 @@ enum AppLocalizable {
         "course.offline.title": "Este curso ainda não está no teu telemóvel",
         "course.offline.body": "Liga-te à Internet uma primeira vez para o abrir. Depois fica disponível sem ligação.",
         "course.offline.retry": "Tentar de novo",
-        "settings.debug.catalog": "Catálogo online",
-        "settings.debug.catalogRefresh": "Atualizar o catálogo",
+        "settings.debug.catalog": "Cursos online",
+        "settings.debug.catalogRefresh": "Recarregar os cursos",
     ]
     // MARK: - Italian
 
@@ -8549,8 +8549,8 @@ enum AppLocalizable {
         "course.offline.title": "Questo corso non è ancora sul tuo telefono",
         "course.offline.body": "Connettiti a Internet una prima volta per aprirlo. Poi resterà leggibile offline.",
         "course.offline.retry": "Riprova",
-        "settings.debug.catalog": "Catalogo online",
-        "settings.debug.catalogRefresh": "Aggiorna il catalogo",
+        "settings.debug.catalog": "Corsi online",
+        "settings.debug.catalogRefresh": "Ricarica i corsi",
     ]
     // MARK: - Turkish
 
@@ -9753,8 +9753,8 @@ enum AppLocalizable {
         "course.offline.title": "Bu kurs henüz telefonunda değil",
         "course.offline.body": "Açmak için bir kez internete bağlan. Sonrasında çevrimdışı okunabilir kalır.",
         "course.offline.retry": "Tekrar dene",
-        "settings.debug.catalog": "Çevrimiçi katalog",
-        "settings.debug.catalogRefresh": "Kataloğu yenile",
+        "settings.debug.catalog": "Çevrimiçi kurslar",
+        "settings.debug.catalogRefresh": "Kursları yeniden yükle",
     ]
     // MARK: - Polish
 
@@ -10958,8 +10958,8 @@ enum AppLocalizable {
         "course.offline.title": "Tego kursu nie ma jeszcze na twoim telefonie",
         "course.offline.body": "Połącz się raz z internetem, aby go otworzyć. Potem będzie dostępny offline.",
         "course.offline.retry": "Spróbuj ponownie",
-        "settings.debug.catalog": "Katalog online",
-        "settings.debug.catalogRefresh": "Odśwież katalog",
+        "settings.debug.catalog": "Kursy online",
+        "settings.debug.catalogRefresh": "Odśwież kursy",
     ]
     // MARK: - Romanian
 
@@ -12163,8 +12163,8 @@ enum AppLocalizable {
         "course.offline.title": "Acest curs nu este încă pe telefonul tău",
         "course.offline.body": "Conectează-te o dată la internet ca să-l deschizi. Apoi rămâne disponibil offline.",
         "course.offline.retry": "Încearcă din nou",
-        "settings.debug.catalog": "Catalog online",
-        "settings.debug.catalogRefresh": "Actualizează catalogul",
+        "settings.debug.catalog": "Cursuri online",
+        "settings.debug.catalogRefresh": "Reîncarcă cursurile",
     ]
     // MARK: - Dutch
 
@@ -13367,8 +13367,8 @@ enum AppLocalizable {
         "course.offline.title": "Deze cursus staat nog niet op je telefoon",
         "course.offline.body": "Maak één keer verbinding met internet om hem te openen. Daarna blijft hij offline leesbaar.",
         "course.offline.retry": "Opnieuw proberen",
-        "settings.debug.catalog": "Online catalogus",
-        "settings.debug.catalogRefresh": "Catalogus vernieuwen",
+        "settings.debug.catalog": "Online cursussen",
+        "settings.debug.catalogRefresh": "Cursussen opnieuw laden",
     ]
     // MARK: - Greek
 
@@ -14571,8 +14571,8 @@ enum AppLocalizable {
         "course.offline.title": "Αυτό το μάθημα δεν είναι ακόμη στο κινητό σου",
         "course.offline.body": "Συνδέσου μία φορά στο διαδίκτυο για να το ανοίξεις. Μετά θα διαβάζεται και εκτός σύνδεσης.",
         "course.offline.retry": "Δοκίμασε ξανά",
-        "settings.debug.catalog": "Διαδικτυακός κατάλογος",
-        "settings.debug.catalogRefresh": "Ανανέωση καταλόγου",
+        "settings.debug.catalog": "Διαδικτυακά μαθήματα",
+        "settings.debug.catalogRefresh": "Επαναφόρτωση μαθημάτων",
     ]
     // MARK: - Swedish
 
@@ -15775,8 +15775,8 @@ enum AppLocalizable {
         "course.offline.title": "Den här kursen finns inte på din telefon än",
         "course.offline.body": "Anslut till internet en första gång för att öppna den. Sedan går den att läsa offline.",
         "course.offline.retry": "Försök igen",
-        "settings.debug.catalog": "Onlinekatalog",
-        "settings.debug.catalogRefresh": "Uppdatera katalogen",
+        "settings.debug.catalog": "Onlinekurser",
+        "settings.debug.catalogRefresh": "Läs in kurserna igen",
     ]
     // MARK: - Hungarian
 
@@ -16979,8 +16979,8 @@ enum AppLocalizable {
         "course.offline.title": "Ez a kurzus még nincs a telefonodon",
         "course.offline.body": "Csatlakozz egyszer az internethez, hogy megnyisd. Utána offline is olvasható marad.",
         "course.offline.retry": "Újra",
-        "settings.debug.catalog": "Online katalógus",
-        "settings.debug.catalogRefresh": "Katalógus frissítése",
+        "settings.debug.catalog": "Online kurzusok",
+        "settings.debug.catalogRefresh": "Kurzusok újratöltése",
     ]
     // MARK: - Bulgarian
 
@@ -18183,8 +18183,8 @@ enum AppLocalizable {
         "course.offline.title": "Този курс още не е на телефона ти",
         "course.offline.body": "Свържи се веднъж с интернет, за да го отвориш. После остава достъпен и офлайн.",
         "course.offline.retry": "Опитай пак",
-        "settings.debug.catalog": "Онлайн каталог",
-        "settings.debug.catalogRefresh": "Обнови каталога",
+        "settings.debug.catalog": "Онлайн курсове",
+        "settings.debug.catalogRefresh": "Презареди курсовете",
     ]
     // MARK: - Czech
 
@@ -19388,8 +19388,8 @@ enum AppLocalizable {
         "course.offline.title": "Tento kurz ještě není v tvém telefonu",
         "course.offline.body": "Připoj se jednou k internetu a otevři ho. Potom zůstane čitelný i offline.",
         "course.offline.retry": "Zkusit znovu",
-        "settings.debug.catalog": "Online katalog",
-        "settings.debug.catalogRefresh": "Obnovit katalog",
+        "settings.debug.catalog": "Online kurzy",
+        "settings.debug.catalogRefresh": "Znovu načíst kurzy",
     ]
 
     // MARK: - Danish
@@ -20593,8 +20593,8 @@ enum AppLocalizable {
         "course.offline.title": "Dette kursus er ikke på din telefon endnu",
         "course.offline.body": "Gå på internettet én gang for at åbne det. Derefter kan det læses offline.",
         "course.offline.retry": "Prøv igen",
-        "settings.debug.catalog": "Onlinekatalog",
-        "settings.debug.catalogRefresh": "Opdater kataloget",
+        "settings.debug.catalog": "Onlinekurser",
+        "settings.debug.catalogRefresh": "Genindlæs kurserne",
     ]
 
     // MARK: - Norwegian
@@ -21798,8 +21798,8 @@ enum AppLocalizable {
         "course.offline.title": "Dette kurset er ikke på telefonen din ennå",
         "course.offline.body": "Koble til internett én gang for å åpne det. Etterpå kan det leses uten nett.",
         "course.offline.retry": "Prøv igjen",
-        "settings.debug.catalog": "Nettkatalog",
-        "settings.debug.catalogRefresh": "Oppdater katalogen",
+        "settings.debug.catalog": "Nettkurs",
+        "settings.debug.catalogRefresh": "Last inn kursene på nytt",
     ]
 
     // MARK: - Russian
@@ -23004,8 +23004,8 @@ enum AppLocalizable {
         "course.offline.title": "Этого курса ещё нет на твоём телефоне",
         "course.offline.body": "Подключись к интернету один раз, чтобы открыть его. Потом он останется доступен офлайн.",
         "course.offline.retry": "Повторить",
-        "settings.debug.catalog": "Онлайн-каталог",
-        "settings.debug.catalogRefresh": "Обновить каталог",
+        "settings.debug.catalog": "Онлайн-курсы",
+        "settings.debug.catalogRefresh": "Перезагрузить курсы",
     ]
 
     // MARK: - Croatian
@@ -24210,8 +24210,8 @@ enum AppLocalizable {
         "course.offline.title": "Ovaj tečaj još nije na tvom telefonu",
         "course.offline.body": "Spoji se jednom na internet da ga otvoriš. Nakon toga ostaje čitljiv i bez mreže.",
         "course.offline.retry": "Pokušaj ponovno",
-        "settings.debug.catalog": "Online katalog",
-        "settings.debug.catalogRefresh": "Osvježi katalog",
+        "settings.debug.catalog": "Online tečajevi",
+        "settings.debug.catalogRefresh": "Ponovno učitaj tečajeve",
     ]
 
     // MARK: - Slovenian
@@ -25417,8 +25417,8 @@ enum AppLocalizable {
         "course.offline.title": "Tega tečaja še ni na tvojem telefonu",
         "course.offline.body": "Enkrat se poveži z internetom, da ga odpreš. Potem ostane berljiv tudi brez povezave.",
         "course.offline.retry": "Poskusi znova",
-        "settings.debug.catalog": "Spletni katalog",
-        "settings.debug.catalogRefresh": "Osveži katalog",
+        "settings.debug.catalog": "Spletni tečaji",
+        "settings.debug.catalogRefresh": "Znova naloži tečaje",
     ]
 
     // MARK: - Slovak
@@ -26623,8 +26623,8 @@ enum AppLocalizable {
         "course.offline.title": "Tento kurz ešte nie je v tvojom telefóne",
         "course.offline.body": "Pripoj sa raz na internet a otvor ho. Potom zostane čitateľný aj offline.",
         "course.offline.retry": "Skúsiť znova",
-        "settings.debug.catalog": "Online katalóg",
-        "settings.debug.catalogRefresh": "Obnoviť katalóg",
+        "settings.debug.catalog": "Online kurzy",
+        "settings.debug.catalogRefresh": "Znova načítať kurzy",
     ]
 
     // MARK: - Serbian
@@ -27829,8 +27829,8 @@ enum AppLocalizable {
         "course.offline.title": "Ovaj kurs još nije na tvom telefonu",
         "course.offline.body": "Poveži se jednom na internet da ga otvoriš. Posle toga ostaje čitljiv i bez mreže.",
         "course.offline.retry": "Pokušaj ponovo",
-        "settings.debug.catalog": "Onlajn katalog",
-        "settings.debug.catalogRefresh": "Osveži katalog",
+        "settings.debug.catalog": "Onlajn kursevi",
+        "settings.debug.catalogRefresh": "Ponovo učitaj kurseve",
     ]
 
     // MARK: - Arabic
@@ -29036,8 +29036,8 @@ enum AppLocalizable {
         "course.offline.title": "هذا الدرس ليس على هاتفك بعد",
         "course.offline.body": "اتصل بالإنترنت مرة واحدة لفتحه. بعدها يبقى متاحًا للقراءة دون اتصال.",
         "course.offline.retry": "إعادة المحاولة",
-        "settings.debug.catalog": "الكتالوج عبر الإنترنت",
-        "settings.debug.catalogRefresh": "تحديث الكتالوج",
+        "settings.debug.catalog": "الدروس عبر الإنترنت",
+        "settings.debug.catalogRefresh": "إعادة تحميل الدروس",
     ]
 
     // MARK: - Hebrew
@@ -30242,8 +30242,8 @@ enum AppLocalizable {
         "course.offline.title": "הקורס הזה עדיין לא בטלפון שלך",
         "course.offline.body": "התחברו לאינטרנט פעם אחת כדי לפתוח אותו. אחר כך הוא יישאר זמין גם במצב לא מקוון.",
         "course.offline.retry": "לנסות שוב",
-        "settings.debug.catalog": "קטלוג מקוון",
-        "settings.debug.catalogRefresh": "רענון הקטלוג",
+        "settings.debug.catalog": "קורסים מקוונים",
+        "settings.debug.catalogRefresh": "טעינת הקורסים מחדש",
     ]
 
     // MARK: - Finnish
@@ -31447,8 +31447,8 @@ enum AppLocalizable {
         "course.offline.title": "Tämä kurssi ei ole vielä puhelimessasi",
         "course.offline.body": "Avaa se kerran verkkoyhteydellä. Sen jälkeen sitä voi lukea ilman yhteyttä.",
         "course.offline.retry": "Yritä uudelleen",
-        "settings.debug.catalog": "Verkkokatalogi",
-        "settings.debug.catalogRefresh": "Päivitä katalogi",
+        "settings.debug.catalog": "Verkkokurssit",
+        "settings.debug.catalogRefresh": "Lataa kurssit uudelleen",
     ]
 
     // MARK: - Estonian
@@ -32652,8 +32652,8 @@ enum AppLocalizable {
         "course.offline.title": "Seda kursust pole veel sinu telefonis",
         "course.offline.body": "Ava see esimest korda internetiühendusega. Pärast seda saab seda lugeda ka võrguta.",
         "course.offline.retry": "Proovi uuesti",
-        "settings.debug.catalog": "Veebikataloog",
-        "settings.debug.catalogRefresh": "Värskenda kataloogi",
+        "settings.debug.catalog": "Veebikursused",
+        "settings.debug.catalogRefresh": "Laadi kursused uuesti",
     ]
 
     // MARK: - lithuanian (copie du français, à post-éditer)
@@ -33857,8 +33857,8 @@ enum AppLocalizable {
         "course.offline.title": "Šio kurso tavo telefone dar nėra",
         "course.offline.body": "Vieną kartą prisijunk prie interneto, kad jį atidarytum. Vėliau jį bus galima skaityti ir be ryšio.",
         "course.offline.retry": "Bandyti dar kartą",
-        "settings.debug.catalog": "Internetinis katalogas",
-        "settings.debug.catalogRefresh": "Atnaujinti katalogą",
+        "settings.debug.catalog": "Internetiniai kursai",
+        "settings.debug.catalogRefresh": "Iš naujo įkelti kursus",
     ]
 
     // MARK: - latvian (copie du français, à post-éditer)
@@ -35063,8 +35063,8 @@ enum AppLocalizable {
         "course.offline.title": "Šis kurss vēl nav tavā tālrunī",
         "course.offline.body": "Vienreiz pieslēdzies internetam, lai to atvērtu. Pēc tam to varēs lasīt arī bezsaistē.",
         "course.offline.retry": "Mēģināt vēlreiz",
-        "settings.debug.catalog": "Tiešsaistes katalogs",
-        "settings.debug.catalogRefresh": "Atjaunināt katalogu",
+        "settings.debug.catalog": "Tiešsaistes kursi",
+        "settings.debug.catalogRefresh": "Pārlādēt kursus",
     ]
 
     // MARK: - japanese (copie du français, à post-éditer)
@@ -36267,7 +36267,7 @@ enum AppLocalizable {
         "course.offline.title": "このコースはまだ端末にありません",
         "course.offline.body": "一度インターネットに接続して開いてください。その後はオフラインでも読めます。",
         "course.offline.retry": "もう一度試す",
-        "settings.debug.catalog": "オンラインカタログ",
-        "settings.debug.catalogRefresh": "カタログを更新",
+        "settings.debug.catalog": "オンラインコース",
+        "settings.debug.catalogRefresh": "コースを再読み込み",
     ]
 }

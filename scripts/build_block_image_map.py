@@ -30,7 +30,8 @@ IMAGE_DIRS = (
     ROOT / "content" / "images",               # everything else, bucket only
 )
 ALIASES = ROOT / "ios" / "Sophia" / "Utilities" / "CourseImageAliases.swift"
-COURSES_V2 = ROOT / "android" / "app" / "src" / "main" / "assets" / "courses_v2"
+# Les cours ne sont plus dans les assets Android : on lit la source, content/courses/<lang>/.
+COURSES_V2 = ROOT / "content" / "courses"
 OUT = ROOT / "android" / "app" / "src" / "main" / "assets" / "course_block_images.json"
 
 

@@ -171,8 +171,9 @@ final class CatalogStore {
         if !force, let etag = etags[language.rawValue], manifests[language] != nil {
             request.setValue(etag, forHTTPHeaderField: "If-None-Match")
         }
-        guard let (data, response) = try? await URLSession.shared.data(for: request),
-              let http = response as? HTTPURLResponse else { return }
+        guard let result = try? await URLSession.shared.data(for: request),
+              let http = result.1 as? HTTPURLResponse else { return }
+        let data = result.0
         if http.statusCode == 304 {
             markRefreshed(language)
             return
@@ -226,9 +227,9 @@ final class CatalogStore {
         request.setValue(AppConfig.SUPABASE_ANON_KEY, forHTTPHeaderField: "apikey")
         request.setValue("Bearer \(AppConfig.SUPABASE_ANON_KEY)", forHTTPHeaderField: "Authorization")
         struct Row: Decodable { let value: CatalogRemoteConfig }
-        guard let (data, response) = try? await URLSession.shared.data(for: request),
-              (response as? HTTPURLResponse)?.statusCode == 200,
-              let rows = try? JSONDecoder().decode([Row].self, from: data),
+        guard let result = try? await URLSession.shared.data(for: request),
+              (result.1 as? HTTPURLResponse)?.statusCode == 200,
+              let rows = try? JSONDecoder().decode([Row].self, from: result.0),
               let value = rows.first?.value else { return }
         config = value
         if let encoded = try? JSONEncoder().encode(value) {
@@ -265,9 +266,9 @@ final class CatalogStore {
     private func fetch(_ url: URL) async -> Data? {
         var request = URLRequest(url: url)
         request.timeoutInterval = 30
-        guard let (data, response) = try? await URLSession.shared.data(for: request),
-              (response as? HTTPURLResponse)?.statusCode == 200 else { return nil }
-        return data
+        guard let result = try? await URLSession.shared.data(for: request),
+              (result.1 as? HTTPURLResponse)?.statusCode == 200 else { return nil }
+        return result.0
     }
 
     // MARK: - Construction du snapshot

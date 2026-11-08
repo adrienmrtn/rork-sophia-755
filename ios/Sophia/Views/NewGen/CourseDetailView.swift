@@ -133,6 +133,11 @@ struct CourseDetailView: View {
         }
         .scrollIndicators(.hidden)
         .background(DS.canvas.ignoresSafeArea())
+        .task(id: course.id) {
+            guard CourseContentStore.content(courseId: course.id, language: language) == nil else { return }
+            _ = await CourseContentStore.ensureContent(courseId: course.id, language: language)
+            contentTick += 1
+        }
         .ignoresSafeArea(edges: .top)
     }
 

@@ -24,7 +24,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 CONTENT_ROOT = ROOT / "content" / "courses"
-LOCALES_DIR = ROOT / "ios" / "Sophia" / "Resources" / "Locales"
+LOCALES_DIR = ROOT / "ios" / "Sophia" / "Resources" / "Locales"  # plus de JSON embarqués : voir GLOSSARY_DIR
+# Les glossaires vivent dans content/ (source de vérité du catalogue en ligne), une langue par fichier.
+GLOSSARY_DIR = ROOT / "content" / "glossary"
 FR_GLOSSARY_SWIFT = ROOT / "ios" / "Sophia" / "Services" / "GlossaryData.swift"
 
 GLOSSARY_RE = re.compile(r"\[\[(.+?)\]\]")
@@ -125,7 +127,7 @@ def write_course(lang: str, course: dict) -> bool:
 
 def glossary_keys_by_course(lang: str) -> dict[str, list[str]]:
     """Registered glossary display terms per course id, for a localised glossary."""
-    path = LOCALES_DIR / f"glossary.{lang}.json"
+    path = GLOSSARY_DIR / f"{lang}.json"
     entries = json.loads(path.read_text(encoding="utf-8"))
     grouped: dict[str, list[str]] = defaultdict(list)
     for key in entries:
@@ -136,7 +138,7 @@ def glossary_keys_by_course(lang: str) -> dict[str, list[str]]:
 
 
 def glossary_entries(lang: str) -> dict[str, dict]:
-    path = LOCALES_DIR / f"glossary.{lang}.json"
+    path = GLOSSARY_DIR / f"{lang}.json"
     return json.loads(path.read_text(encoding="utf-8"))
 
 

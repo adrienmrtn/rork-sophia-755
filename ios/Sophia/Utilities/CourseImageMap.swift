@@ -7,7 +7,9 @@ struct CourseImageMap {
     /// Le nom de la couverture : la carte embarquée, sinon ce que dit le catalogue en ligne
     /// (un cours arrivé après le build).
     static func imageName(for courseId: String) -> String? {
-        map[courseId] ?? CatalogStore.shared.coverSlug(courseId: courseId)
+        if let name = map[courseId] { return name }
+        guard Thread.isMainThread else { return nil }
+        return CatalogStore.shared.coverSlug(courseId: courseId)
     }
 
     static func loadImage(for courseId: String) -> UIImage? {
