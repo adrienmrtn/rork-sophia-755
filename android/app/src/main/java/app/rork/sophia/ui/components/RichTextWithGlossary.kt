@@ -29,6 +29,7 @@ import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import app.rork.sophia.data.GlossaryEntry
 import app.rork.sophia.data.GlossaryStore
+import app.rork.sophia.data.analytics.Analytics
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.SophiaTypography
@@ -89,6 +90,7 @@ fun RichTextWithGlossary(
         onClick = { offset ->
             annotated.getStringAnnotations("glossary", offset, offset).firstOrNull()?.let { ann ->
                 openEntry = GlossaryStore.entry(context, language, courseId, ann.item)
+                if (openEntry != null) Analytics.log("glossary_open", courseId = courseId, props = mapOf("term" to ann.item))
             }
         },
     )

@@ -52,6 +52,8 @@ struct HomeViewTikTok: View {
     /// opened/dismissed), so it doesn't get counted as a genuine browsing swipe.
     @State private var suppressNextSwipeCount = false
     @State private var showSwipeExplain = false
+    /// Pending `card_impression`: cancelled when the card scrolls away within the second.
+    @State private var impressionTask: Task<Void, Never>?
 
     /// Hauteur laissée visible en bas de chaque carte pour laisser **entrapercevoir** la
     /// carte suivante (« il y en a d'autres en dessous »). Chaque rangée fait donc un peu
@@ -84,7 +86,9 @@ struct HomeViewTikTok: View {
                                         language: languageManager.current,
                                         isFavorite: progressManager.isFavorite(course.id),
                                         onToggleFavorite: {
+                                            let liked = !progressManager.isFavorite(course.id)
                                             progressManager.toggleFavorite(course.id)
+                                            AnalyticsService.shared.log(liked ? .like : .unlike, courseId: course.id, screen: "home")
                                         },
                                         onStart: {
                                             startCourse(course)
@@ -117,6 +121,7 @@ struct HomeViewTikTok: View {
                         .scrollPosition(id: $scrolledCardId)
                         .scrollDisabled(cards.count <= 1)
                         .onChange(of: scrolledCardId) { oldValue, newValue in
+                            scheduleImpression(for: newValue)
                             guard oldValue != nil, newValue != nil else { return }
                             if suppressNextSwipeCount {
                                 suppressNextSwipeCount = false
@@ -128,6 +133,13 @@ struct HomeViewTikTok: View {
                             // The card scrolled away from was dealt and not opened.
                             if let passedOver = oldValue {
                                 DeckSkipStore.registerSkip(passedOver)
+                                AnalyticsService.shared.log(
+                                    .cardSkip,
+                                    courseId: passedOver,
+                                    screen: "home",
+                                    position: cards.firstIndex { $0.id == passedOver },
+                                    algoVersion: AnalyticsService.algoVersion
+                                )
                             }
                         }
                     }
@@ -272,7 +284,33 @@ struct HomeViewTikTok: View {
     private func startCourse(_ course: Course) {
         UIImpactFeedbackGenerator(style: .medium).impactOccurred()
         DeckSkipStore.clear(course.id)
+        AnalyticsService.shared.pendingCourseOpenSource = .feed
+        AnalyticsService.shared.log(
+            .cardOpen,
+            courseId: course.id,
+            screen: "home",
+            position: cards.firstIndex { $0.id == course.id },
+            algoVersion: AnalyticsService.algoVersion
+        )
         selectedCourse = course
+    }
+
+    /// A card counts as shown once it has stayed on screen for a second: a flick through
+    /// the deck teaches nothing about the cards it passed (docs/events.md).
+    private func scheduleImpression(for courseId: String?) {
+        impressionTask?.cancel()
+        guard let courseId else { return }
+        impressionTask = Task {
+            try? await Task.sleep(for: .seconds(1))
+            guard !Task.isCancelled, scrolledCardId == courseId else { return }
+            AnalyticsService.shared.log(
+                .cardImpression,
+                courseId: courseId,
+                screen: "home",
+                position: cards.firstIndex { $0.id == courseId },
+                algoVersion: AnalyticsService.algoVersion
+            )
+        }
     }
 
     private func registerDiscountSwipe() {
@@ -314,6 +352,7 @@ struct HomeViewTikTok: View {
             isCompleted: { progressManager.courseStatus(for: $0) == .completed }
         )
         scrolledCardId = cards.first?.id
+        scheduleImpression(for: scrolledCardId)
         let preloadIds = cards.prefix(5).map(\.id)
         CourseImageMap.preloadImages(for: preloadIds)
     }

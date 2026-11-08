@@ -36,6 +36,7 @@ import androidx.compose.ui.unit.dp
 import app.rork.sophia.SophiaApplication
 import app.rork.sophia.billing.StoreViewModel
 import app.rork.sophia.data.ContentCatalog
+import app.rork.sophia.data.analytics.Analytics
 import app.rork.sophia.data.CourseAffinityStore
 import app.rork.sophia.data.DeviceCapabilities
 import app.rork.sophia.data.GlossaryStore
@@ -98,6 +99,42 @@ private enum class OnboardingStep {
     Trial,
     Reminder,
     Paywall,
+    ;
+
+    /** Même nom qu'iOS (`OnboardingV2View.Screen.analyticsName`), pour `onboarding_step`. */
+    val analyticsName: String
+        get() = when (this) {
+            Welcome -> "welcome"
+            Language -> "language"
+            Intro -> "intro"
+            SocialProof -> "social_proof"
+            Name -> "name"
+            Age -> "age"
+            Knowledge -> "knowledge"
+            Motivation -> "motivation"
+            Objectives -> "objective"
+            Topics -> "topics"
+            ObjectiveIntro -> "objective_intro"
+            Mission -> "mission"
+            Questions -> "questions"
+            PhoneTime -> "phone_time"
+            YearsGrid -> "years_grid"
+            Transform -> "transform"
+            Review -> "review"
+            Personalize -> "personalize"
+            Swipe -> "swipe_courses"
+            Loading -> "loading"
+            Profile -> "profile"
+            Notifications -> "notifications"
+            Login -> "login"
+            WelcomeAboard -> "welcome_aboard"
+            Features -> "features"
+            Trial -> "trial_steps"
+            Reminder -> "reminder"
+            // Android enchaîne les deux paywalls dans un seul écran ; iOS les sépare
+            // (`paywall_annual`, `paywall_comparison`).
+            Paywall -> "paywall"
+        }
 }
 
 /** Steps that carry the progress dots, matching the iOS `dotScreens` set. */
@@ -229,6 +266,7 @@ fun OnboardingV2Screen(
     LaunchedEffect(step) {
         // Killing the app mid-onboarding used to restart the whole flow, answers and all.
         app.onboardingStore.rememberStep(step.name)
+        Analytics.log("onboarding_step", props = mapOf("step" to step.analyticsName, "index" to step.ordinal))
     }
     // Warm the home feed + glossary during paywall so arriving on TikTok home is instant.
     LaunchedEffect(step, language) {

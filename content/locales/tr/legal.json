@@ -60,47 +60,52 @@
     {
       "id": "2",
       "title": "2. Toplanan veriler",
-      "body": "Sophia, veri minimizasyonu ilkesine göre tasarlanmıştır. Uygulama cihazınızda şunları saklar:\n\n- Kurslardaki ve quizlerdeki ilerlemeniz\n- Tercihleriniz (ilgi alanlarınız, hedefleriniz)\n- Seriniz (art arda kullanım günleri)\n- Favori kurslarınız\n\nBu yerel veriler sunucularımıza aktarılmaz.\n\nAyarlar'daki form aracılığıyla bize geri bildirim gönderirseniz, size yanıt verebilmemiz için mesajınız ve girdiyseniz e-posta adresiniz Formspree'ye iletilir. Teknik bilgiler (uygulama sürümü, dil, cihaz) otomatik olarak eklenir."
+      "body": "Sophia, veri minimizasyonu ilkesine göre tasarlanmıştır. Uygulama cihazınızda şunları saklar:\n\n- Kurslardaki ve quizlerdeki ilerlemeniz\n- Tercihleriniz (ilgi alanlarınız, hedefleriniz)\n- Seriniz (art arda kullanım günleri)\n- Favori kurslarınız\n\nBu yerel veriler, “Kullanım verileri” ve “Veri depolama” bölümlerinde açıklananlar dışında sunucularımıza aktarılmaz.\n\nAyarlar'daki form aracılığıyla bize geri bildirim gönderirseniz, size yanıt verebilmemiz için mesajınız ve girdiyseniz e-posta adresiniz Formspree'ye iletilir. Teknik bilgiler (uygulama sürümü, dil, cihaz) otomatik olarak eklenir."
     },
     {
       "id": "3",
-      "title": "3. Abonelik verileri",
-      "body": "Premium plana abone olursanız işlem tamamen Apple tarafından App Store aracılığıyla gerçekleştirilir. Ödeme bilgilerinize (kart numarası, fatura adresi) erişimimiz yok. Abonelik durumunuzun onayını yalnızca abonelik yönetimi ortağımız RevenueCat aracılığıyla alırız."
+      "title": "3. Kullanım verileri",
+      "body": "Hangi kursların işe yaradığını anlamak, akış önerilerini iyileştirmek ve zamanla içerik üreticilerine ödeme yapabilmek için Uygulama, Sophia içindeki işlemlerinizi kaydeder ve Supabase sunucularımıza (Avrupa Birliği'nde barındırılır) iletir: görüntülenen tanıtım ekranları, gösterilen, geçilen veya açılan kartlar, açılan kurslar, okunan bölümler ve harcanan süre, tamamlanan kurslar, bakılan sözlük maddeleri, quiz yanıtları, beğenilen kurslar, gösterilen abonelik teklifleri ve başlatılan ya da tamamlanan satın almalar ile RevenueCat'in Uygulamaya bildirdiği şekliyle abonelik durumunuz (etkin, deneme, ücretli, bitiş tarihi).\n\nHer olay hesabınızla, Uygulamaya özgü bir kurulum kimliğiyle, uygulama sürümüyle, seçilen dille, platformla (iOS veya Android) ve cihazınızın ülkesiyle ilişkilendirilir. Hiçbir ödeme bilgisi, iletişim bilgisi, hassas konum veya reklam kimliği toplanmaz ve bu veriler hiçbir zaman üçüncü taraf bir analiz ya da reklam hizmetine aktarılmaz.\n\nAyrıntılı olaylar 90 gün saklanır, ardından silinir; bu sürenin ötesinde yalnızca kurs bazında toplu istatistikler (görüntülenme, okunma, quiz sayısı…) hesabınızla ilişkilendirilmeden saklanır. Hesabınızı silmeniz tüm olaylarınızı anında siler."
     },
     {
       "id": "4",
-      "title": "4. RevenueCat",
-      "body": "Uygulama içi abonelikleri yönetmek için RevenueCat'i kullanıyoruz. RevenueCat, abonelik durumunuzu doğrulamak için anonim bir cihaz tanımlayıcısı toplayabilir. Kişisel olarak tanımlanabilir hiçbir bilgi paylaşılmaz. Daha fazla bilgi için RevenueCat'in web sitesindeki gizlilik politikasına bakın."
+      "title": "4. Abonelik verileri",
+      "body": "Premium plana abone olursanız işlem tamamen Apple tarafından App Store aracılığıyla gerçekleştirilir. Ödeme bilgilerinize (kart numarası, fatura adresi) erişimimiz yok. Abonelik durumunuzun onayını yalnızca abonelik yönetimi ortağımız RevenueCat aracılığıyla alırız."
     },
     {
       "id": "5",
-      "title": "5. Apple Analytics verileri",
-      "body": "Uygulama, Apple tarafından sağlanan anonim istatistiklerden (App Analytics) de yararlanabilir. Bu veriler toplu hâldedir ve kimliğinizin kişisel olarak belirlenmesine olanak tanımaz. Analiz paylaşımını iPhone'unuzun ayarlarından (Ayarlar > Gizlilik > Analizler ve İyileştirmeler) kapatabilirsiniz."
+      "title": "5. RevenueCat",
+      "body": "Uygulama içi abonelikleri yönetmek için RevenueCat'i kullanıyoruz. RevenueCat, abonelik durumunuzu doğrulamak için anonim bir cihaz tanımlayıcısı toplayabilir. Kişisel olarak tanımlanabilir hiçbir bilgi paylaşılmaz. Daha fazla bilgi için RevenueCat'in web sitesindeki gizlilik politikasına bakın."
     },
     {
       "id": "6",
-      "title": "6. Veri depolama",
-      "body": "İlerleme verileriniz cihazınızda yerel olarak saklanır (UserDefaults). Bir hesap (Apple veya Google) oluşturursanız, bu veriler cihazlarınız arasında senkronizasyonu sağlamak amacıyla Avrupa Birliği'nde barındırılan Supabase sunucularımızda da güvenli bir şekilde yedeklenir. Uygulama'nın kaldırılması yerel verileri siler; hesabınızın silinmesi ise sunucudaki ilişkili verileri kalıcı olarak ortadan kaldırır."
+      "title": "6. Apple Analytics verileri",
+      "body": "Uygulama, Apple tarafından sağlanan anonim istatistiklerden (App Analytics) de yararlanabilir. Bu veriler toplu hâldedir ve kimliğinizin kişisel olarak belirlenmesine olanak tanımaz. Analiz paylaşımını iPhone'unuzun ayarlarından (Ayarlar > Gizlilik > Analizler ve İyileştirmeler) kapatabilirsiniz."
     },
     {
       "id": "7",
-      "title": "7. Veri paylaşımı",
-      "body": "Kişisel verileri ticari veya reklam amaçlı olarak üçüncü taraflara satmıyor, kiralamıyor veya paylaşmıyoruz. İletilen veriler şunlarla sınırlıdır: Apple ve RevenueCat (abonelikler), Formspree (Ayarlardan gönüllü olarak gönderilen kullanıcı geri bildirimi)."
+      "title": "7. Veri depolama",
+      "body": "İlerleme verileriniz cihazınızda yerel olarak saklanır (UserDefaults). Bir hesap (Apple veya Google) oluşturursanız, bu veriler cihazlarınız arasında senkronizasyonu sağlamak amacıyla Avrupa Birliği'nde barındırılan Supabase sunucularımızda da güvenli bir şekilde yedeklenir. Uygulama'nın kaldırılması yerel verileri siler; hesabınızın silinmesi ise sunucudaki ilişkili verileri kalıcı olarak ortadan kaldırır."
     },
     {
       "id": "8",
-      "title": "8. Kullanıcı hakları",
-      "body": "Genel Veri Koruma Tüzüğü (GDPR) ve yürürlükteki mevzuat uyarınca aşağıdaki haklara sahipsiniz:\n\n- Verilerinize erişim hakkı\n- Düzeltme hakkı\n- Silme hakkı (Ayarlar'dan sıfırlama yoluyla)\n- Veri taşınabilirliği hakkı\n- İtiraz hakkı\n\nBu hakları kullanmak için App Store sayfamızda belirtilen adres üzerinden bizimle iletişime geçebilirsiniz."
+      "title": "8. Veri paylaşımı",
+      "body": "Kişisel verileri ticari veya reklam amaçlı olarak üçüncü taraflara satmıyor, kiralamıyor veya paylaşmıyoruz. İletilen veriler şunlarla sınırlıdır: Apple ve RevenueCat (abonelikler), Formspree (Ayarlardan gönüllü olarak gönderilen kullanıcı geri bildirimi)."
     },
     {
       "id": "9",
-      "title": "9. Küçüklerin korunması",
-      "body": "Sophia, her yaştan kullanıcıya açık eğitici bir uygulamadır. 16 yaşından küçüklerden bilerek hiçbir kişisel veri toplamayız. Uygulama'da uygunsuz hiçbir içerik bulunmaz."
+      "title": "9. Kullanıcı hakları",
+      "body": "Genel Veri Koruma Tüzüğü (GDPR) ve yürürlükteki mevzuat uyarınca aşağıdaki haklara sahipsiniz:\n\n- Verilerinize erişim hakkı\n- Düzeltme hakkı\n- Silme hakkı (Ayarlar'dan sıfırlama yoluyla)\n- Veri taşınabilirliği hakkı\n- İtiraz hakkı\n\nBu hakları kullanmak için App Store sayfamızda belirtilen adres üzerinden bizimle iletişime geçebilirsiniz."
     },
     {
       "id": "10",
-      "title": "10. Değişiklikler",
-      "body": "Bu politikayı istediğimiz zaman değiştirme hakkını saklı tutarız. Her türlü değişiklik, Uygulama güncellemesiyle bildirilir.\n\nSon güncelleme: Eylül 2026"
+      "title": "10. Küçüklerin korunması",
+      "body": "Sophia, her yaştan kullanıcıya açık eğitici bir uygulamadır. 16 yaşından küçüklerden bilerek hiçbir kişisel veri toplamayız. Uygulama'da uygunsuz hiçbir içerik bulunmaz."
+    },
+    {
+      "id": "11",
+      "title": "11. Değişiklikler",
+      "body": "Bu politikayı istediğimiz zaman değiştirme hakkını saklı tutarız. Her türlü değişiklik, Uygulama güncellemesiyle bildirilir.\n\nSon güncelleme: Kasım 2026"
     }
   ]
 }

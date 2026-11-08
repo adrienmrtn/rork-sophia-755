@@ -60,47 +60,52 @@
     {
       "id": "2",
       "title": "2. Shromážděná data",
-      "body": "Sophia je navržena podle zásady minimalizace údajů. Aplikace ve vašem zařízení ukládá:\n\n- váš pokrok v kurzech a kvízech\n- vaše preference (zájmy, cíle)\n- vaši sérii (po sobě jdoucí dny používání)\n- vaše oblíbené kurzy\n\nTyto údaje uložené v zařízení se na naše servery nepřenášejí.\n\nPokud nám pošlete zpětnou vazbu prostřednictvím formuláře v Nastavení, předá se vaše zpráva, a pokud ji vyplníte, i vaše e-mailová adresa službě Formspree, abychom vám mohli odpovědět. Technické informace (verze aplikace, jazyk, zařízení) se připojují automaticky."
+      "body": "Sophia je navržena podle zásady minimalizace údajů. Aplikace ve vašem zařízení ukládá:\n\n- váš pokrok v kurzech a kvízech\n- vaše preference (zájmy, cíle)\n- vaši sérii (po sobě jdoucí dny používání)\n- vaše oblíbené kurzy\n\nTyto údaje uložené v zařízení se na naše servery nepřenášejí, s výjimkou toho, co je popsáno v částech „Údaje o používání“ a „Ukládání dat“.\n\nPokud nám pošlete zpětnou vazbu prostřednictvím formuláře v Nastavení, předá se vaše zpráva, a pokud ji vyplníte, i vaše e-mailová adresa službě Formspree, abychom vám mohli odpovědět. Technické informace (verze aplikace, jazyk, zařízení) se připojují automaticky."
     },
     {
       "id": "3",
-      "title": "3. Údaje o předplatném",
-      "body": "Pokud si pořídíte předplatné Premium, transakci zpracovává výhradně společnost Apple prostřednictvím App Storu. K vašim platebním údajům (číslo karty, fakturační adresa) nemáme přístup. Od RevenueCat, našeho partnera pro správu předplatného, dostáváme pouze potvrzení o stavu vašeho předplatného."
+      "title": "3. Údaje o používání",
+      "body": "Abychom pochopili, které kurzy fungují, zlepšili doporučení ve feedu a v budoucnu mohli odměňovat tvůrce obsahu, Aplikace zaznamenává vaše akce v Sophii a odesílá je na naše servery Supabase (hostované v Evropské unii): prohlédnuté úvodní obrazovky, zobrazené, přeskočené nebo otevřené karty, otevřené kurzy, přečtené části a strávený čas, dokončené kurzy, zobrazená hesla slovníčku, odpovědi v kvízech, kurzy, které se vám líbily, zobrazené nabídky předplatného a zahájené či dokončené nákupy, a také stav vašeho předplatného (aktivní, zkušební, placené, datum vypršení) tak, jak jej RevenueCat Aplikaci hlásí.\n\nKaždá událost je spojena s vaším účtem, s identifikátorem instalace specifickým pro Aplikaci, s verzí aplikace, zvoleným jazykem, platformou (iOS nebo Android) a zemí vašeho zařízení. Neshromažďujeme žádné platební údaje, kontakty, přesnou polohu ani reklamní identifikátory a tyto údaje nikdy nepředáváme analytickým ani reklamním službám třetích stran.\n\nPodrobné události uchováváme 90 dní a poté je mažeme; déle zůstávají jen souhrnné statistiky za jednotlivé kurzy (počet zobrazení, přečtení, kvízů…), bez vazby na váš účet. Smazání účtu okamžitě vymaže všechny vaše události."
     },
     {
       "id": "4",
-      "title": "4. RevenueCat",
-      "body": "Ke správě předplatného v aplikaci používáme RevenueCat. RevenueCat může shromažďovat anonymní identifikátor zařízení, aby ověřil stav vašeho předplatného. Nesdílejí se žádné osobní údaje, podle kterých by vás bylo možné identifikovat. Další informace najdete v zásadách ochrany osobních údajů na webových stránkách společnosti RevenueCat."
+      "title": "4. Údaje o předplatném",
+      "body": "Pokud si pořídíte předplatné Premium, transakci zpracovává výhradně společnost Apple prostřednictvím App Storu. K vašim platebním údajům (číslo karty, fakturační adresa) nemáme přístup. Od RevenueCat, našeho partnera pro správu předplatného, dostáváme pouze potvrzení o stavu vašeho předplatného."
     },
     {
       "id": "5",
-      "title": "5. Údaje Apple Analytics",
-      "body": "Aplikace může využívat také anonymní statistiky, které poskytuje společnost Apple (App Analytics). Tyto údaje jsou souhrnné a neumožňují vás osobně identifikovat. Sdílení analytických údajů můžete vypnout v nastavení iPhonu (Nastavení > Soukromí > Analýza a vylepšení)."
+      "title": "5. RevenueCat",
+      "body": "Ke správě předplatného v aplikaci používáme RevenueCat. RevenueCat může shromažďovat anonymní identifikátor zařízení, aby ověřil stav vašeho předplatného. Nesdílejí se žádné osobní údaje, podle kterých by vás bylo možné identifikovat. Další informace najdete v zásadách ochrany osobních údajů na webových stránkách společnosti RevenueCat."
     },
     {
       "id": "6",
-      "title": "6. Ukládání dat",
-      "body": "Údaje o vašem pokroku jsou uloženy lokálně ve vašem zařízení (UserDefaults). Pokud si vytvoříte účet (Apple nebo Google), jsou navíc bezpečně zálohovány na našich serverech Supabase (hostovaných v Evropské unii), aby je bylo možné synchronizovat mezi vašimi zařízeními. Odinstalováním aplikace se smažou místní údaje; smazáním účtu se trvale vymažou související údaje na serveru."
+      "title": "6. Údaje Apple Analytics",
+      "body": "Aplikace může využívat také anonymní statistiky, které poskytuje společnost Apple (App Analytics). Tyto údaje jsou souhrnné a neumožňují vás osobně identifikovat. Sdílení analytických údajů můžete vypnout v nastavení iPhonu (Nastavení > Soukromí > Analýza a vylepšení)."
     },
     {
       "id": "7",
-      "title": "7. Sdílení dat",
-      "body": "Neprodáváme, nepronajímáme ani nesdílíme žádné osobní údaje se třetími stranami pro obchodní ani reklamní účely. Údaje předáváme pouze těmto subjektům: Apple a RevenueCat (předplatné), Formspree (zpětná vazba, kterou uživatelé dobrovolně odešlou z Nastavení)."
+      "title": "7. Ukládání dat",
+      "body": "Údaje o vašem pokroku jsou uloženy lokálně ve vašem zařízení (UserDefaults). Pokud si vytvoříte účet (Apple nebo Google), jsou navíc bezpečně zálohovány na našich serverech Supabase (hostovaných v Evropské unii), aby je bylo možné synchronizovat mezi vašimi zařízeními. Odinstalováním aplikace se smažou místní údaje; smazáním účtu se trvale vymažou související údaje na serveru."
     },
     {
       "id": "8",
-      "title": "8. Práva uživatelů",
-      "body": "V souladu s obecným nařízením o ochraně osobních údajů (GDPR) a příslušnými právními předpisy máte tato práva:\n\n- právo na přístup ke svým údajům\n- právo na opravu\n- právo na výmaz (resetováním v Nastavení)\n- právo na přenositelnost údajů\n- právo vznést námitku\n\nPro uplatnění těchto práv nás kontaktujte na adrese uvedené na naší stránce v App Storu."
+      "title": "8. Sdílení dat",
+      "body": "Neprodáváme, nepronajímáme ani nesdílíme žádné osobní údaje se třetími stranami pro obchodní ani reklamní účely. Údaje předáváme pouze těmto subjektům: Apple a RevenueCat (předplatné), Formspree (zpětná vazba, kterou uživatelé dobrovolně odešlou z Nastavení)."
     },
     {
       "id": "9",
-      "title": "9. Ochrana nezletilých",
-      "body": "Sophia je vzdělávací aplikace přístupná všem věkovým kategoriím. Vědomě neshromažďujeme žádné osobní údaje nezletilých mladších 16 let. Aplikace neobsahuje žádný nevhodný obsah."
+      "title": "9. Práva uživatelů",
+      "body": "V souladu s obecným nařízením o ochraně osobních údajů (GDPR) a příslušnými právními předpisy máte tato práva:\n\n- právo na přístup ke svým údajům\n- právo na opravu\n- právo na výmaz (resetováním v Nastavení)\n- právo na přenositelnost údajů\n- právo vznést námitku\n\nPro uplatnění těchto práv nás kontaktujte na adrese uvedené na naší stránce v App Storu."
     },
     {
       "id": "10",
-      "title": "10. Změny",
-      "body": "Vyhrazujeme si právo tyto zásady kdykoli upravit. Jakékoli změny budou oznámeny prostřednictvím aktualizace aplikace.\n\nPoslední aktualizace: září 2026"
+      "title": "10. Ochrana nezletilých",
+      "body": "Sophia je vzdělávací aplikace přístupná všem věkovým kategoriím. Vědomě neshromažďujeme žádné osobní údaje nezletilých mladších 16 let. Aplikace neobsahuje žádný nevhodný obsah."
+    },
+    {
+      "id": "11",
+      "title": "11. Změny",
+      "body": "Vyhrazujeme si právo tyto zásady kdykoli upravit. Jakékoli změny budou oznámeny prostřednictvím aktualizace aplikace.\n\nPoslední aktualizace: listopad 2026"
     }
   ]
 }

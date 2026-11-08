@@ -60,47 +60,52 @@
     {
       "id": "2",
       "title": "2. Kogutavad andmed",
-      "body": "Sophia on loodud andmete minimeerimise põhimõttest lähtudes. Rakendus salvestab sinu seadmesse järgmised andmed:\n\n- Edenemine kursustel ja viktoriinides\n- Eelistused (huvid, eesmärgid)\n- Seeria (järjestikused kasutuspäevad)\n- Lemmikkursused\n\nNeid kohalikke andmeid meie serveritesse ei edastata.\n\nKui saadad meile tagasisidet seadetes oleva vormi kaudu, edastatakse sinu sõnum ja sinu e-posti aadress (kui selle sisestad) teenusele Formspree, et saaksime sulle vastata. Tehniline teave (rakenduse versioon, keel, seade) lisatakse automaatselt."
+      "body": "Sophia on loodud andmete minimeerimise põhimõttest lähtudes. Rakendus salvestab sinu seadmesse järgmised andmed:\n\n- Edenemine kursustel ja viktoriinides\n- Eelistused (huvid, eesmärgid)\n- Seeria (järjestikused kasutuspäevad)\n- Lemmikkursused\n\nNeid kohalikke andmeid meie serveritesse ei edastata, välja arvatud see, mida kirjeldatakse jaotistes „Kasutusandmed“ ja „Andmete salvestamine“.\n\nKui saadad meile tagasisidet seadetes oleva vormi kaudu, edastatakse sinu sõnum ja sinu e-posti aadress (kui selle sisestad) teenusele Formspree, et saaksime sulle vastata. Tehniline teave (rakenduse versioon, keel, seade) lisatakse automaatselt."
     },
     {
       "id": "3",
-      "title": "3. Tellimuse andmed",
-      "body": "Kui ostad Premium-tellimuse, haldab tehingut täielikult Google Play Store'i kaudu. Meil puudub juurdepääs sinu makseandmetele (kaardinumber, arveldusaadress). Saame üksnes kinnituse sinu tellimuse oleku kohta ja see jõuab meieni RevenueCati kaudu, mis on meie tellimuste haldamise partner."
+      "title": "3. Kasutusandmed",
+      "body": "Et mõista, millised kursused toimivad, parandada voo soovitusi ja edaspidi sisuloojaid tasustada, salvestab Rakendus sinu tegevused Sophias ja edastab need meie Supabase'i serveritesse (mis asuvad Euroopa Liidus): läbitud sissejuhatuskuvad, kuvatud, vahele jäetud või avatud kaardid, avatud kursused, loetud osad ja neile kulunud aeg, lõpetatud kursused, vaadatud sõnastikukirjed, viktoriinivastused, meeldivaks märgitud kursused, kuvatud tellimuspakkumised ning alustatud või lõpule viidud ostud, samuti sinu tellimuse olek (aktiivne, prooviperiood, tasuline, lõppkuupäev) sellisena, nagu RevenueCat selle Rakendusele edastab.\n\nIga sündmus seotakse sinu kontoga, Rakenduse enda paigaldustunnusega, rakenduse versiooniga, valitud keelega, platvormiga ja sinu seadme riigiga. Makseandmeid, kontaktandmeid, täpset asukohta ega reklaamitunnuseid ei koguta ning neid andmeid ei edastata kunagi kolmanda osapoole analüütika- ega reklaamiteenusele.\n\nÜksikasjalikke sündmusi säilitatakse 90 päeva ja seejärel need kustutatakse; pärast seda säilitatakse ainult kursuste kaupa koondatud statistikat (vaatamiste, lugemiste, viktoriinide arv …), mida sinu kontoga ei seostata. Konto kustutamisel kustutatakse kohe kõik sinu sündmused."
     },
     {
       "id": "4",
-      "title": "4. RevenueCat",
-      "body": "Kasutame rakendusesiseste tellimuste haldamiseks teenust RevenueCat. RevenueCat võib sinu tellimuse oleku kontrollimiseks koguda anonüümse seadmetunnuse. Isikut tuvastavaid andmeid ei jagata. Lisateavet leiad RevenueCati privaatsuspoliitikast nende veebisaidil."
+      "title": "4. Tellimuse andmed",
+      "body": "Kui ostad Premium-tellimuse, haldab tehingut täielikult Google Play Store'i kaudu. Meil puudub juurdepääs sinu makseandmetele (kaardinumber, arveldusaadress). Saame üksnes kinnituse sinu tellimuse oleku kohta ja see jõuab meieni RevenueCati kaudu, mis on meie tellimuste haldamise partner."
     },
     {
       "id": "5",
-      "title": "5. Google Play / Androidi analüütikaandmed",
-      "body": "Rakendus võib kasutada ka Google'i pakutavat anonüümset statistikat (Play Console'i analüütika). Need andmed on koondatud ega võimalda sind isiklikult tuvastada. Analüütikaandmete jagamise saad välja lülitada oma Android-seadme seadetes (Google > Halda oma Google'i kontot > Andmed ja privaatsus)."
+      "title": "5. RevenueCat",
+      "body": "Kasutame rakendusesiseste tellimuste haldamiseks teenust RevenueCat. RevenueCat võib sinu tellimuse oleku kontrollimiseks koguda anonüümse seadmetunnuse. Isikut tuvastavaid andmeid ei jagata. Lisateavet leiad RevenueCati privaatsuspoliitikast nende veebisaidil."
     },
     {
       "id": "6",
-      "title": "6. Andmete salvestamine",
-      "body": "Sinu edenemisandmed salvestatakse sinu seadmesse (rakenduse kohalik salvestusruum). Kui lood konto (Google'i kaudu), varundatakse need turvaliselt ka meie Supabase'i serveritesse (asuvad Euroopa Liidus), et neid saaks sinu seadmete vahel sünkroonida. Rakenduse desinstallimine kustutab kohalikud andmed; konto kustutamine kustutab serverist jäädavalt sellega seotud andmed."
+      "title": "6. Google Play / Androidi analüütikaandmed",
+      "body": "Rakendus võib kasutada ka Google'i pakutavat anonüümset statistikat (Play Console'i analüütika). Need andmed on koondatud ega võimalda sind isiklikult tuvastada. Analüütikaandmete jagamise saad välja lülitada oma Android-seadme seadetes (Google > Halda oma Google'i kontot > Andmed ja privaatsus)."
     },
     {
       "id": "7",
-      "title": "7. Andmete jagamine",
-      "body": "Me ei müü, rendi ega jaga isikuandmeid kolmandatele isikutele ärilistel ega reklaamieesmärkidel. Andmeid edastatakse ainult järgmistele osapooltele: Google ja RevenueCat (tellimused), Formspree (tagasiside, mida kasutajad saadavad vabatahtlikult seadetest)."
+      "title": "7. Andmete salvestamine",
+      "body": "Sinu edenemisandmed salvestatakse sinu seadmesse (rakenduse kohalik salvestusruum). Kui lood konto (Google'i kaudu), varundatakse need turvaliselt ka meie Supabase'i serveritesse (asuvad Euroopa Liidus), et neid saaks sinu seadmete vahel sünkroonida. Rakenduse desinstallimine kustutab kohalikud andmed; konto kustutamine kustutab serverist jäädavalt sellega seotud andmed."
     },
     {
       "id": "8",
-      "title": "8. Kasutaja õigused",
-      "body": "Isikuandmete kaitse üldmääruse (IKÜM) ja kohaldatavate seaduste kohaselt on sul järgmised õigused:\n\n- Õigus tutvuda oma andmetega\n- Õigus andmete parandamisele\n- Õigus andmete kustutamisele (lähtestamine seadetes)\n- Õigus andmete ülekandmisele\n- Õigus esitada vastuväiteid\n\nNende õiguste kasutamiseks võta meiega ühendust aadressil, mis on märgitud meie Play Store'i lehel."
+      "title": "8. Andmete jagamine",
+      "body": "Me ei müü, rendi ega jaga isikuandmeid kolmandatele isikutele ärilistel ega reklaamieesmärkidel. Andmeid edastatakse ainult järgmistele osapooltele: Google ja RevenueCat (tellimused), Formspree (tagasiside, mida kasutajad saadavad vabatahtlikult seadetest)."
     },
     {
       "id": "9",
-      "title": "9. Alaealiste kaitse",
-      "body": "Sophia on hariv rakendus, mis on mõeldud igas vanuses kasutajatele. Me ei kogu teadlikult isikuandmeid alla 16-aastastelt alaealistelt. Rakendus ei sisalda sobimatut sisu."
+      "title": "9. Kasutaja õigused",
+      "body": "Isikuandmete kaitse üldmääruse (IKÜM) ja kohaldatavate seaduste kohaselt on sul järgmised õigused:\n\n- Õigus tutvuda oma andmetega\n- Õigus andmete parandamisele\n- Õigus andmete kustutamisele (lähtestamine seadetes)\n- Õigus andmete ülekandmisele\n- Õigus esitada vastuväiteid\n\nNende õiguste kasutamiseks võta meiega ühendust aadressil, mis on märgitud meie Play Store'i lehel."
     },
     {
       "id": "10",
-      "title": "10. Muudatused",
-      "body": "Jätame endale õiguse seda poliitikat igal ajal muuta. Kõikidest muudatustest teavitatakse rakenduse värskenduse kaudu.\n\nViimati värskendatud: september 2026"
+      "title": "10. Alaealiste kaitse",
+      "body": "Sophia on hariv rakendus, mis on mõeldud igas vanuses kasutajatele. Me ei kogu teadlikult isikuandmeid alla 16-aastastelt alaealistelt. Rakendus ei sisalda sobimatut sisu."
+    },
+    {
+      "id": "11",
+      "title": "11. Muudatused",
+      "body": "Jätame endale õiguse seda poliitikat igal ajal muuta. Kõikidest muudatustest teavitatakse rakenduse värskenduse kaudu.\n\nViimati värskendatud: november 2026"
     }
   ]
 }

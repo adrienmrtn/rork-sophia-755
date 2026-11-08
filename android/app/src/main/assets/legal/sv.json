@@ -60,47 +60,52 @@
     {
       "id": "2",
       "title": "2. Data som samlas in",
-      "body": "Sophia är utformad enligt principen om dataminimering. Appen lagrar följande på din enhet:\n\n- Dina framsteg i kurser och quiz\n- Dina preferenser (intressen, mål)\n- Din svit (antal dagar i rad som du har använt appen)\n- Dina favoritkurser\n\nDessa lokala uppgifter skickas inte till våra servrar.\n\nOm du skickar feedback till oss via formuläret i inställningarna skickas ditt meddelande, och din e-postadress om du anger den, till Formspree så att vi kan svara dig. Teknisk information (appversion, språk, enhet) bifogas automatiskt."
+      "body": "Sophia är utformad enligt principen om dataminimering. Appen lagrar följande på din enhet:\n\n- Dina framsteg i kurser och quiz\n- Dina preferenser (intressen, mål)\n- Din svit (antal dagar i rad som du har använt appen)\n- Dina favoritkurser\n\nDessa lokala uppgifter skickas inte till våra servrar, med undantag för det som beskrivs i avsnitten ”Användningsdata” och ”Datalagring”.\n\nOm du skickar feedback till oss via formuläret i inställningarna skickas ditt meddelande, och din e-postadress om du anger den, till Formspree så att vi kan svara dig. Teknisk information (appversion, språk, enhet) bifogas automatiskt."
     },
     {
       "id": "3",
-      "title": "3. Prenumerationsuppgifter",
-      "body": "Om du tecknar en Premium-prenumeration hanteras hela transaktionen av Google via Google Play. Vi har inte tillgång till dina betalningsuppgifter (kortnummer, faktureringsadress). Vi får bara en bekräftelse på din prenumerationsstatus via RevenueCat, vår partner för prenumerationshantering."
+      "title": "3. Användningsdata",
+      "body": "För att förstå vilka kurser som fungerar, förbättra flödets rekommendationer och på sikt ersätta innehållsskaparna registrerar appen dina handlingar i Sophia och skickar dem till våra Supabase-servrar (som finns i Europeiska unionen): genomgångna introduktionsskärmar, visade, överhoppade eller öppnade kort, öppnade kurser, lästa avsnitt och tid som lagts ned, avslutade kurser, visade ordlisteposter, quizsvar, kurser du gillat, visade prenumerationserbjudanden och påbörjade eller genomförda köp, samt din prenumerationsstatus (aktiv, provperiod, betald, förfallodatum) så som RevenueCat rapporterar den till appen.\n\nVarje händelse kopplas till ditt konto, till ett installations-id som är specifikt för appen, till appversionen, det valda språket, plattformen och landet för din enhet. Inga betalningsuppgifter, kontaktuppgifter, exakt plats eller annons-id samlas in, och dessa uppgifter skickas aldrig till någon analys- eller annonstjänst från tredje part.\n\nDetaljerade händelser sparas i 90 dagar och raderas sedan; därefter behålls endast sammanställd statistik per kurs (antal visningar, läsningar, quiz …), utan koppling till ditt konto. Om du raderar ditt konto raderas alla dina händelser omedelbart."
     },
     {
       "id": "4",
-      "title": "4. RevenueCat",
-      "body": "Vi använder RevenueCat för att hantera prenumerationer i appen. RevenueCat kan samla in en anonym enhetsidentifierare för att kontrollera din prenumerationsstatus. Inga personuppgifter som kan identifiera dig delas. Mer information finns i RevenueCats integritetspolicy på deras webbplats."
+      "title": "4. Prenumerationsuppgifter",
+      "body": "Om du tecknar en Premium-prenumeration hanteras hela transaktionen av Google via Google Play. Vi har inte tillgång till dina betalningsuppgifter (kortnummer, faktureringsadress). Vi får bara en bekräftelse på din prenumerationsstatus via RevenueCat, vår partner för prenumerationshantering."
     },
     {
       "id": "5",
-      "title": "5. Analysdata från Google Play / Android",
-      "body": "Appen kan också använda anonym statistik från Google (Play Console analytics). Uppgifterna är sammanställda och kan inte användas för att identifiera dig personligen. Du kan stänga av delning av analysdata i inställningarna på din Android-enhet (Google > Hantera ditt Google-konto > Data och integritet)."
+      "title": "5. RevenueCat",
+      "body": "Vi använder RevenueCat för att hantera prenumerationer i appen. RevenueCat kan samla in en anonym enhetsidentifierare för att kontrollera din prenumerationsstatus. Inga personuppgifter som kan identifiera dig delas. Mer information finns i RevenueCats integritetspolicy på deras webbplats."
     },
     {
       "id": "6",
-      "title": "6. Datalagring",
-      "body": "Dina framsteg lagras lokalt på din enhet (appens lokala lagring). Om du skapar ett konto (Google) sparas de dessutom säkert på våra Supabase-servrar (som finns inom EU) så att de kan synkroniseras mellan dina enheter. Om du avinstallerar appen raderas de lokala uppgifterna, och om du raderar ditt konto raderas tillhörande uppgifter på servern permanent."
+      "title": "6. Analysdata från Google Play / Android",
+      "body": "Appen kan också använda anonym statistik från Google (Play Console analytics). Uppgifterna är sammanställda och kan inte användas för att identifiera dig personligen. Du kan stänga av delning av analysdata i inställningarna på din Android-enhet (Google > Hantera ditt Google-konto > Data och integritet)."
     },
     {
       "id": "7",
-      "title": "7. Datadelning",
-      "body": "Vi varken säljer, hyr ut eller delar personuppgifter med tredje part i kommersiellt syfte eller i reklamsyfte. Uppgifter lämnas endast till Google och RevenueCat (prenumerationer) samt Formspree (feedback som användare frivilligt skickar från inställningarna)."
+      "title": "7. Datalagring",
+      "body": "Dina framsteg lagras lokalt på din enhet (appens lokala lagring). Om du skapar ett konto (Google) sparas de dessutom säkert på våra Supabase-servrar (som finns inom EU) så att de kan synkroniseras mellan dina enheter. Om du avinstallerar appen raderas de lokala uppgifterna, och om du raderar ditt konto raderas tillhörande uppgifter på servern permanent."
     },
     {
       "id": "8",
-      "title": "8. Användarnas rättigheter",
-      "body": "Enligt dataskyddsförordningen (GDPR) och tillämplig lagstiftning har du följande rättigheter:\n\n- Rätt till tillgång till dina uppgifter\n- Rätt till rättelse\n- Rätt till radering (återställning i inställningarna)\n- Rätt till dataportabilitet\n- Rätt att göra invändningar\n\nOm du vill utöva dessa rättigheter kan du kontakta oss via adressen som anges på vår sida i Google Play."
+      "title": "8. Datadelning",
+      "body": "Vi varken säljer, hyr ut eller delar personuppgifter med tredje part i kommersiellt syfte eller i reklamsyfte. Uppgifter lämnas endast till Google och RevenueCat (prenumerationer) samt Formspree (feedback som användare frivilligt skickar från inställningarna)."
     },
     {
       "id": "9",
-      "title": "9. Skydd av minderåriga",
-      "body": "Sophia är en pedagogisk app som passar alla åldrar. Vi samlar inte medvetet in personuppgifter från barn under 16 år. Appen innehåller inget olämpligt innehåll."
+      "title": "9. Användarnas rättigheter",
+      "body": "Enligt dataskyddsförordningen (GDPR) och tillämplig lagstiftning har du följande rättigheter:\n\n- Rätt till tillgång till dina uppgifter\n- Rätt till rättelse\n- Rätt till radering (återställning i inställningarna)\n- Rätt till dataportabilitet\n- Rätt att göra invändningar\n\nOm du vill utöva dessa rättigheter kan du kontakta oss via adressen som anges på vår sida i Google Play."
     },
     {
       "id": "10",
-      "title": "10. Ändringar",
-      "body": "Vi förbehåller oss rätten att när som helst ändra denna policy. Eventuella ändringar kommer att meddelas via en appuppdatering.\n\nSenast uppdaterad: september 2026"
+      "title": "10. Skydd av minderåriga",
+      "body": "Sophia är en pedagogisk app som passar alla åldrar. Vi samlar inte medvetet in personuppgifter från barn under 16 år. Appen innehåller inget olämpligt innehåll."
+    },
+    {
+      "id": "11",
+      "title": "11. Ändringar",
+      "body": "Vi förbehåller oss rätten att när som helst ändra denna policy. Eventuella ändringar kommer att meddelas via en appuppdatering.\n\nSenast uppdaterad: november 2026"
     }
   ]
 }

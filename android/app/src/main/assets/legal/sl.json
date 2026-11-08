@@ -60,47 +60,52 @@
     {
       "id": "2",
       "title": "2. Zbrani podatki",
-      "body": "Aplikacija Sophia je zasnovana po načelu najmanjšega obsega podatkov. Aplikacija v tvoji napravi shranjuje:\n\n- Tvoj napredek pri tečajih in kvizih\n- Tvoje preference (zanimanja, cilji)\n- Tvoj niz (zaporedni dnevi uporabe)\n- Tvoje priljubljene tečaje\n\nTi lokalni podatki se ne prenašajo na naše strežnike.\n\nČe nam prek obrazca v nastavitvah pošlješ povratno informacijo, se tvoje sporočilo in, če ga vpišeš, tvoj e-poštni naslov posredujeta storitvi Formspree, da ti lahko odgovorimo. Samodejno so priloženi tudi tehnični podatki (različica aplikacije, jezik, naprava)."
+      "body": "Aplikacija Sophia je zasnovana po načelu najmanjšega obsega podatkov. Aplikacija v tvoji napravi shranjuje:\n\n- Tvoj napredek pri tečajih in kvizih\n- Tvoje preference (zanimanja, cilji)\n- Tvoj niz (zaporedni dnevi uporabe)\n- Tvoje priljubljene tečaje\n\nTi lokalni podatki se ne prenašajo na naše strežnike, razen tega, kar je opisano v razdelkih „Podatki o uporabi“ in „Shranjevanje podatkov“.\n\nČe nam prek obrazca v nastavitvah pošlješ povratno informacijo, se tvoje sporočilo in, če ga vpišeš, tvoj e-poštni naslov posredujeta storitvi Formspree, da ti lahko odgovorimo. Samodejno so priloženi tudi tehnični podatki (različica aplikacije, jezik, naprava)."
     },
     {
       "id": "3",
-      "title": "3. Podatki o naročnini",
-      "body": "Če skleneš naročnino Premium, transakcijo v celoti izvede Google prek trgovine Play Store. Do tvojih plačilnih podatkov (številka kartice, naslov za račun) nimamo dostopa. Prek družbe RevenueCat, našega partnerja za upravljanje naročnin, prejmemo samo potrditev stanja tvoje naročnine."
+      "title": "3. Podatki o uporabi",
+      "body": "Da bi razumeli, kateri tečaji delujejo, izboljšali priporočila v viru in sčasoma nagrajevali ustvarjalce vsebin, Aplikacija beleži tvoja dejanja v Sophii in jih pošilja na naše strežnike Supabase (ki gostujejo v Evropski uniji): pregledane uvodne zaslone, prikazane, preskočene ali odprte kartice, odprte tečaje, prebrane razdelke in porabljen čas, dokončane tečaje, odprta gesla slovarčka, odgovore v kvizih, všečkane tečaje, prikazane ponudbe naročnine ter začete ali dokončane nakupe, pa tudi stanje tvoje naročnine (aktivna, preizkusna, plačljiva, datum poteka), kot ga RevenueCat sporoča Aplikaciji.\n\nVsak dogodek je povezan s tvojim računom, z identifikatorjem namestitve, ki je lasten Aplikaciji, z različico aplikacije, izbranim jezikom, platformo in državo tvoje naprave. Ne zbiramo plačilnih podatkov, kontaktov, natančne lokacije ali oglaševalskih identifikatorjev in teh podatkov nikoli ne posredujemo zunanjim analitičnim ali oglaševalskim storitvam.\n\nPodrobni dogodki se hranijo 90 dni, nato se izbrišejo; po tem ostanejo le zbirne statistike po tečajih (število ogledov, branj, kvizov …), ki niso povezane s tvojim računom. Z izbrisom računa se takoj izbrišejo vsi tvoji dogodki."
     },
     {
       "id": "4",
-      "title": "4. RevenueCat",
-      "body": "Za upravljanje naročnin v aplikaciji uporabljamo RevenueCat. RevenueCat lahko zbira anonimni identifikator naprave, da preveri stanje tvoje naročnine. Osebni podatki, ki bi omogočali tvojo identifikacijo, se ne delijo. Več informacij najdeš v pravilniku o zasebnosti družbe RevenueCat na njenem spletnem mestu."
+      "title": "4. Podatki o naročnini",
+      "body": "Če skleneš naročnino Premium, transakcijo v celoti izvede Google prek trgovine Play Store. Do tvojih plačilnih podatkov (številka kartice, naslov za račun) nimamo dostopa. Prek družbe RevenueCat, našega partnerja za upravljanje naročnin, prejmemo samo potrditev stanja tvoje naročnine."
     },
     {
       "id": "5",
-      "title": "5. Podatki analitike Google Play / Android",
-      "body": "Aplikacija lahko uporablja tudi anonimne statistične podatke, ki jih zagotavlja Google (analitika Play Console). Ti podatki so združeni in ne omogočajo tvoje osebne identifikacije. Deljenje analitike lahko izklopiš v nastavitvah svoje naprave Android (Google > Upravljanje računa Google > Podatki in zasebnost)."
+      "title": "5. RevenueCat",
+      "body": "Za upravljanje naročnin v aplikaciji uporabljamo RevenueCat. RevenueCat lahko zbira anonimni identifikator naprave, da preveri stanje tvoje naročnine. Osebni podatki, ki bi omogočali tvojo identifikacijo, se ne delijo. Več informacij najdeš v pravilniku o zasebnosti družbe RevenueCat na njenem spletnem mestu."
     },
     {
       "id": "6",
-      "title": "6. Shranjevanje podatkov",
-      "body": "Podatki o tvojem napredku so shranjeni lokalno v tvoji napravi (lokalna shramba aplikacije). Če ustvariš račun (Google), se varno shranijo tudi na naših strežnikih Supabase, ki gostujejo v Evropski uniji, da je mogoča sinhronizacija med tvojimi napravami. Z odstranitvijo aplikacije se izbrišejo lokalni podatki, z izbrisom računa pa se trajno izbrišejo povezani podatki na strežniku."
+      "title": "6. Podatki analitike Google Play / Android",
+      "body": "Aplikacija lahko uporablja tudi anonimne statistične podatke, ki jih zagotavlja Google (analitika Play Console). Ti podatki so združeni in ne omogočajo tvoje osebne identifikacije. Deljenje analitike lahko izklopiš v nastavitvah svoje naprave Android (Google > Upravljanje računa Google > Podatki in zasebnost)."
     },
     {
       "id": "7",
-      "title": "7. Posredovanje podatkov",
-      "body": "Osebnih podatkov ne prodajamo, ne dajemo v najem in jih ne delimo s tretjimi osebami v komercialne ali oglaševalske namene. Podatke posredujemo samo tem prejemnikom: Google in RevenueCat (naročnine) ter Formspree (povratne informacije, ki jih uporabniki prostovoljno pošljejo iz nastavitev)."
+      "title": "7. Shranjevanje podatkov",
+      "body": "Podatki o tvojem napredku so shranjeni lokalno v tvoji napravi (lokalna shramba aplikacije). Če ustvariš račun (Google), se varno shranijo tudi na naših strežnikih Supabase, ki gostujejo v Evropski uniji, da je mogoča sinhronizacija med tvojimi napravami. Z odstranitvijo aplikacije se izbrišejo lokalni podatki, z izbrisom računa pa se trajno izbrišejo povezani podatki na strežniku."
     },
     {
       "id": "8",
-      "title": "8. Pravice uporabnikov",
-      "body": "V skladu s Splošno uredbo o varstvu podatkov (GDPR) in veljavno zakonodajo imaš naslednje pravice:\n\n- Pravica dostopa do tvojih podatkov\n- Pravica do popravka\n- Pravica do izbrisa (ponastavitev v nastavitvah)\n- Pravica do prenosljivosti podatkov\n- Pravica do ugovora\n\nZa uveljavljanje teh pravic nam piši na naslov, naveden na naši strani v Play Store."
+      "title": "8. Posredovanje podatkov",
+      "body": "Osebnih podatkov ne prodajamo, ne dajemo v najem in jih ne delimo s tretjimi osebami v komercialne ali oglaševalske namene. Podatke posredujemo samo tem prejemnikom: Google in RevenueCat (naročnine) ter Formspree (povratne informacije, ki jih uporabniki prostovoljno pošljejo iz nastavitev)."
     },
     {
       "id": "9",
-      "title": "9. Varstvo mladoletnikov",
-      "body": "Sophia je izobraževalna aplikacija, primerna za vse starosti. Zavestno ne zbiramo osebnih podatkov otrok, mlajših od 16 let. Aplikacija ne vsebuje neprimerne vsebine."
+      "title": "9. Pravice uporabnikov",
+      "body": "V skladu s Splošno uredbo o varstvu podatkov (GDPR) in veljavno zakonodajo imaš naslednje pravice:\n\n- Pravica dostopa do tvojih podatkov\n- Pravica do popravka\n- Pravica do izbrisa (ponastavitev v nastavitvah)\n- Pravica do prenosljivosti podatkov\n- Pravica do ugovora\n\nZa uveljavljanje teh pravic nam piši na naslov, naveden na naši strani v Play Store."
     },
     {
       "id": "10",
-      "title": "10. Spremembe",
-      "body": "Pridržujemo si pravico, da ta pravilnik kadar koli spremenimo. Vse spremembe bodo sporočene s posodobitvijo aplikacije.\n\nZadnja posodobitev: september 2026"
+      "title": "10. Varstvo mladoletnikov",
+      "body": "Sophia je izobraževalna aplikacija, primerna za vse starosti. Zavestno ne zbiramo osebnih podatkov otrok, mlajših od 16 let. Aplikacija ne vsebuje neprimerne vsebine."
+    },
+    {
+      "id": "11",
+      "title": "11. Spremembe",
+      "body": "Pridržujemo si pravico, da ta pravilnik kadar koli spremenimo. Vse spremembe bodo sporočene s posodobitvijo aplikacije.\n\nZadnja posodobitev: november 2026"
     }
   ]
 }

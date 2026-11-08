@@ -288,6 +288,14 @@ struct TrainingView: View {
         let item = sessionQuestions[currentIndex]
         let fullyCorrect = QuizScoring.isFullyCorrect(for: item.question, answer: answer)
 
+        var props: [String: AnalyticsValue] = [
+            "question_id": .string(item.question.id),
+            "context": "training",
+            "correct": .bool(fullyCorrect),
+        ]
+        if case .singleChoice(let index) = answer { props["option_index"] = .int(index) }
+        AnalyticsService.shared.log(.quizAnswer, courseId: item.course.id, props: props)
+
         hasAnswered = true
         wasFullyCorrect = fullyCorrect
         if fullyCorrect {

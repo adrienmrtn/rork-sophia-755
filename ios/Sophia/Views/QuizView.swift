@@ -19,6 +19,8 @@ struct QuizView: View {
     @State private var chronoPool: [Int] = []
     @State private var sliderValue: Double = 0                   // .numericSlider / .percentageSlider
     @State private var hasAnswered: Bool = false
+    /// Quand la question en cours s'est affichée, pour le temps de réponse de `quiz_answer`.
+    @State private var questionShownAt = Date()
     @State private var currentQuestionPoints: Int = 0
 
     @State private var totalPointsEarned: Int = 0
@@ -220,6 +222,12 @@ struct QuizView: View {
             completedBefore = progressManager.completedCount
             subjectXPBefore = progressManager.xp(for: course.subject)
             courseWasCompletedBeforeQuiz = progressManager.courseStatus(for: course.id) == .completed
+            questionShownAt = Date()
+            AnalyticsService.shared.log(
+                .quizStart,
+                courseId: course.id,
+                props: ["context": "course", "total": .int(shuffledQuestions.count)]
+            )
             pendingCollectionEvents = initialCollectionEvents
             shuffleAllQuestions()
         }
@@ -261,6 +269,17 @@ struct QuizView: View {
         let question = currentQuestion
         let earned = QuizScoring.points(for: question, answer: answer)
         let fullyCorrect = QuizScoring.isFullyCorrect(for: question, answer: answer)
+
+        var props: [String: AnalyticsValue] = [
+            "question_id": .string(question.id),
+            "context": "course",
+            "correct": .bool(fullyCorrect),
+            "points": .int(earned),
+            "max_points": .int(question.maxPoints),
+            "seconds": .int(max(0, Int(Date().timeIntervalSince(questionShownAt).rounded()))),
+        ]
+        if case .singleChoice(let index) = answer { props["option_index"] = .int(index) }
+        AnalyticsService.shared.log(.quizAnswer, courseId: course.id, props: props)
 
         hasAnswered = true
         currentQuestionPoints = earned
@@ -1040,6 +1059,7 @@ struct QuizView: View {
                 try? await Task.sleep(for: .milliseconds(200))
                 currentQuestionIndex += 1
                 resetAnswerState()
+                questionShownAt = Date()
                 withAnimation(.spring(response: 0.45, dampingFraction: 0.85)) {
                     questionAppeared = true
                 }
@@ -1048,6 +1068,16 @@ struct QuizView: View {
             withAnimation(.easeOut(duration: 0.25)) {
                 showFeedback = false
             }
+            AnalyticsService.shared.log(
+                .quizComplete,
+                courseId: course.id,
+                props: [
+                    "context": "course",
+                    "score": .int(totalPointsEarned),
+                    "max_score": .int(maxPossiblePoints),
+                    "total": .int(shuffledQuestions.count),
+                ]
+            )
             // Award the fixed quiz-completion XP bonus once, before transitioning to the result screen.
             progressManager.addXP(subject: course.subject, amount: quizCompletionXPBonus)
             xpEarned += quizCompletionXPBonus

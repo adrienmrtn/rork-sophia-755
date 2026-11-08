@@ -60,47 +60,52 @@
     {
       "id": "2",
       "title": "2. Zozbierané údaje",
-      "body": "Sophia je navrhnutá podľa zásady minimalizácie údajov. Aplikácia ukladá v tvojom zariadení:\n\n- Tvoj pokrok v kurzoch a kvízoch\n- Tvoje preferencie (záujmy, ciele)\n- Tvoju sériu (počet dní používania v rade)\n- Tvoje obľúbené kurzy\n\nTieto lokálne údaje sa na naše servery neodosielajú.\n\nAk nám pošleš spätnú väzbu cez formulár v nastaveniach, tvoja správa a e-mailová adresa (ak ju vyplníš) sa odošlú službe Formspree, aby sme ti mohli odpovedať. Automaticky sa k nim pripoja technické informácie (verzia aplikácie, jazyk, zariadenie)."
+      "body": "Sophia je navrhnutá podľa zásady minimalizácie údajov. Aplikácia ukladá v tvojom zariadení:\n\n- Tvoj pokrok v kurzoch a kvízoch\n- Tvoje preferencie (záujmy, ciele)\n- Tvoju sériu (počet dní používania v rade)\n- Tvoje obľúbené kurzy\n\nTieto lokálne údaje sa na naše servery neodosielajú, s výnimkou toho, čo je opísané v častiach „Údaje o používaní“ a „Ukladanie dát“.\n\nAk nám pošleš spätnú väzbu cez formulár v nastaveniach, tvoja správa a e-mailová adresa (ak ju vyplníš) sa odošlú službe Formspree, aby sme ti mohli odpovedať. Automaticky sa k nim pripoja technické informácie (verzia aplikácie, jazyk, zariadenie)."
     },
     {
       "id": "3",
-      "title": "3. Údaje o predplatnom",
-      "body": "Ak si kúpiš predplatné Premium, transakciu spracúva výhradne Google cez Play Store. Nemáme prístup k tvojim platobným údajom (číslo karty, fakturačná adresa). Dostávame iba potvrdenie o stave tvojho predplatného, a to cez RevenueCat, nášho partnera na správu predplatného."
+      "title": "3. Údaje o používaní",
+      "body": "Aby sme pochopili, ktoré kurzy fungujú, zlepšili odporúčania vo feede a v budúcnosti mohli odmeňovať tvorcov obsahu, Aplikácia zaznamenáva tvoje akcie v Sophii a odosiela ich na naše servery Supabase (hostované v Európskej únii): prezreté úvodné obrazovky, zobrazené, preskočené alebo otvorené karty, otvorené kurzy, prečítané časti a strávený čas, dokončené kurzy, zobrazené heslá slovníka, odpovede v kvízoch, kurzy, ktoré sa ti páčili, zobrazené ponuky predplatného a začaté či dokončené nákupy, ako aj stav tvojho predplatného (aktívne, skúšobné, platené, dátum skončenia) tak, ako ho RevenueCat Aplikácii hlási.\n\nKaždá udalosť je spojená s tvojím účtom, s identifikátorom inštalácie špecifickým pre Aplikáciu, s verziou aplikácie, zvoleným jazykom, platformou a krajinou tvojho zariadenia. Nezhromažďujeme žiadne platobné údaje, kontakty, presnú polohu ani reklamné identifikátory a tieto údaje nikdy neodovzdávame analytickým ani reklamným službám tretích strán.\n\nPodrobné udalosti uchovávame 90 dní a potom ich mažeme; dlhšie zostávajú iba súhrnné štatistiky za jednotlivé kurzy (počet zobrazení, prečítaní, kvízov…), bez väzby na tvoj účet. Vymazanie účtu okamžite odstráni všetky tvoje udalosti."
     },
     {
       "id": "4",
-      "title": "4. RevenueCat",
-      "body": "Na správu predplatného v aplikácii používame RevenueCat. RevenueCat môže zhromažďovať anonymný identifikátor zariadenia, aby overil stav tvojho predplatného. Nezdieľajú sa žiadne údaje, podľa ktorých by sa dala zistiť tvoja totožnosť. Viac informácií nájdeš v zásadách ochrany súkromia na webovej stránke RevenueCat."
+      "title": "4. Údaje o predplatnom",
+      "body": "Ak si kúpiš predplatné Premium, transakciu spracúva výhradne Google cez Play Store. Nemáme prístup k tvojim platobným údajom (číslo karty, fakturačná adresa). Dostávame iba potvrdenie o stave tvojho predplatného, a to cez RevenueCat, nášho partnera na správu predplatného."
     },
     {
       "id": "5",
-      "title": "5. Analytika Google Play / Android",
-      "body": "Aplikácia môže využívať aj anonymné štatistiky, ktoré poskytuje Google (analytika v Play Console). Tieto údaje sú súhrnné a nedá sa podľa nich zistiť tvoja totožnosť. Zdieľanie analytických údajov môžeš vypnúť v nastaveniach zariadenia s Androidom (Google > Spravovať účet Google > Údaje a ochrana súkromia)."
+      "title": "5. RevenueCat",
+      "body": "Na správu predplatného v aplikácii používame RevenueCat. RevenueCat môže zhromažďovať anonymný identifikátor zariadenia, aby overil stav tvojho predplatného. Nezdieľajú sa žiadne údaje, podľa ktorých by sa dala zistiť tvoja totožnosť. Viac informácií nájdeš v zásadách ochrany súkromia na webovej stránke RevenueCat."
     },
     {
       "id": "6",
-      "title": "6. Ukladanie dát",
-      "body": "Údaje o tvojom pokroku sa ukladajú lokálne v tvojom zariadení (lokálne úložisko aplikácie). Ak si vytvoríš účet (Google), bezpečne sa zálohujú aj na naše servery Supabase (umiestnené v Európskej únii), aby sa dali synchronizovať medzi tvojimi zariadeniami. Odinštalovaním aplikácie sa lokálne údaje vymažú; zmazaním účtu sa natrvalo vymažú aj súvisiace údaje na serveri."
+      "title": "6. Analytika Google Play / Android",
+      "body": "Aplikácia môže využívať aj anonymné štatistiky, ktoré poskytuje Google (analytika v Play Console). Tieto údaje sú súhrnné a nedá sa podľa nich zistiť tvoja totožnosť. Zdieľanie analytických údajov môžeš vypnúť v nastaveniach zariadenia s Androidom (Google > Spravovať účet Google > Údaje a ochrana súkromia)."
     },
     {
       "id": "7",
-      "title": "7. Zdieľanie údajov",
-      "body": "Osobné údaje nepredávame, neprenajímame ani nezdieľame s tretími stranami na komerčné ani reklamné účely. Údaje odovzdávame iba týmto subjektom: Google a RevenueCat (predplatné), Formspree (spätná väzba, ktorú používatelia dobrovoľne pošlú z nastavení)."
+      "title": "7. Ukladanie dát",
+      "body": "Údaje o tvojom pokroku sa ukladajú lokálne v tvojom zariadení (lokálne úložisko aplikácie). Ak si vytvoríš účet (Google), bezpečne sa zálohujú aj na naše servery Supabase (umiestnené v Európskej únii), aby sa dali synchronizovať medzi tvojimi zariadeniami. Odinštalovaním aplikácie sa lokálne údaje vymažú; zmazaním účtu sa natrvalo vymažú aj súvisiace údaje na serveri."
     },
     {
       "id": "8",
-      "title": "8. Práva používateľov",
-      "body": "V súlade so všeobecným nariadením o ochrane údajov (GDPR) a platnými právnymi predpismi máš tieto práva:\n\n- Právo na prístup k svojim údajom\n- Právo na opravu\n- Právo na vymazanie (vynulovanie v nastaveniach)\n- Právo na prenosnosť údajov\n- Právo namietať\n\nAk chceš tieto práva uplatniť, kontaktuj nás na adrese uvedenej na našej stránke v Play Store."
+      "title": "8. Zdieľanie údajov",
+      "body": "Osobné údaje nepredávame, neprenajímame ani nezdieľame s tretími stranami na komerčné ani reklamné účely. Údaje odovzdávame iba týmto subjektom: Google a RevenueCat (predplatné), Formspree (spätná väzba, ktorú používatelia dobrovoľne pošlú z nastavení)."
     },
     {
       "id": "9",
-      "title": "9. Ochrana maloletých",
-      "body": "Sophia je vzdelávacia aplikácia vhodná pre všetky vekové kategórie. Vedome nezhromažďujeme osobné údaje od detí mladších ako 16 rokov. Aplikácia neobsahuje žiadny nevhodný obsah."
+      "title": "9. Práva používateľov",
+      "body": "V súlade so všeobecným nariadením o ochrane údajov (GDPR) a platnými právnymi predpismi máš tieto práva:\n\n- Právo na prístup k svojim údajom\n- Právo na opravu\n- Právo na vymazanie (vynulovanie v nastaveniach)\n- Právo na prenosnosť údajov\n- Právo namietať\n\nAk chceš tieto práva uplatniť, kontaktuj nás na adrese uvedenej na našej stránke v Play Store."
     },
     {
       "id": "10",
-      "title": "10. Zmeny",
-      "body": "Vyhradzujeme si právo tieto zásady kedykoľvek upraviť. Akékoľvek zmeny budú oznámené prostredníctvom aktualizácie aplikácie.\n\nPosledná aktualizácia: september 2026"
+      "title": "10. Ochrana maloletých",
+      "body": "Sophia je vzdelávacia aplikácia vhodná pre všetky vekové kategórie. Vedome nezhromažďujeme osobné údaje od detí mladších ako 16 rokov. Aplikácia neobsahuje žiadny nevhodný obsah."
+    },
+    {
+      "id": "11",
+      "title": "11. Zmeny",
+      "body": "Vyhradzujeme si právo tieto zásady kedykoľvek upraviť. Akékoľvek zmeny budú oznámené prostredníctvom aktualizácie aplikácie.\n\nPosledná aktualizácia: november 2026"
     }
   ]
 }

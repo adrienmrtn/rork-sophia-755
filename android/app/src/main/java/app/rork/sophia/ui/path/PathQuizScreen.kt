@@ -76,6 +76,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import app.rork.sophia.data.ContentCatalog
+import app.rork.sophia.data.analytics.Analytics
 import app.rork.sophia.data.ProgressManager
 import app.rork.sophia.data.StringStore
 import app.rork.sophia.domain.AppLanguage
@@ -167,6 +168,7 @@ fun PathQuizScreen(
             return
         }
         entries = drawn.map { PathQuizEntry(it.course, QuizShuffler.shuffle(it.question)) }
+        Analytics.log("quiz_start", props = mapOf("context" to "path", "level" to level.collection.id, "total" to entries.size))
         index = 0
         correctCount = 0
         answeredCurrent = false
@@ -179,6 +181,10 @@ fun PathQuizScreen(
 
     fun finishQuiz() {
         val passed = LearningPathRules.isPassing(correctCount, total)
+        Analytics.log(
+            "quiz_complete",
+            props = mapOf("context" to "path", "level" to level.collection.id, "correct" to correctCount, "total" to total, "passed" to passed),
+        )
         didPass = passed
         newlyPassed = progressManager.recordPathQuizAttempt(level.collection.id, correctCount, total, passed)
         awardedXp = if (newlyPassed) progressManager.awardPathLevelPassedXpIfNeeded(level.collection.id) else 0
@@ -559,6 +565,18 @@ private fun PathQuestionPane(
         earned = QuizScoring.points(question, answer)
         hasAnswered = true
         val correct = earned == question.maxPoints
+        Analytics.log(
+            "quiz_answer",
+            courseId = entry.course.id,
+            props = mapOf(
+                "question_id" to question.id,
+                "context" to "path",
+                "correct" to correct,
+                "points" to earned,
+                "max_points" to question.maxPoints,
+                "option_index" to (answer as? QuizAnswer.SingleChoice)?.index,
+            ),
+        )
         view.pathHaptic(if (correct) PathHaptic.Confirm else PathHaptic.Reject)
         onAnswered(correct)
     }

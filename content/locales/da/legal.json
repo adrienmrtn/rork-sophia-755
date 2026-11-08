@@ -60,47 +60,52 @@
     {
       "id": "2",
       "title": "2. Indsamlede data",
-      "body": "Sophia er bygget efter princippet om dataminimering. Appen gemmer følgende på din enhed:\n\n- Din fremgang i kurser og quizzer\n- Dine præferencer (interesser, mål)\n- Din stime (dage i træk, hvor du har brugt appen)\n- Dine yndlingskurser\n\nDisse lokale data sendes ikke til vores servere.\n\nHvis du sender os feedback via formularen under Indstillinger, sendes din besked og, hvis du oplyser den, din e-mailadresse til Formspree, så vi kan svare dig. Tekniske oplysninger (appversion, sprog, enhed) vedhæftes automatisk."
+      "body": "Sophia er bygget efter princippet om dataminimering. Appen gemmer følgende på din enhed:\n\n- Din fremgang i kurser og quizzer\n- Dine præferencer (interesser, mål)\n- Din stime (dage i træk, hvor du har brugt appen)\n- Dine yndlingskurser\n\nDisse lokale data sendes ikke til vores servere, bortset fra det, der er beskrevet i afsnittene ”Brugsdata” og ”Datalagring”.\n\nHvis du sender os feedback via formularen under Indstillinger, sendes din besked og, hvis du oplyser den, din e-mailadresse til Formspree, så vi kan svare dig. Tekniske oplysninger (appversion, sprog, enhed) vedhæftes automatisk."
     },
     {
       "id": "3",
-      "title": "3. Abonnementsdata",
-      "body": "Hvis du tegner et Premium-abonnement, håndteres transaktionen udelukkende af Apple via App Store. Vi har ikke adgang til dine betalingsoplysninger (kortnummer, faktureringsadresse). Vi modtager kun en bekræftelse af din abonnementsstatus via RevenueCat, vores partner til administration af abonnementer."
+      "title": "3. Brugsdata",
+      "body": "For at forstå, hvilke kurser der fungerer, forbedre feedets anbefalinger og på sigt aflønne indholdsskaberne registrerer appen dine handlinger i Sophia og sender dem til vores Supabase-servere (hostet i Den Europæiske Union): gennemgåede onboarding-skærme, viste, sprungne eller åbnede kort, åbnede kurser, læste afsnit og brugt tid, gennemførte kurser, åbnede ordlisteopslag, quizsvar, kurser du har syntes godt om, viste abonnementstilbud og påbegyndte eller gennemførte køb samt din abonnementsstatus (aktivt, prøveperiode, betalt, udløbsdato), som RevenueCat rapporterer den til appen.\n\nHver hændelse knyttes til din konto, til et installations-id, der er specifikt for appen, til appversionen, det valgte sprog, platformen (iOS eller Android) og din enheds land. Der indsamles ingen betalingsoplysninger, kontaktoplysninger, præcis placering eller annonce-id, og disse data sendes aldrig til en analyse- eller annoncetjeneste fra tredjepart.\n\nDetaljerede hændelser gemmes i 90 dage og slettes derefter; herefter bevares kun samlet statistik pr. kursus (antal visninger, læsninger, quizzer …) uden tilknytning til din konto. Sletter du din konto, slettes alle dine hændelser med det samme."
     },
     {
       "id": "4",
-      "title": "4. RevenueCat",
-      "body": "Vi bruger RevenueCat til at administrere abonnementer i appen. RevenueCat kan indsamle et anonymt enheds-id for at bekræfte din abonnementsstatus. Der deles ingen personhenførbare oplysninger. Du kan læse mere i RevenueCats privatlivspolitik på deres websted."
+      "title": "4. Abonnementsdata",
+      "body": "Hvis du tegner et Premium-abonnement, håndteres transaktionen udelukkende af Apple via App Store. Vi har ikke adgang til dine betalingsoplysninger (kortnummer, faktureringsadresse). Vi modtager kun en bekræftelse af din abonnementsstatus via RevenueCat, vores partner til administration af abonnementer."
     },
     {
       "id": "5",
-      "title": "5. Data fra Apple Analytics",
-      "body": "Appen kan også gøre brug af anonyme statistikker fra Apple (App Analytics). Disse data er samlede og kan ikke bruges til at identificere dig personligt. Du kan slå deling af analysedata fra i indstillingerne på din iPhone (Indstillinger > Anonymitet og sikkerhed > Analyse og forbedringer)."
+      "title": "5. RevenueCat",
+      "body": "Vi bruger RevenueCat til at administrere abonnementer i appen. RevenueCat kan indsamle et anonymt enheds-id for at bekræfte din abonnementsstatus. Der deles ingen personhenførbare oplysninger. Du kan læse mere i RevenueCats privatlivspolitik på deres websted."
     },
     {
       "id": "6",
-      "title": "6. Datalagring",
-      "body": "Data om din fremgang gemmes lokalt på din enhed (UserDefaults). Hvis du opretter en konto (Apple eller Google), gemmes de også sikkert på vores Supabase-servere (hostet i EU), så de kan synkroniseres mellem dine enheder. Når du afinstallerer appen, slettes de lokale data, og når du sletter din konto, slettes de tilknyttede data på serveren permanent."
+      "title": "6. Data fra Apple Analytics",
+      "body": "Appen kan også gøre brug af anonyme statistikker fra Apple (App Analytics). Disse data er samlede og kan ikke bruges til at identificere dig personligt. Du kan slå deling af analysedata fra i indstillingerne på din iPhone (Indstillinger > Anonymitet og sikkerhed > Analyse og forbedringer)."
     },
     {
       "id": "7",
-      "title": "7. Datadeling",
-      "body": "Vi hverken sælger, udlejer eller deler personoplysninger med tredjeparter til kommercielle formål eller reklameformål. De data, der overføres, er begrænset til: Apple og RevenueCat (abonnementer), Formspree (feedback, som brugerne frivilligt sender fra Indstillinger)."
+      "title": "7. Datalagring",
+      "body": "Data om din fremgang gemmes lokalt på din enhed (UserDefaults). Hvis du opretter en konto (Apple eller Google), gemmes de også sikkert på vores Supabase-servere (hostet i EU), så de kan synkroniseres mellem dine enheder. Når du afinstallerer appen, slettes de lokale data, og når du sletter din konto, slettes de tilknyttede data på serveren permanent."
     },
     {
       "id": "8",
-      "title": "8. Brugerrettigheder",
-      "body": "I henhold til den generelle databeskyttelsesforordning (GDPR) og gældende lovgivning har du følgende rettigheder:\n\n- Ret til indsigt i dine data\n- Ret til berigtigelse\n- Ret til sletning (nulstilling under Indstillinger)\n- Ret til dataportabilitet\n- Ret til indsigelse\n\nHvis du vil gøre brug af disse rettigheder, kan du kontakte os via den adresse, der står på vores side i App Store."
+      "title": "8. Datadeling",
+      "body": "Vi hverken sælger, udlejer eller deler personoplysninger med tredjeparter til kommercielle formål eller reklameformål. De data, der overføres, er begrænset til: Apple og RevenueCat (abonnementer), Formspree (feedback, som brugerne frivilligt sender fra Indstillinger)."
     },
     {
       "id": "9",
-      "title": "9. Beskyttelse af mindreårige",
-      "body": "Sophia er en læringsapp for alle aldre. Vi indsamler ikke bevidst personoplysninger om mindreårige under 16 år. Appen indeholder intet upassende indhold."
+      "title": "9. Brugerrettigheder",
+      "body": "I henhold til den generelle databeskyttelsesforordning (GDPR) og gældende lovgivning har du følgende rettigheder:\n\n- Ret til indsigt i dine data\n- Ret til berigtigelse\n- Ret til sletning (nulstilling under Indstillinger)\n- Ret til dataportabilitet\n- Ret til indsigelse\n\nHvis du vil gøre brug af disse rettigheder, kan du kontakte os via den adresse, der står på vores side i App Store."
     },
     {
       "id": "10",
-      "title": "10. Ændringer",
-      "body": "Vi forbeholder os ret til at ændre denne politik til enhver tid. Eventuelle ændringer meddeles via en opdatering af appen.\n\nSidst opdateret: september 2026"
+      "title": "10. Beskyttelse af mindreårige",
+      "body": "Sophia er en læringsapp for alle aldre. Vi indsamler ikke bevidst personoplysninger om mindreårige under 16 år. Appen indeholder intet upassende indhold."
+    },
+    {
+      "id": "11",
+      "title": "11. Ændringer",
+      "body": "Vi forbeholder os ret til at ændre denne politik til enhver tid. Eventuelle ændringer meddeles via en opdatering af appen.\n\nSidst opdateret: november 2026"
     }
   ]
 }

@@ -289,6 +289,10 @@ struct PathQuizView: View {
         awardResult = nil
         resetResultAnimation()
         phase = .questions
+        AnalyticsService.shared.log(
+            .quizStart,
+            props: ["context": "path", "level": .string(level.collection.id), "total": .int(items.count)]
+        )
     }
 
     private var questionsView: some View {
@@ -322,7 +326,18 @@ struct PathQuizView: View {
                     subject: item.course.subject,
                     sourceTitle: item.course.title,
                     isLast: currentIndex == total - 1,
-                    onAnswered: { _, fullyCorrect in
+                    onAnswered: { points, fullyCorrect in
+                        AnalyticsService.shared.log(
+                            .quizAnswer,
+                            courseId: item.course.id,
+                            props: [
+                                "question_id": .string(item.question.id),
+                                "context": "path",
+                                "correct": .bool(fullyCorrect),
+                                "points": .int(points),
+                                "max_points": .int(item.question.maxPoints),
+                            ]
+                        )
                         handleAnswer(fullyCorrect: fullyCorrect)
                     },
                     onContinue: {
@@ -396,6 +411,16 @@ struct PathQuizView: View {
             awardResult = nil
         }
         phase = .result
+        AnalyticsService.shared.log(
+            .quizComplete,
+            props: [
+                "context": "path",
+                "level": .string(level.collection.id),
+                "correct": .int(correctCount),
+                "total": .int(total),
+                "passed": .bool(passed),
+            ]
+        )
     }
 
     // MARK: - Result

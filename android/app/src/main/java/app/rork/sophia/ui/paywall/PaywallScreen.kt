@@ -57,6 +57,7 @@ import androidx.compose.ui.unit.sp
 import app.rork.sophia.SophiaApplication
 import app.rork.sophia.billing.StoreViewModel
 import app.rork.sophia.data.DiscountBucket
+import app.rork.sophia.data.analytics.Analytics
 import app.rork.sophia.data.StringStore
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.formatted
@@ -1371,6 +1372,11 @@ private fun purchasePackage(
     }
     val activity = context.findActivity() ?: return
     onStart()
+    val productId = pkg.product.id
+    Analytics.log(
+        "purchase_started",
+        props = mapOf("product" to productId, "offering" to pkg.presentedOfferingContext.offeringIdentifier),
+    )
     Purchases.sharedInstance.purchase(
         PurchaseParams.Builder(activity, pkg).build(),
         object : PurchaseCallback {
@@ -1381,15 +1387,23 @@ private fun purchasePackage(
                 onDone()
                 storeViewModel.refresh()
                 if (storeViewModel.isEntitlementActive(customerInfo)) {
+                    Analytics.log("purchase_completed", props = mapOf("product" to productId))
                     onPurchased()
                 } else {
                     // Play took the order but has not granted it yet.
+                    Analytics.log("purchase_failed", props = mapOf("product" to productId, "reason" to "pending"))
                     onPending(StringStore.text(context, "purchase.pending", language))
                 }
             }
 
             override fun onError(error: PurchasesError, userCancelled: Boolean) {
                 onDone()
+                val reason = when {
+                    userCancelled -> "cancelled"
+                    error.code == PurchasesErrorCode.PaymentPendingError -> "pending"
+                    else -> "error"
+                }
+                Analytics.log("purchase_failed", props = mapOf("product" to productId, "reason" to reason))
                 if (userCancelled) return
                 if (error.code == PurchasesErrorCode.PaymentPendingError) {
                     onPending(StringStore.text(context, "purchase.pending", language))

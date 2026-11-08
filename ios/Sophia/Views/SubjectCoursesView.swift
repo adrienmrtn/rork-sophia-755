@@ -216,7 +216,7 @@ struct SubjectCoursesView: View {
 
             Button {
                 hapticTrigger += 1
-                selectedCourse = course
+                AnalyticsService.shared.pendingCourseOpenSource = .subject; selectedCourse = course
             } label: {
                 HStack(spacing: 12) {
                     NextCourseThumb(course: course)
@@ -271,7 +271,7 @@ struct SubjectCoursesView: View {
                         status: progressManager.courseStatus(for: course.id),
                         onTap: {
                             hapticTrigger += 1
-                            selectedCourse = course
+                            AnalyticsService.shared.pendingCourseOpenSource = .subject; selectedCourse = course
                         },
                         progressManager: progressManager
                     )

@@ -60,47 +60,52 @@
     {
       "id": "2",
       "title": "2. Dados coletados",
-      "body": "A Sophia foi desenvolvida com base no princípio da minimização de dados. O Aplicativo armazena no seu dispositivo:\n\n- Seu progresso nos cursos e quizzes\n- Suas preferências (interesses, objetivos)\n- Sua sequência (dias seguidos de uso)\n- Seus cursos favoritos\n\nEsses dados locais não são transmitidos aos nossos servidores.\n\nSe você nos enviar um feedback pelo formulário das configurações, sua mensagem e, se você o informar, seu endereço de e-mail são enviados ao Formspree para que possamos responder a você. Informações técnicas (versão do app, idioma, dispositivo) são anexadas automaticamente."
+      "body": "A Sophia foi desenvolvida com base no princípio da minimização de dados. O Aplicativo armazena no seu dispositivo:\n\n- Seu progresso nos cursos e quizzes\n- Suas preferências (interesses, objetivos)\n- Sua sequência (dias seguidos de uso)\n- Seus cursos favoritos\n\nEsses dados locais não são transmitidos aos nossos servidores, exceto o que está descrito nas seções “Dados de uso” e “Armazenamento de dados”.\n\nSe você nos enviar um feedback pelo formulário das configurações, sua mensagem e, se você o informar, seu endereço de e-mail são enviados ao Formspree para que possamos responder a você. Informações técnicas (versão do app, idioma, dispositivo) são anexadas automaticamente."
     },
     {
       "id": "3",
-      "title": "3. Dados de assinatura",
-      "body": "Se você fizer uma assinatura Premium, a transação é gerenciada integralmente pelo Google por meio da Play Store. Não temos acesso às suas informações de pagamento (número do cartão, endereço de cobrança). Recebemos apenas a confirmação do status da sua assinatura por meio do RevenueCat, nosso parceiro de gestão de assinaturas."
+      "title": "3. Dados de uso",
+      "body": "Para entender quais cursos funcionam, melhorar as recomendações do feed e, futuramente, remunerar os criadores de conteúdo, o Aplicativo registra suas ações no Sophia e as envia aos nossos servidores Supabase (hospedados na União Europeia): telas de onboarding percorridas, cards exibidos, pulados ou abertos, cursos abertos, seções lidas e tempo gasto, cursos concluídos, verbetes do glossário consultados, respostas aos quizzes, cursos curtidos, ofertas de assinatura exibidas e compras iniciadas ou concluídas, além do seu status de assinatura (ativa, teste, paga, data de vencimento) conforme o RevenueCat o informa ao Aplicativo.\n\nCada evento é associado à sua conta, a um identificador de instalação próprio do Aplicativo, à versão do app, ao idioma escolhido, à plataforma e ao país do seu dispositivo. Nenhum dado de pagamento, contato, localização precisa ou identificador de publicidade é coletado, e esses dados nunca são transmitidos a serviços de análise ou publicidade de terceiros.\n\nOs eventos detalhados são mantidos por 90 dias e depois excluídos; além desse prazo, só são mantidas estatísticas agregadas por curso (número de visualizações, leituras, quizzes…), sem vínculo com a sua conta. A exclusão da sua conta apaga imediatamente todos os seus eventos."
     },
     {
       "id": "4",
-      "title": "4. RevenueCat",
-      "body": "Usamos o RevenueCat para gerenciar as assinaturas feitas no app. O RevenueCat pode coletar um identificador anônimo do dispositivo para verificar o status da sua assinatura. Nenhum dado pessoal identificável é compartilhado. Para mais informações, consulte a política de privacidade do RevenueCat no site da empresa."
+      "title": "4. Dados de assinatura",
+      "body": "Se você fizer uma assinatura Premium, a transação é gerenciada integralmente pelo Google por meio da Play Store. Não temos acesso às suas informações de pagamento (número do cartão, endereço de cobrança). Recebemos apenas a confirmação do status da sua assinatura por meio do RevenueCat, nosso parceiro de gestão de assinaturas."
     },
     {
       "id": "5",
-      "title": "5. Dados analíticos do Google Play / Android",
-      "body": "O Aplicativo também pode se beneficiar de estatísticas anônimas fornecidas pelo Google (Play Console analytics). Esses dados são agregados e não permitem identificar você pessoalmente. Você pode desativar o compartilhamento de dados analíticos nas configurações do seu dispositivo Android (Google > Gerenciar sua Conta do Google > Dados e privacidade)."
+      "title": "5. RevenueCat",
+      "body": "Usamos o RevenueCat para gerenciar as assinaturas feitas no app. O RevenueCat pode coletar um identificador anônimo do dispositivo para verificar o status da sua assinatura. Nenhum dado pessoal identificável é compartilhado. Para mais informações, consulte a política de privacidade do RevenueCat no site da empresa."
     },
     {
       "id": "6",
-      "title": "6. Armazenamento de dados",
-      "body": "Seus dados de progresso são armazenados localmente no seu dispositivo (armazenamento local do app). Se você criar uma conta (Google), eles também são salvos com segurança nos nossos servidores Supabase (hospedados na União Europeia), para permitir a sincronização entre seus dispositivos. Desinstalar o Aplicativo exclui os dados locais; excluir sua conta apaga definitivamente os dados associados no servidor."
+      "title": "6. Dados analíticos do Google Play / Android",
+      "body": "O Aplicativo também pode se beneficiar de estatísticas anônimas fornecidas pelo Google (Play Console analytics). Esses dados são agregados e não permitem identificar você pessoalmente. Você pode desativar o compartilhamento de dados analíticos nas configurações do seu dispositivo Android (Google > Gerenciar sua Conta do Google > Dados e privacidade)."
     },
     {
       "id": "7",
-      "title": "7. Compartilhamento de dados",
-      "body": "Não vendemos, alugamos nem compartilhamos dados pessoais com terceiros para fins comerciais ou publicitários. Os dados transmitidos se limitam a: Google e RevenueCat (assinaturas), Formspree (feedback enviado voluntariamente pelos usuários nas configurações)."
+      "title": "7. Armazenamento de dados",
+      "body": "Seus dados de progresso são armazenados localmente no seu dispositivo (armazenamento local do app). Se você criar uma conta (Google), eles também são salvos com segurança nos nossos servidores Supabase (hospedados na União Europeia), para permitir a sincronização entre seus dispositivos. Desinstalar o Aplicativo exclui os dados locais; excluir sua conta apaga definitivamente os dados associados no servidor."
     },
     {
       "id": "8",
-      "title": "8. Direitos dos usuários",
-      "body": "Em conformidade com o Regulamento Geral sobre a Proteção de Dados (RGPD) e as leis aplicáveis, você tem os seguintes direitos:\n\n- Direito de acesso aos seus dados\n- Direito de retificação\n- Direito à exclusão (redefinição nas configurações)\n- Direito à portabilidade\n- Direito de oposição\n\nPara exercer esses direitos, entre em contato conosco pelo endereço indicado na nossa página da Play Store."
+      "title": "8. Compartilhamento de dados",
+      "body": "Não vendemos, alugamos nem compartilhamos dados pessoais com terceiros para fins comerciais ou publicitários. Os dados transmitidos se limitam a: Google e RevenueCat (assinaturas), Formspree (feedback enviado voluntariamente pelos usuários nas configurações)."
     },
     {
       "id": "9",
-      "title": "9. Proteção de menores",
-      "body": "A Sophia é um aplicativo educativo acessível a pessoas de todas as idades. Não coletamos conscientemente nenhum dado pessoal de menores de 16 anos. O Aplicativo não contém nenhum conteúdo impróprio."
+      "title": "9. Direitos dos usuários",
+      "body": "Em conformidade com o Regulamento Geral sobre a Proteção de Dados (RGPD) e as leis aplicáveis, você tem os seguintes direitos:\n\n- Direito de acesso aos seus dados\n- Direito de retificação\n- Direito à exclusão (redefinição nas configurações)\n- Direito à portabilidade\n- Direito de oposição\n\nPara exercer esses direitos, entre em contato conosco pelo endereço indicado na nossa página da Play Store."
     },
     {
       "id": "10",
-      "title": "10. Alterações",
-      "body": "Nós nos reservamos o direito de alterar esta política a qualquer momento. Toda alteração será comunicada por meio de uma atualização do Aplicativo.\n\nÚltima atualização: setembro de 2026"
+      "title": "10. Proteção de menores",
+      "body": "A Sophia é um aplicativo educativo acessível a pessoas de todas as idades. Não coletamos conscientemente nenhum dado pessoal de menores de 16 anos. O Aplicativo não contém nenhum conteúdo impróprio."
+    },
+    {
+      "id": "11",
+      "title": "11. Alterações",
+      "body": "Nós nos reservamos o direito de alterar esta política a qualquer momento. Toda alteração será comunicada por meio de uma atualização do Aplicativo.\n\nÚltima atualização: novembro de 2026"
     }
   ]
 }

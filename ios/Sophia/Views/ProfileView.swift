@@ -573,7 +573,7 @@ struct ProfileView: View {
                             total: item.totalPoints,
                             onRetry: {
                                 hapticTrigger += 1
-                                selectedCourse = item.course
+                                AnalyticsService.shared.pendingCourseOpenSource = .profile; selectedCourse = item.course
                             }
                         )
                         if idx < min(2, progressManager.recentQuizzes.count - 1) {
@@ -971,7 +971,7 @@ struct AllQuizzesView: View {
                                     total: item.totalPoints,
                                     onRetry: {
                                         hapticTrigger += 1
-                                        selectedCourse = item.course
+                                        AnalyticsService.shared.pendingCourseOpenSource = .profile; selectedCourse = item.course
                                     }
                                 )
                                 if idx < progressManager.recentQuizzes.count - 1 {

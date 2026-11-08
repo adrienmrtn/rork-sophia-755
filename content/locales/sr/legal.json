@@ -60,47 +60,52 @@
     {
       "id": "2",
       "title": "2. Prikupljeni podaci",
-      "body": "Sophia je osmišljena po principu minimizacije podataka. Aplikacija na tvom uređaju čuva:\n\n- Tvoj napredak u kursevima i kvizovima\n- Tvoje preferencije (interesovanja, ciljevi)\n- Tvoj niz (dani korišćenja zaredom)\n- Tvoje omiljene kurseve\n\nOvi lokalni podaci se ne šalju na naše servere.\n\nAko nam pošalješ povratnu informaciju preko obrasca u podešavanjima, tvoja poruka i, ako je uneseš, tvoja adresa e-pošte prosleđuju se servisu Formspree kako bismo mogli da ti odgovorimo. Tehnički podaci (verzija aplikacije, jezik, uređaj) prilažu se automatski."
+      "body": "Sophia je osmišljena po principu minimizacije podataka. Aplikacija na tvom uređaju čuva:\n\n- Tvoj napredak u kursevima i kvizovima\n- Tvoje preferencije (interesovanja, ciljevi)\n- Tvoj niz (dani korišćenja zaredom)\n- Tvoje omiljene kurseve\n\nOvi lokalni podaci se ne šalju na naše servere, osim onoga što je opisano u odeljcima „Podaci o korišćenju“ i „Skladištenje podataka“.\n\nAko nam pošalješ povratnu informaciju preko obrasca u podešavanjima, tvoja poruka i, ako je uneseš, tvoja adresa e-pošte prosleđuju se servisu Formspree kako bismo mogli da ti odgovorimo. Tehnički podaci (verzija aplikacije, jezik, uređaj) prilažu se automatski."
     },
     {
       "id": "3",
-      "title": "3. Podaci o pretplati",
-      "body": "Ako se pretplatiš na Premium, transakcijom u potpunosti upravlja Apple preko App Store-a. Nemamo pristup tvojim podacima o plaćanju (broj kartice, adresa za naplatu). Od RevenueCat-a, našeg partnera za upravljanje pretplatama, dobijamo samo potvrdu statusa tvoje pretplate."
+      "title": "3. Podaci o korišćenju",
+      "body": "Da bismo razumeli koji kursevi funkcionišu, poboljšali preporuke u fidu i vremenom nagrađivali autore sadržaja, Aplikacija beleži tvoje radnje u Sophiji i šalje ih na naše Supabase servere (smeštene u Evropskoj uniji): pregledane uvodne ekrane, prikazane, preskočene ili otvorene kartice, otvorene kurseve, pročitane odeljke i utrošeno vreme, završene kurseve, otvorene odrednice rečnika, odgovore na kvizove, kurseve koji su ti se dopali, prikazane ponude pretplate i započete ili dovršene kupovine, kao i status tvoje pretplate (aktivna, probni period, plaćena, datum isteka) onako kako ga RevenueCat javlja Aplikaciji.\n\nSvaki događaj je povezan sa tvojim nalogom, identifikatorom instalacije koji pripada samo Aplikaciji, verzijom aplikacije, izabranim jezikom, platformom (iOS ili Android) i državom tvog uređaja. Ne prikupljaju se podaci o plaćanju, kontakti, precizna lokacija ni oglašivački identifikatori, a ti podaci se nikada ne prosleđuju analitičkim ili oglašivačkim servisima trećih strana.\n\nDetaljni događaji se čuvaju 90 dana, a zatim brišu; nakon toga ostaju samo zbirne statistike po kursu (broj prikaza, čitanja, kvizova…), koje nisu povezane sa tvojim nalogom. Brisanjem naloga odmah se brišu svi tvoji događaji."
     },
     {
       "id": "4",
-      "title": "4. RevenueCat",
-      "body": "Za upravljanje pretplatama u aplikaciji koristimo RevenueCat. RevenueCat može da prikuplja anonimni identifikator uređaja da bi proverio status tvoje pretplate. Ne deli se nijedan lični podatak na osnovu kojeg bi mogao da se utvrdi tvoj identitet. Više informacija potraži u politici privatnosti RevenueCat-a na njihovom sajtu."
+      "title": "4. Podaci o pretplati",
+      "body": "Ako se pretplatiš na Premium, transakcijom u potpunosti upravlja Apple preko App Store-a. Nemamo pristup tvojim podacima o plaćanju (broj kartice, adresa za naplatu). Od RevenueCat-a, našeg partnera za upravljanje pretplatama, dobijamo samo potvrdu statusa tvoje pretplate."
     },
     {
       "id": "5",
-      "title": "5. Podaci Apple Analytics",
-      "body": "Aplikacija može da koristi i anonimne statistike koje pruža Apple (App Analytics). Ovi podaci su zbirni i na osnovu njih ne može da se utvrdi tvoj identitet. Deljenje analitike možeš da isključiš u podešavanjima svog iPhone-a (Podešavanja > Privatnost > Analitika i poboljšanja)."
+      "title": "5. RevenueCat",
+      "body": "Za upravljanje pretplatama u aplikaciji koristimo RevenueCat. RevenueCat može da prikuplja anonimni identifikator uređaja da bi proverio status tvoje pretplate. Ne deli se nijedan lični podatak na osnovu kojeg bi mogao da se utvrdi tvoj identitet. Više informacija potraži u politici privatnosti RevenueCat-a na njihovom sajtu."
     },
     {
       "id": "6",
-      "title": "6. Skladištenje podataka",
-      "body": "Podaci o tvom napretku čuvaju se lokalno na tvom uređaju (UserDefaults). Ako napraviš nalog (Apple ili Google), ti podaci se bezbedno čuvaju i na našim Supabase serverima (smeštenim u Evropskoj uniji), kako bi mogli da se sinhronizuju na svim tvojim uređajima. Deinstaliranjem Aplikacije brišu se lokalni podaci; brisanjem naloga trajno se uklanjaju povezani podaci na serveru."
+      "title": "6. Podaci Apple Analytics",
+      "body": "Aplikacija može da koristi i anonimne statistike koje pruža Apple (App Analytics). Ovi podaci su zbirni i na osnovu njih ne može da se utvrdi tvoj identitet. Deljenje analitike možeš da isključiš u podešavanjima svog iPhone-a (Podešavanja > Privatnost > Analitika i poboljšanja)."
     },
     {
       "id": "7",
-      "title": "7. Deljenje podataka",
-      "body": "Ne prodajemo, ne iznajmljujemo i ne delimo lične podatke sa trećim licima u komercijalne ili reklamne svrhe. Podaci se prosleđuju samo sledećim stranama: Apple i RevenueCat (pretplate), Formspree (povratne informacije koje korisnici dobrovoljno šalju iz podešavanja)."
+      "title": "7. Skladištenje podataka",
+      "body": "Podaci o tvom napretku čuvaju se lokalno na tvom uređaju (UserDefaults). Ako napraviš nalog (Apple ili Google), ti podaci se bezbedno čuvaju i na našim Supabase serverima (smeštenim u Evropskoj uniji), kako bi mogli da se sinhronizuju na svim tvojim uređajima. Deinstaliranjem Aplikacije brišu se lokalni podaci; brisanjem naloga trajno se uklanjaju povezani podaci na serveru."
     },
     {
       "id": "8",
-      "title": "8. Prava korisnika",
-      "body": "U skladu sa Opštom uredbom o zaštiti podataka (GDPR) i važećim propisima, imaš sledeća prava:\n\n- Pravo na pristup svojim podacima\n- Pravo na ispravku\n- Pravo na brisanje (resetovanje u podešavanjima)\n- Pravo na prenosivost podataka\n- Pravo na prigovor\n\nOva prava možeš da ostvariš tako što ćeš nam se obratiti na adresu navedenu na našoj stranici u App Store-u."
+      "title": "8. Deljenje podataka",
+      "body": "Ne prodajemo, ne iznajmljujemo i ne delimo lične podatke sa trećim licima u komercijalne ili reklamne svrhe. Podaci se prosleđuju samo sledećim stranama: Apple i RevenueCat (pretplate), Formspree (povratne informacije koje korisnici dobrovoljno šalju iz podešavanja)."
     },
     {
       "id": "9",
-      "title": "9. Zaštita maloletnika",
-      "body": "Sophia je obrazovna aplikacija pogodna za sve uzraste. Ne prikupljamo svesno lične podatke dece mlađe od 16 godina. Aplikacija ne sadrži neprikladan sadržaj."
+      "title": "9. Prava korisnika",
+      "body": "U skladu sa Opštom uredbom o zaštiti podataka (GDPR) i važećim propisima, imaš sledeća prava:\n\n- Pravo na pristup svojim podacima\n- Pravo na ispravku\n- Pravo na brisanje (resetovanje u podešavanjima)\n- Pravo na prenosivost podataka\n- Pravo na prigovor\n\nOva prava možeš da ostvariš tako što ćeš nam se obratiti na adresu navedenu na našoj stranici u App Store-u."
     },
     {
       "id": "10",
-      "title": "10. Promene",
-      "body": "Zadržavamo pravo da u bilo kom trenutku izmenimo ovu politiku. Sve izmene biće objavljene kroz ažuriranje Aplikacije.\n\nPoslednje ažuriranje: septembar 2026."
+      "title": "10. Zaštita maloletnika",
+      "body": "Sophia je obrazovna aplikacija pogodna za sve uzraste. Ne prikupljamo svesno lične podatke dece mlađe od 16 godina. Aplikacija ne sadrži neprikladan sadržaj."
+    },
+    {
+      "id": "11",
+      "title": "11. Promene",
+      "body": "Zadržavamo pravo da u bilo kom trenutku izmenimo ovu politiku. Sve izmene biće objavljene kroz ažuriranje Aplikacije.\n\nPoslednje ažuriranje: novembar 2026."
     }
   ]
 }

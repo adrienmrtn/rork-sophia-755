@@ -60,47 +60,52 @@
     {
       "id": "2",
       "title": "2. Vāktie dati",
-      "body": "Sophia ir izstrādāta pēc datu minimizēšanas principa. Lietotne ierīcē glabā:\n\n- Progresu kursos un viktorīnās\n- Preferences (intereses, mērķi)\n- Sēriju (secīgas lietošanas dienas)\n- Izlases kursus\n\nŠie lokālie dati netiek sūtīti uz mūsu serveriem.\n\nJa lietotājs nosūta atsauksmi, izmantojot iestatījumu veidlapu, ziņojums un, ja lietotājs to norāda, e-pasta adrese tiek nosūtīti uzņēmumam Formspree, lai mēs varētu atbildēt. Atsauksmei automātiski tiek pievienota tehniska informācija (lietotnes versija, valoda, ierīce)."
+      "body": "Sophia ir izstrādāta pēc datu minimizēšanas principa. Lietotne ierīcē glabā:\n\n- Progresu kursos un viktorīnās\n- Preferences (intereses, mērķi)\n- Sēriju (secīgas lietošanas dienas)\n- Izlases kursus\n\nŠie lokālie dati netiek sūtīti uz mūsu serveriem, izņemot to, kas aprakstīts sadaļās “Lietošanas dati” un “Datu glabāšana”.\n\nJa lietotājs nosūta atsauksmi, izmantojot iestatījumu veidlapu, ziņojums un, ja lietotājs to norāda, e-pasta adrese tiek nosūtīti uzņēmumam Formspree, lai mēs varētu atbildēt. Atsauksmei automātiski tiek pievienota tehniska informācija (lietotnes versija, valoda, ierīce)."
     },
     {
       "id": "3",
-      "title": "3. Abonementa dati",
-      "body": "Ja lietotājs noformē Premium abonementu, darījumu pilnībā apstrādā Google, izmantojot Play Store. Mums nav piekļuves maksājumu informācijai (kartes numuram, norēķinu adresei). Mēs saņemam tikai apstiprinājumu par abonementa statusu, izmantojot RevenueCat, mūsu abonementu pārvaldības partneri."
+      "title": "3. Lietošanas dati",
+      "body": "Lai saprastu, kuri kursi darbojas, uzlabotu plūsmas ieteikumus un ar laiku atalgotu satura veidotājus, Lietotne reģistrē tavas darbības Sophia un nosūta tās uz mūsu Supabase serveriem (kas atrodas Eiropas Savienībā): izietos ievada ekrānus, parādītās, izlaistās vai atvērtās kartītes, atvērtos kursus, izlasītās sadaļas un tām veltīto laiku, pabeigtos kursus, aplūkotos vārdnīcas šķirkļus, viktorīnu atbildes, kursus, kas tev patikuši, parādītos abonementa piedāvājumus un uzsāktos vai pabeigtos pirkumus, kā arī tavu abonementa statusu (aktīvs, izmēģinājums, maksas, beigu datums), kādu RevenueCat to paziņo Lietotnei.\n\nKatrs notikums tiek saistīts ar tavu kontu, Lietotnei raksturīgu instalācijas identifikatoru, lietotnes versiju, izvēlēto valodu, platformu un tavas ierīces valsti. Netiek vākti maksājumu dati, kontaktinformācija, precīza atrašanās vieta vai reklāmas identifikatori, un šie dati nekad netiek nodoti trešo pušu analītikas vai reklāmas pakalpojumiem.\n\nDetalizētie notikumi tiek glabāti 90 dienas un pēc tam dzēsti; pēc tam tiek saglabāta tikai pa kursiem apkopota statistika (skatījumu, lasījumu, viktorīnu skaits…), kas nav saistīta ar tavu kontu. Dzēšot kontu, visi tavi notikumi tiek nekavējoties dzēsti."
     },
     {
       "id": "4",
-      "title": "4. RevenueCat",
-      "body": "Mēs izmantojam RevenueCat lietotnes iekšējo abonementu pārvaldībai. RevenueCat var vākt anonīmu ierīces identifikatoru, lai pārbaudītu abonementa statusu. Netiek kopīgoti nekādi personu identificējoši dati. Plašāka informācija ir RevenueCat privātuma politikā to tīmekļa vietnē."
+      "title": "4. Abonementa dati",
+      "body": "Ja lietotājs noformē Premium abonementu, darījumu pilnībā apstrādā Google, izmantojot Play Store. Mums nav piekļuves maksājumu informācijai (kartes numuram, norēķinu adresei). Mēs saņemam tikai apstiprinājumu par abonementa statusu, izmantojot RevenueCat, mūsu abonementu pārvaldības partneri."
     },
     {
       "id": "5",
-      "title": "5. Google Play / Android analītikas dati",
-      "body": "Lietotne var izmantot arī Google sniegto anonīmo statistiku (Play Console analītika). Šie dati ir apkopoti un neļauj identificēt lietotāju. Analītikas datu kopīgošanu var izslēgt Android ierīces iestatījumos (Google > Pārvaldīt Google kontu > Dati un privātums)."
+      "title": "5. RevenueCat",
+      "body": "Mēs izmantojam RevenueCat lietotnes iekšējo abonementu pārvaldībai. RevenueCat var vākt anonīmu ierīces identifikatoru, lai pārbaudītu abonementa statusu. Netiek kopīgoti nekādi personu identificējoši dati. Plašāka informācija ir RevenueCat privātuma politikā to tīmekļa vietnē."
     },
     {
       "id": "6",
-      "title": "6. Datu glabāšana",
-      "body": "Progresa dati tiek glabāti lokāli ierīcē (lokālajā lietotnes krātuvē). Ja lietotājs izveido kontu (Google), tie tiek droši saglabāti arī mūsu Supabase serveros (kas atrodas Eiropas Savienībā), lai varētu sinhronizēt datus starp ierīcēm. Lietotnes atinstalēšana izdzēš lokālos datus; konta dzēšana neatgriezeniski izdzēš ar to saistītos datus serverī."
+      "title": "6. Google Play / Android analītikas dati",
+      "body": "Lietotne var izmantot arī Google sniegto anonīmo statistiku (Play Console analītika). Šie dati ir apkopoti un neļauj identificēt lietotāju. Analītikas datu kopīgošanu var izslēgt Android ierīces iestatījumos (Google > Pārvaldīt Google kontu > Dati un privātums)."
     },
     {
       "id": "7",
-      "title": "7. Datu kopīgošana",
-      "body": "Mēs nepārdodam, neiznomājam un nekopīgojam personas datus ar trešajām personām komerciāliem vai reklāmas nolūkiem. Nosūtītie dati ir ierobežoti ar: Google un RevenueCat (abonementi), Formspree (lietotāju atsauksmes, kas iestatījumos tiek sūtītas brīvprātīgi)."
+      "title": "7. Datu glabāšana",
+      "body": "Progresa dati tiek glabāti lokāli ierīcē (lokālajā lietotnes krātuvē). Ja lietotājs izveido kontu (Google), tie tiek droši saglabāti arī mūsu Supabase serveros (kas atrodas Eiropas Savienībā), lai varētu sinhronizēt datus starp ierīcēm. Lietotnes atinstalēšana izdzēš lokālos datus; konta dzēšana neatgriezeniski izdzēš ar to saistītos datus serverī."
     },
     {
       "id": "8",
-      "title": "8. Lietotāju tiesības",
-      "body": "Saskaņā ar Vispārīgo datu aizsardzības regulu (VDAR) un piemērojamajiem tiesību aktiem lietotājam ir šādas tiesības:\n\n- Piekļuves tiesības saviem datiem\n- Tiesības labot datus\n- Tiesības uz dzēšanu (atiestatīšana iestatījumos)\n- Tiesības uz datu pārnesamību\n- Tiesības iebilst\n\nLai šīs tiesības izmantotu, jāsazinās ar mums, izmantojot adresi, kas norādīta mūsu Play Store lapā."
+      "title": "8. Datu kopīgošana",
+      "body": "Mēs nepārdodam, neiznomājam un nekopīgojam personas datus ar trešajām personām komerciāliem vai reklāmas nolūkiem. Nosūtītie dati ir ierobežoti ar: Google un RevenueCat (abonementi), Formspree (lietotāju atsauksmes, kas iestatījumos tiek sūtītas brīvprātīgi)."
     },
     {
       "id": "9",
-      "title": "9. Nepilngadīgo aizsardzība",
-      "body": "Sophia ir izglītojoša lietotne, kas pieejama jebkura vecuma cilvēkiem. Mēs apzināti nevācam nekādus personas datus no nepilngadīgajiem, kas jaunāki par 16 gadiem. Lietotnē nav nepiemērota satura."
+      "title": "9. Lietotāju tiesības",
+      "body": "Saskaņā ar Vispārīgo datu aizsardzības regulu (VDAR) un piemērojamajiem tiesību aktiem lietotājam ir šādas tiesības:\n\n- Piekļuves tiesības saviem datiem\n- Tiesības labot datus\n- Tiesības uz dzēšanu (atiestatīšana iestatījumos)\n- Tiesības uz datu pārnesamību\n- Tiesības iebilst\n\nLai šīs tiesības izmantotu, jāsazinās ar mums, izmantojot adresi, kas norādīta mūsu Play Store lapā."
     },
     {
       "id": "10",
-      "title": "10. Grozījumi",
-      "body": "Mēs paturam tiesības jebkurā laikā grozīt šo politiku. Par jebkuru grozījumu paziņosim, atjauninot Lietotni.\n\nPēdējo reizi atjaunināts: 2026. gada septembris"
+      "title": "10. Nepilngadīgo aizsardzība",
+      "body": "Sophia ir izglītojoša lietotne, kas pieejama jebkura vecuma cilvēkiem. Mēs apzināti nevācam nekādus personas datus no nepilngadīgajiem, kas jaunāki par 16 gadiem. Lietotnē nav nepiemērota satura."
+    },
+    {
+      "id": "11",
+      "title": "11. Grozījumi",
+      "body": "Mēs paturam tiesības jebkurā laikā grozīt šo politiku. Par jebkuru grozījumu paziņosim, atjauninot Lietotni.\n\nPēdējo reizi atjaunināts: 2026. gada novembris"
     }
   ]
 }

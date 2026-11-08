@@ -83,7 +83,11 @@ struct SophiaApp: App {
                 }
                 // Callbacks Meta (fb…) + deep links Sophia (`sophia://…`, widget compris).
                 MetaAdsService.handleOpenURL(url)
-                deepLinkRouter.open(url)
+                if deepLinkRouter.open(url), AnalyticsService.shared.pendingCourseOpenSource == nil {
+                    // Widget tap or external link; a notification tap is tagged by the
+                    // delegate before it reaches the router.
+                    AnalyticsService.shared.pendingCourseOpenSource = .widget
+                }
             }
         }
     }

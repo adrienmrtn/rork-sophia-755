@@ -17,6 +17,7 @@ import androidx.compose.runtime.setValue
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import app.rork.sophia.billing.StoreViewModel
+import app.rork.sophia.data.analytics.Analytics
 import app.rork.sophia.ui.SophiaRoot
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.SophiaAppearance
@@ -72,9 +73,15 @@ class MainActivity : ComponentActivity() {
     private fun observeForeground() {
         lifecycle.addObserver(
             LifecycleEventObserver { _, event ->
-                if (event != Lifecycle.Event.ON_START) return@LifecycleEventObserver
-                val app = application as SophiaApplication
-                app.progressManager.refreshStreak()
+                when (event) {
+                    Lifecycle.Event.ON_START -> {
+                        val app = application as SophiaApplication
+                        app.progressManager.refreshStreak()
+                        Analytics.appDidStart()
+                    }
+                    Lifecycle.Event.ON_STOP -> Analytics.appDidStop()
+                    else -> Unit
+                }
             },
         )
     }
@@ -93,8 +100,15 @@ class MainActivity : ComponentActivity() {
     private fun courseIdFromIntent(intent: Intent?): String? {
         val data = intent?.data ?: return null
         if (data.scheme == "sophia" && data.host == "course") {
+            // D'où vient l'ouverture : la notification le dit (`source`), sinon c'est un lien.
+            Analytics.pendingCourseOpenSource = intent.getStringExtra(EXTRA_SOURCE) ?: "link"
             return data.pathSegments.firstOrNull()
         }
         return null
+    }
+
+    companion object {
+        /** Extra posé sur l'intent `sophia://course/<id>` pour dire d'où il vient (`notification`). */
+        const val EXTRA_SOURCE = "source"
     }
 }

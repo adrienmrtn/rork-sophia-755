@@ -80,6 +80,7 @@ import app.rork.sophia.data.DeckSkipStore
 import app.rork.sophia.data.DeviceCapabilities
 import app.rork.sophia.data.StringStore
 import app.rork.sophia.data.TutorialFlags
+import app.rork.sophia.data.analytics.Analytics
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.CourseAffinity
 import app.rork.sophia.domain.CourseSummary
@@ -196,6 +197,14 @@ fun HomeTikTokScreen(
         val courseId = cards.getOrNull(index)?.id ?: return@LaunchedEffect
         delay(400)
         CourseImagePrefetch.warmCourse(context.applicationContext, language, courseId)
+    }
+
+    // Une carte compte comme vue après une seconde à l'écran : un défilement rapide ne
+    // produit pas d'impression (même règle qu'iOS, docs/events.md).
+    LaunchedEffect(cards, index) {
+        val courseId = cards.getOrNull(index)?.id ?: return@LaunchedEffect
+        delay(1000)
+        Analytics.log("card_impression", courseId = courseId, screen = "home", position = index, algoVersion = Analytics.ALGO_VERSION)
     }
 
     // Back from a course opened on the feed: like iOS, it goes to the end of the deck ("come
@@ -328,7 +337,10 @@ fun HomeTikTokScreen(
                     onIndexChange = { next ->
                         if (next != index) {
                             // The card scrolled away from was dealt and not opened.
-                            cards.getOrNull(index)?.let { skipStore.registerSkip(it.id) }
+                            cards.getOrNull(index)?.let {
+                                skipStore.registerSkip(it.id)
+                                Analytics.log("card_skip", courseId = it.id, screen = "home", position = index, algoVersion = Analytics.ALGO_VERSION)
+                            }
                             index = next
                             onUserSwipe()
                         }
@@ -349,6 +361,7 @@ fun HomeTikTokScreen(
                         onToggleFavorite = { onToggleFavorite(course.id) },
                         onStart = {
                             skipStore.clear(course.id)
+                            Analytics.log("card_open", courseId = course.id, screen = "home", position = page, algoVersion = Analytics.ALGO_VERSION)
                             onStartCourse(course.id)
                         },
                     )

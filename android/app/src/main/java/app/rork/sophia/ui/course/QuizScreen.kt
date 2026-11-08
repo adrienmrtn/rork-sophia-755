@@ -32,6 +32,7 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableDoubleStateOf
 import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.mutableLongStateOf
 import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -46,6 +47,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import app.rork.sophia.data.ContentCatalog
+import app.rork.sophia.data.analytics.Analytics
 import app.rork.sophia.data.ProgressManager
 import app.rork.sophia.data.StringStore
 import app.rork.sophia.domain.AppLanguage
@@ -132,6 +134,7 @@ fun QuizScreen(
     var sliderValue by remember { mutableDoubleStateOf(0.0) }
     var hasAnswered by remember { mutableStateOf(false) }
     var lastPoints by remember { mutableIntStateOf(0) }
+    var questionShownAt by remember { mutableLongStateOf(System.currentTimeMillis()) }
     val chronoSlots = remember { mutableStateListOf<Int?>() }
     val chronoPool = remember { mutableStateListOf<Int>() }
 
@@ -140,6 +143,7 @@ fun QuizScreen(
         selected = null
         hasAnswered = false
         lastPoints = 0
+        questionShownAt = System.currentTimeMillis()
         sliderValue = q.snapToStep((q.sliderMin + q.sliderMax) / 2.0)
         chronoSlots.clear()
         chronoPool.clear()
@@ -154,7 +158,10 @@ fun QuizScreen(
     // slots and no items to place, which could not be answered at all. Only questions 2
     // onwards went through resetForQuestion.
     LaunchedEffect(questions.size) {
-        if (questions.isNotEmpty()) resetForQuestion(index)
+        if (questions.isNotEmpty()) {
+            resetForQuestion(index)
+            Analytics.log("quiz_start", courseId = course.id, props = mapOf("context" to "course", "total" to questions.size))
+        }
     }
 
     if (questions.isEmpty()) {
@@ -186,6 +193,11 @@ fun QuizScreen(
             score = totalPoints,
             max = max,
             onFinish = {
+                Analytics.log(
+                    "quiz_complete",
+                    courseId = course.id,
+                    props = mapOf("context" to "course", "score" to totalPoints, "max_score" to max, "total" to questions.size),
+                )
                 progressManager.completeQuiz(
                     courseId = course.id,
                     score = totalPoints,
@@ -330,6 +342,19 @@ fun QuizScreen(
                         lastPoints = QuizScoring.points(q, answer)
                         totalPoints += lastPoints
                         hasAnswered = true
+                        Analytics.log(
+                            "quiz_answer",
+                            courseId = course.id,
+                            props = mapOf(
+                                "question_id" to q.id,
+                                "context" to "course",
+                                "correct" to (lastPoints == q.maxPoints),
+                                "points" to lastPoints,
+                                "max_points" to q.maxPoints,
+                                "option_index" to (answer as? QuizAnswer.SingleChoice)?.index,
+                                "seconds" to ((System.currentTimeMillis() - questionShownAt) / 1000).toInt(),
+                            ),
+                        )
                     },
                 )
             }
