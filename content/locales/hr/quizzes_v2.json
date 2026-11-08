@@ -34529,5 +34529,85 @@
         "correctIndex": 0
       }
     ]
+  },
+  {
+    "courseId": "course_312_qu_est_ce_que_la_machine_d_anticythere",
+    "quiz": [
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q1",
+        "type": "mcq",
+        "question": "Tko je 1902. godine primijetio prvi nazubljeni zupčanik u bloku bronce?",
+        "explanation": "Arheolog Valerios Stais primijetio je nazubljeni zupčanik u koroziji 1902. godine.",
+        "options": [
+          "Valerios Stais",
+          "Derek de Solla Price",
+          "Charalambos Karakalos",
+          "Zapovjednik Cousteau"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q2",
+        "type": "mcq",
+        "question": "Kada je potonuo brod koji je prevozio anticiterski mehanizam?",
+        "explanation": "Brod je potonuo oko 60. godine pr. Kr., natovaren grčkim umjetničkim djelima vjerojatno namijenjenim rimskim kupcima.",
+        "options": [
+          "Oko 60. pr. Kr.",
+          "U 2. stoljeću pr. Kr.",
+          "Godine 1900.",
+          "Godine 1976."
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q3",
+        "type": "chronological",
+        "question": "Poredaj kronološkim redom ove etape istraživanja anticiterskog mehanizma.",
+        "explanation": "Otkriće brodoloma dogodilo se 1900. godine, nazubljeni zupčanik je primijećen 1902., Derek de Solla Price objavio je prvu studiju 1959., a snimke tomografije omogućile su dešifriranje koda 2006. godine.",
+        "items": [
+          "Lovci na spužve sa Symija pronalaze brodolom kod Anticitere.",
+          "Valerios Stais primjećuje zupčanik u korodiranom bloku u muzeju u Ateni.",
+          "Derek de Solla Price objavljuje prvu detaljnu studiju mehanizma.",
+          "Snimke tomografije omogućuju čitanje natpisa i razumijevanje brojčanika."
+        ]
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q4",
+        "type": "trueFalse",
+        "question": "Anticiterski mehanizam mogao je predvidjeti pomrčine Sunca i Mjeseca.",
+        "explanation": "Mehanizam je imao brojčanik koji je pratio saros i omogućavao najavu pomrčina Sunca i Mjeseca, s vremenom i ponekad očekivanom bojom.",
+        "options": [
+          "Točno",
+          "Netočno"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q5",
+        "type": "mcq",
+        "question": "Koji astronomski ciklus omogućava usklađivanje 19 sunčevih godina i 235 mjesečevih mjeseci?",
+        "explanation": "Metonov ciklus usklađuje 19 sunčevih godina i 235 mjesečevih mjeseci, a bio je prikazan na jednom od velikih spiralnih brojčanika straga na mehanizmu.",
+        "options": [
+          "Metonov ciklus",
+          "Saros",
+          "Hiparhov ciklus",
+          "Ciklus olimpijskih igara"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q6",
+        "type": "mcq",
+        "question": "Koliko je vremena prošlo prije nego što su pronađeni predmeti slične složenosti kao anticiterski mehanizam?",
+        "explanation": "Nijedan predmet takve složenosti nije poznat prije astronomskih satova Europe iz 14. stoljeća, gotovo 1.500 godina kasnije.",
+        "options": [
+          "Gotovo 1.500 godina",
+          "500 godina",
+          "1.000 godina",
+          "2.000 godina"
+        ],
+        "correctIndex": 0
+      }
+    ]
   }
 ]

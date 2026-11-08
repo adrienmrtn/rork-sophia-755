@@ -1,0 +1,151 @@
+{
+  "id": "course_312_qu_est_ce_que_la_machine_d_anticythere",
+  "hero": {
+    "hook": "Un bloc de bronz corodat a așteptat două mii de ani pe fundul mării ca oamenii să înțeleagă că calculează eclipsele.",
+    "image": "qu_est_ce_que_la_machine_d_anticythere",
+    "ratio": "16:9",
+    "credit": {
+      "title": "NAMA Machine d'Anticythère 1",
+      "author": "Marsyas",
+      "source": "Wikimedia Commons",
+      "license": "CC BY 2.5"
+    }
+  },
+  "title": "Ce este mașina de la Anticythera?",
+  "sources": [
+    {
+      "text": "T. Freeth et al., « Decoding the ancient Greek astronomical calculator known as the Antikythera Mechanism », Nature, vol. 444, 2006, p. 587-591."
+    },
+    {
+      "text": "T. Freeth et al., « A Model of the Cosmos in the ancient Greek Antikythera Mechanism », Scientific Reports, vol. 11, 2021."
+    },
+    {
+      "text": "D. de Solla Price, Gears from the Greeks: The Antikythera Mechanism, a Calendar Computer from ca. 80 B.C., Transactions of the American Philosophical Society, 1974."
+    },
+    {
+      "text": "A. Jones, A Portable Cosmos: Revealing the Antikythera Mechanism, Oxford University Press, 2017."
+    }
+  ],
+  "subject": "sciences",
+  "sections": [
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_intro",
+      "free": true,
+      "title": "Introducere",
+      "blocks": [
+        {
+          "text": "În primăvara anului **1900**, pescarii de bureți din insula Symi se adăpostesc de o furtună lângă Anticythera, o insuliță între Creta și Peloponez. Scufundându-se, unul dintre ei descoperă o epavă antică acoperită cu statui. Timp de un an, grecii scot la suprafață bronzuri, marmuri și amfore.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Printre descoperiri, un bloc de bronz și lemn de mărimea unei cutii de pantofi nu interesează pe nimeni. În **1902**, arheologul Valerios Stais observă o roată dințată prinsă în coroziune. Abia pusese ochii pe obiectul cel mai misterios al Antichității grecești.",
+          "type": "paragraph"
+        }
+      ]
+    },
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_p1",
+      "free": false,
+      "title": "O epavă și un bloc de bronz",
+      "blocks": [
+        {
+          "text": "Nava s-a scufundat în jurul anului **60 î.Hr.**, încărcată cu opere de artă grecești probabil destinate unor cumpărători romani. Mecanismul este mai vechi: a fost probabil fabricat în **secolul al II-lea î.Hr.**, în lumea grecească, poate la Rhodos sau la Corint.",
+          "type": "paragraph"
+        },
+        {
+          "text": "A ajuns până la noi în **82 de fragmente**, dintre care șapte mari. Marea și-a făcut treaba: lemnul a dispărut, bronzul s-a transformat într-o masă verzuie și fragilă. Multă vreme, nimeni nu știa să spună la ce serveau roțile dințate. Unii se îndoiau chiar că un astfel de obiect poate fi antic.",
+          "type": "paragraph"
+        },
+        {
+          "text": "În **1976**, comandantul Cousteau s-a scufundat la epavă și a scos la suprafață monede bătute la Pergam și Efes. Ele permit datarea naufragiului.",
+          "type": "funFact"
+        }
+      ]
+    },
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_p2",
+      "free": false,
+      "title": "Ce ascunde coroziunea",
+      "blocks": [
+        {
+          "text": "Primul care ia obiectul în serios este istoricul științelor **Derek de Solla Price**. În 1959, îl prezintă drept un computer grec antic. Împreună cu fizicianul Charalambos Karakalos, îl radiografiază cu raze gamma și numără dinții roților. În 1974, publică o primă reconstituire.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Cotitură vine în **2005**. O echipă internațională aduce la Atena un scaner de opt tone și realizează o [[tomografie]] a fragmentelor. Imaginile dezvăluie interiorul blocului, strat cu strat, și peste 3.000 de caractere de inscripții: un adevărat manual de utilizare gravat în bronz.",
+          "type": "paragraph"
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1900",
+              "title": "Descoperirea epavei",
+              "detail": "Pescarii de bureți din Symi găsesc epava în largul Anticytherei."
+            },
+            {
+              "date": "1902",
+              "title": "O roată dințată",
+              "detail": "Valerios Stais observă un angrenaj într-un bloc corodat la muzeul din Atena."
+            },
+            {
+              "date": "1959",
+              "title": "Un computer antic",
+              "detail": "Derek de Solla Price publică primul studiu detaliat al mecanismului."
+            },
+            {
+              "date": "2006",
+              "title": "Codul descifrat",
+              "detail": "Imaginile de tomografie permit citirea inscripțiilor și înțelegerea cadranelor."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_p3",
+      "free": false,
+      "title": "Un calendar al cerului într-o cutie",
+      "blocks": [
+        {
+          "text": "Mecanismul conține vreo treizeci de **angrenaje din bronz** care au supraviețuit, iar inițial erau mai multe. O manivelă pe lateral punea în mișcare ansamblul. În față, un cadran arăta poziția Soarelui și a Lunii în zodiac, iar o mică bilă pe jumătate argintie, pe jumătate neagră indica faza Lunii.",
+          "type": "paragraph"
+        },
+        {
+          "text": "În spate, două cadrane mari în spirală serveau drept calendare. Primul urma [[ciclul lui Meton]], care face să coincidă 19 ani solari cu 235 de luni lunare. Al doilea urma [[sarosul]], un ciclu de 223 de luni după care eclipsele se repetă. Permitea anunțarea eclipselor de Soare și de Lună, cu ora și uneori culoarea așteptată.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Cel mai uimitor este un mic dispozitiv cu știft și fanta care modifică viteza Lunii pe parcursul lunii, exact ca în teoria astronomului [[Hipparque]]. Un cadran anexă indica chiar anul marilor jocuri grecești, printre care cele de la Olimpia.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Niciun obiect de o asemenea complexitate nu este cunoscut înaintea **ceasurilor astronomice** din Europa secolului XIV, deci cu aproape 1.500 de ani mai târziu.",
+          "type": "funFact"
+        }
+      ]
+    },
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_p4",
+      "free": false,
+      "title": "Ce ne învață",
+      "blocks": [
+        {
+          "text": "Mașina de la Anticythera arată că grecii nu se mulțumeau cu teorii despre cer: știau să le transforme în mecanisme de precizie. Textele antice menționau astfel de aparate, atribuite lui Arhimede sau lui Posidonios, dar nimeni nu credea cu adevărat în ele înainte de descoperirea epavei.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Amintește și de fragilitatea acestui știință. Atelierele capabile să o construiască au dispărut fără să lase alt exemplar cunoscut. Fragmentele sunt astăzi expuse la Muzeul Național de Arheologie din Atena, iar cercetătorii propun încă reconstituiri noi, precum cea publicată în 2021 de o echipă de la University College din Londra.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Fabricată în **secolul al II-lea î.Hr.** și regăsită în 1901 într-o epavă, mașina de la Anticythera este un calculator astronomic cu angrenaje. Prezice eclipsele și urmărește calendarele cerului, o performanță fără echivalent timp de cincisprezece secole.",
+          "type": "takeaway"
+        }
+      ]
+    }
+  ],
+  "subtitle": "secolul al II-lea î.Hr.",
+  "description": "În 1901, pescarii de bureți scoteau dintr-o epavă grecească un bloc de bronz ros de mare. Ascundea mecanismul cel mai complex al Antichității: o mașină care calcula cerul.",
+  "subcategory": "Descoperiri care au schimbat lumea"
+}

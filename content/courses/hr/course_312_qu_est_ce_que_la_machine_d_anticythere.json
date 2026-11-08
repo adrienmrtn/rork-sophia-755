@@ -1,0 +1,151 @@
+{
+  "id": "course_312_qu_est_ce_que_la_machine_d_anticythere",
+  "hero": {
+    "hook": "Blok korodirane bronce čekao je dvije tisuće godina na dnu mora da netko shvati kako je izračunavao pomrčine.",
+    "image": "qu_est_ce_que_la_machine_d_anticythere",
+    "ratio": "16:9",
+    "credit": {
+      "title": "NAMA Machine d'Anticythère 1",
+      "author": "Marsyas",
+      "source": "Wikimedia Commons",
+      "license": "CC BY 2.5"
+    }
+  },
+  "title": "Što je anticiterski mehanizam?",
+  "sources": [
+    {
+      "text": "T. Freeth et al., « Decoding the ancient Greek astronomical calculator known as the Antikythera Mechanism », Nature, vol. 444, 2006, p. 587-591."
+    },
+    {
+      "text": "T. Freeth et al., « A Model of the Cosmos in the ancient Greek Antikythera Mechanism », Scientific Reports, vol. 11, 2021."
+    },
+    {
+      "text": "D. de Solla Price, Gears from the Greeks: The Antikythera Mechanism, a Calendar Computer from ca. 80 B.C., Transactions of the American Philosophical Society, 1974."
+    },
+    {
+      "text": "A. Jones, A Portable Cosmos: Revealing the Antikythera Mechanism, Oxford University Press, 2017."
+    }
+  ],
+  "subject": "sciences",
+  "sections": [
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_intro",
+      "free": true,
+      "title": "Uvod",
+      "blocks": [
+        {
+          "text": "U proljeće **1900. godine** lovci na spužve s otoka Symi sklanjaju se od oluje blizu Anticitere, otočića između Krete i Peloponeza. Roneći, jedan od njih otkriva antički brodolom prekriven kipovima. Godinu dana Grci izvlače brončane i mramorne kipove te amfore.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Među nalazima, blok bronce i drva veličine kutije za cipele nikoga ne zanima. **1902. godine** arheolog Valerios Stais primjećuje nazubljeni zupčanik u koroziji. Upravo je ugledao najzagonetniji predmet grčke antike.",
+          "type": "paragraph"
+        }
+      ]
+    },
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_p1",
+      "free": false,
+      "title": "Brodolom i blok bronce",
+      "blocks": [
+        {
+          "text": "Brod je potonuo oko **60. godine pr. Kr.**, natovaren grčkim umjetničkim djelima vjerojatno namijenjenim rimskim kupcima. Sam mehanizam je stariji: najvjerojatnije je napravljen **u 2. stoljeću pr. Kr.**, u grčkom svijetu, možda na Rodosu ili u Korintu.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Do nas je došao u **82 ulomka**, od kojih sedam velikih. More je učinilo svoje: drvo je nestalo, bronca se pretvorila u zelenkasto i lomljivu masu. Dugo nitko ne zna reći čemu su služili ti zupčanici. Neki čak sumnjaju da takav predmet može biti antički.",
+          "type": "paragraph"
+        },
+        {
+          "text": "**1976. godine** zapovjednik Cousteau roni na brodolom i izvlači kovanice kovane u Pergamu i Efezu. One omogućuju datiranje brodoloma.",
+          "type": "funFact"
+        }
+      ]
+    },
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_p2",
+      "free": false,
+      "title": "Što skriva korozija",
+      "blocks": [
+        {
+          "text": "Prvi koji ozbiljno shvaća predmet je povjesničar znanosti **Derek de Solla Price**. Godine 1959. predstavlja ga kao \"antičko grčko računalo\". S fizičarom Charalambosom Karakalosom rendgenira ga gama-zrakama i broji zube zupčanika. Godine 1974. objavljuje prvu rekonstrukciju.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Prijelomna točka dolazi **2005. godine**. Međunarodni tim dovodi u Atenu skener od osam tona i izvodi [[tomografija]] ulomaka. Snimke otkrivaju unutrašnjost bloka, sloj po sloj, i više od 3.000 znakova natpisa: pravi upute za uporabu ugravirane u broncu.",
+          "type": "paragraph"
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1900.",
+              "title": "Otkriće brodoloma",
+              "detail": "Lovci na spužve sa Symija pronalaze brodolom kod Anticitere."
+            },
+            {
+              "date": "1902.",
+              "title": "Nazubljeni zupčanik",
+              "detail": "Valerios Stais primjećuje zupčanik u korodiranom bloku u muzeju u Ateni."
+            },
+            {
+              "date": "1959.",
+              "title": "Antičko računalo",
+              "detail": "Derek de Solla Price objavljuje prvu detaljnu studiju mehanizma."
+            },
+            {
+              "date": "2006.",
+              "title": "Dešifrirani kod",
+              "detail": "Snimke tomografije omogućuju čitanje natpisa i razumijevanje brojčanika."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_p3",
+      "free": false,
+      "title": "Kalendar neba u kutiji",
+      "blocks": [
+        {
+          "text": "Mehanizam sadržava tridesetak **brončanih zupčanika** koji su preživjeli, a imao ih je i više. Ručica sa strane pokretala je cjelinu. Sprijeda, brojčanik je pokazivao položaj Sunca i Mjeseca u zodijaku, a mala kuglica napola posrebrena napola crna pokazivala je fazu Mjeseca.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Straga su dva velika spiralna brojčanika služila kao kalendari. Prvi je pratio [[Metonov ciklus]], koji usklađuje 19 sunčevih godina i 235 mjesečevih mjeseci. Drugi je pratio [[saros]], ciklus od 223 mjeseca nakon kojeg se pomrčine ponavljaju. Omogućavao je najavu pomrčina Sunca i Mjeseca, s vremenom i ponekad očekivanom bojom.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Najzapanjajuće je mali uređaj s iglom i prorezom koji mijenja brzinu Mjeseca tijekom mjeseca, točno kao u teoriji astronoma [[Hiparh]]. Dodatni brojčanik davao je čak godinu velikih grčkih igara, uključujući one u Olimpiji.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Nijedan predmet takve složenosti nije poznat prije **astronomskih satova** Europe iz 14. stoljeća, gotovo 1.500 godina kasnije.",
+          "type": "funFact"
+        }
+      ]
+    },
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_p4",
+      "free": false,
+      "title": "Što nas uči",
+      "blocks": [
+        {
+          "text": "Anticiterski mehanizam pokazuje da se Grci nisu zadovoljavali teorijama o nebu: znali su ih pretvoriti u precizne mehanizme. Antički tekstovi spominjali su takve uređaje, pripisane Arhimedu ili Poseidoniju, ali nitko im nije doista vjerovao prije otkrića brodoloma.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Također podsjeća na krhkost tog znanja. Radionice sposobne napraviti ga nestale su ne ostavivši nijedan drugi poznati primjerak. Ulomci su danas izloženi u Nacionalnom arheološkom muzeju u Ateni, a istraživači još uvijek predlažu nove rekonstrukcije, poput one objavljene 2021. godine od strane tima s University Collegea u Londonu.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Napravljen **u 2. stoljeću pr. Kr.** i pronađen 1901. godine u brodolomu, anticiterski mehanizam je astronomski kalkulator sa zupčanicima. Predviđao je pomrčine i pratio kalendare neba, dostignuće bez premca tijekom petnaest stoljeća.",
+          "type": "takeaway"
+        }
+      ]
+    }
+  ],
+  "subtitle": "2. st. pr. Kr.",
+  "description": "Godine 1901. lovci na spužve izvlače s grčkog brodoloma blok bronce nagrižen morem. Skriva najsloženiji mehanizam antike: stroj za izračunavanje kretanja nebeskih tijela.",
+  "subcategory": "Otkrića koja su promijenila svijet"
+}

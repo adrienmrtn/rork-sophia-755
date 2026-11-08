@@ -1,0 +1,151 @@
+{
+  "id": "course_312_qu_est_ce_que_la_machine_d_anticythere",
+  "hero": {
+    "hook": "Denizin dibinde iki bin yıl bekleyen korozif bronz blok, tutulmaları hesapladığını anlamamızı bekledi.",
+    "image": "qu_est_ce_que_la_machine_d_anticythere",
+    "ratio": "16:9",
+    "credit": {
+      "title": "NAMA Machine d'Anticythère 1",
+      "author": "Marsyas",
+      "source": "Wikimedia Commons",
+      "license": "CC BY 2.5"
+    }
+  },
+  "title": "Anticythère makinesi nedir?",
+  "sources": [
+    {
+      "text": "T. Freeth et al., « Decoding the ancient Greek astronomical calculator known as the Antikythera Mechanism », Nature, vol. 444, 2006, p. 587-591."
+    },
+    {
+      "text": "T. Freeth et al., « A Model of the Cosmos in the ancient Greek Antikythera Mechanism », Scientific Reports, vol. 11, 2021."
+    },
+    {
+      "text": "D. de Solla Price, Gears from the Greeks: The Antikythera Mechanism, a Calendar Computer from ca. 80 B.C., Transactions of the American Philosophical Society, 1974."
+    },
+    {
+      "text": "A. Jones, A Portable Cosmos: Revealing the Antikythera Mechanism, Oxford University Press, 2017."
+    }
+  ],
+  "subject": "sciences",
+  "sections": [
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_intro",
+      "free": true,
+      "title": "Giriş",
+      "blocks": [
+        {
+          "text": "**1900** baharında Simi adasından sünger avcıları, Girit ile Mora Yarımadası arasındaki bir adacık olan Anticythère yakınlarında fırtınadan sığınır. Dalış sırasında biri, heykellerin kapladığı bir antik batık keşfeder. Bir yıl boyunca Yunanlılar oradan bronzlar, mermerler ve amforalar çıkarır.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Bulunanlar arasında, ayakkabı kutusu boyutunda tahta ve bronz bir blok kimsenin ilgisini çekmez. **1902'de** arkeolog Valerios Stais, korozyonun içinde sıkışmış dişli bir çark fark eder. Antik Yunan'ın en gizemli nesnesine bakmış olur.",
+          "type": "paragraph"
+        }
+      ]
+    },
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_p1",
+      "free": false,
+      "title": "Bir batık ve bronz blok",
+      "blocks": [
+        {
+          "text": "Gemi **M.Ö. 60** civarında batmıştır; muhtemelen Romalı alıcılara gidecek Yunan sanat eserleriyle yüklüdür. Mekanizma ise daha eskidir: muhtemelen **milattan önceki 2. yüzyılda**, Yunan dünyasında, belki Rodos'ta veya Korint'te yapılmıştır.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Bize **82 parça** halinde ulaşmıştır; yedisi büyüktür. Deniz işini görmüştür: tahta kaybolmuş, bronz yeşilimsi kırılgan bir yığına dönüşmüştür. Uzun süre bu dişli çarkların ne işe yaradığını kimse bilemez. Bazıları böyle bir nesnenin antik olabileceğinden bile şüphe eder.",
+          "type": "paragraph"
+        },
+        {
+          "text": "**1976'da** Komutan Cousteau batığa dalar ve Pergamon ile Efes'te basılmış sikkeler çıkarır. Batışı tarihlendirmeyi sağlayan bunlardır.",
+          "type": "funFact"
+        }
+      ]
+    },
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_p2",
+      "free": false,
+      "title": "Korozyonun sakladığı",
+      "blocks": [
+        {
+          "text": "Nesneyi ciddiye alan ilk kişi bilim tarihçisi **Derek de Solla Price**'tır. 1959'da onu \"antik Yunan bilgisayarı\" olarak sunar. Fizikçi Charalambos Karakalos ile birlikte gama ışınlarıyla radyografisini çeker ve çarkların dişlerini sayar. 1974'te ilk yeniden yapımı yayımlar.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Dönüm noktası **2005'te** gelir. Uluslararası bir ekip Atina'ya sekiz tonluk bir tarayıcı getirir ve parçaların [[tomografi]]sini yapar. Görüntüler bloğun içini katman katman ortaya çıkarır ve 3.000'den fazla yazıt karakteri gösterir: bronza kazınmış gerçek bir kullanım kılavuzu.",
+          "type": "paragraph"
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1900",
+              "title": "Batığın keşfi",
+              "detail": "Simili sünger avcıları Anticythère açıklarında batığı fark eder."
+            },
+            {
+              "date": "1902",
+              "title": "Dişli bir çark",
+              "detail": "Valerios Stais, Atina müzesinde korozif bir bloğun içinde dişli fark eder."
+            },
+            {
+              "date": "1959",
+              "title": "Antik bilgisayar",
+              "detail": "Derek de Solla Price, mekanizmanın ilk ayrıntılı çalışmasını yayımlar."
+            },
+            {
+              "date": "2006",
+              "title": "Kodun çözülmesi",
+              "detail": "Tomografi görüntüleri yazıtların okunmasını ve kadranların anlaşılmasını sağlar."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_p3",
+      "free": false,
+      "title": "Bir kutuda gökyüzü takvimi",
+      "blocks": [
+        {
+          "text": "Mekanizma günümüze ulaşmış otuz kadar **bronz dişli** içerir ve daha fazlası vardı. Yandaki bir kol tüm mekanizmayı döndürüyordu. Önde bir kadran burçlar kuşağında Güneş ile Ay'ın konumunu gösteriyor, yarısı gümüş yarısı siyah küçük bir top Ay'ın evresini belirtiyordu.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Arkada spiral biçimli iki büyük kadran takvim işlevi görüyordu. Birincisi, 19 güneş yılını 235 ay ayıyla eşleştiren [[Meton döngüsü]]nü izliyordu. İkincisi, 223 ay sonra tutulmaların tekrarlandığı [[saros]]u izliyordu. Güneş ve Ay tutulmalarını, saatiyle ve bazen beklenen rengiyle duyurmayı sağlıyordu.",
+          "type": "paragraph"
+        },
+        {
+          "text": "En şaşırtıcı yanı, Ay'ın hızını ay boyunca değiştiren, pimli ve yivli küçük bir düzenektir; tıpkı gökbilimci [[Hipparque]]'ın kuramındaki gibi. Ek bir kadran Olympia oyunları dahil büyük Yunan oyunlarının yılını bile veriyordu.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Böyle bir karmaşıklıkta başka bir nesne, 14. yüzyıl Avrupa'sının **astronomik saatlerinden** önce bilinmez; yani neredeyse 1.500 yıl sonrası.",
+          "type": "funFact"
+        }
+      ]
+    },
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_p4",
+      "free": false,
+      "title": "Bize öğrettiği",
+      "blocks": [
+        {
+          "text": "Anticythère makinesi, Yunanlıların gökyüzü hakkında kuramlarla yetinmediklerini gösterir: onları hassas mekanizmalara dönüştürmeyi biliyorlardı. Eski metinler Arşimet veya Poseidonios'a atfedilen böyle aygıtlardan söz ediyordu ama batık keşfedilmeden önce kimse gerçekten inanmıyordu.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Bu bilginin kırılganlığını da hatırlatır. Onu yapabilecek atölyeler, bilinen başka örnek bırakmadan yok olmuştur. Parçalar bugün Atina Ulusal Arkeoloji Müzesi'nde sergilenir ve araştırmacılar, 2021'de Londra University College'dan bir ekibin yayımladığı gibi, hâlâ yeni yeniden yapımlar önermektedir.",
+          "type": "paragraph"
+        },
+        {
+          "text": "**M.Ö. 2. yüzyılda** yapılmış ve 1901'de bir batıkta bulunmuş olan Anticythère makinesi, dişlili bir astronomik hesaplayıcıdır. Tutulmaları öngörüyor ve gökyüzü takvimlerini izliyordu; on beş yüzyıl boyunca eşi olmayan bir başarı.",
+          "type": "takeaway"
+        }
+      ]
+    }
+  ],
+  "subtitle": "M.Ö. 2. yüzyıl",
+  "description": "1901'de sünger avcıları, Yunan bir batıktan deniz suyunun kemirdiği bir bronz blok çıkarır. İçinde Antik Çağ'ın en karmaşık mekanizması saklanır: gökyüzünü hesaplayan bir makine.",
+  "subcategory": "Dünyayı değiştiren keşifler"
+}

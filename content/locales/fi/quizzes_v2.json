@@ -34529,5 +34529,85 @@
         "correctIndex": 0
       }
     ]
+  },
+  {
+    "courseId": "course_312_qu_est_ce_que_la_machine_d_anticythere",
+    "quiz": [
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q1",
+        "type": "mcq",
+        "question": "Kuka huomasi ensimmäisen hammaspyörän pronssikiekossa vuonna 1902?",
+        "explanation": "Arkeologi Valerios Stais huomasi syöpymään jumittuneen hammaspyörän vuonna 1902.",
+        "options": [
+          "Valerios Stais",
+          "Derek de Solla Price",
+          "Charalambos Karakalos",
+          "Komentaja Cousteau"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q2",
+        "type": "mcq",
+        "question": "Milloin Antikytherin koneen kuljettanut laiva upposi?",
+        "explanation": "Laiva upposi noin vuonna 60 eKr. lastattuna kreikkalaisilla taideteoksilla, jotka oli todennäköisesti tarkoitettu roomalaisille ostajille.",
+        "options": [
+          "Noin vuonna 60 eKr.",
+          "100-luvulla eKr.",
+          "Vuonna 1900",
+          "Vuonna 1976"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q3",
+        "type": "chronological",
+        "question": "Aseta kronologiseen järjestykseen Antikytherin koneen tutkimuksen vaiheet.",
+        "explanation": "Hylky löytyi vuonna 1900, hammaspyörä huomattiin vuonna 1902, Derek de Solla Price julkaisi ensimmäisen tutkimuksensa vuonna 1959, ja tomografiakuvat paljastivat koodin vuonna 2006.",
+        "items": [
+          "Symin sienenpyytäjät löytävät hylkyä Antikytherin edustalta.",
+          "Valerios Stais huomaa hammaspyörän syöpyneessä kiekossa Ateenan museossa.",
+          "Derek de Solla Price julkaisee ensimmäisen yksityiskohtaisen tutkimuksen laitteesta.",
+          "Tomografiakuvat paljastavat kirjoitukset ja selittävät kellotaulut."
+        ]
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q4",
+        "type": "trueFalse",
+        "question": "Antikytherin kone pystyi ennustamaan Auringon ja Kuun pimennykset.",
+        "explanation": "Laitteessa oli saros-kiertoaikaa seuraava kellotaulu, jonka avulla voitiin ennustaa Auringon ja Kuun pimennykset, niiden ajankohta ja joskus odotettu väri.",
+        "options": [
+          "Totta",
+          "Epätotta"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q5",
+        "type": "mcq",
+        "question": "Mikä tähtitieteellinen kiertoaika yhteensovitti 19 aurinkoa ja 235 kuukautta?",
+        "explanation": "Metonin kierto yhteensovitti 19 aurinkoa ja 235 kuukautta, ja se oli esitetty yhdessä laitteen takana olevista suurista spiraalimaisista kellotauluista.",
+        "options": [
+          "Metonin kierto",
+          "Saros",
+          "Hipparkhoksen kiertoaika",
+          "Olympian kisojen kiertoaika"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q6",
+        "type": "mcq",
+        "question": "Kuinka kauan kesti ennen kuin löydettiin Antikytherin koneen kaltaisia monimutkaisia esineitä?",
+        "explanation": "Yhtä monimutkaista esinettä ei tunneta ennen tähtitieteen kelloja, jotka ilmestyivät Eurooppaan 1300-luvulla, siis lähes 1 500 vuotta myöhemmin.",
+        "options": [
+          "Lähes 1 500 vuotta",
+          "500 vuotta",
+          "1 000 vuotta",
+          "2 000 vuotta"
+        ],
+        "correctIndex": 0
+      }
+    ]
   }
 ]

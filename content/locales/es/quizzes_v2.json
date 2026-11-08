@@ -34529,5 +34529,85 @@
         "correctIndex": 0
       }
     ]
+  },
+  {
+    "courseId": "course_312_qu_est_ce_que_la_machine_d_anticythere",
+    "quiz": [
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q1",
+        "type": "mcq",
+        "question": "¿Quién notó la primera rueda dentada en el bloque de bronce en 1902?",
+        "explanation": "Fue el arqueólogo Valerios Stais quien notó una rueda dentada atrapada en la corrosión en 1902.",
+        "options": [
+          "Valerios Stais",
+          "Derek de Solla Price",
+          "Charalambos Karakalos",
+          "El comandante Cousteau"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q2",
+        "type": "mcq",
+        "question": "¿Cuándo se hundió el barco que transportaba la máquina de Anticitera?",
+        "explanation": "El barco se hundió hacia el 60 a. C., cargado de obras de arte griegas probablemente destinadas a compradores romanos.",
+        "options": [
+          "Hacia el 60 a. C.",
+          "En el siglo II a. C.",
+          "En 1900",
+          "En 1976"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q3",
+        "type": "chronological",
+        "question": "Ordena cronológicamente estas etapas del estudio de la máquina de Anticitera.",
+        "explanation": "El descubrimiento del naufragio tuvo lugar en 1900, la rueda dentada fue notada en 1902, Derek de Solla Price publicó su primer estudio en 1959, y las imágenes de tomografía permitieron descifrar el código en 2006.",
+        "items": [
+          "Unos pescadores de esponjas de Symi localizan el naufragio frente a Anticitera.",
+          "Valerios Stais nota un engranaje en un bloque corroído en el museo de Atenas.",
+          "Derek de Solla Price publica el primer estudio detallado del mecanismo.",
+          "Las imágenes de tomografía permiten leer las inscripciones y entender los cuadrantes."
+        ]
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q4",
+        "type": "trueFalse",
+        "question": "La máquina de Anticitera podía predecir los eclipses de Sol y de Luna.",
+        "explanation": "El mecanismo tenía una esfera que seguía el saros y permitía anunciar los eclipses de Sol y de Luna, con la hora y a veces el color esperado.",
+        "options": [
+          "Verdadero",
+          "Falso"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q5",
+        "type": "mcq",
+        "question": "¿Qué ciclo astronómico permitía hacer coincidir 19 años solares y 235 meses lunares?",
+        "explanation": "El ciclo de Metón hacía coincidir 19 años solares y 235 meses lunares, y estaba representado en uno de los grandes cuadrantes en espiral en la parte trasera del mecanismo.",
+        "options": [
+          "El ciclo de Metón",
+          "El saros",
+          "El ciclo de Hiparco",
+          "El ciclo de los juegos de Olimpia"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q6",
+        "type": "mcq",
+        "question": "¿Cuánto tiempo pasó antes de que se encontraran objetos de complejidad comparable a la máquina de Anticitera?",
+        "explanation": "Ningún objeto de tal complejidad es conocido antes de los relojes astronómicos de la Europa del siglo XIV, es decir, casi 1500 años después.",
+        "options": [
+          "Casi 1500 años",
+          "500 años",
+          "1000 años",
+          "2000 años"
+        ],
+        "correctIndex": 0
+      }
+    ]
   }
 ]

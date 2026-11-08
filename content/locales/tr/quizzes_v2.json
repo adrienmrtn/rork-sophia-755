@@ -34529,5 +34529,85 @@
         "correctIndex": 0
       }
     ]
+  },
+  {
+    "courseId": "course_312_qu_est_ce_que_la_machine_d_anticythere",
+    "quiz": [
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q1",
+        "type": "mcq",
+        "question": "1902'de bronz bloğun içindeki ilk dişliyi kim fark etti?",
+        "explanation": "1902'de korozyonun içinde sıkışmış dişli bir çarkı fark eden arkeolog Valerios Stais'tir.",
+        "options": [
+          "Valerios Stais",
+          "Derek de Solla Price",
+          "Charalambos Karakalos",
+          "Komutan Cousteau"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q2",
+        "type": "mcq",
+        "question": "Anticythère makinesini taşıyan gemi ne zaman battı?",
+        "explanation": "Gemi M.Ö. 60 civarında batmıştır; muhtemelen Romalı alıcılara gidecek Yunan sanat eserleriyle yüklüydü.",
+        "options": [
+          "M.Ö. 60 civarında",
+          "M.Ö. 2. yüzyılda",
+          "1900'de",
+          "1976'da"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q3",
+        "type": "chronological",
+        "question": "Anticythère makinesinin incelenmesinde bu aşamaları kronolojik sıraya koy.",
+        "explanation": "Batığın keşfi 1900'de oldu, dişli 1902'de fark edildi, Derek de Solla Price ilk çalışmasını 1959'da yayımladı ve tomografi görüntüleri 2006'da kodun çözülmesini sağladı.",
+        "items": [
+          "Simili sünger avcıları Anticythère açıklarındaki batığı fark eder.",
+          "Valerios Stais, Atina müzesinde korozif bir bloğun içinde dişli fark eder.",
+          "Derek de Solla Price, mekanizmanın ilk ayrıntılı çalışmasını yayımlar.",
+          "Tomografi görüntüleri yazıtların okunmasını ve kadranların anlaşılmasını sağlar."
+        ]
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q4",
+        "type": "trueFalse",
+        "question": "Anticythère makinesi Güneş ve Ay tutulmalarını öngörebiliyordu.",
+        "explanation": "Mekanizma, Güneş ve Ay tutulmalarını, saatiyle ve bazen beklenen rengiyle duyurmayı sağlayan saros döngüsünü izleyen bir kadran içeriyordu.",
+        "options": [
+          "Doğru",
+          "Yanlış"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q5",
+        "type": "mcq",
+        "question": "Hangi astronomik döngü 19 güneş yılını 235 ay ayıyla eşleştiriyordu?",
+        "explanation": "Meton döngüsü 19 güneş yılını 235 ay ayıyla eşleştiriyordu ve mekanizmanın arkasındaki spiral büyük kadranlardan birinde gösteriliyordu.",
+        "options": [
+          "Meton döngüsü",
+          "Saros döngüsü",
+          "Hipparque döngüsü",
+          "Olympia oyunları döngüsü"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q6",
+        "type": "mcq",
+        "question": "Anticythère makinesine karmaşıklıkta eş nesneler bulunana kadar ne kadar zaman geçti?",
+        "explanation": "Böyle bir karmaşıklıkta başka bir nesne, 14. yüzyıl Avrupa'sının astronomik saatlerinden önce bilinmez; yani neredeyse 1.500 yıl sonrası.",
+        "options": [
+          "Neredeyse 1.500 yıl",
+          "500 yıl",
+          "1.000 yıl",
+          "2.000 yıl"
+        ],
+        "correctIndex": 0
+      }
+    ]
   }
 ]

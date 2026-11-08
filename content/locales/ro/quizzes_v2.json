@@ -34529,5 +34529,85 @@
         "correctIndex": 0
       }
     ]
+  },
+  {
+    "courseId": "course_312_qu_est_ce_que_la_machine_d_anticythere",
+    "quiz": [
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q1",
+        "type": "mcq",
+        "question": "Cine a observat prima roată dințată din blocul de bronz în 1902?",
+        "explanation": "Arheologul Valerios Stais a observat o roată dințată prinsă în coroziune în 1902.",
+        "options": [
+          "Valerios Stais",
+          "Derek de Solla Price",
+          "Charalambos Karakalos",
+          "Comandantul Cousteau"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q2",
+        "type": "mcq",
+        "question": "Când s-a scufundat nava care transporta mașina de la Anticythera?",
+        "explanation": "Nava s-a scufundat în jurul anului 60 î.Hr., încărcată cu opere de artă grecești probabil destinate unor cumpărători romani.",
+        "options": [
+          "În jurul anului 60 î.Hr.",
+          "În secolul al II-lea î.Hr.",
+          "În 1900",
+          "În 1976"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q3",
+        "type": "chronological",
+        "question": "Puneți în ordine cronologică aceste etape ale studiului mașinii de la Anticythera.",
+        "explanation": "Descoperirea epavei a avut loc în 1900, roata dințată a fost observată în 1902, Derek de Solla Price a publicat primul său studiu în 1959, iar imaginile de tomografie au permis descifrarea codului în 2006.",
+        "items": [
+          "Pescarii de bureți din Symi găsesc epava în largul Anticytherei.",
+          "Valerios Stais observă un angrenaj într-un bloc corodat la muzeul din Atena.",
+          "Derek de Solla Price publică primul studiu detaliat al mecanismului.",
+          "Imaginile de tomografie permit citirea inscripțiilor și înțelegerea cadranelor."
+        ]
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q4",
+        "type": "trueFalse",
+        "question": "Mașina de la Anticythera putea prezice eclipsele de Soare și de Lună.",
+        "explanation": "Mecanismul avea un cadran care urma sarosul și permitea anunțarea eclipselor de Soare și de Lună, cu ora și uneori culoarea așteptată.",
+        "options": [
+          "Adevărat",
+          "Fals"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q5",
+        "type": "mcq",
+        "question": "Ce ciclu astronomic permitea să coincidă 19 ani solari cu 235 de luni lunare?",
+        "explanation": "Ciclul lui Meton făcea să coincidă 19 ani solari cu 235 de luni lunare și era reprezentat pe unul dintre cadranele mari în spirală din spatele mecanismului.",
+        "options": [
+          "Ciclul lui Meton",
+          "Sarosul",
+          "Ciclul lui Hipparque",
+          "Ciclul jocurilor de la Olimpia"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q6",
+        "type": "mcq",
+        "question": "Cât timp a trecut până să se regăsească obiecte de o complexitate comparabilă cu mașina de la Anticythera?",
+        "explanation": "Niciun obiect de o asemenea complexitate nu este cunoscut înaintea ceasurilor astronomice din Europa secolului XIV, deci cu aproape 1.500 de ani mai târziu.",
+        "options": [
+          "Aproape 1.500 de ani",
+          "500 de ani",
+          "1.000 de ani",
+          "2.000 de ani"
+        ],
+        "correctIndex": 0
+      }
+    ]
   }
 ]

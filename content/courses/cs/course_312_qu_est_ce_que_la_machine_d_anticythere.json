@@ -1,0 +1,151 @@
+{
+  "id": "course_312_qu_est_ce_que_la_machine_d_anticythere",
+  "hero": {
+    "hook": "Zkorodovaný bronzový blok čekal dva tisíce let na mořském dně, než někdo pochopil, že počítal zatmění.",
+    "image": "qu_est_ce_que_la_machine_d_anticythere",
+    "ratio": "16:9",
+    "credit": {
+      "title": "NAMA Machine d'Anticythère 1",
+      "author": "Marsyas",
+      "source": "Wikimedia Commons",
+      "license": "CC BY 2.5"
+    }
+  },
+  "title": "Co je antikythérský mechanismus?",
+  "sources": [
+    {
+      "text": "T. Freeth et al., « Decoding the ancient Greek astronomical calculator known as the Antikythera Mechanism », Nature, vol. 444, 2006, p. 587-591."
+    },
+    {
+      "text": "T. Freeth et al., « A Model of the Cosmos in the ancient Greek Antikythera Mechanism », Scientific Reports, vol. 11, 2021."
+    },
+    {
+      "text": "D. de Solla Price, Gears from the Greeks: The Antikythera Mechanism, a Calendar Computer from ca. 80 B.C., Transactions of the American Philosophical Society, 1974."
+    },
+    {
+      "text": "A. Jones, A Portable Cosmos: Revealing the Antikythera Mechanism, Oxford University Press, 2017."
+    }
+  ],
+  "subject": "sciences",
+  "sections": [
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_intro",
+      "free": true,
+      "title": "Úvod",
+      "blocks": [
+        {
+          "text": "Na jaře **1900** se lovci hub z ostrova Symi ukrývali před bouří poblíž Antikythéry, ostrůvku mezi Krétou a Peloponésem. Při potápění jeden z nich objevil antický vrak pokrytý sochami. Po celý rok Řekové vytahovali bronzy, mramory a amfory.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Mezi nálezy nikoho nezajímal bronzový a dřevěný blok velikosti krabice od bot. V roce **1902** si archeolog Valerios Stais všiml ozubeného kola zachyceného v korozi. Právě se díval na nejzáhadnější předmět starověkého Řecka.",
+          "type": "paragraph"
+        }
+      ]
+    },
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_p1",
+      "free": false,
+      "title": "Vrak a bronzový blok",
+      "blocks": [
+        {
+          "text": "Loď se potopila kolem **60 př. n. l.** naložená řeckými uměleckými díly, která byla pravděpodobně určena pro římské kupce. Samotný mechanismus je starší: byl zřejmě vyroben ve **2. století př. n. l.** v řeckém světě, možná na Rhodu nebo v Korintu.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Dochoval se nám v **82 fragmentech**, z nichž sedm je velkých. Moře udělalo své: dřevo zmizelo, bronz se změnil v nazelenalou a křehkou hmotu. Dlouho nikdo nevěděl, k čemu tato ozubená kola sloužila. Někteří dokonce pochybovali, že by takový předmět mohl být starověký.",
+          "type": "paragraph"
+        },
+        {
+          "text": "V roce **1976** se velitel Cousteau ponořil k vraku a vytáhl mince ražené v Pergamu a v Efesu. Právě ty umožnily datovat ztroskotání.",
+          "type": "funFact"
+        }
+      ]
+    },
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_p2",
+      "free": false,
+      "title": "Co skrývá koroze",
+      "blocks": [
+        {
+          "text": "První, kdo vzal předmět vážně, byl historik vědy **Derek de Solla Price**. V roce 1959 ho představil jako \"starověký řecký počítač\". Spolu s fyzikem Charalambosem Karakalosem ho rentgenoval paprsky gama a spočítal zuby kol. V roce 1974 publikoval první rekonstrukci.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Zlom nastal v roce **2005**. Mezinárodní tým přivezl do Atén osmitunový skener a provedl [[tomografie]] fragmentů. Snímky odhalily vnitřek bloku vrstvu po vrstvě a více než 3.000 znaků nápisů: skutečný návod k použití vyrytý do bronzu.",
+          "type": "paragraph"
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1900",
+              "title": "Objev vraku",
+              "detail": "Lovci hub ze Symi objevili vrak u pobřeží Antikythéry."
+            },
+            {
+              "date": "1902",
+              "title": "Ozubené kolo",
+              "detail": "Valerios Stais si všiml ozubených kol v zkorodovaném bloku v aténském muzeu."
+            },
+            {
+              "date": "1959",
+              "title": "Starověký počítač",
+              "detail": "Derek de Solla Price publikoval první podrobnou studii mechanismu."
+            },
+            {
+              "date": "2006",
+              "title": "Rozluštěný kód",
+              "detail": "Snímky z tomografie umožnily přečíst nápisy a porozumět ciferníkům."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_p3",
+      "free": false,
+      "title": "Kalendář oblohy v krabici",
+      "blocks": [
+        {
+          "text": "Mechanismus obsahuje asi třicet dochovaných **bronzových ozubených kol** a původně jich měl víc. Klička na boku roztáčela celý systém. Na přední straně ciferník ukazoval polohu Slunce a Měsíce ve zvěrokruhu a malá napůl stříbrná, napůl černá kulička znázorňovala fázi Měsíce.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Na zadní straně sloužily dva velké spirálové ciferníky jako kalendáře. První sledoval [[Metonův cyklus]], který sladil 19 slunečních roků a 235 měsíčních měsíců. Druhý sledoval [[saros]], cyklus 223 měsíců, po němž se zatmění opakují. Umožňoval předpovídat zatmění Slunce i Měsíce, s hodinou a někdy i očekávanou barvou.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Nejpozoruhodnější je malé zařízení se čepem a drážkou, které mění rychlost Měsíce v průběhu měsíce přesně tak, jak to popisuje teorie astronoma [[Hipparchos]]. Vedlejší ciferník dokonce uváděl rok konání velkých řeckých her, včetně olympijských.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Předmět takové složitosti není znám dříve než **astronomické hodiny** Evropy 14. století, tedy téměř o 1.500 let později.",
+          "type": "funFact"
+        }
+      ]
+    },
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_p4",
+      "free": false,
+      "title": "Co nás učí",
+      "blocks": [
+        {
+          "text": "Antikythérský mechanismus ukazuje, že se Řekové nespokojili s teoriemi o obloze: uměli je přeměnit v přesné mechanismy. Staré texty zmiňovaly takové přístroje, které přisuzovaly Archimedovi nebo Poseidoniovi, ale nikdo tomu před objevem vraku pořádně nevěřil.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Připomíná také křehkost těchto znalostí. Dílny schopné ho vyrobit zmizely, aniž by zanechaly jiný známý exemplář. Fragmenty jsou dnes vystaveny v Národním archeologickém muzeu v Aténách a vědci stále předkládají nové rekonstrukce, jako tu, kterou v roce 2021 publikoval tým z University College v Londýně.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Vyrobený ve **2. století př. n. l.** a nalezený v roce 1901 ve vraku je antikythérský mechanismus astronomický kalkulátor s ozubenými koly. Předpovídal zatmění a sledoval nebeské kalendáře, což byl výkon bez obdoby po patnáct století.",
+          "type": "takeaway"
+        }
+      ]
+    }
+  ],
+  "subtitle": "2. století př. n. l.",
+  "description": "V roce 1901 vytáhli lovci hub z řeckého vraku bronzový blok sežraný mořem. Skrýval nejsložitější mechanismus starověku: stroj na výpočet pohybu nebeských těles.",
+  "subcategory": "Objevy, které změnily svět"
+}

@@ -1,0 +1,151 @@
+{
+  "id": "course_312_qu_est_ce_que_la_machine_d_anticythere",
+  "hero": {
+    "hook": "Een gecorrodeerd blok brons lag tweeduizend jaar op de zeebodem te wachten tot iemand begreep dat het verduisteringen kon voorspellen.",
+    "image": "qu_est_ce_que_la_machine_d_anticythere",
+    "ratio": "16:9",
+    "credit": {
+      "title": "NAMA Machine d'Anticythère 1",
+      "author": "Marsyas",
+      "source": "Wikimedia Commons",
+      "license": "CC BY 2.5"
+    }
+  },
+  "title": "Wat is het mechanisme van Antikythera?",
+  "sources": [
+    {
+      "text": "T. Freeth et al., « Decoding the ancient Greek astronomical calculator known as the Antikythera Mechanism », Nature, vol. 444, 2006, p. 587-591."
+    },
+    {
+      "text": "T. Freeth et al., « A Model of the Cosmos in the ancient Greek Antikythera Mechanism », Scientific Reports, vol. 11, 2021."
+    },
+    {
+      "text": "D. de Solla Price, Gears from the Greeks: The Antikythera Mechanism, a Calendar Computer from ca. 80 B.C., Transactions of the American Philosophical Society, 1974."
+    },
+    {
+      "text": "A. Jones, A Portable Cosmos: Revealing the Antikythera Mechanism, Oxford University Press, 2017."
+    }
+  ],
+  "subject": "sciences",
+  "sections": [
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_intro",
+      "free": true,
+      "title": "Inleiding",
+      "blocks": [
+        {
+          "text": "In het voorjaar van **1900** schuilen sponsvissers van het eiland Symi bij Antikythera voor een storm, een klein eilandje tussen Kreta en de Peloponnesos. Een van hen ontdekt bij een duik een antiek wrak bedekt met beelden. Een jaar lang bergen de Grieken bronzen kunstwerken, marmeren beelden en amfora's.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Tussen de vondsten zit een blok brons en hout ter grootte van een schoenendoos waar niemand aandacht aan schenkt. In **1902** ziet archeoloog Valerios Stais een tandrad in de corrosie. Hij kijkt naar het raadselachtigste voorwerp uit de Griekse oudheid.",
+          "type": "paragraph"
+        }
+      ]
+    },
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_p1",
+      "free": false,
+      "title": "Een scheepswrak en een blok brons",
+      "blocks": [
+        {
+          "text": "Het schip zonk rond **60 v.Chr.**, geladen met Griekse kunstwerken die waarschijnlijk voor Romeinse kopers waren bestemd. Het mechanisme zelf is ouder: het werd vermoedelijk in de **2e eeuw v.Chr.** gemaakt in de Griekse wereld, mogelijk op Rhodos of in Korinthe.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Het is in **82 fragmenten** bij ons gekomen, waarvan zeven grote. De zee heeft zijn werk gedaan: het hout is verdwenen, het brons is veranderd in een groenachtige, broze massa. Lange tijd wist niemand waarvoor die tandraderen dienden. Sommigen betwijfelden zelfs of zo'n voorwerp wel antiek kon zijn.",
+          "type": "paragraph"
+        },
+        {
+          "text": "In **1976** dook commandant Cousteau op het wrak en haalde munten op die in Pergamon en Efeze geslagen waren. Dankzij die munten kon de scheepsramp gedateerd worden.",
+          "type": "funFact"
+        }
+      ]
+    },
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_p2",
+      "free": false,
+      "title": "Wat de corrosie verbergt",
+      "blocks": [
+        {
+          "text": "De eerste die het voorwerp serieus nam, was wetenschapshistoricus **Derek de Solla Price**. In 1959 presenteerde hij het als 'een antieke Griekse computer'. Met natuurkundige Charalambos Karakalos maakte hij gammastraalbeelden en telde de tanden van de raderen. In 1974 publiceerde hij een eerste reconstructie.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Het keerpunt kwam in **2005**. Een internationaal team liet een scanner van acht ton naar Athene komen en maakte een [[tomografie]] van de fragmenten. De beelden onthulden laag voor laag het binnenste van het blok, en meer dan 3.000 letters inscripties: een echte gebruiksaanwijzing gegraveerd in het brons.",
+          "type": "paragraph"
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1900",
+              "title": "Ontdekking van het wrak",
+              "detail": "Sponsvissers van Symi ontdekken het wrak voor de kust van Antikythera."
+            },
+            {
+              "date": "1902",
+              "title": "Een tandrad",
+              "detail": "Valerios Stais ziet een tandwiel in een gecorrodeerd blok in het museum van Athene."
+            },
+            {
+              "date": "1959",
+              "title": "Een antieke computer",
+              "detail": "Derek de Solla Price publiceert de eerste gedetailleerde studie van het mechanisme."
+            },
+            {
+              "date": "2006",
+              "title": "De code ontcijferd",
+              "detail": "De tomografiebeelden maken het mogelijk de inscripties te lezen en de wijzerplaten te begrijpen."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_p3",
+      "free": false,
+      "title": "Een hemelkalender in een doos",
+      "blocks": [
+        {
+          "text": "Het mechanisme bevat een dertigtal **bronzen tandwielen** die bewaard zijn gebleven, en er waren er meer. Een zwengel aan de zijkant zette het geheel in beweging. Aan de voorkant toonde een wijzerplaat de stand van de zon en de maan in de dierenriem, en een klein half zilver, half zwart balletje gaf de maanfase aan.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Aan de achterkant dienden twee grote spiraalvormige wijzerplaten als kalenders. De eerste volgde de [[cyclus van Meton]], die 19 zonnejaren laat samenvallen met 235 maanmaanden. De tweede volgde de [[saros]], een cyclus van 223 maanmaanden waarna de verduisteringen zich herhalen. Het mechanisme kon zons- en maansverduisteringen aankondigen, met het tijdstip en soms de verwachte kleur.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Het meest verbazingwekkende is een klein mechanisme met pin en gleuf dat de snelheid van de maan in de loop van de maand laat variëren, precies zoals in de theorie van astronoom [[Hipparchus]]. Een aanvullende wijzerplaat gaf zelfs het jaar van de grote Griekse spelen aan, waaronder die van Olympia.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Geen enkel voorwerp van dergelijke complexiteit is bekend vóór de **astronomische klokken** van Europa in de 14e eeuw, dus bijna 1.500 jaar later.",
+          "type": "funFact"
+        }
+      ]
+    },
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_p4",
+      "free": false,
+      "title": "Wat het ons leert",
+      "blocks": [
+        {
+          "text": "Het mechanisme van Antikythera toont aan dat de Grieken zich niet tot theorieën over de hemel beperkten: ze konden ze in precisiemechanismen omzetten. Antieke teksten vermeldden dergelijke apparaten, toegeschreven aan Archimedes of Posidonius, maar niemand geloofde daar echt in vóór de ontdekking van het wrak.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Het herinnert ook aan de kwetsbaarheid van die kennis. De werkplaatsen die het konden bouwen, zijn verdwenen zonder een ander bekend exemplaar achter te laten. De fragmenten worden vandaag tentoongesteld in het Nationaal Archeologisch Museum van Athene, en onderzoekers presenteren nog steeds nieuwe reconstructies, zoals die gepubliceerd in 2021 door een team van University College London.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Gemaakt in de **2e eeuw v.Chr.** en in **1901** in een wrak teruggevonden, is het mechanisme van Antikythera een astronomische rekenmachine met tandwielen. Het voorspelde verduisteringen en volgde de hemelkalenders, een prestatie die vijftien eeuwen lang ongeëvenaard bleef.",
+          "type": "takeaway"
+        }
+      ]
+    }
+  ],
+  "subtitle": "2e eeuw v.Chr.",
+  "description": "In 1901 haalden sponsvissers een blok brons uit een Grieks scheepswrak. Het bleek het meest complexe mechanisme uit de oudheid te zijn: een machine die de hemel kon berekenen.",
+  "subcategory": "Ontdekkingen die de wereld veranderden"
+}

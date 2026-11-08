@@ -1,0 +1,151 @@
+{
+  "id": "course_312_qu_est_ce_que_la_machine_d_anticythere",
+  "hero": {
+    "hook": "Syöpynyt pronssilaite odotti kaksituhatta vuotta merenpohjassa, että joku ymmärtäisi sen laskevan pimennykset.",
+    "image": "qu_est_ce_que_la_machine_d_anticythere",
+    "ratio": "16:9",
+    "credit": {
+      "title": "NAMA Machine d'Anticythère 1",
+      "author": "Marsyas",
+      "source": "Wikimedia Commons",
+      "license": "CC BY 2.5"
+    }
+  },
+  "title": "Mikä on Antikytherin kone?",
+  "sources": [
+    {
+      "text": "T. Freeth et al., « Decoding the ancient Greek astronomical calculator known as the Antikythera Mechanism », Nature, vol. 444, 2006, p. 587-591."
+    },
+    {
+      "text": "T. Freeth et al., « A Model of the Cosmos in the ancient Greek Antikythera Mechanism », Scientific Reports, vol. 11, 2021."
+    },
+    {
+      "text": "D. de Solla Price, Gears from the Greeks: The Antikythera Mechanism, a Calendar Computer from ca. 80 B.C., Transactions of the American Philosophical Society, 1974."
+    },
+    {
+      "text": "A. Jones, A Portable Cosmos: Revealing the Antikythera Mechanism, Oxford University Press, 2017."
+    }
+  ],
+  "subject": "sciences",
+  "sections": [
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_intro",
+      "free": true,
+      "title": "Johdanto",
+      "blocks": [
+        {
+          "text": "Keväällä **1900** Symin saaren sienenpyytäjät etsivät suojaa myrskystä Antikytherin luona, pienellä saarella Kreetan ja Peloponnesoksen välissä. Sukeltaessaan eräs heistä löytää antiikin hylkyä, joka on täynnä patsaita. Vuoden ajan kreikkalaiset nostavat ylös pronssiesineitä, marmoripatsaita ja amforoita.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Löytöjen joukossa kenkälaatikon kokoinen puu- ja pronssilaite ei kiinnosta ketään. Vuonna **1902** arkeologi Valerios Stais huomaa syöpymään jumittuneen hammaspyörän. Hän on juuri katsonut antiikin Kreikan salaperäisintä esinettä.",
+          "type": "paragraph"
+        }
+      ]
+    },
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_p1",
+      "free": false,
+      "title": "Hylky ja pronssikiekko",
+      "blocks": [
+        {
+          "text": "Laiva upposi noin vuonna **60 eKr.** lastattuna kreikkalaisilla taideteoksilla, jotka oli todennäköisesti tarkoitettu roomalaisille ostajille. Itse laite on vanhempi: se valmistettiin luultavasti **100-luvulla eKr.** kreikkalaisessa maailmassa, kenties Rodoksella tai Korintossa.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Se on säilynyt **82 palasena**, joista seitsemän on isoja. Meri on tehnyt tehtävänsä: puu on kadonnut, pronssi on muuttunut vihertäväksi ja hauraaksi massaksi. Pitkään kukaan ei osaa sanoa, mihin nämä hammaspyörät palvelivat. Jotkut epäilevät, voiko tällainen esine olla edes antiikin aikainen.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Vuonna **1976** komentaja Cousteau sukeltaa hylyn luokse ja nostaa sieltä Pergamossa ja Efesoksessa lyötyjä kolikoita. Niiden avulla haaksirikon ajoitus voidaan määrittää.",
+          "type": "funFact"
+        }
+      ]
+    },
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_p2",
+      "free": false,
+      "title": "Mitä syöpymä kätkee",
+      "blocks": [
+        {
+          "text": "Ensimmäinen, joka ottaa esineen vakavasti, on tiedehistorioitsija **Derek de Solla Price**. Vuonna 1959 hän esittelee sen \"antiikin kreikkalaisena tietokoneena\". Fyysikko Charalambos Karakalosin kanssa hän röntgenkuvaa sen gammasäteillä ja laskee pyörien hampaat. Vuonna 1974 hän julkaisee ensimmäisen jäljennöksen.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Käänne tapahtuu vuonna **2005**. Kansainvälinen tutkijaryhmä tuo Ateenaan kahdeksan tonnin skannerin ja tekee palasten [[tomografian]]. Kuvat paljastavat kiekon sisuksen kerros kerrokselta ja yli 3 000 kirjoitusmerkkiä: todellisen käyttöohjeen, joka on kaiverrettu pronssiin.",
+          "type": "paragraph"
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1900",
+              "title": "Hylky löytyy",
+              "detail": "Symin sienenpyytäjät löytävät hylkyä Antikytherin edustalta."
+            },
+            {
+              "date": "1902",
+              "title": "Hammaspyörä",
+              "detail": "Valerios Stais huomaa hammaspyörän syöpyneessä kiekossa Ateenan museossa."
+            },
+            {
+              "date": "1959",
+              "title": "Antiikin tietokone",
+              "detail": "Derek de Solla Price julkaisee ensimmäisen yksityiskohtaisen tutkimuksen laitteesta."
+            },
+            {
+              "date": "2006",
+              "title": "Koodi murtuu",
+              "detail": "Tomografiakuvat paljastavat kirjoitukset ja selittävät kellotaulut."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_p3",
+      "free": false,
+      "title": "Taivaan kalenteri laatikossa",
+      "blocks": [
+        {
+          "text": "Laitteessa on noin kolmekymmentä säilynyttä **pronssihammasratasta**, ja niitä oli alun perin enemmän. Sivussa oleva kampi pyöritti kokonaisuutta. Edessä kellotaulu näytti Auringon ja Kuun sijainnin eläinradassa, ja pieni puoliksi hopeinen, puoliksi musta pallo osoitti Kuun vaiheen.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Takana kaksi suurta spiraalimaista kellotaulua toimivat kalentereina. Ensimmäinen seurasi [[Metonin kiertoa]], joka yhteensovittaa 19 aurinkoa ja 235 kuukautta. Toinen seurasi [[saroksen]]-kiertoaikaa, 223 kuukauden jaksoa, jonka jälkeen pimennykset toistuvat. Sen avulla voitiin ennustaa Auringon ja Kuun pimennykset, niiden ajankohta ja joskus odotettu väri.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Hämmästyttävin on pieni tappi- ja uurrelaite, joka muuttaa Kuun nopeutta kuukauden aikana, täsmälleen kuten tähtitieteilijä [[Hipparkhoksen]] teoriassa. Erillinen kellotaulu näytti jopa Kreikan suurten kisojen vuoden, mukaan lukien Olympian kisat.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Yhtä monimutkaista esinettä ei tunneta ennen **tähtitieteen kelloja**, jotka ilmestyivät Eurooppaan 1300-luvulla, siis lähes 1 500 vuotta myöhemmin.",
+          "type": "funFact"
+        }
+      ]
+    },
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_p4",
+      "free": false,
+      "title": "Mitä se opettaa meille",
+      "blocks": [
+        {
+          "text": "Antikytherin kone osoittaa, että kreikkalaiset eivät tyytyneet pelkkiin teorioihin taivaasta: he osasivat muuttaa ne tarkkuuslaitteiksi. Muinaiset tekstit mainitsivat tällaisia laitteita, jotka oli liitetty Arkhimedeeseen tai Posidoniokseen, mutta kukaan ei oikeastaan uskonut niihin ennen hylkylöydön tekemistä.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Se muistuttaa myös tämän tiedon hauraudesta. Työpajat, jotka pystyivät sen rakentamaan, katosivat jättämättä muita tunnettuja kappaleita. Palat ovat nykyään esillä Ateenan kansallisessa arkeologisessa museossa, ja tutkijat esittävät yhä uusia jäljennöksiä, kuten Lontoon yliopiston tutkijaryhmän vuonna 2021 julkaiseman.",
+          "type": "paragraph"
+        },
+        {
+          "text": "**100-luvulla eKr.** valmistettu ja vuonna 1901 hylystä löydetty Antikytherin kone on hammasrattainen tähtitieteen laskukone. Se ennusti pimennykset ja seurasi taivaan kalentereita, saavutus, jolle ei ollut vertaa viiteentoista vuosisataan.",
+          "type": "takeaway"
+        }
+      ]
+    }
+  ],
+  "subtitle": "100-luku eKr.",
+  "description": "Vuonna 1901 sienenpyytäjät nostavat kreikkalaisesta hylystä meren syövyttämän pronssikiekon. Se kätkee antiikin monimutkaisimman laitteen: koneen, joka laskee taivaan liikkeitä.",
+  "subcategory": "Maailmaa muuttaneet löydöt"
+}

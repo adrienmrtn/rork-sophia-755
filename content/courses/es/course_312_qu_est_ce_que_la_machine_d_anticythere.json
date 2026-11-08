@@ -1,0 +1,151 @@
+{
+  "id": "course_312_qu_est_ce_que_la_machine_d_anticythere",
+  "hero": {
+    "hook": "Un bloque de bronce corroído esperó dos mil años en el fondo del mar a que se entendiera que calculaba los eclipses.",
+    "image": "qu_est_ce_que_la_machine_d_anticythere",
+    "ratio": "16:9",
+    "credit": {
+      "title": "NAMA Machine d'Anticythère 1",
+      "author": "Marsyas",
+      "source": "Wikimedia Commons",
+      "license": "CC BY 2.5"
+    }
+  },
+  "title": "¿Qué es la máquina de Anticitera?",
+  "sources": [
+    {
+      "text": "T. Freeth et al., « Decoding the ancient Greek astronomical calculator known as the Antikythera Mechanism », Nature, vol. 444, 2006, p. 587-591."
+    },
+    {
+      "text": "T. Freeth et al., « A Model of the Cosmos in the ancient Greek Antikythera Mechanism », Scientific Reports, vol. 11, 2021."
+    },
+    {
+      "text": "D. de Solla Price, Gears from the Greeks: The Antikythera Mechanism, a Calendar Computer from ca. 80 B.C., Transactions of the American Philosophical Society, 1974."
+    },
+    {
+      "text": "A. Jones, A Portable Cosmos: Revealing the Antikythera Mechanism, Oxford University Press, 2017."
+    }
+  ],
+  "subject": "sciences",
+  "sections": [
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_intro",
+      "free": true,
+      "title": "Introducción",
+      "blocks": [
+        {
+          "text": "En la primavera de **1900**, unos pescadores de esponjas de la isla de Symi se refugiaron de una tormenta cerca de Anticitera, un islote entre Creta y el Peloponeso. Al bucear, uno de ellos descubrió un naufragio antiguo cubierto de estatuas. Durante un año, los griegos extrajeron bronces, mármoles y ánforas.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Entre los hallazgos, un bloque de bronce y madera del tamaño de una caja de zapatos no interesó a nadie. En **1902**, el arqueólogo Valerios Stais notó una rueda dentada atrapada en la corrosión. Acababa de posar los ojos sobre el objeto más misterioso de la Antigüedad griega.",
+          "type": "paragraph"
+        }
+      ]
+    },
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_p1",
+      "free": false,
+      "title": "Un naufragio y un bloque de bronce",
+      "blocks": [
+        {
+          "text": "El barco se hundió hacia el **60 a. C.**, cargado de obras de arte griegas probablemente destinadas a compradores romanos. El mecanismo es más antiguo: fue fabricado sin duda en el **siglo II antes de nuestra era**, en el mundo griego, quizá en Rodas o en Corinto.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Nos ha llegado en **82 fragmentos**, de los cuales siete son grandes. El mar hizo su obra: la madera desapareció, el bronce se convirtió en una masa verdosa y quebradiza. Durante mucho tiempo, nadie supo decir para qué servían esas ruedas dentadas. Algunos dudaron incluso de que un objeto así pudiera ser antiguo.",
+          "type": "paragraph"
+        },
+        {
+          "text": "En **1976**, el comandante Cousteau buceó en el naufragio y sacó monedas acuñadas en Pérgamo y Éfeso. Fueron ellas las que permitieron fechar el hundimiento.",
+          "type": "funFact"
+        }
+      ]
+    },
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_p2",
+      "free": false,
+      "title": "Lo que oculta la corrosión",
+      "blocks": [
+        {
+          "text": "El primero en tomarse el objeto en serio fue el historiador de la ciencia **Derek de Solla Price**. En 1959 lo presentó como \"una computadora griega antigua\". Con el físico Charalambos Karakalos, lo radiografió con rayos gamma y contó los dientes de las ruedas. En 1974 publicó una primera reconstrucción.",
+          "type": "paragraph"
+        },
+        {
+          "text": "El giro llegó en **2005**. Un equipo internacional llevó a Atenas un escáner de ocho toneladas y realizó una [[tomografía]] de los fragmentos. Las imágenes revelaron el interior del bloque, capa por capa, y más de 3000 caracteres de inscripciones: un verdadero manual de uso grabado en el bronce.",
+          "type": "paragraph"
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1900",
+              "title": "Descubrimiento del naufragio",
+              "detail": "Unos pescadores de esponjas de Symi localizan el naufragio frente a Anticitera."
+            },
+            {
+              "date": "1902",
+              "title": "Una rueda dentada",
+              "detail": "Valerios Stais nota un engranaje en un bloque corroído en el museo de Atenas."
+            },
+            {
+              "date": "1959",
+              "title": "Una computadora antigua",
+              "detail": "Derek de Solla Price publica el primer estudio detallado del mecanismo."
+            },
+            {
+              "date": "2006",
+              "title": "El código descifrado",
+              "detail": "Las imágenes de tomografía permiten leer las inscripciones y entender los cuadrantes."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_p3",
+      "free": false,
+      "title": "Un calendario del cielo en una caja",
+      "blocks": [
+        {
+          "text": "El mecanismo contiene una treintena de **engranajes de bronce** que subsisten, y tenía más. Una manivela lateral hacía girar el conjunto. En la parte delantera, un cuadrante mostraba la posición del Sol y de la Luna en el zodiaco, y una pequeña esfera mitad plateada mitad negra indicaba la fase de la Luna.",
+          "type": "paragraph"
+        },
+        {
+          "text": "En la parte trasera, dos grandes cuadrantes en espiral servían de calendarios. El primero seguía [[el ciclo de Metón]], que hace coincidir 19 años solares y 235 meses lunares. El segundo seguía [[el saros]], un ciclo de 223 meses tras el cual los eclipses se repiten. Permitía anunciar los eclipses de Sol y de Luna, con la hora y a veces el color esperado.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Lo más asombroso es un pequeño dispositivo de pasador y ranura que hace variar la velocidad de la Luna a lo largo del mes, exactamente como en la teoría del astrónomo [[Hiparco]]. Un cuadrante anexo daba incluso el año de los grandes juegos griegos, incluidos los de Olimpia.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Ningún objeto de tal complejidad es conocido antes de los **relojes astronómicos** de la Europa del siglo XIV, es decir, casi 1500 años después.",
+          "type": "funFact"
+        }
+      ]
+    },
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_p4",
+      "free": false,
+      "title": "Lo que nos enseña",
+      "blocks": [
+        {
+          "text": "La máquina de Anticitera muestra que los griegos no se contentaban con teorías sobre el cielo: sabían transformarlas en mecanismos de precisión. Los textos antiguos mencionaban tales aparatos, atribuidos a Arquímedes o a Posidonio, pero nadie les creía de verdad antes del descubrimiento del naufragio.",
+          "type": "paragraph"
+        },
+        {
+          "text": "También recuerda la fragilidad de ese saber. Los talleres capaces de construirla desaparecieron sin dejar otro ejemplar conocido. Los fragmentos están hoy expuestos en el Museo Arqueológico Nacional de Atenas, y los investigadores proponen aún nuevas reconstrucciones, como la publicada en 2021 por un equipo del University College de Londres.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Fabricada en el **siglo II a. C.** y hallada en 1901 en un naufragio, la máquina de Anticitera es un calculador astronómico de engranajes. Predecía los eclipses y seguía los calendarios del cielo, una hazaña sin equivalente durante quince siglos.",
+          "type": "takeaway"
+        }
+      ]
+    }
+  ],
+  "subtitle": "Siglo II a. C.",
+  "description": "En 1901, unos pescadores de esponjas sacaron de un naufragio griego un bloque de bronce corroído por el mar. Escondía el mecanismo más complejo de la Antigüedad: una máquina para calcular el cielo.",
+  "subcategory": "Descubrimientos que cambiaron el mundo"
+}

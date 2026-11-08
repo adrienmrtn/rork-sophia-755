@@ -1,0 +1,151 @@
+{
+  "id": "course_312_qu_est_ce_que_la_machine_d_anticythere",
+  "hero": {
+    "hook": "Kos razjedenega brona je dva tisoč let na dnu morja čakal, da bodo razumeli, da je računal mrke.",
+    "image": "qu_est_ce_que_la_machine_d_anticythere",
+    "ratio": "16:9",
+    "credit": {
+      "title": "NAMA Machine d'Anticythère 1",
+      "author": "Marsyas",
+      "source": "Wikimedia Commons",
+      "license": "CC BY 2.5"
+    }
+  },
+  "title": "Kaj je antikiterski mehanizem?",
+  "sources": [
+    {
+      "text": "T. Freeth et al., « Decoding the ancient Greek astronomical calculator known as the Antikythera Mechanism », Nature, vol. 444, 2006, p. 587-591."
+    },
+    {
+      "text": "T. Freeth et al., « A Model of the Cosmos in the ancient Greek Antikythera Mechanism », Scientific Reports, vol. 11, 2021."
+    },
+    {
+      "text": "D. de Solla Price, Gears from the Greeks: The Antikythera Mechanism, a Calendar Computer from ca. 80 B.C., Transactions of the American Philosophical Society, 1974."
+    },
+    {
+      "text": "A. Jones, A Portable Cosmos: Revealing the Antikythera Mechanism, Oxford University Press, 2017."
+    }
+  ],
+  "subject": "sciences",
+  "sections": [
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_intro",
+      "free": true,
+      "title": "Uvod",
+      "blocks": [
+        {
+          "text": "Spomladi **1900** se lovci na morske spužve z otoka Simi zatečejo pred nevihto blizu Antikitere, otočka med Kreto in Peloponesom. Med potapljanjem eden od njih odkrije antično razbitino, pokrito s kipi. Eno leto Grki iz nje dvigajo bronaste kipe, marmorje in amfore.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Med najdbami je kos brona in lesa, velik kot škatla za čevlje, za katerega se nihče ne zanima. Leta **1902** arheolog Valerios Stais opazi zobato kolo, ujeto v korozijo. Pravkar je zagledal najbolj skrivnosten predmet grške antike.",
+          "type": "paragraph"
+        }
+      ]
+    },
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_p1",
+      "free": false,
+      "title": "Razbitina in bronasti kos",
+      "blocks": [
+        {
+          "text": "Ladja je potonila okoli **60 pr. n. št.**, naložena z grškimi umetninami, verjetno namenjenimi rimskim kupcem. Mehanizem sam pa je starejši: narejen je bil najverjetneje v **2. stoletju pr. n. št.** v grškem svetu, morda na Rodosu ali v Korintu.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Do nas je prišel v **82 kosih**, od tega sedem velikih. Morje je opravilo svoje: les je izginil, bron se je spremenil v zelenkasto in krhko gmoto. Dolgo nihče ne ve reči, čemu so služila ta zobata kolesa. Nekateri celo dvomijo, da je tak predmet sploh lahko antičen.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Leta **1976** se komandant Cousteau potopi do razbitine in z nje dvigne kovance, kovane v Pergamu in Efezu. Prav ti omogočijo datirati brodolom.",
+          "type": "funFact"
+        }
+      ]
+    },
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_p2",
+      "free": false,
+      "title": "Kaj skriva korozija",
+      "blocks": [
+        {
+          "text": "Prvi, ki predmet vzame resno, je zgodovinar znanosti **Derek de Solla Price**. Leta 1959 ga predstavi kot »starogrški računalnik«. S fizikom Charalambosom Karakalosom ga z žarki gama rentgensko presname in prešteje zobe koles. Leta 1974 objavi prvo rekonstrukcijo.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Prelomnica nastopi leta **2005**. Mednarodna ekipa v Atene pripelje tomograf, težak osem ton, in opravi [[tomografijo]] kosov. Slike razkrijejo notranjost kosa, plast za plastjo, in več kot 3000 znakov napisov: pravi navodila za uporabo, vgravirana v bron.",
+          "type": "paragraph"
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1900",
+              "title": "Odkritje razbitine",
+              "detail": "Lovci na morske spužve iz Simija opazijo razbitino ob obali Antikitere."
+            },
+            {
+              "date": "1902",
+              "title": "Zobato kolo",
+              "detail": "Valerios Stais opazi zobnik v razjedenem kosu v atenskem muzeju."
+            },
+            {
+              "date": "1959",
+              "title": "Antični računalnik",
+              "detail": "Derek de Solla Price objavi prvo podrobno študijo mehanizma."
+            },
+            {
+              "date": "2006",
+              "title": "Razvozlana koda",
+              "detail": "Tomografske slike omogočijo prebrati napise in razumeti številčnice."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_p3",
+      "free": false,
+      "title": "Koledar neba v škatli",
+      "blocks": [
+        {
+          "text": "Mehanizem vsebuje okoli trideset **bronastih zobnikov**, ki so se ohranili, bilo pa jih je več. Ročica na strani je vrtela celoto. Spredaj je številčnica kazala položaj Sonca in Lune v zodiaku, majhna kroglica, pol srebrna pol črna, pa je kazala lunino meno.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Zadaj sta dve veliki spiralni številčnici služili kot koledarja. Prva je sledila [[Metonov cikel]], ki ujema 19 sončnih let in 235 luninih mesecev. Druga je sledila [[saros]], ciklu 223 luninih mesecev, po katerem se mrki ponovijo. Omogočal je napovedati mrke Sonca in Lune, z uro in včasih pričakovano barvo.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Najbolj presenetljiva je majhna naprava s zatičem in režo, ki spreminja hitrost Lune skozi mesec, natanko tako kot v teoriji astronoma [[Hiparh]]. Stranska številčnica je celo kazala leto velikih grških iger, tudi tistih v Olimpiji.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Noben predmet takšne zapletenosti ni znan pred **astronomskimi urami** v Evropi 14. stoletja, torej skoraj 1500 let pozneje.",
+          "type": "funFact"
+        }
+      ]
+    },
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_p4",
+      "free": false,
+      "title": "Kaj nas uči",
+      "blocks": [
+        {
+          "text": "Antikiterski mehanizem kaže, da se Grki niso zadovoljevali s teorijami o nebu: znali so jih spremeniti v natančne stroje. Stari zapisi so omenjali take naprave, pripisane Arhimedu ali Poseidoniju, a nihče jim ni zares verjel pred odkritjem razbitine.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Opominja tudi na krhkost tega znanja. Delavnice, zmožne ga zgraditi, so izginile, ne da bi pustile drug znan primerek. Kosi so danes razstavljeni v Narodnem arheološkem muzeju v Atenah, raziskovalci pa še naprej predlagajo nove rekonstrukcije, kot je tista, ki jo je leta 2021 objavila ekipa iz University College v Londonu.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Antikiterski mehanizem, narejen v **2. stoletju pr. n. št.** in najden leta 1901 v razbitini, je astronomski računalnik z zobniki. Napovedoval je mrke in sledil koledarjem neba, dosežek brez enakovrednika petnajst stoletij.",
+          "type": "takeaway"
+        }
+      ]
+    }
+  ],
+  "subtitle": "2. stoletje pr. n. št.",
+  "description": "Leta 1901 lovci na morske spužve iz grške razbitine potegnejo kos brona, ki ga je razjedlo morje. Skriva najzapletenejši mehanizem antike: stroj za računanje neba.",
+  "subcategory": "Odkritja, ki so spremenila svet"
+}

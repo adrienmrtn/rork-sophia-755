@@ -1,0 +1,151 @@
+{
+  "id": "course_312_qu_est_ce_que_la_machine_d_anticythere",
+  "hero": {
+    "hook": "A corroded bronze block waited two thousand years at the bottom of the sea for us to understand it calculated eclipses.",
+    "image": "qu_est_ce_que_la_machine_d_anticythere",
+    "ratio": "16:9",
+    "credit": {
+      "title": "NAMA Machine d'Anticythère 1",
+      "author": "Marsyas",
+      "source": "Wikimedia Commons",
+      "license": "CC BY 2.5"
+    }
+  },
+  "title": "What Is the Antikythera Mechanism?",
+  "sources": [
+    {
+      "text": "T. Freeth et al., « Decoding the ancient Greek astronomical calculator known as the Antikythera Mechanism », Nature, vol. 444, 2006, p. 587-591."
+    },
+    {
+      "text": "T. Freeth et al., « A Model of the Cosmos in the ancient Greek Antikythera Mechanism », Scientific Reports, vol. 11, 2021."
+    },
+    {
+      "text": "D. de Solla Price, Gears from the Greeks: The Antikythera Mechanism, a Calendar Computer from ca. 80 B.C., Transactions of the American Philosophical Society, 1974."
+    },
+    {
+      "text": "A. Jones, A Portable Cosmos: Revealing the Antikythera Mechanism, Oxford University Press, 2017."
+    }
+  ],
+  "subject": "sciences",
+  "sections": [
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_intro",
+      "free": true,
+      "title": "Introduction",
+      "blocks": [
+        {
+          "text": "In the spring of **1900**, sponge divers from the island of Symi took shelter from a storm near Antikythera, a small island between Crete and the Peloponnese. While diving, one of them discovered an ancient shipwreck covered with statues. For a year, the Greeks brought up bronzes, marbles, and amphorae.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Among the finds, a block of bronze and wood the size of a shoebox interested no one. In **1902**, the archaeologist Valerios Stais noticed a gear wheel caught in the corrosion. He had just laid eyes on the most mysterious object of Greek antiquity.",
+          "type": "paragraph"
+        }
+      ]
+    },
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_p1",
+      "free": false,
+      "title": "A Shipwreck and a Bronze Block",
+      "blocks": [
+        {
+          "text": "The ship sank around **60 BC**, loaded with Greek artworks probably destined for Roman buyers. The mechanism itself is older: it was probably made in the **2nd century BC**, in the Greek world, perhaps at Rhodes or Corinth.",
+          "type": "paragraph"
+        },
+        {
+          "text": "It has come down to us in **82 fragments**, including seven large ones. The sea has done its work: the wood has disappeared, the bronze has turned into a greenish, brittle mass. For a long time, no one could say what these gear wheels were for. Some even doubted that such an object could be ancient.",
+          "type": "paragraph"
+        },
+        {
+          "text": "In **1976**, Commander Cousteau dived on the wreck and brought up coins minted in Pergamon and Ephesus. These are what allowed the shipwreck to be dated.",
+          "type": "funFact"
+        }
+      ]
+    },
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_p2",
+      "free": false,
+      "title": "What the Corrosion Hides",
+      "blocks": [
+        {
+          "text": "The first to take the object seriously was the historian of science **Derek de Solla Price**. In 1959, he presented it as \"an ancient Greek computer.\" With the physicist Charalambos Karakalos, he X-rayed it with gamma rays and counted the teeth on the wheels. In 1974, he published an initial reconstruction.",
+          "type": "paragraph"
+        },
+        {
+          "text": "The turning point came in **2005**. An international team brought an eight-ton scanner to Athens and performed a [[tomography]] of the fragments. The images revealed the interior of the block, layer by layer, and more than 3,000 characters of inscriptions: a true instruction manual engraved in bronze.",
+          "type": "paragraph"
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1900",
+              "title": "Discovery of the shipwreck",
+              "detail": "Sponge divers from Symi spotted the wreck off Antikythera."
+            },
+            {
+              "date": "1902",
+              "title": "A gear wheel",
+              "detail": "Valerios Stais noticed a gear in a corroded block at the Athens museum."
+            },
+            {
+              "date": "1959",
+              "title": "An ancient computer",
+              "detail": "Derek de Solla Price published the first detailed study of the mechanism."
+            },
+            {
+              "date": "2006",
+              "title": "The code deciphered",
+              "detail": "Tomography images made it possible to read the inscriptions and understand the dials."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_p3",
+      "free": false,
+      "title": "A Calendar of the Heavens in a Box",
+      "blocks": [
+        {
+          "text": "The mechanism contains about thirty **bronze gears** that survive, and it had more. A crank on the side turned the whole assembly. On the front, a dial showed the position of the Sun and Moon in the zodiac, and a small half-silver, half-black ball indicated the phase of the Moon.",
+          "type": "paragraph"
+        },
+        {
+          "text": "On the back, two large spiral dials served as calendars. The first followed [[the Metonic cycle]], which makes 19 solar years coincide with 235 lunar months. The second followed [[the saros]], a cycle of 223 months after which eclipses repeat. It made it possible to predict eclipses of the Sun and Moon, with the time and sometimes the expected color.",
+          "type": "paragraph"
+        },
+        {
+          "text": "The most remarkable feature is a small pin-and-slot device that varies the Moon's speed throughout the month, exactly as in the theory of the astronomer [[Hipparchus]]. An auxiliary dial even gave the year of the great Greek games, including those at Olympia.",
+          "type": "paragraph"
+        },
+        {
+          "text": "No object of such complexity is known before the **astronomical clocks** of 14th-century Europe, nearly 1,500 years later.",
+          "type": "funFact"
+        }
+      ]
+    },
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_p4",
+      "free": false,
+      "title": "What It Teaches Us",
+      "blocks": [
+        {
+          "text": "The Antikythera mechanism shows that the Greeks were not content with theories about the heavens: they knew how to transform them into precision mechanisms. Ancient texts mentioned such devices, attributed to Archimedes or Posidonius, but no one really believed them before the discovery of the shipwreck.",
+          "type": "paragraph"
+        },
+        {
+          "text": "It also reminds us of the fragility of this knowledge. The workshops capable of building it disappeared without leaving another known example. The fragments are now on display at the National Archaeological Museum of Athens, and researchers continue to propose new reconstructions, such as the one published in 2021 by a team from University College London.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Made in the **2nd century BC** and recovered in 1901 from a shipwreck, the Antikythera mechanism is an astronomical calculator with gears. It predicted eclipses and tracked the calendars of the heavens, a feat without parallel for fifteen centuries.",
+          "type": "takeaway"
+        }
+      ]
+    }
+  ],
+  "subtitle": "2nd century BC",
+  "description": "In 1901, sponge divers brought up a bronze block eaten by the sea from a Greek shipwreck. It concealed the most complex mechanism of antiquity: a machine to calculate the heavens.",
+  "subcategory": "Discoveries that changed the world"
+}

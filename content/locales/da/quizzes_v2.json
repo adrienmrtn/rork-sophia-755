@@ -34529,5 +34529,85 @@
         "correctIndex": 0
       }
     ]
+  },
+  {
+    "courseId": "course_312_qu_est_ce_que_la_machine_d_anticythere",
+    "quiz": [
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q1",
+        "type": "mcq",
+        "question": "Hvem lagde i 1902 mærke til det første tandhjul i bronzeklumpen?",
+        "explanation": "Det var arkæologen Valerios Stais, der i 1902 lagde mærke til et tandhjul fanget i korrosionen.",
+        "options": [
+          "Valerios Stais",
+          "Derek de Solla Price",
+          "Charalambos Karakalos",
+          "Kommandør Cousteau"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q2",
+        "type": "mcq",
+        "question": "Hvornår sank skibet, der transporterede Antikythera-mekanismen?",
+        "explanation": "Skibet sank omkring 60 f.Kr., lastet med græske kunstværker, sandsynligvis bestemt til romerske købere.",
+        "options": [
+          "Omkring 60 f.Kr.",
+          "I det 2. århundrede f.Kr.",
+          "I 1900",
+          "I 1976"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q3",
+        "type": "chronological",
+        "question": "Sæt disse etaper i studiet af Antikythera-mekanismen i kronologisk rækkefølge.",
+        "explanation": "Opdagelsen af vraget fandt sted i 1900, tandhjulet blev bemærket i 1902, Derek de Solla Price udgav sin første undersøgelse i 1959, og tomografibillederne gjorde det muligt at dechiffrere koden i 2006.",
+        "items": [
+          "Svampedykkere fra Symi finder vraget ud for Antikythera.",
+          "Valerios Stais lægger mærke til et tandhjul i en korroderet klump på museet i Athen.",
+          "Derek de Solla Price udgiver den første detaljerede undersøgelse af mekanismen.",
+          "Tomografibillederne gør det muligt at læse indskrifterne og forstå skiverne."
+        ]
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q4",
+        "type": "trueFalse",
+        "question": "Antikythera-mekanismen kunne forudsige sol- og måneformørkelser.",
+        "explanation": "Mekanismen havde en skive, der fulgte saros, som gjorde det muligt at forudsige sol- og måneformørkelser med tidspunkt og sommetider den forventede farve.",
+        "options": [
+          "Sandt",
+          "Falsk"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q5",
+        "type": "mcq",
+        "question": "Hvilken astronomisk cyklus fik 19 solår og 235 måneder til at passe sammen?",
+        "explanation": "Metons cyklus fik 19 solår og 235 måneder til at passe sammen og var repræsenteret på en af de store spiralskiver på bagsiden af mekanismen.",
+        "options": [
+          "Metons cyklus",
+          "Saros",
+          "Hipparchos' cyklus",
+          "De olympiske leges cyklus"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q6",
+        "type": "mcq",
+        "question": "Hvor lang tid gik der, før man fandt genstande af tilsvarende kompleksitet som Antikythera-mekanismen?",
+        "explanation": "Ingen genstand af tilsvarende kompleksitet kendes før de astronomiske ure i Europa i 1300-tallet, altså næsten 1.500 år senere.",
+        "options": [
+          "Næsten 1.500 år",
+          "500 år",
+          "1.000 år",
+          "2.000 år"
+        ],
+        "correctIndex": 0
+      }
+    ]
   }
 ]

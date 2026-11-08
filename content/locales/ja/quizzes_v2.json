@@ -34529,5 +34529,85 @@
         "correctIndex": 0
       }
     ]
+  },
+  {
+    "courseId": "course_312_qu_est_ce_que_la_machine_d_anticythere",
+    "quiz": [
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q1",
+        "type": "mcq",
+        "question": "1902年に青銅の塊の中で最初の歯車に気づいたのはだれですか？",
+        "explanation": "1902年に腐食の中に歯車を見つけたのは考古学者ヴァレリオス・スタイスです。",
+        "options": [
+          "ヴァレリオス・スタイス",
+          "デレク・デ・ソラ・プライス",
+          "カラランボス・カラカロス",
+          "クストー船長"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q2",
+        "type": "mcq",
+        "question": "アンティキティラ島の機械を運んでいた船はいつ沈没しましたか？",
+        "explanation": "この船は紀元前60年ごろ、おそらくローマの買い手向けのギリシア美術品を積んで沈没しました。",
+        "options": [
+          "紀元前60年ごろ",
+          "紀元前2世紀",
+          "1900年",
+          "1976年"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q3",
+        "type": "chronological",
+        "question": "アンティキティラ島の機械の研究について、次の段階を年代順に並べ替えてください。",
+        "explanation": "沈没船の発見は1900年、歯車の発見は1902年、デレク・デ・ソラ・プライスによる最初の研究発表は1959年、断層撮影の画像による銘文の解読は2006年です。",
+        "items": [
+          "シミ島の海綿採取漁師たちがアンティキティラ島沖で沈没船を発見します。",
+          "ヴァレリオス・スタイスがアテネの博物館で腐食した塊の中に歯車を見つけます。",
+          "デレク・デ・ソラ・プライスが機械についての最初の詳細な研究を発表します。",
+          "断層撮影の画像によって銘文が読み取られ、文字盤が理解されます。"
+        ]
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q4",
+        "type": "trueFalse",
+        "question": "アンティキティラ島の機械は日食と月食を予測できました。",
+        "explanation": "機械にはサロス周期に従う文字盤があり、日食と月食を時刻とともに、時には予想される色まで予告できました。",
+        "options": [
+          "正しい",
+          "まちがい"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q5",
+        "type": "mcq",
+        "question": "19太陽年と235朔望月を一致させる天文周期は何ですか？",
+        "explanation": "メトン周期は19太陽年と235朔望月を一致させ、機械の背面にある螺旋状の大きな文字盤の一つに表されていました。",
+        "options": [
+          "メトン周期",
+          "サロス周期",
+          "ヒッパルコスの周期",
+          "オリンピア競技会の周期"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q6",
+        "type": "mcq",
+        "question": "アンティキティラ島の機械に匹敵する複雑さの物体が再び現れるまで、どれくらいの時間がかかりましたか？",
+        "explanation": "これほど複雑な物体は14世紀ヨーロッパの天文時計以前には知られておらず、約1500年後のことです。",
+        "options": [
+          "約1500年",
+          "500年",
+          "1000年",
+          "2000年"
+        ],
+        "correctIndex": 0
+      }
+    ]
   }
 ]

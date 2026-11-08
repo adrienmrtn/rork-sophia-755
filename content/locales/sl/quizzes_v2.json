@@ -34529,5 +34529,85 @@
         "correctIndex": 0
       }
     ]
+  },
+  {
+    "courseId": "course_312_qu_est_ce_que_la_machine_d_anticythere",
+    "quiz": [
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q1",
+        "type": "mcq",
+        "question": "Kdo je leta 1902 opazil prvo zobato kolo v bronastem kosu?",
+        "explanation": "Arheolog Valerios Stais je leta 1902 opazil zobato kolo, ujeto v korozijo.",
+        "options": [
+          "Valerios Stais",
+          "Derek de Solla Price",
+          "Charalambos Karakalos",
+          "Komandant Cousteau"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q2",
+        "type": "mcq",
+        "question": "Kdaj je potonila ladja, ki je prevažala antikiterski mehanizem?",
+        "explanation": "Ladja je potonila okoli 60 pr. n. št., naložena z grškimi umetninami, verjetno namenjenimi rimskim kupcem.",
+        "options": [
+          "Okoli 60 pr. n. št.",
+          "V 2. stoletju pr. n. št.",
+          "Leta 1900",
+          "Leta 1976"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q3",
+        "type": "chronological",
+        "question": "Postavi v kronološki vrstni red te faze preučevanja antikiterskega mehanizma.",
+        "explanation": "Odkritje razbitine se je zgodilo leta 1900, zobato kolo so opazili leta 1902, Derek de Solla Price je svojo prvo študijo objavil leta 1959, tomografske slike pa so omogočile razvozlati šifro leta 2006.",
+        "items": [
+          "Lovci na morske spužve iz Simija opazijo razbitino ob obali Antikitere.",
+          "Valerios Stais opazi zobnik v razjedenem kosu v atenskem muzeju.",
+          "Derek de Solla Price objavi prvo podrobno študijo mehanizma.",
+          "Tomografske slike omogočijo prebrati napise in razumeti številčnice."
+        ]
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q4",
+        "type": "trueFalse",
+        "question": "Antikiterski mehanizem je lahko napovedoval mrke Sonca in Lune.",
+        "explanation": "Mehanizem je imel številčnico, ki je sledila sarosu in omogočala napovedati mrke Sonca in Lune, z uro in včasih pričakovano barvo.",
+        "options": [
+          "Res je",
+          "Ni res"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q5",
+        "type": "mcq",
+        "question": "Kateri astronomski cikel je omogočal ujemanje 19 sončnih let in 235 luninih mesecev?",
+        "explanation": "Metonov cikel je ujemal 19 sončnih let in 235 luninih mesecev in je bil prikazan na eni od velikih spiralnih številčnic na zadnji strani mehanizma.",
+        "options": [
+          "Metonov cikel",
+          "Saros",
+          "Hiparhov cikel",
+          "Cikel olimpijskih iger"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q6",
+        "type": "mcq",
+        "question": "Koliko časa je minilo, preden so našli predmete, primerljive po zapletenosti z antikiterskim mehanizmom?",
+        "explanation": "Noben predmet takšne zapletenosti ni znan pred astronomskimi urami v Evropi 14. stoletja, torej skoraj 1500 let pozneje.",
+        "options": [
+          "Skoraj 1500 let",
+          "500 let",
+          "1000 let",
+          "2000 let"
+        ],
+        "correctIndex": 0
+      }
+    ]
   }
 ]

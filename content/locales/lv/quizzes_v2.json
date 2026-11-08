@@ -34529,5 +34529,85 @@
         "correctIndex": 0
       }
     ]
+  },
+  {
+    "courseId": "course_312_qu_est_ce_que_la_machine_d_anticythere",
+    "quiz": [
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q1",
+        "type": "mcq",
+        "question": "Kurš 1902. gadā pamanīja pirmo zobrata bronzas blokā?",
+        "explanation": "Arheologs Valērijs Staiss 1902. gadā pamanīja zobrata, kas iestrēdzis korozijā.",
+        "options": [
+          "Valērijs Staiss",
+          "Dereks de Sola Praiss",
+          "Haralamboss Karakaloss",
+          "Komandieris Kusto"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q2",
+        "type": "mcq",
+        "question": "Kurš 1902. gadā pamanīja zobrata korodētajā bronzas blokā?",
+        "explanation": "Arheologs Valērijs Staiss 1902. gadā pamanīja zobrata, kas iestrēdzis korozijā.",
+        "options": [
+          "Valērijs Staiss",
+          "Dereks de Sola Praiss",
+          "Haralamboss Karakaloss",
+          "Komandieris Kusto"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q3",
+        "type": "chronological",
+        "question": "Kārto hronoloģiskā secībā šīs Antikitēras mehānisma izpētes stadijas.",
+        "explanation": "Vraka atklāšana notika 1900. gadā, zobrats tika pamanīts 1902. gadā, Dereks de Sola Praiss publicēja savu pirmo izpēti 1959. gadā, un tomogrāfijas attēli ļāva atšifrēt kodu 2006. gadā.",
+        "items": [
+          "Sūkļu zvejnieki no Simi atrod vraku pie Antikitēras.",
+          "Valērijs Staiss pamana zobrata korodētā blokā Atēnu muzejā.",
+          "Dereks de Sola Praiss publicē pirmo detalizēto mehānisma izpēti.",
+          "Tomogrāfijas attēli ļauj nolasīt uzrakstus un saprast ciparnīcas."
+        ]
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q4",
+        "type": "trueFalse",
+        "question": "Antikitēras mehānisms varēja paredzēt Saules un Mēness aptumsējumus.",
+        "explanation": "Mehānismā bija ciparnīca, kas sekoja sarossam un ļāva paredzēt Saules un Mēness aptumsējumus ar laiku un dažreiz gaidāmo krāsu.",
+        "options": [
+          "Patiesi",
+          "Aplami"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q5",
+        "type": "mcq",
+        "question": "Kurš astronomiskais cikls ļāva saskaņot 19 Saules gadus un 235 Mēness mēnešus?",
+        "explanation": "Metona cikls saskaņoja 19 Saules gadus un 235 Mēness mēnešus, un tas bija attēlots uz vienas no lielajām spirālveida ciparnīcām mehānisma aizmugurē.",
+        "options": [
+          "Metona cikls",
+          "Saross",
+          "Hipparha cikls",
+          "Olimpijas spēļu cikls"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q6",
+        "type": "mcq",
+        "question": "Cik laika pagāja, līdz atrada priekšmetus ar līdzīgu sarežģītību kā Antikitēras mehānismam?",
+        "explanation": "Neviens priekšmets ar tādu sarežģītību nav zināms pirms Eiropas 14. gadsimta astronomiskajiem pulksteņiem, tas ir, gandrīz 1500 gadus vēlāk.",
+        "options": [
+          "Gandrīz 1500 gadus",
+          "500 gadus",
+          "1000 gadus",
+          "2000 gadus"
+        ],
+        "correctIndex": 0
+      }
+    ]
   }
 ]

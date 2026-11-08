@@ -1,0 +1,151 @@
+{
+  "id": "course_312_qu_est_ce_que_la_machine_d_anticythere",
+  "hero": {
+    "hook": "Un bloc de bronze corrodé a attendu deux mille ans au fond de la mer qu'on comprenne qu'il calculait les éclipses.",
+    "image": "qu_est_ce_que_la_machine_d_anticythere",
+    "ratio": "16:9",
+    "credit": {
+      "title": "NAMA Machine d'Anticythère 1",
+      "author": "Marsyas",
+      "source": "Wikimedia Commons",
+      "license": "CC BY 2.5"
+    }
+  },
+  "title": "Qu'est-ce que la machine d'Anticythère ?",
+  "sources": [
+    {
+      "text": "T. Freeth et al., « Decoding the ancient Greek astronomical calculator known as the Antikythera Mechanism », Nature, vol. 444, 2006, p. 587-591."
+    },
+    {
+      "text": "T. Freeth et al., « A Model of the Cosmos in the ancient Greek Antikythera Mechanism », Scientific Reports, vol. 11, 2021."
+    },
+    {
+      "text": "D. de Solla Price, Gears from the Greeks: The Antikythera Mechanism, a Calendar Computer from ca. 80 B.C., Transactions of the American Philosophical Society, 1974."
+    },
+    {
+      "text": "A. Jones, A Portable Cosmos: Revealing the Antikythera Mechanism, Oxford University Press, 2017."
+    }
+  ],
+  "subject": "sciences",
+  "sections": [
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_intro",
+      "free": true,
+      "title": "Introduction",
+      "blocks": [
+        {
+          "text": "Au printemps **1900**, des pêcheurs d'éponges de l'île de Symi s'abritent d'une tempête près d'Anticythère, un îlot entre la Crète et le Péloponnèse. En plongeant, l'un d'eux découvre une épave antique couverte de statues. Pendant un an, les Grecs en remontent des bronzes, des marbres et des amphores.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Parmi les trouvailles, un bloc de bronze et de bois de la taille d'une boîte à chaussures n'intéresse personne. En **1902**, l'archéologue Valerios Stais remarque une roue dentée prise dans la corrosion. Il vient de poser les yeux sur l'objet le plus mystérieux de l'Antiquité grecque.",
+          "type": "paragraph"
+        }
+      ]
+    },
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_p1",
+      "free": false,
+      "title": "Une épave et un bloc de bronze",
+      "blocks": [
+        {
+          "text": "Le navire a sombré vers **60 av. J.-C.**, chargé d'œuvres d'art grecques probablement destinées à des acheteurs romains. Le mécanisme, lui, est plus ancien : il a sans doute été fabriqué au **IIe siècle avant notre ère**, dans le monde grec, peut-être à Rhodes ou à Corinthe.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Il nous est parvenu en **82 fragments**, dont sept grands. La mer a fait son œuvre : le bois a disparu, le bronze s'est changé en une masse verdâtre et cassante. Longtemps, personne ne sait dire à quoi servaient ces roues dentées. Certains doutent même qu'un tel objet puisse être antique.",
+          "type": "paragraph"
+        },
+        {
+          "text": "En **1976**, le commandant Cousteau plonge sur l'épave et en remonte des pièces de monnaie frappées à Pergame et à Éphèse. Ce sont elles qui permettent de dater le naufrage.",
+          "type": "funFact"
+        }
+      ]
+    },
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_p2",
+      "free": false,
+      "title": "Ce que cache la corrosion",
+      "blocks": [
+        {
+          "text": "Le premier à prendre l'objet au sérieux est l'historien des sciences **Derek de Solla Price**. En 1959, il le présente comme « un ordinateur grec antique ». Avec le physicien Charalambos Karakalos, il le radiographie aux rayons gamma et compte les dents des roues. En 1974, il publie une première reconstitution.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Le tournant arrive en **2005**. Une équipe internationale fait venir à Athènes un scanner de huit tonnes et réalise une [[tomographie]] des fragments. Les images révèlent l'intérieur du bloc, couche par couche, et plus de 3 000 caractères d'inscriptions : un véritable mode d'emploi gravé dans le bronze.",
+          "type": "paragraph"
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1900",
+              "title": "Découverte de l'épave",
+              "detail": "Des pêcheurs d'éponges de Symi repèrent l'épave au large d'Anticythère."
+            },
+            {
+              "date": "1902",
+              "title": "Une roue dentée",
+              "detail": "Valerios Stais remarque un engrenage dans un bloc corrodé au musée d'Athènes."
+            },
+            {
+              "date": "1959",
+              "title": "Un ordinateur antique",
+              "detail": "Derek de Solla Price publie la première étude détaillée du mécanisme."
+            },
+            {
+              "date": "2006",
+              "title": "Le code déchiffré",
+              "detail": "Les images de tomographie permettent de lire les inscriptions et de comprendre les cadrans."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_p3",
+      "free": false,
+      "title": "Un calendrier du ciel dans une boîte",
+      "blocks": [
+        {
+          "text": "Le mécanisme contient une trentaine d'**engrenages en bronze** qui subsistent, et il en comptait davantage. Une manivelle sur le côté faisait tourner l'ensemble. À l'avant, un cadran montrait la position du Soleil et de la Lune dans le zodiaque, et une petite boule mi-argentée mi-noire indiquait la phase de la Lune.",
+          "type": "paragraph"
+        },
+        {
+          "text": "À l'arrière, deux grands cadrans en spirale servaient de calendriers. Le premier suivait le [[cycle de Méton]], qui fait coïncider 19 années solaires et 235 mois lunaires. Le second suivait le [[saros]], un cycle de 223 mois après lequel les éclipses se répètent. Il permettait d'annoncer les éclipses de Soleil et de Lune, avec l'heure et parfois la couleur attendue.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Le plus étonnant est un petit dispositif à goupille et à fente qui fait varier la vitesse de la Lune au fil du mois, exactement comme dans la théorie de l'astronome [[Hipparque]]. Un cadran annexe donnait même l'année des grands jeux grecs, dont ceux d'Olympie.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Aucun objet d'une telle complexité n'est connu avant les **horloges astronomiques** de l'Europe du XIVe siècle, soit près de 1 500 ans plus tard.",
+          "type": "funFact"
+        }
+      ]
+    },
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_p4",
+      "free": false,
+      "title": "Ce qu'il nous apprend",
+      "blocks": [
+        {
+          "text": "La machine d'Anticythère montre que les Grecs ne se contentaient pas de théories sur le ciel : ils savaient les transformer en mécanismes de précision. Les textes anciens mentionnaient de tels appareils, attribués à Archimède ou à Posidonios, mais personne n'y croyait vraiment avant la découverte de l'épave.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Elle rappelle aussi la fragilité de ce savoir. Les ateliers capables de la construire ont disparu sans laisser d'autre exemplaire connu. Les fragments sont aujourd'hui exposés au Musée national archéologique d'Athènes, et les chercheurs proposent encore de nouvelles reconstitutions, comme celle publiée en 2021 par une équipe de l'University College de Londres.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Fabriquée au **IIe siècle av. J.-C.** et retrouvée en 1901 dans une épave, la machine d'Anticythère est un calculateur astronomique à engrenages. Elle prédisait les éclipses et suivait les calendriers du ciel, un exploit sans équivalent pendant quinze siècles.",
+          "type": "takeaway"
+        }
+      ]
+    }
+  ],
+  "subtitle": "IIe siècle av. J.-C.",
+  "description": "En 1901, des pêcheurs d'éponges remontent d'une épave grecque un bloc de bronze rongé par la mer. Il cache le mécanisme le plus complexe de l'Antiquité : une machine à calculer le ciel.",
+  "subcategory": "Découvertes qui ont changé le monde"
+}

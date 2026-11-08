@@ -1,0 +1,151 @@
+{
+  "id": "course_312_qu_est_ce_que_la_machine_d_anticythere",
+  "hero": {
+    "hook": "Korodēts bronzas bloks divi tūkstoši gadu gaidīja jūras dibenā, kamēr sapratīs, ka tas aprēķina aptumsējumus.",
+    "image": "qu_est_ce_que_la_machine_d_anticythere",
+    "ratio": "16:9",
+    "credit": {
+      "title": "NAMA Machine d'Anticythère 1",
+      "author": "Marsyas",
+      "source": "Wikimedia Commons",
+      "license": "CC BY 2.5"
+    }
+  },
+  "title": "Kas ir Antikitēras mehānisms?",
+  "sources": [
+    {
+      "text": "T. Freeth et al., « Decoding the ancient Greek astronomical calculator known as the Antikythera Mechanism », Nature, vol. 444, 2006, p. 587-591."
+    },
+    {
+      "text": "T. Freeth et al., « A Model of the Cosmos in the ancient Greek Antikythera Mechanism », Scientific Reports, vol. 11, 2021."
+    },
+    {
+      "text": "D. de Solla Price, Gears from the Greeks: The Antikythera Mechanism, a Calendar Computer from ca. 80 B.C., Transactions of the American Philosophical Society, 1974."
+    },
+    {
+      "text": "A. Jones, A Portable Cosmos: Revealing the Antikythera Mechanism, Oxford University Press, 2017."
+    }
+  ],
+  "subject": "sciences",
+  "sections": [
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_intro",
+      "free": true,
+      "title": "Ievads",
+      "blocks": [
+        {
+          "text": "**1900**. gada pavasarī sūkļu zvejnieki no Simi salas vētras laikā patversmi meklē pie Antikitēras, saliņas starp Krētu un Peleponēsu. Niršanas laikā viens no viņiem atklāj antīku vraku, kas klāts ar statujas. Gadu vēlāk grieķi no tā izceļ bronzas priekšmetus, marmora skulptūras un amforas.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Starp atradumiem nevienam neinteresē bronzas un koka bloks apavu kastes izmērā. **1902**. gadā arheologs Valērijs Staiss pamana korozijā iestrēgušu zobrata. Viņš tikko ir palūkojies uz noslēpumaināko sengrieķu priekšmetu.",
+          "type": "paragraph"
+        }
+      ]
+    },
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_p1",
+      "free": false,
+      "title": "Vraks un bronzas bloks",
+      "blocks": [
+        {
+          "text": "Kuģis nogrimis ap **60. g. p.m.ē.**, iekrauts ar grieķu mākslas darbiem, kas, iespējams, bija paredzēti romiešu pircējiem. Pats mehānisms ir senāks: tas, visticamāk, izgatavots **2. gadsimtā pirms mūsu ēras** grieķu pasaulē, varbūt Rodā vai Korintā.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Līdz mums tas nonācis **82 fragmentos**, no kuriem septiņi ir lieli. Jūra ir paveikusi savu: koks ir pazudis, bronza pārvērtusies zaļganā un trauslā masā. Ilgu laiku neviens nezina pateikt, kam kalpoja šie zobrati. Daži pat šaubās, vai tāds priekšmets var būt antīks.",
+          "type": "paragraph"
+        },
+        {
+          "text": "**1976**. gadā komandieris Kusto ienirst pie vraka un izceļ monētas, kas kaldinātas Pergamā un Efesā. Tās ļauj datēt kuģa bojāeju.",
+          "type": "funFact"
+        }
+      ]
+    },
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_p2",
+      "free": false,
+      "title": "Ko slēpj korozija",
+      "blocks": [
+        {
+          "text": "Pirmais, kas priekšmetu uztver nopietni, ir zinātņu vēsturnieks **Dereks de Sola Praiss**. 1959. gadā viņš to prezentē kā \"sengrieķu datoru\". Kopā ar fiziķi Haralambou Karakalou viņš to rentgenē ar gamma stariem un saskaita zobrata zobus. 1974. gadā viņš publicē pirmo rekonstrukciju.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Pagrieziena punkts iestājas **2005**. gadā. Starptautiska komanda uz Atēnām atved astoņu tonnu skeneri un veic fragmentu [[tomogrāfija]]u. Attēli atklāj bloka iekšpusi slāni pa slānim un vairāk nekā 3000 uzrakstu rakstzīmju: īstu lietošanas instrukciju, iegravētu bronzā.",
+          "type": "paragraph"
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1900",
+              "title": "Vraka atklāšana",
+              "detail": "Sūkļu zvejnieki no Simi atrod vraku pie Antikitēras."
+            },
+            {
+              "date": "1902",
+              "title": "Zobrats",
+              "detail": "Valērijs Staiss pamana zobrata korodētajā blokā Atēnu muzejā."
+            },
+            {
+              "date": "1959",
+              "title": "Antīks dators",
+              "detail": "Dereks de Sola Praiss publicē pirmo detalizēto mehānisma izpēti."
+            },
+            {
+              "date": "2006",
+              "title": "Kods atšifrēts",
+              "detail": "Tomogrāfijas attēli ļauj nolasīt uzrakstus un saprast ciparnīcas."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_p3",
+      "free": false,
+      "title": "Debess kalendārs kastē",
+      "blocks": [
+        {
+          "text": "Mehānismā ir aptuveni trīsdesmit **bronzas zobrati**, kas saglabājušies, un to bija vairāk. Rokturis sānos lika griezties visam kopumam. Priekšpusē ciparnīca rādīja Saules un Mēness pozīciju zodiakā, un maza puslodes bumbiņa, puse sudraba, puse melna, norādīja Mēness fāzi.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Aizmugurē divas lielas spirālveida ciparnīcas kalpoja kā kalendāri. Pirmā sekoja [[Metona cikls]]am, kas saskaņo 19 Saules gadus un 235 Mēness mēnešus. Otrā sekoja [[saross]]am, 223 mēnešu ciklam, pēc kura aptumsējumi atkārtojas. Tas ļāva paredzēt Saules un Mēness aptumsējumus ar laiku un dažreiz gaidāmo krāsu.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Visapbrīnojamākais ir maza spraudes un spraugu ierīce, kas maina Mēness ātrumu mēneša laikā, tieši kā astronoma [[Hipparhs]]a teorijā. Papildu ciparnīca pat norādīja lielās grieķu spēles gadu, tostarp Olimpijas.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Neviens priekšmets ar tādu sarežģītību nav zināms pirms Eiropas **14. gadsimta astronomiskajiem pulksteņiem**, tas ir, gandrīz 1500 gadus vēlāk.",
+          "type": "funFact"
+        }
+      ]
+    },
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_p4",
+      "free": false,
+      "title": "Ko tas mums māca",
+      "blocks": [
+        {
+          "text": "Antikitēras mehānisms parāda, ka grieķi neaprobežojās tikai ar teorijām par debesīm: viņi prasīja tās pārvērst precīzos mehānismos. Senielaikos minētas tādas ierīces, kas piedēvētas Arhimēdam vai Poseidonijam, bet neviens tām īsti neticēja pirms vraka atklāšanas.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Tas arī atgādina šo zināšanu trauslumu. Darbnīcas, kas spēja to izgatavot, ir izzudušas, neatstājot citu zināmu eksemplāru. Fragmenti šodien ir eksponēti Atēnu Nacionālajā arheoloģijas muzejā, un pētnieki joprojām piedāvā jaunas rekonstrukcijas, piemēram, to, ko 2021. gadā publicēja Londona Universitātes koledžas komanda.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Izgatavots **2. gs. p.m.ē.** un atrasts 1901. gadā vrakā, Antikitēras mehānisms ir zobrata astronomisks kalkulators. Tas paredzēja aptumsējumus un sekoja debess kalendāriem, sasniegums bez līdzinieka piecpadsmit gadsimtus.",
+          "type": "takeaway"
+        }
+      ]
+    }
+  ],
+  "subtitle": "2. gs. p.m.ē.",
+  "description": "1901. gadā sūkļu zvejnieki no grieķu vraka izceļ jūras korodētu bronzas bloku. Tajā slēpjas sarežģītākais mehānisms antīkajā pasaulē: mašīna debess aprēķināšanai.",
+  "subcategory": "Atklājumi, kas mainīja pasauli"
+}

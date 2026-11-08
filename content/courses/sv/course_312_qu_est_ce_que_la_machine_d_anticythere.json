@@ -1,0 +1,151 @@
+{
+  "id": "course_312_qu_est_ce_que_la_machine_d_anticythere",
+  "hero": {
+    "hook": "Ett korroderat bronzklump låg i två tusen år på havets botten innan någon förstod att det beräknade förmörkelser.",
+    "image": "qu_est_ce_que_la_machine_d_anticythere",
+    "ratio": "16:9",
+    "credit": {
+      "title": "NAMA Machine d'Anticythère 1",
+      "author": "Marsyas",
+      "source": "Wikimedia Commons",
+      "license": "CC BY 2.5"
+    }
+  },
+  "title": "Vad är Antikythera-mekanismen?",
+  "sources": [
+    {
+      "text": "T. Freeth et al., « Decoding the ancient Greek astronomical calculator known as the Antikythera Mechanism », Nature, vol. 444, 2006, p. 587-591."
+    },
+    {
+      "text": "T. Freeth et al., « A Model of the Cosmos in the ancient Greek Antikythera Mechanism », Scientific Reports, vol. 11, 2021."
+    },
+    {
+      "text": "D. de Solla Price, Gears from the Greeks: The Antikythera Mechanism, a Calendar Computer from ca. 80 B.C., Transactions of the American Philosophical Society, 1974."
+    },
+    {
+      "text": "A. Jones, A Portable Cosmos: Revealing the Antikythera Mechanism, Oxford University Press, 2017."
+    }
+  ],
+  "subject": "sciences",
+  "sections": [
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_intro",
+      "free": true,
+      "title": "Introduktion",
+      "blocks": [
+        {
+          "text": "Våren **1900** sökte svampfiskare från ön Symi skydd för en storm nära Antikythera, en ö mellan Kreta och Peloponnesos. En av dem upptäckte vid dykning ett antikt vrak täckt av statyer. Under ett års tid bärgade grekerna brons, marmor och amforor från vraket.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Bland fynden fanns ett brons- och träklump, stort som en skokartong, som ingen brydde sig om. **1902** lade arkeologen Valerios Stais märke till ett kugghjul fast i korrosionen. Han hade just fäst blicken på det mest gåtfulla föremålet från det antika Grekland.",
+          "type": "paragraph"
+        }
+      ]
+    },
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_p1",
+      "free": false,
+      "title": "Ett vrak och ett bronzklump",
+      "blocks": [
+        {
+          "text": "Fartyget sjönk omkring **60 f.Kr.**, lastat med grekiska konstverk som troligen var avsedda för romerska köpare. Själva mekanismen är äldre: den tillverkades förmodligen under **100-talet f.Kr.** i den grekiska världen, kanske i Rhodos eller Korint.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Den har bevarats i **82 fragment**, varav sju stora. Havet har gjort sitt: träet har försvunnit, bronset har förvandlats till en grönaktig och spröd massa. Länge visste ingen vad dessa kugghjul skulle användas till. En del tvivlade till och med på att ett sådant föremål kunde vara antikt.",
+          "type": "paragraph"
+        },
+        {
+          "text": "**1976** dök kommendör Cousteau ned till vraket och bärgade mynt präglade i Pergamon och Efesos. Det är de som gjorde det möjligt att datera förlisningen.",
+          "type": "funFact"
+        }
+      ]
+    },
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_p2",
+      "free": false,
+      "title": "Det som döljs av korrosionen",
+      "blocks": [
+        {
+          "text": "Den förste som tog föremålet på allvar var vetenskapshistorikern **Derek de Solla Price**. 1959 presenterade han det som \"en antik grekisk dator\". Tillsammans med fysikern Charalambos Karakalos röntgade han det med gammastrålar och räknade kugghjulens tänder. 1974 publicerade han en första rekonstruktion.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Vändpunkten kom **2005**. Ett internationellt team tog med en åtta ton tung skanner till Aten och utförde en [[tomografi]] av fragmenten. Bilderna avslöjade insidan av klumpen, lager för lager, och över 3.000 tecken med inskrifter: en riktig bruksanvisning inristad i bronset.",
+          "type": "paragraph"
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1900",
+              "title": "Vraket upptäcks",
+              "detail": "Svampfiskare från Symi upptäcker vraket utanför Antikythera."
+            },
+            {
+              "date": "1902",
+              "title": "Ett kugghjul",
+              "detail": "Valerios Stais lägger märke till ett kugghjul i ett korroderat klump på museet i Aten."
+            },
+            {
+              "date": "1959",
+              "title": "En antik dator",
+              "detail": "Derek de Solla Price publicerar den första detaljerade studien av mekanismen."
+            },
+            {
+              "date": "2006",
+              "title": "Koden dechiffrerad",
+              "detail": "Tomografibilderna gör det möjligt att läsa inskrifterna och förstå urtavlorna."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_p3",
+      "free": false,
+      "title": "En himmelskalender i en låda",
+      "blocks": [
+        {
+          "text": "Mekanismen innehåller ett trettiotal **bronzkugghjul** som finns kvar, och den hade ursprungligen fler. En vev på sidan satte igång hela systemet. På framsidan visade en urtavla solens och månens position i zodiaken, och en liten halvsilver-, halvsvart kula angav månfasen.",
+          "type": "paragraph"
+        },
+        {
+          "text": "På baksidan fungerade två stora spiralformade urtavlor som kalendrar. Den första följde [[Metons cykel]], som får 19 solår och 235 månmånader att sammanfalla. Den andra följde [[saros]], en cykel på 223 månmånader efter vilken förmörkelserna upprepas. Den gjorde det möjligt att förutsäga sol- och månförmörkelser, med tid och ibland förväntad färg.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Det mest häpnadsväckande är en liten anordning med tapp och skåra som varierar månens hastighet under månaden, precis som i astronomen [[Hipparchos]] teori. En extra urtavla angav till och med året för de stora grekiska spelen, däribland de i Olympia.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Inget föremål av sådan komplexitet är känt före de **astronomiska klockorna** i Europa på 1300-talet, alltså nästan 1.500 år senare.",
+          "type": "funFact"
+        }
+      ]
+    },
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_p4",
+      "free": false,
+      "title": "Vad den lär oss",
+      "blocks": [
+        {
+          "text": "Antikythera-mekanismen visar att grekerna inte nöjde sig med teorier om himlen: de kunde förvandla dem till precisionsinstrument. Antika texter nämnde sådana apparater, tillskrivna Arkimedes eller Poseidonios, men ingen trodde egentligen på dem före vrakets upptäckt.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Den påminner också om denna kunskaps bräcklighet. De verkstäder som kunde bygga den försvann utan att lämna något annat känt exemplar. Fragmenten är i dag utställda på Nationella arkeologiska museet i Aten, och forskarna föreslår fortfarande nya rekonstruktioner, som den som publicerades 2021 av ett team från University College i London.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Tillverkad under **100-talet f.Kr.** och återfunnen 1901 i ett vrak är Antikythera-mekanismen en astronomisk kalkylator med kugghjul. Den förutsade förmörkelser och följde himmelskalendrar, en prestation utan motsvarighet under femton århundraden.",
+          "type": "takeaway"
+        }
+      ]
+    }
+  ],
+  "subtitle": "100-talet f.Kr.",
+  "description": "År 1901 bärgar svampfiskare ett bronzklump från ett grekiskt vrak. Det döljer antikens mest komplexa mekanism: en maskin för att beräkna himlen.",
+  "subcategory": "Upptäckter som förändrade världen"
+}

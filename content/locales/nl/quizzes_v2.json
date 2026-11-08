@@ -34529,5 +34529,85 @@
         "correctIndex": 0
       }
     ]
+  },
+  {
+    "courseId": "course_312_qu_est_ce_que_la_machine_d_anticythere",
+    "quiz": [
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q1",
+        "type": "mcq",
+        "question": "Wie zag in 1902 het eerste tandrad in het blok brons?",
+        "explanation": "Het was archeoloog Valerios Stais die in 1902 een tandrad in de corrosie zag.",
+        "options": [
+          "Valerios Stais",
+          "Derek de Solla Price",
+          "Charalambos Karakalos",
+          "Commandant Cousteau"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q2",
+        "type": "mcq",
+        "question": "Wanneer zonk het schip met het mechanisme van Antikythera?",
+        "explanation": "Het schip zonk rond 60 v.Chr., geladen met Griekse kunstwerken die waarschijnlijk voor Romeinse kopers waren bestemd.",
+        "options": [
+          "Rond 60 v.Chr.",
+          "In de 2e eeuw v.Chr.",
+          "In 1900",
+          "In 1976"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q3",
+        "type": "chronological",
+        "question": "Zet deze fasen in het onderzoek van het mechanisme van Antikythera in chronologische volgorde.",
+        "explanation": "De ontdekking van het wrak vond plaats in 1900, het tandrad werd gezien in 1902, Derek de Solla Price publiceerde zijn eerste studie in 1959 en de tomografiebeelden maakten het ontcijferen van de code mogelijk in 2006.",
+        "items": [
+          "Sponsvissers van Symi ontdekken het wrak voor de kust van Antikythera.",
+          "Valerios Stais ziet een tandwiel in een gecorrodeerd blok in het museum van Athene.",
+          "Derek de Solla Price publiceert de eerste gedetailleerde studie van het mechanisme.",
+          "De tomografiebeelden maken het mogelijk de inscripties te lezen en de wijzerplaten te begrijpen."
+        ]
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q4",
+        "type": "trueFalse",
+        "question": "Het mechanisme van Antikythera kon zons- en maansverduisteringen voorspellen.",
+        "explanation": "Het mechanisme had een wijzerplaat die de saros volgde en zons- en maansverduisteringen kon aankondigen, met het tijdstip en soms de verwachte kleur.",
+        "options": [
+          "Waar",
+          "Onwaar"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q5",
+        "type": "mcq",
+        "question": "Welke astronomische cyclus liet 19 zonnejaren samenvallen met 235 maanmaanden?",
+        "explanation": "De cyclus van Meton liet 19 zonnejaren samenvallen met 235 maanmaanden, en was weergegeven op een van de grote spiraalvormige wijzerplaten aan de achterkant van het mechanisme.",
+        "options": [
+          "De cyclus van Meton",
+          "De saros",
+          "De cyclus van Hipparchus",
+          "De cyclus van de Olympische Spelen"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q6",
+        "type": "mcq",
+        "question": "Hoeveel tijd verstreek voordat er voorwerpen van vergelijkbare complexiteit als het mechanisme van Antikythera werden teruggevonden?",
+        "explanation": "Geen enkel voorwerp van dergelijke complexiteit is bekend vóór de astronomische klokken van Europa in de 14e eeuw, dus bijna 1.500 jaar later.",
+        "options": [
+          "Bijna 1.500 jaar",
+          "500 jaar",
+          "1.000 jaar",
+          "2.000 jaar"
+        ],
+        "correctIndex": 0
+      }
+    ]
   }
 ]

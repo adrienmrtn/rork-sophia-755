@@ -34529,5 +34529,85 @@
         "correctIndex": 0
       }
     ]
+  },
+  {
+    "courseId": "course_312_qu_est_ce_que_la_machine_d_anticythere",
+    "quiz": [
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q1",
+        "type": "mcq",
+        "question": "Qui a remarqué la première roue dentée dans le bloc de bronze en 1902 ?",
+        "explanation": "C'est l'archéologue Valerios Stais qui a remarqué une roue dentée prise dans la corrosion en 1902.",
+        "options": [
+          "Valerios Stais",
+          "Derek de Solla Price",
+          "Charalambos Karakalos",
+          "Le commandant Cousteau"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q2",
+        "type": "mcq",
+        "question": "Quand le navire transportant la machine d'Anticythère a-t-il sombré ?",
+        "explanation": "Le navire a sombré vers 60 av. J.-C., chargé d'œuvres d'art grecques probablement destinées à des acheteurs romains.",
+        "options": [
+          "Vers 60 av. J.-C.",
+          "Au IIe siècle av. J.-C.",
+          "En 1900",
+          "En 1976"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q3",
+        "type": "chronological",
+        "question": "Remettez dans l'ordre chronologique ces étapes de l'étude de la machine d'Anticythère.",
+        "explanation": "La découverte de l'épave a eu lieu en 1900, la roue dentée a été remarquée en 1902, Derek de Solla Price a publié sa première étude en 1959, et les images de tomographie ont permis de déchiffrer le code en 2006.",
+        "items": [
+          "Des pêcheurs d'éponges de Symi repèrent l'épave au large d'Anticythère.",
+          "Valerios Stais remarque un engrenage dans un bloc corrodé au musée d'Athènes.",
+          "Derek de Solla Price publie la première étude détaillée du mécanisme.",
+          "Les images de tomographie permettent de lire les inscriptions et de comprendre les cadrans."
+        ]
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q4",
+        "type": "trueFalse",
+        "question": "La machine d'Anticythère pouvait prédire les éclipses de Soleil et de Lune.",
+        "explanation": "Le mécanisme comportait un cadran suivant le saros qui permettait d'annoncer les éclipses de Soleil et de Lune, avec l'heure et parfois la couleur attendue.",
+        "options": [
+          "Vrai",
+          "Faux"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q5",
+        "type": "mcq",
+        "question": "Quel cycle astronomique permettait de faire coïncider 19 années solaires et 235 mois lunaires ?",
+        "explanation": "Le cycle de Méton faisait coïncider 19 années solaires et 235 mois lunaires, et était représenté sur l'un des grands cadrans en spirale à l'arrière du mécanisme.",
+        "options": [
+          "Le cycle de Méton",
+          "Le saros",
+          "Le cycle d'Hipparque",
+          "Le cycle des jeux d'Olympie"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q6",
+        "type": "mcq",
+        "question": "Combien de temps s'est écoulé avant qu'on retrouve des objets d'une complexité comparable à la machine d'Anticythère ?",
+        "explanation": "Aucun objet d'une telle complexité n'est connu avant les horloges astronomiques de l'Europe du XIVe siècle, soit près de 1 500 ans plus tard.",
+        "options": [
+          "Près de 1 500 ans",
+          "500 ans",
+          "1 000 ans",
+          "2 000 ans"
+        ],
+        "correctIndex": 0
+      }
+    ]
   }
 ]

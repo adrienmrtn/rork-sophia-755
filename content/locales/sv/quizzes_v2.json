@@ -34529,5 +34529,85 @@
         "correctIndex": 0
       }
     ]
+  },
+  {
+    "courseId": "course_312_qu_est_ce_que_la_machine_d_anticythere",
+    "quiz": [
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q1",
+        "type": "mcq",
+        "question": "Vem lade märke till det första kugghjulet i bronzklumpen 1902?",
+        "explanation": "Det var arkeologen Valerios Stais som lade märke till ett kugghjul fast i korrosionen 1902.",
+        "options": [
+          "Valerios Stais",
+          "Derek de Solla Price",
+          "Charalambos Karakalos",
+          "Kommendör Cousteau"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q2",
+        "type": "mcq",
+        "question": "När sjönk fartyget som transporterade Antikythera-mekanismen?",
+        "explanation": "Fartyget sjönk omkring 60 f.Kr., lastat med grekiska konstverk som troligen var avsedda för romerska köpare.",
+        "options": [
+          "Omkring 60 f.Kr.",
+          "Under 100-talet f.Kr.",
+          "1900",
+          "1976"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q3",
+        "type": "chronological",
+        "question": "Ordna dessa etapper i studien av Antikythera-mekanismen i kronologisk ordning.",
+        "explanation": "Vrakets upptäckt skedde 1900, kugghjulet uppmärksammades 1902, Derek de Solla Price publicerade sin första studie 1959 och tomografibilderna möjliggjorde dechiffrering av koden 2006.",
+        "items": [
+          "Svampfiskare från Symi upptäcker vraket utanför Antikythera.",
+          "Valerios Stais lägger märke till ett kugghjul i ett korroderat klump på museet i Aten.",
+          "Derek de Solla Price publicerar den första detaljerade studien av mekanismen.",
+          "Tomografibilderna gör det möjligt att läsa inskrifterna och förstå urtavlorna."
+        ]
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q4",
+        "type": "trueFalse",
+        "question": "Antikythera-mekanismen kunde förutsäga sol- och månförmörkelser.",
+        "explanation": "Mekanismen hade en urtavla som följde saros och som gjorde det möjligt att förutsäga sol- och månförmörkelser, med tid och ibland förväntad färg.",
+        "options": [
+          "Sant",
+          "Falskt"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q5",
+        "type": "mcq",
+        "question": "Vilken astronomisk cykel fick 19 solår och 235 månmånader att sammanfalla?",
+        "explanation": "Metons cykel fick 19 solår och 235 månmånader att sammanfalla och var avbildad på en av de stora spiralformade urtavlorna på mekanismens baksida.",
+        "options": [
+          "Metons cykel",
+          "Saros",
+          "Hipparchos cykel",
+          "De olympiska spelens cykel"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q6",
+        "type": "mcq",
+        "question": "Hur lång tid gick det innan man återfann föremål av jämförbar komplexitet som Antikythera-mekanismen?",
+        "explanation": "Inget föremål av sådan komplexitet är känt före de astronomiska klockorna i Europa på 1300-talet, alltså nästan 1.500 år senare.",
+        "options": [
+          "Nästan 1.500 år",
+          "500 år",
+          "1.000 år",
+          "2.000 år"
+        ],
+        "correctIndex": 0
+      }
+    ]
   }
 ]

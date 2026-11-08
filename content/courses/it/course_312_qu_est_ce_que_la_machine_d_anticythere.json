@@ -1,0 +1,151 @@
+{
+  "id": "course_312_qu_est_ce_que_la_machine_d_anticythere",
+  "hero": {
+    "hook": "Un blocco di bronzo corroso ha atteso duemila anni sul fondo del mare che qualcuno capisse che calcolava le eclissi.",
+    "image": "qu_est_ce_que_la_machine_d_anticythere",
+    "ratio": "16:9",
+    "credit": {
+      "title": "NAMA Machine d'Anticythère 1",
+      "author": "Marsyas",
+      "source": "Wikimedia Commons",
+      "license": "CC BY 2.5"
+    }
+  },
+  "title": "Cos'è il meccanismo di Anticitera?",
+  "sources": [
+    {
+      "text": "T. Freeth et al., « Decoding the ancient Greek astronomical calculator known as the Antikythera Mechanism », Nature, vol. 444, 2006, p. 587-591."
+    },
+    {
+      "text": "T. Freeth et al., « A Model of the Cosmos in the ancient Greek Antikythera Mechanism », Scientific Reports, vol. 11, 2021."
+    },
+    {
+      "text": "D. de Solla Price, Gears from the Greeks: The Antikythera Mechanism, a Calendar Computer from ca. 80 B.C., Transactions of the American Philosophical Society, 1974."
+    },
+    {
+      "text": "A. Jones, A Portable Cosmos: Revealing the Antikythera Mechanism, Oxford University Press, 2017."
+    }
+  ],
+  "subject": "sciences",
+  "sections": [
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_intro",
+      "free": true,
+      "title": "Introduzione",
+      "blocks": [
+        {
+          "text": "Nella primavera del **1900**, dei pescatori di spugne dell'isola di Simi si riparano da una tempesta vicino ad Anticitera, un isolotto tra Creta e il Peloponneso. Durante un'immersione, uno di loro scopre un relitto antico coperto di statue. Per un anno, i Greci ne recuperano bronzi, marmi e anfore.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Tra i ritrovamenti, un blocco di bronzo e legno delle dimensioni di una scatola da scarpe non interessa nessuno. Nel **1902**, l'archeologo Valerios Stais nota una ruota dentata imprigionata nella corrosione. Ha appena posato gli occhi sull'oggetto più misterioso dell'antichità greca.",
+          "type": "paragraph"
+        }
+      ]
+    },
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_p1",
+      "free": false,
+      "title": "Un relitto e un blocco di bronzo",
+      "blocks": [
+        {
+          "text": "La nave affondò verso il **60 a.C.**, carica di opere d'arte greche probabilmente destinate ad acquirenti romani. Il meccanismo, invece, è più antico: fu probabilmente fabbricato nel **II secolo a.C.**, nel mondo greco, forse a Rodi o a Corinto.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Ci è giunto in **82 frammenti**, di cui sette grandi. Il mare ha fatto la sua opera: il legno è scomparso, il bronzo si è trasformato in una massa verdastra e fragile. A lungo, nessuno sa dire a cosa servissero quelle ruote dentate. Alcuni dubitano persino che un tale oggetto possa essere antico.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Nel **1976**, il comandante Cousteau si immerge sul relitto e ne recupera monete coniate a Pergamo e a Efeso. Sono loro che permettono di datare il naufragio.",
+          "type": "funFact"
+        }
+      ]
+    },
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_p2",
+      "free": false,
+      "title": "Ciò che nasconde la corrosione",
+      "blocks": [
+        {
+          "text": "Il primo a prendere sul serio l'oggetto è lo storico della scienza **Derek de Solla Price**. Nel 1959, lo presenta come \"un computer greco antico\". Con il fisico Charalambos Karakalos, lo radiografa con raggi gamma e conta i denti delle ruote. Nel 1974, pubblica una prima ricostruzione.",
+          "type": "paragraph"
+        },
+        {
+          "text": "La svolta arriva nel **2005**. Un'équipe internazionale fa arrivare ad Atene uno scanner di otto tonnellate e realizza una [[tomografia]] dei frammenti. Le immagini rivelano l'interno del blocco, strato per strato, e più di 3.000 caratteri di iscrizioni: un vero manuale d'uso inciso nel bronzo.",
+          "type": "paragraph"
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1900",
+              "title": "Scoperta del relitto",
+              "detail": "Pescatori di spugne di Simi individuano il relitto al largo di Anticitera."
+            },
+            {
+              "date": "1902",
+              "title": "Una ruota dentata",
+              "detail": "Valerios Stais nota un ingranaggio in un blocco corroso al museo di Atene."
+            },
+            {
+              "date": "1959",
+              "title": "Un computer antico",
+              "detail": "Derek de Solla Price pubblica il primo studio dettagliato del meccanismo."
+            },
+            {
+              "date": "2006",
+              "title": "Il codice decifrato",
+              "detail": "Le immagini di tomografia permettono di leggere le iscrizioni e di comprendere i quadranti."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_p3",
+      "free": false,
+      "title": "Un calendario del cielo in una scatola",
+      "blocks": [
+        {
+          "text": "Il meccanismo contiene una trentina di **ingranaggi in bronzo** che sopravvivono, e ne contava di più. Una manovella sul lato faceva girare l'insieme. Davanti, un quadrante mostrava la posizione del Sole e della Luna nello zodiaco, e una piccola sfera metà argentata metà nera indicava la fase della Luna.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Sul retro, due grandi quadranti a spirale servivano da calendari. Il primo seguiva [[il ciclo di Metone]], che fa coincidere 19 anni solari e 235 mesi lunari. Il secondo seguiva [[il saros]], un ciclo di 223 mesi dopo il quale le eclissi si ripetono. Permetteva di annunciare le eclissi di Sole e di Luna, con l'ora e talvolta il colore previsto.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Il più sorprendente è un piccolo dispositivo a perno e a fessura che fa variare la velocità della Luna nel corso del mese, esattamente come nella teoria dell'astronomo [[Ipparco]]. Un quadrante annesso dava persino l'anno dei grandi giochi greci, tra cui quelli di Olimpia.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Nessun oggetto di tale complessità è noto prima degli **orologi astronomici** dell'Europa del XIV secolo, cioè quasi 1.500 anni più tardi.",
+          "type": "funFact"
+        }
+      ]
+    },
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_p4",
+      "free": false,
+      "title": "Cosa ci insegna",
+      "blocks": [
+        {
+          "text": "Il meccanismo di Anticitera mostra che i Greci non si accontentavano di teorie sul cielo: sapevano trasformarle in meccanismi di precisione. I testi antichi menzionavano tali apparecchi, attribuiti ad Archimede o a Posidonio, ma nessuno ci credeva davvero prima della scoperta del relitto.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Ricorda anche la fragilità di questo sapere. Le botteghe capaci di costruirla sono scomparse senza lasciare altro esemplare noto. I frammenti sono oggi esposti al Museo archeologico nazionale di Atene, e i ricercatori propongono ancora nuove ricostruzioni, come quella pubblicata nel 2021 da un'équipe dell'University College di Londra.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Fabbricato nel **II secolo a.C.** e ritrovato nel 1901 in un relitto, il meccanismo di Anticitera è un calcolatore astronomico a ingranaggi. Prevedeva le eclissi e seguiva i calendari del cielo, un'impresa senza equivalenti per quindici secoli.",
+          "type": "takeaway"
+        }
+      ]
+    }
+  ],
+  "subtitle": "II secolo a.C.",
+  "description": "Nel 1901, dei pescatori di spugne recuperano da un relitto greco un blocco di bronzo corroso dal mare. Nasconde il meccanismo più complesso dell'antichità: una macchina per calcolare il cielo.",
+  "subcategory": "Scoperte che hanno cambiato il mondo"
+}

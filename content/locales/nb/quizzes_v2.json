@@ -34529,5 +34529,85 @@
         "correctIndex": 0
       }
     ]
+  },
+  {
+    "courseId": "course_312_qu_est_ce_que_la_machine_d_anticythere",
+    "quiz": [
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q1",
+        "type": "mcq",
+        "question": "Hvem la merke til det første tannhjulet i bronseklumpen i 1902?",
+        "explanation": "Det var arkeologen Valerios Stais som la merke til et tannhjul fanget i korrosjonen i 1902.",
+        "options": [
+          "Valerios Stais",
+          "Derek de Solla Price",
+          "Charalambos Karakalos",
+          "Kommandør Cousteau"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q2",
+        "type": "mcq",
+        "question": "Når gikk skipet som fraktet Anticythera-maskinen ned?",
+        "explanation": "Skipet gikk ned rundt 60 f.Kr., lastet med greske kunstgjenstander trolig beregnet på romerske kjøpere.",
+        "options": [
+          "Rundt 60 f.Kr.",
+          "På 100-tallet f.Kr.",
+          "I 1900",
+          "I 1976"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q3",
+        "type": "chronological",
+        "question": "Sett i kronologisk rekkefølge disse etappene i studiet av Anticythera-maskinen.",
+        "explanation": "Oppdagelsen av vraket fant sted i 1900, tannhjulet ble lagt merke til i 1902, Derek de Solla Price publiserte sin første studie i 1959, og tomografibildene gjorde det mulig å dechiffrere koden i 2006.",
+        "items": [
+          "Svampefiskere fra Symi oppdager vraket utenfor Anticythera.",
+          "Valerios Stais legger merke til et girhjul i en korrodert klump på museet i Aten.",
+          "Derek de Solla Price publiserer den første detaljerte studien av mekanismen.",
+          "Tomografibildene gjør det mulig å lese innskriftene og forstå skivene."
+        ]
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q4",
+        "type": "trueFalse",
+        "question": "Anticythera-maskinen kunne forutsi sol- og måneformørkelser.",
+        "explanation": "Mekanismen hadde en skive som fulgte saros, som gjorde det mulig å forutsi sol- og måneformørkelser, med klokkeslett og iblant den forventede fargen.",
+        "options": [
+          "Sant",
+          "Usant"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q5",
+        "type": "mcq",
+        "question": "Hvilken astronomisk syklus fikk 19 solår og 235 månemåneder til å falle sammen?",
+        "explanation": "Meton-syklusen fikk 19 solår og 235 månemåneder til å falle sammen, og var representert på en av de store spiralformede skivene bak på mekanismen.",
+        "options": [
+          "Meton-syklusen",
+          "Saros",
+          "Hipparkos-syklusen",
+          "Syklusen for Olympia-lekene"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q6",
+        "type": "mcq",
+        "question": "Hvor lang tid gikk før man fant gjenstander med tilsvarende kompleksitet som Anticythera-maskinen?",
+        "explanation": "Ingen gjenstand med tilsvarende kompleksitet er kjent før de astronomiske klokkene i Europa på 1300-tallet, altså nesten 1 500 år senere.",
+        "options": [
+          "Nesten 1 500 år",
+          "500 år",
+          "1 000 år",
+          "2 000 år"
+        ],
+        "correctIndex": 0
+      }
+    ]
   }
 ]

@@ -34529,5 +34529,85 @@
         "correctIndex": 0
       }
     ]
+  },
+  {
+    "courseId": "course_312_qu_est_ce_que_la_machine_d_anticythere",
+    "quiz": [
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q1",
+        "type": "mcq",
+        "question": "Who noticed the first gear wheel in the bronze block in 1902?",
+        "explanation": "It was the archaeologist Valerios Stais who noticed a gear wheel caught in the corrosion in 1902.",
+        "options": [
+          "Valerios Stais",
+          "Derek de Solla Price",
+          "Charalambos Karakalos",
+          "Commander Cousteau"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q2",
+        "type": "mcq",
+        "question": "When did the ship carrying the Antikythera mechanism sink?",
+        "explanation": "The ship sank around 60 BC, loaded with Greek artworks probably destined for Roman buyers.",
+        "options": [
+          "Around 60 BC",
+          "In the 2nd century BC",
+          "In 1900",
+          "In 1976"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q3",
+        "type": "chronological",
+        "question": "Put these stages in the study of the Antikythera mechanism in chronological order.",
+        "explanation": "The shipwreck was discovered in 1900, the gear wheel was noticed in 1902, Derek de Solla Price published his first study in 1959, and tomography images made it possible to decipher the code in 2006.",
+        "items": [
+          "Sponge divers from Symi spotted the wreck off Antikythera.",
+          "Valerios Stais noticed a gear in a corroded block at the Athens museum.",
+          "Derek de Solla Price published the first detailed study of the mechanism.",
+          "Tomography images made it possible to read the inscriptions and understand the dials."
+        ]
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q4",
+        "type": "trueFalse",
+        "question": "The Antikythera mechanism could predict eclipses of the Sun and Moon.",
+        "explanation": "The mechanism included a dial following the saros that made it possible to predict eclipses of the Sun and Moon, with the time and sometimes the expected color.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q5",
+        "type": "mcq",
+        "question": "What astronomical cycle made it possible to align 19 solar years with 235 lunar months?",
+        "explanation": "The Metonic cycle aligned 19 solar years with 235 lunar months, and was represented on one of the large spiral dials on the back of the mechanism.",
+        "options": [
+          "The Metonic cycle",
+          "The saros",
+          "Hipparchus's cycle",
+          "The cycle of the Olympic games"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q6",
+        "type": "mcq",
+        "question": "How much time passed before objects of comparable complexity to the Antikythera mechanism were found again?",
+        "explanation": "No object of such complexity is known before the astronomical clocks of 14th-century Europe, nearly 1,500 years later.",
+        "options": [
+          "Nearly 1,500 years",
+          "500 years",
+          "1,000 years",
+          "2,000 years"
+        ],
+        "correctIndex": 0
+      }
+    ]
   }
 ]
