@@ -42,6 +42,7 @@ struct CatalogFile: Decodable {
         let slug: String
         let name: String
         let photo: String?
+        let photoUrl: String?
         let institution: String?
         let country: String?
         let links: [String: String]?

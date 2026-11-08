@@ -356,6 +356,7 @@ def build_language(src: Sources, lang: str) -> dict:
     for author in src.authors:
         creators.append({
             "slug": author["slug"], "name": author["name"], "photo": author.get("photo"),
+            "photoUrl": author.get("photo_url"),
             "institution": author.get("institution"), "country": author.get("country"),
             "links": author.get("links") or {},
             "title": (author.get("title") or {}).get(lang) or (author.get("title") or {}).get("fr"),
@@ -407,8 +408,11 @@ def global_rows(src: Sources, fr_courses: dict[str, dict]) -> dict:
                 "url": f"{DEFAULT_URL}/storage/v1/object/public/course-images/{slug}.jpg",
                 "credit": src.credits.get(slug),
             })
+    # Le portrait hébergé d'un créateur du Studio : posé à part, pour ne jamais effacer en base
+    # celui que l'usine a hébergé quand authors.json ne le porte pas encore.
+    creator_photos = [{"slug": a["slug"], "photo_url": a["photo_url"]} for a in src.authors if a.get("photo_url")]
     return {"creators": creators, "courses": courses, "collections": collections,
-            "collection_courses": collection_courses, "assets": assets}
+            "collection_courses": collection_courses, "assets": assets, "creator_photos": creator_photos}
 
 
 # ---------------------------------------------------------------- packs de départ
@@ -530,6 +534,8 @@ def main() -> None:
     rows = global_rows(src, fr)
     if not args.dry_run:
         sb.upsert("creators", rows["creators"], "slug")
+        if rows["creator_photos"]:
+            sb.upsert("creators", rows["creator_photos"], "slug")
         sb.upsert("courses", rows["courses"], "id")
         sb.upsert("collections", rows["collections"], "id")
         sb.upsert("collection_courses", rows["collection_courses"], "collection_id,course_id")

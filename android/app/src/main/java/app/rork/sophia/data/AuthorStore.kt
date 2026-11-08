@@ -17,6 +17,8 @@ data class CourseAuthor(
     val name: String,
     /** File name (no extension) under `assets/author_photos`; null shows the initials. */
     val photo: String? = null,
+    /** Portrait hébergé d'un créateur du Studio (`creators.photo_url`), affiché quand [photo] manque. */
+    val photoUrl: String? = null,
     val institution: String? = null,
     val country: String? = null,
     val links: Map<String, String> = emptyMap(),
@@ -36,8 +38,12 @@ data class CourseAuthor(
 
     fun bio(language: AppLanguage): String? = localized(bio, language)
 
-    /** Coil model for the portrait, or null when the author has none. */
+    /** Coil model for the portrait: the bundled asset, else the hosted photo of a Studio creator, or null. */
     val photoModel: String?
+        get() = bundledPhotoModel ?: photoUrl?.takeIf { it.startsWith("https://") }
+
+    /** Only the bundled portrait (`assets/author_photos`), for the screens shown before any network. */
+    val bundledPhotoModel: String?
         get() = photo?.takeIf { it.isNotBlank() }?.let { "file:///android_asset/author_photos/$it.jpg" }
 
     /** Up to two initials for the avatar fallback: "Dusan Nikolic" → "DN". */
@@ -58,7 +64,8 @@ data class CourseAuthor(
 
 /**
  * Les créateurs de cours, lus dans le snapshot du catalogue en ligne de la langue persistée
- * (`CatalogStore`, section `creators`) ; leurs portraits restent embarqués (`author_photos/`).
+ * (`CatalogStore`, section `creators`) ; leurs portraits sont embarqués (`author_photos/`) pour les
+ * auteurs du pack, hébergés (`photoUrl`, chargés par Coil) pour les créateurs du Studio.
  */
 object AuthorStore {
     /** Construit le snapshot de la langue si besoin : à appeler hors du fil principal quand c'est possible. */

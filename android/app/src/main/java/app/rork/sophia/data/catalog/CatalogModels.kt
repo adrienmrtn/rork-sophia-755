@@ -64,6 +64,8 @@ data class CatalogCreatorEntry(
     val slug: String,
     val name: String,
     val photo: String? = null,
+    /** Portrait hébergé d'un créateur du Studio, quand `photo` (ressource embarquée) manque. */
+    val photoUrl: String? = null,
     val institution: String? = null,
     val country: String? = null,
     val links: Map<String, String>? = null,
@@ -77,6 +79,7 @@ data class CatalogCreatorEntry(
         slug = slug,
         name = name,
         photo = photo,
+        photoUrl = photoUrl,
         institution = institution,
         country = country,
         links = links.orEmpty(),

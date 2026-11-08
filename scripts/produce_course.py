@@ -1207,8 +1207,13 @@ def update_shared_files(ctx: Context, cover_slug: str | None, credit) -> None:
             credits = read_json(content / "image_credits.json", {}) or {}
             credits[cover_slug] = {k: credit.get(k, "") for k in ("title", "author", "license", "source")}
             write_json(content / "image_credits.json", credits)
+
+
+def update_authors_file(ctx: Context) -> None:
+    """content/authors.json : le créateur du job, avec photo_url tel qu'il est après import_images
+    (la copie hébergée, jamais l'URL signée du Studio)."""
     if ctx.creator and ctx.creator.get("slug"):
-        authors_path = content / "authors.json"
+        authors_path = ctx.content_dir / "authors.json"
         authors = read_json(authors_path, {"authors": []}) or {"authors": []}
         slug = ctx.creator["slug"]
         current = next((a for a in authors.get("authors", []) if a.get("slug") == slug), None)
@@ -1293,6 +1298,7 @@ def import_images(ctx: Context, sb: Supabase | None, steps: Steps) -> dict:
             else:
                 sb.upload(IMAGE_BUCKET, f"{slug}.jpg", data, content_type, cache_control="public, max-age=86400")
                 sb.update("creators", f"slug=eq.{creator['slug']}", {"photo_url": hosted, "updated_at": now_iso()})
+                creator["photo_url"] = hosted
             imported.append(slug)
         except Exception as e:  # noqa: BLE001
             errors.append(f"{slug}: {type(e).__name__}: {e}"[:200])
@@ -1508,6 +1514,7 @@ def run(args) -> int:
 
         # 4. couverture et images
         cover = import_images(ctx, sb, steps)
+        update_authors_file(ctx)
 
         # 5. traductions : le français d'abord quand il n'est pas l'origine (c'est le pivot des porte),
         #    puis les autres langues en parallèle.

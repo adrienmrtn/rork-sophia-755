@@ -33,6 +33,11 @@ struct AuthorAvatarView: View {
         .onAppear {
             if image == nil { image = AuthorStore.photo(for: author) }
         }
+        .task(id: author.photoUrl) {
+            // Créateur du Studio sans portrait embarqué : la photo hébergée, quand elle arrive.
+            guard image == nil, author.photoUrl != nil else { return }
+            image = await AuthorStore.remotePhoto(for: author)
+        }
         .accessibilityHidden(true)
     }
 }

@@ -237,8 +237,9 @@ curl -sS "https://afnmcoovdvbtkgohtdij.supabase.co/functions/v1/course-stats-exp
 ## Limites connues
 
 - `kind: "video"` arrive au prompt 10.
-- La photo d'un créateur du Studio (`creators.photo_url`) n'est pas encore affichée par les apps,
-  qui lisent `photo` (ressource embarquée) ; elles montrent les initiales en attendant.
+- La photo d'un créateur du Studio (`creators.photo_url`) arrive dans les apps avec le prochain
+  rafraîchissement du catalogue (au plus six heures), sous la clé `photoUrl` ; d'ici là, et sans
+  réseau la première fois, elles montrent les initiales.
 - La narration n'existe qu'en fr, en, es, de, tr (règles de lecture `scripts/tts/`) et seules fr et
   en ont une étape dans le job.
 - Les packs de départ embarqués dans les apps ne contiennent pas un cours produit après le build :

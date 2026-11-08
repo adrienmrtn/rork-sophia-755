@@ -99,7 +99,7 @@ private fun LogoWithHalo(logoSize: Dp, haloSizes: List<Dp>, haloScale: Float, mo
 @Composable
 internal fun MissionStep(language: AppLanguage, onContinue: () -> Unit) {
     val context = LocalContext.current
-    val portraits = remember { AuthorStore.all(context).mapNotNull { it.photoModel }.take(5) }
+    val portraits = remember { AuthorStore.all(context).mapNotNull { it.bundledPhotoModel }.take(5) }
     var haloIn by remember { mutableStateOf(false) }
     LaunchedEffect(Unit) {
         delay(100)
