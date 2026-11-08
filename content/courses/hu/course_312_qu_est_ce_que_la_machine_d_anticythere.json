@@ -1,0 +1,151 @@
+{
+  "id": "course_312_qu_est_ce_que_la_machine_d_anticythere",
+  "hero": {
+    "hook": "Egy korrodált bronztömb kétezer évig várt a tenger mélyén, hogy megértsék: fogyatkozásokat számolt.",
+    "image": "qu_est_ce_que_la_machine_d_anticythere",
+    "ratio": "16:9",
+    "credit": {
+      "title": "NAMA Machine d'Anticythère 1",
+      "author": "Marsyas",
+      "source": "Wikimedia Commons",
+      "license": "CC BY 2.5"
+    }
+  },
+  "title": "Mi az antikütérai gépezet?",
+  "sources": [
+    {
+      "text": "T. Freeth et al., « Decoding the ancient Greek astronomical calculator known as the Antikythera Mechanism », Nature, vol. 444, 2006, p. 587-591."
+    },
+    {
+      "text": "T. Freeth et al., « A Model of the Cosmos in the ancient Greek Antikythera Mechanism », Scientific Reports, vol. 11, 2021."
+    },
+    {
+      "text": "D. de Solla Price, Gears from the Greeks: The Antikythera Mechanism, a Calendar Computer from ca. 80 B.C., Transactions of the American Philosophical Society, 1974."
+    },
+    {
+      "text": "A. Jones, A Portable Cosmos: Revealing the Antikythera Mechanism, Oxford University Press, 2017."
+    }
+  ],
+  "subject": "sciences",
+  "sections": [
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_intro",
+      "free": true,
+      "title": "Bevezetés",
+      "blocks": [
+        {
+          "text": "**1900** tavaszán a Szümi szigetéről származó szivacshalászok vihar elől keresnek menedéket Antikütéra közelében, egy szigetecskénél Kréta és a Peloponnészosz között. Merülés közben egyikük egy ókori, szobrokkal borított hajóroncsra bukkan. Egy évig hozzák fel a görögök a bronzokat, márványokat és amforákat.",
+          "type": "paragraph"
+        },
+        {
+          "text": "A leletek között egy cipősdoboz méretű bronz- és fatömb senkit sem érdekel. **1902-ben** Valerios Stais régész észrevesz egy fogaskereket a korrózióba zárva. Most vetette rá a szemét a görög ókor legrejtelyesebb tárgyára.",
+          "type": "paragraph"
+        }
+      ]
+    },
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_p1",
+      "free": false,
+      "title": "Egy hajóroncs és egy bronztömb",
+      "blocks": [
+        {
+          "text": "A hajó **i. e. 60** körül süllyedt el, görög műalkotásokkal megrakodva, amelyek valószínűleg római vásárlóknak voltak szánva. Maga a gépezet régebbi: feltehetően a **mi időszámításunk előtti 2. században** készült, a görög világban, talán Rodoszon vagy Korinthoszban.",
+          "type": "paragraph"
+        },
+        {
+          "text": "**82 töredékben** jutott el hozzánk, ebből hét nagyobb darab. A tenger megtette a magáét: a fa eltűnt, a bronz zöldes, törékeny tömbbé vált. Sokáig senki nem tudta megmondani, mire szolgáltak ezek a fogaskerekek. Némelyek még abban is kételkedtek, hogy egy ilyen tárgy egyáltalán ókori lehet.",
+          "type": "paragraph"
+        },
+        {
+          "text": "**1976-ban** Cousteau kapitány lemerült a roncshoz, és Pergamonban és Epheszoszban vert érméket hozott fel. Ezek tették lehetővé a hajótörés kormeghatározását.",
+          "type": "funFact"
+        }
+      ]
+    },
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_p2",
+      "free": false,
+      "title": "Mit rejt a korrózió",
+      "blocks": [
+        {
+          "text": "Az első, aki komolyan vette a tárgyat, **Derek de Solla Price** tudománytörténész volt. 1959-ben „ókori görög számítógépként\" mutatta be. Charalambos Karakalos fizikussal együtt gammasugarakkal röntgenezte, és megszámolta a kerekek fogait. 1974-ben közzétette az első rekonstrukciót.",
+          "type": "paragraph"
+        },
+        {
+          "text": "A fordulat **2005-ben** jött el. Egy nemzetközi kutatócsoport Athénba hozatott egy nyolctonnás szkennert, és [[tomográfia]]t készített a töredékekről. A képek rétegről rétegre feltárták a tömb belsejét, és több mint 3.000 feliratos karaktert: egy valódi használati utasítást, amely a bronzba volt vésve.",
+          "type": "paragraph"
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1900",
+              "title": "A hajóroncs felfedezése",
+              "detail": "Szümii szivacshalászok észlelik a roncsot Antikütéra partjainál."
+            },
+            {
+              "date": "1902",
+              "title": "Egy fogaskerék",
+              "detail": "Valerios Stais észrevesz egy fogaskereket egy korrodált tömbben az athéni múzeumban."
+            },
+            {
+              "date": "1959",
+              "title": "Egy ókori számítógép",
+              "detail": "Derek de Solla Price közzéteszi a gépezet első részletes tanulmányát."
+            },
+            {
+              "date": "2006",
+              "title": "A kód megfejtése",
+              "detail": "A tomográfiai képek lehetővé teszik a feliratok olvasását és a számlápok megértését."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_p3",
+      "free": false,
+      "title": "Égbolt-naptár egy dobozban",
+      "blocks": [
+        {
+          "text": "A gépezet mintegy harminc fennmaradt **bronz fogaskereket** tartalmaz, és eredetileg még több volt benne. Az oldalsó hajtókar forgatta az egészet. Elöl egy számlapra mutatta a Nap és a Hold helyzetét az állatövben, és egy félig ezüst, félig fekete kis gömb jelezte a Hold fázisát.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Hátul két nagy spirális számlap szolgált naptárként. Az első követte a [[Métón-ciklus]]t, amely 19 napévet és 235 hónapot egyeztet. A második követte a [[szarosz]]t, egy 223 hónapból álló ciklust, amely után a fogyatkozások megismétlődnek. Lehetővé tette a nap- és holdfogyatkozások bejelentését, a pontos idővel és néha a várható színnel együtt.",
+          "type": "paragraph"
+        },
+        {
+          "text": "A legcsodálatosabb egy kis csap-és-rés szerkezet, amely a Hold sebességét változtatja a hónap során, pontosan úgy, ahogy [[Hipparkhosz]] csillagász elmélete leírja. Egy mellékszámlap még a nagy görög játékok évét is mutatta, beleértve az olümpiai játékokat is.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Ilyen bonyolultságú tárgyat nem ismerünk az európai 14. századi **csillagászati órák** előttről, vagyis csaknem 1.500 évvel később.",
+          "type": "funFact"
+        }
+      ]
+    },
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_p4",
+      "free": false,
+      "title": "Mit tanít meg nekünk",
+      "blocks": [
+        {
+          "text": "Az antikütérai gépezet azt mutatja, hogy a görögök nem elégedtek meg az égboltról szóló elméletekkel: precíziós mechanizmusokká tudták átalakítani azokat. Az ókori szövegek említettek ilyen készülékeket, amelyeket Arkhimédésznek vagy Poszeidóniosznak tulajdonítottak, de senki nem hitt bennük igazán a hajóroncs felfedezése előtt.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Emlékeztet a tudás törékenységére is. Az azt előállító műhelyek nyomtalanul eltűntek, más ismert példány nélkül. A töredékek ma az athéni Nemzeti Régészeti Múzeumban láthatók, és a kutatók még mindig új rekonstrukciókat javasolnak, mint például azt, amelyet 2021-ben tett közzé a londoni University College csapata.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Az **i. e. 2. században** készült és 1901-ben egy hajóroncsban megtalált antikütérai gépezet egy fogaskerekekkel működő csillagászati számológép. Megjósolta a fogyatkozásokat és követte az égbolt naptárait, ami tizenöt évszázadon át példátlan teljesítmény maradt.",
+          "type": "takeaway"
+        }
+      ]
+    }
+  ],
+  "subtitle": "i. e. 2. század",
+  "description": "1901-ben szivacshalászok egy görög hajóroncsból egy tengervíztől rágott bronztömböt hoztak fel. Benne az ókor legbonyolultabb mechanizmusa rejlett: egy gép, amely kiszámította az égboltot.",
+  "subcategory": "Világot megváltoztató felfedezések"
+}

@@ -34529,5 +34529,85 @@
         "correctIndex": 0
       }
     ]
+  },
+  {
+    "courseId": "course_312_qu_est_ce_que_la_machine_d_anticythere",
+    "quiz": [
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q1",
+        "type": "mcq",
+        "question": "Kto si v roku 1902 všimol prvé ozubené koleso v bronzovom bloku?",
+        "explanation": "Práve archeológ Valerios Stais si v roku 1902 všimol ozubené koleso uviaznuté v korozívnom povlaku.",
+        "options": [
+          "Valerios Stais",
+          "Derek de Solla Price",
+          "Charalambos Karakalos",
+          "Kapitán Cousteau"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q2",
+        "type": "mcq",
+        "question": "Kedy sa potopila loď prepravujúca antikytherský mechanizmus?",
+        "explanation": "Loď sa potopila okolo roku 60 pred n. l., naložená gréckymi umeleckými dielami pravdepodobne určenými rímskym kupcom.",
+        "options": [
+          "Okolo roku 60 pred n. l.",
+          "V 2. storočí pred n. l.",
+          "V roku 1900",
+          "V roku 1976"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q3",
+        "type": "chronological",
+        "question": "Zoraď chronologicky tieto etapy výskumu antikytherského mechanizmu.",
+        "explanation": "Objav vraku sa udial v roku 1900, ozubené koleso si všimli v roku 1902, Derek de Solla Price publikoval prvú štúdiu v roku 1959 a tomografické snímky umožnili rozlúštiť kód v roku 2006.",
+        "items": [
+          "Lovci húb zo Symi nájdu vrak pri Antikythere.",
+          "Valerios Stais si všimne ozubený prevod v zhrdzavenom bloku v aténskom múzeu.",
+          "Derek de Solla Price publikuje prvú podrobnú štúdiu mechanizmu.",
+          "Tomografické snímky umožnia prečítať nápisy a pochopiť ciferníky."
+        ]
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q4",
+        "type": "trueFalse",
+        "question": "Antikytherský mechanizmus vedel predpovedať zatmenia Slnka a Mesiaca.",
+        "explanation": "Mechanizmus mal ciferník sledujúci saros, ktorý umožňoval predpovedať zatmenia Slnka a Mesiaca s údajom o čase a niekedy aj očakávanej farbe.",
+        "options": [
+          "Pravda",
+          "Nepravda"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q5",
+        "type": "mcq",
+        "question": "Ktorý astronomický cyklus umožňoval spojiť 19 slnečných rokov a 235 mesačných mesiacov?",
+        "explanation": "Metónov cyklus spájal 19 slnečných rokov a 235 mesačných mesiacov a bol znázornený na jednom z veľkých špirálových ciferníkov vzadu na mechanizme.",
+        "options": [
+          "Metónov cyklus",
+          "Saros",
+          "Hipparchov cyklus",
+          "Cyklus olympijských hier"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q6",
+        "type": "mcq",
+        "question": "Koľko času uplynulo, kým sa našli objekty podobnej zložitosti ako antikytherský mechanizmus?",
+        "explanation": "Žiadny objekt takej zložitosti nie je známy pred astronomickými hodinami Európy zo 14. storočia, teda takmer o 1500 rokov neskôr.",
+        "options": [
+          "Takmer 1500 rokov",
+          "500 rokov",
+          "1000 rokov",
+          "2000 rokov"
+        ],
+        "correctIndex": 0
+      }
+    ]
   }
 ]

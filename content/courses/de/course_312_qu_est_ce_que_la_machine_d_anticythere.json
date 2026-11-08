@@ -1,0 +1,151 @@
+{
+  "id": "course_312_qu_est_ce_que_la_machine_d_anticythere",
+  "hero": {
+    "hook": "Ein korrodierter Bronzeblock wartete zweitausend Jahre auf dem Meeresgrund darauf, dass man versteht: Er berechnete Finsternisse.",
+    "image": "qu_est_ce_que_la_machine_d_anticythere",
+    "ratio": "16:9",
+    "credit": {
+      "title": "NAMA Machine d'Anticythère 1",
+      "author": "Marsyas",
+      "source": "Wikimedia Commons",
+      "license": "CC BY 2.5"
+    }
+  },
+  "title": "Was ist der Mechanismus von Antikythera?",
+  "sources": [
+    {
+      "text": "T. Freeth et al., « Decoding the ancient Greek astronomical calculator known as the Antikythera Mechanism », Nature, vol. 444, 2006, p. 587-591."
+    },
+    {
+      "text": "T. Freeth et al., « A Model of the Cosmos in the ancient Greek Antikythera Mechanism », Scientific Reports, vol. 11, 2021."
+    },
+    {
+      "text": "D. de Solla Price, Gears from the Greeks: The Antikythera Mechanism, a Calendar Computer from ca. 80 B.C., Transactions of the American Philosophical Society, 1974."
+    },
+    {
+      "text": "A. Jones, A Portable Cosmos: Revealing the Antikythera Mechanism, Oxford University Press, 2017."
+    }
+  ],
+  "subject": "sciences",
+  "sections": [
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_intro",
+      "free": true,
+      "title": "Einleitung",
+      "blocks": [
+        {
+          "text": "Im Frühjahr **1900** suchen Schwammtaucher von der Insel Symi vor einem Sturm Schutz bei Antikythera, einer kleinen Insel zwischen Kreta und dem Peloponnes. Beim Tauchen entdeckt einer von ihnen ein antikes Wrack voller Statuen. Ein Jahr lang bergen die Griechen Bronzen, Marmorskulpturen und Amphoren.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Unter den Fundstücken interessiert sich niemand für einen schuhkartongroßen Block aus Bronze und Holz. **1902** bemerkt der Archäologe Valerios Stais ein Zahnrad in der Korrosion. Er hat soeben den rätselhaftesten Gegenstand der griechischen Antike vor Augen.",
+          "type": "paragraph"
+        }
+      ]
+    },
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_p1",
+      "free": false,
+      "title": "Ein Wrack und ein Bronzeblock",
+      "blocks": [
+        {
+          "text": "Das Schiff sank um **60** v. Chr., beladen mit griechischen Kunstwerken, die wahrscheinlich für römische Käufer bestimmt waren. Der Mechanismus selbst ist älter: Er wurde vermutlich im **2. Jahrhundert** v. Chr. in der griechischen Welt hergestellt, vielleicht auf Rhodos oder in Korinth.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Er ist in **82 Bruchstücken** erhalten, davon sieben große. Das Meer hat sein Werk getan: Das Holz ist verschwunden, die Bronze hat sich in eine grünliche, spröde Masse verwandelt. Lange Zeit weiß niemand zu sagen, wozu diese Zahnräder dienten. Manche bezweifeln sogar, dass ein solcher Gegenstand antik sein kann.",
+          "type": "paragraph"
+        },
+        {
+          "text": "**1976** taucht Kommandant Cousteau zum Wrack und birgt Münzen, die in Pergamon und Ephesos geprägt wurden. Sie ermöglichen es, den Schiffbruch zu datieren.",
+          "type": "funFact"
+        }
+      ]
+    },
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_p2",
+      "free": false,
+      "title": "Was die Korrosion verbirgt",
+      "blocks": [
+        {
+          "text": "Der Erste, der den Gegenstand ernst nimmt, ist der Wissenschaftshistoriker **Derek de Solla Price**. 1959 stellt er ihn als „einen antiken griechischen Computer\" vor. Zusammen mit dem Physiker Charalambos Karakalos röntgt er ihn mit Gammastrahlen und zählt die Zähne der Räder. 1974 veröffentlicht er eine erste Rekonstruktion.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Die Wende kommt **2005**. Ein internationales Team lässt einen acht Tonnen schweren Scanner nach Athen bringen und erstellt eine [[Tomographie]] der Fragmente. Die Bilder enthüllen das Innere des Blocks Schicht für Schicht und über 3.000 Zeichen an Inschriften: eine regelrechte Bedienungsanleitung, eingraviert in die Bronze.",
+          "type": "paragraph"
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1900",
+              "title": "Entdeckung des Wracks",
+              "detail": "Schwammtaucher aus Symi entdecken das Wrack vor Antikythera."
+            },
+            {
+              "date": "1902",
+              "title": "Ein Zahnrad",
+              "detail": "Valerios Stais bemerkt ein Zahnrad in einem korrodierten Block im Museum von Athen."
+            },
+            {
+              "date": "1959",
+              "title": "Ein antiker Computer",
+              "detail": "Derek de Solla Price veröffentlicht die erste ausführliche Studie über den Mechanismus."
+            },
+            {
+              "date": "2006",
+              "title": "Der Code entschlüsselt",
+              "detail": "Die Tomographie-Aufnahmen ermöglichen es, die Inschriften zu lesen und die Zifferblätter zu verstehen."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_p3",
+      "free": false,
+      "title": "Ein Himmelskalender in einer Schachtel",
+      "blocks": [
+        {
+          "text": "Der Mechanismus enthält etwa dreißig erhaltene **Zahnräder aus Bronze**, und es gab ursprünglich noch mehr. Eine Kurbel an der Seite setzte das Ganze in Bewegung. Auf der Vorderseite zeigte ein Zifferblatt die Position von Sonne und Mond im Tierkreis, und eine kleine halb silberne, halb schwarze Kugel gab die Mondphase an.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Auf der Rückseite dienten zwei große spiralförmige Zifferblätter als Kalender. Das erste folgte [[dem Meton-Zyklus]], der 19 Sonnenjahre und 235 Mondmonate zur Deckung bringt. Das zweite folgte [[dem Saros]], einem Zyklus von 223 Mondmonaten, nach dem sich die Finsternisse wiederholen. Es ermöglichte, Sonnen- und Mondfinsternisse vorherzusagen, mit Uhrzeit und manchmal sogar der erwarteten Farbe.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Das Erstaunlichste ist eine kleine Vorrichtung mit Stift und Schlitz, die die Geschwindigkeit des Mondes im Laufe des Monats verändert, genau wie in der Theorie des Astronomen [[Hipparch]]. Ein zusätzliches Zifferblatt gab sogar das Jahr der großen griechischen Spiele an, darunter die von Olympia.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Kein Gegenstand von solcher Komplexität ist vor den **astronomischen Uhren** Europas im 14. Jahrhundert bekannt, also fast 1.500 Jahre später.",
+          "type": "funFact"
+        }
+      ]
+    },
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_p4",
+      "free": false,
+      "title": "Was er uns lehrt",
+      "blocks": [
+        {
+          "text": "Der Mechanismus von Antikythera zeigt, dass die Griechen sich nicht mit Theorien über den Himmel begnügten: Sie verstanden es, sie in Präzisionsmechanismen umzusetzen. Antike Texte erwähnten solche Geräte, die Archimedes oder Poseidonios zugeschrieben wurden, aber niemand glaubte wirklich daran, bis das Wrack entdeckt wurde.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Er erinnert auch an die Zerbrechlichkeit dieses Wissens. Die Werkstätten, die ihn bauen konnten, verschwanden, ohne ein anderes bekanntes Exemplar zu hinterlassen. Die Fragmente sind heute im Nationalen Archäologischen Museum in Athen ausgestellt, und die Forscher schlagen noch immer neue Rekonstruktionen vor, wie die 2021 von einem Team des University College London veröffentlichte.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Hergestellt im **2. Jahrhundert** v. Chr. und 1901 in einem Wrack gefunden, ist der Mechanismus von Antikythera ein astronomischer Rechner mit Zahnrädern. Er sagte Finsternisse voraus und folgte den Himmelskalendern, eine Leistung ohne Entsprechung für fünfzehn Jahrhunderte.",
+          "type": "takeaway"
+        }
+      ]
+    }
+  ],
+  "subtitle": "2. Jahrhundert v. Chr.",
+  "description": "Im Jahr 1901 bergen Schwammtaucher aus einem griechischen Wrack einen vom Meer zerfressenen Bronzeblock. Er birgt den komplexesten Mechanismus der Antike: eine Maschine zur Berechnung des Himmels.",
+  "subcategory": "Entdeckungen, die die Welt veränderten"
+}

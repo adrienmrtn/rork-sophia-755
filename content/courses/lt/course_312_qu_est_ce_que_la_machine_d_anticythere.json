@@ -1,0 +1,151 @@
+{
+  "id": "course_312_qu_est_ce_que_la_machine_d_anticythere",
+  "hero": {
+    "hook": "Korozijos apneštas bronzinis blokas du tūkstančius metų gulėjo jūros dugne, kol žmonės suprato, kad jis skaičiavo užtemimus.",
+    "image": "qu_est_ce_que_la_machine_d_anticythere",
+    "ratio": "16:9",
+    "credit": {
+      "title": "NAMA Machine d'Anticythère 1",
+      "author": "Marsyas",
+      "source": "Wikimedia Commons",
+      "license": "CC BY 2.5"
+    }
+  },
+  "title": "Kas yra Antikiteros mechanizmas?",
+  "sources": [
+    {
+      "text": "T. Freeth et al., « Decoding the ancient Greek astronomical calculator known as the Antikythera Mechanism », Nature, vol. 444, 2006, p. 587-591."
+    },
+    {
+      "text": "T. Freeth et al., « A Model of the Cosmos in the ancient Greek Antikythera Mechanism », Scientific Reports, vol. 11, 2021."
+    },
+    {
+      "text": "D. de Solla Price, Gears from the Greeks: The Antikythera Mechanism, a Calendar Computer from ca. 80 B.C., Transactions of the American Philosophical Society, 1974."
+    },
+    {
+      "text": "A. Jones, A Portable Cosmos: Revealing the Antikythera Mechanism, Oxford University Press, 2017."
+    }
+  ],
+  "subject": "sciences",
+  "sections": [
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_intro",
+      "free": true,
+      "title": "Įvadas",
+      "blocks": [
+        {
+          "text": "**1900** m. pavasarį Simo salos kempinių žvejai nuo audros slepiasi prie Antikiteros – nedidelio salyno tarp Kretos ir Peloponeso. Naras vienas iš jų aptinka seną laivo nuolaužą, nuklotas statulų. Metus graikai iš jos kelia bronzinius dirbinius, marmuro skulptūras ir amforas.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Tarp radinių – batų dėžės dydžio bronzinis ir medinis blokas, kuris nieką nedomina. **1902** m. archeologas Valerijus Staisas pastebėja korozijoje įstrigusį krumpliaratį. Jis ką tik pažvelgė į paslaptingiausią Antikos Graikijos objektą.",
+          "type": "paragraph"
+        }
+      ]
+    },
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_p1",
+      "free": false,
+      "title": "Nuolaužos ir bronzinis blokas",
+      "blocks": [
+        {
+          "text": "Laivas nuskendo apie **60 m. pr. Kr.**, prikrautas graikų meno kūrinių, tikriausiai skirtų Romos pirkėjams. Pats mechanizmas senesnis: jis greičiausiai buvo pagamintas **II a. pr. Kr.** graikų pasaulyje, galbūt Rode arba Korinte.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Iki mūsų jis atkeliavo **82 fragmentais**, iš jų septyni dideli. Jūra padarė savo: medis išnyko, bronza virto žalsvu ir trapiu lukštu. Ilgą laiką niekas nežino, kam skirti šie krumpliaračiai. Kai kurie netgi abejoja, ar toks objektas gali būti antikinis.",
+          "type": "paragraph"
+        },
+        {
+          "text": "**1976** m. komandoras Kusto neria prie nuolaužų ir iškelia Pergame bei Efeze kaldintas monetas. Būtent jos leidžia nustatyti, kada nuskendo laivas.",
+          "type": "funFact"
+        }
+      ]
+    },
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_p2",
+      "free": false,
+      "title": "Ką slepia korozija",
+      "blocks": [
+        {
+          "text": "Pirmasis, rimtai paėmęs objektą, yra mokslų istorikas **Derekas de Solla Price'as**. 1959 m. jis pristato jį kaip „senovės graikų kompiuterį\". Su fiziku Charalampusu Karakalusu jis nuskaito jį gama spinduliais ir suskaičiuoja krumpliaračių dantis. 1974 m. skelbia pirmąją rekonstrukciją.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Lūžis įvyksta **2005** m. Tarptautinė komanda į Atėnus atsiveža aštuonių tonų skanerį ir atlieka fragmentų [[tomografija]]. Vaizdai atskleidžia bloko vidų, sluoksnis po sluoksnio, ir daugiau kaip 3 000 užrašo ženklų – tikrą naudojimo instrukciją, išgraviruotą bronzoje.",
+          "type": "paragraph"
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1900 m.",
+              "title": "Nuolaužų atradimas",
+              "detail": "Simo kempinių žvejai aptinka nuolaužas prie Antikiteros."
+            },
+            {
+              "date": "1902 m.",
+              "title": "Krumpliaratis",
+              "detail": "Valerijus Staisas Atėnų muziejuje pastebėja krumpliaratį korozijos apnešame bloke."
+            },
+            {
+              "date": "1959 m.",
+              "title": "Antikinis kompiuteris",
+              "detail": "Derekas de Solla Price'as skelbia pirmąją išsamią mechanizmo studiją."
+            },
+            {
+              "date": "2006 m.",
+              "title": "Kodas iššifruotas",
+              "detail": "Tomografijos vaizdai leidžia perskaityti užrašus ir suprasti ciferblatus."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_p3",
+      "free": false,
+      "title": "Dangaus kalendorius dėžutėje",
+      "blocks": [
+        {
+          "text": "Mechanizme išliko apie trisdešimt **bronzinių krumpliaračių**, o jų buvo dar daugiau. Rankenėlė šone sukdavo visą sistemą. Priekyje ciferblatas rodė Saulės ir Mėnulio padėtį zodiake, o mažas pusiau sidabrinis, pusiau juodas rutulys nurodė Mėnulio fazę.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Gale du dideli spiralės formos ciferblатai tarnavo kalendoriams. Pirmasis sekė [[Metono ciklas]], kuris sutapdina 19 saulės metų ir 235 mėnulio mėnesius. Antrasis sekė [[sarosas]] – 223 mėnesių ciklą, po kurio užtemimai kartojasi. Jis leido pranešti Saulės ir Mėnulio užtemimus, su laiku ir kartais tikėtina spalva.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Stebinantis yra mažas įtaisas su smeigtuku ir anga, kuris keičia Mėnulio greitį per mėnesį, lygiai kaip astronomo [[Hiparchas]] teorijoje. Šalutinis ciferblatas net nurodydavo didžiųjų graikų žaidynių, įskaitant Olimpijos, metus.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Joks tokio sudėtingumo objektas nežinomas iki **astronominių laikrodžių** Europoje XIV a., tai yra beveik 1 500 metų vėliau.",
+          "type": "funFact"
+        }
+      ]
+    },
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_p4",
+      "free": false,
+      "title": "Ko jis mus moko",
+      "blocks": [
+        {
+          "text": "Antikiteros mechanizmas rodo, kad graikai neapsiribojo dangaus teorijomis – jie mokėjo jas paversti tiksliaisiais mechanizmais. Senovės tekstai minėjo tokius prietaisus, priskiriamus Archimedui ar Posidoniui, bet niekas tuo tikrai netikėjo iki nuolaužų atradimo.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Jis taip pat primena šio žinojimo trapumą. Dirbtuvės, gebėjusios jį sukonstruoti, išnyko nepalikdamos kito žinomo egzemplioriaus. Fragmentai šiandien eksponuojami Atėnų nacionaliniame archeologijos muziejuje, o mokslininkai vis dar siūlo naujas rekonstrukcijas, pavyzdžiui, 2021 m. Londono universiteto koledžo komandos paskelbta.",
+          "type": "paragraph"
+        },
+        {
+          "text": "**II a. pr. Kr.** pagamintas ir 1901 m. nuolaužose rastas Antikiteros mechanizmas yra astronominis skaičiuotuvas su krumpliaračiais. Jis prognozavo užtemimus ir sekė dangaus kalendorius – pasiekimas, neturintis atitikmens penkiolika amžių.",
+          "type": "takeaway"
+        }
+      ]
+    }
+  ],
+  "subtitle": "II a. pr. Kr.",
+  "description": "1901 m. kempinių žvejai iš graikų laivo nuolaužų iškelia jūros suėstą bronzinį bloką. Jame slypi sudėtingiausias antikos mechanizmas – mašina, skaičiuojanti dangų.",
+  "subcategory": "Atradimai, pakeitę pasaulį"
+}

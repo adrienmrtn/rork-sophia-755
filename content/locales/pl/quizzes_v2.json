@@ -34529,5 +34529,85 @@
         "correctIndex": 0
       }
     ]
+  },
+  {
+    "courseId": "course_312_qu_est_ce_que_la_machine_d_anticythere",
+    "quiz": [
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q1",
+        "type": "mcq",
+        "question": "Kto w 1902 roku dostrzegł pierwsze koło zębate w bloku brązu?",
+        "explanation": "To archeolog Valerios Stais dostrzegł koło zębate uwięzione w korozji w 1902 roku.",
+        "options": [
+          "Valerios Stais",
+          "Derek de Solla Price",
+          "Charalambos Karakalos",
+          "Komandor Cousteau"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q2",
+        "type": "mcq",
+        "question": "Kiedy zatonął statek przewożący mechanizm z Antykithiry?",
+        "explanation": "Statek zatonął około 60 roku p.n.e., załadowany greckimi dziełami sztuki prawdopodobnie przeznaczonymi dla rzymskich nabywców.",
+        "options": [
+          "Około 60 roku p.n.e.",
+          "W II wieku p.n.e.",
+          "W 1900 roku",
+          "W 1976 roku"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q3",
+        "type": "chronological",
+        "question": "Ułóż w kolejności chronologicznej te etapy badań nad mechanizmem z Antykithiry.",
+        "explanation": "Odkrycie wraku miało miejsce w 1900 roku, koło zębate zostało dostrzeżone w 1902 roku, Derek de Solla Price opublikował swoje pierwsze studium w 1959 roku, a obrazy tomograficzne pozwoliły odszyfrować kod w 2006 roku.",
+        "items": [
+          "Nurcy-gąbkarze z Symi zauważają wrak u wybrzeży Antykithiry.",
+          "Valerios Stais dostrzega przekładnię w skorodowanym bloku w muzeum w Atenach.",
+          "Derek de Solla Price publikuje pierwsze szczegółowe studium mechanizmu.",
+          "Obrazy tomograficzne pozwalają odczytać inskrypcje i zrozumieć tarcze."
+        ]
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q4",
+        "type": "trueFalse",
+        "question": "Mechanizm z Antykithiry mógł przepowiadać zaćmienia Słońca i Księżyca.",
+        "explanation": "Mechanizm zawierał tarczę śledzącą saros, która pozwalała zapowiadać zaćmienia Słońca i Księżyca, z godziną, a czasem nawet oczekiwanym kolorem.",
+        "options": [
+          "Prawda",
+          "Fałsz"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q5",
+        "type": "mcq",
+        "question": "Który cykl astronomiczny pozwalał dopasować 19 lat słonecznych do 235 miesięcy księżycowych?",
+        "explanation": "Cykl Metona dopasowywał 19 lat słonecznych do 235 miesięcy księżycowych i był przedstawiony na jednej z dużych tarcz spiralnych z tyłu mechanizmu.",
+        "options": [
+          "Cykl Metona",
+          "Saros",
+          "Cykl Hipparcha",
+          "Cykl igrzysk olimpijskich"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q6",
+        "type": "mcq",
+        "question": "Ile czasu upłynęło, zanim odnaleziono obiekty o złożoności porównywalnej z mechanizmem z Antykithiry?",
+        "explanation": "Żaden obiekt o takiej złożoności nie jest znany przed zegarami astronomicznymi europejskimi z XIV wieku, czyli niemal 1500 lat później.",
+        "options": [
+          "Niemal 1500 lat",
+          "500 lat",
+          "1000 lat",
+          "2000 lat"
+        ],
+        "correctIndex": 0
+      }
+    ]
   }
 ]

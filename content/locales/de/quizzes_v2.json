@@ -34529,5 +34529,85 @@
         "correctIndex": 0
       }
     ]
+  },
+  {
+    "courseId": "course_312_qu_est_ce_que_la_machine_d_anticythere",
+    "quiz": [
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q1",
+        "type": "mcq",
+        "question": "Wer bemerkte 1902 das erste Zahnrad in dem Bronzeblock?",
+        "explanation": "Der Archäologe Valerios Stais bemerkte 1902 ein Zahnrad in der Korrosion.",
+        "options": [
+          "Valerios Stais",
+          "Derek de Solla Price",
+          "Charalambos Karakalos",
+          "Kommandant Cousteau"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q2",
+        "type": "mcq",
+        "question": "Wann sank das Schiff, das den Mechanismus von Antikythera transportierte?",
+        "explanation": "Das Schiff sank um 60 v. Chr., beladen mit griechischen Kunstwerken, die wahrscheinlich für römische Käufer bestimmt waren.",
+        "options": [
+          "Um 60 v. Chr.",
+          "Im 2. Jahrhundert v. Chr.",
+          "Im Jahr 1900",
+          "Im Jahr 1976"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q3",
+        "type": "chronological",
+        "question": "Bringen Sie diese Etappen der Erforschung des Mechanismus von Antikythera in die richtige zeitliche Reihenfolge.",
+        "explanation": "Die Entdeckung des Wracks fand 1900 statt, das Zahnrad wurde 1902 bemerkt, Derek de Solla Price veröffentlichte 1959 seine erste Studie, und die Tomographie-Aufnahmen ermöglichten 2006 die Entschlüsselung des Codes.",
+        "items": [
+          "Schwammtaucher aus Symi entdecken das Wrack vor Antikythera.",
+          "Valerios Stais bemerkt ein Zahnrad in einem korrodierten Block im Museum von Athen.",
+          "Derek de Solla Price veröffentlicht die erste ausführliche Studie über den Mechanismus.",
+          "Die Tomographie-Aufnahmen ermöglichen es, die Inschriften zu lesen und die Zifferblätter zu verstehen."
+        ]
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q4",
+        "type": "trueFalse",
+        "question": "Der Mechanismus von Antikythera konnte Sonnen- und Mondfinsternisse vorhersagen.",
+        "explanation": "Der Mechanismus enthielt ein Zifferblatt, das dem Saros folgte und es ermöglichte, Sonnen- und Mondfinsternisse vorherzusagen, mit Uhrzeit und manchmal der erwarteten Farbe.",
+        "options": [
+          "Richtig",
+          "Falsch"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q5",
+        "type": "mcq",
+        "question": "Welcher astronomische Zyklus ermöglichte es, 19 Sonnenjahre und 235 Mondmonate zur Deckung zu bringen?",
+        "explanation": "Der Meton-Zyklus brachte 19 Sonnenjahre und 235 Mondmonate zur Deckung und war auf einem der großen spiralförmigen Zifferblätter auf der Rückseite des Mechanismus dargestellt.",
+        "options": [
+          "Der Meton-Zyklus",
+          "Der Saros-Zyklus",
+          "Der Zyklus des Hipparch",
+          "Der Zyklus der Olympischen Spiele"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q6",
+        "type": "mcq",
+        "question": "Wie viel Zeit verging, bis man Gegenstände von vergleichbarer Komplexität wie den Mechanismus von Antikythera wiederfand?",
+        "explanation": "Kein Gegenstand von solcher Komplexität ist vor den astronomischen Uhren Europas im 14. Jahrhundert bekannt, also fast 1.500 Jahre später.",
+        "options": [
+          "Fast 1.500 Jahre",
+          "500 Jahre",
+          "1.000 Jahre",
+          "2.000 Jahre"
+        ],
+        "correctIndex": 0
+      }
+    ]
   }
 ]

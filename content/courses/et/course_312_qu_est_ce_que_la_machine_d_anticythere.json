@@ -1,0 +1,151 @@
+{
+  "id": "course_312_qu_est_ce_que_la_machine_d_anticythere",
+  "hero": {
+    "hook": "Korrodeerunud pronksiplokk ootas kaks tuhat aastat merepõhjas, kuni keegi sai aru, et see arvutas varjutusi.",
+    "image": "qu_est_ce_que_la_machine_d_anticythere",
+    "ratio": "16:9",
+    "credit": {
+      "title": "NAMA Machine d'Anticythère 1",
+      "author": "Marsyas",
+      "source": "Wikimedia Commons",
+      "license": "CC BY 2.5"
+    }
+  },
+  "title": "Mis on Antikythera masin?",
+  "sources": [
+    {
+      "text": "T. Freeth et al., « Decoding the ancient Greek astronomical calculator known as the Antikythera Mechanism », Nature, vol. 444, 2006, p. 587-591."
+    },
+    {
+      "text": "T. Freeth et al., « A Model of the Cosmos in the ancient Greek Antikythera Mechanism », Scientific Reports, vol. 11, 2021."
+    },
+    {
+      "text": "D. de Solla Price, Gears from the Greeks: The Antikythera Mechanism, a Calendar Computer from ca. 80 B.C., Transactions of the American Philosophical Society, 1974."
+    },
+    {
+      "text": "A. Jones, A Portable Cosmos: Revealing the Antikythera Mechanism, Oxford University Press, 2017."
+    }
+  ],
+  "subject": "sciences",
+  "sections": [
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_intro",
+      "free": true,
+      "title": "Sissejuhatus",
+      "blocks": [
+        {
+          "text": "Kevadel **1900** varjuvad Symi saare käsnpüüdjad tormi eest Antikythera lähedale, Kreeta ja Peloponnesos vahel asuvale väikesaarele. Sukeldumisel avastab üks neist antiikaegseid kujusid täis vraki. Aasta jooksul toovad kreeklased üles pronkse, marmorit ja amfoorid.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Leidude seas on kingakarbi suurune pronksi- ja puiduplokk, mis kedagi ei huvita. **1902**. aastal märkab arheoloog Valerios Stais korrosiooni sisse jäänud hammasratast. Ta on parajasti silmanud Kreeka antiikaja kõige salapärasemat objekti.",
+          "type": "paragraph"
+        }
+      ]
+    },
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_p1",
+      "free": false,
+      "title": "Vrakk ja pronksiplokk",
+      "blocks": [
+        {
+          "text": "Laev uppus umbes **60 eKr**, lastis Kreeka kunstiteoseid, mis olid tõenäoliselt mõeldud Rooma ostjatele. Mehhanismi ise on vanem: see valmistati tõenäoliselt **2. sajandil eKr** Kreeka maailmas, võib-olla Rodosel või Korintoses.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Meieni on jõudnud **82 tükki**, neist seitse suurt. Meri on oma töö teinud: puit on kadunud, pronks on muutunud rohekas-pruuniks hapras massiks. Pikka aega ei tea keegi öelda, milleks need hammasrattad teenisid. Mõned kahtlevad isegi, kas niisugune ese saab üldse antiikne olla.",
+          "type": "paragraph"
+        },
+        {
+          "text": "**1976**. aastal sukeldub komandör Cousteau vrakile ja toob üles münte, mis on vermitud Pergamonis ja Ephesoses. Just need võimaldavad laevahuku dateerida.",
+          "type": "funFact"
+        }
+      ]
+    },
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_p2",
+      "free": false,
+      "title": "Mida korrosioon peidab",
+      "blocks": [
+        {
+          "text": "Esimene, kes eset tõsiselt võtab, on teadusajaloolane **Derek de Solla Price**. 1959. aastal tutvustab ta seda kui „antiikkreeka arvutit\". Koos füüsik Charalambos Karakalosega teeb ta gammakirte röntgenipilte ja loendab rattaste hambaid. 1974. aastal avaldab ta esimese rekonstruktsiooni.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Pööre saabub **2005**. aastal. Rahvusvaheline meeskond toob Ateenasse kaheksa tonni kaaluva skanneri ja teeb tükkidest [[tomograafia]]. Pildid paljastavad ploki sisemuse kiht-kihilt ning enam kui 3000 tähemärki kirjutatust: tõelise kasutusjuhendi, mis on pronksi sisse graveeritud.",
+          "type": "paragraph"
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1900",
+              "title": "Vraki avastamine",
+              "detail": "Symi käsnpüüdjad märkavad vrakki Antikythera ranniku lähedal."
+            },
+            {
+              "date": "1902",
+              "title": "Hammasratas",
+              "detail": "Valerios Stais märkab Ateena muuseumis korrodeerunud plokis hammasülekannet."
+            },
+            {
+              "date": "1959",
+              "title": "Antiikne arvuti",
+              "detail": "Derek de Solla Price avaldab esimese üksikasjaliku uurimuse mehhanismist."
+            },
+            {
+              "date": "2006",
+              "title": "Koodi lahtimurdmine",
+              "detail": "Tomograafiapildid võimaldavad kirjutist lugeda ja kadraane mõista."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_p3",
+      "free": false,
+      "title": "Taevalaotus kastis",
+      "blocks": [
+        {
+          "text": "Mehhanismis on kolmkümmend säilinud **pronksist hammasülekannet** ja neid oli rohkemgi. Küljes olev vint keerutas tervikut. Esiküljel näitas kadraan Päikese ja Kuu asukohta sodiaagis ning väike pool-hõbedane, pool-must kera näitas Kuu faasi.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Tagaküljel olid kaks suurt spiraalset kadraani kalendritena. Esimene järgis [[Metoni tsükkel]]it, mis viib kokku 19 päikeseaastat ja 235 kuud. Teine järgis [[saros]]t, 223 kuu pikkust tsüklit, mille järel varjutused korduvad. See võimaldas ette kuulutada Päikese- ja Kuuvarjutusi koos kellaaja ja mõnikord oodatava värviga.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Kõige hämmastavam on väike kiilu ja sopiga seade, mis muudab Kuu kiirust kuu jooksul täpselt samamoodi nagu astronoom [[Hipparchos]]e teoorias. Äärekadraan andis isegi suuremate Kreeka mängude aastat, sealhulgas Olümpia omi.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Ükski niivõrd keeruka ehitusega ese pole teada enne **astronoomilisi kelli**, mis ilmusid 14. sajandi Euroopas, seega ligi 1500 aastat hiljem.",
+          "type": "funFact"
+        }
+      ]
+    },
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_p4",
+      "free": false,
+      "title": "Mida see meile õpetab",
+      "blocks": [
+        {
+          "text": "Antikythera masin näitab, et kreeklased ei piirdunud taevatega seotud teooriatega: nad oskasid need muuta täppismehhanismideks. Vanad tekstid mainisid selliseid seadmeid, mida omistati Archimedese või Poseidoniose nimele, kuid enne vraki avastamist ei uskunud neisse keegi päriselt.",
+          "type": "paragraph"
+        },
+        {
+          "text": "See tuletab meelde ka selle teadmise haprust. Töökojad, mis suutsid seda ehitada, kadusid ilma ühtegi teist teadaolevat eksemplari järele jätmata. Tükid on täna väljas Ateena Rahvuslikus Arheoloogiamuuseumis ja teadlased pakuvad ikka veel uusi rekonstruktsioone, nagu see, mille avaldas 2021. aastal Londoni University College'i meeskond.",
+          "type": "paragraph"
+        },
+        {
+          "text": "**2. sajandil eKr** valmistatud ja 1901. aastal vrakist leitud Antikythera masin on hammasülekandega astronoomiline kalkulaator. See ennustas varjutusi ja järgis taeva kalendreid: saavutus, millel ei olnud viisteist sajandit võrdset.",
+          "type": "takeaway"
+        }
+      ]
+    }
+  ],
+  "subtitle": "2. sajand eKr",
+  "description": "Aastal 1901 tõid käsnpüüdjad Kreeka vrakilt üles pronksiploki, mida meri oli söönud. See peitis antiikaja kõige keerukama mehhanismi: taevalaotuse arvutamiseks mõeldud masina.",
+  "subcategory": "Maailma muutnud avastused"
+}

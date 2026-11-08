@@ -34529,5 +34529,85 @@
         "correctIndex": 0
       }
     ]
+  },
+  {
+    "courseId": "course_312_qu_est_ce_que_la_machine_d_anticythere",
+    "quiz": [
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q1",
+        "type": "mcq",
+        "question": "Ki vette észre először a fogaskereket a bronztömbben 1902-ben?",
+        "explanation": "Valerios Stais régész volt az, aki 1902-ben észrevett egy fogaskereket a korrózióba zárva.",
+        "options": [
+          "Valerios Stais",
+          "Derek de Solla Price",
+          "Charalambos Karakalos",
+          "Cousteau kapitány"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q2",
+        "type": "mcq",
+        "question": "Mikor süllyedt el az antikütérai gépezetet szállító hajó?",
+        "explanation": "A hajó i. e. 60 körül süllyedt el, görög műalkotásokkal megrakodva, amelyek valószínűleg római vásárlóknak voltak szánva.",
+        "options": [
+          "I. e. 60 körül",
+          "Az i. e. 2. században",
+          "1900-ban",
+          "1976-ban"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q3",
+        "type": "chronological",
+        "question": "Állítsd időrendi sorrendbe az antikütérai gépezet kutatásának szakaszait.",
+        "explanation": "A hajóroncs felfedezése 1900-ban történt, a fogaskereket 1902-ben vették észre, Derek de Solla Price 1959-ben tette közzé az első tanulmányát, a tomográfiai képek pedig 2006-ban tették lehetővé a kód megfejtését.",
+        "items": [
+          "Szümii szivacshalászok észlelik a roncsot Antikütéra partjainál.",
+          "Valerios Stais észrevesz egy fogaskereket egy korrodált tömbben az athéni múzeumban.",
+          "Derek de Solla Price közzéteszi a gépezet első részletes tanulmányát.",
+          "A tomográfiai képek lehetővé teszik a feliratok olvasását és a számlápok megértését."
+        ]
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q4",
+        "type": "trueFalse",
+        "question": "Az antikütérai gépezet meg tudta jósolni a nap- és holdfogyatkozásokat.",
+        "explanation": "A gépezet tartalmazott egy számlát, amely a szaroszt követte, és lehetővé tette a nap- és holdfogyatkozások bejelentését, a pontos idővel és néha a várható színnel együtt.",
+        "options": [
+          "Igaz",
+          "Hamis"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q5",
+        "type": "mcq",
+        "question": "Melyik csillagászati ciklus egyeztette a 19 napévet és a 235 hónapot?",
+        "explanation": "A Métón-ciklus egyeztette a 19 napévet és a 235 hónapot, és a gépezet hátulján található egyik nagy spirális számlap ábrázolta.",
+        "options": [
+          "A Métón-ciklus",
+          "A szarosz",
+          "Hipparkhosz ciklusa",
+          "Az olümpiai játékok ciklusa"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q6",
+        "type": "mcq",
+        "question": "Mennyi idő telt el, mire az antikütérai gépezethez hasonló bonyolultságú tárgyakat találtak?",
+        "explanation": "Ilyen bonyolultságú tárgyat nem ismerünk az európai 14. századi csillagászati órák előttről, vagyis csaknem 1.500 évvel később.",
+        "options": [
+          "Csaknem 1.500 év",
+          "500 év",
+          "1.000 év",
+          "2.000 év"
+        ],
+        "correctIndex": 0
+      }
+    ]
   }
 ]

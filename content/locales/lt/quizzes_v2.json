@@ -34529,5 +34529,85 @@
         "correctIndex": 0
       }
     ]
+  },
+  {
+    "courseId": "course_312_qu_est_ce_que_la_machine_d_anticythere",
+    "quiz": [
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q1",
+        "type": "mcq",
+        "question": "Kas 1902 m. pastebėjo pirmąjį krumpliaratį bronziniame bloke?",
+        "explanation": "Būtent archeologas Valerijus Staisas 1902 m. pastebėjo korozijoje įstrigusį krumpliaratį.",
+        "options": [
+          "Valerijus Staisas",
+          "Derekas de Solla Price'as",
+          "Charalampusas Karakalusas",
+          "Komandoras Kusto"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q2",
+        "type": "mcq",
+        "question": "Kada nuskendo laivas, vežęs Antikiteros mechanizmą?",
+        "explanation": "Laivas nuskendo apie 60 m. pr. Kr., prikrautas graikų meno kūrinių, tikriausiai skirtų Romos pirkėjams.",
+        "options": [
+          "Apie 60 m. pr. Kr.",
+          "II a. pr. Kr.",
+          "1900 m.",
+          "1976 m."
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q3",
+        "type": "chronological",
+        "question": "Išdėstyk chronologine tvarka šiuos Antikiteros mechanizmo tyrimo etapus.",
+        "explanation": "Nuolaužos atrastos 1900 m., krumpliaratis pastebėtas 1902 m., Derekas de Solla Price'as paskelbė pirmąją studiją 1959 m., o tomografijos vaizdai leido iššifruoti kodą 2006 m.",
+        "items": [
+          "Simo kempinių žvejai aptinka nuolaužas prie Antikiteros.",
+          "Valerijus Staisas Atėnų muziejuje pastebėja krumpliaratį korozijos apnešame bloke.",
+          "Derekas de Solla Price'as skelbia pirmąją išsamią mechanizmo studiją.",
+          "Tomografijos vaizdai leidžia perskaityti užrašus ir suprasti ciferblatus."
+        ]
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q4",
+        "type": "trueFalse",
+        "question": "Antikiteros mechanizmas galėjo prognozuoti Saulės ir Mėnulio užtemimus.",
+        "explanation": "Mechanizme buvo ciferblatas, sekantis sarosą, kuris leido pranešti Saulės ir Mėnulio užtemimus, su laiku ir kartais tikėtina spalva.",
+        "options": [
+          "Tiesa",
+          "Netiesa"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q5",
+        "type": "mcq",
+        "question": "Koks astronominis ciklas leido sutapdinti 19 saulės metų ir 235 mėnulio mėnesius?",
+        "explanation": "Metono ciklas sutapdindavo 19 saulės metų ir 235 mėnulio mėnesius, ir buvo pavaizduotas ant vieno iš didelių spiralės formos ciferblатų mechanizmo gale.",
+        "options": [
+          "Metono ciklas",
+          "Sarosas",
+          "Hiparchas ciklas",
+          "Olimpijos žaidynių ciklas"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q6",
+        "type": "mcq",
+        "question": "Kiek laiko praėjo, kol buvo rasti panašaus sudėtingumo objektai kaip Antikiteros mechanizmas?",
+        "explanation": "Joks tokio sudėtingumo objektas nežinomas iki astronominių laikrodžių Europoje XIV a., tai yra beveik 1 500 metų vėliau.",
+        "options": [
+          "Beveik 1 500 metų",
+          "500 metų",
+          "1 000 metų",
+          "2 000 metų"
+        ],
+        "correctIndex": 0
+      }
+    ]
   }
 ]

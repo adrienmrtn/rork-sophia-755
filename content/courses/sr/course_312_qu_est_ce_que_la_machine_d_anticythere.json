@@ -1,0 +1,151 @@
+{
+  "id": "course_312_qu_est_ce_que_la_machine_d_anticythere",
+  "hero": {
+    "hook": "Korodirani bronzani blok proveo je dve hiljade godina na dnu mora da bi se shvatilo da računa pomračenja.",
+    "image": "qu_est_ce_que_la_machine_d_anticythere",
+    "ratio": "16:9",
+    "credit": {
+      "title": "NAMA Machine d'Anticythère 1",
+      "author": "Marsyas",
+      "source": "Wikimedia Commons",
+      "license": "CC BY 2.5"
+    }
+  },
+  "title": "Šta je antikiterski mehanizam?",
+  "sources": [
+    {
+      "text": "T. Freeth et al., « Decoding the ancient Greek astronomical calculator known as the Antikythera Mechanism », Nature, vol. 444, 2006, p. 587-591."
+    },
+    {
+      "text": "T. Freeth et al., « A Model of the Cosmos in the ancient Greek Antikythera Mechanism », Scientific Reports, vol. 11, 2021."
+    },
+    {
+      "text": "D. de Solla Price, Gears from the Greeks: The Antikythera Mechanism, a Calendar Computer from ca. 80 B.C., Transactions of the American Philosophical Society, 1974."
+    },
+    {
+      "text": "A. Jones, A Portable Cosmos: Revealing the Antikythera Mechanism, Oxford University Press, 2017."
+    }
+  ],
+  "subject": "sciences",
+  "sections": [
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_intro",
+      "free": true,
+      "title": "Uvod",
+      "blocks": [
+        {
+          "text": "U proleće **1900. godine** lovci sunđera sa ostrva Simi sklanjaju se od oluje blizu Antikitere, otočića između Krita i Peloponeza. Zaranjajući, jedan od njih otkriva antičku olupinu prekrivenu statuama. Tokom godinu dana Grci iz nje podižu bronze, mermer i amfore.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Među nalazima, blok od bronze i drveta veličine kutije za cipele ne zanima nikoga. **1902. godine** arheolog Valerios Stais primećuje zupčanik zarobljen u koroziji. Upravo je upravio pogled na najmisterozniji predmet grčke antike.",
+          "type": "paragraph"
+        }
+      ]
+    },
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_p1",
+      "free": false,
+      "title": "Olupina i bronzani blok",
+      "blocks": [
+        {
+          "text": "Brod je potonuo oko **60. p. n. e.**, tovarljen grčkim umetničkim delima verovatno namenjenima rimskim kupcima. Sam mehanizam je stariji: verovatno je napravljen u **2. veku p. n. e.**, u grčkom svetu, možda na Rodosu ili u Korintu.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Do nas je stigao u **82 fragmenta**, od kojih sedam velikih. More je učinilo svoje: drvo je nestalo, bronza se pretvorila u zelenkasto-krhku masu. Dugo niko nije mogao da kaže čemu su služili ti zupčanici. Neki su čak sumnjali da takav predmet može biti antički.",
+          "type": "paragraph"
+        },
+        {
+          "text": "**1976. godine** komandant Kusto zaranja na olupinu i izvlači novčiće kovane u Pergamu i Efesu. Upravo oni omogućavaju datiranje brodoloma.",
+          "type": "funFact"
+        }
+      ]
+    },
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_p2",
+      "free": false,
+      "title": "Šta skriva korozija",
+      "blocks": [
+        {
+          "text": "Prvi koji predmet shvata ozbiljno je istoričar nauke **Derek de Sola Prajs**. Godine 1959. on ga predstavlja kao „antički grčki kompjuter\". Zajedno sa fizičarem Haralambos Karakalosom, rendgenskim zracima ga snima i broji zube zupčanika. Godine 1974. objavljuje prvu rekonstrukciju.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Prekretnica dolazi **2005. godine**. Međunarodni tim dovozi u Atinu skener od osam tona i izvodi [[tomografija]] fragmenata. Slike otkrivaju unutrašnjost bloka, sloj po sloj, i više od 3.000 znakova natpisa: pravo uputstvo za upotrebu urezano u bronzu.",
+          "type": "paragraph"
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1900.",
+              "title": "Otkriće olupine",
+              "detail": "Lovci sunđera iz Simija uočavaju olupinu kod Antikitere."
+            },
+            {
+              "date": "1902.",
+              "title": "Zupčanik",
+              "detail": "Valerios Stais primećuje zupčasti mehanizam u korodiranom bloku u muzeju u Atini."
+            },
+            {
+              "date": "1959.",
+              "title": "Antički kompjuter",
+              "detail": "Derek de Sola Prajs objavljuje prvu detaljnu studiju mehanizma."
+            },
+            {
+              "date": "2006.",
+              "title": "Kod je dešifrovan",
+              "detail": "Tomografski snimci omogućavaju čitanje natpisa i razumevanje brojčanika."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_p3",
+      "free": false,
+      "title": "Kalendar neba u kutiji",
+      "blocks": [
+        {
+          "text": "Mehanizam sadrži tridesetak **bronzanih zupčanika** koji su sačuvani, a bilo ih je više. Ručica sa strane pokretala je celinu. Napred, brojčanik je pokazivao položaj Sunca i Meseca u zodijaku, a mala loptica poluposrebrena-polucna označavala je fazu Meseca.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Pozadi, dva velika spiralna brojčanika služila su kao kalendari. Prvi je pratio [[Metonov ciklus]], koji usklađuje 19 sunčevih godina i 235 mesečevih meseci. Drugi je pratio [[saros]], ciklus od 223 meseca posle kojeg se pomračenja ponavljaju. Omogućavao je najavu pomračenja Sunca i Meseca, sa vremenom i ponekad očekivanom bojom.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Najzapanjiviji je mali uređaj sa iglom i žlebom koji menja brzinu Meseca tokom meseca, tačno kao u teoriji astronoma [[Hiparh]]. Dodatni brojčanik je čak pokazivao godinu velikih grčkih igara, uključujući one u Olimpiji.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Nijedan predmet takve složenosti nije poznat pre **astronomskih satova** Evrope iz 14. veka, što je blizu 1.500 godina kasnije.",
+          "type": "funFact"
+        }
+      ]
+    },
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_p4",
+      "free": false,
+      "title": "Šta nas uči",
+      "blocks": [
+        {
+          "text": "Antikiterski mehanizam pokazuje da se Grci nisu zadovoljavali teorijama o nebu: znali su da ih pretvore u precizne mehanizme. Antički tekstovi spominju takve uređaje, pripisane Arhimedu ili Posidoniusu, ali niko u njih nije zaista verovao pre otkrića olupine.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Mehanizam takođe podseća na krhkost tog znanja. Radionice sposobne da ga naprave nestale su ne ostavivši nijedan drugi poznati primerak. Fragmenti su danas izloženi u Nacionalnom arheološkom muzeju u Atini, a istraživači i dalje predlažu nove rekonstrukcije, kao što je ona objavljena 2021. godine od tima sa Univerzitet koledža iz Londona.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Napravljen u **2. veku p. n. e.** i pronađen 1901. godine u olupini, antikiterski mehanizam je astronomski računar sa zupčanicima. Predviđao je pomračenja i pratio kalendare neba, podvig bez presedana tokom petnaest vekova.",
+          "type": "takeaway"
+        }
+      ]
+    }
+  ],
+  "subtitle": "2. vek p. n. e.",
+  "description": "Godine 1901. lovci sunđera iz olupine podigli su blok bronze nagrižen morem. On skriva najsloženiji mehanizam antike: mašinu za računanje neba.",
+  "subcategory": "Otkrića koja su promenila svet"
+}

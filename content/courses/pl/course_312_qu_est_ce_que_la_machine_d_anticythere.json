@@ -1,0 +1,151 @@
+{
+  "id": "course_312_qu_est_ce_que_la_machine_d_anticythere",
+  "hero": {
+    "hook": "Skorodowany blok brązu czekał dwa tysiące lat na dnie morza, zanim ktoś zrozumiał, że obliczał zaćmienia.",
+    "image": "qu_est_ce_que_la_machine_d_anticythere",
+    "ratio": "16:9",
+    "credit": {
+      "title": "NAMA Machine d'Anticythère 1",
+      "author": "Marsyas",
+      "source": "Wikimedia Commons",
+      "license": "CC BY 2.5"
+    }
+  },
+  "title": "Czym jest mechanizm z Antykithiry?",
+  "sources": [
+    {
+      "text": "T. Freeth et al., « Decoding the ancient Greek astronomical calculator known as the Antikythera Mechanism », Nature, vol. 444, 2006, p. 587-591."
+    },
+    {
+      "text": "T. Freeth et al., « A Model of the Cosmos in the ancient Greek Antikythera Mechanism », Scientific Reports, vol. 11, 2021."
+    },
+    {
+      "text": "D. de Solla Price, Gears from the Greeks: The Antikythera Mechanism, a Calendar Computer from ca. 80 B.C., Transactions of the American Philosophical Society, 1974."
+    },
+    {
+      "text": "A. Jones, A Portable Cosmos: Revealing the Antikythera Mechanism, Oxford University Press, 2017."
+    }
+  ],
+  "subject": "sciences",
+  "sections": [
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_intro",
+      "free": true,
+      "title": "Wprowadzenie",
+      "blocks": [
+        {
+          "text": "Wiosną **1900** roku nurcy-gąbkarze z wyspy Symi chronią się przed burzą w pobliżu Antykithiry, wysepki między Kretą a Peloponezem. Podczas nurkowania jeden z nich odkrywa starożytny wrak pokryty posągami. Przez rok Grecy wydobywają z niego brązy, marmury i amfory.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Wśród znalezisk blok brązu i drewna wielkości pudełka na buty nikogo nie interesuje. W **1902** roku archeolog Valerios Stais dostrzega koło zębate uwięzione w korozji. Właśnie spoczął wzrokiem na najbardziej tajemniczym przedmiocie starożytnej Grecji.",
+          "type": "paragraph"
+        }
+      ]
+    },
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_p1",
+      "free": false,
+      "title": "Wrak i blok brązu",
+      "blocks": [
+        {
+          "text": "Statek zatonął około **60 roku p.n.e.**, załadowany greckimi dziełami sztuki prawdopodobnie przeznaczonymi dla rzymskich nabywców. Sam mechanizm jest starszy: został zapewne wykonany w **II wieku p.n.e.**, w świecie greckim, być może na Rodos lub w Koryncie.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Doszedł do nas w **82 fragmentach**, z czego siedem to większe kawałki. Morze zrobiło swoje: drewno zniknęło, brąz zmienił się w zieloną, kruchą masę. Przez długi czas nikt nie wie powiedzieć, do czego służyły te koła zębate. Niektórzy wątpią nawet, czy taki przedmiot może pochodzić ze starożytności.",
+          "type": "paragraph"
+        },
+        {
+          "text": "W **1976** roku komandor Cousteau nurkuje na wraku i wydobywa monety bite w Pergamonie i Efezie. To one pozwalają datować katastrofę.",
+          "type": "funFact"
+        }
+      ]
+    },
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_p2",
+      "free": false,
+      "title": "Co kryje korozja",
+      "blocks": [
+        {
+          "text": "Pierwszym, kto potraktował obiekt poważnie, jest historyk nauki **Derek de Solla Price**. W 1959 roku przedstawia go jako „starożytny grecki komputer\". Wraz z fizykiem Charalambosem Karakalosem prześwietla go promieniami gamma i liczy zęby kół. W 1974 roku publikuje pierwszą rekonstrukcję.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Przełom następuje w **2005** roku. Międzynarodowy zespół sprowadza do Aten ośmiotonowy skaner i wykonuje [[tomografię]] fragmentów. Obrazy ujawniają wnętrze bloku, warstwa po warstwie, oraz ponad 3000 znaków inskrypcji: prawdziwą instrukcję obsługi wygrawerowaną w brązie.",
+          "type": "paragraph"
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1900",
+              "title": "Odkrycie wraku",
+              "detail": "Nurcy-gąbkarze z Symi zauważają wrak u wybrzeży Antykithiry."
+            },
+            {
+              "date": "1902",
+              "title": "Koło zębate",
+              "detail": "Valerios Stais dostrzega przekładnię w skorodowanym bloku w muzeum w Atenach."
+            },
+            {
+              "date": "1959",
+              "title": "Starożytny komputer",
+              "detail": "Derek de Solla Price publikuje pierwsze szczegółowe studium mechanizmu."
+            },
+            {
+              "date": "2006",
+              "title": "Kod odszyfrowany",
+              "detail": "Obrazy tomograficzne pozwalają odczytać inskrypcje i zrozumieć tarcze."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_p3",
+      "free": false,
+      "title": "Kalendarz nieba w pudełku",
+      "blocks": [
+        {
+          "text": "Mechanizm zawiera około trzydziestu zachowanych **przekładni z brązu**, a miał ich więcej. Korba z boku wprawiała całość w ruch. Z przodu tarcza pokazywała położenie Słońca i Księżyca w zodiaku, a mała kulka w połowie srebrna, w połowie czarna wskazywała fazę Księżyca.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Z tyłu dwie duże tarcze spiralne służyły jako kalendarze. Pierwsza śledziła [[cykl Metona]], który dopasowuje 19 lat słonecznych do 235 miesięcy księżycowych. Druga śledziła [[saros]], cykl 223 miesięcy, po którym zaćmienia się powtarzają. Pozwalała zapowiadać zaćmienia Słońca i Księżyca, z godziną, a czasem nawet oczekiwanym kolorem.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Najbardziej zdumiewające jest małe urządzenie ze sworzniami i szczelinami, które zmienia prędkość Księżyca w ciągu miesiąca, dokładnie jak w teorii astronoma [[Hipparcha]]. Dodatkowa tarcza podawała nawet rok wielkich igrzysk greckich, w tym olimpijskich.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Żaden obiekt o tak dużej złożoności nie jest znany przed **zegarami astronomicznymi** europejskimi z XIV wieku, czyli niemal 1500 lat później.",
+          "type": "funFact"
+        }
+      ]
+    },
+    {
+      "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_p4",
+      "free": false,
+      "title": "Czego nas uczy",
+      "blocks": [
+        {
+          "text": "Mechanizm z Antykithiry pokazuje, że Grecy nie zadowalali się teoriami dotyczącymi nieba: umieli przekształcać je w precyzyjne mechanizmy. Starożytne teksty wspominały takie urządzenia przypisywane Archimedemu czy Posejdoniosowi, ale nikt nie wierzył w nie naprawdę przed odkryciem wraku.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Przypomina też o kruchości tej wiedzy. Warsztaty zdolne go zbudować zniknęły, nie pozostawiając żadnego innego znanego egzemplarza. Fragmenty są dziś wystawione w Narodowym Muzeum Archeologicznym w Atenach, a badacze wciąż proponują nowe rekonstrukcje, jak ta opublikowana w 2021 roku przez zespół z University College London.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Wykonany w **II wieku p.n.e.** i odnaleziony w 1901 roku we wraku, mechanizm z Antykithiry to astronomiczny kalkulator z przekładniami. Przepowiadał zaćmienia i śledził kalendarze nieba: wyczyn bez odpowiednika przez piętnaście stuleci.",
+          "type": "takeaway"
+        }
+      ]
+    }
+  ],
+  "subtitle": "II wiek p.n.e.",
+  "description": "W 1901 roku nurcy wydobywają z greckiego wraku blok brązu zżarty przez morze. Kryje on najzłożeńszy mechanizm starożytności: maszynę do obliczania nieba.",
+  "subcategory": "Odkrycia, które zmieniły świat"
+}

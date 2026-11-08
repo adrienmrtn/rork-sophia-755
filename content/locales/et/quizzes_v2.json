@@ -34529,5 +34529,85 @@
         "correctIndex": 0
       }
     ]
+  },
+  {
+    "courseId": "course_312_qu_est_ce_que_la_machine_d_anticythere",
+    "quiz": [
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q1",
+        "type": "mcq",
+        "question": "Kes märkas 1902. aastal pronksiplokis esimest hammasratast?",
+        "explanation": "Arheoloog Valerios Stais märkas 1902. aastal korrosiooni sisse jäänud hammasratast.",
+        "options": [
+          "Valerios Stais",
+          "Derek de Solla Price",
+          "Charalambos Karakalos",
+          "Komandör Cousteau"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q2",
+        "type": "mcq",
+        "question": "Millal uppus Antikythera masinat vedanud laev?",
+        "explanation": "Laev uppus umbes 60 eKr, lastis Kreeka kunstiteoseid, mis olid tõenäoliselt mõeldud Rooma ostjatele.",
+        "options": [
+          "Umbes 60 eKr",
+          "2. sajandil eKr",
+          "1900. aastal",
+          "1976. aastal"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q3",
+        "type": "chronological",
+        "question": "Pane õigesse järjekorda Antikythera masina uurimise etapid.",
+        "explanation": "Vraki avastamine toimus 1900. aastal, hammasratas märgati 1902. aastal, Derek de Solla Price avaldas oma esimese uurimuse 1959. aastal ja tomograafiapildid võimaldasid koodist aru saada 2006. aastal.",
+        "items": [
+          "Symi käsnpüüdjad märkavad vrakki Antikythera ranniku lähedal.",
+          "Valerios Stais märkab Ateena muuseumis korrodeerunud plokis hammasülekannet.",
+          "Derek de Solla Price avaldab esimese üksikasjaliku uurimuse mehhanismist.",
+          "Tomograafiapildid võimaldavad kirjutist lugeda ja kadraane mõista."
+        ]
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q4",
+        "type": "trueFalse",
+        "question": "Antikythera masin suutis ennustada Päikese- ja Kuuvarjutusi.",
+        "explanation": "Mehhanismil oli sarost järgiv kadraan, mis võimaldas ette kuulutada Päikese- ja Kuuvarjutusi koos kellaaja ja mõnikord oodatava värviga.",
+        "options": [
+          "Tõsi",
+          "Vale"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q5",
+        "type": "mcq",
+        "question": "Milline astronoomiline tsükkel võimaldas viia kokku 19 päikeseaastat ja 235 kuud?",
+        "explanation": "Metoni tsükkel viis kokku 19 päikeseaastat ja 235 kuud ning seda kujutas üks mehhanismi tagakülje suurtest spiraalkadraanidest.",
+        "options": [
+          "Metoni tsükkel",
+          "Saros",
+          "Hipparchose tsükkel",
+          "Olümpia mängude tsükkel"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_312_qu_est_ce_que_la_machine_d_anticythere_q6",
+        "type": "mcq",
+        "question": "Kui palju aega möödus, enne kui leiti Antikythera masinaga võrreldavalt keerukaid esemeid?",
+        "explanation": "Ükski niivõrd keeruka ehitusega ese pole teada enne 14. sajandi Euroopa astronoomilisi kelli, seega ligi 1500 aastat hiljem.",
+        "options": [
+          "Ligi 1500 aastat",
+          "500 aastat",
+          "1000 aastat",
+          "2000 aastat"
+        ],
+        "correctIndex": 0
+      }
+    ]
   }
 ]
