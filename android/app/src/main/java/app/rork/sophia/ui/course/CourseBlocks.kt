@@ -54,7 +54,8 @@ import kotlinx.serialization.json.contentOrNull
 import kotlinx.serialization.json.jsonArray
 
 /**
- * A lesson block as authored in `courses_v2/{lang}/{courseId}.json`, mirroring the
+ * A lesson block as authored in the course's V2 content (the `content` of its catalogue
+ * bundle, `starter_pack/{lang}/courses/{courseId}.json` or downloaded), mirroring the
  * iOS `ContentBlockV2` cases. Anything missing here is dropped from the reader, so
  * it has to stay in sync with the content pipeline.
  */

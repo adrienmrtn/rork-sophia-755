@@ -237,23 +237,19 @@ def export_ui_strings(ref: str | None) -> list[str]:
 
 
 def export_authors() -> int:
-    """Copy the bundled authors file and the professor portraits into the APK assets.
+    """Copy the professor portraits into the APK assets.
 
-    ``authors.json`` is written by ``scripts/build_courses.py`` from ``content/authors.json``;
-    the portraits are the 512 px JPEGs iOS ships. Both are small, so they travel in the
-    APK rather than through Supabase like the course images.
+    The authors themselves now travel with the online catalog (creators of each language's
+    catalog.json, see docs/catalogue-en-ligne.md); only the 512 px JPEGs iOS ships are
+    embedded, because they are small and the avatars must draw offline.
     """
-    if not IOS_AUTHORS.is_file():
-        print("  skip authors (no ios/Sophia/Resources/authors.json)")
-        return 0
-    (ANDROID_ASSETS / "authors.json").write_bytes(IOS_AUTHORS.read_bytes())
     copied = 0
     if IOS_AUTHOR_PHOTOS.is_dir():
         ANDROID_AUTHOR_PHOTOS.mkdir(parents=True, exist_ok=True)
         for photo in sorted(IOS_AUTHOR_PHOTOS.glob("*.jpg")):
             (ANDROID_AUTHOR_PHOTOS / photo.name).write_bytes(photo.read_bytes())
             copied += 1
-    print(f"  authors.json + {copied} portrait(s)")
+    print(f"  {copied} portrait(s)")
     return copied
 
 
@@ -301,65 +297,27 @@ def main() -> int:
     if ref:
         print(f"fallback ref: {ref}")
 
-    print("Copying locale catalog JSON…")
-    copied = copy_locale_json(ref)
-    print(f"  wrote {len(copied)} locale files")
-
-    print("Syncing French catalog quizzes from quizzes_v2…")
-    sync_fr_catalog_quizzes()
-
-    print("Slimming course catalogs (drop lesson bodies, write course_index)…")
-    sys.path.insert(0, str(ROOT / "scripts"))
-    from slim_android_catalog import slim_locale_catalogs
-    slim_locale_catalogs()
-
+    # Les catalogues, cours, glossaires et collections ne sont plus dans les assets : ils
+    # viennent du catalogue en ligne (docs/catalogue-en-ligne.md) et du pack de départ généré
+    # par scripts/import_catalog_to_supabase.py. Il reste les textes d'interface, les photos des
+    # auteurs et la carte des images de blocs.
     print(f"Exporting UI strings from AppLocalizable ({len(ALL_LANGS)} langs)…")
     strings = export_ui_strings(ref)
     print(f"  wrote {len(strings)} string packs")
 
-    print("Exporting course authors…")
+    print("Exporting author photos…")
     export_authors()
 
-    v2_counts: dict[str, int] = {}
-    if not args.skip_courses_v2:
-        print("Exporting CoursesV2…")
-        v2_counts = export_courses_v2(ref)
-        for lang, n in v2_counts.items():
-            if n:
-                print(f"  courses_v2/{lang}: {n}")
-
-        # The inline `image` slugs come from the freshly exported courses_v2, so the
-        # slug → Storage object map has to be rebuilt with them.
-        from build_block_image_map import build_block_image_map
-        resolved, unresolved = build_block_image_map()
-        print(f"  course_block_images.json: {len(resolved)} slugs")
-        if unresolved:
-            print(f"  unresolved image slugs: {unresolved}")
-    else:
-        print("Skipping CoursesV2 (--skip-courses-v2)")
+    sys.path.insert(0, str(ROOT / "scripts"))
+    from build_block_image_map import build_block_image_map
+    resolved, unresolved = build_block_image_map()
+    print(f"  course_block_images.json: {len(resolved)} slugs")
+    if unresolved:
+        print(f"  unresolved image slugs: {unresolved}")
 
     print()
     print("=== Summary ===")
-    print(f"locale JSON files: {len(copied)}")
     print(f"new string packs: {len(strings)}")
-    if v2_counts:
-        missing_v2 = [lang for lang in ALL_LANGS if v2_counts.get(lang, 0) < 200]
-        print(f"courses_v2 langs OK: {sum(1 for n in v2_counts.values() if n >= 200)}/{len(ALL_LANGS)}")
-        if missing_v2:
-            print(f"courses_v2 thin/missing: {missing_v2}")
-            # Not fatal if only FR missing from archive naming — check fr separately.
-            critical = [l for l in NEW_LANGS if v2_counts.get(l, 0) < 200]
-            if critical:
-                print(f"ERROR: new langs missing CoursesV2: {critical}")
-                return 1
-    missing_locales = []
-    for lang in NEW_LANGS:
-        for kind in ("courses", "course_index", "collections", "glossary"):
-            if not (ANDROID_LOCALES / f"{kind}.{lang}.json").is_file():
-                missing_locales.append(f"{kind}.{lang}.json")
-    if missing_locales:
-        print(f"ERROR: missing locale files: {missing_locales[:12]}…")
-        return 1
     for lang in ALL_LANGS:
         if not (ANDROID_STRINGS / f"{lang}.json").is_file():
             print(f"ERROR: missing strings/{lang}.json")

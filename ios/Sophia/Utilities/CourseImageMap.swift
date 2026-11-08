@@ -4,8 +4,12 @@ import SwiftUI
 struct CourseImageMap {
     private static let cache = NSCache<NSString, UIImage>()
 
+    /// Le nom de la couverture : la carte embarquée, sinon ce que dit le catalogue en ligne
+    /// (un cours arrivé après le build).
     static func imageName(for courseId: String) -> String? {
-        return map[courseId]
+        if let name = map[courseId] { return name }
+        guard Thread.isMainThread else { return nil }
+        return CatalogStore.shared.coverSlug(courseId: courseId)
     }
 
     static func loadImage(for courseId: String) -> UIImage? {
@@ -13,7 +17,7 @@ struct CourseImageMap {
         if let cached = cache.object(forKey: cacheKey) {
             return cached
         }
-        guard let name = map[courseId] else { return nil }
+        guard let name = imageName(for: courseId) else { return nil }
         var image: UIImage?
         if let path = Bundle.main.path(forResource: name, ofType: "jpg", inDirectory: "CourseImages") {
             image = UIImage(contentsOfFile: path)

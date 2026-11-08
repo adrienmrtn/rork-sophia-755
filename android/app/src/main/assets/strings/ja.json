@@ -1181,5 +1181,11 @@
   "explore.creatorsToFollow": "フォローしたいクリエイター",
   "course.end.like": "このコースにいいね",
   "course.end.liked": "いいね済み",
-  "course.end.follow": "%@をフォロー"
+  "course.end.follow": "%@をフォロー",
+  "course.loading": "コースをダウンロード中…",
+  "course.offline.title": "このコースはまだ端末にありません",
+  "course.offline.body": "一度インターネットに接続して開いてください。その後はオフラインでも読めます。",
+  "course.offline.retry": "もう一度試す",
+  "settings.debug.catalog": "オンラインコース",
+  "settings.debug.catalogRefresh": "コースを再読み込み"
 }

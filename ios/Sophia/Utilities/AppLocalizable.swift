@@ -1321,6 +1321,12 @@ enum AppLocalizable {
         "course.end.like": "Aimer ce cours",
         "course.end.liked": "Aimé",
         "course.end.follow": "Suivre %@",
+        "course.loading": "Téléchargement du cours…",
+        "course.offline.title": "Ce cours n'est pas encore sur ton téléphone",
+        "course.offline.body": "Connecte-toi à Internet une première fois pour l'ouvrir. Il restera ensuite lisible hors ligne.",
+        "course.offline.retry": "Réessayer",
+        "settings.debug.catalog": "Cours en ligne",
+        "settings.debug.catalogRefresh": "Recharger les cours",
     ]
     // MARK: - English
 
@@ -2518,6 +2524,12 @@ enum AppLocalizable {
         "course.end.like": "Like this course",
         "course.end.liked": "Liked",
         "course.end.follow": "Follow %@",
+        "course.loading": "Downloading the course…",
+        "course.offline.title": "This course isn't on your phone yet",
+        "course.offline.body": "Connect to the Internet once to open it. It will then stay readable offline.",
+        "course.offline.retry": "Try again",
+        "settings.debug.catalog": "Online courses",
+        "settings.debug.catalogRefresh": "Reload the courses",
     ]
     // MARK: - Spanish
 
@@ -3716,6 +3728,12 @@ enum AppLocalizable {
         "course.end.like": "Me gusta este curso",
         "course.end.liked": "Te gusta",
         "course.end.follow": "Seguir a %@",
+        "course.loading": "Descargando el curso…",
+        "course.offline.title": "Este curso aún no está en tu teléfono",
+        "course.offline.body": "Conéctate a Internet una primera vez para abrirlo. Después seguirá disponible sin conexión.",
+        "course.offline.retry": "Reintentar",
+        "settings.debug.catalog": "Cursos en línea",
+        "settings.debug.catalogRefresh": "Recargar los cursos",
     ]
     // MARK: - German
 
@@ -4914,6 +4932,12 @@ enum AppLocalizable {
         "course.end.like": "Gefällt mir",
         "course.end.liked": "Gefällt dir",
         "course.end.follow": "%@ folgen",
+        "course.loading": "Kurs wird geladen…",
+        "course.offline.title": "Dieser Kurs ist noch nicht auf deinem Handy",
+        "course.offline.body": "Verbinde dich einmal mit dem Internet, um ihn zu öffnen. Danach bleibt er offline lesbar.",
+        "course.offline.retry": "Erneut versuchen",
+        "settings.debug.catalog": "Online-Kurse",
+        "settings.debug.catalogRefresh": "Kurse neu laden",
     ]
     // MARK: - Portuguese (Brazil)
 
@@ -6112,6 +6136,12 @@ enum AppLocalizable {
         "course.end.like": "Curtir este curso",
         "course.end.liked": "Curtido",
         "course.end.follow": "Seguir %@",
+        "course.loading": "Baixando o curso…",
+        "course.offline.title": "Este curso ainda não está no seu celular",
+        "course.offline.body": "Conecte-se à Internet uma primeira vez para abri-lo. Depois ele continuará disponível off-line.",
+        "course.offline.retry": "Tentar de novo",
+        "settings.debug.catalog": "Cursos on-line",
+        "settings.debug.catalogRefresh": "Recarregar os cursos",
     ]
 
     // MARK: - Portuguese (Portugal)
@@ -7311,6 +7341,12 @@ enum AppLocalizable {
         "course.end.like": "Gosto deste curso",
         "course.end.liked": "Gostaste",
         "course.end.follow": "Seguir %@",
+        "course.loading": "A transferir o curso…",
+        "course.offline.title": "Este curso ainda não está no teu telemóvel",
+        "course.offline.body": "Liga-te à Internet uma primeira vez para o abrir. Depois fica disponível sem ligação.",
+        "course.offline.retry": "Tentar de novo",
+        "settings.debug.catalog": "Cursos online",
+        "settings.debug.catalogRefresh": "Recarregar os cursos",
     ]
     // MARK: - Italian
 
@@ -8509,6 +8545,12 @@ enum AppLocalizable {
         "course.end.like": "Mi piace questo corso",
         "course.end.liked": "Ti piace",
         "course.end.follow": "Segui %@",
+        "course.loading": "Download del corso…",
+        "course.offline.title": "Questo corso non è ancora sul tuo telefono",
+        "course.offline.body": "Connettiti a Internet una prima volta per aprirlo. Poi resterà leggibile offline.",
+        "course.offline.retry": "Riprova",
+        "settings.debug.catalog": "Corsi online",
+        "settings.debug.catalogRefresh": "Ricarica i corsi",
     ]
     // MARK: - Turkish
 
@@ -9707,6 +9749,12 @@ enum AppLocalizable {
         "course.end.like": "Bu kursu beğen",
         "course.end.liked": "Beğenildi",
         "course.end.follow": "Takip et: %@",
+        "course.loading": "Kurs indiriliyor…",
+        "course.offline.title": "Bu kurs henüz telefonunda değil",
+        "course.offline.body": "Açmak için bir kez internete bağlan. Sonrasında çevrimdışı okunabilir kalır.",
+        "course.offline.retry": "Tekrar dene",
+        "settings.debug.catalog": "Çevrimiçi kurslar",
+        "settings.debug.catalogRefresh": "Kursları yeniden yükle",
     ]
     // MARK: - Polish
 
@@ -10906,6 +10954,12 @@ enum AppLocalizable {
         "course.end.like": "Lubię ten kurs",
         "course.end.liked": "Polubiono",
         "course.end.follow": "Obserwuj: %@",
+        "course.loading": "Pobieranie kursu…",
+        "course.offline.title": "Tego kursu nie ma jeszcze na twoim telefonie",
+        "course.offline.body": "Połącz się raz z internetem, aby go otworzyć. Potem będzie dostępny offline.",
+        "course.offline.retry": "Spróbuj ponownie",
+        "settings.debug.catalog": "Kursy online",
+        "settings.debug.catalogRefresh": "Odśwież kursy",
     ]
     // MARK: - Romanian
 
@@ -12105,6 +12159,12 @@ enum AppLocalizable {
         "course.end.like": "Îmi place acest curs",
         "course.end.liked": "Îmi place",
         "course.end.follow": "Urmărește: %@",
+        "course.loading": "Se descarcă cursul…",
+        "course.offline.title": "Acest curs nu este încă pe telefonul tău",
+        "course.offline.body": "Conectează-te o dată la internet ca să-l deschizi. Apoi rămâne disponibil offline.",
+        "course.offline.retry": "Încearcă din nou",
+        "settings.debug.catalog": "Cursuri online",
+        "settings.debug.catalogRefresh": "Reîncarcă cursurile",
     ]
     // MARK: - Dutch
 
@@ -13303,6 +13363,12 @@ enum AppLocalizable {
         "course.end.like": "Vind ik leuk",
         "course.end.liked": "Vind je leuk",
         "course.end.follow": "%@ volgen",
+        "course.loading": "Cursus downloaden…",
+        "course.offline.title": "Deze cursus staat nog niet op je telefoon",
+        "course.offline.body": "Maak één keer verbinding met internet om hem te openen. Daarna blijft hij offline leesbaar.",
+        "course.offline.retry": "Opnieuw proberen",
+        "settings.debug.catalog": "Online cursussen",
+        "settings.debug.catalogRefresh": "Cursussen opnieuw laden",
     ]
     // MARK: - Greek
 
@@ -14501,6 +14567,12 @@ enum AppLocalizable {
         "course.end.like": "Μου αρέσει αυτό το μάθημα",
         "course.end.liked": "Μου αρέσει",
         "course.end.follow": "Ακολούθησε: %@",
+        "course.loading": "Λήψη του μαθήματος…",
+        "course.offline.title": "Αυτό το μάθημα δεν είναι ακόμη στο κινητό σου",
+        "course.offline.body": "Συνδέσου μία φορά στο διαδίκτυο για να το ανοίξεις. Μετά θα διαβάζεται και εκτός σύνδεσης.",
+        "course.offline.retry": "Δοκίμασε ξανά",
+        "settings.debug.catalog": "Διαδικτυακά μαθήματα",
+        "settings.debug.catalogRefresh": "Επαναφόρτωση μαθημάτων",
     ]
     // MARK: - Swedish
 
@@ -15699,6 +15771,12 @@ enum AppLocalizable {
         "course.end.like": "Gilla den här kursen",
         "course.end.liked": "Gillad",
         "course.end.follow": "Följ %@",
+        "course.loading": "Hämtar kursen…",
+        "course.offline.title": "Den här kursen finns inte på din telefon än",
+        "course.offline.body": "Anslut till internet en första gång för att öppna den. Sedan går den att läsa offline.",
+        "course.offline.retry": "Försök igen",
+        "settings.debug.catalog": "Onlinekurser",
+        "settings.debug.catalogRefresh": "Läs in kurserna igen",
     ]
     // MARK: - Hungarian
 
@@ -16897,6 +16975,12 @@ enum AppLocalizable {
         "course.end.like": "Tetszik ez a kurzus",
         "course.end.liked": "Tetszik",
         "course.end.follow": "%@ követése",
+        "course.loading": "A kurzus letöltése…",
+        "course.offline.title": "Ez a kurzus még nincs a telefonodon",
+        "course.offline.body": "Csatlakozz egyszer az internethez, hogy megnyisd. Utána offline is olvasható marad.",
+        "course.offline.retry": "Újra",
+        "settings.debug.catalog": "Online kurzusok",
+        "settings.debug.catalogRefresh": "Kurzusok újratöltése",
     ]
     // MARK: - Bulgarian
 
@@ -18095,6 +18179,12 @@ enum AppLocalizable {
         "course.end.like": "Харесвам този курс",
         "course.end.liked": "Харесан",
         "course.end.follow": "Следвай %@",
+        "course.loading": "Курсът се изтегля…",
+        "course.offline.title": "Този курс още не е на телефона ти",
+        "course.offline.body": "Свържи се веднъж с интернет, за да го отвориш. После остава достъпен и офлайн.",
+        "course.offline.retry": "Опитай пак",
+        "settings.debug.catalog": "Онлайн курсове",
+        "settings.debug.catalogRefresh": "Презареди курсовете",
     ]
     // MARK: - Czech
 
@@ -19294,6 +19384,12 @@ enum AppLocalizable {
         "course.end.like": "Líbí se mi tento kurz",
         "course.end.liked": "Líbí se mi",
         "course.end.follow": "Sledovat: %@",
+        "course.loading": "Stahování kurzu…",
+        "course.offline.title": "Tento kurz ještě není v tvém telefonu",
+        "course.offline.body": "Připoj se jednou k internetu a otevři ho. Potom zůstane čitelný i offline.",
+        "course.offline.retry": "Zkusit znovu",
+        "settings.debug.catalog": "Online kurzy",
+        "settings.debug.catalogRefresh": "Znovu načíst kurzy",
     ]
 
     // MARK: - Danish
@@ -20493,6 +20589,12 @@ enum AppLocalizable {
         "course.end.like": "Synes godt om kurset",
         "course.end.liked": "Du synes godt om",
         "course.end.follow": "Følg %@",
+        "course.loading": "Henter kurset…",
+        "course.offline.title": "Dette kursus er ikke på din telefon endnu",
+        "course.offline.body": "Gå på internettet én gang for at åbne det. Derefter kan det læses offline.",
+        "course.offline.retry": "Prøv igen",
+        "settings.debug.catalog": "Onlinekurser",
+        "settings.debug.catalogRefresh": "Genindlæs kurserne",
     ]
 
     // MARK: - Norwegian
@@ -21692,6 +21794,12 @@ enum AppLocalizable {
         "course.end.like": "Lik dette kurset",
         "course.end.liked": "Likt",
         "course.end.follow": "Følg %@",
+        "course.loading": "Laster ned kurset…",
+        "course.offline.title": "Dette kurset er ikke på telefonen din ennå",
+        "course.offline.body": "Koble til internett én gang for å åpne det. Etterpå kan det leses uten nett.",
+        "course.offline.retry": "Prøv igjen",
+        "settings.debug.catalog": "Nettkurs",
+        "settings.debug.catalogRefresh": "Last inn kursene på nytt",
     ]
 
     // MARK: - Russian
@@ -22892,6 +23000,12 @@ enum AppLocalizable {
         "course.end.like": "Нравится этот курс",
         "course.end.liked": "Нравится",
         "course.end.follow": "Подписаться: %@",
+        "course.loading": "Загрузка курса…",
+        "course.offline.title": "Этого курса ещё нет на твоём телефоне",
+        "course.offline.body": "Подключись к интернету один раз, чтобы открыть его. Потом он останется доступен офлайн.",
+        "course.offline.retry": "Повторить",
+        "settings.debug.catalog": "Онлайн-курсы",
+        "settings.debug.catalogRefresh": "Перезагрузить курсы",
     ]
 
     // MARK: - Croatian
@@ -24092,6 +24206,12 @@ enum AppLocalizable {
         "course.end.like": "Sviđa mi se ovaj tečaj",
         "course.end.liked": "Sviđa mi se",
         "course.end.follow": "Prati: %@",
+        "course.loading": "Preuzimanje tečaja…",
+        "course.offline.title": "Ovaj tečaj još nije na tvom telefonu",
+        "course.offline.body": "Spoji se jednom na internet da ga otvoriš. Nakon toga ostaje čitljiv i bez mreže.",
+        "course.offline.retry": "Pokušaj ponovno",
+        "settings.debug.catalog": "Online tečajevi",
+        "settings.debug.catalogRefresh": "Ponovno učitaj tečajeve",
     ]
 
     // MARK: - Slovenian
@@ -25293,6 +25413,12 @@ enum AppLocalizable {
         "course.end.like": "Všeč mi je ta tečaj",
         "course.end.liked": "Všeč mi je",
         "course.end.follow": "Sledi: %@",
+        "course.loading": "Prenašanje tečaja…",
+        "course.offline.title": "Tega tečaja še ni na tvojem telefonu",
+        "course.offline.body": "Enkrat se poveži z internetom, da ga odpreš. Potem ostane berljiv tudi brez povezave.",
+        "course.offline.retry": "Poskusi znova",
+        "settings.debug.catalog": "Spletni tečaji",
+        "settings.debug.catalogRefresh": "Znova naloži tečaje",
     ]
 
     // MARK: - Slovak
@@ -26493,6 +26619,12 @@ enum AppLocalizable {
         "course.end.like": "Páči sa mi tento kurz",
         "course.end.liked": "Páči sa mi",
         "course.end.follow": "Sledovať: %@",
+        "course.loading": "Sťahovanie kurzu…",
+        "course.offline.title": "Tento kurz ešte nie je v tvojom telefóne",
+        "course.offline.body": "Pripoj sa raz na internet a otvor ho. Potom zostane čitateľný aj offline.",
+        "course.offline.retry": "Skúsiť znova",
+        "settings.debug.catalog": "Online kurzy",
+        "settings.debug.catalogRefresh": "Znova načítať kurzy",
     ]
 
     // MARK: - Serbian
@@ -27693,6 +27825,12 @@ enum AppLocalizable {
         "course.end.like": "Sviđa mi se ovaj kurs",
         "course.end.liked": "Sviđa mi se",
         "course.end.follow": "Prati: %@",
+        "course.loading": "Preuzimanje kursa…",
+        "course.offline.title": "Ovaj kurs još nije na tvom telefonu",
+        "course.offline.body": "Poveži se jednom na internet da ga otvoriš. Posle toga ostaje čitljiv i bez mreže.",
+        "course.offline.retry": "Pokušaj ponovo",
+        "settings.debug.catalog": "Onlajn kursevi",
+        "settings.debug.catalogRefresh": "Ponovo učitaj kurseve",
     ]
 
     // MARK: - Arabic
@@ -28894,6 +29032,12 @@ enum AppLocalizable {
         "course.end.like": "أعجبني هذا الدرس",
         "course.end.liked": "أعجبني",
         "course.end.follow": "متابعة %@",
+        "course.loading": "جارٍ تنزيل الدرس…",
+        "course.offline.title": "هذا الدرس ليس على هاتفك بعد",
+        "course.offline.body": "اتصل بالإنترنت مرة واحدة لفتحه. بعدها يبقى متاحًا للقراءة دون اتصال.",
+        "course.offline.retry": "إعادة المحاولة",
+        "settings.debug.catalog": "الدروس عبر الإنترنت",
+        "settings.debug.catalogRefresh": "إعادة تحميل الدروس",
     ]
 
     // MARK: - Hebrew
@@ -30094,6 +30238,12 @@ enum AppLocalizable {
         "course.end.like": "אהבתי את הקורס",
         "course.end.liked": "אהבתי",
         "course.end.follow": "עקבו אחרי %@",
+        "course.loading": "הקורס בהורדה…",
+        "course.offline.title": "הקורס הזה עדיין לא בטלפון שלך",
+        "course.offline.body": "התחברו לאינטרנט פעם אחת כדי לפתוח אותו. אחר כך הוא יישאר זמין גם במצב לא מקוון.",
+        "course.offline.retry": "לנסות שוב",
+        "settings.debug.catalog": "קורסים מקוונים",
+        "settings.debug.catalogRefresh": "טעינת הקורסים מחדש",
     ]
 
     // MARK: - Finnish
@@ -31293,6 +31443,12 @@ enum AppLocalizable {
         "course.end.like": "Tykkää kurssista",
         "course.end.liked": "Tykätty",
         "course.end.follow": "Seuraa: %@",
+        "course.loading": "Ladataan kurssia…",
+        "course.offline.title": "Tämä kurssi ei ole vielä puhelimessasi",
+        "course.offline.body": "Avaa se kerran verkkoyhteydellä. Sen jälkeen sitä voi lukea ilman yhteyttä.",
+        "course.offline.retry": "Yritä uudelleen",
+        "settings.debug.catalog": "Verkkokurssit",
+        "settings.debug.catalogRefresh": "Lataa kurssit uudelleen",
     ]
 
     // MARK: - Estonian
@@ -32492,6 +32648,12 @@ enum AppLocalizable {
         "course.end.like": "Meeldib see kursus",
         "course.end.liked": "Meeldib",
         "course.end.follow": "Jälgi: %@",
+        "course.loading": "Kursust laaditakse…",
+        "course.offline.title": "Seda kursust pole veel sinu telefonis",
+        "course.offline.body": "Ava see esimest korda internetiühendusega. Pärast seda saab seda lugeda ka võrguta.",
+        "course.offline.retry": "Proovi uuesti",
+        "settings.debug.catalog": "Veebikursused",
+        "settings.debug.catalogRefresh": "Laadi kursused uuesti",
     ]
 
     // MARK: - lithuanian (copie du français, à post-éditer)
@@ -33691,6 +33853,12 @@ enum AppLocalizable {
         "course.end.like": "Patinka šis kursas",
         "course.end.liked": "Patinka",
         "course.end.follow": "Sekti: %@",
+        "course.loading": "Kursas atsisiunčiamas…",
+        "course.offline.title": "Šio kurso tavo telefone dar nėra",
+        "course.offline.body": "Vieną kartą prisijunk prie interneto, kad jį atidarytum. Vėliau jį bus galima skaityti ir be ryšio.",
+        "course.offline.retry": "Bandyti dar kartą",
+        "settings.debug.catalog": "Internetiniai kursai",
+        "settings.debug.catalogRefresh": "Iš naujo įkelti kursus",
     ]
 
     // MARK: - latvian (copie du français, à post-éditer)
@@ -34891,6 +35059,12 @@ enum AppLocalizable {
         "course.end.like": "Patīk šis kurss",
         "course.end.liked": "Patīk",
         "course.end.follow": "Sekot: %@",
+        "course.loading": "Kurss tiek lejupielādēts…",
+        "course.offline.title": "Šis kurss vēl nav tavā tālrunī",
+        "course.offline.body": "Vienreiz pieslēdzies internetam, lai to atvērtu. Pēc tam to varēs lasīt arī bezsaistē.",
+        "course.offline.retry": "Mēģināt vēlreiz",
+        "settings.debug.catalog": "Tiešsaistes kursi",
+        "settings.debug.catalogRefresh": "Pārlādēt kursus",
     ]
 
     // MARK: - japanese (copie du français, à post-éditer)
@@ -36089,5 +36263,11 @@ enum AppLocalizable {
         "course.end.like": "このコースにいいね",
         "course.end.liked": "いいね済み",
         "course.end.follow": "%@をフォロー",
+        "course.loading": "コースをダウンロード中…",
+        "course.offline.title": "このコースはまだ端末にありません",
+        "course.offline.body": "一度インターネットに接続して開いてください。その後はオフラインでも読めます。",
+        "course.offline.retry": "もう一度試す",
+        "settings.debug.catalog": "オンラインコース",
+        "settings.debug.catalogRefresh": "コースを再読み込み",
     ]
 }

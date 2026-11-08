@@ -81,8 +81,10 @@ def main() -> int:
     errors = 0
     stale = 0
     for lang in LANGS:
-        cat = json.loads((IOS / f"courses.{lang}.json").read_text())
+        # Il n'y a plus de copie du quiz dans un catalogue embarqué : quizzes_v2 est la seule
+        # source (catalogue en ligne). « catalog » et « v2 » désignent donc le même fichier.
         v2 = json.loads((ROOT / "content" / "locales" / lang / "quizzes_v2.json").read_text())
+        cat = v2
         cat_q = by_id(cat)
         v2_q = by_id(v2)
         for cid, fr_quiz in fr.items():

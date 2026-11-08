@@ -492,6 +492,15 @@ struct SettingsView: View {
                 }
                 rowDivider
                 actionRow(
+                    icon: "externaldrive.badge.icloud",
+                    title: languageManager.text("settings.debug.catalog"),
+                    subtitle: CatalogStore.shared.debugSummary(language: languageManager.current)
+                ) {
+                    hapticTrigger += 1
+                    Task { await CatalogStore.shared.refresh(language: languageManager.current, force: true) }
+                }
+                rowDivider
+                actionRow(
                     icon: "flame.fill",
                     title: languageManager.text("settings.debug.discountPaywall")
                 ) {

@@ -1,6 +1,7 @@
 package app.rork.sophia.data
 
 import android.content.Context
+import app.rork.sophia.data.catalog.CatalogStore
 import app.rork.sophia.domain.AppLanguage
 import com.revenuecat.purchases.Purchases
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -8,6 +9,7 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 
 class LanguageManager(context: Context) {
+    private val appContext: Context = context.applicationContext
     private val prefs = context.getSharedPreferences("sophia_prefs", Context.MODE_PRIVATE)
     private val _current = MutableStateFlow(resolveInitial())
     val current: StateFlow<AppLanguage> = _current.asStateFlow()
@@ -52,11 +54,25 @@ class LanguageManager(context: Context) {
         StringStore.clearCache()
         GlossaryStore.clearCache()
         LegalDocumentStore.clearCache()
+        // Le catalogue en ligne : le snapshot de la nouvelle langue se construit à la lecture,
+        // et son manifeste est relu tout de suite.
+        CatalogStore.languageDidChange(appContext, language)
         _current.value = language
         report(language)
     }
 
     companion object {
+        /**
+         * La langue enregistrée dans les préférences (celle que `current` suit), pour les
+         * chargeurs qui n'ont qu'un contexte sous la main. La langue de l'appareil avant le
+         * premier choix, comme `resolveInitial`.
+         */
+        fun persisted(context: Context): AppLanguage {
+            val stored = context.getSharedPreferences("sophia_prefs", Context.MODE_PRIVATE)
+                .getString(AppLanguage.PREFS_KEY, null)
+            return if (stored != null) AppLanguage.fromCode(stored) else AppLanguage.preferredFromDevice()
+        }
+
         /**
          * Tells RevenueCat which language this customer reads the app in, so trial starts and
          * conversions can be compared language by language (customer attribute `app_language`).

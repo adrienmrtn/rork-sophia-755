@@ -11,6 +11,11 @@ struct CourseView: View {
     let onDismissToHome: () -> Void
     @Environment(\.dismiss) private var dismiss
     @State private var currentIndex: Int = 0
+    /// Le paquet du cours (texte, quiz, glossaire) : déjà sur le téléphone, en cours de
+    /// téléchargement, ou introuvable hors ligne.
+    @State private var contentState: ContentLoadState = .ready
+
+    private enum ContentLoadState { case ready, loading, unavailable }
     @State private var showQuiz: Bool = false
     @State private var appeared: Bool = false
     @State private var showDebloquerPaywall: Bool = false
@@ -563,22 +568,82 @@ struct CourseView: View {
                 TikTokLockBanner()
             }
 
-            TabView(selection: $currentIndex) {
-                ForEach(Array(course.lessons.enumerated()), id: \.element.id) { index, lesson in
-                    lessonContent(lesson: lesson, lessonIndex: index)
-                        .tag(index)
+            if contentState != .ready {
+                contentPlaceholder
+            } else {
+                TabView(selection: $currentIndex) {
+                    ForEach(Array(course.lessons.enumerated()), id: \.element.id) { index, lesson in
+                        lessonContent(lesson: lesson, lessonIndex: index)
+                            .tag(index)
+                    }
                 }
-            }
-            .tabViewStyle(.page(indexDisplayMode: .never))
-            // Restaure le slide entre les pages : sur un TabView `.page`, seul ce modifieur
-            // anime un changement *programmatique* de sélection (bouton « Continuer »).
-            // `withAnimation` seul n'anime pas le slide sur iOS 17/18.
-            .animation(.spring(response: 0.4), value: currentIndex)
+                .tabViewStyle(.page(indexDisplayMode: .never))
+                // Restaure le slide entre les pages : sur un TabView `.page`, seul ce modifieur
+                // anime un changement *programmatique* de sélection (bouton « Continuer »).
+                // `withAnimation` seul n'anime pas le slide sur iOS 17/18.
+                .animation(.spring(response: 0.4), value: currentIndex)
 
-            bottomButton
+                bottomButton
+            }
         }
+        .task(id: course.id) { await loadContentIfNeeded() }
         .opacity(appeared ? 1 : 0)
         .offset(y: appeared ? 0 : 20)
+    }
+
+    /// Le texte vient du catalogue en ligne : s'il n'est pas encore sur le téléphone, on le
+    /// télécharge avant d'afficher la première page.
+    private func loadContentIfNeeded() async {
+        let language = AppLanguage.currentPersisted()
+        if CourseContentStore.hasContent(courseId: course.id, language: language) {
+            contentState = .ready
+            return
+        }
+        contentState = .loading
+        let content = await CourseContentStore.ensureContent(courseId: course.id, language: language)
+        contentState = content == nil ? .unavailable : .ready
+    }
+
+    private var contentPlaceholder: some View {
+        let language = AppLanguage.currentPersisted()
+        return VStack(spacing: 14) {
+            Spacer(minLength: 0)
+            if contentState == .loading {
+                ProgressView()
+                    .tint(DS.accent)
+                Text(AppLocalizable.string("course.loading", language: language))
+                    .font(DS.sans(.subheadline))
+                    .foregroundStyle(DS.inkSecondary)
+            } else {
+                Image(systemName: "wifi.slash")
+                    .font(.system(size: 34, weight: .medium))
+                    .foregroundStyle(DS.inkTertiary)
+                Text(AppLocalizable.string("course.offline.title", language: language))
+                    .font(DS.title(.headline, .heavy))
+                    .foregroundStyle(DS.ink)
+                    .multilineTextAlignment(.center)
+                Text(AppLocalizable.string("course.offline.body", language: language))
+                    .font(DS.sans(.subheadline))
+                    .foregroundStyle(DS.inkSecondary)
+                    .multilineTextAlignment(.center)
+                Button {
+                    UIImpactFeedbackGenerator(style: .light).impactOccurred()
+                    Task { await loadContentIfNeeded() }
+                } label: {
+                    Text(AppLocalizable.string("course.offline.retry", language: language))
+                        .font(DS.sans(.subheadline, .bold))
+                        .foregroundStyle(.white)
+                        .padding(.horizontal, 22)
+                        .frame(height: 48)
+                        .background(RoundedRectangle(cornerRadius: 14, style: .continuous).fill(DS.accent))
+                }
+                .buttonStyle(.plain)
+                .padding(.top, 4)
+            }
+            Spacer(minLength: 0)
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .padding(.horizontal, 32)
     }
 
     private var bottomButton: some View {

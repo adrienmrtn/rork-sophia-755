@@ -48,9 +48,9 @@ enum ContentCatalog {
     }
 
     static func courses(for language: AppLanguage) -> [Course] {
-        let all = language == .french
-            ? CourseData.allCourses
-            : LocalizedContentLoader.courses(for: language)
+        // Le catalogue en ligne exclut déjà les cours retenus pour la langue ; la liste locale
+        // reste pour la région du téléphone, que le serveur ne connaît pas.
+        let all = LocalizedContentLoader.courses(for: language)
         let withheld = withheldIds(for: language)
         guard !withheld.isEmpty else { return all }
         return all.filter { !withheld.contains($0.id) }
@@ -59,9 +59,7 @@ enum ContentCatalog {
     /// Collections lose their withheld courses too, so their counts and completion
     /// maths only see what the reader can open.
     static func collections(for language: AppLanguage) -> [LearningCollection] {
-        let all = language == .french
-            ? CollectionData.allCollections
-            : LocalizedContentLoader.collections(for: language)
+        let all = LocalizedContentLoader.collections(for: language)
         let withheld = withheldIds(for: language)
         guard !withheld.isEmpty else { return all }
         return all.map { collection in
@@ -87,7 +85,8 @@ enum ContentCatalog {
 
     static func course(withId id: String, language: AppLanguage? = nil) -> Course? {
         let language = language ?? AppLanguage.currentPersisted()
-        return courses(for: language).first { $0.id == id }
+        guard !isWithheld(id, language: language) else { return nil }
+        return CatalogStore.shared.snapshot(for: language).courseById[id]
     }
 
     // MARK: - Structured (v2) content

@@ -1,53 +1,39 @@
 import Foundation
 
-/// Loads structured ("v2") course content bundled under `Resources/CoursesV2/`.
-///
-/// File naming: `<courseId>.<languageCode>.json` (e.g. `course_1_..._622.fr.json`).
-/// A course renders with the v2 block engine only when its resource exists for the
-/// active language; otherwise callers fall back to the legacy string renderer.
+/// Le contenu structuré (V2) d'un cours, lu dans le catalogue en ligne (`CatalogStore`) : le
+/// paquet téléchargé, ou celui du pack de départ embarqué. Les lectures sont synchrones et
+/// répondent nil quand le paquet n'est pas encore sur le téléphone ; `ensureContent` va alors
+/// le chercher.
 enum CourseContentStore {
-    private static var cache: [String: CourseContentV2] = [:]
-    private static var missing: Set<String> = []
-
     static func resetCache() {
-        cache.removeAll()
-        missing.removeAll()
+        CatalogStore.shared.resetMemory()
     }
 
-    /// Full structured content for a course, or nil when no v2 resource is bundled.
+    /// Le contenu complet d'un cours s'il est sur le téléphone, sinon nil.
     static func content(
         courseId: String,
         language: AppLanguage = AppLanguage.currentPersisted()
     ) -> CourseContentV2? {
-        let key = cacheKey(courseId: courseId, language: language)
-        if let cached = cache[key] { return cached }
-        if missing.contains(key) { return nil }
-
-        guard let url = resourceURL(courseId: courseId, language: language) else {
-            missing.insert(key)
-            return nil
-        }
-        do {
-            let data = try Data(contentsOf: url)
-            let decoded = try JSONDecoder().decode(CourseContentV2.self, from: data)
-            cache[key] = decoded
-            return decoded
-        } catch {
-            assertionFailure("Failed to decode v2 content \(courseId) [\(language.rawValue)]: \(error)")
-            missing.insert(key)
-            return nil
-        }
+        CatalogStore.shared.localContent(courseId: courseId, language: language)
     }
 
     static func hasContent(
         courseId: String,
         language: AppLanguage = AppLanguage.currentPersisted()
     ) -> Bool {
-        content(courseId: courseId, language: language) != nil
+        CatalogStore.shared.hasLocalContent(courseId: courseId, language: language)
     }
 
-    /// Resolves a single section plus whether it is the first (intro) or the last section.
-    /// The first carries the hero and the author byline, the last the author card and sources.
+    /// Le contenu, téléchargé s'il le faut. Nil : hors ligne et jamais téléchargé.
+    static func ensureContent(
+        courseId: String,
+        language: AppLanguage = AppLanguage.currentPersisted()
+    ) async -> CourseContentV2? {
+        await CatalogStore.shared.ensureContent(courseId: courseId, language: language)
+    }
+
+    /// Une section, et si elle est la première (le hero, la signature) ou la dernière (la carte
+    /// auteur, les sources).
     static func section(
         courseId: String,
         sectionId: String,
@@ -56,63 +42,5 @@ enum CourseContentStore {
         guard let content = content(courseId: courseId, language: language) else { return nil }
         guard let index = content.sections.firstIndex(where: { $0.id == sectionId }) else { return nil }
         return (content, content.sections[index], index == 0, index == content.sections.count - 1)
-    }
-
-    private static func cacheKey(courseId: String, language: AppLanguage) -> String {
-        "\(language.rawValue)|\(courseId)"
-    }
-
-    /// Resolves the resource for the exact language only. A language without a v2
-    /// resource intentionally falls back (in the caller) to the legacy localized
-    /// renderer, so we never show French content to a non-French user.
-    private static func resourceURL(courseId: String, language: AppLanguage) -> URL? {
-        resourceURL(courseId: courseId, code: language.rawValue)
-    }
-
-    private static func resourceURL(courseId: String, code: String) -> URL? {
-        let resource = "\(courseId).\(code)"
-        let fileName = "\(resource).json"
-        let subdirectories = ["Resources/CoursesV2", "CoursesV2", ""]
-
-        for subdirectory in subdirectories {
-            if subdirectory.isEmpty {
-                if let url = Bundle.main.url(forResource: resource, withExtension: "json") {
-                    return url
-                }
-                continue
-            }
-            if let url = Bundle.main.url(
-                forResource: resource,
-                withExtension: "json",
-                subdirectory: subdirectory
-            ) {
-                return url
-            }
-        }
-
-        guard let resourceRoot = Bundle.main.resourceURL else { return nil }
-        let relativePaths = [
-            "Resources/CoursesV2/\(fileName)",
-            "CoursesV2/\(fileName)",
-            fileName,
-        ]
-        for relativePath in relativePaths {
-            let candidate = resourceRoot.appendingPathComponent(relativePath)
-            if FileManager.default.fileExists(atPath: candidate.path) {
-                return candidate
-            }
-        }
-
-        // Last resort: walk the bundle (handles unexpected nesting after Xcode sync).
-        if let enumerator = FileManager.default.enumerator(
-            at: resourceRoot,
-            includingPropertiesForKeys: nil,
-            options: [.skipsHiddenFiles]
-        ) {
-            for case let url as URL in enumerator where url.lastPathComponent == fileName {
-                return url
-            }
-        }
-        return nil
     }
 }

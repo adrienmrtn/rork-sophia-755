@@ -16,8 +16,11 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
+import androidx.lifecycle.lifecycleScope
 import app.rork.sophia.billing.StoreViewModel
 import app.rork.sophia.data.analytics.Analytics
+import app.rork.sophia.data.catalog.CatalogStore
+import kotlinx.coroutines.launch
 import app.rork.sophia.ui.SophiaRoot
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.SophiaAppearance
@@ -78,6 +81,11 @@ class MainActivity : ComponentActivity() {
                         val app = application as SophiaApplication
                         app.progressManager.refreshStreak()
                         Analytics.appDidStart()
+                        // Le catalogue en ligne : manifeste relu au lancement et au retour au
+                        // premier plan, s'il date de plus de `refresh_hours` (six heures).
+                        lifecycleScope.launch {
+                            CatalogStore.refreshIfNeeded(applicationContext, app.languageManager.current.value)
+                        }
                     }
                     Lifecycle.Event.ON_STOP -> Analytics.appDidStop()
                     else -> Unit

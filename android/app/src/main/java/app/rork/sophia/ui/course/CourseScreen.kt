@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.pager.HorizontalPager
 import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.pager.rememberPagerState
@@ -17,6 +18,7 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.WifiOff
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
@@ -42,10 +44,12 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import app.rork.sophia.data.AuthorStore
 import app.rork.sophia.data.analytics.Analytics
+import app.rork.sophia.data.catalog.CatalogStore
 import app.rork.sophia.data.ContentCatalog
 import app.rork.sophia.data.CourseCoverUrls
 import app.rork.sophia.data.CourseImagePrefetch
@@ -140,8 +144,26 @@ fun CourseScreen(
         onDispose { logSectionView(reachedEnd = false) }
     }
 
-    LaunchedEffect(course.id, language) {
+    // Le texte vient du catalogue en ligne : la copie locale (pack de départ ou téléchargée)
+    // sert tout de suite ; sinon le paquet est téléchargé avant la première page, et hors
+    // ligne le lecteur montre un état d'attente avec « Réessayer ».
+    var contentState by remember(course.id, language) { mutableStateOf(ReaderContentState.CHECKING) }
+    var loadAttempt by remember(course.id, language) { mutableIntStateOf(0) }
+
+    LaunchedEffect(course.id, language, loadAttempt) {
         val appContext = context.applicationContext
+        val hasLocal = withContext(Dispatchers.IO) {
+            ContentCatalog.hasStructuredContent(appContext, language, course.id)
+        }
+        if (!hasLocal && !ContentCatalog.isWithheld(language, course.id)) {
+            contentState = ReaderContentState.LOADING
+            val fetched = CatalogStore.ensureContent(course.id, language)
+            if (fetched == null && course.lessons.isEmpty()) {
+                contentState = ReaderContentState.UNAVAILABLE
+                return@LaunchedEffect
+            }
+        }
+        contentState = ReaderContentState.READY
         val (loaded, loadedMeta) = withContext(Dispatchers.IO) {
             GlossaryStore.preload(appContext, language)
             AuthorStore.preload(appContext)
@@ -293,7 +315,11 @@ fun CourseScreen(
                     modifier = Modifier.weight(1f).fillMaxWidth(),
                     contentAlignment = Alignment.Center,
                 ) {
-                    CircularProgressIndicator(color = DS.accent)
+                    ReaderContentPlaceholder(
+                        state = contentState,
+                        language = language,
+                        onRetry = { loadAttempt += 1 },
+                    )
                 }
             } else {
                 HorizontalPager(
@@ -381,7 +407,9 @@ fun CourseScreen(
                     .padding(DS.Space.l),
                 horizontalArrangement = Arrangement.spacedBy(12.dp),
             ) {
-                val isLast = pagerState.currentPage >= pages.lastIndex
+                // Sans pages (téléchargement en cours, hors ligne), rien n'est « dernier » : le
+                // bouton reste « Continuer », inactif, et ne peut pas terminer un cours jamais lu.
+                val isLast = pagesReady && pagerState.currentPage >= pages.lastIndex
                 val courseLocked = !isPremium && !isDailyFreeCourse
                 SophiaPrimaryButton(
                     text = when {
@@ -389,7 +417,9 @@ fun CourseScreen(
                         course.hasQuiz -> StringStore.text(context, "course.quiz", language)
                         else -> StringStore.text(context, "course.finish", language)
                     },
+                    enabled = pagesReady,
                     onClick = {
+                        if (!pagesReady) return@SophiaPrimaryButton
                         if (courseLocked) {
                             if (!isLast) {
                                 scope.launch { pagerState.animateScrollToPage(pagerState.currentPage + 1) }
@@ -469,6 +499,80 @@ fun GlossaryTermCoachmark(
 }
 
 private const val PREFETCH_IMAGES = 4
+
+/** Où en est le texte du cours avant la première page. */
+private enum class ReaderContentState {
+    /** On regarde si le paquet est déjà sur le téléphone. */
+    CHECKING,
+
+    /** Le paquet se télécharge depuis le catalogue en ligne. */
+    LOADING,
+
+    /** Le texte est là ; les pages se construisent. */
+    READY,
+
+    /** Hors ligne et jamais téléchargé. */
+    UNAVAILABLE,
+}
+
+/**
+ * Ce qu'affiche le lecteur avant la première page : une roue (et « Téléchargement du cours… »
+ * quand le paquet vient du réseau), ou l'état hors ligne avec un bouton pour réessayer.
+ */
+@Composable
+private fun ReaderContentPlaceholder(
+    state: ReaderContentState,
+    language: AppLanguage,
+    onRetry: () -> Unit,
+) {
+    val context = LocalContext.current
+    if (state == ReaderContentState.UNAVAILABLE) {
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = DS.Space.xl),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.spacedBy(12.dp),
+        ) {
+            Icon(
+                imageVector = Icons.Filled.WifiOff,
+                contentDescription = null,
+                tint = DS.inkTertiary,
+                modifier = Modifier.size(36.dp),
+            )
+            Text(
+                text = StringStore.text(context, "course.offline.title", language),
+                style = SophiaTypography.titleMedium,
+                textAlign = TextAlign.Center,
+            )
+            Text(
+                text = StringStore.text(context, "course.offline.body", language),
+                style = SophiaTypography.bodyMedium,
+                color = DS.inkSecondary,
+                textAlign = TextAlign.Center,
+            )
+            SophiaPrimaryButton(
+                text = StringStore.text(context, "course.offline.retry", language),
+                onClick = onRetry,
+                modifier = Modifier.padding(top = 4.dp),
+            )
+        }
+    } else {
+        Column(
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.spacedBy(14.dp),
+        ) {
+            CircularProgressIndicator(color = DS.accent)
+            if (state == ReaderContentState.LOADING) {
+                Text(
+                    text = StringStore.text(context, "course.loading", language),
+                    style = SophiaTypography.bodyMedium,
+                    color = DS.inkSecondary,
+                )
+            }
+        }
+    }
+}
 
 /** Matches the +50 global XP granted by `ProgressManager.markCourseCompleted`. */
 private const val COURSE_COMPLETION_XP = 50

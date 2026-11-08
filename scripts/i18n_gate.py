@@ -229,93 +229,108 @@ def _duplicate_keys(p: Path) -> list[str]:
 
 
 def check_copies(langs: list[str]) -> list[str]:
+    """La source (content/) est cohérente, et les packs de départ embarqués en sont des copies.
+
+    Les catalogues ne vivent plus dans les bundles : les apps lisent le catalogue en ligne
+    (docs/catalogue-en-ligne.md) et n'embarquent qu'un pack de départ par langue
+    (catalogue complet + les 40 premiers cours du Parcours), généré par
+    scripts/import_catalog_to_supabase.py. C'est ce pack qu'on compare à content/.
+    """
     out = []
     # check_terminology reads these with a loader that turns a broken file into "nothing
     # to report": a broken file must fail here instead.
     for lang in ["fr", *langs]:
         for p in (ROOT / "content" / "locales" / lang / "quizzes_v2.json", ROOT / "content" / "locales" / lang / "legal.json",
-                  ROOT / "content" / "locales" / lang / "ui_strings.json", AND / "strings" / f"{lang}.json", AND / "legal" / f"{lang}.json"):
+                  ROOT / "content" / "locales" / lang / "ui_strings.json", AND / "strings" / f"{lang}.json", AND / "legal" / f"{lang}.json",
+                  ROOT / "content" / "glossary" / f"{lang}.json", ROOT / "content" / "collections" / f"{lang}.json"):
             if p.exists():
                 try:
                     _json(p)
                 except ValueError as e:
                     out.append(f"copies|{lang}|{p.relative_to(ROOT)}|JSON illisible : {e}")
     fr_ids = sorted(p.stem for p in (COURSES / "fr").glob("*.json"))
+    withheld_file = ROOT / "content" / "catalog_withheld.json"
+    withheld_by_lang = {k: set(v) for k, v in (_json(withheld_file).get("by_language", {}) if withheld_file.exists() else {}).items()}
+    structure_path = ROOT / "content" / "collections" / "collections.json"
+    structure = {c["id"]: c for c in _json(structure_path)} if structure_path.exists() else {}
+    if not structure:
+        out.append("copies|fr|collections|content/collections/collections.json absent ou vide")
     for lang in ["fr", *langs]:
-        # French catalogs live in Swift on iOS; every other language has both copies.
-        for name in ("glossary", "courses", "collections"):
-            for platform, p in (("ios", IOS / "Locales" / f"{name}.{lang}.json"), ("android", AND / "locales" / f"{name}.{lang}.json")):
-                if not p.exists() and not (lang == "fr" and platform == "ios"):
-                    out.append(f"copies|{lang}|{name}|fichier {platform} absent")
-        if not (AND / "locales" / f"course_index.{lang}.json").exists():
-            out.append(f"copies|{lang}|course_index|fichier android absent")
-        gi, ga = IOS / "Locales" / f"glossary.{lang}.json", AND / "locales" / f"glossary.{lang}.json"
-        if lang == "fr":
-            gi = ga
-        glossary = _json(gi) if gi.exists() else {}
+        # Glossaire et collections : une seule source, dans content/.
+        gp = ROOT / "content" / "glossary" / f"{lang}.json"
+        if not gp.exists():
+            out.append(f"copies|{lang}|glossaire|content/glossary/{lang}.json absent")
+        glossary = _json(gp) if gp.exists() else {}
         # Both apps fall back to a match that ignores case, spaces and punctuation
         # (GlossaryStore.normKey on iOS, GlossaryStore.normalize on Android).
         normalized = {f"{k.split('|', 1)[0]}|{_norm(k.split('|', 1)[1])}" for k in glossary if "|" in k}
-        # A duplicate key loads silently (the last one wins) and breaks every rewrite tool.
-        for p in {gi, ga}:
-            if p.exists():
-                out += [f"copies|{lang}|{p.relative_to(ROOT)}|{k}|clé en double" for k in _duplicate_keys(p)]
-        if gi.exists() and ga.exists() and _json(ga) != glossary:
-            g2 = _json(ga)
-            for k in sorted(set(glossary) | set(g2)):
-                if glossary.get(k) != g2.get(k):
-                    out.append(f"copies|{lang}|glossaire|{k}|iOS ≠ Android")
-        # The iOS loader (LocalizedContentLoader) decodes `lessons` as required: one course
-        # without it empties the whole catalog, and the library, the home feed and the path
-        # show nothing. The lessons are the id and title of each section of the course.
-        ci = IOS / "Locales" / f"courses.{lang}.json"
-        if lang != "fr" and ci.exists():
-            for c in _json(ci):
-                src = COURSES / lang / f"{c.get('id')}.json"
-                lessons = c.get("lessons")
-                if not lessons:
-                    out.append(f"copies|{lang}|courses|{c.get('id')}|catalogue iOS sans lessons (le catalogue entier ne se charge pas)")
-                elif src.exists() and [(x.get("id"), x.get("title")) for x in lessons] != \
-                        [(x["id"], x["title"]) for x in _json(src).get("sections", [])]:
-                    out.append(f"copies|{lang}|courses|{c['id']}|lessons iOS ≠ sections du cours")
-        oi, oa = IOS / "Locales" / f"collections.{lang}.json", AND / "locales" / f"collections.{lang}.json"
-        if oi.exists() and oa.exists():
-            a = {c["id"]: c for c in _json(oa)}
-            for c in _json(oi):
-                if a.get(c["id"]) != c:
-                    out.append(f"copies|{lang}|collections|{c['id']}|iOS ≠ Android")
+        if gp.exists():
+            # A duplicate key loads silently (the last one wins) and breaks every rewrite tool.
+            out += [f"copies|{lang}|{gp.relative_to(ROOT)}|{k}|clé en double" for k in _duplicate_keys(gp)]
+            for k in glossary:
+                if "|" not in k or k.split("|", 1)[0] not in fr_ids:
+                    out.append(f"copies|{lang}|glossaire|{k}|clé sans id de cours connu")
+        cp = ROOT / "content" / "collections" / f"{lang}.json"
+        if not cp.exists():
+            out.append(f"copies|{lang}|collections|content/collections/{lang}.json absent")
+        else:
+            translated = {c["id"]: c for c in _json(cp)}
+            for cid in sorted(set(structure) - set(translated)):
+                out.append(f"copies|{lang}|collections|{cid}|collection sans traduction")
+            for cid in sorted(set(translated) - set(structure)):
+                out.append(f"copies|{lang}|collections|{cid}|traduction d'une collection inconnue")
+        # Cours : chaque fichier source existe et ses liens de glossaire sont résolubles.
         for cid in fr_ids:
             src = COURSES / lang / f"{cid}.json"
             if not src.exists():
                 out.append(f"copies|{lang}|{cid}|cours absent")
                 continue
-            course = _json(src)
-            for name, p in (("ios", IOS / "CoursesV2" / f"{cid}.{lang}.json"), ("android", AND / "courses_v2" / lang / f"{cid}.json")):
-                if not p.exists():
-                    out.append(f"copies|{lang}|{cid}|copie {name} absente")
-                elif _json(p) != course:
-                    out.append(f"copies|{lang}|{cid}|copie {name} ≠ source")
-            if gi.exists():
-                for s in _strings(course):
-                    for term in re.findall(r"\[\[(.+?)\]\]", s):
+            if gp.exists():
+                for s_ in _strings(_json(src)):
+                    for term in re.findall(r"\[\[(.+?)\]\]", s_):
                         if f"{cid}|{term}" not in glossary and f"{cid}|{_norm(term)}" not in normalized:
                             out.append(f"copies|{lang}|{cid}|lien mort [[{term}]]")
-        ci, ca = IOS / "Locales" / f"courses.{lang}.json", AND / "locales" / f"courses.{lang}.json"
-        ix = AND / "locales" / f"course_index.{lang}.json"
-        if ca.exists():
-            reference = {x["id"]: x for x in _json(ci if ci.exists() else ca)}
-            # The Android catalog has no "lessons"; the Android home reads course_index.
-            for label, p in (("catalogue android", ca), ("course_index android", ix)):
-                if not p.exists():
+        # Packs de départ : identiques entre iOS et Android, et copies fidèles de content/.
+        packs = {"ios": IOS / "StarterPack" / lang, "android": AND / "starter_pack" / lang}
+        catalogs = {}
+        for platform, folder in packs.items():
+            cat = folder / "catalog.json"
+            if not cat.is_file():
+                out.append(f"copies|{lang}|pack|catalogue {platform} absent ({cat.relative_to(ROOT)})")
+                continue
+            catalogs[platform] = cat.read_bytes()
+        if len(catalogs) == 2 and catalogs["ios"] != catalogs["android"]:
+            out.append(f"copies|{lang}|pack|catalogue iOS ≠ Android")
+        if "ios" in catalogs:
+            catalog = json.loads(catalogs["ios"])
+            expected = [cid for cid in fr_ids if (COURSES / lang / f"{cid}.json").exists() and cid not in withheld_by_lang.get(lang, set())]
+            listed = {c["id"]: c for c in catalog.get("courses", [])}
+            for cid in sorted(set(expected) ^ set(listed)):
+                out.append(f"copies|{lang}|pack|{cid}|cours présent d'un seul côté du catalogue")
+            for cid, entry in listed.items():
+                src = COURSES / lang / f"{cid}.json"
+                if not src.exists():
                     continue
-                copy = {x["id"]: x for x in _json(p)}
-                for cid in sorted(reference.keys() ^ copy.keys()):
-                    out.append(f"copies|{lang}|{label}|{cid}|cours présent d'un seul côté")
-                for cid, x in reference.items():
-                    y = copy.get(cid, {})
-                    for field, value in y.items():
-                        if field in x and x[field] != value:
-                            out.append(f"copies|{lang}|{label}|{cid}|{field} ≠ catalogue iOS")
+                course = _json(src)
+                if [(x.get("id"), x.get("title")) for x in entry.get("sections", [])] != \
+                        [(x["id"], x["title"]) for x in course.get("sections", [])]:
+                    out.append(f"copies|{lang}|pack|{cid}|sections du catalogue ≠ sections du cours")
+                if entry.get("title") != course.get("title") or entry.get("subcategory", "") != course.get("subcategory", ""):
+                    out.append(f"copies|{lang}|pack|{cid}|titre ou sous-catégorie ≠ source")
+            if len(catalog.get("collections", [])) != len(structure) and structure:
+                out.append(f"copies|{lang}|pack|collections : {len(catalog.get('collections', []))} dans le pack, {len(structure)} dans content/")
+            for platform, folder in packs.items():
+                courses_dir = folder / "courses"
+                bundles = sorted(courses_dir.glob("*.json")) if courses_dir.is_dir() else []
+                if not bundles:
+                    out.append(f"copies|{lang}|pack|aucun cours de départ {platform}")
+                for bundle_path in bundles:
+                    bundle = _json(bundle_path)
+                    src = COURSES / lang / f"{bundle_path.stem}.json"
+                    if not src.exists():
+                        out.append(f"copies|{lang}|pack|{bundle_path.stem}|cours de départ {platform} sans source")
+                    elif bundle.get("content") != _json(src):
+                        out.append(f"copies|{lang}|pack|{bundle_path.stem}|contenu du pack {platform} ≠ source")
     return out
 
 

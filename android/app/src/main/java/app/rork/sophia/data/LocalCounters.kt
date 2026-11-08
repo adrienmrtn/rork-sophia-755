@@ -3,8 +3,11 @@ package app.rork.sophia.data
 import android.content.Context
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.State
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.produceState
 import androidx.compose.ui.platform.LocalContext
+import app.rork.sophia.data.catalog.CatalogStore
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.Course
 import app.rork.sophia.domain.fakeReadsCount
@@ -79,9 +82,9 @@ fun Int.compactCount(language: AppLanguage): String {
 }
 
 /**
- * Ce que les nouveaux écrans tirent du contenu structuré d'un cours (`courses_v2`) sans
- * ouvrir le lecteur : temps de lecture, nombre de sections, accroche, introduction, langue
- * d'origine. Lu une fois par cours et par langue, puis servi de mémoire.
+ * Ce que les nouveaux écrans tirent du contenu structuré d'un cours (le paquet du catalogue
+ * en ligne) sans ouvrir le lecteur : temps de lecture, nombre de sections, accroche,
+ * introduction, langue d'origine. Lu une fois par cours et par langue, puis servi de mémoire.
  */
 data class StructuredCourseInfo(
     /** Temps de lecture estimé en minutes, borné entre 2 et 20. */
@@ -114,7 +117,10 @@ object ReadingTime {
     /** Lit le JSON structuré si besoin : à appeler hors du fil principal. */
     fun info(context: Context, language: AppLanguage, course: Course): StructuredCourseInfo {
         cache[key(language, course.id)]?.let { return it }
-        val computed = compute(context, language, course)
+        // Le contenu vient du catalogue en ligne : tant qu'il n'est pas sur le téléphone, la
+        // valeur de repli est rendue sans être retenue, pour être recalculée à son arrivée.
+        val raw = ContentCatalog.structuredContentJson(context, language, course.id) ?: return fallback(course)
+        val computed = compute(raw, course)
         cache[key(language, course.id)] = computed
         return computed
     }
@@ -140,8 +146,7 @@ object ReadingTime {
         )
     }
 
-    private fun compute(context: Context, language: AppLanguage, course: Course): StructuredCourseInfo {
-        val raw = ContentCatalog.structuredContentJson(context, language, course.id) ?: return fallback(course)
+    private fun compute(raw: String, course: Course): StructuredCourseInfo {
         return try {
             val root = json.parseToJsonElement(raw).jsonObject
             val sections = root["sections"]?.jsonArray.orEmpty().mapNotNull { it as? JsonObject }
@@ -212,12 +217,14 @@ fun stripInlineMarkup(raw: String): String =
 
 /**
  * Les infos structurées d'un cours pour une carte ou une fiche, lues hors du fil principal ;
- * null tant qu'elles ne sont pas connues.
+ * null tant qu'elles ne sont pas connues. Relues quand le catalogue change (`CatalogStore.version`),
+ * donc quand le paquet du cours vient d'être téléchargé.
  */
 @Composable
 fun rememberCourseInfo(course: Course, language: AppLanguage): State<StructuredCourseInfo?> {
     val context = LocalContext.current
-    return produceState(initialValue = ReadingTime.cached(language, course.id), course.id, language) {
+    val version by CatalogStore.version.collectAsState()
+    return produceState(initialValue = ReadingTime.cached(language, course.id), course.id, language, version) {
         value = ReadingTime.infoAsync(context.applicationContext, language, course)
     }
 }
