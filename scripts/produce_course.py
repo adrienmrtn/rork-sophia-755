@@ -872,7 +872,9 @@ def system_prompt(ctx: Context, lang: str) -> list[dict]:
         "- Keep every `**bold**` span and every `[[glossary term]]` marker: same count per segment, same position in the "
         "sentence; the text inside [[…]] is the translated glossary term, identical each time it appears and identical "
         "to the `term` you give in `glossary`. Articles, prepositions and inflection particles stay OUTSIDE the "
-        "brackets (write `il [[saros]]`, never `[[il saros]]`). Never park a term at the end of a sentence; never drop one.\n"
+        "brackets (write `il [[saros]]`, never `[[il saros]]`). In languages with cases, the bracketed term is the "
+        "dictionary form (nominative singular): never decline it inside the brackets and never attach a suffix after "
+        "`]]`; rebuild the sentence so the nominative fits. Never park a term at the end of a sentence; never drop one.\n"
         "- A bold span holds the same words as in the source and never ends with a period or an abbreviation dot: "
         "keep abbreviations such as BC/AD equivalents outside the bold (`**60** v.Chr.`), or write them without a final dot.\n"
         "- No em dash (—), no en dash (–), no curly quotes or apostrophes unless the guide requires them, no non-breaking "
@@ -962,6 +964,21 @@ def validator_findings(ctx: Context, lang: str) -> list[str]:
     return [f"{f.key} {f.rule}: {f.detail}" for f in check_course(ctx.course_id, lang, allowed)]
 
 
+def aligned_terms(origin_course: dict, course: dict) -> dict[str, list[str]]:
+    """Terme source → formes réellement écrites entre [[…]] dans la traduction, segment par segment
+    (les marqueurs se correspondent dans l'ordre quand leur nombre est le même)."""
+    src, dst = segments_dict(origin_course), segments_dict(course)
+    mapping: dict[str, list[str]] = defaultdict(list)
+    for key, s_text in src.items():
+        s_terms = [t.strip() for t in GLOSSARY_RE.findall(s_text)]
+        t_terms = [t.strip() for t in GLOSSARY_RE.findall(dst.get(key, ""))]
+        if s_terms and len(s_terms) == len(t_terms):
+            for a, b in zip(s_terms, t_terms):
+                if b and b not in mapping[a]:
+                    mapping[a].append(b)
+    return mapping
+
+
 def apply_translation(ctx: Context, lang: str, result: dict, base_course: dict | None, base_quiz: list[dict] | None,
                       memory: dict[str, str]) -> tuple[dict, list[dict], dict[str, dict], list[str]]:
     """Reconstruit cours, quiz et glossaire traduits à partir de la réponse du modèle."""
@@ -1012,6 +1029,7 @@ def apply_translation(ctx: Context, lang: str, result: dict, base_course: dict |
     by_source_norm = {cio.normalise_term(k): v for k, v in by_source.items()}
     used_terms = glossary_terms_in_course(course)
     used_norm = {cio.normalise_term(t): t for t in used_terms}
+    aligned = aligned_terms(ctx.course, course)
     for entry in ctx.glossary:
         t = by_source.get(entry["term"]) or by_source_norm.get(cio.normalise_term(entry["term"]))
         if not t or not str(t.get("term", "")).strip():
@@ -1020,8 +1038,13 @@ def apply_translation(ctx: Context, lang: str, result: dict, base_course: dict |
         term = str(t["term"]).strip()
         # Si le texte emploie une variante (casse, espace), c'est celle du texte qui fait foi.
         term = used_norm.get(cio.normalise_term(term), term)
-        glossary[f"{ctx.course_id}|{term}"] = {"displayTerm": term, "classification": entry["classification"],
-                                                 "explanation": str(t.get("explanation", "")).strip() or entry["explanation"]}
+        explanation = str(t.get("explanation", "")).strip() or entry["explanation"]
+        glossary[f"{ctx.course_id}|{term}"] = {"displayTerm": term, "classification": entry["classification"], "explanation": explanation}
+        # Une forme fléchie restée entre crochets (langues à cas) reçoit sa propre clé, comme les
+        # variantes de casse des cours existants : la touche dans l'app continue d'ouvrir la fiche.
+        for form in aligned.get(entry["term"], []):
+            if cio.normalise_term(form) != cio.normalise_term(term):
+                glossary.setdefault(f"{ctx.course_id}|{form}", {"displayTerm": form, "classification": entry["classification"], "explanation": explanation})
     glossary_norm = {cio.normalise_term(k.split("|", 1)[1]) for k in glossary}
     for term in used_terms:
         if cio.normalise_term(term) not in glossary_norm:
@@ -1093,7 +1116,9 @@ def translate_language(ctx: Context, llm: LLM, steps: Steps, lang: str) -> dict:
                 f"REVIEW PASS. Below is the {name} edition you must review against the source: fidelity first (no fact "
                 "drifted, dropped or added; numbers, names and order preserved), then language (idiomatic, simple, "
                 "natural when read aloud, typography per the guide). Return ONLY the segments, quiz entries and glossary "
-                "entries you change, corrected; return empty arrays when nothing needs changing. Keep every marker rule.\n\n"
+                "entries you change, corrected; return empty arrays when nothing needs changing. Keep every marker rule: "
+                "the text inside [[…]] is the glossary key in its dictionary form and must stay identical to the glossary "
+                "`term`; if the grammar needs another case, rebuild the sentence around the term, never decline it.\n\n"
                 f"Source segments:\n{json.dumps(origin_segments, ensure_ascii=False, indent=1)}\n\n"
                 f"{name} segments:\n{json.dumps(segments_dict(course), ensure_ascii=False, indent=1)}\n\n"
                 f"{name} quiz:\n{json.dumps(quiz, ensure_ascii=False, indent=1)}\n\n"
@@ -1340,7 +1365,14 @@ def commit_and_push(ctx: Context, message: str) -> str | None:
         return None
     env = dict(os.environ)
     git = ["git", "-c", "user.name=Sophia usine", "-c", "user.email=usine@users.noreply.github.com"]
-    subprocess.run([*git, "add", "-A", "content"], cwd=ROOT, check=True)
+    # Les packs de départ embarqués dans les apps sont des copies de content/ (la porte i18n le
+    # vérifie) : on les régénère pour que le catalogue qu'ils portent connaisse le cours.
+    packs = subprocess.run([sys.executable, str(SCRIPTS / "import_catalog_to_supabase.py"), "--starter-pack-only"],
+                           cwd=ROOT, capture_output=True, text=True)
+    if packs.returncode != 0:
+        log(f"packs de départ non régénérés : {packs.stderr.strip()[-400:]}")
+    subprocess.run([*git, "add", "-A", "content", "ios/Sophia/Resources/StarterPack", "android/app/src/main/assets/starter_pack"],
+                   cwd=ROOT, check=True)
     if subprocess.run([*git, "diff", "--cached", "--quiet"], cwd=ROOT).returncode == 0:
         log("commit : rien à écrire")
         return None

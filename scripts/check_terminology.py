@@ -76,8 +76,15 @@ def _load(path: Path):
         return None
 
 
+def withheld_courses(code: str) -> set[str]:
+    """Cours retenus dans cette langue (content/catalog_withheld.json) : non distribués, non balayés."""
+    data = _load(ROOT / "content" / "catalog_withheld.json") or {}
+    return set((data.get("by_language") or {}).get(code, []))
+
+
 def iter_texts(code: str):
     """Yield (surface, location, text) for every displayed string of one language."""
+    withheld = withheld_courses(code)
     for key, value in ios_table(code).items():
         yield "ui", f"ios:{key}", value
     android = _load(ANDROID_STRINGS / f"{code}.json") or {}
@@ -85,6 +92,8 @@ def iter_texts(code: str):
         if isinstance(value, str):
             yield "ui", f"android:{key}", value
     for path in sorted((COURSES / code).glob("*.json")):
+        if path.stem in withheld:
+            continue
         course = _load(path) or {}
         cid = course.get("id", path.stem)
         for field in ("title", "subtitle", "description"):
@@ -105,6 +114,8 @@ def iter_texts(code: str):
                         if event.get(field):
                             yield "cours", f"{prefix}.e{e_index}.{field}", event[field]
     for entry in _load(LOCALES / code / "quizzes_v2.json") or []:
+        if entry.get("courseId") in withheld:
+            continue
         for q in entry.get("quiz") or []:
             qid = q.get("id", "?")
             for field in ("question", "explanation", "statement"):
@@ -118,6 +129,8 @@ def iter_texts(code: str):
                     yield "quiz", f"{qid}/item{i}", item
     # Glossaire et collections : une langue par fichier dans content/ (catalogue en ligne).
     for key, entry in (_load(ROOT / "content" / "glossary" / f"{code}.json") or {}).items():
+        if key.split("|", 1)[0] in withheld:
+            continue
         for field in ("displayTerm", "explanation"):
             if entry.get(field):
                 yield "glossaire", f"{key}/{field}", entry[field]
@@ -129,6 +142,8 @@ def iter_texts(code: str):
     # désormais dérivé des cours eux-mêmes ; on relit leurs champs d'en-tête sous cette étiquette
     # pour garder les identifiants des constats et des exceptions.
     for path in sorted((ROOT / "content" / "courses" / code).glob("*.json")):
+        if path.stem in withheld:
+            continue
         course = _load(path) or {}
         cid = course.get("id", path.stem)
         for field in ("title", "subtitle", "description", "subcategory"):

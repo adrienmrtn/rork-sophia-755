@@ -283,9 +283,12 @@ def check_copies(langs: list[str]) -> list[str]:
         for cid in fr_ids:
             src = COURSES / lang / f"{cid}.json"
             if not src.exists():
-                out.append(f"copies|{lang}|{cid}|cours absent")
+                # Un cours retenu dans cette langue (catalog_withheld.json) n'est pas distribué :
+                # l'usine peut n'avoir rien écrit pour lui.
+                if cid not in withheld_by_lang.get(lang, set()):
+                    out.append(f"copies|{lang}|{cid}|cours absent")
                 continue
-            if gp.exists():
+            if gp.exists() and cid not in withheld_by_lang.get(lang, set()):
                 for s_ in _strings(_json(src)):
                     for term in re.findall(r"\[\[(.+?)\]\]", s_):
                         if f"{cid}|{term}" not in glossary and f"{cid}|{_norm(term)}" not in normalized:
@@ -335,12 +338,23 @@ def check_copies(langs: list[str]) -> list[str]:
 
 
 # ------------------------------------------------------------------ outils existants
+def _withheld(lang: str) -> set[str]:
+    """Les cours que catalog_withheld.json retient dans cette langue : non distribués, donc hors
+    des vérifications de traduction (l'usine les laisse en l'état jusqu'à une relance)."""
+    path = ROOT / "content" / "catalog_withheld.json"
+    data = _json(path) if path.exists() else {}
+    return set((data.get("by_language") or {}).get(lang, []))
+
+
 def _validate_lang(lang: str) -> list[str]:
     from check_course_translation import check_course
     from course_translation_io import glossary_keys_by_course
     allowed = glossary_keys_by_course(lang)
+    withheld = _withheld(lang)
     out = []
     for p in sorted((COURSES / "fr").glob("*.json")):
+        if p.stem in withheld:
+            continue
         for f in check_course(p.stem, lang, allowed):
             out.append(f"validateur|{lang}|{f.course_id}|{f.key}|{f.rule}")
     return out
