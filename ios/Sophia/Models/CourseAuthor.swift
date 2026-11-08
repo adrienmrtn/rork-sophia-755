@@ -11,6 +11,9 @@ nonisolated struct CourseAuthor: Decodable, Sendable, Identifiable, Hashable {
     let name: String
     /// File name (no extension) under `Resources/AuthorPhotos`; nil shows the initials.
     let photo: String?
+    /// Portrait hébergé d'un créateur du Studio (`creators.photo_url`), affiché quand il n'y a pas
+    /// de ressource embarquée ; `AuthorStore.remotePhoto(for:)` le télécharge et le garde en cache.
+    let photoUrl: String?
     let institution: String?
     let country: String?
     let links: [String: String]?

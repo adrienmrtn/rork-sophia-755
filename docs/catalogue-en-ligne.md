@@ -26,7 +26,10 @@ embarqués en sont des copies fidèles.
 
 Migration `supabase/migrations/20261108180000_online_catalog.sql`.
 
-- `creators` : slug, nom, photo, institution, pays, liens, `title` et `bio` par langue (jsonb), `verified`.
+- `creators` : slug, nom, photo, institution, pays, liens, `title` et `bio` par langue (jsonb), `verified`,
+  `photo_url` : le portrait hébergé d'un créateur du Studio (copie faite par l'usine dans
+  `course-images/author_<slug>.jpg`), servi aux apps sous la clé `photoUrl` du catalogue et affiché
+  quand le créateur n'a pas de photo embarquée.
 - `courses` : identité d'un cours indépendante de la langue : `subject`, `creator_slug`, `status`
   (draft, published, archived), `tier`, `origin_lang`, `cover_slug`, `published_at`.
 - `course_contents` (`course_id`, `lang`) : le contenu V2 complet (`content` jsonb), titre,

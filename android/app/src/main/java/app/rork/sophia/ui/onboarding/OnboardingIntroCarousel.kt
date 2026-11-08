@@ -371,7 +371,7 @@ private fun IntroCourseCard(course: CourseSummary, language: AppLanguage, height
 private fun IntroResearchersPage(language: AppLanguage, active: Boolean) {
     val context = LocalContext.current
     val haptics = rememberOnboardingHaptics()
-    val portraits = remember { AuthorStore.all(context).mapNotNull { it.photoModel } }
+    val portraits = remember { AuthorStore.all(context).mapNotNull { it.bundledPhotoModel } }
     val logos = remember { onboardingAssets(context, "university_") }
     var revealedPortraits by remember { mutableIntStateOf(0) }
     var marqueeIn by remember { mutableStateOf(false) }

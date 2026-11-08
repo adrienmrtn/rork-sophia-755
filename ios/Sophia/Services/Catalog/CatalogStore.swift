@@ -326,6 +326,7 @@ final class CatalogStore {
                 slug: creator.slug,
                 name: creator.name,
                 photo: creator.photo,
+                photoUrl: creator.photoUrl,
                 institution: creator.institution,
                 country: creator.country,
                 links: creator.links,
