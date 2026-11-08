@@ -27,5 +27,17 @@ object AppConfig {
         } else {
             "https://sophia-culture.com/en/creators/$role"
         }
+
+    /**
+     * Le Studio des créateurs (« Deviens créateur » du fil, du profil et des événements) :
+     * la page des auteurs du site, en français ou en anglais comme le reste du site.
+     */
+    fun creatorStudioUrl(language: AppLanguage): String =
+        if (language == AppLanguage.FRENCH) {
+            "https://sophia-culture.com/fr/auteurs"
+        } else {
+            "https://sophia-culture.com/en/auteurs"
+        }
+
     const val PREMIUM_ENTITLEMENT = "premium"
 }

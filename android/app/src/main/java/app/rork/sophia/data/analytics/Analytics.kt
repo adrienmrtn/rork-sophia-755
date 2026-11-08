@@ -3,6 +3,7 @@ package app.rork.sophia.data.analytics
 import android.content.Context
 import app.rork.sophia.BuildConfig
 import app.rork.sophia.data.AuthService
+import app.rork.sophia.data.FeatureFlags
 import app.rork.sophia.data.LanguageManager
 import app.rork.sophia.data.SupabaseManager
 import io.github.jan.supabase.exceptions.RestException
@@ -72,6 +73,7 @@ object Analytics {
     /** D'où le prochain cours va s'ouvrir. Posé par l'écran d'origine, lu par `MainTabs.openCourse`. */
     @Volatile var pendingCourseOpenSource: String? = null
 
+    private var appContext: Context? = null
     private var auth: AuthService? = null
     private var languageManager: LanguageManager? = null
     private var scope: CoroutineScope? = null
@@ -129,6 +131,7 @@ object Analytics {
     )
 
     fun init(context: Context, auth: AuthService, languageManager: LanguageManager, scope: CoroutineScope) {
+        this.appContext = context.applicationContext
         this.auth = auth
         this.languageManager = languageManager
         this.scope = scope
@@ -216,7 +219,9 @@ object Analytics {
             "link" -> "link"
             else -> "direct"
         }
-        log("app_open", props = mapOf("source" to source))
+        // La variante de navigation (A/B « nouvelle génération »), pour lire les deux cohortes.
+        val nav = appContext?.let { FeatureFlags.navigationVariant(it).raw } ?: FeatureFlags.NavigationVariant.CLASSIC.raw
+        log("app_open", props = mapOf("source" to source, "nav" to nav))
     }
 
     /** Passage en arrière-plan : la file part tout de suite. */

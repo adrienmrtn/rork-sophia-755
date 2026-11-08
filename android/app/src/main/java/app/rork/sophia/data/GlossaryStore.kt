@@ -20,6 +20,9 @@ private class GlossaryTable(
     val normalized: Map<String, GlossaryEntry>,
 )
 
+/** Un terme trouvé par la recherche de l'onglet Explorer, avec le cours qui le définit. */
+data class GlossaryHit(val courseId: String, val entry: GlossaryEntry)
+
 object GlossaryStore {
     private val json = Json { ignoreUnknownKeys = true; isLenient = true }
     private val cache = ConcurrentHashMap<String, GlossaryTable>()
@@ -80,6 +83,37 @@ object GlossaryStore {
             }
         }
     }
+
+    /**
+     * Les termes dont le nom contient [query] (sans accents ni casse), un par couple
+     * terme/cours, triés par terme, au plus [limit]. Charge la table de la langue si besoin :
+     * à appeler depuis une coroutine, jamais pendant la composition.
+     */
+    suspend fun search(context: Context, language: AppLanguage, query: String, limit: Int): List<GlossaryHit> {
+        val needle = searchKey(query)
+        if (needle.length < 2) return emptyList()
+        return withContext(Dispatchers.IO) {
+            val table = table(context, language)
+            val seen = HashSet<String>()
+            val hits = ArrayList<GlossaryHit>()
+            for ((key, entry) in table.exact) {
+                if (!searchKey(entry.displayTerm).contains(needle)) continue
+                val bar = key.indexOf('|')
+                val courseId = if (bar >= 0) key.substring(0, bar) else ""
+                if (!seen.add(searchKey(entry.displayTerm) + "|" + courseId)) continue
+                hits += GlossaryHit(courseId, entry)
+            }
+            hits.sortBy { it.entry.displayTerm }
+            hits.take(limit)
+        }
+    }
+
+    /** Minuscules sans diacritiques, pour une recherche tolérante (« medecin » trouve « médecin »). */
+    fun searchKey(s: String): String =
+        java.text.Normalizer.normalize(s, java.text.Normalizer.Form.NFD)
+            .replace(Regex("\\p{Mn}+"), "")
+            .lowercase(java.util.Locale.ROOT)
+            .trim()
 
     private fun normalize(s: String): String =
         // Locale.ROOT: a Turkish phone lowercases "I" to a dotless "ı", which would
