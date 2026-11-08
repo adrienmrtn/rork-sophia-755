@@ -28,10 +28,12 @@ Ce que fait un job, étape par étape (production_steps, un webhook « job-step 
 Les fichiers produits sont écrits dans content/ (cours, quiz, glossaire, index, auteurs, carte des
 couvertures) et poussés sur main ; content/ reste la source de vérité.
 
-Variables d'environnement : SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, ANTHROPIC_API_KEY,
-PRODUCTION_MODEL (défaut claude-opus-5-5), PRODUCTION_FALLBACKS (off pour désactiver le repli
-serveur sur refus), PRODUCTION_WORKERS (langues en parallèle, défaut 4), ELEVENLABS_API_KEY,
-ELEVENLABS_VOICE_FR, ELEVENLABS_VOICE_EN.
+Variables d'environnement : SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY ; le modèle par l'API Anthropic
+(ANTHROPIC_API_KEY, défaut claude-opus-5-5, sorties JSON contraintes, PRODUCTION_FALLBACKS=off pour
+couper le repli serveur sur refus) ou par fal-ai/any-llm (FAL_KEY ou FAL_API_KEY, défaut
+anthropic/claude-sonnet-4.5, JSON demandé dans le prompt et vérifié) ; PRODUCTION_PROVIDER pour
+forcer l'un ou l'autre, PRODUCTION_MODEL pour changer de modèle, PRODUCTION_WORKERS (langues en
+parallèle, défaut 4), ELEVENLABS_API_KEY, ELEVENLABS_VOICE_FR, ELEVENLABS_VOICE_EN.
 
 Tests sans réseau :
     python3 scripts/produce_course.py --job-file job.json --dry-run --fake-llm --out-root /tmp/x
@@ -179,25 +181,144 @@ class Steps:
 
 # ---------------------------------------------------------------- le modèle
 
-class LLM:
-    """Appels au modèle avec sortie JSON contrainte (output_config.format)."""
+FAL_QUEUE = "https://queue.fal.run/fal-ai/any-llm"
+DEFAULT_MODELS = {"anthropic": DEFAULT_MODEL, "fal": "anthropic/claude-sonnet-4.5"}
 
-    def __init__(self, model: str, fake: bool = False):
-        self.model = model
+
+def detect_provider() -> str:
+    """anthropic (API Anthropic, sorties JSON contraintes) ou fal (fal-ai/any-llm, JSON demandé dans le prompt)."""
+    wanted = os.environ.get("PRODUCTION_PROVIDER", "").strip().lower()
+    if wanted in DEFAULT_MODELS:
+        return wanted
+    if os.environ.get("ANTHROPIC_API_KEY", "").strip():
+        return "anthropic"
+    if os.environ.get("FAL_KEY", "").strip() or os.environ.get("FAL_API_KEY", "").strip():
+        return "fal"
+    return "anthropic"
+
+
+def extract_json(text: str) -> dict:
+    """Le premier objet JSON d'une réponse, avec ou sans clôture Markdown autour."""
+    stripped = text.strip()
+    stripped = re.sub(r"^```(?:json)?\s*", "", stripped)
+    stripped = re.sub(r"\s*```$", "", stripped)
+    try:
+        value = json.loads(stripped)
+        if isinstance(value, dict):
+            return value
+    except ValueError:
+        pass
+    start, end = stripped.find("{"), stripped.rfind("}")
+    if start < 0 or end <= start:
+        raise ProductionError("réponse du modèle sans objet JSON")
+    value = json.loads(stripped[start:end + 1])
+    if not isinstance(value, dict):
+        raise ProductionError("réponse du modèle : JSON qui n'est pas un objet")
+    return value
+
+
+class LLM:
+    """Appels au modèle avec sortie JSON : contrainte par schéma chez Anthropic, demandée dans le
+    prompt et vérifiée à la lecture chez fal (fal-ai/any-llm)."""
+
+    def __init__(self, model: str | None, fake: bool = False, provider: str | None = None):
         self.fake = fake
+        self.provider = provider or detect_provider()
+        self.model = model or os.environ.get("PRODUCTION_MODEL", "").strip() or DEFAULT_MODELS[self.provider]
         self.calls = 0
         self.input_tokens = 0
         self.output_tokens = 0
         self.lock = threading.Lock()
         self.client = None
-        if not fake:
+        self.fal_key = ""
+        if not fake and self.provider == "anthropic":
             import anthropic
             self.client = anthropic.Anthropic(max_retries=4, timeout=900.0)
+        if not fake and self.provider == "fal":
+            self.fal_key = os.environ.get("FAL_KEY", "").strip() or os.environ.get("FAL_API_KEY", "").strip()
+            if not self.fal_key:
+                raise ProductionError("FAL_KEY (ou FAL_API_KEY) absent")
         self.fallbacks = os.environ.get("PRODUCTION_FALLBACKS", "default").lower() not in ("off", "0", "false", "")
 
     def json_call(self, system: list[dict] | str, user: str, schema: dict, max_tokens: int = 32000, fake=None) -> dict:
         if self.fake:
             return fake() if callable(fake) else (fake or {})
+        if self.provider == "fal":
+            return self._fal_json(system, user, schema, max_tokens)
+        return self._anthropic_json(system, user, schema, max_tokens)
+
+    # ----- fal-ai/any-llm (file d'attente : soumission, puis attente du résultat)
+    def _fal_request(self, method: str, url: str, payload: dict | None = None) -> dict:
+        data = json.dumps(payload).encode("utf-8") if payload is not None else None
+        headers = {"Authorization": f"Key {self.fal_key}", "Accept": "application/json"}
+        if data is not None:
+            headers["Content-Type"] = "application/json"
+        delay = 2.0
+        for attempt in range(5):
+            req = urllib.request.Request(url, data=data, method=method, headers=headers)
+            try:
+                with urllib.request.urlopen(req, timeout=120) as resp:
+                    return json.loads(resp.read() or b"{}")
+            except urllib.error.HTTPError as e:
+                body = e.read()[:400]
+                if e.code in (429, 500, 502, 503, 504) and attempt < 4:
+                    time.sleep(delay)
+                    delay *= 2
+                    continue
+                raise ProductionError(f"fal {method} {url.split('?')[0]} : HTTP {e.code} {body!r}") from e
+            except (urllib.error.URLError, TimeoutError) as e:
+                if attempt < 4:
+                    time.sleep(delay)
+                    delay *= 2
+                    continue
+                raise ProductionError(f"fal : réseau {e}") from e
+        raise ProductionError("fal : inatteignable")
+
+    def _fal_json(self, system: list[dict] | str, user: str, schema: dict, max_tokens: int) -> dict:
+        system_text = system if isinstance(system, str) else "\n\n".join(b.get("text", "") for b in system)
+        contract = (
+            "\n\nOUTPUT FORMAT. Answer with exactly one JSON object and nothing else: no prose before or after, no "
+            "Markdown code fence. The object must match this JSON Schema (every required key present, no other key):\n"
+            + json.dumps(schema, ensure_ascii=False)
+        )
+        prompt = user + contract
+        last_error = ""
+        for attempt in range(2):
+            payload = {"model": self.model, "prompt": prompt if not last_error else prompt + "\n\nYour previous answer was rejected: " + last_error + ". Return only the JSON object.",
+                       "system_prompt": system_text, "max_tokens": max_tokens, "priority": "throughput", "reasoning": False}
+            submitted = self._fal_request("POST", FAL_QUEUE, payload)
+            status_url = submitted.get("status_url") or f"{FAL_QUEUE}/requests/{submitted.get('request_id')}/status"
+            response_url = submitted.get("response_url") or f"{FAL_QUEUE}/requests/{submitted.get('request_id')}"
+            deadline = time.time() + 1500
+            while True:
+                status = self._fal_request("GET", status_url + ("&" if "?" in status_url else "?") + "logs=0")
+                if status.get("status") == "COMPLETED":
+                    break
+                if time.time() > deadline:
+                    raise ProductionError("fal : réponse non arrivée en 25 minutes")
+                time.sleep(3)
+            result = self._fal_request("GET", response_url)
+            with self.lock:
+                self.calls += 1
+            if result.get("error"):
+                raise ProductionError(f"fal any-llm : {str(result['error'])[:300]}")
+            output = result.get("output") or ""
+            if result.get("partial"):
+                raise ProductionError("fal any-llm : réponse partielle (max_tokens trop bas ?)")
+            try:
+                value = extract_json(output)
+            except (ValueError, ProductionError) as e:
+                last_error = f"invalid JSON ({e})"
+                continue
+            missing = [k for k in schema.get("required", []) if k not in value]
+            if missing:
+                last_error = f"missing keys {missing}"
+                continue
+            return value
+        raise ProductionError(f"fal any-llm : {last_error}")
+
+    # ----- API Anthropic
+    def _anthropic_json(self, system: list[dict] | str, user: str, schema: dict, max_tokens: int) -> dict:
         kwargs = dict(
             model=self.model,
             max_tokens=max_tokens,
@@ -226,7 +347,8 @@ class LLM:
             raise ProductionError(f"réponse du modèle illisible : {e}") from e
 
     def usage(self) -> dict:
-        return {"model": self.model, "calls": self.calls, "input_tokens": self.input_tokens, "output_tokens": self.output_tokens}
+        return {"provider": self.provider, "model": self.model, "calls": self.calls,
+                "input_tokens": self.input_tokens, "output_tokens": self.output_tokens}
 
 
 def schema_object(properties: dict, required: list[str] | None = None) -> dict:
@@ -1207,8 +1329,8 @@ def run(args) -> int:
     if not ctx.course or not ctx.course.get("sections"):
         sys.exit("payload.course absent ou sans sections")
     steps = Steps(sb, ctx.job_id, args.dry_run)
-    llm = LLM(args.model, fake=args.fake_llm)
-    log(f"job {ctx.job_id} · {ctx.course_id} · origine {ctx.origin} · {len(ctx.targets)} langue(s) · modèle {llm.model}"
+    llm = LLM(args.model, fake=args.fake_llm, provider=args.provider)
+    log(f"job {ctx.job_id} · {ctx.course_id} · origine {ctx.origin} · {len(ctx.targets)} langue(s) · {llm.provider} {llm.model}"
         + (" · FAKE" if llm.fake else ""))
     hero = ctx.course.get("hero") or {}
     cover_slug = hero.get("image")
@@ -1310,7 +1432,9 @@ def main() -> int:
     parser.add_argument("--job", help="id du job (production_jobs.id)")
     parser.add_argument("--job-file", help="un job local {job:{…}, steps:[…]} ou directement la ligne de production_jobs")
     parser.add_argument("--languages", help="langues cibles, séparées par des virgules (défaut : celles du job)")
-    parser.add_argument("--model", default=os.environ.get("PRODUCTION_MODEL", DEFAULT_MODEL))
+    parser.add_argument("--model", default=None, help="défaut : PRODUCTION_MODEL, sinon claude-opus-5-5 (Anthropic) ou anthropic/claude-sonnet-4.5 (fal)")
+    parser.add_argument("--provider", choices=["anthropic", "fal"], default=None,
+                        help="défaut : PRODUCTION_PROVIDER, sinon anthropic si ANTHROPIC_API_KEY est posée, sinon fal si FAL_KEY l'est")
     parser.add_argument("--dry-run", action="store_true", help="n'écrit ni en base ni dans Storage, ne pousse pas")
     parser.add_argument("--fake-llm", action="store_true", help="pas d'appel au modèle : les textes source tiennent lieu de traduction")
     parser.add_argument("--skip-gate", action="store_true", help="ne lance pas check_course_translation (tests)")

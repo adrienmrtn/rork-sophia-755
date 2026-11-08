@@ -161,8 +161,12 @@ Fonctions SQL sous-jacentes (service_role) : `course_stats_export(days, course_i
 ## L'usine
 
 `.github/workflows/produce-course.yml` → `scripts/produce_course.py --job <id>`, un job à la
-fois. Modèle : `claude-opus-5-5` (variable `PRODUCTION_MODEL` pour en changer), sorties JSON
-contraintes, repli serveur sur refus activé (`PRODUCTION_FALLBACKS=off` pour le couper).
+fois. Deux fournisseurs de modèle, choisis d'après les secrets présents (ou `PRODUCTION_PROVIDER`) :
+l'API Anthropic (`ANTHROPIC_API_KEY`, défaut `claude-opus-5-5`, sorties JSON contraintes par schéma,
+repli serveur sur refus activé, `PRODUCTION_FALLBACKS=off` pour le couper) ou fal-ai/any-llm
+(`FAL_API_KEY`, défaut `anthropic/claude-sonnet-4.5`, JSON demandé dans le prompt et vérifié à la
+lecture ; autres valeurs possibles : `openai/gpt-5-chat`, `google/gemini-2.5-pro`,
+`anthropic/claude-haiku-5.5`…). `PRODUCTION_MODEL` change le modèle dans les deux cas.
 
 1. **glossary** : les entrées du Studio, complétées pour chaque `[[terme]]` sans entrée.
 2. **quiz** : celui du Studio, ou l'existant pour une mise à jour, ou écrit par le modèle (6 à 10
@@ -198,7 +202,7 @@ heure et 60 à 90 appels au modèle pour un cours de six sections en 29 langues.
 | Supabase → SQL | Vault `github_dispatch_token` | `select vault.create_secret('<jeton>', 'github_dispatch_token');` ; jeton GitHub fine-grained sur `adrienmrtn/rork-sophia-755` avec *Contents: Read and write* (c'est ce qu'exige `repository_dispatch`) |
 | Supabase → SQL | Vault `studio_webhook_secret` (facultatif) | `select vault.create_secret('<secret>', 'studio_webhook_secret');` |
 | Supabase → SQL | `app_config.studio.webhook_url` (facultatif) | `update app_config set value = '{"webhook_url": "https://…"}' where key = 'studio';` |
-| GitHub → Settings → Secrets → Actions | `SUPABASE_SERVICE_ROLE_KEY`, `ANTHROPIC_API_KEY`, `ELEVENLABS_API_KEY` (facultatif) | |
+| GitHub → Settings → Secrets → Actions | `SUPABASE_SERVICE_ROLE_KEY` ; `ANTHROPIC_API_KEY` ou `FAL_API_KEY` (l'un des deux suffit) ; `ELEVENLABS_API_KEY` (facultatif) | |
 | GitHub → Settings → Variables → Actions | `PRODUCTION_MODEL`, `ELEVENLABS_VOICE_FR`, `ELEVENLABS_VOICE_EN` (facultatifs) | |
 
 Migration : `supabase/migrations/20261108200000_production_pipeline.sql` (tables
