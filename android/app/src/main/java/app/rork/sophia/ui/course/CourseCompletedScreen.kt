@@ -308,7 +308,7 @@ private fun CourseEndSocialRow(
                     .softPress(onClick = {
                         val wasFollowing = progressManager.isFollowing(author.slug)
                         progressManager.toggleFollow(author.slug)
-                        Analytics.log(if (wasFollowing) "unfollow" else "follow", screen = "course_end", props = mapOf("creator" to author.slug))
+                        Analytics.log(if (wasFollowing) "unfollow" else "follow", courseId = course.id, screen = "course_end", props = mapOf("creator" to author.slug))
                     })
                     .clip(shape)
                     .background(if (following) DS.surface else DS.accent)

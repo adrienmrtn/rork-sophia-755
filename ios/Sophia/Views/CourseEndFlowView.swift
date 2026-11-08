@@ -385,7 +385,7 @@ struct CourseCompletedView: View {
                 Button {
                     UIImpactFeedbackGenerator(style: .light).impactOccurred()
                     progressManager.toggleFollow(author.slug)
-                    AnalyticsService.shared.log(following ? .unfollow : .follow, screen: "course_end", props: ["creator": .string(author.slug)])
+                    AnalyticsService.shared.log(following ? .unfollow : .follow, courseId: course.id, screen: "course_end", props: ["creator": .string(author.slug)])
                 } label: {
                     HStack(spacing: 8) {
                         AuthorAvatarView(author: author, size: 24)
