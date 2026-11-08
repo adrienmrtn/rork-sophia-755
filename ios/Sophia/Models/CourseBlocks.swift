@@ -129,6 +129,9 @@ nonisolated struct CourseContentV2: Decodable, Sendable {
     /// Slug of the professor who wrote the course (see `AuthorStore`); nil for house content.
     let author: String?
     let sources: [CourseSourceV2]?
+    /// Code de la langue d'écriture quand le cours est une traduction (« en » pour un cours
+    /// écrit en anglais). Prévu pour les cours de créateurs (prompt 3) ; vide aujourd'hui.
+    let originalLanguage: String?
 }
 
 /// Parses ratio specs like "16:9", "4:3", "1", or "auto" into a width/height ratio.

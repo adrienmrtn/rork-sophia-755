@@ -17,8 +17,14 @@ nonisolated struct CourseAuthor: Decodable, Sendable, Identifiable, Hashable {
     let title: [String: String]?
     let bio: [String: String]?
     let courseIds: [String]
+    /// Expert vérifié (diplôme ou fonction contrôlés par l'équipe). Absent dans les fichiers
+    /// actuels : tous les auteurs embarqués sont des universitaires, donc vérifiés par défaut.
+    /// Le Studio (prompt 5) posera la valeur explicitement pour les nouveaux créateurs.
+    let verified: Bool?
 
     var id: String { slug }
+
+    var isVerified: Bool { verified ?? true }
 
     nonisolated static func == (lhs: CourseAuthor, rhs: CourseAuthor) -> Bool { lhs.slug == rhs.slug }
     nonisolated func hash(into hasher: inout Hasher) { hasher.combine(slug) }

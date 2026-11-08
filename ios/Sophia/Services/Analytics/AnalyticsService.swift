@@ -42,6 +42,8 @@ nonisolated enum CourseOpenSource: String, Sendable {
     case feed, library, subject, path, favorites, profile
     case myCourses = "my_courses"
     case notification, widget, blocker, author, search, unknown
+    /// Depuis la page d'un événement (collection d'une campagne).
+    case event
 }
 
 /// Valeur scalaire d'une propriété d'événement (`props`).
@@ -245,7 +247,7 @@ final class AnalyticsService {
         case .widget: source = "widget"
         default: source = "direct"
         }
-        log(.appOpen, props: ["source": .string(source)])
+        log(.appOpen, props: ["source": .string(source), "nav": .string(FeatureFlags.navigationVariant.rawValue)])
     }
 
     /// Passage en arrière-plan : la file part tout de suite, le temps qu'iOS nous laisse.

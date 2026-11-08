@@ -21,6 +21,9 @@ struct BlockContentView: View {
     var isLast: Bool = false
     /// Tap on the byline or the author card (professor-authored courses only).
     var onAuthorTap: ((CourseAuthor) -> Void)? = nil
+    /// « Suivre » sur la carte auteur de la dernière page : état et geste, fournis par le lecteur.
+    var isFollowingAuthor: ((CourseAuthor) -> Bool)? = nil
+    var onFollowAuthor: ((CourseAuthor) -> Void)? = nil
 
     private static let ink = DS.ink
 
@@ -59,6 +62,9 @@ struct BlockContentView: View {
                     onAuthorTap?(tapped)
                 }
             }
+            if let code = content.originalLanguage, code != AppLanguage.currentPersisted().rawValue {
+                TranslatedFromLine(code: code)
+            }
         } else {
             Text(section.title)
                 .font(DS.title(.largeTitle, .semibold))
@@ -71,9 +77,12 @@ struct BlockContentView: View {
     @ViewBuilder
     private var footer: some View {
         if let author {
-            AuthorCardV2(author: author) { tapped in
-                onAuthorTap?(tapped)
-            }
+            AuthorCardV2(
+                author: author,
+                isFollowing: isFollowingAuthor?(author),
+                onFollow: onFollowAuthor.map { follow in { follow(author) } },
+                onTap: { tapped in onAuthorTap?(tapped) }
+            )
             .padding(.top, 4)
         }
         if let sources = content.sources, !sources.isEmpty {

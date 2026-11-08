@@ -17,8 +17,9 @@ struct ContentView: View {
     @State private var selectedTab: Int = 0
     @State private var selectedCourse: Course? = nil
     @State private var paywallContext: SophiaPaywallContext? = nil
+    /// Lue une fois au lancement : la navigation ne change pas sous les doigts de l'utilisateur.
+    @State private var newNavigation: Bool = FeatureFlags.newNavigation
 
-    @State private var showSwipeTutorial: Bool = false
     @State private var pendingCourse: Course? = nil
     @State private var autoSwipeCourseId: String? = nil
     @State private var showTrialEndingBanner: Bool = false
@@ -32,6 +33,23 @@ struct ContentView: View {
 
     var body: some View {
         ZStack {
+            Group {
+            if newNavigation {
+                NewGenTabsView(
+                    progressManager: progressManager,
+                    storeVM: storeVM,
+                    discountManager: discountManager,
+                    selectedTab: $selectedTab,
+                    selectedCourse: $selectedCourse,
+                    onShowPaywall: { context in
+                        if context != .debloquerCours, storeVM.isPremium { return }
+                        paywallContext = context
+                    },
+                    onOpenAntiScroll: openAntiScroll,
+                    onResetOnboarding: onResetOnboarding,
+                    openAudioPlayer: openAudioPlayer
+                )
+            } else {
             TabView(selection: $selectedTab) {
                 Tab(languageManager.text("tab.home"), systemImage: "house.fill", value: 0) {
                     HomeView(
@@ -91,6 +109,8 @@ struct ContentView: View {
                     .audioMiniPlayerInset(onOpen: openAudioPlayer)
                 }
             }
+            }
+            }
             .tint(DS.accent)
             .toolbarBackground(DS.canvas, for: .tabBar)
             .toolbarBackground(.visible, for: .tabBar)
@@ -135,16 +155,6 @@ struct ContentView: View {
             }
             .onChange(of: pendingCourse) { _, newValue in
                 clearSelectionIfDismissed(newValue)
-            }
-
-            if showSwipeTutorial, HomeCardPresentation.style == .legacy {
-                SwipeTutorialOverlay(onDismiss: {
-                    withAnimation(.easeOut(duration: 0.35)) {
-                        showSwipeTutorial = false
-                    }
-                    progressManager.markSwipeTutorialSeen()
-                })
-                .transition(.opacity)
             }
 
             if discountManager.isGiftPending,
@@ -289,14 +299,6 @@ struct ContentView: View {
         .onAppear {
             presentTrialEndingBannerIfNeeded()
             // ATT est demandée dès l'ouverture de l'app (voir SophiaApp), plus ici.
-            guard HomeCardPresentation.style == .legacy else { return }
-            if !progressManager.hasSeenSwipeTutorial {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
-                    withAnimation(.easeIn(duration: 0.3)) {
-                        showSwipeTutorial = true
-                    }
-                }
-            }
         }
         .onChange(of: storeVM.trialExpiresInOneDay) { _, _ in
             presentTrialEndingBannerIfNeeded()

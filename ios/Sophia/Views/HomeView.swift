@@ -1,5 +1,8 @@
 import SwiftUI
 
+/// L'accueil des 5 onglets historiques : le fil TikTok. Les présentations « legacy » et
+/// « Tinder » ont été retirées avec la nouvelle navigation (prompt 2) ; la nouvelle génération
+/// a son propre fil, `HomeFeedView`.
 struct HomeView: View {
     let progressManager: ProgressManager
     let discountManager: DiscountOfferManager
@@ -7,43 +10,20 @@ struct HomeView: View {
     @Binding var selectedCourse: Course?
     @Binding var autoSwipeCourseId: String?
     var onShowDiscountPaywall: (() -> Void)? = nil
-    /// Only the TikTok home carries the history button; the other two presentations are
-    /// kept for rollback and are not part of this feature.
     var onOpenMyCourses: (() -> Void)? = nil
-    /// The anti-scroll badge beside the streak (TikTok home only). Presented by `ContentView`.
+    /// The anti-scroll badge beside the streak. Presented by `ContentView`.
     var onOpenAntiScroll: (() -> Void)? = nil
 
     var body: some View {
-        switch HomeCardPresentation.style {
-        case .legacy:
-            HomeViewLegacy(
-                progressManager: progressManager,
-                discountManager: discountManager,
-                isPremium: isPremium,
-                selectedCourse: $selectedCourse,
-                autoSwipeCourseId: $autoSwipeCourseId,
-                onShowDiscountPaywall: onShowDiscountPaywall
-            )
-        case .tinder:
-            HomeViewTinder(
-                progressManager: progressManager,
-                discountManager: discountManager,
-                isPremium: isPremium,
-                selectedCourse: $selectedCourse,
-                autoSwipeCourseId: $autoSwipeCourseId,
-                onShowDiscountPaywall: onShowDiscountPaywall
-            )
-        case .tiktok:
-            HomeViewTikTok(
-                progressManager: progressManager,
-                discountManager: discountManager,
-                isPremium: isPremium,
-                selectedCourse: $selectedCourse,
-                autoSwipeCourseId: $autoSwipeCourseId,
-                onShowDiscountPaywall: onShowDiscountPaywall,
-                onOpenMyCourses: onOpenMyCourses,
-                onOpenAntiScroll: onOpenAntiScroll
-            )
-        }
+        HomeViewTikTok(
+            progressManager: progressManager,
+            discountManager: discountManager,
+            isPremium: isPremium,
+            selectedCourse: $selectedCourse,
+            autoSwipeCourseId: $autoSwipeCourseId,
+            onShowDiscountPaywall: onShowDiscountPaywall,
+            onOpenMyCourses: onOpenMyCourses,
+            onOpenAntiScroll: onOpenAntiScroll
+        )
     }
 }
