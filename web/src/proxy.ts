@@ -4,6 +4,17 @@ import { SUPABASE_KEY, SUPABASE_URL } from "@/lib/env";
 
 /** Rafraîchit la session Supabase à chaque requête et garde /studio et /admin aux connectés. */
 export async function proxy(request: NextRequest) {
+  const { pathname, search } = request.nextUrl;
+  const protectedArea = pathname.startsWith("/studio") || pathname.startsWith("/admin");
+  // Visiteur sans cookie de session : rien à rafraîchir, on ne touche pas à Supabase.
+  const hasSession = request.cookies.getAll().some((c) => c.name.startsWith("sb-"));
+  if (!hasSession) {
+    if (!protectedArea) return NextResponse.next({ request });
+    const url = request.nextUrl.clone();
+    url.pathname = "/join";
+    url.search = `?next=${encodeURIComponent(pathname + search)}`;
+    return NextResponse.redirect(url);
+  }
   let response = NextResponse.next({ request });
   const supabase = createServerClient(SUPABASE_URL, SUPABASE_KEY, {
     cookies: {
@@ -17,11 +28,9 @@ export async function proxy(request: NextRequest) {
       },
     },
   });
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-  const { pathname, search } = request.nextUrl;
-  const protectedArea = pathname.startsWith("/studio") || pathname.startsWith("/admin");
+  // Vérifie le jeton (localement quand les clés de signature le permettent) et le rafraîchit s'il expire.
+  const { data } = await supabase.auth.getClaims();
+  const user = data?.claims?.sub ?? null;
   if (protectedArea && !user) {
     const url = request.nextUrl.clone();
     url.pathname = "/join";
