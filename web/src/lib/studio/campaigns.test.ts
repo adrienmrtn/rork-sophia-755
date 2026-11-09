@@ -46,15 +46,16 @@ describe("campaignFromForm", () => {
     expect(c.course_ids).toEqual(["course_1_a", "course_2_b"]);
     expect(c.challenge_target).toBe(2);
     expect(c.upcoming).toEqual([{ title: { en: "The last day of the war" }, creator: "jane-doe", date: "2026-11-10" }]);
-    expect(c.title).toEqual({ en: "Armistice", fr: "Armistice" });
+    expect(c.title).toEqual({ en: "Armistice" });
   });
 
   it("keeps translated languages when English and French are edited, and removes an emptied field", () => {
     const existing = { ...movember(), title: { en: "Movember", fr: "Movember", de: "Movember" }, tagline: { en: "Old", fr: "Vieux", de: "Alt" } };
     const c = campaignFromForm(form({ kind: "month", status: "published", symbol: "mustache.fill", starts_at: "2026-11-01", ends_at: "2026-11-30", challenge_target: "3", course_ids: ["course_1_a"], title_en: "Movember 2026", title_fr: "", tagline_en: "New", tagline_fr: "Nouveau" }), existing);
     expect(c.slug).toBe("movember-2026");
-    expect(c.title).toEqual({ en: "Movember 2026", de: "Movember" });
-    expect(c.tagline).toEqual({ en: "New", fr: "Nouveau", de: "Alt" });
+    // Le français n'est plus saisi à la main : il est gardé tel quel, comme toute langue traduite.
+    expect(c.title).toEqual({ en: "Movember 2026", fr: "Movember", de: "Movember" });
+    expect(c.tagline).toEqual({ en: "New", fr: "Vieux", de: "Alt" });
     expect(c.status).toBe("published");
     expect(c.course_ids).toEqual(["course_1_a"]);
   });
@@ -63,6 +64,12 @@ describe("campaignFromForm", () => {
     expect(campaignFromForm(form({ starts_at: "2026-01-01", ends_at: "2026-01-05", goal_target: "10 000" }), null).goal_target).toBe(10000);
     expect(campaignFromForm(form({ starts_at: "2026-01-01", ends_at: "2026-01-05", goal_target: "" }), null).goal_target).toBeNull();
     expect(campaignFromForm(form({ starts_at: "2026-01-01", ends_at: "2026-01-05", goal_target: "0" }), null).goal_target).toBeNull();
+  });
+
+  it("reads the countries as upper-case two-letter codes, empty meaning everywhere", () => {
+    expect(campaignFromForm(form({ starts_at: "2026-01-01", ends_at: "2026-01-05", countries: "fr, be ch" }), null).countries).toEqual(["FR", "BE", "CH"]);
+    expect(campaignFromForm(form({ starts_at: "2026-01-01", ends_at: "2026-01-05", countries: "" }), null).countries).toBeNull();
+    expect(hardErrors({ ...movember(), countries: ["FR", "FRA"] })).toEqual(["Countries must be two-letter codes (FR, BE, CH…): FRA."]);
   });
 
   it("ignores an unknown symbol or kind and keeps the previous one", () => {

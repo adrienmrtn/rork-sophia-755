@@ -104,6 +104,13 @@ export default async function EventEditorPage({ params, searchParams }: PageProp
           </Card>
         )}
 
+        {isNew && (
+          <Card className="flex flex-wrap items-center gap-4 p-5">
+            <strong className="text-[14px] font-extrabold text-ink">Images and preview</strong>
+            <span className="text-[13px] text-ink-3">Fill the form and press <strong>Create the event</strong>: the next page shows the feed card preview and the <strong>Generate 2 images with AI</strong> button (the images are drawn from the saved title and tagline).</span>
+          </Card>
+        )}
+
         {!isNew && (
           <Card className="flex flex-wrap items-start gap-8 p-6">
             <div className="flex flex-col gap-3">
@@ -208,6 +215,15 @@ export default async function EventEditorPage({ params, searchParams }: PageProp
             </div>
             <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
               <label className={label}>
+                Countries (optional)
+                <input name="countries" defaultValue={(campaign.countries ?? []).join(", ")} placeholder="Everywhere" className={input} />
+              </label>
+              <p className="self-end pb-2 text-[13px] leading-[1.5] text-ink-3 md:col-span-2">
+                Two-letter codes separated by commas (FR, BE, CH, CA…). The apps compare them with the region of the phone. Empty: shown in every country.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+              <label className={label}>
                 Common goal: courses read together (optional)
                 <input type="number" name="goal_target" defaultValue={campaign.goal_target ?? ""} min={1} max={100000000} placeholder="10000" className={input} />
               </label>
@@ -246,7 +262,7 @@ export default async function EventEditorPage({ params, searchParams }: PageProp
           <Card className="flex flex-col gap-5 p-6">
             <div className="flex flex-col gap-1">
               <strong className="text-[15px] font-extrabold text-ink">Texts</strong>
-              <p className="text-[13px] text-ink-3">English is what the apps fall back to; French is read by most readers. The other 28 languages come from the Translate button once these are final.</p>
+              <p className="text-[13px] text-ink-3">Write in English only. The 29 other languages, French included, come from the Translate button once these texts are final.</p>
             </div>
             <div className="grid grid-cols-1 gap-x-6 gap-y-4 md:grid-cols-2">
               {EDITED_LANGS.map((lang) => (
@@ -287,14 +303,10 @@ export default async function EventEditorPage({ params, searchParams }: PageProp
               {Array.from({ length: UPCOMING_ROWS }, (_, i) => {
                 const u = campaign.upcoming[i];
                 return (
-                  <div key={i} className="grid grid-cols-1 gap-3 rounded-xl border border-line p-3 md:grid-cols-[1fr_1fr_200px_160px]">
+                  <div key={i} className="grid grid-cols-1 gap-3 rounded-xl border border-line p-3 md:grid-cols-[1fr_220px_170px]">
                     <label className={label}>
                       Title (English)
                       <input name={`upcoming_${i}_title_en`} defaultValue={u?.title.en ?? ""} maxLength={120} className={input} />
-                    </label>
-                    <label className={label}>
-                      Title (French)
-                      <input name={`upcoming_${i}_title_fr`} defaultValue={u?.title.fr ?? ""} maxLength={120} className={input} />
                     </label>
                     <label className={label}>
                       Author

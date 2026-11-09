@@ -18,8 +18,9 @@ Ce document est la référence du format. Les quatre implémentations le suivent
 ## Le circuit
 
 1. **Admin du site** (`/admin/events`) : l'équipe crée l'événement, choisit les cours, écrit les
-   textes en anglais et en français, puis clique **Translate** pour les 28 autres langues (même
-   modèle de texte que les couvertures, via fal ; une langue déjà remplie n'est jamais écrasée).
+   textes **en anglais seulement**, puis clique **Translate** pour les 29 autres langues, français
+   compris, toutes traduites depuis l'anglais (même modèle de texte que les couvertures, via fal ;
+   une langue déjà remplie n'est jamais écrasée).
    Elle peut poser une **image** (envoi d'un fichier 16:9, ou **Generate 2 images with AI** : une
    dans la direction artistique des couvertures de cours, Gemini ; une dans celle des illustrations
    du site, Recraft en papier découpé ; les deux restent en candidates, l'équipe en retient une) et
@@ -60,6 +61,7 @@ Clés en `snake_case`, identiques dans la table, le manifeste et les décodeurs 
 | `kind` | texte | le type standard, voir ci-dessous. Réservé côté apps (elles n'en font rien encore). |
 | `status` | texte | `draft` (invisible des apps), `published` (servi), `archived` (retiré, gardé). Le manifeste ne porte que `published` ; la clé n'est pas envoyée aux apps. |
 | `symbol` | texte | un nom de la liste standard ci-dessous (SF Symbols ; Android a l'icône Material correspondante). |
+| `countries` | liste ou null | les pays où l'événement est montré, codes ISO 3166-1 alpha-2 (`FR`, `BE`…) comparés à la région du téléphone. Null : partout. |
 | `image_url` | texte ou null | image 16:9 hébergée (`course-images/events/…`), en tête de la carte du fil et de la page ; sans elle la carte reste bleu nuit avec le symbole. Envoyée depuis l'admin ou générée (même direction artistique que les couvertures). |
 | `starts_at`, `ends_at` | `YYYY-MM-DD` | premier et dernier jour, inclus, en date civile du téléphone. `ends_at ≥ starts_at`. |
 | `challenge_target` | entier | 1 à 50, au plus le nombre de cours de la collection. |
@@ -74,8 +76,9 @@ Clés en `snake_case`, identiques dans la table, le manifeste et les décodeurs 
 | `description` | `{langue: texte}` | 300 caractères, le paragraphe de la page. |
 | `badge_name` | `{langue: texte}` | 40 caractères, un ou deux mots. |
 
-Les textes par langue : l'anglais est obligatoire pour publier ; les apps retombent sur
-l'anglais, puis le français, puis la première valeur présente. Les codes sont ceux des apps
+Les textes par langue : l'anglais est la langue d'écriture et la seule obligatoire pour publier ;
+toutes les autres sont des traductions de l'anglais. Les apps retombent sur l'anglais, puis le
+français, puis la première valeur présente. Les codes sont ceux des apps
 (`fr`, `en`, `pt-PT`, `nb`…, voir `LANGS` dans `web/src/lib/catalog/types.ts`).
 
 ### Les types (`kind`)

@@ -61,7 +61,8 @@ Le manifeste d'une langue : `GET /functions/v1/catalog-manifest?lang=fr` (Edge F
 `Cache-Control: max-age=300` et un ETag (`If-None-Match` → 304). Il liste les trois fichiers et le
 paquet de chaque cours publié, avec leur hash et leur chemin dans le bucket, et porte sous `events`
 les événements éditoriaux publiés (table `campaigns`, docs/evenements.md), les mêmes quelle que
-soit la langue.
+soit la langue, et sous `trending` les cours les plus ouverts de la langue sur sept jours
+(`trending_courses`, recalculés chaque nuit, docs/notifications.md).
 
 ### Importer le catalogue
 

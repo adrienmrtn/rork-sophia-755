@@ -208,6 +208,7 @@ const mockCampaign = {
   symbol: "mustache.fill",
   image_url: null,
   image_candidates: [],
+  countries: null,
   starts_at: "2026-11-01",
   ends_at: "2026-11-30",
   challenge_target: 3,
