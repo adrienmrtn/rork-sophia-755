@@ -65,7 +65,7 @@ export async function publishDraft(form: FormData): Promise<void> {
   try {
     admin = createAdminClient();
   } catch (e) {
-    back(`/admin/review/${id}`, { error: e instanceof Error ? e.message : "SUPABASE_SERVICE_ROLE_KEY missing" });
+    back(`/admin/review/${id}`, { error: e instanceof Error ? e.message : "SUPABASE_SECRET_KEY missing" });
   }
   const { data: draftRow } = await admin.from("studio_drafts").select("*").eq("id", id).maybeSingle();
   const draft = draftRow as DraftRow | null;
