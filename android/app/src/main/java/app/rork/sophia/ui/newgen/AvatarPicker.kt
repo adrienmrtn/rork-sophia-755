@@ -120,7 +120,7 @@ fun AvatarPickerSheet(
                 columns = GridCells.Fixed(4),
                 horizontalArrangement = Arrangement.spacedBy(14.dp),
                 verticalArrangement = Arrangement.spacedBy(14.dp),
-                modifier = Modifier.height(5 * 86.dp),
+                modifier = Modifier.height(86.dp * 5),
                 userScrollEnabled = false,
             ) {
                 items(Avatars.all) { id ->
