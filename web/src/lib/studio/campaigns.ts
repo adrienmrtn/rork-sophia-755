@@ -52,10 +52,16 @@ export type Campaign = {
   kind: CampaignKind;
   status: CampaignStatus;
   symbol: CampaignSymbol;
+  /** Image 16:9 hébergée (course-images/events/), en tête de la carte du fil et de la page ; null : bleu nuit et symbole. */
+  image_url: string | null;
   starts_at: string;
   ends_at: string;
   challenge_target: number;
   participants: number;
+  /** L'objectif commun : cours de la collection à terminer tous lecteurs confondus ; null : pas d'objectif. */
+  goal_target: number | null;
+  /** Où en est l'objectif commun (recalculé toutes les heures côté serveur). */
+  goal_count: number;
   course_ids: string[];
   upcoming: CampaignUpcoming[];
   title: Localized;
@@ -95,7 +101,7 @@ export function symbolLabel(symbol: string): string {
 }
 
 export function emptyCampaign(): Campaign {
-  return { slug: "", kind: "month", status: "draft", symbol: "sparkles", starts_at: "", ends_at: "", challenge_target: 3, participants: 0, course_ids: [], upcoming: [], title: {}, tagline: {}, description: {}, badge_name: {} };
+  return { slug: "", kind: "month", status: "draft", symbol: "sparkles", image_url: null, starts_at: "", ends_at: "", challenge_target: 3, participants: 0, goal_target: null, goal_count: 0, course_ids: [], upcoming: [], title: {}, tagline: {}, description: {}, badge_name: {} };
 }
 
 /** Une ligne de la table, telle que Supabase la renvoie, remise dans le type. */
@@ -112,10 +118,13 @@ export function campaignFromRow(row: Record<string, unknown>): Campaign {
     kind: (CAMPAIGN_KINDS.some((k) => k.id === row.kind) ? row.kind : "month") as CampaignKind,
     status: (CAMPAIGN_STATUSES as readonly string[]).includes(String(row.status)) ? (row.status as CampaignStatus) : "draft",
     symbol: (CAMPAIGN_SYMBOLS.some((s) => s.id === row.symbol) ? row.symbol : "sparkles") as CampaignSymbol,
+    image_url: typeof row.image_url === "string" && /^https:\/\//.test(row.image_url) ? row.image_url : null,
     starts_at: String(row.starts_at ?? "").slice(0, 10),
     ends_at: String(row.ends_at ?? "").slice(0, 10),
     challenge_target: Number(row.challenge_target ?? 1) || 1,
     participants: Number(row.participants ?? 0) || 0,
+    goal_target: row.goal_target == null || row.goal_target === "" ? null : Math.max(1, Math.round(Number(row.goal_target)) || 1),
+    goal_count: Math.max(0, Math.round(Number(row.goal_count ?? 0)) || 0),
     course_ids: Array.isArray(row.course_ids) ? (row.course_ids as unknown[]).map(String) : [],
     upcoming,
     title: obj(row.title),
@@ -162,6 +171,8 @@ export function campaignFromForm(form: FormData, existing: Campaign | null): Cam
     upcoming.push({ title, creator: creator || null, date: text(form, `upcoming_${i}_date`, 10) });
   }
   const courseIds = Array.from(new Set(form.getAll("course_ids").map(String).map((s) => s.trim()).filter(Boolean))).slice(0, MAX_COURSES);
+  const goalRaw = text(form, "goal_target", 12).replace(/[\s,.]/g, "");
+  const goal = goalRaw ? Math.round(Number(goalRaw)) : NaN;
   return {
     ...base,
     slug: existing ? existing.slug : text(form, "slug", 60).toLowerCase(),
@@ -171,6 +182,7 @@ export function campaignFromForm(form: FormData, existing: Campaign | null): Cam
     starts_at: text(form, "starts_at", 10),
     ends_at: text(form, "ends_at", 10),
     challenge_target: Math.max(1, Math.min(50, Math.round(Number(text(form, "challenge_target", 3)) || 1))),
+    goal_target: Number.isFinite(goal) && goal >= 1 ? Math.min(100_000_000, goal) : null,
     course_ids: courseIds,
     upcoming,
     title: merge("title"),

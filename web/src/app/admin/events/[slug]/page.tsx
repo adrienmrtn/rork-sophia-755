@@ -1,7 +1,9 @@
+import Image from "next/image";
 import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
 import { AdminHeader, AdminTitle } from "@/components/admin/AdminChrome";
 import { CoursePicker } from "@/components/admin/CoursePicker";
+import { EventCardPreview } from "@/components/admin/EventCardPreview";
 import { Card, CheckIcon, Pill, buttonClass, container } from "@/components/ui";
 import { catalog } from "@/lib/catalog/source";
 import { LANG_NAMES } from "@/lib/catalog/lang-names";
@@ -9,8 +11,9 @@ import { SUBJECT_LABEL } from "@/lib/catalog/slugs";
 import { getStudioSession } from "@/lib/studio/account";
 import { CAMPAIGN_KINDS, CAMPAIGN_STATUSES, CAMPAIGN_SYMBOLS, EDITED_LANGS, TEXT_FIELDS, TEXT_LABELS, TEXT_LIMITS, UPCOMING_ROWS, campaignFromRow, emptyCampaign, languagesFilled, languagesMissing, localized, publishProblems, statusTone, type Campaign } from "@/lib/studio/campaigns";
 import { shortDateTime } from "@/lib/studio/data";
+import { coversConfigured } from "@/lib/studio/covers";
 import { translationConfigured } from "@/lib/studio/translate";
-import { deleteCampaign, saveCampaign, translateCampaignAction } from "../actions";
+import { deleteCampaign, generateEventImage, saveCampaign, translateCampaignAction } from "../actions";
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 60;
@@ -20,7 +23,7 @@ const textarea = "w-full rounded-xl border border-line bg-white px-3.5 py-3 text
 const label = "flex flex-col gap-1.5 text-[13px] font-bold text-ink-2";
 const select = `${input} appearance-none`;
 
-const DONE: Record<string, string> = { saved: "Event saved.", published: "Event published. The apps pick it up at their next catalogue refresh (within the hour).", "kept-draft": "Saved as a draft.", "translated-none": "Every language already has its texts." };
+const DONE: Record<string, string> = { image: "Image generated and saved. Check the preview; generate again if it misses the point.", saved: "Event saved.", published: "Event published. The apps pick it up at their next catalogue refresh (within the hour).", "kept-draft": "Saved as a draft.", "translated-none": "Every language already has its texts." };
 
 export default async function EventEditorPage({ params, searchParams }: PageProps<"/admin/events/[slug]">) {
   const session = await getStudioSession();
@@ -41,6 +44,7 @@ export default async function EventEditorPage({ params, searchParams }: PageProp
   const creatorName = new Map(creators.map((c) => [c.slug, c.name]));
   const pickable = courses.map((c) => ({ id: c.id, title: c.title, subject: SUBJECT_LABEL[c.subject] ?? c.subject, creator: c.creatorSlug ? (creatorName.get(c.creatorSlug) ?? c.creatorSlug) : null }));
   const problems = publishProblems(campaign, { courseIds: new Set(courses.map((c) => c.id)), creatorSlugs: new Set(creators.map((c) => c.slug)) });
+  const covers = campaign.course_ids.map((id) => courses.find((c) => c.id === id)).filter((c) => c !== undefined).slice(0, 3).map((c) => ({ id: c.id, title: c.title, coverUrl: c.coverUrl }));
   const filled = languagesFilled(campaign);
   const missing = languagesMissing(campaign).filter((l) => !(EDITED_LANGS as readonly string[]).includes(l));
   const doneText = done ? (DONE[done] ?? (done.startsWith("translated-") ? `Translated into ${done.slice("translated-".length)} more language${done.endsWith("-1") ? "" : "s"}. Spot-check a few; French and English are yours to write.` : null)) : null;
@@ -95,6 +99,25 @@ export default async function EventEditorPage({ params, searchParams }: PageProp
                   Translate into the {missing.length} missing language{missing.length === 1 ? "" : "s"}
                 </button>
                 <span className="text-[12px] text-muted">{translationConfigured() ? "Uses the saved texts: save first. Never overwrites a filled language." : "Not configured on the server (FAL_KEY)."}</span>
+              </form>
+            </div>
+          </Card>
+        )}
+
+        {!isNew && (
+          <Card className="flex flex-wrap items-start gap-8 p-6">
+            <div className="flex flex-col gap-3">
+              <strong className="text-[15px] font-extrabold text-ink">Feed card preview</strong>
+              <EventCardPreview campaign={campaign} covers={covers} />
+            </div>
+            <div className="flex min-w-[260px] flex-1 flex-col gap-3 text-[13px] leading-[1.5] text-ink-3">
+              <p>What readers see in “For you”, in English, with the saved texts and image. In the apps the symbol is an icon, the challenge bar belongs to each reader, and the common goal counts every reader.</p>
+              <form action={generateEventImage} className="flex flex-wrap items-center gap-3">
+                <input type="hidden" name="slug" value={campaign.slug} />
+                <button type="submit" disabled={!coversConfigured()} className={buttonClass("secondary", "h-10 px-4 disabled:opacity-50")}>
+                  Generate an image with AI
+                </button>
+                <span className="text-[12px] text-muted">{coversConfigured() ? "Same art direction as course covers, 16:9, from the title and tagline. Replaces the current image." : "Not configured on the server (FAL_KEY)."}</span>
               </form>
             </div>
           </Card>
@@ -161,6 +184,41 @@ export default async function EventEditorPage({ params, searchParams }: PageProp
                   ))}
                 </select>
               </label>
+            </div>
+            <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+              <label className={label}>
+                Common goal: courses read together (optional)
+                <input type="number" name="goal_target" defaultValue={campaign.goal_target ?? ""} min={1} max={100000000} placeholder="10000" className={input} />
+              </label>
+              <p className="self-end pb-2 text-[13px] leading-[1.5] text-ink-3 md:col-span-2">
+                Every course of the collection finished by any reader during the event counts. Recounted every hour: {campaign.goal_count.toLocaleString("en-GB")} so far. Shown as a second bar on the card and on the event page.
+              </p>
+            </div>
+          </Card>
+
+          <Card className="flex flex-col gap-4 p-6">
+            <div className="flex flex-col gap-1">
+              <strong className="text-[15px] font-extrabold text-ink">Image</strong>
+              <p className="text-[13px] text-ink-3">Optional. 16:9, JPEG, PNG or WebP, 6 MB max. Shown at the top of the feed card and of the event page; without it the card stays navy with the symbol.</p>
+            </div>
+            <div className="flex flex-wrap items-start gap-6">
+              {campaign.image_url ? (
+                <Image src={campaign.image_url} alt="" width={640} height={360} unoptimized className="aspect-video w-full max-w-[360px] rounded-xl object-cover" />
+              ) : (
+                <div className="flex aspect-video w-full max-w-[360px] items-center justify-center rounded-xl bg-ink px-6 text-center text-[13px] font-semibold text-white/70">No image yet: the card stays navy with the symbol</div>
+              )}
+              <div className="flex min-w-[260px] flex-1 flex-col gap-3">
+                <label className={label}>
+                  Upload an image
+                  <input type="file" name="image" accept="image/jpeg,image/png,image/webp" className="text-[14px]" />
+                </label>
+                {campaign.image_url && (
+                  <label className="flex items-center gap-2 text-[14px] font-semibold text-ink-2">
+                    <input type="checkbox" name="remove_image" className="h-4 w-4 accent-navy" /> Remove the current image
+                  </label>
+                )}
+                <p className="text-[12px] text-muted">Saved with the event.{isNew ? "" : " Or generate one with AI from the preview card above."}</p>
+              </div>
             </div>
           </Card>
 

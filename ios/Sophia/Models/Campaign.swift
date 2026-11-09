@@ -24,6 +24,13 @@ nonisolated struct Campaign: Decodable, Identifiable, Sendable, Hashable {
     let kind: String?
     /// Symbole SF illustrant l'événement (`mustache.fill`), parmi la liste standard de docs/evenements.md.
     let symbol: String?
+    /// Image 16:9 hébergée (bucket course-images), en tête de la carte du fil et de la page ;
+    /// sans elle, la carte reste bleu nuit avec le symbole.
+    let imageUrl: String?
+    /// L'objectif commun : cours de la collection à terminer tous lecteurs confondus pendant
+    /// l'événement, et où on en est (recalculé toutes les heures côté serveur). Nil : pas d'objectif.
+    let goalTarget: Int?
+    let goalCount: Int?
     let startsAt: String
     let endsAt: String
     /// Nombre de cours de la collection à terminer pour obtenir le badge.
@@ -44,6 +51,9 @@ nonisolated struct Campaign: Decodable, Identifiable, Sendable, Hashable {
 
     enum CodingKeys: String, CodingKey {
         case slug, kind, symbol, upcoming, title, tagline, description, participants
+        case imageUrl = "image_url"
+        case goalTarget = "goal_target"
+        case goalCount = "goal_count"
         case startsAt = "starts_at"
         case endsAt = "ends_at"
         case challengeTarget = "challenge_target"

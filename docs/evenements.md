@@ -20,8 +20,11 @@ Ce document est la référence du format. Les quatre implémentations le suivent
 1. **Admin du site** (`/admin/events`) : l'équipe crée l'événement, choisit les cours, écrit les
    textes en anglais et en français, puis clique **Translate** pour les 28 autres langues (même
    modèle de texte que les couvertures, via fal ; une langue déjà remplie n'est jamais écrasée).
-   Une liste de contrôle dit ce qui manque pour publier ; un événement s'enregistre toujours en
-   brouillon, il ne passe `published` que si la liste est vide.
+   Elle peut poser une **image** (envoi d'un fichier 16:9, ou **Generate an image with AI** avec
+   la direction artistique des couvertures) et fixer un **objectif commun** (cours lus ensemble).
+   La page montre un **aperçu de la carte du fil** telle que les apps la dessinent. Une liste de
+   contrôle dit ce qui manque pour publier ; un événement s'enregistre toujours en brouillon, il
+   ne passe `published` que si la liste est vide.
 2. **Base** : la ligne est dans `public.campaigns`. Seuls les comptes de `studio_admins` lisent et
    écrivent la table (RLS). Les apps ne la lisent jamais directement.
 3. **Manifeste du catalogue** : `catalog_manifest(lang)` porte une clé `events` (fonction
@@ -35,9 +38,10 @@ Ce document est la référence du format. Les quatre implémentations le suivent
    lit cette liste et les écrans se redessinent quand elle change. Rien n'est embarqué dans les
    apps : avant le premier manifeste il n'y a pas d'événement (`content/events/movember.json`
    reste un exemple de format, c'est lui qui a servi d'amorce à la ligne `movember-2026`).
-5. **Participants** : toutes les heures (`cron` `campaign-participants`, minute 25),
-   `campaigns_refresh_participants()` compte les lecteurs distincts ayant terminé au moins un cours
-   de la collection entre le premier et le dernier jour (`course_events`, `course_complete`).
+5. **Participants et objectif commun** : toutes les heures (`cron` `campaign-participants`,
+   minute 25), `campaigns_refresh_participants()` compte les lecteurs distincts ayant terminé au
+   moins un cours de la collection entre le premier et le dernier jour (`participants`) et le
+   nombre total de ces fins de cours (`goal_count`), depuis `course_events` (`course_complete`).
    Les événements finis depuis plus d'une semaine gardent leur dernier chiffre.
 
 Le défi, le badge et « me prévenir » restent calculés sur le téléphone à partir des cours
@@ -54,9 +58,12 @@ Clés en `snake_case`, identiques dans la table, le manifeste et les décodeurs 
 | `kind` | texte | le type standard, voir ci-dessous. Réservé côté apps (elles n'en font rien encore). |
 | `status` | texte | `draft` (invisible des apps), `published` (servi), `archived` (retiré, gardé). Le manifeste ne porte que `published` ; la clé n'est pas envoyée aux apps. |
 | `symbol` | texte | un nom de la liste standard ci-dessous (SF Symbols ; Android a l'icône Material correspondante). |
+| `image_url` | texte ou null | image 16:9 hébergée (`course-images/events/…`), en tête de la carte du fil et de la page ; sans elle la carte reste bleu nuit avec le symbole. Envoyée depuis l'admin ou générée (même direction artistique que les couvertures). |
 | `starts_at`, `ends_at` | `YYYY-MM-DD` | premier et dernier jour, inclus, en date civile du téléphone. `ends_at ≥ starts_at`. |
 | `challenge_target` | entier | 1 à 50, au plus le nombre de cours de la collection. |
 | `participants` | entier | calculé (voir ci-dessus) ; jamais saisi. |
+| `goal_target` | entier ou null | l'objectif commun : cours de la collection à terminer, tous lecteurs confondus, pendant l'événement. Null : pas de barre d'objectif. |
+| `goal_count` | entier | où en est l'objectif commun ; calculé toutes les heures, jamais saisi. |
 | `course_ids` | liste | les cours de la collection, 40 au plus, tous `published`. L'ordre est celui de l'affichage. |
 | `upcoming` | liste | cours annoncés : `{"title": {langue: texte}, "creator": slug ou null, "date": "YYYY-MM-DD"}`, six au plus dans l'admin. |
 | `title` | `{langue: texte}` | 60 caractères. |
@@ -101,10 +108,13 @@ Material, un nom inconnu retombe sur les étincelles. Ajouter un symbole : la co
   "slug": "movember-2026",
   "kind": "month",
   "symbol": "mustache.fill",
+  "image_url": "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/events/movember-2026_m3k1.jpg",
   "starts_at": "2026-11-01",
   "ends_at": "2026-11-30",
   "challenge_target": 3,
   "participants": 0,
+  "goal_target": 10000,
+  "goal_count": 0,
   "course_ids": ["course_228_la_sante_mentale_comme_enjeu_de_societe", "course_42_pourquoi_reve_t_on", "course_73_comment_le_cerveau_stocke_t_il_les_souve"],
   "upcoming": [{ "title": { "en": "Why do men see a doctor less often?", "fr": "Pourquoi les hommes vont-ils moins chez le médecin ?" }, "creator": "ezgi-gizem-berkay", "date": "2026-11-14" }],
   "title": { "en": "Movember", "fr": "Movember" },
@@ -117,9 +127,13 @@ Material, un nom inconnu retombe sur les étincelles. Ajouter un symbole : la co
 ## Dans les apps
 
 - **Fil « Pour toi »** : l'événement actif le plus proche de sa fin est une carte en troisième
-  position ; les cartes des cours de sa collection portent son étiquette.
-- **Page événement** : symbole, dates, titre, description, participants, la collection avec la
-  progression du défi, les cours annoncés avec « me prévenir ».
+  position (image en tête si elle existe, barre du défi, barre de l'objectif commun) ; les cartes
+  des cours de sa collection portent son étiquette.
+- **Page événement** : image, symbole, dates, titre, description, participants, objectif commun,
+  la collection avec la progression du défi, les cours annoncés avec « me prévenir ».
+- **Textes** : la barre de l'objectif commun lit `event.goal.progress` (« Ensemble : %@ cours lus
+  sur %@ »), présent dans les 30 langues des deux apps ; l'image est téléchargée une fois et gardée
+  en cache (iOS `RemoteImage`, Android Coil).
 - **Profil** : le badge (nom, progression *n*/objectif) du dernier événement ; le bloc
   « événement en cours ».
 - **Page créateur** : « en écriture pour … » si l'auteur a un cours annoncé dans un événement actif.

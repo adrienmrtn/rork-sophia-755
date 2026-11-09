@@ -22,12 +22,17 @@ data class Campaign(
     val kind: String? = null,
     /** Symbole SF illustrant l'événement (`mustache.fill`), traduit en icône Material à l'affichage. */
     val symbol: String? = null,
+    /** Image 16:9 hébergée (bucket course-images), en tête de la carte du fil et de la page ; sinon bleu nuit et symbole. */
+    @SerialName("image_url") val imageUrl: String? = null,
     @SerialName("starts_at") val startsAt: String = "",
     @SerialName("ends_at") val endsAt: String = "",
     /** Nombre de cours de la collection à terminer pour obtenir le badge. */
     @SerialName("challenge_target") val challengeTarget: Int = 1,
     /** Lecteurs participants affichés (valeur de test tant que le serveur ne compte pas). */
     val participants: Int = 0,
+    /** L'objectif commun : cours de la collection à terminer tous lecteurs confondus pendant l'événement, et où on en est. */
+    @SerialName("goal_target") val goalTarget: Int? = null,
+    @SerialName("goal_count") val goalCount: Int = 0,
     @SerialName("course_ids") val courseIds: List<String> = emptyList(),
     val upcoming: List<Upcoming> = emptyList(),
     val title: Map<String, String> = emptyMap(),

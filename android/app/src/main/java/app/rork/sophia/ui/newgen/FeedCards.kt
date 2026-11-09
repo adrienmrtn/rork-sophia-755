@@ -45,6 +45,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.hapticfeedback.HapticFeedbackType
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.text.font.FontWeight
@@ -64,13 +65,15 @@ import app.rork.sophia.data.stripInlineMarkup
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.Campaign
 import app.rork.sophia.domain.CourseSummary
-import app.rork.sophia.domain.readsCount
 import app.rork.sophia.domain.UserProgress
+import app.rork.sophia.domain.formatted
+import app.rork.sophia.domain.readsCount
 import app.rork.sophia.ui.components.softPress
 import app.rork.sophia.ui.components.sophiaCard
 import app.rork.sophia.ui.course.AuthorAvatar
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
+import coil.compose.AsyncImage
 
 /**
  * Un élément du fil d'accueil. Les cartes vidéo n'existent pas encore (prompt 10) : le cas
@@ -273,7 +276,10 @@ fun CourseFeedCard(
 
 // MARK: - Carte événement
 
-/** L'événement dans le fil : fond bleu nuit, symbole or, trois couvertures, barre du défi. */
+/**
+ * L'événement dans le fil : fond bleu nuit, image si l'équipe en a posé une, symbole or, trois
+ * couvertures, barre du défi, et la barre de l'objectif commun quand il y en a un.
+ */
 @Composable
 fun EventFeedCard(
     campaign: Campaign,
@@ -296,6 +302,18 @@ fun EventFeedCard(
             .padding(20.dp),
         verticalArrangement = Arrangement.spacedBy(14.dp),
     ) {
+        campaign.imageUrl?.let { url ->
+            AsyncImage(
+                model = url,
+                contentDescription = null,
+                contentScale = ContentScale.Crop,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(140.dp)
+                    .clip(RoundedCornerShape(14.dp))
+                    .background(Color.White.copy(alpha = 0.08f)),
+            )
+        }
         Row(modifier = Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
             CampaignSymbol(symbol = campaign.symbol, size = 36.dp, tint = DS.warm)
             Spacer(Modifier.weight(1f))
@@ -375,6 +393,36 @@ fun EventFeedCard(
                 color = Color.White,
                 maxLines = 1,
             )
+        }
+        // L'objectif commun : tous les lecteurs ensemble, chiffre recalculé par le serveur.
+        val goalTarget = campaign.goalTarget
+        if (goalTarget != null && goalTarget > 0) {
+            Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+                Box(
+                    modifier = Modifier
+                        .weight(1f)
+                        .height(6.dp)
+                        .clip(CircleShape)
+                        .background(Color.White.copy(alpha = 0.2f)),
+                ) {
+                    Box(
+                        modifier = Modifier
+                            .fillMaxWidth((campaign.goalCount.toFloat() / goalTarget).coerceIn(0f, 1f))
+                            .height(6.dp)
+                            .clip(CircleShape)
+                            .background(Color.White),
+                    )
+                }
+                Text(
+                    text = StringStore.text(context, "event.goal.progress", language, campaign.goalCount.formatted(language), goalTarget.formatted(language)),
+                    fontFamily = PlusJakartaSans,
+                    fontWeight = FontWeight.SemiBold,
+                    fontSize = 12.sp,
+                    color = Color.White.copy(alpha = 0.9f),
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
+                )
+            }
         }
         if (fillsPage) Spacer(Modifier.weight(1f))
         Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(4.dp)) {

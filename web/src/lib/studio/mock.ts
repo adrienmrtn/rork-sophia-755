@@ -200,6 +200,29 @@ function eqArg(ops: Op[], col: string): unknown {
   return ops.find((o) => o.m === "eq" && o.a[0] === col)?.a[1];
 }
 
+/** Un événement de démonstration pour l'admin hors ligne (docs/evenements.md). */
+const mockCampaign = {
+  slug: "movember-2026",
+  kind: "month",
+  status: "published",
+  symbol: "mustache.fill",
+  image_url: null,
+  starts_at: "2026-11-01",
+  ends_at: "2026-11-30",
+  challenge_target: 3,
+  participants: 8412,
+  goal_target: 10000,
+  goal_count: 6230,
+  course_ids: ["course_101_1984_george_orwell", "course_107_crime_et_chatiment_dostoievski", "course_116_la_metamorphose_kafka"],
+  upcoming: [{ title: { en: "Why do men see a doctor less often?", fr: "Pourquoi les hommes vont-ils moins chez le médecin ?" }, creator: "dusan-nikolic", date: "2026-11-14" }],
+  title: { en: "Movember", fr: "Movember" },
+  tagline: { en: "Men's health, let's talk about it.", fr: "La santé des hommes, on en parle." },
+  description: { en: "Mental health, prevention, male cancers: a month to talk about it, one course at a time.", fr: "Santé mentale, prévention, cancers masculins : un mois pour en parler, un cours à la fois." },
+  badge_name: { en: "Moustache", fr: "Moustache" },
+  created_at: "2026-11-01T09:00:00Z",
+  updated_at: "2026-11-08T17:30:00Z",
+};
+
 function resolve(kind: "from" | "rpc", name: string, args: unknown[], ops: Op[]): { data: unknown; error: null } {
   const single = has(ops, "maybeSingle") || has(ops, "single");
   const list = (rows: unknown[]) => ({ data: single ? (rows[0] ?? null) : rows, error: null });
@@ -242,6 +265,11 @@ function resolve(kind: "from" | "rpc", name: string, args: unknown[], ops: Op[])
       return list(steps);
     case "creator_accounts":
       return list([account]);
+    case "campaigns": {
+      const slug = eqArg(ops, "slug");
+      const rows = [mockCampaign].filter((c) => !slug || c.slug === slug);
+      return list(rows);
+    }
     case "courses":
       return list([{ id: drafts[2].app_course_id, subject: "histoire", status: "published", origin_lang: "fr", published_at: "2026-11-03T13:40:00Z", course_contents: [{ lang: "fr", title: drafts[2].title, status: "published", content: { sections: drafts[2].sections.map((s) => ({ title: s.title })) } }, { lang: "en", title: drafts[2].title, status: "published", content: null }] }]);
     default:
