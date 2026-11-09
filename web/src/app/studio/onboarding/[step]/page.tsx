@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
 import { CheckIcon, Eyebrow, Initials, container } from "@/components/ui";
+import { Art, ArtPanel, type ArtName } from "@/components/studio/Art";
 import { PhotoUpload } from "@/components/studio/PhotoUpload";
-import { createClient } from "@/lib/supabase/server";
 import { renderMarkdown } from "@/lib/markdown";
 import { s } from "@/lib/copy/studio-en";
 import { LANGS } from "@/lib/catalog/types";
@@ -13,9 +13,21 @@ const STEPS: Exclude<OnboardingStep, "done">[] = ["identity", "credentials", "pr
 const LANG_NAMES: Record<string, string> = { fr: "French", en: "English", es: "Spanish", de: "German", pt: "Portuguese (Brazil)", "pt-PT": "Portuguese (Portugal)", it: "Italian", tr: "Turkish", pl: "Polish", ro: "Romanian", nl: "Dutch", el: "Greek", sv: "Swedish", hu: "Hungarian", bg: "Bulgarian", cs: "Czech", da: "Danish", nb: "Norwegian", ru: "Russian", hr: "Croatian", sl: "Slovene", sk: "Slovak", sr: "Serbian", ar: "Arabic", he: "Hebrew", fi: "Finnish", et: "Estonian", lt: "Lithuanian", lv: "Latvian", ja: "Japanese" };
 const COUNTRIES: [string, string][] = [["FR", "France"], ["BE", "Belgium"], ["CH", "Switzerland"], ["CA", "Canada"], ["US", "United States"], ["GB", "United Kingdom"], ["DE", "Germany"], ["ES", "Spain"], ["IT", "Italy"], ["PT", "Portugal"], ["NL", "Netherlands"], ["PL", "Poland"], ["RS", "Serbia"], ["KR", "South Korea"], ["SK", "Slovakia"], ["TR", "Turkey"], ["JP", "Japan"], ["IN", "India"], ["BR", "Brazil"], ["MX", "Mexico"], ["AU", "Australia"], ["OTHER", "Other"]];
 
-const input = "h-12 rounded-xl border border-line bg-white px-3.5 text-[15px] text-ink outline-none focus:border-blue";
+/** Le panneau illustré de chaque étape : l'image, une promesse, un conseil. */
+const PANEL: Record<Exclude<OnboardingStep, "done">, { art: ArtName; title: string; text: string }> = {
+  identity: { art: "studio_identity", title: "Your name travels with your courses", text: "It appears under each course, in the app and on the site, in 30 languages. The display name can differ from your legal name, and you can change it later." },
+  credentials: { art: "studio_credentials", title: "What lets a reader trust you", text: "Title, institution, country. The team checks them once, before your first publication. A link to a public page (lab, faculty, ORCID) speeds that up." },
+  profile: { art: "studio_photo", title: "A portrait readers recognise", text: "Facing the camera, good light, no filter. The app shows it as a small circle, so keep the face large in the frame." },
+  agreement: { art: "studio_agreement", title: "Signed online, kept with your account", text: "The version, the date and the exact text you signed stay in your account. If the agreement changes, you will be asked to sign again before your next submission." },
+  guide: { art: "studio_guide", title: "Five minutes that save an hour", text: "One question, one answer, 500 to 900 words, a key takeaway at the end. The editor repeats these rules while you write." },
+};
+
+const input = "h-12 w-full rounded-xl border border-line bg-white px-3.5 text-[15px] text-ink outline-none transition focus:border-blue focus:ring-4 focus:ring-blue/10";
+const textarea = "w-full rounded-xl border border-line bg-white px-3.5 py-3 text-[15px] leading-[1.5] text-ink outline-none transition focus:border-blue focus:ring-4 focus:ring-blue/10";
 const label = "flex flex-col gap-1.5 text-[13px] font-bold text-ink-2";
 const help = "text-[12px] font-medium text-muted";
+const primary = "inline-flex h-12 items-center justify-center rounded-full bg-navy px-6 text-[15px] font-extrabold text-white transition-colors hover:bg-ink disabled:opacity-50";
+const card = "flex flex-col gap-5 rounded-card border border-line bg-white p-7 shadow-[0_10px_30px_rgba(22,38,61,.04)]";
 
 export default async function OnboardingPage({ params, searchParams }: PageProps<"/studio/onboarding/[step]">) {
   const { step } = await params;
@@ -25,7 +37,7 @@ export default async function OnboardingPage({ params, searchParams }: PageProps
   const current = step as Exclude<OnboardingStep, "done">;
   const session = await getStudioSession();
   if (!session) redirect("/join?next=/studio");
-  const { account, agreementSigned, user } = session;
+  const { account, agreementSigned, user, supabase } = session;
   // On ne saute pas d'étape : la première non faite est la plus loin où l'on peut aller.
   const reached = account ? (account.onboarding_step === "done" ? STEPS.length : STEPS.indexOf(account.onboarding_step as Exclude<OnboardingStep, "done">)) : 0;
   const index = STEPS.indexOf(current);
@@ -34,7 +46,6 @@ export default async function OnboardingPage({ params, searchParams }: PageProps
 
   const o = s.onboarding;
   const name = displayName(account, user);
-  const supabase = await createClient();
 
   type Doc = { version: number; title: string; body_md: string };
   let doc: Doc | null = null;
@@ -53,6 +64,7 @@ export default async function OnboardingPage({ params, searchParams }: PageProps
     const { data } = await supabase.storage.from("studio-photos").createSignedUrl(account.photo_path, 3600);
     photoUrl = data?.signedUrl ?? null;
   }
+  const panel = PANEL[current];
 
   return (
     <>
@@ -62,7 +74,7 @@ export default async function OnboardingPage({ params, searchParams }: PageProps
             <Link href="/" className="text-[26px] font-extrabold tracking-[-0.6px] text-navy">
               Sophia
             </Link>
-            <span className="rounded-full bg-tint px-2.5 py-1 text-[12px] font-bold text-navy">{s.nav.badge}</span>
+            <span className="rounded-full bg-cream px-2.5 py-1 text-[12px] font-bold text-amber">{s.nav.badge}</span>
           </div>
           <form action={signOut} className="text-[14px] font-semibold text-ink-3">
             {user.email} ·{" "}
@@ -71,41 +83,50 @@ export default async function OnboardingPage({ params, searchParams }: PageProps
             </button>
           </form>
         </div>
+        {/* La progression, en cinq segments */}
+        <div className={`${container} flex gap-1.5 pb-3`} aria-hidden="true">
+          {STEPS.map((st, i) => (
+            <span key={st} className={`h-1.5 flex-1 rounded-full ${i < reached || (account?.onboarding_step === "done") ? "bg-green-2" : i === index ? "bg-navy" : "bg-tint"}`} />
+          ))}
+        </div>
       </header>
 
-      <main className={`${container} flex flex-1 flex-wrap items-start gap-x-12 gap-y-8 pt-10 pb-20`}>
+      <main className={`${container} grid flex-1 grid-cols-1 gap-8 pt-8 pb-20 lg:grid-cols-[280px_minmax(0,1fr)] xl:grid-cols-[280px_minmax(0,1fr)_300px]`}>
         {/* Étapes */}
-        <nav aria-label={o.title} className="flex min-w-0 flex-[0_1_300px] flex-col gap-1 rounded-card border border-line bg-white p-5">
-          <span className="px-2 pb-2.5 text-[13px] font-bold uppercase tracking-[1px] text-muted">{o.title}</span>
+        <nav aria-label={o.title} className="flex flex-col gap-1 self-start rounded-card border border-line bg-white p-4 lg:sticky lg:top-6">
+          <span className="px-2 pb-2 text-[12px] font-bold uppercase tracking-[1px] text-muted">{o.title}</span>
           {STEPS.map((st, i) => {
-            const done = i < reached || (st === "agreement" && agreementSigned) || (account?.onboarding_step === "done");
+            const done = i < reached || (st === "agreement" && agreementSigned) || account?.onboarding_step === "done";
             const isCurrent = st === current;
             const [title, sub] = o.steps[st];
             const reachable = i <= reached;
             const inner = (
               <>
-                <span className={`inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-[13px] font-extrabold ${done ? "bg-green-bg text-green" : isCurrent ? "bg-navy text-white" : "border border-line-2 text-ink-3"}`}>{done ? <CheckIcon className="h-3.5 w-3.5" /> : i + 1}</span>
-                <span className="flex flex-col">
+                <span className={`inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-[13px] font-extrabold transition-colors ${done ? "bg-green-bg text-green" : isCurrent ? "bg-navy text-white" : "bg-paper text-ink-3"}`}>{done ? <CheckIcon className="h-4 w-4" /> : i + 1}</span>
+                <span className="flex min-w-0 flex-col">
                   <strong className={`text-[14px] ${isCurrent ? "font-extrabold text-navy" : done ? "font-bold text-ink" : "font-bold text-ink-3"}`}>{title}</strong>
-                  <span className="text-[12px] text-ink-3">{sub}</span>
+                  <span className="truncate text-[12px] text-ink-3">{sub}</span>
                 </span>
               </>
             );
             return reachable ? (
-              <Link key={st} href={`/studio/onboarding/${st}`} aria-current={isCurrent ? "step" : undefined} className={`flex items-center gap-3 rounded-xl px-2 py-2.5 ${isCurrent ? "bg-tint" : "hover:bg-paper"}`}>
+              <Link key={st} href={`/studio/onboarding/${st}`} aria-current={isCurrent ? "step" : undefined} className={`flex items-center gap-3 rounded-2xl px-2.5 py-2.5 transition-colors ${isCurrent ? "bg-tint" : "hover:bg-paper"}`}>
                 {inner}
               </Link>
             ) : (
-              <span key={st} className="flex items-center gap-3 rounded-xl px-2 py-2.5 opacity-80">
+              <span key={st} className="flex items-center gap-3 rounded-2xl px-2.5 py-2.5 opacity-70">
                 {inner}
               </span>
             );
           })}
-          <div className="m-2 mt-3 rounded-[14px] border border-cream-2 bg-cream p-3.5 text-[13px] leading-[1.5] text-ink-2">{o.note}</div>
+          <div className="m-1 mt-3 flex items-start gap-3 rounded-2xl border border-cream-2 bg-cream p-3.5 text-[13px] leading-[1.5] text-ink-2">
+            <Art name="studio_desk" size={44} className="!rounded-xl" />
+            <span>{o.note}</span>
+          </div>
         </nav>
 
         {/* Contenu de l'étape */}
-        <section className="flex min-w-0 max-w-[760px] flex-[1_1_560px] flex-col gap-6">
+        <section className="flex min-w-0 flex-col gap-6">
           <div className="flex flex-col gap-2">
             <Eyebrow>{o.stepOf(index + 1)}</Eyebrow>
             {error && (
@@ -116,7 +137,7 @@ export default async function OnboardingPage({ params, searchParams }: PageProps
           </div>
 
           {current === "identity" && (
-            <form action={saveIdentity} className="flex flex-col gap-5 rounded-card border border-line bg-white p-7">
+            <form action={saveIdentity} className={card}>
               <div className="flex flex-col gap-2">
                 <h1 className="text-[32px] font-extrabold leading-[1.1] tracking-[-0.8px]">{o.identity.title}</h1>
                 <p className="text-[15px] leading-[1.55] text-ink-3">{o.identity.lead}</p>
@@ -148,7 +169,7 @@ export default async function OnboardingPage({ params, searchParams }: PageProps
                 <span className={help}>{o.identity.langHelp}</span>
               </label>
               <div className="flex justify-end pt-1">
-                <button type="submit" className="h-12 rounded-btn bg-navy px-[22px] text-[15px] font-extrabold text-white hover:bg-ink">
+                <button type="submit" className={primary}>
                   {o.continue}
                 </button>
               </div>
@@ -156,7 +177,7 @@ export default async function OnboardingPage({ params, searchParams }: PageProps
           )}
 
           {current === "credentials" && account && (
-            <form action={saveCredentials} className="flex flex-col gap-5 rounded-card border border-line bg-white p-7">
+            <form action={saveCredentials} className={card}>
               <div className="flex flex-col gap-2">
                 <h1 className="text-[32px] font-extrabold leading-[1.1] tracking-[-0.8px]">{o.credentials.title}</h1>
                 <p className="text-[15px] leading-[1.55] text-ink-3">{o.credentials.lead}</p>
@@ -195,10 +216,10 @@ export default async function OnboardingPage({ params, searchParams }: PageProps
                 </div>
               </fieldset>
               <div className="flex items-center justify-between pt-1">
-                <Link href="/studio/onboarding/identity" className="text-[15px] font-bold text-ink-3">
-                  {o.back}
+                <Link href="/studio/onboarding/identity" className="text-[15px] font-bold text-ink-3 hover:text-navy">
+                  ← {o.back}
                 </Link>
-                <button type="submit" className="h-12 rounded-btn bg-navy px-[22px] text-[15px] font-extrabold text-white hover:bg-ink">
+                <button type="submit" className={primary}>
                   {o.continue}
                 </button>
               </div>
@@ -206,7 +227,7 @@ export default async function OnboardingPage({ params, searchParams }: PageProps
           )}
 
           {current === "profile" && account && (
-            <form action={saveProfile} className="flex flex-col gap-5 rounded-card border border-line bg-white p-7">
+            <form action={saveProfile} className={card}>
               <input type="hidden" name="from" value="onboarding" />
               <div className="flex flex-col gap-2">
                 <h1 className="text-[32px] font-extrabold leading-[1.1] tracking-[-0.8px]">{o.profile.title}</h1>
@@ -223,18 +244,23 @@ export default async function OnboardingPage({ params, searchParams }: PageProps
               </label>
               <label className={label}>
                 {o.profile.bio}
-                <textarea name="bio" rows={3} maxLength={300} defaultValue={account.bio ?? ""} className="rounded-xl border border-line px-3.5 py-3 text-[15px] leading-[1.5] text-ink outline-none focus:border-blue" />
+                <textarea name="bio" rows={3} maxLength={300} defaultValue={account.bio ?? ""} className={textarea} />
                 <span className={help}>{o.profile.bioHelp}</span>
               </label>
               <label className={label}>
                 {o.profile.longBio}
-                <textarea name="long_bio" rows={5} maxLength={1200} defaultValue={account.long_bio ?? ""} className="rounded-xl border border-line px-3.5 py-3 text-[15px] leading-[1.5] text-ink outline-none focus:border-blue" />
+                <textarea name="long_bio" rows={5} maxLength={1200} defaultValue={account.long_bio ?? ""} className={textarea} />
                 <span className={help}>{o.profile.longBioHelp}</span>
               </label>
               <div className="flex flex-col gap-2.5 rounded-2xl border border-line bg-paper p-4">
                 <span className="text-[12px] font-bold uppercase tracking-[1px] text-muted">{o.profile.preview}</span>
                 <div className="flex items-center gap-3">
-                  <Initials name={name} size={44} />
+                  {photoUrl ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img src={photoUrl} alt="" className="h-11 w-11 rounded-full object-cover" />
+                  ) : (
+                    <Initials name={name} size={44} />
+                  )}
                   <span className="flex flex-col gap-0.5">
                     <strong className="text-[15px] font-bold">
                       {o.profile.by} {account.display_name ?? name}
@@ -244,10 +270,10 @@ export default async function OnboardingPage({ params, searchParams }: PageProps
                 </div>
               </div>
               <div className="flex items-center justify-between pt-1">
-                <Link href="/studio/onboarding/credentials" className="text-[15px] font-bold text-ink-3">
-                  {o.back}
+                <Link href="/studio/onboarding/credentials" className="text-[15px] font-bold text-ink-3 hover:text-navy">
+                  ← {o.back}
                 </Link>
-                <button type="submit" className="h-12 rounded-btn bg-navy px-[22px] text-[15px] font-extrabold text-white hover:bg-ink">
+                <button type="submit" className={primary}>
                   {o.continue}
                 </button>
               </div>
@@ -260,7 +286,7 @@ export default async function OnboardingPage({ params, searchParams }: PageProps
                 <h1 className="text-[32px] font-extrabold leading-[1.1] tracking-[-0.8px]">{o.agreement.title}</h1>
                 <p className="text-[15px] leading-[1.55] text-ink-3">{o.agreement.lead}</p>
               </div>
-              <article className="max-h-[520px] overflow-y-auto rounded-card border border-line bg-white p-7 text-[15px] leading-[1.6] text-ink-2">
+              <article className="prose-course max-h-[520px] overflow-y-auto rounded-card border border-line bg-white p-7 text-[15px] leading-[1.6] text-ink-2">
                 {doc ? (
                   <>
                     <p className="text-[12px] font-bold uppercase tracking-[1px] text-muted">{o.agreement.version(doc.version)}</p>
@@ -271,28 +297,33 @@ export default async function OnboardingPage({ params, searchParams }: PageProps
                 )}
               </article>
               {agreementSigned ? (
-                <div className="flex flex-col gap-3 rounded-card border border-green-bg bg-green-bg/50 p-6">
-                  <strong className="text-[16px] font-extrabold text-green">{o.agreement.signed(signedAt ? new Date(signedAt).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" }) : "")}</strong>
-                  <Link href="/studio/onboarding/guide" className="inline-flex h-12 w-fit items-center rounded-btn bg-navy px-[22px] text-[15px] font-extrabold text-white">
+                <div className="flex flex-wrap items-center justify-between gap-4 rounded-card border border-green-bg bg-green-bg/50 p-6">
+                  <div className="flex items-center gap-3">
+                    <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-green-2 text-white">
+                      <CheckIcon className="h-5 w-5" />
+                    </span>
+                    <strong className="text-[16px] font-extrabold text-green">{o.agreement.signed(signedAt ? new Date(signedAt).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" }) : "")}</strong>
+                  </div>
+                  <Link href="/studio/onboarding/guide" className={primary}>
                     {o.continue}
                   </Link>
                 </div>
               ) : (
-                <form action={signAgreement} className="flex flex-col gap-4 rounded-card border border-line bg-white p-7">
+                <form action={signAgreement} className={card}>
                   <label className={label}>
                     {o.agreement.nameLabel}
-                    <input name="signed_name" required minLength={3} maxLength={160} defaultValue={name} className={input} />
+                    <input name="signed_name" required minLength={3} maxLength={160} defaultValue={name} className={`${input} font-serif text-[20px] italic`} />
                   </label>
                   <label className="flex items-start gap-3 text-[14px] font-semibold text-ink-2">
-                    <input type="checkbox" name="accept" required className="mt-1 h-4 w-4" />
+                    <input type="checkbox" name="accept" required className="mt-1 h-4 w-4 accent-navy" />
                     {o.agreement.check}
                   </label>
                   <p className={help}>{o.agreement.draftNote}</p>
                   <div className="flex items-center justify-between pt-1">
-                    <Link href="/studio/onboarding/profile" className="text-[15px] font-bold text-ink-3">
-                      {o.back}
+                    <Link href="/studio/onboarding/profile" className="text-[15px] font-bold text-ink-3 hover:text-navy">
+                      ← {o.back}
                     </Link>
-                    <button type="submit" disabled={!doc} className="h-12 rounded-btn bg-navy px-[22px] text-[15px] font-extrabold text-white hover:bg-ink disabled:opacity-50">
+                    <button type="submit" disabled={!doc} className={primary}>
                       {o.agreement.sign}
                     </button>
                   </div>
@@ -307,18 +338,25 @@ export default async function OnboardingPage({ params, searchParams }: PageProps
                 <h1 className="text-[32px] font-extrabold leading-[1.1] tracking-[-0.8px]">{o.guide.title}</h1>
                 <p className="text-[15px] leading-[1.55] text-ink-3">{o.guide.lead}</p>
               </div>
-              <article className="rounded-card border border-line bg-white p-7 text-[15px] leading-[1.6] text-ink-2">{doc ? renderMarkdown(doc.body_md) : <p>The guide is not published yet.</p>}</article>
-              <form action={finishGuide} className="flex items-center justify-between rounded-card border border-line bg-white p-6">
+              <article className="prose-course rounded-card border border-line bg-white p-7 text-[15px] leading-[1.6] text-ink-2">{doc ? renderMarkdown(doc.body_md) : <p>The guide is not published yet.</p>}</article>
+              <form action={finishGuide} className="flex flex-wrap items-center justify-between gap-4 rounded-card border border-line bg-white p-6">
                 <label className="flex items-center gap-3 text-[14px] font-semibold text-ink-2">
-                  <input type="checkbox" required className="h-4 w-4" /> {o.guide.check}
+                  <input type="checkbox" required className="h-4 w-4 accent-navy" /> {o.guide.check}
                 </label>
-                <button type="submit" className="h-12 rounded-btn bg-navy px-[22px] text-[15px] font-extrabold text-white hover:bg-ink">
-                  {o.guide.finish}
+                <button type="submit" className={primary}>
+                  {o.guide.finish} →
                 </button>
               </form>
             </div>
           )}
         </section>
+
+        {/* Le panneau illustré */}
+        <div className="order-first lg:col-start-2 xl:order-none xl:col-start-3 xl:self-start xl:sticky xl:top-6">
+          <ArtPanel name={panel.art} title={panel.title} size={260}>
+            {panel.text}
+          </ArtPanel>
+        </div>
       </main>
     </>
   );

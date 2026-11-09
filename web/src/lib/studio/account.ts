@@ -2,6 +2,7 @@ import "server-only";
 import { cache } from "react";
 import type { SupabaseClient, User } from "@supabase/supabase-js";
 import { createClient } from "@/lib/supabase/server";
+import { MOCK_STUDIO, mockSession } from "@/lib/studio/mock";
 
 export type OnboardingStep = "identity" | "credentials" | "profile" | "agreement" | "guide" | "done";
 export const ONBOARDING_STEPS: OnboardingStep[] = ["identity", "credentials", "profile", "agreement", "guide", "done"];
@@ -38,24 +39,30 @@ export interface StudioSession {
   agreementSigned: boolean;
 }
 
-/** La session du Studio : l'utilisateur, son compte créateur (s'il existe), son rôle, son contrat. */
+/** La session du Studio : l'utilisateur, son compte créateur (s'il existe), son rôle, son contrat.
+ *  Le jeton est vérifié localement (getClaims) et la base n'est lue qu'une fois (studio_me). */
 export const getStudioSession = cache(async (): Promise<StudioSession | null> => {
+  if (MOCK_STUDIO) return mockSession();
   const supabase = await createClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-  if (!user) return null;
-  const [{ data: account }, { data: isAdmin }, { data: signed }] = await Promise.all([
-    supabase.from("creator_accounts").select("*").eq("user_id", user.id).maybeSingle(),
-    supabase.rpc("studio_admin_touch"),
-    supabase.rpc("creator_agreement_current"),
-  ]);
+  const { data: claimsData } = await supabase.auth.getClaims();
+  const claims = claimsData?.claims;
+  if (!claims?.sub) return null;
+  const user = {
+    id: claims.sub,
+    email: typeof claims.email === "string" ? claims.email : undefined,
+    user_metadata: (claims.user_metadata as Record<string, unknown> | undefined) ?? {},
+    app_metadata: (claims.app_metadata as Record<string, unknown> | undefined) ?? {},
+    aud: "authenticated",
+    created_at: "",
+  } as unknown as User;
+  const { data } = await supabase.rpc("studio_me");
+  const me = (data ?? null) as { account: CreatorAccount | null; is_admin: boolean; agreement_signed: boolean } | null;
   return {
     supabase,
     user,
-    account: (account as CreatorAccount | null) ?? null,
-    isAdmin: Boolean(isAdmin),
-    agreementSigned: Boolean(signed),
+    account: me?.account ?? null,
+    isAdmin: Boolean(me?.is_admin),
+    agreementSigned: Boolean(me?.agreement_signed),
   };
 });
 
