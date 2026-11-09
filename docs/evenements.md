@@ -143,6 +143,10 @@ Material, un nom inconnu retombe sur les étincelles. Ajouter un symbole : la co
 - **Profil** : le badge (nom, progression *n*/objectif) du dernier événement ; le bloc
   « événement en cours ».
 - **Page créateur** : « en écriture pour … » si l'auteur a un cours annoncé dans un événement actif.
+- **Pays** : un événement avec `countries` n'est montré que si la région du téléphone (iOS
+  `Locale.current.region`, Android `Locale.getDefault().country`) en fait partie ; sans région
+  connue, seuls les événements « partout » (`countries` null) apparaissent. Le manifeste est le
+  même pour tous : le filtre se fait dans l'app, dans `CampaignStore`.
 - **Mesure** : `course_open` avec `source = event` quand un cours est ouvert depuis la page
   événement (docs/events.md).
 

@@ -6,6 +6,7 @@ import app.rork.sophia.domain.Campaign
 import app.rork.sophia.domain.UserProgress
 import kotlinx.coroutines.flow.StateFlow
 import java.time.LocalDate
+import java.util.Locale
 
 /**
  * Les événements éditoriaux (table `campaigns` côté serveur, servis par le manifeste du catalogue,
@@ -22,8 +23,11 @@ object CampaignStore {
     /** Les événements publiés, du plus ancien au plus récent ; à collecter dans les écrans. */
     val flow: StateFlow<List<Campaign>> get() = CatalogStore.campaigns
 
-    /** Les événements publiés, du plus ancien au plus récent, tels que le catalogue les a reçus. */
-    fun all(): List<Campaign> = CatalogStore.campaigns.value
+    /** Les événements publiés pour la région du téléphone, du plus ancien au plus récent. */
+    fun all(): List<Campaign> {
+        val region = Locale.getDefault().country.takeIf { it.length == 2 }
+        return CatalogStore.campaigns.value.filter { it.isShownIn(region) }
+    }
 
     /** Les événements en cours, le plus proche de sa fin en premier. */
     fun active(today: LocalDate = LocalDate.now()): List<Campaign> =

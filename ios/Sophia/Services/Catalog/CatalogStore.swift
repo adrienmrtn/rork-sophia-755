@@ -31,6 +31,8 @@ final class CatalogStore {
     /// plus récent. `CampaignStore` les sert aux vues ; observable, donc elles se redessinent
     /// quand un rafraîchissement en apporte.
     private(set) var campaigns: [Campaign] = []
+    /// Les tendances du dernier manifeste de chaque langue (ids de cours, les plus lus en premier).
+    private(set) var trendingByLanguage: [String: [String]] = [:]
 
     private var snapshots: [AppLanguage: CatalogSnapshot] = [:]
     private var manifests: [AppLanguage: CatalogManifest] = [:]
@@ -434,6 +436,12 @@ final class CatalogStore {
         if let events = manifest.events {
             campaigns = events.sorted { $0.startsAt < $1.startsAt }
         }
+        trendingByLanguage[language.rawValue] = manifest.trending ?? []
+    }
+
+    /// Les cours tendance de la langue, tels que le serveur les a comptés ; vide sans manifeste.
+    func trending(for language: AppLanguage) -> [String] {
+        trendingByLanguage[language.rawValue] ?? []
     }
 
     private func readManifestFromDisk(_ language: AppLanguage) -> CatalogManifest? {

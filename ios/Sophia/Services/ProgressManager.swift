@@ -685,6 +685,14 @@ class ProgressManager {
 
     var readingSeconds: Int { progress.readingSeconds }
 
+    var avatarId: String? { progress.avatarId }
+
+    /// L'avatar du profil (nil : les initiales). Suit la progression, donc le multi-appareils.
+    func setAvatar(_ id: String?) {
+        progress.avatarId = id
+        save()
+    }
+
     /// Ajoute le temps passé sur une section quittée. Plafonné à une heure par appel : un
     /// téléphone laissé ouvert sur une page ne compte pas comme une nuit de lecture.
     func addReadingSeconds(_ seconds: Int) {

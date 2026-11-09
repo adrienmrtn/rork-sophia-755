@@ -241,10 +241,14 @@ struct ExploreView: View {
 
     // MARK: - On cherche beaucoup cette semaine
 
-    /// Six cours au titre court, tirés une fois par semaine (graine = semaine ISO) parmi ceux
-    /// que le lecteur n'a pas encore lus. Ils tiennent lieu de « tendances » jusqu'à ce que le
-    /// serveur compte les vraies recherches.
+    /// Les cours les plus ouverts de la semaine dans la langue, comptés chaque nuit par le serveur
+    /// (`trending` du manifeste), moins ceux déjà lus. Faute de données (pas encore d'événements),
+    /// six cours au titre court tirés une fois par semaine (graine = semaine ISO) parmi les non lus.
     private var trendingCourses: [Course] {
+        let fromServer = CatalogStore.shared.trending(for: languageManager.current)
+            .compactMap { ContentCatalog.course(withId: $0) }
+            .filter { progressManager.courseStatus(for: $0.id) != .completed }
+        if fromServer.count >= 3 { return Array(fromServer.prefix(6)) }
         let calendar = Calendar(identifier: .iso8601)
         let now = Date()
         let seed = "\(calendar.component(.yearForWeekOfYear, from: now))-\(calendar.component(.weekOfYear, from: now))"
