@@ -19,6 +19,8 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.snapshots.SnapshotStateList
 import androidx.compose.ui.Alignment
@@ -114,7 +116,6 @@ fun NewGenTabs(
     LaunchedEffect(language) {
         withContext(Dispatchers.IO) {
             AuthorStore.preload(context.applicationContext)
-            CampaignStore.all(context.applicationContext)
             ContentCatalog.summaries(context.applicationContext, language)
         }
     }
@@ -322,7 +323,8 @@ private fun RouteScreen(
             }
         }
         is NewGenRoute.Event -> {
-            val campaign = remember(route.slug) { CampaignStore.campaign(context.applicationContext, route.slug) }
+            val campaigns by CampaignStore.flow.collectAsState()
+            val campaign = remember(route.slug, campaigns) { CampaignStore.campaign(route.slug) }
             if (campaign == null) {
                 MissingRoute(language = language, onBack = onBack, modifier = modifier)
             } else {

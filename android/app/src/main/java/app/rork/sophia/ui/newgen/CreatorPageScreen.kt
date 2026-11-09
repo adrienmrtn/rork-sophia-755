@@ -23,6 +23,7 @@ import androidx.compose.material.icons.outlined.Notifications
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.remember
@@ -82,8 +83,9 @@ fun CreatorPageScreen(
     val followers = LocalCounters.followers(author.slug) + (if (isFollowing) 1 else 0)
 
     /** L'annonce « en écriture » de ce créateur dans un événement actif, s'il y en a une. */
-    val writingFor = remember(author.slug) {
-        CampaignStore.active(context.applicationContext).firstNotNullOfOrNull { campaign ->
+    val campaigns by CampaignStore.flow.collectAsState()
+    val writingFor = remember(author.slug, campaigns) {
+        CampaignStore.active().firstNotNullOfOrNull { campaign ->
             campaign.upcoming.firstOrNull { it.creator == author.slug }?.let { campaign to it }
         }
     }

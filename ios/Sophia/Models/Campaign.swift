@@ -3,8 +3,8 @@ import Foundation
 /// Un événement éditorial (« Movember », une semaine thématique…) : une collection de cours à
 /// lire pendant une période, un défi avec un badge, et des cours annoncés en écriture.
 ///
-/// Mêmes champs que la table `campaigns` prévue côté serveur (prompt 6). En attendant, les
-/// événements viennent de JSON de test dans `Resources/Events/` (source : `content/events/`).
+/// Mêmes champs que la table `campaigns` côté serveur, servie par le manifeste du catalogue
+/// (clé `events`, voir docs/evenements.md) ; `CampaignStore` lit ce que `CatalogStore` a reçu.
 /// Les textes sont donnés par langue (`fr`, `en`…) et retombent sur l'anglais puis le français.
 nonisolated struct Campaign: Decodable, Identifiable, Sendable, Hashable {
     nonisolated struct Upcoming: Decodable, Sendable, Hashable {
@@ -20,7 +20,9 @@ nonisolated struct Campaign: Decodable, Identifiable, Sendable, Hashable {
     }
 
     let slug: String
-    /// Symbole SF illustrant l'événement (`mustache.fill`).
+    /// Le type standard : `month`, `week`, `day` ou `series`. Réservé (les apps n'en font rien encore).
+    let kind: String?
+    /// Symbole SF illustrant l'événement (`mustache.fill`), parmi la liste standard de docs/evenements.md.
     let symbol: String?
     let startsAt: String
     let endsAt: String
@@ -41,7 +43,7 @@ nonisolated struct Campaign: Decodable, Identifiable, Sendable, Hashable {
     nonisolated func hash(into hasher: inout Hasher) { hasher.combine(slug) }
 
     enum CodingKeys: String, CodingKey {
-        case slug, symbol, upcoming, title, tagline, description, participants
+        case slug, kind, symbol, upcoming, title, tagline, description, participants
         case startsAt = "starts_at"
         case endsAt = "ends_at"
         case challengeTarget = "challenge_target"

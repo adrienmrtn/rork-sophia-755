@@ -8,6 +8,7 @@ import app.rork.sophia.BuildConfig
 import app.rork.sophia.SophiaApplication
 import app.rork.sophia.data.GlossaryEntry
 import app.rork.sophia.domain.AppLanguage
+import app.rork.sophia.domain.Campaign
 import app.rork.sophia.domain.CourseSummary
 import app.rork.sophia.domain.LearningCollection
 import app.rork.sophia.domain.QuizQuestion
@@ -91,6 +92,15 @@ object CatalogStore {
      * lecture). Un écran qui le collecte se recompose quand le catalogue change.
      */
     val version: StateFlow<Int> = _version.asStateFlow()
+
+    private val _campaigns = MutableStateFlow<List<Campaign>>(emptyList())
+
+    /**
+     * Les événements éditoriaux du dernier manifeste lu (disque ou réseau), du plus ancien au plus
+     * récent. `CampaignStore` les sert aux écrans, qui collectent ce flux pour se recomposer quand
+     * un rafraîchissement en apporte.
+     */
+    val campaigns: StateFlow<List<Campaign>> = _campaigns.asStateFlow()
 
     @Volatile
     var config: CatalogRemoteConfig = CatalogRemoteConfig()
@@ -250,7 +260,7 @@ object CatalogStore {
         attach(context)
         withContext(Dispatchers.IO) {
             val code = language.code
-            if (manifests[code] == null) readManifestFromDisk(code)?.let { manifests[code] = it }
+            if (manifests[code] == null) readManifestFromDisk(code)?.let { adopt(code, it) }
             val last = prefs().getLong(lastRefreshKey(code), 0L)
             val fresh = manifests[code] != null && last > 0L &&
                 System.currentTimeMillis() - last < (config.refreshHours * 3_600_000.0).toLong()
@@ -289,7 +299,7 @@ object CatalogStore {
 
     private fun performRefresh(language: AppLanguage, force: Boolean) {
         val code = language.code
-        if (manifests[code] == null) readManifestFromDisk(code)?.let { manifests[code] = it }
+        if (manifests[code] == null) readManifestFromDisk(code)?.let { adopt(code, it) }
         // Deux appelants en même temps (lancement et premier plan, deux fiches ouvertes) : le
         // second trouve un manifeste tout frais et s'arrête là.
         if (!force && manifests[code] != null &&
@@ -311,7 +321,7 @@ object CatalogStore {
         if (response.status != 200) return
         val text = response.body ?: return
         val manifest = decodeOrNull<CatalogManifest>(text) ?: return
-        manifests[code] = manifest
+        adopt(code, manifest)
         write(code, "manifest.json", text)
         response.etag?.let { prefs().edit().putString(etagKey(code), it).apply() }
 
@@ -332,6 +342,14 @@ object CatalogStore {
             bumpVersion()
         }
         markRefreshed(code)
+    }
+
+    /** Garde le manifeste et publie ses événements éditoriaux (le même jeu quelle que soit la langue). */
+    private fun adopt(code: String, manifest: CatalogManifest) {
+        manifests[code] = manifest
+        _campaigns.value = manifest.events
+            .filter { it.slug.isNotBlank() && it.startDate != null && it.endDate != null }
+            .sortedBy { it.startsAt }
     }
 
     private fun markRefreshed(code: String) {

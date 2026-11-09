@@ -9,7 +9,7 @@ import { STORAGE_PUBLIC } from "@/lib/env";
  *  couverture choisie sous le slug du cours. */
 
 const FAL_KEY = process.env.FAL_KEY ?? process.env.FAL_API_KEY ?? "";
-const TEXT_MODEL = process.env.FAL_TEXT_MODEL ?? "google/gemini-2.5-flash";
+export const TEXT_MODEL = process.env.FAL_TEXT_MODEL ?? "google/gemini-2.5-flash";
 const IMAGE_MODEL = process.env.FAL_COVER_MODEL ?? "fal-ai/gemini-25-flash-image";
 
 /** La consigne de direction artistique (celle d'Adrien), passée telle quelle au modèle de texte. */
@@ -42,7 +42,8 @@ export function coversConfigured(): boolean {
   return Boolean(FAL_KEY);
 }
 
-async function fal<T>(path: string, body: unknown): Promise<T> {
+/** Un appel synchrone à fal.run ; partagé avec la traduction des événements (translate.ts). */
+export async function fal<T>(path: string, body: unknown): Promise<T> {
   const res = await fetch(`https://fal.run/${path}`, {
     method: "POST",
     headers: { Authorization: `Key ${FAL_KEY}`, "Content-Type": "application/json" },

@@ -9,18 +9,21 @@ import java.time.format.DateTimeFormatter
  * Un événement éditorial (« Movember », une semaine thématique…) : une collection de cours à
  * lire pendant une période, un défi avec un badge, et des cours annoncés en écriture.
  *
- * Mêmes champs que la table `campaigns` prévue côté serveur (prompt 6). En attendant, les
- * événements viennent de JSON de test dans `assets/events/` (source : `content/events/`,
- * mêmes fichiers qu'iOS). Les textes sont donnés par langue (`fr`, `en`…) et retombent sur
- * l'anglais puis le français.
+ * Mêmes champs que la table `campaigns` côté serveur, servie par le manifeste du catalogue
+ * (clé `events`, voir docs/evenements.md) ; `CampaignStore` lit ce que `CatalogStore` a reçu.
+ * Les textes sont donnés par langue (`fr`, `en`…) et retombent sur l'anglais puis le français.
+ * Tous les champs ont une valeur par défaut : un événement incomplet ne fait pas échouer le
+ * décodage du manifeste (le store écarte ensuite ceux sans slug ni dates).
  */
 @Serializable
 data class Campaign(
-    val slug: String,
+    val slug: String = "",
+    /** Le type standard : `month`, `week`, `day` ou `series`. Réservé (les apps n'en font rien encore). */
+    val kind: String? = null,
     /** Symbole SF illustrant l'événement (`mustache.fill`), traduit en icône Material à l'affichage. */
     val symbol: String? = null,
-    @SerialName("starts_at") val startsAt: String,
-    @SerialName("ends_at") val endsAt: String,
+    @SerialName("starts_at") val startsAt: String = "",
+    @SerialName("ends_at") val endsAt: String = "",
     /** Nombre de cours de la collection à terminer pour obtenir le badge. */
     @SerialName("challenge_target") val challengeTarget: Int = 1,
     /** Lecteurs participants affichés (valeur de test tant que le serveur ne compte pas). */

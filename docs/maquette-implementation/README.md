@@ -29,9 +29,9 @@ que dans `maquette/`.
 - **Séries** d'un créateur : onglet présent, vide pour l'instant (pas de données).
 - **« Traduit de l'anglais · Voir l'original »** : la ligne n'apparaît que lorsque le JSON
   du cours porte `originalLanguage` (prévu pour les cours de créateurs, prompt 3).
-- **Événement** : alimenté par `content/events/movember.json` (copié dans
-  `ios/Sophia/Resources/Events/` et `android/app/src/main/assets/events/`). Les titres des
-  cours « en écriture » sont des exemples.
+- **Événement** : servi par le manifeste du catalogue depuis la table `campaigns`, éditée dans
+  l'admin du site (docs/evenements.md). `content/events/movember.json` n'est plus embarqué : il
+  reste l'exemple du format, et l'amorce de la ligne `movember-2026` (en brouillon).
 - **Navigation** : les 4 onglets sont derrière un drapeau tiré au sort à l'installation
   (`FeatureFlags.navigationVariant`, A/B 50 %) ; les 5 onglets historiques restent la
   variante témoin. Réglages → section développeur pour forcer l'une ou l'autre.

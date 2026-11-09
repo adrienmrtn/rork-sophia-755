@@ -27,6 +27,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
@@ -127,10 +128,7 @@ fun HomeFeedScreen(
         if (deckReady && HomeFeedSession.matches(language, completedCount)) return@LaunchedEffect
         val summaries = ContentCatalog.summariesAsync(context.applicationContext, language)
         CourseAffinityStore.load(context.applicationContext)
-        withContext(Dispatchers.IO) {
-            AuthorStore.preload(context.applicationContext)
-            CampaignStore.all(context.applicationContext)
-        }
+        withContext(Dispatchers.IO) { AuthorStore.preload(context.applicationContext) }
         val built = withContext(Dispatchers.Default) { buildDeck(summaries) }
         HomeFeedSession.save(language, completedCount, built)
         deck = built
@@ -141,7 +139,9 @@ fun HomeFeedScreen(
         CatalogStore.prefetch(built.take(8).map { it.id }, language)
     }
 
-    val activeCampaign = remember(deckReady) { CampaignStore.active(context.applicationContext).firstOrNull() }
+    // Les événements arrivent avec le manifeste du catalogue, parfois après le deck : on les collecte.
+    val campaigns by CampaignStore.flow.collectAsState()
+    val activeCampaign = remember(deckReady, campaigns) { CampaignStore.active().firstOrNull() }
     val authors = remember(deckReady) { AuthorStore.all(context.applicationContext) }
 
     /** Le deck, l'événement en troisième position et l'invitation en septième. */

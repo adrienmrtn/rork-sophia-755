@@ -20,11 +20,31 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.automirrored.filled.DirectionsRun
+import androidx.compose.material.icons.automirrored.filled.MenuBook
+import androidx.compose.material.icons.filled.AcUnit
+import androidx.compose.material.icons.filled.AccountBalance
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.AutoAwesome
+import androidx.compose.material.icons.filled.CardGiftcard
 import androidx.compose.material.icons.filled.Check
+import androidx.compose.material.icons.filled.DarkMode
+import androidx.compose.material.icons.filled.Eco
 import androidx.compose.material.icons.filled.Edit
+import androidx.compose.material.icons.filled.EmojiEvents
+import androidx.compose.material.icons.filled.Favorite
+import androidx.compose.material.icons.filled.Flag
+import androidx.compose.material.icons.filled.LocalFireDepartment
+import androidx.compose.material.icons.filled.MusicNote
+import androidx.compose.material.icons.filled.Palette
+import androidx.compose.material.icons.filled.Psychology
+import androidx.compose.material.icons.filled.Public
+import androidx.compose.material.icons.filled.School
+import androidx.compose.material.icons.filled.Science
+import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.filled.Verified
+import androidx.compose.material.icons.filled.WaterDrop
+import androidx.compose.material.icons.filled.WbSunny
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -787,16 +807,40 @@ fun FollowedCreatorsRow(
 }
 
 /**
- * Le symbole d'un événement (`symbol` du JSON, un nom SF Symbols) : la moustache est dessinée
- * à la main faute d'icône Material ; tout autre symbole retombe sur les étincelles.
+ * Le symbole d'un événement : un nom SF Symbols de la liste standard (docs/evenements.md), rendu
+ * par l'icône Material correspondante. La moustache est dessinée à la main faute d'icône ; un
+ * symbole inconnu retombe sur les étincelles.
  */
 @Composable
 fun CampaignSymbol(symbol: String?, size: Dp, tint: Color, modifier: Modifier = Modifier) {
     if (symbol == "mustache.fill") {
         MustacheGlyph(size = size, color = tint, modifier = modifier)
-    } else {
-        Icon(imageVector = Icons.Filled.AutoAwesome, contentDescription = null, tint = tint, modifier = modifier.size(size))
+        return
     }
+    val icon = when (symbol) {
+        "heart.fill" -> Icons.Filled.Favorite
+        "star.fill" -> Icons.Filled.Star
+        "flame.fill" -> Icons.Filled.LocalFireDepartment
+        "leaf.fill" -> Icons.Filled.Eco
+        "globe.europe.africa.fill" -> Icons.Filled.Public
+        "book.fill" -> Icons.AutoMirrored.Filled.MenuBook
+        "flag.fill" -> Icons.Filled.Flag
+        "drop.fill" -> Icons.Filled.WaterDrop
+        "sun.max.fill" -> Icons.Filled.WbSunny
+        "moon.fill" -> Icons.Filled.DarkMode
+        "graduationcap.fill" -> Icons.Filled.School
+        "brain.head.profile" -> Icons.Filled.Psychology
+        "figure.run" -> Icons.AutoMirrored.Filled.DirectionsRun
+        "music.note" -> Icons.Filled.MusicNote
+        "paintpalette.fill" -> Icons.Filled.Palette
+        "building.columns.fill" -> Icons.Filled.AccountBalance
+        "snowflake" -> Icons.Filled.AcUnit
+        "gift.fill" -> Icons.Filled.CardGiftcard
+        "trophy.fill" -> Icons.Filled.EmojiEvents
+        "atom" -> Icons.Filled.Science
+        else -> Icons.Filled.AutoAwesome
+    }
+    Icon(imageVector = icon, contentDescription = null, tint = tint, modifier = modifier.size(size))
 }
 
 /** Une moustache en deux boucles symétriques, pleine. */
