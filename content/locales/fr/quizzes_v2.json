@@ -34609,5 +34609,84 @@
         "correctIndex": 0
       }
     ]
+  },
+  {
+    "courseId": "course_314_carl_lewis_king_of_sprint_and_long_jump",
+    "quiz": [
+      {
+        "id": "course_314_carl_lewis_king_of_sprint_and_long_jump_q1",
+        "type": "mcq",
+        "question": "Où Carl Lewis est-il né ?",
+        "explanation": "Carl Lewis est né à Birmingham, en Alabama, comme indiqué au début du cours.",
+        "options": [
+          "Birmingham, Alabama",
+          "Willingboro, New Jersey",
+          "Houston, Texas",
+          "Los Angeles, Californie"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_314_carl_lewis_king_of_sprint_and_long_jump_q2",
+        "type": "trueFalse",
+        "question": "Carl Lewis a participé aux Jeux olympiques de Moscou en 1980.",
+        "explanation": "Faux. Bien qu'il ait obtenu une place dans l'équipe olympique américaine en 1980, il n'est jamais allé à Moscou en raison du boycott américain.",
+        "options": [
+          "Vrai",
+          "Faux"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "id": "course_314_carl_lewis_king_of_sprint_and_long_jump_q3",
+        "type": "mcq",
+        "question": "Qui était Carol Lewis ?",
+        "explanation": "Carol Lewis était la sœur cadette de Carl Lewis, également une sauteuse en longueur de haut niveau qui a participé aux Jeux olympiques de 1984.",
+        "options": [
+          "Sa sœur cadette, sauteuse en longueur",
+          "Sa mère, coureuse de haies",
+          "Son entraîneur à Houston",
+          "Sa partenaire de relais"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_314_carl_lewis_king_of_sprint_and_long_jump_q4",
+        "type": "mcq",
+        "question": "À quelle performance de Jesse Owens Carl Lewis a-t-il égalé en 1984 ?",
+        "explanation": "Carl Lewis a égalé l'exploit de Jesse Owens de 1936 en remportant quatre médailles d'or aux Jeux olympiques de Los Angeles.",
+        "options": [
+          "Quatre médailles d'or",
+          "Trois titres mondiaux",
+          "Record du monde du 100 m",
+          "Neuf médailles olympiques"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_314_carl_lewis_king_of_sprint_and_long_jump_q5",
+        "type": "mcq",
+        "question": "Quelles épreuves Carl Lewis a-t-il remportées aux Jeux de Los Angeles en 1984 ?",
+        "explanation": "Carl Lewis a gagné quatre médailles d'or : le 100 m, le 200 m, le saut en longueur et le relais 4x100 m.",
+        "options": [
+          "100 m, 200 m, saut en longueur, relais 4x100 m",
+          "100 m, 110 m haies, saut en longueur, relais 4x400 m",
+          "100 m, 200 m, triple saut, relais 4x100 m",
+          "200 m, 400 m, saut en longueur, relais 4x100 m"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_314_carl_lewis_king_of_sprint_and_long_jump_q6",
+        "type": "trueFalse",
+        "question": "Le public de Los Angeles a hué Carl Lewis en partie parce qu'il a renoncé à ses derniers essais au saut en longueur.",
+        "explanation": "Vrai. Une partie du public l'a hué après qu'il eut pris de l'avance au saut en longueur et renoncé à ses dernières tentatives pour économiser ses jambes.",
+        "options": [
+          "Vrai",
+          "Faux"
+        ],
+        "correctIndex": 0
+      }
+    ]
   }
 ]

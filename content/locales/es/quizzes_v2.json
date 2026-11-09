@@ -34609,5 +34609,84 @@
         "correctIndex": 0
       }
     ]
+  },
+  {
+    "courseId": "course_314_carl_lewis_king_of_sprint_and_long_jump",
+    "quiz": [
+      {
+        "id": "course_314_carl_lewis_king_of_sprint_and_long_jump_q1",
+        "type": "mcq",
+        "question": "¿Dónde nació Carl Lewis?",
+        "explanation": "Carl Lewis nació en Birmingham, Alabama, como se indica al principio del curso.",
+        "options": [
+          "Birmingham, Alabama",
+          "Willingboro, Nueva Jersey",
+          "Houston, Texas",
+          "Los Ángeles, California"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_314_carl_lewis_king_of_sprint_and_long_jump_q2",
+        "type": "trueFalse",
+        "question": "Carl Lewis participó en los Juegos Olímpicos de Moscú en 1980.",
+        "explanation": "Falso. Aunque obtuvo un lugar en el equipo olímpico estadounidense en 1980, nunca fue a Moscú debido al boicot estadounidense.",
+        "options": [
+          "Verdadero",
+          "Falso"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "id": "course_314_carl_lewis_king_of_sprint_and_long_jump_q3",
+        "type": "mcq",
+        "question": "¿Quién era Carol Lewis?",
+        "explanation": "Carol Lewis era la hermana menor de Carl Lewis, también una saltadora de longitud de alto nivel que participó en los Juegos Olímpicos de 1984.",
+        "options": [
+          "Su hermana menor, saltadora de longitud",
+          "Su madre, vallista",
+          "Su entrenador en Houston",
+          "Su compañera de relevo"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_314_carl_lewis_king_of_sprint_and_long_jump_q4",
+        "type": "mcq",
+        "question": "¿Qué hazaña de Jesse Owens igualó Carl Lewis en 1984?",
+        "explanation": "Carl Lewis igualó la hazaña de Jesse Owens de 1936 al ganar cuatro medallas de oro en los Juegos Olímpicos de Los Ángeles.",
+        "options": [
+          "Cuatro medallas de oro",
+          "Tres títulos mundiales",
+          "Récord mundial de los 100 m",
+          "Nueve medallas olímpicas"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_314_carl_lewis_king_of_sprint_and_long_jump_q5",
+        "type": "mcq",
+        "question": "¿Qué pruebas ganó Carl Lewis en los Juegos de Los Ángeles en 1984?",
+        "explanation": "Carl Lewis ganó cuatro medallas de oro: los 100 m, los 200 m, el salto de longitud y el relevo 4x100 m.",
+        "options": [
+          "100 m, 200 m, salto de longitud, relevo 4x100 m",
+          "100 m, 110 m vallas, salto de longitud, relevo 4x400 m",
+          "100 m, 200 m, triple salto, relevo 4x100 m",
+          "200 m, 400 m, salto de longitud, relevo 4x100 m"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_314_carl_lewis_king_of_sprint_and_long_jump_q6",
+        "type": "trueFalse",
+        "question": "El público de Los Ángeles abucheó a Carl Lewis en parte porque renunció a sus últimos intentos en el salto de longitud.",
+        "explanation": "Verdadero. Parte del público lo abucheó después de que tomó ventaja en el salto de longitud y renunció a sus últimos intentos para cuidar sus piernas.",
+        "options": [
+          "Verdadero",
+          "Falso"
+        ],
+        "correctIndex": 0
+      }
+    ]
   }
 ]
