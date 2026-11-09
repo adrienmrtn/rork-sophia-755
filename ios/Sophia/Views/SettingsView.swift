@@ -443,6 +443,15 @@ struct SettingsView: View {
                 infoRow(label: languageManager.text("settings.about.version"), value: appVersionString)
                 rowDivider
                 infoRow(label: languageManager.text("settings.about.courses"), value: "\(ContentCatalog.activeCourses.count)")
+                rowDivider
+                // Relit le catalogue en ligne sans attendre le rafraîchissement automatique.
+                actionRow(
+                    icon: "arrow.triangle.2.circlepath",
+                    title: languageManager.text("settings.debug.catalogRefresh")
+                ) {
+                    hapticTrigger += 1
+                    Task { await CatalogStore.shared.refresh(language: languageManager.current, force: true) }
+                }
             }
         }
     }

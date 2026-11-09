@@ -504,6 +504,16 @@ fun SettingsScreen(
                 showChevron = false,
                 onClick = {},
             )
+            // Relit le catalogue en ligne sans attendre le rafraîchissement automatique.
+            HorizontalDivider(color = DS.hairline)
+            SettingsRow(
+                icon = Icons.Filled.CloudDownload,
+                label = StringStore.text(context, "settings.debug.catalogRefresh", language),
+                showChevron = false,
+                onClick = {
+                    scope.launch { CatalogStore.refresh(context.applicationContext, language, force = true) }
+                },
+            )
         }
 
         Spacer(Modifier.height(24.dp))
