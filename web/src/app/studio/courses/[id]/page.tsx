@@ -5,6 +5,8 @@ import { getDraft } from "@/lib/studio/data";
 import type { DraftCourse } from "@/lib/studio/course-format";
 
 export const dynamic = "force-dynamic";
+/** La génération des couvertures (deux appels fal.ai) peut prendre une trentaine de secondes. */
+export const maxDuration = 60;
 
 /** L'éditeur d'un cours : la page charge le brouillon, le composant client fait le reste. */
 export default async function EditorPage({ params }: PageProps<"/studio/courses/[id]">) {

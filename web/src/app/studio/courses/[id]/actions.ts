@@ -4,7 +4,9 @@ import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
 import { SUBJECTS, type Block, type GlossaryEntry, type Section, type Source } from "@/lib/catalog/types";
 import { getStudioSession } from "@/lib/studio/account";
-import { BLOCK_TYPES, CLASSIFICATIONS, type DraftCourse, type Hero } from "@/lib/studio/course-format";
+import { BLOCK_TYPES, CLASSIFICATIONS, MAX_COVER_GENERATIONS, type DraftCourse, type Hero } from "@/lib/studio/course-format";
+import { coversConfigured, generateCoverImages, storeCovers, writeCoverPrompt } from "@/lib/studio/covers";
+import { MOCK_STUDIO } from "@/lib/studio/mock";
 
 type SaveResult = { ok: true; updatedAt: string } | { ok: false; error: string };
 
@@ -29,6 +31,9 @@ async function sanitizeCourse(raw: unknown): Promise<DraftCourse> {
     ratio: opt(heroRaw.ratio, 10) ?? "16:9",
     ...(opt(heroRaw.hook, 200) ? { hook: opt(heroRaw.hook, 200) } : {}),
     ...(creditRaw ? { credit: { title: opt(creditRaw.title, 300), author: opt(creditRaw.author, 300), license: opt(creditRaw.license, 120), source: opt(creditRaw.source, 300) } } : {}),
+    ...(Array.isArray(heroRaw.candidates) ? { candidates: heroRaw.candidates.slice(0, 12).map((c: unknown) => ({ url: str((c as Record<string, unknown>)?.url, 1000) })).filter((c: { url: string }) => /^(https:\/\/|\/)/.test(c.url)) } : {}),
+    ...(typeof heroRaw.generations === "number" ? { generations: Math.max(0, Math.min(10, Math.round(heroRaw.generations))) } : {}),
+    ...(opt(heroRaw.prompt, 2000) ? { prompt: opt(heroRaw.prompt, 2000) } : {}),
   };
   const sections: Section[] = (Array.isArray(r.sections) ? r.sections : []).slice(0, 12).map((sec: unknown, i: number) => {
     const s = (sec && typeof sec === "object" ? sec : {}) as Record<string, unknown>;
@@ -143,4 +148,31 @@ function translateDbError(message: string): string {
   ];
   for (const [re, en] of map) if (re.test(message)) return en;
   return message;
+}
+
+type CoversResult = { ok: true; candidates: string[]; prompt: string } | { ok: false; error: string };
+
+/** Trois couvertures 16:9 générées à partir du titre ; l'auteur en choisira une avant l'envoi.
+ *  Trois tirages au plus par brouillon. Les candidates sont gardées sur le brouillon. */
+export async function generateCovers(id: string, raw: unknown): Promise<CoversResult> {
+  const session = await getStudioSession();
+  if (!session) return { ok: false, error: "Signed out. Sign in again." };
+  const saved = await saveDraft(id, raw);
+  if (!saved.ok) return saved;
+  const course = await sanitizeCourse(raw);
+  if (course.title.trim().length < 3) return { ok: false, error: "Give the course a title first: the cover is drawn from it." };
+  const generations = course.hero.generations ?? 0;
+  if (generations >= MAX_COVER_GENERATIONS) return { ok: false, error: `You have used the ${MAX_COVER_GENERATIONS} rounds of covers for this course. Pick one of them, or ask the team.` };
+  if (MOCK_STUDIO) return { ok: true, candidates: ["/art/poster_histoire.webp", "/art/poster_art.webp", "/art/poster_sciences.webp"], prompt: "Mock prompt" };
+  if (!coversConfigured()) return { ok: false, error: "Cover generation is not configured on the server (FAL_KEY)." };
+  try {
+    const prompt = await writeCoverPrompt({ title: course.title, subject: course.subject, subtitle: course.subtitle, description: course.description });
+    const urls = await generateCoverImages(prompt, 3);
+    const stored = await storeCovers(id, urls);
+    const hero: Hero = { ...course.hero, candidates: [...(course.hero.candidates ?? []), ...stored.map((url) => ({ url }))].slice(-9), generations: generations + 1, prompt };
+    await session.supabase.from("studio_drafts").update({ hero }).eq("id", id).eq("user_id", session.user.id).in("status", ["draft", "changes_requested"]);
+    return { ok: true, candidates: stored, prompt };
+  } catch (e) {
+    return { ok: false, error: e instanceof Error ? e.message : "Cover generation failed." };
+  }
 }
