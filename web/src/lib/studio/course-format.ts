@@ -214,7 +214,7 @@ export function toPublishBody(
   course: DraftCourse,
   originLang: string,
   creator: { slug: string; name: string; title?: string | null; bio?: string | null; photo_url?: string | null; institution?: string | null; country?: string | null; links?: Record<string, string> | null; verified?: boolean },
-  options: { appCourseId?: string | null; skipAudio?: boolean; requestedBy?: string } = {},
+  options: { appCourseId?: string | null; skipAudio?: boolean; requestedBy?: string; languages?: string[] | null } = {},
 ) {
   if (!(LANGS as readonly string[]).includes(originLang)) throw new Error(`Unknown language ${originLang}`);
   const hero: Hero = {};
@@ -256,7 +256,7 @@ export function toPublishBody(
       links: creator.links ?? {},
       verified: creator.verified ?? false,
     },
-    options: { skip_audio: options.skipAudio ?? true },
+    options: { skip_audio: options.skipAudio ?? true, ...(options.languages && options.languages.length ? { languages: options.languages.filter((l) => l !== originLang) } : {}) },
   };
 }
 

@@ -277,9 +277,9 @@ export function mockSession(): StudioSession | null {
   if (!MOCK_STUDIO) return null;
   const user = { id: USER_ID, email: account.email, user_metadata: { full_name: "Marie Dupont" }, app_metadata: {}, aud: "authenticated", created_at: "" } as unknown as User;
   const supabase = mockClient();
-  if (MOCK_STUDIO === "new") return { supabase, user, account: null, isAdmin: false, agreementSigned: false };
-  if (MOCK_STUDIO === "onboarding") return { supabase, user, account: { ...account, status: "pending", onboarding_step: "profile", display_name: null, title: null, bio: null, approved_at: null, guide_read_at: null }, isAdmin: false, agreementSigned: false };
-  return { supabase, user, account, isAdmin: true, agreementSigned: true };
+  if (MOCK_STUDIO === "new") return { supabase, user, account: null, isAdmin: false, agreementSigned: false, publicPage: false };
+  if (MOCK_STUDIO === "onboarding") return { supabase, user, account: { ...account, status: "pending", onboarding_step: "profile", display_name: null, title: null, bio: null, approved_at: null, guide_read_at: null }, isAdmin: false, agreementSigned: false, publicPage: false };
+  return { supabase, user, account, isAdmin: true, agreementSigned: true, publicPage: true };
 }
 
 export const MOCK_DRAFT_IDS = DRAFT_IDS;

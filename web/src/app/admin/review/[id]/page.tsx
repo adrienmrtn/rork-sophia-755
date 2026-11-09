@@ -8,6 +8,8 @@ import { Card, Initials, container } from "@/components/ui";
 import { renderInline } from "@/lib/catalog/inline";
 import { SUBJECT_LABEL } from "@/lib/catalog/slugs";
 import { getStudioSession, type CreatorAccount } from "@/lib/studio/account";
+import { LANGS } from "@/lib/catalog/types";
+import { LANG_NAMES } from "@/lib/catalog/lang-names";
 import { getDraft, getJob, listReviews, shortDateTime } from "@/lib/studio/data";
 import { CLASSIFICATION_LABEL, courseWords, validateCourse, type Classification, type DraftCourse } from "@/lib/studio/course-format";
 import { publishDraft, reviewDraft } from "@/app/admin/actions";
@@ -180,12 +182,28 @@ export default async function ReviewPage({ params, searchParams }: PageProps<"/a
             <Card className="flex flex-col gap-4 p-5">
               <h2 className="text-[16px] font-extrabold">Decision</h2>
               {canPublish && (
-                <form action={publishDraft} className="flex flex-col gap-2">
+                <form action={publishDraft} className="flex flex-col gap-3">
                   <input type="hidden" name="id" value={draft.id} />
+                  <details className="rounded-xl border border-line bg-paper p-3 text-[13px]">
+                    <summary className="cursor-pointer font-bold text-ink-2">
+                      Languages: all 29 by default <span className="font-medium text-muted">(click to choose)</span>
+                    </summary>
+                    <p className="mt-2 text-[12px] text-muted">
+                      {draft.origin_lang.toUpperCase()} is the original and is always published. Untick the languages this course should not be translated into.
+                    </p>
+                    <div className="mt-2 grid grid-cols-2 gap-x-3 gap-y-1.5 sm:grid-cols-3">
+                      {LANGS.filter((l) => l !== draft.origin_lang).map((l) => (
+                        <label key={l} className="flex items-center gap-1.5 text-[12px] font-semibold text-ink-2">
+                          <input type="checkbox" name="languages" value={l} defaultChecked className="h-3.5 w-3.5 accent-navy" />
+                          {LANG_NAMES[l] ?? l}
+                        </label>
+                      ))}
+                    </div>
+                  </details>
                   <button type="submit" className="inline-flex h-11 items-center justify-center rounded-btn bg-navy px-4 text-[15px] font-bold text-white hover:bg-ink">
                     {draft.status === "failed" ? "Relaunch production" : draft.status === "accepted" ? "Launch production" : "Accept and launch production"}
                   </button>
-                  <span className="text-[12px] text-muted">Sends the course to publish-course; the factory writes the quiz, the glossary and 29 translations. No narration.</span>
+                  <span className="text-[12px] text-muted">Sends the course to publish-course; the factory writes the quiz and the glossary, translates into the chosen languages and publishes each one that passes. No narration. About an hour for 29 languages.</span>
                 </form>
               )}
               {draft.status === "publishing" && <p className="text-[13px] text-ink-3">In production. Decisions reopen once the factory is done.</p>}

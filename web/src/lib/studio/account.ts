@@ -37,6 +37,8 @@ export interface StudioSession {
   account: CreatorAccount | null;
   isAdmin: boolean;
   agreementSigned: boolean;
+  /** Une page publique /authors/<slug> existe (ligne creators), créée à la première publication. */
+  publicPage: boolean;
 }
 
 /** La session du Studio : l'utilisateur, son compte créateur (s'il existe), son rôle, son contrat.
@@ -56,13 +58,14 @@ export const getStudioSession = cache(async (): Promise<StudioSession | null> =>
     created_at: "",
   } as unknown as User;
   const { data } = await supabase.rpc("studio_me");
-  const me = (data ?? null) as { account: CreatorAccount | null; is_admin: boolean; agreement_signed: boolean } | null;
+  const me = (data ?? null) as { account: CreatorAccount | null; is_admin: boolean; agreement_signed: boolean; public_page?: boolean } | null;
   return {
     supabase,
     user,
     account: me?.account ?? null,
     isAdmin: Boolean(me?.is_admin),
     agreementSigned: Boolean(me?.agreement_signed),
+    publicPage: Boolean(me?.public_page),
   };
 });
 
