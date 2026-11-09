@@ -8,7 +8,6 @@ import { headers } from "next/headers";
 import { getStudioSession, slugFromName, type OnboardingStep } from "@/lib/studio/account";
 import { LANGS } from "@/lib/catalog/types";
 import { avatarUrl, isAvatarName } from "@/lib/studio/avatars";
-import { syncPublicPhoto } from "@/lib/studio/author-photo";
 
 type ActionResult = { ok: true } | { ok: false; error: string };
 
@@ -99,17 +98,18 @@ export async function saveProfile(form: FormData): Promise<void> {
     })
     .eq("user_id", user.id);
   if (error) redirect(`${fromOnboarding ? "/studio/onboarding/profile" : "/studio/profile"}?error=${encodeURIComponent(error.message)}`);
-  // La page publique suit le profil (trigger SQL) ; la photo aussi, au cas où elle a changé entre-temps.
-  await syncPublicPhoto(account);
+  // La page publique suit le profil (trigger SQL creator_accounts_sync).
   revalidatePath("/studio");
   revalidatePath("/authors");
   redirect(fromOnboarding ? "/studio/onboarding/agreement" : "/studio/profile?saved=1");
 }
 
 /** Un avatar illustré à la place d'une photo : le fichier du site (public/avatars) est copié dans la
- *  photo du Studio de l'auteur, et suit ensuite le même chemin qu'une photo (publique à l'approbation). */
+ *  photo du Studio de l'auteur, et suit ensuite le même chemin qu'une photo : la base la rend
+ *  publique (trigger creator_accounts_photo_sync → Edge Function author-photo-sync) si le compte
+ *  est approuvé, et le catalogue des apps est recalculé dans la minute. */
 export async function chooseAvatar(name: string): Promise<ActionResult & { url?: string }> {
-  const { supabase, user, account } = await requireSession();
+  const { supabase, user } = await requireSession();
   if (!isAvatarName(name)) return { ok: false, error: "Unknown avatar." };
   let bytes: Uint8Array;
   try {
@@ -122,19 +122,18 @@ export async function chooseAvatar(name: string): Promise<ActionResult & { url?:
   if (upErr) return { ok: false, error: upErr.message };
   const { error } = await supabase.from("creator_accounts").update({ photo_path: path }).eq("user_id", user.id);
   if (error) return { ok: false, error: error.message };
-  await syncPublicPhoto({ slug: account?.slug ?? null, photo_path: path, status: account?.status ?? "pending" });
   revalidatePath("/studio");
+  revalidatePath("/authors");
   return { ok: true, url: avatarUrl(name) };
 }
 
 /** La photo est téléversée par le navigateur dans studio-photos/<uid>/… ; on enregistre le chemin. */
 export async function savePhotoPath(path: string): Promise<ActionResult> {
-  const { supabase, user, account } = await requireSession();
+  const { supabase, user } = await requireSession();
   if (!path.startsWith(`${user.id}/`)) return { ok: false, error: "Invalid path" };
   const { error } = await supabase.from("creator_accounts").update({ photo_path: path }).eq("user_id", user.id);
   if (error) return { ok: false, error: error.message };
-  // Compte approuvé : la photo publique suit tout de suite (page auteur, apps au prochain catalogue).
-  await syncPublicPhoto({ slug: account?.slug ?? null, photo_path: path, status: account?.status ?? "pending" });
+  // Compte approuvé : la base rend la photo publique (page auteur tout de suite, apps au prochain catalogue).
   revalidatePath("/studio");
   revalidatePath("/authors");
   return { ok: true };

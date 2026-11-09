@@ -40,6 +40,11 @@ Migration `supabase/migrations/20261108180000_online_catalog.sql`.
   l'ordre des niveaux : il verrouille la progression des lecteurs, ne pas le changer à la légère.
 - `course_assets` : couverture, images des blocs et audio d'un cours, avec leur crédit.
 - `catalog_files` (`lang`, `kind`) : le hash des trois fichiers par langue.
+- `catalog_dirty` (une ligne) : posé par trigger dès que `creators` change (nom, bio, photo…) ;
+  `catalog_refinalize_if_dirty()` (pg_cron, chaque minute) recalcule alors les hash de toutes les
+  langues, environ une seconde par langue. Les apps retéléchargent le fichier `catalog` au prochain
+  manifeste. La photo publique d'un auteur suit le même chemin : `author_photo_requests` et l'Edge
+  Function `author-photo-sync` (docs/site-web.md).
 - `app_config` : `catalog` → `{"enabled": true, "refresh_hours": 6, "share": 1.0}`.
 
 RLS : lecture publique (anon et authentifié) de ce qui est publié ; écriture réservée à la clé

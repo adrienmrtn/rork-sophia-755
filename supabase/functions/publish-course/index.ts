@@ -300,11 +300,12 @@ Deno.serve(async (req: Request) => {
   const isNew = !existingCourse;
 
   if (creator) {
-    const { data: current } = await supabase.from("creators").select("title, bio, links").eq("slug", creator.slug).maybeSingle();
+    const { data: current } = await supabase.from("creators").select("title, bio, links, photo_url").eq("slug", creator.slug).maybeSingle();
     const { error: creatorError } = await supabase.from("creators").upsert({
       slug: creator.slug,
       name: creator.name,
-      photo_url: creator.photo_url ?? null,
+      // La photo publique est tenue par author-photo-sync : sans valeur dans la demande, on garde l'actuelle.
+      photo_url: creator.photo_url ?? current?.photo_url ?? null,
       institution: creator.institution ?? null,
       country: creator.country ?? null,
       links: creator.links ?? current?.links ?? {},
