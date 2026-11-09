@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { createClient } from "@/lib/supabase/server";
 import { t } from "@/lib/copy/en";
@@ -48,8 +49,8 @@ export function SiteHeader({ active }: { active?: "explore" | "write" | "premium
   return (
     <header className="border-b border-line bg-white">
       <div className={`${container} flex flex-wrap items-center gap-x-7 gap-y-3 py-3.5`}>
-        <Link href="/" className="text-[26px] font-extrabold tracking-[-0.6px] text-navy">
-          Sophia
+        <Link href="/" aria-label="Sophia, home" className="flex items-center">
+          <Image src="/brand/sophia-logo.png" alt="Sophia" width={1192} height={334} className="h-[34px] w-auto" priority />
         </Link>
         <nav className="flex flex-1 flex-wrap items-center gap-x-6 gap-y-1">
           {link("explore", "/courses", t.nav.explore)}
@@ -100,7 +101,7 @@ export function SiteFooter({ compact = false }: { compact?: boolean }) {
       <div className={`${container} flex flex-col gap-8 pt-12 pb-8`}>
         <div className="flex flex-wrap gap-x-12 gap-y-8">
           <div className="flex min-w-[260px] flex-1 flex-col gap-3.5">
-            <span className="text-[22px] font-extrabold tracking-[-0.5px] text-navy">Sophia</span>
+            <Image src="/brand/sophia-logo.png" alt="Sophia" width={1192} height={334} className="h-[30px] w-auto self-start" />
             <span className="max-w-[280px] text-[14px] leading-relaxed text-ink-3">{t.footer.tagline}</span>
             <StoreButtons size="compact" />
           </div>

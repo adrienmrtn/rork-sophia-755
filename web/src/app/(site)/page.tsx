@@ -161,7 +161,7 @@ export default async function HomePage() {
         </section>
 
         {/* Écrire pour Sophia */}
-        <section className={`${container} pt-10 pb-24`}>
+        <section className={`${container} pt-10 pb-8`}>
           <div className="flex flex-wrap items-center gap-x-12 gap-y-8 rounded-[28px] border border-cream-2 bg-cream p-8 md:p-12">
             <div className="flex min-w-0 flex-[1_1_400px] justify-center">
               <Image src="/art/poster_ecrire.webp" alt={h.ecrireAlt} width={1365} height={1024} className="aspect-[4/3] w-full max-w-[520px] rounded-[24px] object-cover" />
@@ -188,6 +188,35 @@ export default async function HomePage() {
                   {h.seeEditor}
                 </ButtonLink>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Deviens créateur : vidéos courtes et diaporamas. Pas de lien pour l'instant. */}
+        <section id="creators" className={`${container} pb-24`}>
+          <div className="flex flex-wrap items-center gap-x-12 gap-y-8 rounded-[28px] bg-ink p-8 text-white md:p-12">
+            <div className="flex min-w-0 flex-[1_1_460px] flex-col gap-4">
+              <div className="flex flex-wrap items-center gap-3">
+                <span className="text-[13px] font-bold uppercase tracking-[1.2px] text-saffron">{h.creatorEyebrow}</span>
+                <Pill tone="amber">{h.creatorSoon}</Pill>
+              </div>
+              <h2 className="text-[36px] font-extrabold leading-[1.1] tracking-[-0.9px]">{h.creatorTitle}</h2>
+              <p className="text-[16px] leading-[1.55] text-[#DDE3EC]">{h.creatorLead}</p>
+              <ul className="flex flex-col gap-3">
+                {h.creatorItems.map(([title, detail]) => (
+                  <li key={title} className="flex items-start gap-3">
+                    <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-white/15 text-white">
+                      <CheckIcon className="h-3.5 w-3.5" />
+                    </span>
+                    <span className="text-[14px] leading-[1.45] text-[#DDE3EC]">
+                      <strong className="text-white">{title}</strong>: {detail}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="flex min-w-0 flex-[1_1_400px] justify-center">
+              <Image src="/art/poster_createur.webp" alt={h.creatorAlt} width={1365} height={1024} className="aspect-[4/3] w-full max-w-[520px] rounded-[24px] object-cover" />
             </div>
           </div>
         </section>

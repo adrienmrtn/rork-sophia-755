@@ -1,6 +1,8 @@
 package app.rork.sophia.ui.course
 
+import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.background
+import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -12,7 +14,6 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.pager.HorizontalPager
-import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
@@ -42,14 +43,15 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.StrokeCap
+import androidx.compose.ui.hapticfeedback.HapticFeedbackType
+import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import app.rork.sophia.data.AuthorStore
-import app.rork.sophia.data.analytics.Analytics
-import app.rork.sophia.data.catalog.CatalogStore
 import app.rork.sophia.data.ContentCatalog
 import app.rork.sophia.data.CourseCoverUrls
 import app.rork.sophia.data.CourseImagePrefetch
@@ -57,14 +59,17 @@ import app.rork.sophia.data.GlossaryStore
 import app.rork.sophia.data.InAppReviewHelper
 import app.rork.sophia.data.ProgressManager
 import app.rork.sophia.data.StringStore
+import app.rork.sophia.data.analytics.Analytics
+import app.rork.sophia.data.catalog.CatalogStore
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.Course
 import app.rork.sophia.domain.FreemiumGate
-import app.rork.sophia.ui.components.CalmProgressBar
-import app.rork.sophia.ui.components.lockedContentBlur
-import app.rork.sophia.ui.components.CircleIconButton
 import app.rork.sophia.ui.audio.CourseReaderAudioButton
+import app.rork.sophia.ui.components.CalmProgressBar
+import app.rork.sophia.ui.components.CircleIconButton
 import app.rork.sophia.ui.components.SophiaPrimaryButton
+import app.rork.sophia.ui.components.lockedContentBlur
+import app.rork.sophia.ui.newgen.BigHeartOverlay
 import app.rork.sophia.ui.newgen.SegmentedProgressBar
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
@@ -116,6 +121,16 @@ fun CourseScreen(
         rememberPagerState(pageCount = { pages.size.coerceAtLeast(1) })
     }
     val scope = rememberCoroutineScope()
+    val haptics = LocalHapticFeedback.current
+    // Double-tap sur une leçon : le grand cœur du fil, même règle (il n'éteint jamais).
+    var bigHeart by remember(course.id) { mutableIntStateOf(0) }
+    fun likeFromDoubleTap() {
+        haptics.performHapticFeedback(HapticFeedbackType.LongPress)
+        bigHeart++
+        if (progressManager.isLiked(course.id)) return
+        progressManager.toggleLike(course.id)
+        Analytics.log("like", courseId = course.id, screen = "reader")
+    }
 
     // Temps passé par section (`section_view`, docs/events.md) : la section suivie et son
     // heure d'entrée ; -1 quand rien n'est suivi (pages pas prêtes, cours terminé).
@@ -330,7 +345,12 @@ fun CourseScreen(
                 ) { index ->
                     val locked = FreemiumGate.isLessonContentLocked(index, isPremium, isDailyFreeCourse)
                     val page = pages.getOrNull(index) ?: return@HorizontalPager
-                    Box(modifier = Modifier.fillMaxSize()) {
+                    Box(
+                        modifier = Modifier
+                            .fillMaxSize()
+                            // Deux taps n'importe où sur une leçon lue : « j'aime », comme sur la carte du fil.
+                            .then(if (locked) Modifier else Modifier.pointerInput(course.id) { detectTapGestures(onDoubleTap = { likeFromDoubleTap() }) }),
+                    ) {
                         Column(
                             modifier = Modifier
                                 .fillMaxSize()
@@ -397,6 +417,7 @@ fun CourseScreen(
                                 onRequestPaywall("debloquer_cours")
                             }
                         }
+                        BigHeartOverlay(trigger = bigHeart, modifier = Modifier.align(Alignment.Center))
                     }
                 }
             }
