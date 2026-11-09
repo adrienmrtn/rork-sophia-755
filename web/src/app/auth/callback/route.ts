@@ -9,11 +9,15 @@ export async function GET(request: NextRequest) {
   const code = url.searchParams.get("code");
   const tokenHash = url.searchParams.get("token_hash");
   const type = url.searchParams.get("type") as EmailOtpType | null;
-  const nextParam = url.searchParams.get("next") ?? "/studio";
-  const next = nextParam.startsWith("/") ? nextParam : "/studio";
+  const cookieNext = request.cookies.get("sophia_next")?.value;
+  const nextParam = url.searchParams.get("next") ?? (cookieNext ? decodeURIComponent(cookieNext) : null) ?? "/studio";
+  const next = nextParam.startsWith("/") && !nextParam.startsWith("//") ? nextParam : "/studio";
   const supabase = await createClient();
   let error: string | null = null;
-  if (code) {
+  const providerError = url.searchParams.get("error_description") ?? url.searchParams.get("error");
+  if (providerError) {
+    error = providerError;
+  } else if (code) {
     const res = await supabase.auth.exchangeCodeForSession(code);
     error = res.error?.message ?? null;
   } else if (tokenHash && type) {
@@ -22,8 +26,7 @@ export async function GET(request: NextRequest) {
   } else {
     error = "missing_code";
   }
-  if (error) {
-    return NextResponse.redirect(new URL(`/join?error=${encodeURIComponent(error)}`, url.origin));
-  }
-  return NextResponse.redirect(new URL(next, url.origin));
+  const response = NextResponse.redirect(new URL(error ? `/join?error=${encodeURIComponent(error)}&next=${encodeURIComponent(next)}` : next, url.origin));
+  response.cookies.set("sophia_next", "", { path: "/", maxAge: 0 });
+  return response;
 }

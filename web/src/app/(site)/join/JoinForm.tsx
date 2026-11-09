@@ -34,7 +34,12 @@ export function JoinForm({ next, initialMode = "create", initialError }: { next:
   const [error, setError] = useState<string | null>(initialError ?? null);
   const j = t.join;
 
-  const callback = () => `${window.location.origin}/auth/callback?next=${encodeURIComponent(next)}`;
+  /** L'adresse de retour reste fixe (les règles de Supabase la comparent au caractère près) ;
+   *  la page demandée voyage dans un cookie court, lu par /auth/callback. */
+  const callback = () => {
+    document.cookie = `sophia_next=${encodeURIComponent(next)}; Path=/; Max-Age=900; SameSite=Lax${window.location.protocol === "https:" ? "; Secure" : ""}`;
+    return `${window.location.origin}/auth/callback`;
+  };
 
   async function oauth(provider: "google" | "apple") {
     setBusy(true);
