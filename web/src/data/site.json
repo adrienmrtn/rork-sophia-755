@@ -1,0 +1,715 @@
+{
+ "stats": {
+  "courses": 310,
+  "collections": 40,
+  "creators": 16,
+  "languages": 30,
+  "quizQuestions": 2686
+ },
+ "subjects": [
+  {
+   "id": "histoire",
+   "label": "Histoire",
+   "count": 65,
+   "courses": [
+    {
+     "id": "course_13_la_bataille_de_waterloo_1815",
+     "title": "Pourquoi Napoléon a-t-il perdu à Waterloo ?",
+     "subtitle": "1815",
+     "hook": "Une journée de boue en Belgique, et l'Empire s'effondre pour de bon.",
+     "image": "/img/courses/la_bataille_de_waterloo_1815.webp"
+    },
+    {
+     "id": "course_262_comment_pompei_a_t_elle_disparu_en_dix",
+     "title": "Comment Pompéi a-t-elle disparu en dix-huit heures ?",
+     "subtitle": "79 apr. J.-C.",
+     "hook": "Un grondement comme si le ciel se déchirait, puis des pierres qui tombent avant même que l'on comprenne : Pompéi a dix-huit heures à vivre.",
+     "image": "/img/courses/pompeii_forum_ruins_mount_vesuvius_background.webp"
+    },
+    {
+     "id": "course_264_qui_a_vraiment_construit_les_pyramides",
+     "title": "Qui a vraiment construit les pyramides ?",
+     "subtitle": "Ni esclaves ni extraterrestres",
+     "hook": "Des outils en cuivre, des cordes et près de six millions de tonnes de pierre : le carnet de bord d'un inspecteur raconte enfin qui a fait le travail.",
+     "image": "/img/courses/giza_pyramids_khufu_khafre_menkaure_wide_view.webp"
+    },
+    {
+     "id": "course_292_pourquoi_le_titanic_manquait_il_de",
+     "title": "Pourquoi le Titanic manquait-il de canots de sauvetage ?",
+     "subtitle": "1912",
+     "hook": "Le Titanic transportait exactement le nombre de canots exigé par la loi : voilà pourquoi personne n'a jamais été puni pour ses 1 500 morts.",
+     "image": "/img/courses/rms_titanic_departing_southampton_april_1912.webp"
+    }
+   ]
+  },
+  {
+   "id": "sciences",
+   "label": "Sciences",
+   "count": 57,
+   "courses": [
+    {
+     "id": "course_41_pourquoi_le_ciel_est_il_bleu",
+     "title": "Pourquoi le ciel est-il bleu ?",
+     "subtitle": "Lumière & atmosphère",
+     "hook": "Le ciel n'est pas peint en bleu : c'est un tour de magie de la lumière et de l'air.",
+     "image": "/img/courses/pourquoi_le_ciel_est_il_bleu.webp"
+    },
+    {
+     "id": "course_42_pourquoi_reve_t_on",
+     "title": "Pourquoi rêve-t-on ?",
+     "subtitle": "Cerveau & sommeil",
+     "hook": "Tu rêves environ six ans de ta vie. Et tu en oublies presque tout.",
+     "image": "/img/courses/pourquoi_reve_t_on.webp"
+    },
+    {
+     "id": "course_281_comment_meurt_une_etoile",
+     "title": "Comment meurt une étoile ?",
+     "subtitle": "Géante rouge ou supernova",
+     "hook": "Une étoile peut s'éteindre en douceur ou exploser avec une violence inimaginable : tout se joue sur sa masse.",
+     "image": "/img/courses/crab_nebula_supernova_remnant_hubble.webp"
+    },
+    {
+     "id": "course_304_pourquoi_rougit_on",
+     "title": "Pourquoi rougit-on ?",
+     "subtitle": "L'expression la plus humaine",
+     "hook": "Une remarque de travers, et tes joues s'enflamment. Un compliment, et c'est pareil. Personne ne décide de rougir.",
+     "image": "/img/courses/blushing_red_cheeks_woman_portrait_close_up.webp"
+    }
+   ]
+  },
+  {
+   "id": "comprendreLeMonde",
+   "label": "Comprendre le monde",
+   "count": 50,
+   "courses": [
+    {
+     "id": "course_203_les_tensions_autour_de_taiwan",
+     "title": "Pourquoi Taïwan est-elle au cœur des tensions mondiales ?",
+     "subtitle": "23 millions d'habitants, une planète dépendante",
+     "hook": "Une petite île fabrique les puces qui font tourner le monde entier, et Pékin la revendique comme sa province.",
+     "image": "/img/courses/les_tensions_autour_de_taiwan.webp"
+    },
+    {
+     "id": "course_212_les_paradis_fiscaux_expliques",
+     "title": "Paradis fiscaux : où se cachent 10 000 milliards de dollars ?",
+     "subtitle": "10 000 milliards planqués",
+     "hook": "Les îles Caïmans comptent 65 000 habitants et plus de 100 000 entreprises. Bienvenue dans le monde des paradis fiscaux.",
+     "image": "/img/courses/les_paradis_fiscaux_expliques.webp"
+    },
+    {
+     "id": "course_220_la_desinformation_et_les_fake_news",
+     "title": "Pourquoi les fake news vont-elles plus vite que la vérité ?",
+     "subtitle": "Le mensonge à l'ère virale",
+     "hook": "Une étude du MIT a montré que les fake news voyagent 6 fois plus vite que la vérité sur Twitter. Voici pourquoi.",
+     "image": "/img/courses/la_desinformation_et_les_fake_news.webp"
+    },
+    {
+     "id": "course_226_l_ia_et_l_emploi",
+     "title": "L'IA va-t-elle remplacer les métiers du savoir ?",
+     "subtitle": "Menace ou nouvelle vague ?",
+     "hook": "Les machines ont déjà remplacé des bras. Vont-elles maintenant remplacer des cerveaux ?",
+     "image": "/img/courses/l_ia_et_l_emploi.webp"
+    }
+   ]
+  },
+  {
+   "id": "litterature",
+   "label": "Littérature",
+   "count": 47,
+   "courses": [
+    {
+     "id": "course_101_1984_george_orwell",
+     "title": "« 1984 » : comment Winston finit-il par aimer Big Brother ?",
+     "subtitle": "1949",
+     "hook": "Un roman si puissant que ses mots servent encore à nommer la surveillance et le mensonge d'État.",
+     "image": "/img/courses/1984_george_orwell.webp"
+    },
+    {
+     "id": "course_106_frankenstein_mary_shelley",
+     "title": "Qui est le vrai monstre de « Frankenstein » ?",
+     "subtitle": "1818",
+     "hook": "Une nuit orageuse, un pari entre poètes, et le mythe du Prométhée moderne.",
+     "image": "/img/courses/frankenstein_mary_shelley.webp"
+    },
+    {
+     "id": "course_91_les_miserables_victor_hugo",
+     "title": "« Les Misérables » : comment Jean Valjean se rachète-t-il ?",
+     "subtitle": "1862",
+     "hook": "Un morceau de pain volé, dix-neuf ans de bagne, puis une vie entière pour prouver qu'on peut redevenir homme.",
+     "image": "/img/courses/les_miserables_victor_hugo.webp"
+    },
+    {
+     "id": "course_119_le_petit_prince_saint_exupery",
+     "title": "Le Petit Prince, Saint-Exupéry",
+     "subtitle": "1943",
+     "hook": "Apprivoiser, c'est créer des liens : la leçon du renard devenue universelle.",
+     "image": "/img/courses/le_petit_prince_saint_exupery.webp"
+    }
+   ]
+  },
+  {
+   "id": "mythologie",
+   "label": "Mythologie",
+   "count": 46,
+   "courses": [
+    {
+     "id": "course_162_promethee_le_voleur_de_feu",
+     "title": "Pourquoi Prométhée a-t-il volé le feu aux dieux ?",
+     "subtitle": "Le Titan qui défie Zeus",
+     "hook": "Un Titan vole le feu de l'Olympe. Les hommes gagnent la civilisation. Lui gagne un aigle et une chaîne.",
+     "image": "/img/courses/promethee_le_voleur_de_feu.webp"
+    },
+    {
+     "id": "course_172_thesee_et_le_minotaure",
+     "title": "Comment Thésée a-t-il vaincu le Minotaure ?",
+     "subtitle": "Le fil, le monstre, les voiles",
+     "hook": "Un monstre dans un labyrinthe. Un fil pour en sortir. Des voiles oubliées qui baptisent une mer.",
+     "image": "/img/courses/thesee_et_le_minotaure.webp"
+    },
+    {
+     "id": "course_179_la_guerre_de_troie_et_le_cheval_de_bois",
+     "title": "Comment un cheval de bois a-t-il fait tomber Troie ?",
+     "subtitle": "Mythologie grecque",
+     "hook": "Une pomme d'or, une femme enlevée, puis dix ans de guerre : Troie ne tombe pas sous les armes, mais par un cheval de bois.",
+     "image": "/img/courses/la_guerre_de_troie_et_le_cheval_de_bois.webp"
+    },
+    {
+     "id": "course_181_ragnarok_la_fin_du_monde_nordique",
+     "title": "Ragnarök : et si la fin du monde n'était pas la fin ?",
+     "subtitle": "Mythologie nordique",
+     "hook": "Les dieux savent qu'ils vont mourir. Ils y vont quand même. Puis, sous les cendres, la terre reverdit.",
+     "image": "/img/courses/ragnarok_la_fin_du_monde_nordique.webp"
+    }
+   ]
+  },
+  {
+   "id": "art",
+   "label": "Art",
+   "count": 45,
+   "courses": [
+    {
+     "id": "course_149_la_joconde",
+     "title": "Pourquoi la Joconde est-elle aussi connue ?",
+     "subtitle": "1503",
+     "hook": "Le tableau le plus regardé de la planète a peut-être été, pour Léonard, un travail secondaire.",
+     "image": "/img/courses/la_joconde.webp"
+    },
+    {
+     "id": "course_150_la_nuit_etoilee_van_gogh",
+     "title": "Pourquoi le ciel de « La Nuit étoilée » tourbillonne-t-il ?",
+     "subtitle": "1889",
+     "hook": "Depuis une chambre d'asile, Van Gogh peint un ciel qui refuse de rester sage.",
+     "image": "/img/courses/la_nuit_etoilee_van_gogh.webp"
+    },
+    {
+     "id": "course_133_le_hip_hop_naissance_d_une_culture",
+     "title": "Hip-hop : que s'est-il passé dans le Bronx en 1973 ?",
+     "subtitle": "1973",
+     "hook": "Une fête de quartier dans le Bronx, et une culture mondiale est née.",
+     "image": "/img/courses/le_hip_hop_naissance_d_une_culture.webp"
+    },
+    {
+     "id": "course_128_l_expressionnisme_munch_et_le_cri",
+     "title": "Quelle angoisse se cache derrière « Le Cri » de Munch ?",
+     "subtitle": "1880-1930",
+     "hook": "Un cri sans son, un ciel qui hurle : le visage de l'angoisse moderne.",
+     "image": "/img/courses/l_expressionnisme_munch_et_le_cri.webp"
+    }
+   ]
+  }
+ ],
+ "collections": [
+  {
+   "id": "c_4kd6x78samcf",
+   "title": "Le Corps Humain : de la Guérison à la Technologie",
+   "description": "L'évolution de notre rapport à la santé et au progrès biologique.",
+   "image": "/img/collections/collection_le_corps_humain_de_la_guerison_a_la_technologie.webp",
+   "count": 5
+  },
+  {
+   "id": "c_vblwguvnamcf",
+   "title": "Sons et Sens : La Science de la Musique",
+   "description": "Pourquoi la musique nous touche-t-elle ? Une exploration entre art et biologie.",
+   "image": "/img/collections/collection_sons_et_sens_la_science_de_la_musique.webp",
+   "count": 6
+  },
+  {
+   "id": "c_fgpg15z4amcf",
+   "title": "L'Or Noir et l'Économie du Monde",
+   "description": "Comprendre comment le pétrole a façonné la géopolitique et la science moderne.",
+   "image": "/img/collections/collection_l_or_noir_et_l_economie_du_monde.webp",
+   "count": 5
+  },
+  {
+   "id": "c_m3308zqbamcf",
+   "title": "L'Espace : l'Ultime Frontière",
+   "description": "La conquête du cosmos entre astrophysique et imaginaire cinématographique.",
+   "image": "/img/collections/collection_l_espace_l_ultime_frontiere.webp",
+   "count": 7
+  },
+  {
+   "id": "c_idrry5c5amcf",
+   "title": "Le Temps des Révoltes",
+   "description": "Les grandes bascules sociales et artistiques qui ont redéfini la liberté.",
+   "image": "/img/collections/collection_le_temps_des_revoltes.webp",
+   "count": 5
+  },
+  {
+   "id": "c_jbwuzn5zamcf",
+   "title": "L'Empire de la Peur",
+   "description": "Exploration des mécanismes de la peur à travers le suspense, la science et les crises mondiales.",
+   "image": "/img/collections/collection_l_empire_de_la_peur.webp",
+   "count": 5
+  },
+  {
+   "id": "c_6870opqzamcf",
+   "title": "Architecture et Pouvoir",
+   "description": "Comment les structures bâties reflètent les croyances et les systèmes politiques.",
+   "image": "/img/collections/collection_architecture_et_pouvoir.webp",
+   "count": 7
+  },
+  {
+   "id": "c_7etcora6amcf",
+   "title": "Le feu : entre châtiment divin et énergie",
+   "description": "Étude du feu à travers la mythologie, la géologie et l'histoire de la technologie.",
+   "image": "/img/collections/collection_le_feu_entre_chatiment_divin_et_energie.webp",
+   "count": 7
+  },
+  {
+   "id": "c_nuv73pnuamcf",
+   "title": "Génocides et Mémoire : Plus jamais ça",
+   "description": "Une analyse historique, sociologique et judiciaire des crimes contre l'humanité au XXe siècle.",
+   "image": "/img/collections/collection_genocides_et_memoire_plus_jamais_ca.webp",
+   "count": 6
+  },
+  {
+   "id": "c_tl61pxu9amcf",
+   "title": "L'Homme et la Mer : Mythes et Réalités",
+   "description": "De l'écume des mythes grecs aux enjeux géopolitiques contemporains des océans.",
+   "image": "/img/collections/collection_l_homme_et_la_mer_mythes_et_realites.webp",
+   "count": 7
+  },
+  {
+   "id": "c_9y3ap3px8kck",
+   "title": "Femmes d'exception : de la science à la liberté",
+   "description": "Un parcours transverse honorant les femmes qui ont bouleversé l'histoire, qu'il s'agisse de découvertes scientifiques majeures, de luttes sociales ou de littérature fondatrice.",
+   "image": "/img/collections/collection_femmes_d_exception_de_la_science_a_la_liberte.webp",
+   "count": 5
+  },
+  {
+   "id": "g_mpzqlws4_0n3de",
+   "title": "Le Panthéon de la Grèce Antique",
+   "description": "Rencontrez les dieux et héros qui ont façonné l'imaginaire de la civilisation occidentale.",
+   "image": "/img/collections/collection_le_pantheon_de_la_grece_antique.webp",
+   "count": 6
+  },
+  {
+   "id": "g_mpzqlws4_1j8bg",
+   "title": "Les révolutions scientifiques",
+   "description": "De la gravitation à l'ADN, découvrez les percées qui ont transformé notre compréhension du vivant.",
+   "image": "/img/collections/collection_les_revolutions_scientifiques.webp",
+   "count": 6
+  },
+  {
+   "id": "g_mpzqlws4_24n9h",
+   "title": "Initiation à l'histoire de l'art",
+   "description": "Un voyage visuel des chefs-d'œuvre de la Renaissance aux ruptures de l'art abstrait.",
+   "image": "/img/collections/collection_initiation_a_l_histoire_de_l_art.webp",
+   "count": 7
+  },
+  {
+   "id": "g_mpzqlws4_382sp",
+   "title": "Défis écologiques du XXIe siècle",
+   "description": "Comprendre les enjeux climatiques et les solutions pour préserver notre planète.",
+   "image": "/img/collections/collection_defis_ecologiques_du_xxie_siecle.webp",
+   "count": 7
+  },
+  {
+   "id": "g_mpzqlws4_4xiac",
+   "title": "Les dystopies littéraires",
+   "description": "Quand la littérature imagine le pire des mondes pour mieux questionner notre présent.",
+   "image": "/img/collections/collection_les_dystopies_litteraires.webp",
+   "count": 7
+  },
+  {
+   "id": "g_mpzqlws4_5kxjr",
+   "title": "Les tournants de la Guerre mondiale",
+   "description": "Plongez au cœur des affrontements décisifs qui ont marqué le milieu du XXe siècle.",
+   "image": "/img/collections/collection_les_tournants_de_la_guerre_mondiale.webp",
+   "count": 5
+  },
+  {
+   "id": "g_mpzqlws4_6mt1o",
+   "title": "Les secrets du cerveau humain",
+   "description": "Explorez les mécanismes fascinants de la mémoire, du sommeil et de la conscience.",
+   "image": "/img/collections/collection_les_secrets_du_cerveau_humain.webp",
+   "count": 6
+  },
+  {
+   "id": "g_mpzqlws4_7r1yy",
+   "title": "Histoire du septième art",
+   "description": "Les grands réalisateurs et les mouvements qui ont révolutionné l'image animée.",
+   "image": "/img/collections/collection_histoire_du_septieme_art.webp",
+   "count": 5
+  },
+  {
+   "id": "g_mpzqlws4_8liwv",
+   "title": "L'épopée d'Ulysse",
+   "description": "Suivez le parcours du héros d'Ithaque à travers les mythes et les textes fondateurs.",
+   "image": "/img/collections/collection_l_epopee_d_ulysse.webp",
+   "count": 4
+  },
+  {
+   "id": "g_mpzqlws4_9zcsy",
+   "title": "Comprendre la Géopolitique actuelle",
+   "description": "Les clés pour décrypter les rapports de force et les tensions du monde moderne.",
+   "image": "/img/collections/collection_comprendre_la_geopolitique_actuelle.webp",
+   "count": 7
+  },
+  {
+   "id": "g_mpzqlws4_afvtk",
+   "title": "Grands noms du Théâtre",
+   "description": "De la tragédie grecque dramatique aux drames shakespeariens.",
+   "image": "/img/collections/collection_grands_noms_du_theatre.webp",
+   "count": 5
+  },
+  {
+   "id": "g_mpzqlws4_bonja",
+   "title": "L'ère du numérique",
+   "description": "De l'invention d'Internet aux dérives des réseaux sociaux et de l'IA.",
+   "image": "/img/collections/collection_l_ere_du_numerique.webp",
+   "count": 6
+  },
+  {
+   "id": "g_mpzqlws4_cuig5",
+   "title": "Splendeurs du Moyen Âge",
+   "description": "Entre châteaux, cathédrales et grandes épidémies : l'Europe médiévale.",
+   "image": "/img/collections/collection_splendeurs_du_moyen_age.webp",
+   "count": 7
+  },
+  {
+   "id": "g_mpzqlws4_dtp66",
+   "title": "Progrès et Médecine",
+   "description": "Comment la science a appris à soigner le corps humain et à combattre les virus.",
+   "image": "/img/collections/collection_progres_et_medecine.webp",
+   "count": 6
+  },
+  {
+   "id": "g_mpzqlws4_exr09",
+   "title": "Les maîtres de la musique",
+   "description": "De la rigueur de Bach à la fureur de Beethoven, l'évolution de l'harmonie.",
+   "image": "/img/collections/collection_les_maitres_de_la_musique.webp",
+   "count": 5
+  },
+  {
+   "id": "g_mpzqlws4_fit77",
+   "title": "Luttes pour la liberté",
+   "description": "Les mouvements civils et les figures qui ont brisé les chaînes de l'oppression.",
+   "image": "/img/collections/collection_luttes_pour_la_liberte.webp",
+   "count": 6
+  },
+  {
+   "id": "g_mpzqlws4_gcstj",
+   "title": "Introduction à la philosophie",
+   "description": "Les grandes interrogations sur l'État, la morale et la condition humaine.",
+   "image": "/img/collections/collection_introduction_a_la_philosophie.webp",
+   "count": 6
+  },
+  {
+   "id": "g_mpzqlws4_hlrmk",
+   "title": "Aux confins de l'Univers",
+   "description": "Un voyage de la naissance du cosmos aux mystères des trous noirs.",
+   "image": "/img/collections/collection_aux_confins_de_l_univers.webp",
+   "count": 6
+  },
+  {
+   "id": "g_mpzqlws4_ikf6h",
+   "title": "Les rouages de l'économie mondiale",
+   "description": "Comprendre les flux de capitaux, les crises et les nouvelles formes de travail.",
+   "image": "/img/collections/collection_les_rouages_de_l_economie_mondiale.webp",
+   "count": 7
+  },
+  {
+   "id": "g_mpzqlws4_jwtrk",
+   "title": "Phénomènes naturels expliqués",
+   "description": "Découvrez la science qui se cache derrière les manifestations de notre planète.",
+   "image": "/img/collections/collection_phenomenes_naturels_expliques.webp",
+   "count": 7
+  },
+  {
+   "id": "c_origines_monstres",
+   "title": "Aux origines de nos monstres",
+   "description": "Vampires, loups-garous, zombies : d'où viennent les créatures qui hantent nos peurs ?",
+   "image": "/img/collections/collection_aux_origines_de_nos_monstres.webp",
+   "count": 6
+  },
+  {
+   "id": "c_art_de_raconter",
+   "title": "De Gilgamesh à Superman : l'art de raconter",
+   "description": "Comment les histoires naissent, voyagent et se réinventent, du plus vieux livre du monde aux super-héros.",
+   "image": "/img/collections/collection_de_gilgamesh_a_superman_l_art_de_raconter.webp",
+   "count": 6
+  },
+  {
+   "id": "c_guerre_froide",
+   "title": "La Guerre froide, un monde coupé en deux",
+   "description": "De Berlin à la Lune, quarante ans d'affrontement sans guerre ouverte entre deux blocs.",
+   "image": "/img/collections/collection_la_guerre_froide_un_monde_coupe_en_deux.webp",
+   "count": 7
+  },
+  {
+   "id": "c_enigmes_du_passe",
+   "title": "Des pyramides à Gengis Khan : énigmes du passé",
+   "description": "Bâtisseurs, guerriers et routes marchandes : ce que les mondes anciens ont vraiment laissé.",
+   "image": "/img/collections/collection_des_pyramides_a_gengis_khan_enigmes_du_passe.webp",
+   "count": 7
+  },
+  {
+   "id": "c_mysteres_du_corps",
+   "title": "Les petits mystères du corps",
+   "description": "Hoquet, rougeur, fou rire : la science derrière les réactions que l'on ne contrôle pas.",
+   "image": "/img/collections/collection_les_petits_mysteres_du_corps.webp",
+   "count": 7
+  },
+  {
+   "id": "c_xixe_siecle",
+   "title": "Le XIXe siècle invente le monde moderne",
+   "description": "Fuseaux horaires, ruée vers l'or, empires coloniaux : le siècle qui a dessiné notre monde.",
+   "image": "/img/collections/collection_le_xixe_siecle_invente_le_monde_moderne.webp",
+   "count": 7
+  },
+  {
+   "id": "c_prix_cache_quotidien",
+   "title": "Le prix caché de notre quotidien",
+   "description": "Électricité, smartphone, assiette : ce qu'il faut de ressources et de risques pour faire tourner nos vies.",
+   "image": "/img/collections/collection_le_prix_cache_de_notre_quotidien.webp",
+   "count": 7
+  },
+  {
+   "id": "c_guerre_paix_diplomatie",
+   "title": "Guerre, paix et diplomatie",
+   "description": "Neutralité, sanctions, alliances : comment les États se protègent, se menacent et négocient.",
+   "image": "/img/collections/collection_guerre_paix_et_diplomatie.webp",
+   "count": 7
+  },
+  {
+   "id": "c_secrets_chefs_d_oeuvre",
+   "title": "Les secrets des chefs-d'œuvre",
+   "description": "Faussaires, couleurs précieuses et coups de génie : ce que cachent les œuvres les plus célèbres.",
+   "image": "/img/collections/collection_les_secrets_des_chefs_d_oeuvre.webp",
+   "count": 6
+  }
+ ],
+ "creators": [
+  {
+   "name": "Rana Abdalla",
+   "title": "Doctorante en ingénierie des systèmes industriels, université nationale Jeonbuk",
+   "institution": "Jeonbuk National University",
+   "photo": "/img/authors/author_rana_abdalla.webp",
+   "courses": 2
+  },
+  {
+   "name": "Mark N. Hoffman",
+   "title": "Docteur en science politique (université du Minnesota), professeur à l'université Saint Xavier de Chicago",
+   "institution": "Saint Xavier University, Chicago",
+   "photo": "/img/authors/author_mark_n_hoffman.webp",
+   "courses": 5
+  },
+  {
+   "name": "Elizabeth Singer Hunt",
+   "title": "Autrice primée, master d'études sud-est asiatiques, SOAS (université de Londres)",
+   "institution": "SOAS, University of London",
+   "photo": "/img/authors/author_elizabeth_singer_hunt.webp",
+   "courses": 3
+  },
+  {
+   "name": "Stacy Jankowski",
+   "title": "Docteure en sciences biomédicales, Boston University",
+   "institution": "Boston University",
+   "photo": "/img/authors/author_stacy_jankowski.webp",
+   "courses": 5
+  },
+  {
+   "name": "Simon Lea",
+   "title": "Docteur en philosophie, chercheur indépendant",
+   "institution": null,
+   "photo": "/img/authors/author_simon_lea.webp",
+   "courses": 5
+  },
+  {
+   "name": "Dusan Nikolic",
+   "title": "Historien de l'art, master de l'université de Belgrade",
+   "institution": "University of Belgrade",
+   "photo": "/img/authors/author_dusan_nikolic.webp",
+   "courses": 6
+  },
+  {
+   "name": "Guido Manuel De La Torre Olvera",
+   "title": "Docteur en chimie inorganique, chimiste des matériaux, Académie slovaque des sciences",
+   "institution": "Slovak Academy of Sciences",
+   "photo": "/img/authors/author_guido_manuel_de_la_torre_olvera.webp",
+   "courses": 4
+  },
+  {
+   "name": "Ivana Toskovic",
+   "title": "Master d'études régionales sur les États-Unis, licence de relations internationales, université de Belgrade",
+   "institution": "University of Belgrade",
+   "photo": "/img/authors/author_ivana_toskovic.webp",
+   "courses": 4
+  },
+  {
+   "name": "Ezgi Gizem Berkay",
+   "title": "Médecin, docteure en génétique médicale, master d'histoire ancienne, université Kent d'Istanbul",
+   "institution": "Istanbul Kent University",
+   "photo": null,
+   "courses": 5
+  },
+  {
+   "name": "Angela Bouma",
+   "title": "Professeure d'histoire et podcasteuse, Barton Community College",
+   "institution": "Barton Community College",
+   "photo": null,
+   "courses": 6
+  },
+  {
+   "name": "Benjamin Campbell",
+   "title": "Chercheur en archéologie et auteur, Queen's University Belfast",
+   "institution": "Queen's University Belfast",
+   "photo": null,
+   "courses": 5
+  },
+  {
+   "name": "Nathan Hewitt",
+   "title": "Doctorant en histoire globale et impériale, université d'Oxford",
+   "institution": "University of Oxford",
+   "photo": null,
+   "courses": 5
+  },
+  {
+   "name": "Myra Houser",
+   "title": "Historienne",
+   "institution": null,
+   "photo": null,
+   "courses": 6
+  },
+  {
+   "name": "Vedran Obucina",
+   "title": "Théologien anglican et historien, docteur en histoire",
+   "institution": null,
+   "photo": null,
+   "courses": 5
+  },
+  {
+   "name": "Kate Waddams",
+   "title": "Docteure en microbiologie moléculaire",
+   "institution": null,
+   "photo": null,
+   "courses": 4
+  },
+  {
+   "name": "Muhammad Zaheer",
+   "title": "Docteur en chimie, maître de conférences et chercheur",
+   "institution": null,
+   "photo": null,
+   "courses": 5
+  }
+ ],
+ "universities": [
+  "/img/universities/university_01_oxford.webp",
+  "/img/universities/university_02_queens_belfast.webp",
+  "/img/universities/university_03_jeonbuk.webp",
+  "/img/universities/university_04_belgrade.webp",
+  "/img/universities/university_05_slovak_academy.webp"
+ ],
+ "quiz": [
+  {
+   "question": "Quel est le vrai nom de George Orwell ?",
+   "options": [
+    "Eric Arthur Blair",
+    "George Bernard Shaw",
+    "Aldous Huxley",
+    "Herbert George Wells"
+   ],
+   "correctIndex": 0,
+   "explanation": "George Orwell est le pseudonyme d'Eric Arthur Blair.",
+   "course": "« 1984 » : comment Winston finit-il par aimer Big Brother ?",
+   "image": "/img/courses/1984_george_orwell.webp"
+  },
+  {
+   "question": "Selon la datation admise depuis 2018, quel jour le Vésuve est-il entré en éruption ?",
+   "options": [
+    "Le 24 octobre 79",
+    "Le 24 août 79",
+    "Le 24 octobre 62",
+    "Le 24 août 63"
+   ],
+   "correctIndex": 0,
+   "explanation": "Longtemps datée du 24 août, l'éruption a été redatée au 24 octobre 79 grâce à une inscription au charbon de bois découverte en 2018.",
+   "course": "Comment Pompéi a-t-elle disparu en dix-huit heures ?",
+   "image": "/img/courses/pompeii_forum_ruins_mount_vesuvius_background.webp"
+  },
+  {
+   "question": "Pourquoi le ciel nous paraît-il bleu ?",
+   "options": [
+    "Les molécules d'air dispersent bien plus la lumière bleue que la rouge",
+    "Le Soleil n'émet que de la lumière bleue",
+    "L'atmosphère elle-même est teintée de bleu",
+    "Nos yeux ajoutent artificiellement du bleu à ce qu'on regarde"
+   ],
+   "correctIndex": 0,
+   "explanation": "Les ondes courtes comme le bleu sont bien plus dispersées par les molécules d'air que les ondes longues comme le rouge : c'est la diffusion de Rayleigh.",
+   "course": "Pourquoi le ciel est-il bleu ?",
+   "image": "/img/courses/pourquoi_le_ciel_est_il_bleu.webp"
+  },
+  {
+   "question": "Qui est puni par Zeus pour avoir donné le feu aux hommes ?",
+   "options": [
+    "Prométhée",
+    "Épiméthée",
+    "Héphaïstos",
+    "Atlas"
+   ],
+   "correctIndex": 0,
+   "explanation": "Prométhée vole le feu de l'Olympe pour le donner aux hommes, un acte que Zeus ne pardonne pas.",
+   "course": "Pourquoi Prométhée a-t-il volé le feu aux dieux ?",
+   "image": "/img/courses/promethee_le_voleur_de_feu.webp"
+  },
+  {
+   "question": "Selon Vasari, qui est le modèle de La Joconde ?",
+   "options": [
+    "Lisa Gherardini, épouse du marchand Francesco del Giocondo",
+    "Une maîtresse de François Ier",
+    "La mère de Léonard de Vinci",
+    "Une princesse de la cour de Milan"
+   ],
+   "correctIndex": 0,
+   "explanation": "L'identification repose sur la biographie de Léonard publiée par Giorgio Vasari en 1550 puis en 1568.",
+   "course": "Pourquoi la Joconde est-elle aussi connue ?",
+   "image": "/img/courses/la_joconde.webp"
+  },
+  {
+   "question": "Qui dirige les nationalistes du Kuomintang qui se réfugient à Taïwan en 1949 ?",
+   "options": [
+    "Chiang Kai-shek",
+    "Mao Zedong",
+    "Deng Xiaoping",
+    "Sun Yat-sen"
+   ],
+   "correctIndex": 0,
+   "explanation": "Chiang Kai-shek mène les nationalistes du Kuomintang, écrasés par la victoire communiste, qui se réfugient sur l'île de Taïwan en 1949.",
+   "course": "Pourquoi Taïwan est-elle au cœur des tensions mondiales ?",
+   "image": "/img/courses/les_tensions_autour_de_taiwan.webp"
+  }
+ ],
+ "phoneCourse": {
+  "id": "course_101_1984_george_orwell",
+  "title": "« 1984 » : comment Winston finit-il par aimer Big Brother ?",
+  "subtitle": "1949",
+  "hook": "Un roman si puissant que ses mots servent encore à nommer la surveillance et le mensonge d'État.",
+  "image": "/img/courses/1984_george_orwell.webp",
+  "paragraphs": [
+   "En **1949**, **George Orwell** publie **1984**, l'une des dystopies les plus lues au monde. Ce n'est pas seulement un roman d'anticipation : c'est un vocabulaire pour parler de l'oppression moderne. **Big Brother**, la **La novlangue (Newspeak)**, le **Ministère de la Vérité** : ces mots ont quitté la fiction pour décrire la réalité politique.",
+   "Orwell écrit ce livre alors qu'il est gravement malade, tuberculeux, sur l'île de Jura en Écosse. Son pessimisme vient d'une expérience concrète de la politique, de la guerre et du mensonge institutionnalisé. **1984** ne prédit pas l'avenir comme un calendrier. Il décrit un mécanisme de domination que l'auteur a observé de près, de l'Espagne républicaine à **Oceania**, l'État fictif où tout est contrôlé."
+  ]
+ }
+}
