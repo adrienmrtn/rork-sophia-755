@@ -1,0 +1,85 @@
+{
+  "_comment": "Illustrations du site sophia-culture.com, produites par scripts/site_art.py (Recraft v3 sur fal.ai). Direction : gravure moderne deux couleurs, bleu marine et safran sur papier crème, formes franches, sans texte. Palette = couleurs de la maquette.",
+  "defaults": {
+    "style": "vector_illustration/linocut",
+    "size": "square_hd",
+    "max_side": 1600,
+    "colors": [
+      [
+        26,
+        58,
+        107
+      ],
+      [
+        242,
+        177,
+        52
+      ],
+      [
+        251,
+        247,
+        239
+      ]
+    ]
+  },
+  "items": [
+    {
+      "name": "hero",
+      "size": "landscape_4_3",
+      "max_side": 2000,
+      "prompt": "A curious young person sitting cross-legged, reading on a smartphone, surrounded by floating objects of knowledge: a Greek helmet, a swirling galaxy, an open book, a compass rose, a small Eiffel tower, a laurel branch, a lightning bolt. Bold linocut print, two colors only, deep navy blue and saffron yellow on cream paper, playful balanced composition, clear silhouettes, lots of negative space, no text."
+    },
+    {
+      "name": "hero_alt",
+      "style": "digital_illustration/2d_art_poster",
+      "size": "landscape_4_3",
+      "max_side": 2000,
+      "prompt": "A curious young person sitting cross-legged, reading on a smartphone, surrounded by floating objects of knowledge: a Greek helmet, a swirling galaxy, an open book, a compass rose, a laurel branch. Flat poster illustration, limited palette of deep navy blue, saffron yellow and cream, paper-cut shapes, playful, no text."
+    },
+    {
+      "name": "subject_histoire",
+      "prompt": "A Roman legionary helmet beside a rolled parchment scroll and a small hourglass, bold linocut print, two colors, deep navy blue and saffron yellow on cream paper, centered, clear silhouette, no text."
+    },
+    {
+      "name": "subject_sciences",
+      "prompt": "An atom with orbiting electrons next to a comet and a small beaker, bold linocut print, two colors, deep navy blue and saffron yellow on cream paper, centered, clear silhouette, no text."
+    },
+    {
+      "name": "subject_litterature",
+      "prompt": "An open book with pages turning into birds, a quill pen, bold linocut print, two colors, deep navy blue and saffron yellow on cream paper, centered, clear silhouette, no text."
+    },
+    {
+      "name": "subject_art",
+      "prompt": "A painter's palette with a brush and a swirling starry sky above a small frame, bold linocut print, two colors, deep navy blue and saffron yellow on cream paper, centered, clear silhouette, no text."
+    },
+    {
+      "name": "subject_mythologie",
+      "prompt": "A Greek temple facade with a lightning bolt and a winged sandal, bold linocut print, two colors, deep navy blue and saffron yellow on cream paper, centered, clear silhouette, no text."
+    },
+    {
+      "name": "subject_monde",
+      "prompt": "A globe with meridian lines, a folded newspaper and two arrows circling it, bold linocut print, two colors, deep navy blue and saffron yellow on cream paper, centered, clear silhouette, no text."
+    },
+    {
+      "name": "feature_parties",
+      "prompt": "Five small cards stacked in a gentle fan, the first one open, bold linocut print, two colors, deep navy blue and saffron yellow on cream paper, centered, minimal, no text."
+    },
+    {
+      "name": "feature_quiz",
+      "prompt": "A speech bubble with a large check mark inside and a small question mark beside it, bold linocut print, two colors, deep navy blue and saffron yellow on cream paper, centered, minimal, no text."
+    },
+    {
+      "name": "feature_glossaire",
+      "prompt": "A magnifying glass over an open dictionary page with a bookmark ribbon, bold linocut print, two colors, deep navy blue and saffron yellow on cream paper, centered, minimal, no text."
+    },
+    {
+      "name": "feature_langues",
+      "prompt": "A vintage megaphone emitting three empty speech bubbles of different shapes and a small globe, bold linocut print, two colors, deep navy blue and saffron yellow on cream paper, centered, minimal, no text."
+    },
+    {
+      "name": "ecrire",
+      "size": "landscape_4_3",
+      "prompt": "A professor at a desk writing with a fountain pen, a stack of books, a globe, a lamp, pages flying out of the window turning into paper planes, bold linocut print, two colors, deep navy blue and saffron yellow on cream paper, warm and encouraging, no text."
+    }
+  ]
+}
