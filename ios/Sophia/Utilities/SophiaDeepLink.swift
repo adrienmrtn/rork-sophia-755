@@ -7,6 +7,17 @@ enum SophiaDeepLink {
         URL(string: "\(scheme)://course/\(courseId)")
     }
 
+    /// `sophia://author/<slug>` (le bouton « Follow in the app » du site) ; `creator` accepté aussi.
+    static func authorURL(for slug: String) -> URL? {
+        URL(string: "\(scheme)://author/\(slug)")
+    }
+
+    static func creatorSlug(from url: URL) -> String? {
+        guard url.scheme == scheme, let host = url.host, host == "author" || host == "creator" else { return nil }
+        let slug = url.path.trimmingCharacters(in: CharacterSet(charactersIn: "/"))
+        return slug.isEmpty ? nil : slug
+    }
+
     /// `sophia://unlock`: the TikTok blocker's notification. Opening it is the same as
     /// tapping "Open Sophia" on the shield.
     static func isUnlockRequest(_ url: URL) -> Bool {

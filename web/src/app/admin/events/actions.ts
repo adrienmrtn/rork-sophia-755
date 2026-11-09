@@ -6,7 +6,7 @@ import { STORAGE_PUBLIC } from "@/lib/env";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { getStudioSession } from "@/lib/studio/account";
 import { campaignFromForm, campaignFromRow, hardErrors, languagesMissing, localized, publishProblems, type Campaign, type Known } from "@/lib/studio/campaigns";
-import { coversConfigured, generateCoverImages, storeImageAt, writeCoverPrompt } from "@/lib/studio/covers";
+import { coversConfigured, generateCoverImages, generatePosterImage, storeImageAt, writeCoverPrompt, writePosterScene } from "@/lib/studio/covers";
 import { translateCampaign, translationConfigured } from "@/lib/studio/translate";
 
 const IMAGE_TYPES: Record<string, string> = { "image/jpeg": "jpg", "image/png": "png", "image/webp": "webp" };
@@ -140,8 +140,10 @@ export async function translateCampaignAction(form: FormData): Promise<void> {
   }
 }
 
-/** Une image 16:9 dessinée par la même direction artistique que les couvertures, à partir du
- *  titre et de la phrase d'accroche ; remplace l'image en place. */
+/** Deux images 16:9 à partir du titre et de l'accroche, en parallèle : l'une dans la direction
+ *  artistique des couvertures de cours (Gemini), l'autre dans celle des illustrations du site
+ *  (Recraft, papier découpé). Les deux rejoignent les candidates ; la première devient l'image
+ *  de l'événement s'il n'en a pas encore. Chaque échec est journalisé et montré tel quel. */
 export async function generateEventImage(form: FormData): Promise<void> {
   const session = await requireAdmin();
   const slug = text(form, "slug", 60);
@@ -150,21 +152,57 @@ export async function generateEventImage(form: FormData): Promise<void> {
   if (!coversConfigured()) back(`/admin/events/${slug}`, { error: "Image generation is not configured on the server (FAL_KEY)." });
   const campaign = campaignFromRow(data as Record<string, unknown>);
   const title = localized(campaign.title, "en");
-  if (!title) back(`/admin/events/${slug}`, { error: "Write the title first: the image is drawn from it." });
-  let url: string | null = null;
-  let failure: string | null = null;
-  try {
-    const prompt = await writeCoverPrompt({ title, subtitle: localized(campaign.tagline, "en") || null, description: localized(campaign.description, "en") || null, subject: null });
+  if (!title) back(`/admin/events/${slug}`, { error: "Write the title first: the images are drawn from it." });
+  const theme = { title, subtitle: localized(campaign.tagline, "en") || null, description: localized(campaign.description, "en") || null };
+  const stamp = Date.now().toString(36);
+
+  const coverJob = (async () => {
+    const prompt = await writeCoverPrompt({ ...theme, subject: null });
     const [generated] = await generateCoverImages(prompt, 1);
-    url = await storeImageAt(`events/${slug}_ai_${Date.now().toString(36)}.jpg`, generated);
-  } catch (e) {
-    failure = e instanceof Error ? e.message : "Image generation failed.";
+    return storeImageAt(`events/${slug}_cover_${stamp}.jpg`, generated, "image/jpeg");
+  })();
+  const posterJob = (async () => {
+    const scene = await writePosterScene(theme);
+    const image = await generatePosterImage(scene);
+    const ext = image.contentType.includes("png") ? "png" : image.contentType.includes("jpeg") ? "jpg" : "webp";
+    return storeImageAt(`events/${slug}_poster_${stamp}.${ext}`, image.url, image.contentType);
+  })();
+  const [cover, poster] = await Promise.allSettled([coverJob, posterJob]);
+  const failures: string[] = [];
+  const created: { url: string; style: "cover" | "poster"; created_at: string }[] = [];
+  const now = new Date().toISOString();
+  if (cover.status === "fulfilled") created.push({ url: cover.value, style: "cover", created_at: now });
+  else {
+    console.error("[events] cover-style image failed", slug, cover.reason);
+    failures.push(`Cover style: ${cover.reason instanceof Error ? cover.reason.message : String(cover.reason)}`);
   }
-  if (failure || !url) back(`/admin/events/${slug}`, { error: failure ?? "Image generation failed." });
+  if (poster.status === "fulfilled") created.push({ url: poster.value, style: "poster", created_at: now });
+  else {
+    console.error("[events] poster-style image failed", slug, poster.reason);
+    failures.push(`Poster style: ${poster.reason instanceof Error ? poster.reason.message : String(poster.reason)}`);
+  }
+  if (created.length === 0) back(`/admin/events/${slug}`, { error: `No image could be generated. ${failures.join(" · ")}` });
+
+  const candidates = [...created, ...campaign.image_candidates].slice(0, 8);
+  const { error } = await session.supabase.from("campaigns").update({ image_candidates: candidates, ...(campaign.image_url ? {} : { image_url: created[0].url }) }).eq("slug", slug);
+  revalidate(slug);
+  if (error) back(`/admin/events/${slug}`, { error: error.message });
+  back(`/admin/events/${slug}`, failures.length > 0 ? { error: `One image generated, one failed. ${failures.join(" ")}`, done: "image" } : { done: "image" });
+}
+
+/** L'équipe retient une des images générées (ou remet l'image envoyée à la main). */
+export async function chooseEventImage(form: FormData): Promise<void> {
+  const session = await requireAdmin();
+  const slug = text(form, "slug", 60);
+  const url = text(form, "url", 1000);
+  const { data } = await session.supabase.from("campaigns").select("*").eq("slug", slug).maybeSingle();
+  if (!data) back("/admin/events", { error: "This event no longer exists." });
+  const campaign = campaignFromRow(data as Record<string, unknown>);
+  if (!campaign.image_candidates.some((c) => c.url === url)) back(`/admin/events/${slug}`, { error: "This image is not one of the event's candidates." });
   const { error } = await session.supabase.from("campaigns").update({ image_url: url }).eq("slug", slug);
   revalidate(slug);
   if (error) back(`/admin/events/${slug}`, { error: error.message });
-  back(`/admin/events/${slug}`, { done: "image" });
+  back(`/admin/events/${slug}`, { done: "saved" });
 }
 
 /** Supprime un brouillon ou un événement archivé. Un événement publié s'archive d'abord. */

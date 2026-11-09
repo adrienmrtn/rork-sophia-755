@@ -41,7 +41,7 @@ export default async function ProfilePage({ searchParams }: PageProps<"/studio/p
             </Link>
           ) : (
             <span className="max-w-[320px] text-[13px] leading-[1.45] text-ink-3">
-              Your public page, sophia-culture.com/authors/{account.slug ?? "…"}, opens with your first published course.
+              Your public page, sophia-culture.com/authors/{account.slug ?? "…"}, opens as soon as the team approves your account.
             </span>
           )}
         </PageTitle>

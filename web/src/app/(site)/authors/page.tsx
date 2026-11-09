@@ -9,7 +9,8 @@ export const dynamic = "force-dynamic";
 export const metadata: Metadata = { title: "The authors", description: "Doctors, researchers and professors who write for Sophia." };
 
 export default async function AuthorsPage() {
-  const creators = (await catalog.listCreators("en")).filter((c) => c.courseIds.length).sort((a, b) => b.courseIds.length - a.courseIds.length);
+  // Tous les auteurs approuvés, y compris ceux dont le premier cours s'écrit encore (page publique dès l'approbation).
+  const creators = (await catalog.listCreators("en")).sort((a, b) => b.courseIds.length - a.courseIds.length || a.name.localeCompare(b.name));
   return (
     <>
       <SiteHeader />

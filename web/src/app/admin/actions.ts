@@ -7,7 +7,8 @@ import { getStudioSession } from "@/lib/studio/account";
 import { toPublishBody, validateCourse, hasErrors, type DraftCourse } from "@/lib/studio/course-format";
 import type { CreatorAccount } from "@/lib/studio/account";
 import type { DraftRow } from "@/lib/studio/data";
-import { STORAGE_PUBLIC, SUPABASE_URL } from "@/lib/env";
+import { SUPABASE_URL } from "@/lib/env";
+import { publishAuthorPhoto } from "@/lib/studio/author-photo";
 import { LANGS } from "@/lib/catalog/types";
 
 function text(form: FormData, key: string, max = 2000): string {
@@ -41,15 +42,27 @@ export async function reviewDraft(form: FormData): Promise<void> {
   back(`/admin/review/${id}`, { done: decision });
 }
 
-/** Approuver, suspendre, remettre en attente une personne. */
+/** Approuver, suspendre, remettre en attente une personne. L'approbation crée la page publique
+ *  (ligne creators, dans la fonction SQL) ; la photo du Studio devient publique au même moment. */
 export async function setCreatorStatus(form: FormData): Promise<void> {
   const session = await requireAdmin();
   const user = text(form, "user_id", 64);
   const status = text(form, "status", 20);
   const reason = text(form, "reason", 600);
-  const { error } = await session.supabase.rpc("studio_set_creator_status", { p_user: user, p_status: status, p_reason: reason || null });
+  const { data, error } = await session.supabase.rpc("studio_set_creator_status", { p_user: user, p_status: status, p_reason: reason || null });
+  if (!error && status === "approved") {
+    const account = data as CreatorAccount | null;
+    try {
+      const admin = createAdminClient();
+      const photoUrl = account ? await publishAuthorPhoto(admin, account) : null;
+      if (photoUrl && account?.slug) await admin.from("creators").update({ photo_url: photoUrl }).eq("slug", account.slug);
+    } catch {
+      // Sans clé serveur (développement), la page publique existe sans photo ; la publication la posera.
+    }
+  }
   revalidatePath("/admin/creators");
   revalidatePath("/studio");
+  revalidatePath("/authors");
   if (error) back("/admin/creators", { error: error.message });
   back("/admin/creators", { done: status });
 }
@@ -85,16 +98,7 @@ export async function publishDraft(form: FormData): Promise<void> {
   if (hasErrors(findings)) back(`/admin/review/${id}`, { error: `The course has ${findings.filter((f) => f.severity === "error").length} format problems; ask the author to fix them.` });
 
   // La photo : copiée du bucket privé vers course-images, publique, sous le nom des apps.
-  let photoUrl: string | null = null;
-  if (account.photo_path) {
-    const { data: file } = await admin.storage.from("studio-photos").download(account.photo_path);
-    if (file) {
-      const ext = account.photo_path.split(".").pop()?.toLowerCase() === "png" ? "png" : account.photo_path.endsWith(".webp") ? "webp" : "jpg";
-      const dest = `author_${account.slug}.${ext}`;
-      const { error: upErr } = await admin.storage.from("course-images").upload(dest, file, { upsert: true, contentType: file.type || `image/${ext === "jpg" ? "jpeg" : ext}`, cacheControl: "86400" });
-      if (!upErr) photoUrl = `${STORAGE_PUBLIC}/course-images/${dest}`;
-    }
-  }
+  const photoUrl = await publishAuthorPhoto(admin, account);
 
   // Si le cours n'était pas encore accepté, on trace la décision.
   if (draft.status === "submitted" || draft.status === "changes_requested") {

@@ -7,10 +7,11 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Autorenew
 import androidx.compose.material.icons.filled.Explore
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Person
-import androidx.compose.material.icons.filled.School
+import androidx.compose.material.icons.filled.Route
 import androidx.compose.material3.Icon
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
@@ -54,7 +55,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
 /** Les 4 onglets de la maquette : Accueil, Explorer, Apprendre, Profil. */
-const val NEWGEN_TAB_COUNT = 4
+const val NEWGEN_TAB_COUNT = 5
 
 /**
  * Les écrans qu'un onglet peut pousser. Les cours sont désignés par leur id, comme sur iOS :
@@ -83,7 +84,9 @@ sealed class NewGenRoute {
 private val TABLET_CONTENT_WIDTH = 640.dp
 
 /**
- * La navigation « nouvelle génération » : la barre de 4 onglets, l'écran racine de l'onglet,
+ * La navigation « nouvelle génération » : la barre de 5 onglets (Accueil, Explorer, Parcours,
+ * Entraînement, Profil ; Parcours et Entraînement sont les écrans classiques, gardés pour ne pas
+ * perdre les anciens lecteurs), l'écran racine de l'onglet,
  * et par-dessus l'écran poussé en tête de sa pile ([routeStacks], une par onglet, tenue par
  * `MainTabs` qui gère aussi le retour système). Le lecteur, les paywalls et les overlays
  * restent présentés par `MainTabs` au-dessus de tout ; [onOpenCourse] est la seule porte vers
@@ -124,8 +127,9 @@ fun NewGenTabs(
         listOf(
             Triple("tab.home", Icons.Filled.Home, 0),
             Triple("tab.explore", Icons.Filled.Explore, 1),
-            Triple("tab.learn", Icons.Filled.School, 2),
-            Triple("tab.profile", Icons.Filled.Person, 3),
+            Triple("tab.path", Icons.Filled.Route, 2),
+            Triple("tab.training", Icons.Filled.Autorenew, 3),
+            Triple("tab.profile", Icons.Filled.Person, 4),
         )
     }
     val tabIndex = selectedTab.coerceIn(0, NEWGEN_TAB_COUNT - 1)
@@ -201,15 +205,22 @@ fun NewGenTabs(
                     onOpenCampaign = { push(NewGenRoute.Event(it.slug)) },
                     onOpenUniverse = { push(NewGenRoute.Universe(it)) },
                 )
-                2 -> LearnHubScreen(
-                    modifier = tabModifier,
+                2 -> LearningPathScreen(
                     language = language,
                     progress = progress,
+                    isCovered = pathCovered,
+                    onOpenCourse = { onOpenCourseById(it, "path") },
+                    onOpenQuiz = onOpenPathQuiz,
+                    modifier = tabModifier,
+                )
+                3 -> TrainingScreen(
+                    modifier = tabModifier,
+                    language = language,
+                    isPremium = isPremium,
+                    progress = progress,
                     progressManager = progressManager,
-                    // « Reprendre » rouvre le lecteur directement, sans passer par la fiche.
-                    onResumeCourse = { onOpenCourse(it, "my_courses") },
-                    onOpenPath = { push(NewGenRoute.Path) },
-                    onOpenTraining = { push(NewGenRoute.Training) },
+                    storeViewModel = storeViewModel,
+                    onPremiumUnlocked = { storeViewModel.refresh() },
                 )
                 else -> ProfileV2Screen(
                     modifier = tabModifier,

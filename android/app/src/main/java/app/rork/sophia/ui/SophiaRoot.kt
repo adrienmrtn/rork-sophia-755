@@ -57,6 +57,8 @@ fun SophiaRoot(
     storeViewModel: StoreViewModel,
     deepLinkCourseId: String?,
     onDeepLinkConsumed: () -> Unit,
+    deepLinkCreatorSlug: String? = null,
+    onDeepLinkCreatorConsumed: () -> Unit = {},
 ) {
     val context = LocalContext.current
     val app = context.applicationContext as SophiaApplication
@@ -139,6 +141,8 @@ fun SophiaRoot(
                                 storeViewModel = storeViewModel,
                                 deepLinkCourseId = deepLinkCourseId,
                                 onDeepLinkConsumed = onDeepLinkConsumed,
+                                deepLinkCreatorSlug = deepLinkCreatorSlug,
+                                onDeepLinkCreatorConsumed = onDeepLinkCreatorConsumed,
                             )
                         }
                     }

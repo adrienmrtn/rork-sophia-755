@@ -25,19 +25,19 @@ visiteur ──▶ sophia-culture.com (Vercel, Next.js)
 | `/` | Vitrine : l'app, les six matières, les cours de la semaine, les auteurs, Premium (sans prix), Écrire pour Sophia | `catalog.listCourses`, `listCreators` |
 | `/courses` | Explorer : recherche, matière, sous-catégorie, pagination (24) | idem |
 | `/courses/<numéro>-<slug>` | Fiche d'un cours : introduction lisible, le reste « dans l'app », plan, glossaire, sources, auteur, même matière. Le slug est corrigé par redirection permanente | `catalog.getCourse` |
-| `/authors`, `/authors/<slug>` | Les auteurs et leur page | `creators` |
+| `/authors`, `/authors/<slug>` | Les auteurs et leur page, dès l'approbation du compte (la ligne `creators` est créée par `studio_set_creator_status`, la photo copiée en public par le site) ; sans cours encore, la page le dit. Sur téléphone, « Follow in the app » ouvre l'app (`sophia://author/<slug>`) | `creators` |
 | `/write` | Écrire pour Sophia : promesse, étapes, FAQ, appel au compte | textes |
 | `/join` | Connexion et inscription (Google, Apple, e-mail, lien magique), `?next=` | Supabase Auth |
 | `/auth/callback` | Retour OAuth / lien magique, puis redirection vers `next` | |
 | `/about`, `/legal/creator-agreement` | À propos, contrat créateur public (`studio_documents`, rôle anon) | |
-| `/studio` | Tableau de bord auteur : lectures, terminés / 1 000 impressions, abonnés, gains estimés, lectures par jour, paiements, mes cours | RPC `creator_dashboard` |
+| `/studio` | Tableau de bord auteur : lectures (jour en cours compris, en direct), terminés / 1 000 impressions, abonnés, gains estimés, lectures par jour, paiements, mes cours | RPC `creator_dashboard` |
 | `/studio/onboarding/<étape>` | Identité, références, profil + photo, contrat (signature), guide | `creator_accounts`, `studio_sign_agreement` |
 | `/studio/courses` | Mes cours : brouillons, en relecture, publiés | `studio_drafts` |
 | `/studio/courses/<id>` | L'éditeur (plan, blocs, vérifications, images Commons, aperçu), enregistrement automatique, envoi en relecture | `studio_drafts`, RPC `studio_submit_draft` |
 | `/studio/courses/<id>/status` | Suivi : décisions de l'équipe, production langue par langue | `studio_reviews`, `production_jobs`, `production_steps` |
 | `/studio/courses/app/<course_id>` | Un cours publié : décrochage par section, langues, quiz | RPC `creator_course_detail` |
 | `/studio/profile`, `/studio/guide` | Profil public, guide d'écriture | |
-| `/admin` | Vue d'ensemble équipe : file, créateurs, production, lectures, cagnotte Premium, activité | RPC `studio_admin_overview` |
+| `/admin` | Vue d'ensemble équipe : file, créateurs, production, lectures (synthèse quotidienne + journal du jour en direct, `course_stats_window`), cagnotte Premium, activité | RPC `studio_admin_overview` |
 | `/admin/review`, `/admin/review/<id>` | File de relecture ; lecture du cours, vérifications du format, décision, **Accepter et lancer la production** | RPC `studio_review_draft`, action `publishDraft` |
 | `/admin/creators` | Approuver, suspendre, remettre en attente ; contrat signé ou non | RPC `studio_set_creator_status` |
 | `/admin/production`, `/admin/production/<job>` | Les jobs de l'usine, étape par étape | `production_jobs`, `production_steps` |

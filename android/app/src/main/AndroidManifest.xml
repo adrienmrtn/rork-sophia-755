@@ -46,6 +46,8 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
                 <data android:scheme="sophia" android:host="course" />
+                <data android:scheme="sophia" android:host="author" />
+                <data android:scheme="sophia" android:host="creator" />
             </intent-filter>
         </activity>
 

@@ -20,8 +20,10 @@ Ce document est la référence du format. Les quatre implémentations le suivent
 1. **Admin du site** (`/admin/events`) : l'équipe crée l'événement, choisit les cours, écrit les
    textes en anglais et en français, puis clique **Translate** pour les 28 autres langues (même
    modèle de texte que les couvertures, via fal ; une langue déjà remplie n'est jamais écrasée).
-   Elle peut poser une **image** (envoi d'un fichier 16:9, ou **Generate an image with AI** avec
-   la direction artistique des couvertures) et fixer un **objectif commun** (cours lus ensemble).
+   Elle peut poser une **image** (envoi d'un fichier 16:9, ou **Generate 2 images with AI** : une
+   dans la direction artistique des couvertures de cours, Gemini ; une dans celle des illustrations
+   du site, Recraft en papier découpé ; les deux restent en candidates, l'équipe en retient une) et
+   fixer un **objectif commun** (cours lus ensemble).
    La page montre un **aperçu de la carte du fil** telle que les apps la dessinent. Une liste de
    contrôle dit ce qui manque pour publier ; un événement s'enregistre toujours en brouillon, il
    ne passe `published` que si la liste est vide.
@@ -64,6 +66,7 @@ Clés en `snake_case`, identiques dans la table, le manifeste et les décodeurs 
 | `participants` | entier | calculé (voir ci-dessus) ; jamais saisi. |
 | `goal_target` | entier ou null | l'objectif commun : cours de la collection à terminer, tous lecteurs confondus, pendant l'événement. Null : pas de barre d'objectif. |
 | `goal_count` | entier | où en est l'objectif commun ; calculé toutes les heures, jamais saisi. |
+| `image_candidates` | liste | côté admin seulement (pas dans le manifeste) : les images générées, `{url, style: cover \| poster, created_at}`, huit au plus. |
 | `course_ids` | liste | les cours de la collection, 40 au plus, tous `published`. L'ordre est celui de l'affichage. |
 | `upcoming` | liste | cours annoncés : `{"title": {langue: texte}, "creator": slug ou null, "date": "YYYY-MM-DD"}`, six au plus dans l'admin. |
 | `title` | `{langue: texte}` | 60 caractères. |

@@ -5,7 +5,7 @@ import { AuthorAvatar } from "@/components/AuthorCard";
 import { CourseCard } from "@/components/CourseCard";
 import { SiteHeader } from "@/components/SiteChrome";
 import { StoreButtons } from "@/components/StoreButtons";
-import { ButtonLink, CheckIcon, Pill, container } from "@/components/ui";
+import { buttonClass, ButtonLink, CheckIcon, container, Pill } from "@/components/ui";
 import { catalog } from "@/lib/catalog/source";
 import { authorPath } from "@/lib/catalog/slugs";
 import { t } from "@/lib/copy/en";
@@ -62,7 +62,12 @@ export default async function AuthorPage({ params }: PageProps<"/authors/[slug]"
               <span>{a.writesIn}</span>
             </div>
             <div className="flex flex-wrap gap-2.5 pt-1">
-              <ButtonLink href="#follow" className="h-12 px-5">
+              {/* Sur téléphone, le bouton ouvre l'app sur la page du créateur (sophia://author/<slug>) ;
+                  sur ordinateur, il mène aux boutons des magasins. */}
+              <a href={`sophia://author/${creator.slug}`} className={buttonClass("primary", "h-12 px-5 md:hidden")}>
+                {a.follow}
+              </a>
+              <ButtonLink href="#follow" className="hidden h-12 px-5 md:inline-flex">
                 {a.follow}
               </ButtonLink>
               {Object.entries(creator.links).map(([label, url]) => (
@@ -79,11 +84,15 @@ export default async function AuthorPage({ params }: PageProps<"/authors/[slug]"
             <h2 className="text-[30px] font-extrabold tracking-[-0.7px]">{a.theirCourses}</h2>
             <span className="text-[14px] font-semibold text-ink-3">{a.courses(courses.length)}</span>
           </div>
-          <div className="grid grid-cols-1 gap-x-5 gap-y-6 sm:grid-cols-2 lg:grid-cols-3">
-            {courses.map((c, i) => (
-              <CourseCard key={c.id} course={c} index={i} />
-            ))}
-          </div>
+          {courses.length === 0 ? (
+            <p className="rounded-card border border-line bg-paper px-6 py-5 text-[15px] leading-[1.55] text-ink-3">{a.noCoursesYet}</p>
+          ) : (
+            <div className="grid grid-cols-1 gap-x-5 gap-y-6 sm:grid-cols-2 lg:grid-cols-3">
+              {courses.map((c, i) => (
+                <CourseCard key={c.id} course={c} index={i} />
+              ))}
+            </div>
+          )}
         </section>
 
         <section className="flex flex-wrap gap-6">

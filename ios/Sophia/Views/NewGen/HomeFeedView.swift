@@ -84,6 +84,8 @@ struct HomeFeedView: View {
                 .scrollPosition(id: $scrolledId)
                 .scrollIndicators(.hidden)
                 .scrollDisabled(items.count <= 1)
+                // Tirer vers le bas : le catalogue est relu (nouveaux cours, événements), le deck redistribué.
+                .refreshable { await refreshFeed() }
             }
         }
         .background(DS.canvas.ignoresSafeArea())
@@ -243,6 +245,11 @@ struct HomeFeedView: View {
         .frame(maxWidth: .infinity, alignment: .leading)
         .background(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous).fill(DS.surface))
         .overlay(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous).strokeBorder(DS.hairline, lineWidth: 1))
+    }
+
+    private func refreshFeed() async {
+        await CatalogStore.shared.refresh(language: languageManager.current, force: true)
+        loadDeck()
     }
 
     private func loadDeck() {
