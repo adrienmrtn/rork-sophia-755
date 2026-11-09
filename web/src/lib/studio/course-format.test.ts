@@ -1,6 +1,9 @@
 import { describe, expect, it } from "vitest";
 import { citedTerms, courseWords, hasErrors, toPublishBody, validateCourse, type DraftCourse } from "./course-format";
 
+/** Des paragraphes de remplissage : n mots qui comptent, sans marque ni tiret cadratin. */
+const filler = (n: number) => Array.from({ length: n }, (_, i) => `word${i}`).join(" ");
+
 const good: DraftCourse = {
   title: "The Antikythera mechanism",
   subtitle: "Around 100 BC",
@@ -9,8 +12,8 @@ const good: DraftCourse = {
   description: "A corroded lump of bronze pulled from a shipwreck turned out to be the first known analogue computer. Here is what it did.",
   hero: { image_url: "https://upload.wikimedia.org/wikipedia/commons/x.jpg", ratio: "16:9", credit: { author: "Marsyas", license: "CC BY 2.5", source: "Wikimedia Commons" } },
   sections: [
-    { title: "Introduction", free: true, blocks: [{ type: "paragraph", text: "In 1901, sponge divers found a wreck off [[Antikythera]]. Among the statues lay a **bronze** box." }] },
-    { title: "What it computed", free: false, blocks: [{ type: "paragraph", text: "The gears followed the Moon and the Sun." }, { type: "timeline", events: [{ date: "1901", title: "Discovery" }, { date: "2005", title: "CT scans" }] }, { type: "takeaway", text: "A machine of gears modelled the sky two thousand years ago." }] },
+    { title: "Introduction", free: true, blocks: [{ type: "paragraph", text: `In 1901, sponge divers found a wreck off [[Antikythera]]. Among the statues lay a **bronze** box. ${filler(220)}` }] },
+    { title: "What it computed", free: false, blocks: [{ type: "paragraph", text: `The gears followed the Moon and the Sun. ${filler(220)}` }, { type: "timeline", events: [{ date: "1901", title: "Discovery" }, { date: "2005", title: "CT scans" }] }, { type: "takeaway", text: "A machine of gears modelled the sky two thousand years ago." }] },
   ],
   sources: [{ text: "Freeth, T. et al., Nature, 2006", url: "https://www.nature.com/" }],
   glossary: [{ term: "Antikythera", classification: "lieuInstitution", explanation: "A small Greek island between Crete and the Peloponnese." }],
@@ -52,11 +55,23 @@ describe("validateCourse", () => {
   });
 
   it("warns, without blocking, about missing glossary entries and short courses", () => {
-    const course: DraftCourse = { ...good, glossary: [] };
+    const course: DraftCourse = {
+      ...good,
+      glossary: [],
+      sections: [
+        { title: "Introduction", free: true, blocks: [{ type: "paragraph", text: `A wreck off [[Antikythera]]. ${filler(170)}` }] },
+        { title: "Second part", free: false, blocks: [{ type: "paragraph", text: filler(170) }, { type: "takeaway", text: "One idea." }] },
+      ],
+    };
     const findings = validateCourse(course);
     expect(hasErrors(findings)).toBe(false);
     expect(findings.some((f) => f.severity === "warning" && f.message.includes("[[Antikythera]]"))).toBe(true);
     expect(findings.some((f) => f.severity === "warning" && f.message.includes("Short course"))).toBe(true);
+  });
+
+  it("refuses a course too short for the quiz", () => {
+    const tiny: DraftCourse = { ...good, sections: [{ title: "Introduction", free: true, blocks: [{ type: "paragraph", text: filler(60) }] }, { title: "Two", blocks: [{ type: "paragraph", text: filler(60) }] }] };
+    expect(validateCourse(tiny).some((f) => f.severity === "error" && f.message.includes("Too short"))).toBe(true);
   });
 
   it("requires between 2 and 12 sections", () => {
@@ -69,7 +84,7 @@ describe("helpers", () => {
     expect(citedTerms({ ...good, description: "See [[Antikythera]] and [[Gear train]]." })).toEqual(["Antikythera", "Gear train"]);
   });
   it("counts words across blocks and timelines", () => {
-    expect(courseWords(good)).toBeGreaterThan(30);
+    expect(courseWords(good)).toBeGreaterThan(400);
   });
 });
 
