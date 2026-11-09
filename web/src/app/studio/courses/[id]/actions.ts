@@ -2,7 +2,7 @@
 
 import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
-import { SUBJECTS, type Block, type GlossaryEntry, type Section, type Source } from "@/lib/catalog/types";
+import { LANGS, SUBJECTS, type Block, type GlossaryEntry, type Section, type Source } from "@/lib/catalog/types";
 import { getStudioSession } from "@/lib/studio/account";
 import { BLOCK_TYPES, CLASSIFICATIONS, MAX_COVER_GENERATIONS, type DraftCourse, type Hero } from "@/lib/studio/course-format";
 import { coversConfigured, generateCoverImages, storeCovers, writeCoverPrompt } from "@/lib/studio/covers";
@@ -101,9 +101,11 @@ export async function saveDraft(id: string, raw: unknown): Promise<SaveResult> {
   if (!session) return { ok: false, error: "Signed out. Sign in again to keep saving." };
   if (JSON.stringify(raw ?? {}).length > MAX_BYTES) return { ok: false, error: "The course is too large to save (600 KB)." };
   const course = await sanitizeCourse(raw);
+  // La langue d'écriture du cours (elle vient du profil à la création, l'auteur peut la changer).
+  const lang = typeof (raw as { origin_lang?: unknown })?.origin_lang === "string" ? String((raw as { origin_lang: string }).origin_lang) : null;
   const { data, error } = await session.supabase
     .from("studio_drafts")
-    .update({ title: course.title, subtitle: course.subtitle, subject: course.subject, subcategory: course.subcategory, description: course.description, hero: course.hero, sections: course.sections, sources: course.sources, glossary: course.glossary })
+    .update({ title: course.title, subtitle: course.subtitle, subject: course.subject, subcategory: course.subcategory, description: course.description, hero: course.hero, sections: course.sections, sources: course.sources, glossary: course.glossary, ...(lang && (LANGS as readonly string[]).includes(lang) ? { origin_lang: lang } : {}) })
     .eq("id", id)
     .eq("user_id", session.user.id)
     .in("status", ["draft", "changes_requested"])
