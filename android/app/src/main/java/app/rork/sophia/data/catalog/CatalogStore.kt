@@ -102,6 +102,11 @@ object CatalogStore {
      */
     val campaigns: StateFlow<List<Campaign>> = _campaigns.asStateFlow()
 
+    private val _trending = MutableStateFlow<Map<String, List<String>>>(emptyMap())
+
+    /** Les tendances du dernier manifeste de chaque langue (code → ids de cours, les plus lus en premier). */
+    val trending: StateFlow<Map<String, List<String>>> = _trending.asStateFlow()
+
     @Volatile
     var config: CatalogRemoteConfig = CatalogRemoteConfig()
         private set
@@ -350,6 +355,7 @@ object CatalogStore {
         _campaigns.value = manifest.events
             .filter { it.slug.isNotBlank() && it.startDate != null && it.endDate != null }
             .sortedBy { it.startsAt }
+        _trending.value = _trending.value + (code to manifest.trending)
     }
 
     private fun markRefreshed(code: String) {

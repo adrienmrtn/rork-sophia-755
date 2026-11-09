@@ -31,6 +31,8 @@ nonisolated struct Campaign: Decodable, Identifiable, Sendable, Hashable {
     /// l'événement, et où on en est (recalculé toutes les heures côté serveur). Nil : pas d'objectif.
     let goalTarget: Int?
     let goalCount: Int?
+    /// Les pays où l'événement est montré (ISO 3166-1 alpha-2, la région du téléphone) ; nil : partout.
+    let countries: [String]?
     let startsAt: String
     let endsAt: String
     /// Nombre de cours de la collection à terminer pour obtenir le badge.
@@ -50,7 +52,7 @@ nonisolated struct Campaign: Decodable, Identifiable, Sendable, Hashable {
     nonisolated func hash(into hasher: inout Hasher) { hasher.combine(slug) }
 
     enum CodingKeys: String, CodingKey {
-        case slug, kind, symbol, upcoming, title, tagline, description, participants
+        case slug, kind, symbol, countries, upcoming, title, tagline, description, participants
         case imageUrl = "image_url"
         case goalTarget = "goal_target"
         case goalCount = "goal_count"
@@ -68,6 +70,13 @@ nonisolated struct Campaign: Decodable, Identifiable, Sendable, Hashable {
 
     var startDate: Date? { Self.parseDay(startsAt) }
     var endDate: Date? { Self.parseDay(endsAt) }
+
+    /// Montré dans cette région (`Locale.current.region`) : partout sans liste, sinon si elle y figure.
+    func isShown(inRegion region: String?) -> Bool {
+        guard let countries, !countries.isEmpty else { return true }
+        guard let region else { return false }
+        return countries.contains(region.uppercased())
+    }
 
     /// Actif entre le premier jour et la fin du dernier jour.
     func isActive(on date: Date = Date()) -> Bool {

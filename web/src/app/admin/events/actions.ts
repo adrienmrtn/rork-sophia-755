@@ -125,8 +125,8 @@ export async function translateCampaignAction(form: FormData): Promise<void> {
   if (!data) back("/admin/events", { error: "This event no longer exists." });
   if (!translationConfigured()) back(`/admin/events/${slug}`, { error: "Translation is not configured on the server (FAL_KEY)." });
   const campaign = campaignFromRow(data as Record<string, unknown>);
-  if (!campaign.title.en?.trim() && !campaign.title.fr?.trim()) back(`/admin/events/${slug}`, { error: "Write the English texts first, then translate." });
-  const targets = languagesMissing(campaign).filter((l) => l !== "en" && l !== "fr");
+  if (!campaign.title.en?.trim()) back(`/admin/events/${slug}`, { error: "Write the English texts first, then translate." });
+  const targets = languagesMissing(campaign).filter((l) => l !== "en");
   if (targets.length === 0) back(`/admin/events/${slug}`, { done: "translated-none" });
   try {
     const { fields, added } = await translateCampaign(campaign, targets);

@@ -32,6 +32,7 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.pulltorefresh.PullToRefreshBox
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -74,9 +75,9 @@ import app.rork.sophia.ui.course.AuthorAvatar
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
 import app.rork.sophia.ui.theme.SophiaTypography
+import java.util.Calendar
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import java.util.Calendar
 
 /**
  * L'onglet Explorer, variante « univers » de la maquette : la recherche (cours, créateurs,
@@ -139,7 +140,14 @@ fun ExploreScreen(
     // Six cours au titre court, tirés une fois par semaine (graine = semaine ISO) parmi ceux
     // que le lecteur n'a pas encore lus. Ils tiennent lieu de « tendances » jusqu'à ce que le
     // serveur compte les vraies recherches.
-    val trending = remember(summaries, progress.courseProgress) {
+    // Les cours les plus ouverts de la semaine (`trending` du manifeste, comptés chaque nuit), moins
+    // ceux déjà lus ; faute de données, le tirage local hebdomadaire ci-dessous.
+    val serverTrending by CatalogStore.trending.collectAsState()
+    val trending = remember(summaries, progress.courseProgress, serverTrending) {
+        val fromServer = (serverTrending[language.code] ?: emptyList())
+            .mapNotNull { id -> summaries.firstOrNull { it.id == id } }
+            .filter { progress.courseProgress[it.id]?.isCompleted != true }
+        if (fromServer.size >= 3) return@remember fromServer.take(6)
         val calendar = Calendar.getInstance().apply {
             firstDayOfWeek = Calendar.MONDAY
             minimalDaysInFirstWeek = 4

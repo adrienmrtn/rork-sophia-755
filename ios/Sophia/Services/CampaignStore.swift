@@ -9,8 +9,11 @@ import Foundation
 enum CampaignStore {
     private static let notifyKey = "sophia_campaign_notify"
 
-    /// Les événements publiés, du plus ancien au plus récent.
-    static var all: [Campaign] { CatalogStore.shared.campaigns }
+    /// Les événements publiés pour la région du téléphone, du plus ancien au plus récent.
+    static var all: [Campaign] {
+        let region = Locale.current.region?.identifier
+        return CatalogStore.shared.campaigns.filter { $0.isShown(inRegion: region) }
+    }
 
     /// Les événements en cours, le plus proche de sa fin en premier.
     static func active(on date: Date = Date()) -> [Campaign] {

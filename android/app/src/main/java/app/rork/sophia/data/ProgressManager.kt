@@ -113,6 +113,11 @@ class ProgressManager(context: Context) {
     val readingSeconds: Int
         get() = _progress.value.readingSeconds
 
+    /** L'avatar du profil (null : les initiales). Suit la progression, donc le multi-appareils. */
+    fun setAvatar(id: String?) {
+        mutate { current -> current.copy(avatarId = id) }
+    }
+
     /**
      * Ajoute le temps passé sur une section quittée. Plafonné à une heure par appel : un
      * téléphone laissé ouvert sur une page ne compte pas comme une nuit de lecture.

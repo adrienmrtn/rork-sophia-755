@@ -30,6 +30,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
@@ -112,6 +113,7 @@ fun ProfileV2Screen(
     val handle by app.socialService.myHandle.collectAsState()
     val summaries = rememberCourseSummaries(language)
     var listSegment by remember { mutableIntStateOf(0) }
+    var showAvatarPicker by remember { mutableStateOf(false) }
 
     val displayName = remember(handle, language) {
         handle?.takeIf { it.isNotBlank() } ?: run {
@@ -159,20 +161,27 @@ fun ProfileV2Screen(
             )
         }
 
+        if (showAvatarPicker) {
+            AvatarPickerSheet(
+                language = language,
+                current = progress.avatarId,
+                initial = displayName.take(1).uppercase(),
+                onPick = { id ->
+                    progressManager.setAvatar(id)
+                    showAvatarPicker = false
+                },
+                onDismiss = { showAvatarPicker = false },
+            )
+        }
+
         // Identité.
         Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(14.dp)) {
-            Box(
-                modifier = Modifier.size(64.dp).clip(CircleShape).background(DS.accentSoft),
-                contentAlignment = Alignment.Center,
-            ) {
-                Text(
-                    text = displayName.take(1).uppercase(),
-                    fontFamily = PlusJakartaSans,
-                    fontWeight = FontWeight.ExtraBold,
-                    fontSize = 24.sp,
-                    color = Color.White,
-                )
-            }
+            AvatarCircle(
+                avatarId = progress.avatarId,
+                initial = displayName.take(1).uppercase(),
+                size = 64.dp,
+                modifier = Modifier.softPress(onClick = { showAvatarPicker = true }),
+            )
             Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(3.dp)) {
                 Text(
                     text = displayName,

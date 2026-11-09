@@ -59,6 +59,8 @@ export type Campaign = {
   image_url: string | null;
   /** Les images générées, les plus récentes en premier ; l'équipe en choisit une. */
   image_candidates: ImageCandidate[];
+  /** Pays où l'événement est montré (ISO 3166-1 alpha-2, la région du téléphone) ; null : partout. */
+  countries: string[] | null;
   starts_at: string;
   ends_at: string;
   challenge_target: number;
@@ -81,8 +83,9 @@ export const TEXT_FIELDS = ["title", "tagline", "description", "badge_name"] as 
 export type TextField = (typeof TEXT_FIELDS)[number];
 export const TEXT_LIMITS: Record<TextField, number> = { title: 60, tagline: 90, description: 300, badge_name: 40 };
 export const TEXT_LABELS: Record<TextField, string> = { title: "Title", tagline: "Tagline", description: "Description", badge_name: "Badge name" };
-/** Les langues saisies à la main dans l'admin ; les autres sont traduites. */
-export const EDITED_LANGS = ["en", "fr"] as const;
+/** La langue saisie à la main dans l'admin : l'anglais. Toutes les autres, français compris, sont
+ *  traduites depuis l'anglais (jamais de double traduction). */
+export const EDITED_LANGS = ["en"] as const;
 export const UPCOMING_ROWS = 6;
 export const MAX_COURSES = 40;
 export const SLUG_RE = /^[a-z0-9]+(-[a-z0-9]+)*$/;
@@ -106,7 +109,7 @@ export function symbolLabel(symbol: string): string {
 }
 
 export function emptyCampaign(): Campaign {
-  return { slug: "", kind: "month", status: "draft", symbol: "sparkles", image_url: null, image_candidates: [], starts_at: "", ends_at: "", challenge_target: 3, participants: 0, goal_target: null, goal_count: 0, course_ids: [], upcoming: [], title: {}, tagline: {}, description: {}, badge_name: {} };
+  return { slug: "", kind: "month", status: "draft", symbol: "sparkles", image_url: null, image_candidates: [], countries: null, starts_at: "", ends_at: "", challenge_target: 3, participants: 0, goal_target: null, goal_count: 0, course_ids: [], upcoming: [], title: {}, tagline: {}, description: {}, badge_name: {} };
 }
 
 /** Une ligne de la table, telle que Supabase la renvoie, remise dans le type. */
@@ -130,6 +133,7 @@ export function campaignFromRow(row: Record<string, unknown>): Campaign {
           .filter((c) => typeof c.url === "string" && /^https:\/\//.test(c.url))
           .map((c) => ({ url: c.url as string, style: c.style === "poster" ? ("poster" as const) : ("cover" as const), created_at: typeof c.created_at === "string" ? c.created_at : "" }))
       : [],
+    countries: Array.isArray(row.countries) && row.countries.length > 0 ? (row.countries as unknown[]).map(String).filter((c) => /^[A-Z]{2}$/.test(c)) : null,
     starts_at: String(row.starts_at ?? "").slice(0, 10),
     ends_at: String(row.ends_at ?? "").slice(0, 10),
     challenge_target: Number(row.challenge_target ?? 1) || 1,
@@ -184,6 +188,7 @@ export function campaignFromForm(form: FormData, existing: Campaign | null): Cam
   const courseIds = Array.from(new Set(form.getAll("course_ids").map(String).map((s) => s.trim()).filter(Boolean))).slice(0, MAX_COURSES);
   const goalRaw = text(form, "goal_target", 12).replace(/[\s,.]/g, "");
   const goal = goalRaw ? Math.round(Number(goalRaw)) : NaN;
+  const countries = Array.from(new Set(text(form, "countries", 400).toUpperCase().split(/[\s,;]+/).map((c) => c.trim()).filter(Boolean)));
   return {
     ...base,
     slug: existing ? existing.slug : text(form, "slug", 60).toLowerCase(),
@@ -194,6 +199,7 @@ export function campaignFromForm(form: FormData, existing: Campaign | null): Cam
     ends_at: text(form, "ends_at", 10),
     challenge_target: Math.max(1, Math.min(50, Math.round(Number(text(form, "challenge_target", 3)) || 1))),
     goal_target: Number.isFinite(goal) && goal >= 1 ? Math.min(100_000_000, goal) : null,
+    countries: countries.length > 0 ? countries : null,
     course_ids: courseIds,
     upcoming,
     title: merge("title"),
@@ -213,6 +219,8 @@ export function hardErrors(c: Campaign): string[] {
   if (!DAY_RE.test(c.ends_at) || Number.isNaN(Date.parse(c.ends_at))) errors.push("The end date is missing or invalid.");
   if (errors.length === 0 && c.ends_at < c.starts_at) errors.push("The event cannot end before it starts.");
   if (c.course_ids.length > MAX_COURSES) errors.push(`At most ${MAX_COURSES} courses.`);
+  const badCountries = (c.countries ?? []).filter((x) => !/^[A-Z]{2}$/.test(x));
+  if (badCountries.length > 0) errors.push(`Countries must be two-letter codes (FR, BE, CH…): ${badCountries.join(", ")}.`);
   return errors;
 }
 

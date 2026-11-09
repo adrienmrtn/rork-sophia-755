@@ -23,6 +23,7 @@ struct ProfileV2View: View {
     @Bindable private var social = SocialService.shared
     @State private var listSegment = 0
     @State private var showSettings = false
+    @State private var showAvatarPicker = false
 
     private var language: AppLanguage { languageManager.current }
 
@@ -45,6 +46,9 @@ struct ProfileV2View: View {
         }
         .scrollIndicators(.hidden)
         .background(DS.canvas.ignoresSafeArea())
+        .sheet(isPresented: $showAvatarPicker) {
+            AvatarPickerSheet(current: progressManager.avatarId, initial: String(displayName.prefix(1)).uppercased()) { progressManager.setAvatar($0) }
+        }
         .fullScreenCover(isPresented: $showSettings) {
             SettingsView(
                 progressManager: progressManager,
@@ -91,13 +95,14 @@ struct ProfileV2View: View {
 
     private var identity: some View {
         HStack(spacing: 14) {
-            ZStack {
-                Circle().fill(DS.accentSoft)
-                Text(String(displayName.prefix(1)).uppercased())
-                    .font(DS.title(.title2, .heavy))
-                    .foregroundStyle(.white)
+            Button {
+                UIImpactFeedbackGenerator(style: .light).impactOccurred()
+                showAvatarPicker = true
+            } label: {
+                AvatarCircle(avatarId: progressManager.avatarId, initial: String(displayName.prefix(1)).uppercased(), size: 64)
             }
-            .frame(width: 64, height: 64)
+            .buttonStyle(.plain)
+            .accessibilityLabel(languageManager.text("profile.avatar.title"))
             VStack(alignment: .leading, spacing: 3) {
                 Text(displayName)
                     .font(DS.title(.title3, .heavy))

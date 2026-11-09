@@ -56,3 +56,13 @@ que dans `maquette/`.
   avec résultats sous la rangée), grille « Univers » (les six plus grandes sous-catégories de
   la langue, couverture du cours le plus lu), carrousel « Créateurs à suivre ». La rangée
   « En moins d'une minute » attend les vidéos (prompt 10).
+- **Avatar du lecteur** : dans le profil, le rond bleu à l'initiale s'ouvre sur une feuille de
+  vingt avatars illustrés (les mêmes fichiers que le Studio, `design/site-art/manifest-avatars.json`,
+  embarqués : iOS `Assets.xcassets/avatar_NN`, Android `drawable-nodpi/avatar_NN.webp`). Un lecteur
+  n'a que ce choix, ou « pas d'avatar » pour revenir à ses initiales : jamais de vraie photo. Le
+  choix (`UserProgress.avatarId`) voyage avec la progression, donc d'un appareil à l'autre ; un
+  identifiant inconnu retombe sur les initiales. Textes `profile.avatar.title` et
+  `profile.avatar.none` dans les 30 langues.
+- **Tendances** : l'onglet Explorer lit d'abord `trending` du manifeste (les cours les plus ouverts
+  de la langue sur sept jours, recalculés chaque nuit, docs/notifications.md) et ne retombe sur le
+  tirage local hebdomadaire que si la liste est vide.

@@ -30,13 +30,14 @@ visiteur ──▶ sophia-culture.com (Vercel, Next.js)
 | `/join` | Connexion et inscription (Google, Apple, e-mail, lien magique), `?next=` | Supabase Auth |
 | `/auth/callback` | Retour OAuth / lien magique, puis redirection vers `next` | |
 | `/about`, `/legal/creator-agreement` | À propos, contrat créateur public (`studio_documents`, rôle anon) | |
+| `/unsubscribe?token=` | Le lien « ne plus recevoir ces e-mails » des messages « nouveau cours » (docs/notifications.md) | RPC `notification_unsubscribe` |
 | `/studio` | Tableau de bord auteur : lectures (jour en cours compris, en direct), terminés / 1 000 impressions, abonnés, gains estimés, lectures par jour, paiements, mes cours | RPC `creator_dashboard` |
 | `/studio/onboarding/<étape>` | Identité, références, profil + photo, contrat (signature), guide | `creator_accounts`, `studio_sign_agreement` |
 | `/studio/courses` | Mes cours : brouillons, en relecture, publiés | `studio_drafts` |
 | `/studio/courses/<id>` | L'éditeur (plan, blocs, vérifications, images Commons, aperçu), enregistrement automatique, envoi en relecture | `studio_drafts`, RPC `studio_submit_draft` |
 | `/studio/courses/<id>/status` | Suivi : décisions de l'équipe, production langue par langue | `studio_reviews`, `production_jobs`, `production_steps` |
 | `/studio/courses/app/<course_id>` | Un cours publié : décrochage par section, langues, quiz | RPC `creator_course_detail` |
-| `/studio/profile`, `/studio/guide` | Profil public, guide d'écriture | |
+| `/studio/profile`, `/studio/guide` | Profil public (photo ou avatar illustré ; un compte approuvé voit sa page publique et les apps suivre tout de suite), guide d'écriture | trigger `creator_accounts_sync`, `syncPublicPhoto` |
 | `/admin` | Vue d'ensemble équipe : file, créateurs, production, lectures (synthèse quotidienne + journal du jour en direct, `course_stats_window`), cagnotte Premium, activité | RPC `studio_admin_overview` |
 | `/admin/review`, `/admin/review/<id>` | File de relecture ; lecture du cours, vérifications du format, décision, **Accepter et lancer la production** | RPC `studio_review_draft`, action `publishDraft` |
 | `/admin/creators` | Approuver, suspendre, remettre en attente ; contrat signé ou non | RPC `studio_set_creator_status` |

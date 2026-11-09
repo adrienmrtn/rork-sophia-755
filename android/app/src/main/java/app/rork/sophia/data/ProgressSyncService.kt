@@ -96,7 +96,7 @@ class ProgressSyncService(
 
     private fun isEmpty(p: UserProgress): Boolean =
         p.courseProgress.isEmpty() && p.globalXP == 0 && p.favoriteCourseIds.isEmpty() &&
-            p.pathLevelResults.isEmpty() && p.likedCourseIds.isEmpty() && p.followedCreatorSlugs.isEmpty()
+            p.pathLevelResults.isEmpty() && p.likedCourseIds.isEmpty() && p.followedCreatorSlugs.isEmpty() && p.avatarId == null
 
     // Mêmes termes qu'iOS (`syncSignalScore`), j'aime et abonnements compris.
     private fun syncSignal(p: UserProgress): Int =

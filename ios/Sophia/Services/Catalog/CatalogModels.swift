@@ -108,8 +108,11 @@ struct CatalogManifest: Decodable {
     /// Les événements éditoriaux publiés (table `campaigns`), les mêmes dans chaque manifeste
     /// quelle que soit la langue : les textes portent chaque langue. Absent des anciens manifestes.
     let events: [Campaign]?
+    /// Les cours les plus ouverts de la langue sur sept jours (`trending_courses`), les plus lus en
+    /// premier. Vide tant que le serveur n'a pas d'événements ; Explorer retombe alors sur son tirage.
+    let trending: [String]?
 
-    private enum CodingKeys: String, CodingKey { case lang, files, courses, events }
+    private enum CodingKeys: String, CodingKey { case lang, files, courses, events, trending }
     private struct Skipped: Decodable {}
 
     init(from decoder: Decoder) throws {
@@ -117,6 +120,7 @@ struct CatalogManifest: Decodable {
         lang = try container.decode(String.self, forKey: .lang)
         files = try container.decode([String: Entry].self, forKey: .files)
         courses = try container.decode([String: Entry].self, forKey: .courses)
+        trending = (try? container.decodeIfPresent([String].self, forKey: .trending)) ?? nil
         // Un événement mal formé est ignoré, jamais au prix du catalogue entier.
         guard container.contains(.events) else { events = nil; return }
         var list = try container.nestedUnkeyedContainer(forKey: .events)

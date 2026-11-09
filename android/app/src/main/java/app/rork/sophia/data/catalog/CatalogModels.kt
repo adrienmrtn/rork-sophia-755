@@ -159,6 +159,8 @@ data class CatalogManifest(
      * que soit la langue : les textes portent chaque langue. Absent des anciens manifestes.
      */
     val events: List<Campaign> = emptyList(),
+    /** Les cours les plus ouverts de la langue sur sept jours (`trending_courses`), les plus lus en premier. */
+    val trending: List<String> = emptyList(),
 )
 
 /** `app_config` → clé `catalog` : le coupe-circuit et la cadence de rafraîchissement. */

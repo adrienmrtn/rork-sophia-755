@@ -33,6 +33,8 @@ data class Campaign(
     /** L'objectif commun : cours de la collection à terminer tous lecteurs confondus pendant l'événement, et où on en est. */
     @SerialName("goal_target") val goalTarget: Int? = null,
     @SerialName("goal_count") val goalCount: Int = 0,
+    /** Les pays où l'événement est montré (ISO 3166-1 alpha-2, la région du téléphone) ; null : partout. */
+    val countries: List<String>? = null,
     @SerialName("course_ids") val courseIds: List<String> = emptyList(),
     val upcoming: List<Upcoming> = emptyList(),
     val title: Map<String, String> = emptyMap(),
@@ -60,6 +62,13 @@ data class Campaign(
 
     val startDate: LocalDate? get() = parseDay(startsAt)
     val endDate: LocalDate? get() = parseDay(endsAt)
+
+    /** Montré dans cette région (`Locale.getDefault().country`) : partout sans liste, sinon si elle y figure. */
+    fun isShownIn(region: String?): Boolean {
+        val list = countries ?: return true
+        if (list.isEmpty()) return true
+        return region != null && region.uppercase() in list
+    }
 
     /** Actif entre le premier jour et la fin du dernier jour, inclus. */
     fun isActive(today: LocalDate = LocalDate.now()): Boolean {

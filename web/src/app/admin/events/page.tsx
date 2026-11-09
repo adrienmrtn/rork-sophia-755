@@ -65,7 +65,7 @@ export default async function EventsPage({ searchParams }: PageProps<"/admin/eve
                     {c.course_ids.length} course{c.course_ids.length === 1 ? "" : "s"} · challenge {c.challenge_target} · {c.upcoming.length} announced
                   </span>
                   <span className="text-muted">
-                    {languagesFilled(c).length}/30 languages · {c.participants.toLocaleString("en-GB")} participants
+                    {languagesFilled(c).length}/30 languages · {c.participants.toLocaleString("en-GB")} participants · {c.countries ? c.countries.join(", ") : "every country"}
                   </span>
                 </div>
                 <div className="flex items-center gap-3">

@@ -280,6 +280,8 @@ data class UserProgress(
     val followedCreatorSlugs: List<String> = emptyList(),
     /** Temps de lecture cumulé en secondes : chaque section quittée ajoute le temps passé dessus. */
     val readingSeconds: Int = 0,
+    /** L'avatar illustré choisi dans le profil (`avatar_01` … `avatar_20`), ou null pour les initiales. Même clé JSON qu'iOS. */
+    val avatarId: String? = null,
 )
 
 /**
