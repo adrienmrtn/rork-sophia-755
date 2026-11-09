@@ -4,9 +4,9 @@ import { container } from "@/components/ui";
 import type { StudioSession } from "@/lib/studio/account";
 import { signOut } from "@/app/studio/actions";
 
-type Active = "overview" | "review" | "creators" | "production";
+type Active = "overview" | "review" | "creators" | "production" | "events";
 
-/** L'en-tête de l'espace équipe : quatre pages, un retour au Studio. */
+/** L'en-tête de l'espace équipe : cinq pages, un retour au Studio. */
 export function AdminHeader({ session, active, queue }: { session: StudioSession; active?: Active; queue?: number }) {
   const link = (key: Active, href: string, label: string, badge?: number) => (
     <Link href={href} className={`inline-flex items-center gap-2 py-2.5 text-[15px] font-semibold text-ink-2 hover:text-navy ${active === key ? "border-b-2 border-navy font-extrabold text-navy" : ""}`}>
@@ -28,6 +28,7 @@ export function AdminHeader({ session, active, queue }: { session: StudioSession
           {link("review", "/admin/review", "Review queue", queue)}
           {link("creators", "/admin/creators", "Creators")}
           {link("production", "/admin/production", "Production")}
+          {link("events", "/admin/events", "Events")}
         </nav>
         <div className="flex items-center gap-4 text-[14px] font-semibold text-ink-3">
           <span className="hidden truncate text-[13px] text-muted md:inline">{session.user.email}</span>

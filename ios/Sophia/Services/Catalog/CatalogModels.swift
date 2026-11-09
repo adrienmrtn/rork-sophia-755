@@ -105,6 +105,31 @@ struct CatalogManifest: Decodable {
     let lang: String
     let files: [String: Entry]
     let courses: [String: Entry]
+    /// Les événements éditoriaux publiés (table `campaigns`), les mêmes dans chaque manifeste
+    /// quelle que soit la langue : les textes portent chaque langue. Absent des anciens manifestes.
+    let events: [Campaign]?
+
+    private enum CodingKeys: String, CodingKey { case lang, files, courses, events }
+    private struct Skipped: Decodable {}
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        lang = try container.decode(String.self, forKey: .lang)
+        files = try container.decode([String: Entry].self, forKey: .files)
+        courses = try container.decode([String: Entry].self, forKey: .courses)
+        // Un événement mal formé est ignoré, jamais au prix du catalogue entier.
+        guard container.contains(.events) else { events = nil; return }
+        var list = try container.nestedUnkeyedContainer(forKey: .events)
+        var decoded: [Campaign] = []
+        while !list.isAtEnd {
+            if let campaign = try? list.decode(Campaign.self) {
+                decoded.append(campaign)
+            } else if (try? list.decode(Skipped.self)) == nil {
+                break
+            }
+        }
+        events = decoded
+    }
 }
 
 /// `app_config` → clé `catalog` : le coupe-circuit et la cadence de rafraîchissement.

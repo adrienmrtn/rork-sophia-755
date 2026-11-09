@@ -1253,6 +1253,16 @@ def update_withheld(ctx: Context, failed: list[str]) -> None:
         elif lang not in failed and ctx.course_id in ids:
             by_lang[lang] = [i for i in ids if i != ctx.course_id]
             changed = True
+    # Les langues hors du job qui n'ont jamais eu ce cours (sous-ensemble choisi par l'équipe
+    # dans l'admin) sont retenues aussi : la porte de traduction et l'import savent ainsi que
+    # le cours n'y est pas distribué. Une relance qui les produit les en retire (boucle ci-dessus).
+    for lang in ALL_LANGS:
+        if lang == ctx.origin or lang in ctx.targets:
+            continue
+        ids = by_lang.get(lang, [])
+        if ctx.course_id not in ids and not (ctx.repo_content_dir / "courses" / lang / f"{ctx.course_id}.json").exists():
+            by_lang[lang] = sorted(set(ids) | {ctx.course_id})
+            changed = True
     if changed:
         write_json(path, data)
 

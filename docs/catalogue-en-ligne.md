@@ -59,7 +59,9 @@ Bucket public `course-content` (cache immuable, le hash est dans le nom) :
 Le manifeste d'une langue : `GET /functions/v1/catalog-manifest?lang=fr` (Edge Function
 `supabase/functions/catalog-manifest`, appuyée sur la fonction SQL `catalog_manifest(lang)`), avec
 `Cache-Control: max-age=300` et un ETag (`If-None-Match` → 304). Il liste les trois fichiers et le
-paquet de chaque cours publié, avec leur hash et leur chemin dans le bucket.
+paquet de chaque cours publié, avec leur hash et leur chemin dans le bucket, et porte sous `events`
+les événements éditoriaux publiés (table `campaigns`, docs/evenements.md), les mêmes quelle que
+soit la langue.
 
 ### Importer le catalogue
 

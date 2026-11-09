@@ -27,6 +27,10 @@ final class CatalogStore {
     private(set) var version = 0
     private(set) var isRefreshing = false
     private(set) var config = CatalogRemoteConfig()
+    /// Les événements éditoriaux du dernier manifeste lu (disque ou réseau), du plus ancien au
+    /// plus récent. `CampaignStore` les sert aux vues ; observable, donc elles se redessinent
+    /// quand un rafraîchissement en apporte.
+    private(set) var campaigns: [Campaign] = []
 
     private var snapshots: [AppLanguage: CatalogSnapshot] = [:]
     private var manifests: [AppLanguage: CatalogManifest] = [:]
@@ -142,7 +146,7 @@ final class CatalogStore {
     /// de `refresh_hours` (six heures par défaut), ou s'il n'y en a jamais eu pour cette langue.
     func refreshIfNeeded(language: AppLanguage) async {
         if manifests[language] == nil, let saved = readManifestFromDisk(language) {
-            manifests[language] = saved
+            adopt(saved, for: language)
         }
         if let last = lastRefresh[language.rawValue], manifests[language] != nil,
            Date().timeIntervalSince(last) < config.refreshHours * 3_600 {
@@ -160,7 +164,7 @@ final class CatalogStore {
 
         await loadRemoteConfig()
         if manifests[language] == nil, let saved = readManifestFromDisk(language) {
-            manifests[language] = saved
+            adopt(saved, for: language)
         }
         guard config.enabled, let url = Self.manifestURL(language: language) else { return }
 
@@ -179,7 +183,7 @@ final class CatalogStore {
             return
         }
         guard http.statusCode == 200, let manifest = try? JSONDecoder().decode(CatalogManifest.self, from: data) else { return }
-        manifests[language] = manifest
+        adopt(manifest, for: language)
         write(data, language: language, name: "manifest.json")
         if let etag = http.value(forHTTPHeaderField: "ETag") {
             etags[language.rawValue] = etag
@@ -421,6 +425,14 @@ final class CatalogStore {
             #if DEBUG
             print("CatalogStore: écriture impossible \(name) : \(error)")
             #endif
+        }
+    }
+
+    /// Garde le manifeste et publie ses événements éditoriaux (le même jeu quelle que soit la langue).
+    private func adopt(_ manifest: CatalogManifest, for language: AppLanguage) {
+        manifests[language] = manifest
+        if let events = manifest.events {
+            campaigns = events.sorted { $0.startsAt < $1.startsAt }
         }
     }
 

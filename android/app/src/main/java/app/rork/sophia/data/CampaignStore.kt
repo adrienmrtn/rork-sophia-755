@@ -1,53 +1,39 @@
 package app.rork.sophia.data
 
 import android.content.Context
+import app.rork.sophia.data.catalog.CatalogStore
 import app.rork.sophia.domain.Campaign
 import app.rork.sophia.domain.UserProgress
-import kotlinx.serialization.json.Json
+import kotlinx.coroutines.flow.StateFlow
 import java.time.LocalDate
 
 /**
- * Les événements embarqués (les fichiers JSON de `assets/events`) et l'état local du lecteur vis-à-vis
- * d'eux : les cours annoncés pour lesquels il a demandé à être prévenu.
+ * Les événements éditoriaux (table `campaigns` côté serveur, servis par le manifeste du catalogue,
+ * voir docs/evenements.md) et l'état local du lecteur vis-à-vis d'eux : les cours annoncés pour
+ * lesquels il a demandé à être prévenu.
  *
- * Le serveur prendra le relais au prompt 6 (table `campaigns`, `campaign_progress`) ; l'API
- * est écrite pour que seul ce fichier change à ce moment-là.
+ * Rien n'est embarqué : avant le premier manifeste il n'y a pas d'événement. Un écran collecte
+ * [flow] pour se recomposer quand le catalogue en apporte.
  */
 object CampaignStore {
     private const val PREFS = "sophia_prefs"
     private const val NOTIFY_KEY = "sophia_campaign_notify"
-    private const val EVENTS_DIR = "events"
 
-    private val json = Json { ignoreUnknownKeys = true; isLenient = true }
+    /** Les événements publiés, du plus ancien au plus récent ; à collecter dans les écrans. */
+    val flow: StateFlow<List<Campaign>> get() = CatalogStore.campaigns
 
-    @Volatile
-    private var loaded: List<Campaign>? = null
-
-    fun resetCache() {
-        loaded = null
-    }
-
-    /** Tous les événements embarqués, du plus ancien au plus récent. Lecture unique des assets. */
-    fun all(context: Context): List<Campaign> {
-        loaded?.let { return it }
-        synchronized(this) {
-            loaded?.let { return it }
-            val campaigns = load(context)
-            loaded = campaigns
-            return campaigns
-        }
-    }
+    /** Les événements publiés, du plus ancien au plus récent, tels que le catalogue les a reçus. */
+    fun all(): List<Campaign> = CatalogStore.campaigns.value
 
     /** Les événements en cours, le plus proche de sa fin en premier. */
-    fun active(context: Context, today: LocalDate = LocalDate.now()): List<Campaign> =
-        all(context).filter { it.isActive(today) }
-            .sortedBy { it.endDate ?: LocalDate.MAX }
+    fun active(today: LocalDate = LocalDate.now()): List<Campaign> =
+        all().filter { it.isActive(today) }.sortedBy { it.endDate ?: LocalDate.MAX }
 
-    fun campaign(context: Context, slug: String): Campaign? = all(context).firstOrNull { it.slug == slug }
+    fun campaign(slug: String): Campaign? = all().firstOrNull { it.slug == slug }
 
     /** L'événement actif dont la collection contient ce cours, pour l'étiquette sur les cartes. */
-    fun activeCampaign(context: Context, courseId: String, today: LocalDate = LocalDate.now()): Campaign? =
-        active(context, today).firstOrNull { courseId in it.courseIds }
+    fun activeCampaign(courseId: String, today: LocalDate = LocalDate.now()): Campaign? =
+        active(today).firstOrNull { courseId in it.courseIds }
 
     /** Cours de la collection terminés par le lecteur, dans la limite du défi. */
     fun challengeProgress(campaign: Campaign, progress: UserProgress): Int {
@@ -81,23 +67,5 @@ object CampaignStore {
             .edit()
             .putStringSet(NOTIFY_KEY, HashSet(next))
             .apply()
-    }
-
-    // Chargement
-
-    private fun load(context: Context): List<Campaign> {
-        val names = try {
-            context.assets.list(EVENTS_DIR)?.filter { it.endsWith(".json") }.orEmpty()
-        } catch (_: Exception) {
-            emptyList()
-        }
-        return names.mapNotNull { name ->
-            try {
-                val text = context.assets.open("$EVENTS_DIR/$name").bufferedReader().use { it.readText() }
-                json.decodeFromString(Campaign.serializer(), text)
-            } catch (_: Exception) {
-                null
-            }
-        }.sortedBy { it.startsAt }
     }
 }

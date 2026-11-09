@@ -3,6 +3,7 @@ package app.rork.sophia.data.catalog
 import app.rork.sophia.data.CourseAuthor
 import app.rork.sophia.data.GlossaryEntry
 import app.rork.sophia.domain.AppLanguage
+import app.rork.sophia.domain.Campaign
 import app.rork.sophia.domain.CourseSummary
 import app.rork.sophia.domain.LearningCollection
 import app.rork.sophia.domain.QuizQuestion
@@ -153,6 +154,11 @@ data class CatalogManifest(
     @SerialName("generated_at") val generatedAt: String? = null,
     val files: Map<String, CatalogManifestEntry> = emptyMap(),
     val courses: Map<String, CatalogManifestEntry> = emptyMap(),
+    /**
+     * Les événements éditoriaux publiés (table `campaigns`), les mêmes dans chaque manifeste quelle
+     * que soit la langue : les textes portent chaque langue. Absent des anciens manifestes.
+     */
+    val events: List<Campaign> = emptyList(),
 )
 
 /** `app_config` → clé `catalog` : le coupe-circuit et la cadence de rafraîchissement. */

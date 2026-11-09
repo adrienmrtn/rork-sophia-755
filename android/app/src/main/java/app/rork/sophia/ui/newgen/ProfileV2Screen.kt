@@ -136,8 +136,8 @@ fun ProfileV2Screen(
     val followedAuthors = remember(progress.followedCreatorSlugs, authors) {
         progress.followedCreatorSlugs.mapNotNull { slug -> authors.firstOrNull { it.slug == slug } }
     }
-    val campaigns = remember { CampaignStore.all(context.applicationContext) }
-    val activeCampaign = remember { CampaignStore.active(context.applicationContext).firstOrNull() }
+    val campaigns by CampaignStore.flow.collectAsState()
+    val activeCampaign = remember(campaigns) { CampaignStore.active().firstOrNull() }
     val completedSubjects = remember(progress.courseProgress, summaries) {
         val subjectsById = summaries.associate { it.id to it.subjectEnum }
         progress.courseProgress.filter { it.value.isCompleted }.keys.mapNotNull { subjectsById[it] }.toSet().size

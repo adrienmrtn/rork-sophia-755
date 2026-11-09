@@ -1,22 +1,16 @@
 import Foundation
 
-/// Les événements embarqués (`Resources/Events/*.json`) et l'état local du lecteur vis-à-vis
-/// d'eux : les cours annoncés pour lesquels il a demandé à être prévenu.
+/// Les événements éditoriaux (table `campaigns` côté serveur, servis par le manifeste du
+/// catalogue, voir docs/evenements.md) et l'état local du lecteur vis-à-vis d'eux : les cours
+/// annoncés pour lesquels il a demandé à être prévenu.
 ///
-/// Le serveur prendra le relais au prompt 6 (table `campaigns`, `campaign_progress`) ; l'API
-/// est écrite pour que seul ce fichier change à ce moment-là.
+/// Rien n'est embarqué : avant le premier manifeste il n'y a pas d'événement, et les vues qui
+/// lisent `all` se redessinent dès que `CatalogStore` (observable) en reçoit.
 enum CampaignStore {
-    private static var loaded: [Campaign]?
     private static let notifyKey = "sophia_campaign_notify"
 
-    static func resetCache() { loaded = nil }
-
-    static var all: [Campaign] {
-        if let loaded { return loaded }
-        let campaigns = load()
-        loaded = campaigns
-        return campaigns
-    }
+    /// Les événements publiés, du plus ancien au plus récent.
+    static var all: [Campaign] { CatalogStore.shared.campaigns }
 
     /// Les événements en cours, le plus proche de sa fin en premier.
     static func active(on date: Date = Date()) -> [Campaign] {
@@ -60,49 +54,5 @@ enum CampaignStore {
         if wants, !stored.contains(id) { stored.append(id) }
         if !wants { stored.removeAll { $0 == id } }
         UserDefaults.standard.set(stored, forKey: notifyKey)
-    }
-
-    // MARK: - Loading
-
-    private struct Index: Decodable {
-        let events: [String]
-    }
-
-    /// Xcode peut aplatir le dossier `Resources` dans le bundle : comme les autres chargeurs,
-    /// chaque fichier est cherché dans `Resources/Events`, `Events`, puis à la racine. Un
-    /// index (`index.json`) donne les noms de fichiers, puisqu'on ne peut pas lister la racine.
-    private static func resourceURL(name: String) -> URL? {
-        let bundle = Bundle.main
-        for subdirectory in ["Resources/Events", "Events"] {
-            if let url = bundle.url(forResource: name, withExtension: "json", subdirectory: subdirectory) { return url }
-        }
-        if let url = bundle.url(forResource: name, withExtension: "json") { return url }
-        guard let root = bundle.resourceURL else { return nil }
-        for subdirectory in ["Resources/Events", "Events", ""] {
-            let candidate = root.appendingPathComponent(subdirectory).appendingPathComponent("\(name).json")
-            if FileManager.default.fileExists(atPath: candidate.path) { return candidate }
-        }
-        return nil
-    }
-
-    private static func load() -> [Campaign] {
-        let decoder = JSONDecoder()
-        guard let indexURL = resourceURL(name: "index"),
-              let indexData = try? Data(contentsOf: indexURL),
-              let index = try? decoder.decode(Index.self, from: indexData) else {
-            assertionFailure("Events index.json missing from the bundle")
-            return []
-        }
-        let urls = index.events.compactMap { resourceURL(name: $0) }
-        return urls.compactMap { url in
-            guard let data = try? Data(contentsOf: url) else { return nil }
-            do {
-                return try decoder.decode(Campaign.self, from: data)
-            } catch {
-                assertionFailure("Failed to decode campaign \(url.lastPathComponent): \(error)")
-                return nil
-            }
-        }
-        .sorted { $0.startsAt < $1.startsAt }
     }
 }

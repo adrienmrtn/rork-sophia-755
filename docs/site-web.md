@@ -41,6 +41,7 @@ visiteur ──▶ sophia-culture.com (Vercel, Next.js)
 | `/admin/review`, `/admin/review/<id>` | File de relecture ; lecture du cours, vérifications du format, décision, **Accepter et lancer la production** | RPC `studio_review_draft`, action `publishDraft` |
 | `/admin/creators` | Approuver, suspendre, remettre en attente ; contrat signé ou non | RPC `studio_set_creator_status` |
 | `/admin/production`, `/admin/production/<job>` | Les jobs de l'usine, étape par étape | `production_jobs`, `production_steps` |
+| `/admin/events`, `/admin/events/<slug>` | Les événements éditoriaux (Movember, 11 novembre…) : création, cours de la collection, défi, cours annoncés, textes en 30 langues (traduction), publication vers les apps sans nouvelle version (docs/evenements.md) | `campaigns`, manifeste du catalogue |
 | `/api/commons/search?q=` | Recherche d'images Wikimedia Commons pour l'éditeur (connecté seulement) | API Commons |
 | `/sitemap.xml`, `/robots.txt` | Référencement ; `/studio`, `/admin`, `/auth`, `/join` exclus | |
 

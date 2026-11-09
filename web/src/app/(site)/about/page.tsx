@@ -16,7 +16,7 @@ export default function AboutPage() {
           <p className="text-[18px] leading-[1.6] text-ink-3">
             Sophia is a general-knowledge app. Every course answers one real question in five short parts, ends with an open-book quiz, explains its difficult words and cites its sources. The courses are written by professors and researchers, reviewed before publication, and translated into 30 languages so that a reader in Tokyo and a reader in Lyon learn the same thing.
           </p>
-          <p className="text-[18px] leading-[1.6] text-ink-3">The introduction of every course is free to read; Premium, in the app, unlocks the full catalogue.</p>
+          <p className="text-[18px] leading-[1.6] text-ink-3">500,000 people have read courses on Sophia. The introduction of every course is free to read; Premium, in the app, unlocks the full catalogue.</p>
         </div>
         <div id="help" className="grid grid-cols-1 gap-5 sm:grid-cols-2">
           <div className="flex flex-col gap-2 rounded-card border border-line p-6">

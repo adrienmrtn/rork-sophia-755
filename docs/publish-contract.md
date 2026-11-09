@@ -48,6 +48,11 @@ Corps JSON :
 }
 ```
 
+Quand `languages` est un sous-ensemble, l'usine inscrit les langues non demandées dans
+`content/catalog_withheld.json` (cours non distribué dans ces langues) : la porte de traduction
+ne réclame pas ces copies, l'import ne les attend pas. Un job ultérieur qui produit une de ces
+langues (« Translate into more languages » dans l'admin) l'en retire.
+
 Blocs admis : `heading`, `paragraph`, `image`, `timeline`, `funFact`, `takeaway`, `quote`, avec
 les champs de la charte. Un bloc `image` porte `asset` (slug d'un objet du bucket `course-images`)
 ou `image_url` (https ; l'usine importe l'image et fixe le slug). Dans les textes : `**gras**`,
