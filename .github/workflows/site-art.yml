@@ -1,0 +1,52 @@
+# Illustrations du site (sophia-culture.com) : Recraft v3 via fal.ai, depuis un manifeste.
+# Lancement à la main (workflow_dispatch). Les images sont commitées sur une branche
+# site-art/<run> pour relecture, jamais directement sur main.
+name: Illustrations du site
+
+on:
+  workflow_dispatch:
+    inputs:
+      manifest:
+        description: "Manifeste JSON (liste des images à produire)"
+        required: false
+        default: "design/site-art/manifest.json"
+      only:
+        description: "Noms à produire, séparés par des virgules (vide = tous)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: site-art
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Dépendances
+        run: pip install --quiet pillow
+      - name: Générer
+        env:
+          FAL_KEY: ${{ secrets.FAL_KEY || secrets.FAL_API_KEY }}
+        run: |
+          [ -n "$FAL_KEY" ] || { echo "Secret FAL_KEY ou FAL_API_KEY manquant"; exit 1; }
+          python3 scripts/site_art.py "${{ inputs.manifest }}" design/site-art/out "${{ inputs.only }}"
+      - name: Commit sur une branche de relecture
+        run: |
+          git config user.name "Sophia site-art"
+          git config user.email "site-art@users.noreply.github.com"
+          branch="site-art/${{ github.run_id }}"
+          git checkout -b "$branch"
+          git add design/site-art/out
+          git commit -m "Illustrations du site : run ${{ github.run_id }}" || { echo "rien à commiter"; exit 0; }
+          git push -u origin "$branch"
+          echo "branch=$branch" >> "$GITHUB_OUTPUT"
+          echo "Images sur la branche $branch" >> "$GITHUB_STEP_SUMMARY"
