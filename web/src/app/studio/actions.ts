@@ -161,28 +161,42 @@ export async function finishGuide(): Promise<void> {
   redirect("/studio");
 }
 
-export async function createDraft(): Promise<void> {
-  const { supabase, user, account } = await requireSession();
+/** Proposer un cours : un titre et un pitch. La base vérifie le quota (studio_propose) et crée la
+ *  ligne en statut « proposed » ; l'équipe décide, puis l'auteur écrit. */
+export async function proposeCourse(form: FormData): Promise<void> {
+  const { supabase, account } = await requireSession();
   if (!account) redirect("/studio/onboarding/identity");
-  const { data, error } = await supabase
-    .from("studio_drafts")
-    .insert({
-      user_id: user.id,
-      origin_lang: account.writing_lang,
-      title: "",
-      description: "",
-      hero: { ratio: "16:9" },
-      sections: [
-        { title: "Introduction", free: true, blocks: [{ type: "paragraph", text: "" }] },
-        { title: "", free: false, blocks: [{ type: "paragraph", text: "" }] },
-      ],
-      sources: [],
-      glossary: [],
-    })
-    .select("id")
-    .single();
-  if (error || !data) redirect(`/studio/courses?error=${encodeURIComponent(error?.message ?? "insert")}`);
-  redirect(`/studio/courses/${data.id}`);
+  const title = text(form, "title", 160);
+  const pitch = text(form, "pitch", 600);
+  const { data, error } = await supabase.rpc("studio_propose", { p_title: title, p_pitch: pitch });
+  if (error || !data) {
+    const qs = new URLSearchParams({ error: error?.message ?? "The proposal could not be sent.", title, pitch });
+    redirect(`/studio/courses/new?${qs.toString()}`);
+  }
+  revalidatePath("/studio");
+  revalidatePath("/studio/courses");
+  redirect(`/studio/courses/${(data as { id: string }).id}/status?done=proposed`);
+}
+
+/** Reprendre une proposition renvoyée (ou pas encore lue) et la renvoyer à l'équipe. */
+export async function updateProposal(form: FormData): Promise<void> {
+  const { supabase } = await requireSession();
+  const id = text(form, "id", 64);
+  const title = text(form, "title", 160);
+  const pitch = text(form, "pitch", 600);
+  const { error } = await supabase.rpc("studio_update_proposal", { p_id: id, p_title: title, p_pitch: pitch });
+  revalidatePath("/studio/courses");
+  redirect(`/studio/courses/${id}/status?${error ? `error=${encodeURIComponent(error.message)}` : "done=proposed"}`);
+}
+
+/** Supprimer sa proposition tant qu'elle n'est pas acceptée. */
+export async function deleteProposal(form: FormData): Promise<void> {
+  const { supabase } = await requireSession();
+  const id = text(form, "id", 64);
+  await supabase.from("studio_drafts").delete().eq("id", id).in("status", ["proposed", "proposal_returned"]);
+  revalidatePath("/studio");
+  revalidatePath("/studio/courses");
+  redirect("/studio/courses?done=deleted");
 }
 
 export async function deleteDraft(form: FormData): Promise<void> {

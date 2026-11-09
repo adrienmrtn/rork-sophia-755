@@ -31,16 +31,17 @@ visiteur ──▶ sophia-culture.com (Vercel, Next.js)
 | `/auth/callback` | Retour OAuth / lien magique, puis redirection vers `next` | |
 | `/about`, `/legal/creator-agreement` | À propos, contrat créateur public (`studio_documents`, rôle anon) | |
 | `/unsubscribe?token=` | Le lien « ne plus recevoir ces e-mails » des messages « nouveau cours » (docs/notifications.md) | RPC `notification_unsubscribe` |
-| `/studio` | Tableau de bord auteur : lectures (jour en cours compris, en direct), terminés / 1 000 impressions, abonnés, gains estimés, lectures par jour, paiements, mes cours | RPC `creator_dashboard` |
+| `/studio` | Tableau de bord auteur : lectures (jour en cours compris, en direct), terminés / 1 000 impressions, abonnés, **cagnotte** (15 $ par cours validé, versée le lundi : crédits, versements), quota de la semaine, lectures par jour, mes cours | RPC `creator_dashboard` |
 | `/studio/onboarding/<étape>` | Identité, références, profil + photo, contrat (signature), guide | `creator_accounts`, `studio_sign_agreement` |
-| `/studio/courses` | Mes cours : brouillons, en relecture, publiés | `studio_drafts` |
+| `/studio/courses`, `/studio/courses/new` | Mes cours : propositions (envoyées, renvoyées), en rédaction, en relecture, publiés ; bandeau du quota. **Proposer un cours** : titre + pitch, dans la limite du quota | `studio_drafts`, RPC `studio_propose`, `studio_update_proposal` |
 | `/studio/courses/<id>` | L'éditeur (plan, blocs, vérifications, images Commons, aperçu), enregistrement automatique, envoi en relecture | `studio_drafts`, RPC `studio_submit_draft` |
-| `/studio/courses/<id>/status` | Suivi : décisions de l'équipe, production langue par langue | `studio_reviews`, `production_jobs`, `production_steps` |
+| `/studio/courses/<id>/status` | Suivi : la proposition et la note de l'équipe (reprendre, renvoyer, supprimer), les décisions, la validation (15 $), la production langue par langue | `studio_reviews`, `production_jobs`, `production_steps` |
 | `/studio/courses/app/<course_id>` | Un cours publié : décrochage par section, langues, quiz | RPC `creator_course_detail` |
 | `/studio/profile`, `/studio/guide` | Profil public (photo ou avatar illustré) ; un compte approuvé voit sa page publique suivre tout de suite et les apps au prochain manifeste. La photo est rendue publique **par la base** (trigger `creator_accounts_photo_sync` → Edge Function `author-photo-sync`), jamais par le site. Guide d'écriture. | triggers `creator_accounts_sync`, `creator_accounts_photo_sync`, table `author_photo_requests` |
-| `/admin` | Vue d'ensemble équipe : file, créateurs, production, lectures (synthèse quotidienne + journal du jour en direct, `course_stats_window`), cagnotte Premium, activité | RPC `studio_admin_overview` |
-| `/admin/review`, `/admin/review/<id>` | File de relecture ; lecture du cours, vérifications du format, décision, **Accepter et lancer la production** | RPC `studio_review_draft`, action `publishDraft` |
-| `/admin/creators` | Approuver, suspendre, remettre en attente ; contrat signé ou non | RPC `studio_set_creator_status` |
+| `/admin` | Vue d'ensemble équipe : propositions à décider, file, créateurs, production, lectures (synthèse quotidienne + journal du jour en direct, `course_stats_window`), **versements du lundi** (dû, auteurs à payer), activité | RPC `studio_admin_overview` |
+| `/admin/review`, `/admin/review/<id>` | Propositions à décider (accepter, renvoyer avec un mot, supprimer) ; file de relecture ; lecture du cours, vérifications du format, quota de l'auteur, **Accepter et lancer la production** = validation : +15 $ à la cagnotte, un cran du quota | RPC `studio_decide_proposal`, `studio_review_draft`, action `publishDraft` |
+| `/admin/creators` | Approuver, suspendre, remettre en attente ; contrat signé ou non ; quota de la semaine et **limite hebdomadaire** par auteur (vide = règle commune, 0 = bloqué) ; cagnotte due | RPC `studio_set_creator_status`, `studio_set_creator_quota` |
+| `/admin/payouts` | **Versements du lundi** : le dû par auteur (cours crédités), « Transfer done » qui solde la cagnotte et trace le versement, historique | RPC `studio_payouts_due`, `studio_mark_paid` |
 | `/admin/production`, `/admin/production/<job>` | Les jobs de l'usine, étape par étape | `production_jobs`, `production_steps` |
 | `/admin/events`, `/admin/events/<slug>` | Les événements éditoriaux (Movember, 11 novembre…) : création, cours de la collection, défi, cours annoncés, textes en 30 langues (traduction), publication vers les apps sans nouvelle version (docs/evenements.md) | `campaigns`, manifeste du catalogue |
 | `/api/commons/search?q=` | Recherche d'images Wikimedia Commons pour l'éditeur (connecté seulement) | API Commons |
@@ -49,6 +50,33 @@ visiteur ──▶ sophia-culture.com (Vercel, Next.js)
 Le `proxy.ts` (middleware Next 16) rafraîchit la session et renvoie vers `/join?next=…` les visiteurs
 non connectés de `/studio` et `/admin` ; les pages revérifient. `/admin` exige en plus une ligne
 dans `studio_admins` (fonction `studio_admin_touch`, qui pose `user_id` à la première connexion).
+
+## Rémunération et quotas (10 novembre)
+
+Un auteur touche **15 dollars par cours validé** (`app_config.studio.course_fee_cents`), quel que
+soit le nombre de lectures ; la part des revenus Premium n'existe plus (les statistiques de lecture
+restent). La validation est le clic **Accepter et lancer la production** (ou « Validate only ») :
+`studio_review_draft('accepted')` pose `validated_at`, crée un crédit dans `creator_credits`
+(jamais deux pour un même cours) et journalise `validated`. La cagnotte d'un auteur est la somme de
+ses crédits sans `payout_id`. Le lundi, Adrien fait les virements à la main, en dollars, puis clique
+« Transfer done » sur `/admin/payouts` : `studio_mark_paid` crée une ligne `creator_payouts` et y
+rattache les crédits. Rien n'est collecté comme coordonnées bancaires ; pas de rétroactif.
+
+**Deux étapes.** Un cours commence par une **proposition** (`studio_propose` : titre + pitch, statut
+`proposed`). L'équipe accepte (statut `draft`, l'éditeur s'ouvre), renvoie avec un mot ou un
+contre-titre (`proposal_returned`, l'auteur reprend et renvoie), ou supprime. Ensuite rédaction,
+envoi en relecture, validation.
+
+**Quota.** `studio_quota(user)` : trois cours validés dans les sept jours suivant l'approbation du
+compte (`first_week_quota`), puis un par semaine calendaire lundi-dimanche, Europe/Paris
+(`default_weekly_quota`), sans report. `creator_accounts.weekly_quota` (réglé sur `/admin/creators`)
+remplace la règle commune pour un auteur ; 0 bloque. Un auteur ne peut proposer que si ses cours en
+cours (proposés, en rédaction, en relecture) sont sous la limite ; l'équipe ne peut valider que si
+les validations de la période sont sous la limite (le message dit à partir de quand). Un compte non
+approuvé peut proposer et écrire, pas être validé.
+
+Le contrat créateur **version 2** (`studio_documents`) dit tout cela ; la version en vigueur étant
+la 2, un auteur ayant signé la 1 devra re-signer avant son prochain envoi.
 
 ## Le circuit d'un cours
 

@@ -7,12 +7,13 @@ import { ButtonLink, Card, container } from "@/components/ui";
 import { s } from "@/lib/copy/studio-en";
 import { SUBJECT_LABEL } from "@/lib/catalog/slugs";
 import { displayName, getStudioSession, nextOnboardingPath } from "@/lib/studio/account";
-import { listDrafts, loadDashboard, money, pct, shortDate } from "@/lib/studio/data";
-import { createDraft } from "@/app/studio/actions";
+import { listDrafts, loadDashboard, pct, shortDate } from "@/lib/studio/data";
+import { moneyCents, quotaSummary, type QuotaTone } from "@/lib/studio/payments";
 
 export const dynamic = "force-dynamic";
 
 const PERIODS = [7, 28, 90];
+const TONE: Record<QuotaTone, string> = { ok: "bg-white/80 text-navy", full: "bg-white/80 text-amber", blocked: "bg-red-bg text-red" };
 
 export default async function DashboardPage({ searchParams }: PageProps<"/studio">) {
   const session = await getStudioSession();
@@ -35,7 +36,9 @@ export default async function DashboardPage({ searchParams }: PageProps<"/studio
     const avg = dash.subject_per_1000[subjects[0]];
     return avg == null ? null : { subject: SUBJECT_LABEL[subjects[0] as keyof typeof SUBJECT_LABEL] ?? subjects[0], avg: String(avg) };
   })();
-  const current = dash.payouts.find((p) => p.current);
+  const quota = quotaSummary(dash.quota);
+  const fee = moneyCents(dash.fee_cents, dash.currency);
+  const pending = dash.credits.filter((c) => !c.paid_at);
   const unpublishedDrafts = drafts.filter((x) => x.status !== "published" && x.status !== "archived");
   const inReview = drafts.filter((x) => x.status === "submitted").length;
   const hasData = published.length > 0;
@@ -61,16 +64,20 @@ export default async function DashboardPage({ searchParams }: PageProps<"/studio
                   {d.continueOnboarding}
                 </ButtonLink>
               ) : (
-                <form action={createDraft}>
-                  <button type="submit" className="inline-flex h-11 items-center gap-2 rounded-full bg-navy px-5 text-[15px] font-bold text-white transition-colors hover:bg-ink">
+                <Link href="/studio/courses/new" className="inline-flex h-11 items-center gap-2 rounded-full bg-navy px-5 text-[15px] font-bold text-white transition-colors hover:bg-ink">
                     {s.nav.write}
-                  </button>
-                </form>
+                  </Link>
               )}
               <ButtonLink href="/studio/courses" variant="ghost" className="!rounded-full">
                 {s.nav.courses} →
               </ButtonLink>
             </div>
+            {!onboarding && (
+              <p className={`inline-flex w-fit items-center gap-2 rounded-full px-3 py-1.5 text-[13px] font-semibold ${TONE[quota.tone]}`}>
+                {quota.headline}
+                {quota.detail ? ` ${quota.detail}.` : ""}
+              </p>
+            )}
             {account.status === "pending" && !onboarding && (
               <p className="inline-flex w-fit items-center gap-2 rounded-full bg-white/80 px-3 py-1.5 text-[13px] font-semibold text-amber">
                 <span aria-hidden="true" className="h-2 w-2 rounded-full bg-saffron" /> {d.pending}
@@ -85,7 +92,7 @@ export default async function DashboardPage({ searchParams }: PageProps<"/studio
           <Kpi icon="eye" chip="bg-tint text-navy" label={d.reads} value={dash.reads.toLocaleString("en")} sub={delta == null ? d.vsPrevious : `${delta >= 0 ? "+" : ""}${Math.round(delta * 100)}% ${d.vsPrevious}`} tone={delta == null ? "muted" : delta >= 0 ? "green" : "red"} />
           <Kpi icon="target" chip="bg-cream text-amber" label={d.per1000} value={dash.per_1000 == null ? "–" : String(dash.per_1000)} sub={subjectAvg ? d.aboveAvg(subjectAvg.subject, subjectAvg.avg) : d.onCourses(published.length)} />
           <Kpi icon="users" chip="bg-green-bg text-green" label={d.followers} value={`${dash.followers_gained >= 0 ? "+" : ""}${dash.followers_gained.toLocaleString("en")}`} sub={d.onCourses(published.length)} />
-          <Kpi icon="coin" chip="bg-amber-bg text-amber" label={d.earnings} value={current ? money(current.amount, current.currency) : "–"} sub={current ? `${d.estimated} · ${d.paidOn}` : d.noData} />
+          <Kpi icon="coin" chip="bg-amber-bg text-amber" label={d.earnings} value={moneyCents(dash.pot_cents, dash.currency)} sub={dash.pot_cents > 0 ? `${d.estimated} · ${d.validatedCourses(pending.length, fee)}` : d.validatedCourses(dash.credits.length, fee)} tone={dash.pot_cents > 0 ? "green" : "muted"} />
         </div>
 
         <div className="grid grid-cols-1 gap-5 lg:grid-cols-[2fr_1fr]">
@@ -108,25 +115,43 @@ export default async function DashboardPage({ searchParams }: PageProps<"/studio
           <Card id="payments" className="flex flex-col gap-4 border-cream-2 bg-cream p-6">
             <div className="flex flex-col gap-0.5">
               <h2 className="text-[18px] font-extrabold tracking-[-0.3px]">{d.payments}</h2>
-              <span className="text-[13px] text-ink-3">{d.paymentNote(current?.readers ?? 0)}</span>
+              <span className="text-[13px] text-ink-3">{d.paymentNote(fee)}</span>
+            </div>
+            <div className="flex items-end justify-between gap-3 rounded-2xl bg-white/80 px-4 py-3">
+              <div className="flex flex-col">
+                <span className="text-[12px] font-bold uppercase tracking-[1px] text-muted">{d.earnings}</span>
+                <strong className="text-[26px] font-extrabold tracking-[-0.6px] text-navy tabular-nums">{moneyCents(dash.pot_cents, dash.currency)}</strong>
+              </div>
+              <span className="text-[12px] font-semibold text-ink-3">{dash.pot_cents > 0 ? d.estimated : d.paidOn}</span>
             </div>
             <ul className="flex flex-col divide-y divide-cream-2">
-              {dash.payouts.length === 0 && <li className="py-3 text-[14px] text-muted">{d.noData}</li>}
-              {dash.payouts.map((p) => (
-                <li key={p.month} className="flex items-center justify-between gap-3 py-3">
-                  <div className="flex flex-col">
-                    <strong className="text-[15px] font-bold">{new Date(`${p.month}-01T00:00:00Z`).toLocaleDateString("en-GB", { month: "long", year: "numeric", timeZone: "UTC" })}</strong>
-                    <span className="text-[12px] text-ink-3">
-                      {Math.round(p.minutes).toLocaleString("en")} min · {p.readers} readers · {(p.share * 100).toFixed(1)}% of the pool
-                    </span>
+              {dash.credits.length === 0 && <li className="py-3 text-[14px] text-muted">{d.nothingYet}</li>}
+              {dash.credits.slice(0, 8).map((c) => (
+                <li key={c.id} className="flex items-center justify-between gap-3 py-3">
+                  <div className="flex min-w-0 flex-col">
+                    <strong className="truncate text-[14px] font-bold">{c.title || s.courses.untitled}</strong>
+                    <span className="text-[12px] text-ink-3">Validated {shortDate(c.created_at)}{c.paid_at ? ` · paid ${shortDate(c.paid_at)}` : ""}</span>
                   </div>
-                  <div className="flex flex-col items-end">
-                    <strong className="text-[17px] font-extrabold text-navy tabular-nums">{money(p.amount, p.currency)}</strong>
-                    <span className={`rounded-full px-2 py-0.5 text-[11px] font-bold ${p.current ? "bg-white text-amber" : "bg-green-bg text-green"}`}>{p.current ? d.current : d.paid}</span>
+                  <div className="flex shrink-0 flex-col items-end">
+                    <strong className="text-[15px] font-extrabold text-navy tabular-nums">{moneyCents(c.amount_cents, dash.currency)}</strong>
+                    <span className={`rounded-full px-2 py-0.5 text-[11px] font-bold ${c.paid_at ? "bg-green-bg text-green" : "bg-white text-amber"}`}>{c.paid_at ? d.paid : d.current}</span>
                   </div>
                 </li>
               ))}
             </ul>
+            {dash.payouts.length > 0 && (
+              <div className="flex flex-col gap-1 border-t border-cream-2 pt-3">
+                <span className="text-[12px] font-bold uppercase tracking-[1px] text-muted">{d.payoutsTitle}</span>
+                <ul className="flex flex-col gap-1 text-[13px] text-ink-2">
+                  {dash.payouts.slice(0, 6).map((p) => (
+                    <li key={p.id} className="flex items-center justify-between gap-3">
+                      <span>{shortDate(p.paid_at)} · {p.credits_count} {p.credits_count === 1 ? "course" : "courses"}</span>
+                      <strong className="tabular-nums">{moneyCents(p.amount_cents, dash.currency)}</strong>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </Card>
         </div>
 
@@ -146,11 +171,9 @@ export default async function DashboardPage({ searchParams }: PageProps<"/studio
               <Art name="studio_empty" size={120} />
               <div className="flex min-w-[240px] flex-1 flex-col gap-3">
                 <p className="text-[15px] leading-[1.5] text-ink-2">{s.courses.empty}</p>
-                <form action={createDraft}>
-                  <button type="submit" className="inline-flex h-10 items-center rounded-full bg-navy px-4 text-[14px] font-bold text-white transition-colors hover:bg-ink">
+                <Link href="/studio/courses/new" className="inline-flex h-10 items-center rounded-full bg-navy px-4 text-[14px] font-bold text-white transition-colors hover:bg-ink">
                     {d.newCourse}
-                  </button>
-                </form>
+                  </Link>
               </div>
             </div>
           ) : (

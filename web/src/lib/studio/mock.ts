@@ -29,6 +29,7 @@ const account: CreatorAccount = {
   long_bio: null,
   education: [],
   photo_path: null,
+  weekly_quota: null,
   onboarding_step: "done",
   guide_read_at: "2026-11-02T10:00:00Z",
   approved_at: "2026-11-03T09:00:00Z",
@@ -58,6 +59,11 @@ const drafts = [
     glossary: [{ term: "Flanders", classification: "lieuInstitution", explanation: "A region straddling Belgium and northern France where the Western Front settled in late 1914." }],
     quiz: null,
     status: "draft",
+    pitch: "The Christmas truce of 1914, told from the trenches: who started it, what the soldiers did, and why the high commands made sure it never happened again.",
+    proposal_note: null,
+    proposed_at: "2026-11-01T10:00:00Z",
+    proposal_decided_at: "2026-11-01T15:00:00Z",
+    validated_at: null,
     review_comment: null,
     precheck: null,
     submitted_at: null,
@@ -87,6 +93,11 @@ const drafts = [
     glossary: [],
     quiz: null,
     status: "submitted",
+    pitch: "",
+    proposal_note: null,
+    proposed_at: "2026-11-02T10:00:00Z",
+    proposal_decided_at: "2026-11-02T12:00:00Z",
+    validated_at: null,
     review_comment: null,
     precheck: null,
     submitted_at: "2026-11-08T17:30:00Z",
@@ -113,6 +124,11 @@ const drafts = [
     glossary: [],
     quiz: null,
     status: "published",
+    pitch: "",
+    proposal_note: null,
+    proposed_at: "2026-10-28T10:00:00Z",
+    proposal_decided_at: "2026-10-28T12:00:00Z",
+    validated_at: "2026-11-03T11:00:00Z",
     review_comment: null,
     precheck: null,
     submitted_at: "2026-11-02T09:00:00Z",
@@ -126,6 +142,40 @@ const drafts = [
 ];
 
 const LANGS = ["fr", "en", "es", "de", "pt", "pt-PT", "it", "tr", "pl", "ro", "nl", "el", "sv", "hu", "bg", "cs", "da", "nb", "ru", "hr", "sl", "sk", "sr", "ar", "he", "fi", "et", "lt", "lv", "ja"];
+drafts.push({
+  id: "55555555-5555-4555-8555-555555555555",
+  user_id: USER_ID,
+  app_course_id: null,
+  origin_lang: "fr",
+  title: "Why did Europe fear the potato for two centuries?",
+  subtitle: null,
+  subject: "histoire",
+  subcategory: null,
+  description: "",
+  hero: { ratio: "16:9" },
+  sections: [],
+  sources: [],
+  glossary: [],
+  quiz: null,
+  status: "proposed",
+  pitch: "From the Andes to Parmentier's fields at Neuilly: how a tuber suspected of leprosy became the food that fed the industrial revolution, and what the Irish famine owes to a single variety.",
+  proposal_note: null,
+  proposed_at: "2026-11-08T09:30:00Z",
+  proposal_decided_at: null,
+  validated_at: null,
+  review_comment: null,
+  precheck: null,
+  submitted_at: null,
+  accepted_at: null,
+  published_at: null,
+  version: 1,
+  last_job_id: null,
+  created_at: "2026-11-08T09:30:00Z",
+  updated_at: "2026-11-08T09:30:00Z",
+} as unknown as (typeof drafts)[number]);
+
+const mockQuota = { limit: 1, used: 1, open: 2, can_propose: false, can_validate: false, first_week: false, period_start: "2026-11-02T23:00:00Z", period_end: "2026-11-09T23:00:00Z", next_slot_at: "2026-11-09T23:00:00Z", blocked: false, custom: false, fee_cents: 1500, currency: "USD" };
+
 const job = { id: JOB_ID, course_id: drafts[2].app_course_id, origin_lang: "fr", status: "partial", summary: { published: LANGS.filter((l) => l !== "he"), failed: { he: ["terminology: 2 findings"] } }, error: null, options: { languages: LANGS.filter((l) => l !== "fr"), skip_audio: true, is_new: true }, created_at: "2026-11-03T11:02:00Z", dispatched_at: "2026-11-03T11:05:00Z", started_at: "2026-11-03T11:06:00Z", finished_at: "2026-11-03T13:40:00Z" };
 let stepId = 0;
 const steps = [
@@ -180,11 +230,20 @@ function dashboard(days: number) {
       { id: drafts[2].app_course_id, subject: "histoire", status: "published", published_at: "2026-11-03T13:40:00Z", title: drafts[2].title, impressions: reads * 4, reads: Math.round(reads * 0.6), completes: Math.round(reads * 0.4), likes: 230, readers: Math.round(reads * 0.5), per_1000: 92.1, completion: 0.66, quiz_score: 0.78, languages: [{ lang: "fr", reads: 900 }, { lang: "en", reads: 640 }, { lang: "es", reads: 210 }], published_langs: 29 },
       { id: "course_298_l_armistice_de_1918", subject: "histoire", status: "published", published_at: "2026-10-20T10:00:00Z", title: "Why did the war end at eleven o'clock?", impressions: reads * 3, reads: Math.round(reads * 0.4), completes: Math.round(reads * 0.21), likes: 120, readers: Math.round(reads * 0.3), per_1000: 80.3, completion: 0.53, quiz_score: 0.71, languages: [{ lang: "fr", reads: 500 }, { lang: "en", reads: 300 }], published_langs: 30 },
     ],
-    payouts: [
-      { month: "2026-11", current: true, minutes: 1284, readers: 63, share: 0.0412, pool_net: 906.36, pool_share: 0.3, currency: "USD", amount: 11.2 },
-      { month: "2026-10", current: false, minutes: 4210, readers: 188, share: 0.0598, pool_net: 1240.1, pool_share: 0.3, currency: "USD", amount: 22.25 },
-      { month: "2026-09", current: false, minutes: 2980, readers: 141, share: 0.0455, pool_net: 1180.4, pool_share: 0.3, currency: "USD", amount: 16.11 },
+    fee_cents: 1500,
+    currency: "USD",
+    pot_cents: 1500,
+    paid_cents: 3000,
+    credits: [
+      { id: 3, draft_id: DRAFT_IDS[2], title: drafts[2].title, amount_cents: 1500, created_at: "2026-11-03T11:00:00Z", paid_at: null },
+      { id: 2, draft_id: null, title: "Why did the war end at eleven o'clock?", amount_cents: 1500, created_at: "2026-10-20T10:00:00Z", paid_at: "2026-10-26T09:00:00Z" },
+      { id: 1, draft_id: null, title: "Who were the Vikings, really?", amount_cents: 1500, created_at: "2026-10-14T10:00:00Z", paid_at: "2026-10-19T09:00:00Z" },
     ],
+    payouts: [
+      { id: 2, amount_cents: 1500, credits_count: 1, paid_at: "2026-10-26T09:00:00Z" },
+      { id: 1, amount_cents: 1500, credits_count: 1, paid_at: "2026-10-19T09:00:00Z" },
+    ],
+    quota: mockQuota,
   };
 }
 
@@ -236,7 +295,19 @@ function resolve(kind: "from" | "rpc", name: string, args: unknown[], ops: Op[])
       case "creator_course_detail":
         return { data: { course_id: p.p_course_id, days: Number(p.p_days ?? 28), stats: [{ course_id: p.p_course_id, lang: "fr", impressions: 12840, opens: 1930, completes: 1210, completes_per_1000_impressions: 94.2, likes: 310, saves: 88, shares: 12, readers: 1702, followers_gained: 41, sections: [0, 1, 2, 3].map((i) => ({ index: i, viewers: Math.round(1930 * (1 - i * 0.14)), reach: Math.round(1000 * (1 - i * 0.14)) / 1000 })) }], languages: [{ lang: "fr", reads: 900, completes: 610 }, { lang: "en", reads: 640, completes: 400 }, { lang: "es", reads: 210, completes: 120 }], quiz: { answers: 2100, correct: 1640 }, sections: null }, error: null };
       case "studio_document_version":
-        return { data: 1, error: null };
+        return { data: 2, error: null };
+      case "studio_quota":
+        return { data: mockQuota, error: null };
+      case "studio_payouts_due":
+        return {
+          data: {
+            due_cents: 1500,
+            creators: [{ user_id: USER_ID, name: account.display_name, slug: account.slug, email: account.email, amount_cents: 1500, oldest_at: "2026-11-03T11:00:00Z", credits: [{ id: 3, draft_id: DRAFT_IDS[2], title: drafts[2].title, amount_cents: 1500, created_at: "2026-11-03T11:00:00Z" }] }],
+            history: [{ id: 2, user_id: USER_ID, name: account.display_name, amount_cents: 1500, credits_count: 1, paid_at: "2026-10-26T09:00:00Z", note: null }],
+            paid_total_cents: 3000,
+          },
+          error: null,
+        };
       default:
         return { data: null, error: null };
     }
@@ -253,10 +324,10 @@ function resolve(kind: "from" | "rpc", name: string, args: unknown[], ops: Op[])
     }
     case "studio_documents": {
       const slug = eqArg(ops, "slug");
-      return list([{ version: 1, title: slug === "writing-guide" ? "Writing a Sophia course" : "Creator agreement", body_md: slug === "writing-guide" ? guideMd : agreementMd }]);
+      return list([{ version: 2, title: slug === "writing-guide" ? "Writing a Sophia course" : "Creator agreement", body_md: slug === "writing-guide" ? guideMd : agreementMd }]);
     }
     case "creator_agreements":
-      return list(MOCK_STUDIO === "author" ? [{ user_id: USER_ID, version: 1, signed_at: "2026-11-02T10:00:00Z" }] : []);
+      return list(MOCK_STUDIO === "author" ? [{ user_id: USER_ID, version: 2, signed_at: "2026-11-02T10:00:00Z" }] : []);
     case "studio_reviews": {
       const draftId = eqArg(ops, "draft_id");
       return list(reviews.filter((r) => !draftId || r.draft_id === draftId));
@@ -307,9 +378,9 @@ export function mockSession(): StudioSession | null {
   if (!MOCK_STUDIO) return null;
   const user = { id: USER_ID, email: account.email, user_metadata: { full_name: "Marie Dupont" }, app_metadata: {}, aud: "authenticated", created_at: "" } as unknown as User;
   const supabase = mockClient();
-  if (MOCK_STUDIO === "new") return { supabase, user, account: null, isAdmin: false, agreementSigned: false, publicPage: false };
-  if (MOCK_STUDIO === "onboarding") return { supabase, user, account: { ...account, status: "pending", onboarding_step: "profile", display_name: null, title: null, bio: null, approved_at: null, guide_read_at: null }, isAdmin: false, agreementSigned: false, publicPage: false };
-  return { supabase, user, account, isAdmin: true, agreementSigned: true, publicPage: true };
+  if (MOCK_STUDIO === "new") return { supabase, user, account: null, isAdmin: false, agreementSigned: false, publicPage: false, quota: null, potCents: 0 };
+  if (MOCK_STUDIO === "onboarding") return { supabase, user, account: { ...account, status: "pending", onboarding_step: "profile", display_name: null, title: null, bio: null, approved_at: null, guide_read_at: null }, isAdmin: false, agreementSigned: false, publicPage: false, quota: { ...mockQuota, limit: 3, used: 0, open: 0, can_propose: true, first_week: true, period_end: null }, potCents: 0 };
+  return { supabase, user, account, isAdmin: true, agreementSigned: true, publicPage: true, quota: mockQuota, potCents: 1500 };
 }
 
 export const MOCK_DRAFT_IDS = DRAFT_IDS;

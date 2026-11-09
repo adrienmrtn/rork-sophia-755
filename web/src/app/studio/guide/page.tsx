@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { redirect } from "next/navigation";
 import { ArtPanel } from "@/components/studio/Art";
 import { PageTitle, StudioHeader } from "@/components/studio/StudioChrome";
@@ -5,7 +6,6 @@ import { Card, container } from "@/components/ui";
 import { s } from "@/lib/copy/studio-en";
 import { renderMarkdown } from "@/lib/markdown";
 import { getStudioSession } from "@/lib/studio/account";
-import { createDraft } from "@/app/studio/actions";
 
 export const dynamic = "force-dynamic";
 
@@ -25,11 +25,9 @@ export default async function GuidePage() {
             <ArtPanel name="studio_guide" title="The rules, in one line" size={240}>
               One question, one answer. 500 to 900 words in two to twelve sections, the first one free. Sources, royalty-free images, one key takeaway at the end.
             </ArtPanel>
-            <form action={createDraft}>
-              <button type="submit" className="inline-flex h-11 w-full items-center justify-center rounded-full bg-navy px-5 text-[15px] font-bold text-white transition-colors hover:bg-ink">
+            <Link href="/studio/courses/new" className="inline-flex h-11 w-full items-center justify-center rounded-full bg-navy px-5 text-[15px] font-bold text-white transition-colors hover:bg-ink">
                 {s.nav.write}
-              </button>
-            </form>
+              </Link>
           </div>
         </div>
       </main>

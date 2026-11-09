@@ -2,11 +2,17 @@ import "server-only";
 import type { SupabaseClient } from "@supabase/supabase-js";
 import type { GlossaryEntry, Section, Source } from "@/lib/catalog/types";
 import type { Hero } from "@/lib/studio/course-format";
+import { DEFAULT_FEE_CENTS, parseQuota, type Credit, type PayoutRow, type Quota } from "@/lib/studio/payments";
 
 /** Ce que le Studio lit en base : le tableau de bord, les brouillons, les jobs. Typé à la main
  *  d'après supabase/migrations/20261109000000_studio.sql. */
 
-export type DraftStatus = "draft" | "submitted" | "changes_requested" | "accepted" | "publishing" | "published" | "failed" | "archived";
+export type DraftStatus = "proposed" | "proposal_returned" | "draft" | "submitted" | "changes_requested" | "accepted" | "publishing" | "published" | "failed" | "archived";
+
+/** Un cours encore à l'état de proposition (titre + pitch), avant la rédaction. */
+export const PROPOSAL_STATUSES: readonly DraftStatus[] = ["proposed", "proposal_returned"];
+/** Un cours en cours de rédaction ou de relecture, pas encore validé. */
+export const OPEN_STATUSES: readonly DraftStatus[] = ["proposed", "proposal_returned", "draft", "submitted", "changes_requested"];
 
 export interface DraftRow {
   id: string;
@@ -24,6 +30,11 @@ export interface DraftRow {
   glossary: GlossaryEntry[];
   quiz: unknown[] | null;
   status: DraftStatus;
+  pitch: string;
+  proposal_note: string | null;
+  proposed_at: string | null;
+  proposal_decided_at: string | null;
+  validated_at: string | null;
   review_comment: string | null;
   precheck: unknown;
   submitted_at: string | null;
@@ -35,9 +46,9 @@ export interface DraftRow {
   updated_at: string;
 }
 
-export type DraftListRow = Pick<DraftRow, "id" | "title" | "subject" | "status" | "updated_at" | "submitted_at" | "published_at" | "app_course_id" | "last_job_id" | "sections" | "hero" | "review_comment" | "origin_lang" | "user_id">;
+export type DraftListRow = Pick<DraftRow, "id" | "title" | "subject" | "status" | "updated_at" | "submitted_at" | "published_at" | "app_course_id" | "last_job_id" | "sections" | "hero" | "review_comment" | "origin_lang" | "user_id" | "pitch" | "proposal_note" | "proposed_at" | "validated_at">;
 
-export const DRAFT_LIST_COLUMNS = "id,title,subject,status,updated_at,submitted_at,published_at,app_course_id,last_job_id,sections,hero,review_comment,origin_lang,user_id";
+export const DRAFT_LIST_COLUMNS = "id,title,subject,status,updated_at,submitted_at,published_at,app_course_id,last_job_id,sections,hero,review_comment,origin_lang,user_id,pitch,proposal_note,proposed_at,validated_at";
 
 export interface DashboardCourse {
   id: string;
@@ -57,18 +68,6 @@ export interface DashboardCourse {
   published_langs: number;
 }
 
-export interface Payout {
-  month: string;
-  current: boolean;
-  minutes: number;
-  readers: number;
-  share: number;
-  pool_net: number;
-  pool_share: number;
-  currency: string;
-  amount: number;
-}
-
 export interface Dashboard {
   slug: string | null;
   days: number;
@@ -83,10 +82,17 @@ export interface Dashboard {
   languages_read: number;
   series: { day: string; reads: number }[];
   courses: DashboardCourse[];
-  payouts: Payout[];
+  /** La cagnotte : 15 $ par cours validé, versée le lundi. */
+  fee_cents: number;
+  currency: string;
+  pot_cents: number;
+  paid_cents: number;
+  credits: Credit[];
+  payouts: PayoutRow[];
+  quota: Quota | null;
 }
 
-const EMPTY: Dashboard = { slug: null, days: 28, reads: 0, reads_prev: 0, impressions: 0, completes: 0, likes: 0, per_1000: null, subject_per_1000: {}, followers_gained: 0, languages_read: 0, series: [], courses: [], payouts: [] };
+const EMPTY: Dashboard = { slug: null, days: 28, reads: 0, reads_prev: 0, impressions: 0, completes: 0, likes: 0, per_1000: null, subject_per_1000: {}, followers_gained: 0, languages_read: 0, series: [], courses: [], fee_cents: DEFAULT_FEE_CENTS, currency: "USD", pot_cents: 0, paid_cents: 0, credits: [], payouts: [], quota: null };
 
 export async function loadDashboard(supabase: SupabaseClient, days: number): Promise<Dashboard> {
   const { data, error } = await supabase.rpc("creator_dashboard", { p_days: days });
@@ -106,7 +112,13 @@ export async function loadDashboard(supabase: SupabaseClient, days: number): Pro
     per_1000: d.per_1000 == null ? null : Number(d.per_1000),
     series: (d.series ?? []).map((p) => ({ day: p.day, reads: Number(p.reads) })),
     courses: (d.courses ?? []).map((c) => ({ ...c, reads: Number(c.reads), impressions: Number(c.impressions), completes: Number(c.completes), likes: Number(c.likes), readers: Number(c.readers), published_langs: Number(c.published_langs ?? 0) })),
-    payouts: (d.payouts ?? []).map((p) => ({ ...p, amount: Number(p.amount), minutes: Number(p.minutes), readers: Number(p.readers), share: Number(p.share), pool_net: Number(p.pool_net) })),
+    fee_cents: Number(d.fee_cents ?? DEFAULT_FEE_CENTS),
+    currency: d.currency ?? "USD",
+    pot_cents: Number(d.pot_cents ?? 0),
+    paid_cents: Number(d.paid_cents ?? 0),
+    credits: (d.credits ?? []).map((c) => ({ ...c, amount_cents: Number(c.amount_cents) })),
+    payouts: (d.payouts ?? []).map((p) => ({ ...p, amount_cents: Number(p.amount_cents), credits_count: Number(p.credits_count) })),
+    quota: parseQuota(d.quota),
   };
 }
 
