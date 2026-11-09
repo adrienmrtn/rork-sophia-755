@@ -17,6 +17,9 @@ struct ContentView: View {
     @State private var selectedTab: Int = 0
     @State private var selectedCourse: Course? = nil
     @State private var paywallContext: SophiaPaywallContext? = nil
+    /// `sophia://author/<slug>` reçu en navigation classique : la page du créateur en feuille
+    /// (la nouvelle navigation la pousse dans l'onglet Accueil, voir `NewGenTabsView`).
+    @State private var deepLinkAuthor: CourseAuthor? = nil
     /// Lue une fois au lancement : la navigation ne change pas sous les doigts de l'utilisateur.
     @State private var newNavigation: Bool = FeatureFlags.newNavigation
 
@@ -317,6 +320,20 @@ struct ContentView: View {
         .task {
             openPendingDeepLink()
         }
+        .sheet(item: $deepLinkAuthor) { author in
+            NavigationStack {
+                CreatorPageView(
+                    author: author,
+                    progressManager: progressManager,
+                    onOpenCourse: { course in
+                        deepLinkAuthor = nil
+                        selectedCourse = course
+                    },
+                    onOpenCampaign: { _ in }
+                )
+                .toolbar(.hidden, for: .navigationBar)
+            }
+        }
         // The blocker's two foreground duties: keep the shield in line with the stored
         // state (an unlock window may have ended while we were away), and answer a tap
         // on the shield by opening a course straight away.
@@ -501,6 +518,15 @@ struct ContentView: View {
     }
 
     private func openPendingDeepLink() {
+        // Un créateur : en navigation classique seulement, la nouvelle navigation le prend elle-même.
+        if !newNavigation, let slug = router.pendingCreatorSlug {
+            if let author = AuthorStore.author(slug: slug) {
+                _ = router.consumeCreator()
+                deepLinkAuthor = author
+            } else {
+                router.discardCreator()
+            }
+        }
         guard let courseId = router.pendingCourseId else { return }
         guard let course = ContentCatalog.course(withId: courseId) else {
             // Unknown id: drop it rather than retry it on every appearance.

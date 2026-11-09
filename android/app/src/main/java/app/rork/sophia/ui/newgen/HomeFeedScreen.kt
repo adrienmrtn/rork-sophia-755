@@ -23,8 +23,10 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.outlined.LocalFireDepartment
 import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
+import androidx.compose.material3.pulltorefresh.PullToRefreshBox
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
@@ -32,6 +34,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.runtime.setValue
 import androidx.compose.runtime.snapshotFlow
@@ -68,6 +71,7 @@ import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 /**
@@ -80,7 +84,7 @@ import kotlinx.coroutines.withContext
  * La page courante compte une impression après une seconde, et un passage si on la quitte
  * sans l'avoir ouverte (docs/events.md).
  */
-@OptIn(ExperimentalFoundationApi::class)
+@OptIn(ExperimentalFoundationApi::class, ExperimentalMaterial3Api::class)
 @Composable
 fun HomeFeedScreen(
     modifier: Modifier = Modifier,
@@ -104,6 +108,9 @@ fun HomeFeedScreen(
     var deck by remember(language) { mutableStateOf(HomeFeedSession.restore(language, completedCount)) }
     var deckReady by remember(language) { mutableStateOf(deck.isNotEmpty()) }
     var inviteDismissed by remember { mutableStateOf(HomeFeedSession.isInviteDismissed(context)) }
+    // Tirer vers le bas : le catalogue est relu (nouveaux cours, événements), le deck redistribué.
+    val refreshScope = rememberCoroutineScope()
+    var refreshing by remember { mutableStateOf(false) }
 
     /** Le deck, à partir des mêmes signaux que l'accueil classique (`HomeTikTokScreen`). */
     fun buildDeck(summaries: List<CourseSummary>): List<CourseSummary> {
@@ -273,7 +280,23 @@ fun HomeFeedScreen(
                 CircularProgressIndicator(color = DS.accent)
             }
         } else {
-            BoxWithConstraints(modifier = Modifier.fillMaxWidth().weight(1f)) {
+            PullToRefreshBox(
+                isRefreshing = refreshing,
+                onRefresh = {
+                    refreshScope.launch {
+                        refreshing = true
+                        CatalogStore.refresh(context.applicationContext, language, force = true)
+                        val summaries = ContentCatalog.summariesAsync(context.applicationContext, language)
+                        val built = withContext(Dispatchers.Default) { buildDeck(summaries) }
+                        HomeFeedSession.save(language, completedCount, built)
+                        deck = built
+                        deckReady = true
+                        refreshing = false
+                    }
+                },
+                modifier = Modifier.fillMaxWidth().weight(1f),
+            ) {
+            BoxWithConstraints(modifier = Modifier.fillMaxSize()) {
                 // Ce que la carte suivante laisse voir en bas de l'écran.
                 val peek = 44.dp
                 val pageHeight = (maxHeight - peek).coerceAtLeast(320.dp)
@@ -351,6 +374,7 @@ fun HomeFeedScreen(
                         }
                     }
                 }
+            }
             }
         }
     }

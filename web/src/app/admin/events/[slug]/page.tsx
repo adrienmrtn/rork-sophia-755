@@ -13,17 +13,17 @@ import { CAMPAIGN_KINDS, CAMPAIGN_STATUSES, CAMPAIGN_SYMBOLS, EDITED_LANGS, TEXT
 import { shortDateTime } from "@/lib/studio/data";
 import { coversConfigured } from "@/lib/studio/covers";
 import { translationConfigured } from "@/lib/studio/translate";
-import { deleteCampaign, generateEventImage, saveCampaign, translateCampaignAction } from "../actions";
+import { chooseEventImage, deleteCampaign, generateEventImage, saveCampaign, translateCampaignAction } from "../actions";
 
 export const dynamic = "force-dynamic";
-export const maxDuration = 60;
+export const maxDuration = 120;
 
 const input = "h-11 w-full rounded-xl border border-line bg-white px-3.5 text-[15px] text-ink outline-none transition focus:border-blue focus:ring-4 focus:ring-blue/10";
 const textarea = "w-full rounded-xl border border-line bg-white px-3.5 py-3 text-[15px] leading-[1.5] text-ink outline-none transition focus:border-blue focus:ring-4 focus:ring-blue/10";
 const label = "flex flex-col gap-1.5 text-[13px] font-bold text-ink-2";
 const select = `${input} appearance-none`;
 
-const DONE: Record<string, string> = { image: "Image generated and saved. Check the preview; generate again if it misses the point.", saved: "Event saved.", published: "Event published. The apps pick it up at their next catalogue refresh (within the hour).", "kept-draft": "Saved as a draft.", "translated-none": "Every language already has its texts." };
+const DONE: Record<string, string> = { image: "Images generated. Pick the one you prefer below; generate again if neither fits.", saved: "Event saved.", published: "Event published. The apps pick it up at their next catalogue refresh (within the hour).", "kept-draft": "Saved as a draft.", "translated-none": "Every language already has its texts." };
 
 export default async function EventEditorPage({ params, searchParams }: PageProps<"/admin/events/[slug]">) {
   const session = await getStudioSession();
@@ -115,10 +115,31 @@ export default async function EventEditorPage({ params, searchParams }: PageProp
               <form action={generateEventImage} className="flex flex-wrap items-center gap-3">
                 <input type="hidden" name="slug" value={campaign.slug} />
                 <button type="submit" disabled={!coversConfigured()} className={buttonClass("secondary", "h-10 px-4 disabled:opacity-50")}>
-                  Generate an image with AI
+                  Generate 2 images with AI
                 </button>
-                <span className="text-[12px] text-muted">{coversConfigured() ? "Same art direction as course covers, 16:9, from the title and tagline. Replaces the current image." : "Not configured on the server (FAL_KEY)."}</span>
+                <span className="text-[12px] text-muted">{coversConfigured() ? "One in the art direction of course covers, one in the paper-cut style of the website. 16:9, from the title and tagline. Takes about 30 seconds." : "Not configured on the server (FAL_KEY)."}</span>
               </form>
+              {campaign.image_candidates.length > 0 && (
+                <div className="flex flex-col gap-2 pt-2">
+                  <strong className="text-[13px] font-extrabold text-ink">Generated images</strong>
+                  <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+                    {campaign.image_candidates.map((c) => {
+                      const current = c.url === campaign.image_url;
+                      return (
+                        <form key={c.url} action={chooseEventImage} className={`flex flex-col gap-2 rounded-xl border p-2 ${current ? "border-navy" : "border-line"}`}>
+                          <input type="hidden" name="slug" value={campaign.slug} />
+                          <input type="hidden" name="url" value={c.url} />
+                          <Image src={c.url} alt="" width={640} height={360} unoptimized className="aspect-video w-full rounded-lg object-cover" />
+                          <div className="flex items-center justify-between gap-2">
+                            <span className="text-[12px] font-semibold text-ink-2">{c.style === "poster" ? "Website poster style" : "Course cover style"}</span>
+                            {current ? <Pill tone="green">In use</Pill> : <button type="submit" className={buttonClass("secondary", "h-8 px-3 text-[13px]")}>Use this image</button>}
+                          </div>
+                        </form>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
             </div>
           </Card>
         )}

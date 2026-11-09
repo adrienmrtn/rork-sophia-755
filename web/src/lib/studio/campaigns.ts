@@ -47,6 +47,9 @@ export type Localized = Record<string, string>;
 
 export type CampaignUpcoming = { title: Localized; creator: string | null; date: string };
 
+/** Une image générée pour l'événement : direction « couvertures » (Gemini) ou « affiche » du site (Recraft). */
+export type ImageCandidate = { url: string; style: "cover" | "poster"; created_at: string };
+
 export type Campaign = {
   slug: string;
   kind: CampaignKind;
@@ -54,6 +57,8 @@ export type Campaign = {
   symbol: CampaignSymbol;
   /** Image 16:9 hébergée (course-images/events/), en tête de la carte du fil et de la page ; null : bleu nuit et symbole. */
   image_url: string | null;
+  /** Les images générées, les plus récentes en premier ; l'équipe en choisit une. */
+  image_candidates: ImageCandidate[];
   starts_at: string;
   ends_at: string;
   challenge_target: number;
@@ -101,7 +106,7 @@ export function symbolLabel(symbol: string): string {
 }
 
 export function emptyCampaign(): Campaign {
-  return { slug: "", kind: "month", status: "draft", symbol: "sparkles", image_url: null, starts_at: "", ends_at: "", challenge_target: 3, participants: 0, goal_target: null, goal_count: 0, course_ids: [], upcoming: [], title: {}, tagline: {}, description: {}, badge_name: {} };
+  return { slug: "", kind: "month", status: "draft", symbol: "sparkles", image_url: null, image_candidates: [], starts_at: "", ends_at: "", challenge_target: 3, participants: 0, goal_target: null, goal_count: 0, course_ids: [], upcoming: [], title: {}, tagline: {}, description: {}, badge_name: {} };
 }
 
 /** Une ligne de la table, telle que Supabase la renvoie, remise dans le type. */
@@ -119,6 +124,12 @@ export function campaignFromRow(row: Record<string, unknown>): Campaign {
     status: (CAMPAIGN_STATUSES as readonly string[]).includes(String(row.status)) ? (row.status as CampaignStatus) : "draft",
     symbol: (CAMPAIGN_SYMBOLS.some((s) => s.id === row.symbol) ? row.symbol : "sparkles") as CampaignSymbol,
     image_url: typeof row.image_url === "string" && /^https:\/\//.test(row.image_url) ? row.image_url : null,
+    image_candidates: Array.isArray(row.image_candidates)
+      ? (row.image_candidates as unknown[])
+          .map((c) => (c && typeof c === "object" ? (c as Record<string, unknown>) : {}))
+          .filter((c) => typeof c.url === "string" && /^https:\/\//.test(c.url))
+          .map((c) => ({ url: c.url as string, style: c.style === "poster" ? ("poster" as const) : ("cover" as const), created_at: typeof c.created_at === "string" ? c.created_at : "" }))
+      : [],
     starts_at: String(row.starts_at ?? "").slice(0, 10),
     ends_at: String(row.ends_at ?? "").slice(0, 10),
     challenge_target: Number(row.challenge_target ?? 1) || 1,

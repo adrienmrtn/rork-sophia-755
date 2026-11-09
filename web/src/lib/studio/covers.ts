@@ -104,3 +104,39 @@ export async function storeImageAt(path: string, url: string, contentType = "ima
   if (error) throw new Error(`Could not store the image: ${error.message}`);
   return `${STORAGE_PUBLIC}/course-images/${path}`;
 }
+
+/** La direction artistique des illustrations du site (design/site-art/manifest-*.json) : aplats en
+ *  papier découpé, palette marine, safran, corail, crème. Le modèle de texte écrit la scène, Recraft
+ *  dessine. */
+const POSTER_MODEL = process.env.FAL_POSTER_MODEL ?? "fal-ai/recraft-v3";
+const POSTER_SUFFIX = "Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, centered on a navy background, no text, no outlines.";
+const POSTER_COLORS = [
+  { r: 26, g: 58, b: 107 },
+  { r: 242, g: 177, b: 52 },
+  { r: 224, g: 90, b: 58 },
+  { r: 251, g: 247, b: 239 },
+];
+export const POSTER_SCENE_SYSTEM_PROMPT = `You write the scene of a flat paper-cut poster illustration for an educational app. Given a theme (title, tagline, description), answer with ONE sentence of at most 30 words that lists two to four iconic, concrete objects or figures that stand for the theme (no people's faces unless the theme is about people), with their arrangement. No style words, no colors, no text in the image, no quotes, no prefix.`;
+
+/** La scène d'affiche, écrite par le modèle de texte à partir du thème. */
+export async function writePosterScene(theme: { title: string; subtitle?: string | null; description?: string | null }): Promise<string> {
+  const context = [`Title: ${theme.title}`, theme.subtitle ? `Tagline: ${theme.subtitle}` : null, theme.description ? `About: ${theme.description}` : null].filter(Boolean).join("\n");
+  const out = await fal<{ output?: string; error?: string }>("fal-ai/any-llm", { model: TEXT_MODEL, system_prompt: POSTER_SCENE_SYSTEM_PROMPT, prompt: context, temperature: 0.7 });
+  const text = (out.output ?? "").trim().replace(/^["“]|["”]$/g, "").trim();
+  if (!text) throw new Error(out.error ?? "The poster art director returned an empty scene.");
+  return text;
+}
+
+/** Une image 16:9 dans la direction affiche du site (Recraft v3, style 2d_art_poster, palette du site). */
+export async function generatePosterImage(scene: string): Promise<{ url: string; contentType: string }> {
+  const out = await fal<{ images?: { url: string; content_type?: string }[]; error?: string }>(POSTER_MODEL, {
+    prompt: `${scene.replace(/\.$/, "")}. ${POSTER_SUFFIX}`,
+    image_size: "landscape_16_9",
+    style: "digital_illustration/2d_art_poster",
+    colors: POSTER_COLORS,
+    enable_safety_checker: true,
+  });
+  const image = (out.images ?? [])[0];
+  if (!image?.url) throw new Error(out.error ?? "No poster image was generated.");
+  return { url: image.url, contentType: image.content_type ?? "image/webp" };
+}

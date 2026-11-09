@@ -23,9 +23,10 @@ enum ProfileListKind: String, Hashable, CaseIterable {
     case toRead, read, liked
 }
 
-/// Les 4 onglets de la maquette : Accueil, Explorer, Apprendre, Profil. Chaque onglet a sa
-/// pile de navigation ; le lecteur reste présenté par `ContentView` au-dessus de tout, via
-/// `selectedCourse`.
+/// Les 5 onglets : Accueil, Explorer, Parcours, Entraînement, Profil. Parcours et Entraînement
+/// sont les écrans de la navigation classique, gardés tels quels pour ne pas perdre les anciens
+/// lecteurs (l'onglet « Apprendre » de la maquette a été retiré). Chaque onglet a sa pile de
+/// navigation ; le lecteur reste présenté par `ContentView` au-dessus de tout, via `selectedCourse`.
 struct NewGenTabsView: View {
     @Environment(LanguageManager.self) private var languageManager
     @Environment(\.openURL) private var openURL
@@ -41,7 +42,6 @@ struct NewGenTabsView: View {
 
     @State private var homePath: [NewGenRoute] = []
     @State private var explorePath: [NewGenRoute] = []
-    @State private var learnPath: [NewGenRoute] = []
     @State private var profilePath: [NewGenRoute] = []
 
     var body: some View {
@@ -82,23 +82,22 @@ struct NewGenTabsView: View {
                 .audioMiniPlayerInset(onOpen: openAudioPlayer)
             }
 
-            Tab(languageManager.text("tab.learn"), systemImage: "graduationcap", value: 2) {
-                NavigationStack(path: $learnPath) {
-                    LearnHubView(
-                        progressManager: progressManager,
-                        onResumeCourse: { openReader($0, source: .myCourses) },
-                        onOpenPath: { learnPath.append(.path) },
-                        onOpenTraining: { learnPath.append(.training) }
-                    )
-                    .toolbar(.hidden, for: .navigationBar)
-                    .navigationDestination(for: NewGenRoute.self) { route in
-                        destination(route) { learnPath.append($0) }
-                    }
-                }
+            Tab(languageManager.text("tab.path"), systemImage: "point.bottomleft.forward.to.point.topright.scurvepath", value: 2) {
+                LearningPathView(progressManager: progressManager, selectedCourse: $selectedCourse)
+                    .audioMiniPlayerInset(onOpen: openAudioPlayer)
+            }
+
+            Tab(languageManager.text("tab.training"), systemImage: "arrow.triangle.2.circlepath", value: 3) {
+                TrainingView(
+                    progressManager: progressManager,
+                    store: storeVM,
+                    isPremium: storeVM.isPremium,
+                    onShowQuizPaywall: { onShowPaywall(.entrainement) }
+                )
                 .audioMiniPlayerInset(onOpen: openAudioPlayer)
             }
 
-            Tab(languageManager.text("tab.profile"), systemImage: "person", value: 3) {
+            Tab(languageManager.text("tab.profile"), systemImage: "person", value: 4) {
                 NavigationStack(path: $profilePath) {
                     ProfileV2View(
                         progressManager: progressManager,
@@ -124,6 +123,20 @@ struct NewGenTabsView: View {
                 .audioMiniPlayerInset(onOpen: openAudioPlayer)
             }
         }
+        // `sophia://author/<slug>` : la page du créateur dans l'onglet Accueil.
+        .onChange(of: DeepLinkRouter.shared.token, initial: true) { _, _ in openPendingCreator() }
+    }
+
+    private func openPendingCreator() {
+        let router = DeepLinkRouter.shared
+        guard let slug = router.pendingCreatorSlug else { return }
+        guard AuthorStore.author(slug: slug) != nil else {
+            router.discardCreator()
+            return
+        }
+        _ = router.consumeCreator()
+        selectedTab = 0
+        homePath.append(.creator(slug: slug))
     }
 
     // MARK: - Destinations

@@ -6,6 +6,8 @@ const nextConfig: NextConfig = {
   cacheComponents: false,
   // L'image d'un événement part par une action serveur (1 Mo par défaut).
   experimental: { serverActions: { bodySizeLimit: "8mb" } },
+  // Les avatars du Studio sont lus sur disque par l'action chooseAvatar : embarqués avec les fonctions.
+  outputFileTracingIncludes: { "/studio/**": ["./public/avatars/**"] },
   images: {
     remotePatterns: [
       { protocol: "https", hostname: "afnmcoovdvbtkgohtdij.supabase.co" },

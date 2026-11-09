@@ -140,6 +140,7 @@ export const en = {
     follow: "Follow in the app",
     share: "Share",
     theirCourses: "Their courses",
+    noCoursesYet: "Their first course is being written. Follow them in the app to be told when it comes out.",
     followBand: (name: string) => `Follow ${name} in the app.`,
     followBandLead: "Their new courses land in your “Following” feed as soon as they are published.",
     otherAuthors: "Other authors",

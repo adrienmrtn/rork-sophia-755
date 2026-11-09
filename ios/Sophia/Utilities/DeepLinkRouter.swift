@@ -20,6 +20,8 @@ final class DeepLinkRouter {
     static let shared = DeepLinkRouter()
 
     private(set) var pendingCourseId: String?
+    /// `sophia://author/<slug>` : la page d'un créateur, ouverte par la navigation en place.
+    private(set) var pendingCreatorSlug: String?
     /// Increments on every request, so two requests for the same course are still two events.
     private(set) var token: Int = 0
 
@@ -34,11 +36,30 @@ final class DeepLinkRouter {
             requestUnlock()
             return true
         }
+        if let slug = SophiaDeepLink.creatorSlug(from: url) {
+            requestCreator(slug)
+            return true
+        }
         guard let courseId = SophiaDeepLink.courseId(from: url) else { return false }
         // Parked rather than delivered: the onboarding may still be on screen, and the
         // home opens it as soon as it is ready.
         requestCourse(courseId)
         return true
+    }
+
+    func requestCreator(_ slug: String) {
+        pendingCreatorSlug = slug
+        token += 1
+    }
+
+    /// Takes the pending creator, if there is one.
+    func consumeCreator() -> String? {
+        defer { pendingCreatorSlug = nil }
+        return pendingCreatorSlug
+    }
+
+    func discardCreator() {
+        pendingCreatorSlug = nil
     }
 
     func requestCourse(_ courseId: String) {

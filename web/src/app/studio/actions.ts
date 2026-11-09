@@ -1,10 +1,13 @@
 "use server";
 
+import { readFile } from "node:fs/promises";
+import { join } from "node:path";
 import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
 import { headers } from "next/headers";
 import { getStudioSession, slugFromName, type OnboardingStep } from "@/lib/studio/account";
 import { LANGS } from "@/lib/catalog/types";
+import { avatarUrl, isAvatarName } from "@/lib/studio/avatars";
 
 type ActionResult = { ok: true } | { ok: false; error: string };
 
@@ -97,6 +100,26 @@ export async function saveProfile(form: FormData): Promise<void> {
   if (error) redirect(`${fromOnboarding ? "/studio/onboarding/profile" : "/studio/profile"}?error=${encodeURIComponent(error.message)}`);
   revalidatePath("/studio");
   redirect(fromOnboarding ? "/studio/onboarding/agreement" : "/studio/profile?saved=1");
+}
+
+/** Un avatar illustré à la place d'une photo : le fichier du site (public/avatars) est copié dans la
+ *  photo du Studio de l'auteur, et suit ensuite le même chemin qu'une photo (publique à l'approbation). */
+export async function chooseAvatar(name: string): Promise<ActionResult & { url?: string }> {
+  const { supabase, user } = await requireSession();
+  if (!isAvatarName(name)) return { ok: false, error: "Unknown avatar." };
+  let bytes: Uint8Array;
+  try {
+    bytes = new Uint8Array(await readFile(join(process.cwd(), "public", "avatars", `${name}.webp`)));
+  } catch {
+    return { ok: false, error: "This avatar is not available on the server." };
+  }
+  const path = `${user.id}/avatar.webp`;
+  const { error: upErr } = await supabase.storage.from("studio-photos").upload(path, bytes, { upsert: true, contentType: "image/webp", cacheControl: "3600" });
+  if (upErr) return { ok: false, error: upErr.message };
+  const { error } = await supabase.from("creator_accounts").update({ photo_path: path }).eq("user_id", user.id);
+  if (error) return { ok: false, error: error.message };
+  revalidatePath("/studio");
+  return { ok: true, url: avatarUrl(name) };
 }
 
 /** La photo est téléversée par le navigateur dans studio-photos/<uid>/… ; on enregistre le chemin. */

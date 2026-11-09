@@ -137,14 +137,6 @@ struct ProfileV2View: View {
                 value: "\(progressManager.completedCount)",
                 label: languageManager.text("profile.stat.read")
             )
-            Rectangle().fill(DS.hairline).frame(width: 1, height: 36)
-            StatCounter(
-                systemImage: "clock",
-                iconTint: DS.success,
-                iconBackground: DS.successTint,
-                value: NewGenFormat.readingTime(seconds: progressManager.readingSeconds, language: language),
-                label: languageManager.text("profile.stat.time")
-            )
         }
         .padding(.horizontal, 14)
         .padding(.vertical, 14)

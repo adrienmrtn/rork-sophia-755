@@ -30,6 +30,8 @@ import androidx.compose.ui.graphics.toArgb
 class MainActivity : ComponentActivity() {
     private val storeViewModel: StoreViewModel by viewModels()
     private var deepLinkCourseId by mutableStateOf<String?>(null)
+    /** `sophia://author/<slug>` : la page d'un créateur (bouton « Follow in the app » du site). */
+    private var deepLinkCreatorSlug by mutableStateOf<String?>(null)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -46,6 +48,7 @@ class MainActivity : ComponentActivity() {
             navigationBarStyle = SystemBarStyle.light(TRANSPARENT, TRANSPARENT),
         )
         deepLinkCourseId = courseIdFromIntent(intent)
+        deepLinkCreatorSlug = creatorSlugFromIntent(intent)
         observeForeground()
         setContent {
             // The theme needs the language to pick a font family whose script the user can
@@ -57,6 +60,8 @@ class MainActivity : ComponentActivity() {
                     storeViewModel = storeViewModel,
                     deepLinkCourseId = deepLinkCourseId,
                     onDeepLinkConsumed = { deepLinkCourseId = null },
+                    deepLinkCreatorSlug = deepLinkCreatorSlug,
+                    onDeepLinkCreatorConsumed = { deepLinkCreatorSlug = null },
                 )
             }
         }
@@ -66,6 +71,7 @@ class MainActivity : ComponentActivity() {
         super.onNewIntent(intent)
         setIntent(intent)
         deepLinkCourseId = courseIdFromIntent(intent)
+        deepLinkCreatorSlug = creatorSlugFromIntent(intent)
     }
 
     /**
@@ -111,6 +117,14 @@ class MainActivity : ComponentActivity() {
             // D'où vient l'ouverture : la notification le dit (`source`), sinon c'est un lien.
             Analytics.pendingCourseOpenSource = intent.getStringExtra(EXTRA_SOURCE) ?: "link"
             return data.pathSegments.firstOrNull()
+        }
+        return null
+    }
+
+    private fun creatorSlugFromIntent(intent: Intent?): String? {
+        val data = intent?.data ?: return null
+        if (data.scheme == "sophia" && (data.host == "author" || data.host == "creator")) {
+            return data.pathSegments.firstOrNull()?.takeIf { it.isNotBlank() }
         }
         return null
     }

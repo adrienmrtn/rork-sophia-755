@@ -23,7 +23,6 @@ import androidx.compose.material.icons.automirrored.filled.MenuBook
 import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.Explore
 import androidx.compose.material.icons.filled.LocalFireDepartment
-import androidx.compose.material.icons.filled.Schedule
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
@@ -226,15 +225,6 @@ fun ProfileV2Screen(
                 iconBackground = DS.accentTint,
                 value = "$completedCount",
                 label = StringStore.text(context, "profile.stat.read", language),
-                modifier = Modifier.weight(1f),
-            )
-            Box(modifier = Modifier.width(1.dp).height(36.dp).background(DS.hairline))
-            StatCounter(
-                icon = Icons.Filled.Schedule,
-                iconTint = DS.success,
-                iconBackground = DS.successTint,
-                value = NewGenFormat.readingTime(context, progress.readingSeconds, language),
-                label = StringStore.text(context, "profile.stat.time", language),
                 modifier = Modifier.weight(1f),
             )
         }

@@ -116,6 +116,8 @@ fun MainTabs(
     storeViewModel: StoreViewModel,
     deepLinkCourseId: String?,
     onDeepLinkConsumed: () -> Unit,
+    deepLinkCreatorSlug: String? = null,
+    onDeepLinkCreatorConsumed: () -> Unit = {},
 ) {
     val context = LocalContext.current
     val app = context.applicationContext as SophiaApplication
@@ -216,6 +218,21 @@ fun MainTabs(
                 openCourse(it, source)
             }
         }
+    }
+
+    // `sophia://author/<slug>` : la page du créateur, poussée dans l'onglet Accueil (nouvelle
+    // navigation) ou présentée comme depuis un cours (classique). Un slug inconnu est ignoré.
+    LaunchedEffect(deepLinkCreatorSlug) {
+        val slug = deepLinkCreatorSlug ?: return@LaunchedEffect
+        if (AuthorStore.author(slug) != null) {
+            if (newNavigation) {
+                selectedTab = 0
+                routeStacks[0].add(NewGenRoute.Creator(slug))
+            } else {
+                selectedAuthorSlug = slug
+            }
+        }
+        onDeepLinkCreatorConsumed()
     }
 
     LaunchedEffect(deepLinkCourseId, language) {
