@@ -65,7 +65,7 @@ async function sanitizeCourse(raw: unknown): Promise<DraftCourse> {
           return [{ type: type as "paragraph" | "heading" | "funFact" | "takeaway", text: str(b.text, 5000) }];
       }
     });
-    return { ...(opt(s.id, 200) ? { id: opt(s.id, 200) } : {}), title: str(s.title, 120), free: i === 0 ? s.free !== false : Boolean(s.free), blocks };
+    return { ...(opt(s.id, 200) ? { id: opt(s.id, 200) } : {}), title: str(s.title, 120), free: i === 0, blocks };
   });
   const sources: Source[] = (Array.isArray(r.sources) ? r.sources : []).slice(0, 40).map((so: unknown) => {
     const x = (so && typeof so === "object" ? so : {}) as Record<string, unknown>;

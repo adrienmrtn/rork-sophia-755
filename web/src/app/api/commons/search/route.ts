@@ -15,6 +15,8 @@ export interface CommonsImage {
   author: string;
   license: string;
   description: string;
+  /** La légende prête à l'emploi, dérivée de la description Commons. */
+  caption: string;
   pageUrl: string;
 }
 
@@ -22,6 +24,19 @@ const UA = "SophiaStudio/1.0 (https://sophia-culture.com; studio image search)";
 
 function stripTags(html: string | undefined): string {
   return (html ?? "").replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim();
+}
+
+/** La légende affichée sous l'image : la description Commons, sans balisage ni tiret cadratin,
+ *  coupée à la première phrase au-delà de 160 caractères, 240 au plus. */
+function captionFrom(description: string, title: string): string {
+  let text = description.replace(/[—–]/g, ", ").replace(/\[\[|\]\]|\*\*/g, "").replace(/\s+,/g, ",").replace(/\s+/g, " ").trim();
+  if (!text) text = title.replace(/^File:/, "").replace(/\.[a-z0-9]+$/i, "").replace(/[_]+/g, " ").trim();
+  if (text.length > 160) {
+    const cut = text.slice(0, 240);
+    const end = Math.max(cut.lastIndexOf(". "), cut.lastIndexOf("; "));
+    text = end > 60 ? cut.slice(0, end + 1) : cut.replace(/\s+\S*$/, "") + "…";
+  }
+  return text;
 }
 
 export async function GET(request: Request) {
@@ -65,6 +80,7 @@ export async function GET(request: Request) {
         author: stripTags(meta.Artist?.value).slice(0, 200),
         license: stripTags(meta.LicenseShortName?.value).slice(0, 80),
         description: stripTags(meta.ImageDescription?.value || meta.ObjectName?.value).slice(0, 300),
+        caption: captionFrom(stripTags(meta.ImageDescription?.value || meta.ObjectName?.value), p.title ?? ""),
         pageUrl: info.descriptionurl ?? `https://commons.wikimedia.org/wiki/${encodeURIComponent(p.title ?? "")}`,
       });
     }
