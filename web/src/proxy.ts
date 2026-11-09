@@ -4,6 +4,9 @@ import { SUPABASE_KEY, SUPABASE_URL } from "@/lib/env";
 
 /** Rafraîchit la session Supabase à chaque requête et garde /studio et /admin aux connectés. */
 export async function proxy(request: NextRequest) {
+  // Session factice (captures hors ligne) : la page décide, voir lib/studio/mock.ts.
+  if (process.env.SOPHIA_MOCK_STUDIO && process.env.NODE_ENV !== "production") return NextResponse.next({ request });
+  if (process.env.SOPHIA_MOCK_STUDIO && process.env.SOPHIA_DATA === "starter") return NextResponse.next({ request });
   const { pathname, search } = request.nextUrl;
   const protectedArea = pathname.startsWith("/studio") || pathname.startsWith("/admin");
   // Visiteur sans cookie de session : rien à rafraîchir, on ne touche pas à Supabase.

@@ -14,7 +14,9 @@ npm run build
 
 Sans accès à Supabase (hors ligne), `SOPHIA_DATA=starter npm run dev` sert le catalogue depuis les
 packs de départ de l'app (`ios/Sophia/Resources/StarterPack`) ; les pages publiques s'affichent,
-le Studio demande une connexion.
+le Studio demande une connexion. Avec en plus `SOPHIA_MOCK_STUDIO=author` (ou `onboarding`, `new`),
+le Studio s'affiche avec un compte factice et des chiffres plausibles (`src/lib/studio/mock.ts`), pour
+maquetter et capturer sans base.
 
 Dossiers : `src/app/(site)` pages publiques · `src/app/studio` espace auteur · `src/app/admin`
 espace équipe · `src/lib/catalog` lecture du catalogue · `src/lib/studio` règles du format,

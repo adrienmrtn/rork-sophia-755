@@ -2,6 +2,7 @@ import "server-only";
 import { cache } from "react";
 import type { SupabaseClient, User } from "@supabase/supabase-js";
 import { createClient } from "@/lib/supabase/server";
+import { MOCK_STUDIO, mockSession } from "@/lib/studio/mock";
 
 export type OnboardingStep = "identity" | "credentials" | "profile" | "agreement" | "guide" | "done";
 export const ONBOARDING_STEPS: OnboardingStep[] = ["identity", "credentials", "profile", "agreement", "guide", "done"];
@@ -41,6 +42,7 @@ export interface StudioSession {
 /** La session du Studio : l'utilisateur, son compte créateur (s'il existe), son rôle, son contrat.
  *  Le jeton est vérifié localement (getClaims) et la base n'est lue qu'une fois (studio_me). */
 export const getStudioSession = cache(async (): Promise<StudioSession | null> => {
+  if (MOCK_STUDIO) return mockSession();
   const supabase = await createClient();
   const { data: claimsData } = await supabase.auth.getClaims();
   const claims = claimsData?.claims;

@@ -35,9 +35,9 @@ export interface DraftRow {
   updated_at: string;
 }
 
-export type DraftListRow = Pick<DraftRow, "id" | "title" | "subject" | "status" | "updated_at" | "submitted_at" | "published_at" | "app_course_id" | "last_job_id" | "sections" | "review_comment" | "origin_lang" | "user_id">;
+export type DraftListRow = Pick<DraftRow, "id" | "title" | "subject" | "status" | "updated_at" | "submitted_at" | "published_at" | "app_course_id" | "last_job_id" | "sections" | "hero" | "review_comment" | "origin_lang" | "user_id">;
 
-export const DRAFT_LIST_COLUMNS = "id,title,subject,status,updated_at,submitted_at,published_at,app_course_id,last_job_id,sections,review_comment,origin_lang,user_id";
+export const DRAFT_LIST_COLUMNS = "id,title,subject,status,updated_at,submitted_at,published_at,app_course_id,last_job_id,sections,hero,review_comment,origin_lang,user_id";
 
 export interface DashboardCourse {
   id: string;
