@@ -81,20 +81,26 @@ def download(url: str) -> tuple[bytes, str]:
         return resp.read(60_000_000), resp.headers.get("Content-Type", "")
 
 
-def to_webp(raw: bytes, content_type: str, max_side: int) -> tuple[bytes, str]:
-    """WebP de qualité, bornée en taille, pour que l'API GitHub puisse la relire (< 1 Mo)."""
-    if "svg" in content_type:
+def to_webp(raw: bytes, content_type: str, max_side: int, url: str = "") -> tuple[bytes, str]:
+    """WebP de qualité, bornée en taille, pour que l'API GitHub puisse la relire (< 1 Mo).
+    Les styles vectoriels de Recraft renvoient un SVG : on le garde tel quel (c'est ce que le site
+    préfère). Toute image que Pillow ne lit pas est gardée brute, avec l'extension de l'URL."""
+    head = raw[:400].lstrip().lower()
+    if "svg" in (content_type or "") or url.lower().split("?")[0].endswith(".svg") or head.startswith(b"<svg") or (head.startswith(b"<?xml") and b"<svg" in raw[:2000].lower()):
         return raw, "svg"
+    guess = url.lower().split("?")[0].rsplit(".", 1)[-1] if "." in url.rsplit("/", 1)[-1] else "png"
     try:
         from PIL import Image  # type: ignore
-    except ImportError:
-        return raw, "png"
-    image = Image.open(io.BytesIO(raw))
+        image = Image.open(io.BytesIO(raw))
+        image.load()
+    except Exception:  # noqa: BLE001
+        return raw, guess if guess in ("png", "jpg", "jpeg", "webp", "gif") else "png"
     if image.mode not in ("RGB", "RGBA"):
         image = image.convert("RGBA")
     if max(image.size) > max_side:
         ratio = max_side / max(image.size)
         image = image.resize((round(image.width * ratio), round(image.height * ratio)), Image.LANCZOS)
+    buf = io.BytesIO()
     for quality in (92, 86, 80, 72):
         buf = io.BytesIO()
         image.save(buf, format="WEBP", quality=quality, method=6)
@@ -130,7 +136,7 @@ def main() -> int:
             if not images:
                 raise RuntimeError(f"pas d'image dans la réponse : {json.dumps(result)[:300]}")
             raw, content_type = download(images[0]["url"])
-            data, ext = to_webp(raw, content_type or images[0].get("content_type", ""), int(merged.get("max_side", 1600)))
+            data, ext = to_webp(raw, content_type or images[0].get("content_type") or "", int(merged.get("max_side", 1600)), images[0].get("url", ""))
             path = out / f"{name}.{ext}"
             path.write_bytes(data)
             index[name] = {
@@ -139,7 +145,7 @@ def main() -> int:
                 "generated_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
             }
             print(f"  ok {path.name} ({len(data)} octets)", flush=True)
-        except (urllib.error.HTTPError, urllib.error.URLError, RuntimeError, TimeoutError) as e:
+        except Exception as e:  # noqa: BLE001
             detail = ""
             if isinstance(e, urllib.error.HTTPError):
                 try:
