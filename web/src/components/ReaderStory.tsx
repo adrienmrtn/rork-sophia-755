@@ -10,11 +10,11 @@ import {
   type MotionValue,
 } from "motion/react";
 import { useRef, useState } from "react";
-import { site } from "@/lib/site";
+import { showcase } from "@/lib/showcase";
 import { RichText } from "./RichText";
 import { Avatar } from "./ui";
 
-const r = site.reader;
+const r = showcase.reader;
 
 const steps = [
   {
@@ -93,7 +93,7 @@ function QuizPane({ p }: { p: MotionValue<number> }) {
   return (
     <div className="flex h-full flex-col bg-cream p-6 sm:p-7">
       <div className="flex items-center justify-between text-[13px] font-bold">
-        <span className="rounded-full bg-paper px-3 py-1 ring-1 ring-line">Quiz · 1/{site.reader.quizCount}</span>
+        <span className="rounded-full bg-paper px-3 py-1 ring-1 ring-line">Quiz · 1/{showcase.reader.quizCount}</span>
         <span className="rounded-full bg-saffron-soft px-3 py-1 text-navy">Révision dans 3 jours</span>
       </div>
       <p className="mt-6 text-[22px] font-extrabold leading-snug tracking-tight">{q.question}</p>
@@ -205,7 +205,7 @@ function StickyStory() {
 
   return (
     <div ref={ref} className="relative hidden h-[300vh] lg:block">
-      <div className="sticky top-16 flex h-[calc(100vh-4rem)] items-center">
+      <div className="sticky top-0 flex h-screen items-center">
         <div className="mx-auto grid w-full max-w-6xl grid-cols-[1fr_440px] items-center gap-20 px-6">
           <div>
             <p className="eyebrow">La méthode</p>
@@ -246,7 +246,7 @@ function StickyStory() {
             </ol>
           </div>
 
-          <div className="relative h-[min(640px,calc(100vh-8rem))]">
+          <div className="relative h-[min(640px,calc(100vh-6rem))]">
             <motion.div
               className="absolute -inset-6 -z-10 rounded-[44px]"
               animate={{ backgroundColor: ["#fde9bd", "#e0ede5", "#fbdcd3"][step], rotate: [-2, 2, -1][step] }}
@@ -296,7 +296,7 @@ function MobileStep({ i }: { i: number }) {
 
 export function ReaderStory() {
   return (
-    <section id="methode" className="scroll-mt-16 bg-paper">
+    <section id="methode" className="bg-paper">
       <StickyStory />
       <div className="px-4 py-20 sm:px-6 lg:hidden">
         <p className="eyebrow">La méthode</p>

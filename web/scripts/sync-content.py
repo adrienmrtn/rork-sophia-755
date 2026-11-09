@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
-"""Extrait du repo les données et images de la vitrine.
+"""Extrait du repo les données et images du site.
 
-Lit le catalogue français embarqué dans l'app (starter pack Android), les quiz,
-les cours et les images iOS, puis écrit :
-  - web/src/data/site.json
-  - web/public/img/**.webp (images redimensionnées)
+Lit le catalogue français embarqué dans l'app (starter pack Android), les cours,
+les quiz et les images iOS, puis écrit :
+  - web/src/data/catalog.json     tout le catalogue (pages serveur uniquement)
+  - web/src/data/showcase.json    petit extrait pour les composants interactifs
+  - web/src/data/courses/<slug>.json  introduction, parties et quiz de chaque cours
+  - web/public/img/**.webp        images redimensionnées
 
 Lecture seule sur le reste du repo. Relancer après une mise à jour du catalogue :
   python3 web/scripts/sync-content.py
@@ -22,29 +24,49 @@ IOS = ROOT / "ios" / "Sophia"
 CATALOG = ROOT / "android/app/src/main/assets/starter_pack/fr/catalog.json"
 QUIZZES = ROOT / "content/locales/fr/quizzes_v2.json"
 COURSES_DIR = ROOT / "content/courses/fr"
-OUT_JSON = WEB / "src/data/site.json"
-OUT_IMG = WEB / "public/img"
+DATA = WEB / "src/data"
+IMG = WEB / "public/img"
 
-# Matières, et cours de secours (numéros) quand les auteurs n'en signent pas assez.
 SUBJECTS = [
-    ("histoire", "Histoire", ["13", "262", "264", "292"]),
-    ("sciences", "Sciences", ["41", "42", "281", "304"]),
-    ("comprendreLeMonde", "Comprendre le monde", ["203", "212", "220", "226"]),
-    ("litterature", "Littérature", ["101", "106", "91", "119"]),
-    ("mythologie", "Mythologie", ["162", "172", "179", "181"]),
-    ("art", "Art", ["149", "150", "133", "128"]),
+    ("histoire", "histoire", "Histoire", "Des pyramides à la chute du mur : les tournants qui ont fait le monde."),
+    ("sciences", "sciences", "Sciences", "Le corps, l'espace, la matière : les grandes questions et les petits mystères."),
+    ("comprendreLeMonde", "comprendre-le-monde", "Comprendre le monde", "Géopolitique, économie, société : les clés de l'actualité."),
+    ("litterature", "litterature", "Littérature", "Les classiques et leurs auteurs, racontés comme des histoires."),
+    ("mythologie", "mythologie", "Mythologie", "Dieux, héros et monstres, de la Grèce antique aux légendes nordiques."),
+    ("art", "art", "Art", "Peinture, musique, cinéma, architecture : les œuvres et ce qu'elles disent."),
 ]
-FEED_SIZE = 5
 QUIZ_COURSES = ["101", "262", "41", "162", "149", "203"]
-READER_COURSE = "149"  # « Pourquoi la Joconde est-elle aussi connue ? », Dusan Nikolic
-HERO_FEED = ["262", "101", "149", "41", "162", "203"]
+READER_COURSE = "149"
+FEATURED = ["149", "262", "101", "41", "162", "203"]
+HOUSE = {
+    "slug": "redaction",
+    "name": "La rédaction Sophia",
+    "title": "Équipe éditoriale",
+    "bio": "L'équipe éditoriale de Sophia écrit, vérifie et illustre les cours qui ne sont pas encore signés par un auteur invité. Chaque cours est relu avant publication et mis à jour quand la recherche avance.",
+    "institution": None,
+    "country": None,
+    "links": {},
+    "photo": "/img/brand/app_icon.webp",
+    "verified": True,
+}
 
 
 def num(course_id: str) -> str:
     return course_id.split("_")[1]
 
 
-def save_webp(src: Path, dest: Path, max_side: int, quality: int = 78) -> bool:
+def slug_of(course_id: str) -> str:
+    return re.sub(r"^course_\d+_", "", course_id).replace("_", "-")
+
+
+def slugify(text: str) -> str:
+    import unicodedata
+
+    t = unicodedata.normalize("NFKD", text).encode("ascii", "ignore").decode().lower()
+    return re.sub(r"[^a-z0-9]+", "-", t).strip("-")
+
+
+def save_webp(src: Path, dest: Path, max_side: int, quality: int = 76) -> bool:
     if not src.exists():
         return False
     dest.parent.mkdir(parents=True, exist_ok=True)
@@ -57,130 +79,126 @@ def save_webp(src: Path, dest: Path, max_side: int, quality: int = 78) -> bool:
     return True
 
 
-def strip_markup(text: str) -> str:
+def clean(text: str) -> str:
     return re.sub(r"\[\[([^\]]+)\]\]", r"\1", text)
 
 
 def main() -> None:
-    if (OUT_IMG / "courses").exists():
-        shutil.rmtree(OUT_IMG / "courses")
     cat = json.loads(CATALOG.read_text())
-    courses = {c["id"]: c for c in cat["courses"]}
-    by_num = {num(cid): c for cid, c in courses.items()}
-    creators_by_slug = {cr["slug"]: cr for cr in cat["creators"]}
-    subject_label = {sid: label for sid, label, _ in SUBJECTS}
+    quizzes = {q["courseId"]: q["quiz"] for q in json.loads(QUIZZES.read_text())}
+    subject_meta = {sid: (slug, label, blurb) for sid, slug, label, blurb in SUBJECTS}
 
-    def author_photo(cr: dict) -> str | None:
-        if not cr.get("photo"):
-            return None
-        path = f"/img/authors/{cr['photo']}.webp"
-        ok = save_webp(IOS / "Resources/AuthorPhotos" / f"{cr['photo']}.jpg", WEB / "public" / path.lstrip("/"), 320)
-        return path if ok else None
+    # Auteurs
+    creators = []
+    for cr in cat["creators"]:
+        photo = None
+        if cr.get("photo"):
+            photo = f"/img/authors/{cr['photo']}.webp"
+            if not save_webp(IOS / "Resources/AuthorPhotos" / f"{cr['photo']}.jpg", WEB / "public" / photo.lstrip("/"), 400):
+                photo = None
+        creators.append(
+            {
+                "slug": cr["slug"],
+                "name": cr["name"],
+                "title": cr["title"],
+                "bio": cr.get("bio") or "",
+                "institution": cr.get("institution"),
+                "country": cr.get("country"),
+                "links": cr.get("links") or {},
+                "photo": photo,
+                "verified": bool(cr.get("verified")),
+                "courses": [],
+            }
+        )
+    by_creator = {c["slug"]: c for c in creators}
+    house = {**HOUSE, "courses": []}
 
-    def byline(c: dict) -> dict:
-        cr = creators_by_slug.get(c.get("creator") or "")
-        if not cr:
-            return {"name": "La rédaction Sophia", "title": "Équipe éditoriale", "photo": None}
-        return {"name": cr["name"], "title": cr["title"], "photo": author_photo(cr)}
+    # Collections
+    collections = []
+    course_cols: dict[str, list[str]] = {}
+    for col in cat["collections"]:
+        src = IOS / "Assets.xcassets/CollectionCovers" / f"{col['cover']}.imageset" / f"{col['cover']}.jpg"
+        img = f"/img/collections/{col['cover']}.webp"
+        if not save_webp(src, WEB / "public" / img.lstrip("/"), 900):
+            continue
+        cslug = slugify(col["title"])
+        collections.append(
+            {"slug": cslug, "title": col["title"], "description": col.get("description", ""), "image": img, "courses": [slug_of(i) for i in col["courseIds"]]}
+        )
+        for cid in col["courseIds"]:
+            course_cols.setdefault(cid, []).append(cslug)
 
-    def course_card(c: dict) -> dict:
+    # Cours
+    if (IMG / "courses").exists():
+        shutil.rmtree(IMG / "courses")
+    if (DATA / "courses").exists():
+        shutil.rmtree(DATA / "courses")
+    (DATA / "courses").mkdir(parents=True)
+    courses = []
+    seen = set()
+    for c in cat["courses"]:
+        slug = slug_of(c["id"])
+        assert slug not in seen, slug
+        seen.add(slug)
         img = f"/img/courses/{c['cover']}.webp"
-        save_webp(IOS / "CourseImages" / f"{c['cover']}.jpg", WEB / "public" / img.lstrip("/"), 640)
-        return {
-            "id": c["id"],
+        save_webp(IOS / "CourseImages" / f"{c['cover']}.jpg", WEB / "public" / img.lstrip("/"), 760)
+        author = c.get("creator") if c.get("creator") in by_creator else "redaction"
+        sslug, slabel, _ = subject_meta[c["subject"]]
+        entry = {
+            "slug": slug,
+            "n": int(num(c["id"])),
             "title": c["title"],
             "subtitle": c.get("subtitle") or "",
             "hook": c.get("hook") or c.get("description") or "",
             "description": c.get("description") or "",
+            "subject": sslug,
+            "subjectLabel": slabel,
+            "subcategory": c.get("subcategory") or "",
             "image": img,
-            "subject": subject_label.get(c["subject"], c["subject"]),
             "quizCount": c.get("quizCount", 0),
-            "author": byline(c),
+            "author": author,
+            "collections": course_cols.get(c["id"], []),
         }
+        courses.append(entry)
+        (by_creator.get(author) or house)["courses"].append(slug)
 
-    counts: dict[str, int] = {}
-    for c in cat["courses"]:
-        counts[c["subject"]] = counts.get(c["subject"], 0) + 1
+        detail = json.loads((COURSES_DIR / f"{c['id']}.json").read_text())
+        intro = []
+        for b in detail["sections"][0]["blocks"]:
+            if b["type"] == "paragraph":
+                intro.append({"type": "paragraph", "text": clean(b["text"])})
+            elif b["type"] == "funFact":
+                intro.append({"type": "funFact", "text": clean(b["text"])})
+        teaser = next(
+            (clean(b["text"]) for s in detail["sections"][1:2] for b in s["blocks"] if b["type"] == "paragraph"),
+            "",
+        )
+        mcq = next((q for q in quizzes.get(c["id"], []) if q.get("type") == "mcq"), None)
+        body = {
+            "intro": intro,
+            "sections": [s["title"] for s in detail["sections"]],
+            "teaser": teaser[:420],
+            "quiz": {k: mcq[k] for k in ("question", "options", "correctIndex", "explanation")} if mcq else None,
+        }
+        (DATA / "courses" / f"{slug}.json").write_text(json.dumps(body, ensure_ascii=False))
+
+    by_num = {c["n"]: c for c in courses}
 
     subjects = []
-    for sid, label, fallback in SUBJECTS:
-        signed = [c for c in cat["courses"] if c["subject"] == sid and c.get("creator")]
-        signed.sort(key=lambda c: not creators_by_slug[c["creator"]].get("photo"))
-        picks, per_author = [], {}
-        for c in signed:
-            if per_author.get(c["creator"], 0) >= 2:
-                continue
-            per_author[c["creator"]] = per_author.get(c["creator"], 0) + 1
-            picks.append(c)
-            if len(picks) >= FEED_SIZE - 1:
-                break
-        for n in fallback:
-            if len(picks) >= FEED_SIZE:
-                break
-            if by_num[n] not in picks:
-                picks.append(by_num[n])
-        subjects.append({"id": sid, "label": label, "count": counts.get(sid, 0), "courses": [course_card(c) for c in picks]})
-
-    collections = []
-    for col in cat["collections"]:
-        src = IOS / "Assets.xcassets/CollectionCovers" / f"{col['cover']}.imageset" / f"{col['cover']}.jpg"
-        img = f"/img/collections/{col['cover']}.webp"
-        if save_webp(src, WEB / "public" / img.lstrip("/"), 720):
-            collections.append(
-                {"id": col["id"], "title": col["title"], "description": col.get("description", ""), "image": img, "count": len(col["courseIds"])}
-            )
-
-    creators = []
-    for cr in cat["creators"]:
-        own = [courses[i] for i in cr["courseIds"] if i in courses]
-        creators.append(
-            {
-                "name": cr["name"],
-                "title": cr["title"],
-                "institution": cr.get("institution"),
-                "photo": author_photo(cr),
-                "courseCount": len(own),
-                "courses": [{"title": c["title"], "image": course_card(c)["image"]} for c in own[:3]],
-            }
+    for sid, sslug, label, blurb in SUBJECTS:
+        own = [c for c in courses if c["subject"] == sslug]
+        subs: dict[str, list[str]] = {}
+        for c in own:
+            subs.setdefault(c["subcategory"] or "Autres", []).append(c["slug"])
+        subjects.append(
+            {"slug": sslug, "label": label, "blurb": blurb, "count": len(own), "subcategories": [{"title": k, "courses": v} for k, v in subs.items()]}
         )
-    creators.sort(key=lambda c: c["photo"] is None)
-
-    quizzes = {q["courseId"]: q["quiz"] for q in json.loads(QUIZZES.read_text())}
-    quiz = []
-    for n in QUIZ_COURSES:
-        c = by_num[n]
-        q = next(x for x in quizzes[c["id"]] if x.get("type") == "mcq")
-        quiz.append(
-            {
-                "question": q["question"],
-                "options": q["options"],
-                "correctIndex": q["correctIndex"],
-                "explanation": q["explanation"],
-                "course": c["title"],
-                "image": course_card(c)["image"],
-            }
-        )
-
-    rc = by_num[READER_COURSE]
-    detail = json.loads((COURSES_DIR / f"{rc['id']}.json").read_text())
-    paragraphs = [strip_markup(b["text"]) for b in detail["sections"][0]["blocks"] if b.get("type") == "paragraph"][:3]
-    sections = [s["title"] for s in detail["sections"]]
-    rq = next(x for x in quizzes[rc["id"]] if x.get("type") == "mcq")
-    reader = {
-        **course_card(rc),
-        "paragraphs": paragraphs,
-        "sections": sections,
-        "quiz": {"question": rq["question"], "options": rq["options"], "correctIndex": rq["correctIndex"]},
-    }
-
-    hero_feed = [course_card(by_num[n]) for n in HERO_FEED]
 
     for i in range(1, 7):
-        save_webp(IOS / "Resources/ReviewAvatars" / f"review_avatar_{i}.jpg", OUT_IMG / f"avatars/review_{i}.webp", 160)
+        save_webp(IOS / "Resources/ReviewAvatars" / f"review_avatar_{i}.jpg", IMG / f"avatars/review_{i}.webp", 160)
     for p in sorted((IOS / "Resources/UniversityLogos").glob("*.png")):
-        save_webp(p, OUT_IMG / f"universities/{p.stem}.webp", 400, 90)
-
-    brand = OUT_IMG / "brand"
+        save_webp(p, IMG / f"universities/{p.stem}.webp", 400, 90)
+    brand = IMG / "brand"
     save_webp(IOS / "Assets.xcassets/sophia_mark.imageset/sophia_mark.png", brand / "sophia_logo.webp", 600, 92)
     save_webp(IOS / "Assets.xcassets/logo_white.imageset/logo_white.png", brand / "sophia_logo_white.webp", 600, 92)
     icon = ROOT / "Sophia/Assets.xcassets/AppIcon.appiconset/icon.png"
@@ -188,25 +206,53 @@ def main() -> None:
     Image.open(icon).convert("RGB").resize((180, 180), Image.LANCZOS).save(WEB / "src/app/apple-icon.png")
     Image.open(icon).convert("RGB").resize((64, 64), Image.LANCZOS).save(WEB / "src/app/icon.png")
 
-    data = {
-        "stats": {
-            "courses": len(cat["courses"]),
-            "collections": len(cat["collections"]),
-            "creators": len(cat["creators"]),
-            "languages": len(list(IOS.glob("*.lproj"))),
-            "quizQuestions": sum(c.get("quizCount", 0) for c in cat["courses"]),
-        },
-        "heroFeed": hero_feed,
-        "subjects": subjects,
-        "collections": collections,
-        "creators": creators,
-        "universities": sorted(f"/img/universities/{p.stem}.webp" for p in (IOS / "Resources/UniversityLogos").glob("*.png")),
-        "quiz": quiz,
-        "reader": reader,
+    stats = {
+        "courses": len(courses),
+        "collections": len(collections),
+        "creators": len(creators),
+        "languages": len(list(IOS.glob("*.lproj"))),
+        "quizQuestions": sum(c.get("quizCount", 0) for c in cat["courses"]),
     }
-    OUT_JSON.parent.mkdir(parents=True, exist_ok=True)
-    OUT_JSON.write_text(json.dumps(data, ensure_ascii=False, indent=1))
-    print(f"OK : {OUT_JSON.relative_to(ROOT)}", data["stats"])
+    universities = sorted(f"/img/universities/{p.stem}.webp" for p in (IOS / "Resources/UniversityLogos").glob("*.png"))
+
+    catalog = {
+        "stats": stats,
+        "courses": courses,
+        "creators": creators + [house],
+        "collections": collections,
+        "subjects": subjects,
+        "universities": universities,
+        "featured": [by_num[int(n)]["slug"] for n in FEATURED],
+    }
+    (DATA / "catalog.json").write_text(json.dumps(catalog, ensure_ascii=False))
+
+    # Petit extrait pour les composants interactifs (envoyé au navigateur).
+    authors = {c["slug"]: c for c in creators + [house]}
+
+    def card(c: dict) -> dict:
+        a = authors[c["author"]]
+        return {
+            "slug": c["slug"], "title": c["title"], "hook": c["hook"], "image": c["image"], "subject": c["subjectLabel"],
+            "quizCount": c["quizCount"], "subtitle": c["subtitle"],
+            "author": {"name": a["name"], "title": a["title"], "photo": a["photo"], "slug": a["slug"]},
+        }
+
+    quiz = []
+    for n in QUIZ_COURSES:
+        c = by_num[int(n)]
+        q = json.loads((DATA / "courses" / f"{c['slug']}.json").read_text())["quiz"]
+        quiz.append({**q, "course": c["title"], "slug": c["slug"], "image": c["image"]})
+    rc = by_num[int(READER_COURSE)]
+    rbody = json.loads((DATA / "courses" / f"{rc['slug']}.json").read_text())
+    showcase = {
+        "stats": stats,
+        "universities": universities,
+        "quiz": quiz,
+        "reader": {**card(rc), "paragraphs": [b["text"] for b in rbody["intro"] if b["type"] == "paragraph"][:3], "sections": rbody["sections"], "quiz": rbody["quiz"]},
+        "heroFeed": [card(by_num[int(n)]) for n in FEATURED],
+    }
+    (DATA / "showcase.json").write_text(json.dumps(showcase, ensure_ascii=False, indent=1))
+    print("OK", stats, "pages cours :", len(courses))
 
 
 if __name__ == "__main__":

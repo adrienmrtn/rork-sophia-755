@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { AnimatePresence, motion } from "motion/react";
 import { useState } from "react";
-import { site, links } from "@/lib/site";
+import { showcase } from "@/lib/showcase";
 import { Arrow, Button } from "./ui";
 
 const confettiColors = ["#f2b134", "#e05a3a", "#1a3a6b", "#387d5a", "#2e62c4"];
@@ -31,12 +31,12 @@ function Burst() {
 }
 
 export function QuizDemo() {
-  const total = site.quiz.length;
+  const total = showcase.quiz.length;
   const [index, setIndex] = useState(0);
   const [picked, setPicked] = useState<number | null>(null);
   const [score, setScore] = useState(0);
   const done = index >= total;
-  const q = site.quiz[Math.min(index, total - 1)];
+  const q = showcase.quiz[Math.min(index, total - 1)];
 
   function choose(i: number) {
     if (picked !== null) return;
@@ -162,7 +162,7 @@ export function QuizDemo() {
                       : "Tout le monde commence quelque part. Votre premier cours vous attend."}
                 </p>
                 <div className="mt-8 flex flex-wrap justify-center gap-3">
-                  <Button href={links.appStore} size="lg">
+                  <Button href="/commencer" size="lg">
                     Continuer dans l&apos;app <Arrow />
                   </Button>
                   <motion.button

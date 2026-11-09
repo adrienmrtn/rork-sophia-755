@@ -1,18 +1,18 @@
 "use client";
 
 import Image from "next/image";
-import { site } from "@/lib/site";
+import { showcase } from "@/lib/showcase";
 import { Counter, Rise } from "./ui";
 
 const figures = [
   { value: 500000, label: "lecteurs chaque mois" },
-  { value: site.stats.courses, label: "cours publiés" },
-  { value: site.stats.quizQuestions, label: "questions de quiz" },
-  { value: site.stats.languages, label: "langues" },
+  { value: showcase.stats.courses, label: "cours publiés" },
+  { value: showcase.stats.quizQuestions, label: "questions de quiz" },
+  { value: showcase.stats.languages, label: "langues" },
 ];
 
 export function Proof() {
-  const logos = [...site.universities, ...site.universities, ...site.universities, ...site.universities];
+  const logos = [...showcase.universities, ...showcase.universities, ...showcase.universities, ...showcase.universities];
   return (
     <section className="bg-paper py-16 sm:py-20">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">

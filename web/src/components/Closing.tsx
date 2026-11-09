@@ -3,8 +3,9 @@
 import Image from "next/image";
 import { AnimatePresence, motion } from "motion/react";
 import { useState } from "react";
-import { site, links } from "@/lib/site";
-import { Logo, Rise, StoreBadges } from "./ui";
+import { showcase } from "@/lib/showcase";
+import { links } from "@/lib/config";
+import { Button, Rise } from "./ui";
 
 // Avis repris de l'onboarding de l'app (AppLocalizable.swift, onboardingV2.review.*).
 const reviews = [
@@ -59,7 +60,7 @@ const faq = [
   },
   {
     q: "Qui écrit les cours ?",
-    a: `Des profs, des chercheurs et des auteurs spécialisés (${site.stats.creators} à ce jour), venus d'universités comme Oxford, Queen's University Belfast, Boston University ou l'université de Belgrade. Chaque cours est relu avant publication.`,
+    a: `Des profs, des chercheurs et des auteurs spécialisés (${showcase.stats.creators} à ce jour), venus d'universités comme Oxford, Queen's University Belfast, Boston University ou l'université de Belgrade. Chaque cours est relu avant publication.`,
   },
   {
     q: "Comment marche le bloqueur d'apps ?",
@@ -71,7 +72,7 @@ const faq = [
   },
   {
     q: "Sur quels appareils, dans quelles langues ?",
-    a: `Sur iPhone et Android, en ${site.stats.languages} langues, dont le français, l'anglais, l'espagnol, l'allemand, l'italien, le portugais et le japonais.`,
+    a: `Sur iPhone et Android, en ${showcase.stats.languages} langues, dont le français, l'anglais, l'espagnol, l'allemand, l'italien, le portugais et le japonais.`,
   },
 ];
 
@@ -133,7 +134,7 @@ export function Faq() {
 }
 
 export function FinalCta() {
-  const covers = site.heroFeed;
+  const covers = showcase.heroFeed;
   return (
     <section className="relative overflow-hidden bg-cream py-24 sm:py-32">
       <div className="pointer-events-none absolute inset-0 flex items-center justify-center" aria-hidden>
@@ -141,7 +142,7 @@ export function FinalCta() {
           const angle = (i / covers.length) * Math.PI * 2;
           return (
             <motion.div
-              key={c.id}
+              key={c.slug}
               className="absolute hidden h-24 w-32 overflow-hidden rounded-xl opacity-90 shadow-lg md:block"
               style={{ left: `calc(50% + ${Math.cos(angle) * 46}% - 64px)`, top: `calc(50% + ${Math.sin(angle) * 38}% - 48px)` }}
               animate={{ y: [0, -10, 0], rotate: [i % 2 ? -4 : 4, i % 2 ? 2 : -2, i % 2 ? -4 : 4] }}
@@ -161,48 +162,8 @@ export function FinalCta() {
           Téléchargez Sophia, lisez votre premier cours en dix minutes, et voyez votre culture générale grandir semaine
           après semaine.
         </p>
-        <StoreBadges className="mt-9 justify-center" />
+        <div className="mt-9 flex flex-wrap justify-center gap-3"><Button href="/commencer" size="lg">Commencer gratuitement</Button><Button href={links.download} variant="secondary" size="lg">Télécharger l&apos;app</Button></div>
       </Rise>
     </section>
-  );
-}
-
-const footer = [
-  { title: "Apprendre", items: [["Les cours", "#fil"], ["La méthode", "#methode"], ["Premium", "#premium"], ["L'app", links.appStore]] },
-  { title: "Créer", items: [["Écrire pour Sophia", links.writeForUs], ["Les auteurs", "#auteurs"]] },
-  { title: "Sophia", items: [["Questions fréquentes", "#faq"], ["Support", links.support]] },
-  { title: "Légal", items: [["Confidentialité", links.support], ["Conditions d'utilisation", "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/"]] },
-];
-
-export function Footer() {
-  return (
-    <footer className="border-t border-line bg-paper py-14">
-      <div className="mx-auto grid max-w-6xl gap-10 px-4 sm:px-6 lg:grid-cols-[1.2fr_2fr]">
-        <div>
-          <Logo />
-          <p className="mt-4 max-w-xs font-serif text-[17px] leading-snug text-ink-2">
-            La culture générale en dix minutes par jour, en {site.stats.languages} langues.
-          </p>
-          <StoreBadges className="mt-6" />
-        </div>
-        <div className="grid grid-cols-2 gap-8 sm:grid-cols-4">
-          {footer.map((col) => (
-            <div key={col.title}>
-              <p className="text-[12px] font-bold uppercase tracking-[0.14em] text-ink-3">{col.title}</p>
-              <ul className="mt-4 space-y-2.5 text-[15px] font-semibold text-ink-2">
-                {col.items.map(([label, href]) => (
-                  <li key={label}>
-                    <a href={href} className="transition-colors hover:text-navy" {...(href.startsWith("http") ? { target: "_blank", rel: "noopener" } : {})}>
-                      {label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-      </div>
-      <p className="mx-auto mt-12 max-w-6xl px-4 text-[13px] text-ink-3 sm:px-6">© {new Date().getFullYear()} Sophia. Tous droits réservés.</p>
-    </footer>
   );
 }

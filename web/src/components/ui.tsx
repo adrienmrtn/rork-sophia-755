@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { motion, useInView, animate } from "motion/react";
 import { useEffect, useRef } from "react";
-import { links } from "@/lib/site";
+import { links } from "@/lib/config";
 
 export function Button({
   href,
@@ -64,14 +64,14 @@ export function StoreBadges({ className = "", dark = true }: { className?: strin
   const badge = `flex h-12 items-center gap-2.5 rounded-xl px-4 transition-colors ${tone}`;
   return (
     <div className={`flex flex-wrap gap-3 ${className}`}>
-      <motion.a whileHover={{ y: -2 }} whileTap={{ scale: 0.97 }} href={links.appStore} target="_blank" rel="noopener" className={badge}>
+      <motion.a whileHover={{ y: -2 }} whileTap={{ scale: 0.97 }} href={links.download} target="_blank" rel="noopener" className={badge}>
         <AppleLogo />
         <span className="leading-none">
           <span className="block text-[10px] font-medium opacity-70">Télécharger dans</span>
           <span className="mt-0.5 block text-[15px] font-bold">l&apos;App Store</span>
         </span>
       </motion.a>
-      <motion.a whileHover={{ y: -2 }} whileTap={{ scale: 0.97 }} href={links.playStore} target="_blank" rel="noopener" className={badge}>
+      <motion.a whileHover={{ y: -2 }} whileTap={{ scale: 0.97 }} href={links.download} target="_blank" rel="noopener" className={badge}>
         <PlayLogo />
         <span className="leading-none">
           <span className="block text-[10px] font-medium opacity-70">Disponible sur</span>

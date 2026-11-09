@@ -1,0 +1,231 @@
+{
+ "stats": {
+  "courses": 310,
+  "collections": 40,
+  "creators": 16,
+  "languages": 30,
+  "quizQuestions": 2686
+ },
+ "quiz": [
+  {
+   "question": "Quel est le vrai nom de George Orwell ?",
+   "options": [
+    "Eric Arthur Blair",
+    "George Bernard Shaw",
+    "Aldous Huxley",
+    "Herbert George Wells"
+   ],
+   "correctIndex": 0,
+   "explanation": "George Orwell est le pseudonyme d'Eric Arthur Blair.",
+   "course": "« 1984 » : comment Winston finit-il par aimer Big Brother ?",
+   "slug": "1984-george-orwell",
+   "image": "/img/courses/1984_george_orwell.webp"
+  },
+  {
+   "question": "Selon la datation admise depuis 2018, quel jour le Vésuve est-il entré en éruption ?",
+   "options": [
+    "Le 24 octobre 79",
+    "Le 24 août 79",
+    "Le 24 octobre 62",
+    "Le 24 août 63"
+   ],
+   "correctIndex": 0,
+   "explanation": "Longtemps datée du 24 août, l'éruption a été redatée au 24 octobre 79 grâce à une inscription au charbon de bois découverte en 2018.",
+   "course": "Comment Pompéi a-t-elle disparu en dix-huit heures ?",
+   "slug": "comment-pompei-a-t-elle-disparu-en-dix",
+   "image": "/img/courses/pompeii_forum_ruins_mount_vesuvius_background.webp"
+  },
+  {
+   "question": "Pourquoi le ciel nous paraît-il bleu ?",
+   "options": [
+    "Les molécules d'air dispersent bien plus la lumière bleue que la rouge",
+    "Le Soleil n'émet que de la lumière bleue",
+    "L'atmosphère elle-même est teintée de bleu",
+    "Nos yeux ajoutent artificiellement du bleu à ce qu'on regarde"
+   ],
+   "correctIndex": 0,
+   "explanation": "Les ondes courtes comme le bleu sont bien plus dispersées par les molécules d'air que les ondes longues comme le rouge : c'est la diffusion de Rayleigh.",
+   "course": "Pourquoi le ciel est-il bleu ?",
+   "slug": "pourquoi-le-ciel-est-il-bleu",
+   "image": "/img/courses/pourquoi_le_ciel_est_il_bleu.webp"
+  },
+  {
+   "question": "Qui est puni par Zeus pour avoir donné le feu aux hommes ?",
+   "options": [
+    "Prométhée",
+    "Épiméthée",
+    "Héphaïstos",
+    "Atlas"
+   ],
+   "correctIndex": 0,
+   "explanation": "Prométhée vole le feu de l'Olympe pour le donner aux hommes, un acte que Zeus ne pardonne pas.",
+   "course": "Pourquoi Prométhée a-t-il volé le feu aux dieux ?",
+   "slug": "promethee-le-voleur-de-feu",
+   "image": "/img/courses/promethee_le_voleur_de_feu.webp"
+  },
+  {
+   "question": "Selon Vasari, qui est le modèle de La Joconde ?",
+   "options": [
+    "Lisa Gherardini, épouse du marchand Francesco del Giocondo",
+    "Une maîtresse de François Ier",
+    "La mère de Léonard de Vinci",
+    "Une princesse de la cour de Milan"
+   ],
+   "correctIndex": 0,
+   "explanation": "L'identification repose sur la biographie de Léonard publiée par Giorgio Vasari en 1550 puis en 1568.",
+   "course": "Pourquoi la Joconde est-elle aussi connue ?",
+   "slug": "la-joconde",
+   "image": "/img/courses/la_joconde.webp"
+  },
+  {
+   "question": "Qui dirige les nationalistes du Kuomintang qui se réfugient à Taïwan en 1949 ?",
+   "options": [
+    "Chiang Kai-shek",
+    "Mao Zedong",
+    "Deng Xiaoping",
+    "Sun Yat-sen"
+   ],
+   "correctIndex": 0,
+   "explanation": "Chiang Kai-shek mène les nationalistes du Kuomintang, écrasés par la victoire communiste, qui se réfugient sur l'île de Taïwan en 1949.",
+   "course": "Pourquoi Taïwan est-elle au cœur des tensions mondiales ?",
+   "slug": "les-tensions-autour-de-taiwan",
+   "image": "/img/courses/les_tensions_autour_de_taiwan.webp"
+  }
+ ],
+ "reader": {
+  "slug": "la-joconde",
+  "title": "Pourquoi la Joconde est-elle aussi connue ?",
+  "hook": "Le tableau le plus regardé de la planète a peut-être été, pour Léonard, un travail secondaire.",
+  "image": "/img/courses/la_joconde.webp",
+  "subject": "Art",
+  "quizCount": 8,
+  "subtitle": "1503",
+  "author": {
+   "name": "Dusan Nikolic",
+   "title": "Historien de l'art, master de l'université de Belgrade",
+   "photo": "/img/authors/author_dusan_nikolic.webp",
+   "slug": "dusan-nikolic"
+  },
+  "paragraphs": [
+   "Pour l'un des tableaux les plus célèbres du monde, on sait très peu de choses sûres sur *La Joconde*. Les historiens de l'art s'accordent sur l'essentiel : Léonard de Vinci la peint à Florence entre **1503 et 1506**. En **1517**, il l'emporte avec lui en France, et le panneau finit dans la collection du roi François Ier.",
+   "Le vide historique s'est rempli de légendes. On parle du tableau comme d'une femme, « elle ». Son demi-sourire est dit mystérieux. Après le vol de **1911**, on doute même de son authenticité. Toutes ces histoires ont fait sa gloire, mais elles ont effacé son contexte. Or, à l'époque où Léonard la peint, cette œuvre n'avait peut-être aucune importance à ses yeux."
+  ],
+  "sections": [
+   "Introduction",
+   "Qui est la Joconde ?",
+   "Anghiari : une commande plus prestigieuse",
+   "La fabrique d'une icône",
+   "Un tableau qui a dépassé son auteur"
+  ],
+  "quiz": {
+   "question": "Selon Vasari, qui est le modèle de La Joconde ?",
+   "options": [
+    "Lisa Gherardini, épouse du marchand Francesco del Giocondo",
+    "Une maîtresse de François Ier",
+    "La mère de Léonard de Vinci",
+    "Une princesse de la cour de Milan"
+   ],
+   "correctIndex": 0,
+   "explanation": "L'identification repose sur la biographie de Léonard publiée par Giorgio Vasari en 1550 puis en 1568."
+  }
+ },
+ "heroFeed": [
+  {
+   "slug": "la-joconde",
+   "title": "Pourquoi la Joconde est-elle aussi connue ?",
+   "hook": "Le tableau le plus regardé de la planète a peut-être été, pour Léonard, un travail secondaire.",
+   "image": "/img/courses/la_joconde.webp",
+   "subject": "Art",
+   "quizCount": 8,
+   "subtitle": "1503",
+   "author": {
+    "name": "Dusan Nikolic",
+    "title": "Historien de l'art, master de l'université de Belgrade",
+    "photo": "/img/authors/author_dusan_nikolic.webp",
+    "slug": "dusan-nikolic"
+   }
+  },
+  {
+   "slug": "comment-pompei-a-t-elle-disparu-en-dix",
+   "title": "Comment Pompéi a-t-elle disparu en dix-huit heures ?",
+   "hook": "Un grondement comme si le ciel se déchirait, puis des pierres qui tombent avant même que l'on comprenne : Pompéi a dix-huit heures à vivre.",
+   "image": "/img/courses/pompeii_forum_ruins_mount_vesuvius_background.webp",
+   "subject": "Histoire",
+   "quizCount": 8,
+   "subtitle": "79 apr. J.-C.",
+   "author": {
+    "name": "Ezgi Gizem Berkay",
+    "title": "Médecin, docteure en génétique médicale, master d'histoire ancienne, université Kent d'Istanbul",
+    "photo": null,
+    "slug": "ezgi-gizem-berkay"
+   }
+  },
+  {
+   "slug": "1984-george-orwell",
+   "title": "« 1984 » : comment Winston finit-il par aimer Big Brother ?",
+   "hook": "Un roman si puissant que ses mots servent encore à nommer la surveillance et le mensonge d'État.",
+   "image": "/img/courses/1984_george_orwell.webp",
+   "subject": "Littérature",
+   "quizCount": 10,
+   "subtitle": "1949",
+   "author": {
+    "name": "La rédaction Sophia",
+    "title": "Équipe éditoriale",
+    "photo": "/img/brand/app_icon.webp",
+    "slug": "redaction"
+   }
+  },
+  {
+   "slug": "pourquoi-le-ciel-est-il-bleu",
+   "title": "Pourquoi le ciel est-il bleu ?",
+   "hook": "Le ciel n'est pas peint en bleu : c'est un tour de magie de la lumière et de l'air.",
+   "image": "/img/courses/pourquoi_le_ciel_est_il_bleu.webp",
+   "subject": "Sciences",
+   "quizCount": 8,
+   "subtitle": "Lumière & atmosphère",
+   "author": {
+    "name": "La rédaction Sophia",
+    "title": "Équipe éditoriale",
+    "photo": "/img/brand/app_icon.webp",
+    "slug": "redaction"
+   }
+  },
+  {
+   "slug": "promethee-le-voleur-de-feu",
+   "title": "Pourquoi Prométhée a-t-il volé le feu aux dieux ?",
+   "hook": "Un Titan vole le feu de l'Olympe. Les hommes gagnent la civilisation. Lui gagne un aigle et une chaîne.",
+   "image": "/img/courses/promethee_le_voleur_de_feu.webp",
+   "subject": "Mythologie",
+   "quizCount": 8,
+   "subtitle": "Le Titan qui défie Zeus",
+   "author": {
+    "name": "La rédaction Sophia",
+    "title": "Équipe éditoriale",
+    "photo": "/img/brand/app_icon.webp",
+    "slug": "redaction"
+   }
+  },
+  {
+   "slug": "les-tensions-autour-de-taiwan",
+   "title": "Pourquoi Taïwan est-elle au cœur des tensions mondiales ?",
+   "hook": "Une petite île fabrique les puces qui font tourner le monde entier, et Pékin la revendique comme sa province.",
+   "image": "/img/courses/les_tensions_autour_de_taiwan.webp",
+   "subject": "Comprendre le monde",
+   "quizCount": 9,
+   "subtitle": "23 millions d'habitants, une planète dépendante",
+   "author": {
+    "name": "La rédaction Sophia",
+    "title": "Équipe éditoriale",
+    "photo": "/img/brand/app_icon.webp",
+    "slug": "redaction"
+   }
+  }
+ ],
+ "universities": [
+  "/img/universities/university_01_oxford.webp",
+  "/img/universities/university_02_queens_belfast.webp",
+  "/img/universities/university_03_jeonbuk.webp",
+  "/img/universities/university_04_belgrade.webp",
+  "/img/universities/university_05_slovak_academy.webp"
+ ]
+}
