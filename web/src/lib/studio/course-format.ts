@@ -200,7 +200,8 @@ export function validateCourse(course: DraftCourse): Finding[] {
     if (!glossaryTerms.has(term.toLowerCase())) out.push({ severity: "warning", path: "glossary", message: `[[${term}]] has no glossary entry. The factory will write one; you can write it yourself.` });
   }
   const totalWords = courseWords(course);
-  if (sections.length >= 2 && totalWords < 400) out.push({ severity: "warning", path: "sections", message: `Short course (${totalWords} words). Sophia courses run 500 to 900 words.` });
+  if (sections.length >= 2 && totalWords < 300) out.push({ severity: "error", path: "sections", message: `Too short for the factory (${totalWords} words): the quiz needs six questions it can verify in the text. Aim for 500 to 900 words.` });
+  else if (sections.length >= 2 && totalWords < 400) out.push({ severity: "warning", path: "sections", message: `Short course (${totalWords} words). Sophia courses run 500 to 900 words; the quiz needs enough facts to draw six questions.` });
   if (totalWords > 1100) out.push({ severity: "warning", path: "sections", message: `Long course (${totalWords} words). The guide asks for 500 to 900; consider splitting it in two courses.` });
   return out;
 }
