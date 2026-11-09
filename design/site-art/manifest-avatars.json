@@ -1,16 +1,127 @@
 {
-  "_comment": "Avatars de profil proposés aux auteurs à la place d'une photo (Studio). Même direction affiche que le site : aplats en papier découpé, palette marine, safran, corail, crème. Bustes de face, fond crème uni, tout le monde représenté (âges, corpulences, couleurs de peau, cheveux, lunettes, voile, barbe…). Cinq pour validation, puis vingt.",
+  "_comment": "Avatars de profil proposés aux auteurs à la place d'une photo (Studio). Direction affiche du site, palette élargie de deux bruns et d'un beige pour des carnations réelles (validé par Adrien le 9 novembre). Bustes de face, fond uni, tout le monde représenté : âges, corpulences, couleurs de peau, cheveux, lunettes, voile, turban, barbe, appareil auditif…",
   "defaults": {
     "style": "digital_illustration/2d_art_poster",
     "size": "square_hd",
     "max_side": 1200,
-    "colors": [[26, 58, 107], [242, 177, 52], [224, 90, 58], [251, 247, 239]]
+    "colors": [
+      [
+        26,
+        58,
+        107
+      ],
+      [
+        242,
+        177,
+        52
+      ],
+      [
+        224,
+        90,
+        58
+      ],
+      [
+        251,
+        247,
+        239
+      ],
+      [
+        92,
+        58,
+        38
+      ],
+      [
+        160,
+        110,
+        70
+      ],
+      [
+        222,
+        184,
+        146
+      ]
+    ]
   },
   "items": [
-    { "name": "avatar_01", "prompt": "Bust portrait of a smiling plump Black woman in her forties with short natural hair and round glasses, facing the viewer, wearing a saffron blouse. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, plain cream background, no text, no outlines." },
-    { "name": "avatar_02", "prompt": "Bust portrait of a kind elderly white man with a full white beard, wrinkles and a flat cap, facing the viewer, wearing a navy cardigan. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, plain cream background, no text, no outlines." },
-    { "name": "avatar_03", "prompt": "Bust portrait of a young South Asian woman wearing a coral hijab and small earrings, warm smile, facing the viewer. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, plain cream background, no text, no outlines." },
-    { "name": "avatar_04", "prompt": "Bust portrait of a slim East Asian man in his thirties with round glasses, side-parted black hair and a navy turtleneck, calm expression, facing the viewer. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, plain cream background, no text, no outlines." },
-    { "name": "avatar_05", "prompt": "Bust portrait of a freckled young white woman with a curly red bob, a wide grin and a coral sweater, facing the viewer. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, plain cream background, no text, no outlines." }
+    {
+      "name": "avatar_01",
+      "prompt": "Bust portrait of a smiling plump Black woman in her forties with short natural hair and round glasses, saffron blouse, facing the viewer. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red, cream, warm brown and tan, bold simple forms, subtle paper grain, plain cream background, no text, no outlines."
+    },
+    {
+      "name": "avatar_02",
+      "prompt": "Bust portrait of a kind elderly white man with a full white beard, wrinkles and a flat cap, navy cardigan, facing the viewer. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red, cream, warm brown and tan, bold simple forms, subtle paper grain, plain saffron background, no text, no outlines."
+    },
+    {
+      "name": "avatar_03",
+      "prompt": "Bust portrait of a young South Asian woman wearing a coral hijab and small gold earrings, warm smile, facing the viewer. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red, cream, warm brown and tan, bold simple forms, subtle paper grain, plain cream background, no text, no outlines."
+    },
+    {
+      "name": "avatar_04",
+      "prompt": "Bust portrait of a slim East Asian man in his thirties with round glasses, side-parted black hair and a navy turtleneck, facing the viewer. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red, cream, warm brown and tan, bold simple forms, subtle paper grain, plain saffron background, no text, no outlines."
+    },
+    {
+      "name": "avatar_05",
+      "prompt": "Bust portrait of a freckled young white woman with a curly red bob, wide grin, coral sweater, facing the viewer. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red, cream, warm brown and tan, bold simple forms, subtle paper grain, plain navy background, no text, no outlines."
+    },
+    {
+      "name": "avatar_06",
+      "prompt": "Bust portrait of a Black man in his fifties with grey locs tied back, a short grey beard and a tan shirt, facing the viewer. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red, cream, warm brown and tan, bold simple forms, subtle paper grain, plain cream background, no text, no outlines."
+    },
+    {
+      "name": "avatar_07",
+      "prompt": "Bust portrait of a Latina woman in her thirties with long dark wavy hair, hoop earrings and a navy jacket, facing the viewer. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red, cream, warm brown and tan, bold simple forms, subtle paper grain, plain saffron background, no text, no outlines."
+    },
+    {
+      "name": "avatar_08",
+      "prompt": "Bust portrait of a broad-shouldered Middle Eastern man with a neat dark beard, thick eyebrows and a cream shirt, facing the viewer. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red, cream, warm brown and tan, bold simple forms, subtle paper grain, plain coral background, no text, no outlines."
+    },
+    {
+      "name": "avatar_09",
+      "prompt": "Bust portrait of an older East Asian woman with a grey bun, thin glasses on a chain and a coral cardigan, facing the viewer. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red, cream, warm brown and tan, bold simple forms, subtle paper grain, plain cream background, no text, no outlines."
+    },
+    {
+      "name": "avatar_10",
+      "prompt": "Bust portrait of a young Black woman with long box braids, big smile and a saffron collar shirt, facing the viewer. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red, cream, warm brown and tan, bold simple forms, subtle paper grain, plain navy background, no text, no outlines."
+    },
+    {
+      "name": "avatar_11",
+      "prompt": "Bust portrait of a Sikh man in his forties wearing a navy turban, full beard and a tan vest, facing the viewer. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red, cream, warm brown and tan, bold simple forms, subtle paper grain, plain cream background, no text, no outlines."
+    },
+    {
+      "name": "avatar_12",
+      "prompt": "Bust portrait of a bald white man in his sixties with a grey moustache, square glasses and a coral jumper, facing the viewer. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red, cream, warm brown and tan, bold simple forms, subtle paper grain, plain saffron background, no text, no outlines."
+    },
+    {
+      "name": "avatar_13",
+      "prompt": "Bust portrait of a young androgynous person with short bleached hair, a septum ring and a navy denim jacket, facing the viewer. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red, cream, warm brown and tan, bold simple forms, subtle paper grain, plain cream background, no text, no outlines."
+    },
+    {
+      "name": "avatar_14",
+      "prompt": "Bust portrait of a plump Latino man in his thirties with a goatee, cap worn backwards and a saffron tee, facing the viewer. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red, cream, warm brown and tan, bold simple forms, subtle paper grain, plain navy background, no text, no outlines."
+    },
+    {
+      "name": "avatar_15",
+      "prompt": "Bust portrait of a South Asian man in his twenties with glasses, curly black hair and a cream hoodie, facing the viewer. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red, cream, warm brown and tan, bold simple forms, subtle paper grain, plain coral background, no text, no outlines."
+    },
+    {
+      "name": "avatar_16",
+      "prompt": "Bust portrait of a white woman in her fifties with a sleek grey bob, a hearing aid and a navy blazer, facing the viewer. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red, cream, warm brown and tan, bold simple forms, subtle paper grain, plain cream background, no text, no outlines."
+    },
+    {
+      "name": "avatar_17",
+      "prompt": "Bust portrait of a young Southeast Asian woman with a straight black bob, blunt fringe and a coral shirt, facing the viewer. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red, cream, warm brown and tan, bold simple forms, subtle paper grain, plain saffron background, no text, no outlines."
+    },
+    {
+      "name": "avatar_18",
+      "prompt": "Bust portrait of a Black elderly woman with short white hair, large round earrings and a tan cardigan, facing the viewer. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red, cream, warm brown and tan, bold simple forms, subtle paper grain, plain cream background, no text, no outlines."
+    },
+    {
+      "name": "avatar_19",
+      "prompt": "Bust portrait of a young white man with a ginger beard, a beanie and a saffron shirt, cheerful look, facing the viewer. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red, cream, warm brown and tan, bold simple forms, subtle paper grain, plain navy background, no text, no outlines."
+    },
+    {
+      "name": "avatar_20",
+      "prompt": "Bust portrait of a Black man in his twenties with a high-top fade, a thin chain necklace and a cream shirt, facing the viewer. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red, cream, warm brown and tan, bold simple forms, subtle paper grain, plain saffron background, no text, no outlines."
+    }
   ]
 }
