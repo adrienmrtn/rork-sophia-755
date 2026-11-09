@@ -1,0 +1,21 @@
+{
+  "_comment": "Illustrations du site, direction affiche : aplats en papier découpé, palette marine, safran, corail, crème (le style du hero_alt retenu par Adrien). Même sujet que la série gravure, pour le héros on garde hero_alt.",
+  "defaults": {
+    "style": "digital_illustration/2d_art_poster",
+    "size": "square_hd",
+    "max_side": 1600,
+    "colors": [[26, 58, 107], [242, 177, 52], [224, 90, 58], [251, 247, 239]]
+  },
+  "items": [
+    { "name": "poster_histoire", "prompt": "A Roman legionary helmet beside a rolled parchment scroll and a small hourglass. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, centered on a cream background, no text, no outlines." },
+    { "name": "poster_sciences", "prompt": "An atom with orbiting electrons, a small comet and a laboratory beaker. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, centered on a cream background, no text, no outlines." },
+    { "name": "poster_litterature", "prompt": "An open book whose pages turn into flying birds, with a quill pen. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, centered on a cream background, no text, no outlines." },
+    { "name": "poster_art", "prompt": "A painter's palette with a brush and a swirling starry night sky inside a picture frame. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, centered on a cream background, no text, no outlines." },
+    { "name": "poster_mythologie", "prompt": "A Greek temple facade with a lightning bolt above it and a winged sandal. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, centered on a cream background, no text, no outlines." },
+    { "name": "poster_monde", "prompt": "A globe with meridian lines, a folded newspaper and two arrows circling it. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, centered on a cream background, no text, no outlines." },
+    { "name": "poster_ecrire", "size": "landscape_4_3", "max_side": 2000, "prompt": "A professor writing at a desk with a fountain pen, a stack of books, a globe and a lamp; pages fly out of the window and turn into paper planes. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, warm and encouraging, no text, no outlines." },
+    { "name": "poster_premium", "prompt": "A golden key opening a large book from which stars and small planets rise. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, centered on a navy background, no text, no outlines." },
+    { "name": "poster_quiz", "prompt": "A friendly speech bubble holding a big check mark, next to a small question mark and a pencil. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, centered on a cream background, no text, no outlines." },
+    { "name": "poster_langues", "prompt": "A vintage megaphone sending out three empty speech bubbles of different shapes toward a small globe. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, centered on a cream background, no text, no outlines." }
+  ]
+}

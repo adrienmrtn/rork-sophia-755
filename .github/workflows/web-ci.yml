@@ -1,0 +1,41 @@
+# Le site web (web/) : installation, tests des règles du format, lint, build Next.js.
+# Vercel construit et déploie de son côté ; ce passage garde la branche saine avant la fusion.
+name: Web CI
+
+on:
+  pull_request:
+    paths:
+      - "web/**"
+      - ".github/workflows/web-ci.yml"
+  push:
+    branches: [main]
+    paths:
+      - "web/**"
+      - ".github/workflows/web-ci.yml"
+
+concurrency:
+  group: web-ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  web:
+    name: Tests, lint, build
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: web
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - run: npm ci
+      - run: npm test
+      - run: npm run lint
+      - run: npm run build
+        env:
+          # Le build lit les clés publiques ; sans elles, les valeurs par défaut du projet Sophia.
+          NEXT_PUBLIC_SUPABASE_URL: https://afnmcoovdvbtkgohtdij.supabase.co
+          NEXT_PUBLIC_SITE_URL: https://sophia-culture.com
