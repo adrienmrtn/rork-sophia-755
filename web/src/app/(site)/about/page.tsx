@@ -16,21 +16,21 @@ export default function AboutPage() {
           <p className="text-[18px] leading-[1.6] text-ink-3">
             Sophia is a general-knowledge app. Every course answers one real question in five short parts, ends with an open-book quiz, explains its difficult words and cites its sources. The courses are written by professors and researchers, reviewed before publication, and translated into 30 languages so that a reader in Tokyo and a reader in Lyon learn the same thing.
           </p>
-          <p className="text-[18px] leading-[1.6] text-ink-3">500,000 people have read courses on Sophia. The app is free to start; Premium unlocks the full catalogue.</p>
+          <p className="text-[18px] leading-[1.6] text-ink-3">The introduction of every course is free to read; Premium, in the app, unlocks the full catalogue.</p>
         </div>
         <div id="help" className="grid grid-cols-1 gap-5 sm:grid-cols-2">
           <div className="flex flex-col gap-2 rounded-card border border-line p-6">
             <strong className="text-[18px] font-extrabold">Help</strong>
-            <p className="text-[15px] leading-[1.55] text-ink-3">Questions about your subscription, your account or a course go to our support address. We answer within two working days.</p>
-            <a href="mailto:support@sophia-culture.com" className="text-[15px] font-bold text-blue">
-              support@sophia-culture.com
+            <p className="text-[15px] leading-[1.55] text-ink-3">Questions about your account, Premium or a course go to our support address. We answer within two working days.</p>
+            <a href="mailto:maximilien@vikstudios.com" className="text-[15px] font-bold text-blue">
+              maximilien@vikstudios.com
             </a>
           </div>
           <div id="contact" className="flex flex-col gap-2 rounded-card border border-line p-6">
             <strong className="text-[18px] font-extrabold">Press and partnerships</strong>
             <p className="text-[15px] leading-[1.55] text-ink-3">For interviews, screenshots, or a partnership with your institution.</p>
-            <a href="mailto:hello@sophia-culture.com" className="text-[15px] font-bold text-blue">
-              hello@sophia-culture.com
+            <a href="mailto:maximilien@vikstudios.com" className="text-[15px] font-bold text-blue">
+              maximilien@vikstudios.com
             </a>
           </div>
         </div>

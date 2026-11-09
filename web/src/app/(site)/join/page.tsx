@@ -27,8 +27,8 @@ export default async function JoinPage({ searchParams }: PageProps<"/join">) {
     <div className="flex min-h-full flex-col bg-paper">
       <header className="border-b border-line bg-white">
         <div className={`${container} flex items-center justify-between py-3.5`}>
-          <Link href="/" className="text-[26px] font-extrabold tracking-[-0.6px] text-navy">
-            Sophia
+          <Link href="/" aria-label="Sophia, home" className="flex items-center">
+            <Image src="/brand/sophia-logo.png" alt="Sophia" width={1192} height={334} className="h-[34px] w-auto" />
           </Link>
           <span className="text-[14px] font-bold text-ink-2">EN</span>
         </div>

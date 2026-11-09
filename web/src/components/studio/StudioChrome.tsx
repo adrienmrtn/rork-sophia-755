@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Initials, container } from "@/components/ui";
 import { s } from "@/lib/copy/studio-en";
@@ -18,8 +19,8 @@ export function StudioHeader({ session, active }: { session: StudioSession; acti
     <header className="sticky top-0 z-20 border-b border-line bg-white/95 backdrop-blur">
       <div className={`${container} flex flex-wrap items-center gap-x-6 gap-y-2 py-3`}>
         <div className="flex items-center gap-2.5">
-          <Link href="/" className="text-[24px] font-extrabold tracking-[-0.5px] text-navy">
-            Sophia
+          <Link href="/" aria-label="Sophia, home" className="flex items-center">
+            <Image src="/brand/sophia-logo.png" alt="Sophia" width={1192} height={334} className="h-[30px] w-auto" />
           </Link>
           <span className="rounded-full bg-cream px-2.5 py-1 text-[12px] font-bold text-amber">{s.nav.badge}</span>
         </div>

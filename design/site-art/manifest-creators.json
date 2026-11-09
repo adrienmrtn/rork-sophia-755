@@ -1,0 +1,12 @@
+{
+  "_comment": "Illustration de la section « Deviens créateur » du site (vidéos courtes, diaporamas, UGC), même direction affiche que l'accueil.",
+  "defaults": {
+    "style": "digital_illustration/2d_art_poster",
+    "size": "landscape_4_3",
+    "max_side": 2000,
+    "colors": [[26, 58, 107], [242, 177, 52], [224, 90, 58], [251, 247, 239]]
+  },
+  "items": [
+    { "name": "poster_createur", "prompt": "A young creator filming a short vertical video with a smartphone on a small tripod and a ring light; around them float three slideshow cards showing a Greek helmet, an atom and an open book, plus a heart bubble and a play-button bubble. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, warm and energetic, centered on a cream background, no text, no outlines." }
+  ]
+}

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { container } from "@/components/ui";
 import type { StudioSession } from "@/lib/studio/account";
@@ -17,8 +18,8 @@ export function AdminHeader({ session, active, queue }: { session: StudioSession
     <header className="border-b border-line bg-white">
       <div className={`${container} flex flex-wrap items-center gap-x-7 gap-y-3 py-3.5`}>
         <div className="flex items-center gap-2.5">
-          <Link href="/" className="text-[24px] font-extrabold tracking-[-0.5px] text-navy">
-            Sophia
+          <Link href="/" aria-label="Sophia, home" className="flex items-center">
+            <Image src="/brand/sophia-logo.png" alt="Sophia" width={1192} height={334} className="h-[30px] w-auto" />
           </Link>
           <span className="rounded-full bg-ink px-2.5 py-1 text-[12px] font-bold text-white">Team</span>
         </div>

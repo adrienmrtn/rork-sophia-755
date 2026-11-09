@@ -40,6 +40,8 @@ struct CourseView: View {
     /// Quand la section affichée a commencé, pour le temps passé de `section_view`.
     @State private var sectionEnteredAt = Date()
     @State private var coachmarkTerm: String? = nil
+    /// Double-tap on a lesson: the big heart of the feed, same rule (never un-likes).
+    @State private var bigHeart = 0
     /// Glossary term tapped in the lesson body. Shown as an in-app overlay (not a system
     /// sheet) so the course text stays perfectly still when a term is tapped.
     @State private var selectedGlossaryEntry: GlossaryEntry? = nil
@@ -493,6 +495,16 @@ struct CourseView: View {
         sectionEnteredAt = Date()
     }
 
+    /// Le cœur du double-tap : il s'affiche toujours, il n'éteint jamais un « j'aime » (comme
+    /// sur les réseaux vidéo). Enregistré avec l'écran `reader` (docs/events.md).
+    private func likeFromDoubleTap() {
+        UIImpactFeedbackGenerator(style: .medium).impactOccurred()
+        bigHeart += 1
+        guard !progressManager.isLiked(course.id) else { return }
+        progressManager.toggleLike(course.id)
+        AnalyticsService.shared.log(.like, courseId: course.id, screen: "reader")
+    }
+
     /// Another course picked on the author's page: close this reader, then ask the home
     /// screen to open the new one through the deep-link door, so the daily free course and
     /// the open-source attribution follow the same rules as any other entry point. The
@@ -515,6 +527,10 @@ struct CourseView: View {
                     .padding(.bottom, 120)
             }
             .scrollIndicators(.hidden)
+            // Deux taps n'importe où sur la leçon : « j'aime », comme sur la carte du fil.
+            // Simultané, pour ne pas retarder le tap simple des termes du glossaire.
+            .simultaneousGesture(TapGesture(count: 2).onEnded { likeFromDoubleTap() })
+            .overlay { BigHeartOverlay(trigger: bigHeart) }
             .onChange(of: currentIndex) { oldIndex, newIndex in
                 // Only reset to the top when moving forward (Continue / swipe next).
                 // Going back keeps the previous reading position.
