@@ -35,10 +35,14 @@ export default async function ProfilePage({ searchParams }: PageProps<"/studio/p
       <StudioHeader session={session} active="profile" />
       <main className={`${container} flex flex-1 flex-col gap-7 pt-7 pb-20`}>
         <PageTitle title={s.profile.title} lead={s.profile.lead}>
-          {account.slug && (
+          {account.slug && session.publicPage ? (
             <Link href={`/authors/${account.slug}`} className="inline-flex h-11 items-center rounded-full border border-line bg-white px-5 text-[14px] font-bold text-navy transition-colors hover:bg-paper">
               See my public page →
             </Link>
+          ) : (
+            <span className="max-w-[320px] text-[13px] leading-[1.45] text-ink-3">
+              Your public page, sophia-culture.com/authors/{account.slug ?? "…"}, opens with your first published course.
+            </span>
           )}
         </PageTitle>
         {saved && <p className="rounded-xl bg-green-bg px-4 py-3 text-[14px] font-semibold text-green">{s.profile.saved}</p>}

@@ -49,10 +49,12 @@ export function StudioHeader({ session, active }: { session: StudioSession; acti
               <Link href="/studio/profile" className="rounded-xl px-3 py-2 text-[14px] font-semibold hover:bg-paper">
                 {s.nav.profile}
               </Link>
-              {session.account?.slug && (
+              {session.account?.slug && session.publicPage ? (
                 <Link href={`/authors/${session.account.slug}`} className="rounded-xl px-3 py-2 text-[14px] font-semibold hover:bg-paper">
                   My public page
                 </Link>
+              ) : (
+                <span className="px-3 py-2 text-[12px] leading-[1.4] text-muted">Your public page appears with your first published course.</span>
               )}
               <form action={signOut}>
                 <button type="submit" className="w-full rounded-xl px-3 py-2 text-left text-[14px] font-semibold text-red hover:bg-paper">

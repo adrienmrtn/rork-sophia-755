@@ -4,7 +4,10 @@ import { AdminHeader, AdminTitle } from "@/components/admin/AdminChrome";
 import { JOB_LABEL } from "@/components/studio/JobSteps";
 import { Card, container } from "@/components/ui";
 import { getStudioSession } from "@/lib/studio/account";
-import { shortDateTime, type JobRow } from "@/lib/studio/data";
+import { shortDate, shortDateTime, type JobRow } from "@/lib/studio/data";
+import { catalog } from "@/lib/catalog/source";
+import { courseNumber, slugify, SUBJECT_LABEL } from "@/lib/catalog/slugs";
+import type { Subject } from "@/lib/catalog/types";
 
 export const dynamic = "force-dynamic";
 
@@ -14,14 +17,17 @@ export default async function ProductionPage() {
   const session = await getStudioSession();
   if (!session?.isAdmin) redirect("/studio");
   const { supabase } = session;
-  const [{ data: jobs }, { data: drafts }, { data: courses }] = await Promise.all([
+  const [{ data: jobs }, { data: drafts }, { data: courses }, summaries] = await Promise.all([
     supabase.from("production_jobs").select("id,course_id,origin_lang,status,summary,error,options,created_at,dispatched_at,started_at,finished_at,requested_by").order("created_at", { ascending: false }).limit(60),
     supabase.from("studio_drafts").select("id,title,last_job_id").not("last_job_id", "is", null),
-    supabase.from("courses").select("id,status,creator_slug,published_at,origin_lang").order("published_at", { ascending: false, nullsFirst: true }).limit(400),
+    supabase.from("courses").select("id,status,creator_slug,published_at,origin_lang,subject").order("published_at", { ascending: false, nullsFirst: true }).limit(400),
+    catalog.listCourses("en").catch(() => []),
   ]);
+  const titleOf = new Map(summaries.map((c) => [c.id, c.title]));
   const byJob = new Map(((drafts ?? []) as { id: string; title: string; last_job_id: string }[]).map((d) => [d.last_job_id, d]));
   const rows = (jobs ?? []) as (JobRow & { requested_by: string | null })[];
-  const courseRows = (courses ?? []) as { id: string; status: string; creator_slug: string | null; published_at: string | null; origin_lang: string }[];
+  const courseRows = (courses ?? []) as { id: string; status: string; creator_slug: string | null; published_at: string | null; origin_lang: string; subject: string | null }[];
+  const catalogue = [...courseRows].sort((a, b) => (courseNumber(b.id) ?? 0) - (courseNumber(a.id) ?? 0));
   const inProduction = courseRows.filter((c) => c.status === "in_production");
   const published = courseRows.filter((c) => c.status === "published").length;
 
@@ -95,19 +101,56 @@ export default async function ProductionPage() {
             </tbody>
           </table>
         </Card>
-        {inProduction.length > 0 && (
-          <Card className="flex flex-col gap-2 p-6">
-            <h2 className="text-[16px] font-extrabold">Courses still in production</h2>
-            <ul className="flex flex-wrap gap-2 text-[13px]">
-              {inProduction.map((c) => (
-                <li key={c.id} className="rounded-full bg-tint px-3 py-1 font-semibold text-navy">
-                  {c.id}
-                  {c.creator_slug ? ` · ${c.creator_slug}` : ""}
-                </li>
-              ))}
-            </ul>
-          </Card>
-        )}
+        <Card id="catalogue" className="flex flex-col gap-4 p-6">
+          <div className="flex flex-wrap items-end justify-between gap-3">
+            <div className="flex flex-col gap-0.5">
+              <h2 className="text-[18px] font-extrabold tracking-[-0.3px]">Catalogue · {catalogue.length} courses</h2>
+              <span className="text-[13px] text-ink-3">Every course in the app, newest first. The ones written in the Studio have a job above; the others were imported.</span>
+            </div>
+          </div>
+          <div className="overflow-x-auto">
+            <table className="w-full min-w-[760px] border-collapse text-[13px]">
+              <thead>
+                <tr className="text-left text-[11px] font-bold uppercase tracking-[.8px] text-muted">
+                  <th className="py-2 pr-3 font-bold">#</th>
+                  <th className="py-2 pr-3 font-bold">Course</th>
+                  <th className="py-2 pr-3 font-bold">Subject</th>
+                  <th className="py-2 pr-3 font-bold">Author</th>
+                  <th className="py-2 pr-3 font-bold">Status</th>
+                  <th className="py-2 pr-3 font-bold">Origin</th>
+                  <th className="py-2 text-right font-bold">Published</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-line">
+                {catalogue.map((c) => {
+                  const n = courseNumber(c.id);
+                  const title = titleOf.get(c.id);
+                  return (
+                    <tr key={c.id} className="hover:bg-paper">
+                      <td className="py-2 pr-3 tabular-nums text-muted">{n ?? "–"}</td>
+                      <td className="py-2 pr-3">
+                        {title && n != null ? (
+                          <Link href={`/courses/${n}-${slugify(title)}`} className="font-semibold text-ink hover:text-navy">
+                            {title}
+                          </Link>
+                        ) : (
+                          <span className="font-mono text-[12px] text-ink-2">{c.id}</span>
+                        )}
+                      </td>
+                      <td className="py-2 pr-3 text-ink-3">{c.subject ? (SUBJECT_LABEL[c.subject as Subject] ?? c.subject) : "–"}</td>
+                      <td className="py-2 pr-3 text-ink-3">{c.creator_slug ?? "Sophia"}</td>
+                      <td className="py-2 pr-3">
+                        <span className={`inline-flex items-center rounded-full px-2 py-0.5 text-[11px] font-bold ${c.status === "published" ? "bg-green-bg text-green" : c.status === "in_production" ? "bg-tint text-navy" : "bg-paper text-muted"}`}>{c.status}</span>
+                      </td>
+                      <td className="py-2 pr-3 uppercase text-ink-3">{c.origin_lang}</td>
+                      <td className="py-2 text-right text-ink-3">{c.published_at ? shortDate(c.published_at) : "–"}</td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        </Card>
       </main>
     </>
   );
