@@ -177,11 +177,13 @@ export function CourseEditor({ draftId, initial, status, reviewComment, updatedA
 
   // ----- images
   function placeImage(img: CommonsImage) {
+    // Légende et crédit viennent de Commons ; l'auteur ne les écrit pas.
     const credit: Credit = { title: img.title.replace(/\.[a-z0-9]+$/i, ""), author: img.author || undefined, license: img.license || undefined, source: "Wikimedia Commons" };
+    const caption = img.caption || img.title.replace(/\.[a-z0-9]+$/i, "");
     const t = target ?? { kind: "new" as const, s: active };
     if (t.kind === "cover") update((c) => ({ ...c, hero: { ...c.hero, image_url: img.large, image: undefined, credit } }));
-    else if (t.kind === "block") setBlock(t.s, t.b, { image_url: img.large, asset: undefined, credit } as Partial<Block>);
-    else update((c) => ({ ...c, sections: c.sections.map((sec, k) => (k === t.s ? { ...sec, blocks: [...sec.blocks, { type: "image", image_url: img.large, caption: "", credit }] } : sec)) }));
+    else if (t.kind === "block") setBlock(t.s, t.b, { image_url: img.large, asset: undefined, caption, credit } as Partial<Block>);
+    else update((c) => ({ ...c, sections: c.sections.map((sec, k) => (k === t.s ? { ...sec, blocks: [...sec.blocks, { type: "image", image_url: img.large, caption, credit }] } : sec)) }));
     setTarget(null);
     setTab("checks");
     if (t.kind !== "cover") jumpTo(`sections[${t.s}]`);
@@ -340,10 +342,9 @@ export function CourseEditor({ draftId, initial, status, reviewComment, updatedA
                 <div className="flex flex-wrap items-center gap-3">
                   <span className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-tint text-[13px] font-extrabold text-navy">{si + 1}</span>
                   <input value={sec.title} onChange={(e) => setSection(si, { title: e.target.value })} placeholder={si === 0 ? "Introduction" : "Section title"} maxLength={120} className="min-w-[200px] flex-1 border-0 bg-transparent text-[20px] font-extrabold tracking-[-0.3px] text-ink outline-none placeholder:text-line-2" />
-                  <label className="flex items-center gap-1.5 text-[12px] font-bold text-ink-3">
-                    <input type="checkbox" checked={si === 0 ? sec.free !== false : Boolean(sec.free)} onChange={(e) => setSection(si, { free: e.target.checked })} className="h-4 w-4 accent-navy" />
-                    Free to read
-                  </label>
+                  <span className={`rounded-full px-2.5 py-1 text-[11px] font-bold ${si === 0 ? "bg-green-bg text-green" : "bg-tint text-ink-3"}`} title={si === 0 ? "The first section is the free preview, in the app and on the site." : "Read by Premium subscribers."}>
+                    {si === 0 ? "Free preview" : "Premium"}
+                  </span>
                   <div className="flex items-center">
                     <button type="button" aria-label="Move up" onClick={() => moveSection(si, -1)} disabled={si === 0} className={iconBtn}>
                       ↑
@@ -504,11 +505,15 @@ function BlockEditor({ id, block, flash, first, last, onChange, onMove, onRemove
             </button>
           )}
           <div className="flex min-w-[220px] flex-1 flex-col gap-2">
-            <input value={block.caption ?? ""} onChange={(e) => onChange({ caption: e.target.value } as Partial<Block>)} placeholder="Caption shown under the image" maxLength={400} className={small} />
-            <div className="grid grid-cols-2 gap-2">
-              <input value={block.credit?.author ?? ""} onChange={(e) => onChange({ credit: { ...block.credit, author: e.target.value } } as Partial<Block>)} placeholder="Author" className={small} />
-              <input value={block.credit?.license ?? ""} onChange={(e) => onChange({ credit: { ...block.credit, license: e.target.value } } as Partial<Block>)} placeholder="Licence (CC BY-SA 4.0, Public domain…)" className={small} />
-            </div>
+            {block.image_url || block.asset ? (
+              <>
+                <p className="text-[13px] leading-[1.45] text-ink-2">{block.caption || "No description on Commons for this file."}</p>
+                <p className="text-[12px] text-muted">{[block.credit?.author, block.credit?.license, block.credit?.source ?? "Wikimedia Commons"].filter(Boolean).join(" · ")}</p>
+                <p className="text-[11px] text-muted">Caption and credit come from Wikimedia Commons and are kept as they are.</p>
+              </>
+            ) : (
+              <p className="text-[13px] text-ink-3">Pick a picture from Wikimedia Commons: its description becomes the caption and its author and licence the credit.</p>
+            )}
             <div className="flex gap-2">
               <button type="button" onClick={onReplaceImage} className="rounded-lg border border-line bg-white px-3 py-1.5 text-[12px] font-bold text-navy hover:bg-tint">
                 {block.image_url || block.asset ? "Replace" : "Search Commons"}
@@ -629,7 +634,7 @@ function ImagesPanel({ target, active, sections, onPick, onCancel }: { target: I
           <button key={img.pageUrl} type="button" onClick={() => onPick(img)} className="flex flex-col gap-1 rounded-xl border border-line p-1.5 text-left hover:border-navy">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src={img.thumb} alt="" loading="lazy" className="aspect-[4/3] w-full rounded-lg bg-paper object-cover" />
-            <span className="line-clamp-2 text-[11px] font-semibold leading-[1.3] text-ink-2">{img.title.replace(/\.[a-z0-9]+$/i, "")}</span>
+            <span className="line-clamp-2 text-[11px] font-semibold leading-[1.3] text-ink-2">{img.caption || img.title.replace(/\.[a-z0-9]+$/i, "")}</span>
             <span className="truncate text-[10px] text-muted">
               {img.license || "licence?"}
               {img.author ? ` · ${img.author}` : ""}
@@ -659,7 +664,7 @@ function PreviewPanel({ course, originLang }: { course: DraftCourse; originLang:
           <section key={i} className="flex flex-col gap-2 border-t border-line pt-3">
             <h3 className="text-[17px] font-extrabold tracking-[-0.2px] text-ink">
               {sec.title || `Section ${i + 1}`}
-              {i === 0 || sec.free ? "" : " 🔒"}
+              {i === 0 ? "" : " 🔒"}
             </h3>
             {sec.blocks.map((b, j) => (
               <BlockView key={j} block={b} plain />

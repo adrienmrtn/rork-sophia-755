@@ -149,7 +149,6 @@ export function validateCourse(course: DraftCourse): Finding[] {
         const ok = (block.asset && ASSET.test(block.asset)) || (block.image_url && HTTPS.test(block.image_url));
         if (!ok) out.push({ severity: "error", path: bw, message: `Section ${s + 1}: an image needs a picture (Commons URL or bucket slug).` });
         if (block.caption) checkText(block.caption, `${bw}.caption`, out, 400);
-        if (!block.credit?.author && !block.credit?.license && block.image_url) out.push({ severity: "warning", path: bw, message: `Section ${s + 1}: add the credit of the image (author, licence).` });
       }
       if (block.type === "timeline") {
         const events = block.events ?? [];
@@ -166,7 +165,6 @@ export function validateCourse(course: DraftCourse): Finding[] {
   if (takeaways > 1) out.push({ severity: "error", path: "sections", message: "Only one key takeaway, at the end of the course." });
   if (sections.length >= 2 && takeaways === 0) out.push({ severity: "warning", path: "sections", message: "No key takeaway yet. Readers remember a course that ends with one." });
   if (sections.length >= 2 && images === 0 && !hero.image && !hero.image_url) out.push({ severity: "warning", path: "sections", message: "No image in the course. One or two well-chosen pictures help." });
-  if (sections.length >= 1 && sections[0] && !sections[0].free) out.push({ severity: "warning", path: "sections[0]", message: "The first section is normally free to read: it is what convinces a reader to continue." });
 
   (course.sources ?? []).forEach((source, i) => {
     if (len(source.text) < 3) out.push({ severity: "error", path: `sources[${i}]`, message: `Source ${i + 1}: a reference of 3 to 400 characters.` });
@@ -214,7 +212,7 @@ export function toPublishBody(
   const sections = course.sections.map((section, i) => ({
     ...(section.id ? { id: section.id } : {}),
     title: section.title.trim(),
-    free: i === 0 ? section.free !== false : Boolean(section.free),
+    free: i === 0,
     blocks: section.blocks.map(cleanBlock),
   }));
   return {
