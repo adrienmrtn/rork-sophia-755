@@ -6,7 +6,7 @@ import { t } from "@/lib/copy/en";
 
 export const metadata: Metadata = {
   title: "Write for Sophia",
-  description: "Write a five-minute course in your language. Sophia reviews, translates into 30 languages, publishes, and pays you a share of Premium revenue.",
+  description: "Write a five-minute course in your language. Sophia reviews, translates into 30 languages, publishes, and pays you $15 per validated course.",
 };
 
 export default function WritePage() {
@@ -84,15 +84,15 @@ export default function WritePage() {
               <div className="flex flex-col gap-2.5 text-[15px]">
                 <div className="flex justify-between gap-3 border-b border-white/15 pb-2.5">
                   <span className="text-[#DDE3EC]">{w.examplePool}</span>
-                  <strong>100 %</strong>
+                  <strong>$15</strong>
                 </div>
                 <div className="flex justify-between gap-3 border-b border-white/15 pb-2.5">
                   <span className="text-[#DDE3EC]">{w.exampleTime}</span>
-                  <strong>4 % of the total</strong>
+                  <strong>$60</strong>
                 </div>
                 <div className="flex justify-between gap-3">
                   <span className="text-[#DDE3EC]">{w.exampleShare}</span>
-                  <strong className="text-saffron">4 % of the pool</strong>
+                  <strong className="text-saffron">every Monday</strong>
                 </div>
               </div>
               <span className="text-[13px] leading-[1.5] text-[#C4CCD8]">{w.exampleNote}</span>

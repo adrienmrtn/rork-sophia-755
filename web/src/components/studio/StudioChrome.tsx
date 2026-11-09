@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Initials, container } from "@/components/ui";
 import { s } from "@/lib/copy/studio-en";
 import { displayName, type StudioSession } from "@/lib/studio/account";
-import { createDraft, signOut } from "@/app/studio/actions";
+import { signOut } from "@/app/studio/actions";
 
 type Active = "dashboard" | "courses" | "payments" | "profile" | "guide" | "admin";
 
@@ -33,14 +33,12 @@ export function StudioHeader({ session, active }: { session: StudioSession; acti
           {session.isAdmin && link("admin", "/admin", s.nav.admin)}
         </nav>
         <div className="flex items-center gap-3">
-          <form action={createDraft}>
-            <button type="submit" className="inline-flex h-10 items-center gap-2 rounded-full bg-navy px-4 text-[14px] font-bold text-white transition-colors hover:bg-ink">
+          <Link href="/studio/courses/new" className="inline-flex h-10 items-center gap-2 rounded-full bg-navy px-4 text-[14px] font-bold text-white transition-colors hover:bg-ink">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" aria-hidden="true">
                 <path d="M12 5v14M5 12h14" />
               </svg>
               {s.nav.write}
-            </button>
-          </form>
+            </Link>
           <details className="relative">
             <summary className="list-none cursor-pointer rounded-full ring-offset-2 transition hover:ring-2 hover:ring-tint" aria-label={name}>
               <Initials name={name} size={40} className="bg-saffron text-ink" />
@@ -72,6 +70,8 @@ export function StudioHeader({ session, active }: { session: StudioSession; acti
 
 export function StatusPill({ status, size = "md" }: { status: string; size?: "sm" | "md" }) {
   const look: Record<string, string> = {
+    proposed: "bg-cream text-amber",
+    proposal_returned: "bg-red-bg text-red",
     draft: "bg-tint text-ink-2",
     submitted: "bg-amber-bg text-amber",
     changes_requested: "bg-red-bg text-red",
@@ -81,7 +81,7 @@ export function StatusPill({ status, size = "md" }: { status: string; size?: "sm
     failed: "bg-red-bg text-red",
     archived: "bg-paper text-muted",
   };
-  const dot: Record<string, string> = { draft: "bg-line-2", submitted: "bg-saffron", changes_requested: "bg-coral", accepted: "bg-green-2", publishing: "bg-blue", published: "bg-green-2", failed: "bg-red-2", archived: "bg-muted" };
+  const dot: Record<string, string> = { proposed: "bg-saffron", proposal_returned: "bg-coral", draft: "bg-line-2", submitted: "bg-saffron", changes_requested: "bg-coral", accepted: "bg-green-2", publishing: "bg-blue", published: "bg-green-2", failed: "bg-red-2", archived: "bg-muted" };
   return (
     <span className={`inline-flex items-center gap-1.5 rounded-full font-bold ${size === "sm" ? "px-2 py-0.5 text-[11px]" : "px-2.5 py-1 text-[12px]"} ${look[status] ?? "bg-tint text-ink-2"}`}>
       <span aria-hidden="true" className={`h-1.5 w-1.5 rounded-full ${dot[status] ?? "bg-line-2"}`} />

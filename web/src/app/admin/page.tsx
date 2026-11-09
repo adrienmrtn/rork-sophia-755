@@ -6,13 +6,15 @@ import { StatusPill } from "@/components/studio/StudioChrome";
 import { Card, container } from "@/components/ui";
 import { SUBJECT_LABEL } from "@/lib/catalog/slugs";
 import { getStudioSession } from "@/lib/studio/account";
-import { money, shortDateTime } from "@/lib/studio/data";
+import { shortDateTime } from "@/lib/studio/data";
+import { dayLabel, moneyCents } from "@/lib/studio/payments";
 
 export const dynamic = "force-dynamic";
 
 interface Overview {
   days: number;
   review_queue: number;
+  proposals_waiting: number;
   drafts_by_status: Record<string, number>;
   creators_pending: number;
   creators_approved: number;
@@ -27,7 +29,7 @@ interface Overview {
   series: { day: string; completes: number; reads: number }[];
   by_language: { lang: string; reads: number }[];
   by_subject: { subject: string; reads: number; completes: number; courses: number }[];
-  premium: { month: string | null; currency: string | null; gross: string | null; net: string | null; transactions: string | null; pool_share: number; pool: number; total_minutes: string | null; creators: { creator: string; minutes: number; readers: number; share: number }[] | null };
+  payouts: { fee_cents: number; currency: string; due_cents: number; creators_due: number; validated_period: number; paid_total_cents: number; next_monday: string | null };
 }
 
 const PERIODS = [7, 28, 90];
@@ -44,13 +46,15 @@ export default async function AdminOverview({ searchParams }: PageProps<"/admin"
   const o = (data ?? null) as Overview | null;
   type Recent = { id: number; decision: string; comment: string | null; created_at: string; draft_id: string; studio_drafts: { title: string } | { title: string }[] | null };
   const activity = (recent ?? []) as unknown as Recent[];
-  const currency = o?.premium?.currency ?? "USD";
+  const pay = o?.payouts;
+  const currency = pay?.currency ?? "USD";
+  const queue = (o?.review_queue ?? 0) + (o?.proposals_waiting ?? 0);
 
   return (
     <>
-      <AdminHeader session={session} active="overview" queue={o?.review_queue} />
+      <AdminHeader session={session} active="overview" queue={queue} />
       <main className={`${container} flex flex-1 flex-col gap-6 pt-8 pb-20`}>
-        <AdminTitle title="Overview" lead="Review, creators, production and reading, across the whole catalogue.">
+        <AdminTitle title="Overview" lead="Proposals, review, creators, payouts, production and reading, across the whole catalogue.">
           <div className="flex items-center gap-1 rounded-xl border border-line bg-white p-1">
             {PERIODS.map((p) => (
               <Link key={p} href={p === 28 ? "/admin" : `/admin?days=${p}`} className={`rounded-lg px-3 py-1.5 text-[13px] font-bold ${p === days ? "bg-navy text-white" : "text-ink-3 hover:bg-paper"}`}>
@@ -67,14 +71,14 @@ export default async function AdminOverview({ searchParams }: PageProps<"/admin"
         {o && (
           <>
             <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
-              <Tile label="To review" value={o.review_queue} href="/admin/review" tone={o.review_queue ? "coral" : undefined} />
+              <Tile label="Proposals to decide" value={o.proposals_waiting} href="/admin/review" tone={o.proposals_waiting ? "amber" : undefined} />
+              <Tile label="Courses to review" value={o.review_queue} href="/admin/review" tone={o.review_queue ? "coral" : undefined} />
               <Tile label="Creators waiting" value={o.creators_pending} href="/admin/creators" tone={o.creators_pending ? "amber" : undefined} />
               <Tile label="Agreements missing" value={o.agreements_missing} href="/admin/creators" />
               <Tile label="In production" value={o.courses_in_production} href="/admin/production" />
               <Tile label="Courses published" value={o.courses_published} />
               <Tile label={`Reads · ${days} days`} value={o.reads} />
               <Tile label="Completed" value={o.completes} />
-              <Tile label="Readers" value={o.readers} />
             </div>
             <div className="grid grid-cols-1 gap-5 lg:grid-cols-[2fr_1fr]">
               <Card className="flex flex-col gap-4 p-6">
@@ -84,29 +88,26 @@ export default async function AdminOverview({ searchParams }: PageProps<"/admin"
                 </div>
                 <ReadsChart series={o.series.map((p) => ({ day: p.day, reads: Number(p.reads) }))} />
               </Card>
-              <Card className="flex flex-col gap-3 p-6">
-                <h2 className="text-[18px] font-extrabold tracking-[-0.3px]">Premium pool · {o.premium.month ?? "this month"}</h2>
+              <Card className="flex flex-col gap-3 border-cream-2 bg-cream p-6">
+                <div className="flex items-start justify-between gap-3">
+                  <h2 className="text-[18px] font-extrabold tracking-[-0.3px]">Monday payouts</h2>
+                  <Link href="/admin/payouts" className="text-[13px] font-bold text-blue">
+                    Pay →
+                  </Link>
+                </div>
+                <strong className="text-[34px] font-extrabold tracking-[-0.9px] text-navy tabular-nums">{moneyCents(Number(pay?.due_cents ?? 0), currency)}</strong>
                 <dl className="grid grid-cols-2 gap-x-4 gap-y-2 text-[14px]">
-                  <dt className="text-ink-3">Net revenue</dt>
-                  <dd className="text-right font-bold tabular-nums">{money(Number(o.premium.net ?? 0), currency)}</dd>
-                  <dt className="text-ink-3">Creators&apos; share ({Math.round(o.premium.pool_share * 100)}%)</dt>
-                  <dd className="text-right font-bold tabular-nums">{money(Number(o.premium.pool ?? 0), currency)}</dd>
-                  <dt className="text-ink-3">Transactions</dt>
-                  <dd className="text-right font-bold tabular-nums">{o.premium.transactions ?? 0}</dd>
-                  <dt className="text-ink-3">Premium minutes</dt>
-                  <dd className="text-right font-bold tabular-nums">{Math.round(Number(o.premium.total_minutes ?? 0)).toLocaleString("en")}</dd>
+                  <dt className="text-ink-3">Authors to pay</dt>
+                  <dd className="text-right font-bold tabular-nums">{pay?.creators_due ?? 0}</dd>
+                  <dt className="text-ink-3">Next Monday</dt>
+                  <dd className="text-right font-bold">{pay?.next_monday ? dayLabel(pay.next_monday).replace(/^Monday /, "") : "–"}</dd>
+                  <dt className="text-ink-3">Validated · {days} days</dt>
+                  <dd className="text-right font-bold tabular-nums">{pay?.validated_period ?? 0}</dd>
+                  <dt className="text-ink-3">Fee per course</dt>
+                  <dd className="text-right font-bold tabular-nums">{moneyCents(Number(pay?.fee_cents ?? 1500), currency)}</dd>
+                  <dt className="text-ink-3">Paid so far</dt>
+                  <dd className="text-right font-bold tabular-nums">{moneyCents(Number(pay?.paid_total_cents ?? 0), currency)}</dd>
                 </dl>
-                <ul className="flex flex-col divide-y divide-line text-[13px]">
-                  {(o.premium.creators ?? []).slice(0, 8).map((c) => (
-                    <li key={c.creator} className="flex items-center justify-between py-1.5">
-                      <span className="font-semibold">{c.creator}</span>
-                      <span className="tabular-nums text-ink-3">
-                        {(Number(c.share) * 100).toFixed(1)}% · {money(Number(o.premium.pool ?? 0) * Number(c.share), currency)}
-                      </span>
-                    </li>
-                  ))}
-                  {(o.premium.creators ?? []).length === 0 && <li className="py-1.5 text-muted">No Premium reading recorded this month.</li>}
-                </ul>
               </Card>
             </div>
             <div className="grid grid-cols-1 gap-5 lg:grid-cols-3">
@@ -121,6 +122,7 @@ export default async function AdminOverview({ searchParams }: PageProps<"/admin"
                       </span>
                     </li>
                   ))}
+                  {o.by_subject.length === 0 && <li className="py-1.5 text-muted">No reading recorded yet.</li>}
                 </ul>
               </Card>
               <Card className="flex flex-col gap-3 p-6">
@@ -132,6 +134,7 @@ export default async function AdminOverview({ searchParams }: PageProps<"/admin"
                       <span className="tabular-nums text-ink-3">{Number(x.reads).toLocaleString("en")}</span>
                     </li>
                   ))}
+                  {o.by_language.length === 0 && <li className="py-1.5 text-muted">No reading recorded yet.</li>}
                 </ul>
               </Card>
               <Card className="flex flex-col gap-3 p-6">
@@ -143,7 +146,7 @@ export default async function AdminOverview({ searchParams }: PageProps<"/admin"
                       <span className="text-[13px] font-bold tabular-nums">{n}</span>
                     </span>
                   ))}
-                  {Object.keys(o.drafts_by_status).length === 0 && <span className="text-[13px] text-muted">No draft yet.</span>}
+                  {Object.keys(o.drafts_by_status).length === 0 && <span className="text-[13px] text-muted">No course yet.</span>}
                 </div>
                 <dl className="grid grid-cols-2 gap-x-4 gap-y-1 border-t border-line pt-3 text-[13px]">
                   {Object.entries(o.jobs).map(([st, n]) => (
@@ -156,6 +159,8 @@ export default async function AdminOverview({ searchParams }: PageProps<"/admin"
                   <dd className="text-right font-bold tabular-nums">{o.creators_approved}</dd>
                   <dt className="text-ink-3">Authors in the app</dt>
                   <dd className="text-right font-bold tabular-nums">{o.creators_published}</dd>
+                  <dt className="text-ink-3">Readers · {days} days</dt>
+                  <dd className="text-right font-bold tabular-nums">{Number(o.readers).toLocaleString("en")}</dd>
                 </dl>
               </Card>
             </div>
@@ -167,14 +172,22 @@ export default async function AdminOverview({ searchParams }: PageProps<"/admin"
             {activity.length === 0 && <li className="py-2 text-muted">Nothing yet.</li>}
             {activity.map((a) => {
               const draft = Array.isArray(a.studio_drafts) ? a.studio_drafts[0] : a.studio_drafts;
+              const pill =
+                a.decision === "published" ? "published"
+                : a.decision === "publish_failed" ? "failed"
+                : a.decision === "rejected" ? "archived"
+                : a.decision === "reopened" || a.decision === "withdrawn" ? "draft"
+                : a.decision === "note" || a.decision === "validated" ? "accepted"
+                : a.decision === "proposal_accepted" ? "draft"
+                : a.decision;
               return (
                 <li key={a.id} className="flex flex-wrap items-center gap-x-3 gap-y-1 py-2">
                   <span className="w-[120px] shrink-0 text-muted">{shortDateTime(a.created_at)}</span>
-                  <StatusPill status={a.decision === "published" ? "published" : a.decision === "publish_failed" ? "failed" : a.decision === "rejected" ? "archived" : a.decision === "reopened" || a.decision === "withdrawn" ? "draft" : a.decision === "note" ? "accepted" : a.decision} />
+                  <StatusPill status={pill} />
                   <Link href={`/admin/review/${a.draft_id}`} className="font-bold text-ink hover:text-navy">
                     {draft?.title || "Untitled course"}
                   </Link>
-                  {a.comment && <span className="min-w-0 flex-1 truncate text-ink-3">{a.comment}</span>}
+                  {a.comment && a.decision !== "proposed" && <span className="min-w-0 flex-1 truncate text-ink-3">{a.comment}</span>}
                 </li>
               );
             })}

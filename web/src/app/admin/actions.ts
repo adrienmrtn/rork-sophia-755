@@ -138,3 +138,48 @@ export async function publishDraft(form: FormData): Promise<void> {
   revalidatePath("/studio");
   back(`/admin/review/${id}`, { done: "published" });
 }
+
+/** La décision sur une proposition : accepter (le cours passe en rédaction), renvoyer avec un mot
+ *  ou un contre-titre (requis), supprimer. */
+export async function decideProposal(form: FormData): Promise<void> {
+  const session = await requireAdmin();
+  const id = text(form, "id", 64);
+  const decision = text(form, "decision", 20);
+  const note = text(form, "note", 1200);
+  const { error } = await session.supabase.rpc("studio_decide_proposal", { p_id: id, p_decision: decision, p_note: note || null });
+  revalidatePath("/admin");
+  revalidatePath("/admin/review");
+  revalidatePath("/studio");
+  revalidatePath("/studio/courses");
+  if (error) back(`/admin/review/${id}`, { error: error.message });
+  if (decision === "deleted") back("/admin/review", { done: "proposal_deleted" });
+  back(`/admin/review/${id}`, { done: decision === "accepted" ? "proposal_accepted" : "proposal_returned" });
+}
+
+/** La limite hebdomadaire d'un auteur : vide = la règle commune, 0 = bloqué. */
+export async function setCreatorQuota(form: FormData): Promise<void> {
+  const session = await requireAdmin();
+  const user = text(form, "user_id", 64);
+  const raw = text(form, "weekly_quota", 4);
+  const quota = raw === "" ? null : Number(raw);
+  if (quota !== null && (!Number.isInteger(quota) || quota < 0 || quota > 50)) back("/admin/creators", { error: "The weekly limit is a whole number from 0 to 50, or empty for the default." });
+  const { error } = await session.supabase.rpc("studio_set_creator_quota", { p_user: user, p_quota: quota });
+  revalidatePath("/admin/creators");
+  revalidatePath("/studio");
+  if (error) back("/admin/creators", { error: error.message });
+  back("/admin/creators", { done: quota === null ? "quota reset to the default" : `limit set to ${quota} a week` });
+}
+
+/** « Virement fait » : regroupe les crédits non versés de l'auteur dans un versement daté. */
+export async function markPaid(form: FormData): Promise<void> {
+  const session = await requireAdmin();
+  const user = text(form, "user_id", 64);
+  const note = text(form, "note", 300);
+  const { data, error } = await session.supabase.rpc("studio_mark_paid", { p_user: user, p_note: note || null });
+  revalidatePath("/admin");
+  revalidatePath("/admin/payouts");
+  revalidatePath("/studio");
+  if (error) back("/admin/payouts", { error: error.message });
+  const paid = data as { amount_cents?: number } | null;
+  back("/admin/payouts", { done: String(paid?.amount_cents ?? "") });
+}

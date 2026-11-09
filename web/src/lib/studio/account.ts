@@ -3,6 +3,7 @@ import { cache } from "react";
 import type { SupabaseClient, User } from "@supabase/supabase-js";
 import { createClient } from "@/lib/supabase/server";
 import { MOCK_STUDIO, mockSession } from "@/lib/studio/mock";
+import { parseQuota, type Quota } from "@/lib/studio/payments";
 
 export type OnboardingStep = "identity" | "credentials" | "profile" | "agreement" | "guide" | "done";
 export const ONBOARDING_STEPS: OnboardingStep[] = ["identity", "credentials", "profile", "agreement", "guide", "done"];
@@ -24,6 +25,8 @@ export interface CreatorAccount {
   long_bio: string | null;
   education: { degree: string; institution: string; year?: string }[];
   photo_path: string | null;
+  /** Limite hebdomadaire fixée par l'équipe ; null : la règle commune ; 0 : bloqué. */
+  weekly_quota: number | null;
   onboarding_step: OnboardingStep;
   guide_read_at: string | null;
   approved_at: string | null;
@@ -39,6 +42,9 @@ export interface StudioSession {
   agreementSigned: boolean;
   /** Une page publique /authors/<slug> existe (ligne creators), créée à la première publication. */
   publicPage: boolean;
+  /** Le quota de cours de l'auteur (studio_quota) et sa cagnotte en cents, pour les pages du Studio. */
+  quota: Quota | null;
+  potCents: number;
 }
 
 /** La session du Studio : l'utilisateur, son compte créateur (s'il existe), son rôle, son contrat.
@@ -58,7 +64,7 @@ export const getStudioSession = cache(async (): Promise<StudioSession | null> =>
     created_at: "",
   } as unknown as User;
   const { data } = await supabase.rpc("studio_me");
-  const me = (data ?? null) as { account: CreatorAccount | null; is_admin: boolean; agreement_signed: boolean; public_page?: boolean } | null;
+  const me = (data ?? null) as { account: CreatorAccount | null; is_admin: boolean; agreement_signed: boolean; public_page?: boolean; quota?: unknown; pot_cents?: unknown } | null;
   return {
     supabase,
     user,
@@ -66,6 +72,8 @@ export const getStudioSession = cache(async (): Promise<StudioSession | null> =>
     isAdmin: Boolean(me?.is_admin),
     agreementSigned: Boolean(me?.agreement_signed),
     publicPage: Boolean(me?.public_page),
+    quota: parseQuota(me?.quota),
+    potCents: Number(me?.pot_cents ?? 0),
   };
 });
 
