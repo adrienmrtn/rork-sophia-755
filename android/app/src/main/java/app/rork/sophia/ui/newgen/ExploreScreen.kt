@@ -26,13 +26,16 @@ import androidx.compose.material.icons.automirrored.filled.MenuBook
 import androidx.compose.material.icons.automirrored.filled.TrendingUp
 import androidx.compose.material.icons.filled.Cancel
 import androidx.compose.material.icons.filled.Search
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
+import androidx.compose.material3.pulltorefresh.PullToRefreshBox
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -55,6 +58,7 @@ import app.rork.sophia.data.ProgressManager
 import app.rork.sophia.data.ReadingTime
 import app.rork.sophia.data.StringStore
 import app.rork.sophia.data.analytics.Analytics
+import app.rork.sophia.data.catalog.CatalogStore
 import app.rork.sophia.data.compactCount
 import app.rork.sophia.data.rememberCourseSummaries
 import app.rork.sophia.data.stripInlineMarkup
@@ -71,6 +75,7 @@ import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
 import app.rork.sophia.ui.theme.SophiaTypography
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 import java.util.Calendar
 
 /**
@@ -79,6 +84,7 @@ import java.util.Calendar
  * (les grandes sous-catégories du catalogue, avec une couverture), et les créateurs à suivre
  * en carrousel. La rangée « En moins d'une minute » arrivera avec les vidéos (prompt 10).
  */
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ExploreScreen(
     modifier: Modifier = Modifier,
@@ -184,10 +190,28 @@ fun ExploreScreen(
         )
     }
 
-    Column(
+    // Tirer vers le bas relit le catalogue en ligne tout de suite (nouveaux cours, corrections).
+    val refreshScope = rememberCoroutineScope()
+    var refreshing by remember { mutableStateOf(false) }
+    PullToRefreshBox(
+        isRefreshing = refreshing,
+        onRefresh = {
+            refreshScope.launch {
+                refreshing = true
+                try {
+                    CatalogStore.refresh(context.applicationContext, language, force = true)
+                } finally {
+                    refreshing = false
+                }
+            }
+        },
         modifier = modifier
             .fillMaxSize()
-            .background(DS.canvas)
+            .background(DS.canvas),
+    ) {
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
             .verticalScroll(rememberScrollState())
             .padding(top = 8.dp, bottom = 32.dp),
         verticalArrangement = Arrangement.spacedBy(22.dp),
@@ -395,6 +419,7 @@ fun ExploreScreen(
                 }
             }
         }
+    }
     }
 }
 

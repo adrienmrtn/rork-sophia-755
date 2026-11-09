@@ -47,6 +47,10 @@ struct ExploreView: View {
         }
         .scrollIndicators(.hidden)
         .scrollDismissesKeyboard(.interactively)
+        // Tirer vers le bas relit le catalogue en ligne tout de suite (nouveaux cours, corrections).
+        .refreshable {
+            await CatalogStore.shared.refresh(language: language, force: true)
+        }
         .background(DS.canvas.ignoresSafeArea())
     }
 
