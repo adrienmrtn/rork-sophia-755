@@ -6,6 +6,98 @@
   "languages": 30,
   "quizQuestions": 2686
  },
+ "heroFeed": [
+  {
+   "id": "course_262_comment_pompei_a_t_elle_disparu_en_dix",
+   "title": "Comment Pompéi a-t-elle disparu en dix-huit heures ?",
+   "subtitle": "79 apr. J.-C.",
+   "hook": "Un grondement comme si le ciel se déchirait, puis des pierres qui tombent avant même que l'on comprenne : Pompéi a dix-huit heures à vivre.",
+   "description": "En moins d'un jour, le Vésuve efface une cité romaine de 15 000 habitants sous des mètres de pierre ponce et de cendre. Un violent séisme les avait pourtant avertis dix-sept ans plus tôt.",
+   "image": "/img/courses/pompeii_forum_ruins_mount_vesuvius_background.webp",
+   "subject": "Histoire",
+   "quizCount": 8,
+   "author": {
+    "name": "Ezgi Gizem Berkay",
+    "title": "Médecin, docteure en génétique médicale, master d'histoire ancienne, université Kent d'Istanbul",
+    "photo": null
+   }
+  },
+  {
+   "id": "course_101_1984_george_orwell",
+   "title": "« 1984 » : comment Winston finit-il par aimer Big Brother ?",
+   "subtitle": "1949",
+   "hook": "Un roman si puissant que ses mots servent encore à nommer la surveillance et le mensonge d'État.",
+   "description": "Publié en 1949, 1984 invente Big Brother, la Novlangue et le Ministère de la Vérité. Orwell décrit une société où la surveillance et le mensonge d'État broient l'individu jusqu'à l'amour du tyran.",
+   "image": "/img/courses/1984_george_orwell.webp",
+   "subject": "Littérature",
+   "quizCount": 10,
+   "author": {
+    "name": "La rédaction Sophia",
+    "title": "Équipe éditoriale",
+    "photo": null
+   }
+  },
+  {
+   "id": "course_149_la_joconde",
+   "title": "Pourquoi la Joconde est-elle aussi connue ?",
+   "subtitle": "1503",
+   "hook": "Le tableau le plus regardé de la planète a peut-être été, pour Léonard, un travail secondaire.",
+   "description": "C'est le tableau le plus célèbre du monde. Pourtant, en 1503, son propre auteur avait mieux à faire que le portrait d'une épouse de marchand.",
+   "image": "/img/courses/la_joconde.webp",
+   "subject": "Art",
+   "quizCount": 8,
+   "author": {
+    "name": "Dusan Nikolic",
+    "title": "Historien de l'art, master de l'université de Belgrade",
+    "photo": "/img/authors/author_dusan_nikolic.webp"
+   }
+  },
+  {
+   "id": "course_41_pourquoi_le_ciel_est_il_bleu",
+   "title": "Pourquoi le ciel est-il bleu ?",
+   "subtitle": "Lumière & atmosphère",
+   "hook": "Le ciel n'est pas peint en bleu : c'est un tour de magie de la lumière et de l'air.",
+   "description": "Regarder le ciel bleu est si banal qu'on oublie de se demander pourquoi. La réponse tient à la lumière du Soleil et à l'air que l'on traverse pour la voir.",
+   "image": "/img/courses/pourquoi_le_ciel_est_il_bleu.webp",
+   "subject": "Sciences",
+   "quizCount": 8,
+   "author": {
+    "name": "La rédaction Sophia",
+    "title": "Équipe éditoriale",
+    "photo": null
+   }
+  },
+  {
+   "id": "course_162_promethee_le_voleur_de_feu",
+   "title": "Pourquoi Prométhée a-t-il volé le feu aux dieux ?",
+   "subtitle": "Le Titan qui défie Zeus",
+   "hook": "Un Titan vole le feu de l'Olympe. Les hommes gagnent la civilisation. Lui gagne un aigle et une chaîne.",
+   "description": "Prométhée vole le feu des dieux pour les hommes, puis endure un supplice sans fin. Un mythe sur le progrès, la ruse et le prix de la liberté.",
+   "image": "/img/courses/promethee_le_voleur_de_feu.webp",
+   "subject": "Mythologie",
+   "quizCount": 8,
+   "author": {
+    "name": "La rédaction Sophia",
+    "title": "Équipe éditoriale",
+    "photo": null
+   }
+  },
+  {
+   "id": "course_203_les_tensions_autour_de_taiwan",
+   "title": "Pourquoi Taïwan est-elle au cœur des tensions mondiales ?",
+   "subtitle": "23 millions d'habitants, une planète dépendante",
+   "hook": "Une petite île fabrique les puces qui font tourner le monde entier, et Pékin la revendique comme sa province.",
+   "description": "Une île de 36 000 km² fabrique la plupart des puces électroniques du monde. Voilà pourquoi **Taïwan** est l'un des points les plus dangereux de la planète.",
+   "image": "/img/courses/les_tensions_autour_de_taiwan.webp",
+   "subject": "Comprendre le monde",
+   "quizCount": 9,
+   "author": {
+    "name": "La rédaction Sophia",
+    "title": "Équipe éditoriale",
+    "photo": null
+   }
+  }
+ ],
  "subjects": [
   {
    "id": "histoire",
@@ -13,32 +105,79 @@
    "count": 65,
    "courses": [
     {
+     "id": "course_258_qui_s_est_vraiment_enrichi_pendant_la",
+     "title": "Qui s'est vraiment enrichi pendant la ruée vers l'or ?",
+     "subtitle": "1848",
+     "hook": "Des milliers d'hommes ont creusé la boue glacée pour quelques paillettes : la fortune, elle, attendait derrière le comptoir.",
+     "description": "Le 24 janvier 1848, un charpentier ramasse quelques paillettes jaunes dans le canal d'une scierie et déclenche la plus grande ruée de l'histoire. Mais les vrais gagnants n'ont presque jamais tenu une batée.",
+     "image": "/img/courses/miners_in_the_sierras_nahl_1852_painting.webp",
+     "subject": "Histoire",
+     "quizCount": 8,
+     "author": {
+      "name": "Elizabeth Singer Hunt",
+      "title": "Autrice primée, master d'études sud-est asiatiques, SOAS (université de Londres)",
+      "photo": "/img/authors/author_elizabeth_singer_hunt.webp"
+     }
+    },
+    {
+     "id": "course_259_pourquoi_amundsen_a_t_il_battu_scott_au",
+     "title": "Pourquoi Amundsen a-t-il battu Scott au pôle Sud ?",
+     "subtitle": "1911",
+     "hook": "Deux équipes s'élancent vers le même point du globe à quelques semaines d'écart, et une seule en revient vivante.",
+     "description": "En 1911, un Norvégien et un Britannique se lancent en même temps vers le point le plus austral de la planète. Chiens, skis et fourrures d'un côté, poneys, moteurs et traction humaine de l'autre : tout se joue dans la préparation.",
+     "image": "/img/courses/amundsen_party_south_pole_polheim_december_1911.webp",
+     "subject": "Histoire",
+     "quizCount": 8,
+     "author": {
+      "name": "Elizabeth Singer Hunt",
+      "title": "Autrice primée, master d'études sud-est asiatiques, SOAS (université de Londres)",
+      "photo": "/img/authors/author_elizabeth_singer_hunt.webp"
+     }
+    },
+    {
+     "id": "course_249_les_vikings_ont_ils_decouvert_l",
+     "title": "Les Vikings ont-ils découvert l'Amérique avant Colomb ?",
+     "subtitle": "Vers l'an 1000",
+     "hook": "Colomb n'était pas le premier : cinq siècles avant lui, des Scandinaves avaient déjà posé le pied au Canada.",
+     "description": "Cinq siècles avant Colomb, des marins venus du Groenland accostent sur la côte du Canada. Les sagas le racontaient depuis le Moyen Âge, l'archéologie l'a prouvé dans les années 1960.",
+     "image": "/img/courses/leif_erikson_discovers_america_krohg_1893.webp",
+     "subject": "Histoire",
+     "quizCount": 8,
+     "author": {
+      "name": "Benjamin Campbell",
+      "title": "Chercheur en archéologie et auteur, Queen's University Belfast",
+      "photo": null
+     }
+    },
+    {
+     "id": "course_250_comment_gengis_khan_a_t_il_conquis_la",
+     "title": "Comment Gengis Khan a-t-il conquis la moitié du monde ?",
+     "subtitle": "L'empire des steppes",
+     "hook": "Abandonné par son clan à neuf ans, un enfant de la steppe va bâtir le plus grand empire terrestre de l'histoire.",
+     "description": "Orphelin abandonné par son clan à neuf ans, Temüjin devient Gengis Khan et fonde le plus grand empire terrestre de l'histoire. Son secret tient moins à ses cavaliers qu'aux systèmes qu'il invente pour tenir ce qu'il conquiert.",
+     "image": "/img/courses/genghis_khan_equestrian_statue_tsonjin_boldog_mongolia.webp",
+     "subject": "Histoire",
+     "quizCount": 8,
+     "author": {
+      "name": "Benjamin Campbell",
+      "title": "Chercheur en archéologie et auteur, Queen's University Belfast",
+      "photo": null
+     }
+    },
+    {
      "id": "course_13_la_bataille_de_waterloo_1815",
      "title": "Pourquoi Napoléon a-t-il perdu à Waterloo ?",
      "subtitle": "1815",
      "hook": "Une journée de boue en Belgique, et l'Empire s'effondre pour de bon.",
-     "image": "/img/courses/la_bataille_de_waterloo_1815.webp"
-    },
-    {
-     "id": "course_262_comment_pompei_a_t_elle_disparu_en_dix",
-     "title": "Comment Pompéi a-t-elle disparu en dix-huit heures ?",
-     "subtitle": "79 apr. J.-C.",
-     "hook": "Un grondement comme si le ciel se déchirait, puis des pierres qui tombent avant même que l'on comprenne : Pompéi a dix-huit heures à vivre.",
-     "image": "/img/courses/pompeii_forum_ruins_mount_vesuvius_background.webp"
-    },
-    {
-     "id": "course_264_qui_a_vraiment_construit_les_pyramides",
-     "title": "Qui a vraiment construit les pyramides ?",
-     "subtitle": "Ni esclaves ni extraterrestres",
-     "hook": "Des outils en cuivre, des cordes et près de six millions de tonnes de pierre : le carnet de bord d'un inspecteur raconte enfin qui a fait le travail.",
-     "image": "/img/courses/giza_pyramids_khufu_khafre_menkaure_wide_view.webp"
-    },
-    {
-     "id": "course_292_pourquoi_le_titanic_manquait_il_de",
-     "title": "Pourquoi le Titanic manquait-il de canots de sauvetage ?",
-     "subtitle": "1912",
-     "hook": "Le Titanic transportait exactement le nombre de canots exigé par la loi : voilà pourquoi personne n'a jamais été puni pour ses 1 500 morts.",
-     "image": "/img/courses/rms_titanic_departing_southampton_april_1912.webp"
+     "description": "Le **18 juin 1815**, en une journée de pluie en Belgique, l'Empire de Napoléon s'effondre. Waterloo clôt les Cent-Jours et ouvre un siècle d'ordre monarchique en Europe.",
+     "image": "/img/courses/la_bataille_de_waterloo_1815.webp",
+     "subject": "Histoire",
+     "quizCount": 9,
+     "author": {
+      "name": "La rédaction Sophia",
+      "title": "Équipe éditoriale",
+      "photo": null
+     }
     }
    ]
   },
@@ -48,32 +187,79 @@
    "count": 57,
    "courses": [
     {
+     "id": "course_242_pourquoi_a_t_on_le_hoquet",
+     "title": "Pourquoi a-t-on le hoquet ?",
+     "subtitle": "Réflexes & respiration",
+     "hook": "On te dit de retenir ton souffle, de boire la tête en bas ou de te faire peur. Mais que se passe-t-il vraiment dans ton corps ?",
+     "description": "Un spasme du diaphragme, une glotte qui claque, et ce « hic » impossible à contrôler. Ce que le corps fabrique vraiment, et pourquoi aucun remède n'est prouvé.",
+     "image": "/img/courses/child_hiccups_surprised_hand_over_mouth.webp",
+     "subject": "Sciences",
+     "quizCount": 8,
+     "author": {
+      "name": "Stacy Jankowski",
+      "title": "Docteure en sciences biomédicales, Boston University",
+      "photo": "/img/authors/author_stacy_jankowski.webp"
+     }
+    },
+    {
+     "id": "course_266_pourquoi_y_a_t_il_du_cobalt_dans_nos",
+     "title": "Pourquoi y a-t-il du cobalt dans nos batteries ?",
+     "subtitle": "Élément 27",
+     "hook": "Le métal dont dépendent les voitures électriques n'est presque jamais extrait pour lui-même.",
+     "description": "Presque personne ne creuse pour trouver du cobalt, et pourtant il y en a dans la batterie de chaque téléphone. L'histoire d'un métal que l'industrie n'arrive pas à remplacer, et qu'elle cherche pourtant à faire disparaître.",
+     "image": "/img/courses/cobalt_copper_open_pit_mine_kolwezi_drc.webp",
+     "subject": "Sciences",
+     "quizCount": 8,
+     "author": {
+      "name": "Guido Manuel De La Torre Olvera",
+      "title": "Docteur en chimie inorganique, chimiste des matériaux, Académie slovaque des sciences",
+      "photo": "/img/authors/author_guido_manuel_de_la_torre_olvera.webp"
+     }
+    },
+    {
+     "id": "course_267_qui_a_tue_le_premier_cable",
+     "title": "Qui a tué le premier câble transatlantique ?",
+     "subtitle": "1858",
+     "hook": "Le câble qui unissait deux continents était déjà en train de mourir quand le monde le fêtait.",
+     "description": "En août 1858, un câble relie pour la première fois l'Europe et l'Amérique, et la reine Victoria félicite le président Buchanan. Trois semaines plus tard, la ligne est morte : enquête sur un électricien trop pressé et un câble fabriqué de travers.",
+     "image": "/img/courses/hms_agamemnon_laying_atlantic_telegraph_cable_1858.webp",
+     "subject": "Sciences",
+     "quizCount": 8,
+     "author": {
+      "name": "Guido Manuel De La Torre Olvera",
+      "title": "Docteur en chimie inorganique, chimiste des matériaux, Académie slovaque des sciences",
+      "photo": "/img/authors/author_guido_manuel_de_la_torre_olvera.webp"
+     }
+    },
+    {
+     "id": "course_303_pourquoi_certains_detestent_ils_la",
+     "title": "Pourquoi certains détestent-ils la coriandre ?",
+     "subtitle": "Un goût de savon",
+     "hook": "La même feuille, deux saveurs : herbe fraîche pour les uns, savon pour les autres. La différence tient à une seule lettre de ton ADN.",
+     "description": "Pour une partie de l'humanité, la coriandre a un goût de savon. En cause : une seule lettre qui change dans un gène de l'odorat, et peut-être un héritage de nos ancêtres.",
+     "image": "/img/courses/fresh_coriander_cilantro_bunch_leaves.webp",
+     "subject": "Sciences",
+     "quizCount": 8,
+     "author": {
+      "name": "Stacy Jankowski",
+      "title": "Docteure en sciences biomédicales, Boston University",
+      "photo": "/img/authors/author_stacy_jankowski.webp"
+     }
+    },
+    {
      "id": "course_41_pourquoi_le_ciel_est_il_bleu",
      "title": "Pourquoi le ciel est-il bleu ?",
      "subtitle": "Lumière & atmosphère",
      "hook": "Le ciel n'est pas peint en bleu : c'est un tour de magie de la lumière et de l'air.",
-     "image": "/img/courses/pourquoi_le_ciel_est_il_bleu.webp"
-    },
-    {
-     "id": "course_42_pourquoi_reve_t_on",
-     "title": "Pourquoi rêve-t-on ?",
-     "subtitle": "Cerveau & sommeil",
-     "hook": "Tu rêves environ six ans de ta vie. Et tu en oublies presque tout.",
-     "image": "/img/courses/pourquoi_reve_t_on.webp"
-    },
-    {
-     "id": "course_281_comment_meurt_une_etoile",
-     "title": "Comment meurt une étoile ?",
-     "subtitle": "Géante rouge ou supernova",
-     "hook": "Une étoile peut s'éteindre en douceur ou exploser avec une violence inimaginable : tout se joue sur sa masse.",
-     "image": "/img/courses/crab_nebula_supernova_remnant_hubble.webp"
-    },
-    {
-     "id": "course_304_pourquoi_rougit_on",
-     "title": "Pourquoi rougit-on ?",
-     "subtitle": "L'expression la plus humaine",
-     "hook": "Une remarque de travers, et tes joues s'enflamment. Un compliment, et c'est pareil. Personne ne décide de rougir.",
-     "image": "/img/courses/blushing_red_cheeks_woman_portrait_close_up.webp"
+     "description": "Regarder le ciel bleu est si banal qu'on oublie de se demander pourquoi. La réponse tient à la lumière du Soleil et à l'air que l'on traverse pour la voir.",
+     "image": "/img/courses/pourquoi_le_ciel_est_il_bleu.webp",
+     "subject": "Sciences",
+     "quizCount": 8,
+     "author": {
+      "name": "La rédaction Sophia",
+      "title": "Équipe éditoriale",
+      "photo": null
+     }
     }
    ]
   },
@@ -83,32 +269,79 @@
    "count": 50,
    "courses": [
     {
+     "id": "course_214_la_crise_de_l_etat_providence",
+     "title": "L'État-providence est-il réservé aux citoyens ?",
+     "subtitle": "Algériens et braceros",
+     "hook": "Pour les travailleurs venus des anciennes colonies, la crise de l'État-providence n'a pas commencé avec les déficits : elle a commencé dès le premier jour.",
+     "description": "En France comme aux États-Unis, la protection sociale née après 1945 a aussi été financée par des travailleurs venus des anciennes colonies. Pension refusée à un Algérien, braceros mexicains privés de retraite, bulldozer de Vitry : l'histoire d'une crise plus ancienne que les déficits.",
+     "image": "/img/courses/bracero_mexican_farmworkers_california_1942_lange.webp",
+     "subject": "Comprendre le monde",
+     "quizCount": 8,
+     "author": {
+      "name": "Mark N. Hoffman",
+      "title": "Docteur en science politique (université du Minnesota), professeur à l'université Saint Xavier de Chicago",
+      "photo": "/img/authors/author_mark_n_hoffman.webp"
+     }
+    },
+    {
+     "id": "course_270_pourquoi_la_yougoslavie_a_t_elle_eclate",
+     "title": "Pourquoi la Yougoslavie a-t-elle éclaté ?",
+     "subtitle": "1991",
+     "hook": "Un pays où nos parents ont grandi, rayé de la carte en dix ans.",
+     "description": "Six républiques, un maréchal adulé, puis dix ans de guerres et un tribunal pour juger les crimes. Comment un pays que nos parents ont connu a-t-il disparu de la carte ?",
+     "image": "/img/courses/sarajevo_siege_building_burning_1992.webp",
+     "subject": "Comprendre le monde",
+     "quizCount": 8,
+     "author": {
+      "name": "Ivana Toskovic",
+      "title": "Master d'études régionales sur les États-Unis, licence de relations internationales, université de Belgrade",
+      "photo": "/img/authors/author_ivana_toskovic.webp"
+     }
+    },
+    {
+     "id": "course_271_pourquoi_les_etats_unis_sont_ils_si",
+     "title": "Pourquoi les États-Unis sont-ils si puissants ?",
+     "subtitle": "Naissance d'une superpuissance",
+     "hook": "Un pays qui n'existait pas il y a 250 ans et dont les décisions pèsent aujourd'hui sur toute la planète.",
+     "description": "Un pays qui n'existait pas il y a 250 ans décide aujourd'hui de presque tout, presque partout. Deux océans, une bombe, un dollar et des jeans : comment les États-Unis sont devenus la première superpuissance.",
+     "image": "/img/courses/us_navy_aircraft_carrier_at_sea.webp",
+     "subject": "Comprendre le monde",
+     "quizCount": 8,
+     "author": {
+      "name": "Ivana Toskovic",
+      "title": "Master d'études régionales sur les États-Unis, licence de relations internationales, université de Belgrade",
+      "photo": "/img/authors/author_ivana_toskovic.webp"
+     }
+    },
+    {
+     "id": "course_277_les_sanctions_evitent_elles_vraiment_la",
+     "title": "Les sanctions évitent-elles vraiment la guerre ?",
+     "subtitle": "L'Irak sous embargo",
+     "hook": "Un embargo ne tire pas un seul coup de feu. En Irak, il a pourtant rendu l'eau dangereuse à boire.",
+     "description": "En 1990, l'ONU coupe l'Irak du commerce mondial pour faire plier Saddam Hussein sans tirer un coup de feu. Dix ans plus tard, les eaux usées se déversent dans les rivières et les hôpitaux perdent leurs médecins.",
+     "image": "/img/courses/un_security_council_vote_iraq_sanctions_1990.webp",
+     "subject": "Comprendre le monde",
+     "quizCount": 8,
+     "author": {
+      "name": "Mark N. Hoffman",
+      "title": "Docteur en science politique (université du Minnesota), professeur à l'université Saint Xavier de Chicago",
+      "photo": "/img/authors/author_mark_n_hoffman.webp"
+     }
+    },
+    {
      "id": "course_203_les_tensions_autour_de_taiwan",
      "title": "Pourquoi Taïwan est-elle au cœur des tensions mondiales ?",
      "subtitle": "23 millions d'habitants, une planète dépendante",
      "hook": "Une petite île fabrique les puces qui font tourner le monde entier, et Pékin la revendique comme sa province.",
-     "image": "/img/courses/les_tensions_autour_de_taiwan.webp"
-    },
-    {
-     "id": "course_212_les_paradis_fiscaux_expliques",
-     "title": "Paradis fiscaux : où se cachent 10 000 milliards de dollars ?",
-     "subtitle": "10 000 milliards planqués",
-     "hook": "Les îles Caïmans comptent 65 000 habitants et plus de 100 000 entreprises. Bienvenue dans le monde des paradis fiscaux.",
-     "image": "/img/courses/les_paradis_fiscaux_expliques.webp"
-    },
-    {
-     "id": "course_220_la_desinformation_et_les_fake_news",
-     "title": "Pourquoi les fake news vont-elles plus vite que la vérité ?",
-     "subtitle": "Le mensonge à l'ère virale",
-     "hook": "Une étude du MIT a montré que les fake news voyagent 6 fois plus vite que la vérité sur Twitter. Voici pourquoi.",
-     "image": "/img/courses/la_desinformation_et_les_fake_news.webp"
-    },
-    {
-     "id": "course_226_l_ia_et_l_emploi",
-     "title": "L'IA va-t-elle remplacer les métiers du savoir ?",
-     "subtitle": "Menace ou nouvelle vague ?",
-     "hook": "Les machines ont déjà remplacé des bras. Vont-elles maintenant remplacer des cerveaux ?",
-     "image": "/img/courses/l_ia_et_l_emploi.webp"
+     "description": "Une île de 36 000 km² fabrique la plupart des puces électroniques du monde. Voilà pourquoi **Taïwan** est l'un des points les plus dangereux de la planète.",
+     "image": "/img/courses/les_tensions_autour_de_taiwan.webp",
+     "subject": "Comprendre le monde",
+     "quizCount": 9,
+     "author": {
+      "name": "La rédaction Sophia",
+      "title": "Équipe éditoriale",
+      "photo": null
+     }
     }
    ]
   },
@@ -118,32 +351,79 @@
    "count": 47,
    "courses": [
     {
+     "id": "course_260_d_ou_viennent_les_super_heros",
+     "title": "D'où viennent les super-héros ?",
+     "subtitle": "D'Hercule à Superman",
+     "hook": "Sous la cape de Superman et le costume de Wonder Woman se cachent des héros vieux de trois mille ans.",
+     "description": "Superman, Wonder Woman, Shazam et le Thor de Marvel ont à peine un siècle. Les figures qui les inspirent, Hercule, les Amazones, Samson ou le dieu du tonnerre, ont des milliers d'années.",
+     "image": "/img/courses/superman_fleischer_cartoon_1941_flying_metropolis.webp",
+     "subject": "Littérature",
+     "quizCount": 8,
+     "author": {
+      "name": "Elizabeth Singer Hunt",
+      "title": "Autrice primée, master d'études sud-est asiatiques, SOAS (université de Londres)",
+      "photo": "/img/authors/author_elizabeth_singer_hunt.webp"
+     }
+    },
+    {
+     "id": "course_298_esope_a_t_il_vraiment_existe",
+     "title": "Ésope a-t-il vraiment existé ?",
+     "subtitle": "L'esclave qui disait vrai",
+     "hook": "On lui attribue plus de fables qu'un homme n'en pourrait écrire en une vie, et personne ne sait s'il a vécu.",
+     "description": "Esclave, laid, muet de naissance : la légende d'Ésope est trop belle pour être vraie. Derrière elle se cache une invention qui traverse les siècles, la fable.",
+     "image": "/img/courses/aesop_fox_kylix_vatican_470_bc.webp",
+     "subject": "Littérature",
+     "quizCount": 8,
+     "author": {
+      "name": "Simon Lea",
+      "title": "Docteur en philosophie, chercheur indépendant",
+      "photo": "/img/authors/author_simon_lea.webp"
+     }
+    },
+    {
+     "id": "course_299_pourquoi_aurore_dupin_s_est_elle",
+     "title": "Pourquoi Aurore Dupin s'est-elle appelée George Sand ?",
+     "subtitle": "Romancière en habit d'homme",
+     "hook": "Pour publier, observer Paris et vivre libre, Aurore Dupin emprunte un prénom d'homme, une redingote et un cigare.",
+     "description": "En 1832, un roman signé G. Sand frappe les lecteurs par la justesse de son regard sur une femme mal mariée. Derrière ce prénom d'homme, Aurore Dupin, qui n'a jamais caché qu'elle était une femme.",
+     "image": "/img/courses/george_sand_portrait_auguste_charpentier_1838.webp",
+     "subject": "Littérature",
+     "quizCount": 8,
+     "author": {
+      "name": "Simon Lea",
+      "title": "Docteur en philosophie, chercheur indépendant",
+      "photo": "/img/authors/author_simon_lea.webp"
+     }
+    },
+    {
+     "id": "course_309_d_ou_vient_la_science_fiction",
+     "title": "D'où vient la science-fiction ?",
+     "subtitle": "De Lucien à Frankenstein",
+     "hook": "Un voyage sur la Lune au IIe siècle, un monstre cousu en 1818, un nom trouvé en 1929 : la science-fiction est bien plus vieille que ses fusées.",
+     "description": "Au IIe siècle, Lucien de Samosate envoyait déjà son narrateur sur la Lune. Mais il faut la révolution scientifique, puis le monstre de Mary Shelley, pour que ces rêves deviennent une façon nouvelle d'interroger le changement.",
+     "image": "/img/courses/melies_trip_to_the_moon_1902.webp",
+     "subject": "Littérature",
+     "quizCount": 8,
+     "author": {
+      "name": "Vedran Obucina",
+      "title": "Théologien anglican et historien, docteur en histoire",
+      "photo": null
+     }
+    },
+    {
      "id": "course_101_1984_george_orwell",
      "title": "« 1984 » : comment Winston finit-il par aimer Big Brother ?",
      "subtitle": "1949",
      "hook": "Un roman si puissant que ses mots servent encore à nommer la surveillance et le mensonge d'État.",
-     "image": "/img/courses/1984_george_orwell.webp"
-    },
-    {
-     "id": "course_106_frankenstein_mary_shelley",
-     "title": "Qui est le vrai monstre de « Frankenstein » ?",
-     "subtitle": "1818",
-     "hook": "Une nuit orageuse, un pari entre poètes, et le mythe du Prométhée moderne.",
-     "image": "/img/courses/frankenstein_mary_shelley.webp"
-    },
-    {
-     "id": "course_91_les_miserables_victor_hugo",
-     "title": "« Les Misérables » : comment Jean Valjean se rachète-t-il ?",
-     "subtitle": "1862",
-     "hook": "Un morceau de pain volé, dix-neuf ans de bagne, puis une vie entière pour prouver qu'on peut redevenir homme.",
-     "image": "/img/courses/les_miserables_victor_hugo.webp"
-    },
-    {
-     "id": "course_119_le_petit_prince_saint_exupery",
-     "title": "Le Petit Prince, Saint-Exupéry",
-     "subtitle": "1943",
-     "hook": "Apprivoiser, c'est créer des liens : la leçon du renard devenue universelle.",
-     "image": "/img/courses/le_petit_prince_saint_exupery.webp"
+     "description": "Publié en 1949, 1984 invente Big Brother, la Novlangue et le Ministère de la Vérité. Orwell décrit une société où la surveillance et le mensonge d'État broient l'individu jusqu'à l'amour du tyran.",
+     "image": "/img/courses/1984_george_orwell.webp",
+     "subject": "Littérature",
+     "quizCount": 10,
+     "author": {
+      "name": "La rédaction Sophia",
+      "title": "Équipe éditoriale",
+      "photo": null
+     }
     }
    ]
   },
@@ -153,32 +433,79 @@
    "count": 46,
    "courses": [
     {
+     "id": "course_243_pourquoi_a_t_on_invente_les_vampires",
+     "title": "Pourquoi a-t-on inventé les vampires ?",
+     "subtitle": "1645-1897",
+     "hook": "La mort fait peur. Ne pas pouvoir l'expliquer fait encore plus peur.",
+     "description": "Avant d'être un aristocrate en cape, le vampire est un voisin mort trop tôt, qu'on accuse d'emporter sa famille. L'histoire d'une peur qui a trouvé un nom.",
+     "image": "/img/courses/foggy_village_graveyard_night_balkans.webp",
+     "subject": "Mythologie",
+     "quizCount": 8,
+     "author": {
+      "name": "Angela Bouma",
+      "title": "Professeure d'histoire et podcasteuse, Barton Community College",
+      "photo": null
+     }
+    },
+    {
+     "id": "course_244_d_ou_vient_le_loup_garou",
+     "title": "D'où vient le loup-garou ?",
+     "subtitle": "De Lycaon à Hollywood",
+     "hook": "La peur est ancienne. Le monstre, lui, change de visage à chaque époque.",
+     "description": "Pleine lune, morsure, balle en argent : le loup-garou du cinéma est une invention récente. Les plus vieux récits parlent d'un roi puni par un dieu et d'un seigneur trahi par sa femme.",
+     "image": "/img/courses/grey_wolf_snowy_forest_dusk.webp",
+     "subject": "Mythologie",
+     "quizCount": 8,
+     "author": {
+      "name": "Angela Bouma",
+      "title": "Professeure d'histoire et podcasteuse, Barton Community College",
+      "photo": null
+     }
+    },
+    {
+     "id": "course_311_qui_a_invente_les_zombies",
+     "title": "Qui a inventé les zombies ?",
+     "subtitle": "Du vaudou à Hollywood",
+     "hook": "Avant de dévorer les vivants à l'écran, le zombi était un homme à qui l'on avait volé sa volonté.",
+     "description": "Le mort-vivant lent et affamé du cinéma n'a pas cent ans. Derrière lui se cache une figure haïtienne bien plus ancienne, et bien plus triste : une personne à qui l'on a volé son âme.",
+     "image": "/img/courses/night_of_the_living_dead_1968_still.webp",
+     "subject": "Mythologie",
+     "quizCount": 8,
+     "author": {
+      "name": "Vedran Obucina",
+      "title": "Théologien anglican et historien, docteur en histoire",
+      "photo": null
+     }
+    },
+    {
      "id": "course_162_promethee_le_voleur_de_feu",
      "title": "Pourquoi Prométhée a-t-il volé le feu aux dieux ?",
      "subtitle": "Le Titan qui défie Zeus",
      "hook": "Un Titan vole le feu de l'Olympe. Les hommes gagnent la civilisation. Lui gagne un aigle et une chaîne.",
-     "image": "/img/courses/promethee_le_voleur_de_feu.webp"
+     "description": "Prométhée vole le feu des dieux pour les hommes, puis endure un supplice sans fin. Un mythe sur le progrès, la ruse et le prix de la liberté.",
+     "image": "/img/courses/promethee_le_voleur_de_feu.webp",
+     "subject": "Mythologie",
+     "quizCount": 8,
+     "author": {
+      "name": "La rédaction Sophia",
+      "title": "Équipe éditoriale",
+      "photo": null
+     }
     },
     {
      "id": "course_172_thesee_et_le_minotaure",
      "title": "Comment Thésée a-t-il vaincu le Minotaure ?",
      "subtitle": "Le fil, le monstre, les voiles",
      "hook": "Un monstre dans un labyrinthe. Un fil pour en sortir. Des voiles oubliées qui baptisent une mer.",
-     "image": "/img/courses/thesee_et_le_minotaure.webp"
-    },
-    {
-     "id": "course_179_la_guerre_de_troie_et_le_cheval_de_bois",
-     "title": "Comment un cheval de bois a-t-il fait tomber Troie ?",
-     "subtitle": "Mythologie grecque",
-     "hook": "Une pomme d'or, une femme enlevée, puis dix ans de guerre : Troie ne tombe pas sous les armes, mais par un cheval de bois.",
-     "image": "/img/courses/la_guerre_de_troie_et_le_cheval_de_bois.webp"
-    },
-    {
-     "id": "course_181_ragnarok_la_fin_du_monde_nordique",
-     "title": "Ragnarök : et si la fin du monde n'était pas la fin ?",
-     "subtitle": "Mythologie nordique",
-     "hook": "Les dieux savent qu'ils vont mourir. Ils y vont quand même. Puis, sous les cendres, la terre reverdit.",
-     "image": "/img/courses/ragnarok_la_fin_du_monde_nordique.webp"
+     "description": "Thésée tue le Minotaure grâce au fil d'Ariane. Mais il oublie de changer les voiles : son père Égée se jette à la mer, qui porte encore son nom.",
+     "image": "/img/courses/thesee_et_le_minotaure.webp",
+     "subject": "Mythologie",
+     "quizCount": 9,
+     "author": {
+      "name": "La rédaction Sophia",
+      "title": "Équipe éditoriale",
+      "photo": null
+     }
     }
    ]
   },
@@ -192,28 +519,75 @@
      "title": "Pourquoi la Joconde est-elle aussi connue ?",
      "subtitle": "1503",
      "hook": "Le tableau le plus regardé de la planète a peut-être été, pour Léonard, un travail secondaire.",
-     "image": "/img/courses/la_joconde.webp"
+     "description": "C'est le tableau le plus célèbre du monde. Pourtant, en 1503, son propre auteur avait mieux à faire que le portrait d'une épouse de marchand.",
+     "image": "/img/courses/la_joconde.webp",
+     "subject": "Art",
+     "quizCount": 8,
+     "author": {
+      "name": "Dusan Nikolic",
+      "title": "Historien de l'art, master de l'université de Belgrade",
+      "photo": "/img/authors/author_dusan_nikolic.webp"
+     }
+    },
+    {
+     "id": "course_241_pourquoi_voulait_on_demolir_la_tour_eiffel",
+     "title": "Pourquoi voulait-on démolir la tour Eiffel ?",
+     "subtitle": "1889",
+     "hook": "Avant d'être le symbole de Paris, elle a été une « odieuse colonne de tôle boulonnée » que l'on rêvait d'abattre.",
+     "description": "En 1887, les grands noms des arts et des lettres réclament l'arrêt du chantier d'une « cheminée d'usine ». Vingt ans plus tard, personne n'imagine plus Paris sans elle.",
+     "image": "/img/courses/eiffel_tower_1889_universal_exhibition.webp",
+     "subject": "Art",
+     "quizCount": 8,
+     "author": {
+      "name": "Dusan Nikolic",
+      "title": "Historien de l'art, master de l'université de Belgrade",
+      "photo": "/img/authors/author_dusan_nikolic.webp"
+     }
     },
     {
      "id": "course_150_la_nuit_etoilee_van_gogh",
      "title": "Pourquoi le ciel de « La Nuit étoilée » tourbillonne-t-il ?",
      "subtitle": "1889",
      "hook": "Depuis une chambre d'asile, Van Gogh peint un ciel qui refuse de rester sage.",
-     "image": "/img/courses/la_nuit_etoilee_van_gogh.webp"
+     "description": "En **1889**, depuis l'asile de Saint-Rémy-de-Provence, **Vincent Van Gogh** peint *La Nuit étoilée*. Le ciel tourbillonne : l'art cesse de copier le réel pour dire une émotion.",
+     "image": "/img/courses/la_nuit_etoilee_van_gogh.webp",
+     "subject": "Art",
+     "quizCount": 9,
+     "author": {
+      "name": "La rédaction Sophia",
+      "title": "Équipe éditoriale",
+      "photo": null
+     }
     },
     {
      "id": "course_133_le_hip_hop_naissance_d_une_culture",
      "title": "Hip-hop : que s'est-il passé dans le Bronx en 1973 ?",
      "subtitle": "1973",
      "hook": "Une fête de quartier dans le Bronx, et une culture mondiale est née.",
-     "image": "/img/courses/le_hip_hop_naissance_d_une_culture.webp"
+     "description": "Né dans le Bronx en 1973, le hip-hop invente DJ, rap, breakdance et graffiti, puis conquiert la planète.",
+     "image": "/img/courses/le_hip_hop_naissance_d_une_culture.webp",
+     "subject": "Art",
+     "quizCount": 9,
+     "author": {
+      "name": "La rédaction Sophia",
+      "title": "Équipe éditoriale",
+      "photo": null
+     }
     },
     {
      "id": "course_128_l_expressionnisme_munch_et_le_cri",
      "title": "Quelle angoisse se cache derrière « Le Cri » de Munch ?",
      "subtitle": "1880-1930",
      "hook": "Un cri sans son, un ciel qui hurle : le visage de l'angoisse moderne.",
-     "image": "/img/courses/l_expressionnisme_munch_et_le_cri.webp"
+     "description": "L'expressionnisme fait primer l'émotion intérieure sur le monde extérieur. Avec **Munch** et *Le Cri*, l'angoisse moderne devient une icône.",
+     "image": "/img/courses/l_expressionnisme_munch_et_le_cri.webp",
+     "subject": "Art",
+     "quizCount": 9,
+     "author": {
+      "name": "La rédaction Sophia",
+      "title": "Équipe éditoriale",
+      "photo": null
+     }
     }
    ]
   }
@@ -506,112 +880,332 @@
    "title": "Doctorante en ingénierie des systèmes industriels, université nationale Jeonbuk",
    "institution": "Jeonbuk National University",
    "photo": "/img/authors/author_rana_abdalla.webp",
-   "courses": 2
+   "courseCount": 2,
+   "courses": [
+    {
+     "title": "L'IA consomme-t-elle beaucoup d'énergie ?",
+     "image": "/img/courses/data_center_server_racks_aisle_blue_lights.webp"
+    },
+    {
+     "title": "D'où vient vraiment l'électricité de votre prise ?",
+     "image": "/img/courses/wind_turbines_coal_power_plant_landscape.webp"
+    }
+   ]
   },
   {
    "name": "Mark N. Hoffman",
    "title": "Docteur en science politique (université du Minnesota), professeur à l'université Saint Xavier de Chicago",
    "institution": "Saint Xavier University, Chicago",
    "photo": "/img/authors/author_mark_n_hoffman.webp",
-   "courses": 5
+   "courseCount": 5,
+   "courses": [
+    {
+     "title": "L'État-providence est-il réservé aux citoyens ?",
+     "image": "/img/courses/bracero_mexican_farmworkers_california_1942_lange.webp"
+    },
+    {
+     "title": "Les sanctions évitent-elles vraiment la guerre ?",
+     "image": "/img/courses/un_security_council_vote_iraq_sanctions_1990.webp"
+    },
+    {
+     "title": "Pourquoi les accords climatiques sont-ils si peu respectés ?",
+     "image": "/img/courses/cop21_paris_agreement_adoption_2015_fabius_gavel.webp"
+    }
+   ]
   },
   {
    "name": "Elizabeth Singer Hunt",
    "title": "Autrice primée, master d'études sud-est asiatiques, SOAS (université de Londres)",
    "institution": "SOAS, University of London",
    "photo": "/img/authors/author_elizabeth_singer_hunt.webp",
-   "courses": 3
+   "courseCount": 3,
+   "courses": [
+    {
+     "title": "Qui s'est vraiment enrichi pendant la ruée vers l'or ?",
+     "image": "/img/courses/miners_in_the_sierras_nahl_1852_painting.webp"
+    },
+    {
+     "title": "Pourquoi Amundsen a-t-il battu Scott au pôle Sud ?",
+     "image": "/img/courses/amundsen_party_south_pole_polheim_december_1911.webp"
+    },
+    {
+     "title": "D'où viennent les super-héros ?",
+     "image": "/img/courses/superman_fleischer_cartoon_1941_flying_metropolis.webp"
+    }
+   ]
   },
   {
    "name": "Stacy Jankowski",
    "title": "Docteure en sciences biomédicales, Boston University",
    "institution": "Boston University",
    "photo": "/img/authors/author_stacy_jankowski.webp",
-   "courses": 5
+   "courseCount": 5,
+   "courses": [
+    {
+     "title": "Pourquoi a-t-on le hoquet ?",
+     "image": "/img/courses/child_hiccups_surprised_hand_over_mouth.webp"
+    },
+    {
+     "title": "Pourquoi certains détestent-ils la coriandre ?",
+     "image": "/img/courses/fresh_coriander_cilantro_bunch_leaves.webp"
+    },
+    {
+     "title": "Pourquoi rougit-on ?",
+     "image": "/img/courses/blushing_red_cheeks_woman_portrait_close_up.webp"
+    }
+   ]
   },
   {
    "name": "Simon Lea",
    "title": "Docteur en philosophie, chercheur indépendant",
    "institution": null,
    "photo": "/img/authors/author_simon_lea.webp",
-   "courses": 5
+   "courseCount": 5,
+   "courses": [
+    {
+     "title": "Ésope a-t-il vraiment existé ?",
+     "image": "/img/courses/aesop_fox_kylix_vatican_470_bc.webp"
+    },
+    {
+     "title": "Pourquoi Aurore Dupin s'est-elle appelée George Sand ?",
+     "image": "/img/courses/george_sand_portrait_auguste_charpentier_1838.webp"
+    },
+    {
+     "title": "Comment le journal d'Anne Frank a-t-il survécu ?",
+     "image": "/img/courses/anne_frank_red_checkered_diary_1942.webp"
+    }
+   ]
   },
   {
    "name": "Dusan Nikolic",
    "title": "Historien de l'art, master de l'université de Belgrade",
    "institution": "University of Belgrade",
    "photo": "/img/authors/author_dusan_nikolic.webp",
-   "courses": 6
+   "courseCount": 6,
+   "courses": [
+    {
+     "title": "Pourquoi la Joconde est-elle aussi connue ?",
+     "image": "/img/courses/la_joconde.webp"
+    },
+    {
+     "title": "Pourquoi voulait-on démolir la tour Eiffel ?",
+     "image": "/img/courses/eiffel_tower_1889_universal_exhibition.webp"
+    },
+    {
+     "title": "Qui a vendu un faux Vermeer à Göring ?",
+     "image": "/img/courses/han_van_meegeren_painting_under_guard_1945.webp"
+    }
+   ]
   },
   {
    "name": "Guido Manuel De La Torre Olvera",
    "title": "Docteur en chimie inorganique, chimiste des matériaux, Académie slovaque des sciences",
    "institution": "Slovak Academy of Sciences",
    "photo": "/img/authors/author_guido_manuel_de_la_torre_olvera.webp",
-   "courses": 4
+   "courseCount": 4,
+   "courses": [
+    {
+     "title": "Pourquoi y a-t-il du cobalt dans nos batteries ?",
+     "image": "/img/courses/cobalt_copper_open_pit_mine_kolwezi_drc.webp"
+    },
+    {
+     "title": "Qui a tué le premier câble transatlantique ?",
+     "image": "/img/courses/hms_agamemnon_laying_atlantic_telegraph_cable_1858.webp"
+    },
+    {
+     "title": "Pourquoi le violet est-il la couleur des rois ?",
+     "image": "/img/courses/justinian_mosaic_san_vitale_ravenna_purple_robe.webp"
+    }
+   ]
   },
   {
    "name": "Ivana Toskovic",
    "title": "Master d'études régionales sur les États-Unis, licence de relations internationales, université de Belgrade",
    "institution": "University of Belgrade",
    "photo": "/img/authors/author_ivana_toskovic.webp",
-   "courses": 4
+   "courseCount": 4,
+   "courses": [
+    {
+     "title": "Pourquoi la Yougoslavie a-t-elle éclaté ?",
+     "image": "/img/courses/sarajevo_siege_building_burning_1992.webp"
+    },
+    {
+     "title": "Pourquoi les États-Unis sont-ils si puissants ?",
+     "image": "/img/courses/us_navy_aircraft_carrier_at_sea.webp"
+    },
+    {
+     "title": "Pourquoi la Corée est-elle coupée en deux ?",
+     "image": "/img/courses/panmunjom_joint_security_area_blue_huts.webp"
+    }
+   ]
   },
   {
    "name": "Ezgi Gizem Berkay",
    "title": "Médecin, docteure en génétique médicale, master d'histoire ancienne, université Kent d'Istanbul",
    "institution": "Istanbul Kent University",
    "photo": null,
-   "courses": 5
+   "courseCount": 5,
+   "courses": [
+    {
+     "title": "A-t-on vraiment tout perdu dans l'incendie d'Alexandrie ?",
+     "image": "/img/courses/alexandria_library_fire_goll_1876_wood_engraving.webp"
+    },
+    {
+     "title": "Comment Pompéi a-t-elle disparu en dix-huit heures ?",
+     "image": "/img/courses/pompeii_forum_ruins_mount_vesuvius_background.webp"
+    },
+    {
+     "title": "À quoi servait vraiment la route de la soie ?",
+     "image": "/img/courses/silk_road_camel_caravan_dunhuang_sand_dunes.webp"
+    }
+   ]
   },
   {
    "name": "Angela Bouma",
    "title": "Professeure d'histoire et podcasteuse, Barton Community College",
    "institution": "Barton Community College",
    "photo": null,
-   "courses": 6
+   "courseCount": 6,
+   "courses": [
+    {
+     "title": "Pourquoi a-t-on inventé les vampires ?",
+     "image": "/img/courses/foggy_village_graveyard_night_balkans.webp"
+    },
+    {
+     "title": "D'où vient le loup-garou ?",
+     "image": "/img/courses/grey_wolf_snowy_forest_dusk.webp"
+    },
+    {
+     "title": "D'où vient le père Noël ?",
+     "image": "/img/courses/santa_claus_thomas_nast_1881_harpers_weekly.webp"
+    }
+   ]
   },
   {
    "name": "Benjamin Campbell",
    "title": "Chercheur en archéologie et auteur, Queen's University Belfast",
    "institution": "Queen's University Belfast",
    "photo": null,
-   "courses": 5
+   "courseCount": 5,
+   "courses": [
+    {
+     "title": "Les Vikings ont-ils découvert l'Amérique avant Colomb ?",
+     "image": "/img/courses/leif_erikson_discovers_america_krohg_1893.webp"
+    },
+    {
+     "title": "Comment Gengis Khan a-t-il conquis la moitié du monde ?",
+     "image": "/img/courses/genghis_khan_equestrian_statue_tsonjin_boldog_mongolia.webp"
+    },
+    {
+     "title": "Pourquoi Londres a-t-elle brûlé en 1666 ?",
+     "image": "/img/courses/great_fire_london_1666_thames_painting.webp"
+    }
+   ]
   },
   {
    "name": "Nathan Hewitt",
    "title": "Doctorant en histoire globale et impériale, université d'Oxford",
    "institution": "University of Oxford",
    "photo": null,
-   "courses": 5
+   "courseCount": 5,
+   "courses": [
+    {
+     "title": "L'esclavage américain a-t-il vraiment pris fin en 1865 ?",
+     "image": "/img/courses/southern_chain_gang_convicts_1900s_photograph.webp"
+    },
+    {
+     "title": "Pourquoi le Titanic manquait-il de canots de sauvetage ?",
+     "image": "/img/courses/rms_titanic_departing_southampton_april_1912.webp"
+    },
+    {
+     "title": "Pourquoi l'Angleterre s'est-elle battue pour l'opium ?",
+     "image": "/img/courses/nemesis_destroying_chinese_war_junks_1841.webp"
+    }
+   ]
   },
   {
    "name": "Myra Houser",
    "title": "Historienne",
    "institution": null,
    "photo": null,
-   "courses": 6
+   "courseCount": 6,
+   "courses": [
+    {
+     "title": "Comment a-t-on évité la famine annoncée des années 1960 ?",
+     "image": "/img/courses/norman_borlaug_wheat_field_mexico_1960s.webp"
+    },
+    {
+     "title": "Pourquoi a-t-on ravitaillé Berlin par avion en 1948 ?",
+     "image": "/img/courses/berlin_airlift_1948_c54_landing_tempelhof_children.webp"
+    },
+    {
+     "title": "Que s'est-il passé à Bhopal la nuit du 3 décembre 1984 ?",
+     "image": "/img/courses/union_carbide_bhopal_abandoned_plant_ruins.webp"
+    }
+   ]
   },
   {
    "name": "Vedran Obucina",
    "title": "Théologien anglican et historien, docteur en histoire",
    "institution": null,
    "photo": null,
-   "courses": 5
+   "courseCount": 5,
+   "courses": [
+    {
+     "title": "Comment le christianisme est-il devenu religion d'État ?",
+     "image": "/img/courses/arch_of_constantine_rome_colosseum_view.webp"
+    },
+    {
+     "title": "Quelle a été la guerre la plus meurtrière de l'histoire ?",
+     "image": "/img/courses/taiping_rebellion_battle_qing_court_painting_1860s.webp"
+    },
+    {
+     "title": "D'où vient la science-fiction ?",
+     "image": "/img/courses/melies_trip_to_the_moon_1902.webp"
+    }
+   ]
   },
   {
    "name": "Kate Waddams",
    "title": "Docteure en microbiologie moléculaire",
    "institution": null,
    "photo": null,
-   "courses": 4
+   "courseCount": 4,
+   "courses": [
+    {
+     "title": "Comment nourrir huit milliards d'humains ?",
+     "image": "/img/courses/combine_harvester_wheat_field_aerial.webp"
+    },
+    {
+     "title": "Peut-on modifier l'ADN d'un être humain ?",
+     "image": "/img/courses/genetics_lab_pipette_dna_samples_gloved_hands.webp"
+    },
+    {
+     "title": "Que peut-on vraiment lire dans son ADN ?",
+     "image": "/img/courses/dna_double_helix_3d_render_blue.webp"
+    }
+   ]
   },
   {
    "name": "Muhammad Zaheer",
    "title": "Docteur en chimie, maître de conférences et chercheur",
    "institution": null,
    "photo": null,
-   "courses": 5
+   "courseCount": 5,
+   "courses": [
+    {
+     "title": "Comment meurt une étoile ?",
+     "image": "/img/courses/crab_nebula_supernova_remnant_hubble.webp"
+    },
+    {
+     "title": "Que se passerait-il si un supervolcan se réveillait ?",
+     "image": "/img/courses/yellowstone_grand_prismatic_spring_aerial.webp"
+    },
+    {
+     "title": "Qu'y a-t-il vraiment dans un smartphone ?",
+     "image": "/img/courses/disassembled_smartphone_components_flat_lay.webp"
+    }
+   ]
   }
  ],
  "universities": [
@@ -701,15 +1295,40 @@
    "image": "/img/courses/les_tensions_autour_de_taiwan.webp"
   }
  ],
- "phoneCourse": {
-  "id": "course_101_1984_george_orwell",
-  "title": "« 1984 » : comment Winston finit-il par aimer Big Brother ?",
-  "subtitle": "1949",
-  "hook": "Un roman si puissant que ses mots servent encore à nommer la surveillance et le mensonge d'État.",
-  "image": "/img/courses/1984_george_orwell.webp",
+ "reader": {
+  "id": "course_149_la_joconde",
+  "title": "Pourquoi la Joconde est-elle aussi connue ?",
+  "subtitle": "1503",
+  "hook": "Le tableau le plus regardé de la planète a peut-être été, pour Léonard, un travail secondaire.",
+  "description": "C'est le tableau le plus célèbre du monde. Pourtant, en 1503, son propre auteur avait mieux à faire que le portrait d'une épouse de marchand.",
+  "image": "/img/courses/la_joconde.webp",
+  "subject": "Art",
+  "quizCount": 8,
+  "author": {
+   "name": "Dusan Nikolic",
+   "title": "Historien de l'art, master de l'université de Belgrade",
+   "photo": "/img/authors/author_dusan_nikolic.webp"
+  },
   "paragraphs": [
-   "En **1949**, **George Orwell** publie **1984**, l'une des dystopies les plus lues au monde. Ce n'est pas seulement un roman d'anticipation : c'est un vocabulaire pour parler de l'oppression moderne. **Big Brother**, la **La novlangue (Newspeak)**, le **Ministère de la Vérité** : ces mots ont quitté la fiction pour décrire la réalité politique.",
-   "Orwell écrit ce livre alors qu'il est gravement malade, tuberculeux, sur l'île de Jura en Écosse. Son pessimisme vient d'une expérience concrète de la politique, de la guerre et du mensonge institutionnalisé. **1984** ne prédit pas l'avenir comme un calendrier. Il décrit un mécanisme de domination que l'auteur a observé de près, de l'Espagne républicaine à **Oceania**, l'État fictif où tout est contrôlé."
-  ]
+   "Pour l'un des tableaux les plus célèbres du monde, on sait très peu de choses sûres sur *La Joconde*. Les historiens de l'art s'accordent sur l'essentiel : Léonard de Vinci la peint à Florence entre **1503 et 1506**. En **1517**, il l'emporte avec lui en France, et le panneau finit dans la collection du roi François Ier.",
+   "Le vide historique s'est rempli de légendes. On parle du tableau comme d'une femme, « elle ». Son demi-sourire est dit mystérieux. Après le vol de **1911**, on doute même de son authenticité. Toutes ces histoires ont fait sa gloire, mais elles ont effacé son contexte. Or, à l'époque où Léonard la peint, cette œuvre n'avait peut-être aucune importance à ses yeux."
+  ],
+  "sections": [
+   "Introduction",
+   "Qui est la Joconde ?",
+   "Anghiari : une commande plus prestigieuse",
+   "La fabrique d'une icône",
+   "Un tableau qui a dépassé son auteur"
+  ],
+  "quiz": {
+   "question": "Selon Vasari, qui est le modèle de La Joconde ?",
+   "options": [
+    "Lisa Gherardini, épouse du marchand Francesco del Giocondo",
+    "Une maîtresse de François Ier",
+    "La mère de Léonard de Vinci",
+    "Une princesse de la cour de Milan"
+   ],
+   "correctIndex": 0
+  }
  }
 }

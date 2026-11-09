@@ -1,28 +1,33 @@
 @import "tailwindcss";
 
-/* Palette Sophia : icône (encre + violet), logo (rose), illustrations du site (safran, crème). */
+/*
+ * Direction : une publication éditoriale (façon Substack) habillée aux couleurs de Sophia.
+ * Palette d'Adrien (marine, safran, corail sur crème), titres en Plus Jakarta Sans (police de l'app),
+ * extraits de cours en Newsreader, illustrations = images des cours de l'app.
+ */
 @theme {
-  --color-ink: #0f1729;
-  --color-ink-soft: #3a4560;
+  --color-ink: #16263d;
+  --color-ink-2: #55637a;
+  --color-ink-3: #8f9aab;
+  --color-paper: #ffffff;
   --color-cream: #fbf7ef;
-  --color-paper: #fffdf8;
-  --color-violet: #845eed;
-  --color-violet-soft: #c9b8ff;
-  --color-pink: #ff85b5;
-  --color-pink-soft: #ffd0e3;
-  --color-saffron: #f2b134;
-  --color-saffron-soft: #ffe2a3;
-  --color-sky: #9cc3ff;
-  --color-mint: #a6e3c4;
-  --color-peach: #ffb38a;
+  --color-sand: #f3ecdf;
+  --color-line: #e8e2d6;
   --color-navy: #1a3a6b;
+  --color-navy-deep: #12284b;
+  --color-saffron: #f2b134;
+  --color-saffron-soft: #fde9bd;
+  --color-coral: #e05a3a;
+  --color-coral-soft: #fbdcd3;
+  --color-sky: #2e62c4;
+  --color-sage: #387d5a;
+  --color-sage-soft: #e0ede5;
 
-  --font-display: var(--font-bricolage), ui-sans-serif, system-ui, sans-serif;
   --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-newsreader), Georgia, "Times New Roman", serif;
 
-  --animate-marquee: marquee var(--marquee-duration, 40s) linear infinite;
-  --animate-float: float 6s ease-in-out infinite;
-  --animate-spin-slow: spin 18s linear infinite;
+  --animate-marquee: marquee var(--marquee-duration, 60s) linear infinite;
+  --animate-float: float 7s ease-in-out infinite;
 }
 
 @keyframes marquee {
@@ -32,7 +37,44 @@
 
 @keyframes float {
   0%, 100% { transform: translateY(0) rotate(var(--r, 0deg)); }
-  50% { transform: translateY(-12px) rotate(var(--r, 0deg)); }
+  50% { transform: translateY(-10px) rotate(var(--r, 0deg)); }
+}
+
+/* Séquence d'ouverture en CSS pur : visible même si le JavaScript ne se charge pas. */
+@keyframes rise {
+  from { transform: translateY(105%); }
+  to { transform: translateY(0); }
+}
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes draw {
+  from { stroke-dashoffset: 1; }
+  to { stroke-dashoffset: 0; }
+}
+
+.rise-line {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+  padding-bottom: 0.08em;
+  margin-bottom: -0.08em;
+}
+.rise-line > span {
+  display: inline-block;
+  animation: rise 900ms cubic-bezier(.2,.8,.2,1) both;
+  animation-delay: var(--d, 0ms);
+}
+.fade-up {
+  animation: fade-up 800ms cubic-bezier(.2,.8,.2,1) both;
+  animation-delay: var(--d, 0ms);
+}
+.draw path {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: draw 900ms cubic-bezier(.6,0,.2,1) forwards;
+  animation-delay: var(--d, 900ms);
 }
 
 html {
@@ -40,66 +82,53 @@ html {
 }
 
 body {
-  background: var(--color-cream);
+  background: var(--color-paper);
   color: var(--color-ink);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3 {
+  text-wrap: balance;
 }
 
 ::selection {
-  background: var(--color-saffron);
+  background: var(--color-saffron-soft);
   color: var(--color-ink);
 }
 
-/* Bloc « néo-brutal » : bord noir épais + ombre dure décalée. */
-@utility brutal {
-  border: 2.5px solid var(--color-ink);
-  box-shadow: 5px 5px 0 0 var(--color-ink);
-}
-@utility brutal-sm {
-  border: 2px solid var(--color-ink);
-  box-shadow: 3px 3px 0 0 var(--color-ink);
-}
-@utility brutal-lg {
-  border: 3px solid var(--color-ink);
-  box-shadow: 8px 8px 0 0 var(--color-ink);
+:focus-visible {
+  outline: 3px solid var(--color-sky);
+  outline-offset: 3px;
+  border-radius: 8px;
 }
 
-/* Bouton qui « s'enfonce » au survol. */
-@utility press {
-  transition: transform 150ms ease, box-shadow 150ms ease;
-  &:hover {
-    transform: translate(2px, 2px);
-    box-shadow: 2px 2px 0 0 var(--color-ink);
-  }
-  &:active {
-    transform: translate(4px, 4px);
-    box-shadow: 0 0 0 0 var(--color-ink);
-  }
+/* Lettrine des extraits de cours. */
+.drop-cap::first-letter {
+  float: left;
+  font-family: var(--font-serif);
+  font-size: 3.4em;
+  line-height: 0.82;
+  font-weight: 600;
+  padding: 0.06em 0.1em 0 0;
+  color: var(--color-navy);
 }
 
-/* Fond quadrillé discret, comme du papier de cahier. */
-@utility grid-paper {
-  background-image:
-    linear-gradient(to right, color-mix(in srgb, var(--color-ink) 7%, transparent) 1px, transparent 1px),
-    linear-gradient(to bottom, color-mix(in srgb, var(--color-ink) 7%, transparent) 1px, transparent 1px);
-  background-size: 28px 28px;
-}
-
-/* Apparition au défilement (voir components/Reveal.tsx). */
-.reveal {
-  opacity: 0;
-  transform: translateY(28px);
-  transition: opacity 700ms cubic-bezier(.2,.7,.2,1), transform 700ms cubic-bezier(.2,.7,.2,1);
-  transition-delay: var(--delay, 0ms);
-}
-.reveal.is-visible {
-  opacity: 1;
-  transform: none;
+@utility eyebrow {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-sky);
 }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .reveal { opacity: 1; transform: none; transition: none; }
-  *, *::before, *::after { animation: none !important; }
+  *, *::before, *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+  }
+  .animate-marquee { animation: none !important; }
 }

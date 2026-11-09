@@ -3,6 +3,7 @@ import data from "@/data/site.json";
 export type Course = (typeof data.subjects)[number]["courses"][number];
 export type Subject = (typeof data.subjects)[number];
 export type QuizQuestion = (typeof data.quiz)[number];
+export type Creator = (typeof data.creators)[number];
 
 export const site = data;
 
@@ -17,9 +18,7 @@ export const links = {
   playStore:
     process.env.NEXT_PUBLIC_PLAY_STORE_URL ??
     "https://play.google.com/store/apps/details?id=app.rork.sophia",
-  /** Candidatures profs / créateurs (site actuel). */
+  /** Candidatures auteurs (site actuel). */
   writeForUs: process.env.NEXT_PUBLIC_WRITE_URL ?? "https://sophia-culture.com",
   support: "http://vikstudios.com",
 };
-
-export const fr = (n: number) => n.toLocaleString("fr-FR");

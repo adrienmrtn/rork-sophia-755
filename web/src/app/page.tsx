@@ -1,15 +1,14 @@
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
-import { Stats } from "@/components/Stats";
-import { SubjectExplorer } from "@/components/SubjectExplorer";
-import { Method } from "@/components/Method";
+import { Proof } from "@/components/Proof";
+import { Feed } from "@/components/Feed";
+import { ReaderStory } from "@/components/ReaderStory";
 import { Blocker } from "@/components/Blocker";
 import { QuizDemo } from "@/components/QuizDemo";
 import { Collections } from "@/components/Collections";
-import { Profs } from "@/components/Profs";
-import { Testimonials } from "@/components/Testimonials";
-import { Faq } from "@/components/Faq";
-import { FinalCta, Footer } from "@/components/Footer";
+import { Authors } from "@/components/Authors";
+import { Premium } from "@/components/Premium";
+import { Faq, FinalCta, Footer, Testimonials } from "@/components/Closing";
 
 export default function Home() {
   return (
@@ -17,13 +16,14 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <Stats />
-        <SubjectExplorer />
-        <Method />
+        <Proof />
+        <Feed />
+        <ReaderStory />
         <Blocker />
         <QuizDemo />
         <Collections />
-        <Profs />
+        <Authors />
+        <Premium />
         <Testimonials />
         <Faq />
         <FinalCta />

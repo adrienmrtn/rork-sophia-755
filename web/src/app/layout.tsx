@@ -1,18 +1,19 @@
 import type { Metadata, Viewport } from "next";
-import { Bricolage_Grotesque, Plus_Jakarta_Sans } from "next/font/google";
+import { Newsreader, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
-
-const bricolage = Bricolage_Grotesque({
-  subsets: ["latin"],
-  variable: "--font-bricolage",
-  weight: ["600", "700", "800"],
-  display: "swap",
-});
 
 const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
   variable: "--font-jakarta",
   weight: ["400", "500", "600", "700", "800"],
+  display: "swap",
+});
+
+const newsreader = Newsreader({
+  subsets: ["latin"],
+  variable: "--font-newsreader",
+  weight: ["400", "500", "600"],
+  style: ["normal", "italic"],
   display: "swap",
 });
 
@@ -22,11 +23,10 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: "Sophia : moins de scroll, plus de culture",
   description:
-    "Des cours de 10 minutes écrits par des profs, un quiz pour que ça reste et un bloqueur d'apps pour tenir le rythme. Histoire, sciences, littérature, art, mythologie et géopolitique.",
+    "Chaque jour, un cours de 10 minutes écrit par un spécialiste, un quiz pour retenir l'essentiel, et un bloqueur d'apps pour tenir le rythme.",
   openGraph: {
     title: "Sophia : moins de scroll, plus de culture",
-    description:
-      "10 minutes par jour pour comprendre le monde. Des cours écrits par des profs, des quiz, et un bloqueur d'apps.",
+    description: "Chaque jour, un cours de 10 minutes écrit par un spécialiste. Histoire, sciences, littérature, art, mythologie, géopolitique.",
     locale: "fr_FR",
     type: "website",
     images: ["/img/collections/collection_l_epopee_d_ulysse.webp"],
@@ -34,12 +34,12 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#845eed",
+  themeColor: "#fbf7ef",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="fr" className={`${bricolage.variable} ${jakarta.variable}`}>
+    <html lang="fr" className={`${jakarta.variable} ${newsreader.variable}`}>
       <body>{children}</body>
     </html>
   );
