@@ -1,8 +1,9 @@
 import SwiftUI
 
-/// La page d'un événement : en-tête, défi avec barre et badge, les cours de la collection,
-/// les cours en écriture avec « Me prévenir », et l'appel aux créateurs. Les données viennent
-/// de `CampaignStore` (JSON de test embarqué, serveur au prompt 6).
+/// La page d'un événement : en-tête (image si l'équipe en a posé une, dates, titre, participants,
+/// objectif commun), défi avec barre et badge, les cours de la collection, les cours en écriture
+/// avec « Me prévenir », et l'appel aux créateurs. Les données viennent de `CampaignStore`, donc
+/// du manifeste du catalogue (docs/evenements.md).
 struct EventPageView: View {
     @Environment(LanguageManager.self) private var languageManager
     @Environment(\.dismiss) private var dismiss
@@ -71,6 +72,13 @@ struct EventPageView: View {
 
     private var hero: some View {
         VStack(alignment: .leading, spacing: 14) {
+            if let imageUrl = campaign.imageUrl {
+                RemoteImage(url: imageUrl)
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 180)
+                    .background(Color.white.opacity(0.08))
+                    .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
+            }
             HStack(alignment: .center) {
                 Image(systemName: campaign.symbol ?? "sparkles")
                     .font(.system(size: 36, weight: .semibold))
@@ -98,6 +106,25 @@ struct EventPageView: View {
             Text(String(format: languageManager.text("event.participants"), participantsText))
                 .font(DS.sans(.subheadline, .semibold))
                 .foregroundStyle(.white.opacity(0.9))
+            if let goal = campaign.goalTarget, goal > 0 {
+                let read = campaign.goalCount ?? 0
+                VStack(alignment: .leading, spacing: 6) {
+                    GeometryReader { geo in
+                        ZStack(alignment: .leading) {
+                            Capsule().fill(.white.opacity(0.2))
+                            Capsule()
+                                .fill(.white)
+                                .frame(width: geo.size.width * CGFloat(min(1, Double(read) / Double(goal))))
+                        }
+                    }
+                    .frame(height: 6)
+                    Text(String(format: languageManager.text("event.goal.progress"), read.formatted(language: language), goal.formatted(language: language)))
+                        .font(DS.sans(.footnote, .semibold))
+                        .foregroundStyle(.white.opacity(0.9))
+                        .monospacedDigit()
+                }
+                .padding(.top, 2)
+            }
         }
         .padding(22)
         .frame(maxWidth: .infinity, alignment: .leading)

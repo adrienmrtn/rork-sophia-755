@@ -59,6 +59,12 @@ describe("campaignFromForm", () => {
     expect(c.course_ids).toEqual(["course_1_a"]);
   });
 
+  it("reads the common goal, empty meaning none", () => {
+    expect(campaignFromForm(form({ starts_at: "2026-01-01", ends_at: "2026-01-05", goal_target: "10 000" }), null).goal_target).toBe(10000);
+    expect(campaignFromForm(form({ starts_at: "2026-01-01", ends_at: "2026-01-05", goal_target: "" }), null).goal_target).toBeNull();
+    expect(campaignFromForm(form({ starts_at: "2026-01-01", ends_at: "2026-01-05", goal_target: "0" }), null).goal_target).toBeNull();
+  });
+
   it("ignores an unknown symbol or kind and keeps the previous one", () => {
     const c = campaignFromForm(form({ kind: "party", symbol: "poop", status: "secret", starts_at: "2026-01-01", ends_at: "2026-01-02" }), movember());
     expect(c.kind).toBe("month");
@@ -103,12 +109,15 @@ describe("languages and phase", () => {
   });
 
   it("reads a table row defensively", () => {
-    const c = campaignFromRow({ slug: "x-1", kind: "nope", status: "published", symbol: "atom", starts_at: "2026-01-01T00:00:00", ends_at: "2026-01-05", challenge_target: "2", course_ids: ["a"], upcoming: [{ title: { en: "T" }, creator: "", date: "2026-01-03" }], title: { en: "X", bad: 3 } });
+    const c = campaignFromRow({ slug: "x-1", kind: "nope", status: "published", symbol: "atom", image_url: "http://insecure/x.jpg", goal_target: "500", goal_count: 42, starts_at: "2026-01-01T00:00:00", ends_at: "2026-01-05", challenge_target: "2", course_ids: ["a"], upcoming: [{ title: { en: "T" }, creator: "", date: "2026-01-03" }], title: { en: "X", bad: 3 } });
     expect(c.kind).toBe("month");
     expect(c.symbol).toBe("atom");
     expect(c.starts_at).toBe("2026-01-01");
     expect(c.challenge_target).toBe(2);
     expect(c.upcoming[0].creator).toBeNull();
     expect(c.title).toEqual({ en: "X" });
+    expect(c.image_url).toBeNull();
+    expect(c.goal_target).toBe(500);
+    expect(c.goal_count).toBe(42);
   });
 });

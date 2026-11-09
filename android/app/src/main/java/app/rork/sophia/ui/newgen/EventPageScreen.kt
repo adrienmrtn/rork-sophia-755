@@ -28,6 +28,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
@@ -48,6 +49,7 @@ import app.rork.sophia.ui.components.sophiaCard
 import app.rork.sophia.ui.course.AuthorAvatar
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
+import coil.compose.AsyncImage
 
 /**
  * La page d'un événement : en-tête, défi avec barre et badge, les cours de la collection,
@@ -94,6 +96,18 @@ fun EventPageScreen(
                 .padding(22.dp),
             verticalArrangement = Arrangement.spacedBy(14.dp),
         ) {
+            campaign.imageUrl?.let { url ->
+                AsyncImage(
+                    model = url,
+                    contentDescription = null,
+                    contentScale = ContentScale.Crop,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(180.dp)
+                        .clip(RoundedCornerShape(14.dp))
+                        .background(Color.White.copy(alpha = 0.08f)),
+                )
+            }
             Row(modifier = Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
                 CampaignSymbol(symbol = campaign.symbol, size = 44.dp, tint = DS.warm)
                 Spacer(Modifier.weight(1f))
@@ -144,6 +158,34 @@ fun EventPageScreen(
                 fontSize = 15.sp,
                 color = Color.White.copy(alpha = 0.9f),
             )
+            // L'objectif commun : tous les lecteurs ensemble, chiffre recalculé par le serveur.
+            val goalTarget = campaign.goalTarget
+            if (goalTarget != null && goalTarget > 0) {
+                Column(verticalArrangement = Arrangement.spacedBy(6.dp), modifier = Modifier.padding(top = 2.dp)) {
+                    Box(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(6.dp)
+                            .clip(CircleShape)
+                            .background(Color.White.copy(alpha = 0.2f)),
+                    ) {
+                        Box(
+                            modifier = Modifier
+                                .fillMaxWidth((campaign.goalCount.toFloat() / goalTarget).coerceIn(0f, 1f))
+                                .height(6.dp)
+                                .clip(CircleShape)
+                                .background(Color.White),
+                        )
+                    }
+                    Text(
+                        text = StringStore.text(context, "event.goal.progress", language, campaign.goalCount.formatted(language), goalTarget.formatted(language)),
+                        fontFamily = PlusJakartaSans,
+                        fontWeight = FontWeight.SemiBold,
+                        fontSize = 13.sp,
+                        color = Color.White.copy(alpha = 0.9f),
+                    )
+                }
+            }
         }
 
         // Le défi et son badge.

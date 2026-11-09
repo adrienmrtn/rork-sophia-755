@@ -204,7 +204,8 @@ struct CourseFeedCard: View {
 
 // MARK: - Carte événement
 
-/// L'événement dans le fil : fond bleu nuit, symbole or, trois couvertures, barre du défi.
+/// L'événement dans le fil : fond bleu nuit, image si l'équipe en a posé une, symbole or, trois
+/// couvertures, barre du défi, et la barre de l'objectif commun quand il y en a un.
 struct EventFeedCard: View {
     @Environment(LanguageManager.self) private var languageManager
     let campaign: Campaign
@@ -221,6 +222,13 @@ struct EventFeedCard: View {
         let language = languageManager.current
         let done = CampaignStore.challengeProgress(for: campaign, progressManager: progressManager)
         VStack(alignment: .leading, spacing: 14) {
+            if let imageUrl = campaign.imageUrl {
+                RemoteImage(url: imageUrl)
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 140)
+                    .background(Color.white.opacity(0.08))
+                    .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
+            }
             HStack(alignment: .center) {
                 Image(systemName: campaign.symbol ?? "sparkles")
                     .font(.system(size: 28, weight: .semibold))
@@ -276,6 +284,28 @@ struct EventFeedCard: View {
                     .foregroundStyle(.white)
                     .monospacedDigit()
                     .fixedSize()
+            }
+
+            // L'objectif commun : tous les lecteurs ensemble, chiffre recalculé par le serveur.
+            if let goal = campaign.goalTarget, goal > 0 {
+                let read = campaign.goalCount ?? 0
+                HStack(spacing: 12) {
+                    GeometryReader { geo in
+                        ZStack(alignment: .leading) {
+                            Capsule().fill(.white.opacity(0.2))
+                            Capsule()
+                                .fill(.white)
+                                .frame(width: geo.size.width * CGFloat(min(1, Double(read) / Double(goal))))
+                        }
+                    }
+                    .frame(height: 6)
+                    Text(String(format: AppLocalizable.string("event.goal.progress", language: language), read.formatted(language: language), goal.formatted(language: language)))
+                        .font(DS.sans(.caption, .semibold))
+                        .foregroundStyle(.white.opacity(0.9))
+                        .monospacedDigit()
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.8)
+                }
             }
 
             if fillsPage { Spacer(minLength: 0) }

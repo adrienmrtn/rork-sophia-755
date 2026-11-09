@@ -92,3 +92,15 @@ export async function storeCovers(draftId: string, urls: string[]): Promise<stri
   );
   return stored.filter(Boolean);
 }
+
+/** Copie une image distante dans le bucket public course-images, à ce chemin ; rend son adresse publique.
+ *  Sert aux images d'événement générées (events/<slug>_ai_<horodatage>.jpg). */
+export async function storeImageAt(path: string, url: string, contentType = "image/jpeg"): Promise<string> {
+  const admin = createAdminClient();
+  const res = await fetch(url, { cache: "no-store" });
+  if (!res.ok) throw new Error(`Could not download the generated image (${res.status}).`);
+  const bytes = new Uint8Array(await res.arrayBuffer());
+  const { error } = await admin.storage.from("course-images").upload(path, bytes, { contentType, upsert: true, cacheControl: "31536000" });
+  if (error) throw new Error(`Could not store the image: ${error.message}`);
+  return `${STORAGE_PUBLIC}/course-images/${path}`;
+}
