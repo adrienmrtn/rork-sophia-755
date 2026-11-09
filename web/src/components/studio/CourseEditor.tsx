@@ -8,8 +8,8 @@ import { renderInline, countWords } from "@/lib/catalog/inline";
 import { SUBJECTS, type Block, type Credit, type Section } from "@/lib/catalog/types";
 import { SUBJECT_LABEL } from "@/lib/catalog/slugs";
 import { s } from "@/lib/copy/studio-en";
-import { BLOCK_LABEL, BLOCK_TYPES, CLASSIFICATIONS, CLASSIFICATION_LABEL, citedTerms, courseWords, emptyBlock, validateCourse, type BlockType, type DraftCourse, type Finding } from "@/lib/studio/course-format";
-import { saveDraft, submitDraft } from "@/app/studio/courses/[id]/actions";
+import { BLOCK_LABEL, BLOCK_TYPES, CLASSIFICATIONS, CLASSIFICATION_LABEL, COVER_CREDIT, MAX_COVER_GENERATIONS, citedTerms, courseWords, emptyBlock, validateCourse, type BlockType, type DraftCourse, type Finding, type Hero } from "@/lib/studio/course-format";
+import { generateCovers, saveDraft, submitDraft } from "@/app/studio/courses/[id]/actions";
 import type { CommonsImage } from "@/app/api/commons/search/route";
 
 /** L'éditeur de cours : le plan à gauche, le contenu par blocs au centre, les vérifications,
@@ -191,9 +191,16 @@ export function CourseEditor({ draftId, initial, status, reviewComment, updatedA
   }
 
   // ----- envoi
-  const canSubmit = errorCount === 0 && blockers.length === 0 && !pending && save.kind !== "saving";
+  const coverMissing = !course.hero.image_url && !course.hero.image;
+  const onlyCoverMissing = errorCount === 1 && findings.some((f) => f.severity === "error" && f.path === "hero");
+  const canSubmit = (errorCount === 0 || onlyCoverMissing) && blockers.length === 0 && !pending && save.kind !== "saving";
   function submit() {
     setSubmitError(null);
+    if (coverMissing) {
+      jumpTo("hero");
+      setSubmitError("Choose a cover first: generate three from the title and pick one.");
+      return;
+    }
     if (!window.confirm("Send this course to the Sophia team for review? You will not be able to edit it until they answer.")) return;
     startTransition(async () => {
       if (timer.current) clearTimeout(timer.current);
@@ -223,7 +230,7 @@ export function CourseEditor({ draftId, initial, status, reviewComment, updatedA
             {save.kind === "saved" ? `Saved · ${timeOf(save.at)}` : save.kind === "saving" ? "Saving…" : save.kind === "dirty" ? "Unsaved changes" : `Not saved: ${save.message}`}
           </span>
           <button type="button" onClick={submit} disabled={!canSubmit} title={blockers[0] ?? (errorCount ? `${errorCount} problems to fix first` : "")} className="inline-flex h-10 items-center rounded-xl bg-navy px-4 text-[14px] font-bold text-white hover:bg-ink disabled:cursor-not-allowed disabled:opacity-40">
-            {pending ? "Sending…" : status === "changes_requested" ? "Send again" : "Send for review"}
+            {pending ? "Sending…" : coverMissing && onlyCoverMissing ? "Choose a cover and send" : status === "changes_requested" ? "Send again" : "Send for review"}
           </button>
         </div>
       </header>
@@ -306,33 +313,21 @@ export function CourseEditor({ draftId, initial, status, reviewComment, updatedA
               </span>
               <textarea value={course.description} onChange={(e) => update((c) => ({ ...c, description: e.target.value }))} rows={3} maxLength={600} placeholder="Two or three sentences that make a reader open the course." className={textarea} />
             </label>
-            <div id="hero" className={`flex flex-wrap items-start gap-4 rounded-2xl bg-paper p-4 ${flashClass("hero")}`}>
-              {course.hero.image_url || course.hero.image ? (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img src={course.hero.image_url ?? `https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/${course.hero.image}.jpg`} alt="" className="h-28 w-44 shrink-0 rounded-xl object-cover" />
-              ) : (
-                <div className="flex h-28 w-44 shrink-0 items-center justify-center rounded-xl border border-dashed border-line-2 text-[12px] font-semibold text-muted">No cover</div>
-              )}
-              <div className="flex min-w-[220px] flex-1 flex-col gap-2">
-                <strong className="text-[13px] font-bold text-ink-2">Cover image</strong>
-                {course.hero.credit && (course.hero.credit.author || course.hero.credit.title) && (
-                  <span className="text-[12px] text-ink-3">
-                    {[course.hero.credit.title, course.hero.credit.author, course.hero.credit.license].filter(Boolean).join(" · ")}
-                  </span>
-                )}
-                <input value={course.hero.hook ?? ""} onChange={(e) => update((c) => ({ ...c, hero: { ...c.hero, hook: e.target.value || undefined } }))} placeholder="One-line hook shown over the cover (optional, 200 characters)" maxLength={200} className={small} />
-                <div className="flex flex-wrap gap-2">
-                  <button type="button" onClick={() => { setTarget({ kind: "cover" }); setTab("images"); }} className="rounded-lg border border-line bg-white px-3 py-1.5 text-[13px] font-bold text-navy hover:bg-tint">
-                    {course.hero.image_url || course.hero.image ? "Replace" : "Choose from Commons"}
-                  </button>
-                  {(course.hero.image_url || course.hero.image) && (
-                    <button type="button" onClick={() => update((c) => ({ ...c, hero: { ratio: c.hero.ratio, hook: c.hero.hook } }))} className="rounded-lg px-3 py-1.5 text-[13px] font-bold text-red hover:bg-red-bg">
-                      Remove
-                    </button>
-                  )}
-                </div>
-              </div>
-            </div>
+            <label className={label}>
+              Hook over the cover (optional)
+              <input value={course.hero.hook ?? ""} onChange={(e) => update((c) => ({ ...c, hero: { ...c.hero, hook: e.target.value || undefined } }))} placeholder="One line shown over the cover, 200 characters at most" maxLength={200} className={input} />
+            </label>
+            <CoverPicker
+              hero={course.hero}
+              flash={flash === "hero"}
+              onGenerate={async () => {
+                const res = await generateCovers(draftId, latest.current);
+                if (res.ok) update((c) => ({ ...c, hero: { ...c.hero, candidates: [...(c.hero.candidates ?? []), ...res.candidates.map((url) => ({ url }))].slice(-9), generations: (c.hero.generations ?? 0) + 1, prompt: res.prompt } }));
+                return res;
+              }}
+              onChoose={(url) => update((c) => ({ ...c, hero: { ...c.hero, image_url: url, image: undefined, credit: { ...COVER_CREDIT } } }))}
+              onClear={() => update((c) => ({ ...c, hero: { ...c.hero, image_url: undefined, image: undefined, credit: undefined } }))}
+            />
           </section>
 
           {/* Sections */}
@@ -672,6 +667,89 @@ function PreviewPanel({ course, originLang }: { course: DraftCourse; originLang:
           </section>
         ))}
       </div>
+    </div>
+  );
+}
+
+// ------------------------------------------------------------------ la couverture
+
+function CoverPicker({ hero, flash, onGenerate, onChoose, onClear }: { hero: Hero; flash: boolean; onGenerate: () => Promise<{ ok: true } | { ok: false; error: string }>; onChoose: (url: string) => void; onClear: () => void }) {
+  const [busy, setBusy] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const candidates = hero.candidates ?? [];
+  const generations = hero.generations ?? 0;
+  const chosen = hero.image_url ?? (hero.image ? `https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/${hero.image}.jpg` : null);
+  const exhausted = generations >= MAX_COVER_GENERATIONS;
+  async function generate() {
+    setBusy(true);
+    setError(null);
+    const res = await onGenerate();
+    if (!res.ok) setError(res.error);
+    setBusy(false);
+  }
+  return (
+    <div id="hero" className={`flex flex-col gap-3 rounded-2xl bg-paper p-4 ${flash ? "ring-2 ring-blue ring-offset-2" : ""}`}>
+      <div className="flex flex-wrap items-start justify-between gap-3">
+        <div className="flex flex-col gap-0.5">
+          <strong className="text-[13px] font-bold text-ink-2">Cover</strong>
+          <span className="text-[12px] text-ink-3">Drawn from the title, 16:9. Generate three, pick one before sending. {MAX_COVER_GENERATIONS} rounds per course.</span>
+        </div>
+        <div className="flex flex-wrap gap-2">
+          <button type="button" onClick={generate} disabled={busy || exhausted} className="inline-flex h-9 items-center gap-2 rounded-full bg-navy px-3.5 text-[13px] font-bold text-white hover:bg-ink disabled:opacity-50">
+            {busy ? (
+              <>
+                <span aria-hidden="true" className="h-3.5 w-3.5 animate-spin rounded-full border-2 border-white/40 border-t-white" /> Drawing…
+              </>
+            ) : candidates.length === 0 ? (
+              "Generate 3 covers"
+            ) : exhausted ? (
+              `${MAX_COVER_GENERATIONS} rounds used`
+            ) : (
+              `Generate 3 more (${MAX_COVER_GENERATIONS - generations} left)`
+            )}
+          </button>
+          {chosen && (
+            <button type="button" onClick={onClear} className="rounded-full px-3 py-1.5 text-[13px] font-bold text-red hover:bg-red-bg">
+              Clear choice
+            </button>
+          )}
+        </div>
+      </div>
+      {error && (
+        <p role="alert" className="rounded-xl bg-red-bg px-3 py-2 text-[13px] font-semibold text-red">
+          {error}
+        </p>
+      )}
+      {candidates.length === 0 && !chosen && !busy && <div className="flex aspect-[16/6] w-full items-center justify-center rounded-xl border border-dashed border-line-2 text-[13px] font-semibold text-muted">No cover yet</div>}
+      {busy && candidates.length === 0 && (
+        <div className="grid grid-cols-3 gap-3">
+          {[0, 1, 2].map((i) => (
+            <div key={i} className="aspect-video animate-pulse rounded-xl bg-tint" />
+          ))}
+        </div>
+      )}
+      {(candidates.length > 0 || chosen) && (
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+          {chosen && !candidates.some((c) => c.url === chosen) && (
+            <figure className="relative overflow-hidden rounded-xl ring-2 ring-navy ring-offset-2">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={chosen} alt="" className="aspect-video w-full object-cover" />
+              <figcaption className="absolute left-2 top-2 rounded-full bg-navy px-2 py-0.5 text-[11px] font-bold text-white">Chosen</figcaption>
+            </figure>
+          )}
+          {candidates.map((c, i) => {
+            const selected = c.url === chosen;
+            return (
+              <button key={`${c.url}-${i}`} type="button" onClick={() => onChoose(c.url)} aria-pressed={selected} className={`group relative overflow-hidden rounded-xl text-left transition ${selected ? "ring-2 ring-navy ring-offset-2" : "hover:ring-2 hover:ring-blue/40 hover:ring-offset-2"}`}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={c.url} alt="" className="aspect-video w-full object-cover" />
+                <span className={`absolute left-2 top-2 rounded-full px-2 py-0.5 text-[11px] font-bold ${selected ? "bg-navy text-white" : "bg-white/90 text-ink-2 opacity-0 transition-opacity group-hover:opacity-100"}`}>{selected ? "Chosen" : "Choose"}</span>
+              </button>
+            );
+          })}
+        </div>
+      )}
+      {chosen && <span className="text-[12px] text-muted">Credit: {[hero.credit?.author, hero.credit?.license].filter(Boolean).join(" · ") || "Sophia"}</span>}
     </div>
   );
 }

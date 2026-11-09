@@ -27,7 +27,21 @@ export const BLOCK_LABEL: Record<BlockType, string> = {
   quote: "Quote",
 };
 
-export type Hero = { image?: string; image_url?: string; ratio?: string; hook?: string; credit?: { title?: string; author?: string; license?: string; source?: string } };
+export type Hero = {
+  image?: string;
+  image_url?: string;
+  ratio?: string;
+  hook?: string;
+  credit?: { title?: string; author?: string; license?: string; source?: string };
+  /** Les couvertures générées parmi lesquelles choisir (adresses publiques), et le nombre de tirages. */
+  candidates?: { url: string }[];
+  generations?: number;
+  prompt?: string;
+};
+
+/** Le crédit d'une couverture générée pour Sophia. */
+export const COVER_CREDIT = { author: "Sophia", license: "Illustration generated for Sophia", source: "Sophia" } as const;
+export const MAX_COVER_GENERATIONS = 3;
 
 /** Un cours tel qu'il vit dans studio_drafts (les colonnes éditables). */
 export interface DraftCourse {
@@ -116,7 +130,7 @@ export function validateCourse(course: DraftCourse): Finding[] {
   const hero = course.hero ?? {};
   if (hero.image !== undefined && hero.image !== "" && !ASSET.test(hero.image)) out.push({ severity: "error", path: "hero", message: "Cover slug: lowercase letters, digits and underscores." });
   if (hero.image_url && !HTTPS.test(hero.image_url)) out.push({ severity: "error", path: "hero", message: "Cover image: an https URL." });
-  if (!hero.image && !hero.image_url) out.push({ severity: "warning", path: "hero", message: "No cover image yet. Pick one from Wikimedia Commons; the team can also add one." });
+  if (!hero.image && !hero.image_url) out.push({ severity: "error", path: "hero", message: "Choose a cover before sending: generate three from the title and pick one." });
   if (hero.hook) checkText(hero.hook, "hero.hook", out, 200);
 
   const sections = course.sections ?? [];
@@ -164,7 +178,7 @@ export function validateCourse(course: DraftCourse): Finding[] {
   });
   if (takeaways > 1) out.push({ severity: "error", path: "sections", message: "Only one key takeaway, at the end of the course." });
   if (sections.length >= 2 && takeaways === 0) out.push({ severity: "warning", path: "sections", message: "No key takeaway yet. Readers remember a course that ends with one." });
-  if (sections.length >= 2 && images === 0 && !hero.image && !hero.image_url) out.push({ severity: "warning", path: "sections", message: "No image in the course. One or two well-chosen pictures help." });
+  if (sections.length >= 2 && images === 0) out.push({ severity: "warning", path: "sections", message: "No image in the text. One or two well-chosen pictures from Commons help." });
 
   (course.sources ?? []).forEach((source, i) => {
     if (len(source.text) < 3) out.push({ severity: "error", path: `sources[${i}]`, message: `Source ${i + 1}: a reference of 3 to 400 characters.` });

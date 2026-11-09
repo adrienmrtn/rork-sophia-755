@@ -91,6 +91,7 @@ Variables d'environnement (Vercel → Settings → Environment Variables) :
 | `NEXT_PUBLIC_SITE_URL` | `https://sophia-culture.com` (production) | oui |
 | `SUPABASE_SECRET_KEY` | Supabase → Settings → API Keys → Secret keys (`sb_secret_…`, pleins droits ; l'ancienne `SUPABASE_SERVICE_ROLE_KEY` est acceptée) | **à poser** |
 | `PUBLISH_API_KEY` | la même chaîne que le secret de l'Edge Function `publish-course` | **à poser** |
+| `FAL_KEY` | la clé fal.ai (la même que le secret GitHub de l'usine d'images) : couvertures générées dans l'éditeur | **à poser** |
 | `NEXT_PUBLIC_APP_STORE_URL`, `NEXT_PUBLIC_PLAY_STORE_URL` | facultatif, les liens des fiches | |
 
 Sans `SUPABASE_SECRET_KEY` et `PUBLISH_API_KEY`, tout fonctionne sauf « Accepter et lancer
