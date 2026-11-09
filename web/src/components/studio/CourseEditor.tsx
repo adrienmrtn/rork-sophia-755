@@ -5,8 +5,9 @@ import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useMemo, useRef, useState, useTransition } from "react";
 import { BlockView } from "@/components/CourseBlocks";
 import { renderInline, countWords } from "@/lib/catalog/inline";
-import { SUBJECTS, type Block, type Credit, type Section } from "@/lib/catalog/types";
+import { LANGS, SUBJECTS, type Block, type Credit, type Section } from "@/lib/catalog/types";
 import { SUBJECT_LABEL } from "@/lib/catalog/slugs";
+import { LANG_NAMES } from "@/lib/catalog/lang-names";
 import { s } from "@/lib/copy/studio-en";
 import { BLOCK_LABEL, BLOCK_TYPES, CLASSIFICATIONS, CLASSIFICATION_LABEL, COVER_CREDIT, MAX_COVER_GENERATIONS, citedTerms, courseWords, emptyBlock, validateCourse, type BlockType, type DraftCourse, type Finding, type Hero } from "@/lib/studio/course-format";
 import { generateCovers, saveDraft, submitDraft } from "@/app/studio/courses/[id]/actions";
@@ -66,8 +67,12 @@ export function CourseEditor({ draftId, initial, status, reviewComment, updatedA
   const [submitError, setSubmitError] = useState<string | null>(null);
   const [flash, setFlash] = useState<string | null>(null);
   const [pending, startTransition] = useTransition();
+  const [lang, setLang] = useState(originLang);
+  const langRef = useRef(originLang);
   const latest = useRef(course);
   const dirty = useRef(false);
+  /** Ce qui part au serveur : le cours et sa langue d'écriture. */
+  const payload = () => ({ ...latest.current, origin_lang: langRef.current });
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const findings = useMemo(() => validateCourse(course), [course]);
@@ -82,7 +87,7 @@ export function CourseEditor({ draftId, initial, status, reviewComment, updatedA
     if (!dirty.current) return;
     dirty.current = false;
     setSave({ kind: "saving" });
-    const res = await saveDraft(draftId, latest.current);
+    const res = await saveDraft(draftId, payload());
     if (res.ok) setSave(dirty.current ? { kind: "dirty" } : { kind: "saved", at: res.updatedAt });
     else {
       dirty.current = true;
@@ -205,7 +210,7 @@ export function CourseEditor({ draftId, initial, status, reviewComment, updatedA
     startTransition(async () => {
       if (timer.current) clearTimeout(timer.current);
       dirty.current = true;
-      const res = await submitDraft(draftId, latest.current);
+      const res = await submitDraft(draftId, payload());
       if (res.ok) router.push(`/studio/courses/${draftId}/status`);
       else setSubmitError(res.error);
     });
@@ -290,7 +295,25 @@ export function CourseEditor({ draftId, initial, status, reviewComment, updatedA
               <input value={course.title} onChange={(e) => update((c) => ({ ...c, title: e.target.value }))} placeholder="Course title" maxLength={160} className="w-full border-0 bg-transparent text-[30px] font-extrabold tracking-[-0.7px] text-ink outline-none placeholder:text-line-2" />
               <input value={course.subtitle ?? ""} onChange={(e) => update((c) => ({ ...c, subtitle: e.target.value || null }))} placeholder="Subtitle, a date or a place (optional)" maxLength={80} className="w-full border-0 bg-transparent text-[16px] font-semibold text-ink-3 outline-none placeholder:text-line-2" />
             </div>
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+              <label className={label}>
+                Written in
+                <select
+                  value={lang}
+                  onChange={(e) => {
+                    setLang(e.target.value);
+                    langRef.current = e.target.value;
+                    update((c) => c);
+                  }}
+                  className={input}
+                >
+                  {LANGS.map((l) => (
+                    <option key={l} value={l}>
+                      {LANG_NAMES[l] ?? l}
+                    </option>
+                  ))}
+                </select>
+              </label>
               <label className={label}>
                 Subject
                 <select value={course.subject ?? ""} onChange={(e) => update((c) => ({ ...c, subject: e.target.value || null }))} className={input}>
@@ -321,7 +344,7 @@ export function CourseEditor({ draftId, initial, status, reviewComment, updatedA
               hero={course.hero}
               flash={flash === "hero"}
               onGenerate={async () => {
-                const res = await generateCovers(draftId, latest.current);
+                const res = await generateCovers(draftId, payload());
                 if (res.ok) update((c) => ({ ...c, hero: { ...c.hero, candidates: [...(c.hero.candidates ?? []), ...res.candidates.map((url) => ({ url }))].slice(-9), generations: (c.hero.generations ?? 0) + 1, prompt: res.prompt } }));
                 return res;
               }}

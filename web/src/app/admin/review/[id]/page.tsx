@@ -30,6 +30,13 @@ export default async function ReviewPage({ params, searchParams }: PageProps<"/a
   if (!draft) notFound();
   const [{ data: accountRow }, reviews, job] = await Promise.all([supabase.from("creator_accounts").select("*").eq("user_id", draft.user_id).maybeSingle(), listReviews(supabase, id), draft.last_job_id ? getJob(supabase, draft.last_job_id) : null]);
   const account = (accountRow as CreatorAccount | null) ?? null;
+  // Pour un cours publié : les langues déjà en ligne, pour proposer les autres.
+  const publishedLangs = new Set<string>();
+  if (draft.status === "published" && draft.app_course_id) {
+    const { data: contents } = await supabase.from("course_contents").select("lang,status").eq("course_id", draft.app_course_id);
+    for (const row of (contents ?? []) as { lang: string; status: string }[]) if (row.status === "published") publishedLangs.add(row.lang);
+  }
+  const missingLangs = LANGS.filter((l) => l !== draft.origin_lang && !publishedLangs.has(l));
   let photoUrl: string | null = null;
   if (account?.photo_path) {
     const { data } = await supabase.storage.from("studio-photos").createSignedUrl(account.photo_path, 3600);
@@ -207,6 +214,33 @@ export default async function ReviewPage({ params, searchParams }: PageProps<"/a
                 </form>
               )}
               {draft.status === "publishing" && <p className="text-[13px] text-ink-3">In production. Decisions reopen once the factory is done.</p>}
+              {draft.status === "published" && draft.app_course_id && (
+                <form action={publishDraft} className="flex flex-col gap-3">
+                  <input type="hidden" name="id" value={draft.id} />
+                  <p className="text-[13px] text-ink-2">
+                    Live in <strong>{publishedLangs.size}</strong> {publishedLangs.size === 1 ? "language" : "languages"}: {[...publishedLangs].map((l) => LANG_NAMES[l] ?? l).join(", ") || "none yet"}.
+                  </p>
+                  {missingLangs.length > 0 ? (
+                    <details className="rounded-xl border border-line bg-paper p-3 text-[13px]">
+                      <summary className="cursor-pointer font-bold text-ink-2">Translate into more languages</summary>
+                      <div className="mt-2 grid grid-cols-2 gap-x-3 gap-y-1.5 sm:grid-cols-3">
+                        {missingLangs.map((l) => (
+                          <label key={l} className="flex items-center gap-1.5 text-[12px] font-semibold text-ink-2">
+                            <input type="checkbox" name="languages" value={l} className="h-3.5 w-3.5 accent-navy" />
+                            {LANG_NAMES[l] ?? l}
+                          </label>
+                        ))}
+                      </div>
+                      <button type="submit" className="mt-3 inline-flex h-10 items-center justify-center rounded-btn bg-navy px-4 text-[14px] font-bold text-white hover:bg-ink">
+                        Launch these translations
+                      </button>
+                      <span className="mt-2 block text-[12px] text-muted">The factory translates the course into the ticked languages only; the ones already live are untouched.</span>
+                    </details>
+                  ) : (
+                    <p className="text-[12px] text-muted">Published in every language.</p>
+                  )}
+                </form>
+              )}
               {(canDecide || draft.status === "accepted" || draft.status === "published" || draft.status === "archived" || draft.status === "changes_requested" || draft.status === "failed") && (
                 <form action={reviewDraft} className="flex flex-col gap-2">
                   <input type="hidden" name="id" value={draft.id} />

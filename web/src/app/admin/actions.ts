@@ -71,7 +71,9 @@ export async function publishDraft(form: FormData): Promise<void> {
   const { data: draftRow } = await admin.from("studio_drafts").select("*").eq("id", id).maybeSingle();
   const draft = draftRow as DraftRow | null;
   if (!draft) back("/admin/review", { error: "Draft not found." });
-  if (!["submitted", "accepted", "failed", "changes_requested"].includes(draft.status)) back(`/admin/review/${id}`, { error: `Cannot publish a course in status ${draft.status}.` });
+  const pickedRaw = form.getAll("languages").map(String);
+  const addingLanguages = draft.status === "published" && pickedRaw.length > 0;
+  if (!["submitted", "accepted", "failed", "changes_requested"].includes(draft.status) && !addingLanguages) back(`/admin/review/${id}`, { error: `Cannot publish a course in status ${draft.status}.` });
 
   const { data: accountRow } = await admin.from("creator_accounts").select("*").eq("user_id", draft.user_id).maybeSingle();
   const account = accountRow as CreatorAccount | null;
@@ -101,9 +103,10 @@ export async function publishDraft(form: FormData): Promise<void> {
   }
 
   // Les langues de distribution : celles cochées par l'équipe (toutes par défaut), jamais l'origine.
-  const picked = form.getAll("languages").map(String).filter((l) => (LANGS as readonly string[]).includes(l) && l !== draft.origin_lang);
+  const picked = pickedRaw.filter((l) => (LANGS as readonly string[]).includes(l) && l !== draft.origin_lang);
   const allOthers = LANGS.filter((l) => l !== draft.origin_lang);
-  const languages = picked.length > 0 && picked.length < allOthers.length ? picked : null;
+  // Toutes cochées : on laisse l'usine prendre les 29 ; un sous-ensemble (ou un ajout) : on le nomme.
+  const languages = picked.length > 0 && (picked.length < allOthers.length || addingLanguages) ? picked : null;
   const body = toPublishBody(
     course,
     draft.origin_lang,
@@ -128,7 +131,7 @@ export async function publishDraft(form: FormData): Promise<void> {
 
   const now = new Date().toISOString();
   await admin.from("studio_drafts").update({ status: "publishing", last_job_id: out.job_id, app_course_id: out.course_id, accepted_at: draft.accepted_at ?? now, review_comment: null }).eq("id", id);
-  await admin.from("studio_reviews").insert({ draft_id: id, reviewer_id: session.user.id, decision: "note", comment: `Production launched · job ${out.job_id} · course ${out.course_id} · ${languages ? `${languages.length} languages: ${languages.join(", ")}` : "all 29 languages"}` });
+  await admin.from("studio_reviews").insert({ draft_id: id, reviewer_id: session.user.id, decision: "note", comment: `${addingLanguages ? "More languages launched" : "Production launched"} · job ${out.job_id} · course ${out.course_id} · ${languages ? `${languages.length} languages: ${languages.join(", ")}` : "all 29 languages"}` });
   await admin.from("creators").update({ user_id: draft.user_id }).eq("slug", account.slug);
   // L'usine démarre tout de suite plutôt qu'au prochain passage du cron (cinq minutes).
   await admin.rpc("jobs_dispatch", { p_limit: 5 });
