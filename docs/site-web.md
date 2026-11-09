@@ -37,7 +37,7 @@ visiteur ──▶ sophia-culture.com (Vercel, Next.js)
 | `/studio/courses/<id>` | L'éditeur (plan, blocs, vérifications, images Commons, aperçu), enregistrement automatique, envoi en relecture | `studio_drafts`, RPC `studio_submit_draft` |
 | `/studio/courses/<id>/status` | Suivi : décisions de l'équipe, production langue par langue | `studio_reviews`, `production_jobs`, `production_steps` |
 | `/studio/courses/app/<course_id>` | Un cours publié : décrochage par section, langues, quiz | RPC `creator_course_detail` |
-| `/studio/profile`, `/studio/guide` | Profil public (photo ou avatar illustré ; un compte approuvé voit sa page publique et les apps suivre tout de suite), guide d'écriture | trigger `creator_accounts_sync`, `syncPublicPhoto` |
+| `/studio/profile`, `/studio/guide` | Profil public (photo ou avatar illustré) ; un compte approuvé voit sa page publique suivre tout de suite et les apps au prochain manifeste. La photo est rendue publique **par la base** (trigger `creator_accounts_photo_sync` → Edge Function `author-photo-sync`), jamais par le site. Guide d'écriture. | triggers `creator_accounts_sync`, `creator_accounts_photo_sync`, table `author_photo_requests` |
 | `/admin` | Vue d'ensemble équipe : file, créateurs, production, lectures (synthèse quotidienne + journal du jour en direct, `course_stats_window`), cagnotte Premium, activité | RPC `studio_admin_overview` |
 | `/admin/review`, `/admin/review/<id>` | File de relecture ; lecture du cours, vérifications du format, décision, **Accepter et lancer la production** | RPC `studio_review_draft`, action `publishDraft` |
 | `/admin/creators` | Approuver, suspendre, remettre en attente ; contrat signé ou non | RPC `studio_set_creator_status` |

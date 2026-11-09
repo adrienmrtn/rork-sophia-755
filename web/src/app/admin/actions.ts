@@ -8,7 +8,6 @@ import { toPublishBody, validateCourse, hasErrors, type DraftCourse } from "@/li
 import type { CreatorAccount } from "@/lib/studio/account";
 import type { DraftRow } from "@/lib/studio/data";
 import { SUPABASE_URL } from "@/lib/env";
-import { publishAuthorPhoto } from "@/lib/studio/author-photo";
 import { LANGS } from "@/lib/catalog/types";
 
 function text(form: FormData, key: string, max = 2000): string {
@@ -43,23 +42,14 @@ export async function reviewDraft(form: FormData): Promise<void> {
 }
 
 /** Approuver, suspendre, remettre en attente une personne. L'approbation crée la page publique
- *  (ligne creators, dans la fonction SQL) ; la photo du Studio devient publique au même moment. */
+ *  (ligne creators, dans la fonction SQL) ; la photo du Studio devient publique dans la foulée,
+ *  côté base (trigger creator_accounts_approved_photo → Edge Function author-photo-sync). */
 export async function setCreatorStatus(form: FormData): Promise<void> {
   const session = await requireAdmin();
   const user = text(form, "user_id", 64);
   const status = text(form, "status", 20);
   const reason = text(form, "reason", 600);
-  const { data, error } = await session.supabase.rpc("studio_set_creator_status", { p_user: user, p_status: status, p_reason: reason || null });
-  if (!error && status === "approved") {
-    const account = data as CreatorAccount | null;
-    try {
-      const admin = createAdminClient();
-      const photoUrl = account ? await publishAuthorPhoto(admin, account) : null;
-      if (photoUrl && account?.slug) await admin.from("creators").update({ photo_url: photoUrl }).eq("slug", account.slug);
-    } catch {
-      // Sans clé serveur (développement), la page publique existe sans photo ; la publication la posera.
-    }
-  }
+  const { error } = await session.supabase.rpc("studio_set_creator_status", { p_user: user, p_status: status, p_reason: reason || null });
   revalidatePath("/admin/creators");
   revalidatePath("/studio");
   revalidatePath("/authors");
@@ -97,8 +87,10 @@ export async function publishDraft(form: FormData): Promise<void> {
   const findings = validateCourse(course);
   if (hasErrors(findings)) back(`/admin/review/${id}`, { error: `The course has ${findings.filter((f) => f.severity === "error").length} format problems; ask the author to fix them.` });
 
-  // La photo : copiée du bucket privé vers course-images, publique, sous le nom des apps.
-  const photoUrl = await publishAuthorPhoto(admin, account);
+  // La photo publique est tenue à jour par la base (author-photo-sync) ; on reprend l'adresse courante
+  // pour que publish-course ne l'efface pas.
+  const { data: creatorRow } = await admin.from("creators").select("photo_url").eq("slug", account.slug).maybeSingle();
+  const photoUrl = (creatorRow?.photo_url as string | null | undefined) ?? null;
 
   // Si le cours n'était pas encore accepté, on trace la décision.
   if (draft.status === "submitted" || draft.status === "changes_requested") {
