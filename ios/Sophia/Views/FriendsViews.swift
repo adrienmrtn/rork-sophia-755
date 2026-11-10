@@ -111,12 +111,16 @@ struct AddFriendSheet: View {
     @Environment(LanguageManager.self) private var languageManager
     @Environment(\.dismiss) private var dismiss
 
+    /// L'avatar du lecteur, pour sa carte « Mon QR code ».
+    var myAvatarId: String? = nil
     var onAdded: () -> Void
 
     @State private var draft: String = ""
     @State private var isSaving = false
     @State private var errorMessage: String?
     @State private var successMessage: String?
+    @State private var showMyQR = false
+    @State private var showScanner = false
 
     var body: some View {
         NavigationStack {
@@ -159,7 +163,17 @@ struct AddFriendSheet: View {
                             .foregroundStyle(DS.success)
                     }
 
-                    Spacer()
+                    // Sans taper de @ : montrer son QR code, ou scanner celui de l'ami.
+                    HStack(spacing: 10) {
+                        FriendQRActionButton(systemImage: "qrcode", title: languageManager.text("profile.qr.mine")) {
+                            showMyQR = true
+                        }
+                        FriendQRActionButton(systemImage: "qrcode.viewfinder", title: languageManager.text("profile.qr.scan")) {
+                            showScanner = true
+                        }
+                    }
+
+                    Spacer(minLength: 0)
 
                     Button { add() } label: {
                         HStack(spacing: 8) {
@@ -178,6 +192,14 @@ struct AddFriendSheet: View {
                 ToolbarItem(placement: .cancellationAction) {
                     Button(languageManager.text("settings.reset.alert.cancel")) { dismiss() }
                 }
+            }
+            .sheet(isPresented: $showMyQR) {
+                MyFriendQRSheet(avatarId: myAvatarId, onAdded: onAdded)
+                    .sophiaSheetChrome()
+            }
+            .sheet(isPresented: $showScanner) {
+                FriendQRScannerSheet(onAdded: onAdded)
+                    .sophiaSheetChrome()
             }
         }
         .sophiaSheetChrome()
@@ -604,36 +626,33 @@ struct FriendProfileView: View {
 
 // MARK: - Friends leaderboard section (embedded in Profile)
 
+/// Le classement des amis, à même le profil : un podium pour les trois premiers (avec leurs
+/// avatars), les rangs suivants en lignes, la ligne du lecteur mise en avant, puis les actions
+/// pour ajouter un ami (par @, par QR code, en scannant).
 struct FriendsLeaderboardSection: View {
     @Environment(LanguageManager.self) private var languageManager
     @Environment(AuthService.self) private var auth
     @Bindable var social: SocialService
+    /// L'avatar du lecteur, lu sur l'appareil (plus frais que celui du serveur).
+    var myAvatarId: String? = nil
 
     @State private var showAddFriend = false
     @State private var showEditHandle = false
+    @State private var showMyQR = false
+    @State private var showScanner = false
     @State private var selectedFriend: FriendLeaderboardEntry?
     @State private var hapticTrigger = 0
     @State private var respondingIds: Set<UUID> = []
 
+    /// Avatars et présence des amis : le classement des trophées (`duel_friends_leaderboard`)
+    /// les porte déjà pour le même groupe (moi et mes amis) ; celui des XP n'a que les @.
+    private var duelRows: [UUID: DuelLeaderboardEntry] {
+        DuelService.shared.leaderboard.reduce(into: [:]) { $0[$1.userId] = $1 }
+    }
+
     var body: some View {
         VStack(alignment: .leading, spacing: 14) {
-            HStack(alignment: .firstTextBaseline) {
-                Text(languageManager.text("friends.title"))
-                    .font(DS.sans(.caption, .semibold))
-                    .foregroundStyle(DS.inkTertiary)
-                    .tracking(1.1)
-                Spacer()
-                if auth.isSignedIn {
-                    Button {
-                        hapticTrigger += 1
-                        showAddFriend = true
-                    } label: {
-                        Label(languageManager.text("friends.add.short"), systemImage: "person.badge.plus")
-                            .font(DS.sans(.caption, .semibold))
-                            .foregroundStyle(DS.accentSoft)
-                    }
-                }
-            }
+            NewGenSectionTitle(text: languageManager.text("profile.friends.title"))
 
             if !auth.isSignedIn {
                 signedOutCard
@@ -643,6 +662,7 @@ struct FriendsLeaderboardSection: View {
                 }
                 periodPicker
                 leaderboardCard
+                addActions
             }
         }
         .sensoryFeedback(.impact(weight: .light), trigger: hapticTrigger)
@@ -651,14 +671,17 @@ struct FriendsLeaderboardSection: View {
                 await social.refreshPendingRequests()
             }
         }
-        .sheet(isPresented: $showAddFriend) {
-            AddFriendSheet {
-                Task {
-                    await social.refreshLeaderboard()
-                    await social.refreshPendingRequests()
-                }
+        // Les avatars : relus à l'arrivée et quand le nombre d'amis change.
+        .task(id: avatarRefreshKey) {
+            if auth.isSignedIn {
+                await DuelService.shared.refreshLeaderboard()
             }
-            .presentationDetents([.medium])
+        }
+        .sheet(isPresented: $showAddFriend) {
+            AddFriendSheet(myAvatarId: myAvatarId) {
+                refreshAfterAdd()
+            }
+            .presentationDetents([.medium, .large])
             .sophiaSheetChrome()
         }
         .sheet(isPresented: $showEditHandle) {
@@ -670,8 +693,84 @@ struct FriendsLeaderboardSection: View {
                 .sophiaSheetChrome()
             }
         }
+        .sheet(isPresented: $showMyQR) {
+            MyFriendQRSheet(avatarId: resolvedMyAvatarId) {
+                refreshAfterAdd()
+            }
+            .sophiaSheetChrome()
+        }
+        .sheet(isPresented: $showScanner) {
+            FriendQRScannerSheet {
+                refreshAfterAdd()
+            }
+            .sophiaSheetChrome()
+        }
         .navigationDestination(item: $selectedFriend) { entry in
             FriendProfileView(userId: entry.userId, fallbackHandle: entry.handle)
+        }
+    }
+
+    private var avatarRefreshKey: String {
+        "\(auth.isSignedIn)-\(social.leaderboard.count)"
+    }
+
+    private var resolvedMyAvatarId: String? {
+        if let myAvatarId { return myAvatarId }
+        return DuelService.shared.leaderboard.first(where: { $0.isMe })?.avatarId
+    }
+
+    private func refreshAfterAdd() {
+        Task {
+            await social.refreshLeaderboard()
+            await social.refreshPendingRequests()
+        }
+    }
+
+    private func avatarId(for entry: FriendLeaderboardEntry) -> String? {
+        if entry.isMe, let myAvatarId { return myAvatarId }
+        return duelRows[entry.userId]?.avatarId
+    }
+
+    private func isOnline(_ entry: FriendLeaderboardEntry) -> Bool {
+        !entry.isMe && (duelRows[entry.userId]?.online ?? false)
+    }
+
+    private func open(_ entry: FriendLeaderboardEntry) {
+        hapticTrigger += 1
+        if entry.isMe {
+            showEditHandle = true
+        } else {
+            selectedFriend = entry
+        }
+    }
+
+    // MARK: Ajouter un ami
+
+    /// « Ajouter un ami » en bouton principal, puis « Mon QR code » et « Scanner ».
+    private var addActions: some View {
+        VStack(spacing: 10) {
+            Button {
+                hapticTrigger += 1
+                showAddFriend = true
+            } label: {
+                HStack(spacing: 10) {
+                    Image(systemName: "person.badge.plus")
+                        .font(.system(size: 17, weight: .bold))
+                    Text(languageManager.text("friends.add.title"))
+                }
+            }
+            .buttonStyle(DSPrimaryButtonStyle())
+
+            HStack(spacing: 10) {
+                FriendQRActionButton(systemImage: "qrcode", title: languageManager.text("profile.qr.mine")) {
+                    hapticTrigger += 1
+                    showMyQR = true
+                }
+                FriendQRActionButton(systemImage: "qrcode.viewfinder", title: languageManager.text("profile.qr.scan")) {
+                    hapticTrigger += 1
+                    showScanner = true
+                }
+            }
         }
     }
 
@@ -688,6 +787,8 @@ struct FriendsLeaderboardSection: View {
         .frame(maxWidth: .infinity, alignment: .leading)
         .dsCard()
     }
+
+    // MARK: Demandes reçues
 
     private var requestsCard: some View {
         VStack(alignment: .leading, spacing: 0) {
@@ -721,9 +822,7 @@ struct FriendsLeaderboardSection: View {
 
     private func requestRow(_ request: FriendRequest) -> some View {
         HStack(spacing: 12) {
-            Image(systemName: "person.crop.circle")
-                .font(.jakarta(size: 26, weight: .regular))
-                .foregroundStyle(DS.inkTertiary)
+            AvatarCircle(avatarId: nil, initial: String(request.handle.prefix(1)).uppercased(), size: 38)
 
             Text("@\(request.handle)")
                 .font(DS.sans(.body, .semibold))
@@ -744,6 +843,7 @@ struct FriendsLeaderboardSection: View {
             }
             .buttonStyle(.plain)
             .disabled(respondingIds.contains(request.requestId))
+            .accessibilityLabel(Text(languageManager.text("friends.requests.decline")))
 
             Button {
                 respond(request, accept: true)
@@ -756,6 +856,7 @@ struct FriendsLeaderboardSection: View {
             }
             .buttonStyle(.plain)
             .disabled(respondingIds.contains(request.requestId))
+            .accessibilityLabel(Text(languageManager.text("friends.requests.accept")))
         }
         .padding(.horizontal, 16)
         .padding(.vertical, 10)
@@ -770,6 +871,8 @@ struct FriendsLeaderboardSection: View {
             respondingIds.remove(request.requestId)
         }
     }
+
+    // MARK: Période
 
     private var periodPicker: some View {
         HStack(spacing: 8) {
@@ -798,26 +901,26 @@ struct FriendsLeaderboardSection: View {
         .buttonStyle(.plain)
     }
 
+    // MARK: Classement
+
     private var leaderboardCard: some View {
-        VStack(spacing: 0) {
-            if social.isLoadingLeaderboard && social.leaderboard.isEmpty {
+        let entries = social.leaderboard
+        let hasFriends = entries.contains { !$0.isMe }
+        // Un podium demande trois personnes ; à deux, de simples lignes médaillées.
+        let podiumEntries = entries.count >= 3 ? Array(entries.prefix(3)) : []
+        let rowEntries = Array(entries.enumerated().dropFirst(podiumEntries.count))
+        return VStack(spacing: 0) {
+            if social.isLoadingLeaderboard && entries.isEmpty {
                 ProgressView()
                     .padding(24)
                     .frame(maxWidth: .infinity)
-            } else if social.leaderboard.filter({ !$0.isMe }).isEmpty {
-                VStack(alignment: .leading, spacing: 8) {
-                    Text(languageManager.text("friends.empty.title"))
-                        .font(DS.title(.headline, .semibold))
-                        .foregroundStyle(DS.ink)
-                    Text(languageManager.text("friends.empty.body"))
-                        .font(DS.sans(.subheadline, .medium))
-                        .foregroundStyle(DS.inkSecondary)
-                        .fixedSize(horizontal: false, vertical: true)
-                }
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(16)
+            } else if !hasFriends {
+                emptyState
             } else {
-                ForEach(Array(social.leaderboard.enumerated()), id: \.element.id) { index, entry in
+                if !podiumEntries.isEmpty {
+                    podium(podiumEntries)
+                }
+                ForEach(rowEntries, id: \.element.id) { index, entry in
                     if index > 0 {
                         Rectangle().fill(DS.hairline).frame(height: 1)
                     }
@@ -825,59 +928,219 @@ struct FriendsLeaderboardSection: View {
                 }
             }
         }
+        .clipShape(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
         .dsCard(padding: 0)
+    }
+
+    private var emptyState: some View {
+        HStack(alignment: .center, spacing: 14) {
+            AvatarCircle(
+                avatarId: resolvedMyAvatarId,
+                initial: String((social.myHandle ?? "S").prefix(1)).uppercased(),
+                size: 52
+            )
+            VStack(alignment: .leading, spacing: 4) {
+                Text(languageManager.text("friends.empty.title"))
+                    .font(DS.title(.headline, .semibold))
+                    .foregroundStyle(DS.ink)
+                Text(languageManager.text("friends.empty.body"))
+                    .font(DS.sans(.subheadline, .medium))
+                    .foregroundStyle(DS.inkSecondary)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+            Spacer(minLength: 0)
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding(16)
+    }
+
+    /// Or, argent, bronze : les couleurs des médailles des trois premiers rangs.
+    private func medalColor(rank: Int) -> Color {
+        switch rank {
+        case 1: DuelPalette.saffron
+        case 2: Color(red: 0.62, green: 0.67, blue: 0.74)
+        default: Color(red: 0.80, green: 0.50, blue: 0.31)
+        }
+    }
+
+    /// Le podium : le premier au centre, plus haut ; le deuxième à gauche, le troisième à droite.
+    private func podium(_ top: [FriendLeaderboardEntry]) -> some View {
+        HStack(alignment: .bottom, spacing: 8) {
+            podiumColumn(rank: 2, entry: top[1])
+            podiumColumn(rank: 1, entry: top[0])
+            podiumColumn(rank: 3, entry: top[2])
+        }
+        .padding(.horizontal, 12)
+        .padding(.top, 18)
+        .padding(.bottom, 12)
+        .environment(\.layoutDirection, .leftToRight)
+    }
+
+    private func podiumColumn(rank: Int, entry: FriendLeaderboardEntry) -> some View {
+        let medal = medalColor(rank: rank)
+        let avatarSize: CGFloat = rank == 1 ? 72 : 56
+        let stepHeight: CGFloat = rank == 1 ? 62 : (rank == 2 ? 44 : 32)
+        return Button {
+            open(entry)
+        } label: {
+            VStack(spacing: 6) {
+                if rank == 1 {
+                    Image(systemName: "crown.fill")
+                        .font(.system(size: 18, weight: .bold))
+                        .foregroundStyle(medal)
+                        .accessibilityHidden(true)
+                }
+                friendAvatar(entry, size: avatarSize, ring: medal)
+                Text("@\(entry.handle)")
+                    .font(DS.sans(.footnote, .bold))
+                    .foregroundStyle(entry.isMe ? DS.accentSoft : DS.ink)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.7)
+                    .padding(.horizontal, entry.isMe ? 8 : 0)
+                    .padding(.vertical, entry.isMe ? 2 : 0)
+                    .background {
+                        if entry.isMe { Capsule().fill(DS.accentTint) }
+                    }
+                Text("\(entry.xp.formatted(language: languageManager.current)) XP")
+                    .font(DS.sans(.caption, .semibold))
+                    .foregroundStyle(DS.inkSecondary)
+                    .monospacedDigit()
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.7)
+                // La marche du podium, à la couleur de la médaille.
+                Text("\(rank)")
+                    .font(DS.title(rank == 1 ? .title2 : .title3, .heavy))
+                    .foregroundStyle(medal)
+                    .frame(maxWidth: .infinity)
+                    .frame(height: stepHeight)
+                    .background(
+                        UnevenRoundedRectangle(
+                            topLeadingRadius: 14,
+                            bottomLeadingRadius: 4,
+                            bottomTrailingRadius: 4,
+                            topTrailingRadius: 14,
+                            style: .continuous
+                        )
+                        .fill(medal.opacity(0.2))
+                    )
+            }
+            .frame(maxWidth: .infinity)
+            .contentShape(Rectangle())
+        }
+        .buttonStyle(FriendRowPress())
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel(Text("\(rank). @\(entry.handle), \(entry.xp) XP"))
+    }
+
+    /// L'avatar d'un ami (ses initiales s'il n'en a pas choisi), avec la pastille « en ligne ».
+    private func friendAvatar(_ entry: FriendLeaderboardEntry, size: CGFloat, ring: Color? = nil) -> some View {
+        AvatarCircle(avatarId: avatarId(for: entry), initial: String(entry.handle.prefix(1)).uppercased(), size: size)
+            .overlay {
+                if let ring {
+                    Circle().strokeBorder(ring, lineWidth: max(2.5, size * 0.05))
+                }
+            }
+            .overlay(alignment: .bottomTrailing) {
+                if isOnline(entry) {
+                    DuelOnlineDot(size: max(11, size * 0.22))
+                }
+            }
     }
 
     private func leaderboardRow(rank: Int, entry: FriendLeaderboardEntry) -> some View {
         Button {
-            guard !entry.isMe else {
-                showEditHandle = true
-                return
-            }
-            hapticTrigger += 1
-            selectedFriend = entry
+            open(entry)
         } label: {
             HStack(spacing: 12) {
-                Text("\(rank)")
-                    .font(DS.sans(.subheadline, .semibold))
+                rankBadge(rank)
+
+                friendAvatar(entry, size: 42)
+
+                Text("@\(entry.handle)")
+                    .font(DS.sans(.body, .semibold))
+                    .foregroundStyle(DS.ink)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.75)
+                if entry.isMe {
+                    Text(languageManager.text("friends.you"))
+                        .font(DS.sans(.caption2, .bold))
+                        .foregroundStyle(.white)
+                        .padding(.horizontal, 7)
+                        .padding(.vertical, 2)
+                        .background(DS.accent, in: Capsule())
+                        .fixedSize()
+                }
+
+                Spacer(minLength: 6)
+
+                Text("\(entry.xp.formatted(language: languageManager.current)) XP")
+                    .font(DS.sans(.subheadline, .bold))
+                    .foregroundStyle(entry.isMe ? DS.ink : DS.inkSecondary)
+                    .monospacedDigit()
+                    .fixedSize()
+
+                Image(systemName: "chevron.forward")
+                    .font(.jakarta(size: 12, weight: .semibold))
                     .foregroundStyle(DS.inkTertiary)
-                    .frame(width: 22, alignment: .leading)
-                    .monospacedDigit()
-
-                VStack(alignment: .leading, spacing: 2) {
-                    HStack(spacing: 6) {
-                        Text("@\(entry.handle)")
-                            .font(DS.sans(.body, .semibold))
-                            .foregroundStyle(DS.ink)
-                        if entry.isMe {
-                            Text(languageManager.text("friends.you"))
-                                .font(DS.sans(.caption2, .semibold))
-                                .foregroundStyle(DS.accentSoft)
-                                .padding(.horizontal, 6)
-                                .padding(.vertical, 2)
-                                .background(DS.accentTint, in: Capsule())
-                        }
-                    }
-                }
-
-                Spacer()
-
-                Text("\(entry.xp) XP")
-                    .font(DS.sans(.subheadline, .semibold))
-                    .foregroundStyle(DS.inkSecondary)
-                    .monospacedDigit()
-
-                if !entry.isMe {
-                    Image(systemName: "chevron.forward")
-                        .font(.jakarta(size: 12, weight: .semibold))
-                        .foregroundStyle(DS.inkTertiary)
-                }
+                    .opacity(entry.isMe ? 0 : 1)
             }
             .padding(.horizontal, 16)
-            .padding(.vertical, 14)
+            .padding(.vertical, 11)
+            // La ligne du lecteur ressort sur un fond teinté.
+            .background(entry.isMe ? DS.accentTint : Color.clear)
             .contentShape(Rectangle())
         }
-        .buttonStyle(ProfileCardPress())
+        .buttonStyle(FriendRowPress())
+    }
+
+    /// Le rang : une médaille pleine pour les trois premiers, un simple nombre ensuite.
+    private func rankBadge(_ rank: Int) -> some View {
+        Text("\(rank)")
+            .font(DS.sans(.footnote, .bold))
+            .monospacedDigit()
+            .foregroundStyle(rank <= 3 ? .white : DS.inkTertiary)
+            .frame(width: 26, height: 26)
+            .background {
+                if rank <= 3 { Circle().fill(medalColor(rank: rank)) }
+            }
+    }
+}
+
+/// « Mon QR code », « Scanner » : un bouton secondaire avec son pictogramme.
+struct FriendQRActionButton: View {
+    let systemImage: String
+    let title: String
+    let action: () -> Void
+
+    var body: some View {
+        Button(action: action) {
+            HStack(spacing: 8) {
+                Image(systemName: systemImage)
+                    .font(.system(size: 16, weight: .semibold))
+                Text(title)
+                    .font(DS.sans(.subheadline, .bold))
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.7)
+            }
+            .foregroundStyle(DS.accent)
+            .padding(.horizontal, 10)
+            .frame(maxWidth: .infinity)
+            .frame(height: 50)
+            .background(Capsule(style: .continuous).fill(DS.surface))
+            .overlay(Capsule(style: .continuous).strokeBorder(DS.accent.opacity(0.35), lineWidth: 1.5))
+            .contentShape(Capsule(style: .continuous))
+        }
+        .buttonStyle(FriendRowPress())
+    }
+}
+
+/// Le retour au toucher des lignes et des boutons de la section des amis.
+struct FriendRowPress: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .scaleEffect(configuration.isPressed ? 0.98 : 1)
+            .opacity(configuration.isPressed ? 0.9 : 1)
+            .animation(.spring(response: 0.2, dampingFraction: 0.8), value: configuration.isPressed)
     }
 }
 

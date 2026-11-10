@@ -299,6 +299,12 @@ nonisolated struct DuelResult: Codable, Sendable, Equatable {
     }
 }
 
+/// Les trophées d'une victoire, pour l'animation de la jauge de ligue au retour sur la page.
+nonisolated struct DuelLeagueGain: Sendable, Equatable {
+    let before: Int
+    let after: Int
+}
+
 /// Une ligne du classement des trophées entre amis : `duel_friends_leaderboard()`.
 nonisolated struct DuelLeaderboardEntry: Codable, Sendable, Identifiable, Equatable, Hashable {
     let userId: UUID

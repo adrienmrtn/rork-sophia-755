@@ -32,6 +32,10 @@ final class DuelService {
     private(set) var homeFailed = false
     /// Une partie est en cours à l'écran : sa fin en attente ne doit pas partir comme un abandon.
     var isPlaying = false
+    /// Les trophées gagnés à la dernière partie, tant que la page ne les a pas montrés : au retour
+    /// d'une victoire, la jauge de ligue se remplit de l'ancien total au nouveau, une seule fois.
+    /// Gardé en mémoire seulement : rien ne se rejoue au lancement suivant.
+    private(set) var pendingLeagueGain: DuelLeagueGain?
 
     private let client = SupabaseManager.shared
     private let defaults = UserDefaults.standard
@@ -190,8 +194,21 @@ final class DuelService {
 
     private func apply(_ result: DuelResult) {
         BadgeCounters.sync(profile: result.profile)
+        // Seule la dernière partie compte : une défaite après une victoire efface l'animation.
+        if result.won, result.trophiesAfter > result.trophiesBefore {
+            pendingLeagueGain = DuelLeagueGain(before: result.trophiesBefore, after: result.trophiesAfter)
+        } else {
+            pendingLeagueGain = nil
+        }
         guard let current = home else { return }
         home = DuelHome(handle: current.handle, profile: result.profile, leagues: current.leagues, recent: current.recent)
+    }
+
+    /// Rend les trophées gagnés à montrer, et les oublie : l'animation ne se joue qu'une fois.
+    func takePendingLeagueGain() -> DuelLeagueGain? {
+        let gain = pendingLeagueGain
+        pendingLeagueGain = nil
+        return gain
     }
 
     // MARK: - Fin de partie en attente
@@ -231,6 +248,7 @@ final class DuelService {
 
     func clearLocalState() {
         home = nil
+        pendingLeagueGain = nil
         leaderboard = []
         homeFailed = false
         homeUserId = nil

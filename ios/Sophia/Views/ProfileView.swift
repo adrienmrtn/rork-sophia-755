@@ -179,18 +179,16 @@ struct ProfileView: View {
 
     // MARK: - Illustration
 
-    /// L'illustration papier du site (`progress_hero`), recadrée dans une bande arrondie.
+    /// L'illustration papier du site (`progress_hero`, 3:2), en carte arrondie ; sa hauteur est
+    /// bornée pour les grands écrans.
     private var hero: some View {
-        Color.clear
-            .frame(maxWidth: .infinity)
-            .frame(height: 190)
-            .overlay {
-                Image("progress_hero")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-            }
+        Image("progress_hero")
+            .resizable()
+            .aspectRatio(3.0 / 2.0, contentMode: .fit)
             .clipShape(RoundedRectangle(cornerRadius: 28, style: .continuous))
             .dsSoftShadow()
+            .frame(maxHeight: 300)
+            .frame(maxWidth: .infinity)
             .accessibilityHidden(true)
     }
 

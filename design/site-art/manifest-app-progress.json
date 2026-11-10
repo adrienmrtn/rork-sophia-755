@@ -1,5 +1,5 @@
 {
-  "_comment": "Illustrations de l'app iOS, direction affiche (même réglages que manifest-poster.json), en deux couleurs : marine et safran sur papier crème. progress_poster = carte d'entrée « Ma progression » (profil), progress_hero = en-tête de la page « Ma progression », ambassador_poster = bannière « Deviens ambassadeur » des réglages. Sorties converties en JPEG dans ios/Sophia/Assets.xcassets/<nom>.imageset (carré 480 px pour progress_poster, 1200 × 900 pour les deux autres).",
+  "_comment": "Illustrations de l'app iOS, direction affiche (même réglages que manifest-poster.json), en deux couleurs : marine et safran sur papier crème. progress_poster = carte d'entrée « Ma progression » (profil), progress_hero = en-tête de la page « Ma progression », ambassador_poster = bannière « Deviens ambassadeur » des réglages. Sorties converties en JPEG dans ios/Sophia/Assets.xcassets/<nom>.imageset (carré 480 px pour progress_poster, 1200 × 900 pour les deux autres). Le fond n'est pas garanti par le modèle (il sort souvent bleu, vert ou corail) : relancer jusqu'à obtenir le fond crème ; pour progress_hero, la palette répète le crème en tête pour l'y pousser, et l'image est recadrée en 3:2.",
   "defaults": {
     "style": "digital_illustration/2d_art_poster",
     "size": "square_hd",
@@ -31,7 +31,29 @@
       "name": "progress_hero",
       "size": "landscape_4_3",
       "max_side": 2000,
-      "prompt": "A small simple navy figure climbing a staircase made of big stacked navy and saffron books that rises from the lower left to the right, a large saffron star framed by two saffron laurel branches above the top step, a few tiny saffron sparkles. Two-color linocut print, paper-cut shapes: only deep navy blue ink and saffron yellow ink on plain cream off-white paper, the cream paper background fills most of the image, bold simple flat forms, subtle paper grain, generous empty cream space, no red, no light blue, no teal, no text, no letters, no outlines."
+      "prompt": "Cream off-white paper background. A small simple navy figure climbing a staircase made of big stacked navy and saffron books that rises from the lower left to the right, a large saffron star framed by two saffron laurel branches above the top step, a few tiny saffron sparkles. Two-color linocut print, paper-cut shapes: only deep navy blue ink and saffron yellow ink on plain cream off-white paper, the cream paper background fills most of the image, bold simple flat forms, subtle paper grain, generous empty cream space, no red, no light blue, no teal, no text, no letters, no outlines.",
+      "colors": [
+        [
+          251,
+          247,
+          239
+        ],
+        [
+          251,
+          247,
+          239
+        ],
+        [
+          26,
+          58,
+          107
+        ],
+        [
+          242,
+          177,
+          52
+        ]
+      ]
     },
     {
       "name": "ambassador_poster",
