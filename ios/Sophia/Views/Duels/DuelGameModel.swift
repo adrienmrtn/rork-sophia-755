@@ -26,12 +26,27 @@ nonisolated struct DuelSummary: Sendable, Equatable {
     let abandoned: Bool
     let tiebreak: Bool
     let answers: [DuelAnswer]
+    /// Duel entre amis : aucun trophée en jeu, et une égalité parfaite est possible.
+    var friendly = false
+    var draw = false
+}
+
+/// Le lien d'une partie entre amis avec le serveur : la partie, et l'instant (sur l'horloge de
+/// l'appareil) où sa première question démarre pour les deux joueurs.
+nonisolated struct DuelLiveLink: Sendable, Equatable {
+    let matchId: UUID
+    let startsAt: Date
 }
 
 /// Le déroulé d'une partie : 20 questions l'une après l'autre, chacune avec son chrono, puis une
 /// question décisive en cas d'égalité. L'adversaire « répond » aux instants écrits par le serveur
 /// (`DuelMatch.bot`), un peu plus tôt si le joueur a déjà répondu, pour ne pas le faire attendre.
 /// Le score affiché est recompté par le serveur à la fin, avec les mêmes règles (`DuelScoring`).
+///
+/// Entre amis (`live`), il n'y a pas de script : les deux joueurs répondent en même temps et le
+/// serveur tient l'horloge. Le modèle lui envoie chaque réponse, l'interroge plusieurs fois par
+/// seconde, et suit ce qu'il dit : l'ami a répondu, la question est close (avec sa réponse et
+/// les points de chacun), la suivante démarre dans tant de millisecondes.
 @Observable
 @MainActor
 final class DuelGameModel {
@@ -46,6 +61,8 @@ final class DuelGameModel {
     }
 
     let match: DuelMatch
+    /// Présent pour une partie entre amis.
+    let live: DuelLiveLink?
 
     private(set) var index = 0
     private(set) var phase: Phase = .answering
@@ -67,14 +84,28 @@ final class DuelGameModel {
     private(set) var lastRound: DuelRound?
     private(set) var isSuddenDeath = false
     private(set) var playerWon = false
+    /// Partie entre amis finie sur une égalité parfaite (personne n'a répondu à la question décisive).
+    private(set) var isDraw = false
+    /// L'ami a quitté la partie : on la finit seul.
+    private(set) var opponentLeft = false
+
+    /// Le dernier état reçu du serveur, et l'instant de sa réception.
+    @ObservationIgnored private var liveState: DuelFriendState?
+    @ObservationIgnored private var liveStateAt = Date()
+    /// Les réponses de l'ami aux questions closes, sous la forme que l'écran sait dévoiler.
+    @ObservationIgnored private var liveOpponent: [Int: DuelBotAnswer] = [:]
+    /// Ma réponse à la question en cours, pas encore reçue par le serveur.
+    @ObservationIgnored private var unsent: (index: Int, answer: DuelAnswer)?
+    @ObservationIgnored private var isRefreshing = false
 
     @ObservationIgnored private var sliderTouched = false
     @ObservationIgnored private var playerLockTime: Double?
     @ObservationIgnored private var opponentDelay: Double = 1
     @ObservationIgnored private var lastSliderTick = Date.distantPast
 
-    init(match: DuelMatch) {
+    init(match: DuelMatch, live: DuelLiveLink? = nil) {
         self.match = match
+        self.live = live
         playerMarks = Array(repeating: nil, count: match.questions.count)
         opponentMarks = Array(repeating: nil, count: match.questions.count)
     }
@@ -85,7 +116,12 @@ final class DuelGameModel {
         index < match.questions.count ? match.questions[index] : match.tiebreak
     }
 
+    /// La réponse de l'adversaire à la question en cours : le script du serveur en duel classé,
+    /// la vraie réponse de l'ami (connue une fois la question close) en duel amical.
     var botAnswer: DuelBotAnswer {
+        if live != nil {
+            return liveOpponent[index] ?? DuelBotAnswer(correct: false, choice: nil, value: nil, timeMs: question.timeLimitMs)
+        }
         guard !match.bot.isEmpty else {
             return DuelBotAnswer(correct: false, choice: nil, value: nil, timeMs: question.timeLimitMs / 2)
         }
@@ -108,7 +144,9 @@ final class DuelGameModel {
             won: playerWon,
             abandoned: false,
             tiebreak: isSuddenDeath,
-            answers: answers
+            answers: answers,
+            friendly: live != nil,
+            draw: isDraw
         )
     }
 
@@ -147,6 +185,9 @@ final class DuelGameModel {
         playerLockTime = Date().timeIntervalSince(questionStart)
         opponentDelay = Double.random(in: 0.5...1.4)
         DuelHaptics.lock()
+        if live != nil {
+            queueLiveAnswer()
+        }
     }
 
     private func snap(_ raw: Double) -> Double {
@@ -161,6 +202,10 @@ final class DuelGameModel {
 
     /// Joue la partie jusqu'au bout. Revient plus tôt si la tâche est annulée (abandon, écran fermé).
     func run() async {
+        if let live {
+            await runLive(live)
+            return
+        }
         for i in 0..<match.questions.count {
             guard await play(i) else { return }
         }
@@ -264,6 +309,183 @@ final class DuelGameModel {
             DuelHaptics.wrong()
         }
         return await pause(current.kind == .slider ? 2.8 : 1.8)
+    }
+
+    // MARK: - Partie entre amis
+
+    /// Ma réponse à la question en cours, telle qu'elle part au serveur.
+    private func currentAnswer() -> DuelAnswer {
+        let limit = question.timeLimit
+        let elapsedMs = Int((playerLockTime ?? limit) * 1000)
+        var answer = DuelAnswer(c: nil, v: nil, t: min(elapsedMs, question.timeLimitMs))
+        if question.kind == .slider {
+            answer.v = sliderTouched ? sliderValue : nil
+        } else {
+            answer.c = selectedChoice
+        }
+        return answer
+    }
+
+    private func queueLiveAnswer() {
+        unsent = (index, currentAnswer())
+        Task { await refreshLive() }
+    }
+
+    /// Un échange avec le serveur : ma réponse si elle n'est pas encore partie, sinon l'état de
+    /// la partie. Un échec (réseau) est simplement retenté au tour suivant.
+    private func refreshLive() async {
+        guard let live, !isRefreshing else { return }
+        isRefreshing = true
+        defer { isRefreshing = false }
+        do {
+            let state: DuelFriendState
+            if let pending = unsent {
+                state = try await DuelLiveService.shared.answer(matchId: live.matchId, index: pending.index, answer: pending.answer)
+                if unsent?.index == pending.index {
+                    unsent = nil
+                }
+            } else {
+                state = try await DuelLiveService.shared.state(matchId: live.matchId)
+            }
+            liveState = state
+            liveStateAt = Date()
+        } catch {
+            #if DEBUG
+            print("[Duel] live refresh failed: \(error)")
+            #endif
+        }
+    }
+
+    private func runLive(_ live: DuelLiveLink) async {
+        let poller = Task { [weak self] in
+            while !Task.isCancelled {
+                await self?.refreshLive()
+                try? await Task.sleep(for: .milliseconds(700))
+            }
+        }
+        defer { poller.cancel() }
+
+        var i = 0
+        var startsAt = live.startsAt
+        while true {
+            // La question démarre au même instant pour les deux joueurs.
+            while Date() < startsAt {
+                guard await pause(0.05) else { return }
+            }
+            guard let state = await playLive(i, startedAt: startsAt) else { return }
+
+            if state.finished {
+                playerWon = state.won
+                isDraw = state.draw
+                guard await pause(question.kind == .slider ? 3.0 : 2.2) else { return }
+                phase = .finished
+                return
+            }
+
+            let next = max(state.index, i + 1)
+            startsAt = liveStateAt.addingTimeInterval(Double(state.questionStartsInMs) / 1000)
+            if next >= match.questions.count, !isSuddenDeath {
+                // Égalité après la dernière question : l'annonce, puis la question décisive.
+                guard await pause(2.4) else { return }
+                isSuddenDeath = true
+                withAnimation(.spring(response: 0.5, dampingFraction: 0.7)) {
+                    phase = .suddenDeathIntro
+                }
+                DuelHaptics.suddenDeath()
+            }
+            i = next
+        }
+    }
+
+    /// Joue une question en direct : jusqu'à ce que le serveur la close. Rend l'état reçu à ce
+    /// moment-là, ou nil si la tâche est annulée.
+    private func playLive(_ i: Int, startedAt: Date) async -> DuelFriendState? {
+        let isTiebreak = i >= match.questions.count
+        withAnimation(.spring(response: 0.5, dampingFraction: 0.86)) {
+            index = i
+            selectedChoice = nil
+            playerLocked = false
+            opponentAnswered = false
+            lastRound = nil
+            frozenFraction = 1
+            phase = .answering
+        }
+        let current = question
+        sliderTouched = false
+        playerLockTime = nil
+        if current.kind == .slider {
+            sliderValue = snap(((current.sliderMin ?? 0) + (current.sliderMax ?? 100)) / 2)
+        }
+        questionStart = startedAt
+
+        let limit = current.timeLimit
+        var lastClock = Int.max
+        var closed: DuelFriendState?
+        while closed == nil {
+            guard await pause(0.05) else { return nil }
+            let elapsed = Date().timeIntervalSince(questionStart)
+            if let state = liveState {
+                if state.opponentLeft != opponentLeft {
+                    withAnimation { opponentLeft = state.opponentLeft }
+                }
+                if state.resolved > i || state.finished {
+                    closed = state
+                    break
+                }
+                if state.index == i, state.opponentAnswered, !opponentAnswered {
+                    withAnimation(.spring(response: 0.3, dampingFraction: 0.6)) {
+                        opponentAnswered = true
+                    }
+                    DuelHaptics.opponentAnswered()
+                }
+            }
+            if elapsed >= limit, !playerLocked {
+                // Temps écoulé : le serveur est prévenu, pour ne pas faire attendre l'ami.
+                playerLocked = true
+                playerLockTime = limit
+                queueLiveAnswer()
+            }
+            let remaining = Int((limit - elapsed).rounded(.up))
+            if remaining <= 3, remaining > 0, remaining < lastClock, !playerLocked {
+                lastClock = remaining
+                DuelHaptics.clock()
+            }
+        }
+        guard let state = closed else { return nil }
+        frozenFraction = remainingFraction(at: Date())
+
+        answers.append(currentAnswer())
+        // La réponse de l'ami et les points de chacun viennent du serveur, qui fait foi.
+        if i < state.opponentAnswers.count {
+            let theirs = state.opponentAnswers[i]
+            let theirPoint = i < state.opponentPoints.count ? state.opponentPoints[i] : false
+            liveOpponent[i] = DuelBotAnswer(correct: theirPoint, choice: theirs.c, value: theirs.v, timeMs: theirs.t)
+        }
+        let round = DuelRound(
+            player: i < state.myPoints.count ? state.myPoints[i] : false,
+            opponent: i < state.opponentPoints.count ? state.opponentPoints[i] : false
+        )
+        withAnimation(.spring(response: 0.38, dampingFraction: 0.62)) {
+            playerLocked = true
+            opponentAnswered = true
+            lastRound = round
+            phase = .reveal
+            if !isTiebreak {
+                playerScore = state.myScore
+                opponentScore = state.opponentScore
+                // Les questions closes pendant une coupure réseau sont marquées d'un coup.
+                for k in 0..<min(state.resolved, playerMarks.count) {
+                    if k < state.myPoints.count { playerMarks[k] = state.myPoints[k] }
+                    if k < state.opponentPoints.count { opponentMarks[k] = state.opponentPoints[k] }
+                }
+            }
+        }
+        if round.player {
+            DuelHaptics.correct()
+        } else {
+            DuelHaptics.wrong()
+        }
+        return state
     }
 
     private func pause(_ seconds: Double) async -> Bool {

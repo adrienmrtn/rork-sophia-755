@@ -53,6 +53,8 @@ nonisolated struct DuelProfile: Codable, Sendable, Equatable {
 }
 
 nonisolated struct DuelOpponent: Codable, Sendable, Equatable {
+    /// Le compte de l'adversaire quand c'est un ami (duel amical) ; absent en duel classé.
+    var userId: UUID? = nil
     let handle: String
     let countryCode: String
     let avatarId: String?
@@ -72,6 +74,7 @@ nonisolated struct DuelOpponent: Codable, Sendable, Equatable {
 
     enum CodingKeys: String, CodingKey {
         case handle, trophies
+        case userId = "user_id"
         case countryCode = "country_code"
         case avatarId = "avatar_id"
         case leaguePosition = "league_position"
@@ -243,22 +246,184 @@ nonisolated struct DuelResult: Codable, Sendable, Equatable {
 }
 
 /// Une ligne du classement des trophées entre amis : `duel_friends_leaderboard()`.
-nonisolated struct DuelLeaderboardEntry: Codable, Sendable, Identifiable, Equatable {
+nonisolated struct DuelLeaderboardEntry: Codable, Sendable, Identifiable, Equatable, Hashable {
     let userId: UUID
     let handle: String
     let avatarId: String?
     let trophies: Int
     let leaguePosition: Int
     let isMe: Bool
+    /// L'ami a l'app ouverte en ce moment (pastille verte).
+    let online: Bool
+    /// L'ami peut être défié : son app a les duels.
+    let canChallenge: Bool
 
     var id: UUID { userId }
 
     enum CodingKeys: String, CodingKey {
-        case handle, trophies
+        case handle, trophies, online
         case userId = "user_id"
         case avatarId = "avatar_id"
         case leaguePosition = "league_position"
         case isMe = "is_me"
+        case canChallenge = "can_challenge"
+    }
+
+    init(from decoder: Decoder) throws {
+        let c = try decoder.container(keyedBy: CodingKeys.self)
+        userId = try c.decode(UUID.self, forKey: .userId)
+        handle = try c.decode(String.self, forKey: .handle)
+        avatarId = try c.decodeIfPresent(String.self, forKey: .avatarId)
+        trophies = try c.decode(Int.self, forKey: .trophies)
+        leaguePosition = try c.decode(Int.self, forKey: .leaguePosition)
+        isMe = try c.decode(Bool.self, forKey: .isMe)
+        // Absentes tant que le serveur n'a pas les duels entre amis.
+        online = try c.decodeIfPresent(Bool.self, forKey: .online) ?? false
+        canChallenge = try c.decodeIfPresent(Bool.self, forKey: .canChallenge) ?? false
+    }
+}
+
+// MARK: - Duels entre amis
+
+/// Une invitation reçue : `duel_ping()` la rapporte tant qu'elle attend une réponse.
+nonisolated struct DuelIncomingInvite: Codable, Sendable, Equatable, Identifiable {
+    let inviteId: UUID
+    let from: DuelOpponent
+    let expiresInMs: Int
+
+    var id: UUID { inviteId }
+
+    enum CodingKeys: String, CodingKey {
+        case from
+        case inviteId = "invite_id"
+        case expiresInMs = "expires_in_ms"
+    }
+}
+
+nonisolated struct DuelPingResponse: Codable, Sendable {
+    let invite: DuelIncomingInvite?
+}
+
+/// Une invitation envoyée : `duel_invite_friend()`.
+nonisolated struct DuelSentInvite: Codable, Sendable, Equatable {
+    let inviteId: UUID
+    let expiresInMs: Int
+    let me: DuelOpponent
+    let friend: DuelOpponent
+    let online: Bool
+
+    enum CodingKeys: String, CodingKey {
+        case me, friend, online
+        case inviteId = "invite_id"
+        case expiresInMs = "expires_in_ms"
+    }
+}
+
+/// Le lancement d'une partie entre amis, reçu par les deux joueurs.
+nonisolated struct DuelFriendStart: Codable, Sendable, Equatable {
+    let matchId: UUID
+    let me: DuelOpponent
+    let opponent: DuelOpponent
+    let questions: [DuelQuestion]
+    let tiebreak: DuelQuestion
+    /// La première question démarre dans tant de millisecondes, pour les deux joueurs.
+    let startsInMs: Int
+
+    enum CodingKeys: String, CodingKey {
+        case me, opponent, questions, tiebreak
+        case matchId = "match_id"
+        case startsInMs = "starts_in_ms"
+    }
+
+    /// La même partie sous la forme que l'écran de jeu connaît (sans script d'adversaire).
+    var match: DuelMatch {
+        DuelMatch(matchId: matchId, opponent: opponent, questions: questions, tiebreak: tiebreak, bot: [], searchMs: 0)
+    }
+}
+
+/// Où en est une invitation envoyée (`duel_invite_status`) ou la réponse donnée à une
+/// invitation reçue (`duel_invite_respond`).
+nonisolated struct DuelInviteOutcome: Codable, Sendable, Equatable {
+    /// pending, accepted, declined, busy, cancelled, expired.
+    let status: String
+    let match: DuelFriendStart?
+}
+
+/// L'état d'une partie entre amis, vu par ce joueur : `duel_friend_state()`.
+nonisolated struct DuelFriendState: Codable, Sendable, Equatable {
+    let matchId: UUID
+    let finished: Bool
+    /// La question en cours (20 : la question décisive).
+    let index: Int
+    /// Nombre de questions closes : leurs réponses et leurs points sont connus.
+    let resolved: Int
+    /// Positif : la question en cours démarre dans tant de ms ; négatif : elle tourne déjà.
+    let questionStartsInMs: Int
+    let myScore: Int
+    let opponentScore: Int
+    let myAnswered: Bool
+    let opponentAnswered: Bool
+    let opponentAnswers: [DuelAnswer]
+    let myPoints: [Bool]
+    let opponentPoints: [Bool]
+    let tiebreak: Bool
+    let opponentLeft: Bool
+    let won: Bool
+    let draw: Bool
+
+    enum CodingKeys: String, CodingKey {
+        case finished, index, resolved, tiebreak, won, draw
+        case matchId = "match_id"
+        case questionStartsInMs = "question_starts_in_ms"
+        case myScore = "my_score"
+        case opponentScore = "opponent_score"
+        case myAnswered = "my_answered"
+        case opponentAnswered = "opponent_answered"
+        case opponentAnswers = "opponent_answers"
+        case myPoints = "my_points"
+        case opponentPoints = "opponent_points"
+        case opponentLeft = "opponent_left"
+    }
+}
+
+/// Le profil d'un ami : `friend_profile()`.
+nonisolated struct FriendProfile: Codable, Sendable, Equatable {
+    let userId: UUID
+    let handle: String
+    let avatarId: String?
+    let globalXP: Int
+    let streak: Int
+    let coursesCompleted: Int
+    let quizzesCompleted: Int
+    let trophies: Int
+    let bestTrophies: Int
+    let leaguePosition: Int
+    let duelGames: Int
+    let duelWins: Int
+    /// Les créateurs qu'il suit (leurs identifiants), du plus récent au plus ancien.
+    let follows: [String]
+    let online: Bool
+    let canChallenge: Bool
+    /// Nos duels amicaux : joués, gagnés par moi, gagnés par lui.
+    let friendlyPlayed: Int
+    let friendlyWon: Int
+    let friendlyLost: Int
+
+    enum CodingKeys: String, CodingKey {
+        case handle, streak, trophies, follows, online
+        case userId = "user_id"
+        case avatarId = "avatar_id"
+        case globalXP = "global_xp"
+        case coursesCompleted = "courses_completed"
+        case quizzesCompleted = "quizzes_completed"
+        case bestTrophies = "best_trophies"
+        case leaguePosition = "league_position"
+        case duelGames = "duel_games"
+        case duelWins = "duel_wins"
+        case canChallenge = "can_challenge"
+        case friendlyPlayed = "friendly_played"
+        case friendlyWon = "friendly_won"
+        case friendlyLost = "friendly_lost"
     }
 }
 
