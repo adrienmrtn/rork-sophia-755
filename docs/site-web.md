@@ -163,14 +163,19 @@ Dans l'ordre : (1) Maximilien branche vik-studios-creators.com sur le Hub, y met
 absolue du site (`src/config/site.ts`), le webhook Brevo, l'URL des tâches planifiées, la
 vérification de domaine Meta et le pixel ; (2) Supabase Auth ci-dessous ; (3) le DNS.
 
-Chez name.com, pour `sophia-culture.com` :
+Le domaine a été acheté **dans Lovable** (registrar name.com en coulisses, serveurs de noms
+`ns*.name.com`) : les enregistrements se gèrent dans Lovable, Workspace settings → Workspace
+domains → `sophia-culture.com` → Advanced → DNS records, pas chez name.com. D'abord déconnecter le
+domaine du projet Hub (menu ⋯ du domaine, Disconnect), puis :
 
 | Type | Nom | Valeur |
 | --- | --- | --- |
 | A | `@` | `216.150.1.1` et `216.150.16.1` (ou l'ancienne adresse unique `76.76.21.21`) |
 | CNAME | `www` | `f51d4520f6c33d8b.vercel-dns-016.com` (ou `cname.vercel-dns.com`) |
 
-Supprimer l'A record Lovable `185.158.133.1` (sur `@` et sur `www`). Propagation de quelques
+Supprimer l'A record Lovable `185.158.133.1` (sur `@` et sur `www`), garder les MX et TXT. Un
+transfert vers un autre registrar (Vercel, Cloudflare…) n'est pas nécessaire : il reste possible
+plus tard (Transfer out dans Lovable, code d'autorisation, 60 jours après l'achat). Propagation de quelques
 minutes à quelques heures ; Vercel émet le certificat tout seul. `www.sophia-culture.com` est
 rattaché au projet Vercel en redirection 308 vers l'adresse nue. Ensuite : Search Console (soumettre
 `/sitemap.xml`), fiches App Store et Play (adresses de support et de confidentialité, aujourd'hui
