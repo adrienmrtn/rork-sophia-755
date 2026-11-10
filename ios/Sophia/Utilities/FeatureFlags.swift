@@ -2,44 +2,27 @@ import Foundation
 
 /// Drapeaux de fonctionnalités de l'app.
 ///
-/// La navigation « nouvelle génération » (4 onglets Accueil /
-/// Explorer / Apprendre / Profil, fil unique, nouveau profil, page créateur), tirée au sort
-/// une fois par installation pour un A/B contre les 5 onglets actuels. La variante est lue
-/// une fois au lancement de `ContentView` ; un changement (réglage de debug) prend effet au
-/// prochain lancement, pour ne pas changer la navigation sous les doigts de l'utilisateur.
+/// La navigation « nouvelle génération » (Accueil / Explorer / Profil, fil unique, nouveau
+/// profil, page créateur) a d'abord été tirée au sort une fois par installation, en A/B contre
+/// les 5 onglets historiques. Le tirage est terminé : tout le monde la reçoit, y compris les
+/// installations qui avaient tiré `classic`.
 enum FeatureFlags {
     enum NavigationVariant: String, CaseIterable {
-        /// Les 5 onglets historiques et le fil TikTok.
+        /// Les 5 onglets historiques et le fil TikTok. Plus servie.
         case classic
         /// Les écrans de la maquette « Sophia nouvelle génération ».
         case newGen = "newgen"
     }
 
-    static let navigationKey = "sophia_nav_variant"
-
-    /// Part des installations qui reçoivent la nouvelle navigation au tirage.
-    static let newGenShare: Double = 0.5
-
-    /// Variante de navigation : tirée au sort à la première lecture, stable ensuite.
-    static var navigationVariant: NavigationVariant {
-        get {
-            let defaults = UserDefaults.standard
-            if let raw = defaults.string(forKey: navigationKey), let variant = NavigationVariant(rawValue: raw) {
-                return variant
-            }
-            let drawn: NavigationVariant = Double.random(in: 0..<1) < newGenShare ? .newGen : .classic
-            defaults.set(drawn.rawValue, forKey: navigationKey)
-            return drawn
-        }
-        set { UserDefaults.standard.set(newValue.rawValue, forKey: navigationKey) }
-    }
+    /// Variante de navigation, gardée pour la propriété `nav` des événements d'analyse.
+    static var navigationVariant: NavigationVariant { .newGen }
 
     static var newNavigation: Bool { navigationVariant == .newGen }
 
     // MARK: - Duels
 
     /// Valeur de sélection de l'onglet Duels, à la suite des cinq onglets existants (0 à 4)
-    /// pour ne pas décaler les leurs ; dans la barre, il se place entre Entraînement et Profil.
+    /// pour ne pas décaler les leurs ; dans la barre, il se place entre Explorer et Profil.
     static let duelsTab = 5
 
     /// L'onglet Duels est ouvert à tous, mais seulement quand l'app est en anglais : les

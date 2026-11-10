@@ -12,9 +12,17 @@ enum AppConfig {
         URL(string: "https://vik-studios-creators.com/creators/\(role)")
     }
 
-    /// La page « Write for Sophia » du site, porte d'entrée du Studio des auteurs. Anglais seulement.
-    static var creatorStudioURL: URL? {
-        URL(string: "https://sophia-culture.com/write")
+    /// L'accueil du Hub des créateurs, dans la langue de l'app : `vik-studios-creators.com/<langue>`.
+    /// C'est la sortie de la page « Deviens créateur » (`BecomeCreatorView`). Le Hub écrit ses
+    /// codes à sa façon : le portugais n'y existe qu'en `pt-br`, le norvégien en `no`.
+    static func creatorHubURL(language: AppLanguage) -> URL? {
+        let code: String
+        switch language {
+        case .portuguese, .portuguesePortugal: code = "pt-br"
+        case .norwegian: code = "no"
+        default: code = language.rawValue
+        }
+        return URL(string: "https://vik-studios-creators.com/\(code)")
     }
 
     // MARK: - Supabase (auth + sync)

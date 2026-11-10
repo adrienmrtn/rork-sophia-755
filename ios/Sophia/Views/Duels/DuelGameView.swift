@@ -219,16 +219,12 @@ struct DuelGameView: View {
             }
 
             if question.kind == .portrait {
-                DS.surfaceMuted
-                    .frame(width: 184, height: 230)
-                    // Sans touches : un portrait qui déborde de son cadre ne doit pas couvrir les réponses.
-                    .overlay { RemoteImage(url: question.imageURL).allowsHitTesting(false) }
-                    .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 20, style: .continuous)
-                            .strokeBorder(DS.hairline, lineWidth: 1)
-                    )
-                    .dsSoftShadow()
+                // L'image seule, entière et à ses proportions : ni cadre ni fond derrière elle.
+                // Sans touches : elle ne doit pas couvrir les réponses.
+                DuelQuestionImage(url: question.imageURL)
+                    .frame(maxWidth: 280)
+                    .frame(height: 230)
+                    .allowsHitTesting(false)
             }
 
             Text(question.question)
@@ -321,5 +317,38 @@ struct DuelGameView: View {
             }
             .padding(32)
         }
+    }
+}
+
+/// L'image d'une question (portrait, drapeau, tableau, monument) : montrée entière, à ses
+/// proportions, coins arrondis, sans fond. Elle est déjà en cache, chargée pendant la
+/// présentation de l'adversaire ; tant qu'elle n'est pas là, la place reste vide.
+private struct DuelQuestionImage: View {
+    let url: String?
+    @State private var image: UIImage?
+
+    var body: some View {
+        ZStack {
+            if let image {
+                Image(uiImage: image)
+                    .resizable()
+                    .scaledToFit()
+                    .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
+            }
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .task(id: url) {
+            guard let url else {
+                image = nil
+                return
+            }
+            if let cached = RemoteImageLoader.cached(url) {
+                image = cached
+                return
+            }
+            image = nil
+            image = await RemoteImageLoader.image(url)
+        }
+        .accessibilityHidden(true)
     }
 }
