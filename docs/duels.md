@@ -206,3 +206,15 @@ les notifications push (une invitation n'arrive que si l'ami a l'app ouverte).
 - Une victoire par déconnexion compte comme une victoire, pas pour les badges d'exploit.
 - Pour changer les fréquences : `% 10` (avatars) et `random() < 0.025` (déconnexions) dans
   `duel_start_match_v2`.
+
+## Ajouts du 12/11/2026 (iOS)
+
+- **Noms des adversaires** : `supabase/migrations/20261112010000_duel_bot_names.sql` ajoute 800
+  pseudos (1 100 au total), et `duel_pick_bot` écarte les 150 derniers adversaires, les pseudos
+  qui commencent comme l'un des 20 derniers et le pays des 2 derniers.
+- **Drapeaux** : les fichiers hébergés portent un fond « papier » beige (`scripts/duels_images.py`).
+  iOS le rogne à l'affichage (`DuelImageTrimmer`) ; Android le montre encore. Le vrai correctif
+  est de régénérer les images sans ce fond.
+- **Après une victoire** : au retour sur l'accueil des duels, la carte de ligue rejoue une fois
+  la montée des trophées (barre, compteur, vibrations, passage de ligue le cas échéant).
+- **Ligues** : la carte de la ligue du joueur affiche ses trophées, plus le seuil d'entrée.
