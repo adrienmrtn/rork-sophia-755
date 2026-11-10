@@ -184,9 +184,15 @@ struct DuelLeagueBackdrop: View {
     var body: some View {
         // L'image est posée en surimpression : elle remplit la place donnée à la couleur sans
         // jamais agrandir la vue (une image « à remplir » sans cadre prendrait sa propre taille).
+        //
+        // Elle ne reçoit pas les touches : rogner une image ne rogne que son dessin. Une image
+        // en hauteur dans un bandeau bas déborde, invisible, de plusieurs centaines de points
+        // au-dessus et en dessous, et avalait les touches des boutons voisins (« Défier en
+        // duel », juste au-dessus de la carte de ligue du profil d'un ami).
         Color(duelHex: league?.accentHex ?? "")
-            .overlay { RemoteImage(url: thumb ? league?.thumbURL : league?.backgroundURL) }
+            .overlay { RemoteImage(url: thumb ? league?.thumbURL : league?.backgroundURL).allowsHitTesting(false) }
             .clipped()
+            .contentShape(Rectangle())
             .accessibilityHidden(true)
     }
 }
