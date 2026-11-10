@@ -36,7 +36,8 @@ enum FeedNotice: String, Equatable {
 // MARK: - Carte cours
 
 /// La carte de cours de la maquette : couverture 16:9 avec la pastille de matière, titre,
-/// accroche, ligne créateur, puis lectures · j'aime · enregistrer · durée.
+/// accroche, ligne créateur, puis lectures · j'aime · durée. (Enregistrer se fait depuis la
+/// fiche du cours, plus depuis la carte.)
 struct CourseFeedCard: View {
     @Environment(LanguageManager.self) private var languageManager
     let course: Course
@@ -61,7 +62,6 @@ struct CourseFeedCard: View {
 
     private var identity: CreatorIdentity { CreatorIdentity.forCourse(course.id) }
     private var liked: Bool { progressManager.isLiked(course.id) }
-    private var saved: Bool { progressManager.isFavorite(course.id) }
 
     private var hook: String {
         let content = CourseContentStore.content(courseId: course.id, language: languageManager.current)
@@ -176,22 +176,6 @@ struct CourseFeedCard: View {
             }
             .buttonStyle(.plain)
             .accessibilityLabel(Text(AppLocalizable.string(liked ? "common.unlike" : "common.like", language: languageManager.current)))
-
-            Button {
-                UIImpactFeedbackGenerator(style: .light).impactOccurred()
-                let wasSaved = saved
-                progressManager.toggleFavorite(course.id)
-                AnalyticsService.shared.log(wasSaved ? .unsave : .save, courseId: course.id, screen: screen)
-            } label: {
-                Image(systemName: saved ? "bookmark.fill" : "bookmark")
-                    .font(.system(size: 15, weight: .medium))
-                    .foregroundStyle(saved ? DS.accent : DS.inkSecondary)
-                    .padding(.vertical, 6)
-                    .padding(.horizontal, 2)
-                    .contentShape(Rectangle())
-            }
-            .buttonStyle(.plain)
-            .accessibilityLabel(Text(AppLocalizable.string(saved ? "common.unsave" : "common.save", language: languageManager.current)))
 
             Spacer(minLength: 0)
 

@@ -856,6 +856,8 @@ extension SocialError {
             return languageManager.text("friends.error.invalidHandle")
         case .handleTaken:
             return languageManager.text("friends.error.handleTaken")
+        case .handleNotAllowed:
+            return languageManager.text("friends.error.handleNotAllowed")
         case .userNotFound:
             return languageManager.text("friends.error.userNotFound")
         case .cannotAddSelf:
