@@ -1,7 +1,8 @@
 # Duels
 
 Des parties de 20 questions contre un adversaire, avec des trophées et 30 ligues. Version bêta :
-iOS seulement, questions en anglais seulement, donc onglet visible quand l'app est en anglais
+iOS, et Android pour les duels classés (voir « Android » plus bas ; les duels entre amis n'y sont
+pas encore), questions en anglais seulement, donc onglet visible quand l'app est en anglais
 (`FeatureFlags.duelsVisible`, lu au lancement : après un changement de langue, l'onglet suit au
 prochain lancement). Les adversaires sont simulés par le serveur ; rien dans l'app ne
 le dit, et le niveau de difficulté du joueur n'est jamais affiché.
@@ -165,9 +166,27 @@ Migration : `supabase/migrations/20261110010000_duel_friends.sql`.
   avatar tiré au hasard et le @ généré, modifiables ; elle n'apparaît que pour un compte créé
   dans le dernier quart d'heure.
 
+## Android
+
+Les duels classés sont portés à l'identique : même serveur, mêmes règles, mêmes durées, mêmes
+textes (les clés `duel.*` de `assets/strings`).
+
+- `domain/DuelModels.kt` (formes du serveur, règle du point), `data/DuelService.kt` (accueil
+  avec cache par compte, lancement et fin de partie, fin de partie gardée puis renvoyée).
+- `ui/duels/` : `DuelsHomeScreen` et `DuelLeagueRoadScreen` (l'onglet), `DuelFlow` (recherche →
+  partie → résultat), `DuelGameModel` avec `DuelRules` (le déroulé et ses durées, en fonctions
+  testables), les écrans de jeu, `DuelComponents` (palette, avatar, trophées, vibrations).
+- L'onglet a l'indice 5, entre Entraînement et Profil, dans les deux variantes de navigation ;
+  `FeatureFlags.duelsVisible` est lu une fois à la composition des onglets.
+- Tests (`app/src/test`) : les règles, des parties entières sur une horloge simulée, et le
+  décodage de vraies réponses du serveur (`src/test/resources/duels`, produites par les
+  migrations sur une base de test) suivies d'une partie jouée avec.
+- Pas encore sur Android : duels entre amis (présence, invitations, partie en direct), profil
+  d'un ami avec ses trophées, badges de duel.
+
 ## Pas encore fait
 
-Android, les questions dans les autres langues, les saisons, les sons, un gain d'XP par duel,
+Les duels entre amis sur Android, les questions dans les autres langues, les saisons, les sons, un gain d'XP par duel,
 les notifications push (une invitation n'arrive que si l'ami a l'app ouverte).
 
 ## Adversaires plus crédibles (10 novembre)
