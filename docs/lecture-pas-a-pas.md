@@ -6,6 +6,16 @@ donnée : la lecture d'une leçon dans Sapio (Thetys Lab, « le Duolingo de la c
 Prototype cliquable, avec le contenu réel du cours « Pourquoi les États-Unis n'ont-ils pas gagné
 au Vietnam ? » : https://claude.ai/artifact/KeejMReVqGNRYAPgquRXYR
 
+**Décision du 10/11/2026, après relecture.** Le mécanisme de révélation au tap est retenu. Les
+questions intercalées (§3) sont abandonnées : pour être justes, elles exigent que le paragraphe
+qu'on vient de lire contienne la réponse, ce qui ne tient pas à l'échelle de 311 cours écrits sans
+cette contrainte ; les quiz restent à la fin du cours. Le lecteur pas à pas est **livré sur iOS**
+(`CourseReadingMode`, `CourseStepReaderView`, `ReadingModePickerControl`), par défaut, avec
+l'ancien lecteur par pages conservé : le choix se fait dans l'en-tête du lecteur (menu) ou dans
+Réglages, et vaut pour tous les cours. Android reste par pages pour l'instant. Pas d'A/B : le
+mode est un choix du lecteur, lu dans `section_view.mode`. Le code n'a pas été compilé dans la
+session qui l'a écrit (pas de Xcode) : à vérifier au premier build.
+
 ---
 
 ## 1. Ce qu'on a aujourd'hui
@@ -114,7 +124,7 @@ découpage bloc par bloc est donc faisable sans réécrire une ligne de contenu.
 La barre segmentée reste (un segment par section) ; le segment courant se remplit bloc par bloc
 au lieu de basculer d'un coup. Le compteur « 2 / 5 » reste.
 
-### Questions intercalées (ce qui rend Sapio addictif ; en option, même drapeau)
+### Questions intercalées (abandonné le 10/11, voir la décision en tête)
 
 - Après les parties 1 et 2 (jamais après l'intro, jamais entre la dernière partie et
   « À retenir »), une question du quiz du cours est posée dans le fil, types `mcq` et `trueFalse`
@@ -162,7 +172,7 @@ Le prototype montre les deux modes côte à côte (« Pas à pas » / « D'une t
 
 ## 4. Implémentation
 
-**iOS, `CourseView.swift`**
+**iOS, `CourseView.swift`** (fait le 10/11/2026, voir la décision en tête)
 
 - `lessonsBody` : remplacer le `TabView` paginé par un `ScrollView` + `LazyVStack` des blocs
   révélés, un `ScrollViewReader` pour le défilement, une transition

@@ -1251,5 +1251,10 @@
   "duel.result.done": "終了",
   "duel.result.syncFailed": "結果を保存できませんでした。接続が回復したら自動で送信されます。",
   "duel.promotion.title": "新しいリーグ",
-  "duel.promotion.continue": "続ける"
+  "duel.promotion.continue": "続ける",
+  "course.readingMode": "読み方",
+  "course.readingMode.steps": "ステップごと",
+  "course.readingMode.steps.hint": "「続ける」をタップするたびに次の一節が現れます。",
+  "course.readingMode.pages": "ページごと",
+  "course.readingMode.pages.hint": "パートごとに1ページ、スクロールして読みます。"
 }
