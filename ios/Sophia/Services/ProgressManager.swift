@@ -189,6 +189,8 @@ class ProgressManager {
         // retomber à 0 ici aussi (la remise à zéro faite au lancement, avant la restauration
         // de la session, n'avait pas pu partir vers le cloud).
         updateStreak()
+        // Les badges arrivés du cloud (autre appareil, connexion) ne sont pas fêtés ici.
+        BadgeCelebrationCenter.shared.absorb(using: self)
     }
 
     var streak: Int { progress.streak }
@@ -892,6 +894,8 @@ class ProgressManager {
     private func save() {
         persistLocally()
         ProgressSyncService.shared.schedulePush(progress)
+        // Un badge vient peut-être d'être gagné : il sera fêté (voir BadgeCelebrationCenter).
+        BadgeCelebrationCenter.shared.scheduleDetection()
     }
 
     private func persistLocally() {

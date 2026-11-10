@@ -222,6 +222,9 @@ enum BadgeCounters {
 
     private static func defaultsKey(_ key: Key) -> String { "sophia_badge_counter_\(key.rawValue)" }
     private static let lastMatchKey = "sophia_badge_last_match"
+    /// Posés à la première lecture du serveur : ce qui date d'avant n'est pas fêté.
+    private static let duelBaselineKey = "sophia_badge_baseline_duels"
+    private static let friendsBaselineKey = "sophia_badge_baseline_friends"
 
     static func value(_ key: Key) -> Int {
         UserDefaults.standard.integer(forKey: defaultsKey(key))
@@ -231,6 +234,8 @@ enum BadgeCounters {
     static func raise(_ key: Key, to value: Int) {
         guard value > Self.value(key) else { return }
         UserDefaults.standard.set(value, forKey: defaultsKey(key))
+        // Un record qui monte peut faire gagner un badge : il sera fêté.
+        BadgeCelebrationCenter.shared.scheduleDetection()
     }
 
     /// Les statistiques tenues par le serveur (`duel_home`, résultat d'une partie classée).
@@ -244,6 +249,11 @@ enum BadgeCounters {
         sync(profile: home.profile)
         if let best = home.league(forTrophies: home.profile.bestTrophies) {
             raise(.bestLeague, to: best.position)
+        }
+        // Première lecture : victoires et ligues d'avant cette version sont attribuées sans fête.
+        if !UserDefaults.standard.bool(forKey: duelBaselineKey),
+           BadgeCelebrationCenter.shared.absorb(matching: { $0.family.needsDuels }) {
+            UserDefaults.standard.set(true, forKey: duelBaselineKey)
         }
     }
 
@@ -269,6 +279,11 @@ enum BadgeCounters {
 
     static func recordFriends(count: Int) {
         raise(.friends, to: count)
+        // Première lecture : les amis déjà là sont comptés sans fête.
+        if !UserDefaults.standard.bool(forKey: friendsBaselineKey),
+           BadgeCelebrationCenter.shared.absorb(matching: { $0.metric == .friends }) {
+            UserDefaults.standard.set(true, forKey: friendsBaselineKey)
+        }
     }
 }
 

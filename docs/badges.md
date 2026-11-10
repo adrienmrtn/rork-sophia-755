@@ -50,6 +50,18 @@ de duel atteinte (30), un badge par événement. iOS seulement pour l'instant.
 - Les badges affichés sur le profil sont dans `UserProgress.featuredBadgeIds` ; `friend_profile`
   les renvoie aux amis (`featured_badges`), limités à ceux réellement gagnés.
 
+## La fête d'un badge gagné
+
+- `BadgeCelebrationCenter` (iOS) garde sur l'appareil les badges déjà fêtés. À chaque progression
+  enregistrée, compteur de duel ou d'amis relevé, ou retour de l'app au premier plan, il fait
+  constater les badges atteints et met en file ceux qui n'ont pas été fêtés. `BadgeCelebrationView`
+  les montre un par un par-dessus les onglets (`ContentView`), une fois le cours, le quiz ou le
+  duel en cours refermé.
+- Ne sont pas fêtés : ce qui est déjà gagné à la première ouverture avec cette version, ce qui
+  arrive du cloud, les victoires, ligues et amis déjà là à la première lecture du serveur, un
+  événement découvert déjà rempli. Plusieurs paliers d'une même mesure franchis d'un coup : seul
+  le plus haut est fêté.
+
 ## Illustrations
 
 - Badges permanents et de ligue : `design/site-art/manifest-badges.json`, dessinés par l'atelier
@@ -69,6 +81,5 @@ sur `campaigns`, le manifeste des événements, `friend_profile` avec `featured_
 ## Limites
 
 - Android n'affiche pas encore la collection.
-- Pas d'animation au moment où un badge est gagné.
 - Les compteurs d'exploits de duel vivent sur l'appareil : sur un nouveau téléphone, un exploit
   déjà récompensé garde son badge (il est dans la progression), mais un compteur en cours repart.
