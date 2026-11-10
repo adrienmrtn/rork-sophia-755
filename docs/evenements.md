@@ -26,8 +26,12 @@ Ce document est la référence du format. Les quatre implémentations le suivent
    du site, Recraft en papier découpé ; les deux restent en candidates, l'équipe en retient une) et
    fixer un **objectif commun** (cours lus ensemble).
    La page montre un **aperçu de la carte du fil** telle que les apps la dessinent. Une liste de
-   contrôle dit ce qui manque pour publier ; un événement s'enregistre toujours en brouillon, il
-   ne passe `published` que si la liste est vide.
+   contrôle dit ce qui manque pour publier. L'événement s'enregistre toujours dans son statut
+   courant (brouillon à la création) ; **Publish now**, en haut de la page, le passe `published`
+   si la liste est vide, **Unpublish** le remet en brouillon, **Archive** le retire en le gardant.
+   Les textes s'écrivent en anglais ; **Translate** remplit les 29 autres langues d'un coup, et tant
+   qu'une langue manque les lecteurs de cette langue voient l'anglais. Le champ Pays ne touche pas
+   aux langues.
 2. **Base** : la ligne est dans `public.campaigns`. Seuls les comptes de `studio_admins` lisent et
    écrivent la table (RLS). Les apps ne la lisent jamais directement.
 3. **Manifeste du catalogue** : `catalog_manifest(lang)` porte une clé `events` (fonction

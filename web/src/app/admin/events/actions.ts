@@ -229,3 +229,23 @@ export async function deleteCampaign(form: FormData): Promise<void> {
   if (error) back(`/admin/events/${slug}`, { error: error.message });
   back("/admin/events", { done: "deleted" });
 }
+
+/** Publier, dépublier, archiver ou remettre en brouillon : le statut seul change, avec les textes
+ *  déjà enregistrés. Publier exige une liste de contrôle vide (textes en anglais, collection…). */
+export async function setCampaignStatus(form: FormData): Promise<void> {
+  const session = await requireAdmin();
+  const slug = text(form, "slug", 60);
+  const status = text(form, "status", 20);
+  if (!["draft", "published", "archived"].includes(status)) back(`/admin/events/${slug}`, { error: "Unknown status." });
+  const { data } = await session.supabase.from("campaigns").select("*").eq("slug", slug).maybeSingle();
+  if (!data) back("/admin/events", { error: "This event no longer exists." });
+  const campaign = campaignFromRow(data as Record<string, unknown>);
+  if (status === "published") {
+    const problems = publishProblems(campaign, await loadKnown(session.supabase));
+    if (problems.length > 0) back(`/admin/events/${slug}`, { error: `Not published yet: ${problems.join(" ")}` });
+  }
+  const { error } = await session.supabase.from("campaigns").update({ status }).eq("slug", slug);
+  revalidate(slug);
+  if (error) back(`/admin/events/${slug}`, { error: error.message });
+  back(`/admin/events/${slug}`, { done: status === "published" ? "published" : status === "archived" ? "archived" : campaign.status === "archived" ? "restored" : "unpublished" });
+}
