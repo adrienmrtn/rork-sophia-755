@@ -5,9 +5,16 @@
 
 Écrit, de façon reproductible (tirages à graine fixe) :
   content/duels/leagues.json        les 30 ligues (nom, seuil de trophées, images)
-  content/duels/questions_en.json   les questions (scripts/duels_questions_source.py), options mélangées
+  content/duels/questions_en.json   les questions, options mélangées
   content/duels/bots.json           les adversaires simulés (@, pays, avatar)
-  supabase/migrations/20261110020100_duels_seed_v2.sql   le tout en INSERT … ON CONFLICT DO UPDATE
+  supabase/migrations/20261111010100_duels_seed_v3.sql   le tout en INSERT … ON CONFLICT DO UPDATE
+
+Les questions viennent, dans cet ordre (l'identifiant d'une question est son rang dans son
+niveau : on ajoute à la fin, on ne réordonne jamais) :
+  1. scripts/duels_questions_source.py   les 137 premières
+  2. scripts/duels_geo_source.py         drapeaux, capitales, comparaisons de pays et de géographie
+  3. scripts/duels_source/*.json         le reste, par matière puis les questions à image, dans
+                                         l'ordre des noms de fichiers
 
 Le SQL se rejoue sans risque : une ligne existante est mise à jour, jamais dupliquée.
 Les images viennent de scripts/duels_assets.py (Supabase Storage, bucket public course-images).
@@ -24,11 +31,12 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 from duels_questions_source import QUESTIONS  # noqa: E402
+import duels_geo_source  # noqa: E402
 
 OUT = ROOT / "content" / "duels"
 # Le contenu est republié en entier à chaque évolution, dans une nouvelle migration (la
 # précédente, déjà exécutée, ne bouge pas) : chaque ligne est insérée ou mise à jour.
-SEED = ROOT / "supabase" / "migrations" / "20261110020100_duels_seed_v2.sql"
+SEED = ROOT / "supabase" / "migrations" / "20261111010100_duels_seed_v3.sql"
 STORAGE = "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels"
 
 # ------------------------------------------------------------------ ligues
@@ -63,13 +71,32 @@ def build_leagues() -> list[dict]:
 
 
 # ------------------------------------------------------------------ questions
+def all_questions() -> list[dict]:
+    """Toutes les questions, dans l'ordre qui fixe leurs identifiants."""
+    out = list(QUESTIONS) + duels_geo_source.questions()
+    for path in sorted((ROOT / "scripts" / "duels_source").glob("*.json")):
+        out += json.loads(path.read_text(encoding="utf-8"))
+    for q in out:
+        # Écriture courte des fichiers JSON : « tf » pour un vrai/faux, « image » pour une
+        # question à image (drapeau, tableau, monument, portrait), qui est un « portrait » pour l'app.
+        if q["kind"] == "tf":
+            q["kind"] = "true_false"
+    return out
+
+
+def credit_line(meta: dict) -> str:
+    return " · ".join(x for x in (meta.get("artist"), meta.get("license"), "Wikimedia Commons") if x)
+
+
 def build_questions() -> list[dict]:
     credits_path = OUT / "portraits.json"
     credits = json.loads(credits_path.read_text(encoding="utf-8")) if credits_path.exists() else {}
+    images_path = OUT / "images.json"
+    images = json.loads(images_path.read_text(encoding="utf-8")) if images_path.exists() else {}
     rng = random.Random(20261109)
     counters: dict[int, int] = {}
     rows = []
-    for q in QUESTIONS:
+    for q in all_questions():
         counters[q["level"]] = counters.get(q["level"], 0) + 1
         row = {
             "id": f"dq_en_{q['level']}_{counters[q['level']]:02d}", "lang": "en", "level": q["level"],
@@ -80,15 +107,26 @@ def build_questions() -> list[dict]:
         if q["kind"] == "true_false":
             row["options"] = ["True", "False"]
             row["correct_index"] = 0 if q["answer"] else 1
-        elif q["kind"] in ("mcq", "portrait"):
+        elif q["kind"] in ("mcq", "portrait", "image"):
             order = list(range(len(q["options"])))
             rng.shuffle(order)
             row["options"] = [q["options"][i] for i in order]
             row["correct_index"] = order.index(0)
             if q["kind"] == "portrait":
                 row["image_url"] = f"{STORAGE}/portraits/{q['portrait']}.jpg"
-                meta = credits.get(q["portrait"], {})
-                row["image_credit"] = " · ".join(x for x in (meta.get("artist"), meta.get("license"), "Wikimedia Commons") if x)
+                row["image_credit"] = credit_line(credits.get(q["portrait"], {}))
+            elif q["kind"] == "image":
+                # Une question à image est, pour l'app et le serveur, un « portrait » : une image
+                # et quatre réponses. Drapeaux : duels/flags ; le reste : duels/images.
+                row["kind"] = "portrait"
+                if q["image"].startswith("flags/"):
+                    row["image_url"] = f"{STORAGE}/{q['image']}.jpg"
+                    row["image_credit"] = "flagcdn.com · Public domain"
+                else:
+                    if q["image"] not in images:
+                        sys.exit(f"image sans crédit dans content/duels/images.json : {q['image']}")
+                    row["image_url"] = f"{STORAGE}/images/{q['image']}.jpg"
+                    row["image_credit"] = credit_line(images[q["image"]])
         else:
             row.update(slider_min=q["min"], slider_max=q["max"], slider_step=q["step"],
                        correct_value=q["value"], unit=q["unit"])
