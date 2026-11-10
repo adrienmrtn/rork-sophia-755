@@ -22,6 +22,11 @@ struct ContentView: View {
     @State private var deepLinkAuthor: CourseAuthor? = nil
     /// Lue une fois au lancement : la navigation ne change pas sous les doigts de l'utilisateur.
     @State private var newNavigation: Bool = FeatureFlags.newNavigation
+    /// The Duels tab only exists in English for now (beta questions). It makes six tabs, more
+    /// than the system bar shows on iPhone: see `SophiaTabScaffold`. Read once at launch, like
+    /// the navigation variant, so that changing the language in Settings does not rebuild the
+    /// tabs under the open screen; the tab follows at the next launch.
+    @State private var showsDuels: Bool = FeatureFlags.duelsVisible(language: AppLanguage.currentPersisted())
 
     @State private var pendingCourse: Course? = nil
     @State private var autoSwipeCourseId: String? = nil
@@ -52,64 +57,34 @@ struct ContentView: View {
                     onResetOnboarding: onResetOnboarding,
                     openAudioPlayer: openAudioPlayer
                 )
+            } else if showsDuels {
+                SophiaTabScaffold(selection: $selectedTab, items: classicTabItems) { tab in
+                    switch tab {
+                    case 0: classicHomeTab
+                    case 1: classicLibraryTab
+                    case 2: classicPathTab
+                    case 3: classicTrainingTab
+                    case FeatureFlags.duelsTab: classicDuelsTab
+                    default: classicProfileTab
+                    }
+                }
             } else {
             TabView(selection: $selectedTab) {
                 Tab(languageManager.text("tab.home"), systemImage: "house.fill", value: 0) {
-                    HomeView(
-                        progressManager: progressManager,
-                        discountManager: discountManager,
-                        isPremium: storeVM.isPremium,
-                        selectedCourse: $selectedCourse,
-                        autoSwipeCourseId: $autoSwipeCourseId,
-                        onShowDiscountPaywall: {
-                            if storeVM.isPremium { return }
-                            discountManager.markShownToday()
-                            paywallContext = .offreDiscount
-                        },
-                        onOpenMyCourses: { showMyCourses = true },
-                        onOpenAntiScroll: openAntiScroll
-                    )
-                    .audioMiniPlayerInset(onOpen: openAudioPlayer)
+                    classicHomeTab
                 }
-
                 Tab(languageManager.text("tab.library"), systemImage: "books.vertical.fill", value: 1) {
-                    libraryTab
-                        .audioMiniPlayerInset(onOpen: openAudioPlayer)
+                    classicLibraryTab
                 }
-
                 // The path took the collections' slot; the former collections pages are gone.
                 Tab(languageManager.text("tab.path"), systemImage: "point.bottomleft.forward.to.point.topright.scurvepath.fill", value: 2) {
-                    pathTab
-                        .audioMiniPlayerInset(onOpen: openAudioPlayer)
+                    classicPathTab
                 }
-
                 Tab(languageManager.text("tab.training"), systemImage: "arrow.triangle.2.circlepath", value: 3) {
-                    TrainingView(
-                        progressManager: progressManager,
-                        store: storeVM,
-                        isPremium: storeVM.isPremium,
-                        onShowQuizPaywall: {
-                            if storeVM.isPremium { return }
-                            paywallContext = .entrainement
-                        }
-                    )
-                    .audioMiniPlayerInset(onOpen: openAudioPlayer)
+                    classicTrainingTab
                 }
-
                 Tab(languageManager.text("tab.profile"), systemImage: "person.fill", value: 4) {
-                    ProfileView(
-                        progressManager: progressManager,
-                        store: storeVM,
-                        selectedCourse: $selectedCourse,
-                        onShowPaywall: {
-                            paywallContext = .debloquerCours
-                        },
-                        onShowBlockerPaywall: {
-                            paywallContext = .blocker
-                        },
-                        onResetOnboarding: onResetOnboarding
-                    )
-                    .audioMiniPlayerInset(onOpen: openAudioPlayer)
+                    classicProfileTab
                 }
             }
             }
@@ -429,6 +404,81 @@ struct ContentView: View {
         player.isPremium = storeVM.isPremium
         guard storeVM.isPremium, let id = player.paywallCourseId else { return }
         player.requestPlay(courseId: id, source: "paywall_purchase")
+    }
+
+    // MARK: - Classic tabs
+
+    private var classicTabItems: [SophiaTabItem] {
+        [
+            SophiaTabItem(value: 0, title: languageManager.text("tab.home"), systemImage: "house", keepsAlive: true),
+            SophiaTabItem(value: 1, title: languageManager.text("tab.library"), systemImage: "books.vertical", keepsAlive: true),
+            SophiaTabItem(value: 2, title: languageManager.text("tab.path"), systemImage: "point.bottomleft.forward.to.point.topright.scurvepath"),
+            SophiaTabItem(value: 3, title: languageManager.text("tab.training"), systemImage: "arrow.triangle.2.circlepath", keepsAlive: true),
+            SophiaTabItem(value: FeatureFlags.duelsTab, title: languageManager.text("tab.duels"), systemImage: "trophy", keepsAlive: true),
+            SophiaTabItem(value: 4, title: languageManager.text("tab.profile"), systemImage: "person"),
+        ]
+    }
+
+    private var classicHomeTab: some View {
+        HomeView(
+            progressManager: progressManager,
+            discountManager: discountManager,
+            isPremium: storeVM.isPremium,
+            selectedCourse: $selectedCourse,
+            autoSwipeCourseId: $autoSwipeCourseId,
+            onShowDiscountPaywall: {
+                if storeVM.isPremium { return }
+                discountManager.markShownToday()
+                paywallContext = .offreDiscount
+            },
+            onOpenMyCourses: { showMyCourses = true },
+            onOpenAntiScroll: openAntiScroll
+        )
+        .audioMiniPlayerInset(onOpen: openAudioPlayer)
+    }
+
+    private var classicLibraryTab: some View {
+        libraryTab
+            .audioMiniPlayerInset(onOpen: openAudioPlayer)
+    }
+
+    private var classicPathTab: some View {
+        pathTab
+            .audioMiniPlayerInset(onOpen: openAudioPlayer)
+    }
+
+    private var classicTrainingTab: some View {
+        TrainingView(
+            progressManager: progressManager,
+            store: storeVM,
+            isPremium: storeVM.isPremium,
+            onShowQuizPaywall: {
+                if storeVM.isPremium { return }
+                paywallContext = .entrainement
+            }
+        )
+        .audioMiniPlayerInset(onOpen: openAudioPlayer)
+    }
+
+    private var classicProfileTab: some View {
+        ProfileView(
+            progressManager: progressManager,
+            store: storeVM,
+            selectedCourse: $selectedCourse,
+            onShowPaywall: {
+                paywallContext = .debloquerCours
+            },
+            onShowBlockerPaywall: {
+                paywallContext = .blocker
+            },
+            onResetOnboarding: onResetOnboarding
+        )
+        .audioMiniPlayerInset(onOpen: openAudioPlayer)
+    }
+
+    private var classicDuelsTab: some View {
+        DuelsHomeView(progressManager: progressManager, isActive: selectedTab == FeatureFlags.duelsTab)
+            .audioMiniPlayerInset(onOpen: openAudioPlayer)
     }
 
     private var libraryTab: some View {

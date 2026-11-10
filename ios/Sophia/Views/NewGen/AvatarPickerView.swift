@@ -1,11 +1,12 @@
 import SwiftUI
 
-/// Les vingt avatars illustrés (design/site-art/manifest-avatars.json, la direction affiche du
-/// site), embarqués dans le catalogue d'images sous `avatar_01` … `avatar_20`. Un lecteur en choisit
-/// un à la place de ses initiales ; le choix (`UserProgress.avatarId`) suit la progression, donc
-/// le multi-appareils. Les mêmes fichiers servent aux auteurs dans le Studio.
+/// Les soixante avatars illustrés (design/site-art/manifest-avatars.json et
+/// manifest-avatars-duels.json, la direction affiche du site), embarqués dans le catalogue
+/// d'images sous `avatar_01` … `avatar_60`. Un lecteur en choisit un à la place de ses initiales ;
+/// le choix (`UserProgress.avatarId`) suit la progression, donc le multi-appareils. Les vingt
+/// premiers servent aussi aux auteurs dans le Studio ; tous servent aux adversaires des duels.
 enum Avatars {
-    static let all: [String] = (1...20).map { String(format: "avatar_%02d", $0) }
+    static let all: [String] = (1...60).map { String(format: "avatar_%02d", $0) }
 
     static func isValid(_ id: String?) -> Bool {
         guard let id else { return false }
@@ -38,7 +39,7 @@ struct AvatarCircle: View {
     }
 }
 
-/// La feuille de choix : la grille des vingt, et « pas d'avatar » pour revenir aux initiales.
+/// La feuille de choix : la grille des avatars, et « pas d'avatar » pour revenir aux initiales.
 struct AvatarPickerSheet: View {
     @Environment(LanguageManager.self) private var languageManager
     @Environment(\.dismiss) private var dismiss

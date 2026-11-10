@@ -1,0 +1,272 @@
+[
+  {
+    "position": 1,
+    "slug": "aesop",
+    "name": "Aesop",
+    "min_trophies": 0,
+    "background_url": "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels/leagues/league_01_aesop.jpg",
+    "thumb_url": "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels/leagues/league_01_aesop_thumb.jpg",
+    "accent_hex": "#2C4768"
+  },
+  {
+    "position": 2,
+    "slug": "homer",
+    "name": "Homer",
+    "min_trophies": 100,
+    "background_url": "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels/leagues/league_02_homer.jpg",
+    "thumb_url": "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels/leagues/league_02_homer_thumb.jpg",
+    "accent_hex": "#B2AEA1"
+  },
+  {
+    "position": 3,
+    "slug": "sappho",
+    "name": "Sappho",
+    "min_trophies": 200,
+    "background_url": "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels/leagues/league_03_sappho.jpg",
+    "thumb_url": "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels/leagues/league_03_sappho_thumb.jpg",
+    "accent_hex": "#04608F"
+  },
+  {
+    "position": 4,
+    "slug": "confucius",
+    "name": "Confucius",
+    "min_trophies": 300,
+    "background_url": "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels/leagues/league_04_confucius.jpg",
+    "thumb_url": "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels/leagues/league_04_confucius_thumb.jpg",
+    "accent_hex": "#A37C32"
+  },
+  {
+    "position": 5,
+    "slug": "socrates",
+    "name": "Socrates",
+    "min_trophies": 400,
+    "background_url": "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels/leagues/league_05_socrates.jpg",
+    "thumb_url": "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels/leagues/league_05_socrates_thumb.jpg",
+    "accent_hex": "#994931"
+  },
+  {
+    "position": 6,
+    "slug": "cleopatra",
+    "name": "Cleopatra",
+    "min_trophies": 500,
+    "background_url": "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels/leagues/league_06_cleopatra.jpg",
+    "thumb_url": "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels/leagues/league_06_cleopatra_thumb.jpg",
+    "accent_hex": "#1F326B"
+  },
+  {
+    "position": 7,
+    "slug": "hypatia",
+    "name": "Hypatia",
+    "min_trophies": 650,
+    "background_url": "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels/leagues/league_07_hypatia.jpg",
+    "thumb_url": "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels/leagues/league_07_hypatia_thumb.jpg",
+    "accent_hex": "#A47523"
+  },
+  {
+    "position": 8,
+    "slug": "avicenna",
+    "name": "Avicenna",
+    "min_trophies": 800,
+    "background_url": "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels/leagues/league_08_avicenna.jpg",
+    "thumb_url": "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels/leagues/league_08_avicenna_thumb.jpg",
+    "accent_hex": "#0B3967"
+  },
+  {
+    "position": 9,
+    "slug": "murasaki",
+    "name": "Murasaki",
+    "min_trophies": 950,
+    "background_url": "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels/leagues/league_09_murasaki.jpg",
+    "thumb_url": "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels/leagues/league_09_murasaki_thumb.jpg",
+    "accent_hex": "#AE8525"
+  },
+  {
+    "position": 10,
+    "slug": "mansa_musa",
+    "name": "Mansa Musa",
+    "min_trophies": 1100,
+    "background_url": "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels/leagues/league_10_mansa_musa.jpg",
+    "thumb_url": "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels/leagues/league_10_mansa_musa_thumb.jpg",
+    "accent_hex": "#1D3269"
+  },
+  {
+    "position": 11,
+    "slug": "dante",
+    "name": "Dante",
+    "min_trophies": 1300,
+    "background_url": "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels/leagues/league_11_dante.jpg",
+    "thumb_url": "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels/leagues/league_11_dante_thumb.jpg",
+    "accent_hex": "#A98416"
+  },
+  {
+    "position": 12,
+    "slug": "joan_of_arc",
+    "name": "Joan of Arc",
+    "min_trophies": 1500,
+    "background_url": "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels/leagues/league_12_joan_of_arc.jpg",
+    "thumb_url": "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels/leagues/league_12_joan_of_arc_thumb.jpg",
+    "accent_hex": "#ABABA3"
+  },
+  {
+    "position": 13,
+    "slug": "gutenberg",
+    "name": "Gutenberg",
+    "min_trophies": 1700,
+    "background_url": "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels/leagues/league_13_gutenberg.jpg",
+    "thumb_url": "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels/leagues/league_13_gutenberg_thumb.jpg",
+    "accent_hex": "#A98336"
+  },
+  {
+    "position": 14,
+    "slug": "leonardo",
+    "name": "Leonardo",
+    "min_trophies": 1900,
+    "background_url": "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels/leagues/league_14_leonardo.jpg",
+    "thumb_url": "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels/leagues/league_14_leonardo_thumb.jpg",
+    "accent_hex": "#B5AFA3"
+  },
+  {
+    "position": 15,
+    "slug": "michelangelo",
+    "name": "Michelangelo",
+    "min_trophies": 2100,
+    "background_url": "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels/leagues/league_15_michelangelo.jpg",
+    "thumb_url": "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels/leagues/league_15_michelangelo_thumb.jpg",
+    "accent_hex": "#AE8606"
+  },
+  {
+    "position": 16,
+    "slug": "copernicus",
+    "name": "Copernicus",
+    "min_trophies": 2350,
+    "background_url": "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels/leagues/league_16_copernicus.jpg",
+    "thumb_url": "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels/leagues/league_16_copernicus_thumb.jpg",
+    "accent_hex": "#02638E"
+  },
+  {
+    "position": 17,
+    "slug": "shakespeare",
+    "name": "Shakespeare",
+    "min_trophies": 2600,
+    "background_url": "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels/leagues/league_17_shakespeare.jpg",
+    "thumb_url": "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels/leagues/league_17_shakespeare_thumb.jpg",
+    "accent_hex": "#B55D96"
+  },
+  {
+    "position": 18,
+    "slug": "galileo",
+    "name": "Galileo",
+    "min_trophies": 2850,
+    "background_url": "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels/leagues/league_18_galileo.jpg",
+    "thumb_url": "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels/leagues/league_18_galileo_thumb.jpg",
+    "accent_hex": "#9F472D"
+  },
+  {
+    "position": 19,
+    "slug": "vermeer",
+    "name": "Vermeer",
+    "min_trophies": 3100,
+    "background_url": "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels/leagues/league_19_vermeer.jpg",
+    "thumb_url": "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels/leagues/league_19_vermeer_thumb.jpg",
+    "accent_hex": "#A84522"
+  },
+  {
+    "position": 20,
+    "slug": "newton",
+    "name": "Newton",
+    "min_trophies": 3400,
+    "background_url": "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels/leagues/league_20_newton.jpg",
+    "thumb_url": "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels/leagues/league_20_newton_thumb.jpg",
+    "accent_hex": "#A47A26"
+  },
+  {
+    "position": 21,
+    "slug": "mozart",
+    "name": "Mozart",
+    "min_trophies": 3700,
+    "background_url": "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels/leagues/league_21_mozart.jpg",
+    "thumb_url": "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels/leagues/league_21_mozart_thumb.jpg",
+    "accent_hex": "#005E3F"
+  },
+  {
+    "position": 22,
+    "slug": "napoleon",
+    "name": "Napoleon",
+    "min_trophies": 4000,
+    "background_url": "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels/leagues/league_22_napoleon.jpg",
+    "thumb_url": "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels/leagues/league_22_napoleon_thumb.jpg",
+    "accent_hex": "#282418"
+  },
+  {
+    "position": 23,
+    "slug": "austen",
+    "name": "Austen",
+    "min_trophies": 4300,
+    "background_url": "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels/leagues/league_23_austen.jpg",
+    "thumb_url": "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels/leagues/league_23_austen_thumb.jpg",
+    "accent_hex": "#AE8221"
+  },
+  {
+    "position": 24,
+    "slug": "darwin",
+    "name": "Darwin",
+    "min_trophies": 4650,
+    "background_url": "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels/leagues/league_24_darwin.jpg",
+    "thumb_url": "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels/leagues/league_24_darwin_thumb.jpg",
+    "accent_hex": "#292218"
+  },
+  {
+    "position": 25,
+    "slug": "lovelace",
+    "name": "Lovelace",
+    "min_trophies": 5000,
+    "background_url": "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels/leagues/league_25_lovelace.jpg",
+    "thumb_url": "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels/leagues/league_25_lovelace_thumb.jpg",
+    "accent_hex": "#06613A"
+  },
+  {
+    "position": 26,
+    "slug": "van_gogh",
+    "name": "Van Gogh",
+    "min_trophies": 5400,
+    "background_url": "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels/leagues/league_26_van_gogh.jpg",
+    "thumb_url": "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels/leagues/league_26_van_gogh_thumb.jpg",
+    "accent_hex": "#015E6B"
+  },
+  {
+    "position": 27,
+    "slug": "curie",
+    "name": "Curie",
+    "min_trophies": 5800,
+    "background_url": "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels/leagues/league_27_curie.jpg",
+    "thumb_url": "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels/leagues/league_27_curie_thumb.jpg",
+    "accent_hex": "#A64B36"
+  },
+  {
+    "position": 28,
+    "slug": "einstein",
+    "name": "Einstein",
+    "min_trophies": 6200,
+    "background_url": "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels/leagues/league_28_einstein.jpg",
+    "thumb_url": "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels/leagues/league_28_einstein_thumb.jpg",
+    "accent_hex": "#B56485"
+  },
+  {
+    "position": 29,
+    "slug": "kahlo",
+    "name": "Kahlo",
+    "min_trophies": 6600,
+    "background_url": "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels/leagues/league_29_kahlo.jpg",
+    "thumb_url": "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels/leagues/league_29_kahlo_thumb.jpg",
+    "accent_hex": "#9B3B28"
+  },
+  {
+    "position": 30,
+    "slug": "sophia",
+    "name": "Sophia",
+    "min_trophies": 7000,
+    "background_url": "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels/leagues/league_30_sophia.jpg",
+    "thumb_url": "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels/leagues/league_30_sophia_thumb.jpg",
+    "accent_hex": "#0E2E4E"
+  }
+]

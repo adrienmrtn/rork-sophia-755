@@ -1,0 +1,152 @@
+{
+  "_comment": "Fonds des 30 ligues de duel (apps). Direction affiche du site : une scène emblématique par figure, sans personnage, format portrait. Style validé par Adrien le 9 novembre.",
+  "defaults": {
+    "style": "digital_illustration/2d_art_poster",
+    "size": "portrait_16_9",
+    "max_side": 1600,
+    "colors": [
+      [
+        26,
+        58,
+        107
+      ],
+      [
+        242,
+        177,
+        52
+      ],
+      [
+        224,
+        90,
+        58
+      ],
+      [
+        251,
+        247,
+        239
+      ]
+    ]
+  },
+  "items": [
+    {
+      "name": "league_01_aesop",
+      "prompt": "A tortoise and a hare on a winding country path leading to a small flag on a hill, olive trees, a fox watching from behind a rock and a crow on a branch, ancient Greek countryside, no people. Tall vertical composition with calm empty space in the upper third. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, no text, no outlines."
+    },
+    {
+      "name": "league_02_homer",
+      "prompt": "A giant wooden horse standing before the walls and gate of an ancient city at dusk, Greek ships with striped sails waiting on the sea in the distance, no people. Tall vertical composition with calm empty space in the upper third. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, no text, no outlines."
+    },
+    {
+      "name": "league_03_sappho",
+      "prompt": "A lyre resting on the marble terrace of a Greek island house, olive branches, an amphora, the sea and small islands at sunset, swallows in the sky, no people. Tall vertical composition with calm empty space in the upper third. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, no text, no outlines."
+    },
+    {
+      "name": "league_04_confucius",
+      "prompt": "A Chinese wooden pavilion with curved roofs beside a ginkgo tree, bamboo scrolls and an ink brush on a low table, misty mountains behind, a crane flying, no people. Tall vertical composition with calm empty space in the upper third. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, no text, no outlines."
+    },
+    {
+      "name": "league_05_socrates",
+      "prompt": "The Athenian agora in the morning: marble columns and steps in the foreground, a simple clay cup on a stone bench, the Acropolis with the Parthenon on the hill behind, olive trees, no people. Tall vertical composition with calm empty space in the upper third. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, no text, no outlines."
+    },
+    {
+      "name": "league_06_cleopatra",
+      "prompt": "The banks of the Nile at sunset: a royal barge with a large sail gliding on the river, papyrus reeds and lotus flowers in the foreground, palm trees and the lighthouse of Alexandria on the horizon, a huge low sun, no people. Tall vertical composition with calm empty sky in the upper third. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, no text, no outlines."
+    },
+    {
+      "name": "league_07_hypatia",
+      "prompt": "The great library of Alexandria at night: tall shelves of scrolls, a brass astrolabe and geometric instruments on a table, a large arched opening onto a starry sky with constellations, no people. Tall vertical composition with calm empty space in the upper third. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, no text, no outlines."
+    },
+    {
+      "name": "league_08_avicenna",
+      "prompt": "A Persian courtyard with pointed arches and patterned tiles, a fountain, shelves of medicine jars and a stack of thick books on a carved stand, a crescent moon, cypress trees, no people. Tall vertical composition with calm empty space in the upper third. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, no text, no outlines."
+    },
+    {
+      "name": "league_09_murasaki",
+      "prompt": "A Heian-era Japanese pavilion by a pond under a full moon, wisteria hanging from the eaves, a low writing desk with a brush, an ink stone and a folding fan, sliding screens, no people. Tall vertical composition with calm empty space in the upper third. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, no text, no outlines."
+    },
+    {
+      "name": "league_10_mansa_musa",
+      "prompt": "A caravan of camels loaded with gold crossing saffron dunes toward the great mud-brick mosque of Timbuktu with its wooden beams, a huge sun, acacia trees, no people. Tall vertical composition with calm empty space in the upper third. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, no text, no outlines."
+    },
+    {
+      "name": "league_11_dante",
+      "prompt": "A dark forest of tall trunks opening onto a spiral mountain rising toward a sky full of stars, the dome and towers of Florence small on the horizon, a laurel wreath on a rock in the foreground, no people. Tall vertical composition with calm empty space in the upper third. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, no text, no outlines."
+    },
+    {
+      "name": "league_12_joan_of_arc",
+      "prompt": "A white banner with golden lilies flying over a medieval camp, a knight's helmet and a sword planted in the ground in the foreground, a Gothic cathedral with twin towers behind, dawn sky, no people. Tall vertical composition with calm empty space in the upper third. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, no text, no outlines."
+    },
+    {
+      "name": "league_13_gutenberg",
+      "prompt": "A wooden printing press in a medieval workshop, trays of metal type, freshly printed sheets hanging to dry on lines, an oil lamp, a window with small panes, no people. Tall vertical composition with calm empty space in the upper third. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, no text, no outlines."
+    },
+    {
+      "name": "league_14_leonardo",
+      "prompt": "A Renaissance inventor's workshop: a wooden flying machine with bat-like wings hanging from the ceiling, a compass and gears on a desk, an easel, an open arched window on Tuscan hills with cypresses, no people. Tall vertical composition with calm empty space in the upper third. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, no text, no outlines."
+    },
+    {
+      "name": "league_15_michelangelo",
+      "prompt": "A sculptor's studio in Renaissance Rome: a large block of marble with a half-carved hand emerging, chisels and a mallet, wooden scaffolding rising toward a painted vaulted ceiling, a great dome seen through the door, no people. Tall vertical composition with calm empty space in the upper third. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, no text, no outlines."
+    },
+    {
+      "name": "league_16_copernicus",
+      "prompt": "A brick observatory tower at night with a wooden armillary sphere on its terrace, above it planets on circular orbits around a big golden sun, red roofs of a Baltic town below, no people. Tall vertical composition with calm empty space in the upper third. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, no text, no outlines."
+    },
+    {
+      "name": "league_17_shakespeare",
+      "prompt": "The stage of an Elizabethan round wooden theatre seen from the pit: timber galleries, a red curtain, a skull, a crown and a quill lying on the boards, flags on the thatched roof, evening sky, no people. Tall vertical composition with calm empty space in the upper third. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, no text, no outlines."
+    },
+    {
+      "name": "league_18_galileo",
+      "prompt": "A brass telescope on a tripod on a Tuscan balcony at night pointing at a striped planet with four small moons and a crescent moon, a leaning tower and cypress hills in the distance, no people. Tall vertical composition with calm empty space in the upper third. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, no text, no outlines."
+    },
+    {
+      "name": "league_19_vermeer",
+      "prompt": "A quiet seventeenth-century Dutch interior: a tall leaded window on the left pouring soft light onto a black-and-white checkered floor, a table with a draped cloth, a ceramic jug and a single pearl, a map hanging on the wall, no people. Tall vertical composition with calm empty space in the upper third. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, no text, no outlines."
+    },
+    {
+      "name": "league_20_newton",
+      "prompt": "An apple tree heavy with red apples in front of an English stone manor, one apple falling, a glass prism on a garden table splitting a ray of light into colored bands, a pale crescent moon in the sky, no people. Tall vertical composition with calm empty space in the upper third. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, no text, no outlines."
+    },
+    {
+      "name": "league_21_mozart",
+      "prompt": "An eighteenth-century music room: a harpsichord with its lid open, sheets of music scattered, a violin on a chair, candles in a chandelier, tall windows looking on baroque domes and a hilltop fortress, no people. Tall vertical composition with calm empty space in the upper third. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, no text, no outlines."
+    },
+    {
+      "name": "league_22_napoleon",
+      "prompt": "A bicorne hat resting on a campaign map table inside an open military tent at dawn, beyond the tent flaps a wide plain with distant rows of tiny tents, flags and a rising sun, no people, no faces. Tall vertical composition with calm empty sky in the upper third. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, no text, no outlines."
+    },
+    {
+      "name": "league_23_austen",
+      "prompt": "An English Regency country house seen across a garden with rose bushes, in the foreground a small round writing table with a quill, letters tied with a ribbon and a teacup, a carriage far away on the lane, no people. Tall vertical composition with calm empty space in the upper third. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, no text, no outlines."
+    },
+    {
+      "name": "league_24_darwin",
+      "prompt": "A three-masted sailing ship anchored off volcanic islands, in the foreground a giant tortoise, finches on a cactus and an iguana on black rocks, sea birds in the sky, no people. Tall vertical composition with calm empty space in the upper third. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, no text, no outlines."
+    },
+    {
+      "name": "league_25_lovelace",
+      "prompt": "A Victorian mechanical computing engine made of brass gears, cogwheels and columns of numbered wheels, punched cards flowing out of it like ribbons, a candlestick and a rose on the desk, no people. Tall vertical composition with calm empty space in the upper third. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, no text, no outlines."
+    },
+    {
+      "name": "league_26_van_gogh",
+      "prompt": "A wheat field under a swirling night sky full of big stars and a crescent moon, a tall dark cypress on the left, sunflowers in the foreground, a small village with a church steeple, no people. Tall vertical composition with calm empty space in the upper third. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, no text, no outlines."
+    },
+    {
+      "name": "league_27_curie",
+      "prompt": "An early twentieth-century laboratory in a wooden shed: glass flasks and test tubes, a balance scale, a small glowing bowl radiating soft light, notebooks, a stove pipe, a window on Paris rooftops, no people. Tall vertical composition with calm empty space in the upper third. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, no text, no outlines."
+    },
+    {
+      "name": "league_28_einstein",
+      "prompt": "A deep night sky where a grid of space bends around a large golden sun, a pocket watch floating, a small train passing a clock tower below, light rays curving, a violin leaning on a chair, no people. Tall vertical composition with calm empty space in the upper third. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, no text, no outlines."
+    },
+    {
+      "name": "league_29_kahlo",
+      "prompt": "A cobalt-blue Mexican courtyard house with coral window frames, tall cacti, agaves and big tropical flowers, a parrot and a small monkey on a branch, a painter's easel under paper garlands, no people. Tall vertical composition with calm empty space in the upper third. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, no text, no outlines."
+    },
+    {
+      "name": "league_30_sophia",
+      "prompt": "An owl perched on top of a Greek column on a mountain summit above a sea of clouds, a temple with a golden pediment behind it, a laurel wreath and an open book at the base, a huge radiant sun and stars, no people. Tall vertical composition with calm empty space in the upper third. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, no text, no outlines."
+    }
+  ]
+}

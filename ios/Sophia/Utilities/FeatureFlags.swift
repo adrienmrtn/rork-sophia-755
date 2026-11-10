@@ -2,7 +2,7 @@ import Foundation
 
 /// Drapeaux de fonctionnalités de l'app.
 ///
-/// Un seul pour l'instant : la navigation « nouvelle génération » (4 onglets Accueil /
+/// La navigation « nouvelle génération » (4 onglets Accueil /
 /// Explorer / Apprendre / Profil, fil unique, nouveau profil, page créateur), tirée au sort
 /// une fois par installation pour un A/B contre les 5 onglets actuels. La variante est lue
 /// une fois au lancement de `ContentView` ; un changement (réglage de debug) prend effet au
@@ -35,4 +35,16 @@ enum FeatureFlags {
     }
 
     static var newNavigation: Bool { navigationVariant == .newGen }
+
+    // MARK: - Duels
+
+    /// Valeur de sélection de l'onglet Duels, à la suite des cinq onglets existants (0 à 4)
+    /// pour ne pas décaler les leurs ; dans la barre, il se place entre Entraînement et Profil.
+    static let duelsTab = 5
+
+    /// L'onglet Duels est ouvert à tous, mais seulement quand l'app est en anglais : les
+    /// questions de la bêta n'existent que dans cette langue.
+    static func duelsVisible(language: AppLanguage) -> Bool {
+        language == .english
+    }
 }
