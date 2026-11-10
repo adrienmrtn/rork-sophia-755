@@ -63,5 +63,8 @@
 	<!-- Texte ATT affiché par iOS avant la demande de tracking publicitaire. -->
 	<key>NSUserTrackingUsageDescription</key>
 	<string>Sophia utilise cet identifiant pour mesurer l'efficacité de ses campagnes publicitaires et améliorer la pertinence des annonces.</string>
+	<!-- Caméra : scanner le QR code d'un ami pour l'ajouter (profil). Traduit dans les InfoPlist.strings. -->
+	<key>NSCameraUsageDescription</key>
+	<string>Sophia utilise la caméra pour scanner le QR code d'un ami et l'ajouter.</string>
 </dict>
 </plist>

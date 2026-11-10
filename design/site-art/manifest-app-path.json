@@ -1,0 +1,15 @@
+{
+  "_comment": "Illustration de l'app iOS pour l'entrée « Parcours » de l'onglet Explorer, direction affiche (mêmes réglages que manifest-app-progress.json), en deux couleurs : marine et safran sur papier crème. Sortie convertie en JPEG 1200 × 900 dans ios/Sophia/Assets.xcassets/path_poster.imageset.",
+  "defaults": {
+    "style": "digital_illustration/2d_art_poster",
+    "size": "landscape_4_3",
+    "max_side": 2000,
+    "colors": [[26, 58, 107], [242, 177, 52], [251, 247, 239]]
+  },
+  "items": [
+    {
+      "name": "path_poster",
+      "prompt": "On a plain cream paper background: a winding deep navy blue path that snakes up a gentle saffron yellow hill, marked by five round stepping-stone milestones with small flags, leading to a big saffron shining star at the top; a small simple navy figure with a backpack walks on the path. The sky is empty cream paper, no blue sky. Flat poster illustration, linocut paper-cut shapes, strictly two colors: deep navy blue and saffron yellow on a cream paper background, bold simple forms, subtle paper grain, airy composition, no text, no letters, no numbers, no outlines."
+    }
+  ]
+}

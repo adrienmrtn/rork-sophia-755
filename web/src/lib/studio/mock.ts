@@ -277,7 +277,6 @@ const mockCampaign = {
   goal_target: 10000,
   goal_count: 6230,
   course_ids: ["course_101_1984_george_orwell", "course_107_crime_et_chatiment_dostoievski", "course_116_la_metamorphose_kafka"],
-  upcoming: [{ title: { en: "Why do men see a doctor less often?", fr: "Pourquoi les hommes vont-ils moins chez le médecin ?" }, creator: "dusan-nikolic", date: "2026-11-14" }],
   title: { en: "Movember", fr: "Movember" },
   tagline: { en: "Men's health, let's talk about it.", fr: "La santé des hommes, on en parle." },
   description: { en: "Mental health, prevention, male cancers: a month to talk about it, one course at a time.", fr: "Santé mentale, prévention, cancers masculins : un mois pour en parler, un cours à la fois." },

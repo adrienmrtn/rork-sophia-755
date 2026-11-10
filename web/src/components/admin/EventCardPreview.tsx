@@ -23,7 +23,7 @@ export function EventCardPreview({ campaign, covers }: { campaign: Campaign; cov
         </div>
         <strong className="text-[26px] font-extrabold leading-[1.1]">{title}</strong>
         <p className="text-[14px] leading-[1.45] text-white/85">
-          {tagline} {campaign.course_ids.length} courses to read, {campaign.upcoming.length} being written.
+          {tagline} {campaign.course_ids.length} {campaign.course_ids.length === 1 ? "course" : "courses"} to read.
         </p>
         <div className="flex items-center gap-2.5">
           {covers.slice(0, 3).map((c) =>
@@ -35,7 +35,6 @@ export function EventCardPreview({ campaign, covers }: { campaign: Campaign; cov
               </span>
             ),
           )}
-          {campaign.upcoming.length > 0 && <span className="pl-1 text-[14px] font-semibold">+{campaign.upcoming.length} soon</span>}
         </div>
         <div className="flex items-center gap-3">
           <span className="h-1.5 flex-1 overflow-hidden rounded-full bg-white/20">

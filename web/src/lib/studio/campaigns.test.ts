@@ -7,7 +7,7 @@ function form(entries: Record<string, string | string[]>): FormData {
   return f;
 }
 
-const known = { courseIds: new Set(["course_1_a", "course_2_b", "course_3_c"]), creatorSlugs: new Set(["jane-doe"]) };
+const known = { courseIds: new Set(["course_1_a", "course_2_b", "course_3_c"]) };
 
 function movember(): Campaign {
   return {
@@ -20,7 +20,6 @@ function movember(): Campaign {
     ends_at: "2026-11-30",
     challenge_target: 3,
     course_ids: ["course_1_a", "course_2_b", "course_3_c"],
-    upcoming: [{ title: { en: "Why do men see a doctor less often?", fr: "Pourquoi…" }, creator: "jane-doe", date: "2026-11-14" }],
     title: { en: "Movember", fr: "Movember" },
     tagline: { en: "Men's health, let's talk about it.", fr: "La santé des hommes, on en parle." },
     description: { en: "A month to talk about it.", fr: "Un mois pour en parler." },
@@ -45,7 +44,8 @@ describe("campaignFromForm", () => {
     expect(c.symbol).toBe("flag.fill");
     expect(c.course_ids).toEqual(["course_1_a", "course_2_b"]);
     expect(c.challenge_target).toBe(2);
-    expect(c.upcoming).toEqual([{ title: { en: "The last day of the war" }, creator: "jane-doe", date: "2026-11-10" }]);
+    // Les cours annoncés « en écriture » n'existent plus : les anciens champs du formulaire sont ignorés.
+    expect(c).not.toHaveProperty("upcoming");
     expect(c.title).toEqual({ en: "Armistice" });
   });
 
@@ -89,13 +89,11 @@ describe("validation", () => {
 
   it("lists what blocks publication", () => {
     expect(publishProblems(movember(), known)).toEqual([]);
-    const problems = publishProblems({ ...movember(), course_ids: ["course_1_a", "course_9_z"], badge_name: {}, upcoming: [{ title: {}, creator: "nobody", date: "soon" }] }, known);
+    const problems = publishProblems({ ...movember(), course_ids: ["course_1_a", "course_9_z"], badge_name: {} }, known);
     expect(problems).toContain("Badge name in English is required.");
     expect(problems.some((p) => p.startsWith("1 course is not published"))).toBe(true);
     expect(problems).toContain("The challenge asks for 3 courses but the collection has 2.");
-    expect(problems).toContain("Announced course 1: title in English is required.");
-    expect(problems).toContain("Announced course 1: the release date is missing or invalid.");
-    expect(problems).toContain("Announced course 1: unknown author “nobody”.");
+    expect(problems.some((p) => p.startsWith("Announced course"))).toBe(false);
   });
 
   it("checks the duration against the kind", () => {
@@ -121,7 +119,7 @@ describe("languages and phase", () => {
     expect(c.symbol).toBe("atom");
     expect(c.starts_at).toBe("2026-01-01");
     expect(c.challenge_target).toBe(2);
-    expect(c.upcoming[0].creator).toBeNull();
+    expect(c).not.toHaveProperty("upcoming");
     expect(c.title).toEqual({ en: "X" });
     expect(c.image_url).toBeNull();
     expect(c.goal_target).toBe(500);

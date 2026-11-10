@@ -14,20 +14,19 @@ Rules:
 - Translate faithfully, in the natural register of each language, as an editor would write it (not word for word).
 - Keep proper nouns, brand names and campaign names unchanged (Movember, Sophia).
 - Keep each text about as long as the source. Titles stay short; the badge name is one or two words.
-- Output ONLY a JSON object, no markdown, no comments. Keys: the language codes requested. Each value: an object with "title", "tagline", "description", "badge_name" (strings) and "upcoming" (an array of strings, same order and count as the source).`;
+- Output ONLY a JSON object, no markdown, no comments. Keys: the language codes requested. Each value: an object with "title", "tagline", "description", "badge_name" (strings).`;
 
-type Translated = Partial<Record<"title" | "tagline" | "description" | "badge_name", string>> & { upcoming?: string[] };
+type Translated = Partial<Record<"title" | "tagline" | "description" | "badge_name", string>>;
 
 export function translationConfigured(): boolean {
   return coversConfigured();
 }
 
-function sourceOf(c: Campaign): { lang: string; texts: Record<string, string>; upcoming: string[] } {
+function sourceOf(c: Campaign): { lang: string; texts: Record<string, string> } {
   const lang = TEXT_FIELDS.every((f) => c[f].en?.trim()) ? "en" : "fr";
   return {
     lang,
     texts: Object.fromEntries(TEXT_FIELDS.map((f) => [f, (c[f][lang] ?? c[f].en ?? c[f].fr ?? "").trim()])),
-    upcoming: c.upcoming.map((u) => (u.title[lang] ?? u.title.en ?? u.title.fr ?? "").trim()),
   };
 }
 
@@ -39,12 +38,12 @@ function parseJson(text: string): Record<string, Translated> {
   return JSON.parse(cleaned.slice(start, end + 1)) as Record<string, Translated>;
 }
 
-/** Les quatre tables et les titres annoncés, complétés pour `targets`. Renvoie aussi les langues effectivement ajoutées. */
-export async function translateCampaign(c: Campaign, targets: Lang[]): Promise<{ fields: Pick<Campaign, "title" | "tagline" | "description" | "badge_name" | "upcoming">; added: Lang[] }> {
-  const fields = { title: { ...c.title }, tagline: { ...c.tagline }, description: { ...c.description }, badge_name: { ...c.badge_name }, upcoming: c.upcoming.map((u) => ({ ...u, title: { ...u.title } })) };
+/** Les quatre tables, complétées pour `targets`. Renvoie aussi les langues effectivement ajoutées. */
+export async function translateCampaign(c: Campaign, targets: Lang[]): Promise<{ fields: Pick<Campaign, "title" | "tagline" | "description" | "badge_name">; added: Lang[] }> {
+  const fields = { title: { ...c.title }, tagline: { ...c.tagline }, description: { ...c.description }, badge_name: { ...c.badge_name } };
   if (targets.length === 0) return { fields, added: [] };
   const source = sourceOf(c);
-  const sourceJson = JSON.stringify({ ...source.texts, upcoming: source.upcoming }, null, 2);
+  const sourceJson = JSON.stringify(source.texts, null, 2);
   // Les langues par paquets de dix : une réponse plus courte est plus sûre à analyser.
   const added: Lang[] = [];
   for (let i = 0; i < targets.length; i += 10) {
@@ -68,15 +67,6 @@ export async function translateCampaign(c: Campaign, targets: Lang[]): Promise<{
           (fields[f] as Localized)[lang] = v;
           touched = true;
         }
-      }
-      if (Array.isArray(t.upcoming)) {
-        t.upcoming.forEach((v, idx) => {
-          const u = fields.upcoming[idx];
-          if (u && typeof v === "string" && v.trim() && !u.title[lang]?.trim()) {
-            u.title[lang] = v.trim();
-            touched = true;
-          }
-        });
       }
       if (touched) added.push(lang);
     }

@@ -33,15 +33,14 @@ function text(form: FormData, key: string, max = 200): string {
 }
 
 async function loadKnown(supabase: Awaited<ReturnType<typeof requireAdmin>>["supabase"]): Promise<Known> {
-  const [{ data: courses }, { data: creators }] = await Promise.all([supabase.from("courses").select("id").eq("status", "published"), supabase.from("creators").select("slug")]);
-  return {
-    courseIds: new Set(((courses ?? []) as { id: string }[]).map((c) => c.id)),
-    creatorSlugs: new Set(((creators ?? []) as { slug: string }[]).map((c) => c.slug)),
-  };
+  const { data: courses } = await supabase.from("courses").select("id").eq("status", "published");
+  return { courseIds: new Set(((courses ?? []) as { id: string }[]).map((c) => c.id)) };
 }
 
+/** Les colonnes enregistrées. `upcoming` (les cours annoncés « en écriture ») n'existe plus dans
+ *  le produit : la colonne reste en base (non nulle), on y remet toujours une liste vide. */
 function toRow(c: Campaign) {
-  return { kind: c.kind, status: c.status, symbol: c.symbol, image_url: c.image_url, starts_at: c.starts_at, ends_at: c.ends_at, challenge_target: c.challenge_target, goal_target: c.goal_target, course_ids: c.course_ids, upcoming: c.upcoming, title: c.title, tagline: c.tagline, description: c.description, badge_name: c.badge_name };
+  return { kind: c.kind, status: c.status, symbol: c.symbol, image_url: c.image_url, starts_at: c.starts_at, ends_at: c.ends_at, challenge_target: c.challenge_target, goal_target: c.goal_target, course_ids: c.course_ids, upcoming: [], title: c.title, tagline: c.tagline, description: c.description, badge_name: c.badge_name };
 }
 
 /** L'image envoyée par le formulaire, copiée dans le bucket public course-images sous events/.
