@@ -40,7 +40,10 @@ enum DuelHaptics {
     }
 
     private static func after(_ delay: Double, _ work: @escaping () -> Void) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + delay, execute: work)
+        Task {
+            try? await Task.sleep(for: .seconds(delay))
+            work()
+        }
     }
 
     /// Un bouton secondaire, une ligne de liste.
@@ -179,12 +182,12 @@ struct DuelLeagueBackdrop: View {
     var thumb: Bool = false
 
     var body: some View {
-        ZStack {
-            Color(duelHex: league?.accentHex ?? "")
-            RemoteImage(url: thumb ? league?.thumbURL : league?.backgroundURL)
-        }
-        .clipped()
-        .accessibilityHidden(true)
+        // L'image est posée en surimpression : elle remplit la place donnée à la couleur sans
+        // jamais agrandir la vue (une image « à remplir » sans cadre prendrait sa propre taille).
+        Color(duelHex: league?.accentHex ?? "")
+            .overlay { RemoteImage(url: thumb ? league?.thumbURL : league?.backgroundURL) }
+            .clipped()
+            .accessibilityHidden(true)
     }
 }
 

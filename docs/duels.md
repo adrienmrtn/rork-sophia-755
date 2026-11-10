@@ -2,7 +2,8 @@
 
 Des parties de 20 questions contre un adversaire, avec des trophées et 30 ligues. Version bêta :
 iOS seulement, questions en anglais seulement, donc onglet visible quand l'app est en anglais
-(`FeatureFlags.duelsVisible`). Les adversaires sont simulés par le serveur ; rien dans l'app ne
+(`FeatureFlags.duelsVisible`, lu au lancement : après un changement de langue, l'onglet suit au
+prochain lancement). Les adversaires sont simulés par le serveur ; rien dans l'app ne
 le dit, et le niveau de difficulté du joueur n'est jamais affiché.
 
 ## Règles
@@ -77,6 +78,8 @@ Une partie restée ouverte est close comme un abandon au lancement de la suivant
   résultat avec la montée de ligue (`DuelFlowView` les enchaîne).
 - Six onglets : la barre du système n'en montre que cinq sur iPhone, l'app dessine donc la sienne
   quand l'onglet Duels est visible (`Views/NewGen/SophiaTabScaffold.swift`), dans les deux navigations.
+  Accueil, Explorer (ou Biblio), Entraînement et Duels y restent en vie d'un onglet à l'autre ;
+  Parcours et Profil sont reconstruits à chaque visite, ce qui rejoue leur `onAppear`.
 - Un compte est requis ; sans compte la page propose la connexion.
 - Un résultat qui n'a pas pu partir (réseau coupé) est gardé sur l'appareil et renvoyé au
   prochain passage.

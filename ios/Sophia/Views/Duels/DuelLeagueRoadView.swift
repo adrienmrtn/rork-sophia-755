@@ -16,7 +16,9 @@ struct DuelLeagueRoadView: View {
     var body: some View {
         ScrollViewReader { proxy in
             ScrollView {
-                LazyVStack(spacing: 0) {
+                // Trente lignes : une pile simple (non paresseuse), pour que l'ouverture sur la
+                // ligue du joueur soit fiable dès le premier affichage.
+                VStack(spacing: 0) {
                     ForEach(Array(home.leagues.reversed())) { league in
                         row(league)
                             .id(league.position)
@@ -28,6 +30,9 @@ struct DuelLeagueRoadView: View {
             }
             .onAppear {
                 proxy.scrollTo(currentPosition, anchor: .center)
+                DispatchQueue.main.async {
+                    proxy.scrollTo(currentPosition, anchor: .center)
+                }
             }
         }
         .safeAreaInset(edge: .top, spacing: 0) { topBar }

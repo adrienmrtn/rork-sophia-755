@@ -86,7 +86,10 @@ final class DuelGameModel {
     }
 
     var botAnswer: DuelBotAnswer {
-        match.bot[min(index, match.bot.count - 1)]
+        guard !match.bot.isEmpty else {
+            return DuelBotAnswer(correct: false, choice: nil, value: nil, timeMs: question.timeLimitMs / 2)
+        }
+        return match.bot[min(index, match.bot.count - 1)]
     }
 
     /// Part du temps restant (1 → 0) à un instant donné, pour le cadran.
@@ -221,10 +224,10 @@ final class DuelGameModel {
                 DuelHaptics.clock()
             }
         }
-        frozenFraction = remainingFraction(at: Date())
         if bothAnswered {
             guard await pause(0.35) else { return false }
         }
+        frozenFraction = remainingFraction(at: Date())
 
         let elapsedMs = Int((playerLockTime ?? limit) * 1000)
         var answer = DuelAnswer(c: nil, v: nil, t: min(elapsedMs, current.timeLimitMs))

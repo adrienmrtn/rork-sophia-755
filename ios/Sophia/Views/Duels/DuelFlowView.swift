@@ -47,7 +47,10 @@ struct DuelFlowView: View {
                     DuelGameView(
                         model: game,
                         player: player,
-                        onFinished: { finish(game.summary) },
+                        onFinished: {
+                            // Un abandon a pu passer juste avant : il garde la main.
+                            if stage == .playing { finish(game.summary) }
+                        },
                         onAbandon: { abandon(game) }
                     )
                     .transition(.asymmetric(
@@ -74,6 +77,7 @@ struct DuelFlowView: View {
         }
         .animation(.easeInOut(duration: 0.4), value: stage)
         .interactiveDismissDisabled()
+        .statusBarHidden()
         .onAppear { service.isPlaying = true }
         .onDisappear {
             service.isPlaying = false
@@ -112,14 +116,16 @@ struct DuelFlowView: View {
 
     private func send(_ summary: DuelSummary) {
         resultFailed = false
+        let matchId = summary.match.matchId
         Task {
+            // La réponse d'une partie précédente (réseau lent, puis « Rejouer ») ne doit pas
+            // s'afficher sur le résultat de la suivante.
             do {
-                result = try await service.finishMatch(
-                    matchId: summary.match.matchId,
-                    answers: summary.answers,
-                    abandoned: summary.abandoned
-                )
+                let value = try await service.finishMatch(matchId: matchId, answers: summary.answers, abandoned: summary.abandoned)
+                guard self.summary?.match.matchId == matchId else { return }
+                result = value
             } catch {
+                guard self.summary?.match.matchId == matchId else { return }
                 resultFailed = true
             }
         }

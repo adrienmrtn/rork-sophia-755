@@ -193,10 +193,9 @@ struct DuelGameView: View {
         let question = model.question
         return VStack(spacing: 18) {
             if question.kind == .portrait {
-                RemoteImage(url: question.imageURL)
-                    .aspectRatio(0.8, contentMode: .fit)
-                    .frame(maxHeight: 230)
-                    .background(DS.surfaceMuted)
+                DS.surfaceMuted
+                    .frame(width: 184, height: 230)
+                    .overlay { RemoteImage(url: question.imageURL) }
                     .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
                     .overlay(
                         RoundedRectangle(cornerRadius: 20, style: .continuous)

@@ -7,6 +7,9 @@ struct DuelsHomeView: View {
     @Environment(LanguageManager.self) private var languageManager
     @Environment(AuthService.self) private var auth
     let progressManager: ProgressManager
+    /// L'onglet est celui affiché. Il reste en vie quand on en change (une partie en cours ne
+    /// doit pas se fermer) : c'est donc ce signal, et non `onAppear`, qui rafraîchit la page.
+    var isActive: Bool = true
 
     @State private var service = DuelService.shared
     @State private var showFlow = false
@@ -46,6 +49,11 @@ struct DuelsHomeView: View {
         .task(id: auth.isSignedIn) { await refresh() }
         .onChange(of: auth.isBootstrapping) { _, _ in
             Task { await refresh() }
+        }
+        .onChange(of: isActive) { _, active in
+            if active, !showFlow {
+                Task { await refresh() }
+            }
         }
         .fullScreenCover(isPresented: $showFlow) {
             DuelFlowView(handle: handle, avatarId: progressManager.avatarId, service: service)
@@ -176,11 +184,8 @@ struct DuelsHomeView: View {
             }
             .buttonStyle(DuelPlayButtonStyle())
             .scaleEffect(playPulse ? 1.015 : 1)
-            .onAppear {
-                withAnimation(.easeInOut(duration: 1.1).repeatForever(autoreverses: true)) {
-                    playPulse = true
-                }
-            }
+            .animation(.easeInOut(duration: 1.1).repeatForever(autoreverses: true), value: playPulse)
+            .onAppear { playPulse = true }
 
             Text(languageManager.text("duel.play.caption"))
                 .font(DS.sans(.footnote, .medium))
@@ -279,6 +284,7 @@ struct DuelsHomeView: View {
                     }
                 }
             }
+            .clipShape(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
             .dsCard(padding: 0)
         }
     }
@@ -324,6 +330,7 @@ struct DuelsHomeView: View {
                     recentRow(match)
                 }
             }
+            .clipShape(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
             .dsCard(padding: 0)
         }
     }

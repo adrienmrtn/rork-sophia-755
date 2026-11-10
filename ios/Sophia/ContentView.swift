@@ -22,6 +22,11 @@ struct ContentView: View {
     @State private var deepLinkAuthor: CourseAuthor? = nil
     /// Lue une fois au lancement : la navigation ne change pas sous les doigts de l'utilisateur.
     @State private var newNavigation: Bool = FeatureFlags.newNavigation
+    /// The Duels tab only exists in English for now (beta questions). It makes six tabs, more
+    /// than the system bar shows on iPhone: see `SophiaTabScaffold`. Read once at launch, like
+    /// the navigation variant, so that changing the language in Settings does not rebuild the
+    /// tabs under the open screen; the tab follows at the next launch.
+    @State private var showsDuels: Bool = FeatureFlags.duelsVisible(language: AppLanguage.currentPersisted())
 
     @State private var pendingCourse: Course? = nil
     @State private var autoSwipeCourseId: String? = nil
@@ -88,9 +93,6 @@ struct ContentView: View {
             .toolbarBackground(DS.canvas, for: .tabBar)
             .toolbarBackground(.visible, for: .tabBar)
             .sensoryFeedback(.selection, trigger: selectedTab)
-            .onChange(of: showsDuels) { _, visible in
-                if !visible, selectedTab == FeatureFlags.duelsTab { selectedTab = 0 }
-            }
             .onAppear { SophiaTabBarStyle.apply() }
             .onChange(of: appearance.preference) { _, _ in
                 SophiaTabBarStyle.apply()
@@ -406,17 +408,13 @@ struct ContentView: View {
 
     // MARK: - Classic tabs
 
-    /// The Duels tab only exists in English for now (beta questions). It makes six tabs, more
-    /// than the system bar shows on iPhone: see `SophiaTabScaffold`.
-    private var showsDuels: Bool { FeatureFlags.duelsVisible(language: languageManager.current) }
-
     private var classicTabItems: [SophiaTabItem] {
         [
             SophiaTabItem(value: 0, title: languageManager.text("tab.home"), systemImage: "house", keepsAlive: true),
             SophiaTabItem(value: 1, title: languageManager.text("tab.library"), systemImage: "books.vertical", keepsAlive: true),
             SophiaTabItem(value: 2, title: languageManager.text("tab.path"), systemImage: "point.bottomleft.forward.to.point.topright.scurvepath"),
-            SophiaTabItem(value: 3, title: languageManager.text("tab.training"), systemImage: "arrow.triangle.2.circlepath"),
-            SophiaTabItem(value: FeatureFlags.duelsTab, title: languageManager.text("tab.duels"), systemImage: "trophy"),
+            SophiaTabItem(value: 3, title: languageManager.text("tab.training"), systemImage: "arrow.triangle.2.circlepath", keepsAlive: true),
+            SophiaTabItem(value: FeatureFlags.duelsTab, title: languageManager.text("tab.duels"), systemImage: "trophy", keepsAlive: true),
             SophiaTabItem(value: 4, title: languageManager.text("tab.profile"), systemImage: "person"),
         ]
     }
@@ -479,7 +477,7 @@ struct ContentView: View {
     }
 
     private var classicDuelsTab: some View {
-        DuelsHomeView(progressManager: progressManager)
+        DuelsHomeView(progressManager: progressManager, isActive: selectedTab == FeatureFlags.duelsTab)
             .audioMiniPlayerInset(onOpen: openAudioPlayer)
     }
 

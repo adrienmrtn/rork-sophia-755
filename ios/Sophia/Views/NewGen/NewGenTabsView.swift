@@ -45,8 +45,10 @@ struct NewGenTabsView: View {
     @State private var profilePath: [NewGenRoute] = []
 
     /// L'onglet Duels n'existe qu'en anglais pour l'instant (questions de la bêta) : il fait six
-    /// onglets, que la barre du système ne sait pas montrer (voir `SophiaTabScaffold`).
-    private var showsDuels: Bool { FeatureFlags.duelsVisible(language: languageManager.current) }
+    /// onglets, que la barre du système ne sait pas montrer (voir `SophiaTabScaffold`). Lu une
+    /// fois au lancement, comme la variante de navigation : changer de langue dans les réglages
+    /// ne reconstruit pas les onglets sous l'écran ouvert, l'onglet suit au prochain lancement.
+    @State private var showsDuels = FeatureFlags.duelsVisible(language: AppLanguage.currentPersisted())
 
     var body: some View {
         Group {
@@ -81,9 +83,6 @@ struct NewGenTabsView: View {
                 }
             }
         }
-        .onChange(of: showsDuels) { _, visible in
-            if !visible, selectedTab == FeatureFlags.duelsTab { selectedTab = 0 }
-        }
         // `sophia://author/<slug>` : la page du créateur dans l'onglet Accueil.
         .onChange(of: DeepLinkRouter.shared.token, initial: true) { _, _ in openPendingCreator() }
     }
@@ -91,14 +90,15 @@ struct NewGenTabsView: View {
     // MARK: - Onglets
 
     /// Les six onglets de la barre maison, Duels entre Entraînement et Profil. Accueil et
-    /// Explorer restent en vie (fil, recherche) ; les autres rejouent leur `onAppear` à chaque visite.
+    /// Explorer restent en vie (fil, recherche), Entraînement et Duels aussi (une séance ou une
+    /// partie en cours ne se ferme pas) ; Parcours et Profil rejouent leur `onAppear` à chaque visite.
     private var tabItems: [SophiaTabItem] {
         [
             SophiaTabItem(value: 0, title: languageManager.text("tab.home"), systemImage: "house", keepsAlive: true),
             SophiaTabItem(value: 1, title: languageManager.text("tab.explore"), systemImage: "safari", keepsAlive: true),
             SophiaTabItem(value: 2, title: languageManager.text("tab.path"), systemImage: "point.bottomleft.forward.to.point.topright.scurvepath"),
-            SophiaTabItem(value: 3, title: languageManager.text("tab.training"), systemImage: "arrow.triangle.2.circlepath"),
-            SophiaTabItem(value: FeatureFlags.duelsTab, title: languageManager.text("tab.duels"), systemImage: "trophy"),
+            SophiaTabItem(value: 3, title: languageManager.text("tab.training"), systemImage: "arrow.triangle.2.circlepath", keepsAlive: true),
+            SophiaTabItem(value: FeatureFlags.duelsTab, title: languageManager.text("tab.duels"), systemImage: "trophy", keepsAlive: true),
             SophiaTabItem(value: 4, title: languageManager.text("tab.profile"), systemImage: "person"),
         ]
     }
@@ -191,7 +191,7 @@ struct NewGenTabsView: View {
     }
 
     private var duelsTab: some View {
-        DuelsHomeView(progressManager: progressManager)
+        DuelsHomeView(progressManager: progressManager, isActive: selectedTab == FeatureFlags.duelsTab)
             .audioMiniPlayerInset(onOpen: openAudioPlayer)
     }
 

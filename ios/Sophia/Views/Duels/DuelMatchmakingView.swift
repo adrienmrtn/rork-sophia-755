@@ -216,7 +216,7 @@ struct DuelMatchmakingView: View {
 
         let fetched: DuelMatch
         do {
-            fetched = try await DuelService.shared.startMatch()
+            fetched = try await startMatch()
         } catch {
             shuffler.cancel()
             withAnimation(.spring(response: 0.4, dampingFraction: 0.8)) { step = .failed }
@@ -250,6 +250,23 @@ struct DuelMatchmakingView: View {
         }
         DuelHaptics.countdown(final: true)
         onReady(fetched)
+    }
+}
+
+extension DuelMatchmakingView {
+    /// Le lancement de la partie, borné dans le temps : une requête qui ne revient pas ne doit
+    /// pas laisser le joueur devant une recherche sans fin ni bouton pour en sortir.
+    private func startMatch() async throws -> DuelMatch {
+        try await withThrowingTaskGroup(of: DuelMatch.self) { group in
+            group.addTask { try await DuelService.shared.startMatch() }
+            group.addTask {
+                try await Task.sleep(for: .seconds(12))
+                throw DuelError.underlying("timeout")
+            }
+            defer { group.cancelAll() }
+            guard let match = try await group.next() else { throw DuelError.unavailable }
+            return match
+        }
     }
 }
 
