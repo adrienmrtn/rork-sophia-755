@@ -343,6 +343,8 @@ struct ContentView: View {
             showPlayer: $showAudioPlayer,
             onShowPaywall: presentAudioPaywall
         )
+        // La fête d'un badge gagné, par-dessus les onglets et le mini-lecteur.
+        .badgeCelebrationHost(progressManager: progressManager)
     }
 
     // MARK: - Anti-scroll

@@ -36,8 +36,8 @@ enum FeedNotice: String, Equatable {
 // MARK: - Carte cours
 
 /// La carte de cours de la maquette : couverture 16:9 avec la pastille de matière, titre,
-/// accroche, ligne créateur, puis lectures · j'aime · partager · durée. (Enregistrer se fait
-/// depuis la fiche du cours, plus depuis la carte.)
+/// accroche, ligne créateur, puis lectures · j'aime · durée. (Enregistrer et partager se font
+/// depuis le cours ouvert, plus depuis la carte.)
 struct CourseFeedCard: View {
     @Environment(LanguageManager.self) private var languageManager
     let course: Course
@@ -165,7 +165,10 @@ struct CourseFeedCard: View {
 
     private var statsRow: some View {
         HStack(spacing: 18) {
-            StatChip(systemImage: "eye", text: course.readsCount.compactCount)
+            // Les vraies ouvertures (serveur) ; rien tant que le chiffre n'est pas arrivé.
+            if let reads = course.realReadsCount {
+                StatChip(systemImage: "eye", text: reads.compactCount)
+            }
 
             Button {
                 toggleLike()
@@ -184,18 +187,6 @@ struct CourseFeedCard: View {
             .buttonStyle(.plain)
             .accessibilityLabel(Text(AppLocalizable.string(liked ? "common.unlike" : "common.like", language: languageManager.current)))
 
-            ShareLink(item: SophiaDeepLink.shareText(for: course, language: languageManager.current)) {
-                Image(systemName: "square.and.arrow.up")
-                    .font(.system(size: 15, weight: .medium))
-                    .foregroundStyle(DS.inkSecondary)
-                    .padding(.vertical, 6)
-                    .padding(.horizontal, 2)
-                    .contentShape(Rectangle())
-            }
-            .simultaneousGesture(TapGesture().onEnded {
-                AnalyticsService.shared.log(.share, courseId: course.id, screen: screen, props: ["channel": .string("sheet"), "target": .string("course")])
-            })
-
             Spacer(minLength: 0)
 
             if let minutes {
@@ -207,8 +198,10 @@ struct CourseFeedCard: View {
 
 // MARK: - Carte événement
 
-/// L'événement dans le fil : fond bleu nuit, image si l'équipe en a posé une, symbole or, trois
-/// couvertures, barre du défi, et la barre de l'objectif commun quand il y en a un.
+/// L'événement dans le fil : son illustration en grand (l'image de l'équipe, sinon un éventail
+/// des couvertures de la collection) avec la date et le titre posés dessus, puis l'accroche, le
+/// nombre de cours, le défi avec le badge à gagner, l'objectif commun quand il y en a un, et le
+/// bouton vers la collection.
 struct EventFeedCard: View {
     @Environment(LanguageManager.self) private var languageManager
     let campaign: Campaign
@@ -224,107 +217,55 @@ struct EventFeedCard: View {
     var body: some View {
         let language = languageManager.current
         let done = CampaignStore.challengeProgress(for: campaign, progressManager: progressManager)
-        VStack(alignment: .leading, spacing: 14) {
-            if let imageUrl = campaign.imageUrl {
-                RemoteImage(url: imageUrl)
-                    .frame(maxWidth: .infinity)
-                    .frame(height: 140)
-                    .background(Color.white.opacity(0.08))
-                    .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
-            }
-            HStack(alignment: .center) {
-                Image(systemName: campaign.symbol ?? "sparkles")
-                    .font(.system(size: 28, weight: .semibold))
-                    .foregroundStyle(DS.warm)
-                Spacer(minLength: 8)
-                if let end = campaign.endDate {
-                    Text(String(format: AppLocalizable.string("event.card.until", language: language), NewGenFormat.shortDay(end, language: language)))
-                        .font(DS.sans(.caption, .semibold))
-                        .foregroundStyle(.white)
-                        .padding(.horizontal, 10)
-                        .frame(height: 28)
-                        .background(Capsule().fill(.white.opacity(0.16)))
+        let tagline = campaign.tagline(for: language)
+        VStack(alignment: .leading, spacing: 0) {
+            hero(language: language)
+
+            VStack(alignment: .leading, spacing: 14) {
+                if !tagline.isEmpty {
+                    Text(tagline)
+                        .font(DS.sans(.subheadline))
+                        .foregroundStyle(DS.inkSecondary)
+                        .lineSpacing(2)
+                        .lineLimit(3)
+                        .fixedSize(horizontal: false, vertical: true)
                 }
-            }
 
-            Text(campaign.title(for: language))
-                .font(DS.title(.title, .heavy))
-                .foregroundStyle(.white)
-
-            Text("\(campaign.tagline(for: language)) \(String(format: AppLocalizable.string("event.card.summary", language: language), courses.count, campaign.upcoming.count))")
-                .font(DS.sans(.subheadline))
-                .foregroundStyle(.white.opacity(0.86))
-                .lineSpacing(2)
-                .fixedSize(horizontal: false, vertical: true)
-
-            HStack(spacing: 10) {
-                ForEach(courses.prefix(3)) { course in
-                    CourseCover(course: course, cornerRadius: 14)
-                        .frame(width: 64, height: 64)
-                        .overlay(RoundedRectangle(cornerRadius: 14, style: .continuous).strokeBorder(.white.opacity(0.6), lineWidth: 2))
-                }
-                if !campaign.upcoming.isEmpty {
-                    Text(String(format: AppLocalizable.string("event.card.soon", language: language), campaign.upcoming.count))
-                        .font(DS.sans(.subheadline, .semibold))
-                        .foregroundStyle(.white)
-                        .padding(.leading, 4)
-                }
-                Spacer(minLength: 0)
-            }
-
-            HStack(spacing: 12) {
-                GeometryReader { geo in
-                    ZStack(alignment: .leading) {
-                        Capsule().fill(.white.opacity(0.2))
-                        Capsule()
-                            .fill(DS.warm)
-                            .frame(width: geo.size.width * CGFloat(min(1, Double(done) / Double(max(1, campaign.challengeTarget)))))
+                HStack(spacing: 16) {
+                    StatChip(systemImage: "book.closed", text: String(format: AppLocalizable.string("event.card.coursesToRead", language: language), courses.count))
+                    if campaign.participants > 0 {
+                        StatChip(systemImage: "person.2", text: campaign.participants.formatted(language: language))
                     }
+                    Spacer(minLength: 0)
                 }
-                .frame(height: 6)
-                Text(String(format: AppLocalizable.string("event.card.challenge", language: language), done, campaign.challengeTarget))
-                    .font(DS.sans(.caption, .semibold))
-                    .foregroundStyle(.white)
-                    .monospacedDigit()
-                    .fixedSize()
-            }
+                .lineLimit(1)
 
-            // L'objectif commun : tous les lecteurs ensemble, chiffre recalculé par le serveur.
-            if let goal = campaign.goalTarget, goal > 0 {
-                let read = campaign.goalCount ?? 0
-                HStack(spacing: 12) {
-                    GeometryReader { geo in
-                        ZStack(alignment: .leading) {
-                            Capsule().fill(.white.opacity(0.2))
-                            Capsule()
-                                .fill(.white)
-                                .frame(width: geo.size.width * CGFloat(min(1, Double(read) / Double(goal))))
-                        }
-                    }
-                    .frame(height: 6)
-                    Text(String(format: AppLocalizable.string("event.goal.progress", language: language), read.formatted(language: language), goal.formatted(language: language)))
-                        .font(DS.sans(.caption, .semibold))
-                        .foregroundStyle(.white.opacity(0.9))
-                        .monospacedDigit()
+                if fillsPage { Spacer(minLength: 0) }
+
+                progressPanel(done: done, language: language)
+
+                HStack(spacing: 6) {
+                    Text(AppLocalizable.string("event.card.seeCollection", language: language))
+                        .font(DS.sans(.subheadline, .bold))
                         .lineLimit(1)
                         .minimumScaleFactor(0.8)
+                    Image(systemName: "chevron.forward")
+                        .font(.system(size: 12, weight: .bold))
                 }
+                .foregroundStyle(.white)
+                .padding(.horizontal, 12)
+                .frame(maxWidth: .infinity)
+                .frame(height: 48)
+                .background(RoundedRectangle(cornerRadius: 14, style: .continuous).fill(DS.accent))
             }
-
-            if fillsPage { Spacer(minLength: 0) }
-
-            HStack(spacing: 4) {
-                Text(AppLocalizable.string("event.card.seeCollection", language: language))
-                    .font(DS.sans(.subheadline, .bold))
-                Image(systemName: "chevron.forward")
-                    .font(.system(size: 12, weight: .bold))
-            }
-            .foregroundStyle(DS.warm)
+            .padding(16)
+            .frame(maxHeight: fillsPage ? .infinity : nil, alignment: .top)
         }
-        .padding(20)
         .frame(maxWidth: .infinity, alignment: .leading)
         .frame(maxHeight: fillsPage ? .infinity : nil, alignment: .top)
-        .background(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous).fill(DS.accent))
+        .background(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous).fill(DS.surface))
+        .clipShape(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
+        .overlay(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous).strokeBorder(DS.hairline, lineWidth: 1))
         .dsSoftShadow()
         .contentShape(Rectangle())
         .onTapGesture {
@@ -333,6 +274,101 @@ struct EventFeedCard: View {
         }
         .accessibilityElement(children: .combine)
         .accessibilityAddTraits(.isButton)
+    }
+
+    /// L'illustration, la pastille de date en haut, le titre en bas sur un voile sombre. Dans le
+    /// fil paginé elle prend la hauteur que le reste de la carte laisse libre.
+    private func hero(language: AppLanguage) -> some View {
+        Group {
+            if fillsPage {
+                Color.clear
+                    .frame(minHeight: 150, maxHeight: 420)
+                    .layoutPriority(1)
+            } else {
+                Color.clear.aspectRatio(16.0 / 10.0, contentMode: .fit)
+            }
+        }
+        .overlay { EventArtwork(campaign: campaign, courses: courses, collageLift: 0.08) }
+        .overlay {
+            LinearGradient(
+                stops: [
+                    .init(color: EventPalette.night.opacity(0), location: 0.3),
+                    .init(color: EventPalette.night.opacity(0.5), location: 0.68),
+                    .init(color: EventPalette.night.opacity(0.9), location: 1),
+                ],
+                startPoint: .top,
+                endPoint: .bottom
+            )
+        }
+        .overlay(alignment: .topLeading) {
+            Group {
+                if campaign.hasEnded() {
+                    EventPill(text: AppLocalizable.string("event.ended", language: language), style: .dark)
+                } else if let end = campaign.endDate {
+                    EventPill(text: String(format: AppLocalizable.string("event.card.until", language: language), NewGenFormat.shortDay(end, language: language)))
+                }
+            }
+            .padding(12)
+        }
+        .overlay(alignment: .bottomLeading) {
+            Text(campaign.title(for: language))
+                .font(DS.title(.title, .heavy))
+                .foregroundStyle(.white)
+                .multilineTextAlignment(.leading)
+                .lineLimit(3)
+                .minimumScaleFactor(0.7)
+                .shadow(color: Color.black.opacity(0.35), radius: 6, x: 0, y: 2)
+                .padding(.horizontal, 16)
+                .padding(.bottom, 14)
+                .padding(.top, 52)
+        }
+        .clipped()
+    }
+
+    /// Le défi du lecteur (badge dans son anneau, segments) et, dessous, l'objectif commun.
+    private func progressPanel(done: Int, language: AppLanguage) -> some View {
+        let complete = done >= campaign.challengeTarget
+        return VStack(alignment: .leading, spacing: 12) {
+            HStack(spacing: 12) {
+                EventBadgeRing(campaign: campaign, done: done, size: 52)
+                VStack(alignment: .leading, spacing: 7) {
+                    Text(
+                        complete
+                            ? String(format: AppLocalizable.string("event.challenge.unlocked", language: language), campaign.badgeName(for: language))
+                            : String(format: AppLocalizable.string("event.card.challenge", language: language), done, campaign.challengeTarget)
+                    )
+                    .font(DS.sans(.footnote, .bold))
+                    .foregroundStyle(DS.ink)
+                    .monospacedDigit()
+                    .lineLimit(2)
+                    .fixedSize(horizontal: false, vertical: true)
+                    EventChallengeMeter(done: done, target: campaign.challengeTarget, track: DS.hairline, height: 6)
+                }
+            }
+
+            // L'objectif commun : tous les lecteurs ensemble, chiffre recalculé par le serveur.
+            if let goal = campaign.goalTarget, goal > 0 {
+                let read = campaign.goalCount ?? 0
+                Rectangle().fill(DS.hairline).frame(height: 1)
+                VStack(alignment: .leading, spacing: 7) {
+                    HStack(spacing: 6) {
+                        Image(systemName: "person.3.fill")
+                            .font(.system(size: 11, weight: .semibold))
+                            .foregroundStyle(DS.accentSoft)
+                        Text(String(format: AppLocalizable.string("event.goal.progress", language: language), read.formatted(language: language), goal.formatted(language: language)))
+                            .font(DS.sans(.caption, .semibold))
+                            .foregroundStyle(DS.inkSecondary)
+                            .monospacedDigit()
+                            .lineLimit(1)
+                            .minimumScaleFactor(0.75)
+                    }
+                    EventProgressBar(fraction: Double(read) / Double(goal), tint: DS.accentSoft, track: DS.hairline, height: 6)
+                }
+            }
+        }
+        .padding(12)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(RoundedRectangle(cornerRadius: 16, style: .continuous).fill(DS.canvas))
     }
 }
 

@@ -321,19 +321,30 @@ struct DuelGameView: View {
 }
 
 /// L'image d'une question (portrait, drapeau, tableau, monument) : montrée entière, à ses
-/// proportions, coins arrondis, sans fond. Elle est déjà en cache, chargée pendant la
+/// proportions, coins arrondis, sans fond. Un drapeau arrive avec une marge beige cuite dans son
+/// fichier : elle est rognée (`DuelImageTrimmer`) et le drapeau se pose à même la page, avec un
+/// filet pour que ses bords blancs se détachent. L'image est déjà en cache, chargée pendant la
 /// présentation de l'adversaire ; tant qu'elle n'est pas là, la place reste vide.
 private struct DuelQuestionImage: View {
     let url: String?
     @State private var image: UIImage?
+    /// Un drapeau rogné : coins moins ronds, filet et ombre légère.
+    @State private var flat = false
 
     var body: some View {
         ZStack {
             if let image {
+                let radius: CGFloat = flat ? 8 : 16
                 Image(uiImage: image)
                     .resizable()
                     .scaledToFit()
-                    .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
+                    .clipShape(RoundedRectangle(cornerRadius: radius, style: .continuous))
+                    .overlay(
+                        RoundedRectangle(cornerRadius: radius, style: .continuous)
+                            .strokeBorder(DS.ink.opacity(flat ? 0.14 : 0), lineWidth: 1)
+                    )
+                    .shadow(color: .black.opacity(flat ? 0.14 : 0), radius: 8, x: 0, y: 4)
+                    .padding(.vertical, flat ? 8 : 0)
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -343,12 +354,20 @@ private struct DuelQuestionImage: View {
                 return
             }
             if let cached = RemoteImageLoader.cached(url) {
-                image = cached
+                show(cached, url: url)
                 return
             }
             image = nil
-            image = await RemoteImageLoader.image(url)
+            if let loaded = await RemoteImageLoader.image(url) {
+                show(loaded, url: url)
+            }
         }
         .accessibilityHidden(true)
+    }
+
+    private func show(_ loaded: UIImage, url: String) {
+        let result = DuelImageTrimmer.trimmed(loaded, key: url)
+        flat = result.flat
+        image = result.image
     }
 }

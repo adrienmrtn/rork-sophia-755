@@ -1,12 +1,14 @@
 import Foundation
 
 /// Un événement éditorial (« Movember », une semaine thématique…) : une collection de cours à
-/// lire pendant une période, un défi avec un badge, et des cours annoncés en écriture.
+/// lire pendant une période, et un défi avec un badge.
 ///
 /// Mêmes champs que la table `campaigns` côté serveur, servie par le manifeste du catalogue
 /// (clé `events`, voir docs/evenements.md) ; `CampaignStore` lit ce que `CatalogStore` a reçu.
 /// Les textes sont donnés par langue (`fr`, `en`…) et retombent sur l'anglais puis le français.
 nonisolated struct Campaign: Decodable, Identifiable, Sendable, Hashable {
+    /// Un cours annoncé « en écriture » : l'idée est abandonnée, plus rien ne l'affiche. Le type
+    /// reste le temps que ses derniers lecteurs disparaissent (voir `upcoming` plus bas).
     nonisolated struct Upcoming: Decodable, Sendable, Hashable {
         let title: [String: String]
         /// Slug d'auteur (`CourseAuthor.slug`), s'il est connu.
@@ -40,7 +42,10 @@ nonisolated struct Campaign: Decodable, Identifiable, Sendable, Hashable {
     /// Lecteurs participants affichés (valeur de test tant que le serveur ne compte pas).
     let participants: Int
     let courseIds: [String]
-    let upcoming: [Upcoming]
+    /// Les cours annoncés « en écriture » ne sont plus montrés nulle part. Le serveur peut encore
+    /// envoyer la clé `upcoming` (ou ne plus l'envoyer) : elle n'est pas décodée, la liste est
+    /// toujours vide.
+    var upcoming: [Upcoming] { [] }
     let title: [String: String]
     let tagline: [String: String]
     let description: [String: String]
@@ -55,7 +60,7 @@ nonisolated struct Campaign: Decodable, Identifiable, Sendable, Hashable {
     nonisolated func hash(into hasher: inout Hasher) { hasher.combine(slug) }
 
     enum CodingKeys: String, CodingKey {
-        case slug, kind, symbol, countries, upcoming, title, tagline, description, participants
+        case slug, kind, symbol, countries, title, tagline, description, participants
         case imageUrl = "image_url"
         case goalTarget = "goal_target"
         case goalCount = "goal_count"
@@ -87,6 +92,14 @@ nonisolated struct Campaign: Decodable, Identifiable, Sendable, Hashable {
         guard let start = startDate, let end = endDate else { return false }
         let endOfLastDay = Calendar.current.date(byAdding: .day, value: 1, to: end) ?? end
         return date >= start && date < endOfLastDay
+    }
+
+    /// Terminé : la fin du dernier jour est passée. L'onglet Explorer le garde, grisé, tant que
+    /// le serveur le sert encore.
+    func hasEnded(on date: Date = Date()) -> Bool {
+        guard let end = endDate else { return false }
+        let endOfLastDay = Calendar.current.date(byAdding: .day, value: 1, to: end) ?? end
+        return date >= endOfLastDay
     }
 
     /// `yyyy-MM-dd` → minuit local de ce jour. Un formateur par appel : les dates sont rares

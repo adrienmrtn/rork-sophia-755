@@ -21,16 +21,6 @@ struct CreatorPageView: View {
     private var courses: [Course] { author.courseIds.compactMap { ContentCatalog.course(withId: $0) } }
     private var followers: Int { LocalCounters.followers(creatorSlug: author.slug) + (isFollowing ? 1 : 0) }
 
-    /// L'annonce « en écriture » de ce créateur dans un événement actif, s'il y en a une.
-    private var writingFor: (Campaign, Campaign.Upcoming)? {
-        for campaign in CampaignStore.active() {
-            if let upcoming = campaign.upcoming.first(where: { $0.creator == author.slug }) {
-                return (campaign, upcoming)
-            }
-        }
-        return nil
-    }
-
     private var listedCourses: [Course] {
         switch segment {
         case 0: courses.sorted { $0.readsCount > $1.readsCount }
@@ -98,37 +88,6 @@ struct CreatorPageView: View {
                         .fixedSize(horizontal: false, vertical: true)
                 }
 
-                if showsCampaignCard, let writing = writingFor {
-                    let campaign = writing.0
-                    let upcoming = writing.1
-                    Button {
-                        onOpenCampaign(campaign)
-                    } label: {
-                        VStack(alignment: .leading, spacing: 4) {
-                            Text(String(format: languageManager.text("creator.writingFor"), campaign.title(for: language)))
-                                .font(DS.sans(.footnote, .bold))
-                                .foregroundStyle(DS.accentSoft)
-                            HStack(alignment: .firstTextBaseline, spacing: 4) {
-                                Text(upcoming.title(for: language))
-                                    .font(DS.sans(.subheadline, .bold))
-                                    .foregroundStyle(DS.ink)
-                                if let date = Campaign.parseDay(upcoming.date) {
-                                    Text("· \(String(format: languageManager.text("event.upcoming.date"), NewGenFormat.shortDay(date, language: language)))")
-                                        .font(DS.sans(.subheadline))
-                                        .foregroundStyle(DS.inkSecondary)
-                                }
-                            }
-                        }
-                        .padding(16)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .background(
-                            RoundedRectangle(cornerRadius: 16, style: .continuous)
-                                .strokeBorder(DS.inkTertiary, style: StrokeStyle(lineWidth: 1, dash: [4, 4]))
-                        )
-                    }
-                    .buttonStyle(.plain)
-                }
-
                 SegmentedPills(
                     items: [
                         languageManager.text("creator.tab.popular"),
@@ -150,7 +109,7 @@ struct CreatorPageView: View {
                         CompactCourseRow(
                             course: course,
                             meta: courseMeta(course, completed: completed),
-                            secondMeta: "\(course.readsCount.compactCount) \(languageManager.text("creator.stat.reads")) · \(course.likesCount(liked: progressManager.isLiked(course.id)).compactCount) \(languageManager.text("common.likes"))",
+                            secondMeta: course.statsLine(liked: progressManager.isLiked(course.id), language: languageManager.current),
                             onTap: { onOpenCourse(course) }
                         ) {
                             if completed { ReadCheck() }

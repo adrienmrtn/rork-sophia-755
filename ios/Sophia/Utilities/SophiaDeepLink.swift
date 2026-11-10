@@ -18,6 +18,43 @@ enum SophiaDeepLink {
         return slug.isEmpty ? nil : slug
     }
 
+    // MARK: - Liens d'ami (QR code du profil)
+
+    /// `sophia://friend/<handle>` : ce que contient le QR code d'un lecteur. Le scanner dans
+    /// l'app, ou ouvrir le lien depuis l'appareil photo, mène à la demande d'ami.
+    static func friendURL(for handle: String) -> URL? {
+        guard let cleaned = validFriendHandle(handle) else { return nil }
+        return URL(string: "\(scheme)://friend/\(cleaned)")
+    }
+
+    /// Le @ porté par un lien d'ami : `sophia://friend/<handle>` (`add-friend` accepté aussi),
+    /// ou la même chose sur le site (`/friend/<handle>`). Nil pour tout le reste, et pour un @
+    /// qui n'a pas la forme d'un @ Sophia.
+    static func friendHandle(from url: URL) -> String? {
+        let hosts: Set<String> = ["friend", "add-friend"]
+        if url.scheme == scheme, let host = url.host?.lowercased(), hosts.contains(host) {
+            return validFriendHandle(url.path.trimmingCharacters(in: CharacterSet(charactersIn: "/")))
+        }
+        if url.scheme == "https" || url.scheme == "http",
+           let host = url.host?.lowercased(), host == webHost || host == "www.\(webHost)" {
+            let parts = url.pathComponents.filter { $0 != "/" }
+            guard parts.count >= 2, hosts.contains(parts[0].lowercased()) else { return nil }
+            return validFriendHandle(parts[1])
+        }
+        return nil
+    }
+
+    /// Le @ nettoyé (sans « @ », en minuscules) s'il a la forme imposée par le serveur :
+    /// une lettre, puis 2 à 19 lettres ou chiffres.
+    static func validFriendHandle(_ raw: String) -> String? {
+        let cleaned = raw
+            .trimmingCharacters(in: .whitespacesAndNewlines)
+            .replacingOccurrences(of: "@", with: "")
+            .lowercased()
+        guard cleaned.range(of: "^[a-z][a-z0-9]{2,19}$", options: .regularExpression) != nil else { return nil }
+        return cleaned
+    }
+
     /// `sophia://unlock`: the TikTok blocker's notification. Opening it is the same as
     /// tapping "Open Sophia" on the shield.
     static func isUnlockRequest(_ url: URL) -> Bool {

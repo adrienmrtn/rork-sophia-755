@@ -69,7 +69,10 @@ struct NewGenTabsView: View {
             }
         }
         // `sophia://author/<slug>` : la page du créateur dans l'onglet Accueil.
-        .onChange(of: DeepLinkRouter.shared.token, initial: true) { _, _ in openPendingCreator() }
+        .onChange(of: DeepLinkRouter.shared.token, initial: true) { _, _ in
+            openPendingCreator()
+            openPendingFriend()
+        }
     }
 
     // MARK: - Onglets
@@ -152,6 +155,13 @@ struct NewGenTabsView: View {
         _ = router.consumeCreator()
         selectedTab = 0
         homePath.append(.creator(slug: slug))
+    }
+
+    /// `sophia://friend/<handle>` (QR code d'un ami) : l'onglet Profil, qui propose la demande.
+    private func openPendingFriend() {
+        guard DeepLinkRouter.shared.pendingFriendHandle != nil else { return }
+        profilePath.removeAll()
+        selectedTab = 4
     }
 
     // MARK: - Destinations

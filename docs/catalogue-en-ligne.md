@@ -68,6 +68,12 @@ paquet de chaque cours publié, avec leur hash et leur chemin dans le bucket, et
 les événements éditoriaux publiés (table `campaigns`, docs/evenements.md), les mêmes quelle que
 soit la langue, et sous `trending` les cours les plus ouverts de la langue sur sept jours
 (`trending_courses`, recalculés chaque nuit, docs/notifications.md).
+Deux autres clés, lues par les apps récentes et ignorées des anciennes
+(`supabase/migrations/20261112000000_course_counters_and_origins.sql`) : `stats`, les compteurs
+affichés sur les cartes (`{cours: [ouvertures, j'aime]}`, table `course_counters` ; les
+ouvertures sont les vraies, comptées dans `user_progress` chaque lundi, les j'aime sont fixés
+par SQL), et `origins`, la langue d'écriture des cours qui n'ont pas été écrits en français
+(`{cours: langue}`, d'après `courses.origin_lang`), d'où « Voir l'original » ouvre le bon texte.
 
 ### Importer le catalogue
 

@@ -1,14 +1,11 @@
 import Foundation
 
 /// Les événements éditoriaux (table `campaigns` côté serveur, servis par le manifeste du
-/// catalogue, voir docs/evenements.md) et l'état local du lecteur vis-à-vis d'eux : les cours
-/// annoncés pour lesquels il a demandé à être prévenu.
+/// catalogue, voir docs/evenements.md) et l'avancement du lecteur dans leur défi.
 ///
 /// Rien n'est embarqué : avant le premier manifeste il n'y a pas d'événement, et les vues qui
 /// lisent `all` se redessinent dès que `CatalogStore` (observable) en reçoit.
 enum CampaignStore {
-    private static let notifyKey = "sophia_campaign_notify"
-
     /// Les événements publiés pour la région du téléphone, du plus ancien au plus récent.
     static var all: [Campaign] {
         let region = Locale.current.region?.identifier
@@ -19,6 +16,14 @@ enum CampaignStore {
     static func active(on date: Date = Date()) -> [Campaign] {
         all.filter { $0.isActive(on: date) }
             .sorted { ($0.endDate ?? .distantFuture) < ($1.endDate ?? .distantFuture) }
+    }
+
+    /// Les événements terminés que le serveur sert encore (il les garde tant qu'ils sont publiés,
+    /// pour les badges gagnés), le plus récemment terminé en premier. L'onglet Explorer les
+    /// montre grisés ; le fil d'accueil ne les montre pas.
+    static func ended(on date: Date = Date()) -> [Campaign] {
+        all.filter { $0.hasEnded(on: date) }
+            .sorted { ($0.endDate ?? .distantPast) > ($1.endDate ?? .distantPast) }
     }
 
     static func campaign(slug: String) -> Campaign? {
@@ -38,24 +43,5 @@ enum CampaignStore {
 
     static func isChallengeComplete(for campaign: Campaign, progressManager: ProgressManager) -> Bool {
         challengeProgress(for: campaign, progressManager: progressManager) >= campaign.challengeTarget
-    }
-
-    // MARK: - « Me prévenir »
-
-    private static func notifyId(_ campaign: Campaign, _ upcoming: Campaign.Upcoming) -> String {
-        "\(campaign.slug)|\(upcoming.date)|\(upcoming.title["fr"] ?? upcoming.title["en"] ?? "")"
-    }
-
-    static func wantsNotification(for campaign: Campaign, upcoming: Campaign.Upcoming) -> Bool {
-        let stored = UserDefaults.standard.stringArray(forKey: notifyKey) ?? []
-        return stored.contains(notifyId(campaign, upcoming))
-    }
-
-    static func setWantsNotification(_ wants: Bool, for campaign: Campaign, upcoming: Campaign.Upcoming) {
-        var stored = UserDefaults.standard.stringArray(forKey: notifyKey) ?? []
-        let id = notifyId(campaign, upcoming)
-        if wants, !stored.contains(id) { stored.append(id) }
-        if !wants { stored.removeAll { $0 == id } }
-        UserDefaults.standard.set(stored, forKey: notifyKey)
     }
 }

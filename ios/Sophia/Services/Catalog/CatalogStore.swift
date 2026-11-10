@@ -33,6 +33,11 @@ final class CatalogStore {
     private(set) var campaigns: [Campaign] = []
     /// Les tendances du dernier manifeste de chaque langue (ids de cours, les plus lus en premier).
     private(set) var trendingByLanguage: [String: [String]] = [:]
+    /// Les compteurs réels du dernier manifeste : identifiant du cours → `[ouvertures, j'aime]`.
+    /// Les mêmes quelle que soit la langue. Vide tant que le serveur ne les a pas envoyés.
+    private(set) var courseStats: [String: [Int]] = [:]
+    /// La langue d'écriture des cours qui ne sont pas écrits en français (dernier manifeste).
+    private(set) var courseOrigins: [String: String] = [:]
 
     private var snapshots: [AppLanguage: CatalogSnapshot] = [:]
     private var manifests: [AppLanguage: CatalogManifest] = [:]
@@ -437,6 +442,12 @@ final class CatalogStore {
             campaigns = events.sorted { $0.startsAt < $1.startsAt }
         }
         trendingByLanguage[language.rawValue] = manifest.trending ?? []
+        if let stats = manifest.stats, !stats.isEmpty {
+            courseStats = stats
+        }
+        if let origins = manifest.origins {
+            courseOrigins = origins
+        }
     }
 
     /// Les cours tendance de la langue, tels que le serveur les a comptés ; vide sans manifeste.

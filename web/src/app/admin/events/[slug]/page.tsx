@@ -9,7 +9,7 @@ import { catalog } from "@/lib/catalog/source";
 import { LANG_NAMES } from "@/lib/catalog/lang-names";
 import { SUBJECT_LABEL } from "@/lib/catalog/slugs";
 import { getStudioSession } from "@/lib/studio/account";
-import { CAMPAIGN_KINDS, CAMPAIGN_SYMBOLS, EDITED_LANGS, TEXT_FIELDS, TEXT_LABELS, TEXT_LIMITS, UPCOMING_ROWS, campaignFromRow, emptyCampaign, languagesFilled, languagesMissing, localized, publishProblems, statusTone, type Campaign } from "@/lib/studio/campaigns";
+import { CAMPAIGN_KINDS, CAMPAIGN_SYMBOLS, EDITED_LANGS, TEXT_FIELDS, TEXT_LABELS, TEXT_LIMITS, campaignFromRow, emptyCampaign, languagesFilled, languagesMissing, localized, publishProblems, statusTone, type Campaign } from "@/lib/studio/campaigns";
 import { shortDateTime } from "@/lib/studio/data";
 import { coversConfigured } from "@/lib/studio/covers";
 import { translationConfigured } from "@/lib/studio/translate";
@@ -43,7 +43,7 @@ export default async function EventEditorPage({ params, searchParams }: PageProp
   const [courses, creators] = await Promise.all([catalog.listCourses("en"), catalog.listCreators("en")]);
   const creatorName = new Map(creators.map((c) => [c.slug, c.name]));
   const pickable = courses.map((c) => ({ id: c.id, title: c.title, subject: SUBJECT_LABEL[c.subject] ?? c.subject, creator: c.creatorSlug ? (creatorName.get(c.creatorSlug) ?? c.creatorSlug) : null }));
-  const problems = publishProblems(campaign, { courseIds: new Set(courses.map((c) => c.id)), creatorSlugs: new Set(creators.map((c) => c.slug)) });
+  const problems = publishProblems(campaign, { courseIds: new Set(courses.map((c) => c.id)) });
   const covers = campaign.course_ids.map((id) => courses.find((c) => c.id === id)).filter((c) => c !== undefined).slice(0, 3).map((c) => ({ id: c.id, title: c.title, coverUrl: c.coverUrl }));
   const filled = languagesFilled(campaign);
   const missing = languagesMissing(campaign).filter((l) => !(EDITED_LANGS as readonly string[]).includes(l));
@@ -91,7 +91,7 @@ export default async function EventEditorPage({ params, searchParams }: PageProp
                 </strong>
                 {problems.length === 0 ? (
                   <p className="flex items-center gap-2 text-[14px] text-green">
-                    <CheckIcon className="h-4 w-4" /> Texts in English, a collection, a reachable challenge, valid announced courses.
+                    <CheckIcon className="h-4 w-4" /> Texts in English, a collection, a reachable challenge.
                   </p>
                 ) : (
                   <ul className="flex list-disc flex-col gap-1 pl-5 text-[14px] text-ink-2">
@@ -355,41 +355,6 @@ export default async function EventEditorPage({ params, searchParams }: PageProp
               <p className="text-[13px] text-ink-3">The courses readers are invited to finish during the event. Only published courses are listed; the challenge target cannot exceed their number.</p>
             </div>
             <CoursePicker courses={pickable} selected={campaign.course_ids} inputClass={input} />
-          </Card>
-
-          <Card className="flex flex-col gap-5 p-6">
-            <div className="flex flex-col gap-1">
-              <strong className="text-[15px] font-extrabold text-ink">Announced courses</strong>
-              <p className="text-[13px] text-ink-3">Courses being written for the event, with their release date. Readers can ask to be told when one comes out. Leave a row empty to drop it.</p>
-            </div>
-            <div className="flex flex-col gap-3">
-              {Array.from({ length: UPCOMING_ROWS }, (_, i) => {
-                const u = campaign.upcoming[i];
-                return (
-                  <div key={i} className="grid grid-cols-1 gap-3 rounded-xl border border-line p-3 md:grid-cols-[1fr_220px_170px]">
-                    <label className={label}>
-                      Title (English)
-                      <input name={`upcoming_${i}_title_en`} defaultValue={u?.title.en ?? ""} maxLength={120} className={input} />
-                    </label>
-                    <label className={label}>
-                      Author
-                      <select name={`upcoming_${i}_creator`} defaultValue={u?.creator ?? ""} className={select}>
-                        <option value="">Not announced</option>
-                        {creators.map((c) => (
-                          <option key={c.slug} value={c.slug}>
-                            {c.name}
-                          </option>
-                        ))}
-                      </select>
-                    </label>
-                    <label className={label}>
-                      Release date
-                      <input type="date" name={`upcoming_${i}_date`} defaultValue={u?.date ?? ""} className={input} />
-                    </label>
-                  </div>
-                );
-              })}
-            </div>
           </Card>
 
           <div className="flex flex-wrap items-center gap-3">

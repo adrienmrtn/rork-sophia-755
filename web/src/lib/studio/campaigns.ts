@@ -45,8 +45,6 @@ export type CampaignStatus = (typeof CAMPAIGN_STATUSES)[number];
 /** Un texte par langue : {"en": "…", "fr": "…"}. Les apps retombent sur l'anglais puis le français. */
 export type Localized = Record<string, string>;
 
-export type CampaignUpcoming = { title: Localized; creator: string | null; date: string };
-
 /** Une image générée pour l'événement : direction « couvertures » (Gemini) ou « affiche » du site (Recraft). */
 export type ImageCandidate = { url: string; style: "cover" | "poster"; created_at: string };
 
@@ -77,7 +75,6 @@ export type Campaign = {
   /** Où en est l'objectif commun (recalculé toutes les heures côté serveur). */
   goal_count: number;
   course_ids: string[];
-  upcoming: CampaignUpcoming[];
   title: Localized;
   tagline: Localized;
   description: Localized;
@@ -93,7 +90,6 @@ export const TEXT_LABELS: Record<TextField, string> = { title: "Title", tagline:
 /** La langue saisie à la main dans l'admin : l'anglais. Toutes les autres, français compris, sont
  *  traduites depuis l'anglais (jamais de double traduction). */
 export const EDITED_LANGS = ["en"] as const;
-export const UPCOMING_ROWS = 6;
 export const MAX_COURSES = 40;
 export const SLUG_RE = /^[a-z0-9]+(-[a-z0-9]+)*$/;
 const DAY_RE = /^\d{4}-\d{2}-\d{2}$/;
@@ -116,18 +112,12 @@ export function symbolLabel(symbol: string): string {
 }
 
 export function emptyCampaign(): Campaign {
-  return { slug: "", kind: "month", status: "draft", symbol: "sparkles", image_url: null, image_candidates: [], badge_image_url: null, badge_candidates: [], countries: null, starts_at: "", ends_at: "", challenge_target: 3, participants: 0, goal_target: null, goal_count: 0, course_ids: [], upcoming: [], title: {}, tagline: {}, description: {}, badge_name: {} };
+  return { slug: "", kind: "month", status: "draft", symbol: "sparkles", image_url: null, image_candidates: [], badge_image_url: null, badge_candidates: [], countries: null, starts_at: "", ends_at: "", challenge_target: 3, participants: 0, goal_target: null, goal_count: 0, course_ids: [], title: {}, tagline: {}, description: {}, badge_name: {} };
 }
 
 /** Une ligne de la table, telle que Supabase la renvoie, remise dans le type. */
 export function campaignFromRow(row: Record<string, unknown>): Campaign {
   const obj = (v: unknown): Localized => (v && typeof v === "object" && !Array.isArray(v) ? Object.fromEntries(Object.entries(v as Record<string, unknown>).filter(([, x]) => typeof x === "string")) as Localized : {});
-  const upcoming: CampaignUpcoming[] = Array.isArray(row.upcoming)
-    ? (row.upcoming as unknown[]).map((u) => {
-        const x = (u && typeof u === "object" ? u : {}) as Record<string, unknown>;
-        return { title: obj(x.title), creator: typeof x.creator === "string" && x.creator ? x.creator : null, date: typeof x.date === "string" ? x.date : "" };
-      })
-    : [];
   return {
     slug: String(row.slug ?? ""),
     kind: (CAMPAIGN_KINDS.some((k) => k.id === row.kind) ? row.kind : "month") as CampaignKind,
@@ -155,7 +145,6 @@ export function campaignFromRow(row: Record<string, unknown>): Campaign {
     goal_target: row.goal_target == null || row.goal_target === "" ? null : Math.max(1, Math.round(Number(row.goal_target)) || 1),
     goal_count: Math.max(0, Math.round(Number(row.goal_count ?? 0)) || 0),
     course_ids: Array.isArray(row.course_ids) ? (row.course_ids as unknown[]).map(String) : [],
-    upcoming,
     title: obj(row.title),
     tagline: obj(row.tagline),
     description: obj(row.description),
@@ -186,19 +175,6 @@ export function campaignFromForm(form: FormData, existing: Campaign | null): Cam
     }
     return out;
   };
-  const upcoming: CampaignUpcoming[] = [];
-  for (let i = 0; i < UPCOMING_ROWS; i += 1) {
-    const en = text(form, `upcoming_${i}_title_en`, 120);
-    const fr = text(form, `upcoming_${i}_title_fr`, 120);
-    if (!en && !fr) continue;
-    const title: Localized = { ...(base.upcoming[i]?.title ?? {}) };
-    if (en) title.en = en;
-    else delete title.en;
-    if (fr) title.fr = fr;
-    else delete title.fr;
-    const creator = text(form, `upcoming_${i}_creator`, 80);
-    upcoming.push({ title, creator: creator || null, date: text(form, `upcoming_${i}_date`, 10) });
-  }
   const courseIds = Array.from(new Set(form.getAll("course_ids").map(String).map((s) => s.trim()).filter(Boolean))).slice(0, MAX_COURSES);
   const goalRaw = text(form, "goal_target", 12).replace(/[\s,.]/g, "");
   const goal = goalRaw ? Math.round(Number(goalRaw)) : NaN;
@@ -215,7 +191,6 @@ export function campaignFromForm(form: FormData, existing: Campaign | null): Cam
     goal_target: Number.isFinite(goal) && goal >= 1 ? Math.min(100_000_000, goal) : null,
     countries: countries.length > 0 ? countries : null,
     course_ids: courseIds,
-    upcoming,
     title: merge("title"),
     tagline: merge("tagline"),
     description: merge("description"),
@@ -223,7 +198,7 @@ export function campaignFromForm(form: FormData, existing: Campaign | null): Cam
   };
 }
 
-export type Known = { courseIds: Set<string>; creatorSlugs: Set<string> };
+export type Known = { courseIds: Set<string> };
 
 /** Ce qui empêche d'enregistrer du tout : un slug ou des dates qui ne passeraient pas la base. */
 export function hardErrors(c: Campaign): string[] {
@@ -246,11 +221,6 @@ export function publishProblems(c: Campaign, known: Known): string[] {
   const unknown = c.course_ids.filter((id) => !known.courseIds.has(id));
   if (unknown.length > 0) problems.push(`${unknown.length} course${unknown.length > 1 ? "s are" : " is"} not published: ${unknown.slice(0, 3).join(", ")}${unknown.length > 3 ? "…" : ""}.`);
   if (c.course_ids.length > 0 && c.challenge_target > c.course_ids.length) problems.push(`The challenge asks for ${c.challenge_target} courses but the collection has ${c.course_ids.length}.`);
-  c.upcoming.forEach((u, i) => {
-    if (!u.title.en?.trim()) problems.push(`Announced course ${i + 1}: title in English is required.`);
-    if (!DAY_RE.test(u.date) || Number.isNaN(Date.parse(u.date))) problems.push(`Announced course ${i + 1}: the release date is missing or invalid.`);
-    if (u.creator && !known.creatorSlugs.has(u.creator)) problems.push(`Announced course ${i + 1}: unknown author “${u.creator}”.`);
-  });
   const monthKinds: Record<CampaignKind, [number, number]> = { month: [20, 62], week: [5, 14], day: [1, 10], series: [7, 90] };
   if (DAY_RE.test(c.starts_at) && DAY_RE.test(c.ends_at)) {
     const days = Math.round((Date.parse(c.ends_at) - Date.parse(c.starts_at)) / 86_400_000) + 1;

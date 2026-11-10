@@ -13,7 +13,6 @@ struct CourseDetailView: View {
     let onOpenCreator: (CourseAuthor) -> Void
     let onOpenCourse: (Course) -> Void
 
-    @State private var showOriginal = false
     /// Incrémenté quand le paquet du cours arrive : la fiche se redessine avec l'accroche et
     /// l'introduction du vrai contenu.
     @State private var contentTick = 0
@@ -72,7 +71,7 @@ struct CourseDetailView: View {
 
                     creatorCard
 
-                    if let code = content?.originalLanguage, code != language.rawValue {
+                    if let code = content.flatMap({ CourseOriginal.translatedFromCode(of: $0) }) {
                         translationPanel(code: code)
                     }
 
@@ -119,7 +118,8 @@ struct CourseDetailView: View {
                         ForEach(otherCourses) { other in
                             CompactCourseRow(
                                 course: other,
-                                meta: "\(other.readsCount.compactCount) \(languageManager.text("creator.stat.reads")) · \(other.likesCount(liked: progressManager.isLiked(other.id)).compactCount) \(languageManager.text("common.likes"))",
+                                meta: other.statsLine(liked: progressManager.isLiked(other.id), language: languageManager.current)
+                                    ?? NewGenFormat.minutes(ReadingTime.minutes(for: other, language: languageManager.current), language: languageManager.current),
                                 onTap: { onOpenCourse(other) }
                             ) {
                                 if progressManager.courseStatus(for: other.id) == .completed { ReadCheck() }
@@ -196,15 +196,8 @@ struct CourseDetailView: View {
             Text(String(format: languageManager.text("course.translatedFrom"), name))
                 .font(DS.sans(.footnote, .semibold))
                 .foregroundStyle(DS.ink)
-            Spacer(minLength: 8)
-            Button {
-                showOriginal.toggle()
-            } label: {
-                Text(languageManager.text(showOriginal ? "course.seeTranslation" : "course.seeOriginal"))
-                    .font(DS.sans(.footnote, .bold))
-                    .foregroundStyle(DS.accentSoft)
-            }
-            .buttonStyle(.plain)
+            // « Voir l'original » se trouve dans le cours ouvert (réservé à qui peut le lire en entier).
+            Spacer(minLength: 0)
         }
         .padding(.horizontal, 12)
         .padding(.vertical, 10)
@@ -213,7 +206,9 @@ struct CourseDetailView: View {
 
     private var statsRow: some View {
         HStack(spacing: 22) {
-            StatChip(systemImage: "eye", text: "\(course.readsCount.compactCount) \(languageManager.text("creator.stat.reads"))")
+            if let reads = course.realReadsCount {
+                StatChip(systemImage: "eye", text: "\(reads.compactCount) \(languageManager.text("creator.stat.reads"))")
+            }
             Button {
                 UIImpactFeedbackGenerator(style: .light).impactOccurred()
                 let wasLiked = liked

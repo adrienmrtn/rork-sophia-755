@@ -102,9 +102,8 @@ struct BadgesPageView: View {
         .background(DS.canvas.ignoresSafeArea())
         .onAppear { progressManager.refreshBadges() }
         .sheet(item: $selected) { badge in
+            // La feuille se règle elle-même à la hauteur de son contenu.
             BadgeDetailSheet(badge: badge, progressManager: progressManager)
-                .presentationDetents([.medium])
-                .presentationDragIndicator(.visible)
         }
     }
 
@@ -132,10 +131,6 @@ struct BadgesPageView: View {
                 }
                 Spacer(minLength: 0)
             }
-            Text(languageManager.text("badges.featured.hint"))
-                .font(DS.sans(.caption))
-                .foregroundStyle(DS.inkSecondary)
-                .fixedSize(horizontal: false, vertical: true)
         }
         .padding(16)
         .frame(maxWidth: .infinity, alignment: .leading)
@@ -143,8 +138,11 @@ struct BadgesPageView: View {
         .overlay(RoundedRectangle(cornerRadius: 18, style: .continuous).strokeBorder(DS.hairline, lineWidth: 1))
     }
 
+    /// Une case de la grille. Toutes ont la même taille : le titre réserve toujours deux lignes
+    /// et la ligne d'avancement garde sa place même quand elle est vide (badge gagné).
     private func cell(_ badge: Badge, stats: BadgeStats) -> some View {
         let earned = progressManager.isBadgeEarned(badge.id)
+        let showsProgress = !earned && badge.target > 1 && badge.metric != .league
         return Button {
             UIImpactFeedbackGenerator(style: .light).impactOccurred()
             selected = badge
@@ -155,19 +153,20 @@ struct BadgesPageView: View {
                     .font(DS.sans(.footnote, .bold))
                     .foregroundStyle(earned ? DS.ink : DS.inkSecondary)
                     .multilineTextAlignment(.center)
-                    .lineLimit(2)
+                    .lineLimit(2, reservesSpace: true)
                     .minimumScaleFactor(0.8)
                     .frame(maxWidth: .infinity)
-                if !earned, badge.target > 1, badge.metric != .league {
-                    Text(String(format: languageManager.text("badge.progress"), stats.progress(for: badge), badge.target))
-                        .font(DS.sans(.caption2, .semibold))
-                        .foregroundStyle(DS.inkTertiary)
-                        .monospacedDigit()
-                }
+                Text(showsProgress ? String(format: languageManager.text("badge.progress"), stats.progress(for: badge), badge.target) : " ")
+                    .font(DS.sans(.caption2, .semibold))
+                    .foregroundStyle(DS.inkTertiary)
+                    .monospacedDigit()
+                    .lineLimit(1)
+                    .opacity(showsProgress ? 1 : 0)
+                    .accessibilityHidden(!showsProgress)
             }
             .padding(.vertical, 12)
             .padding(.horizontal, 6)
-            .frame(maxWidth: .infinity, minHeight: 138, alignment: .top)
+            .frame(maxWidth: .infinity, alignment: .top)
             .background(RoundedRectangle(cornerRadius: 18, style: .continuous).fill(DS.surface))
             .overlay(RoundedRectangle(cornerRadius: 18, style: .continuous).strokeBorder(DS.hairline, lineWidth: 1))
             .contentShape(Rectangle())
@@ -186,6 +185,8 @@ struct BadgeDetailSheet: View {
     let progressManager: ProgressManager
 
     @State private var showFull = false
+    /// La hauteur du contenu, mesurée : la feuille s'arrête là, sans vide en dessous.
+    @State private var contentHeight: CGFloat = 360
 
     private var language: AppLanguage { languageManager.current }
 
@@ -224,8 +225,6 @@ struct BadgeDetailSheet: View {
                 }
             }
 
-            Spacer(minLength: 0)
-
             if earned {
                 if showFull {
                     Text(languageManager.text("badges.featured.full"))
@@ -252,12 +251,23 @@ struct BadgeDetailSheet: View {
                         }
                 }
                 .buttonStyle(.plain)
+                .padding(.top, 8)
             }
         }
         .padding(.horizontal, 24)
         .padding(.bottom, 20)
         .frame(maxWidth: .infinity)
+        .fixedSize(horizontal: false, vertical: true)
+        .onGeometryChange(for: CGFloat.self) { proxy in
+            proxy.size.height
+        } action: { height in
+            // Bornée à l'écran : au-delà (très grands caractères), la feuille reste grande.
+            if height > 0 { contentHeight = min(height.rounded(.up), UIScreen.main.bounds.height * 0.9) }
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         .background(DS.canvas.ignoresSafeArea())
+        .presentationDetents([.height(contentHeight)])
+        .presentationDragIndicator(.visible)
     }
 }
 
@@ -280,8 +290,10 @@ struct BadgeRow: View {
                         .font(DS.sans(.footnote, .bold))
                         .foregroundStyle(DS.ink)
                         .multilineTextAlignment(.center)
-                        .lineLimit(2)
+                        // Deux lignes toujours réservées : toutes les cases ont la même hauteur.
+                        .lineLimit(2, reservesSpace: true)
                         .minimumScaleFactor(0.8)
+                        .frame(maxWidth: .infinity)
                 }
                 .padding(.vertical, 14)
                 .padding(.horizontal, 6)

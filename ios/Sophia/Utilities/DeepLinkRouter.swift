@@ -22,6 +22,9 @@ final class DeepLinkRouter {
     private(set) var pendingCourseId: String?
     /// `sophia://author/<slug>` : la page d'un créateur, ouverte par la navigation en place.
     private(set) var pendingCreatorSlug: String?
+    /// `sophia://friend/<handle>` : le @ d'un lecteur à ajouter en ami (QR code du profil). Le
+    /// profil le lit et propose la demande d'ami.
+    private(set) var pendingFriendHandle: String?
     /// Increments on every request, so two requests for the same course are still two events.
     private(set) var token: Int = 0
 
@@ -35,6 +38,10 @@ final class DeepLinkRouter {
             // Same stamp the shield writes; the home screen reads it right away.
             TikTokBlockerShared.pendingRequestAt = Date()
             requestUnlock()
+            return true
+        }
+        if let handle = SophiaDeepLink.friendHandle(from: url) {
+            requestFriend(handle)
             return true
         }
         if let slug = SophiaDeepLink.creatorSlug(from: url) {
@@ -76,6 +83,17 @@ final class DeepLinkRouter {
 
     func discardCreator() {
         pendingCreatorSlug = nil
+    }
+
+    func requestFriend(_ handle: String) {
+        pendingFriendHandle = handle
+        token += 1
+    }
+
+    /// Takes the pending friend handle, if there is one.
+    func consumeFriend() -> String? {
+        defer { pendingFriendHandle = nil }
+        return pendingFriendHandle
     }
 
     func requestCourse(_ courseId: String) {

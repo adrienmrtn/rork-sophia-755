@@ -5,6 +5,11 @@ enum AppLocalizable {
         if let value = table(for: language)[key] {
             return value
         }
+        // Textes ajoutés par zone (`Utilities/Localizable/`), clé → code de langue → texte.
+        if let entry = AppLocalizableAdditions.entry(for: key) {
+            if let value = entry[language.rawValue] { return value }
+            if let value = entry["en"] { return value }
+        }
         if language != .english, let value = english[key] {
             return value
         }

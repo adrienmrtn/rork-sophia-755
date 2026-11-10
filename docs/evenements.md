@@ -1,7 +1,7 @@
 # Événements éditoriaux (`campaigns`)
 
 Un **événement** est une collection de cours à lire pendant une période, un **défi** (terminer
-*n* cours de la collection) récompensé par un **badge**, et des **cours annoncés** en écriture.
+*n* cours de la collection) récompensé par un **badge**.
 Movember, le 11 novembre, une semaine thématique, le lancement d'une série : même objet, même
 format partout. Il se crée et se publie depuis l'admin du site, et les apps le reçoivent sans
 nouvelle version.
@@ -74,7 +74,7 @@ Clés en `snake_case`, identiques dans la table, le manifeste et les décodeurs 
 | `goal_count` | entier | où en est l'objectif commun ; calculé toutes les heures, jamais saisi. |
 | `image_candidates` | liste | côté admin seulement (pas dans le manifeste) : les images générées, `{url, style: cover \| poster, created_at}`, huit au plus. |
 | `course_ids` | liste | les cours de la collection, 40 au plus, tous `published`. L'ordre est celui de l'affichage. |
-| `upcoming` | liste | cours annoncés : `{"title": {langue: texte}, "creator": slug ou null, "date": "YYYY-MM-DD"}`, six au plus dans l'admin. |
+| `upcoming` | liste | **abandonné** : les cours annoncés « en écriture ». La colonne reste (non nulle) ; l'admin y enregistre toujours `[]`, iOS ne la décode plus et plus rien ne l'affiche. |
 | `title` | `{langue: texte}` | 60 caractères. |
 | `tagline` | `{langue: texte}` | 90 caractères, la phrase sous le titre. |
 | `description` | `{langue: texte}` | 300 caractères, le paragraphe de la page. |
@@ -126,7 +126,7 @@ Material, un nom inconnu retombe sur les étincelles. Ajouter un symbole : la co
   "goal_target": 10000,
   "goal_count": 0,
   "course_ids": ["course_228_la_sante_mentale_comme_enjeu_de_societe", "course_42_pourquoi_reve_t_on", "course_73_comment_le_cerveau_stocke_t_il_les_souve"],
-  "upcoming": [{ "title": { "en": "Why do men see a doctor less often?", "fr": "Pourquoi les hommes vont-ils moins chez le médecin ?" }, "creator": "ezgi-gizem-berkay", "date": "2026-11-14" }],
+  "upcoming": [],
   "title": { "en": "Movember", "fr": "Movember" },
   "tagline": { "en": "Men's health, let's talk about it.", "fr": "La santé des hommes, on en parle." },
   "description": { "en": "Mental health, prevention, male cancers: a month to talk about it, one course at a time.", "fr": "Santé mentale, prévention, cancers masculins : un mois pour en parler, un cours à la fois." },
@@ -137,16 +137,23 @@ Material, un nom inconnu retombe sur les étincelles. Ajouter un symbole : la co
 ## Dans les apps
 
 - **Fil « Pour toi »** : l'événement actif le plus proche de sa fin est une carte en troisième
-  position (image en tête si elle existe, barre du défi, barre de l'objectif commun) ; les cartes
-  des cours de sa collection portent son étiquette.
-- **Page événement** : image, symbole, dates, titre, description, participants, objectif commun,
-  la collection avec la progression du défi, les cours annoncés avec « me prévenir ».
+  position (l'image en grand si elle existe, sinon un éventail des couvertures de la collection ;
+  date, titre, accroche, nombre de cours, défi avec le badge, barre de l'objectif commun) ; les
+  cartes des cours de sa collection portent son étiquette.
+- **Page événement** : en-tête (image ou éventail de couvertures, dates, titre, accroche,
+  participants), description, le défi avec le badge à gagner, l'objectif commun, puis les cours
+  de la collection.
+- **Explorer** (iOS) : les événements en cours, puis les événements terminés encore servis par le
+  manifeste, grisés avec la pastille « Terminé », du plus récemment terminé au plus ancien. Un
+  événement dépublié disparaît.
+- **Cours « en écriture »** : retirés partout (carte, page, admin du site). iOS ignore `upcoming` ;
+  Android l'affiche encore tant que la liste n'est pas vide en base, d'où le `[]` enregistré par
+  l'admin.
 - **Textes** : la barre de l'objectif commun lit `event.goal.progress` (« Ensemble : %@ cours lus
   sur %@ »), présent dans les 30 langues des deux apps ; l'image est téléchargée une fois et gardée
   en cache (iOS `RemoteImage`, Android Coil).
 - **Profil** : le badge (nom, progression *n*/objectif) du dernier événement ; le bloc
   « événement en cours ».
-- **Page créateur** : « en écriture pour … » si l'auteur a un cours annoncé dans un événement actif.
 - **Pays** : un événement avec `countries` n'est montré que si la région du téléphone (iOS
   `Locale.current.region`, Android `Locale.getDefault().country`) en fait partie ; sans région
   connue, seuls les événements « partout » (`countries` null) apparaissent. Le manifeste est le

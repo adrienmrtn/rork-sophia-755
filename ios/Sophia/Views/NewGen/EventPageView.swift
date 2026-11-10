@@ -1,20 +1,19 @@
 import SwiftUI
 
-/// La page d'un événement : en-tête (image si l'équipe en a posé une, dates, titre, participants,
-/// objectif commun), défi avec barre et badge, les cours de la collection, les cours en écriture
-/// avec « Me prévenir », et l'appel aux créateurs. Les données viennent de `CampaignStore`, donc
-/// du manifeste du catalogue (docs/evenements.md).
+/// La page d'un événement : un en-tête plein écran (l'image de l'équipe ou un éventail des
+/// couvertures, dates, titre, accroche, participants), la présentation, le défi avec le badge à
+/// gagner, l'objectif commun, puis les cours de la collection. Les données viennent de
+/// `CampaignStore`, donc du manifeste du catalogue (docs/evenements.md).
 struct EventPageView: View {
     @Environment(LanguageManager.self) private var languageManager
     @Environment(\.dismiss) private var dismiss
     let campaign: Campaign
     let progressManager: ProgressManager
     let onOpenCourse: (Course) -> Void
+    /// Plus utilisés depuis que la page n'annonce plus de cours « en écriture » ni n'invite à
+    /// écrire ; gardés pour que les appelants (`NewGenTabsView`) n'aient pas à changer.
     let onOpenCreator: (CourseAuthor) -> Void
     let onBecomeCreator: () -> Void
-
-    /// Rafraîchit la vue après « Me prévenir » (l'état vit dans `UserDefaults`).
-    @State private var notifyTick = 0
 
     private var language: AppLanguage { languageManager.current }
     private var courses: [Course] { campaign.courseIds.compactMap { ContentCatalog.course(withId: $0) } }
@@ -22,246 +21,231 @@ struct EventPageView: View {
     private var complete: Bool { CampaignStore.isChallengeComplete(for: campaign, progressManager: progressManager) }
 
     var body: some View {
+        let description = campaign.description(for: language)
         ScrollView {
-            VStack(alignment: .leading, spacing: 20) {
-                HStack(spacing: 12) {
-                    RoundIconButton(systemImage: "chevron.left", accessibilityLabel: languageManager.text("common.close")) { dismiss() }
-                    Spacer()
-                }
+            VStack(alignment: .leading, spacing: 0) {
+                header
 
-                hero
-                challengeCard
-
-                NewGenSectionTitle(text: languageManager.text("event.courses"))
-                ForEach(courses) { course in
-                    let completed = progressManager.courseStatus(for: course.id) == .completed
-                    CompactCourseRow(
-                        course: course,
-                        meta: courseMeta(course, completed: completed),
-                        secondMeta: "\(course.readsCount.compactCount) \(languageManager.text("creator.stat.reads")) · \(course.likesCount(liked: progressManager.isLiked(course.id)).compactCount) \(languageManager.text("common.likes"))",
-                        onTap: { onOpenCourse(course) }
-                    ) {
-                        if completed { ReadCheck() }
-                    }
-                }
-
-                if !campaign.upcoming.isEmpty {
-                    VStack(alignment: .leading, spacing: 6) {
-                        NewGenSectionTitle(text: languageManager.text("event.writing"))
-                        Text(String(format: languageManager.text("event.writing.body"), campaign.title(for: language)))
-                            .font(DS.sans(.subheadline))
-                            .foregroundStyle(DS.inkSecondary)
+                VStack(alignment: .leading, spacing: 22) {
+                    if !description.isEmpty {
+                        Text(description)
+                            .font(DS.sans(.body))
+                            .foregroundStyle(DS.ink)
+                            .lineSpacing(4)
                             .fixedSize(horizontal: false, vertical: true)
                     }
-                    .padding(.top, 6)
-                    ForEach(Array(campaign.upcoming.enumerated()), id: \.offset) { _, upcoming in
-                        upcomingRow(upcoming)
-                    }
-                }
 
-                callCard
+                    challengeBlock
+
+                    if let goal = campaign.goalTarget, goal > 0 {
+                        goalBlock(goal: goal)
+                    }
+
+                    coursesSection
+                }
+                .padding(20)
+                .padding(.bottom, 24)
             }
-            .padding(20)
-            .padding(.bottom, 24)
         }
         .scrollIndicators(.hidden)
         .background(DS.canvas.ignoresSafeArea())
+        .ignoresSafeArea(edges: .top)
     }
 
-    // MARK: - Pièces
+    // MARK: - En-tête
 
-    private var hero: some View {
-        VStack(alignment: .leading, spacing: 14) {
-            if let imageUrl = campaign.imageUrl {
-                RemoteImage(url: imageUrl)
-                    .frame(maxWidth: .infinity)
-                    .frame(height: 180)
-                    .background(Color.white.opacity(0.08))
-                    .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
-            }
-            HStack(alignment: .center) {
-                Image(systemName: campaign.symbol ?? "sparkles")
-                    .font(.system(size: 36, weight: .semibold))
-                    .foregroundStyle(DS.warm)
-                Spacer(minLength: 8)
+    /// L'illustration jusque sous la barre d'état, fondue dans le bleu marine, puis les dates,
+    /// le titre, l'accroche et les participants.
+    private var header: some View {
+        VStack(alignment: .leading, spacing: 0) {
+            Color.clear
+                .frame(height: 290)
+                .overlay { EventArtwork(campaign: campaign, courses: courses, collageLift: -0.08) }
+                .overlay(alignment: .bottom) {
+                    LinearGradient(
+                        colors: [EventPalette.navy.opacity(0), EventPalette.navy],
+                        startPoint: .top,
+                        endPoint: .bottom
+                    )
+                    .frame(height: 120)
+                }
+                .clipped()
+
+            headerText
+                .padding(.horizontal, 20)
+                .padding(.top, -30)
+                .padding(.bottom, 26)
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(EventPalette.navy)
+        .overlay(alignment: .topLeading) {
+            RoundIconButton(systemImage: "chevron.left", accessibilityLabel: languageManager.text("common.close")) { dismiss() }
+                .padding(.leading, 20)
+                .padding(.top, 56)
+        }
+    }
+
+    private var headerText: some View {
+        let tagline = campaign.tagline(for: language)
+        return VStack(alignment: .leading, spacing: 10) {
+            HStack(spacing: 8) {
                 if let start = campaign.startDate, let end = campaign.endDate {
-                    Text(String(format: languageManager.text("event.page.dates"), NewGenFormat.longDay(start, language: language), NewGenFormat.longDay(end, language: language)))
-                        .font(DS.sans(.caption, .semibold))
-                        .foregroundStyle(.white)
-                        .padding(.horizontal, 10)
-                        .frame(height: 28)
-                        .background(Capsule().fill(.white.opacity(0.16)))
-                        .lineLimit(1)
-                        .minimumScaleFactor(0.8)
+                    EventPill(text: String(format: languageManager.text("event.page.dates"), NewGenFormat.longDay(start, language: language), NewGenFormat.longDay(end, language: language)))
+                }
+                if campaign.hasEnded() {
+                    EventPill(text: languageManager.text("event.ended"), style: .dark)
+                        .fixedSize()
                 }
             }
+
             Text(campaign.title(for: language))
                 .font(DS.title(.largeTitle, .heavy))
                 .foregroundStyle(.white)
-            Text(campaign.description(for: language))
-                .font(DS.sans(.body))
-                .foregroundStyle(.white.opacity(0.88))
-                .lineSpacing(3)
                 .fixedSize(horizontal: false, vertical: true)
-            Text(String(format: languageManager.text("event.participants"), participantsText))
-                .font(DS.sans(.subheadline, .semibold))
-                .foregroundStyle(.white.opacity(0.9))
-            if let goal = campaign.goalTarget, goal > 0 {
-                let read = campaign.goalCount ?? 0
-                VStack(alignment: .leading, spacing: 6) {
-                    GeometryReader { geo in
-                        ZStack(alignment: .leading) {
-                            Capsule().fill(.white.opacity(0.2))
-                            Capsule()
-                                .fill(.white)
-                                .frame(width: geo.size.width * CGFloat(min(1, Double(read) / Double(goal))))
-                        }
-                    }
-                    .frame(height: 6)
-                    Text(String(format: languageManager.text("event.goal.progress"), read.formatted(language: language), goal.formatted(language: language)))
-                        .font(DS.sans(.footnote, .semibold))
+
+            if !tagline.isEmpty {
+                Text(tagline)
+                    .font(DS.sans(.headline, .semibold))
+                    .foregroundStyle(.white.opacity(0.9))
+                    .lineSpacing(2)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+
+            if campaign.participants > 0 {
+                HStack(spacing: 8) {
+                    Image(systemName: "person.2.fill")
+                        .font(.system(size: 13, weight: .semibold))
+                        .foregroundStyle(EventPalette.saffron)
+                    Text(String(format: languageManager.text("event.participants"), campaign.participants.formatted(language: language)))
+                        .font(DS.sans(.subheadline, .semibold))
                         .foregroundStyle(.white.opacity(0.9))
-                        .monospacedDigit()
+                        .fixedSize(horizontal: false, vertical: true)
                 }
                 .padding(.top, 2)
             }
         }
-        .padding(22)
         .frame(maxWidth: .infinity, alignment: .leading)
-        .background(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous).fill(DS.accent))
     }
 
-    private var participantsText: String {
-        let formatter = NumberFormatter()
-        formatter.numberStyle = .decimal
-        formatter.locale = language.foundationLocale
-        return formatter.string(from: NSNumber(value: campaign.participants)) ?? "\(campaign.participants)"
-    }
+    // MARK: - Défi
 
-    private var challengeCard: some View {
-        HStack(alignment: .top, spacing: 16) {
-            ZStack {
-                Circle().fill(complete ? DS.warm.opacity(0.25) : DS.surfaceMuted)
-                Image(systemName: campaign.symbol ?? "sparkles")
-                    .font(.system(size: 30, weight: .semibold))
-                    .foregroundStyle(complete ? DS.warm : DS.inkTertiary)
+    /// Le défi sur une feuille crème, comme les affiches du site : le badge à gagner dans son
+    /// anneau, son nom, ce qu'il faut lire pour l'obtenir, et un segment par cours.
+    private var challengeBlock: some View {
+        let navy = EventPalette.navy
+        return VStack(alignment: .leading, spacing: 16) {
+            HStack(alignment: .center, spacing: 16) {
+                EventBadgeRing(campaign: campaign, done: done, size: 96, track: navy.opacity(0.14))
+                VStack(alignment: .leading, spacing: 4) {
+                    Text(languageManager.text("event.badge.toEarn").uppercasedInApp())
+                        .font(DS.sans(.caption, .bold))
+                        .tracking(0.6)
+                        .foregroundStyle(navy.opacity(0.62))
+                    Text(campaign.badgeName(for: language))
+                        .font(DS.title(.title2, .heavy))
+                        .foregroundStyle(navy)
+                        .fixedSize(horizontal: false, vertical: true)
+                    Text(String(format: languageManager.text("event.challenge.title"), campaign.title(for: language)))
+                        .font(DS.sans(.subheadline, .semibold))
+                        .foregroundStyle(navy.opacity(0.75))
+                        .fixedSize(horizontal: false, vertical: true)
+                }
+                Spacer(minLength: 0)
             }
-            .frame(width: 84, height: 84)
+
+            Text(
+                complete
+                    ? String(format: languageManager.text("event.challenge.unlocked"), campaign.badgeName(for: language))
+                    : String(format: languageManager.text("event.challenge.body"), campaign.challengeTarget, campaign.badgeName(for: language))
+            )
+            .font(DS.sans(.subheadline, complete ? .bold : .regular))
+            .foregroundStyle(navy.opacity(complete ? 1 : 0.82))
+            .lineSpacing(3)
+            .fixedSize(horizontal: false, vertical: true)
 
             VStack(alignment: .leading, spacing: 8) {
-                Text(String(format: languageManager.text("event.challenge.title"), campaign.title(for: language)))
-                    .font(DS.title(.headline, .heavy))
-                    .foregroundStyle(DS.ink)
-                Text(String(format: languageManager.text("event.challenge.body"), campaign.challengeTarget, campaign.badgeName(for: language)))
-                    .font(DS.sans(.subheadline))
-                    .foregroundStyle(DS.inkSecondary)
-                    .lineSpacing(2)
-                    .fixedSize(horizontal: false, vertical: true)
-                HStack(spacing: 12) {
-                    GeometryReader { geo in
-                        ZStack(alignment: .leading) {
-                            Capsule().fill(DS.surfaceMuted)
-                            Capsule()
-                                .fill(DS.warm)
-                                .frame(width: geo.size.width * CGFloat(min(1, Double(done) / Double(max(1, campaign.challengeTarget)))))
-                        }
-                    }
-                    .frame(height: 6)
-                    Text(String(format: languageManager.text("event.challenge.progress"), done, campaign.challengeTarget))
-                        .font(DS.sans(.caption, .bold))
-                        .foregroundStyle(DS.ink)
-                        .monospacedDigit()
-                        .fixedSize()
-                }
-                .padding(.top, 4)
-            }
-        }
-        .padding(18)
-        .background(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous).fill(DS.surface))
-        .overlay(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous).strokeBorder(DS.hairline, lineWidth: 1))
-        .dsSoftShadow()
-    }
-
-    private func upcomingRow(_ upcoming: Campaign.Upcoming) -> some View {
-        let author = upcoming.creator.flatMap { AuthorStore.author(slug: $0) }
-        let wants = CampaignStore.wantsNotification(for: campaign, upcoming: upcoming)
-        _ = notifyTick
-        return HStack(spacing: 12) {
-            if let author {
-                Button { onOpenCreator(author) } label: { AuthorAvatarView(author: author, size: 44) }
-                    .buttonStyle(.plain)
-            } else {
-                ZStack {
-                    Circle().fill(DS.surfaceMuted)
-                    Image(systemName: "pencil")
-                        .foregroundStyle(DS.inkTertiary)
-                }
-                .frame(width: 44, height: 44)
-            }
-            VStack(alignment: .leading, spacing: 3) {
-                Text(upcoming.title(for: language))
-                    .font(DS.sans(.subheadline, .bold))
-                    .foregroundStyle(DS.ink)
-                    .fixedSize(horizontal: false, vertical: true)
-                HStack(spacing: 4) {
-                    if let author { Text(author.name) }
-                    if let date = Campaign.parseDay(upcoming.date) {
-                        Text(author == nil ? "" : "·")
-                        Text(String(format: languageManager.text("event.upcoming.date"), NewGenFormat.shortDay(date, language: language)))
-                    }
-                }
-                .font(DS.sans(.caption))
-                .foregroundStyle(DS.inkSecondary)
-            }
-            Spacer(minLength: 8)
-            Button {
-                UIImpactFeedbackGenerator(style: .light).impactOccurred()
-                CampaignStore.setWantsNotification(!wants, for: campaign, upcoming: upcoming)
-                notifyTick += 1
-            } label: {
-                Text(languageManager.text(wants ? "event.notified" : "event.notify"))
+                EventChallengeMeter(done: done, target: campaign.challengeTarget, tint: EventPalette.saffron, track: navy.opacity(0.14), height: 10)
+                Text(String(format: languageManager.text("event.challenge.progress"), done, campaign.challengeTarget))
                     .font(DS.sans(.footnote, .bold))
-                    .foregroundStyle(wants ? DS.success : DS.accent)
-                    .padding(.horizontal, 12)
-                    .frame(height: 36)
-                    .background(RoundedRectangle(cornerRadius: 10, style: .continuous).fill(wants ? DS.successTint : DS.accentTint))
+                    .foregroundStyle(navy)
+                    .monospacedDigit()
             }
-            .buttonStyle(.plain)
-        }
-        .padding(14)
-        .background(
-            RoundedRectangle(cornerRadius: 18, style: .continuous)
-                .strokeBorder(DS.inkTertiary, style: StrokeStyle(lineWidth: 1, dash: [4, 4]))
-        )
-    }
-
-    private var callCard: some View {
-        VStack(alignment: .leading, spacing: 10) {
-            Text(String(format: languageManager.text("event.write.title"), campaign.title(for: language)))
-                .font(DS.title(.headline, .heavy))
-                .foregroundStyle(DS.ink)
-            Text(String(format: languageManager.text("event.write.body"), AppLanguage.allCases.count))
-                .font(DS.sans(.subheadline))
-                .foregroundStyle(DS.inkSecondary)
-                .lineSpacing(2)
-                .fixedSize(horizontal: false, vertical: true)
-            Button {
-                UIImpactFeedbackGenerator(style: .light).impactOccurred()
-                onBecomeCreator()
-            } label: {
-                Text(languageManager.text("event.write.cta"))
-                    .font(DS.sans(.subheadline, .bold))
-                    .foregroundStyle(.white)
-                    .frame(maxWidth: .infinity)
-                    .frame(height: 48)
-                    .background(RoundedRectangle(cornerRadius: 14, style: .continuous).fill(DS.accent))
-            }
-            .buttonStyle(.plain)
-            .padding(.top, 4)
         }
         .padding(20)
         .frame(maxWidth: .infinity, alignment: .leading)
-        .background(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous).fill(DS.accentTint))
+        .background(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous).fill(EventPalette.cream))
+        .overlay(
+            RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
+                .strokeBorder(EventPalette.saffron.opacity(0.55), lineWidth: 1.5)
+        )
+        .dsSoftShadow()
+        .accessibilityElement(children: .combine)
+    }
+
+    // MARK: - Objectif commun
+
+    /// Tous les lecteurs ensemble : le chiffre recalculé par le serveur, sa barre et le pourcentage.
+    private func goalBlock(goal: Int) -> some View {
+        let read = campaign.goalCount ?? 0
+        let fraction = min(1, Double(read) / Double(goal))
+        return VStack(alignment: .leading, spacing: 12) {
+            HStack(alignment: .center, spacing: 12) {
+                ZStack {
+                    Circle().fill(DS.accentTint)
+                    Image(systemName: "person.3.fill")
+                        .font(.system(size: 14, weight: .semibold))
+                        .foregroundStyle(DS.accentSoft)
+                }
+                .frame(width: 40, height: 40)
+                Text(String(format: languageManager.text("event.goal.progress"), read.formatted(language: language), goal.formatted(language: language)))
+                    .font(DS.sans(.subheadline, .bold))
+                    .foregroundStyle(DS.ink)
+                    .monospacedDigit()
+                    .fixedSize(horizontal: false, vertical: true)
+                Spacer(minLength: 8)
+                Text(percentText(fraction))
+                    .font(DS.title(.headline, .heavy))
+                    .foregroundStyle(DS.accentSoft)
+                    .monospacedDigit()
+                    .fixedSize()
+            }
+            EventProgressBar(fraction: fraction, tint: DS.accentSoft, track: DS.surfaceMuted, height: 8)
+        }
+        .padding(16)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous).fill(DS.surface))
+        .overlay(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous).strokeBorder(DS.hairline, lineWidth: 1))
+        .accessibilityElement(children: .combine)
+    }
+
+    /// « 62 % », « 62% » : le pourcentage écrit comme la langue de l'app l'écrit.
+    private func percentText(_ fraction: Double) -> String {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .percent
+        formatter.maximumFractionDigits = 0
+        formatter.roundingMode = .down
+        formatter.locale = language.foundationLocale
+        return formatter.string(from: NSNumber(value: fraction)) ?? "\(Int(fraction * 100)) %"
+    }
+
+    // MARK: - Cours
+
+    private var coursesSection: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            NewGenSectionTitle(text: languageManager.text("event.courses"), trailing: "· \(courses.count)")
+                .padding(.bottom, 2)
+            ForEach(courses) { course in
+                let completed = progressManager.courseStatus(for: course.id) == .completed
+                CompactCourseRow(
+                    course: course,
+                    meta: courseMeta(course, completed: completed),
+                    secondMeta: course.statsLine(liked: progressManager.isLiked(course.id), language: language),
+                    onTap: { onOpenCourse(course) }
+                ) {
+                    if completed { ReadCheck() }
+                }
+            }
+        }
     }
 
     private func courseMeta(_ course: Course, completed: Bool) -> String {

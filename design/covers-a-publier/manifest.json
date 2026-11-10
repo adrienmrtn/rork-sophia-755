@@ -1,0 +1,31 @@
+{
+  "bucket": "course-images",
+  "generated": "2026-11-10",
+  "pipeline": "web/src/lib/studio/covers.ts via scripts/generate_course_covers.py (fal-ai/any-llm google/gemini-2.5-flash + fal-ai/gemini-25-flash-image, 16:9, jpeg, 1344x768)",
+  "covers": [
+    {
+      "course_id": "course_255_comment_un_roman_a_t_il_sauve_notre_dame",
+      "file": "comment_un_roman_a_t_il_sauve_notre_dame.jpg",
+      "storage_object": "course-images/comment_un_roman_a_t_il_sauve_notre_dame.jpg",
+      "new_cover_slug": "comment_un_roman_a_t_il_sauve_notre_dame",
+      "replaces_cover_slug": "notre_dame_de_paris_cathedral_facade",
+      "alternatives": [
+        "alternatives/comment_un_roman_a_t_il_sauve_notre_dame_alt1.jpg",
+        "alternatives/comment_un_roman_a_t_il_sauve_notre_dame_alt2.jpg"
+      ],
+      "prompt": "A landscape (16:9) illustration in a clean, modern flat design style. The entire image is filled edge-to-edge with a dramatic depiction of Notre-Dame Cathedral. In the foreground, a stylized, dark silhouette of Victor Hugo, identifiable by his flowing cape and quill in hand, stands to the left, gazing up towards the cathedral. To the right, dominating the midground, is a majestic, slightly dilapidated Notre-Dame Cathedral rendered in slate gray and deep terracotta, with visible cracks and missing architectural details, emphasizing its ruinous state. Above the cathedral, a golden, ethereal glow emanates from a single open book, its pages subtly radiating light onto the cathedral's spires, symbolizing its salvation. The background is a vibrant, contrasting twilight sky transitioning from deep indigo blue at the top to a warm, hopeful amber orange near the horizon. The composition is clean and focused. The style uses bold flat colors, simple geometric shapes, and stylized figures. Without any text."
+    },
+    {
+      "course_id": "course_312_qu_est_ce_que_la_machine_d_anticythere",
+      "file": "la_machine_d_anticythere.jpg",
+      "storage_object": "course-images/la_machine_d_anticythere.jpg",
+      "new_cover_slug": "la_machine_d_anticythere",
+      "replaces_cover_slug": "qu_est_ce_que_la_machine_d_anticythere",
+      "alternatives": [
+        "alternatives/la_machine_d_anticythere_alt1.jpg",
+        "alternatives/la_machine_d_anticythere_alt2.jpg"
+      ],
+      "prompt": "A landscape (16:9) illustration in a clean, modern flat design style. The entire image is filled edge-to-edge with the intricate bronze gears of the Antikythera Mechanism emerging from ancient shipwreck debris. In the foreground, a large, weathered bronze gear, partially encrusted with teal-green verdigris, dominates the left side, showing finely etched teeth and a stylized central axis. To its right and slightly above, a cluster of smaller, polished golden gears interlock, depicting the complex internal workings of the device. Below the gears, fragments of dark brown wooden planks and scattered terracotta amphora shards are visible, suggesting the shipwreck site. The background is a deep, luminous ocean blue, with faint, stylized outlines of distant fish swimming. The composition is clean and focused. The style uses bold flat colors, simple geometric shapes, and stylized figures. Without any text."
+    }
+  ]
+}

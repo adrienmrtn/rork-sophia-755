@@ -111,8 +111,14 @@ struct CatalogManifest: Decodable {
     /// Les cours les plus ouverts de la langue sur sept jours (`trending_courses`), les plus lus en
     /// premier. Vide tant que le serveur n'a pas d'événements ; Explorer retombe alors sur son tirage.
     let trending: [String]?
+    /// Les compteurs affichés sur les cartes : identifiant du cours → `[ouvertures, j'aime]`
+    /// (table `course_counters`, recalculée chaque nuit). Absent des anciens manifestes.
+    let stats: [String: [Int]]?
+    /// La langue d'écriture des cours qui n'ont pas été écrits en français : identifiant du
+    /// cours → code de langue (`courses.origin_lang`). Absent des anciens manifestes.
+    let origins: [String: String]?
 
-    private enum CodingKeys: String, CodingKey { case lang, files, courses, events, trending }
+    private enum CodingKeys: String, CodingKey { case lang, files, courses, events, trending, stats, origins }
     private struct Skipped: Decodable {}
 
     init(from decoder: Decoder) throws {
@@ -121,6 +127,8 @@ struct CatalogManifest: Decodable {
         files = try container.decode([String: Entry].self, forKey: .files)
         courses = try container.decode([String: Entry].self, forKey: .courses)
         trending = (try? container.decodeIfPresent([String].self, forKey: .trending)) ?? nil
+        stats = (try? container.decodeIfPresent([String: [Int]].self, forKey: .stats)) ?? nil
+        origins = (try? container.decodeIfPresent([String: String].self, forKey: .origins)) ?? nil
         // Un événement mal formé est ignoré, jamais au prix du catalogue entier.
         guard container.contains(.events) else { events = nil; return }
         var list = try container.nestedUnkeyedContainer(forKey: .events)
