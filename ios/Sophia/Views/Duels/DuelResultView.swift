@@ -102,7 +102,12 @@ struct DuelResultView: View {
                 .multilineTextAlignment(.center)
                 .scaleEffect(appeared ? 1 : 0.4)
                 .opacity(appeared ? 1 : 0)
-            if summary.tiebreak && !summary.abandoned {
+            if summary.forfeit {
+                Text(String(format: languageManager.text("duel.friend.left"), opponent.handle))
+                    .font(DS.sans(.subheadline, .semibold))
+                    .foregroundStyle(.white.opacity(0.75))
+                    .multilineTextAlignment(.center)
+            } else if summary.tiebreak && !summary.abandoned {
                 Text(languageManager.text("duel.result.suddenDeath"))
                     .font(DS.sans(.subheadline, .semibold))
                     .foregroundStyle(.white.opacity(0.75))

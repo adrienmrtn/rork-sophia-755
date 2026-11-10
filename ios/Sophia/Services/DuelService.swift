@@ -131,15 +131,33 @@ final class DuelService {
         // suivante : un résultat resté en attente (réseau coupé) doit donc partir avant.
         await flushPendingFinish(evenWhilePlaying: true)
         do {
-            let match: DuelMatch = try await client
-                .rpc("duel_start_match_v2")
-                .execute()
-                .value
+            // `p_can_forfeit` : cette version sait montrer un adversaire qui se déconnecte. Un
+            // serveur qui ne connaît pas encore le paramètre refuse l'appel : on le refait sans.
+            struct Params: Encodable { let p_can_forfeit: Bool }
+            let client = self.client
+            let match: DuelMatch
+            do {
+                match = try await client
+                    .rpc("duel_start_match_v2", params: Params(p_can_forfeit: true))
+                    .execute()
+                    .value
+            } catch where Self.isUnknownFunction(error) {
+                match = try await client
+                    .rpc("duel_start_match_v2")
+                    .execute()
+                    .value
+            }
             storePending(PendingFinish(userId: userId, matchId: match.matchId, answers: [], abandoned: true, pick: nil))
             return match
         } catch {
             throw DuelError.from(error)
         }
+    }
+
+    /// PostgREST ne trouve pas la fonction avec ces paramètres (PGRST202) : base pas encore à jour.
+    private static func isUnknownFunction(_ error: Error) -> Bool {
+        let text = "\(error) \(error.localizedDescription)".lowercased()
+        return text.contains("pgrst202") || text.contains("could not find the function")
     }
 
     /// Envoie la fin d'une partie et applique le résultat (trophées, statistiques) à la page.

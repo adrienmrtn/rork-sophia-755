@@ -258,6 +258,8 @@ enum BadgeCounters {
             raise(.rivalWins, to: value(.rivalWins) + 1)
             return
         }
+        // Une victoire par déconnexion compte comme une victoire, pas comme un exploit.
+        guard !summary.forfeit else { return }
         raise(.duelBestScore, to: summary.playerScore)
         raise(.duelBestMargin, to: summary.playerScore - summary.opponentScore)
         if summary.tiebreak {

@@ -229,6 +229,9 @@ nonisolated struct DuelMatch: Codable, Sendable, Equatable {
     /// La réponse de l'adversaire à la question décisive (duel classé).
     let tiebreakBot: DuelBotAnswer?
     let searchMs: Int
+    /// Très rarement, l'adversaire se déconnecte après cette question (1 = la première) : la
+    /// partie s'arrête là et le joueur gagne par déconnexion. Décidé par le serveur ; nil sinon.
+    var opponentLeavesAfter: Int? = nil
 
     static let questionsPerRound = 5
 
@@ -252,6 +255,7 @@ nonisolated struct DuelMatch: Codable, Sendable, Equatable {
         case matchId = "match_id"
         case tiebreakBot = "tiebreak_bot"
         case searchMs = "search_ms"
+        case opponentLeavesAfter = "opponent_leaves_after"
     }
 }
 
