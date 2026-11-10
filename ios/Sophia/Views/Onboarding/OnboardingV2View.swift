@@ -11,7 +11,7 @@ import Supabase
 /// (questions) ·
 /// Temps d'écran (slider) · Ta vie en années · « Transforme ce temps » · Avis · « Fais bon
 /// usage » · Swipe · Loading · Profil · Notifications · **Login** · Ton profil (avatar, @) ·
-/// Bienvenue à bord · Atouts ·
+/// Suis des profs · Bienvenue à bord · Atouts ·
 /// Essai · Rappel · Paywall
 /// annuel · Paywall comparatif. Les pages « Se cultiver, c'est long et cher » et « Des cours
 /// écrits par des docteurs et des profs » ont été retirées le 29/09/2026.
@@ -40,7 +40,7 @@ struct OnboardingV2View: View {
         case welcome, language, intro, socialProof, name, age, knowledge, motivation
         case objectives, topics, objectiveIntro, mission
         case questions, phoneTime, yearsGrid, transform, review, personalize
-        case swipe, loading, profile, readingTime, notifications, login, account
+        case swipe, loading, profile, readingTime, notifications, login, account, followCreators
         case welcomeAboard, features, trialSteps, reminder, paywallAnnual, paywallComparison
 
         /// Nom stable de l'écran, mémorisé pour reprendre l'onboarding au bon endroit : la
@@ -73,6 +73,7 @@ struct OnboardingV2View: View {
             case .notifications: "notifications"
             case .login: "login"
             case .account: "account"
+            case .followCreators: "follow_creators"
             case .welcomeAboard: "welcome_aboard"
             case .features: "features"
             case .trialSteps: "trial_steps"
@@ -94,7 +95,7 @@ struct OnboardingV2View: View {
         var list: [Screen] = [.welcome, .language, .intro, .socialProof,
                               .name, .age, .knowledge, .motivation, .objectives, .topics, .objectiveIntro, .mission,
                               .questions, .phoneTime, .yearsGrid, .transform, .review, .personalize,
-                              .swipe, .loading, .profile, .readingTime, .notifications, .login, .account,
+                              .swipe, .loading, .profile, .readingTime, .notifications, .login, .account, .followCreators,
                               .welcomeAboard, .features]
         if store.offerings == nil || store.annualHasFreeTrial {
             list.append(.trialSteps)
@@ -221,6 +222,8 @@ struct OnboardingV2View: View {
             OnboardingV2Login(onSignedIn: advance)
         case .account:
             OnboardingV2Account(progressManager: progressManager, onNext: advance)
+        case .followCreators:
+            OnboardingV2FollowCreators(vm: vm, progressManager: progressManager, onNext: advance)
         case .welcomeAboard:
             OnboardingV2WelcomeAboard(vm: vm, onNext: advance)
         case .features:
@@ -258,6 +261,12 @@ struct OnboardingV2View: View {
         // La page « Ton profil » (avatar, @) ne concerne qu'un compte qui vient d'être créé :
         // sans session (saut du simulateur) ou pour un compte existant, on passe.
         if list[next] == .account, !isNewAccount {
+            next += 1
+            guard next < list.count else { finish(); return }
+        }
+
+        // « Suis des profs » n'a rien à montrer sans créateur dans le catalogue.
+        if list[next] == .followCreators, AuthorStore.all.isEmpty {
             next += 1
             guard next < list.count else { finish(); return }
         }

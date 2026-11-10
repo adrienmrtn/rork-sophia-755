@@ -37,6 +37,8 @@ struct SophiaApp: App {
             Group {
                 if showOnboarding {
                     OnboardingV2View(onComplete: {
+                        // Arrivé par le lien d'un cours partagé : ce cours s'ouvre maintenant.
+                        DeferredLink.openPendingIfAny()
                         withAnimation(.spring(response: 0.5)) {
                             showOnboarding = false
                         }
@@ -76,6 +78,12 @@ struct SophiaApp: App {
                 // ATT dès l'ouverture de l'app (avant/pendant l'onboarding), pas après.
                 MetaAdsService.requestTrackingAuthorizationAtLaunch()
             }
+            .task {
+                // Lien partagé repris après installation (docs/partage.md). Un onboarding fini
+                // sans que l'app ait pu ouvrir le lien (app tuée entre-temps) le rejoue ici.
+                await DeferredLink.captureAtFirstLaunch()
+                if !showOnboarding { DeferredLink.openPendingIfAny() }
+            }
             .onOpenURL { url in
                 // Callback Google Sign-In (reversed client ID) en priorité.
                 if GIDSignIn.sharedInstance.handle(url) {
@@ -84,9 +92,10 @@ struct SophiaApp: App {
                 // Callbacks Meta (fb…) + deep links Sophia (`sophia://…`, widget compris).
                 MetaAdsService.handleOpenURL(url)
                 if deepLinkRouter.open(url), AnalyticsService.shared.pendingCourseOpenSource == nil {
-                    // Widget tap or external link; a notification tap is tagged by the
-                    // delegate before it reaches the router.
-                    AnalyticsService.shared.pendingCourseOpenSource = .widget
+                    // A shared sophia-culture.com link, or else a widget tap; a notification
+                    // tap is tagged by the delegate before it reaches the router.
+                    AnalyticsService.shared.pendingCourseOpenSource =
+                        SophiaDeepLink.webTarget(from: url) != nil ? .sharedLink : .widget
                 }
             }
         }

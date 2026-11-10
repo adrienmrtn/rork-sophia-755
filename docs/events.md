@@ -73,7 +73,7 @@ n'est qu'une photo sans dates).
 
 | Nom | Quand | `props` |
 | --- | --- | --- |
-| `course_open` | le lecteur s'ouvre | `source` : `feed`, `library`, `subject`, `path`, `favorites`, `profile`, `my_courses`, `notification`, `widget`, `blocker`, `author`, `search`, `event`, `unknown` ; `locked` (vrai si le cours est verrouillé pour un gratuit) |
+| `course_open` | le lecteur s'ouvre | `source` : `feed`, `library`, `subject`, `path`, `favorites`, `profile`, `my_courses`, `notification`, `widget`, `blocker`, `author`, `search`, `event`, `shared_link` (lien web d'un cours partagé), `unknown` ; `locked` (vrai si le cours est verrouillé pour un gratuit) |
 | `section_view` | l'utilisateur quitte une section (page suivante, fin ou fermeture) | `section_index` (0 = intro), `section_count`, `seconds` (entier), `reached_end` (vrai si la section a été lue jusqu'au bout), `mode` (iOS : `steps` pour le lecteur pas à pas, `pages` pour le lecteur par pages ; absent sur Android, toujours par pages) |
 | `course_complete` | fin du cours validée (écran de félicitations) | `first_time` (vrai si première fois), `mode` (iOS, comme `section_view`) |
 | `glossary_open` | une fiche de glossaire s'ouvre | `term`, `section_index` (iOS seulement : Android ne connaît pas la section depuis le texte) |

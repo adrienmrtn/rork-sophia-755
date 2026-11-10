@@ -171,9 +171,9 @@ struct HomeFeedView: View {
 
     @ViewBuilder
     private func page(for item: FeedItem, position: Int, width: CGFloat, height: CGFloat) -> some View {
-        // La couverture garde son 16:9 tant que la page est assez haute ; sur un petit écran
-        // elle se raccourcit pour laisser la place au texte et aux compteurs.
-        let coverHeight = min((width - 32) * 9 / 16, height * 0.42)
+        // La couverture occupe la hauteur que le texte laisse libre (plus de vide sous
+        // l'accroche), jusqu'à un carré ; sur un petit écran elle se raccourcit d'elle-même.
+        let coverMaxHeight = width - 32
         Group {
             switch item {
             case .course(let course):
@@ -186,7 +186,7 @@ struct HomeFeedView: View {
                     tagStyle: campaign != nil ? .warm : .accent,
                     screen: screen,
                     fillsPage: true,
-                    coverHeight: coverHeight,
+                    coverMaxHeight: coverMaxHeight,
                     onOpen: { open(course, position: position) },
                     onOpenCreator: onOpenCreator
                 )

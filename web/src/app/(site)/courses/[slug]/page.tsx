@@ -14,6 +14,7 @@ import { creatorMap } from "@/lib/catalog/select";
 import { authorPath, coursePath, parseCourseParam, SUBJECT_LABEL, subjectParam } from "@/lib/catalog/slugs";
 import type { Block, CourseDetail } from "@/lib/catalog/types";
 import { t } from "@/lib/copy/en";
+import { APP_STORE_ID, SITE_URL } from "@/lib/env";
 
 export const dynamic = "force-dynamic";
 
@@ -32,7 +33,10 @@ export async function generateMetadata({ params }: PageProps<"/courses/[slug]">)
     title: course.title,
     description,
     alternates: { canonical: coursePath(course) },
-    openGraph: { title: course.title, description, images: course.coverUrl ? [{ url: course.coverUrl }] : undefined, type: "article" },
+    openGraph: { title: course.title, description, url: coursePath(course), siteName: "Sophia", images: course.coverUrl ? [{ url: course.coverUrl }] : undefined, type: "article" },
+    twitter: { card: course.coverUrl ? "summary_large_image" : "summary", title: course.title, description, images: course.coverUrl ? [course.coverUrl] : undefined },
+    // Bannière Safari : « Ouvrir » l'app sur ce cours si elle est installée, sinon l'App Store.
+    itunes: { appId: APP_STORE_ID, appArgument: `${SITE_URL}${coursePath(course)}` },
   };
 }
 
@@ -147,7 +151,7 @@ export default async function CoursePage({ params }: PageProps<"/courses/[slug]"
                 </ol>
               )}
               <div className="flex flex-wrap items-center gap-2.5">
-                <StoreButtons size="compact" />
+                <StoreButtons size="compact" resumeUrl={`${SITE_URL}${canonical}`} />
                 <a href={`sophia://course/${course.id}`} className="inline-flex h-[46px] items-center px-3 text-[14px] font-bold text-blue">
                   {c.alreadyInstalled}
                 </a>

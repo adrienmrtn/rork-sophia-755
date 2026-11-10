@@ -89,6 +89,8 @@ nonisolated enum SocialError: Error, Sendable, Equatable {
     case notSignedIn
     case invalidHandle
     case handleTaken
+    /// Le @ contient un terme interdit (insulte, haine, usurpation de l'équipe…).
+    case handleNotAllowed
     case userNotFound
     case cannotAddSelf
     case notFriends
@@ -101,6 +103,7 @@ nonisolated enum SocialError: Error, Sendable, Equatable {
         let message = error.localizedDescription.lowercased()
         if message.contains("invalid_handle") { return .invalidHandle }
         if message.contains("handle_taken") { return .handleTaken }
+        if message.contains("handle_not_allowed") { return .handleNotAllowed }
         if message.contains("user_not_found") { return .userNotFound }
         if message.contains("cannot_add_self") { return .cannotAddSelf }
         if message.contains("already_friends") { return .alreadyFriends }
@@ -174,6 +177,11 @@ final class SocialService {
     @discardableResult
     func updateHandle(_ raw: String) async throws -> String {
         guard AuthService.shared.isSignedIn else { throw SocialError.notSignedIn }
+        // Réponse immédiate pour les @ interdits ; le serveur refait le contrôle avec sa liste.
+        let candidate = raw.trimmingCharacters(in: .whitespacesAndNewlines)
+            .replacingOccurrences(of: "@", with: "")
+            .lowercased()
+        guard HandleModeration.isAllowed(candidate) else { throw SocialError.handleNotAllowed }
         struct Params: Encodable { let new_handle: String }
         do {
             let updated: String = try await client

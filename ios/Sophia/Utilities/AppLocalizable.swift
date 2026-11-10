@@ -1132,6 +1132,7 @@ enum AppLocalizable {
         "friends.error.notSignedIn": "Connecte-toi pour continuer.",
         "friends.error.invalidHandle": "Ce @ n'est pas valide.",
         "friends.error.handleTaken": "Ce @ est déjà pris.",
+        "friends.error.handleNotAllowed": "Ce @ n'est pas autorisé. Choisis-en un autre.",
         "friends.error.userNotFound": "Aucun utilisateur avec ce @.",
         "friends.error.cannotAddSelf": "Tu ne peux pas t'ajouter toi-même.",
         "friends.error.notFriends": "Vous n'êtes pas amis.",
@@ -1417,6 +1418,8 @@ enum AppLocalizable {
         "duel.result.draw": "Égalité",
         "onboardingV2.account.title": "Ton profil",
         "onboardingV2.account.subtitle": "Choisis ton avatar et ton @. C'est avec lui que tes amis te trouveront.",
+        "onboardingV2.follow.title": "Suis des profs",
+        "onboardingV2.follow.subtitle": "Leurs nouveaux cours arriveront dans ton onglet Abonnements.",
         // MARK: Demande de fonctionnalité
         "settings.featureRequest.title": "Demander une fonctionnalité",
         "settings.featureRequest.subtitle": "Dis-nous ce que tu aimerais voir dans Sophia",
@@ -2723,6 +2726,9 @@ enum AppLocalizable {
         "duel.result.draw": "Draw",
         "onboardingV2.account.title": "Your profile",
         "onboardingV2.account.subtitle": "Pick your avatar and your username. It's how your friends will find you.",
+        "friends.error.handleNotAllowed": "This username isn't allowed. Pick another one.",
+        "onboardingV2.follow.title": "Follow teachers",
+        "onboardingV2.follow.subtitle": "Their new courses will show up in your Following tab.",
         // MARK: Demande de fonctionnalité
         "settings.featureRequest.title": "Request a feature",
         "settings.featureRequest.subtitle": "Tell us what you'd like to see in Sophia",
@@ -4030,6 +4036,9 @@ enum AppLocalizable {
         "duel.result.draw": "Empate",
         "onboardingV2.account.title": "Tu perfil",
         "onboardingV2.account.subtitle": "Elige tu avatar y tu @. Con él te encontrarán tus amigos.",
+        "friends.error.handleNotAllowed": "Este @ no está permitido. Elige otro.",
+        "onboardingV2.follow.title": "Sigue a profesores",
+        "onboardingV2.follow.subtitle": "Sus nuevos cursos aparecerán en tu pestaña Siguiendo.",
         // MARK: Demande de fonctionnalité
         "settings.featureRequest.title": "Pedir una función",
         "settings.featureRequest.subtitle": "Dinos qué te gustaría ver en Sophia",
@@ -5337,6 +5346,9 @@ enum AppLocalizable {
         "duel.result.draw": "Unentschieden",
         "onboardingV2.account.title": "Dein Profil",
         "onboardingV2.account.subtitle": "Wähle deinen Avatar und deinen @. Damit finden dich deine Freunde.",
+        "friends.error.handleNotAllowed": "Dieser @ ist nicht erlaubt. Wähle einen anderen.",
+        "onboardingV2.follow.title": "Folge Profs",
+        "onboardingV2.follow.subtitle": "Ihre neuen Kurse erscheinen in deinem Tab „Abos“.",
         // MARK: Demande de fonctionnalité
         "settings.featureRequest.title": "Funktion wünschen",
         "settings.featureRequest.subtitle": "Sag uns, was du dir in Sophia wünschst",
@@ -6644,6 +6656,9 @@ enum AppLocalizable {
         "duel.result.draw": "Empate",
         "onboardingV2.account.title": "Seu perfil",
         "onboardingV2.account.subtitle": "Escolha seu avatar e seu @. É com ele que seus amigos vão encontrar você.",
+        "friends.error.handleNotAllowed": "Este @ não é permitido. Escolha outro.",
+        "onboardingV2.follow.title": "Siga professores",
+        "onboardingV2.follow.subtitle": "Os novos cursos deles vão aparecer na sua aba Seguindo.",
         // MARK: Demande de fonctionnalité
         "settings.featureRequest.title": "Pedir um recurso",
         "settings.featureRequest.subtitle": "Diga o que você gostaria de ver na Sophia",
@@ -7952,6 +7967,9 @@ enum AppLocalizable {
         "duel.result.draw": "Empate",
         "onboardingV2.account.title": "O teu perfil",
         "onboardingV2.account.subtitle": "Escolhe o teu avatar e o teu @. É com ele que os teus amigos te vão encontrar.",
+        "friends.error.handleNotAllowed": "Este @ não é permitido. Escolhe outro.",
+        "onboardingV2.follow.title": "Segue professores",
+        "onboardingV2.follow.subtitle": "Os novos cursos deles vão aparecer no teu separador A seguir.",
         // MARK: Demande de fonctionnalité
         "settings.featureRequest.title": "Pedir uma funcionalidade",
         "settings.featureRequest.subtitle": "Diz-nos o que gostavas de ver na Sophia",
@@ -9259,6 +9277,9 @@ enum AppLocalizable {
         "duel.result.draw": "Pareggio",
         "onboardingV2.account.title": "Il tuo profilo",
         "onboardingV2.account.subtitle": "Scegli il tuo avatar e la tua @. È con questa che i tuoi amici ti troveranno.",
+        "friends.error.handleNotAllowed": "Questa @ non è consentita. Scegline un'altra.",
+        "onboardingV2.follow.title": "Segui dei professori",
+        "onboardingV2.follow.subtitle": "I loro nuovi corsi arriveranno nella tua scheda Seguiti.",
         // MARK: Demande de fonctionnalité
         "settings.featureRequest.title": "Richiedi una funzione",
         "settings.featureRequest.subtitle": "Dicci cosa ti piacerebbe vedere su Sophia",
@@ -10566,6 +10587,9 @@ enum AppLocalizable {
         "duel.result.draw": "Berabere",
         "onboardingV2.account.title": "Profilin",
         "onboardingV2.account.subtitle": "Avatarını ve @ adresini seç. Arkadaşların seni bununla bulacak.",
+        "friends.error.handleNotAllowed": "Bu @ kullanılamaz. Başka bir tane seç.",
+        "onboardingV2.follow.title": "Hocaları takip et",
+        "onboardingV2.follow.subtitle": "Yeni kursları Takip sekmende görünecek.",
         // MARK: Demande de fonctionnalité
         "settings.featureRequest.title": "Özellik iste",
         "settings.featureRequest.subtitle": "Sophia'da ne görmek istediğini bize söyle",
@@ -11874,6 +11898,9 @@ enum AppLocalizable {
         "duel.result.draw": "Remis",
         "onboardingV2.account.title": "Twój profil",
         "onboardingV2.account.subtitle": "Wybierz swój awatar i swój @. To dzięki niemu znajdą cię znajomi.",
+        "friends.error.handleNotAllowed": "Ten @ jest niedozwolony. Wybierz inny.",
+        "onboardingV2.follow.title": "Obserwuj wykładowców",
+        "onboardingV2.follow.subtitle": "Ich nowe kursy pojawią się w zakładce Obserwowani.",
         // MARK: Demande de fonctionnalité
         "settings.featureRequest.title": "Zaproponuj funkcję",
         "settings.featureRequest.subtitle": "Napisz, co chcesz zobaczyć w Sophii",
@@ -13182,6 +13209,9 @@ enum AppLocalizable {
         "duel.result.draw": "Egalitate",
         "onboardingV2.account.title": "Profilul tău",
         "onboardingV2.account.subtitle": "Alege-ți avatarul și @-ul. Cu el te vor găsi prietenii tăi.",
+        "friends.error.handleNotAllowed": "Acest @ nu este permis. Alege altul.",
+        "onboardingV2.follow.title": "Urmărește profesori",
+        "onboardingV2.follow.subtitle": "Cursurile lor noi vor apărea în fila Urmărești.",
         // MARK: Demande de fonctionnalité
         "settings.featureRequest.title": "Cere o funcție",
         "settings.featureRequest.subtitle": "Spune-ne ce ți-ar plăcea să vezi în Sophia",
@@ -14489,6 +14519,9 @@ enum AppLocalizable {
         "duel.result.draw": "Gelijkspel",
         "onboardingV2.account.title": "Jouw profiel",
         "onboardingV2.account.subtitle": "Kies je avatar en je @. Daarmee kunnen je vrienden je vinden.",
+        "friends.error.handleNotAllowed": "Deze @ is niet toegestaan. Kies een andere.",
+        "onboardingV2.follow.title": "Volg docenten",
+        "onboardingV2.follow.subtitle": "Hun nieuwe cursussen verschijnen in je tabblad Volgend.",
         // MARK: Demande de fonctionnalité
         "settings.featureRequest.title": "Vraag een functie aan",
         "settings.featureRequest.subtitle": "Vertel ons wat je graag in Sophia wilt zien",
@@ -15796,6 +15829,9 @@ enum AppLocalizable {
         "duel.result.draw": "Ισοπαλία",
         "onboardingV2.account.title": "Το προφίλ σου",
         "onboardingV2.account.subtitle": "Διάλεξε το avatar και το @ σου. Με αυτό θα σε βρίσκουν οι φίλοι σου.",
+        "friends.error.handleNotAllowed": "Αυτό το @ δεν επιτρέπεται. Διάλεξε άλλο.",
+        "onboardingV2.follow.title": "Ακολούθησε καθηγητές",
+        "onboardingV2.follow.subtitle": "Τα νέα τους μαθήματα θα εμφανίζονται στην καρτέλα «Ακολουθείς».",
         // MARK: Demande de fonctionnalité
         "settings.featureRequest.title": "Αίτημα λειτουργίας",
         "settings.featureRequest.subtitle": "Πες μας τι θα ήθελες να δεις στη Sophia",
@@ -17103,6 +17139,9 @@ enum AppLocalizable {
         "duel.result.draw": "Oavgjort",
         "onboardingV2.account.title": "Din profil",
         "onboardingV2.account.subtitle": "Välj din avatar och ditt @. Det är så dina vänner hittar dig.",
+        "friends.error.handleNotAllowed": "Detta @ är inte tillåtet. Välj ett annat.",
+        "onboardingV2.follow.title": "Följ lärare",
+        "onboardingV2.follow.subtitle": "Deras nya kurser dyker upp under fliken Följer.",
         // MARK: Demande de fonctionnalité
         "settings.featureRequest.title": "Önska en funktion",
         "settings.featureRequest.subtitle": "Berätta vad du vill se i Sophia",
@@ -18410,6 +18449,9 @@ enum AppLocalizable {
         "duel.result.draw": "Döntetlen",
         "onboardingV2.account.title": "A profilod",
         "onboardingV2.account.subtitle": "Válassz avatart és @-nevet. A barátaid ez alapján találnak majd meg.",
+        "friends.error.handleNotAllowed": "Ez a @-név nem engedélyezett. Válassz másikat.",
+        "onboardingV2.follow.title": "Kövess oktatókat",
+        "onboardingV2.follow.subtitle": "Az új kurzusaik a Követett fülön jelennek meg.",
         // MARK: Demande de fonctionnalité
         "settings.featureRequest.title": "Funkció kérése",
         "settings.featureRequest.subtitle": "Mondd el, mit látnál szívesen a Sophiában",
@@ -19717,6 +19759,9 @@ enum AppLocalizable {
         "duel.result.draw": "Равенство",
         "onboardingV2.account.title": "Твоят профил",
         "onboardingV2.account.subtitle": "Избери своя аватар и своя @. С него приятелите ти ще те намират.",
+        "friends.error.handleNotAllowed": "Този @ не е разрешен. Избери друг.",
+        "onboardingV2.follow.title": "Следвай преподаватели",
+        "onboardingV2.follow.subtitle": "Новите им курсове ще се появяват в раздела „Следвани“.",
         // MARK: Demande de fonctionnalité
         "settings.featureRequest.title": "Поискай функция",
         "settings.featureRequest.subtitle": "Кажи ни какво искаш да видиш в Sophia",
@@ -21025,6 +21070,9 @@ enum AppLocalizable {
         "duel.result.draw": "Remíza",
         "onboardingV2.account.title": "Tvůj profil",
         "onboardingV2.account.subtitle": "Vyber si avatar a své @. Díky němu tě kamarádi najdou.",
+        "friends.error.handleNotAllowed": "Toto @ není povolené. Zvolte jiné.",
+        "onboardingV2.follow.title": "Sledujte autory",
+        "onboardingV2.follow.subtitle": "Jejich nové kurzy se objeví na kartě Sledované.",
         // MARK: Demande de fonctionnalité
         "settings.featureRequest.title": "Požádat o funkci",
         "settings.featureRequest.subtitle": "Napiš nám, co chceš v Sophii vidět",
@@ -22333,6 +22381,9 @@ enum AppLocalizable {
         "duel.result.draw": "Uafgjort",
         "onboardingV2.account.title": "Din profil",
         "onboardingV2.account.subtitle": "Vælg din avatar og dit @. Sådan finder dine venner dig.",
+        "friends.error.handleNotAllowed": "Dette @ er ikke tilladt. Vælg et andet.",
+        "onboardingV2.follow.title": "Følg undervisere",
+        "onboardingV2.follow.subtitle": "Deres nye kurser dukker op under fanen Følger.",
         // MARK: Demande de fonctionnalité
         "settings.featureRequest.title": "Ønsk en funktion",
         "settings.featureRequest.subtitle": "Fortæl os, hvad du gerne vil se i Sophia",
@@ -23641,6 +23692,9 @@ enum AppLocalizable {
         "duel.result.draw": "Uavgjort",
         "onboardingV2.account.title": "Profilen din",
         "onboardingV2.account.subtitle": "Velg avataren og @-en din. Slik finner vennene dine deg.",
+        "friends.error.handleNotAllowed": "Denne @-en er ikke tillatt. Velg en annen.",
+        "onboardingV2.follow.title": "Følg lærere",
+        "onboardingV2.follow.subtitle": "De nye kursene deres dukker opp under fanen Følger.",
         // MARK: Demande de fonctionnalité
         "settings.featureRequest.title": "Ønsk deg en funksjon",
         "settings.featureRequest.subtitle": "Fortell oss hva du vil se i Sophia",
@@ -24950,6 +25004,9 @@ enum AppLocalizable {
         "duel.result.draw": "Ничья",
         "onboardingV2.account.title": "Твой профиль",
         "onboardingV2.account.subtitle": "Выбери аватар и свой @. По нему друзья смогут тебя найти.",
+        "friends.error.handleNotAllowed": "Такой @ использовать нельзя. Выбери другой.",
+        "onboardingV2.follow.title": "Подпишись на авторов",
+        "onboardingV2.follow.subtitle": "Их новые курсы появятся на вкладке «Подписки».",
         // MARK: Demande de fonctionnalité
         "settings.featureRequest.title": "Запросить функцию",
         "settings.featureRequest.subtitle": "Расскажи, что ты хочешь видеть в Sophia",
@@ -26259,6 +26316,9 @@ enum AppLocalizable {
         "duel.result.draw": "Neriješeno",
         "onboardingV2.account.title": "Tvoj profil",
         "onboardingV2.account.subtitle": "Odaberi svoj avatar i svoj @. Po njemu će te prijatelji pronaći.",
+        "friends.error.handleNotAllowed": "Ovaj @ nije dopušten. Odaberi drugi.",
+        "onboardingV2.follow.title": "Prati profesore",
+        "onboardingV2.follow.subtitle": "Njihovi novi tečajevi pojavit će se na kartici Pratim.",
         // MARK: Demande de fonctionnalité
         "settings.featureRequest.title": "Zatraži značajku",
         "settings.featureRequest.subtitle": "Reci nam što želiš vidjeti u Sophiji",
@@ -27569,6 +27629,9 @@ enum AppLocalizable {
         "duel.result.draw": "Neodločeno",
         "onboardingV2.account.title": "Tvoj profil",
         "onboardingV2.account.subtitle": "Izberi svoj avatar in svoj @. Po njem te bodo prijatelji našli.",
+        "friends.error.handleNotAllowed": "Ta @ ni dovoljen. Izberi drugega.",
+        "onboardingV2.follow.title": "Sledi profesorjem",
+        "onboardingV2.follow.subtitle": "Njihovi novi tečaji se bodo prikazali v zavihku Sledim.",
         // MARK: Demande de fonctionnalité
         "settings.featureRequest.title": "Predlagaj funkcijo",
         "settings.featureRequest.subtitle": "Povej nam, kaj želiš videti v Sophii",
@@ -28878,6 +28941,9 @@ enum AppLocalizable {
         "duel.result.draw": "Remíza",
         "onboardingV2.account.title": "Tvoj profil",
         "onboardingV2.account.subtitle": "Vyber si avatar a svoj @. Podľa neho ťa priatelia nájdu.",
+        "friends.error.handleNotAllowed": "Tento @ nie je povolený. Vyber si iný.",
+        "onboardingV2.follow.title": "Sleduj profesorov",
+        "onboardingV2.follow.subtitle": "Ich nové kurzy sa objavia na karte Sledované.",
         // MARK: Demande de fonctionnalité
         "settings.featureRequest.title": "Požiadať o funkciu",
         "settings.featureRequest.subtitle": "Napíš nám, čo chceš v Sophii vidieť",
@@ -30187,6 +30253,9 @@ enum AppLocalizable {
         "duel.result.draw": "Nerešeno",
         "onboardingV2.account.title": "Tvoj profil",
         "onboardingV2.account.subtitle": "Izaberi svoj avatar i svoj @. Po njemu će te prijatelji pronaći.",
+        "friends.error.handleNotAllowed": "Ovaj @ nije dozvoljen. Izaberi drugi.",
+        "onboardingV2.follow.title": "Prati profesore",
+        "onboardingV2.follow.subtitle": "Njihovi novi kursevi pojaviće se na kartici Pratim.",
         // MARK: Demande de fonctionnalité
         "settings.featureRequest.title": "Zatraži funkciju",
         "settings.featureRequest.subtitle": "Reci nam šta želiš da vidiš u Sophiji",
@@ -31497,6 +31566,9 @@ enum AppLocalizable {
         "duel.result.draw": "تعادل",
         "onboardingV2.account.title": "ملفك الشخصي",
         "onboardingV2.account.subtitle": "اختر صورتك الرمزية و@ الخاص بك. من خلاله سيجدك أصدقاؤك.",
+        "friends.error.handleNotAllowed": "هذا @ غير مسموح به. اختر غيره.",
+        "onboardingV2.follow.title": "تابع الأساتذة",
+        "onboardingV2.follow.subtitle": "ستظهر دروسهم الجديدة في تبويب المتابَعون.",
         // MARK: Demande de fonctionnalité
         "settings.featureRequest.title": "طلب ميزة",
         "settings.featureRequest.subtitle": "أخبرنا بما تود رؤيته في Sophia",
@@ -32806,6 +32878,9 @@ enum AppLocalizable {
         "duel.result.draw": "תיקו",
         "onboardingV2.account.title": "הפרופיל שלך",
         "onboardingV2.account.subtitle": "בחר אווטאר ואת ה-@ שלך. כך החברים שלך ימצאו אותך.",
+        "friends.error.handleNotAllowed": "ה-@ הזה אינו מותר. בחרו אחר.",
+        "onboardingV2.follow.title": "עקבו אחרי מרצים",
+        "onboardingV2.follow.subtitle": "הקורסים החדשים שלהם יופיעו בלשונית במעקב.",
         // MARK: Demande de fonctionnalité
         "settings.featureRequest.title": "בקש תכונה",
         "settings.featureRequest.subtitle": "ספר לנו מה היית רוצה לראות ב-Sophia",
@@ -34114,6 +34189,9 @@ enum AppLocalizable {
         "duel.result.draw": "Tasapeli",
         "onboardingV2.account.title": "Profiilisi",
         "onboardingV2.account.subtitle": "Valitse avatarisi ja @-tunnuksesi. Sen avulla kaverisi löytävät sinut.",
+        "friends.error.handleNotAllowed": "Tämä @ ei ole sallittu. Valitse toinen.",
+        "onboardingV2.follow.title": "Seuraa opettajia",
+        "onboardingV2.follow.subtitle": "Heidän uudet kurssinsa ilmestyvät Seuratut-välilehdelle.",
         // MARK: Demande de fonctionnalité
         "settings.featureRequest.title": "Toivo ominaisuutta",
         "settings.featureRequest.subtitle": "Kerro, mitä haluaisit nähdä Sophiassa",
@@ -35422,6 +35500,9 @@ enum AppLocalizable {
         "duel.result.draw": "Viik",
         "onboardingV2.account.title": "Sinu profiil",
         "onboardingV2.account.subtitle": "Vali oma avatar ja @. Selle järgi leiavad sõbrad su üles.",
+        "friends.error.handleNotAllowed": "See @ ei ole lubatud. Vali mõni teine.",
+        "onboardingV2.follow.title": "Jälgi õpetajaid",
+        "onboardingV2.follow.subtitle": "Nende uued kursused ilmuvad vahekaardile Jälgitavad.",
         // MARK: Demande de fonctionnalité
         "settings.featureRequest.title": "Soovi funktsiooni",
         "settings.featureRequest.subtitle": "Kirjuta, mida tahaksid Sophias näha",
@@ -36730,6 +36811,9 @@ enum AppLocalizable {
         "duel.result.draw": "Lygiosios",
         "onboardingV2.account.title": "Tavo profilis",
         "onboardingV2.account.subtitle": "Pasirink avatarą ir savo @. Pagal jį draugai tave ras.",
+        "friends.error.handleNotAllowed": "Šis @ neleidžiamas. Pasirink kitą.",
+        "onboardingV2.follow.title": "Sek dėstytojus",
+        "onboardingV2.follow.subtitle": "Nauji jų kursai atsiras skirtuke „Sekami“.",
         // MARK: Demande de fonctionnalité
         "settings.featureRequest.title": "Paprašyti funkcijos",
         "settings.featureRequest.subtitle": "Pasakyk, ką norėtum matyti Sophia programėlėje",
@@ -38039,6 +38123,9 @@ enum AppLocalizable {
         "duel.result.draw": "Neizšķirts",
         "onboardingV2.account.title": "Tavs profils",
         "onboardingV2.account.subtitle": "Izvēlies savu avataru un @. Pēc tā draugi tevi atradīs.",
+        "friends.error.handleNotAllowed": "Šis @ nav atļauts. Izvēlies citu.",
+        "onboardingV2.follow.title": "Seko pasniedzējiem",
+        "onboardingV2.follow.subtitle": "Viņu jaunie kursi parādīsies cilnē “Sekoju”.",
         // MARK: Demande de fonctionnalité
         "settings.featureRequest.title": "Pieprasīt funkciju",
         "settings.featureRequest.subtitle": "Pastāsti, ko vēlies redzēt lietotnē Sophia",
@@ -39346,6 +39433,9 @@ enum AppLocalizable {
         "duel.result.draw": "引き分け",
         "onboardingV2.account.title": "あなたのプロフィール",
         "onboardingV2.account.subtitle": "アバターと@を決めましょう。友だちはこの@であなたを見つけます。",
+        "friends.error.handleNotAllowed": "この@は使えません。別のものを選んでください。",
+        "onboardingV2.follow.title": "先生をフォローしよう",
+        "onboardingV2.follow.subtitle": "新しいコースが「フォロー中」タブに届きます。",
         // MARK: Demande de fonctionnalité
         "settings.featureRequest.title": "機能の要望を送る",
         "settings.featureRequest.subtitle": "Sophiaにほしい機能を教えてください",
