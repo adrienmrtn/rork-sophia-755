@@ -1,0 +1,307 @@
+{
+  "_comment": "Badges de l'app (35 badges permanents, 30 badges de ligue de duel : le buste de la figure de la ligue). Même direction que les avatars et les fonds de ligue : papier découpé, palette du site. Images carrées, recadrées en rond par l'app.",
+  "defaults": {
+    "style": "digital_illustration/2d_art_poster",
+    "size": "square_hd",
+    "max_side": 512,
+    "colors": [
+      [
+        26,
+        58,
+        107
+      ],
+      [
+        242,
+        177,
+        52
+      ],
+      [
+        224,
+        90,
+        58
+      ],
+      [
+        251,
+        247,
+        239
+      ],
+      [
+        92,
+        58,
+        38
+      ],
+      [
+        160,
+        110,
+        70
+      ],
+      [
+        222,
+        184,
+        146
+      ]
+    ]
+  },
+  "items": [
+    {
+      "name": "badge_streak_3",
+      "prompt": "A single small spark with three tiny rays above a match head. Single centred emblem filling most of the frame, like a merit badge. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, plain navy background, no text, no letters, no numbers, no outlines."
+    },
+    {
+      "name": "badge_streak_7",
+      "prompt": "A bright single flame with two layered tongues. Single centred emblem filling most of the frame, like a merit badge. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, plain navy background, no text, no letters, no numbers, no outlines."
+    },
+    {
+      "name": "badge_streak_30",
+      "prompt": "A glowing brazier bowl on a tripod with tall flames. Single centred emblem filling most of the frame, like a merit badge. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, plain navy background, no text, no letters, no numbers, no outlines."
+    },
+    {
+      "name": "badge_streak_100",
+      "prompt": "An ancient temple altar with an eternal flame between two columns. Single centred emblem filling most of the frame, like a merit badge. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, plain navy background, no text, no letters, no numbers, no outlines."
+    },
+    {
+      "name": "badge_streak_365",
+      "prompt": "A phoenix rising with spread wings from flames. Single centred emblem filling most of the frame, like a merit badge. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, plain navy background, no text, no letters, no numbers, no outlines."
+    },
+    {
+      "name": "badge_courses_1",
+      "prompt": "A single footprint path leading to an open book lying on the ground. Single centred emblem filling most of the frame, like a merit badge. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, plain cream background, no text, no letters, no numbers, no outlines."
+    },
+    {
+      "name": "badge_courses_10",
+      "prompt": "An open book with a ribbon bookmark and round reading glasses resting on it. Single centred emblem filling most of the frame, like a merit badge. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, plain saffron background, no text, no letters, no numbers, no outlines."
+    },
+    {
+      "name": "badge_courses_50",
+      "prompt": "A small mouse wearing glasses sitting on a stack of three books. Single centred emblem filling most of the frame, like a merit badge. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, plain cream background, no text, no letters, no numbers, no outlines."
+    },
+    {
+      "name": "badge_courses_100",
+      "prompt": "A tall bookshelf shaped like a human head in profile, filled with books. Single centred emblem filling most of the frame, like a merit badge. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, plain navy background, no text, no letters, no numbers, no outlines."
+    },
+    {
+      "name": "badge_early",
+      "prompt": "A rooster crowing in front of a large rising sun over a hill. Single centred emblem filling most of the frame, like a merit badge. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, plain saffron background, no text, no letters, no numbers, no outlines."
+    },
+    {
+      "name": "badge_late",
+      "prompt": "An owl perched on a branch in front of a crescent moon and stars. Single centred emblem filling most of the frame, like a merit badge. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, plain navy background, no text, no letters, no numbers, no outlines."
+    },
+    {
+      "name": "badge_binge",
+      "prompt": "A tall teetering stack of seven books with a steaming cup on top. Single centred emblem filling most of the frame, like a merit badge. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, plain coral background, no text, no letters, no numbers, no outlines."
+    },
+    {
+      "name": "badge_subject_histoire",
+      "prompt": "An ancient Greek helmet resting beside a rolled parchment scroll and an hourglass. Single centred emblem filling most of the frame, like a merit badge. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, plain cream background, no text, no letters, no numbers, no outlines."
+    },
+    {
+      "name": "badge_subject_sciences",
+      "prompt": "A round-bottom flask with bubbles and an atom orbiting above it. Single centred emblem filling most of the frame, like a merit badge. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, plain navy background, no text, no letters, no numbers, no outlines."
+    },
+    {
+      "name": "badge_subject_litterature",
+      "prompt": "A quill pen in an inkwell beside an open book. Single centred emblem filling most of the frame, like a merit badge. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, plain saffron background, no text, no letters, no numbers, no outlines."
+    },
+    {
+      "name": "badge_subject_art",
+      "prompt": "A painter's palette with three brushes and a small framed canvas. Single centred emblem filling most of the frame, like a merit badge. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, plain cream background, no text, no letters, no numbers, no outlines."
+    },
+    {
+      "name": "badge_subject_mythologie",
+      "prompt": "A winged horse Pegasus rearing above a cloud with a lightning bolt. Single centred emblem filling most of the frame, like a merit badge. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, plain navy background, no text, no letters, no numbers, no outlines."
+    },
+    {
+      "name": "badge_subject_comprendreLeMonde",
+      "prompt": "A globe on a stand with a compass rose behind it. Single centred emblem filling most of the frame, like a merit badge. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, plain saffron background, no text, no letters, no numbers, no outlines."
+    },
+    {
+      "name": "badge_all_subjects",
+      "prompt": "A six-pointed rosette made of six objects: a helmet, a flask, a quill, a palette, a lightning bolt and a globe. Single centred emblem filling most of the frame, like a merit badge. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, plain navy background, no text, no letters, no numbers, no outlines."
+    },
+    {
+      "name": "badge_quiz_10",
+      "prompt": "A school notebook with a large check mark and a red apple beside it. Single centred emblem filling most of the frame, like a merit badge. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, plain cream background, no text, no letters, no numbers, no outlines."
+    },
+    {
+      "name": "badge_quiz_50",
+      "prompt": "A graduation cap on top of a laurel wreath with a rolled diploma. Single centred emblem filling most of the frame, like a merit badge. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, plain navy background, no text, no letters, no numbers, no outlines."
+    },
+    {
+      "name": "badge_duel_first",
+      "prompt": "Two crossed fencing foils with a small star above. Single centred emblem filling most of the frame, like a merit badge. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, plain cream background, no text, no letters, no numbers, no outlines."
+    },
+    {
+      "name": "badge_duel_wins_10",
+      "prompt": "A fencing mask in front of two crossed foils. Single centred emblem filling most of the frame, like a merit badge. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, plain coral background, no text, no letters, no numbers, no outlines."
+    },
+    {
+      "name": "badge_duel_wins_50",
+      "prompt": "A golden trophy cup with two handles on a small pedestal. Single centred emblem filling most of the frame, like a merit badge. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, plain navy background, no text, no letters, no numbers, no outlines."
+    },
+    {
+      "name": "badge_duel_wins_200",
+      "prompt": "A Roman gladiator helmet with a laurel wreath in front of arena arches. Single centred emblem filling most of the frame, like a merit badge. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, plain saffron background, no text, no letters, no numbers, no outlines."
+    },
+    {
+      "name": "badge_duel_perfect",
+      "prompt": "An archery target with an arrow exactly in the bullseye. Single centred emblem filling most of the frame, like a merit badge. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, plain navy background, no text, no letters, no numbers, no outlines."
+    },
+    {
+      "name": "badge_duel_near",
+      "prompt": "An archery target with an arrow just beside the bullseye. Single centred emblem filling most of the frame, like a merit badge. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, plain cream background, no text, no letters, no numbers, no outlines."
+    },
+    {
+      "name": "badge_duel_margin",
+      "prompt": "A great stylised ocean wave curling over a tiny sailing boat. Single centred emblem filling most of the frame, like a merit badge. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, plain navy background, no text, no letters, no numbers, no outlines."
+    },
+    {
+      "name": "badge_duel_tiebreak",
+      "prompt": "A perfectly balanced pair of brass scales with a single snowflake above. Single centred emblem filling most of the frame, like a merit badge. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, plain cream background, no text, no letters, no numbers, no outlines."
+    },
+    {
+      "name": "badge_duel_streak_5",
+      "prompt": "A round shield with five small stars arranged in an arc. Single centred emblem filling most of the frame, like a merit badge. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, plain navy background, no text, no letters, no numbers, no outlines."
+    },
+    {
+      "name": "badge_duel_streak_10",
+      "prompt": "A knight's helmet with a tall plume in front of a round shield with a lightning bolt. Single centred emblem filling most of the frame, like a merit badge. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, plain coral background, no text, no letters, no numbers, no outlines."
+    },
+    {
+      "name": "badge_duel_rival",
+      "prompt": "Two chess knights facing each other. Single centred emblem filling most of the frame, like a merit badge. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, plain saffron background, no text, no letters, no numbers, no outlines."
+    },
+    {
+      "name": "badge_follows_3",
+      "prompt": "A raised hand holding a lit oil lamp, three small stars around it. Single centred emblem filling most of the frame, like a merit badge. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, plain navy background, no text, no letters, no numbers, no outlines."
+    },
+    {
+      "name": "badge_likes_10",
+      "prompt": "A large heart with a small open book inside it. Single centred emblem filling most of the frame, like a merit badge. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, plain cream background, no text, no letters, no numbers, no outlines."
+    },
+    {
+      "name": "badge_friends_3",
+      "prompt": "Three different raised hands joined together in a circle. Single centred emblem filling most of the frame, like a merit badge. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, plain saffron background, no text, no letters, no numbers, no outlines."
+    },
+    {
+      "name": "badge_league_01_aesop",
+      "prompt": "Aesop, an ancient Greek storyteller with a short grey beard and a simple tunic, a small tortoise on his shoulder. Head-and-shoulders bust portrait, facing the viewer, cropped at the chest, centred. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red, cream, warm brown and tan, bold simple forms, subtle paper grain, plain cream background, no text, no outlines."
+    },
+    {
+      "name": "badge_league_02_homer",
+      "prompt": "Homer, an old blind ancient Greek poet with a long white beard, a laurel wreath and a lyre at his shoulder. Head-and-shoulders bust portrait, facing the viewer, cropped at the chest, centred. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red, cream, warm brown and tan, bold simple forms, subtle paper grain, plain navy background, no text, no outlines."
+    },
+    {
+      "name": "badge_league_03_sappho",
+      "prompt": "Sappho, an ancient Greek woman poet with dark curled hair tied with a ribbon, holding a small lyre. Head-and-shoulders bust portrait, facing the viewer, cropped at the chest, centred. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red, cream, warm brown and tan, bold simple forms, subtle paper grain, plain saffron background, no text, no outlines."
+    },
+    {
+      "name": "badge_league_04_confucius",
+      "prompt": "Confucius, an elderly Chinese philosopher with a long thin beard and moustache, a scholar's topknot cap and robe. Head-and-shoulders bust portrait, facing the viewer, cropped at the chest, centred. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red, cream, warm brown and tan, bold simple forms, subtle paper grain, plain cream background, no text, no outlines."
+    },
+    {
+      "name": "badge_league_05_socrates",
+      "prompt": "Socrates, a bald ancient Greek philosopher with a snub nose and a round beard, wearing a draped toga. Head-and-shoulders bust portrait, facing the viewer, cropped at the chest, centred. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red, cream, warm brown and tan, bold simple forms, subtle paper grain, plain navy background, no text, no outlines."
+    },
+    {
+      "name": "badge_league_06_cleopatra",
+      "prompt": "Cleopatra, an Egyptian queen with a black bob, a golden cobra diadem and a wide jewelled collar. Head-and-shoulders bust portrait, facing the viewer, cropped at the chest, centred. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red, cream, warm brown and tan, bold simple forms, subtle paper grain, plain saffron background, no text, no outlines."
+    },
+    {
+      "name": "badge_league_07_hypatia",
+      "prompt": "Hypatia, an Alexandrian woman mathematician with braided hair pinned up, a white draped robe, an astrolabe at her shoulder. Head-and-shoulders bust portrait, facing the viewer, cropped at the chest, centred. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red, cream, warm brown and tan, bold simple forms, subtle paper grain, plain cream background, no text, no outlines."
+    },
+    {
+      "name": "badge_league_08_avicenna",
+      "prompt": "Avicenna, a medieval Persian physician with a dark beard and a large white turban, holding a book. Head-and-shoulders bust portrait, facing the viewer, cropped at the chest, centred. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red, cream, warm brown and tan, bold simple forms, subtle paper grain, plain navy background, no text, no outlines."
+    },
+    {
+      "name": "badge_league_09_murasaki",
+      "prompt": "Murasaki Shikibu, a Heian-period Japanese court lady with very long straight black hair and layered robes, holding a writing brush. Head-and-shoulders bust portrait, facing the viewer, cropped at the chest, centred. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red, cream, warm brown and tan, bold simple forms, subtle paper grain, plain coral background, no text, no outlines."
+    },
+    {
+      "name": "badge_league_10_mansa_musa",
+      "prompt": "Mansa Musa, a medieval West African emperor with a golden crown and robes, holding a gold nugget. Head-and-shoulders bust portrait, facing the viewer, cropped at the chest, centred. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red, cream, warm brown and tan, bold simple forms, subtle paper grain, plain navy background, no text, no outlines."
+    },
+    {
+      "name": "badge_league_11_dante",
+      "prompt": "Dante, a medieval Italian poet in profile with a hooked nose, a red hood and cap crowned with a laurel wreath. Head-and-shoulders bust portrait, facing the viewer, cropped at the chest, centred. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red, cream, warm brown and tan, bold simple forms, subtle paper grain, plain cream background, no text, no outlines."
+    },
+    {
+      "name": "badge_league_12_joan_of_arc",
+      "prompt": "Joan of Arc, a young woman with a short bob haircut in steel plate armour, a banner pole at her shoulder. Head-and-shoulders bust portrait, facing the viewer, cropped at the chest, centred. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red, cream, warm brown and tan, bold simple forms, subtle paper grain, plain navy background, no text, no outlines."
+    },
+    {
+      "name": "badge_league_13_gutenberg",
+      "prompt": "Gutenberg, a fifteenth-century German printer with a long forked beard and a fur-trimmed cap, a metal type block in hand. Head-and-shoulders bust portrait, facing the viewer, cropped at the chest, centred. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red, cream, warm brown and tan, bold simple forms, subtle paper grain, plain saffron background, no text, no outlines."
+    },
+    {
+      "name": "badge_league_14_leonardo",
+      "prompt": "Leonardo da Vinci, an old Renaissance man with long flowing white hair and beard and a dark cap. Head-and-shoulders bust portrait, facing the viewer, cropped at the chest, centred. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red, cream, warm brown and tan, bold simple forms, subtle paper grain, plain cream background, no text, no outlines."
+    },
+    {
+      "name": "badge_league_15_michelangelo",
+      "prompt": "Michelangelo, a Renaissance sculptor with curly dark hair, a short forked beard and a broken nose, a chisel at his shoulder. Head-and-shoulders bust portrait, facing the viewer, cropped at the chest, centred. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red, cream, warm brown and tan, bold simple forms, subtle paper grain, plain navy background, no text, no outlines."
+    },
+    {
+      "name": "badge_league_16_copernicus",
+      "prompt": "Copernicus, a Renaissance astronomer with shoulder-length dark hair, a red fur-collared coat, a small sun model in hand. Head-and-shoulders bust portrait, facing the viewer, cropped at the chest, centred. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red, cream, warm brown and tan, bold simple forms, subtle paper grain, plain saffron background, no text, no outlines."
+    },
+    {
+      "name": "badge_league_17_shakespeare",
+      "prompt": "Shakespeare, an Elizabethan playwright with a high bald forehead, moustache and small beard, a wide white collar and an earring. Head-and-shoulders bust portrait, facing the viewer, cropped at the chest, centred. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red, cream, warm brown and tan, bold simple forms, subtle paper grain, plain cream background, no text, no outlines."
+    },
+    {
+      "name": "badge_league_18_galileo",
+      "prompt": "Galileo, an old Italian astronomer with a long grey beard and a dark doublet, a brass telescope at his shoulder. Head-and-shoulders bust portrait, facing the viewer, cropped at the chest, centred. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red, cream, warm brown and tan, bold simple forms, subtle paper grain, plain navy background, no text, no outlines."
+    },
+    {
+      "name": "badge_league_19_vermeer",
+      "prompt": "Vermeer's Girl with a Pearl Earring style figure: a young woman glancing over her shoulder with a blue and yellow turban and a large pearl earring. Head-and-shoulders bust portrait, facing the viewer, cropped at the chest, centred. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red, cream, warm brown and tan, bold simple forms, subtle paper grain, plain navy background, no text, no outlines."
+    },
+    {
+      "name": "badge_league_20_newton",
+      "prompt": "Isaac Newton, a seventeenth-century English scientist with long curly grey hair, a red apple beside his shoulder. Head-and-shoulders bust portrait, facing the viewer, cropped at the chest, centred. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red, cream, warm brown and tan, bold simple forms, subtle paper grain, plain cream background, no text, no outlines."
+    },
+    {
+      "name": "badge_league_21_mozart",
+      "prompt": "Mozart, an eighteenth-century composer with a white powdered wig tied with a black bow and a red embroidered coat. Head-and-shoulders bust portrait, facing the viewer, cropped at the chest, centred. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red, cream, warm brown and tan, bold simple forms, subtle paper grain, plain saffron background, no text, no outlines."
+    },
+    {
+      "name": "badge_league_22_napoleon",
+      "prompt": "Napoleon, a French emperor with a black bicorne hat, a dark blue uniform with epaulettes. Head-and-shoulders bust portrait, facing the viewer, cropped at the chest, centred. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red, cream, warm brown and tan, bold simple forms, subtle paper grain, plain cream background, no text, no outlines."
+    },
+    {
+      "name": "badge_league_23_austen",
+      "prompt": "Jane Austen, a Regency-era English novelist with brown curls under a white bonnet cap and a high-waisted dress. Head-and-shoulders bust portrait, facing the viewer, cropped at the chest, centred. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red, cream, warm brown and tan, bold simple forms, subtle paper grain, plain coral background, no text, no outlines."
+    },
+    {
+      "name": "badge_league_24_darwin",
+      "prompt": "Charles Darwin, an elderly Victorian naturalist with a bald head, bushy eyebrows and a very long white beard, a finch on his shoulder. Head-and-shoulders bust portrait, facing the viewer, cropped at the chest, centred. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red, cream, warm brown and tan, bold simple forms, subtle paper grain, plain navy background, no text, no outlines."
+    },
+    {
+      "name": "badge_league_25_lovelace",
+      "prompt": "Ada Lovelace, a Victorian woman mathematician with dark hair parted in the middle and looped braids, an off-shoulder gown, small gears beside her. Head-and-shoulders bust portrait, facing the viewer, cropped at the chest, centred. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red, cream, warm brown and tan, bold simple forms, subtle paper grain, plain saffron background, no text, no outlines."
+    },
+    {
+      "name": "badge_league_26_van_gogh",
+      "prompt": "Vincent van Gogh, a Dutch painter with a red beard and a straw hat, swirling brush strokes behind him. Head-and-shoulders bust portrait, facing the viewer, cropped at the chest, centred. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red, cream, warm brown and tan, bold simple forms, subtle paper grain, plain navy background, no text, no outlines."
+    },
+    {
+      "name": "badge_league_27_curie",
+      "prompt": "Marie Curie, a physicist with wavy grey hair in a loose bun and a plain black dress, a softly glowing flask in hand. Head-and-shoulders bust portrait, facing the viewer, cropped at the chest, centred. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red, cream, warm brown and tan, bold simple forms, subtle paper grain, plain cream background, no text, no outlines."
+    },
+    {
+      "name": "badge_league_28_einstein",
+      "prompt": "Albert Einstein, an elderly physicist with wild white hair and a bushy moustache, a wool sweater. Head-and-shoulders bust portrait, facing the viewer, cropped at the chest, centred. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red, cream, warm brown and tan, bold simple forms, subtle paper grain, plain saffron background, no text, no outlines."
+    },
+    {
+      "name": "badge_league_29_kahlo",
+      "prompt": "Frida Kahlo, a Mexican painter with joined eyebrows, braided hair crowned with flowers and large earrings. Head-and-shoulders bust portrait, facing the viewer, cropped at the chest, centred. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red, cream, warm brown and tan, bold simple forms, subtle paper grain, plain coral background, no text, no outlines."
+    },
+    {
+      "name": "badge_league_30_sophia",
+      "prompt": "An allegory of wisdom: a serene woman with a golden laurel crown and a small owl on her shoulder, stars behind her. Head-and-shoulders bust portrait, facing the viewer, cropped at the chest, centred. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red, cream, warm brown and tan, bold simple forms, subtle paper grain, plain navy background, no text, no outlines."
+    }
+  ]
+}
