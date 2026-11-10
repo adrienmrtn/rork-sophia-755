@@ -7,6 +7,7 @@ import app.rork.sophia.audio.CourseAudioPlayer
 import app.rork.sophia.data.AuthService
 import app.rork.sophia.data.ContentCatalog
 import app.rork.sophia.data.DiscountOfferManager
+import app.rork.sophia.data.DuelService
 import app.rork.sophia.data.StringStore
 import app.rork.sophia.data.CourseCoverUrls
 import app.rork.sophia.data.LanguageManager
@@ -41,6 +42,8 @@ class SophiaApplication : Application(), ImageLoaderFactory {
         private set
     lateinit var socialService: SocialService
         private set
+    lateinit var duelService: DuelService
+        private set
     lateinit var discountManager: DiscountOfferManager
         private set
     lateinit var tutorialFlags: TutorialFlags
@@ -58,6 +61,7 @@ class SophiaApplication : Application(), ImageLoaderFactory {
         progressSyncService = ProgressSyncService(authService)
         progressSyncService.attach(progressManager)
         socialService = SocialService(authService)
+        duelService = DuelService(this, authService)
         progressManager.onGlobalXPAwarded = { amount ->
             appScope.launch { socialService.logXPEvent(amount, "progress") }
         }

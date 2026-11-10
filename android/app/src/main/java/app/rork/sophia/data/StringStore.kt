@@ -11,6 +11,7 @@ object StringStore {
     private val json = Json { ignoreUnknownKeys = true }
     private val cache = ConcurrentHashMap<String, Map<String, String>>()
     private val pluralRules = ConcurrentHashMap<String, PluralRules>()
+    private val IOS_STRING_ARGUMENT = Regex("""%(\d+\$)?@""")
 
     /**
      * Looks up [key] in the user's language, falling back to English, and formats it.
@@ -28,7 +29,8 @@ object StringStore {
         val template = primary[resolvedKey] ?: english[resolvedKey] ?: primary[key] ?: english[key] ?: key
         return if (formatArgs.isEmpty()) template else {
             try {
-                val javaTemplate = template.replace("%@", "%s")
+                // iOS writes a string argument `%@`, or `%1$@` when the order is fixed: both become `%s`.
+                val javaTemplate = template.replace(IOS_STRING_ARGUMENT) { "%${it.groupValues[1]}s" }
                 // Formatted in the app's own locale: on an Arabic phone the default locale
                 // rendered every count in Arabic-Indic digits, including for a French reader.
                 String.format(language.locale, javaTemplate, *formatArgs)

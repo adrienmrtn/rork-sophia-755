@@ -34,7 +34,8 @@ class AppLanguageTest {
         assertEquals(AppLanguage.FRENCH, device("fr-FR"))
         assertEquals(AppLanguage.NORWEGIAN, device("nn-NO"))
         assertEquals(AppLanguage.CROATIAN, device("bs-BA"))
-        assertNull(device("ja-JP"))
+        // Une langue que l'app ne propose pas (le japonais, lui, est proposé depuis).
+        assertNull(device("ko-KR"))
     }
 
     @Test

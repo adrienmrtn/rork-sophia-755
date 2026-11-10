@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Autorenew
+import androidx.compose.material.icons.filled.EmojiEvents
 import androidx.compose.material.icons.filled.Explore
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Person
@@ -46,6 +47,8 @@ import app.rork.sophia.domain.Subject
 import app.rork.sophia.domain.UserProgress
 import app.rork.sophia.ui.audio.AudioMiniPlayer
 import app.rork.sophia.ui.components.softPress
+import app.rork.sophia.ui.duels.DUELS_TAB_INDEX
+import app.rork.sophia.ui.duels.DuelsTabHost
 import app.rork.sophia.ui.path.LearningPathScreen
 import app.rork.sophia.ui.profile.ProfileScreen
 import app.rork.sophia.ui.theme.DS
@@ -54,8 +57,15 @@ import app.rork.sophia.ui.training.TrainingScreen
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
-/** Les 4 onglets de la maquette : Accueil, Explorer, Apprendre, Profil. */
-const val NEWGEN_TAB_COUNT = 5
+/**
+ * Le nombre d'index d'onglet (0 à 5), donc de piles d'écrans tenues par `MainTabs` : Accueil,
+ * Explorer, Parcours, Entraînement, Profil (4) et Duels ([DUELS_TAB_INDEX] = 5, affiché avant
+ * le Profil quand l'app est en anglais ; sa pile existe mais reste vide, il ne pousse rien).
+ */
+const val NEWGEN_TAB_COUNT = 6
+
+/** L'index de l'onglet Profil, le dernier de la barre. */
+private const val PROFILE_TAB_INDEX = 4
 
 /**
  * Les écrans qu'un onglet peut pousser. Les cours sont désignés par leur id, comme sur iOS :
@@ -86,7 +96,8 @@ private val TABLET_CONTENT_WIDTH = 640.dp
 /**
  * La navigation « nouvelle génération » : la barre de 5 onglets (Accueil, Explorer, Parcours,
  * Entraînement, Profil ; Parcours et Entraînement sont les écrans classiques, gardés pour ne pas
- * perdre les anciens lecteurs), l'écran racine de l'onglet,
+ * perdre les anciens lecteurs), 6 avec Duels entre Entraînement et Profil quand [showsDuels]
+ * (l'app est en anglais), l'écran racine de l'onglet,
  * et par-dessus l'écran poussé en tête de sa pile ([routeStacks], une par onglet, tenue par
  * `MainTabs` qui gère aussi le retour système). Le lecteur, les paywalls et les overlays
  * restent présentés par `MainTabs` au-dessus de tout ; [onOpenCourse] est la seule porte vers
@@ -102,8 +113,16 @@ fun NewGenTabs(
     selectedTab: Int,
     onSelectTab: (Int) -> Unit,
     routeStacks: List<SnapshotStateList<NewGenRoute>>,
-    /** Le Parcours ne rejoue ses changements que lorsque rien n'est dessiné par-dessus. */
+    /**
+     * Un écran est dessiné par-dessus les onglets : le Parcours ne rejoue ses changements
+     * qu'une fois découvert, et l'onglet Duels ne se recharge pas tant qu'il est recouvert.
+     */
     pathCovered: Boolean,
+    /** L'onglet Duels est affiché (décidé une fois par `MainTabs`, à la première composition). */
+    showsDuels: Boolean,
+    /** Une partie de duel est à l'écran par-dessus les onglets (présentée par `MainTabs`). */
+    duelFlowShown: Boolean,
+    onPlayDuel: () -> Unit,
     onOpenCourse: (CourseSummary, String) -> Unit,
     onOpenCourseById: (String, String) -> Unit,
     onOpenSettings: () -> Unit,
@@ -123,16 +142,24 @@ fun NewGenTabs(
         }
     }
 
-    val tabs = remember {
-        listOf(
-            Triple("tab.home", Icons.Filled.Home, 0),
-            Triple("tab.explore", Icons.Filled.Explore, 1),
-            Triple("tab.path", Icons.Filled.Route, 2),
-            Triple("tab.training", Icons.Filled.Autorenew, 3),
-            Triple("tab.profile", Icons.Filled.Person, 4),
-        )
+    val tabs = remember(showsDuels) {
+        buildList {
+            add(Triple("tab.home", Icons.Filled.Home, 0))
+            add(Triple("tab.explore", Icons.Filled.Explore, 1))
+            add(Triple("tab.path", Icons.Filled.Route, 2))
+            add(Triple("tab.training", Icons.Filled.Autorenew, 3))
+            // Dessiné avant le Profil mais avec son propre index (5, comme sur iOS) : les
+            // onglets existants gardent leurs numéros.
+            if (showsDuels) add(Triple("tab.duels", Icons.Filled.EmojiEvents, DUELS_TAB_INDEX))
+            add(Triple("tab.profile", Icons.Filled.Person, PROFILE_TAB_INDEX))
+        }
     }
+    // Six onglets sur un téléphone de 360 dp : environ 53 dp par libellé. En 10 sp (la taille
+    // de la barre à six onglets d'iOS) « Practice » tient sans être coupé.
+    val tabLabelSize = if (tabs.size > 5) 10.sp else 11.sp
+    // Un index inconnu, ou celui des Duels quand l'onglet n'est pas affiché, retombe sur le Profil.
     val tabIndex = selectedTab.coerceIn(0, NEWGEN_TAB_COUNT - 1)
+        .let { if (it == DUELS_TAB_INDEX && !showsDuels) PROFILE_TAB_INDEX else it }
     val stack = routeStacks[tabIndex]
     fun push(route: NewGenRoute) {
         stack.add(route)
@@ -157,7 +184,7 @@ fun NewGenTabs(
                                 Text(
                                     text = StringStore.text(context, key, language),
                                     fontFamily = PlusJakartaSans,
-                                    fontSize = 11.sp,
+                                    fontSize = tabLabelSize,
                                     fontWeight = if (tabIndex == index) FontWeight.SemiBold else FontWeight.Normal,
                                     maxLines = 1,
                                     softWrap = false,
@@ -222,6 +249,8 @@ fun NewGenTabs(
                     storeViewModel = storeViewModel,
                     onPremiumUnlocked = { storeViewModel.refresh() },
                 )
+                // Dessiné plus bas, hors du `when`, pour rester monté quand on change d'onglet.
+                DUELS_TAB_INDEX -> Unit
                 else -> ProfileV2Screen(
                     modifier = tabModifier,
                     language = language,
@@ -237,6 +266,18 @@ fun NewGenTabs(
                     onDiscoverCreators = { onSelectTab(1) },
                     onBecomeCreator = onBecomeCreator,
                     onOpenSettings = onOpenSettings,
+                )
+            }
+
+            if (showsDuels) {
+                DuelsTabHost(
+                    language = language,
+                    selected = tabIndex == DUELS_TAB_INDEX,
+                    // Un paywall ou le lecteur audio par-dessus : l'onglet n'est plus à l'écran.
+                    covered = pathCovered,
+                    flowShown = duelFlowShown,
+                    onPlay = onPlayDuel,
+                    modifier = tabModifier,
                 )
             }
 
