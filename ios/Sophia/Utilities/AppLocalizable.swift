@@ -1133,6 +1133,7 @@ enum AppLocalizable {
         "friends.error.invalidHandle": "Ce @ n'est pas valide.",
         "friends.error.handleTaken": "Ce @ est déjà pris.",
         "friends.error.handleNotAllowed": "Ce @ n'est pas autorisé. Choisis-en un autre.",
+        "friends.lastSeen": "Vu %@",
         "friends.error.userNotFound": "Aucun utilisateur avec ce @.",
         "friends.error.cannotAddSelf": "Tu ne peux pas t'ajouter toi-même.",
         "friends.error.notFriends": "Vous n'êtes pas amis.",
@@ -2742,6 +2743,7 @@ enum AppLocalizable {
         "duel.round.pick.theirChoice": "@%@'s pick",
         "duel.round.sprint.title": "Final sprint",
         "duel.round.sprint.body": "Short timers: answer fast!",
+        "friends.lastSeen": "Last seen %@",
     ]
     // MARK: - Spanish
 
@@ -4052,6 +4054,7 @@ enum AppLocalizable {
         "duel.round.pick.theirChoice": "Elección de @%@",
         "duel.round.sprint.title": "Sprint final",
         "duel.round.sprint.body": "Poco tiempo: ¡responde rápido!",
+        "friends.lastSeen": "Última conexión %@",
     ]
     // MARK: - German
 
@@ -5362,6 +5365,7 @@ enum AppLocalizable {
         "duel.round.pick.theirChoice": "Wahl von @%@",
         "duel.round.sprint.title": "Endspurt",
         "duel.round.sprint.body": "Wenig Zeit: Antworte schnell!",
+        "friends.lastSeen": "Zuletzt online %@",
     ]
     // MARK: - Portuguese (Brazil)
 
@@ -6672,6 +6676,7 @@ enum AppLocalizable {
         "duel.round.pick.theirChoice": "Escolha de @%@",
         "duel.round.sprint.title": "Sprint final",
         "duel.round.sprint.body": "Pouco tempo: responda rápido!",
+        "friends.lastSeen": "Visto por último %@",
     ]
 
     // MARK: - Portuguese (Portugal)
@@ -7983,6 +7988,7 @@ enum AppLocalizable {
         "duel.round.pick.theirChoice": "Escolha de @%@",
         "duel.round.sprint.title": "Sprint final",
         "duel.round.sprint.body": "Pouco tempo: responde depressa!",
+        "friends.lastSeen": "Visto pela última vez %@",
     ]
     // MARK: - Italian
 
@@ -9293,6 +9299,7 @@ enum AppLocalizable {
         "duel.round.pick.theirChoice": "La scelta di @%@",
         "duel.round.sprint.title": "Sprint finale",
         "duel.round.sprint.body": "Poco tempo: rispondi in fretta!",
+        "friends.lastSeen": "Ultimo accesso %@",
     ]
     // MARK: - Turkish
 
@@ -10603,6 +10610,7 @@ enum AppLocalizable {
         "duel.round.pick.theirChoice": "@%@ seçti:",
         "duel.round.sprint.title": "Final sprinti",
         "duel.round.sprint.body": "Süre kısa: hızlı cevap ver!",
+        "friends.lastSeen": "Son görülme: %@",
     ]
     // MARK: - Polish
 
@@ -11914,6 +11922,7 @@ enum AppLocalizable {
         "duel.round.pick.theirChoice": "@%@ wybiera:",
         "duel.round.sprint.title": "Finałowy sprint",
         "duel.round.sprint.body": "Mało czasu: odpowiadaj szybko!",
+        "friends.lastSeen": "Ostatnio online %@",
     ]
     // MARK: - Romanian
 
@@ -13225,6 +13234,7 @@ enum AppLocalizable {
         "duel.round.pick.theirChoice": "Alegerea lui @%@",
         "duel.round.sprint.title": "Sprint final",
         "duel.round.sprint.body": "Timp scurt: răspunde repede!",
+        "friends.lastSeen": "Ultima dată online %@",
     ]
     // MARK: - Dutch
 
@@ -14535,6 +14545,7 @@ enum AppLocalizable {
         "duel.round.pick.theirChoice": "Keuze van @%@",
         "duel.round.sprint.title": "Eindsprint",
         "duel.round.sprint.body": "Weinig tijd: antwoord snel!",
+        "friends.lastSeen": "Laatst gezien %@",
     ]
     // MARK: - Greek
 
@@ -15845,6 +15856,7 @@ enum AppLocalizable {
         "duel.round.pick.theirChoice": "@%@ διάλεξε:",
         "duel.round.sprint.title": "Τελικό σπριντ",
         "duel.round.sprint.body": "Λίγος χρόνος: απάντα γρήγορα!",
+        "friends.lastSeen": "Τελευταία σύνδεση %@",
     ]
     // MARK: - Swedish
 
@@ -17155,6 +17167,7 @@ enum AppLocalizable {
         "duel.round.pick.theirChoice": "Valt av @%@",
         "duel.round.sprint.title": "Slutspurt",
         "duel.round.sprint.body": "Kort om tid: svara snabbt!",
+        "friends.lastSeen": "Senast sedd %@",
     ]
     // MARK: - Hungarian
 
@@ -18465,6 +18478,7 @@ enum AppLocalizable {
         "duel.round.pick.theirChoice": "@%@ választása",
         "duel.round.sprint.title": "Végső hajrá",
         "duel.round.sprint.body": "Kevés az idő: válaszolj gyorsan!",
+        "friends.lastSeen": "Utoljára online: %@",
     ]
     // MARK: - Bulgarian
 
@@ -19775,6 +19789,7 @@ enum AppLocalizable {
         "duel.round.pick.theirChoice": "Изборът на @%@",
         "duel.round.sprint.title": "Финален спринт",
         "duel.round.sprint.body": "Малко време: отговаряй бързо!",
+        "friends.lastSeen": "Последно онлайн %@",
     ]
     // MARK: - Czech
 
@@ -21086,6 +21101,7 @@ enum AppLocalizable {
         "duel.round.pick.theirChoice": "@%@ vybírá:",
         "duel.round.sprint.title": "Závěrečný sprint",
         "duel.round.sprint.body": "Málo času: odpovídej rychle!",
+        "friends.lastSeen": "Naposledy online %@",
     ]
 
     // MARK: - Danish
@@ -22397,6 +22413,7 @@ enum AppLocalizable {
         "duel.round.pick.theirChoice": "Valgt af @%@",
         "duel.round.sprint.title": "Slutspurt",
         "duel.round.sprint.body": "Kort tid: Svar hurtigt!",
+        "friends.lastSeen": "Sidst set %@",
     ]
 
     // MARK: - Norwegian
@@ -23708,6 +23725,7 @@ enum AppLocalizable {
         "duel.round.pick.theirChoice": "Valgt av @%@",
         "duel.round.sprint.title": "Sluttspurt",
         "duel.round.sprint.body": "Kort tid: Svar raskt!",
+        "friends.lastSeen": "Sist sett %@",
     ]
 
     // MARK: - Russian
@@ -25020,6 +25038,7 @@ enum AppLocalizable {
         "duel.round.pick.theirChoice": "@%@ выбирает:",
         "duel.round.sprint.title": "Финальный спринт",
         "duel.round.sprint.body": "Времени мало: отвечай быстро!",
+        "friends.lastSeen": "Был(а) в сети %@",
     ]
 
     // MARK: - Croatian
@@ -26332,6 +26351,7 @@ enum AppLocalizable {
         "duel.round.pick.theirChoice": "@%@ bira:",
         "duel.round.sprint.title": "Završni sprint",
         "duel.round.sprint.body": "Malo vremena: odgovaraj brzo!",
+        "friends.lastSeen": "Zadnji put online %@",
     ]
 
     // MARK: - Slovenian
@@ -27645,6 +27665,7 @@ enum AppLocalizable {
         "duel.round.pick.theirChoice": "@%@ izbira:",
         "duel.round.sprint.title": "Zaključni sprint",
         "duel.round.sprint.body": "Malo časa: odgovarjaj hitro!",
+        "friends.lastSeen": "Nazadnje online %@",
     ]
 
     // MARK: - Slovak
@@ -28957,6 +28978,7 @@ enum AppLocalizable {
         "duel.round.pick.theirChoice": "@%@ vyberá:",
         "duel.round.sprint.title": "Záverečný šprint",
         "duel.round.sprint.body": "Málo času: odpovedaj rýchlo!",
+        "friends.lastSeen": "Naposledy online %@",
     ]
 
     // MARK: - Serbian
@@ -30269,6 +30291,7 @@ enum AppLocalizable {
         "duel.round.pick.theirChoice": "@%@ bira:",
         "duel.round.sprint.title": "Završni sprint",
         "duel.round.sprint.body": "Malo vremena: odgovaraj brzo!",
+        "friends.lastSeen": "Poslednji put onlajn %@",
     ]
 
     // MARK: - Arabic
@@ -31582,6 +31605,7 @@ enum AppLocalizable {
         "duel.round.pick.theirChoice": "اختيار @%@",
         "duel.round.sprint.title": "جولة السرعة الأخيرة",
         "duel.round.sprint.body": "الوقت قصير: أجب بسرعة!",
+        "friends.lastSeen": "آخر ظهور %@",
     ]
 
     // MARK: - Hebrew
@@ -32894,6 +32918,7 @@ enum AppLocalizable {
         "duel.round.pick.theirChoice": "הבחירה של @%@",
         "duel.round.sprint.title": "ספרינט סיום",
         "duel.round.sprint.body": "הזמן קצר: ענה מהר!",
+        "friends.lastSeen": "נראה לאחרונה %@",
     ]
 
     // MARK: - Finnish
@@ -34205,6 +34230,7 @@ enum AppLocalizable {
         "duel.round.pick.theirChoice": "@%@ valitsi:",
         "duel.round.sprint.title": "Loppukiri",
         "duel.round.sprint.body": "Aikaa on vähän: vastaa nopeasti!",
+        "friends.lastSeen": "Viimeksi paikalla %@",
     ]
 
     // MARK: - Estonian
@@ -35516,6 +35542,7 @@ enum AppLocalizable {
         "duel.round.pick.theirChoice": "@%@ valis:",
         "duel.round.sprint.title": "Lõpuspurt",
         "duel.round.sprint.body": "Aega on vähe: vasta kiiresti!",
+        "friends.lastSeen": "Viimati nähtud %@",
     ]
 
     // MARK: - lithuanian (copie du français, à post-éditer)
@@ -36827,6 +36854,7 @@ enum AppLocalizable {
         "duel.round.pick.theirChoice": "@%@ pasirinko:",
         "duel.round.sprint.title": "Finišo spurtas",
         "duel.round.sprint.body": "Laiko mažai: atsakyk greitai!",
+        "friends.lastSeen": "Paskutinį kartą prisijungė %@",
     ]
 
     // MARK: - latvian (copie du français, à post-éditer)
@@ -38139,6 +38167,7 @@ enum AppLocalizable {
         "duel.round.pick.theirChoice": "@%@ izvēlējās:",
         "duel.round.sprint.title": "Finiša spurts",
         "duel.round.sprint.body": "Laika maz: atbildi ātri!",
+        "friends.lastSeen": "Pēdējoreiz tiešsaistē %@",
     ]
 
     // MARK: - japanese (copie du français, à post-éditer)
@@ -39449,5 +39478,6 @@ enum AppLocalizable {
         "duel.round.pick.theirChoice": "@%@が選んだ科目",
         "duel.round.sprint.title": "ラストスパート",
         "duel.round.sprint.body": "制限時間が短くなります。すばやく答えましょう！",
+        "friends.lastSeen": "最終オンライン：%@",
     ]
 }

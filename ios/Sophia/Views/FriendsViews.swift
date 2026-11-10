@@ -343,6 +343,14 @@ struct FriendProfileView: View {
                     Text(String(format: languageManager.text("common.levelShort"), progress.level))
                         .font(DS.sans(.subheadline, .medium))
                         .foregroundStyle(DS.inkSecondary)
+
+                    if let presence = presenceText(profile) {
+                        Text(presence)
+                            .font(DS.sans(.footnote, .medium))
+                            .foregroundStyle(profile.online ? DS.success : DS.inkTertiary)
+                            .lineLimit(1)
+                            .minimumScaleFactor(0.8)
+                    }
                 }
                 Spacer(minLength: 0)
             }
@@ -363,6 +371,19 @@ struct FriendProfileView: View {
         }
         .dsCard()
         .padding(.horizontal, 20)
+    }
+
+    /// « En ligne », ou « Vu il y a 5 minutes » : la durée est écrite par le système dans la
+    /// langue de l'app. Rien quand le serveur ne sait pas (ami jamais vu, ancienne base).
+    private func presenceText(_ profile: FriendProfile) -> String? {
+        if profile.online { return languageManager.text("duel.friend.online") }
+        guard let seconds = profile.lastSeenSeconds else { return nil }
+        let formatter = RelativeDateTimeFormatter()
+        formatter.locale = languageManager.locale
+        formatter.unitsStyle = .full
+        // Sous la minute, « il y a 1 minute » plutôt qu'un compte de secondes.
+        let ago = formatter.localizedString(fromTimeInterval: -Double(max(seconds, 60)))
+        return String(format: languageManager.text("friends.lastSeen"), ago)
     }
 
     /// « Défier en duel » : un duel amical, sans trophées en jeu. L'ami a 15 secondes pour
