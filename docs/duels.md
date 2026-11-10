@@ -18,7 +18,7 @@ le dit, et le niveau de difficulté du joueur n'est jamais affiché.
   à distance égale).
 - **Égalité après 20 questions** : une 21e question au curseur, en mort subite. Le plus proche
   gagne ; à distance égale, le plus rapide.
-- **Quitter en pleine partie** (bouton, ou app fermée) compte comme une défaite et coûte toujours
+- **Quitter en pleine partie** (bouton, app fermée, ou app laissée à l'arrière-plan plus de 15 secondes en duel classé) compte comme une défaite et coûte toujours
   20 trophées, même dans les premières ligues (jamais sous 0), sans faire redescendre de ligue.
 - **Trophées**, façon Clash Royale : +25 à +35 pour une victoire, −15 à −25 pour une défaite,
   selon l'écart de trophées avec l'adversaire. Aucune perte avant la 5e ligue (400 trophées), et
