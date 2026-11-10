@@ -13,7 +13,7 @@ import { CAMPAIGN_KINDS, CAMPAIGN_STATUSES, CAMPAIGN_SYMBOLS, EDITED_LANGS, TEXT
 import { shortDateTime } from "@/lib/studio/data";
 import { coversConfigured } from "@/lib/studio/covers";
 import { translationConfigured } from "@/lib/studio/translate";
-import { chooseEventImage, deleteCampaign, generateEventImage, saveCampaign, translateCampaignAction } from "../actions";
+import { chooseEventImage, deleteCampaign, saveCampaign, translateCampaignAction } from "../actions";
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 120;
@@ -104,13 +104,6 @@ export default async function EventEditorPage({ params, searchParams }: PageProp
           </Card>
         )}
 
-        {isNew && (
-          <Card className="flex flex-wrap items-center gap-4 p-5">
-            <strong className="text-[14px] font-extrabold text-ink">Images and preview</strong>
-            <span className="text-[13px] text-ink-3">Fill the form and press <strong>Create the event</strong>: the next page shows the feed card preview and the <strong>Generate 2 images with AI</strong> button (the images are drawn from the saved title and tagline).</span>
-          </Card>
-        )}
-
         {!isNew && (
           <Card className="flex flex-wrap items-start gap-8 p-6">
             <div className="flex flex-col gap-3">
@@ -119,13 +112,7 @@ export default async function EventEditorPage({ params, searchParams }: PageProp
             </div>
             <div className="flex min-w-[260px] flex-1 flex-col gap-3 text-[13px] leading-[1.5] text-ink-3">
               <p>What readers see in “For you”, in English, with the saved texts and image. In the apps the symbol is an icon, the challenge bar belongs to each reader, and the common goal counts every reader.</p>
-              <form action={generateEventImage} className="flex flex-wrap items-center gap-3">
-                <input type="hidden" name="slug" value={campaign.slug} />
-                <button type="submit" disabled={!coversConfigured()} className={buttonClass("secondary", "h-10 px-4 disabled:opacity-50")}>
-                  Generate 2 images with AI
-                </button>
-                <span className="text-[12px] text-muted">{coversConfigured() ? "One in the art direction of course covers, one in the paper-cut style of the website. 16:9, from the title and tagline. Takes about 30 seconds." : "Not configured on the server (FAL_KEY)."}</span>
-              </form>
+              <p className="text-[12px] text-muted">Upload an image or generate two with AI from the <strong>Image</strong> card below; the generated candidates appear here, pick one.</p>
               {campaign.image_candidates.length > 0 && (
                 <div className="flex flex-col gap-2 pt-2">
                   <strong className="text-[13px] font-extrabold text-ink">Generated images</strong>
@@ -254,7 +241,22 @@ export default async function EventEditorPage({ params, searchParams }: PageProp
                     <input type="checkbox" name="remove_image" className="h-4 w-4 accent-navy" /> Remove the current image
                   </label>
                 )}
-                <p className="text-[12px] text-muted">Saved with the event.{isNew ? "" : " Or generate one with AI from the preview card above."}</p>
+                <p className="text-[12px] text-muted">Saved with the event.</p>
+                <div className="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[1px] text-muted">
+                  <span className="h-px flex-1 bg-line" />
+                  or
+                  <span className="h-px flex-1 bg-line" />
+                </div>
+                <div className="flex flex-col gap-2">
+                  <button type="submit" name="intent" value="generate" disabled={!coversConfigured()} className={buttonClass("secondary", "h-10 w-fit px-4 disabled:opacity-50")}>
+                    Generate 2 images with AI
+                  </button>
+                  <span className="text-[12px] text-muted">
+                    {coversConfigured()
+                      ? `${isNew ? "Creates the event" : "Saves the event"}, then draws two 16:9 images from the English title and tagline: one in the art direction of course covers, one in the paper-cut style of the website. About 30 seconds. Then pick one in the preview card${isNew ? " of the next page" : " above"}.`
+                      : "Not configured on the server (FAL_KEY)."}
+                  </span>
+                </div>
               </div>
             </div>
           </Card>

@@ -14,7 +14,7 @@ export type Credit = { title?: string; author?: string; license?: string; source
 export type Block =
   | { type: "paragraph"; text: string }
   | { type: "heading"; text: string }
-  | { type: "image"; asset?: string; image_url?: string; caption?: string; credit?: Credit; fullBleed?: boolean }
+  | { type: "image"; asset?: string; image_url?: string; caption?: string; credit?: Credit; fullBleed?: boolean; ratio?: string }
   | { type: "timeline"; events: { date: string; title: string; detail?: string }[] }
   | { type: "funFact"; text: string }
   | { type: "takeaway"; text: string }
