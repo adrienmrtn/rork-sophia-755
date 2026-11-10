@@ -87,10 +87,10 @@ découpage bloc par bloc est donc faisable sans réécrire une ligne de contenu.
 
 1. **Un seul fil vertical par cours.** Les 5 sections ne sont plus 5 pages : ce sont des chapitres
    dans le fil, chacun ouvert par un marqueur (« Partie 2 sur 4 » puis le titre de la section).
-2. **L'unité de révélation est le bloc** : un paragraphe, une frise, une citation, un savais-tu,
-   un à-retenir. Une image s'affiche avec le paragraphe qui la suit (jamais seule, il n'y aurait
-   rien à lire) ; si elle ferme une section, avec le paragraphe qui la précède. Un `heading`
-   s'affiche avec le bloc qui le suit.
+2. **L'unité de révélation est le bloc** : un paragraphe, une image, une frise, une citation, un
+   savais-tu, un à-retenir. Une image est un passage à part entière (deuxième relecture du
+   10/11 : elle n'est plus groupée avec le paragraphe voisin). Un `heading` s'affiche avec le
+   bloc qui le suit.
 3. **« Continuer » fixe en bas**, posé sur un fondu du fond. Quand le dernier bloc est révélé, il
    devient « Terminer » et enchaîne sur l'écran de fin existant (XP, quiz, série).
 4. **Rien ne change dans les JSON** : contenu, quiz, glossaire, auteurs, sources, images.
@@ -101,11 +101,12 @@ découpage bloc par bloc est donc faisable sans réécrire une ligne de contenu.
   (le ressort du savais-tu, `response 0.42, dampingFraction 0.8`). Les images y ajoutent une
   montée d'échelle de 0,97 à 1.
 - Frise : les événements apparaissent en cascade, 90 ms d'écart.
-- Défilement automatique : le haut du nouveau bloc se pose à 20 % de la hauteur du lecteur
-  (16 % pour un marqueur de chapitre). Si le bloc est plus haut que les deux tiers de l'écran,
-  son haut s'aligne à 20 pt du bord. Jamais de défilement automatique quand on remonte lire.
-- À l'ouverture, le hero et le premier paragraphe sont déjà là, sans animation : on arrive sur
-  quelque chose à lire, pas sur un bouton.
+- Défilement automatique : le haut du nouveau bloc se pose à 8 % de la hauteur du lecteur,
+  quelle que soit la hauteur du bloc (la cible est un repère sans hauteur au sommet du bloc) ; de
+  la place est gardée sous le dernier bloc pour qu'il puisse toujours monter jusque-là. Jamais de
+  défilement automatique quand on remonte lire.
+- À l'ouverture, seul l'en-tête est là (hero, titre, accroche), sans animation ; le premier tap
+  révèle le premier paragraphe.
 - Réglage système « Réduire les animations » : pas de translation, défilement instantané.
 
 ### Haptique

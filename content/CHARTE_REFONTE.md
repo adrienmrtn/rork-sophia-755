@@ -26,8 +26,8 @@ Objectif : des cours **courts, vivants, séduisants**, à l'opposé du texte « 
 ### Navigation & lecture
 - **Deux modes de lecture sur iOS** (depuis le 10/11/2026, `CourseReadingMode`, docs/lecture-pas-a-pas.md) :
   **pas à pas** par défaut (un seul fil vertical, chaque bloc apparaît au tap sur « Continuer »,
-  ressort, défilement automatique, retour haptique ; une image s'affiche avec le paragraphe voisin,
-  le titre de section ouvre un chapitre) et **par pages** (le lecteur historique décrit ci-dessous).
+  ressort, défilement automatique, retour haptique ; une image est un passage à part entière, le
+  titre de section ouvre un chapitre) et **par pages** (le lecteur historique décrit ci-dessous).
   Le choix se fait dans l'en-tête du lecteur ou dans Réglages et vaut pour tous les cours. Le
   contenu ne change pas : les règles de blocs ci-dessous s'appliquent aux deux modes.
 - **Bouton « Continuer »** : passe à l'écran suivant avec l'**animation de swipe** (pagination), et toujours **positionné en haut** du nouvel écran (jamais au milieu ni en bas d'un contenu déjà scrollé).
