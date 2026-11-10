@@ -29,6 +29,9 @@ nonisolated struct DuelSummary: Sendable, Equatable {
     /// Duel entre amis : aucun trophée en jeu, et une égalité parfaite est possible.
     var friendly = false
     var draw = false
+    /// La matière que le joueur a choisie pour sa manche (duel classé : le serveur en a besoin
+    /// pour recompter le score).
+    var pick: String? = nil
 }
 
 /// Le lien d'une partie entre amis avec le serveur : la partie, et l'instant (sur l'horloge de
@@ -55,9 +58,26 @@ final class DuelGameModel {
         case answering
         /// Les réponses sont dévoilées.
         case reveal
+        /// L'annonce d'une manche : matière à choisir, matière choisie par l'adversaire, sprint.
+        case roundIntro
         /// L'annonce de la question décisive.
         case suddenDeathIntro
         case finished
+    }
+
+    /// Ce que montre l'annonce d'une manche.
+    struct RoundIntro: Equatable {
+        let number: Int
+        let kind: DuelRoundKind
+        /// Manche au choix : c'est à moi de choisir.
+        let mine: Bool
+        /// Les matières proposées, quand c'est à moi de choisir.
+        let options: [String]
+        /// La matière retenue, une fois connue.
+        var chosen: String?
+        /// Le temps laissé pour choisir : son début et sa fin.
+        var opensAt = Date()
+        var deadline: Date?
     }
 
     let match: DuelMatch
@@ -66,6 +86,9 @@ final class DuelGameModel {
 
     private(set) var index = 0
     private(set) var phase: Phase = .answering
+    private(set) var roundIntro: RoundIntro?
+    /// Les matières des manches au choix déjà fixées, par numéro de manche.
+    private(set) var roundSubjects: [Int: String] = [:]
     private(set) var playerScore = 0
     private(set) var opponentScore = 0
     /// Une case par question : le camp a-t-il marqué ? `nil` tant que la question n'est pas jouée.
@@ -97,6 +120,12 @@ final class DuelGameModel {
     /// Ma réponse à la question en cours, pas encore reçue par le serveur.
     @ObservationIgnored private var unsent: (index: Int, answer: DuelAnswer)?
     @ObservationIgnored private var isRefreshing = false
+    /// Mon choix de matière, pas encore reçu par le serveur (partie entre amis).
+    @ObservationIgnored private var unsentPick: (round: Int, subject: String)?
+    /// Les questions des manches déjà commencées, dans l'ordre où elles se jouent, et en duel
+    /// classé les réponses de l'adversaire à ces questions.
+    @ObservationIgnored private var playedQuestions: [DuelQuestion] = []
+    @ObservationIgnored private var playedBot: [DuelBotAnswer] = []
     /// Une réponse est arrivée pendant un échange en cours : il faut en refaire un aussitôt.
     @ObservationIgnored private var refreshAgain = false
 
@@ -108,14 +137,28 @@ final class DuelGameModel {
     init(match: DuelMatch, live: DuelLiveLink? = nil) {
         self.match = match
         self.live = live
-        playerMarks = Array(repeating: nil, count: match.questions.count)
-        opponentMarks = Array(repeating: nil, count: match.questions.count)
+        playerMarks = Array(repeating: nil, count: match.questionCount)
+        opponentMarks = Array(repeating: nil, count: match.questionCount)
     }
 
-    var questionCount: Int { match.questions.count }
+    var questionCount: Int { match.questionCount }
 
+    /// La question en cours. Les questions d'une manche ne sont connues qu'à son début (une
+    /// manche au choix dépend de la matière retenue).
     var question: DuelQuestion {
-        index < match.questions.count ? match.questions[index] : match.tiebreak
+        if index >= questionCount { return match.tiebreak }
+        if index < playedQuestions.count { return playedQuestions[index] }
+        return playedQuestions.last ?? match.tiebreak
+    }
+
+    /// Le numéro de la manche en cours (1 à 4).
+    var roundNumber: Int {
+        min(index / DuelMatch.questionsPerRound, max(match.rounds.count - 1, 0)) + 1
+    }
+
+    /// La matière de la manche en cours, quand c'est une manche au choix.
+    var currentSubject: String? {
+        index < questionCount ? roundSubjects[roundNumber] : nil
     }
 
     /// La réponse de l'adversaire à la question en cours : le script du serveur en duel classé,
@@ -124,10 +167,13 @@ final class DuelGameModel {
         if live != nil {
             return liveOpponent[index] ?? DuelBotAnswer(correct: false, choice: nil, value: nil, timeMs: question.timeLimitMs)
         }
-        guard !match.bot.isEmpty else {
+        if index >= questionCount, let tiebreakBot = match.tiebreakBot {
+            return tiebreakBot
+        }
+        guard index < playedBot.count else {
             return DuelBotAnswer(correct: false, choice: nil, value: nil, timeMs: question.timeLimitMs / 2)
         }
-        return match.bot[min(index, match.bot.count - 1)]
+        return playedBot[index]
     }
 
     /// Part du temps restant (1 → 0) à un instant donné, pour le cadran.
@@ -148,11 +194,32 @@ final class DuelGameModel {
             tiebreak: isSuddenDeath,
             answers: answers,
             friendly: live != nil,
-            draw: isDraw
+            draw: isDraw,
+            pick: myPick
         )
     }
 
+    /// La matière que j'ai choisie pour ma manche au choix.
+    var myPick: String? {
+        guard let mine = match.rounds.first(where: { $0.isMyPick }) else { return nil }
+        return roundSubjects[mine.number]
+    }
+
     // MARK: - Actions du joueur
+
+    /// Choisit la matière de la manche annoncée (quand c'est à moi de choisir).
+    func pickSubject(_ subject: String) {
+        guard phase == .roundIntro, let intro = roundIntro, intro.mine, intro.chosen == nil,
+              intro.options.contains(subject) else { return }
+        withAnimation(.spring(response: 0.35, dampingFraction: 0.7)) {
+            roundIntro?.chosen = subject
+        }
+        DuelHaptics.lock()
+        if live != nil {
+            unsentPick = (intro.number, subject)
+            Task { await refreshLive() }
+        }
+    }
 
     func choose(_ option: Int) {
         guard phase == .answering, !playerLocked, question.kind != .slider else { return }
@@ -208,8 +275,15 @@ final class DuelGameModel {
             await runLive(live)
             return
         }
-        for i in 0..<match.questions.count {
-            guard await play(i) else { return }
+        for (r, plan) in match.rounds.enumerated() {
+            if r > 0 {
+                guard await announce(plan) else { return }
+            }
+            let first = playedQuestions.count
+            let questions = resolve(plan)
+            for k in questions.indices {
+                guard await play(first + k) else { return }
+            }
         }
         if playerScore == opponentScore {
             isSuddenDeath = true
@@ -218,15 +292,77 @@ final class DuelGameModel {
             }
             DuelHaptics.suddenDeath()
             guard await pause(2.4) else { return }
-            guard await play(match.questions.count) else { return }
+            guard await play(questionCount) else { return }
         } else {
             playerWon = playerScore > opponentScore
         }
         phase = .finished
     }
 
+    // MARK: - Manches (duel classé)
+
+    /// Les questions d'une manche (et les réponses de l'adversaire), ajoutées à la suite de
+    /// celles déjà jouées. Manche au choix : celles de la matière retenue.
+    private func resolve(_ plan: DuelRoundPlan) -> [DuelQuestion] {
+        var questions = plan.questions ?? []
+        var bot = plan.bot ?? []
+        if plan.isMyPick, let options = plan.options, !options.isEmpty {
+            let option = options.first(where: { $0.subject == roundSubjects[plan.number] }) ?? options[0]
+            roundSubjects[plan.number] = option.subject
+            questions = option.questions
+            bot = option.bot ?? []
+        } else if plan.kind == .pick, let subject = plan.subject {
+            roundSubjects[plan.number] = subject
+        }
+        // Une manche tient toujours cinq places dans la partie, même si le serveur en livre moins.
+        while playedBot.count < playedQuestions.count { playedBot.append(DuelBotAnswer(correct: false, choice: nil, value: nil, timeMs: 4000)) }
+        playedQuestions.append(contentsOf: questions)
+        playedBot.append(contentsOf: bot.prefix(questions.count))
+        return questions
+    }
+
+    /// L'annonce d'une manche. Au choix : huit secondes pour choisir parmi les trois matières
+    /// proposées (passé ce délai, la première) ; ou l'adversaire « réfléchit » puis sa matière
+    /// se dévoile. Sprint : le temps de lire l'annonce.
+    private func announce(_ plan: DuelRoundPlan) async -> Bool {
+        switch plan.kind {
+        case .mixed:
+            return true
+        case .sprint:
+            show(RoundIntro(number: plan.number, kind: .sprint, mine: false, options: []))
+            return await pause(2.8)
+        case .pick:
+            if plan.isMyPick {
+                let subjects = (plan.options ?? []).map(\.subject)
+                let deadline = Date().addingTimeInterval(8)
+                show(RoundIntro(number: plan.number, kind: .pick, mine: true, options: subjects, deadline: deadline))
+                while roundIntro?.chosen == nil, Date() < deadline {
+                    guard await pause(0.05) else { return false }
+                }
+                if roundIntro?.chosen == nil, let fallback = subjects.first {
+                    withAnimation(.spring(response: 0.35, dampingFraction: 0.7)) { roundIntro?.chosen = fallback }
+                }
+                roundSubjects[plan.number] = roundIntro?.chosen
+                return await pause(1.3)
+            }
+            show(RoundIntro(number: plan.number, kind: .pick, mine: false, options: []))
+            guard await pause(2.4) else { return false }
+            withAnimation(.spring(response: 0.4, dampingFraction: 0.65)) { roundIntro?.chosen = plan.subject }
+            DuelHaptics.opponentAnswered()
+            return await pause(1.7)
+        }
+    }
+
+    private func show(_ intro: RoundIntro) {
+        withAnimation(.spring(response: 0.5, dampingFraction: 0.8)) {
+            roundIntro = intro
+            phase = .roundIntro
+        }
+        DuelHaptics.opponentFound()
+    }
+
     private func play(_ i: Int) async -> Bool {
-        let isTiebreak = i >= match.questions.count
+        let isTiebreak = i >= questionCount
         withAnimation(.spring(response: 0.5, dampingFraction: 0.86)) {
             index = i
             selectedChoice = nil
@@ -348,7 +484,14 @@ final class DuelGameModel {
             refreshAgain = false
             do {
                 let state: DuelFriendState
-                if let pending = unsent {
+                if let pick = unsentPick {
+                    state = try await DuelTimeout.run(seconds: 5) {
+                        try await DuelLiveService.shared.pick(matchId: matchId, round: pick.round, subject: pick.subject)
+                    }
+                    if unsentPick?.round == pick.round {
+                        unsentPick = nil
+                    }
+                } else if let pending = unsent {
                     // Bornés à 5 s : une requête qui ne revient pas ne doit pas figer la partie.
                     state = try await DuelTimeout.run(seconds: 5) {
                         try await DuelLiveService.shared.answer(matchId: matchId, index: pending.index, answer: pending.answer)
@@ -384,10 +527,15 @@ final class DuelGameModel {
         var i = 0
         var startsAt = live.startsAt
         while true {
+            // Une nouvelle manche commence : son annonce occupe le temps qui la précède.
+            if i > 0, i < questionCount, i % DuelMatch.questionsPerRound == 0, i >= playedQuestions.count {
+                guard await announceLive(match.rounds[i / DuelMatch.questionsPerRound], startsAt: startsAt) else { return }
+            }
             // La question démarre au même instant pour les deux joueurs.
             while Date() < startsAt {
                 guard await pause(0.05) else { return }
             }
+            guard await resolveLive(through: i) else { return }
             guard let state = await playLive(i, startedAt: startsAt) else { return }
 
             if state.finished {
@@ -400,7 +548,7 @@ final class DuelGameModel {
 
             let next = max(state.index, i + 1)
             startsAt = liveStateAt.addingTimeInterval(Double(state.questionStartsInMs) / 1000)
-            if next >= match.questions.count, !isSuddenDeath {
+            if next >= questionCount, !isSuddenDeath {
                 // Égalité après la dernière question : l'annonce, puis la question décisive.
                 guard await pause(2.4) else { return }
                 isSuddenDeath = true
@@ -413,10 +561,58 @@ final class DuelGameModel {
         }
     }
 
+    /// L'annonce d'une manche en direct, jusqu'à l'instant où sa première question démarre. Au
+    /// choix : celui qui choisit a jusqu'à 1,5 s avant le départ ; l'autre voit la matière dès
+    /// que le serveur la connaît.
+    private func announceLive(_ plan: DuelRoundPlan, startsAt: Date) async -> Bool {
+        guard plan.kind != .mixed else { return true }
+        // La révélation de la question précédente reste un instant à l'écran.
+        guard await pause(2.0) else { return false }
+        let mine = plan.isMyPick
+        show(RoundIntro(
+            number: plan.number,
+            kind: plan.kind,
+            mine: mine,
+            options: mine ? (plan.options ?? []).map(\.subject) : [],
+            deadline: mine ? startsAt.addingTimeInterval(-1.5) : nil
+        ))
+        while Date() < startsAt {
+            guard await pause(0.05) else { return false }
+            guard plan.kind == .pick else { continue }
+            if let chosen = liveState?.picks?[String(plan.number)], roundIntro?.chosen != chosen {
+                withAnimation(.spring(response: 0.4, dampingFraction: 0.65)) { roundIntro?.chosen = chosen }
+                if !mine { DuelHaptics.opponentAnswered() }
+            }
+        }
+        return true
+    }
+
+    /// Fixe les questions des manches jusqu'à la question `i` (plusieurs d'un coup après une
+    /// coupure réseau). Pour une manche au choix, attend que le serveur donne la matière.
+    private func resolveLive(through i: Int) async -> Bool {
+        while playedQuestions.count <= i, i < questionCount {
+            let plan = match.rounds[min(playedQuestions.count / DuelMatch.questionsPerRound, match.rounds.count - 1)]
+            var questions = plan.questions ?? []
+            if plan.kind == .pick {
+                var subject = liveState?.picks?[String(plan.number)]
+                while subject == nil {
+                    guard await pause(0.05) else { return false }
+                    subject = liveState?.picks?[String(plan.number)]
+                }
+                let options = plan.options ?? []
+                questions = (options.first(where: { $0.subject == subject }) ?? options.first)?.questions ?? []
+                roundSubjects[plan.number] = subject
+            }
+            guard !questions.isEmpty else { return false }
+            playedQuestions.append(contentsOf: questions)
+        }
+        return true
+    }
+
     /// Joue une question en direct : jusqu'à ce que le serveur la close. Rend l'état reçu à ce
     /// moment-là, ou nil si la tâche est annulée.
     private func playLive(_ i: Int, startedAt: Date) async -> DuelFriendState? {
-        let isTiebreak = i >= match.questions.count
+        let isTiebreak = i >= questionCount
         withAnimation(.spring(response: 0.5, dampingFraction: 0.86)) {
             index = i
             selectedChoice = nil

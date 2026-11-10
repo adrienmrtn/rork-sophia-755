@@ -7,7 +7,7 @@
   content/duels/leagues.json        les 30 ligues (nom, seuil de trophées, images)
   content/duels/questions_en.json   les questions (scripts/duels_questions_source.py), options mélangées
   content/duels/bots.json           les adversaires simulés (@, pays, avatar)
-  supabase/migrations/20261109010100_duels_seed.sql   le tout en INSERT … ON CONFLICT DO UPDATE
+  supabase/migrations/20261110020100_duels_seed_v2.sql   le tout en INSERT … ON CONFLICT DO UPDATE
 
 Le SQL se rejoue sans risque : une ligne existante est mise à jour, jamais dupliquée.
 Les images viennent de scripts/duels_assets.py (Supabase Storage, bucket public course-images).
@@ -26,7 +26,9 @@ sys.path.insert(0, str(ROOT / "scripts"))
 from duels_questions_source import QUESTIONS  # noqa: E402
 
 OUT = ROOT / "content" / "duels"
-SEED = ROOT / "supabase" / "migrations" / "20261109010100_duels_seed.sql"
+# Le contenu est republié en entier à chaque évolution, dans une nouvelle migration (la
+# précédente, déjà exécutée, ne bouge pas) : chaque ligne est insérée ou mise à jour.
+SEED = ROOT / "supabase" / "migrations" / "20261110020100_duels_seed_v2.sql"
 STORAGE = "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels"
 
 # ------------------------------------------------------------------ ligues

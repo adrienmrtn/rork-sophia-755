@@ -334,7 +334,7 @@ struct DuelFriendFlowView: View {
         let startsAt = Date().addingTimeInterval(Double(max(start.startsInMs, 0)) / 1000)
         me = start.me
         friend = start.opponent
-        let images = (start.questions + [start.tiebreak]).compactMap(\.imageURL)
+        let images = start.match.allQuestions.compactMap(\.imageURL)
         Task {
             for url in images {
                 _ = await RemoteImageLoader.image(url)

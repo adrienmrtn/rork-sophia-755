@@ -32,6 +32,11 @@ struct DuelGameView: View {
                     .padding(.bottom, 10)
             }
 
+            if model.phase == .roundIntro, let intro = model.roundIntro {
+                DuelRoundIntroView(model: model, intro: intro, opponentHandle: opponent.handle)
+                    .transition(.opacity)
+            }
+
             if model.phase == .suddenDeathIntro {
                 suddenDeathBanner
                     .transition(.scale(scale: 0.6).combined(with: .opacity))
@@ -126,7 +131,9 @@ struct DuelGameView: View {
         if model.isSuddenDeath {
             return languageManager.text("duel.suddenDeath.title").uppercased()
         }
-        return String(format: languageManager.text("duel.game.counter"), min(model.index + 1, model.questionCount), model.questionCount)
+        // « Manche 2 · 7 / 20 »
+        let round = String(format: languageManager.text("duel.round.title"), model.roundNumber)
+        return "\(round) · \(min(model.index + 1, model.questionCount)) / \(model.questionCount)"
     }
 
     /// Un camp : avatar, nom, score. `scored` vaut vrai ou faux pendant la révélation.
@@ -192,6 +199,20 @@ struct DuelGameView: View {
     private var questionArea: some View {
         let question = model.question
         return VStack(spacing: 18) {
+            if let subject = model.currentSubject {
+                // La matière de la manche au choix en cours.
+                HStack(spacing: 6) {
+                    Image(systemName: DuelSubjects.icon(subject))
+                        .font(.system(size: 11, weight: .bold))
+                    Text(DuelSubjects.name(subject, language: languageManager.current))
+                        .font(DS.sans(.caption, .bold))
+                }
+                .foregroundStyle(DS.accentSoft)
+                .padding(.horizontal, 12)
+                .padding(.vertical, 6)
+                .background(Capsule().fill(DS.accentTint))
+            }
+
             if question.kind == .portrait {
                 DS.surfaceMuted
                     .frame(width: 184, height: 230)
@@ -250,7 +271,7 @@ struct DuelGameView: View {
             }
             if round.player { return languageManager.text("duel.game.correct") }
             return languageManager.text(model.selectedChoice == nil ? "duel.game.timeUp" : "duel.game.wrong")
-        case .suddenDeathIntro, .finished:
+        case .roundIntro, .suddenDeathIntro, .finished:
             return " "
         }
     }
