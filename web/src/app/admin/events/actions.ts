@@ -114,6 +114,12 @@ export async function saveCampaign(form: FormData): Promise<void> {
     const message = error.code === "23505" ? `An event with the slug “${campaign.slug}” already exists.` : error.message;
     back(existing ? `/admin/events/${existing.slug}` : "/admin/events/new", { error: message });
   }
+  if (text(form, "intent", 20) === "generate") {
+    // Le bouton de la carte Image : l'événement est enregistré (ou créé), puis les deux images sont dessinées.
+    const { data: saved } = await session.supabase.from("campaigns").select("*").eq("slug", campaign.slug).maybeSingle();
+    const outcome = saved ? await generateImagesFor(session, campaignFromRow(saved as Record<string, unknown>)) : { error: "Saved, but the event could not be read back." };
+    back(`/admin/events/${campaign.slug}`, outcome.error ? { ...outcome, error: `Saved. ${outcome.error}` } : outcome);
+  }
   back(`/admin/events/${campaign.slug}`, { done: note });
 }
 
@@ -144,15 +150,13 @@ export async function translateCampaignAction(form: FormData): Promise<void> {
  *  artistique des couvertures de cours (Gemini), l'autre dans celle des illustrations du site
  *  (Recraft, papier découpé). Les deux rejoignent les candidates ; la première devient l'image
  *  de l'événement s'il n'en a pas encore. Chaque échec est journalisé et montré tel quel. */
-export async function generateEventImage(form: FormData): Promise<void> {
-  const session = await requireAdmin();
-  const slug = text(form, "slug", 60);
-  const { data } = await session.supabase.from("campaigns").select("*").eq("slug", slug).maybeSingle();
-  if (!data) back("/admin/events", { error: "This event no longer exists." });
-  if (!coversConfigured()) back(`/admin/events/${slug}`, { error: "Image generation is not configured on the server (FAL_KEY)." });
-  const campaign = campaignFromRow(data as Record<string, unknown>);
+/** Deux images 16:9 depuis le titre et l'accroche en anglais : une dans la direction artistique
+ *  des couvertures, une dans le style papier découpé du site. Rend les paramètres de la redirection. */
+async function generateImagesFor(session: Awaited<ReturnType<typeof requireAdmin>>, campaign: Campaign): Promise<Record<string, string>> {
+  const slug = campaign.slug;
   const title = localized(campaign.title, "en");
-  if (!title) back(`/admin/events/${slug}`, { error: "Write the title first: the images are drawn from it." });
+  if (!coversConfigured()) return { error: "Image generation is not configured on the server (FAL_KEY)." };
+  if (!title) return { error: "Write the English title first: the images are drawn from it." };
   const theme = { title, subtitle: localized(campaign.tagline, "en") || null, description: localized(campaign.description, "en") || null };
   const stamp = Date.now().toString(36);
 
@@ -181,16 +185,24 @@ export async function generateEventImage(form: FormData): Promise<void> {
     console.error("[events] poster-style image failed", slug, poster.reason);
     failures.push(`Poster style: ${poster.reason instanceof Error ? poster.reason.message : String(poster.reason)}`);
   }
-  if (created.length === 0) back(`/admin/events/${slug}`, { error: `No image could be generated. ${failures.join(" · ")}` });
+  if (created.length === 0) return { error: `No image could be generated. ${failures.join(" · ")}` };
 
   const candidates = [...created, ...campaign.image_candidates].slice(0, 8);
   const { error } = await session.supabase.from("campaigns").update({ image_candidates: candidates, ...(campaign.image_url ? {} : { image_url: created[0].url }) }).eq("slug", slug);
   revalidate(slug);
-  if (error) back(`/admin/events/${slug}`, { error: error.message });
-  back(`/admin/events/${slug}`, failures.length > 0 ? { error: `One image generated, one failed. ${failures.join(" ")}`, done: "image" } : { done: "image" });
+  if (error) return { error: error.message };
+  return failures.length > 0 ? { error: `One image generated, one failed. ${failures.join(" ")}`, done: "image" } : { done: "image" };
 }
 
-/** L'équipe retient une des images générées (ou remet l'image envoyée à la main). */
+/** Le bouton « Generate 2 images with AI » d'un événement déjà enregistré (formulaire séparé). */
+export async function generateEventImage(form: FormData): Promise<void> {
+  const session = await requireAdmin();
+  const slug = text(form, "slug", 60);
+  const { data } = await session.supabase.from("campaigns").select("*").eq("slug", slug).maybeSingle();
+  if (!data) back("/admin/events", { error: "This event no longer exists." });
+  back(`/admin/events/${slug}`, await generateImagesFor(session, campaignFromRow(data as Record<string, unknown>)));
+}
+
 export async function chooseEventImage(form: FormData): Promise<void> {
   const session = await requireAdmin();
   const slug = text(form, "slug", 60);

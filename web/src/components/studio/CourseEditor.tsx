@@ -11,20 +11,25 @@ import { LANG_NAMES } from "@/lib/catalog/lang-names";
 import { s } from "@/lib/copy/studio-en";
 import { BLOCK_LABEL, BLOCK_TYPES, CLASSIFICATIONS, CLASSIFICATION_LABEL, COVER_CREDIT, MAX_COVER_GENERATIONS, citedTerms, courseWords, emptyBlock, validateCourse, type BlockType, type DraftCourse, type Finding, type Hero } from "@/lib/studio/course-format";
 import { generateCovers, saveDraft, submitDraft } from "@/app/studio/courses/[id]/actions";
+import { saveCatalogContent } from "@/app/admin/courses/actions";
 import type { CommonsImage } from "@/app/api/commons/search/route";
 
 /** L'éditeur de cours : le plan à gauche, le contenu par blocs au centre, les vérifications,
  *  les images et l'aperçu à droite. Enregistrement automatique, envoi en relecture. */
 
+/** En mode catalogue (équipe), l'éditeur écrit directement le contenu publié d'une langue. */
+export type CatalogTarget = { kind: "catalog"; courseId: string; lang: string };
+
 type Props = {
   draftId: string;
   initial: DraftCourse;
-  status: "draft" | "changes_requested";
+  status: "draft" | "changes_requested" | "published";
   reviewComment: string | null;
   updatedAt: string;
   originLang: string;
   blockers: string[];
   onboardingHref: string | null;
+  catalog?: CatalogTarget;
 };
 
 type SaveState = { kind: "saved"; at: string } | { kind: "dirty" } | { kind: "saving" } | { kind: "error"; message: string };
@@ -57,7 +62,7 @@ function pathToId(path: string): string {
   return "meta";
 }
 
-export function CourseEditor({ draftId, initial, status, reviewComment, updatedAt, originLang, blockers, onboardingHref }: Props) {
+export function CourseEditor({ draftId, initial, status, reviewComment, updatedAt, originLang, blockers, onboardingHref, catalog }: Props) {
   const router = useRouter();
   const [course, setCourse] = useState<DraftCourse>(initial);
   const [save, setSave] = useState<SaveState>({ kind: "saved", at: updatedAt });
@@ -87,13 +92,13 @@ export function CourseEditor({ draftId, initial, status, reviewComment, updatedA
     if (!dirty.current) return;
     dirty.current = false;
     setSave({ kind: "saving" });
-    const res = await saveDraft(draftId, payload());
+    const res = catalog ? await saveCatalogContent(catalog.courseId, catalog.lang, payload()) : await saveDraft(draftId, payload());
     if (res.ok) setSave(dirty.current ? { kind: "dirty" } : { kind: "saved", at: res.updatedAt });
     else {
       dirty.current = true;
       setSave({ kind: "error", message: res.error });
     }
-  }, [draftId]);
+  }, [draftId, catalog]);
 
   const update = useCallback(
     (fn: (c: DraftCourse) => DraftCourse) => {
@@ -201,6 +206,24 @@ export function CourseEditor({ draftId, initial, status, reviewComment, updatedA
   const canSubmit = (errorCount === 0 || onlyCoverMissing) && blockers.length === 0 && !pending && save.kind !== "saving";
   function submit() {
     setSubmitError(null);
+    if (catalog) {
+      // Mode catalogue : enregistrer, puis revenir à la fiche du cours. Les apps rechargent dans l'heure.
+      startTransition(async () => {
+        if (timer.current) clearTimeout(timer.current);
+        dirty.current = false;
+        setSave({ kind: "saving" });
+        const res = await saveCatalogContent(catalog.courseId, catalog.lang, payload());
+        if (res.ok) {
+          setSave({ kind: "saved", at: res.updatedAt });
+          router.push(`/admin/courses/${catalog.courseId}?done=${encodeURIComponent(catalog.lang)}`);
+        } else {
+          dirty.current = true;
+          setSave({ kind: "error", message: res.error });
+          setSubmitError(res.error);
+        }
+      });
+      return;
+    }
     if (coverMissing) {
       jumpTo("hero");
       setSubmitError("Choose a cover first: generate three from the title and pick one.");
@@ -223,8 +246,8 @@ export function CourseEditor({ draftId, initial, status, reviewComment, updatedA
       {/* Barre */}
       <header className="sticky top-0 z-20 border-b border-line bg-white/95 backdrop-blur">
         <div className="mx-auto flex w-full max-w-[1480px] flex-wrap items-center gap-x-5 gap-y-2 px-5 py-2.5">
-          <Link href="/studio/courses" className="text-[13px] font-bold text-blue">
-            ← {s.courses.title}
+          <Link href={catalog ? `/admin/courses/${catalog.courseId}` : "/studio/courses"} className="text-[13px] font-bold text-blue">
+            ← {catalog ? `Course · ${LANG_NAMES[catalog.lang] ?? catalog.lang}` : s.courses.title}
           </Link>
           <span className="min-w-0 flex-1 truncate text-[15px] font-extrabold text-ink">{course.title || s.courses.untitled}</span>
           <span className={`inline-flex items-center rounded-full px-2.5 py-1 text-[12px] font-bold ${status === "changes_requested" ? "bg-red-bg text-red" : "bg-tint text-ink-2"}`}>{s.dashboard.statuses[status]}</span>
@@ -235,7 +258,7 @@ export function CourseEditor({ draftId, initial, status, reviewComment, updatedA
             {save.kind === "saved" ? `Saved · ${timeOf(save.at)}` : save.kind === "saving" ? "Saving…" : save.kind === "dirty" ? "Unsaved changes" : `Not saved: ${save.message}`}
           </span>
           <button type="button" onClick={submit} disabled={!canSubmit} title={blockers[0] ?? (errorCount ? `${errorCount} problems to fix first` : "")} className="inline-flex h-10 items-center rounded-xl bg-navy px-4 text-[14px] font-bold text-white hover:bg-ink disabled:cursor-not-allowed disabled:opacity-40">
-            {pending ? "Sending…" : coverMissing && onlyCoverMissing ? "Choose a cover and send" : status === "changes_requested" ? "Send again" : "Send for review"}
+            {catalog ? (pending ? "Publishing…" : "Publish changes") : pending ? "Sending…" : coverMissing && onlyCoverMissing ? "Choose a cover and send" : status === "changes_requested" ? "Send again" : "Send for review"}
           </button>
         </div>
       </header>
@@ -344,6 +367,7 @@ export function CourseEditor({ draftId, initial, status, reviewComment, updatedA
               hero={course.hero}
               flash={flash === "hero"}
               onGenerate={async () => {
+                if (catalog) return { ok: false as const, error: "Cover generation works for Studio drafts only. Pick an image from Commons in the Images tab." };
                 const res = await generateCovers(draftId, payload());
                 if (res.ok) update((c) => ({ ...c, hero: { ...c.hero, candidates: [...(c.hero.candidates ?? []), ...res.candidates.map((url) => ({ url }))].slice(-9), generations: (c.hero.generations ?? 0) + 1, prompt: res.prompt } }));
                 return res;
@@ -471,7 +495,7 @@ export function CourseEditor({ draftId, initial, status, reviewComment, updatedA
               ))}
             </div>
             <div className="p-4">
-              {tab === "checks" && <ChecksPanel findings={findings} blockers={blockers} onboardingHref={onboardingHref} words={words} onJump={jumpTo} />}
+              {tab === "checks" && <ChecksPanel findings={findings} blockers={blockers} onboardingHref={onboardingHref} words={words} onJump={jumpTo} publishMode={Boolean(catalog)} />}
               {tab === "images" && <ImagesPanel target={target} active={active} sections={course.sections} onPick={placeImage} onCancel={() => setTarget(null)} />}
               {tab === "preview" && <PreviewPanel course={course} originLang={originLang} />}
             </div>
@@ -565,14 +589,14 @@ function BlockEditor({ id, block, flash, first, last, onChange, onMove, onRemove
 
 // ------------------------------------------------------------------ vérifications
 
-function ChecksPanel({ findings, blockers, onboardingHref, words, onJump }: { findings: Finding[]; blockers: string[]; onboardingHref: string | null; words: number; onJump: (path: string) => void }) {
+function ChecksPanel({ findings, blockers, onboardingHref, words, onJump, publishMode = false }: { findings: Finding[]; blockers: string[]; onboardingHref: string | null; words: number; onJump: (path: string) => void; publishMode?: boolean }) {
   const errors = findings.filter((f) => f.severity === "error");
   const warnings = findings.filter((f) => f.severity === "warning");
   return (
     <div className="flex flex-col gap-4">
       <div className={`rounded-2xl p-4 ${errors.length ? "bg-red-bg/60" : blockers.length ? "bg-amber-bg/60" : "bg-green-bg"}`}>
-        <strong className={`block text-[14px] font-extrabold ${errors.length ? "text-red" : blockers.length ? "text-amber" : "text-green"}`}>{errors.length ? `${errors.length} ${errors.length === 1 ? "problem" : "problems"} to fix` : blockers.length ? "Almost ready" : "Ready to send"}</strong>
-        <span className="text-[13px] text-ink-2">{errors.length ? "The factory would refuse the course as it is." : blockers.length ? blockers[0] : `${words.toLocaleString("en")} words. The team reviews within 72 hours.`}</span>
+        <strong className={`block text-[14px] font-extrabold ${errors.length ? "text-red" : blockers.length ? "text-amber" : "text-green"}`}>{errors.length ? `${errors.length} ${errors.length === 1 ? "problem" : "problems"} to fix` : blockers.length ? "Almost ready" : publishMode ? "Ready to publish" : "Ready to send"}</strong>
+        <span className="text-[13px] text-ink-2">{errors.length ? "The factory would refuse the course as it is." : blockers.length ? blockers[0] : publishMode ? `${words.toLocaleString("en")} words. Publish changes: the apps pick them up within the hour.` : `${words.toLocaleString("en")} words. The team reviews within 72 hours.`}</span>
         {!errors.length && onboardingHref && (
           <Link href={onboardingHref} className="mt-2 block text-[13px] font-bold text-navy">
             Sign the agreement →

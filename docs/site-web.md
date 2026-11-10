@@ -42,8 +42,10 @@ visiteur ──▶ sophia-culture.com (Vercel, Next.js)
 | `/admin/review`, `/admin/review/<id>` | Propositions à décider (accepter, renvoyer avec un mot, supprimer) ; file de relecture ; lecture du cours, vérifications du format, quota de l'auteur, **Accepter et lancer la production** = validation : +15 $ à la cagnotte, un cran du quota | RPC `studio_decide_proposal`, `studio_review_draft`, action `publishDraft` |
 | `/admin/creators` | Approuver, suspendre, remettre en attente ; contrat signé ou non ; quota de la semaine et **limite hebdomadaire** par auteur (vide = règle commune, 0 = bloqué) ; cagnotte due | RPC `studio_set_creator_status`, `studio_set_creator_quota` |
 | `/admin/payouts` | **Versements du lundi** : le dû par auteur (cours crédités), « Transfer done » qui solde la cagnotte et trace le versement, historique | RPC `studio_payouts_due`, `studio_mark_paid` |
+| `/admin/courses`, `/admin/courses/<id>` | **Le catalogue** : tous les cours (recherche, statut) ; la fiche d'un cours, langue par langue (statut, titre, version), **Edit**, retirer ou remettre une langue, archiver ou remettre le cours, supprimer (identifiant à retaper) | RPC `catalog_admin_courses`, `catalog_admin_set_content_status`, `catalog_admin_set_course_status`, `catalog_admin_delete_course` |
+| `/admin/courses/<id>/<lang>` | L'éditeur du Studio en mode catalogue : texte, images (Commons, importées en JPEG dans le bucket), sources, glossaire d'une langue ; **Publish changes** recalcule le hash du paquet et du fichier catalogue de la langue | RPC `catalog_admin_update_content`, action `saveCatalogContent` |
 | `/admin/production`, `/admin/production/<job>` | Les jobs de l'usine, étape par étape | `production_jobs`, `production_steps` |
-| `/admin/events`, `/admin/events/<slug>` | Les événements éditoriaux (Movember, 11 novembre…) : création, cours de la collection, défi, cours annoncés, textes en 30 langues (traduction), publication vers les apps sans nouvelle version (docs/evenements.md) | `campaigns`, manifeste du catalogue |
+| `/admin/events`, `/admin/events/<slug>` | Les événements éditoriaux (Movember, 11 novembre…) : création, cours de la collection, défi, cours annoncés, textes en anglais traduits en 29 langues, image (import ou **Generate 2 images with AI** dans la carte Image, aussi sur un nouvel événement : il est créé puis les images dessinées), publication vers les apps sans nouvelle version (docs/evenements.md) | `campaigns`, manifeste du catalogue |
 | `/api/commons/search?q=` | Recherche d'images Wikimedia Commons pour l'éditeur (connecté seulement) | API Commons |
 | `/sitemap.xml`, `/robots.txt` | Référencement ; `/studio`, `/admin`, `/auth`, `/join` exclus | |
 
@@ -77,6 +79,20 @@ approuvé peut proposer et écrire, pas être validé.
 
 Le contrat créateur **version 2** (`studio_documents`) dit tout cela ; la version en vigueur étant
 la 2, un auteur ayant signé la 1 devra re-signer avant son prochain envoi.
+
+## Édition du catalogue par l'équipe (10 novembre)
+
+`/admin/courses` ouvre n'importe quel cours, y compris les 309 importés, dans l'éditeur du Studio
+(`CourseEditor`, prop `target`) branché sur `course_contents` : même format V2, mêmes vérifications.
+Une image choisie dans Commons est importée dans le bucket `course-images` en JPEG (1 600 px, via
+`sharp`), sous un nom dérivé de son adresse, puis le bloc porte `asset` comme ceux de l'usine.
+`catalog_admin_update_content` remplace le contenu et le glossaire de la langue, garde les
+identifiants des parties (les statistiques de décrochage s'y accrochent), recalcule le hash du paquet
+(`course_bundle`) et celui du fichier catalogue (`catalog_finalize_language`) : les apps retéléchargent
+au prochain manifeste. Retirer une langue = statut `withheld` ; archiver un cours = `courses.status =
+'archived'` (il quitte les apps, rien n'est perdu) ; supprimer = suppression en cascade (contenus, quiz,
+glossaires, collections, jobs), le brouillon Studio d'origine passant en `archived` et les images
+restant dans le bucket. Les quiz ne s'éditent pas ici (l'usine les écrit depuis le texte).
 
 ## Le circuit d'un cours
 
