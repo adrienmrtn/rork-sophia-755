@@ -508,7 +508,7 @@ final class QRScannerController: UIViewController, AVCaptureMetadataOutputObject
         }
         session.addOutput(output)
         // Les types ne se règlent qu'une fois la sortie reliée à la session.
-        output.setMetadataObjectsDelegate(self, queue: .main)
+        output.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
         if output.availableMetadataObjectTypes.contains(.qr) {
             output.metadataObjectTypes = [.qr]
         }

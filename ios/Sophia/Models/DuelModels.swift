@@ -128,10 +128,16 @@ nonisolated struct DuelHome: Codable, Sendable, Equatable {
     /// Avancement (0 à 1) entre le seuil de la ligue du joueur et celui de la suivante.
     func leagueProgress(forTrophies trophies: Int) -> Double {
         guard let current = league(forTrophies: trophies) else { return 0 }
-        guard let next = nextLeague(after: current) else { return 1 }
-        let span = Double(next.minTrophies - current.minTrophies)
+        return progress(forTrophies: trophies, in: current)
+    }
+
+    /// Avancement (0 à 1) d'un nombre de trophées dans une ligue donnée, vers le seuil de la
+    /// suivante : sert à remplir la jauge d'une ligue jusqu'au bout avant de passer à la suivante.
+    func progress(forTrophies trophies: Int, in league: DuelLeague) -> Double {
+        guard let next = nextLeague(after: league) else { return 1 }
+        let span = Double(next.minTrophies - league.minTrophies)
         guard span > 0 else { return 1 }
-        return min(max(Double(trophies - current.minTrophies) / span, 0), 1)
+        return min(max(Double(trophies - league.minTrophies) / span, 0), 1)
     }
 }
 

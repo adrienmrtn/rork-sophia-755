@@ -91,7 +91,7 @@ export default async function EventEditorPage({ params, searchParams }: PageProp
                 </strong>
                 {problems.length === 0 ? (
                   <p className="flex items-center gap-2 text-[14px] text-green">
-                    <CheckIcon className="h-4 w-4" /> Texts in English, a collection, a reachable challenge, valid announced courses.
+                    <CheckIcon className="h-4 w-4" /> Texts in English, a collection, a reachable challenge.
                   </p>
                 ) : (
                   <ul className="flex list-disc flex-col gap-1 pl-5 text-[14px] text-ink-2">

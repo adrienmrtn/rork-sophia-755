@@ -1029,6 +1029,7 @@ struct FriendsLeaderboardSection: View {
         }
         .buttonStyle(FriendRowPress())
         .accessibilityElement(children: .ignore)
+        .accessibilityAddTraits(.isButton)
         .accessibilityLabel(Text("\(rank). @\(entry.handle), \(entry.xp) XP"))
     }
 

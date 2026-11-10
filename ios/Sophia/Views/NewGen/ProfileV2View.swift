@@ -1,22 +1,26 @@
 import SwiftUI
 
-/// Le profil de la maquette : identité, trois compteurs, Reprendre, Mes abonnements, Badges,
-/// l'entrée de l'Entraînement, listes À lire / Lus / Aimés, « Deviens créateur », puis les pages secondaires (progression,
-/// amis, anti-scroll). L'ancien profil reste accessible comme page « Ma progression ».
+/// Le profil de la maquette : identité, compteurs, trophées et ligue des duels, les cartes
+/// illustrées de l'Entraînement et de « Ma progression », Mes abonnements, le classement des
+/// amis, Badges, listes À lire / Lus / Aimés, puis l'anti-scroll. L'ancien profil reste
+/// accessible comme page « Ma progression ».
 struct ProfileV2View: View {
     @Environment(LanguageManager.self) private var languageManager
     @Environment(AuthService.self) private var auth
     let progressManager: ProgressManager
     let store: StoreViewModel
     let onOpenCourse: (Course) -> Void
+    /// Plus utilisé ici (la section « Reprendre » a quitté le profil) ; gardé pour l'appelant.
     let onResumeCourse: (Course) -> Void
     let onOpenCreator: (CourseAuthor) -> Void
     let onOpenList: (ProfileListKind) -> Void
+    /// Plus utilisé ici (la carte « Deviens créateur » a quitté le profil) ; gardé pour l'appelant.
     let onOpenCampaign: (Campaign) -> Void
     let onOpenProgression: () -> Void
     let onOpenTraining: () -> Void
     let onOpenAntiScroll: () -> Void
     let onDiscoverCreators: () -> Void
+    /// Plus utilisé ici (la carte « Deviens créateur » a quitté le profil) ; gardé pour l'appelant.
     let onBecomeCreator: () -> Void
     var onShowPaywall: (() -> Void)? = nil
     var onResetOnboarding: (() -> Void)? = nil
@@ -26,6 +30,8 @@ struct ProfileV2View: View {
     @State private var showSettings = false
     @State private var showAvatarPicker = false
     @State private var showBadges = false
+    /// Un lien d'ami (`sophia://friend/<handle>`) ouvert depuis l'extérieur, à confirmer.
+    @State private var friendLink: FriendLinkTarget?
 
     private var language: AppLanguage { languageManager.current }
 
@@ -35,15 +41,14 @@ struct ProfileV2View: View {
                 titleRow
                 identity
                 statsCard
-                ResumeCoursesSection(progressManager: progressManager, onResume: onResumeCourse)
-                    .padding(.horizontal, -20)
+                trophiesCard
                 trainingCard
+                progressCard
                 followingSection
                 // Les amis et leur classement, à même la page (plus de page à part).
-                FriendsLeaderboardSection(social: social)
+                FriendsLeaderboardSection(social: social, myAvatarId: progressManager.avatarId)
                 badgesSection
                 listsSection
-                creatorCard
                 secondaryPages
             }
             .padding(20)
@@ -58,6 +63,26 @@ struct ProfileV2View: View {
             } else if !auth.isBootstrapping {
                 social.clearLocalState()
             }
+        }
+        // Les trophées et la ligue, là où les duels existent.
+        .task(id: duelsRefreshKey) {
+            if auth.isSignedIn, duelsVisible {
+                await DuelService.shared.refreshHome()
+            }
+        }
+        .onChange(of: DeepLinkRouter.shared.pendingFriendHandle, initial: true) { _, _ in
+            guard let handle = DeepLinkRouter.shared.pendingFriendHandle else { return }
+            friendLink = FriendLinkTarget(handle: handle)
+            // Retiré au tour suivant : les onglets lisent la même demande pour venir sur le profil.
+            Task { _ = DeepLinkRouter.shared.consumeFriend() }
+        }
+        .sheet(item: $friendLink) { target in
+            FriendLinkSheet(handle: target.handle) {
+                Task { await social.refreshLeaderboard() }
+            }
+            .presentationDetents([.height(380)])
+            .presentationDragIndicator(.visible)
+            .sophiaSheetChrome()
         }
         .sheet(isPresented: $showBadges) {
             BadgesPageView(progressManager: progressManager)
@@ -164,6 +189,53 @@ struct ProfileV2View: View {
         .padding(.vertical, 14)
         .background(RoundedRectangle(cornerRadius: 18, style: .continuous).fill(DS.surface))
         .overlay(RoundedRectangle(cornerRadius: 18, style: .continuous).strokeBorder(DS.hairline, lineWidth: 1))
+    }
+
+    // MARK: - Trophées et ligue
+
+    /// Trophées, ligue et duels n'ont de sens que là où les duels existent.
+    private var duelsVisible: Bool { FeatureFlags.duelsVisible(language: language) }
+
+    private var duelsRefreshKey: String { "\(auth.isSignedIn)-\(duelsVisible)" }
+
+    /// La ligue du lecteur sur son illustration, avec ses trophées : la même carte que sur le
+    /// profil d'un ami. Rien sans compte, ni tant que la page des duels n'a jamais été lue.
+    @ViewBuilder
+    private var trophiesCard: some View {
+        if duelsVisible, auth.isSignedIn, let home = DuelService.shared.home {
+            let league = home.currentLeague
+            let shape = RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
+            ZStack(alignment: .bottomLeading) {
+                DuelLeagueBackdrop(league: league, thumb: true)
+                LinearGradient(
+                    colors: [DuelPalette.night.opacity(0.05), DuelPalette.night.opacity(0.85)],
+                    startPoint: .top,
+                    endPoint: .bottom
+                )
+                HStack(alignment: .bottom, spacing: 8) {
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text(languageManager.text("duel.trophies.title").uppercasedInApp())
+                            .font(DS.sans(.caption2, .bold))
+                            .tracking(1.1)
+                            .foregroundStyle(.white.opacity(0.8))
+                        Text(DuelFormat.leagueName(league, language: language))
+                            .font(.jakarta(size: 22, weight: .heavy))
+                            .foregroundStyle(.white)
+                            .lineLimit(1)
+                            .minimumScaleFactor(0.6)
+                    }
+                    Spacer(minLength: 8)
+                    DuelTrophyCount(value: home.profile.trophies, size: 20, color: .white)
+                }
+                .padding(14)
+            }
+            .frame(height: 104)
+            .frame(maxWidth: .infinity)
+            .clipShape(shape)
+            .overlay(shape.strokeBorder(DS.hairline, lineWidth: 1))
+            .dsSoftShadow()
+            .accessibilityElement(children: .combine)
+        }
     }
 
     // MARK: - Abonnements
@@ -315,25 +387,46 @@ struct ProfileV2View: View {
         }
     }
 
-    // MARK: - Entraînement
+    // MARK: - Cartes illustrées (Entraînement, Ma progression)
 
     /// L'entrée de l'Entraînement, qui n'a plus d'onglet à lui.
     private var trainingCard: some View {
+        posterCard(
+            image: "training_poster",
+            title: languageManager.text("training.title"),
+            subtitle: languageManager.text("training.locked.tagline"),
+            action: onOpenTraining
+        )
+    }
+
+    /// L'entrée de la page « Ma progression » (rang, matières, quiz).
+    private var progressCard: some View {
+        posterCard(
+            image: "progress_poster",
+            title: languageManager.text("profile.progress.title"),
+            subtitle: languageManager.text("profile.progress.subtitle"),
+            action: onOpenProgression
+        )
+    }
+
+    /// Une carte d'entrée illustrée (papier découpé du site) : vignette, titre, une ligne, chevron.
+    private func posterCard(image: String, title: String, subtitle: String, action: @escaping () -> Void) -> some View {
         Button {
             UIImpactFeedbackGenerator(style: .light).impactOccurred()
-            onOpenTraining()
+            action()
         } label: {
             HStack(spacing: 14) {
-                Image("training_poster")
+                Image(image)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: 64, height: 64)
                     .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
+                    .accessibilityHidden(true)
                 VStack(alignment: .leading, spacing: 3) {
-                    Text(languageManager.text("training.title"))
+                    Text(title)
                         .font(DS.title(.title3, .heavy))
                         .foregroundStyle(DS.ink)
-                    Text(languageManager.text("training.locked.tagline"))
+                    Text(subtitle)
                         .font(DS.sans(.subheadline))
                         .foregroundStyle(DS.inkSecondary)
                         .multilineTextAlignment(.leading)
@@ -354,97 +447,10 @@ struct ProfileV2View: View {
         .buttonStyle(.plain)
     }
 
-    // MARK: - Deviens créateur
-
-    private var creatorCard: some View {
-        VStack(alignment: .leading, spacing: 14) {
-            Image("creator_writing")
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(maxWidth: .infinity)
-                .frame(height: 150)
-                .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
-                .accessibilityHidden(true)
-            HStack(alignment: .top, spacing: 14) {
-                VStack(alignment: .leading, spacing: 4) {
-                    Text(languageManager.text("profile.creator.title"))
-                        .font(DS.title(.title3, .heavy))
-                        .foregroundStyle(DS.ink)
-                    Text(languageManager.text("profile.creator.subtitle"))
-                        .font(DS.sans(.subheadline))
-                        .foregroundStyle(DS.inkSecondary)
-                        .fixedSize(horizontal: false, vertical: true)
-                }
-            }
-            VStack(alignment: .leading, spacing: 10) {
-                step(1, languageManager.text("profile.creator.step1"))
-                step(2, String(format: languageManager.text("profile.creator.step2"), AppLanguage.allCases.count))
-                step(3, languageManager.text("profile.creator.step3"))
-            }
-            if let campaign = CampaignStore.active().first {
-                Button { onOpenCampaign(campaign) } label: {
-                    HStack(spacing: 10) {
-                        Image(systemName: campaign.symbol ?? "sparkles")
-                            .font(.system(size: 18, weight: .semibold))
-                            .foregroundStyle(DS.warm)
-                        VStack(alignment: .leading, spacing: 2) {
-                            Text(languageManager.text("profile.creator.call"))
-                                .font(DS.sans(.footnote, .bold))
-                                .foregroundStyle(DS.ink)
-                            Text("\(campaign.title(for: language)), \(campaign.tagline(for: language).lowercasedFirst)")
-                                .font(DS.sans(.footnote))
-                                .foregroundStyle(DS.inkSecondary)
-                                .lineLimit(2)
-                        }
-                        Spacer(minLength: 4)
-                        Image(systemName: "chevron.forward")
-                            .font(.system(size: 12, weight: .semibold))
-                            .foregroundStyle(DS.inkTertiary)
-                    }
-                    .padding(12)
-                    .background(RoundedRectangle(cornerRadius: 14, style: .continuous).fill(DS.canvas))
-                }
-                .buttonStyle(.plain)
-            }
-            Button {
-                UIImpactFeedbackGenerator(style: .light).impactOccurred()
-                onBecomeCreator()
-            } label: {
-                Text(languageManager.text("home.start"))
-                    .font(DS.sans(.headline, .bold))
-                    .foregroundStyle(.white)
-                    .frame(maxWidth: .infinity)
-                    .frame(height: 52)
-                    .background(RoundedRectangle(cornerRadius: 16, style: .continuous).fill(DS.accent))
-            }
-            .buttonStyle(.plain)
-        }
-        .padding(20)
-        .background(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous).fill(DS.surface))
-        .overlay(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous).strokeBorder(DS.hairline, lineWidth: 1))
-        .dsSoftShadow()
-    }
-
-    private func step(_ number: Int, _ text: String) -> some View {
-        HStack(alignment: .top, spacing: 12) {
-            Text("\(number)")
-                .font(DS.sans(.footnote, .bold))
-                .foregroundStyle(DS.accent)
-                .frame(width: 26, height: 26)
-                .background(Circle().fill(DS.accentTint))
-            Text(text)
-                .font(DS.sans(.subheadline))
-                .foregroundStyle(DS.ink)
-                .fixedSize(horizontal: false, vertical: true)
-        }
-    }
-
     // MARK: - Pages secondaires
 
     private var secondaryPages: some View {
         VStack(spacing: 0) {
-            pageRow(languageManager.text("profile.page.progression"), action: onOpenProgression)
-            Rectangle().fill(DS.hairline).frame(height: 1).padding(.leading, 16)
             pageRow(languageManager.text("profile.page.antiScroll"), action: onOpenAntiScroll)
         }
         .background(RoundedRectangle(cornerRadius: 20, style: .continuous).fill(DS.surface))
@@ -491,11 +497,10 @@ extension ProfileListKind {
     }
 }
 
-private extension String {
-    var lowercasedFirst: String {
-        guard let first = first else { return self }
-        return first.lowercased() + dropFirst()
-    }
+/// Le @ d'un lien d'ami à confirmer, présenté en feuille.
+private struct FriendLinkTarget: Identifiable {
+    let handle: String
+    var id: String { handle }
 }
 
 /// Une liste complète du profil (À lire, Lus, Aimés).

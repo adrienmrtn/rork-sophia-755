@@ -13,6 +13,15 @@ struct DuelLeagueRoadView: View {
 
     private var currentPosition: Int { home.currentLeague?.position ?? 1 }
 
+    /// Où en est le joueur dans sa ligue : ses trophées, la jauge et la ligue suivante.
+    private var standing: DuelLeagueStanding {
+        DuelLeagueStanding(
+            trophies: home.profile.trophies,
+            progress: home.leagueProgress(forTrophies: home.profile.trophies),
+            next: home.nextLeague(after: home.currentLeague)
+        )
+    }
+
     var body: some View {
         ScrollViewReader { proxy in
             ScrollView {
@@ -38,8 +47,12 @@ struct DuelLeagueRoadView: View {
         .safeAreaInset(edge: .top, spacing: 0) { topBar }
         .background(DS.canvas.ignoresSafeArea())
         .fullScreenCover(item: $preview) { league in
-            DuelLeaguePreview(league: league, reached: league.position <= currentPosition)
-                .sophiaColorScheme()
+            DuelLeaguePreview(
+                league: league,
+                reached: league.position <= currentPosition,
+                standing: league.position == currentPosition ? standing : nil
+            )
+            .sophiaColorScheme()
         }
     }
 
@@ -125,17 +138,26 @@ struct DuelLeagueRoadView: View {
                     .foregroundStyle(.white)
                     .lineLimit(1)
                     .minimumScaleFactor(0.6)
-                HStack(spacing: 8) {
-                    DuelTrophyCount(value: league.minTrophies, size: 14, color: .white)
-                    if !reached {
-                        Image(systemName: "lock.fill")
-                            .font(.system(size: 11, weight: .bold))
-                            .foregroundStyle(.white.opacity(0.7))
-                    }
-                }
                 if isCurrent {
+                    // Sa propre ligue : les trophées du joueur (et non le seuil de la ligue, 0
+                    // pour la première), puis le seuil de la suivante au bout de la jauge.
+                    HStack(spacing: 8) {
+                        DuelTrophyCount(value: home.profile.trophies, size: 15, color: .white)
+                        Spacer(minLength: 0)
+                        if let next = home.nextLeague(after: league) {
+                            DuelTrophyCount(value: next.minTrophies, size: 13, color: .white.opacity(0.75))
+                        }
+                    }
                     DuelProgressBar(progress: home.leagueProgress(forTrophies: home.profile.trophies), height: 8)
-                        .padding(.top, 2)
+                } else {
+                    HStack(spacing: 8) {
+                        DuelTrophyCount(value: league.minTrophies, size: 14, color: .white)
+                        if !reached {
+                            Image(systemName: "lock.fill")
+                                .font(.system(size: 11, weight: .bold))
+                                .foregroundStyle(.white.opacity(0.7))
+                        }
+                    }
                 }
             }
             .padding(14)
@@ -159,12 +181,23 @@ struct DuelLeagueRoadView: View {
     }
 }
 
-/// Une ligue en grand : son illustration plein écran, son nom et son seuil de trophées.
+/// Où en est le joueur dans sa ligue : ce que la ligue en grand montre quand c'est la sienne.
+nonisolated struct DuelLeagueStanding: Sendable, Equatable {
+    let trophies: Int
+    let progress: Double
+    let next: DuelLeague?
+}
+
+/// Une ligue en grand : son illustration plein écran, son nom et son seuil de trophées. Pour la
+/// ligue du joueur, ses propres trophées et sa jauge passent devant : le seuil seul (0 pour la
+/// première ligue) se lisait comme « tu as 0 trophée ».
 struct DuelLeaguePreview: View {
     @Environment(LanguageManager.self) private var languageManager
     @Environment(\.dismiss) private var dismiss
     let league: DuelLeague
     let reached: Bool
+    /// Renseigné seulement pour la ligue du joueur.
+    var standing: DuelLeagueStanding? = nil
 
     @State private var revealed = false
 
@@ -206,12 +239,33 @@ struct DuelLeaguePreview: View {
                     .foregroundStyle(.white)
                     .lineLimit(2)
                     .minimumScaleFactor(0.6)
-                HStack(spacing: 10) {
-                    DuelTrophyCount(value: league.minTrophies, size: 18, color: .white)
-                    if !reached {
-                        Image(systemName: "lock.fill")
-                            .font(.system(size: 13, weight: .bold))
-                            .foregroundStyle(.white.opacity(0.75))
+                if let standing {
+                    caption("duel.league.yourTrophies")
+                    DuelTrophyCount(value: standing.trophies, size: 26, color: .white)
+                    DuelProgressBar(progress: standing.progress)
+                    Group {
+                        if let next = standing.next {
+                            Text(String(
+                                format: languageManager.text("duel.league.toNext"),
+                                max(next.minTrophies - standing.trophies, 0),
+                                DuelFormat.leagueName(next, language: languageManager.current)
+                            ))
+                        } else {
+                            Text(languageManager.text("duel.league.top"))
+                        }
+                    }
+                    .font(DS.sans(.footnote, .semibold))
+                    .foregroundStyle(.white.opacity(0.85))
+                    .fixedSize(horizontal: false, vertical: true)
+                } else {
+                    caption("duel.league.required")
+                    HStack(spacing: 10) {
+                        DuelTrophyCount(value: league.minTrophies, size: 18, color: .white)
+                        if !reached {
+                            Image(systemName: "lock.fill")
+                                .font(.system(size: 13, weight: .bold))
+                                .foregroundStyle(.white.opacity(0.75))
+                        }
                     }
                 }
             }
@@ -221,5 +275,13 @@ struct DuelLeaguePreview: View {
         .onAppear {
             withAnimation(.easeOut(duration: 0.7)) { revealed = true }
         }
+    }
+
+    /// La petite ligne qui dit ce que compte le nombre de trophées en dessous.
+    private func caption(_ key: String) -> some View {
+        Text(languageManager.text(key))
+            .font(DS.sans(.footnote, .semibold))
+            .foregroundStyle(.white.opacity(0.75))
+            .padding(.top, 4)
     }
 }

@@ -1,10 +1,10 @@
 import SwiftUI
 
 /// L'onglet Explorer, variante « univers » de la maquette : la recherche (cours, créateurs,
-/// termes du glossaire), l'entrée du Parcours, les événements (en cours, puis terminés en gris),
-/// les sujets qu'on cherche beaucoup cette semaine, la grille des univers
-/// (les grandes sous-catégories du catalogue, avec une couverture), et les créateurs à suivre
-/// en carrousel. La rangée « En moins d'une minute » arrivera avec les vidéos (prompt 10).
+/// termes du glossaire), les événements (en cours, puis terminés en gris), les sujets qu'on
+/// cherche beaucoup cette semaine, la grille des univers (les grandes sous-catégories du
+/// catalogue, avec une couverture), les créateurs à suivre en carrousel et, tout en bas,
+/// l'entrée du Parcours. La rangée « En moins d'une minute » arrivera avec les vidéos (prompt 10).
 struct ExploreView: View {
     @Environment(LanguageManager.self) private var languageManager
     let progressManager: ProgressManager
@@ -38,13 +38,13 @@ struct ExploreView: View {
                     results
                         .padding(.horizontal, 20)
                 } else {
-                    pathCard
-                        .padding(.horizontal, 20)
                     eventsSection
                     trendingSection
                     universesSection
                         .padding(.horizontal, 20)
                     creatorsCarousel
+                    pathCard
+                        .padding(.horizontal, 20)
                 }
             }
             .padding(.vertical, 8)
@@ -67,41 +67,60 @@ struct ExploreView: View {
         return (levels.first { !$0.isPassed } ?? levels.last)?.number ?? 1
     }
 
-    /// L'entrée du Parcours, qui n'a plus d'onglet à lui.
+    /// L'entrée du Parcours, qui n'a plus d'onglet à lui : tout en bas de la page, sur fond marine,
+    /// avec son illustration en papier découpé (`path_poster`, même direction que le site).
     private var pathCard: some View {
         Button {
             UIImpactFeedbackGenerator(style: .light).impactOccurred()
             onOpenPath()
         } label: {
-            HStack(spacing: 14) {
-                ZStack {
-                    RoundedRectangle(cornerRadius: 14, style: .continuous).fill(.white.opacity(0.16))
-                    Image(systemName: "point.bottomleft.forward.to.point.topright.scurvepath.fill")
-                        .font(.system(size: 20, weight: .semibold))
-                        .foregroundStyle(DS.warm)
-                }
-                .frame(width: 48, height: 48)
-                VStack(alignment: .leading, spacing: 3) {
-                    Text(languageManager.text("path.title"))
-                        .font(DS.title(.title3, .heavy))
-                        .foregroundStyle(.white)
+            VStack(alignment: .leading, spacing: 6) {
+                Text(languageManager.text("path.title"))
+                    .font(DS.title(.title2, .heavy))
+                    .foregroundStyle(.white)
+                    .fixedSize(horizontal: false, vertical: true)
+                Text(languageManager.text("explore.path.subtitle"))
+                    .font(DS.sans(.subheadline))
+                    .foregroundStyle(.white.opacity(0.85))
+                    .lineSpacing(2)
+                    .multilineTextAlignment(.leading)
+                    .fixedSize(horizontal: false, vertical: true)
+                HStack(spacing: 6) {
                     Text(String(format: languageManager.text("path.levelCaption"), currentPathLevel))
-                        .font(DS.sans(.subheadline, .semibold))
-                        .foregroundStyle(.white.opacity(0.82))
+                        .font(DS.sans(.footnote, .bold))
+                        .lineLimit(1)
+                    Image(systemName: "chevron.forward")
+                        .font(.system(size: 11, weight: .bold))
                 }
-                Spacer(minLength: 4)
-                Image(systemName: "chevron.forward")
-                    .font(.system(size: 14, weight: .bold))
-                    .foregroundStyle(.white.opacity(0.9))
+                .foregroundStyle(EventPalette.navy)
+                .padding(.horizontal, 12)
+                .frame(height: 32)
+                .background(Capsule().fill(EventPalette.saffron))
+                .padding(.top, 6)
             }
             .padding(16)
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .background(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous).fill(DS.accent))
+            .padding(.trailing, Self.pathPosterWidth)
+            .frame(maxWidth: .infinity, minHeight: 148, alignment: .leading)
+            .background(alignment: .trailing) {
+                Color.clear
+                    .frame(width: Self.pathPosterWidth)
+                    .overlay {
+                        Image("path_poster")
+                            .resizable()
+                            .scaledToFill()
+                    }
+                    .clipped()
+                    .accessibilityHidden(true)
+            }
+            .background(EventPalette.navy)
+            .clipShape(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
             .dsSoftShadow()
             .contentShape(Rectangle())
         }
         .buttonStyle(.plain)
     }
+
+    private static let pathPosterWidth: CGFloat = 128
 
     // MARK: - Événements
 
@@ -111,15 +130,14 @@ struct ExploreView: View {
         var id: String { campaign.slug }
     }
 
-    /// Les événements publiés déjà commencés : ceux en cours d'abord (le plus proche de sa fin
-    /// en tête), puis les terminés, du plus récent au plus ancien, grisés.
+    /// Les événements que le serveur sert (publiés, dans la région du téléphone) : ceux en cours
+    /// d'abord (le plus proche de sa fin en tête), puis les terminés, du plus récent au plus
+    /// ancien, grisés. Un événement terminé reste là tant qu'il est en ligne et disparaît quand
+    /// il n'est plus publié ; ceux qui n'ont pas commencé ne sont pas montrés.
     private var events: [ExploreEvent] {
         let now = Date()
-        let active = CampaignStore.active(on: now)
-        let ended = CampaignStore.all
-            .filter { !$0.isActive(on: now) && ($0.startDate ?? .distantFuture) <= now }
-            .sorted { ($0.endDate ?? .distantPast) > ($1.endDate ?? .distantPast) }
-        return active.map { ExploreEvent(campaign: $0, ended: false) } + ended.map { ExploreEvent(campaign: $0, ended: true) }
+        return CampaignStore.active(on: now).map { ExploreEvent(campaign: $0, ended: false) }
+            + CampaignStore.ended(on: now).map { ExploreEvent(campaign: $0, ended: true) }
     }
 
     @ViewBuilder
@@ -136,63 +154,74 @@ struct ExploreView: View {
                         }
                     }
                     .padding(.horizontal, 20)
+                    .padding(.bottom, 8)
                 }
                 .scrollIndicators(.hidden)
             }
         }
     }
 
+    private static let eventCardWidth: CGFloat = 248
+
+    /// Une carte d'événement du carrousel. Toutes ont la même taille : l'illustration a une
+    /// hauteur fixe et chaque ligne de texte réserve sa place (le titre toujours deux lignes).
     private func eventCard(_ campaign: Campaign, ended: Bool) -> some View {
-        Button {
+        let courses = campaign.courseIds.compactMap { ContentCatalog.course(withId: $0) }
+        return Button {
             UIImpactFeedbackGenerator(style: .light).impactOccurred()
             onOpenCampaign(campaign)
         } label: {
             VStack(alignment: .leading, spacing: 0) {
-                ZStack {
-                    DS.accent
-                    if let imageUrl = campaign.imageUrl {
-                        RemoteImage(url: imageUrl)
-                    } else {
-                        Image(systemName: campaign.symbol ?? "sparkles")
-                            .font(.system(size: 34, weight: .semibold))
-                            .foregroundStyle(DS.warm)
+                Color.clear
+                    .frame(width: Self.eventCardWidth, height: 140)
+                    .overlay { EventArtwork(campaign: campaign, courses: courses) }
+                    .overlay(alignment: .topLeading) {
+                        if ended {
+                            EventPill(text: languageManager.text("event.ended"), style: .dark)
+                                .padding(10)
+                        }
                     }
-                }
-                .frame(width: 240, height: 120)
-                .clipped()
+                    .clipped()
                 VStack(alignment: .leading, spacing: 4) {
                     Text(eventDates(campaign, ended: ended))
-                        .font(DS.sans(.caption, .semibold))
+                        .font(DS.sans(.caption, .bold))
                         .foregroundStyle(ended ? DS.inkTertiary : DS.accentSoft)
                         .lineLimit(1)
                         .minimumScaleFactor(0.8)
                     Text(campaign.title(for: language))
                         .font(DS.title(.headline, .heavy))
                         .foregroundStyle(DS.ink)
-                        .lineLimit(2)
+                        .lineLimit(2, reservesSpace: true)
                         .multilineTextAlignment(.leading)
+                    Text(String(format: languageManager.text("event.card.coursesToRead"), courses.count))
+                        .font(DS.sans(.caption))
+                        .foregroundStyle(DS.inkSecondary)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.8)
                 }
                 .padding(12)
-                .frame(width: 240, alignment: .leading)
+                .frame(width: Self.eventCardWidth, alignment: .leading)
             }
             .background(DS.surface)
             .clipShape(RoundedRectangle(cornerRadius: 18, style: .continuous))
             .overlay(RoundedRectangle(cornerRadius: 18, style: .continuous).strokeBorder(DS.hairline, lineWidth: 1))
             // Terminé : la carte passe en gris et s'efface un peu, mais reste ouvrable.
             .saturation(ended ? 0 : 1)
-            .opacity(ended ? 0.55 : 1)
+            .opacity(ended ? 0.6 : 1)
             .contentShape(Rectangle())
         }
         .buttonStyle(.plain)
     }
 
+    /// « Jusqu'au 30 nov. » pour un événement en cours, « 1 nov. – 30 nov. » pour un terminé.
+    /// Jamais vide, pour que la ligne garde sa hauteur.
     private func eventDates(_ campaign: Campaign, ended: Bool) -> String {
-        guard let end = campaign.endDate else { return "" }
+        guard let end = campaign.endDate else { return " " }
         if !ended {
-            return String(format: languageManager.text("event.card.until"), NewGenFormat.shortDay(end, language: language))
+            return String(format: languageManager.text("event.until"), NewGenFormat.shortDay(end, language: language))
         }
         guard let start = campaign.startDate else { return NewGenFormat.shortDay(end, language: language) }
-        return String(format: languageManager.text("event.page.dates"), NewGenFormat.shortDay(start, language: language), NewGenFormat.shortDay(end, language: language))
+        return "\(NewGenFormat.shortDay(start, language: language)) – \(NewGenFormat.shortDay(end, language: language))"
     }
 
     // MARK: - Recherche

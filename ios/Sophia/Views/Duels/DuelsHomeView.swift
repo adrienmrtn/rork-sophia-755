@@ -17,6 +17,29 @@ struct DuelsHomeView: View {
     /// L'ami dont le profil est ouvert depuis le classement.
     @State private var selectedFriend: DuelLeaderboardEntry?
     @State private var playPulse = false
+    /// Nombre de parties montrées dans « Derniers duels » : cinq, puis cinq de plus à la demande.
+    @State private var recentShown = DuelsHomeView.recentPage
+    /// L'anneau de réussite se dessine à la première apparition des statistiques.
+    @State private var statsRevealed = false
+    /// Au retour d'une victoire, la carte de ligue montre ces valeurs le temps que la jauge se
+    /// remplisse de l'ancien total de trophées au nouveau.
+    @State private var heroGain: HeroGain?
+    @State private var heroPulse = false
+    @State private var showGainChip = false
+    @State private var gainTask: Task<Void, Never>?
+    /// Change pour ramener la page en haut, sur la carte de ligue.
+    @State private var scrollTopToken = 0
+
+    private static let recentPage = 5
+    private static let topAnchor = "duels.top"
+
+    /// Ce que la carte de ligue affiche pendant l'animation d'une victoire.
+    private struct HeroGain: Equatable {
+        var trophies: Int
+        var league: DuelLeague?
+        var progress: Double
+        let delta: Int
+    }
 
     private var handle: String {
         service.home?.handle ?? SocialService.shared.myHandle ?? "you"
@@ -69,6 +92,15 @@ struct DuelsHomeView: View {
                 await service.refreshLeaderboard()
             }
         }
+        .onChange(of: showFlow) { _, shown in
+            // Dès que l'écran de partie se referme (pas à la fin de sa fermeture) : la carte de
+            // ligue repart de l'ancien total avant d'être visible.
+            if shown {
+                stopLeagueGain()
+            } else {
+                startLeagueGain()
+            }
+        }
         .fullScreenCover(isPresented: $showFlow) {
             DuelFlowView(handle: handle, avatarId: progressManager.avatarId, service: service)
                 .sophiaColorScheme()
@@ -90,39 +122,137 @@ struct DuelsHomeView: View {
     // MARK: - Page
 
     private func content(_ home: DuelHome) -> some View {
-        ScrollView {
-            VStack(alignment: .leading, spacing: 22) {
-                HStack(alignment: .center) {
-                    Text(languageManager.text("tab.duels"))
-                        .font(DS.title(.largeTitle, .heavy))
-                        .foregroundStyle(DS.ink)
-                    Spacer()
-                    DuelTrophyCount(value: home.profile.trophies, size: 17)
-                        .padding(.horizontal, 14)
-                        .padding(.vertical, 8)
-                        .background(Capsule().fill(DS.surface))
-                        .overlay(Capsule().strokeBorder(DS.hairline, lineWidth: 1))
-                }
+        ScrollViewReader { proxy in
+            ScrollView {
+                VStack(alignment: .leading, spacing: 22) {
+                    HStack(alignment: .center) {
+                        Text(languageManager.text("tab.duels"))
+                            .font(DS.title(.largeTitle, .heavy))
+                            .foregroundStyle(DS.ink)
+                        Spacer()
+                        DuelTrophyCount(value: heroGain?.trophies ?? home.profile.trophies, size: 17)
+                            .padding(.horizontal, 14)
+                            .padding(.vertical, 8)
+                            .background(Capsule().fill(DS.surface))
+                            .overlay(Capsule().strokeBorder(DS.hairline, lineWidth: 1))
+                    }
+                    .id(Self.topAnchor)
 
-                leagueHero(home)
-                playButton
-                stats(home.profile)
-                leaderboardSection
-                if !home.recent.isEmpty {
-                    recentSection(home.recent)
+                    leagueHero(home)
+                    playButton
+                    stats(home.profile)
+                    leaderboardSection
+                    if !home.recent.isEmpty {
+                        recentSection(home.recent)
+                    }
                 }
+                .padding(.horizontal, 20)
+                .padding(.top, 12)
+                .padding(.bottom, 28)
             }
-            .padding(.horizontal, 20)
-            .padding(.top, 12)
-            .padding(.bottom, 28)
+            .refreshable { await refresh() }
+            .onChange(of: scrollTopToken) { _, _ in
+                proxy.scrollTo(Self.topAnchor, anchor: .top)
+            }
         }
-        .refreshable { await refresh() }
+    }
+
+    // MARK: - Retour d'une victoire
+
+    /// Au retour d'une partie gagnée : la jauge de ligue se remplit de l'ancien total au nouveau,
+    /// avec une vibration à chaque cran et une salve si une ligue tombe. Une seule fois : le
+    /// service oublie le gain dès qu'il est pris.
+    private func startLeagueGain() {
+        // Le gain doit mener au total que la page affiche : sinon (résultat arrivé après coup,
+        // autre partie entre-temps) on ne rejoue rien.
+        guard let gain = service.takePendingLeagueGain(), gain.after > gain.before,
+              let home = service.home, home.profile.trophies == gain.after else { return }
+        gainTask?.cancel()
+        let league = home.league(forTrophies: gain.before)
+        var progress = 0.0
+        if let league {
+            progress = home.progress(forTrophies: gain.before, in: league)
+        }
+        heroGain = HeroGain(trophies: gain.before, league: league, progress: progress, delta: gain.after - gain.before)
+        showGainChip = false
+        scrollTopToken += 1
+        gainTask = Task { await playLeagueGain(gain, home: home) }
+    }
+
+    private func stopLeagueGain() {
+        gainTask?.cancel()
+        gainTask = nil
+        heroGain = nil
+        heroPulse = false
+        showGainChip = false
+    }
+
+    private func playLeagueGain(_ gain: DuelLeagueGain, home: DuelHome) async {
+        // Le temps que l'écran de partie finisse de se refermer.
+        try? await Task.sleep(for: .seconds(0.75))
+        guard !Task.isCancelled else { return }
+        withAnimation(.spring(response: 0.4, dampingFraction: 0.55)) { showGainChip = true }
+
+        var league = home.league(forTrophies: gain.before)
+        let delta = gain.after - gain.before
+        let steps = min(delta, 30)
+        if steps > 0 {
+            for step in 1...steps {
+                let fraction = Double(step) / Double(steps)
+                let eased = 1 - (1 - fraction) * (1 - fraction)
+                let value = gain.before + Int((Double(delta) * eased).rounded())
+                // Un seuil tombe : la jauge va au bout, la ligue suivante prend la carte.
+                while let current = league, let next = home.nextLeague(after: current), value >= next.minTrophies {
+                    withAnimation(.easeOut(duration: 0.3)) {
+                        heroGain?.trophies = next.minTrophies
+                        heroGain?.progress = 1
+                    }
+                    try? await Task.sleep(for: .seconds(0.4))
+                    guard !Task.isCancelled else { return }
+                    DuelHaptics.promotion()
+                    league = next
+                    heroGain?.progress = 0
+                    withAnimation(.spring(response: 0.45, dampingFraction: 0.5)) {
+                        heroGain?.league = next
+                        heroPulse = true
+                    }
+                    try? await Task.sleep(for: .seconds(0.45))
+                    guard !Task.isCancelled else { return }
+                    withAnimation(.spring(response: 0.5, dampingFraction: 0.7)) { heroPulse = false }
+                    try? await Task.sleep(for: .seconds(0.45))
+                    guard !Task.isCancelled else { return }
+                }
+                var progress = 0.0
+                if let current = league {
+                    progress = home.progress(forTrophies: value, in: current)
+                }
+                let reached = progress
+                withAnimation(.linear(duration: 0.1)) {
+                    heroGain?.trophies = value
+                    heroGain?.progress = reached
+                }
+                DuelHaptics.trophyTick(progress: fraction)
+                try? await Task.sleep(for: .milliseconds(34 + Int(56 * fraction)))
+                guard !Task.isCancelled else { return }
+            }
+        }
+        DuelHaptics.trophyLanded()
+        try? await Task.sleep(for: .seconds(1.8))
+        guard !Task.isCancelled else { return }
+        // La carte rend la main au profil, qui porte déjà le nouveau total.
+        withAnimation(.easeInOut(duration: 0.35)) {
+            showGainChip = false
+            heroGain = nil
+        }
     }
 
     /// La carte de ligue : l'illustration, le nom, les trophées et la jauge vers la suivante.
     private func leagueHero(_ home: DuelHome) -> some View {
-        let league = home.currentLeague
+        let trophies = heroGain?.trophies ?? home.profile.trophies
+        let league = heroGain?.league ?? home.currentLeague
         let next = home.nextLeague(after: league)
+        let progress = heroGain?.progress ?? home.leagueProgress(forTrophies: trophies)
+        let gained = heroGain?.delta ?? 0
         return Button {
             DuelHaptics.tap()
             showLeagues = true
@@ -145,12 +275,30 @@ struct DuelsHomeView: View {
                         .foregroundStyle(.white)
                         .lineLimit(1)
                         .minimumScaleFactor(0.6)
-                    DuelProgressBar(progress: home.leagueProgress(forTrophies: home.profile.trophies))
+                    // Les trophées du joueur à gauche, le seuil de la ligue suivante à droite.
+                    HStack(spacing: 8) {
+                        DuelTrophyCount(value: trophies, size: 17, color: .white)
+                        if showGainChip, gained > 0 {
+                            Text("+\(gained)")
+                                .font(.jakarta(size: 14, weight: .heavy))
+                                .monospacedDigit()
+                                .foregroundStyle(DuelPalette.night)
+                                .padding(.horizontal, 9)
+                                .padding(.vertical, 3)
+                                .background(Capsule().fill(DuelPalette.saffron))
+                                .transition(.scale(scale: 0.3).combined(with: .opacity))
+                        }
+                        Spacer(minLength: 0)
+                        if let next {
+                            DuelTrophyCount(value: next.minTrophies, size: 14, color: .white.opacity(0.75))
+                        }
+                    }
+                    DuelProgressBar(progress: progress)
                     HStack(spacing: 6) {
                         if let next {
                             Text(String(
                                 format: languageManager.text("duel.league.toNext"),
-                                max(next.minTrophies - home.profile.trophies, 0),
+                                max(next.minTrophies - trophies, 0),
                                 DuelFormat.leagueName(next, language: languageManager.current)
                             ))
                         } else {
@@ -179,7 +327,13 @@ struct DuelsHomeView: View {
                 .background(Capsule().fill(DuelPalette.night.opacity(0.55)))
                 .padding(14)
             }
+            .overlay(
+                RoundedRectangle(cornerRadius: 28, style: .continuous)
+                    .strokeBorder(DuelPalette.saffron, lineWidth: 3)
+                    .opacity(heroPulse ? 1 : 0)
+            )
             .dsSoftShadow()
+            .scaleEffect(heroPulse ? 1.03 : 1)
         }
         .buttonStyle(SoftPressButtonStyle())
     }
@@ -210,63 +364,153 @@ struct DuelsHomeView: View {
 
     // MARK: - Statistiques
 
+    /// Les statistiques en une carte : l'anneau de réussite et le partage victoires / défaites
+    /// en haut, les séries et le record de trophées en bas.
     private func stats(_ profile: DuelProfile) -> some View {
         VStack(alignment: .leading, spacing: 12) {
             sectionTitle("duel.stats.title")
-            HStack(spacing: 10) {
-                statTile(value: "\(profile.games)", label: "duel.stats.games")
-                statTile(value: "\(profile.wins)", label: "duel.stats.wins", color: DS.success)
-                statTile(value: "\(profile.losses)", label: "duel.stats.losses", color: DS.danger)
-                statTile(value: profile.winRate.map { "\($0) %" } ?? "–", label: "duel.stats.winRate")
+            VStack(spacing: 0) {
+                HStack(alignment: .center, spacing: 18) {
+                    winRateRing(profile)
+                    VStack(alignment: .leading, spacing: 10) {
+                        HStack(alignment: .firstTextBaseline, spacing: 6) {
+                            Text("\(profile.games)")
+                                .font(.jakarta(size: 26, weight: .heavy))
+                                .monospacedDigit()
+                                .foregroundStyle(DS.ink)
+                            Text(languageManager.text("duel.stats.games"))
+                                .font(DS.sans(.subheadline, .semibold))
+                                .foregroundStyle(DS.inkSecondary)
+                                .lineLimit(1)
+                                .minimumScaleFactor(0.7)
+                        }
+                        if profile.games > 0 {
+                            winLossBar(profile)
+                            HStack(spacing: 8) {
+                                splitLegend(color: DS.success, value: profile.wins, label: "duel.stats.wins")
+                                Spacer(minLength: 4)
+                                splitLegend(color: DS.danger, value: profile.losses, label: "duel.stats.losses")
+                            }
+                        } else {
+                            Text(languageManager.text("duel.stats.empty"))
+                                .font(DS.sans(.footnote, .medium))
+                                .foregroundStyle(DS.inkSecondary)
+                                .fixedSize(horizontal: false, vertical: true)
+                        }
+                    }
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                }
+                .padding(16)
+
+                Rectangle().fill(DS.hairline).frame(height: 1)
+
+                HStack(alignment: .top, spacing: 0) {
+                    statCell(systemImage: "flame.fill", tint: DuelPalette.coral, value: "\(profile.winStreak)", label: "duel.stats.streak")
+                    Rectangle().fill(DS.hairline).frame(width: 1, height: 44)
+                    statCell(systemImage: "bolt.fill", tint: DuelPalette.saffron, value: "\(profile.bestWinStreak)", label: "duel.stats.bestStreak")
+                    Rectangle().fill(DS.hairline).frame(width: 1, height: 44)
+                    statCell(systemImage: "trophy.fill", tint: DuelPalette.saffron, value: profile.bestTrophies.formatted(language: languageManager.current), label: "duel.stats.best")
+                }
+                .padding(.vertical, 14)
             }
-            HStack(spacing: 10) {
-                statRow(systemImage: "flame.fill", label: "duel.stats.streak", value: "\(profile.winStreak)")
-                statRow(systemImage: "trophy.fill", label: "duel.stats.best", value: profile.bestTrophies.formatted(language: languageManager.current))
-            }
+            .clipShape(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
+            .dsCard(padding: 0)
+            .onAppear { statsRevealed = true }
         }
     }
 
-    private func statTile(value: String, label: String, color: Color = DS.ink) -> some View {
-        VStack(spacing: 4) {
-            Text(value)
-                .font(.jakarta(size: 22, weight: .heavy))
+    /// L'anneau de réussite : la part de victoires en vert, le reste en rouge pâle.
+    private func winRateRing(_ profile: DuelProfile) -> some View {
+        let fraction = profile.games > 0 ? min(max(Double(profile.wins) / Double(profile.games), 0), 1) : 0
+        return ZStack {
+            Circle()
+                .stroke(profile.games > 0 ? DS.danger.opacity(0.22) : DS.hairline, lineWidth: 9)
+            Circle()
+                .trim(from: 0, to: statsRevealed ? fraction : 0)
+                .stroke(DS.success, style: StrokeStyle(lineWidth: 9, lineCap: .round))
+                .rotationEffect(.degrees(-90))
+                .animation(.easeOut(duration: 0.9), value: statsRevealed)
+                .animation(.easeOut(duration: 0.6), value: fraction)
+            VStack(spacing: 1) {
+                Text(profile.winRate.map { "\($0) %" } ?? "–")
+                    .font(.jakarta(size: 20, weight: .heavy))
+                    .monospacedDigit()
+                    .foregroundStyle(DS.ink)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.6)
+                Text(languageManager.text("duel.stats.winRate"))
+                    .font(DS.sans(.caption2, .semibold))
+                    .foregroundStyle(DS.inkTertiary)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.6)
+            }
+            .padding(.horizontal, 14)
+        }
+        .frame(width: 100, height: 100)
+        .accessibilityElement(children: .combine)
+    }
+
+    /// La barre partagée : victoires à gauche, défaites à droite, à proportion.
+    private func winLossBar(_ profile: DuelProfile) -> some View {
+        let total = max(profile.wins + profile.losses, 1)
+        let share = Double(profile.wins) / Double(total)
+        return GeometryReader { proxy in
+            let gap: CGFloat = profile.wins > 0 && profile.losses > 0 ? 3 : 0
+            let winsWidth = max((proxy.size.width - gap) * share, 0)
+            HStack(spacing: gap) {
+                if profile.wins > 0 {
+                    Capsule().fill(DS.success).frame(width: winsWidth)
+                }
+                if profile.losses > 0 {
+                    Capsule().fill(DS.danger)
+                }
+                if profile.wins == 0 && profile.losses == 0 {
+                    Capsule().fill(DS.hairline)
+                }
+            }
+        }
+        .frame(height: 8)
+        .accessibilityHidden(true)
+    }
+
+    private func splitLegend(color: Color, value: Int, label: String) -> some View {
+        HStack(spacing: 5) {
+            Circle().fill(color).frame(width: 7, height: 7)
+            Text("\(value)")
+                .font(DS.sans(.footnote, .bold))
                 .monospacedDigit()
-                .foregroundStyle(color)
-                .lineLimit(1)
-                .minimumScaleFactor(0.6)
+                .foregroundStyle(DS.ink)
             Text(languageManager.text(label))
-                .font(DS.sans(.caption2, .semibold))
-                .foregroundStyle(DS.inkTertiary)
-                .lineLimit(1)
-                .minimumScaleFactor(0.7)
-        }
-        .frame(maxWidth: .infinity)
-        .padding(.vertical, 14)
-        .background(RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous).fill(DS.surface))
-        .overlay(RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous).strokeBorder(DS.hairline, lineWidth: 1))
-    }
-
-    private func statRow(systemImage: String, label: String, value: String) -> some View {
-        HStack(spacing: 8) {
-            Image(systemName: systemImage)
-                .font(.system(size: 13, weight: .bold))
-                .foregroundStyle(DuelPalette.saffron)
-            Text(languageManager.text(label))
-                .font(DS.sans(.caption, .semibold))
+                .font(DS.sans(.caption, .medium))
                 .foregroundStyle(DS.inkSecondary)
                 .lineLimit(1)
                 .minimumScaleFactor(0.7)
-            Spacer(minLength: 4)
-            Text(value)
-                .font(DS.sans(.subheadline, .bold))
-                .monospacedDigit()
-                .foregroundStyle(DS.ink)
         }
-        .padding(.horizontal, 14)
-        .padding(.vertical, 12)
+    }
+
+    private func statCell(systemImage: String, tint: Color, value: String, label: String) -> some View {
+        VStack(spacing: 4) {
+            HStack(spacing: 5) {
+                Image(systemName: systemImage)
+                    .font(.system(size: 13, weight: .bold))
+                    .foregroundStyle(tint)
+                Text(value)
+                    .font(.jakarta(size: 19, weight: .heavy))
+                    .monospacedDigit()
+                    .foregroundStyle(DS.ink)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.6)
+            }
+            Text(languageManager.text(label))
+                .font(DS.sans(.caption2, .semibold))
+                .foregroundStyle(DS.inkTertiary)
+                .multilineTextAlignment(.center)
+                .lineLimit(2)
+                .minimumScaleFactor(0.8)
+        }
         .frame(maxWidth: .infinity)
-        .background(RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous).fill(DS.surface))
-        .overlay(RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous).strokeBorder(DS.hairline, lineWidth: 1))
+        .padding(.horizontal, 6)
+        .accessibilityElement(children: .combine)
     }
 
     private func sectionTitle(_ key: String) -> some View {
@@ -360,15 +604,41 @@ struct DuelsHomeView: View {
 
     // MARK: - Dernières parties
 
+    /// Les dernières parties : cinq d'abord, puis « Voir plus » en ajoute cinq à chaque fois
+    /// (le serveur en garde dix) ; une fois tout montré, le bouton replie la liste.
     private func recentSection(_ matches: [DuelRecentMatch]) -> some View {
-        VStack(alignment: .leading, spacing: 12) {
+        let shown = Array(matches.prefix(max(recentShown, Self.recentPage)))
+        let canExpand = shown.count < matches.count
+        let canCollapse = !canExpand && matches.count > Self.recentPage
+        return VStack(alignment: .leading, spacing: 12) {
             sectionTitle("duel.recent.title")
             VStack(spacing: 0) {
-                ForEach(Array(matches.enumerated()), id: \.element.id) { index, match in
+                ForEach(Array(shown.enumerated()), id: \.element.id) { index, match in
                     if index > 0 {
                         Rectangle().fill(DS.hairline).frame(height: 1)
                     }
                     recentRow(match)
+                }
+                if canExpand || canCollapse {
+                    Rectangle().fill(DS.hairline).frame(height: 1)
+                    Button {
+                        DuelHaptics.tap()
+                        withAnimation(.easeInOut(duration: 0.25)) {
+                            recentShown = canExpand ? shown.count + Self.recentPage : Self.recentPage
+                        }
+                    } label: {
+                        HStack(spacing: 6) {
+                            Text(languageManager.text(canExpand ? "duel.recent.more" : "duel.recent.less"))
+                            Image(systemName: canExpand ? "chevron.down" : "chevron.up")
+                                .font(.system(size: 11, weight: .heavy))
+                        }
+                        .font(DS.sans(.subheadline, .semibold))
+                        .foregroundStyle(DS.accentSoft)
+                        .frame(maxWidth: .infinity)
+                        .padding(.vertical, 13)
+                        .contentShape(Rectangle())
+                    }
+                    .buttonStyle(.plain)
                 }
             }
             .clipShape(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))

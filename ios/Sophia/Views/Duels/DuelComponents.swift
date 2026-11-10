@@ -236,6 +236,108 @@ enum DuelFormat {
     }
 }
 
+// MARK: - Images de question
+
+/// Les drapeaux hébergés sont des fichiers 640 × 800 où le drapeau est posé sur une marge beige
+/// (« papier », cuite dans l'image par scripts/duels_images.py) : affichés tels quels, ils
+/// gardent ce fond beige derrière eux, en clair comme en sombre. On ne peut pas réécrire les
+/// fichiers ; l'app rogne donc la marge et ne garde que le drapeau, posé à même la page.
+/// Une image sans cette marge (portrait, tableau, monument) ressort inchangée.
+enum DuelImageTrimmer {
+    private static let cache = NSCache<NSString, UIImage>()
+    /// Les adresses des images laissées telles quelles (rien à rogner).
+    private static let untouched = NSCache<NSString, NSNumber>()
+
+    /// L'image sans sa marge, et si elle a été rognée (un drapeau, à montrer avec un filet).
+    static func trimmed(_ image: UIImage, key: String) -> (image: UIImage, flat: Bool) {
+        let cacheKey = key as NSString
+        if let cached = cache.object(forKey: cacheKey) { return (cached, true) }
+        if untouched.object(forKey: cacheKey) != nil { return (image, false) }
+        guard let result = trim(image) else {
+            untouched.setObject(NSNumber(value: true), forKey: cacheKey)
+            return (image, false)
+        }
+        cache.setObject(result, forKey: cacheKey)
+        return (result, true)
+    }
+
+    /// La couleur de la marge (232, 228, 218), ou la même assombrie par l'ombre portée du drapeau.
+    private static func isPaper(_ red: UInt8, _ green: UInt8, _ blue: UInt8) -> Bool {
+        let level = Double(red) / 232
+        guard level >= 0.55, level <= 1.06 else { return false }
+        return abs(Double(green) / 228 - level) < 0.035 && abs(Double(blue) / 218 - level) < 0.045
+    }
+
+    private static func trim(_ image: UIImage) -> UIImage? {
+        guard let source = image.cgImage, source.width >= 64, source.height >= 64 else { return nil }
+        // Une copie réduite suffit à trouver les bords, à deux points près.
+        let width = 320
+        let height = max(Int((Double(source.height) / Double(source.width) * Double(width)).rounded()), 1)
+        var buffer = [UInt8](repeating: 0, count: width * height * 4)
+        let drawn: Bool = buffer.withUnsafeMutableBytes { bytes -> Bool in
+            guard let context = CGContext(
+                data: bytes.baseAddress,
+                width: width,
+                height: height,
+                bitsPerComponent: 8,
+                bytesPerRow: width * 4,
+                space: CGColorSpaceCreateDeviceRGB(),
+                bitmapInfo: CGImageAlphaInfo.noneSkipLast.rawValue
+            ) else { return false }
+            context.interpolationQuality = .medium
+            context.draw(source, in: CGRect(x: 0, y: 0, width: width, height: height))
+            return true
+        }
+        guard drawn else { return nil }
+        let pixels = buffer
+
+        // Le pourtour doit être de la marge : sinon l'image occupe tout son cadre, rien à rogner.
+        var ring = 0
+        var ringPaper = 0
+        var rows = [Int](repeating: 0, count: height)
+        var columns = [Int](repeating: 0, count: width)
+        for y in 0..<height {
+            for x in 0..<width {
+                let index = (y * width + x) * 4
+                let paper = isPaper(pixels[index], pixels[index + 1], pixels[index + 2])
+                if y < 2 || y >= height - 2 || x < 2 || x >= width - 2 {
+                    ring += 1
+                    if paper { ringPaper += 1 }
+                }
+                if !paper {
+                    rows[y] += 1
+                    columns[x] += 1
+                }
+            }
+        }
+        guard ring > 0, Double(ringPaper) / Double(ring) >= 0.97 else { return nil }
+
+        // Le drapeau : les lignes et les colonnes nettement hors marge (l'ombre n'en fait pas partie).
+        let rowFloor = Double(rows.max() ?? 0) * 0.4
+        let columnFloor = Double(columns.max() ?? 0) * 0.4
+        guard rowFloor > 0, columnFloor > 0,
+              let top = rows.firstIndex(where: { Double($0) >= rowFloor }),
+              let bottom = rows.lastIndex(where: { Double($0) >= rowFloor }),
+              let left = columns.firstIndex(where: { Double($0) >= columnFloor }),
+              let right = columns.lastIndex(where: { Double($0) >= columnFloor }),
+              bottom > top, right > left else { return nil }
+
+        // Retour aux points du fichier, trois de moins de chaque côté : le filet noir du bord part avec.
+        let scaleX = Double(source.width) / Double(width)
+        let scaleY = Double(source.height) / Double(height)
+        let inset = 3.0
+        let rect = CGRect(
+            x: Double(left) * scaleX + inset,
+            y: Double(top) * scaleY + inset,
+            width: Double(right + 1 - left) * scaleX - inset * 2,
+            height: Double(bottom + 1 - top) * scaleY - inset * 2
+        ).integral
+        guard rect.width >= Double(source.width) * 0.3, rect.height >= Double(source.height) * 0.12,
+              let cropped = source.cropping(to: rect) else { return nil }
+        return UIImage(cgImage: cropped, scale: image.scale, orientation: image.imageOrientation)
+    }
+}
+
 // MARK: - Boutons
 
 /// Le grand bouton des duels : un aplat safran posé sur une tranche plus sombre, qui s'enfonce

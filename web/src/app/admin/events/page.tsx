@@ -24,7 +24,7 @@ export default async function EventsPage({ searchParams }: PageProps<"/admin/eve
     <>
       <AdminHeader session={session} active="events" />
       <main className={`${container} flex flex-1 flex-col gap-6 pt-8 pb-20`}>
-        <AdminTitle title="Events" lead="Movember, a commemoration day, a thematic week: a collection of courses, a challenge, a badge, announced courses. Published events reach the apps within the hour, with no app update.">
+        <AdminTitle title="Events" lead="Movember, a commemoration day, a thematic week: a collection of courses, a challenge, a badge. Published events reach the apps within the hour, with no app update.">
           <ButtonLink href="/admin/events/new" className="h-11 px-5">
             New event
           </ButtonLink>
