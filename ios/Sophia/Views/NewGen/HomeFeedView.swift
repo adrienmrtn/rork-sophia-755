@@ -4,7 +4,7 @@ import SwiftUI
 /// défiler d'un geste vertical comme un réseau vidéo (la carte suivante dépasse un peu en bas
 /// pour dire qu'il y en a d'autres). L'en-tête et le segment « Pour toi / Abonnements » restent
 /// fixes en haut. « Pour toi » est le deck local de `HomeDeckBuilder`, avec l'événement en cours
-/// et l'invitation à créer glissés dedans ; « Abonnements », les cours des créateurs suivis.
+/// glissé dedans ; « Abonnements », les cours des créateurs suivis.
 ///
 /// La page courante compte une impression après une seconde, et un passage si on la quitte
 /// sans l'avoir ouverte (docs/events.md).
@@ -20,14 +20,11 @@ struct HomeFeedView: View {
 
     @State private var segment = 0
     @State private var deck: [Course] = []
-    @State private var inviteDismissed = HomeFeedView.isInviteDismissed()
     @State private var scrolledId: String?
     @State private var impressed: Set<String> = []
     @State private var opened: Set<String> = []
     @State private var skipped: Set<String> = []
     @State private var impressionTask: Task<Void, Never>?
-
-    private static let inviteDismissKey = "sophia_creator_invite_dismissed_at"
 
     /// Ce que la carte suivante laisse voir en bas de l'écran.
     private let peekHeight: CGFloat = 44
@@ -107,23 +104,15 @@ struct HomeFeedView: View {
                 .accessibilityLabel(Text("Sophia"))
             Spacer(minLength: 0)
             streakPill
-            RoundIconButton(
-                systemImage: "magnifyingglass",
-                accessibilityLabel: languageManager.text("tab.explore"),
-                action: onSearch
-            )
         }
     }
 
     private var streakPill: some View {
         HStack(spacing: 5) {
-            if progressManager.streak > 0 {
-                AnimatedFlameBadge(size: 16)
-            } else {
-                Image(systemName: "flame")
-                    .font(.system(size: 14, weight: .semibold))
-                    .foregroundStyle(DS.inkTertiary)
-            }
+            // Une flamme fixe : pleine et chaude quand la série est en cours, en creux sinon.
+            Image(systemName: progressManager.streak > 0 ? "flame.fill" : "flame")
+                .font(.system(size: 14, weight: .semibold))
+                .foregroundStyle(progressManager.streak > 0 ? DS.warm : DS.inkTertiary)
             Text("\(progressManager.streak)")
                 .font(DS.sans(.subheadline, .bold))
                 .foregroundStyle(DS.ink)
@@ -145,15 +134,12 @@ struct HomeFeedView: View {
         segment == 0 ? forYouItems : followingItems
     }
 
-    /// Le deck, l'événement en troisième position et l'invitation en septième.
+    /// Le deck, avec l'événement en troisième position.
     private var forYouItems: [FeedItem] {
         guard !deck.isEmpty else { return [.notice(.allCaughtUp)] }
         var items: [FeedItem] = deck.map { .course($0) }
         if let campaign = activeCampaign {
             items.insert(.campaign(campaign), at: min(2, items.count))
-        }
-        if !inviteDismissed, items.count >= 4 {
-            items.insert(.creatorInvite, at: min(6, items.count))
         }
         return items
     }
@@ -195,14 +181,8 @@ struct HomeFeedView: View {
                     onOpenCampaign(campaign)
                 }
             case .creatorInvite:
-                CreatorInviteCard(
-                    fillsPage: true,
-                    onBecomeCreator: onBecomeCreator,
-                    onLater: {
-                        UserDefaults.standard.set(Date().timeIntervalSince1970, forKey: Self.inviteDismissKey)
-                        withAnimation(.easeInOut(duration: 0.25)) { inviteDismissed = true }
-                    }
-                )
+                // L'invitation à écrire n'est plus glissée dans le fil.
+                EmptyView()
             case .video(let id):
                 VideoFeedCard(title: id)
             case .notice(let notice):
@@ -265,13 +245,6 @@ struct HomeFeedView: View {
         CourseImageMap.preloadImages(for: Array(deck.prefix(6)).map(\.id))
         CatalogStore.shared.prefetch(courseIds: Array(deck.prefix(8)).map(\.id), language: languageManager.current)
         restartAtTop()
-    }
-
-    /// Masquée pour deux semaines après « Plus tard ».
-    private static func isInviteDismissed() -> Bool {
-        let stamp = UserDefaults.standard.double(forKey: inviteDismissKey)
-        guard stamp > 0 else { return false }
-        return Date().timeIntervalSince1970 - stamp < 14 * 24 * 3_600
     }
 
     // MARK: - Abonnements

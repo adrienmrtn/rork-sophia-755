@@ -66,10 +66,25 @@ struct BlockContentView: View {
 /// La langue dans laquelle un cours a été écrit, quand ce n'est pas celle de l'app. Les cours
 /// de la maison sont écrits en français ; un cours de créateur porte la sienne.
 enum CourseOriginal {
+    /// Le code de la langue d'écriture : celui que porte le contenu, sinon celui que le serveur
+    /// donne pour le cours (`CatalogStore.courseOrigins`), sinon le français des cours maison.
+    static func code(of content: CourseContentV2) -> String {
+        content.originalLanguage ?? CatalogStore.shared.courseOrigins[content.id] ?? AppLanguage.french.rawValue
+    }
+
     static func language(of content: CourseContentV2) -> AppLanguage? {
-        let code = content.originalLanguage ?? AppLanguage.french.rawValue
+        let code = code(of: content)
         guard code != AppLanguage.currentPersisted().rawValue else { return nil }
         return AppLanguage(rawValue: code)
+    }
+
+    /// Le code à afficher dans « Traduit · original en … » : seulement quand le cours n'a pas
+    /// été écrit en français par la maison (langue portée par le contenu ou par le serveur) et
+    /// qu'on ne le lit pas dans cette langue.
+    static func translatedFromCode(of content: CourseContentV2) -> String? {
+        guard let code = content.originalLanguage ?? CatalogStore.shared.courseOrigins[content.id],
+              code != AppLanguage.currentPersisted().rawValue else { return nil }
+        return code
     }
 }
 
@@ -112,7 +127,7 @@ struct SectionHeaderV2: View {
                         onAuthorTap?(tapped)
                     }
                 }
-                if let code = content.originalLanguage, code != AppLanguage.currentPersisted().rawValue {
+                if let code = CourseOriginal.translatedFromCode(of: content) {
                     TranslatedFromLine(code: code, onShowOriginal: originalAction)
                 }
             }

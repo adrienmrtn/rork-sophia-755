@@ -1,9 +1,9 @@
 import Foundation
 
-/// Compteurs affichés sur les cartes, la page créateur et l'événement tant que le serveur ne
-/// les fournit pas (prompt 6). Ils sont faux mais stables : dérivés d'un hash FNV-1a de
-/// l'identifiant, donc identiques à chaque lancement et sur tous les appareils, comme
-/// `Course.readsCount`. Les gestes locaux (j'aime, suivre) s'ajoutent par-dessus.
+/// Compteurs affichés sur les cartes, la page créateur et l'événement. Les ouvertures et les
+/// j'aime des cours viennent du serveur (`CatalogStore.courseStats`) ; seuls les abonnés d'un
+/// créateur restent dérivés d'un hash FNV-1a stable. Les gestes locaux (j'aime, suivre)
+/// s'ajoutent par-dessus.
 enum LocalCounters {
     static func hash(_ text: String) -> UInt64 {
         var hash: UInt64 = 0xcbf29ce484222325
@@ -14,10 +14,10 @@ enum LocalCounters {
         return hash
     }
 
-    /// Entre 9 % et 16 % des lectures, arrondi à la dizaine.
-    static func likes(courseId: String, reads: Int) -> Int {
-        let ratio = 0.09 + Double(hash(courseId + "|likes") % 70) / 1_000
-        return max(10, Int(Double(reads) * ratio) / 10 * 10)
+    /// Les j'aime du cours tels que le serveur les donne (deuxième valeur de `stats`) ; 0 sans chiffre.
+    static func likes(courseId: String) -> Int {
+        let stats = CatalogStore.shared.courseStats[courseId] ?? []
+        return stats.count > 1 ? stats[1] : 0
     }
 
     /// Abonnés d'un créateur : entre 800 et 5 800, arrondi à la dizaine.
@@ -36,7 +36,14 @@ enum LocalCounters {
 extension Course {
     /// Nombre de « j'aime » affiché : le compteur local plus le geste de l'utilisateur.
     func likesCount(liked: Bool) -> Int {
-        LocalCounters.likes(courseId: id, reads: readsCount) + (liked ? 1 : 0)
+        LocalCounters.likes(courseId: id) + (liked ? 1 : 0)
+    }
+
+    /// « 1,2 k lectures · 96 j'aime » pour les lignes de liste ; `nil` tant que le serveur n'a
+    /// pas envoyé les compteurs (on n'affiche alors rien plutôt qu'un zéro).
+    func statsLine(liked: Bool, language: AppLanguage) -> String? {
+        guard let reads = realReadsCount else { return nil }
+        return "\(reads.compactCount) \(AppLocalizable.string("creator.stat.reads", language: language)) · \(likesCount(liked: liked).compactCount) \(AppLocalizable.string("common.likes", language: language))"
     }
 }
 

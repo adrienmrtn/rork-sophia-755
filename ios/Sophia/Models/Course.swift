@@ -241,32 +241,19 @@ nonisolated struct Course: Codable, Identifiable, Sendable, Equatable {
 }
 
 extension Course {
-    /// Nombre de lectures « social proof » (fictif mais stable) affiché sur chaque cours.
-    /// Dérivé d'un hash déterministe de `id` (FNV-1a) — indépendant du seed de hachage du
-    /// process, donc identique à chaque lancement et sur tous les appareils. Borné à
-    /// [7 000 ; 250 000], arrondi à la centaine pour rester crédible.
-    var readsCount: Int {
-        var hash: UInt64 = 0xcbf29ce484222325
-        for byte in id.utf8 {
-            hash ^= UInt64(byte)
-            hash = hash &* 0x100000001b3
-        }
-        let lower = 7_000
-        let upper = 250_000
-        let span = UInt64(upper - lower)
-        let value = lower + Int(hash % span)
-        return (value / 100) * 100
+    /// Les vraies ouvertures du cours, comptées par le serveur (manifeste du catalogue, clé
+    /// `stats`) ; `nil` tant que le chiffre n'est pas arrivé (ancien manifeste, premier lancement
+    /// hors ligne). Plus aucun chiffre inventé côté app.
+    var realReadsCount: Int? {
+        CatalogStore.shared.courseStats[id]?.first
     }
+
+    /// Les ouvertures du cours pour les tris et les totaux : le vrai chiffre, 0 s'il manque.
+    var readsCount: Int { realReadsCount ?? 0 }
 
     /// Version compacte pour l'affichage : « 7,2 k », « 48 k », « 132 k ».
     var readsCountShort: String {
-        let count = readsCount
-        if count < 10_000 {
-            let thousands = Double(count) / 1_000.0
-            let text = String(format: "%.1f", thousands).replacingOccurrences(of: ".", with: ",")
-            return "\(text) k"
-        }
-        return "\(count / 1_000) k"
+        readsCount.compactCount
     }
 
     /// Description sans balisage, pour les textes affichés tels quels. Les traductions

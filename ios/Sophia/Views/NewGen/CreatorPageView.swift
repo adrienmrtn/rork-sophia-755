@@ -150,7 +150,7 @@ struct CreatorPageView: View {
                         CompactCourseRow(
                             course: course,
                             meta: courseMeta(course, completed: completed),
-                            secondMeta: "\(course.readsCount.compactCount) \(languageManager.text("creator.stat.reads")) · \(course.likesCount(liked: progressManager.isLiked(course.id)).compactCount) \(languageManager.text("common.likes"))",
+                            secondMeta: course.statsLine(liked: progressManager.isLiked(course.id), language: languageManager.current),
                             onTap: { onOpenCourse(course) }
                         ) {
                             if completed { ReadCheck() }

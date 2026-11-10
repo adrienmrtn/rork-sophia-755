@@ -36,8 +36,8 @@ enum FeedNotice: String, Equatable {
 // MARK: - Carte cours
 
 /// La carte de cours de la maquette : couverture 16:9 avec la pastille de matière, titre,
-/// accroche, ligne créateur, puis lectures · j'aime · partager · durée. (Enregistrer se fait
-/// depuis la fiche du cours, plus depuis la carte.)
+/// accroche, ligne créateur, puis lectures · j'aime · durée. (Enregistrer et partager se font
+/// depuis le cours ouvert, plus depuis la carte.)
 struct CourseFeedCard: View {
     @Environment(LanguageManager.self) private var languageManager
     let course: Course
@@ -165,7 +165,10 @@ struct CourseFeedCard: View {
 
     private var statsRow: some View {
         HStack(spacing: 18) {
-            StatChip(systemImage: "eye", text: course.readsCount.compactCount)
+            // Les vraies ouvertures (serveur) ; rien tant que le chiffre n'est pas arrivé.
+            if let reads = course.realReadsCount {
+                StatChip(systemImage: "eye", text: reads.compactCount)
+            }
 
             Button {
                 toggleLike()
@@ -183,18 +186,6 @@ struct CourseFeedCard: View {
             }
             .buttonStyle(.plain)
             .accessibilityLabel(Text(AppLocalizable.string(liked ? "common.unlike" : "common.like", language: languageManager.current)))
-
-            ShareLink(item: SophiaDeepLink.shareText(for: course, language: languageManager.current)) {
-                Image(systemName: "square.and.arrow.up")
-                    .font(.system(size: 15, weight: .medium))
-                    .foregroundStyle(DS.inkSecondary)
-                    .padding(.vertical, 6)
-                    .padding(.horizontal, 2)
-                    .contentShape(Rectangle())
-            }
-            .simultaneousGesture(TapGesture().onEnded {
-                AnalyticsService.shared.log(.share, courseId: course.id, screen: screen, props: ["channel": .string("sheet"), "target": .string("course")])
-            })
 
             Spacer(minLength: 0)
 
