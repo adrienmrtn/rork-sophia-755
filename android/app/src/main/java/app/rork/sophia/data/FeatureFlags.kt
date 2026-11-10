@@ -51,4 +51,13 @@ object FeatureFlags {
     }
 
     fun newNavigation(context: Context): Boolean = navigationVariant(context) == NavigationVariant.NEWGEN
+
+    /**
+     * Les duels (onglet, trophées et ligue d'un ami) : visibles quand l'app est en anglais, la
+     * seule langue des questions pour l'instant. Comme sur iOS, à lire une fois au lancement :
+     * un changement de langue prend effet au lancement suivant, pour ne pas faire apparaître
+     * ou disparaître un onglet sous les doigts.
+     */
+    fun duelsVisible(language: app.rork.sophia.domain.AppLanguage): Boolean =
+        language == app.rork.sophia.domain.AppLanguage.ENGLISH
 }

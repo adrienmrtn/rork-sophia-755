@@ -235,6 +235,8 @@ class AuthService(private val appContext: Context) {
         _userId.value = null
         // Handle, requests and leaderboard belong to the account that just left.
         runCatching { app()?.socialService?.clearLocalState() }
+        // Trophées, ligue et classement des duels aussi.
+        runCatching { app()?.duelService?.clearLocalState() }
         revenueCatUserId = null
         if (Purchases.isConfigured) {
             // Back to an anonymous RevenueCat user. A subscription bought on this device
