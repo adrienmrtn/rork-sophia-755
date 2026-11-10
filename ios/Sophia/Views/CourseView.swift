@@ -811,15 +811,15 @@ struct CourseView: View {
         revealSteps(throughSection: currentIndex)
     }
 
-    /// Révèle le fil jusqu'à l'en-tête et au premier passage de `section` (les sections
-    /// précédentes entières) et, hors de l'intro, demande à y défiler.
+    /// Révèle le fil jusqu'à l'en-tête de `section` (les sections précédentes entières, puis le
+    /// titre seul : le premier tap révèle le premier passage) et, hors de l'intro, demande à y défiler.
     private func revealSteps(throughSection section: Int) {
         let inSection = steps.indices.filter { steps[$0].sectionIndex == section }
-        guard let first = inSection.first, let last = inSection.last else {
+        guard let first = inSection.first else {
             revealedCount = steps.count
             return
         }
-        revealedCount = min(first + 2, last + 1)
+        revealedCount = first + 1
         if section > 0 {
             scrollRequest = CourseStepReaderView.ScrollRequest(stepID: steps[first].id, token: (scrollRequest?.token ?? 0) + 1)
         }

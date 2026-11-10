@@ -4,17 +4,17 @@ import SwiftUI
 ///
 /// Les passages d'un cours sont calculés à l'ouverture (`ReaderStep.build`) à partir des
 /// sections structurées, dans l'ordre de lecture ; `CourseView` ne garde que le nombre de
-/// passages révélés. Le découpage suit docs/lecture-pas-a-pas.md : l'unité est le bloc, une
-/// image accompagne le paragraphe voisin, un titre de section ouvre un chapitre.
+/// passages révélés. Le découpage suit docs/lecture-pas-a-pas.md : l'unité est le bloc (une
+/// image est un passage à part entière), un titre de section ouvre un chapitre.
 struct ReaderStep: Identifiable {
     typealias Resolved = (content: CourseContentV2, section: CourseSectionV2, isFirst: Bool, isLast: Bool)
 
     enum Kind {
         /// L'en-tête de la section : hero, titre et accroche pour l'intro, le titre sinon.
         case header
-        /// Un bloc du cours. Une image qui précède un paragraphe s'affiche avec lui, une image
-        /// qui ferme la section s'affiche sous son dernier bloc, un `heading` avec le bloc suivant.
-        case block(ContentBlockV2, heading: String?, leadingImage: ImageBlockV2?, trailingImage: ImageBlockV2?)
+        /// Un bloc du cours tel quel : paragraphe, image, frise, encart, citation. Un `heading`
+        /// s'affiche avec le bloc qui le suit plutôt que d'occuper un tap à lui seul.
+        case block(ContentBlockV2, heading: String?)
         /// La carte auteur et les sources, après « À retenir » de la dernière section.
         case footer
         /// Une section réservée (gratuit hors cours du jour) : la page floutée et le cadenas, en
@@ -34,7 +34,7 @@ struct ReaderStep: Identifiable {
 
     /// Le texte de prose du passage, pour le coachmark du glossaire ; vide s'il n'en a pas.
     var proseText: String {
-        guard case .block(let block, _, _, _) = kind else { return "" }
+        guard case .block(let block, _) = kind else { return "" }
         switch block {
         case .heading(let text), .paragraph(let text), .funFact(let text), .takeaway(let text):
             return text
@@ -50,8 +50,7 @@ struct ReaderStep: Identifiable {
         switch kind {
         case .header:
             return resolved?.isFirst == true && resolved?.content.hero != nil
-        case .block(let block, _, let leadingImage, let trailingImage):
-            if leadingImage != nil || trailingImage != nil { return true }
+        case .block(let block, _):
             if case .image = block { return true }
             return false
         case .footer, .locked, .legacy:
@@ -86,7 +85,6 @@ struct ReaderStep: Identifiable {
 
     private static func blockSteps(for resolved: Resolved, lesson: LessonPage, sectionIndex: Int) -> [ReaderStep] {
         var steps: [ReaderStep] = []
-        var pendingImage: ImageBlockV2?
         var pendingHeading: String?
 
         func make(_ kind: Kind, suffix: String) -> ReaderStep {
@@ -94,43 +92,18 @@ struct ReaderStep: Identifiable {
         }
 
         for (blockIndex, block) in resolved.section.blocks.enumerated() {
-            switch block {
-            case .image(let image):
-                // Deux images de suite : la première n'accompagne aucun paragraphe, elle passe seule.
-                if let waiting = pendingImage {
-                    steps.append(make(.block(.image(waiting), heading: pendingHeading, leadingImage: nil, trailingImage: nil), suffix: "\(blockIndex)-image"))
-                    pendingHeading = nil
-                }
-                pendingImage = image
-            case .heading(let text):
+            if case .heading(let text) = block {
                 if let waiting = pendingHeading {
-                    steps.append(make(.block(.heading(waiting), heading: nil, leadingImage: nil, trailingImage: nil), suffix: "\(blockIndex)-heading"))
+                    steps.append(make(.block(.heading(waiting), heading: nil), suffix: "\(blockIndex)-heading"))
                 }
                 pendingHeading = text
-            default:
-                steps.append(make(.block(block, heading: pendingHeading, leadingImage: pendingImage, trailingImage: nil), suffix: "\(blockIndex)"))
-                pendingImage = nil
-                pendingHeading = nil
+                continue
             }
-        }
-
-        if let image = pendingImage {
-            // Une image qui ferme la section s'affiche sous le dernier passage, jamais seule.
-            if let last = steps.last, case .block(let block, let heading, let leadingImage, _) = last.kind {
-                steps[steps.count - 1] = ReaderStep(
-                    id: last.id,
-                    kind: .block(block, heading: heading, leadingImage: leadingImage, trailingImage: image),
-                    sectionIndex: sectionIndex,
-                    lesson: lesson,
-                    resolved: resolved
-                )
-            } else {
-                steps.append(make(.block(.image(image), heading: pendingHeading, leadingImage: nil, trailingImage: nil), suffix: "end-image"))
-                pendingHeading = nil
-            }
+            steps.append(make(.block(block, heading: pendingHeading), suffix: "\(blockIndex)"))
+            pendingHeading = nil
         }
         if let heading = pendingHeading {
-            steps.append(make(.block(.heading(heading), heading: nil, leadingImage: nil, trailingImage: nil), suffix: "end-heading"))
+            steps.append(make(.block(.heading(heading), heading: nil), suffix: "end-heading"))
         }
         return steps
     }
@@ -164,45 +137,51 @@ struct CourseStepReaderView: View {
 
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
-    /// Le passage révélé vient se poser vers 20 % de la hauteur du lecteur ; un passage plus
-    /// haut que l'écran s'aligne de lui-même près du bord supérieur.
-    private static let revealAnchor = UnitPoint(x: 0.5, y: 0.2)
+    /// Le haut du passage révélé vient se poser à 8 % de la hauteur du lecteur, quelle que soit la
+    /// hauteur du passage : la cible du défilement est un repère sans hauteur posé à son sommet.
+    private static let revealAnchor = UnitPoint(x: 0.5, y: 0.08)
 
     var body: some View {
-        ScrollViewReader { proxy in
-            ScrollView {
-                VStack(alignment: .leading, spacing: 24) {
-                    ForEach(Array(steps.prefix(revealedCount))) { step in
-                        stepView(step)
-                            .id(step.id)
+        GeometryReader { geo in
+            ScrollViewReader { proxy in
+                ScrollView {
+                    VStack(alignment: .leading, spacing: 24) {
+                        ForEach(Array(steps.prefix(revealedCount))) { step in
+                            VStack(alignment: .leading, spacing: 0) {
+                                Color.clear.frame(height: 0).id(step.id)
+                                stepView(step)
+                            }
                             .transition(transition(for: step))
+                        }
+                    }
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.horizontal, 24)
+                    .padding(.top, 24)
+                    // De la place sous le dernier passage, pour qu'il puisse toujours monter jusqu'au
+                    // repère de lecture même quand rien ne le suit encore.
+                    .padding(.bottom, max(160, geo.size.height * 0.85))
+                }
+                .scrollIndicators(.hidden)
+                // Deux taps n'importe où sur la leçon : « j'aime », comme en mode par pages et sur le fil.
+                .simultaneousGesture(TapGesture(count: 2).onEnded { onDoubleTap() })
+                .overlay { BigHeartOverlay(trigger: bigHeart) }
+                .onAppear {
+                    // Retour du mode par pages au milieu du cours : on reprend à la section en cours.
+                    guard let request = scrollRequest else { return }
+                    DispatchQueue.main.async {
+                        proxy.scrollTo(request.stepID, anchor: Self.revealAnchor)
                     }
                 }
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.horizontal, 24)
-                .padding(.top, 24)
-                .padding(.bottom, 160)
-            }
-            .scrollIndicators(.hidden)
-            // Deux taps n'importe où sur la leçon : « j'aime », comme en mode par pages et sur le fil.
-            .simultaneousGesture(TapGesture(count: 2).onEnded { onDoubleTap() })
-            .overlay { BigHeartOverlay(trigger: bigHeart) }
-            .onAppear {
-                // Retour du mode par pages au milieu du cours : on reprend à la section en cours.
-                guard let request = scrollRequest else { return }
-                DispatchQueue.main.async {
-                    proxy.scrollTo(request.stepID, anchor: .top)
-                }
-            }
-            .onChange(of: scrollRequest) { _, request in
-                guard let request else { return }
-                // Le passage vient d'être inséré : SwiftUI le pose au prochain tour, on défile ensuite.
-                DispatchQueue.main.async {
-                    if reduceMotion {
-                        proxy.scrollTo(request.stepID, anchor: Self.revealAnchor)
-                    } else {
-                        withAnimation(.spring(response: 0.5, dampingFraction: 0.86)) {
+                .onChange(of: scrollRequest) { _, request in
+                    guard let request else { return }
+                    // Le passage vient d'être inséré : SwiftUI le pose au prochain tour, on défile ensuite.
+                    DispatchQueue.main.async {
+                        if reduceMotion {
                             proxy.scrollTo(request.stepID, anchor: Self.revealAnchor)
+                        } else {
+                            withAnimation(.spring(response: 0.5, dampingFraction: 0.86)) {
+                                proxy.scrollTo(request.stepID, anchor: Self.revealAnchor)
+                            }
                         }
                     }
                 }
@@ -235,7 +214,7 @@ struct CourseStepReaderView: View {
                 )
             }
 
-        case .block(let block, let heading, let leadingImage, let trailingImage):
+        case .block(let block, let heading):
             VStack(alignment: .leading, spacing: 24) {
                 if let heading {
                     ContentBlockViewV2(
@@ -246,9 +225,6 @@ struct CourseStepReaderView: View {
                         onGlossaryTap: onGlossaryTap
                     )
                 }
-                if let leadingImage {
-                    AspectImageView(block: leadingImage)
-                }
                 ContentBlockViewV2(
                     block: block,
                     accent: accent,
@@ -256,9 +232,6 @@ struct CourseStepReaderView: View {
                     courseTitle: course.title,
                     onGlossaryTap: onGlossaryTap
                 )
-                if let trailingImage {
-                    AspectImageView(block: trailingImage)
-                }
             }
 
         case .footer:
