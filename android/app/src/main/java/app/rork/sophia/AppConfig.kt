@@ -17,11 +17,11 @@ object AppConfig {
     const val FORMSPREE_AMBASSADOR_ENDPOINT = BuildConfig.FORMSPREE_AMBASSADOR_ENDPOINT
 
     /**
-     * Page d'un rôle du programme créateurs (`ugc` ou `slideshow`), ouverte depuis la bannière
-     * « Deviens ambassadeur » des réglages. Le site est en anglais seulement, sans préfixe de
-     * langue dans ses adresses.
+     * Page d'un rôle du programme créateurs vidéo (`ugc` ou `slideshow`), ouverte depuis la
+     * bannière « Deviens ambassadeur » des réglages. Le Hub des créateurs a son propre domaine
+     * (équipe de Maximilien) ; anglais seulement, sans préfixe de langue.
      */
-    fun creatorsUrl(role: String): String = "https://sophia-culture.com/creators/$role"
+    fun creatorsUrl(role: String): String = "https://vik-studios-creators.com/creators/$role"
 
     /**
      * Le Studio des créateurs (« Deviens créateur » du fil, du profil et des événements) :

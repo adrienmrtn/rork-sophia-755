@@ -144,7 +144,24 @@ Variables d'environnement (Vercel → Settings → Environment Variables) :
 Sans `SUPABASE_SECRET_KEY` et `PUBLISH_API_KEY`, tout fonctionne sauf « Accepter et lancer
 la production » (message explicite dans l'admin).
 
-### Mise en ligne du domaine (quand le site est validé)
+### Mise en ligne du domaine
+
+Jusqu'au basculement, `sophia-culture.com` sert le **Hub des créateurs vidéo** (projet Lovable
+« Sophia Culture Hub », équipe de Maximilien) : pages de recrutement des pubs Meta, candidatures,
+liens de signature de contrat et de paiement envoyés par email, connexion de l'équipe, webhooks
+Brevo et pont « Sophia OS » sous `/api/public/*`, tâches planifiées. Le Hub part sur son propre
+domaine, **vik-studios-creators.com**, et le site Next.js renvoie ses anciennes adresses là-bas
+(`next.config.ts`, redirections permanentes 308 pour que les POST des webhooks suivent) : `/creators/*`,
+`/<lang>/creators/*`, `/fr/createurs/*`, `/payout/<token>`, `/poster-unsubscribe`, `/auth`,
+`/reset-password`, `/hub/*`, `/api/public/*`. Ses pages légales viennent ici (`/legal/privacy`,
+`/legal/notice`, textes dans `src/lib/legal/texts.ts`), et `/fr`, `/en`, `/fr/auteurs`, `/en/auteurs`
+mènent aux pages du site. Les apps en circulation ouvrent encore `/fr/createurs/<rôle>` et
+`/fr/auteurs` : couverts par ces redirections jusqu'à leur mise à jour (les versions suivantes
+ouvrent directement `vik-studios-creators.com/creators/<rôle>` et `/write`).
+
+Dans l'ordre : (1) Maximilien branche vik-studios-creators.com sur le Hub, y met à jour l'adresse
+absolue du site (`src/config/site.ts`), le webhook Brevo, l'URL des tâches planifiées, la
+vérification de domaine Meta et le pixel ; (2) Supabase Auth ci-dessous ; (3) le DNS.
 
 Chez name.com, pour `sophia-culture.com` :
 
@@ -153,9 +170,11 @@ Chez name.com, pour `sophia-culture.com` :
 | A | `@` | `216.150.1.1` et `216.150.16.1` (ou l'ancienne adresse unique `76.76.21.21`) |
 | CNAME | `www` | `f51d4520f6c33d8b.vercel-dns-016.com` (ou `cname.vercel-dns.com`) |
 
-Supprimer l'A record Lovable `185.158.133.1`. Propagation de quelques minutes à quelques heures ;
-Vercel émet le certificat tout seul. Le site Lovable reste joignable sur son adresse `*.lovable.app`
-pour le Hub vidéo (lien « Video creators hub » du pied de page, à ajuster si l'adresse change).
+Supprimer l'A record Lovable `185.158.133.1` (sur `@` et sur `www`). Propagation de quelques
+minutes à quelques heures ; Vercel émet le certificat tout seul. `www.sophia-culture.com` est
+rattaché au projet Vercel en redirection 308 vers l'adresse nue. Ensuite : Search Console (soumettre
+`/sitemap.xml`), fiches App Store et Play (adresses de support et de confidentialité, aujourd'hui
+vikstudios.com), Resend (docs/notifications.md).
 
 ### Supabase Auth
 
