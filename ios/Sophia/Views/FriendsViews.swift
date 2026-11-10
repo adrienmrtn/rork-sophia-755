@@ -225,11 +225,14 @@ struct FriendProfileView: View {
     let userId: UUID
     let fallbackHandle: String
 
-    @State private var stats: FriendPublicStats?
+    @State private var profile: FriendProfile?
     @State private var isLoading = true
     @State private var errorMessage: String?
     @State private var showRemoveConfirm = false
     @State private var isRemoving = false
+
+    /// Trophées, ligue et défi n'ont de sens que là où les duels existent.
+    private var duelsVisible: Bool { FeatureFlags.duelsVisible(language: languageManager.current) }
 
     var body: some View {
         ZStack {
@@ -249,7 +252,7 @@ struct FriendProfileView: View {
                                 .overlay { Circle().strokeBorder(DS.hairline, lineWidth: 1) }
                         }
                         Spacer()
-                        Text("@\(stats?.handle ?? fallbackHandle)")
+                        Text("@\(profile?.handle ?? fallbackHandle)")
                             .font(DS.sans(.headline, .semibold))
                             .foregroundStyle(DS.ink)
                         Spacer()
@@ -261,9 +264,16 @@ struct FriendProfileView: View {
                         ProgressView()
                             .frame(maxWidth: .infinity)
                             .padding(.top, 40)
-                    } else if let stats {
-                        identityCard(stats)
-                        statsGrid(stats)
+                    } else if let profile {
+                        identityCard(profile)
+                        if duelsVisible {
+                            if profile.canChallenge {
+                                challengeButton(profile)
+                            }
+                            duelCard(profile)
+                        }
+                        statsGrid(profile)
+                        followingSection(profile)
                     } else if let errorMessage {
                         Text(errorMessage)
                             .font(DS.sans(.subheadline, .medium))
@@ -271,7 +281,7 @@ struct FriendProfileView: View {
                             .padding(.horizontal, 20)
                     }
 
-                    if stats != nil {
+                    if profile != nil {
                         Button(role: .destructive) {
                             showRemoveConfirm = true
                         } label: {
@@ -302,11 +312,23 @@ struct FriendProfileView: View {
         .task { await load() }
     }
 
-    private func identityCard(_ stats: FriendPublicStats) -> some View {
-        let progress = ProgressManager.globalLevelProgress(for: stats.globalXP)
+    private func identityCard(_ profile: FriendProfile) -> some View {
+        let progress = ProgressManager.globalLevelProgress(for: profile.globalXP)
         return VStack(spacing: 16) {
             HStack(alignment: .center, spacing: 16) {
-                GlobalRankRing(progress: progress, size: 88)
+                Group {
+                    if Avatars.isValid(profile.avatarId) {
+                        AvatarCircle(avatarId: profile.avatarId, initial: String(profile.handle.prefix(1)).uppercased(), size: 88)
+                    } else {
+                        GlobalRankRing(progress: progress, size: 88)
+                    }
+                }
+                .overlay(alignment: .bottomTrailing) {
+                    if profile.online {
+                        DuelOnlineDot(size: 18)
+                            .offset(x: -3, y: -3)
+                    }
+                }
 
                 VStack(alignment: .leading, spacing: 6) {
                     Text(progress.rank.localizedName(language: languageManager.current).uppercasedInApp())
@@ -314,7 +336,7 @@ struct FriendProfileView: View {
                         .foregroundStyle(DS.accentSoft)
                         .tracking(1.2)
 
-                    Text("@\(stats.handle)")
+                    Text("@\(profile.handle)")
                         .font(DS.title(.title2, .semibold))
                         .foregroundStyle(DS.ink)
 
@@ -328,7 +350,7 @@ struct FriendProfileView: View {
             VStack(spacing: 6) {
                 CalmProgressBar(fraction: progress.progressToNextRank)
                 HStack {
-                    Text("\(stats.globalXP) XP")
+                    Text("\(profile.globalXP) XP")
                         .font(DS.sans(.caption2, .medium))
                         .foregroundStyle(DS.inkTertiary)
                     Spacer()
@@ -343,21 +365,115 @@ struct FriendProfileView: View {
         .padding(.horizontal, 20)
     }
 
-    private func statsGrid(_ stats: FriendPublicStats) -> some View {
+    /// « Défier en duel » : un duel amical, sans trophées en jeu. L'ami a 15 secondes pour
+    /// rejoindre ; la ligne du dessous dit s'il a l'app ouverte en ce moment.
+    private func challengeButton(_ profile: FriendProfile) -> some View {
+        VStack(spacing: 8) {
+            Button {
+                DuelHaptics.countdown(final: true)
+                DuelFriendPresenter.present(.challenge(userId: profile.userId, handle: profile.handle, avatarId: profile.avatarId))
+            } label: {
+                HStack(spacing: 10) {
+                    Image(systemName: "bolt.fill")
+                        .font(.system(size: 17, weight: .heavy))
+                    Text(languageManager.text("duel.friend.challenge"))
+                }
+            }
+            .buttonStyle(DuelPlayButtonStyle())
+
+            HStack(spacing: 6) {
+                if profile.online {
+                    DuelOnlineDot(size: 10)
+                }
+                Text(languageManager.text(profile.online ? "duel.friend.online" : "duel.friend.offline"))
+                    .font(DS.sans(.footnote, .medium))
+                    .foregroundStyle(DS.inkSecondary)
+            }
+            .frame(maxWidth: .infinity)
+        }
+        .padding(.horizontal, 20)
+    }
+
+    /// Sa ligue et ses trophées, ses duels, et le bilan de nos duels amicaux.
+    private func duelCard(_ profile: FriendProfile) -> some View {
+        let league = DuelService.shared.home?.league(position: profile.leaguePosition)
+        let leagueTitle = league.map { DuelFormat.leagueName($0, language: languageManager.current) }
+            ?? String(format: languageManager.text("duel.league.position"), profile.leaguePosition)
+        return VStack(alignment: .leading, spacing: 0) {
+            ZStack(alignment: .bottomLeading) {
+                DuelLeagueBackdrop(league: league, thumb: true)
+                LinearGradient(
+                    colors: [DuelPalette.night.opacity(0.1), DuelPalette.night.opacity(0.85)],
+                    startPoint: .top,
+                    endPoint: .bottom
+                )
+                HStack(alignment: .bottom) {
+                    Text(leagueTitle)
+                        .font(.jakarta(size: 22, weight: .heavy))
+                        .foregroundStyle(.white)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.6)
+                    Spacer(minLength: 8)
+                    DuelTrophyCount(value: profile.trophies, size: 18, color: .white)
+                }
+                .padding(14)
+            }
+            .frame(height: 116)
+            .frame(maxWidth: .infinity)
+
+            VStack(spacing: 10) {
+                duelRow(label: "duel.stats.games", value: "\(profile.duelGames)")
+                duelRow(label: "duel.stats.wins", value: "\(profile.duelWins)")
+                duelRow(label: "duel.stats.best", value: profile.bestTrophies.formatted(language: languageManager.current))
+                if profile.friendlyPlayed > 0 {
+                    Rectangle().fill(DS.hairline).frame(height: 1)
+                    duelRow(
+                        label: "duel.friend.headToHead",
+                        value: "\(profile.friendlyWon) – \(profile.friendlyLost)"
+                    )
+                }
+            }
+            .padding(16)
+        }
+        .background(DS.surface)
+        .clipShape(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
+        .overlay(
+            RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
+                .strokeBorder(DS.hairline, lineWidth: 1)
+        )
+        .dsSoftShadow()
+        .padding(.horizontal, 20)
+    }
+
+    private func duelRow(label: String, value: String) -> some View {
+        HStack {
+            Text(languageManager.text(label))
+                .font(DS.sans(.subheadline, .medium))
+                .foregroundStyle(DS.inkSecondary)
+            Spacer(minLength: 8)
+            Text(value)
+                .font(DS.sans(.subheadline, .bold))
+                .monospacedDigit()
+                .foregroundStyle(DS.ink)
+                .environment(\.layoutDirection, .leftToRight)
+        }
+    }
+
+    private func statsGrid(_ profile: FriendProfile) -> some View {
         HStack(spacing: 14) {
             friendStatTile(
                 icon: "flame.fill",
-                value: "\(stats.streak)",
+                value: "\(profile.streak)",
                 label: languageManager.text("friends.stats.streak")
             )
             friendStatTile(
                 icon: "checkmark.circle",
-                value: "\(stats.coursesCompleted)",
+                value: "\(profile.coursesCompleted)",
                 label: languageManager.text("profile.stats.coursesDone")
             )
             friendStatTile(
                 icon: "target",
-                value: "\(stats.quizzesCompleted)",
+                value: "\(profile.quizzesCompleted)",
                 label: languageManager.text("friends.stats.quizzes")
             )
         }
@@ -384,11 +500,49 @@ struct FriendProfileView: View {
         .dsCard(padding: 14)
     }
 
+    /// Les créateurs qu'il suit ; toucher un créateur ouvre sa page.
+    @ViewBuilder
+    private func followingSection(_ profile: FriendProfile) -> some View {
+        let authors = profile.follows.compactMap { AuthorStore.author(slug: $0) }
+        if !authors.isEmpty {
+            VStack(alignment: .leading, spacing: 12) {
+                Text("\(languageManager.text("home.segment.following")) · \(authors.count)")
+                    .font(DS.sans(.caption, .semibold))
+                    .foregroundStyle(DS.inkTertiary)
+                    .tracking(1.1)
+                    .padding(.horizontal, 20)
+                ScrollView(.horizontal) {
+                    HStack(alignment: .top, spacing: 16) {
+                        ForEach(authors) { author in
+                            Button {
+                                UIImpactFeedbackGenerator(style: .light).impactOccurred()
+                                DeepLinkRouter.shared.requestCreator(author.slug)
+                            } label: {
+                                VStack(spacing: 8) {
+                                    AuthorAvatarView(author: author, size: 64)
+                                    Text(author.name)
+                                        .font(DS.sans(.caption, .semibold))
+                                        .foregroundStyle(DS.ink)
+                                        .lineLimit(2)
+                                        .multilineTextAlignment(.center)
+                                        .frame(width: 76)
+                                }
+                            }
+                            .buttonStyle(.plain)
+                        }
+                    }
+                    .padding(.horizontal, 20)
+                }
+                .scrollIndicators(.hidden)
+            }
+        }
+    }
+
     private func load() async {
         isLoading = true
         errorMessage = nil
         do {
-            stats = try await SocialService.shared.friendStats(userId: userId)
+            profile = try await DuelLiveService.shared.friendProfile(userId: userId)
         } catch let error as SocialError {
             errorMessage = error.localizedMessage(languageManager: languageManager)
         } catch {

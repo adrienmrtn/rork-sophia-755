@@ -9,11 +9,11 @@ import { catalog } from "@/lib/catalog/source";
 import { LANG_NAMES } from "@/lib/catalog/lang-names";
 import { SUBJECT_LABEL } from "@/lib/catalog/slugs";
 import { getStudioSession } from "@/lib/studio/account";
-import { CAMPAIGN_KINDS, CAMPAIGN_STATUSES, CAMPAIGN_SYMBOLS, EDITED_LANGS, TEXT_FIELDS, TEXT_LABELS, TEXT_LIMITS, UPCOMING_ROWS, campaignFromRow, emptyCampaign, languagesFilled, languagesMissing, localized, publishProblems, statusTone, type Campaign } from "@/lib/studio/campaigns";
+import { CAMPAIGN_KINDS, CAMPAIGN_SYMBOLS, EDITED_LANGS, TEXT_FIELDS, TEXT_LABELS, TEXT_LIMITS, UPCOMING_ROWS, campaignFromRow, emptyCampaign, languagesFilled, languagesMissing, localized, publishProblems, statusTone, type Campaign } from "@/lib/studio/campaigns";
 import { shortDateTime } from "@/lib/studio/data";
 import { coversConfigured } from "@/lib/studio/covers";
 import { translationConfigured } from "@/lib/studio/translate";
-import { chooseEventImage, deleteCampaign, saveCampaign, translateCampaignAction } from "../actions";
+import { chooseEventImage, deleteCampaign, saveCampaign, setCampaignStatus, translateCampaignAction } from "../actions";
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 120;
@@ -23,7 +23,7 @@ const textarea = "w-full rounded-xl border border-line bg-white px-3.5 py-3 text
 const label = "flex flex-col gap-1.5 text-[13px] font-bold text-ink-2";
 const select = `${input} appearance-none`;
 
-const DONE: Record<string, string> = { image: "Images generated. Pick the one you prefer below; generate again if neither fits.", saved: "Event saved.", published: "Event published. The apps pick it up at their next catalogue refresh (within the hour).", "kept-draft": "Saved as a draft.", "translated-none": "Every language already has its texts." };
+const DONE: Record<string, string> = { image: "Images generated. Pick the one you prefer below; generate again if neither fits.", saved: "Event saved.", published: "Event published. The apps pick it up at their next catalogue refresh (within the hour).", "kept-draft": "Saved as a draft.", "translated-none": "Every language already has its texts.", unpublished: "Event back to draft: hidden from the apps at their next catalogue refresh.", archived: "Event archived: withdrawn from the apps, kept here.", restored: "Event back as a draft. Publish it when ready." };
 
 export default async function EventEditorPage({ params, searchParams }: PageProps<"/admin/events/[slug]">) {
   const session = await getStudioSession();
@@ -70,36 +70,69 @@ export default async function EventEditorPage({ params, searchParams }: PageProp
         {doneText && <p className="rounded-xl bg-green-bg px-4 py-3 text-[14px] font-semibold text-green">{doneText}</p>}
 
         {!isNew && (
-          <Card className="flex flex-wrap items-start gap-x-10 gap-y-4 p-6">
-            <div className="flex min-w-[260px] flex-1 flex-col gap-2">
-              <strong className="text-[15px] font-extrabold text-ink">{problems.length === 0 ? "Ready to publish" : `${problems.length} thing${problems.length > 1 ? "s" : ""} before publishing`}</strong>
-              {problems.length === 0 ? (
-                <p className="flex items-center gap-2 text-[14px] text-green">
-                  <CheckIcon className="h-4 w-4" /> Texts in English, a collection, a reachable challenge, valid announced courses.
+          <Card className="flex flex-col gap-5 p-6">
+            <ol className="flex flex-wrap gap-x-6 gap-y-2 text-[13px] font-semibold text-ink-3">
+              {[
+                ["1", "Write the texts in English", true],
+                ["2", "Save", true],
+                ["3", `Translate (${filled.length}/30 languages)`, missing.length === 0],
+                ["4", "Publish", campaign.status === "published"],
+              ].map(([n, label, done]) => (
+                <li key={String(n)} className="flex items-center gap-2">
+                  <span className={`inline-flex h-6 w-6 items-center justify-center rounded-full text-[12px] font-extrabold ${done ? "bg-green-bg text-green" : "bg-tint text-navy"}`}>{done ? "✓" : String(n)}</span>
+                  <span className={done ? "text-green" : ""}>{String(label)}</span>
+                </li>
+              ))}
+            </ol>
+            <div className="flex flex-wrap items-start gap-x-10 gap-y-4">
+              <div className="flex min-w-[280px] flex-1 flex-col gap-3">
+                <strong className="text-[15px] font-extrabold text-ink">
+                  {campaign.status === "published" ? "Live in the apps" : campaign.status === "archived" ? "Archived" : problems.length === 0 ? "Ready to publish" : `${problems.length} thing${problems.length > 1 ? "s" : ""} before publishing`}
+                </strong>
+                {problems.length === 0 ? (
+                  <p className="flex items-center gap-2 text-[14px] text-green">
+                    <CheckIcon className="h-4 w-4" /> Texts in English, a collection, a reachable challenge, valid announced courses.
+                  </p>
+                ) : (
+                  <ul className="flex list-disc flex-col gap-1 pl-5 text-[14px] text-ink-2">
+                    {problems.map((p) => (
+                      <li key={p}>{p}</li>
+                    ))}
+                  </ul>
+                )}
+                <form action={setCampaignStatus} className="flex flex-wrap items-center gap-3">
+                  <input type="hidden" name="slug" value={campaign.slug} />
+                  {campaign.status === "published" ? (
+                    <>
+                      <button type="submit" name="status" value="draft" className={buttonClass("secondary", "h-11 px-5")}>
+                        Unpublish (back to draft)
+                      </button>
+                      <span className="text-[12px] text-muted">Readers lose it at their next catalogue refresh, within the hour.</span>
+                    </>
+                  ) : (
+                    <>
+                      <button type="submit" name="status" value="published" disabled={problems.length > 0} className={buttonClass("primary", "h-11 px-5 disabled:opacity-50")}>
+                        Publish now
+                      </button>
+                      <span className="text-[12px] text-muted">{problems.length > 0 ? "Fix the list above, save, then publish." : missing.length > 0 ? `Goes live as it is: readers in the ${missing.length} untranslated languages see the English texts. Translate first if you prefer.` : "Live in the apps within the hour, in the 30 languages."}</span>
+                    </>
+                  )}
+                </form>
+              </div>
+              <div className="flex min-w-[280px] flex-1 flex-col gap-2">
+                <strong className="text-[15px] font-extrabold text-ink">Languages · {filled.length}/30</strong>
+                <p className="text-[13px] leading-[1.5] text-ink-3">
+                  You write in English only. The other 29 languages come from the button below, in one go, from the saved English texts. Until then, readers in those languages see the English texts.
+                  {missing.length > 0 && filled.length > 0 ? ` Missing: ${missing.map((l) => LANG_NAMES[l] ?? l).join(", ")}.` : missing.length === 0 ? " Every language is filled." : ""}
                 </p>
-              ) : (
-                <ul className="flex list-disc flex-col gap-1 pl-5 text-[14px] text-ink-2">
-                  {problems.map((p) => (
-                    <li key={p}>{p}</li>
-                  ))}
-                </ul>
-              )}
-            </div>
-            <div className="flex min-w-[260px] flex-1 flex-col gap-2">
-              <strong className="text-[15px] font-extrabold text-ink">
-                {filled.length}/30 languages
-              </strong>
-              <p className="text-[13px] leading-[1.5] text-ink-3">
-                {filled.length > 0 ? filled.map((l) => LANG_NAMES[l] ?? l).join(", ") : "No complete language yet."}
-                {missing.length > 0 && filled.length > 0 ? ` · missing: ${missing.map((l) => LANG_NAMES[l] ?? l).join(", ")}` : ""}
-              </p>
-              <form action={translateCampaignAction} className="flex flex-wrap items-center gap-3 pt-1">
-                <input type="hidden" name="slug" value={campaign.slug} />
-                <button type="submit" disabled={missing.length === 0 || !translationConfigured()} className={buttonClass("secondary", "h-10 px-4 disabled:opacity-50")}>
-                  Translate into the {missing.length} missing language{missing.length === 1 ? "" : "s"}
-                </button>
-                <span className="text-[12px] text-muted">{translationConfigured() ? "Uses the saved texts: save first. Never overwrites a filled language." : "Not configured on the server (FAL_KEY)."}</span>
-              </form>
+                <form action={translateCampaignAction} className="flex flex-wrap items-center gap-3 pt-1">
+                  <input type="hidden" name="slug" value={campaign.slug} />
+                  <button type="submit" disabled={missing.length === 0 || !translationConfigured()} className={buttonClass("secondary", "h-10 px-4 disabled:opacity-50")}>
+                    Translate into the {missing.length} missing language{missing.length === 1 ? "" : "s"}
+                  </button>
+                  <span className="text-[12px] text-muted">{translationConfigured() ? "About a minute. Never overwrites a filled language; re-save the English texts first if you changed them." : "Not configured on the server (FAL_KEY)."}</span>
+                </form>
+              </div>
             </div>
           </Card>
         )}
@@ -189,16 +222,7 @@ export default async function EventEditorPage({ params, searchParams }: PageProp
                 Challenge: courses to finish
                 <input type="number" name="challenge_target" defaultValue={campaign.challenge_target} min={1} max={50} required className={input} />
               </label>
-              <label className={label}>
-                Status
-                <select name="status" defaultValue={campaign.status} className={select}>
-                  {CAMPAIGN_STATUSES.map((s) => (
-                    <option key={s} value={s}>
-                      {s === "draft" ? "Draft (hidden from the apps)" : s === "published" ? "Published (live in the apps)" : "Archived (withdrawn, kept)"}
-                    </option>
-                  ))}
-                </select>
-              </label>
+              <input type="hidden" name="status" value={campaign.status} />
             </div>
             <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
               <label className={label}>
@@ -206,7 +230,7 @@ export default async function EventEditorPage({ params, searchParams }: PageProp
                 <input name="countries" defaultValue={(campaign.countries ?? []).join(", ")} placeholder="Everywhere" className={input} />
               </label>
               <p className="self-end pb-2 text-[13px] leading-[1.5] text-ink-3 md:col-span-2">
-                Two-letter codes separated by commas (FR, BE, CH, CA…). The apps compare them with the region of the phone. Empty: shown in every country.
+                Where the event is shown, not its language: two-letter country codes separated by commas (FR, BE, CH, CA…), compared with the region of the phone. Empty: shown in every country. The texts are translated into the 30 languages from the card at the top, whatever the countries.
               </p>
             </div>
             <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
@@ -335,18 +359,27 @@ export default async function EventEditorPage({ params, searchParams }: PageProp
             <button type="submit" className={buttonClass("primary", "h-12 px-6 font-extrabold")}>
               {isNew ? "Create the event" : "Save"}
             </button>
-            <span className="text-[13px] text-muted">Set the status to Published to make it live; a draft stays invisible to readers.</span>
+            <span className="text-[13px] text-muted">{isNew ? "Creates the event as a draft, hidden from readers. Then translate and publish from the top of its page." : "Saves the texts, dates, courses and image; the event keeps its status. Publishing and unpublishing are the buttons at the top of the page."}</span>
           </div>
         </form>
 
         {!isNew && (
-          <form action={deleteCampaign} className="flex flex-wrap items-center gap-3 border-t border-line pt-6">
-            <input type="hidden" name="slug" value={campaign.slug} />
-            <button type="submit" disabled={campaign.status === "published"} className="text-[14px] font-bold text-red disabled:opacity-40">
-              Delete this event
-            </button>
-            <span className="text-[13px] text-muted">{campaign.status === "published" ? "Archive it first: readers may hold its badge." : "Permanent. Prefer Archived to keep the record."}</span>
-          </form>
+          <div className="flex flex-wrap items-center gap-x-8 gap-y-3 border-t border-line pt-6">
+            <form action={setCampaignStatus} className="flex flex-wrap items-center gap-3">
+              <input type="hidden" name="slug" value={campaign.slug} />
+              <button type="submit" name="status" value={campaign.status === "archived" ? "draft" : "archived"} className="text-[14px] font-bold text-amber">
+                {campaign.status === "archived" ? "Put back as a draft" : "Archive this event"}
+              </button>
+              <span className="text-[13px] text-muted">{campaign.status === "archived" ? "It comes back hidden; publish it again when ready." : "Withdrawn from the apps, kept here with its participants."}</span>
+            </form>
+            <form action={deleteCampaign} className="flex flex-wrap items-center gap-3">
+              <input type="hidden" name="slug" value={campaign.slug} />
+              <button type="submit" disabled={campaign.status === "published"} className="text-[14px] font-bold text-red disabled:opacity-40">
+                Delete this event
+              </button>
+              <span className="text-[13px] text-muted">{campaign.status === "published" ? "Unpublish or archive it first: readers may hold its badge." : "Permanent. Prefer archiving to keep the record."}</span>
+            </form>
+          </div>
         )}
       </main>
     </>

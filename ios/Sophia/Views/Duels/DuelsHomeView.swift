@@ -14,6 +14,8 @@ struct DuelsHomeView: View {
     @State private var service = DuelService.shared
     @State private var showFlow = false
     @State private var showLeagues = false
+    /// L'ami dont le profil est ouvert depuis le classement.
+    @State private var selectedFriend: DuelLeaderboardEntry?
     @State private var playPulse = false
 
     private var handle: String {
@@ -45,6 +47,9 @@ struct DuelsHomeView: View {
                         .toolbar(.hidden, for: .navigationBar)
                 }
             }
+            .navigationDestination(item: $selectedFriend) { entry in
+                FriendProfileView(userId: entry.userId, fallbackHandle: entry.handle)
+            }
         }
         .task(id: auth.isSignedIn) { await refresh() }
         .onChange(of: auth.isBootstrapping) { _, _ in
@@ -53,6 +58,15 @@ struct DuelsHomeView: View {
         .onChange(of: isActive) { _, active in
             if active, !showFlow {
                 Task { await refresh() }
+            }
+        }
+        .task(id: isActive) {
+            // Les pastilles « en ligne » du classement : rafraîchies tant que l'onglet est affiché.
+            guard isActive else { return }
+            while !Task.isCancelled {
+                try? await Task.sleep(for: .seconds(15))
+                guard !Task.isCancelled, auth.isSignedIn, !showFlow else { continue }
+                await service.refreshLeaderboard()
             }
         }
         .fullScreenCover(isPresented: $showFlow) {
@@ -289,6 +303,7 @@ struct DuelsHomeView: View {
         }
     }
 
+    /// Une ligne du classement : toucher la ligne ouvre le profil de l'ami, l'éclair le défie.
     private func leaderboardRow(rank: Int, entry: DuelLeaderboardEntry) -> some View {
         HStack(spacing: 12) {
             Text("\(rank)")
@@ -297,6 +312,12 @@ struct DuelsHomeView: View {
                 .monospacedDigit()
                 .frame(width: 22, alignment: .leading)
             AvatarCircle(avatarId: entry.avatarId, initial: String(entry.handle.prefix(1)).uppercased(), size: 38)
+                .overlay(alignment: .bottomTrailing) {
+                    if entry.online {
+                        DuelOnlineDot(size: 12)
+                            .offset(x: 2, y: 2)
+                    }
+                }
             VStack(alignment: .leading, spacing: 2) {
                 Text("@\(entry.handle)")
                     .font(DS.sans(.subheadline, .semibold))
@@ -311,10 +332,30 @@ struct DuelsHomeView: View {
             }
             Spacer(minLength: 8)
             DuelTrophyCount(value: entry.trophies, size: 15)
+            if entry.canChallenge {
+                Button {
+                    DuelHaptics.countdown(final: true)
+                    DuelFriendPresenter.present(.challenge(userId: entry.userId, handle: entry.handle, avatarId: entry.avatarId))
+                } label: {
+                    Image(systemName: "bolt.fill")
+                        .font(.system(size: 14, weight: .heavy))
+                        .foregroundStyle(DuelPalette.night)
+                        .frame(width: 36, height: 36)
+                        .background(Circle().fill(DuelPalette.saffron))
+                }
+                .buttonStyle(SoftPressButtonStyle())
+                .accessibilityLabel(Text(languageManager.text("duel.friend.challenge")))
+            }
         }
         .padding(.horizontal, 16)
         .padding(.vertical, 12)
         .background(entry.isMe ? DS.accentTint.opacity(0.6) : Color.clear)
+        .contentShape(Rectangle())
+        .onTapGesture {
+            guard !entry.isMe else { return }
+            DuelHaptics.tap()
+            selectedFriend = entry
+        }
     }
 
     // MARK: - Dernières parties

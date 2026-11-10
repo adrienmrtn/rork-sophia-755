@@ -23,6 +23,8 @@ struct DuelResultView: View {
     @State private var promotedLeague: DuelLeague?
 
     private var won: Bool { result?.won ?? summary.won }
+    /// Duel entre amis : aucun trophée en jeu, la carte des trophées laisse place à une note.
+    private var friendly: Bool { summary.friendly }
     private var opponent: DuelOpponent { summary.match.opponent }
 
     private var shownLeague: DuelLeague? {
@@ -71,7 +73,7 @@ struct DuelResultView: View {
             withAnimation(.spring(response: 0.55, dampingFraction: 0.62)) { appeared = true }
             if won {
                 DuelHaptics.victory()
-            } else {
+            } else if !summary.draw {
                 DuelHaptics.defeat()
             }
         }
@@ -86,6 +88,7 @@ struct DuelResultView: View {
 
     private var headlineKey: String {
         if summary.abandoned { return "duel.result.abandoned" }
+        if summary.draw { return "duel.result.draw" }
         return won ? "duel.result.victory" : "duel.result.defeat"
     }
 
@@ -108,7 +111,7 @@ struct DuelResultView: View {
 
     private var faces: some View {
         HStack(alignment: .center, spacing: 14) {
-            face(avatarId: player.avatarId, initial: player.initial, name: "@\(player.handle)", ring: DuelPalette.saffron, crowned: won)
+            face(avatarId: player.avatarId, initial: player.initial, name: "@\(player.handle)", ring: DuelPalette.saffron, crowned: won && !summary.draw)
             Text("\(summary.playerScore) – \(summary.opponentScore)")
                 .font(.jakarta(size: 40, weight: .heavy))
                 .monospacedDigit()
@@ -116,7 +119,7 @@ struct DuelResultView: View {
                 .lineLimit(1)
                 .minimumScaleFactor(0.6)
                 .environment(\.layoutDirection, .leftToRight)
-            face(avatarId: opponent.avatarId, initial: opponent.initial, name: "@\(opponent.handle) \(opponent.flag)", ring: DuelPalette.coral, crowned: !won)
+            face(avatarId: opponent.avatarId, initial: opponent.initial, name: "@\(opponent.handle) \(opponent.flag)", ring: DuelPalette.coral, crowned: !won && !summary.draw)
         }
         .opacity(appeared ? 1 : 0)
         .offset(y: appeared ? 0 : 24)
@@ -135,7 +138,7 @@ struct DuelResultView: View {
                             .scaleEffect(appeared ? 1 : 0.1)
                     }
                 }
-                .saturation(crowned ? 1 : 0.55)
+                .saturation(crowned || summary.draw ? 1 : 0.55)
             Text(name)
                 .font(DS.sans(.caption, .bold))
                 .foregroundStyle(.white.opacity(0.85))
@@ -150,7 +153,20 @@ struct DuelResultView: View {
 
     private var trophyCard: some View {
         VStack(spacing: 18) {
-            if let result {
+            if friendly {
+                VStack(spacing: 10) {
+                    Image(systemName: "person.2.fill")
+                        .font(.system(size: 26, weight: .semibold))
+                        .foregroundStyle(DS.accentSoft)
+                    Text(languageManager.text("duel.friend.noTrophies"))
+                        .font(DS.sans(.subheadline, .semibold))
+                        .foregroundStyle(DS.inkSecondary)
+                        .multilineTextAlignment(.center)
+                        .fixedSize(horizontal: false, vertical: true)
+                }
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 6)
+            } else if let result {
                 HStack(spacing: 16) {
                     Image("duel_trophy")
                         .resizable()
@@ -259,7 +275,7 @@ struct DuelResultView: View {
                 DuelHaptics.countdown(final: false)
                 onPlayAgain()
             } label: {
-                Text(languageManager.text("duel.result.again"))
+                Text(languageManager.text(friendly ? "duel.friend.rematch" : "duel.result.again"))
             }
             .buttonStyle(DuelPlayButtonStyle())
 
