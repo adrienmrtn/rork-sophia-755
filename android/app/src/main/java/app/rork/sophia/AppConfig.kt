@@ -18,26 +18,16 @@ object AppConfig {
 
     /**
      * Page d'un rôle du programme créateurs (`ugc` ou `slideshow`), ouverte depuis la bannière
-     * « Deviens ambassadeur » des réglages. Le site n'existe qu'en français et en anglais :
-     * l'anglais pour toutes les autres langues.
+     * « Deviens ambassadeur » des réglages. Le site est en anglais seulement, sans préfixe de
+     * langue dans ses adresses.
      */
-    fun creatorsUrl(role: String, language: AppLanguage): String =
-        if (language == AppLanguage.FRENCH) {
-            "https://sophia-culture.com/fr/createurs/$role"
-        } else {
-            "https://sophia-culture.com/en/creators/$role"
-        }
+    fun creatorsUrl(role: String): String = "https://sophia-culture.com/creators/$role"
 
     /**
      * Le Studio des créateurs (« Deviens créateur » du fil, du profil et des événements) :
-     * la page des auteurs du site, en français ou en anglais comme le reste du site.
+     * la page « Write for Sophia » du site. Anglais seulement.
      */
-    fun creatorStudioUrl(language: AppLanguage): String =
-        if (language == AppLanguage.FRENCH) {
-            "https://sophia-culture.com/fr/auteurs"
-        } else {
-            "https://sophia-culture.com/en/auteurs"
-        }
+    const val CREATOR_STUDIO_URL = "https://sophia-culture.com/write"
 
     const val PREMIUM_ENTITLEMENT = "premium"
 }
