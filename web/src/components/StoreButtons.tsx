@@ -1,5 +1,6 @@
 import { APP_STORE_URL, PLAY_STORE_URL } from "@/lib/env";
 import { t } from "@/lib/copy/en";
+import { StoreLink } from "./StoreLink";
 
 function AppleIcon({ color = "#FFFFFF" }: { color?: string }) {
   return (
@@ -20,36 +21,38 @@ function PlayIcon() {
   );
 }
 
-/** Les deux boutons des stores, grands (avec la ligne du haut) ou compacts. */
-export function StoreButtons({ size = "large", className = "" }: { size?: "large" | "compact"; className?: string }) {
+/** Les deux boutons des stores, grands (avec la ligne du haut) ou compacts.
+ *  `resumeUrl` : l'adresse de la page (un cours, un auteur) que l'app doit rouvrir après
+ *  l'installation ; le bouton la copie dans le presse-papiers au clic (voir StoreLink). */
+export function StoreButtons({ size = "large", className = "", resumeUrl }: { size?: "large" | "compact"; className?: string; resumeUrl?: string }) {
   if (size === "compact") {
     return (
       <div className={`flex flex-wrap gap-2.5 ${className}`}>
-        <a href={APP_STORE_URL} className="inline-flex h-[46px] items-center gap-2 rounded-btn bg-ink px-[18px] text-[14px] font-extrabold text-white" aria-label={`${t.stores.appStoreTop} ${t.stores.appStore}`}>
+        <StoreLink resumeUrl={resumeUrl} href={APP_STORE_URL} className="inline-flex h-[46px] items-center gap-2 rounded-btn bg-ink px-[18px] text-[14px] font-extrabold text-white" aria-label={`${t.stores.appStoreTop} ${t.stores.appStore}`}>
           <AppleIcon /> {t.stores.appStore}
-        </a>
-        <a href={PLAY_STORE_URL} className="inline-flex h-[46px] items-center gap-2 rounded-btn bg-ink px-[18px] text-[14px] font-extrabold text-white" aria-label={`${t.stores.playTop} ${t.stores.play}`}>
+        </StoreLink>
+        <StoreLink resumeUrl={resumeUrl} href={PLAY_STORE_URL} className="inline-flex h-[46px] items-center gap-2 rounded-btn bg-ink px-[18px] text-[14px] font-extrabold text-white" aria-label={`${t.stores.playTop} ${t.stores.play}`}>
           <PlayIcon /> {t.stores.play}
-        </a>
+        </StoreLink>
       </div>
     );
   }
   return (
     <div className={`flex flex-wrap items-center gap-3 ${className}`}>
-      <a href={APP_STORE_URL} className="inline-flex h-14 items-center gap-2.5 rounded-btn bg-ink px-[18px] text-white" aria-label={`${t.stores.appStoreTop} ${t.stores.appStore}`}>
+      <StoreLink resumeUrl={resumeUrl} href={APP_STORE_URL} className="inline-flex h-14 items-center gap-2.5 rounded-btn bg-ink px-[18px] text-white" aria-label={`${t.stores.appStoreTop} ${t.stores.appStore}`}>
         <AppleIcon />
         <span className="flex flex-col leading-[1.1]">
           <span className="text-[11px] font-medium opacity-85">{t.stores.appStoreTop}</span>
           <span className="text-[17px] font-bold">{t.stores.appStore}</span>
         </span>
-      </a>
-      <a href={PLAY_STORE_URL} className="inline-flex h-14 items-center gap-2.5 rounded-btn bg-ink px-[18px] text-white" aria-label={`${t.stores.playTop} ${t.stores.play}`}>
+      </StoreLink>
+      <StoreLink resumeUrl={resumeUrl} href={PLAY_STORE_URL} className="inline-flex h-14 items-center gap-2.5 rounded-btn bg-ink px-[18px] text-white" aria-label={`${t.stores.playTop} ${t.stores.play}`}>
         <PlayIcon />
         <span className="flex flex-col leading-[1.1]">
           <span className="text-[11px] font-medium opacity-85">{t.stores.playTop}</span>
           <span className="text-[17px] font-bold">{t.stores.play}</span>
         </span>
-      </a>
+      </StoreLink>
     </div>
   );
 }

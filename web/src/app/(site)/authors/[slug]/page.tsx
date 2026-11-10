@@ -9,6 +9,7 @@ import { buttonClass, ButtonLink, CheckIcon, container, Pill } from "@/component
 import { catalog } from "@/lib/catalog/source";
 import { authorPath } from "@/lib/catalog/slugs";
 import { t } from "@/lib/copy/en";
+import { APP_STORE_ID, SITE_URL } from "@/lib/env";
 
 export const dynamic = "force-dynamic";
 
@@ -18,7 +19,15 @@ export async function generateMetadata({ params }: PageProps<"/authors/[slug]">)
   const { slug } = await params;
   const creator = await catalog.getCreator("en", slug);
   if (!creator) return { title: "Author not found" };
-  return { title: creator.name, description: creator.bio ?? creator.title ?? undefined, alternates: { canonical: authorPath(slug) } };
+  const description = creator.bio ?? creator.title ?? undefined;
+  return {
+    title: creator.name,
+    description,
+    alternates: { canonical: authorPath(slug) },
+    openGraph: { title: creator.name, description, url: authorPath(slug), siteName: "Sophia", images: creator.photoUrl ? [{ url: creator.photoUrl }] : undefined, type: "profile" },
+    // Bannière Safari : « Ouvrir » l'app sur cet auteur si elle est installée, sinon l'App Store.
+    itunes: { appId: APP_STORE_ID, appArgument: `${SITE_URL}${authorPath(slug)}` },
+  };
 }
 
 export default async function AuthorPage({ params }: PageProps<"/authors/[slug]">) {
@@ -101,7 +110,7 @@ export default async function AuthorPage({ params }: PageProps<"/authors/[slug]"
               <strong className="text-[20px] font-extrabold">{a.followBand(creator.name)}</strong>
               <span className="text-[15px] leading-[1.5] text-[#DDE3EC]">{a.followBandLead}</span>
             </div>
-            <StoreButtons size="compact" />
+            <StoreButtons size="compact" resumeUrl={`${SITE_URL}${authorPath(creator.slug)}`} />
           </div>
           {others.length > 0 && (
             <div className="flex min-w-0 flex-[1_1_400px] flex-col gap-3.5 rounded-card border border-line px-7 py-6">

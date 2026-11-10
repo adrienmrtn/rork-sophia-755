@@ -36,8 +36,8 @@ enum FeedNotice: String, Equatable {
 // MARK: - Carte cours
 
 /// La carte de cours de la maquette : couverture 16:9 avec la pastille de matière, titre,
-/// accroche, ligne créateur, puis lectures · j'aime · durée. (Enregistrer se fait depuis la
-/// fiche du cours, plus depuis la carte.)
+/// accroche, ligne créateur, puis lectures · j'aime · partager · durée. (Enregistrer se fait
+/// depuis la fiche du cours, plus depuis la carte.)
 struct CourseFeedCard: View {
     @Environment(LanguageManager.self) private var languageManager
     let course: Course
@@ -49,10 +49,12 @@ struct CourseFeedCard: View {
     var kicker: String? = nil
     /// Écran rapporté dans les événements `like` / `save`.
     var screen: String = "home"
-    /// Dans le fil paginé, la carte remplit sa page : les compteurs descendent en bas.
+    /// Dans le fil paginé, la carte remplit sa page : la couverture prend toute la hauteur que
+    /// le texte et les compteurs laissent libre, au lieu d'un vide sous l'accroche.
     var fillsPage = false
-    /// Hauteur imposée à la couverture (fil paginé) ; sinon 16:9.
-    var coverHeight: CGFloat? = nil
+    /// Plafond de la couverture dans le fil paginé (un carré, en pratique) ; au-delà, le reste
+    /// de la hauteur revient au texte. Sans plafond ni page à remplir : 16:9.
+    var coverMaxHeight: CGFloat? = nil
     let onOpen: () -> Void
     let onOpenCreator: (CourseAuthor) -> Void
 
@@ -71,8 +73,13 @@ struct CourseFeedCard: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             Group {
-                if let coverHeight {
-                    Color.clear.frame(height: coverHeight)
+                if fillsPage {
+                    // Prioritaire sur le bloc de texte : la pile lui offre toute la hauteur moins
+                    // celle, incompressible, du texte. Le plancher garde une image lisible quand
+                    // le texte est très grand (Dynamic Type, traductions longues).
+                    Color.clear
+                        .frame(minHeight: 110, maxHeight: coverMaxHeight ?? .infinity)
+                        .layoutPriority(1)
                 } else {
                     Color.clear.aspectRatio(16 / 9, contentMode: .fit)
                 }
@@ -176,6 +183,18 @@ struct CourseFeedCard: View {
             }
             .buttonStyle(.plain)
             .accessibilityLabel(Text(AppLocalizable.string(liked ? "common.unlike" : "common.like", language: languageManager.current)))
+
+            ShareLink(item: SophiaDeepLink.shareText(for: course, language: languageManager.current)) {
+                Image(systemName: "square.and.arrow.up")
+                    .font(.system(size: 15, weight: .medium))
+                    .foregroundStyle(DS.inkSecondary)
+                    .padding(.vertical, 6)
+                    .padding(.horizontal, 2)
+                    .contentShape(Rectangle())
+            }
+            .simultaneousGesture(TapGesture().onEnded {
+                AnalyticsService.shared.log(.share, courseId: course.id, screen: screen, props: ["channel": .string("sheet"), "target": .string("course")])
+            })
 
             Spacer(minLength: 0)
 

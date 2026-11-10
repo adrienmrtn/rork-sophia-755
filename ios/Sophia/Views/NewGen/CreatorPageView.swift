@@ -45,7 +45,7 @@ struct CreatorPageView: View {
                 HStack {
                     RoundIconButton(systemImage: "chevron.left", accessibilityLabel: languageManager.text("common.close")) { dismiss() }
                     Spacer()
-                    ShareLink(item: String(format: languageManager.text("share.creator.message"), author.name)) {
+                    ShareLink(item: SophiaDeepLink.shareText(for: author, language: languageManager.current)) {
                         Image(systemName: "square.and.arrow.up")
                             .font(.system(size: 16, weight: .semibold))
                             .foregroundStyle(DS.ink)

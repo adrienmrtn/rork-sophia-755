@@ -47,6 +47,7 @@ visiteur ──▶ sophia-culture.com (Vercel, Next.js)
 | `/admin/production`, `/admin/production/<job>` | Les jobs de l'usine, étape par étape | `production_jobs`, `production_steps` |
 | `/admin/events`, `/admin/events/<slug>` | Les événements éditoriaux (Movember, 11 novembre…) : création, cours de la collection, défi, cours annoncés, textes en anglais traduits en 29 langues, image (import ou **Generate 2 images with AI** dans la carte Image, aussi sur un nouvel événement : il est créé puis les images dessinées), publication vers les apps sans nouvelle version (docs/evenements.md) | `campaigns`, manifeste du catalogue |
 | `/api/commons/search?q=` | Recherche d'images Wikimedia Commons pour l'éditeur (connecté seulement) | API Commons |
+| `/c/<identifiant>`, `/.well-known/apple-app-site-association` | Partage depuis l'app : lien court vers la fiche d'un cours ; fichier d'association Apple qui fait ouvrir `/courses/*`, `/c/*` et `/authors/*` dans l'app iOS (docs/partage.md) | |
 | `/sitemap.xml`, `/robots.txt` | Référencement ; `/studio`, `/admin`, `/auth`, `/join` exclus | |
 
 Le `proxy.ts` (middleware Next 16) rafraîchit la session et renvoie vers `/join?next=…` les visiteurs

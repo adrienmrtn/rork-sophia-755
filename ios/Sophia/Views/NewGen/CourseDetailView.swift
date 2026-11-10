@@ -242,7 +242,7 @@ struct CourseDetailView: View {
     }
 
     private var shareText: String {
-        String(format: languageManager.text("share.course.message"), course.title.withoutInlineMarkup)
+        SophiaDeepLink.shareText(for: course, language: languageManager.current)
     }
 
     private var ctaTitle: String {

@@ -27,7 +27,8 @@ final class DeepLinkRouter {
 
     private init() {}
 
-    /// A `sophia://` link, from `onOpenURL` or a notification tap. False when it is not ours.
+    /// A `sophia://` link or a sophia-culture.com page, from `onOpenURL` or a notification tap.
+    /// False when it is not ours.
     @discardableResult
     func open(_ url: URL) -> Bool {
         if SophiaDeepLink.isUnlockRequest(url) {
@@ -38,6 +39,21 @@ final class DeepLinkRouter {
         }
         if let slug = SophiaDeepLink.creatorSlug(from: url) {
             requestCreator(slug)
+            return true
+        }
+        // Un lien du site (lien universel, bannière Safari, lien repris après installation).
+        if let target = SophiaDeepLink.webTarget(from: url) {
+            switch target {
+            case .creator(let slug):
+                requestCreator(slug)
+            case .courseId(let id):
+                requestCourse(id)
+            case .courseNumber(let number):
+                // Le site ne connaît que le numéro ; un numéro absent du catalogue est ignoré.
+                let prefix = "course_\(number)_"
+                guard let course = ContentCatalog.activeCourses.first(where: { $0.id.hasPrefix(prefix) }) else { return false }
+                requestCourse(course.id)
+            }
             return true
         }
         guard let courseId = SophiaDeepLink.courseId(from: url) else { return false }
