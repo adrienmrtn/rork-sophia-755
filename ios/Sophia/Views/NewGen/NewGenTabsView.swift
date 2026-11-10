@@ -23,7 +23,7 @@ enum ProfileListKind: String, Hashable, CaseIterable {
     case toRead, read, liked
 }
 
-/// Les 5 onglets : Accueil, Explorer, Parcours, Entraînement, Profil. Parcours et Entraînement
+/// Les onglets : Accueil, Explorer, Parcours, Entraînement, Profil, et Duels quand l'app est en anglais. Parcours et Entraînement
 /// sont les écrans de la navigation classique, gardés tels quels pour ne pas perdre les anciens
 /// lecteurs (l'onglet « Apprendre » de la maquette a été retiré). Chaque onglet a sa pile de
 /// navigation ; le lecteur reste présenté par `ContentView` au-dessus de tout, via `selectedCourse`.
@@ -44,87 +44,155 @@ struct NewGenTabsView: View {
     @State private var explorePath: [NewGenRoute] = []
     @State private var profilePath: [NewGenRoute] = []
 
+    /// L'onglet Duels n'existe qu'en anglais pour l'instant (questions de la bêta) : il fait six
+    /// onglets, que la barre du système ne sait pas montrer (voir `SophiaTabScaffold`).
+    private var showsDuels: Bool { FeatureFlags.duelsVisible(language: languageManager.current) }
+
     var body: some View {
-        TabView(selection: $selectedTab) {
-            Tab(languageManager.text("tab.home"), systemImage: "house", value: 0) {
-                NavigationStack(path: $homePath) {
-                    HomeFeedView(
-                        progressManager: progressManager,
-                        discountManager: discountManager,
-                        onOpenCourse: { homePath.append(.course(id: $0.id, source: .feed)) },
-                        onOpenCreator: { homePath.append(.creator(slug: $0.slug)) },
-                        onOpenCampaign: { homePath.append(.campaign(slug: $0.slug)) },
-                        onSearch: { selectedTab = 1 },
-                        onBecomeCreator: openCreatorStudio
-                    )
-                    .toolbar(.hidden, for: .navigationBar)
-                    .navigationDestination(for: NewGenRoute.self) { route in
-                        destination(route) { homePath.append($0) }
+        Group {
+            if showsDuels {
+                SophiaTabScaffold(selection: $selectedTab, items: tabItems, onReselect: popToRoot) { tab in
+                    switch tab {
+                    case 0: homeTab
+                    case 1: exploreTab
+                    case 2: pathTab
+                    case 3: trainingTab
+                    case FeatureFlags.duelsTab: duelsTab
+                    default: profileTab
                     }
                 }
-                .audioMiniPlayerInset(onOpen: openAudioPlayer)
-            }
-
-            Tab(languageManager.text("tab.explore"), systemImage: "safari", value: 1) {
-                NavigationStack(path: $explorePath) {
-                    ExploreView(
-                        progressManager: progressManager,
-                        onOpenCourse: { explorePath.append(.course(id: $0.id, source: .search)) },
-                        onOpenCreator: { explorePath.append(.creator(slug: $0.slug)) },
-                        onOpenCampaign: { explorePath.append(.campaign(slug: $0.slug)) },
-                        onOpenUniverse: { explorePath.append(.universe(subcategory: $0)) }
-                    )
-                    .toolbar(.hidden, for: .navigationBar)
-                    .navigationDestination(for: NewGenRoute.self) { route in
-                        destination(route) { explorePath.append($0) }
+            } else {
+                TabView(selection: $selectedTab) {
+                    Tab(languageManager.text("tab.home"), systemImage: "house", value: 0) {
+                        homeTab
+                    }
+                    Tab(languageManager.text("tab.explore"), systemImage: "safari", value: 1) {
+                        exploreTab
+                    }
+                    Tab(languageManager.text("tab.path"), systemImage: "point.bottomleft.forward.to.point.topright.scurvepath", value: 2) {
+                        pathTab
+                    }
+                    Tab(languageManager.text("tab.training"), systemImage: "arrow.triangle.2.circlepath", value: 3) {
+                        trainingTab
+                    }
+                    Tab(languageManager.text("tab.profile"), systemImage: "person", value: 4) {
+                        profileTab
                     }
                 }
-                .audioMiniPlayerInset(onOpen: openAudioPlayer)
             }
-
-            Tab(languageManager.text("tab.path"), systemImage: "point.bottomleft.forward.to.point.topright.scurvepath", value: 2) {
-                LearningPathView(progressManager: progressManager, selectedCourse: $selectedCourse)
-                    .audioMiniPlayerInset(onOpen: openAudioPlayer)
-            }
-
-            Tab(languageManager.text("tab.training"), systemImage: "arrow.triangle.2.circlepath", value: 3) {
-                TrainingView(
-                    progressManager: progressManager,
-                    store: storeVM,
-                    isPremium: storeVM.isPremium,
-                    onShowQuizPaywall: { onShowPaywall(.entrainement) }
-                )
-                .audioMiniPlayerInset(onOpen: openAudioPlayer)
-            }
-
-            Tab(languageManager.text("tab.profile"), systemImage: "person", value: 4) {
-                NavigationStack(path: $profilePath) {
-                    ProfileV2View(
-                        progressManager: progressManager,
-                        store: storeVM,
-                        onOpenCourse: { profilePath.append(.course(id: $0.id, source: .profile)) },
-                        onResumeCourse: { openReader($0, source: .profile) },
-                        onOpenCreator: { profilePath.append(.creator(slug: $0.slug)) },
-                        onOpenList: { profilePath.append(.courseList($0)) },
-                        onOpenCampaign: { profilePath.append(.campaign(slug: $0.slug)) },
-                        onOpenProgression: { profilePath.append(.progression) },
-                        onOpenFriends: { profilePath.append(.friends) },
-                        onOpenAntiScroll: onOpenAntiScroll,
-                        onDiscoverCreators: { selectedTab = 1 },
-                        onBecomeCreator: openCreatorStudio,
-                        onShowPaywall: { onShowPaywall(.debloquerCours) },
-                        onResetOnboarding: onResetOnboarding
-                    )
-                    .toolbar(.hidden, for: .navigationBar)
-                    .navigationDestination(for: NewGenRoute.self) { route in
-                        destination(route) { profilePath.append($0) }
-                    }
-                }
-                .audioMiniPlayerInset(onOpen: openAudioPlayer)
-            }
+        }
+        .onChange(of: showsDuels) { _, visible in
+            if !visible, selectedTab == FeatureFlags.duelsTab { selectedTab = 0 }
         }
         // `sophia://author/<slug>` : la page du créateur dans l'onglet Accueil.
         .onChange(of: DeepLinkRouter.shared.token, initial: true) { _, _ in openPendingCreator() }
+    }
+
+    // MARK: - Onglets
+
+    /// Les six onglets de la barre maison, Duels entre Entraînement et Profil. Accueil et
+    /// Explorer restent en vie (fil, recherche) ; les autres rejouent leur `onAppear` à chaque visite.
+    private var tabItems: [SophiaTabItem] {
+        [
+            SophiaTabItem(value: 0, title: languageManager.text("tab.home"), systemImage: "house", keepsAlive: true),
+            SophiaTabItem(value: 1, title: languageManager.text("tab.explore"), systemImage: "safari", keepsAlive: true),
+            SophiaTabItem(value: 2, title: languageManager.text("tab.path"), systemImage: "point.bottomleft.forward.to.point.topright.scurvepath"),
+            SophiaTabItem(value: 3, title: languageManager.text("tab.training"), systemImage: "arrow.triangle.2.circlepath"),
+            SophiaTabItem(value: FeatureFlags.duelsTab, title: languageManager.text("tab.duels"), systemImage: "trophy"),
+            SophiaTabItem(value: 4, title: languageManager.text("tab.profile"), systemImage: "person"),
+        ]
+    }
+
+    /// Toucher l'onglet déjà affiché ramène sa pile à la racine, comme la barre du système.
+    private func popToRoot(_ tab: Int) {
+        switch tab {
+        case 0: homePath.removeAll()
+        case 1: explorePath.removeAll()
+        case 4: profilePath.removeAll()
+        default: break
+        }
+    }
+
+    private var homeTab: some View {
+        NavigationStack(path: $homePath) {
+            HomeFeedView(
+                progressManager: progressManager,
+                discountManager: discountManager,
+                onOpenCourse: { homePath.append(.course(id: $0.id, source: .feed)) },
+                onOpenCreator: { homePath.append(.creator(slug: $0.slug)) },
+                onOpenCampaign: { homePath.append(.campaign(slug: $0.slug)) },
+                onSearch: { selectedTab = 1 },
+                onBecomeCreator: openCreatorStudio
+            )
+            .toolbar(.hidden, for: .navigationBar)
+            .navigationDestination(for: NewGenRoute.self) { route in
+                destination(route) { homePath.append($0) }
+            }
+        }
+        .audioMiniPlayerInset(onOpen: openAudioPlayer)
+    }
+
+    private var exploreTab: some View {
+        NavigationStack(path: $explorePath) {
+            ExploreView(
+                progressManager: progressManager,
+                onOpenCourse: { explorePath.append(.course(id: $0.id, source: .search)) },
+                onOpenCreator: { explorePath.append(.creator(slug: $0.slug)) },
+                onOpenCampaign: { explorePath.append(.campaign(slug: $0.slug)) },
+                onOpenUniverse: { explorePath.append(.universe(subcategory: $0)) }
+            )
+            .toolbar(.hidden, for: .navigationBar)
+            .navigationDestination(for: NewGenRoute.self) { route in
+                destination(route) { explorePath.append($0) }
+            }
+        }
+        .audioMiniPlayerInset(onOpen: openAudioPlayer)
+    }
+
+    private var pathTab: some View {
+        LearningPathView(progressManager: progressManager, selectedCourse: $selectedCourse)
+            .audioMiniPlayerInset(onOpen: openAudioPlayer)
+    }
+
+    private var trainingTab: some View {
+        TrainingView(
+            progressManager: progressManager,
+            store: storeVM,
+            isPremium: storeVM.isPremium,
+            onShowQuizPaywall: { onShowPaywall(.entrainement) }
+        )
+        .audioMiniPlayerInset(onOpen: openAudioPlayer)
+    }
+
+    private var profileTab: some View {
+        NavigationStack(path: $profilePath) {
+            ProfileV2View(
+                progressManager: progressManager,
+                store: storeVM,
+                onOpenCourse: { profilePath.append(.course(id: $0.id, source: .profile)) },
+                onResumeCourse: { openReader($0, source: .profile) },
+                onOpenCreator: { profilePath.append(.creator(slug: $0.slug)) },
+                onOpenList: { profilePath.append(.courseList($0)) },
+                onOpenCampaign: { profilePath.append(.campaign(slug: $0.slug)) },
+                onOpenProgression: { profilePath.append(.progression) },
+                onOpenFriends: { profilePath.append(.friends) },
+                onOpenAntiScroll: onOpenAntiScroll,
+                onDiscoverCreators: { selectedTab = 1 },
+                onBecomeCreator: openCreatorStudio,
+                onShowPaywall: { onShowPaywall(.debloquerCours) },
+                onResetOnboarding: onResetOnboarding
+            )
+            .toolbar(.hidden, for: .navigationBar)
+            .navigationDestination(for: NewGenRoute.self) { route in
+                destination(route) { profilePath.append($0) }
+            }
+        }
+        .audioMiniPlayerInset(onOpen: openAudioPlayer)
+    }
+
+    private var duelsTab: some View {
+        DuelsHomeView(progressManager: progressManager)
+            .audioMiniPlayerInset(onOpen: openAudioPlayer)
     }
 
     private func openPendingCreator() {
