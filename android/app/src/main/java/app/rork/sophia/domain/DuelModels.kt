@@ -126,7 +126,7 @@ data class DuelQuestion(
     @SerialName("time_limit_ms") val timeLimitMs: Int = 12000,
 )
 
-/** Ce que l'adversaire simulé répond à une question, décidé par le serveur au lancement. */
+/** Ce que l'adversaire répond à une question, tel que le serveur l'envoie avec la partie. */
 @Serializable
 data class DuelBotAnswer(
     val correct: Boolean = false,
@@ -153,7 +153,7 @@ data class DuelRoundOption(
 /**
  * Une des quatre manches de cinq questions. `MIXED` et `SPRINT` portent `questions` ; une manche
  * `PICK` porte `options` quand c'est à moi de choisir (`picker == "me"`), ou `subject` et
- * `questions` quand l'adversaire simulé a choisi.
+ * `questions` quand c'est le choix de l'adversaire.
  */
 @Serializable
 data class DuelRoundPlan(
