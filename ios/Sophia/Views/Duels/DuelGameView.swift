@@ -230,6 +230,9 @@ struct DuelGameView: View {
     private var statusText: String {
         switch model.phase {
         case .answering:
+            if model.opponentLeft {
+                return String(format: languageManager.text("duel.friend.left"), opponent.handle)
+            }
             if model.playerLocked && !model.opponentAnswered {
                 return String(format: languageManager.text("duel.game.waiting"), opponent.handle)
             }

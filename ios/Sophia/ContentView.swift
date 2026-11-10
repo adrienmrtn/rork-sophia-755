@@ -257,6 +257,8 @@ struct ContentView: View {
             // Le premier affichage est un lancement : `scenePhase` ne signale que les
             // changements suivants.
             AnalyticsService.shared.appDidBecomeActive()
+            // Duels entre amis : l'app se signale (pastille verte) et reçoit les invitations.
+            if showsDuels { DuelLiveService.shared.start() }
             // Une connexion faite pendant l'onboarding arrive ici comme un lancement.
             _ = auth.consumeInteractiveSignIn()
             if auth.isSignedIn {
@@ -319,11 +321,13 @@ struct ContentView: View {
         }
         .onChange(of: scenePhase) { _, phase in
             if phase == .background {
+                DuelLiveService.shared.stop()
                 syncService.flushPendingPush()
                 AnalyticsService.shared.appDidEnterBackground()
                 return
             }
             guard phase == .active else { return }
+            if showsDuels { DuelLiveService.shared.start() }
             Task { await CatalogStore.shared.refreshIfNeeded(language: languageManager.current) }
             AnalyticsService.shared.appDidBecomeActive()
             blocker.reconcileShield()

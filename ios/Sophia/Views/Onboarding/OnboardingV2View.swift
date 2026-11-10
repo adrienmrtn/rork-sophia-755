@@ -1,5 +1,6 @@
 import SwiftUI
 import RevenueCat
+import Supabase
 
 /// Coordinateur d'onboarding V2 — séquence **fixe** (les pages valeur ne dépendent plus des
 /// objectifs sélectionnés).
@@ -9,7 +10,8 @@ import RevenueCat
 /// Sujets (6 carrés) · « Sophia va t'aider » · Mission (gratuite à l'essai) · « Me cultiver »
 /// (questions) ·
 /// Temps d'écran (slider) · Ta vie en années · « Transforme ce temps » · Avis · « Fais bon
-/// usage » · Swipe · Loading · Profil · Notifications · **Login** · Bienvenue à bord · Atouts ·
+/// usage » · Swipe · Loading · Profil · Notifications · **Login** · Ton profil (avatar, @) ·
+/// Bienvenue à bord · Atouts ·
 /// Essai · Rappel · Paywall
 /// annuel · Paywall comparatif. Les pages « Se cultiver, c'est long et cher » et « Des cours
 /// écrits par des docteurs et des profs » ont été retirées le 29/09/2026.
@@ -38,7 +40,7 @@ struct OnboardingV2View: View {
         case welcome, language, intro, socialProof, name, age, knowledge, motivation
         case objectives, topics, objectiveIntro, mission
         case questions, phoneTime, yearsGrid, transform, review, personalize
-        case swipe, loading, profile, readingTime, notifications, login
+        case swipe, loading, profile, readingTime, notifications, login, account
         case welcomeAboard, features, trialSteps, reminder, paywallAnnual, paywallComparison
 
         /// Nom stable de l'écran, mémorisé pour reprendre l'onboarding au bon endroit : la
@@ -70,6 +72,7 @@ struct OnboardingV2View: View {
             case .readingTime: "reading_time"
             case .notifications: "notifications"
             case .login: "login"
+            case .account: "account"
             case .welcomeAboard: "welcome_aboard"
             case .features: "features"
             case .trialSteps: "trial_steps"
@@ -91,7 +94,7 @@ struct OnboardingV2View: View {
         var list: [Screen] = [.welcome, .language, .intro, .socialProof,
                               .name, .age, .knowledge, .motivation, .objectives, .topics, .objectiveIntro, .mission,
                               .questions, .phoneTime, .yearsGrid, .transform, .review, .personalize,
-                              .swipe, .loading, .profile, .readingTime, .notifications, .login,
+                              .swipe, .loading, .profile, .readingTime, .notifications, .login, .account,
                               .welcomeAboard, .features]
         if store.offerings == nil || store.annualHasFreeTrial {
             list.append(.trialSteps)
@@ -216,6 +219,8 @@ struct OnboardingV2View: View {
             OnboardingV2Notifications(vm: vm, onNext: advance)
         case .login:
             OnboardingV2Login(onSignedIn: advance)
+        case .account:
+            OnboardingV2Account(progressManager: progressManager, onNext: advance)
         case .welcomeAboard:
             OnboardingV2WelcomeAboard(vm: vm, onNext: advance)
         case .features:
@@ -250,6 +255,13 @@ struct OnboardingV2View: View {
             guard next < list.count else { finish(); return }
         }
 
+        // La page « Ton profil » (avatar, @) ne concerne qu'un compte qui vient d'être créé :
+        // sans session (saut du simulateur) ou pour un compte existant, on passe.
+        if list[next] == .account, !isNewAccount {
+            next += 1
+            guard next < list.count else { finish(); return }
+        }
+
         // Skip les paywalls si déjà premium.
         if list[next] == .paywallAnnual, store.isPremium {
             finish()
@@ -265,6 +277,14 @@ struct OnboardingV2View: View {
             .onboardingStep,
             props: ["step": .string(list[next].analyticsName), "index": .int(next)]
         )
+    }
+
+    /// Le compte connecté a été créé dans le dernier quart d'heure : c'est une inscription.
+    private var isNewAccount: Bool {
+        // `AuthService` apprend la session par un flux : au moment où la page de connexion
+        // avance, elle peut ne pas l'avoir encore ; le client Supabase, lui, la connaît déjà.
+        guard let created = (auth.currentUser ?? SupabaseManager.shared.auth.currentUser)?.createdAt else { return false }
+        return Date().timeIntervalSince(created) < 15 * 60
     }
 
     private func finish() {

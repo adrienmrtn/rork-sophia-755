@@ -14,7 +14,8 @@ le dit, et le niveau de difficulté du joueur n'est jamais affiché.
   à distance égale).
 - **Égalité après 20 questions** : une 21e question au curseur, en mort subite. Le plus proche
   gagne ; à distance égale, le plus rapide.
-- **Quitter en pleine partie** (bouton, ou app fermée) compte comme une défaite.
+- **Quitter en pleine partie** (bouton, ou app fermée) compte comme une défaite et coûte toujours
+  20 trophées, même dans les premières ligues (jamais sous 0), sans faire redescendre de ligue.
 - **Trophées**, façon Clash Royale : +25 à +35 pour une victoire, −15 à −25 pour une défaite,
   selon l'écart de trophées avec l'adversaire. Aucune perte avant la 5e ligue (400 trophées), et
   on ne redescend jamais sous le seuil de la meilleure ligue atteinte.
@@ -84,6 +85,47 @@ Une partie restée ouverte est close comme un abandon au lancement de la suivant
 - Un résultat qui n'a pas pu partir (réseau coupé) est gardé sur l'appareil et renvoyé au
   prochain passage.
 
+## Duels entre amis
+
+Un duel amical : les deux amis reçoivent les mêmes 20 questions et répondent en même temps. Aucun
+trophée en jeu, les statistiques classées ne bougent pas ; le profil d'un ami montre le bilan des
+duels amicaux joués contre lui.
+
+- **Présence.** L'app n'a pas de notifications push. Tant qu'elle est ouverte (en anglais, là où
+  les duels existent), elle appelle `duel_ping` toutes les 4 secondes : c'est ce qui tient la
+  pastille verte chez les amis (« en ligne » = signal reçu depuis moins de 20 secondes), et c'est
+  la réponse à ce signal qui apporte une invitation. `duel_go_offline` à la mise en arrière-plan.
+- **Invitation.** Depuis le profil d'un ami ou le classement de l'onglet Duels, vers n'importe
+  quel ami dont l'app a les duels, en ligne ou non. Il a 15 secondes : un bandeau s'affiche
+  par-dessus l'écran où il se trouve (`DuelInviteBanner`, dans sa propre fenêtre). Sans réponse,
+  l'invitation expire ; un ami en pleine partie la refuse d'office (« déjà en duel »).
+- **Partie.** Le serveur tient l'horloge (`duel_friend_matches`) : une question est close quand
+  les deux ont répondu ou quand son temps est écoulé, la suivante démarre après la révélation,
+  au même instant pour les deux. Chaque app envoie sa réponse (`duel_friend_answer`) et
+  interroge l'état (`duel_friend_state`) environ toutes les 0,7 seconde.
+- **Départ d'un joueur.** Celui qui quitte a perdu (sans perte de trophées) ; l'autre finit la
+  partie seul, sans attendre. Une simple coupure réseau ne fait pas perdre d'office : les
+  questions manquées comptent comme non répondues.
+- **Écran.** La partie s'ouvre par-dessus n'importe quel écran (`DuelFriendPresenter`, présenté
+  par UIKit depuis l'écran le plus haut), avec le même écran de jeu que les duels classés
+  (`DuelGameModel` en mode `live`).
+
+Tables : `duel_presence`, `duel_invites`, `duel_friend_matches` (aucun accès direct). Fonctions :
+`duel_ping`, `duel_go_offline`, `duel_invite_friend`, `duel_invite_status`, `duel_invite_cancel`,
+`duel_invite_respond`, `duel_friend_state`, `duel_friend_answer`, `duel_friend_leave`.
+Migration : `supabase/migrations/20261110010000_duel_friends.sql`.
+
+## Profil d'un ami et page profil de l'onboarding
+
+- `friend_profile(target)` : ce que `friend_public_stats` donnait (XP, série, cours et quiz
+  terminés), plus l'avatar, les trophées et la ligue, les créateurs suivis, la présence et le
+  bilan des duels amicaux. Réservé aux amis. Si la fonction manque côté serveur, l'app retombe
+  sur `friend_public_stats`.
+- Onboarding : après la connexion, la page « Ton profil » (`OnboardingV2Account`) propose un
+  avatar tiré au hasard et le @ généré, modifiables ; elle n'apparaît que pour un compte créé
+  dans le dernier quart d'heure.
+
 ## Pas encore fait
 
-Android, les questions dans les autres langues, les saisons, les sons, un gain d'XP par duel.
+Android, les questions dans les autres langues, les saisons, les sons, un gain d'XP par duel,
+les notifications push (une invitation n'arrive que si l'ami a l'app ouverte).
