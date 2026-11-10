@@ -332,7 +332,7 @@ enum DuelImageTrimmer {
             width: Double(right + 1 - left) * scaleX - inset * 2,
             height: Double(bottom + 1 - top) * scaleY - inset * 2
         ).integral
-        guard rect.width >= Double(source.width) * 0.3, rect.height >= Double(source.height) * 0.12,
+        guard Double(rect.width) >= Double(source.width) * 0.3, Double(rect.height) >= Double(source.height) * 0.12,
               let cropped = source.cropping(to: rect) else { return nil }
         return UIImage(cgImage: cropped, scale: image.scale, orientation: image.imageOrientation)
     }

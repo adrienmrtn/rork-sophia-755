@@ -456,7 +456,7 @@ struct DuelsHomeView: View {
         let share = Double(profile.wins) / Double(total)
         return GeometryReader { proxy in
             let gap: CGFloat = profile.wins > 0 && profile.losses > 0 ? 3 : 0
-            let winsWidth = max((proxy.size.width - gap) * share, 0)
+            let winsWidth: CGFloat = max((proxy.size.width - gap) * CGFloat(share), 0)
             HStack(spacing: gap) {
                 if profile.wins > 0 {
                     Capsule().fill(DS.success).frame(width: winsWidth)
