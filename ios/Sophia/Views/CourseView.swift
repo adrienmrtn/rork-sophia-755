@@ -11,6 +11,14 @@ struct CourseView: View {
     let onDismissToHome: () -> Void
     @Environment(\.dismiss) private var dismiss
     @State private var currentIndex: Int = 0
+    /// Mode de lecture (pas à pas ou par pages), lu à l'ouverture, modifiable dans l'en-tête.
+    @State private var readingMode: CourseReadingMode = CourseReadingMode.current
+    /// Mode pas à pas : les passages du cours dans l'ordre, et combien sont révélés.
+    @State private var steps: [ReaderStep] = []
+    @State private var revealedCount: Int = 0
+    /// Dernière demande de défilement vers un passage révélé.
+    @State private var scrollRequest: CourseStepReaderView.ScrollRequest? = nil
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
     /// Le paquet du cours (texte, quiz, glossaire) : déjà sur le téléphone, en cours de
     /// téléchargement, ou introuvable hors ligne.
     @State private var contentState: ContentLoadState = .ready
@@ -87,8 +95,19 @@ struct CourseView: View {
         currentIndex == course.lessons.count - 1
     }
 
+    /// Tout est lu : la dernière page par pages, le dernier passage révélé pas à pas.
+    private var hasReachedEnd: Bool {
+        switch readingMode {
+        case .pages: isLastLesson
+        case .steps: !steps.isEmpty && revealedCount >= steps.count
+        }
+    }
+
     private var progressValue: Double {
-        Double(currentIndex + 1) / Double(course.lessons.count)
+        switch readingMode {
+        case .pages: Double(currentIndex + 1) / Double(course.lessons.count)
+        case .steps: steps.isEmpty ? 0 : Double(revealedCount) / Double(steps.count)
+        }
     }
 
     private let cream = DS.canvas
@@ -227,8 +246,15 @@ struct CourseView: View {
             .sophiaColorScheme()
         }
         .onChange(of: currentIndex) { _, _ in
+            // Pas à pas, chaque passage a déjà son retour haptique (`advanceStep`).
+            guard readingMode == .pages else { return }
             let g = UIImpactFeedbackGenerator(style: .light)
             g.impactOccurred()
+        }
+        .onChange(of: hasFullAccess) { _, _ in
+            // Un achat dans le lecteur : les sections verrouillées du fil deviennent lisibles.
+            guard contentState == .ready else { return }
+            prepareSteps()
         }
         .fullScreenCover(isPresented: $showDebloquerPaywall) {
             SophiaPaywallView(
@@ -344,6 +370,8 @@ struct CourseView: View {
                 .foregroundStyle(DS.inkSecondary)
                 .monospacedDigit()
 
+            readingModeMenu
+
             if CourseAudioCatalog.shared.hasAudio(course.id) {
                 audioButton
             }
@@ -351,6 +379,44 @@ struct CourseView: View {
         .padding(.horizontal, 20)
         .padding(.top, 12)
         .padding(.bottom, 12)
+    }
+
+    // MARK: Reading mode
+
+    /// Pas à pas ou par pages : le choix se fait ici, dans le lecteur, et vaut pour tous les cours.
+    private var readingModeMenu: some View {
+        Menu {
+            Picker(
+                languageManager.text("course.readingMode"),
+                selection: Binding(get: { readingMode }, set: { setReadingMode($0) })
+            ) {
+                ForEach(CourseReadingMode.allCases) { mode in
+                    Label(languageManager.text(mode.titleKey), systemImage: mode.systemImage)
+                        .tag(mode)
+                }
+            }
+        } label: {
+            Image(systemName: readingMode.systemImage)
+                .font(.jakarta(size: 15, weight: .semibold))
+                .foregroundStyle(DS.inkSecondary)
+                .frame(width: 40, height: 40)
+                .background(DS.surface, in: Circle())
+                .overlay { Circle().strokeBorder(DS.hairline, lineWidth: 1) }
+        }
+        .accessibilityLabel(Text(languageManager.text("course.readingMode")))
+    }
+
+    private func setReadingMode(_ mode: CourseReadingMode) {
+        guard mode != readingMode else { return }
+        UIImpactFeedbackGenerator(style: .light).impactOccurred()
+        CourseReadingMode.current = mode
+        if mode == .steps {
+            // Reprendre à la section en cours : son en-tête et son premier passage.
+            revealSteps(throughSection: currentIndex)
+        }
+        withAnimation(.easeInOut(duration: 0.25)) {
+            readingMode = mode
+        }
     }
 
     // MARK: Audio
@@ -398,9 +464,7 @@ struct CourseView: View {
             if course.lessons.count <= 12 {
                 HStack(spacing: 4) {
                     ForEach(0..<max(1, course.lessons.count), id: \.self) { index in
-                        Capsule()
-                            .fill(index <= currentIndex ? DS.accentSoft : DS.hairline)
-                            .animation(.easeInOut(duration: 0.25), value: currentIndex)
+                        ProgressSegment(fill: segmentFill(index))
                     }
                 }
             } else {
@@ -490,6 +554,7 @@ struct CourseView: View {
                 "section_count": .int(course.lessons.count),
                 "seconds": .int(max(0, seconds)),
                 "reached_end": .bool(reachedEnd),
+                "mode": .string(readingMode.rawValue),
             ]
         )
         sectionEnteredAt = Date()
@@ -587,17 +652,22 @@ struct CourseView: View {
             if contentState != .ready {
                 contentPlaceholder
             } else {
-                TabView(selection: $currentIndex) {
-                    ForEach(Array(course.lessons.enumerated()), id: \.element.id) { index, lesson in
-                        lessonContent(lesson: lesson, lessonIndex: index)
-                            .tag(index)
+                switch readingMode {
+                case .pages:
+                    TabView(selection: $currentIndex) {
+                        ForEach(Array(course.lessons.enumerated()), id: \.element.id) { index, lesson in
+                            lessonContent(lesson: lesson, lessonIndex: index)
+                                .tag(index)
+                        }
                     }
+                    .tabViewStyle(.page(indexDisplayMode: .never))
+                    // Restaure le slide entre les pages : sur un TabView `.page`, seul ce modifieur
+                    // anime un changement *programmatique* de sélection (bouton « Continuer »).
+                    // `withAnimation` seul n'anime pas le slide sur iOS 17/18.
+                    .animation(.spring(response: 0.4), value: currentIndex)
+                case .steps:
+                    stepsReader
                 }
-                .tabViewStyle(.page(indexDisplayMode: .never))
-                // Restaure le slide entre les pages : sur un TabView `.page`, seul ce modifieur
-                // anime un changement *programmatique* de sélection (bouton « Continuer »).
-                // `withAnimation` seul n'anime pas le slide sur iOS 17/18.
-                .animation(.spring(response: 0.4), value: currentIndex)
 
                 bottomButton
             }
@@ -613,11 +683,15 @@ struct CourseView: View {
         let language = AppLanguage.currentPersisted()
         if CourseContentStore.hasContent(courseId: course.id, language: language) {
             contentState = .ready
+            prepareSteps()
             return
         }
         contentState = .loading
         let content = await CourseContentStore.ensureContent(courseId: course.id, language: language)
         contentState = content == nil ? .unavailable : .ready
+        if contentState == .ready {
+            prepareSteps()
+        }
     }
 
     private var contentPlaceholder: some View {
@@ -664,6 +738,10 @@ struct CourseView: View {
 
     private var bottomButton: some View {
         Button {
+            if readingMode == .steps {
+                advanceStep()
+                return
+            }
             let g = UIImpactFeedbackGenerator(style: .medium)
             g.impactOccurred()
             // Cours verrouillé (2e+ du jour) : le bouton bas slide comme d'habitude.
@@ -679,33 +757,7 @@ struct CourseView: View {
                 return
             }
             if isLastLesson {
-                guard FreemiumGate.canCompleteCourse(isPremium: isPremium, isDailyFreeCourse: isDailyFreeCourse) else { return }
-                progressManager.updateLessonProgress(
-                    courseId: course.id,
-                    lessonIndex: currentIndex,
-                    lessonCount: course.lessons.count
-                )
-                let wasCompletedBefore = progressManager.courseStatus(for: course.id) == .completed
-                previousSubjectCount = progressManager.completedCount(for: course.subject)
-                previousSubjectXP = progressManager.xp(for: course.subject)
-                progressManager.completeCourse(courseId: course.id, quizScore: 0)
-                logSectionView(index: currentIndex, reachedEnd: true)
-                AnalyticsService.shared.log(
-                    .courseComplete,
-                    courseId: course.id,
-                    props: ["first_time": .bool(!wasCompletedBefore)]
-                )
-                // The daily course is done: if TikTok was waiting on it, it opens now.
-                TikTokBlockerManager.shared.registerDailyCourseCompleted(courseId: course.id)
-                progressManager.addXP(subject: course.subject, amount: Self.courseCompletionXP)
-                globalCourseAwardResult = progressManager.awardGlobalXP(
-                    reason: .courseCompleted(courseId: course.id),
-                    amount: ProgressManager.globalCourseCompletionXP
-                )
-                pendingCollectionEvents = wasCompletedBefore ? [] : progressManager.collectionProgressEvents(forNewlyCompletedCourseId: course.id)
-                withAnimation(.spring(response: 0.5, dampingFraction: 0.85)) {
-                    endPhase = .completed
-                }
+                finishCourse()
             } else {
                 // Le slide est animé par `.animation(_:value: currentIndex)` sur le TabView.
                 currentIndex += 1
@@ -717,16 +769,144 @@ struct CourseView: View {
             }
         } label: {
             HStack(spacing: 8) {
-                Text(isLastLesson && !isCourseLocked
+                Text(hasReachedEnd && !isCourseLocked
                       ? languageManager.text("course.finish")
                       : languageManager.text("common.continue"))
-                Image(systemName: isLastLesson && !isCourseLocked ? "checkmark" : "arrow.forward")
+                Image(systemName: hasReachedEnd && !isCourseLocked ? "checkmark" : "arrow.forward")
                     .font(.subheadline.weight(.semibold))
             }
         }
         .buttonStyle(DSPrimaryButtonStyle())
         .padding(.horizontal, 24)
         .padding(.bottom, 24)
+    }
+
+    // MARK: Step-by-step reading
+
+    /// Le fil pas à pas (`CourseStepReaderView`) ; les gestes remontent ici, comme pour les pages.
+    private var stepsReader: some View {
+        CourseStepReaderView(
+            course: course,
+            steps: steps,
+            revealedCount: revealedCount,
+            accent: DS.accentSoft,
+            scrollRequest: scrollRequest,
+            bigHeart: bigHeart,
+            onGlossaryTap: showGlossary,
+            onAuthorTap: { author in presentedAuthor = author },
+            isFollowingAuthor: { progressManager.isFollowing($0.slug) },
+            onFollowAuthor: { author in
+                let wasFollowing = progressManager.isFollowing(author.slug)
+                progressManager.toggleFollow(author.slug)
+                AnalyticsService.shared.log(wasFollowing ? .unfollow : .follow, courseId: course.id, screen: "reader", props: ["creator": .string(author.slug)])
+            },
+            onUnlock: { presentDebloquerPaywall() },
+            onDoubleTap: { likeFromDoubleTap() }
+        )
+    }
+
+    /// Calcule les passages du mode pas à pas et replace la lecture sur la section en cours.
+    private func prepareSteps() {
+        steps = ReaderStep.build(course: course, isPremium: isPremium, isDailyFreeCourse: isDailyFreeCourse)
+        revealSteps(throughSection: currentIndex)
+    }
+
+    /// Révèle le fil jusqu'à l'en-tête et au premier passage de `section` (les sections
+    /// précédentes entières) et, hors de l'intro, demande à y défiler.
+    private func revealSteps(throughSection section: Int) {
+        let inSection = steps.indices.filter { steps[$0].sectionIndex == section }
+        guard let first = inSection.first, let last = inSection.last else {
+            revealedCount = steps.count
+            return
+        }
+        revealedCount = min(first + 2, last + 1)
+        if section > 0 {
+            scrollRequest = CourseStepReaderView.ScrollRequest(stepID: steps[first].id, token: (scrollRequest?.token ?? 0) + 1)
+        }
+    }
+
+    /// Mode pas à pas : révèle le passage suivant, ou termine le cours quand tout est lu.
+    private func advanceStep() {
+        guard !steps.isEmpty else { return }
+        guard revealedCount < steps.count else {
+            // Cours verrouillé : comme par pages, le bouton ne fait rien au bout ; le paywall
+            // ne s'ouvre que par le cadenas.
+            guard !isCourseLocked else { return }
+            UIImpactFeedbackGenerator(style: .medium).impactOccurred()
+            finishCourse()
+            return
+        }
+        let step = steps[revealedCount]
+        switch step.kind {
+        case .header, .locked:
+            UIImpactFeedbackGenerator(style: .medium).impactOccurred()
+        case .block, .footer, .legacy:
+            UIImpactFeedbackGenerator(style: .light).impactOccurred()
+        }
+        if reduceMotion {
+            revealedCount += 1
+        } else {
+            withAnimation(.spring(response: 0.42, dampingFraction: 0.8)) {
+                revealedCount += 1
+            }
+        }
+        scrollRequest = CourseStepReaderView.ScrollRequest(stepID: step.id, token: (scrollRequest?.token ?? 0) + 1)
+        if step.sectionIndex != currentIndex {
+            // Nouvelle section : `section_view`, progression, coachmark et demande d'avis
+            // suivent `currentIndex`, comme par pages.
+            currentIndex = step.sectionIndex
+            progressManager.updateLessonProgress(
+                courseId: course.id,
+                lessonIndex: currentIndex,
+                lessonCount: course.lessons.count
+            )
+        } else {
+            maybeShowTermCoachmark(lessonIndex: currentIndex)
+        }
+    }
+
+    /// Remplissage d'un segment de la barre : plein ou vide par pages, progressif pas à pas.
+    private func segmentFill(_ index: Int) -> Double {
+        switch readingMode {
+        case .pages:
+            return index <= currentIndex ? 1 : 0
+        case .steps:
+            let inSection = steps.indices.filter { steps[$0].sectionIndex == index }
+            guard !inSection.isEmpty else { return index <= currentIndex ? 1 : 0 }
+            let done = inSection.filter { $0 < revealedCount }.count
+            return Double(done) / Double(inSection.count)
+        }
+    }
+
+    /// Tout est lu : progression, XP, événements, puis l'écran de fin. Commun aux deux modes.
+    private func finishCourse() {
+        guard FreemiumGate.canCompleteCourse(isPremium: isPremium, isDailyFreeCourse: isDailyFreeCourse) else { return }
+        progressManager.updateLessonProgress(
+            courseId: course.id,
+            lessonIndex: currentIndex,
+            lessonCount: course.lessons.count
+        )
+        let wasCompletedBefore = progressManager.courseStatus(for: course.id) == .completed
+        previousSubjectCount = progressManager.completedCount(for: course.subject)
+        previousSubjectXP = progressManager.xp(for: course.subject)
+        progressManager.completeCourse(courseId: course.id, quizScore: 0)
+        logSectionView(index: currentIndex, reachedEnd: true)
+        AnalyticsService.shared.log(
+            .courseComplete,
+            courseId: course.id,
+            props: ["first_time": .bool(!wasCompletedBefore), "mode": .string(readingMode.rawValue)]
+        )
+        // The daily course is done: if TikTok was waiting on it, it opens now.
+        TikTokBlockerManager.shared.registerDailyCourseCompleted(courseId: course.id)
+        progressManager.addXP(subject: course.subject, amount: Self.courseCompletionXP)
+        globalCourseAwardResult = progressManager.awardGlobalXP(
+            reason: .courseCompleted(courseId: course.id),
+            amount: ProgressManager.globalCourseCompletionXP
+        )
+        pendingCollectionEvents = wasCompletedBefore ? [] : progressManager.collectionProgressEvents(forNewlyCompletedCourseId: course.id)
+        withAnimation(.spring(response: 0.5, dampingFraction: 0.85)) {
+            endPhase = .completed
+        }
     }
 
     private func presentDebloquerPaywall() {
@@ -774,6 +954,15 @@ struct CourseView: View {
 
     /// Premier terme du glossaire réellement résoluble dans la leçon (v2 `[[…]]`, sinon legacy `<…>`).
     private func firstGlossaryTerm(lessonIndex: Int) -> String? {
+        if readingMode == .steps {
+            // Seuls les passages déjà révélés de la section comptent : le mot doit être visible.
+            for step in steps.prefix(revealedCount) where step.sectionIndex == lessonIndex {
+                if let term = firstResolvableTerm(in: step.proseText, open: "[[", close: "]]") {
+                    return term
+                }
+            }
+            return nil
+        }
         let lesson = course.lessons[lessonIndex]
         if let resolved = CourseContentStore.section(courseId: course.id, sectionId: lesson.id) {
             for block in resolved.section.blocks {
@@ -850,5 +1039,22 @@ struct CourseView: View {
             steps.append(.streak(streak: progressManager.streak, subject: course.subject, lastActiveDate: progressManager.progress.lastActiveDate))
         }
         return steps
+    }
+}
+
+/// Un segment de la barre de progression du lecteur, rempli de gauche à droite.
+private struct ProgressSegment: View {
+    let fill: Double
+
+    var body: some View {
+        GeometryReader { geo in
+            ZStack(alignment: .leading) {
+                Capsule().fill(DS.hairline)
+                Capsule()
+                    .fill(DS.accentSoft)
+                    .frame(width: max(0, geo.size.width * min(1, fill)))
+            }
+        }
+        .animation(.spring(response: 0.4, dampingFraction: 0.9), value: fill)
     }
 }
