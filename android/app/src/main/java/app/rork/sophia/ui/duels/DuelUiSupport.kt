@@ -112,7 +112,12 @@ internal fun DuelShrinkText(
             lineHeight = (fontSize.value * scale * 1.25f).sp,
         ),
         onTextLayout = { layout ->
-            if (layout.hasVisualOverflow && scale > minScale) {
+            // Trop long pour ses lignes, ou un mot coupé en deux (« Rembrand / t ») : on réduit.
+            val splitsWord = (0 until layout.lineCount - 1).any { line ->
+                val end = layout.getLineEnd(line)
+                end in 1 until text.length && text[end - 1].isLetterOrDigit() && text[end].isLetterOrDigit()
+            }
+            if ((layout.hasVisualOverflow || splitsWord) && scale > minScale) {
                 scale = maxOf(scale - 0.09f, minScale)
             }
         },

@@ -1,0 +1,846 @@
+{
+ "rounds": [
+  {
+   "bot": [
+    {
+     "value": null,
+     "choice": 2,
+     "correct": false,
+     "time_ms": 3106
+    },
+    {
+     "value": null,
+     "choice": 3,
+     "correct": false,
+     "time_ms": 2000
+    },
+    {
+     "value": 1929,
+     "choice": null,
+     "correct": false,
+     "time_ms": 7419
+    },
+    {
+     "value": null,
+     "choice": 1,
+     "correct": false,
+     "time_ms": 4895
+    },
+    {
+     "value": null,
+     "choice": 1,
+     "correct": true,
+     "time_ms": 4251
+    }
+   ],
+   "kind": "mixed",
+   "number": 1,
+   "questions": [
+    {
+     "id": "dq_en_2_113",
+     "kind": "mcq",
+     "unit": null,
+     "options": [
+      "Peter Pan",
+      "The Wizard of Oz",
+      "Mary Poppins",
+      "Alice in Wonderland"
+     ],
+     "question": "Which 1939 film follows Dorothy along the yellow brick road?",
+     "image_url": null,
+     "slider_max": null,
+     "slider_min": null,
+     "slider_step": null,
+     "image_credit": null,
+     "correct_index": 1,
+     "correct_value": null,
+     "time_limit_ms": 12000
+    },
+    {
+     "id": "dq_en_2_154",
+     "kind": "portrait",
+     "unit": null,
+     "options": [
+      "Gustav Klimt",
+      "Edvard Munch",
+      "Egon Schiele",
+      "Alphonse Mucha"
+     ],
+     "question": "Who painted this?",
+     "image_url": "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels/images/painting_the_kiss.jpg",
+     "slider_max": null,
+     "slider_min": null,
+     "slider_step": null,
+     "image_credit": "Gustav Klimt · Public domain · Wikimedia Commons",
+     "correct_index": 0,
+     "correct_value": null,
+     "time_limit_ms": 10000
+    },
+    {
+     "id": "dq_en_2_54",
+     "kind": "slider",
+     "unit": "year",
+     "options": null,
+     "question": "In what year did the First World War end?",
+     "image_url": null,
+     "slider_max": 1950,
+     "slider_min": 1870,
+     "slider_step": 1,
+     "image_credit": null,
+     "correct_index": null,
+     "correct_value": 1918,
+     "time_limit_ms": 15000
+    },
+    {
+     "id": "dq_en_2_14",
+     "kind": "true_false",
+     "unit": null,
+     "options": [
+      "True",
+      "False"
+     ],
+     "question": "Charles Dickens wrote \"Oliver Twist\".",
+     "image_url": null,
+     "slider_max": null,
+     "slider_min": null,
+     "slider_step": null,
+     "image_credit": null,
+     "correct_index": 0,
+     "correct_value": null,
+     "time_limit_ms": 8000
+    },
+    {
+     "id": "dq_en_2_35",
+     "kind": "mcq",
+     "unit": null,
+     "options": [
+      "Europe",
+      "Africa"
+     ],
+     "question": "Which continent is larger?",
+     "image_url": null,
+     "slider_max": null,
+     "slider_min": null,
+     "slider_step": null,
+     "image_credit": null,
+     "correct_index": 1,
+     "correct_value": null,
+     "time_limit_ms": 12000
+    }
+   ]
+  },
+  {
+   "kind": "pick",
+   "number": 2,
+   "picker": "me",
+   "options": [
+    {
+     "bot": [
+      {
+       "value": null,
+       "choice": 1,
+       "correct": false,
+       "time_ms": 6665
+      },
+      {
+       "value": null,
+       "choice": 3,
+       "correct": false,
+       "time_ms": 3000
+      },
+      {
+       "value": null,
+       "choice": 1,
+       "correct": true,
+       "time_ms": 2058
+      },
+      {
+       "value": null,
+       "choice": 0,
+       "correct": true,
+       "time_ms": 9197
+      },
+      {
+       "value": null,
+       "choice": 3,
+       "correct": false,
+       "time_ms": 9390
+      }
+     ],
+     "subject": "world",
+     "questions": [
+      {
+       "id": "dq_en_2_29",
+       "kind": "mcq",
+       "unit": null,
+       "options": [
+        "Japan",
+        "Germany"
+       ],
+       "question": "Which country has more people?",
+       "image_url": null,
+       "slider_max": null,
+       "slider_min": null,
+       "slider_step": null,
+       "image_credit": null,
+       "correct_index": 0,
+       "correct_value": null,
+       "time_limit_ms": 12000
+      },
+      {
+       "id": "dq_en_2_27",
+       "kind": "mcq",
+       "unit": null,
+       "options": [
+        "Corinth",
+        "Athens",
+        "Thessaloniki",
+        "Sparta"
+       ],
+       "question": "What is the capital of Greece?",
+       "image_url": null,
+       "slider_max": null,
+       "slider_min": null,
+       "slider_step": null,
+       "image_credit": null,
+       "correct_index": 1,
+       "correct_value": null,
+       "time_limit_ms": 12000
+      },
+      {
+       "id": "dq_en_2_20",
+       "kind": "portrait",
+       "unit": null,
+       "options": [
+        "Belgium",
+        "Germany",
+        "Austria",
+        "Netherlands"
+       ],
+       "question": "Which country's flag is this?",
+       "image_url": "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels/flags/de.jpg",
+       "slider_max": null,
+       "slider_min": null,
+       "slider_step": null,
+       "image_credit": "flagcdn.com · Public domain",
+       "correct_index": 1,
+       "correct_value": null,
+       "time_limit_ms": 10000
+      },
+      {
+       "id": "dq_en_2_25",
+       "kind": "mcq",
+       "unit": null,
+       "options": [
+        "Moscow",
+        "Novosibirsk",
+        "Saint Petersburg",
+        "Kazan"
+       ],
+       "question": "What is the capital of Russia?",
+       "image_url": null,
+       "slider_max": null,
+       "slider_min": null,
+       "slider_step": null,
+       "image_credit": null,
+       "correct_index": 0,
+       "correct_value": null,
+       "time_limit_ms": 12000
+      },
+      {
+       "id": "dq_en_2_28",
+       "kind": "mcq",
+       "unit": null,
+       "options": [
+        "New York",
+        "Los Angeles",
+        "Washington, D.C.",
+        "Chicago"
+       ],
+       "question": "What is the capital of the United States?",
+       "image_url": null,
+       "slider_max": null,
+       "slider_min": null,
+       "slider_step": null,
+       "image_credit": null,
+       "correct_index": 2,
+       "correct_value": null,
+       "time_limit_ms": 12000
+      }
+     ]
+    },
+    {
+     "bot": [
+      {
+       "value": null,
+       "choice": 1,
+       "correct": false,
+       "time_ms": 8337
+      },
+      {
+       "value": null,
+       "choice": 2,
+       "correct": false,
+       "time_ms": 8744
+      },
+      {
+       "value": null,
+       "choice": 1,
+       "correct": true,
+       "time_ms": 5566
+      },
+      {
+       "value": null,
+       "choice": 0,
+       "correct": false,
+       "time_ms": 6921
+      },
+      {
+       "value": null,
+       "choice": 2,
+       "correct": true,
+       "time_ms": 7465
+      }
+     ],
+     "subject": "science",
+     "questions": [
+      {
+       "id": "dq_en_2_70",
+       "kind": "mcq",
+       "unit": null,
+       "options": [
+        "Earth",
+        "Mars"
+       ],
+       "question": "Which planet is bigger?",
+       "image_url": null,
+       "slider_max": null,
+       "slider_min": null,
+       "slider_step": null,
+       "image_credit": null,
+       "correct_index": 0,
+       "correct_value": null,
+       "time_limit_ms": 12000
+      },
+      {
+       "id": "dq_en_2_58",
+       "kind": "mcq",
+       "unit": null,
+       "options": [
+        "Venus",
+        "Mars",
+        "Earth",
+        "Mercury"
+       ],
+       "question": "Which planet is closest to the Sun?",
+       "image_url": null,
+       "slider_max": null,
+       "slider_min": null,
+       "slider_step": null,
+       "image_credit": null,
+       "correct_index": 3,
+       "correct_value": null,
+       "time_limit_ms": 12000
+      },
+      {
+       "id": "dq_en_2_72",
+       "kind": "mcq",
+       "unit": null,
+       "options": [
+        "One kilometre",
+        "One mile"
+       ],
+       "question": "Which is longer?",
+       "image_url": null,
+       "slider_max": null,
+       "slider_min": null,
+       "slider_step": null,
+       "image_credit": null,
+       "correct_index": 1,
+       "correct_value": null,
+       "time_limit_ms": 12000
+      },
+      {
+       "id": "dq_en_2_66",
+       "kind": "mcq",
+       "unit": null,
+       "options": [
+        "Mantle",
+        "Inner core",
+        "Outer core",
+        "Crust"
+       ],
+       "question": "What is the outermost solid layer of the Earth called?",
+       "image_url": null,
+       "slider_max": null,
+       "slider_min": null,
+       "slider_step": null,
+       "image_credit": null,
+       "correct_index": 3,
+       "correct_value": null,
+       "time_limit_ms": 12000
+      },
+      {
+       "id": "dq_en_2_61",
+       "kind": "mcq",
+       "unit": null,
+       "options": [
+        "Brain",
+        "Heart",
+        "Skin",
+        "Liver"
+       ],
+       "question": "What is the largest organ of the human body?",
+       "image_url": null,
+       "slider_max": null,
+       "slider_min": null,
+       "slider_step": null,
+       "image_credit": null,
+       "correct_index": 2,
+       "correct_value": null,
+       "time_limit_ms": 12000
+      }
+     ]
+    },
+    {
+     "bot": [
+      {
+       "value": null,
+       "choice": 0,
+       "correct": false,
+       "time_ms": 2839
+      },
+      {
+       "value": null,
+       "choice": 0,
+       "correct": true,
+       "time_ms": 6777
+      },
+      {
+       "value": null,
+       "choice": 0,
+       "correct": false,
+       "time_ms": 5028
+      },
+      {
+       "value": null,
+       "choice": 1,
+       "correct": true,
+       "time_ms": 2664
+      },
+      {
+       "value": null,
+       "choice": 2,
+       "correct": false,
+       "time_ms": 2527
+      }
+     ],
+     "subject": "art",
+     "questions": [
+      {
+       "id": "dq_en_2_151",
+       "kind": "portrait",
+       "unit": null,
+       "options": [
+        "The Night Watch",
+        "The Last Supper",
+        "The Creation of Adam",
+        "The School of Athens"
+       ],
+       "question": "What is this painting called?",
+       "image_url": "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels/images/painting_last_supper.jpg",
+       "slider_max": null,
+       "slider_min": null,
+       "slider_step": null,
+       "image_credit": "Leonardo da Vinci · Public domain · Wikimedia Commons",
+       "correct_index": 1,
+       "correct_value": null,
+       "time_limit_ms": 10000
+      },
+      {
+       "id": "dq_en_2_103",
+       "kind": "mcq",
+       "unit": null,
+       "options": [
+        "Mosaic",
+        "Tapestry",
+        "Engraving",
+        "Fresco"
+       ],
+       "question": "What is a picture made of small pieces of coloured stone or glass called?",
+       "image_url": null,
+       "slider_max": null,
+       "slider_min": null,
+       "slider_step": null,
+       "image_credit": null,
+       "correct_index": 0,
+       "correct_value": null,
+       "time_limit_ms": 12000
+      },
+      {
+       "id": "dq_en_2_108",
+       "kind": "mcq",
+       "unit": null,
+       "options": [
+        "Landscape",
+        "Seascape",
+        "Still life",
+        "Portrait"
+       ],
+       "question": "What is a painting of a particular person called?",
+       "image_url": null,
+       "slider_max": null,
+       "slider_min": null,
+       "slider_step": null,
+       "image_credit": null,
+       "correct_index": 3,
+       "correct_value": null,
+       "time_limit_ms": 12000
+      },
+      {
+       "id": "dq_en_2_114",
+       "kind": "mcq",
+       "unit": null,
+       "options": [
+        "Taj Mahal",
+        "Great Pyramid of Giza"
+       ],
+       "question": "Which is older?",
+       "image_url": null,
+       "slider_max": null,
+       "slider_min": null,
+       "slider_step": null,
+       "image_credit": null,
+       "correct_index": 1,
+       "correct_value": null,
+       "time_limit_ms": 12000
+      },
+      {
+       "id": "dq_en_2_109",
+       "kind": "mcq",
+       "unit": null,
+       "options": [
+        "Four",
+        "Five",
+        "Six",
+        "Three"
+       ],
+       "question": "How many musicians play in a quartet?",
+       "image_url": null,
+       "slider_max": null,
+       "slider_min": null,
+       "slider_step": null,
+       "image_credit": null,
+       "correct_index": 0,
+       "correct_value": null,
+       "time_limit_ms": 12000
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "bot": [
+    {
+     "value": null,
+     "choice": 1,
+     "correct": false,
+     "time_ms": 5363
+    },
+    {
+     "value": null,
+     "choice": 3,
+     "correct": false,
+     "time_ms": 5053
+    },
+    {
+     "value": null,
+     "choice": 3,
+     "correct": false,
+     "time_ms": 3095
+    },
+    {
+     "value": null,
+     "choice": 0,
+     "correct": false,
+     "time_ms": 5346
+    },
+    {
+     "value": null,
+     "choice": 1,
+     "correct": false,
+     "time_ms": 8248
+    }
+   ],
+   "kind": "pick",
+   "number": 3,
+   "picker": "opponent",
+   "subject": "literature",
+   "questions": [
+    {
+     "id": "dq_en_3_91",
+     "kind": "mcq",
+     "unit": null,
+     "options": [
+      "Alliteration",
+      "Metaphor",
+      "Hyperbole",
+      "Simile"
+     ],
+     "question": "Which figure of speech compares two things using \"like\" or \"as\"?",
+     "image_url": null,
+     "slider_max": null,
+     "slider_min": null,
+     "slider_step": null,
+     "image_credit": null,
+     "correct_index": 3,
+     "correct_value": null,
+     "time_limit_ms": 12000
+    },
+    {
+     "id": "dq_en_3_86",
+     "kind": "mcq",
+     "unit": null,
+     "options": [
+      "Macbeth",
+      "King Lear",
+      "Hamlet",
+      "The Tempest"
+     ],
+     "question": "Which Shakespeare play opens with three witches?",
+     "image_url": null,
+     "slider_max": null,
+     "slider_min": null,
+     "slider_step": null,
+     "image_credit": null,
+     "correct_index": 0,
+     "correct_value": null,
+     "time_limit_ms": 12000
+    },
+    {
+     "id": "dq_en_3_93",
+     "kind": "mcq",
+     "unit": null,
+     "options": [
+      "D'Artagnan",
+      "Aramis",
+      "Porthos",
+      "Athos"
+     ],
+     "question": "In \"The Three Musketeers\", which young Gascon dreams of joining the musketeers?",
+     "image_url": null,
+     "slider_max": null,
+     "slider_min": null,
+     "slider_step": null,
+     "image_credit": null,
+     "correct_index": 0,
+     "correct_value": null,
+     "time_limit_ms": 12000
+    },
+    {
+     "id": "dq_en_3_160",
+     "kind": "portrait",
+     "unit": null,
+     "options": [
+      "Herman Melville",
+      "Edgar Allan Poe",
+      "Nathaniel Hawthorne",
+      "Charles Baudelaire"
+     ],
+     "question": "Who is this?",
+     "image_url": "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels/images/edgar_allan_poe.jpg",
+     "slider_max": null,
+     "slider_min": null,
+     "slider_step": null,
+     "image_credit": "Unknown authorUnknown author; Restored by Yann Forget and Adam Cuerden · Public domain · Wikimedia Commons",
+     "correct_index": 1,
+     "correct_value": null,
+     "time_limit_ms": 10000
+    },
+    {
+     "id": "dq_en_3_98",
+     "kind": "mcq",
+     "unit": null,
+     "options": [
+      "Victor Hugo",
+      "Albert Camus"
+     ],
+     "question": "Which author was born earlier?",
+     "image_url": null,
+     "slider_max": null,
+     "slider_min": null,
+     "slider_step": null,
+     "image_credit": null,
+     "correct_index": 0,
+     "correct_value": null,
+     "time_limit_ms": 12000
+    }
+   ]
+  },
+  {
+   "bot": [
+    {
+     "value": null,
+     "choice": 1,
+     "correct": false,
+     "time_ms": 3709
+    },
+    {
+     "value": null,
+     "choice": 2,
+     "correct": false,
+     "time_ms": 3248
+    },
+    {
+     "value": null,
+     "choice": 1,
+     "correct": false,
+     "time_ms": 5306
+    },
+    {
+     "value": null,
+     "choice": 0,
+     "correct": false,
+     "time_ms": 3725
+    },
+    {
+     "value": null,
+     "choice": 0,
+     "correct": true,
+     "time_ms": 2219
+    }
+   ],
+   "kind": "sprint",
+   "number": 4,
+   "questions": [
+    {
+     "id": "dq_en_2_51",
+     "kind": "true_false",
+     "unit": null,
+     "options": [
+      "True",
+      "False"
+     ],
+     "question": "Julius Caesar was assassinated by a group of Roman senators.",
+     "image_url": null,
+     "slider_max": null,
+     "slider_min": null,
+     "slider_step": null,
+     "image_credit": null,
+     "correct_index": 0,
+     "correct_value": null,
+     "time_limit_ms": 4800
+    },
+    {
+     "id": "dq_en_2_46",
+     "kind": "mcq",
+     "unit": null,
+     "options": [
+      "Martin Luther King Jr.",
+      "Malcolm X",
+      "Rosa Parks",
+      "Jesse Jackson"
+     ],
+     "question": "Which civil rights leader gave the \"I Have a Dream\" speech in 1963?",
+     "image_url": null,
+     "slider_max": null,
+     "slider_min": null,
+     "slider_step": null,
+     "image_credit": null,
+     "correct_index": 0,
+     "correct_value": null,
+     "time_limit_ms": 7200
+    },
+    {
+     "id": "dq_en_2_127",
+     "kind": "mcq",
+     "unit": null,
+     "options": [
+      "A she-wolf",
+      "A mare",
+      "A she-bear",
+      "A lioness"
+     ],
+     "question": "In Roman legend, which animal suckled the twins Romulus and Remus?",
+     "image_url": null,
+     "slider_max": null,
+     "slider_min": null,
+     "slider_step": null,
+     "image_credit": null,
+     "correct_index": 0,
+     "correct_value": null,
+     "time_limit_ms": 7200
+    },
+    {
+     "id": "dq_en_2_50",
+     "kind": "true_false",
+     "unit": null,
+     "options": [
+      "True",
+      "False"
+     ],
+     "question": "Ancient Rome was founded before the pyramids of Giza were built.",
+     "image_url": null,
+     "slider_max": null,
+     "slider_min": null,
+     "slider_step": null,
+     "image_credit": null,
+     "correct_index": 1,
+     "correct_value": null,
+     "time_limit_ms": 4800
+    },
+    {
+     "id": "dq_en_2_128",
+     "kind": "mcq",
+     "unit": null,
+     "options": [
+      "Helen",
+      "Penelope",
+      "Cassandra",
+      "Andromache"
+     ],
+     "question": "In Greek myth, whose abduction by the Trojan prince Paris led to the Trojan War?",
+     "image_url": null,
+     "slider_max": null,
+     "slider_min": null,
+     "slider_step": null,
+     "image_credit": null,
+     "correct_index": 0,
+     "correct_value": null,
+     "time_limit_ms": 7200
+    }
+   ]
+  }
+ ],
+ "match_id": "10ad78a8-a499-4b67-84d7-54040ad9bd38",
+ "opponent": {
+  "handle": "poppywalker",
+  "trophies": 0,
+  "avatar_id": "avatar_01",
+  "country_code": "US",
+  "league_position": 1
+ },
+ "tiebreak": {
+  "id": "dq_en_3_104",
+  "kind": "slider",
+  "unit": "year",
+  "options": null,
+  "question": "In what year was \"The Little Prince\" first published?",
+  "image_url": null,
+  "slider_max": 2000,
+  "slider_min": 1850,
+  "slider_step": 1,
+  "image_credit": null,
+  "correct_index": null,
+  "correct_value": 1943,
+  "time_limit_ms": 15000
+ },
+ "search_ms": 3507,
+ "tiebreak_bot": {
+  "value": 1971,
+  "choice": null,
+  "correct": false,
+  "time_ms": 7234
+ },
+ "opponent_leaves_after": null
+}

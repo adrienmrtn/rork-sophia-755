@@ -66,6 +66,7 @@ import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.semantics.clearAndSetSemantics
@@ -199,43 +200,50 @@ internal fun DuelOptionButton(
         label = "duelOptionScale",
     )
     val plain = state == DuelOptionState.Idle || state == DuelOptionState.Dimmed
-    Row(
-        modifier = modifier
-            .graphicsLayer {
-                scaleX = scale
-                scaleY = scale
-            }
-            .alpha(if (state == DuelOptionState.Dimmed) 0.55f else 1f)
-            .softPress(onClick = onClick, enabled = state == DuelOptionState.Idle)
-            .heightIn(min = minHeight)
-            .background(fill, DS.controlShape)
-            .border(if (plain) 1.dp else 2.dp, border, DS.controlShape)
-            .padding(horizontal = 16.dp, vertical = 8.dp),
-        verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.spacedBy(10.dp),
+    Box(
+        modifier = modifier.graphicsLayer {
+            scaleX = scale
+            scaleY = scale
+        },
     ) {
-        if (icon != null) {
-            Icon(icon, contentDescription = null, tint = foreground, modifier = Modifier.size(20.dp))
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .alpha(if (state == DuelOptionState.Dimmed) 0.55f else 1f)
+                .softPress(onClick = onClick, enabled = state == DuelOptionState.Idle)
+                .heightIn(min = minHeight)
+                .background(fill, DS.controlShape)
+                .border(if (plain) 1.dp else 2.dp, border, DS.controlShape)
+                .padding(horizontal = 16.dp, vertical = 8.dp),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.spacedBy(10.dp),
+        ) {
+            if (icon != null) {
+                Icon(icon, contentDescription = null, tint = foreground, modifier = Modifier.size(20.dp))
+            }
+            DuelShrinkText(
+                text = text,
+                fontSize = 16.sp,
+                fontWeight = FontWeight.SemiBold,
+                color = foreground,
+                maxLines = 2,
+                modifier = Modifier.weight(1f),
+            )
+            when (state) {
+                DuelOptionState.Correct ->
+                    Icon(Icons.Filled.CheckCircle, contentDescription = null, tint = foreground, modifier = Modifier.size(22.dp))
+                DuelOptionState.Wrong ->
+                    Icon(Icons.Filled.Cancel, contentDescription = null, tint = foreground, modifier = Modifier.size(22.dp))
+                else -> Unit
+            }
         }
-        DuelShrinkText(
-            text = text,
-            fontSize = 16.sp,
-            fontWeight = FontWeight.SemiBold,
-            color = foreground,
-            maxLines = 2,
-            modifier = Modifier.weight(1f),
-        )
-        when (state) {
-            DuelOptionState.Correct ->
-                Icon(Icons.Filled.CheckCircle, contentDescription = null, tint = foreground, modifier = Modifier.size(22.dp))
-            DuelOptionState.Wrong ->
-                Icon(Icons.Filled.Cancel, contentDescription = null, tint = foreground, modifier = Modifier.size(22.dp))
-            else -> Unit
-        }
+        // L'avatar de l'adversaire se pose sur le coin de l'option, hors du texte : dans la grille
+        // 2 × 2 d'une question à image, il ne prend pas la place d'un nom déjà à l'étroit.
         AnimatedVisibility(
             visible = showsOpponent,
             enter = scaleIn(duelSpring(response = 0.38f, damping = 0.62f), initialScale = 0.2f) + fadeIn(),
             exit = fadeOut(tween(100)),
+            modifier = Modifier.align(Alignment.TopEnd).offset(x = 7.dp, y = (-9).dp),
         ) {
             DuelOpponentMarker(opponent)
         }
@@ -334,9 +342,17 @@ private fun ChoiceOption(
 @Composable
 internal fun DuelQuestionImage(url: String?, modifier: Modifier = Modifier) {
     val context = LocalContext.current
+    // Sur un écran court (moins de 700 dp de haut), l'image rétrécit pour que les quatre
+    // réponses restent à l'écran sans défiler : le chrono tourne, on ne cherche pas ses réponses.
+    val screenHeight = LocalConfiguration.current.screenHeightDp
+    val scale = when {
+        screenHeight < 600 -> 0.56f
+        screenHeight < 700 -> 0.68f
+        else -> 1f
+    }
     Box(
         modifier = modifier
-            .size(width = 184.dp, height = 230.dp)
+            .size(width = 184.dp * scale, height = 230.dp * scale)
             .sophiaCard(shape = RoundedCornerShape(20.dp), fill = DS.surfaceMuted),
     ) {
         if (!url.isNullOrBlank()) {
