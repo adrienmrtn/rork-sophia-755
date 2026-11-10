@@ -6,7 +6,7 @@ import { STORAGE_PUBLIC } from "@/lib/env";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { getStudioSession } from "@/lib/studio/account";
 import { campaignFromForm, campaignFromRow, hardErrors, languagesMissing, localized, publishProblems, type Campaign, type Known } from "@/lib/studio/campaigns";
-import { coversConfigured, generateCoverImages, generatePosterImage, storeImageAt, writeCoverPrompt, writePosterScene } from "@/lib/studio/covers";
+import { coversConfigured, generateBadgeImage, generateCoverImages, generatePosterImage, storeImageAt, writeBadgeEmblems, writeCoverPrompt, writePosterScene } from "@/lib/studio/covers";
 import { translateCampaign, translationConfigured } from "@/lib/studio/translate";
 
 const IMAGE_TYPES: Record<string, string> = { "image/jpeg": "jpg", "image/png": "png", "image/webp": "webp" };
@@ -212,6 +212,64 @@ export async function chooseEventImage(form: FormData): Promise<void> {
   const campaign = campaignFromRow(data as Record<string, unknown>);
   if (!campaign.image_candidates.some((c) => c.url === url)) back(`/admin/events/${slug}`, { error: "This image is not one of the event's candidates." });
   const { error } = await session.supabase.from("campaigns").update({ image_url: url }).eq("slug", slug);
+  revalidate(slug);
+  if (error) back(`/admin/events/${slug}`, { error: error.message });
+  back(`/admin/events/${slug}`, { done: "saved" });
+}
+
+/** Le bouton « Generate 3 badges with AI » : trois emblèmes en papier découpé (carrés), dessinés
+ *  depuis le titre, l'accroche et le nom du badge en anglais. Ils rejoignent les propositions ;
+ *  le premier devient le badge de l'événement s'il n'en a pas encore. */
+export async function generateEventBadge(form: FormData): Promise<void> {
+  const session = await requireAdmin();
+  const slug = text(form, "slug", 60);
+  const { data } = await session.supabase.from("campaigns").select("*").eq("slug", slug).maybeSingle();
+  if (!data) back("/admin/events", { error: "This event no longer exists." });
+  const campaign = campaignFromRow(data as Record<string, unknown>);
+  const title = localized(campaign.title, "en");
+  if (!coversConfigured()) back(`/admin/events/${slug}`, { error: "Image generation is not configured on the server (FAL_KEY)." });
+  if (!title) back(`/admin/events/${slug}`, { error: "Write the English title first: the badge is drawn from it." });
+
+  let outcome: Record<string, string>;
+  try {
+    const emblems = await writeBadgeEmblems({ title, badge: localized(campaign.badge_name, "en") || null, subtitle: localized(campaign.tagline, "en") || null, description: localized(campaign.description, "en") || null });
+    const stamp = Date.now().toString(36);
+    const results = await Promise.allSettled(
+      emblems.map(async (emblem, i) => {
+        const image = await generateBadgeImage(emblem);
+        const ext = image.contentType.includes("png") ? "png" : image.contentType.includes("jpeg") ? "jpg" : "webp";
+        return storeImageAt(`events/badges/${slug}_${stamp}_${i + 1}.${ext}`, image.url, image.contentType);
+      }),
+    );
+    const now = new Date().toISOString();
+    const created = results.flatMap((r) => (r.status === "fulfilled" ? [{ url: r.value, created_at: now }] : []));
+    const failed = results.filter((r) => r.status === "rejected") as PromiseRejectedResult[];
+    for (const f of failed) console.error("[events] badge image failed", slug, f.reason);
+    if (created.length === 0) {
+      outcome = { error: `No badge could be generated. ${failed.map((f) => (f.reason instanceof Error ? f.reason.message : String(f.reason))).join(" · ")}` };
+    } else {
+      const candidates = [...created, ...campaign.badge_candidates].slice(0, 9);
+      const { error } = await session.supabase.from("campaigns").update({ badge_candidates: candidates, ...(campaign.badge_image_url ? {} : { badge_image_url: created[0].url }) }).eq("slug", slug);
+      revalidate(slug);
+      outcome = error ? { error: error.message } : failed.length > 0 ? { error: `${created.length} of 3 badges generated.`, done: "badge" } : { done: "badge" };
+    }
+  } catch (e) {
+    console.error("[events] badge generation failed", slug, e);
+    outcome = { error: e instanceof Error ? e.message : "Badge generation failed." };
+  }
+  back(`/admin/events/${slug}`, outcome);
+}
+
+/** « Use this badge » : une des propositions devient le badge de l'événement. */
+export async function chooseEventBadge(form: FormData): Promise<void> {
+  const session = await requireAdmin();
+  const slug = text(form, "slug", 60);
+  const url = text(form, "url", 1000);
+  const { data } = await session.supabase.from("campaigns").select("*").eq("slug", slug).maybeSingle();
+  if (!data) back("/admin/events", { error: "This event no longer exists." });
+  const campaign = campaignFromRow(data as Record<string, unknown>);
+  if (!campaign.badge_candidates.some((c) => c.url === url)) back(`/admin/events/${slug}`, { error: "This image is not one of the event's badge candidates." });
+  const { error } = await session.supabase.from("campaigns").update({ badge_image_url: url }).eq("slug", slug);
   revalidate(slug);
   if (error) back(`/admin/events/${slug}`, { error: error.message });
   back(`/admin/events/${slug}`, { done: "saved" });

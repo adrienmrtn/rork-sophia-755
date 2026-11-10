@@ -4,6 +4,7 @@ import SwiftUI
 /// repart sur une recherche sans quitter l'écran.
 struct DuelFlowView: View {
     @Environment(\.dismiss) private var dismiss
+    @Environment(\.scenePhase) private var scenePhase
     let handle: String
     let avatarId: String?
     let service: DuelService
@@ -23,6 +24,13 @@ struct DuelFlowView: View {
     @State private var round = 0
     /// La page telle qu'elle était au lancement de la partie : le résultat s'anime depuis elle.
     @State private var homeAtStart: DuelHome?
+    /// L'instant où l'app est passée à l'arrière-plan pendant une partie.
+    @State private var leftAppAt: Date?
+
+    /// Au-delà, quitter l'app en pleine partie est un abandon : un adversaire ne reste pas à
+    /// attendre dix minutes. En deçà (une notification, un appel refusé), la partie continue,
+    /// et le chrono de la question a tourné pendant l'absence.
+    private static let maxAbsence: TimeInterval = 15
 
     private var player: DuelPlayerIdentity {
         DuelPlayerIdentity(handle: handle, avatarId: avatarId, trophies: service.home?.profile.trophies ?? 0)
@@ -79,6 +87,19 @@ struct DuelFlowView: View {
         .interactiveDismissDisabled()
         .statusBarHidden()
         .onAppear { service.isPlaying = true }
+        .onChange(of: scenePhase) { _, phase in
+            switch phase {
+            case .background:
+                if stage == .playing, leftAppAt == nil { leftAppAt = Date() }
+            case .active:
+                defer { leftAppAt = nil }
+                guard let leftAppAt, stage == .playing, let game, game.phase != .finished,
+                      Date().timeIntervalSince(leftAppAt) > Self.maxAbsence else { return }
+                abandon(game)
+            default:
+                break
+            }
+        }
         .onDisappear {
             service.isPlaying = false
             Task {

@@ -71,6 +71,8 @@ struct DuelResultView: View {
         }
         .onAppear {
             withAnimation(.spring(response: 0.55, dampingFraction: 0.62)) { appeared = true }
+            // Les exploits de la partie (score, écart, question décisive) comptent pour les badges.
+            BadgeCounters.record(summary)
             if won {
                 DuelHaptics.victory()
             } else if !summary.draw {
@@ -100,7 +102,12 @@ struct DuelResultView: View {
                 .multilineTextAlignment(.center)
                 .scaleEffect(appeared ? 1 : 0.4)
                 .opacity(appeared ? 1 : 0)
-            if summary.tiebreak && !summary.abandoned {
+            if summary.forfeit {
+                Text(String(format: languageManager.text("duel.friend.left"), opponent.handle))
+                    .font(DS.sans(.subheadline, .semibold))
+                    .foregroundStyle(.white.opacity(0.75))
+                    .multilineTextAlignment(.center)
+            } else if summary.tiebreak && !summary.abandoned {
                 Text(languageManager.text("duel.result.suddenDeath"))
                     .font(DS.sans(.subheadline, .semibold))
                     .foregroundStyle(.white.opacity(0.75))

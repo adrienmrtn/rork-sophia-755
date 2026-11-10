@@ -24,6 +24,7 @@ struct ProfileV2View: View {
     @State private var listSegment = 0
     @State private var showSettings = false
     @State private var showAvatarPicker = false
+    @State private var showBadges = false
 
     private var language: AppLanguage { languageManager.current }
 
@@ -55,6 +56,9 @@ struct ProfileV2View: View {
             } else if !auth.isBootstrapping {
                 social.clearLocalState()
             }
+        }
+        .sheet(isPresented: $showBadges) {
+            BadgesPageView(progressManager: progressManager)
         }
         .sheet(isPresented: $showAvatarPicker) {
             AvatarPickerSheet(current: progressManager.avatarId, initial: String(displayName.prefix(1)).uppercased()) { progressManager.setAvatar($0) }
@@ -210,64 +214,51 @@ struct ProfileV2View: View {
 
     // MARK: - Badges
 
-    private var completedSubjectsCount: Int {
-        Subject.allCases.filter { progressManager.completedCount(for: $0) > 0 }.count
+    /// Trois badges : ceux que le lecteur a choisi d'afficher, complétés par ses derniers gagnés,
+    /// puis par les plus proches d'être obtenus. « Tout voir » ouvre la collection.
+    private var profileBadges: [Badge] {
+        let all = BadgeCatalog.all(language: language)
+        let stats = BadgeStats(progressManager: progressManager)
+        var picked = progressManager.featuredBadgeIds.compactMap { id in all.first { $0.id == id } }
+        let earned = all
+            .filter { progressManager.isBadgeEarned($0.id) && !picked.contains($0) }
+            .sorted { (progressManager.progress.earnedBadges[$0.id] ?? "") > (progressManager.progress.earnedBadges[$1.id] ?? "") }
+        picked += earned
+        if picked.count < 3 {
+            let closest = all
+                .filter { !progressManager.isBadgeEarned($0.id) && $0.metric != .league }
+                .sorted { Double(stats.progress(for: $0)) / Double($0.target) > Double(stats.progress(for: $1)) / Double($1.target) }
+            picked += closest
+        }
+        return Array(picked.prefix(3))
     }
 
     private var badgesSection: some View {
         VStack(alignment: .leading, spacing: 12) {
-            NewGenSectionTitle(text: languageManager.text("profile.badges"))
-            HStack(spacing: 10) {
-                if let campaign = CampaignStore.all.last {
-                    let done = CampaignStore.challengeProgress(for: campaign, progressManager: progressManager)
-                    badge(
-                        systemImage: campaign.symbol ?? "sparkles",
-                        title: campaign.badgeName(for: language),
-                        subtitle: String(format: languageManager.text("badge.progress"), done, campaign.challengeTarget),
-                        earned: done >= campaign.challengeTarget
-                    )
+            HStack(alignment: .firstTextBaseline) {
+                NewGenSectionTitle(text: languageManager.text("profile.badges"))
+                Button {
+                    showBadges = true
+                } label: {
+                    HStack(spacing: 4) {
+                        Text(languageManager.text("badges.seeAll"))
+                            .font(DS.sans(.subheadline, .bold))
+                        Image(systemName: "chevron.forward")
+                            .font(.system(size: 11, weight: .bold))
+                    }
+                    .foregroundStyle(DS.accent)
+                    .padding(.vertical, 4)
+                    .contentShape(Rectangle())
                 }
-                badge(
-                    systemImage: "flame.fill",
-                    title: languageManager.text("badge.streak7.title"),
-                    subtitle: languageManager.text("friends.stats.streak"),
-                    earned: progressManager.streak >= 7
-                )
-                badge(
-                    systemImage: "safari",
-                    title: languageManager.text("globalRank.curieux"),
-                    subtitle: String(format: languageManager.text("badge.curious.sub"), completedSubjectsCount),
-                    earned: completedSubjectsCount >= 3
-                )
+                .buttonStyle(.plain)
             }
+            BadgeRow(
+                badges: profileBadges,
+                earned: { progressManager.isBadgeEarned($0.id) },
+                onTap: { _ in showBadges = true }
+            )
         }
-    }
-
-    private func badge(systemImage: String, title: String, subtitle: String, earned: Bool) -> some View {
-        VStack(spacing: 8) {
-            ZStack {
-                Circle().fill(earned ? DS.warm.opacity(0.2) : DS.surfaceMuted)
-                Image(systemName: systemImage)
-                    .font(.system(size: 20, weight: .semibold))
-                    .foregroundStyle(earned ? DS.warm : DS.inkTertiary)
-            }
-            .frame(width: 48, height: 48)
-            Text(title)
-                .font(DS.sans(.subheadline, .bold))
-                .foregroundStyle(DS.ink)
-                .lineLimit(1)
-                .minimumScaleFactor(0.8)
-            Text(subtitle)
-                .font(DS.sans(.caption))
-                .foregroundStyle(DS.inkSecondary)
-                .lineLimit(1)
-                .minimumScaleFactor(0.8)
-        }
-        .padding(.vertical, 16)
-        .frame(maxWidth: .infinity)
-        .background(RoundedRectangle(cornerRadius: 18, style: .continuous).fill(DS.surface))
-        .overlay(RoundedRectangle(cornerRadius: 18, style: .continuous).strokeBorder(DS.hairline, lineWidth: 1))
-        .opacity(earned ? 1 : 0.75)
+        .onAppear { progressManager.refreshBadges() }
     }
 
     // MARK: - Listes

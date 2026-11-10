@@ -255,6 +255,10 @@ struct DuelGameView: View {
     // MARK: - Ligne d'état
 
     private var statusText: String {
+        // Duel classé : l'adversaire vient de se déconnecter, la victoire suit.
+        if model.opponentForfeited {
+            return String(format: languageManager.text("duel.friend.left"), opponent.handle)
+        }
         switch model.phase {
         case .answering:
             if model.opponentLeft {

@@ -18,7 +18,7 @@ le dit, et le niveau de difficulté du joueur n'est jamais affiché.
   à distance égale).
 - **Égalité après 20 questions** : une 21e question au curseur, en mort subite. Le plus proche
   gagne ; à distance égale, le plus rapide.
-- **Quitter en pleine partie** (bouton, ou app fermée) compte comme une défaite et coûte toujours
+- **Quitter en pleine partie** (bouton, app fermée, ou app laissée à l'arrière-plan plus de 15 secondes en duel classé) compte comme une défaite et coûte toujours
   20 trophées, même dans les premières ligues (jamais sous 0), sans faire redescendre de ligue.
 - **Trophées**, façon Clash Royale : +25 à +35 pour une victoire, −15 à −25 pour une défaite,
   selon l'écart de trophées avec l'adversaire. Aucune perte avant la 5e ligue (400 trophées), et
@@ -150,3 +150,21 @@ Migration : `supabase/migrations/20261110010000_duel_friends.sql`.
 
 Android, les questions dans les autres langues, les saisons, les sons, un gain d'XP par duel,
 les notifications push (une invitation n'arrive que si l'ami a l'app ouverte).
+
+## Adversaires plus crédibles (10 novembre)
+
+`supabase/migrations/20261110020500_duel_credibility.sql`, duel classé seulement :
+
+- **Sans avatar** : un adversaire sur dix environ n'a pas d'avatar, ses initiales à la place.
+  Toujours les mêmes (selon le pseudo), pour qu'un adversaire recroisé ne change pas de tête.
+- **Déconnexion** : dans 2,5 % des parties (jamais dans les cinq premières d'un joueur),
+  l'adversaire se déconnecte après une question tirée entre la 6e et la 17e. Le serveur le
+  décide au lancement (`duel_matches.forfeit_at`) et le dit à l'app (`opponent_leaves_after`) ;
+  l'app affiche « @x a quitté le duel » puis la victoire. À la fin, le serveur ne compte que les
+  questions jouées avant le départ et donne la victoire, quel que soit le score ; les trophées
+  sont ceux d'une victoire ordinaire. Quitter soi-même avant reste une défaite.
+- L'app demande ce comportement (`p_can_forfeit`) : une version plus ancienne n'y a pas droit.
+  Tant que la migration n'est pas appliquée, l'app relance l'appel sans le paramètre.
+- Une victoire par déconnexion compte comme une victoire, pas pour les badges d'exploit.
+- Pour changer les fréquences : `% 10` (avatars) et `random() < 0.025` (déconnexions) dans
+  `duel_start_match_v2`.

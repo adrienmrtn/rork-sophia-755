@@ -45,6 +45,9 @@ nonisolated struct Campaign: Decodable, Identifiable, Sendable, Hashable {
     let tagline: [String: String]
     let description: [String: String]
     let badgeName: [String: String]
+    /// L'illustration du badge (papier découpé, carrée), choisie dans l'admin du site ; nil tant
+    /// qu'aucune n'a été générée : le badge montre alors le symbole de l'événement.
+    let badgeImageUrl: String?
 
     var id: String { slug }
 
@@ -61,6 +64,7 @@ nonisolated struct Campaign: Decodable, Identifiable, Sendable, Hashable {
         case challengeTarget = "challenge_target"
         case courseIds = "course_ids"
         case badgeName = "badge_name"
+        case badgeImageUrl = "badge_image_url"
     }
 
     func title(for language: AppLanguage) -> String { Self.localized(title, language: language) }
