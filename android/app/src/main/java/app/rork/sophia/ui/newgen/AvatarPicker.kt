@@ -44,13 +44,13 @@ import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
 
 /**
- * Les vingt avatars illustrés (design/site-art/manifest-avatars.json, la direction affiche du
- * site), dans `res/drawable-nodpi`. Un lecteur en choisit un à la place de ses initiales ; le choix
+ * Les soixante avatars illustrés (design/site-art/manifest-avatars.json et
+ * manifest-avatars-duels.json, la direction affiche du site), dans `res/drawable-nodpi`. Un lecteur en choisit un à la place de ses initiales ; le choix
  * (`UserProgress.avatarId`) suit la progression, donc le multi-appareils. Mêmes fichiers que le
  * Studio pour les auteurs.
  */
 object Avatars {
-    val all: List<String> = (1..20).map { "avatar_%02d".format(it) }
+    val all: List<String> = (1..60).map { "avatar_%02d".format(it) }
 
     private val drawables = mapOf(
         "avatar_01" to R.drawable.avatar_01, "avatar_02" to R.drawable.avatar_02, "avatar_03" to R.drawable.avatar_03,
@@ -60,6 +60,20 @@ object Avatars {
         "avatar_13" to R.drawable.avatar_13, "avatar_14" to R.drawable.avatar_14, "avatar_15" to R.drawable.avatar_15,
         "avatar_16" to R.drawable.avatar_16, "avatar_17" to R.drawable.avatar_17, "avatar_18" to R.drawable.avatar_18,
         "avatar_19" to R.drawable.avatar_19, "avatar_20" to R.drawable.avatar_20,
+        "avatar_21" to R.drawable.avatar_21, "avatar_22" to R.drawable.avatar_22, "avatar_23" to R.drawable.avatar_23,
+        "avatar_24" to R.drawable.avatar_24, "avatar_25" to R.drawable.avatar_25, "avatar_26" to R.drawable.avatar_26,
+        "avatar_27" to R.drawable.avatar_27, "avatar_28" to R.drawable.avatar_28, "avatar_29" to R.drawable.avatar_29,
+        "avatar_30" to R.drawable.avatar_30, "avatar_31" to R.drawable.avatar_31, "avatar_32" to R.drawable.avatar_32,
+        "avatar_33" to R.drawable.avatar_33, "avatar_34" to R.drawable.avatar_34, "avatar_35" to R.drawable.avatar_35,
+        "avatar_36" to R.drawable.avatar_36, "avatar_37" to R.drawable.avatar_37, "avatar_38" to R.drawable.avatar_38,
+        "avatar_39" to R.drawable.avatar_39, "avatar_40" to R.drawable.avatar_40, "avatar_41" to R.drawable.avatar_41,
+        "avatar_42" to R.drawable.avatar_42, "avatar_43" to R.drawable.avatar_43, "avatar_44" to R.drawable.avatar_44,
+        "avatar_45" to R.drawable.avatar_45, "avatar_46" to R.drawable.avatar_46, "avatar_47" to R.drawable.avatar_47,
+        "avatar_48" to R.drawable.avatar_48, "avatar_49" to R.drawable.avatar_49, "avatar_50" to R.drawable.avatar_50,
+        "avatar_51" to R.drawable.avatar_51, "avatar_52" to R.drawable.avatar_52, "avatar_53" to R.drawable.avatar_53,
+        "avatar_54" to R.drawable.avatar_54, "avatar_55" to R.drawable.avatar_55, "avatar_56" to R.drawable.avatar_56,
+        "avatar_57" to R.drawable.avatar_57, "avatar_58" to R.drawable.avatar_58, "avatar_59" to R.drawable.avatar_59,
+        "avatar_60" to R.drawable.avatar_60,
     )
 
     fun drawable(id: String?): Int? = id?.let { drawables[it] }
@@ -92,7 +106,7 @@ fun AvatarCircle(avatarId: String?, initial: String, size: Dp, modifier: Modifie
     }
 }
 
-/** La feuille de choix : la grille des vingt, et « pas d'avatar » pour revenir aux initiales. */
+/** La feuille de choix : la grille des avatars, et « pas d'avatar » pour revenir aux initiales. */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun AvatarPickerSheet(
@@ -120,8 +134,9 @@ fun AvatarPickerSheet(
                 columns = GridCells.Fixed(4),
                 horizontalArrangement = Arrangement.spacedBy(14.dp),
                 verticalArrangement = Arrangement.spacedBy(14.dp),
+                // Soixante avatars : cinq rangées visibles, le reste en faisant défiler la grille.
                 modifier = Modifier.height(86.dp * 5),
-                userScrollEnabled = false,
+                userScrollEnabled = true,
             ) {
                 items(Avatars.all) { id ->
                     AvatarCircle(
