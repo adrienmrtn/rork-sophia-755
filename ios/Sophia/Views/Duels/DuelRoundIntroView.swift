@@ -36,6 +36,8 @@ struct DuelRoundIntroView: View {
     let model: DuelGameModel
     let intro: DuelGameModel.RoundIntro
     let opponentHandle: String
+    /// L'annonce couvre l'écran de jeu : elle porte son propre bouton pour quitter le duel.
+    let onQuit: () -> Void
 
     var body: some View {
         ZStack {
@@ -62,6 +64,19 @@ struct DuelRoundIntroView: View {
             }
             .padding(.horizontal, 28)
             .frame(maxWidth: 520)
+        }
+        .overlay(alignment: .topLeading) {
+            Button(action: onQuit) {
+                Image(systemName: "xmark")
+                    .font(.system(size: 13, weight: .bold))
+                    .foregroundStyle(.white.opacity(0.85))
+                    .frame(width: 32, height: 32)
+                    .background(Circle().fill(Color.white.opacity(0.14)))
+            }
+            .buttonStyle(.plain)
+            .accessibilityLabel(Text(languageManager.text("duel.quit.title")))
+            .padding(.leading, 16)
+            .padding(.top, 6)
         }
     }
 

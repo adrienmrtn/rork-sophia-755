@@ -236,7 +236,15 @@ nonisolated struct DuelMatch: Codable, Sendable, Equatable {
 
     /// Toutes les questions qui peuvent être posées (pour charger leurs images d'avance).
     var allQuestions: [DuelQuestion] {
-        rounds.flatMap { ($0.questions ?? []) + ($0.options ?? []).flatMap(\.questions) } + [tiebreak]
+        var result: [DuelQuestion] = []
+        for round in rounds {
+            result += round.questions ?? []
+            for option in round.options ?? [] {
+                result += option.questions
+            }
+        }
+        result.append(tiebreak)
+        return result
     }
 
     enum CodingKeys: String, CodingKey {

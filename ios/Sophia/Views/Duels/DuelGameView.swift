@@ -33,13 +33,18 @@ struct DuelGameView: View {
             }
 
             if model.phase == .roundIntro, let intro = model.roundIntro {
-                DuelRoundIntroView(model: model, intro: intro, opponentHandle: opponent.handle)
-                    .transition(.opacity)
+                DuelRoundIntroView(model: model, intro: intro, opponentHandle: opponent.handle) {
+                    DuelHaptics.tap()
+                    confirmQuit = true
+                }
+                .transition(.opacity)
+                .zIndex(1)
             }
 
             if model.phase == .suddenDeathIntro {
                 suddenDeathBanner
                     .transition(.scale(scale: 0.6).combined(with: .opacity))
+                    .zIndex(2)
             }
         }
         .task {

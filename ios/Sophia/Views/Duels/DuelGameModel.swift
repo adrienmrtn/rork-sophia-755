@@ -139,6 +139,12 @@ final class DuelGameModel {
         self.live = live
         playerMarks = Array(repeating: nil, count: match.questionCount)
         opponentMarks = Array(repeating: nil, count: match.questionCount)
+        // La première manche est connue d'avance : sa première question est à l'écran dès le
+        // premier affichage, avant même que la partie ne démarre.
+        if let first = match.rounds.first, first.kind != .pick {
+            playedQuestions = first.questions ?? []
+            playedBot = Array((first.bot ?? []).prefix(playedQuestions.count))
+        }
     }
 
     var questionCount: Int { match.questionCount }
@@ -211,6 +217,8 @@ final class DuelGameModel {
     func pickSubject(_ subject: String) {
         guard phase == .roundIntro, let intro = roundIntro, intro.mine, intro.chosen == nil,
               intro.options.contains(subject) else { return }
+        // Passé le délai, le choix n'arriverait plus à temps au serveur.
+        if let deadline = intro.deadline, Date() >= deadline { return }
         withAnimation(.spring(response: 0.35, dampingFraction: 0.7)) {
             roundIntro?.chosen = subject
         }
@@ -279,9 +287,11 @@ final class DuelGameModel {
             if r > 0 {
                 guard await announce(plan) else { return }
             }
-            let first = playedQuestions.count
-            let questions = resolve(plan)
-            for k in questions.indices {
+            // La première manche est déjà en place (voir `init`).
+            let preloaded = r == 0 && !playedQuestions.isEmpty
+            let first = preloaded ? 0 : playedQuestions.count
+            let count = preloaded ? playedQuestions.count : resolve(plan).count
+            for k in 0..<count {
                 guard await play(first + k) else { return }
             }
         }
@@ -566,6 +576,8 @@ final class DuelGameModel {
     /// que le serveur la connaît.
     private func announceLive(_ plan: DuelRoundPlan, startsAt: Date) async -> Bool {
         guard plan.kind != .mixed else { return true }
+        // En retard sur le serveur (coupure réseau) : pas d'annonce, on rattrape la partie.
+        guard startsAt.timeIntervalSinceNow > 2.5 else { return true }
         // La révélation de la question précédente reste un instant à l'écran.
         guard await pause(2.0) else { return false }
         let mine = plan.isMyPick
@@ -582,6 +594,10 @@ final class DuelGameModel {
             if let chosen = liveState?.picks?[String(plan.number)], roundIntro?.chosen != chosen {
                 withAnimation(.spring(response: 0.4, dampingFraction: 0.65)) { roundIntro?.chosen = chosen }
                 if !mine { DuelHaptics.opponentAnswered() }
+            } else if mine, roundIntro?.chosen == nil, let deadline = roundIntro?.deadline, Date() >= deadline,
+                      let fallback = plan.options?.first?.subject {
+                // Pas de choix à temps : la première matière proposée, celle que le serveur retient.
+                withAnimation(.spring(response: 0.35, dampingFraction: 0.7)) { roundIntro?.chosen = fallback }
             }
         }
         return true
@@ -596,6 +612,9 @@ final class DuelGameModel {
             if plan.kind == .pick {
                 var subject = liveState?.picks?[String(plan.number)]
                 while subject == nil {
+                    // Sans choix, le serveur ne fixe la matière qu'au départ de la manche : on
+                    // la lui demande tout de suite plutôt que d'attendre le prochain tour.
+                    await refreshLive()
                     guard await pause(0.05) else { return false }
                     subject = liveState?.picks?[String(plan.number)]
                 }
