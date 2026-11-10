@@ -16,7 +16,10 @@ n'est qu'une photo sans dates).
   toujours). Migration : `supabase/migrations/20261108120000_course_events_and_subscriptions.sql`.
 - L'app insère directement par PostgREST (`upsert` sur `(ts, event_id)`, doublons
   ignorés). Règle RLS : `user_id = auth.uid()`, horodatage entre maintenant − 30 jours et
-  maintenant + 15 minutes. Aucune lecture, mise à jour ni suppression côté client.
+  maintenant + 15 minutes. Côté client, la lecture se limite aux colonnes `ts` et `event_id`
+  de ses propres lignes : la clause `on conflict` l'exige (sans ce droit et sans règle
+  `select`, Postgres refuse tout l'envoi, ce qui a bloqué la collecte jusqu'au 10 novembre,
+  migration `20261110000300_course_events_upsert_grant.sql`). Ni mise à jour ni suppression.
 - File d'attente sur le téléphone (fichier dans Application Support / `filesDir`),
   envoi par lots de 200 au plus, toutes les 30 secondes, quand la file atteint 50
   événements, et au passage en arrière-plan. Rejeu après une coupure réseau ; la file
