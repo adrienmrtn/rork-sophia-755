@@ -72,6 +72,7 @@ struct OnboardingV2Account: View {
                             .autocorrectionDisabled()
                             .keyboardType(.asciiCapable)
                             .submitLabel(.done)
+                            .disabled(originalHandle == nil)
                     }
                     .padding(16)
                     .background(OV2.surface, in: RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
@@ -116,7 +117,9 @@ struct OnboardingV2Account: View {
             )
         }
         .ov2Background()
-        .task { await load() }
+        // Relancé quand la session est connue : juste après la connexion, elle peut arriver un
+        // instant plus tard, et sans elle le @ ne peut pas être lu.
+        .task(id: AuthService.shared.isSignedIn) { await load() }
     }
 
     private func load() async {

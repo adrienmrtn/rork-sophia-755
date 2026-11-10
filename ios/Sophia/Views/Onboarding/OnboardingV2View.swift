@@ -1,5 +1,6 @@
 import SwiftUI
 import RevenueCat
+import Supabase
 
 /// Coordinateur d'onboarding V2 — séquence **fixe** (les pages valeur ne dépendent plus des
 /// objectifs sélectionnés).

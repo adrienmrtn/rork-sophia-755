@@ -97,6 +97,8 @@ final class DuelGameModel {
     /// Ma réponse à la question en cours, pas encore reçue par le serveur.
     @ObservationIgnored private var unsent: (index: Int, answer: DuelAnswer)?
     @ObservationIgnored private var isRefreshing = false
+    /// Une réponse est arrivée pendant un échange en cours : il faut en refaire un aussitôt.
+    @ObservationIgnored private var refreshAgain = false
 
     @ObservationIgnored private var sliderTouched = false
     @ObservationIgnored private var playerLockTime: Double?
@@ -334,26 +336,40 @@ final class DuelGameModel {
     /// Un échange avec le serveur : ma réponse si elle n'est pas encore partie, sinon l'état de
     /// la partie. Un échec (réseau) est simplement retenté au tour suivant.
     private func refreshLive() async {
-        guard let live, !isRefreshing else { return }
+        guard let live else { return }
+        if isRefreshing {
+            refreshAgain = true
+            return
+        }
         isRefreshing = true
         defer { isRefreshing = false }
-        do {
-            let state: DuelFriendState
-            if let pending = unsent {
-                state = try await DuelLiveService.shared.answer(matchId: live.matchId, index: pending.index, answer: pending.answer)
-                if unsent?.index == pending.index {
-                    unsent = nil
+        let matchId = live.matchId
+        repeat {
+            refreshAgain = false
+            do {
+                let state: DuelFriendState
+                if let pending = unsent {
+                    // Bornés à 5 s : une requête qui ne revient pas ne doit pas figer la partie.
+                    state = try await DuelTimeout.run(seconds: 5) {
+                        try await DuelLiveService.shared.answer(matchId: matchId, index: pending.index, answer: pending.answer)
+                    }
+                    if unsent?.index == pending.index {
+                        unsent = nil
+                    }
+                } else {
+                    state = try await DuelTimeout.run(seconds: 5) {
+                        try await DuelLiveService.shared.state(matchId: matchId)
+                    }
                 }
-            } else {
-                state = try await DuelLiveService.shared.state(matchId: live.matchId)
+                liveState = state
+                liveStateAt = Date()
+            } catch {
+                #if DEBUG
+                print("[Duel] live refresh failed: \(error)")
+                #endif
+                break
             }
-            liveState = state
-            liveStateAt = Date()
-        } catch {
-            #if DEBUG
-            print("[Duel] live refresh failed: \(error)")
-            #endif
-        }
+        } while refreshAgain && !Task.isCancelled
     }
 
     private func runLive(_ live: DuelLiveLink) async {
@@ -375,7 +391,7 @@ final class DuelGameModel {
             guard let state = await playLive(i, startedAt: startsAt) else { return }
 
             if state.finished {
-                playerWon = state.won
+                playerWon = state.won ?? false
                 isDraw = state.draw
                 guard await pause(question.kind == .slider ? 3.0 : 2.2) else { return }
                 phase = .finished

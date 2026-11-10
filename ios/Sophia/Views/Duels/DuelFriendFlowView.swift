@@ -86,8 +86,25 @@ struct DuelFriendFlowView: View {
         .animation(.easeInOut(duration: 0.4), value: stage)
         .statusBarHidden()
         .task(id: attempt) { await run() }
-        .onAppear { service.isInFriendDuel = true }
-        .onDisappear { service.isInFriendDuel = false }
+        // « Occupé » tant qu'un défi attend ou qu'une partie se joue ; sur l'écran de résultat, on
+        // redevient défiable (c'est ce qui permet la revanche), et le serveur l'apprend tout de suite.
+        .onChange(of: stage, initial: true) { _, value in
+            let busy = value == .waiting || value == .countdown || value == .playing
+            service.isInFriendDuel = busy
+            if !busy { service.pingNow() }
+        }
+        .onDisappear {
+            // Écran fermé autrement que par ses boutons : on ne laisse ni invitation ni partie en plan.
+            if stage == .playing, let game {
+                let matchId = game.match.matchId
+                Task { await service.leave(matchId: matchId) }
+            }
+            if let inviteId {
+                Task { await service.cancelInvite(inviteId) }
+            }
+            service.isInFriendDuel = false
+            service.pingNow()
+        }
     }
 
     // MARK: - Attente et compte à rebours
@@ -187,6 +204,9 @@ struct DuelFriendFlowView: View {
     @ViewBuilder
     private var footer: some View {
         switch stage {
+        case .waiting where target == nil:
+            // Invitation acceptée : la partie arrive, rien à attendre ni à annuler.
+            Color.clear.frame(height: 40)
         case .waiting:
             VStack(spacing: 14) {
                 Text(String(format: languageManager.text("duel.game.waiting"), friend?.handle ?? target?.handle ?? ""))
@@ -248,7 +268,10 @@ struct DuelFriendFlowView: View {
 
         let sent: DuelSentInvite
         do {
-            sent = try await service.invite(friend: target.userId)
+            // L'envoi va jusqu'au bout même si l'écran se ferme entre-temps : l'invitation
+            // créée côté serveur peut alors être annulée, au lieu de rester sans personne.
+            let friendId = target.userId
+            sent = try await Task { try await DuelLiveService.shared.invite(friend: friendId) }.value
         } catch let error as DuelInviteError {
             fail(error == .friendBusy ? "duel.friend.busy" : (error == .friendUnavailable ? "duel.friend.unavailable" : "duel.friend.failed"))
             return
@@ -256,7 +279,10 @@ struct DuelFriendFlowView: View {
             fail("duel.friend.failed")
             return
         }
-        guard !Task.isCancelled else { return }
+        guard !Task.isCancelled else {
+            Task { await DuelLiveService.shared.cancelInvite(sent.inviteId) }
+            return
+        }
         me = sent.me
         friend = sent.friend
         friendOnline = sent.online

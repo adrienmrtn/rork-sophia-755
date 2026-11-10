@@ -14,8 +14,29 @@ enum DuelFriendEntry {
 /// SwiftUI attachée à un onglet, qui ne pourrait pas passer devant une autre feuille.
 @MainActor
 enum DuelFriendPresenter {
+    /// L'écran de duel entre amis actuellement présenté, s'il y en a un.
+    private static weak var current: UIViewController?
+
     static func present(_ entry: DuelFriendEntry) {
-        guard !DuelLiveService.shared.isInFriendDuel, let top = AuthService.topViewController() else { return }
+        // Une partie (ou un défi) est en cours : un second ne s'ouvre pas par-dessus.
+        guard !DuelLiveService.shared.isInFriendDuel else { return }
+        DuelLiveService.shared.isInFriendDuel = true
+        // Un duel précédent est resté sur son écran de résultat : il laisse la place.
+        if let previous = current, previous.presentingViewController != nil {
+            previous.dismiss(animated: false) {
+                DuelLiveService.shared.isInFriendDuel = true
+                show(entry)
+            }
+        } else {
+            show(entry)
+        }
+    }
+
+    private static func show(_ entry: DuelFriendEntry) {
+        guard let top = AuthService.topViewController() else {
+            DuelLiveService.shared.isInFriendDuel = false
+            return
+        }
         let host = UIHostingController(rootView: AnyView(EmptyView()))
         let flow = DuelFriendFlowView(entry: entry) { [weak host] in
             host?.dismiss(animated: true)
@@ -29,6 +50,7 @@ enum DuelFriendPresenter {
         host.rootView = AnyView(flow)
         host.modalPresentationStyle = .fullScreen
         host.view.backgroundColor = UIColor(DuelPalette.night)
+        current = host
         top.present(host, animated: true)
     }
 }
@@ -61,7 +83,7 @@ final class DuelInviteBanner {
         let window = UIWindow(windowScene: scene)
         // Une bande en haut de l'écran : le reste de l'app reste touchable.
         window.frame = CGRect(x: 0, y: 0, width: scene.screen.bounds.width, height: 240)
-        window.windowLevel = .alert + 1
+        window.windowLevel = UIWindow.Level(rawValue: UIWindow.Level.alert.rawValue + 1)
         window.backgroundColor = .clear
         window.rootViewController = host
         window.isHidden = false

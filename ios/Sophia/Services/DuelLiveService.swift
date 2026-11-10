@@ -2,6 +2,23 @@ import Foundation
 import Observation
 import Supabase
 
+/// Borne une requête dans le temps : au-delà, elle est abandonnée et l'appel échoue.
+/// L'opération s'exécute sur l'acteur principal, comme tous les appels Supabase de l'app.
+nonisolated enum DuelTimeout {
+    static func run<T: Sendable>(seconds: Double, _ operation: @escaping @MainActor @Sendable () async throws -> T) async throws -> T {
+        try await withThrowingTaskGroup(of: T.self) { group in
+            group.addTask { try await operation() }
+            group.addTask {
+                try await Task.sleep(for: .seconds(seconds))
+                throw DuelError.underlying("timeout")
+            }
+            defer { group.cancelAll() }
+            guard let value = try await group.next() else { throw DuelError.unavailable }
+            return value
+        }
+    }
+}
+
 nonisolated enum DuelInviteError: Error, Sendable, Equatable {
     case notSignedIn
     case notFriends
@@ -63,6 +80,7 @@ final class DuelLiveService {
 
     /// L'app passe à l'arrière-plan : plus de signal, et la pastille verte s'éteint tout de suite.
     func stop() {
+        guard pingTask != nil else { return }
         pingTask?.cancel()
         pingTask = nil
         clearIncoming()
@@ -70,6 +88,12 @@ final class DuelLiveService {
         Task {
             _ = try? await client.rpc("duel_go_offline").execute()
         }
+    }
+
+    /// Un signal tout de suite, sans attendre le prochain tour : « je ne suis plus en partie ».
+    func pingNow() {
+        guard pingTask != nil else { return }
+        Task { await ping() }
     }
 
     private func ping() async {
@@ -83,10 +107,13 @@ final class DuelLiveService {
         }
         let busy = isInFriendDuel || DuelService.shared.isPlaying
         do {
-            let response: DuelPingResponse = try await client
-                .rpc("duel_ping", params: Params(p_lang: "en", p_busy: busy))
-                .execute()
-                .value
+            let client = self.client
+            let response: DuelPingResponse = try await DuelTimeout.run(seconds: 6) {
+                try await client
+                    .rpc("duel_ping", params: Params(p_lang: "en", p_busy: busy))
+                    .execute()
+                    .value
+            }
             apply(response.invite)
         } catch {
             // Hors ligne, ou serveur sans les duels entre amis : on réessaie au prochain tour.
@@ -106,6 +133,14 @@ final class DuelLiveService {
         incomingDeadline = Date().addingTimeInterval(Double(max(invite.expiresInMs, 0)) / 1000)
         DuelHaptics.opponentFound()
         DuelInviteBanner.shared.show()
+        // Le bandeau tombe à l'instant où l'invitation expire, sans attendre le prochain signal.
+        let inviteId = invite.inviteId
+        Task {
+            try? await Task.sleep(for: .milliseconds(max(invite.expiresInMs, 0)))
+            if incoming?.inviteId == inviteId {
+                clearIncoming()
+            }
+        }
     }
 
     private func clearIncoming() {

@@ -368,7 +368,8 @@ nonisolated struct DuelFriendState: Codable, Sendable, Equatable {
     let opponentPoints: [Bool]
     let tiebreak: Bool
     let opponentLeft: Bool
-    let won: Bool
+    /// Absent tant que la partie n'est pas finie sur un vainqueur.
+    let won: Bool?
     let draw: Bool
 
     enum CodingKeys: String, CodingKey {

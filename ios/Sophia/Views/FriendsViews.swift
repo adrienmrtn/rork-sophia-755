@@ -506,7 +506,7 @@ struct FriendProfileView: View {
         let authors = profile.follows.compactMap { AuthorStore.author(slug: $0) }
         if !authors.isEmpty {
             VStack(alignment: .leading, spacing: 12) {
-                Text("\(languageManager.text("profile.following")) · \(authors.count)")
+                Text("\(languageManager.text("home.segment.following")) · \(authors.count)")
                     .font(DS.sans(.caption, .semibold))
                     .foregroundStyle(DS.inkTertiary)
                     .tracking(1.1)

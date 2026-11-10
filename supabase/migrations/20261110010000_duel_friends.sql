@@ -368,7 +368,11 @@ DECLARE
   resolved int := CASE WHEN m.status = 'finished' THEN m.current_index + 1 ELSE m.current_index END;
   opponent_answers jsonb;
 BEGIN
-  SELECT coalesce(jsonb_agg(t.x ORDER BY t.ord), '[]'::jsonb)
+  -- Une case restée vide (partie arrêtée parce que les deux joueurs sont partis) est rendue
+  -- comme une question sans réponse.
+  SELECT coalesce(jsonb_agg(
+      CASE WHEN jsonb_typeof(t.x) = 'object' THEN t.x ELSE jsonb_build_object('c', NULL, 'v', NULL, 't', 0) END
+      ORDER BY t.ord), '[]'::jsonb)
     INTO opponent_answers
     FROM jsonb_array_elements(theirs) WITH ORDINALITY AS t(x, ord)
     WHERE t.ord <= resolved;
@@ -389,7 +393,7 @@ BEGIN
     'opponent_points', CASE WHEN is_a THEN m.points_b ELSE m.points_a END,
     'tiebreak', m.tiebreak,
     'opponent_left', CASE WHEN is_a THEN m.left_b ELSE m.left_a END,
-    'won', m.status = 'finished' AND m.winner = p_uid,
+    'won', m.status = 'finished' AND coalesce(m.winner = p_uid, false),
     'draw', m.status = 'finished' AND m.winner IS NULL
   );
 END;
