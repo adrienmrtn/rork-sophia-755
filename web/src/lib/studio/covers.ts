@@ -127,6 +127,38 @@ export async function writePosterScene(theme: { title: string; subtitle?: string
   return text;
 }
 
+const BADGE_SUFFIX = "Single centred emblem filling most of the frame, like a merit badge. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, plain navy background, no text, no letters, no numbers, no outlines.";
+export const BADGE_EMBLEM_SYSTEM_PROMPT = `You design the emblem of an achievement badge for an educational app, in flat paper-cut style. Given an event (title, tagline, description) and the badge's name, answer with THREE different emblem ideas, one per line, nothing else. Each line is ONE sentence of at most 20 words describing a single iconic, concrete object or a tight group of two objects that stands for the theme (no people's faces unless the theme is a person). No style words, no colors, no text in the image, no numbering, no quotes.`;
+
+/** Trois idées d'emblème pour le badge d'un événement, écrites par le modèle de texte. */
+export async function writeBadgeEmblems(theme: { title: string; badge?: string | null; subtitle?: string | null; description?: string | null }): Promise<string[]> {
+  const context = [`Event: ${theme.title}`, theme.badge ? `Badge name: ${theme.badge}` : null, theme.subtitle ? `Tagline: ${theme.subtitle}` : null, theme.description ? `About: ${theme.description}` : null].filter(Boolean).join("\n");
+  const out = await fal<{ output?: string; error?: string }>("fal-ai/any-llm", { model: TEXT_MODEL, system_prompt: BADGE_EMBLEM_SYSTEM_PROMPT, prompt: context, temperature: 0.9 });
+  const lines = (out.output ?? "")
+    .split("\n")
+    .map((l) => l.trim().replace(/^[-*\d.)\s]+/, "").replace(/^["“]|["”]$/g, "").trim())
+    .filter(Boolean)
+    .slice(0, 3);
+  if (lines.length === 0) throw new Error(out.error ?? "The badge art director returned no emblem.");
+  // Moins de trois idées : la première est redessinée, Recraft ne rend jamais deux fois la même image.
+  while (lines.length < 3) lines.push(lines[0]);
+  return lines;
+}
+
+/** Une illustration carrée de badge, dans la direction papier découpé des avatars et des ligues. */
+export async function generateBadgeImage(emblem: string): Promise<{ url: string; contentType: string }> {
+  const out = await fal<{ images?: { url: string; content_type?: string }[]; error?: string }>(POSTER_MODEL, {
+    prompt: `${emblem.replace(/\.$/, "")}. ${BADGE_SUFFIX}`,
+    image_size: "square_hd",
+    style: "digital_illustration/2d_art_poster",
+    colors: POSTER_COLORS,
+    enable_safety_checker: true,
+  });
+  const image = (out.images ?? [])[0];
+  if (!image?.url) throw new Error(out.error ?? "No badge image was generated.");
+  return { url: image.url, contentType: image.content_type ?? "image/webp" };
+}
+
 /** Une image 16:9 dans la direction affiche du site (Recraft v3, style 2d_art_poster, palette du site). */
 export async function generatePosterImage(scene: string): Promise<{ url: string; contentType: string }> {
   const out = await fal<{ images?: { url: string; content_type?: string }[]; error?: string }>(POSTER_MODEL, {

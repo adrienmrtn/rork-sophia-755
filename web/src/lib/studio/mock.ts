@@ -267,6 +267,8 @@ const mockCampaign = {
   symbol: "mustache.fill",
   image_url: null,
   image_candidates: [],
+  badge_image_url: null,
+  badge_candidates: [],
   countries: null,
   starts_at: "2026-11-01",
   ends_at: "2026-11-30",

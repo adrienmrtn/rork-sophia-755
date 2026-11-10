@@ -273,6 +273,7 @@ struct FriendProfileView: View {
                             duelCard(profile)
                         }
                         statsGrid(profile)
+                        badgesSection(profile)
                         followingSection(profile)
                     } else if let errorMessage {
                         Text(errorMessage)
@@ -371,6 +372,21 @@ struct FriendProfileView: View {
         }
         .dsCard()
         .padding(.horizontal, 20)
+    }
+
+    /// Les badges que l'ami a choisi d'afficher (trois au plus). Rien s'il n'en affiche aucun.
+    @ViewBuilder
+    private func badgesSection(_ profile: FriendProfile) -> some View {
+        let badges = (profile.featuredBadges ?? []).prefix(3).compactMap { BadgeCatalog.badge(id: $0) }
+        if !badges.isEmpty {
+            VStack(alignment: .leading, spacing: 12) {
+                Text(languageManager.text("profile.badges"))
+                    .font(DS.title(.title3, .heavy))
+                    .foregroundStyle(DS.ink)
+                BadgeRow(badges: Array(badges))
+            }
+            .padding(.horizontal, 20)
+        }
     }
 
     /// « En ligne », ou « Vu il y a 5 minutes » : la durée est écrite par le système dans la

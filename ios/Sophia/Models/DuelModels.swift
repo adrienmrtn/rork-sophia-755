@@ -464,10 +464,13 @@ nonisolated struct FriendProfile: Codable, Sendable, Equatable {
     /// Secondes depuis sa dernière présence dans l'app, au moment de la lecture du profil ;
     /// nil s'il n'a jamais été vu, ou si le serveur ne le donne pas encore.
     var lastSeenSeconds: Int? = nil
+    /// Les badges (trois au plus) qu'il affiche sur son profil ; nil si le serveur ne les donne pas.
+    var featuredBadges: [String]? = nil
 
     enum CodingKeys: String, CodingKey {
         case handle, streak, trophies, follows, online
         case lastSeenSeconds = "last_seen_seconds"
+        case featuredBadges = "featured_badges"
         case userId = "user_id"
         case avatarId = "avatar_id"
         case globalXP = "global_xp"

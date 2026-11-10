@@ -292,6 +292,7 @@ final class SocialService {
                 .execute()
                 .value
             leaderboard = rows
+            BadgeCounters.recordFriends(count: rows.filter { !$0.isMe }.count)
         } catch {
             #if DEBUG
             print("[Social] refreshLeaderboard failed: \(error)")

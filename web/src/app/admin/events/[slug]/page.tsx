@@ -13,7 +13,7 @@ import { CAMPAIGN_KINDS, CAMPAIGN_SYMBOLS, EDITED_LANGS, TEXT_FIELDS, TEXT_LABEL
 import { shortDateTime } from "@/lib/studio/data";
 import { coversConfigured } from "@/lib/studio/covers";
 import { translationConfigured } from "@/lib/studio/translate";
-import { chooseEventImage, deleteCampaign, saveCampaign, setCampaignStatus, translateCampaignAction } from "../actions";
+import { chooseEventBadge, chooseEventImage, deleteCampaign, generateEventBadge, saveCampaign, setCampaignStatus, translateCampaignAction } from "../actions";
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 120;
@@ -23,7 +23,7 @@ const textarea = "w-full rounded-xl border border-line bg-white px-3.5 py-3 text
 const label = "flex flex-col gap-1.5 text-[13px] font-bold text-ink-2";
 const select = `${input} appearance-none`;
 
-const DONE: Record<string, string> = { image: "Images generated. Pick the one you prefer below; generate again if neither fits.", saved: "Event saved.", published: "Event published. The apps pick it up at their next catalogue refresh (within the hour).", "kept-draft": "Saved as a draft.", "translated-none": "Every language already has its texts.", unpublished: "Event back to draft: hidden from the apps at their next catalogue refresh.", archived: "Event archived: withdrawn from the apps, kept here.", restored: "Event back as a draft. Publish it when ready." };
+const DONE: Record<string, string> = { badge: "Badges generated. Pick the one you want; the first is used until you choose.", image: "Images generated. Pick the one you prefer below; generate again if neither fits.", saved: "Event saved.", published: "Event published. The apps pick it up at their next catalogue refresh (within the hour).", "kept-draft": "Saved as a draft.", "translated-none": "Every language already has its texts.", unpublished: "Event back to draft: hidden from the apps at their next catalogue refresh.", archived: "Event archived: withdrawn from the apps, kept here.", restored: "Event back as a draft. Publish it when ready." };
 
 export default async function EventEditorPage({ params, searchParams }: PageProps<"/admin/events/[slug]">) {
   const session = await getStudioSession();
@@ -165,6 +165,43 @@ export default async function EventEditorPage({ params, searchParams }: PageProp
                       );
                     })}
                   </div>
+                </div>
+              )}
+            </div>
+          </Card>
+        )}
+
+        {!isNew && (
+          <Card className="flex flex-wrap items-start gap-8 p-6">
+            <div className="flex min-w-[240px] max-w-[320px] flex-col gap-3">
+              <strong className="text-[15px] font-extrabold text-ink">Badge</strong>
+              <p className="text-[13px] leading-[1.5] text-ink-3">
+                Readers who finish the challenge earn this badge and can show it on their profile. The button draws three paper-cut emblems from the English title, tagline and badge name; pick one. Without an image, the apps show the event symbol.
+              </p>
+              <form action={generateEventBadge} className="flex flex-col gap-2">
+                <input type="hidden" name="slug" value={campaign.slug} />
+                <button type="submit" disabled={!coversConfigured() || !titleEn} className={buttonClass("secondary", "h-10 w-fit px-4 disabled:opacity-50")}>
+                  Generate 3 badges with AI
+                </button>
+                <span className="text-[12px] text-muted">{coversConfigured() ? "About 30 seconds. Earlier candidates are kept (9 at most)." : "Not configured on the server (FAL_KEY)."}</span>
+              </form>
+            </div>
+            <div className="flex min-w-[260px] flex-1 flex-col gap-2">
+              {campaign.badge_candidates.length === 0 ? (
+                <p className="text-[13px] text-muted">No badge generated yet.</p>
+              ) : (
+                <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+                  {campaign.badge_candidates.map((c) => {
+                    const current = c.url === campaign.badge_image_url;
+                    return (
+                      <form key={c.url} action={chooseEventBadge} className={`flex flex-col items-center gap-2 rounded-xl border p-3 ${current ? "border-navy" : "border-line"}`}>
+                        <input type="hidden" name="slug" value={campaign.slug} />
+                        <input type="hidden" name="url" value={c.url} />
+                        <Image src={c.url} alt="" width={240} height={240} unoptimized className="aspect-square w-full max-w-[140px] rounded-full object-cover" />
+                        {current ? <Pill tone="green">In use</Pill> : <button type="submit" className={buttonClass("secondary", "h-8 px-3 text-[13px]")}>Use this badge</button>}
+                      </form>
+                    );
+                  })}
                 </div>
               )}
             </div>

@@ -89,6 +89,7 @@ final class DuelService {
                 .execute()
                 .value
             home = fresh
+            BadgeCounters.sync(home: fresh)
             homeFailed = false
             homeUserId = userId
             if let data = try? JSONEncoder().encode(CachedHome(userId: userId, home: fresh)) {
@@ -170,6 +171,7 @@ final class DuelService {
     }
 
     private func apply(_ result: DuelResult) {
+        BadgeCounters.sync(profile: result.profile)
         guard let current = home else { return }
         home = DuelHome(handle: current.handle, profile: result.profile, leagues: current.leagues, recent: current.recent)
     }

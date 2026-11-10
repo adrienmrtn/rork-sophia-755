@@ -71,6 +71,8 @@ struct DuelResultView: View {
         }
         .onAppear {
             withAnimation(.spring(response: 0.55, dampingFraction: 0.62)) { appeared = true }
+            // Les exploits de la partie (score, écart, question décisive) comptent pour les badges.
+            BadgeCounters.record(summary)
             if won {
                 DuelHaptics.victory()
             } else if !summary.draw {
