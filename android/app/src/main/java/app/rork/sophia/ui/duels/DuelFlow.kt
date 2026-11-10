@@ -30,6 +30,7 @@ import androidx.compose.ui.platform.LocalView
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.compose.LocalLifecycleOwner
+import kotlinx.coroutines.delay
 import app.rork.sophia.SophiaApplication
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.DuelHome
@@ -165,11 +166,23 @@ fun DuelFlow(language: AppLanguage, onClose: () -> Unit, modifier: Modifier = Mo
     val currentGame by rememberUpdatedState(game)
     DisposableEffect(lifecycleOwner) {
         var leftAppAt: Long? = null
+        // Au bout de 15 s d'absence, la partie est abandonnée sans attendre le retour : elle ne
+        // doit pas se jouer seule jusqu'au bout et partir comme une partie normale.
+        var absence: Job? = null
         val observer = LifecycleEventObserver { _, event ->
             when (event) {
                 Lifecycle.Event.ON_STOP ->
-                    if (currentStage == DuelStage.Playing && leftAppAt == null) leftAppAt = SystemClock.elapsedRealtime()
+                    if (currentStage == DuelStage.Playing && leftAppAt == null) {
+                        leftAppAt = SystemClock.elapsedRealtime()
+                        absence?.cancel()
+                        absence = scope.launch {
+                            delay(DuelRules.MAX_ABSENCE_MS + 1)
+                            currentGame?.let { if (it.phase != DuelPhase.Finished) abandon(it) }
+                        }
+                    }
                 Lifecycle.Event.ON_START -> {
+                    absence?.cancel()
+                    absence = null
                     val left = leftAppAt
                     leftAppAt = null
                     val model = currentGame
@@ -184,7 +197,10 @@ fun DuelFlow(language: AppLanguage, onClose: () -> Unit, modifier: Modifier = Mo
             }
         }
         lifecycleOwner.lifecycle.addObserver(observer)
-        onDispose { lifecycleOwner.lifecycle.removeObserver(observer) }
+        onDispose {
+            absence?.cancel()
+            lifecycleOwner.lifecycle.removeObserver(observer)
+        }
     }
 
     Box(

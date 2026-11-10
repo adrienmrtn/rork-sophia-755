@@ -63,6 +63,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.lifecycle.compose.LocalLifecycleOwner
+import androidx.lifecycle.withStarted
 import app.rork.sophia.SophiaApplication
 import app.rork.sophia.data.StringStore
 import app.rork.sophia.domain.AppLanguage
@@ -120,6 +122,7 @@ internal fun DuelMatchmakingScreen(
 
     LaunchedEffect(Unit) { appeared = true }
 
+    val lifecycle = LocalLifecycleOwner.current.lifecycle
     LaunchedEffect(attempt) {
         step = MatchmakingStep.Searching
         match = null
@@ -138,6 +141,9 @@ internal fun DuelMatchmakingScreen(
             try {
                 // Tant que la partie n'existe pas côté serveur, annuler ne coûte rien.
                 delay(Random.nextLong(SEARCH_MIN_MS, SEARCH_MAX_MS + 1))
+                // App passée à l'arrière-plan pendant la recherche : la partie n'est créée qu'au
+                // retour, sinon elle se jouerait toute seule, sans personne devant.
+                lifecycle.withStarted { }
                 canCancel = false
                 withTimeoutOrNull(START_TIMEOUT_MS) { app.duelService.startMatch() }?.getOrNull()
             } finally {
@@ -167,6 +173,8 @@ internal fun DuelMatchmakingScreen(
             delay(COUNTDOWN_STEP_MS)
         }
         view.duelHaptic(DuelHaptic.CountdownFinal)
+        // De même, la première question attend que l'app soit à l'écran.
+        lifecycle.withStarted { }
         currentOnReady(fetched)
     }
 
@@ -214,6 +222,9 @@ internal fun DuelMatchmakingScreen(
                             .clip(CircleShape)
                             .background(Color.White.copy(alpha = 0.16f))
                             .clickable(role = Role.Button) {
+                                // La croix s'efface en 200 ms : pendant ce temps, elle ne ferme
+                                // plus une partie déjà créée (ce serait un abandon).
+                                if (!canCancel && step != MatchmakingStep.Failed) return@clickable
                                 view.duelHaptic(DuelHaptic.Tap)
                                 onCancel()
                             },

@@ -30,7 +30,7 @@ object StringStore {
         return if (formatArgs.isEmpty()) template else {
             try {
                 // iOS writes a string argument `%@`, or `%1$@` when the order is fixed: both become `%s`.
-                val javaTemplate = template.replace(IOS_STRING_ARGUMENT, "%$1s")
+                val javaTemplate = template.replace(IOS_STRING_ARGUMENT) { "%${it.groupValues[1]}s" }
                 // Formatted in the app's own locale: on an Arabic phone the default locale
                 // rendered every count in Arabic-Indic digits, including for a French reader.
                 String.format(language.locale, javaTemplate, *formatArgs)

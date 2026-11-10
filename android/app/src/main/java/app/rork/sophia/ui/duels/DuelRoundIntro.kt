@@ -176,20 +176,7 @@ private fun MyPick(model: DuelGameModel, intro: DuelRoundAnnouncement, language:
         // Le temps qui reste pour choisir ; la place reste prise une fois le choix fait.
         val deadline = intro.deadlineMs
         if (deadline != null && intro.chosen == null) {
-            var remaining by remember(deadline) { mutableFloatStateOf(1f) }
-            LaunchedEffect(deadline) {
-                val window = maxOf(deadline - intro.opensAtMs, 100L).toFloat()
-                while (true) {
-                    remaining = (maxOf(deadline - model.nowMs(), 0L) / window).coerceIn(0f, 1f)
-                    withFrameNanos { }
-                }
-            }
-            DuelProgressBar(
-                progress = remaining,
-                tint = DuelPalette.saffron,
-                track = Color.White.copy(alpha = 0.18f),
-                height = 5.dp,
-            )
+            PickCountdownBar(model = model, opensAtMs = intro.opensAtMs, deadlineMs = deadline)
         } else {
             Spacer(Modifier.height(5.dp))
         }
@@ -342,4 +329,26 @@ private fun SubjectCard(
             Icon(Icons.Filled.CheckCircle, contentDescription = null, tint = DuelPalette.saffron, modifier = Modifier.size(26.dp))
         }
     }
+}
+
+/**
+ * Le temps qui reste pour choisir sa matière. À part, pour que seule cette jauge se recompose
+ * à chaque image, et non les trois cartes de matière au-dessus d'elle.
+ */
+@Composable
+private fun PickCountdownBar(model: DuelGameModel, opensAtMs: Long, deadlineMs: Long) {
+    var remaining by remember(deadlineMs) { mutableFloatStateOf(1f) }
+    LaunchedEffect(deadlineMs) {
+        val window = maxOf(deadlineMs - opensAtMs, 100L).toFloat()
+        while (true) {
+            remaining = (maxOf(deadlineMs - model.nowMs(), 0L) / window).coerceIn(0f, 1f)
+            withFrameNanos { }
+        }
+    }
+    DuelProgressBar(
+        progress = remaining,
+        tint = DuelPalette.saffron,
+        track = Color.White.copy(alpha = 0.18f),
+        height = 5.dp,
+    )
 }

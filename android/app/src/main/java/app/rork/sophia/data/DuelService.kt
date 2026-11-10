@@ -103,10 +103,11 @@ class DuelService(context: Context, private val auth: AuthService) {
     }
 
     suspend fun refreshLeaderboard() {
-        if (auth.userId.value == null) return
+        val userId = auth.userId.value ?: return
         runCatching {
             val rows: List<DuelLeaderboardEntry> = json.decodeFromString(db.rpc("duel_friends_leaderboard").data)
-            _leaderboard.value = rows
+            // Une réponse arrivée après un changement de compte n'est pas celle de ce compte.
+            if (auth.userId.value == userId) _leaderboard.value = rows
         }
     }
 
@@ -166,7 +167,12 @@ class DuelService(context: Context, private val auth: AuthService) {
         abandoned: Boolean,
         pick: String?,
     ): Result<DuelResult> {
-        val userId = auth.userId.value ?: return Result.failure(DuelError.NotSignedIn)
+        // La session peut être momentanément illisible (jeton en cours de renouvellement) : le
+        // compte est alors celui qui a lancé la partie. Les vraies réponses remplacent dans tous
+        // les cas l'abandon noté au lancement, sinon une partie jouée repartirait en abandon.
+        val userId = auth.userId.value
+            ?: loadPending()?.takeIf { it.matchId == matchId }?.userId
+            ?: return Result.failure(DuelError.NotSignedIn)
         val pending = PendingFinish(userId, matchId, answers, abandoned, pick)
         storePending(pending)
         return runCatching { send(pending) }

@@ -247,7 +247,10 @@ fun MainTabs(
         onDeepLinkCreatorConsumed()
     }
 
-    LaunchedEffect(deepLinkCourseId, language) {
+    LaunchedEffect(deepLinkCourseId, language, showDuelFlow) {
+        // Un lien reçu en pleine partie de duel attend la fin de la partie : le cours
+        // s'ouvrirait dessous, invisible, et prendrait le bouton retour.
+        if (showDuelFlow) return@LaunchedEffect
         val id = deepLinkCourseId ?: return@LaunchedEffect
         // Posée par `MainActivity` à la réception de l'intent : `notification` ou `link`.
         val source = Analytics.takeCourseOpenSource()
@@ -765,13 +768,14 @@ fun MainTabs(
         // La partie de duel recouvre tout, barre d'onglets comprise. À sa fermeture, l'accueil
         // des duels (resté monté dessous) se recharge de lui-même.
         if (showDuelFlow) {
-            SophiaOverlayLayer {
-                DuelFlow(
-                    language = language,
-                    onClose = { showDuelFlow = false },
-                    modifier = Modifier.fillMaxSize(),
-                )
-            }
+            // Posée directement, sans la couche des autres écrans : celle-ci rétrécit et
+            // s'éclaircit sous le doigt, ce qui laisserait voir les onglets clairs à travers un
+            // écran de nuit. La partie peint son fond et arrête elle-même les touches.
+            DuelFlow(
+                language = language,
+                onClose = { showDuelFlow = false },
+                modifier = Modifier.fillMaxSize(),
+            )
         }
 
         if (showAudioPlayer) {

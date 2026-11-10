@@ -54,6 +54,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import app.rork.sophia.data.CourseImagePrefetch
 import app.rork.sophia.data.StringStore
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.DuelLeague
@@ -208,7 +209,14 @@ fun DuelLeagueBackdrop(league: DuelLeague?, modifier: Modifier = Modifier, thumb
     Box(modifier = modifier.background(duelColor(league?.accentHex))) {
         if (!url.isNullOrEmpty()) {
             val request = remember(url) {
-                ImageRequest.Builder(context).data(url).allowHardware(false).crossfade(true).build()
+                ImageRequest.Builder(context)
+                    .data(url)
+                    // Décodée à la taille utile, comme les images de cours : une illustration de
+                    // ligue entière ne doit pas chasser les couvertures du cache en mémoire.
+                    .size(CourseImagePrefetch.targetPx(context))
+                    .allowHardware(false)
+                    .crossfade(true)
+                    .build()
             }
             AsyncImage(
                 model = request,
