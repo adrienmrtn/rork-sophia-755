@@ -110,7 +110,8 @@ struct DuelFlowView: View {
             won: false,
             abandoned: true,
             tiebreak: false,
-            answers: game.answers
+            answers: game.answers,
+            pick: game.myPick
         ))
     }
 
@@ -121,7 +122,7 @@ struct DuelFlowView: View {
             // La réponse d'une partie précédente (réseau lent, puis « Rejouer ») ne doit pas
             // s'afficher sur le résultat de la suivante.
             do {
-                let value = try await service.finishMatch(matchId: matchId, answers: summary.answers, abandoned: summary.abandoned)
+                let value = try await service.finishMatch(matchId: matchId, answers: summary.answers, abandoned: summary.abandoned, pick: summary.pick)
                 guard self.summary?.match.matchId == matchId else { return }
                 result = value
             } catch {

@@ -1,8 +1,12 @@
 #!/usr/bin/env python3
-"""Source des questions de duel (bêta, anglais) : 80 questions sur 8 niveaux cachés.
+"""Source des questions de duel (bêta, anglais) : 137 questions sur 8 niveaux cachés.
 
-Par niveau : 4 QCM, 2 vrai/faux, 2 portraits (« qui est-ce ? », image Wikimedia Commons du
-domaine public, copiée sur Supabase Storage) et 2 curseurs (le plus proche marque).
+Les 80 premières : par niveau, 4 QCM, 2 vrai/faux, 2 portraits (« qui est-ce ? », image
+Wikimedia Commons du domaine public, copiée sur Supabase Storage) et 2 curseurs (le plus
+proche marque). Puis un complément par matière (art, littérature, mythologie, comprendre le
+monde), pour que chaque matière ait de quoi remplir une manche à tous les niveaux. Les
+nouvelles questions s'ajoutent à la fin : l'identifiant d'une question suit son rang dans
+son niveau, il ne doit pas changer.
 La première option d'un QCM ou d'un portrait est la bonne ; scripts/build_duels_seed.py
 mélange les options (ordre stable d'une exécution à l'autre) et écrit
 content/duels/questions_en.json puis le SQL d'amorçage.
@@ -24,9 +28,19 @@ def TF(level, subject, statement, answer):
     QUESTIONS.append({"level": level, "kind": "true_false", "subject": subject, "question": statement, "answer": answer})
 
 
+# La matière d'un portrait est celle de la personne : une manche « Sciences » peut montrer Curie.
+PORTRAIT_SUBJECTS = {
+    "albert_einstein": "science", "marie_curie": "science", "charles_darwin": "science",
+    "galileo_galilei": "science", "isaac_newton": "science", "ada_lovelace": "science",
+    "william_shakespeare": "literature", "virginia_woolf": "literature", "voltaire": "literature",
+    "wolfgang_amadeus_mozart": "art", "ludwig_van_beethoven": "art",
+    "rene_descartes": "world", "erasmus": "world",
+}
+
+
 def P(level, portrait, options):
-    QUESTIONS.append({"level": level, "kind": "portrait", "subject": "history", "question": "Who is this?",
-                      "portrait": portrait, "options": options})
+    QUESTIONS.append({"level": level, "kind": "portrait", "subject": PORTRAIT_SUBJECTS.get(portrait, "history"),
+                      "question": "Who is this?", "portrait": portrait, "options": options})
 
 
 def S(level, subject, question, lo, hi, value, unit, step=1):
@@ -129,3 +143,71 @@ P(8, "rene_descartes", ["René Descartes", "Blaise Pascal", "Baruch Spinoza", "C
 P(8, "erasmus", ["Erasmus", "Martin Luther", "Thomas More", "John Calvin"])
 S(8, "history", "In what year did the First Council of Nicaea take place?", 100, 800, 325, "year")
 S(8, "science", "In what year did Copernicus publish \"On the Revolutions of the Heavenly Spheres\"?", 1400, 1700, 1543, "year")
+
+# ================================================================ complément par matière
+# (manches thématiques : au moins une vingtaine de questions par matière)
+
+# ---------------------------------------------------------------- art
+M(1, "art", "Which artist is famous for his paintings of sunflowers?", ["Vincent van Gogh", "Claude Monet", "Pablo Picasso", "Rembrandt"])
+M(2, "art", "In which city is the Louvre museum?", ["Paris", "London", "Rome", "Madrid"])
+TF(2, "art", "Michelangelo sculpted the statue of David.", True)
+M(3, "art", "Which painter is known for his water lilies painted at Giverny?", ["Claude Monet", "Auguste Renoir", "Edgar Degas", "Paul Gauguin"])
+M(4, "art", "Which art movement is Salvador Dalí associated with?", ["Surrealism", "Cubism", "Impressionism", "Pop art"])
+S(4, "art", "In what year did Leonardo da Vinci die?", 1400, 1600, 1519, "year")
+TF(5, "art", "Andy Warhol was a leading figure of Pop art.", True)
+M(5, "art", "Who painted \"The Birth of Venus\" in the 1480s?", ["Sandro Botticelli", "Raphael", "Titian", "Giotto"])
+M(6, "art", "Which architect designed the Sagrada Família in Barcelona?", ["Antoni Gaudí", "Le Corbusier", "Frank Lloyd Wright", "Oscar Niemeyer"])
+S(6, "art", "In what year was the Eiffel Tower completed?", 1800, 1950, 1889, "year")
+TF(7, "art", "\"Las Meninas\" was painted by Francisco Goya.", False)
+M(8, "art", "Which Japanese artist created the print \"The Great Wave off Kanagawa\"?", ["Katsushika Hokusai", "Utagawa Hiroshige", "Kitagawa Utamaro", "Tawaraya Sōtatsu"])
+
+# ---------------------------------------------------------------- littérature
+M(1, "literature", "Who wrote the Harry Potter novels?", ["J. K. Rowling", "J. R. R. Tolkien", "Roald Dahl", "C. S. Lewis"])
+TF(1, "literature", "\"The Odyssey\" tells the story of Odysseus's journey home.", True)
+M(2, "literature", "Which detective was created by Arthur Conan Doyle?", ["Sherlock Holmes", "Hercule Poirot", "Philip Marlowe", "Miss Marple"])
+TF(2, "literature", "Charles Dickens wrote \"Oliver Twist\".", True)
+M(3, "literature", "Who wrote \"Les Misérables\"?", ["Victor Hugo", "Émile Zola", "Alexandre Dumas", "Gustave Flaubert"])
+TF(3, "literature", "\"Moby-Dick\" is about the hunt for a great white whale.", True)
+M(4, "literature", "Which Russian author wrote \"War and Peace\"?", ["Leo Tolstoy", "Fyodor Dostoevsky", "Anton Chekhov", "Ivan Turgenev"])
+M(5, "literature", "Who wrote \"One Hundred Years of Solitude\"?", ["Gabriel García Márquez", "Jorge Luis Borges", "Mario Vargas Llosa", "Pablo Neruda"])
+S(5, "literature", "In what year was the first part of \"Don Quixote\" published?", 1400, 1800, 1605, "year")
+M(6, "literature", "Which poet wrote \"The Waste Land\"?", ["T. S. Eliot", "W. B. Yeats", "Ezra Pound", "W. H. Auden"])
+M(7, "literature", "Who wrote \"In Search of Lost Time\"?", ["Marcel Proust", "André Gide", "Albert Camus", "Stendhal"])
+TF(8, "literature", "Fyodor Dostoevsky wrote \"Fathers and Sons\".", False)
+
+# ---------------------------------------------------------------- mythologie
+TF(1, "mythology", "In Greek mythology, Poseidon is the god of the sea.", True)
+M(1, "mythology", "Which Greek hero had to complete a series of labours as a penance?", ["Heracles", "Achilles", "Theseus", "Jason"])
+M(2, "mythology", "Who is the Roman god of war?", ["Mars", "Jupiter", "Neptune", "Apollo"])
+TF(2, "mythology", "In Greek mythology, Pandora opened a jar that released evils into the world.", True)
+M(3, "mythology", "Which creature posed a riddle to Oedipus at the gates of Thebes?", ["The Sphinx", "The Minotaur", "The Chimera", "The Hydra"])
+M(3, "mythology", "In Egyptian mythology, who is the god of the Sun?", ["Ra", "Osiris", "Anubis", "Thoth"])
+TF(3, "mythology", "The Minotaur lived in a labyrinth on the island of Crete.", True)
+M(4, "mythology", "Who is the chief god in Norse mythology?", ["Odin", "Thor", "Loki", "Freyr"])
+TF(4, "mythology", "In Greek mythology, Achilles was invulnerable except for his heel.", True)
+S(4, "mythology", "How many Muses are there in Greek mythology?", 1, 20, 9, "Muses")
+M(5, "mythology", "Which Greek goddess sprang fully grown from the head of Zeus?", ["Athena", "Aphrodite", "Artemis", "Hera"])
+M(5, "mythology", "In Greek mythology, who was condemned to roll a boulder up a hill for eternity?", ["Sisyphus", "Tantalus", "Prometheus", "Atlas"])
+TF(6, "mythology", "In Norse mythology, Ragnarök is the name of Odin's eight-legged horse.", False)
+M(6, "mythology", "In Egyptian mythology, which goddess reassembled the body of Osiris?", ["Isis", "Hathor", "Bastet", "Nut"])
+M(7, "mythology", "In Aztec mythology, which god is known as the \"Feathered Serpent\"?", ["Quetzalcoatl", "Huitzilopochtli", "Tezcatlipoca", "Tlaloc"])
+M(8, "mythology", "In Greek mythology, which Titaness is the goddess of memory and mother of the Muses?", ["Mnemosyne", "Themis", "Rhea", "Tethys"])
+TF(8, "mythology", "The Bhagavad Gita is part of the Ramayana.", False)
+
+# ---------------------------------------------------------------- comprendre le monde
+M(1, "world", "What is the capital of the United States?", ["Washington, D.C.", "New York", "Los Angeles", "Chicago"])
+TF(1, "world", "The euro is the currency used in Japan.", False)
+M(2, "world", "Which organization was founded in 1945 to maintain international peace?", ["The United Nations", "NATO", "The European Union", "The League of Nations"])
+TF(2, "world", "The word \"democracy\" comes from Greek words meaning \"rule by the people\".", True)
+M(3, "world", "Which ancient Greek philosopher was sentenced to death by drinking hemlock?", ["Socrates", "Plato", "Aristotle", "Diogenes"])
+M(3, "world", "Who wrote \"The Communist Manifesto\" with Friedrich Engels?", ["Karl Marx", "Vladimir Lenin", "Adam Smith", "Jean-Jacques Rousseau"])
+TF(4, "world", "Inflation means that prices in general are falling.", False)
+S(4, "world", "How many member states does the United Nations have?", 100, 250, 193, "states")
+M(5, "world", "Which philosopher wrote \"The Republic\"?", ["Plato", "Aristotle", "Cicero", "Epicurus"])
+M(5, "world", "Which thinker wrote \"The Prince\", a treatise on political power?", ["Niccolò Machiavelli", "Thomas Hobbes", "John Locke", "Montesquieu"])
+S(5, "world", "In what year was the Universal Declaration of Human Rights adopted?", 1900, 2000, 1948, "year")
+M(6, "world", "Who is the author of \"Leviathan\" (1651)?", ["Thomas Hobbes", "John Locke", "David Hume", "Francis Bacon"])
+TF(6, "world", "\"I think, therefore I am\" is a statement by René Descartes.", True)
+M(7, "world", "Which philosopher wrote \"Thus Spoke Zarathustra\"?", ["Friedrich Nietzsche", "Martin Heidegger", "Søren Kierkegaard", "Arthur Schopenhauer"])
+TF(7, "world", "John Maynard Keynes argued that governments should never intervene in the economy.", False)
+M(8, "world", "Which philosopher wrote \"Being and Time\" (1927)?", ["Martin Heidegger", "Edmund Husserl", "Jean-Paul Sartre", "Ludwig Wittgenstein"])

@@ -222,6 +222,19 @@ final class DuelLiveService {
             .value
     }
 
+    /// Mon choix de matière pour une manche au choix.
+    func pick(matchId: UUID, round: Int, subject: String) async throws -> DuelFriendState {
+        struct Params: Encodable {
+            let p_match: UUID
+            let p_round: Int
+            let p_subject: String
+        }
+        return try await client
+            .rpc("duel_friend_pick", params: Params(p_match: matchId, p_round: round, p_subject: subject))
+            .execute()
+            .value
+    }
+
     func leave(matchId: UUID) async {
         struct Params: Encodable { let p_match: UUID }
         _ = try? await client

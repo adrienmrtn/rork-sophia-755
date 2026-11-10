@@ -24,6 +24,9 @@ struct BlockContentView: View {
     /// « Suivre » sur la carte auteur de la dernière page : état et geste, fournis par le lecteur.
     var isFollowingAuthor: ((CourseAuthor) -> Bool)? = nil
     var onFollowAuthor: ((CourseAuthor) -> Void)? = nil
+    /// « Voir l'original » : ouvre le cours dans sa langue d'écriture. Absent (nil) là où le
+    /// texte original ne doit pas être proposé (cours verrouillé, vue de l'original elle-même).
+    var onShowOriginal: ((AppLanguage) -> Void)? = nil
 
     var body: some View {
         VStack(alignment: .leading, spacing: 24) {
@@ -32,7 +35,8 @@ struct BlockContentView: View {
                 section: section,
                 isFirst: isFirst,
                 accent: accent,
-                onAuthorTap: onAuthorTap
+                onAuthorTap: onAuthorTap,
+                onShowOriginal: onShowOriginal
             )
 
             ForEach(Array(section.blocks.enumerated()), id: \.offset) { _, block in
@@ -50,11 +54,22 @@ struct BlockContentView: View {
                     content: content,
                     onAuthorTap: onAuthorTap,
                     isFollowingAuthor: isFollowingAuthor,
-                    onFollowAuthor: onFollowAuthor
+                    onFollowAuthor: onFollowAuthor,
+                    onShowOriginal: onShowOriginal
                 )
             }
         }
         .frame(maxWidth: .infinity, alignment: .leading)
+    }
+}
+
+/// La langue dans laquelle un cours a été écrit, quand ce n'est pas celle de l'app. Les cours
+/// de la maison sont écrits en français ; un cours de créateur porte la sienne.
+enum CourseOriginal {
+    static func language(of content: CourseContentV2) -> AppLanguage? {
+        let code = content.originalLanguage ?? AppLanguage.french.rawValue
+        guard code != AppLanguage.currentPersisted().rawValue else { return nil }
+        return AppLanguage(rawValue: code)
     }
 }
 
@@ -69,11 +84,18 @@ struct SectionHeaderV2: View {
     let isFirst: Bool
     let accent: Color
     var onAuthorTap: ((CourseAuthor) -> Void)? = nil
+    /// « Voir l'original », sur la mention « Traduit · original en … » d'un cours de créateur.
+    var onShowOriginal: ((AppLanguage) -> Void)? = nil
 
     /// The professor behind the course, when the JSON names one that the bundle knows.
     private var author: CourseAuthor? {
         guard let slug = content.author else { return nil }
         return AuthorStore.author(slug: slug)
+    }
+
+    private var originalAction: (() -> Void)? {
+        guard let original = CourseOriginal.language(of: content), let onShowOriginal else { return nil }
+        return { onShowOriginal(original) }
     }
 
     var body: some View {
@@ -91,7 +113,7 @@ struct SectionHeaderV2: View {
                     }
                 }
                 if let code = content.originalLanguage, code != AppLanguage.currentPersisted().rawValue {
-                    TranslatedFromLine(code: code)
+                    TranslatedFromLine(code: code, onShowOriginal: originalAction)
                 }
             }
         } else {
@@ -167,6 +189,8 @@ struct SectionFooterV2: View {
     /// « Suivre » sur la carte auteur : état et geste, fournis par le lecteur.
     var isFollowingAuthor: ((CourseAuthor) -> Bool)? = nil
     var onFollowAuthor: ((CourseAuthor) -> Void)? = nil
+    /// « Voir l'original » : un lien discret tout en bas du cours.
+    var onShowOriginal: ((AppLanguage) -> Void)? = nil
 
     private var author: CourseAuthor? {
         guard let slug = content.author else { return nil }
@@ -186,6 +210,24 @@ struct SectionFooterV2: View {
             }
             if let sources = content.sources, !sources.isEmpty {
                 SourcesCardV2(sources: sources)
+            }
+            // Tout en bas du cours, discrètement : le texte dans sa langue d'écriture.
+            if let original = CourseOriginal.language(of: content), let onShowOriginal {
+                Button {
+                    onShowOriginal(original)
+                } label: {
+                    HStack(spacing: 6) {
+                        Image(systemName: "globe")
+                            .font(.system(size: 12, weight: .medium))
+                        Text("\(AppLocalizable.string("course.seeOriginal", language: AppLanguage.currentPersisted())) · \(original.displayName)")
+                            .font(DS.sans(.footnote, .medium))
+                            .underline()
+                    }
+                    .foregroundStyle(DS.inkTertiary)
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 6)
+                }
+                .buttonStyle(.plain)
             }
         }
     }

@@ -187,20 +187,70 @@ nonisolated struct DuelBotAnswer: Codable, Sendable, Equatable {
     }
 }
 
-/// Une partie lancée : `duel_start_match()`.
+nonisolated enum DuelRoundKind: String, Codable, Sendable {
+    /// Des questions de toutes les matières.
+    case mixed
+    /// Une matière au choix, parmi trois : le joueur ou son adversaire choisit.
+    case pick
+    /// La dernière manche : des questions rapides, aux chronos courts.
+    case sprint
+}
+
+/// Une matière proposée pour une manche au choix, avec ses cinq questions (et, en duel classé,
+/// les réponses de l'adversaire à ces questions).
+nonisolated struct DuelRoundOption: Codable, Sendable, Equatable {
+    let subject: String
+    let questions: [DuelQuestion]
+    let bot: [DuelBotAnswer]?
+}
+
+/// Une manche : cinq questions. Pour une manche au choix, `picker` dit qui choisit (« me » ou
+/// « opponent ») ; les questions sont alors dans `options` (une liste par matière proposée),
+/// sauf en duel classé quand l'adversaire choisit : sa matière est déjà fixée (`subject`).
+nonisolated struct DuelRoundPlan: Codable, Sendable, Equatable {
+    let number: Int
+    let kind: DuelRoundKind
+    let picker: String?
+    let subject: String?
+    let questions: [DuelQuestion]?
+    let bot: [DuelBotAnswer]?
+    let options: [DuelRoundOption]?
+
+    var isMyPick: Bool { kind == .pick && picker == "me" }
+}
+
+/// Une partie lancée : `duel_start_match_v2()`. Quatre manches de cinq questions.
 nonisolated struct DuelMatch: Codable, Sendable, Equatable {
     let matchId: UUID
     let opponent: DuelOpponent
-    let questions: [DuelQuestion]
+    let rounds: [DuelRoundPlan]
     /// La question décisive, jouée seulement en cas d'égalité après les 20 questions.
     let tiebreak: DuelQuestion
-    /// Une réponse par question, dans l'ordre ; la dernière est celle de la question décisive.
-    let bot: [DuelBotAnswer]
+    /// La réponse de l'adversaire à la question décisive (duel classé).
+    let tiebreakBot: DuelBotAnswer?
     let searchMs: Int
 
+    static let questionsPerRound = 5
+
+    var questionCount: Int { rounds.count * Self.questionsPerRound }
+
+    /// Toutes les questions qui peuvent être posées (pour charger leurs images d'avance).
+    var allQuestions: [DuelQuestion] {
+        var result: [DuelQuestion] = []
+        for round in rounds {
+            result += round.questions ?? []
+            for option in round.options ?? [] {
+                result += option.questions
+            }
+        }
+        result.append(tiebreak)
+        return result
+    }
+
     enum CodingKeys: String, CodingKey {
-        case opponent, questions, tiebreak, bot
+        case opponent, rounds, tiebreak
         case matchId = "match_id"
+        case tiebreakBot = "tiebreak_bot"
         case searchMs = "search_ms"
     }
 }
@@ -324,20 +374,20 @@ nonisolated struct DuelFriendStart: Codable, Sendable, Equatable {
     let matchId: UUID
     let me: DuelOpponent
     let opponent: DuelOpponent
-    let questions: [DuelQuestion]
+    let rounds: [DuelRoundPlan]
     let tiebreak: DuelQuestion
     /// La première question démarre dans tant de millisecondes, pour les deux joueurs.
     let startsInMs: Int
 
     enum CodingKeys: String, CodingKey {
-        case me, opponent, questions, tiebreak
+        case me, opponent, rounds, tiebreak
         case matchId = "match_id"
         case startsInMs = "starts_in_ms"
     }
 
     /// La même partie sous la forme que l'écran de jeu connaît (sans script d'adversaire).
     var match: DuelMatch {
-        DuelMatch(matchId: matchId, opponent: opponent, questions: questions, tiebreak: tiebreak, bot: [], searchMs: 0)
+        DuelMatch(matchId: matchId, opponent: opponent, rounds: rounds, tiebreak: tiebreak, tiebreakBot: nil, searchMs: 0)
     }
 }
 
@@ -367,13 +417,15 @@ nonisolated struct DuelFriendState: Codable, Sendable, Equatable {
     let myPoints: [Bool]
     let opponentPoints: [Bool]
     let tiebreak: Bool
+    /// Les matières retenues pour les manches au choix, par numéro de manche : ["2": "art"].
+    let picks: [String: String]?
     let opponentLeft: Bool
     /// Absent tant que la partie n'est pas finie sur un vainqueur.
     let won: Bool?
     let draw: Bool
 
     enum CodingKeys: String, CodingKey {
-        case finished, index, resolved, tiebreak, won, draw
+        case finished, index, resolved, tiebreak, picks, won, draw
         case matchId = "match_id"
         case questionStartsInMs = "question_starts_in_ms"
         case myScore = "my_score"
