@@ -1412,6 +1412,12 @@ enum AppLocalizable {
         "duel.result.draw": "Égalité",
         "onboardingV2.account.title": "Ton profil",
         "onboardingV2.account.subtitle": "Choisis ton avatar et ton @. C'est avec lui que tes amis te trouveront.",
+        // MARK: Demande de fonctionnalité
+        "settings.featureRequest.title": "Demander une fonctionnalité",
+        "settings.featureRequest.subtitle": "Dis-nous ce que tu aimerais voir dans Sophia",
+        "feedback.category.feature": "Fonctionnalité",
+        "feedback.feature.title": "Ta demande",
+        "feedback.feature.placeholder": "Décris la fonctionnalité que tu aimerais avoir…",
     ]
     // MARK: - English
 
@@ -2700,6 +2706,12 @@ enum AppLocalizable {
         "duel.result.draw": "Draw",
         "onboardingV2.account.title": "Your profile",
         "onboardingV2.account.subtitle": "Pick your avatar and your username. It's how your friends will find you.",
+        // MARK: Demande de fonctionnalité
+        "settings.featureRequest.title": "Request a feature",
+        "settings.featureRequest.subtitle": "Tell us what you'd like to see in Sophia",
+        "feedback.category.feature": "Feature",
+        "feedback.feature.title": "Your request",
+        "feedback.feature.placeholder": "Describe the feature you'd like to have…",
     ]
     // MARK: - Spanish
 
@@ -3989,6 +4001,12 @@ enum AppLocalizable {
         "duel.result.draw": "Empate",
         "onboardingV2.account.title": "Tu perfil",
         "onboardingV2.account.subtitle": "Elige tu avatar y tu @. Con él te encontrarán tus amigos.",
+        // MARK: Demande de fonctionnalité
+        "settings.featureRequest.title": "Pedir una función",
+        "settings.featureRequest.subtitle": "Dinos qué te gustaría ver en Sophia",
+        "feedback.category.feature": "Función",
+        "feedback.feature.title": "Tu petición",
+        "feedback.feature.placeholder": "Describe la función que te gustaría tener…",
     ]
     // MARK: - German
 
@@ -5278,6 +5296,12 @@ enum AppLocalizable {
         "duel.result.draw": "Unentschieden",
         "onboardingV2.account.title": "Dein Profil",
         "onboardingV2.account.subtitle": "Wähle deinen Avatar und deinen @. Damit finden dich deine Freunde.",
+        // MARK: Demande de fonctionnalité
+        "settings.featureRequest.title": "Funktion wünschen",
+        "settings.featureRequest.subtitle": "Sag uns, was du dir in Sophia wünschst",
+        "feedback.category.feature": "Funktion",
+        "feedback.feature.title": "Dein Wunsch",
+        "feedback.feature.placeholder": "Beschreibe die Funktion, die du dir wünschst…",
     ]
     // MARK: - Portuguese (Brazil)
 
@@ -6567,6 +6591,12 @@ enum AppLocalizable {
         "duel.result.draw": "Empate",
         "onboardingV2.account.title": "Seu perfil",
         "onboardingV2.account.subtitle": "Escolha seu avatar e seu @. É com ele que seus amigos vão encontrar você.",
+        // MARK: Demande de fonctionnalité
+        "settings.featureRequest.title": "Pedir um recurso",
+        "settings.featureRequest.subtitle": "Diga o que você gostaria de ver na Sophia",
+        "feedback.category.feature": "Recurso",
+        "feedback.feature.title": "Seu pedido",
+        "feedback.feature.placeholder": "Descreva o recurso que você gostaria de ter…",
     ]
 
     // MARK: - Portuguese (Portugal)
@@ -7857,6 +7887,12 @@ enum AppLocalizable {
         "duel.result.draw": "Empate",
         "onboardingV2.account.title": "O teu perfil",
         "onboardingV2.account.subtitle": "Escolhe o teu avatar e o teu @. É com ele que os teus amigos te vão encontrar.",
+        // MARK: Demande de fonctionnalité
+        "settings.featureRequest.title": "Pedir uma funcionalidade",
+        "settings.featureRequest.subtitle": "Diz-nos o que gostavas de ver na Sophia",
+        "feedback.category.feature": "Funcionalidade",
+        "feedback.feature.title": "O teu pedido",
+        "feedback.feature.placeholder": "Descreve a funcionalidade que gostavas de ter…",
     ]
     // MARK: - Italian
 
@@ -9146,6 +9182,12 @@ enum AppLocalizable {
         "duel.result.draw": "Pareggio",
         "onboardingV2.account.title": "Il tuo profilo",
         "onboardingV2.account.subtitle": "Scegli il tuo avatar e la tua @. È con questa che i tuoi amici ti troveranno.",
+        // MARK: Demande de fonctionnalité
+        "settings.featureRequest.title": "Richiedi una funzione",
+        "settings.featureRequest.subtitle": "Dicci cosa ti piacerebbe vedere su Sophia",
+        "feedback.category.feature": "Funzione",
+        "feedback.feature.title": "La tua richiesta",
+        "feedback.feature.placeholder": "Descrivi la funzione che vorresti avere…",
     ]
     // MARK: - Turkish
 
@@ -10435,6 +10477,12 @@ enum AppLocalizable {
         "duel.result.draw": "Berabere",
         "onboardingV2.account.title": "Profilin",
         "onboardingV2.account.subtitle": "Avatarını ve @ adresini seç. Arkadaşların seni bununla bulacak.",
+        // MARK: Demande de fonctionnalité
+        "settings.featureRequest.title": "Özellik iste",
+        "settings.featureRequest.subtitle": "Sophia'da ne görmek istediğini bize söyle",
+        "feedback.category.feature": "Özellik",
+        "feedback.feature.title": "İsteğin",
+        "feedback.feature.placeholder": "İstediğin özelliği anlat…",
     ]
     // MARK: - Polish
 
@@ -11725,6 +11773,12 @@ enum AppLocalizable {
         "duel.result.draw": "Remis",
         "onboardingV2.account.title": "Twój profil",
         "onboardingV2.account.subtitle": "Wybierz swój awatar i swój @. To dzięki niemu znajdą cię znajomi.",
+        // MARK: Demande de fonctionnalité
+        "settings.featureRequest.title": "Zaproponuj funkcję",
+        "settings.featureRequest.subtitle": "Napisz, co chcesz zobaczyć w Sophii",
+        "feedback.category.feature": "Funkcja",
+        "feedback.feature.title": "Twoja propozycja",
+        "feedback.feature.placeholder": "Opisz funkcję, którą chcesz mieć…",
     ]
     // MARK: - Romanian
 
@@ -13015,6 +13069,12 @@ enum AppLocalizable {
         "duel.result.draw": "Egalitate",
         "onboardingV2.account.title": "Profilul tău",
         "onboardingV2.account.subtitle": "Alege-ți avatarul și @-ul. Cu el te vor găsi prietenii tăi.",
+        // MARK: Demande de fonctionnalité
+        "settings.featureRequest.title": "Cere o funcție",
+        "settings.featureRequest.subtitle": "Spune-ne ce ți-ar plăcea să vezi în Sophia",
+        "feedback.category.feature": "Funcție",
+        "feedback.feature.title": "Cererea ta",
+        "feedback.feature.placeholder": "Descrie funcția pe care ți-ai dori-o…",
     ]
     // MARK: - Dutch
 
@@ -14304,6 +14364,12 @@ enum AppLocalizable {
         "duel.result.draw": "Gelijkspel",
         "onboardingV2.account.title": "Jouw profiel",
         "onboardingV2.account.subtitle": "Kies je avatar en je @. Daarmee kunnen je vrienden je vinden.",
+        // MARK: Demande de fonctionnalité
+        "settings.featureRequest.title": "Vraag een functie aan",
+        "settings.featureRequest.subtitle": "Vertel ons wat je graag in Sophia wilt zien",
+        "feedback.category.feature": "Functie",
+        "feedback.feature.title": "Jouw verzoek",
+        "feedback.feature.placeholder": "Beschrijf de functie die je graag wilt hebben…",
     ]
     // MARK: - Greek
 
@@ -15593,6 +15659,12 @@ enum AppLocalizable {
         "duel.result.draw": "Ισοπαλία",
         "onboardingV2.account.title": "Το προφίλ σου",
         "onboardingV2.account.subtitle": "Διάλεξε το avatar και το @ σου. Με αυτό θα σε βρίσκουν οι φίλοι σου.",
+        // MARK: Demande de fonctionnalité
+        "settings.featureRequest.title": "Αίτημα λειτουργίας",
+        "settings.featureRequest.subtitle": "Πες μας τι θα ήθελες να δεις στη Sophia",
+        "feedback.category.feature": "Λειτουργία",
+        "feedback.feature.title": "Το αίτημά σου",
+        "feedback.feature.placeholder": "Περίγραψε τη λειτουργία που θα ήθελες…",
     ]
     // MARK: - Swedish
 
@@ -16882,6 +16954,12 @@ enum AppLocalizable {
         "duel.result.draw": "Oavgjort",
         "onboardingV2.account.title": "Din profil",
         "onboardingV2.account.subtitle": "Välj din avatar och ditt @. Det är så dina vänner hittar dig.",
+        // MARK: Demande de fonctionnalité
+        "settings.featureRequest.title": "Önska en funktion",
+        "settings.featureRequest.subtitle": "Berätta vad du vill se i Sophia",
+        "feedback.category.feature": "Funktion",
+        "feedback.feature.title": "Ditt önskemål",
+        "feedback.feature.placeholder": "Beskriv funktionen du skulle vilja ha…",
     ]
     // MARK: - Hungarian
 
@@ -18171,6 +18249,12 @@ enum AppLocalizable {
         "duel.result.draw": "Döntetlen",
         "onboardingV2.account.title": "A profilod",
         "onboardingV2.account.subtitle": "Válassz avatart és @-nevet. A barátaid ez alapján találnak majd meg.",
+        // MARK: Demande de fonctionnalité
+        "settings.featureRequest.title": "Funkció kérése",
+        "settings.featureRequest.subtitle": "Mondd el, mit látnál szívesen a Sophiában",
+        "feedback.category.feature": "Funkció",
+        "feedback.feature.title": "A kérésed",
+        "feedback.feature.placeholder": "Írd le, milyen funkciót szeretnél…",
     ]
     // MARK: - Bulgarian
 
@@ -19460,6 +19544,12 @@ enum AppLocalizable {
         "duel.result.draw": "Равенство",
         "onboardingV2.account.title": "Твоят профил",
         "onboardingV2.account.subtitle": "Избери своя аватар и своя @. С него приятелите ти ще те намират.",
+        // MARK: Demande de fonctionnalité
+        "settings.featureRequest.title": "Поискай функция",
+        "settings.featureRequest.subtitle": "Кажи ни какво искаш да видиш в Sophia",
+        "feedback.category.feature": "Функция",
+        "feedback.feature.title": "Твоята заявка",
+        "feedback.feature.placeholder": "Опиши функцията, която искаш да имаш…",
     ]
     // MARK: - Czech
 
@@ -20750,6 +20840,12 @@ enum AppLocalizable {
         "duel.result.draw": "Remíza",
         "onboardingV2.account.title": "Tvůj profil",
         "onboardingV2.account.subtitle": "Vyber si avatar a své @. Díky němu tě kamarádi najdou.",
+        // MARK: Demande de fonctionnalité
+        "settings.featureRequest.title": "Požádat o funkci",
+        "settings.featureRequest.subtitle": "Napiš nám, co chceš v Sophii vidět",
+        "feedback.category.feature": "Funkce",
+        "feedback.feature.title": "Tvůj požadavek",
+        "feedback.feature.placeholder": "Popiš funkci, kterou chceš mít…",
     ]
 
     // MARK: - Danish
@@ -22040,6 +22136,12 @@ enum AppLocalizable {
         "duel.result.draw": "Uafgjort",
         "onboardingV2.account.title": "Din profil",
         "onboardingV2.account.subtitle": "Vælg din avatar og dit @. Sådan finder dine venner dig.",
+        // MARK: Demande de fonctionnalité
+        "settings.featureRequest.title": "Ønsk en funktion",
+        "settings.featureRequest.subtitle": "Fortæl os, hvad du gerne vil se i Sophia",
+        "feedback.category.feature": "Funktion",
+        "feedback.feature.title": "Dit ønske",
+        "feedback.feature.placeholder": "Beskriv den funktion, du gerne vil have…",
     ]
 
     // MARK: - Norwegian
@@ -23330,6 +23432,12 @@ enum AppLocalizable {
         "duel.result.draw": "Uavgjort",
         "onboardingV2.account.title": "Profilen din",
         "onboardingV2.account.subtitle": "Velg avataren og @-en din. Slik finner vennene dine deg.",
+        // MARK: Demande de fonctionnalité
+        "settings.featureRequest.title": "Ønsk deg en funksjon",
+        "settings.featureRequest.subtitle": "Fortell oss hva du vil se i Sophia",
+        "feedback.category.feature": "Funksjon",
+        "feedback.feature.title": "Ønsket ditt",
+        "feedback.feature.placeholder": "Beskriv funksjonen du ønsker deg…",
     ]
 
     // MARK: - Russian
@@ -24621,6 +24729,12 @@ enum AppLocalizable {
         "duel.result.draw": "Ничья",
         "onboardingV2.account.title": "Твой профиль",
         "onboardingV2.account.subtitle": "Выбери аватар и свой @. По нему друзья смогут тебя найти.",
+        // MARK: Demande de fonctionnalité
+        "settings.featureRequest.title": "Запросить функцию",
+        "settings.featureRequest.subtitle": "Расскажи, что ты хочешь видеть в Sophia",
+        "feedback.category.feature": "Функция",
+        "feedback.feature.title": "Твой запрос",
+        "feedback.feature.placeholder": "Опиши функцию, которую хочешь видеть…",
     ]
 
     // MARK: - Croatian
@@ -25912,6 +26026,12 @@ enum AppLocalizable {
         "duel.result.draw": "Neriješeno",
         "onboardingV2.account.title": "Tvoj profil",
         "onboardingV2.account.subtitle": "Odaberi svoj avatar i svoj @. Po njemu će te prijatelji pronaći.",
+        // MARK: Demande de fonctionnalité
+        "settings.featureRequest.title": "Zatraži značajku",
+        "settings.featureRequest.subtitle": "Reci nam što želiš vidjeti u Sophiji",
+        "feedback.category.feature": "Značajka",
+        "feedback.feature.title": "Tvoj zahtjev",
+        "feedback.feature.placeholder": "Opiši značajku koju želiš imati…",
     ]
 
     // MARK: - Slovenian
@@ -27204,6 +27324,12 @@ enum AppLocalizable {
         "duel.result.draw": "Neodločeno",
         "onboardingV2.account.title": "Tvoj profil",
         "onboardingV2.account.subtitle": "Izberi svoj avatar in svoj @. Po njem te bodo prijatelji našli.",
+        // MARK: Demande de fonctionnalité
+        "settings.featureRequest.title": "Predlagaj funkcijo",
+        "settings.featureRequest.subtitle": "Povej nam, kaj želiš videti v Sophii",
+        "feedback.category.feature": "Funkcija",
+        "feedback.feature.title": "Tvoj predlog",
+        "feedback.feature.placeholder": "Opiši funkcijo, ki jo želiš imeti…",
     ]
 
     // MARK: - Slovak
@@ -28495,6 +28621,12 @@ enum AppLocalizable {
         "duel.result.draw": "Remíza",
         "onboardingV2.account.title": "Tvoj profil",
         "onboardingV2.account.subtitle": "Vyber si avatar a svoj @. Podľa neho ťa priatelia nájdu.",
+        // MARK: Demande de fonctionnalité
+        "settings.featureRequest.title": "Požiadať o funkciu",
+        "settings.featureRequest.subtitle": "Napíš nám, čo chceš v Sophii vidieť",
+        "feedback.category.feature": "Funkcia",
+        "feedback.feature.title": "Tvoja požiadavka",
+        "feedback.feature.placeholder": "Popíš funkciu, ktorú chceš mať…",
     ]
 
     // MARK: - Serbian
@@ -29786,6 +29918,12 @@ enum AppLocalizable {
         "duel.result.draw": "Nerešeno",
         "onboardingV2.account.title": "Tvoj profil",
         "onboardingV2.account.subtitle": "Izaberi svoj avatar i svoj @. Po njemu će te prijatelji pronaći.",
+        // MARK: Demande de fonctionnalité
+        "settings.featureRequest.title": "Zatraži funkciju",
+        "settings.featureRequest.subtitle": "Reci nam šta želiš da vidiš u Sophiji",
+        "feedback.category.feature": "Funkcija",
+        "feedback.feature.title": "Tvoj zahtev",
+        "feedback.feature.placeholder": "Opiši funkciju koju želiš da imaš…",
     ]
 
     // MARK: - Arabic
@@ -31078,6 +31216,12 @@ enum AppLocalizable {
         "duel.result.draw": "تعادل",
         "onboardingV2.account.title": "ملفك الشخصي",
         "onboardingV2.account.subtitle": "اختر صورتك الرمزية و@ الخاص بك. من خلاله سيجدك أصدقاؤك.",
+        // MARK: Demande de fonctionnalité
+        "settings.featureRequest.title": "طلب ميزة",
+        "settings.featureRequest.subtitle": "أخبرنا بما تود رؤيته في Sophia",
+        "feedback.category.feature": "ميزة",
+        "feedback.feature.title": "طلبك",
+        "feedback.feature.placeholder": "صف الميزة التي تود الحصول عليها…",
     ]
 
     // MARK: - Hebrew
@@ -32369,6 +32513,12 @@ enum AppLocalizable {
         "duel.result.draw": "תיקו",
         "onboardingV2.account.title": "הפרופיל שלך",
         "onboardingV2.account.subtitle": "בחר אווטאר ואת ה-@ שלך. כך החברים שלך ימצאו אותך.",
+        // MARK: Demande de fonctionnalité
+        "settings.featureRequest.title": "בקש תכונה",
+        "settings.featureRequest.subtitle": "ספר לנו מה היית רוצה לראות ב-Sophia",
+        "feedback.category.feature": "תכונה",
+        "feedback.feature.title": "הבקשה שלך",
+        "feedback.feature.placeholder": "תאר את התכונה שהיית רוצה לקבל...",
     ]
 
     // MARK: - Finnish
@@ -33659,6 +33809,12 @@ enum AppLocalizable {
         "duel.result.draw": "Tasapeli",
         "onboardingV2.account.title": "Profiilisi",
         "onboardingV2.account.subtitle": "Valitse avatarisi ja @-tunnuksesi. Sen avulla kaverisi löytävät sinut.",
+        // MARK: Demande de fonctionnalité
+        "settings.featureRequest.title": "Toivo ominaisuutta",
+        "settings.featureRequest.subtitle": "Kerro, mitä haluaisit nähdä Sophiassa",
+        "feedback.category.feature": "Ominaisuus",
+        "feedback.feature.title": "Toiveesi",
+        "feedback.feature.placeholder": "Kuvaile ominaisuutta, jonka haluaisit…",
     ]
 
     // MARK: - Estonian
@@ -34949,6 +35105,12 @@ enum AppLocalizable {
         "duel.result.draw": "Viik",
         "onboardingV2.account.title": "Sinu profiil",
         "onboardingV2.account.subtitle": "Vali oma avatar ja @. Selle järgi leiavad sõbrad su üles.",
+        // MARK: Demande de fonctionnalité
+        "settings.featureRequest.title": "Soovi funktsiooni",
+        "settings.featureRequest.subtitle": "Kirjuta, mida tahaksid Sophias näha",
+        "feedback.category.feature": "Funktsioon",
+        "feedback.feature.title": "Sinu soov",
+        "feedback.feature.placeholder": "Kirjelda funktsiooni, mida sooviksid…",
     ]
 
     // MARK: - lithuanian (copie du français, à post-éditer)
@@ -36239,6 +36401,12 @@ enum AppLocalizable {
         "duel.result.draw": "Lygiosios",
         "onboardingV2.account.title": "Tavo profilis",
         "onboardingV2.account.subtitle": "Pasirink avatarą ir savo @. Pagal jį draugai tave ras.",
+        // MARK: Demande de fonctionnalité
+        "settings.featureRequest.title": "Paprašyti funkcijos",
+        "settings.featureRequest.subtitle": "Pasakyk, ką norėtum matyti Sophia programėlėje",
+        "feedback.category.feature": "Funkcija",
+        "feedback.feature.title": "Tavo prašymas",
+        "feedback.feature.placeholder": "Aprašyk funkciją, kurios norėtum…",
     ]
 
     // MARK: - latvian (copie du français, à post-éditer)
@@ -37530,6 +37698,12 @@ enum AppLocalizable {
         "duel.result.draw": "Neizšķirts",
         "onboardingV2.account.title": "Tavs profils",
         "onboardingV2.account.subtitle": "Izvēlies savu avataru un @. Pēc tā draugi tevi atradīs.",
+        // MARK: Demande de fonctionnalité
+        "settings.featureRequest.title": "Pieprasīt funkciju",
+        "settings.featureRequest.subtitle": "Pastāsti, ko vēlies redzēt lietotnē Sophia",
+        "feedback.category.feature": "Funkcija",
+        "feedback.feature.title": "Tavs pieprasījums",
+        "feedback.feature.placeholder": "Apraksti funkciju, ko vēlies…",
     ]
 
     // MARK: - japanese (copie du français, à post-éditer)
@@ -38819,5 +38993,11 @@ enum AppLocalizable {
         "duel.result.draw": "引き分け",
         "onboardingV2.account.title": "あなたのプロフィール",
         "onboardingV2.account.subtitle": "アバターと@を決めましょう。友だちはこの@であなたを見つけます。",
+        // MARK: Demande de fonctionnalité
+        "settings.featureRequest.title": "機能の要望を送る",
+        "settings.featureRequest.subtitle": "Sophiaにほしい機能を教えてください",
+        "feedback.category.feature": "機能",
+        "feedback.feature.title": "ご要望",
+        "feedback.feature.placeholder": "ほしい機能について書いてください…",
     ]
 }
