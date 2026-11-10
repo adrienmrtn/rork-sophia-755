@@ -683,6 +683,50 @@ class ProgressManager {
         save()
     }
 
+    // MARK: - Badges
+
+    /// Enregistre les badges dont la cible vient d'être atteinte (avec la date du jour) et rend
+    /// ceux qui sont nouveaux. À appeler quand le profil ou la page des badges s'affiche.
+    @discardableResult
+    func refreshBadges() -> [Badge] {
+        let stats = BadgeStats(progressManager: self)
+        let reached = (BadgeCatalog.permanent + BadgeCatalog.leagues + BadgeCatalog.events)
+            .filter { progress.earnedBadges[$0.id] == nil && stats.isReached($0) }
+        guard !reached.isEmpty else { return [] }
+        let now = Self.isoFormatter.string(from: Date())
+        for badge in reached { progress.earnedBadges[badge.id] = now }
+        save()
+        return reached
+    }
+
+    func isBadgeEarned(_ id: String) -> Bool { progress.earnedBadges[id] != nil }
+
+    func badgeEarnedDate(_ id: String) -> Date? {
+        progress.earnedBadges[id].flatMap { Self.isoFormatter.date(from: $0) }
+    }
+
+    static let maxFeaturedBadges = 3
+
+    /// Les badges affichés sur le profil : ceux choisis qui sont toujours gagnés.
+    var featuredBadgeIds: [String] {
+        progress.featuredBadgeIds.filter { progress.earnedBadges[$0] != nil }
+    }
+
+    /// Ajoute ou retire un badge du profil. Faux quand il y en a déjà trois (rien n'est changé).
+    @discardableResult
+    func toggleFeaturedBadge(_ id: String) -> Bool {
+        var featured = featuredBadgeIds
+        if let index = featured.firstIndex(of: id) {
+            featured.remove(at: index)
+        } else {
+            guard progress.earnedBadges[id] != nil, featured.count < Self.maxFeaturedBadges else { return false }
+            featured.append(id)
+        }
+        progress.featuredBadgeIds = featured
+        save()
+        return true
+    }
+
     var readingSeconds: Int { progress.readingSeconds }
 
     var avatarId: String? { progress.avatarId }

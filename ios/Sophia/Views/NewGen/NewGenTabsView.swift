@@ -315,7 +315,7 @@ struct NewGenTabsView: View {
     }
 
     private func openCreatorStudio() {
-        guard let url = AppConfig.creatorStudioURL(language: languageManager.current) else { return }
+        guard let url = AppConfig.creatorStudioURL else { return }
         openURL(url)
     }
 }

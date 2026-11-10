@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { CREATORS_HUB_URL } from "@/lib/legal/texts";
 import Link from "next/link";
 import { createClient } from "@/lib/supabase/server";
 import { t } from "@/lib/copy/en";
@@ -79,7 +80,7 @@ export function SiteFooter({ compact = false }: { compact?: boolean }) {
           <nav className="flex flex-wrap gap-x-[18px] text-[13px] font-semibold">
             <Link href="/about">{t.footer.about}</Link>
             <Link href="/legal/privacy">{t.footer.privacy}</Link>
-            <Link href="/legal/terms">{t.footer.terms}</Link>
+            <Link href="/legal/notice">{t.footer.notice}</Link>
             <Link href="/write">{t.footer.writeForSophia}</Link>
           </nav>
         </div>
@@ -114,7 +115,7 @@ export function SiteFooter({ compact = false }: { compact?: boolean }) {
           {col(t.footer.create, [
             [t.footer.writeForSophia, "/write"],
             [t.footer.guide, "/write#guide"],
-            [t.footer.hub, "https://sophia-culture.com/creators"],
+            [t.footer.hub, CREATORS_HUB_URL],
             [t.footer.signIn, "/join"],
           ])}
           {col(t.footer.sophia, [
@@ -124,7 +125,7 @@ export function SiteFooter({ compact = false }: { compact?: boolean }) {
           ])}
           {col(t.footer.legal, [
             [t.footer.privacy, "/legal/privacy"],
-            [t.footer.terms, "/legal/terms"],
+            [t.footer.notice, "/legal/notice"],
             [t.footer.agreement, "/legal/creator-agreement"],
           ])}
         </div>

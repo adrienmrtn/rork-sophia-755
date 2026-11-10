@@ -30,7 +30,6 @@ export const en = {
     contact: "Contact",
     legal: "Legal",
     privacy: "Privacy",
-    terms: "Terms of use",
     agreement: "Creator agreement",
     notice: "Legal notice",
     copyright: "© 2026 Sophia · sophia-culture.com",

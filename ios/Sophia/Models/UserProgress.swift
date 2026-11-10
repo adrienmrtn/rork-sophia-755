@@ -214,6 +214,11 @@ nonisolated struct UserProgress: Codable, Sendable {
     /// L'avatar illustré choisi dans le profil (`avatar_01` … `avatar_20`, voir `Avatars`), ou nil
     /// pour les initiales. Synchronisé avec la progression.
     var avatarId: String?
+    /// Badges obtenus : identifiant (`Badge.id`) → date ISO où l'app l'a constaté. Un badge gagné
+    /// reste, même si la série casse ensuite.
+    var earnedBadges: [String: String] = [:]
+    /// Les badges (trois au plus) que le lecteur affiche sur son profil, visibles de ses amis.
+    var featuredBadgeIds: [String] = []
 
     static let empty = UserProgress(courseProgress: [:], streak: 0, lastActiveDate: nil, favoriteCourseIds: [], freeCoursesOpened: 0, hasSeenSwipeTutorial: false, hasSeenSpecialOffer: false, lastCourseCompletedDate: nil, lastStreakShownDate: nil, subjectXP: [:], globalXP: 0, globalCourseXPAwardedIds: [], globalQuizXPAwardedIds: [], globalCollectionXPAwardedIds: [], completedQuizCourseIds: [], pendingGlobalRankUp: nil, trainingQuestionStates: [:])
 
@@ -255,6 +260,7 @@ nonisolated struct UserProgress: Codable, Sendable {
         case xpUnlockedCourseIds, spentGlobalXP
         case pathLevelResults
         case likedCourseIds, followedCreatorSlugs, readingSeconds, avatarId
+        case earnedBadges, featuredBadgeIds
     }
 
     init(from decoder: Decoder) throws {
@@ -285,6 +291,8 @@ nonisolated struct UserProgress: Codable, Sendable {
         self.followedCreatorSlugs = try c.decodeIfPresent([String].self, forKey: .followedCreatorSlugs) ?? []
         self.readingSeconds = try c.decodeIfPresent(Int.self, forKey: .readingSeconds) ?? 0
         self.avatarId = try c.decodeIfPresent(String.self, forKey: .avatarId)
+        self.earnedBadges = try c.decodeIfPresent([String: String].self, forKey: .earnedBadges) ?? [:]
+        self.featuredBadgeIds = try c.decodeIfPresent([String].self, forKey: .featuredBadgeIds) ?? []
     }
 }
 

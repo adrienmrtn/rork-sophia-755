@@ -229,6 +229,9 @@ nonisolated struct DuelMatch: Codable, Sendable, Equatable {
     /// La réponse de l'adversaire à la question décisive (duel classé).
     let tiebreakBot: DuelBotAnswer?
     let searchMs: Int
+    /// Très rarement, l'adversaire se déconnecte après cette question (1 = la première) : la
+    /// partie s'arrête là et le joueur gagne par déconnexion. Décidé par le serveur ; nil sinon.
+    var opponentLeavesAfter: Int? = nil
 
     static let questionsPerRound = 5
 
@@ -252,6 +255,7 @@ nonisolated struct DuelMatch: Codable, Sendable, Equatable {
         case matchId = "match_id"
         case tiebreakBot = "tiebreak_bot"
         case searchMs = "search_ms"
+        case opponentLeavesAfter = "opponent_leaves_after"
     }
 }
 
@@ -461,9 +465,16 @@ nonisolated struct FriendProfile: Codable, Sendable, Equatable {
     let friendlyPlayed: Int
     let friendlyWon: Int
     let friendlyLost: Int
+    /// Secondes depuis sa dernière présence dans l'app, au moment de la lecture du profil ;
+    /// nil s'il n'a jamais été vu, ou si le serveur ne le donne pas encore.
+    var lastSeenSeconds: Int? = nil
+    /// Les badges (trois au plus) qu'il affiche sur son profil ; nil si le serveur ne les donne pas.
+    var featuredBadges: [String]? = nil
 
     enum CodingKeys: String, CodingKey {
         case handle, streak, trophies, follows, online
+        case lastSeenSeconds = "last_seen_seconds"
+        case featuredBadges = "featured_badges"
         case userId = "user_id"
         case avatarId = "avatar_id"
         case globalXP = "global_xp"

@@ -5,20 +5,16 @@ enum AppConfig {
     static let EXPO_PUBLIC_REVENUECAT_TEST_API_KEY: String = "test_LaMUBJriSlDtBOIRKsZjkPgKbUB"
     static let FORMSPREE_ENDPOINT: String = "https://formspree.io/f/xwvdybwb"
     static let FORMSPREE_AMBASSADOR_ENDPOINT: String = "https://formspree.io/f/xpqvqnwb"
-    /// Page d'un rôle du programme créateurs (`ugc` ou `slideshow`), ouverte depuis la
-    /// bannière « Deviens ambassadeur » des Réglages. Le site n'existe qu'en français et en
-    /// anglais : l'anglais pour toutes les autres langues.
-    static func creatorsURL(role: String, language: AppLanguage) -> URL? {
-        language == .french
-            ? URL(string: "https://sophia-culture.com/fr/createurs/\(role)")
-            : URL(string: "https://sophia-culture.com/en/creators/\(role)")
+    /// Page d'un rôle du programme créateurs vidéo (`ugc` ou `slideshow`), ouverte depuis la
+    /// bannière « Deviens ambassadeur » des Réglages. Le Hub des créateurs a son propre domaine
+    /// (équipe de Maximilien) ; anglais seulement, sans préfixe de langue.
+    static func creatorsURL(role: String) -> URL? {
+        URL(string: "https://vik-studios-creators.com/creators/\(role)")
     }
 
-    /// Le Studio des créateurs de cours sur le site (prompt 5). Français et anglais seulement.
-    static func creatorStudioURL(language: AppLanguage) -> URL? {
-        language == .french
-            ? URL(string: "https://sophia-culture.com/fr/auteurs")
-            : URL(string: "https://sophia-culture.com/en/auteurs")
+    /// La page « Write for Sophia » du site, porte d'entrée du Studio des auteurs. Anglais seulement.
+    static var creatorStudioURL: URL? {
+        URL(string: "https://sophia-culture.com/write")
     }
 
     // MARK: - Supabase (auth + sync)

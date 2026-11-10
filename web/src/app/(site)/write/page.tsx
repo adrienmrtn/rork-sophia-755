@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { CREATORS_HUB_URL } from "@/lib/legal/texts";
 import type { Metadata } from "next";
 import { SiteHeader } from "@/components/SiteChrome";
 import { ArrowIcon, ButtonLink, CheckIcon, Eyebrow, container } from "@/components/ui";
@@ -100,7 +101,7 @@ export default function WritePage() {
             <p className="text-[16px] leading-[1.55] text-ink-3">{w.whoLead}</p>
             <p className="text-[16px] leading-[1.55] text-ink-3">
               {w.whoVideo}{" "}
-              <a href="https://sophia-culture.com/creators" className="font-bold text-blue">
+              <a href={CREATORS_HUB_URL} className="font-bold text-blue">
                 {w.hubLink}
               </a>
               .

@@ -50,6 +50,9 @@ export type CampaignUpcoming = { title: Localized; creator: string | null; date:
 /** Une image générée pour l'événement : direction « couvertures » (Gemini) ou « affiche » du site (Recraft). */
 export type ImageCandidate = { url: string; style: "cover" | "poster"; created_at: string };
 
+/** Une illustration de badge générée (Recraft, papier découpé). */
+export type BadgeCandidate = { url: string; created_at: string };
+
 export type Campaign = {
   slug: string;
   kind: CampaignKind;
@@ -59,6 +62,10 @@ export type Campaign = {
   image_url: string | null;
   /** Les images générées, les plus récentes en premier ; l'équipe en choisit une. */
   image_candidates: ImageCandidate[];
+  /** L'illustration du badge (carrée, papier découpé) ; null : les apps montrent le symbole. */
+  badge_image_url: string | null;
+  /** Les illustrations de badge générées, les plus récentes en premier ; l'équipe en choisit une. */
+  badge_candidates: BadgeCandidate[];
   /** Pays où l'événement est montré (ISO 3166-1 alpha-2, la région du téléphone) ; null : partout. */
   countries: string[] | null;
   starts_at: string;
@@ -109,7 +116,7 @@ export function symbolLabel(symbol: string): string {
 }
 
 export function emptyCampaign(): Campaign {
-  return { slug: "", kind: "month", status: "draft", symbol: "sparkles", image_url: null, image_candidates: [], countries: null, starts_at: "", ends_at: "", challenge_target: 3, participants: 0, goal_target: null, goal_count: 0, course_ids: [], upcoming: [], title: {}, tagline: {}, description: {}, badge_name: {} };
+  return { slug: "", kind: "month", status: "draft", symbol: "sparkles", image_url: null, image_candidates: [], badge_image_url: null, badge_candidates: [], countries: null, starts_at: "", ends_at: "", challenge_target: 3, participants: 0, goal_target: null, goal_count: 0, course_ids: [], upcoming: [], title: {}, tagline: {}, description: {}, badge_name: {} };
 }
 
 /** Une ligne de la table, telle que Supabase la renvoie, remise dans le type. */
@@ -132,6 +139,13 @@ export function campaignFromRow(row: Record<string, unknown>): Campaign {
           .map((c) => (c && typeof c === "object" ? (c as Record<string, unknown>) : {}))
           .filter((c) => typeof c.url === "string" && /^https:\/\//.test(c.url))
           .map((c) => ({ url: c.url as string, style: c.style === "poster" ? ("poster" as const) : ("cover" as const), created_at: typeof c.created_at === "string" ? c.created_at : "" }))
+      : [],
+    badge_image_url: typeof row.badge_image_url === "string" && /^https:\/\//.test(row.badge_image_url) ? row.badge_image_url : null,
+    badge_candidates: Array.isArray(row.badge_candidates)
+      ? (row.badge_candidates as unknown[])
+          .map((c) => (c && typeof c === "object" ? (c as Record<string, unknown>) : {}))
+          .filter((c) => typeof c.url === "string" && /^https:\/\//.test(c.url))
+          .map((c) => ({ url: c.url as string, created_at: typeof c.created_at === "string" ? c.created_at : "" }))
       : [],
     countries: Array.isArray(row.countries) && row.countries.length > 0 ? (row.countries as unknown[]).map(String).filter((c) => /^[A-Z]{2}$/.test(c)) : null,
     starts_at: String(row.starts_at ?? "").slice(0, 10),

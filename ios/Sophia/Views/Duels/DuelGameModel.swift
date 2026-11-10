@@ -29,6 +29,8 @@ nonisolated struct DuelSummary: Sendable, Equatable {
     /// Duel entre amis : aucun trophée en jeu, et une égalité parfaite est possible.
     var friendly = false
     var draw = false
+    /// L'adversaire s'est déconnecté en cours de partie : victoire par déconnexion.
+    var forfeit = false
     /// La matière que le joueur a choisie pour sa manche (duel classé : le serveur en a besoin
     /// pour recompter le score).
     var pick: String? = nil
@@ -111,6 +113,8 @@ final class DuelGameModel {
     private(set) var isDraw = false
     /// L'ami a quitté la partie : on la finit seul.
     private(set) var opponentLeft = false
+    /// Duel classé : l'adversaire s'est déconnecté, la partie s'arrête sur une victoire.
+    private(set) var opponentForfeited = false
 
     /// Le dernier état reçu du serveur, et l'instant de sa réception.
     @ObservationIgnored private var liveState: DuelFriendState?
@@ -201,6 +205,7 @@ final class DuelGameModel {
             answers: answers,
             friendly: live != nil,
             draw: isDraw,
+            forfeit: opponentForfeited,
             pick: myPick
         )
     }
@@ -293,6 +298,12 @@ final class DuelGameModel {
             let count = preloaded ? playedQuestions.count : resolve(plan).count
             for k in 0..<count {
                 guard await play(first + k) else { return }
+                // L'adversaire se déconnecte après cette question (rare, décidé par le serveur) :
+                // le temps de lire l'annonce, puis la victoire.
+                if let leavesAfter = match.opponentLeavesAfter, first + k + 1 == leavesAfter {
+                    await forfeitByOpponent()
+                    return
+                }
             }
         }
         if playerScore == opponentScore {
@@ -306,6 +317,16 @@ final class DuelGameModel {
         } else {
             playerWon = playerScore > opponentScore
         }
+        phase = .finished
+    }
+
+    /// L'adversaire a quitté la partie : la ligne d'état le dit, puis l'écran de résultat.
+    private func forfeitByOpponent() async {
+        // La dernière question reste à l'écran, dévoilée : seule la ligne d'état change.
+        withAnimation(.easeInOut(duration: 0.3)) { opponentForfeited = true }
+        DuelHaptics.suddenDeath()
+        playerWon = true
+        guard await pause(2.8) else { return }
         phase = .finished
     }
 
