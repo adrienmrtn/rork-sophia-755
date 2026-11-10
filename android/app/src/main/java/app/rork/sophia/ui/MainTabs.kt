@@ -18,6 +18,7 @@ import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AutoStories
 import androidx.compose.material.icons.filled.Autorenew
+import androidx.compose.material.icons.filled.EmojiEvents
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.RestartAlt
@@ -71,6 +72,9 @@ import app.rork.sophia.ui.components.ConfirmDialog
 import app.rork.sophia.ui.components.PostCompletionRewardFlow
 import app.rork.sophia.ui.components.TrialEndingMiniBanner
 import app.rork.sophia.ui.course.CourseScreen
+import app.rork.sophia.ui.duels.DUELS_TAB_INDEX
+import app.rork.sophia.ui.duels.DuelFlow
+import app.rork.sophia.ui.duels.DuelsTabHost
 import app.rork.sophia.ui.home.DiscountGiftOverlay
 import app.rork.sophia.ui.home.DiscountSideTab
 import app.rork.sophia.ui.home.HomeTikTokScreen
@@ -133,6 +137,14 @@ fun MainTabs(
     // Variante de navigation (A/B « nouvelle génération »), lue une fois : un changement dans
     // les réglages de debug vaut au prochain lancement, pas sous les doigts de l'utilisateur.
     val newNavigation = remember { FeatureFlags.newNavigation(context) }
+    // L'onglet Duels n'existe qu'en anglais pour l'instant (la langue des questions). Lu une
+    // fois, comme la variante de navigation : changer de langue dans les réglages ne fait pas
+    // apparaître ou disparaître un onglet sous l'écran ouvert, il suit au prochain lancement.
+    val showsDuels = remember { FeatureFlags.duelsVisible(language) }
+    // Une partie de duel (recherche d'adversaire, partie, résultat), en plein écran par-dessus
+    // les onglets. Tenue ici et non dans l'onglet : un cours ouvert par un lien démonte les
+    // onglets, la partie en cours ne doit pas se fermer avec eux.
+    var showDuelFlow by remember { mutableStateOf(false) }
     // Nouvelle navigation : une pile d'écrans poussés par onglet (fiche, créateur, événement…).
     val routeStacks = remember { List(NEWGEN_TAB_COUNT) { mutableStateListOf<NewGenRoute>() } }
     val currentRoutes = if (newNavigation) routeStacks.getOrNull(selectedTab) else null
@@ -350,6 +362,10 @@ fun MainTabs(
     ) {
         currentRoutes?.let { if (it.isNotEmpty()) it.removeAt(it.lastIndex) }
     }
+    // Pendant une partie de duel, le retour revient à la partie elle-même (`DuelFlow` demande
+    // confirmation avant d'abandonner ; son gestionnaire, composé plus tard, passe avant
+    // celui-ci). Ce garde-fou évite seulement que le retour change d'onglet sous la partie.
+    BackHandler(enabled = showDuelFlow && paywall == null && rewardSteps == null) {}
     // Registered last, so it takes precedence: the author page sits above the reader.
     BackHandler(enabled = selectedAuthorSlug != null) {
         selectedAuthorSlug = null
@@ -358,6 +374,11 @@ fun MainTabs(
     BackHandler(enabled = showAudioPlayer && paywall == null && rewardSteps == null) {
         showAudioPlayer = false
     }
+
+    // Un écran est dessiné par-dessus les onglets : le Parcours attend pour rejouer ses
+    // changements, et l'onglet Duels n'est plus « à l'écran » (ni rechargement ni retour).
+    val tabsCovered = pathQuiz != null || rewardSteps != null || paywall != null ||
+        overlay != null || showAudioPlayer
 
     Box(modifier = Modifier.fillMaxSize()) {
         if (selectedCourse != null) {
@@ -414,8 +435,10 @@ fun MainTabs(
                     selectedTab = selectedTab,
                     onSelectTab = { selectedTab = it },
                     routeStacks = routeStacks,
-                    pathCovered = pathQuiz != null || rewardSteps != null || paywall != null ||
-                        overlay != null || showAudioPlayer,
+                    pathCovered = tabsCovered,
+                    showsDuels = showsDuels,
+                    duelFlowShown = showDuelFlow,
+                    onPlayDuel = { showDuelFlow = true },
                     onOpenCourse = { course, source -> openCourse(course.toStub(), source) },
                     onOpenCourseById = { id, source -> openCourseById(id, source) },
                     onOpenSettings = { overlay = OverlayScreen.Settings },
@@ -436,14 +459,20 @@ fun MainTabs(
             } else {
     // Autorenew is the Material twin of the iOS `arrow.triangle.2.circlepath`; RestartAlt
         // read as "reset", and it is also the icon of the reset rows in settings.
-        val tabs = listOf(
-            Triple("tab.home", Icons.Filled.Home, 0),
-            Triple("tab.library", Icons.Filled.AutoStories, 1),
+        val tabs = buildList {
+            add(Triple("tab.home", Icons.Filled.Home, 0))
+            add(Triple("tab.library", Icons.Filled.AutoStories, 1))
             // The path took the collections' slot, as on iOS.
-            Triple("tab.path", Icons.Filled.Route, 2),
-            Triple("tab.training", Icons.Filled.Autorenew, 3),
-            Triple("tab.profile", Icons.Filled.Person, 4),
-        )
+            add(Triple("tab.path", Icons.Filled.Route, 2))
+            add(Triple("tab.training", Icons.Filled.Autorenew, 3))
+            // Dessiné avant le Profil mais avec son propre index (5, comme sur iOS) : les
+            // onglets existants gardent leurs numéros.
+            if (showsDuels) add(Triple("tab.duels", Icons.Filled.EmojiEvents, DUELS_TAB_INDEX))
+            add(Triple("tab.profile", Icons.Filled.Person, 4))
+        }
+        // Six onglets sur un téléphone de 360 dp : environ 53 dp par libellé. En 10 sp
+        // (la taille de la barre à six onglets d'iOS) « Practice » tient sans être coupé.
+        val tabLabelSize = if (tabs.size > 5) 10.sp else 11.sp
 
             Scaffold(
                 containerColor = DS.canvas,
@@ -464,7 +493,7 @@ fun MainTabs(
                                     Text(
                                         text = StringStore.text(context, key, language),
                                         fontFamily = PlusJakartaSans,
-                                        fontSize = 11.sp,
+                                        fontSize = tabLabelSize,
                                         fontWeight = if (selectedTab == index) FontWeight.SemiBold else FontWeight.Normal,
                                         maxLines = 1,
                                         softWrap = false,
@@ -525,8 +554,7 @@ fun MainTabs(
                         progress = progress,
                         // What changed is played back once nothing is drawn over the path:
                         // the level quiz, the rewards of a finished course, a paywall.
-                        isCovered = pathQuiz != null || rewardSteps != null || paywall != null ||
-                            overlay != null || showAudioPlayer,
+                        isCovered = tabsCovered,
                         onOpenCourse = { openCourseById(it, source = "path") },
                         onOpenQuiz = { level, isLastLevel -> pathQuiz = level to isLastLevel },
                     )
@@ -551,6 +579,18 @@ fun MainTabs(
                             pendingFriendUserId = friendUserId
                             overlay = OverlayScreen.Friends
                         },
+                    )
+                    // DUELS_TAB_INDEX : dessiné juste en dessous, hors du `when`, pour rester
+                    // monté quand un autre onglet est choisi.
+                }
+                if (showsDuels) {
+                    DuelsTabHost(
+                        language = language,
+                        selected = selectedTab == DUELS_TAB_INDEX,
+                        covered = tabsCovered,
+                        flowShown = showDuelFlow,
+                        onPlay = { showDuelFlow = true },
+                        modifier = tabModifier,
                     )
                 }
                 }
@@ -718,6 +758,18 @@ fun MainTabs(
                     language = language,
                     progressManager = app.progressManager,
                     onDismiss = { pathQuiz = null },
+                )
+            }
+        }
+
+        // La partie de duel recouvre tout, barre d'onglets comprise. À sa fermeture, l'accueil
+        // des duels (resté monté dessous) se recharge de lui-même.
+        if (showDuelFlow) {
+            SophiaOverlayLayer {
+                DuelFlow(
+                    language = language,
+                    onClose = { showDuelFlow = false },
+                    modifier = Modifier.fillMaxSize(),
                 )
             }
         }

@@ -22,6 +22,7 @@ import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
@@ -86,7 +87,8 @@ object DuelPalette {
 /** Une couleur « #RRGGBB » envoyée par le serveur ; la couleur de marque si elle est illisible. */
 fun duelColor(hex: String?): Color {
     val clean = hex.orEmpty().trim().removePrefix("#")
-    val value = clean.takeIf { it.length == 6 }?.toLongOrNull(16) ?: return DuelPalette.navy
+    val isHex = clean.length == 6 && clean.all { it in '0'..'9' || it in 'a'..'f' || it in 'A'..'F' }
+    val value = clean.takeIf { isHex }?.toLongOrNull(16) ?: return DuelPalette.navy
     return Color(0xFF000000 or value)
 }
 
@@ -228,9 +230,11 @@ fun DuelProgressBar(
     height: Dp = 10.dp,
 ) {
     Box(modifier = modifier.fillMaxWidth().height(height).clip(CircleShape).background(track)) {
+        // Jamais plus étroite que haute : à zéro, il reste un point de couleur au départ.
         Box(
             modifier = Modifier
                 .fillMaxWidth(progress.coerceIn(0f, 1f))
+                .widthIn(min = height)
                 .height(height)
                 .clip(CircleShape)
                 .background(tint),

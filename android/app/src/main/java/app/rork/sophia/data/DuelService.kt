@@ -8,6 +8,7 @@ import app.rork.sophia.domain.DuelMatch
 import app.rork.sophia.domain.DuelResult
 import io.github.jan.supabase.postgrest.postgrest
 import io.github.jan.supabase.postgrest.rpc
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.TimeoutCancellationException
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -86,14 +87,17 @@ class DuelService(context: Context, private val auth: AuthService) {
         }
         // Une fin de partie restée sans réponse part d'abord, sauf pendant une partie.
         if (!_isPlaying.value) flushPendingFinish()
-        runCatching {
+        try {
             val fresh: DuelHome = json.decodeFromString(db.rpc("duel_home").data)
             if (auth.userId.value == userId) {
                 _home.value = fresh
                 _homeFailed.value = false
                 storeHome(userId, fresh)
             }
-        }.onFailure {
+        } catch (cancelled: CancellationException) {
+            // L'écran est parti pendant le chargement : ce n'est pas un échec à afficher.
+            throw cancelled
+        } catch (_: Throwable) {
             if (auth.userId.value == userId) _homeFailed.value = _home.value == null
         }
     }
