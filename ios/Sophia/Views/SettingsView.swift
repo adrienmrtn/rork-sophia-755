@@ -19,8 +19,7 @@ struct SettingsView: View {
     @State private var showFeedback: Bool = false
     @State private var showFeatureRequest: Bool = false
     @State private var showShare: Bool = false
-    /// Choix du rôle (UGC ou slideshow) avant d'ouvrir la page créateurs du site.
-    @State private var showCreatorChoice: Bool = false
+    /// Page ambassadeur du site, ouverte dans Safari intégré depuis la bannière.
     @State private var creatorsPage: CreatorsPage? = nil
     @State private var showAudioDownloads: Bool = false
     @State private var hapticTrigger: Int = 0
@@ -140,15 +139,6 @@ struct SettingsView: View {
             .sheet(isPresented: $showFeedback) { FeedbackView(isPremium: store.isPremium) }
             .sheet(isPresented: $showFeatureRequest) { FeedbackView(isPremium: store.isPremium, initialCategory: .feature) }
             .sheet(isPresented: $showShare) { ShareSophiaSheet().sophiaSheetChrome() }
-            .confirmationDialog(
-                languageManager.text("settings.ambassador.banner.title"),
-                isPresented: $showCreatorChoice,
-                titleVisibility: .visible
-            ) {
-                Button(languageManager.text("ambassador.role.ugc.title")) { openCreatorsPage(role: "ugc") }
-                Button(languageManager.text("ambassador.role.slideshow.title")) { openCreatorsPage(role: "slideshow") }
-                Button(languageManager.text("settings.reset.alert.cancel"), role: .cancel) { }
-            }
             .sheet(item: $creatorsPage) { page in
                 InAppSafariView(url: page.url)
                     .ignoresSafeArea()
@@ -606,58 +596,85 @@ struct SettingsView: View {
 
     // MARK: - Ambassador banner
 
-    /// Page du site pour le rôle choisi, dans Safari intégré. Laisse le choix se refermer
-    /// avant d'ouvrir la page, sinon les deux présentations se gênent.
-    private func openCreatorsPage(role: String) {
-        guard let url = AppConfig.creatorsURL(role: role) else { return }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.35) {
-            creatorsPage = CreatorsPage(url: url)
-        }
+    /// Ouvre directement la page ambassadeur du site (programme slideshow, le seul rôle
+    /// proposé : plus d'UGC, plus de choix de rôle ni de formulaire dans l'app).
+    private func openAmbassadorPage() {
+        guard let url = AppConfig.creatorsURL(role: "slideshow") else { return }
+        creatorsPage = CreatorsPage(url: url)
     }
 
-    /// Demande le rôle (UGC ou slideshow), puis ouvre sa page sur le site. Le formulaire
-    /// intégré n'est plus affiché.
+    /// Bannière « Deviens ambassadeur » dans le style papier du site : l'illustration, la
+    /// promesse en une ligne, et la sortie vers le site.
     private var ambassadorBanner: some View {
         Button {
             hapticTrigger += 1
-            showCreatorChoice = true
+            openAmbassadorPage()
         } label: {
-            HStack(spacing: 14) {
-                Image(systemName: "sparkles")
-                    .font(.jakarta(size: 18, weight: .medium))
-                    .foregroundStyle(DS.accentSoft)
-                    .frame(width: 44, height: 44)
-                    .background(DS.surface, in: RoundedRectangle(cornerRadius: 12, style: .continuous))
+            VStack(alignment: .leading, spacing: 0) {
+                Color.clear
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 150)
                     .overlay {
-                        RoundedRectangle(cornerRadius: 12, style: .continuous)
-                            .strokeBorder(DS.hairline, lineWidth: 1)
+                        Image("ambassador_poster")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                    }
+                    .clipped()
+                    .overlay(alignment: .topLeading) {
+                        Text(languageManager.text("settings.ambassador.banner.badge"))
+                            .font(DS.sans(.caption, .bold))
+                            .foregroundStyle(.white)
+                            .lineLimit(1)
+                            .padding(.horizontal, 10)
+                            .padding(.vertical, 6)
+                            .background(Capsule().fill(DS.accent))
+                            .padding(12)
+                    }
+                    .accessibilityHidden(true)
+
+                VStack(alignment: .leading, spacing: 14) {
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text(languageManager.text("settings.ambassador.banner.title"))
+                            .font(DS.title(.title3, .heavy))
+                            .foregroundStyle(DS.ink)
+                            .multilineTextAlignment(.leading)
+                            .fixedSize(horizontal: false, vertical: true)
+                        Text(languageManager.text("settings.ambassador.banner.subtitle"))
+                            .font(DS.sans(.subheadline))
+                            .foregroundStyle(DS.inkSecondary)
+                            .multilineTextAlignment(.leading)
+                            .fixedSize(horizontal: false, vertical: true)
                     }
 
-                VStack(alignment: .leading, spacing: 3) {
-                    Text(languageManager.text("settings.ambassador.banner.badge").uppercasedInApp())
-                        .font(DS.sans(.caption2, .semibold))
-                        .foregroundStyle(DS.accentSoft)
-                        .tracking(1.0)
-                    Text(languageManager.text("settings.ambassador.banner.title"))
-                        .font(DS.title(.headline, .semibold))
-                        .foregroundStyle(DS.ink)
-                    Text(languageManager.text("settings.ambassador.banner.subtitle"))
-                        .font(DS.sans(.caption, .medium))
-                        .foregroundStyle(DS.inkSecondary)
-                        .fixedSize(horizontal: false, vertical: true)
+                    HStack(spacing: 8) {
+                        Text(languageManager.text("settings.ambassador.cta"))
+                            .font(DS.sans(.subheadline, .bold))
+                            .multilineTextAlignment(.center)
+                            .fixedSize(horizontal: false, vertical: true)
+                        Image(systemName: "arrow.up.right")
+                            .font(.system(size: 13, weight: .bold))
+                    }
+                    .foregroundStyle(.white)
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 13)
+                    .padding(.horizontal, 16)
+                    .background(Capsule(style: .continuous).fill(DS.accent))
                 }
-
-                Spacer(minLength: 0)
-
-                Image(systemName: "chevron.forward")
-                    .font(.jakarta(size: 13, weight: .semibold))
-                    .foregroundStyle(DS.inkTertiary)
+                .padding(16)
+                .frame(maxWidth: .infinity, alignment: .leading)
             }
-            .padding(16)
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .background(DS.accentTint, in: RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
+            .background(DS.surface)
+            .clipShape(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
+            .overlay(
+                RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
+                    .strokeBorder(DS.hairline, lineWidth: 1)
+            )
+            .dsSoftShadow()
+            .contentShape(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
         }
         .buttonStyle(SoftPressButtonStyle())
+        .accessibilityElement(children: .combine)
+        .accessibilityAddTraits(.isLink)
     }
 
     // MARK: - Building blocks

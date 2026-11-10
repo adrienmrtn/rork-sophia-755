@@ -1,5 +1,9 @@
 import SwiftUI
 
+/// La page « Ma progression » : une illustration papier (style du site), le niveau et sa barre
+/// d'XP, la série, les compteurs, la progression par matière, le rang global, les quiz récents,
+/// le classement entre amis et les raccourcis (anti-scroll, favoris, partage).
+/// Poussée depuis le profil (`embedded`), ou racine de l'onglet Profil de la navigation classique.
 struct ProfileView: View {
     @Environment(LanguageManager.self) private var languageManager
     @Environment(AuthService.self) private var auth
@@ -24,6 +28,9 @@ struct ProfileView: View {
     @State private var hapticTrigger: Int = 0
     @State private var appeared: Bool = false
     @Bindable private var social = SocialService.shared
+
+    /// Safran des illustrations du site (flamme, étoiles, XP).
+    fileprivate static let saffron = Color(red: 0.949, green: 0.694, blue: 0.204)
 
     var body: some View {
         Group {
@@ -62,36 +69,21 @@ struct ProfileView: View {
             DS.canvas.ignoresSafeArea()
 
             ScrollView {
-                VStack(alignment: .leading, spacing: 26) {
+                VStack(alignment: .leading, spacing: 22) {
+                    hero
                     titleBar
-                        .padding(.horizontal, 20)
-                        .padding(.top, 4)
-
-                    identityHeader
-                        .padding(.horizontal, 20)
-
-                    statsSection
-                        .padding(.horizontal, 20)
-
-                    tiktokBlockerCard
-                        .padding(.horizontal, 20)
-
-                    shareCard
-                        .padding(.horizontal, 20)
-
-                    FriendsLeaderboardSection(social: social)
-                        .padding(.horizontal, 20)
-
-                    subjectLevelsSection
-                        .padding(.horizontal, 20)
-
-                    favoritesShortcut
-                        .padding(.horizontal, 20)
-
+                    levelCard
+                    streakCard
+                    statsGrid
+                    subjectsSection
+                    rankSection
                     quizSection
-                        .padding(.horizontal, 20)
-                        .padding(.bottom, 40)
+                    FriendsLeaderboardSection(social: social)
+                    shortcutsCard
                 }
+                .padding(.horizontal, 20)
+                .padding(.top, 8)
+                .padding(.bottom, 40)
                 .opacity(appeared ? 1 : 0)
                 .offset(y: appeared ? 0 : 12)
             }
@@ -185,32 +177,51 @@ struct ProfileView: View {
         }
     }
 
-    // MARK: - Title bar
+    // MARK: - Illustration
+
+    /// L'illustration papier du site (`progress_hero`), recadrée dans une bande arrondie.
+    private var hero: some View {
+        Color.clear
+            .frame(maxWidth: .infinity)
+            .frame(height: 190)
+            .overlay {
+                Image("progress_hero")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+            }
+            .clipShape(RoundedRectangle(cornerRadius: 28, style: .continuous))
+            .dsSoftShadow()
+            .accessibilityHidden(true)
+    }
+
+    // MARK: - Titre
 
     private var titleBar: some View {
-        HStack(alignment: .center) {
-            Text(languageManager.text("profile.title"))
-                .font(DS.title(.largeTitle, .semibold))
+        HStack(alignment: .center, spacing: 12) {
+            Text(languageManager.text(embedded ? "progress.title" : "profile.title"))
+                .font(DS.title(.largeTitle, .heavy))
                 .foregroundStyle(DS.ink)
+                .fixedSize(horizontal: false, vertical: true)
 
-            Spacer()
+            Spacer(minLength: 0)
 
             Button {
                 hapticTrigger += 1
                 showSettings = true
             } label: {
                 Image(systemName: "gearshape")
-                    .font(.jakarta(size: 17, weight: .medium))
-                    .foregroundStyle(DS.inkSecondary)
+                    .font(.system(size: 16, weight: .semibold))
+                    .foregroundStyle(DS.ink)
                     .frame(width: 44, height: 44)
-                    .background(DS.surface, in: Circle())
-                    .overlay { Circle().strokeBorder(DS.hairline, lineWidth: 1) }
+                    .background(Circle().fill(DS.surface))
+                    .overlay(Circle().strokeBorder(DS.hairline, lineWidth: 1))
             }
             .buttonStyle(ProfileCardPress())
+            .accessibilityLabel(Text(languageManager.text("settings.title")))
         }
     }
 
-    // MARK: - Identity header
+    // MARK: - Niveau
 
     private var nickname: String {
         let interests = OnboardingViewModel.userInterestKeys()
@@ -221,26 +232,59 @@ struct ProfileView: View {
         return languageManager.text("onboarding.program.nickname.\(first)")
     }
 
-    private var identityHeader: some View {
+    /// Part du niveau en cours déjà parcourue (0…1) ; 1 au niveau maximal.
+    private func levelFraction(_ p: GlobalLevelProgress) -> Double {
+        guard p.level < 100 else { return 1 }
+        let lower = ProgressManager.xpThreshold(forGlobalLevel: p.level)
+        let upper = ProgressManager.xpThreshold(forGlobalLevel: p.level + 1)
+        let span = max(1, upper - lower)
+        return min(1, max(0, Double(p.xp - lower) / Double(span)))
+    }
+
+    /// « 1240 XP · 60 avant niv. 13 », ou « 1240 XP · niveau max ».
+    private func levelCaption(_ p: GlobalLevelProgress) -> String {
+        guard p.level < 100 else {
+            return String(format: languageManager.text("profile.progress.max"), p.xp)
+        }
+        let upper = ProgressManager.xpThreshold(forGlobalLevel: p.level + 1)
+        let toNext = max(0, upper - p.xp)
+        return String(format: languageManager.text("profile.progress.toNext"), p.xp, toNext, p.level + 1)
+    }
+
+    private var levelCard: some View {
         let p = progressManager.globalLevelProgress
 
-        return VStack(spacing: 16) {
+        return VStack(alignment: .leading, spacing: 18) {
             HStack(alignment: .center, spacing: 16) {
-                GlobalRankRing(progress: p, size: 96)
+                Text("\(p.level)")
+                    .font(DS.title(.title, .heavy))
+                    .foregroundStyle(.white)
+                    .monospacedDigit()
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.6)
+                    .padding(.horizontal, 6)
+                    .frame(width: 68, height: 68)
+                    .background(Circle().fill(DS.accent))
+                    .overlay(alignment: .topTrailing) {
+                        Image(systemName: "star.fill")
+                            .font(.system(size: 11, weight: .bold))
+                            .foregroundStyle(DS.accent)
+                            .frame(width: 24, height: 24)
+                            .background(Circle().fill(Self.saffron))
+                            .overlay(Circle().strokeBorder(DS.surface, lineWidth: 2))
+                            .offset(x: 4, y: -4)
+                    }
+                    .accessibilityHidden(true)
 
-                VStack(alignment: .leading, spacing: 6) {
-                    Text(p.rank.localizedName(language: languageManager.current).uppercasedInApp())
-                        .font(DS.sans(.caption2, .semibold))
-                        .foregroundStyle(DS.accentSoft)
-                        .tracking(1.2)
-                        .lineLimit(1)
-                        .minimumScaleFactor(0.7)
+                VStack(alignment: .leading, spacing: 4) {
+                    Text(String(format: languageManager.text("path.levelCaption"), p.level))
+                        .font(DS.title(.title2, .heavy))
+                        .foregroundStyle(DS.ink)
+                        .fixedSize(horizontal: false, vertical: true)
 
                     Text(nickname)
-                        .font(DS.title(.title2, .semibold))
-                        .foregroundStyle(DS.ink)
-                        .lineLimit(2)
-                        .minimumScaleFactor(0.8)
+                        .font(DS.sans(.subheadline, .medium))
+                        .foregroundStyle(DS.inkSecondary)
                         .fixedSize(horizontal: false, vertical: true)
 
                     if auth.isSignedIn, let handle = social.myHandle {
@@ -252,102 +296,67 @@ struct ProfileView: View {
                                 Text("@\(handle)")
                                     .font(DS.sans(.subheadline, .semibold))
                                     .foregroundStyle(DS.accentSoft)
+                                    .lineLimit(1)
                                 Image(systemName: "pencil")
-                                    .font(.jakarta(size: 11, weight: .semibold))
+                                    .font(.system(size: 11, weight: .semibold))
                                     .foregroundStyle(DS.inkTertiary)
                             }
                         }
                         .buttonStyle(.plain)
                     }
-
-                    Text(String(format: languageManager.text("common.levelShort"), p.level))
-                        .font(DS.sans(.subheadline, .medium))
-                        .foregroundStyle(DS.inkSecondary)
                 }
 
                 Spacer(minLength: 0)
             }
 
-            VStack(spacing: 6) {
-                CalmProgressBar(fraction: p.progressToNextRank)
-                HStack {
-                    Text(languageManager.text("globalRank.title"))
-                        .font(DS.sans(.caption2, .medium))
-                        .foregroundStyle(DS.inkTertiary)
-                    Spacer()
-                    Text("\(Int(p.progressToNextRank * 100))%")
-                        .font(DS.sans(.caption2, .semibold))
-                        .foregroundStyle(DS.inkSecondary)
-                        .monospacedDigit()
-                }
+            VStack(alignment: .leading, spacing: 8) {
+                ProgressPageBar(fraction: levelFraction(p), tint: DS.accent, height: 10)
+                Text(levelCaption(p))
+                    .font(DS.sans(.footnote, .semibold))
+                    .foregroundStyle(DS.inkSecondary)
+                    .monospacedDigit()
+                    .fixedSize(horizontal: false, vertical: true)
             }
         }
         .dsCard()
     }
 
-    // MARK: - Stats
-
-    private var completedCoursesCount: Int {
-        ContentCatalog.activeCourses.filter { progressManager.courseStatus(for: $0.id) == .completed }.count
-    }
-
-    private var statsSection: some View {
-        let stats = progressManager.quizStatsSummary
-
-        return VStack(spacing: 14) {
-            streakCard
-
-            HStack(spacing: 14) {
-                statTile(
-                    badge: .courses,
-                    value: "\(completedCoursesCount)",
-                    label: languageManager.text("profile.stats.coursesDone")
-                )
-                statTile(
-                    badge: .target,
-                    value: "\(stats.successPercent)%",
-                    label: languageManager.text("cards.successRate")
-                )
-            }
-        }
-    }
+    // MARK: - Série
 
     private var streakCard: some View {
         VStack(alignment: .leading, spacing: 16) {
-            HStack(alignment: .center, spacing: 8) {
-                AnimatedFlameBadge(size: 22, showGlow: false)
-                    .frame(width: 28, height: 28)
-                Text("\(progressManager.streak)")
-                    .font(DS.title(.largeTitle, .semibold))
-                    .foregroundStyle(DS.ink)
-                    .contentTransition(.numericText())
-                    .monospacedDigit()
-                Text(progressManager.streak <= 1 ? languageManager.text("common.streak.day") : languageManager.text("common.streak.days"))
-                    .font(DS.sans(.subheadline, .medium))
-                    .foregroundStyle(DS.inkSecondary)
-                Spacer()
+            HStack(alignment: .center, spacing: 12) {
+                // Flamme fixe : plus d'animation sur cette page.
+                Image(systemName: "flame.fill")
+                    .font(.system(size: 20, weight: .semibold))
+                    .foregroundStyle(Self.saffron)
+                    .frame(width: 44, height: 44)
+                    .background(Circle().fill(Self.saffron.opacity(0.16)))
+                    .accessibilityHidden(true)
+
+                VStack(alignment: .leading, spacing: 0) {
+                    Text(languageManager.text("friends.stats.streak"))
+                        .font(DS.sans(.caption, .semibold))
+                        .foregroundStyle(DS.inkSecondary)
+                    HStack(alignment: .firstTextBaseline, spacing: 6) {
+                        Text("\(progressManager.streak)")
+                            .font(DS.title(.title, .heavy))
+                            .foregroundStyle(DS.ink)
+                            .contentTransition(.numericText())
+                            .monospacedDigit()
+                        Text(progressManager.streak <= 1 ? languageManager.text("common.streak.day") : languageManager.text("common.streak.days"))
+                            .font(DS.sans(.caption, .bold))
+                            .foregroundStyle(DS.inkSecondary)
+                            .tracking(0.8)
+                    }
+                }
+                Spacer(minLength: 0)
             }
+            .accessibilityElement(children: .combine)
+
             weekStrip
         }
         .dsCard()
-    }
-
-    private func statTile(badge: AnimatedRewardBadge.Kind, value: String, label: String) -> some View {
-        VStack(alignment: .leading, spacing: 10) {
-            AnimatedRewardBadge(kind: badge, size: 17, showGlow: false)
-                .frame(width: 38, height: 38)
-                .background(DS.accentTint, in: Circle())
-            Text(value)
-                .font(DS.title(.title, .semibold))
-                .foregroundStyle(DS.ink)
-                .monospacedDigit()
-            Text(label)
-                .font(DS.sans(.caption, .medium))
-                .foregroundStyle(DS.inkSecondary)
-                .fixedSize(horizontal: false, vertical: true)
-        }
-        .frame(maxWidth: .infinity, minHeight: 120, alignment: .topLeading)
-        .dsCard(padding: 16)
     }
 
     private var weekStrip: some View {
@@ -380,17 +389,17 @@ struct ProfileView: View {
 
                 VStack(spacing: 6) {
                     Text(dayLetters[i])
-                        .font(DS.sans(.caption2, .medium))
-                        .foregroundStyle(DS.inkTertiary)
+                        .font(DS.sans(.caption2, .semibold))
+                        .foregroundStyle(isToday ? DS.ink : DS.inkTertiary)
                     ZStack {
                         if isDone {
                             Circle().fill(DS.accent)
                             Image(systemName: "checkmark")
-                                .font(.jakarta(size: 11, weight: .bold))
+                                .font(.system(size: 11, weight: .bold))
                                 .foregroundStyle(.white)
                         } else if isToday {
                             Circle().fill(DS.surface)
-                            Circle().strokeBorder(DS.accentSoft, lineWidth: 2)
+                            Circle().strokeBorder(Self.saffron, lineWidth: 2)
                         } else {
                             Circle().fill(DS.surfaceMuted)
                         }
@@ -401,180 +410,196 @@ struct ProfileView: View {
                 .frame(maxWidth: .infinity)
             }
         }
+        .accessibilityHidden(true)
     }
 
-    // MARK: - Favorites shortcut
+    // MARK: - Compteurs
 
-    // MARK: - TikTok blocker
-
-    /// "Cultive-toi avant de scroller", where the daily goal lives. One card, four
-    /// states: not Premium, off, locked (finish today's course), done (well played).
-    private struct BlockerCardState {
-        let icon: String
-        let tint: Color
-        let bg: Color
-        let title: String
-        let subtitle: String
+    private var completedCoursesCount: Int {
+        ContentCatalog.activeCourses.filter { progressManager.courseStatus(for: $0.id) == .completed }.count
     }
 
-    /// One of four states, resolved in plain statements: the tuple-returning closure this
-    /// replaced was a type-checker sink.
-    private var blockerCardState: BlockerCardState {
-        let blocker = TikTokBlockerManager.shared
-        if !store.isPremium {
-            return BlockerCardState(
-                icon: "lock.fill", tint: DS.accentSoft, bg: DS.accentTint,
-                title: languageManager.text("tiktokBlocker.card.premium.title"),
-                subtitle: languageManager.text("tiktokBlocker.card.premium.subtitle")
+    private var statsGrid: some View {
+        let stats = progressManager.quizStatsSummary
+        let columns = [GridItem(.flexible(), spacing: 12), GridItem(.flexible(), spacing: 12)]
+
+        return LazyVGrid(columns: columns, spacing: 12) {
+            statTile(
+                icon: "book.closed.fill",
+                value: "\(completedCoursesCount)",
+                label: languageManager.text("profile.stats.coursesDone")
+            )
+            statTile(
+                icon: "checkmark.seal.fill",
+                value: "\(stats.completedQuizCount)",
+                label: languageManager.text("progress.stats.quizzes")
+            )
+            statTile(
+                icon: "target",
+                value: "\(stats.successPercent)%",
+                label: languageManager.text("progress.stats.successRate")
+            )
+            statTile(
+                icon: "bolt.fill",
+                value: "\(progressManager.globalLevelProgress.xp)",
+                label: languageManager.text("progress.stats.xp")
             )
         }
-        if !blocker.isArmed {
-            return BlockerCardState(
-                icon: "lock.fill", tint: DS.accentSoft, bg: DS.accentTint,
-                title: languageManager.text("tiktokBlocker.card.off.title"),
-                subtitle: languageManager.text("tiktokBlocker.card.off.subtitle")
+    }
+
+    private func statTile(icon: String, value: String, label: String) -> some View {
+        VStack(alignment: .leading, spacing: 10) {
+            Image(systemName: icon)
+                .font(.system(size: 15, weight: .semibold))
+                .foregroundStyle(DS.accent)
+                .frame(width: 36, height: 36)
+                .background(Circle().fill(DS.accentTint))
+                .accessibilityHidden(true)
+            VStack(alignment: .leading, spacing: 2) {
+                Text(value)
+                    .font(DS.title(.title2, .heavy))
+                    .foregroundStyle(DS.ink)
+                    .monospacedDigit()
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.6)
+                Text(label)
+                    .font(DS.sans(.footnote, .medium))
+                    .foregroundStyle(DS.inkSecondary)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+        }
+        .frame(maxWidth: .infinity, minHeight: 104, alignment: .topLeading)
+        .dsCard(padding: 16)
+        .accessibilityElement(children: .combine)
+    }
+
+    // MARK: - Titres de section
+
+    private func sectionTitle(_ text: String) -> some View {
+        Text(text)
+            .font(DS.title(.title3, .heavy))
+            .foregroundStyle(DS.ink)
+            .fixedSize(horizontal: false, vertical: true)
+    }
+
+    // MARK: - Par matière
+
+    private var subjectsSection: some View {
+        let subjects = Subject.allCases
+
+        return VStack(alignment: .leading, spacing: 12) {
+            sectionTitle(languageManager.text("progress.subjects.title"))
+
+            VStack(spacing: 0) {
+                ForEach(Array(subjects.enumerated()), id: \.element) { index, subject in
+                    SubjectProgressRow(subject: subject, xp: progressManager.xp(for: subject))
+                    if index < subjects.count - 1 {
+                        Rectangle()
+                            .fill(DS.hairline)
+                            .frame(height: 1)
+                            .padding(.leading, 72)
+                    }
+                }
+            }
+            .dsCard(padding: 0)
+        }
+    }
+
+    // MARK: - Rang global
+
+    private func rankCaption(_ p: GlobalLevelProgress) -> String {
+        if let toNext = p.xpToNextRank, let next = p.rank.next {
+            return String(
+                format: languageManager.text("globalRank.xpBefore"),
+                toNext,
+                next.localizedName(language: languageManager.current)
             )
         }
-        if blocker.isUnlockWindowOpen {
-            return BlockerCardState(
-                icon: "checkmark.seal.fill", tint: DS.success, bg: DS.successTint,
-                title: languageManager.text("tiktokBlocker.card.done.title"),
-                subtitle: languageManager.text("tiktokBlocker.card.done.subtitle")
-            )
-        }
-        let warmTint: Color = DS.warm.opacity(0.15)
-        return BlockerCardState(
-            icon: "lock.fill", tint: DS.warm, bg: warmTint,
-            title: languageManager.text("tiktokBlocker.card.locked.title"),
-            subtitle: languageManager.text("tiktokBlocker.card.locked.subtitle")
-        )
+        return languageManager.text("globalRank.maxLevel")
     }
 
-    private var tiktokBlockerCard: some View {
-        let state: BlockerCardState = blockerCardState
-        return Button {
-            hapticTrigger += 1
-            // Already on: straight to the settings. Otherwise the anti-scroll explainer first.
-            if TikTokBlockerManager.shared.isEnabled {
-                showTikTokBlocker = true
-            } else {
-                showAntiScrollIntro = true
-            }
-        } label: {
-            HStack(spacing: 14) {
-                Image(systemName: state.icon)
-                    .font(.jakarta(size: 16, weight: .medium))
-                    .foregroundStyle(state.tint)
-                    .frame(width: 40, height: 40)
-                    .background(state.bg, in: RoundedRectangle(cornerRadius: 12, style: .continuous))
+    private var rankSection: some View {
+        let p = progressManager.globalLevelProgress
 
-                VStack(alignment: .leading, spacing: 2) {
-                    Text(state.title)
-                        .font(DS.title(.headline, .semibold))
-                        .foregroundStyle(DS.ink)
-                        .fixedSize(horizontal: false, vertical: true)
-                    Text(state.subtitle)
-                        .font(DS.sans(.caption, .medium))
-                        .foregroundStyle(DS.inkSecondary)
-                        .fixedSize(horizontal: false, vertical: true)
+        return VStack(alignment: .leading, spacing: 12) {
+            sectionTitle(languageManager.text("globalRank.title"))
+
+            VStack(alignment: .leading, spacing: 18) {
+                HStack(alignment: .center, spacing: 16) {
+                    GlobalRankRing(progress: p, size: 76)
+                        .accessibilityHidden(true)
+
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text(p.rank.localizedName(language: languageManager.current))
+                            .font(DS.title(.title2, .heavy))
+                            .foregroundStyle(DS.ink)
+                            .fixedSize(horizontal: false, vertical: true)
+                        Text(rankCaption(p))
+                            .font(DS.sans(.subheadline, .medium))
+                            .foregroundStyle(DS.inkSecondary)
+                            .monospacedDigit()
+                            .fixedSize(horizontal: false, vertical: true)
+                    }
+                    Spacer(minLength: 0)
                 }
-                Spacer()
-                Image(systemName: "chevron.forward")
-                    .font(.jakarta(size: 13, weight: .semibold))
-                    .foregroundStyle(DS.inkTertiary)
+                .accessibilityElement(children: .combine)
+
+                rankLadder(current: p.rank)
             }
-            .dsCard(padding: 14)
+            .dsCard()
         }
-        .buttonStyle(ProfileCardPress())
     }
 
-    // MARK: - Partager Sophia
+    /// Les cinq rangs, du premier au dernier : ceux déjà atteints en plein, le rang en cours cerclé de safran.
+    private func rankLadder(current: GlobalRank) -> some View {
+        let ranks = GlobalRank.allCases
+        let currentIndex = ranks.firstIndex(of: current) ?? 0
 
-    /// « Partage Sophia · Offre 10 minutes de culture à un ami » : ouvre la feuille de partage.
-    private var shareCard: some View {
-        Button {
-            hapticTrigger += 1
-            showShare = true
-        } label: {
-            HStack(spacing: 14) {
-                Image(systemName: "paperplane.fill")
-                    .font(.jakarta(size: 16, weight: .medium))
-                    .foregroundStyle(OV2.pink)
-                    .frame(width: 40, height: 40)
-                    .background(OV2.pink.opacity(0.12), in: RoundedRectangle(cornerRadius: 12, style: .continuous))
-
-                VStack(alignment: .leading, spacing: 2) {
-                    Text(languageManager.text("share.card.title"))
-                        .font(DS.title(.headline, .semibold))
-                        .foregroundStyle(DS.ink)
-                        .fixedSize(horizontal: false, vertical: true)
-                    Text(languageManager.text("share.card.subtitle"))
-                        .font(DS.sans(.caption, .medium))
-                        .foregroundStyle(DS.inkSecondary)
-                        .fixedSize(horizontal: false, vertical: true)
+        return HStack(alignment: .top, spacing: 4) {
+            ForEach(Array(ranks.enumerated()), id: \.element) { index, rank in
+                let reached = index <= currentIndex
+                VStack(spacing: 6) {
+                    Image(systemName: rank.symbolName)
+                        .font(.system(size: 14, weight: .semibold))
+                        .foregroundStyle(reached ? Color.white : DS.inkTertiary)
+                        .frame(width: 36, height: 36)
+                        .background(Circle().fill(reached ? DS.accent : DS.surfaceMuted))
+                        .overlay(
+                            Circle().strokeBorder(index == currentIndex ? Self.saffron : Color.clear, lineWidth: 2.5)
+                        )
+                    Text(rank.localizedName(language: languageManager.current))
+                        .font(DS.sans(.caption2, index == currentIndex ? .bold : .medium))
+                        .foregroundStyle(reached ? DS.ink : DS.inkTertiary)
+                        .multilineTextAlignment(.center)
+                        .lineLimit(2)
+                        .minimumScaleFactor(0.7)
                 }
-                Spacer()
-                Image(systemName: "square.and.arrow.up")
-                    .font(.jakarta(size: 14, weight: .semibold))
-                    .foregroundStyle(DS.inkTertiary)
+                .frame(maxWidth: .infinity)
             }
-            .dsCard(padding: 14)
         }
-        .buttonStyle(ProfileCardPress())
+        .accessibilityHidden(true)
     }
 
-    private var favoritesShortcut: some View {
-        Button {
-            hapticTrigger += 1
-            showFavorites = true
-        } label: {
-            HStack(spacing: 14) {
-                Image(systemName: "bookmark.fill")
-                    .font(.jakarta(size: 16, weight: .medium))
-                    .foregroundStyle(DS.accentSoft)
-                    .frame(width: 40, height: 40)
-                    .background(DS.accentTint, in: RoundedRectangle(cornerRadius: 12, style: .continuous))
-
-                VStack(alignment: .leading, spacing: 2) {
-                    Text(languageManager.text("profile.favorites"))
-                        .font(DS.title(.headline, .semibold))
-                        .foregroundStyle(DS.ink)
-                    Text(String(format: languageManager.text("profile.favorites.count"), progressManager.favoriteCourses.count))
-                        .font(DS.sans(.caption, .medium))
-                        .foregroundStyle(DS.inkSecondary)
-                }
-                Spacer()
-                Image(systemName: "chevron.forward")
-                    .font(.jakarta(size: 13, weight: .semibold))
-                    .foregroundStyle(DS.inkTertiary)
-            }
-            .dsCard(padding: 14)
-        }
-        .buttonStyle(ProfileCardPress())
-    }
-
-    // MARK: - Quiz section
+    // MARK: - Quiz récents
 
     private var quizSection: some View {
         VStack(alignment: .leading, spacing: 12) {
-            HStack {
-                Text(languageManager.text("profile.quiz.recent").uppercasedInApp())
-                    .font(DS.sans(.caption2, .semibold))
-                    .foregroundStyle(DS.inkTertiary)
-                    .tracking(1.2)
-                Spacer()
+            HStack(alignment: .firstTextBaseline, spacing: 12) {
+                sectionTitle(languageManager.text("progress.quizzes.title"))
+                Spacer(minLength: 0)
                 if store.isPremium && !progressManager.recentQuizzes.isEmpty {
                     Button {
                         hapticTrigger += 1
                         showAllQuizzes = true
                     } label: {
                         Text(languageManager.text("common.seeMoreArrow"))
-                            .font(DS.sans(.subheadline, .medium))
+                            .font(DS.sans(.subheadline, .bold))
                             .foregroundStyle(DS.accentSoft)
+                            .lineLimit(1)
                     }
+                    .buttonStyle(.plain)
                 }
             }
-            .padding(.horizontal, 4)
 
             if progressManager.recentQuizzes.isEmpty {
                 emptyQuizzesCard
@@ -604,48 +629,277 @@ struct ProfileView: View {
 
     private var emptyQuizzesCard: some View {
         HStack(spacing: 14) {
-            Image(systemName: "questionmark.circle")
-                .font(.jakarta(size: 16, weight: .medium))
-                .foregroundStyle(DS.accentSoft)
-                .frame(width: 40, height: 40)
-                .background(DS.accentTint, in: RoundedRectangle(cornerRadius: 12, style: .continuous))
+            shortcutIcon("questionmark", tint: DS.accent, background: DS.accentTint)
 
             VStack(alignment: .leading, spacing: 2) {
                 Text(languageManager.text("profile.quiz.emptyTitle"))
-                    .font(DS.title(.headline, .semibold))
+                    .font(DS.title(.headline, .heavy))
                     .foregroundStyle(DS.ink)
+                    .fixedSize(horizontal: false, vertical: true)
                 Text(languageManager.text("profile.quiz.emptySubtitle"))
-                    .font(DS.sans(.caption, .medium))
+                    .font(DS.sans(.footnote, .medium))
                     .foregroundStyle(DS.inkSecondary)
                     .fixedSize(horizontal: false, vertical: true)
             }
             Spacer(minLength: 0)
         }
-        .dsCard(padding: 14)
+        .dsCard(padding: 16)
     }
 
-    // MARK: - Subject levels (par matière, sans graphe)
+    // MARK: - Raccourcis (anti-scroll, favoris, partage)
 
-    private var subjectLevelsSection: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            Text(languageManager.text("profile.mastery.title").uppercasedInApp())
-                .font(DS.sans(.caption2, .semibold))
-                .foregroundStyle(DS.inkTertiary)
-                .tracking(1.2)
-                .padding(.horizontal, 4)
+    /// "Cultive-toi avant de scroller", where the daily goal lives. One row, four
+    /// states: not Premium, off, locked (finish today's course), done (well played).
+    private struct BlockerCardState {
+        let icon: String
+        let tint: Color
+        let bg: Color
+        let title: String
+        let subtitle: String
+    }
 
-            LazyVGrid(
-                columns: [GridItem(.flexible(), spacing: 14), GridItem(.flexible(), spacing: 14)],
-                spacing: 14
+    /// One of four states, resolved in plain statements: the tuple-returning closure this
+    /// replaced was a type-checker sink.
+    private var blockerCardState: BlockerCardState {
+        let blocker = TikTokBlockerManager.shared
+        if !store.isPremium {
+            return BlockerCardState(
+                icon: "lock.fill", tint: DS.accent, bg: DS.accentTint,
+                title: languageManager.text("tiktokBlocker.card.premium.title"),
+                subtitle: languageManager.text("tiktokBlocker.card.premium.subtitle")
+            )
+        }
+        if !blocker.isArmed {
+            return BlockerCardState(
+                icon: "lock.fill", tint: DS.accent, bg: DS.accentTint,
+                title: languageManager.text("tiktokBlocker.card.off.title"),
+                subtitle: languageManager.text("tiktokBlocker.card.off.subtitle")
+            )
+        }
+        if blocker.isUnlockWindowOpen {
+            return BlockerCardState(
+                icon: "checkmark.seal.fill", tint: DS.success, bg: DS.successTint,
+                title: languageManager.text("tiktokBlocker.card.done.title"),
+                subtitle: languageManager.text("tiktokBlocker.card.done.subtitle")
+            )
+        }
+        let warmTint: Color = DS.warm.opacity(0.15)
+        return BlockerCardState(
+            icon: "lock.fill", tint: DS.warm, bg: warmTint,
+            title: languageManager.text("tiktokBlocker.card.locked.title"),
+            subtitle: languageManager.text("tiktokBlocker.card.locked.subtitle")
+        )
+    }
+
+    private var shortcutsCard: some View {
+        let blockerState: BlockerCardState = blockerCardState
+
+        return VStack(spacing: 0) {
+            // Anti-scroll : déjà activé, droit aux réglages ; sinon l'explication d'abord.
+            shortcutRow(
+                icon: blockerState.icon,
+                tint: blockerState.tint,
+                background: blockerState.bg,
+                title: blockerState.title,
+                subtitle: blockerState.subtitle,
+                trailingIcon: "chevron.forward"
             ) {
-                ForEach(Subject.allCases, id: \.self) { subject in
-                    SubjectProgressCard(
-                        subject: subject,
-                        xp: progressManager.xp(for: subject)
-                    )
+                if TikTokBlockerManager.shared.isEnabled {
+                    showTikTokBlocker = true
+                } else {
+                    showAntiScrollIntro = true
                 }
             }
+
+            shortcutDivider
+
+            shortcutRow(
+                icon: "bookmark.fill",
+                tint: DS.accent,
+                background: DS.accentTint,
+                title: languageManager.text("profile.favorites"),
+                subtitle: String(format: languageManager.text("profile.favorites.count"), progressManager.favoriteCourses.count),
+                trailingIcon: "chevron.forward"
+            ) {
+                showFavorites = true
+            }
+
+            shortcutDivider
+
+            // « Partage Sophia · Offre 10 minutes de culture à un ami » : ouvre la feuille de partage.
+            shortcutRow(
+                icon: "paperplane.fill",
+                tint: DS.accent,
+                background: Self.saffron.opacity(0.22),
+                title: languageManager.text("share.card.title"),
+                subtitle: languageManager.text("share.card.subtitle"),
+                trailingIcon: "square.and.arrow.up"
+            ) {
+                showShare = true
+            }
         }
+        .dsCard(padding: 0)
+    }
+
+    private var shortcutDivider: some View {
+        Rectangle()
+            .fill(DS.hairline)
+            .frame(height: 1)
+            .padding(.leading, 72)
+    }
+
+    private func shortcutIcon(_ systemName: String, tint: Color, background: Color) -> some View {
+        Image(systemName: systemName)
+            .font(.system(size: 16, weight: .semibold))
+            .foregroundStyle(tint)
+            .frame(width: 44, height: 44)
+            .background(RoundedRectangle(cornerRadius: 14, style: .continuous).fill(background))
+            .accessibilityHidden(true)
+    }
+
+    private func shortcutRow(
+        icon: String,
+        tint: Color,
+        background: Color,
+        title: String,
+        subtitle: String,
+        trailingIcon: String,
+        action: @escaping () -> Void
+    ) -> some View {
+        Button {
+            hapticTrigger += 1
+            action()
+        } label: {
+            HStack(spacing: 14) {
+                shortcutIcon(icon, tint: tint, background: background)
+
+                VStack(alignment: .leading, spacing: 2) {
+                    Text(title)
+                        .font(DS.title(.headline, .heavy))
+                        .foregroundStyle(DS.ink)
+                        .multilineTextAlignment(.leading)
+                        .fixedSize(horizontal: false, vertical: true)
+                    Text(subtitle)
+                        .font(DS.sans(.footnote, .medium))
+                        .foregroundStyle(DS.inkSecondary)
+                        .multilineTextAlignment(.leading)
+                        .fixedSize(horizontal: false, vertical: true)
+                }
+                Spacer(minLength: 4)
+                Image(systemName: trailingIcon)
+                    .font(.system(size: 13, weight: .semibold))
+                    .foregroundStyle(DS.inkTertiary)
+            }
+            .padding(.horizontal, 14)
+            .padding(.vertical, 14)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .contentShape(Rectangle())
+        }
+        .buttonStyle(ProfileCardPress())
+    }
+}
+
+// MARK: - Barre de progression animée
+
+/// Barre fine qui se remplit à l'apparition (XP du niveau, XP d'une matière).
+private struct ProgressPageBar: View {
+    let fraction: Double
+    var tint: Color = DS.accent
+    var height: CGFloat = 8
+
+    @State private var shown: Bool = false
+
+    private var clamped: CGFloat { CGFloat(min(1, max(0, fraction))) }
+
+    var body: some View {
+        GeometryReader { geo in
+            ZStack(alignment: .leading) {
+                Capsule().fill(DS.hairline)
+                Capsule()
+                    .fill(tint)
+                    .frame(width: shown ? max(clamped > 0 ? height : 0, geo.size.width * clamped) : 0)
+            }
+        }
+        .frame(height: height)
+        .animation(.easeOut(duration: 0.5), value: fraction)
+        .onAppear {
+            withAnimation(.easeOut(duration: 0.9).delay(0.25)) {
+                shown = true
+            }
+        }
+        .accessibilityHidden(true)
+    }
+}
+
+// MARK: - Ligne d'une matière
+
+/// Une matière : pastille à sa couleur, nom, niveau, barre fine et XP restant avant le niveau suivant.
+private struct SubjectProgressRow: View {
+    @Environment(LanguageManager.self) private var languageManager
+    let subject: Subject
+    let xp: Int
+
+    private static let tiers: [(level: Int, lower: Int, upper: Int)] = ProgressManager.subjectXPTiers
+
+    private var currentTier: (level: Int, lower: Int, upper: Int) {
+        Self.tiers.last(where: { xp >= $0.lower }) ?? Self.tiers[0]
+    }
+
+    private var progressInLevel: Double {
+        let tier = currentTier
+        if tier.level == ProgressManager.maxSubjectLevel { return 1.0 }
+        let span = max(1, tier.upper - tier.lower)
+        let inLevel = max(0, xp - tier.lower)
+        return min(1.0, Double(inLevel) / Double(span))
+    }
+
+    private var progressLabel: String {
+        let tier = currentTier
+        if tier.level == ProgressManager.maxSubjectLevel {
+            return String(format: languageManager.text("profile.progress.max"), xp)
+        }
+        let toNext = max(0, tier.upper - xp)
+        return String(format: languageManager.text("profile.progress.toNext"), xp, toNext, tier.level + 1)
+    }
+
+    var body: some View {
+        HStack(alignment: .center, spacing: 14) {
+            Image(systemName: subject.icon)
+                .font(.system(size: 17, weight: .semibold))
+                .foregroundStyle(subject.color)
+                .frame(width: 44, height: 44)
+                .background(RoundedRectangle(cornerRadius: 14, style: .continuous).fill(subject.color.opacity(0.16)))
+                .accessibilityHidden(true)
+
+            VStack(alignment: .leading, spacing: 7) {
+                HStack(alignment: .firstTextBaseline, spacing: 8) {
+                    Text(subject.localizedShortName(language: languageManager.current))
+                        .font(DS.title(.subheadline, .heavy))
+                        .foregroundStyle(DS.ink)
+                        .multilineTextAlignment(.leading)
+                        .fixedSize(horizontal: false, vertical: true)
+                    Spacer(minLength: 4)
+                    Text(String(format: languageManager.text("common.levelShort"), currentTier.level))
+                        .font(DS.sans(.caption2, .bold))
+                        .foregroundStyle(DS.accent)
+                        .lineLimit(1)
+                        .padding(.horizontal, 8)
+                        .padding(.vertical, 3)
+                        .background(Capsule().fill(DS.accentTint))
+                }
+
+                ProgressPageBar(fraction: progressInLevel, tint: subject.color, height: 6)
+
+                Text(progressLabel)
+                    .font(DS.sans(.caption, .medium))
+                    .foregroundStyle(DS.inkSecondary)
+                    .monospacedDigit()
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+        }
+        .padding(.horizontal, 14)
+        .padding(.vertical, 14)
+        .accessibilityElement(children: .combine)
     }
 }
 
@@ -676,73 +930,6 @@ struct ProfileCardPress: ButtonStyle {
             .scaleEffect(configuration.isPressed ? 0.98 : 1)
             .opacity(configuration.isPressed ? 0.92 : 1)
             .animation(.spring(response: 0.2, dampingFraction: 0.8), value: configuration.isPressed)
-    }
-}
-
-// MARK: - Subject progress card
-
-private struct SubjectProgressCard: View {
-    @Environment(LanguageManager.self) private var languageManager
-    let subject: Subject
-    let xp: Int
-
-    private static let tiers: [(level: Int, lower: Int, upper: Int)] = ProgressManager.subjectXPTiers
-
-    private var currentTier: (level: Int, lower: Int, upper: Int) {
-        Self.tiers.last(where: { xp >= $0.lower }) ?? Self.tiers[0]
-    }
-
-    private var progressInLevel: Double {
-        let tier = currentTier
-        if tier.level == ProgressManager.maxSubjectLevel { return 1.0 }
-        let span = max(1, tier.upper - tier.lower)
-        let inLevel = max(0, xp - tier.lower)
-        return min(1.0, Double(inLevel) / Double(span))
-    }
-
-    var body: some View {
-        VStack(alignment: .leading, spacing: 10) {
-            HStack(spacing: 10) {
-                Image(systemName: subject.icon)
-                    .font(.jakarta(size: 18, weight: .medium))
-                    .foregroundStyle(DS.accentSoft)
-                    .frame(width: 44, height: 44)
-                    .background(DS.accentTint, in: RoundedRectangle(cornerRadius: 14, style: .continuous))
-                Spacer(minLength: 0)
-                Text(String(format: languageManager.text("common.levelShort"), currentTier.level))
-                    .font(DS.sans(.caption2, .semibold))
-                    .foregroundStyle(DS.accentSoft)
-                    .padding(.horizontal, 8)
-                    .padding(.vertical, 3)
-                    .background(DS.accentTint, in: Capsule())
-            }
-
-            Text(subject.localizedShortName(language: languageManager.current))
-                .font(DS.title(.subheadline, .semibold))
-                .foregroundStyle(DS.ink)
-                .lineLimit(2)
-                .minimumScaleFactor(0.85)
-
-            CalmProgressBar(fraction: progressInLevel, height: 6)
-
-            Text(progressLabel)
-                .font(DS.sans(.caption2, .medium))
-                .foregroundStyle(DS.inkSecondary)
-                .lineLimit(2)
-
-            Spacer(minLength: 0)
-        }
-        .frame(maxWidth: .infinity, minHeight: 138, alignment: .topLeading)
-        .dsCard(padding: 14)
-    }
-
-    private var progressLabel: String {
-        let tier = currentTier
-        if tier.level == ProgressManager.maxSubjectLevel {
-            return String(format: languageManager.text("profile.progress.max"), xp)
-        }
-        let toNext = max(0, tier.upper - xp)
-        return String(format: languageManager.text("profile.progress.toNext"), xp, toNext, tier.level + 1)
     }
 }
 
@@ -792,91 +979,6 @@ struct GlobalRankRing: View {
                 appeared = true
             }
         }
-    }
-}
-
-// MARK: - Subject mastery radar (hexagon)
-
-private struct SubjectRadarChart: View {
-    let values: [(subject: Subject, value: Double)]
-
-    @State private var appeared = false
-
-    private func angle(_ i: Int) -> Double { -.pi / 2 + Double(i) * (.pi / 3) }
-
-    private func point(_ center: CGPoint, _ radius: CGFloat, _ i: Int) -> CGPoint {
-        CGPoint(x: center.x + cos(angle(i)) * radius, y: center.y + sin(angle(i)) * radius)
-    }
-
-    private func hexPath(_ center: CGPoint, _ radius: CGFloat) -> Path {
-        var p = Path()
-        for i in 0..<6 {
-            let pt = point(center, radius, i)
-            if i == 0 { p.move(to: pt) } else { p.addLine(to: pt) }
-        }
-        p.closeSubpath()
-        return p
-    }
-
-    private func dataPath(_ center: CGPoint, _ maxR: CGFloat, _ scale: CGFloat) -> Path {
-        var p = Path()
-        for i in 0..<6 {
-            let r = max(2, maxR * CGFloat(values[i].value) * scale)
-            let pt = point(center, r, i)
-            if i == 0 { p.move(to: pt) } else { p.addLine(to: pt) }
-        }
-        p.closeSubpath()
-        return p
-    }
-
-    var body: some View {
-        GeometryReader { geo in
-            let side = min(geo.size.width, geo.size.height)
-            let center = CGPoint(x: geo.size.width / 2, y: geo.size.height / 2)
-            let maxR = side / 2 - 30
-            let scale: CGFloat = appeared ? 1 : 0.001
-
-            ZStack {
-                ForEach(1...3, id: \.self) { ring in
-                    hexPath(center, maxR * CGFloat(ring) / 3)
-                        .stroke(DS.hairline, lineWidth: 1)
-                }
-
-                Path { p in
-                    for i in 0..<6 {
-                        p.move(to: center)
-                        p.addLine(to: point(center, maxR, i))
-                    }
-                }
-                .stroke(DS.hairline, lineWidth: 1)
-
-                dataPath(center, maxR, scale)
-                    .fill(DS.accentSoft.opacity(0.16))
-
-                dataPath(center, maxR, scale)
-                    .stroke(DS.accentSoft, lineWidth: 2)
-
-                ForEach(0..<6, id: \.self) { i in
-                    Circle()
-                        .fill(DS.accentSoft)
-                        .frame(width: 8, height: 8)
-                        .position(point(center, max(2, maxR * CGFloat(values[i].value) * scale), i))
-                }
-
-                ForEach(0..<6, id: \.self) { i in
-                    Image(systemName: values[i].subject.icon)
-                        .font(.jakarta(size: 16, weight: .medium))
-                        .foregroundStyle(DS.inkSecondary)
-                        .position(point(center, maxR + 22, i))
-                }
-            }
-            .onAppear {
-                withAnimation(.spring(response: 0.7, dampingFraction: 0.7).delay(0.15)) {
-                    appeared = true
-                }
-            }
-        }
-        .aspectRatio(1, contentMode: .fit)
     }
 }
 
