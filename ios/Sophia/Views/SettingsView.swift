@@ -19,6 +19,7 @@ struct SettingsView: View {
     @State private var showTerms: Bool = false
     @State private var showPrivacy: Bool = false
     @State private var showFeedback: Bool = false
+    @State private var showFeatureRequest: Bool = false
     @State private var showShare: Bool = false
     /// Choix du rôle (UGC ou slideshow) avant d'ouvrir la page créateurs du site.
     @State private var showCreatorChoice: Bool = false
@@ -137,6 +138,7 @@ struct SettingsView: View {
             .sheet(isPresented: $showTerms) { TermsView().sophiaSheetChrome() }
             .sheet(isPresented: $showPrivacy) { PrivacyPolicyView().sophiaSheetChrome() }
             .sheet(isPresented: $showFeedback) { FeedbackView(isPremium: store.isPremium) }
+            .sheet(isPresented: $showFeatureRequest) { FeedbackView(isPremium: store.isPremium, initialCategory: .feature) }
             .sheet(isPresented: $showShare) { ShareSophiaSheet().sophiaSheetChrome() }
             .confirmationDialog(
                 languageManager.text("settings.ambassador.banner.title"),
@@ -409,6 +411,15 @@ struct SettingsView: View {
                 ) {
                     hapticTrigger += 1
                     showFeedback = true
+                }
+                rowDivider
+                actionRow(
+                    icon: "lightbulb",
+                    title: languageManager.text("settings.featureRequest.title"),
+                    subtitle: languageManager.text("settings.featureRequest.subtitle")
+                ) {
+                    hapticTrigger += 1
+                    showFeatureRequest = true
                 }
             }
         }

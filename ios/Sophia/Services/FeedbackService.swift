@@ -5,6 +5,8 @@ enum FeedbackService {
     enum Category: String, CaseIterable, Identifiable {
         case bug
         case idea
+        /// Une fonctionnalité demandée (entrée « Demander une fonctionnalité » des réglages).
+        case feature
         case content
         case translation
         case other

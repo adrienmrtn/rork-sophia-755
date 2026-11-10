@@ -6,7 +6,7 @@ struct FeedbackView: View {
 
     let isPremium: Bool
 
-    @State private var category: FeedbackService.Category = .idea
+    @State private var category: FeedbackService.Category
     @State private var message: String = ""
     @State private var email: String = ""
     @State private var isSubmitting = false
@@ -17,6 +17,13 @@ struct FeedbackView: View {
     private enum Field {
         case message
         case email
+    }
+
+    /// `initialCategory` : la catégorie présélectionnée (« Demander une fonctionnalité » ouvre
+    /// le formulaire sur la sienne).
+    init(isPremium: Bool, initialCategory: FeedbackService.Category = .idea) {
+        self.isPremium = isPremium
+        _category = State(initialValue: initialCategory)
     }
 
     private let messageLimit = 2_000
@@ -35,7 +42,7 @@ struct FeedbackView: View {
 
             VStack(spacing: 0) {
                 LegalHeader(
-                    title: languageManager.text("feedback.title"),
+                    title: languageManager.text(category == .feature ? "feedback.feature.title" : "feedback.title"),
                     onClose: { dismiss() }
                 )
 
@@ -168,7 +175,7 @@ struct FeedbackView: View {
     private var messageField: some View {
         ZStack(alignment: .topLeading) {
             if message.isEmpty {
-                Text(languageManager.text("feedback.message.placeholder"))
+                Text(languageManager.text(category == .feature ? "feedback.feature.placeholder" : "feedback.message.placeholder"))
                     .font(DS.sans(.body))
                     .foregroundStyle(DS.inkTertiary)
                     .padding(.horizontal, 14)

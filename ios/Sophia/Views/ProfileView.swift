@@ -10,6 +10,8 @@ struct ProfileView: View {
     /// The anti-scroll paywall (`.blocker`), for the TikTok blocker card and its settings.
     var onShowBlockerPaywall: (() -> Void)? = nil
     var onResetOnboarding: (() -> Void)? = nil
+    /// Vrai quand la page est poussée dans la pile d'un autre écran (pas de pile à elle).
+    var embedded: Bool = false
 
     @State private var showSettings: Bool = false
     @State private var showFavorites: Bool = false
@@ -24,130 +26,11 @@ struct ProfileView: View {
     @Bindable private var social = SocialService.shared
 
     var body: some View {
-        NavigationStack {
-            ZStack {
-                DS.canvas.ignoresSafeArea()
-
-                ScrollView {
-                    VStack(alignment: .leading, spacing: 26) {
-                        titleBar
-                            .padding(.horizontal, 20)
-                            .padding(.top, 4)
-
-                        identityHeader
-                            .padding(.horizontal, 20)
-
-                        statsSection
-                            .padding(.horizontal, 20)
-
-                        tiktokBlockerCard
-                            .padding(.horizontal, 20)
-
-                        shareCard
-                            .padding(.horizontal, 20)
-
-                        FriendsLeaderboardSection(social: social)
-                            .padding(.horizontal, 20)
-
-                        subjectLevelsSection
-                            .padding(.horizontal, 20)
-
-                        favoritesShortcut
-                            .padding(.horizontal, 20)
-
-                        quizSection
-                            .padding(.horizontal, 20)
-                            .padding(.bottom, 40)
-                    }
-                    .opacity(appeared ? 1 : 0)
-                    .offset(y: appeared ? 0 : 12)
-                }
-                .scrollIndicators(.hidden)
-            }
-            .navigationBarHidden(true)
-            .sensoryFeedback(.impact(weight: .light), trigger: hapticTrigger)
-            .fullScreenCover(isPresented: $showTikTokBlocker) {
-                TikTokBlockerSettingsView(
-                    store: store,
-                    onShowPaywall: {
-                        // The settings cover has to be gone before the paywall cover comes
-                        // up, or the two presentations race and neither appears.
-                        showTikTokBlocker = false
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
-                            (onShowBlockerPaywall ?? onShowPaywall)?()
-                        }
-                    },
-                    presentedAsCover: true
-                )
-                .sophiaColorScheme()
-            }
-            .sheet(isPresented: $showShare) {
-                ShareSophiaSheet()
-                    .sophiaSheetChrome()
-            }
-            // « Active l'anti-scroll » : l'explication d'abord, puis les réglages (membre) ou
-            // le paywall du blocker.
-            .sheet(isPresented: $showAntiScrollIntro) {
-                AntiScrollIntroSheet {
-                    showAntiScrollIntro = false
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
-                        if store.isPremium {
-                            showTikTokBlocker = true
-                        } else {
-                            (onShowBlockerPaywall ?? onShowPaywall)?()
-                        }
-                    }
-                }
-                .sophiaSheetChrome()
-            }
-            .fullScreenCover(isPresented: $showSettings) {
-                SettingsView(
-                    progressManager: progressManager,
-                    store: store,
-                    onShowPaywall: onShowPaywall,
-                    onResetOnboarding: onResetOnboarding,
-                    onDismiss: { showSettings = false }
-                )
-                .sophiaColorScheme()
-            }
-            .fullScreenCover(isPresented: $showFavorites) {
-                FavoritesSheet(
-                    progressManager: progressManager,
-                    selectedCourse: $selectedCourse,
-                    onDismiss: { showFavorites = false }
-                )
-                .sophiaColorScheme()
-            }
-            .fullScreenCover(isPresented: $showAllQuizzes) {
-                AllQuizzesView(
-                    progressManager: progressManager,
-                    selectedCourse: $selectedCourse,
-                    onDismiss: { showAllQuizzes = false }
-                )
-                .sophiaColorScheme()
-            }
-            .fullScreenCover(isPresented: $showPendingGlobalRankUp) {
-                if let pending = progressManager.pendingGlobalRankUp() {
-                    GlobalRankUpCelebrationView(
-                        previousRank: pending.previous,
-                        newRank: pending.new,
-                        newLevel: pending.newLevel,
-                        onContinue: {
-                            progressManager.clearPendingGlobalRankUp()
-                            showPendingGlobalRankUp = false
-                        }
-                    )
-                    .sophiaColorScheme()
-                }
-            }
-            .sheet(isPresented: $showEditHandle) {
-                if let handle = social.myHandle {
-                    EditHandleSheet(currentHandle: handle) { _ in
-                        Task { await social.refreshAll() }
-                    }
-                    .presentationDetents([.medium])
-                    .sophiaSheetChrome()
-                }
+        Group {
+            if embedded {
+                page
+            } else {
+                NavigationStack { page }
             }
         }
         .task(id: auth.isSignedIn) {
@@ -167,6 +50,137 @@ struct ProfileView: View {
                         showPendingGlobalRankUp = true
                     }
                 }
+            }
+        }
+    }
+
+    /// Le contenu de la page. Racine d'onglet (navigation classique), il vit dans sa propre pile
+    /// de navigation ; poussé depuis le nouveau profil (« Ma progression »), il s'insère dans la
+    /// pile qui l'a poussé (SwiftUI ne prend pas en charge une pile imbriquée dans une destination).
+    private var page: some View {
+        ZStack {
+            DS.canvas.ignoresSafeArea()
+
+            ScrollView {
+                VStack(alignment: .leading, spacing: 26) {
+                    titleBar
+                        .padding(.horizontal, 20)
+                        .padding(.top, 4)
+
+                    identityHeader
+                        .padding(.horizontal, 20)
+
+                    statsSection
+                        .padding(.horizontal, 20)
+
+                    tiktokBlockerCard
+                        .padding(.horizontal, 20)
+
+                    shareCard
+                        .padding(.horizontal, 20)
+
+                    FriendsLeaderboardSection(social: social)
+                        .padding(.horizontal, 20)
+
+                    subjectLevelsSection
+                        .padding(.horizontal, 20)
+
+                    favoritesShortcut
+                        .padding(.horizontal, 20)
+
+                    quizSection
+                        .padding(.horizontal, 20)
+                        .padding(.bottom, 40)
+                }
+                .opacity(appeared ? 1 : 0)
+                .offset(y: appeared ? 0 : 12)
+            }
+            .scrollIndicators(.hidden)
+        }
+        // Page poussée : la barre du système reste, c'est elle qui porte le bouton retour.
+        .navigationBarHidden(!embedded)
+        .sensoryFeedback(.impact(weight: .light), trigger: hapticTrigger)
+        .fullScreenCover(isPresented: $showTikTokBlocker) {
+            TikTokBlockerSettingsView(
+                store: store,
+                onShowPaywall: {
+                    // The settings cover has to be gone before the paywall cover comes
+                    // up, or the two presentations race and neither appears.
+                    showTikTokBlocker = false
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+                        (onShowBlockerPaywall ?? onShowPaywall)?()
+                    }
+                },
+                presentedAsCover: true
+            )
+            .sophiaColorScheme()
+        }
+        .sheet(isPresented: $showShare) {
+            ShareSophiaSheet()
+                .sophiaSheetChrome()
+        }
+        // « Active l'anti-scroll » : l'explication d'abord, puis les réglages (membre) ou
+        // le paywall du blocker.
+        .sheet(isPresented: $showAntiScrollIntro) {
+            AntiScrollIntroSheet {
+                showAntiScrollIntro = false
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+                    if store.isPremium {
+                        showTikTokBlocker = true
+                    } else {
+                        (onShowBlockerPaywall ?? onShowPaywall)?()
+                    }
+                }
+            }
+            .sophiaSheetChrome()
+        }
+        .fullScreenCover(isPresented: $showSettings) {
+            SettingsView(
+                progressManager: progressManager,
+                store: store,
+                onShowPaywall: onShowPaywall,
+                onResetOnboarding: onResetOnboarding,
+                onDismiss: { showSettings = false }
+            )
+            .sophiaColorScheme()
+        }
+        .fullScreenCover(isPresented: $showFavorites) {
+            FavoritesSheet(
+                progressManager: progressManager,
+                selectedCourse: $selectedCourse,
+                onDismiss: { showFavorites = false }
+            )
+            .sophiaColorScheme()
+        }
+        .fullScreenCover(isPresented: $showAllQuizzes) {
+            AllQuizzesView(
+                progressManager: progressManager,
+                selectedCourse: $selectedCourse,
+                onDismiss: { showAllQuizzes = false }
+            )
+            .sophiaColorScheme()
+        }
+        .fullScreenCover(isPresented: $showPendingGlobalRankUp) {
+            if let pending = progressManager.pendingGlobalRankUp() {
+                GlobalRankUpCelebrationView(
+                    previousRank: pending.previous,
+                    newRank: pending.new,
+                    newLevel: pending.newLevel,
+                    onContinue: {
+                        progressManager.clearPendingGlobalRankUp()
+                        showPendingGlobalRankUp = false
+                    }
+                )
+                .sophiaColorScheme()
+            }
+        }
+        .sheet(isPresented: $showEditHandle) {
+            if let handle = social.myHandle {
+                EditHandleSheet(currentHandle: handle) { _ in
+                    Task { await social.refreshAll() }
+                }
+                .presentationDetents([.medium])
+                .sophiaSheetChrome()
             }
         }
     }

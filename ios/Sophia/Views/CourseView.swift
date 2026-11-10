@@ -47,6 +47,8 @@ struct CourseView: View {
     @State private var selectedGlossaryEntry: GlossaryEntry? = nil
     /// Professor whose page is open (byline or "written by" card tapped).
     @State private var presentedAuthor: CourseAuthor? = nil
+    /// « Voir l'original » : la langue d'écriture du cours, quand son texte original est ouvert.
+    @State private var originalLanguage: AppLanguage? = nil
     /// Full audio player, opened by the headphones in the header.
     @State private var showAudioPlayer: Bool = false
     @State private var showAudioPaywall: Bool = false
@@ -279,6 +281,10 @@ struct CourseView: View {
             AudioPlayerView()
                 .sophiaSheetChrome()
         }
+        .sheet(item: $originalLanguage) { language in
+            OriginalCourseView(courseId: course.id, language: language)
+                .sophiaSheetChrome()
+        }
         .audioPlayChoiceDialog(isPresented: $showAudioChoice, courseId: course.id, source: "course_reader") {
             CourseAudioPlayer.shared.play(courseId: course.id, source: "course_reader")
             showAudioPlayer = true
@@ -448,7 +454,9 @@ struct CourseView: View {
                     let wasFollowing = progressManager.isFollowing(author.slug)
                     progressManager.toggleFollow(author.slug)
                     AnalyticsService.shared.log(wasFollowing ? .unfollow : .follow, courseId: course.id, screen: "reader", props: ["creator": .string(author.slug)])
-                }
+                },
+                // Le texte original entier n'est proposé qu'à qui peut lire le cours entier.
+                onShowOriginal: hasFullAccess ? { language in originalLanguage = language } : nil
             )
         } else {
             VStack(alignment: .leading, spacing: 24) {
