@@ -130,7 +130,21 @@ final class SocialService {
 
     private let client = SupabaseManager.shared
 
-    private init() {}
+    /// Le dernier @ lu, gardé d'un lancement à l'autre : le profil l'affiche tout de suite, sans
+    /// attendre la réponse du serveur.
+    private static let handleCacheKey = "sophia_my_handle"
+
+    private init() {
+        myHandle = UserDefaults.standard.string(forKey: Self.handleCacheKey)
+    }
+
+    private func rememberHandle(_ handle: String?) {
+        if let handle, !handle.isEmpty {
+            UserDefaults.standard.set(handle, forKey: Self.handleCacheKey)
+        } else {
+            UserDefaults.standard.removeObject(forKey: Self.handleCacheKey)
+        }
+    }
 
     // MARK: - Profile handle
 
@@ -152,6 +166,7 @@ final class SocialService {
                 .execute()
                 .value
             myHandle = rows.first?.handle
+            rememberHandle(myHandle)
         } catch {
             #if DEBUG
             print("[Social] refreshMyHandle failed: \(error)")
@@ -174,6 +189,7 @@ final class SocialService {
                 .execute()
                 .value
             myHandle = updated
+            rememberHandle(updated)
             return updated
         } catch {
             throw SocialError.from(error)
@@ -335,6 +351,7 @@ final class SocialService {
 
     func clearLocalState() {
         myHandle = nil
+        rememberHandle(nil)
         leaderboard = []
         pendingRequests = []
     }

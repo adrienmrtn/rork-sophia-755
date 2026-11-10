@@ -226,7 +226,7 @@ struct DuelMatchmakingView: View {
         guard !Task.isCancelled else { return }
 
         // Les portraits de la partie, chargés pendant la présentation de l'adversaire.
-        let images = (fetched.questions + [fetched.tiebreak]).compactMap(\.imageURL)
+        let images = fetched.allQuestions.compactMap(\.imageURL)
         Task {
             for url in images {
                 _ = await RemoteImageLoader.image(url)

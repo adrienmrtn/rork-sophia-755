@@ -8,8 +8,12 @@ le dit, et le niveau de difficulté du joueur n'est jamais affiché.
 
 ## Règles
 
-- **20 questions**, quatre types : QCM (12 s), vrai/faux (8 s), portrait « qui est-ce ? » (10 s),
-  curseur (15 s). Une partie compte 9 QCM, 4 vrai/faux, 4 portraits et 3 curseurs.
+- **20 questions en quatre manches de cinq.** Manche 1 : toutes les matières. Manche 2 : le
+  joueur choisit la matière parmi trois (8 secondes ; entre amis, c'est celui qui a lancé le
+  défi). Manche 3 : l'adversaire choisit parmi trois autres. Manche 4 : sprint, des QCM et des
+  vrai/faux aux chronos courts (60 % du temps habituel), sans points doublés.
+- Quatre types de questions : QCM (12 s), vrai/faux (8 s), portrait « qui est-ce ? » (10 s),
+  curseur (15 s).
 - **1 point par bonne réponse.** Au curseur, le plus proche de la bonne valeur marque (les deux
   à distance égale).
 - **Égalité après 20 questions** : une 21e question au curseur, en mort subite. Le plus proche
@@ -53,11 +57,28 @@ Fonctions appelées par l'app (réservées aux comptes connectés) :
 Une partie restée ouverte est close comme un abandon au lancement de la suivante, ou au bout de
 12 minutes au prochain passage sur la page.
 
+## Manches
+
+`supabase/migrations/20261110020000_duel_rounds.sql`. Les cinq questions de chaque matière
+proposée sont tirées au lancement de la partie : choisir une matière ne demande aucun
+aller-retour de plus.
+
+- Duel classé : `duel_start_match_v2()` rend les quatre manches (`rounds`) ; la manche 2 porte
+  trois matières avec leurs questions et les réponses de l'adversaire, la manche 3 la matière
+  « choisie » par l'adversaire. `duel_finish_match_v2(..., p_pick)` reçoit la matière choisie et
+  recompte le score avec ses questions. Les fonctions d'avant restent pour les apps pas à jour.
+- Duel entre amis : `duel_friend_pick(p_match, p_round, p_subject)` pendant l'annonce de la
+  manche (9 secondes avant la première question) ; sans choix à temps, la première matière
+  proposée. L'état de la partie porte `picks`.
+- Dans l'app : `DuelGameModel` annonce chaque manche (`DuelRoundIntroView`) puis fixe ses
+  questions ; le fil du score est groupé par manche.
+
 ## Contenu
 
-- Questions : `scripts/duels_questions_source.py` (80 questions, 10 par niveau).
+- Questions : `scripts/duels_questions_source.py` (137 questions, une vingtaine par matière, sur
+  8 niveaux).
 - Ligues, adversaires et SQL : `python3 scripts/build_duels_seed.py` écrit `content/duels/*.json`
-  et `supabase/migrations/20261109010100_duels_seed.sql`.
+  et `supabase/migrations/20261110020100_duels_seed_v2.sql` (tout le contenu, republié en entier).
 - Pour ajouter des questions : les écrire dans la source, relancer le script, exécuter le SQL généré.
 - Portraits : Wikimedia Commons, domaine public, crédits dans `content/duels/portraits.json` et
   dans `duel_questions.image_credit`.

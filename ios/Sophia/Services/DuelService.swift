@@ -46,6 +46,8 @@ final class DuelService {
         let matchId: UUID
         var answers: [DuelAnswer]
         var abandoned: Bool
+        /// La matière choisie pour la manche au choix.
+        var pick: String?
     }
 
     private init() {
@@ -129,10 +131,10 @@ final class DuelService {
         await flushPendingFinish(evenWhilePlaying: true)
         do {
             let match: DuelMatch = try await client
-                .rpc("duel_start_match")
+                .rpc("duel_start_match_v2")
                 .execute()
                 .value
-            storePending(PendingFinish(userId: userId, matchId: match.matchId, answers: [], abandoned: true))
+            storePending(PendingFinish(userId: userId, matchId: match.matchId, answers: [], abandoned: true, pick: nil))
             return match
         } catch {
             throw DuelError.from(error)
@@ -141,11 +143,11 @@ final class DuelService {
 
     /// Envoie la fin d'une partie et applique le résultat (trophées, statistiques) à la page.
     /// En cas d'échec, les réponses restent gardées et repartiront au prochain passage.
-    func finishMatch(matchId: UUID, answers: [DuelAnswer], abandoned: Bool) async throws -> DuelResult {
+    func finishMatch(matchId: UUID, answers: [DuelAnswer], abandoned: Bool, pick: String?) async throws -> DuelResult {
         guard AuthService.shared.isSignedIn, let userId else { throw DuelError.notSignedIn }
-        storePending(PendingFinish(userId: userId, matchId: matchId, answers: answers, abandoned: abandoned))
+        storePending(PendingFinish(userId: userId, matchId: matchId, answers: answers, abandoned: abandoned, pick: pick))
         do {
-            let result = try await sendFinish(matchId: matchId, answers: answers, abandoned: abandoned)
+            let result = try await sendFinish(matchId: matchId, answers: answers, abandoned: abandoned, pick: pick)
             clearPending(matchId: matchId)
             apply(result)
             return result
@@ -154,14 +156,15 @@ final class DuelService {
         }
     }
 
-    private func sendFinish(matchId: UUID, answers: [DuelAnswer], abandoned: Bool) async throws -> DuelResult {
+    private func sendFinish(matchId: UUID, answers: [DuelAnswer], abandoned: Bool, pick: String?) async throws -> DuelResult {
         struct Params: Encodable {
             let p_match_id: UUID
             let p_answers: [DuelAnswer]
             let p_abandoned: Bool
+            let p_pick: String?
         }
         return try await client
-            .rpc("duel_finish_match", params: Params(p_match_id: matchId, p_answers: answers, p_abandoned: abandoned))
+            .rpc("duel_finish_match_v2", params: Params(p_match_id: matchId, p_answers: answers, p_abandoned: abandoned, p_pick: pick))
             .execute()
             .value
     }
@@ -196,7 +199,7 @@ final class DuelService {
             return
         }
         do {
-            _ = try await sendFinish(matchId: pending.matchId, answers: pending.answers, abandoned: pending.abandoned)
+            _ = try await sendFinish(matchId: pending.matchId, answers: pending.answers, abandoned: pending.abandoned, pick: pending.pick)
             clearPending(matchId: pending.matchId)
         } catch {
             // Partie inconnue du serveur (compte changé, base réinitialisée) : rien à renvoyer.

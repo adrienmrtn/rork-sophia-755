@@ -134,6 +134,8 @@ struct CourseStepReaderView: View {
     let onFollowAuthor: (CourseAuthor) -> Void
     let onUnlock: () -> Void
     let onDoubleTap: () -> Void
+    /// « Voir l'original » (nil : non proposé, par exemple quand le cours n'est pas lisible en entier).
+    var onShowOriginal: ((AppLanguage) -> Void)? = nil
 
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
@@ -210,7 +212,8 @@ struct CourseStepReaderView: View {
                     section: resolved.section,
                     isFirst: resolved.isFirst,
                     accent: accent,
-                    onAuthorTap: onAuthorTap
+                    onAuthorTap: onAuthorTap,
+                    onShowOriginal: onShowOriginal
                 )
             }
 
@@ -240,7 +243,8 @@ struct CourseStepReaderView: View {
                     content: resolved.content,
                     onAuthorTap: onAuthorTap,
                     isFollowingAuthor: isFollowingAuthor,
-                    onFollowAuthor: onFollowAuthor
+                    onFollowAuthor: onFollowAuthor,
+                    onShowOriginal: onShowOriginal
                 )
             }
 

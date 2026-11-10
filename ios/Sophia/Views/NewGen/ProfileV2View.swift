@@ -5,6 +5,7 @@ import SwiftUI
 /// amis, anti-scroll). L'ancien profil reste accessible comme page « Ma progression ».
 struct ProfileV2View: View {
     @Environment(LanguageManager.self) private var languageManager
+    @Environment(AuthService.self) private var auth
     let progressManager: ProgressManager
     let store: StoreViewModel
     let onOpenCourse: (Course) -> Void
@@ -13,7 +14,6 @@ struct ProfileV2View: View {
     let onOpenList: (ProfileListKind) -> Void
     let onOpenCampaign: (Campaign) -> Void
     let onOpenProgression: () -> Void
-    let onOpenFriends: () -> Void
     let onOpenAntiScroll: () -> Void
     let onDiscoverCreators: () -> Void
     let onBecomeCreator: () -> Void
@@ -36,6 +36,8 @@ struct ProfileV2View: View {
                 ResumeCoursesSection(progressManager: progressManager, onResume: onResumeCourse)
                     .padding(.horizontal, -20)
                 followingSection
+                // Les amis et leur classement, à même la page (plus de page à part).
+                FriendsLeaderboardSection(social: social)
                 badgesSection
                 listsSection
                 creatorCard
@@ -46,6 +48,14 @@ struct ProfileV2View: View {
         }
         .scrollIndicators(.hidden)
         .background(DS.canvas.ignoresSafeArea())
+        // Le @ affiché en tête, le classement des amis et les demandes reçues.
+        .task(id: auth.isSignedIn) {
+            if auth.isSignedIn {
+                await social.refreshAll()
+            } else if !auth.isBootstrapping {
+                social.clearLocalState()
+            }
+        }
         .sheet(isPresented: $showAvatarPicker) {
             AvatarPickerSheet(current: progressManager.avatarId, initial: String(displayName.prefix(1)).uppercased()) { progressManager.setAvatar($0) }
         }
@@ -73,6 +83,11 @@ struct ProfileV2View: View {
                 showSettings = true
             }
         }
+    }
+
+    private var hasHandle: Bool {
+        guard let handle = social.myHandle else { return false }
+        return !handle.isEmpty
     }
 
     private var displayName: String {
@@ -104,22 +119,18 @@ struct ProfileV2View: View {
             .buttonStyle(.plain)
             .accessibilityLabel(languageManager.text("profile.avatar.title"))
             VStack(alignment: .leading, spacing: 3) {
-                Text(displayName)
+                // Le @ du compte ; sans compte (ou tant qu'il n'est pas lu), le surnom de l'onboarding.
+                Text(hasHandle ? "@\(displayName)" : displayName)
                     .font(DS.title(.title3, .heavy))
                     .foregroundStyle(DS.ink)
                     .lineLimit(1)
-                HStack(spacing: 4) {
-                    if let handle = social.myHandle, !handle.isEmpty {
-                        Text("@\(handle)")
-                    }
-                    if let memberSince {
-                        if social.myHandle != nil { Text("·") }
-                        Text(String(format: languageManager.text("profile.member.since"), memberSince))
-                    }
+                    .minimumScaleFactor(0.7)
+                if let memberSince {
+                    Text(String(format: languageManager.text("profile.member.since"), memberSince))
+                        .font(DS.sans(.footnote))
+                        .foregroundStyle(DS.inkSecondary)
+                        .lineLimit(1)
                 }
-                .font(DS.sans(.footnote))
-                .foregroundStyle(DS.inkSecondary)
-                .lineLimit(1)
             }
             Spacer(minLength: 0)
         }
@@ -401,8 +412,6 @@ struct ProfileV2View: View {
     private var secondaryPages: some View {
         VStack(spacing: 0) {
             pageRow(languageManager.text("profile.page.progression"), action: onOpenProgression)
-            Rectangle().fill(DS.hairline).frame(height: 1).padding(.leading, 16)
-            pageRow(languageManager.text("profile.page.friends"), action: onOpenFriends)
             Rectangle().fill(DS.hairline).frame(height: 1).padding(.leading, 16)
             pageRow(languageManager.text("profile.page.antiScroll"), action: onOpenAntiScroll)
         }

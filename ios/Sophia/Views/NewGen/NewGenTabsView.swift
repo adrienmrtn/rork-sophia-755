@@ -13,7 +13,6 @@ enum NewGenRoute: Hashable {
     case universe(subcategory: String)
     /// L'ancien profil (rang, matières, quiz, amis, anti-scroll), désormais page secondaire.
     case progression
-    case friends
     case path
     case training
 }
@@ -175,7 +174,6 @@ struct NewGenTabsView: View {
                 onOpenList: { profilePath.append(.courseList($0)) },
                 onOpenCampaign: { profilePath.append(.campaign(slug: $0.slug)) },
                 onOpenProgression: { profilePath.append(.progression) },
-                onOpenFriends: { profilePath.append(.friends) },
                 onOpenAntiScroll: onOpenAntiScroll,
                 onDiscoverCreators: { selectedTab = 1 },
                 onBecomeCreator: openCreatorStudio,
@@ -281,12 +279,10 @@ struct NewGenTabsView: View {
                 selectedCourse: $selectedCourse,
                 onShowPaywall: { onShowPaywall(.debloquerCours) },
                 onShowBlockerPaywall: { onShowPaywall(.blocker) },
-                onResetOnboarding: onResetOnboarding
+                onResetOnboarding: onResetOnboarding,
+                embedded: true
             )
             .modifier(SystemBackBar())
-        case .friends:
-            FriendsHubView()
-                .toolbar(.hidden, for: .navigationBar)
         case .path:
             LearningPathView(progressManager: progressManager, selectedCourse: $selectedCourse)
                 .modifier(SystemBackBar())
@@ -333,28 +329,5 @@ private struct SystemBackBar: ViewModifier {
             .toolbarBackground(DS.canvas, for: .navigationBar)
             .toolbarBackground(.visible, for: .navigationBar)
             .tint(DS.accent)
-    }
-}
-
-/// Les amis et leur classement, en page secondaire du profil.
-struct FriendsHubView: View {
-    @Environment(LanguageManager.self) private var languageManager
-    @Environment(\.dismiss) private var dismiss
-
-    var body: some View {
-        ScrollView {
-            VStack(alignment: .leading, spacing: 20) {
-                HStack(spacing: 12) {
-                    RoundIconButton(systemImage: "chevron.left", accessibilityLabel: languageManager.text("common.close")) { dismiss() }
-                    Text(languageManager.text("profile.page.friends"))
-                        .font(DS.title(.title2, .heavy))
-                        .foregroundStyle(DS.ink)
-                    Spacer()
-                }
-                FriendsLeaderboardSection(social: SocialService.shared)
-            }
-            .padding(20)
-        }
-        .background(DS.canvas.ignoresSafeArea())
     }
 }

@@ -1420,6 +1420,19 @@ enum AppLocalizable {
         "onboardingV2.account.subtitle": "Choisis ton avatar et ton @. C'est avec lui que tes amis te trouveront.",
         "onboardingV2.follow.title": "Suis des profs",
         "onboardingV2.follow.subtitle": "Leurs nouveaux cours arriveront dans ton onglet Abonnements.",
+        // MARK: Demande de fonctionnalité
+        "settings.featureRequest.title": "Demander une fonctionnalité",
+        "settings.featureRequest.subtitle": "Dis-nous ce que tu aimerais voir dans Sophia",
+        "feedback.category.feature": "Fonctionnalité",
+        "feedback.feature.title": "Ta demande",
+        "feedback.feature.placeholder": "Décris la fonctionnalité que tu aimerais avoir…",
+        // MARK: Duels en manches
+        "duel.round.title": "Manche %d",
+        "duel.round.pick.title": "Choisis la matière",
+        "duel.round.pick.theirs": "@%@ choisit la matière…",
+        "duel.round.pick.theirChoice": "Le choix de @%@",
+        "duel.round.sprint.title": "Sprint final",
+        "duel.round.sprint.body": "Chronos courts : réponds vite !",
     ]
     // MARK: - English
 
@@ -2716,6 +2729,19 @@ enum AppLocalizable {
         "friends.error.handleNotAllowed": "This username isn't allowed. Pick another one.",
         "onboardingV2.follow.title": "Follow teachers",
         "onboardingV2.follow.subtitle": "Their new courses will show up in your Following tab.",
+        // MARK: Demande de fonctionnalité
+        "settings.featureRequest.title": "Request a feature",
+        "settings.featureRequest.subtitle": "Tell us what you'd like to see in Sophia",
+        "feedback.category.feature": "Feature",
+        "feedback.feature.title": "Your request",
+        "feedback.feature.placeholder": "Describe the feature you'd like to have…",
+        // MARK: Duels en manches
+        "duel.round.title": "Round %d",
+        "duel.round.pick.title": "Choose the subject",
+        "duel.round.pick.theirs": "@%@ is choosing the subject…",
+        "duel.round.pick.theirChoice": "@%@'s pick",
+        "duel.round.sprint.title": "Final sprint",
+        "duel.round.sprint.body": "Short timers: answer fast!",
     ]
     // MARK: - Spanish
 
@@ -4013,6 +4039,19 @@ enum AppLocalizable {
         "friends.error.handleNotAllowed": "Este @ no está permitido. Elige otro.",
         "onboardingV2.follow.title": "Sigue a profesores",
         "onboardingV2.follow.subtitle": "Sus nuevos cursos aparecerán en tu pestaña Siguiendo.",
+        // MARK: Demande de fonctionnalité
+        "settings.featureRequest.title": "Pedir una función",
+        "settings.featureRequest.subtitle": "Dinos qué te gustaría ver en Sophia",
+        "feedback.category.feature": "Función",
+        "feedback.feature.title": "Tu petición",
+        "feedback.feature.placeholder": "Describe la función que te gustaría tener…",
+        // MARK: Duels en manches
+        "duel.round.title": "Ronda %d",
+        "duel.round.pick.title": "Elige la materia",
+        "duel.round.pick.theirs": "@%@ está eligiendo la materia…",
+        "duel.round.pick.theirChoice": "Elección de @%@",
+        "duel.round.sprint.title": "Sprint final",
+        "duel.round.sprint.body": "Poco tiempo: ¡responde rápido!",
     ]
     // MARK: - German
 
@@ -5310,6 +5349,19 @@ enum AppLocalizable {
         "friends.error.handleNotAllowed": "Dieser @ ist nicht erlaubt. Wähle einen anderen.",
         "onboardingV2.follow.title": "Folge Profs",
         "onboardingV2.follow.subtitle": "Ihre neuen Kurse erscheinen in deinem Tab „Abos“.",
+        // MARK: Demande de fonctionnalité
+        "settings.featureRequest.title": "Funktion wünschen",
+        "settings.featureRequest.subtitle": "Sag uns, was du dir in Sophia wünschst",
+        "feedback.category.feature": "Funktion",
+        "feedback.feature.title": "Dein Wunsch",
+        "feedback.feature.placeholder": "Beschreibe die Funktion, die du dir wünschst…",
+        // MARK: Duels en manches
+        "duel.round.title": "Runde %d",
+        "duel.round.pick.title": "Wähle das Fach",
+        "duel.round.pick.theirs": "@%@ wählt das Fach…",
+        "duel.round.pick.theirChoice": "Wahl von @%@",
+        "duel.round.sprint.title": "Endspurt",
+        "duel.round.sprint.body": "Wenig Zeit: Antworte schnell!",
     ]
     // MARK: - Portuguese (Brazil)
 
@@ -6607,6 +6659,19 @@ enum AppLocalizable {
         "friends.error.handleNotAllowed": "Este @ não é permitido. Escolha outro.",
         "onboardingV2.follow.title": "Siga professores",
         "onboardingV2.follow.subtitle": "Os novos cursos deles vão aparecer na sua aba Seguindo.",
+        // MARK: Demande de fonctionnalité
+        "settings.featureRequest.title": "Pedir um recurso",
+        "settings.featureRequest.subtitle": "Diga o que você gostaria de ver na Sophia",
+        "feedback.category.feature": "Recurso",
+        "feedback.feature.title": "Seu pedido",
+        "feedback.feature.placeholder": "Descreva o recurso que você gostaria de ter…",
+        // MARK: Duels en manches
+        "duel.round.title": "Rodada %d",
+        "duel.round.pick.title": "Escolha a matéria",
+        "duel.round.pick.theirs": "@%@ está escolhendo a matéria…",
+        "duel.round.pick.theirChoice": "Escolha de @%@",
+        "duel.round.sprint.title": "Sprint final",
+        "duel.round.sprint.body": "Pouco tempo: responda rápido!",
     ]
 
     // MARK: - Portuguese (Portugal)
@@ -7905,6 +7970,19 @@ enum AppLocalizable {
         "friends.error.handleNotAllowed": "Este @ não é permitido. Escolhe outro.",
         "onboardingV2.follow.title": "Segue professores",
         "onboardingV2.follow.subtitle": "Os novos cursos deles vão aparecer no teu separador A seguir.",
+        // MARK: Demande de fonctionnalité
+        "settings.featureRequest.title": "Pedir uma funcionalidade",
+        "settings.featureRequest.subtitle": "Diz-nos o que gostavas de ver na Sophia",
+        "feedback.category.feature": "Funcionalidade",
+        "feedback.feature.title": "O teu pedido",
+        "feedback.feature.placeholder": "Descreve a funcionalidade que gostavas de ter…",
+        // MARK: Duels en manches
+        "duel.round.title": "Ronda %d",
+        "duel.round.pick.title": "Escolhe a matéria",
+        "duel.round.pick.theirs": "@%@ está a escolher a matéria…",
+        "duel.round.pick.theirChoice": "Escolha de @%@",
+        "duel.round.sprint.title": "Sprint final",
+        "duel.round.sprint.body": "Pouco tempo: responde depressa!",
     ]
     // MARK: - Italian
 
@@ -9202,6 +9280,19 @@ enum AppLocalizable {
         "friends.error.handleNotAllowed": "Questa @ non è consentita. Scegline un'altra.",
         "onboardingV2.follow.title": "Segui dei professori",
         "onboardingV2.follow.subtitle": "I loro nuovi corsi arriveranno nella tua scheda Seguiti.",
+        // MARK: Demande de fonctionnalité
+        "settings.featureRequest.title": "Richiedi una funzione",
+        "settings.featureRequest.subtitle": "Dicci cosa ti piacerebbe vedere su Sophia",
+        "feedback.category.feature": "Funzione",
+        "feedback.feature.title": "La tua richiesta",
+        "feedback.feature.placeholder": "Descrivi la funzione che vorresti avere…",
+        // MARK: Duels en manches
+        "duel.round.title": "Round %d",
+        "duel.round.pick.title": "Scegli la materia",
+        "duel.round.pick.theirs": "@%@ sta scegliendo la materia…",
+        "duel.round.pick.theirChoice": "La scelta di @%@",
+        "duel.round.sprint.title": "Sprint finale",
+        "duel.round.sprint.body": "Poco tempo: rispondi in fretta!",
     ]
     // MARK: - Turkish
 
@@ -10499,6 +10590,19 @@ enum AppLocalizable {
         "friends.error.handleNotAllowed": "Bu @ kullanılamaz. Başka bir tane seç.",
         "onboardingV2.follow.title": "Hocaları takip et",
         "onboardingV2.follow.subtitle": "Yeni kursları Takip sekmende görünecek.",
+        // MARK: Demande de fonctionnalité
+        "settings.featureRequest.title": "Özellik iste",
+        "settings.featureRequest.subtitle": "Sophia'da ne görmek istediğini bize söyle",
+        "feedback.category.feature": "Özellik",
+        "feedback.feature.title": "İsteğin",
+        "feedback.feature.placeholder": "İstediğin özelliği anlat…",
+        // MARK: Duels en manches
+        "duel.round.title": "%d. Tur",
+        "duel.round.pick.title": "Alanı seç",
+        "duel.round.pick.theirs": "@%@ alanı seçiyor…",
+        "duel.round.pick.theirChoice": "@%@ seçti:",
+        "duel.round.sprint.title": "Final sprinti",
+        "duel.round.sprint.body": "Süre kısa: hızlı cevap ver!",
     ]
     // MARK: - Polish
 
@@ -11797,6 +11901,19 @@ enum AppLocalizable {
         "friends.error.handleNotAllowed": "Ten @ jest niedozwolony. Wybierz inny.",
         "onboardingV2.follow.title": "Obserwuj wykładowców",
         "onboardingV2.follow.subtitle": "Ich nowe kursy pojawią się w zakładce Obserwowani.",
+        // MARK: Demande de fonctionnalité
+        "settings.featureRequest.title": "Zaproponuj funkcję",
+        "settings.featureRequest.subtitle": "Napisz, co chcesz zobaczyć w Sophii",
+        "feedback.category.feature": "Funkcja",
+        "feedback.feature.title": "Twoja propozycja",
+        "feedback.feature.placeholder": "Opisz funkcję, którą chcesz mieć…",
+        // MARK: Duels en manches
+        "duel.round.title": "Runda %d",
+        "duel.round.pick.title": "Wybierz przedmiot",
+        "duel.round.pick.theirs": "@%@ wybiera przedmiot…",
+        "duel.round.pick.theirChoice": "@%@ wybiera:",
+        "duel.round.sprint.title": "Finałowy sprint",
+        "duel.round.sprint.body": "Mało czasu: odpowiadaj szybko!",
     ]
     // MARK: - Romanian
 
@@ -13095,6 +13212,19 @@ enum AppLocalizable {
         "friends.error.handleNotAllowed": "Acest @ nu este permis. Alege altul.",
         "onboardingV2.follow.title": "Urmărește profesori",
         "onboardingV2.follow.subtitle": "Cursurile lor noi vor apărea în fila Urmărești.",
+        // MARK: Demande de fonctionnalité
+        "settings.featureRequest.title": "Cere o funcție",
+        "settings.featureRequest.subtitle": "Spune-ne ce ți-ar plăcea să vezi în Sophia",
+        "feedback.category.feature": "Funcție",
+        "feedback.feature.title": "Cererea ta",
+        "feedback.feature.placeholder": "Descrie funcția pe care ți-ai dori-o…",
+        // MARK: Duels en manches
+        "duel.round.title": "Runda %d",
+        "duel.round.pick.title": "Alege materia",
+        "duel.round.pick.theirs": "@%@ alege materia…",
+        "duel.round.pick.theirChoice": "Alegerea lui @%@",
+        "duel.round.sprint.title": "Sprint final",
+        "duel.round.sprint.body": "Timp scurt: răspunde repede!",
     ]
     // MARK: - Dutch
 
@@ -14392,6 +14522,19 @@ enum AppLocalizable {
         "friends.error.handleNotAllowed": "Deze @ is niet toegestaan. Kies een andere.",
         "onboardingV2.follow.title": "Volg docenten",
         "onboardingV2.follow.subtitle": "Hun nieuwe cursussen verschijnen in je tabblad Volgend.",
+        // MARK: Demande de fonctionnalité
+        "settings.featureRequest.title": "Vraag een functie aan",
+        "settings.featureRequest.subtitle": "Vertel ons wat je graag in Sophia wilt zien",
+        "feedback.category.feature": "Functie",
+        "feedback.feature.title": "Jouw verzoek",
+        "feedback.feature.placeholder": "Beschrijf de functie die je graag wilt hebben…",
+        // MARK: Duels en manches
+        "duel.round.title": "Ronde %d",
+        "duel.round.pick.title": "Kies het vak",
+        "duel.round.pick.theirs": "@%@ kiest het vak…",
+        "duel.round.pick.theirChoice": "Keuze van @%@",
+        "duel.round.sprint.title": "Eindsprint",
+        "duel.round.sprint.body": "Weinig tijd: antwoord snel!",
     ]
     // MARK: - Greek
 
@@ -15689,6 +15832,19 @@ enum AppLocalizable {
         "friends.error.handleNotAllowed": "Αυτό το @ δεν επιτρέπεται. Διάλεξε άλλο.",
         "onboardingV2.follow.title": "Ακολούθησε καθηγητές",
         "onboardingV2.follow.subtitle": "Τα νέα τους μαθήματα θα εμφανίζονται στην καρτέλα «Ακολουθείς».",
+        // MARK: Demande de fonctionnalité
+        "settings.featureRequest.title": "Αίτημα λειτουργίας",
+        "settings.featureRequest.subtitle": "Πες μας τι θα ήθελες να δεις στη Sophia",
+        "feedback.category.feature": "Λειτουργία",
+        "feedback.feature.title": "Το αίτημά σου",
+        "feedback.feature.placeholder": "Περίγραψε τη λειτουργία που θα ήθελες…",
+        // MARK: Duels en manches
+        "duel.round.title": "Γύρος %d",
+        "duel.round.pick.title": "Διάλεξε τομέα",
+        "duel.round.pick.theirs": "@%@ διαλέγει τομέα…",
+        "duel.round.pick.theirChoice": "@%@ διάλεξε:",
+        "duel.round.sprint.title": "Τελικό σπριντ",
+        "duel.round.sprint.body": "Λίγος χρόνος: απάντα γρήγορα!",
     ]
     // MARK: - Swedish
 
@@ -16986,6 +17142,19 @@ enum AppLocalizable {
         "friends.error.handleNotAllowed": "Detta @ är inte tillåtet. Välj ett annat.",
         "onboardingV2.follow.title": "Följ lärare",
         "onboardingV2.follow.subtitle": "Deras nya kurser dyker upp under fliken Följer.",
+        // MARK: Demande de fonctionnalité
+        "settings.featureRequest.title": "Önska en funktion",
+        "settings.featureRequest.subtitle": "Berätta vad du vill se i Sophia",
+        "feedback.category.feature": "Funktion",
+        "feedback.feature.title": "Ditt önskemål",
+        "feedback.feature.placeholder": "Beskriv funktionen du skulle vilja ha…",
+        // MARK: Duels en manches
+        "duel.round.title": "Omgång %d",
+        "duel.round.pick.title": "Välj ämne",
+        "duel.round.pick.theirs": "@%@ väljer ämne…",
+        "duel.round.pick.theirChoice": "Valt av @%@",
+        "duel.round.sprint.title": "Slutspurt",
+        "duel.round.sprint.body": "Kort om tid: svara snabbt!",
     ]
     // MARK: - Hungarian
 
@@ -18283,6 +18452,19 @@ enum AppLocalizable {
         "friends.error.handleNotAllowed": "Ez a @-név nem engedélyezett. Válassz másikat.",
         "onboardingV2.follow.title": "Kövess oktatókat",
         "onboardingV2.follow.subtitle": "Az új kurzusaik a Követett fülön jelennek meg.",
+        // MARK: Demande de fonctionnalité
+        "settings.featureRequest.title": "Funkció kérése",
+        "settings.featureRequest.subtitle": "Mondd el, mit látnál szívesen a Sophiában",
+        "feedback.category.feature": "Funkció",
+        "feedback.feature.title": "A kérésed",
+        "feedback.feature.placeholder": "Írd le, milyen funkciót szeretnél…",
+        // MARK: Duels en manches
+        "duel.round.title": "%d. kör",
+        "duel.round.pick.title": "Válassz tantárgyat",
+        "duel.round.pick.theirs": "@%@ tantárgyat választ…",
+        "duel.round.pick.theirChoice": "@%@ választása",
+        "duel.round.sprint.title": "Végső hajrá",
+        "duel.round.sprint.body": "Kevés az idő: válaszolj gyorsan!",
     ]
     // MARK: - Bulgarian
 
@@ -19580,6 +19762,19 @@ enum AppLocalizable {
         "friends.error.handleNotAllowed": "Този @ не е разрешен. Избери друг.",
         "onboardingV2.follow.title": "Следвай преподаватели",
         "onboardingV2.follow.subtitle": "Новите им курсове ще се появяват в раздела „Следвани“.",
+        // MARK: Demande de fonctionnalité
+        "settings.featureRequest.title": "Поискай функция",
+        "settings.featureRequest.subtitle": "Кажи ни какво искаш да видиш в Sophia",
+        "feedback.category.feature": "Функция",
+        "feedback.feature.title": "Твоята заявка",
+        "feedback.feature.placeholder": "Опиши функцията, която искаш да имаш…",
+        // MARK: Duels en manches
+        "duel.round.title": "Рунд %d",
+        "duel.round.pick.title": "Избери тема",
+        "duel.round.pick.theirs": "@%@ избира тема…",
+        "duel.round.pick.theirChoice": "Изборът на @%@",
+        "duel.round.sprint.title": "Финален спринт",
+        "duel.round.sprint.body": "Малко време: отговаряй бързо!",
     ]
     // MARK: - Czech
 
@@ -20878,6 +21073,19 @@ enum AppLocalizable {
         "friends.error.handleNotAllowed": "Toto @ není povolené. Zvolte jiné.",
         "onboardingV2.follow.title": "Sledujte autory",
         "onboardingV2.follow.subtitle": "Jejich nové kurzy se objeví na kartě Sledované.",
+        // MARK: Demande de fonctionnalité
+        "settings.featureRequest.title": "Požádat o funkci",
+        "settings.featureRequest.subtitle": "Napiš nám, co chceš v Sophii vidět",
+        "feedback.category.feature": "Funkce",
+        "feedback.feature.title": "Tvůj požadavek",
+        "feedback.feature.placeholder": "Popiš funkci, kterou chceš mít…",
+        // MARK: Duels en manches
+        "duel.round.title": "%d. kolo",
+        "duel.round.pick.title": "Vyber předmět",
+        "duel.round.pick.theirs": "@%@ vybírá předmět…",
+        "duel.round.pick.theirChoice": "@%@ vybírá:",
+        "duel.round.sprint.title": "Závěrečný sprint",
+        "duel.round.sprint.body": "Málo času: odpovídej rychle!",
     ]
 
     // MARK: - Danish
@@ -22176,6 +22384,19 @@ enum AppLocalizable {
         "friends.error.handleNotAllowed": "Dette @ er ikke tilladt. Vælg et andet.",
         "onboardingV2.follow.title": "Følg undervisere",
         "onboardingV2.follow.subtitle": "Deres nye kurser dukker op under fanen Følger.",
+        // MARK: Demande de fonctionnalité
+        "settings.featureRequest.title": "Ønsk en funktion",
+        "settings.featureRequest.subtitle": "Fortæl os, hvad du gerne vil se i Sophia",
+        "feedback.category.feature": "Funktion",
+        "feedback.feature.title": "Dit ønske",
+        "feedback.feature.placeholder": "Beskriv den funktion, du gerne vil have…",
+        // MARK: Duels en manches
+        "duel.round.title": "Runde %d",
+        "duel.round.pick.title": "Vælg fag",
+        "duel.round.pick.theirs": "@%@ vælger fag…",
+        "duel.round.pick.theirChoice": "Valgt af @%@",
+        "duel.round.sprint.title": "Slutspurt",
+        "duel.round.sprint.body": "Kort tid: Svar hurtigt!",
     ]
 
     // MARK: - Norwegian
@@ -23474,6 +23695,19 @@ enum AppLocalizable {
         "friends.error.handleNotAllowed": "Denne @-en er ikke tillatt. Velg en annen.",
         "onboardingV2.follow.title": "Følg lærere",
         "onboardingV2.follow.subtitle": "De nye kursene deres dukker opp under fanen Følger.",
+        // MARK: Demande de fonctionnalité
+        "settings.featureRequest.title": "Ønsk deg en funksjon",
+        "settings.featureRequest.subtitle": "Fortell oss hva du vil se i Sophia",
+        "feedback.category.feature": "Funksjon",
+        "feedback.feature.title": "Ønsket ditt",
+        "feedback.feature.placeholder": "Beskriv funksjonen du ønsker deg…",
+        // MARK: Duels en manches
+        "duel.round.title": "Runde %d",
+        "duel.round.pick.title": "Velg fag",
+        "duel.round.pick.theirs": "@%@ velger fag…",
+        "duel.round.pick.theirChoice": "Valgt av @%@",
+        "duel.round.sprint.title": "Sluttspurt",
+        "duel.round.sprint.body": "Kort tid: Svar raskt!",
     ]
 
     // MARK: - Russian
@@ -24773,6 +25007,19 @@ enum AppLocalizable {
         "friends.error.handleNotAllowed": "Такой @ использовать нельзя. Выбери другой.",
         "onboardingV2.follow.title": "Подпишись на авторов",
         "onboardingV2.follow.subtitle": "Их новые курсы появятся на вкладке «Подписки».",
+        // MARK: Demande de fonctionnalité
+        "settings.featureRequest.title": "Запросить функцию",
+        "settings.featureRequest.subtitle": "Расскажи, что ты хочешь видеть в Sophia",
+        "feedback.category.feature": "Функция",
+        "feedback.feature.title": "Твой запрос",
+        "feedback.feature.placeholder": "Опиши функцию, которую хочешь видеть…",
+        // MARK: Duels en manches
+        "duel.round.title": "Раунд %d",
+        "duel.round.pick.title": "Выбери предмет",
+        "duel.round.pick.theirs": "@%@ выбирает предмет…",
+        "duel.round.pick.theirChoice": "@%@ выбирает:",
+        "duel.round.sprint.title": "Финальный спринт",
+        "duel.round.sprint.body": "Времени мало: отвечай быстро!",
     ]
 
     // MARK: - Croatian
@@ -26072,6 +26319,19 @@ enum AppLocalizable {
         "friends.error.handleNotAllowed": "Ovaj @ nije dopušten. Odaberi drugi.",
         "onboardingV2.follow.title": "Prati profesore",
         "onboardingV2.follow.subtitle": "Njihovi novi tečajevi pojavit će se na kartici Pratim.",
+        // MARK: Demande de fonctionnalité
+        "settings.featureRequest.title": "Zatraži značajku",
+        "settings.featureRequest.subtitle": "Reci nam što želiš vidjeti u Sophiji",
+        "feedback.category.feature": "Značajka",
+        "feedback.feature.title": "Tvoj zahtjev",
+        "feedback.feature.placeholder": "Opiši značajku koju želiš imati…",
+        // MARK: Duels en manches
+        "duel.round.title": "%d. runda",
+        "duel.round.pick.title": "Odaberi predmet",
+        "duel.round.pick.theirs": "@%@ bira predmet…",
+        "duel.round.pick.theirChoice": "@%@ bira:",
+        "duel.round.sprint.title": "Završni sprint",
+        "duel.round.sprint.body": "Malo vremena: odgovaraj brzo!",
     ]
 
     // MARK: - Slovenian
@@ -27372,6 +27632,19 @@ enum AppLocalizable {
         "friends.error.handleNotAllowed": "Ta @ ni dovoljen. Izberi drugega.",
         "onboardingV2.follow.title": "Sledi profesorjem",
         "onboardingV2.follow.subtitle": "Njihovi novi tečaji se bodo prikazali v zavihku Sledim.",
+        // MARK: Demande de fonctionnalité
+        "settings.featureRequest.title": "Predlagaj funkcijo",
+        "settings.featureRequest.subtitle": "Povej nam, kaj želiš videti v Sophii",
+        "feedback.category.feature": "Funkcija",
+        "feedback.feature.title": "Tvoj predlog",
+        "feedback.feature.placeholder": "Opiši funkcijo, ki jo želiš imeti…",
+        // MARK: Duels en manches
+        "duel.round.title": "%d. krog",
+        "duel.round.pick.title": "Izberi predmet",
+        "duel.round.pick.theirs": "@%@ izbira predmet…",
+        "duel.round.pick.theirChoice": "@%@ izbira:",
+        "duel.round.sprint.title": "Zaključni sprint",
+        "duel.round.sprint.body": "Malo časa: odgovarjaj hitro!",
     ]
 
     // MARK: - Slovak
@@ -28671,6 +28944,19 @@ enum AppLocalizable {
         "friends.error.handleNotAllowed": "Tento @ nie je povolený. Vyber si iný.",
         "onboardingV2.follow.title": "Sleduj profesorov",
         "onboardingV2.follow.subtitle": "Ich nové kurzy sa objavia na karte Sledované.",
+        // MARK: Demande de fonctionnalité
+        "settings.featureRequest.title": "Požiadať o funkciu",
+        "settings.featureRequest.subtitle": "Napíš nám, čo chceš v Sophii vidieť",
+        "feedback.category.feature": "Funkcia",
+        "feedback.feature.title": "Tvoja požiadavka",
+        "feedback.feature.placeholder": "Popíš funkciu, ktorú chceš mať…",
+        // MARK: Duels en manches
+        "duel.round.title": "%d. kolo",
+        "duel.round.pick.title": "Vyber predmet",
+        "duel.round.pick.theirs": "@%@ vyberá predmet…",
+        "duel.round.pick.theirChoice": "@%@ vyberá:",
+        "duel.round.sprint.title": "Záverečný šprint",
+        "duel.round.sprint.body": "Málo času: odpovedaj rýchlo!",
     ]
 
     // MARK: - Serbian
@@ -29970,6 +30256,19 @@ enum AppLocalizable {
         "friends.error.handleNotAllowed": "Ovaj @ nije dozvoljen. Izaberi drugi.",
         "onboardingV2.follow.title": "Prati profesore",
         "onboardingV2.follow.subtitle": "Njihovi novi kursevi pojaviće se na kartici Pratim.",
+        // MARK: Demande de fonctionnalité
+        "settings.featureRequest.title": "Zatraži funkciju",
+        "settings.featureRequest.subtitle": "Reci nam šta želiš da vidiš u Sophiji",
+        "feedback.category.feature": "Funkcija",
+        "feedback.feature.title": "Tvoj zahtev",
+        "feedback.feature.placeholder": "Opiši funkciju koju želiš da imaš…",
+        // MARK: Duels en manches
+        "duel.round.title": "%d. runda",
+        "duel.round.pick.title": "Izaberi oblast",
+        "duel.round.pick.theirs": "@%@ bira oblast…",
+        "duel.round.pick.theirChoice": "@%@ bira:",
+        "duel.round.sprint.title": "Završni sprint",
+        "duel.round.sprint.body": "Malo vremena: odgovaraj brzo!",
     ]
 
     // MARK: - Arabic
@@ -31270,6 +31569,19 @@ enum AppLocalizable {
         "friends.error.handleNotAllowed": "هذا @ غير مسموح به. اختر غيره.",
         "onboardingV2.follow.title": "تابع الأساتذة",
         "onboardingV2.follow.subtitle": "ستظهر دروسهم الجديدة في تبويب المتابَعون.",
+        // MARK: Demande de fonctionnalité
+        "settings.featureRequest.title": "طلب ميزة",
+        "settings.featureRequest.subtitle": "أخبرنا بما تود رؤيته في Sophia",
+        "feedback.category.feature": "ميزة",
+        "feedback.feature.title": "طلبك",
+        "feedback.feature.placeholder": "صف الميزة التي تود الحصول عليها…",
+        // MARK: Duels en manches
+        "duel.round.title": "الجولة %d",
+        "duel.round.pick.title": "اختر المادة",
+        "duel.round.pick.theirs": "في انتظار اختيار @%@ للمادة…",
+        "duel.round.pick.theirChoice": "اختيار @%@",
+        "duel.round.sprint.title": "جولة السرعة الأخيرة",
+        "duel.round.sprint.body": "الوقت قصير: أجب بسرعة!",
     ]
 
     // MARK: - Hebrew
@@ -32569,6 +32881,19 @@ enum AppLocalizable {
         "friends.error.handleNotAllowed": "ה-@ הזה אינו מותר. בחרו אחר.",
         "onboardingV2.follow.title": "עקבו אחרי מרצים",
         "onboardingV2.follow.subtitle": "הקורסים החדשים שלהם יופיעו בלשונית במעקב.",
+        // MARK: Demande de fonctionnalité
+        "settings.featureRequest.title": "בקש תכונה",
+        "settings.featureRequest.subtitle": "ספר לנו מה היית רוצה לראות ב-Sophia",
+        "feedback.category.feature": "תכונה",
+        "feedback.feature.title": "הבקשה שלך",
+        "feedback.feature.placeholder": "תאר את התכונה שהיית רוצה לקבל...",
+        // MARK: Duels en manches
+        "duel.round.title": "סיבוב %d",
+        "duel.round.pick.title": "בחר תחום",
+        "duel.round.pick.theirs": "ממתינים לבחירת התחום על ידי @%@…",
+        "duel.round.pick.theirChoice": "הבחירה של @%@",
+        "duel.round.sprint.title": "ספרינט סיום",
+        "duel.round.sprint.body": "הזמן קצר: ענה מהר!",
     ]
 
     // MARK: - Finnish
@@ -33867,6 +34192,19 @@ enum AppLocalizable {
         "friends.error.handleNotAllowed": "Tämä @ ei ole sallittu. Valitse toinen.",
         "onboardingV2.follow.title": "Seuraa opettajia",
         "onboardingV2.follow.subtitle": "Heidän uudet kurssinsa ilmestyvät Seuratut-välilehdelle.",
+        // MARK: Demande de fonctionnalité
+        "settings.featureRequest.title": "Toivo ominaisuutta",
+        "settings.featureRequest.subtitle": "Kerro, mitä haluaisit nähdä Sophiassa",
+        "feedback.category.feature": "Ominaisuus",
+        "feedback.feature.title": "Toiveesi",
+        "feedback.feature.placeholder": "Kuvaile ominaisuutta, jonka haluaisit…",
+        // MARK: Duels en manches
+        "duel.round.title": "Kierros %d",
+        "duel.round.pick.title": "Valitse aihe",
+        "duel.round.pick.theirs": "@%@ valitsee aihetta…",
+        "duel.round.pick.theirChoice": "@%@ valitsi:",
+        "duel.round.sprint.title": "Loppukiri",
+        "duel.round.sprint.body": "Aikaa on vähän: vastaa nopeasti!",
     ]
 
     // MARK: - Estonian
@@ -35165,6 +35503,19 @@ enum AppLocalizable {
         "friends.error.handleNotAllowed": "See @ ei ole lubatud. Vali mõni teine.",
         "onboardingV2.follow.title": "Jälgi õpetajaid",
         "onboardingV2.follow.subtitle": "Nende uued kursused ilmuvad vahekaardile Jälgitavad.",
+        // MARK: Demande de fonctionnalité
+        "settings.featureRequest.title": "Soovi funktsiooni",
+        "settings.featureRequest.subtitle": "Kirjuta, mida tahaksid Sophias näha",
+        "feedback.category.feature": "Funktsioon",
+        "feedback.feature.title": "Sinu soov",
+        "feedback.feature.placeholder": "Kirjelda funktsiooni, mida sooviksid…",
+        // MARK: Duels en manches
+        "duel.round.title": "%d. voor",
+        "duel.round.pick.title": "Vali aine",
+        "duel.round.pick.theirs": "@%@ valib ainet…",
+        "duel.round.pick.theirChoice": "@%@ valis:",
+        "duel.round.sprint.title": "Lõpuspurt",
+        "duel.round.sprint.body": "Aega on vähe: vasta kiiresti!",
     ]
 
     // MARK: - lithuanian (copie du français, à post-éditer)
@@ -36463,6 +36814,19 @@ enum AppLocalizable {
         "friends.error.handleNotAllowed": "Šis @ neleidžiamas. Pasirink kitą.",
         "onboardingV2.follow.title": "Sek dėstytojus",
         "onboardingV2.follow.subtitle": "Nauji jų kursai atsiras skirtuke „Sekami“.",
+        // MARK: Demande de fonctionnalité
+        "settings.featureRequest.title": "Paprašyti funkcijos",
+        "settings.featureRequest.subtitle": "Pasakyk, ką norėtum matyti Sophia programėlėje",
+        "feedback.category.feature": "Funkcija",
+        "feedback.feature.title": "Tavo prašymas",
+        "feedback.feature.placeholder": "Aprašyk funkciją, kurios norėtum…",
+        // MARK: Duels en manches
+        "duel.round.title": "%d raundas",
+        "duel.round.pick.title": "Pasirink dalyką",
+        "duel.round.pick.theirs": "@%@ renkasi dalyką…",
+        "duel.round.pick.theirChoice": "@%@ pasirinko:",
+        "duel.round.sprint.title": "Finišo spurtas",
+        "duel.round.sprint.body": "Laiko mažai: atsakyk greitai!",
     ]
 
     // MARK: - latvian (copie du français, à post-éditer)
@@ -37762,6 +38126,19 @@ enum AppLocalizable {
         "friends.error.handleNotAllowed": "Šis @ nav atļauts. Izvēlies citu.",
         "onboardingV2.follow.title": "Seko pasniedzējiem",
         "onboardingV2.follow.subtitle": "Viņu jaunie kursi parādīsies cilnē “Sekoju”.",
+        // MARK: Demande de fonctionnalité
+        "settings.featureRequest.title": "Pieprasīt funkciju",
+        "settings.featureRequest.subtitle": "Pastāsti, ko vēlies redzēt lietotnē Sophia",
+        "feedback.category.feature": "Funkcija",
+        "feedback.feature.title": "Tavs pieprasījums",
+        "feedback.feature.placeholder": "Apraksti funkciju, ko vēlies…",
+        // MARK: Duels en manches
+        "duel.round.title": "%d. raunds",
+        "duel.round.pick.title": "Izvēlies priekšmetu",
+        "duel.round.pick.theirs": "@%@ izvēlas priekšmetu…",
+        "duel.round.pick.theirChoice": "@%@ izvēlējās:",
+        "duel.round.sprint.title": "Finiša spurts",
+        "duel.round.sprint.body": "Laika maz: atbildi ātri!",
     ]
 
     // MARK: - japanese (copie du français, à post-éditer)
@@ -39059,5 +39436,18 @@ enum AppLocalizable {
         "friends.error.handleNotAllowed": "この@は使えません。別のものを選んでください。",
         "onboardingV2.follow.title": "先生をフォローしよう",
         "onboardingV2.follow.subtitle": "新しいコースが「フォロー中」タブに届きます。",
+        // MARK: Demande de fonctionnalité
+        "settings.featureRequest.title": "機能の要望を送る",
+        "settings.featureRequest.subtitle": "Sophiaにほしい機能を教えてください",
+        "feedback.category.feature": "機能",
+        "feedback.feature.title": "ご要望",
+        "feedback.feature.placeholder": "ほしい機能について書いてください…",
+        // MARK: Duels en manches
+        "duel.round.title": "第%dラウンド",
+        "duel.round.pick.title": "科目を選びましょう",
+        "duel.round.pick.theirs": "@%@が科目を選んでいます…",
+        "duel.round.pick.theirChoice": "@%@が選んだ科目",
+        "duel.round.sprint.title": "ラストスパート",
+        "duel.round.sprint.body": "制限時間が短くなります。すばやく答えましょう！",
     ]
 }

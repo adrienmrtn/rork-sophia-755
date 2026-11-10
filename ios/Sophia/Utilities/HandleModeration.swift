@@ -3,7 +3,7 @@ import Foundation
 /// Les @ interdits : insultes, propos haineux, figures et organisations liées à la haine ou au
 /// terrorisme, contenu sexuel, et noms qui feraient passer un compte pour l'équipe Sophia.
 ///
-/// Copie de la table `banned_handle_terms` (migration `20261110020000_banned_handles.sql`), pour
+/// Copie de la table `banned_handle_terms` (migration `20261110020200_banned_handles.sql`), pour
 /// répondre dès « Continuer » sans attendre le serveur. C'est le serveur qui fait foi
 /// (`update_my_handle` lève `handle_not_allowed`) : sa liste peut s'allonger sans nouvelle
 /// version de l'app.

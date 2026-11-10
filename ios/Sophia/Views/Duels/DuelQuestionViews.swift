@@ -357,12 +357,22 @@ struct DuelScoreStrip: View {
     let marks: [Bool?]
     let current: Int
 
+    /// Les segments sont groupés par manche (cinq questions), un espace entre deux manches.
+    private var groups: [[Int]] {
+        let size = DuelMatch.questionsPerRound
+        return stride(from: 0, to: marks.count, by: size).map { Array($0..<min($0 + size, marks.count)) }
+    }
+
     var body: some View {
-        HStack(spacing: 3) {
-            ForEach(Array(marks.enumerated()), id: \.offset) { index, mark in
-                Capsule()
-                    .fill(color(for: mark, isCurrent: index == current))
-                    .frame(height: 5)
+        HStack(spacing: 9) {
+            ForEach(groups, id: \.first) { group in
+                HStack(spacing: 3) {
+                    ForEach(group, id: \.self) { index in
+                        Capsule()
+                            .fill(color(for: marks[index], isCurrent: index == current))
+                            .frame(height: 5)
+                    }
+                }
             }
         }
         .accessibilityHidden(true)
