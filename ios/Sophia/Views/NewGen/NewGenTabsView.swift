@@ -15,6 +15,8 @@ enum NewGenRoute: Hashable {
     case progression
     case path
     case training
+    /// La page « Deviens créateur », avant la sortie vers le Hub des créateurs.
+    case becomeCreator
 }
 
 /// Les listes du profil : à lire (favoris), lus, aimés.
@@ -22,13 +24,14 @@ enum ProfileListKind: String, Hashable, CaseIterable {
     case toRead, read, liked
 }
 
-/// Les onglets : Accueil, Explorer, Parcours, Entraînement, Profil, et Duels quand l'app est en anglais. Parcours et Entraînement
-/// sont les écrans de la navigation classique, gardés tels quels pour ne pas perdre les anciens
-/// lecteurs (l'onglet « Apprendre » de la maquette a été retiré). Chaque onglet a sa pile de
-/// navigation ; le lecteur reste présenté par `ContentView` au-dessus de tout, via `selectedCourse`.
+/// Les onglets : Accueil, Explorer, Profil, et Duels (entre Explorer et Profil) quand l'app est
+/// en anglais. Le Parcours s'ouvre depuis Explorer et l'Entraînement depuis le Profil, en pages
+/// poussées : ce sont les écrans de la navigation classique, gardés tels quels. Quatre onglets
+/// au plus, donc toujours la barre du système, qui règle elle-même la fin du défilement au-dessus
+/// d'elle. Chaque onglet a sa pile de navigation ; le lecteur reste présenté par `ContentView`
+/// au-dessus de tout, via `selectedCourse`.
 struct NewGenTabsView: View {
     @Environment(LanguageManager.self) private var languageManager
-    @Environment(\.openURL) private var openURL
     let progressManager: ProgressManager
     let storeVM: StoreViewModel
     let discountManager: DiscountOfferManager
@@ -43,43 +46,26 @@ struct NewGenTabsView: View {
     @State private var explorePath: [NewGenRoute] = []
     @State private var profilePath: [NewGenRoute] = []
 
-    /// L'onglet Duels n'existe qu'en anglais pour l'instant (questions de la bêta) : il fait six
-    /// onglets, que la barre du système ne sait pas montrer (voir `SophiaTabScaffold`). Lu une
-    /// fois au lancement, comme la variante de navigation : changer de langue dans les réglages
-    /// ne reconstruit pas les onglets sous l'écran ouvert, l'onglet suit au prochain lancement.
+    /// L'onglet Duels n'existe qu'en anglais pour l'instant (questions de la bêta). Lu une fois
+    /// au lancement : changer de langue dans les réglages ne reconstruit pas les onglets sous
+    /// l'écran ouvert, l'onglet suit au prochain lancement.
     @State private var showsDuels = FeatureFlags.duelsVisible(language: AppLanguage.currentPersisted())
 
     var body: some View {
-        Group {
+        TabView(selection: $selectedTab) {
+            Tab(languageManager.text("tab.home"), systemImage: "house", value: 0) {
+                homeTab
+            }
+            Tab(languageManager.text("tab.explore"), systemImage: "safari", value: 1) {
+                exploreTab
+            }
             if showsDuels {
-                SophiaTabScaffold(selection: $selectedTab, items: tabItems, onReselect: popToRoot) { tab in
-                    switch tab {
-                    case 0: homeTab
-                    case 1: exploreTab
-                    case 2: pathTab
-                    case 3: trainingTab
-                    case FeatureFlags.duelsTab: duelsTab
-                    default: profileTab
-                    }
+                Tab(languageManager.text("tab.duels"), systemImage: "trophy", value: FeatureFlags.duelsTab) {
+                    duelsTab
                 }
-            } else {
-                TabView(selection: $selectedTab) {
-                    Tab(languageManager.text("tab.home"), systemImage: "house", value: 0) {
-                        homeTab
-                    }
-                    Tab(languageManager.text("tab.explore"), systemImage: "safari", value: 1) {
-                        exploreTab
-                    }
-                    Tab(languageManager.text("tab.path"), systemImage: "point.bottomleft.forward.to.point.topright.scurvepath", value: 2) {
-                        pathTab
-                    }
-                    Tab(languageManager.text("tab.training"), systemImage: "arrow.triangle.2.circlepath", value: 3) {
-                        trainingTab
-                    }
-                    Tab(languageManager.text("tab.profile"), systemImage: "person", value: 4) {
-                        profileTab
-                    }
-                }
+            }
+            Tab(languageManager.text("tab.profile"), systemImage: "person", value: 4) {
+                profileTab
             }
         }
         // `sophia://author/<slug>` : la page du créateur dans l'onglet Accueil.
@@ -87,30 +73,6 @@ struct NewGenTabsView: View {
     }
 
     // MARK: - Onglets
-
-    /// Les six onglets de la barre maison, Duels entre Entraînement et Profil. Accueil et
-    /// Explorer restent en vie (fil, recherche), Entraînement et Duels aussi (une séance ou une
-    /// partie en cours ne se ferme pas) ; Parcours et Profil rejouent leur `onAppear` à chaque visite.
-    private var tabItems: [SophiaTabItem] {
-        [
-            SophiaTabItem(value: 0, title: languageManager.text("tab.home"), systemImage: "house", keepsAlive: true),
-            SophiaTabItem(value: 1, title: languageManager.text("tab.explore"), systemImage: "safari", keepsAlive: true),
-            SophiaTabItem(value: 2, title: languageManager.text("tab.path"), systemImage: "point.bottomleft.forward.to.point.topright.scurvepath"),
-            SophiaTabItem(value: 3, title: languageManager.text("tab.training"), systemImage: "arrow.triangle.2.circlepath", keepsAlive: true),
-            SophiaTabItem(value: FeatureFlags.duelsTab, title: languageManager.text("tab.duels"), systemImage: "trophy", keepsAlive: true),
-            SophiaTabItem(value: 4, title: languageManager.text("tab.profile"), systemImage: "person"),
-        ]
-    }
-
-    /// Toucher l'onglet déjà affiché ramène sa pile à la racine, comme la barre du système.
-    private func popToRoot(_ tab: Int) {
-        switch tab {
-        case 0: homePath.removeAll()
-        case 1: explorePath.removeAll()
-        case 4: profilePath.removeAll()
-        default: break
-        }
-    }
 
     private var homeTab: some View {
         NavigationStack(path: $homePath) {
@@ -121,7 +83,7 @@ struct NewGenTabsView: View {
                 onOpenCreator: { homePath.append(.creator(slug: $0.slug)) },
                 onOpenCampaign: { homePath.append(.campaign(slug: $0.slug)) },
                 onSearch: { selectedTab = 1 },
-                onBecomeCreator: openCreatorStudio
+                onBecomeCreator: { homePath.append(.becomeCreator) }
             )
             .toolbar(.hidden, for: .navigationBar)
             .navigationDestination(for: NewGenRoute.self) { route in
@@ -138,28 +100,14 @@ struct NewGenTabsView: View {
                 onOpenCourse: { explorePath.append(.course(id: $0.id, source: .search)) },
                 onOpenCreator: { explorePath.append(.creator(slug: $0.slug)) },
                 onOpenCampaign: { explorePath.append(.campaign(slug: $0.slug)) },
-                onOpenUniverse: { explorePath.append(.universe(subcategory: $0)) }
+                onOpenUniverse: { explorePath.append(.universe(subcategory: $0)) },
+                onOpenPath: { explorePath.append(.path) }
             )
             .toolbar(.hidden, for: .navigationBar)
             .navigationDestination(for: NewGenRoute.self) { route in
                 destination(route) { explorePath.append($0) }
             }
         }
-        .audioMiniPlayerInset(onOpen: openAudioPlayer)
-    }
-
-    private var pathTab: some View {
-        LearningPathView(progressManager: progressManager, selectedCourse: $selectedCourse)
-            .audioMiniPlayerInset(onOpen: openAudioPlayer)
-    }
-
-    private var trainingTab: some View {
-        TrainingView(
-            progressManager: progressManager,
-            store: storeVM,
-            isPremium: storeVM.isPremium,
-            onShowQuizPaywall: { onShowPaywall(.entrainement) }
-        )
         .audioMiniPlayerInset(onOpen: openAudioPlayer)
     }
 
@@ -174,9 +122,10 @@ struct NewGenTabsView: View {
                 onOpenList: { profilePath.append(.courseList($0)) },
                 onOpenCampaign: { profilePath.append(.campaign(slug: $0.slug)) },
                 onOpenProgression: { profilePath.append(.progression) },
+                onOpenTraining: { profilePath.append(.training) },
                 onOpenAntiScroll: onOpenAntiScroll,
                 onDiscoverCreators: { selectedTab = 1 },
-                onBecomeCreator: openCreatorStudio,
+                onBecomeCreator: { profilePath.append(.becomeCreator) },
                 onShowPaywall: { onShowPaywall(.debloquerCours) },
                 onResetOnboarding: onResetOnboarding
             )
@@ -242,7 +191,7 @@ struct NewGenTabsView: View {
                     progressManager: progressManager,
                     onOpenCourse: { push(.course(id: $0.id, source: .event)) },
                     onOpenCreator: { push(.creator(slug: $0.slug)) },
-                    onBecomeCreator: openCreatorStudio
+                    onBecomeCreator: { push(.becomeCreator) }
                 )
                 .toolbar(.hidden, for: .navigationBar)
             } else {
@@ -294,6 +243,9 @@ struct NewGenTabsView: View {
                 onShowQuizPaywall: { onShowPaywall(.entrainement) }
             )
             .modifier(SystemBackBar())
+        case .becomeCreator:
+            BecomeCreatorView()
+                .toolbar(.hidden, for: .navigationBar)
         }
     }
 
@@ -312,11 +264,6 @@ struct NewGenTabsView: View {
     private func openReader(_ course: Course, source: CourseOpenSource) {
         AnalyticsService.shared.pendingCourseOpenSource = source
         selectedCourse = course
-    }
-
-    private func openCreatorStudio() {
-        guard let url = AppConfig.creatorStudioURL else { return }
-        openURL(url)
     }
 }
 

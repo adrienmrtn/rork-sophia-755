@@ -9,6 +9,7 @@ const HUB_REDIRECTS = [
   { source: "/creators", destination: `${HUB}/` },
   { source: "/creators/:path*", destination: `${HUB}/creators/:path*` },
   { source: "/:lang([a-z]{2})/creators/:path*", destination: `${HUB}/:lang/creators/:path*` },
+  { source: "/:lang([a-z]{2}-[A-Za-z]{2,4})/creators/:path*", destination: `${HUB}/:lang/creators/:path*` },
   { source: "/fr/createurs/:path*", destination: `${HUB}/fr/creators/:path*` },
   { source: "/fr/candidature-slideshow", destination: `${HUB}/fr/creators/slideshow/apply` },
   { source: "/en/slideshow-application", destination: `${HUB}/en/creators/slideshow/apply` },

@@ -353,6 +353,18 @@ struct CreatorInviteCard: View {
     var body: some View {
         let language = languageManager.current
         VStack(alignment: .leading, spacing: 14) {
+            // L'illustration papier du site ; dans le fil paginé elle prend la place qui reste.
+            Color.clear
+                .frame(maxWidth: .infinity)
+                .frame(minHeight: 120, idealHeight: 160, maxHeight: fillsPage ? 260 : 160)
+                .overlay {
+                    Image("creator_writing")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                }
+                .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
+                .accessibilityHidden(true)
+
             HStack(spacing: 10) {
                 HStack(spacing: -10) {
                     ForEach(authors) { author in

@@ -1,7 +1,7 @@
 import SwiftUI
 
 /// Le profil de la maquette : identité, trois compteurs, Reprendre, Mes abonnements, Badges,
-/// listes À lire / Lus / Aimés, « Deviens créateur », puis les pages secondaires (progression,
+/// l'entrée de l'Entraînement, listes À lire / Lus / Aimés, « Deviens créateur », puis les pages secondaires (progression,
 /// amis, anti-scroll). L'ancien profil reste accessible comme page « Ma progression ».
 struct ProfileV2View: View {
     @Environment(LanguageManager.self) private var languageManager
@@ -14,6 +14,7 @@ struct ProfileV2View: View {
     let onOpenList: (ProfileListKind) -> Void
     let onOpenCampaign: (Campaign) -> Void
     let onOpenProgression: () -> Void
+    let onOpenTraining: () -> Void
     let onOpenAntiScroll: () -> Void
     let onDiscoverCreators: () -> Void
     let onBecomeCreator: () -> Void
@@ -36,6 +37,7 @@ struct ProfileV2View: View {
                 statsCard
                 ResumeCoursesSection(progressManager: progressManager, onResume: onResumeCourse)
                     .padding(.horizontal, -20)
+                trainingCard
                 followingSection
                 // Les amis et leur classement, à même la page (plus de page à part).
                 FriendsLeaderboardSection(social: social)
@@ -313,18 +315,57 @@ struct ProfileV2View: View {
         }
     }
 
+    // MARK: - Entraînement
+
+    /// L'entrée de l'Entraînement, qui n'a plus d'onglet à lui.
+    private var trainingCard: some View {
+        Button {
+            UIImpactFeedbackGenerator(style: .light).impactOccurred()
+            onOpenTraining()
+        } label: {
+            HStack(spacing: 14) {
+                Image("training_poster")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 64, height: 64)
+                    .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
+                VStack(alignment: .leading, spacing: 3) {
+                    Text(languageManager.text("training.title"))
+                        .font(DS.title(.title3, .heavy))
+                        .foregroundStyle(DS.ink)
+                    Text(languageManager.text("training.locked.tagline"))
+                        .font(DS.sans(.subheadline))
+                        .foregroundStyle(DS.inkSecondary)
+                        .multilineTextAlignment(.leading)
+                        .fixedSize(horizontal: false, vertical: true)
+                }
+                Spacer(minLength: 4)
+                Image(systemName: "chevron.forward")
+                    .font(.system(size: 13, weight: .semibold))
+                    .foregroundStyle(DS.inkTertiary)
+            }
+            .padding(14)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .background(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous).fill(DS.surface))
+            .overlay(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous).strokeBorder(DS.hairline, lineWidth: 1))
+            .dsSoftShadow()
+            .contentShape(Rectangle())
+        }
+        .buttonStyle(.plain)
+    }
+
     // MARK: - Deviens créateur
 
     private var creatorCard: some View {
         VStack(alignment: .leading, spacing: 14) {
+            Image("creator_writing")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(maxWidth: .infinity)
+                .frame(height: 150)
+                .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
+                .accessibilityHidden(true)
             HStack(alignment: .top, spacing: 14) {
-                ZStack {
-                    RoundedRectangle(cornerRadius: 14, style: .continuous).fill(DS.accentTint)
-                    Image(systemName: "pencil")
-                        .font(.system(size: 20, weight: .semibold))
-                        .foregroundStyle(DS.accent)
-                }
-                .frame(width: 48, height: 48)
                 VStack(alignment: .leading, spacing: 4) {
                     Text(languageManager.text("profile.creator.title"))
                         .font(DS.title(.title3, .heavy))
