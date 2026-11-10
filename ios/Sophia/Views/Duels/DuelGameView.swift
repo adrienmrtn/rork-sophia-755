@@ -221,7 +221,8 @@ struct DuelGameView: View {
             if question.kind == .portrait {
                 DS.surfaceMuted
                     .frame(width: 184, height: 230)
-                    .overlay { RemoteImage(url: question.imageURL) }
+                    // Sans touches : un portrait qui déborde de son cadre ne doit pas couvrir les réponses.
+                    .overlay { RemoteImage(url: question.imageURL).allowsHitTesting(false) }
                     .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
                     .overlay(
                         RoundedRectangle(cornerRadius: 20, style: .continuous)
