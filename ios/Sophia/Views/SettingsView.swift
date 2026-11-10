@@ -621,7 +621,7 @@ struct SettingsView: View {
     /// Page du site pour le rôle choisi, dans Safari intégré. Laisse le choix se refermer
     /// avant d'ouvrir la page, sinon les deux présentations se gênent.
     private func openCreatorsPage(role: String) {
-        guard let url = AppConfig.creatorsURL(role: role, language: languageManager.current) else { return }
+        guard let url = AppConfig.creatorsURL(role: role) else { return }
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.35) {
             creatorsPage = CreatorsPage(url: url)
         }

@@ -427,7 +427,7 @@ fun MainTabs(
                     onOpenPathQuiz = { level, isLastLevel -> pathQuiz = level to isLastLevel },
                     onOpenAudioPlayer = { showAudioPlayer = true },
                     onBecomeCreator = {
-                        val url = AppConfig.creatorStudioUrl(language)
+                        val url = AppConfig.CREATOR_STUDIO_URL
                         val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
                             .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                         runCatching { context.startActivity(intent) }
@@ -603,7 +603,7 @@ fun MainTabs(
                             onOpenFeedback = { openFromSettings(OverlayScreen.Feedback) },
                             // La page du rôle choisi sur le site, plutôt que le formulaire intégré.
                             onOpenCreators = { role ->
-                                val url = AppConfig.creatorsUrl(role, language)
+                                val url = AppConfig.creatorsUrl(role)
                                 val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
                                     .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                                 runCatching { context.startActivity(intent) }
