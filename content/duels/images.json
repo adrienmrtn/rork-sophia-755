@@ -1,0 +1,795 @@
+{
+  "painting_mona_lisa": {
+    "name": "Mona Lisa, Leonardo da Vinci, c. 1503-1519",
+    "file": "Mona Lisa, by Leonardo da Vinci, from C2RMF retouched.jpg",
+    "artist": "Leonardo da Vinci",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Mona_Lisa,_by_Leonardo_da_Vinci,_from_C2RMF_retouched.jpg",
+    "fit": "cover"
+  },
+  "painting_starry_night": {
+    "name": "The Starry Night, Vincent van Gogh, 1889",
+    "file": "Van Gogh - Starry Night - Google Art Project.jpg",
+    "artist": "Vincent van Gogh",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg",
+    "fit": "contain"
+  },
+  "painting_great_wave": {
+    "name": "The Great Wave off Kanagawa, Katsushika Hokusai, c. 1831",
+    "file": "Tsunami by hokusai 19th century.jpg",
+    "artist": "Katsushika Hokusai",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Tsunami_by_hokusai_19th_century.jpg",
+    "fit": "contain"
+  },
+  "painting_the_scream": {
+    "name": "The Scream, Edvard Munch, 1893",
+    "file": "Edvard Munch, 1893, The Scream, oil, tempera and pastel on cardboard, 91 x 73 cm, National Gallery of Norway.jpg",
+    "artist": "Edvard Munch",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Edvard_Munch,_1893,_The_Scream,_oil,_tempera_and_pastel_on_cardboard,_91_x_73_cm,_National_Gallery_of_Norway.jpg",
+    "fit": "cover"
+  },
+  "painting_creation_of_adam": {
+    "name": "The Creation of Adam, Michelangelo, c. 1512",
+    "file": "Michelangelo - Creation of Adam (cropped).jpg",
+    "artist": "Michelangelo",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Michelangelo_-_Creation_of_Adam_(cropped).jpg",
+    "fit": "contain"
+  },
+  "painting_last_supper": {
+    "name": "The Last Supper, Leonardo da Vinci, c. 1495-1498",
+    "file": "Última Cena - Da Vinci 5.jpg",
+    "artist": "Leonardo da Vinci",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:%C3%9Altima_Cena_-_Da_Vinci_5.jpg",
+    "fit": "contain"
+  },
+  "painting_girl_pearl_earring": {
+    "name": "Girl with a Pearl Earring, Johannes Vermeer, c. 1665",
+    "file": "1665 Girl with a Pearl Earring.jpg",
+    "artist": "Johannes Vermeer",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:1665_Girl_with_a_Pearl_Earring.jpg",
+    "fit": "cover"
+  },
+  "painting_birth_of_venus": {
+    "name": "The Birth of Venus, Sandro Botticelli, c. 1485",
+    "file": "Sandro Botticelli - La nascita di Venere - Google Art Project - edited.jpg",
+    "artist": "Sandro Botticelli",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Sandro_Botticelli_-_La_nascita_di_Venere_-_Google_Art_Project_-_edited.jpg",
+    "fit": "contain"
+  },
+  "painting_the_kiss": {
+    "name": "The Kiss, Gustav Klimt, 1907-1908",
+    "file": "The Kiss - Gustav Klimt - Google Cultural Institute.jpg",
+    "artist": "Gustav Klimt",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:The_Kiss_-_Gustav_Klimt_-_Google_Cultural_Institute.jpg",
+    "fit": "contain"
+  },
+  "painting_night_watch": {
+    "name": "The Night Watch, Rembrandt, 1642",
+    "file": "La ronda de noche, por Rembrandt van Rijn.jpg",
+    "artist": "Rembrandt",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:La_ronda_de_noche,_por_Rembrandt_van_Rijn.jpg",
+    "fit": "contain"
+  },
+  "painting_liberty_leading": {
+    "name": "Liberty Leading the People, Eugène Delacroix, 1830",
+    "file": "Eugène Delacroix - Le 28 Juillet. La Liberté guidant le peuple.jpg",
+    "artist": "Eugène Delacroix",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Eug%C3%A8ne_Delacroix_-_Le_28_Juillet._La_Libert%C3%A9_guidant_le_peuple.jpg",
+    "fit": "contain"
+  },
+  "painting_whistlers_mother": {
+    "name": "Whistler's Mother (Arrangement in Grey and Black No. 1), James McNeill Whistler, 1871",
+    "file": "Whistlers Mother high res.jpg",
+    "artist": "James McNeill Whistler",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Whistlers_Mother_high_res.jpg",
+    "fit": "contain"
+  },
+  "painting_impression_sunrise": {
+    "name": "Impression, Sunrise, Claude Monet, 1872",
+    "file": "Monet - Impression, Sunrise.jpg",
+    "artist": "Claude Monet",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Monet_-_Impression,_Sunrise.jpg",
+    "fit": "contain"
+  },
+  "painting_las_meninas": {
+    "name": "Las Meninas, Diego Velázquez, 1656",
+    "file": "Las Meninas, by Diego Velázquez, from Prado in Google Earth.jpg",
+    "artist": "Diego Velázquez",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Las_Meninas,_by_Diego_Vel%C3%A1zquez,_from_Prado_in_Google_Earth.jpg",
+    "fit": "contain"
+  },
+  "painting_third_of_may": {
+    "name": "The Third of May 1808, Francisco Goya, 1814",
+    "file": "Francisco de Goya y Lucientes - Los fusilamientos del tres de mayo - 1814.jpg",
+    "artist": "Francisco Goya",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Francisco_de_Goya_y_Lucientes_-_Los_fusilamientos_del_tres_de_mayo_-_1814.jpg",
+    "fit": "contain"
+  },
+  "painting_grande_jatte": {
+    "name": "A Sunday on La Grande Jatte, Georges Seurat, 1884-1886",
+    "file": "A Sunday on La Grande Jatte, Georges Seurat, 1884.jpg",
+    "artist": "Georges Seurat",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:A_Sunday_on_La_Grande_Jatte,_Georges_Seurat,_1884.jpg",
+    "fit": "contain"
+  },
+  "painting_school_of_athens": {
+    "name": "The School of Athens, Raphael, 1509-1511",
+    "file": "\"The School of Athens\" by Raffaello Sanzio da Urbino.jpg",
+    "artist": "Raphael",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:%22The_School_of_Athens%22_by_Raffaello_Sanzio_da_Urbino.jpg",
+    "fit": "contain"
+  },
+  "painting_arnolfini": {
+    "name": "The Arnolfini Portrait, Jan van Eyck, 1434",
+    "file": "Van Eyck - Arnolfini Portrait.jpg",
+    "artist": "Jan van Eyck",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Van_Eyck_-_Arnolfini_Portrait.jpg",
+    "fit": "contain"
+  },
+  "painting_garden_delights": {
+    "name": "The Garden of Earthly Delights, Hieronymus Bosch, c. 1490-1510",
+    "file": "The Garden of Earthly Delights by Bosch High Resolution 2.jpg",
+    "artist": "Hieronymus Bosch",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:The_Garden_of_Earthly_Delights_by_Bosch_High_Resolution_2.jpg",
+    "fit": "contain"
+  },
+  "painting_raft_of_medusa": {
+    "name": "The Raft of the Medusa, Théodore Géricault, 1818-1819",
+    "file": "JEAN LOUIS THÉODORE GÉRICAULT - La Balsa de la Medusa (Museo del Louvre, 1818-19).jpg",
+    "artist": "Théodore Géricault",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:JEAN_LOUIS_TH%C3%89ODORE_G%C3%89RICAULT_-_La_Balsa_de_la_Medusa_(Museo_del_Louvre,_1818-19).jpg",
+    "fit": "contain"
+  },
+  "painting_fighting_temeraire": {
+    "name": "The Fighting Temeraire, J. M. W. Turner, 1839",
+    "file": "Turner, J. M. W. - The Fighting Téméraire tugged to her last Berth to be broken.jpg",
+    "artist": "J. M. W. Turner",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Turner,_J._M._W._-_The_Fighting_T%C3%A9m%C3%A9raire_tugged_to_her_last_Berth_to_be_broken.jpg",
+    "fit": "contain"
+  },
+  "painting_wanderer_fog": {
+    "name": "Wanderer above the Sea of Fog, Caspar David Friedrich, c. 1818",
+    "file": "Caspar David Friedrich - Wanderer above the sea of fog.jpg",
+    "artist": "Caspar David Friedrich",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Caspar_David_Friedrich_-_Wanderer_above_the_sea_of_fog.jpg",
+    "fit": "cover"
+  },
+  "painting_hunters_snow": {
+    "name": "The Hunters in the Snow, Pieter Bruegel the Elder, 1565",
+    "file": "Pieter Bruegel the Elder - Hunters in the Snow (Winter) - Google Art Project.jpg",
+    "artist": "Pieter Brueghel the Elder",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Pieter_Bruegel_the_Elder_-_Hunters_in_the_Snow_(Winter)_-_Google_Art_Project.jpg",
+    "fit": "contain"
+  },
+  "painting_ophelia": {
+    "name": "Ophelia, John Everett Millais, 1851-1852",
+    "file": "John Everett Millais - Ophelia - Google Art Project.jpg",
+    "artist": "John Everett Millais",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:John_Everett_Millais_-_Ophelia_-_Google_Art_Project.jpg",
+    "fit": "contain"
+  },
+  "painting_bar_folies_bergere": {
+    "name": "A Bar at the Folies-Bergère, Édouard Manet, 1882",
+    "file": "Edouard Manet, A Bar at the Folies-Bergère.jpg",
+    "artist": "Édouard Manet",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Edouard_Manet,_A_Bar_at_the_Folies-Berg%C3%A8re.jpg",
+    "fit": "contain"
+  },
+  "painting_card_players": {
+    "name": "The Card Players, Paul Cézanne, 1890s",
+    "file": "Paul Cézanne, Les joueurs de carte (1892-95).jpg",
+    "artist": "Paul Cézanne",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Paul_C%C3%A9zanne,_Les_joueurs_de_carte_(1892-95).jpg",
+    "fit": "contain"
+  },
+  "painting_the_swing": {
+    "name": "The Swing, Jean-Honoré Fragonard, c. 1767",
+    "file": "Fragonard, The Swing.jpg",
+    "artist": "Jean-Honoré Fragonard",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Fragonard,_The_Swing.jpg",
+    "fit": "cover"
+  },
+  "painting_ambassadors": {
+    "name": "The Ambassadors, Hans Holbein the Younger, 1533",
+    "file": "Hans Holbein the Younger - The Ambassadors - Google Art Project.jpg",
+    "artist": "Hans Holbein the Younger",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Hans_Holbein_the_Younger_-_The_Ambassadors_-_Google_Art_Project.jpg",
+    "fit": "contain"
+  },
+  "painting_barge_haulers": {
+    "name": "Barge Haulers on the Volga, Ilya Repin, 1870-1873",
+    "file": "Ilya Repin - Barge Haulers on the Volga - Google Art Project.jpg",
+    "artist": "Ilya Repin",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Ilya_Repin_-_Barge_Haulers_on_the_Volga_-_Google_Art_Project.jpg",
+    "fit": "contain"
+  },
+  "painting_sudden_shower": {
+    "name": "Sudden Shower over Shin-Ohashi Bridge and Atake, Utagawa Hiroshige, 1857",
+    "file": "Hiroshige Atake sous une averse soudaine.jpg",
+    "artist": "Utagawa Hiroshige",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Hiroshige_Atake_sous_une_averse_soudaine.jpg",
+    "fit": "contain"
+  },
+  "painting_oath_horatii": {
+    "name": "Oath of the Horatii, Jacques-Louis David, 1784",
+    "file": "Le Serment des Horaces - Jacques-Louis David - Musée du Louvre Peintures INV 3692 ; MR 1432.jpg",
+    "artist": "Jacques-Louis David",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Le_Serment_des_Horaces_-_Jacques-Louis_David_-_Mus%C3%A9e_du_Louvre_Peintures_INV_3692_;_MR_1432.jpg",
+    "fit": "contain"
+  },
+  "painting_ninth_wave": {
+    "name": "The Ninth Wave, Ivan Aivazovsky, 1850",
+    "file": "Hovhannes Aivazovsky - The Ninth Wave - Google Art Project.jpg",
+    "artist": "Hovhannes Aivazovsky (1817 - 1900) – painter (Russian) Born in Rossiiskaya imperiya, Feodosia. Died in Rossiiskaya imper",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Hovhannes_Aivazovsky_-_The_Ninth_Wave_-_Google_Art_Project.jpg",
+    "fit": "contain"
+  },
+  "painting_tortoise_trainer": {
+    "name": "The Tortoise Trainer, Osman Hamdi Bey, 1906",
+    "file": "Osman Hamdi Bey - The Tortoise Trainer - Google Art Project.jpg",
+    "artist": "Osman Hamdi Bey",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Osman_Hamdi_Bey_-_The_Tortoise_Trainer_-_Google_Art_Project.jpg",
+    "fit": "contain"
+  },
+  "painting_shakuntala": {
+    "name": "Shakuntala (Looking for Dushyanta), Raja Ravi Varma, 1898",
+    "file": "Raja Ravi Varma - Mahabharata - Shakuntala.jpg",
+    "artist": "Raja Ravi Varma",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Raja_Ravi_Varma_-_Mahabharata_-_Shakuntala.jpg",
+    "fit": "contain"
+  },
+  "painting_early_spring": {
+    "name": "Early Spring, Guo Xi, 1072",
+    "file": "早春图轴.北宋.郭熙绘.绢本浅设色.宋神宗熙宁五年.台北故宫博物院藏.tif",
+    "artist": "Guo Xi",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:%E6%97%A9%E6%98%A5%E5%9B%BE%E8%BD%B4.%E5%8C%97%E5%AE%8B.%E9%83%AD%E7%86%99%E7%BB%98.%E7%BB%A2%E6%9C%AC%E6%B5%85%E8%AE%BE%E8%89%B2.%E5%AE%8B%E7%A5%9E%E5%AE%97%E7%86%99%E5%AE%81%E4%BA%94%E5%B9%B4.%E5%8F%B0%E5%8C%97%E6%95%85%E5%AE%AB%E5%8D%9A%E7%89%A9%E9%99%A2%E8%97%8F.tif",
+    "fit": "contain"
+  },
+  "painting_washington_delaware": {
+    "name": "Washington Crossing the Delaware, Emanuel Leutze, 1851",
+    "file": "Washington Crossing the Delaware MET DP215410.jpg",
+    "artist": "Emanuel Leutze",
+    "license": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Washington_Crossing_the_Delaware_MET_DP215410.jpg",
+    "fit": "contain"
+  },
+  "mark_twain": {
+    "name": "Mark Twain",
+    "file": "Mark Twain by AF Bradley.jpg",
+    "artist": "A.F. Bradley, New York",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Mark_Twain_by_AF_Bradley.jpg",
+    "fit": "cover",
+    "focus": "top"
+  },
+  "mahatma_gandhi": {
+    "name": "Mahatma Gandhi",
+    "file": "Portrait Gandhi.jpg",
+    "artist": "Unknown authorUnknown author",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Portrait_Gandhi.jpg",
+    "fit": "cover",
+    "focus": "top"
+  },
+  "george_washington": {
+    "name": "George Washington",
+    "file": "Gilbert Stuart Williamstown Portrait of George Washington.jpg",
+    "artist": "Gilbert Stuart",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Gilbert_Stuart_Williamstown_Portrait_of_George_Washington.jpg",
+    "fit": "cover",
+    "focus": "top"
+  },
+  "vincent_van_gogh": {
+    "name": "Vincent van Gogh",
+    "file": "Vincent van Gogh - Self-Portrait - Google Art Project (454045).jpg",
+    "artist": "Vincent van Gogh",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Vincent_van_Gogh_-_Self-Portrait_-_Google_Art_Project_(454045).jpg",
+    "fit": "cover",
+    "focus": "top"
+  },
+  "charles_dickens": {
+    "name": "Charles Dickens",
+    "file": "Dickens Gurney head.jpg",
+    "artist": "Jeremiah Gurney",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Dickens_Gurney_head.jpg",
+    "fit": "cover",
+    "focus": "top"
+  },
+  "nikola_tesla": {
+    "name": "Nikola Tesla",
+    "file": "Tesla circa 1890.jpeg",
+    "artist": "Napoleon Sarony",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Tesla_circa_1890.jpeg",
+    "fit": "cover",
+    "focus": "top"
+  },
+  "sigmund_freud": {
+    "name": "Sigmund Freud",
+    "file": "Sigmund Freud, by Max Halberstadt (cropped).jpg",
+    "artist": "Max Halberstadt",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Sigmund_Freud,_by_Max_Halberstadt_(cropped).jpg",
+    "fit": "cover",
+    "focus": "top"
+  },
+  "henry_viii": {
+    "name": "Henry VIII",
+    "file": "After Hans Holbein the Younger - Portrait of Henry VIII - Google Art Project.jpg",
+    "artist": "Workshop of Hans Holbein the Younger",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:After_Hans_Holbein_the_Younger_-_Portrait_of_Henry_VIII_-_Google_Art_Project.jpg",
+    "fit": "cover",
+    "focus": "top"
+  },
+  "leonardo_da_vinci": {
+    "name": "Leonardo da Vinci",
+    "file": "Leonardo da Vinci - presumed self-portrait - WGA12798.jpg",
+    "artist": "Leonardo da Vinci",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Leonardo_da_Vinci_-_presumed_self-portrait_-_WGA12798.jpg",
+    "fit": "cover",
+    "focus": "top"
+  },
+  "leo_tolstoy": {
+    "name": "Leo Tolstoy",
+    "file": "Ilya Efimovich Repin (1844-1930) - Portrait of Leo Tolstoy (1887).jpg",
+    "artist": "Ilya Repin",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Ilya_Efimovich_Repin_(1844-1930)_-_Portrait_of_Leo_Tolstoy_(1887).jpg",
+    "fit": "cover",
+    "focus": "top"
+  },
+  "edgar_allan_poe": {
+    "name": "Edgar Allan Poe",
+    "file": "Edgar Allan Poe, circa 1849, restored, squared off.jpg",
+    "artist": "Unknown authorUnknown author; Restored by Yann Forget and Adam Cuerden",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Edgar_Allan_Poe,_circa_1849,_restored,_squared_off.jpg",
+    "fit": "cover",
+    "focus": "top"
+  },
+  "thomas_edison": {
+    "name": "Thomas Edison",
+    "file": "Thomas Edison2.jpg",
+    "artist": "Louis Bachrach, Bachrach Studios, restored by Michel Vuijlsteke",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Thomas_Edison2.jpg",
+    "fit": "cover",
+    "focus": "top"
+  },
+  "elizabeth_i": {
+    "name": "Elizabeth I",
+    "file": "Darnley stage 3.jpg",
+    "artist": "Unidentified painter",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Darnley_stage_3.jpg",
+    "fit": "cover",
+    "focus": "top"
+  },
+  "johann_sebastian_bach": {
+    "name": "Johann Sebastian Bach",
+    "file": "Johann Sebastian Bach.jpg",
+    "artist": "Elias Gottlob Haussmann",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Johann_Sebastian_Bach.jpg",
+    "fit": "cover",
+    "focus": "top"
+  },
+  "jane_austen": {
+    "name": "Jane Austen",
+    "file": "CassandraAusten-JaneAusten(c.1810) hires.jpg",
+    "artist": "Cassandra Austen",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:CassandraAusten-JaneAusten(c.1810)_hires.jpg",
+    "fit": "cover",
+    "focus": "top"
+  },
+  "oscar_wilde": {
+    "name": "Oscar Wilde",
+    "file": "Oscar Wilde portrait.jpg",
+    "artist": "Napoleon Sarony",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Oscar_Wilde_portrait.jpg",
+    "fit": "cover",
+    "focus": "top"
+  },
+  "louis_pasteur": {
+    "name": "Louis Pasteur",
+    "file": "Louis Pasteur, foto av Paul Nadar, Crisco edit.jpg",
+    "artist": "Paul Nadar",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Louis_Pasteur,_foto_av_Paul_Nadar,_Crisco_edit.jpg",
+    "fit": "cover",
+    "focus": "top"
+  },
+  "florence_nightingale": {
+    "name": "Florence Nightingale",
+    "file": "Florence Nightingale (H Hering NPG x82368).jpg",
+    "artist": "Henry Hering (1814-1893)",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Florence_Nightingale_(H_Hering_NPG_x82368).jpg",
+    "fit": "cover",
+    "focus": "top"
+  },
+  "louis_xiv": {
+    "name": "Louis XIV",
+    "file": "Louis XIV of France (cropped).jpg",
+    "artist": "Hyacinthe Rigaud",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Louis_XIV_of_France_(cropped).jpg",
+    "fit": "cover",
+    "focus": "top"
+  },
+  "victor_hugo": {
+    "name": "Victor Hugo",
+    "file": "Victor Hugo by Étienne Carjat 1876 - full.jpg",
+    "artist": "Étienne Carjat",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Victor_Hugo_by_%C3%89tienne_Carjat_1876_-_full.jpg",
+    "fit": "cover",
+    "focus": "top"
+  },
+  "fyodor_dostoevsky": {
+    "name": "Fyodor Dostoevsky",
+    "file": "Vasily Perov - Портрет Ф.М.Достоевского - Google Art Project.jpg",
+    "artist": "Vasily Perov",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Vasily_Perov_-_%D0%9F%D0%BE%D1%80%D1%82%D1%80%D0%B5%D1%82_%D0%A4.%D0%9C.%D0%94%D0%BE%D1%81%D1%82%D0%BE%D0%B5%D0%B2%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_-_Google_Art_Project.jpg",
+    "fit": "cover",
+    "focus": "top"
+  },
+  "franz_kafka": {
+    "name": "Franz Kafka",
+    "file": "Franz Kafka, 1923.jpg",
+    "artist": "Unknown photographer",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Franz_Kafka,_1923.jpg",
+    "fit": "cover",
+    "focus": "top"
+  },
+  "catherine_the_great": {
+    "name": "Catherine the Great",
+    "file": "Catherine II after Roslin, Rokotov (1780s, Kunsthistorisches Museum).jpg",
+    "artist": "After Alexander Roslin",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Catherine_II_after_Roslin,_Rokotov_(1780s,_Kunsthistorisches_Museum).jpg",
+    "fit": "cover",
+    "focus": "top"
+  },
+  "rembrandt": {
+    "name": "Rembrandt",
+    "file": "Rembrandt van Rijn - Self-Portrait - Google Art Project.jpg",
+    "artist": "Rembrandt",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Rembrandt_van_Rijn_-_Self-Portrait_-_Google_Art_Project.jpg",
+    "fit": "cover",
+    "focus": "top"
+  },
+  "rabindranath_tagore": {
+    "name": "Rabindranath Tagore",
+    "file": "Rabindranath Tagore in 1909.jpg",
+    "artist": "Generalstabens litografiska anstalt",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Rabindranath_Tagore_in_1909.jpg",
+    "fit": "cover",
+    "focus": "top"
+  },
+  "emily_dickinson": {
+    "name": "Emily Dickinson",
+    "file": "Black-white photograph of Emily Dickinson2.png",
+    "artist": "Unknown authorUnknown author",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Black-white_photograph_of_Emily_Dickinson2.png",
+    "fit": "cover",
+    "focus": "top"
+  },
+  "dmitri_mendeleev": {
+    "name": "Dmitri Mendeleev",
+    "file": "DIMendeleevCab.jpg",
+    "artist": "Unknown authorUnknown author",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:DIMendeleevCab.jpg",
+    "fit": "cover",
+    "focus": "top"
+  },
+  "genghis_khan": {
+    "name": "Genghis Khan",
+    "file": "YuanEmperorAlbumGenghisPortrait.jpg",
+    "artist": "Unknown authorUnknown author",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:YuanEmperorAlbumGenghisPortrait.jpg",
+    "fit": "cover",
+    "focus": "top"
+  },
+  "frederic_chopin": {
+    "name": "Frédéric Chopin",
+    "file": "Eugène Ferdinand Victor Delacroix 043.jpg",
+    "artist": "Eugène Delacroix",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Eug%C3%A8ne_Ferdinand_Victor_Delacroix_043.jpg",
+    "fit": "cover",
+    "focus": "top"
+  },
+  "johann_wolfgang_von_goethe": {
+    "name": "Johann Wolfgang von Goethe",
+    "file": "Goethe (Stieler 1828).jpg",
+    "artist": "Joseph Karl Stieler",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Goethe_(Stieler_1828).jpg",
+    "fit": "cover",
+    "focus": "top"
+  },
+  "alexander_pushkin": {
+    "name": "Alexander Pushkin",
+    "file": "Kiprensky Pushkin.jpg",
+    "artist": "Orest Kiprensky",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Kiprensky_Pushkin.jpg",
+    "fit": "cover",
+    "focus": "top"
+  },
+  "niels_bohr": {
+    "name": "Niels Bohr",
+    "file": "Niels Bohr.jpg",
+    "artist": "The American Institute of Physics credits the photo [1] to AB Lagrelius &amp; Westphal, which is the Swedish company use",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Niels_Bohr.jpg",
+    "fit": "cover",
+    "focus": "top"
+  },
+  "michael_faraday": {
+    "name": "Michael Faraday",
+    "file": "M Faraday Th Phillips oil 1842.jpg",
+    "artist": "Thomas Phillips",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:M_Faraday_Th_Phillips_oil_1842.jpg",
+    "fit": "cover",
+    "focus": "top"
+  },
+  "simon_bolivar": {
+    "name": "Simón Bolívar",
+    "file": "Simón Bolívar 2.jpg",
+    "artist": "Ricardo Acevedo Bernal",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Sim%C3%B3n_Bol%C3%ADvar_by_Ricardo_Acevedo_Bernal.jpg",
+    "fit": "cover",
+    "focus": "top"
+  },
+  "charlotte_bronte": {
+    "name": "Charlotte Brontë",
+    "file": "Charlotte Brontë.jpg",
+    "artist": "Painted by Evert A. Duyckinick, based on a drawing by George Richmond",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Charlotte_Bront%C3%AB.jpg",
+    "fit": "cover",
+    "focus": "top"
+  },
+  "srinivasa_ramanujan": {
+    "name": "Srinivasa Ramanujan",
+    "file": "Srinivasa Ramanujan - OPC - 1.jpg",
+    "artist": "Unknown authorUnknown author",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Srinivasa_Ramanujan_-_OPC_-_1.jpg",
+    "fit": "cover",
+    "focus": "top"
+  },
+  "lise_meitner": {
+    "name": "Lise Meitner",
+    "file": "Lise Meitner (1878-1968), lecturing at Catholic University, Washington, D.C., 1946.jpg",
+    "artist": "Smithsonian Institution",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Lise_Meitner_(1878-1968),_lecturing_at_Catholic_University,_Washington,_D.C.,_1946.jpg",
+    "fit": "cover",
+    "focus": "top"
+  },
+  "emperor_meiji": {
+    "name": "Emperor Meiji",
+    "file": "Black and white photo of emperor Meiji of Japan.jpg",
+    "artist": "Takagi Haisui",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Black_and_white_portrait_of_emperor_Meiji_of_Japan.jpg",
+    "fit": "cover",
+    "focus": "top"
+  },
+  "elisabeth_vigee_le_brun": {
+    "name": "Élisabeth Vigée Le Brun",
+    "file": "Self-portrait in a Straw Hat by Elisabeth-Louise Vigée-Lebrun.jpg",
+    "artist": "Élisabeth Louise Vigée Le Brun",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Self-portrait_in_a_Straw_Hat_by_Elisabeth-Louise_Vig%C3%A9e-Lebrun.jpg",
+    "fit": "cover",
+    "focus": "top"
+  },
+  "myth_birth_of_venus": {
+    "name": "The Birth of Venus, Botticelli",
+    "file": "Sandro Botticelli - La nascita di Venere - Google Art Project - edited.jpg",
+    "artist": "Sandro Botticelli",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Sandro_Botticelli_-_La_nascita_di_Venere_-_Google_Art_Project_-_edited.jpg",
+    "fit": "contain"
+  },
+  "myth_medusa": {
+    "name": "Medusa, Caravaggio",
+    "file": "Caravaggio - Medusa - Google Art Project.jpg",
+    "artist": "Caravaggio",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Caravaggio_-_Medusa_-_Google_Art_Project.jpg",
+    "fit": "contain"
+  },
+  "myth_capitoline_wolf": {
+    "name": "Capitoline Wolf, Capitoline Museums, Rome",
+    "file": "Capitoline she-wolf Musei Capitolini MC1181.jpg",
+    "artist": "Unknown artistUnknown artist",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Capitoline_she-wolf_Musei_Capitolini_MC1181.jpg",
+    "fit": "contain"
+  },
+  "myth_ulysses_sirens": {
+    "name": "Ulysses and the Sirens, John William Waterhouse",
+    "file": "John William Waterhouse - Ulysses and the Sirens (1891).jpg",
+    "artist": "John William Waterhouse",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:John_William_Waterhouse_-_Ulysses_and_the_Sirens_(1891).jpg",
+    "fit": "cover",
+    "focus": "center"
+  },
+  "myth_lament_icarus": {
+    "name": "The Lament for Icarus, Herbert Draper",
+    "file": "Herbert Draper - The Lament for Icarus - Google Art Project.jpg",
+    "artist": "Herbert James Draper",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Herbert_Draper_-_The_Lament_for_Icarus_-_Google_Art_Project.jpg",
+    "fit": "cover",
+    "focus": "center"
+  },
+  "myth_thor_giants": {
+    "name": "Thor's Fight with the Giants, Mårten Eskil Winge",
+    "file": "Mårten Eskil Winge - Tor's Fight with the Giants - Google Art Project.jpg",
+    "artist": "Mårten Eskil Winge",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:M%C3%A5rten_Eskil_Winge_-_Tor%27s_Fight_with_the_Giants_-_Google_Art_Project.jpg",
+    "fit": "cover",
+    "focus": "top"
+  },
+  "myth_anubis_weighing": {
+    "name": "Weighing of the Heart, Papyrus of Hunefer",
+    "file": "Weighing of the heart3.jpg",
+    "artist": "Hunefer",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Weighing_of_the_heart3.jpg",
+    "fit": "cover",
+    "focus": "center"
+  },
+  "myth_perseus_cellini": {
+    "name": "Perseus with the Head of Medusa, Benvenuto Cellini",
+    "file": "Perseus Medusa Cellini Lanzi Florence.jpg",
+    "artist": "Jebulon",
+    "license": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Perseus_Medusa_Cellini_Lanzi_Florence.jpg",
+    "fit": "cover",
+    "focus": "top"
+  },
+  "myth_saturn_goya": {
+    "name": "Saturn Devouring His Son, Francisco Goya",
+    "file": "Francisco de Goya, Saturno devorando a su hijo (1819-1823).jpg",
+    "artist": "Francisco Goya",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Francisco_de_Goya,_Saturno_devorando_a_su_hijo_(1819-1823).jpg",
+    "fit": "cover",
+    "focus": "top"
+  },
+  "myth_echo_narcissus": {
+    "name": "Echo and Narcissus, John William Waterhouse",
+    "file": "John William Waterhouse - Echo and Narcissus - Google Art Project.jpg",
+    "artist": "John William Waterhouse",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:John_William_Waterhouse_-_Echo_and_Narcissus_-_Google_Art_Project.jpg",
+    "fit": "contain"
+  },
+  "myth_nike_samothrace": {
+    "name": "Winged Victory of Samothrace, Louvre",
+    "file": "Nike of Samothrake Louvre Ma2369 n4.jpg",
+    "artist": "",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Nike_of_Samothrake_Louvre_Ma2369_n4.jpg",
+    "fit": "cover",
+    "focus": "top"
+  },
+  "myth_prometheus_bound": {
+    "name": "Prometheus Bound, Peter Paul Rubens",
+    "file": "Peter Paul Rubens, Flemish (active Italy, Antwerp, and England) - Prometheus Bound - Google Art Project.jpg",
+    "artist": "Frans Snyders / Peter Paul Rubens",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Peter_Paul_Rubens,_Flemish_(active_Italy,_Antwerp,_and_England)_-_Prometheus_Bound_-_Google_Art_Project.jpg",
+    "fit": "contain"
+  },
+  "myth_laocoon": {
+    "name": "Laocoön and His Sons, Vatican Museums",
+    "file": "Laocoon Pio-Clementino Inv1059-1064-1067.jpg",
+    "artist": "Hagesandros, Athenedoros, and Polydoros",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Laocoon_Pio-Clementino_Inv1059-1064-1067.jpg",
+    "fit": "contain"
+  },
+  "myth_apollo_daphne": {
+    "name": "Apollo and Daphne, Gian Lorenzo Bernini",
+    "file": "Apollo and Daphne by Bernini - Galleria Borghese - Rome, Italy - DSC04587.jpg",
+    "artist": "Daderot",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Apollo_and_Daphne_by_Bernini_-_Galleria_Borghese_-_Rome,_Italy_-_DSC04587.jpg",
+    "fit": "cover",
+    "focus": "top"
+  },
+  "myth_saraswati": {
+    "name": "Goddess Saraswati, Raja Ravi Varma",
+    "file": "Raja Ravi Varma, Goddess Saraswati.jpg",
+    "artist": "Raja Ravi Varma",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Raja_Ravi_Varma,_Goddess_Saraswati.jpg",
+    "fit": "cover",
+    "focus": "center"
+  },
+  "myth_quetzalcoatl": {
+    "name": "Quetzalcoatl, Codex Telleriano-Remensis",
+    "file": "Quetzalcoatl telleriano.jpg",
+    "artist": "Unknown authorUnknown author",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Quetzalcoatl_telleriano.jpg",
+    "fit": "contain"
+  },
+  "myth_spinners": {
+    "name": "The Spinners (The Fable of Arachne), Diego Velázquez",
+    "file": "Velazquez-las hilanderas.jpg",
+    "artist": "Diego Velázquez",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Velazquez-las_hilanderas.jpg",
+    "fit": "contain"
+  },
+  "myth_susanoo": {
+    "name": "Susanoo Slaying the Yamata no Orochi, Tsukioka Yoshitoshi",
+    "file": "Susanoo-no-Mikoto-slays-Yamata-no-Orochi-in-Izumo-By-Tsukioka-Yoshitoshi repaired.png",
+    "artist": "Yoshitoshi",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Susanoo-no-Mikoto-slays-Yamata-no-Orochi-in-Izumo-By-Tsukioka-Yoshitoshi_repaired.png",
+    "fit": "cover",
+    "focus": "center"
+  }
+}

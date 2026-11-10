@@ -12,8 +12,10 @@ le dit, et le niveau de difficulté du joueur n'est jamais affiché.
   joueur choisit la matière parmi trois (8 secondes ; entre amis, c'est celui qui a lancé le
   défi). Manche 3 : l'adversaire choisit parmi trois autres. Manche 4 : sprint, des QCM et des
   vrai/faux aux chronos courts (60 % du temps habituel), sans points doublés.
-- Quatre types de questions : QCM (12 s), vrai/faux (8 s), portrait « qui est-ce ? » (10 s),
-  curseur (15 s).
+- Quatre types de questions pour l'app : QCM (12 s), vrai/faux (8 s), image (10 s), curseur
+  (15 s). Le type « image » (`portrait` en base) sert aux portraits, aux drapeaux, aux tableaux,
+  aux monuments et aux œuvres mythologiques ; un QCM à deux réponses est une comparaison
+  (« Which is taller? », « Which came first? », « Which country has more people? »).
 - **1 point par bonne réponse.** Au curseur, le plus proche de la bonne valeur marque (les deux
   à distance égale).
 - **Égalité après 20 questions** : une 21e question au curseur, en mort subite. Le plus proche
@@ -75,13 +77,30 @@ aller-retour de plus.
 
 ## Contenu
 
-- Questions : `scripts/duels_questions_source.py` (137 questions, une vingtaine par matière, sur
-  8 niveaux).
+- Plus de 1 200 questions en anglais, au moins 200 par matière, sur 8 niveaux. Trois sources,
+  lues dans cet ordre (l'identifiant d'une question est son rang dans son niveau : on ajoute
+  toujours à la fin, on ne réordonne jamais) :
+  - `scripts/duels_questions_source.py` : les 137 premières ;
+  - `scripts/duels_geo_source.py` : drapeaux, capitales, comparaisons de pays (population,
+    superficie, PIB ; Banque mondiale 2023, écarts nets seulement, contrôlés par le script) et
+    de géographie physique ;
+  - `scripts/duels_source/*.json` : le reste par matière (`10_history` … `15_world`), puis les
+    questions à image (`20_images`, `21_monuments`).
+- Chaque lot a été écrit puis relu par un vérificateur indépendant (réponse juste, mauvaises
+  réponses certainement fausses, rien qui se périme) avant d'entrer dans la base.
 - Ligues, adversaires et SQL : `python3 scripts/build_duels_seed.py` écrit `content/duels/*.json`
-  et `supabase/migrations/20261110020100_duels_seed_v2.sql` (tout le contenu, republié en entier).
-- Pour ajouter des questions : les écrire dans la source, relancer le script, exécuter le SQL généré.
-- Portraits : Wikimedia Commons, domaine public, crédits dans `content/duels/portraits.json` et
-  dans `duel_questions.image_credit`.
+  et `supabase/migrations/20261111010100_duels_seed_v3.sql` (tout le contenu, republié en entier).
+- Pour ajouter des questions : un nouveau fichier dans `scripts/duels_source/` (nom qui se range
+  après les autres), relancer le script, exécuter le SQL généré.
+- Images : Wikimedia Commons, domaine public ou CC0 uniquement ; drapeaux de flagcdn.com.
+  Crédits dans `content/duels/portraits.json`, `content/duels/images.json` et
+  `duel_questions.image_credit`. `scripts/duels_images.py` met chaque image au format du cadre
+  de l'app (640 × 800) : drapeau entier sur fond neutre, tableau entier sur fond flouté, photo
+  ou portrait rogné.
+- **Questions déjà vues** (`20261111010000_duel_question_pool.sql`) : chaque joueur garde en
+  mémoire ses 300 dernières questions (15 parties) ; une question vue dans les 120 dernières
+  est presque exclue du tirage, les autres nettement défavorisées. Les duels entre amis
+  évitent ce que l'un ou l'autre a vu récemment.
 
 ## Images
 
