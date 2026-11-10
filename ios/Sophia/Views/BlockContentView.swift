@@ -28,15 +28,64 @@ struct BlockContentView: View {
     /// texte original ne doit pas être proposé (cours verrouillé, vue de l'original elle-même).
     var onShowOriginal: ((AppLanguage) -> Void)? = nil
 
-    private static let ink = DS.ink
+    var body: some View {
+        VStack(alignment: .leading, spacing: 24) {
+            SectionHeaderV2(
+                content: content,
+                section: section,
+                isFirst: isFirst,
+                accent: accent,
+                onAuthorTap: onAuthorTap,
+                onShowOriginal: onShowOriginal
+            )
 
-    /// La langue dans laquelle le cours a été écrit, quand ce n'est pas celle de l'app. Les
-    /// cours de la maison sont écrits en français ; un cours de créateur porte la sienne.
-    private var originalLanguage: AppLanguage? {
+            ForEach(Array(section.blocks.enumerated()), id: \.offset) { _, block in
+                ContentBlockViewV2(
+                    block: block,
+                    accent: accent,
+                    courseId: courseId,
+                    courseTitle: courseTitle,
+                    onGlossaryTap: onGlossaryTap
+                )
+            }
+
+            if isLast {
+                SectionFooterV2(
+                    content: content,
+                    onAuthorTap: onAuthorTap,
+                    isFollowingAuthor: isFollowingAuthor,
+                    onFollowAuthor: onFollowAuthor,
+                    onShowOriginal: onShowOriginal
+                )
+            }
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+    }
+}
+
+/// La langue dans laquelle un cours a été écrit, quand ce n'est pas celle de l'app. Les cours
+/// de la maison sont écrits en français ; un cours de créateur porte la sienne.
+enum CourseOriginal {
+    static func language(of content: CourseContentV2) -> AppLanguage? {
         let code = content.originalLanguage ?? AppLanguage.french.rawValue
         guard code != AppLanguage.currentPersisted().rawValue else { return nil }
         return AppLanguage(rawValue: code)
     }
+}
+
+// MARK: - Section pieces (shared with the step-by-step reader)
+
+/// En-tête d'une section : hero, titre, accroche (puis signature et mention de traduction)
+/// pour l'introduction ; le titre de la section sinon. Rendu identique dans les deux modes de
+/// lecture (`BlockContentView` par pages, `CourseStepReaderView` pas à pas).
+struct SectionHeaderV2: View {
+    let content: CourseContentV2
+    let section: CourseSectionV2
+    let isFirst: Bool
+    let accent: Color
+    var onAuthorTap: ((CourseAuthor) -> Void)? = nil
+    /// « Voir l'original », sur la mention « Traduit · original en … » d'un cours de créateur.
+    var onShowOriginal: ((AppLanguage) -> Void)? = nil
 
     /// The professor behind the course, when the JSON names one that the bundle knows.
     private var author: CourseAuthor? {
@@ -44,91 +93,52 @@ struct BlockContentView: View {
         return AuthorStore.author(slug: slug)
     }
 
-    var body: some View {
-        VStack(alignment: .leading, spacing: 24) {
-            header
-
-            ForEach(Array(section.blocks.enumerated()), id: \.offset) { _, block in
-                blockView(block)
-            }
-
-            if isLast {
-                footer
-            }
-        }
-        .frame(maxWidth: .infinity, alignment: .leading)
+    private var originalAction: (() -> Void)? {
+        guard let original = CourseOriginal.language(of: content), let onShowOriginal else { return nil }
+        return { onShowOriginal(original) }
     }
 
-    @ViewBuilder
-    private var header: some View {
+    var body: some View {
         if isFirst, let hero = content.hero {
-            HeroBlockView(
-                hero: hero,
-                title: content.title,
-                subtitle: content.subtitle,
-                accent: accent
-            )
-            if let author {
-                AuthorBylineV2(author: author) { tapped in
-                    onAuthorTap?(tapped)
+            VStack(alignment: .leading, spacing: 24) {
+                HeroBlockView(
+                    hero: hero,
+                    title: content.title,
+                    subtitle: content.subtitle,
+                    accent: accent
+                )
+                if let author {
+                    AuthorBylineV2(author: author) { tapped in
+                        onAuthorTap?(tapped)
+                    }
                 }
-            }
-            if let code = content.originalLanguage, code != AppLanguage.currentPersisted().rawValue {
-                TranslatedFromLine(code: code, onShowOriginal: originalAction)
+                if let code = content.originalLanguage, code != AppLanguage.currentPersisted().rawValue {
+                    TranslatedFromLine(code: code, onShowOriginal: originalAction)
+                }
             }
         } else {
             Text(section.title)
                 .font(DS.title(.largeTitle, .semibold))
-                .foregroundStyle(Self.ink)
+                .foregroundStyle(DS.ink)
                 .fixedSize(horizontal: false, vertical: true)
         }
     }
+}
 
-    /// Signature and references, only ever after the last block of the last section.
-    @ViewBuilder
-    private var footer: some View {
-        if let author {
-            AuthorCardV2(
-                author: author,
-                isFollowing: isFollowingAuthor?(author),
-                onFollow: onFollowAuthor.map { follow in { follow(author) } },
-                onTap: { tapped in onAuthorTap?(tapped) }
-            )
-            .padding(.top, 4)
-        }
-        if let sources = content.sources, !sources.isEmpty {
-            SourcesCardV2(sources: sources)
-        }
-        // Tout en bas du cours, discrètement : le texte dans sa langue d'écriture.
-        if let original = originalLanguage, let originalAction {
-            Button(action: originalAction) {
-                HStack(spacing: 6) {
-                    Image(systemName: "globe")
-                        .font(.system(size: 12, weight: .medium))
-                    Text("\(AppLocalizable.string("course.seeOriginal", language: AppLanguage.currentPersisted())) · \(original.displayName)")
-                        .font(DS.sans(.footnote, .medium))
-                        .underline()
-                }
-                .foregroundStyle(DS.inkTertiary)
-                .frame(maxWidth: .infinity)
-                .padding(.vertical, 6)
-            }
-            .buttonStyle(.plain)
-        }
-    }
+/// Un bloc typé d'une section, rendu de la même façon dans les deux modes de lecture.
+struct ContentBlockViewV2: View {
+    let block: ContentBlockV2
+    let accent: Color
+    let courseId: String
+    let courseTitle: String
+    let onGlossaryTap: (GlossaryEntry) -> Void
 
-    private var originalAction: (() -> Void)? {
-        guard let original = originalLanguage, let onShowOriginal else { return nil }
-        return { onShowOriginal(original) }
-    }
-
-    @ViewBuilder
-    private func blockView(_ block: ContentBlockV2) -> some View {
+    var body: some View {
         switch block {
         case .heading(let text):
             Text(text)
                 .font(DS.title(.title2, .semibold))
-                .foregroundStyle(Self.ink)
+                .foregroundStyle(DS.ink)
                 .fixedSize(horizontal: false, vertical: true)
                 .padding(.top, 4)
 
@@ -167,6 +177,58 @@ struct BlockContentView: View {
 
         case .quote(let text, let attribution):
             QuoteBlockView(text: text, attribution: attribution, accent: accent)
+        }
+    }
+}
+
+/// Signature et références : la carte auteur puis les sources, seulement après le dernier bloc
+/// de la dernière section.
+struct SectionFooterV2: View {
+    let content: CourseContentV2
+    var onAuthorTap: ((CourseAuthor) -> Void)? = nil
+    /// « Suivre » sur la carte auteur : état et geste, fournis par le lecteur.
+    var isFollowingAuthor: ((CourseAuthor) -> Bool)? = nil
+    var onFollowAuthor: ((CourseAuthor) -> Void)? = nil
+    /// « Voir l'original » : un lien discret tout en bas du cours.
+    var onShowOriginal: ((AppLanguage) -> Void)? = nil
+
+    private var author: CourseAuthor? {
+        guard let slug = content.author else { return nil }
+        return AuthorStore.author(slug: slug)
+    }
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 24) {
+            if let author {
+                AuthorCardV2(
+                    author: author,
+                    isFollowing: isFollowingAuthor?(author),
+                    onFollow: onFollowAuthor.map { follow in { follow(author) } },
+                    onTap: { tapped in onAuthorTap?(tapped) }
+                )
+                .padding(.top, 4)
+            }
+            if let sources = content.sources, !sources.isEmpty {
+                SourcesCardV2(sources: sources)
+            }
+            // Tout en bas du cours, discrètement : le texte dans sa langue d'écriture.
+            if let original = CourseOriginal.language(of: content), let onShowOriginal {
+                Button {
+                    onShowOriginal(original)
+                } label: {
+                    HStack(spacing: 6) {
+                        Image(systemName: "globe")
+                            .font(.system(size: 12, weight: .medium))
+                        Text("\(AppLocalizable.string("course.seeOriginal", language: AppLanguage.currentPersisted())) · \(original.displayName)")
+                            .font(DS.sans(.footnote, .medium))
+                            .underline()
+                    }
+                    .foregroundStyle(DS.inkTertiary)
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 6)
+                }
+                .buttonStyle(.plain)
+            }
         }
     }
 }

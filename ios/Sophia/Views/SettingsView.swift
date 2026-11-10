@@ -65,6 +65,8 @@ struct SettingsView: View {
 
                         appearanceSection
 
+                        readingSection
+
                         progressionSection
 
                         // Pendant l'essai gratuit, aucune notification : pas de réglage non plus.
@@ -200,6 +202,14 @@ struct SettingsView: View {
                         .padding(.horizontal, 24)
                 }
             }
+        }
+    }
+
+    /// Pas à pas ou par pages : le même choix que dans l'en-tête du lecteur.
+    private var readingSection: some View {
+        section(languageManager.text("course.readingMode")) {
+            ReadingModePickerControl()
+                .padding(.horizontal, 20)
         }
     }
 
