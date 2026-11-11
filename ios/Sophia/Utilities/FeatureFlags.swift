@@ -25,9 +25,10 @@ enum FeatureFlags {
     /// pour ne pas décaler les leurs ; dans la barre, il se place entre Explorer et Profil.
     static let duelsTab = 5
 
-    /// L'onglet Duels est ouvert à tous, mais seulement quand l'app est en anglais : les
-    /// questions de la bêta n'existent que dans cette langue.
+    /// L'onglet Duels est ouvert dans toutes les langues de l'app : le serveur rend chaque
+    /// question dans la langue du joueur (`duel_set_language`, `duel_ping`), et deux joueurs de
+    /// langues différentes jouent la même partie. Le paramètre reste pour les appelants.
     static func duelsVisible(language: AppLanguage) -> Bool {
-        language == .english
+        true
     }
 }

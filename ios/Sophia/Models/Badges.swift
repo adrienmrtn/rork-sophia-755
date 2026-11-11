@@ -55,9 +55,18 @@ nonisolated struct Badge: Identifiable, Hashable, Sendable {
     var eventNames: [String: String]? = nil
     var eventTitles: [String: String]? = nil
 
+    /// Le nom de la figure tel que le serveur le donne dans la langue du joueur (page des duels
+    /// chargée), sinon le nom anglais embarqué.
+    @MainActor
+    private var shownLeagueName: String? {
+        guard let leagueName else { return nil }
+        let slug = id.hasPrefix("league_") ? String(id.dropFirst("league_".count)) : ""
+        return DuelService.shared.home?.leagues.first(where: { $0.slug == slug })?.name ?? leagueName
+    }
+
     @MainActor
     func title(language: AppLanguage) -> String {
-        if let leagueName {
+        if let leagueName = shownLeagueName {
             return String(format: AppLocalizable.string("duel.league.name", language: language), leagueName)
         }
         if let eventNames {
@@ -90,7 +99,7 @@ nonisolated struct Badge: Identifiable, Hashable, Sendable {
         case .follows: return String(format: text("follows"), target)
         case .likes: return String(format: text("likes"), target)
         case .friends: return String(format: text("friends"), target)
-        case .league: return String(format: text("league"), leagueName ?? "")
+        case .league: return String(format: text("league"), shownLeagueName ?? "")
         case .event:
             let event = eventTitles.map { Campaign.localized($0, language: language) } ?? ""
             return String(format: text("event"), target, event)
