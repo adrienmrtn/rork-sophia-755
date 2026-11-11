@@ -1,102 +1,723 @@
-{"items": {
-"dq_en_1_214": {"q": "Como se chama uma pintura de objetos como frutos, flores ou jarras?", "o": ["Natureza-morta", "Mural", "Paisagem", "Fresco"]},
-"dq_en_1_215": {"q": "Como se chama o suporte de madeira que segura a tela do pintor?", "o": ["Cavalete", "Moldura", "Espátula", "Paleta"]},
-"dq_en_1_216": {"q": "Como se chama a pessoa cuja profissão é projetar edifícios?", "o": ["Arquiteto", "Carpinteiro", "Escultor", "Pintor"]},
-"dq_en_1_217": {"q": "Sobre que cidade se ergue a estátua do Cristo Redentor?", "o": ["Buenos Aires", "Lisboa", "São Paulo", "Rio de Janeiro"]},
-"dq_en_1_218": {"q": "Que edifício de Washington, D.C., é a residência oficial do presidente dos EUA?", "o": ["Pentágono", "Capitólio", "Memorial de Lincoln", "Casa Branca"]},
-"dq_en_1_219": {"q": "Que forma de arte conta uma história numa sequência de vinhetas desenhadas, com balões de fala?", "o": ["Banda desenhada", "Mosaico", "Fresco", "Colagem"]},
-"dq_en_1_220": {"q": "Em que cidade fica a torre do relógio popularmente conhecida como Big Ben?", "o": ["Londres", "Dublin", "Paris", "Berlim"]},
-"dq_en_1_221": {"q": "Como se chama o edifício onde se guardam e expõem obras de arte ao público?", "o": ["Teatro", "Estádio", "Biblioteca", "Museu"]},
-"dq_en_1_222": {"q": "Que ferramenta golpeia o escultor com um maço para talhar a pedra?", "o": ["Cavalete", "Cinzel", "Pincel", "Paleta"]},
-"dq_en_1_223": {"q": "Qual foi construído primeiro?", "o": ["Coliseu de Roma", "Big Ben de Londres"]},
-"dq_en_1_224": {"q": "Como se chama uma pintura de um cenário natural, com colinas, rios e campos?", "o": ["Paisagem", "Natureza-morta", "Abstração", "Retrato"]},
-"dq_en_1_225": {"q": "Como se chama um desenho cómico que exagera os traços de uma pessoa?", "o": ["Esboço", "Mosaico", "Silhueta", "Caricatura"]},
-"dq_en_1_226": {"q": "A cerâmica faz-se moldando o barro e endurecendo-o com calor."},
-"dq_en_1_227": {"q": "A Grande Muralha da China foi construída num só ano."},
-"dq_en_1_228": {"q": "A estátua antiga conhecida como Vénus de Milo perdeu os dois braços."},
-"dq_en_2_215": {"q": "Como se chama o traje tradicional japonês em forma de T, apertado com uma faixa?", "o": ["Poncho", "Quimono", "Hanbok", "Sari"]},
-"dq_en_2_216": {"q": "A célebre máscara funerária de Tutankhamon é feita sobretudo de que material?", "o": ["Madeira", "Prata", "Ouro", "Bronze"]},
-"dq_en_2_217": {"q": "Que surrealista pintou relógios a derreter em «A Persistência da Memória»?", "o": ["Max Ernst", "Salvador Dalí", "René Magritte", "Joan Miró"]},
-"dq_en_2_218": {"q": "Em que cidade fica o Metropolitan Museum of Art?", "o": ["Nova Iorque", "Boston", "Chicago", "Washington, D.C."]},
-"dq_en_2_219": {"q": "Como se chama a torre alta e esguia de uma mesquita?", "o": ["Pagode", "Minarete", "Flecha", "Campanário"]},
-"dq_en_2_220": {"q": "Qual destes edifícios é mais alto?", "o": ["Burj Khalifa", "Torres Petronas"]},
-"dq_en_2_221": {"q": "Que movimento artístico representava os objetos como formas geométricas vistas de vários ângulos ao mesmo tempo?", "o": ["Barroco", "Romantismo", "Impressionismo", "Cubismo"]},
-"dq_en_2_222": {"q": "O kilt, um saiote de tartã que chega ao joelho, é o traje tradicional de que nação?", "o": ["Áustria", "Noruega", "Escócia", "Países Baixos"]},
-"dq_en_2_223": {"q": "Que parte de uma máquina fotográfica é o vidro curvo que foca a luz?", "o": ["Tripé", "Obturador", "Lente", "Flash"]},
-"dq_en_2_224": {"q": "O que têm de especial as matrioscas russas?", "o": ["São feitas de vidro", "Encaixam umas nas outras", "Tocam música", "Giram como piões"]},
-"dq_en_2_225": {"q": "Nos vitrais, os pedaços de vidro colorido são unidos por tiras de chumbo."},
-"dq_en_2_226": {"q": "O Kremlin, a famosa fortaleza russa, fica em São Petersburgo."},
-"dq_en_2_227": {"q": "Os postes totémicos tradicionais são esculpidos em pedra."},
-"dq_en_2_228": {"q": "A Grande Pirâmide de Gizé já esteve revestida de calcário branco e liso."},
-"dq_en_2_229": {"q": "Quantos rostos de presidentes estão esculpidos no monte Rushmore?", "u": "rostos"},
-"dq_en_3_219": {"q": "Como se chama uma escultura que representa apenas a cabeça, os ombros e o peito de uma pessoa?", "o": ["Busto", "Torso", "Relevo", "Estatueta"]},
-"dq_en_3_220": {"q": "Que técnica usava Georges Seurat para construir os seus quadros?", "o": ["Cubismo", "Fauvismo", "Pontilhismo", "Futurismo"]},
-"dq_en_3_221": {"q": "Em que cidade fica a Cúpula do Rochedo?", "o": ["Meca", "Damasco", "Cairo", "Jerusalém"]},
-"dq_en_3_222": {"q": "Que rainha egípcia é célebre por um busto de calcário pintado encontrado em Amarna?", "o": ["Cleópatra", "Nefertiti", "Hatchepsut", "Nefertari"]},
-"dq_en_3_223": {"q": "Que civilização construiu a pirâmide escalonada de El Castillo, em Chichén Itzá?", "o": ["Incas", "Olmecas", "Astecas", "Maias"]},
-"dq_en_3_224": {"q": "Em que cidade se erguem as Torres Petronas, gémeas?", "o": ["Singapura", "Jacarta", "Kuala Lumpur", "Banguecoque"]},
-"dq_en_3_225": {"q": "Em que palácio fica a Galeria dos Espelhos, onde foi assinado um tratado de paz em 1919?", "o": ["Fontainebleau", "Palácio de Buckingham", "Versalhes", "Schönbrunn"]},
-"dq_en_3_226": {"q": "Em que cidade fica a Galeria dos Uffizi?", "o": ["Veneza", "Roma", "Milão", "Florença"]},
-"dq_en_3_227": {"q": "Qual é mais antigo?", "o": ["Machu Picchu", "Stonehenge"]},
-"dq_en_3_228": {"q": "A Torre de Pisa foi construída como campanário da catedral da cidade."},
-"dq_en_3_229": {"q": "A pintura com pontos é um estilo bem conhecido da arte aborígene australiana."},
-"dq_en_3_230": {"q": "Os templos e as estátuas da Grécia Antiga ficavam sempre em mármore branco, sem qualquer pintura."},
-"dq_en_3_231": {"q": "Que altura tem o Burj Khalifa, no Dubai, em metros?", "u": "metros"},
-"dq_en_3_232": {"q": "Em que ano foi inaugurada a ponte Golden Gate, em São Francisco?"},
-"dq_en_3_233": {"q": "Há cerca de quantos anos foram feitas as pinturas da gruta de Lascaux?", "u": "anos"},
-"dq_en_4_221": {"q": "Nas igrejas ortodoxas, como se chamam os painéis de madeira pintados com Cristo e os santos?", "o": ["Thangkas", "Mandalas", "Ícones", "Totens"]},
-"dq_en_4_222": {"q": "Como se chama um pilar alto de pedra, com quatro faces, que termina numa pequena pirâmide?", "o": ["Minarete", "Estupa", "Obelisco", "Zigurate"]},
-"dq_en_4_223": {"q": "Que sistema de desenho faz convergir as linhas paralelas num ponto de fuga para criar profundidade?", "o": ["Sfumato", "Empaste", "Claro-escuro", "Perspetiva linear"]},
-"dq_en_4_224": {"q": "O que é o Pont du Gard, no sul de França?", "o": ["Um castelo medieval", "Um aqueduto romano", "Um palácio real", "Uma catedral gótica"]},
-"dq_en_4_225": {"q": "Em que ilha do Pacífico pintou Paul Gauguin muitas obras a partir de 1891?", "o": ["Taiti", "Havai", "Bali", "Fiji"]},
-"dq_en_4_226": {"q": "Que centro de artes de Paris exibe as condutas e as escadas rolantes no exterior?", "o": ["Museu d'Orsay", "Centro Pompidou", "Grand Palais", "Petit Palais"]},
-"dq_en_4_227": {"q": "Que pintor liderou os fauves, as «feras» da cor intensa, por volta de 1905?", "o": ["Paul Signac", "Fernand Léger", "Henri Matisse", "Edgar Degas"]},
-"dq_en_4_228": {"q": "Que estilo arquitetónico surgiu primeiro na Europa medieval?", "o": ["Gótico", "Românico"]},
-"dq_en_4_229": {"q": "Nas catedrais góticas, qual é a função prática das gárgulas?", "o": ["Iluminar a nave", "Tocar os sinos", "Sustentar o telhado", "Escoar a água da chuva"]},
-"dq_en_4_230": {"q": "Em que país fica Borobudur, o maior templo budista do mundo?", "o": ["Myanmar", "Indonésia", "Camboja", "Tailândia"]},
-"dq_en_4_231": {"q": "Em que cidade fica o Atomium, construído para a Exposição Universal de 1958?", "o": ["Paris", "Amesterdão", "Bruxelas", "Genebra"]},
-"dq_en_4_232": {"q": "O sari tradicional é uma longa peça de tecido sem costuras, enrolada à volta do corpo."},
-"dq_en_4_233": {"q": "As gravuras japonesas em madeira influenciaram fortemente muitos pintores impressionistas."},
-"dq_en_4_234": {"q": "Quantos anos demorou a esculpir o monte Rushmore?", "u": "anos"},
-"dq_en_4_235": {"q": "Quantos lados tem o muro exterior da Cúpula do Rochedo?", "u": "lados"},
-"dq_en_5_229": {"q": "Que movimento artístico surgiu primeiro?", "o": ["Futurismo", "Surrealismo"]},
-"dq_en_5_230": {"q": "Que pintor nasceu primeiro?", "o": ["Caravaggio", "Albrecht Dürer"]},
-"dq_en_5_231": {"q": "Em que país fica a gruta de Altamira, com as suas pinturas de bisontes da Idade da Pedra?", "o": ["Espanha", "Itália", "Portugal", "França"]},
-"dq_en_5_232": {"q": "Como se chama a abertura redonda no topo da cúpula do Panteão de Roma?", "o": ["Lanterna", "Óculo", "Nave", "Abside"]},
-"dq_en_5_233": {"q": "Que edifício era antigamente o Museu d'Orsay, em Paris?", "o": ["Uma fábrica", "Um palácio real", "Uma prisão", "Uma estação ferroviária"]},
-"dq_en_5_234": {"q": "A escultura gigante «Maman», de Louise Bourgeois, representa que criatura?", "o": ["Aranha", "Escorpião", "Caranguejo", "Polvo"]},
-"dq_en_5_235": {"q": "Que desenho sagrado circular fazem por vezes os monges tibetanos com areia colorida?", "o": ["Mandala", "Estupa", "Mantra", "Thangka"]},
-"dq_en_5_236": {"q": "Que estilo, por volta de 1900, usava linhas fluidas e curvas inspiradas nas plantas?", "o": ["Arte Nova", "Art Déco", "Bauhaus", "Brutalismo"]},
-"dq_en_5_237": {"q": "A Porta de Ishtar, de tijolos vidrados azuis, hoje reconstruída num museu de Berlim, vem de que cidade antiga?", "o": ["Troia", "Babilónia", "Nínive", "Persépolis"]},
-"dq_en_5_238": {"q": "Que criador de moda lançou «Le Smoking», um smoking para mulher, em 1966?", "o": ["Pierre Cardin", "Hubert de Givenchy", "Christian Dior", "Yves Saint Laurent"]},
-"dq_en_5_239": {"q": "A galeria Tate Modern, em Londres, ocupa uma antiga estação ferroviária."},
-"dq_en_5_240": {"q": "A ordem dórica é a mais ricamente decorada das ordens clássicas gregas."},
-"dq_en_5_241": {"q": "Em que ano abriu o Museu Guggenheim de Bilbau, de Frank Gehry?"},
-"dq_en_5_242": {"q": "Quantos metros de altura tem, aproximadamente, a Grande Esfinge de Gizé?", "u": "metros"},
-"dq_en_5_243": {"q": "Em que ano foi inaugurada a Ponte de Brooklyn, em Nova Iorque?"},
-"dq_en_6_216": {"q": "Que termo de pintura designa uma passagem gradual entre tons, sem contornos nítidos?", "o": ["Pentimento", "Sfumato", "Grisalha", "Empaste"]},
-"dq_en_6_217": {"q": "Em que país atual se faziam os célebres azulejos e cerâmicas de Iznik?", "o": ["Turquia", "Marrocos", "Irão", "Usbequistão"]},
-"dq_en_6_218": {"q": "Os príncipes da dinastia Han eram sepultados com trajes feitos de pequenas placas de que pedra?", "o": ["Jade", "Mármore", "Obsidiana", "Lápis-lazúli"]},
-"dq_en_6_219": {"q": "Em que país foi encontrada a Vénus de Willendorf, uma pequena estatueta da Idade da Pedra?", "o": ["França", "Chéquia", "Alemanha", "Áustria"]},
-"dq_en_6_220": {"q": "O tā moko é a arte tradicional maori de quê?", "o": ["Tecelagem", "Tatuagem", "Olaria", "Talha em madeira"]},
-"dq_en_6_221": {"q": "As grandes muralhas de pedra do Grande Zimbabué foram construídas sem quê?", "o": ["Torres", "Portas", "Argamassa", "Curvas"]},
-"dq_en_6_222": {"q": "Que arquiteto fundou a escola de design Bauhaus?", "o": ["Frank Lloyd Wright", "Walter Gropius", "Le Corbusier", "Alvar Aalto"]},
-"dq_en_6_223": {"q": "Que pintora francesa foi membro fundador do grupo impressionista?", "o": ["Camille Claudel", "Sonia Delaunay", "Berthe Morisot", "Rosa Bonheur"]},
-"dq_en_6_224": {"q": "Quem pintou «Quadrado Negro» (1915), um marco da arte abstrata?", "o": ["Kazimir Malevich", "El Lissitzky", "Wassily Kandinsky", "Alexander Rodchenko"]},
-"dq_en_6_225": {"q": "Que pintor nasceu primeiro?", "o": ["Peter Paul Rubens", "Ticiano"]},
-"dq_en_6_226": {"q": "O pintor El Greco nasceu em Toledo, em Espanha."},
-"dq_en_6_227": {"q": "A Tapeçaria de Bayeux é, na verdade, um bordado e não uma tapeçaria tecida."},
-"dq_en_6_228": {"q": "Em que ano apresentou Christian Dior a sua famosa coleção «New Look»?"},
-"dq_en_6_229": {"q": "Em que ano foi anunciado em Paris o processo fotográfico do daguerreótipo?"},
-"dq_en_7_216": {"q": "Que técnica de pintura antiga usa pigmentos misturados com cera de abelha?", "o": ["Têmpera", "Fresco", "Guache", "Encáustica"]},
-"dq_en_7_217": {"q": "Que método usavam os artistas do Benim para fundir as suas placas de bronze e latão?", "o": ["Fundição sob pressão", "Fundição centrífuga", "Fundição em areia", "Fundição por cera perdida"]},
-"dq_en_7_218": {"q": "Que escrita árabe angulosa foi usada em muitas das primeiras cópias do Corão?", "o": ["Diwani", "Nastaliq", "Cúfica", "Ruq'a"]},
-"dq_en_7_219": {"q": "Que país é famoso pelos celadons verde-jade do século XII, com motivos incrustados?", "o": ["Tailândia", "Coreia", "Vietname", "Japão"]},
-"dq_en_7_220": {"q": "Em que país fica a Cueva de las Manos, famosa pelas mãos pré-históricas pintadas em negativo?", "o": ["Peru", "Argentina", "Chile", "Bolívia"]},
-"dq_en_7_221": {"q": "Em que cidade iraniana fica a grande Praça Naqsh-e Jahan, rodeada de mesquitas?", "o": ["Teerão", "Ispaão", "Xiraz", "Tabriz"]},
-"dq_en_7_222": {"q": "O quadro «Abaporu», de Tarsila do Amaral, é um ícone da arte moderna de que país?", "o": ["Portugal", "Brasil", "Argentina", "México"]},
-"dq_en_7_223": {"q": "Nas suas célebres «Untitled Film Stills», quem fotografa Cindy Sherman?", "o": ["Estrelas de cinema", "Desconhecidos na rua", "A própria família", "A si mesma, caracterizada"]},
-"dq_en_7_224": {"q": "Que escultor florentino fez um David em bronze, o primeiro nu independente desde a Antiguidade?", "o": ["Benvenuto Cellini", "Donatello", "Lorenzo Ghiberti", "Verrocchio"]},
-"dq_en_7_225": {"q": "Os retratos de múmias do Faium foram pintados no Egito durante o período romano."},
-"dq_en_7_226": {"q": "A mais antiga fotografia de Niépce tirada com câmara que se conservou precisou apenas de alguns segundos de exposição."}
-}, "untranslatable": []}
+{
+ "items": {
+  "dq_en_1_214": {
+   "q": "Como se chama uma pintura de objetos como frutos, flores ou jarras?",
+   "o": [
+    "Natureza-morta",
+    "Mural",
+    "Paisagem",
+    "Fresco"
+   ]
+  },
+  "dq_en_1_215": {
+   "q": "Como se chama o suporte de madeira que segura a tela do pintor?",
+   "o": [
+    "Cavalete",
+    "Moldura",
+    "Espátula",
+    "Paleta"
+   ]
+  },
+  "dq_en_1_216": {
+   "q": "Como se chama a pessoa cuja profissão é projetar edifícios?",
+   "o": [
+    "Arquiteto",
+    "Carpinteiro",
+    "Escultor",
+    "Pintor"
+   ]
+  },
+  "dq_en_1_217": {
+   "q": "Sobre que cidade se ergue a estátua do Cristo Redentor?",
+   "o": [
+    "Buenos Aires",
+    "Lisboa",
+    "São Paulo",
+    "Rio de Janeiro"
+   ]
+  },
+  "dq_en_1_218": {
+   "q": "Que edifício de Washington, D.C., é a residência oficial do presidente dos EUA?",
+   "o": [
+    "Pentágono",
+    "Capitólio",
+    "Memorial de Lincoln",
+    "Casa Branca"
+   ]
+  },
+  "dq_en_1_219": {
+   "q": "Que forma de arte conta uma história numa sequência de vinhetas, com balões de fala?",
+   "o": [
+    "Banda desenhada",
+    "Mosaico",
+    "Fresco",
+    "Colagem"
+   ]
+  },
+  "dq_en_1_220": {
+   "q": "Em que cidade fica a torre do relógio popularmente conhecida como Big Ben?",
+   "o": [
+    "Londres",
+    "Dublin",
+    "Paris",
+    "Berlim"
+   ]
+  },
+  "dq_en_1_221": {
+   "q": "Como se chama o edifício onde se guardam e expõem obras de arte ao público?",
+   "o": [
+    "Teatro",
+    "Estádio",
+    "Biblioteca",
+    "Museu"
+   ]
+  },
+  "dq_en_1_222": {
+   "q": "Que ferramenta golpeia o escultor com um maço para talhar a pedra?",
+   "o": [
+    "Cavalete",
+    "Cinzel",
+    "Pincel",
+    "Paleta"
+   ]
+  },
+  "dq_en_1_223": {
+   "q": "Qual foi construído primeiro?",
+   "o": [
+    "Coliseu de Roma",
+    "Big Ben de Londres"
+   ]
+  },
+  "dq_en_1_224": {
+   "q": "Como se chama uma pintura de um cenário natural, com colinas, rios e campos?",
+   "o": [
+    "Paisagem",
+    "Natureza-morta",
+    "Abstração",
+    "Retrato"
+   ]
+  },
+  "dq_en_1_225": {
+   "q": "Como se chama um desenho cómico que exagera os traços de uma pessoa?",
+   "o": [
+    "Esboço",
+    "Mosaico",
+    "Silhueta",
+    "Caricatura"
+   ]
+  },
+  "dq_en_1_226": {
+   "q": "A cerâmica faz-se moldando o barro e endurecendo-o com calor."
+  },
+  "dq_en_1_227": {
+   "q": "A Grande Muralha da China foi construída num só ano."
+  },
+  "dq_en_1_228": {
+   "q": "A estátua antiga conhecida como Vénus de Milo perdeu os dois braços."
+  },
+  "dq_en_2_215": {
+   "q": "Como se chama o traje tradicional japonês em forma de T, apertado com uma faixa?",
+   "o": [
+    "Poncho",
+    "Quimono",
+    "Hanbok",
+    "Sari"
+   ]
+  },
+  "dq_en_2_216": {
+   "q": "A célebre máscara funerária de Tutankhamon é feita sobretudo de que material?",
+   "o": [
+    "Madeira",
+    "Prata",
+    "Ouro",
+    "Bronze"
+   ]
+  },
+  "dq_en_2_217": {
+   "q": "Que surrealista pintou relógios a derreter em «A Persistência da Memória»?",
+   "o": [
+    "Max Ernst",
+    "Salvador Dalí",
+    "René Magritte",
+    "Joan Miró"
+   ]
+  },
+  "dq_en_2_218": {
+   "q": "Em que cidade fica o Metropolitan Museum of Art?",
+   "o": [
+    "Nova Iorque",
+    "Boston",
+    "Chicago",
+    "Washington, D.C."
+   ]
+  },
+  "dq_en_2_219": {
+   "q": "Como se chama a torre alta e esguia de uma mesquita?",
+   "o": [
+    "Pagode",
+    "Minarete",
+    "Flecha",
+    "Campanário"
+   ]
+  },
+  "dq_en_2_220": {
+   "q": "Qual destes edifícios é mais alto?",
+   "o": [
+    "Burj Khalifa",
+    "Torres Petronas"
+   ]
+  },
+  "dq_en_2_221": {
+   "q": "Que movimento artístico representava os objetos como formas geométricas vistas de vários ângulos ao mesmo tempo?",
+   "o": [
+    "Barroco",
+    "Romantismo",
+    "Impressionismo",
+    "Cubismo"
+   ]
+  },
+  "dq_en_2_222": {
+   "q": "O kilt, um saiote de tartã que chega ao joelho, é o traje tradicional de que nação?",
+   "o": [
+    "Áustria",
+    "Noruega",
+    "Escócia",
+    "Países Baixos"
+   ]
+  },
+  "dq_en_2_223": {
+   "q": "Que parte de uma máquina fotográfica é o vidro curvo que foca a luz?",
+   "o": [
+    "Tripé",
+    "Obturador",
+    "Lente",
+    "Flash"
+   ]
+  },
+  "dq_en_2_224": {
+   "q": "O que têm de especial as matrioscas russas?",
+   "o": [
+    "São feitas de vidro",
+    "Encaixam umas nas outras",
+    "Tocam música",
+    "Giram como piões"
+   ]
+  },
+  "dq_en_2_225": {
+   "q": "Nos vitrais, os pedaços de vidro colorido são unidos por tiras de chumbo."
+  },
+  "dq_en_2_226": {
+   "q": "O Kremlin, a famosa fortaleza russa, fica em São Petersburgo."
+  },
+  "dq_en_2_227": {
+   "q": "Os postes totémicos tradicionais são esculpidos em pedra."
+  },
+  "dq_en_2_228": {
+   "q": "A Grande Pirâmide de Gizé já esteve revestida de calcário branco e liso."
+  },
+  "dq_en_2_229": {
+   "q": "Quantos rostos de presidentes estão esculpidos no monte Rushmore?",
+   "u": "rostos"
+  },
+  "dq_en_3_219": {
+   "q": "Como se chama uma escultura que representa apenas a cabeça, os ombros e o peito de uma pessoa?",
+   "o": [
+    "Busto",
+    "Torso",
+    "Relevo",
+    "Estatueta"
+   ]
+  },
+  "dq_en_3_220": {
+   "q": "Que técnica usava Georges Seurat para construir os seus quadros?",
+   "o": [
+    "Cubismo",
+    "Fauvismo",
+    "Pontilhismo",
+    "Futurismo"
+   ]
+  },
+  "dq_en_3_221": {
+   "q": "Em que cidade fica a Cúpula do Rochedo?",
+   "o": [
+    "Meca",
+    "Damasco",
+    "Cairo",
+    "Jerusalém"
+   ]
+  },
+  "dq_en_3_222": {
+   "q": "Que rainha egípcia é célebre por um busto de calcário pintado encontrado em Amarna?",
+   "o": [
+    "Cleópatra",
+    "Nefertiti",
+    "Hatchepsut",
+    "Nefertari"
+   ]
+  },
+  "dq_en_3_223": {
+   "q": "Que civilização construiu a pirâmide escalonada de El Castillo, em Chichén Itzá?",
+   "o": [
+    "Incas",
+    "Olmecas",
+    "Astecas",
+    "Maias"
+   ]
+  },
+  "dq_en_3_224": {
+   "q": "Em que cidade se erguem as Torres Petronas, gémeas?",
+   "o": [
+    "Singapura",
+    "Jacarta",
+    "Kuala Lumpur",
+    "Banguecoque"
+   ]
+  },
+  "dq_en_3_225": {
+   "q": "Em que palácio fica a Galeria dos Espelhos, onde foi assinado um tratado de paz em 1919?",
+   "o": [
+    "Fontainebleau",
+    "Palácio de Buckingham",
+    "Versalhes",
+    "Schönbrunn"
+   ]
+  },
+  "dq_en_3_226": {
+   "q": "Em que cidade fica a Galeria dos Uffizi?",
+   "o": [
+    "Veneza",
+    "Roma",
+    "Milão",
+    "Florença"
+   ]
+  },
+  "dq_en_3_227": {
+   "q": "Qual é mais antigo?",
+   "o": [
+    "Machu Picchu",
+    "Stonehenge"
+   ]
+  },
+  "dq_en_3_228": {
+   "q": "A Torre de Pisa foi construída como campanário da catedral da cidade."
+  },
+  "dq_en_3_229": {
+   "q": "A pintura com pontos é um estilo bem conhecido da arte aborígene australiana."
+  },
+  "dq_en_3_230": {
+   "q": "Os templos e as estátuas da Grécia Antiga ficavam sempre em mármore branco, sem qualquer pintura."
+  },
+  "dq_en_3_231": {
+   "q": "Que altura tem o Burj Khalifa, no Dubai, em metros?",
+   "u": "metros"
+  },
+  "dq_en_3_232": {
+   "q": "Em que ano foi inaugurada a ponte Golden Gate, em São Francisco?"
+  },
+  "dq_en_3_233": {
+   "q": "Há cerca de quantos anos foram feitas as pinturas da gruta de Lascaux?",
+   "u": "anos"
+  },
+  "dq_en_4_221": {
+   "q": "Nas igrejas ortodoxas, como se chamam os painéis de madeira pintados com Cristo e os santos?",
+   "o": [
+    "Thangkas",
+    "Mandalas",
+    "Ícones",
+    "Totens"
+   ]
+  },
+  "dq_en_4_222": {
+   "q": "Como se chama um pilar alto de pedra, com quatro faces, que termina numa pequena pirâmide?",
+   "o": [
+    "Minarete",
+    "Estupa",
+    "Obelisco",
+    "Zigurate"
+   ]
+  },
+  "dq_en_4_223": {
+   "q": "Que sistema de desenho faz convergir as linhas paralelas num ponto de fuga para criar profundidade?",
+   "o": [
+    "Sfumato",
+    "Empaste",
+    "Claro-escuro",
+    "Perspetiva linear"
+   ]
+  },
+  "dq_en_4_224": {
+   "q": "O que é o Pont du Gard, no sul de França?",
+   "o": [
+    "Um castelo medieval",
+    "Um aqueduto romano",
+    "Um palácio real",
+    "Uma catedral gótica"
+   ]
+  },
+  "dq_en_4_225": {
+   "q": "Em que ilha do Pacífico pintou Paul Gauguin muitas obras a partir de 1891?",
+   "o": [
+    "Taiti",
+    "Havai",
+    "Bali",
+    "Fiji"
+   ]
+  },
+  "dq_en_4_226": {
+   "q": "Que centro de artes de Paris exibe as condutas e as escadas rolantes no exterior?",
+   "o": [
+    "Museu d'Orsay",
+    "Centro Pompidou",
+    "Grand Palais",
+    "Petit Palais"
+   ]
+  },
+  "dq_en_4_227": {
+   "q": "Que pintor liderou os fauves, as «feras» da cor intensa, por volta de 1905?",
+   "o": [
+    "Paul Signac",
+    "Fernand Léger",
+    "Henri Matisse",
+    "Edgar Degas"
+   ]
+  },
+  "dq_en_4_228": {
+   "q": "Que estilo arquitetónico surgiu primeiro na Europa medieval?",
+   "o": [
+    "Gótico",
+    "Românico"
+   ]
+  },
+  "dq_en_4_229": {
+   "q": "Nas catedrais góticas, qual é a função prática das gárgulas?",
+   "o": [
+    "Iluminar a nave",
+    "Tocar os sinos",
+    "Sustentar o telhado",
+    "Escoar a água da chuva"
+   ]
+  },
+  "dq_en_4_230": {
+   "q": "Em que país fica Borobudur, o maior templo budista do mundo?",
+   "o": [
+    "Myanmar",
+    "Indonésia",
+    "Camboja",
+    "Tailândia"
+   ]
+  },
+  "dq_en_4_231": {
+   "q": "Em que cidade fica o Atomium, construído para a Exposição Universal de 1958?",
+   "o": [
+    "Paris",
+    "Amesterdão",
+    "Bruxelas",
+    "Genebra"
+   ]
+  },
+  "dq_en_4_232": {
+   "q": "O sari tradicional é uma longa peça de tecido sem costuras, enrolada à volta do corpo."
+  },
+  "dq_en_4_233": {
+   "q": "As gravuras japonesas em madeira influenciaram fortemente muitos pintores impressionistas."
+  },
+  "dq_en_4_234": {
+   "q": "Quantos anos demorou a esculpir o monte Rushmore?",
+   "u": "anos"
+  },
+  "dq_en_4_235": {
+   "q": "Quantos lados tem o muro exterior da Cúpula do Rochedo?",
+   "u": "lados"
+  },
+  "dq_en_5_229": {
+   "q": "Que movimento artístico surgiu primeiro?",
+   "o": [
+    "Futurismo",
+    "Surrealismo"
+   ]
+  },
+  "dq_en_5_230": {
+   "q": "Que pintor nasceu primeiro?",
+   "o": [
+    "Caravaggio",
+    "Albrecht Dürer"
+   ]
+  },
+  "dq_en_5_231": {
+   "q": "Em que país fica a gruta de Altamira, com as suas pinturas de bisontes da Idade da Pedra?",
+   "o": [
+    "Espanha",
+    "Itália",
+    "Portugal",
+    "França"
+   ]
+  },
+  "dq_en_5_232": {
+   "q": "Como se chama a abertura redonda no topo da cúpula do Panteão de Roma?",
+   "o": [
+    "Lanterna",
+    "Óculo",
+    "Nave",
+    "Abside"
+   ]
+  },
+  "dq_en_5_233": {
+   "q": "Que edifício era antigamente o Museu d'Orsay, em Paris?",
+   "o": [
+    "Uma fábrica",
+    "Um palácio real",
+    "Uma prisão",
+    "Uma estação ferroviária"
+   ]
+  },
+  "dq_en_5_234": {
+   "q": "A escultura gigante «Maman», de Louise Bourgeois, representa que criatura?",
+   "o": [
+    "Aranha",
+    "Escorpião",
+    "Caranguejo",
+    "Polvo"
+   ]
+  },
+  "dq_en_5_235": {
+   "q": "Que desenho sagrado circular fazem por vezes os monges tibetanos com areia colorida?",
+   "o": [
+    "Mandala",
+    "Estupa",
+    "Mantra",
+    "Thangka"
+   ]
+  },
+  "dq_en_5_236": {
+   "q": "Que estilo, por volta de 1900, usava linhas fluidas e curvas inspiradas nas plantas?",
+   "o": [
+    "Arte Nova",
+    "Art Déco",
+    "Bauhaus",
+    "Brutalismo"
+   ]
+  },
+  "dq_en_5_237": {
+   "q": "A Porta de Ishtar, de tijolos vidrados azuis, hoje reconstruída num museu de Berlim, vem de que cidade antiga?",
+   "o": [
+    "Troia",
+    "Babilónia",
+    "Nínive",
+    "Persépolis"
+   ]
+  },
+  "dq_en_5_238": {
+   "q": "Que criador de moda lançou «Le Smoking», um smoking para mulher, em 1966?",
+   "o": [
+    "Pierre Cardin",
+    "Hubert de Givenchy",
+    "Christian Dior",
+    "Yves Saint Laurent"
+   ]
+  },
+  "dq_en_5_239": {
+   "q": "A galeria Tate Modern, em Londres, ocupa uma antiga estação ferroviária."
+  },
+  "dq_en_5_240": {
+   "q": "A ordem dórica é a mais ricamente decorada das ordens clássicas gregas."
+  },
+  "dq_en_5_241": {
+   "q": "Em que ano abriu o Museu Guggenheim de Bilbau, de Frank Gehry?"
+  },
+  "dq_en_5_242": {
+   "q": "Quantos metros de altura tem, aproximadamente, a Grande Esfinge de Gizé?",
+   "u": "metros"
+  },
+  "dq_en_5_243": {
+   "q": "Em que ano foi inaugurada a Ponte de Brooklyn, em Nova Iorque?"
+  },
+  "dq_en_6_216": {
+   "q": "Que termo de pintura designa uma passagem gradual entre tons, sem contornos nítidos?",
+   "o": [
+    "Pentimento",
+    "Sfumato",
+    "Grisalha",
+    "Empaste"
+   ]
+  },
+  "dq_en_6_217": {
+   "q": "Em que país atual se faziam os célebres azulejos e cerâmicas de Iznik?",
+   "o": [
+    "Turquia",
+    "Marrocos",
+    "Irão",
+    "Usbequistão"
+   ]
+  },
+  "dq_en_6_218": {
+   "q": "Os príncipes da dinastia Han eram sepultados com trajes feitos de pequenas placas de que pedra?",
+   "o": [
+    "Jade",
+    "Mármore",
+    "Obsidiana",
+    "Lápis-lazúli"
+   ]
+  },
+  "dq_en_6_219": {
+   "q": "Em que país foi encontrada a Vénus de Willendorf, uma pequena estatueta da Idade da Pedra?",
+   "o": [
+    "França",
+    "Chéquia",
+    "Alemanha",
+    "Áustria"
+   ]
+  },
+  "dq_en_6_220": {
+   "q": "O tā moko é a arte tradicional maori de quê?",
+   "o": [
+    "Tecelagem",
+    "Tatuagem",
+    "Olaria",
+    "Talha em madeira"
+   ]
+  },
+  "dq_en_6_221": {
+   "q": "As grandes muralhas de pedra do Grande Zimbabué foram construídas sem quê?",
+   "o": [
+    "Torres",
+    "Portas",
+    "Argamassa",
+    "Curvas"
+   ]
+  },
+  "dq_en_6_222": {
+   "q": "Que arquiteto fundou a escola de design Bauhaus?",
+   "o": [
+    "Frank Lloyd Wright",
+    "Walter Gropius",
+    "Le Corbusier",
+    "Alvar Aalto"
+   ]
+  },
+  "dq_en_6_223": {
+   "q": "Que pintora francesa foi membro fundador do grupo impressionista?",
+   "o": [
+    "Camille Claudel",
+    "Sonia Delaunay",
+    "Berthe Morisot",
+    "Rosa Bonheur"
+   ]
+  },
+  "dq_en_6_224": {
+   "q": "Quem pintou «Quadrado Negro» (1915), um marco da arte abstrata?",
+   "o": [
+    "Kazimir Malevich",
+    "El Lissitzky",
+    "Wassily Kandinsky",
+    "Alexander Rodchenko"
+   ]
+  },
+  "dq_en_6_225": {
+   "q": "Que pintor nasceu primeiro?",
+   "o": [
+    "Peter Paul Rubens",
+    "Ticiano"
+   ]
+  },
+  "dq_en_6_226": {
+   "q": "O pintor El Greco nasceu em Toledo, em Espanha."
+  },
+  "dq_en_6_227": {
+   "q": "A Tapeçaria de Bayeux é, na verdade, um bordado e não uma tapeçaria tecida."
+  },
+  "dq_en_6_228": {
+   "q": "Em que ano apresentou Christian Dior a sua famosa coleção «New Look»?"
+  },
+  "dq_en_6_229": {
+   "q": "Em que ano foi anunciado em Paris o processo fotográfico do daguerreótipo?"
+  },
+  "dq_en_7_216": {
+   "q": "Que técnica de pintura antiga usa pigmentos misturados com cera de abelha?",
+   "o": [
+    "Têmpera",
+    "Fresco",
+    "Guache",
+    "Encáustica"
+   ]
+  },
+  "dq_en_7_217": {
+   "q": "Que método usavam os artistas do Benim para fundir as suas placas de bronze e latão?",
+   "o": [
+    "Fundição sob pressão",
+    "Fundição centrífuga",
+    "Fundição em areia",
+    "Fundição por cera perdida"
+   ]
+  },
+  "dq_en_7_218": {
+   "q": "Que escrita árabe angulosa foi usada em muitas das primeiras cópias do Corão?",
+   "o": [
+    "Diwani",
+    "Nastaliq",
+    "Cúfica",
+    "Ruq'a"
+   ]
+  },
+  "dq_en_7_219": {
+   "q": "Que país é famoso pelos celadons verde-jade do século XII, com motivos incrustados?",
+   "o": [
+    "Tailândia",
+    "Coreia",
+    "Vietname",
+    "Japão"
+   ]
+  },
+  "dq_en_7_220": {
+   "q": "Em que país fica a Cueva de las Manos, famosa pelas mãos pré-históricas pintadas em negativo?",
+   "o": [
+    "Peru",
+    "Argentina",
+    "Chile",
+    "Bolívia"
+   ]
+  },
+  "dq_en_7_221": {
+   "q": "Em que cidade iraniana fica a grande Praça Naqsh-e Jahan, rodeada de mesquitas?",
+   "o": [
+    "Teerão",
+    "Ispaão",
+    "Xiraz",
+    "Tabriz"
+   ]
+  },
+  "dq_en_7_222": {
+   "q": "O quadro «Abaporu», de Tarsila do Amaral, é um ícone da arte moderna de que país?",
+   "o": [
+    "Portugal",
+    "Brasil",
+    "Argentina",
+    "México"
+   ]
+  },
+  "dq_en_7_223": {
+   "q": "Nas suas célebres «Untitled Film Stills», quem fotografa Cindy Sherman?",
+   "o": [
+    "Estrelas de cinema",
+    "Desconhecidos na rua",
+    "A própria família",
+    "A si mesma, caracterizada"
+   ]
+  },
+  "dq_en_7_224": {
+   "q": "Que escultor florentino fez um David em bronze, o primeiro nu independente desde a Antiguidade?",
+   "o": [
+    "Benvenuto Cellini",
+    "Donatello",
+    "Lorenzo Ghiberti",
+    "Verrocchio"
+   ]
+  },
+  "dq_en_7_225": {
+   "q": "Os retratos de múmias do Faium foram pintados no Egito durante o período romano."
+  },
+  "dq_en_7_226": {
+   "q": "A mais antiga fotografia de Niépce tirada com câmara que se conservou precisou apenas de alguns segundos de exposição."
+  }
+ },
+ "untranslatable": []
+}
