@@ -73,17 +73,17 @@ def main() -> int:
     a = ap.parse_args()
     base = set(a.baseline.read_text(encoding="utf-8").split())
     skip = excluded_ids()
-    new = [q for q in load_questions() if q["id"] not in base]
-    if not new:
+    added = [q for q in load_questions() if q["id"] not in base]
+    if not added:
         sys.exit("aucune question nouvelle")
-    live = [q for q in new if q["id"] not in skip]
+    # Une question nouvelle retirée (intraduisible dans au moins une langue) n'est pas insérée du
+    # tout : elle reste dans questions_en.json pour que les identifiants ne bougent pas.
+    new = [q for q in added if q["id"] not in skip]
+    live = new
 
     head = (f"-- Duels : {len(new)} questions ajoutées et leurs traductions ({len(LANGS)} langues).\n"
             "-- Généré par scripts/build_duels_add_sql.py — ne pas modifier à la main. Rejouable.\n")
     blocks = [insert("duel_questions", COLUMNS, new, "id")]
-    retired = [q["id"] for q in new if q["id"] in skip]
-    if retired:
-        blocks.append(f"UPDATE public.duel_questions SET active = false WHERE id IN ({', '.join(map(sql_str, retired))});\n")
     for lang in LANGS:
         rows = translation_rows(lang, live)
         blocks.append(f"-- {lang} : {len(rows)} questions\n" + translations_sql(rows))
