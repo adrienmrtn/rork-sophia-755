@@ -33,6 +33,6 @@ La v4 (400 questions) est terminée : supabase/duels_v4_a_coller/1..3 (voir cont
 
 ## File d'attente des traductions (20 agents max en même temps)
 - Vague 1 (parts 1–7) lancée : fr es(fini) sk de pt pt-PT it tr pl ro nl el sv hu bg cs da nb ru hr sl
-- Vague 1 à lancer : lt lv ja
+- Vague 1 à lancer : ja
 - Vague 2 (parts 8–15, 15 = images) : toutes les langues, après la vague 1
 (Une langue est finie pour une vague quand out/<lang>/part<N>.json existe et passe `check` pour toutes ses parts.)
