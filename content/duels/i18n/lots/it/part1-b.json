@@ -1,0 +1,919 @@
+{
+ "items": {
+  "dq_en_3_16": {
+   "q": "Il Minotauro viveva in un labirinto sull'isola di Creta."
+  },
+  "dq_en_4_14": {
+   "q": "Chi è il dio supremo della mitologia norrena?",
+   "o": [
+    "Loki",
+    "Freyr",
+    "Odino",
+    "Thor"
+   ]
+  },
+  "dq_en_4_15": {
+   "q": "Nella mitologia greca, Achille era invulnerabile tranne che nel tallone."
+  },
+  "dq_en_4_16": {
+   "q": "Quante sono le Muse nella mitologia greca?",
+   "u": "Muse"
+  },
+  "dq_en_5_15": {
+   "q": "Quale dea greca nacque già adulta dalla testa di Zeus?",
+   "o": [
+    "Afrodite",
+    "Era",
+    "Artemide",
+    "Atena"
+   ]
+  },
+  "dq_en_5_16": {
+   "q": "Nella mitologia greca, chi fu condannato a spingere un masso su per un pendio per l'eternità?",
+   "o": [
+    "Sisifo",
+    "Tantalo",
+    "Prometeo",
+    "Atlante"
+   ]
+  },
+  "dq_en_6_14": {
+   "q": "Nella mitologia norrena, Ragnarök è il nome del cavallo a otto zampe di Odino."
+  },
+  "dq_en_6_15": {
+   "q": "Nella mitologia egizia, quale dea ricompose il corpo di Osiride?",
+   "o": [
+    "Iside",
+    "Bastet",
+    "Hathor",
+    "Nut"
+   ]
+  },
+  "dq_en_7_13": {
+   "q": "Nella mitologia azteca, quale dio è detto il “Serpente piumato”?",
+   "o": [
+    "Tezcatlipoca",
+    "Tlaloc",
+    "Quetzalcoatl",
+    "Huitzilopochtli"
+   ]
+  },
+  "dq_en_8_13": {
+   "q": "Nella mitologia greca, quale titanide è la dea della memoria e la madre delle Muse?",
+   "o": [
+    "Temi",
+    "Teti",
+    "Rea",
+    "Mnemosine"
+   ]
+  },
+  "dq_en_8_14": {
+   "q": "La “Bhagavad Gita” fa parte del “Ramayana”."
+  },
+  "dq_en_1_16": {
+   "q": "Qual è la capitale degli Stati Uniti?",
+   "o": [
+    "Washington, D.C.",
+    "New York",
+    "Chicago",
+    "Los Angeles"
+   ]
+  },
+  "dq_en_1_17": {
+   "q": "L'euro è la moneta usata in Giappone."
+  },
+  "dq_en_2_17": {
+   "q": "Quale organizzazione fu fondata nel 1945 per mantenere la pace internazionale?",
+   "o": [
+    "La Società delle Nazioni",
+    "Le Nazioni Unite",
+    "L'Unione europea",
+    "La NATO"
+   ]
+  },
+  "dq_en_2_18": {
+   "q": "La parola “democrazia” deriva da parole greche che significano “governo del popolo”."
+  },
+  "dq_en_3_17": {
+   "q": "Quale filosofo dell'antica Grecia fu condannato a morire bevendo la cicuta?",
+   "o": [
+    "Aristotele",
+    "Socrate",
+    "Diogene",
+    "Platone"
+   ]
+  },
+  "dq_en_3_18": {
+   "q": "Chi scrisse il “Manifesto del Partito Comunista” insieme a Friedrich Engels?",
+   "o": [
+    "Karl Marx",
+    "Adam Smith",
+    "Lenin",
+    "Jean-Jacques Rousseau"
+   ]
+  },
+  "dq_en_4_17": {
+   "q": "L'inflazione è un calo generale dei prezzi."
+  },
+  "dq_en_4_18": {
+   "q": "Quanti Stati membri conta l'ONU?",
+   "u": "Stati"
+  },
+  "dq_en_5_17": {
+   "q": "Quale filosofo scrisse “La Repubblica”?",
+   "o": [
+    "Cicerone",
+    "Epicuro",
+    "Platone",
+    "Aristotele"
+   ]
+  },
+  "dq_en_5_18": {
+   "q": "Quale pensatore scrisse “Il Principe”, un trattato sul potere politico?",
+   "o": [
+    "Thomas Hobbes",
+    "Niccolò Machiavelli",
+    "John Locke",
+    "Montesquieu"
+   ]
+  },
+  "dq_en_5_19": {
+   "q": "In che anno fu adottata la Dichiarazione universale dei diritti umani?"
+  },
+  "dq_en_6_16": {
+   "q": "Chi è l'autore del “Leviatano” (1651)?",
+   "o": [
+    "Thomas Hobbes",
+    "John Locke",
+    "David Hume",
+    "Francesco Bacone"
+   ]
+  },
+  "dq_en_6_17": {
+   "q": "“Penso, dunque sono” è una frase di Cartesio."
+  },
+  "dq_en_7_14": {
+   "q": "Quale filosofo scrisse “Così parlò Zarathustra”?",
+   "o": [
+    "Martin Heidegger",
+    "Søren Kierkegaard",
+    "Friedrich Nietzsche",
+    "Arthur Schopenhauer"
+   ]
+  },
+  "dq_en_7_15": {
+   "q": "John Maynard Keynes sosteneva che lo Stato non dovesse mai intervenire nell'economia."
+  },
+  "dq_en_8_15": {
+   "q": "Quale filosofo scrisse “Essere e tempo” (1927)?",
+   "o": [
+    "Ludwig Wittgenstein",
+    "Martin Heidegger",
+    "Jean-Paul Sartre",
+    "Edmund Husserl"
+   ]
+  },
+  "dq_en_1_18": {
+   "q": "Di quale Paese è questa bandiera?",
+   "o": [
+    "Francia",
+    "Stati Uniti",
+    "Regno Unito",
+    "Australia"
+   ]
+  },
+  "dq_en_1_19": {
+   "q": "Di quale Paese è questa bandiera?",
+   "o": [
+    "Giappone",
+    "Corea del Sud",
+    "Vietnam",
+    "Cina"
+   ]
+  },
+  "dq_en_1_20": {
+   "q": "Di quale Paese è questa bandiera?",
+   "o": [
+    "Danimarca",
+    "Stati Uniti",
+    "Canada",
+    "Svizzera"
+   ]
+  },
+  "dq_en_1_21": {
+   "q": "Di quale Paese è questa bandiera?",
+   "o": [
+    "Australia",
+    "Regno Unito",
+    "Nuova Zelanda",
+    "Irlanda"
+   ]
+  },
+  "dq_en_1_22": {
+   "q": "Di quale Paese è questa bandiera?",
+   "o": [
+    "Belgio",
+    "Francia",
+    "Paesi Bassi",
+    "Italia"
+   ]
+  },
+  "dq_en_2_19": {
+   "q": "Di quale Paese è questa bandiera?",
+   "o": [
+    "Messico",
+    "Italia",
+    "Ungheria",
+    "Irlanda"
+   ]
+  },
+  "dq_en_2_20": {
+   "q": "Di quale Paese è questa bandiera?",
+   "o": [
+    "Belgio",
+    "Germania",
+    "Austria",
+    "Paesi Bassi"
+   ]
+  },
+  "dq_en_2_21": {
+   "q": "Di quale Paese è questa bandiera?",
+   "o": [
+    "Colombia",
+    "Brasile",
+    "Portogallo",
+    "Argentina"
+   ]
+  },
+  "dq_en_2_22": {
+   "q": "Di quale Paese è questa bandiera?",
+   "o": [
+    "Vietnam",
+    "Turchia",
+    "Giappone",
+    "Cina"
+   ]
+  },
+  "dq_en_2_23": {
+   "q": "Di quale Paese è questa bandiera?",
+   "o": [
+    "Svizzera",
+    "Svezia",
+    "Austria",
+    "Danimarca"
+   ]
+  },
+  "dq_en_3_19": {
+   "q": "Di quale Paese è questa bandiera?",
+   "o": [
+    "Portogallo",
+    "Germania",
+    "Colombia",
+    "Spagna"
+   ]
+  },
+  "dq_en_3_20": {
+   "q": "Di quale Paese è questa bandiera?",
+   "o": [
+    "Irlanda",
+    "Pakistan",
+    "India",
+    "Italia"
+   ]
+  },
+  "dq_en_3_21": {
+   "q": "Di quale Paese è questa bandiera?",
+   "o": [
+    "Messico",
+    "Italia",
+    "Ungheria",
+    "Iran"
+   ]
+  },
+  "dq_en_3_22": {
+   "q": "Di quale Paese è questa bandiera?",
+   "o": [
+    "Figi",
+    "Regno Unito",
+    "Nuova Zelanda",
+    "Australia"
+   ]
+  },
+  "dq_en_3_23": {
+   "q": "Di quale Paese è questa bandiera?",
+   "o": [
+    "Grecia",
+    "Uruguay",
+    "Finlandia",
+    "Israele"
+   ]
+  },
+  "dq_en_4_19": {
+   "q": "Di quale Paese è questa bandiera?",
+   "o": [
+    "Finlandia",
+    "Danimarca",
+    "Svezia",
+    "Norvegia"
+   ]
+  },
+  "dq_en_4_20": {
+   "q": "Di quale Paese è questa bandiera?",
+   "o": [
+    "Uruguay",
+    "Honduras",
+    "Grecia",
+    "Argentina"
+   ]
+  },
+  "dq_en_4_21": {
+   "q": "Di quale Paese è questa bandiera?",
+   "o": [
+    "Giappone",
+    "Taiwan",
+    "Corea del Sud",
+    "Corea del Nord"
+   ]
+  },
+  "dq_en_4_22": {
+   "q": "Di quale Paese è questa bandiera?",
+   "o": [
+    "Tunisia",
+    "Turchia",
+    "Pakistan",
+    "Marocco"
+   ]
+  },
+  "dq_en_4_23": {
+   "q": "Di quale Paese è questa bandiera?",
+   "o": [
+    "Giamaica",
+    "Zimbabwe",
+    "Kenya",
+    "Sudafrica"
+   ]
+  },
+  "dq_en_5_20": {
+   "q": "Di quale Paese è questa bandiera?",
+   "o": [
+    "Portogallo",
+    "Spagna",
+    "Italia",
+    "Brasile"
+   ]
+  },
+  "dq_en_5_21": {
+   "q": "Di quale Paese è questa bandiera?",
+   "o": [
+    "Islanda",
+    "Danimarca",
+    "Svezia",
+    "Norvegia"
+   ]
+  },
+  "dq_en_5_22": {
+   "q": "Di quale Paese è questa bandiera?",
+   "o": [
+    "Argentina",
+    "Finlandia",
+    "Grecia",
+    "Israele"
+   ]
+  },
+  "dq_en_5_23": {
+   "q": "Di quale Paese è questa bandiera?",
+   "o": [
+    "Iraq",
+    "Siria",
+    "Egitto",
+    "Yemen"
+   ]
+  },
+  "dq_en_5_24": {
+   "q": "Di quale Paese è questa bandiera?",
+   "o": [
+    "Paesi Bassi",
+    "Russia",
+    "Croazia",
+    "Francia"
+   ]
+  },
+  "dq_en_6_18": {
+   "q": "Di quale Paese è questa bandiera?",
+   "o": [
+    "Polonia",
+    "Austria",
+    "Indonesia",
+    "Danimarca"
+   ]
+  },
+  "dq_en_6_19": {
+   "q": "Di quale Paese è questa bandiera?",
+   "o": [
+    "Vietnam",
+    "Turchia",
+    "Marocco",
+    "Cina"
+   ]
+  },
+  "dq_en_6_20": {
+   "q": "Di quale Paese è questa bandiera?",
+   "o": [
+    "Sudafrica",
+    "Tanzania",
+    "Giamaica",
+    "Ghana"
+   ]
+  },
+  "dq_en_6_21": {
+   "q": "Di quale Paese è questa bandiera?",
+   "o": [
+    "Pakistan",
+    "Arabia Saudita",
+    "Iran",
+    "Iraq"
+   ]
+  },
+  "dq_en_6_22": {
+   "q": "Di quale Paese è questa bandiera?",
+   "o": [
+    "Irlanda",
+    "Ungheria",
+    "India",
+    "Italia"
+   ]
+  },
+  "dq_en_7_16": {
+   "q": "Di quale Paese è questa bandiera?",
+   "o": [
+    "Kenya",
+    "Tanzania",
+    "Uganda",
+    "Etiopia"
+   ]
+  },
+  "dq_en_7_17": {
+   "q": "Di quale Paese è questa bandiera?",
+   "o": [
+    "Filippine",
+    "Cuba",
+    "Cechia",
+    "Cile"
+   ]
+  },
+  "dq_en_7_18": {
+   "q": "Di quale Paese è questa bandiera?",
+   "o": [
+    "Islanda",
+    "Finlandia",
+    "Grecia",
+    "Svezia"
+   ]
+  },
+  "dq_en_7_19": {
+   "q": "Di quale Paese è questa bandiera?",
+   "o": [
+    "Paesi Bassi",
+    "Thailandia",
+    "Costa Rica",
+    "Cambogia"
+   ]
+  },
+  "dq_en_7_20": {
+   "q": "Di quale Paese è questa bandiera?",
+   "o": [
+    "Bhutan",
+    "Nepal",
+    "Mongolia",
+    "Sri Lanka"
+   ]
+  },
+  "dq_en_8_16": {
+   "q": "Di quale Paese è questa bandiera?",
+   "o": [
+    "Nepal",
+    "Sri Lanka",
+    "Bhutan",
+    "Brunei"
+   ]
+  },
+  "dq_en_8_17": {
+   "q": "Di quale Paese è questa bandiera?",
+   "o": [
+    "Kazakistan",
+    "Palau",
+    "Uzbekistan",
+    "Kirghizistan"
+   ]
+  },
+  "dq_en_8_18": {
+   "q": "Di quale Paese è questa bandiera?",
+   "o": [
+    "Grecia",
+    "Argentina",
+    "El Salvador",
+    "Uruguay"
+   ]
+  },
+  "dq_en_8_19": {
+   "q": "Di quale Paese è questa bandiera?",
+   "o": [
+    "Angola",
+    "Zambia",
+    "Mozambico",
+    "Zimbabwe"
+   ]
+  },
+  "dq_en_8_20": {
+   "q": "Di quale Paese è questa bandiera?",
+   "o": [
+    "Lituania",
+    "Estonia",
+    "Lettonia",
+    "Botswana"
+   ]
+  },
+  "dq_en_1_23": {
+   "q": "Qual è la capitale della Francia?",
+   "o": [
+    "Nizza",
+    "Lione",
+    "Parigi",
+    "Marsiglia"
+   ]
+  },
+  "dq_en_1_24": {
+   "q": "Qual è la capitale del Giappone?",
+   "o": [
+    "Osaka",
+    "Yokohama",
+    "Tokyo",
+    "Kyoto"
+   ]
+  },
+  "dq_en_1_25": {
+   "q": "Qual è la capitale dell'Italia?",
+   "o": [
+    "Napoli",
+    "Roma",
+    "Milano",
+    "Venezia"
+   ]
+  },
+  "dq_en_1_26": {
+   "q": "Qual è la capitale dell'Egitto?",
+   "o": [
+    "Giza",
+    "Luxor",
+    "Il Cairo",
+    "Alessandria"
+   ]
+  },
+  "dq_en_1_27": {
+   "q": "Qual è la capitale della Spagna?",
+   "o": [
+    "Madrid",
+    "Siviglia",
+    "Valencia",
+    "Barcellona"
+   ]
+  },
+  "dq_en_2_24": {
+   "q": "Qual è la capitale della Germania?",
+   "o": [
+    "Monaco di Baviera",
+    "Francoforte",
+    "Amburgo",
+    "Berlino"
+   ]
+  },
+  "dq_en_2_25": {
+   "q": "Qual è la capitale della Russia?",
+   "o": [
+    "Mosca",
+    "Novosibirsk",
+    "San Pietroburgo",
+    "Kazan'"
+   ]
+  },
+  "dq_en_2_26": {
+   "q": "Qual è la capitale della Cina?",
+   "o": [
+    "Hong Kong",
+    "Shanghai",
+    "Canton",
+    "Pechino"
+   ]
+  },
+  "dq_en_2_27": {
+   "q": "Qual è la capitale della Grecia?",
+   "o": [
+    "Corinto",
+    "Atene",
+    "Salonicco",
+    "Sparta"
+   ]
+  },
+  "dq_en_2_28": {
+   "q": "Qual è la capitale degli Stati Uniti?",
+   "o": [
+    "New York",
+    "Los Angeles",
+    "Washington, D.C.",
+    "Chicago"
+   ]
+  },
+  "dq_en_3_24": {
+   "q": "Qual è la capitale dell'Australia?",
+   "o": [
+    "Melbourne",
+    "Sydney",
+    "Canberra",
+    "Perth"
+   ]
+  },
+  "dq_en_3_25": {
+   "q": "Qual è la capitale del Canada?",
+   "o": [
+    "Toronto",
+    "Ottawa",
+    "Montréal",
+    "Vancouver"
+   ]
+  },
+  "dq_en_3_26": {
+   "q": "Qual è la capitale del Brasile?",
+   "o": [
+    "Salvador",
+    "Brasília",
+    "Rio de Janeiro",
+    "San Paolo"
+   ]
+  },
+  "dq_en_3_27": {
+   "q": "Qual è la capitale della Turchia?",
+   "o": [
+    "Istanbul",
+    "Ankara",
+    "Smirne",
+    "Antalya"
+   ]
+  },
+  "dq_en_3_28": {
+   "q": "Qual è la capitale dell'India?",
+   "o": [
+    "Nuova Delhi",
+    "Bangalore",
+    "Calcutta",
+    "Mumbai"
+   ]
+  },
+  "dq_en_4_24": {
+   "q": "Qual è la capitale della Svizzera?",
+   "o": [
+    "Ginevra",
+    "Basilea",
+    "Zurigo",
+    "Berna"
+   ]
+  },
+  "dq_en_4_25": {
+   "q": "Qual è la capitale del Marocco?",
+   "o": [
+    "Fès",
+    "Rabat",
+    "Marrakech",
+    "Casablanca"
+   ]
+  },
+  "dq_en_4_26": {
+   "q": "Qual è la capitale dell'Argentina?",
+   "o": [
+    "Rosario",
+    "Buenos Aires",
+    "Córdoba",
+    "Mendoza"
+   ]
+  },
+  "dq_en_4_27": {
+   "q": "Qual è la capitale della Corea del Sud?",
+   "o": [
+    "Incheon",
+    "Daegu",
+    "Seul",
+    "Busan"
+   ]
+  },
+  "dq_en_4_28": {
+   "q": "Qual è la capitale della Polonia?",
+   "o": [
+    "Breslavia",
+    "Varsavia",
+    "Danzica",
+    "Cracovia"
+   ]
+  },
+  "dq_en_5_25": {
+   "q": "Qual è la capitale della Nuova Zelanda?",
+   "o": [
+    "Christchurch",
+    "Wellington",
+    "Queenstown",
+    "Auckland"
+   ]
+  },
+  "dq_en_5_26": {
+   "q": "Qual è la capitale del Vietnam?",
+   "o": [
+    "Hanoi",
+    "Ho Chi Minh",
+    "Hue",
+    "Da Nang"
+   ]
+  },
+  "dq_en_5_27": {
+   "q": "Qual è la capitale del Pakistan?",
+   "o": [
+    "Peshawar",
+    "Islamabad",
+    "Karachi",
+    "Lahore"
+   ]
+  },
+  "dq_en_5_28": {
+   "q": "Qual è la capitale della Nigeria?",
+   "o": [
+    "Abuja",
+    "Lagos",
+    "Ibadan",
+    "Kano"
+   ]
+  },
+  "dq_en_5_29": {
+   "q": "Nairobi è la capitale di quale Paese?",
+   "o": [
+    "Etiopia",
+    "Kenya",
+    "Tanzania",
+    "Uganda"
+   ]
+  },
+  "dq_en_6_23": {
+   "q": "Qual è la capitale del Perù?",
+   "o": [
+    "Lima",
+    "Arequipa",
+    "Trujillo",
+    "Cusco"
+   ]
+  },
+  "dq_en_6_24": {
+   "q": "Qual è la capitale della Tanzania?",
+   "o": [
+    "Dar es Salaam",
+    "Dodoma",
+    "Arusha",
+    "Zanzibar"
+   ]
+  },
+  "dq_en_6_25": {
+   "q": "Qual è la capitale del Myanmar?",
+   "o": [
+    "Bagan",
+    "Yangon",
+    "Mandalay",
+    "Naypyidaw"
+   ]
+  },
+  "dq_en_6_26": {
+   "q": "Qual è la capitale della Colombia?",
+   "o": [
+    "Medellín",
+    "Cartagena",
+    "Bogotá",
+    "Cali"
+   ]
+  },
+  "dq_en_6_27": {
+   "q": "Reykjavík è la capitale di quale Paese?",
+   "o": [
+    "Norvegia",
+    "Islanda",
+    "Finlandia",
+    "Danimarca"
+   ]
+  },
+  "dq_en_7_21": {
+   "q": "Ulan Bator è la capitale di quale Paese?",
+   "o": [
+    "Mongolia",
+    "Kazakistan",
+    "Nepal",
+    "Kirghizistan"
+   ]
+  },
+  "dq_en_7_22": {
+   "q": "Qual è la capitale dell'Uruguay?",
+   "o": [
+    "Montevideo",
+    "Punta del Este",
+    "Salto",
+    "Colonia del Sacramento"
+   ]
+  },
+  "dq_en_7_23": {
+   "q": "Tbilisi è la capitale di quale Paese?",
+   "o": [
+    "Armenia",
+    "Georgia",
+    "Moldavia",
+    "Azerbaigian"
+   ]
+  },
+  "dq_en_7_24": {
+   "q": "Tashkent è la capitale di quale Paese?",
+   "o": [
+    "Uzbekistan",
+    "Kazakistan",
+    "Tagikistan",
+    "Turkmenistan"
+   ]
+  },
+  "dq_en_7_25": {
+   "q": "Qual è la capitale dell'Ecuador?",
+   "o": [
+    "Lima",
+    "Cuenca",
+    "Guayaquil",
+    "Quito"
+   ]
+  },
+  "dq_en_8_21": {
+   "q": "Thimphu è la capitale di quale Paese?",
+   "o": [
+    "Brunei",
+    "Nepal",
+    "Laos",
+    "Bhutan"
+   ]
+  },
+  "dq_en_8_22": {
+   "q": "Ouagadougou è la capitale di quale Paese?",
+   "o": [
+    "Mali",
+    "Benin",
+    "Niger",
+    "Burkina Faso"
+   ]
+  },
+  "dq_en_8_23": {
+   "q": "Paramaribo è la capitale di quale Paese?",
+   "o": [
+    "Guyana",
+    "Suriname",
+    "Paraguay",
+    "Belize"
+   ]
+  },
+  "dq_en_8_24": {
+   "q": "Vaduz è la capitale di quale Paese?",
+   "o": [
+    "Lussemburgo",
+    "Monaco",
+    "Andorra",
+    "Liechtenstein"
+   ]
+  },
+  "dq_en_8_25": {
+   "q": "Antananarivo è la capitale di quale Paese?",
+   "o": [
+    "Mozambico",
+    "Madagascar",
+    "Malawi",
+    "Mauritius"
+   ]
+  },
+  "dq_en_1_28": {
+   "q": "Quale Paese ha più abitanti?",
+   "o": [
+    "India",
+    "Stati Uniti"
+   ]
+  },
+  "dq_en_1_29": {
+   "q": "Quale Paese ha più abitanti?",
+   "o": [
+    "Russia",
+    "Cina"
+   ]
+  },
+  "dq_en_2_29": {
+   "q": "Quale Paese ha più abitanti?",
+   "o": [
+    "Giappone",
+    "Germania"
+   ]
+  }
+ },
+ "untranslatable": []
+}

@@ -1,0 +1,769 @@
+{
+ "true_false": [
+  "Doğru",
+  "Yanlış"
+ ],
+ "leagues": {
+  "aesop": "Ezop",
+  "homer": "Homeros",
+  "sappho": "Sappho",
+  "confucius": "Konfüçyüs",
+  "socrates": "Sokrates",
+  "cleopatra": "Kleopatra",
+  "hypatia": "Hypatia",
+  "avicenna": "İbn Sina",
+  "murasaki": "Murasaki",
+  "mansa_musa": "Mansa Musa",
+  "dante": "Dante",
+  "joan_of_arc": "Jeanne d'Arc",
+  "gutenberg": "Gutenberg",
+  "leonardo": "Leonardo",
+  "michelangelo": "Michelangelo",
+  "copernicus": "Kopernik",
+  "shakespeare": "Shakespeare",
+  "galileo": "Galileo",
+  "vermeer": "Vermeer",
+  "newton": "Newton",
+  "mozart": "Mozart",
+  "napoleon": "Napolyon",
+  "austen": "Austen",
+  "darwin": "Darwin",
+  "lovelace": "Lovelace",
+  "van_gogh": "Van Gogh",
+  "curie": "Curie",
+  "einstein": "Einstein",
+  "kahlo": "Kahlo",
+  "sophia": "Sophia"
+ },
+ "items": {
+  "dq_en_1_01": {
+   "q": "Kızıl Gezegen olarak bilinen gezegen hangisidir?",
+   "o": [
+    "Jüpiter",
+    "Merkür",
+    "Mars",
+    "Venüs"
+   ]
+  },
+  "dq_en_1_02": {
+   "q": "Mona Lisa'yı kim resmetti?",
+   "o": [
+    "Michelangelo",
+    "Leonardo da Vinci",
+    "Sandro Botticelli",
+    "Raffaello"
+   ]
+  },
+  "dq_en_1_03": {
+   "q": "Yunan mitolojisinde tanrıların kralı kimdir?",
+   "o": [
+    "Hades",
+    "Zeus",
+    "Poseidon",
+    "Apollon"
+   ]
+  },
+  "dq_en_1_04": {
+   "q": "Gize piramitleri hangi ülkededir?",
+   "o": [
+    "Yunanistan",
+    "Irak",
+    "Meksika",
+    "Mısır"
+   ]
+  },
+  "dq_en_1_05": {
+   "q": "Titanik daha ilk seferinde battı."
+  },
+  "dq_en_1_06": {
+   "q": "Köpekbalıkları memelidir."
+  },
+  "dq_en_1_07": {
+   "q": "Bu kim?",
+   "o": [
+    "Thomas Edison",
+    "Albert Einstein",
+    "Mark Twain",
+    "Sigmund Freud"
+   ]
+  },
+  "dq_en_1_08": {
+   "q": "Bu kim?",
+   "o": [
+    "Wellington Dükü",
+    "XIV. Louis",
+    "Napolyon Bonapart",
+    "George Washington"
+   ]
+  },
+  "dq_en_1_09": {
+   "q": "Kristof Kolomb Amerika'ya ilk kez hangi yıl ulaştı?"
+  },
+  "dq_en_1_10": {
+   "q": "İnsanlar Ay'da ilk kez hangi yıl yürüdü?"
+  },
+  "dq_en_2_01": {
+   "q": "“Gurur ve Önyargı” romanını kim yazdı?",
+   "o": [
+    "George Eliot",
+    "Charlotte Brontë",
+    "Jane Austen",
+    "Mary Shelley"
+   ]
+  },
+  "dq_en_2_02": {
+   "q": "M.S. 79'da Vezüv Yanardağı'nın püskürmesiyle gömülen antik kent hangisidir?",
+   "o": [
+    "Kartaca",
+    "Pompeii",
+    "Atina",
+    "Truva"
+   ]
+  },
+  "dq_en_2_03": {
+   "q": "Altının kimyasal simgesi nedir?",
+   "o": [
+    "Ag",
+    "Au",
+    "Go",
+    "Gd"
+   ]
+  },
+  "dq_en_2_04": {
+   "q": "“Yıldızlı Gece” tablosunu kim yaptı?",
+   "o": [
+    "Pablo Picasso",
+    "Paul Cézanne",
+    "Vincent van Gogh",
+    "Claude Monet"
+   ]
+  },
+  "dq_en_2_05": {
+   "q": "Sistina Şapeli'nin tavan resimlerini Leonardo da Vinci yaptı."
+  },
+  "dq_en_2_06": {
+   "q": "Fransız Devrimi 1789'da başladı."
+  },
+  "dq_en_2_07": {
+   "q": "Bu kim?",
+   "o": [
+    "William Shakespeare",
+    "Sir Walter Raleigh",
+    "Miguel de Cervantes",
+    "Christopher Marlowe"
+   ]
+  },
+  "dq_en_2_08": {
+   "q": "Bu kim?",
+   "o": [
+    "Abraham Lincoln",
+    "Charles Dickens",
+    "Karl Marx",
+    "Ulysses S. Grant"
+   ]
+  },
+  "dq_en_2_09": {
+   "q": "Berlin Duvarı hangi yıl yıkıldı?"
+  },
+  "dq_en_2_10": {
+   "q": "Dünya yüzeyinin yüzde kaçı suyla kaplıdır?"
+  },
+  "dq_en_3_01": {
+   "q": "Yunan mitolojisinde balmumundan kanatlarla Güneş'e fazla yaklaşan kimdir?",
+   "o": [
+    "İkaros",
+    "Daidalos",
+    "Orpheus",
+    "Perseus"
+   ]
+  },
+  "dq_en_3_02": {
+   "q": "Roma'nın ilk imparatoru kimdir?",
+   "o": [
+    "Neron",
+    "Augustus",
+    "Konstantin",
+    "Jül Sezar"
+   ]
+  },
+  "dq_en_3_03": {
+   "q": "Doğal seçilimle evrim kuramını hangi bilim insanı ortaya attı?",
+   "o": [
+    "Louis Pasteur",
+    "Charles Darwin",
+    "Jean-Baptiste Lamarck",
+    "Gregor Mendel"
+   ]
+  },
+  "dq_en_3_04": {
+   "q": "“1984” romanını kim yazdı?",
+   "o": [
+    "Aldous Huxley",
+    "Ray Bradbury",
+    "H. G. Wells",
+    "George Orwell"
+   ]
+  },
+  "dq_en_3_05": {
+   "q": "Rönesans İtalya'da başladı."
+  },
+  "dq_en_3_06": {
+   "q": "Ses, ışıktan daha hızlı yayılır."
+  },
+  "dq_en_3_07": {
+   "q": "Bu kim?",
+   "o": [
+    "Emmeline Pankhurst",
+    "Rosalind Franklin",
+    "Florence Nightingale",
+    "Marie Curie"
+   ]
+  },
+  "dq_en_3_08": {
+   "q": "Bu kim?",
+   "o": [
+    "Joseph Haydn",
+    "Wolfgang Amadeus Mozart",
+    "Antonio Vivaldi",
+    "Johann Sebastian Bach"
+   ]
+  },
+  "dq_en_3_09": {
+   "q": "Birinci Dünya Savaşı hangi yıl başladı?"
+  },
+  "dq_en_3_10": {
+   "q": "Yetişkin bir insanın vücudunda kaç kemik vardır?",
+   "u": "kemik"
+  },
+  "dq_en_4_01": {
+   "q": "“Guernica” tablosunu hangi sanatçı yaptı?",
+   "o": [
+    "Pablo Picasso",
+    "Salvador Dalí",
+    "Joan Miró",
+    "Henri Matisse"
+   ]
+  },
+  "dq_en_4_02": {
+   "q": "Büyük İskender'in hocası hangi filozoftu?",
+   "o": [
+    "Sokrates",
+    "Platon",
+    "Aristoteles",
+    "Epikuros"
+   ]
+  },
+  "dq_en_4_03": {
+   "q": "Hangi parçacık negatif elektrik yükü taşır?",
+   "o": [
+    "Foton",
+    "Nötron",
+    "Elektron",
+    "Proton"
+   ]
+  },
+  "dq_en_4_04": {
+   "q": "İskandinav mitolojisinde Thor'un çekicinin adı nedir?",
+   "o": [
+    "Gungnir",
+    "Excalibur",
+    "Gram",
+    "Mjölnir"
+   ]
+  },
+  "dq_en_4_05": {
+   "q": "Büyük Londra Yangını 1666'da çıktı."
+  },
+  "dq_en_4_06": {
+   "q": "“Don Kişot” romanını Dante yazdı."
+  },
+  "dq_en_4_07": {
+   "q": "Bu kim?",
+   "o": [
+    "John Stuart Mill",
+    "Thomas Henry Huxley",
+    "Charles Dickens",
+    "Charles Darwin"
+   ]
+  },
+  "dq_en_4_08": {
+   "q": "Bu kim?",
+   "o": [
+    "Büyük Katerina",
+    "Avusturya İmparatoriçesi Elisabeth",
+    "Kraliçe Victoria",
+    "Kraliçe I. Elizabeth"
+   ]
+  },
+  "dq_en_4_09": {
+   "q": "Gutenberg İncili yaklaşık hangi yıl basıldı?"
+  },
+  "dq_en_4_10": {
+   "q": "Bugün periyodik tabloda kaç kimyasal element var?",
+   "u": "element"
+  },
+  "dq_en_5_01": {
+   "q": "“İlahi Komedya” adlı eseri kim yazdı?",
+   "o": [
+    "Petrarca",
+    "Giovanni Boccaccio",
+    "Dante Alighieri",
+    "Vergilius"
+   ]
+  },
+  "dq_en_5_02": {
+   "q": "1919'da imzalanan ve Almanya ile Birinci Dünya Savaşı'nı bitiren antlaşma hangisidir?",
+   "o": [
+    "Vestfalya Antlaşması",
+    "Tordesillas Antlaşması",
+    "Viyana Antlaşması",
+    "Versay Antlaşması"
+   ]
+  },
+  "dq_en_5_03": {
+   "q": "“İnci Küpeli Kız” tablosunu hangi Hollandalı ressam yaptı?",
+   "o": [
+    "Johannes Vermeer",
+    "Frans Hals",
+    "Rembrandt",
+    "Jan van Eyck"
+   ]
+  },
+  "dq_en_5_04": {
+   "q": "Penisilini 1928'de hangi bilim insanı keşfetti?",
+   "o": [
+    "Alexander Fleming",
+    "Edward Jenner",
+    "Robert Koch",
+    "Louis Pasteur"
+   ]
+  },
+  "dq_en_5_05": {
+   "q": "Yunan mitolojisinde Medusa, üç Gorgon'dan biriydi."
+  },
+  "dq_en_5_06": {
+   "q": "Yüz Yıl Savaşları tam olarak 100 yıl sürdü."
+  },
+  "dq_en_5_07": {
+   "q": "Bu kim?",
+   "o": [
+    "Franz Schubert",
+    "Ludwig van Beethoven",
+    "Johann Wolfgang von Goethe",
+    "Richard Wagner"
+   ]
+  },
+  "dq_en_5_08": {
+   "q": "Bu kim?",
+   "o": [
+    "Leonardo da Vinci",
+    "Galileo Galilei",
+    "Johannes Kepler",
+    "Nikolas Kopernik"
+   ]
+  },
+  "dq_en_5_09": {
+   "q": "Konstantinopolis hangi yıl Osmanlıların eline geçti?"
+  },
+  "dq_en_5_10": {
+   "q": "Güneş ışığı Dünya'ya yaklaşık kaç dakikada ulaşır?"
+  },
+  "dq_en_6_01": {
+   "q": "“Milletlerin Zenginliği” (1776) adlı eseri hangi iktisatçı yazdı?",
+   "o": [
+    "Karl Marx",
+    "John Maynard Keynes",
+    "Adam Smith",
+    "David Ricardo"
+   ]
+  },
+  "dq_en_6_02": {
+   "q": "“Düşünen Adam” heykelini hangi heykeltıraş yaptı?",
+   "o": [
+    "Auguste Rodin",
+    "Gian Lorenzo Bernini",
+    "Michelangelo",
+    "Donatello"
+   ]
+  },
+  "dq_en_6_03": {
+   "q": "Gılgamış Destanı'nda Gılgamış hangi kentin kralıdır?",
+   "o": [
+    "Ninova",
+    "Babil",
+    "Uruk",
+    "Ur"
+   ]
+  },
+  "dq_en_6_04": {
+   "q": "Gezegenlerin hareketine ilişkin üç yasayı hangi gökbilimci ortaya koydu?",
+   "o": [
+    "Johannes Kepler",
+    "Tycho Brahe",
+    "Nikolas Kopernik",
+    "Galileo Galilei"
+   ]
+  },
+  "dq_en_6_05": {
+   "q": "Bizans İmparatorluğu, Roma İmparatorluğu'nun doğudaki devamıydı."
+  },
+  "dq_en_6_06": {
+   "q": "Franz Kafka, “Dönüşüm” adlı eserini Fransızca yazdı."
+  },
+  "dq_en_6_07": {
+   "q": "Bu kim?",
+   "o": [
+    "John Locke",
+    "Gottfried Wilhelm Leibniz",
+    "Christiaan Huygens",
+    "Isaac Newton"
+   ]
+  },
+  "dq_en_6_08": {
+   "q": "Bu kim?",
+   "o": [
+    "Sylvia Plath",
+    "Virginia Woolf",
+    "Emily Dickinson",
+    "Katherine Mansfield"
+   ]
+  },
+  "dq_en_6_09": {
+   "q": "Magna Carta hangi yıl mühürlendi?"
+  },
+  "dq_en_6_10": {
+   "q": "Dünya atmosferinin yüzde kaçı azottur?"
+  },
+  "dq_en_7_01": {
+   "q": "“Saf Aklın Eleştirisi” adlı eseri hangi filozof yazdı?",
+   "o": [
+    "Arthur Schopenhauer",
+    "Georg Wilhelm Friedrich Hegel",
+    "Immanuel Kant",
+    "Gottfried Wilhelm Leibniz"
+   ]
+  },
+  "dq_en_7_02": {
+   "q": "Otuz Yıl Savaşları'nı 1648'de hangi barış düzenlemesi sona erdirdi?",
+   "o": [
+    "Utrecht Antlaşması",
+    "Vestfalya Barışı",
+    "Augsburg Barışı",
+    "Viyana Kongresi"
+   ]
+  },
+  "dq_en_7_03": {
+   "q": "“Dünyevi Zevkler Bahçesi” tablosunu kim yaptı?",
+   "o": [
+    "Jan van Eyck",
+    "Albrecht Dürer",
+    "Yaşlı Pieter Bruegel",
+    "Hieronymus Bosch"
+   ]
+  },
+  "dq_en_7_04": {
+   "q": "Hindu geleneğinde koruyucu olarak bilinen tanrı hangisidir?",
+   "o": [
+    "İndra",
+    "Şiva",
+    "Brahma",
+    "Vişnu"
+   ]
+  },
+  "dq_en_7_05": {
+   "q": "James Joyce'un “Ulysses” romanı, Dublin'de tek bir gün içinde geçer."
+  },
+  "dq_en_7_06": {
+   "q": "Marie Curie hem fizik hem tıp dalında Nobel Ödülü kazandı."
+  },
+  "dq_en_7_07": {
+   "q": "Bu kim?",
+   "o": [
+    "Jean-Jacques Rousseau",
+    "Voltaire",
+    "Denis Diderot",
+    "Montesquieu"
+   ]
+  },
+  "dq_en_7_08": {
+   "q": "Bu kim?",
+   "o": [
+    "Ada Lovelace",
+    "Jane Austen",
+    "Mary Shelley",
+    "Charlotte Brontë"
+   ]
+  },
+  "dq_en_7_09": {
+   "q": "Batı Roma İmparatorluğu hangi yıl yıkıldı?"
+  },
+  "dq_en_7_10": {
+   "q": "Dmitri Mendeleyev periyodik tablosunu hangi yıl yayımladı?"
+  },
+  "dq_en_8_01": {
+   "q": "537'de tamamlanan Ayasofya'yı hangi Bizans imparatoru yaptırdı?",
+   "o": [
+    "I. Justinianus",
+    "II. Basileios",
+    "I. Konstantin",
+    "Herakleios"
+   ]
+  },
+  "dq_en_8_02": {
+   "q": "Çoğu zaman dünyanın ilk romanı sayılan “Genji'nin Hikâyesi” kimin eseridir?",
+   "o": [
+    "Leydi Sarashina",
+    "Murasaki Shikibu",
+    "Matsuo Bashō",
+    "Sei Shōnagon"
+   ]
+  },
+  "dq_en_8_03": {
+   "q": "Eksiklik teoremlerini 1931'de hangi mantıkçı kanıtladı?",
+   "o": [
+    "Alan Turing",
+    "Kurt Gödel",
+    "Bertrand Russell",
+    "David Hilbert"
+   ]
+  },
+  "dq_en_8_04": {
+   "q": "“Aziz Matta'nın Çağrılışı” tablosunu 1600 dolaylarında hangi İtalyan ressam yaptı?",
+   "o": [
+    "Caravaggio",
+    "Tintoretto",
+    "Raffaello",
+    "Tiziano"
+   ]
+  },
+  "dq_en_8_05": {
+   "q": "Filozof Baruch Spinoza Amsterdam'da doğdu."
+  },
+  "dq_en_8_06": {
+   "q": "Peloponez Savaşı, Atina'nın Sparta'yı yenmesiyle sona erdi."
+  },
+  "dq_en_8_07": {
+   "q": "Bu kim?",
+   "o": [
+    "Baruch Spinoza",
+    "Blaise Pascal",
+    "René Descartes",
+    "Kardinal Richelieu"
+   ]
+  },
+  "dq_en_8_08": {
+   "q": "Bu kim?",
+   "o": [
+    "Erasmus",
+    "Martin Luther",
+    "Thomas More",
+    "Jean Calvin"
+   ]
+  },
+  "dq_en_8_09": {
+   "q": "Birinci İznik Konsili hangi yıl toplandı?"
+  },
+  "dq_en_8_10": {
+   "q": "Kopernik “Göksel Kürelerin Dönüşleri Üzerine” adlı eserini hangi yıl yayımladı?"
+  },
+  "dq_en_1_11": {
+   "q": "Ayçiçeği tablolarıyla ünlü sanatçı kimdir?",
+   "o": [
+    "Pablo Picasso",
+    "Vincent van Gogh",
+    "Claude Monet",
+    "Rembrandt"
+   ]
+  },
+  "dq_en_2_11": {
+   "q": "Louvre Müzesi hangi kenttedir?",
+   "o": [
+    "Paris",
+    "Londra",
+    "Roma",
+    "Madrid"
+   ]
+  },
+  "dq_en_2_12": {
+   "q": "Davut heykelini Michelangelo yonttu."
+  },
+  "dq_en_3_11": {
+   "q": "Giverny'de resmettiği nilüferlerle tanınan ressam kimdir?",
+   "o": [
+    "Paul Gauguin",
+    "Edgar Degas",
+    "Claude Monet",
+    "Auguste Renoir"
+   ]
+  },
+  "dq_en_4_11": {
+   "q": "Salvador Dalí hangi sanat akımıyla özdeşleşir?",
+   "o": [
+    "Sürrealizm",
+    "Pop Art",
+    "Empresyonizm",
+    "Kübizm"
+   ]
+  },
+  "dq_en_4_12": {
+   "q": "Leonardo da Vinci hangi yıl öldü?"
+  },
+  "dq_en_5_11": {
+   "q": "Andy Warhol, Pop Art'ın önde gelen isimlerindendi."
+  },
+  "dq_en_5_12": {
+   "q": "“Venüs'ün Doğuşu” tablosunu 1480'lerde kim yaptı?",
+   "o": [
+    "Tiziano",
+    "Raffaello",
+    "Sandro Botticelli",
+    "Giotto"
+   ]
+  },
+  "dq_en_6_11": {
+   "q": "Barselona'daki Sagrada Familia'yı hangi mimar tasarladı?",
+   "o": [
+    "Frank Lloyd Wright",
+    "Antoni Gaudí",
+    "Oscar Niemeyer",
+    "Le Corbusier"
+   ]
+  },
+  "dq_en_6_12": {
+   "q": "Eyfel Kulesi hangi yıl tamamlandı?"
+  },
+  "dq_en_7_11": {
+   "q": "“Las Meninas” tablosunu Francisco Goya yaptı."
+  },
+  "dq_en_8_11": {
+   "q": "“Kanagawa Açıklarında Büyük Dalga” baskısını hangi Japon sanatçı yaptı?",
+   "o": [
+    "Tawaraya Sōtatsu",
+    "Utagawa Hiroshige",
+    "Katsushika Hokusai",
+    "Kitagawa Utamaro"
+   ]
+  },
+  "dq_en_1_12": {
+   "q": "Harry Potter romanlarını kim yazdı?",
+   "o": [
+    "C. S. Lewis",
+    "J. K. Rowling",
+    "J. R. R. Tolkien",
+    "Roald Dahl"
+   ]
+  },
+  "dq_en_1_13": {
+   "q": "“Odysseia”, Odysseus'un yurduna dönüş yolculuğunu anlatır."
+  },
+  "dq_en_2_13": {
+   "q": "Arthur Conan Doyle hangi dedektifi yarattı?",
+   "o": [
+    "Sherlock Holmes",
+    "Miss Marple",
+    "Hercule Poirot",
+    "Philip Marlowe"
+   ]
+  },
+  "dq_en_2_14": {
+   "q": "“Oliver Twist” romanını Charles Dickens yazdı."
+  },
+  "dq_en_3_12": {
+   "q": "“Sefiller” romanını kim yazdı?",
+   "o": [
+    "Gustave Flaubert",
+    "Alexandre Dumas",
+    "Victor Hugo",
+    "Émile Zola"
+   ]
+  },
+  "dq_en_3_13": {
+   "q": "“Moby Dick”, büyük beyaz bir balinanın avını anlatır."
+  },
+  "dq_en_4_13": {
+   "q": "“Savaş ve Barış” romanını hangi Rus yazar yazdı?",
+   "o": [
+    "Lev Tolstoy",
+    "Fyodor Dostoyevski",
+    "İvan Turgenyev",
+    "Anton Çehov"
+   ]
+  },
+  "dq_en_5_13": {
+   "q": "“Yüzyıllık Yalnızlık” romanını kim yazdı?",
+   "o": [
+    "Jorge Luis Borges",
+    "Pablo Neruda",
+    "Mario Vargas Llosa",
+    "Gabriel García Márquez"
+   ]
+  },
+  "dq_en_5_14": {
+   "q": "“Don Kişot”un ilk cildi hangi yıl yayımlandı?"
+  },
+  "dq_en_6_13": {
+   "q": "“Çorak Ülke” şiirini hangi şair yazdı?",
+   "o": [
+    "T. S. Eliot",
+    "W. H. Auden",
+    "W. B. Yeats",
+    "Ezra Pound"
+   ]
+  },
+  "dq_en_7_12": {
+   "q": "“Kayıp Zamanın İzinde” kimin eseridir?",
+   "o": [
+    "Stendhal",
+    "André Gide",
+    "Albert Camus",
+    "Marcel Proust"
+   ]
+  },
+  "dq_en_8_12": {
+   "q": "“Babalar ve Oğullar” romanını Fyodor Dostoyevski yazdı."
+  },
+  "dq_en_1_14": {
+   "q": "Yunan mitolojisinde Poseidon denizlerin tanrısıdır."
+  },
+  "dq_en_1_15": {
+   "q": "Hangi Yunan kahramanı, kefaret olarak bir dizi görevi yerine getirmek zorunda kaldı?",
+   "o": [
+    "İason",
+    "Theseus",
+    "Herakles",
+    "Akhilleus"
+   ]
+  },
+  "dq_en_2_15": {
+   "q": "Romalıların savaş tanrısı kimdir?",
+   "o": [
+    "Apollon",
+    "Neptün",
+    "Mars",
+    "Jüpiter"
+   ]
+  },
+  "dq_en_2_16": {
+   "q": "Yunan mitolojisinde Pandora, kötülükleri dünyaya salan bir küpü açtı."
+  },
+  "dq_en_3_14": {
+   "q": "Teb kapılarında Oidipus'a bilmece soran yaratık hangisidir?",
+   "o": [
+    "Minotauros",
+    "Khimaira",
+    "Sfenks",
+    "Hydra"
+   ]
+  },
+  "dq_en_3_15": {
+   "q": "Mısır mitolojisinde güneş tanrısı kimdir?",
+   "o": [
+    "Anubis",
+    "Thoth",
+    "Osiris",
+    "Ra"
+   ]
+  }
+ },
+ "untranslatable": []
+}

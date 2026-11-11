@@ -1,0 +1,727 @@
+{
+ "items": {
+  "dq_en_2_50": {
+   "q": "La Rome antique a été fondée avant la construction des pyramides de Gizeh."
+  },
+  "dq_en_2_51": {
+   "q": "Jules César a été assassiné par un groupe de sénateurs romains."
+  },
+  "dq_en_2_52": {
+   "q": "Marie-Antoinette était reine d’Angleterre."
+  },
+  "dq_en_2_53": {
+   "q": "L’Empire inca s’étendait le long de la cordillère des Andes."
+  },
+  "dq_en_2_54": {
+   "q": "En quelle année la Première Guerre mondiale a-t-elle pris fin ?"
+  },
+  "dq_en_2_55": {
+   "q": "Combien de colonies britanniques se sont unies pour former les États-Unis en 1776 ?",
+   "u": "colonies"
+  },
+  "dq_en_2_56": {
+   "q": "En quelle année l’Union soviétique a-t-elle éclaté ?"
+  },
+  "dq_en_3_39": {
+   "q": "Quel navigateur a mené la première expédition autour du monde, partie en 1519 ?",
+   "o": [
+    "Christophe Colomb",
+    "Vasco de Gama",
+    "Francis Drake",
+    "Fernand de Magellan"
+   ]
+  },
+  "dq_en_3_40": {
+   "q": "Quel général carthaginois a franchi les Alpes avec des éléphants pour attaquer Rome ?",
+   "o": [
+    "Spartacus",
+    "Hannibal",
+    "Hamilcar",
+    "Scipion"
+   ]
+  },
+  "dq_en_3_41": {
+   "q": "Qui a proclamé la République populaire de Chine en 1949 ?",
+   "o": [
+    "Tchang Kaï-chek",
+    "Mao Zedong",
+    "Deng Xiaoping",
+    "Sun Yat-sen"
+   ]
+  },
+  "dq_en_3_42": {
+   "q": "Quel empire fut gouverné par Soliman le Magnifique ?",
+   "o": [
+    "L’Empire perse",
+    "L’Empire moghol",
+    "L’Empire byzantin",
+    "L’Empire ottoman"
+   ]
+  },
+  "dq_en_3_43": {
+   "q": "Quel moine allemand a lancé la Réforme protestante en 1517 ?",
+   "o": [
+    "Ulrich Zwingli",
+    "Jean Calvin",
+    "Jan Hus",
+    "Martin Luther"
+   ]
+  },
+  "dq_en_3_44": {
+   "q": "Quel peuple a bâti les cités de Tikal et de Chichén Itzá ?",
+   "o": [
+    "Les Incas",
+    "Les Mayas",
+    "Les Aztèques",
+    "Les Olmèques"
+   ]
+  },
+  "dq_en_3_45": {
+   "q": "Quel pays l’Allemagne a-t-elle envahi le 1er septembre 1939 ?",
+   "o": [
+    "La Pologne",
+    "La Belgique",
+    "La Tchécoslovaquie",
+    "La France"
+   ]
+  },
+  "dq_en_3_46": {
+   "q": "Quel pays a été divisé le long du 38e parallèle après la Seconde Guerre mondiale ?",
+   "o": [
+    "Le Viêt Nam",
+    "La Chine",
+    "L’Allemagne",
+    "La Corée"
+   ]
+  },
+  "dq_en_3_47": {
+   "q": "Qui fut le dernier tsar de Russie ?",
+   "o": [
+    "Alexandre III",
+    "Pierre le Grand",
+    "Alexandre II",
+    "Nicolas II"
+   ]
+  },
+  "dq_en_3_48": {
+   "q": "De quel pays européen le Brésil a-t-il obtenu son indépendance en 1822 ?",
+   "o": [
+    "L’Espagne",
+    "La France",
+    "Le Portugal",
+    "Les Pays-Bas"
+   ]
+  },
+  "dq_en_3_49": {
+   "q": "Quel président américain a signé la proclamation d’émancipation en 1863 ?",
+   "o": [
+    "Abraham Lincoln",
+    "Thomas Jefferson",
+    "Ulysses S. Grant",
+    "Andrew Jackson"
+   ]
+  },
+  "dq_en_3_50": {
+   "q": "Quel empire était le plus étendu ?",
+   "o": [
+    "L’Empire britannique",
+    "L’empire de Napoléon"
+   ]
+  },
+  "dq_en_3_51": {
+   "q": "Qu’est-ce qui a été construit en premier ?",
+   "o": [
+    "Le Colisée",
+    "Le Parthénon"
+   ]
+  },
+  "dq_en_3_52": {
+   "q": "Qui a régné le premier ?",
+   "o": [
+    "Alexandre le Grand",
+    "Toutânkhamon"
+   ]
+  },
+  "dq_en_3_53": {
+   "q": "Le Japon a été gouverné par des shoguns pendant plusieurs siècles."
+  },
+  "dq_en_3_54": {
+   "q": "L’Union soviétique et les États-Unis étaient alliés pendant la Seconde Guerre mondiale."
+  },
+  "dq_en_3_55": {
+   "q": "L’Empire aztèque a été conquis par le Portugal."
+  },
+  "dq_en_3_56": {
+   "q": "Gandhi fut le premier Premier ministre de l’Inde."
+  },
+  "dq_en_3_57": {
+   "q": "En quelle année la révolution russe a-t-elle renversé le tsar ?"
+  },
+  "dq_en_3_58": {
+   "q": "En quelle année l’Inde est-elle devenue indépendante du Royaume-Uni ?"
+  },
+  "dq_en_3_59": {
+   "q": "En quelle année Nelson Mandela est-il devenu président de l’Afrique du Sud ?"
+  },
+  "dq_en_4_38": {
+   "q": "Quel roi de Babylone a promulgué un célèbre code de lois vers 1750 av. J.-C. ?",
+   "o": [
+    "Assurbanipal",
+    "Sargon d’Akkad",
+    "Hammurabi",
+    "Nabuchodonosor II"
+   ]
+  },
+  "dq_en_4_39": {
+   "q": "Quel empereur, le premier à unifier la Chine, fut enterré avec une armée de terre cuite ?",
+   "o": [
+    "L’empereur Kangxi",
+    "L’empereur Wu des Han",
+    "Qin Shi Huang",
+    "Kubilai Khan"
+   ]
+  },
+  "dq_en_4_40": {
+   "q": "Quel empereur moghol a fait construire le Taj Mahal ?",
+   "o": [
+    "Shah Jahan",
+    "Aurangzeb",
+    "Akbar",
+    "Babur"
+   ]
+  },
+  "dq_en_4_41": {
+   "q": "Quel sultan a repris Jérusalem aux croisés en 1187 ?",
+   "o": [
+    "Baybars",
+    "Soliman Ier",
+    "Haroun al-Rachid",
+    "Saladin"
+   ]
+  },
+  "dq_en_4_42": {
+   "q": "Qui a fondé la République de Turquie en 1923 ?",
+   "o": [
+    "Mustafa Kemal Atatürk",
+    "İsmet İnönü",
+    "Abdülhamid II",
+    "Enver Pacha"
+   ]
+  },
+  "dq_en_4_43": {
+   "q": "Qui fut couronné empereur par le pape à Rome le jour de Noël de l’an 800 ?",
+   "o": [
+    "Charles Martel",
+    "Charlemagne",
+    "Otton Ier",
+    "Clovis Ier"
+   ]
+  },
+  "dq_en_4_44": {
+   "q": "Quel homme d’État prussien fut l’artisan de l’unification allemande en 1871 ?",
+   "o": [
+    "Klemens von Metternich",
+    "Helmuth von Moltke",
+    "Frédéric le Grand",
+    "Otto von Bismarck"
+   ]
+  },
+  "dq_en_4_45": {
+   "q": "Dans quelle ville l’archiduc François-Ferdinand a-t-il été assassiné en 1914 ?",
+   "o": [
+    "Belgrade",
+    "Budapest",
+    "Sarajevo",
+    "Vienne"
+   ]
+  },
+  "dq_en_4_46": {
+   "q": "Lors de quelle bataille, en 490 av. J.-C., les Athéniens ont-ils repoussé une invasion perse ?",
+   "o": [
+    "Les Thermopyles",
+    "Marathon",
+    "Salamine",
+    "Platées"
+   ]
+  },
+  "dq_en_4_47": {
+   "q": "Quelle ville était la capitale de l’Empire inca ?",
+   "o": [
+    "Machu Picchu",
+    "Lima",
+    "Cuzco",
+    "Quito"
+   ]
+  },
+  "dq_en_4_48": {
+   "q": "Quel programme américain a aidé à reconstruire l’Europe de l’Ouest après la Seconde Guerre mondiale ?",
+   "o": [
+    "Le plan Dawes",
+    "Le plan Marshall",
+    "Le New Deal",
+    "La doctrine Monroe"
+   ]
+  },
+  "dq_en_4_49": {
+   "q": "Lequel a duré le plus longtemps ?",
+   "o": [
+    "L’Union soviétique",
+    "L’Empire ottoman"
+   ]
+  },
+  "dq_en_4_50": {
+   "q": "Qui a vécu le premier ?",
+   "o": [
+    "Bouddha",
+    "Mahomet"
+   ]
+  },
+  "dq_en_4_51": {
+   "q": "Quelle guerre a duré le plus longtemps ?",
+   "o": [
+    "La guerre du Viêt Nam",
+    "La Première Guerre mondiale"
+   ]
+  },
+  "dq_en_4_52": {
+   "q": "Quel canal a été ouvert en premier ?",
+   "o": [
+    "Le canal de Panama",
+    "Le canal de Suez"
+   ]
+  },
+  "dq_en_4_53": {
+   "q": "L’Empire mongol fut le plus grand empire continu de l’histoire."
+  },
+  "dq_en_4_54": {
+   "q": "L’Empire khmer a bâti le complexe de temples d’Angkor Vat."
+  },
+  "dq_en_4_55": {
+   "q": "La civilisation maya était centrée dans la cordillère des Andes."
+  },
+  "dq_en_4_56": {
+   "q": "La guerre de Corée s’est achevée par la réunification de la Corée."
+  },
+  "dq_en_4_57": {
+   "q": "En quelle année Napoléon a-t-il été vaincu à Waterloo ?"
+  },
+  "dq_en_4_58": {
+   "q": "Combien d’années la guerre de Cent Ans a-t-elle réellement duré ?",
+   "u": "ans"
+  },
+  "dq_en_4_59": {
+   "q": "En quelle année la guerre du Viêt Nam s’est-elle achevée avec la chute de Saïgon ?"
+  },
+  "dq_en_5_46": {
+   "q": "Quel empereur du Mali a accompli un pèlerinage à La Mecque resté célèbre pour son faste, en 1324 ?",
+   "o": [
+    "Soundiata Keïta",
+    "Mansa Moussa",
+    "Askia Mohammed",
+    "Sonni Ali"
+   ]
+  },
+  "dq_en_5_47": {
+   "q": "Quel empereur indien s’est converti au bouddhisme après la sanglante guerre du Kalinga ?",
+   "o": [
+    "Akbar",
+    "Chandragupta Maurya",
+    "Harsha",
+    "Ashoka"
+   ]
+  },
+  "dq_en_5_48": {
+   "q": "Quel roi a fondé l’Empire perse achéménide au VIe siècle av. J.-C. ?",
+   "o": [
+    "Xerxès Ier",
+    "Cambyse II",
+    "Darius Ier",
+    "Cyrus le Grand"
+   ]
+  },
+  "dq_en_5_49": {
+   "q": "Quelle ville, fondée en 762, devint la capitale du califat abbasside ?",
+   "o": [
+    "Damas",
+    "Le Caire",
+    "Bagdad",
+    "Cordoue"
+   ]
+  },
+  "dq_en_5_50": {
+   "q": "Quel empereur japonais fut rétabli au pouvoir en 1868, lançant une modernisation rapide ?",
+   "o": [
+    "Taishō",
+    "Meiji",
+    "Shōwa",
+    "Kōmei"
+   ]
+  },
+  "dq_en_5_51": {
+   "q": "Quel pays est devenu indépendant en 1804 après une révolte d’esclaves victorieuse ?",
+   "o": [
+    "Cuba",
+    "Le Brésil",
+    "La Jamaïque",
+    "Haïti"
+   ]
+  },
+  "dq_en_5_52": {
+   "q": "Quel était le nom de code de l’invasion de l’Union soviétique par l’Allemagne en 1941 ?",
+   "o": [
+    "Opération Otarie",
+    "Opération Overlord",
+    "Opération Torch",
+    "Opération Barbarossa"
+   ]
+  },
+  "dq_en_5_53": {
+   "q": "Quel révolutionnaire fut la figure de proue de la Terreur en France en 1793-1794 ?",
+   "o": [
+    "Jean-Paul Marat",
+    "La Fayette",
+    "Maximilien de Robespierre",
+    "Georges Danton"
+   ]
+  },
+  "dq_en_5_54": {
+   "q": "Quel empereur romain a légalisé le christianisme par l’édit de Milan en 313 ?",
+   "o": [
+    "Constantin Ier",
+    "Néron",
+    "Dioclétien",
+    "Théodose Ier"
+   ]
+  },
+  "dq_en_5_55": {
+   "q": "Quel roi fit du royaume zoulou une grande puissance militaire vers 1820 ?",
+   "o": [
+    "Lobengula",
+    "Chaka",
+    "Moshoeshoe",
+    "Cetshwayo"
+   ]
+  },
+  "dq_en_5_56": {
+   "q": "Quel président égyptien a nationalisé le canal de Suez en 1956 ?",
+   "o": [
+    "Mohammed Naguib",
+    "Hosni Moubarak",
+    "Gamal Abdel Nasser",
+    "Anouar el-Sadate"
+   ]
+  },
+  "dq_en_5_57": {
+   "q": "Quel empire était le plus étendu ?",
+   "o": [
+    "L’Empire mongol",
+    "L’empire d’Alexandre"
+   ]
+  },
+  "dq_en_5_58": {
+   "q": "Qu’est-ce qui a été construit en premier ?",
+   "o": [
+    "Notre-Dame de Paris",
+    "Sainte-Sophie"
+   ]
+  },
+  "dq_en_5_59": {
+   "q": "Qu’est-ce qui est apparu en premier ?",
+   "o": [
+    "L’Empire aztèque",
+    "La civilisation olmèque"
+   ]
+  },
+  "dq_en_5_60": {
+   "q": "L’Empire ottoman a survécu jusqu’après la Première Guerre mondiale."
+  },
+  "dq_en_5_61": {
+   "q": "La pierre de Rosette porte le même décret en trois écritures."
+  },
+  "dq_en_5_62": {
+   "q": "L’Empire moghol a été fondé par Gengis Khan."
+  },
+  "dq_en_5_63": {
+   "q": "Les guerres de l’opium ont opposé la Chine au Japon."
+  },
+  "dq_en_5_64": {
+   "q": "En quelle année la Peste noire est-elle arrivée en Italie ?"
+  },
+  "dq_en_5_65": {
+   "q": "En quelle année l’abdication du dernier empereur de Chine a-t-elle mis fin à la dynastie Qing ?"
+  },
+  "dq_en_5_66": {
+   "q": "En quelle année Tenochtitlan est-elle tombée aux mains d’Hernán Cortés ?"
+  },
+  "dq_en_6_38": {
+   "q": "Sous quel empereur l’Empire romain a-t-il atteint sa plus grande étendue, en 117 apr. J.-C. ?",
+   "o": [
+    "Marc Aurèle",
+    "Auguste",
+    "Hadrien",
+    "Trajan"
+   ]
+  },
+  "dq_en_6_39": {
+   "q": "Quel amiral chinois a mené d’immenses flottes à travers l’océan Indien dans les années 1400 ?",
+   "o": [
+    "Zhang Qian",
+    "Xuanzang",
+    "Koxinga",
+    "Zheng He"
+   ]
+  },
+  "dq_en_6_40": {
+   "q": "Quel savant de Bagdad du IXe siècle a donné son nom au mot « algorithme » ?",
+   "o": [
+    "Avicenne",
+    "Omar Khayyam",
+    "Al-Khwarizmi",
+    "Al-Biruni"
+   ]
+  },
+  "dq_en_6_41": {
+   "q": "Quel voyageur marocain du XIVe siècle a parcouru le monde, du Mali jusqu’à la Chine ?",
+   "o": [
+    "Ibn Battuta",
+    "Léon l’Africain",
+    "Al-Idrissi",
+    "Ibn Khaldoun"
+   ]
+  },
+  "dq_en_6_42": {
+   "q": "Quel shogunat a gouverné le Japon de 1603 à 1868 ?",
+   "o": [
+    "Kamakura",
+    "Tokugawa",
+    "Toyotomi",
+    "Ashikaga"
+   ]
+  },
+  "dq_en_6_43": {
+   "q": "Quel empereur inca fut capturé par les Espagnols à Cajamarca en 1532 ?",
+   "o": [
+    "Túpac Amaru",
+    "Atahualpa",
+    "Huayna Capac",
+    "Pachacutec"
+   ]
+  },
+  "dq_en_6_44": {
+   "q": "Quel royaume africain, situé dans l’actuelle Éthiopie, a adopté le christianisme au IVe siècle ?",
+   "o": [
+    "Koush",
+    "Mali",
+    "Bénin",
+    "Aksoum"
+   ]
+  },
+  "dq_en_6_45": {
+   "q": "Qui a mené la Côte-de-l’Or à l’indépendance sous le nom de Ghana en 1957 ?",
+   "o": [
+    "Julius Nyerere",
+    "Jomo Kenyatta",
+    "Patrice Lumumba",
+    "Kwame Nkrumah"
+   ]
+  },
+  "dq_en_6_46": {
+   "q": "Quel État mongol a dominé les principautés russes pendant plus de deux siècles ?",
+   "o": [
+    "Le khanat de Djaghataï",
+    "La Horde d’or",
+    "L’Ilkhanat",
+    "La dynastie Yuan"
+   ]
+  },
+  "dq_en_6_47": {
+   "q": "Quel roi de France a accordé des droits aux protestants par l’édit de Nantes en 1598 ?",
+   "o": [
+    "François Ier",
+    "Charles IX",
+    "Henri IV",
+    "Louis XIV"
+   ]
+  },
+  "dq_en_6_48": {
+   "q": "Lors de quelle bataille, en 1954, le Viêt-minh a-t-il vaincu l’armée française ?",
+   "o": [
+    "Da Nang",
+    "Khe Sanh",
+    "Hué",
+    "Diên Biên Phu"
+   ]
+  },
+  "dq_en_6_49": {
+   "q": "Laquelle a duré le plus longtemps ?",
+   "o": [
+    "La dynastie Ming",
+    "La dynastie Yuan"
+   ]
+  },
+  "dq_en_6_50": {
+   "q": "Qui a régné le premier ?",
+   "o": [
+    "Charlemagne",
+    "Justinien Ier"
+   ]
+  },
+  "dq_en_6_51": {
+   "q": "Lequel est apparu en premier ?",
+   "o": [
+    "L’Empire gupta",
+    "L’Empire maurya"
+   ]
+  },
+  "dq_en_6_52": {
+   "q": "L’Éthiopie a vaincu une armée italienne à la bataille d’Adoua en 1896."
+  },
+  "dq_en_6_53": {
+   "q": "Les Mongols ont tenté deux fois d’envahir le Japon, et ont échoué les deux fois."
+  },
+  "dq_en_6_54": {
+   "q": "Saladin fut le fondateur de la dynastie ottomane."
+  },
+  "dq_en_6_55": {
+   "q": "Simón Bolívar est né en Espagne."
+  },
+  "dq_en_6_56": {
+   "q": "En quelle année a eu lieu l’Hégire, la migration de Mahomet à Médine ?"
+  },
+  "dq_en_6_57": {
+   "q": "En quelle année Gengis Khan est-il mort ?"
+  },
+  "dq_en_6_58": {
+   "q": "Pendant combien d’années Louis XIV a-t-il régné sur la France ?",
+   "u": "ans"
+  },
+  "dq_en_7_39": {
+   "q": "Quelle bataille, vers 1274 av. J.-C., opposa Ramsès II aux Hittites ?",
+   "o": [
+    "Megiddo",
+    "Péluse",
+    "Qadesh",
+    "Karkemish"
+   ]
+  },
+  "dq_en_7_40": {
+   "q": "Quelle guerre civile chinoise de 1850-1864 fut menée par un homme se disant le frère de Jésus ?",
+   "o": [
+    "La révolte des Taiping",
+    "La révolte des Boxers",
+    "La révolte des Nian",
+    "La révolte du Lotus blanc"
+   ]
+  },
+  "dq_en_7_41": {
+   "q": "Quelle dynastie a régné sur la Perse à partir de 1501 et fait de l’islam chiite la religion d’État ?",
+   "o": [
+    "Les Timourides",
+    "Les Safavides",
+    "Les Qadjars",
+    "Les Seldjoukides"
+   ]
+  },
+  "dq_en_7_42": {
+   "q": "Quels souverains d’Égypte ont stoppé l’avancée mongole à Aïn Djalout en 1260 ?",
+   "o": [
+    "Les Ayyoubides",
+    "Les Seldjoukides",
+    "Les Mamelouks",
+    "Les Fatimides"
+   ]
+  },
+  "dq_en_7_43": {
+   "q": "Quel pape a appelé à la première croisade en 1095 ?",
+   "o": [
+    "Grégoire VII",
+    "Innocent III",
+    "Léon X",
+    "Urbain II"
+   ]
+  },
+  "dq_en_7_44": {
+   "q": "Quel prêtre a lancé la guerre d’indépendance du Mexique en 1810 ?",
+   "o": [
+    "José María Morelos",
+    "Benito Juárez",
+    "Agustín de Iturbide",
+    "Miguel Hidalgo"
+   ]
+  },
+  "dq_en_7_45": {
+   "q": "Quel royaume antique, au sud de l’Égypte, avait pour capitale Méroé ?",
+   "o": [
+    "Pount",
+    "Koush",
+    "Aksoum",
+    "Ghana"
+   ]
+  },
+  "dq_en_7_46": {
+   "q": "Quel empereur romain a instauré la tétrarchie, un gouvernement à quatre empereurs ?",
+   "o": [
+    "Aurélien",
+    "Septime Sévère",
+    "Dioclétien",
+    "Constantin Ier"
+   ]
+  },
+  "dq_en_7_47": {
+   "q": "Quel roi de Corée a fait créer l’alphabet hangeul au XVe siècle ?",
+   "o": [
+    "Gojong",
+    "Taejo",
+    "Yeongjo",
+    "Sejong le Grand"
+   ]
+  },
+  "dq_en_7_48": {
+   "q": "Lors de quelle bataille, en 331 av. J.-C., Alexandre le Grand a-t-il vaincu Darius III de façon décisive ?",
+   "o": [
+    "Issos",
+    "Gaugamèles",
+    "L’Hydaspe",
+    "Le Granique"
+   ]
+  },
+  "dq_en_7_49": {
+   "q": "Quel empire était le plus étendu ?",
+   "o": [
+    "L’Empire inca",
+    "L’Empire aztèque"
+   ]
+  },
+  "dq_en_7_50": {
+   "q": "Qui a régné le premier ?",
+   "o": [
+    "Hatchepsout",
+    "Ramsès II"
+   ]
+  },
+  "dq_en_7_51": {
+   "q": "Qu’est-ce qui a eu lieu en premier ?",
+   "o": [
+    "Les guerres de l’opium",
+    "La révolte des Boxers"
+   ]
+  },
+  "dq_en_7_52": {
+   "q": "Lequel a duré le plus longtemps ?",
+   "o": [
+    "Le Raj britannique",
+    "Le shogunat Tokugawa"
+   ]
+  },
+  "dq_en_7_53": {
+   "q": "Des guerriers zoulous ont vaincu une armée britannique à Isandhlwana en 1879."
+  },
+  "dq_en_7_54": {
+   "q": "L’époque de Heian, au Japon, doit son nom à un ancien nom de Kyoto."
+  },
+  "dq_en_7_55": {
+   "q": "Vasco de Gama fut le premier Européen à doubler le cap de Bonne-Espérance."
+  }
+ },
+ "untranslatable": []
+}

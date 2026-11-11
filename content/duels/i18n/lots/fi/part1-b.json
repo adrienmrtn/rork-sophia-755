@@ -1,0 +1,919 @@
+{
+ "items": {
+  "dq_en_3_16": {
+   "q": "Minotauros asui labyrintissa Kreetan saarella."
+  },
+  "dq_en_4_14": {
+   "q": "Kuka on skandinaavisen mytologian ylijumala?",
+   "o": [
+    "Loki",
+    "Freyr",
+    "Odin",
+    "Thor"
+   ]
+  },
+  "dq_en_4_15": {
+   "q": "Kreikkalaisessa mytologiassa Akhilleus oli haavoittumaton kantapäätään lukuun ottamatta."
+  },
+  "dq_en_4_16": {
+   "q": "Montako muusaa kreikkalaisessa mytologiassa on?",
+   "u": "muusaa"
+  },
+  "dq_en_5_15": {
+   "q": "Mikä kreikkalainen jumalatar syntyi täysikasvuisena Zeuksen päästä?",
+   "o": [
+    "Afrodite",
+    "Hera",
+    "Artemis",
+    "Athene"
+   ]
+  },
+  "dq_en_5_16": {
+   "q": "Kuka kreikkalaisessa mytologiassa tuomittiin vierittämään kiveä ylös mäkeä ikuisesti?",
+   "o": [
+    "Sisyfos",
+    "Tantalos",
+    "Prometheus",
+    "Atlas"
+   ]
+  },
+  "dq_en_6_14": {
+   "q": "Skandinaavisessa mytologiassa Ragnarök on Odinin kahdeksanjalkaisen hevosen nimi."
+  },
+  "dq_en_6_15": {
+   "q": "Kuka egyptiläisen mytologian jumalatar kokosi Osiriksen ruumiin?",
+   "o": [
+    "Isis",
+    "Bastet",
+    "Hathor",
+    "Nut"
+   ]
+  },
+  "dq_en_7_13": {
+   "q": "Kuka atsteekkien mytologian jumala tunnetaan nimellä ”Sulkakäärme”?",
+   "o": [
+    "Tezcatlipoca",
+    "Tlaloc",
+    "Quetzalcoatl",
+    "Huitzilopochtli"
+   ]
+  },
+  "dq_en_8_13": {
+   "q": "Kuka kreikkalaisen mytologian titaanitar on muistin jumalatar ja muusien äiti?",
+   "o": [
+    "Themis",
+    "Tethys",
+    "Rheia",
+    "Mnemosyne"
+   ]
+  },
+  "dq_en_8_14": {
+   "q": "Bhagavadgita on osa Ramayana-eeposta."
+  },
+  "dq_en_1_16": {
+   "q": "Mikä on Yhdysvaltojen pääkaupunki?",
+   "o": [
+    "Washington, D.C.",
+    "New York",
+    "Chicago",
+    "Los Angeles"
+   ]
+  },
+  "dq_en_1_17": {
+   "q": "Euro on Japanin valuutta."
+  },
+  "dq_en_2_17": {
+   "q": "Mikä järjestö perustettiin vuonna 1945 ylläpitämään kansainvälistä rauhaa?",
+   "o": [
+    "Kansainliitto",
+    "Yhdistyneet kansakunnat",
+    "Euroopan unioni",
+    "Nato"
+   ]
+  },
+  "dq_en_2_18": {
+   "q": "Sana ”demokratia” tulee kreikan sanoista, jotka tarkoittavat ”kansan valtaa”."
+  },
+  "dq_en_3_17": {
+   "q": "Kuka antiikin kreikkalainen filosofi tuomittiin kuolemaan juomalla myrkkykatkoa?",
+   "o": [
+    "Aristoteles",
+    "Sokrates",
+    "Diogenes",
+    "Platon"
+   ]
+  },
+  "dq_en_3_18": {
+   "q": "Kuka kirjoitti teoksen ”Kommunistinen manifesti” yhdessä Friedrich Engelsin kanssa?",
+   "o": [
+    "Karl Marx",
+    "Adam Smith",
+    "Vladimir Lenin",
+    "Jean-Jacques Rousseau"
+   ]
+  },
+  "dq_en_4_17": {
+   "q": "Inflaatio tarkoittaa, että hintataso laskee."
+  },
+  "dq_en_4_18": {
+   "q": "Montako jäsenvaltiota YK:ssa on?",
+   "u": "jäsenvaltiota"
+  },
+  "dq_en_5_17": {
+   "q": "Kuka filosofi kirjoitti teoksen ”Valtio”?",
+   "o": [
+    "Cicero",
+    "Epikuros",
+    "Platon",
+    "Aristoteles"
+   ]
+  },
+  "dq_en_5_18": {
+   "q": "Kuka ajattelija kirjoitti poliittista valtaa käsittelevän teoksen ”Ruhtinas”?",
+   "o": [
+    "Thomas Hobbes",
+    "Niccolò Machiavelli",
+    "John Locke",
+    "Montesquieu"
+   ]
+  },
+  "dq_en_5_19": {
+   "q": "Minä vuonna ihmisoikeuksien yleismaailmallinen julistus hyväksyttiin?"
+  },
+  "dq_en_6_16": {
+   "q": "Kuka kirjoitti teoksen ”Leviathan” (1651)?",
+   "o": [
+    "Thomas Hobbes",
+    "John Locke",
+    "David Hume",
+    "Francis Bacon"
+   ]
+  },
+  "dq_en_6_17": {
+   "q": "”Ajattelen, siis olen” on René Descartes'n lause."
+  },
+  "dq_en_7_14": {
+   "q": "Kuka filosofi kirjoitti teoksen ”Näin puhui Zarathustra”?",
+   "o": [
+    "Martin Heidegger",
+    "Søren Kierkegaard",
+    "Friedrich Nietzsche",
+    "Arthur Schopenhauer"
+   ]
+  },
+  "dq_en_7_15": {
+   "q": "John Maynard Keynesin mukaan valtion ei pitäisi koskaan puuttua talouteen."
+  },
+  "dq_en_8_15": {
+   "q": "Kuka filosofi kirjoitti teoksen ”Oleminen ja aika” (1927)?",
+   "o": [
+    "Ludwig Wittgenstein",
+    "Martin Heidegger",
+    "Jean-Paul Sartre",
+    "Edmund Husserl"
+   ]
+  },
+  "dq_en_1_18": {
+   "q": "Minkä maan lippu tämä on?",
+   "o": [
+    "Ranska",
+    "Yhdysvallat",
+    "Iso-Britannia",
+    "Australia"
+   ]
+  },
+  "dq_en_1_19": {
+   "q": "Minkä maan lippu tämä on?",
+   "o": [
+    "Japani",
+    "Etelä-Korea",
+    "Vietnam",
+    "Kiina"
+   ]
+  },
+  "dq_en_1_20": {
+   "q": "Minkä maan lippu tämä on?",
+   "o": [
+    "Tanska",
+    "Yhdysvallat",
+    "Kanada",
+    "Sveitsi"
+   ]
+  },
+  "dq_en_1_21": {
+   "q": "Minkä maan lippu tämä on?",
+   "o": [
+    "Australia",
+    "Iso-Britannia",
+    "Uusi-Seelanti",
+    "Irlanti"
+   ]
+  },
+  "dq_en_1_22": {
+   "q": "Minkä maan lippu tämä on?",
+   "o": [
+    "Belgia",
+    "Ranska",
+    "Alankomaat",
+    "Italia"
+   ]
+  },
+  "dq_en_2_19": {
+   "q": "Minkä maan lippu tämä on?",
+   "o": [
+    "Meksiko",
+    "Italia",
+    "Unkari",
+    "Irlanti"
+   ]
+  },
+  "dq_en_2_20": {
+   "q": "Minkä maan lippu tämä on?",
+   "o": [
+    "Belgia",
+    "Saksa",
+    "Itävalta",
+    "Alankomaat"
+   ]
+  },
+  "dq_en_2_21": {
+   "q": "Minkä maan lippu tämä on?",
+   "o": [
+    "Kolumbia",
+    "Brasilia",
+    "Portugali",
+    "Argentiina"
+   ]
+  },
+  "dq_en_2_22": {
+   "q": "Minkä maan lippu tämä on?",
+   "o": [
+    "Vietnam",
+    "Turkki",
+    "Japani",
+    "Kiina"
+   ]
+  },
+  "dq_en_2_23": {
+   "q": "Minkä maan lippu tämä on?",
+   "o": [
+    "Sveitsi",
+    "Ruotsi",
+    "Itävalta",
+    "Tanska"
+   ]
+  },
+  "dq_en_3_19": {
+   "q": "Minkä maan lippu tämä on?",
+   "o": [
+    "Portugali",
+    "Saksa",
+    "Kolumbia",
+    "Espanja"
+   ]
+  },
+  "dq_en_3_20": {
+   "q": "Minkä maan lippu tämä on?",
+   "o": [
+    "Irlanti",
+    "Pakistan",
+    "Intia",
+    "Italia"
+   ]
+  },
+  "dq_en_3_21": {
+   "q": "Minkä maan lippu tämä on?",
+   "o": [
+    "Meksiko",
+    "Italia",
+    "Unkari",
+    "Iran"
+   ]
+  },
+  "dq_en_3_22": {
+   "q": "Minkä maan lippu tämä on?",
+   "o": [
+    "Fidži",
+    "Iso-Britannia",
+    "Uusi-Seelanti",
+    "Australia"
+   ]
+  },
+  "dq_en_3_23": {
+   "q": "Minkä maan lippu tämä on?",
+   "o": [
+    "Kreikka",
+    "Uruguay",
+    "Suomi",
+    "Israel"
+   ]
+  },
+  "dq_en_4_19": {
+   "q": "Minkä maan lippu tämä on?",
+   "o": [
+    "Suomi",
+    "Tanska",
+    "Ruotsi",
+    "Norja"
+   ]
+  },
+  "dq_en_4_20": {
+   "q": "Minkä maan lippu tämä on?",
+   "o": [
+    "Uruguay",
+    "Honduras",
+    "Kreikka",
+    "Argentiina"
+   ]
+  },
+  "dq_en_4_21": {
+   "q": "Minkä maan lippu tämä on?",
+   "o": [
+    "Japani",
+    "Taiwan",
+    "Etelä-Korea",
+    "Pohjois-Korea"
+   ]
+  },
+  "dq_en_4_22": {
+   "q": "Minkä maan lippu tämä on?",
+   "o": [
+    "Tunisia",
+    "Turkki",
+    "Pakistan",
+    "Marokko"
+   ]
+  },
+  "dq_en_4_23": {
+   "q": "Minkä maan lippu tämä on?",
+   "o": [
+    "Jamaika",
+    "Zimbabwe",
+    "Kenia",
+    "Etelä-Afrikka"
+   ]
+  },
+  "dq_en_5_20": {
+   "q": "Minkä maan lippu tämä on?",
+   "o": [
+    "Portugali",
+    "Espanja",
+    "Italia",
+    "Brasilia"
+   ]
+  },
+  "dq_en_5_21": {
+   "q": "Minkä maan lippu tämä on?",
+   "o": [
+    "Islanti",
+    "Tanska",
+    "Ruotsi",
+    "Norja"
+   ]
+  },
+  "dq_en_5_22": {
+   "q": "Minkä maan lippu tämä on?",
+   "o": [
+    "Argentiina",
+    "Suomi",
+    "Kreikka",
+    "Israel"
+   ]
+  },
+  "dq_en_5_23": {
+   "q": "Minkä maan lippu tämä on?",
+   "o": [
+    "Irak",
+    "Syyria",
+    "Egypti",
+    "Jemen"
+   ]
+  },
+  "dq_en_5_24": {
+   "q": "Minkä maan lippu tämä on?",
+   "o": [
+    "Alankomaat",
+    "Venäjä",
+    "Kroatia",
+    "Ranska"
+   ]
+  },
+  "dq_en_6_18": {
+   "q": "Minkä maan lippu tämä on?",
+   "o": [
+    "Puola",
+    "Itävalta",
+    "Indonesia",
+    "Tanska"
+   ]
+  },
+  "dq_en_6_19": {
+   "q": "Minkä maan lippu tämä on?",
+   "o": [
+    "Vietnam",
+    "Turkki",
+    "Marokko",
+    "Kiina"
+   ]
+  },
+  "dq_en_6_20": {
+   "q": "Minkä maan lippu tämä on?",
+   "o": [
+    "Etelä-Afrikka",
+    "Tansania",
+    "Jamaika",
+    "Ghana"
+   ]
+  },
+  "dq_en_6_21": {
+   "q": "Minkä maan lippu tämä on?",
+   "o": [
+    "Pakistan",
+    "Saudi-Arabia",
+    "Iran",
+    "Irak"
+   ]
+  },
+  "dq_en_6_22": {
+   "q": "Minkä maan lippu tämä on?",
+   "o": [
+    "Irlanti",
+    "Unkari",
+    "Intia",
+    "Italia"
+   ]
+  },
+  "dq_en_7_16": {
+   "q": "Minkä maan lippu tämä on?",
+   "o": [
+    "Kenia",
+    "Tansania",
+    "Uganda",
+    "Etiopia"
+   ]
+  },
+  "dq_en_7_17": {
+   "q": "Minkä maan lippu tämä on?",
+   "o": [
+    "Filippiinit",
+    "Kuuba",
+    "Tšekki",
+    "Chile"
+   ]
+  },
+  "dq_en_7_18": {
+   "q": "Minkä maan lippu tämä on?",
+   "o": [
+    "Islanti",
+    "Suomi",
+    "Kreikka",
+    "Ruotsi"
+   ]
+  },
+  "dq_en_7_19": {
+   "q": "Minkä maan lippu tämä on?",
+   "o": [
+    "Alankomaat",
+    "Thaimaa",
+    "Costa Rica",
+    "Kambodža"
+   ]
+  },
+  "dq_en_7_20": {
+   "q": "Minkä maan lippu tämä on?",
+   "o": [
+    "Bhutan",
+    "Nepal",
+    "Mongolia",
+    "Sri Lanka"
+   ]
+  },
+  "dq_en_8_16": {
+   "q": "Minkä maan lippu tämä on?",
+   "o": [
+    "Nepal",
+    "Sri Lanka",
+    "Bhutan",
+    "Brunei"
+   ]
+  },
+  "dq_en_8_17": {
+   "q": "Minkä maan lippu tämä on?",
+   "o": [
+    "Kazakstan",
+    "Palau",
+    "Uzbekistan",
+    "Kirgisia"
+   ]
+  },
+  "dq_en_8_18": {
+   "q": "Minkä maan lippu tämä on?",
+   "o": [
+    "Kreikka",
+    "Argentiina",
+    "El Salvador",
+    "Uruguay"
+   ]
+  },
+  "dq_en_8_19": {
+   "q": "Minkä maan lippu tämä on?",
+   "o": [
+    "Angola",
+    "Sambia",
+    "Mosambik",
+    "Zimbabwe"
+   ]
+  },
+  "dq_en_8_20": {
+   "q": "Minkä maan lippu tämä on?",
+   "o": [
+    "Liettua",
+    "Viro",
+    "Latvia",
+    "Botswana"
+   ]
+  },
+  "dq_en_1_23": {
+   "q": "Mikä on Ranskan pääkaupunki?",
+   "o": [
+    "Nizza",
+    "Lyon",
+    "Pariisi",
+    "Marseille"
+   ]
+  },
+  "dq_en_1_24": {
+   "q": "Mikä on Japanin pääkaupunki?",
+   "o": [
+    "Osaka",
+    "Jokohama",
+    "Tokio",
+    "Kioto"
+   ]
+  },
+  "dq_en_1_25": {
+   "q": "Mikä on Italian pääkaupunki?",
+   "o": [
+    "Napoli",
+    "Rooma",
+    "Milano",
+    "Venetsia"
+   ]
+  },
+  "dq_en_1_26": {
+   "q": "Mikä on Egyptin pääkaupunki?",
+   "o": [
+    "Giza",
+    "Luxor",
+    "Kairo",
+    "Aleksandria"
+   ]
+  },
+  "dq_en_1_27": {
+   "q": "Mikä on Espanjan pääkaupunki?",
+   "o": [
+    "Madrid",
+    "Sevilla",
+    "Valencia",
+    "Barcelona"
+   ]
+  },
+  "dq_en_2_24": {
+   "q": "Mikä on Saksan pääkaupunki?",
+   "o": [
+    "München",
+    "Frankfurt",
+    "Hampuri",
+    "Berliini"
+   ]
+  },
+  "dq_en_2_25": {
+   "q": "Mikä on Venäjän pääkaupunki?",
+   "o": [
+    "Moskova",
+    "Novosibirsk",
+    "Pietari",
+    "Kazan"
+   ]
+  },
+  "dq_en_2_26": {
+   "q": "Mikä on Kiinan pääkaupunki?",
+   "o": [
+    "Hongkong",
+    "Shanghai",
+    "Guangzhou",
+    "Peking"
+   ]
+  },
+  "dq_en_2_27": {
+   "q": "Mikä on Kreikan pääkaupunki?",
+   "o": [
+    "Korintti",
+    "Ateena",
+    "Thessaloniki",
+    "Sparta"
+   ]
+  },
+  "dq_en_2_28": {
+   "q": "Mikä on Yhdysvaltojen pääkaupunki?",
+   "o": [
+    "New York",
+    "Los Angeles",
+    "Washington, D.C.",
+    "Chicago"
+   ]
+  },
+  "dq_en_3_24": {
+   "q": "Mikä on Australian pääkaupunki?",
+   "o": [
+    "Melbourne",
+    "Sydney",
+    "Canberra",
+    "Perth"
+   ]
+  },
+  "dq_en_3_25": {
+   "q": "Mikä on Kanadan pääkaupunki?",
+   "o": [
+    "Toronto",
+    "Ottawa",
+    "Montreal",
+    "Vancouver"
+   ]
+  },
+  "dq_en_3_26": {
+   "q": "Mikä on Brasilian pääkaupunki?",
+   "o": [
+    "Salvador",
+    "Brasília",
+    "Rio de Janeiro",
+    "São Paulo"
+   ]
+  },
+  "dq_en_3_27": {
+   "q": "Mikä on Turkin pääkaupunki?",
+   "o": [
+    "Istanbul",
+    "Ankara",
+    "Izmir",
+    "Antalya"
+   ]
+  },
+  "dq_en_3_28": {
+   "q": "Mikä on Intian pääkaupunki?",
+   "o": [
+    "New Delhi",
+    "Bangalore",
+    "Kalkutta",
+    "Mumbai"
+   ]
+  },
+  "dq_en_4_24": {
+   "q": "Mikä on Sveitsin pääkaupunki?",
+   "o": [
+    "Geneve",
+    "Basel",
+    "Zürich",
+    "Bern"
+   ]
+  },
+  "dq_en_4_25": {
+   "q": "Mikä on Marokon pääkaupunki?",
+   "o": [
+    "Fès",
+    "Rabat",
+    "Marrakech",
+    "Casablanca"
+   ]
+  },
+  "dq_en_4_26": {
+   "q": "Mikä on Argentiinan pääkaupunki?",
+   "o": [
+    "Rosario",
+    "Buenos Aires",
+    "Córdoba",
+    "Mendoza"
+   ]
+  },
+  "dq_en_4_27": {
+   "q": "Mikä on Etelä-Korean pääkaupunki?",
+   "o": [
+    "Incheon",
+    "Daegu",
+    "Soul",
+    "Busan"
+   ]
+  },
+  "dq_en_4_28": {
+   "q": "Mikä on Puolan pääkaupunki?",
+   "o": [
+    "Wrocław",
+    "Varsova",
+    "Gdańsk",
+    "Krakova"
+   ]
+  },
+  "dq_en_5_25": {
+   "q": "Mikä on Uuden-Seelannin pääkaupunki?",
+   "o": [
+    "Christchurch",
+    "Wellington",
+    "Queenstown",
+    "Auckland"
+   ]
+  },
+  "dq_en_5_26": {
+   "q": "Mikä on Vietnamin pääkaupunki?",
+   "o": [
+    "Hanoi",
+    "Ho Chi Minhin kaupunki",
+    "Hue",
+    "Da Nang"
+   ]
+  },
+  "dq_en_5_27": {
+   "q": "Mikä on Pakistanin pääkaupunki?",
+   "o": [
+    "Peshawar",
+    "Islamabad",
+    "Karachi",
+    "Lahore"
+   ]
+  },
+  "dq_en_5_28": {
+   "q": "Mikä on Nigerian pääkaupunki?",
+   "o": [
+    "Abuja",
+    "Lagos",
+    "Ibadan",
+    "Kano"
+   ]
+  },
+  "dq_en_6_23": {
+   "q": "Mikä on Perun pääkaupunki?",
+   "o": [
+    "Lima",
+    "Arequipa",
+    "Trujillo",
+    "Cusco"
+   ]
+  },
+  "dq_en_6_24": {
+   "q": "Mikä on Tansanian pääkaupunki?",
+   "o": [
+    "Dar es Salaam",
+    "Dodoma",
+    "Arusha",
+    "Sansibar"
+   ]
+  },
+  "dq_en_6_25": {
+   "q": "Mikä on Myanmarin pääkaupunki?",
+   "o": [
+    "Bagan",
+    "Yangon",
+    "Mandalay",
+    "Naypyidaw"
+   ]
+  },
+  "dq_en_6_26": {
+   "q": "Mikä on Kolumbian pääkaupunki?",
+   "o": [
+    "Medellín",
+    "Cartagena",
+    "Bogotá",
+    "Cali"
+   ]
+  },
+  "dq_en_7_22": {
+   "q": "Mikä on Uruguayn pääkaupunki?",
+   "o": [
+    "Montevideo",
+    "Punta del Este",
+    "Salto",
+    "Colonia del Sacramento"
+   ]
+  },
+  "dq_en_7_25": {
+   "q": "Mikä on Ecuadorin pääkaupunki?",
+   "o": [
+    "Lima",
+    "Cuenca",
+    "Guayaquil",
+    "Quito"
+   ]
+  },
+  "dq_en_5_29": {
+   "q": "Nairobi on minkä maan pääkaupunki?",
+   "o": [
+    "Etiopia",
+    "Kenia",
+    "Tansania",
+    "Uganda"
+   ]
+  },
+  "dq_en_6_27": {
+   "q": "Reykjavík on minkä maan pääkaupunki?",
+   "o": [
+    "Norja",
+    "Islanti",
+    "Suomi",
+    "Tanska"
+   ]
+  },
+  "dq_en_7_21": {
+   "q": "Ulan Bator on minkä maan pääkaupunki?",
+   "o": [
+    "Mongolia",
+    "Kazakstan",
+    "Nepal",
+    "Kirgisia"
+   ]
+  },
+  "dq_en_7_23": {
+   "q": "Tbilisi on minkä maan pääkaupunki?",
+   "o": [
+    "Armenia",
+    "Georgia",
+    "Moldova",
+    "Azerbaidžan"
+   ]
+  },
+  "dq_en_7_24": {
+   "q": "Taškent on minkä maan pääkaupunki?",
+   "o": [
+    "Uzbekistan",
+    "Kazakstan",
+    "Tadžikistan",
+    "Turkmenistan"
+   ]
+  },
+  "dq_en_8_21": {
+   "q": "Thimphu on minkä maan pääkaupunki?",
+   "o": [
+    "Brunei",
+    "Nepal",
+    "Laos",
+    "Bhutan"
+   ]
+  },
+  "dq_en_8_22": {
+   "q": "Ouagadougou on minkä maan pääkaupunki?",
+   "o": [
+    "Mali",
+    "Benin",
+    "Niger",
+    "Burkina Faso"
+   ]
+  },
+  "dq_en_8_23": {
+   "q": "Paramaribo on minkä maan pääkaupunki?",
+   "o": [
+    "Guyana",
+    "Suriname",
+    "Paraguay",
+    "Belize"
+   ]
+  },
+  "dq_en_8_24": {
+   "q": "Vaduz on minkä maan pääkaupunki?",
+   "o": [
+    "Luxemburg",
+    "Monaco",
+    "Andorra",
+    "Liechtenstein"
+   ]
+  },
+  "dq_en_8_25": {
+   "q": "Antananarivo on minkä maan pääkaupunki?",
+   "o": [
+    "Mosambik",
+    "Madagaskar",
+    "Malawi",
+    "Mauritius"
+   ]
+  },
+  "dq_en_1_28": {
+   "q": "Kummassa maassa on enemmän asukkaita?",
+   "o": [
+    "Intia",
+    "Yhdysvallat"
+   ]
+  },
+  "dq_en_1_29": {
+   "q": "Kummassa maassa on enemmän asukkaita?",
+   "o": [
+    "Venäjä",
+    "Kiina"
+   ]
+  },
+  "dq_en_2_29": {
+   "q": "Kummassa maassa on enemmän asukkaita?",
+   "o": [
+    "Japani",
+    "Saksa"
+   ]
+  }
+ },
+ "untranslatable": []
+}

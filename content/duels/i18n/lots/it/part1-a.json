@@ -1,0 +1,769 @@
+{
+ "true_false": [
+  "Vero",
+  "Falso"
+ ],
+ "leagues": {
+  "aesop": "Esopo",
+  "homer": "Omero",
+  "sappho": "Saffo",
+  "confucius": "Confucio",
+  "socrates": "Socrate",
+  "cleopatra": "Cleopatra",
+  "hypatia": "Ipazia",
+  "avicenna": "Avicenna",
+  "murasaki": "Murasaki",
+  "mansa_musa": "Mansa Musa",
+  "dante": "Dante",
+  "joan_of_arc": "Giovanna d'Arco",
+  "gutenberg": "Gutenberg",
+  "leonardo": "Leonardo",
+  "michelangelo": "Michelangelo",
+  "copernicus": "Copernico",
+  "shakespeare": "Shakespeare",
+  "galileo": "Galileo",
+  "vermeer": "Vermeer",
+  "newton": "Newton",
+  "mozart": "Mozart",
+  "napoleon": "Napoleone",
+  "austen": "Austen",
+  "darwin": "Darwin",
+  "lovelace": "Lovelace",
+  "van_gogh": "Van Gogh",
+  "curie": "Curie",
+  "einstein": "Einstein",
+  "kahlo": "Kahlo",
+  "sophia": "Sophia"
+ },
+ "items": {
+  "dq_en_1_01": {
+   "q": "Quale pianeta è noto come il Pianeta rosso?",
+   "o": [
+    "Giove",
+    "Mercurio",
+    "Marte",
+    "Venere"
+   ]
+  },
+  "dq_en_1_02": {
+   "q": "Chi dipinse la Gioconda?",
+   "o": [
+    "Michelangelo",
+    "Leonardo da Vinci",
+    "Sandro Botticelli",
+    "Raffaello"
+   ]
+  },
+  "dq_en_1_03": {
+   "q": "Nella mitologia greca, chi è il re degli dèi?",
+   "o": [
+    "Ade",
+    "Zeus",
+    "Poseidone",
+    "Apollo"
+   ]
+  },
+  "dq_en_1_04": {
+   "q": "In quale Paese si trovano le piramidi di Giza?",
+   "o": [
+    "Grecia",
+    "Iraq",
+    "Messico",
+    "Egitto"
+   ]
+  },
+  "dq_en_1_05": {
+   "q": "Il Titanic affondò durante il suo primo viaggio."
+  },
+  "dq_en_1_06": {
+   "q": "Gli squali sono mammiferi."
+  },
+  "dq_en_1_07": {
+   "q": "Chi è?",
+   "o": [
+    "Thomas Edison",
+    "Albert Einstein",
+    "Mark Twain",
+    "Sigmund Freud"
+   ]
+  },
+  "dq_en_1_08": {
+   "q": "Chi è?",
+   "o": [
+    "Duca di Wellington",
+    "Luigi XIV",
+    "Napoleone Bonaparte",
+    "George Washington"
+   ]
+  },
+  "dq_en_1_09": {
+   "q": "In che anno Cristoforo Colombo raggiunse per la prima volta le Americhe?"
+  },
+  "dq_en_1_10": {
+   "q": "In che anno l'uomo camminò per la prima volta sulla Luna?"
+  },
+  "dq_en_2_01": {
+   "q": "Chi scrisse “Orgoglio e pregiudizio”?",
+   "o": [
+    "George Eliot",
+    "Charlotte Brontë",
+    "Jane Austen",
+    "Mary Shelley"
+   ]
+  },
+  "dq_en_2_02": {
+   "q": "Quale antica città fu sepolta dall'eruzione del Vesuvio nel 79 d.C.?",
+   "o": [
+    "Cartagine",
+    "Pompei",
+    "Atene",
+    "Troia"
+   ]
+  },
+  "dq_en_2_03": {
+   "q": "Qual è il simbolo chimico dell'oro?",
+   "o": [
+    "Ag",
+    "Au",
+    "Go",
+    "Gd"
+   ]
+  },
+  "dq_en_2_04": {
+   "q": "Chi dipinse “Notte stellata”?",
+   "o": [
+    "Pablo Picasso",
+    "Paul Cézanne",
+    "Vincent van Gogh",
+    "Claude Monet"
+   ]
+  },
+  "dq_en_2_05": {
+   "q": "Leonardo da Vinci dipinse la volta della Cappella Sistina."
+  },
+  "dq_en_2_06": {
+   "q": "La Rivoluzione francese iniziò nel 1789."
+  },
+  "dq_en_2_07": {
+   "q": "Chi è?",
+   "o": [
+    "William Shakespeare",
+    "Sir Walter Raleigh",
+    "Miguel de Cervantes",
+    "Christopher Marlowe"
+   ]
+  },
+  "dq_en_2_08": {
+   "q": "Chi è?",
+   "o": [
+    "Abraham Lincoln",
+    "Charles Dickens",
+    "Karl Marx",
+    "Ulysses S. Grant"
+   ]
+  },
+  "dq_en_2_09": {
+   "q": "In che anno cadde il Muro di Berlino?"
+  },
+  "dq_en_2_10": {
+   "q": "Quale percentuale della superficie terrestre è coperta dall'acqua?"
+  },
+  "dq_en_3_01": {
+   "q": "Nella mitologia greca, chi volò troppo vicino al Sole con ali di cera?",
+   "o": [
+    "Icaro",
+    "Dedalo",
+    "Orfeo",
+    "Perseo"
+   ]
+  },
+  "dq_en_3_02": {
+   "q": "Chi fu il primo imperatore romano?",
+   "o": [
+    "Nerone",
+    "Augusto",
+    "Costantino",
+    "Giulio Cesare"
+   ]
+  },
+  "dq_en_3_03": {
+   "q": "Quale scienziato propose la teoria dell'evoluzione per selezione naturale?",
+   "o": [
+    "Louis Pasteur",
+    "Charles Darwin",
+    "Jean-Baptiste Lamarck",
+    "Gregor Mendel"
+   ]
+  },
+  "dq_en_3_04": {
+   "q": "Chi scrisse il romanzo “1984”?",
+   "o": [
+    "Aldous Huxley",
+    "Ray Bradbury",
+    "H. G. Wells",
+    "George Orwell"
+   ]
+  },
+  "dq_en_3_05": {
+   "q": "Il Rinascimento ebbe inizio in Italia."
+  },
+  "dq_en_3_06": {
+   "q": "Il suono viaggia più veloce della luce."
+  },
+  "dq_en_3_07": {
+   "q": "Chi è?",
+   "o": [
+    "Emmeline Pankhurst",
+    "Rosalind Franklin",
+    "Florence Nightingale",
+    "Marie Curie"
+   ]
+  },
+  "dq_en_3_08": {
+   "q": "Chi è?",
+   "o": [
+    "Joseph Haydn",
+    "Wolfgang Amadeus Mozart",
+    "Antonio Vivaldi",
+    "Johann Sebastian Bach"
+   ]
+  },
+  "dq_en_3_09": {
+   "q": "In che anno iniziò la Prima guerra mondiale?"
+  },
+  "dq_en_3_10": {
+   "q": "Quante ossa ha il corpo umano adulto?",
+   "u": "ossa"
+  },
+  "dq_en_4_01": {
+   "q": "Quale artista dipinse “Guernica”?",
+   "o": [
+    "Pablo Picasso",
+    "Salvador Dalí",
+    "Joan Miró",
+    "Henri Matisse"
+   ]
+  },
+  "dq_en_4_02": {
+   "q": "Quale filosofo fu il precettore di Alessandro Magno?",
+   "o": [
+    "Socrate",
+    "Platone",
+    "Aristotele",
+    "Epicuro"
+   ]
+  },
+  "dq_en_4_03": {
+   "q": "Quale particella ha carica elettrica negativa?",
+   "o": [
+    "Fotone",
+    "Neutrone",
+    "Elettrone",
+    "Protone"
+   ]
+  },
+  "dq_en_4_04": {
+   "q": "Nella mitologia norrena, come si chiama il martello di Thor?",
+   "o": [
+    "Gungnir",
+    "Excalibur",
+    "Gram",
+    "Mjölnir"
+   ]
+  },
+  "dq_en_4_05": {
+   "q": "Il grande incendio di Londra avvenne nel 1666."
+  },
+  "dq_en_4_06": {
+   "q": "Il “Don Chisciotte” fu scritto da Dante."
+  },
+  "dq_en_4_07": {
+   "q": "Chi è?",
+   "o": [
+    "John Stuart Mill",
+    "Thomas Henry Huxley",
+    "Charles Dickens",
+    "Charles Darwin"
+   ]
+  },
+  "dq_en_4_08": {
+   "q": "Chi è?",
+   "o": [
+    "Caterina la Grande",
+    "Elisabetta d'Austria",
+    "Regina Vittoria",
+    "Elisabetta I"
+   ]
+  },
+  "dq_en_4_09": {
+   "q": "In che anno circa fu stampata la Bibbia di Gutenberg?"
+  },
+  "dq_en_4_10": {
+   "q": "Quanti elementi chimici conta oggi la tavola periodica?",
+   "u": "elementi"
+  },
+  "dq_en_5_01": {
+   "q": "Chi scrisse la “Divina Commedia”?",
+   "o": [
+    "Petrarca",
+    "Giovanni Boccaccio",
+    "Dante Alighieri",
+    "Virgilio"
+   ]
+  },
+  "dq_en_5_02": {
+   "q": "Quale trattato, firmato nel 1919, chiuse la Prima guerra mondiale con la Germania?",
+   "o": [
+    "Trattato di Vestfalia",
+    "Trattato di Tordesillas",
+    "Trattato di Vienna",
+    "Trattato di Versailles"
+   ]
+  },
+  "dq_en_5_03": {
+   "q": "Quale pittore olandese realizzò “La ragazza con l'orecchino di perla”?",
+   "o": [
+    "Johannes Vermeer",
+    "Frans Hals",
+    "Rembrandt",
+    "Jan van Eyck"
+   ]
+  },
+  "dq_en_5_04": {
+   "q": "Quale scienziato scoprì la penicillina nel 1928?",
+   "o": [
+    "Alexander Fleming",
+    "Edward Jenner",
+    "Robert Koch",
+    "Louis Pasteur"
+   ]
+  },
+  "dq_en_5_05": {
+   "q": "Nella mitologia greca, Medusa era una delle tre Gorgoni."
+  },
+  "dq_en_5_06": {
+   "q": "La guerra dei Cent'anni durò esattamente 100 anni."
+  },
+  "dq_en_5_07": {
+   "q": "Chi è?",
+   "o": [
+    "Franz Schubert",
+    "Ludwig van Beethoven",
+    "Johann Wolfgang von Goethe",
+    "Richard Wagner"
+   ]
+  },
+  "dq_en_5_08": {
+   "q": "Chi è?",
+   "o": [
+    "Leonardo da Vinci",
+    "Galileo Galilei",
+    "Giovanni Keplero",
+    "Niccolò Copernico"
+   ]
+  },
+  "dq_en_5_09": {
+   "q": "In che anno Costantinopoli cadde in mano agli Ottomani?"
+  },
+  "dq_en_5_10": {
+   "q": "Quanti minuti impiega circa la luce del Sole per raggiungere la Terra?"
+  },
+  "dq_en_6_01": {
+   "q": "Quale economista scrisse “La ricchezza delle nazioni” (1776)?",
+   "o": [
+    "Karl Marx",
+    "John Maynard Keynes",
+    "Adam Smith",
+    "David Ricardo"
+   ]
+  },
+  "dq_en_6_02": {
+   "q": "Quale scultore realizzò “Il pensatore”?",
+   "o": [
+    "Auguste Rodin",
+    "Gian Lorenzo Bernini",
+    "Michelangelo",
+    "Donatello"
+   ]
+  },
+  "dq_en_6_03": {
+   "q": "Nell'“Epopea di Gilgamesh”, di quale città è re Gilgamesh?",
+   "o": [
+    "Ninive",
+    "Babilonia",
+    "Uruk",
+    "Ur"
+   ]
+  },
+  "dq_en_6_04": {
+   "q": "Quale astronomo formulò le tre leggi del moto dei pianeti?",
+   "o": [
+    "Giovanni Keplero",
+    "Tycho Brahe",
+    "Niccolò Copernico",
+    "Galileo Galilei"
+   ]
+  },
+  "dq_en_6_05": {
+   "q": "L'Impero bizantino fu la continuazione orientale dell'Impero romano."
+  },
+  "dq_en_6_06": {
+   "q": "Franz Kafka scrisse “La metamorfosi” in francese."
+  },
+  "dq_en_6_07": {
+   "q": "Chi è?",
+   "o": [
+    "John Locke",
+    "Gottfried Wilhelm Leibniz",
+    "Christiaan Huygens",
+    "Isaac Newton"
+   ]
+  },
+  "dq_en_6_08": {
+   "q": "Chi è?",
+   "o": [
+    "Sylvia Plath",
+    "Virginia Woolf",
+    "Emily Dickinson",
+    "Katherine Mansfield"
+   ]
+  },
+  "dq_en_6_09": {
+   "q": "In che anno fu concessa la Magna Carta?"
+  },
+  "dq_en_6_10": {
+   "q": "Quale percentuale dell'atmosfera terrestre è composta da azoto?"
+  },
+  "dq_en_7_01": {
+   "q": "Quale filosofo scrisse la “Critica della ragion pura”?",
+   "o": [
+    "Arthur Schopenhauer",
+    "Georg Wilhelm Friedrich Hegel",
+    "Immanuel Kant",
+    "Gottfried Wilhelm Leibniz"
+   ]
+  },
+  "dq_en_7_02": {
+   "q": "Quale accordo del 1648 pose fine alla guerra dei Trent'anni?",
+   "o": [
+    "Trattato di Utrecht",
+    "Pace di Vestfalia",
+    "Pace di Augusta",
+    "Congresso di Vienna"
+   ]
+  },
+  "dq_en_7_03": {
+   "q": "Chi dipinse “Il Giardino delle delizie”?",
+   "o": [
+    "Jan van Eyck",
+    "Albrecht Dürer",
+    "Pieter Bruegel il Vecchio",
+    "Hieronymus Bosch"
+   ]
+  },
+  "dq_en_7_04": {
+   "q": "Nella tradizione induista, quale dio è detto il Conservatore?",
+   "o": [
+    "Indra",
+    "Shiva",
+    "Brahma",
+    "Vishnu"
+   ]
+  },
+  "dq_en_7_05": {
+   "q": "L'“Ulisse” di James Joyce si svolge nell'arco di una sola giornata a Dublino."
+  },
+  "dq_en_7_06": {
+   "q": "Marie Curie vinse il premio Nobel sia per la fisica sia per la medicina."
+  },
+  "dq_en_7_07": {
+   "q": "Chi è?",
+   "o": [
+    "Jean-Jacques Rousseau",
+    "Voltaire",
+    "Denis Diderot",
+    "Montesquieu"
+   ]
+  },
+  "dq_en_7_08": {
+   "q": "Chi è?",
+   "o": [
+    "Ada Lovelace",
+    "Jane Austen",
+    "Mary Shelley",
+    "Charlotte Brontë"
+   ]
+  },
+  "dq_en_7_09": {
+   "q": "In che anno cadde l'Impero romano d'Occidente?"
+  },
+  "dq_en_7_10": {
+   "q": "In che anno Dmitrij Mendeleev pubblicò la sua tavola periodica?"
+  },
+  "dq_en_8_01": {
+   "q": "Quale imperatore bizantino fece costruire Santa Sofia, completata nel 537?",
+   "o": [
+    "Giustiniano I",
+    "Basilio II",
+    "Costantino I",
+    "Eraclio"
+   ]
+  },
+  "dq_en_8_02": {
+   "q": "Chi scrisse la “Storia di Genji”, spesso considerata il primo romanzo del mondo?",
+   "o": [
+    "Dama di Sarashina",
+    "Murasaki Shikibu",
+    "Matsuo Bashō",
+    "Sei Shōnagon"
+   ]
+  },
+  "dq_en_8_03": {
+   "q": "Quale logico dimostrò i teoremi di incompletezza nel 1931?",
+   "o": [
+    "Alan Turing",
+    "Kurt Gödel",
+    "Bertrand Russell",
+    "David Hilbert"
+   ]
+  },
+  "dq_en_8_04": {
+   "q": "Quale pittore italiano realizzò la “Vocazione di san Matteo” intorno al 1600?",
+   "o": [
+    "Caravaggio",
+    "Tintoretto",
+    "Raffaello",
+    "Tiziano"
+   ]
+  },
+  "dq_en_8_05": {
+   "q": "Il filosofo Baruch Spinoza nacque ad Amsterdam."
+  },
+  "dq_en_8_06": {
+   "q": "La guerra del Peloponneso si concluse con la vittoria di Atene su Sparta."
+  },
+  "dq_en_8_07": {
+   "q": "Chi è?",
+   "o": [
+    "Baruch Spinoza",
+    "Blaise Pascal",
+    "Cartesio",
+    "Cardinale Richelieu"
+   ]
+  },
+  "dq_en_8_08": {
+   "q": "Chi è?",
+   "o": [
+    "Erasmo da Rotterdam",
+    "Martin Lutero",
+    "Tommaso Moro",
+    "Giovanni Calvino"
+   ]
+  },
+  "dq_en_8_09": {
+   "q": "In che anno si tenne il primo concilio di Nicea?"
+  },
+  "dq_en_8_10": {
+   "q": "In che anno Copernico pubblicò il “De revolutionibus orbium coelestium”?"
+  },
+  "dq_en_1_11": {
+   "q": "Quale artista è famoso per i suoi dipinti di girasoli?",
+   "o": [
+    "Pablo Picasso",
+    "Vincent van Gogh",
+    "Claude Monet",
+    "Rembrandt"
+   ]
+  },
+  "dq_en_2_11": {
+   "q": "In quale città si trova il museo del Louvre?",
+   "o": [
+    "Parigi",
+    "Londra",
+    "Roma",
+    "Madrid"
+   ]
+  },
+  "dq_en_2_12": {
+   "q": "Michelangelo scolpì la statua del David."
+  },
+  "dq_en_3_11": {
+   "q": "Quale pittore è noto per le ninfee dipinte a Giverny?",
+   "o": [
+    "Paul Gauguin",
+    "Edgar Degas",
+    "Claude Monet",
+    "Auguste Renoir"
+   ]
+  },
+  "dq_en_4_11": {
+   "q": "A quale movimento artistico è associato Salvador Dalí?",
+   "o": [
+    "Surrealismo",
+    "Pop art",
+    "Impressionismo",
+    "Cubismo"
+   ]
+  },
+  "dq_en_4_12": {
+   "q": "In che anno morì Leonardo da Vinci?"
+  },
+  "dq_en_5_11": {
+   "q": "Andy Warhol fu una figura di spicco della Pop art."
+  },
+  "dq_en_5_12": {
+   "q": "Chi dipinse “La nascita di Venere” negli anni Ottanta del Quattrocento?",
+   "o": [
+    "Tiziano",
+    "Raffaello",
+    "Sandro Botticelli",
+    "Giotto"
+   ]
+  },
+  "dq_en_6_11": {
+   "q": "Quale architetto progettò la Sagrada Família di Barcellona?",
+   "o": [
+    "Frank Lloyd Wright",
+    "Antoni Gaudí",
+    "Oscar Niemeyer",
+    "Le Corbusier"
+   ]
+  },
+  "dq_en_6_12": {
+   "q": "In che anno fu completata la Torre Eiffel?"
+  },
+  "dq_en_7_11": {
+   "q": "Francisco Goya dipinse “Las Meninas”."
+  },
+  "dq_en_8_11": {
+   "q": "Quale artista giapponese realizzò la stampa “La grande onda di Kanagawa”?",
+   "o": [
+    "Tawaraya Sōtatsu",
+    "Utagawa Hiroshige",
+    "Katsushika Hokusai",
+    "Kitagawa Utamaro"
+   ]
+  },
+  "dq_en_1_12": {
+   "q": "Chi scrisse i romanzi di Harry Potter?",
+   "o": [
+    "C. S. Lewis",
+    "J. K. Rowling",
+    "J. R. R. Tolkien",
+    "Roald Dahl"
+   ]
+  },
+  "dq_en_1_13": {
+   "q": "L'“Odissea” racconta il viaggio di ritorno a casa di Ulisse."
+  },
+  "dq_en_2_13": {
+   "q": "Quale investigatore fu creato da Arthur Conan Doyle?",
+   "o": [
+    "Sherlock Holmes",
+    "Miss Marple",
+    "Hercule Poirot",
+    "Philip Marlowe"
+   ]
+  },
+  "dq_en_2_14": {
+   "q": "Charles Dickens scrisse “Oliver Twist”."
+  },
+  "dq_en_3_12": {
+   "q": "Chi scrisse “I Miserabili”?",
+   "o": [
+    "Gustave Flaubert",
+    "Alexandre Dumas",
+    "Victor Hugo",
+    "Émile Zola"
+   ]
+  },
+  "dq_en_3_13": {
+   "q": "“Moby Dick” racconta la caccia a una grande balena bianca."
+  },
+  "dq_en_4_13": {
+   "q": "Quale scrittore russo scrisse “Guerra e pace”?",
+   "o": [
+    "Lev Tolstoj",
+    "Fëdor Dostoevskij",
+    "Ivan Turgenev",
+    "Anton Čechov"
+   ]
+  },
+  "dq_en_5_13": {
+   "q": "Chi scrisse “Cent'anni di solitudine”?",
+   "o": [
+    "Jorge Luis Borges",
+    "Pablo Neruda",
+    "Mario Vargas Llosa",
+    "Gabriel García Márquez"
+   ]
+  },
+  "dq_en_5_14": {
+   "q": "In che anno fu pubblicata la prima parte del “Don Chisciotte”?"
+  },
+  "dq_en_6_13": {
+   "q": "Quale poeta scrisse “La terra desolata”?",
+   "o": [
+    "T. S. Eliot",
+    "W. H. Auden",
+    "W. B. Yeats",
+    "Ezra Pound"
+   ]
+  },
+  "dq_en_7_12": {
+   "q": "Chi scrisse “Alla ricerca del tempo perduto”?",
+   "o": [
+    "Stendhal",
+    "André Gide",
+    "Albert Camus",
+    "Marcel Proust"
+   ]
+  },
+  "dq_en_8_12": {
+   "q": "Fëdor Dostoevskij scrisse “Padri e figli”."
+  },
+  "dq_en_1_14": {
+   "q": "Nella mitologia greca, Poseidone è il dio del mare."
+  },
+  "dq_en_1_15": {
+   "q": "Quale eroe greco dovette compiere una serie di fatiche per espiare una colpa?",
+   "o": [
+    "Giasone",
+    "Teseo",
+    "Eracle",
+    "Achille"
+   ]
+  },
+  "dq_en_2_15": {
+   "q": "Chi è il dio romano della guerra?",
+   "o": [
+    "Apollo",
+    "Nettuno",
+    "Marte",
+    "Giove"
+   ]
+  },
+  "dq_en_2_16": {
+   "q": "Nella mitologia greca, Pandora aprì un vaso che sparse i mali nel mondo."
+  },
+  "dq_en_3_14": {
+   "q": "Quale creatura pose un enigma a Edipo alle porte di Tebe?",
+   "o": [
+    "Il Minotauro",
+    "La Chimera",
+    "La Sfinge",
+    "L'Idra"
+   ]
+  },
+  "dq_en_3_15": {
+   "q": "Nella mitologia egizia, chi è il dio del Sole?",
+   "o": [
+    "Anubi",
+    "Thot",
+    "Osiride",
+    "Ra"
+   ]
+  }
+ },
+ "untranslatable": []
+}

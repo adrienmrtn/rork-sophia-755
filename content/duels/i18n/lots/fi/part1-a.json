@@ -1,0 +1,769 @@
+{
+ "true_false": [
+  "Tosi",
+  "Epätosi"
+ ],
+ "leagues": {
+  "aesop": "Aisopos",
+  "homer": "Homeros",
+  "sappho": "Sapfo",
+  "confucius": "Kungfutse",
+  "socrates": "Sokrates",
+  "cleopatra": "Kleopatra",
+  "hypatia": "Hypatia",
+  "avicenna": "Avicenna",
+  "murasaki": "Murasaki",
+  "mansa_musa": "Mansa Musa",
+  "dante": "Dante",
+  "joan_of_arc": "Jeanne d'Arc",
+  "gutenberg": "Gutenberg",
+  "leonardo": "Leonardo",
+  "michelangelo": "Michelangelo",
+  "copernicus": "Kopernikus",
+  "shakespeare": "Shakespeare",
+  "galileo": "Galilei",
+  "vermeer": "Vermeer",
+  "newton": "Newton",
+  "mozart": "Mozart",
+  "napoleon": "Napoleon",
+  "austen": "Austen",
+  "darwin": "Darwin",
+  "lovelace": "Lovelace",
+  "van_gogh": "Van Gogh",
+  "curie": "Curie",
+  "einstein": "Einstein",
+  "kahlo": "Kahlo",
+  "sophia": "Sophia"
+ },
+ "items": {
+  "dq_en_1_01": {
+   "q": "Mikä planeetta tunnetaan punaisena planeettana?",
+   "o": [
+    "Jupiter",
+    "Merkurius",
+    "Mars",
+    "Venus"
+   ]
+  },
+  "dq_en_1_02": {
+   "q": "Kuka maalasi Mona Lisan?",
+   "o": [
+    "Michelangelo",
+    "Leonardo da Vinci",
+    "Sandro Botticelli",
+    "Rafael"
+   ]
+  },
+  "dq_en_1_03": {
+   "q": "Kuka on kreikkalaisessa mytologiassa jumalten kuningas?",
+   "o": [
+    "Hades",
+    "Zeus",
+    "Poseidon",
+    "Apollon"
+   ]
+  },
+  "dq_en_1_04": {
+   "q": "Missä maassa Gizan pyramidit ovat?",
+   "o": [
+    "Kreikka",
+    "Irak",
+    "Meksiko",
+    "Egypti"
+   ]
+  },
+  "dq_en_1_05": {
+   "q": "Titanic upposi jo ensimmäisellä matkallaan."
+  },
+  "dq_en_1_06": {
+   "q": "Hait ovat nisäkkäitä."
+  },
+  "dq_en_1_07": {
+   "q": "Kuka kuvassa on?",
+   "o": [
+    "Thomas Edison",
+    "Albert Einstein",
+    "Mark Twain",
+    "Sigmund Freud"
+   ]
+  },
+  "dq_en_1_08": {
+   "q": "Kuka kuvassa on?",
+   "o": [
+    "Wellingtonin herttua",
+    "Ludvig XIV",
+    "Napoleon Bonaparte",
+    "George Washington"
+   ]
+  },
+  "dq_en_1_09": {
+   "q": "Minä vuonna Kristoffer Kolumbus saapui ensimmäisen kerran Amerikkaan?"
+  },
+  "dq_en_1_10": {
+   "q": "Minä vuonna ihminen käveli ensimmäisen kerran Kuun pinnalla?"
+  },
+  "dq_en_2_01": {
+   "q": "Kuka kirjoitti romaanin ”Ylpeys ja ennakkoluulo”?",
+   "o": [
+    "George Eliot",
+    "Charlotte Brontë",
+    "Jane Austen",
+    "Mary Shelley"
+   ]
+  },
+  "dq_en_2_02": {
+   "q": "Minkä antiikin kaupungin Vesuviuksen purkaus hautasi vuonna 79 jKr.?",
+   "o": [
+    "Karthago",
+    "Pompeji",
+    "Ateena",
+    "Troija"
+   ]
+  },
+  "dq_en_2_03": {
+   "q": "Mikä on kullan kemiallinen merkki?",
+   "o": [
+    "Ag",
+    "Au",
+    "Go",
+    "Gd"
+   ]
+  },
+  "dq_en_2_04": {
+   "q": "Kuka maalasi teoksen ”Tähtikirkas yö”?",
+   "o": [
+    "Pablo Picasso",
+    "Paul Cézanne",
+    "Vincent van Gogh",
+    "Claude Monet"
+   ]
+  },
+  "dq_en_2_05": {
+   "q": "Leonardo da Vinci maalasi Sikstiiniläisen kappelin katon."
+  },
+  "dq_en_2_06": {
+   "q": "Ranskan vallankumous alkoi vuonna 1789."
+  },
+  "dq_en_2_07": {
+   "q": "Kuka kuvassa on?",
+   "o": [
+    "William Shakespeare",
+    "Sir Walter Raleigh",
+    "Miguel de Cervantes",
+    "Christopher Marlowe"
+   ]
+  },
+  "dq_en_2_08": {
+   "q": "Kuka kuvassa on?",
+   "o": [
+    "Abraham Lincoln",
+    "Charles Dickens",
+    "Karl Marx",
+    "Ulysses S. Grant"
+   ]
+  },
+  "dq_en_2_09": {
+   "q": "Minä vuonna Berliinin muuri murtui?"
+  },
+  "dq_en_2_10": {
+   "q": "Kuinka monta prosenttia maapallon pinnasta on veden peitossa?"
+  },
+  "dq_en_3_01": {
+   "q": "Kuka kreikkalaisessa mytologiassa lensi vahasiivillä liian lähelle aurinkoa?",
+   "o": [
+    "Ikaros",
+    "Daidalos",
+    "Orfeus",
+    "Perseus"
+   ]
+  },
+  "dq_en_3_02": {
+   "q": "Kuka oli Rooman ensimmäinen keisari?",
+   "o": [
+    "Nero",
+    "Augustus",
+    "Konstantinus",
+    "Julius Caesar"
+   ]
+  },
+  "dq_en_3_03": {
+   "q": "Kuka tutkija esitti luonnonvalintaan perustuvan evoluutioteorian?",
+   "o": [
+    "Louis Pasteur",
+    "Charles Darwin",
+    "Jean-Baptiste Lamarck",
+    "Gregor Mendel"
+   ]
+  },
+  "dq_en_3_04": {
+   "q": "Kuka kirjoitti romaanin ”Vuonna 1984”?",
+   "o": [
+    "Aldous Huxley",
+    "Ray Bradbury",
+    "H. G. Wells",
+    "George Orwell"
+   ]
+  },
+  "dq_en_3_05": {
+   "q": "Renessanssi alkoi Italiasta."
+  },
+  "dq_en_3_06": {
+   "q": "Ääni kulkee valoa nopeammin."
+  },
+  "dq_en_3_07": {
+   "q": "Kuka kuvassa on?",
+   "o": [
+    "Emmeline Pankhurst",
+    "Rosalind Franklin",
+    "Florence Nightingale",
+    "Marie Curie"
+   ]
+  },
+  "dq_en_3_08": {
+   "q": "Kuka kuvassa on?",
+   "o": [
+    "Joseph Haydn",
+    "Wolfgang Amadeus Mozart",
+    "Antonio Vivaldi",
+    "Johann Sebastian Bach"
+   ]
+  },
+  "dq_en_3_09": {
+   "q": "Minä vuonna ensimmäinen maailmansota alkoi?"
+  },
+  "dq_en_3_10": {
+   "q": "Montako luuta aikuisen ihmisen kehossa on?",
+   "u": "luuta"
+  },
+  "dq_en_4_01": {
+   "q": "Kuka taiteilija maalasi teoksen ”Guernica”?",
+   "o": [
+    "Pablo Picasso",
+    "Salvador Dalí",
+    "Joan Miró",
+    "Henri Matisse"
+   ]
+  },
+  "dq_en_4_02": {
+   "q": "Kuka filosofi oli Aleksanteri Suuren opettaja?",
+   "o": [
+    "Sokrates",
+    "Platon",
+    "Aristoteles",
+    "Epikuros"
+   ]
+  },
+  "dq_en_4_03": {
+   "q": "Millä hiukkasella on negatiivinen sähkövaraus?",
+   "o": [
+    "Fotoni",
+    "Neutroni",
+    "Elektroni",
+    "Protoni"
+   ]
+  },
+  "dq_en_4_04": {
+   "q": "Mikä on Thorin vasaran nimi skandinaavisessa mytologiassa?",
+   "o": [
+    "Gungnir",
+    "Excalibur",
+    "Gram",
+    "Mjölnir"
+   ]
+  },
+  "dq_en_4_05": {
+   "q": "Lontoon suuri palo riehui vuonna 1666."
+  },
+  "dq_en_4_06": {
+   "q": "Romaanin ”Don Quijote” kirjoitti Dante."
+  },
+  "dq_en_4_07": {
+   "q": "Kuka kuvassa on?",
+   "o": [
+    "John Stuart Mill",
+    "Thomas Henry Huxley",
+    "Charles Dickens",
+    "Charles Darwin"
+   ]
+  },
+  "dq_en_4_08": {
+   "q": "Kuka kuvassa on?",
+   "o": [
+    "Katariina Suuri",
+    "Itävallan keisarinna Elisabet",
+    "Kuningatar Viktoria",
+    "Kuningatar Elisabet I"
+   ]
+  },
+  "dq_en_4_09": {
+   "q": "Noin minä vuonna Gutenbergin Raamattu painettiin?"
+  },
+  "dq_en_4_10": {
+   "q": "Montako alkuainetta jaksollisessa järjestelmässä on nykyään?",
+   "u": "alkuainetta"
+  },
+  "dq_en_5_01": {
+   "q": "Kuka kirjoitti teoksen ”Jumalainen näytelmä”?",
+   "o": [
+    "Petrarca",
+    "Giovanni Boccaccio",
+    "Dante Alighieri",
+    "Vergilius"
+   ]
+  },
+  "dq_en_5_02": {
+   "q": "Mikä vuonna 1919 allekirjoitettu sopimus päätti ensimmäisen maailmansodan Saksan osalta?",
+   "o": [
+    "Westfalenin rauha",
+    "Tordesillasin sopimus",
+    "Wienin sopimus",
+    "Versailles'n rauha"
+   ]
+  },
+  "dq_en_5_03": {
+   "q": "Kuka hollantilainen taidemaalari maalasi teoksen ”Tyttö ja helmikorvakoru”?",
+   "o": [
+    "Johannes Vermeer",
+    "Frans Hals",
+    "Rembrandt",
+    "Jan van Eyck"
+   ]
+  },
+  "dq_en_5_04": {
+   "q": "Kuka tutkija löysi penisilliinin vuonna 1928?",
+   "o": [
+    "Alexander Fleming",
+    "Edward Jenner",
+    "Robert Koch",
+    "Louis Pasteur"
+   ]
+  },
+  "dq_en_5_05": {
+   "q": "Kreikkalaisessa mytologiassa Medusa oli yksi kolmesta gorgonista."
+  },
+  "dq_en_5_06": {
+   "q": "Satavuotinen sota kesti tasan 100 vuotta."
+  },
+  "dq_en_5_07": {
+   "q": "Kuka kuvassa on?",
+   "o": [
+    "Franz Schubert",
+    "Ludwig van Beethoven",
+    "Johann Wolfgang von Goethe",
+    "Richard Wagner"
+   ]
+  },
+  "dq_en_5_08": {
+   "q": "Kuka kuvassa on?",
+   "o": [
+    "Leonardo da Vinci",
+    "Galileo Galilei",
+    "Johannes Kepler",
+    "Nikolaus Kopernikus"
+   ]
+  },
+  "dq_en_5_09": {
+   "q": "Minä vuonna Konstantinopoli joutui osmanien valtaan?"
+  },
+  "dq_en_5_10": {
+   "q": "Noin monessako minuutissa auringonvalo saapuu Maahan?"
+  },
+  "dq_en_6_01": {
+   "q": "Kuka taloustieteilijä kirjoitti teoksen ”Kansojen varallisuus” (1776)?",
+   "o": [
+    "Karl Marx",
+    "John Maynard Keynes",
+    "Adam Smith",
+    "David Ricardo"
+   ]
+  },
+  "dq_en_6_02": {
+   "q": "Kuka kuvanveistäjä teki veistoksen ”Ajattelija”?",
+   "o": [
+    "Auguste Rodin",
+    "Gian Lorenzo Bernini",
+    "Michelangelo",
+    "Donatello"
+   ]
+  },
+  "dq_en_6_03": {
+   "q": "Minkä kaupungin kuningas Gilgameš on Gilgameš-eepoksessa?",
+   "o": [
+    "Niinive",
+    "Babylon",
+    "Uruk",
+    "Ur"
+   ]
+  },
+  "dq_en_6_04": {
+   "q": "Kuka tähtitieteilijä muotoili planeettojen liikkeen kolme lakia?",
+   "o": [
+    "Johannes Kepler",
+    "Tyko Brahe",
+    "Nikolaus Kopernikus",
+    "Galileo Galilei"
+   ]
+  },
+  "dq_en_6_05": {
+   "q": "Bysantin valtakunta oli Rooman valtakunnan itäinen jatke."
+  },
+  "dq_en_6_06": {
+   "q": "Franz Kafka kirjoitti novellin ”Muodonmuutos” ranskaksi."
+  },
+  "dq_en_6_07": {
+   "q": "Kuka kuvassa on?",
+   "o": [
+    "John Locke",
+    "Gottfried Wilhelm Leibniz",
+    "Christiaan Huygens",
+    "Isaac Newton"
+   ]
+  },
+  "dq_en_6_08": {
+   "q": "Kuka kuvassa on?",
+   "o": [
+    "Sylvia Plath",
+    "Virginia Woolf",
+    "Emily Dickinson",
+    "Katherine Mansfield"
+   ]
+  },
+  "dq_en_6_09": {
+   "q": "Minä vuonna Magna Carta sinetöitiin?"
+  },
+  "dq_en_6_10": {
+   "q": "Kuinka monta prosenttia maapallon ilmakehästä on typpeä?"
+  },
+  "dq_en_7_01": {
+   "q": "Kuka filosofi kirjoitti teoksen ”Puhtaan järjen kritiikki”?",
+   "o": [
+    "Arthur Schopenhauer",
+    "Georg Wilhelm Friedrich Hegel",
+    "Immanuel Kant",
+    "Gottfried Wilhelm Leibniz"
+   ]
+  },
+  "dq_en_7_02": {
+   "q": "Mikä vuoden 1648 rauhanratkaisu päätti kolmikymmenvuotisen sodan?",
+   "o": [
+    "Utrechtin rauha",
+    "Westfalenin rauha",
+    "Augsburgin uskonrauha",
+    "Wienin kongressi"
+   ]
+  },
+  "dq_en_7_03": {
+   "q": "Kuka maalasi teoksen ”Maallisten ilojen puutarha”?",
+   "o": [
+    "Jan van Eyck",
+    "Albrecht Dürer",
+    "Pieter Bruegel vanhempi",
+    "Hieronymus Bosch"
+   ]
+  },
+  "dq_en_7_04": {
+   "q": "Kuka hindulaisuuden jumala tunnetaan ylläpitäjänä?",
+   "o": [
+    "Indra",
+    "Šiva",
+    "Brahma",
+    "Višnu"
+   ]
+  },
+  "dq_en_7_05": {
+   "q": "James Joycen romaanin ”Odysseus” tapahtumat sijoittuvat yhteen päivään Dublinissa."
+  },
+  "dq_en_7_06": {
+   "q": "Marie Curie sai Nobelin palkinnon sekä fysiikasta että lääketieteestä."
+  },
+  "dq_en_7_07": {
+   "q": "Kuka kuvassa on?",
+   "o": [
+    "Jean-Jacques Rousseau",
+    "Voltaire",
+    "Denis Diderot",
+    "Montesquieu"
+   ]
+  },
+  "dq_en_7_08": {
+   "q": "Kuka kuvassa on?",
+   "o": [
+    "Ada Lovelace",
+    "Jane Austen",
+    "Mary Shelley",
+    "Charlotte Brontë"
+   ]
+  },
+  "dq_en_7_09": {
+   "q": "Minä vuonna Länsi-Rooman valtakunta kukistui?"
+  },
+  "dq_en_7_10": {
+   "q": "Minä vuonna Dmitri Mendelejev julkaisi jaksollisen järjestelmänsä?"
+  },
+  "dq_en_8_01": {
+   "q": "Kuka Bysantin keisari rakennutti vuonna 537 valmistuneen Hagia Sofian?",
+   "o": [
+    "Justinianus I",
+    "Basileios II",
+    "Konstantinus I",
+    "Herakleios"
+   ]
+  },
+  "dq_en_8_02": {
+   "q": "Kuka kirjoitti teoksen ”Genjin tarina”, jota kutsutaan usein maailman ensimmäiseksi romaaniksi?",
+   "o": [
+    "Hovinainen Sarashina",
+    "Murasaki Shikibu",
+    "Matsuo Bashō",
+    "Sei Shōnagon"
+   ]
+  },
+  "dq_en_8_03": {
+   "q": "Kuka loogikko todisti epätäydellisyyslauseet vuonna 1931?",
+   "o": [
+    "Alan Turing",
+    "Kurt Gödel",
+    "Bertrand Russell",
+    "David Hilbert"
+   ]
+  },
+  "dq_en_8_04": {
+   "q": "Kuka italialainen taidemaalari maalasi teoksen ”Pyhän Matteuksen kutsumus” noin vuonna 1600?",
+   "o": [
+    "Caravaggio",
+    "Tintoretto",
+    "Rafael",
+    "Tizian"
+   ]
+  },
+  "dq_en_8_05": {
+   "q": "Filosofi Baruch Spinoza syntyi Amsterdamissa."
+  },
+  "dq_en_8_06": {
+   "q": "Peloponnesolainen sota päättyi Ateenan voittoon Spartasta."
+  },
+  "dq_en_8_07": {
+   "q": "Kuka kuvassa on?",
+   "o": [
+    "Baruch Spinoza",
+    "Blaise Pascal",
+    "René Descartes",
+    "Kardinaali Richelieu"
+   ]
+  },
+  "dq_en_8_08": {
+   "q": "Kuka kuvassa on?",
+   "o": [
+    "Erasmus Rotterdamilainen",
+    "Martti Luther",
+    "Thomas More",
+    "Jean Calvin"
+   ]
+  },
+  "dq_en_8_09": {
+   "q": "Minä vuonna pidettiin Nikaian ensimmäinen kirkolliskokous?"
+  },
+  "dq_en_8_10": {
+   "q": "Minä vuonna Kopernikus julkaisi teoksen ”Taivaankappaleiden kiertoliikkeistä”?"
+  },
+  "dq_en_1_11": {
+   "q": "Kuka taiteilija on kuuluisa auringonkukkamaalauksistaan?",
+   "o": [
+    "Pablo Picasso",
+    "Vincent van Gogh",
+    "Claude Monet",
+    "Rembrandt"
+   ]
+  },
+  "dq_en_2_11": {
+   "q": "Missä kaupungissa Louvren museo on?",
+   "o": [
+    "Pariisi",
+    "Lontoo",
+    "Rooma",
+    "Madrid"
+   ]
+  },
+  "dq_en_2_12": {
+   "q": "Michelangelo veisti Daavid-patsaan."
+  },
+  "dq_en_3_11": {
+   "q": "Kuka taidemaalari tunnetaan Givernyssä maalaamistaan lumpeista?",
+   "o": [
+    "Paul Gauguin",
+    "Edgar Degas",
+    "Claude Monet",
+    "Auguste Renoir"
+   ]
+  },
+  "dq_en_4_11": {
+   "q": "Mihin taidesuuntaukseen Salvador Dalí yhdistetään?",
+   "o": [
+    "Surrealismi",
+    "Pop-taide",
+    "Impressionismi",
+    "Kubismi"
+   ]
+  },
+  "dq_en_4_12": {
+   "q": "Minä vuonna Leonardo da Vinci kuoli?"
+  },
+  "dq_en_5_11": {
+   "q": "Andy Warhol oli pop-taiteen johtohahmoja."
+  },
+  "dq_en_5_12": {
+   "q": "Kuka maalasi teoksen ”Venuksen syntymä” 1480-luvulla?",
+   "o": [
+    "Tizian",
+    "Rafael",
+    "Sandro Botticelli",
+    "Giotto"
+   ]
+  },
+  "dq_en_6_11": {
+   "q": "Kuka arkkitehti suunnitteli Barcelonan Sagrada Família -kirkon?",
+   "o": [
+    "Frank Lloyd Wright",
+    "Antoni Gaudí",
+    "Oscar Niemeyer",
+    "Le Corbusier"
+   ]
+  },
+  "dq_en_6_12": {
+   "q": "Minä vuonna Eiffel-torni valmistui?"
+  },
+  "dq_en_7_11": {
+   "q": "Teoksen ”Las Meninas” maalasi Francisco Goya."
+  },
+  "dq_en_8_11": {
+   "q": "Kuka japanilainen taiteilija teki puupiirroksen ”Suuri aalto Kanagawan edustalla”?",
+   "o": [
+    "Tawaraya Sōtatsu",
+    "Utagawa Hiroshige",
+    "Katsushika Hokusai",
+    "Kitagawa Utamaro"
+   ]
+  },
+  "dq_en_1_12": {
+   "q": "Kuka kirjoitti Harry Potter -kirjat?",
+   "o": [
+    "C. S. Lewis",
+    "J. K. Rowling",
+    "J. R. R. Tolkien",
+    "Roald Dahl"
+   ]
+  },
+  "dq_en_1_13": {
+   "q": "”Odysseia” kertoo Odysseuksen kotimatkasta."
+  },
+  "dq_en_2_13": {
+   "q": "Minkä etsivähahmon Arthur Conan Doyle loi?",
+   "o": [
+    "Sherlock Holmes",
+    "Neiti Marple",
+    "Hercule Poirot",
+    "Philip Marlowe"
+   ]
+  },
+  "dq_en_2_14": {
+   "q": "Charles Dickens kirjoitti romaanin ”Oliver Twist”."
+  },
+  "dq_en_3_12": {
+   "q": "Kuka kirjoitti romaanin ”Kurjat”?",
+   "o": [
+    "Gustave Flaubert",
+    "Alexandre Dumas",
+    "Victor Hugo",
+    "Émile Zola"
+   ]
+  },
+  "dq_en_3_13": {
+   "q": "”Moby Dick” kertoo suuren valkoisen valaan jahdista."
+  },
+  "dq_en_4_13": {
+   "q": "Kuka venäläinen kirjailija kirjoitti romaanin ”Sota ja rauha”?",
+   "o": [
+    "Lev Tolstoi",
+    "Fjodor Dostojevski",
+    "Ivan Turgenev",
+    "Anton Tšehov"
+   ]
+  },
+  "dq_en_5_13": {
+   "q": "Kuka kirjoitti romaanin ”Sadan vuoden yksinäisyys”?",
+   "o": [
+    "Jorge Luis Borges",
+    "Pablo Neruda",
+    "Mario Vargas Llosa",
+    "Gabriel García Márquez"
+   ]
+  },
+  "dq_en_5_14": {
+   "q": "Minä vuonna romaanin ”Don Quijote” ensimmäinen osa julkaistiin?"
+  },
+  "dq_en_6_13": {
+   "q": "Kuka runoilija kirjoitti teoksen ”Autio maa”?",
+   "o": [
+    "T. S. Eliot",
+    "W. H. Auden",
+    "W. B. Yeats",
+    "Ezra Pound"
+   ]
+  },
+  "dq_en_7_12": {
+   "q": "Kuka kirjoitti teoksen ”Kadonnutta aikaa etsimässä”?",
+   "o": [
+    "Stendhal",
+    "André Gide",
+    "Albert Camus",
+    "Marcel Proust"
+   ]
+  },
+  "dq_en_8_12": {
+   "q": "Fjodor Dostojevski kirjoitti romaanin ”Isät ja pojat”."
+  },
+  "dq_en_1_14": {
+   "q": "Kreikkalaisessa mytologiassa Poseidon on meren jumala."
+  },
+  "dq_en_1_15": {
+   "q": "Minkä kreikkalaisen sankarin piti sovitukseksi suorittaa joukko urotöitä?",
+   "o": [
+    "Iason",
+    "Theseus",
+    "Herakles",
+    "Akhilleus"
+   ]
+  },
+  "dq_en_2_15": {
+   "q": "Kuka on roomalaisten sodanjumala?",
+   "o": [
+    "Apollo",
+    "Neptunus",
+    "Mars",
+    "Jupiter"
+   ]
+  },
+  "dq_en_2_16": {
+   "q": "Kreikkalaisessa mytologiassa Pandora avasi astian, josta pahuus pääsi maailmaan."
+  },
+  "dq_en_3_14": {
+   "q": "Mikä olento esitti Oidipukselle arvoituksen Theban porteilla?",
+   "o": [
+    "Minotauros",
+    "Khimaira",
+    "Sfinksi",
+    "Hydra"
+   ]
+  },
+  "dq_en_3_15": {
+   "q": "Kuka on egyptiläisessä mytologiassa auringonjumala?",
+   "o": [
+    "Anubis",
+    "Thoth",
+    "Osiris",
+    "Ra"
+   ]
+  }
+ },
+ "untranslatable": []
+}
