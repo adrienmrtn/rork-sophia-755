@@ -1,0 +1,43 @@
+{
+  "_comment": "Paywall « débloquer le cours en cours de lecture » (maquette). Même direction que manifest-poster.json : aplats en papier découpé, marine, safran, corail, crème.",
+  "defaults": {
+    "style": "digital_illustration/2d_art_poster",
+    "size": "square_hd",
+    "max_side": 1024,
+    "colors": [[26, 58, 107], [242, 177, 52], [224, 90, 58], [251, 247, 239]]
+  },
+  "items": [
+    {
+      "name": "pw_hero_nuit_etoilee",
+      "size": "landscape_4_3",
+      "max_side": 1400,
+      "prompt": "An open book lying flat; from its pages rises a swirling night sky with big spiral swirls, a glowing crescent moon, round stars and a tall dark flame-shaped cypress tree. A ribbon bookmark hangs from the middle of the book. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, centered on a cream background, no text, no outlines."
+    },
+    {
+      "name": "pw_bibliotheque",
+      "size": "landscape_4_3",
+      "max_side": 1400,
+      "prompt": "A tall wooden bookshelf packed with many books of different heights, with small objects of knowledge resting on the shelves: a Roman helmet, an atom, a painter's palette, a small globe, a tiny rocket and a laurel branch. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, centered on a cream background, no text, no outlines."
+    },
+    {
+      "name": "pw_pro_quiz",
+      "prompt": "A friendly speech bubble holding a big check mark, next to a small question mark. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, centered on a cream background, no text, no outlines."
+    },
+    {
+      "name": "pw_pro_audio",
+      "prompt": "A pair of round vintage headphones with three curved sound waves. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, centered on a cream background, no text, no outlines."
+    },
+    {
+      "name": "pw_pro_entrainement",
+      "prompt": "Two stacked flash cards surrounded by a circular arrow, with a small light bulb above them. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, centered on a cream background, no text, no outlines."
+    },
+    {
+      "name": "pw_pro_antiscroll",
+      "prompt": "A smartphone with an open hand raised in a stop gesture in front of its screen, and a small hourglass beside it. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, centered on a cream background, no text, no outlines."
+    },
+    {
+      "name": "pw_cle_cadenas",
+      "prompt": "A golden key turning in an open padlock, with small stars around it. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red and cream, bold simple forms, subtle paper grain, centered on a cream background, no text, no outlines."
+    }
+  ]
+}
