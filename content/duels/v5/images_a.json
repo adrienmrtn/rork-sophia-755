@@ -86,18 +86,6 @@
     "fit": "contain",
     "name": "Shearing the Rams, Tom Roberts, 1890"
   },
-  "v5a_david_death_marat": {
-    "file": "Death of Marat by David.jpg",
-    "fit": "cover",
-    "name": "The Death of Marat, Jacques-Louis David, 1793",
-    "focus": "center",
-    "crop": [
-      0,
-      0,
-      1,
-      0.72
-    ]
-  },
   "v5a_venus_de_milo": {
     "file": "Venus de Milo from Paris Project, 44.jpg",
     "fit": "cover",
@@ -169,13 +157,144 @@
   },
   "v5a_myth_amaterasu": {
     "file": "Origin of Iwato Kagura Dance Amaterasu by Toyokuni III (Kunisada) 1856.png",
-    "fit": "contain",
-    "name": "Origin of the Iwato Kagura Dance (Amaterasu emerging from the cave), Utagawa Kunisada, 1856"
+    "fit": "cover",
+    "name": "Origin of the Iwato Kagura Dance (Amaterasu emerging from the cave), Utagawa Kunisada, 1856",
+    "focus": "center",
+    "crop": [
+      0.333,
+      0,
+      0.667,
+      1
+    ]
   },
   "v5a_myth_lamassu": {
     "file": "Lamassu (Winged Bull) of Throne Room of Palace of Sargon II, Khorsabad, Assyria (27681700183).jpg",
     "fit": "cover",
     "name": "Lamassu from the palace of Sargon II, Khorsabad",
     "focus": "center"
+  },
+  "v5a_harriet_tubman": {
+    "file": "Harriet Tubman by Squyer, NPG, c1885.jpg",
+    "fit": "cover",
+    "focus": "top",
+    "name": "Harriet Tubman, photograph by H. Seymour Squyer, c. 1885"
+  },
+  "v5a_frederick_douglass": {
+    "file": "Frederick Douglass (circa 1879).jpg",
+    "fit": "cover",
+    "focus": "top",
+    "name": "Frederick Douglass, c. 1879"
+  },
+  "v5a_sun_yatsen": {
+    "file": "Sun Yat-sen 2.jpg",
+    "fit": "cover",
+    "focus": "top",
+    "name": "Sun Yat-sen"
+  },
+  "v5a_ataturk": {
+    "file": "Mustafa Kemal Atatürk (white balance).png",
+    "fit": "cover",
+    "focus": "top",
+    "name": "Mustafa Kemal Atatürk, c. 1923"
+  },
+  "v5a_sitting_bull": {
+    "file": "Sitting Bull by DF Barry, 1885.jpg",
+    "fit": "cover",
+    "focus": "top",
+    "name": "Sitting Bull, photograph by David F. Barry, 1885"
+  },
+  "v5a_alexander_graham_bell": {
+    "file": "Alexander Graham Bell 1895 NPG 77 363.jpg",
+    "fit": "cover",
+    "focus": "top",
+    "name": "Alexander Graham Bell, 1895"
+  },
+  "v5a_mary_shelley": {
+    "file": "Richard Rothwell (1800-1868) - Mary Wollstonecraft Shelley - NPG 1235 - National Portrait Gallery.jpg",
+    "fit": "cover",
+    "focus": "top",
+    "name": "Mary Shelley, Richard Rothwell, 1840"
+  },
+  "v5a_empress_cixi": {
+    "file": "Hubert Vos's painting of the Dowager Empress Cixi (Tzu Hsi).jpg",
+    "fit": "cover",
+    "focus": "top",
+    "name": "Empress Dowager Cixi, Hubert Vos, 1905-1906",
+    "crop": [
+      0,
+      0.13,
+      1,
+      1
+    ]
+  },
+  "v5a_benito_juarez": {
+    "file": "Benito-Juarez-pic loc.jpg",
+    "fit": "cover",
+    "focus": "top",
+    "name": "Benito Juárez"
+  },
+  "v5a_jose_rizal": {
+    "file": "Portrait of José Rizal (1891).jpg",
+    "fit": "cover",
+    "focus": "top",
+    "name": "José Rizal, 1891"
+  },
+  "v5a_liliuokalani": {
+    "file": "Liliuokalani, c. 1891.jpg",
+    "fit": "cover",
+    "focus": "top",
+    "name": "Liliʻuokalani, c. 1891",
+    "crop": [
+      0,
+      0,
+      0.68,
+      1
+    ]
+  },
+  "v5a_karl_marx": {
+    "file": "Karl Marx by John Jabez Edwin Mayall 1875 - Restored.png",
+    "fit": "cover",
+    "focus": "top",
+    "name": "Karl Marx, photograph by John Jabez Edwin Mayall, 1875"
+  },
+  "v5a_copernicus": {
+    "file": "Nikolaus Kopernikus.jpg",
+    "fit": "cover",
+    "focus": "top",
+    "name": "Nicolaus Copernicus, Toruń portrait, c. 1580"
+  },
+  "v5a_sofia_kovalevskaya": {
+    "file": "Sofya Kovalevskaya, 1890.jpg",
+    "fit": "cover",
+    "focus": "top",
+    "name": "Sofia Kovalevskaya, 1890"
+  },
+  "v5a_alexander_von_humboldt": {
+    "file": "Stieler, Joseph Karl - Alexander von Humboldt - 1843.jpg",
+    "fit": "cover",
+    "focus": "top",
+    "name": "Alexander von Humboldt, Joseph Karl Stieler, 1843"
+  },
+  "v5a_natsume_soseki": {
+    "file": "Natsume Soseki photo.jpg",
+    "fit": "cover",
+    "focus": "top",
+    "name": "Natsume Sōseki"
+  },
+  "v5a_velasco_valley_mexico": {
+    "file": "José María Velasco - The Valley of Mexico from the Santa Isabel Mountain Range - Google Art Project.jpg",
+    "fit": "contain",
+    "name": "The Valley of Mexico from the Santa Isabel Mountain Range, José María Velasco, 1875"
+  },
+  "v5a_courbet_desperate_man": {
+    "file": "Gustave Courbet - Le Désespéré (1843).jpg",
+    "fit": "contain",
+    "name": "The Desperate Man (self-portrait), Gustave Courbet, 1843-1845"
+  },
+  "v5a_myth_bastet": {
+    "file": "Bastet MET DP310891.jpg",
+    "fit": "cover",
+    "focus": "center",
+    "name": "Statuette of Bastet, Egypt, Metropolitan Museum of Art"
   }
 }

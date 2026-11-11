@@ -45,7 +45,13 @@
     "artist": "Zhang Zeduan",
     "license": "Public domain",
     "source": "https://commons.wikimedia.org/wiki/File:Along_the_River_During_the_Qingming_Festival_(detail_of_original).jpg",
-    "fit": "contain"
+    "fit": "cover",
+    "crop": [
+      0.45,
+      0,
+      0.85,
+      1
+    ]
   },
   "v5a_reza_abbasi_lovers": {
     "name": "Two Lovers, Reza Abbasi, 1630",
@@ -53,6 +59,327 @@
     "artist": "Reza Abbasi",
     "license": "Public domain",
     "source": "https://commons.wikimedia.org/wiki/File:Reza_Abbasi_-_Two_Lovers_(1630).jpg",
+    "fit": "cover",
+    "crop": [
+      0.28,
+      0.14,
+      0.97,
+      0.86
+    ]
+  },
+  "v5a_renoir_galette": {
+    "name": "Bal du moulin de la Galette, Pierre-Auguste Renoir, 1876",
+    "file": "Pierre-Auguste Renoir, Le Moulin de la Galette.jpg",
+    "artist": "Pierre-Auguste Renoir",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Pierre-Auguste_Renoir,_Le_Moulin_de_la_Galette.jpg",
     "fit": "contain"
+  },
+  "v5a_kim_hongdo_ssireum": {
+    "name": "Ssireum (Wrestling), Kim Hong-do, 18th century",
+    "file": "Danwon Ssireum.jpg",
+    "artist": "Kim Hong-do",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Danwon_Ssireum.jpg",
+    "fit": "contain"
+  },
+  "v5a_gauguin_where_from": {
+    "name": "Where Do We Come From? What Are We? Where Are We Going?, Paul Gauguin, 1897-1898",
+    "file": "Gauguin - Where Do We Come From? What Are We? Where Are We Going? (1897-98).jpg",
+    "artist": "Paul Gauguin",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Gauguin_-_Where_Do_We_Come_From%3F_What_Are_We%3F_Where_Are_We_Going%3F_(1897-98).jpg",
+    "fit": "contain"
+  },
+  "v5a_ingres_odalisque": {
+    "name": "La Grande Odalisque, Jean-Auguste-Dominique Ingres, 1814",
+    "file": "Jean Auguste Dominique Ingres, La Grande Odalisque, 1814.jpg",
+    "artist": "Jean-Auguste-Dominique Ingres",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Jean_Auguste_Dominique_Ingres,_La_Grande_Odalisque,_1814.jpg",
+    "fit": "contain"
+  },
+  "v5a_raphael_sistine_madonna": {
+    "name": "The Sistine Madonna, Raphael, 1512",
+    "file": "Raphael - The Sistine Madonna - Google Arts & Culture.jpg",
+    "artist": "Raphael",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Raphael_-_The_Sistine_Madonna_-_Google_Arts_%26_Culture.jpg",
+    "fit": "contain"
+  },
+  "v5a_rousseau_surprised": {
+    "name": "Surprised! (Tiger in a Tropical Storm), Henri Rousseau, 1891",
+    "file": "Henri Rousseau - Surprise!.jpg",
+    "artist": "Henri Rousseau",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Henri_Rousseau_-_Surprise!.jpg",
+    "fit": "contain"
+  },
+  "v5a_sargent_madame_x": {
+    "name": "Madame X, John Singer Sargent, 1884",
+    "file": "Madame X (Madame Pierre Gautreau) MET DT278076.jpg",
+    "artist": "John Singer Sargent",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Madame_X_(Madame_Pierre_Gautreau)_MET_DT278076.jpg",
+    "fit": "contain"
+  },
+  "v5a_roberts_shearing_rams": {
+    "name": "Shearing the Rams, Tom Roberts, 1890",
+    "file": "Tom Roberts - Shearing the rams - Google Art Project.jpg",
+    "artist": "Tom Roberts",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Tom_Roberts_-_Shearing_the_rams_-_Google_Art_Project.jpg",
+    "fit": "contain"
+  },
+  "v5a_venus_de_milo": {
+    "name": "Venus de Milo, Louvre, c. 150-125 BC",
+    "file": "Venus de Milo from Paris Project, 44.jpg",
+    "artist": "Wilfredor",
+    "license": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Venus_de_Milo_from_Paris_Project,_44.jpg",
+    "fit": "cover",
+    "focus": "center"
+  },
+  "v5a_nefertiti_bust": {
+    "name": "Bust of Nefertiti, Neues Museum, Berlin, c. 1345 BC",
+    "file": "Nefertiti Bust Neues Museum Berlin.jpg",
+    "artist": "Ywpark2003",
+    "license": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Nefertiti_Bust_Neues_Museum_Berlin.jpg",
+    "fit": "cover",
+    "focus": "center"
+  },
+  "v5a_benin_iyoba_mask": {
+    "name": "Queen Mother Pendant Mask (Iyoba), Kingdom of Benin, 16th century, Metropolitan Museum of Art",
+    "file": "Queen Mother Pendant Mask- Iyoba MET DP231460.jpg",
+    "artist": "Edo people",
+    "license": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Queen_Mother_Pendant_Mask-_Iyoba_MET_DP231460.jpg",
+    "fit": "cover",
+    "focus": "center"
+  },
+  "v5a_rodin_thinker": {
+    "name": "The Thinker, Auguste Rodin, Musée Rodin, Paris",
+    "file": "Le Penseur Musée Rodin Paris S.1295.jpg",
+    "artist": "Auguste Rodin",
+    "license": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Le_Penseur_Mus%C3%A9e_Rodin_Paris_S.1295.jpg",
+    "fit": "cover",
+    "focus": "center"
+  },
+  "v5a_myth_ganesha": {
+    "name": "Ganesha, Kalighat painting, Calcutta, 19th century",
+    "file": "India, Calcutta, Kalighat painting, 19th century - Ganesha - 2003.166 - Cleveland Museum of Art.tif",
+    "artist": "anonymous",
+    "license": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:India,_Calcutta,_Kalighat_painting,_19th_century_-_Ganesha_-_2003.166_-_Cleveland_Museum_of_Art.tif",
+    "fit": "contain"
+  },
+  "v5a_myth_pygmalion": {
+    "name": "Pygmalion and Galatea, Jean-Léon Gérôme, c. 1890",
+    "file": "Pygmalion and Galatea MET DT1969.jpg",
+    "artist": "Jean-Léon Gérôme",
+    "license": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Pygmalion_and_Galatea_MET_DT1969.jpg",
+    "fit": "contain"
+  },
+  "v5a_myth_bacchus_ariadne": {
+    "name": "Bacchus and Ariadne, Titian, 1520-1523",
+    "file": "Titian - Bacchus and Ariadne - Google Art Project.jpg",
+    "artist": "Titian",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Titian_-_Bacchus_and_Ariadne_-_Google_Art_Project.jpg",
+    "fit": "contain"
+  },
+  "v5a_myth_krishna_govardhan": {
+    "name": "Krishna Holds Up Mount Govardhan, Mughal, c. 1590-1595, Metropolitan Museum of Art",
+    "file": "Krishna Holds Up Mount Govardhan to Shelter the Villagers of Braj, ca.1590–95, The Met.jpg",
+    "artist": "Miskin",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Krishna_Holds_Up_Mount_Govardhan_to_Shelter_the_Villagers_of_Braj,_ca.1590%E2%80%9395,_The_Met.jpg",
+    "fit": "contain"
+  },
+  "v5a_myth_raijin": {
+    "name": "The Thunder God (Raijin), screen by Tawaraya Sōtatsu, 17th century",
+    "file": "Tawaraya Sōtatsu - The Gods of Wind and Thunder (left screen).jpg",
+    "artist": "Tawara Sōtatsu",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Tawaraya_S%C5%8Dtatsu_-_The_Gods_of_Wind_and_Thunder_(left_screen).jpg",
+    "fit": "contain"
+  },
+  "v5a_myth_sisyphus": {
+    "name": "Sisyphus, Titian, 1548-1549",
+    "file": "Titian - Sisyphus - Madrid - Prado.jpg",
+    "artist": "Titian",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Titian_-_Sisyphus_-_Madrid_-_Prado.jpg",
+    "fit": "contain"
+  },
+  "v5a_myth_durga": {
+    "name": "Durga Mahishasuramardini, slayer of the buffalo demon",
+    "file": "Durga Mahishasura-mardini, the slayer of the buffalo demon.jpg",
+    "artist": "Anant Shivaji Desai, Ravi Varma Press",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Durga_Mahishasura-mardini,_the_slayer_of_the_buffalo_demon.jpg",
+    "fit": "contain"
+  },
+  "v5a_myth_amaterasu": {
+    "name": "Origin of the Iwato Kagura Dance (Amaterasu emerging from the cave), Utagawa Kunisada, 1856",
+    "file": "Origin of Iwato Kagura Dance Amaterasu by Toyokuni III (Kunisada) 1856.png",
+    "artist": "Toyokuni III (Kunisada)",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Origin_of_Iwato_Kagura_Dance_Amaterasu_by_Toyokuni_III_(Kunisada)_1856.png",
+    "fit": "contain"
+  },
+  "v5a_myth_lamassu": {
+    "name": "Lamassu from the palace of Sargon II, Khorsabad",
+    "file": "Lamassu (Winged Bull) of Throne Room of Palace of Sargon II, Khorsabad, Assyria (27681700183).jpg",
+    "artist": "Gary Todd from Xinzheng, China",
+    "license": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Lamassu_(Winged_Bull)_of_Throne_Room_of_Palace_of_Sargon_II,_Khorsabad,_Assyria_(27681700183).jpg",
+    "fit": "cover",
+    "focus": "center"
+  },
+  "v5a_myth_pandora": {
+    "name": "Pandora, John William Waterhouse, 1896",
+    "file": "John William Waterhouse - Pandora, 1896.jpg",
+    "artist": "John William Waterhouse",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:John_William_Waterhouse_-_Pandora,_1896.jpg",
+    "fit": "contain"
+  },
+  "v5a_myth_valkyrie": {
+    "name": "The Valkyrie, Peter Nicolai Arbo, 1869",
+    "file": "Peter Nicolai Arbo - The Valkyrie - NG.M.00259 - National Museum of Art, Architecture and Design.jpg",
+    "artist": "Peter Nicolai Arbo",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Peter_Nicolai_Arbo_-_The_Valkyrie_-_NG.M.00259_-_National_Museum_of_Art,_Architecture_and_Design.jpg",
+    "fit": "contain"
+  },
+  "v5a_harriet_tubman": {
+    "name": "Harriet Tubman, photograph by H. Seymour Squyer, c. 1885",
+    "file": "Harriet Tubman by Squyer, NPG, c1885.jpg",
+    "artist": "Photographer: Horatio Seymour Squyer, 1848 - 18 Dec 1905",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Harriet_Tubman_by_Squyer,_NPG,_c1885.jpg",
+    "fit": "cover",
+    "focus": "top"
+  },
+  "v5a_frederick_douglass": {
+    "name": "Frederick Douglass, c. 1879",
+    "file": "Frederick Douglass (circa 1879).jpg",
+    "artist": "George Kendall Warren",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Frederick_Douglass_(circa_1879).jpg",
+    "fit": "cover",
+    "focus": "top"
+  },
+  "v5a_sun_yatsen": {
+    "name": "Sun Yat-sen",
+    "file": "Sun Yat-sen 2.jpg",
+    "artist": null,
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Sun_Yat-sen_2.jpg",
+    "fit": "cover",
+    "focus": "top"
+  },
+  "v5a_ataturk": {
+    "name": "Mustafa Kemal Atatürk, c. 1923",
+    "file": "K. Ataturk president de la Republique Turque (cropped).jpg",
+    "artist": "Direction Generale de la Presse, Ankara",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:K._Ataturk_president_de_la_Republique_Turque_(cropped).jpg",
+    "fit": "cover",
+    "focus": "top"
+  },
+  "v5a_sitting_bull": {
+    "name": "Sitting Bull, photograph by David F. Barry, 1885",
+    "file": "Sitting Bull by DF Barry, 1885.jpg",
+    "artist": "David Francis Barry",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Sitting_Bull_by_DF_Barry,_1885.jpg",
+    "fit": "cover",
+    "focus": "top"
+  },
+  "v5a_alexander_graham_bell": {
+    "name": "Alexander Graham Bell, 1895",
+    "file": "Alexander Graham Bell 1895 NPG 77 363.jpg",
+    "artist": "Unknown authorUnknown author",
+    "license": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Alexander_Graham_Bell_1895_NPG_77_363.jpg",
+    "fit": "cover",
+    "focus": "top"
+  },
+  "v5a_mary_shelley": {
+    "name": "Mary Shelley, Richard Rothwell, 1840",
+    "file": "Richard Rothwell (1800-1868) - Mary Wollstonecraft Shelley - NPG 1235 - National Portrait Gallery.jpg",
+    "artist": "Richard Rothwell",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Richard_Rothwell_(1800-1868)_-_Mary_Wollstonecraft_Shelley_-_NPG_1235_-_National_Portrait_Gallery.jpg",
+    "fit": "cover",
+    "focus": "top"
+  },
+  "v5a_empress_cixi": {
+    "name": "Empress Dowager Cixi, Hubert Vos, 1905-1906",
+    "file": "Hubert Vos's painting of the Dowager Empress Cixi (Tzu Hsi).jpg",
+    "artist": "Hubert Vos",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Hubert_Vos%27s_painting_of_the_Dowager_Empress_Cixi_(Tzu_Hsi).jpg",
+    "fit": "cover",
+    "focus": "top"
+  },
+  "v5a_benito_juarez": {
+    "name": "Benito Juárez",
+    "file": "Benito-Juarez-pic loc.jpg",
+    "artist": "portrait depicting Benito Juárez by Salvador Martínez Báez in the Library of Congress Hispanic Reading Room",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Benito-Juarez-pic_loc.jpg",
+    "fit": "cover",
+    "focus": "top"
+  },
+  "v5a_liliuokalani": {
+    "name": "Liliʻuokalani, c. 1891",
+    "file": "Liliuokalani, c. 1891.jpg",
+    "artist": "James J. Williams / Adam Cuerden",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Liliuokalani,_c._1891.jpg",
+    "fit": "cover",
+    "focus": "top"
+  },
+  "v5a_karl_marx": {
+    "name": "Karl Marx, photograph by John Jabez Edwin Mayall, 1875",
+    "file": "Karl Marx by John Jabez Edwin Mayall 1875 - Restored.png",
+    "artist": "John Jabez Edwin Mayall",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Karl_Marx_by_John_Jabez_Edwin_Mayall_1875_-_Restored.png",
+    "fit": "cover",
+    "focus": "top"
+  },
+  "v5a_copernicus": {
+    "name": "Nicolaus Copernicus, Toruń portrait, c. 1580",
+    "file": "Nikolaus Kopernikus.jpg",
+    "artist": "Unknown authorUnknown author",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Nikolaus_Kopernikus.jpg",
+    "fit": "cover",
+    "focus": "top"
+  },
+  "v5a_alexander_von_humboldt": {
+    "name": "Alexander von Humboldt, Joseph Karl Stieler, 1843",
+    "file": "Stieler, Joseph Karl - Alexander von Humboldt - 1843.jpg",
+    "artist": "Joseph Karl Stieler",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Stieler,_Joseph_Karl_-_Alexander_von_Humboldt_-_1843.jpg",
+    "fit": "cover",
+    "focus": "top"
+  },
+  "v5a_natsume_soseki": {
+    "name": "Natsume Sōseki",
+    "file": "Natsume Soseki photo.jpg",
+    "artist": "Ogawa Kazumasa",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Natsume_Soseki_photo.jpg",
+    "fit": "cover",
+    "focus": "top"
   }
 }
