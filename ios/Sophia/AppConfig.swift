@@ -5,15 +5,9 @@ enum AppConfig {
     static let EXPO_PUBLIC_REVENUECAT_TEST_API_KEY: String = "test_LaMUBJriSlDtBOIRKsZjkPgKbUB"
     static let FORMSPREE_ENDPOINT: String = "https://formspree.io/f/xwvdybwb"
     static let FORMSPREE_AMBASSADOR_ENDPOINT: String = "https://formspree.io/f/xpqvqnwb"
-    /// Page d'un rôle du programme créateurs vidéo (`ugc` ou `slideshow`), ouverte depuis la
-    /// bannière « Deviens ambassadeur » des Réglages. Le Hub des créateurs a son propre domaine
-    /// (équipe de Maximilien) ; anglais seulement, sans préfixe de langue.
-    static func creatorsURL(role: String) -> URL? {
-        URL(string: "https://vik-studios-creators.com/creators/\(role)")
-    }
-
     /// L'accueil du Hub des créateurs, dans la langue de l'app : `vik-studios-creators.com/<langue>`.
-    /// C'est la sortie de la page « Deviens créateur » (`BecomeCreatorView`). Le Hub écrit ses
+    /// C'est la sortie de la page « Deviens créateur » (`BecomeCreatorView`) et de la bannière
+    /// « Deviens ambassadeur » des Réglages. Le Hub écrit ses
     /// codes à sa façon : le portugais n'y existe qu'en `pt-br`, le norvégien en `no`.
     static func creatorHubURL(language: AppLanguage) -> URL? {
         let code: String
