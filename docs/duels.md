@@ -269,3 +269,18 @@ toujours vrai, sur iOS comme sur Android).
 - **Nouvelles questions** : après `build_duels_seed.py`, traduire les nouvelles (un lot `packs` ne
   contenant qu'elles), relancer `build_duels_i18n_sql.py`. Une question sans traduction reste jouable,
   en anglais.
+
+## 400 questions de plus (12/11/2026)
+
+- 400 questions anglaises (histoire 67, sciences 67, littérature 66, art 66, mythologie 66, monde 68 ;
+  264 QCM dont des comparaisons, 78 vrai/faux, 58 curseurs ; environ 50 par niveau), sans image.
+  Écrites par matière puis relues par un vérificateur indépendant (consignes et journaux :
+  `content/duels/v4/`), comparées au vivier existant pour écarter les doublons.
+  Sources : `scripts/duels_source/30_v4_*.json` ; ids `dq_en_<niveau>_<n>` à la suite des précédents.
+- `build_duels_seed.py` écrit désormais `20261114010000_duels_seed_v4.sql` (tout le contenu) ; la v3,
+  déjà exécutée, ne bouge pas.
+- Traductions des seules nouvelles questions : `duels_i18n.py packs|check|merge --new`
+  (work dir `content/duels/i18n/lots_v4`), fusionnées dans `content/duels/i18n/<langue>.json`.
+- SQL des ajouts seulement (questions + traductions) : `python3 scripts/build_duels_add_sql.py
+  --baseline content/duels/v4/baseline_ids.txt --migration supabase/migrations/20261114010100_duels_v4_add.sql
+  --paste-dir supabase/duels_v4_a_coller` ; fichiers à coller dans l'ordre dans l'éditeur SQL.
