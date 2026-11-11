@@ -251,9 +251,20 @@ fun StreakCelebration(
 }
 
 /**
- * Monday to Sunday of this week: the days the streak covers in pink, today ringed in pink,
- * the days to come faded.
+ * Seven days starting on the first day of the streak (not on Monday): the days the streak
+ * covers in pink, today ringed in pink, the days to come faded. On the eighth day a new row
+ * starts; it does not slide one day at a time.
  */
+/** The day in the first cell of the streak row. A broken streak starts again from today. */
+internal fun streakWeekFirstDay(streak: Int, last: LocalDate?, today: LocalDate): LocalDate {
+    if (streak <= 0 || last == null) return today
+    val gap = java.time.temporal.ChronoUnit.DAYS.between(last, today)
+    if (gap < 0 || gap > 1) return today
+    val start = last.minusDays((streak - 1).toLong())
+    val elapsed = java.time.temporal.ChronoUnit.DAYS.between(start, today)
+    return start.plusDays((elapsed / 7) * 7)
+}
+
 @Composable
 private fun StreakWeekStrip(
     streak: Int,
@@ -262,11 +273,11 @@ private fun StreakWeekStrip(
     modifier: Modifier = Modifier,
 ) {
     val today = remember { LocalDate.now() }
-    val monday = today.with(java.time.DayOfWeek.MONDAY)
     val last = remember(lastActiveDate) { lastActiveDate?.let { runCatching { LocalDate.parse(it) }.getOrNull() } }
+    val firstDay = streakWeekFirstDay(streak, last, today)
     Row(modifier = modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
         repeat(7) { i ->
-            val date = monday.plusDays(i.toLong())
+            val date = firstDay.plusDays(i.toLong())
             val isToday = date == today
             val isFuture = date.isAfter(today)
             val isDone = !isFuture && last != null && !date.isAfter(last) &&
