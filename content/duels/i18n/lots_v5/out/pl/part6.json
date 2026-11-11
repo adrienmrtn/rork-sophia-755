@@ -1,102 +1,683 @@
-{"items": {
-"dq_en_3_282": {"q": "Arlekin, Pantalone i Kolombina to postacie z jakiej tradycji teatralnej?", "o": ["Kabuki", "Tragedii greckiej", "Opery seria", "Commedii dell'arte"]},
-"dq_en_3_283": {"q": "Kto napisał „Księcia”, słynny traktat o tym, jak władcy zdobywają i utrzymują władzę?", "o": ["Tomasz Morus", "Erazm z Rotterdamu", "Petrarka", "Niccolò Machiavelli"]},
-"dq_en_3_284": {"q": "Który francuski poeta napisał bajki „Kruk i lis” oraz „Wilk i jagnię”?", "o": ["Charles Perrault", "Jean de La Fontaine", "Jean Racine", "Molier"]},
-"dq_en_3_285": {"q": "Co jest starsze?", "o": ["Ramajana", "Księga tysiąca i jednej nocy"]},
-"dq_en_3_286": {"q": "Który literacki baron-samochwała twierdzi, że leciał na kuli armatniej?", "o": ["Baron de Coubertin", "Baron Haussmann", "Baron Münchhausen", "Baron Rothschild"]},
-"dq_en_3_287": {"q": "Z jakim potworem walczy najpierw Beowulf w staroangielskim eposie?", "o": ["Z Ymirem", "Z Tyfonem", "Z Grendelem", "Z Fafnirem"]},
-"dq_en_3_288": {"q": "W czasach Szekspira role kobiece na angielskiej scenie grały kobiety."},
-"dq_en_3_289": {"q": "Safona, słynąca z poezji miłosnej, była poetką starożytnego Rzymu."},
-"dq_en_3_290": {"q": "Commedia dell'arte narodziła się w Hiszpanii."},
-"dq_en_3_291": {"q": "Ile lat przespał Rip Van Winkle w opowiadaniu Washingtona Irvinga?", "u": "lat"},
-"dq_en_3_292": {"q": "„Pańczatantra”, słynny zbiór bajek o zwierzętach, pochodzi ze starożytnych Chin."},
-"dq_en_4_281": {"q": "Jak nazywa się czarnoksiężnik, który rządzi wyspą w „Burzy”?", "o": ["Oberon", "Malvolio", "Puk", "Prospero"]},
-"dq_en_4_282": {"q": "Który angielski poeta romantyczny napisał „Odę do słowika”?", "o": ["William Blake", "John Keats", "Lord Byron", "Robert Burns"]},
-"dq_en_4_283": {"q": "Kto napisał powieść historyczną „Ivanhoe”?", "o": ["Walter Scott", "Charles Dickens", "Robert Louis Stevenson", "James Fenimore Cooper"]},
-"dq_en_4_284": {"q": "Kto napisał „Utopię”, opis idealnego społeczeństwa na wymyślonej wyspie?", "o": ["Tomasz Morus", "Francis Bacon", "Erazm z Rotterdamu", "Thomas Hobbes"]},
-"dq_en_4_285": {"q": "Który francuski pisarz renesansu jest autorem słynnych „Prób”?", "o": ["Blaise Pascal", "François Rabelais", "Michel de Montaigne", "Pierre de Ronsard"]},
-"dq_en_4_286": {"q": "Który niemiecki dramatopisarz napisał dramat „Wilhelm Tell” (1804)?", "o": ["Heinrich von Kleist", "Friedrich Schiller", "Georg Büchner", "Gotthold Lessing"]},
-"dq_en_4_287": {"q": "Heathcliff to posępny bohater której powieści?", "o": ["Pamela", "Jane Eyre", "Ivanhoe", "Wichrowe Wzgórza"]},
-"dq_en_4_288": {"q": "Która pionierka informatyki była córką poety lorda Byrona?", "o": ["Grace Hopper", "Mary Shelley", "Ada Lovelace", "Maria Skłodowska-Curie"]},
-"dq_en_4_289": {"q": "Który epos jest dłuższy?", "o": ["Mahabharata", "Iliada"]},
-"dq_en_4_290": {"q": "Którego szkockiego poetę co roku w styczniu czci się kolacją z haggisem?", "o": ["Lorda Byrona", "Jamesa Macphersona", "Roberta Burnsa", "Waltera Scotta"]},
-"dq_en_4_291": {"q": "Kto napisał komiczne opowieści o Gargantui i Pantagruelu?", "o": ["Wolter", "Michel de Montaigne", "François Rabelais", "Molier"]},
-"dq_en_4_292": {"q": "Który starożytny grecki dramatopisarz napisał tragedię „Medea”?", "o": ["Arystofanes", "Sofokles", "Eurypides", "Ajschylos"]},
-"dq_en_4_293": {"q": "IX symfonia Beethovena zawiera muzykę do wiersza Friedricha Schillera."},
-"dq_en_4_294": {"q": "Aktorzy tradycyjnego japońskiego teatru nō nigdy nie noszą masek."},
-"dq_en_4_295": {"q": "Ile opowieści zawiera „Dekameron” Boccaccia?", "u": "opowieści"},
-"dq_en_5_287": {"q": "Który francuski poeta z XII wieku jako pierwszy pisał o Świętym Graalu w romansie „Percewal”?", "o": ["Pierre de Ronsard", "Chrétien de Troyes", "François Villon", "Maria Francuska"]},
-"dq_en_5_288": {"q": "Którego prawdziwego rycerza sławi średniowieczny hiszpański epos „Pieśń o Cydzie”?", "o": ["Bernarda del Carpio", "Rodriga Díaza de Vivar", "Hernána Cortésa", "Pelagiusza z Asturii"]},
-"dq_en_5_289": {"q": "Na baśni którego niemieckiego romantyka oparty jest balet Czajkowskiego „Dziadek do orzechów”?", "o": ["E.T.A. Hoffmanna", "Novalisa", "Heinricha Heinego", "Clemensa Brentana"]},
-"dq_en_5_290": {"q": "Do sanktuarium którego świętego pielgrzymują bohaterowie „Opowieści kanterberyjskich”?", "o": ["Tomasza Becketa", "Świętego Patryka", "Świętego Swithuna", "Świętego Jerzego"]},
-"dq_en_5_291": {"q": "Kto napisał „Ostatniego Mohikanina”?", "o": ["Nathaniel Hawthorne", "Herman Melville", "Washington Irving", "James Fenimore Cooper"]},
-"dq_en_5_292": {"q": "Kogo w greckiej tragedii Antygona chce pochować wbrew woli króla?", "o": ["Ojca", "Syna", "Brata", "Męża"]},
-"dq_en_5_293": {"q": "Którego starożytnego chińskiego poetę wspomina się co roku podczas Święta Smoczych Łodzi?", "o": ["Li Bai", "Wang Wei", "Qu Yuan", "Du Fu"]},
-"dq_en_5_294": {"q": "Z którym kompozytorem francuska powieściopisarka George Sand przeżyła długi romans?", "o": ["Z Richardem Wagnerem", "Z Ferencem Lisztem", "Z Fryderykiem Chopinem", "Z Hectorem Berliozem"]},
-"dq_en_5_295": {"q": "Którego mądrego głupca z tureckich opowieści ludowych często przedstawia się jadącego tyłem na ośle?", "o": ["Keloğlana", "Karagöza", "Dyla Sowizdrzała", "Nasreddina Hodżę"]},
-"dq_en_5_296": {"q": "Siostry Brontë początkowo wydawały swoje powieści pod męsko brzmiącymi pseudonimami."},
-"dq_en_5_297": {"q": "W średniowiecznej legendzie Tristan i Izolda zakochują się w sobie po wypiciu napoju miłosnego."},
-"dq_en_5_298": {"q": "W książkach Rabelais'go Gargantua i Pantagruel są karłami."},
-"dq_en_5_299": {"q": "Ilu „jedności” przestrzegał francuski dramat klasyczny?", "u": "jedności"},
-"dq_en_5_300": {"q": "Ile lat miał poeta John Keats, gdy zmarł?", "u": "lat"},
-"dq_en_5_301": {"q": "W co zamieniają się kochankowie w chińskiej legendzie o Liang Shanbo i Zhu Yingtai?", "o": ["W żurawie", "W łabędzie", "W motyle", "W gwiazdy"]},
-"dq_en_6_272": {"q": "Opera Mozarta „Wesele Figara” powstała na podstawie sztuki Beaumarchais'go."},
-"dq_en_6_273": {"q": "Kto urodził się wcześniej?", "o": ["Pierre Corneille", "Lope de Vega"]},
-"dq_en_6_274": {"q": "Która powieść ukazała się wcześniej?", "o": ["Pamela", "Tom Jones"]},
-"dq_en_6_275": {"q": "Który rzymski poeta ukuł zwrot „carpe diem” („chwytaj dzień”)?", "o": ["Horacy", "Katullus", "Wergiliusz", "Lukrecjusz"]},
-"dq_en_6_276": {"q": "Wyprawę którego odkrywcy sławi epos Camõesa „Luzjady”?", "o": ["Bartolomeu Diasa", "Vasca da Gamy", "Ferdynanda Magellana", "Krzysztofa Kolumba"]},
-"dq_en_6_277": {"q": "Według legendy poeta Li Bai utonął, próbując objąć... co?", "o": ["Odbicie Księżyca", "Złotego karpia", "Kwiat lotosu", "Pływający lampion"]},
-"dq_en_6_278": {"q": "Dokąd w końcu wraca księżniczka Kaguya w „Opowieści o zbieraczu bambusa”?", "o": ["Na Księżyc", "Na Słońce", "Do morza", "W góry"]},
-"dq_en_6_279": {"q": "Jaki wspólny tytuł nadał Balzak swojemu ogromnemu cyklowi powieści?", "o": ["Komedia ludzka", "Rougon-Macquartowie", "Boska komedia", "Komedia omyłek"]},
-"dq_en_6_280": {"q": "Tradycja przypisuje stworzenie teatru kabuki kobiecie, artystce Izumo no Okuni."},
-"dq_en_6_281": {"q": "Montaigne napisał swoje „Próby” po łacinie."},
-"dq_en_6_282": {"q": "Akcja powieści Waltera Scotta „Ivanhoe” rozgrywa się w Szkocji."},
-"dq_en_6_283": {"q": "Ile sylab ma klasyczny francuski aleksandryn?", "u": "sylab"},
-"dq_en_6_284": {"q": "W którym roku po raz pierwszy wydano „Utopię” Tomasza Morusa?"},
-"dq_en_6_285": {"q": "Który pisarz jest najsłynniejszym rosyjskim bajkopisarzem?", "o": ["Aleksander Puszkin", "Iwan Kryłow", "Michaił Lermontow", "Nikołaj Gogol"]},
-"dq_en_7_275": {"q": "Kto urodził się wcześniej?", "o": ["Sor Juana Inés de la Cruz", "Jean Racine"]},
-"dq_en_7_276": {"q": "Który aktor i dramatopisarz wraz z ojcem Kan'amim ukształtował japoński teatr nō?", "o": ["Chikamatsu Monzaemon", "Ihara Saikaku", "Matsuo Bashō", "Zeami"]},
-"dq_en_7_277": {"q": "Który perski poeta z XII wieku napisał klasyczną wersję „Lejli i Madżnuna”?", "o": ["Nizami Gandżawi", "Firdausi", "Hafez", "Omar Chajjam"]},
-"dq_en_7_278": {"q": "O wojnie między którymi dwoma japońskimi rodami opowiada „Opowieść o rodzie Heike”?", "o": ["Soga i Mononobe", "Tokugawa i Toyotomi", "Hōjō i Ashikaga", "Taira i Minamoto"]},
-"dq_en_7_279": {"q": "„Pan Tadeusz” Adama Mickiewicza (1834) to narodowa epopeja którego kraju?", "o": ["Polski", "Węgier", "Serbii", "Ukrainy"]},
-"dq_en_7_280": {"q": "Któremu hiszpańskiemu dramatopisarzowi tradycyjnie przypisuje się stworzenie uwodziciela Don Juana?", "o": ["Calderónowi de la Barca", "Tirsowi de Molinie", "Franciscowi de Quevedo", "Lopemu de Vedze"]},
-"dq_en_7_281": {"q": "Jak Arystoteles w „Poetyce” nazywa oczyszczenie z emocji, które wywołuje tragedia?", "o": ["Katharsis", "Perypetia", "Hybris", "Mimesis"]},
-"dq_en_7_282": {"q": "Wordsworth i Coleridge wspólnie wydali tom „Ballady liryczne”."},
-"dq_en_7_283": {"q": "Lord Byron zmarł w Grecji, dokąd udał się, by wesprzeć grecką wojnę o niepodległość."},
-"dq_en_7_284": {"q": "„Książę” Machiavellego ukazał się drukiem za życia autora."},
-"dq_en_7_285": {"q": "W którym roku Charles Perrault wydał swój zbiór baśni?"},
-"dq_en_7_286": {"q": "W którym roku ukazał się pierwszy tom „Encyklopedii” Diderota?"},
-"dq_en_7_287": {"q": "Ile rozdziałów ma standardowa wersja „Opowieści o Trzech Królestwach”?", "u": "rozdziałów"},
-"dq_en_7_288": {"q": "Do jakiej literatury należą Muallakat, słynny zbiór długich od?", "o": ["Klasycznej perskiej", "Średniowiecznej hebrajskiej", "Przedislamskiej arabskiej", "Osmańskiej tureckiej"]},
-"dq_en_7_289": {"q": "Według tradycji indyjski poeta mistyk Kabir był tkaczem."},
-"dq_en_8_255": {"q": "Jakie zwierzę wychowuje bohatera powieści filozoficznej Ibn Tufajla „Hajj ibn Jakzan”?", "o": ["Gazela", "Wielbłąd", "Wilczyca", "Lwica"]},
-"dq_en_8_256": {"q": "Jakiego legendarnego ptasiego króla wyruszają szukać ptaki w „Mowie ptaków” Attara?", "o": ["Simurga", "Humę", "Feniksa", "Roka"]},
-"dq_en_8_257": {"q": "Miłość Kryszny i kogo sławi sanskrycki poemat „Gitagowinda”?", "o": ["Sity", "Radhy", "Siakuntali", "Draupadi"]},
-"dq_en_8_258": {"q": "Hiszpański podbój jakiej krainy opisuje epos Alonsa de Ercilli „Araukana”?", "o": ["Chile", "Florydy", "Meksyku", "Peru"]},
-"dq_en_8_259": {"q": "Który rosyjski dramatopisarz, autor „Mądremu biada”, zginął w Teheranie jako poseł?", "o": ["Aleksander Gribojedow", "Aleksander Ostrowski", "Iwan Kryłow", "Denis Fonwizin"]},
-"dq_en_8_260": {"q": "„Rycerz w tygrysiej skórze” to narodowy epos którego kraju?", "o": ["Azerbejdżanu", "Armenii", "Gruzji", "Iranu"]},
-"dq_en_8_261": {"q": "Arabski zbiór bajek „Kalila i Dimna” wywodzi się z indyjskiej „Pańczatantry”."},
-"dq_en_8_262": {"q": "„Opowieść o Kiều” to najsłynniejsze klasyczne dzieło literatury koreańskiej."},
-"dq_en_8_263": {"q": "Poeta Rumi napisał większość swoich wierszy po arabsku."},
-"dq_en_8_264": {"q": "Na ile pieśni dzieli się epos Camõesa „Luzjady”?", "u": "pieśni"},
-"dq_en_8_265": {"q": "Ile pieśni liczy standardowa wersja fińskiej „Kalevali” z 1849 roku?", "u": "pieśni"},
-"dq_en_8_266": {"q": "Ile mniej więcej wierszy zawiera „Man'yōshū”, najstarsza antologia poezji japońskiej?", "u": "wierszy"},
-"dq_en_8_267": {"q": "W którym roku ukazała się powieść pani de La Fayette „Księżna de Clèves”?"},
-"dq_en_8_268": {"q": "W którym roku wydrukowano najwcześniejsze znane wydania „Łazika z Tormesu”?"},
-"dq_en_8_269": {"q": "O czym są głównie „Opowieści niesamowite z Pracowni Liao” Pu Songlinga?", "o": ["O powstaniach chłopskich", "O życiu na dworze cesarskim", "O duchach i lisich demonach", "O morskich podróżach kupców"]},
-"dq_en_1_288": {"q": "W wiosce w jakiej starożytnej krainie mieszkają Asteriks i Obeliks?", "o": ["W Galii", "W Brytanii", "W Grecji", "W Egipcie"]},
-"dq_en_1_289": {"q": "Kto jest właścicielem fabryki czekolady w „Charliem i fabryce czekolady”?", "o": ["Willy Wonka", "Dziadek Józek", "Pan Salt", "Augustus Gloop"]},
-"dq_en_1_290": {"q": "Tarzana wychowuje w dżungli rodzina wilków."},
-"dq_en_1_291": {"q": "Jaki numer kodowy ma brytyjski szpieg James Bond?", "o": ["009", "070", "007", "001"]},
-"dq_en_1_292": {"q": "We „Władcy Pierścieni” hobbit Frodo wyrusza, by zniszczyć potężny pierścień."},
-"dq_en_1_293": {"q": "Kto napisał „Opowieści z Narnii”?", "o": ["Roald Dahl", "C.S. Lewis", "Lewis Carroll", "J.R.R. Tolkien"]},
-"dq_en_1_294": {"q": "Jak ma na imię pies Charliego Browna w komiksie Charlesa Schulza?", "o": ["Odie", "Scooby-Doo", "Snoopy", "Pluto"]},
-"dq_en_1_295": {"q": "W co zamienia się bardzo głodna gąsienica z książki obrazkowej Erica Carle'a?", "o": ["W ćmę", "W pszczołę", "W motyla", "W ważkę"]},
-"dq_en_1_296": {"q": "Który młody reporter przemierza świat ze swoim białym pieskiem w komiksach Hergégo?", "o": ["Tintin", "Asteriks", "Corto Maltese", "Lucky Luke"]},
-"dq_en_1_297": {"q": "W komiksach Smerfy mieszkają w domkach w kształcie... czego?", "o": ["Żołędzi", "Grzybów", "Dyń", "Czajniczków"]},
-"dq_en_1_298": {"q": "Który zielony minerał z rodzinnej planety osłabia Supermana?", "o": ["Mithril", "Kryptonit", "Vibranium", "Adamantium"]},
-"dq_en_1_299": {"q": "Jakim zwierzęciem jest Babar z książek obrazkowych Jeana de Brunhoffa?", "o": ["Nosorożcem", "Słoniem", "Lwem", "Niedźwiedziem"]},
-"dq_en_1_300": {"q": "Jakim zwierzęciem jest Bambi z powieści Felixa Saltena?", "o": ["Lisem", "Królikiem", "Wiewiórką", "Sarną"]},
-"dq_en_1_301": {"q": "Na czym słynna czarodziejska niania Mary Poppins lata w powietrzu?", "o": ["Na latawcu", "Na parasolu", "Na latającym dywanie", "Na miotle"]},
-"dq_en_1_302": {"q": "Ile dzieci przechodzi przez szafę do Narnii w „Lwie, czarownicy i starej szafie”?", "u": "dzieci"}
-}, "untranslatable": []}
+{
+ "items": {
+  "dq_en_3_282": {
+   "q": "Arlekin, Pantalone i Kolombina to postacie z jakiej tradycji teatralnej?",
+   "o": [
+    "Kabuki",
+    "Tragedii greckiej",
+    "Opery seria",
+    "Commedii dell'arte"
+   ]
+  },
+  "dq_en_3_283": {
+   "q": "Kto napisał „Księcia”, słynny traktat o tym, jak władcy zdobywają i utrzymują władzę?",
+   "o": [
+    "Tomasz Morus",
+    "Erazm z Rotterdamu",
+    "Petrarka",
+    "Niccolò Machiavelli"
+   ]
+  },
+  "dq_en_3_284": {
+   "q": "Który francuski poeta napisał bajki „Kruk i lis” oraz „Wilk i jagnię”?",
+   "o": [
+    "Charles Perrault",
+    "Jean de La Fontaine",
+    "Jean Racine",
+    "Molier"
+   ]
+  },
+  "dq_en_3_285": {
+   "q": "Co jest starsze?",
+   "o": [
+    "Ramajana",
+    "Księga tysiąca i jednej nocy"
+   ]
+  },
+  "dq_en_3_286": {
+   "q": "Który literacki baron-samochwała twierdzi, że leciał na kuli armatniej?",
+   "o": [
+    "Baron de Coubertin",
+    "Baron Haussmann",
+    "Baron Münchhausen",
+    "Baron Rothschild"
+   ]
+  },
+  "dq_en_3_287": {
+   "q": "Z jakim potworem walczy najpierw Beowulf w staroangielskim eposie?",
+   "o": [
+    "Z Ymirem",
+    "Z Tyfonem",
+    "Z Grendelem",
+    "Z Fafnirem"
+   ]
+  },
+  "dq_en_3_288": {
+   "q": "W czasach Szekspira role kobiece na angielskiej scenie grały kobiety."
+  },
+  "dq_en_3_289": {
+   "q": "Safona, słynąca z poezji miłosnej, była poetką starożytnego Rzymu."
+  },
+  "dq_en_3_290": {
+   "q": "Commedia dell'arte narodziła się w Hiszpanii."
+  },
+  "dq_en_3_291": {
+   "q": "Ile lat przespał Rip Van Winkle w opowiadaniu Washingtona Irvinga?",
+   "u": "lat"
+  },
+  "dq_en_3_292": {
+   "q": "„Pańczatantra”, słynny zbiór bajek o zwierzętach, pochodzi ze starożytnych Chin."
+  },
+  "dq_en_4_281": {
+   "q": "Jak nazywa się czarnoksiężnik, który rządzi wyspą w „Burzy”?",
+   "o": [
+    "Oberon",
+    "Malvolio",
+    "Puk",
+    "Prospero"
+   ]
+  },
+  "dq_en_4_282": {
+   "q": "Który angielski poeta romantyczny napisał „Odę do słowika”?",
+   "o": [
+    "William Blake",
+    "John Keats",
+    "Lord Byron",
+    "Robert Burns"
+   ]
+  },
+  "dq_en_4_283": {
+   "q": "Kto napisał powieść historyczną „Ivanhoe”?",
+   "o": [
+    "Walter Scott",
+    "Charles Dickens",
+    "Robert Louis Stevenson",
+    "James Fenimore Cooper"
+   ]
+  },
+  "dq_en_4_284": {
+   "q": "Kto napisał „Utopię”, opis idealnego społeczeństwa na wymyślonej wyspie?",
+   "o": [
+    "Tomasz Morus",
+    "Francis Bacon",
+    "Erazm z Rotterdamu",
+    "Thomas Hobbes"
+   ]
+  },
+  "dq_en_4_285": {
+   "q": "Który francuski pisarz renesansu jest autorem słynnych „Prób”?",
+   "o": [
+    "Blaise Pascal",
+    "François Rabelais",
+    "Michel de Montaigne",
+    "Pierre de Ronsard"
+   ]
+  },
+  "dq_en_4_286": {
+   "q": "Który niemiecki dramatopisarz napisał dramat „Wilhelm Tell” (1804)?",
+   "o": [
+    "Heinrich von Kleist",
+    "Friedrich Schiller",
+    "Georg Büchner",
+    "Gotthold Lessing"
+   ]
+  },
+  "dq_en_4_287": {
+   "q": "Heathcliff to posępny bohater której powieści?",
+   "o": [
+    "Pamela",
+    "Jane Eyre",
+    "Ivanhoe",
+    "Wichrowe Wzgórza"
+   ]
+  },
+  "dq_en_4_288": {
+   "q": "Która pionierka informatyki była córką poety lorda Byrona?",
+   "o": [
+    "Grace Hopper",
+    "Mary Shelley",
+    "Ada Lovelace",
+    "Maria Skłodowska-Curie"
+   ]
+  },
+  "dq_en_4_289": {
+   "q": "Który epos jest dłuższy?",
+   "o": [
+    "Mahabharata",
+    "Iliada"
+   ]
+  },
+  "dq_en_4_290": {
+   "q": "Którego szkockiego poetę co roku w styczniu czci się kolacją z haggisem?",
+   "o": [
+    "Lorda Byrona",
+    "Jamesa Macphersona",
+    "Roberta Burnsa",
+    "Waltera Scotta"
+   ]
+  },
+  "dq_en_4_291": {
+   "q": "Kto napisał komiczne opowieści o Gargantui i Pantagruelu?",
+   "o": [
+    "Wolter",
+    "Michel de Montaigne",
+    "François Rabelais",
+    "Molier"
+   ]
+  },
+  "dq_en_4_292": {
+   "q": "Który starożytny grecki dramatopisarz napisał tragedię „Medea”?",
+   "o": [
+    "Arystofanes",
+    "Sofokles",
+    "Eurypides",
+    "Ajschylos"
+   ]
+  },
+  "dq_en_4_293": {
+   "q": "IX symfonia Beethovena zawiera muzykę do wiersza Friedricha Schillera."
+  },
+  "dq_en_4_294": {
+   "q": "Aktorzy tradycyjnego japońskiego teatru nō nigdy nie noszą masek."
+  },
+  "dq_en_4_295": {
+   "q": "Ile opowieści zawiera „Dekameron” Boccaccia?",
+   "u": "opowieści"
+  },
+  "dq_en_5_287": {
+   "q": "Który francuski poeta z XII wieku jako pierwszy pisał o Świętym Graalu w romansie „Percewal”?",
+   "o": [
+    "Pierre de Ronsard",
+    "Chrétien de Troyes",
+    "François Villon",
+    "Maria Francuska"
+   ]
+  },
+  "dq_en_5_288": {
+   "q": "Którego prawdziwego rycerza sławi średniowieczny hiszpański epos „Pieśń o Cydzie”?",
+   "o": [
+    "Bernarda del Carpio",
+    "Rodriga Díaza de Vivar",
+    "Hernána Cortésa",
+    "Pelagiusza z Asturii"
+   ]
+  },
+  "dq_en_5_289": {
+   "q": "Na baśni którego niemieckiego romantyka oparty jest balet Czajkowskiego „Dziadek do orzechów”?",
+   "o": [
+    "E.T.A. Hoffmanna",
+    "Novalisa",
+    "Heinricha Heinego",
+    "Clemensa Brentana"
+   ]
+  },
+  "dq_en_5_290": {
+   "q": "Do sanktuarium którego świętego pielgrzymują bohaterowie „Opowieści kanterberyjskich”?",
+   "o": [
+    "Tomasza Becketa",
+    "Świętego Patryka",
+    "Świętego Swithuna",
+    "Świętego Jerzego"
+   ]
+  },
+  "dq_en_5_291": {
+   "q": "Kto napisał „Ostatniego Mohikanina”?",
+   "o": [
+    "Nathaniel Hawthorne",
+    "Herman Melville",
+    "Washington Irving",
+    "James Fenimore Cooper"
+   ]
+  },
+  "dq_en_5_292": {
+   "q": "Kogo w greckiej tragedii Antygona chce pochować wbrew woli króla?",
+   "o": [
+    "Ojca",
+    "Syna",
+    "Brata",
+    "Męża"
+   ]
+  },
+  "dq_en_5_293": {
+   "q": "Którego starożytnego chińskiego poetę wspomina się co roku podczas Święta Smoczych Łodzi?",
+   "o": [
+    "Li Bai",
+    "Wang Wei",
+    "Qu Yuan",
+    "Du Fu"
+   ]
+  },
+  "dq_en_5_294": {
+   "q": "Z którym kompozytorem francuska powieściopisarka George Sand przeżyła długi romans?",
+   "o": [
+    "Z Richardem Wagnerem",
+    "Z Ferencem Lisztem",
+    "Z Fryderykiem Chopinem",
+    "Z Hectorem Berliozem"
+   ]
+  },
+  "dq_en_5_295": {
+   "q": "Którego mądrego głupca z tureckich opowieści ludowych często przedstawia się jadącego tyłem na ośle?",
+   "o": [
+    "Keloğlana",
+    "Karagöza",
+    "Dyla Sowizdrzała",
+    "Nasreddina Hodżę"
+   ]
+  },
+  "dq_en_5_296": {
+   "q": "Siostry Brontë początkowo wydawały swoje powieści pod męsko brzmiącymi pseudonimami."
+  },
+  "dq_en_5_297": {
+   "q": "W średniowiecznej legendzie Tristan i Izolda zakochują się w sobie po wypiciu napoju miłosnego."
+  },
+  "dq_en_5_298": {
+   "q": "W książkach Rabelais'go Gargantua i Pantagruel są karłami."
+  },
+  "dq_en_5_299": {
+   "q": "Ilu „jedności” przestrzegał francuski dramat klasyczny?",
+   "u": "jedności"
+  },
+  "dq_en_5_300": {
+   "q": "Ile lat miał poeta John Keats, gdy zmarł?",
+   "u": "lat"
+  },
+  "dq_en_5_301": {
+   "q": "W co zamieniają się kochankowie w chińskiej legendzie o Liang Shanbo i Zhu Yingtai?",
+   "o": [
+    "W żurawie",
+    "W łabędzie",
+    "W motyle",
+    "W gwiazdy"
+   ]
+  },
+  "dq_en_6_272": {
+   "q": "Opera Mozarta „Wesele Figara” powstała na podstawie sztuki Beaumarchais'go."
+  },
+  "dq_en_6_273": {
+   "q": "Kto urodził się wcześniej?",
+   "o": [
+    "Pierre Corneille",
+    "Lope de Vega"
+   ]
+  },
+  "dq_en_6_274": {
+   "q": "Która powieść ukazała się wcześniej?",
+   "o": [
+    "Pamela",
+    "Tom Jones"
+   ]
+  },
+  "dq_en_6_275": {
+   "q": "Który rzymski poeta ukuł zwrot „carpe diem” („chwytaj dzień”)?",
+   "o": [
+    "Horacy",
+    "Katullus",
+    "Wergiliusz",
+    "Lukrecjusz"
+   ]
+  },
+  "dq_en_6_276": {
+   "q": "Wyprawę którego odkrywcy sławi epos Camõesa „Luzjady”?",
+   "o": [
+    "Bartolomeu Diasa",
+    "Vasca da Gamy",
+    "Ferdynanda Magellana",
+    "Krzysztofa Kolumba"
+   ]
+  },
+  "dq_en_6_277": {
+   "q": "Co według legendy próbował objąć poeta Li Bai, gdy utonął?",
+   "o": [
+    "Odbicie Księżyca",
+    "Złotego karpia",
+    "Kwiat lotosu",
+    "Pływający lampion"
+   ]
+  },
+  "dq_en_6_278": {
+   "q": "Dokąd w końcu wraca księżniczka Kaguya w „Opowieści o zbieraczu bambusa”?",
+   "o": [
+    "Na Księżyc",
+    "Na Słońce",
+    "Do morza",
+    "W góry"
+   ]
+  },
+  "dq_en_6_279": {
+   "q": "Jaki wspólny tytuł nadał Balzak swojemu ogromnemu cyklowi powieści?",
+   "o": [
+    "Komedia ludzka",
+    "Rougon-Macquartowie",
+    "Boska komedia",
+    "Komedia omyłek"
+   ]
+  },
+  "dq_en_6_280": {
+   "q": "Tradycja przypisuje stworzenie teatru kabuki kobiecie, artystce Izumo no Okuni."
+  },
+  "dq_en_6_281": {
+   "q": "Montaigne napisał swoje „Próby” po łacinie."
+  },
+  "dq_en_6_282": {
+   "q": "Akcja powieści Waltera Scotta „Ivanhoe” rozgrywa się w Szkocji."
+  },
+  "dq_en_6_283": {
+   "q": "Ile sylab ma klasyczny francuski aleksandryn?",
+   "u": "sylab"
+  },
+  "dq_en_6_284": {
+   "q": "W którym roku po raz pierwszy wydano „Utopię” Tomasza Morusa?"
+  },
+  "dq_en_6_285": {
+   "q": "Który pisarz jest najsłynniejszym rosyjskim bajkopisarzem?",
+   "o": [
+    "Aleksander Puszkin",
+    "Iwan Kryłow",
+    "Michaił Lermontow",
+    "Nikołaj Gogol"
+   ]
+  },
+  "dq_en_7_275": {
+   "q": "Kto urodził się wcześniej?",
+   "o": [
+    "Sor Juana Inés de la Cruz",
+    "Jean Racine"
+   ]
+  },
+  "dq_en_7_276": {
+   "q": "Który aktor i dramatopisarz wraz z ojcem Kan'amim ukształtował japoński teatr nō?",
+   "o": [
+    "Chikamatsu Monzaemon",
+    "Ihara Saikaku",
+    "Matsuo Bashō",
+    "Zeami"
+   ]
+  },
+  "dq_en_7_277": {
+   "q": "Który perski poeta z XII wieku napisał klasyczną wersję „Lejli i Madżnuna”?",
+   "o": [
+    "Nizami Gandżawi",
+    "Firdausi",
+    "Hafez",
+    "Omar Chajjam"
+   ]
+  },
+  "dq_en_7_278": {
+   "q": "O wojnie między którymi dwoma japońskimi rodami opowiada „Opowieść o rodzie Heike”?",
+   "o": [
+    "Soga i Mononobe",
+    "Tokugawa i Toyotomi",
+    "Hōjō i Ashikaga",
+    "Taira i Minamoto"
+   ]
+  },
+  "dq_en_7_279": {
+   "q": "„Pan Tadeusz” Adama Mickiewicza (1834) to narodowa epopeja którego kraju?",
+   "o": [
+    "Polski",
+    "Węgier",
+    "Serbii",
+    "Ukrainy"
+   ]
+  },
+  "dq_en_7_280": {
+   "q": "Któremu hiszpańskiemu dramatopisarzowi tradycyjnie przypisuje się stworzenie uwodziciela Don Juana?",
+   "o": [
+    "Calderónowi de la Barca",
+    "Tirsowi de Molinie",
+    "Franciscowi de Quevedo",
+    "Lopemu de Vedze"
+   ]
+  },
+  "dq_en_7_281": {
+   "q": "Jak Arystoteles w „Poetyce” nazywa oczyszczenie z emocji, które wywołuje tragedia?",
+   "o": [
+    "Katharsis",
+    "Perypetia",
+    "Hybris",
+    "Mimesis"
+   ]
+  },
+  "dq_en_7_282": {
+   "q": "Wordsworth i Coleridge wspólnie wydali tom „Ballady liryczne”."
+  },
+  "dq_en_7_283": {
+   "q": "Lord Byron zmarł w Grecji, dokąd udał się, by wesprzeć grecką wojnę o niepodległość."
+  },
+  "dq_en_7_284": {
+   "q": "„Książę” Machiavellego ukazał się drukiem za życia autora."
+  },
+  "dq_en_7_285": {
+   "q": "W którym roku Charles Perrault wydał swój zbiór baśni?"
+  },
+  "dq_en_7_286": {
+   "q": "W którym roku ukazał się pierwszy tom „Encyklopedii” Diderota?"
+  },
+  "dq_en_7_287": {
+   "q": "Ile rozdziałów ma standardowa wersja „Opowieści o Trzech Królestwach”?",
+   "u": "rozdziałów"
+  },
+  "dq_en_7_288": {
+   "q": "Do jakiej literatury należą Muallakat, słynny zbiór długich od?",
+   "o": [
+    "Klasycznej perskiej",
+    "Średniowiecznej hebrajskiej",
+    "Przedislamskiej arabskiej",
+    "Osmańskiej tureckiej"
+   ]
+  },
+  "dq_en_7_289": {
+   "q": "Według tradycji indyjski poeta mistyk Kabir był tkaczem."
+  },
+  "dq_en_8_255": {
+   "q": "Jakie zwierzę wychowuje bohatera powieści filozoficznej Ibn Tufajla „Hajj ibn Jakzan”?",
+   "o": [
+    "Gazela",
+    "Wielbłąd",
+    "Wilczyca",
+    "Lwica"
+   ]
+  },
+  "dq_en_8_256": {
+   "q": "Jakiego legendarnego ptasiego króla wyruszają szukać ptaki w „Mowie ptaków” Attara?",
+   "o": [
+    "Simurga",
+    "Humę",
+    "Feniksa",
+    "Roka"
+   ]
+  },
+  "dq_en_8_257": {
+   "q": "Miłość Kryszny i kogo sławi sanskrycki poemat „Gitagowinda”?",
+   "o": [
+    "Sity",
+    "Radhy",
+    "Siakuntali",
+    "Draupadi"
+   ]
+  },
+  "dq_en_8_258": {
+   "q": "Hiszpański podbój jakiej krainy opisuje epos Alonsa de Ercilli „Araukana”?",
+   "o": [
+    "Chile",
+    "Florydy",
+    "Meksyku",
+    "Peru"
+   ]
+  },
+  "dq_en_8_259": {
+   "q": "Który rosyjski dramatopisarz, autor „Mądremu biada”, zginął w Teheranie jako poseł?",
+   "o": [
+    "Aleksander Gribojedow",
+    "Aleksander Ostrowski",
+    "Iwan Kryłow",
+    "Denis Fonwizin"
+   ]
+  },
+  "dq_en_8_260": {
+   "q": "„Rycerz w tygrysiej skórze” to narodowy epos którego kraju?",
+   "o": [
+    "Azerbejdżanu",
+    "Armenii",
+    "Gruzji",
+    "Iranu"
+   ]
+  },
+  "dq_en_8_261": {
+   "q": "Arabski zbiór bajek „Kalila i Dimna” wywodzi się z indyjskiej „Pańczatantry”."
+  },
+  "dq_en_8_262": {
+   "q": "„Opowieść o Kiều” to najsłynniejsze klasyczne dzieło literatury koreańskiej."
+  },
+  "dq_en_8_263": {
+   "q": "Poeta Rumi napisał większość swoich wierszy po arabsku."
+  },
+  "dq_en_8_264": {
+   "q": "Na ile pieśni dzieli się epos Camõesa „Luzjady”?",
+   "u": "pieśni"
+  },
+  "dq_en_8_265": {
+   "q": "Ile pieśni liczy standardowa wersja fińskiej „Kalevali” z 1849 roku?",
+   "u": "pieśni"
+  },
+  "dq_en_8_266": {
+   "q": "Ile mniej więcej wierszy zawiera „Man'yōshū”, najstarsza antologia poezji japońskiej?",
+   "u": "wierszy"
+  },
+  "dq_en_8_267": {
+   "q": "W którym roku ukazała się powieść pani de La Fayette „Księżna de Clèves”?"
+  },
+  "dq_en_8_268": {
+   "q": "W którym roku wydrukowano najwcześniejsze znane wydania „Łazika z Tormesu”?"
+  },
+  "dq_en_8_269": {
+   "q": "O czym są głównie „Opowieści niesamowite z Pracowni Liao” Pu Songlinga?",
+   "o": [
+    "O powstaniach chłopskich",
+    "O życiu na dworze cesarskim",
+    "O duchach i lisich demonach",
+    "O morskich podróżach kupców"
+   ]
+  },
+  "dq_en_1_288": {
+   "q": "W wiosce w jakiej starożytnej krainie mieszkają Asteriks i Obeliks?",
+   "o": [
+    "W Galii",
+    "W Brytanii",
+    "W Grecji",
+    "W Egipcie"
+   ]
+  },
+  "dq_en_1_289": {
+   "q": "Kto jest właścicielem fabryki czekolady w „Charliem i fabryce czekolady”?",
+   "o": [
+    "Willy Wonka",
+    "Dziadek Józek",
+    "Pan Salt",
+    "Augustus Gloop"
+   ]
+  },
+  "dq_en_1_290": {
+   "q": "Tarzana wychowuje w dżungli rodzina wilków."
+  },
+  "dq_en_1_291": {
+   "q": "Jaki numer kodowy ma brytyjski szpieg James Bond?",
+   "o": [
+    "009",
+    "070",
+    "007",
+    "001"
+   ]
+  },
+  "dq_en_1_292": {
+   "q": "We „Władcy Pierścieni” hobbit Frodo wyrusza, by zniszczyć potężny pierścień."
+  },
+  "dq_en_1_293": {
+   "q": "Kto napisał „Opowieści z Narnii”?",
+   "o": [
+    "Roald Dahl",
+    "C.S. Lewis",
+    "Lewis Carroll",
+    "J.R.R. Tolkien"
+   ]
+  },
+  "dq_en_1_294": {
+   "q": "Jak ma na imię pies Charliego Browna w komiksie Charlesa Schulza?",
+   "o": [
+    "Odie",
+    "Scooby-Doo",
+    "Snoopy",
+    "Pluto"
+   ]
+  },
+  "dq_en_1_295": {
+   "q": "W co zamienia się bardzo głodna gąsienica z książki obrazkowej Erica Carle'a?",
+   "o": [
+    "W ćmę",
+    "W pszczołę",
+    "W motyla",
+    "W ważkę"
+   ]
+  },
+  "dq_en_1_296": {
+   "q": "Który młody reporter przemierza świat ze swoim białym pieskiem w komiksach Hergégo?",
+   "o": [
+    "Tintin",
+    "Asteriks",
+    "Corto Maltese",
+    "Lucky Luke"
+   ]
+  },
+  "dq_en_1_297": {
+   "q": "Na co wyglądają domki Smerfów w komiksach?",
+   "o": [
+    "Na żołędzie",
+    "Na grzyby",
+    "Na dynie",
+    "Na czajniczki"
+   ]
+  },
+  "dq_en_1_298": {
+   "q": "Który zielony minerał z rodzinnej planety osłabia Supermana?",
+   "o": [
+    "Mithril",
+    "Kryptonit",
+    "Vibranium",
+    "Adamantium"
+   ]
+  },
+  "dq_en_1_299": {
+   "q": "Jakim zwierzęciem jest Babar z książek obrazkowych Jeana de Brunhoffa?",
+   "o": [
+    "Nosorożcem",
+    "Słoniem",
+    "Lwem",
+    "Niedźwiedziem"
+   ]
+  },
+  "dq_en_1_300": {
+   "q": "Jakim zwierzęciem jest Bambi z powieści Felixa Saltena?",
+   "o": [
+    "Lisem",
+    "Królikiem",
+    "Wiewiórką",
+    "Sarną"
+   ]
+  },
+  "dq_en_1_301": {
+   "q": "Na czym słynna czarodziejska niania Mary Poppins lata w powietrzu?",
+   "o": [
+    "Na latawcu",
+    "Na parasolu",
+    "Na latającym dywanie",
+    "Na miotle"
+   ]
+  },
+  "dq_en_1_302": {
+   "q": "Ile dzieci przechodzi przez szafę do Narnii w „Lwie, czarownicy i starej szafie”?",
+   "u": "dzieci"
+  }
+ },
+ "untranslatable": []
+}
