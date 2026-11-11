@@ -80,6 +80,8 @@ internal fun duelQuestionImageRequest(context: Context, url: String): ImageReque
         .size(CourseImagePrefetch.targetPx(context))
         .allowHardware(false)
         .crossfade(false)
+        // Un drapeau arrive avec une marge beige cuite dans son fichier : elle est rognée.
+        .transformations(DuelTrimTransformation())
         .build()
 
 /**

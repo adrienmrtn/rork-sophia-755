@@ -218,6 +218,9 @@ data class DuelResult(
     val promoted: Boolean get() = leagueAfter > leagueBefore
 }
 
+/** Les trophées d'une victoire, pour l'animation de la jauge de ligue au retour sur la page. */
+data class DuelLeagueGain(val before: Int, val after: Int)
+
 /** Une ligne du classement des amis par trophées (moi compris). */
 @Serializable
 data class DuelLeaderboardEntry(

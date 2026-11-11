@@ -90,6 +90,10 @@ import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
 import coil.compose.AsyncImage
 import kotlin.math.ceil
+import androidx.compose.foundation.layout.aspectRatio
+import androidx.compose.foundation.Image
+import coil.compose.AsyncImagePainter
+import coil.compose.rememberAsyncImagePainter
 
 // Les réponses d'une question, le chrono et le fil du score : mêmes états et mêmes proportions
 // que `ios/Sophia/Views/Duels/DuelQuestionViews.swift`.
@@ -335,9 +339,11 @@ private fun ChoiceOption(
 }
 
 /**
- * L'image d'une question (portrait, drapeau, tableau, monument) dans un cadre 4:5 qu'elle
- * remplit. Elle est déjà en cache, chargée pendant la présentation de l'adversaire ; tant
- * qu'elle n'est pas là, le cadre reste vide.
+ * L'image d'une question (portrait, drapeau, tableau, monument) : montrée entière, à ses
+ * proportions, coins arrondis, sans fond, comme sur iOS. Un drapeau arrive rogné de sa marge
+ * beige ([DuelTrimTransformation]) et se pose à même la page, avec un filet pour que ses bords
+ * blancs se détachent. L'image est déjà en cache, chargée pendant la présentation de
+ * l'adversaire ; tant qu'elle n'est pas là, la place reste vide.
  */
 @Composable
 internal fun DuelQuestionImage(url: String?, modifier: Modifier = Modifier) {
@@ -351,18 +357,32 @@ internal fun DuelQuestionImage(url: String?, modifier: Modifier = Modifier) {
         else -> 1f
     }
     Box(
-        modifier = modifier
-            .size(width = 184.dp * scale, height = 230.dp * scale)
-            .sophiaCard(shape = RoundedCornerShape(20.dp), fill = DS.surfaceMuted),
+        modifier = modifier.size(width = 230.dp * scale, height = 230.dp * scale),
+        contentAlignment = Alignment.Center,
     ) {
         if (!url.isNullOrBlank()) {
             val request = remember(url) { duelQuestionImageRequest(context, url) }
-            AsyncImage(
-                model = request,
-                contentDescription = null,
-                contentScale = ContentScale.Crop,
-                modifier = Modifier.fillMaxSize(),
-            )
+            val painter = rememberAsyncImagePainter(model = request)
+            val intrinsic = painter.intrinsicSize
+            if (painter.state is AsyncImagePainter.State.Success && intrinsic.width > 0f && intrinsic.height > 0f) {
+                // Un drapeau rogné : coins moins ronds, filet et ombre légère.
+                val flat = DuelImageTrim.isFlat(intrinsic.width, intrinsic.height)
+                val shape = RoundedCornerShape(if (flat) 8.dp else 16.dp)
+                Image(
+                    painter = painter,
+                    contentDescription = null,
+                    contentScale = ContentScale.Fit,
+                    modifier = Modifier
+                        .padding(vertical = if (flat) 8.dp else 0.dp)
+                        .aspectRatio(intrinsic.width / intrinsic.height)
+                        .then(if (flat) Modifier.shadow(elevation = 6.dp, shape = shape) else Modifier)
+                        .clip(shape)
+                        .then(if (flat) Modifier.border(1.dp, DS.ink.copy(alpha = 0.14f), shape) else Modifier),
+                )
+            } else {
+                // Le peintre doit être posé pour charger : une place vide, sans rien dessiner.
+                Image(painter = painter, contentDescription = null, modifier = Modifier.size(1.dp).alpha(0f))
+            }
         }
     }
 }
