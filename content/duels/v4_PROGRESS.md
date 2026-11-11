@@ -12,9 +12,9 @@ le SQL à copier-coller. Supabase en LECTURE seule (rien n'est écrit dans la ba
 2. [x] Vérification indépendante → content/duels/v4/final_<matière>.json
    (history 67, science 67, literature 66, art 66, mythology 66, world 68 = 400)
 3. [x] scripts/duels_source/30_v4_<matière>.json, build_duels_seed.py → ids nouveaux
-4. [ ] Traduction : work dir content/duels/i18n/lots_v4 (packs --new), out/<lang>/part*.json
-5. [ ] Fusion dans content/duels/i18n/<lang>.json (merge --new)
-6. [ ] SQL : supabase/migrations/20261114010000_duels_v4.sql + supabase/duels_v4_a_coller/
+4. [x] Traduction : work dir content/duels/i18n/lots_v4 (packs --new), out/<lang>/part*.json
+5. [x] Fusion dans content/duels/i18n/<lang>.json (merge --new)
+6. [x] SQL : supabase/migrations/20261114010000_duels_v4.sql + supabase/duels_v4_a_coller/
 
 ## Fait
 - 400 questions vérifiées (history 67, science 67, literature 66, art 66, mythology 66, world 68),
@@ -25,3 +25,6 @@ le SQL à copier-coller. Supabase en LECTURE seule (rien n'est écrit dans la ba
 - Après : merge --new --parts 4, puis
   python3 scripts/build_duels_add_sql.py --baseline content/duels/v4/baseline_ids.txt \
     --migration supabase/migrations/20261114010100_duels_v4_add.sql --paste-dir supabase/duels_v4_a_coller
+
+## v4 TERMINÉE (12/11 ~00h Paris)
+SQL : supabase/duels_v4_a_coller/1..3_duels_ajout.sql (testé sur Postgres local : 400 questions, 11 600 traductions).

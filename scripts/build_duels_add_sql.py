@@ -35,7 +35,8 @@ def sql_str(s: str) -> str:
 
 def translation_rows(lang: str, new: list[dict]) -> list[str]:
     data = json.loads((I18N / f"{lang}.json").read_text(encoding="utf-8"))
-    rejects, _ = check(lang, data, new)
+    ids = {q["id"] for q in new}
+    rejects, _ = check(lang, {**data, "items": {k: v for k, v in data["items"].items() if k in ids}}, new)
     missing = [q["id"] for q in new if q["id"] not in data["items"]]
     if rejects or missing:
         sys.exit(f"{lang} : {len(rejects)} rejet(s), {len(missing)} manquante(s) — SQL non écrit\n  "
