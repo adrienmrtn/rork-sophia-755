@@ -149,8 +149,9 @@ def check(lang: str, data: dict, expected: list[dict]) -> tuple[list[str], list[
     if not isinstance(items, dict):
         return ["fichier : il faut {\"items\": {id: {...}}}"], []
     by_id = {q["id"]: q for q in expected}
+    retired = excluded_ids()
     for qid in items:
-        if qid not in by_id:
+        if qid not in by_id and qid not in retired:
             rejects.append(f"REJET {qid} : identifiant inconnu dans ce lot")
     flagged = {f.get("id") for f in data.get("untranslatable", []) if isinstance(f, dict)}
     for qid, q in by_id.items():
@@ -189,9 +190,17 @@ def check(lang: str, data: dict, expected: list[dict]) -> tuple[list[str], list[
     return rejects, warns
 
 
-def expected_part(part: int | None, parts: int) -> list[dict]:
+def expected_part(part: int | None, parts: int, work: Path | None = None) -> list[dict]:
+    """Les questions d'un lot. Si DIR/packs/partN.md existe, le lot est celui qu'il contient
+    (moins les questions retirées depuis) : retirer une question ne décale pas les lots."""
     qs = to_translate()
-    return split(qs, parts)[part - 1] if part else qs
+    if not part:
+        return qs
+    pack = work / "packs" / f"part{part}.md" if work else None
+    if pack and pack.exists():
+        ids = set(re.findall(r"^### (dq_en_\d+_\d+) ", pack.read_text(encoding="utf-8"), re.M))
+        return [q for q in qs if q["id"] in ids]
+    return split(qs, parts)[part - 1]
 
 
 def cmd_check(work: Path, lang: str, part: int, parts: int) -> int:
@@ -200,7 +209,7 @@ def cmd_check(work: Path, lang: str, part: int, parts: int) -> int:
     except (FileNotFoundError, ValueError) as e:
         print(f"REJET {e}")
         return 1
-    rejects, warns = check(lang, data, expected_part(part, parts))
+    rejects, warns = check(lang, data, expected_part(part, parts, work))
     if part == 1:
         tf = data.get("true_false")
         if not (isinstance(tf, list) and len(tf) == 2 and all(isinstance(x, str) and x.strip() for x in tf)):

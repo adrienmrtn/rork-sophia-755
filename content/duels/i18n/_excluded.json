@@ -1,9 +1,29 @@
 {
  "_readme": "Questions retirées des duels pour toutes les langues : leur réponse tient à un mot anglais et ne se transpose pas. Elles restent dans questions_en.json (les identifiants ne bougent jamais) mais sont désactivées (duel_questions.active = false).",
  "questions": [
-  {"id": "dq_en_2_132", "raison": "Thursday ← Thor : jeudi, jueves, 木曜日… ne viennent pas de Thor."},
-  {"id": "dq_en_3_134", "raison": "« Which English word comes from Pan? » : la question porte sur le lexique anglais."},
-  {"id": "dq_en_3_145", "raison": "cereal ← Ceres : Getreide, 穀物, gabona… sans lien avec Cérès."},
-  {"id": "dq_en_4_135", "raison": "January ← Janus : tammikuu, styczeń, leden, 1月, Ocak… sans lien avec Janus."}
+  {
+   "id": "dq_en_2_132",
+   "raison": "Thursday ← Thor : jeudi, jueves, 木曜日… ne viennent pas de Thor."
+  },
+  {
+   "id": "dq_en_3_134",
+   "raison": "« Which English word comes from Pan? » : la question porte sur le lexique anglais."
+  },
+  {
+   "id": "dq_en_3_145",
+   "raison": "cereal ← Ceres : Getreide, 穀物, gabona… sans lien avec Cérès."
+  },
+  {
+   "id": "dq_en_4_135",
+   "raison": "January ← Janus : tammikuu, styczeń, leden, 1月, Ocak… sans lien avec Janus."
+  },
+  {
+   "id": "dq_en_6_40",
+   "raison": "« algorithm » ← al-Khwarizmi : en arabe, le mot (الخوارزمية) est le nom du savant, la question donne sa réponse."
+  },
+  {
+   "id": "dq_en_6_67",
+   "raison": "Même question que dq_en_6_40 (origine du mot « algorithm »), même problème en arabe."
+  }
  ]
 }
