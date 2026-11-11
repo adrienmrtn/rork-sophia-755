@@ -16,12 +16,6 @@ object AppConfig {
     const val FORMSPREE_ENDPOINT = BuildConfig.FORMSPREE_ENDPOINT
     const val FORMSPREE_AMBASSADOR_ENDPOINT = BuildConfig.FORMSPREE_AMBASSADOR_ENDPOINT
 
-    /**
-     * Page d'un rôle du programme créateurs vidéo (`ugc` ou `slideshow`), ouverte depuis la
-     * bannière « Deviens ambassadeur » des réglages. Le Hub des créateurs a son propre domaine
-     * (équipe de Maximilien) ; anglais seulement, sans préfixe de langue.
-     */
-    fun creatorsUrl(role: String): String = "https://vik-studios-creators.com/creators/$role"
 
     /**
      * L'accueil du Hub des créateurs, dans la langue de l'app : `vik-studios-creators.com/<langue>`.

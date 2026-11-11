@@ -91,7 +91,6 @@ import app.rork.sophia.ui.paywall.PaywallContext
 import app.rork.sophia.ui.paywall.PaywallScreen
 import app.rork.sophia.ui.legal.LegalDocKind
 import app.rork.sophia.ui.legal.LegalDocumentScreen
-import app.rork.sophia.ui.profile.AmbassadorScreen
 import app.rork.sophia.ui.profile.FeedbackScreen
 import app.rork.sophia.ui.profile.ProfileScreen
 import app.rork.sophia.ui.profile.SettingsScreen
@@ -113,7 +112,7 @@ import app.rork.sophia.ui.duels.DuelFriendFlow
 import app.rork.sophia.ui.duels.DuelFriendPresenter
 import app.rork.sophia.ui.newgen.BadgeCelebrationHost
 
-private enum class OverlayScreen { Settings, Friends, Feedback, Ambassador, Terms, Privacy, MyCourses, AudioDownloads }
+private enum class OverlayScreen { Settings, Friends, Feedback, FeatureRequest, Terms, Privacy, MyCourses, AudioDownloads }
 
 /**
  * Widest the tab content is allowed to get. Sophia's screens are a single column; past this
@@ -654,10 +653,10 @@ fun MainTabs(
                                 paywall = PaywallContext.DEBLOQUER_COURS
                             },
                             onOpenFeedback = { openFromSettings(OverlayScreen.Feedback) },
-                            // La page du rôle choisi sur le site, plutôt que le formulaire intégré.
-                            onOpenCreators = { role ->
-                                val url = AppConfig.creatorsUrl(role)
-                                val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+                            onOpenFeatureRequest = { openFromSettings(OverlayScreen.FeatureRequest) },
+                            // Le site des créateurs, dans la langue de l'app : plus de formulaire intégré.
+                            onOpenAmbassador = {
+                                val intent = Intent(Intent.ACTION_VIEW, Uri.parse(AppConfig.creatorHubUrl(language)))
                                     .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                                 runCatching { context.startActivity(intent) }
                             },
@@ -696,10 +695,12 @@ fun MainTabs(
                             isPremium = isPremium,
                             onBack = { closeOverlay() },
                         )
-                    OverlayScreen.Ambassador ->
-                        AmbassadorScreen(
+                    OverlayScreen.FeatureRequest ->
+                        FeedbackScreen(
                             language = language,
+                            isPremium = isPremium,
                             onBack = { closeOverlay() },
+                            initialCategory = "feature",
                         )
                     OverlayScreen.Terms ->
                         LegalDocumentScreen(
