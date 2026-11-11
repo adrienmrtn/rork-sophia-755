@@ -82,14 +82,6 @@ fun CreatorPageScreen(
     val isFollowing = author.slug in progress.followedCreatorSlugs
     val followers = LocalCounters.followers(author.slug) + (if (isFollowing) 1 else 0)
 
-    /** L'annonce « en écriture » de ce créateur dans un événement actif, s'il y en a une. */
-    val campaigns by CampaignStore.flow.collectAsState()
-    val writingFor = remember(author.slug, campaigns) {
-        CampaignStore.active().firstNotNullOfOrNull { campaign ->
-            campaign.upcoming.firstOrNull { it.creator == author.slug }?.let { campaign to it }
-        }
-    }
-
     val listed = remember(courses, segment) {
         when (segment) {
             0 -> courses.sortedByDescending { it.readsCount }
@@ -197,36 +189,6 @@ fun CreatorPageScreen(
                 lineHeight = 25.sp,
                 color = DS.ink,
             )
-        }
-
-        writingFor?.let { (campaign, upcoming) ->
-            Column(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .then(if (onOpenCampaign != null) Modifier.softPress(onClick = { onOpenCampaign(campaign) }) else Modifier)
-                    .dashedBorder(DS.inkTertiary, 16.dp)
-                    .padding(16.dp),
-                verticalArrangement = Arrangement.spacedBy(4.dp),
-            ) {
-                Text(
-                    text = StringStore.text(context, "creator.writingFor", language, campaign.title(language)),
-                    fontFamily = PlusJakartaSans,
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 13.sp,
-                    color = DS.accentSoft,
-                )
-                val dateText = upcoming.releaseDate?.let { date ->
-                    " · " + StringStore.text(context, "event.upcoming.date", language, NewGenFormat.shortDay(date, language))
-                }.orEmpty()
-                Text(
-                    text = upcoming.title(language) + dateText,
-                    fontFamily = PlusJakartaSans,
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 15.sp,
-                    lineHeight = 21.sp,
-                    color = DS.ink,
-                )
-            }
         }
 
         SegmentedPills(

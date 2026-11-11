@@ -76,6 +76,12 @@ import app.rork.sophia.ui.theme.PlusJakartaSans
 import coil.compose.AsyncImage
 import androidx.compose.ui.unit.Constraints
 import androidx.compose.ui.layout.Layout
+import app.rork.sophia.data.rememberCourseSummaries
+import androidx.compose.material.icons.automirrored.filled.MenuBook
+import androidx.compose.material.icons.filled.Groups
+import androidx.compose.material.icons.filled.Group
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.foundation.layout.heightIn
 
 /**
  * Un élément du fil d'accueil. Les cartes vidéo n'existent pas encore (prompt 10) : le cas
@@ -306,8 +312,9 @@ fun CourseFeedCard(
 // MARK: - Carte événement
 
 /**
- * L'événement dans le fil : fond bleu nuit, image si l'équipe en a posé une, symbole or, trois
- * couvertures, barre du défi, et la barre de l'objectif commun quand il y en a un.
+ * L'événement dans le fil, comme sur iOS : l'illustration (image de l'équipe ou éventail de
+ * couvertures) avec la date et le titre posés dessus, l'accroche, le nombre de cours, le défi du
+ * lecteur avec son badge en anneau, l'objectif commun, et le bouton vers la collection.
  */
 @Composable
 fun EventFeedCard(
@@ -320,153 +327,152 @@ fun EventFeedCard(
     fillsPage: Boolean = false,
 ) {
     val context = LocalContext.current
+    val summaries = rememberCourseSummaries(language)
+    val courses = remember(summaries, campaign.slug) {
+        campaign.courseIds.mapNotNull { id -> summaries.firstOrNull { it.id == id } }
+    }
     val done = CampaignStore.challengeProgress(campaign, progress)
-    val target = maxOf(1, campaign.challengeTarget)
+    val complete = done >= campaign.challengeTarget
+    val tagline = campaign.tagline(language)
+
     Column(
         modifier = modifier
             .fillMaxWidth()
             .then(if (fillsPage) Modifier.fillMaxHeight() else Modifier)
             .softPress(onClick = onOpen)
-            .sophiaCard(fill = DS.accent, border = false)
-            .padding(20.dp),
-        verticalArrangement = Arrangement.spacedBy(14.dp),
+            .sophiaCard(),
     ) {
-        campaign.imageUrl?.let { url ->
-            AsyncImage(
-                model = url,
-                contentDescription = null,
-                contentScale = ContentScale.Crop,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(140.dp)
-                    .clip(RoundedCornerShape(14.dp))
-                    .background(Color.White.copy(alpha = 0.08f)),
-            )
-        }
-        Row(modifier = Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
-            CampaignSymbol(symbol = campaign.symbol, size = 36.dp, tint = DS.warm)
-            Spacer(Modifier.weight(1f))
-            campaign.endDate?.let { end ->
-                Text(
-                    text = StringStore.text(context, "event.card.until", language, NewGenFormat.shortDay(end, language)),
-                    fontFamily = PlusJakartaSans,
-                    fontWeight = FontWeight.SemiBold,
-                    fontSize = 12.sp,
-                    color = Color.White,
-                    maxLines = 1,
-                    overflow = TextOverflow.Ellipsis,
-                    modifier = Modifier
-                        .clip(CircleShape)
-                        .background(Color.White.copy(alpha = 0.16f))
-                        .padding(horizontal = 10.dp, vertical = 6.dp),
-                )
-            }
-        }
-        Text(
-            text = campaign.title(language),
-            fontFamily = PlusJakartaSans,
-            fontWeight = FontWeight.ExtraBold,
-            fontSize = 28.sp,
-            color = Color.White,
-        )
-        Text(
-            text = campaign.tagline(language) + " " +
-                StringStore.text(context, "event.card.summary", language, campaign.courseIds.size, campaign.upcoming.size),
-            fontFamily = PlusJakartaSans,
-            fontSize = 15.sp,
-            lineHeight = 21.sp,
-            color = Color.White.copy(alpha = 0.86f),
-        )
-        Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(10.dp)) {
-            campaign.courseIds.take(3).forEach { id ->
-                CourseCover(
-                    courseId = id,
-                    modifier = Modifier
-                        .size(64.dp)
-                        .border(2.dp, Color.White.copy(alpha = 0.6f), RoundedCornerShape(14.dp)),
-                    cornerRadius = 14.dp,
-                )
-            }
-            if (campaign.upcoming.isNotEmpty()) {
-                Text(
-                    text = StringStore.text(context, "event.card.soon", language, campaign.upcoming.size),
-                    fontFamily = PlusJakartaSans,
-                    fontWeight = FontWeight.SemiBold,
-                    fontSize = 15.sp,
-                    color = Color.White,
-                    modifier = Modifier.padding(start = 4.dp),
-                )
-            }
-        }
-        Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+        // L'illustration, la pastille de date en haut, le titre en bas sur un voile sombre. Dans
+        // le fil paginé elle prend la hauteur que le reste de la carte laisse libre.
+        Box(
+            modifier = if (fillsPage) {
+                Modifier.fillMaxWidth().weight(1f).heightIn(min = 150.dp)
+            } else {
+                Modifier.fillMaxWidth().aspectRatio(16f / 10f)
+            },
+        ) {
+            EventArtwork(campaign = campaign, courses = courses, modifier = Modifier.fillMaxSize(), collageLift = 0.08f)
             Box(
                 modifier = Modifier
-                    .weight(1f)
-                    .height(6.dp)
-                    .clip(CircleShape)
-                    .background(Color.White.copy(alpha = 0.2f)),
-            ) {
-                Box(
-                    modifier = Modifier
-                        .fillMaxWidth((done.toFloat() / target).coerceIn(0f, 1f))
-                        .height(6.dp)
-                        .clip(CircleShape)
-                        .background(DS.warm),
-                )
-            }
-            Text(
-                text = StringStore.text(context, "event.card.challenge", language, done, campaign.challengeTarget),
-                fontFamily = PlusJakartaSans,
-                fontWeight = FontWeight.SemiBold,
-                fontSize = 12.sp,
-                color = Color.White,
-                maxLines = 1,
+                    .fillMaxSize()
+                    .background(
+                        Brush.verticalGradient(
+                            0.3f to EventPalette.night.copy(alpha = 0f),
+                            0.68f to EventPalette.night.copy(alpha = 0.5f),
+                            1f to EventPalette.night.copy(alpha = 0.9f),
+                        ),
+                    ),
             )
-        }
-        // L'objectif commun : tous les lecteurs ensemble, chiffre recalculé par le serveur.
-        val goalTarget = campaign.goalTarget
-        if (goalTarget != null && goalTarget > 0) {
-            Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(12.dp)) {
-                Box(
-                    modifier = Modifier
-                        .weight(1f)
-                        .height(6.dp)
-                        .clip(CircleShape)
-                        .background(Color.White.copy(alpha = 0.2f)),
-                ) {
-                    Box(
-                        modifier = Modifier
-                            .fillMaxWidth((campaign.goalCount.toFloat() / goalTarget).coerceIn(0f, 1f))
-                            .height(6.dp)
-                            .clip(CircleShape)
-                            .background(Color.White),
+            if (campaign.hasEnded()) {
+                EventPill(text = StringStore.text(context, "event.ended", language), dark = true, modifier = Modifier.padding(12.dp))
+            } else {
+                campaign.endDate?.let { end ->
+                    EventPill(
+                        text = StringStore.text(context, "event.card.until", language, NewGenFormat.shortDay(end, language)),
+                        modifier = Modifier.padding(12.dp),
                     )
                 }
+            }
+            Text(
+                text = campaign.title(language),
+                fontFamily = PlusJakartaSans,
+                fontWeight = FontWeight.ExtraBold,
+                fontSize = 28.sp,
+                lineHeight = 33.sp,
+                color = Color.White,
+                maxLines = 3,
+                overflow = TextOverflow.Ellipsis,
+                modifier = Modifier.align(Alignment.BottomStart).padding(horizontal = 16.dp).padding(bottom = 14.dp),
+            )
+        }
+
+        Column(modifier = Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(14.dp)) {
+            if (tagline.isNotEmpty()) {
                 Text(
-                    text = StringStore.text(context, "event.goal.progress", language, campaign.goalCount.formatted(language), goalTarget.formatted(language)),
+                    text = tagline,
                     fontFamily = PlusJakartaSans,
-                    fontWeight = FontWeight.SemiBold,
-                    fontSize = 12.sp,
-                    color = Color.White.copy(alpha = 0.9f),
-                    maxLines = 1,
+                    fontSize = 15.sp,
+                    lineHeight = 21.sp,
+                    color = DS.inkSecondary,
+                    maxLines = 3,
                     overflow = TextOverflow.Ellipsis,
                 )
             }
-        }
-        if (fillsPage) Spacer(Modifier.weight(1f))
-        Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(4.dp)) {
-            Text(
-                text = StringStore.text(context, "event.card.seeCollection", language),
-                fontFamily = PlusJakartaSans,
-                fontWeight = FontWeight.Bold,
-                fontSize = 15.sp,
-                color = DS.warm,
-            )
-            Icon(
-                imageVector = Icons.AutoMirrored.Filled.ArrowForwardIos,
-                contentDescription = null,
-                tint = DS.warm,
-                modifier = Modifier.size(12.dp),
+            Row(horizontalArrangement = Arrangement.spacedBy(16.dp), verticalAlignment = Alignment.CenterVertically) {
+                StatChip(
+                    icon = Icons.AutoMirrored.Filled.MenuBook,
+                    text = StringStore.text(context, "event.card.coursesToRead", language, courses.size),
+                )
+                if (campaign.participants > 0) {
+                    StatChip(icon = Icons.Filled.Group, text = campaign.participants.formatted(language))
+                }
+            }
+
+            // Le défi du lecteur (badge dans son anneau, segments) et, dessous, l'objectif commun.
+            Column(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .clip(RoundedCornerShape(16.dp))
+                    .background(DS.canvas)
+                    .padding(12.dp),
+                verticalArrangement = Arrangement.spacedBy(12.dp),
+            ) {
+                Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+                    EventBadgeRing(campaign = campaign, done = done, size = 52.dp)
+                    Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(7.dp)) {
+                        Text(
+                            text = if (complete) {
+                                StringStore.text(context, "event.challenge.unlocked", language, campaign.badgeName(language))
+                            } else {
+                                StringStore.text(context, "event.card.challenge", language, done, campaign.challengeTarget)
+                            },
+                            fontFamily = PlusJakartaSans,
+                            fontWeight = FontWeight.Bold,
+                            fontSize = 13.sp,
+                            color = DS.ink,
+                            maxLines = 2,
+                            overflow = TextOverflow.Ellipsis,
+                        )
+                        EventChallengeMeter(done = done, target = campaign.challengeTarget, track = DS.hairline, height = 6.dp)
+                    }
+                }
+                val goal = campaign.goalTarget
+                if (goal != null && goal > 0) {
+                    Box(modifier = Modifier.fillMaxWidth().height(1.dp).background(DS.hairline))
+                    Column(verticalArrangement = Arrangement.spacedBy(7.dp)) {
+                        Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                            Icon(
+                                imageVector = Icons.Filled.Groups,
+                                contentDescription = null,
+                                tint = DS.accentSoft,
+                                modifier = Modifier.size(14.dp),
+                            )
+                            Text(
+                                text = StringStore.text(
+                                    context, "event.goal.progress", language,
+                                    campaign.goalCount.formatted(language), goal.formatted(language),
+                                ),
+                                fontFamily = PlusJakartaSans,
+                                fontWeight = FontWeight.SemiBold,
+                                fontSize = 12.sp,
+                                color = DS.inkSecondary,
+                                maxLines = 1,
+                                overflow = TextOverflow.Ellipsis,
+                            )
+                        }
+                        EventProgressBar(
+                            fraction = campaign.goalCount.toFloat() / goal,
+                            tint = DS.accentSoft,
+                            track = DS.hairline,
+                            height = 6.dp,
+                        )
+                    }
+                }
+            }
+
+            NewGenPrimaryButton(
+                text = StringStore.text(context, "event.card.seeCollection", language) + "  ›",
+                onClick = onOpen,
             )
         }
     }

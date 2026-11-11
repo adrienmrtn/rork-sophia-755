@@ -39,6 +39,12 @@ Debug APK uses the placeholder RevenueCat key (`goog_REPLACE_ME`) until you set 
   Duels (English only) and Profile tabs. Parcours opens from a card at the bottom of Explore,
   training from a card on the profile, and « Become a creator » is a page (`BecomeCreatorScreen`)
   that leads to `vik-studios-creators.com/<app language>`. The 5-tab shell is no longer served.
+- **Home feed like iOS**: no search button, no creator invite card, no save icon on cards; the
+  cover takes the height the text leaves free. Reads and likes come from the catalogue manifest
+  (`stats`, table `course_counters`): nothing is shown until the server sends a figure.
+- **Events like iOS**: paper-style feed card and event page (artwork or cover fan, badge ring,
+  challenge segments, shared goal), events row at the top of Explore (running first, then ended
+  ones greyed out while still published). Courses « being written » are no longer shown anywhere.
 - **Parcours** (iOS learning path): every collection is a level, courses open one after the other,
   a 20-question mixed quiz passed at 11/20 opens the next level (+100 XP once, synced with iOS as
   `pathLevelResults`); changes since the last visit are replayed (pod fill, connector, level unlock

@@ -88,6 +88,15 @@ import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
 import app.rork.sophia.domain.LearningPathEngine
 import app.rork.sophia.data.ContentCatalog
 import app.rork.sophia.R
+import androidx.compose.ui.geometry.Rect
+import androidx.compose.ui.graphics.drawscope.drawIntoCanvas
+import androidx.compose.ui.graphics.Paint
+import androidx.compose.ui.draw.drawWithContent
+import androidx.compose.ui.graphics.graphicsLayer
+import androidx.compose.ui.graphics.CompositingStrategy
+import androidx.compose.ui.graphics.ColorMatrix
+import androidx.compose.ui.graphics.ColorFilter
+import app.rork.sophia.data.CampaignStore
 
 /**
  * L'onglet Explorer, variante « univers » de la maquette : la recherche (cours, créateurs,
@@ -334,6 +343,9 @@ fun ExploreScreen(
                 }
             }
         } else {
+            // Les événements que le serveur sert : en cours, puis terminés (grisés).
+            EventsRow(language = language, summaries = summaries, onOpenCampaign = onOpenCampaign)
+
             // On cherche beaucoup cette semaine.
             if (trending.isNotEmpty()) {
                 Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
@@ -447,6 +459,147 @@ fun ExploreScreen(
             )
         }
     }
+    }
+}
+
+/**
+ * Les événements que le serveur sert (publiés, dans la région du téléphone) : ceux en cours
+ * d'abord (le plus proche de sa fin en tête), puis les terminés, du plus récent au plus ancien,
+ * grisés. Un événement terminé reste là tant qu'il est en ligne et disparaît quand il n'est plus
+ * publié ; ceux qui n'ont pas commencé ne sont pas montrés.
+ */
+@Composable
+private fun EventsRow(
+    language: AppLanguage,
+    summaries: List<CourseSummary>,
+    onOpenCampaign: (Campaign) -> Unit,
+) {
+    val context = LocalContext.current
+    val campaigns by CampaignStore.flow.collectAsState()
+    val items = remember(campaigns) {
+        CampaignStore.active().map { it to false } + CampaignStore.ended().map { it to true }
+    }
+    if (items.isEmpty()) return
+    Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
+        NewGenSectionTitle(
+            text = StringStore.text(context, "badges.family.events", language),
+            modifier = Modifier.padding(horizontal = 20.dp),
+        )
+        Row(
+            modifier = Modifier
+                .horizontalScroll(rememberScrollState())
+                .padding(horizontal = 20.dp)
+                .padding(bottom = 8.dp),
+            horizontalArrangement = Arrangement.spacedBy(12.dp),
+            verticalAlignment = Alignment.Top,
+        ) {
+            items.forEach { (campaign, ended) ->
+                EventCard(
+                    campaign = campaign,
+                    ended = ended,
+                    language = language,
+                    summaries = summaries,
+                    onClick = { onOpenCampaign(campaign) },
+                )
+            }
+        }
+    }
+}
+
+private val EVENT_CARD_WIDTH = 248.dp
+
+/** Gris pour les événements terminés : l'image comme le texte perdent leur couleur. */
+private val ENDED_EVENT_FILTER = ColorFilter.colorMatrix(ColorMatrix().apply { setToSaturation(0f) })
+
+/**
+ * Une carte d'événement du carrousel. Toutes ont la même taille : l'illustration a une hauteur
+ * fixe et chaque ligne de texte réserve sa place (le titre toujours deux lignes).
+ */
+@Composable
+private fun EventCard(
+    campaign: Campaign,
+    ended: Boolean,
+    language: AppLanguage,
+    summaries: List<CourseSummary>,
+    onClick: () -> Unit,
+) {
+    val context = LocalContext.current
+    val courses = remember(summaries, campaign.slug) {
+        campaign.courseIds.mapNotNull { id -> summaries.firstOrNull { it.id == id } }
+    }
+    // « Jusqu'au 30 nov. » pour un événement en cours, « 1 nov. – 30 nov. » pour un terminé.
+    val end = campaign.endDate
+    val start = campaign.startDate
+    val dates = when {
+        end == null -> " "
+        !ended -> StringStore.text(context, "event.until", language, NewGenFormat.shortDay(end, language))
+        start == null -> NewGenFormat.shortDay(end, language)
+        else -> NewGenFormat.shortDay(start, language) + " – " + NewGenFormat.shortDay(end, language)
+    }
+    val shape = RoundedCornerShape(18.dp)
+    Column(
+        modifier = Modifier
+            .width(EVENT_CARD_WIDTH)
+            .softPress(onClick = onClick)
+            // Terminé : la carte passe en gris et s'efface un peu, mais reste ouvrable.
+            .then(
+                if (ended) {
+                    Modifier.graphicsLayer {
+                        alpha = 0.6f
+                        compositingStrategy = CompositingStrategy.Offscreen
+                    }.drawWithContent {
+                        val paint = Paint().apply { colorFilter = ENDED_EVENT_FILTER }
+                        drawIntoCanvas { canvas ->
+                            canvas.saveLayer(Rect(0f, 0f, size.width, size.height), paint)
+                            drawContent()
+                            canvas.restore()
+                        }
+                    }
+                } else {
+                    Modifier
+                },
+            )
+            .clip(shape)
+            .background(DS.surface)
+            .border(1.dp, DS.hairline, shape),
+    ) {
+        Box(modifier = Modifier.fillMaxWidth().height(140.dp)) {
+            EventArtwork(campaign = campaign, courses = courses, modifier = Modifier.fillMaxSize())
+            if (ended) {
+                EventPill(text = StringStore.text(context, "event.ended", language), dark = true, modifier = Modifier.padding(10.dp))
+            }
+        }
+        Column(modifier = Modifier.padding(12.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
+            Text(
+                text = dates,
+                fontFamily = PlusJakartaSans,
+                fontWeight = FontWeight.Bold,
+                fontSize = 12.sp,
+                color = if (ended) DS.inkTertiary else DS.accentSoft,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
+            )
+            Text(
+                text = campaign.title(language),
+                fontFamily = PlusJakartaSans,
+                fontWeight = FontWeight.ExtraBold,
+                fontSize = 17.sp,
+                lineHeight = 22.sp,
+                color = DS.ink,
+                // Toujours deux lignes, pour que toutes les cartes aient la même hauteur.
+                minLines = 2,
+                maxLines = 2,
+                overflow = TextOverflow.Ellipsis,
+            )
+            Text(
+                text = StringStore.text(context, "event.card.coursesToRead", language, courses.size),
+                fontFamily = PlusJakartaSans,
+                fontSize = 12.sp,
+                color = DS.inkSecondary,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
+            )
+        }
     }
 }
 

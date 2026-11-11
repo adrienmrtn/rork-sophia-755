@@ -7,7 +7,7 @@ import java.time.format.DateTimeFormatter
 
 /**
  * Un événement éditorial (« Movember », une semaine thématique…) : une collection de cours à
- * lire pendant une période, un défi avec un badge, et des cours annoncés en écriture.
+ * lire pendant une période, et un défi avec un badge.
  *
  * Mêmes champs que la table `campaigns` côté serveur, servie par le manifeste du catalogue
  * (clé `events`, voir docs/evenements.md) ; `CampaignStore` lit ce que `CatalogStore` a reçu.
@@ -36,24 +36,18 @@ data class Campaign(
     /** Les pays où l'événement est montré (ISO 3166-1 alpha-2, la région du téléphone) ; null : partout. */
     val countries: List<String>? = null,
     @SerialName("course_ids") val courseIds: List<String> = emptyList(),
-    val upcoming: List<Upcoming> = emptyList(),
     val title: Map<String, String> = emptyMap(),
     val tagline: Map<String, String> = emptyMap(),
     val description: Map<String, String> = emptyMap(),
     @SerialName("badge_name") val badgeName: Map<String, String> = emptyMap(),
+    /**
+     * L'illustration du badge (papier découpé, carrée), choisie dans l'admin du site ; null tant
+     * qu'aucune n'a été générée : le badge montre alors le symbole de l'événement.
+     */
+    @SerialName("badge_image_url") val badgeImageUrl: String? = null,
 ) {
-    @Serializable
-    data class Upcoming(
-        val title: Map<String, String> = emptyMap(),
-        /** Slug d'auteur (`CourseAuthor.slug`), s'il est connu. */
-        val creator: String? = null,
-        /** Date de sortie annoncée, `yyyy-MM-dd`. */
-        val date: String = "",
-    ) {
-        fun title(language: AppLanguage): String = localized(title, language)
-
-        val releaseDate: LocalDate? get() = parseDay(date)
-    }
+    // Les cours annoncés « en écriture » ne sont plus montrés nulle part, comme sur iOS. Le
+    // serveur peut encore envoyer la clé `upcoming` : elle n'est pas décodée.
 
     fun title(language: AppLanguage): String = localized(title, language)
     fun tagline(language: AppLanguage): String = localized(tagline, language)
@@ -75,6 +69,15 @@ data class Campaign(
         val start = startDate ?: return false
         val end = endDate ?: return false
         return !today.isBefore(start) && !today.isAfter(end)
+    }
+
+    /**
+     * Terminé : le dernier jour est passé. L'onglet Explorer le garde, grisé, tant que le
+     * serveur le sert encore.
+     */
+    fun hasEnded(today: LocalDate = LocalDate.now()): Boolean {
+        val end = endDate ?: return false
+        return today.isAfter(end)
     }
 
     companion object {
