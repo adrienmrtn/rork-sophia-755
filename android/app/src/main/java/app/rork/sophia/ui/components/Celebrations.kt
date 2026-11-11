@@ -255,7 +255,7 @@ fun StreakCelebration(
  * the days to come faded.
  */
 @Composable
-private fun StreakWeekStrip(
+internal fun StreakWeekStrip(
     streak: Int,
     lastActiveDate: String?,
     language: AppLanguage,

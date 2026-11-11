@@ -27,6 +27,14 @@ import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import app.rork.sophia.domain.uppercaseIn
+import app.rork.sophia.ui.social.ProfileFriendsSection
+import app.rork.sophia.ui.duels.DuelTrophyCount
+import app.rork.sophia.ui.duels.DuelPalette
+import app.rork.sophia.ui.duels.DuelLeagueBackdrop
+import app.rork.sophia.ui.duels.DuelFormat
+import app.rork.sophia.data.FeatureFlags
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
@@ -108,7 +116,7 @@ fun ProfileV2Screen(
     onOpenProgression: () -> Unit,
     onOpenTraining: () -> Unit,
     onOpenBadges: () -> Unit,
-    onOpenFriends: () -> Unit,
+    onOpenFriends: (friendUserId: String?) -> Unit,
     onDiscoverCreators: () -> Unit,
     onBecomeCreator: () -> Unit,
     onOpenSettings: () -> Unit,
@@ -116,6 +124,12 @@ fun ProfileV2Screen(
     val context = LocalContext.current
     val app = context.applicationContext as SophiaApplication
     val handle by app.socialService.myHandle.collectAsState()
+    val signedIn by app.authService.userId.collectAsState()
+    val duelsVisible = FeatureFlags.duelsVisible(language)
+    val duelHome by app.duelService.home.collectAsState()
+    LaunchedEffect(signedIn, duelsVisible) {
+        if (signedIn != null && duelsVisible) app.duelService.refreshHome()
+    }
     val summaries = rememberCourseSummaries(language)
     var listSegment by remember { mutableIntStateOf(0) }
     var showAvatarPicker by remember { mutableStateOf(false) }
@@ -243,6 +257,53 @@ fun ProfileV2Screen(
             )
         }
 
+        // Les trophées et la ligue, là où les duels existent.
+        if (duelsVisible && signedIn != null) {
+            duelHome?.let { home ->
+                val league = home.currentLeague
+                Box(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(104.dp)
+                        .clip(RoundedCornerShape(20.dp))
+                        .border(1.dp, DS.hairline, RoundedCornerShape(20.dp)),
+                ) {
+                    DuelLeagueBackdrop(league = league, modifier = Modifier.fillMaxSize(), thumb = true)
+                    Box(
+                        modifier = Modifier.fillMaxSize().background(
+                            Brush.verticalGradient(listOf(DuelPalette.night.copy(alpha = 0.05f), DuelPalette.night.copy(alpha = 0.85f))),
+                        ),
+                    )
+                    Row(
+                        modifier = Modifier.align(Alignment.BottomStart).fillMaxWidth().padding(14.dp),
+                        verticalAlignment = Alignment.Bottom,
+                        horizontalArrangement = Arrangement.spacedBy(8.dp),
+                    ) {
+                        Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(2.dp)) {
+                            Text(
+                                text = StringStore.text(context, "duel.trophies.title", language).uppercaseIn(language),
+                                fontFamily = PlusJakartaSans,
+                                fontWeight = FontWeight.Bold,
+                                fontSize = 11.sp,
+                                letterSpacing = 1.1.sp,
+                                color = Color.White.copy(alpha = 0.8f),
+                            )
+                            Text(
+                                text = DuelFormat.leagueName(context, league, language),
+                                fontFamily = PlusJakartaSans,
+                                fontWeight = FontWeight.ExtraBold,
+                                fontSize = 22.sp,
+                                color = Color.White,
+                                maxLines = 1,
+                                overflow = TextOverflow.Ellipsis,
+                            )
+                        }
+                        DuelTrophyCount(value = home.profile.trophies, language = language, size = 20.dp)
+                    }
+                }
+            }
+        }
+
         // L'Entraînement n'a plus d'onglet à lui : il s'ouvre d'ici.
         PosterCard(
             imageRes = R.drawable.training_poster,
@@ -251,12 +312,12 @@ fun ProfileV2Screen(
             onClick = onOpenTraining,
         )
 
-        ResumeCoursesSection(
-            language = language,
-            progress = progress,
-            summaries = summaries,
-            onResume = onResumeCourse,
-            horizontalPadding = 0.dp,
+        // « Ma progression » : la page illustrée (niveau, série, matières, quiz).
+        PosterCard(
+            imageRes = R.drawable.progress_poster,
+            title = StringStore.text(context, "profile.progress.title", language),
+            subtitle = StringStore.text(context, "profile.progress.subtitle", language),
+            onClick = onOpenProgression,
         )
 
         // Mes abonnements.
@@ -272,6 +333,14 @@ fun ProfileV2Screen(
                 onDiscover = onDiscoverCreators,
             )
         }
+
+        // Les amis et leur classement, à même la page.
+        ProfileFriendsSection(
+            language = language,
+            myAvatarId = progress.avatarId,
+            onOpenFriend = { onOpenFriends(it) },
+            onEditHandle = { onOpenFriends(null) },
+        )
 
         // Badges : ceux choisis, puis les derniers gagnés, puis les plus proches d'être gagnés.
         val badgeCenter = app.badgeCenter
@@ -342,97 +411,6 @@ fun ProfileV2Screen(
             }
         }
 
-        // Deviens créateur.
-        Column(
-            modifier = Modifier.fillMaxWidth().sophiaCard().padding(20.dp),
-            verticalArrangement = Arrangement.spacedBy(14.dp),
-        ) {
-            Row(verticalAlignment = Alignment.Top, horizontalArrangement = Arrangement.spacedBy(14.dp)) {
-                Box(
-                    modifier = Modifier.size(48.dp).clip(RoundedCornerShape(14.dp)).background(DS.accentTint),
-                    contentAlignment = Alignment.Center,
-                ) {
-                    Icon(imageVector = Icons.Filled.Edit, contentDescription = null, tint = DS.accent, modifier = Modifier.size(20.dp))
-                }
-                Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(4.dp)) {
-                    Text(
-                        text = StringStore.text(context, "profile.creator.title", language),
-                        fontFamily = PlusJakartaSans,
-                        fontWeight = FontWeight.ExtraBold,
-                        fontSize = 20.sp,
-                        color = DS.ink,
-                    )
-                    Text(
-                        text = StringStore.text(context, "profile.creator.subtitle", language),
-                        fontFamily = PlusJakartaSans,
-                        fontSize = 15.sp,
-                        lineHeight = 21.sp,
-                        color = DS.inkSecondary,
-                    )
-                }
-            }
-            Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
-                CreatorStep(1, StringStore.text(context, "profile.creator.step1", language))
-                CreatorStep(2, StringStore.text(context, "profile.creator.step2", language, AppLanguage.entries.size))
-                CreatorStep(3, StringStore.text(context, "profile.creator.step3", language))
-            }
-            activeCampaign?.let { campaign ->
-                Row(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .softPress(onClick = { onOpenCampaign(campaign) })
-                        .clip(RoundedCornerShape(14.dp))
-                        .background(DS.canvas)
-                        .padding(12.dp),
-                    verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.spacedBy(10.dp),
-                ) {
-                    CampaignSymbol(symbol = campaign.symbol, size = 24.dp, tint = DS.warm)
-                    Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(2.dp)) {
-                        Text(
-                            text = StringStore.text(context, "profile.creator.call", language),
-                            fontFamily = PlusJakartaSans,
-                            fontWeight = FontWeight.Bold,
-                            fontSize = 13.sp,
-                            color = DS.ink,
-                        )
-                        Text(
-                            text = campaign.title(language) + ", " + campaign.tagline(language).replaceFirstChar { it.lowercase() },
-                            fontFamily = PlusJakartaSans,
-                            fontSize = 13.sp,
-                            color = DS.inkSecondary,
-                            maxLines = 2,
-                            overflow = TextOverflow.Ellipsis,
-                        )
-                    }
-                    Icon(
-                        imageVector = Icons.AutoMirrored.Filled.ArrowForwardIos,
-                        contentDescription = null,
-                        tint = DS.inkTertiary,
-                        modifier = Modifier.size(12.dp),
-                    )
-                }
-            }
-            NewGenPrimaryButton(
-                text = StringStore.text(context, "home.start", language),
-                onClick = onBecomeCreator,
-                height = 52.dp,
-                fontSize = 17.sp,
-            )
-        }
-
-        // Pages secondaires.
-        Column(
-            modifier = Modifier
-                .fillMaxWidth()
-                .clip(RoundedCornerShape(20.dp))
-                .background(DS.surface)
-                .border(1.dp, DS.hairline, RoundedCornerShape(20.dp)),
-        ) {
-            PageRow(StringStore.text(context, "profile.page.progression", language), onOpenProgression)
-            Box(modifier = Modifier.fillMaxWidth().padding(start = 16.dp).height(1.dp).background(DS.hairline))
-            PageRow(StringStore.text(context, "profile.page.friends", language), onOpenFriends)
-        }
     }
 }
 

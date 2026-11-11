@@ -51,6 +51,7 @@ class MainActivity : ComponentActivity() {
         )
         deepLinkCourseId = courseIdFromIntent(intent)
         deepLinkCreatorSlug = creatorSlugFromIntent(intent)
+        routeFriendLink(intent)
         observeForeground()
         setContent {
             // The theme needs the language to pick a font family whose script the user can
@@ -74,6 +75,7 @@ class MainActivity : ComponentActivity() {
         setIntent(intent)
         deepLinkCourseId = courseIdFromIntent(intent)
         deepLinkCreatorSlug = creatorSlugFromIntent(intent)
+        routeFriendLink(intent)
     }
 
     /**
@@ -136,6 +138,12 @@ class MainActivity : ComponentActivity() {
         }
         if (pending != null) Analytics.pendingCourseOpenSource = "shared_link"
         return pending
+    }
+
+    /** `sophia://friend/<handle>` : le QR code d'un ami, scanné avec l'appareil photo. */
+    private fun routeFriendLink(intent: Intent?) {
+        val handle = intent?.data?.toString()?.let { SophiaLinks.friendHandle(it) } ?: return
+        app.rork.sophia.data.FriendLinkRouter.open(handle)
     }
 
     private fun creatorSlugFromIntent(intent: Intent?): String? {

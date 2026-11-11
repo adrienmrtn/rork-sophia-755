@@ -77,6 +77,17 @@ object SophiaLinks {
         return courseId(number, catalogIds)
     }
 
+    /** Le lien d'ami dessiné dans « Mon QR code » : `sophia://friend/<handle>`, comme sur iOS. */
+    fun friendUrl(handle: String): String = "sophia://friend/${escape(handle)}"
+
+    /** Le @ d'un lien d'ami ; null pour toute autre adresse ou un @ vide. */
+    fun friendHandle(url: String): String? {
+        val uri = runCatching { URI(url.trim()) }.getOrNull() ?: return null
+        if (uri.scheme?.lowercase() != "sophia" || uri.host?.lowercase() != "friend") return null
+        val raw = (uri.path ?: "").split("/").firstOrNull { it.isNotEmpty() } ?: return null
+        return raw.removePrefix("@").trim().lowercase().takeIf { it.isNotEmpty() }
+    }
+
     /** Le texte partagé : la phrase habituelle, suivie du lien. */
     fun shareText(message: String, url: String): String = "$message $url"
 

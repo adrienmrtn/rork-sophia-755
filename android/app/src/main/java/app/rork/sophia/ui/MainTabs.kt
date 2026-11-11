@@ -95,6 +95,7 @@ import app.rork.sophia.ui.profile.AmbassadorScreen
 import app.rork.sophia.ui.profile.FeedbackScreen
 import app.rork.sophia.ui.profile.ProfileScreen
 import app.rork.sophia.ui.profile.SettingsScreen
+import app.rork.sophia.ui.social.FriendLinkHost
 import app.rork.sophia.ui.social.FriendsScreen
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
@@ -460,8 +461,8 @@ fun MainTabs(
                     onOpenCourse = { course, source -> openCourse(course.toStub(), source) },
                     onOpenCourseById = { id, source -> openCourseById(id, source) },
                     onOpenSettings = { overlay = OverlayScreen.Settings },
-                    onOpenFriends = {
-                        pendingFriendUserId = null
+                    onOpenFriends = { friendUserId ->
+                        pendingFriendUserId = friendUserId
                         overlay = OverlayScreen.Friends
                     },
                     onShowPaywall = { paywall = PaywallContext.DEBLOQUER_COURS },
@@ -899,6 +900,8 @@ fun MainTabs(
 
         // La fête d'un badge gagné, quand les onglets sont à l'écran : jamais par-dessus (ni
         // derrière) un cours, un quiz, un duel, un paywall ou une autre page.
+        // Un lien d'ami ouvert de l'extérieur (QR code scanné) : la feuille de confirmation.
+        FriendLinkHost(language = language)
         BadgeCelebrationHost(
             screenFree = selectedCourse == null && !tabsCovered && !showDuelFlow &&
                 selectedAuthorSlug == null && DuelFriendPresenter.entry == null && !showCreateAccountPrompt,

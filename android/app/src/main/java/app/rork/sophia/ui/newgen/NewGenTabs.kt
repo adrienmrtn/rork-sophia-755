@@ -48,7 +48,7 @@ import app.rork.sophia.ui.components.softPress
 import app.rork.sophia.ui.duels.DUELS_TAB_INDEX
 import app.rork.sophia.ui.duels.DuelsTabHost
 import app.rork.sophia.ui.path.LearningPathScreen
-import app.rork.sophia.ui.profile.ProfileScreen
+import app.rork.sophia.ui.profile.ProgressScreen
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
 import app.rork.sophia.ui.training.TrainingScreen
@@ -132,7 +132,7 @@ fun NewGenTabs(
     onOpenCourse: (CourseSummary, String) -> Unit,
     onOpenCourseById: (String, String) -> Unit,
     onOpenSettings: () -> Unit,
-    onOpenFriends: () -> Unit,
+    onOpenFriends: (friendUserId: String?) -> Unit,
     onShowPaywall: () -> Unit,
     onOpenPathQuiz: (PathLevel, Boolean) -> Unit,
     onOpenAudioPlayer: () -> Unit,
@@ -318,7 +318,7 @@ private fun RouteScreen(
     onOpenCourse: (CourseSummary, String) -> Unit,
     onOpenCourseById: (String, String) -> Unit,
     onOpenSettings: () -> Unit,
-    onOpenFriends: () -> Unit,
+    onOpenFriends: (friendUserId: String?) -> Unit,
     onShowPaywall: () -> Unit,
     onOpenPathQuiz: (PathLevel, Boolean) -> Unit,
     modifier: Modifier = Modifier,
@@ -405,23 +405,14 @@ private fun RouteScreen(
         )
         // Les trois pages ci-dessous étaient des racines d'onglet : elles n'ont pas de bouton
         // retour à elles, un en-tête le leur donne (barre système sur iOS).
-        NewGenRoute.Progression -> Column(modifier = modifier.fillMaxSize()) {
-            NewGenBackHeader(
-                language = language,
-                onBack = onBack,
-                modifier = Modifier.padding(horizontal = 20.dp, vertical = 12.dp),
-            )
-            ProfileScreen(
-                modifier = Modifier.weight(1f),
-                language = language,
-                progress = progress,
-                isPremium = isPremium,
-                onOpenCourse = { onOpenCourseById(it, "profile") },
-                onOpenSettings = onOpenSettings,
-                onShowPaywall = onShowPaywall,
-                onOpenFriends = { onOpenFriends() },
-            )
-        }
+        // « Ma progression », refaite : la page illustrée (l'ancien profil n'est plus servi).
+        NewGenRoute.Progression -> ProgressScreen(
+            language = language,
+            progress = progress,
+            onBack = onBack,
+            onOpenCourse = { onOpenCourseById(it, "profile") },
+            modifier = modifier,
+        )
         NewGenRoute.Path -> Column(modifier = modifier.fillMaxSize()) {
             NewGenBackHeader(
                 language = language,

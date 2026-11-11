@@ -48,6 +48,7 @@
                 <data android:scheme="sophia" android:host="course" />
                 <data android:scheme="sophia" android:host="author" />
                 <data android:scheme="sophia" android:host="creator" />
+                <data android:scheme="sophia" android:host="friend" />
             </intent-filter>
             <!--
                 Les pages de cours et d'auteurs du site sont des liens d'app : un lien partagé

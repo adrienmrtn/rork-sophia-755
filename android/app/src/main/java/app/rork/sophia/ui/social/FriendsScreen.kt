@@ -49,6 +49,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import app.rork.sophia.SophiaApplication
 import app.rork.sophia.data.FriendLeaderboardEntry
+import app.rork.sophia.data.FriendPresence
 import app.rork.sophia.data.FriendPublicStats
 import app.rork.sophia.data.FriendsLeaderboardPeriod
 import app.rork.sophia.data.ProgressManager
@@ -58,6 +59,7 @@ import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.uppercaseIn
 import app.rork.sophia.ui.components.CircleIconButton
 import app.rork.sophia.ui.components.ConfirmDialog
+import app.rork.sophia.ui.duels.DuelPalette
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
 import app.rork.sophia.ui.theme.SophiaTypography
@@ -458,6 +460,10 @@ private fun FriendProfileSheet(
     val level = ProgressManager.globalLevelProgress(stats.global_xp)
     val progress = if (level.xpForLevel == 0) 0f else level.xpIntoLevel.toFloat() / level.xpForLevel
     var confirmRemove by remember { mutableStateOf(false) }
+    var presence by remember(stats.user_id) { mutableStateOf<FriendPresence?>(null) }
+    LaunchedEffect(stats.user_id) {
+        presence = (context.applicationContext as SophiaApplication).socialService.friendPresence(stats.user_id)
+    }
 
     if (confirmRemove) {
         ConfirmDialog(
@@ -502,6 +508,10 @@ private fun FriendProfileSheet(
                 letterSpacing = 2.sp,
             )
             Text("@${stats.handle}", style = SophiaTypography.titleMedium)
+            // « En ligne », ou « Vu il y a 5 minutes ». Rien quand le serveur ne sait pas.
+            friendPresenceText(context, presence, language)?.let {
+                Text(it, style = SophiaTypography.labelMedium, color = if (presence?.online == true) DuelPalette.online else DS.inkSecondary)
+            }
             Text(
                 StringStore.text(context, "common.levelShort", language, level.level),
                 style = SophiaTypography.labelMedium,
@@ -615,7 +625,7 @@ private fun StatTile(label: String, value: String, modifier: Modifier = Modifier
 }
 
 @Composable
-private fun PeriodChip(label: String, selected: Boolean, onClick: () -> Unit) {
+internal fun PeriodChip(label: String, selected: Boolean, onClick: () -> Unit) {
     Text(
         text = label,
         style = SophiaTypography.labelLarge,
