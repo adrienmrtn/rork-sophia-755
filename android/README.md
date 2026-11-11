@@ -45,6 +45,13 @@ Debug APK uses the placeholder RevenueCat key (`goog_REPLACE_ME`) until you set 
 - **Events like iOS**: paper-style feed card and event page (artwork or cover fan, badge ring,
   challenge segments, shared goal), events row at the top of Explore (running first, then ended
   ones greyed out while still published). Courses « being written » are no longer shown anywhere.
+- **Step-by-step reader** (default, as on iOS): one vertical thread, each block revealed by
+  « Continue » with an entry animation, auto-scroll and haptics; the paged reader stays available
+  from the menu in the reader header (`CourseReadingMode`, kept on the device).
+- **« See the original »** opens the course in the language it was written in (from the content or
+  the manifest `origins`), for readers who can read the whole course.
+- **Sharing** a course or a creator sends the site link; the app opens `sophia-culture.com` course
+  and author pages (App Links, see `docs/partage.md`).
 - **Parcours** (iOS learning path): every collection is a level, courses open one after the other,
   a 20-question mixed quiz passed at 11/20 opens the next level (+100 XP once, synced with iOS as
   `pathLevelResults`); changes since the last visit are replayed (pod fill, connector, level unlock
