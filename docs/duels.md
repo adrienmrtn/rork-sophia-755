@@ -251,7 +251,7 @@ toujours vrai, sur iOS comme sur Android).
 - **SQL** : `python3 scripts/build_duels_i18n_sql.py` écrit
   `supabase/migrations/20261113010000_duels_i18n.sql` (schéma, fonctions, questions retirées, noms
   des ligues, traductions ; rejouable). Il refuse d'écrire si une langue est incomplète. Le même
-  contenu, découpé en fichiers de moins de 900 000 caractères (l'éditeur coupe à 1 000 000) pour l'éditeur SQL de Supabase, est dans
+  contenu, découpé en fichiers de moins de 900 000 octets (l'éditeur coupe à 1 000 000 d'octets) pour l'éditeur SQL de Supabase, est dans
   `supabase/duels_i18n_a_coller/` (à exécuter dans l'ordre).
 - **Nouvelles questions** : après `build_duels_seed.py`, traduire les nouvelles (un lot `packs` ne
   contenant qu'elles), relancer `build_duels_i18n_sql.py`. Une question sans traduction reste jouable,
