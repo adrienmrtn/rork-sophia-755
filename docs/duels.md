@@ -1,11 +1,10 @@
 # Duels
 
-Des parties de 20 questions contre un adversaire, avec des trophées et 30 ligues. Version bêta :
-iOS, et Android pour les duels classés (voir « Android » plus bas ; les duels entre amis n'y sont
-pas encore), questions en anglais seulement, donc onglet visible quand l'app est en anglais
-(`FeatureFlags.duelsVisible`, lu au lancement : après un changement de langue, l'onglet suit au
-prochain lancement). Les adversaires sont simulés par le serveur ; rien dans l'app ne
-le dit, et le niveau de difficulté du joueur n'est jamais affiché.
+Des parties de 20 questions contre un adversaire, avec des trophées et 30 ligues. iOS et Android
+(duels classés et duels entre amis ; voir « Android » plus bas).
+Ouverts dans les 30 langues de l'app (voir « Langues ») : un joueur japonais peut affronter un
+joueur hongrois, chacun lit les questions dans sa langue. Les adversaires sont simulés par le
+serveur ; rien dans l'app ne le dit, et le niveau de difficulté du joueur n'est jamais affiché.
 
 ## Règles
 
@@ -132,8 +131,8 @@ Un duel amical : les deux amis reçoivent les mêmes 20 questions et répondent 
 trophée en jeu, les statistiques classées ne bougent pas ; le profil d'un ami montre le bilan des
 duels amicaux joués contre lui.
 
-- **Présence.** L'app n'a pas de notifications push. Tant qu'elle est ouverte (en anglais, là où
-  les duels existent), elle appelle `duel_ping` toutes les 4 secondes : c'est ce qui tient la
+- **Présence.** L'app n'a pas de notifications push. Tant qu'elle est ouverte, elle appelle
+  `duel_ping` (avec sa langue) toutes les 4 secondes : c'est ce qui tient la
   pastille verte chez les amis (« en ligne » = signal reçu depuis moins de 20 secondes), et c'est
   la réponse à ce signal qui apporte une invitation. `duel_go_offline` à la mise en arrière-plan.
 - **Invitation.** Depuis le profil d'un ami ou le classement de l'onglet Duels, vers n'importe
@@ -199,7 +198,7 @@ textes (les clés `duel.*` de `assets/strings`).
 
 ## Pas encore fait
 
-Les questions dans les autres langues, les saisons, les sons, un gain d'XP par duel,
+Les saisons, les sons, un gain d'XP par duel,
 les notifications push (une invitation n'arrive que si l'ami a l'app ouverte).
 
 ## Adversaires plus crédibles (10 novembre)
@@ -231,3 +230,40 @@ les notifications push (une invitation n'arrive que si l'ami a l'app ouverte).
 - **Après une victoire** : au retour sur l'accueil des duels, la carte de ligue rejoue une fois
   la montée des trophées (barre, compteur, vibrations, passage de ligue le cas échéant).
 - **Ligues** : la carte de la ligue du joueur affiche ses trophées, plus le seuil d'entrée.
+
+## Langues (13/11/2026)
+
+Les duels sont ouverts dans toutes les langues de l'app (`FeatureFlags.duelsVisible` vaut
+toujours vrai, sur iOS comme sur Android).
+
+- **Une seule partie, plusieurs langues.** Une question garde son identifiant, son type, sa bonne
+  réponse (même rang d'option), ses bornes et sa valeur dans toutes les langues ; seuls le texte,
+  les options et l'unité du curseur changent. Le tirage ne bouge pas (vivier anglais, la
+  référence) ; `duel_question_json`, par où passent toutes les questions envoyées (duel classé,
+  manches, question décisive, duel entre amis), rend chaque question dans la langue de celui qui
+  appelle. Deux amis de langues différentes reçoivent donc les mêmes questions, chacun dans la
+  sienne, et le score se compte comme avant.
+- **Langue du joueur** : `duel_profiles.lang`, posée par l'app avant la page des duels
+  (`duel_set_language`, une fois par compte et par langue) et par chaque `duel_ping`. Une langue
+  inconnue retombe sur l'anglais ; une app d'avant, qui ne la donne pas, reçoit l'anglais.
+- **Traductions** : table `duel_question_translations` (question, langue, texte, options, unité ;
+  aucun accès direct). Sans traduction, le texte anglais. Les boutons vrai/faux viennent aussi du
+  serveur, traduits. Les noms des 30 figures de ligue sont dans `duel_leagues.names` (langue → nom),
+  rendus par `duel_home` ; les badges de ligue d'iOS les reprennent quand la page des duels est chargée.
+- **Duel entre amis** : `duel_can_challenge` ne demande plus que l'ami ait l'app en anglais, seulement
+  qu'elle ait les duels (un signal de présence déjà reçu).
+- **Questions retirées** : celles dont la réponse tient à un mot anglais (Thursday ← Thor,
+  January ← Janus…) sont désactivées pour tout le monde, pour que tous les joueurs piochent dans le
+  même vivier. Liste et raisons : `content/duels/i18n/_excluded.json`.
+- **Contenu** : `content/duels/i18n/<langue>.json`. Traduit depuis l'anglais par des éditeurs natifs
+  (une consigne commune, le guide de traduction de chaque langue), en réécrivant chaque question
+  comme un auteur de quiz de la langue : noms et titres établis (Ulysse, *L'Avare*, 『百年の孤独』),
+  options parallèles, rien qui donne la réponse. `python3 scripts/duels_i18n.py` découpe les lots
+  (`packs`), contrôle une traduction (`check` : identifiants, nombre et unicité des options, nombres
+  conservés, écriture de la langue), réunit les lots (`merge`) et fait le point (`status`).
+- **SQL** : `python3 scripts/build_duels_i18n_sql.py` écrit
+  `supabase/migrations/20261113010000_duels_i18n.sql` (schéma, fonctions, questions retirées, noms
+  des ligues, traductions ; rejouable). Il refuse d'écrire si une langue est incomplète.
+- **Nouvelles questions** : après `build_duels_seed.py`, traduire les nouvelles (un lot `packs` ne
+  contenant qu'elles), relancer `build_duels_i18n_sql.py`. Une question sans traduction reste jouable,
+  en anglais.

@@ -87,6 +87,7 @@ final class DuelService {
         isLoadingHome = true
         defer { isLoadingHome = false }
         await flushPendingFinish()
+        await sendLanguageIfNeeded()
         do {
             let fresh: DuelHome = try await client
                 .rpc("duel_home")
@@ -103,6 +104,29 @@ final class DuelService {
             homeFailed = home == nil
             #if DEBUG
             print("[Duel] refreshHome failed: \(error)")
+            #endif
+        }
+    }
+
+    /// La langue déjà donnée au serveur pour ce compte (« <compte>|<langue> »).
+    private var languageSent: String?
+
+    /// Dit au serveur dans quelle langue envoyer les questions et les noms des ligues, avant la
+    /// page des duels (puis à chaque changement de langue ou de compte). Sans réponse, ou sur un
+    /// serveur qui n'a pas encore la fonction, les questions restent en anglais : on réessaie au
+    /// prochain passage.
+    private func sendLanguageIfNeeded() async {
+        guard let userId else { return }
+        let language = AppLanguage.currentPersisted().rawValue
+        let key = "\(userId)|\(language)"
+        guard languageSent != key else { return }
+        struct Params: Encodable { let p_lang: String }
+        do {
+            try await client.rpc("duel_set_language", params: Params(p_lang: language)).execute()
+            languageSent = key
+        } catch {
+            #if DEBUG
+            print("[Duel] duel_set_language failed: \(error)")
             #endif
         }
     }

@@ -23,11 +23,11 @@ object FeatureFlags {
     val newNavigation: Boolean get() = navigationVariant == NavigationVariant.NEWGEN
 
     /**
-     * Les duels (onglet, trophées et ligue d'un ami) : visibles quand l'app est en anglais, la
-     * seule langue des questions pour l'instant. Comme sur iOS, à lire une fois au lancement :
-     * un changement de langue prend effet au lancement suivant, pour ne pas faire apparaître
-     * ou disparaître un onglet sous les doigts.
+     * Les duels (onglet, trophées et ligue d'un ami) : ouverts dans toutes les langues de l'app.
+     * Le serveur rend chaque question dans la langue du joueur (`duel_set_language`), et deux
+     * joueurs de langues différentes jouent la même partie. Le paramètre reste pour les
+     * appelants ; comme sur iOS, la valeur est lue une fois au lancement.
      */
-    fun duelsVisible(language: app.rork.sophia.domain.AppLanguage): Boolean =
-        language == app.rork.sophia.domain.AppLanguage.ENGLISH
+    @Suppress("UNUSED_PARAMETER")
+    fun duelsVisible(language: app.rork.sophia.domain.AppLanguage): Boolean = true
 }

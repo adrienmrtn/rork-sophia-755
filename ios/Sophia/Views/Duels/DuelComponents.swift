@@ -231,6 +231,9 @@ enum DuelFormat {
         switch unit {
         case nil, "", "year": return number
         case "%": return "\(number) %"
+        // Un compteur japonais (日, 冊, か国…) se colle au nombre : « 13植民地 ».
+        case let other? where other.unicodeScalars.first.map({ (0x3040...0x30FF).contains($0.value) || (0x4E00...0x9FFF).contains($0.value) }) == true:
+            return "\(number)\(other)"
         case let other?: return "\(number) \(other)"
         }
     }

@@ -54,7 +54,8 @@ sealed class DuelError(message: String) : Exception(message) {
  * même gestion de la fin de partie restée sans réponse du serveur (elle est gardée et renvoyée).
  */
 class DuelService(context: Context, private val auth: AuthService) {
-    private val prefs = context.applicationContext.getSharedPreferences("sophia_prefs", Context.MODE_PRIVATE)
+    private val appContext = context.applicationContext
+    private val prefs = appContext.getSharedPreferences("sophia_prefs", Context.MODE_PRIVATE)
     private val json = Json { ignoreUnknownKeys = true; explicitNulls = false; coerceInputValues = true }
     private val db get() = SupabaseManager.client.postgrest
     private val pendingLock = Mutex()
@@ -88,6 +89,7 @@ class DuelService(context: Context, private val auth: AuthService) {
         }
         // Une fin de partie restée sans réponse part d'abord, sauf pendant une partie.
         if (!_isPlaying.value) flushPendingFinish()
+        sendLanguageIfNeeded(userId)
         try {
             val fresh: DuelHome = json.decodeFromString(db.rpc("duel_home").data)
             if (auth.userId.value == userId) {
@@ -100,6 +102,29 @@ class DuelService(context: Context, private val auth: AuthService) {
             throw cancelled
         } catch (_: Throwable) {
             if (auth.userId.value == userId) _homeFailed.value = _home.value == null
+        }
+    }
+
+    /** La langue déjà donnée au serveur pour ce compte (« <compte>|<langue> »). */
+    @Volatile private var languageSent: String? = null
+
+    /**
+     * Dit au serveur dans quelle langue envoyer les questions et les noms des ligues, avant
+     * l'accueil (puis à chaque changement de langue ou de compte). En cas d'échec, ou sur un
+     * serveur qui n'a pas encore la fonction, les questions restent en anglais : on réessaie au
+     * prochain chargement. Même rôle que `sendLanguageIfNeeded` sur iOS.
+     */
+    private suspend fun sendLanguageIfNeeded(userId: String) {
+        val language = LanguageManager.persisted(appContext).code
+        val key = "$userId|$language"
+        if (languageSent == key) return
+        try {
+            db.rpc("duel_set_language", buildJsonObject { put("p_lang", language) })
+            languageSent = key
+        } catch (cancelled: CancellationException) {
+            throw cancelled
+        } catch (_: Throwable) {
+            // Réessayé au prochain chargement de l'accueil.
         }
     }
 

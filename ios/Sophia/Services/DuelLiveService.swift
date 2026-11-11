@@ -110,7 +110,7 @@ final class DuelLiveService {
             let client = self.client
             let response: DuelPingResponse = try await DuelTimeout.run(seconds: 6) {
                 try await client
-                    .rpc("duel_ping", params: Params(p_lang: "en", p_busy: busy))
+                    .rpc("duel_ping", params: Params(p_lang: AppLanguage.currentPersisted().rawValue, p_busy: busy))
                     .execute()
                     .value
             }
