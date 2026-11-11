@@ -1,4 +1,4 @@
--- Duels dans toutes les langues — morceau 01 sur 07. À exécuter dans l'ordre, chacun en entier.
+-- Duels dans toutes les langues — morceau 01 sur 30. Dans l'ordre, chacun en entier.
 BEGIN;
 
 -- Duels dans toutes les langues de l'app.
