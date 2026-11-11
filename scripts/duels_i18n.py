@@ -6,6 +6,9 @@
     python3 scripts/duels_i18n.py merge  --work DIR [--parts 3]
     python3 scripts/duels_i18n.py status
 
+Questions ajoutées après coup : --new sur packs, check et merge (lots des seules questions pas
+encore traduites, ajoutés aux fichiers existants).
+
 L'anglais (content/duels/questions_en.json) reste la référence : une question garde son
 identifiant, son type, sa bonne réponse (même rang d'option), ses bornes et sa valeur dans
 toutes les langues. Seuls changent le texte de la question, celui des options et l'unité du
@@ -70,6 +73,13 @@ def to_translate() -> list[dict]:
     return [q for q in load_questions() if q["id"] not in skip]
 
 
+def not_yet_translated() -> list[dict]:
+    """Les questions ajoutées depuis la dernière traduction (absentes de fr.json)."""
+    ref = I18N / "fr.json"
+    done = set(json.loads(ref.read_text(encoding="utf-8"))["items"]) if ref.exists() else set()
+    return [q for q in to_translate() if q["id"] not in done]
+
+
 def split(items: list, parts: int) -> list[list]:
     size = -(-len(items) // parts)
     return [items[i * size:(i + 1) * size] for i in range(parts)]
@@ -97,10 +107,10 @@ def render(q: dict) -> str:
     return "\n".join(lines)
 
 
-def cmd_packs(work: Path, parts: int) -> None:
+def cmd_packs(work: Path, parts: int, new: bool = False) -> None:
     out = work / "packs"
     out.mkdir(parents=True, exist_ok=True)
-    for n, chunk in enumerate(split(to_translate(), parts), start=1):
+    for n, chunk in enumerate(split(not_yet_translated() if new else to_translate(), parts), start=1):
         (out / f"part{n}.md").write_text("\n\n".join(render(q) for q in chunk) + "\n", encoding="utf-8")
         print(f"part{n}: {len(chunk)} questions ({chunk[0]['id']} … {chunk[-1]['id']})")
 
@@ -203,14 +213,14 @@ def expected_part(part: int | None, parts: int, work: Path | None = None) -> lis
     return split(qs, parts)[part - 1]
 
 
-def cmd_check(work: Path, lang: str, part: int, parts: int) -> int:
+def cmd_check(work: Path, lang: str, part: int, parts: int, new: bool = False) -> int:
     try:
         data = load_part(work, lang, part)
     except (FileNotFoundError, ValueError) as e:
         print(f"REJET {e}")
         return 1
     rejects, warns = check(lang, data, expected_part(part, parts, work))
-    if part == 1:
+    if part == 1 and not new:
         tf = data.get("true_false")
         if not (isinstance(tf, list) and len(tf) == 2 and all(isinstance(x, str) and x.strip() for x in tf)):
             rejects.append("REJET true_false : il faut [\"<True>\", \"<False>\"] dans la langue")
@@ -226,13 +236,25 @@ def cmd_check(work: Path, lang: str, part: int, parts: int) -> int:
 
 
 # ------------------------------------------------------------------ merge / status
-def cmd_merge(work: Path, parts: int) -> None:
+def cmd_merge(work: Path, parts: int, new: bool = False) -> None:
+    """Sans --new : réécrit content/duels/i18n/<lang>.json depuis les lots. Avec --new : ajoute
+    les traductions des lots (questions nouvelles) au fichier existant, sans rien y retirer."""
     I18N.mkdir(parents=True, exist_ok=True)
     for lang in LANGS:
         try:
             loaded = [load_part(work, lang, n) for n in range(1, parts + 1)]
         except (FileNotFoundError, ValueError) as e:
             print(f"{lang} : incomplet ({e}), ignoré")
+            continue
+        if new:
+            path = I18N / f"{lang}.json"
+            current = json.loads(path.read_text(encoding="utf-8"))
+            for d in loaded:
+                current["items"].update(d["items"])
+                current["untranslatable"] += d["untranslatable"]
+            current["items"] = dict(sorted(current["items"].items(), key=lambda kv: order_key(kv[0])))
+            path.write_text(json.dumps(current, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+            print(f"{lang} : {len(current['items'])} questions, {len(current['untranslatable'])} signalées")
             continue
         items, flags = {}, []
         for d in loaded:
@@ -277,17 +299,20 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     sub = ap.add_subparsers(dest="cmd", required=True)
     p = sub.add_parser("packs"); p.add_argument("--work", type=Path, required=True); p.add_argument("--parts", type=int, default=3)
+    p.add_argument("--new", action="store_true", help="seulement les questions pas encore traduites")
     c = sub.add_parser("check"); c.add_argument("--work", type=Path, required=True); c.add_argument("--lang", required=True)
     c.add_argument("--part", type=int, required=True); c.add_argument("--parts", type=int, default=3)
+    c.add_argument("--new", action="store_true", help="lot de questions nouvelles : ni vrai/faux ni ligues")
     m = sub.add_parser("merge"); m.add_argument("--work", type=Path, required=True); m.add_argument("--parts", type=int, default=3)
+    m.add_argument("--new", action="store_true", help="ajouter aux traductions existantes")
     sub.add_parser("status")
     a = ap.parse_args()
     if a.cmd == "packs":
-        cmd_packs(a.work, a.parts)
+        cmd_packs(a.work, a.parts, a.new)
     elif a.cmd == "check":
-        return cmd_check(a.work, a.lang, a.part, a.parts)
+        return cmd_check(a.work, a.lang, a.part, a.parts, a.new)
     elif a.cmd == "merge":
-        cmd_merge(a.work, a.parts)
+        cmd_merge(a.work, a.parts, a.new)
     else:
         return cmd_status()
     return 0
