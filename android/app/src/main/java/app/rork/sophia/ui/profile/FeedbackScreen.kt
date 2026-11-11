@@ -53,7 +53,7 @@ import app.rork.sophia.ui.theme.PlusJakartaSans
 import app.rork.sophia.ui.theme.SophiaTypography
 import kotlinx.coroutines.launch
 
-private val CATEGORIES = listOf("bug", "idea", "content", "translation", "other")
+private val CATEGORIES = listOf("bug", "idea", "feature", "content", "translation", "other")
 
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
@@ -61,10 +61,12 @@ fun FeedbackScreen(
     language: AppLanguage,
     isPremium: Boolean,
     onBack: () -> Unit,
+    /** La catégorie présélectionnée : « Demander une fonctionnalité » ouvre le formulaire sur la sienne. */
+    initialCategory: String = "idea",
 ) {
     val context = LocalContext.current
     val scope = rememberCoroutineScope()
-    var category by remember { mutableStateOf("idea") }
+    var category by remember { mutableStateOf(initialCategory) }
     var message by remember { mutableStateOf("") }
     var email by remember { mutableStateOf("") }
     var sending by remember { mutableStateOf(false) }
@@ -125,7 +127,7 @@ fun FeedbackScreen(
         ) {
             CircleIconButton(icon = Icons.AutoMirrored.Filled.ArrowBack, onClick = onBack)
             ScreenTitle(
-                text = StringStore.text(context, "feedback.title", language),
+                text = StringStore.text(context, if (category == "feature") "feedback.feature.title" else "feedback.title", language),
                 modifier = Modifier.weight(1f),
             )
         }
@@ -162,7 +164,7 @@ fun FeedbackScreen(
         FeedbackField(
             value = message,
             onValueChange = { message = it },
-            placeholder = StringStore.text(context, "feedback.message.placeholder", language),
+            placeholder = StringStore.text(context, if (category == "feature") "feedback.feature.placeholder" else "feedback.message.placeholder", language),
             singleLine = false,
             minHeight = 150.dp,
         )

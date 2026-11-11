@@ -12,7 +12,9 @@ qu'on vient de lire contienne la réponse, ce qui ne tient pas à l'échelle de 
 cette contrainte ; les quiz restent à la fin du cours. Le lecteur pas à pas est **livré sur iOS**
 (`CourseReadingMode`, `CourseStepReaderView`, `ReadingModePickerControl`), par défaut, avec
 l'ancien lecteur par pages conservé : le choix se fait dans l'en-tête du lecteur (menu) ou dans
-Réglages, et vaut pour tous les cours. Android reste par pages pour l'instant. Pas d'A/B : le
+Réglages, et vaut pour tous les cours. Android l'a aussi depuis le 11/11/2026
+(`CourseStepReader.kt` : `CourseReadingMode`, `ReaderStep`, `CourseStepReader` ; choix dans
+l'en-tête du lecteur, pas encore dans les Réglages). Pas d'A/B : le
 mode est un choix du lecteur, lu dans `section_view.mode`. Le code n'a pas été compilé dans la
 session qui l'a écrit (pas de Xcode) : à vérifier au premier build.
 

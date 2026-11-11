@@ -82,14 +82,6 @@ fun CreatorPageScreen(
     val isFollowing = author.slug in progress.followedCreatorSlugs
     val followers = LocalCounters.followers(author.slug) + (if (isFollowing) 1 else 0)
 
-    /** L'annonce « en écriture » de ce créateur dans un événement actif, s'il y en a une. */
-    val campaigns by CampaignStore.flow.collectAsState()
-    val writingFor = remember(author.slug, campaigns) {
-        CampaignStore.active().firstNotNullOfOrNull { campaign ->
-            campaign.upcoming.firstOrNull { it.creator == author.slug }?.let { campaign to it }
-        }
-    }
-
     val listed = remember(courses, segment) {
         when (segment) {
             0 -> courses.sortedByDescending { it.readsCount }
@@ -119,7 +111,11 @@ fun CreatorPageScreen(
                 RoundIconButton(
                     icon = Icons.Filled.Share,
                     onClick = {
-                        val message = StringStore.text(context, "share.creator.message", language, author.name)
+                        // La phrase habituelle, suivie du lien de sa page sur le site.
+                        val message = app.rork.sophia.domain.SophiaLinks.shareText(
+                            StringStore.text(context, "share.creator.message", language, author.name),
+                            app.rork.sophia.domain.SophiaLinks.authorWebUrl(author.slug),
+                        )
                         val send = Intent(Intent.ACTION_SEND).setType("text/plain").putExtra(Intent.EXTRA_TEXT, message)
                         runCatching { context.startActivity(Intent.createChooser(send, null)) }
                     },
@@ -197,36 +193,6 @@ fun CreatorPageScreen(
                 lineHeight = 25.sp,
                 color = DS.ink,
             )
-        }
-
-        writingFor?.let { (campaign, upcoming) ->
-            Column(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .then(if (onOpenCampaign != null) Modifier.softPress(onClick = { onOpenCampaign(campaign) }) else Modifier)
-                    .dashedBorder(DS.inkTertiary, 16.dp)
-                    .padding(16.dp),
-                verticalArrangement = Arrangement.spacedBy(4.dp),
-            ) {
-                Text(
-                    text = StringStore.text(context, "creator.writingFor", language, campaign.title(language)),
-                    fontFamily = PlusJakartaSans,
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 13.sp,
-                    color = DS.accentSoft,
-                )
-                val dateText = upcoming.releaseDate?.let { date ->
-                    " · " + StringStore.text(context, "event.upcoming.date", language, NewGenFormat.shortDay(date, language))
-                }.orEmpty()
-                Text(
-                    text = upcoming.title(language) + dateText,
-                    fontFamily = PlusJakartaSans,
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 15.sp,
-                    lineHeight = 21.sp,
-                    color = DS.ink,
-                )
-            }
         }
 
         SegmentedPills(
@@ -307,10 +273,7 @@ internal fun CreatorCourseRow(
     CompactCourseRow(
         course = course,
         meta = listOfNotNull(first, second).joinToString(" · "),
-        secondMeta = course.readsCount.compactCount(language) + " " +
-            StringStore.text(context, "creator.stat.reads", language) + " · " +
-            LocalCounters.likesCount(course.id, liked).compactCount(language) + " " +
-            StringStore.text(context, "common.likes", language),
+        secondMeta = LocalCounters.statsLine(context, course.id, liked, language),
         onTap = onTap,
         trailing = if (completed) ({ ReadCheck(language = language) }) else null,
     )

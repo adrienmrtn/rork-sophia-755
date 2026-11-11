@@ -78,6 +78,25 @@ import app.rork.sophia.ui.theme.SophiaTypography
 import java.util.Calendar
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import androidx.compose.foundation.Image
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.foundation.layout.IntrinsicSize
+import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.foundation.layout.heightIn
+import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
+import app.rork.sophia.domain.LearningPathEngine
+import app.rork.sophia.data.ContentCatalog
+import app.rork.sophia.R
+import androidx.compose.ui.geometry.Rect
+import androidx.compose.ui.graphics.drawscope.drawIntoCanvas
+import androidx.compose.ui.graphics.Paint
+import androidx.compose.ui.draw.drawWithContent
+import androidx.compose.ui.graphics.graphicsLayer
+import androidx.compose.ui.graphics.CompositingStrategy
+import androidx.compose.ui.graphics.ColorMatrix
+import androidx.compose.ui.graphics.ColorFilter
+import app.rork.sophia.data.CampaignStore
 
 /**
  * L'onglet Explorer, variante « univers » de la maquette : la recherche (cours, créateurs,
@@ -96,6 +115,7 @@ fun ExploreScreen(
     onOpenCreator: (CourseAuthor) -> Unit,
     onOpenCampaign: (Campaign) -> Unit,
     onOpenUniverse: (String) -> Unit,
+    onOpenPath: () -> Unit,
 ) {
     val context = LocalContext.current
     val summaries = rememberCourseSummaries(language)
@@ -323,6 +343,9 @@ fun ExploreScreen(
                 }
             }
         } else {
+            // Les événements que le serveur sert : en cours, puis terminés (grisés).
+            EventsRow(language = language, summaries = summaries, onOpenCampaign = onOpenCampaign)
+
             // On cherche beaucoup cette semaine.
             if (trending.isNotEmpty()) {
                 Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
@@ -426,10 +449,267 @@ fun ExploreScreen(
                     }
                 }
             }
+
+            // Le Parcours n'a plus d'onglet à lui : son entrée est tout en bas de la page.
+            PathCard(
+                language = language,
+                progress = progress,
+                onClick = onOpenPath,
+                modifier = Modifier.padding(horizontal = 20.dp),
+            )
         }
     }
     }
 }
+
+/**
+ * Les événements que le serveur sert (publiés, dans la région du téléphone) : ceux en cours
+ * d'abord (le plus proche de sa fin en tête), puis les terminés, du plus récent au plus ancien,
+ * grisés. Un événement terminé reste là tant qu'il est en ligne et disparaît quand il n'est plus
+ * publié ; ceux qui n'ont pas commencé ne sont pas montrés.
+ */
+@Composable
+private fun EventsRow(
+    language: AppLanguage,
+    summaries: List<CourseSummary>,
+    onOpenCampaign: (Campaign) -> Unit,
+) {
+    val context = LocalContext.current
+    val campaigns by CampaignStore.flow.collectAsState()
+    val items = remember(campaigns) {
+        CampaignStore.active().map { it to false } + CampaignStore.ended().map { it to true }
+    }
+    if (items.isEmpty()) return
+    Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
+        NewGenSectionTitle(
+            text = StringStore.text(context, "badges.family.events", language),
+            modifier = Modifier.padding(horizontal = 20.dp),
+        )
+        Row(
+            modifier = Modifier
+                .horizontalScroll(rememberScrollState())
+                .padding(horizontal = 20.dp)
+                .padding(bottom = 8.dp),
+            horizontalArrangement = Arrangement.spacedBy(12.dp),
+            verticalAlignment = Alignment.Top,
+        ) {
+            items.forEach { (campaign, ended) ->
+                EventCard(
+                    campaign = campaign,
+                    ended = ended,
+                    language = language,
+                    summaries = summaries,
+                    onClick = { onOpenCampaign(campaign) },
+                )
+            }
+        }
+    }
+}
+
+private val EVENT_CARD_WIDTH = 248.dp
+
+/** Gris pour les événements terminés : l'image comme le texte perdent leur couleur. */
+private val ENDED_EVENT_FILTER = ColorFilter.colorMatrix(ColorMatrix().apply { setToSaturation(0f) })
+
+/**
+ * Une carte d'événement du carrousel. Toutes ont la même taille : l'illustration a une hauteur
+ * fixe et chaque ligne de texte réserve sa place (le titre toujours deux lignes).
+ */
+@Composable
+private fun EventCard(
+    campaign: Campaign,
+    ended: Boolean,
+    language: AppLanguage,
+    summaries: List<CourseSummary>,
+    onClick: () -> Unit,
+) {
+    val context = LocalContext.current
+    val courses = remember(summaries, campaign.slug) {
+        campaign.courseIds.mapNotNull { id -> summaries.firstOrNull { it.id == id } }
+    }
+    // « Jusqu'au 30 nov. » pour un événement en cours, « 1 nov. – 30 nov. » pour un terminé.
+    val end = campaign.endDate
+    val start = campaign.startDate
+    val dates = when {
+        end == null -> " "
+        !ended -> StringStore.text(context, "event.until", language, NewGenFormat.shortDay(end, language))
+        start == null -> NewGenFormat.shortDay(end, language)
+        else -> NewGenFormat.shortDay(start, language) + " – " + NewGenFormat.shortDay(end, language)
+    }
+    val shape = RoundedCornerShape(18.dp)
+    Column(
+        modifier = Modifier
+            .width(EVENT_CARD_WIDTH)
+            .softPress(onClick = onClick)
+            // Terminé : la carte passe en gris et s'efface un peu, mais reste ouvrable.
+            .then(
+                if (ended) {
+                    Modifier.graphicsLayer {
+                        alpha = 0.6f
+                        compositingStrategy = CompositingStrategy.Offscreen
+                    }.drawWithContent {
+                        val paint = Paint().apply { colorFilter = ENDED_EVENT_FILTER }
+                        drawIntoCanvas { canvas ->
+                            canvas.saveLayer(Rect(0f, 0f, size.width, size.height), paint)
+                            drawContent()
+                            canvas.restore()
+                        }
+                    }
+                } else {
+                    Modifier
+                },
+            )
+            .clip(shape)
+            .background(DS.surface)
+            .border(1.dp, DS.hairline, shape),
+    ) {
+        Box(modifier = Modifier.fillMaxWidth().height(140.dp)) {
+            EventArtwork(campaign = campaign, courses = courses, modifier = Modifier.fillMaxSize())
+            if (ended) {
+                EventPill(text = StringStore.text(context, "event.ended", language), dark = true, modifier = Modifier.padding(10.dp))
+            }
+        }
+        Column(modifier = Modifier.padding(12.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
+            Text(
+                text = dates,
+                fontFamily = PlusJakartaSans,
+                fontWeight = FontWeight.Bold,
+                fontSize = 12.sp,
+                color = if (ended) DS.inkTertiary else DS.accentSoft,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
+            )
+            Text(
+                text = campaign.title(language),
+                fontFamily = PlusJakartaSans,
+                fontWeight = FontWeight.ExtraBold,
+                fontSize = 17.sp,
+                lineHeight = 22.sp,
+                color = DS.ink,
+                // Toujours deux lignes, pour que toutes les cartes aient la même hauteur.
+                minLines = 2,
+                maxLines = 2,
+                overflow = TextOverflow.Ellipsis,
+            )
+            Text(
+                text = StringStore.text(context, "event.card.coursesToRead", language, courses.size),
+                fontFamily = PlusJakartaSans,
+                fontSize = 12.sp,
+                color = DS.inkSecondary,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
+            )
+        }
+    }
+}
+
+/**
+ * L'entrée du Parcours : sur fond marine, avec son illustration en papier découpé
+ * (`path_poster`, même direction que le site) et le niveau où en est le lecteur.
+ */
+@Composable
+private fun PathCard(
+    language: AppLanguage,
+    progress: UserProgress,
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier,
+) {
+    val context = LocalContext.current
+    // Le niveau en cours : le premier qui n'est pas réussi, sinon le dernier. Les collections
+    // se lisent hors du fil principal ; sans elles, la carte annonce le niveau 1.
+    var collections by remember(language) { mutableStateOf(ContentCatalog.cachedCollections(language)) }
+    var coursesById by remember(language) {
+        mutableStateOf(ContentCatalog.cachedSummaries(language)?.associateBy { it.id })
+    }
+    LaunchedEffect(language) {
+        if (collections == null) {
+            collections = ContentCatalog.collectionsAsync(context.applicationContext, language)
+        }
+        if (coursesById == null) {
+            coursesById = ContentCatalog.summariesAsync(context.applicationContext, language).associateBy { it.id }
+        }
+    }
+    val level = remember(collections, coursesById, progress.courseProgress, progress.pathLevelResults) {
+        val all = collections
+        val byId = coursesById
+        if (all == null || byId == null) {
+            1
+        } else {
+            val completed = progress.courseProgress.filterValues { it.isCompleted }.keys
+            val passed = progress.pathLevelResults.filterValues { it.isPassed }.keys
+            val levels = LearningPathEngine.snapshot(all, byId, { it in completed }, { it in passed }).levels
+            (levels.firstOrNull { !it.isPassed } ?: levels.lastOrNull())?.number ?: 1
+        }
+    }
+    val posterWidth = 128.dp
+    Box(
+        modifier = modifier
+            .fillMaxWidth()
+            .height(IntrinsicSize.Min)
+            .softPress(onClick = onClick)
+            .clip(DS.cardShape)
+            .background(PATH_CARD_NAVY),
+    ) {
+        Image(
+            painter = painterResource(R.drawable.path_poster),
+            contentDescription = null,
+            contentScale = ContentScale.Crop,
+            modifier = Modifier.align(Alignment.CenterEnd).width(posterWidth).fillMaxHeight(),
+        )
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .heightIn(min = 148.dp)
+                .padding(16.dp)
+                .padding(end = posterWidth),
+            verticalArrangement = Arrangement.spacedBy(6.dp, Alignment.CenterVertically),
+        ) {
+            Text(
+                text = StringStore.text(context, "path.title", language),
+                fontFamily = PlusJakartaSans,
+                fontWeight = FontWeight.ExtraBold,
+                fontSize = 22.sp,
+                color = Color.White,
+            )
+            Text(
+                text = StringStore.text(context, "explore.path.subtitle", language),
+                fontFamily = PlusJakartaSans,
+                fontSize = 15.sp,
+                lineHeight = 20.sp,
+                color = Color.White.copy(alpha = 0.85f),
+            )
+            Row(
+                modifier = Modifier
+                    .padding(top = 6.dp)
+                    .height(32.dp)
+                    .clip(CircleShape)
+                    .background(PATH_CARD_SAFFRON)
+                    .padding(horizontal = 12.dp),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(4.dp),
+            ) {
+                Text(
+                    text = StringStore.text(context, "path.levelCaption", language, level),
+                    fontFamily = PlusJakartaSans,
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 13.sp,
+                    color = PATH_CARD_NAVY,
+                    maxLines = 1,
+                )
+                Icon(
+                    imageVector = Icons.AutoMirrored.Filled.KeyboardArrowRight,
+                    contentDescription = null,
+                    tint = PATH_CARD_NAVY,
+                    modifier = Modifier.size(16.dp),
+                )
+            }
+        }
+    }
+}
+
+/** Marine et safran des illustrations du site (`EventPalette` sur iOS). */
+private val PATH_CARD_NAVY = Color(0xFF1A3A6B)
+private val PATH_CARD_SAFFRON = Color(0xFFF2B134)
 
 /** Une sous-catégorie du catalogue, avec la couverture de son cours le plus lu. */
 internal data class Universe(val name: String, val courses: List<CourseSummary>, val cover: CourseSummary)

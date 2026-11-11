@@ -266,7 +266,7 @@ internal fun streakWeekFirstDay(streak: Int, last: LocalDate?, today: LocalDate)
 }
 
 @Composable
-private fun StreakWeekStrip(
+internal fun StreakWeekStrip(
     streak: Int,
     lastActiveDate: String?,
     language: AppLanguage,

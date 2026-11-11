@@ -183,6 +183,8 @@ dependencies {
 
     // Remote covers (Supabase Storage) — one image at a time, disk-cached
     implementation("io.coil-kt:coil-compose:2.7.0")
+    // Le QR code « ajoute-moi en ami » : l'encodeur seul, sans caméra ni interface.
+    implementation("com.google.zxing:core:3.5.3")
 
     // Audio mode: ExoPlayer + MediaSession (notification, lock screen, headsets)
     implementation("androidx.media3:media3-exoplayer:1.5.1")

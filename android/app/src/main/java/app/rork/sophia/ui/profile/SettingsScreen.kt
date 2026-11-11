@@ -1,5 +1,16 @@
 package app.rork.sophia.ui.profile
 
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.border
+import androidx.compose.foundation.layout.width
+import androidx.compose.material.icons.filled.ArrowOutward
+import androidx.compose.material.icons.filled.Lightbulb
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontWeight
+import app.rork.sophia.R
+import app.rork.sophia.ui.theme.PlusJakartaSans
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -37,7 +48,6 @@ import androidx.compose.material.icons.filled.RestartAlt
 import androidx.compose.material.icons.filled.School
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.filled.Today
-import androidx.compose.material.icons.filled.ViewModule
 import androidx.compose.material.icons.filled.WorkspacePremium
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.CircularProgressIndicator
@@ -109,7 +119,8 @@ fun SettingsScreen(
     onShowPaywall: () -> Unit,
     onOpenFeedback: () -> Unit,
     /** Ouvre la page du rôle choisi (`ugc` ou `slideshow`) du programme créateurs. */
-    onOpenCreators: (role: String) -> Unit,
+    onOpenFeatureRequest: () -> Unit,
+    onOpenAmbassador: () -> Unit,
     onOpenTerms: () -> Unit,
     onOpenPrivacy: () -> Unit,
     onRestorePurchases: () -> Unit,
@@ -123,9 +134,7 @@ fun SettingsScreen(
     val scope = rememberCoroutineScope()
     val userId by app.authService.userId.collectAsState()
     var showResetProgress by remember { mutableStateOf(false) }
-    var showCreatorChoice by remember { mutableStateOf(false) }
     // Variante de navigation (A/B « nouvelle génération ») ; un changement vaut au prochain lancement.
-    var navVariant by remember { mutableStateOf(FeatureFlags.navigationVariant(context)) }
     var showShare by remember { mutableStateOf(false) }
     if (showShare) {
         ShareSophiaSheet(language = language, onDismiss = { showShare = false })
@@ -359,6 +368,8 @@ fun SettingsScreen(
             }
         }
 
+        AmbassadorBanner(language = language, onClick = onOpenAmbassador)
+
         SettingsSection(StringStore.text(context, "settings.section.help", language))
         SettingsGroup {
             SettingsRow(
@@ -376,12 +387,10 @@ fun SettingsScreen(
             )
             HorizontalDivider(color = DS.hairline)
             SettingsRow(
-                icon = Icons.Filled.Star,
-                label = StringStore.text(context, "settings.ambassador.banner.title", language),
-                subtitle = StringStore.text(context, "settings.ambassador.banner.subtitle", language),
-                onClick = {
-                    showCreatorChoice = true
-                },
+                icon = Icons.Filled.Lightbulb,
+                label = StringStore.text(context, "settings.featureRequest.title", language),
+                subtitle = StringStore.text(context, "settings.featureRequest.subtitle", language),
+                onClick = onOpenFeatureRequest,
             )
         }
 
@@ -450,24 +459,6 @@ fun SettingsScreen(
                             onCheckedChange = onDebugPremiumChange,
                             colors = SwitchDefaults.colors(checkedTrackColor = DS.accent),
                         )
-                    },
-                )
-                // Bascule la navigation entre les 5 onglets historiques et la maquette
-                // « nouvelle génération » ; lue une fois au lancement, comme sur iOS.
-                HorizontalDivider(color = DS.hairline)
-                SettingsRow(
-                    icon = Icons.Filled.ViewModule,
-                    label = StringStore.text(context, "settings.debug.navigation", language),
-                    subtitle = navVariant.raw,
-                    showChevron = false,
-                    onClick = {
-                        val next = if (navVariant == FeatureFlags.NavigationVariant.NEWGEN) {
-                            FeatureFlags.NavigationVariant.CLASSIC
-                        } else {
-                            FeatureFlags.NavigationVariant.NEWGEN
-                        }
-                        FeatureFlags.setNavigationVariant(context, next)
-                        navVariant = next
                     },
                 )
                 // Le catalogue en ligne : d'où il vient, combien de cours sont sur le téléphone,
@@ -565,46 +556,6 @@ fun SettingsScreen(
     }
 
     // Deviens ambassadeur : on choisit son rôle, puis sa page s'ouvre sur le site.
-    if (showCreatorChoice) {
-        AlertDialog(
-            onDismissRequest = { showCreatorChoice = false },
-            containerColor = DS.surface,
-            shape = DS.cardShape,
-            title = {
-                Text(
-                    StringStore.text(context, "settings.ambassador.banner.title", language),
-                    style = SophiaTypography.titleMedium,
-                )
-            },
-            text = {
-                Column {
-                    listOf(
-                        "ugc" to "ambassador.role.ugc.title",
-                        "slideshow" to "ambassador.role.slideshow.title",
-                    ).forEach { (role, key) ->
-                        TextButton(
-                            onClick = {
-                                showCreatorChoice = false
-                                onOpenCreators(role)
-                            },
-                            modifier = Modifier.fillMaxWidth(),
-                        ) {
-                            Text(
-                                StringStore.text(context, key, language),
-                                style = SophiaTypography.bodyLarge,
-                                color = DS.accentSoft,
-                            )
-                        }
-                    }
-                }
-            },
-            confirmButton = {
-                TextButton(onClick = { showCreatorChoice = false }) {
-                    Text(StringStore.text(context, "settings.reset.alert.cancel", language), color = DS.inkSecondary)
-                }
-            },
-        )
-    }
 }
 
 /** « Essai gratuit jusqu'au… », « Renouvellement le… » or « Se termine le… », with the store's date. */
@@ -698,6 +649,68 @@ private fun SettingsRow(
                 tint = DS.inkTertiary,
                 modifier = Modifier.size(18.dp),
             )
+        }
+    }
+}
+/**
+ * Le bandeau « Deviens ambassadeur », illustré comme sur iOS : l'image du site, le titre, une
+ * ligne, et le bouton qui ouvre le site des créateurs dans la langue de l'app.
+ */
+@Composable
+private fun AmbassadorBanner(language: AppLanguage, onClick: () -> Unit) {
+    val context = LocalContext.current
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(top = DS.Space.l)
+            .softPress(onClick = onClick)
+            .clip(DS.cardShape)
+            .background(DS.surface)
+            .border(1.dp, DS.hairline, DS.cardShape),
+    ) {
+        Image(
+            painter = painterResource(R.drawable.ambassador_poster),
+            contentDescription = null,
+            contentScale = ContentScale.Crop,
+            modifier = Modifier.fillMaxWidth().height(150.dp),
+        )
+        Column(modifier = Modifier.fillMaxWidth().padding(16.dp), verticalArrangement = Arrangement.spacedBy(14.dp)) {
+            Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                Text(
+                    text = StringStore.text(context, "settings.ambassador.banner.title", language),
+                    fontFamily = PlusJakartaSans,
+                    fontWeight = FontWeight.ExtraBold,
+                    fontSize = 20.sp,
+                    color = DS.ink,
+                )
+                Text(
+                    text = StringStore.text(context, "settings.ambassador.banner.subtitle", language),
+                    fontFamily = PlusJakartaSans,
+                    fontSize = 15.sp,
+                    lineHeight = 21.sp,
+                    color = DS.inkSecondary,
+                )
+            }
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .clip(CircleShape)
+                    .background(DS.accent)
+                    .padding(horizontal = 16.dp, vertical = 13.dp),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.Center,
+            ) {
+                Text(
+                    text = StringStore.text(context, "settings.ambassador.cta", language),
+                    fontFamily = PlusJakartaSans,
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 15.sp,
+                    color = Color.White,
+                    textAlign = TextAlign.Center,
+                )
+                Spacer(Modifier.width(8.dp))
+                Icon(Icons.Filled.ArrowOutward, contentDescription = null, tint = Color.White, modifier = Modifier.size(15.dp))
+            }
         }
     }
 }

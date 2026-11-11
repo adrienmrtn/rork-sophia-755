@@ -33,6 +33,27 @@ data class FriendPublicStats(
     val quizzes_completed: Int = 0,
 )
 
+/** La présence d'un ami, lue sur `friend_profile` : en ligne, ou vu il y a tant de secondes. */
+@Serializable
+data class FriendPresence(
+    val online: Boolean = false,
+    val last_seen_seconds: Int? = null,
+)
+
+/** Un lien d'ami (`sophia://friend/<handle>`) reçu par l'app, en attente de confirmation. */
+object FriendLinkRouter {
+    private val _pendingHandle = MutableStateFlow<String?>(null)
+    val pendingHandle: StateFlow<String?> = _pendingHandle.asStateFlow()
+
+    fun open(handle: String) {
+        _pendingHandle.value = handle
+    }
+
+    fun consume() {
+        _pendingHandle.value = null
+    }
+}
+
 enum class FriendsLeaderboardPeriod(val rpcValue: String) {
     WEEK("week"),
     ALL("all"),
@@ -154,6 +175,9 @@ class SocialService(private val auth: AuthService) {
      * week totals under the "all" chip, so a late reply for a period nobody is looking at is
      * dropped rather than displayed.
      */
+    /** Appelé avec le nombre d'amis à chaque lecture réussie du classement. */
+    var onFriendsCounted: ((Int) -> Unit)? = null
+
     suspend fun refreshLeaderboard() {
         @Serializable
         data class Params(val period: String)
@@ -162,6 +186,8 @@ class SocialService(private val auth: AuthService) {
             val rows: List<FriendLeaderboardEntry> =
                 db.rpc("friends_leaderboard", Params(period = requested.rpcValue)).decodeList()
             if (_period.value == requested) _leaderboard.value = rows
+            // Le nombre d'amis (moi exclu) compte pour un badge.
+            onFriendsCounted?.invoke(rows.count { !it.is_me })
         }.onFailure {
             if (_period.value == requested) _errorKey.value = errorKeyFor(it.message)
         }
@@ -172,6 +198,20 @@ class SocialService(private val auth: AuthService) {
         data class Params(val target: String)
         return runCatching {
             db.rpc("friend_public_stats", Params(target = userId)).decodeList<FriendPublicStats>().firstOrNull()
+        }.getOrNull()
+    }
+
+    /** En ligne / vu il y a… : null quand le serveur ne sait pas (ancienne base, hors ligne). */
+    suspend fun friendPresence(userId: String): FriendPresence? {
+        @Serializable
+        data class Params(val target: String)
+        return runCatching {
+            // Lu champ par champ : la réponse porte bien d'autres clés que ces deux-là.
+            val row = db.rpc("friend_profile", Params(target = userId)).decodeAs<kotlinx.serialization.json.JsonObject>()
+            FriendPresence(
+                online = (row["online"] as? kotlinx.serialization.json.JsonPrimitive)?.content == "true",
+                last_seen_seconds = (row["last_seen_seconds"] as? kotlinx.serialization.json.JsonPrimitive)?.content?.toIntOrNull(),
+            )
         }.getOrNull()
     }
 

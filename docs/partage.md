@@ -41,6 +41,26 @@ vers l'adresse lisible) ou `https://sophia-culture.com/authors/<slug>`.
 ## Limites
 
 - Le site est en anglais : un cours partagé depuis l'app en français mène à sa fiche anglaise.
-- Android : le partage n'envoie pas encore de lien, et l'app n'ouvre pas les liens du site.
+- Android : le partage envoie le lien et l'app ouvre les liens du site (voir « Android » plus bas) ;
+  la reprise après installation n'y existe pas encore.
 - Un cours sans numéro dans son identifiant n'a pas de fiche sur le site : `/c/<identifiant>` mène
   alors à l'exploration.
+
+## Android
+
+- **App** : `SophiaLinks` (domaine) fabrique et reconnaît les adresses du site, comme
+  `SophiaDeepLink` sur iOS. Le partage de la fiche d'un cours et de la page d'un créateur envoie
+  la phrase habituelle suivie du lien. `MainActivity` reçoit les liens `https://sophia-culture.com`
+  (`/courses/*`, `/c/*`, `/authors/*`, filtre `autoVerify` du manifeste) ; un lien `/courses/150`
+  ne porte que le numéro, l'identifiant est retrouvé dans le catalogue. Une ouverture par lien
+  compte `course_open` avec `source = shared_link`.
+- **Site** : `/.well-known/assetlinks.json` (route Next) déclare l'app (`ANDROID_PACKAGE`) et les
+  empreintes de ses certificats (`ANDROID_APP_FINGERPRINTS`, séparées par des virgules). Tant que
+  la variable est vide, le fichier est une liste vide et les liens restent dans le navigateur.
+- **À faire hors du code** : copier les deux empreintes SHA-256 de la Play Console (Intégrité de
+  l'application : clé de signature d'application et clé d'importation) dans
+  `ANDROID_APP_FINGERPRINTS` sur Vercel, déployer le site, puis publier l'app. Vérifier ensuite que
+  `https://sophia-culture.com/.well-known/assetlinks.json` répond en JSON, sans redirection.
+- **Pas encore fait** : la reprise après installation (ouvrir le cours partagé à la fin de
+  l'onboarding). Sur Android elle passerait par le paramètre `referrer` du lien Play Store et la
+  bibliothèque Install Referrer.

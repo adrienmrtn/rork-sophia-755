@@ -84,6 +84,19 @@ import kotlinx.serialization.json.contentOrNull
 import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
+import app.rork.sophia.domain.CourseOrigins
+import app.rork.sophia.ui.components.softPress
+import androidx.compose.ui.unit.LayoutDirection
+import androidx.compose.ui.platform.LocalLayoutDirection
+import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.material.icons.filled.Public
+import androidx.compose.material.icons.filled.Close
+import androidx.compose.ui.draw.clipToBounds
+import androidx.compose.material3.DropdownMenuItem
+import androidx.compose.material3.DropdownMenu
+import androidx.compose.material.icons.filled.Check
+import androidx.compose.material.icons.filled.AutoStories
+import androidx.compose.material.icons.filled.ViewDay
 
 @Composable
 fun CourseScreen(
@@ -104,6 +117,8 @@ fun CourseScreen(
     // Suivi pour le bouton « Suivre » de la carte auteur ; le reste lit `progress.value`.
     val progressSnapshot by progressManager.progress.collectAsState()
     var showQuiz by remember { mutableStateOf(false) }
+    // « Voir l'original » : la langue d'écriture du cours, présentée par-dessus le lecteur.
+    var originalLanguage by remember(course.id) { mutableStateOf<AppLanguage?>(null) }
     var showCompleted by remember(course.id) { mutableStateOf(false) }
     var showCoachmark by remember { mutableStateOf(false) }
     var coachmarkTerm by remember { mutableStateOf<String?>(null) }
@@ -122,6 +137,18 @@ fun CourseScreen(
     }
     val scope = rememberCoroutineScope()
     val haptics = LocalHapticFeedback.current
+    // Le mode de lecture (pas à pas par défaut, par pages au choix), conservé sur l'appareil.
+    var readingMode by remember { mutableStateOf(CourseReadingMode.current(context)) }
+    var showModeMenu by remember { mutableStateOf(false) }
+    // Pas à pas : les passages du cours, combien sont révélés, et la section où en est la lecture.
+    var steps by remember(course.id, language) { mutableStateOf<List<ReaderStep>>(emptyList()) }
+    var revealed by remember(course.id, language) { mutableIntStateOf(0) }
+    var stepSection by remember(course.id, language) { mutableIntStateOf(0) }
+    // Les passages révélés avant cet index étaient déjà là (reprise, changement de mode) : ils
+    // n'entrent pas en animation.
+    var animateFrom by remember(course.id, language) { mutableIntStateOf(0) }
+    var scrollToIndex by remember(course.id, language) { mutableIntStateOf(0) }
+    var scrollToken by remember(course.id, language) { mutableIntStateOf(0) }
     // Double-tap sur une leçon : le grand cœur du fil, même règle (il n'éteint jamais).
     var bigHeart by remember(course.id) { mutableIntStateOf(0) }
     fun likeFromDoubleTap() {
@@ -151,6 +178,7 @@ fun CourseScreen(
                 "section_count" to pages.size,
                 "seconds" to seconds,
                 "reached_end" to reachedEnd,
+                "mode" to readingMode.raw,
             ),
         )
     }
@@ -201,9 +229,11 @@ fun CourseScreen(
     // Inside a course, back is a step backwards through the reader, not an exit from the
     // app. Only the first page hands back to whoever opened the course.
     BackHandler(enabled = showQuiz) { showQuiz = false }
+    BackHandler(enabled = originalLanguage != null) { originalLanguage = null }
     BackHandler(enabled = !showQuiz && showCompleted) { onDismiss() }
     BackHandler(enabled = !showQuiz && !showCompleted) {
-        if (pagesReady && pagerState.currentPage > 0) {
+        // Par pages, retour revient d'une page ; pas à pas, le fil se remonte en défilant.
+        if (pagesReady && readingMode == CourseReadingMode.PAGES && pagerState.currentPage > 0) {
             scope.launch { pagerState.animateScrollToPage(pagerState.currentPage - 1) }
         } else {
             onDismiss()
@@ -256,9 +286,35 @@ fun CourseScreen(
         return
     }
 
-    LaunchedEffect(pagerState.currentPage, pagesReady) {
+    originalLanguage?.let { original ->
+        OriginalCourseOverlay(
+            course = course,
+            original = original,
+            language = language,
+            onClose = { originalLanguage = null },
+        )
+        return
+    }
+
+    // Les passages du mode pas à pas, recalculés quand l'accès change (achat en cours de lecture) ;
+    // la lecture reste sur la section en cours, son titre seul révélé.
+    LaunchedEffect(pages, isPremium, isDailyFreeCourse, author, meta) {
+        if (pages.isEmpty()) return@LaunchedEffect
+        steps = buildReaderSteps(
+            pages = pages,
+            isLocked = { FreemiumGate.isLessonContentLocked(it, isPremium, isDailyFreeCourse) },
+            hasFooter = author != null || meta.sources.isNotEmpty(),
+        )
+        revealed = maxOf(revealed, revealedThroughSection(steps, stepSection)).coerceAtMost(steps.size)
+        animateFrom = revealed
+    }
+
+    // La section en cours : la page affichée, ou celle du dernier passage révélé.
+    val currentSection = if (readingMode == CourseReadingMode.PAGES) pagerState.currentPage else stepSection
+
+    LaunchedEffect(currentSection, pagesReady) {
         if (!pagesReady) return@LaunchedEffect
-        val pageIndex = pagerState.currentPage
+        val pageIndex = currentSection
         if (trackedSection != pageIndex) {
             // Page suivante : la précédente a été lue jusqu'au bout ; page précédente : non.
             logSectionView(reachedEnd = pageIndex > trackedSection)
@@ -287,6 +343,123 @@ fun CourseScreen(
         }
     }
 
+    // Tout est lu : progression, événements, puis l'écran de fin. Commun aux deux modes.
+    fun finishCourse() {
+        if (!FreemiumGate.canCompleteCourse(isPremium, isDailyFreeCourse)) return
+        logSectionView(reachedEnd = true)
+        Analytics.log(
+            "course_complete",
+            courseId = course.id,
+            props = mapOf("first_time" to !wasCompletedBefore, "mode" to readingMode.raw),
+        )
+        if (!wasCompletedBefore) {
+            progressManager.markCourseCompleted(course.id)
+            onCourseCompleted()
+        }
+        showCompleted = true
+    }
+
+    // Pas à pas : révèle le passage suivant, ou termine le cours quand tout est lu.
+    fun advanceStep() {
+        if (steps.isEmpty()) return
+        if (revealed >= steps.size) {
+            // Cours verrouillé : comme par pages, le bouton ne fait rien au bout ; le paywall
+            // ne s'ouvre que par le cadenas.
+            if (isPremium || isDailyFreeCourse) finishCourse()
+            return
+        }
+        val step = steps[revealed]
+        haptics.performHapticFeedback(
+            if (step.opensChapter) HapticFeedbackType.LongPress else HapticFeedbackType.TextHandleMove,
+        )
+        scrollToIndex = revealed
+        revealed += 1
+        scrollToken += 1
+        if (step.sectionIndex != stepSection) stepSection = step.sectionIndex
+    }
+
+    fun changeReadingMode(mode: CourseReadingMode) {
+        showModeMenu = false
+        if (mode == readingMode) return
+        haptics.performHapticFeedback(HapticFeedbackType.TextHandleMove)
+        CourseReadingMode.save(context, mode)
+        if (mode == CourseReadingMode.STEPS) {
+            // Reprendre à la section en cours : les précédentes entières, puis son titre seul.
+            stepSection = pagerState.currentPage
+            revealed = revealedThroughSection(steps, stepSection)
+            animateFrom = revealed
+            if (stepSection > 0) {
+                scrollToIndex = revealed - 1
+                scrollToken += 1
+            }
+            readingMode = mode
+        } else {
+            val target = stepSection.coerceIn(0, (pages.size - 1).coerceAtLeast(0))
+            readingMode = mode
+            scope.launch { pagerState.scrollToPage(target) }
+        }
+    }
+
+    // L'en-tête d'une section et le pied du cours, dessinés de la même façon dans les deux modes
+    // de lecture (par pages et pas à pas).
+    val sectionHeader: @Composable (Int, ReaderPage) -> Unit = { index, page ->
+        // The title stays sharp; only the paid body is blurred.
+        Text(text = page.title, style = SophiaTypography.titleLarge)
+        // The intro is the free page: who wrote the course belongs there.
+        if (index == 0 && author != null) {
+            AuthorByline(
+                author = author,
+                language = language,
+                onClick = { onOpenAuthor(author.slug) },
+            )
+        }
+        // Un cours écrit dans une autre langue le dit sous la signature.
+        if (index == 0) {
+            CourseOrigins.translatedFromCode(course.id, meta.originalLanguage, language)?.let { code ->
+                // « Voir l'original » : réservé à qui peut lire le cours en
+                // entier, et seulement si l'app connaît cette langue.
+                val original = CourseOrigins.language(course.id, meta.originalLanguage, language)
+                val hasFullAccess = !FreemiumGate.isLessonContentLocked(
+                    pages.lastIndex,
+                    isPremium,
+                    isDailyFreeCourse,
+                )
+                TranslatedFromLine(
+                    code = code,
+                    language = language,
+                    onShowOriginal = if (original != null && hasFullAccess) {
+                        { originalLanguage = original }
+                    } else {
+                        null
+                    },
+                )
+            }
+        }
+    }
+    val readerFooter: @Composable () -> Unit = {
+        if (author != null) {
+            AuthorCard(
+                author = author,
+                language = language,
+                onOpenAuthor = { onOpenAuthor(author.slug) },
+                isFollowing = author.slug in progressSnapshot.followedCreatorSlugs,
+                onFollow = {
+                    val wasFollowing = progressManager.isFollowing(author.slug)
+                    progressManager.toggleFollow(author.slug)
+                    Analytics.log(
+                        if (wasFollowing) "unfollow" else "follow",
+                        courseId = course.id,
+                        screen = "reader",
+                        props = mapOf("creator" to author.slug),
+                    )
+                },
+            )
+        }
+        if (meta.sources.isNotEmpty()) {
+            SourcesCard(sources = meta.sources, language = language)
+        }
+    }
+
     Box(modifier = Modifier.fillMaxSize()) {
         Column(modifier = Modifier.fillMaxSize().background(DS.canvas)) {
             Row(
@@ -302,6 +475,33 @@ fun CourseScreen(
                     maxLines = 1,
                     modifier = Modifier.weight(1f).padding(horizontal = 12.dp),
                 )
+                // Le choix du mode de lecture : pas à pas ou par pages, pour tous les cours.
+                Box {
+                    CircleIconButton(
+                        icon = if (readingMode == CourseReadingMode.STEPS) Icons.Filled.ViewDay else Icons.Filled.AutoStories,
+                        onClick = { showModeMenu = true },
+                    )
+                    DropdownMenu(expanded = showModeMenu, onDismissRequest = { showModeMenu = false }) {
+                        CourseReadingMode.entries.forEach { mode ->
+                            DropdownMenuItem(
+                                text = { Text(text = StringStore.text(context, mode.titleKey, language), style = SophiaTypography.bodyLarge) },
+                                onClick = { changeReadingMode(mode) },
+                                leadingIcon = {
+                                    Icon(
+                                        imageVector = if (mode == CourseReadingMode.STEPS) Icons.Filled.ViewDay else Icons.Filled.AutoStories,
+                                        contentDescription = null,
+                                        tint = DS.inkSecondary,
+                                    )
+                                },
+                                trailingIcon = {
+                                    if (mode == readingMode) {
+                                        Icon(imageVector = Icons.Filled.Check, contentDescription = null, tint = DS.accent)
+                                    }
+                                },
+                            )
+                        }
+                    }
+                }
                 CourseReaderAudioButton(
                     courseId = course.id,
                     language = language,
@@ -312,15 +512,28 @@ fun CourseScreen(
             }
             // Une capsule par section, remplies jusqu'à la courante (maquette) ; au-delà de douze
             // sections les capsules deviendraient des pointillés, la barre continue reprend.
+            // Pas à pas, chaque capsule se remplit passage après passage.
+            val stepsMode = readingMode == CourseReadingMode.STEPS && steps.isNotEmpty()
             if (pages.size in 1..12) {
-                SegmentedProgressBar(
-                    count = pages.size,
-                    current = pagerState.currentPage,
-                    modifier = Modifier.padding(horizontal = DS.Space.l),
-                )
+                if (stepsMode) {
+                    SteppedProgressBar(
+                        fills = pages.indices.map { sectionFill(steps, revealed, it) },
+                        modifier = Modifier.padding(horizontal = DS.Space.l),
+                    )
+                } else {
+                    SegmentedProgressBar(
+                        count = pages.size,
+                        current = pagerState.currentPage,
+                        modifier = Modifier.padding(horizontal = DS.Space.l),
+                    )
+                }
             } else {
                 CalmProgressBar(
-                    fraction = if (pages.isEmpty()) 0f else (pagerState.currentPage + 1).toFloat() / pages.size,
+                    fraction = when {
+                        pages.isEmpty() -> 0f
+                        stepsMode -> revealed.toFloat() / steps.size
+                        else -> (pagerState.currentPage + 1).toFloat() / pages.size
+                    },
                     modifier = Modifier.padding(horizontal = DS.Space.l),
                 )
             }
@@ -335,6 +548,61 @@ fun CourseScreen(
                         language = language,
                         onRetry = { loadAttempt += 1 },
                     )
+                }
+            } else if (readingMode == CourseReadingMode.STEPS) {
+                Box(modifier = Modifier.weight(1f).fillMaxWidth()) {
+                    CourseStepReader(
+                        steps = steps,
+                        revealed = revealed,
+                        animateFrom = animateFrom,
+                        scrollToIndex = scrollToIndex,
+                        scrollToken = scrollToken,
+                        onDoubleTap = { likeFromDoubleTap() },
+                        modifier = Modifier.fillMaxSize(),
+                    ) { step ->
+                        val page = pages.getOrNull(step.sectionIndex)
+                        when (step) {
+                            is ReaderStep.Header -> Column(verticalArrangement = Arrangement.spacedBy(DS.Space.m)) {
+                                if (page != null) sectionHeader(step.sectionIndex, page)
+                            }
+                            is ReaderStep.Block -> Column(verticalArrangement = Arrangement.spacedBy(24.dp)) {
+                                step.heading?.let { heading ->
+                                    ReaderBlockView(
+                                        block = ReaderBlock.Heading(heading),
+                                        language = language,
+                                        courseId = course.id,
+                                        locked = false,
+                                    )
+                                }
+                                ReaderBlockView(block = step.block, language = language, courseId = course.id, locked = false)
+                            }
+                            is ReaderStep.Footer -> Column(verticalArrangement = Arrangement.spacedBy(DS.Space.m)) {
+                                readerFooter()
+                            }
+                            // Une section réservée : la page floutée, raccourcie, le cadenas
+                            // par-dessus. Seul le cadenas ouvre le paywall.
+                            is ReaderStep.Locked -> Box(modifier = Modifier.fillMaxWidth().height(440.dp)) {
+                                Column(
+                                    modifier = Modifier.fillMaxSize().clipToBounds(),
+                                    verticalArrangement = Arrangement.spacedBy(DS.Space.m),
+                                ) {
+                                    if (page != null) {
+                                        Text(text = page.title, style = SophiaTypography.titleLarge)
+                                        Column(
+                                            modifier = Modifier.lockedContentBlur(true),
+                                            verticalArrangement = Arrangement.spacedBy(DS.Space.m),
+                                        ) {
+                                            page.blocks.forEach { block ->
+                                                ReaderBlockView(block = block, language = language, courseId = course.id, locked = true)
+                                            }
+                                        }
+                                    }
+                                }
+                                CourseLessonLockOverlay { onRequestPaywall("debloquer_cours") }
+                            }
+                        }
+                    }
+                    BigHeartOverlay(trigger = bigHeart, modifier = Modifier.align(Alignment.Center))
                 }
             } else {
                 HorizontalPager(
@@ -358,22 +626,7 @@ fun CourseScreen(
                                 .padding(DS.Space.l),
                             verticalArrangement = Arrangement.spacedBy(DS.Space.m),
                         ) {
-                            // The title stays sharp; only the paid body is blurred.
-                            Text(text = page.title, style = SophiaTypography.titleLarge)
-                            // The intro is the free page: who wrote the course belongs there.
-                            if (index == 0 && author != null) {
-                                AuthorByline(
-                                    author = author,
-                                    language = language,
-                                    onClick = { onOpenAuthor(author.slug) },
-                                )
-                            }
-                            // Un cours écrit dans une autre langue le dit sous la signature.
-                            if (index == 0) {
-                                meta.originalLanguage?.takeIf { it != language.code }?.let { code ->
-                                    TranslatedFromLine(code = code, language = language)
-                                }
-                            }
+                            sectionHeader(index, page)
                             Column(
                                 modifier = Modifier.lockedContentBlur(locked),
                                 verticalArrangement = Arrangement.spacedBy(DS.Space.m),
@@ -387,29 +640,7 @@ fun CourseScreen(
                                     )
                                 }
                                 // Signature and references close the last page, after "À retenir".
-                                if (index == pages.lastIndex) {
-                                    if (author != null) {
-                                        AuthorCard(
-                                            author = author,
-                                            language = language,
-                                            onOpenAuthor = { onOpenAuthor(author.slug) },
-                                            isFollowing = author.slug in progressSnapshot.followedCreatorSlugs,
-                                            onFollow = {
-                                                val wasFollowing = progressManager.isFollowing(author.slug)
-                                                progressManager.toggleFollow(author.slug)
-                                                Analytics.log(
-                                                    if (wasFollowing) "unfollow" else "follow",
-                                                    courseId = course.id,
-                                                    screen = "reader",
-                                                    props = mapOf("creator" to author.slug),
-                                                )
-                                            },
-                                        )
-                                    }
-                                    if (meta.sources.isNotEmpty()) {
-                                        SourcesCard(sources = meta.sources, language = language)
-                                    }
-                                }
+                                if (index == pages.lastIndex) readerFooter()
                             }
                         }
                         if (locked) {
@@ -430,7 +661,11 @@ fun CourseScreen(
             ) {
                 // Sans pages (téléchargement en cours, hors ligne), rien n'est « dernier » : le
                 // bouton reste « Continuer », inactif, et ne peut pas terminer un cours jamais lu.
-                val isLast = pagesReady && pagerState.currentPage >= pages.lastIndex
+                val isLast = pagesReady && if (readingMode == CourseReadingMode.STEPS) {
+                    steps.isNotEmpty() && revealed >= steps.size
+                } else {
+                    pagerState.currentPage >= pages.lastIndex
+                }
                 val courseLocked = !isPremium && !isDailyFreeCourse
                 SophiaPrimaryButton(
                     text = when {
@@ -441,6 +676,10 @@ fun CourseScreen(
                     enabled = pagesReady,
                     onClick = {
                         if (!pagesReady) return@SophiaPrimaryButton
+                        if (readingMode == CourseReadingMode.STEPS) {
+                            advanceStep()
+                            return@SophiaPrimaryButton
+                        }
                         if (courseLocked) {
                             if (!isLast) {
                                 scope.launch { pagerState.animateScrollToPage(pagerState.currentPage + 1) }
@@ -448,15 +687,7 @@ fun CourseScreen(
                             return@SophiaPrimaryButton
                         }
                         if (isLast) {
-                            if (FreemiumGate.canCompleteCourse(isPremium, isDailyFreeCourse)) {
-                                logSectionView(reachedEnd = true)
-                                Analytics.log("course_complete", courseId = course.id, props = mapOf("first_time" to !wasCompletedBefore))
-                                if (!wasCompletedBefore) {
-                                    progressManager.markCourseCompleted(course.id)
-                                    onCourseCompleted()
-                                }
-                                showCompleted = true
-                            }
+                            finishCourse()
                         } else {
                             scope.launch { pagerState.animateScrollToPage(pagerState.currentPage + 1) }
                         }
@@ -598,7 +829,113 @@ private fun ReaderContentPlaceholder(
 /** Matches the +50 global XP granted by `ProgressManager.markCourseCompleted`. */
 private const val COURSE_COMPLETION_XP = 50
 
-private data class ReaderPage(val title: String, val blocks: List<ReaderBlock>)
+internal data class ReaderPage(val title: String, val blocks: List<ReaderBlock>)
+
+/**
+ * Le cours dans sa langue d'écriture, en un seul défilement, par-dessus le lecteur
+ * (`OriginalCourseView` sur iOS). Le texte est téléchargé à la demande : il n'est sur le
+ * téléphone que si l'app a déjà été utilisée dans cette langue.
+ */
+@Composable
+private fun OriginalCourseOverlay(
+    course: Course,
+    original: AppLanguage,
+    language: AppLanguage,
+    onClose: () -> Unit,
+) {
+    val context = LocalContext.current
+    var pages by remember(course.id, original) { mutableStateOf<List<ReaderPage>?>(null) }
+    var loading by remember(course.id, original) { mutableStateOf(true) }
+    var attempt by remember(course.id, original) { mutableIntStateOf(0) }
+    LaunchedEffect(course.id, original, attempt) {
+        loading = true
+        val appContext = context.applicationContext
+        val text = CatalogStore.ensureContent(course.id, original)
+        pages = if (text == null) {
+            null
+        } else {
+            withContext(Dispatchers.IO) {
+                CourseCoverUrls.ensureBlockMap(appContext)
+                structuredPages(appContext, course, original).takeIf { it.isNotEmpty() }
+            }
+        }
+        loading = false
+    }
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(DS.canvas)
+            .pointerInput(Unit) { detectTapGestures { } },
+    ) {
+        Row(
+            modifier = Modifier.fillMaxWidth().padding(start = 20.dp, end = 20.dp, top = 12.dp, bottom = 10.dp),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.spacedBy(10.dp),
+        ) {
+            Icon(imageVector = Icons.Filled.Public, contentDescription = null, tint = DS.accent, modifier = Modifier.size(18.dp))
+            Text(
+                text = original.displayName,
+                style = SophiaTypography.titleMedium,
+                color = DS.ink,
+                modifier = Modifier.weight(1f),
+            )
+            IconButton(onClick = onClose) {
+                Icon(
+                    imageVector = Icons.Filled.Close,
+                    contentDescription = StringStore.text(context, "common.close", language),
+                    tint = DS.ink,
+                )
+            }
+        }
+        val loaded = pages
+        when {
+            loaded != null -> {
+                // Le texte suit le sens d'écriture de sa langue, pas celui de l'app.
+                CompositionLocalProvider(
+                    LocalLayoutDirection provides if (original.isRtl) LayoutDirection.Rtl else LayoutDirection.Ltr,
+                ) {
+                    Column(
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .verticalScroll(rememberScrollState())
+                            .padding(start = 20.dp, end = 20.dp, top = 8.dp, bottom = 40.dp),
+                        verticalArrangement = Arrangement.spacedBy(40.dp),
+                    ) {
+                        loaded.forEach { page ->
+                            Column(verticalArrangement = Arrangement.spacedBy(DS.Space.m)) {
+                                Text(text = page.title, style = SophiaTypography.titleLarge)
+                                page.blocks.forEach { block ->
+                                    ReaderBlockView(block = block, language = original, courseId = course.id, locked = false)
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            loading -> Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+                CircularProgressIndicator(color = DS.accent)
+            }
+            else -> Column(
+                modifier = Modifier.fillMaxSize().padding(32.dp),
+                horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.spacedBy(12.dp, Alignment.CenterVertically),
+            ) {
+                Text(
+                    text = StringStore.text(context, "course.offline.body", language),
+                    style = SophiaTypography.bodyLarge,
+                    color = DS.inkSecondary,
+                    textAlign = TextAlign.Center,
+                )
+                Text(
+                    text = StringStore.text(context, "course.offline.retry", language),
+                    style = SophiaTypography.titleMedium,
+                    color = DS.accentSoft,
+                    modifier = Modifier.softPress(onClick = { attempt++ }),
+                )
+            }
+        }
+    }
+}
 
 /**
  * Author slug, references and original language of a course, read from the V2 root.

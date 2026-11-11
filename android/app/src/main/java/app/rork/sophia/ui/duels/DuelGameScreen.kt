@@ -437,6 +437,8 @@ private fun StatusLine(model: DuelGameModel, language: AppLanguage, modifier: Mo
         // L'adversaire vient de quitter la partie : la victoire suit.
         model.opponentForfeited -> text("duel.friend.left", handle)
         model.phase == DuelPhase.Answering -> when {
+            // Entre amis : l'ami a quitté la partie, on la finit seul.
+            model.opponentLeft -> text("duel.friend.left", handle)
             model.playerLocked && !model.opponentAnswered -> text("duel.game.waiting", handle)
             model.opponentAnswered && !model.playerLocked -> text("duel.game.theyAnswered", handle)
             else -> ""

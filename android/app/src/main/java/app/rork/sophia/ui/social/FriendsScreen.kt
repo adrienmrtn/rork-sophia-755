@@ -49,6 +49,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import app.rork.sophia.SophiaApplication
 import app.rork.sophia.data.FriendLeaderboardEntry
+import app.rork.sophia.data.FriendPresence
 import app.rork.sophia.data.FriendPublicStats
 import app.rork.sophia.data.FriendsLeaderboardPeriod
 import app.rork.sophia.data.ProgressManager
@@ -58,10 +59,14 @@ import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.uppercaseIn
 import app.rork.sophia.ui.components.CircleIconButton
 import app.rork.sophia.ui.components.ConfirmDialog
+import app.rork.sophia.ui.duels.DuelPalette
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
 import app.rork.sophia.ui.theme.SophiaTypography
 import kotlinx.coroutines.launch
+import app.rork.sophia.ui.duels.DuelFriendEntry
+import app.rork.sophia.ui.duels.DuelFriendPresenter
+import app.rork.sophia.data.FeatureFlags
 
 @Composable
 fun FriendsScreen(
@@ -455,6 +460,10 @@ private fun FriendProfileSheet(
     val level = ProgressManager.globalLevelProgress(stats.global_xp)
     val progress = if (level.xpForLevel == 0) 0f else level.xpIntoLevel.toFloat() / level.xpForLevel
     var confirmRemove by remember { mutableStateOf(false) }
+    var presence by remember(stats.user_id) { mutableStateOf<FriendPresence?>(null) }
+    LaunchedEffect(stats.user_id) {
+        presence = (context.applicationContext as SophiaApplication).socialService.friendPresence(stats.user_id)
+    }
 
     if (confirmRemove) {
         ConfirmDialog(
@@ -499,6 +508,10 @@ private fun FriendProfileSheet(
                 letterSpacing = 2.sp,
             )
             Text("@${stats.handle}", style = SophiaTypography.titleMedium)
+            // « En ligne », ou « Vu il y a 5 minutes ». Rien quand le serveur ne sait pas.
+            friendPresenceText(context, presence, language)?.let {
+                Text(it, style = SophiaTypography.labelMedium, color = if (presence?.online == true) DuelPalette.online else DS.inkSecondary)
+            }
             Text(
                 StringStore.text(context, "common.levelShort", language, level.level),
                 style = SophiaTypography.labelMedium,
@@ -533,6 +546,33 @@ private fun FriendProfileSheet(
             )
         }
         Spacer(Modifier.weight(1f))
+        // « Défier en duel » : là où les duels existent, pour un ami qui les a (le classement
+        // des duels le dit). Aucun trophée en jeu ; la partie s'ouvre par-dessus cet écran.
+        val sophia = context.applicationContext as SophiaApplication
+        val duelFriends by sophia.duelService.leaderboard.collectAsState()
+        LaunchedEffect(stats.user_id) {
+            if (FeatureFlags.duelsVisible(language)) sophia.duelService.refreshLeaderboard()
+        }
+        val duelEntry = duelFriends.firstOrNull { it.userId == stats.user_id }
+        if (FeatureFlags.duelsVisible(language) && duelEntry?.canChallenge == true) {
+            Button(
+                onClick = {
+                    DuelFriendPresenter.present(
+                        DuelFriendEntry.Challenge(
+                            userId = stats.user_id,
+                            handle = stats.handle,
+                            avatarId = duelEntry.avatarId,
+                        ),
+                    )
+                },
+                modifier = Modifier.fillMaxWidth().height(52.dp),
+                shape = DS.controlShape,
+                colors = ButtonDefaults.buttonColors(containerColor = DS.accent, contentColor = androidx.compose.ui.graphics.Color.White),
+            ) {
+                Text(StringStore.text(context, "duel.friend.challenge", language), fontFamily = PlusJakartaSans, fontWeight = FontWeight.Bold)
+            }
+            Spacer(Modifier.height(10.dp))
+        }
         Button(
             onClick = { confirmRemove = true },
             modifier = Modifier.fillMaxWidth().height(48.dp),
@@ -585,7 +625,7 @@ private fun StatTile(label: String, value: String, modifier: Modifier = Modifier
 }
 
 @Composable
-private fun PeriodChip(label: String, selected: Boolean, onClick: () -> Unit) {
+internal fun PeriodChip(label: String, selected: Boolean, onClick: () -> Unit) {
     Text(
         text = label,
         style = SophiaTypography.labelLarge,
