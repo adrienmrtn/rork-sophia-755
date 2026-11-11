@@ -35,6 +35,10 @@ Debug APK uses the placeholder RevenueCat key (`goog_REPLACE_ME`) until you set 
 ## Implemented so far
 
 - 5-tab shell + TikTok home + library / Parcours / training / profile
+- **New-generation navigation for everyone** (the 50/50 draw is over, as on iOS): Home, Explore,
+  Duels (English only) and Profile tabs. Parcours opens from a card at the bottom of Explore,
+  training from a card on the profile, and « Become a creator » is a page (`BecomeCreatorScreen`)
+  that leads to `vik-studios-creators.com/<app language>`. The 5-tab shell is no longer served.
 - **Parcours** (iOS learning path): every collection is a level, courses open one after the other,
   a 20-question mixed quiz passed at 11/20 opens the next level (+100 XP once, synced with iOS as
   `pathLevelResults`); changes since the last visit are replayed (pod fill, connector, level unlock

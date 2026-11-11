@@ -134,9 +134,9 @@ fun MainTabs(
     val progress by app.progressManager.progress.collectAsState()
     val discount by app.discountManager.state.collectAsState()
     var selectedTab by remember { mutableIntStateOf(0) }
-    // Variante de navigation (A/B « nouvelle génération »), lue une fois : un changement dans
-    // les réglages de debug vaut au prochain lancement, pas sous les doigts de l'utilisateur.
-    val newNavigation = remember { FeatureFlags.newNavigation(context) }
+    // La navigation « nouvelle génération », pour tous depuis la fin du tirage 50/50. La
+    // branche classique plus bas n'est plus servie.
+    val newNavigation = FeatureFlags.newNavigation
     // L'onglet Duels n'existe qu'en anglais pour l'instant (la langue des questions). Lu une
     // fois, comme la variante de navigation : changer de langue dans les réglages ne fait pas
     // apparaître ou disparaître un onglet sous l'écran ouvert, il suit au prochain lancement.
@@ -427,7 +427,7 @@ fun MainTabs(
             }
         } else {
             if (newNavigation) {
-                // Les 4 onglets de la maquette ; le lecteur, les paywalls et les overlays
+                // Les onglets de la maquette ; le lecteur, les paywalls et les overlays
                 // ci-dessous restent les mêmes, `openCourse` reste la seule porte du lecteur.
                 NewGenTabs(
                     language = language,
@@ -452,12 +452,6 @@ fun MainTabs(
                     onShowPaywall = { paywall = PaywallContext.DEBLOQUER_COURS },
                     onOpenPathQuiz = { level, isLastLevel -> pathQuiz = level to isLastLevel },
                     onOpenAudioPlayer = { showAudioPlayer = true },
-                    onBecomeCreator = {
-                        val url = AppConfig.CREATOR_STUDIO_URL
-                        val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
-                            .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-                        runCatching { context.startActivity(intent) }
-                    },
                 )
             } else {
     // Autorenew is the Material twin of the iOS `arrow.triangle.2.circlepath`; RestartAlt

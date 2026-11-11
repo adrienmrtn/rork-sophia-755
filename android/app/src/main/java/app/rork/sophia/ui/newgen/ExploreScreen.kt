@@ -78,6 +78,16 @@ import app.rork.sophia.ui.theme.SophiaTypography
 import java.util.Calendar
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import androidx.compose.foundation.Image
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.foundation.layout.IntrinsicSize
+import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.foundation.layout.heightIn
+import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
+import app.rork.sophia.domain.LearningPathEngine
+import app.rork.sophia.data.ContentCatalog
+import app.rork.sophia.R
 
 /**
  * L'onglet Explorer, variante « univers » de la maquette : la recherche (cours, créateurs,
@@ -96,6 +106,7 @@ fun ExploreScreen(
     onOpenCreator: (CourseAuthor) -> Unit,
     onOpenCampaign: (Campaign) -> Unit,
     onOpenUniverse: (String) -> Unit,
+    onOpenPath: () -> Unit,
 ) {
     val context = LocalContext.current
     val summaries = rememberCourseSummaries(language)
@@ -426,10 +437,126 @@ fun ExploreScreen(
                     }
                 }
             }
+
+            // Le Parcours n'a plus d'onglet à lui : son entrée est tout en bas de la page.
+            PathCard(
+                language = language,
+                progress = progress,
+                onClick = onOpenPath,
+                modifier = Modifier.padding(horizontal = 20.dp),
+            )
         }
     }
     }
 }
+
+/**
+ * L'entrée du Parcours : sur fond marine, avec son illustration en papier découpé
+ * (`path_poster`, même direction que le site) et le niveau où en est le lecteur.
+ */
+@Composable
+private fun PathCard(
+    language: AppLanguage,
+    progress: UserProgress,
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier,
+) {
+    val context = LocalContext.current
+    // Le niveau en cours : le premier qui n'est pas réussi, sinon le dernier. Les collections
+    // se lisent hors du fil principal ; sans elles, la carte annonce le niveau 1.
+    var collections by remember(language) { mutableStateOf(ContentCatalog.cachedCollections(language)) }
+    var coursesById by remember(language) {
+        mutableStateOf(ContentCatalog.cachedSummaries(language)?.associateBy { it.id })
+    }
+    LaunchedEffect(language) {
+        if (collections == null) {
+            collections = ContentCatalog.collectionsAsync(context.applicationContext, language)
+        }
+        if (coursesById == null) {
+            coursesById = ContentCatalog.summariesAsync(context.applicationContext, language).associateBy { it.id }
+        }
+    }
+    val level = remember(collections, coursesById, progress.courseProgress, progress.pathLevelResults) {
+        val all = collections
+        val byId = coursesById
+        if (all == null || byId == null) {
+            1
+        } else {
+            val completed = progress.courseProgress.filterValues { it.isCompleted }.keys
+            val passed = progress.pathLevelResults.filterValues { it.isPassed }.keys
+            val levels = LearningPathEngine.snapshot(all, byId, { it in completed }, { it in passed }).levels
+            (levels.firstOrNull { !it.isPassed } ?: levels.lastOrNull())?.number ?: 1
+        }
+    }
+    val posterWidth = 128.dp
+    Box(
+        modifier = modifier
+            .fillMaxWidth()
+            .height(IntrinsicSize.Min)
+            .softPress(onClick = onClick)
+            .clip(DS.cardShape)
+            .background(PATH_CARD_NAVY),
+    ) {
+        Image(
+            painter = painterResource(R.drawable.path_poster),
+            contentDescription = null,
+            contentScale = ContentScale.Crop,
+            modifier = Modifier.align(Alignment.CenterEnd).width(posterWidth).fillMaxHeight(),
+        )
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .heightIn(min = 148.dp)
+                .padding(16.dp)
+                .padding(end = posterWidth),
+            verticalArrangement = Arrangement.spacedBy(6.dp, Alignment.CenterVertically),
+        ) {
+            Text(
+                text = StringStore.text(context, "path.title", language),
+                fontFamily = PlusJakartaSans,
+                fontWeight = FontWeight.ExtraBold,
+                fontSize = 22.sp,
+                color = Color.White,
+            )
+            Text(
+                text = StringStore.text(context, "explore.path.subtitle", language),
+                fontFamily = PlusJakartaSans,
+                fontSize = 15.sp,
+                lineHeight = 20.sp,
+                color = Color.White.copy(alpha = 0.85f),
+            )
+            Row(
+                modifier = Modifier
+                    .padding(top = 6.dp)
+                    .height(32.dp)
+                    .clip(CircleShape)
+                    .background(PATH_CARD_SAFFRON)
+                    .padding(horizontal = 12.dp),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(4.dp),
+            ) {
+                Text(
+                    text = StringStore.text(context, "path.levelCaption", language, level),
+                    fontFamily = PlusJakartaSans,
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 13.sp,
+                    color = PATH_CARD_NAVY,
+                    maxLines = 1,
+                )
+                Icon(
+                    imageVector = Icons.AutoMirrored.Filled.KeyboardArrowRight,
+                    contentDescription = null,
+                    tint = PATH_CARD_NAVY,
+                    modifier = Modifier.size(16.dp),
+                )
+            }
+        }
+    }
+}
+
+/** Marine et safran des illustrations du site (`EventPalette` sur iOS). */
+private val PATH_CARD_NAVY = Color(0xFF1A3A6B)
+private val PATH_CARD_SAFFRON = Color(0xFFF2B134)
 
 /** Une sous-catégorie du catalogue, avec la couverture de son cours le plus lu. */
 internal data class Universe(val name: String, val courses: List<CourseSummary>, val cover: CourseSummary)

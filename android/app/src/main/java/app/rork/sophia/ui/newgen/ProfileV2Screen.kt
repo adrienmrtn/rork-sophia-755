@@ -64,6 +64,7 @@ import app.rork.sophia.ui.components.softPress
 import app.rork.sophia.ui.components.sophiaCard
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
+import app.rork.sophia.R
 
 /** Les listes du profil : à lire (favoris), lus, aimés. */
 enum class ProfileListKind(val titleKey: String, val emptyKey: String) {
@@ -103,6 +104,7 @@ fun ProfileV2Screen(
     onOpenList: (ProfileListKind) -> Unit,
     onOpenCampaign: (Campaign) -> Unit,
     onOpenProgression: () -> Unit,
+    onOpenTraining: () -> Unit,
     onOpenFriends: () -> Unit,
     onDiscoverCreators: () -> Unit,
     onBecomeCreator: () -> Unit,
@@ -237,6 +239,14 @@ fun ProfileV2Screen(
                 modifier = Modifier.weight(1f),
             )
         }
+
+        // L'Entraînement n'a plus d'onglet à lui : il s'ouvre d'ici.
+        PosterCard(
+            imageRes = R.drawable.training_poster,
+            title = StringStore.text(context, "training.title", language),
+            subtitle = StringStore.text(context, "training.locked.tagline", language),
+            onClick = onOpenTraining,
+        )
 
         ResumeCoursesSection(
             language = language,

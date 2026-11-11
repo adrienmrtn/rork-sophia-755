@@ -7,12 +7,10 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Autorenew
 import androidx.compose.material.icons.filled.EmojiEvents
 import androidx.compose.material.icons.filled.Explore
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Person
-import androidx.compose.material.icons.filled.Route
 import androidx.compose.material3.Icon
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
@@ -58,9 +56,11 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
 /**
- * Le nombre d'index d'onglet (0 à 5), donc de piles d'écrans tenues par `MainTabs` : Accueil,
- * Explorer, Parcours, Entraînement, Profil (4) et Duels ([DUELS_TAB_INDEX] = 5, affiché avant
- * le Profil quand l'app est en anglais ; sa pile existe mais reste vide, il ne pousse rien).
+ * Le nombre d'index d'onglet (0 à 5), donc de piles d'écrans tenues par `MainTabs` : Accueil (0),
+ * Explorer (1), Profil (4) et Duels ([DUELS_TAB_INDEX] = 5, affiché avant le Profil quand l'app
+ * est en anglais ; sa pile existe mais reste vide, il ne pousse rien). Les index 2 et 3 étaient
+ * ceux du Parcours et de l'Entraînement, désormais des pages poussées : ils restent réservés
+ * pour ne pas décaler les autres (mêmes numéros que sur iOS) et retombent sur le Profil.
  */
 const val NEWGEN_TAB_COUNT = 6
 
@@ -85,6 +85,9 @@ sealed class NewGenRoute {
     data object Progression : NewGenRoute()
     data object Path : NewGenRoute()
     data object Training : NewGenRoute()
+
+    /** La page « Deviens créateur », avant la sortie vers le Hub des créateurs. */
+    data object BecomeCreator : NewGenRoute()
 }
 
 /**
@@ -94,11 +97,11 @@ sealed class NewGenRoute {
 private val TABLET_CONTENT_WIDTH = 640.dp
 
 /**
- * La navigation « nouvelle génération » : la barre de 5 onglets (Accueil, Explorer, Parcours,
- * Entraînement, Profil ; Parcours et Entraînement sont les écrans classiques, gardés pour ne pas
- * perdre les anciens lecteurs), 6 avec Duels entre Entraînement et Profil quand [showsDuels]
- * (l'app est en anglais), l'écran racine de l'onglet,
- * et par-dessus l'écran poussé en tête de sa pile ([routeStacks], une par onglet, tenue par
+ * La navigation « nouvelle génération », comme sur iOS : la barre de 3 onglets (Accueil,
+ * Explorer, Profil), 4 avec Duels entre Explorer et Profil quand [showsDuels] (l'app est en
+ * anglais). Le Parcours s'ouvre depuis une carte d'Explorer et l'Entraînement depuis une carte
+ * du Profil, en pages poussées : ce sont les écrans classiques, gardés tels quels. Sous la
+ * barre : l'écran racine de l'onglet, et par-dessus l'écran poussé en tête de sa pile ([routeStacks], une par onglet, tenue par
  * `MainTabs` qui gère aussi le retour système). Le lecteur, les paywalls et les overlays
  * restent présentés par `MainTabs` au-dessus de tout ; [onOpenCourse] est la seule porte vers
  * le lecteur, avec la source de l'événement `course_open`.
@@ -130,7 +133,6 @@ fun NewGenTabs(
     onShowPaywall: () -> Unit,
     onOpenPathQuiz: (PathLevel, Boolean) -> Unit,
     onOpenAudioPlayer: () -> Unit,
-    onBecomeCreator: () -> Unit,
 ) {
     val context = LocalContext.current
     // Les nouveaux écrans lisent auteurs et événements de manière synchrone : chauffés ici,
@@ -146,20 +148,18 @@ fun NewGenTabs(
         buildList {
             add(Triple("tab.home", Icons.Filled.Home, 0))
             add(Triple("tab.explore", Icons.Filled.Explore, 1))
-            add(Triple("tab.path", Icons.Filled.Route, 2))
-            add(Triple("tab.training", Icons.Filled.Autorenew, 3))
             // Dessiné avant le Profil mais avec son propre index (5, comme sur iOS) : les
             // onglets existants gardent leurs numéros.
             if (showsDuels) add(Triple("tab.duels", Icons.Filled.EmojiEvents, DUELS_TAB_INDEX))
             add(Triple("tab.profile", Icons.Filled.Person, PROFILE_TAB_INDEX))
         }
     }
-    // Six onglets sur un téléphone de 360 dp : environ 53 dp par libellé. En 10 sp (la taille
-    // de la barre à six onglets d'iOS) « Practice » tient sans être coupé.
-    val tabLabelSize = if (tabs.size > 5) 10.sp else 11.sp
-    // Un index inconnu, ou celui des Duels quand l'onglet n'est pas affiché, retombe sur le Profil.
+    // Quatre onglets au plus : les libellés tiennent largement en 11 sp.
+    val tabLabelSize = 11.sp
+    // Un index sans onglet (2 et 3, anciens Parcours et Entraînement ; celui des Duels quand
+    // l'onglet n'est pas affiché ; un index inconnu) retombe sur le Profil.
     val tabIndex = selectedTab.coerceIn(0, NEWGEN_TAB_COUNT - 1)
-        .let { if (it == DUELS_TAB_INDEX && !showsDuels) PROFILE_TAB_INDEX else it }
+        .let { if (tabs.none { tab -> tab.third == it }) PROFILE_TAB_INDEX else it }
     val stack = routeStacks[tabIndex]
     fun push(route: NewGenRoute) {
         stack.add(route)
@@ -220,7 +220,7 @@ fun NewGenTabs(
                     onOpenCreator = { push(NewGenRoute.Creator(it.slug)) },
                     onOpenCampaign = { push(NewGenRoute.Event(it.slug)) },
                     onSearch = { onSelectTab(1) },
-                    onBecomeCreator = onBecomeCreator,
+                    onBecomeCreator = { push(NewGenRoute.BecomeCreator) },
                 )
                 1 -> ExploreScreen(
                     modifier = tabModifier,
@@ -231,23 +231,7 @@ fun NewGenTabs(
                     onOpenCreator = { push(NewGenRoute.Creator(it.slug)) },
                     onOpenCampaign = { push(NewGenRoute.Event(it.slug)) },
                     onOpenUniverse = { push(NewGenRoute.Universe(it)) },
-                )
-                2 -> LearningPathScreen(
-                    language = language,
-                    progress = progress,
-                    isCovered = pathCovered,
-                    onOpenCourse = { onOpenCourseById(it, "path") },
-                    onOpenQuiz = onOpenPathQuiz,
-                    modifier = tabModifier,
-                )
-                3 -> TrainingScreen(
-                    modifier = tabModifier,
-                    language = language,
-                    isPremium = isPremium,
-                    progress = progress,
-                    progressManager = progressManager,
-                    storeViewModel = storeViewModel,
-                    onPremiumUnlocked = { storeViewModel.refresh() },
+                    onOpenPath = { push(NewGenRoute.Path) },
                 )
                 // Dessiné plus bas, hors du `when`, pour rester monté quand on change d'onglet.
                 DUELS_TAB_INDEX -> Unit
@@ -262,9 +246,10 @@ fun NewGenTabs(
                     onOpenList = { push(NewGenRoute.CourseList(it)) },
                     onOpenCampaign = { push(NewGenRoute.Event(it.slug)) },
                     onOpenProgression = { push(NewGenRoute.Progression) },
+                    onOpenTraining = { push(NewGenRoute.Training) },
                     onOpenFriends = onOpenFriends,
                     onDiscoverCreators = { onSelectTab(1) },
-                    onBecomeCreator = onBecomeCreator,
+                    onBecomeCreator = { push(NewGenRoute.BecomeCreator) },
                     onOpenSettings = onOpenSettings,
                 )
             }
@@ -307,7 +292,6 @@ fun NewGenTabs(
                         onOpenFriends = onOpenFriends,
                         onShowPaywall = onShowPaywall,
                         onOpenPathQuiz = onOpenPathQuiz,
-                        onBecomeCreator = onBecomeCreator,
                         modifier = tabModifier,
                     )
                 }
@@ -333,7 +317,6 @@ private fun RouteScreen(
     onOpenFriends: () -> Unit,
     onShowPaywall: () -> Unit,
     onOpenPathQuiz: (PathLevel, Boolean) -> Unit,
-    onBecomeCreator: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
     val context = LocalContext.current
@@ -387,7 +370,7 @@ private fun RouteScreen(
                     onBack = onBack,
                     onOpenCourse = { push(NewGenRoute.CourseDetail(it.id, "event")) },
                     onOpenCreator = { push(NewGenRoute.Creator(it.slug)) },
-                    onBecomeCreator = onBecomeCreator,
+                    onBecomeCreator = { push(NewGenRoute.BecomeCreator) },
                     modifier = modifier,
                 )
             }
@@ -466,6 +449,11 @@ private fun RouteScreen(
                 onPremiumUnlocked = { storeViewModel.refresh() },
             )
         }
+        NewGenRoute.BecomeCreator -> BecomeCreatorScreen(
+            language = language,
+            onBack = onBack,
+            modifier = modifier,
+        )
     }
 }
 

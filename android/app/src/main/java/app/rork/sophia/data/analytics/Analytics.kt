@@ -219,8 +219,8 @@ object Analytics {
             "link" -> "link"
             else -> "direct"
         }
-        // La variante de navigation (A/B « nouvelle génération »), pour lire les deux cohortes.
-        val nav = appContext?.let { FeatureFlags.navigationVariant(it).raw } ?: FeatureFlags.NavigationVariant.CLASSIC.raw
+        // La variante de navigation : « newgen » pour tous depuis la fin du tirage 50/50.
+        val nav = FeatureFlags.navigationVariant.raw
         log("app_open", props = mapOf("source" to source, "nav" to nav))
     }
 

@@ -24,10 +24,19 @@ object AppConfig {
     fun creatorsUrl(role: String): String = "https://vik-studios-creators.com/creators/$role"
 
     /**
-     * Le Studio des créateurs (« Deviens créateur » du fil, du profil et des événements) :
-     * la page « Write for Sophia » du site. Anglais seulement.
+     * L'accueil du Hub des créateurs, dans la langue de l'app : `vik-studios-creators.com/<langue>`.
+     * C'est la sortie de la page « Deviens créateur » (`BecomeCreatorScreen`). Le Hub écrit ses
+     * codes à sa façon, comme sur iOS : le portugais n'y existe qu'en `pt-br`, le norvégien en `no`.
      */
-    const val CREATOR_STUDIO_URL = "https://sophia-culture.com/write"
+    fun creatorHubUrl(language: app.rork.sophia.domain.AppLanguage): String {
+        val code = when (language) {
+            app.rork.sophia.domain.AppLanguage.PORTUGUESE,
+            app.rork.sophia.domain.AppLanguage.PORTUGUESE_PORTUGAL -> "pt-br"
+            app.rork.sophia.domain.AppLanguage.NORWEGIAN -> "no"
+            else -> language.code
+        }
+        return "https://vik-studios-creators.com/$code"
+    }
 
     const val PREMIUM_ENTITLEMENT = "premium"
 }

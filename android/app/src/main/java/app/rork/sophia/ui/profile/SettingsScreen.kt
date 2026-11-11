@@ -37,7 +37,6 @@ import androidx.compose.material.icons.filled.RestartAlt
 import androidx.compose.material.icons.filled.School
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.filled.Today
-import androidx.compose.material.icons.filled.ViewModule
 import androidx.compose.material.icons.filled.WorkspacePremium
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.CircularProgressIndicator
@@ -125,7 +124,6 @@ fun SettingsScreen(
     var showResetProgress by remember { mutableStateOf(false) }
     var showCreatorChoice by remember { mutableStateOf(false) }
     // Variante de navigation (A/B « nouvelle génération ») ; un changement vaut au prochain lancement.
-    var navVariant by remember { mutableStateOf(FeatureFlags.navigationVariant(context)) }
     var showShare by remember { mutableStateOf(false) }
     if (showShare) {
         ShareSophiaSheet(language = language, onDismiss = { showShare = false })
@@ -450,24 +448,6 @@ fun SettingsScreen(
                             onCheckedChange = onDebugPremiumChange,
                             colors = SwitchDefaults.colors(checkedTrackColor = DS.accent),
                         )
-                    },
-                )
-                // Bascule la navigation entre les 5 onglets historiques et la maquette
-                // « nouvelle génération » ; lue une fois au lancement, comme sur iOS.
-                HorizontalDivider(color = DS.hairline)
-                SettingsRow(
-                    icon = Icons.Filled.ViewModule,
-                    label = StringStore.text(context, "settings.debug.navigation", language),
-                    subtitle = navVariant.raw,
-                    showChevron = false,
-                    onClick = {
-                        val next = if (navVariant == FeatureFlags.NavigationVariant.NEWGEN) {
-                            FeatureFlags.NavigationVariant.CLASSIC
-                        } else {
-                            FeatureFlags.NavigationVariant.NEWGEN
-                        }
-                        FeatureFlags.setNavigationVariant(context, next)
-                        navVariant = next
                     },
                 )
                 // Le catalogue en ligne : d'où il vient, combien de cours sont sur le téléphone,

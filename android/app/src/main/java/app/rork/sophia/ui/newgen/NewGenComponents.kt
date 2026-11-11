@@ -20,6 +20,7 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
 import androidx.compose.material.icons.automirrored.filled.DirectionsRun
 import androidx.compose.material.icons.automirrored.filled.MenuBook
 import androidx.compose.material.icons.filled.AcUnit
@@ -939,5 +940,58 @@ object NewGenFormat {
                 date.toString()
             }
         }
+    }
+}
+
+/**
+ * Une carte d'entrée illustrée (papier découpé du site) : vignette, titre, une ligne, chevron.
+ * Le `posterCard` du profil iOS (Entraînement, Ma progression, anti-scroll).
+ */
+@Composable
+fun PosterCard(
+    imageRes: Int,
+    title: String,
+    subtitle: String,
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier,
+) {
+    Row(
+        modifier = modifier
+            .fillMaxWidth()
+            .softPress(onClick = onClick)
+            .clip(DS.cardShape)
+            .background(DS.surface)
+            .border(1.dp, DS.hairline, DS.cardShape)
+            .padding(14.dp),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.spacedBy(14.dp),
+    ) {
+        androidx.compose.foundation.Image(
+            painter = androidx.compose.ui.res.painterResource(imageRes),
+            contentDescription = null,
+            contentScale = androidx.compose.ui.layout.ContentScale.Crop,
+            modifier = Modifier.size(64.dp).clip(RoundedCornerShape(16.dp)),
+        )
+        Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(3.dp)) {
+            Text(
+                text = title,
+                fontFamily = PlusJakartaSans,
+                fontWeight = FontWeight.ExtraBold,
+                fontSize = 20.sp,
+                color = DS.ink,
+            )
+            Text(
+                text = subtitle,
+                fontFamily = PlusJakartaSans,
+                fontSize = 15.sp,
+                color = DS.inkSecondary,
+            )
+        }
+        Icon(
+            imageVector = Icons.AutoMirrored.Filled.KeyboardArrowRight,
+            contentDescription = null,
+            tint = DS.inkTertiary,
+            modifier = Modifier.size(20.dp),
+        )
     }
 }
