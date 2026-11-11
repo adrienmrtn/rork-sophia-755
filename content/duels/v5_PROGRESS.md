@@ -30,3 +30,9 @@ La v4 (400 questions) est terminée : supabase/duels_v4_a_coller/1..3 (voir cont
 - [ ] images (agents a et b en cours) → vérifier, réduire/compléter à 100, scripts/duels_source/41_v5_images.json, crédits dans images.json, rebuild, pack part15
 - [ ] traduction : packs part1..14 (texte) ; vague 1 = parts 1–7 (29 agents), vague 2 = parts 8–15 (29 agents)
 - [ ] merge --new --parts 15, SQL, test Postgres local
+
+## File d'attente des traductions (20 agents max en même temps)
+- Vague 1 (parts 1–7) lancée : fr es de pt pt-PT it tr pl ro nl el sv hu bg cs da nb ru hr sl
+- Vague 1 à lancer : sk sr ar he fi et lt lv ja
+- Vague 2 (parts 8–15, 15 = images) : toutes les langues, après la vague 1
+(Une langue est finie pour une vague quand out/<lang>/part<N>.json existe et passe `check` pour toutes ses parts.)
