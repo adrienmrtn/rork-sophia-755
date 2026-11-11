@@ -229,7 +229,14 @@
     "artist": "Toyokuni III (Kunisada)",
     "license": "Public domain",
     "source": "https://commons.wikimedia.org/wiki/File:Origin_of_Iwato_Kagura_Dance_Amaterasu_by_Toyokuni_III_(Kunisada)_1856.png",
-    "fit": "contain"
+    "fit": "cover",
+    "focus": "center",
+    "crop": [
+      0.333,
+      0,
+      0.667,
+      1
+    ]
   },
   "v5a_myth_lamassu": {
     "name": "Lamassu from the palace of Sargon II, Khorsabad",
@@ -285,10 +292,10 @@
   },
   "v5a_ataturk": {
     "name": "Mustafa Kemal Atatürk, c. 1923",
-    "file": "K. Ataturk president de la Republique Turque (cropped).jpg",
-    "artist": "Direction Generale de la Presse, Ankara",
+    "file": "Mustafa Kemal Atatürk (white balance).png",
+    "artist": "Unknown authorUnknown author",
     "license": "Public domain",
-    "source": "https://commons.wikimedia.org/wiki/File:K._Ataturk_president_de_la_Republique_Turque_(cropped).jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Mustafa_Kemal_Atat%C3%BCrk_(white_balance).png",
     "fit": "cover",
     "focus": "top"
   },
@@ -326,7 +333,13 @@
     "license": "Public domain",
     "source": "https://commons.wikimedia.org/wiki/File:Hubert_Vos%27s_painting_of_the_Dowager_Empress_Cixi_(Tzu_Hsi).jpg",
     "fit": "cover",
-    "focus": "top"
+    "focus": "top",
+    "crop": [
+      0,
+      0.13,
+      1,
+      1
+    ]
   },
   "v5a_benito_juarez": {
     "name": "Benito Juárez",
@@ -344,7 +357,13 @@
     "license": "Public domain",
     "source": "https://commons.wikimedia.org/wiki/File:Liliuokalani,_c._1891.jpg",
     "fit": "cover",
-    "focus": "top"
+    "focus": "top",
+    "crop": [
+      0,
+      0,
+      0.68,
+      1
+    ]
   },
   "v5a_karl_marx": {
     "name": "Karl Marx, photograph by John Jabez Edwin Mayall, 1875",
@@ -381,5 +400,30 @@
     "source": "https://commons.wikimedia.org/wiki/File:Natsume_Soseki_photo.jpg",
     "fit": "cover",
     "focus": "top"
+  },
+  "v5a_velasco_valley_mexico": {
+    "name": "The Valley of Mexico from the Santa Isabel Mountain Range, José María Velasco, 1875",
+    "file": "José María Velasco - The Valley of Mexico from the Santa Isabel Mountain Range - Google Art Project.jpg",
+    "artist": "José María Velasco (1840 - 1912) – painter (Mexican) Born in State of Mexico. Details on Google Art Project",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Jos%C3%A9_Mar%C3%ADa_Velasco_-_The_Valley_of_Mexico_from_the_Santa_Isabel_Mountain_Range_-_Google_Art_Project.jpg",
+    "fit": "contain"
+  },
+  "v5a_courbet_desperate_man": {
+    "name": "The Desperate Man (self-portrait), Gustave Courbet, 1843-1845",
+    "file": "Gustave Courbet - Le Désespéré (1843).jpg",
+    "artist": "Gustave Courbet",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Gustave_Courbet_-_Le_D%C3%A9sesp%C3%A9r%C3%A9_(1843).jpg",
+    "fit": "contain"
+  },
+  "v5a_myth_bastet": {
+    "name": "Statuette of Bastet, Egypt, Metropolitan Museum of Art",
+    "file": "Bastet MET DP310891.jpg",
+    "artist": null,
+    "license": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Bastet_MET_DP310891.jpg",
+    "fit": "cover",
+    "focus": "center"
   }
 }

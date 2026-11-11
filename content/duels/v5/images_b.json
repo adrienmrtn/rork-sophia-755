@@ -69,13 +69,25 @@
   "file": "Arc de Triomphe de l'Etoile, Paris, France, ca. 1890-1900.jpg",
   "fit": "cover",
   "focus": "center",
-  "name": "Arc de Triomphe de l'Étoile, Paris, photochrom, c. 1890-1900"
+  "name": "Arc de Triomphe de l'Étoile, Paris, photochrom, c. 1890-1900",
+  "crop": [
+   0,
+   0,
+   1,
+   0.93
+  ]
  },
  "v5b_monument_mount_rushmore": {
   "file": "Mount Rushmore National Memorial MORU3609.jpg",
   "fit": "cover",
   "focus": "center",
-  "name": "Mount Rushmore National Memorial, South Dakota (NPS)"
+  "name": "Mount Rushmore National Memorial, South Dakota (NPS)",
+  "crop": [
+   0.01,
+   0.04,
+   0.99,
+   0.99
+  ]
  },
  "v5b_monument_moai": {
   "file": "Moai Rano raraku.jpg",
@@ -83,17 +95,17 @@
   "focus": "center",
   "name": "Moai at Rano Raraku, Easter Island"
  },
- "v5b_monument_forbidden_city": {
-  "file": "The Forbidden City 1918.jpg",
-  "fit": "cover",
-  "focus": "center",
-  "name": "The Forbidden City, Beijing, 1918"
- },
  "v5b_monument_trevi": {
   "file": "Fountain of Trevi, Rome, Italy-LCCN2001700954.jpg",
   "fit": "cover",
   "focus": "center",
-  "name": "Trevi Fountain, Rome, photochrom, c. 1890-1900"
+  "name": "Trevi Fountain, Rome, photochrom, c. 1890-1900",
+  "crop": [
+   0.1,
+   0.18,
+   0.9,
+   0.86
+  ]
  },
  "v5b_monument_lincoln_memorial": {
   "file": "National Mall, Lincoln Memorial 04448v.jpg",
@@ -106,12 +118,6 @@
   "fit": "cover",
   "focus": "center",
   "name": "Pyramid of the Sun, Teotihuacan, Mexico"
- },
- "v5b_monument_great_zimbabwe": {
-  "file": "Great-Zimbabwe-3.jpg",
-  "fit": "cover",
-  "focus": "center",
-  "name": "Great Zimbabwe ruins, Zimbabwe"
  },
  "v5b_monument_golden_temple": {
   "file": "Vintage postcard of the Golden Temple, Amritsar, ca.1905 (detail).jpg",
@@ -127,7 +133,7 @@
  },
  "v5b_science_saturn": {
   "file": "Saturn during Equinox.jpg",
-  "fit": "cover",
+  "fit": "contain",
   "focus": "center",
   "name": "Saturn, Cassini, NASA, 2009"
  },
@@ -135,7 +141,13 @@
   "file": "STS-133 International Space Station after undocking 7.jpg",
   "fit": "cover",
   "focus": "center",
-  "name": "International Space Station, STS-133, NASA, 2011"
+  "name": "International Space Station, STS-133, NASA, 2011",
+  "crop": [
+   0,
+   0.5,
+   1,
+   1
+  ]
  },
  "v5b_science_hubble": {
   "file": "Hubble Space Telescope Release.jpg",
@@ -171,7 +183,13 @@
   "file": "Welwitschia mirabilis 3.jpg",
   "fit": "cover",
   "focus": "center",
-  "name": "Welwitschia mirabilis, Namib Desert"
+  "name": "Welwitschia mirabilis, Namib Desert",
+  "crop": [
+   0,
+   0,
+   0.94,
+   1
+  ]
  },
  "v5b_science_venus_flytrap": {
   "file": "Venus flytrap in pot.jpg",
@@ -189,12 +207,108 @@
   "file": "The Matterhorn and the Findelenbach Bridge, Valais, Alps of, Switzerland-LCCN2001703307.jpg",
   "fit": "cover",
   "focus": "center",
-  "name": "The Matterhorn, Valais, photochrom, c. 1890-1900"
+  "name": "The Matterhorn, Valais, photochrom, c. 1890-1900",
+  "crop": [
+   0.01,
+   0.02,
+   0.99,
+   0.6
+  ]
  },
  "v5b_nature_giants_causeway": {
   "file": "Giant's Causeway, County Antrim, Ireland, 1890s.jpg",
   "fit": "cover",
   "focus": "center",
-  "name": "Giant's Causeway, County Antrim, photochrom, 1890s"
+  "name": "Giant's Causeway, County Antrim, photochrom, 1890s",
+  "crop": [
+   0,
+   0,
+   1,
+   0.93
+  ]
+ },
+ "v5b_monument_karnak": {
+  "file": "Karnak Hypostyle Hall (9794663325).jpg",
+  "fit": "cover",
+  "focus": "center",
+  "name": "Great Hypostyle Hall, Karnak, Luxor, Egypt"
+ },
+ "v5b_monument_kinkakuji": {
+  "file": "Kusakabe Kimbei 1337 Kinkakuji.JPG",
+  "fit": "cover",
+  "focus": "center",
+  "name": "Kinkaku-ji, Kyoto, photograph by Kusakabe Kimbei, 1880s"
+ },
+ "v5b_monument_shwedagon": {
+  "file": "Shwedagon pagode, Rangoon Shwé Dagon pagoda. Rangoon, 565 (titel op object), RP-F-00-5342-2.jpg",
+  "fit": "cover",
+  "focus": "center",
+  "name": "Shwedagon Pagoda, Yangon, Rijksmuseum photograph"
+ },
+ "v5b_monument_chichen_itza": {
+  "file": "Chichen Itza Castillo (Catherwood).jpg",
+  "fit": "contain",
+  "focus": "center",
+  "name": "El Castillo, Chichén Itzá, Frederick Catherwood, 1844"
+ },
+ "v5b_monument_us_capitol": {
+  "file": "The United States Capitol building sits atop Capitol Hill 10107v.jpg",
+  "fit": "cover",
+  "focus": "center",
+  "name": "United States Capitol, Washington, D.C., Carol M. Highsmith"
+ },
+ "v5b_monument_st_peters": {
+  "file": "St. Peter's Place, the obelisk, Rome, Italy-LCCN2001700929.jpg",
+  "fit": "cover",
+  "focus": "center",
+  "name": "St. Peter's Square and Basilica, photochrom, c. 1890-1900"
+ },
+ "v5b_science_pluto": {
+  "file": "Pluto in True Color - High-Res.jpg",
+  "fit": "cover",
+  "focus": "center",
+  "name": "Pluto in true colour, New Horizons, NASA, 2015"
+ },
+ "v5b_science_space_shuttle": {
+  "file": "STS120LaunchHiRes-edit1.jpg",
+  "fit": "cover",
+  "focus": "center",
+  "name": "Launch of Space Shuttle Discovery, STS-120, NASA, 2007"
+ },
+ "v5b_science_axolotl": {
+  "file": "Axolotl Ambystoma mexicanum Aquarium Liège 30012016 1.jpg",
+  "fit": "cover",
+  "focus": "center",
+  "name": "Axolotl (Ambystoma mexicanum)"
+ },
+ "v5b_science_okapi": {
+  "file": "Okapi (PSF).png",
+  "fit": "contain",
+  "focus": "center",
+  "name": "Okapi, Pearson Scott Foresman illustration"
+ },
+ "v5b_science_aye_aye": {
+  "file": "Ayeaye, Daubentonia madagascariensis, Joseph Wolf (touched).jpg",
+  "fit": "contain",
+  "focus": "center",
+  "name": "Aye-aye, Joseph Wolf"
+ },
+ "v5b_science_rafflesia": {
+  "file": "Rafflesia-arnoldii.jpg",
+  "fit": "cover",
+  "focus": "center",
+  "name": "Rafflesia arnoldii flower"
+ },
+ "v5b_nature_old_faithful": {
+  "file": "Old Faithful Geyser (29289675968).jpg",
+  "fit": "cover",
+  "focus": "center",
+  "name": "Old Faithful Geyser, Yellowstone (NPS)"
+ },
+ "v5b_nature_victoria_falls": {
+  "file": "Baines Falls by Sunrise col print.jpg",
+  "fit": "contain",
+  "focus": "center",
+  "name": "Victoria Falls, Thomas Baines, 1860s"
  }
 }
