@@ -125,7 +125,10 @@ object DuelFormat {
             null, "", "year" -> number
             "%" -> "$number %"
             // Un compteur japonais (日, 冊, か国…) se colle au nombre : « 13植民地 ».
-            else -> if (unit.first().code in 0x3040..0x30FF || unit.first().code in 0x4E00..0x9FFF) "$number$unit" else "$number $unit"
+            else -> {
+                val first = unit?.firstOrNull()?.code ?: 0
+                if (first in 0x3040..0x30FF || first in 0x4E00..0x9FFF) "$number$unit" else "$number $unit"
+            }
         }
     }
 }
