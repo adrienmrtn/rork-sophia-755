@@ -17,9 +17,6 @@ struct ReaderStep: Identifiable {
         case block(ContentBlockV2, heading: String?)
         /// La carte auteur et les sources, après « À retenir » de la dernière section.
         case footer
-        /// Une section réservée (gratuit hors cours du jour) : la page floutée et le cadenas, en
-        /// un seul passage, comme la page verrouillée du mode par pages.
-        case locked
         /// Une leçon sans édition structurée : le rendu legacy de la page entière.
         case legacy
     }
@@ -53,15 +50,17 @@ struct ReaderStep: Identifiable {
         case .block(let block, _):
             if case .image = block { return true }
             return false
-        case .footer, .locked, .legacy:
+        case .footer, .legacy:
             return false
         }
     }
 
     // MARK: - Construction
 
-    /// Les passages d'un cours, dans l'ordre de lecture. Les sections verrouillées pour ce
-    /// lecteur tiennent en un passage ; une leçon sans édition structurée aussi.
+    /// Les passages d'un cours, dans l'ordre de lecture. Les sections réservées pour ce lecteur
+    /// n'y figurent pas (ni cadenas ni aperçu flouté) : le fil s'arrête à la fin de la partie
+    /// gratuite, et le « Continuer » suivant ouvre le paywall (`CourseView.advanceStep`). Une
+    /// leçon sans édition structurée tient en un passage.
     static func build(course: Course, isPremium: Bool, isDailyFreeCourse: Bool) -> [ReaderStep] {
         var steps: [ReaderStep] = []
         for (index, lesson) in course.lessons.enumerated() {
@@ -70,7 +69,6 @@ struct ReaderStep: Identifiable {
                 continue
             }
             if FreemiumGate.isLessonContentLocked(lessonIndex: index, isPremium: isPremium, isDailyFreeCourse: isDailyFreeCourse) {
-                steps.append(ReaderStep(id: "\(lesson.id)#locked", kind: .locked, sectionIndex: index, lesson: lesson, resolved: resolved))
                 continue
             }
             steps.append(ReaderStep(id: "\(lesson.id)#header", kind: .header, sectionIndex: index, lesson: lesson, resolved: resolved))
@@ -132,16 +130,16 @@ struct CourseStepReaderView: View {
     let onAuthorTap: (CourseAuthor) -> Void
     let isFollowingAuthor: (CourseAuthor) -> Bool
     let onFollowAuthor: (CourseAuthor) -> Void
-    let onUnlock: () -> Void
     let onDoubleTap: () -> Void
     /// « Voir l'original » (nil : non proposé, par exemple quand le cours n'est pas lisible en entier).
     var onShowOriginal: ((AppLanguage) -> Void)? = nil
 
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
-    /// Le haut du passage révélé vient se poser à 8 % de la hauteur du lecteur, quelle que soit la
-    /// hauteur du passage : la cible du défilement est un repère sans hauteur posé à son sommet.
-    private static let revealAnchor = UnitPoint(x: 0.5, y: 0.08)
+    /// Le haut du passage révélé vient se poser vers le milieu du lecteur (38 % de sa hauteur,
+    /// pour qu'un paragraphe entier tienne au centre de l'écran), quelle que soit la hauteur du
+    /// passage : la cible du défilement est un repère sans hauteur posé à son sommet.
+    private static let revealAnchor = UnitPoint(x: 0.5, y: 0.38)
 
     var body: some View {
         GeometryReader { geo in
@@ -248,17 +246,6 @@ struct CourseStepReaderView: View {
                 )
             }
 
-        case .locked:
-            if let resolved = step.resolved {
-                LockedSectionStep(
-                    resolved: resolved,
-                    accent: accent,
-                    courseId: course.id,
-                    courseTitle: course.title,
-                    onUnlock: onUnlock
-                )
-            }
-
         case .legacy:
             VStack(alignment: .leading, spacing: 24) {
                 Text(step.lesson.title)
@@ -275,46 +262,5 @@ struct CourseStepReaderView: View {
                 )
             }
         }
-    }
-}
-
-/// Une section réservée dans le fil : la page floutée, raccourcie et fondue vers le bas, le
-/// cadenas par-dessus. Même règle que la page verrouillée du mode par pages : le texte est
-/// caché à l'œil comme à VoiceOver, et seul le cadenas ouvre le paywall.
-private struct LockedSectionStep: View {
-    let resolved: ReaderStep.Resolved
-    let accent: Color
-    let courseId: String
-    let courseTitle: String
-    let onUnlock: () -> Void
-
-    var body: some View {
-        BlockContentView(
-            content: resolved.content,
-            section: resolved.section,
-            isFirst: resolved.isFirst,
-            accent: accent,
-            courseId: courseId,
-            courseTitle: courseTitle,
-            onGlossaryTap: { _ in }
-        )
-        .compositingGroup()
-        .blur(radius: 5)
-        .frame(maxWidth: .infinity, maxHeight: 440, alignment: .topLeading)
-        .clipped()
-        .mask(
-            LinearGradient(
-                stops: [
-                    .init(color: .black, location: 0),
-                    .init(color: .black, location: 0.7),
-                    .init(color: .clear, location: 1),
-                ],
-                startPoint: .top,
-                endPoint: .bottom
-            )
-        )
-        .allowsHitTesting(false)
-        .accessibilityHidden(true)
-        .overlay { CourseLessonLockOverlay(onUnlock: onUnlock) }
     }
 }

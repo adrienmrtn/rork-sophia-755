@@ -103,7 +103,7 @@ découpage bloc par bloc est donc faisable sans réécrire une ligne de contenu.
   (le ressort du savais-tu, `response 0.42, dampingFraction 0.8`). Les images y ajoutent une
   montée d'échelle de 0,97 à 1.
 - Frise : les événements apparaissent en cascade, 90 ms d'écart.
-- Défilement automatique : le haut du nouveau bloc se pose à 8 % de la hauteur du lecteur,
+- Défilement automatique : le haut du nouveau bloc se pose vers le milieu du lecteur (38 % de sa hauteur),
   quelle que soit la hauteur du bloc (la cible est un repère sans hauteur au sommet du bloc) ; de
   la place est gardée sous le dernier bloc pour qu'il puisse toujours monter jusque-là. Jamais de
   défilement automatique quand on remonte lire.
@@ -144,9 +144,10 @@ au lieu de basculer d'un coup. Le compteur « 2 / 5 » reste.
 ### Freemium
 
 La règle ne change pas : intro lisible par tous, suite réservée (premium ou cours gratuit du
-jour). Dans le fil, après l'intro, le marqueur « Partie 1 sur 4 » apparaît, puis le bloc suivant
-flouté avec le cadenas existant (`CourseLessonLockOverlay`) ; « Continuer » ouvre le paywall
-`debloquer_cours`. Le moment de conversion devient plus net : on est arrêté au milieu d'une
+jour). Dans le fil, sur iOS, la suite réservée n'apparaît pas (ni aperçu flouté ni cadenas) : la
+partie gratuite se lit normalement et le « Continuer » suivant ouvre le paywall `debloquer_cours` ;
+fermé sans achat, on reste sur le dernier bloc lu. (Le cadenas `CourseLessonLockOverlay` reste
+celui du mode par pages.) Le moment de conversion devient plus net : on est arrêté au milieu d'une
 histoire plutôt qu'au bout d'une page.
 
 ### Ce qui ne bouge pas
