@@ -332,15 +332,24 @@ def build(partial: bool = False) -> str:
             if q["kind"] == "slider" and (t.get("u") or "").strip():
                 row["u"] = t["u"].strip()
             rows[qid] = row
-        payload = json.dumps(rows, ensure_ascii=False, separators=(",", ":"))
-        parts.append(
-            f"-- {lang} : {len(rows)} questions\n"
-            "INSERT INTO public.duel_question_translations (question_id, lang, question, options, unit)\n"
-            f"SELECT e.key, {sql_str(lang)}, e.value ->> 'q', e.value -> 'o', e.value ->> 'u'\n"
-            f"FROM jsonb_each({dollar(payload)}::jsonb) AS e\n"
-            "WHERE EXISTS (SELECT 1 FROM public.duel_questions q WHERE q.id = e.key)\n"
-            "ON CONFLICT (question_id, lang) DO UPDATE SET question = EXCLUDED.question, options = EXCLUDED.options,\n"
-            "  unit = EXCLUDED.unit, updated_at = now();\n")
+        # Une ligne par question (l'éditeur SQL de Supabase tronque les lignes très longues),
+        # par paquets de 200 lignes.
+        values = [
+            "  (" + ", ".join([
+                sql_str(qid), sql_str(lang), sql_str(row["q"]),
+                (sql_str(json.dumps(row["o"], ensure_ascii=False)) + "::jsonb") if "o" in row else "NULL",
+                sql_str(row["u"]) if "u" in row else "NULL",
+            ]) + ")"
+            for qid, row in rows.items()
+        ]
+        block = [f"-- {lang} : {len(rows)} questions\n"]
+        for k in range(0, len(values), 200):
+            block.append(
+                "INSERT INTO public.duel_question_translations (question_id, lang, question, options, unit) VALUES\n"
+                + ",\n".join(values[k:k + 200])
+                + "\nON CONFLICT (question_id, lang) DO UPDATE SET question = EXCLUDED.question, options = EXCLUDED.options,\n"
+                "  unit = EXCLUDED.unit, updated_at = now();\n")
+        parts.append("".join(block))
     if problems:
         sys.exit("Traductions incomplètes, SQL non écrit :\n  " + "\n  ".join(problems))
 
