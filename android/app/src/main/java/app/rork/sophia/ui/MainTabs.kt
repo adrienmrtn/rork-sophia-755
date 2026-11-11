@@ -110,6 +110,7 @@ import androidx.compose.runtime.key
 import app.rork.sophia.ui.duels.DuelInviteBanner
 import app.rork.sophia.ui.duels.DuelFriendFlow
 import app.rork.sophia.ui.duels.DuelFriendPresenter
+import app.rork.sophia.ui.newgen.BadgeCelebrationHost
 
 private enum class OverlayScreen { Settings, Friends, Feedback, Ambassador, Terms, Privacy, MyCourses, AudioDownloads }
 
@@ -895,6 +896,14 @@ fun MainTabs(
         ) {
             TrialEndingMiniBanner(language = language)
         }
+
+        // La fête d'un badge gagné, quand les onglets sont à l'écran : jamais par-dessus (ni
+        // derrière) un cours, un quiz, un duel, un paywall ou une autre page.
+        BadgeCelebrationHost(
+            screenFree = selectedCourse == null && !tabsCovered && !showDuelFlow &&
+                selectedAuthorSlug == null && DuelFriendPresenter.entry == null && !showCreateAccountPrompt,
+            language = language,
+        )
 
         // Un duel entre amis recouvre tout, lui aussi, où que l'on soit dans l'app : un défi lancé
         // depuis le classement, ou une invitation acceptée depuis le bandeau.

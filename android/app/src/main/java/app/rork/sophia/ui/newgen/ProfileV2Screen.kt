@@ -65,6 +65,8 @@ import app.rork.sophia.ui.components.sophiaCard
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
 import app.rork.sophia.R
+import androidx.compose.runtime.LaunchedEffect
+import app.rork.sophia.domain.BadgeRules
 
 /** Les listes du profil : à lire (favoris), lus, aimés. */
 enum class ProfileListKind(val titleKey: String, val emptyKey: String) {
@@ -105,6 +107,7 @@ fun ProfileV2Screen(
     onOpenCampaign: (Campaign) -> Unit,
     onOpenProgression: () -> Unit,
     onOpenTraining: () -> Unit,
+    onOpenBadges: () -> Unit,
     onOpenFriends: () -> Unit,
     onDiscoverCreators: () -> Unit,
     onBecomeCreator: () -> Unit,
@@ -270,32 +273,33 @@ fun ProfileV2Screen(
             )
         }
 
-        // Badges.
+        // Badges : ceux choisis, puis les derniers gagnés, puis les plus proches d'être gagnés.
+        val badgeCenter = app.badgeCenter
+        LaunchedEffect(Unit) { badgeCenter.refresh() }
+        val profileBadges = remember(progress, campaigns, summaries) {
+            BadgeRules.profileBadges(badgeCenter.visibleBadges(), progress, badgeCenter.stats(progress))
+        }
         Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
-            NewGenSectionTitle(text = StringStore.text(context, "profile.badges", language))
-            Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
-                campaigns.lastOrNull()?.let { campaign ->
-                    val done = CampaignStore.challengeProgress(campaign, progress)
-                    ProfileBadge(
-                        title = campaign.badgeName(language),
-                        subtitle = StringStore.text(context, "badge.progress", language, done, campaign.challengeTarget),
-                        earned = done >= campaign.challengeTarget,
-                        modifier = Modifier.weight(1f),
-                    ) { tint -> CampaignSymbol(symbol = campaign.symbol, size = 24.dp, tint = tint) }
-                }
-                ProfileBadge(
-                    title = StringStore.text(context, "badge.streak7.title", language),
-                    subtitle = StringStore.text(context, "friends.stats.streak", language),
-                    earned = progress.streak >= 7,
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                NewGenSectionTitle(
+                    text = StringStore.text(context, "profile.badges", language),
                     modifier = Modifier.weight(1f),
-                ) { tint -> BadgeIcon(Icons.Filled.LocalFireDepartment, tint) }
-                ProfileBadge(
-                    title = StringStore.text(context, "globalRank.curieux", language),
-                    subtitle = StringStore.text(context, "badge.curious.sub", language, completedSubjects),
-                    earned = completedSubjects >= 3,
-                    modifier = Modifier.weight(1f),
-                ) { tint -> BadgeIcon(Icons.Filled.Explore, tint) }
+                )
+                Text(
+                    text = StringStore.text(context, "badges.seeAll", language) + "  ›",
+                    fontFamily = PlusJakartaSans,
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 15.sp,
+                    color = DS.accent,
+                    modifier = Modifier.softPress(onClick = onOpenBadges).padding(vertical = 4.dp),
+                )
             }
+            BadgeRow(
+                badges = profileBadges,
+                language = language,
+                earned = { it.id in progress.earnedBadges },
+                onTap = { onOpenBadges() },
+            )
         }
 
         // Listes.
@@ -429,61 +433,6 @@ fun ProfileV2Screen(
             Box(modifier = Modifier.fillMaxWidth().padding(start = 16.dp).height(1.dp).background(DS.hairline))
             PageRow(StringStore.text(context, "profile.page.friends", language), onOpenFriends)
         }
-    }
-}
-
-@Composable
-private fun BadgeIcon(icon: ImageVector, tint: Color) {
-    Icon(imageVector = icon, contentDescription = null, tint = tint, modifier = Modifier.size(22.dp))
-}
-
-@Composable
-private fun ProfileBadge(
-    title: String,
-    subtitle: String,
-    earned: Boolean,
-    modifier: Modifier = Modifier,
-    icon: @Composable (Color) -> Unit,
-) {
-    val shape = RoundedCornerShape(18.dp)
-    Column(
-        modifier = modifier
-            .clip(shape)
-            .background(DS.surface)
-            .border(1.dp, DS.hairline, shape)
-            .padding(vertical = 16.dp, horizontal = 8.dp)
-            .alpha(if (earned) 1f else 0.75f),
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.spacedBy(8.dp),
-    ) {
-        Box(
-            modifier = Modifier
-                .size(48.dp)
-                .clip(CircleShape)
-                .background(if (earned) DS.warm.copy(alpha = 0.2f) else DS.surfaceMuted),
-            contentAlignment = Alignment.Center,
-        ) {
-            icon(if (earned) DS.warm else DS.inkTertiary)
-        }
-        Text(
-            text = title,
-            fontFamily = PlusJakartaSans,
-            fontWeight = FontWeight.Bold,
-            fontSize = 14.sp,
-            color = DS.ink,
-            maxLines = 1,
-            overflow = TextOverflow.Ellipsis,
-            textAlign = TextAlign.Center,
-        )
-        Text(
-            text = subtitle,
-            fontFamily = PlusJakartaSans,
-            fontSize = 12.sp,
-            color = DS.inkSecondary,
-            maxLines = 1,
-            overflow = TextOverflow.Ellipsis,
-            textAlign = TextAlign.Center,
-        )
     }
 }
 

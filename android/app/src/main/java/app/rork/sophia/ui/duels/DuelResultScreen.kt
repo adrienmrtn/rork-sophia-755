@@ -130,6 +130,18 @@ internal fun DuelResultScreen(
 
     LaunchedEffect(Unit) {
         appeared = true
+        // Les exploits de la partie (score, écart, question décisive) comptent pour les badges.
+        (view.context.applicationContext as app.rork.sophia.SophiaApplication).badgeCenter.recordDuel(
+            matchId = summary.match.matchId,
+            won = summary.won,
+            abandoned = summary.abandoned,
+            draw = summary.draw,
+            friendly = summary.friendly,
+            forfeit = summary.forfeit,
+            tiebreak = summary.tiebreak,
+            playerScore = summary.playerScore,
+            opponentScore = summary.opponentScore,
+        )
         // Une égalité parfaite (entre amis) n'est ni une victoire ni une défaite.
         if (won) view.duelHaptic(DuelHaptic.Victory) else if (!summary.draw) view.duelHaptic(DuelHaptic.Defeat)
     }

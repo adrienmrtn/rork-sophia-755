@@ -7,6 +7,7 @@ import app.rork.sophia.audio.CourseAudioPlayer
 import app.rork.sophia.data.AuthService
 import app.rork.sophia.data.ContentCatalog
 import app.rork.sophia.data.DiscountOfferManager
+import app.rork.sophia.data.BadgeCenter
 import app.rork.sophia.data.DuelLiveService
 import app.rork.sophia.data.DuelService
 import app.rork.sophia.data.StringStore
@@ -45,6 +46,7 @@ class SophiaApplication : Application(), ImageLoaderFactory {
         private set
     lateinit var duelService: DuelService
     lateinit var duelLiveService: DuelLiveService
+    lateinit var badgeCenter: BadgeCenter
         private set
     lateinit var discountManager: DiscountOfferManager
         private set
@@ -65,6 +67,16 @@ class SophiaApplication : Application(), ImageLoaderFactory {
         socialService = SocialService(authService)
         duelService = DuelService(this, authService)
         duelLiveService = DuelLiveService(authService, duelService)
+        // Les badges : constat, compteurs de duel et d'amis, file des badges à fêter.
+        badgeCenter = BadgeCenter(
+            this, progressManager, languageManager,
+            // Sur le fil principal, toujours en différé : une détection ne part jamais du milieu d'une écriture.
+            CoroutineScope(SupervisorJob() + Dispatchers.Main),
+        )
+        // Ce qui arrive du cloud (autre appareil, connexion à un compte) n'est pas fêté ici.
+        progressManager.onReplacedFromCloud = { badgeCenter.absorb(it) }
+        appScope.launch { duelService.home.collect { home -> home?.let { badgeCenter.sync(it) } } }
+        socialService.onFriendsCounted = { badgeCenter.recordFriends(it) }
         progressManager.onGlobalXPAwarded = { amount ->
             appScope.launch { socialService.logXPEvent(amount, "progress") }
         }

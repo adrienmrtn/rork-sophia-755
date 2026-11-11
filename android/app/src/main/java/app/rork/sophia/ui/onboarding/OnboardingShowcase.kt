@@ -315,7 +315,7 @@ private class ConfettiPiece(
  * fading out over [durationMillis]. Plays once.
  */
 @Composable
-internal fun ConfettiBurst(
+fun ConfettiBurst(
     colors: List<Color>,
     modifier: Modifier = Modifier,
     pieceCount: Int = 70,

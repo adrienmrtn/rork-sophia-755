@@ -154,6 +154,9 @@ class SocialService(private val auth: AuthService) {
      * week totals under the "all" chip, so a late reply for a period nobody is looking at is
      * dropped rather than displayed.
      */
+    /** Appelé avec le nombre d'amis à chaque lecture réussie du classement. */
+    var onFriendsCounted: ((Int) -> Unit)? = null
+
     suspend fun refreshLeaderboard() {
         @Serializable
         data class Params(val period: String)
@@ -162,6 +165,8 @@ class SocialService(private val auth: AuthService) {
             val rows: List<FriendLeaderboardEntry> =
                 db.rpc("friends_leaderboard", Params(period = requested.rpcValue)).decodeList()
             if (_period.value == requested) _leaderboard.value = rows
+            // Le nombre d'amis (moi exclu) compte pour un badge.
+            onFriendsCounted?.invoke(rows.count { !it.is_me })
         }.onFailure {
             if (_period.value == requested) _errorKey.value = errorKeyFor(it.message)
         }

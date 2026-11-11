@@ -306,6 +306,14 @@ data class UserProgress(
     val readingSeconds: Int = 0,
     /** L'avatar illustré choisi dans le profil (`avatar_01` … `avatar_60`), ou null pour les initiales. Même clé JSON qu'iOS. */
     val avatarId: String? = null,
+    /**
+     * Badges obtenus : identifiant (`Badge.id`) → date ISO où l'app l'a constaté. Un badge gagné
+     * ne se perd plus. Écrit aussi par iOS : sans ce champ, la prochaine synchronisation depuis
+     * Android effaçait les badges gagnés sur l'iPhone.
+     */
+    val earnedBadges: Map<String, String> = emptyMap(),
+    /** Les badges (trois au plus) que le lecteur affiche sur son profil, visibles de ses amis. */
+    val featuredBadgeIds: List<String> = emptyList(),
 )
 
 /**

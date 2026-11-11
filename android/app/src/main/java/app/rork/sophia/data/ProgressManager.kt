@@ -366,8 +366,44 @@ class ProgressManager(context: Context) {
         return next
     }
 
+    // ---------------------------------------------------------------- badges
+
+    /** Enregistre, avec la date du moment, les badges dont l'identifiant est donné et qui ne le sont pas encore. */
+    fun recordEarnedBadges(ids: Collection<String>) {
+        if (ids.isEmpty()) return
+        mutate { current ->
+            val fresh = ids.filter { it !in current.earnedBadges }
+            if (fresh.isEmpty()) current else current.copy(earnedBadges = current.earnedBadges + fresh.associateWith { nowIso() })
+        }
+    }
+
+    /** Les badges affichés sur le profil : ceux choisis qui sont toujours gagnés. */
+    val featuredBadgeIds: List<String>
+        get() = _progress.value.let { p -> p.featuredBadgeIds.filter { it in p.earnedBadges } }
+
+    /** Ajoute ou retire un badge du profil. Faux quand il y en a déjà trois (rien n'est changé). */
+    fun toggleFeaturedBadge(id: String): Boolean {
+        var changed = true
+        mutate { current ->
+            val featured = current.featuredBadgeIds.filter { it in current.earnedBadges }
+            when {
+                id in featured -> current.copy(featuredBadgeIds = featured - id)
+                id !in current.earnedBadges || featured.size >= app.rork.sophia.domain.BadgeRules.MAX_FEATURED -> {
+                    changed = false
+                    current
+                }
+                else -> current.copy(featuredBadgeIds = featured + id)
+            }
+        }
+        return changed
+    }
+
+    /** Appelé avec la progression reçue du cloud, juste après son enregistrement. */
+    var onReplacedFromCloud: ((UserProgress) -> Unit)? = null
+
     fun replaceAll(progress: UserProgress) {
         synchronized(lock) { persist(progress) }
+        onReplacedFromCloud?.invoke(progress)
     }
 
     fun resetProgress() {

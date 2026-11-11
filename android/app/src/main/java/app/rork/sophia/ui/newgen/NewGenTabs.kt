@@ -88,6 +88,9 @@ sealed class NewGenRoute {
 
     /** La page « Deviens créateur », avant la sortie vers le Hub des créateurs. */
     data object BecomeCreator : NewGenRoute()
+
+    /** Toute la collection de badges. */
+    data object Badges : NewGenRoute()
 }
 
 /**
@@ -247,6 +250,7 @@ fun NewGenTabs(
                     onOpenCampaign = { push(NewGenRoute.Event(it.slug)) },
                     onOpenProgression = { push(NewGenRoute.Progression) },
                     onOpenTraining = { push(NewGenRoute.Training) },
+                    onOpenBadges = { push(NewGenRoute.Badges) },
                     onOpenFriends = onOpenFriends,
                     onDiscoverCreators = { onSelectTab(1) },
                     onBecomeCreator = { push(NewGenRoute.BecomeCreator) },
@@ -449,6 +453,12 @@ private fun RouteScreen(
                 onPremiumUnlocked = { storeViewModel.refresh() },
             )
         }
+        NewGenRoute.Badges -> BadgesScreen(
+            language = language,
+            progress = progress,
+            onBack = onBack,
+            modifier = modifier,
+        )
         NewGenRoute.BecomeCreator -> BecomeCreatorScreen(
             language = language,
             onBack = onBack,
