@@ -8,7 +8,7 @@ enum AppLocalizableAdditions {
     typealias Table = [String: [String: String]]
 
     private static let tables: [Table] = [
-        home, events, explore, duels, profile, progressPage, settings, badgeCelebration,
+        home, events, explore, duels, profile, progressPage, settings, badgeCelebration, invite,
     ]
 
     static func entry(for key: String) -> [String: String]? {

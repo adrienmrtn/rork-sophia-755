@@ -44,6 +44,21 @@ enum SophiaDeepLink {
         return nil
     }
 
+    /// Le code d'invitation porté par un lien de parrainage : `sophia://invite/<handle>`, ou la
+    /// page d'invitation du site (`/invite/<handle>`). Le code est le @ de celui qui invite.
+    static func inviteCode(from url: URL) -> String? {
+        if url.scheme == scheme, url.host?.lowercased() == "invite" {
+            return validFriendHandle(url.path.trimmingCharacters(in: CharacterSet(charactersIn: "/")))
+        }
+        if url.scheme == "https" || url.scheme == "http",
+           let host = url.host?.lowercased(), host == webHost || host == "www.\(webHost)" {
+            let parts = url.pathComponents.filter { $0 != "/" }
+            guard parts.count >= 2, parts[0].lowercased() == "invite" else { return nil }
+            return validFriendHandle(parts[1])
+        }
+        return nil
+    }
+
     /// Le @ nettoyé (sans « @ », en minuscules) s'il a la forme imposée par le serveur :
     /// une lettre, puis 2 à 19 lettres ou chiffres.
     static func validFriendHandle(_ raw: String) -> String? {

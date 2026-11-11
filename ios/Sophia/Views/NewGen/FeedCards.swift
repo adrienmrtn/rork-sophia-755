@@ -6,6 +6,8 @@ enum FeedItem: Identifiable, Equatable {
     case course(Course)
     case campaign(Campaign)
     case creatorInvite
+    /// « Invite un ami et gagne 3 cours gratuits » (parrainage), après le premier cours terminé.
+    case friendInvite
     case video(id: String)
     /// Une page de texte quand il n'y a rien à montrer (aucun abonnement, tout est lu…).
     case notice(FeedNotice)
@@ -15,6 +17,7 @@ enum FeedItem: Identifiable, Equatable {
         case .course(let course): "course:\(course.id)"
         case .campaign(let campaign): "campaign:\(campaign.slug)"
         case .creatorInvite: "creator-invite"
+        case .friendInvite: "friend-invite"
         case .video(let id): "video:\(id)"
         case .notice(let notice): "notice:\(notice.rawValue)"
         }

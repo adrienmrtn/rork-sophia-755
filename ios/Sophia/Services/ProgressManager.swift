@@ -453,6 +453,30 @@ class ProgressManager {
         return true
     }
 
+    // MARK: - Crédits de parrainage
+
+    /// `true` si le cours a été débloqué avec un crédit de parrainage : lisible en entier.
+    func isCourseUnlockedByReferral(_ courseId: String) -> Bool {
+        progress.referralUnlockedCourseIds.contains(courseId)
+    }
+
+    /// Crédits de cours encore disponibles : trois une fois la récompense acquise, moins ceux
+    /// déjà dépensés.
+    var referralCreditsRemaining: Int {
+        guard ReferralService.shared.rewarded else { return 0 }
+        return max(0, ReferralService.rewardCredits - progress.referralUnlockedCourseIds.count)
+    }
+
+    /// Dépense un crédit pour débloquer ce cours. Sans effet (`false`) s'il l'est déjà ou s'il
+    /// ne reste aucun crédit.
+    @discardableResult
+    func unlockCourseWithReferralCredit(_ courseId: String) -> Bool {
+        guard !isCourseUnlockedByReferral(courseId), referralCreditsRemaining > 0 else { return false }
+        progress.referralUnlockedCourseIds.append(courseId)
+        save()
+        return true
+    }
+
     /// Returns the persisted XP for a given subject.
     func xp(for subject: Subject) -> Int {
         progress.subjectXP[subject.rawValue] ?? 0

@@ -219,6 +219,9 @@ nonisolated struct UserProgress: Codable, Sendable {
     var earnedBadges: [String: String] = [:]
     /// Les badges (trois au plus) que le lecteur affiche sur son profil, visibles de ses amis.
     var featuredBadgeIds: [String] = []
+    /// Les cours débloqués avec un crédit de parrainage (« Invite un ami et gagne 3 cours
+    /// gratuits ») : lisibles en entier pour toujours. Trois au plus (`ReferralService`).
+    var referralUnlockedCourseIds: [String] = []
 
     static let empty = UserProgress(courseProgress: [:], streak: 0, lastActiveDate: nil, favoriteCourseIds: [], freeCoursesOpened: 0, hasSeenSwipeTutorial: false, hasSeenSpecialOffer: false, lastCourseCompletedDate: nil, lastStreakShownDate: nil, subjectXP: [:], globalXP: 0, globalCourseXPAwardedIds: [], globalQuizXPAwardedIds: [], globalCollectionXPAwardedIds: [], completedQuizCourseIds: [], pendingGlobalRankUp: nil, trainingQuestionStates: [:])
 
@@ -261,6 +264,7 @@ nonisolated struct UserProgress: Codable, Sendable {
         case pathLevelResults
         case likedCourseIds, followedCreatorSlugs, readingSeconds, avatarId
         case earnedBadges, featuredBadgeIds
+        case referralUnlockedCourseIds
     }
 
     init(from decoder: Decoder) throws {
@@ -293,6 +297,7 @@ nonisolated struct UserProgress: Codable, Sendable {
         self.avatarId = try c.decodeIfPresent(String.self, forKey: .avatarId)
         self.earnedBadges = try c.decodeIfPresent([String: String].self, forKey: .earnedBadges) ?? [:]
         self.featuredBadgeIds = try c.decodeIfPresent([String].self, forKey: .featuredBadgeIds) ?? []
+        self.referralUnlockedCourseIds = try c.decodeIfPresent([String].self, forKey: .referralUnlockedCourseIds) ?? []
     }
 }
 

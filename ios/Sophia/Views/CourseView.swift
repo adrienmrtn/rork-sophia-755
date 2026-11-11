@@ -27,6 +27,8 @@ struct CourseView: View {
     @State private var showQuiz: Bool = false
     @State private var appeared: Bool = false
     @State private var showDebloquerPaywall: Bool = false
+    /// « Utiliser un cours gratuit ? » : le choix proposé à qui a des crédits de parrainage.
+    @State private var showReferralCreditChoice: Bool = false
     @State private var showQuizPaywall: Bool = false
     /// Second-chance comparison paywall (both offers, like the end of onboarding), shown after
     /// the user closes the quiz / course-unlock paywall without subscribing.
@@ -80,7 +82,8 @@ struct CourseView: View {
 
     /// The one course a free user can fully read today (claimed on open in `ContentView`).
     private var isDailyFreeCourse: Bool {
-        progressManager.isDailyFreeCourse(course.id)
+        // Un cours débloqué avec un crédit de parrainage se lit comme le cours gratuit du jour.
+        progressManager.isDailyFreeCourse(course.id) || progressManager.isCourseUnlockedByReferral(course.id)
     }
 
     /// Full read + completion access: premium, or this is the free course of the day.
@@ -262,6 +265,21 @@ struct CourseView: View {
             if readingMode == .steps, alreadyRevealed > 0 {
                 revealedCount = min(alreadyRevealed, steps.count)
             }
+        }
+        .confirmationDialog(
+            languageManager.text("invite.credit.title"),
+            isPresented: $showReferralCreditChoice,
+            titleVisibility: .visible
+        ) {
+            Button(String(format: languageManager.text("invite.credit.use"), max(0, progressManager.referralCreditsRemaining - 1))) {
+                UINotificationFeedbackGenerator().notificationOccurred(.success)
+                // `hasFullAccess` change : le fil et les pages se rouvrent d'eux-mêmes.
+                progressManager.unlockCourseWithReferralCredit(course.id)
+            }
+            Button(languageManager.text("invite.credit.premium")) {
+                showDebloquerPaywall = true
+            }
+            Button(languageManager.text("audio.cancel"), role: .cancel) {}
         }
         .fullScreenCover(isPresented: $showDebloquerPaywall) {
             SophiaPaywallView(
@@ -947,7 +965,13 @@ struct CourseView: View {
 
     private func presentDebloquerPaywall() {
         UIImpactFeedbackGenerator(style: .medium).impactOccurred()
-        showDebloquerPaywall = true
+        // Il reste des cours gratuits gagnés en invitant un ami : on propose d'en utiliser un
+        // avant de montrer le paywall.
+        if progressManager.referralCreditsRemaining > 0 {
+            showReferralCreditChoice = true
+        } else {
+            showDebloquerPaywall = true
+        }
     }
 
     /// Third lesson (index 2) of the first course ever opened — once per install.
