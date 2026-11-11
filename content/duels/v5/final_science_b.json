@@ -11,7 +11,6 @@
 {"level": 1, "kind": "tf", "subject": "science", "question": "A baby kangaroo grows inside its mother's pouch.", "answer": true},
 {"level": 1, "kind": "tf", "subject": "science", "question": "Most fish breathe with lungs.", "answer": false},
 {"level": 1, "kind": "tf", "subject": "science", "question": "Owls can turn their heads all the way round, a full 360 degrees.", "answer": false},
-{"level": 1, "kind": "slider", "subject": "science", "question": "How many legs does an insect have?", "min": 2, "max": 14, "value": 6, "unit": "legs", "step": 1},
 {"level": 1, "kind": "slider", "subject": "science", "question": "How many senses are humans traditionally said to have?", "min": 1, "max": 12, "value": 5, "unit": "senses", "step": 1},
 {"level": 2, "kind": "mcq", "subject": "science", "question": "Which blood cells help the body fight infections?", "options": ["White blood cells", "Red blood cells", "Platelets", "Nerve cells"]},
 {"level": 2, "kind": "mcq", "subject": "science", "question": "Which coloured part of the eye surrounds the pupil?", "options": ["Iris", "Retina", "Cornea", "Lens"]},
