@@ -52,7 +52,7 @@ import app.rork.sophia.data.rememberCourseSummaries
 import app.rork.sophia.data.stripInlineMarkup
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.CourseSummary
-import app.rork.sophia.domain.readsCount
+import app.rork.sophia.domain.realReadsCount
 import app.rork.sophia.domain.UserProgress
 import app.rork.sophia.ui.components.CourseImage
 import app.rork.sophia.ui.components.softPress
@@ -248,10 +248,13 @@ fun CourseDetailScreen(
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.spacedBy(22.dp),
             ) {
-                StatChip(
-                    icon = Icons.Filled.Visibility,
-                    text = course.readsCount.compactCount(language) + " " + StringStore.text(context, "creator.stat.reads", language),
-                )
+                // Les vraies ouvertures (serveur) ; rien tant que le chiffre n'est pas arrivé.
+                course.realReadsCount?.let { reads ->
+                    StatChip(
+                        icon = Icons.Filled.Visibility,
+                        text = reads.compactCount(language) + " " + StringStore.text(context, "creator.stat.reads", language),
+                    )
+                }
                 StatChip(
                     icon = if (liked) Icons.Filled.Favorite else Icons.Filled.FavoriteBorder,
                     text = LocalCounters.likesCount(course.id, liked).compactCount(language),
@@ -306,10 +309,8 @@ fun CourseDetailScreen(
                     val otherCompleted = progress.courseProgress[other.id]?.isCompleted == true
                     CompactCourseRow(
                         course = other,
-                        meta = other.readsCount.compactCount(language) + " " +
-                            StringStore.text(context, "creator.stat.reads", language) + " · " +
-                            LocalCounters.likesCount(other.id, otherLiked).compactCount(language) + " " +
-                            StringStore.text(context, "common.likes", language),
+                        meta = LocalCounters.statsLine(context, other.id, otherLiked, language)
+                            ?: StringStore.text(context, "subject.${other.subjectEnum.storageKey}.short", language),
                         onTap = { onOpenCourse(other) },
                         trailing = if (otherCompleted) ({ ReadCheck(language = language) }) else null,
                     )

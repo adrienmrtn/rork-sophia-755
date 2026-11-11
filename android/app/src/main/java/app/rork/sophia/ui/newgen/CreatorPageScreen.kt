@@ -307,10 +307,7 @@ internal fun CreatorCourseRow(
     CompactCourseRow(
         course = course,
         meta = listOfNotNull(first, second).joinToString(" · "),
-        secondMeta = course.readsCount.compactCount(language) + " " +
-            StringStore.text(context, "creator.stat.reads", language) + " · " +
-            LocalCounters.likesCount(course.id, liked).compactCount(language) + " " +
-            StringStore.text(context, "common.likes", language),
+        secondMeta = LocalCounters.statsLine(context, course.id, liked, language),
         onTap = onTap,
         trailing = if (completed) ({ ReadCheck(language = language) }) else null,
     )

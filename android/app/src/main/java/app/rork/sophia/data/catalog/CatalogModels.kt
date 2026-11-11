@@ -161,6 +161,11 @@ data class CatalogManifest(
     val events: List<Campaign> = emptyList(),
     /** Les cours les plus ouverts de la langue sur sept jours (`trending_courses`), les plus lus en premier. */
     val trending: List<String> = emptyList(),
+    /**
+     * Les compteurs affichés sur les cartes : identifiant du cours → `[ouvertures, j'aime]`
+     * (table `course_counters`). Absent des anciens manifestes.
+     */
+    val stats: Map<String, List<Int>> = emptyMap(),
 )
 
 /** `app_config` → clé `catalog` : le coupe-circuit et la cadence de rafraîchissement. */

@@ -356,6 +356,8 @@ object CatalogStore {
             .filter { it.slug.isNotBlank() && it.startDate != null && it.endDate != null }
             .sortedBy { it.startsAt }
         _trending.value = _trending.value + (code to manifest.trending)
+        // Les compteurs réels des cartes ; un manifeste sans chiffres ne vide pas ceux qu'on a.
+        if (manifest.stats.isNotEmpty()) app.rork.sophia.domain.CourseStats.byCourse = manifest.stats
     }
 
     private fun markRefreshed(code: String) {

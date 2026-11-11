@@ -67,13 +67,15 @@ import app.rork.sophia.domain.Campaign
 import app.rork.sophia.domain.CourseSummary
 import app.rork.sophia.domain.UserProgress
 import app.rork.sophia.domain.formatted
-import app.rork.sophia.domain.readsCount
+import app.rork.sophia.domain.realReadsCount
 import app.rork.sophia.ui.components.softPress
 import app.rork.sophia.ui.components.sophiaCard
 import app.rork.sophia.ui.course.AuthorAvatar
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
 import coil.compose.AsyncImage
+import androidx.compose.ui.unit.Constraints
+import androidx.compose.ui.layout.Layout
 
 /**
  * Un élément du fil d'accueil. Les cartes vidéo n'existent pas encore (prompt 10) : le cas
@@ -92,6 +94,9 @@ sealed class FeedItem(val id: String) {
 
 enum class FeedNotice { FOLLOWING_EMPTY, FOLLOWING_UP_TO_DATE, ALL_CAUGHT_UP }
 
+/** La hauteur sous laquelle la couverture d'une carte du fil paginé ne descend pas. */
+private val FEED_COVER_MIN_HEIGHT = 110.dp
+
 /** Rose des cœurs allumés, comme sur iOS. */
 internal val LikedTint = Color(0xFFED5973)
 
@@ -99,7 +104,8 @@ internal val LikedTint = Color(0xFFED5973)
 
 /**
  * La carte de cours de la maquette : couverture 16:9 avec la pastille de matière, titre,
- * accroche, ligne créateur, puis lectures · j'aime · enregistrer · durée.
+ * accroche, ligne créateur, puis lectures · j'aime · durée. (Enregistrer et partager se font
+ * depuis le cours ouvert, plus depuis la carte.)
  */
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
@@ -118,16 +124,21 @@ fun CourseFeedCard(
     kicker: String? = null,
     /** Écran rapporté dans les événements `like` / `save`. */
     screen: String = "home",
-    /** Dans le fil paginé, la carte remplit sa page : les compteurs descendent en bas. */
+    /**
+     * Dans le fil paginé, la carte remplit sa page : la couverture prend toute la hauteur que
+     * le texte et les compteurs laissent libre, au lieu d'un vide sous l'accroche.
+     */
     fillsPage: Boolean = false,
-    /** Hauteur imposée à la couverture (fil paginé) ; sinon 16:9. */
-    coverHeight: Dp? = null,
+    /**
+     * Plafond de la couverture dans le fil paginé (un carré, en pratique) ; au-delà, le reste
+     * de la hauteur revient au texte. Sans plafond ni page à remplir : 16:9.
+     */
+    coverMaxHeight: Dp? = null,
 ) {
     val context = LocalContext.current
     val identity = remember(course.id) { CreatorIdentity.forCourse(context.applicationContext, course.id) }
     val info by rememberCourseInfo(course.toStub(), language)
     val liked = course.id in progress.likedCourseIds
-    val saved = course.id in progress.favoriteCourseIds
     val hook = info?.hook ?: stripInlineMarkup(course.description)
     val haptics = LocalHapticFeedback.current
     var likeBurst by remember(course.id) { mutableIntStateOf(0) }
@@ -169,12 +180,7 @@ fun CourseFeedCard(
             )
             .sophiaCard(),
     ) {
-    Column(modifier = Modifier.fillMaxWidth().then(if (fillsPage) Modifier.fillMaxHeight() else Modifier)) {
-        val coverModifier = if (coverHeight != null) {
-            Modifier.fillMaxWidth().height(coverHeight)
-        } else {
-            Modifier.fillMaxWidth().aspectRatio(16f / 9f)
-        }
+    val cover: @Composable (Modifier) -> Unit = { coverModifier ->
         Box(modifier = coverModifier) {
             CourseCover(courseId = course.id, modifier = Modifier.fillMaxSize(), cornerRadius = 0.dp, letterSize = 42.sp)
             Row(
@@ -185,8 +191,10 @@ fun CourseFeedCard(
                 if (tag != null) TagPill(text = tag, style = tagStyle)
             }
         }
+    }
+    val body: @Composable (Modifier) -> Unit = { bodyModifier ->
         Column(
-            modifier = Modifier.padding(16.dp).then(if (fillsPage) Modifier.weight(1f) else Modifier),
+            modifier = bodyModifier.padding(16.dp),
             verticalArrangement = Arrangement.spacedBy(10.dp),
         ) {
             if (kicker != null) {
@@ -230,7 +238,10 @@ fun CourseFeedCard(
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.spacedBy(18.dp),
             ) {
-                StatChip(icon = Icons.Filled.Visibility, text = course.readsCount.compactCount(language))
+                // Les vraies ouvertures (serveur) ; rien tant que le chiffre n'est pas arrivé.
+                course.realReadsCount?.let { reads ->
+                    StatChip(icon = Icons.Filled.Visibility, text = reads.compactCount(language))
+                }
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.spacedBy(5.dp),
@@ -247,19 +258,6 @@ fun CourseFeedCard(
                         color = if (liked) LikedTint else DS.inkSecondary,
                     )
                 }
-                Icon(
-                    imageVector = if (saved) Icons.Filled.Bookmark else Icons.Filled.BookmarkBorder,
-                    contentDescription = StringStore.text(context, if (saved) "common.unsave" else "common.save", language),
-                    tint = if (saved) DS.accent else DS.inkSecondary,
-                    modifier = Modifier
-                        .softPress(onClick = {
-                            val wasSaved = progressManager.isFavorite(course.id)
-                            progressManager.toggleFavorite(course.id)
-                            Analytics.log(if (wasSaved) "unsave" else "save", courseId = course.id, screen = screen)
-                        })
-                        .padding(vertical = 6.dp, horizontal = 2.dp)
-                        .size(17.dp),
-                )
                 Spacer(Modifier.weight(1f))
                 info?.let { details ->
                     StatChip(
@@ -268,6 +266,37 @@ fun CourseFeedCard(
                     )
                 }
             }
+        }
+    }
+    if (fillsPage) {
+        // La couverture est prioritaire sur le bloc de texte : elle reçoit toute la hauteur
+        // moins celle, incompressible, du texte, jusqu'à son plafond. Le plancher garde une
+        // image lisible quand le texte est très grand (grande police, traductions longues) ;
+        // ce qui reste au-delà du plafond revient au texte, dont les compteurs descendent en bas.
+        Layout(
+            content = {
+                cover(Modifier.fillMaxWidth())
+                body(Modifier.fillMaxWidth())
+            },
+            modifier = Modifier.fillMaxWidth().fillMaxHeight(),
+        ) { measurables, constraints ->
+            val width = constraints.maxWidth
+            val height = constraints.maxHeight
+            val floor = FEED_COVER_MIN_HEIGHT.roundToPx().coerceAtMost(height)
+            val ceiling = (coverMaxHeight?.roundToPx() ?: height).coerceAtLeast(floor)
+            val bodyNatural = measurables[1].minIntrinsicHeight(width)
+            val coverPx = (height - bodyNatural).coerceIn(floor, ceiling)
+            val coverPlaceable = measurables[0].measure(Constraints.fixed(width, coverPx))
+            val bodyPlaceable = measurables[1].measure(Constraints.fixed(width, (height - coverPx).coerceAtLeast(0)))
+            layout(width, height) {
+                coverPlaceable.place(0, 0)
+                bodyPlaceable.place(0, coverPx)
+            }
+        }
+    } else {
+        Column(modifier = Modifier.fillMaxWidth()) {
+            cover(Modifier.fillMaxWidth().aspectRatio(16f / 9f))
+            body(Modifier)
         }
     }
     BigHeartOverlay(trigger = bigHeart, modifier = Modifier.align(Alignment.Center))

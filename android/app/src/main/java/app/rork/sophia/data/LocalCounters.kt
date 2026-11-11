@@ -10,7 +10,7 @@ import androidx.compose.ui.platform.LocalContext
 import app.rork.sophia.data.catalog.CatalogStore
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.Course
-import app.rork.sophia.domain.fakeReadsCount
+import app.rork.sophia.domain.CourseStats
 import app.rork.sophia.domain.locale
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -26,10 +26,9 @@ import java.util.concurrent.ConcurrentHashMap
 import kotlin.math.roundToInt
 
 /**
- * Compteurs affichés sur les cartes, la page créateur et l'événement tant que le serveur ne
- * les fournit pas (prompt 6). Ils sont faux mais stables : dérivés d'un hash FNV-1a de
- * l'identifiant, donc identiques à chaque lancement et sur tous les appareils, comme
- * `Course.readsCount` (et qu'iOS, même formule). Les gestes locaux (j'aime, suivre)
+ * Compteurs affichés sur les cartes, la page créateur et l'événement. Les ouvertures et les
+ * j'aime des cours viennent du serveur ([CourseStats]) ; seuls les abonnés d'un créateur restent
+ * dérivés d'un hash FNV-1a stable (même formule qu'iOS). Les gestes locaux (j'aime, suivre)
  * s'ajoutent par-dessus.
  */
 object LocalCounters {
@@ -42,13 +41,21 @@ object LocalCounters {
         return hash
     }
 
-    /** Lectures d'un cours, par son identifiant seul (même valeur que `Course.readsCount`). */
-    fun reads(courseId: String): Int = fakeReadsCount(courseId)
+    /** Ouvertures réelles d'un cours, par son identifiant seul ; 0 sans chiffre du serveur. */
+    fun reads(courseId: String): Int = CourseStats.reads(courseId) ?: 0
 
-    /** Entre 9 % et 16 % des lectures, arrondi à la dizaine. */
-    fun likes(courseId: String, reads: Int = reads(courseId)): Int {
-        val ratio = 0.09 + (hash("$courseId|likes") % 70UL).toDouble() / 1_000
-        return maxOf(10, (reads * ratio).toInt() / 10 * 10)
+    /** Les j'aime du cours tels que le serveur les donne ; 0 sans chiffre. */
+    fun likes(courseId: String): Int = CourseStats.likes(courseId)
+
+    /**
+     * « 1,2 k lectures · 96 j'aime » pour les lignes de liste ; `null` tant que le serveur n'a
+     * pas envoyé les compteurs (on n'affiche alors rien plutôt qu'un zéro).
+     */
+    fun statsLine(context: android.content.Context, courseId: String, liked: Boolean, language: AppLanguage): String? {
+        val reads = CourseStats.reads(courseId) ?: return null
+        return reads.compactCount(language) + " " + StringStore.text(context, "creator.stat.reads", language) +
+            " · " + likesCount(courseId, liked).compactCount(language) + " " +
+            StringStore.text(context, "common.likes", language)
     }
 
     /** Nombre de « j'aime » affiché : le compteur local plus le geste de l'utilisateur. */

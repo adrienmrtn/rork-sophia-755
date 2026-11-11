@@ -94,40 +94,38 @@ data class Course(
 
     val hasQuiz: Boolean get() = quizAvailable || quiz.isNotEmpty()
 
-    val readsCount: Int
-        get() = fakeReadsCount(id)
+    /** Les vraies ouvertures du cours (serveur) ; `null` tant que le chiffre n'est pas arrivé. */
+    val realReadsCount: Int? get() = CourseStats.reads(id)
 
-    val readsCountShort: String
-        get() {
-            val count = readsCount
-            return if (count < 10_000) {
-                String.format("%.1f k", count / 1000.0).replace('.', ',')
-            } else {
-                "${count / 1000} k"
-            }
-        }
+    /** Les ouvertures pour les tris et les totaux : le vrai chiffre, 0 s'il manque. */
+    val readsCount: Int get() = realReadsCount ?: 0
 }
 
 /**
- * Lectures affichées d'un cours tant que le serveur ne les compte pas : fausses mais stables,
- * dérivées d'un hash FNV-1a de l'identifiant (entre 7 000 et 250 000, arrondies à la
- * centaine), identiques sur iOS. Accessible sans `Course` pour les compteurs d'un créateur.
+ * Les compteurs réels des cours, tels que le serveur les envoie dans le manifeste du catalogue
+ * (clé `stats` : identifiant du cours → `[ouvertures, j'aime]`, table `course_counters`). Les
+ * mêmes quelle que soit la langue ; vides tant qu'aucun manifeste récent n'a été lu. Plus
+ * aucun chiffre inventé côté app, comme sur iOS (`CatalogStore.courseStats`). `CatalogStore`
+ * les pose ici à chaque manifeste.
  */
-/** Même compteur pour une fiche du catalogue, qui n'est pas un [Course]. */
-val CourseSummary.readsCount: Int
-    get() = fakeReadsCount(id)
+object CourseStats {
+    @Volatile
+    var byCourse: Map<String, List<Int>> = emptyMap()
 
-fun fakeReadsCount(courseId: String): Int {
-    var hash = 0xcbf29ce484222325UL
-    for (byte in courseId.encodeToByteArray()) {
-        hash = hash xor byte.toULong()
-        hash *= 0x100000001b3UL
-    }
-    val lower = 7_000
-    val upper = 250_000
-    val value = lower + (hash % (upper - lower).toULong()).toInt()
-    return (value / 100) * 100
+    /** Les ouvertures du cours ; `null` sans chiffre. */
+    fun reads(courseId: String): Int? = byCourse[courseId]?.getOrNull(0)
+
+    /** Les j'aime du cours (deuxième valeur) ; 0 sans chiffre. */
+    fun likes(courseId: String): Int = byCourse[courseId]?.getOrNull(1) ?: 0
 }
+
+/** Les vraies ouvertures d'une fiche du catalogue ; `null` tant que le chiffre n'est pas arrivé. */
+val CourseSummary.realReadsCount: Int?
+    get() = CourseStats.reads(id)
+
+/** Les ouvertures pour les tris et les totaux : le vrai chiffre, 0 s'il manque. */
+val CourseSummary.readsCount: Int
+    get() = realReadsCount ?: 0
 
 @Serializable
 data class LearningCollection(
