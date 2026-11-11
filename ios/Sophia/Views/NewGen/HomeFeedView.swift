@@ -17,6 +17,10 @@ struct HomeFeedView: View {
     let onOpenCampaign: (Campaign) -> Void
     let onSearch: () -> Void
     let onBecomeCreator: () -> Void
+    /// Abonné Premium : pas de carte de parrainage (les cours gratuits ne lui apportent rien).
+    var isPremium: Bool = false
+    /// Ouvre la page « Invite un ami ».
+    var onInviteFriend: () -> Void = {}
 
     @State private var segment = 0
     @State private var deck: [Course] = []
@@ -87,6 +91,9 @@ struct HomeFeedView: View {
         }
         .background(DS.canvas.ignoresSafeArea())
         .onAppear { if deck.isEmpty { loadDeck() } }
+        // Parrainage : à l'ouverture et à chaque connexion, le code d'un lien d'invitation est
+        // déclaré et la récompense relue.
+        .task(id: AuthService.shared.isSignedIn) { await ReferralService.shared.sync() }
         .onChange(of: languageManager.current) { _, _ in loadDeck() }
         .onChange(of: progressManager.completedCount) { _, _ in loadDeck() }
         .onChange(of: scrolledId) { old, new in pageChanged(from: old, to: new) }
@@ -141,6 +148,10 @@ struct HomeFeedView: View {
         if let campaign = activeCampaign {
             items.insert(.campaign(campaign), at: min(2, items.count))
         }
+        // Le parrainage, en sixième position : jamais avant le premier cours terminé.
+        if items.count >= 4, InviteFriend.showsFeedCard(progressManager: progressManager, isPremium: isPremium) {
+            items.insert(.friendInvite, at: min(5, items.count))
+        }
         return items
     }
 
@@ -183,6 +194,8 @@ struct HomeFeedView: View {
             case .creatorInvite:
                 // L'invitation à écrire n'est plus glissée dans le fil.
                 EmptyView()
+            case .friendInvite:
+                InviteFriendFeedCard(fillsPage: true, onInvite: onInviteFriend)
             case .video(let id):
                 VideoFeedCard(title: id)
             case .notice(let notice):

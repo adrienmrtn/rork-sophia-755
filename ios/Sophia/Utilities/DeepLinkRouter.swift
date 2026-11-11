@@ -40,6 +40,11 @@ final class DeepLinkRouter {
             requestUnlock()
             return true
         }
+        if let code = SophiaDeepLink.inviteCode(from: url) {
+            // Un lien de parrainage : le code attend la création du compte (`ReferralService`).
+            ReferralService.shared.notePendingCode(code)
+            return true
+        }
         if let handle = SophiaDeepLink.friendHandle(from: url) {
             requestFriend(handle)
             return true

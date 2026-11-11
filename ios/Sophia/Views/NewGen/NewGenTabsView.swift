@@ -17,6 +17,8 @@ enum NewGenRoute: Hashable {
     case training
     /// La page « Deviens créateur », avant la sortie vers le Hub des créateurs.
     case becomeCreator
+    /// La page « Invite un ami » (parrainage).
+    case inviteFriend
 }
 
 /// Les listes du profil : à lire (favoris), lus, aimés.
@@ -86,7 +88,9 @@ struct NewGenTabsView: View {
                 onOpenCreator: { homePath.append(.creator(slug: $0.slug)) },
                 onOpenCampaign: { homePath.append(.campaign(slug: $0.slug)) },
                 onSearch: { selectedTab = 1 },
-                onBecomeCreator: { homePath.append(.becomeCreator) }
+                onBecomeCreator: { homePath.append(.becomeCreator) },
+                isPremium: storeVM.isPremium,
+                onInviteFriend: { homePath.append(.inviteFriend) }
             )
             .toolbar(.hidden, for: .navigationBar)
             .navigationDestination(for: NewGenRoute.self) { route in
@@ -129,6 +133,7 @@ struct NewGenTabsView: View {
                 onOpenAntiScroll: onOpenAntiScroll,
                 onDiscoverCreators: { selectedTab = 1 },
                 onBecomeCreator: { profilePath.append(.becomeCreator) },
+                onInviteFriend: { profilePath.append(.inviteFriend) },
                 onShowPaywall: { onShowPaywall(.debloquerCours) },
                 onResetOnboarding: onResetOnboarding
             )
@@ -255,6 +260,9 @@ struct NewGenTabsView: View {
             .modifier(SystemBackBar())
         case .becomeCreator:
             BecomeCreatorView()
+                .toolbar(.hidden, for: .navigationBar)
+        case .inviteFriend:
+            InviteFriendView(progressManager: progressManager)
                 .toolbar(.hidden, for: .navigationBar)
         }
     }

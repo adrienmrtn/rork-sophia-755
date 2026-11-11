@@ -16,6 +16,7 @@ export function GET() {
               { "/": "/courses/?*", comment: "A course page: /courses/150-why-does-the-sky-swirl" },
               { "/": "/c/?*", comment: "Short course link: /c/<course id>" },
               { "/": "/authors/?*", comment: "An author page: /authors/<slug>" },
+              { "/": "/invite/?*", comment: "A referral invite: /invite/<handle>" },
             ],
           },
         ],

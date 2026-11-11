@@ -1,0 +1,14 @@
+{
+  "_comment": "Illustration de l'app iOS pour la carte « Invite un ami » (fil d'accueil et profil), direction affiche (mêmes réglages que manifest-app-progress.json) : marine et safran sur papier crème. Sortie convertie en JPEG 1200 × 900 dans ios/Sophia/Assets.xcassets/invite_poster.imageset. Le modèle ne respecte pas toujours le fond crème : relancer si besoin.",
+  "defaults": {
+    "style": "digital_illustration/2d_art_poster",
+    "size": "landscape_4_3",
+    "max_side": 2000,
+    "colors": [[26, 58, 107], [242, 177, 52], [251, 247, 239]]
+  },
+  "items": [
+    { "name": "invite_a", "prompt": "On a plain cream paper background: two simple friendly figures, one deep navy blue and one saffron yellow, facing each other, one handing a big wrapped gift box with a ribbon to the other; three small open books float above them like presents, with a few small four-point stars. Flat poster illustration, linocut paper-cut shapes, strictly two colors: deep navy blue and saffron yellow on a cream paper background, bold simple forms, subtle paper grain, airy composition, lots of empty cream space, no text, no letters, no numbers, no outlines." },
+    { "name": "invite_b", "prompt": "On a plain cream paper background: two simple friendly figures, one deep navy blue and one saffron yellow, facing each other, one handing a big wrapped gift box with a ribbon to the other; three small open books float above them like presents, with a few small four-point stars. Flat poster illustration, linocut paper-cut shapes, strictly two colors: deep navy blue and saffron yellow on a cream paper background, bold simple forms, subtle paper grain, airy composition, lots of empty cream space, no text, no letters, no numbers, no outlines." },
+    { "name": "invite_c", "prompt": "On a plain cream paper background: a large saffron yellow envelope opening, with three small books and stars flying out of it toward a small deep navy blue figure with raised arms; a second navy figure waves on the other side. Flat poster illustration, linocut paper-cut shapes, strictly two colors: deep navy blue and saffron yellow on a cream paper background, bold simple forms, subtle paper grain, airy composition, lots of empty cream space, no text, no letters, no numbers, no outlines." }
+  ]
+}
