@@ -62,6 +62,9 @@ import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
 import app.rork.sophia.ui.theme.SophiaTypography
 import kotlinx.coroutines.launch
+import app.rork.sophia.ui.duels.DuelFriendEntry
+import app.rork.sophia.ui.duels.DuelFriendPresenter
+import app.rork.sophia.data.FeatureFlags
 
 @Composable
 fun FriendsScreen(
@@ -533,6 +536,33 @@ private fun FriendProfileSheet(
             )
         }
         Spacer(Modifier.weight(1f))
+        // « Défier en duel » : là où les duels existent, pour un ami qui les a (le classement
+        // des duels le dit). Aucun trophée en jeu ; la partie s'ouvre par-dessus cet écran.
+        val sophia = context.applicationContext as SophiaApplication
+        val duelFriends by sophia.duelService.leaderboard.collectAsState()
+        LaunchedEffect(stats.user_id) {
+            if (FeatureFlags.duelsVisible(language)) sophia.duelService.refreshLeaderboard()
+        }
+        val duelEntry = duelFriends.firstOrNull { it.userId == stats.user_id }
+        if (FeatureFlags.duelsVisible(language) && duelEntry?.canChallenge == true) {
+            Button(
+                onClick = {
+                    DuelFriendPresenter.present(
+                        DuelFriendEntry.Challenge(
+                            userId = stats.user_id,
+                            handle = stats.handle,
+                            avatarId = duelEntry.avatarId,
+                        ),
+                    )
+                },
+                modifier = Modifier.fillMaxWidth().height(52.dp),
+                shape = DS.controlShape,
+                colors = ButtonDefaults.buttonColors(containerColor = DS.accent, contentColor = androidx.compose.ui.graphics.Color.White),
+            ) {
+                Text(StringStore.text(context, "duel.friend.challenge", language), fontFamily = PlusJakartaSans, fontWeight = FontWeight.Bold)
+            }
+            Spacer(Modifier.height(10.dp))
+        }
         Button(
             onClick = { confirmRemove = true },
             modifier = Modifier.fillMaxWidth().height(48.dp),

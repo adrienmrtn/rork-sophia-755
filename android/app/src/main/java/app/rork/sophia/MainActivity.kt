@@ -22,6 +22,7 @@ import app.rork.sophia.data.analytics.Analytics
 import app.rork.sophia.data.catalog.CatalogStore
 import kotlinx.coroutines.launch
 import app.rork.sophia.ui.SophiaRoot
+import app.rork.sophia.data.FeatureFlags
 import app.rork.sophia.domain.SophiaLinks
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.SophiaAppearance
@@ -88,13 +89,21 @@ class MainActivity : ComponentActivity() {
                         val app = application as SophiaApplication
                         app.progressManager.refreshStreak()
                         Analytics.appDidStart()
+                        // Duels entre amis : l'app se signale (pastille verte) et reçoit les
+                        // invitations, là où les duels existent (app en anglais).
+                        if (FeatureFlags.duelsVisible(app.languageManager.current.value)) {
+                            app.duelLiveService.start()
+                        }
                         // Le catalogue en ligne : manifeste relu au lancement et au retour au
                         // premier plan, s'il date de plus de `refresh_hours` (six heures).
                         lifecycleScope.launch {
                             CatalogStore.refreshIfNeeded(applicationContext, app.languageManager.current.value)
                         }
                     }
-                    Lifecycle.Event.ON_STOP -> Analytics.appDidStop()
+                    Lifecycle.Event.ON_STOP -> {
+                        (application as SophiaApplication).duelLiveService.stop()
+                        Analytics.appDidStop()
+                    }
                     else -> Unit
                 }
             },

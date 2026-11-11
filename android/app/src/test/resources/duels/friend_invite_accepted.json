@@ -1,0 +1,1236 @@
+{
+    "match": {
+        "me": {
+            "handle": "alice",
+            "user_id": "00000000-0000-0000-0000-00000000000a",
+            "trophies": 0,
+            "avatar_id": null,
+            "country_code": "",
+            "league_position": 1
+        },
+        "rounds": [
+            {
+                "kind": "mixed",
+                "number": 1,
+                "questions": [
+                    {
+                        "id": "dq_en_2_08",
+                        "kind": "portrait",
+                        "unit": null,
+                        "options": [
+                            "Abraham Lincoln",
+                            "Charles Dickens",
+                            "Karl Marx",
+                            "Ulysses S. Grant"
+                        ],
+                        "question": "Who is this?",
+                        "image_url": "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels/portraits/abraham_lincoln.jpg",
+                        "slider_max": null,
+                        "slider_min": null,
+                        "slider_step": null,
+                        "image_credit": "Alexander Gardner · Public domain · Wikimedia Commons",
+                        "correct_index": 0,
+                        "correct_value": null,
+                        "time_limit_ms": 10000
+                    },
+                    {
+                        "id": "dq_en_3_90",
+                        "kind": "mcq",
+                        "unit": null,
+                        "options": [
+                            "A loaf of bread",
+                            "A silver candlestick",
+                            "A horse",
+                            "A gold coin"
+                        ],
+                        "question": "In \"Les Misérables\", what did Jean Valjean steal that first sent him to prison?",
+                        "image_url": null,
+                        "slider_max": null,
+                        "slider_min": null,
+                        "slider_step": null,
+                        "image_credit": null,
+                        "correct_index": 0,
+                        "correct_value": null,
+                        "time_limit_ms": 12000
+                    },
+                    {
+                        "id": "dq_en_3_150",
+                        "kind": "mcq",
+                        "unit": null,
+                        "options": [
+                            "Cyrillic",
+                            "Latin",
+                            "Greek",
+                            "Armenian"
+                        ],
+                        "question": "Which alphabet is used to write Russian?",
+                        "image_url": null,
+                        "slider_max": null,
+                        "slider_min": null,
+                        "slider_step": null,
+                        "image_credit": null,
+                        "correct_index": 0,
+                        "correct_value": null,
+                        "time_limit_ms": 12000
+                    },
+                    {
+                        "id": "dq_en_2_150",
+                        "kind": "slider",
+                        "unit": "animals",
+                        "options": null,
+                        "question": "How many animals are there in the cycle of the Chinese zodiac?",
+                        "image_url": null,
+                        "slider_max": 30,
+                        "slider_min": 1,
+                        "slider_step": 1,
+                        "image_credit": null,
+                        "correct_index": null,
+                        "correct_value": 12,
+                        "time_limit_ms": 15000
+                    },
+                    {
+                        "id": "dq_en_2_98",
+                        "kind": "true_false",
+                        "unit": null,
+                        "options": [
+                            "True",
+                            "False"
+                        ],
+                        "question": "Homer's \"Iliad\" is set during the Trojan War.",
+                        "image_url": null,
+                        "slider_max": null,
+                        "slider_min": null,
+                        "slider_step": null,
+                        "image_credit": null,
+                        "correct_index": 0,
+                        "correct_value": null,
+                        "time_limit_ms": 8000
+                    }
+                ]
+            },
+            {
+                "kind": "pick",
+                "number": 2,
+                "picker": "me",
+                "options": [
+                    {
+                        "subject": "literature",
+                        "questions": [
+                            {
+                                "id": "dq_en_3_102",
+                                "kind": "true_false",
+                                "unit": null,
+                                "options": [
+                                    "True",
+                                    "False"
+                                ],
+                                "question": "Hans Christian Andersen was a Swedish author.",
+                                "image_url": null,
+                                "slider_max": null,
+                                "slider_min": null,
+                                "slider_step": null,
+                                "image_credit": null,
+                                "correct_index": 1,
+                                "correct_value": null,
+                                "time_limit_ms": 8000
+                            },
+                            {
+                                "id": "dq_en_3_92",
+                                "kind": "mcq",
+                                "unit": null,
+                                "options": [
+                                    "Emily Dickinson",
+                                    "Edgar Allan Poe",
+                                    "Robert Frost",
+                                    "Walt Whitman"
+                                ],
+                                "question": "Which American poet wrote \"The Raven\"?",
+                                "image_url": null,
+                                "slider_max": null,
+                                "slider_min": null,
+                                "slider_step": null,
+                                "image_credit": null,
+                                "correct_index": 1,
+                                "correct_value": null,
+                                "time_limit_ms": 12000
+                            },
+                            {
+                                "id": "dq_en_3_04",
+                                "kind": "mcq",
+                                "unit": null,
+                                "options": [
+                                    "Aldous Huxley",
+                                    "Ray Bradbury",
+                                    "H. G. Wells",
+                                    "George Orwell"
+                                ],
+                                "question": "Who wrote the novel \"1984\"?",
+                                "image_url": null,
+                                "slider_max": null,
+                                "slider_min": null,
+                                "slider_step": null,
+                                "image_credit": null,
+                                "correct_index": 3,
+                                "correct_value": null,
+                                "time_limit_ms": 12000
+                            },
+                            {
+                                "id": "dq_en_3_97",
+                                "kind": "mcq",
+                                "unit": null,
+                                "options": [
+                                    "Dracula",
+                                    "Don Quixote"
+                                ],
+                                "question": "Which was published first?",
+                                "image_url": null,
+                                "slider_max": null,
+                                "slider_min": null,
+                                "slider_step": null,
+                                "image_credit": null,
+                                "correct_index": 1,
+                                "correct_value": null,
+                                "time_limit_ms": 12000
+                            },
+                            {
+                                "id": "dq_en_2_07",
+                                "kind": "portrait",
+                                "unit": null,
+                                "options": [
+                                    "William Shakespeare",
+                                    "Sir Walter Raleigh",
+                                    "Miguel de Cervantes",
+                                    "Christopher Marlowe"
+                                ],
+                                "question": "Who is this?",
+                                "image_url": "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels/portraits/william_shakespeare.jpg",
+                                "slider_max": null,
+                                "slider_min": null,
+                                "slider_step": null,
+                                "image_credit": "Attributed to John Taylor · Public domain · Wikimedia Commons",
+                                "correct_index": 0,
+                                "correct_value": null,
+                                "time_limit_ms": 10000
+                            }
+                        ]
+                    },
+                    {
+                        "subject": "history",
+                        "questions": [
+                            {
+                                "id": "dq_en_2_165",
+                                "kind": "portrait",
+                                "unit": null,
+                                "options": [
+                                    "China",
+                                    "Japan",
+                                    "Mongolia",
+                                    "Korea"
+                                ],
+                                "question": "Which country built this wall?",
+                                "image_url": "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels/images/monument_great_wall.jpg",
+                                "slider_max": null,
+                                "slider_min": null,
+                                "slider_step": null,
+                                "image_credit": "Velatrix · CC0 · Wikimedia Commons",
+                                "correct_index": 0,
+                                "correct_value": null,
+                                "time_limit_ms": 10000
+                            },
+                            {
+                                "id": "dq_en_2_43",
+                                "kind": "mcq",
+                                "unit": null,
+                                "options": [
+                                    "Apartheid",
+                                    "Serfdom",
+                                    "Jim Crow",
+                                    "The caste system"
+                                ],
+                                "question": "Which system of racial segregation was enforced in South Africa from 1948?",
+                                "image_url": null,
+                                "slider_max": null,
+                                "slider_min": null,
+                                "slider_step": null,
+                                "image_credit": null,
+                                "correct_index": 0,
+                                "correct_value": null,
+                                "time_limit_ms": 12000
+                            },
+                            {
+                                "id": "dq_en_3_47",
+                                "kind": "mcq",
+                                "unit": null,
+                                "options": [
+                                    "Alexander III",
+                                    "Peter the Great",
+                                    "Alexander II",
+                                    "Nicholas II"
+                                ],
+                                "question": "Who was the last tsar of Russia?",
+                                "image_url": null,
+                                "slider_max": null,
+                                "slider_min": null,
+                                "slider_step": null,
+                                "image_credit": null,
+                                "correct_index": 3,
+                                "correct_value": null,
+                                "time_limit_ms": 12000
+                            },
+                            {
+                                "id": "dq_en_2_37",
+                                "kind": "mcq",
+                                "unit": null,
+                                "options": [
+                                    "Cleopatra",
+                                    "Nefertari",
+                                    "Nefertiti",
+                                    "Hatshepsut"
+                                ],
+                                "question": "Which queen of Egypt was allied with Julius Caesar and Mark Antony?",
+                                "image_url": null,
+                                "slider_max": null,
+                                "slider_min": null,
+                                "slider_step": null,
+                                "image_credit": null,
+                                "correct_index": 0,
+                                "correct_value": null,
+                                "time_limit_ms": 12000
+                            },
+                            {
+                                "id": "dq_en_2_158",
+                                "kind": "portrait",
+                                "unit": null,
+                                "options": [
+                                    "Thomas Cromwell",
+                                    "Francis I of France",
+                                    "Emperor Charles V",
+                                    "Henry VIII"
+                                ],
+                                "question": "Who is this?",
+                                "image_url": "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels/images/henry_viii.jpg",
+                                "slider_max": null,
+                                "slider_min": null,
+                                "slider_step": null,
+                                "image_credit": "Workshop of Hans Holbein the Younger · Public domain · Wikimedia Commons",
+                                "correct_index": 3,
+                                "correct_value": null,
+                                "time_limit_ms": 10000
+                            }
+                        ]
+                    },
+                    {
+                        "subject": "mythology",
+                        "questions": [
+                            {
+                                "id": "dq_en_2_15",
+                                "kind": "mcq",
+                                "unit": null,
+                                "options": [
+                                    "Apollo",
+                                    "Neptune",
+                                    "Mars",
+                                    "Jupiter"
+                                ],
+                                "question": "Who is the Roman god of war?",
+                                "image_url": null,
+                                "slider_max": null,
+                                "slider_min": null,
+                                "slider_step": null,
+                                "image_credit": null,
+                                "correct_index": 2,
+                                "correct_value": null,
+                                "time_limit_ms": 12000
+                            },
+                            {
+                                "id": "dq_en_2_137",
+                                "kind": "true_false",
+                                "unit": null,
+                                "options": [
+                                    "True",
+                                    "False"
+                                ],
+                                "question": "In Norse mythology, Odin has only one eye.",
+                                "image_url": null,
+                                "slider_max": null,
+                                "slider_min": null,
+                                "slider_step": null,
+                                "image_credit": null,
+                                "correct_index": 0,
+                                "correct_value": null,
+                                "time_limit_ms": 8000
+                            },
+                            {
+                                "id": "dq_en_3_165",
+                                "kind": "portrait",
+                                "unit": null,
+                                "options": [
+                                    "Odin",
+                                    "Tyr",
+                                    "Freyr",
+                                    "Thor"
+                                ],
+                                "question": "Which Norse god is this?",
+                                "image_url": "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels/images/myth_thor_giants.jpg",
+                                "slider_max": null,
+                                "slider_min": null,
+                                "slider_step": null,
+                                "image_credit": "Mårten Eskil Winge · Public domain · Wikimedia Commons",
+                                "correct_index": 3,
+                                "correct_value": null,
+                                "time_limit_ms": 10000
+                            },
+                            {
+                                "id": "dq_en_2_139",
+                                "kind": "true_false",
+                                "unit": null,
+                                "options": [
+                                    "True",
+                                    "False"
+                                ],
+                                "question": "In Greek mythology, Narcissus fell in love with his own reflection.",
+                                "image_url": null,
+                                "slider_max": null,
+                                "slider_min": null,
+                                "slider_step": null,
+                                "image_credit": null,
+                                "correct_index": 0,
+                                "correct_value": null,
+                                "time_limit_ms": 8000
+                            },
+                            {
+                                "id": "dq_en_3_15",
+                                "kind": "mcq",
+                                "unit": null,
+                                "options": [
+                                    "Anubis",
+                                    "Thoth",
+                                    "Osiris",
+                                    "Ra"
+                                ],
+                                "question": "In Egyptian mythology, who is the god of the Sun?",
+                                "image_url": null,
+                                "slider_max": null,
+                                "slider_min": null,
+                                "slider_step": null,
+                                "image_credit": null,
+                                "correct_index": 3,
+                                "correct_value": null,
+                                "time_limit_ms": 12000
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "kind": "pick",
+                "number": 3,
+                "picker": "opponent",
+                "options": [
+                    {
+                        "subject": "world",
+                        "questions": [
+                            {
+                                "id": "dq_en_2_144",
+                                "kind": "mcq",
+                                "unit": null,
+                                "options": [
+                                    "Greece",
+                                    "Portugal",
+                                    "Spain",
+                                    "Italy"
+                                ],
+                                "question": "Paella is a traditional dish of which country?",
+                                "image_url": null,
+                                "slider_max": null,
+                                "slider_min": null,
+                                "slider_step": null,
+                                "image_credit": null,
+                                "correct_index": 2,
+                                "correct_value": null,
+                                "time_limit_ms": 12000
+                            },
+                            {
+                                "id": "dq_en_3_20",
+                                "kind": "portrait",
+                                "unit": null,
+                                "options": [
+                                    "Ireland",
+                                    "Pakistan",
+                                    "India",
+                                    "Italy"
+                                ],
+                                "question": "Which country's flag is this?",
+                                "image_url": "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels/flags/in.jpg",
+                                "slider_max": null,
+                                "slider_min": null,
+                                "slider_step": null,
+                                "image_credit": "flagcdn.com · Public domain",
+                                "correct_index": 2,
+                                "correct_value": null,
+                                "time_limit_ms": 10000
+                            },
+                            {
+                                "id": "dq_en_3_33",
+                                "kind": "mcq",
+                                "unit": null,
+                                "options": [
+                                    "Australia",
+                                    "India"
+                                ],
+                                "question": "Which country is larger in area?",
+                                "image_url": null,
+                                "slider_max": null,
+                                "slider_min": null,
+                                "slider_step": null,
+                                "image_credit": null,
+                                "correct_index": 0,
+                                "correct_value": null,
+                                "time_limit_ms": 12000
+                            },
+                            {
+                                "id": "dq_en_3_149",
+                                "kind": "mcq",
+                                "unit": null,
+                                "options": [
+                                    "Buddhism",
+                                    "Jainism",
+                                    "Sikhism",
+                                    "Hinduism"
+                                ],
+                                "question": "Which religion grew from the teachings of Siddhartha Gautama?",
+                                "image_url": null,
+                                "slider_max": null,
+                                "slider_min": null,
+                                "slider_step": null,
+                                "image_credit": null,
+                                "correct_index": 0,
+                                "correct_value": null,
+                                "time_limit_ms": 12000
+                            },
+                            {
+                                "id": "dq_en_2_146",
+                                "kind": "mcq",
+                                "unit": null,
+                                "options": [
+                                    "Baghdad",
+                                    "Jerusalem",
+                                    "Medina",
+                                    "Mecca"
+                                ],
+                                "question": "Which city is the destination of the Hajj, the Muslim pilgrimage?",
+                                "image_url": null,
+                                "slider_max": null,
+                                "slider_min": null,
+                                "slider_step": null,
+                                "image_credit": null,
+                                "correct_index": 3,
+                                "correct_value": null,
+                                "time_limit_ms": 12000
+                            }
+                        ]
+                    },
+                    {
+                        "subject": "art",
+                        "questions": [
+                            {
+                                "id": "dq_en_3_109",
+                                "kind": "mcq",
+                                "unit": null,
+                                "options": [
+                                    "Cambodia",
+                                    "Thailand",
+                                    "Myanmar",
+                                    "Vietnam"
+                                ],
+                                "question": "In which country is the temple complex of Angkor Wat?",
+                                "image_url": null,
+                                "slider_max": null,
+                                "slider_min": null,
+                                "slider_step": null,
+                                "image_credit": null,
+                                "correct_index": 0,
+                                "correct_value": null,
+                                "time_limit_ms": 12000
+                            },
+                            {
+                                "id": "dq_en_3_169",
+                                "kind": "portrait",
+                                "unit": null,
+                                "options": [
+                                    "Guggenheim Bilbao",
+                                    "Walt Disney Concert Hall",
+                                    "Sydney Opera House",
+                                    "Oslo Opera House"
+                                ],
+                                "question": "What is this building called?",
+                                "image_url": "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels/images/monument_sydney_opera.jpg",
+                                "slider_max": null,
+                                "slider_min": null,
+                                "slider_step": null,
+                                "image_credit": "Bernard Spragg. NZ from Christchurch, New Zealand · CC0 · Wikimedia Commons",
+                                "correct_index": 2,
+                                "correct_value": null,
+                                "time_limit_ms": 10000
+                            },
+                            {
+                                "id": "dq_en_2_104",
+                                "kind": "mcq",
+                                "unit": null,
+                                "options": [
+                                    "Athens",
+                                    "Rome",
+                                    "Alexandria",
+                                    "Istanbul"
+                                ],
+                                "question": "In which city does the Parthenon stand?",
+                                "image_url": null,
+                                "slider_max": null,
+                                "slider_min": null,
+                                "slider_step": null,
+                                "image_credit": null,
+                                "correct_index": 0,
+                                "correct_value": null,
+                                "time_limit_ms": 12000
+                            },
+                            {
+                                "id": "dq_en_2_116",
+                                "kind": "true_false",
+                                "unit": null,
+                                "options": [
+                                    "True",
+                                    "False"
+                                ],
+                                "question": "A cello is a brass instrument.",
+                                "image_url": null,
+                                "slider_max": null,
+                                "slider_min": null,
+                                "slider_step": null,
+                                "image_credit": null,
+                                "correct_index": 1,
+                                "correct_value": null,
+                                "time_limit_ms": 8000
+                            },
+                            {
+                                "id": "dq_en_2_119",
+                                "kind": "slider",
+                                "unit": "keys",
+                                "options": null,
+                                "question": "How many keys does a standard modern piano have?",
+                                "image_url": null,
+                                "slider_max": 120,
+                                "slider_min": 40,
+                                "slider_step": 1,
+                                "image_credit": null,
+                                "correct_index": null,
+                                "correct_value": 88,
+                                "time_limit_ms": 15000
+                            }
+                        ]
+                    },
+                    {
+                        "subject": "science",
+                        "questions": [
+                            {
+                                "id": "dq_en_2_76",
+                                "kind": "true_false",
+                                "unit": null,
+                                "options": [
+                                    "True",
+                                    "False"
+                                ],
+                                "question": "The Pacific is the largest ocean on Earth.",
+                                "image_url": null,
+                                "slider_max": null,
+                                "slider_min": null,
+                                "slider_step": null,
+                                "image_credit": null,
+                                "correct_index": 0,
+                                "correct_value": null,
+                                "time_limit_ms": 8000
+                            },
+                            {
+                                "id": "dq_en_3_62",
+                                "kind": "mcq",
+                                "unit": null,
+                                "options": [
+                                    "Lava",
+                                    "Sediment",
+                                    "Granite",
+                                    "Magma"
+                                ],
+                                "question": "What is molten rock called once it reaches the Earth's surface?",
+                                "image_url": null,
+                                "slider_max": null,
+                                "slider_min": null,
+                                "slider_step": null,
+                                "image_credit": null,
+                                "correct_index": 0,
+                                "correct_value": null,
+                                "time_limit_ms": 12000
+                            },
+                            {
+                                "id": "dq_en_3_80",
+                                "kind": "slider",
+                                "unit": "%",
+                                "options": null,
+                                "question": "What percentage of the air around us is oxygen?",
+                                "image_url": null,
+                                "slider_max": 100,
+                                "slider_min": 0,
+                                "slider_step": 1,
+                                "image_credit": null,
+                                "correct_index": null,
+                                "correct_value": 21,
+                                "time_limit_ms": 15000
+                            },
+                            {
+                                "id": "dq_en_3_82",
+                                "kind": "slider",
+                                "unit": "days",
+                                "options": null,
+                                "question": "About how many days pass between one full moon and the next?",
+                                "image_url": null,
+                                "slider_max": 60,
+                                "slider_min": 5,
+                                "slider_step": 0.5,
+                                "image_credit": null,
+                                "correct_index": null,
+                                "correct_value": 29.5,
+                                "time_limit_ms": 15000
+                            },
+                            {
+                                "id": "dq_en_2_79",
+                                "kind": "slider",
+                                "unit": "ribs",
+                                "options": null,
+                                "question": "How many ribs does a human normally have?",
+                                "image_url": null,
+                                "slider_max": 50,
+                                "slider_min": 6,
+                                "slider_step": 1,
+                                "image_credit": null,
+                                "correct_index": null,
+                                "correct_value": 24,
+                                "time_limit_ms": 15000
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "kind": "sprint",
+                "number": 4,
+                "questions": [
+                    {
+                        "id": "dq_en_3_113",
+                        "kind": "mcq",
+                        "unit": null,
+                        "options": [
+                            "Stanley Kubrick",
+                            "Alfred Hitchcock",
+                            "Billy Wilder",
+                            "Orson Welles"
+                        ],
+                        "question": "Which director made \"Psycho\" and \"The Birds\"?",
+                        "image_url": null,
+                        "slider_max": null,
+                        "slider_min": null,
+                        "slider_step": null,
+                        "image_credit": null,
+                        "correct_index": 1,
+                        "correct_value": null,
+                        "time_limit_ms": 7200
+                    },
+                    {
+                        "id": "dq_en_2_147",
+                        "kind": "true_false",
+                        "unit": null,
+                        "options": [
+                            "True",
+                            "False"
+                        ],
+                        "question": "Judaism, Christianity and Islam are all monotheistic religions.",
+                        "image_url": null,
+                        "slider_max": null,
+                        "slider_min": null,
+                        "slider_step": null,
+                        "image_credit": null,
+                        "correct_index": 0,
+                        "correct_value": null,
+                        "time_limit_ms": 4800
+                    },
+                    {
+                        "id": "dq_en_2_74",
+                        "kind": "true_false",
+                        "unit": null,
+                        "options": [
+                            "True",
+                            "False"
+                        ],
+                        "question": "Lightning never strikes the same place twice.",
+                        "image_url": null,
+                        "slider_max": null,
+                        "slider_min": null,
+                        "slider_step": null,
+                        "image_credit": null,
+                        "correct_index": 1,
+                        "correct_value": null,
+                        "time_limit_ms": 4800
+                    },
+                    {
+                        "id": "dq_en_3_66",
+                        "kind": "mcq",
+                        "unit": null,
+                        "options": [
+                            "Mercury",
+                            "Lead",
+                            "Tin",
+                            "Zinc"
+                        ],
+                        "question": "Which metal is liquid at room temperature?",
+                        "image_url": null,
+                        "slider_max": null,
+                        "slider_min": null,
+                        "slider_step": null,
+                        "image_credit": null,
+                        "correct_index": 0,
+                        "correct_value": null,
+                        "time_limit_ms": 7200
+                    },
+                    {
+                        "id": "dq_en_2_123",
+                        "kind": "mcq",
+                        "unit": null,
+                        "options": [
+                            "Saturn",
+                            "Mars",
+                            "Apollo",
+                            "Jupiter"
+                        ],
+                        "question": "Which Roman god is the equivalent of the Greek god Zeus?",
+                        "image_url": null,
+                        "slider_max": null,
+                        "slider_min": null,
+                        "slider_step": null,
+                        "image_credit": null,
+                        "correct_index": 3,
+                        "correct_value": null,
+                        "time_limit_ms": 7200
+                    }
+                ]
+            }
+        ],
+        "match_id": "1c1dab4f-8209-462e-86da-409302cd718b",
+        "opponent": {
+            "handle": "bruno",
+            "user_id": "00000000-0000-0000-0000-00000000000b",
+            "trophies": 0,
+            "avatar_id": null,
+            "country_code": "",
+            "league_position": 1
+        },
+        "tiebreak": {
+            "id": "dq_en_3_121",
+            "kind": "slider",
+            "unit": "symphonies",
+            "options": null,
+            "question": "How many symphonies did Beethoven complete?",
+            "image_url": null,
+            "slider_max": 25,
+            "slider_min": 1,
+            "slider_step": 1,
+            "image_credit": null,
+            "correct_index": null,
+            "correct_value": 9,
+            "time_limit_ms": 15000
+        },
+        "questions": [
+            {
+                "id": "dq_en_2_08",
+                "kind": "portrait",
+                "unit": null,
+                "options": [
+                    "Abraham Lincoln",
+                    "Charles Dickens",
+                    "Karl Marx",
+                    "Ulysses S. Grant"
+                ],
+                "question": "Who is this?",
+                "image_url": "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels/portraits/abraham_lincoln.jpg",
+                "slider_max": null,
+                "slider_min": null,
+                "slider_step": null,
+                "image_credit": "Alexander Gardner · Public domain · Wikimedia Commons",
+                "correct_index": 0,
+                "correct_value": null,
+                "time_limit_ms": 10000
+            },
+            {
+                "id": "dq_en_3_90",
+                "kind": "mcq",
+                "unit": null,
+                "options": [
+                    "A loaf of bread",
+                    "A silver candlestick",
+                    "A horse",
+                    "A gold coin"
+                ],
+                "question": "In \"Les Misérables\", what did Jean Valjean steal that first sent him to prison?",
+                "image_url": null,
+                "slider_max": null,
+                "slider_min": null,
+                "slider_step": null,
+                "image_credit": null,
+                "correct_index": 0,
+                "correct_value": null,
+                "time_limit_ms": 12000
+            },
+            {
+                "id": "dq_en_3_150",
+                "kind": "mcq",
+                "unit": null,
+                "options": [
+                    "Cyrillic",
+                    "Latin",
+                    "Greek",
+                    "Armenian"
+                ],
+                "question": "Which alphabet is used to write Russian?",
+                "image_url": null,
+                "slider_max": null,
+                "slider_min": null,
+                "slider_step": null,
+                "image_credit": null,
+                "correct_index": 0,
+                "correct_value": null,
+                "time_limit_ms": 12000
+            },
+            {
+                "id": "dq_en_2_150",
+                "kind": "slider",
+                "unit": "animals",
+                "options": null,
+                "question": "How many animals are there in the cycle of the Chinese zodiac?",
+                "image_url": null,
+                "slider_max": 30,
+                "slider_min": 1,
+                "slider_step": 1,
+                "image_credit": null,
+                "correct_index": null,
+                "correct_value": 12,
+                "time_limit_ms": 15000
+            },
+            {
+                "id": "dq_en_2_98",
+                "kind": "true_false",
+                "unit": null,
+                "options": [
+                    "True",
+                    "False"
+                ],
+                "question": "Homer's \"Iliad\" is set during the Trojan War.",
+                "image_url": null,
+                "slider_max": null,
+                "slider_min": null,
+                "slider_step": null,
+                "image_credit": null,
+                "correct_index": 0,
+                "correct_value": null,
+                "time_limit_ms": 8000
+            },
+            {
+                "id": "dq_en_3_102",
+                "kind": "true_false",
+                "unit": null,
+                "options": [
+                    "True",
+                    "False"
+                ],
+                "question": "Hans Christian Andersen was a Swedish author.",
+                "image_url": null,
+                "slider_max": null,
+                "slider_min": null,
+                "slider_step": null,
+                "image_credit": null,
+                "correct_index": 1,
+                "correct_value": null,
+                "time_limit_ms": 8000
+            },
+            {
+                "id": "dq_en_3_92",
+                "kind": "mcq",
+                "unit": null,
+                "options": [
+                    "Emily Dickinson",
+                    "Edgar Allan Poe",
+                    "Robert Frost",
+                    "Walt Whitman"
+                ],
+                "question": "Which American poet wrote \"The Raven\"?",
+                "image_url": null,
+                "slider_max": null,
+                "slider_min": null,
+                "slider_step": null,
+                "image_credit": null,
+                "correct_index": 1,
+                "correct_value": null,
+                "time_limit_ms": 12000
+            },
+            {
+                "id": "dq_en_3_04",
+                "kind": "mcq",
+                "unit": null,
+                "options": [
+                    "Aldous Huxley",
+                    "Ray Bradbury",
+                    "H. G. Wells",
+                    "George Orwell"
+                ],
+                "question": "Who wrote the novel \"1984\"?",
+                "image_url": null,
+                "slider_max": null,
+                "slider_min": null,
+                "slider_step": null,
+                "image_credit": null,
+                "correct_index": 3,
+                "correct_value": null,
+                "time_limit_ms": 12000
+            },
+            {
+                "id": "dq_en_3_97",
+                "kind": "mcq",
+                "unit": null,
+                "options": [
+                    "Dracula",
+                    "Don Quixote"
+                ],
+                "question": "Which was published first?",
+                "image_url": null,
+                "slider_max": null,
+                "slider_min": null,
+                "slider_step": null,
+                "image_credit": null,
+                "correct_index": 1,
+                "correct_value": null,
+                "time_limit_ms": 12000
+            },
+            {
+                "id": "dq_en_2_07",
+                "kind": "portrait",
+                "unit": null,
+                "options": [
+                    "William Shakespeare",
+                    "Sir Walter Raleigh",
+                    "Miguel de Cervantes",
+                    "Christopher Marlowe"
+                ],
+                "question": "Who is this?",
+                "image_url": "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels/portraits/william_shakespeare.jpg",
+                "slider_max": null,
+                "slider_min": null,
+                "slider_step": null,
+                "image_credit": "Attributed to John Taylor · Public domain · Wikimedia Commons",
+                "correct_index": 0,
+                "correct_value": null,
+                "time_limit_ms": 10000
+            },
+            {
+                "id": "dq_en_2_144",
+                "kind": "mcq",
+                "unit": null,
+                "options": [
+                    "Greece",
+                    "Portugal",
+                    "Spain",
+                    "Italy"
+                ],
+                "question": "Paella is a traditional dish of which country?",
+                "image_url": null,
+                "slider_max": null,
+                "slider_min": null,
+                "slider_step": null,
+                "image_credit": null,
+                "correct_index": 2,
+                "correct_value": null,
+                "time_limit_ms": 12000
+            },
+            {
+                "id": "dq_en_3_20",
+                "kind": "portrait",
+                "unit": null,
+                "options": [
+                    "Ireland",
+                    "Pakistan",
+                    "India",
+                    "Italy"
+                ],
+                "question": "Which country's flag is this?",
+                "image_url": "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels/flags/in.jpg",
+                "slider_max": null,
+                "slider_min": null,
+                "slider_step": null,
+                "image_credit": "flagcdn.com · Public domain",
+                "correct_index": 2,
+                "correct_value": null,
+                "time_limit_ms": 10000
+            },
+            {
+                "id": "dq_en_3_33",
+                "kind": "mcq",
+                "unit": null,
+                "options": [
+                    "Australia",
+                    "India"
+                ],
+                "question": "Which country is larger in area?",
+                "image_url": null,
+                "slider_max": null,
+                "slider_min": null,
+                "slider_step": null,
+                "image_credit": null,
+                "correct_index": 0,
+                "correct_value": null,
+                "time_limit_ms": 12000
+            },
+            {
+                "id": "dq_en_3_149",
+                "kind": "mcq",
+                "unit": null,
+                "options": [
+                    "Buddhism",
+                    "Jainism",
+                    "Sikhism",
+                    "Hinduism"
+                ],
+                "question": "Which religion grew from the teachings of Siddhartha Gautama?",
+                "image_url": null,
+                "slider_max": null,
+                "slider_min": null,
+                "slider_step": null,
+                "image_credit": null,
+                "correct_index": 0,
+                "correct_value": null,
+                "time_limit_ms": 12000
+            },
+            {
+                "id": "dq_en_2_146",
+                "kind": "mcq",
+                "unit": null,
+                "options": [
+                    "Baghdad",
+                    "Jerusalem",
+                    "Medina",
+                    "Mecca"
+                ],
+                "question": "Which city is the destination of the Hajj, the Muslim pilgrimage?",
+                "image_url": null,
+                "slider_max": null,
+                "slider_min": null,
+                "slider_step": null,
+                "image_credit": null,
+                "correct_index": 3,
+                "correct_value": null,
+                "time_limit_ms": 12000
+            },
+            {
+                "id": "dq_en_3_113",
+                "kind": "mcq",
+                "unit": null,
+                "options": [
+                    "Stanley Kubrick",
+                    "Alfred Hitchcock",
+                    "Billy Wilder",
+                    "Orson Welles"
+                ],
+                "question": "Which director made \"Psycho\" and \"The Birds\"?",
+                "image_url": null,
+                "slider_max": null,
+                "slider_min": null,
+                "slider_step": null,
+                "image_credit": null,
+                "correct_index": 1,
+                "correct_value": null,
+                "time_limit_ms": 7200
+            },
+            {
+                "id": "dq_en_2_147",
+                "kind": "true_false",
+                "unit": null,
+                "options": [
+                    "True",
+                    "False"
+                ],
+                "question": "Judaism, Christianity and Islam are all monotheistic religions.",
+                "image_url": null,
+                "slider_max": null,
+                "slider_min": null,
+                "slider_step": null,
+                "image_credit": null,
+                "correct_index": 0,
+                "correct_value": null,
+                "time_limit_ms": 4800
+            },
+            {
+                "id": "dq_en_2_74",
+                "kind": "true_false",
+                "unit": null,
+                "options": [
+                    "True",
+                    "False"
+                ],
+                "question": "Lightning never strikes the same place twice.",
+                "image_url": null,
+                "slider_max": null,
+                "slider_min": null,
+                "slider_step": null,
+                "image_credit": null,
+                "correct_index": 1,
+                "correct_value": null,
+                "time_limit_ms": 4800
+            },
+            {
+                "id": "dq_en_3_66",
+                "kind": "mcq",
+                "unit": null,
+                "options": [
+                    "Mercury",
+                    "Lead",
+                    "Tin",
+                    "Zinc"
+                ],
+                "question": "Which metal is liquid at room temperature?",
+                "image_url": null,
+                "slider_max": null,
+                "slider_min": null,
+                "slider_step": null,
+                "image_credit": null,
+                "correct_index": 0,
+                "correct_value": null,
+                "time_limit_ms": 7200
+            },
+            {
+                "id": "dq_en_2_123",
+                "kind": "mcq",
+                "unit": null,
+                "options": [
+                    "Saturn",
+                    "Mars",
+                    "Apollo",
+                    "Jupiter"
+                ],
+                "question": "Which Roman god is the equivalent of the Greek god Zeus?",
+                "image_url": null,
+                "slider_max": null,
+                "slider_min": null,
+                "slider_step": null,
+                "image_credit": null,
+                "correct_index": 3,
+                "correct_value": null,
+                "time_limit_ms": 7200
+            }
+        ],
+        "starts_in_ms": 4969
+    },
+    "status": "accepted"
+}

@@ -106,6 +106,10 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import androidx.compose.runtime.key
+import app.rork.sophia.ui.duels.DuelInviteBanner
+import app.rork.sophia.ui.duels.DuelFriendFlow
+import app.rork.sophia.ui.duels.DuelFriendPresenter
 
 private enum class OverlayScreen { Settings, Friends, Feedback, Ambassador, Terms, Privacy, MyCourses, AudioDownloads }
 
@@ -377,6 +381,8 @@ fun MainTabs(
     // confirmation avant d'abandonner ; son gestionnaire, composé plus tard, passe avant
     // celui-ci). Ce garde-fou évite seulement que le retour change d'onglet sous la partie.
     BackHandler(enabled = showDuelFlow && paywall == null && rewardSteps == null) {}
+    // Pendant un duel entre amis, retour ne quitte pas l'app ; l'écran du duel gère ses propres retours.
+    BackHandler(enabled = DuelFriendPresenter.entry != null && paywall == null && rewardSteps == null) {}
     // Registered last, so it takes precedence: the author page sits above the reader.
     BackHandler(enabled = selectedAuthorSlug != null) {
         selectedAuthorSlug = null
@@ -888,6 +894,23 @@ fun MainTabs(
             exit = fadeOut() + slideOutVertically { -it },
         ) {
             TrialEndingMiniBanner(language = language)
+        }
+
+        // Un duel entre amis recouvre tout, lui aussi, où que l'on soit dans l'app : un défi lancé
+        // depuis le classement, ou une invitation acceptée depuis le bandeau.
+        DuelFriendPresenter.entry?.let { friendEntry ->
+            key(friendEntry) {
+                DuelFriendFlow(
+                    entry = friendEntry,
+                    language = language,
+                    onClose = { DuelFriendPresenter.dismiss() },
+                    modifier = Modifier.fillMaxSize(),
+                )
+            }
+        }
+        // Une invitation reçue : en bandeau par-dessus l'écran en cours, là où les duels existent.
+        if (showsDuels) {
+            DuelInviteBanner(language = language, modifier = Modifier.align(Alignment.TopCenter))
         }
     }
 }

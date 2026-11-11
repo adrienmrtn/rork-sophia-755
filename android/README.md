@@ -50,6 +50,10 @@ Debug APK uses the placeholder RevenueCat key (`goog_REPLACE_ME`) until you set 
   from the menu in the reader header (`CourseReadingMode`, kept on the device).
 - **« See the original »** opens the course in the language it was written in (from the content or
   the manifest `origins`), for readers who can read the whole course.
+- **Friend duels** (as on iOS): presence, invitations (banner over any screen), live match with
+  the server keeping the clock, friendly result and rematch; challenge from the duels leaderboard
+  or a friend's profile. Duels home: stats card, « See more », trophy climb after a win, flags
+  trimmed of their beige margin. Not yet played on two real phones.
 - **Sharing** a course or a creator sends the site link; the app opens `sophia-culture.com` course
   and author pages (App Links, see `docs/partage.md`).
 - **Parcours** (iOS learning path): every collection is a level, courses open one after the other,

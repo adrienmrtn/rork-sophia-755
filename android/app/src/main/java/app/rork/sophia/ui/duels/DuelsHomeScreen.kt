@@ -118,6 +118,7 @@ import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.foundation.Canvas
+import androidx.compose.ui.semantics.contentDescription
 
 /** Le classement des amis (leurs pastilles « en ligne ») est relu à ce rythme tant que l'onglet est affiché. */
 private const val LEADERBOARD_REFRESH_MS = 15_000L
@@ -993,6 +994,26 @@ private fun LeaderboardRow(rank: Int, entry: DuelLeaderboardEntry, home: DuelHom
             }
         }
         DuelTrophyCount(value = entry.trophies, language = language, size = 15.dp, color = DS.ink)
+        // Défier cet ami en duel (aucun trophée en jeu), s'il a les duels.
+        if (!entry.isMe && entry.canChallenge) {
+            val view = LocalView.current
+            Box(
+                modifier = Modifier
+                    .size(36.dp)
+                    .softPress(onClick = {
+                        view.duelHaptic(DuelHaptic.CountdownFinal)
+                        DuelFriendPresenter.present(
+                            DuelFriendEntry.Challenge(userId = entry.userId, handle = entry.handle, avatarId = entry.avatarId),
+                        )
+                    })
+                    .clip(CircleShape)
+                    .background(DuelPalette.saffron)
+                    .semantics { contentDescription = StringStore.text(context, "duel.friend.challenge", language) },
+                contentAlignment = Alignment.Center,
+            ) {
+                Icon(Icons.Filled.Bolt, contentDescription = null, tint = DuelPalette.night, modifier = Modifier.size(18.dp))
+            }
+        }
     }
 }
 

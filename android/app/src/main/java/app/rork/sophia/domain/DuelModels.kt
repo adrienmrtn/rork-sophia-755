@@ -234,6 +234,79 @@ data class DuelLeaderboardEntry(
     @SerialName("can_challenge") val canChallenge: Boolean = false,
 )
 
+// ---------------------------------------------------------------- duels entre amis
+
+/** Une invitation reçue : `duel_ping()` la rapporte tant qu'elle attend une réponse. */
+@Serializable
+data class DuelIncomingInvite(
+    @SerialName("invite_id") val inviteId: String,
+    val from: DuelOpponent,
+    @SerialName("expires_in_ms") val expiresInMs: Int = 0,
+)
+
+@Serializable
+data class DuelPingResponse(val invite: DuelIncomingInvite? = null)
+
+/** Une invitation envoyée : `duel_invite_friend()`. */
+@Serializable
+data class DuelSentInvite(
+    @SerialName("invite_id") val inviteId: String,
+    @SerialName("expires_in_ms") val expiresInMs: Int = 0,
+    val me: DuelOpponent,
+    val friend: DuelOpponent,
+    val online: Boolean = false,
+)
+
+/** Le lancement d'une partie entre amis, reçu par les deux joueurs. */
+@Serializable
+data class DuelFriendStart(
+    @SerialName("match_id") val matchId: String,
+    val me: DuelOpponent,
+    val opponent: DuelOpponent,
+    val rounds: List<DuelRoundPlan>,
+    val tiebreak: DuelQuestion,
+    /** La première question démarre dans tant de millisecondes, pour les deux joueurs. */
+    @SerialName("starts_in_ms") val startsInMs: Int = 0,
+) {
+    /** La même partie sous la forme que l'écran de jeu connaît (sans script d'adversaire). */
+    val match: DuelMatch
+        get() = DuelMatch(matchId = matchId, opponent = opponent, rounds = rounds, tiebreak = tiebreak)
+}
+
+/**
+ * Où en est une invitation envoyée (`duel_invite_status`) ou la réponse donnée à une invitation
+ * reçue (`duel_invite_respond`). [status] : pending, accepted, declined, busy, cancelled, expired.
+ */
+@Serializable
+data class DuelInviteOutcome(val status: String = "", val match: DuelFriendStart? = null)
+
+/** L'état d'une partie entre amis, vu par ce joueur : `duel_friend_state()`. */
+@Serializable
+data class DuelFriendState(
+    @SerialName("match_id") val matchId: String = "",
+    val finished: Boolean = false,
+    /** La question en cours (20 : la question décisive). */
+    val index: Int = 0,
+    /** Nombre de questions closes : leurs réponses et leurs points sont connus. */
+    val resolved: Int = 0,
+    /** Positif : la question en cours démarre dans tant de ms ; négatif : elle tourne déjà. */
+    @SerialName("question_starts_in_ms") val questionStartsInMs: Int = 0,
+    @SerialName("my_score") val myScore: Int = 0,
+    @SerialName("opponent_score") val opponentScore: Int = 0,
+    @SerialName("my_answered") val myAnswered: Boolean = false,
+    @SerialName("opponent_answered") val opponentAnswered: Boolean = false,
+    @SerialName("opponent_answers") val opponentAnswers: List<DuelAnswer> = emptyList(),
+    @SerialName("my_points") val myPoints: List<Boolean> = emptyList(),
+    @SerialName("opponent_points") val opponentPoints: List<Boolean> = emptyList(),
+    val tiebreak: Boolean = false,
+    /** Les matières retenues pour les manches au choix, par numéro de manche : {"2": "art"}. */
+    val picks: Map<String, String>? = null,
+    @SerialName("opponent_left") val opponentLeft: Boolean = false,
+    /** Absent tant que la partie n'est pas finie sur un vainqueur. */
+    val won: Boolean? = null,
+    val draw: Boolean = false,
+)
+
 /** Qui marque le point d'une question, et qui gagne la question décisive. */
 object DuelScoring {
     /** (moi, l'adversaire) : chacun marque-t-il le point de cette question ? */

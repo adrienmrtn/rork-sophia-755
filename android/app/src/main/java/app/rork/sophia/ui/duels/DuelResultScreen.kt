@@ -84,6 +84,7 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlin.math.abs
 import kotlin.math.roundToInt
+import androidx.compose.material.icons.filled.Group
 
 /** Le compteur de trophées défile en 28 crans au plus, quel que soit l'écart. */
 private const val TROPHY_STEPS = 28
@@ -129,7 +130,8 @@ internal fun DuelResultScreen(
 
     LaunchedEffect(Unit) {
         appeared = true
-        view.duelHaptic(if (won) DuelHaptic.Victory else DuelHaptic.Defeat)
+        // Une égalité parfaite (entre amis) n'est ni une victoire ni une défaite.
+        if (won) view.duelHaptic(DuelHaptic.Victory) else if (!summary.draw) view.duelHaptic(DuelHaptic.Defeat)
     }
 
     // Les trophées défilent de l'ancien total au nouveau, la jauge suit, puis la nouvelle ligue
@@ -219,6 +221,7 @@ internal fun DuelResultScreen(
                         text = text(
                             when {
                                 summary.abandoned -> "duel.result.abandoned"
+                                summary.draw -> "duel.result.draw"
                                 won -> "duel.result.victory"
                                 else -> "duel.result.defeat"
                             },
@@ -268,7 +271,7 @@ internal fun DuelResultScreen(
                         initial = player.initial,
                         name = "@${player.handle}",
                         ring = DuelPalette.saffron,
-                        crowned = won,
+                        crowned = won && !summary.draw,
                         entrance = entrance,
                         modifier = Modifier.weight(1f),
                     )
@@ -287,13 +290,14 @@ internal fun DuelResultScreen(
                         initial = opponent.initial,
                         name = "@${opponent.handle} ${opponent.flag}".trim(),
                         ring = DuelPalette.coral,
-                        crowned = !won,
+                        crowned = !won && !summary.draw,
                         entrance = entrance,
                         modifier = Modifier.weight(1f),
                     )
                 }
 
                 TrophyCard(
+                    friendly = summary.friendly,
                     result = result,
                     resultFailed = resultFailed,
                     won = won,
@@ -322,7 +326,7 @@ internal fun DuelResultScreen(
                 verticalArrangement = Arrangement.spacedBy(12.dp),
             ) {
                 DuelPlayButton(
-                    text = text("duel.result.again"),
+                    text = text(if (summary.friendly) "duel.friend.rematch" else "duel.result.again"),
                     onClick = {
                         view.duelHaptic(DuelHaptic.Countdown)
                         onPlayAgain()
@@ -459,6 +463,8 @@ private fun DuelCrown(size: Dp, modifier: Modifier = Modifier) {
 
 @Composable
 private fun TrophyCard(
+    /** Duel entre amis : aucun trophée en jeu. */
+    friendly: Boolean,
     result: DuelResult?,
     resultFailed: Boolean,
     won: Boolean,
@@ -483,6 +489,27 @@ private fun TrophyCard(
         verticalArrangement = Arrangement.spacedBy(18.dp),
     ) {
         when {
+            friendly -> Column(
+                modifier = Modifier.fillMaxWidth().padding(vertical = 6.dp),
+                horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.spacedBy(10.dp),
+            ) {
+                Icon(
+                    imageVector = Icons.Filled.Group,
+                    contentDescription = null,
+                    tint = DS.accentSoft,
+                    modifier = Modifier.size(28.dp),
+                )
+                Text(
+                    text = text("duel.friend.noTrophies"),
+                    fontFamily = PlusJakartaSans,
+                    fontWeight = FontWeight.SemiBold,
+                    fontSize = 15.sp,
+                    lineHeight = 20.sp,
+                    color = DS.inkSecondary,
+                    textAlign = TextAlign.Center,
+                )
+            }
             result != null -> {
                 Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(16.dp)) {
                     val lift by animateFloatAsState(
