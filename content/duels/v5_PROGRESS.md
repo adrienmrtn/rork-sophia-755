@@ -25,4 +25,8 @@ La v4 (400 questions) est terminée : supabase/duels_v4_a_coller/1..3 (voir cont
   ; test sur Postgres local (/var/lib/postgresql/duelstest, port 5499).
 
 ## État
-- [ ] rédaction texte  - [ ] vérification texte  - [ ] images  - [ ] intégration  - [ ] traduction  - [ ] SQL
+- [x] rédaction texte  - [x] vérification texte (12 × final_*.json, dédoublonnage global fait)
+- [x] intégration texte : scripts/duels_source/40_v5_*.json → 1 400 questions (ids dans questions_en.json, absents de v5/baseline_ids.txt)
+- [ ] images (agents a et b en cours) → vérifier, réduire/compléter à 100, scripts/duels_source/41_v5_images.json, crédits dans images.json, rebuild, pack part15
+- [ ] traduction : packs part1..14 (texte) ; vague 1 = parts 1–7 (29 agents), vague 2 = parts 8–15 (29 agents)
+- [ ] merge --new --parts 15, SQL, test Postgres local
