@@ -1,102 +1,724 @@
-{"items": {
-"dq_en_1_189": {"q": "Yunan mitolojisinde gökyüzünü taşımaya mahkûm edilen Titan kimdir?", "o": ["Atlas", "Kronos", "Hyperion", "Okeanos"]},
-"dq_en_1_190": {"q": "Kral Arthur efsanesinde genç Arthur, meşru kral olduğunu nasıl kanıtlar?", "o": ["Kutsal Kâse'yi bulur", "Taşa saplı kılıcı çeker", "Bir ejderha öldürür", "Bir turnuva kazanır"]},
-"dq_en_1_191": {"q": "Kutsal Kitap'ta dev Golyat'ı sapanla kim öldürdü?", "o": ["Samson", "Musa", "Davut", "Yeşu"]},
-"dq_en_1_192": {"q": "Yunan mitolojisinde ateşin ve demirci ocağının tanrısı kimdir?", "o": ["Dionysos", "Hephaistos", "Hermes", "Apollon"]},
-"dq_en_1_193": {"q": "Avrupa halk inanışlarında dolunayda kurda dönüşen yaratık hangisidir?", "o": ["Gulyabani", "Kurt adam", "Vampir", "Trol"]},
-"dq_en_1_194": {"q": "Yunan mitolojisinde Apollon denizlerin tanrısıdır."},
-"dq_en_1_195": {"q": "Kutsal Kitap'ta Nuh tufanının yağmuru kaç gün kaç gece yağdı?", "u": "gün"},
-"dq_en_2_190": {"q": "Belden yukarısı insan, gövdesi at olan efsanevi yaratık hangisidir?", "o": ["Satir", "Kentauros", "Minotauros", "Faun"]},
-"dq_en_2_191": {"q": "Romalıların deniz tanrısı kimdir?", "o": ["Neptün", "Vulcanus", "Merkür", "Mars"]},
-"dq_en_2_192": {"q": "Alnında tek bir boynuz olan, ata benzeyen efsanevi yaratık hangisidir?", "o": ["Hipogrif", "Pegasus", "Tek boynuzlu at", "Kelpie"]},
-"dq_en_2_193": {"q": "Hindu geleneğinde yok edici olarak bilinen tanrı hangisidir?", "o": ["İndra", "Şiva", "Brahma", "Vişnu"]},
-"dq_en_2_194": {"q": "İskandinav mitolojisinde Thor'un babası kimdir?", "o": ["Odin", "Loki", "Heimdall", "Tyr"]},
-"dq_en_2_195": {"q": "Roma efsanesine göre Roma kentini Romulus kurdu."},
-"dq_en_2_196": {"q": "Yunan mitolojisinde Herakles, Poseidon'un oğludur."},
-"dq_en_2_197": {"q": "İngiliz efsanesinde kanun kaçağı Robin Hood hangi ormanda yaşar?", "o": ["Kara Orman", "Sherwood Ormanı", "Białowieża Ormanı", "Dean Ormanı"]},
-"dq_en_3_195": {"q": "“Odysseia”da Odysseus'un adamlarını domuza çeviren büyücü kadın kimdir?", "o": ["Hekate", "Kalypso", "Kirke", "Medeia"]},
-"dq_en_3_196": {"q": "Kutsal Kitap'ta büyük gücü uzun saçlarında olan kahraman kimdir?", "o": ["Samson", "Davut", "Yeşu", "Gidyon"]},
-"dq_en_3_197": {"q": "“Ramayana”da Rama'nın sadık yardımcısı olan maymun tanrı kimdir?", "o": ["Hanuman", "Ganeşa", "Kartikeya", "Garuda"]},
-"dq_en_3_198": {"q": "Romalıların aşk tanrısı Cupido'nun Yunanca adı nedir?", "o": ["Pan", "Eros", "Adonis", "Hymenaios"]},
-"dq_en_3_199": {"q": "“Odysseia”da Odysseus'un yurdu hangi adadır?", "o": ["İthaka", "Kıbrıs", "Girit", "Rodos"]},
-"dq_en_3_200": {"q": "Kutsal Kitap'ta Musa, İsrailoğullarını Babil'den çıkardı."},
-"dq_en_3_201": {"q": "Kutsal Kitap'ta Firavun İsrailoğullarını salıvermeden önce Mısır'a kaç bela indi?", "u": "bela"},
-"dq_en_3_202": {"q": "Yaratılış kitabında Tanrı, dinlenmeden önce dünyayı kaç günde yaratır?", "u": "gün"},
-"dq_en_4_196": {"q": "Yunan mitolojisinde Paris altın elmayı hangi tanrıçaya verdi?", "o": ["Hera", "Artemis", "Athena", "Afrodit"]},
-"dq_en_4_197": {"q": "Sık sık inek olarak tasvir edilen Mısır aşk ve müzik tanrıçası kimdir?", "o": ["Hathor", "Bastet", "Nephthys", "Sekhmet"]},
-"dq_en_4_198": {"q": "Kral Arthur efsanesinde Kutsal Kâse'ye ulaşan, Lancelot'un oğlu olan saf şövalye kimdir?", "o": ["Tristan", "Gawain", "Bedivere", "Galahad"]},
-"dq_en_4_199": {"q": "“Odysseia”da Odysseus'a içi rüzgâr dolu bir tulum veren rüzgârların bekçisi kimdir?", "o": ["Triton", "Boreas", "Aiolos", "Proteus"]},
-"dq_en_4_200": {"q": "Çin burçları döngüsünde ilk sırada hangi hayvan gelir?", "o": ["Kaplan", "Ejderha", "Fare", "Öküz"]},
-"dq_en_4_201": {"q": "Yunan mitolojisinde Hades, Zeus'un kardeşidir."},
-"dq_en_4_202": {"q": "Kral Arthur efsanesinde Arthur, Lancelot tarafından ölümcül biçimde yaralanır."},
-"dq_en_4_203": {"q": "Hindu geleneğinde yaratıcı tanrı Brahma'nın kaç başı vardır?", "u": "baş"},
-"dq_en_5_204": {"q": "Yunan mitolojisinde Afrodit'in sevdiği, bir yaban domuzunca öldürülen genç kimdir?", "o": ["Narkissos", "Endymion", "Hyakinthos", "Adonis"]},
-"dq_en_5_205": {"q": "Japon halk inanışlarında kappa nasıl bir yaratıktır?", "o": ["Tilki ruhu", "Kar kadını", "Dağ cini", "Su cini"]},
-"dq_en_5_206": {"q": "“Odysseia”da Odysseus'un oğlunun adı nedir?", "o": ["Telemakhos", "Neoptolemos", "Orestes", "Laertes"]},
-"dq_en_5_207": {"q": "Venüs gezegeniyle ilişkilendirilen Mezopotamya aşk ve savaş tanrıçası kimdir?", "o": ["Tiamat", "İştar", "Ninhursag", "Ereşkigal"]},
-"dq_en_5_208": {"q": "Aztek mitolojisinde Tlaloc neyin tanrısıdır?", "o": ["Mısır", "Yağmur", "Savaş", "Ay"]},
-"dq_en_5_209": {"q": "Yunan mitolojisinde Hermes ilk liri bir kaplumbağa kabuğundan yaptı."},
-"dq_en_5_210": {"q": "Hindu geleneğinde Lakşmi savaş tanrıçasıdır."},
-"dq_en_5_211": {"q": "“Odysseia”da Odysseus, Truva'nın düşüşünden sonra evine kaç yılda döner?", "u": "yıl"},
-"dq_en_6_190": {"q": "İskandinav mitolojisinde tanrıları genç tutan elmaları hangi tanrıça korur?", "o": ["Frigg", "Sif", "İdun", "Skadi"]},
-"dq_en_6_191": {"q": "Yunan mitolojisinde Girit adasını koruyan tunçtan dev kimdir?", "o": ["Tyfon", "Geryon", "Talos", "Antaios"]},
-"dq_en_6_192": {"q": "İrlanda efsanesinde Bilgelik Somonu'nu tadarak bilgelik kazanan kahraman kimdir?", "o": ["Diarmuid", "Cú Chulainn", "Fionn mac Cumhaill", "Oisín"]},
-"dq_en_6_193": {"q": "Yoruba geleneğinde orişa Ogun neyin tanrısıdır?", "o": ["Demir ve metal işçiliği", "Deniz", "Gök gürültüsü", "Nehirler ve aşk"]},
-"dq_en_6_194": {"q": "İnkaların güneş tanrısı kimdir?", "o": ["Pachamama", "Mama Quilla", "Inti", "Illapa"]},
-"dq_en_6_195": {"q": "Yunan mitolojisinde Herakles iki nehrin yönünü değiştirerek kimin ahırlarını temizledi?", "o": ["Eurystheus", "Minos", "Diomedes", "Augeias"]},
-"dq_en_6_196": {"q": "İskandinav mitolojisinde Loki, kurt Fenrir'in babasıdır."},
-"dq_en_6_197": {"q": "Çin mitolojisinde Yeşim İmparator yeraltı dünyasını yönetir."},
-"dq_en_6_198": {"q": "Hesiodos'un “Theogonia”sında Gaia ile Uranos'tan kaç Titan doğar?", "u": "Titan"},
-"dq_en_7_190": {"q": "Yunan mitolojisinde sonsuza dek ateşten bir çarka bağlanan kral kimdir?", "o": ["Tantalos", "İksion", "Sisyphos", "Tityos"]},
-"dq_en_7_191": {"q": "“Ramayana”da Sita'yı kurtarmak için Ravana ile savaşan akbaba kral kimdir?", "o": ["Sampati", "Jambavan", "Garuda", "Jatayu"]},
-"dq_en_7_192": {"q": "Slav mitolojisinde Perun'un rakibi olan yeraltı tanrısı kimdir?", "o": ["Stribog", "Veles", "Dajbog", "Svarog"]},
-"dq_en_7_193": {"q": "Māori geleneğinde toprak ana Papatūānuku'dan ayrılan gök baba kimdir?", "o": ["Tūmatauenga", "Tangaroa", "Ranginui", "Tāwhirimātea"]},
-"dq_en_7_194": {"q": "Evleri, anneleri ve yeni doğanları koruyan cüce görünümlü Mısır tanrısı kimdir?", "o": ["Bes", "Khonsu", "Min", "Ptah"]},
-"dq_en_7_195": {"q": "Yunan mitolojisinde Zeus'un tanrılara sâkilik etsin diye kaçırdığı Truvalı genç kimdir?", "o": ["Ganymedes", "Paris", "Troilos", "Hyakinthos"]},
-"dq_en_7_196": {"q": "Gılgamış Destanı'nda bir yılan, gençlik bitkisini Gılgamış'tan çalar."},
-"dq_en_7_197": {"q": "Yunan mitolojisinde Klytaimnestra, Agamemnon'un kızıdır."},
-"dq_en_7_198": {"q": "Hindu geleneğinde kartala benzeyen Garuda, Vişnu'nun bineğidir."},
-"dq_en_8_175": {"q": "Fin destanı “Kalevala”da sihirli Sampo'yu hangi demirci döver?", "o": ["Ilmarinen", "Kullervo", "Väinämöinen", "Lemminkäinen"]},
-"dq_en_8_176": {"q": "Aztek mitolojisinde Huitzilopochtli'yi Yılan Dağı'nda doğuran tanrıça kimdir?", "o": ["Xochiquetzal", "Mictecacihuatl", "Chalchiuhtlicue", "Coatlicue"]},
-"dq_en_8_177": {"q": "Yunan mitolojisinde üç Graia aralarında neyi paylaşır?", "o": ["Bir altın elma", "Bir kalp", "Bir göz ve bir diş", "Bir çift kanat"]},
-"dq_en_8_178": {"q": "İskandinav mitolojisinde Ragnarök'te dünyayı ateşe veren ateş devi kimdir?", "o": ["Skrymir", "Ymir", "Surtr", "Thrym"]},
-"dq_en_8_179": {"q": "İrlanda mitolojisinde Dagda'yı önderleri arasında sayan tanrısal halk hangisidir?", "o": ["Fir Bolg", "Milesyalılar", "Tuatha Dé Danann", "Fomorlar"]},
-"dq_en_8_180": {"q": "Mezopotamya mitolojisinde yeraltı dünyasının kraliçesi olan tanrıça kimdir?", "o": ["Ereşkigal", "Tiamat", "Ninlil", "İnanna"]},
-"dq_en_8_181": {"q": "İskandinav şiiri “Hávamál”da Odin dünya ağacında kaç gece asılı kalır?", "u": "gece"},
-"dq_en_8_182": {"q": "“Mahabharata”da Pandavalar kaç yıl sürgüne katlanır (gizlilik yılı dahil)?", "u": "yıl"},
-"dq_en_1_196": {"q": "İnsanlar hangi organlarla nefes alır?", "o": ["Böbrekler", "Karaciğer", "Mide", "Akciğerler"]},
-"dq_en_1_197": {"q": "Arılar çiçek nektarından ne yapar?", "o": ["İpek", "Reçel", "Bal", "Süt"]},
-"dq_en_1_198": {"q": "Güneş Sistemi'nde kaç gezegen vardır?", "o": ["Sekiz", "On", "Yedi", "Dokuz"]},
-"dq_en_1_199": {"q": "Donmuş suya ne denir?", "o": ["Buz", "Buhar", "Çiy", "Sis"]},
-"dq_en_1_200": {"q": "Bitkinin toprak altında büyüyen ve su emen kısmı hangisidir?", "o": ["Taç yapraklar", "Yapraklar", "Çiçekler", "Kökler"]},
-"dq_en_1_201": {"q": "Hangisi daha büyüktür?", "o": ["Ay", "Dünya"]},
-"dq_en_1_202": {"q": "Yarasalar memelidir."},
-"dq_en_1_203": {"q": "Örümcekler böcektir."},
-"dq_en_1_204": {"q": "Bir örümceğin kaç bacağı vardır?", "u": "bacak"},
-"dq_en_2_198": {"q": "Gazlı içeceklere kabarcıklarını hangi gaz verir?", "o": ["Oksijen", "Karbondioksit", "Helyum", "Hidrojen"]},
-"dq_en_2_199": {"q": "İribaş büyüyünce neye dönüşür?", "o": ["Yılan", "Kaplumbağa", "Kertenkele", "Kurbağa"]},
-"dq_en_2_200": {"q": "İnsan kalbinin kaç odacığı vardır?", "o": ["Dört", "Üç", "İki", "Altı"]},
-"dq_en_2_201": {"q": "Kanı süzüp idrar oluşturan organlar hangileridir?", "o": ["Akciğerler", "Böbrekler", "Mide", "Karaciğer"]},
-"dq_en_2_202": {"q": "Johannes Gutenberg 1440 dolaylarında Avrupa'da ne geliştirdi?", "o": ["Teleskop", "Mikroskop", "Pusula", "Matbaa"]},
-"dq_en_2_203": {"q": "Hangi gezegen Güneş'e daha yakındır?", "o": ["Mars", "Venüs"]},
-"dq_en_2_204": {"q": "Balinalar solungaçlarla nefes alır."},
-"dq_en_2_205": {"q": "Güneş bir yıldızdır."},
-"dq_en_2_206": {"q": "Bir üçgenin üç açısının toplamı kaç derecedir?", "u": "derece"},
-"dq_en_3_203": {"q": "Banyosunda “Evreka!” diye bağırdığı söylenen Yunan bilgin kimdir?", "o": ["Aristoteles", "Arşimet", "Pisagor", "Öklid"]},
-"dq_en_3_204": {"q": "Kanı kalpten vücuda taşıyan damarlar hangileridir?", "o": ["Atardamarlar", "Toplardamarlar", "Lenf damarları", "Kılcal damarlar"]},
-"dq_en_3_205": {"q": "Dev bir fırtına olan Büyük Kırmızı Leke'siyle ünlü gezegen hangisidir?", "o": ["Jüpiter", "Mars", "Neptün", "Satürn"]},
-"dq_en_3_206": {"q": "Sodyum klorürün gündelik adı nedir?", "o": ["Karbonat", "Sofra tuzu", "Tebeşir", "Şeker"]},
-"dq_en_3_207": {"q": "Barut hangi ülkede icat edildi?", "o": ["İran", "Mısır", "Çin", "Hindistan"]},
-"dq_en_3_208": {"q": "Hangisi daha ağırdır?", "o": ["Bir litre zeytinyağı", "Bir litre su"]},
-"dq_en_3_209": {"q": "Penguenler doğada Kuzey Kutbu'nda yaşar."},
-"dq_en_3_210": {"q": "Bir çocuğun normalde kaç süt dişi olur?", "u": "diş"},
-"dq_en_4_204": {"q": "Boyundaki hangi bez vücudun metabolizmasını düzenlemeye yardım eder?", "o": ["Pankreas", "Böbreküstü bezi", "Tiroit", "Hipofiz"]},
-"dq_en_4_205": {"q": "25 °C'de saf suyun pH değeri kaçtır?", "o": ["14", "7", "1", "0"]},
-"dq_en_4_206": {"q": "Ekseni yaklaşık 98° eğik olan, yan yatmış biçimde dönen gezegen hangisidir?", "o": ["Neptün", "Mars", "Satürn", "Uranüs"]},
-"dq_en_4_207": {"q": "1796'da inek çiçeğinden çiçek hastalığı aşısı geliştiren İngiliz doktor kimdir?", "o": ["Joseph Lister", "Edward Jenner", "Robert Koch", "Louis Pasteur"]},
-"dq_en_4_208": {"q": "Alyuvarlarda oksijeni taşıyan molekül hangisidir?", "o": ["Keratin", "Hemoglobin", "İnsülin", "Kolajen"]},
-"dq_en_4_209": {"q": "Köpeklerde koşullu refleksleri inceleyen Rus bilim insanı kimdir?", "o": ["Dmitri Mendeleyev", "İlya Meçnikov", "Mihail Lomonosov", "İvan Pavlov"]},
-"dq_en_4_210": {"q": "Ses suda havadakinden daha hızlı yayılır."},
-"dq_en_4_211": {"q": "İlk yapay uydu Sputnik 1 hangi yıl fırlatıldı?"},
-"dq_en_5_212": {"q": "Klasik reklam tabelalarında kırmızı-turuncu parlayan soy gaz hangisidir?", "o": ["Ksenon", "Neon", "Argon", "Kripton"]}
-}, "untranslatable": []}
+{
+"items": {
+"dq_en_1_189": {
+"q": "Yunan mitolojisinde gökyüzünü taşımaya mahkûm edilen Titan kimdir?",
+"o": [
+"Atlas",
+"Kronos",
+"Hyperion",
+"Okeanos"
+]
+},
+"dq_en_1_190": {
+"q": "Kral Arthur efsanesinde genç Arthur, meşru kral olduğunu nasıl kanıtlar?",
+"o": [
+"Kutsal Kâse'yi bulur",
+"Taşa saplı kılıcı çeker",
+"Bir ejderha öldürür",
+"Bir turnuva kazanır"
+]
+},
+"dq_en_1_191": {
+"q": "Kutsal Kitap'ta dev Golyat'ı sapanla kim öldürdü?",
+"o": [
+"Samson",
+"Musa",
+"Davut",
+"Yeşu"
+]
+},
+"dq_en_1_192": {
+"q": "Yunan mitolojisinde ateşin ve demirci ocağının tanrısı kimdir?",
+"o": [
+"Dionysos",
+"Hephaistos",
+"Hermes",
+"Apollon"
+]
+},
+"dq_en_1_193": {
+"q": "Avrupa halk inanışlarında dolunayda kurda dönüşen yaratık hangisidir?",
+"o": [
+"Gulyabani",
+"Kurt adam",
+"Vampir",
+"Trol"
+]
+},
+"dq_en_1_194": {
+"q": "Yunan mitolojisinde Apollon denizlerin tanrısıdır."
+},
+"dq_en_1_195": {
+"q": "Kutsal Kitap'ta Nuh tufanının yağmuru kaç gün kaç gece yağdı?",
+"u": "gün"
+},
+"dq_en_2_190": {
+"q": "Belden yukarısı insan, gövdesi at olan efsanevi yaratık hangisidir?",
+"o": [
+"Satir",
+"Kentauros",
+"Minotauros",
+"Faun"
+]
+},
+"dq_en_2_191": {
+"q": "Romalıların deniz tanrısı kimdir?",
+"o": [
+"Neptün",
+"Vulcanus",
+"Merkür",
+"Mars"
+]
+},
+"dq_en_2_192": {
+"q": "Alnında tek bir boynuz olan, ata benzeyen efsanevi yaratık hangisidir?",
+"o": [
+"Hipogrif",
+"Pegasus",
+"Tek boynuzlu at",
+"Kelpie"
+]
+},
+"dq_en_2_193": {
+"q": "Hindu geleneğinde yok edici olarak bilinen tanrı hangisidir?",
+"o": [
+"İndra",
+"Şiva",
+"Brahma",
+"Vişnu"
+]
+},
+"dq_en_2_194": {
+"q": "İskandinav mitolojisinde Thor'un babası kimdir?",
+"o": [
+"Odin",
+"Loki",
+"Heimdall",
+"Tyr"
+]
+},
+"dq_en_2_195": {
+"q": "Roma efsanesine göre Roma kentini Romulus kurdu."
+},
+"dq_en_2_196": {
+"q": "Yunan mitolojisinde Herakles, Poseidon'un oğludur."
+},
+"dq_en_2_197": {
+"q": "İngiliz efsanesinde kanun kaçağı Robin Hood hangi ormanda yaşar?",
+"o": [
+"Kara Orman",
+"Sherwood Ormanı",
+"Białowieża Ormanı",
+"Dean Ormanı"
+]
+},
+"dq_en_3_195": {
+"q": "“Odysseia”da Odysseus'un adamlarını domuza çeviren büyücü kadın kimdir?",
+"o": [
+"Hekate",
+"Kalypso",
+"Kirke",
+"Medeia"
+]
+},
+"dq_en_3_196": {
+"q": "Kutsal Kitap'ta büyük gücü uzun saçlarında olan kahraman kimdir?",
+"o": [
+"Samson",
+"Davut",
+"Yeşu",
+"Gidyon"
+]
+},
+"dq_en_3_197": {
+"q": "“Ramayana”da Rama'nın sadık yardımcısı olan maymun tanrı kimdir?",
+"o": [
+"Hanuman",
+"Ganeşa",
+"Kartikeya",
+"Garuda"
+]
+},
+"dq_en_3_198": {
+"q": "Romalıların aşk tanrısı Cupido'nun Yunanca adı nedir?",
+"o": [
+"Pan",
+"Eros",
+"Adonis",
+"Hymenaios"
+]
+},
+"dq_en_3_199": {
+"q": "“Odysseia”da Odysseus'un yurdu hangi adadır?",
+"o": [
+"İthaka",
+"Kıbrıs",
+"Girit",
+"Rodos"
+]
+},
+"dq_en_3_200": {
+"q": "Kutsal Kitap'ta Musa, İsrailoğullarını Babil'den çıkardı."
+},
+"dq_en_3_201": {
+"q": "Kutsal Kitap'ta Firavun İsrailoğullarını salıvermeden önce Mısır'a kaç bela indi?",
+"u": "bela"
+},
+"dq_en_3_202": {
+"q": "Yaratılış kitabında Tanrı, dinlenmeden önce dünyayı kaç günde yaratır?",
+"u": "gün"
+},
+"dq_en_4_196": {
+"q": "Yunan mitolojisinde Paris altın elmayı hangi tanrıçaya verdi?",
+"o": [
+"Hera",
+"Artemis",
+"Athena",
+"Afrodit"
+]
+},
+"dq_en_4_197": {
+"q": "Sık sık inek olarak tasvir edilen Mısır aşk ve müzik tanrıçası kimdir?",
+"o": [
+"Hathor",
+"Bastet",
+"Nephthys",
+"Sekhmet"
+]
+},
+"dq_en_4_198": {
+"q": "Kral Arthur efsanesinde Kutsal Kâse'ye ulaşan, Lancelot'un oğlu olan saf şövalye kimdir?",
+"o": [
+"Tristan",
+"Gawain",
+"Bedivere",
+"Galahad"
+]
+},
+"dq_en_4_199": {
+"q": "“Odysseia”da Odysseus'a içi rüzgâr dolu bir tulum veren rüzgârların bekçisi kimdir?",
+"o": [
+"Triton",
+"Boreas",
+"Aiolos",
+"Proteus"
+]
+},
+"dq_en_4_200": {
+"q": "Çin burçları döngüsünde ilk sırada hangi hayvan gelir?",
+"o": [
+"Kaplan",
+"Ejderha",
+"Fare",
+"Öküz"
+]
+},
+"dq_en_4_201": {
+"q": "Yunan mitolojisinde Hades, Zeus'un kardeşidir."
+},
+"dq_en_4_202": {
+"q": "Kral Arthur efsanesinde Arthur, Lancelot tarafından ölümcül biçimde yaralanır."
+},
+"dq_en_4_203": {
+"q": "Hindu geleneğinde yaratıcı tanrı Brahma'nın kaç başı vardır?",
+"u": "baş"
+},
+"dq_en_5_204": {
+"q": "Yunan mitolojisinde Afrodit'in sevdiği, bir yaban domuzunca öldürülen genç kimdir?",
+"o": [
+"Narkissos",
+"Endymion",
+"Hyakinthos",
+"Adonis"
+]
+},
+"dq_en_5_205": {
+"q": "Japon halk inanışlarında kappa nasıl bir yaratıktır?",
+"o": [
+"Tilki ruhu",
+"Kar kadını",
+"Dağ cini",
+"Su cini"
+]
+},
+"dq_en_5_206": {
+"q": "“Odysseia”da Odysseus'un oğlunun adı nedir?",
+"o": [
+"Telemakhos",
+"Neoptolemos",
+"Orestes",
+"Laertes"
+]
+},
+"dq_en_5_207": {
+"q": "Venüs gezegeniyle ilişkilendirilen Mezopotamya aşk ve savaş tanrıçası kimdir?",
+"o": [
+"Tiamat",
+"İştar",
+"Ninhursag",
+"Ereşkigal"
+]
+},
+"dq_en_5_208": {
+"q": "Aztek mitolojisinde Tlaloc neyin tanrısıdır?",
+"o": [
+"Mısır bitkisi",
+"Yağmur",
+"Savaş",
+"Ay"
+]
+},
+"dq_en_5_209": {
+"q": "Yunan mitolojisinde Hermes ilk liri bir kaplumbağa kabuğundan yaptı."
+},
+"dq_en_5_210": {
+"q": "Hindu geleneğinde Lakşmi savaş tanrıçasıdır."
+},
+"dq_en_5_211": {
+"q": "“Odysseia”da Odysseus, Truva'nın düşüşünden sonra evine kaç yılda döner?",
+"u": "yıl"
+},
+"dq_en_6_190": {
+"q": "İskandinav mitolojisinde tanrıları genç tutan elmaları hangi tanrıça korur?",
+"o": [
+"Frigg",
+"Sif",
+"İdun",
+"Skadi"
+]
+},
+"dq_en_6_191": {
+"q": "Yunan mitolojisinde Girit adasını koruyan tunçtan dev kimdir?",
+"o": [
+"Tyfon",
+"Geryon",
+"Talos",
+"Antaios"
+]
+},
+"dq_en_6_192": {
+"q": "İrlanda efsanesinde Bilgelik Somonu'nu tadarak bilgelik kazanan kahraman kimdir?",
+"o": [
+"Diarmuid",
+"Cú Chulainn",
+"Fionn mac Cumhaill",
+"Oisín"
+]
+},
+"dq_en_6_193": {
+"q": "Yoruba geleneğinde orişa Ogun neyin tanrısıdır?",
+"o": [
+"Demir ve metal işçiliği",
+"Deniz",
+"Gök gürültüsü",
+"Nehirler ve aşk"
+]
+},
+"dq_en_6_194": {
+"q": "İnkaların güneş tanrısı kimdir?",
+"o": [
+"Pachamama",
+"Mama Quilla",
+"Inti",
+"Illapa"
+]
+},
+"dq_en_6_195": {
+"q": "Yunan mitolojisinde Herakles iki nehrin yönünü değiştirerek kimin ahırlarını temizledi?",
+"o": [
+"Eurystheus",
+"Minos",
+"Diomedes",
+"Augeias"
+]
+},
+"dq_en_6_196": {
+"q": "İskandinav mitolojisinde Loki, kurt Fenrir'in babasıdır."
+},
+"dq_en_6_197": {
+"q": "Çin mitolojisinde Yeşim İmparator yeraltı dünyasını yönetir."
+},
+"dq_en_6_198": {
+"q": "Hesiodos'un “Theogonia”sında Gaia ile Uranos'tan kaç Titan doğar?",
+"u": "Titan"
+},
+"dq_en_7_190": {
+"q": "Yunan mitolojisinde sonsuza dek ateşten bir çarka bağlanan kral kimdir?",
+"o": [
+"Tantalos",
+"İksion",
+"Sisyphos",
+"Tityos"
+]
+},
+"dq_en_7_191": {
+"q": "“Ramayana”da Sita'yı kurtarmak için Ravana ile savaşan akbaba kral kimdir?",
+"o": [
+"Sampati",
+"Jambavan",
+"Garuda",
+"Jatayu"
+]
+},
+"dq_en_7_192": {
+"q": "Slav mitolojisinde Perun'un rakibi olan yeraltı tanrısı kimdir?",
+"o": [
+"Stribog",
+"Veles",
+"Dajbog",
+"Svarog"
+]
+},
+"dq_en_7_193": {
+"q": "Māori geleneğinde toprak ana Papatūānuku'dan ayrılan gök baba kimdir?",
+"o": [
+"Tūmatauenga",
+"Tangaroa",
+"Ranginui",
+"Tāwhirimātea"
+]
+},
+"dq_en_7_194": {
+"q": "Evleri, anneleri ve yeni doğanları koruyan cüce görünümlü Mısır tanrısı kimdir?",
+"o": [
+"Bes",
+"Khonsu",
+"Min",
+"Ptah"
+]
+},
+"dq_en_7_195": {
+"q": "Yunan mitolojisinde Zeus'un tanrılara sâkilik etsin diye kaçırdığı Truvalı genç kimdir?",
+"o": [
+"Ganymedes",
+"Paris",
+"Troilos",
+"Hyakinthos"
+]
+},
+"dq_en_7_196": {
+"q": "Gılgamış Destanı'nda bir yılan, gençlik bitkisini Gılgamış'tan çalar."
+},
+"dq_en_7_197": {
+"q": "Yunan mitolojisinde Klytaimnestra, Agamemnon'un kızıdır."
+},
+"dq_en_7_198": {
+"q": "Hindu geleneğinde kartala benzeyen Garuda, Vişnu'nun bineğidir."
+},
+"dq_en_8_175": {
+"q": "Fin destanı “Kalevala”da sihirli Sampo'yu hangi demirci döver?",
+"o": [
+"Ilmarinen",
+"Kullervo",
+"Väinämöinen",
+"Lemminkäinen"
+]
+},
+"dq_en_8_176": {
+"q": "Aztek mitolojisinde Huitzilopochtli'yi Yılan Dağı'nda doğuran tanrıça kimdir?",
+"o": [
+"Xochiquetzal",
+"Mictecacihuatl",
+"Chalchiuhtlicue",
+"Coatlicue"
+]
+},
+"dq_en_8_177": {
+"q": "Yunan mitolojisinde üç Graia aralarında neyi paylaşır?",
+"o": [
+"Bir altın elma",
+"Bir kalp",
+"Bir göz ve bir diş",
+"Bir çift kanat"
+]
+},
+"dq_en_8_178": {
+"q": "İskandinav mitolojisinde Ragnarök'te dünyayı ateşe veren ateş devi kimdir?",
+"o": [
+"Skrymir",
+"Ymir",
+"Surtr",
+"Thrym"
+]
+},
+"dq_en_8_179": {
+"q": "İrlanda mitolojisinde Dagda'yı önderleri arasında sayan tanrısal halk hangisidir?",
+"o": [
+"Fir Bolg",
+"Milesyalılar",
+"Tuatha Dé Danann",
+"Fomorlar"
+]
+},
+"dq_en_8_180": {
+"q": "Mezopotamya mitolojisinde yeraltı dünyasının kraliçesi olan tanrıça kimdir?",
+"o": [
+"Ereşkigal",
+"Tiamat",
+"Ninlil",
+"İnanna"
+]
+},
+"dq_en_8_181": {
+"q": "İskandinav şiiri “Hávamál”da Odin dünya ağacında kaç gece asılı kalır?",
+"u": "gece"
+},
+"dq_en_8_182": {
+"q": "“Mahabharata”da Pandavalar kaç yıl sürgüne katlanır (gizlilik yılı dahil)?",
+"u": "yıl"
+},
+"dq_en_1_196": {
+"q": "İnsanlar hangi organlarla nefes alır?",
+"o": [
+"Böbrekler",
+"Karaciğer",
+"Mide",
+"Akciğerler"
+]
+},
+"dq_en_1_197": {
+"q": "Arılar çiçek nektarından ne yapar?",
+"o": [
+"İpek",
+"Reçel",
+"Bal",
+"Süt"
+]
+},
+"dq_en_1_198": {
+"q": "Güneş Sistemi'nde kaç gezegen vardır?",
+"o": [
+"Sekiz",
+"On",
+"Yedi",
+"Dokuz"
+]
+},
+"dq_en_1_199": {
+"q": "Donmuş suya ne denir?",
+"o": [
+"Buz",
+"Buhar",
+"Çiy",
+"Sis"
+]
+},
+"dq_en_1_200": {
+"q": "Bitkinin toprak altında büyüyen ve su emen kısmı hangisidir?",
+"o": [
+"Taç yapraklar",
+"Yapraklar",
+"Çiçekler",
+"Kökler"
+]
+},
+"dq_en_1_201": {
+"q": "Hangisi daha büyüktür?",
+"o": [
+"Ay",
+"Dünya"
+]
+},
+"dq_en_1_202": {
+"q": "Yarasalar memelidir."
+},
+"dq_en_1_203": {
+"q": "Örümcekler böcektir."
+},
+"dq_en_1_204": {
+"q": "Bir örümceğin kaç bacağı vardır?",
+"u": "bacak"
+},
+"dq_en_2_198": {
+"q": "Gazlı içeceklere kabarcıklarını hangi gaz verir?",
+"o": [
+"Oksijen",
+"Karbondioksit",
+"Helyum",
+"Hidrojen"
+]
+},
+"dq_en_2_199": {
+"q": "İribaş büyüyünce neye dönüşür?",
+"o": [
+"Yılan",
+"Kaplumbağa",
+"Kertenkele",
+"Kurbağa"
+]
+},
+"dq_en_2_200": {
+"q": "İnsan kalbinin kaç odacığı vardır?",
+"o": [
+"Dört",
+"Üç",
+"İki",
+"Altı"
+]
+},
+"dq_en_2_201": {
+"q": "Kanı süzüp idrar oluşturan organlar hangileridir?",
+"o": [
+"Akciğerler",
+"Böbrekler",
+"Mide",
+"Karaciğer"
+]
+},
+"dq_en_2_202": {
+"q": "Johannes Gutenberg 1440 dolaylarında Avrupa'da ne geliştirdi?",
+"o": [
+"Teleskop",
+"Mikroskop",
+"Pusula",
+"Matbaa"
+]
+},
+"dq_en_2_203": {
+"q": "Hangi gezegen Güneş'e daha yakındır?",
+"o": [
+"Mars",
+"Venüs"
+]
+},
+"dq_en_2_204": {
+"q": "Balinalar solungaçlarla nefes alır."
+},
+"dq_en_2_205": {
+"q": "Güneş bir yıldızdır."
+},
+"dq_en_2_206": {
+"q": "Bir üçgenin üç açısının toplamı kaç derecedir?",
+"u": "derece"
+},
+"dq_en_3_203": {
+"q": "Banyosunda “Evreka!” diye bağırdığı söylenen Yunan bilgin kimdir?",
+"o": [
+"Aristoteles",
+"Arşimet",
+"Pisagor",
+"Öklid"
+]
+},
+"dq_en_3_204": {
+"q": "Kanı kalpten vücuda taşıyan damarlar hangileridir?",
+"o": [
+"Atardamarlar",
+"Toplardamarlar",
+"Lenf damarları",
+"Kılcal damarlar"
+]
+},
+"dq_en_3_205": {
+"q": "Dev bir fırtına olan Büyük Kırmızı Leke'siyle ünlü gezegen hangisidir?",
+"o": [
+"Jüpiter",
+"Mars",
+"Neptün",
+"Satürn"
+]
+},
+"dq_en_3_206": {
+"q": "Sodyum klorürün gündelik adı nedir?",
+"o": [
+"Karbonat",
+"Sofra tuzu",
+"Tebeşir",
+"Şeker"
+]
+},
+"dq_en_3_207": {
+"q": "Barut hangi ülkede icat edildi?",
+"o": [
+"İran",
+"Mısır",
+"Çin",
+"Hindistan"
+]
+},
+"dq_en_3_208": {
+"q": "Hangisi daha ağırdır?",
+"o": [
+"Bir litre zeytinyağı",
+"Bir litre su"
+]
+},
+"dq_en_3_209": {
+"q": "Penguenler doğada Kuzey Kutbu'nda yaşar."
+},
+"dq_en_3_210": {
+"q": "Bir çocuğun normalde kaç süt dişi olur?",
+"u": "diş"
+},
+"dq_en_4_204": {
+"q": "Boyundaki hangi bez vücudun metabolizmasını düzenlemeye yardım eder?",
+"o": [
+"Pankreas",
+"Böbreküstü bezi",
+"Tiroit",
+"Hipofiz"
+]
+},
+"dq_en_4_205": {
+"q": "25 °C'de saf suyun pH değeri kaçtır?",
+"o": [
+"14",
+"7",
+"1",
+"0"
+]
+},
+"dq_en_4_206": {
+"q": "Ekseni yaklaşık 98° eğik olan, yan yatmış biçimde dönen gezegen hangisidir?",
+"o": [
+"Neptün",
+"Mars",
+"Satürn",
+"Uranüs"
+]
+},
+"dq_en_4_207": {
+"q": "1796'da inek çiçeğinden çiçek hastalığı aşısı geliştiren İngiliz doktor kimdir?",
+"o": [
+"Joseph Lister",
+"Edward Jenner",
+"Robert Koch",
+"Louis Pasteur"
+]
+},
+"dq_en_4_208": {
+"q": "Alyuvarlarda oksijeni taşıyan molekül hangisidir?",
+"o": [
+"Keratin",
+"Hemoglobin",
+"İnsülin",
+"Kolajen"
+]
+},
+"dq_en_4_209": {
+"q": "Köpeklerde koşullu refleksleri inceleyen Rus bilim insanı kimdir?",
+"o": [
+"Dmitri Mendeleyev",
+"İlya Meçnikov",
+"Mihail Lomonosov",
+"İvan Pavlov"
+]
+},
+"dq_en_4_210": {
+"q": "Ses suda havadakinden daha hızlı yayılır."
+},
+"dq_en_4_211": {
+"q": "İlk yapay uydu Sputnik 1 hangi yıl fırlatıldı?"
+},
+"dq_en_5_212": {
+"q": "Klasik reklam tabelalarında kırmızı-turuncu parlayan soy gaz hangisidir?",
+"o": [
+"Ksenon",
+"Neon",
+"Argon",
+"Kripton"
+]
+}
+},
+"untranslatable": []
+}
