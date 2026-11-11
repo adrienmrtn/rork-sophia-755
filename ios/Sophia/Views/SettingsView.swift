@@ -621,16 +621,6 @@ struct SettingsView: View {
                             .aspectRatio(contentMode: .fill)
                     }
                     .clipped()
-                    .overlay(alignment: .topLeading) {
-                        Text(languageManager.text("settings.ambassador.banner.badge"))
-                            .font(DS.sans(.caption, .bold))
-                            .foregroundStyle(.white)
-                            .lineLimit(1)
-                            .padding(.horizontal, 10)
-                            .padding(.vertical, 6)
-                            .background(Capsule().fill(DS.accent))
-                            .padding(12)
-                    }
                     .accessibilityHidden(true)
 
                 VStack(alignment: .leading, spacing: 14) {
