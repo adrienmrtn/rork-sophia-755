@@ -15,3 +15,12 @@ export const PLAY_STORE_URL = process.env.NEXT_PUBLIC_PLAY_STORE_URL ?? "https:/
 export const APP_STORE_ID = process.env.NEXT_PUBLIC_APP_STORE_ID ?? "6744889213";
 /** `<Team ID>.<bundle id>` de l'app iOS, pour le fichier d'association des liens universels. */
 export const IOS_APP_ID = process.env.IOS_APP_ID ?? "K792T8TQ4X.app.rork.assvmps5x7hpyq0ezcsut";
+/** Identifiant de l'app Android, pour le fichier d'association des liens d'app. */
+export const ANDROID_PACKAGE = process.env.ANDROID_PACKAGE ?? "app.rork.sophia";
+/** Empreintes SHA-256 des certificats qui signent l'app Android (Play Console, Intégrité de
+ *  l'application : clé de signature d'application et clé d'importation), séparées par des
+ *  virgules. Vide : aucun lien d'app n'est déclaré. */
+export const ANDROID_APP_FINGERPRINTS = (process.env.ANDROID_APP_FINGERPRINTS ?? "")
+  .split(",")
+  .map((value) => value.trim().toUpperCase())
+  .filter(Boolean);

@@ -47,6 +47,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import app.rork.sophia.AppConfig
+import app.rork.sophia.domain.SophiaLinks
 import app.rork.sophia.SophiaApplication
 import app.rork.sophia.audio.CourseAudioPlayer
 import app.rork.sophia.ui.audio.AudioDownloadsScreen
@@ -251,11 +252,18 @@ fun MainTabs(
         // Un lien reçu en pleine partie de duel attend la fin de la partie : le cours
         // s'ouvrirait dessous, invisible, et prendrait le bouton retour.
         if (showDuelFlow) return@LaunchedEffect
-        val id = deepLinkCourseId ?: return@LaunchedEffect
-        // Posée par `MainActivity` à la réception de l'intent : `notification` ou `link`.
+        val pending = deepLinkCourseId ?: return@LaunchedEffect
+        // Posée par `MainActivity` à la réception de l'intent : `notification`, `link` ou `shared_link`.
         val source = Analytics.takeCourseOpenSource()
-        val stub = ContentCatalog.cachedStub(language, id)
-            ?: ContentCatalog.courseStubAsync(context.applicationContext, language, id)
+        // Un lien du site ne porte que le numéro du cours : l'identifiant vient du catalogue.
+        val id = SophiaLinks.resolvePendingCourse(
+            pending,
+            ContentCatalog.summariesAsync(context.applicationContext, language).map { it.id },
+        )
+        val stub = id?.let {
+            ContentCatalog.cachedStub(language, it)
+                ?: ContentCatalog.courseStubAsync(context.applicationContext, language, it)
+        }
         stub?.let {
             // Through the same door as a tap on home: setting `selectedCourse` directly
             // skipped claiming the daily free course, so a free user who arrived from a link

@@ -119,6 +119,32 @@ object CourseStats {
     fun likes(courseId: String): Int = byCourse[courseId]?.getOrNull(1) ?: 0
 }
 
+/**
+ * La langue d'écriture des cours qui n'ont pas été écrits en français, telle que le serveur la
+ * donne dans le manifeste du catalogue (clé `origins` : identifiant du cours → code de langue,
+ * `courses.origin_lang`). `CatalogStore` la pose ici à chaque manifeste.
+ */
+object CourseOrigins {
+    @Volatile
+    var byCourse: Map<String, String> = emptyMap()
+
+    /**
+     * Le code à afficher dans « Traduit · original en … » : la langue d'écriture portée par le
+     * contenu ([contentCode]) ou par le serveur, seulement quand on ne lit pas le cours dans
+     * cette langue. `null` pour un cours maison écrit en français.
+     */
+    fun translatedFromCode(courseId: String, contentCode: String?, reading: AppLanguage): String? {
+        val code = contentCode?.takeIf { it.isNotBlank() } ?: byCourse[courseId] ?: return null
+        return code.takeIf { !it.equals(reading.code, ignoreCase = true) }
+    }
+
+    /** La langue d'écriture, quand l'app la connaît et qu'elle n'est pas celle de lecture. */
+    fun language(courseId: String, contentCode: String?, reading: AppLanguage): AppLanguage? {
+        val code = translatedFromCode(courseId, contentCode, reading) ?: return null
+        return AppLanguage.entries.firstOrNull { it.code.equals(code, ignoreCase = true) }
+    }
+}
+
 /** Les vraies ouvertures d'une fiche du catalogue ; `null` tant que le chiffre n'est pas arrivé. */
 val CourseSummary.realReadsCount: Int?
     get() = CourseStats.reads(id)

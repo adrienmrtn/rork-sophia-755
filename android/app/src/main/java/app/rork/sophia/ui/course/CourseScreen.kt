@@ -84,6 +84,13 @@ import kotlinx.serialization.json.contentOrNull
 import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
+import app.rork.sophia.domain.CourseOrigins
+import app.rork.sophia.ui.components.softPress
+import androidx.compose.ui.unit.LayoutDirection
+import androidx.compose.ui.platform.LocalLayoutDirection
+import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.material.icons.filled.Public
+import androidx.compose.material.icons.filled.Close
 
 @Composable
 fun CourseScreen(
@@ -104,6 +111,8 @@ fun CourseScreen(
     // Suivi pour le bouton « Suivre » de la carte auteur ; le reste lit `progress.value`.
     val progressSnapshot by progressManager.progress.collectAsState()
     var showQuiz by remember { mutableStateOf(false) }
+    // « Voir l'original » : la langue d'écriture du cours, présentée par-dessus le lecteur.
+    var originalLanguage by remember(course.id) { mutableStateOf<AppLanguage?>(null) }
     var showCompleted by remember(course.id) { mutableStateOf(false) }
     var showCoachmark by remember { mutableStateOf(false) }
     var coachmarkTerm by remember { mutableStateOf<String?>(null) }
@@ -201,6 +210,7 @@ fun CourseScreen(
     // Inside a course, back is a step backwards through the reader, not an exit from the
     // app. Only the first page hands back to whoever opened the course.
     BackHandler(enabled = showQuiz) { showQuiz = false }
+    BackHandler(enabled = originalLanguage != null) { originalLanguage = null }
     BackHandler(enabled = !showQuiz && showCompleted) { onDismiss() }
     BackHandler(enabled = !showQuiz && !showCompleted) {
         if (pagesReady && pagerState.currentPage > 0) {
@@ -252,6 +262,16 @@ fun CourseScreen(
                 showCompleted = false
                 showQuiz = true
             },
+        )
+        return
+    }
+
+    originalLanguage?.let { original ->
+        OriginalCourseOverlay(
+            course = course,
+            original = original,
+            language = language,
+            onClose = { originalLanguage = null },
         )
         return
     }
@@ -370,8 +390,24 @@ fun CourseScreen(
                             }
                             // Un cours écrit dans une autre langue le dit sous la signature.
                             if (index == 0) {
-                                meta.originalLanguage?.takeIf { it != language.code }?.let { code ->
-                                    TranslatedFromLine(code = code, language = language)
+                                CourseOrigins.translatedFromCode(course.id, meta.originalLanguage, language)?.let { code ->
+                                    // « Voir l'original » : réservé à qui peut lire le cours en
+                                    // entier, et seulement si l'app connaît cette langue.
+                                    val original = CourseOrigins.language(course.id, meta.originalLanguage, language)
+                                    val hasFullAccess = !FreemiumGate.isLessonContentLocked(
+                                        pages.lastIndex,
+                                        isPremium,
+                                        isDailyFreeCourse,
+                                    )
+                                    TranslatedFromLine(
+                                        code = code,
+                                        language = language,
+                                        onShowOriginal = if (original != null && hasFullAccess) {
+                                            { originalLanguage = original }
+                                        } else {
+                                            null
+                                        },
+                                    )
                                 }
                             }
                             Column(
@@ -599,6 +635,112 @@ private fun ReaderContentPlaceholder(
 private const val COURSE_COMPLETION_XP = 50
 
 private data class ReaderPage(val title: String, val blocks: List<ReaderBlock>)
+
+/**
+ * Le cours dans sa langue d'écriture, en un seul défilement, par-dessus le lecteur
+ * (`OriginalCourseView` sur iOS). Le texte est téléchargé à la demande : il n'est sur le
+ * téléphone que si l'app a déjà été utilisée dans cette langue.
+ */
+@Composable
+private fun OriginalCourseOverlay(
+    course: Course,
+    original: AppLanguage,
+    language: AppLanguage,
+    onClose: () -> Unit,
+) {
+    val context = LocalContext.current
+    var pages by remember(course.id, original) { mutableStateOf<List<ReaderPage>?>(null) }
+    var loading by remember(course.id, original) { mutableStateOf(true) }
+    var attempt by remember(course.id, original) { mutableIntStateOf(0) }
+    LaunchedEffect(course.id, original, attempt) {
+        loading = true
+        val appContext = context.applicationContext
+        val text = CatalogStore.ensureContent(course.id, original)
+        pages = if (text == null) {
+            null
+        } else {
+            withContext(Dispatchers.IO) {
+                CourseCoverUrls.ensureBlockMap(appContext)
+                structuredPages(appContext, course, original).takeIf { it.isNotEmpty() }
+            }
+        }
+        loading = false
+    }
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(DS.canvas)
+            .pointerInput(Unit) { detectTapGestures { } },
+    ) {
+        Row(
+            modifier = Modifier.fillMaxWidth().padding(start = 20.dp, end = 20.dp, top = 12.dp, bottom = 10.dp),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.spacedBy(10.dp),
+        ) {
+            Icon(imageVector = Icons.Filled.Public, contentDescription = null, tint = DS.accent, modifier = Modifier.size(18.dp))
+            Text(
+                text = original.displayName,
+                style = SophiaTypography.titleMedium,
+                color = DS.ink,
+                modifier = Modifier.weight(1f),
+            )
+            IconButton(onClick = onClose) {
+                Icon(
+                    imageVector = Icons.Filled.Close,
+                    contentDescription = StringStore.text(context, "common.close", language),
+                    tint = DS.ink,
+                )
+            }
+        }
+        val loaded = pages
+        when {
+            loaded != null -> {
+                // Le texte suit le sens d'écriture de sa langue, pas celui de l'app.
+                CompositionLocalProvider(
+                    LocalLayoutDirection provides if (original.isRtl) LayoutDirection.Rtl else LayoutDirection.Ltr,
+                ) {
+                    Column(
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .verticalScroll(rememberScrollState())
+                            .padding(start = 20.dp, end = 20.dp, top = 8.dp, bottom = 40.dp),
+                        verticalArrangement = Arrangement.spacedBy(40.dp),
+                    ) {
+                        loaded.forEach { page ->
+                            Column(verticalArrangement = Arrangement.spacedBy(DS.Space.m)) {
+                                Text(text = page.title, style = SophiaTypography.titleLarge)
+                                page.blocks.forEach { block ->
+                                    ReaderBlockView(block = block, language = original, courseId = course.id, locked = false)
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            loading -> Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+                CircularProgressIndicator(color = DS.accent)
+            }
+            else -> Column(
+                modifier = Modifier.fillMaxSize().padding(32.dp),
+                horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.spacedBy(12.dp, Alignment.CenterVertically),
+            ) {
+                Text(
+                    text = StringStore.text(context, "course.offline.body", language),
+                    style = SophiaTypography.bodyLarge,
+                    color = DS.inkSecondary,
+                    textAlign = TextAlign.Center,
+                )
+                Text(
+                    text = StringStore.text(context, "course.offline.retry", language),
+                    style = SophiaTypography.titleMedium,
+                    color = DS.accentSoft,
+                    modifier = Modifier.softPress(onClick = { attempt++ }),
+                )
+            }
+        }
+    }
+}
 
 /**
  * Author slug, references and original language of a course, read from the V2 root.

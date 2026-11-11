@@ -111,7 +111,11 @@ fun CreatorPageScreen(
                 RoundIconButton(
                     icon = Icons.Filled.Share,
                     onClick = {
-                        val message = StringStore.text(context, "share.creator.message", language, author.name)
+                        // La phrase habituelle, suivie du lien de sa page sur le site.
+                        val message = app.rork.sophia.domain.SophiaLinks.shareText(
+                            StringStore.text(context, "share.creator.message", language, author.name),
+                            app.rork.sophia.domain.SophiaLinks.authorWebUrl(author.slug),
+                        )
                         val send = Intent(Intent.ACTION_SEND).setType("text/plain").putExtra(Intent.EXTRA_TEXT, message)
                         runCatching { context.startActivity(Intent.createChooser(send, null)) }
                     },

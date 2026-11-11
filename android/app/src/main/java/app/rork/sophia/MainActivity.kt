@@ -22,6 +22,7 @@ import app.rork.sophia.data.analytics.Analytics
 import app.rork.sophia.data.catalog.CatalogStore
 import kotlinx.coroutines.launch
 import app.rork.sophia.ui.SophiaRoot
+import app.rork.sophia.domain.SophiaLinks
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.SophiaAppearance
 import app.rork.sophia.ui.theme.SophiaTheme
@@ -118,7 +119,14 @@ class MainActivity : ComponentActivity() {
             Analytics.pendingCourseOpenSource = intent.getStringExtra(EXTRA_SOURCE) ?: "link"
             return data.pathSegments.firstOrNull()
         }
-        return null
+        // Une page de cours du site (lien d'app) : `/courses/150…` ou `/c/<identifiant>`.
+        val pending = when (val target = SophiaLinks.webTarget(data.toString())) {
+            is SophiaLinks.WebTarget.CourseNumber -> SophiaLinks.pendingCourseNumber(target.number)
+            is SophiaLinks.WebTarget.CourseId -> target.id
+            else -> null
+        }
+        if (pending != null) Analytics.pendingCourseOpenSource = "shared_link"
+        return pending
     }
 
     private fun creatorSlugFromIntent(intent: Intent?): String? {
@@ -126,7 +134,8 @@ class MainActivity : ComponentActivity() {
         if (data.scheme == "sophia" && (data.host == "author" || data.host == "creator")) {
             return data.pathSegments.firstOrNull()?.takeIf { it.isNotBlank() }
         }
-        return null
+        // La page d'un auteur sur le site (lien d'app) : `/authors/<slug>`.
+        return (SophiaLinks.webTarget(data.toString()) as? SophiaLinks.WebTarget.Creator)?.slug
     }
 
     companion object {

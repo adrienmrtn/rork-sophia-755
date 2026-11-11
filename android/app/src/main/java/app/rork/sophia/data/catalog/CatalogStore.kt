@@ -358,6 +358,8 @@ object CatalogStore {
         _trending.value = _trending.value + (code to manifest.trending)
         // Les compteurs réels des cartes ; un manifeste sans chiffres ne vide pas ceux qu'on a.
         if (manifest.stats.isNotEmpty()) app.rork.sophia.domain.CourseStats.byCourse = manifest.stats
+        // La vraie langue d'écriture des cours ; absente d'un ancien manifeste, on garde ce qu'on a.
+        manifest.origins?.let { app.rork.sophia.domain.CourseOrigins.byCourse = it }
     }
 
     private fun markRefreshed(code: String) {
