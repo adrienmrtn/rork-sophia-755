@@ -1,102 +1,723 @@
-{"items": {
-"dq_en_1_214": {"q": "Jak se říká obrazu, na kterém jsou předměty jako ovoce, květiny nebo vázy?", "o": ["Zátiší", "Nástěnná malba", "Krajinomalba", "Freska"]},
-"dq_en_1_215": {"q": "Na čem je při malování opřené malířovo plátno?", "o": ["Na stojanu", "Na rámu", "Na špachtli", "Na paletě"]},
-"dq_en_1_216": {"q": "Jak se jmenuje povolání člověka, který navrhuje budovy?", "o": ["Architekt", "Tesař", "Sochař", "Malíř"]},
-"dq_en_1_217": {"q": "Nad kterým městem se tyčí socha Krista Spasitele?", "o": ["Buenos Aires", "Lisabon", "São Paulo", "Rio de Janeiro"]},
-"dq_en_1_218": {"q": "Která budova ve Washingtonu je oficiálním sídlem amerického prezidenta?", "o": ["Pentagon", "Kapitol", "Lincolnův památník", "Bílý dům"]},
-"dq_en_1_219": {"q": "Která umělecká forma vypráví příběh v řadě kreslených políček s bublinami?", "o": ["Komiks", "Mozaika", "Freska", "Koláž"]},
-"dq_en_1_220": {"q": "Ve kterém městě stojí hodinová věž, které se lidově říká Big Ben?", "o": ["Londýn", "Dublin", "Paříž", "Berlín"]},
-"dq_en_1_221": {"q": "Jak se říká budově, kde se uchovávají a veřejnosti vystavují umělecká díla?", "o": ["Divadlo", "Stadion", "Knihovna", "Muzeum"]},
-"dq_en_1_222": {"q": "Do kterého nástroje sochař tluče paličkou, když tesá kámen?", "o": ["Stojan", "Dláto", "Štětec", "Paleta"]},
-"dq_en_1_223": {"q": "Co bylo postaveno dřív?", "o": ["Koloseum v Římě", "Big Ben v Londýně"]},
-"dq_en_1_224": {"q": "Jak se říká obrazu přírodní scenérie, třeba s kopci, řekami a poli?", "o": ["Krajinomalba", "Zátiší", "Abstrakce", "Portrét"]},
-"dq_en_1_225": {"q": "Jak se říká vtipné kresbě, která přehání rysy člověka?", "o": ["Skica", "Mozaika", "Silueta", "Karikatura"]},
-"dq_en_1_226": {"q": "Keramika vzniká tak, že se z hlíny vytvaruje předmět, který se pak vypálí."},
-"dq_en_1_227": {"q": "Velká čínská zeď byla postavena za jediný rok."},
-"dq_en_1_228": {"q": "Antická socha známá jako Venuše Mélská přišla o obě paže."},
-"dq_en_2_215": {"q": "Jak se jmenuje tradiční japonský oděv ve tvaru písmene T převázaný pásem?", "o": ["Pončo", "Kimono", "Hanbok", "Sárí"]},
-"dq_en_2_216": {"q": "Z jakého materiálu je převážně vyrobena slavná pohřební maska Tutanchamona?", "o": ["Ze dřeva", "Ze stříbra", "Ze zlata", "Z bronzu"]},
-"dq_en_2_217": {"q": "Který surrealista namaloval roztékající se hodiny na obraze „Persistence paměti“?", "o": ["Max Ernst", "Salvador Dalí", "René Magritte", "Joan Miró"]},
-"dq_en_2_218": {"q": "Ve kterém městě je Metropolitní muzeum umění?", "o": ["New York", "Boston", "Chicago", "Washington, D.C."]},
-"dq_en_2_219": {"q": "Jak se jmenuje vysoká štíhlá věž mešity?", "o": ["Pagoda", "Minaret", "Věžní jehla", "Zvonice"]},
-"dq_en_2_220": {"q": "Co je vyšší?", "o": ["Burdž Chalífa", "Petronas Towers"]},
-"dq_en_2_221": {"q": "Který umělecký směr zobrazoval předměty jako geometrické tvary viděné z několika úhlů najednou?", "o": ["Baroko", "Romantismus", "Impresionismus", "Kubismus"]},
-"dq_en_2_222": {"q": "Kilt, kostkovaná sukně ke kolenům, je tradičním oděvem které země?", "o": ["Rakousko", "Norsko", "Skotsko", "Nizozemsko"]},
-"dq_en_2_223": {"q": "Která část fotoaparátu je zakřivené sklo, které soustřeďuje světlo?", "o": ["Stativ", "Závěrka", "Čočka", "Blesk"]},
-"dq_en_2_224": {"q": "Čím jsou zvláštní ruské matrjošky?", "o": ["Jsou ze skla", "Vejdou se jedna do druhé", "Hrají melodii", "Točí se jako káča"]},
-"dq_en_2_225": {"q": "Ve vitrážích drží kousky barevného skla pohromadě olověné pásky."},
-"dq_en_2_226": {"q": "Kreml, slavná ruská pevnost, stojí v Petrohradu."},
-"dq_en_2_227": {"q": "Tradiční totemy se tesají z kamene."},
-"dq_en_2_228": {"q": "Velká pyramida v Gíze byla kdysi obložena hladkým bílým vápencem."},
-"dq_en_2_229": {"q": "Kolik prezidentských tváří je vytesáno do hory Mount Rushmore?", "u": "tváře"},
-"dq_en_3_219": {"q": "Jak se říká soše, která zobrazuje jen hlavu, ramena a hruď člověka?", "o": ["Busta", "Torzo", "Reliéf", "Soška"]},
-"dq_en_3_220": {"q": "Jakou technikou skládal Georges Seurat své obrazy?", "o": ["Kubismus", "Fauvismus", "Pointilismus", "Futurismus"]},
-"dq_en_3_221": {"q": "Ve kterém městě stojí Skalní dóm?", "o": ["Mekka", "Damašek", "Káhira", "Jeruzalém"]},
-"dq_en_3_222": {"q": "Kterou egyptskou královnu proslavila malovaná vápencová busta nalezená v Amarně?", "o": ["Kleopatru", "Nefertiti", "Hatšepsut", "Nefertari"]},
-"dq_en_3_223": {"q": "Která civilizace postavila stupňovitou pyramidu El Castillo v Chichén Itzá?", "o": ["Inkové", "Olmékové", "Aztékové", "Mayové"]},
-"dq_en_3_224": {"q": "Ve kterém městě stojí dvojčata Petronas Towers?", "o": ["Singapur", "Jakarta", "Kuala Lumpur", "Bangkok"]},
-"dq_en_3_225": {"q": "Ve kterém paláci je Zrcadlová síň, kde byla roku 1919 podepsána mírová smlouva?", "o": ["Fontainebleau", "Buckinghamský palác", "Versailles", "Schönbrunn"]},
-"dq_en_3_226": {"q": "Ve kterém městě je galerie Uffizi?", "o": ["Benátky", "Řím", "Milán", "Florencie"]},
-"dq_en_3_227": {"q": "Co je starší?", "o": ["Machu Picchu", "Stonehenge"]},
-"dq_en_3_228": {"q": "Šikmá věž v Pise byla postavena jako zvonice městské katedrály."},
-"dq_en_3_229": {"q": "Tečková malba je známý styl umění australských Aboriginců."},
-"dq_en_3_230": {"q": "Starověké řecké chrámy a sochy zůstávaly vždy z holého bílého mramoru a nikdy se nemalovaly."},
-"dq_en_3_231": {"q": "Kolik metrů měří na výšku Burdž Chalífa v Dubaji?", "u": "metrů"},
-"dq_en_3_232": {"q": "Ve kterém roce byl otevřen most Golden Gate v San Francisku?"},
-"dq_en_3_233": {"q": "Zhruba před kolika lety vznikly malby v jeskyni Lascaux?", "u": "let"},
-"dq_en_4_221": {"q": "Jak se v pravoslavných kostelech říká malovaným dřevěným deskám s Kristem a svatými?", "o": ["Thangky", "Mandaly", "Ikony", "Totemy"]},
-"dq_en_4_222": {"q": "Jak se jmenuje vysoký čtyřboký kamenný sloup zakončený malou pyramidou?", "o": ["Minaret", "Stúpa", "Obelisk", "Zikkurat"]},
-"dq_en_4_223": {"q": "Který způsob zobrazení vytváří hloubku tím, že se rovnoběžky sbíhají v úběžníku?", "o": ["Sfumato", "Impasto", "Šerosvit", "Lineární perspektiva"]},
-"dq_en_4_224": {"q": "Co je Pont du Gard na jihu Francie?", "o": ["Středověký hrad", "Římský akvadukt", "Královský palác", "Gotická katedrála"]},
-"dq_en_4_225": {"q": "Na kterém tichomořském ostrově namaloval Paul Gauguin po roce 1891 mnoho děl?", "o": ["Tahiti", "Havaj", "Bali", "Fidži"]},
-"dq_en_4_226": {"q": "Které pařížské kulturní centrum má potrubí a eskalátory na vnější straně budovy?", "o": ["Musée d'Orsay", "Centre Pompidou", "Grand Palais", "Petit Palais"]},
-"dq_en_4_227": {"q": "Který malíř stál kolem roku 1905 v čele fauvistů, „divochů“ odvážných barev?", "o": ["Paul Signac", "Fernand Léger", "Henri Matisse", "Edgar Degas"]},
-"dq_en_4_228": {"q": "Který architektonický sloh se ve středověké Evropě objevil dřív?", "o": ["Gotika", "Románský sloh"]},
-"dq_en_4_229": {"q": "K čemu prakticky slouží chrliče na gotických katedrálách?", "o": ["Osvětlují hlavní loď", "Rozeznívají zvony", "Podpírají střechu", "Odvádějí dešťovou vodu"]},
-"dq_en_4_230": {"q": "Ve které zemi leží Borobudur, největší buddhistický chrám na světě?", "o": ["Myanmar", "Indonésie", "Kambodža", "Thajsko"]},
-"dq_en_4_231": {"q": "Ve kterém městě stojí Atomium, postavené pro světovou výstavu roku 1958?", "o": ["Paříž", "Amsterdam", "Brusel", "Ženeva"]},
-"dq_en_4_232": {"q": "Tradiční sárí je dlouhý kus nesešité látky, který se drapuje kolem těla."},
-"dq_en_4_233": {"q": "Japonské dřevořezy silně ovlivnily mnoho impresionistických malířů."},
-"dq_en_4_234": {"q": "Kolik let trvalo vytesat sochy na Mount Rushmore?", "u": "let"},
-"dq_en_4_235": {"q": "Kolik stran má vnější zeď Skalního dómu?", "u": "stran"},
-"dq_en_5_229": {"q": "Který umělecký směr vznikl dřív?", "o": ["Futurismus", "Surrealismus"]},
-"dq_en_5_230": {"q": "Který malíř se narodil dřív?", "o": ["Caravaggio", "Albrecht Dürer"]},
-"dq_en_5_231": {"q": "Ve které zemi je jeskyně Altamira s malbami bizonů z doby kamenné?", "o": ["Španělsko", "Itálie", "Portugalsko", "Francie"]},
-"dq_en_5_232": {"q": "Jak se jmenuje kruhový otvor na vrcholu kupole římského Pantheonu?", "o": ["Lucerna", "Oculus", "Loď", "Apsida"]},
-"dq_en_5_233": {"q": "Čím byla původně budova, v níž dnes sídlí pařížské Musée d'Orsay?", "o": ["Továrna", "Královský palác", "Věznice", "Železniční nádraží"]},
-"dq_en_5_234": {"q": "Jaké zvíře zobrazuje obří socha „Maman“ od Louise Bourgeoisové?", "o": ["Pavouka", "Štíra", "Kraba", "Chobotnici"]},
-"dq_en_5_235": {"q": "Jaký kruhový posvátný obrazec někdy tibetští mniši sypou z barevného písku?", "o": ["Mandalu", "Stúpu", "Mantru", "Thangku"]},
-"dq_en_5_236": {"q": "Který sloh kolem roku 1900 používal plynulé, zvlněné linie inspirované rostlinami?", "o": ["Secese", "Art deco", "Bauhaus", "Brutalismus"]},
-"dq_en_5_237": {"q": "Z kterého starověkého města pochází modře glazovaná Ištařina brána, dnes znovu postavená v berlínském muzeu?", "o": ["Z Tróje", "Z Babylonu", "Z Ninive", "Z Persepole"]},
-"dq_en_5_238": {"q": "Který módní návrhář uvedl roku 1966 „Le Smoking“, dámský smoking?", "o": ["Pierre Cardin", "Hubert de Givenchy", "Christian Dior", "Yves Saint Laurent"]},
-"dq_en_5_239": {"q": "Londýnská galerie Tate Modern sídlí v bývalém železničním nádraží."},
-"dq_en_5_240": {"q": "Dórský řád je nejbohatěji zdobený z klasických řeckých sloupových řádů."},
-"dq_en_5_241": {"q": "Ve kterém roce bylo otevřeno Guggenheimovo muzeum v Bilbau od Franka Gehryho?"},
-"dq_en_5_242": {"q": "Zhruba kolik metrů měří na výšku Velká sfinga v Gíze?", "u": "metrů"},
-"dq_en_5_243": {"q": "Ve kterém roce byl otevřen newyorský Brooklynský most?"},
-"dq_en_6_216": {"q": "Který malířský termín označuje plynulé prolínání tónů bez ostrých obrysů?", "o": ["Pentimento", "Sfumato", "Grisaille", "Impasto"]},
-"dq_en_6_217": {"q": "Ve které dnešní zemi vznikaly slavné iznické obklady a keramika?", "o": ["Turecko", "Maroko", "Írán", "Uzbekistán"]},
-"dq_en_6_218": {"q": "Princové z dynastie Chan byli pohřbíváni v oděvech z drobných destiček kterého kamene?", "o": ["Nefritu", "Mramoru", "Obsidiánu", "Lazuritu"]},
-"dq_en_6_219": {"q": "Ve které zemi byla nalezena Willendorfská venuše, drobná soška z doby kamenné?", "o": ["Francie", "Česko", "Německo", "Rakousko"]},
-"dq_en_6_220": {"q": "Čím je tā moko v tradičním maorském umění?", "o": ["Tkaní", "Tetování", "Hrnčířství", "Řezbářství"]},
-"dq_en_6_221": {"q": "Bez čeho byly postaveny mohutné kamenné zdi Velkého Zimbabwe?", "o": ["Bez věží", "Bez bran", "Bez malty", "Bez oblouků"]},
-"dq_en_6_222": {"q": "Který architekt založil školu designu Bauhaus?", "o": ["Frank Lloyd Wright", "Walter Gropius", "Le Corbusier", "Alvar Aalto"]},
-"dq_en_6_223": {"q": "Která francouzská malířka patřila k zakladatelům skupiny impresionistů?", "o": ["Camille Claudelová", "Sonia Delaunayová", "Berthe Morisotová", "Rosa Bonheurová"]},
-"dq_en_6_224": {"q": "Kdo namaloval „Černý čtverec“ (1915), milník abstraktního umění?", "o": ["Kazimir Malevič", "El Lisickij", "Vasilij Kandinskij", "Alexandr Rodčenko"]},
-"dq_en_6_225": {"q": "Který malíř se narodil dřív?", "o": ["Petr Pavel Rubens", "Tizian"]},
-"dq_en_6_226": {"q": "Malíř El Greco se narodil ve španělském Toledu."},
-"dq_en_6_227": {"q": "Tapiserie z Bayeux je ve skutečnosti výšivka, nikoli tkaná tapiserie."},
-"dq_en_6_228": {"q": "Ve kterém roce představil Christian Dior svou slavnou kolekci „New Look“?"},
-"dq_en_6_229": {"q": "Ve kterém roce byl v Paříži zveřejněn fotografický postup zvaný daguerrotypie?"},
-"dq_en_7_216": {"q": "Která starověká malířská technika používá pigmenty smíchané se včelím voskem?", "o": ["Tempera", "Freska", "Kvaš", "Enkaustika"]},
-"dq_en_7_217": {"q": "Jakou metodou odlévali beninští umělci své bronzové a mosazné reliéfy?", "o": ["Tlakovým litím", "Odstředivým litím", "Litím do písku", "Litím na ztracený vosk"]},
-"dq_en_7_218": {"q": "Které hranaté arabské písmo se používalo v mnoha raných opisech Koránu?", "o": ["Díwání", "Nastalík", "Kúfí", "Ruk'a"]},
-"dq_en_7_219": {"q": "Která země proslula ve 12. století nefritově zeleným seladonem s vykládanými motivy?", "o": ["Thajsko", "Korea", "Vietnam", "Japonsko"]},
-"dq_en_7_220": {"q": "Ve které zemi je jeskyně Cueva de las Manos, proslulá pravěkými obrysy rukou?", "o": ["Peru", "Argentina", "Chile", "Bolívie"]},
-"dq_en_7_221": {"q": "Ve kterém íránském městě leží velké náměstí Nagš-e Džahán lemované mešitami?", "o": ["Teherán", "Isfahán", "Šíráz", "Tabríz"]},
-"dq_en_7_222": {"q": "Obraz „Abaporu“ od Tarsily do Amaral je ikonou moderního umění které země?", "o": ["Portugalsko", "Brazílie", "Argentina", "Mexiko"]},
-"dq_en_7_223": {"q": "Koho fotografuje Cindy Shermanová ve svém slavném cyklu „Untitled Film Stills“?", "o": ["Filmové hvězdy", "Cizí lidi na ulici", "Svou rodinu", "Sebe v kostýmech"]},
-"dq_en_7_224": {"q": "Který florentský sochař vytvořil bronzového Davida, první volně stojící akt od dob antiky?", "o": ["Benvenuto Cellini", "Donatello", "Lorenzo Ghiberti", "Verrocchio"]},
-"dq_en_7_225": {"q": "Fajjúmské portréty mumií vznikly v Egyptě v době římské nadvlády."},
-"dq_en_7_226": {"q": "Niépceho nejstarší dochovaná fotografie pořízená kamerou si vyžádala expozici jen několik sekund."}
-}, "untranslatable": []}
+{
+"items": {
+"dq_en_1_214": {
+"q": "Jak se říká obrazu, na kterém jsou předměty jako ovoce, květiny nebo vázy?",
+"o": [
+"Zátiší",
+"Nástěnná malba",
+"Krajinomalba",
+"Freska"
+]
+},
+"dq_en_1_215": {
+"q": "Na čem je při malování opřené malířovo plátno?",
+"o": [
+"Na stojanu",
+"Na rámu",
+"Na špachtli",
+"Na paletě"
+]
+},
+"dq_en_1_216": {
+"q": "Jak se jmenuje povolání člověka, který navrhuje budovy?",
+"o": [
+"Architekt",
+"Tesař",
+"Sochař",
+"Malíř"
+]
+},
+"dq_en_1_217": {
+"q": "Nad kterým městem se tyčí socha Krista Spasitele?",
+"o": [
+"Buenos Aires",
+"Lisabon",
+"São Paulo",
+"Rio de Janeiro"
+]
+},
+"dq_en_1_218": {
+"q": "Která budova ve Washingtonu je oficiálním sídlem amerického prezidenta?",
+"o": [
+"Pentagon",
+"Kapitol",
+"Lincolnův památník",
+"Bílý dům"
+]
+},
+"dq_en_1_219": {
+"q": "Která umělecká forma vypráví příběh v řadě kreslených políček s bublinami?",
+"o": [
+"Komiks",
+"Mozaika",
+"Freska",
+"Koláž"
+]
+},
+"dq_en_1_220": {
+"q": "Ve kterém městě stojí hodinová věž, které se lidově říká Big Ben?",
+"o": [
+"Londýn",
+"Dublin",
+"Paříž",
+"Berlín"
+]
+},
+"dq_en_1_221": {
+"q": "Jak se říká budově, kde se uchovávají a veřejnosti vystavují umělecká díla?",
+"o": [
+"Divadlo",
+"Stadion",
+"Knihovna",
+"Muzeum"
+]
+},
+"dq_en_1_222": {
+"q": "Do kterého nástroje sochař tluče paličkou, když tesá kámen?",
+"o": [
+"Stojan",
+"Dláto",
+"Štětec",
+"Paleta"
+]
+},
+"dq_en_1_223": {
+"q": "Co bylo postaveno dřív?",
+"o": [
+"Koloseum v Římě",
+"Big Ben v Londýně"
+]
+},
+"dq_en_1_224": {
+"q": "Jak se říká obrazu přírodní scenérie, třeba s kopci, řekami a poli?",
+"o": [
+"Krajinomalba",
+"Zátiší",
+"Abstrakce",
+"Portrét"
+]
+},
+"dq_en_1_225": {
+"q": "Jak se říká vtipné kresbě, která přehání rysy člověka?",
+"o": [
+"Skica",
+"Mozaika",
+"Silueta",
+"Karikatura"
+]
+},
+"dq_en_1_226": {
+"q": "Keramika vzniká tak, že se z hlíny vytvaruje předmět, který se pak vypálí."
+},
+"dq_en_1_227": {
+"q": "Velká čínská zeď byla postavena za jediný rok."
+},
+"dq_en_1_228": {
+"q": "Antická socha známá jako Venuše Mélská přišla o obě paže."
+},
+"dq_en_2_215": {
+"q": "Jak se jmenuje tradiční japonský oděv ve tvaru písmene T převázaný pásem?",
+"o": [
+"Pončo",
+"Kimono",
+"Hanbok",
+"Sárí"
+]
+},
+"dq_en_2_216": {
+"q": "Z jakého materiálu je převážně vyrobena slavná pohřební maska Tutanchamona?",
+"o": [
+"Ze dřeva",
+"Ze stříbra",
+"Ze zlata",
+"Z bronzu"
+]
+},
+"dq_en_2_217": {
+"q": "Který surrealista namaloval roztékající se hodiny na obraze „Persistence paměti“?",
+"o": [
+"Max Ernst",
+"Salvador Dalí",
+"René Magritte",
+"Joan Miró"
+]
+},
+"dq_en_2_218": {
+"q": "Ve kterém městě je Metropolitní muzeum umění?",
+"o": [
+"New York",
+"Boston",
+"Chicago",
+"Washington, D.C."
+]
+},
+"dq_en_2_219": {
+"q": "Jak se jmenuje vysoká štíhlá věž mešity?",
+"o": [
+"Pagoda",
+"Minaret",
+"Věžní jehla",
+"Zvonice"
+]
+},
+"dq_en_2_220": {
+"q": "Co je vyšší?",
+"o": [
+"Burdž Chalífa",
+"Petronas Towers"
+]
+},
+"dq_en_2_221": {
+"q": "Který umělecký směr zobrazoval předměty jako geometrické tvary viděné z několika úhlů najednou?",
+"o": [
+"Baroko",
+"Romantismus",
+"Impresionismus",
+"Kubismus"
+]
+},
+"dq_en_2_222": {
+"q": "Kilt, kostkovaná sukně ke kolenům, je tradičním oděvem které země?",
+"o": [
+"Rakousko",
+"Norsko",
+"Skotsko",
+"Nizozemsko"
+]
+},
+"dq_en_2_223": {
+"q": "Která část fotoaparátu je zakřivené sklo, které soustřeďuje světlo?",
+"o": [
+"Stativ",
+"Závěrka",
+"Čočka",
+"Blesk"
+]
+},
+"dq_en_2_224": {
+"q": "Čím jsou zvláštní ruské matrjošky?",
+"o": [
+"Jsou ze skla",
+"Vejdou se jedna do druhé",
+"Hrají melodii",
+"Točí se jako káča"
+]
+},
+"dq_en_2_225": {
+"q": "Ve vitrážích drží kousky barevného skla pohromadě olověné pásky."
+},
+"dq_en_2_226": {
+"q": "Kreml, slavná ruská pevnost, stojí v Petrohradu."
+},
+"dq_en_2_227": {
+"q": "Tradiční totemy se tesají z kamene."
+},
+"dq_en_2_228": {
+"q": "Velká pyramida v Gíze byla kdysi obložena hladkým bílým vápencem."
+},
+"dq_en_2_229": {
+"q": "Kolik prezidentských tváří je vytesáno do hory Mount Rushmore?",
+"u": "tváře"
+},
+"dq_en_3_219": {
+"q": "Jak se říká soše, která zobrazuje jen hlavu, ramena a hruď člověka?",
+"o": [
+"Busta",
+"Torzo",
+"Reliéf",
+"Soška"
+]
+},
+"dq_en_3_220": {
+"q": "Jakou technikou skládal Georges Seurat své obrazy?",
+"o": [
+"Kubismus",
+"Fauvismus",
+"Pointilismus",
+"Futurismus"
+]
+},
+"dq_en_3_221": {
+"q": "Ve kterém městě stojí Skalní dóm?",
+"o": [
+"Mekka",
+"Damašek",
+"Káhira",
+"Jeruzalém"
+]
+},
+"dq_en_3_222": {
+"q": "Kterou egyptskou královnu proslavila malovaná vápencová busta nalezená v Amarně?",
+"o": [
+"Kleopatru",
+"Nefertiti",
+"Hatšepsut",
+"Nefertari"
+]
+},
+"dq_en_3_223": {
+"q": "Která civilizace postavila stupňovitou pyramidu El Castillo v Chichén Itzá?",
+"o": [
+"Inkové",
+"Olmékové",
+"Aztékové",
+"Mayové"
+]
+},
+"dq_en_3_224": {
+"q": "Ve kterém městě stojí dvojčata Petronas Towers?",
+"o": [
+"Singapur",
+"Jakarta",
+"Kuala Lumpur",
+"Bangkok"
+]
+},
+"dq_en_3_225": {
+"q": "Ve kterém paláci je Zrcadlová síň, kde byla roku 1919 podepsána mírová smlouva?",
+"o": [
+"Fontainebleau",
+"Buckinghamský palác",
+"Versailles",
+"Schönbrunn"
+]
+},
+"dq_en_3_226": {
+"q": "Ve kterém městě je galerie Uffizi?",
+"o": [
+"Benátky",
+"Řím",
+"Milán",
+"Florencie"
+]
+},
+"dq_en_3_227": {
+"q": "Co je starší?",
+"o": [
+"Machu Picchu",
+"Stonehenge"
+]
+},
+"dq_en_3_228": {
+"q": "Šikmá věž v Pise byla postavena jako zvonice městské katedrály."
+},
+"dq_en_3_229": {
+"q": "Tečková malba je známý styl umění australských Aboriginců."
+},
+"dq_en_3_230": {
+"q": "Starověké řecké chrámy a sochy zůstávaly vždy z holého bílého mramoru a nikdy se nemalovaly."
+},
+"dq_en_3_231": {
+"q": "Kolik metrů měří na výšku Burdž Chalífa v Dubaji?",
+"u": "metrů"
+},
+"dq_en_3_232": {
+"q": "Ve kterém roce byl otevřen most Golden Gate v San Francisku?"
+},
+"dq_en_3_233": {
+"q": "Zhruba před kolika lety vznikly malby v jeskyni Lascaux?",
+"u": "let"
+},
+"dq_en_4_221": {
+"q": "Jak se v pravoslavných kostelech říká malovaným dřevěným deskám s Kristem a svatými?",
+"o": [
+"Thangky",
+"Mandaly",
+"Ikony",
+"Totemy"
+]
+},
+"dq_en_4_222": {
+"q": "Jak se jmenuje vysoký čtyřboký kamenný sloup zakončený malou pyramidou?",
+"o": [
+"Minaret",
+"Stúpa",
+"Obelisk",
+"Zikkurat"
+]
+},
+"dq_en_4_223": {
+"q": "Který způsob zobrazení vytváří hloubku tím, že se rovnoběžky sbíhají v úběžníku?",
+"o": [
+"Sfumato",
+"Impasto",
+"Šerosvit",
+"Lineární perspektiva"
+]
+},
+"dq_en_4_224": {
+"q": "Co je Pont du Gard na jihu Francie?",
+"o": [
+"Středověký hrad",
+"Římský akvadukt",
+"Královský palác",
+"Gotická katedrála"
+]
+},
+"dq_en_4_225": {
+"q": "Na kterém tichomořském ostrově namaloval Paul Gauguin po roce 1891 mnoho děl?",
+"o": [
+"Tahiti",
+"Havaj",
+"Bali",
+"Fidži"
+]
+},
+"dq_en_4_226": {
+"q": "Které pařížské kulturní centrum má potrubí a eskalátory na vnější straně budovy?",
+"o": [
+"Musée d'Orsay",
+"Centre Pompidou",
+"Grand Palais",
+"Petit Palais"
+]
+},
+"dq_en_4_227": {
+"q": "Který malíř stál kolem roku 1905 v čele fauvistů, „divochů“ odvážných barev?",
+"o": [
+"Paul Signac",
+"Fernand Léger",
+"Henri Matisse",
+"Edgar Degas"
+]
+},
+"dq_en_4_228": {
+"q": "Který architektonický sloh se ve středověké Evropě objevil dřív?",
+"o": [
+"Gotika",
+"Románský sloh"
+]
+},
+"dq_en_4_229": {
+"q": "K čemu prakticky slouží chrliče na gotických katedrálách?",
+"o": [
+"Osvětlují hlavní loď",
+"Rozeznívají zvony",
+"Podpírají střechu",
+"Odvádějí dešťovou vodu"
+]
+},
+"dq_en_4_230": {
+"q": "Ve které zemi leží Borobudur, největší buddhistický chrám na světě?",
+"o": [
+"Myanmar",
+"Indonésie",
+"Kambodža",
+"Thajsko"
+]
+},
+"dq_en_4_231": {
+"q": "Ve kterém městě stojí Atomium, postavené pro světovou výstavu roku 1958?",
+"o": [
+"Paříž",
+"Amsterdam",
+"Brusel",
+"Ženeva"
+]
+},
+"dq_en_4_232": {
+"q": "Tradiční sárí je dlouhý kus nesešité látky, který se drapuje kolem těla."
+},
+"dq_en_4_233": {
+"q": "Japonské dřevořezy silně ovlivnily mnoho impresionistických malířů."
+},
+"dq_en_4_234": {
+"q": "Kolik let trvalo vytesat sochy na Mount Rushmore?",
+"u": "let"
+},
+"dq_en_4_235": {
+"q": "Kolik stran má vnější zeď Skalního dómu?",
+"u": "stran"
+},
+"dq_en_5_229": {
+"q": "Který umělecký směr vznikl dřív?",
+"o": [
+"Futurismus",
+"Surrealismus"
+]
+},
+"dq_en_5_230": {
+"q": "Který malíř se narodil dřív?",
+"o": [
+"Caravaggio",
+"Albrecht Dürer"
+]
+},
+"dq_en_5_231": {
+"q": "Ve které zemi je jeskyně Altamira s malbami bizonů z doby kamenné?",
+"o": [
+"Španělsko",
+"Itálie",
+"Portugalsko",
+"Francie"
+]
+},
+"dq_en_5_232": {
+"q": "Jak se jmenuje kruhový otvor na vrcholu kupole římského Pantheonu?",
+"o": [
+"Lucerna",
+"Oculus",
+"Loď",
+"Apsida"
+]
+},
+"dq_en_5_233": {
+"q": "Čím byla původně budova, v níž dnes sídlí pařížské Musée d'Orsay?",
+"o": [
+"Továrna",
+"Královský palác",
+"Věznice",
+"Železniční nádraží"
+]
+},
+"dq_en_5_234": {
+"q": "Jaké zvíře zobrazuje obří socha „Maman“ od Louise Bourgeoisové?",
+"o": [
+"Pavouka",
+"Štíra",
+"Kraba",
+"Chobotnici"
+]
+},
+"dq_en_5_235": {
+"q": "Jaký kruhový posvátný obrazec někdy tibetští mniši sypou z barevného písku?",
+"o": [
+"Mandalu",
+"Stúpu",
+"Mantru",
+"Thangku"
+]
+},
+"dq_en_5_236": {
+"q": "Který sloh kolem roku 1900 používal plynulé, zvlněné linie inspirované rostlinami?",
+"o": [
+"Secese",
+"Art deco",
+"Bauhaus",
+"Brutalismus"
+]
+},
+"dq_en_5_237": {
+"q": "Z kterého starověkého města pochází modře glazovaná Ištařina brána, dnes znovu postavená v berlínském muzeu?",
+"o": [
+"Z Tróje",
+"Z Babylonu",
+"Z Ninive",
+"Z Persepole"
+]
+},
+"dq_en_5_238": {
+"q": "Který módní návrhář uvedl roku 1966 „Le Smoking“, dámský smoking?",
+"o": [
+"Pierre Cardin",
+"Hubert de Givenchy",
+"Christian Dior",
+"Yves Saint Laurent"
+]
+},
+"dq_en_5_239": {
+"q": "Londýnská galerie Tate Modern sídlí v bývalém železničním nádraží."
+},
+"dq_en_5_240": {
+"q": "Dórský řád je nejbohatěji zdobený z klasických řeckých sloupových řádů."
+},
+"dq_en_5_241": {
+"q": "Ve kterém roce bylo otevřeno Guggenheimovo muzeum v Bilbau od Franka Gehryho?"
+},
+"dq_en_5_242": {
+"q": "Zhruba kolik metrů měří na výšku Velká sfinga v Gíze?",
+"u": "metrů"
+},
+"dq_en_5_243": {
+"q": "Ve kterém roce byl otevřen newyorský Brooklynský most?"
+},
+"dq_en_6_216": {
+"q": "Který malířský termín označuje plynulé prolínání tónů bez ostrých obrysů?",
+"o": [
+"Pentimento",
+"Sfumato",
+"Grisaille",
+"Impasto"
+]
+},
+"dq_en_6_217": {
+"q": "Ve které dnešní zemi vznikaly slavné iznické obklady a keramika?",
+"o": [
+"Turecko",
+"Maroko",
+"Írán",
+"Uzbekistán"
+]
+},
+"dq_en_6_218": {
+"q": "Princové z dynastie Chan byli pohřbíváni v oděvech z drobných destiček kterého kamene?",
+"o": [
+"Nefritu",
+"Mramoru",
+"Obsidiánu",
+"Lazuritu"
+]
+},
+"dq_en_6_219": {
+"q": "Ve které zemi byla nalezena Willendorfská venuše, drobná soška z doby kamenné?",
+"o": [
+"Francie",
+"Česko",
+"Německo",
+"Rakousko"
+]
+},
+"dq_en_6_220": {
+"q": "Co je tā moko v tradičním maorském umění?",
+"o": [
+"Tkaní",
+"Tetování",
+"Hrnčířství",
+"Řezbářství"
+]
+},
+"dq_en_6_221": {
+"q": "Bez čeho byly postaveny mohutné kamenné zdi Velkého Zimbabwe?",
+"o": [
+"Bez věží",
+"Bez bran",
+"Bez malty",
+"Bez oblouků"
+]
+},
+"dq_en_6_222": {
+"q": "Který architekt založil školu designu Bauhaus?",
+"o": [
+"Frank Lloyd Wright",
+"Walter Gropius",
+"Le Corbusier",
+"Alvar Aalto"
+]
+},
+"dq_en_6_223": {
+"q": "Která francouzská malířka patřila k zakladatelům skupiny impresionistů?",
+"o": [
+"Camille Claudelová",
+"Sonia Delaunayová",
+"Berthe Morisotová",
+"Rosa Bonheurová"
+]
+},
+"dq_en_6_224": {
+"q": "Kdo namaloval „Černý čtverec“ (1915), milník abstraktního umění?",
+"o": [
+"Kazimir Malevič",
+"El Lisickij",
+"Vasilij Kandinskij",
+"Alexandr Rodčenko"
+]
+},
+"dq_en_6_225": {
+"q": "Který malíř se narodil dřív?",
+"o": [
+"Petr Pavel Rubens",
+"Tizian"
+]
+},
+"dq_en_6_226": {
+"q": "Malíř El Greco se narodil ve španělském Toledu."
+},
+"dq_en_6_227": {
+"q": "Tapiserie z Bayeux je ve skutečnosti výšivka, nikoli tkaná tapiserie."
+},
+"dq_en_6_228": {
+"q": "Ve kterém roce představil Christian Dior svou slavnou kolekci „New Look“?"
+},
+"dq_en_6_229": {
+"q": "Ve kterém roce byl v Paříži zveřejněn fotografický postup zvaný daguerrotypie?"
+},
+"dq_en_7_216": {
+"q": "Která starověká malířská technika používá pigmenty smíchané se včelím voskem?",
+"o": [
+"Tempera",
+"Freska",
+"Kvaš",
+"Enkaustika"
+]
+},
+"dq_en_7_217": {
+"q": "Jakou metodou odlévali beninští umělci své bronzové a mosazné reliéfy?",
+"o": [
+"Tlakovým litím",
+"Odstředivým litím",
+"Litím do písku",
+"Litím na ztracený vosk"
+]
+},
+"dq_en_7_218": {
+"q": "Které hranaté arabské písmo se používalo v mnoha raných opisech Koránu?",
+"o": [
+"Díwání",
+"Nastalík",
+"Kúfí",
+"Ruk'a"
+]
+},
+"dq_en_7_219": {
+"q": "Která země proslula ve 12. století nefritově zeleným seladonem s vykládanými motivy?",
+"o": [
+"Thajsko",
+"Korea",
+"Vietnam",
+"Japonsko"
+]
+},
+"dq_en_7_220": {
+"q": "Ve které zemi je jeskyně Cueva de las Manos, proslulá pravěkými obrysy rukou?",
+"o": [
+"Peru",
+"Argentina",
+"Chile",
+"Bolívie"
+]
+},
+"dq_en_7_221": {
+"q": "Ve kterém íránském městě leží velké náměstí Nagš-e Džahán lemované mešitami?",
+"o": [
+"Teherán",
+"Isfahán",
+"Šíráz",
+"Tabríz"
+]
+},
+"dq_en_7_222": {
+"q": "Obraz „Abaporu“ od Tarsily do Amaral je ikonou moderního umění které země?",
+"o": [
+"Portugalsko",
+"Brazílie",
+"Argentina",
+"Mexiko"
+]
+},
+"dq_en_7_223": {
+"q": "Koho fotografuje Cindy Shermanová ve svém slavném cyklu „Untitled Film Stills“?",
+"o": [
+"Filmové hvězdy",
+"Cizí lidi na ulici",
+"Svou rodinu",
+"Sebe v kostýmech"
+]
+},
+"dq_en_7_224": {
+"q": "Který florentský sochař vytvořil bronzového Davida, první volně stojící akt od dob antiky?",
+"o": [
+"Benvenuto Cellini",
+"Donatello",
+"Lorenzo Ghiberti",
+"Verrocchio"
+]
+},
+"dq_en_7_225": {
+"q": "Fajjúmské portréty mumií vznikly v Egyptě v době římské nadvlády."
+},
+"dq_en_7_226": {
+"q": "Niépceho nejstarší dochovaná fotografie pořízená kamerou si vyžádala expozici jen několik sekund."
+}
+},
+"untranslatable": []
+}

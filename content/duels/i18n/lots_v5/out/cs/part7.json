@@ -1,102 +1,688 @@
-{"items": {
-"dq_en_2_289": {"q": "Hergé, autor Tintina, byl Francouz."},
-"dq_en_2_290": {"q": "V komiksech o Asterixovi spadl Obelix jako malý do kotle s kouzelným nápojem."},
-"dq_en_2_291": {"q": "Kdo napsal „Matyldu“ a „Obra Dobra“?", "o": ["Lewis Carroll", "Roald Dahl", "Enid Blytonová", "A. A. Milne"]},
-"dq_en_2_292": {"q": "Která autorka vymyslela králíčka Petra?", "o": ["Enid Blytonová", "Kenneth Grahame", "A. A. Milne", "Beatrix Potterová"]},
-"dq_en_2_293": {"q": "Který jednonohý pirát s papouškem vystupuje v „Ostrově pokladů“?", "o": ["Kapitán Hook", "Kapitán Haddock", "Černovous", "John Silver"]},
-"dq_en_2_294": {"q": "Ve kterém smyšleném městě bojuje Batman proti zločinu?", "o": ["Smallville", "Gotham City", "Springfield", "Metropolis"]},
-"dq_en_2_295": {"q": "Jaké zvíře je ve „Šarlotině pavučince“ Wilbur, kterému Šarlota zachrání život?", "o": ["Prasátko", "Ovečka", "Housátko", "Tele"]},
-"dq_en_2_296": {"q": "Který komiksový superhrdina se objevil dřív?", "o": ["Superman", "Spider-Man"]},
-"dq_en_2_297": {"q": "Kolik sester Marchových vystupuje v „Malých ženách“ Louisy May Alcottové?", "u": "sestry"},
-"dq_en_2_298": {"q": "Kde v „Pánovi much“ uvíznou chlapci bez dospělých?", "o": ["V lese", "Na neobydleném ostrově", "V poušti", "Na hoře"]},
-"dq_en_2_299": {"q": "Doraemon je robotický pes, který byl poslán zpátky v čase z budoucnosti."},
-"dq_en_2_300": {"q": "Jaký zvláštní dar má doktor Dolittle?", "o": ["Mluví se zvířaty", "Umí se zneviditelnit", "Umí létat", "Čte myšlenky"]},
-"dq_en_2_301": {"q": "Ze které země pochází medvídek Paddington?", "o": ["Z Peru", "Z Kanady", "Z Austrálie", "Z Brazílie"]},
-"dq_en_2_302": {"q": "Který britský autor vymyslel špiona Jamese Bonda?", "o": ["John le Carré", "Arthur Conan Doyle", "Ian Fleming", "Graham Greene"]},
-"dq_en_2_303": {"q": "Jaké zvíře je Garfield, líná komiksová postavička, která miluje lasagne?", "o": ["Medvěd", "Kocour", "Křeček", "Pes"]},
-"dq_en_3_293": {"q": "Jakou práci dělají hasiči ve „451 stupňů Fahrenheita“?", "o": ["Loví roboty", "Hasí lesní požáry", "Pálí knihy", "Hlídají knihovny"]},
-"dq_en_3_294": {"q": "Kdo napsal „Velkého Gatsbyho“?", "o": ["John Steinbeck", "Ernest Hemingway", "William Faulkner", "F. Scott Fitzgerald"]},
-"dq_en_3_295": {"q": "Která část obličeje trápí Cyrana z Bergeracu?", "o": ["Chybějící oko", "Obrovský nos", "Křivé zuby", "Zjizvená tvář"]},
-"dq_en_3_296": {"q": "Komiksový kovboj Lucky Luke je proslulý tím, že střílí rychleji než vlastní stín."},
-"dq_en_3_297": {"q": "Kterého francouzského „gentlemana lupiče“ vymyslel Maurice Leblanc?", "o": ["Rouletabille", "Rocambole", "Fantomas", "Arsène Lupin"]},
-"dq_en_3_298": {"q": "Japonská manga se tradičně čte zprava doleva."},
-"dq_en_3_299": {"q": "Spisovatelka knih pro děti Astrid Lindgrenová byla Dánka."},
-"dq_en_3_300": {"q": "Paulo Coelho napsal „Alchymistu“ původně španělsky."},
-"dq_en_3_301": {"q": "Co vyšlo dřív?", "o": ["Čaroděj ze země Oz", "Medvídek Pú"]},
-"dq_en_3_302": {"q": "Kolik let bylo Anne Frankové, když dostala deník k narozeninám?", "u": "let"},
-"dq_en_3_303": {"q": "Na hřbetě kterého ptáka cestuje Nils v románu Selmy Lagerlöfové přes Švédsko?", "o": ["Husy", "Orla", "Čápa", "Labutě"]},
-"dq_en_3_304": {"q": "Ve které manze je hrdinou Son Goku, chlapec s opičím ocasem?", "o": ["Astro Boy", "Dragon Ball", "One Piece", "Naruto"]},
-"dq_en_3_305": {"q": "Jak se říká románu z děsivé, utlačující vymyšlené společnosti?", "o": ["Bajka", "Epos", "Utopie", "Dystopie"]},
-"dq_en_3_306": {"q": "Kdo vymyslel Tarzana?", "o": ["H. Rider Haggard", "Rudyard Kipling", "Edgar Rice Burroughs", "Jack London"]},
-"dq_en_3_307": {"q": "Kdo vymyslel Mumínky?", "o": ["Hans Christian Andersen", "Selma Lagerlöfová", "Tove Janssonová", "Astrid Lindgrenová"]},
-"dq_en_4_296": {"q": "Ve „Válce světů“ nakonec marťanské vetřelce zahubí pozemské bakterie."},
-"dq_en_4_297": {"q": "Romanopisec „George Eliot“ byl ve skutečnosti žena, Mary Ann Evansová."},
-"dq_en_4_298": {"q": "Slečna Marplová Agathy Christie je profesionální policejní detektivka."},
-"dq_en_4_299": {"q": "Co vyšlo dřív?", "o": ["Hrozny hněvu", "Volání divočiny"]},
-"dq_en_4_300": {"q": "Který autor detektivek se narodil dřív?", "o": ["Stieg Larsson", "Georges Simenon"]},
-"dq_en_4_301": {"q": "Ve kterém kraji zlaté horečky se odehrává „Volání divočiny“ Jacka Londona?", "o": ["V Austrálii", "V Kalifornii", "V Jižní Africe", "Na Klondiku"]},
-"dq_en_4_302": {"q": "Který japonský autor napsal „Norské dřevo“ a „Kafku na pobřeží“?", "o": ["Kenzaburó Óe", "Kóbó Abe", "Haruki Murakami", "Jukio Mišima"]},
-"dq_en_4_303": {"q": "Který styl, typický pro latinskoamerický boom, líčí nadpřirozené události, jako by byly běžné?", "o": ["Naturalismus", "Magický realismus", "Romantismus", "Symbolismus"]},
-"dq_en_4_304": {"q": "Který autor formuloval „tři zákony robotiky“?", "o": ["Arthur C. Clarke", "Ray Bradbury", "Philip K. Dick", "Isaac Asimov"]},
-"dq_en_4_305": {"q": "Ve které zemi se odehrává „Anna ze Zeleného domu“?", "o": ["V Kanadě", "V Irsku", "V Austrálii", "Na Novém Zélandu"]},
-"dq_en_4_306": {"q": "Kdo napsal protiotrokářský román „Chaloupka strýčka Toma“?", "o": ["Harriet Beecher Stoweová", "Louisa May Alcottová", "Toni Morrisonová", "Emily Dickinsonová"]},
-"dq_en_4_307": {"q": "Který německý autor napsal „Nekonečný příběh“ a „Momo“?", "o": ["Michael Ende", "Otfried Preußler", "Erich Kästner", "Cornelia Funkeová"]},
-"dq_en_4_308": {"q": "Kdo napsal román „Fantom opery“?", "o": ["Alexandre Dumas", "Victor Hugo", "Jules Verne", "Gaston Leroux"]},
-"dq_en_4_309": {"q": "Holden Caulfield je dospívající vypravěč kterého románu?", "o": ["Pán much", "Kdo chytá v žitě", "Velký Gatsby", "Na cestě"]},
-"dq_en_4_310": {"q": "Ze které země pocházel kreslíř, který vymyslel Šmouly?", "o": ["Z Nizozemska", "Ze Švýcarska", "Z Francie", "Z Belgie"]},
-"dq_en_5_302": {"q": "Jean-Paul Sartre odmítl Nobelovu cenu za literaturu."},
-"dq_en_5_303": {"q": "Ve kterém roce poprvé vyšel komiks „Peanuts“ s Charliem Brownem a Snoopym?"},
-"dq_en_5_304": {"q": "Ve kterém roce vyšel „Pán much“ Williama Goldinga?"},
-"dq_en_5_305": {"q": "Který malý koláček namočený do čaje probudí v Proustově románu vypravěčovy vzpomínky na dětství?", "o": ["Makronka", "Croissant", "Madlenka", "Briočka"]},
-"dq_en_5_306": {"q": "Kdo napsal „Druhé pohlaví“, zakladatelský text moderního feminismu?", "o": ["Virginia Woolfová", "Marguerite Durasová", "Simone Weilová", "Simone de Beauvoirová"]},
-"dq_en_5_307": {"q": "Kdo se roku 1993 stal první černoškou oceněnou Nobelovou cenou za literaturu?", "o": ["Zora Neale Hurstonová", "Maya Angelou", "Alice Walkerová", "Toni Morrisonová"]},
-"dq_en_5_308": {"q": "Který řecký autor napsal „Řeka Zorbu“?", "o": ["Jorgos Seferis", "Odysseas Elytis", "Nikos Kazantzakis", "Konstantinos Kavafis"]},
-"dq_en_5_309": {"q": "Která kanadská autorka napsala „Příběh služebnice“?", "o": ["Lucy Maud Montgomeryová", "Leonard Cohen", "Alice Munroová", "Margaret Atwoodová"]},
-"dq_en_5_310": {"q": "Kdo se roku 2006 stal prvním tureckým spisovatelem s Nobelovou cenou za literaturu?", "o": ["Orhan Pamuk", "Yaşar Kemal", "Elif Şafak", "Nâzım Hikmet"]},
-"dq_en_5_311": {"q": "Který japonský umělec, přezdívaný „bůh mangy“, vytvořil Astro Boye?", "o": ["Kacušika Hokusai", "Osamu Tezuka", "Akira Torijama", "Hajao Mijazaki"]},
-"dq_en_5_312": {"q": "O dětství ve které zemi vypráví komiksový memoár „Persepolis“ Marjane Satrapiové?", "o": ["V Turecku", "V Afghánistánu", "V Íránu", "V Iráku"]},
-"dq_en_5_313": {"q": "Na které pouštní planetě se odehrává většina „Duny“ Franka Herberta?", "o": ["Arrakis", "Trantor", "Solaris", "Gethen"]},
-"dq_en_5_314": {"q": "Která hra George Bernarda Shawa se dočkala muzikálové podoby „My Fair Lady“?", "o": ["Major Barbara", "Svatá Jana", "Člověk a nadčlověk", "Pygmalion"]},
-"dq_en_5_315": {"q": "Který belgický autor vytvořil komisaře Maigreta?", "o": ["Georges Simenon", "Maurice Leblanc", "Gaston Leroux", "Hergé"]},
-"dq_en_5_316": {"q": "Která technika, kterou používali Joyce a Woolfová, zachycuje plynoucí myšlenky postavy tak, jak přicházejí?", "o": ["Epistolární román", "Magický realismus", "Proud vědomí", "Nespolehlivý vypravěč"]},
-"dq_en_6_286": {"q": "Kdo získal Nobelovu cenu za literaturu dřív?", "o": ["Hermann Hesse", "Thomas Mann"]},
-"dq_en_6_287": {"q": "Co vyšlo dřív?", "o": ["Děti půlnoci", "Bůh maličkostí"]},
-"dq_en_6_288": {"q": "Který polský autor napsal vědeckofantastický román „Solaris“?", "o": ["Witold Gombrowicz", "Czesław Miłosz", "Stanisław Lem", "Bruno Schulz"]},
-"dq_en_6_289": {"q": "V „Mausovi“ Arta Spiegelmana jsou Židé nakresleni jako myši. Jako co jsou nakresleni nacisté?", "o": ["Jako vlci", "Jako psi", "Jako prasata", "Jako kočky"]},
-"dq_en_6_290": {"q": "Kdo je v „Mistrovi a Markétce“ Behemot, ďáblův společník?", "o": ["Prase", "Obří kocour", "Černý pes", "Havran"]},
-"dq_en_6_291": {"q": "Po které africké řece vede cesta v „Srdci temnoty“ Josepha Conrada?", "o": ["Po Kongu", "Po Zambezi", "Po Nilu", "Po Nigeru"]},
-"dq_en_6_292": {"q": "Který nositel Nobelovy ceny, narozený v Nagasaki, napsal „Soumrak dne“?", "o": ["Jasunari Kawabata", "Kenzaburó Óe", "Haruki Murakami", "Kazuo Ishiguro"]},
-"dq_en_6_293": {"q": "Japonský romanopisec Jukio Mišima zemřel roku 1970 rituální sebevraždou (seppuku)."},
-"dq_en_6_294": {"q": "Mafaldu, komiksovou holčičku, která se trápí stavem světa, vytvořil brazilský kreslíř."},
-"dq_en_6_295": {"q": "Langston Hughes byl předním básníkem beat generation."},
-"dq_en_6_296": {"q": "Ve kterém roce vyšel „Velký Gatsby“?"},
-"dq_en_6_297": {"q": "Ve kterém roce vyšel „Stroj času“ H. G. Wellse?"},
-"dq_en_6_298": {"q": "Ve kterém roce vyšla „Chaloupka strýčka Toma“ knižně?"},
-"dq_en_6_299": {"q": "Ve kterém roce poprvé vyšla „Duna“ Franka Herberta jako román?"},
-"dq_en_7_290": {"q": "Který básník se narodil dřív?", "o": ["Pablo Neruda", "Octavio Paz"]},
-"dq_en_7_291": {"q": "Který čínský spisovatel se narodil dřív?", "o": ["Mo Jen", "Lao She"]},
-"dq_en_7_292": {"q": "Kterému vládci popisuje Marco Polo města v „Neviditelných městech“ Itala Calvina?", "o": ["Čingischánovi", "Tamerlánovi", "Kublajchánovi", "Sulejmanu Nádhernému"]},
-"dq_en_7_293": {"q": "Ve které italské oblasti se odehrává hlavně Lampedusův román „Gepard“?", "o": ["V Kalábrii", "Na Sardinii", "Na Sicílii", "V Toskánsku"]},
-"dq_en_7_294": {"q": "Která ruská básnířka napsala „Rekviem“, cyklus o obětech Stalinova teroru?", "o": ["Vladimir Majakovskij", "Osip Mandelštam", "Marina Cvetajevová", "Anna Achmatovová"]},
-"dq_en_7_295": {"q": "Který indický autor zasadil mnoho svých povídek do smyšleného městečka Malgudi?", "o": ["R. K. Narayan", "Vikram Seth", "Mulk Raj Anand", "Salman Rushdie"]},
-"dq_en_7_296": {"q": "Za které války se odehrává „Půlka žlutého slunce“ Chimamandy Ngozi Adichieové?", "o": ["Za druhé světové války", "Za alžírské války", "Za rwandské občanské války", "Za nigerijské občanské války"]},
-"dq_en_7_297": {"q": "Ve které zemi zemřel roku 1942 rakouský spisovatel Stefan Zweig?", "o": ["V Argentině", "Ve Švýcarsku", "Ve Spojených státech", "V Brazílii"]},
-"dq_en_7_298": {"q": "Tove Janssonová psala své knihy o Mumíncích švédsky."},
-"dq_en_7_299": {"q": "„Doktor Živago“ Borise Pasternaka vyšel poprvé v Itálii, nikoli v Sovětském svazu."},
-"dq_en_7_300": {"q": "„Persepolis“ Marjane Satrapiové vyšlo původně persky."},
-"dq_en_7_301": {"q": "Nositel Nobelovy ceny J. M. Coetzee se narodil v Austrálii."},
-"dq_en_7_302": {"q": "Ve kterém roce poprvé knižně vyšel „Odysseus“ Jamese Joyce?"},
-"dq_en_7_303": {"q": "Ve kterém roce poprvé vyšla „Anna ze Zeleného domu“?"},
-"dq_en_8_270": {"q": "Který turecký básník strávil léta ve vězení a zemřel roku 1963 v exilu v Moskvě?", "o": ["Sait Faik", "Orhan Veli", "Nâzım Hikmet", "Yaşar Kemal"]},
-"dq_en_8_271": {"q": "Který argentinský autor napsal román „Nebe, peklo, ráj“ („Rayuela“)?", "o": ["Ernesto Sabato", "Julio Cortázar", "Manuel Puig", "Adolfo Bioy Casares"]},
-"dq_en_8_272": {"q": "Z kterého ostrova pocházel Aimé Césaire, jeden ze zakladatelů hnutí négritude?", "o": ["Z Martiniku", "Z Guadeloupu", "Z Haiti", "Z Jamajky"]},
-"dq_en_8_273": {"q": "Ze které země pocházel at-Tajjib Sálih, autor „Období stěhování na sever“?", "o": ["Ze Súdánu", "Z Maroka", "Z Egypta", "Z Libanonu"]},
-"dq_en_8_274": {"q": "Ve kterém městě postřelil roku 1873 Paul Verlaine Arthura Rimbauda?", "o": ["V Londýně", "V Marseille", "V Bruselu", "V Paříži"]},
-"dq_en_8_275": {"q": "Která senegalská autorka napsala román v dopisech „Tak dlouhý dopis“?", "o": ["Ousmane Sembène", "Cheikh Hamidou Kane", "Mariama Bâ", "Aminata Sow Fall"]},
-"dq_en_8_276": {"q": "Text písně „Guantanamera“ vychází z veršů kubánského básníka Josého Martího."},
-"dq_en_8_277": {"q": "Japonský autor detektivek Edogawa Ranpo si zvolil pseudonym podle Edgara Allana Poea."},
-"dq_en_8_278": {"q": "Nabokovova „Lolita“ vyšla poprvé ve Spojených státech."},
-"dq_en_8_279": {"q": "Haškův dobrý voják Švejk slouží za druhé světové války."},
-"dq_en_8_280": {"q": "Kolik let bylo Arthuru Rimbaudovi, když napsal „Opilý koráb“?", "u": "let"},
-"dq_en_8_281": {"q": "Ve kterém roce vydal Lu Sün „Deník šílence“, milník moderní čínské prózy?"}
-}, "untranslatable": []}
+{
+"items": {
+"dq_en_2_289": {
+"q": "Hergé, autor Tintina, byl Francouz."
+},
+"dq_en_2_290": {
+"q": "V komiksech o Asterixovi spadl Obelix jako malý do kotle s kouzelným nápojem."
+},
+"dq_en_2_291": {
+"q": "Kdo napsal „Matyldu“ a „Obra Dobra“?",
+"o": [
+"Lewis Carroll",
+"Roald Dahl",
+"Enid Blytonová",
+"A. A. Milne"
+]
+},
+"dq_en_2_292": {
+"q": "Kdo vymyslel králíčka Petra?",
+"o": [
+"Enid Blytonová",
+"Kenneth Grahame",
+"A. A. Milne",
+"Beatrix Potterová"
+]
+},
+"dq_en_2_293": {
+"q": "Který jednonohý pirát s papouškem vystupuje v „Ostrově pokladů“?",
+"o": [
+"Kapitán Hook",
+"Kapitán Haddock",
+"Černovous",
+"John Silver"
+]
+},
+"dq_en_2_294": {
+"q": "Ve kterém smyšleném městě bojuje Batman proti zločinu?",
+"o": [
+"Smallville",
+"Gotham City",
+"Springfield",
+"Metropolis"
+]
+},
+"dq_en_2_295": {
+"q": "Jaké zvíře je ve „Šarlotině pavučince“ Wilbur, kterému Šarlota zachrání život?",
+"o": [
+"Prasátko",
+"Ovečka",
+"Housátko",
+"Tele"
+]
+},
+"dq_en_2_296": {
+"q": "Který komiksový superhrdina se objevil dřív?",
+"o": [
+"Superman",
+"Spider-Man"
+]
+},
+"dq_en_2_297": {
+"q": "Kolik sester Marchových vystupuje v „Malých ženách“ Louisy May Alcottové?",
+"u": "sestry"
+},
+"dq_en_2_298": {
+"q": "Kde v „Pánovi much“ uvíznou chlapci bez dospělých?",
+"o": [
+"V lese",
+"Na neobydleném ostrově",
+"V poušti",
+"Na hoře"
+]
+},
+"dq_en_2_299": {
+"q": "Doraemon je robotický pes, který byl poslán zpátky v čase z budoucnosti."
+},
+"dq_en_2_300": {
+"q": "Jaký zvláštní dar má doktor Dolittle?",
+"o": [
+"Mluví se zvířaty",
+"Umí se zneviditelnit",
+"Umí létat",
+"Čte myšlenky"
+]
+},
+"dq_en_2_301": {
+"q": "Ze které země pochází medvídek Paddington?",
+"o": [
+"Z Peru",
+"Z Kanady",
+"Z Austrálie",
+"Z Brazílie"
+]
+},
+"dq_en_2_302": {
+"q": "Který britský autor vymyslel špiona Jamese Bonda?",
+"o": [
+"John le Carré",
+"Arthur Conan Doyle",
+"Ian Fleming",
+"Graham Greene"
+]
+},
+"dq_en_2_303": {
+"q": "Jaké zvíře je Garfield, líná komiksová postavička, která miluje lasagne?",
+"o": [
+"Medvěd",
+"Kocour",
+"Křeček",
+"Pes"
+]
+},
+"dq_en_3_293": {
+"q": "Jakou práci dělají hasiči ve „451 stupňů Fahrenheita“?",
+"o": [
+"Loví roboty",
+"Hasí lesní požáry",
+"Pálí knihy",
+"Hlídají knihovny"
+]
+},
+"dq_en_3_294": {
+"q": "Kdo napsal „Velkého Gatsbyho“?",
+"o": [
+"John Steinbeck",
+"Ernest Hemingway",
+"William Faulkner",
+"F. Scott Fitzgerald"
+]
+},
+"dq_en_3_295": {
+"q": "Která část obličeje trápí Cyrana z Bergeracu?",
+"o": [
+"Chybějící oko",
+"Obrovský nos",
+"Křivé zuby",
+"Zjizvená tvář"
+]
+},
+"dq_en_3_296": {
+"q": "Komiksový kovboj Lucky Luke je proslulý tím, že střílí rychleji než vlastní stín."
+},
+"dq_en_3_297": {
+"q": "Kterého francouzského „gentlemana lupiče“ vymyslel Maurice Leblanc?",
+"o": [
+"Rouletabille",
+"Rocambole",
+"Fantomas",
+"Arsène Lupin"
+]
+},
+"dq_en_3_298": {
+"q": "Japonská manga se tradičně čte zprava doleva."
+},
+"dq_en_3_299": {
+"q": "Spisovatelka knih pro děti Astrid Lindgrenová byla Dánka."
+},
+"dq_en_3_300": {
+"q": "Paulo Coelho napsal „Alchymistu“ původně španělsky."
+},
+"dq_en_3_301": {
+"q": "Co vyšlo dřív?",
+"o": [
+"Čaroděj ze země Oz",
+"Medvídek Pú"
+]
+},
+"dq_en_3_302": {
+"q": "Kolik let bylo Anne Frankové, když dostala deník k narozeninám?",
+"u": "let"
+},
+"dq_en_3_303": {
+"q": "Na hřbetě kterého ptáka cestuje Nils v románu Selmy Lagerlöfové přes Švédsko?",
+"o": [
+"Husy",
+"Orla",
+"Čápa",
+"Labutě"
+]
+},
+"dq_en_3_304": {
+"q": "Ve které manze je hrdinou Son Goku, chlapec s opičím ocasem?",
+"o": [
+"Astro Boy",
+"Dragon Ball",
+"One Piece",
+"Naruto"
+]
+},
+"dq_en_3_305": {
+"q": "Jak se říká románu z děsivé, utlačující vymyšlené společnosti?",
+"o": [
+"Bajka",
+"Epos",
+"Utopie",
+"Dystopie"
+]
+},
+"dq_en_3_306": {
+"q": "Kdo vymyslel Tarzana?",
+"o": [
+"H. Rider Haggard",
+"Rudyard Kipling",
+"Edgar Rice Burroughs",
+"Jack London"
+]
+},
+"dq_en_3_307": {
+"q": "Kdo vymyslel Mumínky?",
+"o": [
+"Hans Christian Andersen",
+"Selma Lagerlöfová",
+"Tove Janssonová",
+"Astrid Lindgrenová"
+]
+},
+"dq_en_4_296": {
+"q": "Ve „Válce světů“ nakonec marťanské vetřelce zahubí pozemské bakterie."
+},
+"dq_en_4_297": {
+"q": "Romanopisec „George Eliot“ byl ve skutečnosti žena, Mary Ann Evansová."
+},
+"dq_en_4_298": {
+"q": "Slečna Marplová Agathy Christie je profesionální policejní detektivka."
+},
+"dq_en_4_299": {
+"q": "Co vyšlo dřív?",
+"o": [
+"Hrozny hněvu",
+"Volání divočiny"
+]
+},
+"dq_en_4_300": {
+"q": "Který autor detektivek se narodil dřív?",
+"o": [
+"Stieg Larsson",
+"Georges Simenon"
+]
+},
+"dq_en_4_301": {
+"q": "Ve kterém kraji zlaté horečky se odehrává „Volání divočiny“ Jacka Londona?",
+"o": [
+"V Austrálii",
+"V Kalifornii",
+"V Jižní Africe",
+"Na Klondiku"
+]
+},
+"dq_en_4_302": {
+"q": "Který japonský autor napsal „Norské dřevo“ a „Kafku na pobřeží“?",
+"o": [
+"Kenzaburó Óe",
+"Kóbó Abe",
+"Haruki Murakami",
+"Jukio Mišima"
+]
+},
+"dq_en_4_303": {
+"q": "Který styl, typický pro latinskoamerický boom, líčí nadpřirozené události, jako by byly běžné?",
+"o": [
+"Naturalismus",
+"Magický realismus",
+"Romantismus",
+"Symbolismus"
+]
+},
+"dq_en_4_304": {
+"q": "Který autor formuloval „tři zákony robotiky“?",
+"o": [
+"Arthur C. Clarke",
+"Ray Bradbury",
+"Philip K. Dick",
+"Isaac Asimov"
+]
+},
+"dq_en_4_305": {
+"q": "Ve které zemi se odehrává „Anna ze Zeleného domu“?",
+"o": [
+"V Kanadě",
+"V Irsku",
+"V Austrálii",
+"Na Novém Zélandu"
+]
+},
+"dq_en_4_306": {
+"q": "Kdo napsal protiotrokářský román „Chaloupka strýčka Toma“?",
+"o": [
+"Harriet Beecher Stoweová",
+"Louisa May Alcottová",
+"Toni Morrisonová",
+"Emily Dickinsonová"
+]
+},
+"dq_en_4_307": {
+"q": "Který německý autor napsal „Nekonečný příběh“ a „Momo“?",
+"o": [
+"Michael Ende",
+"Otfried Preußler",
+"Erich Kästner",
+"Cornelia Funkeová"
+]
+},
+"dq_en_4_308": {
+"q": "Kdo napsal román „Fantom opery“?",
+"o": [
+"Alexandre Dumas",
+"Victor Hugo",
+"Jules Verne",
+"Gaston Leroux"
+]
+},
+"dq_en_4_309": {
+"q": "Holden Caulfield je dospívající vypravěč kterého románu?",
+"o": [
+"Pán much",
+"Kdo chytá v žitě",
+"Velký Gatsby",
+"Na cestě"
+]
+},
+"dq_en_4_310": {
+"q": "Ze které země pocházel kreslíř, který vymyslel Šmouly?",
+"o": [
+"Z Nizozemska",
+"Ze Švýcarska",
+"Z Francie",
+"Z Belgie"
+]
+},
+"dq_en_5_302": {
+"q": "Jean-Paul Sartre odmítl Nobelovu cenu za literaturu."
+},
+"dq_en_5_303": {
+"q": "Ve kterém roce poprvé vyšel komiks „Peanuts“ s Charliem Brownem a Snoopym?"
+},
+"dq_en_5_304": {
+"q": "Ve kterém roce vyšel „Pán much“ Williama Goldinga?"
+},
+"dq_en_5_305": {
+"q": "Který malý koláček namočený do čaje probudí v Proustově románu vypravěčovy vzpomínky na dětství?",
+"o": [
+"Makronka",
+"Croissant",
+"Madlenka",
+"Briočka"
+]
+},
+"dq_en_5_306": {
+"q": "Kdo napsal „Druhé pohlaví“, zakladatelský text moderního feminismu?",
+"o": [
+"Virginia Woolfová",
+"Marguerite Durasová",
+"Simone Weilová",
+"Simone de Beauvoirová"
+]
+},
+"dq_en_5_307": {
+"q": "Kdo se roku 1993 stal první černoškou oceněnou Nobelovou cenou za literaturu?",
+"o": [
+"Zora Neale Hurstonová",
+"Maya Angelou",
+"Alice Walkerová",
+"Toni Morrisonová"
+]
+},
+"dq_en_5_308": {
+"q": "Který řecký autor napsal „Řeka Zorbu“?",
+"o": [
+"Jorgos Seferis",
+"Odysseas Elytis",
+"Nikos Kazantzakis",
+"Konstantinos Kavafis"
+]
+},
+"dq_en_5_309": {
+"q": "Kdo z kanadských autorů napsal „Příběh služebnice“?",
+"o": [
+"Lucy Maud Montgomeryová",
+"Leonard Cohen",
+"Alice Munroová",
+"Margaret Atwoodová"
+]
+},
+"dq_en_5_310": {
+"q": "Kdo se roku 2006 stal prvním tureckým spisovatelem s Nobelovou cenou za literaturu?",
+"o": [
+"Orhan Pamuk",
+"Yaşar Kemal",
+"Elif Şafak",
+"Nâzım Hikmet"
+]
+},
+"dq_en_5_311": {
+"q": "Který japonský umělec, přezdívaný „bůh mangy“, vytvořil Astro Boye?",
+"o": [
+"Kacušika Hokusai",
+"Osamu Tezuka",
+"Akira Torijama",
+"Hajao Mijazaki"
+]
+},
+"dq_en_5_312": {
+"q": "O dětství ve které zemi vypráví komiksový memoár „Persepolis“ Marjane Satrapiové?",
+"o": [
+"V Turecku",
+"V Afghánistánu",
+"V Íránu",
+"V Iráku"
+]
+},
+"dq_en_5_313": {
+"q": "Na které pouštní planetě se odehrává většina „Duny“ Franka Herberta?",
+"o": [
+"Arrakis",
+"Trantor",
+"Solaris",
+"Gethen"
+]
+},
+"dq_en_5_314": {
+"q": "Která hra George Bernarda Shawa se dočkala muzikálové podoby „My Fair Lady“?",
+"o": [
+"Major Barbara",
+"Svatá Jana",
+"Člověk a nadčlověk",
+"Pygmalion"
+]
+},
+"dq_en_5_315": {
+"q": "Který belgický autor vytvořil komisaře Maigreta?",
+"o": [
+"Georges Simenon",
+"Maurice Leblanc",
+"Gaston Leroux",
+"Hergé"
+]
+},
+"dq_en_5_316": {
+"q": "Která technika, kterou používali Joyce a Woolfová, zachycuje plynoucí myšlenky postavy tak, jak přicházejí?",
+"o": [
+"Epistolární román",
+"Magický realismus",
+"Proud vědomí",
+"Nespolehlivý vypravěč"
+]
+},
+"dq_en_6_286": {
+"q": "Kdo získal Nobelovu cenu za literaturu dřív?",
+"o": [
+"Hermann Hesse",
+"Thomas Mann"
+]
+},
+"dq_en_6_287": {
+"q": "Co vyšlo dřív?",
+"o": [
+"Děti půlnoci",
+"Bůh maličkostí"
+]
+},
+"dq_en_6_288": {
+"q": "Který polský autor napsal vědeckofantastický román „Solaris“?",
+"o": [
+"Witold Gombrowicz",
+"Czesław Miłosz",
+"Stanisław Lem",
+"Bruno Schulz"
+]
+},
+"dq_en_6_289": {
+"q": "V „Mausovi“ Arta Spiegelmana jsou Židé nakresleni jako myši. Jako co jsou nakresleni nacisté?",
+"o": [
+"Jako vlci",
+"Jako psi",
+"Jako prasata",
+"Jako kočky"
+]
+},
+"dq_en_6_290": {
+"q": "Kdo je v „Mistrovi a Markétce“ Behemot, ďáblův společník?",
+"o": [
+"Prase",
+"Obří kocour",
+"Černý pes",
+"Havran"
+]
+},
+"dq_en_6_291": {
+"q": "Po které africké řece vede cesta v „Srdci temnoty“ Josepha Conrada?",
+"o": [
+"Po Kongu",
+"Po Zambezi",
+"Po Nilu",
+"Po Nigeru"
+]
+},
+"dq_en_6_292": {
+"q": "Který nositel Nobelovy ceny, narozený v Nagasaki, napsal „Soumrak dne“?",
+"o": [
+"Jasunari Kawabata",
+"Kenzaburó Óe",
+"Haruki Murakami",
+"Kazuo Ishiguro"
+]
+},
+"dq_en_6_293": {
+"q": "Japonský romanopisec Jukio Mišima zemřel roku 1970 rituální sebevraždou (seppuku)."
+},
+"dq_en_6_294": {
+"q": "Mafaldu, komiksovou holčičku, která se trápí stavem světa, vytvořil brazilský kreslíř."
+},
+"dq_en_6_295": {
+"q": "Langston Hughes byl předním básníkem beat generation."
+},
+"dq_en_6_296": {
+"q": "Ve kterém roce vyšel „Velký Gatsby“?"
+},
+"dq_en_6_297": {
+"q": "Ve kterém roce vyšel „Stroj času“ H. G. Wellse?"
+},
+"dq_en_6_298": {
+"q": "Ve kterém roce vyšla „Chaloupka strýčka Toma“ knižně?"
+},
+"dq_en_6_299": {
+"q": "Ve kterém roce poprvé vyšla „Duna“ Franka Herberta jako román?"
+},
+"dq_en_7_290": {
+"q": "Který básník se narodil dřív?",
+"o": [
+"Pablo Neruda",
+"Octavio Paz"
+]
+},
+"dq_en_7_291": {
+"q": "Který čínský spisovatel se narodil dřív?",
+"o": [
+"Mo Jen",
+"Lao She"
+]
+},
+"dq_en_7_292": {
+"q": "Kterému vládci popisuje Marco Polo města v „Neviditelných městech“ Itala Calvina?",
+"o": [
+"Čingischánovi",
+"Tamerlánovi",
+"Kublajchánovi",
+"Sulejmanu Nádhernému"
+]
+},
+"dq_en_7_293": {
+"q": "Ve které italské oblasti se odehrává hlavně Lampedusův román „Gepard“?",
+"o": [
+"V Kalábrii",
+"Na Sardinii",
+"Na Sicílii",
+"V Toskánsku"
+]
+},
+"dq_en_7_294": {
+"q": "Kdo z ruských básníků napsal „Rekviem“, cyklus o obětech Stalinova teroru?",
+"o": [
+"Vladimir Majakovskij",
+"Osip Mandelštam",
+"Marina Cvetajevová",
+"Anna Achmatovová"
+]
+},
+"dq_en_7_295": {
+"q": "Který indický autor zasadil mnoho svých povídek do smyšleného městečka Malgudi?",
+"o": [
+"R. K. Narayan",
+"Vikram Seth",
+"Mulk Raj Anand",
+"Salman Rushdie"
+]
+},
+"dq_en_7_296": {
+"q": "Za které války se odehrává „Půlka žlutého slunce“ Chimamandy Ngozi Adichieové?",
+"o": [
+"Za druhé světové války",
+"Za alžírské války",
+"Za rwandské občanské války",
+"Za nigerijské občanské války"
+]
+},
+"dq_en_7_297": {
+"q": "Ve které zemi zemřel roku 1942 rakouský spisovatel Stefan Zweig?",
+"o": [
+"V Argentině",
+"Ve Švýcarsku",
+"Ve Spojených státech",
+"V Brazílii"
+]
+},
+"dq_en_7_298": {
+"q": "Tove Janssonová psala své knihy o Mumíncích švédsky."
+},
+"dq_en_7_299": {
+"q": "„Doktor Živago“ Borise Pasternaka vyšel poprvé v Itálii, nikoli v Sovětském svazu."
+},
+"dq_en_7_300": {
+"q": "„Persepolis“ Marjane Satrapiové vyšlo původně persky."
+},
+"dq_en_7_301": {
+"q": "Nositel Nobelovy ceny J. M. Coetzee se narodil v Austrálii."
+},
+"dq_en_7_302": {
+"q": "Ve kterém roce poprvé knižně vyšel „Odysseus“ Jamese Joyce?"
+},
+"dq_en_7_303": {
+"q": "Ve kterém roce poprvé vyšla „Anna ze Zeleného domu“?"
+},
+"dq_en_8_270": {
+"q": "Který turecký básník strávil léta ve vězení a zemřel roku 1963 v exilu v Moskvě?",
+"o": [
+"Sait Faik",
+"Orhan Veli",
+"Nâzım Hikmet",
+"Yaşar Kemal"
+]
+},
+"dq_en_8_271": {
+"q": "Který argentinský autor napsal román „Nebe, peklo, ráj“ („Rayuela“)?",
+"o": [
+"Ernesto Sabato",
+"Julio Cortázar",
+"Manuel Puig",
+"Adolfo Bioy Casares"
+]
+},
+"dq_en_8_272": {
+"q": "Z kterého ostrova pocházel Aimé Césaire, jeden ze zakladatelů hnutí négritude?",
+"o": [
+"Z Martiniku",
+"Z Guadeloupu",
+"Z Haiti",
+"Z Jamajky"
+]
+},
+"dq_en_8_273": {
+"q": "Ze které země pocházel at-Tajjib Sálih, autor „Období stěhování na sever“?",
+"o": [
+"Ze Súdánu",
+"Z Maroka",
+"Z Egypta",
+"Z Libanonu"
+]
+},
+"dq_en_8_274": {
+"q": "Ve kterém městě postřelil roku 1873 Paul Verlaine Arthura Rimbauda?",
+"o": [
+"V Londýně",
+"V Marseille",
+"V Bruselu",
+"V Paříži"
+]
+},
+"dq_en_8_275": {
+"q": "Kdo ze senegalských autorů napsal román v dopisech „Tak dlouhý dopis“?",
+"o": [
+"Ousmane Sembène",
+"Cheikh Hamidou Kane",
+"Mariama Bâ",
+"Aminata Sow Fall"
+]
+},
+"dq_en_8_276": {
+"q": "Text písně „Guantanamera“ vychází z veršů kubánského básníka Josého Martího."
+},
+"dq_en_8_277": {
+"q": "Japonský autor detektivek Edogawa Ranpo si zvolil pseudonym podle Edgara Allana Poea."
+},
+"dq_en_8_278": {
+"q": "Nabokovova „Lolita“ vyšla poprvé ve Spojených státech."
+},
+"dq_en_8_279": {
+"q": "Haškův dobrý voják Švejk slouží za druhé světové války."
+},
+"dq_en_8_280": {
+"q": "Kolik let bylo Arthuru Rimbaudovi, když napsal „Opilý koráb“?",
+"u": "let"
+},
+"dq_en_8_281": {
+"q": "Ve kterém roce vydal Lu Sün „Deník šílence“, milník moderní čínské prózy?"
+}
+},
+"untranslatable": []
+}
