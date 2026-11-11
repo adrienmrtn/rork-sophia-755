@@ -162,6 +162,16 @@ fun DuelLeagueRoadScreen(
             DuelLeaguePreview(
                 league = league,
                 reached = league.position <= currentPosition,
+                // Renseigné seulement pour la ligue du joueur.
+                standing = if (league.position == currentPosition) {
+                    DuelLeagueStanding(
+                        trophies = home.profile.trophies,
+                        progress = home.leagueProgress(home.profile.trophies),
+                        next = home.nextLeague(home.currentLeague),
+                    )
+                } else {
+                    null
+                },
                 language = language,
                 onClose = {
                     view.duelHaptic(DuelHaptic.Tap)
@@ -309,18 +319,35 @@ private fun LeagueCard(
                 color = Color.White,
                 modifier = Modifier.fillMaxWidth(),
             )
-            Row(
-                horizontalArrangement = Arrangement.spacedBy(8.dp),
-                verticalAlignment = Alignment.CenterVertically,
-            ) {
-                DuelTrophyCount(value = league.minTrophies, language = language, size = 14.dp, color = Color.White)
-                if (!reached) {
-                    Icon(
-                        Icons.Filled.Lock,
-                        contentDescription = null,
-                        tint = Color.White.copy(alpha = 0.7f),
-                        modifier = Modifier.size(12.dp),
-                    )
+            if (isCurrent) {
+                // Sa propre ligue : les trophées du joueur (et non le seuil de la ligue, 0 pour
+                // la première), puis le seuil de la suivante au bout de la jauge.
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    DuelTrophyCount(value = home.profile.trophies, language = language, size = 15.dp, color = Color.White)
+                    Spacer(Modifier.weight(1f))
+                    home.nextLeague(league)?.let { next ->
+                        DuelTrophyCount(
+                            value = next.minTrophies,
+                            language = language,
+                            size = 13.dp,
+                            color = Color.White.copy(alpha = 0.75f),
+                        )
+                    }
+                }
+            } else {
+                Row(
+                    horizontalArrangement = Arrangement.spacedBy(8.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                ) {
+                    DuelTrophyCount(value = league.minTrophies, language = language, size = 14.dp, color = Color.White)
+                    if (!reached) {
+                        Icon(
+                            Icons.Filled.Lock,
+                            contentDescription = null,
+                            tint = Color.White.copy(alpha = 0.7f),
+                            modifier = Modifier.size(12.dp),
+                        )
+                    }
                 }
             }
             if (isCurrent) {
@@ -360,6 +387,7 @@ private fun LeagueCard(
 private fun DuelLeaguePreview(
     league: DuelLeague,
     reached: Boolean,
+    standing: DuelLeagueStanding?,
     language: AppLanguage,
     onClose: () -> Unit,
 ) {
@@ -436,23 +464,63 @@ private fun DuelLeaguePreview(
                 color = Color.White,
                 maxLines = 2,
             )
-            Row(
-                horizontalArrangement = Arrangement.spacedBy(10.dp),
-                verticalAlignment = Alignment.CenterVertically,
-            ) {
-                DuelTrophyCount(value = league.minTrophies, language = language, size = 18.dp, color = Color.White)
-                if (!reached) {
-                    Icon(
-                        Icons.Filled.Lock,
-                        contentDescription = null,
-                        tint = Color.White.copy(alpha = 0.75f),
-                        modifier = Modifier.size(14.dp),
-                    )
+            val caption: @Composable (String) -> Unit = { key ->
+                // La petite ligne qui dit ce que compte le nombre de trophées en dessous.
+                Text(
+                    text = StringStore.text(context, key, language),
+                    fontFamily = PlusJakartaSans,
+                    fontWeight = FontWeight.SemiBold,
+                    fontSize = 13.sp,
+                    color = Color.White.copy(alpha = 0.75f),
+                    modifier = Modifier.padding(top = 4.dp),
+                )
+            }
+            if (standing != null) {
+                // Sa propre ligue : ses trophées et sa jauge passent devant. Le seuil seul (0
+                // pour la première ligue) se lisait comme « tu as 0 trophée ».
+                caption("duel.league.yourTrophies")
+                DuelTrophyCount(value = standing.trophies, language = language, size = 26.dp, color = Color.White)
+                DuelProgressBar(progress = standing.progress)
+                Text(
+                    text = if (standing.next != null) {
+                        StringStore.text(
+                            context,
+                            "duel.league.toNext",
+                            language,
+                            maxOf(standing.next.minTrophies - standing.trophies, 0),
+                            DuelFormat.leagueName(context, standing.next, language),
+                        )
+                    } else {
+                        StringStore.text(context, "duel.league.top", language)
+                    },
+                    fontFamily = PlusJakartaSans,
+                    fontWeight = FontWeight.SemiBold,
+                    fontSize = 13.sp,
+                    color = Color.White.copy(alpha = 0.85f),
+                )
+            } else {
+                caption("duel.league.required")
+                Row(
+                    horizontalArrangement = Arrangement.spacedBy(10.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                ) {
+                    DuelTrophyCount(value = league.minTrophies, language = language, size = 18.dp, color = Color.White)
+                    if (!reached) {
+                        Icon(
+                            Icons.Filled.Lock,
+                            contentDescription = null,
+                            tint = Color.White.copy(alpha = 0.75f),
+                            modifier = Modifier.size(14.dp),
+                        )
+                    }
                 }
             }
         }
     }
 }
+
+/** Où en est le joueur dans sa ligue : ce que la ligue en grand montre quand c'est la sienne. */
+private data class DuelLeagueStanding(val trophies: Int, val progress: Float, val next: DuelLeague?)
 
 /**
  * Passe ce qui est dessiné en niveaux de gris. Le fond d'une ligue charge son image lui-même :

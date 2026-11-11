@@ -254,9 +254,14 @@ struct CourseView: View {
             g.impactOccurred()
         }
         .onChange(of: hasFullAccess) { _, _ in
-            // Un achat dans le lecteur : les sections verrouillées du fil deviennent lisibles.
+            // Un achat dans le lecteur : les sections réservées rejoignent le fil. Ce qui était
+            // déjà révélé (la partie gratuite, en tête du fil) le reste ; « Continuer » enchaîne.
             guard contentState == .ready else { return }
+            let alreadyRevealed = revealedCount
             prepareSteps()
+            if readingMode == .steps, alreadyRevealed > 0 {
+                revealedCount = min(alreadyRevealed, steps.count)
+            }
         }
         .fullScreenCover(isPresented: $showDebloquerPaywall) {
             SophiaPaywallView(
@@ -401,8 +406,27 @@ struct CourseView: View {
                         .tag(mode)
                 }
             }
+            // Enregistrer et partager : ils vivaient sur la fiche du cours, qui n'existe plus
+            // (une carte ouvre directement le lecteur).
+            Section {
+                Button {
+                    UIImpactFeedbackGenerator(style: .light).impactOccurred()
+                    let wasSaved = progressManager.isFavorite(course.id)
+                    progressManager.toggleFavorite(course.id)
+                    AnalyticsService.shared.log(wasSaved ? .unsave : .save, courseId: course.id, screen: "course_reader")
+                } label: {
+                    let saved = progressManager.isFavorite(course.id)
+                    Label(
+                        languageManager.text(saved ? "common.unsave" : "common.save"),
+                        systemImage: saved ? "bookmark.fill" : "bookmark"
+                    )
+                }
+                ShareLink(item: SophiaDeepLink.shareText(for: course, language: languageManager.current)) {
+                    Label(languageManager.text("reader.share"), systemImage: "square.and.arrow.up")
+                }
+            }
         } label: {
-            Image(systemName: readingMode.systemImage)
+            Image(systemName: "ellipsis")
                 .font(.jakarta(size: 15, weight: .semibold))
                 .foregroundStyle(DS.inkSecondary)
                 .frame(width: 40, height: 40)
@@ -808,7 +832,6 @@ struct CourseView: View {
                 progressManager.toggleFollow(author.slug)
                 AnalyticsService.shared.log(wasFollowing ? .unfollow : .follow, courseId: course.id, screen: "reader", props: ["creator": .string(author.slug)])
             },
-            onUnlock: { presentDebloquerPaywall() },
             onDoubleTap: { likeFromDoubleTap() },
             // Le texte original entier n'est proposé qu'à qui peut lire le cours entier.
             onShowOriginal: hasFullAccess ? { language in originalLanguage = language } : nil
@@ -839,16 +862,19 @@ struct CourseView: View {
     private func advanceStep() {
         guard !steps.isEmpty else { return }
         guard revealedCount < steps.count else {
-            // Cours verrouillé : comme par pages, le bouton ne fait rien au bout ; le paywall
-            // ne s'ouvre que par le cadenas.
-            guard !isCourseLocked else { return }
+            // Cours réservé : la partie gratuite est lue, le « Continuer » de trop ouvre le
+            // paywall. Fermé sans achat, on reste sur le dernier passage lu.
+            guard !isCourseLocked else {
+                presentDebloquerPaywall()
+                return
+            }
             UIImpactFeedbackGenerator(style: .medium).impactOccurred()
             finishCourse()
             return
         }
         let step = steps[revealedCount]
         switch step.kind {
-        case .header, .locked:
+        case .header:
             UIImpactFeedbackGenerator(style: .medium).impactOccurred()
         case .block, .footer, .legacy:
             UIImpactFeedbackGenerator(style: .light).impactOccurred()

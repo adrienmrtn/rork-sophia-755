@@ -52,13 +52,15 @@ import app.rork.sophia.data.rememberCourseSummaries
 import app.rork.sophia.data.stripInlineMarkup
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.CourseSummary
-import app.rork.sophia.domain.readsCount
+import app.rork.sophia.domain.realReadsCount
 import app.rork.sophia.domain.UserProgress
 import app.rork.sophia.ui.components.CourseImage
 import app.rork.sophia.ui.components.softPress
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
 import app.rork.sophia.ui.theme.uppercaseInApp
+import app.rork.sophia.ui.course.TranslatedFromLine
+import app.rork.sophia.domain.CourseOrigins
 
 /**
  * La fiche d'un cours (écran « Cours » de la maquette) : couverture, matière et durée, titre,
@@ -82,7 +84,6 @@ fun CourseDetailScreen(
     val identity = remember(course.id) { CreatorIdentity.forCourse(context.applicationContext, course.id) }
     val info by rememberCourseInfo(course.toStub(), language)
     val summaries = rememberCourseSummaries(language)
-    var showOriginal by remember { mutableStateOf(false) }
 
     // L'accroche et l'introduction viennent du paquet du cours : s'il n'est pas encore sur le
     // téléphone, on le télécharge ; `rememberCourseInfo` se relit quand il arrive.
@@ -215,13 +216,9 @@ fun CourseDetailScreen(
                 }
             }
 
-            info?.originalLanguage?.takeIf { it != language.code }?.let { code ->
-                TranslationPanel(
-                    code = code,
-                    language = language,
-                    showOriginal = showOriginal,
-                    onToggle = { showOriginal = !showOriginal },
-                )
+            // « Voir l'original » se trouve dans le cours ouvert (réservé à qui peut le lire en entier).
+            CourseOrigins.translatedFromCode(course.id, info?.originalLanguage, language)?.let { code ->
+                TranslatedFromLine(code = code, language = language)
             }
 
             Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
@@ -248,10 +245,13 @@ fun CourseDetailScreen(
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.spacedBy(22.dp),
             ) {
-                StatChip(
-                    icon = Icons.Filled.Visibility,
-                    text = course.readsCount.compactCount(language) + " " + StringStore.text(context, "creator.stat.reads", language),
-                )
+                // Les vraies ouvertures (serveur) ; rien tant que le chiffre n'est pas arrivé.
+                course.realReadsCount?.let { reads ->
+                    StatChip(
+                        icon = Icons.Filled.Visibility,
+                        text = reads.compactCount(language) + " " + StringStore.text(context, "creator.stat.reads", language),
+                    )
+                }
                 StatChip(
                     icon = if (liked) Icons.Filled.Favorite else Icons.Filled.FavoriteBorder,
                     text = LocalCounters.likesCount(course.id, liked).compactCount(language),
@@ -271,7 +271,11 @@ fun CourseDetailScreen(
                         .size(36.dp)
                         .softPress(onClick = {
                             Analytics.log("share", courseId = course.id, props = mapOf("channel" to "sheet", "target" to "course"))
-                            val message = StringStore.text(context, "share.course.message", language, stripInlineMarkup(course.title))
+                            // La phrase habituelle, suivie du lien du cours sur le site.
+                            val message = app.rork.sophia.domain.SophiaLinks.shareText(
+                                StringStore.text(context, "share.course.message", language, stripInlineMarkup(course.title)),
+                                app.rork.sophia.domain.SophiaLinks.courseWebUrl(course.id),
+                            )
                             val send = Intent(Intent.ACTION_SEND).setType("text/plain").putExtra(Intent.EXTRA_TEXT, message)
                             runCatching { context.startActivity(Intent.createChooser(send, null)) }
                         })
@@ -306,10 +310,8 @@ fun CourseDetailScreen(
                     val otherCompleted = progress.courseProgress[other.id]?.isCompleted == true
                     CompactCourseRow(
                         course = other,
-                        meta = other.readsCount.compactCount(language) + " " +
-                            StringStore.text(context, "creator.stat.reads", language) + " · " +
-                            LocalCounters.likesCount(other.id, otherLiked).compactCount(language) + " " +
-                            StringStore.text(context, "common.likes", language),
+                        meta = LocalCounters.statsLine(context, other.id, otherLiked, language)
+                            ?: StringStore.text(context, "subject.${other.subjectEnum.storageKey}.short", language),
                         onTap = { onOpenCourse(other) },
                         trailing = if (otherCompleted) ({ ReadCheck(language = language) }) else null,
                     )
@@ -319,40 +321,3 @@ fun CourseDetailScreen(
     }
 }
 
-/**
- * « Traduit · original en anglais » avec « Voir l'original ». Le texte original n'est pas
- * encore livré avec les cours (prompt 3) : le bouton ne fait que basculer son libellé.
- */
-@Composable
-private fun TranslationPanel(code: String, language: AppLanguage, showOriginal: Boolean, onToggle: () -> Unit) {
-    val context = LocalContext.current
-    val name = AppLanguage.entries.firstOrNull { it.code.equals(code, ignoreCase = true) }?.displayName
-        ?: code.uppercase()
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .clip(RoundedCornerShape(14.dp))
-            .background(DS.accentTint)
-            .padding(horizontal = 12.dp, vertical = 10.dp),
-        verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.spacedBy(8.dp),
-    ) {
-        Icon(imageVector = Icons.Filled.Public, contentDescription = null, tint = DS.accent, modifier = Modifier.size(16.dp))
-        Text(
-            text = StringStore.text(context, "course.translatedFrom", language, name),
-            fontFamily = PlusJakartaSans,
-            fontWeight = FontWeight.SemiBold,
-            fontSize = 13.sp,
-            color = DS.ink,
-            modifier = Modifier.weight(1f),
-        )
-        Text(
-            text = StringStore.text(context, if (showOriginal) "course.seeTranslation" else "course.seeOriginal", language),
-            fontFamily = PlusJakartaSans,
-            fontWeight = FontWeight.Bold,
-            fontSize = 13.sp,
-            color = DS.accentSoft,
-            modifier = Modifier.softPress(onClick = onToggle),
-        )
-    }
-}

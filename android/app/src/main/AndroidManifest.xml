@@ -48,6 +48,23 @@
                 <data android:scheme="sophia" android:host="course" />
                 <data android:scheme="sophia" android:host="author" />
                 <data android:scheme="sophia" android:host="creator" />
+                <data android:scheme="sophia" android:host="friend" />
+            </intent-filter>
+            <!--
+                Les pages de cours et d'auteurs du site sont des liens d'app : un lien partagé
+                ouvre le cours dans Sophia quand elle est installée (docs/partage.md). Android
+                vérifie le lien avec https://sophia-culture.com/.well-known/assetlinks.json.
+            -->
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="https" />
+                <data android:host="sophia-culture.com" />
+                <data android:host="www.sophia-culture.com" />
+                <data android:pathPrefix="/courses/" />
+                <data android:pathPrefix="/c/" />
+                <data android:pathPrefix="/authors/" />
             </intent-filter>
         </activity>
 

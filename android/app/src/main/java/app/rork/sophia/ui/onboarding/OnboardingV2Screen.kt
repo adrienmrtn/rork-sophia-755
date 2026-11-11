@@ -44,6 +44,7 @@ import app.rork.sophia.data.InAppReviewHelper
 import app.rork.sophia.data.NotificationPermission
 import app.rork.sophia.data.OnboardingAnswers
 import app.rork.sophia.data.SignInOutcome
+import app.rork.sophia.data.AuthorStore
 import app.rork.sophia.data.StringStore
 import app.rork.sophia.data.TrialReminderScheduler
 import app.rork.sophia.domain.AppLanguage
@@ -94,6 +95,7 @@ private enum class OnboardingStep {
     Profile,
     Notifications,
     Login,
+    FollowCreators,
     WelcomeAboard,
     Features,
     Trial,
@@ -127,6 +129,7 @@ private enum class OnboardingStep {
             Profile -> "profile"
             Notifications -> "notifications"
             Login -> "login"
+            FollowCreators -> "follow_creators"
             WelcomeAboard -> "welcome_aboard"
             Features -> "features"
             Trial -> "trial_steps"
@@ -357,7 +360,9 @@ fun OnboardingV2Screen(
 
     /** Login, skipped or done, lands on the same next page. */
     fun advanceFromLogin() {
-        goTo(OnboardingStep.WelcomeAboard)
+        // « Suis des profs » n'a rien à montrer sans créateur dans le catalogue.
+        val hasCreators = AuthorStore.all(context.applicationContext).any { it.courseIds.isNotEmpty() }
+        goTo(if (hasCreators) OnboardingStep.FollowCreators else OnboardingStep.WelcomeAboard)
     }
 
     fun advanceFromFeatures() {
@@ -566,6 +571,12 @@ fun OnboardingV2Screen(
                     onSkip = {
                         if (DeviceCapabilities.allowsLoginBypass()) advanceFromLogin()
                     },
+                )
+                OnboardingStep.FollowCreators -> FollowCreatorsStep(
+                    language = language,
+                    chosenSubjects = answers.topics.toSet(),
+                    progressManager = app.progressManager,
+                    onContinue = { goTo(OnboardingStep.WelcomeAboard) },
                 )
                 OnboardingStep.WelcomeAboard -> WelcomeAboardStep(
                     language = language,

@@ -82,7 +82,7 @@ struct NewGenTabsView: View {
             HomeFeedView(
                 progressManager: progressManager,
                 discountManager: discountManager,
-                onOpenCourse: { homePath.append(.course(id: $0.id, source: .feed)) },
+                onOpenCourse: { openReader($0, source: .feed) },
                 onOpenCreator: { homePath.append(.creator(slug: $0.slug)) },
                 onOpenCampaign: { homePath.append(.campaign(slug: $0.slug)) },
                 onSearch: { selectedTab = 1 },
@@ -100,7 +100,7 @@ struct NewGenTabsView: View {
         NavigationStack(path: $explorePath) {
             ExploreView(
                 progressManager: progressManager,
-                onOpenCourse: { explorePath.append(.course(id: $0.id, source: .search)) },
+                onOpenCourse: { openReader($0, source: .search) },
                 onOpenCreator: { explorePath.append(.creator(slug: $0.slug)) },
                 onOpenCampaign: { explorePath.append(.campaign(slug: $0.slug)) },
                 onOpenUniverse: { explorePath.append(.universe(subcategory: $0)) },
@@ -119,7 +119,7 @@ struct NewGenTabsView: View {
             ProfileV2View(
                 progressManager: progressManager,
                 store: storeVM,
-                onOpenCourse: { profilePath.append(.course(id: $0.id, source: .profile)) },
+                onOpenCourse: { openReader($0, source: .profile) },
                 onResumeCourse: { openReader($0, source: .profile) },
                 onOpenCreator: { profilePath.append(.creator(slug: $0.slug)) },
                 onOpenList: { profilePath.append(.courseList($0)) },
@@ -176,7 +176,7 @@ struct NewGenTabsView: View {
                     progressManager: progressManager,
                     onStart: { openReader(course, source: source) },
                     onOpenCreator: { push(.creator(slug: $0.slug)) },
-                    onOpenCourse: { push(.course(id: $0.id, source: .author)) }
+                    onOpenCourse: { openReader($0, source: .author) }
                 )
                 .toolbar(.hidden, for: .navigationBar)
             } else {
@@ -187,7 +187,7 @@ struct NewGenTabsView: View {
                 CreatorPageView(
                     author: author,
                     progressManager: progressManager,
-                    onOpenCourse: { push(.course(id: $0.id, source: .author)) },
+                    onOpenCourse: { openReader($0, source: .author) },
                     onOpenCampaign: { push(.campaign(slug: $0.slug)) }
                 )
                 .toolbar(.hidden, for: .navigationBar)
@@ -199,7 +199,7 @@ struct NewGenTabsView: View {
                 EventPageView(
                     campaign: campaign,
                     progressManager: progressManager,
-                    onOpenCourse: { push(.course(id: $0.id, source: .event)) },
+                    onOpenCourse: { openReader($0, source: .event) },
                     onOpenCreator: { push(.creator(slug: $0.slug)) },
                     onBecomeCreator: { push(.becomeCreator) }
                 )
@@ -211,14 +211,14 @@ struct NewGenTabsView: View {
             ProfileCourseListView(
                 kind: kind,
                 progressManager: progressManager,
-                onOpenCourse: { push(.course(id: $0.id, source: .profile)) }
+                onOpenCourse: { openReader($0, source: .profile) }
             )
             .toolbar(.hidden, for: .navigationBar)
         case .universe(let subcategory):
             UniverseCoursesView(
                 subcategory: subcategory,
                 progressManager: progressManager,
-                onOpenCourse: { push(.course(id: $0.id, source: .search)) }
+                onOpenCourse: { openReader($0, source: .search) }
             )
             .toolbar(.hidden, for: .navigationBar)
         case .subject(let subject):

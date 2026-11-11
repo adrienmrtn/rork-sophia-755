@@ -596,10 +596,11 @@ struct SettingsView: View {
 
     // MARK: - Ambassador banner
 
-    /// Ouvre directement la page ambassadeur du site (programme slideshow, le seul rôle
-    /// proposé : plus d'UGC, plus de choix de rôle ni de formulaire dans l'app).
+    /// Ouvre directement le Hub des créateurs dans la langue de l'app
+    /// (`vik-studios-creators.com/<langue>`) : plus d'UGC, plus de choix de rôle ni de
+    /// formulaire dans l'app.
     private func openAmbassadorPage() {
-        guard let url = AppConfig.creatorsURL(role: "slideshow") else { return }
+        guard let url = AppConfig.creatorHubURL(language: languageManager.current) else { return }
         creatorsPage = CreatorsPage(url: url)
     }
 
@@ -620,16 +621,6 @@ struct SettingsView: View {
                             .aspectRatio(contentMode: .fill)
                     }
                     .clipped()
-                    .overlay(alignment: .topLeading) {
-                        Text(languageManager.text("settings.ambassador.banner.badge"))
-                            .font(DS.sans(.caption, .bold))
-                            .foregroundStyle(.white)
-                            .lineLimit(1)
-                            .padding(.horizontal, 10)
-                            .padding(.vertical, 6)
-                            .background(Capsule().fill(DS.accent))
-                            .padding(12)
-                    }
                     .accessibilityHidden(true)
 
                 VStack(alignment: .leading, spacing: 14) {

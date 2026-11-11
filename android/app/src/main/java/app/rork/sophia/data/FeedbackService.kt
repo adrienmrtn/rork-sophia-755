@@ -57,47 +57,6 @@ object FeedbackService {
         post(AppConfig.FORMSPREE_ENDPOINT, body)
     }
 
-    suspend fun submitAmbassador(
-        email: String,
-        age: Int,
-        presentation: String,
-        wantsSlideshow: Boolean,
-        wantsUgc: Boolean,
-        countryConfirmed: Boolean,
-        language: String,
-    ): Result<Unit> = withContext(Dispatchers.IO) {
-        if (!isPlausibleEmail(email)) {
-            return@withContext Result.failure(IllegalArgumentException("email"))
-        }
-        if (age !in 16..120 || presentation.trim().length < 10 || !countryConfirmed) {
-            return@withContext Result.failure(IllegalArgumentException("validation"))
-        }
-        if (!wantsSlideshow && !wantsUgc) {
-            return@withContext Result.failure(IllegalArgumentException("roles"))
-        }
-        val roleValue = when {
-            wantsSlideshow && wantsUgc -> "slideshow+ugc"
-            wantsSlideshow -> "slideshow"
-            else -> "ugc"
-        }
-        val body = JSONObject()
-            .put("email", email.trim())
-            .put("_replyto", email.trim())
-            .put("age", age)
-            .put("presentation", presentation.trim())
-            .put("roles", roleValue)
-            .put("wants_slideshow", wantsSlideshow)
-            .put("wants_ugc", wantsUgc)
-            .put("country_confirmed", countryConfirmed)
-            .put("eligible_countries", "FR,CA,BE,CH")
-            .put("_subject", "Sophia Android ambassador")
-            .put("app_version", BuildConfig.VERSION_NAME)
-            .put("android_version", android.os.Build.VERSION.RELEASE)
-            .put("device", android.os.Build.MODEL)
-            .put("language", language)
-        post(AppConfig.FORMSPREE_AMBASSADOR_ENDPOINT, body)
-    }
-
     private fun post(endpoint: String, body: JSONObject): Result<Unit> {
         return try {
             val conn = (URL(endpoint).openConnection() as HttpURLConnection).apply {

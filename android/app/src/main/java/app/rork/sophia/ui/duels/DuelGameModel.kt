@@ -18,9 +18,12 @@ import kotlinx.coroutines.delay
 import kotlin.math.ceil
 import kotlin.math.floor
 import kotlin.random.Random
+import kotlinx.coroutines.launch
+import app.rork.sophia.domain.DuelFriendState
 
-// Le déroulé d'une partie classée, sans rien d'affichage : mêmes règles et mêmes durées que
-// `ios/Sophia/Views/Duels/DuelGameModel.swift` (la partie entre amis, en direct, n'est pas portée).
+// Le déroulé d'une partie, sans rien d'affichage : mêmes règles et mêmes durées que
+// `ios/Sophia/Views/Duels/DuelGameModel.swift`, pour la partie classée (adversaire écrit d'avance
+// par le serveur) comme pour la partie entre amis, en direct.
 
 /** Qui a marqué sur une question. */
 data class DuelRound(val player: Boolean, val opponent: Boolean)
@@ -44,7 +47,22 @@ data class DuelSummary(
     val forfeit: Boolean = false,
     /** La matière que j'ai choisie pour ma manche : le serveur en a besoin pour recompter le score. */
     val pick: String? = null,
+    /** Duel entre amis : aucun trophée en jeu, et une égalité parfaite est possible. */
+    val friendly: Boolean = false,
+    val draw: Boolean = false,
 )
+
+/**
+ * Le lien d'une partie entre amis avec le serveur, qui tient l'horloge : la partie démarre à
+ * [startsAtMs] (sur l'horloge du modèle) pour les deux joueurs. Chaque appel rend l'état de la
+ * partie vu par ce joueur ; un échec (réseau) lève une exception, l'appel est retenté.
+ */
+interface DuelLiveLink {
+    val startsAtMs: Long
+    suspend fun state(): DuelFriendState
+    suspend fun answer(index: Int, answer: DuelAnswer): DuelFriendState
+    suspend fun pick(round: Int, subject: String): DuelFriendState
+}
 
 enum class DuelPhase {
     /** Le chrono tourne. */
@@ -119,6 +137,24 @@ object DuelRules {
 
     /** Au-delà, quitter l'app en pleine partie est un abandon. */
     const val MAX_ABSENCE_MS = 15_000L
+
+    // ------------------------------------------------------------ partie entre amis
+
+    /** L'état de la partie est demandé au serveur à ce rythme. */
+    const val LIVE_POLL_MS = 700L
+
+    /** En retard de plus que cela sur le serveur (coupure réseau) : pas d'annonce de manche. */
+    const val LIVE_ANNOUNCE_MIN_MS = 2_500L
+
+    /** La révélation de la question précédente reste à l'écran avant l'annonce d'une manche. */
+    const val LIVE_BEFORE_ANNOUNCE_MS = 2_000L
+
+    /** Celui qui choisit sa matière a jusqu'à ce délai avant le départ de la manche. */
+    const val LIVE_PICK_MARGIN_MS = 1_500L
+
+    /** La dernière révélation reste à l'écran avant le résultat. */
+    const val LIVE_FINAL_REVEAL_MS = 2_200L
+    const val LIVE_FINAL_REVEAL_SLIDER_MS = 3_000L
 
     /** La place d'une réponse de l'adversaire absente des données de la manche. */
     val fillerOpponentAnswer = DuelBotAnswer(correct = false, choice = null, value = null, timeMs = 4000)
@@ -260,6 +296,8 @@ object DuelRules {
  */
 class DuelGameModel(
     val match: DuelMatch,
+    /** Présent pour une partie entre amis : le serveur tient l'horloge et donne les réponses de l'ami. */
+    private val live: DuelLiveLink? = null,
     private val haptic: (DuelHaptic) -> Unit = {},
     /** Une horloge qui avance aussi quand l'app est à l'arrière-plan : le chrono n'attend pas. */
     private val clock: () -> Long = { SystemClock.elapsedRealtime() },
@@ -312,6 +350,26 @@ class DuelGameModel(
     /** L'adversaire a quitté la partie : elle s'arrête sur une victoire. */
     var opponentForfeited by mutableStateOf(false)
         private set
+
+    /** Partie entre amis finie sur une égalité parfaite (personne n'a répondu à la question décisive). */
+    var isDraw by mutableStateOf(false)
+        private set
+
+    /** L'ami a quitté la partie : on la finit seul. */
+    var opponentLeft by mutableStateOf(false)
+        private set
+
+    /** Une partie entre amis, en direct. */
+    val isLive: Boolean get() = live != null
+
+    // Partie entre amis : le dernier état reçu du serveur et l'instant de sa réception, les
+    // réponses de l'ami aux questions closes, et ce qui n'est pas encore parti au serveur.
+    private var liveState: DuelFriendState? = null
+    private var liveStateAtMs = 0L
+    private val liveOpponent = HashMap<Int, DuelBotAnswer>()
+    private var unsentAnswer: Pair<Int, DuelAnswer>? = null
+    private var unsentPick: Pair<Int, String>? = null
+    private var refreshRequested = false
 
     /**
      * Les questions des manches déjà commencées, dans l'ordre où elles se jouent, et les
@@ -368,6 +426,11 @@ class DuelGameModel(
 
     /** La réponse de l'adversaire à la question `i`. */
     fun opponentAnswerAt(i: Int): DuelBotAnswer {
+        // Entre amis : la vraie réponse de l'ami, connue une fois la question close.
+        if (live != null) {
+            return liveOpponent[i]
+                ?: DuelBotAnswer(correct = false, choice = null, value = null, timeMs = questionAt(i).timeLimitMs)
+        }
         if (i >= questionCount) match.tiebreakBot?.let { return it }
         return playedOpponentAnswers.getOrNull(i) ?: DuelRules.missingOpponentAnswer(questionAt(i))
     }
@@ -395,6 +458,8 @@ class DuelGameModel(
             answers = answers,
             forfeit = opponentForfeited,
             pick = myPick,
+            friendly = live != null,
+            draw = isDraw,
         )
 
     /** Quitter en pleine partie : une défaite, avec les réponses données jusque-là. */
@@ -407,6 +472,7 @@ class DuelGameModel(
         tiebreak = false,
         answers = answers,
         pick = myPick,
+        friendly = live != null,
     )
 
     // ------------------------------------------------------------ actions du joueur
@@ -419,6 +485,10 @@ class DuelGameModel(
         if (intro.deadlineMs != null && clock() >= intro.deadlineMs) return
         roundIntro = intro.copy(chosen = subject)
         haptic(DuelHaptic.Lock)
+        if (live != null) {
+            unsentPick = intro.number to subject
+            refreshRequested = true
+        }
     }
 
     /** Une option touchée est verrouillée aussitôt : on ne change pas d'avis. */
@@ -456,12 +526,17 @@ class DuelGameModel(
         lockedAtMs = clock() - questionStartMs
         opponentDelayMs = random.nextLong(DuelRules.OPPONENT_DELAY_MIN_MS, DuelRules.OPPONENT_DELAY_MAX_MS + 1)
         haptic(DuelHaptic.Lock)
+        if (live != null) queueLiveAnswer()
     }
 
     // ------------------------------------------------------------ déroulé
 
     /** Joue la partie jusqu'au bout. L'annulation de la coroutine l'arrête où elle en est. */
     suspend fun run() {
+        if (live != null) {
+            runLive(live)
+            return
+        }
         for ((r, plan) in match.rounds.withIndex()) {
             if (r > 0) announce(plan)
             // La première manche est déjà en place (voir `init`).
@@ -623,5 +698,261 @@ class DuelGameModel(
         }
         haptic(if (round.player) DuelHaptic.Correct else DuelHaptic.Wrong)
         pause(DuelRules.revealMs(current.kind))
+    }
+
+    // ------------------------------------------------------------ partie entre amis
+
+    /** Ma réponse à la question en cours, telle qu'elle part au serveur. */
+    private fun currentAnswer(): DuelAnswer =
+        DuelRules.answer(question, selectedChoice, sliderValue, locked = false, sliderTouched = sliderTouched, lockedAtMs = lockedAtMs)
+
+    private fun queueLiveAnswer() {
+        unsentAnswer = index to currentAnswer()
+        refreshRequested = true
+    }
+
+    /**
+     * Un échange avec le serveur : mon choix de matière ou ma réponse s'ils ne sont pas encore
+     * partis, sinon l'état de la partie. Un échec (réseau) est simplement retenté au tour suivant.
+     */
+    private suspend fun refreshLive(link: DuelLiveLink) {
+        do {
+            refreshRequested = false
+            val pick = unsentPick
+            val pending = unsentAnswer
+            val state = try {
+                when {
+                    pick != null -> link.pick(pick.first, pick.second).also {
+                        if (unsentPick?.first == pick.first) unsentPick = null
+                    }
+                    pending != null -> link.answer(pending.first, pending.second).also {
+                        if (unsentAnswer?.first == pending.first) unsentAnswer = null
+                    }
+                    else -> link.state()
+                }
+            } catch (cancelled: kotlinx.coroutines.CancellationException) {
+                // Un dépassement de délai est un échec comme un autre ; une vraie annulation arrête tout.
+                if (cancelled !is kotlinx.coroutines.TimeoutCancellationException) throw cancelled
+                return
+            } catch (_: Throwable) {
+                return
+            }
+            liveState = state
+            liveStateAtMs = clock()
+        } while (refreshRequested)
+    }
+
+    /**
+     * La partie en direct : le modèle envoie chaque réponse, interroge le serveur plusieurs fois
+     * par seconde, et suit ce qu'il dit (l'ami a répondu, la question est close avec sa réponse
+     * et les points de chacun, la suivante démarre dans tant de millisecondes).
+     */
+    private suspend fun runLive(link: DuelLiveLink) = kotlinx.coroutines.coroutineScope {
+        val poller = launch {
+            while (true) {
+                refreshLive(link)
+                // Jusqu'au prochain tour, sauf si une réponse ou un choix attend de partir.
+                var waited = 0L
+                while (waited < DuelRules.LIVE_POLL_MS && !refreshRequested) {
+                    pause(DuelRules.TICK_MS)
+                    waited += DuelRules.TICK_MS
+                }
+            }
+        }
+        try {
+            var i = 0
+            var startsAt = link.startsAtMs
+            while (true) {
+                // Une nouvelle manche commence : son annonce occupe le temps qui la précède.
+                if (i in 1 until questionCount && i % DuelMatch.QUESTIONS_PER_ROUND == 0 && i >= playedQuestions.size) {
+                    announceLive(match.rounds[i / DuelMatch.QUESTIONS_PER_ROUND], startsAt)
+                }
+                // La question démarre au même instant pour les deux joueurs.
+                while (clock() < startsAt) pause(DuelRules.TICK_MS)
+                if (!resolveLive(i)) {
+                    // Une manche sans questions : la partie ne peut pas se jouer.
+                    phase = DuelPhase.Finished
+                    return@coroutineScope
+                }
+                val state = playLive(i, startsAt)
+
+                if (state.finished) {
+                    playerWon = state.won ?: false
+                    isDraw = state.draw
+                    pause(
+                        if (question.kind == DuelQuestionKind.SLIDER) DuelRules.LIVE_FINAL_REVEAL_SLIDER_MS
+                        else DuelRules.LIVE_FINAL_REVEAL_MS,
+                    )
+                    phase = DuelPhase.Finished
+                    return@coroutineScope
+                }
+
+                val next = maxOf(state.index, i + 1)
+                startsAt = liveStateAtMs + state.questionStartsInMs
+                if (next >= questionCount && !isSuddenDeath) {
+                    // Égalité après la dernière question : l'annonce, puis la question décisive.
+                    pause(DuelRules.SUDDEN_DEATH_INTRO_MS)
+                    isSuddenDeath = true
+                    phase = DuelPhase.SuddenDeathIntro
+                    haptic(DuelHaptic.SuddenDeath)
+                }
+                i = next
+            }
+        } finally {
+            poller.cancel()
+        }
+    }
+
+    /**
+     * L'annonce d'une manche en direct, jusqu'à l'instant où sa première question démarre. Au
+     * choix : celui qui choisit a jusqu'à 1,5 s avant le départ ; l'autre voit la matière dès
+     * que le serveur la connaît.
+     */
+    private suspend fun announceLive(plan: DuelRoundPlan, startsAt: Long) {
+        if (plan.kind == DuelRoundKind.MIXED) return
+        // En retard sur le serveur (coupure réseau) : pas d'annonce, on rattrape la partie.
+        if (startsAt - clock() <= DuelRules.LIVE_ANNOUNCE_MIN_MS) return
+        // La révélation de la question précédente reste un instant à l'écran.
+        pause(DuelRules.LIVE_BEFORE_ANNOUNCE_MS)
+        val mine = plan.isMyPick
+        show(
+            DuelRoundAnnouncement(
+                number = plan.number,
+                kind = plan.kind,
+                mine = mine,
+                options = if (mine) plan.options.orEmpty().map { it.subject } else emptyList(),
+                opensAtMs = clock(),
+                deadlineMs = if (mine) startsAt - DuelRules.LIVE_PICK_MARGIN_MS else null,
+            ),
+        )
+        while (clock() < startsAt) {
+            pause(DuelRules.TICK_MS)
+            if (plan.kind != DuelRoundKind.PICK) continue
+            val intro = roundIntro ?: continue
+            val chosen = liveState?.picks?.get(plan.number.toString())
+            if (chosen != null && intro.chosen != chosen) {
+                roundIntro = intro.copy(chosen = chosen)
+                if (!mine) haptic(DuelHaptic.OpponentAnswered)
+            } else if (mine && intro.chosen == null && intro.deadlineMs != null && clock() >= intro.deadlineMs) {
+                // Pas de choix à temps : la première matière proposée, celle que le serveur retient.
+                plan.options?.firstOrNull()?.subject?.let { roundIntro = intro.copy(chosen = it) }
+            }
+        }
+    }
+
+    /**
+     * Fixe les questions des manches jusqu'à la question [i] (plusieurs d'un coup après une
+     * coupure réseau). Pour une manche au choix, attend que le serveur donne la matière.
+     * Renvoie faux si une manche n'a pas de questions.
+     */
+    private suspend fun resolveLive(i: Int): Boolean {
+        while (playedQuestions.size <= i && i < questionCount) {
+            val plan = match.rounds[minOf(playedQuestions.size / DuelMatch.QUESTIONS_PER_ROUND, match.rounds.size - 1)]
+            var questions = plan.questions.orEmpty()
+            if (plan.kind == DuelRoundKind.PICK) {
+                var subject = liveState?.picks?.get(plan.number.toString())
+                while (subject == null) {
+                    // Sans choix, le serveur ne fixe la matière qu'au départ de la manche : on
+                    // la lui demande tout de suite plutôt que d'attendre le prochain tour.
+                    refreshRequested = true
+                    pause(DuelRules.TICK_MS)
+                    subject = liveState?.picks?.get(plan.number.toString())
+                }
+                val options = plan.options.orEmpty()
+                if (options.isNotEmpty()) {
+                    questions = (options.firstOrNull { it.subject == subject } ?: options[0]).questions
+                }
+                roundSubjects = roundSubjects + (plan.number to subject)
+            }
+            questions = questions.take(DuelMatch.QUESTIONS_PER_ROUND)
+            if (questions.isEmpty()) return false
+            playedQuestions = playedQuestions + questions
+        }
+        return true
+    }
+
+    /** Joue une question en direct, jusqu'à ce que le serveur la close. Rend l'état reçu à ce moment-là. */
+    private suspend fun playLive(i: Int, startedAtMs: Long): DuelFriendState {
+        val isTiebreak = i >= questionCount
+        index = i
+        selectedChoice = null
+        playerLocked = false
+        opponentAnswered = false
+        lastRound = null
+        frozenFraction = 1.0
+        phase = DuelPhase.Answering
+
+        val current = question
+        sliderTouched = false
+        lockedAtMs = null
+        if (current.kind == DuelQuestionKind.SLIDER) sliderValue = DuelRules.sliderStart(current)
+        questionStartMs = startedAtMs
+
+        val limitMs = current.timeLimitMs.toLong()
+        var lastClock = Int.MAX_VALUE
+        var closed: DuelFriendState? = null
+        while (closed == null) {
+            pause(DuelRules.TICK_MS)
+            val elapsed = clock() - questionStartMs
+            val state = liveState
+            if (state != null) {
+                if (state.opponentLeft != opponentLeft) opponentLeft = state.opponentLeft
+                if (state.resolved > i || state.finished) {
+                    closed = state
+                    break
+                }
+                if (state.index == i && state.opponentAnswered && !opponentAnswered) {
+                    opponentAnswered = true
+                    haptic(DuelHaptic.OpponentAnswered)
+                }
+            }
+            if (elapsed >= limitMs && !playerLocked) {
+                // Temps écoulé : le serveur est prévenu, pour ne pas faire attendre l'ami.
+                playerLocked = true
+                lockedAtMs = limitMs
+                queueLiveAnswer()
+            }
+            val remaining = DuelRules.secondsLeft(limitMs, elapsed)
+            if (remaining in 1..DuelRules.CLOCK_SECONDS && remaining < lastClock && !playerLocked) {
+                lastClock = remaining
+                haptic(DuelHaptic.Clock)
+            }
+        }
+        val state = closed!!
+        frozenFraction = DuelRules.remainingFraction(limitMs, clock() - questionStartMs)
+
+        givenAnswers += currentAnswer()
+        // La réponse de l'ami et les points de chacun viennent du serveur, qui fait foi.
+        state.opponentAnswers.getOrNull(i)?.let { theirs ->
+            liveOpponent[i] = DuelBotAnswer(
+                correct = state.opponentPoints.getOrElse(i) { false },
+                choice = theirs.c,
+                value = theirs.v,
+                timeMs = theirs.t,
+            )
+        }
+        val round = DuelRound(
+            player = state.myPoints.getOrElse(i) { false },
+            opponent = state.opponentPoints.getOrElse(i) { false },
+        )
+        playerLocked = true
+        opponentAnswered = true
+        lastRound = round
+        phase = DuelPhase.Reveal
+        if (!isTiebreak) {
+            playerScore = state.myScore
+            opponentScore = state.opponentScore
+            // Les questions closes pendant une coupure réseau sont marquées d'un coup.
+            val mine = playerMarks.toMutableList()
+            val theirs = opponentMarks.toMutableList()
+            for (k in 0 until minOf(state.resolved, mine.size)) {
+                state.myPoints.getOrNull(k)?.let { mine[k] = it }
+                state.opponentPoints.getOrNull(k)?.let { theirs[k] = it }
+            }
+            playerMarks = mine
+            opponentMarks = theirs
+        }
+        haptic(if (round.player) DuelHaptic.Correct else DuelHaptic.Wrong)
+        return state
     }
 }

@@ -107,7 +107,6 @@ fun HomeFeedScreen(
     var segment by remember { mutableIntStateOf(HomeFeedSession.segment) }
     var deck by remember(language) { mutableStateOf(HomeFeedSession.restore(language, completedCount)) }
     var deckReady by remember(language) { mutableStateOf(deck.isNotEmpty()) }
-    var inviteDismissed by remember { mutableStateOf(HomeFeedSession.isInviteDismissed(context)) }
     // Tirer vers le bas : le catalogue est relu (nouveaux cours, événements), le deck redistribué.
     val refreshScope = rememberCoroutineScope()
     var refreshing by remember { mutableStateOf(false) }
@@ -151,13 +150,12 @@ fun HomeFeedScreen(
     val activeCampaign = remember(deckReady, campaigns) { CampaignStore.active().firstOrNull() }
     val authors = remember(deckReady) { AuthorStore.all(context.applicationContext) }
 
-    /** Le deck, l'événement en troisième position et l'invitation en septième. */
-    val forYouItems = remember(deck, deckReady, activeCampaign, inviteDismissed) {
+    /** Le deck, avec l'événement en troisième position. */
+    val forYouItems = remember(deck, deckReady, activeCampaign) {
         if (deckReady && deck.isEmpty()) return@remember listOf<FeedItem>(FeedItem.Notice(FeedNotice.ALL_CAUGHT_UP))
         val items = ArrayList<FeedItem>(deck.size + 2)
         deck.forEach { items += FeedItem.CourseCard(it) }
         if (activeCampaign != null) items.add(minOf(2, items.size), FeedItem.CampaignCard(activeCampaign))
-        if (!inviteDismissed && items.size >= 4) items.add(minOf(6, items.size), FeedItem.CreatorInvite)
         items.toList()
     }
 
@@ -249,7 +247,6 @@ fun HomeFeedScreen(
         FeedHeader(
             language = language,
             streak = progress.streak,
-            onSearch = onSearch,
             modifier = Modifier.padding(start = 20.dp, end = 20.dp, top = 8.dp),
         )
         SegmentedPills(
@@ -300,9 +297,9 @@ fun HomeFeedScreen(
                 // Ce que la carte suivante laisse voir en bas de l'écran.
                 val peek = 44.dp
                 val pageHeight = (maxHeight - peek).coerceAtLeast(320.dp)
-                // La couverture garde son 16:9 tant que la page est assez haute ; sur un petit
-                // écran elle se raccourcit pour laisser la place au texte et aux compteurs.
-                val coverHeight = minOf((maxWidth - 32.dp) * 9f / 16f, pageHeight * 0.42f)
+                // La couverture occupe la hauteur que le texte laisse libre (plus de vide sous
+                // l'accroche), jusqu'à un carré ; sur un petit écran elle se raccourcit d'elle-même.
+                val coverMaxHeight = maxWidth - 32.dp
                 VerticalPager(
                     state = pagerState,
                     modifier = Modifier.fillMaxSize(),
@@ -329,7 +326,7 @@ fun HomeFeedScreen(
                                     tagStyle = if (campaign != null) TagPillStyle.WARM else TagPillStyle.ACCENT,
                                     screen = screen,
                                     fillsPage = true,
-                                    coverHeight = coverHeight,
+                                    coverMaxHeight = coverMaxHeight,
                                     onOpen = { open(course, index) },
                                     onOpenCreator = onOpenCreator,
                                 )
@@ -341,16 +338,8 @@ fun HomeFeedScreen(
                                 onOpen = { onOpenCampaign(item.campaign) },
                                 fillsPage = true,
                             )
-                            FeedItem.CreatorInvite -> CreatorInviteCard(
-                                language = language,
-                                authors = authors,
-                                onBecomeCreator = onBecomeCreator,
-                                onLater = {
-                                    HomeFeedSession.dismissInvite(context)
-                                    inviteDismissed = true
-                                },
-                                fillsPage = true,
-                            )
+                            // L'invitation à écrire n'est plus glissée dans le fil.
+                            FeedItem.CreatorInvite -> Unit
                             is FeedItem.Video -> VideoFeedCard(title = item.videoId, fillsPage = true)
                             is FeedItem.Notice -> {
                                 val (title, body) = when (item.notice) {
@@ -381,8 +370,7 @@ fun HomeFeedScreen(
 }
 
 @Composable
-private fun FeedHeader(language: AppLanguage, streak: Int, onSearch: () -> Unit, modifier: Modifier = Modifier) {
-    val context = LocalContext.current
+private fun FeedHeader(language: AppLanguage, streak: Int, modifier: Modifier = Modifier) {
     Row(
         modifier = modifier.fillMaxWidth(),
         verticalAlignment = Alignment.CenterVertically,
@@ -424,12 +412,6 @@ private fun FeedHeader(language: AppLanguage, streak: Int, onSearch: () -> Unit,
                 color = DS.ink,
             )
         }
-        RoundIconButton(
-            icon = Icons.Filled.Search,
-            onClick = onSearch,
-            size = 36.dp,
-            contentDescription = StringStore.text(context, "tab.explore", language),
-        )
     }
 }
 
@@ -438,9 +420,6 @@ private fun FeedHeader(language: AppLanguage, streak: Int, onSearch: () -> Unit,
  * redistribuer les cartes à chaque retour sur l'onglet), les cartes déjà comptées, le segment.
  */
 internal object HomeFeedSession {
-    private const val INVITE_DISMISS_KEY = "sophia_creator_invite_dismissed_at"
-    private const val PREFS = "sophia_prefs"
-
     private var language: AppLanguage? = null
     private var completedCount = -1
     private var deckIds: List<String> = emptyList()
@@ -470,17 +449,4 @@ internal object HomeFeedSession {
         return deckIds.mapNotNull { byId[it] }
     }
 
-    /** L'invitation à créer est masquée pour deux semaines après « Plus tard ». */
-    fun isInviteDismissed(context: android.content.Context): Boolean {
-        val stamp = context.getSharedPreferences(PREFS, android.content.Context.MODE_PRIVATE).getLong(INVITE_DISMISS_KEY, 0L)
-        if (stamp <= 0L) return false
-        return System.currentTimeMillis() - stamp < 14L * 24 * 3_600 * 1_000
-    }
-
-    fun dismissInvite(context: android.content.Context) {
-        context.getSharedPreferences(PREFS, android.content.Context.MODE_PRIVATE)
-            .edit()
-            .putLong(INVITE_DISMISS_KEY, System.currentTimeMillis())
-            .apply()
-    }
 }

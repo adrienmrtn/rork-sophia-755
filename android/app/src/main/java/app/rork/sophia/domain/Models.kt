@@ -94,40 +94,64 @@ data class Course(
 
     val hasQuiz: Boolean get() = quizAvailable || quiz.isNotEmpty()
 
-    val readsCount: Int
-        get() = fakeReadsCount(id)
+    /** Les vraies ouvertures du cours (serveur) ; `null` tant que le chiffre n'est pas arrivé. */
+    val realReadsCount: Int? get() = CourseStats.reads(id)
 
-    val readsCountShort: String
-        get() {
-            val count = readsCount
-            return if (count < 10_000) {
-                String.format("%.1f k", count / 1000.0).replace('.', ',')
-            } else {
-                "${count / 1000} k"
-            }
-        }
+    /** Les ouvertures pour les tris et les totaux : le vrai chiffre, 0 s'il manque. */
+    val readsCount: Int get() = realReadsCount ?: 0
 }
 
 /**
- * Lectures affichées d'un cours tant que le serveur ne les compte pas : fausses mais stables,
- * dérivées d'un hash FNV-1a de l'identifiant (entre 7 000 et 250 000, arrondies à la
- * centaine), identiques sur iOS. Accessible sans `Course` pour les compteurs d'un créateur.
+ * Les compteurs réels des cours, tels que le serveur les envoie dans le manifeste du catalogue
+ * (clé `stats` : identifiant du cours → `[ouvertures, j'aime]`, table `course_counters`). Les
+ * mêmes quelle que soit la langue ; vides tant qu'aucun manifeste récent n'a été lu. Plus
+ * aucun chiffre inventé côté app, comme sur iOS (`CatalogStore.courseStats`). `CatalogStore`
+ * les pose ici à chaque manifeste.
  */
-/** Même compteur pour une fiche du catalogue, qui n'est pas un [Course]. */
-val CourseSummary.readsCount: Int
-    get() = fakeReadsCount(id)
+object CourseStats {
+    @Volatile
+    var byCourse: Map<String, List<Int>> = emptyMap()
 
-fun fakeReadsCount(courseId: String): Int {
-    var hash = 0xcbf29ce484222325UL
-    for (byte in courseId.encodeToByteArray()) {
-        hash = hash xor byte.toULong()
-        hash *= 0x100000001b3UL
-    }
-    val lower = 7_000
-    val upper = 250_000
-    val value = lower + (hash % (upper - lower).toULong()).toInt()
-    return (value / 100) * 100
+    /** Les ouvertures du cours ; `null` sans chiffre. */
+    fun reads(courseId: String): Int? = byCourse[courseId]?.getOrNull(0)
+
+    /** Les j'aime du cours (deuxième valeur) ; 0 sans chiffre. */
+    fun likes(courseId: String): Int = byCourse[courseId]?.getOrNull(1) ?: 0
 }
+
+/**
+ * La langue d'écriture des cours qui n'ont pas été écrits en français, telle que le serveur la
+ * donne dans le manifeste du catalogue (clé `origins` : identifiant du cours → code de langue,
+ * `courses.origin_lang`). `CatalogStore` la pose ici à chaque manifeste.
+ */
+object CourseOrigins {
+    @Volatile
+    var byCourse: Map<String, String> = emptyMap()
+
+    /**
+     * Le code à afficher dans « Traduit · original en … » : la langue d'écriture portée par le
+     * contenu ([contentCode]) ou par le serveur, seulement quand on ne lit pas le cours dans
+     * cette langue. `null` pour un cours maison écrit en français.
+     */
+    fun translatedFromCode(courseId: String, contentCode: String?, reading: AppLanguage): String? {
+        val code = contentCode?.takeIf { it.isNotBlank() } ?: byCourse[courseId] ?: return null
+        return code.takeIf { !it.equals(reading.code, ignoreCase = true) }
+    }
+
+    /** La langue d'écriture, quand l'app la connaît et qu'elle n'est pas celle de lecture. */
+    fun language(courseId: String, contentCode: String?, reading: AppLanguage): AppLanguage? {
+        val code = translatedFromCode(courseId, contentCode, reading) ?: return null
+        return AppLanguage.entries.firstOrNull { it.code.equals(code, ignoreCase = true) }
+    }
+}
+
+/** Les vraies ouvertures d'une fiche du catalogue ; `null` tant que le chiffre n'est pas arrivé. */
+val CourseSummary.realReadsCount: Int?
+    get() = CourseStats.reads(id)
+
+/** Les ouvertures pour les tris et les totaux : le vrai chiffre, 0 s'il manque. */
+val CourseSummary.readsCount: Int
+    get() = realReadsCount ?: 0
 
 @Serializable
 data class LearningCollection(
@@ -282,6 +306,14 @@ data class UserProgress(
     val readingSeconds: Int = 0,
     /** L'avatar illustré choisi dans le profil (`avatar_01` … `avatar_60`), ou null pour les initiales. Même clé JSON qu'iOS. */
     val avatarId: String? = null,
+    /**
+     * Badges obtenus : identifiant (`Badge.id`) → date ISO où l'app l'a constaté. Un badge gagné
+     * ne se perd plus. Écrit aussi par iOS : sans ce champ, la prochaine synchronisation depuis
+     * Android effaçait les badges gagnés sur l'iPhone.
+     */
+    val earnedBadges: Map<String, String> = emptyMap(),
+    /** Les badges (trois au plus) que le lecteur affiche sur son profil, visibles de ses amis. */
+    val featuredBadgeIds: List<String> = emptyList(),
 )
 
 /**

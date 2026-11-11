@@ -22,6 +22,8 @@ import app.rork.sophia.data.analytics.Analytics
 import app.rork.sophia.data.catalog.CatalogStore
 import kotlinx.coroutines.launch
 import app.rork.sophia.ui.SophiaRoot
+import app.rork.sophia.data.FeatureFlags
+import app.rork.sophia.domain.SophiaLinks
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.SophiaAppearance
 import app.rork.sophia.ui.theme.SophiaTheme
@@ -49,6 +51,7 @@ class MainActivity : ComponentActivity() {
         )
         deepLinkCourseId = courseIdFromIntent(intent)
         deepLinkCreatorSlug = creatorSlugFromIntent(intent)
+        routeFriendLink(intent)
         observeForeground()
         setContent {
             // The theme needs the language to pick a font family whose script the user can
@@ -72,6 +75,7 @@ class MainActivity : ComponentActivity() {
         setIntent(intent)
         deepLinkCourseId = courseIdFromIntent(intent)
         deepLinkCreatorSlug = creatorSlugFromIntent(intent)
+        routeFriendLink(intent)
     }
 
     /**
@@ -87,13 +91,21 @@ class MainActivity : ComponentActivity() {
                         val app = application as SophiaApplication
                         app.progressManager.refreshStreak()
                         Analytics.appDidStart()
+                        // Duels entre amis : l'app se signale (pastille verte) et reçoit les
+                        // invitations, là où les duels existent (app en anglais).
+                        if (FeatureFlags.duelsVisible(app.languageManager.current.value)) {
+                            app.duelLiveService.start()
+                        }
                         // Le catalogue en ligne : manifeste relu au lancement et au retour au
                         // premier plan, s'il date de plus de `refresh_hours` (six heures).
                         lifecycleScope.launch {
                             CatalogStore.refreshIfNeeded(applicationContext, app.languageManager.current.value)
                         }
                     }
-                    Lifecycle.Event.ON_STOP -> Analytics.appDidStop()
+                    Lifecycle.Event.ON_STOP -> {
+                        (application as SophiaApplication).duelLiveService.stop()
+                        Analytics.appDidStop()
+                    }
                     else -> Unit
                 }
             },
@@ -118,7 +130,20 @@ class MainActivity : ComponentActivity() {
             Analytics.pendingCourseOpenSource = intent.getStringExtra(EXTRA_SOURCE) ?: "link"
             return data.pathSegments.firstOrNull()
         }
-        return null
+        // Une page de cours du site (lien d'app) : `/courses/150…` ou `/c/<identifiant>`.
+        val pending = when (val target = SophiaLinks.webTarget(data.toString())) {
+            is SophiaLinks.WebTarget.CourseNumber -> SophiaLinks.pendingCourseNumber(target.number)
+            is SophiaLinks.WebTarget.CourseId -> target.id
+            else -> null
+        }
+        if (pending != null) Analytics.pendingCourseOpenSource = "shared_link"
+        return pending
+    }
+
+    /** `sophia://friend/<handle>` : le QR code d'un ami, scanné avec l'appareil photo. */
+    private fun routeFriendLink(intent: Intent?) {
+        val handle = intent?.data?.toString()?.let { SophiaLinks.friendHandle(it) } ?: return
+        app.rork.sophia.data.FriendLinkRouter.open(handle)
     }
 
     private fun creatorSlugFromIntent(intent: Intent?): String? {
@@ -126,7 +151,8 @@ class MainActivity : ComponentActivity() {
         if (data.scheme == "sophia" && (data.host == "author" || data.host == "creator")) {
             return data.pathSegments.firstOrNull()?.takeIf { it.isNotBlank() }
         }
-        return null
+        // La page d'un auteur sur le site (lien d'app) : `/authors/<slug>`.
+        return (SophiaLinks.webTarget(data.toString()) as? SophiaLinks.WebTarget.Creator)?.slug
     }
 
     companion object {

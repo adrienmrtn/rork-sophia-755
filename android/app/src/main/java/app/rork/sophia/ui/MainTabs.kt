@@ -47,6 +47,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import app.rork.sophia.AppConfig
+import app.rork.sophia.domain.SophiaLinks
 import app.rork.sophia.SophiaApplication
 import app.rork.sophia.audio.CourseAudioPlayer
 import app.rork.sophia.ui.audio.AudioDownloadsScreen
@@ -90,10 +91,10 @@ import app.rork.sophia.ui.paywall.PaywallContext
 import app.rork.sophia.ui.paywall.PaywallScreen
 import app.rork.sophia.ui.legal.LegalDocKind
 import app.rork.sophia.ui.legal.LegalDocumentScreen
-import app.rork.sophia.ui.profile.AmbassadorScreen
 import app.rork.sophia.ui.profile.FeedbackScreen
 import app.rork.sophia.ui.profile.ProfileScreen
 import app.rork.sophia.ui.profile.SettingsScreen
+import app.rork.sophia.ui.social.FriendLinkHost
 import app.rork.sophia.ui.social.FriendsScreen
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
@@ -105,8 +106,13 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import androidx.compose.runtime.key
+import app.rork.sophia.ui.duels.DuelInviteBanner
+import app.rork.sophia.ui.duels.DuelFriendFlow
+import app.rork.sophia.ui.duels.DuelFriendPresenter
+import app.rork.sophia.ui.newgen.BadgeCelebrationHost
 
-private enum class OverlayScreen { Settings, Friends, Feedback, Ambassador, Terms, Privacy, MyCourses, AudioDownloads }
+private enum class OverlayScreen { Settings, Friends, Feedback, FeatureRequest, Terms, Privacy, MyCourses, AudioDownloads }
 
 /**
  * Widest the tab content is allowed to get. Sophia's screens are a single column; past this
@@ -134,9 +140,9 @@ fun MainTabs(
     val progress by app.progressManager.progress.collectAsState()
     val discount by app.discountManager.state.collectAsState()
     var selectedTab by remember { mutableIntStateOf(0) }
-    // Variante de navigation (A/B « nouvelle génération »), lue une fois : un changement dans
-    // les réglages de debug vaut au prochain lancement, pas sous les doigts de l'utilisateur.
-    val newNavigation = remember { FeatureFlags.newNavigation(context) }
+    // La navigation « nouvelle génération », pour tous depuis la fin du tirage 50/50. La
+    // branche classique plus bas n'est plus servie.
+    val newNavigation = FeatureFlags.newNavigation
     // L'onglet Duels n'existe qu'en anglais pour l'instant (la langue des questions). Lu une
     // fois, comme la variante de navigation : changer de langue dans les réglages ne fait pas
     // apparaître ou disparaître un onglet sous l'écran ouvert, il suit au prochain lancement.
@@ -251,11 +257,18 @@ fun MainTabs(
         // Un lien reçu en pleine partie de duel attend la fin de la partie : le cours
         // s'ouvrirait dessous, invisible, et prendrait le bouton retour.
         if (showDuelFlow) return@LaunchedEffect
-        val id = deepLinkCourseId ?: return@LaunchedEffect
-        // Posée par `MainActivity` à la réception de l'intent : `notification` ou `link`.
+        val pending = deepLinkCourseId ?: return@LaunchedEffect
+        // Posée par `MainActivity` à la réception de l'intent : `notification`, `link` ou `shared_link`.
         val source = Analytics.takeCourseOpenSource()
-        val stub = ContentCatalog.cachedStub(language, id)
-            ?: ContentCatalog.courseStubAsync(context.applicationContext, language, id)
+        // Un lien du site ne porte que le numéro du cours : l'identifiant vient du catalogue.
+        val id = SophiaLinks.resolvePendingCourse(
+            pending,
+            ContentCatalog.summariesAsync(context.applicationContext, language).map { it.id },
+        )
+        val stub = id?.let {
+            ContentCatalog.cachedStub(language, it)
+                ?: ContentCatalog.courseStubAsync(context.applicationContext, language, it)
+        }
         stub?.let {
             // Through the same door as a tap on home: setting `selectedCourse` directly
             // skipped claiming the daily free course, so a free user who arrived from a link
@@ -369,6 +382,8 @@ fun MainTabs(
     // confirmation avant d'abandonner ; son gestionnaire, composé plus tard, passe avant
     // celui-ci). Ce garde-fou évite seulement que le retour change d'onglet sous la partie.
     BackHandler(enabled = showDuelFlow && paywall == null && rewardSteps == null) {}
+    // Pendant un duel entre amis, retour ne quitte pas l'app ; l'écran du duel gère ses propres retours.
+    BackHandler(enabled = DuelFriendPresenter.entry != null && paywall == null && rewardSteps == null) {}
     // Registered last, so it takes precedence: the author page sits above the reader.
     BackHandler(enabled = selectedAuthorSlug != null) {
         selectedAuthorSlug = null
@@ -427,7 +442,7 @@ fun MainTabs(
             }
         } else {
             if (newNavigation) {
-                // Les 4 onglets de la maquette ; le lecteur, les paywalls et les overlays
+                // Les onglets de la maquette ; le lecteur, les paywalls et les overlays
                 // ci-dessous restent les mêmes, `openCourse` reste la seule porte du lecteur.
                 NewGenTabs(
                     language = language,
@@ -445,19 +460,13 @@ fun MainTabs(
                     onOpenCourse = { course, source -> openCourse(course.toStub(), source) },
                     onOpenCourseById = { id, source -> openCourseById(id, source) },
                     onOpenSettings = { overlay = OverlayScreen.Settings },
-                    onOpenFriends = {
-                        pendingFriendUserId = null
+                    onOpenFriends = { friendUserId ->
+                        pendingFriendUserId = friendUserId
                         overlay = OverlayScreen.Friends
                     },
                     onShowPaywall = { paywall = PaywallContext.DEBLOQUER_COURS },
                     onOpenPathQuiz = { level, isLastLevel -> pathQuiz = level to isLastLevel },
                     onOpenAudioPlayer = { showAudioPlayer = true },
-                    onBecomeCreator = {
-                        val url = AppConfig.CREATOR_STUDIO_URL
-                        val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
-                            .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-                        runCatching { context.startActivity(intent) }
-                    },
                 )
             } else {
     // Autorenew is the Material twin of the iOS `arrow.triangle.2.circlepath`; RestartAlt
@@ -644,10 +653,10 @@ fun MainTabs(
                                 paywall = PaywallContext.DEBLOQUER_COURS
                             },
                             onOpenFeedback = { openFromSettings(OverlayScreen.Feedback) },
-                            // La page du rôle choisi sur le site, plutôt que le formulaire intégré.
-                            onOpenCreators = { role ->
-                                val url = AppConfig.creatorsUrl(role)
-                                val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+                            onOpenFeatureRequest = { openFromSettings(OverlayScreen.FeatureRequest) },
+                            // Le site des créateurs, dans la langue de l'app : plus de formulaire intégré.
+                            onOpenAmbassador = {
+                                val intent = Intent(Intent.ACTION_VIEW, Uri.parse(AppConfig.creatorHubUrl(language)))
                                     .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                                 runCatching { context.startActivity(intent) }
                             },
@@ -686,10 +695,12 @@ fun MainTabs(
                             isPremium = isPremium,
                             onBack = { closeOverlay() },
                         )
-                    OverlayScreen.Ambassador ->
-                        AmbassadorScreen(
+                    OverlayScreen.FeatureRequest ->
+                        FeedbackScreen(
                             language = language,
+                            isPremium = isPremium,
                             onBack = { closeOverlay() },
+                            initialCategory = "feature",
                         )
                     OverlayScreen.Terms ->
                         LegalDocumentScreen(
@@ -886,6 +897,33 @@ fun MainTabs(
             exit = fadeOut() + slideOutVertically { -it },
         ) {
             TrialEndingMiniBanner(language = language)
+        }
+
+        // La fête d'un badge gagné, quand les onglets sont à l'écran : jamais par-dessus (ni
+        // derrière) un cours, un quiz, un duel, un paywall ou une autre page.
+        // Un lien d'ami ouvert de l'extérieur (QR code scanné) : la feuille de confirmation.
+        FriendLinkHost(language = language)
+        BadgeCelebrationHost(
+            screenFree = selectedCourse == null && !tabsCovered && !showDuelFlow &&
+                selectedAuthorSlug == null && DuelFriendPresenter.entry == null && !showCreateAccountPrompt,
+            language = language,
+        )
+
+        // Un duel entre amis recouvre tout, lui aussi, où que l'on soit dans l'app : un défi lancé
+        // depuis le classement, ou une invitation acceptée depuis le bandeau.
+        DuelFriendPresenter.entry?.let { friendEntry ->
+            key(friendEntry) {
+                DuelFriendFlow(
+                    entry = friendEntry,
+                    language = language,
+                    onClose = { DuelFriendPresenter.dismiss() },
+                    modifier = Modifier.fillMaxSize(),
+                )
+            }
+        }
+        // Une invitation reçue : en bandeau par-dessus l'écran en cours, là où les duels existent.
+        if (showsDuels) {
+            DuelInviteBanner(language = language, modifier = Modifier.align(Alignment.TopCenter))
         }
     }
 }

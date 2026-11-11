@@ -447,35 +447,16 @@ struct ProfileV2View: View {
         .buttonStyle(.plain)
     }
 
-    // MARK: - Pages secondaires
+    // MARK: - Anti-scroll
 
+    /// L'entrée de l'anti-scroll : une carte illustrée comme les autres, plus une ligne de liste.
     private var secondaryPages: some View {
-        VStack(spacing: 0) {
-            pageRow(languageManager.text("profile.page.antiScroll"), action: onOpenAntiScroll)
-        }
-        .background(RoundedRectangle(cornerRadius: 20, style: .continuous).fill(DS.surface))
-        .overlay(RoundedRectangle(cornerRadius: 20, style: .continuous).strokeBorder(DS.hairline, lineWidth: 1))
-    }
-
-    private func pageRow(_ title: String, action: @escaping () -> Void) -> some View {
-        Button {
-            UIImpactFeedbackGenerator(style: .light).impactOccurred()
-            action()
-        } label: {
-            HStack {
-                Text(title)
-                    .font(DS.sans(.subheadline, .semibold))
-                    .foregroundStyle(DS.ink)
-                Spacer()
-                Image(systemName: "chevron.forward")
-                    .font(.system(size: 13, weight: .semibold))
-                    .foregroundStyle(DS.inkTertiary)
-            }
-            .padding(.horizontal, 16)
-            .frame(height: 54)
-            .contentShape(Rectangle())
-        }
-        .buttonStyle(.plain)
+        posterCard(
+            image: "antiscroll_poster",
+            title: languageManager.text("profile.page.antiScroll"),
+            subtitle: languageManager.text("tiktokBlocker.card.off.subtitle"),
+            action: onOpenAntiScroll
+        )
     }
 }
 

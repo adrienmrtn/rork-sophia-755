@@ -15,7 +15,7 @@ extension AppLocalizableAdditions {
             "tr": "Her kursla bir seviye daha yüksel.",
             "pl": "Zdobywaj poziomy, kurs po kursie.",
             "ro": "Urcă în nivel, curs cu curs.",
-            "nl": "Ga een level omhoog, cursus na cursus.",
+            "nl": "Ga een niveau omhoog, cursus na cursus.",
             "el": "Ανέβα επίπεδο, ένα μάθημα τη φορά.",
             "sv": "Gå upp i nivå, en kurs i taget.",
             "hu": "Lépj szintet, kurzusról kurzusra.",

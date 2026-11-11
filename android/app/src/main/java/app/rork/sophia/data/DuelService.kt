@@ -21,6 +21,7 @@ import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.buildJsonObject
 import kotlinx.serialization.json.encodeToJsonElement
 import kotlinx.serialization.json.put
+import app.rork.sophia.domain.DuelLeagueGain
 
 /** Pourquoi une partie n'a pas pu être lancée ou enregistrée. */
 sealed class DuelError(message: String) : Exception(message) {
@@ -137,7 +138,23 @@ class DuelService(context: Context, private val auth: AuthService) {
     }
 
     /** À la déconnexion : plus rien de l'ancien compte à l'écran ni en cache. */
+    /**
+     * Les trophées gagnés par la dernière partie, tant que l'accueil ne les a pas montrés : au
+     * retour d'une victoire, la jauge de ligue se remplit de l'ancien total au nouveau, une seule
+     * fois. Gardé en mémoire seulement : rien ne se rejoue au lancement suivant.
+     */
+    @Volatile
+    private var pendingLeagueGain: DuelLeagueGain? = null
+
+    /** Rend les trophées gagnés à montrer, et les oublie : l'animation ne se joue qu'une fois. */
+    fun takePendingLeagueGain(): DuelLeagueGain? {
+        val gain = pendingLeagueGain
+        pendingLeagueGain = null
+        return gain
+    }
+
     fun clearLocalState() {
+        pendingLeagueGain = null
         _home.value = null
         _homeFailed.value = false
         _leaderboard.value = emptyList()
@@ -243,6 +260,12 @@ class DuelService(context: Context, private val auth: AuthService) {
 
     /** Le profil renvoyé avec un résultat remplace celui de l'accueil (trophées, ligue, statistiques). */
     private fun apply(result: DuelResult) {
+        // Seule la dernière partie compte : une défaite après une victoire efface l'animation.
+        pendingLeagueGain = if (result.won && result.trophiesAfter > result.trophiesBefore) {
+            DuelLeagueGain(before = result.trophiesBefore, after = result.trophiesAfter)
+        } else {
+            null
+        }
         val current = _home.value ?: return
         val updated = current.copy(profile = result.profile)
         _home.value = updated

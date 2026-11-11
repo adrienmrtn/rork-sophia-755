@@ -361,18 +361,17 @@ struct ProfileView: View {
         let calendar = Calendar.current
         let today = calendar.startOfDay(for: Date())
         let dayLetters = languageManager.current.mondayFirstWeekdayLetters
-        let weekday = calendar.component(.weekday, from: today)
-        let mondayOffset = ((weekday + 5) % 7)
-        let monday = calendar.date(byAdding: .day, value: -mondayOffset, to: today) ?? today
 
         let fmt = DateFormatter()
         fmt.dateFormat = "yyyy-MM-dd"
         let lastActive = progressManager.progress.lastActiveDate
         let streak = progressManager.streak
+        // La première case est le premier jour de la série, pas le lundi.
+        let firstDay = StreakWeek.firstDay(streak: streak, lastActive: lastActive, today: today, calendar: calendar)
 
         return HStack(spacing: 8) {
             ForEach(0..<7, id: \.self) { i in
-                let date = calendar.date(byAdding: .day, value: i, to: monday) ?? today
+                let date = calendar.date(byAdding: .day, value: i, to: firstDay) ?? today
                 let isToday = calendar.isDate(date, inSameDayAs: today)
                 let isFuture = date > today
                 let dateStr = fmt.string(from: date)
@@ -386,7 +385,7 @@ struct ProfileView: View {
                 }()
 
                 VStack(spacing: 6) {
-                    Text(dayLetters[i])
+                    Text(dayLetters[StreakWeek.letterIndex(of: date, calendar: calendar)])
                         .font(DS.sans(.caption2, .semibold))
                         .foregroundStyle(isToday ? DS.ink : DS.inkTertiary)
                     ZStack {

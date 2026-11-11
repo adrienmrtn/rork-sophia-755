@@ -1,7 +1,7 @@
 # Duels
 
-Des parties de 20 questions contre un adversaire, avec des trophées et 30 ligues. iOS, et Android
-pour les duels classés (voir « Android » plus bas ; les duels entre amis n'y sont pas encore).
+Des parties de 20 questions contre un adversaire, avec des trophées et 30 ligues. iOS et Android
+(duels classés et duels entre amis ; voir « Android » plus bas).
 Ouverts dans les 30 langues de l'app (voir « Langues ») : un joueur japonais peut affronter un
 joueur hongrois, chacun lit les questions dans sa langue. Les adversaires sont simulés par le
 serveur ; rien dans l'app ne le dit, et le niveau de difficulté du joueur n'est jamais affiché.
@@ -180,12 +180,25 @@ textes (les clés `duel.*` de `assets/strings`).
 - Tests (`app/src/test`) : les règles, des parties entières sur une horloge simulée, et le
   décodage de vraies réponses du serveur (`src/test/resources/duels`, produites par les
   migrations sur une base de test) suivies d'une partie jouée avec.
-- Pas encore sur Android : duels entre amis (présence, invitations, partie en direct), profil
-  d'un ami avec ses trophées, badges de duel.
+- Duels entre amis (11/11) : `data/DuelLiveService.kt` (présence toutes les 4 secondes là où
+  les duels existent, invitations, partie en direct), `DuelGameModel` en mode direct
+  (`DuelLiveLink` : le serveur tient l'horloge), `ui/duels/DuelFriendFlow.kt` (attente du défi,
+  compte à rebours, partie, résultat sans trophées, revanche), `DuelInviteBanner` (invitation
+  reçue, par-dessus tout écran) et `DuelFriendPresenter`. On défie depuis le classement de
+  l'onglet Duels (bouton éclair) ou depuis le profil d'un ami.
+- Accueil : carte de statistiques (anneau de réussite, séries, record), « Voir plus » sur les
+  derniers duels, montée des trophées après une victoire, ligue du joueur avec ses trophées ;
+  les images des questions sont montrées entières et la marge beige des drapeaux est rognée
+  (`DuelImageTrim`).
+- Tests en plus : une partie entre amis entière contre un faux serveur, une coupure réseau, et
+  le décodage des vraies réponses du serveur pour un duel entre amis
+  (`src/test/resources/duels/friend_*.json`).
+- Pas encore sur Android : profil d'un ami avec ses trophées (`friend_profile`), badges de duel.
+  Les duels entre amis n'ont pas été joués sur deux téléphones : à vérifier avant de publier.
 
 ## Pas encore fait
 
-Les duels entre amis sur Android, les saisons, les sons, un gain d'XP par duel,
+Les saisons, les sons, un gain d'XP par duel,
 les notifications push (une invitation n'arrive que si l'ami a l'app ouverte).
 
 ## Adversaires plus crédibles (10 novembre)
@@ -212,7 +225,7 @@ les notifications push (une invitation n'arrive que si l'ami a l'app ouverte).
   pseudos (1 100 au total), et `duel_pick_bot` écarte les 150 derniers adversaires, les pseudos
   qui commencent comme l'un des 20 derniers et le pays des 2 derniers.
 - **Drapeaux** : les fichiers hébergés portent un fond « papier » beige (`scripts/duels_images.py`).
-  iOS le rogne à l'affichage (`DuelImageTrimmer`) ; Android le montre encore. Le vrai correctif
+  iOS le rogne à l'affichage (`DuelImageTrimmer`), Android aussi (`DuelImageTrim`). Le vrai correctif
   est de régénérer les images sans ce fond.
 - **Après une victoire** : au retour sur l'accueil des duels, la carte de ligue rejoue une fois
   la montée des trophées (barre, compteur, vibrations, passage de ligue le cas échéant).
