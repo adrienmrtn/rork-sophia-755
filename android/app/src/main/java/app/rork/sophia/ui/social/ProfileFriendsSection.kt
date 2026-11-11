@@ -27,6 +27,11 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowForwardIos
 import androidx.compose.material.icons.filled.PersonAdd
 import androidx.compose.material.icons.filled.QrCode2
+import androidx.compose.material.icons.filled.QrCodeScanner
+import android.widget.Toast
+import com.google.mlkit.vision.barcode.common.Barcode
+import com.google.mlkit.vision.codescanner.GmsBarcodeScannerOptions
+import com.google.mlkit.vision.codescanner.GmsBarcodeScanning
 import androidx.compose.material.icons.filled.WorkspacePremium
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
@@ -311,6 +316,25 @@ fun ProfileFriendsSection(
                 icon = Icons.Filled.QrCode2,
                 title = StringStore.text(context, "profile.qr.mine", language),
                 onClick = { showQr = true },
+            )
+            // « Scanner » : le code d'un ami ouvre la même confirmation qu'un lien d'ami.
+            SecondaryAction(
+                icon = Icons.Filled.QrCodeScanner,
+                title = StringStore.text(context, "profile.qr.scan", language),
+                onClick = {
+                    fun toast(key: String) =
+                        Toast.makeText(context, StringStore.text(context, key, language), Toast.LENGTH_LONG).show()
+                    runCatching {
+                        val options = GmsBarcodeScannerOptions.Builder().setBarcodeFormats(Barcode.FORMAT_QR_CODE).build()
+                        GmsBarcodeScanning.getClient(context, options).startScan()
+                            .addOnSuccessListener { code ->
+                                val friend = code.rawValue?.let { SophiaLinks.friendHandle(it) }
+                                if (friend != null) FriendLinkRouter.open(friend) else toast("profile.qr.invalid")
+                            }
+                            // Fermé par le lecteur : rien à dire. Sinon, l'appareil ne peut pas scanner.
+                            .addOnFailureListener { toast("profile.qr.camera.unavailable") }
+                    }.onFailure { toast("profile.qr.camera.unavailable") }
+                },
             )
         }
     }

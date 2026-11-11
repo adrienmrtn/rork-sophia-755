@@ -60,6 +60,11 @@ import app.rork.sophia.domain.uppercaseIn
 import app.rork.sophia.ui.components.CircleIconButton
 import app.rork.sophia.ui.components.ConfirmDialog
 import app.rork.sophia.ui.duels.DuelPalette
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
+import app.rork.sophia.ui.duels.DuelFormat
+import app.rork.sophia.ui.duels.DuelTrophyCount
+import app.rork.sophia.ui.newgen.BadgeRow
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
 import app.rork.sophia.ui.theme.SophiaTypography
@@ -483,6 +488,7 @@ private fun FriendProfileSheet(
         modifier = Modifier
             .fillMaxSize()
             .background(DS.canvas)
+            .verticalScroll(rememberScrollState())
             .padding(DS.Space.l),
     ) {
         Row(verticalAlignment = Alignment.CenterVertically) {
@@ -545,7 +551,45 @@ private fun FriendProfileSheet(
                 modifier = Modifier.weight(1f),
             )
         }
-        Spacer(Modifier.weight(1f))
+        // Ses trophées et sa ligue, là où les duels existent.
+        val trophies = presence?.trophies
+        if (FeatureFlags.duelsVisible(language) && trophies != null) {
+            val duelHome by (context.applicationContext as SophiaApplication).duelService.home.collectAsState()
+            val league = presence?.league_position?.let { duelHome?.leagueAt(it) }
+            Spacer(Modifier.height(12.dp))
+            Row(
+                modifier = Modifier.fillMaxWidth().clip(DS.cardShape).background(DuelPalette.night).padding(14.dp),
+                verticalAlignment = Alignment.CenterVertically,
+            ) {
+                Column(modifier = Modifier.weight(1f)) {
+                    Text(
+                        StringStore.text(context, "duel.trophies.title", language).uppercaseIn(language),
+                        style = SophiaTypography.labelMedium,
+                        color = androidx.compose.ui.graphics.Color.White.copy(alpha = 0.8f),
+                    )
+                    if (league != null) {
+                        Text(
+                            DuelFormat.leagueName(context, league, language),
+                            style = SophiaTypography.titleMedium,
+                            color = androidx.compose.ui.graphics.Color.White,
+                        )
+                    }
+                }
+                DuelTrophyCount(value = trophies, language = language, size = 20.dp)
+            }
+        }
+        // Les badges qu'il affiche sur son profil.
+        val badgeCenter = (context.applicationContext as SophiaApplication).badgeCenter
+        val featured = remember(presence) {
+            presence?.featured_badges.orEmpty().take(3).mapNotNull { id -> badgeCenter.badge(id) }
+        }
+        if (featured.isNotEmpty()) {
+            Spacer(Modifier.height(16.dp))
+            Text(StringStore.text(context, "profile.badges", language), style = SophiaTypography.titleMedium)
+            Spacer(Modifier.height(10.dp))
+            BadgeRow(badges = featured, language = language, earned = { true })
+        }
+        Spacer(Modifier.height(24.dp))
         // « Défier en duel » : là où les duels existent, pour un ami qui les a (le classement
         // des duels le dit). Aucun trophée en jeu ; la partie s'ouvre par-dessus cet écran.
         val sophia = context.applicationContext as SophiaApplication

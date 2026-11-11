@@ -38,6 +38,11 @@ data class FriendPublicStats(
 data class FriendPresence(
     val online: Boolean = false,
     val last_seen_seconds: Int? = null,
+    /** Ses trophées de duel et le rang de sa ligue ; null sur une base sans duels. */
+    val trophies: Int? = null,
+    val league_position: Int? = null,
+    /** Les badges qu'il affiche sur son profil (trois au plus). */
+    val featured_badges: List<String> = emptyList(),
 )
 
 /** Un lien d'ami (`sophia://friend/<handle>`) reçu par l'app, en attente de confirmation. */
@@ -211,6 +216,10 @@ class SocialService(private val auth: AuthService) {
             FriendPresence(
                 online = (row["online"] as? kotlinx.serialization.json.JsonPrimitive)?.content == "true",
                 last_seen_seconds = (row["last_seen_seconds"] as? kotlinx.serialization.json.JsonPrimitive)?.content?.toIntOrNull(),
+                trophies = (row["trophies"] as? kotlinx.serialization.json.JsonPrimitive)?.content?.toIntOrNull(),
+                league_position = (row["league_position"] as? kotlinx.serialization.json.JsonPrimitive)?.content?.toIntOrNull(),
+                featured_badges = (row["featured_badges"] as? kotlinx.serialization.json.JsonArray)
+                    ?.mapNotNull { (it as? kotlinx.serialization.json.JsonPrimitive)?.content }.orEmpty(),
             )
         }.getOrNull()
     }

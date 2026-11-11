@@ -185,6 +185,8 @@ dependencies {
     implementation("io.coil-kt:coil-compose:2.7.0")
     // Le QR code « ajoute-moi en ami » : l'encodeur seul, sans caméra ni interface.
     implementation("com.google.zxing:core:3.5.3")
+    // Le scanner de QR code de Google : son propre écran, sans permission caméra à demander.
+    implementation("com.google.android.gms:play-services-code-scanner:16.1.0")
 
     // Audio mode: ExoPlayer + MediaSession (notification, lock screen, headsets)
     implementation("androidx.media3:media3-exoplayer:1.5.1")
