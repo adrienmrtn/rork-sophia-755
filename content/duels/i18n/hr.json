@@ -1,0 +1,9580 @@
+{
+ "lang": "hr",
+ "true_false": [
+  "Točno",
+  "Netočno"
+ ],
+ "leagues": {
+  "aesop": "Ezop",
+  "homer": "Homer",
+  "sappho": "Sapfa",
+  "confucius": "Konfucije",
+  "socrates": "Sokrat",
+  "cleopatra": "Kleopatra",
+  "hypatia": "Hipatija",
+  "avicenna": "Avicena",
+  "murasaki": "Murasaki",
+  "mansa_musa": "Mansa Musa",
+  "dante": "Dante",
+  "joan_of_arc": "Ivana Orleanska",
+  "gutenberg": "Gutenberg",
+  "leonardo": "Leonardo",
+  "michelangelo": "Michelangelo",
+  "copernicus": "Kopernik",
+  "shakespeare": "Shakespeare",
+  "galileo": "Galileo",
+  "vermeer": "Vermeer",
+  "newton": "Newton",
+  "mozart": "Mozart",
+  "napoleon": "Napoleon",
+  "austen": "Austen",
+  "darwin": "Darwin",
+  "lovelace": "Lovelace",
+  "van_gogh": "Van Gogh",
+  "curie": "Curie",
+  "einstein": "Einstein",
+  "kahlo": "Kahlo",
+  "sophia": "Sophia"
+ },
+ "items": {
+  "dq_en_1_01": {
+   "q": "Koji se planet naziva Crvenim planetom?",
+   "o": [
+    "Jupiter",
+    "Merkur",
+    "Mars",
+    "Venera"
+   ]
+  },
+  "dq_en_1_02": {
+   "q": "Tko je naslikao Mona Lisu?",
+   "o": [
+    "Michelangelo",
+    "Leonardo da Vinci",
+    "Sandro Botticelli",
+    "Rafael"
+   ]
+  },
+  "dq_en_1_03": {
+   "q": "Tko je u grčkoj mitologiji kralj bogova?",
+   "o": [
+    "Had",
+    "Zeus",
+    "Posejdon",
+    "Apolon"
+   ]
+  },
+  "dq_en_1_04": {
+   "q": "U kojoj su zemlji piramide u Gizi?",
+   "o": [
+    "Grčka",
+    "Irak",
+    "Meksiko",
+    "Egipat"
+   ]
+  },
+  "dq_en_1_05": {
+   "q": "Titanic je potonuo na svom prvom putovanju."
+  },
+  "dq_en_1_06": {
+   "q": "Morski psi su sisavci."
+  },
+  "dq_en_1_07": {
+   "q": "Tko je ovo?",
+   "o": [
+    "Thomas Edison",
+    "Albert Einstein",
+    "Mark Twain",
+    "Sigmund Freud"
+   ]
+  },
+  "dq_en_1_08": {
+   "q": "Tko je ovo?",
+   "o": [
+    "Vojvoda od Wellingtona",
+    "Luj XIV.",
+    "Napoleon Bonaparte",
+    "George Washington"
+   ]
+  },
+  "dq_en_1_09": {
+   "q": "Koje je godine Kristofor Kolumbo prvi put stigao do Amerike?"
+  },
+  "dq_en_1_10": {
+   "q": "Koje je godine čovjek prvi put hodao po Mjesecu?"
+  },
+  "dq_en_1_11": {
+   "q": "Koji je umjetnik poznat po slikama suncokreta?",
+   "o": [
+    "Pablo Picasso",
+    "Vincent van Gogh",
+    "Claude Monet",
+    "Rembrandt"
+   ]
+  },
+  "dq_en_1_12": {
+   "q": "Tko je napisao romane o Harryju Potteru?",
+   "o": [
+    "C. S. Lewis",
+    "J. K. Rowling",
+    "J. R. R. Tolkien",
+    "Roald Dahl"
+   ]
+  },
+  "dq_en_1_13": {
+   "q": "„Odiseja” pripovijeda o Odisejevu putu kući."
+  },
+  "dq_en_1_14": {
+   "q": "U grčkoj mitologiji Posejdon je bog mora."
+  },
+  "dq_en_1_15": {
+   "q": "Koji je grčki junak za pokoru morao izvršiti niz zadataka?",
+   "o": [
+    "Jazon",
+    "Tezej",
+    "Heraklo",
+    "Ahilej"
+   ]
+  },
+  "dq_en_1_16": {
+   "q": "Koji je glavni grad SAD-a?",
+   "o": [
+    "Washington",
+    "New York",
+    "Chicago",
+    "Los Angeles"
+   ]
+  },
+  "dq_en_1_17": {
+   "q": "Euro je valuta Japana."
+  },
+  "dq_en_1_18": {
+   "q": "Čija je ovo zastava?",
+   "o": [
+    "Francuska",
+    "SAD",
+    "Ujedinjeno Kraljevstvo",
+    "Australija"
+   ]
+  },
+  "dq_en_1_19": {
+   "q": "Čija je ovo zastava?",
+   "o": [
+    "Japan",
+    "Južna Koreja",
+    "Vijetnam",
+    "Kina"
+   ]
+  },
+  "dq_en_1_20": {
+   "q": "Čija je ovo zastava?",
+   "o": [
+    "Danska",
+    "SAD",
+    "Kanada",
+    "Švicarska"
+   ]
+  },
+  "dq_en_1_21": {
+   "q": "Čija je ovo zastava?",
+   "o": [
+    "Australija",
+    "Ujedinjeno Kraljevstvo",
+    "Novi Zeland",
+    "Irska"
+   ]
+  },
+  "dq_en_1_22": {
+   "q": "Čija je ovo zastava?",
+   "o": [
+    "Belgija",
+    "Francuska",
+    "Nizozemska",
+    "Italija"
+   ]
+  },
+  "dq_en_1_23": {
+   "q": "Koji je glavni grad Francuske?",
+   "o": [
+    "Nica",
+    "Lyon",
+    "Pariz",
+    "Marseille"
+   ]
+  },
+  "dq_en_1_24": {
+   "q": "Koji je glavni grad Japana?",
+   "o": [
+    "Osaka",
+    "Jokohama",
+    "Tokio",
+    "Kjoto"
+   ]
+  },
+  "dq_en_1_25": {
+   "q": "Koji je glavni grad Italije?",
+   "o": [
+    "Napulj",
+    "Rim",
+    "Milano",
+    "Venecija"
+   ]
+  },
+  "dq_en_1_26": {
+   "q": "Koji je glavni grad Egipta?",
+   "o": [
+    "Giza",
+    "Luksor",
+    "Kairo",
+    "Aleksandrija"
+   ]
+  },
+  "dq_en_1_27": {
+   "q": "Koji je glavni grad Španjolske?",
+   "o": [
+    "Madrid",
+    "Sevilla",
+    "Valencija",
+    "Barcelona"
+   ]
+  },
+  "dq_en_1_28": {
+   "q": "Koja zemlja ima više stanovnika?",
+   "o": [
+    "Indija",
+    "SAD"
+   ]
+  },
+  "dq_en_1_29": {
+   "q": "Koja zemlja ima više stanovnika?",
+   "o": [
+    "Rusija",
+    "Kina"
+   ]
+  },
+  "dq_en_1_30": {
+   "q": "Koja je zemlja veća po površini?",
+   "o": [
+    "Rusija",
+    "Kina"
+   ]
+  },
+  "dq_en_1_31": {
+   "q": "Koja zemlja ima veće gospodarstvo (BDP)?",
+   "o": [
+    "Japan",
+    "SAD"
+   ]
+  },
+  "dq_en_1_32": {
+   "q": "Koja je planina viša?",
+   "o": [
+    "Mount Everest",
+    "Mont Blanc"
+   ]
+  },
+  "dq_en_1_33": {
+   "q": "Koji je ocean veći?",
+   "o": [
+    "Tihi ocean",
+    "Atlantski ocean"
+   ]
+  },
+  "dq_en_1_34": {
+   "q": "Koji je kontinent veći?",
+   "o": [
+    "Afrika",
+    "Azija"
+   ]
+  },
+  "dq_en_1_35": {
+   "q": "Koja je antička civilizacija sagradila Kolosej?",
+   "o": [
+    "Rimljani",
+    "Perzijanci",
+    "Grci",
+    "Egipćani"
+   ]
+  },
+  "dq_en_1_36": {
+   "q": "Tko je bio prvi predsjednik SAD-a?",
+   "o": [
+    "Benjamin Franklin",
+    "George Washington",
+    "Abraham Lincoln",
+    "Thomas Jefferson"
+   ]
+  },
+  "dq_en_1_37": {
+   "q": "U kojoj je zemlji sagrađen Veliki zid?",
+   "o": [
+    "Mongolija",
+    "Indija",
+    "Kina",
+    "Japan"
+   ]
+  },
+  "dq_en_1_38": {
+   "q": "Koju su titulu nosili vladari starog Egipta?",
+   "o": [
+    "Sultan",
+    "Cezar",
+    "Šogun",
+    "Faraon"
+   ]
+  },
+  "dq_en_1_39": {
+   "q": "Koja je zemlja 1941. napala Pearl Harbor?",
+   "o": [
+    "Njemačka",
+    "Italija",
+    "Japan",
+    "Sovjetski Savez"
+   ]
+  },
+  "dq_en_1_40": {
+   "q": "Tko je predvodio nenasilnu borbu Indije za neovisnost od Britanije?",
+   "o": [
+    "Nelson Mandela",
+    "Ho Chi Minh",
+    "Sun Yat-sen",
+    "Mahatma Gandhi"
+   ]
+  },
+  "dq_en_1_41": {
+   "q": "Koji je južnoafrički vođa proveo 27 godina u zatvoru prije nego što je postao predsjednik?",
+   "o": [
+    "Desmond Tutu",
+    "Kwame Nkrumah",
+    "Nelson Mandela",
+    "Jomo Kenyatta"
+   ]
+  },
+  "dq_en_1_42": {
+   "q": "Koji su skandinavski pomorci dugim brodovima pustošili Europu?",
+   "o": [
+    "Huni",
+    "Vikinzi",
+    "Mauri",
+    "Mongoli"
+   ]
+  },
+  "dq_en_1_43": {
+   "q": "Koji je francuski car poražen u bitki kod Waterlooa?",
+   "o": [
+    "Luj XIV.",
+    "Napoleon Bonaparte",
+    "Karlo Veliki",
+    "Luj XVI."
+   ]
+  },
+  "dq_en_1_44": {
+   "q": "Na kojem je kontinentu vladalo Carstvo Inka?",
+   "o": [
+    "Afrika",
+    "Azija",
+    "Južna Amerika",
+    "Europa"
+   ]
+  },
+  "dq_en_1_45": {
+   "q": "Koja su dva japanska grada 1945. pogođena atomskim bombama?",
+   "o": [
+    "Tokio i Osaka",
+    "Kjoto i Kobe",
+    "Hirošima i Nagasaki",
+    "Tokio i Jokohama"
+   ]
+  },
+  "dq_en_1_46": {
+   "q": "Što je nastalo prije?",
+   "o": [
+    "Eiffelov toranj",
+    "Piramide u Gizi"
+   ]
+  },
+  "dq_en_1_47": {
+   "q": "Tko je živio prije?",
+   "o": [
+    "Julije Cezar",
+    "Napoleon Bonaparte"
+   ]
+  },
+  "dq_en_1_48": {
+   "q": "Što je izumljeno prije?",
+   "o": [
+    "Tiskarski stroj",
+    "Kotač"
+   ]
+  },
+  "dq_en_1_49": {
+   "q": "Što je bilo prije?",
+   "o": [
+    "Prvo slijetanje na Mjesec",
+    "Kolumbovo prvo putovanje"
+   ]
+  },
+  "dq_en_1_50": {
+   "q": "Stari Egipćani pisali su hijeroglifima."
+  },
+  "dq_en_1_51": {
+   "q": "Asteci su živjeli na području današnjeg Meksika."
+  },
+  "dq_en_1_52": {
+   "q": "Samuraji su bili ratnici iz Kine."
+  },
+  "dq_en_1_53": {
+   "q": "Prvi svjetski rat vodio se u 18. stoljeću."
+  },
+  "dq_en_1_54": {
+   "q": "Koje je godine završio Drugi svjetski rat?"
+  },
+  "dq_en_1_55": {
+   "q": "Koje su godine Sjedinjene Američke Države proglasile neovisnost?"
+  },
+  "dq_en_1_56": {
+   "q": "Koliko je žena imao engleski kralj Henrik VIII.?",
+   "u": "žena"
+  },
+  "dq_en_1_57": {
+   "q": "Koji plin čovjek mora udisati da bi preživio?",
+   "o": [
+    "Ugljikov dioksid",
+    "Kisik",
+    "Dušik",
+    "Helij"
+   ]
+  },
+  "dq_en_1_58": {
+   "q": "Koji je najveći planet Sunčeva sustava?",
+   "o": [
+    "Zemlja",
+    "Neptun",
+    "Saturn",
+    "Jupiter"
+   ]
+  },
+  "dq_en_1_59": {
+   "q": "Koja je kemijska formula vode?",
+   "o": [
+    "O2",
+    "H2O",
+    "CO2",
+    "NaCl"
+   ]
+  },
+  "dq_en_1_60": {
+   "q": "Koji organ pumpa krv kroz ljudsko tijelo?",
+   "o": [
+    "Srce",
+    "Pluća",
+    "Bubrezi",
+    "Jetra"
+   ]
+  },
+  "dq_en_1_61": {
+   "q": "Koja je zvijezda najbliža Zemlji?",
+   "o": [
+    "Vega",
+    "Sunce",
+    "Sjevernjača",
+    "Sirius"
+   ]
+  },
+  "dq_en_1_62": {
+   "q": "Koja je najveća životinja na Zemlji?",
+   "o": [
+    "Afrički slon",
+    "Žirafa",
+    "Veliki bijeli morski pas",
+    "Plavi kit"
+   ]
+  },
+  "dq_en_1_63": {
+   "q": "Koja sila vuče predmete prema tlu?",
+   "o": [
+    "Gravitacija",
+    "Magnetizam",
+    "Trenje",
+    "Elektricitet"
+   ]
+  },
+  "dq_en_1_64": {
+   "q": "Kako se zove životinja koja jede samo biljke?",
+   "o": [
+    "Biljožder",
+    "Grabežljivac",
+    "Mesožder",
+    "Svežder"
+   ]
+  },
+  "dq_en_1_65": {
+   "q": "Koliko stupnjeva ima pravi kut?",
+   "o": [
+    "45",
+    "180",
+    "90",
+    "360"
+   ]
+  },
+  "dq_en_1_66": {
+   "q": "Kako se zove planina koja izbacuje lavu i pepeo?",
+   "o": [
+    "Gejzir",
+    "Kanjon",
+    "Vulkan",
+    "Ledenjak"
+   ]
+  },
+  "dq_en_1_67": {
+   "q": "Kojim se uređajem upisuje tekst u računalo?",
+   "o": [
+    "Pisač",
+    "Tipkovnica",
+    "Zvučnik",
+    "Monitor"
+   ]
+  },
+  "dq_en_1_68": {
+   "q": "Što je veće?",
+   "o": [
+    "Sunce",
+    "Zemlja"
+   ]
+  },
+  "dq_en_1_69": {
+   "q": "Tko je viši?",
+   "o": [
+    "Žirafa",
+    "Afrički slon"
+   ]
+  },
+  "dq_en_1_70": {
+   "q": "Što je toplije?",
+   "o": [
+    "Rastaljena lava",
+    "Kipuća voda"
+   ]
+  },
+  "dq_en_1_71": {
+   "q": "Tko živi dulje?",
+   "o": [
+    "Slon",
+    "Miš"
+   ]
+  },
+  "dq_en_1_72": {
+   "q": "Tko je brži?",
+   "o": [
+    "Sprinter",
+    "Gepard"
+   ]
+  },
+  "dq_en_1_73": {
+   "q": "Zemlja kruži oko Sunca."
+  },
+  "dq_en_1_74": {
+   "q": "Pingvini mogu letjeti."
+  },
+  "dq_en_1_75": {
+   "q": "Mjesec proizvodi vlastitu svjetlost."
+  },
+  "dq_en_1_76": {
+   "q": "Ljudsko srce je mišić."
+  },
+  "dq_en_1_77": {
+   "q": "Kolika je normalna temperatura ljudskog tijela u Celzijevim stupnjevima?"
+  },
+  "dq_en_1_78": {
+   "q": "Otprilike koliko dana treba Zemlji da obiđe Sunce?",
+   "u": "dana"
+  },
+  "dq_en_1_79": {
+   "q": "Otprilike koliko sati treba Zemlji da se jednom okrene oko svoje osi?",
+   "u": "sata"
+  },
+  "dq_en_1_80": {
+   "q": "Tko je napisao „Romea i Juliju”?",
+   "o": [
+    "Oscar Wilde",
+    "Jane Austen",
+    "William Shakespeare",
+    "Charles Dickens"
+   ]
+  },
+  "dq_en_1_81": {
+   "q": "Kojoj drvenoj lutki raste nos kad god slaže?",
+   "o": [
+    "Pinocchiju",
+    "Mačku u čizmama",
+    "Palčiću",
+    "Petru Panu"
+   ]
+  },
+  "dq_en_1_82": {
+   "q": "Koja djevojčica slijedi bijelog zeca kroz rupu u Zemlju čudesa?",
+   "o": [
+    "Wendy",
+    "Heidi",
+    "Dorothy",
+    "Alisa"
+   ]
+  },
+  "dq_en_1_83": {
+   "q": "Tko je vjerni prijatelj i pomoćnik Sherlocka Holmesa?",
+   "o": [
+    "Gospođa Hudson",
+    "Profesor Moriarty",
+    "Inspektor Lestrade",
+    "Doktor Watson"
+   ]
+  },
+  "dq_en_1_84": {
+   "q": "Što Pepeljuga u bajci izgubi bježeći s bala?",
+   "o": [
+    "Prsten",
+    "Ogrlicu",
+    "Cipelicu",
+    "Rukavicu"
+   ]
+  },
+  "dq_en_1_85": {
+   "q": "Kakvo je stvorenje grof Drakula?",
+   "o": [
+    "Vukodlak",
+    "Vampir",
+    "Zombi",
+    "Duh"
+   ]
+  },
+  "dq_en_1_86": {
+   "q": "Koji legendarni engleski odmetnik krade od bogatih da bi davao siromašnima?",
+   "o": [
+    "Dick Turpin",
+    "Ivanhoe",
+    "Kralj Artur",
+    "Robin Hood"
+   ]
+  },
+  "dq_en_1_87": {
+   "q": "Iz koje zemlje potječe kratka pjesnička forma haiku?",
+   "o": [
+    "Koreja",
+    "Japan",
+    "Indija",
+    "Kina"
+   ]
+  },
+  "dq_en_1_88": {
+   "q": "Na kojem otoku Petar Pan živi s Izgubljenim dječacima?",
+   "o": [
+    "Nigdjezemska",
+    "Otok s blagom",
+    "Liliput",
+    "Atlantida"
+   ]
+  },
+  "dq_en_1_89": {
+   "q": "Tko je napisao „Hobita” i „Gospodara prstenova”?",
+   "o": [
+    "J. R. R. Tolkien",
+    "Lewis Carroll",
+    "C. S. Lewis",
+    "J. K. Rowling"
+   ]
+  },
+  "dq_en_1_90": {
+   "q": "Kojem kralju služe junaci „Tri mušketira”?",
+   "o": [
+    "Španjolskom",
+    "Engleskom",
+    "Talijanskom",
+    "Francuskom"
+   ]
+  },
+  "dq_en_1_91": {
+   "q": "Kojem se starogrčkom pjesniku pripisuju „Ilijada” i „Odiseja”?",
+   "o": [
+    "Ezopu",
+    "Platonu",
+    "Sofoklu",
+    "Homeru"
+   ]
+  },
+  "dq_en_1_92": {
+   "q": "Kojeg dječaka u „Knjizi o džungli” odgajaju vukovi?",
+   "o": [
+    "Mowglija",
+    "Kima",
+    "Tarzana",
+    "Aladina"
+   ]
+  },
+  "dq_en_1_93": {
+   "q": "U koga se vuk preruši u „Crvenkapici”?",
+   "o": [
+    "U lovca",
+    "U majku",
+    "U baku",
+    "U drvosječu"
+   ]
+  },
+  "dq_en_1_94": {
+   "q": "Koja je knjiga dulja?",
+   "o": [
+    "Rat i mir",
+    "Mali princ"
+   ]
+  },
+  "dq_en_1_95": {
+   "q": "Što je napisano prije?",
+   "o": [
+    "Odiseja",
+    "Romeo i Julija"
+   ]
+  },
+  "dq_en_1_96": {
+   "q": "Što je objavljeno prije?",
+   "o": [
+    "Gospodar prstenova",
+    "Frankenstein"
+   ]
+  },
+  "dq_en_1_97": {
+   "q": "Sherlock Holmes živi u Londonu, u Baker Streetu 221B."
+  },
+  "dq_en_1_98": {
+   "q": "Petar Pan je dječak koji jedva čeka odrasti."
+  },
+  "dq_en_1_99": {
+   "q": "U bajci Snjeguljica pada kao mrtva nakon što zagrize otrovnu jabuku."
+  },
+  "dq_en_1_100": {
+   "q": "William Shakespeare pisao je svoje drame u 20. stoljeću."
+  },
+  "dq_en_1_101": {
+   "q": "Za koliko dana Phileas Fogg u slavnom romanu Julesa Vernea obiđe svijet?",
+   "u": "dana"
+  },
+  "dq_en_1_102": {
+   "q": "U kojem se gradu nalazi Eiffelov toranj?",
+   "o": [
+    "London",
+    "Rim",
+    "Berlin",
+    "Pariz"
+   ]
+  },
+  "dq_en_1_103": {
+   "q": "Koji od ovih instrumenata ima crne i bijele tipke?",
+   "o": [
+    "Klarinet",
+    "Klavir",
+    "Saksofon",
+    "Harfa"
+   ]
+  },
+  "dq_en_1_104": {
+   "q": "U kojoj umjetnosti izvođači plešu na vrhovima prstiju?",
+   "o": [
+    "Pantomima",
+    "Lutkarstvo",
+    "Balet",
+    "Opera"
+   ]
+  },
+  "dq_en_1_105": {
+   "q": "U kojem se gradu nalazi antički Kolosej?",
+   "o": [
+    "Atena",
+    "Kairo",
+    "Rim",
+    "Istanbul"
+   ]
+  },
+  "dq_en_1_106": {
+   "q": "Kako se zove umjetnik koji kleše kipove?",
+   "o": [
+    "Skladatelj",
+    "Arhitekt",
+    "Dirigent",
+    "Kipar"
+   ]
+  },
+  "dq_en_1_107": {
+   "q": "Koji je od ovih instrumenata žičani?",
+   "o": [
+    "Violina",
+    "Bubanj",
+    "Truba",
+    "Flauta"
+   ]
+  },
+  "dq_en_1_108": {
+   "q": "Koje dvije boje pomiješane daju zelenu?",
+   "o": [
+    "Plava i žuta",
+    "Crvena i plava",
+    "Crvena i žuta",
+    "Crvena i bijela"
+   ]
+  },
+  "dq_en_1_109": {
+   "q": "Koji slavni kip stoji u njujorškoj luci?",
+   "o": [
+    "Mala sirena",
+    "Krist Otkupitelj",
+    "Venera Milska",
+    "Kip slobode"
+   ]
+  },
+  "dq_en_1_110": {
+   "q": "U kojem se filmu divovski majmun penje na Empire State Building?",
+   "o": [
+    "King Kong",
+    "Godzilla",
+    "Planet majmuna",
+    "Jurski park"
+   ]
+  },
+  "dq_en_1_111": {
+   "q": "Velika sfinga u Gizi ima ljudsku glavu na tijelu koje životinje?",
+   "o": [
+    "Bika",
+    "Lava",
+    "Krokodila",
+    "Konja"
+   ]
+  },
+  "dq_en_1_112": {
+   "q": "Kako se zove ploča na kojoj slikar miješa boje?",
+   "o": [
+    "Okvir",
+    "Paleta",
+    "Platno",
+    "Štafelaj"
+   ]
+  },
+  "dq_en_1_113": {
+   "q": "Što je više?",
+   "o": [
+    "Eiffelov toranj",
+    "Velika piramida u Gizi"
+   ]
+  },
+  "dq_en_1_114": {
+   "q": "Mona Lisa je skulptura."
+  },
+  "dq_en_1_115": {
+   "q": "Bubanj je udaraljka."
+  },
+  "dq_en_1_116": {
+   "q": "Kosi toranj u Pisi nalazi se u Italiji."
+  },
+  "dq_en_1_117": {
+   "q": "Wolfgang Amadeus Mozart slavan je kao slikar."
+  },
+  "dq_en_1_118": {
+   "q": "Koliko žica ima standardna gitara?",
+   "u": "žica"
+  },
+  "dq_en_1_119": {
+   "q": "Tko je u grčkoj mitologiji božica ljubavi i ljepote?",
+   "o": [
+    "Artemida",
+    "Afrodita",
+    "Hera",
+    "Atena"
+   ]
+  },
+  "dq_en_1_120": {
+   "q": "Što Meduza u grčkoj mitologiji ima umjesto kose?",
+   "o": [
+    "Zmije",
+    "Plamenove",
+    "Perje",
+    "Trnje"
+   ]
+  },
+  "dq_en_1_121": {
+   "q": "Što su prema legendi o Troji Grci izgradili da bi ušli u grad?",
+   "o": [
+    "Kameni most",
+    "Drvenog konja",
+    "Opsadnu kulu",
+    "Tajni tunel"
+   ]
+  },
+  "dq_en_1_122": {
+   "q": "Koji bog u grčkoj mitologiji vlada podzemljem?",
+   "o": [
+    "Ares",
+    "Apolon",
+    "Had",
+    "Hermes"
+   ]
+  },
+  "dq_en_1_123": {
+   "q": "Tko je u nordijskoj mitologiji bog groma?",
+   "o": [
+    "Thor",
+    "Freyr",
+    "Baldr",
+    "Loki"
+   ]
+  },
+  "dq_en_1_124": {
+   "q": "Koje legendarno biće ima tijelo lava i ljudsku glavu?",
+   "o": [
+    "Sfinga",
+    "Kentaur",
+    "Minotaur",
+    "Grifon"
+   ]
+  },
+  "dq_en_1_125": {
+   "q": "Oziris, Izida i Horus bogovi su koje drevne civilizacije?",
+   "o": [
+    "Egipatske",
+    "Rimske",
+    "Mezopotamske",
+    "Grčke"
+   ]
+  },
+  "dq_en_1_126": {
+   "q": "Na kojoj planini u grčkoj mitologiji žive bogovi?",
+   "o": [
+    "Olimp",
+    "Vezuv",
+    "Etna",
+    "Ararat"
+   ]
+  },
+  "dq_en_1_127": {
+   "q": "Kako se u legendi o kralju Arturu zove njegov mač?",
+   "o": [
+    "Excalibur",
+    "Durendal",
+    "Joyeuse",
+    "Gram"
+   ]
+  },
+  "dq_en_1_128": {
+   "q": "Koja se legendarna ptica ponovno rađa iz vlastitog pepela?",
+   "o": [
+    "Harpija",
+    "Feniks",
+    "Grifon",
+    "Rok"
+   ]
+  },
+  "dq_en_1_129": {
+   "q": "Koje biće iz europskih legendi riga vatru i čuva blago?",
+   "o": [
+    "Sirena",
+    "Zmaj",
+    "Trol",
+    "Jednorog"
+   ]
+  },
+  "dq_en_1_130": {
+   "q": "Koliko očiju u grčkoj mitologiji ima Kiklop?",
+   "o": [
+    "Dva",
+    "Jedno",
+    "Tri",
+    "Sto"
+   ]
+  },
+  "dq_en_1_131": {
+   "q": "Koji je bog u grčkoj mitologiji glasnik bogova?",
+   "o": [
+    "Hermes",
+    "Hefest",
+    "Ares",
+    "Dioniz"
+   ]
+  },
+  "dq_en_1_132": {
+   "q": "Koji čarobnjak u legendi o kralju Arturu savjetuje kralja?",
+   "o": [
+    "Lancelot",
+    "Merlin",
+    "Mordred",
+    "Gawain"
+   ]
+  },
+  "dq_en_1_133": {
+   "q": "Kakvo je biće Pegaz u grčkoj mitologiji?",
+   "o": [
+    "Jednooki div",
+    "Krilati konj",
+    "Morska zmija",
+    "Troglavi pas"
+   ]
+  },
+  "dq_en_1_134": {
+   "q": "Koje biće iz grčke mitologije ima više glava?",
+   "o": [
+    "Minotaur",
+    "Kerber"
+   ]
+  },
+  "dq_en_1_135": {
+   "q": "U grčkoj mitologiji munja je Zeusovo oružje."
+  },
+  "dq_en_1_136": {
+   "q": "U nordijskoj mitologiji Loki je poznat kao varalica."
+  },
+  "dq_en_1_137": {
+   "q": "U legendi o kralju Arturu njegovi se vitezovi okupljaju za Okruglim stolom."
+  },
+  "dq_en_1_138": {
+   "q": "U grčkoj mitologiji Minotaur je napola čovjek, a napola konj."
+  },
+  "dq_en_1_139": {
+   "q": "U rimskoj mitologiji Venera je božica rata."
+  },
+  "dq_en_1_140": {
+   "q": "Koliko je zadataka Heraklo u grčkoj mitologiji morao izvršiti?",
+   "u": "zadataka"
+  },
+  "dq_en_1_141": {
+   "q": "Koji je najveći ocean na Zemlji?",
+   "o": [
+    "Indijski ocean",
+    "Tihi ocean",
+    "Arktički ocean",
+    "Atlantski ocean"
+   ]
+  },
+  "dq_en_1_142": {
+   "q": "Na kojem je kontinentu pustinja Sahara?",
+   "o": [
+    "Australija",
+    "Afrika",
+    "Azija",
+    "Južna Amerika"
+   ]
+  },
+  "dq_en_1_143": {
+   "q": "Koji je službeni jezik Brazila?",
+   "o": [
+    "Francuski",
+    "Talijanski",
+    "Portugalski",
+    "Španjolski"
+   ]
+  },
+  "dq_en_1_144": {
+   "q": "Kur'an je sveta knjiga koje religije?",
+   "o": [
+    "Hinduizma",
+    "Islama",
+    "Budizma",
+    "Judaizma"
+   ]
+  },
+  "dq_en_1_145": {
+   "q": "Prijestupna godina ima 366 dana."
+  },
+  "dq_en_1_146": {
+   "q": "Amazonska prašuma nalazi se u Africi."
+  },
+  "dq_en_1_147": {
+   "q": "Koliko punih tjedana ima jedna godina?",
+   "u": "tjedna"
+  },
+  "dq_en_1_148": {
+   "q": "Koliko slova ima engleska abeceda?",
+   "u": "slova"
+  },
+  "dq_en_1_149": {
+   "q": "Kako se zove ova slika?",
+   "o": [
+    "Whistlerova majka",
+    "Rođenje Venere",
+    "Mona Lisa",
+    "Djevojka s bisernom naušnicom"
+   ]
+  },
+  "dq_en_1_150": {
+   "q": "Tko je naslikao ovu sliku?",
+   "o": [
+    "Edvard Munch",
+    "Paul Gauguin",
+    "Vincent van Gogh",
+    "Claude Monet"
+   ]
+  },
+  "dq_en_1_151": {
+   "q": "Kako se zove ova grafika?",
+   "o": [
+    "Zvjezdana noć",
+    "Veliki val",
+    "Splav Meduze",
+    "Impresija, izlazak sunca"
+   ]
+  },
+  "dq_en_1_152": {
+   "q": "Kako se zove ova slika?",
+   "o": [
+    "Usnula Ciganka",
+    "Poljubac",
+    "Krik",
+    "Noćna straža"
+   ]
+  },
+  "dq_en_1_153": {
+   "q": "Tko je naslikao ovu sliku?",
+   "o": [
+    "Rafael",
+    "Sandro Botticelli",
+    "Michelangelo",
+    "Leonardo da Vinci"
+   ]
+  },
+  "dq_en_1_154": {
+   "q": "Tko je ovo?",
+   "o": [
+    "Mark Twain",
+    "Ambrose Bierce",
+    "Rudyard Kipling",
+    "Thomas Hardy"
+   ]
+  },
+  "dq_en_1_155": {
+   "q": "Tko je ovo?",
+   "o": [
+    "Jawaharlal Nehru",
+    "Muhammad Ali Jinnah",
+    "Mahatma Gandhi",
+    "Vallabhbhai Patel"
+   ]
+  },
+  "dq_en_1_156": {
+   "q": "Tko je ovo?",
+   "o": [
+    "Benjamin Franklin",
+    "Thomas Jefferson",
+    "John Adams",
+    "George Washington"
+   ]
+  },
+  "dq_en_1_157": {
+   "q": "Tko je ovo?",
+   "o": [
+    "Paul Gauguin",
+    "Paul Cézanne",
+    "Claude Monet",
+    "Vincent van Gogh"
+   ]
+  },
+  "dq_en_1_158": {
+   "q": "Koja je božica ovdje prikazana?",
+   "o": [
+    "Dijana",
+    "Junona",
+    "Venera",
+    "Minerva"
+   ]
+  },
+  "dq_en_1_159": {
+   "q": "Koje je ovo čudovište iz grčkog mita?",
+   "o": [
+    "Scila",
+    "Himera",
+    "Meduza",
+    "Hidra"
+   ]
+  },
+  "dq_en_1_160": {
+   "q": "U kojem je gradu ovaj toranj?",
+   "o": [
+    "Berlin",
+    "Bruxelles",
+    "Pariz",
+    "London"
+   ]
+  },
+  "dq_en_1_161": {
+   "q": "Koji je ovo spomenik?",
+   "o": [
+    "Majka domovina zove",
+    "Kolos s Roda",
+    "Krist Spasitelj",
+    "Kip slobode"
+   ]
+  },
+  "dq_en_1_162": {
+   "q": "U kojoj je zemlji ovo?",
+   "o": [
+    "Iran",
+    "Pakistan",
+    "Indija",
+    "Turska"
+   ]
+  },
+  "dq_en_1_163": {
+   "q": "Koja je civilizacija ovo izgradila?",
+   "o": [
+    "Maje",
+    "Stari Egipćani",
+    "Asteci",
+    "Sumerani"
+   ]
+  },
+  "dq_en_2_01": {
+   "q": "Tko je napisao „Ponos i predrasude”?",
+   "o": [
+    "George Eliot",
+    "Charlotte Brontë",
+    "Jane Austen",
+    "Mary Shelley"
+   ]
+  },
+  "dq_en_2_02": {
+   "q": "Koji je antički grad zatrpala erupcija Vezuva 79. godine?",
+   "o": [
+    "Kartaga",
+    "Pompeji",
+    "Atena",
+    "Troja"
+   ]
+  },
+  "dq_en_2_03": {
+   "q": "Koji je kemijski simbol zlata?",
+   "o": [
+    "Ag",
+    "Au",
+    "Go",
+    "Gd"
+   ]
+  },
+  "dq_en_2_04": {
+   "q": "Tko je naslikao „Zvjezdanu noć”?",
+   "o": [
+    "Pablo Picasso",
+    "Paul Cézanne",
+    "Vincent van Gogh",
+    "Claude Monet"
+   ]
+  },
+  "dq_en_2_05": {
+   "q": "Leonardo da Vinci oslikao je strop Sikstinske kapele."
+  },
+  "dq_en_2_06": {
+   "q": "Francuska revolucija počela je 1789. godine."
+  },
+  "dq_en_2_07": {
+   "q": "Tko je ovo?",
+   "o": [
+    "William Shakespeare",
+    "Sir Walter Raleigh",
+    "Miguel de Cervantes",
+    "Christopher Marlowe"
+   ]
+  },
+  "dq_en_2_08": {
+   "q": "Tko je ovo?",
+   "o": [
+    "Abraham Lincoln",
+    "Charles Dickens",
+    "Karl Marx",
+    "Ulysses S. Grant"
+   ]
+  },
+  "dq_en_2_09": {
+   "q": "Koje je godine pao Berlinski zid?"
+  },
+  "dq_en_2_10": {
+   "q": "Koliki je postotak Zemljine površine prekriven vodom?"
+  },
+  "dq_en_2_11": {
+   "q": "U kojem je gradu muzej Louvre?",
+   "o": [
+    "Pariz",
+    "London",
+    "Rim",
+    "Madrid"
+   ]
+  },
+  "dq_en_2_12": {
+   "q": "Michelangelo je isklesao kip Davida."
+  },
+  "dq_en_2_13": {
+   "q": "Kojeg je detektiva stvorio Arthur Conan Doyle?",
+   "o": [
+    "Sherlocka Holmesa",
+    "Miss Marple",
+    "Herculea Poirota",
+    "Philipa Marlowea"
+   ]
+  },
+  "dq_en_2_14": {
+   "q": "Charles Dickens napisao je „Olivera Twista”."
+  },
+  "dq_en_2_15": {
+   "q": "Tko je rimski bog rata?",
+   "o": [
+    "Apolon",
+    "Neptun",
+    "Mars",
+    "Jupiter"
+   ]
+  },
+  "dq_en_2_16": {
+   "q": "U grčkoj mitologiji Pandora je otvorila posudu iz koje su zla izašla u svijet."
+  },
+  "dq_en_2_17": {
+   "q": "Koja je organizacija osnovana 1945. radi očuvanja međunarodnog mira?",
+   "o": [
+    "Liga naroda",
+    "Ujedinjeni narodi",
+    "Europska unija",
+    "NATO"
+   ]
+  },
+  "dq_en_2_18": {
+   "q": "Riječ „demokracija” potječe od grčkih riječi koje znače „vlast naroda”."
+  },
+  "dq_en_2_19": {
+   "q": "Čija je ovo zastava?",
+   "o": [
+    "Meksiko",
+    "Italija",
+    "Mađarska",
+    "Irska"
+   ]
+  },
+  "dq_en_2_20": {
+   "q": "Čija je ovo zastava?",
+   "o": [
+    "Belgija",
+    "Njemačka",
+    "Austrija",
+    "Nizozemska"
+   ]
+  },
+  "dq_en_2_21": {
+   "q": "Čija je ovo zastava?",
+   "o": [
+    "Kolumbija",
+    "Brazil",
+    "Portugal",
+    "Argentina"
+   ]
+  },
+  "dq_en_2_22": {
+   "q": "Čija je ovo zastava?",
+   "o": [
+    "Vijetnam",
+    "Turska",
+    "Japan",
+    "Kina"
+   ]
+  },
+  "dq_en_2_23": {
+   "q": "Čija je ovo zastava?",
+   "o": [
+    "Švicarska",
+    "Švedska",
+    "Austrija",
+    "Danska"
+   ]
+  },
+  "dq_en_2_24": {
+   "q": "Koji je glavni grad Njemačke?",
+   "o": [
+    "München",
+    "Frankfurt",
+    "Hamburg",
+    "Berlin"
+   ]
+  },
+  "dq_en_2_25": {
+   "q": "Koji je glavni grad Rusije?",
+   "o": [
+    "Moskva",
+    "Novosibirsk",
+    "Sankt Peterburg",
+    "Kazan"
+   ]
+  },
+  "dq_en_2_26": {
+   "q": "Koji je glavni grad Kine?",
+   "o": [
+    "Hong Kong",
+    "Šangaj",
+    "Guangzhou",
+    "Peking"
+   ]
+  },
+  "dq_en_2_27": {
+   "q": "Koji je glavni grad Grčke?",
+   "o": [
+    "Korint",
+    "Atena",
+    "Solun",
+    "Sparta"
+   ]
+  },
+  "dq_en_2_28": {
+   "q": "Koji je glavni grad SAD-a?",
+   "o": [
+    "New York",
+    "Los Angeles",
+    "Washington",
+    "Chicago"
+   ]
+  },
+  "dq_en_2_29": {
+   "q": "Koja zemlja ima više stanovnika?",
+   "o": [
+    "Japan",
+    "Njemačka"
+   ]
+  },
+  "dq_en_2_30": {
+   "q": "Koja zemlja ima više stanovnika?",
+   "o": [
+    "Brazil",
+    "Kanada"
+   ]
+  },
+  "dq_en_2_31": {
+   "q": "Koja je zemlja veća po površini?",
+   "o": [
+    "Kanada",
+    "Indija"
+   ]
+  },
+  "dq_en_2_32": {
+   "q": "Koja zemlja ima veće gospodarstvo (BDP)?",
+   "o": [
+    "Kina",
+    "Japan"
+   ]
+  },
+  "dq_en_2_33": {
+   "q": "Koja je rijeka duža?",
+   "o": [
+    "Nil",
+    "Dunav"
+   ]
+  },
+  "dq_en_2_34": {
+   "q": "Koja je pustinja veća?",
+   "o": [
+    "Sahara",
+    "Gobi"
+   ]
+  },
+  "dq_en_2_35": {
+   "q": "Koji je kontinent veći?",
+   "o": [
+    "Europa",
+    "Afrika"
+   ]
+  },
+  "dq_en_2_36": {
+   "q": "Tko je u 13. stoljeću osnovao Mongolsko Carstvo?",
+   "o": [
+    "Džingis-kan",
+    "Atila",
+    "Timur Lenk",
+    "Kublaj-kan"
+   ]
+  },
+  "dq_en_2_37": {
+   "q": "Koja je egipatska kraljica bila saveznica Julija Cezara i Marka Antonija?",
+   "o": [
+    "Kleopatra",
+    "Nefertari",
+    "Nefertiti",
+    "Hatšepsut"
+   ]
+  },
+  "dq_en_2_38": {
+   "q": "Koje je carstvo imalo prijestolnicu u Tenochtitlanu, u današnjem Meksiku?",
+   "o": [
+    "Olmečko",
+    "Majansko",
+    "Inkursko",
+    "Astečko"
+   ]
+  },
+  "dq_en_2_39": {
+   "q": "Koji je makedonski kralj u 4. stoljeću pr. Kr. osvojio Perzijsko Carstvo?",
+   "o": [
+    "Aleksandar Veliki",
+    "Pir",
+    "Leonida",
+    "Filip II."
+   ]
+  },
+  "dq_en_2_40": {
+   "q": "U kojoj je zemlji počela industrijska revolucija?",
+   "o": [
+    "Velika Britanija",
+    "Francuska",
+    "SAD",
+    "Njemačka"
+   ]
+  },
+  "dq_en_2_41": {
+   "q": "Koja je bolest, zvana Crna smrt, u 14. stoljeću poharala Europu?",
+   "o": [
+    "Velike boginje",
+    "Kolera",
+    "Kuga",
+    "Tifus"
+   ]
+  },
+  "dq_en_2_42": {
+   "q": "Koju je parišku tvrđavu 14. srpnja 1789. jurišem zauzelo mnoštvo?",
+   "o": [
+    "Tuileries",
+    "Conciergerie",
+    "Louvre",
+    "Bastilja"
+   ]
+  },
+  "dq_en_2_43": {
+   "q": "Koji se sustav rasne segregacije provodio u Južnoj Africi od 1948.?",
+   "o": [
+    "Aparthejd",
+    "Kmetstvo",
+    "Zakoni Jima Crowa",
+    "Kastinski sustav"
+   ]
+  },
+  "dq_en_2_44": {
+   "q": "Koji je revolucionarni vođa 1959. preuzeo vlast na Kubi?",
+   "o": [
+    "Che Guevara",
+    "Fulgencio Batista",
+    "Salvador Allende",
+    "Fidel Castro"
+   ]
+  },
+  "dq_en_2_45": {
+   "q": "Koji je trgovački put stoljećima povezivao Kinu sa Sredozemljem?",
+   "o": [
+    "Put svile",
+    "Kraljevski put",
+    "Apijeva cesta",
+    "Jantarni put"
+   ]
+  },
+  "dq_en_2_46": {
+   "q": "Koji je borac za građanska prava 1963. održao govor „Imam san”?",
+   "o": [
+    "Martin Luther King ml.",
+    "Malcolm X",
+    "Rosa Parks",
+    "Jesse Jackson"
+   ]
+  },
+  "dq_en_2_47": {
+   "q": "Što je bilo prije?",
+   "o": [
+    "Kameno doba",
+    "Brončano doba"
+   ]
+  },
+  "dq_en_2_48": {
+   "q": "Što je bilo prije?",
+   "o": [
+    "Američki građanski rat",
+    "Prvi svjetski rat"
+   ]
+  },
+  "dq_en_2_49": {
+   "q": "Što je bilo prije?",
+   "o": [
+    "Ruska revolucija",
+    "Francuska revolucija"
+   ]
+  },
+  "dq_en_2_50": {
+   "q": "Stari Rim osnovan je prije nego što su sagrađene piramide u Gizi."
+  },
+  "dq_en_2_51": {
+   "q": "Julija Cezara ubila je skupina rimskih senatora."
+  },
+  "dq_en_2_52": {
+   "q": "Marija Antoaneta bila je engleska kraljica."
+  },
+  "dq_en_2_53": {
+   "q": "Carstvo Inka protezalo se duž Anda."
+  },
+  "dq_en_2_54": {
+   "q": "Koje je godine završio Prvi svjetski rat?"
+  },
+  "dq_en_2_55": {
+   "q": "Koliko se britanskih kolonija 1776. ujedinilo u Sjedinjene Američke Države?",
+   "u": "kolonija"
+  },
+  "dq_en_2_56": {
+   "q": "Koje se godine raspao Sovjetski Savez?"
+  },
+  "dq_en_2_57": {
+   "q": "Koliko stranica ima šesterokut?",
+   "o": [
+    "Sedam",
+    "Pet",
+    "Osam",
+    "Šest"
+   ]
+  },
+  "dq_en_2_58": {
+   "q": "Koji je planet najbliži Suncu?",
+   "o": [
+    "Venera",
+    "Mars",
+    "Zemlja",
+    "Merkur"
+   ]
+  },
+  "dq_en_2_59": {
+   "q": "Koji je planet poznat po velikim, sjajnim prstenovima?",
+   "o": [
+    "Saturn",
+    "Venera",
+    "Jupiter",
+    "Mars"
+   ]
+  },
+  "dq_en_2_60": {
+   "q": "Kojim procesom biljke uz pomoć sunčeve svjetlosti proizvode hranu?",
+   "o": [
+    "Disanje",
+    "Vrenje",
+    "Probava",
+    "Fotosinteza"
+   ]
+  },
+  "dq_en_2_61": {
+   "q": "Koji je najveći organ ljudskog tijela?",
+   "o": [
+    "Mozak",
+    "Srce",
+    "Koža",
+    "Jetra"
+   ]
+  },
+  "dq_en_2_62": {
+   "q": "Koji je znanstvenik poznat po jednadžbi E = mc²?",
+   "o": [
+    "Isaac Newton",
+    "Max Planck",
+    "Albert Einstein",
+    "Niels Bohr"
+   ]
+  },
+  "dq_en_2_63": {
+   "q": "Kakva je životinja žaba?",
+   "o": [
+    "Vodozemac",
+    "Gmaz",
+    "Riba",
+    "Sisavac"
+   ]
+  },
+  "dq_en_2_64": {
+   "q": "Koja su braća 1903. godine izvela prvi let motornim zrakoplovom?",
+   "o": [
+    "Braća Montgolfier",
+    "Braća Michelin",
+    "Braća Lumière",
+    "Braća Wright"
+   ]
+  },
+  "dq_en_2_65": {
+   "q": "Koji kukci prenose malariju na ljude?",
+   "o": [
+    "Muhe ce-ce",
+    "Kućne muhe",
+    "Komarci",
+    "Buhe"
+   ]
+  },
+  "dq_en_2_66": {
+   "q": "Kako se zove vanjski čvrsti sloj Zemlje?",
+   "o": [
+    "Plašt",
+    "Unutarnja jezgra",
+    "Vanjska jezgra",
+    "Kora"
+   ]
+  },
+  "dq_en_2_67": {
+   "q": "Koji dio računala izvršava naredbe i izračune?",
+   "o": [
+    "Napajanje",
+    "Procesor (CPU)",
+    "Tvrdi disk",
+    "Monitor"
+   ]
+  },
+  "dq_en_2_68": {
+   "q": "Što je dalje od Sunca?",
+   "o": [
+    "Saturn",
+    "Neptun"
+   ]
+  },
+  "dq_en_2_69": {
+   "q": "Tko je teži?",
+   "o": [
+    "Nilski konj",
+    "Afrički savanski slon"
+   ]
+  },
+  "dq_en_2_70": {
+   "q": "Koji je planet veći?",
+   "o": [
+    "Zemlja",
+    "Mars"
+   ]
+  },
+  "dq_en_2_71": {
+   "q": "Gdje je gravitacija jača?",
+   "o": [
+    "Na Zemlji",
+    "Na Mjesecu"
+   ]
+  },
+  "dq_en_2_72": {
+   "q": "Što je dulje?",
+   "o": [
+    "Jedan kilometar",
+    "Jedna milja"
+   ]
+  },
+  "dq_en_2_73": {
+   "q": "Botanički gledano, rajčica je plod."
+  },
+  "dq_en_2_74": {
+   "q": "Munja nikad ne udari dvaput u isto mjesto."
+  },
+  "dq_en_2_75": {
+   "q": "Ljudi su živjeli u isto vrijeme kad i Tyrannosaurus rex."
+  },
+  "dq_en_2_76": {
+   "q": "Tihi ocean je najveći ocean na Zemlji."
+  },
+  "dq_en_2_77": {
+   "q": "Na kojoj temperaturi voda vrije na razini mora, u Celzijevim stupnjevima?"
+  },
+  "dq_en_2_78": {
+   "q": "Koliko sekundi ima jedan sat?",
+   "u": "sekundi"
+  },
+  "dq_en_2_79": {
+   "q": "Koliko rebara obično ima čovjek?",
+   "u": "rebra"
+  },
+  "dq_en_2_80": {
+   "q": "Koju zbirku priča Šeherezada pripovijeda noć za noći?",
+   "o": [
+    "Tisuću i jedna noć",
+    "Ezopove basne",
+    "Canterburyjske priče",
+    "Dekameron"
+   ]
+  },
+  "dq_en_2_81": {
+   "q": "Tko je napisao „Malu sirenu” i „Ružno pače”?",
+   "o": [
+    "Lewis Carroll",
+    "Hans Christian Andersen",
+    "Braća Grimm",
+    "Charles Perrault"
+   ]
+  },
+  "dq_en_2_82": {
+   "q": "Tko u „Dvadeset tisuća milja pod morem” zapovijeda podmornicom Nautilus?",
+   "o": [
+    "Kapetan Nemo",
+    "Kapetan Ahab",
+    "Kapetan Kuka",
+    "Kapetan Flint"
+   ]
+  },
+  "dq_en_2_83": {
+   "q": "U kojoj se Shakespeareovoj drami nalazi stih „Biti ili ne biti”?",
+   "o": [
+    "Otelo",
+    "Kralj Lear",
+    "Hamlet",
+    "Macbeth"
+   ]
+  },
+  "dq_en_2_84": {
+   "q": "Kojeg škrtca u „Božićnoj priči” na Badnju večer posjećuju duhovi?",
+   "o": [
+    "Ebenezera Scroogea",
+    "Boba Cratchita",
+    "Uriaha Heepa",
+    "Gospodina Micawbera"
+   ]
+  },
+  "dq_en_2_85": {
+   "q": "Tko je napisao „Malog princa”?",
+   "o": [
+    "Antoine de Saint-Exupéry",
+    "Alphonse Daudet",
+    "Jules Verne",
+    "Charles Perrault"
+   ]
+  },
+  "dq_en_2_86": {
+   "q": "Što junak „Don Quijotea” napada misleći da su divovi?",
+   "o": [
+    "Crkvene tornjeve",
+    "Hrastove",
+    "Vjetrenjače",
+    "Plastove sijena"
+   ]
+  },
+  "dq_en_2_87": {
+   "q": "Tko je napisao „Pustolovine Toma Sawyera”?",
+   "o": [
+    "Charles Dickens",
+    "Herman Melville",
+    "Mark Twain",
+    "Jack London"
+   ]
+  },
+  "dq_en_2_88": {
+   "q": "Koja su njemačka braća sakupljala bajke poput „Ivice i Marice”?",
+   "o": [
+    "Wilhelm i Alexander von Humboldt",
+    "Jacob i Wilhelm Grimm",
+    "August i Friedrich Schlegel",
+    "Thomas i Heinrich Mann"
+   ]
+  },
+  "dq_en_2_89": {
+   "q": "U planinama koje zemlje se odvija dječji klasik „Heidi”?",
+   "o": [
+    "Škotske",
+    "Švicarske",
+    "Norveške",
+    "Austrije"
+   ]
+  },
+  "dq_en_2_90": {
+   "q": "Kojem se starogrčkom pripovjedaču pripisuje basna „Kornjača i zec”?",
+   "o": [
+    "Ezopu",
+    "Homeru",
+    "Sofoklu",
+    "Herodotu"
+   ]
+  },
+  "dq_en_2_91": {
+   "q": "U kojoj se zemlji Anne Frank skrivala dok je pisala dnevnik?",
+   "o": [
+    "U Poljskoj",
+    "U Nizozemskoj",
+    "U Njemačkoj",
+    "U Belgiji"
+   ]
+  },
+  "dq_en_2_92": {
+   "q": "Tko je napisao „Frankensteina”?",
+   "o": [
+    "Mary Shelley",
+    "Bram Stoker",
+    "Edgar Allan Poe",
+    "Emily Brontë"
+   ]
+  },
+  "dq_en_2_93": {
+   "q": "Čiji život opisuje autobiografija?",
+   "o": [
+    "Slavnog pretka",
+    "Sveca",
+    "Izmišljenog junaka",
+    "Samog autora"
+   ]
+  },
+  "dq_en_2_94": {
+   "q": "Što je objavljeno prije?",
+   "o": [
+    "Pinocchio",
+    "Mali princ"
+   ]
+  },
+  "dq_en_2_95": {
+   "q": "Tko je rođen prije?",
+   "o": [
+    "Jane Austen",
+    "Agatha Christie"
+   ]
+  },
+  "dq_en_2_96": {
+   "q": "Tko je rođen prije?",
+   "o": [
+    "Hans Christian Andersen",
+    "J. R. R. Tolkien"
+   ]
+  },
+  "dq_en_2_97": {
+   "q": "Mali princ dolazi s malenog asteroida."
+  },
+  "dq_en_2_98": {
+   "q": "Homerova „Ilijada” odvija se u vrijeme Trojanskog rata."
+  },
+  "dq_en_2_99": {
+   "q": "Lav Tolstoj bio je francuski romanopisac."
+  },
+  "dq_en_2_100": {
+   "q": "U „Knjizi o džungli” Baloo je tigar."
+  },
+  "dq_en_2_101": {
+   "q": "Koje je godine objavljen prvi roman o Harryju Potteru?"
+  },
+  "dq_en_2_102": {
+   "q": "Koliko stihova ima sonet?",
+   "u": "stihova"
+  },
+  "dq_en_2_103": {
+   "q": "Kako se zove slika složena od komadića obojenog kamena ili stakla?",
+   "o": [
+    "Mozaik",
+    "Tapiserija",
+    "Gravura",
+    "Freska"
+   ]
+  },
+  "dq_en_2_104": {
+   "q": "U kojem se gradu nalazi Partenon?",
+   "o": [
+    "Atena",
+    "Rim",
+    "Aleksandrija",
+    "Istanbul"
+   ]
+  },
+  "dq_en_2_105": {
+   "q": "Iz kojeg jezika potječe riječ „origami”?",
+   "o": [
+    "Iz korejskog",
+    "Iz tajlandskog",
+    "Iz japanskog",
+    "Iz kineskog"
+   ]
+  },
+  "dq_en_2_106": {
+   "q": "Koja je zvijezda nijemog filma glumila Skitnicu?",
+   "o": [
+    "Charlie Chaplin",
+    "Harold Lloyd",
+    "Buster Keaton",
+    "Stan Laurel"
+   ]
+  },
+  "dq_en_2_107": {
+   "q": "Koji australski grad ima operu s krovovima u obliku jedara?",
+   "o": [
+    "Sydney",
+    "Brisbane",
+    "Melbourne",
+    "Perth"
+   ]
+  },
+  "dq_en_2_108": {
+   "q": "Kako se zove slika određene osobe?",
+   "o": [
+    "Pejzaž",
+    "Marina",
+    "Mrtva priroda",
+    "Portret"
+   ]
+  },
+  "dq_en_2_109": {
+   "q": "Koliko glazbenika svira u kvartetu?",
+   "o": [
+    "Četiri",
+    "Pet",
+    "Šest",
+    "Tri"
+   ]
+  },
+  "dq_en_2_110": {
+   "q": "Po kojem je instrumentu jazz legenda Louis Armstrong postao slavan?",
+   "o": [
+    "Po klaviru",
+    "Po trubi",
+    "Po klarinetu",
+    "Po saksofonu"
+   ]
+  },
+  "dq_en_2_111": {
+   "q": "Koja je meksička slikarica poznata po autoportretima?",
+   "o": [
+    "Mary Cassatt",
+    "Frida Kahlo",
+    "Tamara de Lempicka",
+    "Georgia O'Keeffe"
+   ]
+  },
+  "dq_en_2_112": {
+   "q": "U kojoj se katedrali odvija priča Victora Hugoa o grbavom zvonaru?",
+   "o": [
+    "U katedrali u Reimsu",
+    "U katedrali u Chartresu",
+    "U kölnskoj katedrali",
+    "U Notre-Dame de Paris"
+   ]
+  },
+  "dq_en_2_113": {
+   "q": "Koji film iz 1939. prati Dorothy cestom od žute cigle?",
+   "o": [
+    "Petar Pan",
+    "Čarobnjak iz Oza",
+    "Mary Poppins",
+    "Alisa u zemlji čudesa"
+   ]
+  },
+  "dq_en_2_114": {
+   "q": "Što je starije?",
+   "o": [
+    "Tadž Mahal",
+    "Velika piramida u Gizi"
+   ]
+  },
+  "dq_en_2_115": {
+   "q": "Kip slobode bio je dar Francuske Sjedinjenim Američkim Državama."
+  },
+  "dq_en_2_116": {
+   "q": "Violončelo je limeni puhački instrument."
+  },
+  "dq_en_2_117": {
+   "q": "Pablo Picasso rođen je u Italiji."
+  },
+  "dq_en_2_118": {
+   "q": "Claude Monet bio je francuski slikar."
+  },
+  "dq_en_2_119": {
+   "q": "Koliko tipaka ima standardni suvremeni klavir?",
+   "u": "tipaka"
+  },
+  "dq_en_2_120": {
+   "q": "Glavu koje životinje u egipatskoj mitologiji ima bog Anubis?",
+   "o": [
+    "Sokola",
+    "Šakala",
+    "Krokodila",
+    "Ibisa"
+   ]
+  },
+  "dq_en_2_121": {
+   "q": "Tko je u grčkoj mitologiji ukrao vatru bogovima i dao je ljudima?",
+   "o": [
+    "Atlas",
+    "Perzej",
+    "Hefest",
+    "Prometej"
+   ]
+  },
+  "dq_en_2_122": {
+   "q": "Koji je junak u grčkoj mitologiji ubio Minotaura?",
+   "o": [
+    "Jazon",
+    "Odisej",
+    "Tezej",
+    "Perzej"
+   ]
+  },
+  "dq_en_2_123": {
+   "q": "Koji rimski bog odgovara grčkom bogu Zeusu?",
+   "o": [
+    "Saturn",
+    "Mars",
+    "Apolon",
+    "Jupiter"
+   ]
+  },
+  "dq_en_2_124": {
+   "q": "Koji čudovišni pas u grčkoj mitologiji čuva vrata podzemlja?",
+   "o": [
+    "Ort",
+    "Kerber",
+    "Haron",
+    "Arg"
+   ]
+  },
+  "dq_en_2_125": {
+   "q": "U kojoj se dvorani u nordijskoj mitologiji ratnici pali u boju goste s Odinom?",
+   "o": [
+    "Niflheim",
+    "Jotunheim",
+    "Midgard",
+    "Valhalla"
+   ]
+  },
+  "dq_en_2_126": {
+   "q": "Koji je kralj u grčkoj mitologiji sve što bi dotaknuo pretvarao u zlato?",
+   "o": [
+    "Krez",
+    "Mida",
+    "Prijam",
+    "Minos"
+   ]
+  },
+  "dq_en_2_127": {
+   "q": "Koja je životinja prema rimskoj legendi dojila blizance Romula i Rema?",
+   "o": [
+    "Vučica",
+    "Kobila",
+    "Medvjedica",
+    "Lavica"
+   ]
+  },
+  "dq_en_2_128": {
+   "q": "Čija je otmica, koju je izveo trojanski kraljević Paris, prema grčkom mitu dovela do Trojanskog rata?",
+   "o": [
+    "Helenina",
+    "Penelopina",
+    "Kasandrina",
+    "Andromahina"
+   ]
+  },
+  "dq_en_2_129": {
+   "q": "Koji sveti predmet u legendi o kralju Arturu traže vitezovi Okruglog stola?",
+   "o": [
+    "Sveti gral",
+    "Zlatno runo",
+    "Kamen mudraca",
+    "Kovčeg saveza"
+   ]
+  },
+  "dq_en_2_130": {
+   "q": "Koja je ptica simbol grčke božice Atene?",
+   "o": [
+    "Paun",
+    "Sova",
+    "Golubica",
+    "Orao"
+   ]
+  },
+  "dq_en_2_131": {
+   "q": "Koji se od ovih egipatskih bogova prikazuje sa sokolovom glavom?",
+   "o": [
+    "Anubis",
+    "Sobek",
+    "Tot",
+    "Horus"
+   ]
+  },
+  "dq_en_2_133": {
+   "q": "Koji mali bradati vilenjak iz irskog folklora navodno skriva ćup zlata?",
+   "o": [
+    "Kelpie",
+    "Selkie",
+    "Banshee",
+    "Leprechaun"
+   ]
+  },
+  "dq_en_2_134": {
+   "q": "Koja su bića u grčkoj mitologiji pjesmom mamila mornare u smrt?",
+   "o": [
+    "Harpije",
+    "Sirene",
+    "Furije",
+    "Gorgone"
+   ]
+  },
+  "dq_en_2_135": {
+   "q": "Koji je naraštaj bogova u grčkoj mitologiji bio prvi?",
+   "o": [
+    "Olimpijci",
+    "Titani"
+   ]
+  },
+  "dq_en_2_136": {
+   "q": "U grčkoj mitologiji Hera je Zeusova žena."
+  },
+  "dq_en_2_137": {
+   "q": "U nordijskoj mitologiji Odin ima samo jedno oko."
+  },
+  "dq_en_2_138": {
+   "q": "Prema legendi o Troji, drvenog su konja Trojanci darovali Grcima."
+  },
+  "dq_en_2_139": {
+   "q": "U grčkoj mitologiji Narcis se zaljubio u vlastiti odraz."
+  },
+  "dq_en_2_140": {
+   "q": "U grčkoj mitologiji satir je napola čovjek, a napola riba."
+  },
+  "dq_en_2_141": {
+   "q": "Koliko je godina prema grčkoj legendi trajao Trojanski rat?",
+   "u": "godina"
+  },
+  "dq_en_2_142": {
+   "q": "Koja rijeka teče prema sjeveru kroz Egipat i ulijeva se u Sredozemno more?",
+   "o": [
+    "Nil",
+    "Niger",
+    "Zambezi",
+    "Kongo"
+   ]
+  },
+  "dq_en_2_143": {
+   "q": "U kojem se gorju nalazi Mount Everest?",
+   "o": [
+    "Stjenjak",
+    "Ande",
+    "Alpe",
+    "Himalaja"
+   ]
+  },
+  "dq_en_2_144": {
+   "q": "Paella je tradicionalno jelo koje zemlje?",
+   "o": [
+    "Grčke",
+    "Portugala",
+    "Španjolske",
+    "Italije"
+   ]
+  },
+  "dq_en_2_145": {
+   "q": "U kojem je gradu sjedište Ujedinjenih naroda?",
+   "o": [
+    "Ženeva",
+    "Pariz",
+    "Washington",
+    "New York"
+   ]
+  },
+  "dq_en_2_146": {
+   "q": "Koji je grad odredište hadža, muslimanskog hodočašća?",
+   "o": [
+    "Bagdad",
+    "Jeruzalem",
+    "Medina",
+    "Meka"
+   ]
+  },
+  "dq_en_2_147": {
+   "q": "Judaizam, kršćanstvo i islam monoteističke su religije."
+  },
+  "dq_en_2_148": {
+   "q": "Ekvator prolazi kroz Europu."
+  },
+  "dq_en_2_149": {
+   "q": "Koliko je metara nadmorske visine visok Mount Everest?",
+   "u": "metara"
+  },
+  "dq_en_2_150": {
+   "q": "Koliko životinja ima ciklus kineskog horoskopa?",
+   "u": "životinja"
+  },
+  "dq_en_2_151": {
+   "q": "Kako se zove ova slika?",
+   "o": [
+    "Noćna straža",
+    "Posljednja večera",
+    "Stvaranje Adama",
+    "Atenska škola"
+   ]
+  },
+  "dq_en_2_152": {
+   "q": "Kako se zove ova slika?",
+   "o": [
+    "Mona Lisa",
+    "Dama s hermelinom",
+    "Djevojka s bisernom naušnicom",
+    "Mljekarica"
+   ]
+  },
+  "dq_en_2_153": {
+   "q": "Kako se zove ova slika?",
+   "o": [
+    "Stvaranje Adama",
+    "Bakho i Arijadna",
+    "Atenska škola",
+    "Rođenje Venere"
+   ]
+  },
+  "dq_en_2_154": {
+   "q": "Tko je naslikao ovu sliku?",
+   "o": [
+    "Gustav Klimt",
+    "Edvard Munch",
+    "Egon Schiele",
+    "Alfons Mucha"
+   ]
+  },
+  "dq_en_2_155": {
+   "q": "Tko je ovo?",
+   "o": [
+    "Alfred Tennyson",
+    "Wilkie Collins",
+    "Robert Louis Stevenson",
+    "Charles Dickens"
+   ]
+  },
+  "dq_en_2_156": {
+   "q": "Tko je ovo?",
+   "o": [
+    "Nikola Tesla",
+    "Guglielmo Marconi",
+    "Thomas Edison",
+    "Alexander Graham Bell"
+   ]
+  },
+  "dq_en_2_157": {
+   "q": "Tko je ovo?",
+   "o": [
+    "Wilhelm Wundt",
+    "Alfred Adler",
+    "Carl Jung",
+    "Sigmund Freud"
+   ]
+  },
+  "dq_en_2_158": {
+   "q": "Tko je ovo?",
+   "o": [
+    "Thomas Cromwell",
+    "Franjo I. Francuski",
+    "Car Karlo V.",
+    "Henrik VIII."
+   ]
+  },
+  "dq_en_2_159": {
+   "q": "Tko je ovo?",
+   "o": [
+    "Michelangelo",
+    "Leonardo da Vinci",
+    "Tizian",
+    "Donatello"
+   ]
+  },
+  "dq_en_2_160": {
+   "q": "Koje blizance doji ova vučica?",
+   "o": [
+    "Herkula i Ifikla",
+    "Apolona i Dijanu",
+    "Kastora i Poluksa",
+    "Romula i Rema"
+   ]
+  },
+  "dq_en_2_161": {
+   "q": "Koji je junak ovdje privezan za jarbol?",
+   "o": [
+    "Eneja",
+    "Odisej",
+    "Jazon",
+    "Tezej"
+   ]
+  },
+  "dq_en_2_162": {
+   "q": "U kojem je gradu ovaj toranj sa satom?",
+   "o": [
+    "Edinburgh",
+    "London",
+    "Dublin",
+    "Amsterdam"
+   ]
+  },
+  "dq_en_2_163": {
+   "q": "U kojoj je zemlji ovaj toranj?",
+   "o": [
+    "Grčka",
+    "Portugal",
+    "Italija",
+    "Španjolska"
+   ]
+  },
+  "dq_en_2_164": {
+   "q": "Koja je civilizacija izgradila ovu arenu?",
+   "o": [
+    "Etruščani",
+    "Kartažani",
+    "Grci",
+    "Rimljani"
+   ]
+  },
+  "dq_en_2_165": {
+   "q": "Koja je zemlja izgradila ovaj zid?",
+   "o": [
+    "Kina",
+    "Japan",
+    "Mongolija",
+    "Koreja"
+   ]
+  },
+  "dq_en_3_01": {
+   "q": "Tko je u grčkoj mitologiji na krilima od voska poletio preblizu Suncu?",
+   "o": [
+    "Ikar",
+    "Dedal",
+    "Orfej",
+    "Perzej"
+   ]
+  },
+  "dq_en_3_02": {
+   "q": "Tko je bio prvi rimski car?",
+   "o": [
+    "Neron",
+    "August",
+    "Konstantin",
+    "Julije Cezar"
+   ]
+  },
+  "dq_en_3_03": {
+   "q": "Koji je znanstvenik postavio teoriju evolucije prirodnom selekcijom?",
+   "o": [
+    "Louis Pasteur",
+    "Charles Darwin",
+    "Jean-Baptiste Lamarck",
+    "Gregor Mendel"
+   ]
+  },
+  "dq_en_3_04": {
+   "q": "Tko je napisao roman „1984.”?",
+   "o": [
+    "Aldous Huxley",
+    "Ray Bradbury",
+    "H. G. Wells",
+    "George Orwell"
+   ]
+  },
+  "dq_en_3_05": {
+   "q": "Renesansa je počela u Italiji."
+  },
+  "dq_en_3_06": {
+   "q": "Zvuk putuje brže od svjetlosti."
+  },
+  "dq_en_3_07": {
+   "q": "Tko je ovo?",
+   "o": [
+    "Emmeline Pankhurst",
+    "Rosalind Franklin",
+    "Florence Nightingale",
+    "Marie Curie"
+   ]
+  },
+  "dq_en_3_08": {
+   "q": "Tko je ovo?",
+   "o": [
+    "Joseph Haydn",
+    "Wolfgang Amadeus Mozart",
+    "Antonio Vivaldi",
+    "Johann Sebastian Bach"
+   ]
+  },
+  "dq_en_3_09": {
+   "q": "Koje je godine počeo Prvi svjetski rat?"
+  },
+  "dq_en_3_10": {
+   "q": "Koliko kostiju ima tijelo odraslog čovjeka?",
+   "u": "kostiju"
+  },
+  "dq_en_3_11": {
+   "q": "Koji je slikar poznat po lopočima naslikanima u Givernyju?",
+   "o": [
+    "Paul Gauguin",
+    "Edgar Degas",
+    "Claude Monet",
+    "Auguste Renoir"
+   ]
+  },
+  "dq_en_3_12": {
+   "q": "Tko je napisao „Jadnike”?",
+   "o": [
+    "Gustave Flaubert",
+    "Alexandre Dumas",
+    "Victor Hugo",
+    "Émile Zola"
+   ]
+  },
+  "dq_en_3_13": {
+   "q": "„Moby Dick” govori o lovu na velikog bijelog kita."
+  },
+  "dq_en_3_14": {
+   "q": "Koje je biće Edipu postavilo zagonetku pred vratima Tebe?",
+   "o": [
+    "Minotaur",
+    "Himera",
+    "Sfinga",
+    "Hidra"
+   ]
+  },
+  "dq_en_3_15": {
+   "q": "Tko je u egipatskoj mitologiji bog Sunca?",
+   "o": [
+    "Anubis",
+    "Tot",
+    "Oziris",
+    "Ra"
+   ]
+  },
+  "dq_en_3_16": {
+   "q": "Minotaur je živio u labirintu na otoku Kreti."
+  },
+  "dq_en_3_17": {
+   "q": "Koji je starogrčki filozof osuđen na smrt ispijanjem kukute?",
+   "o": [
+    "Aristotel",
+    "Sokrat",
+    "Diogen",
+    "Platon"
+   ]
+  },
+  "dq_en_3_18": {
+   "q": "Tko je s Friedrichom Engelsom napisao „Komunistički manifest”?",
+   "o": [
+    "Karl Marx",
+    "Adam Smith",
+    "Vladimir Lenjin",
+    "Jean-Jacques Rousseau"
+   ]
+  },
+  "dq_en_3_19": {
+   "q": "Čija je ovo zastava?",
+   "o": [
+    "Portugal",
+    "Njemačka",
+    "Kolumbija",
+    "Španjolska"
+   ]
+  },
+  "dq_en_3_20": {
+   "q": "Čija je ovo zastava?",
+   "o": [
+    "Irska",
+    "Pakistan",
+    "Indija",
+    "Italija"
+   ]
+  },
+  "dq_en_3_21": {
+   "q": "Čija je ovo zastava?",
+   "o": [
+    "Meksiko",
+    "Italija",
+    "Mađarska",
+    "Iran"
+   ]
+  },
+  "dq_en_3_22": {
+   "q": "Čija je ovo zastava?",
+   "o": [
+    "Fidži",
+    "Ujedinjeno Kraljevstvo",
+    "Novi Zeland",
+    "Australija"
+   ]
+  },
+  "dq_en_3_23": {
+   "q": "Čija je ovo zastava?",
+   "o": [
+    "Grčka",
+    "Urugvaj",
+    "Finska",
+    "Izrael"
+   ]
+  },
+  "dq_en_3_24": {
+   "q": "Koji je glavni grad Australije?",
+   "o": [
+    "Melbourne",
+    "Sydney",
+    "Canberra",
+    "Perth"
+   ]
+  },
+  "dq_en_3_25": {
+   "q": "Koji je glavni grad Kanade?",
+   "o": [
+    "Toronto",
+    "Ottawa",
+    "Montreal",
+    "Vancouver"
+   ]
+  },
+  "dq_en_3_26": {
+   "q": "Koji je glavni grad Brazila?",
+   "o": [
+    "Salvador",
+    "Brasília",
+    "Rio de Janeiro",
+    "São Paulo"
+   ]
+  },
+  "dq_en_3_27": {
+   "q": "Koji je glavni grad Turske?",
+   "o": [
+    "Istanbul",
+    "Ankara",
+    "Izmir",
+    "Antalya"
+   ]
+  },
+  "dq_en_3_28": {
+   "q": "Koji je glavni grad Indije?",
+   "o": [
+    "New Delhi",
+    "Bangalore",
+    "Kolkata",
+    "Mumbai"
+   ]
+  },
+  "dq_en_3_29": {
+   "q": "Koja zemlja ima više stanovnika?",
+   "o": [
+    "Japan",
+    "Indonezija"
+   ]
+  },
+  "dq_en_3_30": {
+   "q": "Koja zemlja ima više stanovnika?",
+   "o": [
+    "Meksiko",
+    "Italija"
+   ]
+  },
+  "dq_en_3_31": {
+   "q": "Koja zemlja ima više stanovnika?",
+   "o": [
+    "Australija",
+    "Turska"
+   ]
+  },
+  "dq_en_3_32": {
+   "q": "Koja je zemlja veća po površini?",
+   "o": [
+    "Indija",
+    "Brazil"
+   ]
+  },
+  "dq_en_3_33": {
+   "q": "Koja je zemlja veća po površini?",
+   "o": [
+    "Australija",
+    "Indija"
+   ]
+  },
+  "dq_en_3_34": {
+   "q": "Koja zemlja ima veće gospodarstvo (BDP)?",
+   "o": [
+    "Brazil",
+    "Argentina"
+   ]
+  },
+  "dq_en_3_35": {
+   "q": "Koja je planina viša?",
+   "o": [
+    "Kilimandžaro",
+    "K2"
+   ]
+  },
+  "dq_en_3_36": {
+   "q": "Koja je rijeka duža?",
+   "o": [
+    "Mekong",
+    "Seina"
+   ]
+  },
+  "dq_en_3_37": {
+   "q": "Koji je ocean veći?",
+   "o": [
+    "Indijski ocean",
+    "Arktički ocean"
+   ]
+  },
+  "dq_en_3_38": {
+   "q": "Koji je otok veći?",
+   "o": [
+    "Madagaskar",
+    "Grenland"
+   ]
+  },
+  "dq_en_3_39": {
+   "q": "Koji je moreplovac predvodio prvu plovidbu oko svijeta, započetu 1519.?",
+   "o": [
+    "Kristofor Kolumbo",
+    "Vasco da Gama",
+    "Francis Drake",
+    "Ferdinand Magellan"
+   ]
+  },
+  "dq_en_3_40": {
+   "q": "Koji je kartaški vojskovođa sa slonovima prešao Alpe da napadne Rim?",
+   "o": [
+    "Spartak",
+    "Hanibal",
+    "Hamilkar",
+    "Scipion"
+   ]
+  },
+  "dq_en_3_41": {
+   "q": "Tko je 1949. proglasio Narodnu Republiku Kinu?",
+   "o": [
+    "Chiang Kai-shek",
+    "Mao Zedong",
+    "Deng Xiaoping",
+    "Sun Yat-sen"
+   ]
+  },
+  "dq_en_3_42": {
+   "q": "Koje je carstvo bilo pod vlašću Sulejmana Veličanstvenog?",
+   "o": [
+    "Perzijsko",
+    "Mogulsko",
+    "Bizantsko",
+    "Osmansko"
+   ]
+  },
+  "dq_en_3_43": {
+   "q": "Koji je njemački redovnik 1517. pokrenuo protestantsku reformaciju?",
+   "o": [
+    "Ulrich Zwingli",
+    "Jean Calvin",
+    "Jan Hus",
+    "Martin Luther"
+   ]
+  },
+  "dq_en_3_44": {
+   "q": "Koja je civilizacija izgradila gradove Tikal i Chichén Itzá?",
+   "o": [
+    "Inkurska",
+    "Majanska",
+    "Astečka",
+    "Olmečka"
+   ]
+  },
+  "dq_en_3_45": {
+   "q": "Koju je zemlju Njemačka napala 1. rujna 1939.?",
+   "o": [
+    "Poljsku",
+    "Belgiju",
+    "Čehoslovačku",
+    "Francusku"
+   ]
+  },
+  "dq_en_3_46": {
+   "q": "Koja je zemlja nakon Drugog svjetskog rata podijeljena duž 38. usporednice?",
+   "o": [
+    "Vijetnam",
+    "Kina",
+    "Njemačka",
+    "Koreja"
+   ]
+  },
+  "dq_en_3_47": {
+   "q": "Tko je bio posljednji ruski car?",
+   "o": [
+    "Aleksandar III.",
+    "Petar Veliki",
+    "Aleksandar II.",
+    "Nikola II."
+   ]
+  },
+  "dq_en_3_48": {
+   "q": "Od koje je europske zemlje Brazil 1822. stekao neovisnost?",
+   "o": [
+    "Španjolske",
+    "Francuske",
+    "Portugala",
+    "Nizozemske"
+   ]
+  },
+  "dq_en_3_49": {
+   "q": "Koji je američki predsjednik 1863. izdao Proglas o oslobođenju robova?",
+   "o": [
+    "Abraham Lincoln",
+    "Thomas Jefferson",
+    "Ulysses S. Grant",
+    "Andrew Jackson"
+   ]
+  },
+  "dq_en_3_50": {
+   "q": "Koje je carstvo zauzimalo veću površinu?",
+   "o": [
+    "Britansko Carstvo",
+    "Napoleonovo carstvo"
+   ]
+  },
+  "dq_en_3_51": {
+   "q": "Što je sagrađeno prije?",
+   "o": [
+    "Kolosej",
+    "Partenon"
+   ]
+  },
+  "dq_en_3_52": {
+   "q": "Tko je vladao prije?",
+   "o": [
+    "Aleksandar Veliki",
+    "Tutankamon"
+   ]
+  },
+  "dq_en_3_53": {
+   "q": "Japanom su nekoliko stoljeća vladali šoguni."
+  },
+  "dq_en_3_54": {
+   "q": "Sovjetski Savez i SAD bili su saveznici u Drugom svjetskom ratu."
+  },
+  "dq_en_3_55": {
+   "q": "Astečko Carstvo osvojio je Portugal."
+  },
+  "dq_en_3_56": {
+   "q": "Mahatma Gandhi bio je prvi premijer Indije."
+  },
+  "dq_en_3_57": {
+   "q": "Koje je godine Ruska revolucija svrgnula cara?"
+  },
+  "dq_en_3_58": {
+   "q": "Koje je godine Indija stekla neovisnost od Britanije?"
+  },
+  "dq_en_3_59": {
+   "q": "Koje je godine Nelson Mandela postao predsjednik Južne Afrike?"
+  },
+  "dq_en_3_60": {
+   "q": "Kolika je približna vrijednost broja pi?",
+   "o": [
+    "1,41",
+    "1,62",
+    "2,72",
+    "3,14"
+   ]
+  },
+  "dq_en_3_61": {
+   "q": "Kako se zove energija koju tijelo ima zbog svog gibanja?",
+   "o": [
+    "Nuklearna energija",
+    "Potencijalna energija",
+    "Kinetička energija",
+    "Kemijska energija"
+   ]
+  },
+  "dq_en_3_62": {
+   "q": "Kako se zove rastaljena stijena kad izađe na površinu Zemlje?",
+   "o": [
+    "Lava",
+    "Sediment",
+    "Granit",
+    "Magma"
+   ]
+  },
+  "dq_en_3_63": {
+   "q": "Koji je mineral najtvrđi, s ocjenom 10 na Mohsovoj ljestvici?",
+   "o": [
+    "Korund",
+    "Topaz",
+    "Kvarc",
+    "Dijamant"
+   ]
+  },
+  "dq_en_3_64": {
+   "q": "Koji se dio stanice naziva njezinom elektranom?",
+   "o": [
+    "Ribosomi",
+    "Mitohondriji",
+    "Jezgra",
+    "Stanična membrana"
+   ]
+  },
+  "dq_en_3_65": {
+   "q": "Tko je bio prvi čovjek u svemiru?",
+   "o": [
+    "Alan Shepard",
+    "Neil Armstrong",
+    "John Glenn",
+    "Jurij Gagarin"
+   ]
+  },
+  "dq_en_3_66": {
+   "q": "Koji je metal tekuć na sobnoj temperaturi?",
+   "o": [
+    "Živa",
+    "Olovo",
+    "Kositar",
+    "Cink"
+   ]
+  },
+  "dq_en_3_67": {
+   "q": "Koliko bitova ima jedan bajt?",
+   "o": [
+    "Deset",
+    "Šesnaest",
+    "Osam",
+    "Četiri"
+   ]
+  },
+  "dq_en_3_68": {
+   "q": "Koji od ovih sisavaca nese jaja?",
+   "o": [
+    "Klokan",
+    "Pasanac",
+    "Koala",
+    "Čudnovati kljunaš"
+   ]
+  },
+  "dq_en_3_69": {
+   "q": "Koga od starih Grka nazivaju ocem medicine?",
+   "o": [
+    "Pitagoru",
+    "Arhimeda",
+    "Hipokrata",
+    "Aristotela"
+   ]
+  },
+  "dq_en_3_70": {
+   "q": "Tko je 1876. godine dobio prvi patent za telefon?",
+   "o": [
+    "Thomas Edison",
+    "Samuel Morse",
+    "Alexander Graham Bell",
+    "Guglielmo Marconi"
+   ]
+  },
+  "dq_en_3_71": {
+   "q": "Što je više?",
+   "o": [
+    "Velika piramida u Gizi",
+    "Eiffelov toranj"
+   ]
+  },
+  "dq_en_3_72": {
+   "q": "Čega ljudsko tijelo ima više?",
+   "o": [
+    "Kostiju",
+    "Mišića"
+   ]
+  },
+  "dq_en_3_73": {
+   "q": "Što je prvo podiglo ljude u nebo?",
+   "o": [
+    "Balon na topli zrak",
+    "Zrakoplov"
+   ]
+  },
+  "dq_en_3_74": {
+   "q": "Koji metal ima veću gustoću?",
+   "o": [
+    "Aluminij",
+    "Željezo"
+   ]
+  },
+  "dq_en_3_75": {
+   "q": "Čije srce kuca brže?",
+   "o": [
+    "Slonovo",
+    "Mišje"
+   ]
+  },
+  "dq_en_3_76": {
+   "q": "Antibiotici djeluju protiv virusa."
+  },
+  "dq_en_3_77": {
+   "q": "Zvuk se ne može širiti kroz vakuum."
+  },
+  "dq_en_3_78": {
+   "q": "Kineski zid lako se vidi golim okom s Mjeseca."
+  },
+  "dq_en_3_79": {
+   "q": "Odrastao čovjek obično ima 32 zuba, računajući i umnjake."
+  },
+  "dq_en_3_80": {
+   "q": "Koliki je postotak kisika u zraku oko nas?"
+  },
+  "dq_en_3_81": {
+   "q": "Koliko bridova ima kocka?",
+   "u": "bridova"
+  },
+  "dq_en_3_82": {
+   "q": "Otprilike koliko dana prođe od jednog uštapa do sljedećeg?",
+   "u": "dana"
+  },
+  "dq_en_3_83": {
+   "q": "Tko je napisao „Zločin i kaznu”?",
+   "o": [
+    "Fjodor Dostojevski",
+    "Lav Tolstoj",
+    "Nikolaj Gogolj",
+    "Aleksandar Puškin"
+   ]
+  },
+  "dq_en_3_84": {
+   "q": "Tko je napisao „Grofa Monte Crista”?",
+   "o": [
+    "Victor Hugo",
+    "Honoré de Balzac",
+    "Jules Verne",
+    "Alexandre Dumas"
+   ]
+  },
+  "dq_en_3_85": {
+   "q": "Kako se zove zvonar u romanu „Zvonar crkve Notre-Dame”?",
+   "o": [
+    "Gringoire",
+    "Phoebus",
+    "Frollo",
+    "Quasimodo"
+   ]
+  },
+  "dq_en_3_86": {
+   "q": "Koja Shakespeareova drama počinje trima vješticama?",
+   "o": [
+    "Macbeth",
+    "Kralj Lear",
+    "Hamlet",
+    "Oluja"
+   ]
+  },
+  "dq_en_3_87": {
+   "q": "Tko je napisao „Starca i more”?",
+   "o": [
+    "William Faulkner",
+    "Ernest Hemingway",
+    "Jack London",
+    "John Steinbeck"
+   ]
+  },
+  "dq_en_3_88": {
+   "q": "Kako se u „Gulliverovim putovanjima” zove zemlja sićušnih ljudi?",
+   "o": [
+    "Utopija",
+    "Liliput",
+    "Laputa",
+    "Brobdingnag"
+   ]
+  },
+  "dq_en_3_89": {
+   "q": "Kako Robinson Crusoe nazove čovjeka kojeg spasi na svom otoku?",
+   "o": [
+    "Petko",
+    "Subotko",
+    "Ponedjeljko",
+    "Nedjeljko"
+   ]
+  },
+  "dq_en_3_90": {
+   "q": "Što je u „Jadnicima” Jean Valjean ukrao pa prvi put završio u zatvoru?",
+   "o": [
+    "Štrucu kruha",
+    "Srebrni svijećnjak",
+    "Konja",
+    "Zlatnik"
+   ]
+  },
+  "dq_en_3_91": {
+   "q": "Koja stilska figura uspoređuje dvije stvari riječima „kao” ili „poput”?",
+   "o": [
+    "Aliteracija",
+    "Metafora",
+    "Hiperbola",
+    "Poredba"
+   ]
+  },
+  "dq_en_3_92": {
+   "q": "Koji je američki pjesnik napisao „Gavrana”?",
+   "o": [
+    "Emily Dickinson",
+    "Edgar Allan Poe",
+    "Robert Frost",
+    "Walt Whitman"
+   ]
+  },
+  "dq_en_3_93": {
+   "q": "Koji mladi Gaskonjac u „Tri mušketira” sanja da postane mušketir?",
+   "o": [
+    "D'Artagnan",
+    "Aramis",
+    "Porthos",
+    "Athos"
+   ]
+  },
+  "dq_en_3_94": {
+   "q": "Kako se zove glavni lik priče?",
+   "o": [
+    "Pripovjedač",
+    "Protagonist",
+    "Antagonist",
+    "Zbor"
+   ]
+  },
+  "dq_en_3_95": {
+   "q": "Koji je njemački pisac napisao tragediju „Faust”?",
+   "o": [
+    "Johann Wolfgang von Goethe",
+    "Friedrich Schiller",
+    "Heinrich von Kleist",
+    "Georg Büchner"
+   ]
+  },
+  "dq_en_3_96": {
+   "q": "Gnjev kojeg je grčkog junaka središnja tema Homerove „Ilijade”?",
+   "o": [
+    "Agamemnona",
+    "Odiseja",
+    "Ahileja",
+    "Hektora"
+   ]
+  },
+  "dq_en_3_97": {
+   "q": "Što je objavljeno prije?",
+   "o": [
+    "Drakula",
+    "Don Quijote"
+   ]
+  },
+  "dq_en_3_98": {
+   "q": "Tko je rođen prije?",
+   "o": [
+    "Victor Hugo",
+    "Albert Camus"
+   ]
+  },
+  "dq_en_3_99": {
+   "q": "Što je objavljeno prije?",
+   "o": [
+    "Robinson Crusoe",
+    "Otok s blagom"
+   ]
+  },
+  "dq_en_3_100": {
+   "q": "Huckleberry Finn putuje niz rijeku Mississippi na splavi."
+  },
+  "dq_en_3_101": {
+   "q": "Detektiv Agathe Christie Hercule Poirot je Francuz."
+  },
+  "dq_en_3_102": {
+   "q": "Hans Christian Andersen bio je švedski pisac."
+  },
+  "dq_en_3_103": {
+   "q": "Jules Verne napisao je „Put u središte Zemlje”."
+  },
+  "dq_en_3_104": {
+   "q": "Koje je godine prvi put objavljen „Mali princ”?"
+  },
+  "dq_en_3_105": {
+   "q": "Koje je godine prvi put objavljen roman „Frankenstein”?"
+  },
+  "dq_en_3_106": {
+   "q": "Koji je norveški umjetnik naslikao „Krik”?",
+   "o": [
+    "Paul Klee",
+    "Egon Schiele",
+    "Edvard Munch",
+    "Gustav Klimt"
+   ]
+  },
+  "dq_en_3_107": {
+   "q": "Koji je skladatelj napisao violinske koncerte „Četiri godišnja doba”?",
+   "o": [
+    "Antonio Vivaldi",
+    "Niccolò Paganini",
+    "Giuseppe Verdi",
+    "Johann Sebastian Bach"
+   ]
+  },
+  "dq_en_3_108": {
+   "q": "U kojem baletu pleše Vila šećerne šljive?",
+   "o": [
+    "Labuđe jezero",
+    "Orašar",
+    "Trnoružica",
+    "Giselle"
+   ]
+  },
+  "dq_en_3_109": {
+   "q": "U kojoj se zemlji nalazi hramski kompleks Angkor Wat?",
+   "o": [
+    "U Kambodži",
+    "U Tajlandu",
+    "U Mjanmaru",
+    "U Vijetnamu"
+   ]
+  },
+  "dq_en_3_110": {
+   "q": "Tko je naslikao „Posljednju večeru” na zidu samostana u Milanu?",
+   "o": [
+    "Leonardo da Vinci",
+    "Rafael",
+    "Michelangelo",
+    "Tizian"
+   ]
+  },
+  "dq_en_3_111": {
+   "q": "Koji je umjetnički pokret dobio ime po Monetovoj slici izlaska sunca?",
+   "o": [
+    "Ekspresionizam",
+    "Impresionizam",
+    "Fovizam",
+    "Simbolizam"
+   ]
+  },
+  "dq_en_3_112": {
+   "q": "Koja se planina pojavljuje u Hokusaijevu najslavnijem ciklusu grafika?",
+   "o": [
+    "Fuji",
+    "Olimp",
+    "Mount Everest",
+    "Kilimandžaro"
+   ]
+  },
+  "dq_en_3_113": {
+   "q": "Koji je redatelj snimio „Psiho” i „Ptice”?",
+   "o": [
+    "Stanley Kubrick",
+    "Alfred Hitchcock",
+    "Billy Wilder",
+    "Orson Welles"
+   ]
+  },
+  "dq_en_3_114": {
+   "q": "Gdje se nalazi Sikstinska kapela?",
+   "o": [
+    "U Firenci",
+    "U Vatikanu",
+    "U Napulju",
+    "U Torinu"
+   ]
+  },
+  "dq_en_3_115": {
+   "q": "Iz koje zemlje potječu glazba i ples flamenko?",
+   "o": [
+    "Iz Portugala",
+    "Iz Argentine",
+    "Iz Španjolske",
+    "Iz Meksika"
+   ]
+  },
+  "dq_en_3_116": {
+   "q": "U kojem talijanskom gradu možeš vidjeti Michelangelova „Davida”?",
+   "o": [
+    "U Firenci",
+    "U Veneciji",
+    "U Milanu",
+    "U Rimu"
+   ]
+  },
+  "dq_en_3_117": {
+   "q": "Koji je Disneyjev animirani film izašao prije?",
+   "o": [
+    "Snjeguljica",
+    "Kralj lavova"
+   ]
+  },
+  "dq_en_3_118": {
+   "q": "Stonehenge je prapovijesni spomenik u Engleskoj."
+  },
+  "dq_en_3_119": {
+   "q": "Venera Milska slavna je slika u ulju."
+  },
+  "dq_en_3_120": {
+   "q": "Zabranjeni grad u Pekingu bio je dom kineskih careva."
+  },
+  "dq_en_3_121": {
+   "q": "Koliko je simfonija Beethoven dovršio?",
+   "u": "simfonija"
+  },
+  "dq_en_3_122": {
+   "q": "Koje je godine rođen Wolfgang Amadeus Mozart?"
+  },
+  "dq_en_3_123": {
+   "q": "Koji je junak u grčkoj mitologiji odrubio glavu Meduzi?",
+   "o": [
+    "Tezej",
+    "Belerofont",
+    "Heraklo",
+    "Perzej"
+   ]
+  },
+  "dq_en_3_124": {
+   "q": "Tko je u „Odiseji” Odisejeva vjerna žena?",
+   "o": [
+    "Kalipso",
+    "Penelopa",
+    "Kirka",
+    "Helena"
+   ]
+  },
+  "dq_en_3_125": {
+   "q": "Kako se kod Rimljana zove grčka božica Afrodita?",
+   "o": [
+    "Minerva",
+    "Dijana",
+    "Junona",
+    "Venera"
+   ]
+  },
+  "dq_en_3_126": {
+   "q": "Što su u grčkoj mitologiji Jazon i argonauti otplovili potražiti?",
+   "o": [
+    "Zlatno runo",
+    "Zlatne jabuke",
+    "Hipolitin pojas",
+    "Rog obilja"
+   ]
+  },
+  "dq_en_3_127": {
+   "q": "Tko u grčkoj mitologiji prevozi duše mrtvih u podzemlje?",
+   "o": [
+    "Hipnos",
+    "Haron",
+    "Kerber",
+    "Tanatos"
+   ]
+  },
+  "dq_en_3_128": {
+   "q": "Što je Yggdrasil u nordijskoj mitologiji?",
+   "o": [
+    "Divovski vuk",
+    "Odinovo koplje",
+    "Dugin most",
+    "Stablo svijeta"
+   ]
+  },
+  "dq_en_3_129": {
+   "q": "Koje djevojke u nordijskoj mitologiji biraju ratnike koji će poginuti u boju?",
+   "o": [
+    "Furije",
+    "Valkire",
+    "Norne",
+    "Nimfe"
+   ]
+  },
+  "dq_en_3_130": {
+   "q": "Koji egipatski bog vlada podzemljem kao kralj mrtvih?",
+   "o": [
+    "Ptah",
+    "Amon",
+    "Horus",
+    "Oziris"
+   ]
+  },
+  "dq_en_3_131": {
+   "q": "Koja se egipatska božica prikazuje kao mačka ili s mačjom glavom?",
+   "o": [
+    "Nut",
+    "Maat",
+    "Izida",
+    "Bastet"
+   ]
+  },
+  "dq_en_3_132": {
+   "q": "Koja je božica lova u grčkoj mitologiji Apolonova sestra blizanka?",
+   "o": [
+    "Demetra",
+    "Artemida",
+    "Hestija",
+    "Atena"
+   ]
+  },
+  "dq_en_3_133": {
+   "q": "Tko je u legendi o kralju Arturu njegova kraljica?",
+   "o": [
+    "Morgana",
+    "Izolda",
+    "Elaine",
+    "Guinevere"
+   ]
+  },
+  "dq_en_3_135": {
+   "q": "Koja je rijeka u hinduističkoj tradiciji božica koja je s neba sišla na zemlju?",
+   "o": [
+    "Ind",
+    "Brahmaputra",
+    "Mekong",
+    "Ganges"
+   ]
+  },
+  "dq_en_3_136": {
+   "q": "Kojoj su zmiji u grčkoj mitologiji za svaku odsječenu glavu izrasle dvije nove?",
+   "o": [
+    "Hidri",
+    "Himeri",
+    "Scili",
+    "Tifonu"
+   ]
+  },
+  "dq_en_3_137": {
+   "q": "Koje je mitsko biće u kineskoj tradiciji bilo simbol cara?",
+   "o": [
+    "Kornjača",
+    "Qilin",
+    "Feniks",
+    "Zmaj"
+   ]
+  },
+  "dq_en_3_138": {
+   "q": "Koji je od ovih epova nastao prije?",
+   "o": [
+    "Homerova „Ilijada”",
+    "Vergilijeva „Eneida”"
+   ]
+  },
+  "dq_en_3_139": {
+   "q": "U grčkoj mitologiji Orfej je izgubio Euridiku jer se osvrnuo za njom."
+  },
+  "dq_en_3_140": {
+   "q": "U grčkoj mitologiji Perzefonu je u podzemlje odveo Posejdon."
+  },
+  "dq_en_3_141": {
+   "q": "U nordijskoj mitologiji dugin most Bifröst vodi u Asgard, carstvo bogova."
+  },
+  "dq_en_3_142": {
+   "q": "U Homerovoj „Ilijadi” Ahilej se bori na strani Trojanaca."
+  },
+  "dq_en_3_143": {
+   "q": "U egipatskoj mitologiji bog Tot prikazuje se s glavom krokodila."
+  },
+  "dq_en_3_144": {
+   "q": "Koliko se olimpskih bogova tradicionalno ubraja u grčkoj mitologiji?",
+   "u": "bogova"
+  },
+  "dq_en_3_146": {
+   "q": "U grčkoj mitologiji Stiks je planina na kojoj se bogovi zaklinju."
+  },
+  "dq_en_3_147": {
+   "q": "Koji tjesnac dijeli Španjolsku od Maroka?",
+   "o": [
+    "Bospor",
+    "Mesinski tjesnac",
+    "Doverski tjesnac",
+    "Gibraltarski tjesnac"
+   ]
+  },
+  "dq_en_3_148": {
+   "q": "Koja rijeka u more donosi više vode od bilo koje druge?",
+   "o": [
+    "Jangce",
+    "Amazona",
+    "Mississippi",
+    "Nil"
+   ]
+  },
+  "dq_en_3_149": {
+   "q": "Koja je religija nastala iz učenja Siddharthe Gautame?",
+   "o": [
+    "Budizam",
+    "Džainizam",
+    "Sikhizam",
+    "Hinduizam"
+   ]
+  },
+  "dq_en_3_150": {
+   "q": "Kojim se pismom piše ruski?",
+   "o": [
+    "Ćirilicom",
+    "Latinicom",
+    "Grčkim pismom",
+    "Armenskim pismom"
+   ]
+  },
+  "dq_en_3_151": {
+   "q": "Što u ekonomiji znači kratica BDP?",
+   "o": [
+    "Bruto domaći proizvod",
+    "Bruto dobit poduzeća",
+    "Bilanca državnog proračuna",
+    "Broj dnevnih plaćanja"
+   ]
+  },
+  "dq_en_3_152": {
+   "q": "Kad proizvod postane rijedak, a potražnja ostane ista, njegova cijena obično raste."
+  },
+  "dq_en_3_153": {
+   "q": "Veliki koraljni greben nalazi se uz obalu Brazila."
+  },
+  "dq_en_3_154": {
+   "q": "Koliko je stupnjeva geografske širine ekvator udaljen od Sjevernog pola?",
+   "u": "stupnjeva"
+  },
+  "dq_en_3_155": {
+   "q": "Tko je naslikao ovu sliku?",
+   "o": [
+    "Peter Paul Rubens",
+    "Johannes Vermeer",
+    "Rembrandt",
+    "Frans Hals"
+   ]
+  },
+  "dq_en_3_156": {
+   "q": "Kako se zove ova slika?",
+   "o": [
+    "Splav Meduze",
+    "Sloboda predvodi narod",
+    "Treći svibnja 1808.",
+    "Zakletva Horacija"
+   ]
+  },
+  "dq_en_3_157": {
+   "q": "Kako se zove ova slika?",
+   "o": [
+    "Mljekarica",
+    "Američka gotika",
+    "Olympia",
+    "Whistlerova majka"
+   ]
+  },
+  "dq_en_3_158": {
+   "q": "Kako se zove ova slika?",
+   "o": [
+    "Impresija, izlazak sunca",
+    "Lopoči",
+    "Kola sa sijenom",
+    "Zvjezdana noć"
+   ]
+  },
+  "dq_en_3_159": {
+   "q": "Tko je ovo?",
+   "o": [
+    "Lav Tolstoj",
+    "Walt Whitman",
+    "Henrik Ibsen",
+    "Fjodor Dostojevski"
+   ]
+  },
+  "dq_en_3_160": {
+   "q": "Tko je ovo?",
+   "o": [
+    "Herman Melville",
+    "Edgar Allan Poe",
+    "Nathaniel Hawthorne",
+    "Charles Baudelaire"
+   ]
+  },
+  "dq_en_3_161": {
+   "q": "Tko je ovo?",
+   "o": [
+    "Thomas Edison",
+    "Alexander Graham Bell",
+    "George Westinghouse",
+    "Henry Ford"
+   ]
+  },
+  "dq_en_3_162": {
+   "q": "Tko je ovo?",
+   "o": [
+    "Kraljica Elizabeta I.",
+    "Katarina Medici",
+    "Marija Stuart",
+    "Marija I. Tudor"
+   ]
+  },
+  "dq_en_3_163": {
+   "q": "Tko je ovo?",
+   "o": [
+    "Johann Sebastian Bach",
+    "Antonio Vivaldi",
+    "Georg Philipp Telemann",
+    "Georg Friedrich Händel"
+   ]
+  },
+  "dq_en_3_164": {
+   "q": "Kojeg palog mladića ovdje oplakuju?",
+   "o": [
+    "Dedala",
+    "Hijacinta",
+    "Ikara",
+    "Adonisa"
+   ]
+  },
+  "dq_en_3_165": {
+   "q": "Koji je ovo nordijski bog?",
+   "o": [
+    "Odin",
+    "Tyr",
+    "Freyr",
+    "Thor"
+   ]
+  },
+  "dq_en_3_166": {
+   "q": "Koji bog sa šakalovom glavom važe srce?",
+   "o": [
+    "Tot",
+    "Horus",
+    "Anubis",
+    "Oziris"
+   ]
+  },
+  "dq_en_3_167": {
+   "q": "U kojem je gradu ovaj kip?",
+   "o": [
+    "São Paulo",
+    "Buenos Aires",
+    "Ciudad de México",
+    "Rio de Janeiro"
+   ]
+  },
+  "dq_en_3_168": {
+   "q": "Kako se zove ovaj most?",
+   "o": [
+    "Sydney Harbour Bridge",
+    "Tower Bridge",
+    "Brooklyn Bridge",
+    "Golden Gate Bridge"
+   ]
+  },
+  "dq_en_3_169": {
+   "q": "Kako se zove ova građevina?",
+   "o": [
+    "Guggenheim u Bilbau",
+    "Koncertna dvorana Walt Disney",
+    "Sidnejska opera",
+    "Opera u Oslu"
+   ]
+  },
+  "dq_en_3_170": {
+   "q": "U kojoj je zemlji ovo prapovijesno nalazište?",
+   "o": [
+    "Irska",
+    "Škotska",
+    "Engleska",
+    "Francuska"
+   ]
+  },
+  "dq_en_4_01": {
+   "q": "Koji je umjetnik naslikao „Guernicu”?",
+   "o": [
+    "Pablo Picasso",
+    "Salvador Dalí",
+    "Joan Miró",
+    "Henri Matisse"
+   ]
+  },
+  "dq_en_4_02": {
+   "q": "Koji je filozof bio učitelj Aleksandra Velikog?",
+   "o": [
+    "Sokrat",
+    "Platon",
+    "Aristotel",
+    "Epikur"
+   ]
+  },
+  "dq_en_4_03": {
+   "q": "Koja čestica nosi negativan električni naboj?",
+   "o": [
+    "Foton",
+    "Neutron",
+    "Elektron",
+    "Proton"
+   ]
+  },
+  "dq_en_4_04": {
+   "q": "Kako se u nordijskoj mitologiji zove Thorov čekić?",
+   "o": [
+    "Gungnir",
+    "Excalibur",
+    "Gram",
+    "Mjölnir"
+   ]
+  },
+  "dq_en_4_05": {
+   "q": "Veliki požar u Londonu izbio je 1666. godine."
+  },
+  "dq_en_4_06": {
+   "q": "„Don Quijotea” napisao je Dante."
+  },
+  "dq_en_4_07": {
+   "q": "Tko je ovo?",
+   "o": [
+    "John Stuart Mill",
+    "Thomas Henry Huxley",
+    "Charles Dickens",
+    "Charles Darwin"
+   ]
+  },
+  "dq_en_4_08": {
+   "q": "Tko je ovo?",
+   "o": [
+    "Katarina Velika",
+    "Carica Elizabeta Austrijska",
+    "Kraljica Viktorija",
+    "Kraljica Elizabeta I."
+   ]
+  },
+  "dq_en_4_09": {
+   "q": "Otprilike koje je godine tiskana Gutenbergova Biblija?"
+  },
+  "dq_en_4_10": {
+   "q": "Koliko kemijskih elemenata danas ima periodni sustav?",
+   "u": "elemenata"
+  },
+  "dq_en_4_11": {
+   "q": "S kojim se umjetničkim pravcem povezuje Salvador Dalí?",
+   "o": [
+    "Nadrealizam",
+    "Pop-art",
+    "Impresionizam",
+    "Kubizam"
+   ]
+  },
+  "dq_en_4_12": {
+   "q": "Koje je godine umro Leonardo da Vinci?"
+  },
+  "dq_en_4_13": {
+   "q": "Koji je ruski pisac napisao „Rat i mir”?",
+   "o": [
+    "Lav Tolstoj",
+    "Fjodor Dostojevski",
+    "Ivan Turgenjev",
+    "Anton Čehov"
+   ]
+  },
+  "dq_en_4_14": {
+   "q": "Tko je vrhovni bog u nordijskoj mitologiji?",
+   "o": [
+    "Loki",
+    "Frey",
+    "Odin",
+    "Thor"
+   ]
+  },
+  "dq_en_4_15": {
+   "q": "U grčkoj mitologiji Ahilej je bio neranjiv osim u peti."
+  },
+  "dq_en_4_16": {
+   "q": "Koliko je Muza u grčkoj mitologiji?",
+   "u": "Muza"
+  },
+  "dq_en_4_17": {
+   "q": "Inflacija znači da cijene općenito padaju."
+  },
+  "dq_en_4_18": {
+   "q": "Koliko država članica imaju Ujedinjeni narodi?",
+   "u": "države"
+  },
+  "dq_en_4_19": {
+   "q": "Čija je ovo zastava?",
+   "o": [
+    "Finska",
+    "Danska",
+    "Švedska",
+    "Norveška"
+   ]
+  },
+  "dq_en_4_20": {
+   "q": "Čija je ovo zastava?",
+   "o": [
+    "Urugvaj",
+    "Honduras",
+    "Grčka",
+    "Argentina"
+   ]
+  },
+  "dq_en_4_21": {
+   "q": "Čija je ovo zastava?",
+   "o": [
+    "Japan",
+    "Tajvan",
+    "Južna Koreja",
+    "Sjeverna Koreja"
+   ]
+  },
+  "dq_en_4_22": {
+   "q": "Čija je ovo zastava?",
+   "o": [
+    "Tunis",
+    "Turska",
+    "Pakistan",
+    "Maroko"
+   ]
+  },
+  "dq_en_4_23": {
+   "q": "Čija je ovo zastava?",
+   "o": [
+    "Jamajka",
+    "Zimbabve",
+    "Kenija",
+    "Južna Afrika"
+   ]
+  },
+  "dq_en_4_24": {
+   "q": "Koji je glavni grad Švicarske?",
+   "o": [
+    "Ženeva",
+    "Basel",
+    "Zürich",
+    "Bern"
+   ]
+  },
+  "dq_en_4_25": {
+   "q": "Koji je glavni grad Maroka?",
+   "o": [
+    "Fes",
+    "Rabat",
+    "Marakeš",
+    "Casablanca"
+   ]
+  },
+  "dq_en_4_26": {
+   "q": "Koji je glavni grad Argentine?",
+   "o": [
+    "Rosario",
+    "Buenos Aires",
+    "Córdoba",
+    "Mendoza"
+   ]
+  },
+  "dq_en_4_27": {
+   "q": "Koji je glavni grad Južne Koreje?",
+   "o": [
+    "Incheon",
+    "Daegu",
+    "Seul",
+    "Busan"
+   ]
+  },
+  "dq_en_4_28": {
+   "q": "Koji je glavni grad Poljske?",
+   "o": [
+    "Wrocław",
+    "Varšava",
+    "Gdanjsk",
+    "Krakov"
+   ]
+  },
+  "dq_en_4_29": {
+   "q": "Koja zemlja ima više stanovnika?",
+   "o": [
+    "Brazil",
+    "Indonezija"
+   ]
+  },
+  "dq_en_4_30": {
+   "q": "Koja zemlja ima više stanovnika?",
+   "o": [
+    "Njemačka",
+    "Pakistan"
+   ]
+  },
+  "dq_en_4_31": {
+   "q": "Koja zemlja ima više stanovnika?",
+   "o": [
+    "Kanada",
+    "Iran"
+   ]
+  },
+  "dq_en_4_32": {
+   "q": "Koja zemlja ima veće gospodarstvo (BDP)?",
+   "o": [
+    "Japan",
+    "Rusija"
+   ]
+  },
+  "dq_en_4_33": {
+   "q": "Koja zemlja ima veće gospodarstvo (BDP)?",
+   "o": [
+    "Njemačka",
+    "Brazil"
+   ]
+  },
+  "dq_en_4_34": {
+   "q": "Koja zemlja ima veće gospodarstvo (BDP)?",
+   "o": [
+    "Indija",
+    "Australija"
+   ]
+  },
+  "dq_en_4_35": {
+   "q": "Koja je planina viša?",
+   "o": [
+    "Kilimandžaro",
+    "Mont Blanc"
+   ]
+  },
+  "dq_en_4_36": {
+   "q": "Koja je rijeka duža?",
+   "o": [
+    "Jangce",
+    "Ganges"
+   ]
+  },
+  "dq_en_4_37": {
+   "q": "Koji je otok veći?",
+   "o": [
+    "Island",
+    "Madagaskar"
+   ]
+  },
+  "dq_en_4_38": {
+   "q": "Koji je babilonski kralj oko 1750. pr. Kr. izdao glasoviti zakonik?",
+   "o": [
+    "Asurbanipal",
+    "Sargon Akadski",
+    "Hamurabi",
+    "Nabukodonozor II."
+   ]
+  },
+  "dq_en_4_39": {
+   "q": "Koji je car, prvi ujedinitelj Kine, pokopan s vojskom od terakote?",
+   "o": [
+    "Car Kangxi",
+    "Car Wu od Hana",
+    "Qin Shi Huang",
+    "Kublaj-kan"
+   ]
+  },
+  "dq_en_4_40": {
+   "q": "Koji je mogulski car dao sagraditi Tadž Mahal?",
+   "o": [
+    "Šah Džahan",
+    "Aurangzeb",
+    "Akbar",
+    "Babur"
+   ]
+  },
+  "dq_en_4_41": {
+   "q": "Koji je sultan 1187. preoteo Jeruzalem križarima?",
+   "o": [
+    "Bajbars",
+    "Sulejman I.",
+    "Harun al-Rašid",
+    "Saladin"
+   ]
+  },
+  "dq_en_4_42": {
+   "q": "Tko je 1923. osnovao Republiku Tursku?",
+   "o": [
+    "Mustafa Kemal Atatürk",
+    "İsmet İnönü",
+    "Abdul Hamid II.",
+    "Enver-paša"
+   ]
+  },
+  "dq_en_4_43": {
+   "q": "Tko je na Božić 800. godine u Rimu od pape okrunjen za cara?",
+   "o": [
+    "Karlo Martel",
+    "Karlo Veliki",
+    "Oton I.",
+    "Klodvig I."
+   ]
+  },
+  "dq_en_4_44": {
+   "q": "Koji je pruski državnik 1871. proveo ujedinjenje Njemačke?",
+   "o": [
+    "Klemens von Metternich",
+    "Helmuth von Moltke",
+    "Fridrik Veliki",
+    "Otto von Bismarck"
+   ]
+  },
+  "dq_en_4_45": {
+   "q": "U kojem je gradu 1914. ubijen nadvojvoda Franjo Ferdinand?",
+   "o": [
+    "Beogradu",
+    "Budimpešti",
+    "Sarajevu",
+    "Beču"
+   ]
+  },
+  "dq_en_4_46": {
+   "q": "U kojoj su bitki 490. pr. Kr. Atenjani odbili perzijsku invaziju?",
+   "o": [
+    "Kod Termopila",
+    "Kod Maratona",
+    "Kod Salamine",
+    "Kod Plateje"
+   ]
+  },
+  "dq_en_4_47": {
+   "q": "Koji je grad bio prijestolnica Carstva Inka?",
+   "o": [
+    "Machu Picchu",
+    "Lima",
+    "Cusco",
+    "Quito"
+   ]
+  },
+  "dq_en_4_48": {
+   "q": "Koji je američki program pomogao obnovi Zapadne Europe nakon Drugog svjetskog rata?",
+   "o": [
+    "Dawesov plan",
+    "Marshallov plan",
+    "New Deal",
+    "Monroeova doktrina"
+   ]
+  },
+  "dq_en_4_49": {
+   "q": "Što je trajalo dulje?",
+   "o": [
+    "Sovjetski Savez",
+    "Osmansko Carstvo"
+   ]
+  },
+  "dq_en_4_50": {
+   "q": "Tko je živio prije?",
+   "o": [
+    "Buda",
+    "Muhamed"
+   ]
+  },
+  "dq_en_4_51": {
+   "q": "Koji je rat trajao dulje?",
+   "o": [
+    "Vijetnamski rat",
+    "Prvi svjetski rat"
+   ]
+  },
+  "dq_en_4_52": {
+   "q": "Koji je kanal otvoren prije?",
+   "o": [
+    "Panamski kanal",
+    "Sueski kanal"
+   ]
+  },
+  "dq_en_4_53": {
+   "q": "Mongolsko Carstvo bilo je najveće kopneno carstvo s neprekinutim teritorijem u povijesti."
+  },
+  "dq_en_4_54": {
+   "q": "Kmersko Carstvo izgradilo je hramski kompleks Angkor Wat."
+  },
+  "dq_en_4_55": {
+   "q": "Središte majanske civilizacije bilo je u Andama."
+  },
+  "dq_en_4_56": {
+   "q": "Korejski rat završio je ponovnim ujedinjenjem Koreje."
+  },
+  "dq_en_4_57": {
+   "q": "Koje je godine Napoleon poražen kod Waterlooa?"
+  },
+  "dq_en_4_58": {
+   "q": "Koliko je godina zapravo trajao Stogodišnji rat?",
+   "u": "godina"
+  },
+  "dq_en_4_59": {
+   "q": "Koje je godine padom Sajgona završio Vijetnamski rat?"
+  },
+  "dq_en_4_60": {
+   "q": "Koja je najdulja kost u ljudskom tijelu?",
+   "o": [
+    "Nadlaktična kost",
+    "Lisna kost",
+    "Goljenična kost",
+    "Bedrena kost"
+   ]
+  },
+  "dq_en_4_61": {
+   "q": "Koji je element najzastupljeniji u svemiru?",
+   "o": [
+    "Kisik",
+    "Helij",
+    "Ugljik",
+    "Vodik"
+   ]
+  },
+  "dq_en_4_62": {
+   "q": "Koja je SI jedinica električnog otpora?",
+   "o": [
+    "Volt",
+    "Om",
+    "Amper",
+    "Vat"
+   ]
+  },
+  "dq_en_4_63": {
+   "q": "Koji organ proizvodi inzulin?",
+   "o": [
+    "Štitnjača",
+    "Bubreg",
+    "Gušterača",
+    "Jetra"
+   ]
+  },
+  "dq_en_4_64": {
+   "q": "Kako se zovu brojevi 1, 1, 2, 3, 5, 8, 13...?",
+   "o": [
+    "Trokutasti brojevi",
+    "Fibonaccijevi brojevi",
+    "Kvadratni brojevi",
+    "Prosti brojevi"
+   ]
+  },
+  "dq_en_4_65": {
+   "q": "Tko je pokusima na grašku utemeljio genetiku?",
+   "o": [
+    "Hugo de Vries",
+    "Thomas Hunt Morgan",
+    "Charles Darwin",
+    "Gregor Mendel"
+   ]
+  },
+  "dq_en_4_66": {
+   "q": "Koji planet ima najtopliju površinu u Sunčevu sustavu?",
+   "o": [
+    "Mars",
+    "Zemlja",
+    "Merkur",
+    "Venera"
+   ]
+  },
+  "dq_en_4_67": {
+   "q": "Kome se pripisuje izum World Wide Weba 1989. godine?",
+   "o": [
+    "Vint Cerf",
+    "Steve Jobs",
+    "Bill Gates",
+    "Tim Berners-Lee"
+   ]
+  },
+  "dq_en_4_68": {
+   "q": "Koja je bolest 1980. godine proglašena iskorijenjenom u cijelom svijetu?",
+   "o": [
+    "Dječja paraliza",
+    "Ospice",
+    "Velike boginje",
+    "Guba"
+   ]
+  },
+  "dq_en_4_69": {
+   "q": "Koja je najveća mačka podrijetlom iz Amerike?",
+   "o": [
+    "Crveni ris",
+    "Jaguar",
+    "Puma",
+    "Ocelot"
+   ]
+  },
+  "dq_en_4_70": {
+   "q": "Od čega se uglavnom sastoji Zemljina unutarnja jezgra?",
+   "o": [
+    "Od olova i urana",
+    "Od granita i bazalta",
+    "Od željeza i nikla",
+    "Od silicija i kisika"
+   ]
+  },
+  "dq_en_4_71": {
+   "q": "Što je teže?",
+   "o": [
+    "Elektron",
+    "Proton"
+   ]
+  },
+  "dq_en_4_72": {
+   "q": "Što je dulje?",
+   "o": [
+    "Tanko crijevo",
+    "Debelo crijevo"
+   ]
+  },
+  "dq_en_4_73": {
+   "q": "Što je više?",
+   "o": [
+    "Olympus Mons na Marsu",
+    "Mount Everest"
+   ]
+  },
+  "dq_en_4_74": {
+   "q": "Koji planet ima više mjeseca?",
+   "o": [
+    "Zemlja",
+    "Mars"
+   ]
+  },
+  "dq_en_4_75": {
+   "q": "Što je brže?",
+   "o": [
+    "Metak iz puške",
+    "ISS u orbiti"
+   ]
+  },
+  "dq_en_4_76": {
+   "q": "Na vrhu Mount Everesta voda vrije na nižoj temperaturi nego na razini mora."
+  },
+  "dq_en_4_77": {
+   "q": "Razlomak 22/7 točno je jednak broju pi."
+  },
+  "dq_en_4_78": {
+   "q": "Nula je paran broj."
+  },
+  "dq_en_4_79": {
+   "q": "Ljudska krv u venama je plava, a pocrveni kad dođe u dodir sa zrakom."
+  },
+  "dq_en_4_80": {
+   "q": "Koliko kromosoma ima normalna tjelesna stanica čovjeka?",
+   "u": "kromosoma"
+  },
+  "dq_en_4_81": {
+   "q": "Otprilike kojom se brzinom širi zvuk u zraku na 20 °C, u metrima u sekundi?"
+  },
+  "dq_en_4_82": {
+   "q": "Otprilike koliko je stara Zemlja, u milijardama godina?",
+   "u": "milijardi godina"
+  },
+  "dq_en_4_83": {
+   "q": "Koji roman počinje riječima „Zovite me Ishmael”?",
+   "o": [
+    "Moby Dick",
+    "Srce tame",
+    "Robinson Crusoe",
+    "Otok s blagom"
+   ]
+  },
+  "dq_en_4_84": {
+   "q": "Tko je napisao „Gospođu Bovary”?",
+   "o": [
+    "Guy de Maupassant",
+    "Émile Zola",
+    "Gustave Flaubert",
+    "Honoré de Balzac"
+   ]
+  },
+  "dq_en_4_85": {
+   "q": "Tko je napisao „Stranca” i „Kugu”?",
+   "o": [
+    "Jean-Paul Sartre",
+    "Albert Camus",
+    "André Gide",
+    "André Malraux"
+   ]
+  },
+  "dq_en_4_86": {
+   "q": "Koji latinski ep prati trojanskog princa koji nakon pada Troje bježi u Italiju?",
+   "o": [
+    "Eneida",
+    "Argonautika",
+    "Ilijada",
+    "Odiseja"
+   ]
+  },
+  "dq_en_4_87": {
+   "q": "Tko je napisao „Sliku Doriana Graya”?",
+   "o": [
+    "Robert Louis Stevenson",
+    "Bram Stoker",
+    "Henry James",
+    "Oscar Wilde"
+   ]
+  },
+  "dq_en_4_88": {
+   "q": "U što se Gregor Samsa probudi pretvoren u Kafkinoj „Preobrazbi”?",
+   "o": [
+    "U golemog kukca",
+    "U mačku lutalicu",
+    "U velikog psa",
+    "U crnu pticu"
+   ]
+  },
+  "dq_en_4_89": {
+   "q": "Koji roman počinje rečenicom „Bijaše to najbolje od svih vremena, bijaše to najgore od svih vremena”?",
+   "o": [
+    "Middlemarch",
+    "Priča o dva grada",
+    "Sajam taštine",
+    "Velika očekivanja"
+   ]
+  },
+  "dq_en_4_90": {
+   "q": "U kojem se romanu ljudi uzgajaju u inkubatorima, a zadovoljnima ih drži droga soma?",
+   "o": [
+    "1984.",
+    "Fahrenheit 451",
+    "Vrli novi svijet",
+    "Vremenski stroj"
+   ]
+  },
+  "dq_en_4_91": {
+   "q": "Koji staroindijski ep pripovijeda kako princ Rama spašava svoju ženu Situ?",
+   "o": [
+    "Rigveda",
+    "Ramajana",
+    "Mahabharata",
+    "Pančatantra"
+   ]
+  },
+  "dq_en_4_92": {
+   "q": "Koji se starokineski strateg smatra autorom „Umijeća ratovanja”?",
+   "o": [
+    "Mencije",
+    "Laozi",
+    "Sun Tzu",
+    "Konfucije"
+   ]
+  },
+  "dq_en_4_93": {
+   "q": "U kojem se ratu odvija roman „Na zapadu ništa novo”?",
+   "o": [
+    "U Francusko-pruskom ratu",
+    "U Drugom svjetskom ratu",
+    "U Tridesetogodišnjem ratu",
+    "U Prvom svjetskom ratu"
+   ]
+  },
+  "dq_en_4_94": {
+   "q": "U kojem se romanu pojavljuje odvjetnik Atticus Finch?",
+   "o": [
+    "Plodovi gnjeva",
+    "O miševima i ljudima",
+    "Ubiti pticu rugalicu",
+    "Lovac u žitu"
+   ]
+  },
+  "dq_en_4_95": {
+   "q": "Koji je francuski dramatičar napisao komedije „Tartuffe” i „Škrtac”?",
+   "o": [
+    "Voltaire",
+    "Molière",
+    "Jean Racine",
+    "Pierre Corneille"
+   ]
+  },
+  "dq_en_4_96": {
+   "q": "U kojoj je zemlji rođen romanopisac Gabriel García Márquez?",
+   "o": [
+    "U Argentini",
+    "U Čileu",
+    "U Meksiku",
+    "U Kolumbiji"
+   ]
+  },
+  "dq_en_4_97": {
+   "q": "Tko je rođen prije?",
+   "o": [
+    "Miguel de Cervantes",
+    "Dante Alighieri"
+   ]
+  },
+  "dq_en_4_98": {
+   "q": "Koja je knjiga dulja?",
+   "o": [
+    "Starac i more",
+    "Jadnici"
+   ]
+  },
+  "dq_en_4_99": {
+   "q": "„Životinjska farma” Georgea Orwella satira je na Rusku revoluciju i staljinizam."
+  },
+  "dq_en_4_100": {
+   "q": "U romanu „Frankenstein” Frankenstein je ime čudovišta."
+  },
+  "dq_en_4_101": {
+   "q": "Tradicionalni haiku obično se opisuje kao 17 slogova u obrascu 5-7-5."
+  },
+  "dq_en_4_102": {
+   "q": "„Anu Karenjinu” napisao je Fjodor Dostojevski."
+  },
+  "dq_en_4_103": {
+   "q": "Koje su godine objavljena „Tri mušketira”?"
+  },
+  "dq_en_4_104": {
+   "q": "Koje je godine objavljen roman „1984.”?"
+  },
+  "dq_en_4_105": {
+   "q": "Na što se nanosi boja u pravoj fresci?",
+   "o": [
+    "Na bakrenu ploču",
+    "Na drvenu ploču",
+    "Na vlažnu žbuku",
+    "Na napeto platno"
+   ]
+  },
+  "dq_en_4_106": {
+   "q": "Koji je mogulski car dao sagraditi Tadž Mahal?",
+   "o": [
+    "Aurangzeb",
+    "Šah Džahan",
+    "Akbar",
+    "Babur"
+   ]
+  },
+  "dq_en_4_107": {
+   "q": "Koji je francuski umjetnik najpoznatiji po slikama balerina?",
+   "o": [
+    "Georges Seurat",
+    "Édouard Manet",
+    "Edgar Degas",
+    "Paul Cézanne"
+   ]
+  },
+  "dq_en_4_108": {
+   "q": "Tko je skladao balete „Labuđe jezero” i „Trnoružica”?",
+   "o": [
+    "Sergej Rahmanjinov",
+    "Igor Stravinski",
+    "Sergej Prokofjev",
+    "Petar Iljič Čajkovski"
+   ]
+  },
+  "dq_en_4_109": {
+   "q": "Koji je austrijski slikar u „Poljupcu” upotrijebio zlatne listiće?",
+   "o": [
+    "Oskar Kokoschka",
+    "Egon Schiele",
+    "Gustav Klimt",
+    "Alfons Mucha"
+   ]
+  },
+  "dq_en_4_110": {
+   "q": "Tko je skladao operu „Carmen”?",
+   "o": [
+    "Giacomo Puccini",
+    "Giuseppe Verdi",
+    "Georges Bizet",
+    "Jacques Offenbach"
+   ]
+  },
+  "dq_en_4_111": {
+   "q": "Koji je arhitektonski stil poznat po šiljastim lukovima i letećim potpornjima?",
+   "o": [
+    "Gotika",
+    "Barok",
+    "Neoklasicizam",
+    "Romanika"
+   ]
+  },
+  "dq_en_4_112": {
+   "q": "Tko je naslikao „Noćnu stražu”?",
+   "o": [
+    "Frans Hals",
+    "Rembrandt",
+    "Johannes Vermeer",
+    "Peter Paul Rubens"
+   ]
+  },
+  "dq_en_4_113": {
+   "q": "Kako se zove japanska umjetnost aranžiranja cvijeća?",
+   "o": [
+    "Bonsai",
+    "Ikebana",
+    "Sumi-e",
+    "Origami"
+   ]
+  },
+  "dq_en_4_114": {
+   "q": "Kako se zovu divovski kameni kipovi na Uskršnjem otoku?",
+   "o": [
+    "Totemi",
+    "Moai",
+    "Menhiri",
+    "Kolosi"
+   ]
+  },
+  "dq_en_4_115": {
+   "q": "Što znači pjevati „a cappella”?",
+   "o": [
+    "Na latinskom",
+    "Visokim glasom",
+    "Bez instrumenata",
+    "Vrlo tiho"
+   ]
+  },
+  "dq_en_4_116": {
+   "q": "Što je naslikano prije?",
+   "o": [
+    "Mona Lisa",
+    "Zvjezdana noć"
+   ]
+  },
+  "dq_en_4_117": {
+   "q": "Koja je građevina starija?",
+   "o": [
+    "Partenon",
+    "Koloseum"
+   ]
+  },
+  "dq_en_4_118": {
+   "q": "Michelangelo je isklesao „Pietà” izloženu u bazilici sv. Petra."
+  },
+  "dq_en_4_119": {
+   "q": "Kabuki je tradicionalni oblik kineskog kazališta."
+  },
+  "dq_en_4_120": {
+   "q": "Chrysler Building viši je od Empire State Buildinga."
+  },
+  "dq_en_4_121": {
+   "q": "Koje je godine otvorena Sidnejska opera?"
+  },
+  "dq_en_4_122": {
+   "q": "Koliko je visok kip Krista Spasitelja u Riju, bez postolja?",
+   "u": "metara"
+  },
+  "dq_en_4_123": {
+   "q": "Kojeg jednookog diva u „Odiseji” oslijepi Odisej?",
+   "o": [
+    "Geriona",
+    "Anteja",
+    "Tala",
+    "Polifema"
+   ]
+  },
+  "dq_en_4_124": {
+   "q": "Koja je božica u grčkoj mitologiji Perzefonina majka?",
+   "o": [
+    "Atena",
+    "Hestija",
+    "Hera",
+    "Demetra"
+   ]
+  },
+  "dq_en_4_125": {
+   "q": "Tko je u hinduističkom epu „Ramajana” Ramina žena?",
+   "o": [
+    "Radha",
+    "Parvati",
+    "Draupadi",
+    "Sita"
+   ]
+  },
+  "dq_en_4_126": {
+   "q": "Kako se u nordijskoj mitologiji zove svijet ljudi?",
+   "o": [
+    "Jotunheim",
+    "Asgard",
+    "Midgard",
+    "Helheim"
+   ]
+  },
+  "dq_en_4_127": {
+   "q": "Koja se nordijska božica ljubavi vozi u kolima koja vuku mačke?",
+   "o": [
+    "Hel",
+    "Frigg",
+    "Freyja",
+    "Sif"
+   ]
+  },
+  "dq_en_4_128": {
+   "q": "Koji je bog u egipatskoj mitologiji ubio svog brata Ozirisa?",
+   "o": [
+    "Set",
+    "Sobek",
+    "Horus",
+    "Anubis"
+   ]
+  },
+  "dq_en_4_129": {
+   "q": "Koji je staroegipatski simbol života križ s petljom na vrhu?",
+   "o": [
+    "Džed",
+    "Skarabej",
+    "Ankh",
+    "Kartuša"
+   ]
+  },
+  "dq_en_4_130": {
+   "q": "Koja je nimfa u grčkoj mitologiji prokleta da ponavlja samo tuđe posljednje riječi?",
+   "o": [
+    "Siringa",
+    "Kalipso",
+    "Dafna",
+    "Eho"
+   ]
+  },
+  "dq_en_4_131": {
+   "q": "Koji je majstor u grčkoj mitologiji sagradio Labirint za kralja Minosa?",
+   "o": [
+    "Dedal",
+    "Hefest",
+    "Ikar",
+    "Pigmalion"
+   ]
+  },
+  "dq_en_4_132": {
+   "q": "Koja rimska božica odgovara grčkoj Artemidi?",
+   "o": [
+    "Vesta",
+    "Dijana",
+    "Cerera",
+    "Junona"
+   ]
+  },
+  "dq_en_4_133": {
+   "q": "Koji vitez u legendi o kralju Arturu postaje ljubavnik Arturove kraljice?",
+   "o": [
+    "Lancelot",
+    "Galahad",
+    "Percival",
+    "Gawain"
+   ]
+  },
+  "dq_en_4_134": {
+   "q": "Koje legendarno biće ima tijelo lava te glavu i krila orla?",
+   "o": [
+    "Mantikora",
+    "Himera",
+    "Grifon",
+    "Bazilisk"
+   ]
+  },
+  "dq_en_4_136": {
+   "q": "Tko je u grčkoj mitologiji Tezeju dao nit da pronađe izlaz iz Labirinta?",
+   "o": [
+    "Fedra",
+    "Arijadna",
+    "Andromeda",
+    "Medeja"
+   ]
+  },
+  "dq_en_4_137": {
+   "q": "Što u irskom folkloru najavljuje jauk banshee?",
+   "o": [
+    "Smrt",
+    "Rođenje",
+    "Oluju",
+    "Vjenčanje"
+   ]
+  },
+  "dq_en_4_138": {
+   "q": "Koje biće iz nordijske mitologije ima više nogu?",
+   "o": [
+    "Vuk Fenrir",
+    "Odinov konj Sleipnir"
+   ]
+  },
+  "dq_en_4_139": {
+   "q": "U grčkoj mitologiji titan Kron progutao je vlastitu djecu."
+  },
+  "dq_en_4_140": {
+   "q": "U nordijskoj mitologiji Loki je Odinov sin."
+  },
+  "dq_en_4_141": {
+   "q": "Prema staroegipatskom vjerovanju, srce pokojnika vagalo se naspram pera."
+  },
+  "dq_en_4_142": {
+   "q": "U Homerovoj „Odiseji” Odisej je kralj Sparte."
+  },
+  "dq_en_4_143": {
+   "q": "Rimski bog Vulkan odgovara grčkom bogu Hermesu."
+  },
+  "dq_en_4_144": {
+   "q": "Koliko svjetova postoji u nordijskoj kozmologiji?",
+   "u": "svjetova"
+  },
+  "dq_en_4_145": {
+   "q": "U grčkoj mitologiji blizanci Kastor i Poluks povezani su sa zviježđem Blizanaca."
+  },
+  "dq_en_4_146": {
+   "q": "Koja se pustinja prostire na jugu Mongolije i sjeveru Kine?",
+   "o": [
+    "Kalahari",
+    "Gobi",
+    "Karakum",
+    "Thar"
+   ]
+  },
+  "dq_en_4_147": {
+   "q": "Koja od ovih južnoameričkih zemalja nema izlaz na more?",
+   "o": [
+    "Urugvaj",
+    "Bolivija",
+    "Ekvador",
+    "Peru"
+   ]
+  },
+  "dq_en_4_148": {
+   "q": "Koja zemlja ima četiri nacionalna jezika, među njima i retoromanski?",
+   "o": [
+    "Švicarska",
+    "Belgija",
+    "Luksemburg",
+    "Austrija"
+   ]
+  },
+  "dq_en_4_149": {
+   "q": "Riječ „filozofija” dolazi od grčkih riječi koje znače što?",
+   "o": [
+    "Proučavanje duše",
+    "Umijeće govora",
+    "Znanost o prirodi",
+    "Ljubav prema mudrosti"
+   ]
+  },
+  "dq_en_4_150": {
+   "q": "Kako ekonomisti zovu tržište sa samo jednim prodavateljem?",
+   "o": [
+    "Monopson",
+    "Oligopol",
+    "Kartel",
+    "Monopol"
+   ]
+  },
+  "dq_en_4_151": {
+   "q": "Datumska granica prolazi Tihim oceanom."
+  },
+  "dq_en_4_152": {
+   "q": "Konfucije je bio filozof iz drevne Indije."
+  },
+  "dq_en_4_153": {
+   "q": "Koliko slova ima grčki alfabet?",
+   "u": "slova"
+  },
+  "dq_en_4_154": {
+   "q": "Koje su godine euronovčanice i kovanice eura ušle u optjecaj?"
+  },
+  "dq_en_4_155": {
+   "q": "Kako se zove ova slika?",
+   "o": [
+    "Portret Arnolfinijevih",
+    "Predaja Brede",
+    "Las Meninas",
+    "Noćna straža"
+   ]
+  },
+  "dq_en_4_156": {
+   "q": "Kako se zove ova slika?",
+   "o": [
+    "Sloboda predvodi narod",
+    "Splav Meduze",
+    "Zakletva Horacija",
+    "Treći svibnja 1808."
+   ]
+  },
+  "dq_en_4_157": {
+   "q": "Tko je naslikao ovu sliku?",
+   "o": [
+    "Camille Pissarro",
+    "Georges Seurat",
+    "Paul Signac",
+    "Paul Cézanne"
+   ]
+  },
+  "dq_en_4_158": {
+   "q": "Kako se zove ova slika?",
+   "o": [
+    "Svadba u Kani",
+    "Posljednja večera",
+    "Atenska škola",
+    "Zakletva Horacija"
+   ]
+  },
+  "dq_en_4_159": {
+   "q": "Tko je ovo?",
+   "o": [
+    "Jane Austen",
+    "Mary Shelley",
+    "Charlotte Brontë",
+    "Mary Wollstonecraft"
+   ]
+  },
+  "dq_en_4_160": {
+   "q": "Tko je ovo?",
+   "o": [
+    "Marcel Proust",
+    "Oscar Wilde",
+    "Algernon Swinburne",
+    "W. B. Yeats"
+   ]
+  },
+  "dq_en_4_161": {
+   "q": "Tko je ovo?",
+   "o": [
+    "Gregor Mendel",
+    "Louis Pasteur",
+    "Joseph Lister",
+    "Robert Koch"
+   ]
+  },
+  "dq_en_4_162": {
+   "q": "Tko je ovo?",
+   "o": [
+    "Elizabeth Blackwell",
+    "Florence Nightingale",
+    "Mary Somerville",
+    "Clara Barton"
+   ]
+  },
+  "dq_en_4_163": {
+   "q": "Tko je ovo?",
+   "o": [
+    "Karlo II. Engleski",
+    "Luj XVI.",
+    "Filip V. Španjolski",
+    "Luj XIV."
+   ]
+  },
+  "dq_en_4_164": {
+   "q": "Koji je ovo grčki junak?",
+   "o": [
+    "Heraklo",
+    "Jazon",
+    "Tezej",
+    "Perzej"
+   ]
+  },
+  "dq_en_4_165": {
+   "q": "Koji bog ovdje proždire vlastito dijete?",
+   "o": [
+    "Neptun",
+    "Pluton",
+    "Jupiter",
+    "Saturn"
+   ]
+  },
+  "dq_en_4_166": {
+   "q": "Koji mit prikazuje ova slika?",
+   "o": [
+    "Orfej i Euridika",
+    "Piram i Tizba",
+    "Venera i Adonis",
+    "Eho i Narcis"
+   ]
+  },
+  "dq_en_4_167": {
+   "q": "U kojem je gradu ova katedrala?",
+   "o": [
+    "Sankt Peterburg",
+    "Moskva",
+    "Sofija",
+    "Kijev"
+   ]
+  },
+  "dq_en_4_168": {
+   "q": "U kojem je gradu ova bazilika?",
+   "o": [
+    "Milano",
+    "Sevilla",
+    "Barcelona",
+    "Madrid"
+   ]
+  },
+  "dq_en_4_169": {
+   "q": "Koja je civilizacija izgradila ovaj hram?",
+   "o": [
+    "Stari Grci",
+    "Feničani",
+    "Rimljani",
+    "Perzijanci"
+   ]
+  },
+  "dq_en_4_170": {
+   "q": "Koja je civilizacija izgradila ovaj grad u planinama?",
+   "o": [
+    "Maje",
+    "Asteci",
+    "Olmeci",
+    "Inke"
+   ]
+  },
+  "dq_en_5_01": {
+   "q": "Tko je napisao „Božanstvenu komediju”?",
+   "o": [
+    "Petrarca",
+    "Giovanni Boccaccio",
+    "Dante Alighieri",
+    "Vergilije"
+   ]
+  },
+  "dq_en_5_02": {
+   "q": "Koji je ugovor, potpisan 1919., okončao Prvi svjetski rat s Njemačkom?",
+   "o": [
+    "Vestfalski mir",
+    "Ugovor iz Tordesillasa",
+    "Bečki mir",
+    "Versajski mir"
+   ]
+  },
+  "dq_en_5_03": {
+   "q": "Koji je nizozemski slikar naslikao „Djevojku s bisernom naušnicom”?",
+   "o": [
+    "Johannes Vermeer",
+    "Frans Hals",
+    "Rembrandt",
+    "Jan van Eyck"
+   ]
+  },
+  "dq_en_5_04": {
+   "q": "Koji je znanstvenik 1928. otkrio penicilin?",
+   "o": [
+    "Alexander Fleming",
+    "Edward Jenner",
+    "Robert Koch",
+    "Louis Pasteur"
+   ]
+  },
+  "dq_en_5_05": {
+   "q": "U grčkoj mitologiji Meduza je bila jedna od triju Gorgona."
+  },
+  "dq_en_5_06": {
+   "q": "Stogodišnji rat trajao je točno 100 godina."
+  },
+  "dq_en_5_07": {
+   "q": "Tko je ovo?",
+   "o": [
+    "Franz Schubert",
+    "Ludwig van Beethoven",
+    "Johann Wolfgang von Goethe",
+    "Richard Wagner"
+   ]
+  },
+  "dq_en_5_08": {
+   "q": "Tko je ovo?",
+   "o": [
+    "Leonardo da Vinci",
+    "Galileo Galilei",
+    "Johannes Kepler",
+    "Nikola Kopernik"
+   ]
+  },
+  "dq_en_5_09": {
+   "q": "Koje su godine Osmanlije osvojili Carigrad?"
+  },
+  "dq_en_5_10": {
+   "q": "Otprilike koliko minuta treba Sunčevoj svjetlosti da stigne do Zemlje?"
+  },
+  "dq_en_5_11": {
+   "q": "Andy Warhol bio je jedan od predvodnika pop-arta."
+  },
+  "dq_en_5_12": {
+   "q": "Tko je 1480-ih naslikao „Rođenje Venere”?",
+   "o": [
+    "Tizian",
+    "Rafael",
+    "Sandro Botticelli",
+    "Giotto"
+   ]
+  },
+  "dq_en_5_13": {
+   "q": "Tko je napisao „Sto godina samoće”?",
+   "o": [
+    "Jorge Luis Borges",
+    "Pablo Neruda",
+    "Mario Vargas Llosa",
+    "Gabriel García Márquez"
+   ]
+  },
+  "dq_en_5_14": {
+   "q": "Koje je godine objavljen prvi dio „Don Quijotea”?"
+  },
+  "dq_en_5_15": {
+   "q": "Koja je grčka božica iskočila iz Zeusove glave posve odrasla?",
+   "o": [
+    "Afrodita",
+    "Hera",
+    "Artemida",
+    "Atena"
+   ]
+  },
+  "dq_en_5_16": {
+   "q": "Tko je u grčkoj mitologiji osuđen da zauvijek gura stijenu uzbrdo?",
+   "o": [
+    "Sizif",
+    "Tantal",
+    "Prometej",
+    "Atlas"
+   ]
+  },
+  "dq_en_5_17": {
+   "q": "Koji je filozof napisao „Državu”?",
+   "o": [
+    "Ciceron",
+    "Epikur",
+    "Platon",
+    "Aristotel"
+   ]
+  },
+  "dq_en_5_18": {
+   "q": "Koji je mislilac napisao „Vladara”, raspravu o političkoj moći?",
+   "o": [
+    "Thomas Hobbes",
+    "Niccolò Machiavelli",
+    "John Locke",
+    "Montesquieu"
+   ]
+  },
+  "dq_en_5_19": {
+   "q": "Koje je godine usvojena Opća deklaracija o ljudskim pravima?"
+  },
+  "dq_en_5_20": {
+   "q": "Čija je ovo zastava?",
+   "o": [
+    "Portugal",
+    "Španjolska",
+    "Italija",
+    "Brazil"
+   ]
+  },
+  "dq_en_5_21": {
+   "q": "Čija je ovo zastava?",
+   "o": [
+    "Island",
+    "Danska",
+    "Švedska",
+    "Norveška"
+   ]
+  },
+  "dq_en_5_22": {
+   "q": "Čija je ovo zastava?",
+   "o": [
+    "Argentina",
+    "Finska",
+    "Grčka",
+    "Izrael"
+   ]
+  },
+  "dq_en_5_23": {
+   "q": "Čija je ovo zastava?",
+   "o": [
+    "Irak",
+    "Sirija",
+    "Egipat",
+    "Jemen"
+   ]
+  },
+  "dq_en_5_24": {
+   "q": "Čija je ovo zastava?",
+   "o": [
+    "Nizozemska",
+    "Rusija",
+    "Hrvatska",
+    "Francuska"
+   ]
+  },
+  "dq_en_5_25": {
+   "q": "Koji je glavni grad Novog Zelanda?",
+   "o": [
+    "Christchurch",
+    "Wellington",
+    "Queenstown",
+    "Auckland"
+   ]
+  },
+  "dq_en_5_26": {
+   "q": "Koji je glavni grad Vijetnama?",
+   "o": [
+    "Hanoj",
+    "Ho Chi Minh",
+    "Hue",
+    "Da Nang"
+   ]
+  },
+  "dq_en_5_27": {
+   "q": "Koji je glavni grad Pakistana?",
+   "o": [
+    "Pešavar",
+    "Islamabad",
+    "Karači",
+    "Lahore"
+   ]
+  },
+  "dq_en_5_28": {
+   "q": "Koji je glavni grad Nigerije?",
+   "o": [
+    "Abuja",
+    "Lagos",
+    "Ibadan",
+    "Kano"
+   ]
+  },
+  "dq_en_5_29": {
+   "q": "Nairobi je glavni grad koje zemlje?",
+   "o": [
+    "Etiopija",
+    "Kenija",
+    "Tanzanija",
+    "Uganda"
+   ]
+  },
+  "dq_en_5_30": {
+   "q": "Koja zemlja ima više stanovnika?",
+   "o": [
+    "Nigerija",
+    "Rusija"
+   ]
+  },
+  "dq_en_5_31": {
+   "q": "Koja zemlja ima više stanovnika?",
+   "o": [
+    "Egipat",
+    "Francuska"
+   ]
+  },
+  "dq_en_5_32": {
+   "q": "Koja zemlja ima više stanovnika?",
+   "o": [
+    "Vijetnam",
+    "Španjolska"
+   ]
+  },
+  "dq_en_5_33": {
+   "q": "Koja je zemlja veća po površini?",
+   "o": [
+    "Meksiko",
+    "Argentina"
+   ]
+  },
+  "dq_en_5_34": {
+   "q": "Koja je zemlja veća po površini?",
+   "o": [
+    "Mongolija",
+    "Francuska"
+   ]
+  },
+  "dq_en_5_35": {
+   "q": "Koja je zemlja veća po površini?",
+   "o": [
+    "Ujedinjeno Kraljevstvo",
+    "Švedska"
+   ]
+  },
+  "dq_en_5_36": {
+   "q": "Koja je zemlja veća po površini?",
+   "o": [
+    "Španjolska",
+    "Peru"
+   ]
+  },
+  "dq_en_5_37": {
+   "q": "Koja zemlja ima veće gospodarstvo (BDP)?",
+   "o": [
+    "Južna Koreja",
+    "Nigerija"
+   ]
+  },
+  "dq_en_5_38": {
+   "q": "Koja zemlja ima veće gospodarstvo (BDP)?",
+   "o": [
+    "Meksiko",
+    "Pakistan"
+   ]
+  },
+  "dq_en_5_39": {
+   "q": "Koja zemlja ima veće gospodarstvo (BDP)?",
+   "o": [
+    "Egipat",
+    "Australija"
+   ]
+  },
+  "dq_en_5_40": {
+   "q": "Koja je planina viša?",
+   "o": [
+    "Fuji",
+    "Elbrus"
+   ]
+  },
+  "dq_en_5_41": {
+   "q": "Koja je rijeka duža?",
+   "o": [
+    "Volga",
+    "Rajna"
+   ]
+  },
+  "dq_en_5_42": {
+   "q": "Koje je jezero dublje?",
+   "o": [
+    "Gornje jezero",
+    "Bajkalsko jezero"
+   ]
+  },
+  "dq_en_5_43": {
+   "q": "Koji je otok veći?",
+   "o": [
+    "Velika Britanija",
+    "Borneo"
+   ]
+  },
+  "dq_en_5_44": {
+   "q": "Koji je kontinent veći?",
+   "o": [
+    "Europa",
+    "Antarktika"
+   ]
+  },
+  "dq_en_5_45": {
+   "q": "Koji je grad sjevernije?",
+   "o": [
+    "Pariz",
+    "New York"
+   ]
+  },
+  "dq_en_5_46": {
+   "q": "Koji je malijski car 1324. poduzeo glasovito raskošno hodočašće u Meku?",
+   "o": [
+    "Sundiata Keita",
+    "Mansa Musa",
+    "Askia Muhamed",
+    "Sonni Ali"
+   ]
+  },
+  "dq_en_5_47": {
+   "q": "Koji je indijski car prihvatio budizam nakon krvavog rata u Kalingi?",
+   "o": [
+    "Akbar",
+    "Čandragupta Maurja",
+    "Harša",
+    "Ašoka"
+   ]
+  },
+  "dq_en_5_48": {
+   "q": "Koji je kralj u 6. stoljeću pr. Kr. osnovao Ahemenidsko Perzijsko Carstvo?",
+   "o": [
+    "Kserkso I.",
+    "Kambiz II.",
+    "Darije I.",
+    "Kir Veliki"
+   ]
+  },
+  "dq_en_5_49": {
+   "q": "Koji je grad, osnovan 762. godine, postao prijestolnica Abasidskog kalifata?",
+   "o": [
+    "Damask",
+    "Kairo",
+    "Bagdad",
+    "Córdoba"
+   ]
+  },
+  "dq_en_5_50": {
+   "q": "Koji je japanski car 1868. vraćen na vlast, čime je počela brza modernizacija?",
+   "o": [
+    "Taisho",
+    "Meiji",
+    "Showa",
+    "Komei"
+   ]
+  },
+  "dq_en_5_51": {
+   "q": "Koja je zemlja 1804. stekla neovisnost nakon uspješne pobune robova?",
+   "o": [
+    "Kuba",
+    "Brazil",
+    "Jamajka",
+    "Haiti"
+   ]
+  },
+  "dq_en_5_52": {
+   "q": "Koje je bilo tajno ime njemačke invazije na Sovjetski Savez 1941.?",
+   "o": [
+    "Operacija Morski lav",
+    "Operacija Overlord",
+    "Operacija Baklja",
+    "Operacija Barbarossa"
+   ]
+  },
+  "dq_en_5_53": {
+   "q": "Koji je revolucionar bio glavni lik vladavine terora u Francuskoj 1793.-1794.?",
+   "o": [
+    "Jean-Paul Marat",
+    "Markiz de Lafayette",
+    "Maximilien Robespierre",
+    "Georges Danton"
+   ]
+  },
+  "dq_en_5_54": {
+   "q": "Koji je rimski car Milanskim ediktom 313. godine legalizirao kršćanstvo?",
+   "o": [
+    "Konstantin I.",
+    "Neron",
+    "Dioklecijan",
+    "Teodozije I."
+   ]
+  },
+  "dq_en_5_55": {
+   "q": "Koji je kralj oko 1820. od kraljevstva Zulua stvorio veliku vojnu silu?",
+   "o": [
+    "Lobengula",
+    "Shaka",
+    "Moshoeshoe",
+    "Cetshwayo"
+   ]
+  },
+  "dq_en_5_56": {
+   "q": "Koji je egipatski predsjednik 1956. nacionalizirao Sueski kanal?",
+   "o": [
+    "Muhammad Nagib",
+    "Hosni Mubarak",
+    "Gamal Abdel Naser",
+    "Anvar Sadat"
+   ]
+  },
+  "dq_en_5_57": {
+   "q": "Koje je carstvo zauzimalo veću površinu?",
+   "o": [
+    "Mongolsko Carstvo",
+    "Aleksandrovo carstvo"
+   ]
+  },
+  "dq_en_5_58": {
+   "q": "Što je sagrađeno prije?",
+   "o": [
+    "Notre-Dame u Parizu",
+    "Aja Sofija"
+   ]
+  },
+  "dq_en_5_59": {
+   "q": "Što je bilo prije?",
+   "o": [
+    "Astečko Carstvo",
+    "Olmečka civilizacija"
+   ]
+  },
+  "dq_en_5_60": {
+   "q": "Osmansko Carstvo opstalo je i nakon Prvog svjetskog rata."
+  },
+  "dq_en_5_61": {
+   "q": "Na kamenu iz Rosette isti je proglas ispisan trima pismima."
+  },
+  "dq_en_5_62": {
+   "q": "Mogulsko Carstvo osnovao je Džingis-kan."
+  },
+  "dq_en_5_63": {
+   "q": "Opijumski ratovi vodili su se između Kine i Japana."
+  },
+  "dq_en_5_64": {
+   "q": "Koje je godine Crna smrt stigla u Italiju?"
+  },
+  "dq_en_5_65": {
+   "q": "Koje je godine abdikacija posljednjeg kineskog cara okončala dinastiju Qing?"
+  },
+  "dq_en_5_66": {
+   "q": "Koje je godine Tenochtitlan pao u ruke Hernána Cortésa?"
+  },
+  "dq_en_5_67": {
+   "q": "Tko je 1895. godine otkrio rendgenske zrake?",
+   "o": [
+    "Wilhelm Röntgen",
+    "Pierre Curie",
+    "Henri Becquerel",
+    "Heinrich Hertz"
+   ]
+  },
+  "dq_en_5_68": {
+   "q": "Koja boja vidljive svjetlosti ima najveću valnu duljinu?",
+   "o": [
+    "Ljubičasta",
+    "Zelena",
+    "Plava",
+    "Crvena"
+   ]
+  },
+  "dq_en_5_69": {
+   "q": "Koji su par znanstvenika 1953. godine predložili strukturu dvostruke uzvojnice DNK?",
+   "o": [
+    "Hershey i Chase",
+    "Meselson i Stahl",
+    "Watson i Crick",
+    "Pauling i Corey"
+   ]
+  },
+  "dq_en_5_70": {
+   "q": "U kojem se sloju atmosfere nalazi većina ozonskog omotača?",
+   "o": [
+    "Troposfera",
+    "Stratosfera",
+    "Mezosfera",
+    "Termosfera"
+   ]
+  },
+  "dq_en_5_71": {
+   "q": "Koji je najveći mjesec u Sunčevu sustavu?",
+   "o": [
+    "Titan",
+    "Europa",
+    "Ganimed",
+    "Kalisto"
+   ]
+  },
+  "dq_en_5_72": {
+   "q": "Nedostatak kojeg vitamina uzrokuje skorbut?",
+   "o": [
+    "Vitamin B12",
+    "Vitamin C",
+    "Vitamin A",
+    "Vitamin D"
+   ]
+  },
+  "dq_en_5_73": {
+   "q": "Kako se zovu atomi istog elementa s različitim brojem neutrona?",
+   "o": [
+    "Ioni",
+    "Izotopi",
+    "Izomeri",
+    "Alotropi"
+   ]
+  },
+  "dq_en_5_74": {
+   "q": "Koji je njemački matematičar razvio infinitezimalni račun neovisno o Newtonu?",
+   "o": [
+    "Bernhard Riemann",
+    "Leonhard Euler",
+    "Gottfried Wilhelm Leibniz",
+    "Carl Friedrich Gauss"
+   ]
+  },
+  "dq_en_5_75": {
+   "q": "Kako se dekadski broj 5 piše u binarnom sustavu?",
+   "o": [
+    "101",
+    "110",
+    "111",
+    "100"
+   ]
+  },
+  "dq_en_5_76": {
+   "q": "Koliko srca ima hobotnica?",
+   "o": [
+    "Dva",
+    "Četiri",
+    "Tri",
+    "Jedno"
+   ]
+  },
+  "dq_en_5_77": {
+   "q": "Koji dio mozga uglavnom upravlja ravnotežom i pokretima?",
+   "o": [
+    "Hipotalamus",
+    "Mali mozak",
+    "Amigdala",
+    "Hipokampus"
+   ]
+  },
+  "dq_en_5_78": {
+   "q": "Što ima veću gustoću?",
+   "o": [
+    "Zlato",
+    "Olovo"
+   ]
+  },
+  "dq_en_5_79": {
+   "q": "Što je toplije?",
+   "o": [
+    "Munja",
+    "Površina Sunca"
+   ]
+  },
+  "dq_en_5_80": {
+   "q": "Što je dalje od Zemlje?",
+   "o": [
+    "Sonda Voyager 1",
+    "Proxima Centauri"
+   ]
+  },
+  "dq_en_5_81": {
+   "q": "Tko je rođen prije?",
+   "o": [
+    "Galileo Galilei",
+    "Isaac Newton"
+   ]
+  },
+  "dq_en_5_82": {
+   "q": "Što je veće?",
+   "o": [
+    "Mjesec",
+    "Pluton"
+   ]
+  },
+  "dq_en_5_83": {
+   "q": "Žirafa ima isti broj vratnih kralježaka kao čovjek."
+  },
+  "dq_en_5_84": {
+   "q": "Malariju uzrokuje virus."
+  },
+  "dq_en_5_85": {
+   "q": "Planet Saturn ima manju gustoću od vode."
+  },
+  "dq_en_5_86": {
+   "q": "Svjetlosna godina je jedinica za vrijeme."
+  },
+  "dq_en_5_87": {
+   "q": "Koliko iznosi apsolutna nula u Celzijevim stupnjevima, zaokruženo na cijeli stupanj?"
+  },
+  "dq_en_5_88": {
+   "q": "Otprilike koliko godina treba Halleyjevu kometu da obiđe Sunce?",
+   "u": "godina"
+  },
+  "dq_en_5_89": {
+   "q": "Koje je godine Darwin objavio djelo „Postanak vrsta”?"
+  },
+  "dq_en_5_90": {
+   "q": "Što je dalje od Zemlje?",
+   "o": [
+    "Sirius",
+    "Alfa Centauri"
+   ]
+  },
+  "dq_en_5_91": {
+   "q": "Koji je ruski dramatičar napisao „Višnjik” i „Ujaka Vanju”?",
+   "o": [
+    "Anton Čehov",
+    "Ivan Turgenjev",
+    "Nikolaj Gogolj",
+    "Maksim Gorki"
+   ]
+  },
+  "dq_en_5_92": {
+   "q": "Koji je perzijski pjesnik napisao „Rubaije”, slavne u prijevodu Edwarda FitzGeralda?",
+   "o": [
+    "Sadi",
+    "Rumi",
+    "Omar Hajjam",
+    "Hafiz"
+   ]
+  },
+  "dq_en_5_93": {
+   "q": "Koji rimski pjesnik u „Božanstvenoj komediji” vodi pripovjedača kroz Pakao?",
+   "o": [
+    "Vergilije",
+    "Ovidije",
+    "Lukan",
+    "Horacije"
+   ]
+  },
+  "dq_en_5_94": {
+   "q": "Tko je napisao srednjovjekovni kriminalistički roman „Ime ruže”?",
+   "o": [
+    "Italo Calvino",
+    "Umberto Eco",
+    "Primo Levi",
+    "Alberto Moravia"
+   ]
+  },
+  "dq_en_5_95": {
+   "q": "Koji je čileanski pjesnik 1971. godine dobio Nobelovu nagradu za književnost?",
+   "o": [
+    "Pablo Neruda",
+    "Nicanor Parra",
+    "Gabriela Mistral",
+    "Octavio Paz"
+   ]
+  },
+  "dq_en_5_96": {
+   "q": "Koji je indijski pjesnik 1913. godine postao prvi azijski nobelovac za književnost?",
+   "o": [
+    "Rabindranath Tagore",
+    "Muhammad Iqbal",
+    "Premchand",
+    "Sarojini Naidu"
+   ]
+  },
+  "dq_en_5_97": {
+   "q": "Koji je grčki dramatičar napisao „Kralja Edipa”?",
+   "o": [
+    "Aristofan",
+    "Euripid",
+    "Menandar",
+    "Sofoklo"
+   ]
+  },
+  "dq_en_5_98": {
+   "q": "Na čemu je izvorno zapisan „Ep o Gilgamešu”?",
+   "o": [
+    "Na pergameni",
+    "Na glinenim pločicama",
+    "Na svicima papirusa",
+    "Na bambusovim letvicama"
+   ]
+  },
+  "dq_en_5_99": {
+   "q": "Kojem književnom pokretu pripadaju Wordsworth, Byron i Keats?",
+   "o": [
+    "Romantizmu",
+    "Modernizmu",
+    "Simbolizmu",
+    "Realizmu"
+   ]
+  },
+  "dq_en_5_100": {
+   "q": "Koji je američki pjesnik napisao „Vlati trave”?",
+   "o": [
+    "Henry Wadsworth Longfellow",
+    "Walt Whitman",
+    "Robert Frost",
+    "Emily Dickinson"
+   ]
+  },
+  "dq_en_5_101": {
+   "q": "Tko je napisao dramu „Čekajući Godota”?",
+   "o": [
+    "Samuel Beckett",
+    "Eugène Ionesco",
+    "Harold Pinter",
+    "Jean Genet"
+   ]
+  },
+  "dq_en_5_102": {
+   "q": "Tko je napisao „Doktora Živaga”?",
+   "o": [
+    "Mihail Šolohov",
+    "Maksim Gorki",
+    "Boris Pasternak",
+    "Aleksandr Solženjicin"
+   ]
+  },
+  "dq_en_5_103": {
+   "q": "Koji roman počinje rečenicom „Sve sretne obitelji nalik su jedna na drugu, svaka nesretna obitelj nesretna je na svoj način”?",
+   "o": [
+    "Ana Karenjina",
+    "Rat i mir",
+    "Middlemarch",
+    "Gospođa Bovary"
+   ]
+  },
+  "dq_en_5_104": {
+   "q": "Što je napisano prije?",
+   "o": [
+    "Izgubljeni raj",
+    "Canterburyjske priče"
+   ]
+  },
+  "dq_en_5_105": {
+   "q": "Tko je rođen prije?",
+   "o": [
+    "Voltaire",
+    "Molière"
+   ]
+  },
+  "dq_en_5_106": {
+   "q": "Što je objavljeno prije?",
+   "o": [
+    "Kafkina Preobrazba",
+    "Goetheov Faust, prvi dio"
+   ]
+  },
+  "dq_en_5_107": {
+   "q": "Miguel de Cervantes i William Shakespeare umrli su iste godine."
+  },
+  "dq_en_5_108": {
+   "q": "„Božanstvena komedija” izvorno je napisana na latinskom."
+  },
+  "dq_en_5_109": {
+   "q": "Roman „Rat i mir” odvija se u vrijeme Krimskog rata."
+  },
+  "dq_en_5_110": {
+   "q": "U njemačkoj drami „Faust” junak sklapa ugovor s đavlom Mefistom."
+  },
+  "dq_en_5_111": {
+   "q": "Koliko je soneta William Shakespeare objavio u zbirci iz 1609.?",
+   "u": "soneta"
+  },
+  "dq_en_5_112": {
+   "q": "Koje je godine objavljen „Zločin i kazna”?"
+  },
+  "dq_en_5_113": {
+   "q": "Koji je američki arhitekt projektirao kuću Fallingwater?",
+   "o": [
+    "Richard Neutra",
+    "Frank Lloyd Wright",
+    "Philip Johnson",
+    "Louis Sullivan"
+   ]
+  },
+  "dq_en_5_114": {
+   "q": "Koji se film Orsona Wellesa iz 1941. vrti oko riječi „Rosebud”?",
+   "o": [
+    "Bulevar sumraka",
+    "Građanin Kane",
+    "Malteški sokol",
+    "Casablanca"
+   ]
+  },
+  "dq_en_5_115": {
+   "q": "Za kojeg je kineskog cara izrađena Terakotna vojska?",
+   "o": [
+    "Car Yongle",
+    "Car Wu iz dinastije Han",
+    "Kublaj-kan",
+    "Qin Shi Huang"
+   ]
+  },
+  "dq_en_5_116": {
+   "q": "Tko je skladao operni ciklus „Prsten Nibelunga”?",
+   "o": [
+    "Giuseppe Verdi",
+    "Richard Wagner",
+    "Richard Strauss",
+    "Gustav Mahler"
+   ]
+  },
+  "dq_en_5_117": {
+   "q": "Koji je nizozemski umjetnik slikao mreže crnih linija s crvenom, žutom i plavom?",
+   "o": [
+    "Kazimir Maljevič",
+    "Paul Klee",
+    "Vasilij Kandinski",
+    "Piet Mondrian"
+   ]
+  },
+  "dq_en_5_118": {
+   "q": "Koji je umjetnik naslikao „Atensku školu” u Vatikanu?",
+   "o": [
+    "Sandro Botticelli",
+    "Rafael",
+    "Michelangelo",
+    "Tizian"
+   ]
+  },
+  "dq_en_5_119": {
+   "q": "Koji je japanski redatelj snimio „Sedam samuraja” (1954.)?",
+   "o": [
+    "Akira Kurosawa",
+    "Yasujirō Ozu",
+    "Hayao Miyazaki",
+    "Kenji Mizoguchi"
+   ]
+  },
+  "dq_en_5_120": {
+   "q": "Koji je arhitekt projektirao staklenu piramidu Louvrea?",
+   "o": [
+    "Norman Foster",
+    "I. M. Pei",
+    "Jean Nouvel",
+    "Renzo Piano"
+   ]
+  },
+  "dq_en_5_121": {
+   "q": "Koji je američki slikar poznat po kapanju boje na platna položena na pod?",
+   "o": [
+    "Jackson Pollock",
+    "Mark Rothko",
+    "Jasper Johns",
+    "Willem de Kooning"
+   ]
+  },
+  "dq_en_5_122": {
+   "q": "Koji je francuski skladatelj napisao „Clair de lune” i „More”?",
+   "o": [
+    "Gabriel Fauré",
+    "Claude Debussy",
+    "Erik Satie",
+    "Maurice Ravel"
+   ]
+  },
+  "dq_en_5_123": {
+   "q": "U kojem je španjolskom gradu palača Alhambra?",
+   "o": [
+    "Córdoba",
+    "Valencia",
+    "Sevilla",
+    "Granada"
+   ]
+  },
+  "dq_en_5_124": {
+   "q": "Koji je skladatelj rođen ranije?",
+   "o": [
+    "Johann Sebastian Bach",
+    "Frédéric Chopin"
+   ]
+  },
+  "dq_en_5_125": {
+   "q": "Škola dizajna Bauhaus osnovana je u Njemačkoj."
+  },
+  "dq_en_5_126": {
+   "q": "Ludwig van Beethoven rođen je u Beču."
+  },
+  "dq_en_5_127": {
+   "q": "Antonio Stradivari poznat je po izradi klavira."
+  },
+  "dq_en_5_128": {
+   "q": "Zbor „Aleluja” dio je Händelova oratorija „Mesija”."
+  },
+  "dq_en_5_129": {
+   "q": "Koje je godine prvi put prikazan film „Zameo ih vjetar”?"
+  },
+  "dq_en_5_130": {
+   "q": "Koje je godine Mona Lisa ukradena iz Louvrea?"
+  },
+  "dq_en_5_131": {
+   "q": "Koji je junak u grčkoj mitologiji jahao Pegaza da ubije Himeru?",
+   "o": [
+    "Jazon",
+    "Perzej",
+    "Belerofont",
+    "Tezej"
+   ]
+  },
+  "dq_en_5_132": {
+   "q": "Kako se u „Epu o Gilgamešu” zove divlji čovjek koji postaje Gilgamešov prijatelj?",
+   "o": [
+    "Marduk",
+    "Humbaba",
+    "Enkidu",
+    "Utnapištim"
+   ]
+  },
+  "dq_en_5_133": {
+   "q": "Amaterasu je u japanskoj mitologiji božica čega?",
+   "o": [
+    "Sunca",
+    "Mjeseca",
+    "Oluja",
+    "Mora"
+   ]
+  },
+  "dq_en_5_134": {
+   "q": "Koju je princezu u grčkoj mitologiji Perzej spasio od morskog čudovišta?",
+   "o": [
+    "Arijadnu",
+    "Andromedu",
+    "Danaju",
+    "Kasandru"
+   ]
+  },
+  "dq_en_5_135": {
+   "q": "Koji je trojanski junak u Vergilijevu epu legendarni praotac Rimljana?",
+   "o": [
+    "Eneja",
+    "Prijam",
+    "Paris",
+    "Hektor"
+   ]
+  },
+  "dq_en_5_136": {
+   "q": "Kojeg boga u nordijskoj mitologiji ubija strelica od imele?",
+   "o": [
+    "Thora",
+    "Heimdalla",
+    "Freyra",
+    "Baldra"
+   ]
+  },
+  "dq_en_5_137": {
+   "q": "Kakvo je biće Jörmungandr u nordijskoj mitologiji?",
+   "o": [
+    "Vatreni div",
+    "Divovski orao",
+    "Divovska morska zmija",
+    "Čudovišni vuk"
+   ]
+  },
+  "dq_en_5_138": {
+   "q": "Koja egipatska božica utjelovljuje istinu, pravdu i kozmički poredak?",
+   "o": [
+    "Maat",
+    "Sekhmet",
+    "Neftis",
+    "Hator"
+   ]
+  },
+  "dq_en_5_139": {
+   "q": "Kojega su kukca stari Egipćani povezivali s izlaskom sunca i ponovnim rođenjem?",
+   "o": [
+    "Pčelu",
+    "Vilinog konjica",
+    "Skarabeja",
+    "Skakavca"
+   ]
+  },
+  "dq_en_5_140": {
+   "q": "Koja je morska nimfa u grčkoj mitologiji bila Ahilejeva majka?",
+   "o": [
+    "Hekuba",
+    "Tetida",
+    "Leda",
+    "Alkmena"
+   ]
+  },
+  "dq_en_5_141": {
+   "q": "U što se u grčkoj mitologiji pretvorila nimfa Dafna da pobjegne Apolonu?",
+   "o": [
+    "U pauka",
+    "U trsku",
+    "U izvor",
+    "U lovor"
+   ]
+  },
+  "dq_en_5_142": {
+   "q": "Kakva je bila Tantalova kazna u podzemlju u grčkoj mitologiji?",
+   "o": [
+    "Vječno guranje stijene uzbrdo",
+    "Hrana i piće tik izvan dohvata",
+    "Orao koji mu svaki dan kljuje jetru",
+    "Vezanost za vatreni kotač"
+   ]
+  },
+  "dq_en_5_143": {
+   "q": "Kojoj je civilizaciji pripadao bog rata i sunca Huitzilopochtli?",
+   "o": [
+    "Majama",
+    "Olmecima",
+    "Inkama",
+    "Astecima"
+   ]
+  },
+  "dq_en_5_144": {
+   "q": "Koji bog sa slonovskom glavom u hinduističkoj tradiciji uklanja prepreke?",
+   "o": [
+    "Kartikeja",
+    "Ganeša",
+    "Indra",
+    "Hanuman"
+   ]
+  },
+  "dq_en_5_145": {
+   "q": "Kakvo je biće varalica Anansi u zapadnoafričkom folkloru?",
+   "o": [
+    "Majmun",
+    "Kornjača",
+    "Zec",
+    "Pauk"
+   ]
+  },
+  "dq_en_5_146": {
+   "q": "Koji je od ovih epova stariji?",
+   "o": [
+    "Homerova „Ilijada”",
+    "„Ep o Gilgamešu”"
+   ]
+  },
+  "dq_en_5_147": {
+   "q": "U Homerovoj „Ilijadi” trojanskog junaka Hektora ubija Ahilej."
+  },
+  "dq_en_5_148": {
+   "q": "U nordijskoj mitologiji bog Tyr izgubio je šaku zbog vuka Fenrira."
+  },
+  "dq_en_5_149": {
+   "q": "U egipatskoj mitologiji Horus je Setov sin."
+  },
+  "dq_en_5_150": {
+   "q": "U Vergilijevoj „Eneidi” kraljica Didona vlada Trojom."
+  },
+  "dq_en_5_151": {
+   "q": "U „Mahabharati” Pandave su petorica braće."
+  },
+  "dq_en_5_152": {
+   "q": "Koliko je očiju prema Ovidiju imao div Arg Panoptes?",
+   "u": "očiju"
+  },
+  "dq_en_5_153": {
+   "q": "Koji tjesnac dijeli Rusiju od Aljaske?",
+   "o": [
+    "Beringov tjesnac",
+    "Davisov tjesnac",
+    "Hudsonov tjesnac",
+    "Malački tjesnac"
+   ]
+  },
+  "dq_en_5_154": {
+   "q": "Koja je najdulja rijeka u Europi?",
+   "o": [
+    "Dunav",
+    "Dnjepar",
+    "Volga",
+    "Rajna"
+   ]
+  },
+  "dq_en_5_155": {
+   "q": "Koji otok dijele Indonezija, Malezija i Brunej?",
+   "o": [
+    "Borneo",
+    "Sulawesi",
+    "Nova Gvineja",
+    "Sumatra"
+   ]
+  },
+  "dq_en_5_156": {
+   "q": "Tko je napisao „Društveni ugovor” (1762.)?",
+   "o": [
+    "Montesquieu",
+    "Jean-Jacques Rousseau",
+    "Denis Diderot",
+    "Voltaire"
+   ]
+  },
+  "dq_en_5_157": {
+   "q": "Kako ekonomisti zovu vrijednost najbolje alternative kojoj se odreklo nekim izborom?",
+   "o": [
+    "Nepovratni trošak",
+    "Granični trošak",
+    "Oportunitetni trošak",
+    "Fiksni trošak"
+   ]
+  },
+  "dq_en_5_158": {
+   "q": "Kaspijsko jezero najveća je kopnena vodena površina na Zemlji."
+  },
+  "dq_en_5_159": {
+   "q": "Svjetska zdravstvena organizacija ima sjedište u New Yorku."
+  },
+  "dq_en_5_160": {
+   "q": "Otprilike koliko je duboka najdublja točka Marijanske brazde?",
+   "u": "metara"
+  },
+  "dq_en_5_161": {
+   "q": "Za koliko se stupnjeva geografske dužine Zemlja okrene u jednom satu?",
+   "u": "stupnjeva"
+  },
+  "dq_en_5_162": {
+   "q": "Kako se zove ova slika?",
+   "o": [
+    "Ambasadori",
+    "Portret Arnolfinijevih",
+    "Mljekarica",
+    "Las Meninas"
+   ]
+  },
+  "dq_en_5_163": {
+   "q": "Kako se zove ova slika?",
+   "o": [
+    "Vrt zemaljskih užitaka",
+    "Babilonska kula",
+    "Nizozemske poslovice",
+    "Brod luđaka"
+   ]
+  },
+  "dq_en_5_164": {
+   "q": "Tko je naslikao ovu sliku?",
+   "o": [
+    "Eugène Delacroix",
+    "Théodore Géricault",
+    "Gustave Courbet",
+    "Jacques-Louis David"
+   ]
+  },
+  "dq_en_5_165": {
+   "q": "Tko je naslikao ovu sliku?",
+   "o": [
+    "William Blake",
+    "John Constable",
+    "Thomas Gainsborough",
+    "J. M. W. Turner"
+   ]
+  },
+  "dq_en_5_166": {
+   "q": "Tko je naslikao ovu sliku?",
+   "o": [
+    "Arnold Böcklin",
+    "J. M. W. Turner",
+    "Philipp Otto Runge",
+    "Caspar David Friedrich"
+   ]
+  },
+  "dq_en_5_167": {
+   "q": "Tko je ovo?",
+   "o": [
+    "Victor Hugo",
+    "Alexandre Dumas",
+    "Jules Verne",
+    "Émile Zola"
+   ]
+  },
+  "dq_en_5_168": {
+   "q": "Tko je ovo?",
+   "o": [
+    "Nikolaj Gogolj",
+    "Fjodor Dostojevski",
+    "Ivan Turgenjev",
+    "Anton Čehov"
+   ]
+  },
+  "dq_en_5_169": {
+   "q": "Tko je ovo?",
+   "o": [
+    "Stefan Zweig",
+    "Franz Kafka",
+    "James Joyce",
+    "Marcel Proust"
+   ]
+  },
+  "dq_en_5_170": {
+   "q": "Tko je ovo?",
+   "o": [
+    "Elizabeta Ruska",
+    "Marija Antoaneta",
+    "Marija Terezija",
+    "Katarina Velika"
+   ]
+  },
+  "dq_en_5_171": {
+   "q": "Tko je ovo?",
+   "o": [
+    "Diego Velázquez",
+    "Peter Paul Rubens",
+    "Frans Hals",
+    "Rembrandt"
+   ]
+  },
+  "dq_en_5_172": {
+   "q": "Koja je ovo grčka božica?",
+   "o": [
+    "Nika",
+    "Artemida",
+    "Hera",
+    "Atena"
+   ]
+  },
+  "dq_en_5_173": {
+   "q": "Tko je ovdje kažnjen?",
+   "o": [
+    "Tantal",
+    "Sizif",
+    "Prometej",
+    "Iksion"
+   ]
+  },
+  "dq_en_5_174": {
+   "q": "Kako se zove ovaj neboder?",
+   "o": [
+    "Empire State Building",
+    "Chrysler Building",
+    "Willis Tower",
+    "Rockefeller Center"
+   ]
+  },
+  "dq_en_5_175": {
+   "q": "Kako se zove ovaj plimni otok?",
+   "o": [
+    "Lindisfarne",
+    "St Michael's Mount",
+    "Mont-Saint-Michel",
+    "Skellig Michael"
+   ]
+  },
+  "dq_en_5_176": {
+   "q": "Kako se zove ovaj dvorac?",
+   "o": [
+    "Dvorac Windsor",
+    "Dvorac Bran",
+    "Neuschwanstein",
+    "Dvorac Chambord"
+   ]
+  },
+  "dq_en_5_177": {
+   "q": "Kako se zovu ova vrata?",
+   "o": [
+    "Brandenburška vrata",
+    "Mramorni slavoluk",
+    "Konstantinov slavoluk",
+    "Slavoluk pobjede"
+   ]
+  },
+  "dq_en_6_01": {
+   "q": "Koji je ekonomist napisao „Bogatstvo naroda” (1776.)?",
+   "o": [
+    "Karl Marx",
+    "John Maynard Keynes",
+    "Adam Smith",
+    "David Ricardo"
+   ]
+  },
+  "dq_en_6_02": {
+   "q": "Koji je kipar izradio „Mislioca”?",
+   "o": [
+    "Auguste Rodin",
+    "Gian Lorenzo Bernini",
+    "Michelangelo",
+    "Donatello"
+   ]
+  },
+  "dq_en_6_03": {
+   "q": "Kojem je gradu Gilgameš kralj u „Epu o Gilgamešu”?",
+   "o": [
+    "Ninivi",
+    "Babilonu",
+    "Uruku",
+    "Uru"
+   ]
+  },
+  "dq_en_6_04": {
+   "q": "Koji je astronom postavio tri zakona gibanja planeta?",
+   "o": [
+    "Johannes Kepler",
+    "Tycho Brahe",
+    "Nikola Kopernik",
+    "Galileo Galilei"
+   ]
+  },
+  "dq_en_6_05": {
+   "q": "Bizantsko Carstvo bilo je istočni nastavak Rimskog Carstva."
+  },
+  "dq_en_6_06": {
+   "q": "Franz Kafka napisao je „Preobrazbu” na francuskom."
+  },
+  "dq_en_6_07": {
+   "q": "Tko je ovo?",
+   "o": [
+    "John Locke",
+    "Gottfried Wilhelm Leibniz",
+    "Christiaan Huygens",
+    "Isaac Newton"
+   ]
+  },
+  "dq_en_6_08": {
+   "q": "Tko je ovo?",
+   "o": [
+    "Sylvia Plath",
+    "Virginia Woolf",
+    "Emily Dickinson",
+    "Katherine Mansfield"
+   ]
+  },
+  "dq_en_6_09": {
+   "q": "Koje je godine zapečaćena Magna Carta?"
+  },
+  "dq_en_6_10": {
+   "q": "Koliki postotak Zemljine atmosfere čini dušik?"
+  },
+  "dq_en_6_11": {
+   "q": "Koji je arhitekt projektirao Sagradu Famíliju u Barceloni?",
+   "o": [
+    "Frank Lloyd Wright",
+    "Antoni Gaudí",
+    "Oscar Niemeyer",
+    "Le Corbusier"
+   ]
+  },
+  "dq_en_6_12": {
+   "q": "Koje je godine dovršen Eiffelov toranj?"
+  },
+  "dq_en_6_13": {
+   "q": "Koji je pjesnik napisao „Pustu zemlju”?",
+   "o": [
+    "T. S. Eliot",
+    "W. H. Auden",
+    "W. B. Yeats",
+    "Ezra Pound"
+   ]
+  },
+  "dq_en_6_14": {
+   "q": "U nordijskoj mitologiji Ragnarök je ime Odinova osmonogog konja."
+  },
+  "dq_en_6_15": {
+   "q": "Koja je božica u egipatskoj mitologiji ponovno sastavila Ozirisovo tijelo?",
+   "o": [
+    "Izida",
+    "Bastet",
+    "Hator",
+    "Nut"
+   ]
+  },
+  "dq_en_6_16": {
+   "q": "Tko je autor „Levijatana” (1651.)?",
+   "o": [
+    "Thomas Hobbes",
+    "John Locke",
+    "David Hume",
+    "Francis Bacon"
+   ]
+  },
+  "dq_en_6_17": {
+   "q": "„Mislim, dakle jesam” izreka je Renéa Descartesa."
+  },
+  "dq_en_6_18": {
+   "q": "Čija je ovo zastava?",
+   "o": [
+    "Poljska",
+    "Austrija",
+    "Indonezija",
+    "Danska"
+   ]
+  },
+  "dq_en_6_19": {
+   "q": "Čija je ovo zastava?",
+   "o": [
+    "Vijetnam",
+    "Turska",
+    "Maroko",
+    "Kina"
+   ]
+  },
+  "dq_en_6_20": {
+   "q": "Čija je ovo zastava?",
+   "o": [
+    "Južna Afrika",
+    "Tanzanija",
+    "Jamajka",
+    "Gana"
+   ]
+  },
+  "dq_en_6_21": {
+   "q": "Čija je ovo zastava?",
+   "o": [
+    "Pakistan",
+    "Saudijska Arabija",
+    "Iran",
+    "Irak"
+   ]
+  },
+  "dq_en_6_22": {
+   "q": "Čija je ovo zastava?",
+   "o": [
+    "Irska",
+    "Mađarska",
+    "Indija",
+    "Italija"
+   ]
+  },
+  "dq_en_6_23": {
+   "q": "Koji je glavni grad Perua?",
+   "o": [
+    "Lima",
+    "Arequipa",
+    "Trujillo",
+    "Cusco"
+   ]
+  },
+  "dq_en_6_24": {
+   "q": "Koji je glavni grad Tanzanije?",
+   "o": [
+    "Dar es Salaam",
+    "Dodoma",
+    "Arusha",
+    "Zanzibar"
+   ]
+  },
+  "dq_en_6_25": {
+   "q": "Koji je glavni grad Mjanmara?",
+   "o": [
+    "Bagan",
+    "Yangon",
+    "Mandalay",
+    "Naypyidaw"
+   ]
+  },
+  "dq_en_6_26": {
+   "q": "Koji je glavni grad Kolumbije?",
+   "o": [
+    "Medellín",
+    "Cartagena",
+    "Bogotá",
+    "Cali"
+   ]
+  },
+  "dq_en_6_27": {
+   "q": "Reykjavík je glavni grad koje zemlje?",
+   "o": [
+    "Norveška",
+    "Island",
+    "Finska",
+    "Danska"
+   ]
+  },
+  "dq_en_6_28": {
+   "q": "Koja zemlja ima više stanovnika?",
+   "o": [
+    "Bangladeš",
+    "Japan"
+   ]
+  },
+  "dq_en_6_29": {
+   "q": "Koja zemlja ima više stanovnika?",
+   "o": [
+    "Etiopija",
+    "Njemačka"
+   ]
+  },
+  "dq_en_6_30": {
+   "q": "Koja zemlja ima više stanovnika?",
+   "o": [
+    "Ujedinjeno Kraljevstvo",
+    "Filipini"
+   ]
+  },
+  "dq_en_6_31": {
+   "q": "Koja je zemlja veća po površini?",
+   "o": [
+    "Alžir",
+    "Južna Afrika"
+   ]
+  },
+  "dq_en_6_32": {
+   "q": "Koja je zemlja veća po površini?",
+   "o": [
+    "Meksiko",
+    "Kazahstan"
+   ]
+  },
+  "dq_en_6_33": {
+   "q": "Koja je zemlja veća po površini?",
+   "o": [
+    "DR Kongo",
+    "Egipat"
+   ]
+  },
+  "dq_en_6_34": {
+   "q": "Koja je zemlja veća po površini?",
+   "o": [
+    "Japan",
+    "Ujedinjeno Kraljevstvo"
+   ]
+  },
+  "dq_en_6_35": {
+   "q": "Koja zemlja ima veće gospodarstvo (BDP)?",
+   "o": [
+    "Južna Koreja",
+    "Argentina"
+   ]
+  },
+  "dq_en_6_36": {
+   "q": "Koji je grad sjevernije?",
+   "o": [
+    "Montreal",
+    "London"
+   ]
+  },
+  "dq_en_6_37": {
+   "q": "Koji je grad sjevernije?",
+   "o": [
+    "Tokio",
+    "Rim"
+   ]
+  },
+  "dq_en_6_38": {
+   "q": "Pod kojim je carem Rimsko Carstvo 117. godine doseglo najveći opseg?",
+   "o": [
+    "Markom Aurelijem",
+    "Augustom",
+    "Hadrijanom",
+    "Trajanom"
+   ]
+  },
+  "dq_en_6_39": {
+   "q": "Koji je kineski admiral u 15. stoljeću vodio goleme flote s blagom preko Indijskog oceana?",
+   "o": [
+    "Zhang Qian",
+    "Xuanzang",
+    "Koxinga",
+    "Zheng He"
+   ]
+  },
+  "dq_en_6_40": {
+   "q": "Koji je bagdadski učenjak iz 9. stoljeća dao ime riječi „algoritam”?",
+   "o": [
+    "Avicena",
+    "Omar Hajjam",
+    "Al-Hvarizmi",
+    "Al-Biruni"
+   ]
+  },
+  "dq_en_6_41": {
+   "q": "Koji je marokanski putnik iz 14. stoljeća proputovao svijet od Malija do Kine?",
+   "o": [
+    "Ibn Battuta",
+    "Lav Afrikanac",
+    "Al-Idrisi",
+    "Ibn Haldun"
+   ]
+  },
+  "dq_en_6_42": {
+   "q": "Koji je šogunat vladao Japanom od 1603. do 1868.?",
+   "o": [
+    "Kamakura",
+    "Tokugawa",
+    "Toyotomi",
+    "Ashikaga"
+   ]
+  },
+  "dq_en_6_43": {
+   "q": "Koji je inkurski car 1532. pao u ruke Španjolaca kod Cajamarce?",
+   "o": [
+    "Túpac Amaru",
+    "Atahualpa",
+    "Huayna Capac",
+    "Pachacuti"
+   ]
+  },
+  "dq_en_6_44": {
+   "q": "Koje je afričko kraljevstvo, na području današnje Etiopije, u 4. stoljeću prihvatilo kršćanstvo?",
+   "o": [
+    "Kuš",
+    "Mali",
+    "Benin",
+    "Aksum"
+   ]
+  },
+  "dq_en_6_45": {
+   "q": "Tko je 1957. doveo Zlatnu obalu do neovisnosti pod imenom Gana?",
+   "o": [
+    "Julius Nyerere",
+    "Jomo Kenyatta",
+    "Patrice Lumumba",
+    "Kwame Nkrumah"
+   ]
+  },
+  "dq_en_6_46": {
+   "q": "Koja je mongolska država više od dva stoljeća vladala ruskim kneževinama?",
+   "o": [
+    "Čagatajski kanat",
+    "Zlatna horda",
+    "Ilkanat",
+    "Dinastija Yuan"
+   ]
+  },
+  "dq_en_6_47": {
+   "q": "Koji je francuski kralj 1598. Nanteskim ediktom dao prava protestantima?",
+   "o": [
+    "Franjo I.",
+    "Karlo IX.",
+    "Henrik IV.",
+    "Luj XIV."
+   ]
+  },
+  "dq_en_6_48": {
+   "q": "U kojoj je bitki 1954. Viet Minh porazio francusku vojsku?",
+   "o": [
+    "Kod Da Nanga",
+    "Kod Khe Sanha",
+    "Kod Huea",
+    "Kod Dien Bien Phua"
+   ]
+  },
+  "dq_en_6_49": {
+   "q": "Što je trajalo dulje?",
+   "o": [
+    "Dinastija Ming",
+    "Dinastija Yuan"
+   ]
+  },
+  "dq_en_6_50": {
+   "q": "Tko je vladao prije?",
+   "o": [
+    "Karlo Veliki",
+    "Justinijan I."
+   ]
+  },
+  "dq_en_6_51": {
+   "q": "Što je bilo prije?",
+   "o": [
+    "Carstvo Gupta",
+    "Carstvo Maurja"
+   ]
+  },
+  "dq_en_6_52": {
+   "q": "Etiopija je 1896. u bitki kod Adve porazila talijansku vojsku."
+  },
+  "dq_en_6_53": {
+   "q": "Mongoli su dvaput pokušali osvojiti Japan i oba puta nisu uspjeli."
+  },
+  "dq_en_6_54": {
+   "q": "Saladin je bio osnivač osmanske dinastije."
+  },
+  "dq_en_6_55": {
+   "q": "Simón Bolívar rođen je u Španjolskoj."
+  },
+  "dq_en_6_56": {
+   "q": "Koje se godine dogodila hidžra, Muhamedova seoba u Medinu?"
+  },
+  "dq_en_6_57": {
+   "q": "Koje je godine umro Džingis-kan?"
+  },
+  "dq_en_6_58": {
+   "q": "Koliko je godina Luj XIV. vladao Francuskom?",
+   "u": "godine"
+  },
+  "dq_en_6_59": {
+   "q": "Koja temeljna sila drži protone i neutrone zajedno u jezgri?",
+   "o": [
+    "Jaka nuklearna sila",
+    "Elektromagnetska sila",
+    "Slaba nuklearna sila",
+    "Gravitacija"
+   ]
+  },
+  "dq_en_6_60": {
+   "q": "Koji je metal najzastupljeniji u Zemljinoj kori?",
+   "o": [
+    "Željezo",
+    "Magnezij",
+    "Kalcij",
+    "Aluminij"
+   ]
+  },
+  "dq_en_6_61": {
+   "q": "Koji je element Marie Curie nazvala po svojoj domovini?",
+   "o": [
+    "Germanij",
+    "Polonij",
+    "Radij",
+    "Francij"
+   ]
+  },
+  "dq_en_6_62": {
+   "q": "Koja je svemirska sonda prva ušla u međuzvjezdani prostor?",
+   "o": [
+    "Voyager 2",
+    "New Horizons",
+    "Pioneer 10",
+    "Voyager 1"
+   ]
+  },
+  "dq_en_6_63": {
+   "q": "S kojom se bazom u DNK sparuje adenin?",
+   "o": [
+    "Citozin",
+    "Timin",
+    "Uracil",
+    "Gvanin"
+   ]
+  },
+  "dq_en_6_64": {
+   "q": "Koja je najmanja kost u ljudskom tijelu?",
+   "o": [
+    "Čekić",
+    "Stremen",
+    "Trtična kost",
+    "Nakovanj"
+   ]
+  },
+  "dq_en_6_65": {
+   "q": "Koji je liječnik 1628. godine opisao krvotok?",
+   "o": [
+    "William Harvey",
+    "Andreas Vesalius",
+    "Thomas Sydenham",
+    "Paracelzus"
+   ]
+  },
+  "dq_en_6_66": {
+   "q": "Koja logička vrata daju 1 samo kad su oba ulaza 1?",
+   "o": [
+    "XOR",
+    "NOR",
+    "OR",
+    "AND"
+   ]
+  },
+  "dq_en_6_68": {
+   "q": "Koji je nizozemski znanstvenik prvi promatrao bakterije kroz mikroskop?",
+   "o": [
+    "Christiaan Huygens",
+    "Jan Swammerdam",
+    "Antonie van Leeuwenhoek",
+    "Herman Boerhaave"
+   ]
+  },
+  "dq_en_6_69": {
+   "q": "Koje biljno tkivo provodi vodu od korijena do listova?",
+   "o": [
+    "Kambij",
+    "Ksilem",
+    "Epiderma",
+    "Floem"
+   ]
+  },
+  "dq_en_6_70": {
+   "q": "Tko je živio prije?",
+   "o": [
+    "Stegosaurus",
+    "Tyrannosaurus rex"
+   ]
+  },
+  "dq_en_6_71": {
+   "q": "Što je brže?",
+   "o": [
+    "Zemlja na putanji oko Sunca",
+    "ISS na putanji oko Zemlje"
+   ]
+  },
+  "dq_en_6_72": {
+   "q": "Što je hladnije?",
+   "o": [
+    "Tekući dušik",
+    "Tekući helij"
+   ]
+  },
+  "dq_en_6_73": {
+   "q": "Što ima višu frekvenciju?",
+   "o": [
+    "Ultraljubičasto zračenje",
+    "Infracrveno zračenje"
+   ]
+  },
+  "dq_en_6_74": {
+   "q": "Što ima veću masu?",
+   "o": [
+    "Svi ostali planeti zajedno",
+    "Jupiter"
+   ]
+  },
+  "dq_en_6_75": {
+   "q": "Vrh Mount Everesta je točka na Zemljinoj površini najudaljenija od Zemljina središta."
+  },
+  "dq_en_6_76": {
+   "q": "Venera se vrti u suprotnom smjeru od većine planeta Sunčeva sustava."
+  },
+  "dq_en_6_77": {
+   "q": "Hobotnice imaju plavu krv."
+  },
+  "dq_en_6_78": {
+   "q": "Ligamenti povezuju mišiće s kostima."
+  },
+  "dq_en_6_79": {
+   "q": "Koliki je atomski broj urana, odnosno broj njegovih protona?",
+   "u": "protona"
+  },
+  "dq_en_6_80": {
+   "q": "Pri kojoj temperaturi Celzijeva i Fahrenheitova ljestvica pokazuju isti broj?",
+   "u": "stupnjeva"
+  },
+  "dq_en_6_81": {
+   "q": "Koje je godine Einstein predstavio opću teoriju relativnosti?"
+  },
+  "dq_en_6_82": {
+   "q": "Koji je nigerijski pisac napisao roman „Sve se raspada” (1958.)?",
+   "o": [
+    "Chinua Achebe",
+    "Amos Tutuola",
+    "Ben Okri",
+    "Wole Soyinka"
+   ]
+  },
+  "dq_en_6_83": {
+   "q": "Koji je argentinski pisac napisao priču „Babilonska knjižnica”?",
+   "o": [
+    "Julio Cortázar",
+    "Adolfo Bioy Casares",
+    "Ernesto Sabato",
+    "Jorge Luis Borges"
+   ]
+  },
+  "dq_en_6_84": {
+   "q": "Koji je njemački pisac napisao „Čarobni brijeg” i „Buddenbrookove”?",
+   "o": [
+    "Hermann Hesse",
+    "Günter Grass",
+    "Heinrich Böll",
+    "Thomas Mann"
+   ]
+  },
+  "dq_en_6_85": {
+   "q": "U kojem se klasičnom kineskom romanu pojavljuje Kralj majmuna, Sun Wukong?",
+   "o": [
+    "Priča o tri kraljevstva",
+    "Rubom vode",
+    "San o crvenom paviljonu",
+    "Putovanje na Zapad"
+   ]
+  },
+  "dq_en_6_86": {
+   "q": "Koji je rimski pjesnik napisao „Metamorfoze”?",
+   "o": [
+    "Katul",
+    "Ovidije",
+    "Vergilije",
+    "Horacije"
+   ]
+  },
+  "dq_en_6_87": {
+   "q": "Tko je napisao „Majstora i Margaritu”?",
+   "o": [
+    "Mihail Bulgakov",
+    "Vladimir Nabokov",
+    "Isak Babelj",
+    "Boris Pasternak"
+   ]
+  },
+  "dq_en_6_88": {
+   "q": "Tko je napisao roman „Gospođa Dalloway”?",
+   "o": [
+    "D. H. Lawrence",
+    "Katherine Mansfield",
+    "E. M. Forster",
+    "Virginia Woolf"
+   ]
+  },
+  "dq_en_6_89": {
+   "q": "S kojim se književnim pokretom najviše povezuje Émile Zola?",
+   "o": [
+    "S romantizmom",
+    "S naturalizmom",
+    "S nadrealizmom",
+    "Sa simbolizmom"
+   ]
+  },
+  "dq_en_6_90": {
+   "q": "Koji je francuski pjesnik napisao „Cvjetove zla”?",
+   "o": [
+    "Stéphane Mallarmé",
+    "Charles Baudelaire",
+    "Arthur Rimbaud",
+    "Paul Verlaine"
+   ]
+  },
+  "dq_en_6_91": {
+   "q": "U kojem se izmišljenom gradiću odvija roman „Sto godina samoće”?",
+   "o": [
+    "Comala",
+    "Macondo",
+    "Santa María",
+    "Santa Teresa"
+   ]
+  },
+  "dq_en_6_92": {
+   "q": "Koja je književna vrsta Puškinov „Evgenij Onjegin”?",
+   "o": [
+    "Ep u prozi",
+    "Tragedija u pet činova",
+    "Roman u stihu",
+    "Ciklus kratkih priča"
+   ]
+  },
+  "dq_en_6_93": {
+   "q": "„Kalevala” je nacionalni ep koje zemlje?",
+   "o": [
+    "Finske",
+    "Mađarske",
+    "Estonije",
+    "Islanda"
+   ]
+  },
+  "dq_en_6_94": {
+   "q": "Tko je napisao ep „Izgubljeni raj”?",
+   "o": [
+    "Edmund Spenser",
+    "John Milton",
+    "John Donne",
+    "Alexander Pope"
+   ]
+  },
+  "dq_en_6_95": {
+   "q": "Što je napisano prije?",
+   "o": [
+    "Beowulf",
+    "Eneida"
+   ]
+  },
+  "dq_en_6_96": {
+   "q": "Tko je rođen prije?",
+   "o": [
+    "Anton Čehov",
+    "Aleksandar Puškin"
+   ]
+  },
+  "dq_en_6_97": {
+   "q": "Što je objavljeno prije?",
+   "o": [
+    "Candide",
+    "Gospođa Bovary"
+   ]
+  },
+  "dq_en_6_98": {
+   "q": "Anton Čehov školovao se za liječnika i radio kao liječnik."
+  },
+  "dq_en_6_99": {
+   "q": "„Tao Te Ching” tradicionalno se pripisuje Konfuciju."
+  },
+  "dq_en_6_100": {
+   "q": "Većina pjesama Emily Dickinson objavljena je tek nakon njezine smrti."
+  },
+  "dq_en_6_101": {
+   "q": "Točna rečenica „Elementarno, dragi moj Watsone” pojavljuje se u izvornim pričama o Sherlocku Holmesu."
+  },
+  "dq_en_6_102": {
+   "q": "Koliko pjevanja ima „Božanstvena komedija”?",
+   "u": "pjevanja"
+  },
+  "dq_en_6_103": {
+   "q": "Koje je godine prvi put objavljen roman „Sto godina samoće”?"
+  },
+  "dq_en_6_104": {
+   "q": "Koji je slikar 1863. izazvao skandal „Doručkom na travi”?",
+   "o": [
+    "Édouard Manet",
+    "Edgar Degas",
+    "Claude Monet",
+    "Gustave Courbet"
+   ]
+  },
+  "dq_en_6_105": {
+   "q": "Tko je osmislio i izveo kupolu firentinske katedrale?",
+   "o": [
+    "Leon Battista Alberti",
+    "Donato Bramante",
+    "Filippo Brunelleschi",
+    "Andrea Palladio"
+   ]
+  },
+  "dq_en_6_106": {
+   "q": "Tko je skladao opere „Tosca” i „La Bohème”?",
+   "o": [
+    "Giuseppe Verdi",
+    "Giacomo Puccini",
+    "Gioachino Rossini",
+    "Vincenzo Bellini"
+   ]
+  },
+  "dq_en_6_107": {
+   "q": "Kako se zovu snažni kontrasti svjetla i sjene na slici?",
+   "o": [
+    "Grisaille",
+    "Sfumato",
+    "Impasto",
+    "Chiaroscuro"
+   ]
+  },
+  "dq_en_6_108": {
+   "q": "Koji je fotograf poznat po crno-bijelim snimkama Yosemitea?",
+   "o": [
+    "Alfred Stieglitz",
+    "Robert Capa",
+    "Ansel Adams",
+    "Walker Evans"
+   ]
+  },
+  "dq_en_6_109": {
+   "q": "Koji je skladatelj napisao balet „Posvećenje proljeća”?",
+   "o": [
+    "Sergej Prokofjev",
+    "Maurice Ravel",
+    "Dmitrij Šostakovič",
+    "Igor Stravinski"
+   ]
+  },
+  "dq_en_6_110": {
+   "q": "Koja je mezoamerička civilizacija klesala goleme kamene glave?",
+   "o": [
+    "Olmeci",
+    "Asteci",
+    "Tolteci",
+    "Maje"
+   ]
+  },
+  "dq_en_6_111": {
+   "q": "Koji grčki stil stupova ima kapitele ukrašene listovima akanta?",
+   "o": [
+    "Korintski",
+    "Jonski",
+    "Toskanski",
+    "Dorski"
+   ]
+  },
+  "dq_en_6_112": {
+   "q": "Koji je skladatelj napisao „Mađarske rapsodije” za klavir?",
+   "o": [
+    "Franz Liszt",
+    "Antonín Dvořák",
+    "Johannes Brahms",
+    "Béla Bartók"
+   ]
+  },
+  "dq_en_6_113": {
+   "q": "U kojoj japanskoj kazališnoj tradiciji glavni glumac nosi rezbarenu drvenu masku?",
+   "o": [
+    "Nō",
+    "Kabuki",
+    "Bunraku",
+    "Rakugo"
+   ]
+  },
+  "dq_en_6_114": {
+   "q": "Kojem se umjetniku pripisuje „Fontana” (1917.), pisoar izložen kao umjetničko djelo?",
+   "o": [
+    "Marcel Duchamp",
+    "Man Ray",
+    "Francis Picabia",
+    "Max Ernst"
+   ]
+  },
+  "dq_en_6_115": {
+   "q": "Što je naslikano prije?",
+   "o": [
+    "Las Meninas",
+    "Sloboda predvodi narod"
+   ]
+  },
+  "dq_en_6_116": {
+   "q": "Špiljske slike u Lascauxu nalaze se u Španjolskoj."
+  },
+  "dq_en_6_117": {
+   "q": "Tempera se tradicionalno veže žumanjkom."
+  },
+  "dq_en_6_118": {
+   "q": "Martha Graham bila je pionirka modernog plesa."
+  },
+  "dq_en_6_119": {
+   "q": "Koje su godine braća Lumière održala prvu javnu filmsku projekciju?"
+  },
+  "dq_en_6_120": {
+   "q": "Koje je godine dovršen Michelangelov „David”?"
+  },
+  "dq_en_6_121": {
+   "q": "Na čemu u slavenskom folkloru stoji kućica vještice Babe Jage?",
+   "o": [
+    "Na kamenim stupovima",
+    "Na kokošjim nogama",
+    "Na vučjim kostima",
+    "Na divovskoj kornjači"
+   ]
+  },
+  "dq_en_6_122": {
+   "q": "Na koji je otok u legendi o kralju Arturu odnesen umirući Artur?",
+   "o": [
+    "Lyonesse",
+    "Thule",
+    "Iona",
+    "Avalon"
+   ]
+  },
+  "dq_en_6_123": {
+   "q": "Koji je junak varalica u polinezijskoj mitologiji izvukao otoke iz mora?",
+   "o": [
+    "Tāne",
+    "Rongo",
+    "Rangi",
+    "Māui"
+   ]
+  },
+  "dq_en_6_124": {
+   "q": "Pele je u havajskoj tradiciji božica čega?",
+   "o": [
+    "Mjeseca",
+    "Vulkana",
+    "Oceana",
+    "Šume"
+   ]
+  },
+  "dq_en_6_125": {
+   "q": "Što je Gungnir u nordijskoj mitologiji?",
+   "o": [
+    "Thorov pojas",
+    "Heimdallov rog",
+    "Freyrov brod",
+    "Odinovo koplje"
+   ]
+  },
+  "dq_en_6_126": {
+   "q": "Koji bog u nordijskoj mitologiji čuva dugin most Bifröst?",
+   "o": [
+    "Heimdall",
+    "Njord",
+    "Tyr",
+    "Bragi"
+   ]
+  },
+  "dq_en_6_127": {
+   "q": "Što u nordijskoj mitologiji određuju tri Norne?",
+   "o": [
+    "Sudbinu",
+    "Žetvu",
+    "Plimu",
+    "Vremenske prilike"
+   ]
+  },
+  "dq_en_6_128": {
+   "q": "Koja zmija u egipatskoj mitologiji svake noći napada lađu boga sunca?",
+   "o": [
+    "Ammit",
+    "Sobek",
+    "Apopis",
+    "Wadjet"
+   ]
+  },
+  "dq_en_6_129": {
+   "q": "Koja se božica neba u egipatskoj mitologiji tijelom nadvija nad zemljom?",
+   "o": [
+    "Izida",
+    "Sekhmet",
+    "Nut",
+    "Tefnut"
+   ]
+  },
+  "dq_en_6_130": {
+   "q": "Koja je čarobnica iz Kolhide u grčkoj mitologiji postala Jazonova žena?",
+   "o": [
+    "Hekata",
+    "Medeja",
+    "Kirka",
+    "Pasifaja"
+   ]
+  },
+  "dq_en_6_131": {
+   "q": "Čija smrt u „Ilijadi” tjera Ahileja da se vrati u boj?",
+   "o": [
+    "Ajantova",
+    "Antilohova",
+    "Patroklova",
+    "Diomedova"
+   ]
+  },
+  "dq_en_6_132": {
+   "q": "Gdje u kineskoj mitologiji živi božica Chang'e?",
+   "o": [
+    "Na Mjesecu",
+    "Na Suncu",
+    "Pod Istočnim morem",
+    "Na planini Kunlun"
+   ]
+  },
+  "dq_en_6_133": {
+   "q": "Koji demonski kralj Lanke u „Ramajani” otima Raminu ženu?",
+   "o": [
+    "Kamsa",
+    "Hiranjakašipu",
+    "Durjodhana",
+    "Ravana"
+   ]
+  },
+  "dq_en_6_134": {
+   "q": "Kako se zove Kralj majmuna u kineskom klasiku „Putovanje na Zapad”?",
+   "o": [
+    "Zhu Bajie",
+    "Sun Wukong",
+    "Nezha",
+    "Guan Yu"
+   ]
+  },
+  "dq_en_6_135": {
+   "q": "Što je prema Hesiodovoj „Teogoniji” nastalo prvo?",
+   "o": [
+    "Kaos",
+    "Geja, Zemlja"
+   ]
+  },
+  "dq_en_6_136": {
+   "q": "U nordijskoj mitologiji Thor i Midgardska zmija ubijaju jedno drugo u Ragnaröku."
+  },
+  "dq_en_6_137": {
+   "q": "U „Odiseji” Penelopa danju tka pokrov, a noću ga para kako bi odgodila prosce."
+  },
+  "dq_en_6_138": {
+   "q": "U grčkoj mitologiji Agamemnon je bio muž Helene Trojanske."
+  },
+  "dq_en_6_139": {
+   "q": "U japanskom folkloru kitsune je mačka koja mijenja obličje."
+  },
+  "dq_en_6_140": {
+   "q": "Na koliko se pjevanja tradicionalno dijeli Homerova „Ilijada”?",
+   "u": "pjevanja"
+  },
+  "dq_en_6_141": {
+   "q": "Koje je najdublje jezero na svijetu?",
+   "o": [
+    "Gornje jezero",
+    "Jezero Tanganjika",
+    "Viktorijino jezero",
+    "Bajkalsko jezero"
+   ]
+  },
+  "dq_en_6_142": {
+   "q": "Koju zemlju potpuno okružuje Južnoafrička Republika?",
+   "o": [
+    "Malavi",
+    "Esvatini",
+    "Lesoto",
+    "Bocvanu"
+   ]
+  },
+  "dq_en_6_143": {
+   "q": "Kojoj jezičnoj porodici pripadaju finski i mađarski?",
+   "o": [
+    "Germanskoj",
+    "Slavenskoj",
+    "Uralskoj",
+    "Turkijskoj"
+   ]
+  },
+  "dq_en_6_144": {
+   "q": "Koji je kineski mudrac prema predaji autor djela „Tao Te Ching”?",
+   "o": [
+    "Konfucije",
+    "Mencije",
+    "Sun Tzu",
+    "Laozi"
+   ]
+  },
+  "dq_en_6_145": {
+   "q": "Sljedbenici koje se religije mole u gurdvari?",
+   "o": [
+    "Džainizma",
+    "Hinduizma",
+    "Zoroastrizma",
+    "Sikhizma"
+   ]
+  },
+  "dq_en_6_146": {
+   "q": "Dunav se ulijeva u Crno more."
+  },
+  "dq_en_6_147": {
+   "q": "Jezero Titicaca nalazi se na granici Čilea i Argentine."
+  },
+  "dq_en_6_148": {
+   "q": "Koliko je visok Kilimandžaro, najviša planina Afrike?",
+   "u": "metara"
+  },
+  "dq_en_6_149": {
+   "q": "Tko je naslikao ovu sliku?",
+   "o": [
+    "Albrecht Dürer",
+    "Jan van Eyck",
+    "Pieter Bruegel Stariji",
+    "Hieronymus Bosch"
+   ]
+  },
+  "dq_en_6_150": {
+   "q": "Kako se zove ova slika?",
+   "o": [
+    "Prozerpina",
+    "Ofelija",
+    "Plameni lipanj",
+    "Olympia"
+   ]
+  },
+  "dq_en_6_151": {
+   "q": "Tko je naslikao ovu sliku?",
+   "o": [
+    "Edgar Degas",
+    "Henri de Toulouse-Lautrec",
+    "Édouard Manet",
+    "Auguste Renoir"
+   ]
+  },
+  "dq_en_6_152": {
+   "q": "Tko je naslikao ovu sliku?",
+   "o": [
+    "Vincent van Gogh",
+    "Gustave Courbet",
+    "Paul Cézanne",
+    "Paul Gauguin"
+   ]
+  },
+  "dq_en_6_153": {
+   "q": "Tko je naslikao ovu sliku?",
+   "o": [
+    "Antoine Watteau",
+    "Jean-Honoré Fragonard",
+    "Thomas Gainsborough",
+    "François Boucher"
+   ]
+  },
+  "dq_en_6_154": {
+   "q": "Tko je ovo?",
+   "o": [
+    "Sri Aurobindo",
+    "Rabindranath Tagore",
+    "Khalil Gibran",
+    "Muhammad Iqbal"
+   ]
+  },
+  "dq_en_6_155": {
+   "q": "Tko je ovo?",
+   "o": [
+    "Emily Dickinson",
+    "Louisa May Alcott",
+    "Christina Rossetti",
+    "Emily Brontë"
+   ]
+  },
+  "dq_en_6_156": {
+   "q": "Tko je ovo?",
+   "o": [
+    "Dmitrij Mendeljejev",
+    "Ivan Pavlov",
+    "Alfred Nobel",
+    "Ludwig Boltzmann"
+   ]
+  },
+  "dq_en_6_157": {
+   "q": "Tko je ovo?",
+   "o": [
+    "Kublaj-kan",
+    "Atila",
+    "Džingis-kan",
+    "Timur Lenk"
+   ]
+  },
+  "dq_en_6_158": {
+   "q": "Tko je ovo?",
+   "o": [
+    "Franz Liszt",
+    "Robert Schumann",
+    "Felix Mendelssohn",
+    "Frédéric Chopin"
+   ]
+  },
+  "dq_en_6_159": {
+   "q": "Koga ovdje napadaju morske zmije?",
+   "o": [
+    "Laokoonta",
+    "Prijama",
+    "Helena",
+    "Anhiza"
+   ]
+  },
+  "dq_en_6_160": {
+   "q": "Koja se nimfa pretvara u lovor?",
+   "o": [
+    "Dafna",
+    "Siringa",
+    "Eho",
+    "Kalisto"
+   ]
+  },
+  "dq_en_6_161": {
+   "q": "Koje je carstvo izgradilo ovaj hram?",
+   "o": [
+    "Srivijaya",
+    "Carstvo Chola",
+    "Kmersko Carstvo",
+    "Carstvo Majapahit"
+   ]
+  },
+  "dq_en_6_162": {
+   "q": "Koji je narod ovo isklesao u stijeni?",
+   "o": [
+    "Feničani",
+    "Hetiti",
+    "Nabatejci",
+    "Asirci"
+   ]
+  },
+  "dq_en_6_163": {
+   "q": "Koji je faraon dao sagraditi ovaj hram?",
+   "o": [
+    "Keops",
+    "Ramzes II.",
+    "Ehnaton",
+    "Tutankamon"
+   ]
+  },
+  "dq_en_7_01": {
+   "q": "Koji je filozof napisao „Kritiku čistoga uma”?",
+   "o": [
+    "Arthur Schopenhauer",
+    "Georg Wilhelm Friedrich Hegel",
+    "Immanuel Kant",
+    "Gottfried Wilhelm Leibniz"
+   ]
+  },
+  "dq_en_7_02": {
+   "q": "Što je 1648. godine okončalo Tridesetogodišnji rat?",
+   "o": [
+    "Utrechtski mir",
+    "Vestfalski mir",
+    "Augsburški mir",
+    "Bečki kongres"
+   ]
+  },
+  "dq_en_7_03": {
+   "q": "Tko je naslikao „Vrt zemaljskih užitaka”?",
+   "o": [
+    "Jan van Eyck",
+    "Albrecht Dürer",
+    "Pieter Bruegel Stariji",
+    "Hieronymus Bosch"
+   ]
+  },
+  "dq_en_7_04": {
+   "q": "Koji je bog u hinduizmu poznat kao održavatelj svijeta?",
+   "o": [
+    "Indra",
+    "Šiva",
+    "Brahma",
+    "Višnu"
+   ]
+  },
+  "dq_en_7_05": {
+   "q": "Radnja „Uliksa” Jamesa Joycea odvija se tijekom jednog dana u Dublinu."
+  },
+  "dq_en_7_06": {
+   "q": "Marie Curie dobila je Nobelovu nagradu i za fiziku i za medicinu."
+  },
+  "dq_en_7_07": {
+   "q": "Tko je ovo?",
+   "o": [
+    "Jean-Jacques Rousseau",
+    "Voltaire",
+    "Denis Diderot",
+    "Montesquieu"
+   ]
+  },
+  "dq_en_7_08": {
+   "q": "Tko je ovo?",
+   "o": [
+    "Ada Lovelace",
+    "Jane Austen",
+    "Mary Shelley",
+    "Charlotte Brontë"
+   ]
+  },
+  "dq_en_7_09": {
+   "q": "Koje je godine propalo Zapadno Rimsko Carstvo?"
+  },
+  "dq_en_7_10": {
+   "q": "Koje je godine Dmitrij Mendeljejev objavio svoj periodni sustav?"
+  },
+  "dq_en_7_11": {
+   "q": "„Las Meninas” naslikao je Francisco Goya."
+  },
+  "dq_en_7_12": {
+   "q": "Tko je napisao „U potrazi za izgubljenim vremenom”?",
+   "o": [
+    "Stendhal",
+    "André Gide",
+    "Albert Camus",
+    "Marcel Proust"
+   ]
+  },
+  "dq_en_7_13": {
+   "q": "Koji je bog u astečkoj mitologiji poznat kao „Pernata zmija”?",
+   "o": [
+    "Tezcatlipoca",
+    "Tlaloc",
+    "Quetzalcoatl",
+    "Huitzilopochtli"
+   ]
+  },
+  "dq_en_7_14": {
+   "q": "Koji je filozof napisao „Tako je govorio Zaratustra”?",
+   "o": [
+    "Martin Heidegger",
+    "Søren Kierkegaard",
+    "Friedrich Nietzsche",
+    "Arthur Schopenhauer"
+   ]
+  },
+  "dq_en_7_15": {
+   "q": "John Maynard Keynes tvrdio je da država nikad ne smije intervenirati u gospodarstvo."
+  },
+  "dq_en_7_16": {
+   "q": "Čija je ovo zastava?",
+   "o": [
+    "Kenija",
+    "Tanzanija",
+    "Uganda",
+    "Etiopija"
+   ]
+  },
+  "dq_en_7_17": {
+   "q": "Čija je ovo zastava?",
+   "o": [
+    "Filipini",
+    "Kuba",
+    "Češka",
+    "Čile"
+   ]
+  },
+  "dq_en_7_18": {
+   "q": "Čija je ovo zastava?",
+   "o": [
+    "Island",
+    "Finska",
+    "Grčka",
+    "Švedska"
+   ]
+  },
+  "dq_en_7_19": {
+   "q": "Čija je ovo zastava?",
+   "o": [
+    "Nizozemska",
+    "Tajland",
+    "Kostarika",
+    "Kambodža"
+   ]
+  },
+  "dq_en_7_20": {
+   "q": "Čija je ovo zastava?",
+   "o": [
+    "Butan",
+    "Nepal",
+    "Mongolija",
+    "Šri Lanka"
+   ]
+  },
+  "dq_en_7_21": {
+   "q": "Ulan Bator je glavni grad koje zemlje?",
+   "o": [
+    "Mongolija",
+    "Kazahstan",
+    "Nepal",
+    "Kirgistan"
+   ]
+  },
+  "dq_en_7_22": {
+   "q": "Koji je glavni grad Urugvaja?",
+   "o": [
+    "Montevideo",
+    "Punta del Este",
+    "Salto",
+    "Colonia del Sacramento"
+   ]
+  },
+  "dq_en_7_23": {
+   "q": "Tbilisi je glavni grad koje zemlje?",
+   "o": [
+    "Armenija",
+    "Gruzija",
+    "Moldavija",
+    "Azerbajdžan"
+   ]
+  },
+  "dq_en_7_24": {
+   "q": "Taškent je glavni grad koje zemlje?",
+   "o": [
+    "Uzbekistan",
+    "Kazahstan",
+    "Tadžikistan",
+    "Turkmenistan"
+   ]
+  },
+  "dq_en_7_25": {
+   "q": "Koji je glavni grad Ekvadora?",
+   "o": [
+    "Lima",
+    "Cuenca",
+    "Guayaquil",
+    "Quito"
+   ]
+  },
+  "dq_en_7_26": {
+   "q": "Koja zemlja ima više stanovnika?",
+   "o": [
+    "DR Kongo",
+    "Francuska"
+   ]
+  },
+  "dq_en_7_27": {
+   "q": "Koja zemlja ima više stanovnika?",
+   "o": [
+    "Tanzanija",
+    "Australija"
+   ]
+  },
+  "dq_en_7_28": {
+   "q": "Koja zemlja ima više stanovnika?",
+   "o": [
+    "Kenija",
+    "Kanada"
+   ]
+  },
+  "dq_en_7_29": {
+   "q": "Koja je zemlja veća po površini?",
+   "o": [
+    "Egipat",
+    "Libija"
+   ]
+  },
+  "dq_en_7_30": {
+   "q": "Koja je zemlja veća po površini?",
+   "o": [
+    "Njemačka",
+    "Čad"
+   ]
+  },
+  "dq_en_7_31": {
+   "q": "Koja je zemlja veća po površini?",
+   "o": [
+    "Turska",
+    "Sudan"
+   ]
+  },
+  "dq_en_7_32": {
+   "q": "Koja zemlja ima veće gospodarstvo (BDP)?",
+   "o": [
+    "Nizozemska",
+    "Nigerija"
+   ]
+  },
+  "dq_en_7_33": {
+   "q": "Koja zemlja ima veće gospodarstvo (BDP)?",
+   "o": [
+    "Švicarska",
+    "Egipat"
+   ]
+  },
+  "dq_en_7_34": {
+   "q": "Koja zemlja ima veće gospodarstvo (BDP)?",
+   "o": [
+    "Belgija",
+    "Etiopija"
+   ]
+  },
+  "dq_en_7_35": {
+   "q": "Koja je rijeka duža?",
+   "o": [
+    "Kongo",
+    "Zambezi"
+   ]
+  },
+  "dq_en_7_36": {
+   "q": "Koja je pustinja veća?",
+   "o": [
+    "Kalahari",
+    "Arapska pustinja"
+   ]
+  },
+  "dq_en_7_37": {
+   "q": "Koje jezero ima veću površinu?",
+   "o": [
+    "Tanganjika",
+    "Viktorijino jezero"
+   ]
+  },
+  "dq_en_7_38": {
+   "q": "Koji je otok veći?",
+   "o": [
+    "Nova Gvineja",
+    "Honšu"
+   ]
+  },
+  "dq_en_7_39": {
+   "q": "U kojoj su se bitki oko 1274. pr. Kr. sukobili Ramzes II. i Hetiti?",
+   "o": [
+    "Kod Megida",
+    "Kod Pelusija",
+    "Kod Kadeša",
+    "Kod Karkemiša"
+   ]
+  },
+  "dq_en_7_40": {
+   "q": "Koji je kineski građanski rat 1850.-1864. predvodio čovjek koji je tvrdio da je Isusov brat?",
+   "o": [
+    "Taipinški ustanak",
+    "Bokserski ustanak",
+    "Ustanak Nian",
+    "Ustanak Bijelog lotosa"
+   ]
+  },
+  "dq_en_7_41": {
+   "q": "Koja je dinastija od 1501. vladala Perzijom i šijitski islam proglasila državnom vjerom?",
+   "o": [
+    "Timuridska",
+    "Safavidska",
+    "Kadžarska",
+    "Seldžučka"
+   ]
+  },
+  "dq_en_7_42": {
+   "q": "Koji su vladari Egipta 1260. kod Ain Džaluta zaustavili prodor Mongola?",
+   "o": [
+    "Ajubidi",
+    "Seldžuci",
+    "Mameluci",
+    "Fatimidi"
+   ]
+  },
+  "dq_en_7_43": {
+   "q": "Koji je papa 1095. pozvao na Prvi križarski rat?",
+   "o": [
+    "Grgur VII.",
+    "Inocent III.",
+    "Lav X.",
+    "Urban II."
+   ]
+  },
+  "dq_en_7_44": {
+   "q": "Koji je svećenik 1810. pokrenuo meksički rat za neovisnost?",
+   "o": [
+    "José María Morelos",
+    "Benito Juárez",
+    "Agustín de Iturbide",
+    "Miguel Hidalgo"
+   ]
+  },
+  "dq_en_7_45": {
+   "q": "Koje je drevno kraljevstvo južno od Egipta imalo prijestolnicu u Meroi?",
+   "o": [
+    "Punt",
+    "Kuš",
+    "Aksum",
+    "Gana"
+   ]
+  },
+  "dq_en_7_46": {
+   "q": "Koji je rimski car uveo tetrarhiju, vladavinu četvorice careva?",
+   "o": [
+    "Aurelijan",
+    "Septimije Sever",
+    "Dioklecijan",
+    "Konstantin I."
+   ]
+  },
+  "dq_en_7_47": {
+   "q": "Koji je korejski kralj u 15. stoljeću dao stvoriti pismo hangul?",
+   "o": [
+    "Gojong",
+    "Taejo",
+    "Yeongjo",
+    "Sejong Veliki"
+   ]
+  },
+  "dq_en_7_48": {
+   "q": "U kojoj je bitki 331. pr. Kr. Aleksandar Veliki odlučno porazio Darija III.?",
+   "o": [
+    "Kod Isa",
+    "Kod Gaugamele",
+    "Kod Hidaspa",
+    "Kod Granika"
+   ]
+  },
+  "dq_en_7_49": {
+   "q": "Koje je carstvo zauzimalo veću površinu?",
+   "o": [
+    "Carstvo Inka",
+    "Astečko Carstvo"
+   ]
+  },
+  "dq_en_7_50": {
+   "q": "Tko je vladao prije?",
+   "o": [
+    "Hatšepsut",
+    "Ramzes II."
+   ]
+  },
+  "dq_en_7_51": {
+   "q": "Što je bilo prije?",
+   "o": [
+    "Opijumski ratovi",
+    "Bokserski ustanak"
+   ]
+  },
+  "dq_en_7_52": {
+   "q": "Što je trajalo dulje?",
+   "o": [
+    "Britanski Raj",
+    "Šogunat Tokugawa"
+   ]
+  },
+  "dq_en_7_53": {
+   "q": "Zuluski ratnici porazili su 1879. britanske snage kod Isandlwane."
+  },
+  "dq_en_7_54": {
+   "q": "Japansko razdoblje Heian nazvano je po starom imenu Kjota."
+  },
+  "dq_en_7_55": {
+   "q": "Vasco da Gama bio je prvi Europljanin koji je oplovio Rt dobre nade."
+  },
+  "dq_en_7_56": {
+   "q": "Čandragupta Maurja bio je Ašokin unuk."
+  },
+  "dq_en_7_57": {
+   "q": "Koliko je dana trajala opsada Lenjingrada u Drugom svjetskom ratu?",
+   "u": "dana"
+  },
+  "dq_en_7_58": {
+   "q": "Koje je godine u Kini osnovana dinastija Ming?"
+  },
+  "dq_en_7_59": {
+   "q": "Koje je godine Brazil ukinuo ropstvo?"
+  },
+  "dq_en_7_60": {
+   "q": "Za što je Albert Einstein dobio Nobelovu nagradu za fiziku?",
+   "o": [
+    "Fotoelektrični efekt",
+    "Opću teoriju relativnosti",
+    "Brownovo gibanje",
+    "Specijalnu teoriju relativnosti"
+   ]
+  },
+  "dq_en_7_61": {
+   "q": "Kojim se industrijskim postupkom proizvodi amonijak iz dušika i vodika?",
+   "o": [
+    "Solvayev postupak",
+    "Haber-Boschov postupak",
+    "Bessemerov postupak",
+    "Ostwaldov postupak"
+   ]
+  },
+  "dq_en_7_62": {
+   "q": "Tko je 1912. godine iznio teoriju pomicanja kontinenata?",
+   "o": [
+    "Charles Lyell",
+    "James Hutton",
+    "Harry Hess",
+    "Alfred Wegener"
+   ]
+  },
+  "dq_en_7_63": {
+   "q": "Tko je 1990-ih dokazao Fermatov posljednji teorem?",
+   "o": [
+    "John Nash",
+    "Grigorij Perelman",
+    "Andrew Wiles",
+    "Paul Erdős"
+   ]
+  },
+  "dq_en_7_64": {
+   "q": "Koji je kirurg 1860-ih uveo antiseptičku kirurgiju s karbolnom kiselinom?",
+   "o": [
+    "Joseph Lister",
+    "Ignaz Semmelweis",
+    "John Hunter",
+    "Ambroise Paré"
+   ]
+  },
+  "dq_en_7_65": {
+   "q": "Što je Sagittarius A* u središtu Mliječnog puta?",
+   "o": [
+    "Kuglasti skup",
+    "Neutronska zvijezda",
+    "Supermasivna crna rupa",
+    "Crveni superdiv"
+   ]
+  },
+  "dq_en_7_66": {
+   "q": "Tko je prvi upotrijebio riječ „stanica” u biologiji, u knjizi „Micrographia” iz 1665.?",
+   "o": [
+    "Robert Boyle",
+    "Marcello Malpighi",
+    "Antonie van Leeuwenhoek",
+    "Robert Hooke"
+   ]
+  },
+  "dq_en_7_67": {
+   "q": "Koja je riba, poznata samo iz fosila, 1938. godine pronađena živa kod Južne Afrike?",
+   "o": [
+    "Jesetra",
+    "Latimerija",
+    "Arapaima",
+    "Dvodihalica"
+   ]
+  },
+  "dq_en_7_68": {
+   "q": "Koji je programski jezik Dennis Ritchie stvorio u Bell Labsu početkom 1970-ih?",
+   "o": [
+    "Fortran",
+    "COBOL",
+    "Pascal",
+    "C"
+   ]
+  },
+  "dq_en_7_69": {
+   "q": "Koji je vitamin nužan za normalno zgrušavanje krvi?",
+   "o": [
+    "Vitamin B12",
+    "Vitamin A",
+    "Vitamin K",
+    "Vitamin E"
+   ]
+  },
+  "dq_en_7_70": {
+   "q": "Tko ima više kromosoma?",
+   "o": [
+    "Čovjek",
+    "Pas"
+   ]
+  },
+  "dq_en_7_71": {
+   "q": "Što bolje provodi struju?",
+   "o": [
+    "Srebro",
+    "Zlato"
+   ]
+  },
+  "dq_en_7_72": {
+   "q": "Što je toplije?",
+   "o": [
+    "Sunčeva korona",
+    "Površina Sunca"
+   ]
+  },
+  "dq_en_7_73": {
+   "q": "Kojeg plina ima više u zraku?",
+   "o": [
+    "Ugljikova dioksida",
+    "Argona"
+   ]
+  },
+  "dq_en_7_74": {
+   "q": "Što je dulje?",
+   "o": [
+    "Parsek",
+    "Svjetlosna godina"
+   ]
+  },
+  "dq_en_7_75": {
+   "q": "Neptun je otkriven nakon što su matematičari izračunali gdje bi trebao biti."
+  },
+  "dq_en_7_76": {
+   "q": "Elektronvolt je jedinica električnog naboja."
+  },
+  "dq_en_7_77": {
+   "q": "Zreli ljudski crveni krvni zrnci nemaju jezgru."
+  },
+  "dq_en_7_78": {
+   "q": "Deuterij je izotop helija."
+  },
+  "dq_en_7_79": {
+   "q": "Koje su godine prvi put objavljeni Newtonovi „Principia”?"
+  },
+  "dq_en_7_80": {
+   "q": "Otprilike koliko Zemljinih dana treba Merkuru da obiđe Sunce?",
+   "u": "dana"
+  },
+  "dq_en_7_81": {
+   "q": "Koje je godine u Bell Labsu izumljen tranzistor?"
+  },
+  "dq_en_7_82": {
+   "q": "Koji je egipatski romanopisac, autor „Kairske trilogije”, dobio Nobelovu nagradu 1988.?",
+   "o": [
+    "Taha Husein",
+    "Tevfik el-Hakim",
+    "Jusuf Idris",
+    "Nagib Mahfuz"
+   ]
+  },
+  "dq_en_7_83": {
+   "q": "Koji je perzijski pjesnik napisao „Šahname”, „Knjigu kraljeva”?",
+   "o": [
+    "Hafiz",
+    "Omar Hajjam",
+    "Firdusi",
+    "Rumi"
+   ]
+  },
+  "dq_en_7_84": {
+   "q": "Koji je japanski pisac, autor „Snježne zemlje”, dobio Nobelovu nagradu za književnost 1968.?",
+   "o": [
+    "Jun'ichirō Tanizaki",
+    "Kenzaburō Ōe",
+    "Yasunari Kawabata",
+    "Yukio Mishima"
+   ]
+  },
+  "dq_en_7_85": {
+   "q": "Na kojem je jeziku rimski car Marko Aurelije napisao svoja „Razmišljanja”?",
+   "o": [
+    "Na grčkom",
+    "Na aramejskom",
+    "Na latinskom",
+    "Na etruščanskom"
+   ]
+  },
+  "dq_en_7_86": {
+   "q": "Tko je 1945. godine postao prvi Latinoamerikanac s Nobelovom nagradom za književnost?",
+   "o": [
+    "Jorge Luis Borges",
+    "Gabriela Mistral",
+    "Pablo Neruda",
+    "Miguel Ángel Asturias"
+   ]
+  },
+  "dq_en_7_87": {
+   "q": "Koji je grčki tragičar napisao trilogiju „Orestija”?",
+   "o": [
+    "Euripid",
+    "Sofoklo",
+    "Eshil",
+    "Menandar"
+   ]
+  },
+  "dq_en_7_88": {
+   "q": "Koju je ženu Petrarka opjevao u svojim sonetima?",
+   "o": [
+    "Lauru",
+    "Beatrice",
+    "Fiammettu",
+    "Francescu"
+   ]
+  },
+  "dq_en_7_89": {
+   "q": "Koji je pjesnik 1960. godine postao prvi predsjednik neovisnog Senegala?",
+   "o": [
+    "Aimé Césaire",
+    "Cheikh Anta Diop",
+    "Birago Diop",
+    "Léopold Sédar Senghor"
+   ]
+  },
+  "dq_en_7_90": {
+   "q": "U kojem gorju Roland pogiba u „Pjesmi o Rolandu”?",
+   "o": [
+    "U Pirenejima",
+    "U Apeninima",
+    "U Alpama",
+    "U Vogezima"
+   ]
+  },
+  "dq_en_7_91": {
+   "q": "Čija je drama „R.U.R.” iz 1920. uvela riječ „robot”?",
+   "o": [
+    "Milana Kundere",
+    "Václava Havla",
+    "Karela Čapeka",
+    "Jaroslava Hašeka"
+   ]
+  },
+  "dq_en_7_92": {
+   "q": "Julien Sorel je častohlepni junak kojeg Stendhalova romana?",
+   "o": [
+    "Lucien Leuwen",
+    "Armance",
+    "Parmski kartuzijanski samostan",
+    "Crveno i crno"
+   ]
+  },
+  "dq_en_7_93": {
+   "q": "U kojoj pjesmi mornar ubivši albatrosa navuče kletvu na svoj brod?",
+   "o": [
+    "Pjesan o starom mornaru",
+    "Oda zapadnom vjetru",
+    "Brodolom Hesperusa",
+    "Gospa od Shalotta"
+   ]
+  },
+  "dq_en_7_94": {
+   "q": "Za koje su kineske dinastije živjeli pjesnici Li Bai i Du Fu?",
+   "o": [
+    "Han",
+    "Tang",
+    "Song",
+    "Ming"
+   ]
+  },
+  "dq_en_7_95": {
+   "q": "Koji spjev ima više stihova?",
+   "o": [
+    "Eneida",
+    "Ilijada"
+   ]
+  },
+  "dq_en_7_96": {
+   "q": "Što je napisano prije?",
+   "o": [
+    "Priča o Genjiju",
+    "Dekameron"
+   ]
+  },
+  "dq_en_7_97": {
+   "q": "Koji je pjesnik rođen prije?",
+   "o": [
+    "Rumi",
+    "Hafiz"
+   ]
+  },
+  "dq_en_7_98": {
+   "q": "Naslov romana „Sve se raspada” potječe iz pjesme W. B. Yeatsa."
+  },
+  "dq_en_7_99": {
+   "q": "Lav Tolstoj dobio je Nobelovu nagradu za književnost."
+  },
+  "dq_en_7_100": {
+   "q": "Autoru „Gospođe Bovary” sudilo se zbog nemorala, ali je oslobođen."
+  },
+  "dq_en_7_101": {
+   "q": "Bertolt Brecht poznat je kao jedan od utemeljitelja „teatra apsurda”."
+  },
+  "dq_en_7_102": {
+   "q": "Na koliko je pjevanja podijeljena Homerova „Ilijada”?",
+   "u": "pjevanja"
+  },
+  "dq_en_7_103": {
+   "q": "Koje je godine objavljen Voltaireov „Candide”?"
+  },
+  "dq_en_7_104": {
+   "q": "Koji je barokni kipar isklesao „Zanos svete Terezije”?",
+   "o": [
+    "Antonio Canova",
+    "Francesco Borromini",
+    "Gian Lorenzo Bernini",
+    "Alessandro Algardi"
+   ]
+  },
+  "dq_en_7_105": {
+   "q": "Koji je arhitekt poznat po geslu „Manje je više”?",
+   "o": [
+    "Ludwig Mies van der Rohe",
+    "Walter Gropius",
+    "Frank Lloyd Wright",
+    "Le Corbusier"
+   ]
+  },
+  "dq_en_7_106": {
+   "q": "Tko je režirao nijemi film „Oklopnjača Potemkin” (1925.)?",
+   "o": [
+    "Vsevolod Pudovkin",
+    "Sergej Ejzenštejn",
+    "Andrej Tarkovski",
+    "Dziga Vertov"
+   ]
+  },
+  "dq_en_7_107": {
+   "q": "Beninske bronce nastale su u kraljevstvu na području koje današnje države?",
+   "o": [
+    "Mali",
+    "Nigerija",
+    "Gana",
+    "Kamerun"
+   ]
+  },
+  "dq_en_7_108": {
+   "q": "Velika džamija kojeg je grada slavna po šumi crveno-bijelih prugastih lukova?",
+   "o": [
+    "Córdoba",
+    "Granada",
+    "Kairo",
+    "Marakeš"
+   ]
+  },
+  "dq_en_7_109": {
+   "q": "Koji je klasični indijski ples nastao u Tamil Naduu?",
+   "o": [
+    "Kathakali",
+    "Odissi",
+    "Bharatanatyam",
+    "Kathak"
+   ]
+  },
+  "dq_en_7_110": {
+   "q": "Tko je oko 1818. naslikao „Putnika iznad mora magle”?",
+   "o": [
+    "Caspar David Friedrich",
+    "J. M. W. Turner",
+    "John Constable",
+    "Eugène Delacroix"
+   ]
+  },
+  "dq_en_7_111": {
+   "q": "Koji je skladatelj napisao „Fantastičnu simfoniju” (1830.)?",
+   "o": [
+    "Camille Saint-Saëns",
+    "César Franck",
+    "Franz Liszt",
+    "Hector Berlioz"
+   ]
+  },
+  "dq_en_7_112": {
+   "q": "Koji se fotograf povezuje s idejom „odlučujućeg trenutka”?",
+   "o": [
+    "Henri Cartier-Bresson",
+    "Man Ray",
+    "Brassaï",
+    "Robert Doisneau"
+   ]
+  },
+  "dq_en_7_113": {
+   "q": "Koji je njemački umjetnik 1514. izradio bakrorez „Melankolija I”?",
+   "o": [
+    "Lucas Cranach Stariji",
+    "Albrecht Dürer",
+    "Matthias Grünewald",
+    "Hans Holbein Mlađi"
+   ]
+  },
+  "dq_en_7_114": {
+   "q": "Koji je skladatelj rođen prije?",
+   "o": [
+    "Claudio Monteverdi",
+    "Antonio Vivaldi"
+   ]
+  },
+  "dq_en_7_115": {
+   "q": "Pariška praizvedba baleta „Posvećenje proljeća” 1913. izazvala je metež u publici."
+  },
+  "dq_en_7_116": {
+   "q": "Johannes Vermeer ostavio je više od 300 slika."
+  },
+  "dq_en_7_117": {
+   "q": "Arhitekt Le Corbusier rođen je u Švicarskoj."
+  },
+  "dq_en_7_118": {
+   "q": "Tizian je bio vodeći slikar firentinske škole."
+  },
+  "dq_en_7_119": {
+   "q": "Koje je godine u Parizu otvorena prva izložba impresionista?"
+  },
+  "dq_en_7_120": {
+   "q": "Od koliko se platna sastoji djelo Andyja Warhola „Campbellove konzerve juhe” iz 1962.?",
+   "u": "platna"
+  },
+  "dq_en_7_121": {
+   "q": "Koji je lovac u grčkoj mitologiji pretvoren u jelena i rastrgali su ga vlastiti psi?",
+   "o": [
+    "Adonis",
+    "Akteon",
+    "Meleagar",
+    "Orion"
+   ]
+  },
+  "dq_en_7_122": {
+   "q": "Koji čudovišni vrtlog u „Odiseji” leži nasuprot šesteroglavoj Scili?",
+   "o": [
+    "Ehidna",
+    "Ladon",
+    "Lamija",
+    "Haribda"
+   ]
+  },
+  "dq_en_7_123": {
+   "q": "Koja muza u grčkoj mitologiji bdije nad poviješću?",
+   "o": [
+    "Uranija",
+    "Talija",
+    "Klio",
+    "Kaliopa"
+   ]
+  },
+  "dq_en_7_124": {
+   "q": "Kako se u nordijskoj mitologiji zovu Odinova dva gavrana?",
+   "o": [
+    "Geri i Freki",
+    "Sköll i Hati",
+    "Hugi i Logi",
+    "Huginn i Muninn"
+   ]
+  },
+  "dq_en_7_125": {
+   "q": "Od tijela kojeg je diva u nordijskoj mitologiji stvoren svijet?",
+   "o": [
+    "Surtra",
+    "Ymira",
+    "Thryma",
+    "Bergelmira"
+   ]
+  },
+  "dq_en_7_126": {
+   "q": "Koje je čudovište u egipatskoj mitologiji proždiralo srca nedostojnih pokojnika?",
+   "o": [
+    "Bennu",
+    "Taweret",
+    "Ammit",
+    "Apopis"
+   ]
+  },
+  "dq_en_7_127": {
+   "q": "Koji je egipatski bog, „skriveni”, stopljen s Raom kao kralj bogova u Tebi?",
+   "o": [
+    "Ptah",
+    "Amon",
+    "Sobek",
+    "Aton"
+   ]
+  },
+  "dq_en_7_128": {
+   "q": "Koja je egipatska božica s glavom lavice povezana s ratom i kugom?",
+   "o": [
+    "Taweret",
+    "Sekhmet",
+    "Sešat",
+    "Neftis"
+   ]
+  },
+  "dq_en_7_129": {
+   "q": "Koji bog oluje u japanskoj mitologiji ubija osmeroglavu zmiju Yamata no Orochi?",
+   "o": [
+    "Izanagi",
+    "Tsukuyomi",
+    "Raijin",
+    "Susanoo"
+   ]
+  },
+  "dq_en_7_130": {
+   "q": "Koji junak irske mitologije sam brani Ulster u „Otmici goveda iz Cooleyja” (Táin Bó Cúailnge)?",
+   "o": [
+    "Oisín",
+    "Finn MacCool",
+    "Cú Chulainn",
+    "Lugh"
+   ]
+  },
+  "dq_en_7_131": {
+   "q": "Tko je u „Mahabharati” Arjunin kočijaš u velikoj bitki?",
+   "o": [
+    "Krišna",
+    "Karna",
+    "Bhima",
+    "Drona"
+   ]
+  },
+  "dq_en_7_132": {
+   "q": "Koji bog u babilonskoj mitologiji pobjeđuje morsku božicu Tiamat?",
+   "o": [
+    "Marduk",
+    "Ea",
+    "Enlil",
+    "Šamaš"
+   ]
+  },
+  "dq_en_7_133": {
+   "q": "Koja sveta knjiga Maja K'iche' pripovijeda priču o blizancima junacima?",
+   "o": [
+    "Dresdenski kodeks",
+    "Chilam Balam",
+    "Popol Vuh",
+    "Firentinski kodeks"
+   ]
+  },
+  "dq_en_7_134": {
+   "q": "Tko je u slavenskoj mitologiji bog groma?",
+   "o": [
+    "Perun",
+    "Svarog",
+    "Dažbog",
+    "Veles"
+   ]
+  },
+  "dq_en_7_135": {
+   "q": "Koji je Odisejev boravak u „Odiseji” trajao dulje?",
+   "o": [
+    "Boravak kod Kirke",
+    "Boravak kod Kalipso"
+   ]
+  },
+  "dq_en_7_136": {
+   "q": "U nordijskoj mitologiji vuk Fenrir ubija Odina u Ragnaröku."
+  },
+  "dq_en_7_137": {
+   "q": "U „Mahabharati” Kaurave pobjeđuju Pandave u ratu na Kurukšetri."
+  },
+  "dq_en_7_138": {
+   "q": "U egipatskoj mitologiji bog Sobek ima glavu nilskog konja."
+  },
+  "dq_en_7_139": {
+   "q": "Koliko je godina u „Ramajani” Rama prognan u šumu?",
+   "u": "godina"
+  },
+  "dq_en_7_140": {
+   "q": "Koji tjesnac povezuje Crno more s Mramornim morem?",
+   "o": [
+    "Otrantska vrata",
+    "Bospor",
+    "Dardaneli",
+    "Kerčki tjesnac"
+   ]
+  },
+  "dq_en_7_141": {
+   "q": "Koji tjesnac dijeli Tasmaniju od australskog kopna?",
+   "o": [
+    "Foveauxov tjesnac",
+    "Cookov tjesnac",
+    "Bassov tjesnac",
+    "Torresov tjesnac"
+   ]
+  },
+  "dq_en_7_142": {
+   "q": "Koji je filozof u „Teoriji pravednosti” uveo „veo neznanja”?",
+   "o": [
+    "Robert Nozick",
+    "John Rawls",
+    "Isaiah Berlin",
+    "Karl Popper"
+   ]
+  },
+  "dq_en_7_143": {
+   "q": "Koja je konferencija 1944. dovela do osnivanja MMF-a i Svjetske banke?",
+   "o": [
+    "Jalta",
+    "Bretton Woods",
+    "Dumbarton Oaks",
+    "Potsdam"
+   ]
+  },
+  "dq_en_7_144": {
+   "q": "Koju je filozofsku školu u Ateni osnovao Zenon iz Kitija?",
+   "o": [
+    "Kinizam",
+    "Skepticizam",
+    "Stoicizam",
+    "Epikurejstvo"
+   ]
+  },
+  "dq_en_7_145": {
+   "q": "Epikur je učio da je užitak, shvaćen kao odsutnost boli i straha, najviše dobro."
+  },
+  "dq_en_7_146": {
+   "q": "Malački tjesnac dijeli Indiju od Šri Lanke."
+  },
+  "dq_en_7_147": {
+   "q": "Koje se godine dogodila hidžra, početna točka islamskog kalendara?"
+  },
+  "dq_en_7_148": {
+   "q": "Koje je godine potpisan Rimski ugovor, kojim je osnovana Europska ekonomska zajednica?"
+  },
+  "dq_en_7_149": {
+   "q": "Kako se zove ova slika?",
+   "o": [
+    "Sat anatomije",
+    "Sindici suknarskog ceha",
+    "Ambasadori",
+    "Portret Arnolfinijevih"
+   ]
+  },
+  "dq_en_7_150": {
+   "q": "Tko je naslikao ovu sliku?",
+   "o": [
+    "Vasilij Surikov",
+    "Ivan Kramskoj",
+    "Ilja Repin",
+    "Valentin Serov"
+   ]
+  },
+  "dq_en_7_151": {
+   "q": "Tko je izradio ovu grafiku?",
+   "o": [
+    "Utagawa Kuniyoshi",
+    "Katsushika Hokusai",
+    "Utagawa Hiroshige",
+    "Kitagawa Utamaro"
+   ]
+  },
+  "dq_en_7_152": {
+   "q": "Kako se zove ova slika?",
+   "o": [
+    "Zakletva Horacija",
+    "Atenska škola",
+    "Predaja Brede",
+    "Sokratova smrt"
+   ]
+  },
+  "dq_en_7_153": {
+   "q": "Tko je naslikao ovu sliku?",
+   "o": [
+    "Ivan Šiškin",
+    "Ivan Ajvazovski",
+    "Ilja Repin",
+    "Isak Levitan"
+   ]
+  },
+  "dq_en_7_154": {
+   "q": "Tko je ovo?",
+   "o": [
+    "Samuel Taylor Coleridge",
+    "Heinrich Heine",
+    "Johann Wolfgang von Goethe",
+    "Friedrich Schiller"
+   ]
+  },
+  "dq_en_7_155": {
+   "q": "Tko je ovo?",
+   "o": [
+    "Aleksandar Puškin",
+    "Percy Bysshe Shelley",
+    "Mihail Ljermontov",
+    "Lord Byron"
+   ]
+  },
+  "dq_en_7_156": {
+   "q": "Tko je ovo?",
+   "o": [
+    "Werner Heisenberg",
+    "Niels Bohr",
+    "Erwin Schrödinger",
+    "Enrico Fermi"
+   ]
+  },
+  "dq_en_7_157": {
+   "q": "Tko je ovo?",
+   "o": [
+    "Michael Faraday",
+    "James Clerk Maxwell",
+    "Humphry Davy",
+    "John Dalton"
+   ]
+  },
+  "dq_en_7_158": {
+   "q": "Tko je ovo?",
+   "o": [
+    "José de San Martín",
+    "Francisco de Miranda",
+    "Simón Bolívar",
+    "Antonio José de Sucre"
+   ]
+  },
+  "dq_en_7_159": {
+   "q": "Koja je hinduistička božica ovdje prikazana?",
+   "o": [
+    "Sarasvati",
+    "Parvati",
+    "Lakšmi",
+    "Durga"
+   ]
+  },
+  "dq_en_7_160": {
+   "q": "Koji je astečki bog ovdje prikazan?",
+   "o": [
+    "Tlaloc",
+    "Tezcatlipoca",
+    "Huitzilopochtli",
+    "Quetzalcoatl"
+   ]
+  },
+  "dq_en_7_161": {
+   "q": "Kako se zove ova palača-utvrda?",
+   "o": [
+    "Alcázar u Sevilli",
+    "Aljafería",
+    "Alhambra",
+    "Alcázar u Segoviji"
+   ]
+  },
+  "dq_en_7_162": {
+   "q": "U kojem je gradu ova palača?",
+   "o": [
+    "Katmandu",
+    "Lhasa",
+    "Ulan Bator",
+    "Thimphu"
+   ]
+  },
+  "dq_en_7_163": {
+   "q": "Kako se zove ovaj japanski dvorac?",
+   "o": [
+    "Dvorac Nagoya",
+    "Dvorac Osaka",
+    "Dvorac Himeji",
+    "Dvorac Matsumoto"
+   ]
+  },
+  "dq_en_8_01": {
+   "q": "Koji je bizantski car dao sagraditi Aju Sofiju, dovršenu 537. godine?",
+   "o": [
+    "Justinijan I.",
+    "Bazilije II.",
+    "Konstantin I.",
+    "Heraklije"
+   ]
+  },
+  "dq_en_8_02": {
+   "q": "Tko je napisao „Priču o Genjiju”, često nazivanu prvim romanom na svijetu?",
+   "o": [
+    "Gospa Sarashina",
+    "Murasaki Shikibu",
+    "Matsuo Bashō",
+    "Sei Shōnagon"
+   ]
+  },
+  "dq_en_8_03": {
+   "q": "Koji je logičar 1931. dokazao teoreme o nepotpunosti?",
+   "o": [
+    "Alan Turing",
+    "Kurt Gödel",
+    "Bertrand Russell",
+    "David Hilbert"
+   ]
+  },
+  "dq_en_8_04": {
+   "q": "Koji je talijanski slikar oko 1600. naslikao „Poziv svetog Mateja”?",
+   "o": [
+    "Caravaggio",
+    "Tintoretto",
+    "Rafael",
+    "Tizian"
+   ]
+  },
+  "dq_en_8_05": {
+   "q": "Filozof Baruch Spinoza rođen je u Amsterdamu."
+  },
+  "dq_en_8_06": {
+   "q": "Peloponeski rat završio je pobjedom Atene nad Spartom."
+  },
+  "dq_en_8_07": {
+   "q": "Tko je ovo?",
+   "o": [
+    "Baruch Spinoza",
+    "Blaise Pascal",
+    "René Descartes",
+    "Kardinal Richelieu"
+   ]
+  },
+  "dq_en_8_08": {
+   "q": "Tko je ovo?",
+   "o": [
+    "Erazmo Roterdamski",
+    "Martin Luther",
+    "Toma Morus",
+    "Jean Calvin"
+   ]
+  },
+  "dq_en_8_09": {
+   "q": "Koje je godine održan Prvi nicejski sabor?"
+  },
+  "dq_en_8_10": {
+   "q": "Koje je godine Kopernik objavio djelo „De revolutionibus orbium coelestium”?"
+  },
+  "dq_en_8_11": {
+   "q": "Koji je japanski umjetnik izradio grafiku „Veliki val kod Kanagawe”?",
+   "o": [
+    "Tawaraya Sōtatsu",
+    "Utagawa Hiroshige",
+    "Katsushika Hokusai",
+    "Kitagawa Utamaro"
+   ]
+  },
+  "dq_en_8_12": {
+   "q": "Fjodor Dostojevski napisao je „Očeve i djecu”."
+  },
+  "dq_en_8_13": {
+   "q": "Koja je titanida u grčkoj mitologiji božica pamćenja i majka Muza?",
+   "o": [
+    "Temida",
+    "Tetija",
+    "Reja",
+    "Mnemozina"
+   ]
+  },
+  "dq_en_8_14": {
+   "q": "Bhagavadgita je dio Ramajane."
+  },
+  "dq_en_8_15": {
+   "q": "Koji je filozof napisao „Bitak i vrijeme” (1927.)?",
+   "o": [
+    "Ludwig Wittgenstein",
+    "Martin Heidegger",
+    "Jean-Paul Sartre",
+    "Edmund Husserl"
+   ]
+  },
+  "dq_en_8_16": {
+   "q": "Čija je ovo zastava?",
+   "o": [
+    "Nepal",
+    "Šri Lanka",
+    "Butan",
+    "Brunej"
+   ]
+  },
+  "dq_en_8_17": {
+   "q": "Čija je ovo zastava?",
+   "o": [
+    "Kazahstan",
+    "Palau",
+    "Uzbekistan",
+    "Kirgistan"
+   ]
+  },
+  "dq_en_8_18": {
+   "q": "Čija je ovo zastava?",
+   "o": [
+    "Grčka",
+    "Argentina",
+    "Salvador",
+    "Urugvaj"
+   ]
+  },
+  "dq_en_8_19": {
+   "q": "Čija je ovo zastava?",
+   "o": [
+    "Angola",
+    "Zambija",
+    "Mozambik",
+    "Zimbabve"
+   ]
+  },
+  "dq_en_8_20": {
+   "q": "Čija je ovo zastava?",
+   "o": [
+    "Litva",
+    "Estonija",
+    "Latvija",
+    "Bocvana"
+   ]
+  },
+  "dq_en_8_21": {
+   "q": "Thimphu je glavni grad koje zemlje?",
+   "o": [
+    "Brunej",
+    "Nepal",
+    "Laos",
+    "Butan"
+   ]
+  },
+  "dq_en_8_22": {
+   "q": "Ouagadougou je glavni grad koje zemlje?",
+   "o": [
+    "Mali",
+    "Benin",
+    "Niger",
+    "Burkina Faso"
+   ]
+  },
+  "dq_en_8_23": {
+   "q": "Paramaribo je glavni grad koje zemlje?",
+   "o": [
+    "Gvajana",
+    "Surinam",
+    "Paragvaj",
+    "Belize"
+   ]
+  },
+  "dq_en_8_24": {
+   "q": "Vaduz je glavni grad koje zemlje?",
+   "o": [
+    "Luksemburg",
+    "Monako",
+    "Andora",
+    "Lihtenštajn"
+   ]
+  },
+  "dq_en_8_25": {
+   "q": "Antananarivo je glavni grad koje zemlje?",
+   "o": [
+    "Mozambik",
+    "Madagaskar",
+    "Malavi",
+    "Mauricijus"
+   ]
+  },
+  "dq_en_8_26": {
+   "q": "Koja zemlja ima više stanovnika?",
+   "o": [
+    "Uzbekistan",
+    "Nizozemska"
+   ]
+  },
+  "dq_en_8_27": {
+   "q": "Koja je zemlja veća po površini?",
+   "o": [
+    "Madagaskar",
+    "Ujedinjeno Kraljevstvo"
+   ]
+  },
+  "dq_en_8_28": {
+   "q": "Koja zemlja ima veće gospodarstvo (BDP)?",
+   "o": [
+    "Kenija",
+    "Singapur"
+   ]
+  },
+  "dq_en_8_29": {
+   "q": "Koji je grad sjevernije?",
+   "o": [
+    "Moskva",
+    "Oslo"
+   ]
+  },
+  "dq_en_8_30": {
+   "q": "Koji je grad južnije?",
+   "o": [
+    "Buenos Aires",
+    "Johannesburg"
+   ]
+  },
+  "dq_en_8_31": {
+   "q": "Koja je bitka 1071. godine otvorila Anadoliju Turcima Seldžucima?",
+   "o": [
+    "Kosovo",
+    "Miriokefal",
+    "Jarmuk",
+    "Manzikert"
+   ]
+  },
+  "dq_en_8_32": {
+   "q": "Koji je unuk Džingis-kana 1258. godine predvodio pljačku Bagdada?",
+   "o": [
+    "Möngke",
+    "Batu",
+    "Hulagu",
+    "Kublaj"
+   ]
+  },
+  "dq_en_8_33": {
+   "q": "Koji je grad s Tenochtitlanom i Texcocom činio Astečki trojni savez?",
+   "o": [
+    "Cholula",
+    "Tlaxcala",
+    "Tlacopan",
+    "Azcapotzalco"
+   ]
+  },
+  "dq_en_8_34": {
+   "q": "Koji je car 380. godine nicejsko kršćanstvo proglasio državnom vjerom Rima?",
+   "o": [
+    "Julijan",
+    "Teodozije I.",
+    "Konstantin I.",
+    "Justinijan I."
+   ]
+  },
+  "dq_en_8_35": {
+   "q": "U kojoj je bitki 1600. godine Tokugawa Ieyasu preuzeo vlast nad Japanom?",
+   "o": [
+    "Okehazama",
+    "Dan-no-ura",
+    "Sekigahara",
+    "Nagashino"
+   ]
+  },
+  "dq_en_8_36": {
+   "q": "Koje je pomorsko carstvo sa Sumatre od 7. stoljeća nadziralo Malajski prolaz?",
+   "o": [
+    "Ayutthaya",
+    "Srivijaya",
+    "Champa",
+    "Majapahit"
+   ]
+  },
+  "dq_en_8_37": {
+   "q": "Koji je vladar Songhaja zauzeo Timbuktu krajem 1460-ih?",
+   "o": [
+    "Mansa Musa",
+    "Sonni Ali",
+    "Sundiata Keita",
+    "Askia Muhamed"
+   ]
+  },
+  "dq_en_8_38": {
+   "q": "Koja je pobuna od 755. do 763. smrtno oslabila kinesku dinastiju Tang?",
+   "o": [
+    "Pobuna An Lushana",
+    "Pobuna Crvenih obrva",
+    "Pobuna Žutih turbana",
+    "Pobuna Crvenih turbana"
+   ]
+  },
+  "dq_en_8_39": {
+   "q": "Koji je ugovor 843. godine podijelio carstvo Karla Velikog među njegova tri unuka?",
+   "o": [
+    "Ugovor iz Meerssena",
+    "Strasburške prisege",
+    "Verdunski ugovor",
+    "Ugovor iz Ribemonta"
+   ]
+  },
+  "dq_en_8_40": {
+   "q": "Koja je dinastija vladala Perzijom od 224. do arapskog osvajanja 651. godine?",
+   "o": [
+    "Seleukidi",
+    "Parti",
+    "Sasanidi",
+    "Ahemenidi"
+   ]
+  },
+  "dq_en_8_41": {
+   "q": "Koje se carstvo prostiralo na većem teritoriju?",
+   "o": [
+    "Rimsko Carstvo",
+    "Umajadski kalifat"
+   ]
+  },
+  "dq_en_8_42": {
+   "q": "Što je bilo prije?",
+   "o": [
+    "Bitka kod Lepanta",
+    "Opsada Beča 1683."
+   ]
+  },
+  "dq_en_8_43": {
+   "q": "Što je bilo prije?",
+   "o": [
+    "Restauracija Meiji",
+    "Xinhai revolucija"
+   ]
+  },
+  "dq_en_8_44": {
+   "q": "Kraljevstvo Kuš jednom je vladalo Egiptom kao njegova 25. dinastija."
+  },
+  "dq_en_8_45": {
+   "q": "U bitki na Talasu 751. godine sukobile su se abasidska i kineska tanška vojska."
+  },
+  "dq_en_8_46": {
+   "q": "Fatimidski kalifat bio je sunitska dinastija."
+  },
+  "dq_en_8_47": {
+   "q": "Nantski edikt opozvao je Luj XVI."
+  },
+  "dq_en_8_48": {
+   "q": "Koje su godine Abasidi srušili Umajadski kalifat?"
+  },
+  "dq_en_8_49": {
+   "q": "Koje je godine pala dinastija Ming, a Mandžurci zauzeli Peking?"
+  },
+  "dq_en_8_50": {
+   "q": "Koje je godine Istočnoindijska kompanija pobijedila u bitki kod Plaseja u Bengalu?"
+  },
+  "dq_en_8_51": {
+   "q": "Čiji je pokus s kapljicama ulja izmjerio naboj elektrona?",
+   "o": [
+    "Arthura Comptona",
+    "J. J. Thomsona",
+    "Ernesta Rutherforda",
+    "Roberta Millikana"
+   ]
+  },
+  "dq_en_8_52": {
+   "q": "Koji je astronom, mjereći pomrčine Jupiterova mjeseca Ija, prvi pokazao da je brzina svjetlosti konačna?",
+   "o": [
+    "James Bradley",
+    "Christiaan Huygens",
+    "Ole Rømer",
+    "Edmond Halley"
+   ]
+  },
+  "dq_en_8_53": {
+   "q": "Chandrasekharova granica je najveća masa koje vrste zvijezde?",
+   "o": [
+    "Bijelog patuljka",
+    "Neutronske zvijezde",
+    "Smeđeg patuljka",
+    "Crvenog diva"
+   ]
+  },
+  "dq_en_8_54": {
+   "q": "Koji je kemičar 1828. godine prvi dobio ureu iz anorganskih spojeva?",
+   "o": [
+    "Justus von Liebig",
+    "Robert Bunsen",
+    "Friedrich Wöhler",
+    "August Kekulé"
+   ]
+  },
+  "dq_en_8_55": {
+   "q": "Kako se zove granica između Zemljine kore i plašta?",
+   "o": [
+    "Conradov diskontinuitet",
+    "Gutenbergov diskontinuitet",
+    "Mohorovičićev diskontinuitet",
+    "Lehmannov diskontinuitet"
+   ]
+  },
+  "dq_en_8_56": {
+   "q": "Koji enzim prepisuje DNK u glasničku RNK?",
+   "o": [
+    "Reverzna transkriptaza",
+    "DNK-ligaza",
+    "DNK-polimeraza",
+    "RNK-polimeraza"
+   ]
+  },
+  "dq_en_8_57": {
+   "q": "Koja se hipoteza iz 1859. odnosi na nultočke funkcije zeta?",
+   "o": [
+    "Poincaréova slutnja",
+    "Goldbachova slutnja",
+    "Riemannova hipoteza",
+    "Hodgeova slutnja"
+   ]
+  },
+  "dq_en_8_58": {
+   "q": "Tko je radom o komunikaciji iz 1948. utemeljio teoriju informacija?",
+   "o": [
+    "John von Neumann",
+    "Alan Turing",
+    "Claude Shannon",
+    "Norbert Wiener"
+   ]
+  },
+  "dq_en_8_59": {
+   "q": "Koji je perzijski učenjak u 11. stoljeću napisao „Kanon medicine”?",
+   "o": [
+    "Majmonid",
+    "Averoes (Ibn Rušd)",
+    "Razes (al-Razi)",
+    "Avicena (Ibn Sina)"
+   ]
+  },
+  "dq_en_8_60": {
+   "q": "Koja moždana struktura prenosi većinu osjetnih signala u moždanu koru?",
+   "o": [
+    "Hipotalamus",
+    "Amigdala",
+    "Hipokampus",
+    "Talamus"
+   ]
+  },
+  "dq_en_8_61": {
+   "q": "Što ima dulje vrijeme poluraspada?",
+   "o": [
+    "Uran-238",
+    "Uran-235"
+   ]
+  },
+  "dq_en_8_62": {
+   "q": "Čega u genetskom kodu ima više?",
+   "o": [
+    "Aminokiselina",
+    "Kodona"
+   ]
+  },
+  "dq_en_8_63": {
+   "q": "Kojih živaca ljudsko tijelo ima više pari?",
+   "o": [
+    "Moždinskih živaca",
+    "Moždanih živaca"
+   ]
+  },
+  "dq_en_8_64": {
+   "q": "Koje je gorje starije?",
+   "o": [
+    "Himalaja",
+    "Apalačko gorje"
+   ]
+  },
+  "dq_en_8_65": {
+   "q": "Dijamant je najstabilniji oblik ugljika pri sobnoj temperaturi i tlaku."
+  },
+  "dq_en_8_66": {
+   "q": "Eulerov identitet kaže da je e na potenciju i puta pi, plus jedan, jednako nuli."
+  },
+  "dq_en_8_67": {
+   "q": "Rosalind Franklin podijelila je Nobelovu nagradu 1962. s Watsonom i Crickom."
+  },
+  "dq_en_8_68": {
+   "q": "Proton se sastoji od dva u-kvarka i jednog d-kvarka."
+  },
+  "dq_en_8_69": {
+   "q": "Otprilike koliko godina iznosi vrijeme poluraspada ugljika-14?",
+   "u": "godina"
+  },
+  "dq_en_8_70": {
+   "q": "Koliko znakova definira standardni 7-bitni kod ASCII?",
+   "u": "znakova"
+  },
+  "dq_en_8_71": {
+   "q": "Koji je klasični sanskrtski pjesnik napisao dramu „Šakuntala”?",
+   "o": [
+    "Vjasa",
+    "Valmiki",
+    "Tulsidas",
+    "Kalidasa"
+   ]
+  },
+  "dq_en_8_72": {
+   "q": "Koji je kineski pisac napisao „Pravu priču o A Q-u”?",
+   "o": [
+    "Ba Jin",
+    "Mao Dun",
+    "Lu Xun",
+    "Lao She"
+   ]
+  },
+  "dq_en_8_73": {
+   "q": "Tko se smatra autorom kineskog romana „San o crvenom paviljonu”?",
+   "o": [
+    "Shi Nai'an",
+    "Wu Cheng'en",
+    "Cao Xueqin",
+    "Luo Guanzhong"
+   ]
+  },
+  "dq_en_8_74": {
+   "q": "„Đulistan” („Ružičnjak”) djelo je kojeg perzijskog pjesnika?",
+   "o": [
+    "Sadija",
+    "Rumija",
+    "Hafiza",
+    "Atara"
+   ]
+  },
+  "dq_en_8_75": {
+   "q": "Koji je japanski romanopisac napisao „Kokoro” i „Ja sam mačak”?",
+   "o": [
+    "Natsume Sōseki",
+    "Mori Ōgai",
+    "Osamu Dazai",
+    "Ryūnosuke Akutagawa"
+   ]
+  },
+  "dq_en_8_76": {
+   "q": "Koji je nikaragvanski pjesnik zbirkom „Azul...” (1888.) pokrenuo španjolski modernizam?",
+   "o": [
+    "César Vallejo",
+    "Rubén Darío",
+    "José Martí",
+    "Amado Nervo"
+   ]
+  },
+  "dq_en_8_77": {
+   "q": "Tko je napisao ruski roman „Junak našeg doba” (1840.)?",
+   "o": [
+    "Ivan Turgenjev",
+    "Ivan Gončarov",
+    "Mihail Ljermontov",
+    "Nikolaj Leskov"
+   ]
+  },
+  "dq_en_8_78": {
+   "q": "Koji je pjesnik napisao „Devinske elegije” i „Sonete Orfeju”?",
+   "o": [
+    "Stefan George",
+    "Georg Trakl",
+    "Paul Celan",
+    "Rainer Maria Rilke"
+   ]
+  },
+  "dq_en_8_79": {
+   "q": "Na kojem je jeziku napisan klasični indijski tekst „Tirukural”?",
+   "o": [
+    "Na tamilskom",
+    "Na sanskrtu",
+    "Na paliju",
+    "Na teluškom"
+   ]
+  },
+  "dq_en_8_80": {
+   "q": "Zapadnoafrički ep o Sundiati pripovijeda o osnutku kojeg carstva?",
+   "o": [
+    "Malijskog Carstva",
+    "Kraljevstva Benin",
+    "Carstva Gane",
+    "Carstva Songhaj"
+   ]
+  },
+  "dq_en_8_81": {
+   "q": "Koja je dvorska dama iz razdoblja Heian napisala „Knjigu uz uzglavlje”?",
+   "o": [
+    "Sei Shōnagon",
+    "Murasaki Shikibu",
+    "Izumi Shikibu",
+    "Ono no Komachi"
+   ]
+  },
+  "dq_en_8_82": {
+   "q": "Koji je dramatičar španjolskog zlatnog vijeka napisao „Život je san”?",
+   "o": [
+    "Pedro Calderón de la Barca",
+    "Miguel de Cervantes",
+    "Lope de Vega",
+    "Tirso de Molina"
+   ]
+  },
+  "dq_en_8_83": {
+   "q": "Koji je elizabetinski pjesnik napisao alegorijski ep „Vilinska kraljica”?",
+   "o": [
+    "Philip Sidney",
+    "John Donne",
+    "Christopher Marlowe",
+    "Edmund Spenser"
+   ]
+  },
+  "dq_en_8_84": {
+   "q": "Što je dovršeno prije?",
+   "o": [
+    "Šahname",
+    "Bijesni Orlando"
+   ]
+  },
+  "dq_en_8_85": {
+   "q": "Što je objavljeno prije?",
+   "o": [
+    "San o crvenom paviljonu",
+    "Putovanje na Zapad"
+   ]
+  },
+  "dq_en_8_86": {
+   "q": "August je rimskog pjesnika Ovidija prognao u grad na obali Crnog mora."
+  },
+  "dq_en_8_87": {
+   "q": "Portugalski pjesnik Fernando Pessoa pisao je pod izmišljenim identitetima zvanima heteronimi."
+  },
+  "dq_en_8_88": {
+   "q": "Kafkin roman „Proces” objavljen je za njegova života."
+  },
+  "dq_en_8_89": {
+   "q": "Ep „Izgubljeni raj” napisan je u rimovanim dvostihovima."
+  },
+  "dq_en_8_90": {
+   "q": "Koliko je Sofoklovih drama sačuvano u cijelosti?",
+   "u": "drama"
+  },
+  "dq_en_8_91": {
+   "q": "Koliko romana čini Zolin ciklus „Rougon-Macquartovi”?",
+   "u": "romana"
+  },
+  "dq_en_8_92": {
+   "q": "Tko je izradio brončana „Rajska vrata” firentinske krstionice?",
+   "o": [
+    "Andrea del Verrocchio",
+    "Luca della Robbia",
+    "Donatello",
+    "Lorenzo Ghiberti"
+   ]
+  },
+  "dq_en_8_93": {
+   "q": "Koji je grčki kipar stvorio „Diskobola” (bacača diska)?",
+   "o": [
+    "Fidija",
+    "Praksitel",
+    "Miron",
+    "Poliklet"
+   ]
+  },
+  "dq_en_8_94": {
+   "q": "Koji je arhitekt napisao „Četiri knjige o arhitekturi” (1570.)?",
+   "o": [
+    "Sebastiano Serlio",
+    "Giacomo da Vignola",
+    "Leon Battista Alberti",
+    "Andrea Palladio"
+   ]
+  },
+  "dq_en_8_95": {
+   "q": "Koji je osmanski arhitekt projektirao Sulejmanijinu džamiju u Istanbulu?",
+   "o": [
+    "Mimar Kemaleddin",
+    "Sedefkâr Mehmed-aga",
+    "Mimar Sinan",
+    "Antemije iz Trala"
+   ]
+  },
+  "dq_en_8_96": {
+   "q": "Koji je umjetnik izradio seriju grafika „Sto slavnih pogleda na Edo”?",
+   "o": [
+    "Utagawa Hiroshige",
+    "Tōshūsai Sharaku",
+    "Kitagawa Utamaro",
+    "Katsushika Hokusai"
+   ]
+  },
+  "dq_en_8_97": {
+   "q": "Kinesko pejzažno slikarstvo zove se „shan shui”. Što to znači?",
+   "o": [
+    "Tuš i kist",
+    "Planina i voda",
+    "Nebo i zemlja",
+    "Magla i oblak"
+   ]
+  },
+  "dq_en_8_98": {
+   "q": "Koji je slikar oko 1305. oslikao freskama kapelu Scrovegni (Arena) u Padovi?",
+   "o": [
+    "Simone Martini",
+    "Cimabue",
+    "Duccio",
+    "Giotto"
+   ]
+  },
+  "dq_en_8_99": {
+   "q": "Tko je skladao operu „Wozzeck” (1925.)?",
+   "o": [
+    "Alban Berg",
+    "Paul Hindemith",
+    "Anton Webern",
+    "Arnold Schönberg"
+   ]
+  },
+  "dq_en_8_100": {
+   "q": "Koji je koreograf postavio „Trnoružicu” i „Bajaderu”?",
+   "o": [
+    "Mihail Fokin",
+    "August Bournonville",
+    "Marius Petipa",
+    "Jules Perrot"
+   ]
+  },
+  "dq_en_8_101": {
+   "q": "Tko je 1936. snimio fotografiju poznatu kao „Majka migrantica”?",
+   "o": [
+    "Walker Evans",
+    "Dorothea Lange",
+    "Berenice Abbott",
+    "Margaret Bourke-White"
+   ]
+  },
+  "dq_en_8_102": {
+   "q": "Što je starije?",
+   "o": [
+    "Angkor Wat",
+    "Borobudur"
+   ]
+  },
+  "dq_en_8_103": {
+   "q": "Bernini je projektirao kupolu bazilike sv. Petra."
+  },
+  "dq_en_8_104": {
+   "q": "Schubertova „Nedovršena” simfonija njegova je Simfonija br. 5."
+  },
+  "dq_en_8_105": {
+   "q": "Japanski izraz „ukiyo-e” znači „slike plutajućeg svijeta”."
+  },
+  "dq_en_8_106": {
+   "q": "Sergej Djagiljev osnovao je Ruski balet (Ballets Russes)."
+  },
+  "dq_en_8_107": {
+   "q": "Koliko varijacija slijedi nakon uvodne arije u Bachovim „Goldberg-varijacijama”?",
+   "u": "varijacija"
+  },
+  "dq_en_8_108": {
+   "q": "Koji je titan u grčkoj mitologiji otac Prometeja i Atlasa?",
+   "o": [
+    "Hiperion",
+    "Okean",
+    "Kej",
+    "Japet"
+   ]
+  },
+  "dq_en_8_109": {
+   "q": "Tko je u jorupskoj tradiciji oriša groma i munje?",
+   "o": [
+    "Shango",
+    "Eshu",
+    "Ogun",
+    "Obatala"
+   ]
+  },
+  "dq_en_8_110": {
+   "q": "Lari i penati u rimskoj su religiji bili bogovi zaštitnici čega?",
+   "o": [
+    "Vojske",
+    "Žetve",
+    "Mora",
+    "Doma"
+   ]
+  },
+  "dq_en_8_111": {
+   "q": "Koji se Ahilejev osjećaj spominje u prvom stihu „Ilijade”?",
+   "o": [
+    "Strah",
+    "Ponos",
+    "Tuga",
+    "Srdžba"
+   ]
+  },
+  "dq_en_8_112": {
+   "q": "Koje dvoje ljudi u nordijskoj mitologiji preživi Ragnarök i ponovno naseli svijet?",
+   "o": [
+    "Sigurd i Brynhild",
+    "Helgi i Sváva",
+    "Ask i Embla",
+    "Líf i Lífthrasir"
+   ]
+  },
+  "dq_en_8_113": {
+   "q": "Od čega je u nordijskoj mitologiji napravljen Naglfar, brod koji isplovljava u Ragnaröku?",
+   "o": [
+    "Od drva Yggdrasila",
+    "Od zmajskih kostiju",
+    "Od noktiju mrtvih",
+    "Od kose divova"
+   ]
+  },
+  "dq_en_8_114": {
+   "q": "Koji je islandski pisac u 13. stoljeću napisao „Proznu Eddu”?",
+   "o": [
+    "Snorri Sturluson",
+    "Ari Thorgilsson",
+    "Egill Skallagrímsson",
+    "Saxo Grammaticus"
+   ]
+  },
+  "dq_en_8_115": {
+   "q": "Koji bog s ovnujskom glavom u egipatskoj mitologiji oblikuje ljude na lončarskom kolu?",
+   "o": [
+    "Atum",
+    "Ptah",
+    "Hnum",
+    "Geb"
+   ]
+  },
+  "dq_en_8_116": {
+   "q": "Tko su u egipatskoj mitologiji roditelji Ozirisa, Izide, Seta i Neftis?",
+   "o": [
+    "Ra i Hator",
+    "Ptah i Sekhmet",
+    "Geb i Nut",
+    "Šu i Tefnut"
+   ]
+  },
+  "dq_en_8_117": {
+   "q": "Koji je egipatski grad bio glavno središte štovanja boga sunca Ra?",
+   "o": [
+    "Teba",
+    "Memfis",
+    "Heliopolis",
+    "Abid"
+   ]
+  },
+  "dq_en_8_118": {
+   "q": "Tko je u „Epu o Gilgamešu” preživio veliki potop i postao besmrtan?",
+   "o": [
+    "Enkidu",
+    "Humbaba",
+    "Utnapištim",
+    "Šamhat"
+   ]
+  },
+  "dq_en_8_119": {
+   "q": "Kojem se mudracu tradicionalno pripisuje sanskrtska „Ramajana”?",
+   "o": [
+    "Valmiki",
+    "Vjasa",
+    "Panini",
+    "Kalidasa"
+   ]
+  },
+  "dq_en_8_120": {
+   "q": "Koja velška zbirka srednjovjekovnih priča sadrži priče o Pwyllu i Branwen?",
+   "o": [
+    "Poetska Edda",
+    "Pjesma o Nibelunzima",
+    "Kalevala",
+    "Mabinogion"
+   ]
+  },
+  "dq_en_8_121": {
+   "q": "Koja je božica u kineskoj mitologiji popravila razbijeno nebo kamenjem pet boja?",
+   "o": [
+    "Nüwa",
+    "Mazu",
+    "Xi Wangmu",
+    "Chang'e"
+   ]
+  },
+  "dq_en_8_122": {
+   "q": "U grčkoj mitologiji tri božice sudbine zovu se Moire."
+  },
+  "dq_en_8_123": {
+   "q": "U Vergilijevoj „Eneidi” Kumska Sibila vodi Eneju kroz podzemlje."
+  },
+  "dq_en_8_124": {
+   "q": "U nordijskoj mitologiji Vani su rasa ledenih divova."
+  },
+  "dq_en_8_125": {
+   "q": "U japanskoj mitologiji Tsukuyomi je božica Sunca."
+  },
+  "dq_en_8_126": {
+   "q": "Koliko dana u „Mahabharati” traje rat na Kurukšetri?",
+   "u": "dana"
+  },
+  "dq_en_8_127": {
+   "q": "Koliko je kćeri u grčkoj mitologiji imao kralj Danaj?",
+   "u": "kćeri"
+  },
+  "dq_en_8_128": {
+   "q": "Koje more nema obalu, nego ga omeđuju samo oceanske struje?",
+   "o": [
+    "Weddellovo more",
+    "Koraljno more",
+    "Sargaško more",
+    "Tasmanovo more"
+   ]
+  },
+  "dq_en_8_129": {
+   "q": "Koji je znanstvenik osmislio najrašireniju klasifikaciju klima na svijetu?",
+   "o": [
+    "Wladimir Köppen",
+    "Carl Ritter",
+    "Alexander von Humboldt",
+    "Alfred Wegener"
+   ]
+  },
+  "dq_en_8_130": {
+   "q": "Koji je srednjovjekovni učenjak napisao „Mukadimu” (1377.), rano djelo o društvu i povijesti?",
+   "o": [
+    "Avicena",
+    "Ibn Haldun",
+    "Averoes",
+    "Al-Gazali"
+   ]
+  },
+  "dq_en_8_131": {
+   "q": "Koji je filozof napisao „Tractatus Logico-Philosophicus” (1921.)?",
+   "o": [
+    "Rudolf Carnap",
+    "Gottlob Frege",
+    "Bertrand Russell",
+    "Ludwig Wittgenstein"
+   ]
+  },
+  "dq_en_8_132": {
+   "q": "Židovski kalendar je lunisolarni: neke njegove godine imaju dodatni mjesec."
+  },
+  "dq_en_8_133": {
+   "q": "Za Kanta je čin moralno ispravan samo ako proizvodi najveću sreću."
+  },
+  "dq_en_8_134": {
+   "q": "Koliko se planina na Zemlji uzdiže iznad 8.000 metara?",
+   "u": "planina"
+  },
+  "dq_en_8_135": {
+   "q": "Koliko dana ima obična godina islamskog lunarnog kalendara?",
+   "u": "dana"
+  },
+  "dq_en_8_136": {
+   "q": "Tko je naslikao ovu sliku?",
+   "o": [
+    "Eugène Delacroix",
+    "Osman Hamdi-beg",
+    "Jean-Léon Gérôme",
+    "John Frederick Lewis"
+   ]
+  },
+  "dq_en_8_137": {
+   "q": "Tko je naslikao ovu sliku?",
+   "o": [
+    "Amrita Sher-Gil",
+    "Jamini Roy",
+    "Raja Ravi Varma",
+    "Abanindranath Tagore"
+   ]
+  },
+  "dq_en_8_138": {
+   "q": "Tko je naslikao ovu sliku?",
+   "o": [
+    "Qi Baishi",
+    "Guo Xi",
+    "Zhang Zeduan",
+    "Fan Kuan"
+   ]
+  },
+  "dq_en_8_139": {
+   "q": "Tko je naslikao ovu sliku?",
+   "o": [
+    "Gilbert Stuart",
+    "John Trumbull",
+    "Benjamin West",
+    "Emanuel Leutze"
+   ]
+  },
+  "dq_en_8_140": {
+   "q": "Tko je ovo?",
+   "o": [
+    "George Eliot",
+    "Charlotte Brontë",
+    "Elizabeth Barrett Browning",
+    "Elizabeth Gaskell"
+   ]
+  },
+  "dq_en_8_141": {
+   "q": "Tko je ovo?",
+   "o": [
+    "Satyendra Nath Bose",
+    "Jagadish Chandra Bose",
+    "C. V. Raman",
+    "Srinivasa Ramanujan"
+   ]
+  },
+  "dq_en_8_142": {
+   "q": "Tko je ovo?",
+   "o": [
+    "Emmy Noether",
+    "Irène Joliot-Curie",
+    "Lise Meitner",
+    "Maria Goeppert Mayer"
+   ]
+  },
+  "dq_en_8_143": {
+   "q": "Tko je ovo?",
+   "o": [
+    "Itō Hirobumi",
+    "Car Taishō",
+    "Tokugawa Yoshinobu",
+    "Car Meiji"
+   ]
+  },
+  "dq_en_8_144": {
+   "q": "Tko je ovo?",
+   "o": [
+    "Angelica Kauffman",
+    "Rosalba Carriera",
+    "Élisabeth Vigée Le Brun",
+    "Adélaïde Labille-Guiard"
+   ]
+  },
+  "dq_en_8_145": {
+   "q": "Mit o kojoj tkalji pripovijeda ova slika?",
+   "o": [
+    "Arijadni",
+    "Filomeli",
+    "Penelopi",
+    "Arahni"
+   ]
+  },
+  "dq_en_8_146": {
+   "q": "Koji japanski bog ovdje ubija zmiju?",
+   "o": [
+    "Tsukuyomi",
+    "Izanagi",
+    "Susanoo",
+    "Hachiman"
+   ]
+  },
+  "dq_en_8_147": {
+   "q": "Za koju je religiju izgrađen ovaj hram?",
+   "o": [
+    "Taoizam",
+    "Budizam",
+    "Hinduizam",
+    "Džainizam"
+   ]
+  },
+  "dq_en_8_148": {
+   "q": "U kojoj je zemlji ova džamija od blatnih opeka?",
+   "o": [
+    "Niger",
+    "Sudan",
+    "Čad",
+    "Mali"
+   ]
+  },
+  "dq_en_8_149": {
+   "q": "U kojoj je zemlji ova crkva uklesana u stijenu?",
+   "o": [
+    "Armenija",
+    "Etiopija",
+    "Egipat",
+    "Gruzija"
+   ]
+  },
+  "dq_en_8_150": {
+   "q": "U kojem je gradu ovaj trg?",
+   "o": [
+    "Samarkand",
+    "Isfahan",
+    "Herat",
+    "Buhara"
+   ]
+  }
+ },
+ "untranslatable": []
+}

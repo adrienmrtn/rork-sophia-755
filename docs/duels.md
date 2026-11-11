@@ -252,8 +252,8 @@ toujours vrai, sur iOS comme sur Android).
   rendus par `duel_home` ; les badges de ligue d'iOS les reprennent quand la page des duels est chargée.
 - **Duel entre amis** : `duel_can_challenge` ne demande plus que l'ami ait l'app en anglais, seulement
   qu'elle ait les duels (un signal de présence déjà reçu).
-- **Questions retirées** : celles dont la réponse tient à un mot anglais (Thursday ← Thor,
-  January ← Janus…) sont désactivées pour tout le monde, pour que tous les joueurs piochent dans le
+- **Questions retirées** (9) : celles dont la réponse tient à un mot d'une langue (Thursday ← Thor,
+  January ← Janus, « algorithme » qui est le nom du savant en arabe, kitsune = renard en japonais…) sont désactivées pour tout le monde, pour que tous les joueurs piochent dans le
   même vivier. Liste et raisons : `content/duels/i18n/_excluded.json`.
 - **Contenu** : `content/duels/i18n/<langue>.json`. Traduit depuis l'anglais par des éditeurs natifs
   (une consigne commune, le guide de traduction de chaque langue), en réécrivant chaque question
@@ -263,7 +263,9 @@ toujours vrai, sur iOS comme sur Android).
   conservés, écriture de la langue), réunit les lots (`merge`) et fait le point (`status`).
 - **SQL** : `python3 scripts/build_duels_i18n_sql.py` écrit
   `supabase/migrations/20261113010000_duels_i18n.sql` (schéma, fonctions, questions retirées, noms
-  des ligues, traductions ; rejouable). Il refuse d'écrire si une langue est incomplète.
+  des ligues, traductions ; rejouable). Il refuse d'écrire si une langue est incomplète. Le même
+  contenu, découpé en fichiers de moins de 900 000 octets (l'éditeur coupe à 1 000 000 d'octets) pour l'éditeur SQL de Supabase, est dans
+  `supabase/duels_i18n_a_coller/` (à exécuter dans l'ordre).
 - **Nouvelles questions** : après `build_duels_seed.py`, traduire les nouvelles (un lot `packs` ne
   contenant qu'elles), relancer `build_duels_i18n_sql.py`. Une question sans traduction reste jouable,
   en anglais.

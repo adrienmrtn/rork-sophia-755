@@ -114,6 +114,9 @@ class DuelService(context: Context, private val auth: AuthService) {
      * serveur qui n'a pas encore la fonction, les questions restent en anglais : on réessaie au
      * prochain chargement. Même rôle que `sendLanguageIfNeeded` sur iOS.
      */
+    /** La langue de l'app, celle des questions (aussi envoyée par le signal de présence). */
+    fun appLanguageCode(): String = LanguageManager.persisted(appContext).code
+
     private suspend fun sendLanguageIfNeeded(userId: String) {
         val language = LanguageManager.persisted(appContext).code
         val key = "$userId|$language"
