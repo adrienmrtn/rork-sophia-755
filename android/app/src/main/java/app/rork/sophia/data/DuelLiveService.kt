@@ -124,7 +124,7 @@ class DuelLiveService(private val auth: AuthService, private val duels: DuelServ
         try {
             val response: DuelPingResponse = withTimeout(PING_TIMEOUT_MS) {
                 val params = buildJsonObject {
-                    put("p_lang", "en")
+                    put("p_lang", duels.appLanguageCode())
                     put("p_busy", busy)
                 }
                 json.decodeFromString(db.rpc("duel_ping", params).data)
