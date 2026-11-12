@@ -83,3 +83,4 @@ Restent à lancer ensuite : vague 1 rien d'autre ; vague 2 pour fr de pt it ro b
 - fi parts 8–14 fini
 - sk parts 8–14 fini
 - ar parts 8–14 fini
+- lt parts 8–14 fini
