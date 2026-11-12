@@ -6,7 +6,13 @@
     "license": "Public domain",
     "source": "https://commons.wikimedia.org/wiki/File:Arc_de_Triomphe_de_l%27Etoile,_Paris,_France,_ca._1890-1900.jpg",
     "fit": "cover",
-    "focus": "center"
+    "focus": "center",
+    "crop": [
+      0,
+      0,
+      1,
+      0.93
+    ]
   },
   "v5b_monument_mount_rushmore": {
     "name": "Mount Rushmore National Memorial, South Dakota (NPS)",
@@ -15,7 +21,13 @@
     "license": "Public domain",
     "source": "https://commons.wikimedia.org/wiki/File:Mount_Rushmore_National_Memorial_MORU3609.jpg",
     "fit": "cover",
-    "focus": "center"
+    "focus": "center",
+    "crop": [
+      0.01,
+      0.04,
+      0.99,
+      0.99
+    ]
   },
   "v5b_monument_moai": {
     "name": "Moai at Rano Raraku, Easter Island",
@@ -42,7 +54,13 @@
     "license": "Public domain",
     "source": "https://commons.wikimedia.org/wiki/File:Fountain_of_Trevi,_Rome,_Italy-LCCN2001700954.jpg",
     "fit": "cover",
-    "focus": "center"
+    "focus": "center",
+    "crop": [
+      0.1,
+      0.18,
+      0.9,
+      0.86
+    ]
   },
   "v5b_monument_lincoln_memorial": {
     "name": "Lincoln Memorial, Washington, D.C., Carol M. Highsmith",
@@ -86,7 +104,7 @@
     "artist": "NASA / JPL / Space Science Institute",
     "license": "Public domain",
     "source": "https://commons.wikimedia.org/wiki/File:Saturn_during_Equinox.jpg",
-    "fit": "cover",
+    "fit": "contain",
     "focus": "center"
   },
   "v5b_science_iss": {
@@ -96,7 +114,13 @@
     "license": "Public domain",
     "source": "https://commons.wikimedia.org/wiki/File:STS-133_International_Space_Station_after_undocking_7.jpg",
     "fit": "cover",
-    "focus": "center"
+    "focus": "center",
+    "crop": [
+      0,
+      0.5,
+      1,
+      1
+    ]
   },
   "v5b_science_hubble": {
     "name": "Hubble Space Telescope released after Servicing Mission 4, NASA, 2009",
@@ -150,7 +174,13 @@
     "license": "CC0",
     "source": "https://commons.wikimedia.org/wiki/File:Welwitschia_mirabilis_3.jpg",
     "fit": "cover",
-    "focus": "center"
+    "focus": "center",
+    "crop": [
+      0,
+      0,
+      0.94,
+      1
+    ]
   },
   "v5b_science_venus_flytrap": {
     "name": "Venus flytrap (Dionaea muscipula)",
@@ -177,7 +207,13 @@
     "license": "Public domain",
     "source": "https://commons.wikimedia.org/wiki/File:The_Matterhorn_and_the_Findelenbach_Bridge,_Valais,_Alps_of,_Switzerland-LCCN2001703307.jpg",
     "fit": "cover",
-    "focus": "center"
+    "focus": "center",
+    "crop": [
+      0.01,
+      0.02,
+      0.99,
+      0.6
+    ]
   },
   "v5b_nature_giants_causeway": {
     "name": "Giant's Causeway, County Antrim, photochrom, 1890s",
@@ -186,6 +222,120 @@
     "license": "Public domain",
     "source": "https://commons.wikimedia.org/wiki/File:Giant%27s_Causeway,_County_Antrim,_Ireland,_1890s.jpg",
     "fit": "cover",
+    "focus": "center",
+    "crop": [
+      0,
+      0,
+      1,
+      0.93
+    ]
+  },
+  "v5b_monument_tower_bridge": {
+    "name": "Tower Bridge, London, photochrom, c. 1890-1900",
+    "file": "Tower Bridge, III. (closed), London, England-LCCN2002696929.jpg",
+    "artist": "Photochrom Print Collection",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Tower_Bridge,_III._(closed),_London,_England-LCCN2002696929.jpg",
+    "fit": "cover",
+    "focus": "center"
+  },
+  "v5b_monument_karnak": {
+    "name": "Great Hypostyle Hall, Karnak, Luxor, Egypt",
+    "file": "Karnak Hypostyle Hall (9794663325).jpg",
+    "artist": "Gary Todd from Xinzheng, China",
+    "license": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Karnak_Hypostyle_Hall_(9794663325).jpg",
+    "fit": "cover",
+    "focus": "center"
+  },
+  "v5b_monument_shwedagon": {
+    "name": "Shwedagon Pagoda, Yangon, Rijksmuseum photograph",
+    "file": "Shwedagon pagode, Rangoon Shwé Dagon pagoda. Rangoon, 565 (titel op object), RP-F-00-5342-2.jpg",
+    "artist": "Rijksmuseum",
+    "license": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Shwedagon_pagode,_Rangoon_Shw%C3%A9_Dagon_pagoda._Rangoon,_565_(titel_op_object),_RP-F-00-5342-2.jpg",
+    "fit": "cover",
+    "focus": "center"
+  },
+  "v5b_monument_chichen_itza": {
+    "name": "El Castillo, Chichén Itzá, Frederick Catherwood, 1844",
+    "file": "Chichen Itza Castillo (Catherwood).jpg",
+    "artist": "Frederick Catherwood",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Chichen_Itza_Castillo_(Catherwood).jpg",
+    "fit": "contain",
+    "focus": "center"
+  },
+  "v5b_monument_st_peters": {
+    "name": "St. Peter's Square and Basilica, photochrom, c. 1890-1900",
+    "file": "St. Peter's Place, the obelisk, Rome, Italy-LCCN2001700929.jpg",
+    "artist": "Photochrom Print Collection",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:St._Peter%27s_Place,_the_obelisk,_Rome,_Italy-LCCN2001700929.jpg",
+    "fit": "cover",
+    "focus": "center"
+  },
+  "v5b_science_pluto": {
+    "name": "Pluto in true colour, New Horizons, NASA, 2015",
+    "file": "Pluto in True Color - High-Res.jpg",
+    "artist": "NASA/Johns Hopkins University Applied Physics Laboratory/Southwest Research Institute/Alex Parker",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Pluto_in_True_Color_-_High-Res.jpg",
+    "fit": "cover",
+    "focus": "center"
+  },
+  "v5b_science_space_shuttle": {
+    "name": "Launch of Space Shuttle Discovery, STS-120, NASA, 2007",
+    "file": "STS120LaunchHiRes-edit1.jpg",
+    "artist": "NASA; edited by jjron (tilt corrected)",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:STS120LaunchHiRes-edit1.jpg",
+    "fit": "cover",
+    "focus": "center"
+  },
+  "v5b_science_axolotl": {
+    "name": "Axolotl (Ambystoma mexicanum)",
+    "file": "Axolotl Ambystoma mexicanum Aquarium Liège 30012016 1.jpg",
+    "artist": "Vassil",
+    "license": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Axolotl_Ambystoma_mexicanum_Aquarium_Li%C3%A8ge_30012016_1.jpg",
+    "fit": "cover",
+    "focus": "center"
+  },
+  "v5b_science_okapi": {
+    "name": "Okapi, Pearson Scott Foresman illustration",
+    "file": "Okapi (PSF).png",
+    "artist": "Pearson Scott Foresman",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Okapi_(PSF).png",
+    "fit": "contain",
+    "focus": "center"
+  },
+  "v5b_science_rafflesia": {
+    "name": "Rafflesia arnoldii flower",
+    "file": "Rafflesia-arnoldii.jpg",
+    "artist": "Walter Hood Fitch. File created by Ian Tresman",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Rafflesia-arnoldii.jpg",
+    "fit": "cover",
+    "focus": "center"
+  },
+  "v5b_nature_old_faithful": {
+    "name": "Old Faithful Geyser, Yellowstone (NPS)",
+    "file": "Old Faithful Geyser (29289675968).jpg",
+    "artist": "Yellowstone National Park",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Old_Faithful_Geyser_(29289675968).jpg",
+    "fit": "cover",
+    "focus": "center"
+  },
+  "v5b_nature_victoria_falls": {
+    "name": "Victoria Falls, Thomas Baines, 1860s",
+    "file": "Baines Falls by Sunrise col print.jpg",
+    "artist": "Thomas Baines",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Baines_Falls_by_Sunrise_col_print.jpg",
+    "fit": "contain",
     "focus": "center"
   }
 }
