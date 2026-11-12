@@ -15,7 +15,7 @@ extension AppLocalizableAdditions {
         ],
         "onboardingV2.elevate.lessons.lesson.title": [
             "fr": "Une leçon Sophia",
-            "en": "A Sophia lesson",
+            "en": "A Sophia course",
         ],
         "onboardingV2.elevate.lessons.lesson.caption": [
             "fr": "%d minutes",
