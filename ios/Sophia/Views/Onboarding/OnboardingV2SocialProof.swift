@@ -62,7 +62,7 @@ struct OnboardingV2SocialProof: View {
     // MARK: - Titre
 
     private var titleCard: some View {
-        OV2Markup.elevate(languageManager.text("onboardingV2.intro.social.title"))
+        OV2Markup.elevate(languageManager.text("onboardingV2.intro.social.title"), highlightFont: DS.title(.title3, .bold))
             .font(DS.title(.title3, .regular))
             .foregroundStyle(OV2.ink)
             .multilineTextAlignment(.center)

@@ -286,12 +286,22 @@ enum OV2Markup {
     /// Mots marqués en gras et en bleu d'accent : le titre du style « Elevate arrondi ». Le
     /// `Text` rendu accepte `lineLimit` et `minimumScaleFactor`, contrairement à
     /// `DSHighlightTitle` qui impose sa hauteur idéale.
-    static func elevate(_ source: String, weight: Font.Weight = .bold, color: Color = DS.accent) -> Text {
+    ///
+    /// - Parameter highlightFont: police des mots marqués (la même que le titre, en gras) ;
+    ///   sans elle, seule la graisse `weight` leur est appliquée.
+    static func elevate(
+        _ source: String,
+        highlightFont: Font? = nil,
+        weight: Font.Weight = .bold,
+        color: Color = DS.accent
+    ) -> Text {
         var result = Text(verbatim: "")
         for (index, part) in source.components(separatedBy: "**").enumerated() where !part.isEmpty {
             let piece = Text(verbatim: part)
             if index.isMultiple(of: 2) {
                 result = result + piece
+            } else if let highlightFont {
+                result = result + piece.font(highlightFont).foregroundStyle(color)
             } else {
                 result = result + piece.fontWeight(weight).foregroundStyle(color)
             }

@@ -57,7 +57,7 @@ struct OnboardingV2Researchers: View {
             VStack(spacing: 22) {
                 portraitRow
 
-                OV2Markup.elevate(languageManager.text("onboardingV2.intro.researchers.title"))
+                OV2Markup.elevate(languageManager.text("onboardingV2.intro.researchers.title"), highlightFont: DS.title(.title, .bold))
                     .font(DS.title(.title, .regular))
                     .foregroundStyle(OV2.ink)
                     .multilineTextAlignment(.center)

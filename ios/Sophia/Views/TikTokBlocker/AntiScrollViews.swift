@@ -145,7 +145,7 @@ struct SophiaBlockerPaywall: View {
 
     var body: some View {
         ZStack {
-            DS.canvas.ignoresSafeArea()
+            DSLegacy.canvas.ignoresSafeArea()
 
             VStack(spacing: 0) {
                 HStack {
@@ -176,7 +176,7 @@ struct SophiaBlockerPaywall: View {
                     .offset(y: appeared ? 0 : 20)
             }
             // One column of copy, drawn for an iPhone (see the other native paywalls).
-            .frame(maxWidth: OV2.readableWidth)
+            .frame(maxWidth: OV2Legacy.readableWidth)
         }
         .onAppear {
             if tracksAnalytics {
@@ -202,9 +202,9 @@ struct SophiaBlockerPaywall: View {
         VStack(spacing: 18) {
             Image(systemName: "iphone.slash")
                 .font(.system(size: 34, weight: .semibold))
-                .foregroundStyle(DS.accent)
+                .foregroundStyle(DSLegacy.accent)
                 .frame(width: 84, height: 84)
-                .background(DS.accentTint, in: Circle())
+                .background(DSLegacy.accentTint, in: Circle())
             AntiScrollLockedApps(tileSize: 46, spacing: 10)
         }
     }
@@ -214,16 +214,16 @@ struct SophiaBlockerPaywall: View {
     private var headline: some View {
         VStack(spacing: 10) {
             Text(languageManager.text("paywall.blocker.title"))
-                .font(DS.title(.title, .heavy))
-                .foregroundStyle(DS.ink)
+                .font(DSLegacy.title(.title, .heavy))
+                .foregroundStyle(DSLegacy.ink)
                 .multilineTextAlignment(.center)
                 .fixedSize(horizontal: false, vertical: true)
 
             Text(hasTrial
                  ? languageManager.trialText("paywall.blocker.subtitle", days: trialDays)
                  : languageManager.text("paywall.blocker.subtitle.noTrial"))
-                .font(DS.sans(.subheadline, .bold))
-                .foregroundStyle(hasTrial ? DS.success : DS.inkSecondary)
+                .font(DSLegacy.sans(.subheadline, .bold))
+                .foregroundStyle(hasTrial ? DSLegacy.success : DSLegacy.inkSecondary)
                 .multilineTextAlignment(.center)
                 .fixedSize(horizontal: false, vertical: true)
         }
@@ -246,7 +246,7 @@ struct SophiaBlockerPaywall: View {
                     }
                 }
             }
-            .buttonStyle(DSPrimaryButtonStyle())
+            .buttonStyle(DSLegacyPrimaryButtonStyle())
             .disabled(purchasing)
             .padding(.horizontal, 24)
 
@@ -279,10 +279,10 @@ struct SophiaBlockerPaywall: View {
         } label: {
             Image(systemName: "xmark")
                 .font(.system(size: 15, weight: .semibold))
-                .foregroundStyle(DS.inkSecondary)
+                .foregroundStyle(DSLegacy.inkSecondary)
                 .frame(width: 40, height: 40)
-                .background(DS.surface, in: Circle())
-                .overlay { Circle().strokeBorder(DS.hairline, lineWidth: 1) }
+                .background(DSLegacy.surface, in: Circle())
+                .overlay { Circle().strokeBorder(DSLegacy.hairline, lineWidth: 1) }
         }
     }
 

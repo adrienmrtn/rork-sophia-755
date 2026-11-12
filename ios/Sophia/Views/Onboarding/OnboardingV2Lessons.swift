@@ -165,7 +165,7 @@ struct OnboardingV2Lessons: View {
     // MARK: - Titre
 
     private var title: some View {
-        OV2Markup.elevate(languageManager.text("onboardingV2.intro.lessons.title"))
+        OV2Markup.elevate(languageManager.text("onboardingV2.intro.lessons.title"), highlightFont: DS.title(.title, .bold))
             .font(DS.title(.title, .regular))
             .foregroundStyle(OV2.ink)
             .multilineTextAlignment(.center)

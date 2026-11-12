@@ -72,7 +72,7 @@ struct OnboardingV2IntroPageFrame<Visual: View>: View {
             .padding(.top, 10)
             .accessibilityHidden(true)
 
-            OV2Markup.elevate(title)
+            OV2Markup.elevate(title, highlightFont: DS.title(.title2, .bold))
                 .font(DS.title(.title2, .medium))
                 .foregroundStyle(OV2.ink)
                 .multilineTextAlignment(.center)

@@ -80,7 +80,7 @@ struct OnboardingV2Welcome: View {
         VStack(alignment: .leading, spacing: 14) {
             logo
 
-            OV2Markup.elevate(languageManager.text("onboardingV2.welcome.title"))
+            OV2Markup.elevate(languageManager.text("onboardingV2.welcome.title"), highlightFont: DS.title(.title, .bold))
                 .font(DS.title(.title, .regular))
                 .foregroundStyle(OV2.ink)
                 .multilineTextAlignment(.leading)
