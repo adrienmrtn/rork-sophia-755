@@ -1,170 +1,210 @@
 import SwiftUI
 import UIKit
 
-/// Cinquième page de présentation, après le carrousel : « Rejoins les 500 000 utilisateurs
-/// heureux qui apprennent avec Sophia » en haut, des photos d'étudiants, la note App Store
-/// entre deux lauriers, la disponibilité dans plus de 140 pays au-dessus du bouton, et le CTA
+/// Écran 9 — preuve sociale, après le carrousel : « Rejoins les 500 000 utilisateurs… »
+/// dans une carte, deux lauriers (les cinq étoiles et le nombre d'utilisateurs, la note
+/// App Store), trois avis d'utilisateurs, la disponibilité dans plus de 140 pays, et le CTA
 /// « C'est parti ».
 ///
-/// Les photos sont les `student_<n>.jpg` du bundle (voir `Resources/StudentPhotos/README.md`),
-/// suivies des portraits des avis (`review_avatar_<n>`), dans une grille symétrique.
+/// Tous les chiffres sont ceux que l'app affichait déjà (titre, note, pays) ; les avis sont
+/// ceux de la page « Voici ce que nos utilisateurs en pensent ».
 struct OnboardingV2SocialProof: View {
     @Environment(LanguageManager.self) private var languageManager
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
     let onNext: () -> Void
 
     @State private var photos: [UIImage] = []
-    @State private var revealedPhotos = 0
-    @State private var ratingIn = false
-    @State private var textIn = false
+    @State private var laurelsIn = false
+    @State private var starsShown = 0
+
+    /// Les avis montrés ici (clés `onboardingV2.review.t<n>`) : la fin de la liste, pour ne
+    /// pas ouvrir sur les mêmes que la page des avis, plus loin dans le déroulé.
+    private static let reviewIndices: [Int] = [4, 5, 6]
+    private static let starCount = 5
 
     var body: some View {
-        // Photos, lauriers, titre et pays dépassent un petit iPhone en grande taille de texte :
+        // Carte, lauriers et avis dépassent un petit iPhone en grande taille de texte :
         // le contenu défile, le CTA reste épinglé.
         OV2ScrollableContent {
             VStack(spacing: 0) {
-                Spacer().frame(height: 64)
+                titleCard
+                    .padding(.top, 12)
+                    .dsStagger(0)
 
-                OV2Markup.highlighted(languageManager.text("onboardingV2.intro.social.title"))
-                    .font(DS.title(.title, .heavy))
-                    .foregroundStyle(OV2.ink)
-                    .multilineTextAlignment(.center)
-                    .minimumScaleFactor(0.8)
-                    .padding(.horizontal, 28)
-                    .ov2Reveal(delay: 0.05)
+                laurels
+                    .padding(.top, 20)
 
-                Spacer(minLength: 20)
-
-                if !photos.isEmpty {
-                    OnboardingV2StudentCluster(photos: photos, revealed: revealedPhotos)
-                        .padding(.horizontal, 16)
-
-                    Spacer().frame(height: 26)
+                VStack(spacing: 10) {
+                    ForEach(Array(Self.reviewIndices.enumerated()), id: \.element) { position, index in
+                        reviewCard(index: index)
+                            .dsStagger(position + 3, step: 0.09)
+                    }
                 }
-
-                OnboardingV2LaurelBadge {
-                    OnboardingV2RatingStack(caption: languageManager.text("onboardingV2.review.appStore"))
-                }
-                .scaleEffect(ratingIn ? 1 : 0.7)
-                .opacity(ratingIn ? 1 : 0)
-
-                Spacer(minLength: 24)
+                .padding(.top, 18)
 
                 countriesLine
-                    .opacity(textIn ? 1 : 0)
-                    .offset(y: textIn ? 0 : 14)
-
-                Spacer().frame(height: 10)
+                    .padding(.top, 16)
+                    .padding(.bottom, 12)
+                    .dsStagger(Self.reviewIndices.count + 3, step: 0.09)
             }
+            .padding(.horizontal, 24)
         } footer: {
             OnboardingV2Button(title: languageManager.text("onboardingV2.intro.social.cta"), action: onNext)
+                .padding(.top, 10)
         }
         .ov2Background()
         .onAppear {
-            if photos.isEmpty { photos = OnboardingStudentPhotos.load() }
-            reveal()
+            if photos.isEmpty { photos = Array(OnboardingStudentPhotos.load().prefix(4)) }
         }
+        .task { await reveal() }
     }
 
-    /// « Disponible dans plus de 140 pays », centré, juste au-dessus du bouton.
+    // MARK: - Titre
+
+    private var titleCard: some View {
+        OV2Markup.elevate(languageManager.text("onboardingV2.intro.social.title"))
+            .font(DS.title(.title3, .regular))
+            .foregroundStyle(OV2.ink)
+            .multilineTextAlignment(.center)
+            .lineSpacing(3)
+            .fixedSize(horizontal: false, vertical: true)
+            .frame(maxWidth: .infinity)
+            .padding(.horizontal, 18)
+            .padding(.vertical, 14)
+            .ov2Card()
+            .accessibilityAddTraits(.isHeader)
+    }
+
+    // MARK: - Lauriers
+
+    private var laurels: some View {
+        HStack(spacing: 8) {
+            OnboardingV2PaperLaurels {
+                VStack(spacing: 5) {
+                    Text(languageManager.text("onboardingV2.loading.social.count").uppercasedInApp())
+                        .font(DS.sans(.caption, .heavy))
+                        .tracking(0.6)
+                        .foregroundStyle(OV2.ink)
+                        .lineLimit(2)
+                        .multilineTextAlignment(.center)
+                        .minimumScaleFactor(0.7)
+                    stars(size: 14, shown: starsShown)
+                }
+            }
+            .frame(maxWidth: .infinity)
+
+            OnboardingV2PaperLaurels {
+                VStack(spacing: 5) {
+                    Text((4.8).formatted(.number.precision(.fractionLength(1)).locale(languageManager.locale)))
+                        .font(DS.title(.title2, .heavy))
+                        .foregroundStyle(OV2.ink)
+                    Text(languageManager.text("onboardingV2.review.appStore").uppercasedInApp())
+                        .font(DS.sans(.caption2, .bold))
+                        .tracking(0.6)
+                        .foregroundStyle(OV2.inkSecondary)
+                        .lineLimit(2)
+                        .multilineTextAlignment(.center)
+                        .minimumScaleFactor(0.7)
+                }
+            }
+            .frame(maxWidth: .infinity)
+        }
+        .scaleEffect(laurelsIn || reduceMotion ? 1 : 0.8)
+        .opacity(laurelsIn ? 1 : 0)
+    }
+
+    /// Cinq étoiles ; `shown` en allume les premières (toutes par défaut).
+    private func stars(size: CGFloat, shown: Int = OnboardingV2SocialProof.starCount) -> some View {
+        HStack(spacing: 2) {
+            ForEach(0..<Self.starCount, id: \.self) { index in
+                Image(systemName: "star.fill")
+                    .font(.system(size: size))
+                    .foregroundStyle(OV2.warm)
+                    .scaleEffect(index < shown || reduceMotion ? 1 : 0.2)
+                    .opacity(index < shown ? 1 : 0)
+            }
+        }
+        .accessibilityHidden(true)
+    }
+
+    // MARK: - Avis
+
+    private func reviewCard(index: Int) -> some View {
+        VStack(alignment: .leading, spacing: 10) {
+            Text(languageManager.text("onboardingV2.review.t\(index).quote"))
+                .font(DS.sans(.subheadline, .regular))
+                .foregroundStyle(OV2.ink)
+                .multilineTextAlignment(.leading)
+                .lineSpacing(4)
+                .fixedSize(horizontal: false, vertical: true)
+                .frame(maxWidth: .infinity, alignment: .leading)
+
+            HStack(spacing: 8) {
+                stars(size: 13)
+                Spacer(minLength: 8)
+                Text(languageManager.text("onboardingV2.review.t\(index).author"))
+                    .font(DS.sans(.caption, .regular))
+                    .foregroundStyle(OV2.inkSecondary)
+                    .lineLimit(1)
+            }
+        }
+        .padding(.horizontal, 18)
+        .padding(.vertical, 16)
+        .ov2Card()
+        .accessibilityElement(children: .combine)
+    }
+
+    // MARK: - Pays
+
+    /// « Disponible dans plus de 140 pays », à côté de quelques visages d'utilisateurs.
     private var countriesLine: some View {
-        VStack(spacing: 8) {
-            Image(systemName: "globe.europe.africa.fill")
-                .font(.system(size: 18))
-                .foregroundStyle(OV2.accentSoft)
+        HStack(spacing: 10) {
+            if !photos.isEmpty {
+                OnboardingV2PhotoRow(photos: photos, size: 26)
+            } else {
+                Image(systemName: "globe.europe.africa.fill")
+                    .font(.system(size: 16))
+                    .foregroundStyle(OV2.accent)
+                    .accessibilityHidden(true)
+            }
             Text(languageManager.text("onboardingV2.intro.social.countries"))
-                .font(DS.sans(.body, .medium))
+                .font(DS.sans(.footnote, .medium))
                 .foregroundStyle(OV2.inkSecondary)
-                .multilineTextAlignment(.center)
+                .multilineTextAlignment(.leading)
                 .fixedSize(horizontal: false, vertical: true)
         }
         .frame(maxWidth: .infinity)
-        .padding(.horizontal, 32)
     }
 
     // MARK: - Animation
 
-    private func reveal() {
-        guard revealedPhotos == 0 else { return }
-        let count = min(photos.count, OnboardingV2StudentCluster.maxPhotos)
-        for i in 0..<count {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3 + Double(i) * 0.08) {
-                withAnimation(.spring(response: 0.5, dampingFraction: 0.62)) {
-                    revealedPhotos = i + 1
-                }
-                OnboardingHaptics.selection()
-            }
+    /// Les lauriers se posent, puis les étoiles s'allument une à une.
+    private func reveal() async {
+        guard !laurelsIn else { return }
+        if reduceMotion {
+            laurelsIn = true
+            starsShown = Self.starCount
+            return
         }
-        let afterPhotos = 0.4 + Double(count) * 0.08
-        DispatchQueue.main.asyncAfter(deadline: .now() + afterPhotos) {
-            withAnimation(.spring(response: 0.55, dampingFraction: 0.6)) {
-                ratingIn = true
-            }
-            OnboardingHaptics.counterComplete()
+        await pause(0.25)
+        if Task.isCancelled { return }
+        withAnimation(DS.Motion.pop) {
+            laurelsIn = true
         }
-        DispatchQueue.main.asyncAfter(deadline: .now() + afterPhotos + 0.25) {
-            withAnimation(.spring(response: 0.7, dampingFraction: 0.85)) {
-                textIn = true
+        Haptics.soft()
+        await pause(0.15)
+        for count in 1...Self.starCount {
+            if Task.isCancelled { return }
+            withAnimation(DS.Motion.pop) {
+                starsShown = count
             }
+            Haptics.tick(0.3 + 0.08 * CGFloat(count))
+            await pause(0.07)
         }
     }
-}
 
-// MARK: - Photos d'étudiants
-
-/// Photos d'étudiants dans des ronds de même taille, en rangées centrées (cinq par rangée au
-/// plus, les rangées équilibrées entre elles) : une grille symétrique, le même style pour
-/// toutes. Seules les vraies photos sont montrées.
-struct OnboardingV2StudentCluster: View {
-    let photos: [UIImage]
-    let revealed: Int
-
-    static let maxPhotos = 10
-    private static let perRow = 5
-    private static let diameter: CGFloat = 58
-    private static let spacing: CGFloat = 10
-    private static let rowSpacing: CGFloat = 12
-
-    /// Les rangées, aussi pleines les unes que les autres : 10 → 5 + 5, 7 → 4 + 3, 5 → 5.
-    private var rows: [[Int]] {
-        let count = min(photos.count, Self.maxPhotos)
-        guard count > 0 else { return [] }
-        let rowCount = Int((Double(count) / Double(Self.perRow)).rounded(.up))
-        let base = count / rowCount
-        let extra = count % rowCount
-        var rows: [[Int]] = []
-        var next = 0
-        for row in 0..<rowCount {
-            let size = base + (row < extra ? 1 : 0)
-            rows.append(Array(next..<(next + size)))
-            next += size
-        }
-        return rows
-    }
-
-    var body: some View {
-        VStack(spacing: Self.rowSpacing) {
-            ForEach(Array(rows.enumerated()), id: \.offset) { _, row in
-                HStack(spacing: Self.spacing) {
-                    ForEach(row, id: \.self) { i in
-                        portrait(photos[i])
-                            .scaleEffect(i < revealed ? 1 : 0.2)
-                            .opacity(i < revealed ? 1 : 0)
-                    }
-                }
-            }
-        }
-        .frame(maxWidth: .infinity)
-        .accessibilityHidden(true)
-    }
-
-    private func portrait(_ image: UIImage) -> some View {
-        Image(uiImage: image)
-            .resizable()
-            .scaledToFill()
-            .frame(width: Self.diameter, height: Self.diameter)
-            .clipShape(Circle())
-            .overlay(Circle().strokeBorder(.white, lineWidth: 3))
-            .shadow(color: .black.opacity(0.14), radius: 8, y: 4)
+    private func pause(_ seconds: TimeInterval) async {
+        try? await Task.sleep(nanoseconds: UInt64(seconds * 1_000_000_000))
     }
 }
 

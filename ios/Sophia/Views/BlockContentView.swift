@@ -408,7 +408,6 @@ enum InlineAttributedBuilder {
            let url = GlossaryStore.linkURL(courseId: courseId, courseTitle: courseTitle, displayTerm: term) {
             attributes[glossaryURLKey] = url
             // Un mot du glossaire : souligné en pointillés, dans l'encre du texte (maquette).
-            _ = accent
             attributes[.underlineStyle] = NSUnderlineStyle.single.rawValue | NSUnderlineStyle.patternDot.rawValue
             attributes[.underlineColor] = DS.uiInk
             attributes[.foregroundColor] = DS.uiInk

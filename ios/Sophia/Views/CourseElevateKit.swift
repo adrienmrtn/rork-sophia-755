@@ -364,7 +364,7 @@ struct CourseQuizOptionCard: View {
         }
         .padding(.horizontal, 16)
         .padding(.vertical, 12)
-        .frame(minHeight: state == .correct ? 60 : 52)
+        .frame(minHeight: 54)
         .dsOptionCard(state)
         .contentShape(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
     }

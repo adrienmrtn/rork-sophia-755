@@ -93,7 +93,7 @@ struct TrainingView: View {
 
     /// Pastille posée sur l'illustration selon l'état de l'entraînement.
     private enum EntryBadge {
-        case none
+        case plain
         case done
         case locked
     }
@@ -160,7 +160,7 @@ struct TrainingView: View {
     // Des questions sont à réviser maintenant.
     private func readyContent(due: [(course: Course, question: QuizQuestion)]) -> some View {
         entryMessage(
-            badge: .none,
+            badge: .plain,
             title: languageManager.text("training.readyTitle"),
             subtitle: String(format: languageManager.text("training.dueCount"), due.count)
         )
@@ -253,7 +253,7 @@ struct TrainingView: View {
     @ViewBuilder
     private func entryBadgeView(_ badge: EntryBadge) -> some View {
         switch badge {
-        case .none:
+        case .plain:
             EmptyView()
         case .done:
             DSCheckBadge(size: 38, delay: 0.25)
