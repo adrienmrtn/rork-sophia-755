@@ -3,9 +3,6 @@ package app.rork.sophia.ui.onboarding
 import android.content.Context
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.LinearEasing
-import androidx.compose.animation.core.Spring
-import androidx.compose.animation.core.animateFloatAsState
-import androidx.compose.animation.core.spring
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
@@ -39,7 +36,6 @@ import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.graphics.drawscope.rotate
 import androidx.compose.ui.graphics.drawscope.scale
-import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.text.AnnotatedString
@@ -274,27 +270,71 @@ internal fun CheckBadge(size: Dp, modifier: Modifier = Modifier) {
     }
 }
 
-/** The page dots under the presentation pages: current one in ink, the others faded. */
+// MARK: - « Paper » laurels (Elevate arrondi)
+
+/** Blue-grey of the laurels of the mock-ups. */
+internal val PaperLaurelTint = Color(0xFFB7C0CF)
+
+/** The seven leaves of the left branch, in a 32 × 64 frame (x, y, rotation in degrees). */
+private val PAPER_LAUREL_LEAVES = listOf(
+    Triple(23.0f, 8.4f, 10f),
+    Triple(15.0f, 14.3f, -12f),
+    Triple(9.7f, 22.7f, -34f),
+    Triple(8.0f, 32.5f, -56f),
+    Triple(10.1f, 42.2f, -78f),
+    Triple(15.6f, 50.4f, -100f),
+    Triple(23.8f, 55.9f, -122f),
+)
+
+/**
+ * A laurel branch drawn leaf by leaf (seven leaves in an arc), the « Elevate arrondi »
+ * variant of [LaurelBranch], which the frozen pages keep. [mirrored] gives the right branch.
+ */
 @Composable
-internal fun PagerDots(count: Int, current: Int, modifier: Modifier = Modifier) {
+internal fun PaperLaurelBranch(
+    height: Dp,
+    modifier: Modifier = Modifier,
+    tint: Color = PaperLaurelTint,
+    mirrored: Boolean = false,
+) {
+    // A right-to-left row swaps the two branches; flip the drawing so each still opens outwards.
+    val flip = mirrored != (LocalLayoutDirection.current == LayoutDirection.Rtl)
+    Canvas(modifier = modifier.width(height * 0.5f).height(height)) {
+        val sx = size.width / 32f
+        val sy = size.height / 64f
+        scale(scaleX = if (flip) -1f else 1f, scaleY = 1f, pivot = Offset(size.width / 2f, size.height / 2f)) {
+            PAPER_LAUREL_LEAVES.forEach { (x, y, degrees) ->
+                // The frame's x origin is shifted by 2, like the mock-up's viewBox.
+                val center = Offset((x - 2f) * sx, y * sy)
+                rotate(degrees = degrees, pivot = center) {
+                    drawOval(
+                        color = tint,
+                        topLeft = Offset(center.x - 3.4f * sx, center.y - 7.5f * sy),
+                        size = Size(6.8f * sx, 15f * sy),
+                    )
+                }
+            }
+        }
+    }
+}
+
+/** Two paper laurels around a block (user count, store rating). */
+@Composable
+internal fun PaperLaurels(
+    modifier: Modifier = Modifier,
+    height: Dp = 60.dp,
+    content: @Composable () -> Unit,
+) {
     Row(
         modifier = modifier,
-        horizontalArrangement = Arrangement.spacedBy(8.dp),
         verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.spacedBy(6.dp, Alignment.CenterHorizontally),
     ) {
-        repeat(count) { i ->
-            val scale by animateFloatAsState(
-                targetValue = if (i == current) 1f else 0.85f,
-                animationSpec = spring(dampingRatio = 0.8f, stiffness = Spring.StiffnessMedium),
-                label = "pagerDot",
-            )
-            Box(
-                modifier = Modifier
-                    .size(8.dp)
-                    .graphicsLayer { scaleX = scale; scaleY = scale }
-                    .background(if (i == current) OV2.ink else OV2.ink.copy(alpha = 0.18f), CircleShape),
-            )
+        PaperLaurelBranch(height = height)
+        Box(modifier = Modifier.weight(1f, fill = false), contentAlignment = Alignment.Center) {
+            content()
         }
+        PaperLaurelBranch(height = height, mirrored = true)
     }
 }
 

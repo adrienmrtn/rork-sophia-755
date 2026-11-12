@@ -1,144 +1,381 @@
 package app.rork.sophia.ui.onboarding
 
-import androidx.activity.compose.BackHandler
-import androidx.compose.animation.core.Animatable
-import androidx.compose.animation.core.Spring
+import android.content.Context
+import androidx.annotation.DrawableRes
+import androidx.compose.animation.core.AnimationSpec
+import androidx.compose.animation.core.LinearEasing
 import androidx.compose.animation.core.animateFloatAsState
-import androidx.compose.animation.core.spring
-import androidx.compose.foundation.ExperimentalFoundationApi
+import androidx.compose.animation.core.animateIntAsState
+import androidx.compose.animation.core.tween
+import androidx.compose.foundation.Canvas
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
+import androidx.compose.foundation.gestures.detectHorizontalDragGestures
+import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.layout.wrapContentWidth
-import androidx.compose.foundation.pager.HorizontalPager
-import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Bolt
+import androidx.compose.material.icons.filled.Check
+import androidx.compose.material.icons.filled.LocalFireDepartment
+import androidx.compose.material.icons.filled.Pause
 import androidx.compose.material.icons.filled.Public
-import androidx.compose.material.icons.outlined.Schedule
+import androidx.compose.material.icons.filled.Replay
+import androidx.compose.material.icons.filled.Star
+import androidx.compose.material.icons.outlined.EmojiEvents
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.Stable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableFloatStateOf
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.rememberCoroutineScope
-import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.rememberUpdatedState
+import androidx.compose.runtime.saveable.Saver
+import androidx.compose.runtime.saveable.listSaver
 import androidx.compose.runtime.setValue
 import androidx.compose.runtime.withFrameNanos
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.draw.clipToBounds
-import androidx.compose.ui.draw.drawWithContent
-import androidx.compose.ui.draw.shadow
-import androidx.compose.ui.graphics.BlendMode
-import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.draw.drawBehind
+import androidx.compose.ui.geometry.CornerRadius
+import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.CompositingStrategy
+import androidx.compose.ui.graphics.PathEffect
 import androidx.compose.ui.graphics.graphicsLayer
-import androidx.compose.ui.graphics.lerp
+import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalLayoutDirection
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.semantics.clearAndSetSemantics
+import androidx.compose.ui.semantics.heading
+import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.text.AnnotatedString
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
-import androidx.compose.ui.unit.Dp
+import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.zIndex
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleEventObserver
+import androidx.lifecycle.compose.LocalLifecycleOwner
+import app.rork.sophia.R
 import app.rork.sophia.data.AuthorStore
 import app.rork.sophia.data.ContentCatalog
 import app.rork.sophia.data.StringStore
+import app.rork.sophia.data.stripInlineMarkup
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.CourseSummary
-import app.rork.sophia.ui.components.CourseImage
+import app.rork.sophia.domain.QuizQuestion
+import app.rork.sophia.domain.QuizQuestionType
+import app.rork.sophia.domain.Subject
+import app.rork.sophia.domain.formatted
+import app.rork.sophia.ui.components.DSCheckBadge
+import app.rork.sophia.ui.components.DSEyebrow
+import app.rork.sophia.ui.components.DSMotion
+import app.rork.sophia.ui.components.DSOptionState
+import app.rork.sophia.ui.components.DSSegmentedProgress
+import app.rork.sophia.ui.components.dsHighlighted
+import app.rork.sophia.ui.components.dsOptionCard
+import app.rork.sophia.ui.components.dsStagger
+import app.rork.sophia.ui.components.rememberHaptics
+import app.rork.sophia.ui.theme.DS
+import app.rork.sophia.ui.theme.PlusJakartaSans
 import app.rork.sophia.ui.theme.uppercaseInApp
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+import java.util.Locale
+
+// region Courses shown as examples
 
 /**
- * The presentation pages right after the language, as in iOS 1.1.8: pages joined by dots at
- * the bottom and one « Continue » button, browsed with the button or a swipe. The last one
- * leads to « Join the 500,000 users » ([SocialProofStep]).
- *
- * Lessons (four cards) · Real researchers (professors and universities) · Quizzes (course
- * pictures) · Personalized route (a preview of the Parcours tab).
+ * The courses of the catalogue the presentation screens borrow (lesson card, audio player,
+ * quiz question). A course withheld from a language is replaced by another one.
  */
-@OptIn(ExperimentalFoundationApi::class)
-@Composable
-internal fun IntroCarouselStep(language: AppLanguage, onContinue: () -> Unit) {
-    val context = LocalContext.current
-    val pageCount = 4
-    var savedPage by rememberSaveable { mutableIntStateOf(0) }
-    val pagerState = rememberPagerState(initialPage = savedPage) { pageCount }
-    val scope = rememberCoroutineScope()
-    LaunchedEffect(pagerState.currentPage) { savedPage = pagerState.currentPage }
-    // Back turns the pages back first; on the first page it leaves the carousel as usual.
-    BackHandler(enabled = pagerState.currentPage > 0) {
-        scope.launch { pagerState.animateScrollToPage(pagerState.currentPage - 1) }
+internal object OnboardingIntroCatalog {
+    /**
+     * The most-read courses of the app, also picked for a catchy title and varied subjects
+     * (same list as iOS).
+     */
+    val featuredCourseIds = listOf(
+        "course_42_pourquoi_reve_t_on",
+        "course_67_qu_est_ce_qu_un_trou_noir",
+        "course_201_la_naissance_du_conflit_israelo_palestin",
+        "course_150_la_nuit_etoilee_van_gogh",
+    )
+
+    /** The course of the « quiz » and « audio » illustrations. */
+    const val BLACK_HOLE_COURSE_ID = "course_67_qu_est_ce_qu_un_trou_noir"
+
+    /** The course of the « a Sophia lesson » card. */
+    const val DREAM_COURSE_ID = "course_42_pourquoi_reve_t_on"
+
+    /** The course asked for, else the first featured course the language carries, else any. */
+    fun pick(courses: List<CourseSummary>, preferring: String): CourseSummary? {
+        val byId = courses.associateBy { it.id }
+        return byId[preferring]
+            ?: featuredCourseIds.firstNotNullOfOrNull { byId[it] }
+            ?: courses.firstOrNull()
     }
 
-    Column(modifier = Modifier.fillMaxSize(), horizontalAlignment = Alignment.CenterHorizontally) {
-        HorizontalPager(
-            state = pagerState,
-            modifier = Modifier.weight(1f).fillMaxWidth(),
-        ) { page ->
-            val active = pagerState.currentPage == page
-            when (page) {
-                0 -> IntroLessonsPage(language, active)
-                1 -> IntroResearchersPage(language, active)
-                2 -> IntroQuizzesPage(language, active)
-                else -> IntroRoutePage(language, active)
-            }
-        }
-        PagerDots(
-            count = pageCount,
-            current = pagerState.currentPage,
-            modifier = Modifier.padding(vertical = 18.dp),
-        )
-        OnboardingCta(
-            text = StringStore.text(context, "common.continue", language),
-            onClick = {
-                // « Continue » turns the pages, then leaves the carousel after the last one.
-                if (pagerState.currentPage < pageCount - 1) {
-                    scope.launch {
-                        pagerState.animateScrollToPage(
-                            pagerState.currentPage + 1,
-                            animationSpec = spring(dampingRatio = 0.9f, stiffness = Spring.StiffnessMediumLow),
-                        )
-                    }
-                } else {
-                    onContinue()
-                }
-            },
+    /** From the catalogue already in memory; null until it is loaded. Never reads a file. */
+    fun cachedCourse(language: AppLanguage, preferring: String): CourseSummary? =
+        ContentCatalog.cachedSummaries(language)?.let { pick(it, preferring) }
+
+    suspend fun course(context: Context, language: AppLanguage, preferring: String): CourseSummary? =
+        runCatching { pick(ContentCatalog.summariesAsync(context.applicationContext, language), preferring) }
+            .getOrNull()
+}
+
+// endregion
+
+// region Carousel state
+
+/**
+ * Current page and clock of the presentation carousel. The coordinator owns it: it feeds
+ * the segments of the header, and its back arrow walks the pages back first.
+ */
+@Stable
+internal class OnboardingCarouselState(initialPage: Int = 0, initialHold: Boolean = false) {
+    var page by mutableIntStateOf(initialPage.coerceIn(0, PAGE_COUNT - 1))
+        private set
+
+    /** Bumped each time the page starts its five seconds again. */
+    var clock by mutableIntStateOf(0)
+        private set
+
+    /**
+     * The current page waits for the user (they came back to it): letting it move on by
+     * itself would send them back where they came from.
+     */
+    var holdsCurrentPage by mutableStateOf(initialHold)
+        private set
+
+    /**
+     * Auto-advance cut for the whole carousel (animations removed, screen reader): content
+     * that changes on its own gets in the way of those readers.
+     */
+    var autoAdvanceDisabled by mutableStateOf(false)
+
+    /** How far the current page is through its time, 0 to 1: the fill of its header segment. */
+    var progress by mutableFloatStateOf(0f)
+
+    /** Does the current page advance by itself? */
+    val isRunning: Boolean get() = !holdsCurrentPage && !autoAdvanceDisabled
+
+    fun go(to: Int, hold: Boolean = false) {
+        page = to.coerceIn(0, PAGE_COUNT - 1)
+        holdsCurrentPage = hold
+        restartClock()
+    }
+
+    /** Sets the page's clock back to zero (the carousel appears, the app comes back). */
+    fun restartClock() {
+        progress = 0f
+        clock += 1
+    }
+
+    companion object {
+        const val PAGE_COUNT = 4
+
+        /** Time a page stays before moving on by itself, in milliseconds. */
+        const val PAGE_MILLIS = 5000
+
+        /** Keeps the page across a rotation; the clock starts again. */
+        val StateSaver: Saver<OnboardingCarouselState, Any> = listSaver<OnboardingCarouselState, Int>(
+            save = { listOf(it.page, if (it.holdsCurrentPage) 1 else 0) },
+            restore = { OnboardingCarouselState(initialPage = it[0], initialHold = it[1] == 1) },
         )
     }
 }
 
-/** Runs [action] once, when the page becomes the current one (the pager composes neighbours early). */
+// endregion
+
+// region Carousel
+
+/**
+ * Screens 5 to 8 — four presentation pages (quiz, path, duels, audio) that advance by
+ * themselves every five seconds. A tap or a swipe advances too; « Continue » goes to the
+ * next page, then to the next screen; the end of the fourth page moves on by itself.
+ *
+ * Same layout on the four: illustration (flexible), title and subtitle of fixed height,
+ * button. The segments and the back arrow live in the coordinator's header, fed by [state].
+ */
 @Composable
-private fun OnPageActivated(active: Boolean, action: suspend () -> Unit) {
+internal fun IntroCarouselStep(
+    language: AppLanguage,
+    state: OnboardingCarouselState,
+    onContinue: () -> Unit,
+) {
+    val context = LocalContext.current
+    val haptics = rememberHaptics()
+    val reduceMotion = rememberOnboardingReduceMotion()
+    val screenReader = rememberOnboardingScreenReader()
+    val rtl = LocalLayoutDirection.current == LayoutDirection.Rtl
+    val lastPage = OnboardingCarouselState.PAGE_COUNT - 1
+    val leave by rememberUpdatedState(onContinue)
+
+    // Back in the foreground, the page takes its five whole seconds again.
+    var resumed by remember { mutableStateOf(true) }
+    val lifecycleOwner = LocalLifecycleOwner.current
+    DisposableEffect(lifecycleOwner) {
+        val observer = LifecycleEventObserver { _, event ->
+            when (event) {
+                Lifecycle.Event.ON_RESUME -> {
+                    resumed = true
+                    state.restartClock()
+                }
+                Lifecycle.Event.ON_PAUSE -> resumed = false
+                else -> Unit
+            }
+        }
+        lifecycleOwner.lifecycle.addObserver(observer)
+        onDispose { lifecycleOwner.lifecycle.removeObserver(observer) }
+    }
+    LaunchedEffect(reduceMotion, screenReader) {
+        state.autoAdvanceDisabled = reduceMotion || screenReader
+    }
+
+    // Next page, or next screen after the last one.
+    fun goNext(auto: Boolean) {
+        if (state.page < lastPage) {
+            if (auto) haptics.tick()
+            state.go(state.page + 1)
+        } else {
+            leave()
+        }
+    }
+
+    // A touch on the page: like « Continue », with a light tick (leaving the carousel
+    // already has the one of the screen change).
+    fun userAdvance() {
+        if (state.page < lastPage) haptics.tap()
+        goNext(auto = false)
+    }
+
+    fun goPrevious() {
+        if (state.page <= 0) return
+        haptics.tap()
+        state.go(state.page - 1, hold = true)
+    }
+
+    // The clock of the page: it fills the header segment, then moves on. Restarted on each
+    // new page, each reset, and when auto-advance stops or resumes.
+    LaunchedEffect(state.page, state.clock, state.isRunning, resumed) {
+        if (!state.isRunning || !resumed) return@LaunchedEffect
+        val start = withFrameNanos { it }
+        var fraction = 0f
+        while (fraction < 1f) {
+            fraction = withFrameNanos { now ->
+                ((now - start) / 1_000_000f / OnboardingCarouselState.PAGE_MILLIS).coerceIn(0f, 1f)
+            }
+            state.progress = fraction
+        }
+        goNext(auto = true)
+    }
+
+    Column(modifier = Modifier.fillMaxSize()) {
+        // The four pages stay mounted, stacked: the current one is opaque, the others wait
+        // shifted on each side. The slide thus always follows the navigation, forwards and back.
+        Box(
+            modifier = Modifier
+                .weight(1f)
+                .fillMaxWidth()
+                .pointerInput(Unit) { detectTapGestures { userAdvance() } }
+                .pointerInput(rtl) {
+                    val threshold = 40.dp.toPx()
+                    var travelled = 0f
+                    detectHorizontalDragGestures(
+                        onDragStart = { travelled = 0f },
+                        onDragEnd = {
+                            // Swiping towards the start of the line advances, towards the end goes back.
+                            val towardNext = if (rtl) travelled else -travelled
+                            if (towardNext > threshold) {
+                                userAdvance()
+                            } else if (towardNext < -threshold) {
+                                goPrevious()
+                            }
+                        },
+                        onHorizontalDrag = { _, amount -> travelled += amount },
+                    )
+                },
+        ) {
+            CarouselSlot(0, state.page, reduceMotion, rtl) { IntroQuizPage(language, active = state.page == 0) }
+            CarouselSlot(1, state.page, reduceMotion, rtl) { IntroRoutePage(language, active = state.page == 1) }
+            CarouselSlot(2, state.page, reduceMotion, rtl) { IntroDuelsPage(language, active = state.page == 2) }
+            CarouselSlot(3, state.page, reduceMotion, rtl) { IntroAudioPage(language, active = state.page == 3) }
+        }
+        OnboardingCta(
+            text = StringStore.text(context, "common.continue", language),
+            onClick = { goNext(auto = false) },
+            modifier = Modifier.padding(top = 20.dp),
+        )
+    }
+}
+
+/** One page of the stack: opaque when current; upcoming pages wait on the reading side, past ones on the other. */
+@Composable
+private fun CarouselSlot(
+    index: Int,
+    page: Int,
+    reduceMotion: Boolean,
+    rtl: Boolean,
+    content: @Composable () -> Unit,
+) {
+    val isCurrent = index == page
+    val spec: AnimationSpec<Float> = if (reduceMotion) tween(200) else DSMotion.reveal()
+    val alpha by animateFloatAsState(if (isCurrent) 1f else 0f, spec, label = "carouselAlpha")
+    val side = when {
+        reduceMotion || isCurrent -> 0f
+        index > page -> 1f
+        else -> -1f
+    } * (if (rtl) -1f else 1f)
+    val shift by animateFloatAsState(side, spec, label = "carouselShift")
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+            .graphicsLayer {
+                this.alpha = alpha.coerceIn(0f, 1f)
+                translationX = shift * 26.dp.toPx()
+            }
+            .then(if (isCurrent) Modifier else Modifier.clearAndSetSemantics { }),
+    ) {
+        content()
+    }
+}
+
+/**
+ * Runs [action] once, when the page becomes the current one of the carousel (or if it is
+ * already). The four pages are mounted from the start: a plain `LaunchedEffect(Unit)` would
+ * play the animations of the pages still hidden.
+ */
+@Composable
+internal fun OnIntroPageActivated(active: Boolean, action: suspend () -> Unit) {
     var fired by remember { mutableStateOf(false) }
     LaunchedEffect(active) {
         if (active && !fired) {
@@ -149,636 +386,1033 @@ private fun OnPageActivated(active: Boolean, action: suspend () -> Unit) {
 }
 
 /**
- * Shared frame of the presentation pages: the title at the top, the visual centred in what
- * is left, the subtitle right above the dots and the button.
+ * Shared frame of the four pages: the illustration in what is left (scaled down as one
+ * block when it does not fit), then a title block and a subtitle block of fixed height, so
+ * nothing jumps from one page to the next.
  */
 @Composable
 private fun IntroPageFrame(
     title: String,
-    subtitle: String? = null,
-    visual: @Composable (width: Dp, height: Dp) -> Unit,
+    subtitle: String,
+    visual: @Composable () -> Unit,
 ) {
-    BoxWithConstraints(modifier = Modifier.fillMaxSize()) {
-        val compact = maxHeight < 600.dp
-        val top = if (compact) 40.dp else 64.dp
-        val subtitleBlock = if (subtitle != null) 70.dp else 0.dp
-        val visualHeight = (maxHeight - top - 132.dp - subtitleBlock - 24.dp).coerceIn(170.dp, 300.dp)
-        val visualWidth = maxWidth
-        Column(
-            modifier = Modifier.fillMaxSize(),
-            horizontalAlignment = Alignment.CenterHorizontally,
-        ) {
-            Spacer(Modifier.height(top))
-            // Up to four lines, shrinking to 75 % before giving up, like iOS's
-            // `minimumScaleFactor(0.75)`: the « personalized route » title runs to five
-            // lines in French at full size and lost its end.
-            val titleStyle = OV2.title
-            var titleScale by remember(title) { mutableFloatStateOf(1f) }
-            var titleFits by remember(title) { mutableStateOf(false) }
-            Text(
-                text = highlighted(title),
-                style = titleStyle.copy(
-                    fontSize = titleStyle.fontSize * titleScale,
-                    lineHeight = titleStyle.lineHeight * titleScale,
-                ),
-                textAlign = TextAlign.Center,
-                maxLines = 4,
-                onTextLayout = { layout ->
-                    if (layout.hasVisualOverflow && titleScale > 0.75f) {
-                        titleScale = (titleScale - 0.05f).coerceAtLeast(0.75f)
-                    } else {
-                        titleFits = true
-                    }
-                },
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = 28.dp)
-                    .drawWithContent { if (titleFits) drawContent() },
-            )
-            Spacer(Modifier.weight(1f))
-            Box(
-                modifier = Modifier.fillMaxWidth().height(visualHeight),
-                contentAlignment = Alignment.Center,
-            ) {
-                visual(visualWidth, visualHeight)
-            }
-            Spacer(Modifier.weight(1f))
-            if (subtitle != null) {
-                Text(
-                    text = subtitle,
-                    style = OV2.body,
-                    textAlign = TextAlign.Center,
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(horizontal = 32.dp)
-                        .padding(bottom = 6.dp),
-                )
-            }
-        }
-    }
-}
-
-// MARK: - 1. Lessons
-
-/**
- * The most-read courses of the app, also picked for a catchy title and varied subjects (same
- * list as iOS). A course withheld from a language is replaced by another one.
- */
-private val FEATURED_COURSE_IDS = listOf(
-    "course_42_pourquoi_reve_t_on",
-    "course_67_qu_est_ce_qu_un_trou_noir",
-    "course_201_la_naissance_du_conflit_israelo_palestin",
-    "course_150_la_nuit_etoilee_van_gogh",
-)
-
-/** « Get smarter with exciting 10-minute lessons »: four course cards land one after the other. */
-@Composable
-private fun IntroLessonsPage(language: AppLanguage, active: Boolean) {
-    val context = LocalContext.current
-    val haptics = rememberOnboardingHaptics()
-    var courses by remember(language) { mutableStateOf<List<CourseSummary>>(emptyList()) }
-    var revealed by remember { mutableIntStateOf(0) }
-    LaunchedEffect(language) {
-        val all = ContentCatalog.summariesAsync(context.applicationContext, language)
-        val byId = all.associateBy { it.id }
-        val picked = FEATURED_COURSE_IDS.mapNotNull { byId[it] }
-        val fill = all.filter { it.id !in FEATURED_COURSE_IDS }.shuffled().take(FEATURED_COURSE_IDS.size - picked.size)
-        courses = picked + fill
-    }
-    OnPageActivated(active) {
-        delay(300)
-        repeat(FEATURED_COURSE_IDS.size) { i ->
-            revealed = i + 1
-            haptics.selection()
-            delay(220)
-        }
-    }
-
-    IntroPageFrame(title = StringStore.text(context, "onboardingV2.intro.lessons.title", language)) { _, height ->
-        val spacing = 10.dp
-        val count = courses.size.coerceAtLeast(1)
-        val cardHeight = ((height - spacing * (count - 1)) / count).coerceIn(54.dp, 74.dp)
-        Column(
-            modifier = Modifier.fillMaxWidth().padding(horizontal = 28.dp),
-            verticalArrangement = Arrangement.spacedBy(spacing, Alignment.CenterVertically),
-        ) {
-            courses.forEachIndexed { i, course ->
-                RevealedItem(shown = i < revealed, fromY = 30f, fromScale = 0.94f) {
-                    IntroCourseCard(course = course, language = language, height = cardHeight)
-                }
-            }
-        }
-    }
-}
-
-/** Fade, lift and scale in once [shown] turns true. */
-@Composable
-private fun RevealedItem(
-    shown: Boolean,
-    fromY: Float,
-    fromScale: Float,
-    modifier: Modifier = Modifier,
-    fromRotation: Float = 0f,
-    dampingRatio: Float = 0.78f,
-    content: @Composable () -> Unit,
-) {
-    val progress by animateFloatAsState(
-        targetValue = if (shown) 1f else 0f,
-        animationSpec = spring(dampingRatio = dampingRatio, stiffness = Spring.StiffnessMediumLow),
-        label = "introReveal",
-    )
-    Box(
-        modifier = modifier.graphicsLayer {
-            alpha = progress.coerceIn(0f, 1f)
-            translationY = (1f - progress) * fromY * density
-            val s = fromScale + (1f - fromScale) * progress
-            scaleX = s
-            scaleY = s
-            rotationZ = (1f - progress) * fromRotation
-        },
-    ) {
-        content()
-    }
-}
-
-/** Thumbnail on the left, subject and title, the duration on the right. */
-@Composable
-private fun IntroCourseCard(course: CourseSummary, language: AppLanguage, height: Dp) {
-    val context = LocalContext.current
-    val shape = RoundedCornerShape(18.dp)
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .height(height)
-            .shadow(10.dp, shape, ambientColor = Color.Black.copy(alpha = 0.07f), spotColor = Color.Black.copy(alpha = 0.07f))
-            .clip(shape)
-            .background(OV2.surface)
-            .border(1.dp, OV2.hairline, shape)
-            .padding(start = 7.dp, top = 6.dp, bottom = 6.dp, end = 12.dp),
-        verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.spacedBy(12.dp),
-    ) {
-        CourseImage(
-            courseId = course.id,
+    Column(modifier = Modifier.fillMaxSize().padding(horizontal = ONBOARDING_SIDE_INSET)) {
+        OnboardingFitHeight(
             modifier = Modifier
-                .size(height - 12.dp)
-                .clip(RoundedCornerShape(12.dp)),
-            maxEdgePx = 240,
-            letterSize = 18.sp,
+                .weight(1f)
+                .fillMaxWidth()
+                .padding(top = 10.dp)
+                .clearAndSetSemantics { },
+        ) {
+            visual()
+        }
+        // Three lines of title (four by tightening) and two of subtitle.
+        OnboardingShrinkText(
+            text = dsHighlighted(title, DS.accent),
+            style = TextStyle(
+                fontFamily = PlusJakartaSans,
+                fontWeight = FontWeight.Medium,
+                fontSize = 22.sp,
+                lineHeight = 30.sp,
+                color = DS.ink,
+            ),
+            maxLines = 4,
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(top = 16.dp)
+                .height(96.dp)
+                .semantics { heading() },
         )
-        Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(2.dp)) {
-            Text(
-                text = StringStore.text(context, "subject.${course.subjectEnum.storageKey}.short", language)
-                    .uppercaseInApp(),
-                style = OV2.caption.copy(
-                    fontSize = 11.sp,
-                    fontWeight = FontWeight.Bold,
-                    letterSpacing = 0.8.sp,
-                    lineHeight = 13.sp,
-                    color = lerp(course.subjectEnum.color, Color.Black, 0.3f),
-                ),
-                maxLines = 1,
-            )
-            Text(
-                text = course.title,
-                style = OV2.subheadline.copy(color = OV2.ink, fontWeight = FontWeight.Bold, fontSize = 14.sp, lineHeight = 17.sp),
-                maxLines = 2,
-                overflow = TextOverflow.Ellipsis,
-            )
-        }
-        Row(
+        OnboardingShrinkText(
+            text = AnnotatedString(subtitle),
+            style = TextStyle(
+                fontFamily = PlusJakartaSans,
+                fontWeight = FontWeight.Normal,
+                fontSize = 15.sp,
+                lineHeight = 21.sp,
+                color = DS.inkSecondary,
+            ),
+            maxLines = 3,
+            minScale = 0.75f,
             modifier = Modifier
-                .clip(CircleShape)
-                .background(app.rork.sophia.ui.theme.DS.accentTint)
-                .padding(horizontal = 8.dp, vertical = 5.dp),
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(4.dp),
-        ) {
-            Icon(Icons.Outlined.Schedule, contentDescription = null, tint = OV2.accentSoft, modifier = Modifier.size(11.dp))
-            Text(
-                text = StringStore.text(context, "onboardingV2.screenTime.minutes", language, 10),
-                style = OV2.caption.copy(fontSize = 11.sp, fontWeight = FontWeight.Bold, color = OV2.accentSoft),
-                maxLines = 1,
-            )
-        }
+                .fillMaxWidth()
+                .padding(top = 8.dp)
+                .height(44.dp),
+        )
     }
 }
 
-// MARK: - 2. Real researchers
+// endregion
 
-/** « Written by real researchers »: the professors' faces in circles, then the universities' logos scrolling by. */
-@Composable
-private fun IntroResearchersPage(language: AppLanguage, active: Boolean) {
-    val context = LocalContext.current
-    val haptics = rememberOnboardingHaptics()
-    val portraits = remember { AuthorStore.all(context).mapNotNull { it.bundledPhotoModel } }
-    val logos = remember { onboardingAssets(context, "university_") }
-    var revealedPortraits by remember { mutableIntStateOf(0) }
-    var marqueeIn by remember { mutableStateOf(false) }
-    OnPageActivated(active) {
-        delay(250)
-        repeat(maxOf(portraits.size, 8)) { i ->
-            revealedPortraits = i + 1
-            if (i < portraits.size) haptics.selection()
-            delay(110)
-        }
-        delay(100)
-        marqueeIn = true
-    }
-    val marqueeProgress by animateFloatAsState(
-        targetValue = if (marqueeIn) 1f else 0f,
-        animationSpec = spring(dampingRatio = 0.85f, stiffness = Spring.StiffnessLow),
-        label = "marqueeIn",
-    )
+// region 5. Quiz
 
-    IntroPageFrame(
-        title = StringStore.text(context, "onboardingV2.intro.researchers.title", language),
-        subtitle = StringStore.text(context, "onboardingV2.intro.researchers.subtitle", language),
-    ) { width, height ->
-        Column(
-            horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.spacedBy(if (height < 220.dp) 22.dp else 34.dp, Alignment.CenterVertically),
-        ) {
-            val count = portraits.size.coerceAtLeast(1)
-            val overlap = 12.dp
-            val size = ((width - 56.dp + overlap * (count - 1)) / count).coerceAtMost(60.dp)
-            Row(horizontalArrangement = Arrangement.spacedBy(-overlap)) {
-                portraits.forEachIndexed { i, url ->
-                    RevealedItem(
-                        shown = i < revealedPortraits,
-                        fromY = 0f,
-                        fromScale = 0.3f,
-                        dampingRatio = 0.65f,
-                        modifier = Modifier.zIndex((portraits.size - i).toFloat()),
-                    ) {
-                        RoundPortrait(url = url, size = size, ring = 2.5.dp)
-                    }
-                }
-            }
-            LogoMarquee(
-                logos = logos,
-                logoHeight = (height * 0.3f).coerceAtMost(72.dp),
-                paused = !active || !marqueeIn,
-                modifier = Modifier.graphicsLayer {
-                    alpha = marqueeProgress
-                    translationY = (1f - marqueeProgress) * 14f * density
-                },
-            )
-        }
+private val COMBO_GOLD = Color(0xFFB17F10)
+private val COMBO_TINT = Color(0xFFFBEFC9)
+private val COMBO_INK = Color(0xFF6B4E00)
+
+/** What the card shows: a multiple-choice question, its right answer and two others. */
+private data class QuizSample(
+    val eyebrow: String,
+    val question: String,
+    /** The answers in display order. */
+    val options: List<String>,
+    val correctIndex: Int,
+    /** Rank of the question in its quiz (1 for the first) and size of the quiz. */
+    val position: Int,
+    val total: Int,
+)
+
+/**
+ * A multiple-choice question of the black-hole course (the second of the quiz for
+ * preference: the x2 combo makes sense there), else the example of the string table.
+ */
+private suspend fun loadQuizSample(context: Context, language: AppLanguage): QuizSample =
+    withContext(Dispatchers.IO) {
+        val app = context.applicationContext
+        val fromCatalogue = runCatching {
+            val course = ContentCatalog.summaries(app, language)
+                .firstOrNull { it.id == OnboardingIntroCatalog.BLACK_HOLE_COURSE_ID }
+            course?.let { catalogueQuizSample(app, language, it, ContentCatalog.quizQuestions(app, language, it.id)) }
+        }.getOrNull()
+        fromCatalogue ?: QuizSample(
+            eyebrow = StringStore.text(app, "subject.${Subject.SCIENCES.storageKey}.short", language),
+            question = StringStore.text(app, "onboardingV2.elevate.quiz.sample.question", language),
+            options = listOf(
+                StringStore.text(app, "onboardingV2.elevate.quiz.sample.correct", language),
+                StringStore.text(app, "onboardingV2.elevate.quiz.sample.wrong1", language),
+                StringStore.text(app, "onboardingV2.elevate.quiz.sample.wrong2", language),
+            ),
+            correctIndex = 0,
+            position = 1,
+            total = 1,
+        )
     }
+
+private fun catalogueQuizSample(
+    context: Context,
+    language: AppLanguage,
+    course: CourseSummary,
+    quiz: List<QuizQuestion>,
+): QuizSample? {
+    // The second question and the following ones first, the first as a last resort.
+    val order = quiz.indices.drop(1) + quiz.indices.take(1)
+    for (index in order) {
+        val question = quiz[index]
+        val options = question.options ?: continue
+        val correct = question.correctIndex ?: continue
+        if (question.type != QuizQuestionType.MCQ || options.size < 3 || correct !in options.indices) continue
+
+        // The right answer and the first two others, in their original order.
+        val kept = (listOf(correct) + options.indices.filter { it != correct }.take(2)).sorted()
+        val texts = kept.map { stripInlineMarkup(options[it]) }
+        val prompt = stripInlineMarkup(question.question)
+        // A question or an answer too long does not fit in the card.
+        if (prompt.length > 110 || texts.any { it.length > 100 }) continue
+
+        val subject = StringStore.text(context, "subject.${course.subjectEnum.storageKey}.short", language)
+        val counter = StringStore.text(context, "duel.game.counter", language, index + 1, quiz.size)
+        return QuizSample(
+            eyebrow = "$subject · $counter",
+            question = prompt,
+            options = texts,
+            correctIndex = kept.indexOf(correct).coerceAtLeast(0),
+            position = index + 1,
+            total = quiz.size,
+        )
+    }
+    return null
 }
 
 /**
- * The universities' logos scrolling by without end. The band starts with the first logo
- * (Oxford) in the middle of the screen and drifts slowly to the left; it stays still while
- * the page is not showing it, and starts again from Oxford when it is revealed.
+ * « Sophia tests you with fun quizzes »: a real question of the catalogue, the right answer
+ * that validates itself, the « Excellent! » banner.
  */
 @Composable
-private fun LogoMarquee(
-    logos: List<String>,
-    logoHeight: Dp,
-    paused: Boolean,
-    modifier: Modifier = Modifier,
-) {
-    if (logos.isEmpty()) return
-    val density = LocalDensity.current
-    val slotWidth = logoHeight * 1.6f
-    val gap = 28.dp
-    val slotWidthPx = with(density) { slotWidth.toPx() }
-    val periodPx = with(density) { (slotWidth + gap).toPx() } * logos.size
-    // Points per second; the first iOS version moved at 38.
-    val speedPx = with(density) { 11.5.dp.toPx() }
-    var travelled by remember { mutableFloatStateOf(0f) }
-    LaunchedEffect(paused, periodPx) {
-        if (paused) return@LaunchedEffect
-        travelled = 0f
-        var last = withFrameNanos { it }
-        while (true) {
-            withFrameNanos { now ->
-                travelled = (travelled + (now - last) / 1_000_000_000f * speedPx) % periodPx
-                last = now
-            }
-        }
-    }
-    // Logos, not text: the band runs the same way in every language.
-    CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Ltr) {
-    BoxWithConstraints(
-        modifier = modifier
-            .fillMaxWidth()
-            .height(logoHeight + 12.dp)
-            .clipToBounds()
-            .graphicsLayer { compositingStrategy = CompositingStrategy.Offscreen }
-            .drawWithContent {
-                drawContent()
-                drawRect(
-                    brush = Brush.horizontalGradient(
-                        0f to Color.Transparent,
-                        0.12f to Color.Black,
-                        0.88f to Color.Black,
-                        1f to Color.Transparent,
-                    ),
-                    blendMode = BlendMode.DstIn,
-                )
-            },
-        contentAlignment = Alignment.CenterStart,
-    ) {
-        val startInset = (constraints.maxWidth - slotWidthPx) / 2f
-        Row(
-            modifier = Modifier
-                .wrapContentWidth(align = Alignment.Start, unbounded = true)
-                .graphicsLayer { translationX = startInset - periodPx - travelled },
-            horizontalArrangement = Arrangement.spacedBy(gap),
-            verticalAlignment = Alignment.CenterVertically,
-        ) {
-            repeat(3) {
-                logos.forEach { url ->
-                    AssetPicture(
-                        url = url,
-                        contentScale = ContentScale.Fit,
-                        modifier = Modifier.width(slotWidth).height(logoHeight),
-                    )
-                }
-            }
-        }
-    }
-    }
-}
-
-// MARK: - 3. Quizzes
-
-/** Six courses picked for their picture: Apollo 11, Tutankhamun, the Mona Lisa, the pyramids, the Crab Nebula, the Eiffel Tower. */
-private val QUIZ_IMAGE_COURSE_IDS = listOf(
-    "course_290_comment_les_etats_unis_ont_ils_gagne_la",
-    "course_247_pourquoi_les_momies_font_elles_peur",
-    "course_149_la_joconde",
-    "course_264_qui_a_vraiment_construit_les_pyramides",
-    "course_281_comment_meurt_une_etoile",
-    "course_241_pourquoi_voulait_on_demolir_la_tour_eiffel",
-)
-
-/** Squares that get a tick, in the order the ticks appear. */
-private val CHECKED_SQUARES = listOf(1, 3, 4)
-
-/** « Sophia tests you with fun quizzes »: course pictures in squares, one by one, then « right answer » ticks. */
-@Composable
-private fun IntroQuizzesPage(language: AppLanguage, active: Boolean) {
+private fun IntroQuizPage(language: AppLanguage, active: Boolean) {
     val context = LocalContext.current
-    val haptics = rememberOnboardingHaptics()
-    var revealed by remember { mutableIntStateOf(0) }
-    var badges by remember { mutableIntStateOf(0) }
-    OnPageActivated(active) {
-        delay(250)
-        repeat(QUIZ_IMAGE_COURSE_IDS.size) { i ->
-            revealed = i + 1
-            haptics.selection()
-            delay(140)
-        }
-        delay(250)
-        repeat(CHECKED_SQUARES.size) { i ->
-            badges = i + 1
-            haptics.commit()
-            delay(300)
-        }
+    val haptics = rememberHaptics()
+    val reduceMotion = rememberOnboardingReduceMotion()
+    var sample by remember(language) { mutableStateOf<QuizSample?>(null) }
+    LaunchedEffect(language) { sample = loadQuizSample(context, language) }
+    var answered by remember { mutableStateOf(false) }
+    // The answers are laid out; a moment later the right one validates itself, as if the
+    // reader had just touched it.
+    OnIntroPageActivated(active) {
+        if (!reduceMotion) delay(900)
+        answered = true
+        if (!reduceMotion) haptics.success()
     }
 
     IntroPageFrame(
         title = StringStore.text(context, "onboardingV2.intro.quizzes.title", language),
         subtitle = StringStore.text(context, "onboardingV2.intro.quizzes.subtitle", language),
-    ) { width, height ->
-        val columns = 3
-        val rows = QUIZ_IMAGE_COURSE_IDS.size / columns
-        val spacing = 12.dp
-        val side = minOf(
-            (width - 56.dp - spacing * (columns - 1)) / columns,
-            (height - spacing * (rows - 1)) / rows,
-        )
-        Column(verticalArrangement = Arrangement.spacedBy(spacing)) {
-            repeat(rows) { row ->
-                Row(horizontalArrangement = Arrangement.spacedBy(spacing)) {
-                    repeat(columns) { column ->
-                        val index = row * columns + column
-                        val badgeRank = CHECKED_SQUARES.indexOf(index)
-                        QuizSquare(
-                            courseId = QUIZ_IMAGE_COURSE_IDS[index],
-                            side = side,
-                            shown = index < revealed,
-                            tilt = if (index % 2 == 0) -8f else 8f,
-                            hasBadge = badgeRank >= 0,
-                            badgeShown = badgeRank in 0 until badges,
+    ) {
+        sample?.let { QuizCard(sample = it, answered = answered, language = language) }
+    }
+}
+
+@Composable
+private fun QuizCard(sample: QuizSample, answered: Boolean, language: AppLanguage) {
+    val context = LocalContext.current
+    val verdict by animateFloatAsState(if (answered) 1f else 0f, DSMotion.snappy(), label = "quizVerdict")
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(bottom = 2.dp)
+            .ov2Card()
+            .padding(top = 16.dp),
+        horizontalAlignment = Alignment.CenterHorizontally,
+    ) {
+        Column(
+            modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp),
+            horizontalAlignment = Alignment.CenterHorizontally,
+        ) {
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(10.dp),
+            ) {
+                DSSegmentedProgress(
+                    total = maxOf(sample.total, sample.position).coerceAtMost(10),
+                    filled = sample.position.coerceAtMost(10),
+                    modifier = Modifier.weight(1f),
+                    height = 5.dp,
+                    spacing = 3.dp,
+                )
+                if (sample.position >= 2) {
+                    Row(
+                        modifier = Modifier
+                            .graphicsLayer {
+                                alpha = verdict.coerceIn(0f, 1f)
+                                val scale = 0.6f + 0.4f * verdict
+                                scaleX = scale
+                                scaleY = scale
+                            }
+                            .background(COMBO_TINT, CircleShape)
+                            .padding(horizontal = 8.dp, vertical = 3.dp),
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.spacedBy(3.dp),
+                    ) {
+                        Icon(
+                            Icons.Filled.LocalFireDepartment,
+                            contentDescription = null,
+                            tint = COMBO_GOLD,
+                            modifier = Modifier.size(11.dp),
+                        )
+                        Text(
+                            text = "x2",
+                            fontFamily = PlusJakartaSans,
+                            fontWeight = FontWeight.ExtraBold,
+                            fontSize = 11.sp,
+                            color = COMBO_INK,
                         )
                     }
                 }
             }
-        }
-    }
-}
-
-@Composable
-private fun QuizSquare(
-    courseId: String,
-    side: Dp,
-    shown: Boolean,
-    tilt: Float,
-    hasBadge: Boolean,
-    badgeShown: Boolean,
-) {
-    val shape = RoundedCornerShape(18.dp)
-    val badgeScale by animateFloatAsState(
-        targetValue = if (badgeShown) 1f else 0.2f,
-        animationSpec = spring(dampingRatio = 0.55f, stiffness = Spring.StiffnessMedium),
-        label = "quizBadge",
-    )
-    RevealedItem(shown = shown, fromY = 0f, fromScale = 0.6f, fromRotation = tilt, dampingRatio = 0.7f) {
-        Box(modifier = Modifier.size(side)) {
-            CourseImage(
-                courseId = courseId,
-                modifier = Modifier
-                    .size(side)
-                    .shadow(10.dp, shape, ambientColor = Color.Black.copy(alpha = 0.10f), spotColor = Color.Black.copy(alpha = 0.10f))
-                    .clip(shape)
-                    .border(1.dp, Color.White.copy(alpha = 0.8f), shape),
-                maxEdgePx = 360,
-                letterSize = 24.sp,
-            )
-            if (hasBadge) {
-                CheckBadge(
-                    size = 26.dp,
-                    modifier = Modifier
-                        .align(Alignment.TopEnd)
-                        .offset(x = 7.dp, y = (-7).dp)
-                        .graphicsLayer {
-                            scaleX = badgeScale
-                            scaleY = badgeScale
-                            alpha = if (badgeShown) 1f else 0f
-                        },
-                )
-            }
-        }
-    }
-}
-
-// MARK: - 4. Personalized route
-
-/** « Sophia builds you a personalized route »: the Parcours preview, fading and growing in. */
-@Composable
-private fun IntroRoutePage(language: AppLanguage, active: Boolean) {
-    val context = LocalContext.current
-    val shown = remember { Animatable(0f) }
-    OnPageActivated(active) {
-        delay(150)
-        shown.animateTo(1f, spring(dampingRatio = 0.85f, stiffness = 80f))
-    }
-    IntroPageFrame(
-        title = StringStore.text(context, "onboardingV2.intro.route.title", language),
-        subtitle = StringStore.text(context, "onboardingV2.intro.route.subtitle", language),
-    ) { width, height ->
-        OnboardingPathPreview(
-            language = language,
-            width = width,
-            height = height,
-            modifier = Modifier.graphicsLayer {
-                val scale = 0.94f + 0.06f * shown.value
-                scaleX = scale
-                scaleY = scale
-                alpha = shown.value.coerceIn(0f, 1f)
-            },
-        )
-    }
-}
-
-// MARK: - Social proof
-
-/**
- * « Join the 500,000 happy users who learn with Sophia » at the top, students' photos, the
- * store rating between two laurels, « available in more than 140 countries » above the
- * button, and the « Let's go » CTA.
- */
-@Composable
-internal fun SocialProofStep(language: AppLanguage, onContinue: () -> Unit) {
-    val context = LocalContext.current
-    val haptics = rememberOnboardingHaptics()
-    val photos = remember { studentPhotos(context).take(MAX_STUDENT_PHOTOS) }
-    var revealedPhotos by remember { mutableIntStateOf(0) }
-    var ratingIn by remember { mutableStateOf(false) }
-    var textIn by remember { mutableStateOf(false) }
-    LaunchedEffect(Unit) {
-        delay(300)
-        repeat(photos.size) { i ->
-            revealedPhotos = i + 1
-            haptics.selection()
-            delay(80)
-        }
-        delay(100)
-        ratingIn = true
-        haptics.commit()
-        delay(250)
-        textIn = true
-    }
-    val ratingProgress by animateFloatAsState(
-        targetValue = if (ratingIn) 1f else 0f,
-        animationSpec = spring(dampingRatio = 0.6f, stiffness = Spring.StiffnessMediumLow),
-        label = "socialRating",
-    )
-    val textProgress by animateFloatAsState(
-        targetValue = if (textIn) 1f else 0f,
-        animationSpec = spring(dampingRatio = 0.85f, stiffness = Spring.StiffnessLow),
-        label = "socialText",
-    )
-
-    // Photos, laurels, title and countries outgrow a small phone at a large font size: the
-    // content scrolls, the CTA stays pinned. When it fits, the title sits at the top, the
-    // countries right above the button, and the photos and rating in the middle.
-    OnboardingPage(
-        contentArrangement = Arrangement.SpaceBetween,
-        footer = {
-            OnboardingCta(StringStore.text(context, "onboardingV2.intro.social.cta", language), onContinue)
-        },
-    ) {
-        Column(horizontalAlignment = Alignment.CenterHorizontally) {
-            Spacer(Modifier.height(64.dp))
+            DSEyebrow(text = sample.eyebrow, modifier = Modifier.padding(top = 16.dp))
             Text(
-                text = highlighted(StringStore.text(context, "onboardingV2.intro.social.title", language)),
-                style = OV2.title,
+                text = sample.question,
+                fontFamily = PlusJakartaSans,
+                fontWeight = FontWeight.Normal,
+                fontSize = 20.sp,
+                lineHeight = 26.sp,
+                color = DS.ink,
                 textAlign = TextAlign.Center,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = 28.dp)
-                    .ov2Reveal(50),
+                modifier = Modifier.padding(top = 6.dp),
             )
-        }
-        Column(
-            horizontalAlignment = Alignment.CenterHorizontally,
-            modifier = Modifier.padding(vertical = 20.dp),
-        ) {
-            if (photos.isNotEmpty()) {
-                StudentCluster(photos = photos, revealed = revealedPhotos)
-                Spacer(Modifier.height(26.dp))
-            }
-            LaurelBadge(
-                modifier = Modifier.graphicsLayer {
-                    val s = 0.7f + 0.3f * ratingProgress
-                    scaleX = s
-                    scaleY = s
-                    alpha = ratingProgress.coerceIn(0f, 1f)
-                },
+            Column(
+                modifier = Modifier.fillMaxWidth().padding(top = 14.dp),
+                verticalArrangement = Arrangement.spacedBy(8.dp),
             ) {
-                RatingStack(
-                    caption = StringStore.text(context, "onboardingV2.review.appStore", language),
-                    language = language,
-                )
+                sample.options.forEachIndexed { index, option ->
+                    QuizOptionRow(text = option, answered = answered, isCorrect = index == sample.correctIndex)
+                }
             }
         }
+        // The verdict banner, stuck to the bottom of the card: « Excellent! » and the combo.
         Column(
-            horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.spacedBy(8.dp),
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(start = 32.dp, end = 32.dp, top = 4.dp, bottom = 10.dp)
+                .padding(top = 14.dp)
                 .graphicsLayer {
-                    alpha = textProgress.coerceIn(0f, 1f)
-                    translationY = (1f - textProgress) * 14f * density
+                    alpha = verdict.coerceIn(0f, 1f)
+                    translationY = (1f - verdict) * 12.dp.toPx()
                 },
         ) {
-            Icon(Icons.Filled.Public, contentDescription = null, tint = OV2.accentSoft, modifier = Modifier.size(20.dp))
-            Text(
-                text = StringStore.text(context, "onboardingV2.intro.social.countries", language),
-                style = OV2.body,
-                textAlign = TextAlign.Center,
-            )
-        }
-    }
-}
-
-private const val MAX_STUDENT_PHOTOS = 10
-
-/**
- * Students' photos in same-size circles, in centred rows of at most five, the rows as full
- * as each other: 10 → 5 + 5, 7 → 4 + 3, 5 → 5.
- */
-@Composable
-private fun StudentCluster(photos: List<String>, revealed: Int) {
-    val perRow = 5
-    val rowCount = (photos.size + perRow - 1) / perRow
-    if (rowCount == 0) return
-    val base = photos.size / rowCount
-    val extra = photos.size % rowCount
-    var next = 0
-    Column(
-        modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp),
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.spacedBy(12.dp),
-    ) {
-        repeat(rowCount) { row ->
-            val size = base + if (row < extra) 1 else 0
-            val indices = next until next + size
-            next += size
-            Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
-                indices.forEach { i ->
-                    RevealedItem(shown = i < revealed, fromY = 0f, fromScale = 0.2f, dampingRatio = 0.62f) {
-                        RoundPortrait(url = photos[i], size = 58.dp)
-                    }
+            Box(modifier = Modifier.fillMaxWidth().height(1.5.dp).background(DS.hairline))
+            Row(
+                modifier = Modifier.fillMaxWidth().padding(start = 16.dp, end = 16.dp, top = 12.dp, bottom = 14.dp),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(8.dp),
+            ) {
+                Box(
+                    modifier = Modifier.size(26.dp).background(DS.successTint, CircleShape),
+                    contentAlignment = Alignment.Center,
+                ) {
+                    Icon(Icons.Filled.Check, contentDescription = null, tint = DS.success, modifier = Modifier.size(14.dp))
+                }
+                Text(
+                    text = StringStore.text(context, "quiz.feedback.excellent", language),
+                    fontFamily = PlusJakartaSans,
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 15.sp,
+                    color = DS.success,
+                    modifier = Modifier.weight(1f),
+                )
+                if (sample.position >= 2) {
+                    Text(
+                        text = StringStore.text(context, "quiz.combo", language, 2),
+                        fontFamily = PlusJakartaSans,
+                        fontWeight = FontWeight.SemiBold,
+                        fontSize = 12.sp,
+                        color = DS.inkSecondary,
+                    )
                 }
             }
         }
     }
 }
+
+@Composable
+private fun QuizOptionRow(text: String, answered: Boolean, isCorrect: Boolean) {
+    val state = when {
+        !answered -> DSOptionState.Idle
+        isCorrect -> DSOptionState.Correct
+        else -> DSOptionState.Dimmed
+    }
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .heightIn(min = 42.dp)
+            .dsOptionCard(state, RoundedCornerShape(14.dp))
+            .padding(horizontal = 12.dp, vertical = 8.dp),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.spacedBy(10.dp),
+    ) {
+        Text(
+            text = text,
+            fontFamily = PlusJakartaSans,
+            fontWeight = if (answered && isCorrect) FontWeight.Bold else FontWeight.Medium,
+            fontSize = 13.sp,
+            lineHeight = 17.sp,
+            color = when {
+                !answered -> DS.ink
+                isCorrect -> DS.success
+                else -> DS.inkTertiary
+            },
+            modifier = Modifier.weight(1f),
+        )
+        if (answered && isCorrect) {
+            DSCheckBadge(size = 22.dp)
+        }
+    }
+}
+
+// endregion
+
+// region 6. Personalized path
+
+/**
+ * « Sophia builds you a personalized path »: the first level of the Parcours, two courses
+ * done, the next one to read, a fourth still closed.
+ */
+@Composable
+private fun IntroRoutePage(language: AppLanguage, active: Boolean) {
+    val context = LocalContext.current
+    IntroPageFrame(
+        title = StringStore.text(context, "onboardingV2.intro.route.title", language),
+        subtitle = StringStore.text(context, "onboardingV2.intro.route.subtitle", language),
+    ) {
+        OnboardingPathPreview(language = language, active = active)
+    }
+}
+
+// endregion
+
+// region 7. Duels
+
+// Sample leaderboard: handles from the string table, avatars from the app's avatar set,
+// trophies purely illustrative (same example as iOS).
+private val DUEL_RIVAL_AVATARS = listOf(
+    R.drawable.avatar_09,
+    R.drawable.avatar_03,
+    R.drawable.avatar_36,
+    R.drawable.avatar_48,
+)
+private val DUEL_RIVAL_TROPHIES = listOf(412, 341, 298, 275)
+private val DUEL_YOU_AVATAR = R.drawable.avatar_22
+private const val DUEL_START_RANK = 3
+private const val DUEL_END_RANK = 1
+private const val DUEL_START_TROPHIES = 286
+private const val DUEL_END_TROPHIES = 386
+
+private val TROPHY_GOLD = Color(0xFFB17F10)
+private val TROPHY_TINT = Color(0xFFFBEFC9)
+private val MEDAL_COLORS = listOf(Color(0xFFE6B233), Color(0xFFC9D0DB), Color(0xFFE3B58E))
+
+private val DUEL_ROW_HEIGHT = 50.dp
+private val DUEL_ROW_GAP = 2.dp
+
+private data class DuelRow(
+    val id: String,
+    val name: String,
+    @DrawableRes val avatar: Int,
+    val trophies: Int,
+    val isYou: Boolean,
+)
+
+/**
+ * « Challenge your friends to a duel »: a sample leaderboard where « You » wins trophies
+ * and climbs two places.
+ */
+@Composable
+private fun IntroDuelsPage(language: AppLanguage, active: Boolean) {
+    val context = LocalContext.current
+    val haptics = rememberHaptics()
+    val reduceMotion = rememberOnboardingReduceMotion()
+    // Place of « You » in the leaderboard (0 for the first).
+    var youRank by remember { mutableIntStateOf(DUEL_START_RANK) }
+    var youTrophies by remember { mutableIntStateOf(DUEL_START_TROPHIES) }
+    var rowsShown by remember { mutableStateOf(false) }
+    // The leaderboard lands, then « You » wins a hundred trophies and moves up to second.
+    OnIntroPageActivated(active) {
+        if (reduceMotion) {
+            rowsShown = true
+            youRank = DUEL_END_RANK
+            youTrophies = DUEL_END_TROPHIES
+            return@OnIntroPageActivated
+        }
+        delay(150)
+        rowsShown = true
+        delay(950)
+        youTrophies = DUEL_END_TROPHIES
+        haptics.tick()
+        delay(350)
+        youRank = DUEL_END_RANK
+        haptics.success()
+    }
+
+    val rivals = remember(language) {
+        DUEL_RIVAL_AVATARS.indices.map { index ->
+            val handle = StringStore.text(context, "onboardingV2.elevate.duels.sample.handle${index + 1}", language)
+            DuelRow(
+                id = "rival$index",
+                name = "@$handle",
+                avatar = DUEL_RIVAL_AVATARS[index],
+                trophies = DUEL_RIVAL_TROPHIES[index],
+                isYou = false,
+            )
+        }
+    }
+    val shownTrophies by animateIntAsState(youTrophies, tween(700), label = "duelTrophies")
+    val you = DuelRow(
+        id = "you",
+        name = StringStore.text(context, "duel.you", language),
+        avatar = DUEL_YOU_AVATAR,
+        trophies = shownTrophies,
+        isYou = true,
+    )
+    val rows = rivals.toMutableList().apply { add(youRank.coerceIn(0, rivals.size), you) }
+    val rowsProgress by animateFloatAsState(if (rowsShown) 1f else 0f, DSMotion.reveal(), label = "duelRows")
+
+    IntroPageFrame(
+        title = StringStore.text(context, "onboardingV2.elevate.duels.title", language),
+        subtitle = StringStore.text(context, "onboardingV2.elevate.duels.subtitle", language),
+    ) {
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(bottom = 2.dp)
+                .ov2Card()
+                .padding(vertical = 16.dp),
+        ) {
+            DuelsHeader(language, modifier = Modifier.padding(horizontal = 16.dp))
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(top = 12.dp)
+                    .padding(horizontal = 8.dp)
+                    .height(DUEL_ROW_HEIGHT * rows.size + DUEL_ROW_GAP * (rows.size - 1))
+                    .graphicsLayer {
+                        alpha = rowsProgress.coerceIn(0f, 1f)
+                        translationY = (1f - rowsProgress) * 10.dp.toPx()
+                    },
+            ) {
+                // Composed in a stable order (rivals, then « You ») and moved by offset, so a
+                // change of rank slides the rows instead of redrawing them.
+                (rivals + you).forEach { row ->
+                    val rank = rows.indexOfFirst { it.id == row.id }
+                    val slot by animateFloatAsState(rank.toFloat(), DSMotion.pop(), label = "duelSlot")
+                    DuelRowView(
+                        row = row,
+                        rank = rank + 1,
+                        modifier = Modifier
+                            .zIndex(if (row.isYou) 1f else 0f)
+                            .offset { IntOffset(0, ((DUEL_ROW_HEIGHT + DUEL_ROW_GAP).toPx() * slot).toInt()) },
+                    )
+                }
+            }
+            DuelsFooter(language, modifier = Modifier.padding(top = 10.dp).padding(horizontal = 16.dp))
+        }
+    }
+}
+
+@Composable
+private fun DuelsHeader(language: AppLanguage, modifier: Modifier = Modifier) {
+    val context = LocalContext.current
+    Row(
+        modifier = modifier.fillMaxWidth(),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.spacedBy(8.dp),
+    ) {
+        Box(
+            modifier = Modifier.size(28.dp).background(TROPHY_TINT, CircleShape),
+            contentAlignment = Alignment.Center,
+        ) {
+            Icon(Icons.Outlined.EmojiEvents, contentDescription = null, tint = TROPHY_GOLD, modifier = Modifier.size(16.dp))
+        }
+        Column(verticalArrangement = Arrangement.spacedBy(1.dp)) {
+            DSEyebrow(text = StringStore.text(context, "duel.trophies.title", language))
+            Text(
+                text = StringStore.text(context, "duel.friends.title", language),
+                fontFamily = PlusJakartaSans,
+                fontWeight = FontWeight.Bold,
+                fontSize = 13.sp,
+                color = DS.ink,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
+            )
+        }
+    }
+}
+
+@Composable
+private fun DuelRowView(row: DuelRow, rank: Int, modifier: Modifier = Modifier) {
+    val onPodium = rank <= MEDAL_COLORS.size
+    Row(
+        modifier = modifier
+            .fillMaxWidth()
+            .height(DUEL_ROW_HEIGHT)
+            .background(if (row.isYou) DS.accentTint else Color.Transparent, RoundedCornerShape(12.dp))
+            .padding(horizontal = 8.dp),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.spacedBy(10.dp),
+    ) {
+        Box(
+            modifier = Modifier
+                .size(24.dp)
+                .background(if (onPodium) MEDAL_COLORS[rank - 1] else Color.Transparent, CircleShape),
+            contentAlignment = Alignment.Center,
+        ) {
+            Text(
+                text = rank.toString(),
+                fontFamily = PlusJakartaSans,
+                fontWeight = FontWeight.ExtraBold,
+                fontSize = 12.sp,
+                color = if (onPodium) Color.White else DS.inkTertiary,
+            )
+        }
+        Image(
+            painter = painterResource(row.avatar),
+            contentDescription = null,
+            contentScale = ContentScale.Crop,
+            modifier = Modifier.size(34.dp).clip(CircleShape),
+        )
+        Text(
+            text = row.name,
+            fontFamily = PlusJakartaSans,
+            fontWeight = if (row.isYou) FontWeight.ExtraBold else FontWeight.SemiBold,
+            fontSize = 13.sp,
+            color = DS.ink,
+            maxLines = 1,
+            overflow = TextOverflow.Ellipsis,
+            modifier = Modifier.weight(1f),
+        )
+        Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(3.dp)) {
+            Icon(Icons.Outlined.EmojiEvents, contentDescription = null, tint = TROPHY_GOLD, modifier = Modifier.size(13.dp))
+            Text(
+                text = row.trophies.toString(),
+                fontFamily = PlusJakartaSans,
+                fontWeight = FontWeight.Bold,
+                fontSize = 13.sp,
+                color = DS.ink,
+            )
+        }
+    }
+}
+
+/** The gesture that starts a duel between friends, shown as on a friend's card. */
+@Composable
+private fun DuelsFooter(language: AppLanguage, modifier: Modifier = Modifier) {
+    val context = LocalContext.current
+    val rule = DS.hairline
+    Column(modifier = modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
+        Canvas(modifier = Modifier.fillMaxWidth().height(1.5.dp)) {
+            drawLine(
+                color = rule,
+                start = Offset(0f, size.height / 2f),
+                end = Offset(size.width, size.height / 2f),
+                strokeWidth = size.height,
+                pathEffect = PathEffect.dashPathEffect(floatArrayOf(4.dp.toPx(), 4.dp.toPx())),
+            )
+        }
+        Row(
+            modifier = Modifier
+                .padding(top = 12.dp)
+                .background(DS.accent, RoundedCornerShape(10.dp))
+                .padding(horizontal = 14.dp, vertical = 8.dp),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.spacedBy(6.dp),
+        ) {
+            Icon(Icons.Filled.Bolt, contentDescription = null, tint = Color.White, modifier = Modifier.size(13.dp))
+            Text(
+                text = StringStore.text(context, "duel.friend.challenge", language),
+                fontFamily = PlusJakartaSans,
+                fontWeight = FontWeight.SemiBold,
+                fontSize = 12.sp,
+                color = Color.White,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
+            )
+        }
+    }
+}
+
+// endregion
+
+// region 8. Audio
+
+/** Announced length of a course, in minutes (the « 10 min » of the lessons). */
+private const val AUDIO_LESSON_MINUTES = 10
+
+/** Where playback stands when the page opens, in seconds. */
+private const val AUDIO_START_SECONDS = 192
+
+private fun audioClock(seconds: Int): String {
+    val safe = seconds.coerceAtLeast(0)
+    return String.format(Locale.ROOT, "%d:%02d", safe / 60, safe % 60)
+}
+
+/**
+ * « Listen to your courses when you can't read them »: the subway illustration and, laid
+ * over it, the audio player of a real course whose time runs.
+ */
+@Composable
+private fun IntroAudioPage(language: AppLanguage, active: Boolean) {
+    val context = LocalContext.current
+    val haptics = rememberHaptics()
+    val reduceMotion = rememberOnboardingReduceMotion()
+    val totalSeconds = AUDIO_LESSON_MINUTES * 60
+    var course by remember(language) {
+        mutableStateOf(OnboardingIntroCatalog.cachedCourse(language, OnboardingIntroCatalog.BLACK_HOLE_COURSE_ID))
+    }
+    var authorName by remember(language) { mutableStateOf<String?>(null) }
+    LaunchedEffect(language) {
+        val picked = course
+            ?: OnboardingIntroCatalog.course(context, language, OnboardingIntroCatalog.BLACK_HOLE_COURSE_ID)
+        course = picked
+        authorName = picked?.let { found ->
+            withContext(Dispatchers.IO) {
+                runCatching { AuthorStore.authorForCourse(context.applicationContext, found.id)?.name }.getOrNull()
+            }
+        }
+    }
+    var playerIn by remember { mutableStateOf(false) }
+    var elapsed by remember { mutableIntStateOf(AUDIO_START_SECONDS) }
+    OnIntroPageActivated(active) {
+        if (reduceMotion) {
+            playerIn = true
+            return@OnIntroPageActivated
+        }
+        delay(200)
+        playerIn = true
+        delay(150)
+        haptics.soft()
+        // The time elapsed since the page opened, one beat per second.
+        while (elapsed < totalSeconds) {
+            delay(1000)
+            elapsed += 1
+        }
+    }
+    val playerProgress by animateFloatAsState(if (playerIn) 1f else 0f, DSMotion.reveal(), label = "audioPlayer")
+    val played by animateFloatAsState(
+        targetValue = elapsed.toFloat() / totalSeconds,
+        animationSpec = tween(1000, easing = LinearEasing),
+        label = "audioPlayed",
+    )
+    // « Stacy Jankowski · 10 min »: the author of the course when the catalogue knows them.
+    val duration = StringStore.text(context, "onboardingV2.screenTime.minutes", language, AUDIO_LESSON_MINUTES)
+    val caption = authorName?.takeIf { it.isNotBlank() }?.let { "$it · $duration" } ?: duration
+
+    IntroPageFrame(
+        title = StringStore.text(context, "onboardingV2.elevate.audio.title", language),
+        subtitle = StringStore.text(context, "onboardingV2.elevate.audio.subtitle", language),
+    ) {
+        Box(modifier = Modifier.fillMaxWidth().height(372.dp)) {
+            Image(
+                painter = painterResource(R.drawable.onb_audio_metro),
+                contentDescription = null,
+                contentScale = ContentScale.Crop,
+                modifier = Modifier
+                    .align(Alignment.TopCenter)
+                    .fillMaxWidth()
+                    .height(300.dp)
+                    .clip(RoundedCornerShape(24.dp)),
+            )
+            // The player: cover, title, author and length, the playback bar, the controls.
+            Column(
+                modifier = Modifier
+                    .align(Alignment.BottomCenter)
+                    .padding(horizontal = 14.dp)
+                    .padding(bottom = 2.dp)
+                    .graphicsLayer {
+                        alpha = playerProgress.coerceIn(0f, 1f)
+                        translationY = (1f - playerProgress) * 24.dp.toPx()
+                    }
+                    .fillMaxWidth()
+                    .ov2Card(shape = RoundedCornerShape(18.dp))
+                    .padding(12.dp),
+                verticalArrangement = Arrangement.spacedBy(10.dp),
+            ) {
+                Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+                    OnboardingCover(
+                        courseId = course?.id,
+                        modifier = Modifier.size(44.dp).clip(RoundedCornerShape(10.dp)),
+                        edgePx = 160,
+                    )
+                    Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(1.dp)) {
+                        Text(
+                            text = course?.title.orEmpty(),
+                            fontFamily = PlusJakartaSans,
+                            fontWeight = FontWeight.Bold,
+                            fontSize = 13.sp,
+                            color = DS.ink,
+                            maxLines = 1,
+                            overflow = TextOverflow.Ellipsis,
+                        )
+                        Text(
+                            text = caption,
+                            fontFamily = PlusJakartaSans,
+                            fontWeight = FontWeight.Normal,
+                            fontSize = 12.sp,
+                            color = DS.inkSecondary,
+                            maxLines = 1,
+                            overflow = TextOverflow.Ellipsis,
+                        )
+                    }
+                }
+                AudioProgressBar(fraction = { played })
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    AudioClockText(audioClock(elapsed), TextAlign.Start)
+                    Spacer(Modifier.weight(1f))
+                    Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(14.dp)) {
+                        AudioSkipGlyph(forward = false)
+                        Box(
+                            modifier = Modifier.size(42.dp).background(DS.accent, CircleShape),
+                            contentAlignment = Alignment.Center,
+                        ) {
+                            Icon(Icons.Filled.Pause, contentDescription = null, tint = Color.White, modifier = Modifier.size(22.dp))
+                        }
+                        AudioSkipGlyph(forward = true)
+                    }
+                    Spacer(Modifier.weight(1f))
+                    AudioClockText(audioClock(totalSeconds), TextAlign.End)
+                }
+            }
+        }
+    }
+}
+
+@Composable
+private fun AudioClockText(text: String, align: TextAlign) {
+    Text(
+        text = text,
+        fontFamily = PlusJakartaSans,
+        fontWeight = FontWeight.SemiBold,
+        fontSize = 11.sp,
+        color = DS.inkSecondary,
+        textAlign = align,
+        maxLines = 1,
+        modifier = Modifier.width(44.dp),
+    )
+}
+
+/** The playback bar: a thin track, the part played in blue, a round knob at its end. */
+@Composable
+private fun AudioProgressBar(fraction: () -> Float) {
+    val track = DS.hairline
+    val tint = DS.accent
+    Box(
+        modifier = Modifier
+            .fillMaxWidth()
+            .height(12.dp)
+            .drawBehind {
+                val clamped = fraction().coerceIn(0f, 1f)
+                val bar = 4.dp.toPx()
+                val top = (size.height - bar) / 2f
+                // A media bar reads from left to right in every language.
+                drawRoundRect(track, Offset(0f, top), Size(size.width, bar), CornerRadius(bar / 2f))
+                drawRoundRect(tint, Offset(0f, top), Size(size.width * clamped, bar), CornerRadius(bar / 2f))
+                drawCircle(tint, radius = size.height / 2f, center = Offset(size.width * clamped, size.height / 2f))
+            },
+    )
+}
+
+/** « 15 seconds back / forward »: the circular arrow with its number inside. */
+@Composable
+private fun AudioSkipGlyph(forward: Boolean) {
+    Box(modifier = Modifier.size(26.dp), contentAlignment = Alignment.Center) {
+        Icon(
+            Icons.Filled.Replay,
+            contentDescription = null,
+            tint = DS.ink,
+            modifier = Modifier.fillMaxSize().graphicsLayer { scaleX = if (forward) -1f else 1f },
+        )
+        Text(
+            text = "15",
+            fontFamily = PlusJakartaSans,
+            fontWeight = FontWeight.Bold,
+            fontSize = 7.sp,
+            color = DS.ink,
+            modifier = Modifier.offset(y = 1.5.dp),
+        )
+    }
+}
+
+// endregion
+
+// region 9. Social proof
+
+/**
+ * The reviews shown here (keys `onboardingV2.review.t<n>`): the end of the list, so as not
+ * to open on the same ones as the reviews page, later in the flow.
+ */
+private val SOCIAL_REVIEW_INDICES = listOf(4, 5, 6)
+private const val SOCIAL_STAR_COUNT = 5
+
+/**
+ * Screen 9 — social proof, after the carousel: « Join the 500,000 users… » in a card, two
+ * laurels (the five stars with the number of users, the store rating), three user reviews,
+ * the availability in more than 140 countries, and the « Let's go » button.
+ *
+ * Every figure is one the app already showed (title, user count, rating, countries); the
+ * reviews are those of the « what our users think » page.
+ */
+@Composable
+internal fun SocialProofStep(language: AppLanguage, onContinue: () -> Unit) {
+    val context = LocalContext.current
+    val haptics = rememberHaptics()
+    val reduceMotion = rememberOnboardingReduceMotion()
+    val photos = remember { studentPhotos(context).take(4) }
+    var laurelsIn by remember { mutableStateOf(reduceMotion) }
+    var starsShown by remember { mutableIntStateOf(if (reduceMotion) SOCIAL_STAR_COUNT else 0) }
+    // The laurels land, then the stars light up one by one.
+    LaunchedEffect(Unit) {
+        if (reduceMotion) return@LaunchedEffect
+        delay(250)
+        laurelsIn = true
+        haptics.soft()
+        delay(150)
+        for (count in 1..SOCIAL_STAR_COUNT) {
+            starsShown = count
+            haptics.tick()
+            delay(70)
+        }
+    }
+    val laurelsProgress by animateFloatAsState(if (laurelsIn) 1f else 0f, DSMotion.pop(), label = "socialLaurels")
+
+    // Card, laurels and reviews outgrow a small phone at a large font size: the content
+    // scrolls, the button stays pinned.
+    OnboardingPage(
+        contentArrangement = Arrangement.Top,
+        footer = {
+            OnboardingCta(
+                text = StringStore.text(context, "onboardingV2.intro.social.cta", language),
+                onClick = onContinue,
+                modifier = Modifier.padding(top = 10.dp),
+            )
+        },
+    ) {
+        Column(
+            modifier = Modifier.fillMaxWidth().padding(horizontal = ONBOARDING_SIDE_INSET),
+            horizontalAlignment = Alignment.CenterHorizontally,
+        ) {
+            Text(
+                text = dsHighlighted(StringStore.text(context, "onboardingV2.intro.social.title", language), DS.accent),
+                fontFamily = PlusJakartaSans,
+                fontWeight = FontWeight.Normal,
+                fontSize = 20.sp,
+                lineHeight = 27.sp,
+                color = DS.ink,
+                textAlign = TextAlign.Center,
+                modifier = Modifier
+                    .padding(top = 12.dp)
+                    .dsStagger(0)
+                    .fillMaxWidth()
+                    .ov2Card()
+                    .padding(horizontal = 18.dp, vertical = 14.dp)
+                    .semantics { heading() },
+            )
+
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(top = 20.dp)
+                    .graphicsLayer {
+                        alpha = laurelsProgress.coerceIn(0f, 1f)
+                        val scale = 0.8f + 0.2f * laurelsProgress
+                        scaleX = scale
+                        scaleY = scale
+                    },
+                horizontalArrangement = Arrangement.spacedBy(8.dp),
+                verticalAlignment = Alignment.CenterVertically,
+            ) {
+                PaperLaurels(modifier = Modifier.weight(1f).semantics(mergeDescendants = true) { }) {
+                    Column(
+                        horizontalAlignment = Alignment.CenterHorizontally,
+                        verticalArrangement = Arrangement.spacedBy(5.dp),
+                    ) {
+                        Text(
+                            text = StringStore.text(context, "onboardingV2.loading.social.count", language).uppercaseInApp(),
+                            fontFamily = PlusJakartaSans,
+                            fontWeight = FontWeight.ExtraBold,
+                            fontSize = 12.sp,
+                            lineHeight = 15.sp,
+                            letterSpacing = 0.6.sp,
+                            color = DS.ink,
+                            textAlign = TextAlign.Center,
+                            maxLines = 2,
+                            overflow = TextOverflow.Ellipsis,
+                        )
+                        SocialStars(starSize = 14, shown = starsShown)
+                    }
+                }
+                PaperLaurels(modifier = Modifier.weight(1f).semantics(mergeDescendants = true) { }) {
+                    Column(
+                        horizontalAlignment = Alignment.CenterHorizontally,
+                        verticalArrangement = Arrangement.spacedBy(5.dp),
+                    ) {
+                        Text(
+                            text = 4.8.formatted(language, 1),
+                            fontFamily = PlusJakartaSans,
+                            fontWeight = FontWeight.ExtraBold,
+                            fontSize = 22.sp,
+                            color = DS.ink,
+                        )
+                        Text(
+                            text = StringStore.text(context, "onboardingV2.review.appStore", language).uppercaseInApp(),
+                            fontFamily = PlusJakartaSans,
+                            fontWeight = FontWeight.Bold,
+                            fontSize = 11.sp,
+                            lineHeight = 14.sp,
+                            letterSpacing = 0.6.sp,
+                            color = DS.inkSecondary,
+                            textAlign = TextAlign.Center,
+                            maxLines = 2,
+                            overflow = TextOverflow.Ellipsis,
+                        )
+                    }
+                }
+            }
+
+            Column(
+                modifier = Modifier.fillMaxWidth().padding(top = 18.dp),
+                verticalArrangement = Arrangement.spacedBy(10.dp),
+            ) {
+                SOCIAL_REVIEW_INDICES.forEachIndexed { position, index ->
+                    SocialReviewCard(
+                        quote = StringStore.text(context, "onboardingV2.review.t$index.quote", language),
+                        author = StringStore.text(context, "onboardingV2.review.t$index.author", language),
+                        modifier = Modifier.dsStagger(position + 3, stepMillis = 90),
+                    )
+                }
+            }
+
+            // « Available in more than 140 countries », beside a few users' faces.
+            Row(
+                modifier = Modifier
+                    .padding(top = 16.dp, bottom = 12.dp)
+                    .dsStagger(SOCIAL_REVIEW_INDICES.size + 3, stepMillis = 90),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(10.dp),
+            ) {
+                if (photos.isNotEmpty()) {
+                    PhotoRow(photos = photos, size = 26.dp, modifier = Modifier.clearAndSetSemantics { })
+                } else {
+                    Icon(Icons.Filled.Public, contentDescription = null, tint = DS.accent, modifier = Modifier.size(18.dp))
+                }
+                Text(
+                    text = StringStore.text(context, "onboardingV2.intro.social.countries", language),
+                    fontFamily = PlusJakartaSans,
+                    fontWeight = FontWeight.Medium,
+                    fontSize = 13.sp,
+                    lineHeight = 18.sp,
+                    color = DS.inkSecondary,
+                    modifier = Modifier.weight(1f, fill = false),
+                )
+            }
+        }
+    }
+}
+
+/** Five stars; [shown] lights the first ones (all by default). */
+@Composable
+private fun SocialStars(starSize: Int, shown: Int = SOCIAL_STAR_COUNT) {
+    Row(
+        modifier = Modifier.clearAndSetSemantics { },
+        horizontalArrangement = Arrangement.spacedBy(2.dp),
+    ) {
+        repeat(SOCIAL_STAR_COUNT) { index ->
+            val lit by animateFloatAsState(if (index < shown) 1f else 0f, DSMotion.pop(), label = "socialStar")
+            Icon(
+                Icons.Filled.Star,
+                contentDescription = null,
+                tint = DS.warm,
+                modifier = Modifier
+                    .size(starSize.dp)
+                    .graphicsLayer {
+                        alpha = lit.coerceIn(0f, 1f)
+                        val scale = 0.2f + 0.8f * lit
+                        scaleX = scale
+                        scaleY = scale
+                    },
+            )
+        }
+    }
+}
+
+@Composable
+private fun SocialReviewCard(quote: String, author: String, modifier: Modifier = Modifier) {
+    Column(
+        modifier = modifier
+            .fillMaxWidth()
+            .ov2Card()
+            .padding(horizontal = 18.dp, vertical = 16.dp)
+            .semantics(mergeDescendants = true) { },
+        verticalArrangement = Arrangement.spacedBy(10.dp),
+    ) {
+        Text(
+            text = quote,
+            fontFamily = PlusJakartaSans,
+            fontWeight = FontWeight.Normal,
+            fontSize = 15.sp,
+            lineHeight = 22.sp,
+            color = DS.ink,
+            modifier = Modifier.fillMaxWidth(),
+        )
+        Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+            SocialStars(starSize = 13)
+            Spacer(Modifier.weight(1f))
+            Text(
+                text = author,
+                fontFamily = PlusJakartaSans,
+                fontWeight = FontWeight.Normal,
+                fontSize = 12.sp,
+                color = DS.inkSecondary,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
+            )
+        }
+    }
+}
+
+// endregion
