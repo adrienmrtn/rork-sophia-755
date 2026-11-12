@@ -36,7 +36,6 @@ import androidx.compose.ui.semantics.heading
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -82,7 +81,8 @@ private fun credentialOf(author: CourseAuthor, language: AppLanguage): String? {
 
 /**
  * Screen 4 — Researchers. Four « paper » portraits of real authors of the app overlapping,
- * the title « written by real researchers », and their institutions as pills. Names and
+ * the title « written by real researchers », and their institutions as pills (plus de
+ * sous-titre : le titre et les pastilles disent déjà qui écrit les leçons). Names and
  * institutions come from the catalogue ([AuthorStore]); only the illustrated portraits are
  * bundled.
  */
@@ -153,7 +153,8 @@ internal fun ResearchersStep(language: AppLanguage, onContinue: () -> Unit) {
                     RESEARCHER_PORTRAITS.forEachIndexed { index, portrait ->
                         val shown by animateFloatAsState(
                             targetValue = if (index < portraitsShown) 1f else 0f,
-                            animationSpec = DSMotion.pop(),
+                            // Un portrait se pose en grossissant un peu, sans rebond.
+                            animationSpec = OV2Calm.settle(),
                             label = "researcherPortrait",
                         )
                         Image(
@@ -166,7 +167,7 @@ internal fun ResearchersStep(language: AppLanguage, onContinue: () -> Unit) {
                                 .size(size)
                                 .graphicsLayer {
                                     alpha = shown.coerceIn(0f, 1f)
-                                    val scale = 0.3f + 0.7f * shown
+                                    val scale = 0.8f + 0.2f * shown
                                     scaleX = scale
                                     scaleY = scale
                                 }
@@ -207,17 +208,6 @@ internal fun ResearchersStep(language: AppLanguage, onContinue: () -> Unit) {
                     }
                 }
             }
-
-            Text(
-                text = StringStore.text(context, "onboardingV2.intro.researchers.subtitle", language),
-                fontFamily = PlusJakartaSans,
-                fontWeight = FontWeight.Normal,
-                fontSize = 15.sp,
-                lineHeight = 22.sp,
-                color = DS.inkSecondary,
-                textAlign = TextAlign.Center,
-                modifier = Modifier.graphicsLayer { alpha = textProgress.coerceIn(0f, 1f) },
-            )
         }
     }
 }
@@ -231,7 +221,7 @@ private fun ResearcherPill(text: String, shown: Boolean, index: Int) {
         delay(index * 70L)
         landed = true
     }
-    val progress by animateFloatAsState(if (landed) 1f else 0f, DSMotion.snappy(), label = "researcherPill")
+    val progress by animateFloatAsState(if (landed) 1f else 0f, OV2Calm.quick(), label = "researcherPill")
     Text(
         text = text,
         fontFamily = PlusJakartaSans,
@@ -243,7 +233,7 @@ private fun ResearcherPill(text: String, shown: Boolean, index: Int) {
         modifier = Modifier
             .graphicsLayer {
                 alpha = progress.coerceIn(0f, 1f)
-                val scale = 0.8f + 0.2f * progress
+                val scale = 0.92f + 0.08f * progress
                 scaleX = scale
                 scaleY = scale
             }

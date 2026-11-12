@@ -95,13 +95,11 @@ import app.rork.sophia.R
 import app.rork.sophia.data.CourseCoverUrls
 import app.rork.sophia.data.StringStore
 import app.rork.sophia.domain.AppLanguage
-import app.rork.sophia.domain.Subject
 import app.rork.sophia.ui.components.DSCheckBadge
 import app.rork.sophia.ui.components.DSMotion
 import app.rork.sophia.ui.components.DSOptionState
 import app.rork.sophia.ui.components.dsHighlighted
 import app.rork.sophia.ui.components.dsOptionCard
-import app.rork.sophia.ui.components.dsPopIn
 import app.rork.sophia.ui.components.dsStagger
 import app.rork.sophia.ui.components.pressable
 import app.rork.sophia.ui.components.rememberHaptics
@@ -191,6 +189,14 @@ private fun introArtSize(base: Dp, available: Dp, reserved: Dp): Dp {
  * Courses whose cover fills the wall: the most read and the most telling in picture, three
  * per column (same list as iOS).
  */
+/**
+ * Langue de tout le texte de la page d'accueil. L'accroche de marque (« Replace scrolling
+ * with… ») est volontairement en anglais dans toutes les tables ; le sous-titre et les deux
+ * boutons étaient, eux, lus dans la langue de l'app, d'où une page en deux langues. Tout se
+ * résout maintenant depuis cette seule langue : celle de l'accroche.
+ */
+private val WELCOME_LANGUAGE = AppLanguage.ENGLISH
+
 private val WELCOME_COVER_COURSE_IDS = listOf(
     "course_67_qu_est_ce_qu_un_trou_noir",
     "course_241_pourquoi_voulait_on_demolir_la_tour_eiffel",
@@ -212,7 +218,8 @@ private val WELCOME_COVER_COURSE_IDS = listOf(
  */
 @Composable
 internal fun WelcomeStep(
-    language: AppLanguage,
+    /** La langue de l'app. Le texte de la page, lui, est lu dans [WELCOME_LANGUAGE]. */
+    @Suppress("UNUSED_PARAMETER") language: AppLanguage,
     onContinue: () -> Unit,
     /** Someone reinstalling or switching phone. Null hides the link (no Google to sign in with). */
     onExistingAccount: (() -> Unit)? = null,
@@ -277,7 +284,7 @@ internal fun WelcomeStep(
                             },
                         contentAlignment = Alignment.CenterStart,
                     ) {
-                        WelcomeTextBlock(language)
+                        WelcomeTextBlock()
                     }
                 }
             }
@@ -291,7 +298,7 @@ internal fun WelcomeStep(
                 horizontalAlignment = Alignment.CenterHorizontally,
             ) {
                 OnboardingCta(
-                    text = StringStore.text(context, "onboardingV2.welcome.cta", language),
+                    text = StringStore.text(context, "onboardingV2.welcome.cta", WELCOME_LANGUAGE),
                     onClick = onContinue,
                     bottomInset = if (onExistingAccount == null) 20.dp else 6.dp,
                 )
@@ -309,7 +316,7 @@ internal fun WelcomeStep(
                         contentAlignment = Alignment.Center,
                     ) {
                         Text(
-                            text = StringStore.text(context, "onboardingV2.welcome.existingAccount", language),
+                            text = StringStore.text(context, "onboardingV2.welcome.existingAccount", WELCOME_LANGUAGE),
                             fontFamily = PlusJakartaSans,
                             fontWeight = FontWeight.SemiBold,
                             fontSize = 15.sp,
@@ -324,10 +331,16 @@ internal fun WelcomeStep(
     }
 }
 
-/** The whole logo (symbol + « Sophia »), the brand tagline and the promise. */
+/**
+ * The whole logo (symbol + « Sophia »), the brand tagline and the promise. L'accroche et la
+ * promesse sont lues dans la même langue ([WELCOME_LANGUAGE]) et posées de gauche à droite,
+ * y compris sur un téléphone en arabe ou en hébreu.
+ */
 @Composable
-private fun WelcomeTextBlock(language: AppLanguage) {
+private fun WelcomeTextBlock() {
     val context = LocalContext.current
+    val language = WELCOME_LANGUAGE
+    CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Ltr) {
     Column(verticalArrangement = Arrangement.spacedBy(14.dp)) {
         Image(
             painter = painterResource(R.drawable.sophia_mark),
@@ -365,6 +378,7 @@ private fun WelcomeTextBlock(language: AppLanguage) {
             textAlign = TextAlign.Start,
             modifier = Modifier.fillMaxWidth(),
         )
+    }
     }
 }
 
@@ -499,7 +513,7 @@ internal fun LanguageStep(
     val haptics = rememberHaptics()
     val scrollState = rememberScrollState()
     var showScrollHint by remember { mutableStateOf(true) }
-    // Bumped on each choice: makes the flag of the header bounce.
+    // Bumped on each choice: the flag of the header pulses, without bouncing.
     var flagPulse by remember { mutableIntStateOf(0) }
     val bounce by rememberInfiniteTransition(label = "langHint").animateFloat(
         initialValue = 0f,
@@ -521,7 +535,7 @@ internal fun LanguageStep(
         ) {
             IntroQuestionTitle(
                 title = StringStore.text(context, "onboardingV2.language.title", language),
-                subtitle = StringStore.text(context, "onboardingV2.language.subtitle", language),
+                subtitle = null,
             )
             LanguageFlagBadge(language = language, pulse = flagPulse, modifier = Modifier.padding(top = 14.dp))
         }
@@ -564,14 +578,15 @@ internal fun LanguageStep(
     }
 }
 
-/** The flag of the chosen language, in a disc that bounces on each change. */
+/** The flag of the chosen language, in a disc that pulses on each change. */
 @Composable
 private fun LanguageFlagBadge(language: AppLanguage, pulse: Int, modifier: Modifier = Modifier) {
     val scale = remember { Animatable(1f) }
     LaunchedEffect(pulse) {
         if (pulse == 0) return@LaunchedEffect
-        scale.snapTo(0.86f)
-        scale.animateTo(1f, DSMotion.pop())
+        // Un léger creux qui se referme, sans rebond.
+        scale.snapTo(0.92f)
+        scale.animateTo(1f, OV2Calm.settle())
     }
     Box(
         modifier = modifier
@@ -587,7 +602,7 @@ private fun LanguageFlagBadge(language: AppLanguage, pulse: Int, modifier: Modif
         AnimatedContent(
             targetState = language,
             transitionSpec = {
-                (scaleIn(DSMotion.pop(), initialScale = 0.4f) + fadeIn(tween(160))) togetherWith fadeOut(tween(110))
+                (scaleIn(OV2Calm.settle(), initialScale = 0.7f) + fadeIn(tween(160))) togetherWith fadeOut(tween(110))
             },
             label = "languageFlag",
         ) { shown ->
@@ -725,7 +740,7 @@ internal fun ObjectivesStep(
                     IntroRoundArt(
                         art = R.drawable.duel_trophy,
                         size = art,
-                        modifier = Modifier.padding(top = 22.dp).dsPopIn(delayMillis = 120),
+                        modifier = Modifier.padding(top = 22.dp).ov2CalmIn(delayMillis = 120),
                     )
                 }
                 Column(
@@ -853,7 +868,7 @@ internal fun ObjectiveIntroStep(language: AppLanguage, firstName: String, onCont
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
             Spacer(Modifier.weight(1f))
-            IntroRoundArt(art = R.drawable.path_poster, size = art, modifier = Modifier.dsPopIn(delayMillis = 100))
+            IntroRoundArt(art = R.drawable.path_poster, size = art, modifier = Modifier.ov2CalmIn(delayMillis = 100))
             Spacer(Modifier.height(26.dp))
             Text(
                 text = buildAnnotatedString {
@@ -901,31 +916,25 @@ internal fun ObjectiveIntroStep(language: AppLanguage, firstName: String, onCont
 // region 20. Questions
 
 /**
- * The course that answers each question (in the order of the keys `q1`…`q10`): its cover is
- * the thumbnail; without one, the disc of its subject.
+ * La personne qui pose chaque question (dans l'ordre des clés `q1`…`q10`) : un avatar de
+ * l'app à côté de la bulle, comme dans une conversation. Un jeu fixe et varié (âges,
+ * origines, genres), le même à chaque passage.
  */
-private val QUESTION_COVERS: List<Pair<String?, Subject>> = listOf(
-    "course_41_pourquoi_le_ciel_est_il_bleu" to Subject.SCIENCES,
-    "course_12_la_strategie_de_napoleon_a_ulm_1805" to Subject.HISTOIRE,
-    "course_67_qu_est_ce_qu_un_trou_noir" to Subject.SCIENCES,
-    "course_122_la_naissance_de_l_impressionnisme" to Subject.ART,
-    "course_216_la_dette_mondiale" to Subject.COMPRENDRE_LE_MONDE,
-    "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur" to Subject.SCIENCES,
-    null to Subject.HISTOIRE,
-    "course_61_le_big_bang" to Subject.SCIENCES,
-    "course_42_pourquoi_reve_t_on" to Subject.SCIENCES,
-    "course_68_la_theorie_de_la_relativite_pour_tous" to Subject.SCIENCES,
+private val QUESTION_AVATARS: List<Int> = listOf(
+    R.drawable.avatar_05,
+    R.drawable.avatar_20,
+    R.drawable.avatar_17,
+    R.drawable.avatar_28,
+    R.drawable.avatar_10,
+    R.drawable.avatar_15,
+    R.drawable.avatar_30,
+    R.drawable.avatar_02,
+    R.drawable.avatar_55,
+    R.drawable.avatar_14,
 )
 
-/** Emoji of a subject, for the thumbnail of a question no course answers yet. */
-private val QUESTION_SUBJECT_EMOJI = mapOf(
-    Subject.HISTOIRE to "🗽",
-    Subject.SCIENCES to "🦠",
-    Subject.LITTERATURE to "📖",
-    Subject.ART to "🎨",
-    Subject.MYTHOLOGIE to "⚡",
-    Subject.COMPRENDRE_LE_MONDE to "🌍",
-)
+/** Délai avant que « Continuer » n'apparaisse sur la page des questions, en millisecondes. */
+private const val QUESTIONS_CTA_DELAY_MILLIS = 1000L
 
 private const val QUESTIONS_HIGHLIGHT_KEY = "elevateOnboardingCore.questions.titleHighlight"
 
@@ -949,9 +958,12 @@ private fun questionsTitle(context: android.content.Context, language: AppLangua
 /**
  * « With Sophia, you'll be able to answer these questions » — the questions arrive one by
  * one as chat bubbles: one at the start (pale blue), the next at the end (solid blue), each
- * with the thumbnail of the course that answers it. Once the screen is full the oldest
- * leaves by the top and a new one lands at the bottom, so the ten questions loop for as
- * long as the page is shown.
+ * beside the avatar of the person asking it. Once the screen is full the oldest leaves by
+ * the top and a new one lands at the bottom, so the ten questions loop for as long as the
+ * page is shown.
+ *
+ * « Continuer » n'apparaît qu'après une seconde : le temps de voir arriver les premières
+ * questions.
  */
 @Composable
 internal fun QuestionsStep(
@@ -969,6 +981,14 @@ internal fun QuestionsStep(
     // Bubbles sent so far. Never wraps: each bubble keeps a stable identity (its rank) and
     // the content loops by a modulo on the list.
     var sent by remember { mutableIntStateOf(0) }
+    // « Continuer » attend une seconde, puis arrive en fondu ; sa place est gardée dès le
+    // départ, donc rien ne bouge quand il apparaît.
+    var ctaShown by remember { mutableStateOf(false) }
+    LaunchedEffect(Unit) {
+        delay(QUESTIONS_CTA_DELAY_MILLIS)
+        ctaShown = true
+    }
+    val ctaAlpha by animateFloatAsState(if (ctaShown) 1f else 0f, tween(300), label = "questionsCta")
     LaunchedEffect(Unit) {
         if (sent == 0) delay(350)
         while (true) {
@@ -1042,12 +1062,10 @@ internal fun QuestionsStep(
                                     shrinkVertically(DSMotion.reveal(), shrinkTowards = Alignment.Top)
                             },
                         ) {
-                            val (courseId, subject) = QUESTION_COVERS[rank % QUESTION_COVERS.size]
                             QuestionBubble(
                                 text = questions[rank % questions.size],
                                 leading = leading,
-                                courseId = courseId,
-                                subject = subject,
+                                avatar = QUESTION_AVATARS[rank % QUESTION_AVATARS.size],
                                 modifier = Modifier.padding(bottom = 12.dp),
                             )
                         }
@@ -1057,8 +1075,12 @@ internal fun QuestionsStep(
         }
         OnboardingCta(
             text = StringStore.text(context, "common.continue", language),
-            onClick = onContinue,
-            modifier = Modifier.padding(top = 14.dp),
+            // Invisible, le bouton ne répond pas (ni au doigt, ni au lecteur d'écran).
+            onClick = { if (ctaShown) onContinue() },
+            modifier = Modifier
+                .padding(top = 14.dp)
+                .alpha(ctaAlpha)
+                .then(if (ctaShown) Modifier else Modifier.clearAndSetSemantics { }),
         )
     }
 }
@@ -1085,8 +1107,7 @@ private fun QuestionFeed(modifier: Modifier = Modifier, content: @Composable () 
 private fun QuestionBubble(
     text: String,
     leading: Boolean,
-    courseId: String?,
-    subject: Subject,
+    @DrawableRes avatar: Int,
     modifier: Modifier = Modifier,
 ) {
     val shape = RoundedCornerShape(
@@ -1100,7 +1121,7 @@ private fun QuestionBubble(
         horizontalArrangement = Arrangement.spacedBy(10.dp, if (leading) Alignment.Start else Alignment.End),
         verticalAlignment = Alignment.Top,
     ) {
-        if (leading) QuestionCover(courseId, subject) else Spacer(Modifier.width(14.dp))
+        if (leading) QuestionAvatar(avatar) else Spacer(Modifier.width(14.dp))
         Text(
             text = text,
             fontFamily = PlusJakartaSans,
@@ -1114,16 +1135,16 @@ private fun QuestionBubble(
                 .background(if (leading) DS.accentTint else DS.accent)
                 .padding(horizontal = 15.dp, vertical = 11.dp),
         )
-        if (leading) Spacer(Modifier.width(14.dp)) else QuestionCover(courseId, subject)
+        if (leading) Spacer(Modifier.width(14.dp)) else QuestionAvatar(avatar)
     }
 }
 
 /**
- * Round thumbnail beside a bubble: the cover of the course, else the disc of its subject,
- * ringed in white then in a hairline.
+ * L'avatar rond à côté d'une bulle : la personne qui pose la question, cerclée de blanc puis
+ * d'un filet.
  */
 @Composable
-private fun QuestionCover(courseId: String?, subject: Subject) {
+private fun QuestionAvatar(@DrawableRes avatar: Int) {
     Box(
         modifier = Modifier
             .size(44.dp)
@@ -1133,21 +1154,12 @@ private fun QuestionCover(courseId: String?, subject: Subject) {
             .clearAndSetSemantics { },
         contentAlignment = Alignment.Center,
     ) {
-        if (courseId != null) {
-            OnboardingCover(
-                courseId = courseId,
-                modifier = Modifier.fillMaxSize().clip(CircleShape),
-                placeholder = subject.color.copy(alpha = 0.18f),
-                edgePx = 160,
-            )
-        } else {
-            Box(
-                modifier = Modifier.fillMaxSize().background(subject.color.copy(alpha = 0.18f), CircleShape),
-                contentAlignment = Alignment.Center,
-            ) {
-                Text(QUESTION_SUBJECT_EMOJI[subject].orEmpty(), fontSize = 20.sp)
-            }
-        }
+        Image(
+            painter = painterResource(avatar),
+            contentDescription = null,
+            contentScale = ContentScale.Crop,
+            modifier = Modifier.fillMaxSize().clip(CircleShape).background(DS.accentTint),
+        )
     }
 }
 

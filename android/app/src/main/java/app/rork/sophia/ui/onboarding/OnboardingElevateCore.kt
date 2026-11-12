@@ -370,7 +370,8 @@ internal fun OV2CoreCheckSquare(isOn: Boolean, modifier: Modifier = Modifier, si
     val fill by animateColorAsState(if (isOn) accent else accent.copy(alpha = 0f), DSMotion.snappy(), label = "checkSquareFill")
     val edge by animateColorAsState(if (isOn) accent else DS.inkTertiary, DSMotion.snappy(), label = "checkSquareEdge")
     val stroke by animateFloatAsState(if (isOn) 1f else 0f, tween(durationMillis = 220), label = "checkSquareStroke")
-    val pop by animateFloatAsState(if (isOn) 1f else 0.92f, DSMotion.pop(), label = "checkSquarePop")
+    // La case grossit à peine en se cochant, sans rebond.
+    val pop by animateFloatAsState(if (isOn) 1f else 0.92f, tween(durationMillis = 180), label = "checkSquarePop")
     Canvas(
         modifier = modifier
             .size(size)
