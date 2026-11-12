@@ -378,26 +378,27 @@ struct CourseView: View {
     }
 
     private var headerBar: some View {
-        HStack(spacing: 14) {
+        HStack(spacing: 8) {
+            // La pression du bouton vibre par son style.
             Button {
-                let g = UIImpactFeedbackGenerator(style: .light)
-                g.impactOccurred()
                 dismiss()
             } label: {
-                Image(systemName: "xmark")
-                    .font(.jakarta(size: 15, weight: .medium))
-                    .foregroundStyle(DS.inkSecondary)
-                    .frame(width: 40, height: 40)
-                    .background(DS.surface, in: Circle())
-                    .overlay { Circle().strokeBorder(DS.hairline, lineWidth: 1) }
+                CourseRoundIcon(systemName: "xmark")
             }
+            .buttonStyle(.pressable)
+            .accessibilityLabel(Text(languageManager.text("common.close")))
 
             progressBar
+                .padding(.horizontal, 2)
 
             Text("\(currentIndex + 1) / \(course.lessons.count)")
-                .font(DS.sans(.subheadline, .medium))
+                .font(DS.sans(.footnote, .bold))
                 .foregroundStyle(DS.inkSecondary)
                 .monospacedDigit()
+                .contentTransition(.numericText(value: Double(currentIndex)))
+                .animation(DS.Motion.snappy, value: currentIndex)
+                .fixedSize()
+                .accessibilityHidden(true)
 
             readingModeMenu
 
@@ -405,9 +406,9 @@ struct CourseView: View {
                 audioButton
             }
         }
-        .padding(.horizontal, 20)
-        .padding(.top, 12)
-        .padding(.bottom, 12)
+        .padding(.horizontal, 24)
+        .padding(.top, 10)
+        .padding(.bottom, 10)
     }
 
     // MARK: Reading mode
@@ -444,12 +445,7 @@ struct CourseView: View {
                 }
             }
         } label: {
-            Image(systemName: "ellipsis")
-                .font(.jakarta(size: 15, weight: .semibold))
-                .foregroundStyle(DS.inkSecondary)
-                .frame(width: 40, height: 40)
-                .background(DS.surface, in: Circle())
-                .overlay { Circle().strokeBorder(DS.hairline, lineWidth: 1) }
+            CourseRoundIcon(systemName: "ellipsis")
         }
         .accessibilityLabel(Text(languageManager.text("course.readingMode")))
     }
@@ -475,13 +471,16 @@ struct CourseView: View {
         let playing = player.isPlayingCourse(course.id)
         return Button(action: openAudio) {
             Image(systemName: playing ? "waveform" : (isPremium ? "headphones" : "lock.fill"))
-                .font(.jakarta(size: 15, weight: .semibold))
-                .foregroundStyle(player.isCurrent(course.id) ? DS.accent : DS.inkSecondary)
+                .font(.system(size: 16, weight: .semibold))
+                .foregroundStyle(player.isCurrent(course.id) ? DS.accent : DS.ink)
                 .symbolEffect(.variableColor.iterative, isActive: playing)
-                .frame(width: 40, height: 40)
-                .background(DS.surface, in: Circle())
-                .overlay { Circle().strokeBorder(DS.hairline, lineWidth: 1) }
+                .frame(width: 44, height: 44)
+                .background(player.isCurrent(course.id) ? DS.accentTint : DS.surface, in: Circle())
+                .overlay {
+                    Circle().strokeBorder(player.isCurrent(course.id) ? DS.accent : DS.hairline, lineWidth: 1)
+                }
         }
+        .buttonStyle(PressableStyle(haptic: false))
         .accessibilityLabel(Text(languageManager.text("audio.listen")))
     }
 
@@ -510,25 +509,22 @@ struct CourseView: View {
     private var progressBar: some View {
         Group {
             if course.lessons.count <= 12 {
-                HStack(spacing: 4) {
+                HStack(spacing: 5) {
                     ForEach(0..<max(1, course.lessons.count), id: \.self) { index in
                         ProgressSegment(fill: segmentFill(index))
                     }
                 }
             } else {
-                GeometryReader { geo in
-                    ZStack(alignment: .leading) {
-                        Capsule()
-                            .fill(DS.hairline)
-                        Capsule()
-                            .fill(DS.accent)
-                            .frame(width: max(8, geo.size.width * progressValue))
-                            .animation(.spring(response: 0.4), value: progressValue)
-                    }
-                }
+                DSProgressBar(value: progressValue, height: 5, track: CoursePalette.track)
             }
         }
-        .frame(height: 6)
+        .frame(height: 5)
+        .accessibilityElement()
+        .accessibilityLabel(Text(String(
+            format: languageManager.text("common.sectionOf"),
+            currentIndex + 1,
+            course.lessons.count
+        )))
     }
 
     @ViewBuilder
@@ -565,9 +561,9 @@ struct CourseView: View {
                 onShowOriginal: hasFullAccess ? { language in originalLanguage = language } : nil
             )
         } else {
-            VStack(alignment: .leading, spacing: 24) {
+            VStack(alignment: .leading, spacing: 16) {
                 Text(lesson.title)
-                    .font(DS.title(.largeTitle, .semibold))
+                    .font(CourseType.font(24, .semibold, relativeTo: .title2))
                     .foregroundStyle(DS.ink)
                     .fixedSize(horizontal: false, vertical: true)
 
@@ -638,7 +634,7 @@ struct CourseView: View {
                 Color.clear.frame(height: 0).id(Self.lessonTopID)
                 lessonBody(lesson: lesson)
                     .padding(.horizontal, 24)
-                    .padding(.top, 24)
+                    .padding(.top, 12)
                     .padding(.bottom, 120)
             }
             .scrollIndicators(.hidden)
@@ -673,7 +669,7 @@ struct CourseView: View {
                             // hidden. The lock below is what this page has to offer.
                             .accessibilityHidden(true)
                             .padding(.horizontal, 24)
-                            .padding(.top, 24)
+                            .padding(.top, 12)
                             .padding(.bottom, max(geo.size.height * 0.34, 180))
                             .frame(maxWidth: .infinity, alignment: .leading)
                     }
@@ -714,7 +710,7 @@ struct CourseView: View {
                     // Restaure le slide entre les pages : sur un TabView `.page`, seul ce modifieur
                     // anime un changement *programmatique* de sélection (bouton « Continuer »).
                     // `withAnimation` seul n'anime pas le slide sur iOS 17/18.
-                    .animation(.spring(response: 0.4), value: currentIndex)
+                    .animation(DS.Motion.reveal, value: currentIndex)
                 case .steps:
                     stepsReader
                 }
@@ -759,15 +755,15 @@ struct CourseView: View {
                     .font(.system(size: 34, weight: .medium))
                     .foregroundStyle(DS.inkTertiary)
                 Text(AppLocalizable.string("course.offline.title", language: language))
-                    .font(DS.title(.headline, .heavy))
+                    .font(DS.title(.title3, .semibold))
                     .foregroundStyle(DS.ink)
                     .multilineTextAlignment(.center)
                 Text(AppLocalizable.string("course.offline.body", language: language))
                     .font(DS.sans(.subheadline))
                     .foregroundStyle(DS.inkSecondary)
                     .multilineTextAlignment(.center)
+                // La pression du bouton vibre par son style.
                 Button {
-                    UIImpactFeedbackGenerator(style: .light).impactOccurred()
                     Task { await loadContentIfNeeded() }
                 } label: {
                     Text(AppLocalizable.string("course.offline.retry", language: language))
@@ -775,9 +771,9 @@ struct CourseView: View {
                         .foregroundStyle(.white)
                         .padding(.horizontal, 22)
                         .frame(height: 48)
-                        .background(RoundedRectangle(cornerRadius: 14, style: .continuous).fill(DS.accent))
+                        .background(RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous).fill(DS.accent))
                 }
-                .buttonStyle(.plain)
+                .buttonStyle(.pressable)
                 .padding(.top, 4)
             }
             Spacer(minLength: 0)
@@ -787,13 +783,14 @@ struct CourseView: View {
     }
 
     private var bottomButton: some View {
-        Button {
+        let finishing: Bool = hasReachedEnd && !isCourseLocked
+        // `CourseCTAStyle` ne vibre pas : chaque geste choisit sa vibration (pas à pas dans
+        // `advanceStep` ; par pages, le changement de section vibre dans `onChange(of: currentIndex)`).
+        return Button {
             if readingMode == .steps {
                 advanceStep()
                 return
             }
-            let g = UIImpactFeedbackGenerator(style: .medium)
-            g.impactOccurred()
             // Cours verrouillé (2e+ du jour) : le bouton bas slide comme d'habitude.
             // Le paywall ne s'ouvre que via le cadenas sur les pages floutées.
             if isCourseLocked {
@@ -807,6 +804,8 @@ struct CourseView: View {
                 return
             }
             if isLastLesson {
+                // Pas de changement de page ici : la fin du cours vibre elle-même.
+                Haptics.confirm()
                 finishCourse()
             } else {
                 // Le slide est animé par `.animation(_:value: currentIndex)` sur le TabView.
@@ -819,15 +818,22 @@ struct CourseView: View {
             }
         } label: {
             HStack(spacing: 8) {
-                Text(hasReachedEnd && !isCourseLocked
+                if finishing {
+                    Image(systemName: "checkmark")
+                        .font(.subheadline.weight(.bold))
+                }
+                Text(finishing
                       ? languageManager.text("course.finish")
                       : languageManager.text("common.continue"))
-                Image(systemName: hasReachedEnd && !isCourseLocked ? "checkmark" : "arrow.forward")
-                    .font(.subheadline.weight(.semibold))
+                if !finishing {
+                    Image(systemName: "arrow.forward")
+                        .font(.subheadline.weight(.semibold))
+                }
             }
         }
-        .buttonStyle(DSPrimaryButtonStyle())
+        .buttonStyle(CourseCTAStyle())
         .padding(.horizontal, 24)
+        .padding(.top, 8)
         .padding(.bottom, 24)
     }
 
@@ -1109,12 +1115,12 @@ private struct ProgressSegment: View {
     var body: some View {
         GeometryReader { geo in
             ZStack(alignment: .leading) {
-                Capsule().fill(DS.hairline)
+                Capsule().fill(CoursePalette.track)
                 Capsule()
-                    .fill(DS.accentSoft)
+                    .fill(DS.accent)
                     .frame(width: max(0, geo.size.width * min(1, fill)))
             }
         }
-        .animation(.spring(response: 0.4, dampingFraction: 0.9), value: fill)
+        .animation(DS.Motion.reveal, value: fill)
     }
 }

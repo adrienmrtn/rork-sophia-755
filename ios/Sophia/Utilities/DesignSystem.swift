@@ -17,7 +17,7 @@ enum DS {
     // Automatic) in Settings. Light values are the existing editorial palette.
 
     /// App background — soft cool off-white / deep navy at night.
-    static let uiCanvas = DSAdaptive.color(light: (0.969, 0.973, 0.980), dark: (0.071, 0.090, 0.129))
+    static let uiCanvas = DSAdaptive.color(light: (1, 1, 1), dark: (0.071, 0.090, 0.129))
     static let canvas = Color(uiColor: uiCanvas)
 
     /// Canvas resolved against an explicit scheme — use on modal chrome so the
@@ -31,31 +31,31 @@ enum DS {
     static let uiSurface = DSAdaptive.color(light: (1, 1, 1), dark: (0.118, 0.145, 0.192))
     static let surface = Color(uiColor: uiSurface)
     /// Muted surface — pale blue hero cards / raised night panels.
-    static let uiSurfaceMuted = DSAdaptive.color(light: (0.914, 0.937, 0.973), dark: (0.145, 0.184, 0.247))
+    static let uiSurfaceMuted = DSAdaptive.color(light: (0.894, 0.925, 0.980), dark: (0.145, 0.184, 0.247))
     static let surfaceMuted = Color(uiColor: uiSurfaceMuted)
 
     /// Primary text — deep navy / off-white at night.
-    static let uiInk = DSAdaptive.color(light: (0.086, 0.149, 0.239), dark: (0.925, 0.937, 0.957))
+    static let uiInk = DSAdaptive.color(light: (0.133, 0.149, 0.180), dark: (0.925, 0.937, 0.957))
     static let ink = Color(uiColor: uiInk)
     /// Secondary text — muted slate.
-    static let uiInkSecondary = DSAdaptive.color(light: (0.333, 0.388, 0.478), dark: (0.655, 0.698, 0.757))
+    static let uiInkSecondary = DSAdaptive.color(light: (0.420, 0.447, 0.502), dark: (0.655, 0.698, 0.757))
     static let inkSecondary = Color(uiColor: uiInkSecondary)
     /// Tertiary text — light slate (captions, hints, credits).
-    static let uiInkTertiary = DSAdaptive.color(light: (0.604, 0.643, 0.698), dark: (0.475, 0.522, 0.588))
+    static let uiInkTertiary = DSAdaptive.color(light: (0.541, 0.576, 0.639), dark: (0.475, 0.522, 0.588))
     static let inkTertiary = Color(uiColor: uiInkTertiary)
 
     /// Primary accent — deep navy CTA by day; lifted blue at night for contrast.
-    static let uiAccent = DSAdaptive.color(light: (0.102, 0.227, 0.420), dark: (0.310, 0.490, 0.855))
+    static let uiAccent = DSAdaptive.color(light: (0.180, 0.384, 0.769), dark: (0.310, 0.490, 0.855))
     static let accent = Color(uiColor: uiAccent)
     /// Softer accent — medium blue for links, counts, underlines.
     static let uiAccentSoft = DSAdaptive.color(light: (0.180, 0.384, 0.769), dark: (0.480, 0.655, 0.960))
     static let accentSoft = Color(uiColor: uiAccentSoft)
     /// Subtle accent fill / selected states.
-    static let uiAccentTint = DSAdaptive.color(light: (0.914, 0.937, 0.973), dark: (0.145, 0.196, 0.298))
+    static let uiAccentTint = DSAdaptive.color(light: (0.894, 0.925, 0.980), dark: (0.145, 0.196, 0.298))
     static let accentTint = Color(uiColor: uiAccentTint)
 
     /// Hairline separators & subtle borders.
-    static let uiHairline = DSAdaptive.color(light: (0.894, 0.906, 0.925), dark: (0.212, 0.247, 0.310))
+    static let uiHairline = DSAdaptive.color(light: (0.855, 0.867, 0.886), dark: (0.212, 0.247, 0.310))
     static let hairline = Color(uiColor: uiHairline)
 
     /// Muted sage green — success / correct-answer semantics (quiz, completions).
@@ -110,7 +110,7 @@ enum DS {
 
     /// Titles / headings — Plus Jakarta Sans, ExtraBold (800) by default for strong
     /// hierarchy; pass an explicit lighter weight where a quieter title is needed.
-    static func title(_ style: Font.TextStyle, _ weight: Font.Weight = .heavy) -> Font {
+    static func title(_ style: Font.TextStyle, _ weight: Font.Weight = .semibold) -> Font {
         .custom(fontFamily, size: baseSize(for: style), relativeTo: style).weight(weight)
     }
 
@@ -123,7 +123,7 @@ enum DS {
     // MARK: - Metrics
 
     enum Radius {
-        static let card: CGFloat = 22
+        static let card: CGFloat = 16
         static let control: CGFloat = 16
         static let small: CGFloat = 12
     }
@@ -134,6 +134,19 @@ enum DS {
         static let m: CGFloat = 16
         static let l: CGFloat = 20
         static let xl: CGFloat = 28
+    }
+
+    /// Courbes d'animation partagées : une seule famille de ressorts pour toute l'app, pour
+    /// que les pressions, apparitions et célébrations aient la même « main ».
+    enum Motion {
+        /// Pression d'un bouton ou d'une carte : rapide, sans rebond marqué.
+        static let press = Animation.spring(response: 0.26, dampingFraction: 0.72)
+        /// Changement d'état (sélection, onglet, bascule) : vif avec un léger rebond.
+        static let snappy = Animation.spring(response: 0.34, dampingFraction: 0.74)
+        /// Apparition d'un bloc de contenu : ample et posée.
+        static let reveal = Animation.spring(response: 0.55, dampingFraction: 0.84)
+        /// Récompense (coche, badge, score) : rebond franc.
+        static let pop = Animation.spring(response: 0.42, dampingFraction: 0.58)
     }
 
     /// Gentle diffuse shadow used on elevated surfaces.
@@ -208,6 +221,9 @@ private struct DSCardModifier: ViewModifier {
     let shadow: Bool
 
     func body(content: Content) -> some View {
+        // Carte « Elevate arrondi » : fond blanc, bordure nette de 1,5 pt et léger rebord
+        // bas (la bordure paraît plus épaisse en bas), sans ombre diffuse. `shadow` pilote
+        // désormais ce rebord.
         content
             .padding(padding ?? 0)
             .frame(maxWidth: .infinity, alignment: .leading)
@@ -217,9 +233,13 @@ private struct DSCardModifier: ViewModifier {
             )
             .overlay(
                 RoundedRectangle(cornerRadius: cornerRadius, style: .continuous)
-                    .strokeBorder(DS.hairline, lineWidth: 1)
+                    .strokeBorder(DS.hairline, lineWidth: 1.5)
             )
-            .modifier(ConditionalSoftShadow(enabled: shadow))
+            .background(
+                RoundedRectangle(cornerRadius: cornerRadius, style: .continuous)
+                    .fill(DS.hairline)
+                    .offset(y: shadow ? 1 : 0)
+            )
     }
 }
 
@@ -236,7 +256,8 @@ private struct ConditionalSoftShadow: ViewModifier {
 
 // MARK: - Button styles
 
-/// Solid navy CTA: filled capsule, white text, gentle press feedback. No offset plate.
+/// CTA plein « Elevate arrondi » : rectangle arrondi (16 pt) bleu, texte blanc, pression
+/// élastique et léger retour haptique.
 struct DSPrimaryButtonStyle: ButtonStyle {
     var fill: Color = DS.accent
     var foreground: Color = .white
@@ -252,11 +273,12 @@ struct DSPrimaryButtonStyle: ButtonStyle {
             .padding(.vertical, 17)
             .padding(.horizontal, 12)
             .background(
-                Capsule(style: .continuous).fill(fill)
+                RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous).fill(fill)
             )
             .opacity(configuration.isPressed ? 0.9 : 1)
-            .scaleEffect(configuration.isPressed ? 0.98 : 1)
-            .animation(.spring(response: 0.28, dampingFraction: 0.8), value: configuration.isPressed)
+            .scaleEffect(configuration.isPressed ? 0.96 : 1)
+            .animation(DS.Motion.press, value: configuration.isPressed)
+            .sensoryFeedback(.impact(weight: .medium, intensity: 0.8), trigger: configuration.isPressed) { _, pressed in pressed }
     }
 }
 
@@ -271,13 +293,14 @@ struct DSSecondaryButtonStyle: ButtonStyle {
             .frame(maxWidth: .infinity)
             .padding(.vertical, 16)
             .background(
-                Capsule(style: .continuous).fill(DS.surface)
+                RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous).fill(DS.surface)
             )
             .overlay(
-                Capsule(style: .continuous).strokeBorder(DS.hairline, lineWidth: 1)
+                RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous).strokeBorder(DS.hairline, lineWidth: 1.5)
             )
             .opacity(configuration.isPressed ? 0.85 : 1)
-            .scaleEffect(configuration.isPressed ? 0.98 : 1)
-            .animation(.spring(response: 0.28, dampingFraction: 0.8), value: configuration.isPressed)
+            .scaleEffect(configuration.isPressed ? 0.96 : 1)
+            .animation(DS.Motion.press, value: configuration.isPressed)
+            .sensoryFeedback(.impact(flexibility: .soft, intensity: 0.7), trigger: configuration.isPressed) { _, pressed in pressed }
     }
 }

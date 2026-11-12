@@ -1,7 +1,10 @@
 import SwiftUI
 
+/// Le passage à un nouveau rang global, dans le style « Elevate arrondi » : le nouveau rang dans
+/// sa carte bordée, l'ancien et le nouveau côte à côte, puis « Continuer ».
 struct GlobalRankUpCelebrationView: View {
     @Environment(LanguageManager.self) private var languageManager
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
     let previousRank: GlobalRank
     let newRank: GlobalRank
     let newLevel: Int
@@ -23,12 +26,15 @@ struct GlobalRankUpCelebrationView: View {
                         .font(DS.title(.title, .semibold))
                         .foregroundStyle(DS.ink)
                         .multilineTextAlignment(.center)
+                        .padding(.horizontal, 24)
                         .opacity(appeared ? 1 : 0)
                         .offset(y: appeared ? 0 : 14)
 
                     Text(String(format: languageManager.text("globalRank.reachedLevel"), newLevel))
                         .font(DS.sans(.subheadline))
                         .foregroundStyle(DS.inkSecondary)
+                        .multilineTextAlignment(.center)
+                        .padding(.horizontal, 24)
                         .padding(.top, 6)
                         .opacity(appeared ? 1 : 0)
 
@@ -51,8 +57,8 @@ struct GlobalRankUpCelebrationView: View {
 
                     Spacer(minLength: 28)
 
+                    // Le CTA vibre de lui-même (`DSPrimaryButtonStyle`).
                     Button {
-                        UIImpactFeedbackGenerator(style: .light).impactOccurred()
                         onContinue()
                     } label: {
                         Text(languageManager.text("common.continue"))
@@ -76,26 +82,28 @@ struct GlobalRankUpCelebrationView: View {
                 .scaleEffect(iconScale)
 
             Text(newRank.localizedName(language: languageManager.current))
-                .font(DS.title(.title, .semibold))
-                .foregroundStyle(DS.ink)
+                .font(DS.title(.title, .bold))
+                .foregroundStyle(DS.accent)
+                .multilineTextAlignment(.center)
+                .lineLimit(2)
+                .minimumScaleFactor(0.7)
 
-            Text(languageManager.text("globalRank.badge"))
-                .font(DS.sans(.caption, .semibold))
-                .foregroundStyle(DS.accentSoft)
-                .tracking(1.0)
-                .padding(.horizontal, 14)
-                .padding(.vertical, 7)
-                .background(DS.accentTint, in: Capsule())
+            DSChip(text: languageManager.text("globalRank.badge"))
         }
         .padding(.vertical, 32)
         .frame(width: 260)
-        .background(DS.surface)
-        .clipShape(.rect(cornerRadius: DS.Radius.card))
+        .background(
+            RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous).fill(DS.surface)
+        )
         .overlay {
             RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
-                .strokeBorder(DS.hairline, lineWidth: 1)
+                .strokeBorder(DS.hairline, lineWidth: 1.5)
         }
-        .dsSoftShadow()
+        .background(
+            RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
+                .fill(DS.hairline)
+                .offset(y: 1.5)
+        )
     }
 
     private func rankChip(_ rank: GlobalRank, faded: Bool) -> some View {
@@ -103,31 +111,46 @@ struct GlobalRankUpCelebrationView: View {
             Image(systemName: rank.symbolName)
                 .font(.jakarta(size: 12, weight: .medium))
             Text(rank.localizedName(language: languageManager.current))
-                .font(DS.sans(.caption, .medium))
+                .font(DS.sans(.caption, faded ? .medium : .bold))
         }
-        .foregroundStyle(faded ? DS.inkTertiary : DS.accentSoft)
+        .foregroundStyle(faded ? DS.inkTertiary : DS.accent)
         .padding(.horizontal, 13)
         .padding(.vertical, 8)
-        .background(faded ? DS.surfaceMuted : DS.accentTint, in: Capsule())
+        .background(
+            Capsule().fill(faded ? DS.surface : DS.accentTint)
+        )
+        .overlay(
+            Capsule().strokeBorder(faded ? DS.hairline : Color.clear, lineWidth: 1.5)
+        )
     }
 
     private func runSequence() {
-        withAnimation(.spring(response: 0.65, dampingFraction: 0.78)) {
+        if reduceMotion {
+            appeared = true
+            cardScale = 1
+            iconScale = 1
+            Haptics.celebrate()
+            return
+        }
+        withAnimation(DS.Motion.reveal) {
             appeared = true
             cardScale = 1
         }
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
-            UINotificationFeedbackGenerator().notificationOccurred(.success)
-            withAnimation(.spring(response: 0.5, dampingFraction: 0.6)) {
+            // La récompense : le badge du rang se pose avec son rebond.
+            Haptics.celebrate()
+            withAnimation(DS.Motion.pop) {
                 iconScale = 1
             }
         }
     }
 }
 
-/// Calm animated rank icon: a soft gradient circle with the rank symbol and a gentle
-/// breathing glow — no orbiting sparkles or spinning rings.
+/// Le badge animé d'un rang : un disque en dégradé aux couleurs du rang (porteuses de sens),
+/// son symbole, et un halo qui respire doucement. Immobile quand « Réduire les animations »
+/// est actif.
 struct GlobalRankAnimatedIcon: View {
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
     let rank: GlobalRank
     var size: CGFloat
 
@@ -136,9 +159,9 @@ struct GlobalRankAnimatedIcon: View {
     var body: some View {
         ZStack {
             Circle()
-                .fill(rank.primaryColor.opacity(pulse ? 0.5 : 0.28))
-                .frame(width: size * 1.12, height: size * 1.12)
-                .blur(radius: size * 0.12)
+                .fill(rank.primaryColor.opacity(pulse ? 0.22 : 0.12))
+                .frame(width: size * 1.16, height: size * 1.16)
+                .scaleEffect(pulse ? 1.04 : 0.96)
 
             Circle()
                 .fill(
@@ -156,6 +179,7 @@ struct GlobalRankAnimatedIcon: View {
         }
         .frame(width: size, height: size)
         .onAppear {
+            guard !reduceMotion else { return }
             withAnimation(.easeInOut(duration: 1.6).repeatForever(autoreverses: true)) {
                 pulse = true
             }

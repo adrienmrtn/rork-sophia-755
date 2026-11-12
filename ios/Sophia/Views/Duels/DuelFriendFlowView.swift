@@ -45,7 +45,7 @@ struct DuelFriendFlowView: View {
 
     var body: some View {
         ZStack {
-            DuelPalette.night.ignoresSafeArea()
+            DS.canvas.ignoresSafeArea()
 
             switch stage {
             case .waiting, .failed, .countdown:
@@ -111,27 +111,29 @@ struct DuelFriendFlowView: View {
 
     private var lobby: some View {
         ZStack {
-            DuelLeagueBackdrop(league: DuelService.shared.home?.currentLeague)
-                .ignoresSafeArea()
-            LinearGradient(
-                colors: [DuelPalette.night.opacity(0.72), DuelPalette.night.opacity(0.9)],
-                startPoint: .top,
-                endPoint: .bottom
-            )
-            .ignoresSafeArea()
+            DS.canvas.ignoresSafeArea()
 
             VStack(spacing: 0) {
                 Text(languageManager.text("duel.friend.title").uppercased())
-                    .font(DS.sans(.caption, .bold))
-                    .tracking(1.6)
-                    .foregroundStyle(DuelPalette.saffron)
-                    .padding(.top, 18)
+                    .font(.jakarta(size: 12, weight: .heavy))
+                    .tracking(1.2)
+                    .foregroundStyle(DS.accent)
+                    .padding(.top, 20)
 
                 Spacer(minLength: 12)
-                card(friend, fallbackHandle: target?.handle, fallbackAvatar: target?.avatarId, ring: DuelPalette.coral, online: friendOnline && stage == .waiting)
+                card(friend, fallbackHandle: target?.handle, fallbackAvatar: target?.avatarId, ring: DuelPalette.saffron, online: friendOnline && stage == .waiting)
+                    .background {
+                        // Le défi est parti : des ondes autour de l'ami tant qu'il n'a pas répondu.
+                        if stage == .waiting, target != nil {
+                            DuelPulseRings(color: DS.accent)
+                                .frame(width: 104, height: 104)
+                                .frame(maxHeight: .infinity, alignment: .top)
+                                .transition(.opacity)
+                        }
+                    }
                 badge
                     .padding(.vertical, 26)
-                card(me, fallbackHandle: player.handle, fallbackAvatar: player.avatarId, ring: DuelPalette.saffron, online: false)
+                card(me, fallbackHandle: player.handle, fallbackAvatar: player.avatarId, ring: DS.accent, online: false)
                 Spacer(minLength: 12)
 
                 footer
@@ -143,62 +145,27 @@ struct DuelFriendFlowView: View {
 
     private func card(_ who: DuelOpponent?, fallbackHandle: String?, fallbackAvatar: String?, ring: Color, online: Bool) -> some View {
         let handle = who?.handle ?? fallbackHandle ?? ""
-        return VStack(spacing: 12) {
-            DuelAvatar(
-                avatarId: who?.avatarId ?? fallbackAvatar,
-                initial: String(handle.prefix(1)).uppercased(),
-                size: 104,
-                ring: ring,
-                ringWidth: 4
-            )
-            .overlay(alignment: .bottomTrailing) {
-                if online {
-                    DuelOnlineDot(size: 20)
-                        .offset(x: -4, y: -4)
-                }
-            }
-            VStack(spacing: 6) {
-                Text("@\(handle)")
-                    .font(.jakarta(size: 22, weight: .heavy))
-                    .foregroundStyle(.white)
-                    .lineLimit(1)
-                    .minimumScaleFactor(0.7)
-                if let who {
-                    DuelTrophyCount(value: who.trophies, size: 16, color: .white)
-                }
-            }
-        }
-        .frame(maxWidth: .infinity)
+        return DuelVersusCard(
+            avatarId: who?.avatarId ?? fallbackAvatar,
+            initial: String(handle.prefix(1)).uppercased(),
+            handle: handle,
+            trophies: who?.trophies,
+            ring: ring,
+            online: online
+        )
     }
 
     /// Le rond central : les secondes qui restent à l'ami pour répondre, puis 3, 2, 1.
+    @ViewBuilder
     private var badge: some View {
-        ZStack {
-            Circle()
-                .fill(stage == .failed ? Color.white.opacity(0.2) : DuelPalette.saffron)
-                .frame(width: 72, height: 72)
-                .shadow(color: DuelPalette.saffron.opacity(stage == .failed ? 0 : 0.5), radius: 18, x: 0, y: 0)
-            if let countdown {
-                Text("\(countdown)")
-                    .font(.jakarta(size: 38, weight: .heavy))
-                    .foregroundStyle(DuelPalette.night)
-                    .id(countdown)
-                    .transition(.scale(scale: 2.2).combined(with: .opacity))
-            } else if stage == .waiting, let waitingDeadline {
-                TimelineView(.periodic(from: .now, by: 0.25)) { timeline in
-                    Text("\(max(Int(waitingDeadline.timeIntervalSince(timeline.date).rounded(.up)), 0))")
-                        .font(.jakarta(size: 30, weight: .heavy))
-                        .monospacedDigit()
-                        .foregroundStyle(DuelPalette.night)
-                        .contentTransition(.numericText(countsDown: true))
-                }
-            } else {
-                Text("VS")
-                    .font(.jakarta(size: 24, weight: .heavy))
-                    .foregroundStyle(stage == .failed ? .white : DuelPalette.night)
+        if stage == .waiting, countdown == nil, let waitingDeadline {
+            TimelineView(.periodic(from: .now, by: 0.25)) { timeline in
+                DuelVersusBadge(number: max(Int(waitingDeadline.timeIntervalSince(timeline.date).rounded(.up)), 0))
             }
+        } else {
+            DuelVersusBadge(number: countdown, counting: true, muted: stage == .failed)
+                .scaleEffect(stage == .countdown ? 1.12 : 1)
         }
-        .scaleEffect(stage == .countdown ? 1.12 : 1)
     }
 
     @ViewBuilder
@@ -209,28 +176,26 @@ struct DuelFriendFlowView: View {
             Color.clear.frame(height: 40)
         case .waiting:
             VStack(spacing: 14) {
-                Text(String(format: languageManager.text("duel.game.waiting"), friend?.handle ?? target?.handle ?? ""))
-                    .font(DS.sans(.subheadline, .semibold))
-                    .foregroundStyle(.white.opacity(0.8))
-                    .multilineTextAlignment(.center)
+                HStack(spacing: 8) {
+                    Text(String(format: languageManager.text("duel.game.waiting"), friend?.handle ?? target?.handle ?? ""))
+                        .font(DS.sans(.subheadline, .semibold))
+                        .foregroundStyle(DS.inkSecondary)
+                        .multilineTextAlignment(.center)
+                    DuelWaitingDots(color: DS.inkSecondary, size: 5)
+                }
+                // Le bouton secondaire vibre de lui-même.
                 Button {
-                    DuelHaptics.tap()
                     cancel()
                 } label: {
                     Text(languageManager.text("duel.friend.cancel"))
-                        .font(DS.sans(.headline, .semibold))
-                        .foregroundStyle(.white)
-                        .frame(maxWidth: .infinity)
-                        .padding(.vertical, 15)
-                        .background(Capsule().fill(Color.white.opacity(0.16)))
                 }
-                .buttonStyle(SoftPressButtonStyle())
+                .buttonStyle(DSSecondaryButtonStyle())
             }
         case .failed:
             VStack(spacing: 14) {
                 Text(String(format: languageManager.text(failureKey), friend?.handle ?? target?.handle ?? ""))
                     .font(DS.sans(.body, .semibold))
-                    .foregroundStyle(.white)
+                    .foregroundStyle(DS.ink)
                     .multilineTextAlignment(.center)
                 Button {
                     DuelHaptics.tap()
@@ -243,7 +208,7 @@ struct DuelFriendFlowView: View {
         default:
             Text(languageManager.text("duel.friend.ready"))
                 .font(DS.sans(.subheadline, .bold))
-                .foregroundStyle(.white.opacity(0.85))
+                .foregroundStyle(DS.accent)
                 .frame(minHeight: 40)
         }
     }
@@ -414,7 +379,7 @@ struct DuelOnlineDot: View {
         Circle()
             .fill(Color(red: 0.25, green: 0.78, blue: 0.47))
             .frame(width: size, height: size)
-            .overlay(Circle().strokeBorder(.white, lineWidth: max(size * 0.16, 1.5)))
+            .overlay(Circle().strokeBorder(DS.surface, lineWidth: max(size * 0.16, 1.5)))
             .accessibilityHidden(true)
     }
 }

@@ -9,6 +9,7 @@ struct AntiScrollLockedApps: View {
     var spacing: CGFloat = 12
 
     @State private var shown = 0
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     /// Dans l'ordre : une app de vidéos courtes, de photos, de vidéos, de messages, un réseau.
     private static let symbols = ["music.note", "camera.fill", "play.rectangle.fill", "bubble.left.fill", "at"]
@@ -49,9 +50,13 @@ struct AntiScrollLockedApps: View {
 
     private func reveal() {
         guard shown == 0 else { return }
+        if reduceMotion {
+            shown = Self.symbols.count
+            return
+        }
         for i in 0..<Self.symbols.count {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.15 + Double(i) * 0.08) {
-                withAnimation(.spring(response: 0.42, dampingFraction: 0.65)) { shown = i + 1 }
+                withAnimation(DS.Motion.pop) { shown = i + 1 }
             }
         }
     }
@@ -69,11 +74,7 @@ struct AntiScrollIntroSheet: View {
         VStack(spacing: 0) {
             Spacer().frame(height: 30)
 
-            Text(languageManager.text("antiScroll.title"))
-                .font(DS.title(.title2, .heavy))
-                .foregroundStyle(DS.ink)
-                .multilineTextAlignment(.center)
-                .fixedSize(horizontal: false, vertical: true)
+            DSHighlightTitle(text: languageManager.text("antiScroll.title"), style: .title2, weight: .medium)
                 .padding(.horizontal, 28)
 
             Spacer(minLength: 26)
@@ -82,13 +83,13 @@ struct AntiScrollIntroSheet: View {
 
             Spacer(minLength: 30)
 
+            // La vibration du CTA vient du style du bouton.
             Button {
-                UIImpactFeedbackGenerator(style: .medium).impactOccurred()
                 onActivate()
             } label: {
                 HStack(spacing: 8) {
                     Image(systemName: "iphone.slash")
-                        .font(.jakarta(size: 15, weight: .bold))
+                        .font(.system(size: 15, weight: .bold))
                     Text(languageManager.text("antiScroll.cta"))
                 }
             }
@@ -100,7 +101,7 @@ struct AntiScrollIntroSheet: View {
         .frame(maxWidth: .infinity)
         .presentationDetents([.medium, .large])
         .presentationDragIndicator(.visible)
-        .presentationCornerRadius(30)
+        .presentationCornerRadius(24)
         .presentationBackground(DS.canvas)
     }
 }
@@ -144,7 +145,7 @@ struct SophiaBlockerPaywall: View {
 
     var body: some View {
         ZStack {
-            DS.canvas.ignoresSafeArea()
+            DSLegacy.canvas.ignoresSafeArea()
 
             VStack(spacing: 0) {
                 HStack {
@@ -175,7 +176,7 @@ struct SophiaBlockerPaywall: View {
                     .offset(y: appeared ? 0 : 20)
             }
             // One column of copy, drawn for an iPhone (see the other native paywalls).
-            .frame(maxWidth: OV2.readableWidth)
+            .frame(maxWidth: OV2Legacy.readableWidth)
         }
         .onAppear {
             if tracksAnalytics {
@@ -201,9 +202,9 @@ struct SophiaBlockerPaywall: View {
         VStack(spacing: 18) {
             Image(systemName: "iphone.slash")
                 .font(.system(size: 34, weight: .semibold))
-                .foregroundStyle(DS.accent)
+                .foregroundStyle(DSLegacy.accent)
                 .frame(width: 84, height: 84)
-                .background(DS.accentTint, in: Circle())
+                .background(DSLegacy.accentTint, in: Circle())
             AntiScrollLockedApps(tileSize: 46, spacing: 10)
         }
     }
@@ -213,16 +214,16 @@ struct SophiaBlockerPaywall: View {
     private var headline: some View {
         VStack(spacing: 10) {
             Text(languageManager.text("paywall.blocker.title"))
-                .font(DS.title(.title, .heavy))
-                .foregroundStyle(DS.ink)
+                .font(DSLegacy.title(.title, .heavy))
+                .foregroundStyle(DSLegacy.ink)
                 .multilineTextAlignment(.center)
                 .fixedSize(horizontal: false, vertical: true)
 
             Text(hasTrial
                  ? languageManager.trialText("paywall.blocker.subtitle", days: trialDays)
                  : languageManager.text("paywall.blocker.subtitle.noTrial"))
-                .font(DS.sans(.subheadline, .bold))
-                .foregroundStyle(hasTrial ? DS.success : DS.inkSecondary)
+                .font(DSLegacy.sans(.subheadline, .bold))
+                .foregroundStyle(hasTrial ? DSLegacy.success : DSLegacy.inkSecondary)
                 .multilineTextAlignment(.center)
                 .fixedSize(horizontal: false, vertical: true)
         }
@@ -245,7 +246,7 @@ struct SophiaBlockerPaywall: View {
                     }
                 }
             }
-            .buttonStyle(DSPrimaryButtonStyle())
+            .buttonStyle(DSLegacyPrimaryButtonStyle())
             .disabled(purchasing)
             .padding(.horizontal, 24)
 
@@ -278,10 +279,10 @@ struct SophiaBlockerPaywall: View {
         } label: {
             Image(systemName: "xmark")
                 .font(.system(size: 15, weight: .semibold))
-                .foregroundStyle(DS.inkSecondary)
+                .foregroundStyle(DSLegacy.inkSecondary)
                 .frame(width: 40, height: 40)
-                .background(DS.surface, in: Circle())
-                .overlay { Circle().strokeBorder(DS.hairline, lineWidth: 1) }
+                .background(DSLegacy.surface, in: Circle())
+                .overlay { Circle().strokeBorder(DSLegacy.hairline, lineWidth: 1) }
         }
     }
 

@@ -5,19 +5,22 @@ import Supabase
 /// Coordinateur d'onboarding V2 — séquence **fixe** (les pages valeur ne dépendent plus des
 /// objectifs sélectionnés).
 ///
-/// Welcome · Langue · Présentation (4 pages reliées par des points) · Preuve sociale (500 000
-/// utilisateurs) · Prénom · Âge · Culture générale (curseur) · Motivation · Objectifs (multi) ·
-/// Sujets (6 carrés) · « Sophia va t'aider » · Mission (gratuite à l'essai) · « Me cultiver »
-/// (questions) ·
-/// Temps d'écran (slider) · Ta vie en années · « Transforme ce temps » · Avis · « Fais bon
-/// usage » · Swipe · Loading · Profil · Notifications · **Login** · Ton profil (avatar, @) ·
-/// Suis des profs · Bienvenue à bord · Atouts ·
-/// Essai · Rappel · Paywall
-/// annuel · Paywall comparatif. Les pages « Se cultiver, c'est long et cher » et « Des cours
-/// écrits par des docteurs et des profs » ont été retirées le 29/09/2026.
+/// Welcome · Langue · Leçons · Chercheurs · Présentation (carrousel de 4 pages qui défilent
+/// seules : quiz, parcours, duels, audio) · Preuve sociale (500 000 utilisateurs) · Prénom ·
+/// Âge · Culture générale (curseur) · Motivation · Objectifs (multi) · Sujets (6 carrés) ·
+/// « Sophia va t'aider » · Temps d'écran (slider) · Ta vie en années · « Transforme ce
+/// temps » · « Me cultiver » (questions) · Mission (gratuite à l'essai) · « Fais bon usage » ·
+/// Swipe · Heure de lecture · Courbe 90 jours · Notifications · Avis · Loading · Profil ·
+/// **Login** · Ton profil (avatar, @) · Suis des profs · Bienvenue à bord · Atouts ·
+/// Essai · Rappel · Paywall annuel · Paywall comparatif.
+///
+/// L'en-tête (flèche retour, segments du carrousel, barre de progression) est posé ici, une
+/// fois, avec `safeAreaInset(edge: .top)` : les écrans se décalent sous lui sans le connaître.
 struct OnboardingV2View: View {
     @Environment(LanguageManager.self) private var languageManager
     @Environment(AuthService.self) private var auth
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+    @Environment(\.layoutDirection) private var layoutDirection
 
     let onComplete: () -> Void
 
@@ -35,12 +38,18 @@ struct OnboardingV2View: View {
     @State private var notificationsSettled = false
     /// Sign-in sheet opened from the welcome page by someone who already has an account.
     @State private var showExistingAccountSignIn = false
+    /// Page et horloge du carrousel de présentation, partagées avec les segments de l'en-tête.
+    @State private var carousel = OnboardingV2CarouselModel()
+    /// Sens de la dernière navigation : la transition glisse dans l'autre sens au retour.
+    @State private var slidesForward = true
+    /// Logo animé joué une fois, à l'ouverture d'un onboarding qui démarre à la page d'accueil.
+    @State private var showSplash: Bool = OnboardingV2View.startsAtWelcome
 
     private enum Screen: Hashable {
-        case welcome, language, intro, socialProof, name, age, knowledge, motivation
+        case welcome, language, lessons, researchers, intro, socialProof, name, age, knowledge, motivation
         case objectives, topics, objectiveIntro, mission
         case questions, phoneTime, yearsGrid, transform, review, personalize
-        case swipe, loading, profile, readingTime, notifications, login, account, followCreators
+        case swipe, loading, profile, readingTime, curve90, notifications, login, account, followCreators
         case welcomeAboard, features, trialSteps, reminder, paywallAnnual, paywallComparison
 
         /// Nom stable de l'écran, mémorisé pour reprendre l'onboarding au bon endroit : la
@@ -50,6 +59,8 @@ struct OnboardingV2View: View {
             switch self {
             case .welcome: "welcome"
             case .language: "language"
+            case .lessons: "lessons"
+            case .researchers: "researchers"
             case .intro: "intro"
             case .socialProof: "social_proof"
             case .name: "name"
@@ -70,6 +81,7 @@ struct OnboardingV2View: View {
             case .loading: "loading"
             case .profile: "profile"
             case .readingTime: "reading_time"
+            case .curve90: "curve_90"
             case .notifications: "notifications"
             case .login: "login"
             case .account: "account"
@@ -92,10 +104,11 @@ struct OnboardingV2View: View {
     /// l'offering servie (variante d'expérience RevenueCat) n'inclut pas d'essai, sinon on
     /// promettrait un essai que l'utilisateur n'aura pas.
     private var screens: [Screen] {
-        var list: [Screen] = [.welcome, .language, .intro, .socialProof,
-                              .name, .age, .knowledge, .motivation, .objectives, .topics, .objectiveIntro, .mission,
-                              .questions, .phoneTime, .yearsGrid, .transform, .review, .personalize,
-                              .swipe, .loading, .profile, .readingTime, .notifications, .login, .account, .followCreators,
+        var list: [Screen] = [.welcome, .language, .lessons, .researchers, .intro, .socialProof,
+                              .name, .age, .knowledge, .motivation, .objectives, .topics, .objectiveIntro,
+                              .phoneTime, .yearsGrid, .transform, .questions, .mission, .personalize,
+                              .swipe, .readingTime, .curve90, .notifications, .review, .loading, .profile,
+                              .login, .account, .followCreators,
                               .welcomeAboard, .features]
         if store.offerings == nil || store.annualHasFreeTrial {
             list.append(.trialSteps)
@@ -104,10 +117,50 @@ struct OnboardingV2View: View {
         return list
     }
 
-    private static let dotScreens: Set<Screen> = [
-        .name, .age, .knowledge, .motivation, .objectives, .topics, .objectiveIntro, .mission,
-        .questions, .phoneTime, .yearsGrid, .review, .swipe, .loading,
+    // MARK: - En-tête
+
+    private enum HeaderKind: Equatable {
+        /// Aucun en-tête : accueil, puis connexion et tout ce qui suit.
+        case none
+        /// Flèche retour seule.
+        case back
+        /// Flèche retour + les quatre segments du carrousel.
+        case segments
+        /// Flèche retour + barre de progression de 200 pt.
+        case progress
+    }
+
+    /// Écrans d'ouverture : la flèche retour, sans barre.
+    private static let backOnlyScreens: Set<Screen> = [.language, .lessons, .researchers]
+
+    /// Écrans comptés par la barre de progression, dans l'ordre du déroulé : de la preuve
+    /// sociale au profil inclus.
+    private static let progressScreens: [Screen] = [
+        .socialProof, .name, .age, .knowledge, .motivation, .objectives, .topics, .objectiveIntro,
+        .phoneTime, .yearsGrid, .transform, .questions, .mission, .personalize,
+        .swipe, .readingTime, .curve90, .notifications, .review, .loading, .profile,
     ]
+
+    private func headerKind(for screen: Screen) -> HeaderKind {
+        if screen == .intro { return .segments }
+        if Self.backOnlyScreens.contains(screen) { return .back }
+        if Self.progressScreens.contains(screen) { return .progress }
+        return .none
+    }
+
+    /// Avancement de la barre : le premier écran compté la montre à peine entamée, le
+    /// dernier la remplit.
+    private var progressValue: Double {
+        guard let index = Self.progressScreens.firstIndex(of: current) else { return 0 }
+        return Double(index + 1) / Double(Self.progressScreens.count)
+    }
+
+    /// L'onboarding démarre-t-il à la page d'accueil (premier lancement, ou reprise restée
+    /// sur l'accueil) ? C'est le seul cas où le logo animé est joué.
+    private static var startsAtWelcome: Bool {
+        guard let step = OnboardingResumeStore.step else { return true }
+        return step == Screen.welcome.analyticsName
+    }
 
     private var current: Screen {
         let list = screens
@@ -130,13 +183,19 @@ struct OnboardingV2View: View {
 
             page(for: current)
                 .id(current)
-                .transition(.ov2)
+                .transition(.ov2Slide(
+                    forward: slidesForward,
+                    mirrored: layoutDirection == .rightToLeft,
+                    distance: reduceMotion ? 0 : 64
+                ))
         }
-        .overlay(alignment: .top) {
-            if Self.dotScreens.contains(current) {
-                OnboardingV2ProgressDots(current: dotIndex, total: dotTotal)
-                    .padding(.top, 14)
-                    .allowsHitTesting(false)
+        .safeAreaInset(edge: .top, spacing: 0) {
+            header
+        }
+        .overlay {
+            if showSplash {
+                OnboardingV2Splash(onFinished: dismissSplash)
+                    .transition(.opacity)
             }
         }
         .preferredColorScheme(.light)
@@ -152,6 +211,8 @@ struct OnboardingV2View: View {
         }
         .onAppear {
             restoreStepIndex()
+            // Une reprise en cours de route n'a pas à rejouer le logo.
+            if current != .welcome { showSplash = false }
             AnalyticsService.shared.log(
                 .onboardingStep,
                 props: ["step": .string(current.analyticsName), "index": .int(stepIndex)]
@@ -159,6 +220,47 @@ struct OnboardingV2View: View {
         }
         .task {
             notificationsSettled = await NotificationPermission.isSettled()
+        }
+    }
+
+    /// L'en-tête de l'écran courant ; rien sur l'accueil, ni à partir de la connexion.
+    @ViewBuilder
+    private var header: some View {
+        let kind: HeaderKind = headerKind(for: current)
+        if kind != .none {
+            OnboardingV2Header(
+                backLabel: languageManager.text("training.backToTraining"),
+                onBack: goBack
+            ) {
+                headerCenter(kind)
+            }
+            .transition(.opacity)
+        }
+    }
+
+    @ViewBuilder
+    private func headerCenter(_ kind: HeaderKind) -> some View {
+        switch kind {
+        case .segments:
+            OnboardingV2StorySegments(
+                count: OnboardingV2CarouselModel.pageCount,
+                current: carousel.page,
+                startedAt: carousel.pageStartedAt,
+                duration: OnboardingV2CarouselModel.pageDuration,
+                isRunning: carousel.isRunning
+            )
+            .transition(.opacity)
+        case .progress:
+            DSProgressBar(value: progressValue)
+                .transition(.opacity)
+        case .none, .back:
+            EmptyView()
+        }
+    }
+
+    private func dismissSplash() {
+        withAnimation(.easeOut(duration: 0.35)) {
+            showSplash = false
         }
     }
 
@@ -172,12 +274,18 @@ struct OnboardingV2View: View {
                 onNext: advance,
                 onExistingAccount: {
                     showExistingAccountSignIn = true
-                }
+                },
+                // L'entrée de la page attend que le logo animé ait fini de jouer.
+                entranceDelay: showSplash ? OnboardingV2Splash.totalDuration : 0
             )
         case .language:
             OnboardingV2Language(onNext: advance)
+        case .lessons:
+            OnboardingV2Lessons(onNext: advance)
+        case .researchers:
+            OnboardingV2Researchers(onNext: advance)
         case .intro:
-            OnboardingV2IntroCarousel(onNext: advance)
+            OnboardingV2IntroCarousel(model: carousel, onNext: advance)
         case .socialProof:
             OnboardingV2SocialProof(onNext: advance)
         case .name:
@@ -216,6 +324,8 @@ struct OnboardingV2View: View {
             OnboardingV2Profile(vm: vm, onNext: advance)
         case .readingTime:
             OnboardingV2ReadingTime(vm: vm, onNext: advance)
+        case .curve90:
+            OnboardingV2Curve90(onNext: advance)
         case .notifications:
             OnboardingV2Notifications(vm: vm, onNext: advance)
         case .login:
@@ -278,8 +388,16 @@ struct OnboardingV2View: View {
         }
 
         lastAdvanceAt = now
-        OnboardingHaptics.selection()
-        stepIndex = next
+        // Le CTA vient de vibrer : on ne double pas. Les avances sans bouton (carrousel,
+        // fin du swipe, « touche pour continuer ») gardent leur vibration légère.
+        if !OV2HapticGate.justConfirmed {
+            OnboardingHaptics.selection()
+        }
+        // Le carrousel repart toujours de sa première page quand on y entre en avançant.
+        if list[next] == .intro {
+            carousel.go(to: 0)
+        }
+        move(to: next, forward: true)
         // Remembered on every step, so the app being killed here resumes here.
         OnboardingResumeStore.step = list[next].analyticsName
         AnalyticsService.shared.log(
@@ -306,14 +424,62 @@ struct OnboardingV2View: View {
         onComplete()
     }
 
-    // MARK: - Progress dots
+    // MARK: - Retour arrière
 
-    private var dotTotal: Int {
-        screens.filter { Self.dotScreens.contains($0) }.count
+    /// Revient d'un écran (ou d'une page du carrousel). Jamais avant l'accueil, et jamais
+    /// une fois la connexion passée : ces écrans n'ont pas d'en-tête, donc pas de flèche.
+    private func goBack() {
+        guard headerKind(for: current) != .none else { return }
+
+        // Dans le carrousel, la flèche remonte d'abord ses pages.
+        if current == .intro, carousel.page > 0 {
+            carousel.go(to: carousel.page - 1, hold: true)
+            return
+        }
+
+        let list = screens
+        var previous = stepIndex - 1
+        while previous > 0, skipsWhenGoingBack(list[previous]) {
+            previous -= 1
+        }
+        guard list.indices.contains(previous), previous < stepIndex else { return }
+
+        // Revenu depuis la preuve sociale, le carrousel montre sa dernière page, à l'arrêt :
+        // il ne doit pas renvoyer tout seul vers l'écran qu'on vient de quitter.
+        if list[previous] == .intro {
+            carousel.go(to: OnboardingV2CarouselModel.pageCount - 1, hold: true)
+        }
+
+        // La reprise suit aussi le retour : l'app tuée ici reprend ici.
+        OnboardingResumeStore.step = list[previous].analyticsName
+        move(to: previous, forward: false)
     }
 
-    private var dotIndex: Int {
-        let dots = screens.filter { Self.dotScreens.contains($0) }
-        return dots.firstIndex(of: current) ?? 0
+    /// Écrans sautés au retour : ceux que `advance()` saute aussi, et ceux qui repartent
+    /// seuls vers l'avant (le swipe déjà fait, le faux chargement) et renverraient
+    /// l'utilisateur d'où il vient.
+    private func skipsWhenGoingBack(_ screen: Screen) -> Bool {
+        switch screen {
+        case .notifications:
+            return notificationsSettled
+        case .swipe, .loading:
+            return true
+        default:
+            return false
+        }
+    }
+
+    /// Change d'écran. La transition d'un écran qui s'en va est celle qu'il portait à son
+    /// dernier rendu : quand le sens change, il est donc posé d'abord, et l'index au tour de
+    /// boucle suivant, pour que l'écran sortant glisse lui aussi dans le bon sens.
+    private func move(to index: Int, forward: Bool) {
+        if slidesForward == forward {
+            stepIndex = index
+        } else {
+            slidesForward = forward
+            DispatchQueue.main.async {
+                stepIndex = index
+            }
+        }
     }
 }

@@ -7,7 +7,7 @@ struct TrialEndingMiniBanner: View {
 
     var body: some View {
         Text(languageManager.text("trial.endingSoon.banner"))
-            .font(DS.sans(.caption2, .medium))
+            .font(DSLegacy.sans(.caption2, .medium))
             .foregroundStyle(.white)
             .multilineTextAlignment(.center)
             .lineLimit(2)
@@ -15,6 +15,6 @@ struct TrialEndingMiniBanner: View {
             .padding(.horizontal, 14)
             .padding(.vertical, 7)
             .frame(maxWidth: .infinity)
-            .background(DS.accent.opacity(0.94))
+            .background(DSLegacy.accent.opacity(0.94))
     }
 }

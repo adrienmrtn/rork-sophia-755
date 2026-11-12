@@ -14,7 +14,7 @@ struct LanguagePickerControl: View {
         Menu {
             ForEach(AppLanguage.allCases) { language in
                 Button {
-                    UIImpactFeedbackGenerator(style: .light).impactOccurred()
+                    Haptics.select()
                     languageManager.setLanguage(language)
                 } label: {
                     if languageManager.current == language {
@@ -30,23 +30,35 @@ struct LanguagePickerControl: View {
         .accessibilityLabel(languageManager.current.displayName)
     }
 
+    /// Le déclencheur, en petite carte du style : drapeau, langue, chevron.
     private var trigger: some View {
         HStack(spacing: 8) {
             Text(languageManager.current.flag)
                 .font(.jakarta(size: 20))
             if !compact {
                 Text(languageManager.current.displayName)
-                    .font(DS.sans(.subheadline, .semibold))
+                    .font(DS.sans(.subheadline, .bold))
                     .foregroundStyle(DS.ink)
                     .lineLimit(1)
             }
-            Image(systemName: "chevron.up.chevron.down")
-                .font(.jakarta(size: 11, weight: .semibold))
+            Image(systemName: "chevron.forward")
+                .font(.system(size: 12, weight: .semibold))
                 .foregroundStyle(DS.inkSecondary)
         }
-        .padding(.horizontal, 14)
-        .padding(.vertical, 10)
-        .background(DS.surface, in: Capsule())
-        .overlay { Capsule().strokeBorder(DS.hairline, lineWidth: 1) }
+        .padding(.horizontal, compact ? 14 : 18)
+        .frame(height: 46)
+        .background(
+            RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous).fill(DS.surface)
+        )
+        .overlay(
+            RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous)
+                .strokeBorder(DS.hairline, lineWidth: 1.5)
+        )
+        .background(
+            RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous)
+                .fill(DS.hairline)
+                .offset(y: 1)
+        )
+        .contentShape(RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous))
     }
 }

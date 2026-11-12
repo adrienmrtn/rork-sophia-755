@@ -1,9 +1,13 @@
 import SwiftUI
 
-/// One quiz question with its answer controls and the feedback bar. Same interaction as
+/// One quiz question with its answer controls and the verdict panel. Same interaction as
 /// `QuizView` and `TrainingView` for every question type, with the scoring left to
 /// `QuizScoring`: this pane only reports the outcome. Give it a new identity per question
 /// (`.id(question.id)`) so the answer state starts fresh.
+///
+/// Dressed like the course quiz: the source as a small-caps eyebrow, the question centred
+/// in a light weight, the answers as option cards that turn green (with a check drawing
+/// itself) or shake in red, and a rounded verdict panel sliding up from the bottom.
 struct QuizQuestionPane: View {
     @Environment(LanguageManager.self) private var languageManager
     let question: ShuffledQuestion
@@ -24,7 +28,8 @@ struct QuizQuestionPane: View {
     @State private var hasAnswered = false
     @State private var earnedPoints = 0
     @State private var showFeedback = false
-    @State private var appeared = false
+    /// Bumped once when the answer earns nothing: what was answered shakes.
+    @State private var wrongShakes = 0
 
     init(
         question: ShuffledQuestion,
@@ -57,14 +62,15 @@ struct QuizQuestionPane: View {
     var body: some View {
         VStack(spacing: 0) {
             ScrollView {
-                VStack(alignment: .leading, spacing: 20) {
-                    questionCard
+                VStack(spacing: 26) {
+                    questionHeader
+                        .dsStagger(0)
                     answerBody
                 }
-                .opacity(appeared ? 1 : 0)
-                .offset(y: appeared ? 0 : 12)
-                .padding(.horizontal, 20)
-                .padding(.top, 16)
+                .frame(maxWidth: 560)
+                .frame(maxWidth: .infinity)
+                .padding(.horizontal, 24)
+                .padding(.top, 22)
                 .padding(.bottom, showFeedback ? 240 : 32)
             }
             .scrollIndicators(.hidden)
@@ -74,34 +80,35 @@ struct QuizQuestionPane: View {
                     .transition(.move(edge: .bottom).combined(with: .opacity))
             }
         }
-        .onAppear {
-            withAnimation(.spring(response: 0.45, dampingFraction: 0.85).delay(0.05)) {
-                appeared = true
-            }
-        }
     }
 
     // MARK: - Question
 
-    private var questionCard: some View {
-        VStack(alignment: .leading, spacing: 12) {
+    /// The longer the question, the smaller its title, so the answers stay on screen.
+    private var questionStyle: Font.TextStyle {
+        let length = question.question.count
+        if length <= 70 { return .title }
+        if length <= 140 { return .title2 }
+        return .title3
+    }
+
+    private var questionHeader: some View {
+        VStack(spacing: 12) {
             HStack(spacing: 6) {
                 Image(systemName: subject.icon)
-                    .font(.jakarta(size: 11, weight: .medium))
-                Text(sourceTitle)
-                    .font(DS.sans(.caption, .semibold))
+                    .font(.jakarta(size: 11, weight: .bold))
+                Text(sourceTitle.withoutInlineMarkup.uppercasedInApp())
+                    .font(DS.sans(.caption2, .heavy))
+                    .tracking(0.8)
                     .lineLimit(2)
-                    .multilineTextAlignment(.leading)
+                    .multilineTextAlignment(.center)
             }
-            .foregroundStyle(DS.accentSoft)
+            .foregroundStyle(DS.accent)
 
-            Text(question.question)
-                .font(DS.title(.title3, .semibold))
-                .foregroundStyle(DS.ink)
-                .fixedSize(horizontal: false, vertical: true)
-                .frame(maxWidth: .infinity, alignment: .leading)
+            DSHighlightTitle(text: question.question, style: questionStyle, weight: .regular)
+                .frame(maxWidth: .infinity)
         }
-        .dsCard()
+        .frame(maxWidth: .infinity)
     }
 
     @ViewBuilder
@@ -126,13 +133,16 @@ struct QuizQuestionPane: View {
         hasAnswered = true
         earnedPoints = points
         if fullyCorrect {
-            UINotificationFeedbackGenerator().notificationOccurred(.success)
+            Haptics.success()
+        } else if points > 0 {
+            Haptics.warning()
         } else {
-            UINotificationFeedbackGenerator().notificationOccurred(points > 0 ? .warning : .error)
+            Haptics.error()
+            wrongShakes += 1
         }
         onAnswered(points, fullyCorrect)
 
-        withAnimation(.spring(response: 0.35, dampingFraction: 0.85)) {
+        withAnimation(DS.Motion.snappy) {
             showFeedback = true
         }
     }
@@ -171,44 +181,51 @@ struct QuizQuestionPane: View {
         }
     }
 
+    /// Idle until the reader answers; then the right answer turns green, the one picked by
+    /// mistake red, and the others step back.
+    private func optionState(for index: Int) -> DSOptionState {
+        guard hasAnswered else { return .idle }
+        if index == question.correctIndex { return .correct }
+        if index == selectedOptionIndex { return .wrong }
+        return .dimmed
+    }
+
+    /// Only the option picked by mistake shakes.
+    private func shakeTrigger(for index: Int) -> Int {
+        index == selectedOptionIndex ? wrongShakes : 0
+    }
+
     private func optionRow(index: Int, text: String) -> some View {
-        Button {
+        let state: DSOptionState = optionState(for: index)
+        return Button {
             selectOption(index)
         } label: {
-            HStack(spacing: 14) {
-                Text("\(Character(UnicodeScalar(65 + index)!))")
-                    .font(DS.title(.subheadline, .semibold))
-                    .foregroundStyle(optionLetterFg(for: index))
-                    .frame(width: 34, height: 34)
-                    .background(optionLetterBg(for: index), in: Circle())
-
+            HStack(spacing: 12) {
                 Text(text)
-                    .font(DS.sans(.body, .medium))
+                    .font(DS.sans(.subheadline, state == .correct ? .bold : .medium))
                     .foregroundStyle(optionTextColor(for: index))
                     .multilineTextAlignment(.leading)
+                    .lineSpacing(2)
                     .fixedSize(horizontal: false, vertical: true)
                     .frame(maxWidth: .infinity, alignment: .leading)
 
                 optionTrailingIcon(for: index)
-                    .frame(width: 24, height: 24)
             }
-            .padding(.horizontal, 14)
-            .padding(.vertical, 14)
-            .frame(minHeight: 64)
-            .background(optionRowBg(for: index))
-            .clipShape(.rect(cornerRadius: DS.Radius.control))
-            .overlay {
-                RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous)
-                    .strokeBorder(optionRowBorder(for: index), lineWidth: hasAnswered && (index == question.correctIndex || index == selectedOptionIndex) ? 1.5 : 1)
-            }
-            .opacity(hasAnswered && index != question.correctIndex && index != selectedOptionIndex ? 0.55 : 1)
+            .padding(.horizontal, 16)
+            .padding(.vertical, 12)
+            .frame(minHeight: 56)
+            .dsOptionCard(state)
+            .contentShape(Rectangle())
         }
-        .buttonStyle(SoftPressButtonStyle())
-        .animation(.spring(response: 0.3, dampingFraction: 0.8), value: hasAnswered)
+        // No vibration on the press itself: the verdict's follows at once.
+        .buttonStyle(PressableStyle(haptic: false))
+        .dsShake(trigger: shakeTrigger(for: index))
+        .dsStagger(index + 1)
     }
 
     private func trueFalseButton(index: Int, text: String) -> some View {
-        Button {
+        let state: DSOptionState = optionState(for: index)
+        return Button {
             selectOption(index)
         } label: {
             VStack(spacing: 10) {
@@ -216,7 +233,7 @@ struct QuizQuestionPane: View {
                     .font(.jakarta(size: 26, weight: .regular))
                     .foregroundStyle(trueFalseIconColor(for: index))
                 Text(text)
-                    .font(DS.title(.headline, .semibold))
+                    .font(DS.sans(.headline, state == .correct ? .bold : .semibold))
                     .foregroundStyle(optionTextColor(for: index))
                     .lineLimit(2)
                     .minimumScaleFactor(0.8)
@@ -226,39 +243,23 @@ struct QuizQuestionPane: View {
             .frame(maxWidth: .infinity)
             .padding(.horizontal, 8)
             .padding(.vertical, 22)
-            .background(optionRowBg(for: index))
-            .clipShape(.rect(cornerRadius: DS.Radius.control))
-            .overlay {
-                RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous)
-                    .strokeBorder(optionRowBorder(for: index), lineWidth: hasAnswered && (index == question.correctIndex || index == selectedOptionIndex) ? 1.5 : 1)
-            }
-            .opacity(hasAnswered && index != question.correctIndex && index != selectedOptionIndex ? 0.55 : 1)
+            .dsOptionCard(state)
+            .contentShape(Rectangle())
         }
-        .buttonStyle(SoftPressButtonStyle())
-        .animation(.spring(response: 0.3, dampingFraction: 0.8), value: hasAnswered)
+        // No vibration on the press itself: the verdict's follows at once.
+        .buttonStyle(PressableStyle(haptic: false))
+        .dsShake(trigger: shakeTrigger(for: index))
+        .dsStagger(index + 1)
     }
 
     private func trueFalseIconColor(for index: Int) -> Color {
-        guard hasAnswered else { return DS.accentSoft }
+        guard hasAnswered else { return DS.accent }
         if index == question.correctIndex { return DS.success }
         if index == selectedOptionIndex { return DS.danger }
-        return DS.accentSoft
+        return DS.accent
     }
 
-    private func optionRowBg(for index: Int) -> Color {
-        guard hasAnswered else { return DS.surface }
-        if index == question.correctIndex { return DS.successTint }
-        if index == selectedOptionIndex, index != question.correctIndex { return DS.dangerTint }
-        return DS.surface
-    }
-
-    private func optionRowBorder(for index: Int) -> Color {
-        guard hasAnswered else { return DS.hairline }
-        if index == question.correctIndex { return DS.success }
-        if index == selectedOptionIndex, index != question.correctIndex { return DS.danger }
-        return DS.hairline
-    }
-
+    /// The options left aside keep their ink: the card itself fades them.
     private func optionTextColor(for index: Int) -> Color {
         guard hasAnswered else { return DS.ink }
         if index == question.correctIndex { return DS.success }
@@ -266,36 +267,24 @@ struct QuizQuestionPane: View {
         return DS.ink
     }
 
-    private func optionLetterFg(for index: Int) -> Color {
-        guard hasAnswered,
-              index == question.correctIndex || (index == selectedOptionIndex && index != question.correctIndex) else {
-            return DS.accentSoft
-        }
-        return .white
-    }
-
-    private func optionLetterBg(for index: Int) -> Color {
-        guard hasAnswered else { return DS.accentTint }
-        if index == question.correctIndex { return DS.success }
-        if index == selectedOptionIndex, index != question.correctIndex { return DS.danger }
-        return DS.accentTint
-    }
-
     @ViewBuilder
     private func optionTrailingIcon(for index: Int) -> some View {
         if hasAnswered && index == question.correctIndex {
-            Image(systemName: "checkmark.circle.fill")
-                .font(.jakarta(size: 20, weight: .medium))
-                .foregroundStyle(DS.success)
-                .transition(.scale.combined(with: .opacity))
+            DSCheckBadge(size: 26)
         } else if hasAnswered && index == selectedOptionIndex && !isCorrect {
-            Image(systemName: "xmark.circle.fill")
-                .font(.jakarta(size: 20, weight: .medium))
-                .foregroundStyle(DS.danger)
-                .transition(.scale.combined(with: .opacity))
-        } else {
-            Color.clear
+            wrongBadge(size: 26)
         }
+    }
+
+    /// Red counterpart of `DSCheckBadge`, for the answer picked by mistake.
+    private func wrongBadge(size: CGFloat) -> some View {
+        Image(systemName: "xmark")
+            .font(.system(size: size * 0.42, weight: .heavy))
+            .foregroundStyle(Color.white)
+            .frame(width: size, height: size)
+            .background(DS.danger, in: Circle())
+            .dsPopIn()
+            .accessibilityHidden(true)
     }
 
     // MARK: - Chronological ordering answer (tap or drag into slots, then drag to reorder)
@@ -333,16 +322,19 @@ struct QuizQuestionPane: View {
                     .foregroundStyle(DS.inkSecondary)
                     .fixedSize(horizontal: false, vertical: true)
             } else if chronoSlots.allSatisfy({ $0 != nil }) {
+                // The primary style vibrates on the press.
                 Button {
-                    UIImpactFeedbackGenerator(style: .light).impactOccurred()
                     submitChronoOrder()
                 } label: {
                     Text(languageManager.text("quiz.chronological.validate"))
                 }
                 .buttonStyle(DSPrimaryButtonStyle())
                 .padding(.top, 4)
+                .transition(.opacity.combined(with: .move(edge: .bottom)))
             }
         }
+        .dsShake(trigger: wrongShakes)
+        .dsStagger(1)
     }
 
     @ViewBuilder
@@ -411,7 +403,7 @@ struct QuizQuestionPane: View {
             RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous)
                 .strokeBorder(
                     slotRowBorder(isCorrect: isCorrectSlot, isWrong: isWrongSlot, filled: filled),
-                    style: StrokeStyle(lineWidth: 1, dash: filled ? [] : [5, 4])
+                    style: StrokeStyle(lineWidth: 1.5, dash: filled ? [] : [5, 4])
                 )
         }
         .contentShape(Rectangle())
@@ -423,6 +415,7 @@ struct QuizQuestionPane: View {
             Image(systemName: isCorrect ? "checkmark.circle.fill" : "xmark.circle.fill")
                 .font(.jakarta(size: 18, weight: .regular))
                 .foregroundStyle(isCorrect ? DS.success : DS.danger)
+                .dsPopIn()
         } else if filled {
             Image(systemName: "line.3.horizontal")
                 .font(.jakarta(size: 13, weight: .medium))
@@ -436,7 +429,7 @@ struct QuizQuestionPane: View {
         HStack(spacing: 12) {
             Image(systemName: "plus.circle")
                 .font(.jakarta(size: 16, weight: .regular))
-                .foregroundStyle(DS.accentSoft)
+                .foregroundStyle(DS.accent)
             Text(question.items[slot])
                 .font(DS.sans(.body, .medium))
                 .foregroundStyle(DS.ink)
@@ -446,12 +439,7 @@ struct QuizQuestionPane: View {
         }
         .padding(.horizontal, 14)
         .padding(.vertical, 14)
-        .background(DS.surface)
-        .clipShape(.rect(cornerRadius: DS.Radius.control))
-        .overlay {
-            RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous)
-                .strokeBorder(DS.hairline, lineWidth: 1)
-        }
+        .dsOptionCard(.idle, cornerRadius: DS.Radius.control)
         .contentShape(Rectangle())
         .onTapGesture { tapPoolItem(slot) }
         .draggable(String(slot))
@@ -462,28 +450,28 @@ struct QuizQuestionPane: View {
         guard !hasAnswered,
               let emptyPosition = chronoSlots.firstIndex(where: { $0 == nil }),
               let poolIndex = chronoPool.firstIndex(of: slot) else { return }
-        withAnimation(.spring(response: 0.3, dampingFraction: 0.8)) {
+        withAnimation(DS.Motion.snappy) {
             chronoPool.remove(at: poolIndex)
             chronoSlots[emptyPosition] = slot
         }
-        UIImpactFeedbackGenerator(style: .light).impactOccurred()
+        Haptics.select()
     }
 
     /// Tapping a filled slot sends its card back to the pool.
     private func tapFilledSlot(_ position: Int) {
         guard !hasAnswered, chronoSlots.indices.contains(position), let slot = chronoSlots[position] else { return }
-        withAnimation(.spring(response: 0.3, dampingFraction: 0.8)) {
+        withAnimation(DS.Motion.snappy) {
             chronoSlots[position] = nil
             chronoPool.append(slot)
         }
-        UIImpactFeedbackGenerator(style: .light).impactOccurred()
+        Haptics.select()
     }
 
     /// A card dropped from another slot swaps places with the target; one dropped from the
     /// pool bumps whatever occupied the target back to the pool.
     private func handleChronoDrop(draggedSlot: Int, targetPosition: Int) {
         guard !hasAnswered, chronoSlots.indices.contains(targetPosition) else { return }
-        withAnimation(.spring(response: 0.3, dampingFraction: 0.8)) {
+        withAnimation(DS.Motion.snappy) {
             if let sourcePosition = chronoSlots.firstIndex(of: draggedSlot) {
                 chronoSlots.swapAt(sourcePosition, targetPosition)
             } else if let poolIndex = chronoPool.firstIndex(of: draggedSlot) {
@@ -494,7 +482,7 @@ struct QuizQuestionPane: View {
                 chronoSlots[targetPosition] = draggedSlot
             }
         }
-        UIImpactFeedbackGenerator(style: .light).impactOccurred()
+        Haptics.soft()
     }
 
     private func slotRowBg(isCorrect: Bool, isWrong: Bool, filled: Bool) -> Color {
@@ -517,7 +505,7 @@ struct QuizQuestionPane: View {
 
     private func slotBadgeFg(isCorrect: Bool, isWrong: Bool, filled: Bool) -> Color {
         if isCorrect || isWrong { return .white }
-        return filled ? DS.accentSoft : DS.inkTertiary
+        return filled ? DS.accent : DS.inkTertiary
     }
 
     private var correctChronologicalOrderText: String {
@@ -569,8 +557,8 @@ struct QuizQuestionPane: View {
                     )
                 }
             } else {
+                // The primary style vibrates on the press.
                 Button {
-                    UIImpactFeedbackGenerator(style: .light).impactOccurred()
                     submitSlider()
                 } label: {
                     Text(languageManager.text("quiz.slider.validate"))
@@ -578,15 +566,9 @@ struct QuizQuestionPane: View {
                 .buttonStyle(DSPrimaryButtonStyle())
             }
         }
-        .padding(.vertical, 20)
-        .padding(.horizontal, 20)
-        .background(DS.surface)
-        .clipShape(.rect(cornerRadius: DS.Radius.card))
-        .overlay {
-            RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
-                .strokeBorder(DS.hairline, lineWidth: 1)
-        }
-        .dsSoftShadow()
+        .dsCard(padding: 20)
+        .dsShake(trigger: wrongShakes)
+        .dsStagger(1)
     }
 
     private func sliderResultPill(label: String, value: String, tint: Color) -> some View {
@@ -607,7 +589,7 @@ struct QuizQuestionPane: View {
 
     private var sliderGuessTint: Color {
         if isFullyCorrect { return DS.success }
-        if earnedPoints > 0 { return DS.accentSoft }
+        if earnedPoints > 0 { return DS.accent }
         return DS.danger
     }
 
@@ -631,72 +613,105 @@ struct QuizQuestionPane: View {
         return unit.isEmpty ? text : "\(text) \(unit)"
     }
 
-    // MARK: - Feedback bar
+    // MARK: - Verdict panel
+
+    private var panelShape: UnevenRoundedRectangle {
+        UnevenRoundedRectangle(
+            topLeadingRadius: 24,
+            bottomLeadingRadius: 0,
+            bottomTrailingRadius: 0,
+            topTrailingRadius: 24,
+            style: .continuous
+        )
+    }
 
     private var feedbackBar: some View {
-        VStack(spacing: 0) {
-            Rectangle()
-                .fill(DS.hairline)
-                .frame(height: 1)
+        VStack(alignment: .leading, spacing: 8) {
+            HStack(spacing: 10) {
+                verdictBadge
 
-            VStack(spacing: 16) {
-                HStack(alignment: .top, spacing: 14) {
-                    Image(systemName: feedbackIconName)
-                        .font(.jakarta(size: 30, weight: .regular))
-                        .foregroundStyle(feedbackColor)
+                Text(feedbackTitle)
+                    .font(DS.title(.title3, .bold))
+                    .foregroundStyle(feedbackColor)
+                    .lineLimit(2)
+                    .minimumScaleFactor(0.8)
 
-                    VStack(alignment: .leading, spacing: 4) {
-                        Text(feedbackTitle)
-                            .font(DS.title(.headline, .semibold))
-                            .foregroundStyle(DS.ink)
+                Spacer(minLength: 8)
 
-                        if question.maxPoints > 2 {
-                            Text("+\(earnedPoints)/\(question.maxPoints) \(languageManager.text("quiz.pointsEarned"))")
-                                .font(DS.sans(.caption, .medium))
-                                .foregroundStyle(DS.inkTertiary)
-                        }
-
-                        if !question.explanation.isEmpty {
-                            Text(question.explanation)
-                                .font(DS.sans(.subheadline))
-                                .foregroundStyle(DS.inkSecondary)
-                                .fixedSize(horizontal: false, vertical: true)
-                                .padding(.top, 2)
-                        }
-                    }
-
-                    Spacer(minLength: 0)
+                if question.maxPoints > 2 {
+                    DSChip(text: "+\(earnedPoints)/\(question.maxPoints) \(languageManager.text("quiz.pointsEarned"))")
+                        .dsPopIn(delay: 0.15)
                 }
-
-                Button {
-                    UIImpactFeedbackGenerator(style: .light).impactOccurred()
-                    onContinue()
-                } label: {
-                    HStack(spacing: 8) {
-                        Text(isLast ? languageManager.text("path.quiz.seeResult") : languageManager.text("common.continue"))
-                        Image(systemName: "arrow.forward")
-                            .font(.subheadline.weight(.semibold))
-                    }
-                }
-                .buttonStyle(DSPrimaryButtonStyle())
             }
-            .padding(.horizontal, 20)
-            .padding(.top, 18)
-            .padding(.bottom, 16)
-            .background(DS.surface)
+
+            if !question.explanation.isEmpty {
+                Text(question.explanation)
+                    .font(DS.sans(.subheadline))
+                    .foregroundStyle(DS.inkSecondary)
+                    .lineSpacing(3)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+            }
+
+            // The primary style vibrates on the press.
+            Button {
+                onContinue()
+            } label: {
+                HStack(spacing: 8) {
+                    Text(isLast ? languageManager.text("path.quiz.seeResult") : languageManager.text("common.continue"))
+                    Image(systemName: "arrow.forward")
+                        .font(.subheadline.weight(.semibold))
+                }
+            }
+            .buttonStyle(DSPrimaryButtonStyle())
+            .padding(.top, 8)
+        }
+        .frame(maxWidth: 560)
+        .frame(maxWidth: .infinity)
+        .padding(.horizontal, 24)
+        .padding(.top, 18)
+        .padding(.bottom, 16)
+        .background {
+            panelShape
+                .fill(DS.surface)
+                .ignoresSafeArea(edges: .bottom)
+        }
+        .overlay {
+            // Only the rounded top edge shows: the sides and the bottom are pushed off screen.
+            panelShape
+                .stroke(DS.hairline, lineWidth: 1.5)
+                .padding(.horizontal, -2)
+                .padding(.bottom, -80)
+                .allowsHitTesting(false)
         }
     }
 
+    private var verdictBadge: some View {
+        Image(systemName: feedbackIconName)
+            .font(.system(size: 14, weight: .heavy))
+            .foregroundStyle(feedbackColor)
+            .frame(width: 32, height: 32)
+            .background(feedbackTint, in: Circle())
+            .dsPopIn(delay: 0.05)
+            .accessibilityHidden(true)
+    }
+
     private var feedbackIconName: String {
-        if isFullyCorrect { return "checkmark.circle.fill" }
+        if isFullyCorrect { return "checkmark" }
         if earnedPoints > 0 { return "circle.lefthalf.filled" }
-        return "xmark.circle.fill"
+        return "xmark"
     }
 
     private var feedbackColor: Color {
         if isFullyCorrect { return DS.success }
-        if earnedPoints > 0 { return DS.accentSoft }
+        if earnedPoints > 0 { return DS.accent }
         return DS.danger
+    }
+
+    private var feedbackTint: Color {
+        if isFullyCorrect { return DS.successTint }
+        if earnedPoints > 0 { return DS.accentTint }
+        return DS.dangerTint
     }
 
     private var feedbackTitle: String {

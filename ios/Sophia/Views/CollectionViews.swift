@@ -6,13 +6,15 @@ import SwiftUI
 
 // MARK: - Shared press feedback
 
-/// Subtle press feedback (gentle scale) that doesn't intercept scroll gestures.
+/// Subtle press feedback (gentle scale) that doesn't intercept scroll gestures. Used by many
+/// screens, some of them frozen on the previous look: it stays discreet, and silent — most of
+/// its call sites already vibrate in their own action.
 struct SoftPressButtonStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
-            .scaleEffect(configuration.isPressed ? 0.985 : 1)
+            .scaleEffect(configuration.isPressed ? 0.98 : 1)
             .opacity(configuration.isPressed ? 0.92 : 1)
-            .animation(.spring(response: 0.2, dampingFraction: 0.8), value: configuration.isPressed)
+            .animation(DS.Motion.press, value: configuration.isPressed)
     }
 }
 

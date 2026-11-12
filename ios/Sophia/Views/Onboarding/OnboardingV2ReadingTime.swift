@@ -18,62 +18,28 @@ struct OnboardingV2ReadingTime: View {
     var body: some View {
         OV2ScrollableContent {
             VStack(spacing: 0) {
-                Spacer().frame(height: 84)
-
-                Text(languageManager.text("onboardingV2.readingTime.title"))
-                    .font(DS.title(.title, .heavy))
-                    .foregroundStyle(OV2.ink)
-                    .multilineTextAlignment(.center)
-                    .padding(.horizontal, 28)
-                    .ov2Reveal(delay: 0.05)
-
-                Spacer().frame(height: 28)
+                OV2EndTitle(text: languageManager.text("onboardingV2.readingTime.title"))
+                    .padding(.top, OV2End.top)
+                    .dsStagger(0)
 
                 SkyView(hour: hour)
                     .frame(height: 220)
-                    .clipShape(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
-                    .padding(.horizontal, 24)
-                    .ov2Reveal(delay: 0.25, yOffset: 20)
+                    .clipShape(RoundedRectangle(cornerRadius: DS.Radius.small, style: .continuous))
+                    .padding(.top, 24)
+                    .dsStagger(1)
+                    .accessibilityHidden(true)
 
-                Spacer().frame(height: 26)
+                timeReadout
+                    .padding(.top, 20)
+                    .dsStagger(2)
 
-                Text(Self.label(hour: Int(hour)))
-                    .font(.system(size: 52, weight: .heavy, design: .rounded))
-                    .foregroundStyle(OV2.ink)
-                    .monospacedDigit()
-                    .contentTransition(.numericText(value: hour))
-                    .animation(.spring(response: 0.35, dampingFraction: 0.82), value: hour)
-
-                Text(Self.moment(hour: Int(hour), languageManager: languageManager))
-                    .font(DS.sans(.subheadline, .semibold))
-                    .foregroundStyle(OV2.inkSecondary)
-                    .padding(.top, 2)
-
-                Spacer().frame(height: 18)
-
-                VStack(spacing: 8) {
-                    Slider(value: $hour, in: range, step: 1)
-                        .tint(OV2.accent)
-                        .onChange(of: hour) { _, newValue in
-                            let s = Int(newValue)
-                            if s != lastStep {
-                                lastStep = s
-                                OnboardingHaptics.selection()
-                            }
-                        }
-                    HStack {
-                        Text(Self.label(hour: Int(range.lowerBound)))
-                        Spacer()
-                        Text(Self.label(hour: Int(range.upperBound)))
-                    }
-                    .font(DS.sans(.caption, .semibold))
-                    .foregroundStyle(OV2.inkTertiary)
-                }
-                .padding(.horizontal, 36)
-                .ov2Reveal(delay: 0.35)
-
-                Spacer().frame(height: 24)
+                sliderBlock
+                    .padding(.top, 14)
+                    .padding(.horizontal, 8)
+                    .dsStagger(3)
             }
+            .padding(.horizontal, OV2End.side)
+            .padding(.bottom, 16)
         } footer: {
             OnboardingV2Button(title: languageManager.text("common.continue")) {
                 vm.reminderHour = Int(hour)
@@ -84,6 +50,52 @@ struct OnboardingV2ReadingTime: View {
         .onAppear {
             hour = Double(vm.reminderHour)
             lastStep = vm.reminderHour
+        }
+    }
+
+    /// L'heure en très gros, et le moment de la journée dessous.
+    private var timeReadout: some View {
+        VStack(spacing: 6) {
+            Text(Self.label(hour: Int(hour)))
+                .font(.jakarta(size: 54, weight: .heavy))
+                .tracking(-1)
+                .foregroundStyle(DS.ink)
+                .monospacedDigit()
+                .contentTransition(.numericText(value: hour))
+                .animation(DS.Motion.snappy, value: hour)
+
+            Text(Self.moment(hour: Int(hour), languageManager: languageManager))
+                .font(DS.sans(.subheadline, .semibold))
+                .foregroundStyle(DS.inkSecondary)
+                .multilineTextAlignment(.center)
+                .contentTransition(.opacity)
+                .animation(DS.Motion.snappy, value: Int(hour))
+        }
+        .frame(maxWidth: .infinity)
+        .accessibilityElement(children: .combine)
+    }
+
+    private var sliderBlock: some View {
+        VStack(spacing: 6) {
+            Slider(value: $hour, in: range, step: 1)
+                .tint(DS.accent)
+                .accessibilityLabel(Text(languageManager.text("onboardingV2.readingTime.title")))
+                .accessibilityValue(Text(Self.label(hour: Int(hour))))
+                .onChange(of: hour) { _, newValue in
+                    let s = Int(newValue)
+                    if s != lastStep {
+                        lastStep = s
+                        OnboardingHaptics.selection()
+                    }
+                }
+            HStack {
+                Text(Self.label(hour: Int(range.lowerBound)))
+                Spacer()
+                Text(Self.label(hour: Int(range.upperBound)))
+            }
+            .font(DS.sans(.footnote, .semibold))
+            .foregroundStyle(DS.inkSecondary)
+            .monospacedDigit()
         }
     }
 
@@ -126,6 +138,13 @@ private struct SkyModel {
         max(bump(center: 6.5, width: 1.8), bump(center: 20.0, width: 2.2))
     }
 
+    /// Opacité de la bande orangée du bas : nulle en plein jour et en pleine nuit, elle ne
+    /// monte qu'au cœur de l'aube et du crépuscule.
+    var glowOpacity: Double {
+        let lifted: Double = max(0.0, glow - 0.4) * 1.5
+        return min(1.0, lifted)
+    }
+
     /// 0 at 20 h, 1 at 24 h: where the moon is.
     var moonProgress: Double {
         hour >= 20.0 ? (hour - 20.0) / 4.0 : 0.0
@@ -144,24 +163,27 @@ private struct SkyModel {
         return CGPoint(x: x, y: y)
     }
 
-    var skyTop: Color {
-        blend(night: SkyModel.nightTop, day: SkyModel.dayTop)
+    /// Ciel en aplat : bleu nuit → bleu ciel.
+    var sky: Color {
+        blend(night: SkyModel.nightSky, day: SkyModel.daySky)
     }
 
-    var skyBottom: Color {
-        blend(night: SkyModel.nightBottom, day: SkyModel.dayBottom)
+    /// Colline de gauche, la plus claire.
+    var hillLeft: Color {
+        blend(night: SkyModel.nightHillLeft, day: SkyModel.dayHillLeft)
     }
 
-    var ground: Color {
-        blend(night: SkyModel.nightGround, day: SkyModel.dayGround)
+    /// Colline de droite, plus sombre, dessinée par-dessus.
+    var hillRight: Color {
+        blend(night: SkyModel.nightHillRight, day: SkyModel.dayHillRight)
     }
 
-    private static let nightTop = (r: 0.06, g: 0.09, b: 0.22)
-    private static let dayTop = (r: 0.36, g: 0.65, b: 0.95)
-    private static let nightBottom = (r: 0.12, g: 0.16, b: 0.32)
-    private static let dayBottom = (r: 0.78, g: 0.90, b: 1.0)
-    private static let nightGround = (r: 0.10, g: 0.16, b: 0.22)
-    private static let dayGround = (r: 0.42, g: 0.70, b: 0.48)
+    private static let nightSky = (r: 0.078, g: 0.141, b: 0.431)
+    private static let daySky = (r: 0.612, g: 0.796, b: 0.918)
+    private static let nightHillLeft = (r: 0.055, g: 0.106, b: 0.302)
+    private static let dayHillLeft = (r: 0.302, g: 0.620, b: 0.420)
+    private static let nightHillRight = (r: 0.031, g: 0.063, b: 0.200)
+    private static let dayHillRight = (r: 0.184, g: 0.478, b: 0.329)
 
     private func blend(night: (r: Double, g: Double, b: Double), day: (r: Double, g: Double, b: Double)) -> Color {
         let d: Double = daylight
@@ -182,18 +204,24 @@ private struct SkyModel {
     }
 }
 
-/// Sky, sun and moon for an hour of the day. The hour is continuous so the slider
-/// animates through dawn and dusk rather than jumping between states.
+/// Sky, sun and moon for an hour of the day, drawn in flat shapes like the rest of the
+/// illustrations. The hour is continuous so the slider animates through dawn and dusk
+/// rather than jumping between states.
 private struct SkyView: View {
     let hour: Double
 
     private var model: SkyModel { SkyModel(hour: hour) }
 
-    /// Fixed pseudo-random star positions: the same sky every time the page appears.
+    /// Crème des étoiles, des nuages, de la lune et du liseré du soleil.
+    private static let cream = Color(red: 0.984, green: 0.953, blue: 0.878)
+    private static let sunFill = Color(red: 0.957, green: 0.725, blue: 0.180)
+    private static let glowFill = Color(red: 0.957, green: 0.639, blue: 0.251)
+
+    /// Fixed star positions: the same sky every time the page appears.
     private static let stars: [(x: Double, y: Double, size: Double)] = [
-        (0.12, 0.18, 2.2), (0.27, 0.10, 1.6), (0.41, 0.24, 1.8), (0.58, 0.08, 2.4),
-        (0.70, 0.20, 1.5), (0.84, 0.14, 2.0), (0.92, 0.32, 1.4), (0.20, 0.38, 1.3),
-        (0.50, 0.40, 1.6), (0.78, 0.42, 1.2), (0.35, 0.52, 1.1), (0.64, 0.55, 1.4),
+        (0.12, 0.18, 4.0), (0.27, 0.10, 3.0), (0.41, 0.24, 4.0), (0.58, 0.08, 5.0),
+        (0.70, 0.20, 3.0), (0.84, 0.14, 4.0), (0.92, 0.32, 3.0), (0.20, 0.38, 3.0),
+        (0.50, 0.40, 3.0), (0.78, 0.42, 3.0),
     ]
 
     var body: some View {
@@ -202,33 +230,31 @@ private struct SkyView: View {
             let m: SkyModel = model
             let sun: CGPoint = m.sunPoint(in: size)
             let moon: CGPoint = m.moonPoint(in: size)
-            let night: Double = 1.0 - m.daylight
+            let day: Double = m.daylight
+            let night: Double = 1.0 - day
 
             ZStack {
-                sky(m)
-                glowLayer(m, sun: sun, size: size)
+                m.sky
+                glowLayer(m, size: size)
                 starsLayer(size: size).opacity(night)
+                cloudsLayer(size: size).opacity(day)
                 moonLayer(m).position(moon).opacity(night)
-                sunLayer.position(sun).opacity(0.15 + 0.85 * m.daylight)
-                groundLayer(m, size: size)
+                sunLayer.position(sun).opacity(0.15 + 0.85 * day)
+                hillsLayer(m, size: size)
             }
         }
         .animation(.easeInOut(duration: 0.35), value: hour)
     }
 
-    private func sky(_ m: SkyModel) -> some View {
-        LinearGradient(colors: [m.skyTop, m.skyBottom], startPoint: .top, endPoint: .bottom)
-    }
-
-    private func glowLayer(_ m: SkyModel, sun: CGPoint, size: CGSize) -> some View {
-        let centerX: Double = size.width > 0 ? Double(sun.x / size.width) : 0.5
-        let glowColor: Color = Color(red: 1.0, green: 0.62, blue: 0.32).opacity(0.55 * m.glow)
-        return RadialGradient(
-            colors: [glowColor, Color.clear],
-            center: UnitPoint(x: centerX, y: 0.95),
-            startRadius: 0,
-            endRadius: size.width * 0.6
-        )
+    /// Bande orangée sur l'horizon, à l'aube et au crépuscule.
+    private func glowLayer(_ m: SkyModel, size: CGSize) -> some View {
+        VStack(spacing: 0) {
+            Spacer(minLength: 0)
+            Rectangle()
+                .fill(Self.glowFill)
+                .frame(height: size.height * 0.46)
+        }
+        .opacity(m.glowOpacity)
     }
 
     private func starsLayer(size: CGSize) -> some View {
@@ -236,42 +262,67 @@ private struct SkyView: View {
             ForEach(Self.stars.indices, id: \.self) { i in
                 let star = Self.stars[i]
                 Circle()
-                    .fill(Color.white.opacity(0.85))
+                    .fill(Self.cream)
                     .frame(width: CGFloat(star.size), height: CGFloat(star.size))
                     .position(x: size.width * CGFloat(star.x), y: size.height * CGFloat(star.y))
             }
         }
     }
 
+    private func cloudsLayer(size: CGSize) -> some View {
+        let firstX: CGFloat = size.width * 0.14 + 35
+        let firstY: CGFloat = size.height * 0.22 + 11
+        let secondX: CGFloat = size.width * 0.62 + 27
+        let secondY: CGFloat = size.height * 0.36 + 9
+        return ZStack {
+            Capsule()
+                .fill(Self.cream)
+                .frame(width: 70, height: 22)
+                .position(x: firstX, y: firstY)
+            Capsule()
+                .fill(Self.cream)
+                .frame(width: 54, height: 18)
+                .position(x: secondX, y: secondY)
+        }
+    }
+
+    /// Croissant : un disque crème entamé par un disque de la couleur du ciel.
     private func moonLayer(_ m: SkyModel) -> some View {
         ZStack {
-            Circle().fill(Color(red: 0.96, green: 0.96, blue: 0.90))
-            Circle().fill(m.skyTop).offset(x: 9, y: -5)
+            Circle().fill(Self.cream)
+            Circle()
+                .fill(m.sky)
+                .frame(width: 30, height: 30)
+                .offset(x: 9, y: -7)
         }
-        .frame(width: 30, height: 30)
-        .shadow(color: Color.white.opacity(0.5), radius: 12)
+        .frame(width: 32, height: 32)
+        .clipShape(Circle())
     }
 
     private var sunLayer: some View {
         Circle()
-            .fill(
-                RadialGradient(
-                    colors: [Color(red: 1.0, green: 0.93, blue: 0.62), Color(red: 1.0, green: 0.72, blue: 0.25)],
-                    center: .center, startRadius: 2, endRadius: 26
-                )
-            )
-            .frame(width: 46, height: 46)
-            .shadow(color: Color(red: 1.0, green: 0.78, blue: 0.3).opacity(0.7), radius: 22)
+            .fill(Self.sunFill)
+            .overlay(Circle().strokeBorder(Self.cream, lineWidth: 5))
+            .frame(width: 52, height: 52)
     }
 
-    private func groundLayer(_ m: SkyModel, size: CGSize) -> some View {
-        VStack(spacing: 0) {
-            Spacer(minLength: 0)
-            RoundedRectangle(cornerRadius: 120, style: .continuous)
-                .fill(m.ground)
-                .scaleEffect(x: 1.6, y: 1, anchor: .top)
-                .offset(y: 12)
-                .frame(height: size.height * 0.22)
+    /// Deux collines en ellipses qui dépassent par le bas.
+    private func hillsLayer(_ m: SkyModel, size: CGSize) -> some View {
+        let leftWidth: CGFloat = size.width * 0.9
+        let leftX: CGFloat = size.width * 0.25
+        let leftY: CGFloat = size.height + 5
+        let rightWidth: CGFloat = size.width * 0.95
+        let rightX: CGFloat = size.width * 0.775
+        let rightY: CGFloat = size.height + 18
+        return ZStack {
+            Ellipse()
+                .fill(m.hillLeft)
+                .frame(width: leftWidth, height: 130)
+                .position(x: leftX, y: leftY)
+            Ellipse()
+                .fill(m.hillRight)
+                .frame(width: rightWidth, height: 132)
+                .position(x: rightX, y: rightY)
         }
     }
 }

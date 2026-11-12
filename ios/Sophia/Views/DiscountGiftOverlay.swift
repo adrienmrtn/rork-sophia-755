@@ -46,13 +46,13 @@ struct DiscountGiftOverlay: View {
         VStack(spacing: 22) {
             VStack(spacing: 8) {
                 Text(languageManager.text("discount.gift.title"))
-                    .font(DS.title(.title2, .semibold))
-                    .foregroundStyle(DS.ink)
+                    .font(DSLegacy.title(.title2, .semibold))
+                    .foregroundStyle(DSLegacy.ink)
                     .multilineTextAlignment(.center)
 
                 Text(promptText)
-                    .font(DS.sans(.subheadline))
-                    .foregroundStyle(DS.inkSecondary)
+                    .font(DSLegacy.sans(.subheadline))
+                    .foregroundStyle(DSLegacy.inkSecondary)
                     .multilineTextAlignment(.center)
                     .contentTransition(.opacity)
                     .id(promptText)
@@ -68,13 +68,13 @@ struct DiscountGiftOverlay: View {
         }
         .padding(.vertical, 32)
         .padding(.horizontal, 24)
-        .background(DS.surface)
-        .clipShape(.rect(cornerRadius: DS.Radius.card))
+        .background(DSLegacy.surface)
+        .clipShape(.rect(cornerRadius: DSLegacy.Radius.card))
         .overlay {
-            RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
-                .strokeBorder(DS.hairline, lineWidth: 1)
+            RoundedRectangle(cornerRadius: DSLegacy.Radius.card, style: .continuous)
+                .strokeBorder(DSLegacy.hairline, lineWidth: 1)
         }
-        .dsSoftShadow()
+        .dsLegacySoftShadow()
     }
 
     private var promptText: String {
@@ -90,23 +90,23 @@ struct DiscountGiftOverlay: View {
     private var giftIcon: some View {
         ZStack {
             Circle()
-                .stroke(DS.hairline, lineWidth: 8)
+                .stroke(DSLegacy.hairline, lineWidth: 8)
                 .frame(width: 128, height: 128)
 
             Circle()
                 .trim(from: 0, to: progress)
-                .stroke(DS.accent, style: StrokeStyle(lineWidth: 8, lineCap: .round))
+                .stroke(DSLegacy.accent, style: StrokeStyle(lineWidth: 8, lineCap: .round))
                 .frame(width: 128, height: 128)
                 .rotationEffect(.degrees(-90))
                 .animation(.spring(response: 0.4, dampingFraction: 0.8), value: progress)
 
             Circle()
-                .fill(DS.accentTint)
+                .fill(DSLegacy.accentTint)
                 .frame(width: 100, height: 100)
 
             Image(systemName: opened ? "gift.fill" : "gift")
                 .font(.jakarta(size: 42, weight: .regular))
-                .foregroundStyle(DS.accent)
+                .foregroundStyle(DSLegacy.accent)
                 .symbolEffect(.bounce, value: bounce)
                 .scaleEffect(iconPulse ? 1.08 : 1.0)
         }
@@ -118,7 +118,7 @@ struct DiscountGiftOverlay: View {
         HStack(spacing: 8) {
             ForEach(0..<tapsToOpen, id: \.self) { i in
                 Capsule()
-                    .fill(i < taps ? DS.accent : DS.hairline)
+                    .fill(i < taps ? DSLegacy.accent : DSLegacy.hairline)
                     .frame(width: i < taps ? 24 : 12, height: 6)
                     .animation(.spring(response: 0.3, dampingFraction: 0.7), value: taps)
             }

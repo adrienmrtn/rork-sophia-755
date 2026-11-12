@@ -12,9 +12,10 @@ import UIKit
 // MARK: - Génération du QR code
 
 enum FriendQRCode {
-    /// Bleu marine sur crème : les couleurs des illustrations du site.
-    static let ink = UIColor(red: 0.102, green: 0.227, blue: 0.420, alpha: 1)
-    static let paper = UIColor(red: 0.984, green: 0.969, blue: 0.937, alpha: 1)
+    /// Encre sur blanc : les couleurs du design (valeurs claires de `DS.ink` et `DS.surface`),
+    /// figées pour que le code reste lisible par n'importe quel appareil photo.
+    static let ink = UIColor(red: 0.133, green: 0.149, blue: 0.180, alpha: 1)
+    static let paper = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
 
     /// Le QR code d'un texte, en pixels nets (à afficher avec `.interpolation(.none)`).
     static func image(for text: String, side: CGFloat = 720) -> UIImage? {
@@ -87,24 +88,26 @@ struct MyFriendQRSheet: View {
             VStack(spacing: 22) {
                 HStack {
                     Text(languageManager.text("profile.qr.mine"))
-                        .font(DS.title(.title2, .heavy))
+                        .font(DS.title(.title2, .semibold))
                         .foregroundStyle(DS.ink)
                     Spacer(minLength: 8)
-                    RoundIconButton(systemImage: "xmark", accessibilityLabel: languageManager.text("common.close")) { dismiss() }
+                    ProfileRoundButton(systemImage: "xmark", accessibilityLabel: languageManager.text("common.close")) { dismiss() }
                 }
 
                 paperCard
                     .padding(.top, 30)
+                    .dsStagger(0)
 
                 Text(languageManager.text("profile.qr.mine.hint"))
-                    .font(DS.sans(.subheadline, .medium))
+                    .font(DS.sans(.subheadline))
                     .foregroundStyle(DS.inkSecondary)
                     .multilineTextAlignment(.center)
                     .fixedSize(horizontal: false, vertical: true)
                     .padding(.horizontal, 8)
+                    .dsStagger(1)
 
+                // La vibration vient du style du bouton.
                 Button {
-                    UIImpactFeedbackGenerator(style: .light).impactOccurred()
                     showScanner = true
                 } label: {
                     HStack(spacing: 8) {
@@ -133,17 +136,15 @@ struct MyFriendQRSheet: View {
         }
     }
 
-    /// La carte crème au liseré marine, posée sur un aplat safran décalé (papier découpé).
+    /// La carte du code : blanche, bordée, l'avatar à cheval sur son bord haut.
     private var paperCard: some View {
-        let shape = RoundedRectangle(cornerRadius: 28, style: .continuous)
-        let navy = Color(uiColor: FriendQRCode.ink)
-        return VStack(spacing: 14) {
+        VStack(spacing: 14) {
             Text(handle.map { "@\($0)" } ?? "@")
                 .font(DS.title(.title3, .heavy))
-                .foregroundStyle(navy)
+                .foregroundStyle(DS.ink)
                 .lineLimit(1)
                 .minimumScaleFactor(0.7)
-                .padding(.top, 36)
+                .padding(.top, 44)
 
             Group {
                 if let qrImage {
@@ -152,37 +153,32 @@ struct MyFriendQRSheet: View {
                         .resizable()
                         .scaledToFit()
                         .accessibilityLabel(Text(languageManager.text("profile.qr.mine")))
+                        .transition(.scale(scale: 0.9).combined(with: .opacity))
                 } else {
                     ProgressView()
-                        .tint(navy)
+                        .tint(DS.accent)
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
                 }
             }
             .frame(maxWidth: 230)
             .aspectRatio(1, contentMode: .fit)
+            .animation(DS.Motion.pop, value: qrImage != nil)
 
             Text("Sophia")
                 .font(DS.sans(.footnote, .bold))
-                .foregroundStyle(navy.opacity(0.7))
+                .foregroundStyle(DS.inkSecondary)
         }
         .padding(.horizontal, 24)
         .padding(.bottom, 22)
-        .background(shape.fill(Color(uiColor: FriendQRCode.paper)))
-        .overlay(shape.strokeBorder(navy, lineWidth: 2))
-        .background(
-            shape
-                .fill(DuelPalette.saffron)
-                .offset(x: 7, y: 8)
-        )
+        .frame(maxWidth: .infinity)
+        .dsCard(padding: 0)
         .overlay(alignment: .top) {
             AvatarCircle(avatarId: avatarId, initial: String((handle ?? "S").prefix(1)).uppercased(), size: 64)
-                .overlay(Circle().strokeBorder(navy, lineWidth: 2))
-                .background(Circle().fill(DuelPalette.saffron).offset(x: 3, y: 4))
+                .overlay(Circle().strokeBorder(DS.surface, lineWidth: 3))
+                .background(Circle().fill(DS.hairline).padding(-1.5))
                 .offset(y: -32)
+                .dsPopIn(delay: 0.15)
         }
-        .padding(.trailing, 7)
-        .padding(.bottom, 8)
-        .frame(maxWidth: .infinity)
     }
 }
 
@@ -217,12 +213,12 @@ struct FriendQRScannerSheet: View {
             VStack(spacing: 20) {
                 HStack {
                     Text(languageManager.text("profile.qr.scan.title"))
-                        .font(DS.title(.title2, .heavy))
+                        .font(DS.title(.title2, .semibold))
                         .foregroundStyle(DS.ink)
                         .lineLimit(2)
                         .minimumScaleFactor(0.75)
                     Spacer(minLength: 8)
-                    RoundIconButton(systemImage: "xmark", accessibilityLabel: languageManager.text("common.close")) { dismiss() }
+                    ProfileRoundButton(systemImage: "xmark", accessibilityLabel: languageManager.text("common.close")) { dismiss() }
                 }
 
                 viewfinder
@@ -238,44 +234,71 @@ struct FriendQRScannerSheet: View {
 
     // MARK: Cadre
 
+    /// Le fond du cadre : sombre tant que la caméra cherche, puis teinté par le verdict.
+    private var viewfinderFill: Color {
+        switch phase {
+        case .scanning: DS.ink
+        case .sending: DS.accentTint
+        case .finished(_, let feedback): feedback.success ? DS.successTint : DS.dangerTint
+        }
+    }
+
+    private var viewfinderBorder: Color {
+        switch phase {
+        case .scanning: DS.hairline
+        case .sending: DS.accent
+        case .finished(_, let feedback): feedback.success ? DS.success : DS.danger
+        }
+    }
+
     private var viewfinder: some View {
-        let shape = RoundedRectangle(cornerRadius: 28, style: .continuous)
+        let shape = RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
         return ZStack {
-            shape.fill(DuelPalette.night)
+            shape.fill(viewfinderFill)
             switch phase {
             case .scanning:
                 scanningContent
             case .sending(let handle):
                 VStack(spacing: 14) {
-                    ProgressView().tint(.white)
+                    ProgressView().tint(DS.accent)
                     Text("@\(handle)")
                         .font(DS.title(.title3, .heavy))
-                        .foregroundStyle(.white)
+                        .foregroundStyle(DS.ink)
                 }
             case .finished(let handle, let feedback):
-                VStack(spacing: 12) {
-                    Image(systemName: feedback.success ? "checkmark.circle.fill" : "exclamationmark.circle.fill")
-                        .font(.system(size: 54, weight: .semibold))
-                        .foregroundStyle(feedback.success ? DuelPalette.saffron : DuelPalette.coral)
-                    Text("@\(handle)")
-                        .font(DS.title(.title3, .heavy))
-                        .foregroundStyle(.white)
-                        .lineLimit(1)
-                        .minimumScaleFactor(0.7)
-                    Text(feedback.message)
-                        .font(DS.sans(.subheadline, .semibold))
-                        .foregroundStyle(.white.opacity(0.85))
-                        .multilineTextAlignment(.center)
-                        .fixedSize(horizontal: false, vertical: true)
-                }
-                .padding(24)
+                finishedContent(handle: handle, feedback: feedback)
             }
         }
         .frame(maxWidth: 360)
         .aspectRatio(1, contentMode: .fit)
         .clipShape(shape)
-        .overlay(shape.strokeBorder(DS.hairline, lineWidth: 1))
+        .overlay(shape.strokeBorder(viewfinderBorder, lineWidth: 1.5))
         .frame(maxWidth: .infinity)
+    }
+
+    /// Le verdict de la demande : la coche qui se dessine, ou le point d'exclamation, puis le message.
+    private func finishedContent(handle: String, feedback: FriendRequestFeedback) -> some View {
+        VStack(spacing: 12) {
+            if feedback.success {
+                DSCheckBadge(size: 56)
+            } else {
+                Image(systemName: "exclamationmark.circle.fill")
+                    .font(.system(size: 54, weight: .semibold))
+                    .foregroundStyle(DS.danger)
+                    .dsPopIn()
+            }
+            Text("@\(handle)")
+                .font(DS.title(.title3, .heavy))
+                .foregroundStyle(DS.ink)
+                .lineLimit(1)
+                .minimumScaleFactor(0.7)
+            Text(feedback.message)
+                .font(DS.sans(.subheadline, .semibold))
+                .foregroundStyle(DS.inkSecondary)
+                .multilineTextAlignment(.center)
+                .fixedSize(horizontal: false, vertical: true)
+        }
+        .padding(24)
     }
 
     @ViewBuilder
@@ -285,9 +308,9 @@ struct FriendQRScannerSheet: View {
             ProgressView().tint(.white)
         case .ready:
             QRScannerPreview(onCode: handleCode)
-            // Le viseur : un cadre safran au milieu de l'image.
-            RoundedRectangle(cornerRadius: 22, style: .continuous)
-                .strokeBorder(DuelPalette.saffron, lineWidth: 3)
+            // Le viseur : un cadre blanc au milieu de l'image.
+            RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
+                .strokeBorder(Color.white, lineWidth: 3)
                 .padding(44)
                 .allowsHitTesting(false)
                 .accessibilityHidden(true)
@@ -324,7 +347,7 @@ struct FriendQRScannerSheet: View {
         VStack(spacing: 10) {
             Image(systemName: systemImage)
                 .font(.system(size: 34, weight: .semibold))
-                .foregroundStyle(DuelPalette.saffron)
+                .foregroundStyle(.white)
             Text(title)
                 .font(DS.sans(.headline, .bold))
                 .foregroundStyle(.white)
@@ -356,7 +379,7 @@ struct FriendQRScannerSheet: View {
                 .buttonStyle(DSPrimaryButtonStyle())
             } else if camera != .unavailable {
                 Text(languageManager.text("profile.qr.scan.hint"))
-                    .font(DS.sans(.subheadline, .medium))
+                    .font(DS.sans(.subheadline))
                     .foregroundStyle(DS.inkSecondary)
                     .multilineTextAlignment(.center)
                     .fixedSize(horizontal: false, vertical: true)
@@ -372,8 +395,8 @@ struct FriendQRScannerSheet: View {
                     Text(languageManager.text("common.close"))
                 }
                 .buttonStyle(DSPrimaryButtonStyle())
+                // La vibration vient du style du bouton.
                 Button {
-                    UIImpactFeedbackGenerator(style: .light).impactOccurred()
                     lastRejected = nil
                     phase = .scanning
                 } label: {
@@ -563,19 +586,27 @@ struct FriendLinkSheet: View {
     var body: some View {
         VStack(spacing: 14) {
             AvatarCircle(avatarId: nil, initial: String(handle.prefix(1)).uppercased(), size: 72)
+                .dsPopIn(delay: 0.1)
                 .padding(.top, 30)
             Text(String(format: languageManager.text("profile.friendLink.title"), handle))
-                .font(DS.title(.title3, .heavy))
+                .font(DS.title(.title3, .semibold))
                 .foregroundStyle(DS.ink)
                 .multilineTextAlignment(.center)
                 .fixedSize(horizontal: false, vertical: true)
 
             if let feedback {
-                Text(feedback.message)
-                    .font(DS.sans(.subheadline, .semibold))
-                    .foregroundStyle(feedback.success ? DS.success : DS.danger)
-                    .multilineTextAlignment(.center)
-                    .fixedSize(horizontal: false, vertical: true)
+                HStack(spacing: 8) {
+                    if feedback.success {
+                        // Demande partie : la coche se dessine, avec rebond.
+                        DSCheckBadge(size: 22)
+                    }
+                    Text(feedback.message)
+                        .font(DS.sans(.subheadline, .semibold))
+                        .foregroundStyle(feedback.success ? DS.success : DS.danger)
+                        .multilineTextAlignment(.center)
+                        .fixedSize(horizontal: false, vertical: true)
+                }
+                .transition(.scale(scale: 0.85).combined(with: .opacity))
             }
 
             Spacer(minLength: 8)
@@ -621,7 +652,8 @@ struct FriendLinkSheet: View {
                 UINotificationFeedbackGenerator().notificationOccurred(.success)
                 onAdded()
             }
-            withAnimation(.easeInOut(duration: 0.2)) { feedback = result }
+            if !result.success { Haptics.error() }
+            withAnimation(DS.Motion.pop) { feedback = result }
             isSending = false
         }
     }

@@ -145,7 +145,7 @@ struct CourseStepReaderView: View {
         GeometryReader { geo in
             ScrollViewReader { proxy in
                 ScrollView {
-                    VStack(alignment: .leading, spacing: 24) {
+                    VStack(alignment: .leading, spacing: 20) {
                         ForEach(Array(steps.prefix(revealedCount))) { step in
                             VStack(alignment: .leading, spacing: 0) {
                                 Color.clear.frame(height: 0).id(step.id)
@@ -156,7 +156,7 @@ struct CourseStepReaderView: View {
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.horizontal, 24)
-                    .padding(.top, 24)
+                    .padding(.top, 12)
                     // De la place sous le dernier passage, pour qu'il puisse toujours monter jusqu'au
                     // repère de lecture même quand rien ne le suit encore.
                     .padding(.bottom, max(160, geo.size.height * 0.85))
@@ -179,7 +179,7 @@ struct CourseStepReaderView: View {
                         if reduceMotion {
                             proxy.scrollTo(request.stepID, anchor: Self.revealAnchor)
                         } else {
-                            withAnimation(.spring(response: 0.5, dampingFraction: 0.86)) {
+                            withAnimation(DS.Motion.reveal) {
                                 proxy.scrollTo(request.stepID, anchor: Self.revealAnchor)
                             }
                         }
@@ -216,7 +216,7 @@ struct CourseStepReaderView: View {
             }
 
         case .block(let block, let heading):
-            VStack(alignment: .leading, spacing: 24) {
+            VStack(alignment: .leading, spacing: 14) {
                 if let heading {
                     ContentBlockViewV2(
                         block: .heading(heading),
@@ -247,9 +247,9 @@ struct CourseStepReaderView: View {
             }
 
         case .legacy:
-            VStack(alignment: .leading, spacing: 24) {
+            VStack(alignment: .leading, spacing: 16) {
                 Text(step.lesson.title)
-                    .font(DS.title(.largeTitle, .semibold))
+                    .font(CourseType.font(24, .semibold, relativeTo: .title2))
                     .foregroundStyle(DS.ink)
                     .fixedSize(horizontal: false, vertical: true)
 

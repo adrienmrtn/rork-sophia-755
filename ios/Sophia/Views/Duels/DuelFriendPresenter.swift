@@ -49,7 +49,7 @@ enum DuelFriendPresenter {
         .environment(\.layoutDirection, LanguageManager.shared.layoutDirection)
         host.rootView = AnyView(flow)
         host.modalPresentationStyle = .fullScreen
-        host.view.backgroundColor = UIColor(DuelPalette.night)
+        host.view.backgroundColor = DS.uiCanvas
         current = host
         top.present(host, animated: true)
     }
@@ -126,16 +126,16 @@ struct DuelInviteBannerView: View {
                 VStack(alignment: .leading, spacing: 2) {
                     Text("@\(invite.from.handle)")
                         .font(DS.sans(.headline, .bold))
-                        .foregroundStyle(.white)
+                        .foregroundStyle(DS.ink)
                         .lineLimit(1)
                     Text(languageManager.text("duel.invite.banner"))
                         .font(DS.sans(.subheadline, .medium))
-                        .foregroundStyle(.white.opacity(0.8))
+                        .foregroundStyle(DS.inkSecondary)
                         .lineLimit(2)
                         .minimumScaleFactor(0.8)
                 }
                 Spacer(minLength: 0)
-                DuelTrophyCount(value: invite.from.trophies, size: 14, color: .white)
+                DuelTrophyCount(value: invite.from.trophies, size: 14, color: DS.ink)
             }
 
             countdownBar
@@ -146,38 +146,40 @@ struct DuelInviteBannerView: View {
                 } label: {
                     Text(languageManager.text("friends.requests.decline"))
                         .font(DS.sans(.subheadline, .bold))
-                        .foregroundStyle(.white)
+                        .foregroundStyle(DS.ink)
                         .frame(maxWidth: .infinity)
                         .padding(.vertical, 12)
-                        .background(Capsule().fill(Color.white.opacity(0.16)))
+                        .background(RoundedRectangle(cornerRadius: DS.Radius.small, style: .continuous).fill(DS.surface))
+                        .overlay(
+                            RoundedRectangle(cornerRadius: DS.Radius.small, style: .continuous)
+                                .strokeBorder(DS.hairline, lineWidth: 1.5)
+                        )
                 }
-                .buttonStyle(SoftPressButtonStyle())
+                // La réponse vibre déjà (`DuelHaptics.lock`).
+                .buttonStyle(PressableStyle(scale: 0.96, haptic: false))
 
                 Button {
                     respond(invite, accept: true)
                 } label: {
                     Text(languageManager.text("friends.requests.accept"))
-                        .font(DS.sans(.subheadline, .heavy))
-                        .foregroundStyle(DuelPalette.night)
+                        .font(DS.sans(.subheadline, .bold))
+                        .foregroundStyle(.white)
                         .frame(maxWidth: .infinity)
                         .padding(.vertical, 12)
-                        .background(Capsule().fill(DuelPalette.saffron))
+                        .background(RoundedRectangle(cornerRadius: DS.Radius.small, style: .continuous).fill(DS.accent))
                 }
-                .buttonStyle(SoftPressButtonStyle())
+                .buttonStyle(PressableStyle(scale: 0.96, haptic: false))
             }
             .disabled(answering)
         }
-        .padding(14)
-        .background(RoundedRectangle(cornerRadius: 24, style: .continuous).fill(DuelPalette.night))
-        .overlay(RoundedRectangle(cornerRadius: 24, style: .continuous).strokeBorder(Color.white.opacity(0.12), lineWidth: 1))
-        .shadow(color: .black.opacity(0.3), radius: 18, x: 0, y: 10)
+        .dsCard(padding: 14)
     }
 
     /// Le temps qui reste pour répondre, en barre qui se vide.
     private var countdownBar: some View {
         TimelineView(.animation(minimumInterval: 1.0 / 20.0)) { timeline in
             let remaining = max(service.incomingDeadline?.timeIntervalSince(timeline.date) ?? 0, 0)
-            DuelProgressBar(progress: min(remaining / 15, 1), tint: DuelPalette.saffron, track: Color.white.opacity(0.18), height: 5)
+            DuelProgressBar(progress: min(remaining / 15, 1), tint: DS.accent, track: DS.accentTint, height: 5)
         }
     }
 

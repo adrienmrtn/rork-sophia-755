@@ -40,7 +40,7 @@ struct InviteFriendFeedCard: View {
                 .accessibilityHidden(true)
 
             Text(languageManager.text("invite.card.title"))
-                .font(DS.title(.title2, .heavy))
+                .font(DS.title(.title2, .semibold))
                 .foregroundStyle(DS.ink)
                 .fixedSize(horizontal: false, vertical: true)
 
@@ -52,29 +52,22 @@ struct InviteFriendFeedCard: View {
 
             if fillsPage { Spacer(minLength: 0) }
 
+            // La vibration vient du style du bouton.
             Button {
-                UIImpactFeedbackGenerator(style: .light).impactOccurred()
                 onInvite()
             } label: {
                 HStack(spacing: 8) {
                     Image(systemName: "gift.fill")
-                        .font(.system(size: 14, weight: .semibold))
+                        .font(.system(size: 15, weight: .semibold))
                     Text(languageManager.text("invite.cta"))
-                        .font(DS.sans(.subheadline, .bold))
                 }
-                .foregroundStyle(.white)
-                .frame(maxWidth: .infinity)
-                .frame(height: 50)
-                .background(RoundedRectangle(cornerRadius: 14, style: .continuous).fill(DS.accent))
             }
-            .buttonStyle(.plain)
+            .buttonStyle(DSPrimaryButtonStyle())
         }
         .padding(20)
         .frame(maxWidth: .infinity, alignment: .leading)
         .frame(maxHeight: fillsPage ? .infinity : nil, alignment: .top)
-        .background(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous).fill(DS.surface))
-        .overlay(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous).strokeBorder(DS.hairline, lineWidth: 1))
-        .dsSoftShadow()
+        .dsCard(padding: 0)
     }
 }
 
@@ -96,6 +89,8 @@ struct InviteFriendView: View {
     @State private var claimMessage: String?
     @State private var claimSucceeded = false
     @State private var isClaiming = false
+    /// Secousse du champ à chaque code refusé.
+    @State private var claimShake = 0
 
     private var language: AppLanguage { languageManager.current }
     private var handle: String? { auth.isSignedIn ? social.myHandle : nil }
@@ -104,7 +99,7 @@ struct InviteFriendView: View {
         ScrollView {
             VStack(alignment: .leading, spacing: 20) {
                 HStack {
-                    RoundIconButton(systemImage: "chevron.left", accessibilityLabel: languageManager.text("common.close")) { dismiss() }
+                    ProfileRoundButton(systemImage: "chevron.left", accessibilityLabel: languageManager.text("elevateProfile.back")) { dismiss() }
                     Spacer()
                 }
 
@@ -120,16 +115,21 @@ struct InviteFriendView: View {
                     .accessibilityHidden(true)
 
                 Text(languageManager.text("invite.card.title"))
-                    .font(DS.title(.title, .heavy))
+                    .font(DS.title(.title, .semibold))
                     .foregroundStyle(DS.ink)
                     .fixedSize(horizontal: false, vertical: true)
+                    .dsStagger(0)
 
                 stepsCard
+                    .dsStagger(1)
                 codeCard
+                    .dsStagger(2)
                 statusLine
+                    .dsStagger(3)
 
                 if auth.isSignedIn, referral.canClaim {
                     enterCodeCard
+                        .dsStagger(4)
                 }
             }
             .padding(20)
@@ -153,21 +153,19 @@ struct InviteFriendView: View {
             step(2, languageManager.text("invite.step2"))
             step(3, languageManager.text("invite.step3"))
         }
-        .padding(18)
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .background(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous).fill(DS.surface))
-        .overlay(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous).strokeBorder(DS.hairline, lineWidth: 1))
+        .dsCard(padding: 16)
     }
 
     private func step(_ number: Int, _ text: String) -> some View {
         HStack(alignment: .top, spacing: 12) {
             Text("\(number)")
-                .font(DS.sans(.footnote, .bold))
+                .font(DS.sans(.footnote, .heavy))
                 .foregroundStyle(DS.accent)
                 .frame(width: 28, height: 28)
                 .background(Circle().fill(DS.accentTint))
+                .dsPopIn(delay: 0.2 + Double(number) * 0.08)
             Text(text)
-                .font(DS.sans(.subheadline, .medium))
+                .font(DS.sans(.subheadline))
                 .foregroundStyle(DS.ink)
                 .lineSpacing(2)
                 .fixedSize(horizontal: false, vertical: true)
@@ -180,10 +178,7 @@ struct InviteFriendView: View {
     private var codeCard: some View {
         if let handle {
             VStack(alignment: .leading, spacing: 12) {
-                Text(languageManager.text("invite.code.label").uppercasedInApp())
-                    .font(DS.sans(.caption, .bold))
-                    .foregroundStyle(DS.inkSecondary)
-                    .tracking(0.6)
+                ProfileGroupLabel(text: languageManager.text("invite.code.label"))
 
                 Button {
                     UIPasteboard.general.string = handle
@@ -206,58 +201,60 @@ struct InviteFriendView: View {
                                 .font(DS.sans(.footnote, .bold))
                                 .foregroundStyle(DS.success)
                         }
-                        Image(systemName: copied ? "checkmark" : "doc.on.doc")
-                            .font(.system(size: 15, weight: .semibold))
-                            .foregroundStyle(copied ? DS.success : DS.accent)
+                        if copied {
+                            // Copié : la coche se dessine, avec rebond.
+                            DSCheckBadge(size: 22)
+                        } else {
+                            Image(systemName: "doc.on.doc")
+                                .font(.system(size: 15, weight: .semibold))
+                                .foregroundStyle(DS.accent)
+                        }
                     }
                     .padding(.horizontal, 16)
                     .frame(height: 58)
                     .background(
-                        RoundedRectangle(cornerRadius: 14, style: .continuous)
-                            .strokeBorder(DS.warm, style: StrokeStyle(lineWidth: 1.5, dash: [6, 4]))
+                        RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous)
+                            .fill(copied ? DS.successTint : DS.accentTint)
                     )
-                    .contentShape(Rectangle())
+                    .overlay(
+                        RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous)
+                            .strokeBorder(copied ? DS.success : DS.accent, style: StrokeStyle(lineWidth: 1.5, dash: [6, 4]))
+                    )
+                    .contentShape(RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous))
                 }
-                .buttonStyle(.plain)
+                // La vibration (succès) vient de l'action elle-même.
+                .buttonStyle(PressableStyle(haptic: false))
 
                 ShareLink(item: ReferralService.shareText(handle: handle, language: language)) {
                     HStack(spacing: 8) {
                         Image(systemName: "square.and.arrow.up")
                             .font(.system(size: 14, weight: .semibold))
                         Text(languageManager.text("invite.cta"))
-                            .font(DS.sans(.subheadline, .bold))
+                            .font(DS.sans(.headline, .semibold))
                     }
                     .foregroundStyle(.white)
                     .frame(maxWidth: .infinity)
-                    .frame(height: 52)
-                    .background(RoundedRectangle(cornerRadius: 14, style: .continuous).fill(DS.accent))
+                    .frame(height: 54)
+                    .background(RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous).fill(DS.accent))
                 }
                 .simultaneousGesture(TapGesture().onEnded {
+                    Haptics.confirm()
                     AnalyticsService.shared.log(.share, screen: "invite", props: ["channel": .string("sheet"), "target": .string("invite")])
                 })
             }
-            .padding(18)
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .background(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous).fill(DS.surface))
-            .overlay(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous).strokeBorder(DS.hairline, lineWidth: 1))
-            .dsSoftShadow()
+            .dsCard(padding: 16)
         } else if auth.isSignedIn {
             ProgressView()
                 .frame(maxWidth: .infinity)
                 .padding(.vertical, 24)
         } else {
+            // La vibration vient du style du bouton.
             Button {
-                UIImpactFeedbackGenerator(style: .light).impactOccurred()
                 showAccount = true
             } label: {
                 Text(languageManager.text("invite.signin"))
-                    .font(DS.sans(.subheadline, .bold))
-                    .foregroundStyle(.white)
-                    .frame(maxWidth: .infinity)
-                    .frame(height: 52)
-                    .background(RoundedRectangle(cornerRadius: 14, style: .continuous).fill(DS.accent))
             }
-            .buttonStyle(.plain)
+            .buttonStyle(DSPrimaryButtonStyle())
         }
     }
 
@@ -274,7 +271,7 @@ struct InviteFriendView: View {
             HStack(spacing: 10) {
                 Image(systemName: referral.rewarded ? "gift.fill" : "hourglass")
                     .font(.system(size: 15, weight: .semibold))
-                    .foregroundStyle(referral.rewarded ? DS.warm : DS.inkTertiary)
+                    .foregroundStyle(referral.rewarded ? DS.warm : DS.accent)
                 Text(text)
                     .font(DS.sans(.subheadline, .semibold))
                     .foregroundStyle(DS.ink)
@@ -283,7 +280,7 @@ struct InviteFriendView: View {
             }
             .padding(.horizontal, 16)
             .padding(.vertical, 14)
-            .background(RoundedRectangle(cornerRadius: 14, style: .continuous).fill(DS.accentTint))
+            .background(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous).fill(DS.accentTint))
         }
     }
 
@@ -291,7 +288,7 @@ struct InviteFriendView: View {
     private var enterCodeCard: some View {
         VStack(alignment: .leading, spacing: 12) {
             Text(languageManager.text("invite.enter.title"))
-                .font(DS.title(.headline, .heavy))
+                .font(DS.sans(.callout, .bold))
                 .foregroundStyle(DS.ink)
 
             HStack(spacing: 10) {
@@ -302,8 +299,12 @@ struct InviteFriendView: View {
                     .foregroundStyle(DS.ink)
                     .padding(.horizontal, 14)
                     .frame(height: 48)
-                    .background(RoundedRectangle(cornerRadius: 12, style: .continuous).fill(DS.canvas))
-                    .overlay(RoundedRectangle(cornerRadius: 12, style: .continuous).strokeBorder(DS.hairline, lineWidth: 1))
+                    .background(RoundedRectangle(cornerRadius: DS.Radius.small, style: .continuous).fill(DS.surface))
+                    .overlay(
+                        RoundedRectangle(cornerRadius: DS.Radius.small, style: .continuous)
+                            .strokeBorder(DS.hairline, lineWidth: 1.5)
+                    )
+                    .dsShake(trigger: claimShake)
 
                 Button {
                     submitCode()
@@ -313,9 +314,9 @@ struct InviteFriendView: View {
                         .foregroundStyle(.white)
                         .padding(.horizontal, 16)
                         .frame(height: 48)
-                        .background(RoundedRectangle(cornerRadius: 12, style: .continuous).fill(DS.accent))
+                        .background(RoundedRectangle(cornerRadius: DS.Radius.small, style: .continuous).fill(DS.accent))
                 }
-                .buttonStyle(.plain)
+                .buttonStyle(.pressable)
                 .disabled(isClaiming || enteredCode.trimmingCharacters(in: .whitespaces).isEmpty)
                 .opacity(isClaiming ? 0.6 : 1)
             }
@@ -327,10 +328,7 @@ struct InviteFriendView: View {
                     .fixedSize(horizontal: false, vertical: true)
             }
         }
-        .padding(18)
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .background(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous).fill(DS.surface))
-        .overlay(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous).strokeBorder(DS.hairline, lineWidth: 1))
+        .dsCard(padding: 16)
     }
 
     private func submitCode() {
@@ -351,6 +349,10 @@ struct InviteFriendView: View {
                 claimMessage = languageManager.text("invite.enter.tooOld")
             case .notSignedIn, .failed:
                 claimMessage = languageManager.text("invite.enter.error")
+            }
+            if !claimSucceeded {
+                Haptics.error()
+                claimShake += 1
             }
         }
     }

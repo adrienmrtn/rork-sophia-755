@@ -35,7 +35,7 @@ struct OriginalCourseView: View {
                                 )
                             }
                         }
-                        .padding(.horizontal, 20)
+                        .padding(.horizontal, 24)
                         .padding(.top, 8)
                         .padding(.bottom, 40)
                     }
@@ -44,6 +44,7 @@ struct OriginalCourseView: View {
                     .environment(\.layoutDirection, language.layoutDirection)
                 } else if isLoading {
                     ProgressView()
+                        .tint(DS.accent)
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
                 } else {
                     unavailable
@@ -61,15 +62,15 @@ struct OriginalCourseView: View {
     private var header: some View {
         HStack(spacing: 10) {
             Image(systemName: "globe")
-                .font(.system(size: 15, weight: .medium))
+                .font(.system(size: 15, weight: .semibold))
                 .foregroundStyle(DS.accent)
             Text(language.displayName)
-                .font(DS.sans(.headline, .semibold))
+                .font(DS.sans(.callout, .heavy))
                 .foregroundStyle(DS.ink)
             Spacer()
             RoundIconButton(systemImage: "xmark", size: 38, accessibilityLabel: languageManager.text("common.close")) { dismiss() }
         }
-        .padding(.horizontal, 20)
+        .padding(.horizontal, 24)
         .padding(.top, 18)
         .padding(.bottom, 10)
     }

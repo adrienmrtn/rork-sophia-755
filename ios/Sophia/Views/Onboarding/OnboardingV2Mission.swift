@@ -1,67 +1,22 @@
 import SwiftUI
 import UIKit
 
-/// « Sophia est gratuite à l'essai » : la mission, et l'équipe qui compte sur la personne,
-/// juste après « Sophia va t'aider à atteindre tous tes objectifs ». Le logo, trois phrases,
-/// la signature de l'équipe avec les têtes des profs, un bouton.
+/// « Sophia est gratuite à l'essai » : la mission, et l'équipe qui compte sur la personne.
+///
+/// Style « Elevate arrondi » : une grande illustration arrondie, « Sophia est gratuite à
+/// l'essai » en pastille bleue, la mission en titre (son cœur en gras bleu), le texte de
+/// l'équipe en gris, puis la signature avec les têtes des profs, et un bouton.
 struct OnboardingV2Mission: View {
     @Environment(LanguageManager.self) private var languageManager
     let onNext: () -> Void
 
     @State private var portraits: [UIImage] = []
-    @State private var haloIn = false
 
     var body: some View {
-        OV2ScrollableContent {
-            VStack(spacing: 0) {
-                Spacer().frame(height: 72)
-
-                ZStack {
-                    Circle()
-                        .fill(OV2.accentSoft.opacity(0.10))
-                        .frame(width: 150, height: 150)
-                        .scaleEffect(haloIn ? 1.05 : 0.7)
-                        .opacity(haloIn ? 1 : 0)
-                    logo
-                }
-                .ov2Reveal(delay: 0.05)
-
-                Spacer().frame(height: 26)
-
-                Text(languageManager.text("onboardingV2.mission.title"))
-                    .font(DS.title(.title, .heavy))
-                    .foregroundStyle(OV2.ink)
-                    .multilineTextAlignment(.center)
-                    .padding(.horizontal, 28)
-                    .ov2Reveal(delay: 0.15)
-
-                Spacer().frame(height: 18)
-
-                Text(languageManager.text("onboardingV2.mission.body1"))
-                    .font(DS.sans(.body, .semibold))
-                    .foregroundStyle(OV2.ink)
-                    .multilineTextAlignment(.center)
-                    .fixedSize(horizontal: false, vertical: true)
-                    .padding(.horizontal, 32)
-                    .ov2Reveal(delay: 0.28)
-
-                Spacer().frame(height: 14)
-
-                Text(languageManager.text("onboardingV2.mission.body2"))
-                    .font(DS.sans(.body, .medium))
-                    .foregroundStyle(OV2.inkSecondary)
-                    .multilineTextAlignment(.center)
-                    .fixedSize(horizontal: false, vertical: true)
-                    .padding(.horizontal, 32)
-                    .ov2Reveal(delay: 0.4)
-
-                Spacer().frame(height: 28)
-
-                signature
-                    .ov2Reveal(delay: 0.55)
-
-                Spacer(minLength: 24)
-            }
+        OV2CorePage { height in
+            pageBody
+                // Bloc centré quand il tient, calé en haut et défilant sinon.
+                .frame(minHeight: height, alignment: .center)
         } footer: {
             OnboardingV2Button(title: languageManager.text("common.continue"), action: onNext)
         }
@@ -70,9 +25,71 @@ struct OnboardingV2Mission: View {
             if portraits.isEmpty {
                 portraits = Array(AuthorStore.all.compactMap { AuthorStore.photo(for: $0) }.prefix(5))
             }
-            withAnimation(.spring(response: 0.9, dampingFraction: 0.75).delay(0.1)) {
-                haloIn = true
-            }
+        }
+    }
+
+    private var pageBody: some View {
+        VStack(spacing: 14) {
+            illustration
+                .dsStagger(0)
+
+            trialChip
+                .dsStagger(1)
+
+            OV2CoreHighlightTitle(text: missionTitle, size: 25, alignment: .center)
+                .dsStagger(2)
+
+            Text(languageManager.text("onboardingV2.mission.body2"))
+                .font(DS.sans(.subheadline, .regular))
+                .foregroundStyle(OV2.inkSecondary)
+                .multilineTextAlignment(.center)
+                .lineSpacing(4)
+                .fixedSize(horizontal: false, vertical: true)
+                .dsStagger(3)
+
+            signature
+                .padding(.top, 2)
+                .dsStagger(4)
+        }
+        .padding(.horizontal, OV2CoreMetrics.sideInset)
+        .padding(.top, OV2CoreMetrics.topInset)
+        .padding(.bottom, 16)
+    }
+
+    // MARK: - Textes
+
+    /// « Notre mission : rendre l'apprentissage **facile, et accessible à tous.** »
+    private var missionTitle: String {
+        OV2CoreText.marked(
+            "onboardingV2.mission.body1",
+            highlightKey: "elevateOnboardingCore.mission.leadHighlight",
+            language: languageManager.current
+        )
+    }
+
+    /// « Sophia est gratuite à l'essai », sans son point final : c'est une étiquette ici.
+    private var trialChipText: String {
+        OV2CoreText.trimmingTrailing(".。", from: languageManager.text("onboardingV2.mission.title"))
+    }
+
+    // MARK: - Blocs
+
+    /// L'illustration de l'équipe au travail ; à défaut, le logo.
+    @ViewBuilder
+    private var illustration: some View {
+        if let image = UIImage(named: "creator_writing") {
+            Color.clear
+                .frame(height: 190)
+                .frame(maxWidth: .infinity)
+                .overlay(
+                    Image(uiImage: image)
+                        .resizable()
+                        .scaledToFill()
+                )
+                .clipShape(RoundedRectangle(cornerRadius: 24, style: .continuous))
+                .accessibilityHidden(true)
+        } else {
+            logo
         }
     }
 
@@ -93,23 +110,41 @@ struct OnboardingV2Mission: View {
         }
     }
 
+    private var trialChip: some View {
+        Text(trialChipText)
+            .font(DS.sans(.footnote, .bold))
+            .tracking(0.4)
+            .foregroundStyle(DS.accent)
+            .multilineTextAlignment(.center)
+            .padding(.horizontal, 14)
+            .padding(.vertical, 5)
+            .background(
+                RoundedRectangle(cornerRadius: 14, style: .continuous)
+                    .fill(DS.accentTint)
+            )
+    }
+
     /// Les têtes des profs qui se chevauchent, et « L'équipe Sophia ».
     private var signature: some View {
         HStack(spacing: 12) {
-            HStack(spacing: -10) {
-                ForEach(Array(portraits.enumerated()), id: \.offset) { i, image in
-                    Image(uiImage: image)
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width: 34, height: 34)
-                        .clipShape(Circle())
-                        .overlay(Circle().strokeBorder(.white, lineWidth: 2))
-                        .zIndex(Double(portraits.count - i))
+            if !portraits.isEmpty {
+                HStack(spacing: -10) {
+                    ForEach(Array(portraits.enumerated()), id: \.offset) { i, image in
+                        Image(uiImage: image)
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: 34, height: 34)
+                            .clipShape(Circle())
+                            .overlay(Circle().strokeBorder(DS.surface, lineWidth: 2))
+                            .zIndex(Double(portraits.count - i))
+                    }
                 }
+                .accessibilityHidden(true)
             }
             Text(languageManager.text("onboardingV2.mission.signature"))
-                .font(DS.sans(.subheadline, .semibold))
-                .foregroundStyle(OV2.inkSecondary)
+                .font(DS.sans(.callout, .bold))
+                .italic()
+                .foregroundStyle(OV2.ink)
         }
     }
 }

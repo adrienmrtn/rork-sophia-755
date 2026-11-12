@@ -67,8 +67,8 @@ struct CollectionProgressCelebrationView: View {
                     .scrollIndicators(.hidden)
                 }
 
+                // Le style du CTA fournit la pression élastique et la vibration.
                 Button {
-                    UIImpactFeedbackGenerator(style: .light).impactOccurred()
                     onContinue()
                 } label: {
                     HStack(spacing: 8) {
@@ -90,12 +90,7 @@ struct CollectionProgressCelebrationView: View {
     private var coverCard: some View {
         CollectionCoverView(collection: event.collection, accentIndex: ContentCatalog.activeCollections.firstIndex(of: event.collection) ?? 0)
             .aspectRatio(16 / 9, contentMode: .fit)
-            .clipShape(.rect(cornerRadius: DS.Radius.card))
-            .overlay {
-                RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
-                    .strokeBorder(DS.hairline, lineWidth: 1)
-            }
-            .dsSoftShadow()
+            .homeCard()
     }
 
     private var progressCard: some View {
@@ -116,13 +111,13 @@ struct CollectionProgressCelebrationView: View {
                 Spacer()
             }
 
-            CalmProgressBar(fraction: Double(barFill), height: 10)
+            DSProgressBar(value: Double(barFill), height: 8)
 
             HStack(spacing: 8) {
                 ForEach(0..<event.totalCount, id: \.self) { index in
                     let filled = index < displayedCount
                     Circle()
-                        .fill(filled ? DS.accent : DS.surfaceMuted)
+                        .fill(filled ? DS.accent : DS.accentTint)
                         .overlay {
                             if filled {
                                 Image(systemName: "checkmark")
@@ -145,12 +140,12 @@ struct CollectionProgressCelebrationView: View {
     private func runSequence() {
         displayedCount = event.previousCompletedCount
         barFill = previousFraction
-        withAnimation(.spring(response: 0.6, dampingFraction: 0.8)) {
+        withAnimation(DS.Motion.reveal) {
             appeared = true
         }
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            UIImpactFeedbackGenerator(style: .light).impactOccurred()
-            withAnimation(.spring(response: 0.9, dampingFraction: 0.8)) {
+            Haptics.success()
+            withAnimation(DS.Motion.reveal) {
                 displayedCount = event.newCompletedCount
                 barFill = newFraction
             }
@@ -217,7 +212,6 @@ struct CollectionCompletedCelebrationView: View {
                 }
 
                 Button {
-                    UIImpactFeedbackGenerator(style: .light).impactOccurred()
                     onContinue()
                 } label: {
                     Text(languageManager.text("common.continue"))
@@ -236,11 +230,6 @@ struct CollectionCompletedCelebrationView: View {
     private var completedCard: some View {
         CollectionCoverView(collection: event.collection, accentIndex: ContentCatalog.activeCollections.firstIndex(of: event.collection) ?? 0)
             .aspectRatio(16 / 9, contentMode: .fit)
-            .clipShape(.rect(cornerRadius: DS.Radius.card))
-            .overlay {
-                RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
-                    .strokeBorder(DS.hairline, lineWidth: 1)
-            }
             .overlay {
                 VStack(spacing: 12) {
                     AnimatedRewardBadge(kind: .seal, size: 44)
@@ -253,7 +242,7 @@ struct CollectionCompletedCelebrationView: View {
                         .background(.black.opacity(0.28), in: Capsule())
                 }
             }
-            .dsSoftShadow()
+            .homeCard()
     }
 
     private var xpPill: some View {
@@ -264,19 +253,20 @@ struct CollectionCompletedCelebrationView: View {
                 .font(DS.title(.headline, .semibold))
                 .monospacedDigit()
         }
-        .foregroundStyle(DS.accentSoft)
+        .foregroundStyle(DS.accent)
         .padding(.horizontal, 20)
         .padding(.vertical, 12)
         .background(DS.accentTint, in: Capsule())
     }
 
     private func runSequence() {
-        withAnimation(.spring(response: 0.65, dampingFraction: 0.78)) {
+        withAnimation(DS.Motion.pop) {
             appeared = true
             cardScale = 1
         }
+        // Une collection terminée est une récompense.
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
-            UINotificationFeedbackGenerator().notificationOccurred(.success)
+            Haptics.celebrate()
         }
     }
 }

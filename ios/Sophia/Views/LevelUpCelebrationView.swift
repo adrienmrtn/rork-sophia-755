@@ -12,6 +12,8 @@ struct LevelUpCelebrationView: View {
     @State private var levelScale: CGFloat = 0.6
     @State private var showNewLevel: Bool = false
 
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+
     var body: some View {
         ZStack {
             DS.canvas.ignoresSafeArea()
@@ -19,82 +21,31 @@ struct LevelUpCelebrationView: View {
             VStack(spacing: 0) {
                 GeometryReader { geo in
                     ScrollView {
-                        VStack(spacing: 0) {
-                            // Blocs équilibrés entre le haut de l'écran et le bouton ancré en bas.
-                            Spacer(minLength: 28)
-
-                            SubjectBadgeView(subject: subject, iconSize: 56, cornerRadius: DS.Radius.card)
-                                .frame(width: 116, height: 116)
-                                // L'éclair du niveau gagné, posé sur le badge de la matière.
-                                .overlay(alignment: .topTrailing) {
-                                    AnimatedRewardBadge(kind: .levelUp, size: 28)
-                                        .offset(x: 16, y: -16)
-                                        .scaleEffect(showNewLevel ? 1 : 0.3)
-                                        .opacity(showNewLevel ? 1 : 0)
-                                }
-                                .scaleEffect(badgeScale)
-                                .opacity(appeared ? 1 : 0)
-
-                            Spacer(minLength: 28)
-
-                            Text(languageManager.text("levelUp.title"))
-                                .font(DS.title(.largeTitle, .semibold))
-                                .foregroundStyle(DS.ink)
-                                .multilineTextAlignment(.center)
-                                .opacity(appeared ? 1 : 0)
-                                .offset(y: appeared ? 0 : 14)
-
-                            Text(subject.localizedShortName(language: languageManager.current))
-                                .font(DS.sans(.subheadline))
-                                .foregroundStyle(DS.inkSecondary)
-                                .padding(.top, 6)
-                                .opacity(appeared ? 1 : 0)
-
-                            HStack(alignment: .firstTextBaseline, spacing: 16) {
-                                Text(String(format: languageManager.text("common.levelShort"), previousLevel))
-                                    .font(DS.title(.title2, .medium))
-                                    .foregroundStyle(DS.inkTertiary.opacity(showNewLevel ? 0.6 : 1))
-                                    .scaleEffect(showNewLevel ? 0.9 : 1)
-
-                                Image(systemName: "arrow.forward")
-                                    .font(.jakarta(size: 18, weight: .medium))
-                                    .foregroundStyle(DS.accentSoft)
-                                    .opacity(showNewLevel ? 1 : 0.3)
-
-                                Text(String(format: languageManager.text("common.levelShort"), newLevel))
-                                    .font(.jakarta(size: 44, weight: .heavy))
-                                    .foregroundStyle(
-                                        LinearGradient(colors: AnimatedRewardBadge.Kind.levelUp.colors, startPoint: .bottom, endPoint: .top)
-                                    )
-                                    .scaleEffect(levelScale)
-                                    .opacity(showNewLevel ? 1 : 0)
-                            }
-                            .padding(.top, 24)
-
-                            Spacer(minLength: 32)
-                        }
-                        .frame(maxWidth: .infinity)
-                        .frame(minHeight: geo.size.height)
+                        levelSummary
+                            .padding(.horizontal, 24)
+                            .padding(.vertical, 20)
+                            .frame(maxWidth: .infinity)
+                            .frame(minHeight: geo.size.height)
                     }
                     .scrollIndicators(.hidden)
                 }
 
+                // Vibre par son style.
                 Button {
-                    UIImpactFeedbackGenerator(style: .light).impactOccurred()
                     onContinue()
                 } label: {
                     Text(languageManager.text("common.continue"))
                 }
                 .buttonStyle(DSPrimaryButtonStyle())
                 .padding(.horizontal, 24)
-                .padding(.bottom, 32)
+                .padding(.bottom, 24)
                 .opacity(showNewLevel ? 1 : 0)
                 .offset(y: showNewLevel ? 0 : 18)
             }
 
-            if showNewLevel {
+            if showNewLevel, !reduceMotion {
                 PathConfettiBurst(
-                    colors: AnimatedRewardBadge.Kind.levelUp.colors + [DS.accentSoft],
+                    colors: [CoursePalette.gold, CoursePalette.goldTint, DS.accent, DS.accentTint],
                     pieceCount: 50,
                     duration: 2.4,
                     origin: CGPoint(x: 0.5, y: 0.28)
@@ -107,19 +58,89 @@ struct LevelUpCelebrationView: View {
         .sophiaColorScheme()
     }
 
+    private var levelSummary: some View {
+        VStack(spacing: 14) {
+            subjectMedallion
+                .scaleEffect(badgeScale)
+                .opacity(appeared ? 1 : 0)
+
+            Text(languageManager.text("levelUp.title"))
+                .font(CourseType.font(26, .semibold, relativeTo: .title))
+                .foregroundStyle(DS.ink)
+                .multilineTextAlignment(.center)
+                .fixedSize(horizontal: false, vertical: true)
+                .padding(.top, 8)
+                .opacity(appeared ? 1 : 0)
+                .offset(y: appeared ? 0 : 14)
+
+            Text(subject.localizedShortName(language: languageManager.current))
+                .font(DS.sans(.callout))
+                .foregroundStyle(DS.inkSecondary)
+                .multilineTextAlignment(.center)
+                .opacity(appeared ? 1 : 0)
+
+            levelTransition
+                .padding(.top, 10)
+        }
+    }
+
+    /// L'illustration de la matière, avec l'éclair du niveau gagné posé dessus.
+    private var subjectMedallion: some View {
+        CourseSubjectAvatar(subject: subject, size: 132)
+            .overlay(alignment: .bottomTrailing) {
+                AnimatedRewardBadge(kind: .levelUp, size: 20, showGlow: false)
+                    .frame(width: 38, height: 38)
+                    .background(DS.surface, in: Circle())
+                    .overlay { Circle().strokeBorder(DS.hairline, lineWidth: 1.5) }
+                    .offset(x: 4, y: 4)
+                    .scaleEffect(showNewLevel ? 1 : 0.3)
+                    .opacity(showNewLevel ? 1 : 0)
+            }
+    }
+
+    /// « NIV. 1 → NIV. 2 » : l'ancien niveau s'efface, le nouveau arrive en gras bleu.
+    private var levelTransition: some View {
+        HStack(alignment: .firstTextBaseline, spacing: 16) {
+            Text(String(format: languageManager.text("common.levelShort"), previousLevel))
+                .font(DS.title(.title2, .medium))
+                .foregroundStyle(DS.inkTertiary.opacity(showNewLevel ? 0.6 : 1))
+                .scaleEffect(showNewLevel ? 0.9 : 1)
+
+            Image(systemName: "arrow.forward")
+                .font(.system(size: 18, weight: .semibold))
+                .foregroundStyle(DS.accent)
+                .opacity(showNewLevel ? 1 : 0.3)
+
+            Text(String(format: languageManager.text("common.levelShort"), newLevel))
+                .font(CourseType.font(44, .heavy, relativeTo: .largeTitle))
+                .foregroundStyle(DS.accent)
+                .scaleEffect(levelScale)
+                .opacity(showNewLevel ? 1 : 0)
+        }
+    }
+
     private func runSequence() {
-        withAnimation(.spring(response: 0.6, dampingFraction: 0.78)) {
+        if reduceMotion {
+            appeared = true
+            badgeScale = 1.0
+            showNewLevel = true
+            levelScale = 1.0
+            Haptics.celebrate()
+            return
+        }
+
+        withAnimation(DS.Motion.pop) {
             appeared = true
             badgeScale = 1.0
         }
 
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            UINotificationFeedbackGenerator().notificationOccurred(.success)
-            withAnimation(.spring(response: 0.5, dampingFraction: 0.65)) {
+            // Le nouveau niveau se pose : la vibration de récompense.
+            Haptics.celebrate()
+            withAnimation(DS.Motion.pop) {
                 showNewLevel = true
                 levelScale = 1.0
             }
-            UIImpactFeedbackGenerator(style: .medium).impactOccurred()
         }
     }
 }

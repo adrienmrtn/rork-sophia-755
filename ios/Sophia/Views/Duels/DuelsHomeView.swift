@@ -6,6 +6,7 @@ import SwiftUI
 struct DuelsHomeView: View {
     @Environment(LanguageManager.self) private var languageManager
     @Environment(AuthService.self) private var auth
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
     let progressManager: ProgressManager
     /// L'onglet est celui affiché. Il reste en vie quand on en change (une partie en cours ne
     /// doit pas se fermer) : c'est donc ce signal, et non `onAppear`, qui rafraîchit la page.
@@ -124,29 +125,29 @@ struct DuelsHomeView: View {
     private func content(_ home: DuelHome) -> some View {
         ScrollViewReader { proxy in
             ScrollView {
-                VStack(alignment: .leading, spacing: 22) {
-                    HStack(alignment: .center) {
-                        Text(languageManager.text("tab.duels"))
-                            .font(DS.title(.largeTitle, .heavy))
-                            .foregroundStyle(DS.ink)
-                        Spacer()
-                        DuelTrophyCount(value: heroGain?.trophies ?? home.profile.trophies, size: 17)
-                            .padding(.horizontal, 14)
-                            .padding(.vertical, 8)
-                            .background(Capsule().fill(DS.surface))
-                            .overlay(Capsule().strokeBorder(DS.hairline, lineWidth: 1))
-                    }
-                    .id(Self.topAnchor)
+                VStack(alignment: .leading, spacing: 0) {
+                    pageHeader(home)
+                        .id(Self.topAnchor)
 
                     leagueHero(home)
+                        .padding(.top, 14)
+                        .dsStagger(0)
                     playButton
+                        .padding(.top, 14)
+                        .dsStagger(1)
                     stats(home.profile)
+                        .padding(.top, 24)
+                        .dsStagger(2)
                     leaderboardSection
+                        .padding(.top, 24)
+                        .dsStagger(3)
                     if !home.recent.isEmpty {
                         recentSection(home.recent)
+                            .padding(.top, 24)
+                            .dsStagger(4)
                     }
                 }
-                .padding(.horizontal, 20)
+                .padding(.horizontal, 24)
                 .padding(.top, 12)
                 .padding(.bottom, 28)
             }
@@ -154,6 +155,20 @@ struct DuelsHomeView: View {
             .onChange(of: scrollTopToken) { _, _ in
                 proxy.scrollTo(Self.topAnchor, anchor: .top)
             }
+        }
+    }
+
+    /// Le titre de l'onglet et, à droite, les trophées du joueur dans leur pastille.
+    private func pageHeader(_ home: DuelHome) -> some View {
+        HStack(alignment: .center, spacing: 12) {
+            Text(languageManager.text("tab.duels"))
+                .font(DS.title(.largeTitle, .medium))
+                .foregroundStyle(DS.ink)
+            Spacer()
+            DuelTrophyCount(value: heroGain?.trophies ?? home.profile.trophies, size: 14)
+                .padding(.horizontal, 12)
+                .frame(height: 36)
+                .background(Capsule().fill(DS.accentTint))
         }
     }
 
@@ -253,89 +268,95 @@ struct DuelsHomeView: View {
         let next = home.nextLeague(after: league)
         let progress = heroGain?.progress ?? home.leagueProgress(forTrophies: trophies)
         let gained = heroGain?.delta ?? 0
+        // La carte vibre d'elle-même à la pression (`PressableStyle`).
         return Button {
-            DuelHaptics.tap()
             showLeagues = true
         } label: {
             ZStack(alignment: .bottomLeading) {
                 DuelLeagueBackdrop(league: league)
                 LinearGradient(
-                    colors: [.clear, DuelPalette.night.opacity(0.25), DuelPalette.night.opacity(0.88)],
+                    colors: [DuelTheme.scrim.opacity(0.32), DuelTheme.scrim.opacity(0.5), DuelTheme.scrim.opacity(0.82)],
                     startPoint: .top,
                     endPoint: .bottom
                 )
-
-                VStack(alignment: .leading, spacing: 10) {
-                    Text(String(format: languageManager.text("duel.league.position"), league?.position ?? 1).uppercased())
-                        .font(DS.sans(.caption, .bold))
-                        .tracking(1.4)
-                        .foregroundStyle(DuelPalette.saffron)
-                    Text(DuelFormat.leagueName(league, language: languageManager.current))
-                        .font(.jakarta(size: 30, weight: .heavy))
-                        .foregroundStyle(.white)
-                        .lineLimit(1)
-                        .minimumScaleFactor(0.6)
-                    // Les trophées du joueur à gauche, le seuil de la ligue suivante à droite.
-                    HStack(spacing: 8) {
-                        DuelTrophyCount(value: trophies, size: 17, color: .white)
-                        if showGainChip, gained > 0 {
-                            Text("+\(gained)")
-                                .font(.jakarta(size: 14, weight: .heavy))
-                                .monospacedDigit()
-                                .foregroundStyle(DuelPalette.night)
-                                .padding(.horizontal, 9)
-                                .padding(.vertical, 3)
-                                .background(Capsule().fill(DuelPalette.saffron))
-                                .transition(.scale(scale: 0.3).combined(with: .opacity))
-                        }
-                        Spacer(minLength: 0)
-                        if let next {
-                            DuelTrophyCount(value: next.minTrophies, size: 14, color: .white.opacity(0.75))
-                        }
-                    }
-                    DuelProgressBar(progress: progress)
-                    HStack(spacing: 6) {
-                        if let next {
-                            Text(String(
-                                format: languageManager.text("duel.league.toNext"),
-                                max(next.minTrophies - trophies, 0),
-                                DuelFormat.leagueName(next, language: languageManager.current)
-                            ))
-                        } else {
-                            Text(languageManager.text("duel.league.top"))
-                        }
-                        Spacer(minLength: 0)
-                    }
-                    .font(DS.sans(.footnote, .semibold))
-                    .foregroundStyle(.white.opacity(0.85))
-                }
-                .padding(18)
+                heroLabels(league: league, next: next, trophies: trophies, progress: progress, gained: gained)
+                    .padding(.horizontal, 16)
+                    .padding(.bottom, 14)
             }
-            .frame(height: 280)
+            .frame(height: 210)
             .frame(maxWidth: .infinity)
-            .clipShape(RoundedRectangle(cornerRadius: 28, style: .continuous))
+            .clipShape(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
             .overlay(alignment: .topTrailing) {
                 HStack(spacing: 4) {
                     Text(languageManager.text("duel.league.all"))
                     Image(systemName: "chevron.right")
                         .font(.system(size: 10, weight: .heavy))
                 }
-                .font(DS.sans(.caption, .bold))
+                .font(.jakarta(size: 12, weight: .bold))
                 .foregroundStyle(.white)
-                .padding(.horizontal, 12)
-                .padding(.vertical, 7)
-                .background(Capsule().fill(DuelPalette.night.opacity(0.55)))
-                .padding(14)
+                .padding(.horizontal, 10)
+                .padding(.vertical, 6)
+                .background(Capsule().fill(Color.white.opacity(0.2)))
+                .padding(12)
             }
             .overlay(
-                RoundedRectangle(cornerRadius: 28, style: .continuous)
+                RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
                     .strokeBorder(DuelPalette.saffron, lineWidth: 3)
                     .opacity(heroPulse ? 1 : 0)
             )
-            .dsSoftShadow()
             .scaleEffect(heroPulse ? 1.03 : 1)
         }
-        .buttonStyle(SoftPressButtonStyle())
+        .buttonStyle(PressableStyle(scale: 0.98))
+    }
+
+    /// Le texte posé en bas de la carte de ligue.
+    private func heroLabels(league: DuelLeague?, next: DuelLeague?, trophies: Int, progress: Double, gained: Int) -> some View {
+        VStack(alignment: .leading, spacing: 6) {
+            Text(String(format: languageManager.text("duel.league.position"), league?.position ?? 1).uppercased())
+                .font(.jakarta(size: 12, weight: .heavy))
+                .tracking(0.8)
+                .foregroundStyle(.white)
+            Text(DuelFormat.leagueName(league, language: languageManager.current))
+                .font(.jakarta(size: 24, weight: .heavy))
+                .foregroundStyle(.white)
+                .lineLimit(1)
+                .minimumScaleFactor(0.6)
+            // Les trophées du joueur à gauche, le seuil de la ligue suivante à droite.
+            HStack(spacing: 8) {
+                DuelTrophyCount(value: trophies, size: 14, color: .white)
+                if showGainChip, gained > 0 {
+                    Text("+\(gained)")
+                        .font(.jakarta(size: 13, weight: .heavy))
+                        .monospacedDigit()
+                        .foregroundStyle(DuelPalette.night)
+                        .padding(.horizontal, 8)
+                        .padding(.vertical, 2)
+                        .background(Capsule().fill(DuelPalette.saffron))
+                        .transition(.scale(scale: 0.3).combined(with: .opacity))
+                }
+                Spacer(minLength: 0)
+                if let next {
+                    DuelTrophyCount(value: next.minTrophies, size: 13, color: .white)
+                }
+            }
+            DuelProgressBar(progress: progress, height: 8)
+            Group {
+                if let next {
+                    Text(String(
+                        format: languageManager.text("duel.league.toNext"),
+                        max(next.minTrophies - trophies, 0),
+                        DuelFormat.leagueName(next, language: languageManager.current)
+                    ))
+                } else {
+                    Text(languageManager.text("duel.league.top"))
+                }
+            }
+            .font(.jakarta(size: 13, weight: .medium))
+            .foregroundStyle(DuelTheme.onArtSecondary)
+            .lineLimit(2)
+            .minimumScaleFactor(0.8)
+            .frame(maxWidth: .infinity, alignment: .leading)
+        }
     }
 
     private var playButton: some View {
@@ -344,19 +365,22 @@ struct DuelsHomeView: View {
                 DuelHaptics.countdown(final: true)
                 showFlow = true
             } label: {
-                HStack(spacing: 10) {
+                HStack(spacing: 8) {
                     Image(systemName: "bolt.fill")
-                        .font(.system(size: 18, weight: .heavy))
+                        .font(.system(size: 15, weight: .bold))
                     Text(languageManager.text("duel.play"))
                 }
             }
             .buttonStyle(DuelPlayButtonStyle())
             .scaleEffect(playPulse ? 1.015 : 1)
             .animation(.easeInOut(duration: 1.1).repeatForever(autoreverses: true), value: playPulse)
-            .onAppear { playPulse = true }
+            .onAppear {
+                guard !reduceMotion else { return }
+                playPulse = true
+            }
 
             Text(languageManager.text("duel.play.caption"))
-                .font(DS.sans(.footnote, .medium))
+                .font(DS.sans(.footnote, .regular))
                 .foregroundStyle(DS.inkSecondary)
                 .frame(maxWidth: .infinity)
         }
@@ -367,55 +391,65 @@ struct DuelsHomeView: View {
     /// Les statistiques en une carte : l'anneau de réussite et le partage victoires / défaites
     /// en haut, les séries et le record de trophées en bas.
     private func stats(_ profile: DuelProfile) -> some View {
-        VStack(alignment: .leading, spacing: 12) {
+        VStack(alignment: .leading, spacing: 8) {
             sectionTitle("duel.stats.title")
-            VStack(spacing: 0) {
-                HStack(alignment: .center, spacing: 18) {
+            VStack(spacing: 12) {
+                HStack(alignment: .center, spacing: 16) {
                     winRateRing(profile)
-                    VStack(alignment: .leading, spacing: 10) {
-                        HStack(alignment: .firstTextBaseline, spacing: 6) {
-                            Text("\(profile.games)")
-                                .font(.jakarta(size: 26, weight: .heavy))
-                                .monospacedDigit()
-                                .foregroundStyle(DS.ink)
-                            Text(languageManager.text("duel.stats.games"))
-                                .font(DS.sans(.subheadline, .semibold))
-                                .foregroundStyle(DS.inkSecondary)
-                                .lineLimit(1)
-                                .minimumScaleFactor(0.7)
-                        }
-                        if profile.games > 0 {
-                            winLossBar(profile)
-                            HStack(spacing: 8) {
-                                splitLegend(color: DS.success, value: profile.wins, label: "duel.stats.wins")
-                                Spacer(minLength: 4)
-                                splitLegend(color: DS.danger, value: profile.losses, label: "duel.stats.losses")
-                            }
-                        } else {
-                            Text(languageManager.text("duel.stats.empty"))
-                                .font(DS.sans(.footnote, .medium))
-                                .foregroundStyle(DS.inkSecondary)
-                                .fixedSize(horizontal: false, vertical: true)
-                        }
-                    }
-                    .frame(maxWidth: .infinity, alignment: .leading)
+                    statsSummary(profile)
+                        .frame(maxWidth: .infinity, alignment: .leading)
                 }
-                .padding(16)
 
                 Rectangle().fill(DS.hairline).frame(height: 1)
 
-                HStack(alignment: .top, spacing: 0) {
-                    statCell(systemImage: "flame.fill", tint: DuelPalette.coral, value: "\(profile.winStreak)", label: "duel.stats.streak")
-                    Rectangle().fill(DS.hairline).frame(width: 1, height: 44)
-                    statCell(systemImage: "bolt.fill", tint: DuelPalette.saffron, value: "\(profile.bestWinStreak)", label: "duel.stats.bestStreak")
-                    Rectangle().fill(DS.hairline).frame(width: 1, height: 44)
-                    statCell(systemImage: "trophy.fill", tint: DuelPalette.saffron, value: profile.bestTrophies.formatted(language: languageManager.current), label: "duel.stats.best")
+                HStack(alignment: .top, spacing: 6) {
+                    statCell(systemImage: "flame", tint: DuelPalette.saffron, label: "duel.stats.streak") {
+                        DSCountUp(value: profile.winStreak, duration: 0.6, font: Self.statValueFont, color: DS.ink, haptics: false)
+                    }
+                    statCell(systemImage: "bolt", tint: DS.accent, label: "duel.stats.bestStreak") {
+                        DSCountUp(value: profile.bestWinStreak, duration: 0.6, font: Self.statValueFont, color: DS.ink, haptics: false)
+                    }
+                    statCell(systemImage: "trophy", tint: DuelPalette.saffron, label: "duel.stats.best") {
+                        Text(profile.bestTrophies.formatted(language: languageManager.current))
+                            .font(Self.statValueFont)
+                            .monospacedDigit()
+                            .foregroundStyle(DS.ink)
+                            .lineLimit(1)
+                            .minimumScaleFactor(0.6)
+                    }
                 }
-                .padding(.vertical, 14)
             }
-            .clipShape(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
-            .dsCard(padding: 0)
+            .dsCard(padding: 16)
             .onAppear { statsRevealed = true }
+        }
+    }
+
+    private static let statValueFont: Font = .jakarta(size: 16, weight: .heavy)
+
+    /// « 12 Duels », puis la barre victoires / défaites et sa légende (ou l'invitation à jouer).
+    private func statsSummary(_ profile: DuelProfile) -> some View {
+        VStack(alignment: .leading, spacing: 8) {
+            HStack(alignment: .firstTextBaseline, spacing: 6) {
+                DSCountUp(value: profile.games, duration: 0.7, font: .jakarta(size: 20, weight: .heavy), color: DS.ink, haptics: false)
+                Text(languageManager.text("duel.stats.games"))
+                    .font(.jakarta(size: 20, weight: .heavy))
+                    .foregroundStyle(DS.ink)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.7)
+            }
+            if profile.games > 0 {
+                winLossBar(profile)
+                HStack(spacing: 8) {
+                    splitLegend(color: DS.success, value: profile.wins, label: "duel.stats.wins")
+                    Spacer(minLength: 4)
+                    splitLegend(color: DS.danger, value: profile.losses, label: "duel.stats.losses")
+                }
+            } else {
+                Text(languageManager.text("duel.stats.empty"))
+                    .font(DS.sans(.footnote, .regular))
+                    .foregroundStyle(DS.inkSecondary)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
         }
     }
 
@@ -424,29 +458,31 @@ struct DuelsHomeView: View {
         let fraction = profile.games > 0 ? min(max(Double(profile.wins) / Double(profile.games), 0), 1) : 0
         return ZStack {
             Circle()
-                .stroke(profile.games > 0 ? DS.danger.opacity(0.22) : DS.hairline, lineWidth: 9)
+                .stroke(profile.games > 0 ? DS.dangerTint : DS.accentTint, lineWidth: 7)
+                .padding(3.5)
             Circle()
                 .trim(from: 0, to: statsRevealed ? fraction : 0)
-                .stroke(DS.success, style: StrokeStyle(lineWidth: 9, lineCap: .round))
+                .stroke(DS.success, style: StrokeStyle(lineWidth: 7, lineCap: .round))
                 .rotationEffect(.degrees(-90))
+                .padding(3.5)
                 .animation(.easeOut(duration: 0.9), value: statsRevealed)
                 .animation(.easeOut(duration: 0.6), value: fraction)
-            VStack(spacing: 1) {
+            VStack(spacing: 0) {
                 Text(profile.winRate.map { "\($0) %" } ?? "–")
-                    .font(.jakarta(size: 20, weight: .heavy))
+                    .font(.jakarta(size: 18, weight: .heavy))
                     .monospacedDigit()
                     .foregroundStyle(DS.ink)
                     .lineLimit(1)
                     .minimumScaleFactor(0.6)
                 Text(languageManager.text("duel.stats.winRate"))
-                    .font(DS.sans(.caption2, .semibold))
-                    .foregroundStyle(DS.inkTertiary)
+                    .font(.jakarta(size: 10, weight: .regular))
+                    .foregroundStyle(DS.inkSecondary)
                     .lineLimit(1)
                     .minimumScaleFactor(0.6)
             }
-            .padding(.horizontal, 14)
+            .padding(.horizontal, 12)
         }
-        .frame(width: 100, height: 100)
+        .frame(width: 76, height: 76)
         .accessibilityElement(children: .combine)
     }
 
@@ -488,112 +524,108 @@ struct DuelsHomeView: View {
         }
     }
 
-    private func statCell(systemImage: String, tint: Color, value: String, label: String) -> some View {
-        VStack(spacing: 4) {
-            HStack(spacing: 5) {
-                Image(systemName: systemImage)
-                    .font(.system(size: 13, weight: .bold))
-                    .foregroundStyle(tint)
-                Text(value)
-                    .font(.jakarta(size: 19, weight: .heavy))
-                    .monospacedDigit()
-                    .foregroundStyle(DS.ink)
-                    .lineLimit(1)
-                    .minimumScaleFactor(0.6)
-            }
+    /// Une case du bas de la carte : le pictogramme, la valeur, puis son libellé.
+    private func statCell<Value: View>(
+        systemImage: String,
+        tint: Color,
+        label: String,
+        @ViewBuilder value: () -> Value
+    ) -> some View {
+        VStack(spacing: 3) {
+            Image(systemName: systemImage)
+                .font(.system(size: 16, weight: .semibold))
+                .foregroundStyle(tint)
+                .frame(height: 20)
+            value()
             Text(languageManager.text(label))
-                .font(DS.sans(.caption2, .semibold))
-                .foregroundStyle(DS.inkTertiary)
+                .font(.jakarta(size: 11, weight: .regular))
+                .foregroundStyle(DS.inkSecondary)
                 .multilineTextAlignment(.center)
                 .lineLimit(2)
                 .minimumScaleFactor(0.8)
         }
         .frame(maxWidth: .infinity)
-        .padding(.horizontal, 6)
         .accessibilityElement(children: .combine)
     }
 
     private func sectionTitle(_ key: String) -> some View {
-        Text(languageManager.text(key).uppercased())
-            .font(DS.sans(.caption, .semibold))
-            .foregroundStyle(DS.inkTertiary)
-            .tracking(1.1)
+        DuelSectionTitle(text: languageManager.text(key))
     }
 
     // MARK: - Classement entre amis
 
     private var leaderboardSection: some View {
-        VStack(alignment: .leading, spacing: 12) {
+        VStack(alignment: .leading, spacing: 8) {
             sectionTitle("duel.friends.title")
-            VStack(spacing: 0) {
+            VStack(spacing: 4) {
                 if service.leaderboard.filter({ !$0.isMe }).isEmpty {
                     Text(languageManager.text("duel.friends.empty"))
-                        .font(DS.sans(.subheadline, .medium))
+                        .font(DS.sans(.footnote, .regular))
                         .foregroundStyle(DS.inkSecondary)
                         .fixedSize(horizontal: false, vertical: true)
                         .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding(16)
+                        .padding(8)
                 } else {
                     ForEach(Array(service.leaderboard.enumerated()), id: \.element.id) { index, entry in
-                        if index > 0 {
-                            Rectangle().fill(DS.hairline).frame(height: 1)
-                        }
                         leaderboardRow(rank: index + 1, entry: entry)
                     }
                 }
             }
-            .clipShape(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
-            .dsCard(padding: 0)
+            .dsCard(padding: 8)
         }
     }
 
     /// Une ligne du classement : toucher la ligne ouvre le profil de l'ami, l'éclair le défie.
     private func leaderboardRow(rank: Int, entry: DuelLeaderboardEntry) -> some View {
-        HStack(spacing: 12) {
+        HStack(spacing: 10) {
             Text("\(rank)")
-                .font(DS.sans(.subheadline, .bold))
-                .foregroundStyle(rank == 1 ? DuelPalette.saffron : DS.inkTertiary)
+                .font(.jakarta(size: 14, weight: .heavy))
+                .foregroundStyle(rank == 1 ? DuelPalette.saffron : DS.inkSecondary)
                 .monospacedDigit()
-                .frame(width: 22, alignment: .leading)
-            AvatarCircle(avatarId: entry.avatarId, initial: String(entry.handle.prefix(1)).uppercased(), size: 38)
+                .frame(width: 18, alignment: .leading)
+            AvatarCircle(avatarId: entry.avatarId, initial: String(entry.handle.prefix(1)).uppercased(), size: 36)
                 .overlay(alignment: .bottomTrailing) {
                     if entry.online {
                         DuelOnlineDot(size: 12)
                             .offset(x: 2, y: 2)
                     }
                 }
-            VStack(alignment: .leading, spacing: 2) {
+            VStack(alignment: .leading, spacing: 1) {
                 Text("@\(entry.handle)")
-                    .font(DS.sans(.subheadline, .semibold))
+                    .font(.jakarta(size: 14, weight: .bold))
                     .foregroundStyle(DS.ink)
                     .lineLimit(1)
                 if let league = service.home?.league(position: entry.leaguePosition) {
                     Text(DuelFormat.leagueName(league, language: languageManager.current))
-                        .font(DS.sans(.caption, .medium))
-                        .foregroundStyle(DS.inkTertiary)
+                        .font(.jakarta(size: 12, weight: .regular))
+                        .foregroundStyle(DS.inkSecondary)
                         .lineLimit(1)
                 }
             }
             Spacer(minLength: 8)
-            DuelTrophyCount(value: entry.trophies, size: 15)
+            DuelTrophyCount(value: entry.trophies, size: 14)
             if entry.canChallenge {
                 Button {
                     DuelHaptics.countdown(final: true)
                     DuelFriendPresenter.present(.challenge(userId: entry.userId, handle: entry.handle, avatarId: entry.avatarId))
                 } label: {
                     Image(systemName: "bolt.fill")
-                        .font(.system(size: 14, weight: .heavy))
+                        .font(.system(size: 15, weight: .heavy))
                         .foregroundStyle(DuelPalette.night)
-                        .frame(width: 36, height: 36)
+                        .frame(width: 44, height: 44)
                         .background(Circle().fill(DuelPalette.saffron))
                 }
-                .buttonStyle(SoftPressButtonStyle())
+                // Le lancement du défi vibre déjà (`DuelHaptics.countdown`).
+                .buttonStyle(PressableStyle(scale: 0.92, haptic: false))
                 .accessibilityLabel(Text(languageManager.text("duel.friend.challenge")))
             }
         }
-        .padding(.horizontal, 16)
-        .padding(.vertical, 12)
-        .background(entry.isMe ? DS.accentTint.opacity(0.6) : Color.clear)
+        .padding(.horizontal, 8)
+        .padding(.vertical, 10)
+        .background(
+            RoundedRectangle(cornerRadius: 10, style: .continuous)
+                .fill(entry.isMe ? DS.accentTint : Color.clear)
+        )
         .contentShape(Rectangle())
         .onTapGesture {
             guard !entry.isMe else { return }
@@ -610,7 +642,7 @@ struct DuelsHomeView: View {
         let shown = Array(matches.prefix(max(recentShown, Self.recentPage)))
         let canExpand = shown.count < matches.count
         let canCollapse = !canExpand && matches.count > Self.recentPage
-        return VStack(alignment: .leading, spacing: 12) {
+        return VStack(alignment: .leading, spacing: 8) {
             sectionTitle("duel.recent.title")
             VStack(spacing: 0) {
                 ForEach(Array(shown.enumerated()), id: \.element.id) { index, match in
@@ -623,7 +655,7 @@ struct DuelsHomeView: View {
                     Rectangle().fill(DS.hairline).frame(height: 1)
                     Button {
                         DuelHaptics.tap()
-                        withAnimation(.easeInOut(duration: 0.25)) {
+                        withAnimation(DS.Motion.snappy) {
                             recentShown = canExpand ? shown.count + Self.recentPage : Self.recentPage
                         }
                     } label: {
@@ -632,16 +664,16 @@ struct DuelsHomeView: View {
                             Image(systemName: canExpand ? "chevron.down" : "chevron.up")
                                 .font(.system(size: 11, weight: .heavy))
                         }
-                        .font(DS.sans(.subheadline, .semibold))
-                        .foregroundStyle(DS.accentSoft)
-                        .frame(maxWidth: .infinity)
-                        .padding(.vertical, 13)
+                        .font(.jakarta(size: 14, weight: .bold))
+                        .foregroundStyle(DS.accent)
+                        .frame(maxWidth: .infinity, minHeight: 40)
                         .contentShape(Rectangle())
                     }
                     .buttonStyle(.plain)
                 }
             }
-            .clipShape(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
+            .padding(.vertical, 2)
+            .padding(.horizontal, 16)
             .dsCard(padding: 0)
         }
     }
@@ -649,31 +681,30 @@ struct DuelsHomeView: View {
     private func recentRow(_ match: DuelRecentMatch) -> some View {
         let outcomeKey = match.abandoned ? "duel.result.abandoned" : (match.won ? "duel.result.victory" : "duel.result.defeat")
         let deltaText = match.trophiesDelta > 0 ? "+\(match.trophiesDelta)" : "\(match.trophiesDelta)"
-        return HStack(spacing: 12) {
-            AvatarCircle(avatarId: match.opponent.avatarId, initial: match.opponent.initial, size: 38)
-            VStack(alignment: .leading, spacing: 2) {
+        return HStack(spacing: 10) {
+            AvatarCircle(avatarId: match.opponent.avatarId, initial: match.opponent.initial, size: 36)
+            VStack(alignment: .leading, spacing: 1) {
                 Text("@\(match.opponent.handle) \(match.opponent.flag)")
-                    .font(DS.sans(.subheadline, .semibold))
+                    .font(.jakarta(size: 14, weight: .bold))
                     .foregroundStyle(DS.ink)
                     .lineLimit(1)
                 Text(match.abandoned
                      ? languageManager.text(outcomeKey)
                      : "\(languageManager.text(outcomeKey)) · \(match.playerScore) – \(match.opponentScore)")
-                    .font(DS.sans(.caption, .semibold))
+                    .font(.jakarta(size: 13, weight: .bold))
                     .foregroundStyle(match.won ? DS.success : DS.danger)
                     .lineLimit(1)
             }
             Spacer(minLength: 8)
             HStack(spacing: 4) {
                 Text(deltaText)
-                    .font(DS.sans(.subheadline, .bold))
+                    .font(.jakarta(size: 14, weight: .heavy))
                     .monospacedDigit()
                     .foregroundStyle(match.trophiesDelta > 0 ? DS.success : (match.trophiesDelta < 0 ? DS.danger : DS.inkTertiary))
                 DuelTrophyIcon(size: 12)
             }
         }
-        .padding(.horizontal, 16)
-        .padding(.vertical, 12)
+        .padding(.vertical, 10)
     }
 
     // MARK: - Sans compte, sans réseau
@@ -686,21 +717,23 @@ struct DuelsHomeView: View {
                     .scaledToFill()
                     .frame(width: 168, height: 168)
                     .clipShape(RoundedRectangle(cornerRadius: 40, style: .continuous))
-                    .dsSoftShadow()
                     .padding(.top, 36)
+                    .dsPopIn()
                 VStack(spacing: 10) {
                     Text(languageManager.text("duel.signedOut.title"))
-                        .font(DS.title(.title, .heavy))
+                        .font(DS.title(.title, .semibold))
                         .foregroundStyle(DS.ink)
                         .multilineTextAlignment(.center)
                     Text(languageManager.text("duel.signedOut.body"))
-                        .font(DS.sans(.body, .medium))
+                        .font(DS.sans(.body, .regular))
                         .foregroundStyle(DS.inkSecondary)
                         .multilineTextAlignment(.center)
                         .fixedSize(horizontal: false, vertical: true)
                 }
+                .dsStagger(1)
                 AuthProvidersView(onSignedIn: {})
                     .padding(.top, 6)
+                    .dsStagger(2)
             }
             .padding(.horizontal, 28)
             .padding(.bottom, 28)
@@ -716,8 +749,8 @@ struct DuelsHomeView: View {
                 .font(DS.sans(.body, .medium))
                 .foregroundStyle(DS.inkSecondary)
                 .multilineTextAlignment(.center)
+            // Le bouton secondaire vibre de lui-même.
             Button(languageManager.text("duel.match.retry")) {
-                DuelHaptics.tap()
                 Task { await refresh() }
             }
             .buttonStyle(DSSecondaryButtonStyle())

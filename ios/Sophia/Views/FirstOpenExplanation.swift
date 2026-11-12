@@ -103,7 +103,7 @@ struct FirstOpenExplanation: View {
         withAnimation(.easeOut(duration: 1.0).delay(1.45)) { showMessage = true }
         withAnimation(.easeIn(duration: 0.8).delay(2.2)) { showHint = true }
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.55) {
-            UIImpactFeedbackGenerator(style: .soft).impactOccurred()
+            Haptics.soft()
         }
     }
 
@@ -199,7 +199,7 @@ struct GlossaryCoachmark: View {
         withAnimation(.easeOut(duration: 1.0).delay(1.5)) { showMessage = true }
         withAnimation(.easeIn(duration: 0.8).delay(2.25)) { showHint = true }
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.55) {
-            UIImpactFeedbackGenerator(style: .soft).impactOccurred()
+            Haptics.soft()
         }
     }
 

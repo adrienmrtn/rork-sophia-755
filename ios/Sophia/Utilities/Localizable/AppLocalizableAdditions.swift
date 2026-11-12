@@ -9,6 +9,9 @@ enum AppLocalizableAdditions {
 
     private static let tables: [Table] = [
         home, events, explore, duels, profile, progressPage, settings, badgeCelebration, invite,
+        // Design « Elevate arrondi » : textes ajoutés par zone lors du passage au nouveau style.
+        elevateOnboardingIntro, elevateOnboardingCore, elevateOnboardingEnd,
+        elevateHome, elevateCourse, elevatePath, elevateDuels, elevateProfile,
     ]
 
     static func entry(for key: String) -> [String: String]? {

@@ -52,20 +52,10 @@ struct TrainingView: View {
         selectedOptionIndex == currentQuestion.correctIndex
     }
 
-    /// Une session active passe dans un « mode révision » visuellement distinct : fond
-    /// dégradé calme et légèrement teinté qui marque clairement l'entrée dans la révision.
-    private var isInRevisionMode: Bool { isSessionActive || isSessionComplete }
-
     var body: some View {
         ZStack {
-            Group {
-                if isInRevisionMode {
-                    revisionBackground.ignoresSafeArea()
-                } else {
-                    DS.canvas.ignoresSafeArea()
-                }
-            }
-            .animation(.easeInOut(duration: 0.45), value: isInRevisionMode)
+            // Fond blanc partout : la session se distingue par son en-tête de quiz, plus par un fond teinté.
+            DS.canvas.ignoresSafeArea()
 
             if isSessionComplete {
                 summaryView
@@ -89,16 +79,6 @@ struct TrainingView: View {
         }
     }
 
-    /// Fond « mode révision » : dégradé calme, légèrement teinté d'accent, pour marquer
-    /// nettement qu'on est entré dans une session de révision (vs. l'accueil de l'onglet).
-    private var revisionBackground: some View {
-        LinearGradient(
-            colors: [DS.accentTint, DS.canvas, DS.surfaceMuted.opacity(0.7)],
-            startPoint: .top,
-            endPoint: .bottom
-        )
-    }
-
     /// Ouvre le flux « Découvrir » (mini-OB) ou « Débloquer » (paywall direct) selon que
     /// l'utilisateur a déjà parcouru l'onboarding entraînement.
     private func openTrainingFlow() {
@@ -111,141 +91,182 @@ struct TrainingView: View {
 
     // MARK: - Entry screen
 
+    /// Pastille posée sur l'illustration selon l'état de l'entraînement.
+    private enum EntryBadge {
+        case plain
+        case done
+        case locked
+    }
+
     private var entryView: some View {
         let due = progressManager.dueTrainingQuestions
         let hasAnyQuestions = !progressManager.progress.trainingQuestionStates.isEmpty
         return VStack(spacing: 0) {
-            HStack {
-                Text(languageManager.text("training.title"))
-                    .font(DS.title(.title2, .semibold))
-                    .foregroundStyle(DS.ink)
-                Spacer()
-            }
-            .padding(.horizontal, 20)
-            .padding(.top, 16)
-            .padding(.bottom, 4)
+            Text(languageManager.text("training.title"))
+                .font(DS.sans(.callout, .heavy))
+                .foregroundStyle(DS.ink)
+                .frame(maxWidth: .infinity)
+                .frame(minHeight: 44)
+                .padding(.horizontal, 24)
+                .padding(.top, 8)
+                .accessibilityAddTraits(.isHeader)
 
-            ScrollView {
-                VStack(spacing: 24) {
-                    Spacer(minLength: 40)
-
-                    if !due.isEmpty {
-                        readyContent(due: due)
-                    } else if hasAnyQuestions {
-                        allReviewedContent
-                    } else {
-                        lockedContent
+            GeometryReader { geo in
+                ScrollView {
+                    Group {
+                        if !due.isEmpty {
+                            readyContent(due: due)
+                        } else if hasAnyQuestions {
+                            allReviewedContent
+                        } else {
+                            lockedContent
+                        }
                     }
-
-                    if !isPremium {
-                        freemiumUnlockButton
-                    }
-
-                    Spacer(minLength: 40)
+                    .padding(.horizontal, 24)
+                    .padding(.vertical, 20)
+                    .frame(maxWidth: .infinity)
+                    .frame(minHeight: geo.size.height)
                 }
-                .padding(.horizontal, 20)
-                .frame(minHeight: 520)
+                .scrollIndicators(.hidden)
             }
-            .scrollIndicators(.hidden)
+
+            entryButtons(due: due)
         }
     }
 
-    // Des questions sont à réviser maintenant.
-    private func readyContent(due: [(course: Course, question: QuizQuestion)]) -> some View {
-        VStack(spacing: 24) {
-            trainingIcon("arrow.triangle.2.circlepath")
-
-            VStack(spacing: 10) {
-                Text(languageManager.text("training.readyTitle"))
-                    .font(DS.title(.title2, .semibold))
-                    .foregroundStyle(DS.ink)
-                    .multilineTextAlignment(.center)
-                Text(String(format: languageManager.text("training.dueCount"), due.count))
-                    .font(DS.sans(.subheadline))
-                    .foregroundStyle(DS.inkSecondary)
-                    .multilineTextAlignment(.center)
-                    .fixedSize(horizontal: false, vertical: true)
-            }
-            .padding(.horizontal, 32)
-
+    /// Les actions ancrées en bas : « Commencer » pour qui peut réviser, « Découvrir » /
+    /// « Débloquer » en freemium (l'entraînement est premium).
+    private func entryButtons(due: [(course: Course, question: QuizQuestion)]) -> some View {
+        VStack(spacing: 10) {
             // Freemium : pas de bouton « Commencer » — l'entraînement est premium et se
             // débloque via le bouton « Débloquer » (voir `freemiumUnlockButton`).
-            if isPremium {
+            if isPremium, !due.isEmpty {
                 Button {
-                    UIImpactFeedbackGenerator(style: .light).impactOccurred()
                     startSession(due: due)
                 } label: {
                     Text(languageManager.text("training.start"))
                 }
                 .buttonStyle(DSPrimaryButtonStyle())
-                .padding(.horizontal, 40)
-                .padding(.top, 8)
+            }
+
+            if !isPremium {
+                freemiumUnlockButton
             }
         }
+        .padding(.horizontal, 24)
+        .padding(.bottom, 24)
+    }
+
+    // Des questions sont à réviser maintenant.
+    private func readyContent(due: [(course: Course, question: QuizQuestion)]) -> some View {
+        entryMessage(
+            badge: .plain,
+            title: languageManager.text("training.readyTitle"),
+            subtitle: String(format: languageManager.text("training.dueCount"), due.count)
+        )
     }
 
     // Tout est révisé pour l'instant (mais l'utilisateur a déjà des questions).
     private var allReviewedContent: some View {
-        VStack(spacing: 24) {
-            trainingIcon("checkmark.seal.fill")
-
-            VStack(spacing: 10) {
-                Text(languageManager.text("training.emptyTitle"))
-                    .font(DS.title(.title2, .semibold))
-                    .foregroundStyle(DS.ink)
-                    .multilineTextAlignment(.center)
-                Text(languageManager.text("training.emptyMessage"))
-                    .font(DS.sans(.subheadline))
-                    .foregroundStyle(DS.inkSecondary)
-                    .multilineTextAlignment(.center)
-                    .fixedSize(horizontal: false, vertical: true)
-            }
-            .padding(.horizontal, 32)
-        }
+        entryMessage(
+            badge: .done,
+            title: languageManager.text("training.emptyTitle"),
+            subtitle: languageManager.text("training.emptyMessage")
+        )
     }
 
     // Aucun quiz terminé encore : on présente l'entraînement sans dérouler les explications
     // (elles sont désormais dans le mini-onboarding « Découvrir »).
     private var lockedContent: some View {
-        VStack(spacing: 22) {
-            trainingIcon("brain.head.profile")
+        entryMessage(
+            badge: .locked,
+            title: languageManager.text("training.locked.title"),
+            subtitle: languageManager.text("training.locked.tagline")
+        )
+    }
 
-            VStack(spacing: 10) {
-                Text(languageManager.text("training.locked.title"))
-                    .font(DS.title(.title2, .semibold))
-                    .foregroundStyle(DS.ink)
-                    .multilineTextAlignment(.center)
-                Text(languageManager.text("training.locked.tagline"))
-                    .font(DS.sans(.subheadline))
-                    .foregroundStyle(DS.inkSecondary)
-                    .multilineTextAlignment(.center)
-                    .fixedSize(horizontal: false, vertical: true)
-            }
-            .padding(.horizontal, 24)
+    private func entryMessage(badge: EntryBadge, title: String, subtitle: String) -> some View {
+        VStack(spacing: 14) {
+            trainingIllustration(badge: badge)
+                .dsPopIn()
+
+            Text(title)
+                .font(CourseType.font(24, .semibold, relativeTo: .title2))
+                .foregroundStyle(DS.ink)
+                .multilineTextAlignment(.center)
+                .fixedSize(horizontal: false, vertical: true)
+                .padding(.top, 6)
+                .dsStagger(1)
+
+            Text(subtitle)
+                .font(DS.sans(.callout))
+                .foregroundStyle(DS.inkSecondary)
+                .multilineTextAlignment(.center)
+                .lineSpacing(4)
+                .fixedSize(horizontal: false, vertical: true)
+                .dsStagger(2)
         }
+        .frame(maxWidth: .infinity)
     }
 
     // CTA freemium : « Découvrir » ouvre le mini-onboarding entraînement (puis le paywall) ;
     // une fois l'onboarding parcouru, le bouton devient « Débloquer » (paywall direct).
+    // `openTrainingFlow` porte sa propre vibration : le style du bouton n'en ajoute pas.
     private var freemiumUnlockButton: some View {
         let seenOnboarding = TutorialFlags.seen(.trainingOnboarding)
         return Button(action: openTrainingFlow) {
             HStack(spacing: 8) {
-                Image(systemName: seenOnboarding ? "lock.open.fill" : "sparkles")
-                    .font(.jakarta(size: 14, weight: .semibold))
+                Image(systemName: seenOnboarding ? "lock.open" : "star")
+                    .font(.subheadline.weight(.semibold))
                 Text(languageManager.text(seenOnboarding ? "training.unlock" : "training.discover"))
             }
         }
-        .buttonStyle(DSPrimaryButtonStyle())
-        .padding(.horizontal, 40)
+        .buttonStyle(CourseCTAStyle())
     }
 
-    private func trainingIcon(_ systemName: String) -> some View {
-        ZStack {
-            Circle().fill(DS.accentTint).frame(width: 128, height: 128)
-            Image(systemName: systemName)
-                .font(.jakarta(size: 50, weight: .regular))
+    /// L'illustration ronde de l'entraînement, avec une pastille quand tout est révisé
+    /// (coche) ou quand il n'y a encore rien à réviser (cadenas).
+    private func trainingIllustration(badge: EntryBadge) -> some View {
+        Group {
+            if let poster = UIImage(named: "training_poster") {
+                Image(uiImage: poster)
+                    .resizable()
+                    .scaledToFill()
+            } else {
+                ZStack {
+                    DS.accentTint
+                    Image(systemName: "arrow.triangle.2.circlepath")
+                        .font(.system(size: 64, weight: .regular))
+                        .foregroundStyle(DS.accent)
+                }
+            }
+        }
+        .frame(width: 190, height: 190)
+        .clipShape(Circle())
+        .overlay(alignment: .bottomTrailing) {
+            entryBadgeView(badge)
+                .offset(x: -6, y: -6)
+        }
+        .accessibilityHidden(true)
+    }
+
+    @ViewBuilder
+    private func entryBadgeView(_ badge: EntryBadge) -> some View {
+        switch badge {
+        case .plain:
+            EmptyView()
+        case .done:
+            DSCheckBadge(size: 38, delay: 0.25)
+                .padding(3)
+                .background(DS.surface, in: Circle())
+        case .locked:
+            Image(systemName: "lock.fill")
+                .font(.system(size: 15, weight: .semibold))
                 .foregroundStyle(DS.accent)
+                .frame(width: 38, height: 38)
+                .background(DS.accentTint, in: Circle())
+                .padding(3)
+                .background(DS.surface, in: Circle())
         }
     }
 
@@ -329,17 +350,31 @@ struct TrainingView: View {
 
     // MARK: - Session screen
 
+    /// « Question 2 sur 8 » : le sur-titre et le libellé VoiceOver de la progression.
+    private var questionCountText: String {
+        String(
+            format: languageManager.text("elevateCourse.quiz.questionOf"),
+            currentIndex + 1,
+            sessionQuestions.count
+        )
+    }
+
     private var sessionView: some View {
         VStack(spacing: 0) {
-            sessionHeader
-            sessionProgressBar
+            CourseQuizTopBar(
+                total: sessionQuestions.count,
+                filled: currentIndex + 1,
+                closeLabel: languageManager.text("common.close"),
+                progressLabel: questionCountText,
+                onClose: { exitSession() }
+            )
 
             ScrollView {
-                VStack(alignment: .leading, spacing: 20) {
-                    questionCard
+                VStack(spacing: 26) {
+                    questionHeader
                         .opacity(questionAppeared ? 1 : 0)
                         .offset(y: questionAppeared ? 0 : 12)
-                        .padding(.top, 16)
+                        .padding(.top, 26)
 
                     Group {
                         switch currentQuestion.type {
@@ -355,8 +390,8 @@ struct TrainingView: View {
                     .offset(y: questionAppeared ? 0 : 12)
                     .id("training_answer_\(currentIndex)")
                 }
-                .padding(.horizontal, 20)
-                .padding(.bottom, showFeedback ? 220 : 32)
+                .padding(.horizontal, 24)
+                .padding(.bottom, 32)
             }
             .scrollIndicators(.hidden)
 
@@ -365,27 +400,6 @@ struct TrainingView: View {
                     .transition(.move(edge: .bottom).combined(with: .opacity))
             }
         }
-    }
-
-    private var sessionHeader: some View {
-        HStack {
-            Button {
-                UIImpactFeedbackGenerator(style: .light).impactOccurred()
-                exitSession()
-            } label: {
-                Image(systemName: "xmark")
-                    .font(.jakarta(size: 15, weight: .medium))
-                    .foregroundStyle(DS.inkSecondary)
-                    .frame(width: 40, height: 40)
-                    .background(DS.surface, in: Circle())
-                    .overlay { Circle().strokeBorder(DS.hairline, lineWidth: 1) }
-            }
-            .buttonStyle(SoftPressButtonStyle())
-
-            Spacer()
-        }
-        .padding(.horizontal, 20)
-        .padding(.top, 10)
     }
 
     private func exitSession() {
@@ -397,39 +411,15 @@ struct TrainingView: View {
         currentIndex = 0
     }
 
-    private var sessionProgressBar: some View {
-        HStack(spacing: 12) {
-            CalmProgressBar(fraction: Double(currentIndex + 1) / Double(sessionQuestions.count), height: 6)
-
-            Text("\(currentIndex + 1)/\(sessionQuestions.count)")
-                .font(DS.sans(.caption, .medium))
-                .foregroundStyle(DS.inkSecondary)
-                .monospacedDigit()
-                .fixedSize()
-        }
-        .padding(.horizontal, 20)
-        .padding(.top, 6)
-        .padding(.bottom, 4)
-    }
-
-    private var questionCard: some View {
-        VStack(alignment: .leading, spacing: 10) {
-            HStack(spacing: 6) {
-                Image(systemName: currentCourse.subject.icon)
-                    .font(.jakarta(size: 11, weight: .medium))
-                Text(currentCourse.title)
-                    .font(DS.sans(.caption, .semibold))
-                    .lineLimit(2)
-            }
-            .foregroundStyle(DS.accentSoft)
-
-            Text(currentQuestion.question)
-                .font(DS.title(.title3, .semibold))
-                .foregroundStyle(DS.ink)
-                .fixedSize(horizontal: false, vertical: true)
-                .frame(maxWidth: .infinity, alignment: .leading)
-        }
-        .dsCard()
+    /// Sur-titre « MATIÈRE · QUESTION n SUR N », le cours d'où vient la question, puis l'énoncé.
+    private var questionHeader: some View {
+        CourseQuizQuestionHeader(
+            subject: currentCourse.subject,
+            eyebrow: "\(currentCourse.subject.localizedShortName(language: languageManager.current)) · \(questionCountText)",
+            question: currentQuestion.question,
+            caption: currentCourse.title
+        )
+        .id("training_question_\(currentIndex)")
     }
 
     // MARK: - Choice answer (.mcq / .trueFalse) — identical styling to QuizView
@@ -437,7 +427,7 @@ struct TrainingView: View {
     @ViewBuilder
     private var choiceAnswerBody: some View {
         if currentQuestion.type == .trueFalse {
-            HStack(spacing: 12) {
+            HStack(spacing: 10) {
                 ForEach(Array(currentQuestion.options.enumerated()), id: \.offset) { index, option in
                     trueFalseButton(index: index, text: option)
                 }
@@ -451,126 +441,38 @@ struct TrainingView: View {
         }
     }
 
+    /// État visuel d'une réponse : au repos tant que rien n'est choisi ; ensuite la bonne en
+    /// vert, la mauvaise choisie en rouge, les autres estompées.
+    private func optionState(for index: Int) -> DSOptionState {
+        guard hasAnswered else { return .idle }
+        if index == currentQuestion.correctIndex { return .correct }
+        if index == selectedOptionIndex { return .wrong }
+        return .dimmed
+    }
+
+    // Pas de vibration au toucher : le verdict (`submitAnswer`) vibre aussitôt.
     private func optionRow(index: Int, text: String) -> some View {
-        Button {
+        let state: DSOptionState = optionState(for: index)
+        return Button {
             selectOption(index)
         } label: {
-            HStack(spacing: 14) {
-                Text("\(Character(UnicodeScalar(65 + index)!))")
-                    .font(DS.title(.subheadline, .semibold))
-                    .foregroundStyle(optionLetterFg(for: index))
-                    .frame(width: 34, height: 34)
-                    .background(optionLetterBg(for: index), in: Circle())
-
-                Text(text)
-                    .font(DS.sans(.body, .medium))
-                    .foregroundStyle(optionTextColor(for: index))
-                    .multilineTextAlignment(.leading)
-                    .fixedSize(horizontal: false, vertical: true)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-
-                optionTrailingIcon(for: index)
-                    .frame(width: 24, height: 24)
-            }
-            .padding(.horizontal, 14)
-            .padding(.vertical, 14)
-            .frame(minHeight: 64)
-            .background(optionRowBg(for: index))
-            .clipShape(.rect(cornerRadius: DS.Radius.control))
-            .overlay {
-                RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous)
-                    .strokeBorder(optionRowBorder(for: index), lineWidth: hasAnswered && (index == currentQuestion.correctIndex || index == selectedOptionIndex) ? 1.5 : 1)
-            }
-            .opacity(hasAnswered && index != currentQuestion.correctIndex && index != selectedOptionIndex ? 0.55 : 1)
+            CourseQuizOptionCard(text: text, state: state)
         }
-        .buttonStyle(SoftPressButtonStyle())
-        .animation(.spring(response: 0.3, dampingFraction: 0.8), value: hasAnswered)
+        .buttonStyle(PressableStyle(haptic: false))
+        .dsShake(trigger: state == .wrong ? 1 : 0)
+        .dsStagger(index)
     }
 
     private func trueFalseButton(index: Int, text: String) -> some View {
-        Button {
+        let state: DSOptionState = optionState(for: index)
+        return Button {
             selectOption(index)
         } label: {
-            VStack(spacing: 10) {
-                Image(systemName: index == 0 ? "checkmark.circle.fill" : "xmark.circle.fill")
-                    .font(.jakarta(size: 26, weight: .regular))
-                    .foregroundStyle(trueFalseIconColor(for: index))
-                Text(text)
-                    .font(DS.title(.headline, .semibold))
-                    .foregroundStyle(optionTextColor(for: index))
-            }
-            .frame(maxWidth: .infinity)
-            .padding(.vertical, 22)
-            .background(optionRowBg(for: index))
-            .clipShape(.rect(cornerRadius: DS.Radius.control))
-            .overlay {
-                RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous)
-                    .strokeBorder(optionRowBorder(for: index), lineWidth: hasAnswered && (index == currentQuestion.correctIndex || index == selectedOptionIndex) ? 1.5 : 1)
-            }
-            .opacity(hasAnswered && index != currentQuestion.correctIndex && index != selectedOptionIndex ? 0.55 : 1)
+            CourseQuizTrueFalseCard(text: text, isTrue: index == 0, state: state)
         }
-        .buttonStyle(SoftPressButtonStyle())
-        .animation(.spring(response: 0.3, dampingFraction: 0.8), value: hasAnswered)
-    }
-
-    private func trueFalseIconColor(for index: Int) -> Color {
-        guard hasAnswered else { return DS.accentSoft }
-        if index == currentQuestion.correctIndex { return DS.success }
-        if index == selectedOptionIndex { return DS.danger }
-        return DS.accentSoft
-    }
-
-    private func optionRowBg(for index: Int) -> Color {
-        guard hasAnswered else { return DS.surface }
-        if index == currentQuestion.correctIndex { return DS.successTint }
-        if index == selectedOptionIndex, index != currentQuestion.correctIndex { return DS.dangerTint }
-        return DS.surface
-    }
-
-    private func optionRowBorder(for index: Int) -> Color {
-        guard hasAnswered else { return DS.hairline }
-        if index == currentQuestion.correctIndex { return DS.success }
-        if index == selectedOptionIndex, index != currentQuestion.correctIndex { return DS.danger }
-        return DS.hairline
-    }
-
-    private func optionTextColor(for index: Int) -> Color {
-        guard hasAnswered else { return DS.ink }
-        if index == currentQuestion.correctIndex { return DS.success }
-        if index == selectedOptionIndex, index != currentQuestion.correctIndex { return DS.danger }
-        return DS.ink
-    }
-
-    private func optionLetterFg(for index: Int) -> Color {
-        guard hasAnswered,
-              index == currentQuestion.correctIndex || (index == selectedOptionIndex && index != currentQuestion.correctIndex) else {
-            return DS.accentSoft
-        }
-        return .white
-    }
-
-    private func optionLetterBg(for index: Int) -> Color {
-        guard hasAnswered else { return DS.accentTint }
-        if index == currentQuestion.correctIndex { return DS.success }
-        if index == selectedOptionIndex, index != currentQuestion.correctIndex { return DS.danger }
-        return DS.accentTint
-    }
-
-    @ViewBuilder
-    private func optionTrailingIcon(for index: Int) -> some View {
-        if hasAnswered && index == currentQuestion.correctIndex {
-            Image(systemName: "checkmark.circle.fill")
-                .font(.jakarta(size: 20, weight: .medium))
-                .foregroundStyle(DS.success)
-                .transition(.scale.combined(with: .opacity))
-        } else if hasAnswered && index == selectedOptionIndex && !isCorrect {
-            Image(systemName: "xmark.circle.fill")
-                .font(.jakarta(size: 20, weight: .medium))
-                .foregroundStyle(DS.danger)
-                .transition(.scale.combined(with: .opacity))
-        } else {
-            Color.clear
-        }
+        .buttonStyle(PressableStyle(haptic: false))
+        .dsShake(trigger: state == .wrong ? 1 : 0)
+        .dsStagger(index)
     }
 
     // MARK: - Chronological ordering answer — identical interaction to QuizView
@@ -580,19 +482,23 @@ struct TrainingView: View {
             Text(languageManager.text("quiz.chronological.instruction"))
                 .font(DS.sans(.subheadline))
                 .foregroundStyle(DS.inkSecondary)
+                .multilineTextAlignment(.center)
+                .fixedSize(horizontal: false, vertical: true)
+                .frame(maxWidth: .infinity)
 
             VStack(spacing: 8) {
                 ForEach(Array(chronoSlots.indices), id: \.self) { position in
                     chronoSlotView(position: position)
+                        .dsStagger(position)
                 }
             }
 
             if !chronoPool.isEmpty {
                 VStack(alignment: .leading, spacing: 8) {
                     Text(languageManager.text("quiz.chronological.remaining").uppercasedInApp())
-                        .font(DS.sans(.caption2, .semibold))
-                        .foregroundStyle(DS.inkTertiary)
-                        .tracking(1.0)
+                        .font(DS.sans(.caption2, .heavy))
+                        .foregroundStyle(DS.inkSecondary)
+                        .tracking(0.9)
 
                     VStack(spacing: 8) {
                         ForEach(chronoPool, id: \.self) { slot in
@@ -603,21 +509,34 @@ struct TrainingView: View {
             }
 
             if hasAnswered {
-                Text("\(languageManager.text("quiz.chronological.correctOrder")) : \(correctChronologicalOrderText)")
-                    .font(DS.sans(.caption, .medium))
-                    .foregroundStyle(DS.inkSecondary)
-                    .fixedSize(horizontal: false, vertical: true)
+                correctOrderCard
             } else if chronoSlots.allSatisfy({ $0 != nil }) {
+                // Pas de vibration au toucher : le verdict vibre aussitôt.
                 Button {
-                    UIImpactFeedbackGenerator(style: .light).impactOccurred()
                     submitChronoOrder()
                 } label: {
                     Text(languageManager.text("quiz.chronological.validate"))
                 }
-                .buttonStyle(DSPrimaryButtonStyle())
+                .buttonStyle(CourseCTAStyle())
                 .padding(.top, 4)
+                .transition(.opacity.combined(with: .offset(y: 8)))
             }
         }
+    }
+
+    private var correctOrderCard: some View {
+        VStack(alignment: .leading, spacing: 6) {
+            Text(languageManager.text("quiz.chronological.correctOrder").uppercasedInApp())
+                .font(DS.sans(.caption2, .heavy))
+                .foregroundStyle(DS.inkSecondary)
+                .tracking(0.9)
+            Text(correctChronologicalOrderText)
+                .font(DS.sans(.footnote, .medium))
+                .foregroundStyle(DS.ink)
+                .lineSpacing(3)
+                .fixedSize(horizontal: false, vertical: true)
+        }
+        .dsCard(padding: 14)
     }
 
     @ViewBuilder
@@ -645,91 +564,31 @@ struct TrainingView: View {
     }
 
     private func chronoSlotContent(position: Int) -> some View {
-        let slot = chronoSlots[position]
-        let filled = slot != nil
-        var isCorrectSlot = false
-        if hasAnswered, let slot, currentQuestion.originalIndices.indices.contains(slot) {
-            isCorrectSlot = currentQuestion.originalIndices[slot] == position
-        }
-        let isWrongSlot = hasAnswered && filled && !isCorrectSlot
-
-        return HStack(spacing: 12) {
-            Text("\(position + 1)")
-                .font(DS.sans(.subheadline, .semibold))
-                .foregroundStyle(slotBadgeFg(isCorrect: isCorrectSlot, isWrong: isWrongSlot, filled: filled))
-                .frame(width: 28, height: 28)
-                .background(slotBadgeBg(isCorrect: isCorrectSlot, isWrong: isWrongSlot, filled: filled), in: Circle())
-
-            Group {
-                if let slot {
-                    Text(currentQuestion.items[slot])
-                        .foregroundStyle(DS.ink)
-                } else {
-                    Text(languageManager.text("quiz.chronological.emptySlot"))
-                        .foregroundStyle(DS.inkTertiary)
-                }
+        let slot: Int? = chronoSlots[position]
+        var verdict: CourseQuizSlotVerdict = .pending
+        if hasAnswered, let slot {
+            var isCorrectSlot = false
+            if currentQuestion.originalIndices.indices.contains(slot) {
+                isCorrectSlot = currentQuestion.originalIndices[slot] == position
             }
-            .font(DS.sans(.body, .medium))
-            .multilineTextAlignment(.leading)
-            .fixedSize(horizontal: false, vertical: true)
-            .frame(maxWidth: .infinity, alignment: .leading)
+            verdict = isCorrectSlot ? .correct : .wrong
+        }
+        var text: String? = nil
+        if let slot { text = currentQuestion.items[slot] }
 
-            chronoSlotTrailingIcon(isCorrect: isCorrectSlot, isWrong: isWrongSlot, filled: filled)
-                .frame(width: 20, height: 20)
-        }
-        .padding(.horizontal, 14)
-        .padding(.vertical, 14)
-        .frame(minHeight: 56)
-        .background(slotRowBg(isCorrect: isCorrectSlot, isWrong: isWrongSlot, filled: filled))
-        .clipShape(.rect(cornerRadius: DS.Radius.control))
-        .overlay {
-            RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous)
-                .strokeBorder(
-                    slotRowBorder(isCorrect: isCorrectSlot, isWrong: isWrongSlot, filled: filled),
-                    style: StrokeStyle(lineWidth: 1, dash: filled ? [] : [5, 4])
-                )
-        }
-        .contentShape(Rectangle())
-    }
-
-    @ViewBuilder
-    private func chronoSlotTrailingIcon(isCorrect: Bool, isWrong: Bool, filled: Bool) -> some View {
-        if hasAnswered && filled {
-            Image(systemName: isCorrect ? "checkmark.circle.fill" : "xmark.circle.fill")
-                .font(.jakarta(size: 18, weight: .regular))
-                .foregroundStyle(isCorrect ? DS.success : DS.danger)
-        } else if filled {
-            Image(systemName: "line.3.horizontal")
-                .font(.jakarta(size: 13, weight: .medium))
-                .foregroundStyle(DS.inkTertiary)
-        } else {
-            Color.clear
-        }
+        return CourseQuizChronoSlotRow(
+            position: position,
+            text: text,
+            emptyText: languageManager.text("quiz.chronological.emptySlot"),
+            verdict: verdict
+        )
+        .dsShake(trigger: verdict == .wrong ? 1 : 0)
     }
 
     private func chronoPoolChip(slot: Int) -> some View {
-        HStack(spacing: 12) {
-            Image(systemName: "plus.circle")
-                .font(.jakarta(size: 16, weight: .regular))
-                .foregroundStyle(DS.accentSoft)
-            Text(currentQuestion.items[slot])
-                .font(DS.sans(.body, .medium))
-                .foregroundStyle(DS.ink)
-                .multilineTextAlignment(.leading)
-                .fixedSize(horizontal: false, vertical: true)
-                .frame(maxWidth: .infinity, alignment: .leading)
-        }
-        .padding(.horizontal, 14)
-        .padding(.vertical, 14)
-        .background(DS.surface)
-        .clipShape(.rect(cornerRadius: DS.Radius.control))
-        .overlay {
-            RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous)
-                .strokeBorder(DS.hairline, lineWidth: 1)
-        }
-        .contentShape(Rectangle())
-        .onTapGesture { tapPoolItem(slot) }
-        .draggable(String(slot))
+        CourseQuizChronoPoolRow(text: currentQuestion.items[slot])
+            .onTapGesture { tapPoolItem(slot) }
+            .draggable(String(slot))
     }
 
     private func tapPoolItem(_ slot: Int) {
@@ -768,29 +627,6 @@ struct TrainingView: View {
         UIImpactFeedbackGenerator(style: .light).impactOccurred()
     }
 
-    private func slotRowBg(isCorrect: Bool, isWrong: Bool, filled: Bool) -> Color {
-        if isCorrect { return DS.successTint }
-        if isWrong { return DS.dangerTint }
-        return filled ? DS.surface : DS.surfaceMuted
-    }
-
-    private func slotRowBorder(isCorrect: Bool, isWrong: Bool, filled: Bool) -> Color {
-        if isCorrect { return DS.success }
-        if isWrong { return DS.danger }
-        return DS.hairline
-    }
-
-    private func slotBadgeBg(isCorrect: Bool, isWrong: Bool, filled: Bool) -> Color {
-        if isCorrect { return DS.success }
-        if isWrong { return DS.danger }
-        return filled ? DS.accentTint : DS.surfaceMuted
-    }
-
-    private func slotBadgeFg(isCorrect: Bool, isWrong: Bool, filled: Bool) -> Color {
-        if isCorrect || isWrong { return .white }
-        return filled ? DS.accentSoft : DS.inkTertiary
-    }
-
     private var correctChronologicalOrderText: String {
         let items = currentQuestion.items
         let originalIndices = currentQuestion.originalIndices
@@ -804,10 +640,12 @@ struct TrainingView: View {
     private var sliderAnswerBody: some View {
         VStack(spacing: 20) {
             Text(sliderValueLabel(sliderValue))
-                .font(.jakarta(size: 42, weight: .semibold))
+                .font(CourseType.font(44, .heavy, relativeTo: .largeTitle))
                 .foregroundStyle(DS.ink)
                 .monospacedDigit()
                 .contentTransition(.numericText())
+                .lineLimit(1)
+                .minimumScaleFactor(0.5)
                 .frame(maxWidth: .infinity)
 
             VStack(spacing: 6) {
@@ -816,64 +654,47 @@ struct TrainingView: View {
                 Slider(value: $sliderValue, in: sliderBounds, step: currentQuestion.sliderStep)
                     .tint(DS.accent)
                     .disabled(hasAnswered)
+                    .sensoryFeedback(.selection, trigger: sliderValue)
 
                 HStack {
                     Text(sliderValueLabel(currentQuestion.sliderMin))
                     Spacer()
                     Text(sliderValueLabel(currentQuestion.sliderMax))
                 }
-                .font(DS.sans(.caption2, .medium))
-                .foregroundStyle(DS.inkTertiary)
+                .font(DS.sans(.caption, .semibold))
+                .foregroundStyle(DS.inkSecondary)
             }
 
             if hasAnswered {
                 HStack(spacing: 10) {
-                    sliderResultPill(
+                    CourseQuizSliderResultPill(
                         label: languageManager.text("quiz.slider.yourGuess"),
                         value: sliderValueLabel(sliderValue),
-                        tint: wasFullyCorrect ? DS.success : DS.danger
+                        tint: wasFullyCorrect ? CoursePalette.successInk : DS.danger,
+                        fill: wasFullyCorrect ? DS.successTint : DS.dangerTint
                     )
-                    sliderResultPill(
+                    .dsShake(trigger: wasFullyCorrect ? 0 : 1)
+
+                    CourseQuizSliderResultPill(
                         label: languageManager.text("quiz.slider.correctAnswer"),
                         value: sliderValueLabel(currentQuestion.correctValue),
-                        tint: DS.success
+                        tint: CoursePalette.successInk,
+                        fill: DS.successTint
                     )
                 }
+                .dsPopIn()
             } else {
+                // Pas de vibration au toucher : le verdict vibre aussitôt.
                 Button {
-                    UIImpactFeedbackGenerator(style: .light).impactOccurred()
                     submitSlider()
                 } label: {
                     Text(languageManager.text("quiz.slider.validate"))
                 }
-                .buttonStyle(DSPrimaryButtonStyle())
+                .buttonStyle(CourseCTAStyle())
             }
         }
-        .padding(.vertical, 20)
-        .padding(.horizontal, 20)
-        .background(DS.surface)
-        .clipShape(.rect(cornerRadius: DS.Radius.card))
-        .overlay {
-            RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
-                .strokeBorder(DS.hairline, lineWidth: 1)
-        }
-        .dsSoftShadow()
-    }
-
-    private func sliderResultPill(label: String, value: String, tint: Color) -> some View {
-        VStack(spacing: 4) {
-            Text(label.uppercasedInApp())
-                .font(DS.sans(.caption2, .semibold))
-                .foregroundStyle(DS.inkTertiary)
-                .tracking(0.5)
-            Text(value)
-                .font(DS.sans(.subheadline, .semibold))
-                .foregroundStyle(tint)
-        }
-        .frame(maxWidth: .infinity)
-        .padding(.vertical, 10)
-        .background(DS.surfaceMuted)
-        .clipShape(.rect(cornerRadius: DS.Radius.small))
+        .dsCard()
+        .dsStagger(0)
     }
 
     private var sliderBounds: ClosedRange<Double> {
@@ -898,52 +719,16 @@ struct TrainingView: View {
 
     // MARK: - Feedback bar (simplified — no XP/combo)
 
+    /// Le panneau de verdict, comme au quiz du cours, sans XP ni combo. « Continuer » vibre
+    /// par son style.
     private var feedbackBar: some View {
-        VStack(spacing: 0) {
-            Rectangle()
-                .fill(DS.hairline)
-                .frame(height: 1)
-
-            VStack(spacing: 16) {
-                HStack(alignment: .top, spacing: 14) {
-                    Image(systemName: wasFullyCorrect ? "checkmark.circle.fill" : "xmark.circle.fill")
-                        .font(.jakarta(size: 30, weight: .regular))
-                        .foregroundStyle(wasFullyCorrect ? DS.success : DS.danger)
-
-                    VStack(alignment: .leading, spacing: 4) {
-                        Text(wasFullyCorrect ? languageManager.text("quiz.feedback.correct") : languageManager.text("quiz.feedback.wrong"))
-                            .font(DS.title(.headline, .semibold))
-                            .foregroundStyle(DS.ink)
-
-                        if !currentQuestion.explanation.isEmpty {
-                            Text(currentQuestion.explanation)
-                                .font(DS.sans(.subheadline))
-                                .foregroundStyle(DS.inkSecondary)
-                                .fixedSize(horizontal: false, vertical: true)
-                                .padding(.top, 2)
-                        }
-                    }
-
-                    Spacer(minLength: 0)
-                }
-
-                Button {
-                    UIImpactFeedbackGenerator(style: .light).impactOccurred()
-                    nextQuestion()
-                } label: {
-                    HStack(spacing: 8) {
-                        Text(currentIndex < sessionQuestions.count - 1 ? languageManager.text("common.continue") : languageManager.text("training.finish"))
-                        Image(systemName: "arrow.forward")
-                            .font(.subheadline.weight(.semibold))
-                    }
-                }
-                .buttonStyle(DSPrimaryButtonStyle())
-            }
-            .padding(.horizontal, 20)
-            .padding(.top, 18)
-            .padding(.bottom, 16)
-            .background(DS.surface)
-        }
+        CourseQuizVerdictPanel(
+            tone: wasFullyCorrect ? .success : .failure,
+            title: wasFullyCorrect ? languageManager.text("quiz.feedback.correct") : languageManager.text("quiz.feedback.wrong"),
+            explanation: currentQuestion.explanation,
+            continueTitle: currentIndex < sessionQuestions.count - 1 ? languageManager.text("common.continue") : languageManager.text("training.finish"),
+            onContinue: { nextQuestion() }
+        )
     }
 
     private func nextQuestion() {
@@ -972,37 +757,43 @@ struct TrainingView: View {
     // MARK: - Session summary
 
     private var summaryView: some View {
-        VStack(spacing: 24) {
+        VStack(spacing: 0) {
             Spacer(minLength: 40)
 
-            ZStack {
-                Circle().fill(DS.successTint).frame(width: 128, height: 128)
-                AnimatedRewardBadge(kind: .seal, size: 54)
-            }
+            VStack(spacing: 14) {
+                DSCheckBadge(size: 104, delay: 0.15)
+                    .padding(13)
+                    .background(DS.successTint, in: Circle())
+                    .dsPopIn()
 
-            VStack(spacing: 10) {
                 Text(languageManager.text("training.sessionComplete.title"))
-                    .font(DS.title(.title2, .semibold))
+                    .font(CourseType.font(24, .semibold, relativeTo: .title2))
                     .foregroundStyle(DS.ink)
+                    .multilineTextAlignment(.center)
+                    .padding(.top, 6)
+                    .dsStagger(1)
 
                 Text(String(format: languageManager.text("training.sessionComplete.summary"), correctCount, sessionQuestions.count))
-                    .font(DS.sans(.subheadline))
+                    .font(DS.sans(.callout))
                     .foregroundStyle(DS.inkSecondary)
+                    .multilineTextAlignment(.center)
+                    .dsStagger(2)
             }
 
             Spacer(minLength: 40)
 
+            // Vibre par son style.
             Button {
-                UIImpactFeedbackGenerator(style: .light).impactOccurred()
                 finishSession()
             } label: {
                 Text(languageManager.text("training.backToTraining"))
             }
             .buttonStyle(DSPrimaryButtonStyle())
-            .padding(.horizontal, 40)
             .padding(.bottom, 24)
+            .dsStagger(3)
         }
-        .padding(.horizontal, 20)
+        .padding(.horizontal, 24)
+        .onAppear { Haptics.success() }
     }
 
     private func finishSession() {

@@ -113,7 +113,7 @@ struct GlossaryTermOverlay: View {
                                     if value.translation.height > 90 {
                                         dismiss()
                                     } else {
-                                        withAnimation(.spring(response: 0.3, dampingFraction: 0.85)) {
+                                        withAnimation(DS.Motion.snappy) {
                                             dragOffset = 0
                                         }
                                     }
@@ -123,7 +123,7 @@ struct GlossaryTermOverlay: View {
             }
         }
         .onAppear {
-            withAnimation(.spring(response: 0.38, dampingFraction: 0.86)) { presented = true }
+            withAnimation(DS.Motion.reveal) { presented = true }
         }
     }
 
@@ -143,18 +143,15 @@ struct GlossaryTermOverlay: View {
                 .padding(.top, 10)
                 .padding(.bottom, 18)
 
-            VStack(alignment: .leading, spacing: 16) {
-                HStack(spacing: 8) {
-                    Text(entry.classification.localizedShortLabel(language: AppLanguage.currentPersisted())
-                        .uppercased(with: AppLanguage.currentPersisted().foundationLocale))
-                        .font(DS.sans(.caption2, .semibold))
-                        .foregroundStyle(DS.accentSoft)
-                        .tracking(1.0)
-                        .padding(.horizontal, 10)
-                        .padding(.vertical, 6)
-                        .background(DS.accentTint, in: Capsule())
-                    Spacer()
-                }
+            VStack(alignment: .leading, spacing: 12) {
+                Text(entry.classification.localizedShortLabel(language: AppLanguage.currentPersisted())
+                    .uppercased(with: AppLanguage.currentPersisted().foundationLocale))
+                    .font(DS.sans(.caption2, .heavy))
+                    .foregroundStyle(DS.accent)
+                    .tracking(0.9)
+                    .padding(.horizontal, 10)
+                    .padding(.vertical, 5)
+                    .background(DS.accentTint, in: RoundedRectangle(cornerRadius: 10, style: .continuous))
 
                 Text(entry.displayTerm)
                     .font(DS.title(.title2, .semibold))
@@ -163,8 +160,8 @@ struct GlossaryTermOverlay: View {
 
                 Text(entry.explanation)
                     .font(DS.sans(.body))
-                    .foregroundStyle(DS.inkSecondary)
-                    .lineSpacing(5)
+                    .foregroundStyle(DS.ink)
+                    .lineSpacing(7)
                     .fixedSize(horizontal: false, vertical: true)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
@@ -174,24 +171,24 @@ struct GlossaryTermOverlay: View {
         .frame(maxWidth: .infinity)
         .background(
             UnevenRoundedRectangle(
-                topLeadingRadius: 28,
+                topLeadingRadius: 24,
                 bottomLeadingRadius: 0,
                 bottomTrailingRadius: 0,
-                topTrailingRadius: 28,
+                topTrailingRadius: 24,
                 style: .continuous
             )
-            .fill(cream)
+            .fill(DS.surface)
             .ignoresSafeArea(edges: .bottom)
         )
         .overlay(alignment: .top) {
             UnevenRoundedRectangle(
-                topLeadingRadius: 28,
+                topLeadingRadius: 24,
                 bottomLeadingRadius: 0,
                 bottomTrailingRadius: 0,
-                topTrailingRadius: 28,
+                topTrailingRadius: 24,
                 style: .continuous
             )
-            .strokeBorder(DS.hairline, lineWidth: 1)
+            .strokeBorder(DS.hairline, lineWidth: 1.5)
             .ignoresSafeArea(edges: .bottom)
         }
     }

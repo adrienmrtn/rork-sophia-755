@@ -2,14 +2,14 @@ import SwiftUI
 import UIKit
 
 /// Les deux pages qui suivent la création du compte : « Bienvenue à bord, {prénom} ! » avec
-/// des confettis et des images de cours qui flottent derrière, puis « {prénom}, apprendre n'a
-/// pas à être compliqué » avec les atouts de Sophia, la note App Store et « Sans engagement,
-/// annulable à tout moment ».
+/// un trophée et des confettis, puis « {prénom}, apprendre n'a pas à être compliqué » avec
+/// les atouts de Sophia, la note App Store et « Sans engagement, annulable à tout moment ».
 
 // MARK: - Bienvenue à bord
 
 struct OnboardingV2WelcomeAboard: View {
     @Environment(LanguageManager.self) private var languageManager
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
     let vm: OnboardingV2ViewModel
     let onNext: () -> Void
 
@@ -19,45 +19,22 @@ struct OnboardingV2WelcomeAboard: View {
 
     var body: some View {
         VStack(spacing: 0) {
-            Spacer()
+            Spacer(minLength: 24)
 
-            ZStack(alignment: .bottomTrailing) {
-                ZStack {
-                    Circle().fill(OV2.accentSoft.opacity(0.10)).frame(width: 200, height: 200)
-                    Circle().fill(OV2.accentSoft.opacity(0.12)).frame(width: 136, height: 136)
-                    logo
-                }
-                checkBadge
-                    .offset(x: -30, y: -30)
-                    .scaleEffect(badgeIn ? 1 : 0.4)
-                    .opacity(badgeIn ? 1 : 0)
-            }
-            // Les images de cours flottent autour du logo, dans sa bande : jamais derrière
-            // le titre, le sous-titre ou le bouton.
-            .background { OnboardingV2FloatingCourseImages() }
-            .scaleEffect(logoIn ? 1 : 0.82)
-            .opacity(logoIn ? 1 : 0)
+            OnboardingV2AboardMedallion(shown: logoIn, badgeShown: badgeIn)
+                .layoutPriority(1)
 
-            Spacer().frame(height: 36)
+            Spacer(minLength: 24)
 
-            Text(vm.personalizedText("onboardingV2.aboard.title", language: languageManager.current))
-                .font(DS.title(.largeTitle, .heavy))
-                .foregroundStyle(OV2.ink)
-                .multilineTextAlignment(.center)
-                .minimumScaleFactor(0.8)
-                .padding(.horizontal, 28)
-                .ov2Reveal(delay: 0.45, yOffset: 12)
+            OV2EndTitle(text: vm.personalizedText("onboardingV2.aboard.title", language: languageManager.current))
+                .padding(.horizontal, OV2End.side)
+                .ov2Reveal(delay: 0.4, yOffset: 12)
 
-            Spacer()
-
-            Text(languageManager.text("onboardingV2.aboard.subtitle"))
-                .font(DS.sans(.body, .medium))
-                .foregroundStyle(OV2.inkSecondary)
-                .multilineTextAlignment(.center)
-                .fixedSize(horizontal: false, vertical: true)
-                .padding(.horizontal, 32)
-                .padding(.bottom, 18)
-                .ov2Reveal(delay: 0.75, yOffset: 10)
+            OV2EndSubtitle(text: languageManager.text("onboardingV2.aboard.subtitle"))
+                .padding(.top, 10)
+                .padding(.horizontal, OV2End.side)
+                .padding(.bottom, 28)
+                .ov2Reveal(delay: 0.6, yOffset: 10)
 
             OnboardingV2Button(title: languageManager.text("common.continue"), action: onNext)
         }
@@ -65,135 +42,99 @@ struct OnboardingV2WelcomeAboard: View {
         .overlay {
             if confetti {
                 PathConfettiBurst(
-                    colors: [OV2.accent, OV2.accentSoft, OV2.pink, OV2.warm, OV2.success],
+                    colors: [DS.accent, DS.accentTint, OV2.pink, DS.warm, DS.success],
                     pieceCount: 70,
                     duration: 3.0,
                     origin: CGPoint(x: 0.5, y: 0.32)
                 )
                 .ignoresSafeArea()
+                .allowsHitTesting(false)
             }
         }
         .onAppear {
-            // Un seul ressort doux pour le logo, la coche qui suit : rien ne claque.
-            withAnimation(.spring(response: 1.0, dampingFraction: 0.85)) { logoIn = true }
-            withAnimation(.spring(response: 0.6, dampingFraction: 0.72).delay(0.5)) { badgeIn = true }
+            // Le trophée se pose avec un rebond, la coche du compte créé suit.
+            withAnimation(DS.Motion.pop.delay(0.05)) { logoIn = true }
+            withAnimation(DS.Motion.pop.delay(0.45)) { badgeIn = true }
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.35) {
-                confetti = true
+                confetti = !reduceMotion
                 OnboardingHaptics.counterComplete()
             }
         }
     }
+}
+
+// MARK: - Médaillon du trophée
+
+/// Le trophée dans un grand rond, avec la coche verte du compte créé posée sur son bord et
+/// une onde qui s'élargit derrière lui à l'arrivée. Il rétrécit de lui-même sur un écran court.
+private struct OnboardingV2AboardMedallion: View {
+    let shown: Bool
+    let badgeShown: Bool
+    var maxSize: CGFloat = 240
+
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+    @State private var ripple = false
+    @State private var floating = false
+
+    var body: some View {
+        trophy
+            .aspectRatio(1, contentMode: .fit)
+            .frame(maxWidth: maxSize, maxHeight: maxSize)
+            .clipShape(Circle())
+            .background {
+                Circle()
+                    .strokeBorder(DS.accentTint, lineWidth: 6)
+                    .scaleEffect(ripple ? 1.28 : 1)
+                    .opacity(ripple ? 0 : 1)
+            }
+            .overlay(alignment: .bottomTrailing) {
+                checkBadge
+                    .scaleEffect(badgeShown || reduceMotion ? 1 : 0.3)
+                    .opacity(badgeShown ? 1 : 0)
+                    .padding(14)
+            }
+            .scaleEffect(shown || reduceMotion ? 1 : 0.6)
+            .opacity(shown ? 1 : 0)
+            .offset(y: floating ? -5 : (reduceMotion ? 0 : 5))
+            .accessibilityHidden(true)
+            .onAppear(perform: start)
+    }
 
     @ViewBuilder
-    private var logo: some View {
-        if UIImage(named: "SplashLogo") != nil {
-            Image("SplashLogo")
+    private var trophy: some View {
+        if UIImage(named: "duel_trophy") != nil {
+            Image("duel_trophy")
                 .resizable()
-                .scaledToFit()
-                .frame(width: 96, height: 96)
         } else {
             ZStack {
-                Circle().fill(OV2.accent).frame(width: 96, height: 96)
-                Image(systemName: "sparkles")
-                    .font(.system(size: 40, weight: .bold))
-                    .foregroundStyle(.white)
+                DS.accentTint
+                Image(systemName: "trophy.fill")
+                    .font(.system(size: 84, weight: .semibold))
+                    .foregroundStyle(DS.warm)
             }
         }
     }
 
-    /// Le compte est créé : une coche verte sur le logo.
+    /// Le compte est créé : une coche verte, cerclée de blanc, sur le bord du trophée.
     private var checkBadge: some View {
         ZStack {
-            Circle().fill(.white)
-            Circle().fill(OV2.success).padding(3)
+            Circle().fill(DS.surface)
+            Circle().fill(DS.success).padding(3)
             Image(systemName: "checkmark")
-                .font(.system(size: 15, weight: .heavy))
+                .font(.system(size: 17, weight: .heavy))
                 .foregroundStyle(.white)
         }
-        .frame(width: 38, height: 38)
-        .shadow(color: .black.opacity(0.15), radius: 6, y: 3)
+        .frame(width: 44, height: 44)
     }
-}
 
-// MARK: - Images de cours qui flottent
-
-/// Six petites images de cours autour du logo, qui dérivent doucement et en boucle. Elles
-/// sont posées par rapport au centre du logo et restent dans sa bande (jamais sous le
-/// titre, le sous-titre ou le bouton : un texte ne passe jamais devant une image).
-private struct OnboardingV2FloatingCourseImages: View {
-    /// Décalage par rapport au centre du logo, taille, inclinaison.
-    private static let slots: [(x: CGFloat, y: CGFloat, size: CGFloat, rotation: Double)] = [
-        (-148, -60, 44, -8), (150, -50, 40, 7), (-128, 46, 38, 5),
-        (134, 56, 44, -6), (-62, -126, 42, 6), (76, -130, 46, -5),
-    ]
-    private static let courseIds = [
-        "course_42_pourquoi_reve_t_on",
-        "course_149_la_joconde",
-        "course_290_comment_les_etats_unis_ont_ils_gagne_la",
-        "course_67_qu_est_ce_qu_un_trou_noir",
-        "course_264_qui_a_vraiment_construit_les_pyramides",
-        "course_150_la_nuit_etoilee_van_gogh",
-    ]
-
-    @State private var images: [UIImage?] = []
-    @State private var shown = false
-
-    var body: some View {
-        ZStack {
-            ForEach(Array(Self.slots.enumerated()), id: \.offset) { i, slot in
-                OnboardingV2FloatingImage(
-                    image: i < images.count ? images[i] : nil,
-                    size: slot.size,
-                    rotation: slot.rotation,
-                    phase: Double(i)
-                )
-                .offset(x: slot.x, y: slot.y)
-            }
+    private func start() {
+        guard !reduceMotion else { return }
+        if !ripple {
+            withAnimation(.easeOut(duration: 1.1).delay(0.3)) { ripple = true }
         }
-        .opacity(shown ? 1 : 0)
-        .allowsHitTesting(false)
-        .accessibilityHidden(true)
-        .onAppear {
-            if images.isEmpty {
-                images = Self.courseIds.map { CourseImageMap.loadImage(for: $0) }
-            }
-            withAnimation(.easeOut(duration: 1.4).delay(0.25)) { shown = true }
-        }
-    }
-}
-
-private struct OnboardingV2FloatingImage: View {
-    let image: UIImage?
-    let size: CGFloat
-    let rotation: Double
-    let phase: Double
-
-    @State private var drift = false
-
-    var body: some View {
-        Group {
-            if let image {
-                Image(uiImage: image)
-                    .resizable()
-                    .scaledToFill()
-            } else {
-                OV2.accentSoft.opacity(0.25)
-            }
-        }
-        .frame(width: size, height: size)
-        .clipShape(RoundedRectangle(cornerRadius: size * 0.28, style: .continuous))
-        .overlay(RoundedRectangle(cornerRadius: size * 0.28, style: .continuous).strokeBorder(.white.opacity(0.8), lineWidth: 1.5))
-        .shadow(color: .black.opacity(0.08), radius: 8, y: 4)
-        .opacity(0.72)
-        .rotationEffect(.degrees(rotation + (drift ? 3 : -3)))
-        .offset(y: drift ? -9 : 9)
-        .onAppear {
-            withAnimation(
-                .easeInOut(duration: 3.2 + phase * 0.35)
-                .repeatForever(autoreverses: true)
-                .delay(phase * 0.3)
-            ) {
-                drift = true
+        if !floating {
+            withAnimation(.easeInOut(duration: 2.6).repeatForever(autoreverses: true).delay(0.9)) {
+                floating = true
             }
         }
     }
@@ -228,8 +169,8 @@ struct OnboardingV2Features: View {
                 Spacer().frame(height: 64)
 
                 Text(vm.personalizedText("onboardingV2.features.title", language: languageManager.current))
-                    .font(DS.title(.title, .heavy))
-                    .foregroundStyle(OV2.ink)
+                    .font(DSLegacy.title(.title, .heavy))
+                    .foregroundStyle(OV2Legacy.ink)
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, 28)
                     .ov2Reveal(delay: 0.05)
@@ -241,7 +182,7 @@ struct OnboardingV2Features: View {
 
                 Spacer().frame(height: 28)
 
-                OnboardingV2LaurelBadge(size: 50, tint: OV2.inkSecondary) {
+                OnboardingV2LaurelBadge(size: 50, tint: OV2Legacy.inkSecondary) {
                     appStoreStack
                 }
                 .ov2Reveal(delay: 1.1)
@@ -254,8 +195,8 @@ struct OnboardingV2Features: View {
                 Spacer().frame(height: 22)
 
                 Text(languageManager.text("onboardingV2.features.noCommitment"))
-                    .font(DS.title(.title3, .bold))
-                    .foregroundStyle(OV2.ink)
+                    .font(DSLegacy.title(.title3, .bold))
+                    .foregroundStyle(OV2Legacy.ink)
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, 28)
                     .ov2Reveal(delay: 1.4)
@@ -263,9 +204,9 @@ struct OnboardingV2Features: View {
                 Spacer(minLength: 24)
             }
         } footer: {
-            OnboardingV2Button(title: languageManager.text("common.continue"), action: onNext)
+            OnboardingV2LegacyButton(title: languageManager.text("common.continue"), action: onNext)
         }
-        .ov2Background()
+        .ov2LegacyBackground()
         .onAppear {
             if features.isEmpty {
                 features = Self.makeFeatures(languageManager: languageManager)
@@ -308,7 +249,7 @@ struct OnboardingV2Features: View {
         return HStack(alignment: .top, spacing: 16) {
             ZStack {
                 RoundedRectangle(cornerRadius: 24, style: .continuous)
-                    .fill(DS.accentTint)
+                    .fill(DSLegacy.accentTint)
                     .frame(width: 48, height: trackHeight)
                 VStack(spacing: 0) {
                     ForEach(features) { feature in
@@ -324,8 +265,8 @@ struct OnboardingV2Features: View {
             VStack(spacing: 0) {
                 ForEach(features) { feature in
                     Text(feature.text)
-                        .font(DS.sans(.body, .medium))
-                        .foregroundStyle(OV2.ink)
+                        .font(DSLegacy.sans(.body, .medium))
+                        .foregroundStyle(OV2Legacy.ink)
                         .lineLimit(2)
                         .minimumScaleFactor(0.85)
                         .frame(maxWidth: .infinity, alignment: .leading)
@@ -353,14 +294,14 @@ struct OnboardingV2Features: View {
         VStack(spacing: 3) {
             Image(systemName: "apple.logo")
                 .font(.system(size: 16, weight: .semibold))
-                .foregroundStyle(OV2.ink)
+                .foregroundStyle(OV2Legacy.ink)
             Text((4.8).formatted(.number.precision(.fractionLength(1)).locale(languageManager.locale)) + " / 5")
-                .font(DS.title(.title3, .heavy))
-                .foregroundStyle(OV2.ink)
+                .font(DSLegacy.title(.title3, .heavy))
+                .foregroundStyle(OV2Legacy.ink)
             Text(languageManager.text("onboardingV2.review.appStore").uppercasedInApp())
-                .font(DS.sans(.caption2, .bold))
+                .font(DSLegacy.sans(.caption2, .bold))
                 .tracking(1.2)
-                .foregroundStyle(OV2.inkSecondary)
+                .foregroundStyle(OV2Legacy.inkSecondary)
                 .lineLimit(1)
         }
     }
@@ -371,13 +312,13 @@ struct OnboardingV2Features: View {
                 ForEach(0..<5, id: \.self) { _ in
                     Image(systemName: "star.fill")
                         .font(.system(size: 22))
-                        .foregroundStyle(OV2.warm)
+                        .foregroundStyle(OV2Legacy.warm)
                 }
             }
             Text(languageManager.text("onboardingV2.loading.reviews").uppercasedInApp())
-                .font(DS.sans(.subheadline, .heavy))
+                .font(DSLegacy.sans(.subheadline, .heavy))
                 .tracking(1.0)
-                .foregroundStyle(OV2.ink)
+                .foregroundStyle(OV2Legacy.ink)
         }
         .accessibilityElement(children: .combine)
     }

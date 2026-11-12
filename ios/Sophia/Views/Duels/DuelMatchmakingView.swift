@@ -25,36 +25,34 @@ struct DuelMatchmakingView: View {
 
     var body: some View {
         ZStack {
-            DuelLeagueBackdrop(league: league)
-                .ignoresSafeArea()
-            LinearGradient(
-                colors: [DuelPalette.night.opacity(0.72), DuelPalette.night.opacity(0.9)],
-                startPoint: .top,
-                endPoint: .bottom
-            )
-            .ignoresSafeArea()
+            DS.canvas.ignoresSafeArea()
 
             VStack(spacing: 0) {
                 HStack {
                     if canCancel || step == .failed {
-                        Button {
-                            DuelHaptics.tap()
+                        // Le bouton rond vibre de lui-même.
+                        RoundIconButton(systemImage: "xmark", accessibilityLabel: languageManager.text("common.close")) {
                             onCancel()
-                        } label: {
-                            Image(systemName: "xmark")
-                                .font(.system(size: 14, weight: .bold))
-                                .foregroundStyle(.white)
-                                .frame(width: 40, height: 40)
-                                .background(Circle().fill(Color.white.opacity(0.16)))
                         }
-                        .buttonStyle(.plain)
-                        .accessibilityLabel(Text(languageManager.text("common.close")))
                         .transition(.opacity)
                     }
                     Spacer()
                 }
                 .frame(height: 44)
-                .padding(.horizontal, 20)
+                .overlay {
+                    // La ligue dans laquelle la partie se joue.
+                    if league != nil {
+                        Text(DuelFormat.leagueName(league, language: languageManager.current).uppercased())
+                            .font(.jakarta(size: 12, weight: .heavy))
+                            .tracking(1)
+                            .foregroundStyle(DS.accent)
+                            .lineLimit(1)
+                            .minimumScaleFactor(0.7)
+                            .padding(.horizontal, 56)
+                    }
+                }
+                .padding(.horizontal, 24)
+                .padding(.top, 8)
 
                 Spacer(minLength: 12)
 
@@ -78,54 +76,60 @@ struct DuelMatchmakingView: View {
         }
         .task(id: attempt) { await run() }
         .onAppear {
-            withAnimation(.spring(response: 0.6, dampingFraction: 0.8)) { appeared = true }
+            withAnimation(DS.Motion.reveal) { appeared = true }
         }
     }
 
     // MARK: - Les deux camps
 
+    /// L'emplacement de l'adversaire : les profils qui défilent au centre du radar pendant la
+    /// recherche, puis l'adversaire tiré par le serveur.
     private var opponentSlot: some View {
         VStack(spacing: 12) {
             ZStack {
                 if step == .searching {
-                    DuelPulseRings(color: .white)
-                        .frame(width: 104, height: 104)
+                    DuelSearchRadar(color: DS.accent, size: 104)
+                        .transition(.opacity)
                 }
                 if let opponent = match?.opponent, step == .found {
-                    DuelAvatar(avatarId: opponent.avatarId, initial: opponent.initial, size: 104, ring: DuelPalette.coral, ringWidth: 4)
+                    DuelAvatar(avatarId: opponent.avatarId, initial: opponent.initial, size: 104, ring: DuelPalette.saffron, ringWidth: 4)
                         .transition(.scale(scale: 0.4).combined(with: .opacity))
                 } else {
-                    DuelAvatar(avatarId: shuffleAvatar, initial: "?", size: 104, ring: Color.white.opacity(0.5), ringWidth: 4)
+                    DuelAvatar(avatarId: shuffleAvatar, initial: "?", size: 104, ring: DS.surface, ringWidth: 4)
                         .blur(radius: step == .failed ? 6 : 1.5)
                         .opacity(step == .failed ? 0.4 : 0.9)
                 }
             }
-            .frame(height: 112)
+            .frame(height: 150)
 
             if let opponent = match?.opponent, step == .found {
                 VStack(spacing: 6) {
                     HStack(spacing: 6) {
                         Text("@\(opponent.handle)")
-                            .font(.jakarta(size: 22, weight: .heavy))
-                            .foregroundStyle(.white)
+                            .font(DS.title(.title3, .bold))
+                            .foregroundStyle(DS.ink)
                             .lineLimit(1)
                             .minimumScaleFactor(0.7)
                         Text(opponent.flag)
-                            .font(.system(size: 22))
+                            .font(.system(size: 20))
                     }
-                    DuelTrophyCount(value: opponent.trophies, size: 16, color: .white)
+                    DuelTrophyCount(value: opponent.trophies, size: 15, color: DS.inkSecondary)
                 }
                 .transition(.move(edge: .top).combined(with: .opacity))
             } else {
                 VStack(spacing: 6) {
                     Text(languageManager.text(step == .failed ? "duel.match.failed.title" : "duel.match.searching"))
-                        .font(.jakarta(size: 20, weight: .heavy))
-                        .foregroundStyle(.white)
+                        .font(DS.title(.title3, .bold))
+                        .foregroundStyle(DS.ink)
                         .multilineTextAlignment(.center)
                     Text(languageManager.text(step == .failed ? "duel.match.failed.body" : "duel.match.searching.body"))
                         .font(DS.sans(.subheadline, .medium))
-                        .foregroundStyle(.white.opacity(0.75))
+                        .foregroundStyle(DS.inkSecondary)
                         .multilineTextAlignment(.center)
+                    if step == .searching {
+                        DuelWaitingDots(color: DS.accent)
+                            .padding(.top, 8)
+                    }
                 }
                 .padding(.horizontal, 32)
             }
@@ -134,40 +138,18 @@ struct DuelMatchmakingView: View {
     }
 
     private var playerCard: some View {
-        VStack(spacing: 12) {
-            DuelAvatar(avatarId: player.avatarId, initial: player.initial, size: 104, ring: DuelPalette.saffron, ringWidth: 4)
-            VStack(spacing: 6) {
-                Text("@\(player.handle)")
-                    .font(.jakarta(size: 22, weight: .heavy))
-                    .foregroundStyle(.white)
-                    .lineLimit(1)
-                    .minimumScaleFactor(0.7)
-                DuelTrophyCount(value: player.trophies, size: 16, color: .white)
-            }
-        }
-        .frame(maxWidth: .infinity)
+        DuelVersusCard(
+            avatarId: player.avatarId,
+            initial: player.initial,
+            handle: player.handle,
+            trophies: player.trophies,
+            ring: DS.accent
+        )
     }
 
     private var versusBadge: some View {
-        ZStack {
-            Circle()
-                .fill(DuelPalette.saffron)
-                .frame(width: 72, height: 72)
-                .shadow(color: DuelPalette.saffron.opacity(0.5), radius: 18, x: 0, y: 0)
-            if let countdown {
-                Text("\(countdown)")
-                    .font(.jakarta(size: 38, weight: .heavy))
-                    .foregroundStyle(DuelPalette.night)
-                    .id(countdown)
-                    .transition(.scale(scale: 2.2).combined(with: .opacity))
-            } else {
-                Text("VS")
-                    .font(.jakarta(size: 24, weight: .heavy))
-                    .foregroundStyle(DuelPalette.night)
-                    .transition(.scale(scale: 0.5).combined(with: .opacity))
-            }
-        }
-        .scaleEffect(step == .found ? 1.12 : 1)
+        DuelVersusBadge(number: countdown, counting: true)
+            .scaleEffect(step == .found ? 1.12 : 1)
     }
 
     @ViewBuilder
@@ -183,7 +165,7 @@ struct DuelMatchmakingView: View {
         } else {
             Text(languageManager.text(step == .found ? "duel.match.found" : "duel.match.hint"))
                 .font(DS.sans(.footnote, .semibold))
-                .foregroundStyle(.white.opacity(0.7))
+                .foregroundStyle(step == .found ? DS.accent : DS.inkSecondary)
                 .multilineTextAlignment(.center)
                 .frame(minHeight: 40)
         }
@@ -270,9 +252,11 @@ extension DuelMatchmakingView {
     }
 }
 
-/// Des anneaux qui s'élargissent autour de l'avatar pendant la recherche.
+/// Des anneaux qui s'élargissent (l'adversaire choisit sa matière, un ami tarde à répondre).
+/// Figés quand « Réduire les animations » est actif.
 struct DuelPulseRings: View {
     var color: Color
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
     @State private var animating = false
 
     var body: some View {
@@ -288,7 +272,10 @@ struct DuelPulseRings: View {
                     )
             }
         }
-        .onAppear { animating = true }
+        .onAppear {
+            guard !reduceMotion else { return }
+            animating = true
+        }
         .accessibilityHidden(true)
     }
 }

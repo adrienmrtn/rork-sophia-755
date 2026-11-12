@@ -155,7 +155,7 @@ private struct WelcomeReadingPage: View {
             let isRead = i <= readIndex
             let suffix = i < list.count - 1 ? " " : ""
             let run = Text(word + suffix)
-                .font(DS.title(.largeTitle, .heavy))
+                .font(DS.title(.largeTitle, .semibold))
                 .foregroundColor(isRead ? OV2.ink : OV2.inkTertiary.opacity(0.26))
             return acc + run
         }
@@ -200,7 +200,8 @@ private struct ActiveRecallPage: View {
             Spacer().frame(height: 92)
 
             Text(languageManager.text("training.ob.recall.title"))
-                .font(DS.title(.title2, .heavy))
+                .font(DS.title(.title2, .medium))
+                .lineSpacing(3)
                 .foregroundStyle(OV2.ink)
                 .multilineTextAlignment(.center)
                 .fixedSize(horizontal: false, vertical: true)
@@ -232,7 +233,7 @@ private struct ActiveRecallPage: View {
             .font(DS.sans(.subheadline, .medium))
             .foregroundColor(OV2.inkSecondary)
         let highlight = Text(languageManager.text("training.ob.recall.stat.highlight"))
-            .font(DS.sans(.subheadline, .heavy))
+            .font(DS.sans(.subheadline, .bold))
             .foregroundColor(OV2.accent)
         let suffix = Text(" " + languageManager.text("training.ob.recall.stat.suffix"))
             .font(DS.sans(.subheadline, .medium))
@@ -303,10 +304,7 @@ private struct RetentionGraph: View {
             legend
                 .opacity(showLegend ? 1 : 0)
         }
-        .padding(16)
-        .background(OV2.surface, in: RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
-        .overlay(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous).strokeBorder(OV2.hairline, lineWidth: 1))
-        .shadow(color: .black.opacity(0.05), radius: 12, y: 6)
+        .dsCard(padding: 16)
         .onAppear {
             withAnimation(.easeInOut(duration: 1.8).delay(0.35)) { progress = 1 }
             withAnimation(.easeIn(duration: 0.6).delay(1.9)) { showLegend = true }
@@ -386,10 +384,9 @@ private struct AlgorithmPage: View {
 
             ZStack {
                 Circle()
-                    .fill(OV2.accent.opacity(0.10))
+                    .fill(DS.accentTint)
                     .frame(width: 132, height: 132)
-                    .scaleEffect(pulse ? 1.05 : 0.92)
-                    .blur(radius: 14)
+                    .scaleEffect(pulse ? 1.04 : 0.96)
                 Image(systemName: "brain.head.profile")
                     .font(.system(size: 46, weight: .semibold))
                     .foregroundStyle(OV2.accent)
@@ -399,7 +396,8 @@ private struct AlgorithmPage: View {
             Spacer().frame(height: 30)
 
             Text(languageManager.text("training.ob.algo.title"))
-                .font(DS.title(.title2, .heavy))
+                .font(DS.title(.title2, .medium))
+                .lineSpacing(3)
                 .foregroundStyle(OV2.ink)
                 .multilineTextAlignment(.center)
                 .fixedSize(horizontal: false, vertical: true)
@@ -409,7 +407,8 @@ private struct AlgorithmPage: View {
             Spacer().frame(height: 14)
 
             Text(languageManager.text("training.ob.algo.body"))
-                .font(DS.sans(.body, .medium))
+                .font(DS.sans(.callout))
+                .lineSpacing(4)
                 .foregroundStyle(OV2.inkSecondary)
                 .multilineTextAlignment(.center)
                 .fixedSize(horizontal: false, vertical: true)
@@ -435,7 +434,7 @@ private struct AlgorithmPage: View {
     private var highlightCard: some View {
         HStack(spacing: 16) {
             Text(languageManager.text("training.ob.algo.highlight.value"))
-                .font(.system(size: 26, weight: .heavy, design: .rounded))
+                .font(CourseType.font(26, .heavy, relativeTo: .title2))
                 .foregroundStyle(OV2.accent)
                 .fixedSize()
             Text(languageManager.text("training.ob.algo.highlight.label"))
@@ -444,9 +443,9 @@ private struct AlgorithmPage: View {
                 .fixedSize(horizontal: false, vertical: true)
                 .frame(maxWidth: .infinity, alignment: .leading)
         }
-        .padding(18)
+        .padding(16)
         .frame(maxWidth: .infinity, alignment: .leading)
-        .background(OV2.accent.opacity(0.07), in: RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
-        .overlay(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous).strokeBorder(OV2.accent.opacity(0.18), lineWidth: 1))
+        .background(DS.accentTint, in: RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
+        .overlay(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous).strokeBorder(OV2.accent, lineWidth: 1.5))
     }
 }

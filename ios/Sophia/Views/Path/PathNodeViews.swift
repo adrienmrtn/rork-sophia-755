@@ -299,8 +299,10 @@ struct PathTrailBaseShape: Shape {
 
 // MARK: - Level banner
 
-/// Header of a level: the collection cover with its number and title centred on it.
-/// Greyed under a padlock while locked; a golden chip once the level is passed.
+/// Header of a level: the collection cover under a night-blue veil, with the level's
+/// number, its progress and its title at the bottom. A chip tells once the level is passed;
+/// greyed under a padlock if it is ever drawn locked (the trail folds locked levels into a
+/// `PathLockedLevelCard` instead).
 ///
 /// The text is an overlay of the fixed-height cover, so the cover's size is settled
 /// before the text is laid out: a bottom-aligned stack was measured one line short and
@@ -314,48 +316,32 @@ struct PathLevelBanner: View {
     /// Bump by one inside `withAnimation` to rattle the padlock before it comes off.
     var lockShakes: CGFloat = 0
 
-    static let height: CGFloat = 176
+    static let height: CGFloat = 120
+
+    private var bannerShape: RoundedRectangle {
+        RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
+    }
 
     var body: some View {
         CollectionCoverView(collection: level.collection, accentIndex: accentIndex)
             .frame(height: Self.height)
             .frame(maxWidth: .infinity)
             .grayscale(isUnlocked ? 0 : 1)
-            .opacity(isUnlocked ? 1 : 0.55)
             .overlay {
-                LinearGradient(
-                    colors: [.black.opacity(0.30), .black.opacity(0.46), .black.opacity(0.62)],
-                    startPoint: .top,
-                    endPoint: .bottom
-                )
+                PathCardPalette.bannerVeil.opacity(0.55)
             }
-            .overlay {
-                VStack(spacing: 8) {
-                    Text(caption)
-                        .font(DS.sans(.caption2, .bold))
-                        .tracking(1.2)
-                        .foregroundStyle(.white.opacity(0.85))
-                        .lineLimit(1)
-                    Text(level.collection.title)
-                        .font(DS.title(.title2, .semibold))
-                        .foregroundStyle(.white)
-                        .multilineTextAlignment(.center)
-                        .lineLimit(2)
-                        .minimumScaleFactor(0.8)
-                }
-                .padding(.horizontal, 24)
-                .padding(.vertical, 36)
-                .frame(maxWidth: .infinity)
-                .shadow(color: .black.opacity(0.35), radius: 8, y: 2)
+            .overlay(alignment: .bottomLeading) {
+                titleBlock
             }
             .overlay(alignment: .topTrailing) {
                 if isPassed {
                     passedChip
-                        .padding(12)
+                        .padding(10)
+                        .transition(.scale(scale: 0.6, anchor: .topTrailing).combined(with: .opacity))
                 } else if !isUnlocked {
                     // The padlock: rattles on demand, then flies off when the level opens.
                     lockMedallion
-                        .padding(12)
+                        .padding(10)
                         .modifier(PathShakeEffect(shakes: lockShakes, amplitude: 6))
                         .transition(.asymmetric(
                             insertion: .opacity,
@@ -363,14 +349,30 @@ struct PathLevelBanner: View {
                         ))
                 }
             }
-            .clipShape(.rect(cornerRadius: DS.Radius.card))
-            .overlay {
-                RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
-                    .strokeBorder(.white.opacity(0.14), lineWidth: 1)
-            }
-            .dsSoftShadow()
+            .clipShape(bannerShape)
             .animation(.easeInOut(duration: 0.6), value: isUnlocked)
-            .animation(.easeInOut(duration: 0.35), value: isPassed)
+            .animation(DS.Motion.pop, value: isPassed)
+            .accessibilityElement(children: .combine)
+    }
+
+    private var titleBlock: some View {
+        VStack(alignment: .leading, spacing: 3) {
+            Text(caption)
+                .font(DS.sans(.caption, .bold))
+                .tracking(1)
+                .foregroundStyle(Color.white)
+                .lineLimit(1)
+                .minimumScaleFactor(0.8)
+            Text(level.collection.title)
+                .font(DS.title(.title3, .bold))
+                .foregroundStyle(Color.white)
+                .multilineTextAlignment(.leading)
+                .lineLimit(2)
+                .minimumScaleFactor(0.8)
+        }
+        .padding(.horizontal, 16)
+        .padding(.bottom, 12)
+        .frame(maxWidth: .infinity, alignment: .leading)
     }
 
     private var caption: String {
@@ -381,13 +383,12 @@ struct PathLevelBanner: View {
 
     private var lockMedallion: some View {
         ZStack {
-            Circle().fill(.black.opacity(0.45))
-            Circle().strokeBorder(.white.opacity(0.35), lineWidth: 1)
+            Circle().fill(Color.white)
             Image(systemName: "lock.fill")
-                .font(.jakarta(size: 18, weight: .bold))
-                .foregroundStyle(.white)
+                .font(.jakarta(size: 14, weight: .bold))
+                .foregroundStyle(DS.inkSecondary)
         }
-        .frame(width: 46, height: 46)
+        .frame(width: 34, height: 34)
         .accessibilityLabel(languageManager.text("path.status.locked"))
     }
 
@@ -396,12 +397,12 @@ struct PathLevelBanner: View {
             Image(systemName: "checkmark.seal.fill")
                 .font(.jakarta(size: 10, weight: .bold))
             Text(languageManager.text("path.status.passed"))
-                .font(DS.sans(.caption2, .semibold))
+                .font(DS.sans(.caption2, .bold))
                 .lineLimit(1)
         }
-        .foregroundStyle(PathPalette.gold)
+        .foregroundStyle(DS.success)
         .padding(.horizontal, 10)
-        .padding(.vertical, 6)
-        .background(.black.opacity(0.4), in: Capsule())
+        .padding(.vertical, 5)
+        .background(Color.white, in: RoundedRectangle(cornerRadius: 10, style: .continuous))
     }
 }

@@ -5,6 +5,9 @@ import SwiftUI
 /// temps ». Chaque mot occupe un emplacement de largeur fixe (largeur « gras ») pour éviter tout
 /// décalage du texte quand le gras arrive. Pas de CTA : on tape n'importe où pour ouvrir l'écran
 /// « Des cours faits pour toi ».
+///
+/// Style « Elevate arrondi » : une illustration ronde au-dessus de la phrase, en très grand et
+/// centrée ; l'invitation à toucher l'écran en bas.
 struct OnboardingV2Personalize: View {
     @Environment(LanguageManager.self) private var languageManager
     let onNext: () -> Void
@@ -19,24 +22,31 @@ struct OnboardingV2Personalize: View {
     }
 
     var body: some View {
-        ZStack {
-            OV2.bg.ignoresSafeArea()
+        GeometryReader { geo in
+            let style: Font.TextStyle = OV2CoreMetrics.sentenceStyle(
+                words: words,
+                width: geo.size.width - OV2CoreMetrics.sideInset * 2
+            )
+            ZStack {
+                VStack(spacing: 26) {
+                    OV2CoreIllustration(art: .mirror, size: 160)
+                        .dsPopIn(delay: 0.1)
 
-            OV2FlowLayout(spacing: languageManager.current == .japanese ? 0 : 7, lineSpacing: 10) {
-                ForEach(Array(words.enumerated()), id: \.offset) { i, word in
-                    wordCell(word, bold: i < boldCount)
+                    OV2FlowLayout(spacing: languageManager.current == .japanese ? 0 : 8, lineSpacing: 6) {
+                        ForEach(Array(words.enumerated()), id: \.offset) { i, word in
+                            wordCell(word, bold: i < boldCount, style: style)
+                        }
+                    }
+                }
+                .padding(.horizontal, OV2CoreMetrics.sideInset)
+
+                VStack {
+                    Spacer()
+                    OV2CoreTapHint(text: languageManager.text("onboardingV2.personalize.tapHint"), visible: showHint)
+                        .padding(.bottom, 28)
                 }
             }
-            .padding(.horizontal, 28)
-
-            VStack {
-                Spacer()
-                Text(languageManager.text("onboardingV2.personalize.tapHint"))
-                    .font(DS.sans(.footnote, .semibold))
-                    .foregroundStyle(OV2.inkTertiary)
-                    .opacity(showHint ? 1 : 0)
-                    .padding(.bottom, 40)
-            }
+            .frame(width: geo.size.width, height: geo.size.height)
         }
         .ov2Background()
         .contentShape(Rectangle())
@@ -47,12 +57,12 @@ struct OnboardingV2Personalize: View {
 
     // MARK: - Cellule de mot (largeur fixe = largeur « gras »)
 
-    private func wordCell(_ word: String, bold: Bool) -> some View {
+    private func wordCell(_ word: String, bold: Bool, style: Font.TextStyle) -> some View {
         ZStack {
             // Sizer invisible en gras : réserve toujours la largeur maximale du mot.
-            Text(word).font(DS.title(.title, .heavy)).opacity(0)
+            Text(word).font(DS.title(style, .heavy)).opacity(0)
             Text(word)
-                .font(DS.title(.title, bold ? .heavy : .regular))
+                .font(DS.title(style, bold ? .heavy : .regular))
                 .foregroundStyle(bold ? OV2.ink : OV2.inkTertiary)
                 .animation(.easeOut(duration: 0.3), value: bold)
         }

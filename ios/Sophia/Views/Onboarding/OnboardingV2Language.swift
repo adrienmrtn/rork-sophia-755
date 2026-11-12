@@ -4,50 +4,25 @@ import SwiftUI
 /// Liste verticale scrollable : on met en avant le geste de slide pour les langues hors écran.
 struct OnboardingV2Language: View {
     @Environment(LanguageManager.self) private var languageManager
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
     let onNext: () -> Void
 
-    @State private var revealed = 0
     @State private var showScrollHint = true
     @State private var hintBounce = false
+    /// Incrémenté à chaque choix : fait rebondir le drapeau de l'en-tête.
+    @State private var flagPulse = 0
+
+    /// Au-delà, les rangées sont hors écran : inutile d'allonger la cascade d'apparition.
+    private static let maxStaggeredRows = 9
 
     var body: some View {
         VStack(spacing: 0) {
-            Spacer().frame(height: 72)
-
-            VStack(spacing: 10) {
-                Text(languageManager.text("onboardingV2.language.title"))
-                    .font(DS.title(.title, .heavy))
-                    .foregroundStyle(OV2.ink)
-                    .multilineTextAlignment(.center)
-                Text(languageManager.text("onboardingV2.language.subtitle"))
-                    .font(DS.sans(.body, .medium))
-                    .foregroundStyle(OV2.inkSecondary)
-                    .multilineTextAlignment(.center)
-            }
-            .padding(.horizontal, 28)
-            .ov2Reveal(delay: 0.1)
-
-            Spacer().frame(height: 28)
+            header
+                .padding(.horizontal, 24)
+                .padding(.top, 20)
 
             ZStack(alignment: .bottom) {
-                ScrollView(showsIndicators: false) {
-                    VStack(spacing: 12) {
-                        ForEach(Array(AppLanguage.allCases.enumerated()), id: \.element.id) { index, language in
-                            languageRow(language)
-                                .opacity(index < revealed ? 1 : 0)
-                                .offset(y: index < revealed ? 0 : 18)
-                        }
-                    }
-                    .padding(.horizontal, 24)
-                    .padding(.bottom, 36)
-                }
-                .onScrollGeometryChange(for: CGFloat.self) { geometry in
-                    geometry.contentOffset.y
-                } action: { _, offset in
-                    if offset > 24, showScrollHint {
-                        withAnimation(.easeOut(duration: 0.25)) { showScrollHint = false }
-                    }
-                }
+                languageList
 
                 if showScrollHint {
                     scrollHint
@@ -55,24 +30,89 @@ struct OnboardingV2Language: View {
                         .allowsHitTesting(false)
                 }
             }
+            .padding(.top, 16)
 
             OnboardingV2Button(title: languageManager.text("common.continue"), action: onNext)
+                .padding(.top, 14)
         }
         .ov2Background()
         .onAppear {
-            for i in 0..<AppLanguage.allCases.count {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.15 + Double(i) * 0.06) {
-                    withAnimation(.spring(response: 0.5, dampingFraction: 0.8)) {
-                        revealed = i + 1
-                    }
-                }
-            }
+            guard !reduceMotion else { return }
             withAnimation(
                 .easeInOut(duration: 0.9)
                 .repeatForever(autoreverses: true)
                 .delay(0.6)
             ) {
                 hintBounce = true
+            }
+        }
+    }
+
+    // MARK: - En-tête
+
+    private var header: some View {
+        VStack(spacing: 0) {
+            Text(languageManager.text("onboardingV2.language.title"))
+                .font(DS.title(.title2, .medium))
+                .tracking(0.2)
+                .foregroundStyle(OV2.ink)
+                .multilineTextAlignment(.center)
+                .fixedSize(horizontal: false, vertical: true)
+                .accessibilityAddTraits(.isHeader)
+
+            Text(languageManager.text("onboardingV2.language.subtitle"))
+                .font(DS.sans(.subheadline, .regular))
+                .foregroundStyle(OV2.inkSecondary)
+                .multilineTextAlignment(.center)
+                .lineSpacing(2)
+                .fixedSize(horizontal: false, vertical: true)
+                .padding(.top, 10)
+
+            flagBadge
+                .padding(.top, 14)
+        }
+        .dsStagger(0)
+    }
+
+    /// Le drapeau de la langue choisie, dans une pastille qui rebondit à chaque changement.
+    private var flagBadge: some View {
+        ZStack {
+            Circle().fill(DS.accentTint)
+            Text(languageManager.current.flag)
+                .font(.system(size: 36))
+                .id(languageManager.current.id)
+                .transition(.scale(scale: 0.4).combined(with: .opacity))
+        }
+        .frame(width: 72, height: 72)
+        .scaleEffect(flagScale)
+        .animation(DS.Motion.pop, value: flagPulse)
+        .accessibilityHidden(true)
+    }
+
+    /// Le rebond alterne deux échelles voisines : chaque choix relance le ressort.
+    private var flagScale: CGFloat {
+        flagPulse.isMultiple(of: 2) ? 1 : 1.04
+    }
+
+    // MARK: - Liste
+
+    private var languageList: some View {
+        ScrollView(showsIndicators: false) {
+            VStack(spacing: 9) {
+                ForEach(Array(AppLanguage.allCases.enumerated()), id: \.element.id) { index, language in
+                    languageRow(language)
+                        .dsStagger(min(index, Self.maxStaggeredRows) + 1, step: 0.045)
+                }
+            }
+            .padding(.horizontal, 24)
+            .padding(.top, 2)
+            .padding(.bottom, 40)
+        }
+        .onScrollGeometryChange(for: CGFloat.self) { geometry in
+            geometry.contentOffset.y
+        } action: { _, offset in
+            if offset > 24, showScrollHint {
+                withAnimation(.easeOut(duration: 0.25)) { showScrollHint = false }
             }
         }
     }
@@ -97,51 +137,41 @@ struct OnboardingV2Language: View {
                     .offset(y: hintBounce ? 3 : 0)
             }
             .foregroundStyle(OV2.inkSecondary)
+            .frame(maxWidth: .infinity)
             .padding(.bottom, 8)
             .background(OV2.bg)
         }
     }
 
     private func languageRow(_ language: AppLanguage) -> some View {
-        let isSelected = languageManager.current == language
+        let isSelected: Bool = languageManager.current == language
         return Button {
-            OnboardingHaptics.selection()
-            withAnimation(.spring(response: 0.3, dampingFraction: 0.8)) {
+            Haptics.select()
+            withAnimation(DS.Motion.snappy) {
                 languageManager.setLanguage(language)
+                flagPulse += 1
             }
         } label: {
             HStack(spacing: 12) {
-                Text(language.flag).font(.system(size: 26))
+                Text(language.flag)
+                    .font(.system(size: 24))
                 Text(language.displayName)
-                    .font(DS.sans(.body, .semibold))
+                    .font(DS.sans(.callout, .semibold))
                     .foregroundStyle(OV2.ink)
                     .frame(maxWidth: .infinity, alignment: .leading)
-                ZStack {
-                    Circle()
-                        .strokeBorder(isSelected ? OV2.accent : OV2.hairline, lineWidth: 2)
-                        .frame(width: 22, height: 22)
-                    if isSelected {
-                        Circle().fill(OV2.accent).frame(width: 22, height: 22)
-                            .overlay {
-                                Image(systemName: "checkmark")
-                                    .font(.system(size: 11, weight: .bold))
-                                    .foregroundStyle(.white)
-                            }
-                            .transition(.scale.combined(with: .opacity))
-                    }
+                if isSelected {
+                    DSCheckBadge(size: 22, fill: DS.accent)
+                        .transition(.scale(scale: 0.4).combined(with: .opacity))
                 }
             }
             .padding(.horizontal, 16)
-            .padding(.vertical, 16)
-            .background(
-                RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous)
-                    .fill(OV2.surface)
-            )
-            .overlay(
-                RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous)
-                    .strokeBorder(isSelected ? OV2.accent : OV2.hairline, lineWidth: isSelected ? 2 : 1)
-            )
+            .padding(.vertical, 8)
+            .frame(minHeight: 52)
+            .dsOptionCard(isSelected ? .selected : .idle)
+            .contentShape(Rectangle())
         }
-        .buttonStyle(SoftPressButtonStyle())
+        // La carte s'enfonce sans vibrer : la vibration du choix part au relâchement.
+        .buttonStyle(PressableStyle(scale: 0.98, haptic: false))
+        .accessibilityAddTraits(isSelected ? .isSelected : [])
     }
 }

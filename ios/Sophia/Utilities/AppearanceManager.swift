@@ -77,12 +77,10 @@ final class AppearanceManager {
 
     init(defaults: UserDefaults = .standard) {
         self.defaults = defaults
-        if let stored = defaults.string(forKey: Self.userDefaultsKey),
-           let value = AppearancePreference(rawValue: stored) {
-            preference = value
-        } else {
-            preference = .light
-        }
+        // Design « Elevate arrondi » : l'app est en clair uniquement pour l'instant (pas de
+        // maquette nuit). Le choix déjà enregistré reste en mémoire, il n'est simplement plus
+        // lu ; rétablir la lecture ci-dessous suffira à rendre le mode nuit.
+        preference = .light
     }
 
     func setPreference(_ preference: AppearancePreference) {

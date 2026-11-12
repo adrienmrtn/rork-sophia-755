@@ -4,7 +4,6 @@ import Supabase
 
 struct SettingsView: View {
     @Environment(LanguageManager.self) private var languageManager
-    @Environment(AppearanceManager.self) private var appearance
     @Environment(AuthService.self) private var auth
     let progressManager: ProgressManager
     let store: StoreViewModel
@@ -28,9 +27,15 @@ struct SettingsView: View {
     @State private var showDebugNotifications: Bool = false
     /// Set only by the developer section, which is itself behind `#if DEBUG`.
     @State private var debugPaywall: SophiaPaywallContext? = nil
+    /// Le @ du lecteur, pour la carte d'identité en tête.
+    @Bindable private var social = SocialService.shared
 
     private static let destructive = DS.danger
-    private static let destructiveTint = DS.dangerTint
+    /// Bleu nuit de la carte Premium (maquette).
+    private static let premiumNavy = Color(red: 0.102, green: 0.227, blue: 0.420)
+    /// Crème et encre de l'illustration « ambassadeur » (papier découpé du site).
+    private static let posterCream = Color(red: 0.984, green: 0.937, blue: 0.788)
+    private static let posterInk = Color(red: 0.086, green: 0.149, blue: 0.239)
 
     private var appVersionString: String {
         let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "1.0.0"
@@ -44,63 +49,23 @@ struct SettingsView: View {
                 DS.canvas.ignoresSafeArea()
 
                 ScrollView {
-                    VStack(alignment: .leading, spacing: 22) {
-                        titleBar
-                            .padding(.horizontal, 20)
-                            .padding(.top, 4)
-
-                        accountSection
-
-                        section(languageManager.text("language.section")) {
-                            HStack {
-                                Spacer(minLength: 0)
-                                LanguagePickerControl()
-                                Spacer(minLength: 0)
-                            }
-                            .padding(.horizontal, 20)
+                    VStack(alignment: .leading, spacing: 24) {
+                        VStack(alignment: .leading, spacing: 12) {
+                            titleBar
+                            identityCard
+                                .dsStagger(0, step: 0.04)
                         }
+                        .padding(.horizontal, 20)
+                        .padding(.top, 4)
 
-                        appearanceSection
-
-                        readingSection
-
-                        progressionSection
-
-                        // Pendant l'essai gratuit, aucune notification : pas de réglage non plus.
-                        if !store.isInFreeTrial {
-                            reminderSection
-                        }
-
-                        if !store.isPremium {
-                            premiumSection
-                        } else {
-                            subscriptionSection
-                        }
-
-                        if store.isPremium || !CourseAudioDownloads.shared.downloaded.isEmpty {
-                            audioSection
-                        }
-
-                        dataSection
-
-                        ambassadorBanner
-                            .padding(.horizontal, 20)
-
-                        helpSection
-
-                        legalSection
-
-                        aboutSection
-
-                        #if DEBUG
-                        developerSection
-                        #endif
+                        preferenceSections
+                        membershipSections
+                        supportSections
 
                         Text(languageManager.text("settings.footer"))
-                            .font(DS.sans(.caption, .medium))
-                            .foregroundStyle(DS.inkTertiary)
+                            .font(DS.sans(.footnote))
+                            .foregroundStyle(DS.inkSecondary)
                             .frame(maxWidth: .infinity, alignment: .center)
-                            .padding(.top, 8)
                             .padding(.bottom, 32)
                     }
                 }
@@ -153,45 +118,159 @@ struct SettingsView: View {
         .sophiaColorScheme()
     }
 
+    // MARK: - Groupes de sections
+
+    /// Compte, langue, mode de lecture, progression, rappel.
+    @ViewBuilder
+    private var preferenceSections: some View {
+        accountSection
+            .dsStagger(1, step: 0.04)
+
+        section(languageManager.text("language.section")) {
+            HStack {
+                Spacer(minLength: 0)
+                LanguagePickerControl()
+                Spacer(minLength: 0)
+            }
+            .padding(.horizontal, 20)
+        }
+        .dsStagger(2, step: 0.04)
+
+        readingSection
+            .dsStagger(3, step: 0.04)
+
+        progressionSection
+            .dsStagger(4, step: 0.04)
+
+        // Pendant l'essai gratuit, aucune notification : pas de réglage non plus.
+        if !store.isInFreeTrial {
+            reminderSection
+                .dsStagger(5, step: 0.04)
+        }
+    }
+
+    /// Premium ou abonnement, audio, données, bannière ambassadeur.
+    @ViewBuilder
+    private var membershipSections: some View {
+        if !store.isPremium {
+            premiumSection
+                .dsStagger(6, step: 0.04)
+        } else {
+            subscriptionSection
+                .dsStagger(6, step: 0.04)
+        }
+
+        if store.isPremium || !CourseAudioDownloads.shared.downloaded.isEmpty {
+            audioSection
+                .dsStagger(7, step: 0.04)
+        }
+
+        dataSection
+            .dsStagger(8, step: 0.04)
+
+        ambassadorBanner
+            .padding(.horizontal, 20)
+            .dsStagger(9, step: 0.04)
+    }
+
+    /// Aide, légal, à propos, et la section développeur en Debug.
+    @ViewBuilder
+    private var supportSections: some View {
+        helpSection
+            .dsStagger(10, step: 0.04)
+
+        legalSection
+            .dsStagger(10, step: 0.04)
+
+        aboutSection
+            .dsStagger(10, step: 0.04)
+
+        #if DEBUG
+        developerSection
+        #endif
+    }
+
     // MARK: - Title
 
+    /// Le titre centré, la croix à droite (et son pendant vide à gauche, pour le centrage).
     private var titleBar: some View {
-        HStack {
+        HStack(spacing: 10) {
+            Color.clear.frame(width: 44, height: 44)
+            Spacer(minLength: 0)
             Text(languageManager.text("settings.title"))
-                .font(DS.title(.largeTitle, .semibold))
+                .font(DS.sans(.callout, .heavy))
                 .foregroundStyle(DS.ink)
-            Spacer()
+                .lineLimit(1)
+                .minimumScaleFactor(0.8)
+                .accessibilityAddTraits(.isHeader)
+            Spacer(minLength: 0)
             if let onDismiss {
-                Button(action: onDismiss) {
-                    Image(systemName: "xmark")
-                        .font(.jakarta(size: 15, weight: .medium))
-                        .foregroundStyle(DS.inkSecondary)
-                        .frame(width: 40, height: 40)
-                        .background(DS.surface, in: Circle())
-                        .overlay { Circle().strokeBorder(DS.hairline, lineWidth: 1) }
-                }
-                .buttonStyle(SoftPressButtonStyle())
+                ProfileRoundButton(
+                    systemImage: "xmark",
+                    accessibilityLabel: languageManager.text("common.close"),
+                    action: onDismiss
+                )
+            } else {
+                Color.clear.frame(width: 44, height: 44)
             }
         }
+    }
+
+    // MARK: - Carte d'identité
+
+    /// « @pseudo · membre depuis … » : seulement ce que l'app connaît déjà, rien sinon.
+    private var identityDetail: String? {
+        var parts: [String] = []
+        if auth.isSignedIn, let handle = social.myHandle, !handle.isEmpty {
+            parts.append("@\(handle)")
+        }
+        if let since = ProfileIdentity.memberSince(progressManager: progressManager, language: languageManager.current) {
+            parts.append(String(format: languageManager.text("profile.member.since"), since))
+        }
+        return parts.isEmpty ? nil : parts.joined(separator: " · ")
+    }
+
+    /// La carte d'identité du lecteur : avatar, titre de rang, @ et ancienneté. Elle ouvre le compte.
+    private var identityCard: some View {
+        let rankTitle: String = ProfileIdentity.rankTitle(languageManager: languageManager)
+        let initialSource: String = social.myHandle ?? rankTitle
+        return Button {
+            hapticTrigger += 1
+            showAccount = true
+        } label: {
+            HStack(spacing: 14) {
+                AvatarCircle(
+                    avatarId: progressManager.avatarId,
+                    initial: String(initialSource.prefix(1)).uppercased(),
+                    size: 56
+                )
+                VStack(alignment: .leading, spacing: 3) {
+                    Text(rankTitle)
+                        .font(DS.title(.headline, .semibold))
+                        .foregroundStyle(DS.ink)
+                        .multilineTextAlignment(.leading)
+                        .fixedSize(horizontal: false, vertical: true)
+                    if let identityDetail {
+                        Text(identityDetail)
+                            .font(DS.sans(.footnote))
+                            .foregroundStyle(DS.inkSecondary)
+                            .multilineTextAlignment(.leading)
+                            .fixedSize(horizontal: false, vertical: true)
+                    }
+                }
+                Spacer(minLength: 4)
+                rowChevron
+            }
+            .padding(.horizontal, 16)
+            .padding(.vertical, 14)
+            .dsCard(padding: 0)
+            .contentShape(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
+        }
+        .buttonStyle(PressableStyle(haptic: false))
+        .accessibilityElement(children: .combine)
     }
 
     // MARK: - Sections
-
-    private var appearanceSection: some View {
-        section(languageManager.text("settings.section.appearance")) {
-            VStack(alignment: .leading, spacing: 10) {
-                AppearancePickerControl()
-                    .padding(.horizontal, 20)
-                if appearance.preference == .system {
-                    Text(languageManager.text("settings.appearance.hint"))
-                        .font(DS.sans(.caption, .medium))
-                        .foregroundStyle(DS.inkSecondary)
-                        .fixedSize(horizontal: false, vertical: true)
-                        .padding(.horizontal, 24)
-                }
-            }
-        }
-    }
 
     /// Pas à pas ou par pages : le même choix que dans l'en-tête du lecteur.
     private var readingSection: some View {
@@ -206,7 +285,7 @@ struct SettingsView: View {
             groupedCard {
                 if auth.isSignedIn {
                     actionRow(
-                        icon: "person.crop.circle.fill",
+                        icon: "person",
                         title: auth.currentUser?.email ?? languageManager.text("account.signedIn.title"),
                         subtitle: languageManager.text("account.manage.subtitle")
                     ) {
@@ -215,7 +294,7 @@ struct SettingsView: View {
                     }
                 } else {
                     actionRow(
-                        icon: "person.crop.circle.badge.plus",
+                        icon: "person",
                         title: languageManager.text("account.create.title"),
                         subtitle: languageManager.text("account.create.subtitle")
                     ) {
@@ -231,7 +310,7 @@ struct SettingsView: View {
         section(languageManager.text("settings.section.progress")) {
             groupedCard {
                 statRow(
-                    icon: "checkmark.circle",
+                    icon: "book",
                     title: String(format: languageManager.text("settings.courses.completed"), progressManager.completedCount),
                     subtitle: String(format: languageManager.text("settings.courses.available"), ContentCatalog.activeCourses.count)
                 )
@@ -251,35 +330,53 @@ struct SettingsView: View {
     private var reminderSection: some View {
         section(languageManager.text("settings.section.reminder")) {
             groupedCard {
-                HStack(spacing: 14) {
-                    iconBadge(name: "bell")
+                HStack(spacing: 12) {
+                    rowIcon("bell")
                     VStack(alignment: .leading, spacing: 2) {
                         Text(languageManager.text("settings.reminder.title"))
-                            .font(DS.sans(.body, .medium))
+                            .font(DS.sans(.subheadline, .bold))
                             .foregroundStyle(DS.ink)
                         Text(languageManager.text("settings.reminder.subtitle"))
-                            .font(DS.sans(.caption, .medium))
+                            .font(DS.sans(.footnote))
                             .foregroundStyle(DS.inkSecondary)
                             .fixedSize(horizontal: false, vertical: true)
                     }
                     Spacer(minLength: 8)
-                    Picker(languageManager.text("settings.reminder.title"), selection: $reminderHour) {
-                        ForEach(5...23, id: \.self) { hour in
-                            Text(OnboardingV2ReadingTime.label(hour: hour)).tag(hour)
-                        }
-                    }
-                    .pickerStyle(.menu)
-                    .labelsHidden()
-                    .tint(DS.accentSoft)
+                    reminderHourMenu
                 }
-                .padding(.horizontal, 14)
+                .padding(.horizontal, 16)
                 .padding(.vertical, 12)
             }
         }
         .onChange(of: reminderHour) { _, hour in
+            Haptics.select()
             DailyCourseReminder.storedHour = hour
             DailyCourseReminder.refresh()
         }
+    }
+
+    /// L'heure choisie sur une pastille bleu pâle ; la toucher ouvre le menu des heures.
+    private var reminderHourMenu: some View {
+        Menu {
+            Picker(languageManager.text("settings.reminder.title"), selection: $reminderHour) {
+                ForEach(5...23, id: \.self) { hour in
+                    Text(OnboardingV2ReadingTime.label(hour: hour)).tag(hour)
+                }
+            }
+        } label: {
+            Text(OnboardingV2ReadingTime.label(hour: reminderHour))
+                .font(DS.sans(.subheadline, .heavy))
+                .foregroundStyle(DS.ink)
+                .monospacedDigit()
+                .lineLimit(1)
+                .padding(.horizontal, 12)
+                .padding(.vertical, 7)
+                .background(RoundedRectangle(cornerRadius: 10, style: .continuous).fill(DS.accentTint))
+                .contentTransition(.numericText())
+                .animation(DS.Motion.snappy, value: reminderHour)
+        }
+        .accessibilityLabel(Text(languageManager.text("settings.reminder.title")))
+        .accessibilityValue(Text(OnboardingV2ReadingTime.label(hour: reminderHour)))
     }
 
     private var premiumSection: some View {
@@ -288,32 +385,36 @@ struct SettingsView: View {
                 hapticTrigger += 1
                 onShowPaywall?()
             } label: {
-                HStack(spacing: 14) {
+                HStack(spacing: 12) {
                     Image(systemName: "crown.fill")
-                        .font(.jakarta(size: 17, weight: .medium))
-                        .foregroundStyle(.white)
-                        .frame(width: 42, height: 42)
-                        .background(.white.opacity(0.18), in: Circle())
+                        .font(.system(size: 18, weight: .semibold))
+                        .foregroundStyle(DS.warm)
+                        .frame(width: 24)
+                        .accessibilityHidden(true)
                     VStack(alignment: .leading, spacing: 2) {
                         Text(languageManager.text("settings.premium.title"))
-                            .font(DS.title(.headline, .semibold))
+                            .font(DS.sans(.callout, .heavy))
                             .foregroundStyle(.white)
+                            .multilineTextAlignment(.leading)
                         Text(languageManager.text("settings.premium.subtitle"))
-                            .font(DS.sans(.caption, .medium))
-                            .foregroundStyle(.white.opacity(0.8))
+                            .font(DS.sans(.footnote))
+                            .foregroundStyle(.white.opacity(0.82))
+                            .multilineTextAlignment(.leading)
                             .fixedSize(horizontal: false, vertical: true)
                     }
                     Spacer(minLength: 8)
                     Image(systemName: "arrow.forward")
-                        .font(.jakarta(size: 14, weight: .semibold))
-                        .foregroundStyle(.white.opacity(0.9))
+                        .font(.system(size: 14, weight: .bold))
+                        .foregroundStyle(.white)
                 }
-                .padding(16)
+                .padding(.horizontal, 16)
+                .padding(.vertical, 14)
                 .frame(maxWidth: .infinity, alignment: .leading)
-                .background(DS.accent, in: RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
+                .background(Self.premiumNavy, in: RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
+                .contentShape(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
                 .padding(.horizontal, 20)
             }
-            .buttonStyle(SoftPressButtonStyle())
+            .buttonStyle(PressableStyle(haptic: false))
         }
     }
 
@@ -361,7 +462,7 @@ struct SettingsView: View {
         section(languageManager.text("settings.section.audio")) {
             groupedCard {
                 actionRow(
-                    icon: "arrow.down.circle",
+                    icon: "arrow.down.to.line",
                     title: languageManager.text("audio.downloads.title"),
                     subtitle: String(
                         format: languageManager.text("audio.downloads.subtitle"),
@@ -394,7 +495,7 @@ struct SettingsView: View {
         section(languageManager.text("settings.section.help")) {
             groupedCard {
                 actionRow(
-                    icon: "paperplane",
+                    icon: "square.and.arrow.up",
                     title: languageManager.text("share.card.title"),
                     subtitle: languageManager.text("share.card.subtitle")
                 ) {
@@ -403,7 +504,7 @@ struct SettingsView: View {
                 }
                 rowDivider
                 actionRow(
-                    icon: "bubble.left.and.bubble.right",
+                    icon: "pencil",
                     title: languageManager.text("settings.feedback.title"),
                     subtitle: languageManager.text("settings.feedback.subtitle")
                 ) {
@@ -412,7 +513,7 @@ struct SettingsView: View {
                 }
                 rowDivider
                 actionRow(
-                    icon: "lightbulb",
+                    icon: "star",
                     title: languageManager.text("settings.featureRequest.title"),
                     subtitle: languageManager.text("settings.featureRequest.subtitle")
                 ) {
@@ -426,18 +527,18 @@ struct SettingsView: View {
     private var legalSection: some View {
         section(languageManager.text("settings.section.legal")) {
             groupedCard {
-                actionRow(icon: "doc.text", title: languageManager.text("settings.terms.title")) {
+                actionRow(title: languageManager.text("settings.terms.title")) {
                     hapticTrigger += 1
                     showTerms = true
                 }
                 rowDivider
-                actionRow(icon: "hand.raised", title: languageManager.text("settings.privacy.title")) {
+                actionRow(title: languageManager.text("settings.privacy.title")) {
                     hapticTrigger += 1
                     showPrivacy = true
                 }
                 if !store.isPremium {
                     rowDivider
-                    actionRow(icon: "arrow.clockwise", title: languageManager.text("settings.restore.title")) {
+                    actionRow(title: languageManager.text("settings.restore.title")) {
                         hapticTrigger += 1
                         Task { await store.restore() }
                     }
@@ -455,7 +556,6 @@ struct SettingsView: View {
                 rowDivider
                 // Relit le catalogue en ligne sans attendre le rafraîchissement automatique.
                 actionRow(
-                    icon: "arrow.triangle.2.circlepath",
                     title: languageManager.text("settings.debug.catalogRefresh")
                 ) {
                     hapticTrigger += 1
@@ -604,80 +704,74 @@ struct SettingsView: View {
         creatorsPage = CreatorsPage(url: url)
     }
 
-    /// Bannière « Deviens ambassadeur » dans le style papier du site : l'illustration, la
-    /// promesse en une ligne, et la sortie vers le site.
+    /// Bannière « Deviens ambassadeur » dans le style papier du site : l'illustration à gauche,
+    /// la promesse en une ligne, et la sortie vers le site.
     private var ambassadorBanner: some View {
         Button {
             hapticTrigger += 1
             openAmbassadorPage()
         } label: {
-            VStack(alignment: .leading, spacing: 0) {
-                Color.clear
-                    .frame(maxWidth: .infinity)
-                    .frame(height: 150)
-                    .overlay {
-                        Image("ambassador_poster")
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                    }
-                    .clipped()
-                    .accessibilityHidden(true)
-
-                VStack(alignment: .leading, spacing: 14) {
-                    VStack(alignment: .leading, spacing: 4) {
-                        Text(languageManager.text("settings.ambassador.banner.title"))
-                            .font(DS.title(.title3, .heavy))
-                            .foregroundStyle(DS.ink)
-                            .multilineTextAlignment(.leading)
-                            .fixedSize(horizontal: false, vertical: true)
-                        Text(languageManager.text("settings.ambassador.banner.subtitle"))
-                            .font(DS.sans(.subheadline))
-                            .foregroundStyle(DS.inkSecondary)
-                            .multilineTextAlignment(.leading)
-                            .fixedSize(horizontal: false, vertical: true)
-                    }
-
-                    HStack(spacing: 8) {
-                        Text(languageManager.text("settings.ambassador.cta"))
-                            .font(DS.sans(.subheadline, .bold))
-                            .multilineTextAlignment(.center)
-                            .fixedSize(horizontal: false, vertical: true)
-                        Image(systemName: "arrow.up.right")
-                            .font(.system(size: 13, weight: .bold))
-                    }
-                    .foregroundStyle(.white)
-                    .frame(maxWidth: .infinity)
-                    .padding(.vertical, 13)
-                    .padding(.horizontal, 16)
-                    .background(Capsule(style: .continuous).fill(DS.accent))
-                }
-                .padding(16)
+            ambassadorText
+                .padding(14)
+                .padding(.leading, 110)
                 .frame(maxWidth: .infinity, alignment: .leading)
-            }
-            .background(DS.surface)
-            .clipShape(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
-            .overlay(
-                RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
-                    .strokeBorder(DS.hairline, lineWidth: 1)
-            )
-            .dsSoftShadow()
-            .contentShape(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
+                .background(alignment: .leading) {
+                    Color.clear
+                        .frame(width: 110)
+                        .frame(maxHeight: .infinity)
+                        .overlay {
+                            Image("ambassador_poster")
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                        }
+                        .clipped()
+                        .accessibilityHidden(true)
+                }
+                .background(Self.posterCream)
+                .clipShape(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
+                .contentShape(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
         }
-        .buttonStyle(SoftPressButtonStyle())
+        .buttonStyle(PressableStyle(haptic: false))
         .accessibilityElement(children: .combine)
         .accessibilityAddTraits(.isLink)
+    }
+
+    private var ambassadorText: some View {
+        VStack(alignment: .leading, spacing: 6) {
+            Text(languageManager.text("settings.ambassador.banner.title"))
+                .font(DS.sans(.callout, .heavy))
+                .foregroundStyle(Self.posterInk)
+                .multilineTextAlignment(.leading)
+                .fixedSize(horizontal: false, vertical: true)
+            Text(languageManager.text("settings.ambassador.banner.subtitle"))
+                .font(DS.sans(.footnote))
+                .foregroundStyle(Self.posterInk)
+                .multilineTextAlignment(.leading)
+                .fixedSize(horizontal: false, vertical: true)
+
+            HStack(spacing: 6) {
+                Text(languageManager.text("settings.ambassador.cta"))
+                    .font(DS.sans(.footnote, .bold))
+                    .multilineTextAlignment(.leading)
+                    .fixedSize(horizontal: false, vertical: true)
+                Image(systemName: "arrow.up.right")
+                    .font(.system(size: 11, weight: .bold))
+            }
+            .foregroundStyle(.white)
+            .padding(.vertical, 8)
+            .padding(.horizontal, 12)
+            .background(RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous).fill(Self.posterInk))
+            .padding(.top, 2)
+        }
     }
 
     // MARK: - Building blocks
 
     @ViewBuilder
     private func section<Content: View>(_ title: String, @ViewBuilder content: () -> Content) -> some View {
-        VStack(alignment: .leading, spacing: 10) {
-            Text(title.uppercasedInApp())
-                .font(DS.sans(.caption2, .semibold))
-                .foregroundStyle(DS.inkTertiary)
-                .tracking(1.2)
-                .padding(.horizontal, 24)
+        VStack(alignment: .leading, spacing: 8) {
+            ProfileGroupLabel(text: title)
+                .padding(.horizontal, 20)
             content()
         }
     }
@@ -687,90 +781,107 @@ struct SettingsView: View {
         VStack(spacing: 0) {
             content()
         }
+        .clipShape(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
         .dsCard(padding: 0)
         .padding(.horizontal, 20)
     }
 
     private var rowDivider: some View {
-        Rectangle()
-            .fill(DS.hairline)
-            .frame(height: 1)
-            .padding(.leading, 66)
+        ProfileRowDivider()
+            .padding(.horizontal, 16)
     }
 
-    private func iconBadge(name: String, tint: Color = DS.accentSoft, bg: Color = DS.accentTint) -> some View {
+    /// Pictogramme de rangée : au trait, bleu (rouge pour une action destructrice), sans fond.
+    private func rowIcon(_ name: String, tint: Color = DS.accent) -> some View {
         Image(systemName: name)
-            .font(.jakarta(size: 16, weight: .medium))
+            .font(.system(size: 17, weight: .semibold))
             .foregroundStyle(tint)
-            .frame(width: 38, height: 38)
-            .background(bg, in: Circle())
+            .frame(width: 24)
+            .accessibilityHidden(true)
+    }
+
+    private var rowChevron: some View {
+        Image(systemName: "chevron.forward")
+            .font(.system(size: 13, weight: .semibold))
+            .foregroundStyle(DS.inkSecondary)
+            .accessibilityHidden(true)
     }
 
     private func statRow(icon: String, title: String, subtitle: String) -> some View {
-        HStack(spacing: 14) {
-            iconBadge(name: icon)
+        HStack(spacing: 12) {
+            rowIcon(icon)
             VStack(alignment: .leading, spacing: 2) {
                 Text(title)
-                    .font(DS.title(.subheadline, .semibold))
+                    .font(DS.sans(.subheadline, .bold))
                     .foregroundStyle(DS.ink)
+                    .fixedSize(horizontal: false, vertical: true)
                 Text(subtitle)
-                    .font(DS.sans(.caption, .medium))
+                    .font(DS.sans(.footnote))
                     .foregroundStyle(DS.inkSecondary)
+                    .fixedSize(horizontal: false, vertical: true)
             }
-            Spacer()
+            Spacer(minLength: 0)
         }
-        .padding(.horizontal, 14)
-        .padding(.vertical, 14)
+        .padding(.horizontal, 16)
+        .padding(.vertical, 12)
+        .accessibilityElement(children: .combine)
     }
 
+    /// Une rangée d'action : pression douce, pictogramme facultatif, chevron (sauf action destructrice).
     private func actionRow(
-        icon: String,
+        icon: String? = nil,
         title: String,
         subtitle: String? = nil,
         destructive: Bool = false,
         action: @escaping () -> Void
     ) -> some View {
         Button(action: action) {
-            HStack(spacing: 14) {
-                iconBadge(
-                    name: icon,
-                    tint: destructive ? Self.destructive : DS.accentSoft,
-                    bg: destructive ? Self.destructiveTint : DS.accentTint
-                )
+            HStack(spacing: 12) {
+                if let icon {
+                    rowIcon(icon, tint: destructive ? Self.destructive : DS.accent)
+                }
                 VStack(alignment: .leading, spacing: 2) {
                     Text(title)
-                        .font(DS.sans(.body, .medium))
+                        .font(DS.sans(.subheadline, .bold))
                         .foregroundStyle(destructive ? Self.destructive : DS.ink)
+                        .multilineTextAlignment(.leading)
+                        .fixedSize(horizontal: false, vertical: true)
                     if let subtitle {
                         Text(subtitle)
-                            .font(DS.sans(.caption, .medium))
+                            .font(DS.sans(.footnote))
                             .foregroundStyle(DS.inkSecondary)
+                            .multilineTextAlignment(.leading)
+                            .fixedSize(horizontal: false, vertical: true)
                     }
                 }
-                Spacer()
-                Image(systemName: "chevron.forward")
-                    .font(.jakarta(size: 12, weight: .semibold))
-                    .foregroundStyle(DS.inkTertiary)
+                Spacer(minLength: 8)
+                if !destructive {
+                    rowChevron
+                }
             }
-            .padding(.horizontal, 14)
+            .padding(.horizontal, 16)
             .padding(.vertical, 12)
+            .frame(maxWidth: .infinity, alignment: .leading)
             .contentShape(Rectangle())
         }
-        .buttonStyle(SoftPressButtonStyle())
+        // La vibration vient de `hapticTrigger`, posé par chaque action.
+        .buttonStyle(ProfileRowPressStyle(haptic: false))
     }
 
     private func infoRow(label: String, value: String) -> some View {
-        HStack {
+        HStack(spacing: 12) {
             Text(label)
-                .font(DS.sans(.body, .medium))
+                .font(DS.sans(.subheadline, .bold))
                 .foregroundStyle(DS.ink)
-            Spacer()
+            Spacer(minLength: 8)
             Text(value)
-                .font(DS.sans(.body, .medium))
+                .font(DS.sans(.subheadline))
                 .foregroundStyle(DS.inkSecondary)
+                .monospacedDigit()
         }
-        .padding(.horizontal, 14)
-        .padding(.vertical, 14)
+        .padding(.horizontal, 16)
+        .padding(.vertical, 12)
+        .accessibilityElement(children: .combine)
     }
 }
 

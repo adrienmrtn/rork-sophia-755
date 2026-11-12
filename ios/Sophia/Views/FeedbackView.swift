@@ -77,7 +77,7 @@ struct FeedbackView: View {
 
                     Text(languageManager.text("feedback.technicalNote"))
                         .font(DS.sans(.caption))
-                        .foregroundStyle(DS.inkTertiary)
+                        .foregroundStyle(DS.inkSecondary)
                         .frame(maxWidth: .infinity, alignment: .leading)
 
                     if let errorMessage {
@@ -115,25 +115,21 @@ struct FeedbackView: View {
         VStack(spacing: 16) {
             Spacer()
 
-            ZStack {
-                Circle().fill(DS.accentTint)
-                Image(systemName: "checkmark")
-                    .font(.jakarta(size: 34, weight: .medium))
-                    .foregroundStyle(DS.accent)
-            }
-            .frame(width: 88, height: 88)
-            .symbolEffect(.bounce, value: didSucceed)
+            // Retour envoyé : la coche se dessine, avec rebond (la vibration part à l'envoi).
+            DSCheckBadge(size: 88, delay: 0.1)
 
             Text(languageManager.text("feedback.success.title"))
                 .font(DS.title(.title2, .semibold))
                 .foregroundStyle(DS.ink)
                 .multilineTextAlignment(.center)
+                .dsStagger(1)
 
             Text(languageManager.text("feedback.success.body"))
                 .font(DS.sans(.subheadline))
                 .foregroundStyle(DS.inkSecondary)
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 24)
+                .dsStagger(2)
 
             Spacer()
 
@@ -151,22 +147,23 @@ struct FeedbackView: View {
             HStack(spacing: 8) {
                 ForEach(FeedbackService.Category.allCases) { item in
                     Button {
-                        category = item
-                        UIImpactFeedbackGenerator(style: .light).impactOccurred()
+                        guard category != item else { return }
+                        Haptics.select()
+                        withAnimation(DS.Motion.snappy) { category = item }
                     } label: {
                         Text(item.label(language: languageManager.current))
-                            .font(DS.sans(.subheadline, .semibold))
-                            .foregroundStyle(category == item ? .white : DS.ink)
+                            .font(DS.sans(.subheadline, .bold))
+                            .foregroundStyle(category == item ? Color.white : DS.ink)
                             .padding(.horizontal, 14)
-                            .padding(.vertical, 10)
-                            .background(category == item ? DS.accent : DS.surface, in: Capsule())
-                            .overlay {
-                                if category != item {
-                                    Capsule().strokeBorder(DS.hairline, lineWidth: 1)
-                                }
-                            }
+                            .frame(height: 40)
+                            .background(
+                                RoundedRectangle(cornerRadius: 14, style: .continuous)
+                                    .fill(category == item ? DS.accent : DS.accentTint)
+                            )
+                            .contentShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
                     }
-                    .buttonStyle(SoftPressButtonStyle())
+                    .buttonStyle(PressableStyle(haptic: false))
+                    .accessibilityAddTraits(category == item ? [.isSelected] : [])
                 }
             }
         }
@@ -201,8 +198,9 @@ struct FeedbackView: View {
         .clipShape(.rect(cornerRadius: DS.Radius.control))
         .overlay {
             RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous)
-                .strokeBorder(DS.hairline, lineWidth: 1)
+                .strokeBorder(focusedField == .message ? DS.accent : DS.hairline, lineWidth: 1.5)
         }
+        .animation(DS.Motion.snappy, value: focusedField)
     }
 
     private var emailField: some View {
@@ -225,15 +223,13 @@ struct FeedbackView: View {
         .clipShape(.rect(cornerRadius: DS.Radius.control))
         .overlay {
             RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous)
-                .strokeBorder(DS.hairline, lineWidth: 1)
+                .strokeBorder(focusedField == .email ? DS.accent : DS.hairline, lineWidth: 1.5)
         }
+        .animation(DS.Motion.snappy, value: focusedField)
     }
 
     private func fieldLabel(_ text: String) -> some View {
-        Text(text.uppercasedInApp())
-            .font(DS.sans(.caption, .semibold))
-            .foregroundStyle(DS.inkTertiary)
-            .tracking(1.1)
+        ProfileGroupLabel(text: text)
     }
 
     private func submit() {

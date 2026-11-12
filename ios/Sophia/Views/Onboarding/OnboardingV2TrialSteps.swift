@@ -42,9 +42,9 @@ struct OnboardingV2TrialSteps: View {
         OV2ScrollableContent {
             pageBody
         } footer: {
-            OnboardingV2Button(title: languageManager.text("onboardingV2.trial.cta"), action: onNext)
+            OnboardingV2LegacyButton(title: languageManager.text("onboardingV2.trial.cta"), action: onNext)
         }
-        .ov2Background()
+        .ov2LegacyBackground()
         .onAppear {
             for i in 0..<steps.count {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.2 + Double(i) * 0.18) {
@@ -61,8 +61,8 @@ struct OnboardingV2TrialSteps: View {
             Spacer().frame(height: 72)
 
             Text(languageManager.text("onboardingV2.trial.title"))
-                .font(DS.title(.largeTitle, .heavy))
-                .foregroundStyle(OV2.ink)
+                .font(DSLegacy.title(.largeTitle, .heavy))
+                .foregroundStyle(OV2Legacy.ink)
                 .padding(.horizontal, 28)
                 .ov2Reveal(delay: 0.05)
 
@@ -75,17 +75,17 @@ struct OnboardingV2TrialSteps: View {
                             icon(step)
                             if i < steps.count - 1 {
                                 Rectangle()
-                                    .fill(OV2.accent.opacity(0.18))
+                                    .fill(OV2Legacy.accent.opacity(0.18))
                                     .frame(width: 3, height: 46)
                             }
                         }
                         VStack(alignment: .leading, spacing: 4) {
                             Text(step.title)
-                                .font(DS.title(.headline, .bold))
-                                .foregroundStyle(step.active ? OV2.accent : OV2.ink)
+                                .font(DSLegacy.title(.headline, .bold))
+                                .foregroundStyle(step.active ? OV2Legacy.accent : OV2Legacy.ink)
                             Text(step.detail)
-                                .font(DS.sans(.subheadline, .medium))
-                                .foregroundStyle(OV2.inkSecondary)
+                                .font(DSLegacy.sans(.subheadline, .medium))
+                                .foregroundStyle(OV2Legacy.inkSecondary)
                                 .fixedSize(horizontal: false, vertical: true)
                         }
                         .padding(.bottom, i < steps.count - 1 ? 14 : 0)
@@ -102,7 +102,7 @@ struct OnboardingV2TrialSteps: View {
     }
 
     private func icon(_ step: (icon: String, title: String, detail: String, active: Bool, done: Bool)) -> some View {
-        let bg: Color = step.done ? OV2.accent : (step.active ? OV2.accent : OV2.inkTertiary.opacity(0.35))
+        let bg: Color = step.done ? OV2Legacy.accent : (step.active ? OV2Legacy.accent : OV2Legacy.inkTertiary.opacity(0.35))
         return ZStack {
             Circle().fill(bg).frame(width: 40, height: 40)
             Image(systemName: step.icon)

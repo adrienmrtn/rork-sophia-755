@@ -73,7 +73,7 @@ struct PostCompletionRewardFlowView: View {
 
     private func advance() {
         if index < steps.count - 1 {
-            withAnimation(.easeInOut(duration: 0.28)) {
+            withAnimation(DS.Motion.reveal) {
                 index += 1
             }
         } else {

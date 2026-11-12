@@ -62,7 +62,7 @@ struct ShareSophiaSheet: View {
             Spacer().frame(height: 16)
 
             Text(languageManager.text("share.title"))
-                .font(DS.title(.title2, .heavy))
+                .font(DS.title(.title2, .semibold))
                 .foregroundStyle(DS.ink)
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 28)
@@ -70,7 +70,7 @@ struct ShareSophiaSheet: View {
             Spacer().frame(height: 8)
 
             Text(languageManager.text("share.subtitle"))
-                .font(DS.sans(.subheadline, .medium))
+                .font(DS.sans(.subheadline))
                 .foregroundStyle(DS.inkSecondary)
                 .multilineTextAlignment(.center)
                 .fixedSize(horizontal: false, vertical: true)
@@ -103,8 +103,8 @@ struct ShareSophiaSheet: View {
 
             Spacer().frame(height: 12)
 
+            // Le style du CTA fournit la pression élastique et la vibration.
             Button {
-                UIImpactFeedbackGenerator(style: .light).impactOccurred()
                 showSystemShare = true
             } label: {
                 HStack(spacing: 8) {
@@ -128,7 +128,7 @@ struct ShareSophiaSheet: View {
                 .presentationDetents([.medium, .large])
         }
         .onAppear {
-            withAnimation(.spring(response: 0.55, dampingFraction: 0.65).delay(0.1)) { appeared = true }
+            withAnimation(DS.Motion.pop.delay(0.1)) { appeared = true }
         }
     }
 
@@ -146,8 +146,8 @@ struct ShareSophiaSheet: View {
             Spacer(minLength: 8)
             Button {
                 UIPasteboard.general.string = SophiaShare.url.absoluteString
-                UINotificationFeedbackGenerator().notificationOccurred(.success)
-                withAnimation(.spring(response: 0.3, dampingFraction: 0.7)) { copied = true }
+                Haptics.success()
+                withAnimation(DS.Motion.snappy) { copied = true }
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1.8) {
                     withAnimation(.easeOut(duration: 0.3)) { copied = false }
                 }
@@ -155,6 +155,7 @@ struct ShareSophiaSheet: View {
                 HStack(spacing: 5) {
                     Image(systemName: copied ? "checkmark" : "doc.on.doc")
                         .font(.jakarta(size: 12, weight: .bold))
+                        .contentTransition(.symbolEffect(.replace))
                     Text(languageManager.text(copied ? "share.copied" : "share.copy"))
                         .font(DS.sans(.caption, .bold))
                         .lineLimit(1)
@@ -164,20 +165,15 @@ struct ShareSophiaSheet: View {
                 .padding(.vertical, 8)
                 .background(copied ? DS.success : DS.accentTint, in: Capsule())
             }
-            .buttonStyle(.plain)
+            .buttonStyle(PressableStyle(scale: 0.94, haptic: false))
         }
         .padding(.horizontal, 16)
         .padding(.vertical, 14)
-        .background(DS.surface, in: RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous))
-        .overlay {
-            RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous)
-                .strokeBorder(DS.hairline, lineWidth: 1)
-        }
+        .homeCard()
     }
 
     private func channelButton(title: String, icon: String, tint: Color, action: @escaping () -> Void) -> some View {
         Button {
-            UIImpactFeedbackGenerator(style: .light).impactOccurred()
             action()
         } label: {
             HStack(spacing: 8) {
@@ -190,10 +186,10 @@ struct ShareSophiaSheet: View {
             }
             .foregroundStyle(.white)
             .frame(maxWidth: .infinity)
-            .padding(.vertical, 15)
-            .background(tint, in: Capsule(style: .continuous))
+            .frame(height: 50)
+            .background(tint, in: RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous))
         }
-        .buttonStyle(SoftPressButtonStyle())
+        .buttonStyle(.pressable)
     }
 
     /// Ouvre l'app visée ; si elle n'est pas installée, la feuille de partage du système prend

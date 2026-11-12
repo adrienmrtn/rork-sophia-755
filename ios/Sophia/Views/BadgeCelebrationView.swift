@@ -77,7 +77,7 @@ struct BadgeCelebrationView: View {
 
             if showConfetti {
                 PathConfettiBurst(
-                    colors: [DS.warm, DS.accent, DS.accentSoft, DS.success],
+                    colors: [DS.warm, CoursePalette.goldTint, DS.accent, DS.success],
                     pieceCount: 70,
                     duration: 2.6,
                     origin: CGPoint(x: 0.5, y: 0.36)
@@ -124,7 +124,6 @@ struct BadgeCelebrationView: View {
                         }
                     }
                     .clipShape(Circle())
-                    .shadow(color: DS.warm.opacity(0.35), radius: 18, x: 0, y: 8)
                     .scaleEffect(reduceMotion ? 1 : (medalVisible ? 1 : 0.2))
                     .rotationEffect(.degrees(reduceMotion ? 0 : (medalVisible ? 0 : -24)))
                     .opacity(medalVisible ? 1 : 0)
@@ -134,13 +133,13 @@ struct BadgeCelebrationView: View {
 
             VStack(spacing: 8) {
                 Text(languageManager.text("badgeCelebration.kicker").uppercased(with: languageManager.locale))
-                    .font(DS.sans(.caption, .bold))
-                    .tracking(1.2)
+                    .font(DS.sans(.caption, .heavy))
+                    .tracking(0.9)
                     .foregroundStyle(DS.accent)
                     .multilineTextAlignment(.center)
 
                 Text(badge.title(language: languageManager.current))
-                    .font(DS.title(.title, .heavy))
+                    .font(CourseType.font(26, .semibold, relativeTo: .title))
                     .foregroundStyle(DS.ink)
                     .multilineTextAlignment(.center)
                     .lineLimit(3)
@@ -148,9 +147,10 @@ struct BadgeCelebrationView: View {
                     .fixedSize(horizontal: false, vertical: true)
 
                 Text(badge.condition(language: languageManager.current))
-                    .font(DS.sans(.subheadline, .medium))
+                    .font(DS.sans(.callout))
                     .foregroundStyle(DS.inkSecondary)
                     .multilineTextAlignment(.center)
+                    .lineSpacing(3)
                     .lineLimit(4)
                     .minimumScaleFactor(0.85)
                     .fixedSize(horizontal: false, vertical: true)
@@ -160,8 +160,8 @@ struct BadgeCelebrationView: View {
             .offset(y: textVisible || reduceMotion ? 0 : 14)
             .accessibilityElement(children: .combine)
 
+            // Vibre par son style.
             Button {
-                UIImpactFeedbackGenerator(style: .light).impactOccurred()
                 onContinue()
             } label: {
                 Text(languageManager.text("common.continue"))
@@ -170,14 +170,13 @@ struct BadgeCelebrationView: View {
             .padding(.top, 24)
             .opacity(textVisible ? 1 : 0)
         }
-        .padding(.horizontal, 22)
+        .padding(.horizontal, 20)
         .padding(.top, 10)
-        .padding(.bottom, 22)
+        .padding(.bottom, 20)
         .frame(maxWidth: .infinity)
-        .background(RoundedRectangle(cornerRadius: 30, style: .continuous).fill(DS.canvas))
-        .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
-        .overlay(RoundedRectangle(cornerRadius: 30, style: .continuous).strokeBorder(DS.hairline, lineWidth: 1))
-        .shadow(color: Color.black.opacity(0.25), radius: 30, x: 0, y: 14)
+        .background(RoundedRectangle(cornerRadius: 24, style: .continuous).fill(DS.surface))
+        .clipShape(RoundedRectangle(cornerRadius: 24, style: .continuous))
+        .overlay(RoundedRectangle(cornerRadius: 24, style: .continuous).strokeBorder(DS.hairline, lineWidth: 1.5))
         .opacity(backdropVisible ? 1 : 0)
         .scaleEffect(reduceMotion ? 1 : (backdropVisible ? 1 : 0.92))
         .accessibilityAddTraits(.isModal)
@@ -206,13 +205,13 @@ struct BadgeCelebrationView: View {
         UIImpactFeedbackGenerator(style: .light).impactOccurred()
 
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
-            withAnimation(.spring(response: 0.55, dampingFraction: 0.58)) { medalVisible = true }
+            withAnimation(DS.Motion.pop) { medalVisible = true }
             withAnimation(.linear(duration: 22).repeatForever(autoreverses: false)) { raysSpinning = true }
         }
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             UINotificationFeedbackGenerator().notificationOccurred(.success)
             showConfetti = true
-            withAnimation(.spring(response: 0.5, dampingFraction: 0.8)) { textVisible = true }
+            withAnimation(DS.Motion.reveal) { textVisible = true }
         }
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.72) {
             UIImpactFeedbackGenerator(style: .medium).impactOccurred()

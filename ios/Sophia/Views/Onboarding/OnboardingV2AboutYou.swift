@@ -1,97 +1,19 @@
 import SwiftUI
 
-/// Les pages « à propos de toi », juste avant les objectifs : prénom, âge, culture générale
-/// (curseur), motivation ; puis, après les objectifs, les sujets qui intéressent (six carrés).
+/// Les pages « à propos de toi », juste avant les objectifs : prénom, âge, culture générale,
+/// motivation ; puis, après les objectifs, les sujets qui intéressent (six rangées à cocher).
 /// Le prénom n'est pas répété dans les questions : il sert ensuite là où il porte (« Sophia va
 /// t'aider à atteindre tous tes objectifs », profil, chargement, après le compte).
-
-// MARK: - En-tête commun
-
-/// Titre et sous-titre d'une page question.
-private struct OnboardingV2QuestionHeader: View {
-    let title: String
-    var subtitle: String? = nil
-
-    var body: some View {
-        VStack(spacing: 8) {
-            Text(title)
-                .font(DS.title(.title, .heavy))
-                .foregroundStyle(OV2.ink)
-                .multilineTextAlignment(.center)
-            if let subtitle {
-                Text(subtitle)
-                    .font(DS.sans(.body, .medium))
-                    .foregroundStyle(OV2.inkSecondary)
-                    .multilineTextAlignment(.center)
-            }
-        }
-        .padding(.horizontal, 28)
-        .ov2Reveal(delay: 0.1)
-    }
-}
-
-// MARK: - Ligne de choix unique
-
-/// Une réponse parmi plusieurs : pastille (emoji) facultative, libellé, rond coché à droite.
-/// Même dessin que les lignes de la page objectifs, avec un rond à la place de la case.
-private struct OnboardingV2ChoiceRow: View {
-    var emoji: String? = nil
-    let label: String
-    let isSelected: Bool
-    let action: () -> Void
-
-    var body: some View {
-        Button(action: action) {
-            HStack(spacing: 14) {
-                if let emoji {
-                    Text(emoji)
-                        .font(.system(size: 24))
-                        .frame(width: 44, height: 44)
-                        .background((isSelected ? OV2.accent : OV2.accentSoft).opacity(isSelected ? 0.16 : 0.12), in: Circle())
-                }
-                Text(label)
-                    .font(DS.sans(.body, .semibold))
-                    .foregroundStyle(OV2.ink)
-                    .multilineTextAlignment(.leading)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                radio
-            }
-            .padding(.horizontal, 16)
-            .padding(.vertical, emoji == nil ? 16 : 14)
-            .background(
-                RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous)
-                    .fill(isSelected ? OV2.accentSoft.opacity(0.06) : OV2.surface)
-            )
-            .overlay(
-                RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous)
-                    .strokeBorder(isSelected ? OV2.accent : OV2.hairline, lineWidth: isSelected ? 2 : 1)
-            )
-        }
-        .buttonStyle(SoftPressButtonStyle())
-    }
-
-    private var radio: some View {
-        ZStack {
-            Circle()
-                .strokeBorder(isSelected ? OV2.accent : OV2.hairline, lineWidth: 2)
-                .frame(width: 22, height: 22)
-            if isSelected {
-                Circle().fill(OV2.accent).frame(width: 22, height: 22)
-                    .overlay {
-                        Image(systemName: "checkmark")
-                            .font(.system(size: 11, weight: .bold))
-                            .foregroundStyle(.white)
-                    }
-                    .transition(.scale.combined(with: .opacity))
-            }
-        }
-    }
-}
+///
+/// Mise en page commune (style « Elevate arrondi ») : titre centré en graisse moyenne,
+/// sous-titre gris, illustration ronde quand la hauteur le permet, puis les réponses en cartes
+/// d'option (`OV2CoreOptionRow`) et le CTA épinglé. L'en-tête (flèche retour, progression) est
+/// posé par le coordinateur.
 
 // MARK: - Prénom
 
 /// « Comment tu t'appelles ? » : un champ, le clavier qui arrive tout seul, « Continuer » dès
-/// qu'il y a un prénom, et un « Passer » discret pour qui ne veut pas le donner.
+/// qu'il y a un prénom, et « Passer » pour qui ne veut pas le donner.
 struct OnboardingV2Name: View {
     @Environment(LanguageManager.self) private var languageManager
     let vm: OnboardingV2ViewModel
@@ -105,38 +27,21 @@ struct OnboardingV2Name: View {
     }
 
     var body: some View {
-        // Le clavier prend la moitié d'un petit écran : le contenu défile, le CTA reste épinglé.
-        OV2ScrollableContent {
-            VStack(spacing: 0) {
-                Spacer().frame(height: 72)
-
-                OnboardingV2QuestionHeader(
-                    title: languageManager.text("onboardingV2.name.title"),
-                    subtitle: languageManager.text("onboardingV2.name.subtitle")
-                )
-
-                Spacer().frame(height: 36)
-
-                field
-                    .padding(.horizontal, 24)
-                    .ov2Reveal(delay: 0.25)
-
-                Spacer().frame(height: 24)
-            }
+        // Le clavier prend la moitié d'un petit écran : l'illustration se réduit (ou s'efface)
+        // selon la hauteur qui reste, le contenu défile au besoin, le CTA reste épinglé.
+        OV2CorePage { height in
+            pageBody(height: height)
         } footer: {
             VStack(spacing: 0) {
                 OnboardingV2Button(
                     title: languageManager.text("common.continue"),
                     enabled: !trimmed.isEmpty,
+                    bottomPadding: 8,
                     action: commit
                 )
-                Button(action: skip) {
-                    Text(languageManager.text("onboardingV2.name.skip"))
-                        .font(DS.sans(.subheadline, .semibold))
-                        .foregroundStyle(OV2.inkSecondary)
-                        .underline()
-                }
-                .padding(.bottom, 24)
+                skipButton
+                    .padding(.horizontal, OV2CoreMetrics.sideInset)
+                    .padding(.bottom, 20)
             }
         }
         .ov2Background()
@@ -149,17 +54,44 @@ struct OnboardingV2Name: View {
         }
     }
 
+    private func pageBody(height: CGFloat) -> some View {
+        let art: CGFloat = OV2CoreMetrics.artSize(base: 116, available: height, reserved: 200)
+        return VStack(spacing: 0) {
+            OV2CoreQuestionTitle(
+                title: languageManager.text("onboardingV2.name.title"),
+                subtitle: languageManager.text("onboardingV2.name.subtitle")
+            )
+            .padding(.top, OV2CoreMetrics.topInset)
+            .dsStagger(0)
+
+            if art > 0 {
+                OV2CoreIllustration(art: .reader, size: art)
+                    .padding(.top, 22)
+                    .dsPopIn(delay: 0.12)
+                    .transition(.scale(scale: 0.6).combined(with: .opacity))
+            }
+
+            field
+                .padding(.horizontal, OV2CoreMetrics.sideInset)
+                .padding(.top, 26)
+                .dsStagger(2)
+
+            Spacer(minLength: 12)
+        }
+        .animation(DS.Motion.snappy, value: art)
+    }
+
     private var field: some View {
         TextField(
             "",
             text: $name,
             prompt: Text(languageManager.text("onboardingV2.name.placeholder"))
-                .font(DS.title(.title2, .semibold))
+                .font(DS.sans(.headline, .semibold))
                 .foregroundStyle(OV2.inkTertiary)
         )
-        .font(DS.title(.title2, .semibold))
+        .font(DS.sans(.headline, .semibold))
         .foregroundStyle(OV2.ink)
-        .multilineTextAlignment(.center)
+        .multilineTextAlignment(.leading)
         .textContentType(.givenName)
         .textInputAutocapitalization(.words)
         .autocorrectionDisabled()
@@ -174,14 +106,47 @@ struct OnboardingV2Name: View {
                 name = String(newValue.prefix(limit))
             }
         }
-        .padding(.horizontal, 18)
-        .padding(.vertical, 18)
-        .background(OV2.surface, in: RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous))
+        .padding(.horizontal, 16)
+        .frame(minHeight: 58)
+        .background(
+            RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous)
+                .fill(OV2.surface)
+        )
         .overlay(
             RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous)
-                .strokeBorder(focused ? OV2.accent : OV2.hairline, lineWidth: focused ? 2 : 1)
+                .strokeBorder(focused ? OV2.accent : OV2.hairline, lineWidth: 1.5)
         )
-        .animation(.easeOut(duration: 0.2), value: focused)
+        .background(
+            // Le petit rebord bas des cartes du style.
+            RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous)
+                .fill(focused ? OV2.accent : OV2.hairline)
+                .offset(y: 1)
+        )
+        .contentShape(Rectangle())
+        .onTapGesture { focused = true }
+        .animation(DS.Motion.snappy, value: focused)
+    }
+
+    /// « Passer » : bouton secondaire, contour bleu clair sur fond blanc.
+    private var skipButton: some View {
+        Button(action: skip) {
+            Text(languageManager.text("onboardingV2.name.skip"))
+                .font(DS.sans(.callout, .semibold))
+                .foregroundStyle(OV2.accent)
+                .frame(maxWidth: .infinity)
+                .frame(minHeight: 54)
+                .background(
+                    RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous)
+                        .fill(OV2.surface)
+                )
+                .overlay(
+                    RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous)
+                        .strokeBorder(OV2.accent.opacity(0.33), lineWidth: 1.5)
+                )
+                .contentShape(Rectangle())
+        }
+        // Pas de vibration de style : `skip()` puis le coordinateur s'en chargent déjà.
+        .buttonStyle(PressableStyle(haptic: false))
     }
 
     private func commit() {
@@ -206,39 +171,10 @@ struct OnboardingV2Age: View {
     let vm: OnboardingV2ViewModel
     let onNext: () -> Void
 
-    @State private var revealed = 0
-
     var body: some View {
-        VStack(spacing: 0) {
-            Spacer().frame(height: 72)
-
-            OnboardingV2QuestionHeader(
-                title: languageManager.text("onboardingV2.age.title"),
-                subtitle: languageManager.text("onboardingV2.age.subtitle")
-            )
-
-            Spacer().frame(height: 24)
-
-            ScrollView(showsIndicators: false) {
-                VStack(spacing: 12) {
-                    ForEach(Array(OnboardingV2ViewModel.ageRangeKeys.enumerated()), id: \.element) { index, key in
-                        OnboardingV2ChoiceRow(
-                            label: OnboardingV2ViewModel.ageRangeLabel(key, language: languageManager.current),
-                            isSelected: vm.ageRangeKey == key
-                        ) {
-                            OnboardingHaptics.selection()
-                            withAnimation(.spring(response: 0.3, dampingFraction: 0.8)) {
-                                vm.ageRangeKey = key
-                            }
-                        }
-                        .opacity(index < revealed ? 1 : 0)
-                        .offset(y: index < revealed ? 0 : 18)
-                    }
-                }
-                .padding(.horizontal, 24)
-                .padding(.bottom, 12)
-            }
-
+        OV2CorePage { height in
+            pageBody(height: height)
+        } footer: {
             OnboardingV2Button(
                 title: languageManager.text("common.continue"),
                 enabled: vm.ageRangeKey != nil,
@@ -246,17 +182,44 @@ struct OnboardingV2Age: View {
             )
         }
         .ov2Background()
-        .onAppear {
-            revealRows(count: OnboardingV2ViewModel.ageRangeKeys.count)
+    }
+
+    private func pageBody(height: CGFloat) -> some View {
+        let art: CGFloat = OV2CoreMetrics.artSize(base: 124, available: height, reserved: 506)
+        return VStack(spacing: 0) {
+            OV2CoreQuestionTitle(
+                title: languageManager.text("onboardingV2.age.title"),
+                subtitle: languageManager.text("onboardingV2.age.subtitle")
+            )
+            .padding(.top, OV2CoreMetrics.topInset)
+            .dsStagger(0)
+
+            if art > 0 {
+                OV2CoreIllustration(art: .mirror, size: art)
+                    .padding(.top, 22)
+                    .dsPopIn(delay: 0.12)
+            }
+
+            rows
+                .padding(.horizontal, OV2CoreMetrics.sideInset)
+                .padding(.top, 24)
+                .padding(.bottom, 16)
         }
     }
 
-    private func revealRows(count: Int) {
-        for i in 0..<count {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.15 + Double(i) * 0.07) {
-                withAnimation(.spring(response: 0.5, dampingFraction: 0.8)) {
-                    revealed = i + 1
-                }
+    private var rows: some View {
+        VStack(spacing: 10) {
+            ForEach(Array(OnboardingV2ViewModel.ageRangeKeys.enumerated()), id: \.element) { index, key in
+                OV2CoreOptionRow(
+                    label: OnboardingV2ViewModel.ageRangeLabel(key, language: languageManager.current),
+                    isSelected: vm.ageRangeKey == key,
+                    action: {
+                        withAnimation(DS.Motion.snappy) {
+                            vm.ageRangeKey = key
+                        }
+                    }
+                )
+                .dsStagger(index, base: 0.18)
             }
         }
     }
@@ -264,57 +227,21 @@ struct OnboardingV2Age: View {
 
 // MARK: - Culture générale
 
-/// « Comment évalues-tu ta culture générale ? » : un curseur à quatre crans, de « pas
-/// terrible » à « très bonne », avec l'emoji et le libellé du cran au-dessus.
+/// « Comment évalues-tu ta culture générale ? » : quatre niveaux, de « pas terrible » à « très
+/// bonne », une seule réponse. Le niveau déjà connu (« correcte » par défaut) est présélectionné,
+/// si bien que « Continuer » est toujours disponible.
 struct OnboardingV2Knowledge: View {
     @Environment(LanguageManager.self) private var languageManager
     let vm: OnboardingV2ViewModel
     let onNext: () -> Void
 
-    /// Position continue du pouce (0 … levelCount − 1) : il suit le doigt sans à-coups, puis
-    /// se pose sur le cran le plus proche quand on le lâche.
-    @State private var level: Double = 1
     @State private var step: Int = 1
-    @State private var dragging = false
 
     private static let levelCount = OnboardingV2ViewModel.knowledgeLevelCount
-    private static let thumbSize: CGFloat = 30
 
     var body: some View {
-        OV2ScrollableContent {
-            VStack(spacing: 0) {
-                Spacer().frame(height: 72)
-
-                OnboardingV2QuestionHeader(
-                    title: languageManager.text("onboardingV2.knowledge.title"),
-                    subtitle: languageManager.text("onboardingV2.knowledge.subtitle")
-                )
-
-                Spacer().frame(height: 36)
-
-                VStack(spacing: 12) {
-                    Text(OnboardingV2ViewModel.knowledgeLevelEmoji(step))
-                        .font(.system(size: 72))
-                        .id("emoji-\(step)")
-                        .transition(.scale(scale: 0.6).combined(with: .opacity))
-                    Text(OnboardingV2ViewModel.knowledgeLevelLabel(step, language: languageManager.current))
-                        .font(DS.title(.title, .heavy))
-                        .foregroundStyle(OV2.accent)
-                        .id("label-\(step)")
-                        .transition(.opacity.combined(with: .offset(y: 6)))
-                }
-                .frame(height: 150)
-                .animation(.spring(response: 0.38, dampingFraction: 0.78), value: step)
-                .ov2Reveal(delay: 0.25)
-
-                Spacer().frame(height: 28)
-
-                slider
-                    .padding(.horizontal, 36)
-                    .ov2Reveal(delay: 0.35)
-
-                Spacer().frame(height: 24)
-            }
+        OV2CorePage { height in
+            pageBody(height: height)
         } footer: {
             OnboardingV2Button(title: languageManager.text("common.continue")) {
                 vm.knowledgeLevel = step
@@ -324,113 +251,51 @@ struct OnboardingV2Knowledge: View {
         .ov2Background()
         .onAppear {
             step = vm.knowledgeLevel
-            level = Double(step)
         }
     }
 
-    // MARK: - Curseur
+    private func pageBody(height: CGFloat) -> some View {
+        let art: CGFloat = OV2CoreMetrics.artSize(base: 124, available: height, reserved: 430)
+        return VStack(spacing: 0) {
+            OV2CoreQuestionTitle(
+                title: languageManager.text("onboardingV2.knowledge.title"),
+                subtitle: languageManager.text("onboardingV2.knowledge.subtitle")
+            )
+            .padding(.top, OV2CoreMetrics.topInset)
+            .dsStagger(0)
 
-    /// Le rail, quatre crans, le pouce ; puis les libellés, un par cran, à largeur égale.
-    private var slider: some View {
-        VStack(spacing: 14) {
-            GeometryReader { geo in
-                let inset = Self.thumbSize / 2
-                let span = max(geo.size.width - inset * 2, 1)
-                let thumbX = inset + span * CGFloat(level) / CGFloat(Self.levelCount - 1)
-                let midY = geo.size.height / 2
+            if art > 0 {
+                OV2CoreIllustration(art: .growth, size: art)
+                    .padding(.top, 22)
+                    .dsPopIn(delay: 0.12)
+            }
 
-                ZStack(alignment: .leading) {
-                    Capsule().fill(OV2.hairline).frame(height: 6)
-                    Capsule().fill(OV2.accent).frame(width: thumbX, height: 6)
+            rows
+                .padding(.horizontal, OV2CoreMetrics.sideInset)
+                .padding(.top, 24)
+                .padding(.bottom, 16)
+        }
+    }
 
-                    ForEach(0..<Self.levelCount, id: \.self) { i in
-                        Circle()
-                            .fill(i <= step ? OV2.accent : OV2.hairline)
-                            .overlay(Circle().strokeBorder(OV2.bg, lineWidth: 2))
-                            .frame(width: 14, height: 14)
-                            .position(x: Self.tickX(i, inset: inset, span: span), y: midY)
-                    }
-
-                    Circle()
-                        .fill(.white)
-                        .overlay(Circle().strokeBorder(OV2.accent, lineWidth: 3))
-                        .shadow(color: .black.opacity(0.18), radius: 8, y: 3)
-                        .frame(width: Self.thumbSize, height: Self.thumbSize)
-                        .scaleEffect(dragging ? 1.12 : 1)
-                        .animation(.spring(response: 0.25, dampingFraction: 0.7), value: dragging)
-                        .position(x: thumbX, y: midY)
-                }
-                .contentShape(Rectangle())
-                .gesture(
-                    DragGesture(minimumDistance: 0)
-                        .onChanged { value in
-                            dragging = true
-                            let fraction = (value.location.x - inset) / span
-                            move(to: Double(min(max(fraction, 0), 1)) * Double(Self.levelCount - 1))
-                        }
-                        .onEnded { _ in
-                            dragging = false
-                            withAnimation(.spring(response: 0.35, dampingFraction: 0.75)) {
-                                level = Double(step)
-                            }
-                        }
+    private var rows: some View {
+        VStack(spacing: 10) {
+            ForEach(0..<Self.levelCount, id: \.self) { level in
+                OV2CoreOptionRow(
+                    label: OnboardingV2ViewModel.knowledgeLevelLabel(level, language: languageManager.current),
+                    isSelected: step == level,
+                    action: { select(level) }
                 )
+                .dsStagger(level, base: 0.18)
             }
-            .frame(height: Self.thumbSize + 8)
-            .accessibilityElement()
-            .accessibilityLabel(Text(languageManager.text("onboardingV2.knowledge.title")))
-            .accessibilityValue(Text(OnboardingV2ViewModel.knowledgeLevelLabel(step, language: languageManager.current)))
-            .accessibilityAdjustableAction { direction in
-                switch direction {
-                case .increment: move(to: Double(min(step + 1, Self.levelCount - 1)), snap: true)
-                case .decrement: move(to: Double(max(step - 1, 0)), snap: true)
-                @unknown default: break
-                }
-            }
-
-            tickLabels
         }
     }
 
-    /// Le pouce suit la position donnée ; le cran change (emoji, libellé, vibration) dès que
-    /// le pouce dépasse la moitié du chemin vers le cran voisin.
-    private func move(to value: Double, snap: Bool = false) {
-        if snap {
-            withAnimation(.spring(response: 0.35, dampingFraction: 0.75)) { level = value }
-        } else {
-            level = value
+    private func select(_ level: Int) {
+        guard level != step else { return }
+        withAnimation(DS.Motion.snappy) {
+            step = level
         }
-        let s = Int(value.rounded())
-        if s != step {
-            step = s
-            vm.knowledgeLevel = s
-            OnboardingHaptics.selection()
-        }
-    }
-
-    private static func tickX(_ i: Int, inset: CGFloat, span: CGFloat) -> CGFloat {
-        inset + span * CGFloat(i) / CGFloat(levelCount - 1)
-    }
-
-    /// Un libellé centré sous chaque cran, tous de la même largeur, sur deux lignes au plus.
-    private var tickLabels: some View {
-        GeometryReader { geo in
-            let inset = Self.thumbSize / 2
-            let span = max(geo.size.width - inset * 2, 1)
-            let labelWidth = span / CGFloat(Self.levelCount - 1) - 6
-            ForEach(0..<Self.levelCount, id: \.self) { i in
-                Text(OnboardingV2ViewModel.knowledgeLevelLabel(i, language: languageManager.current))
-                    .font(DS.sans(.caption, i == step ? .bold : .medium))
-                    .foregroundStyle(i == step ? OV2.accent : OV2.inkTertiary)
-                    .multilineTextAlignment(.center)
-                    .lineLimit(2)
-                    .minimumScaleFactor(0.8)
-                    .frame(width: labelWidth)
-                    .position(x: Self.tickX(i, inset: inset, span: span), y: 16)
-            }
-        }
-        .frame(height: 34)
-        .animation(.easeInOut(duration: 0.2), value: step)
+        vm.knowledgeLevel = level
     }
 }
 
@@ -442,40 +307,22 @@ struct OnboardingV2Motivation: View {
     let vm: OnboardingV2ViewModel
     let onNext: () -> Void
 
-    @State private var revealed = 0
-
     var body: some View {
-        VStack(spacing: 0) {
-            Spacer().frame(height: 72)
+        OV2ScrollableContent {
+            VStack(spacing: 0) {
+                OV2CoreQuestionTitle(
+                    title: languageManager.text("onboardingV2.motivation.title"),
+                    subtitle: languageManager.text("onboardingV2.motivation.subtitle")
+                )
+                .padding(.top, OV2CoreMetrics.topInset)
+                .dsStagger(0)
 
-            OnboardingV2QuestionHeader(
-                title: languageManager.text("onboardingV2.motivation.title"),
-                subtitle: languageManager.text("onboardingV2.motivation.subtitle")
-            )
-
-            Spacer().frame(height: 24)
-
-            ScrollView(showsIndicators: false) {
-                VStack(spacing: 12) {
-                    ForEach(Array(OnboardingV2ViewModel.motivationKeys.enumerated()), id: \.element) { index, key in
-                        OnboardingV2ChoiceRow(
-                            emoji: OnboardingV2ViewModel.motivationEmoji(key),
-                            label: OnboardingV2ViewModel.motivationLabel(key, language: languageManager.current),
-                            isSelected: vm.motivationKey == key
-                        ) {
-                            OnboardingHaptics.selection()
-                            withAnimation(.spring(response: 0.3, dampingFraction: 0.8)) {
-                                vm.motivationKey = key
-                            }
-                        }
-                        .opacity(index < revealed ? 1 : 0)
-                        .offset(y: index < revealed ? 0 : 18)
-                    }
-                }
-                .padding(.horizontal, 24)
-                .padding(.bottom, 12)
+                rows
+                    .padding(.horizontal, OV2CoreMetrics.sideInset)
+                    .padding(.top, 28)
+                    .padding(.bottom, 16)
             }
-
+        } footer: {
             OnboardingV2Button(
                 title: languageManager.text("common.continue"),
                 enabled: vm.motivationKey != nil,
@@ -483,139 +330,107 @@ struct OnboardingV2Motivation: View {
             )
         }
         .ov2Background()
-        .onAppear {
-            for i in 0..<OnboardingV2ViewModel.motivationKeys.count {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.15 + Double(i) * 0.07) {
-                    withAnimation(.spring(response: 0.5, dampingFraction: 0.8)) {
-                        revealed = i + 1
-                    }
-                }
+    }
+
+    private var rows: some View {
+        VStack(spacing: 10) {
+            ForEach(Array(OnboardingV2ViewModel.motivationKeys.enumerated()), id: \.element) { index, key in
+                OV2CoreOptionRow(
+                    label: OnboardingV2ViewModel.motivationLabel(key, language: languageManager.current),
+                    isSelected: vm.motivationKey == key,
+                    action: {
+                        withAnimation(DS.Motion.snappy) {
+                            vm.motivationKey = key
+                        }
+                    },
+                    leading: { pictogram(for: key) }
+                )
+                .dsStagger(index, base: 0.14)
             }
+        }
+    }
+
+    /// Pictogramme au trait de chaque raison, dans sa couleur.
+    private func pictogram(for key: String) -> some View {
+        Image(systemName: Self.symbolName(for: key))
+            .font(.system(size: 20, weight: .semibold))
+            .foregroundStyle(Self.symbolColor(for: key))
+            .frame(width: 26, height: 26)
+            .accessibilityHidden(true)
+    }
+
+    private static func symbolName(for key: String) -> String {
+        switch key {
+        case "grow": return "leaf"
+        case "conversations": return "bubble.left"
+        case "career": return "briefcase"
+        case "sharp": return "bolt"
+        case "world": return "globe"
+        default: return "sparkles"
+        }
+    }
+
+    private static func symbolColor(for key: String) -> Color {
+        switch key {
+        case "grow": return DS.success
+        case "conversations": return DS.danger
+        case "career": return Color(red: 0.541, green: 0.353, blue: 0.0)
+        case "sharp": return Color(red: 0.420, green: 0.247, blue: 0.627)
+        default: return DS.accent
         }
     }
 }
 
 // MARK: - Sujets
 
-/// « Quels sujets t'intéressent le plus ? » : les six matières en carrés, deux par ligne,
-/// sélection multiple.
+/// « Quels sujets t'intéressent le plus ? » : les six matières, une rangée chacune avec sa
+/// vignette et une case à cocher, sélection multiple.
 struct OnboardingV2Topics: View {
     @Environment(LanguageManager.self) private var languageManager
     let vm: OnboardingV2ViewModel
     let onNext: () -> Void
 
-    @State private var revealed = 0
-
-    private static let spacing: CGFloat = 12
-
     var body: some View {
-        GeometryReader { geo in
-            let side = Self.squareSide(for: geo.size)
+        OV2ScrollableContent {
             VStack(spacing: 0) {
-                Spacer().frame(height: geo.size.height < 700 ? 48 : 72)
-
-                OnboardingV2QuestionHeader(
+                OV2CoreQuestionTitle(
                     title: languageManager.text("onboardingV2.topics.title"),
                     subtitle: languageManager.text("onboardingV2.topics.subtitle")
                 )
+                .padding(.top, OV2CoreMetrics.topInset)
+                .dsStagger(0)
 
-                Spacer().frame(height: 22)
-
-                // Les carrés sont dimensionnés pour tenir ; le défilement n'est qu'un filet
-                // (grande taille de texte, très petit écran).
-                ScrollView(showsIndicators: false) {
-                    grid(side: side)
-                        .frame(maxWidth: .infinity)
-                        .padding(.vertical, 8)
-                }
-
-                OnboardingV2Button(
-                    title: languageManager.text("common.continue"),
-                    enabled: !vm.topicKeys.isEmpty,
-                    action: onNext
-                )
+                rows
+                    .padding(.horizontal, OV2CoreMetrics.sideInset)
+                    .padding(.top, 28)
+                    .padding(.bottom, 16)
             }
-            .frame(width: geo.size.width, height: geo.size.height)
+        } footer: {
+            OnboardingV2Button(
+                title: languageManager.text("common.continue"),
+                enabled: !vm.topicKeys.isEmpty,
+                action: onNext
+            )
         }
         .ov2Background()
-        .onAppear {
-            for i in 0..<Subject.allCases.count {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.15 + Double(i) * 0.07) {
-                    withAnimation(.spring(response: 0.5, dampingFraction: 0.8)) {
-                        revealed = i + 1
-                    }
-                }
-            }
-        }
     }
 
-    /// Deux carrés par ligne dans la largeur et, quand c'est possible, trois lignes dans la
-    /// hauteur ; jamais plus petits que 96 pt.
-    private static func squareSide(for size: CGSize) -> CGFloat {
-        let byWidth: CGFloat = (min(size.width, OV2.readableWidth) - 48 - spacing) / 2
-        let chrome: CGFloat = size.height < 700 ? 300 : 330
-        let byHeight: CGFloat = (size.height - chrome - spacing * 2) / 3
-        return max(96, min(byWidth, byHeight))
-    }
-
-    private func grid(side: CGFloat) -> some View {
-        let columns = Array(repeating: GridItem(.fixed(side), spacing: Self.spacing), count: 2)
-        return LazyVGrid(columns: columns, spacing: Self.spacing) {
+    private var rows: some View {
+        VStack(spacing: 10) {
             ForEach(Array(Subject.allCases.enumerated()), id: \.element) { index, subject in
-                square(subject, index: index, side: side)
+                OV2CoreOptionRow(
+                    label: subject.localizedName(language: languageManager.current),
+                    isSelected: vm.isTopicSelected(subject.storageKey),
+                    showsCheckbox: true,
+                    action: {
+                        withAnimation(DS.Motion.snappy) {
+                            vm.toggleTopic(subject.storageKey)
+                        }
+                    },
+                    leading: { OV2CoreSubjectBadge(subject: subject, size: 30) }
+                )
+                .dsStagger(index, base: 0.14)
             }
         }
-        .frame(width: side * 2 + Self.spacing)
-    }
-
-    private func square(_ subject: Subject, index: Int, side: CGFloat) -> some View {
-        let isSelected = vm.isTopicSelected(subject.storageKey)
-        return Button {
-            OnboardingHaptics.selection()
-            withAnimation(.spring(response: 0.3, dampingFraction: 0.75)) {
-                vm.toggleTopic(subject.storageKey)
-            }
-        } label: {
-            VStack(spacing: 10) {
-                Text(subject.emoji)
-                    .font(.system(size: side * 0.3))
-                    .frame(width: side * 0.46, height: side * 0.46)
-                    .background(subject.color.opacity(isSelected ? 0.24 : 0.14), in: Circle())
-                Text(subject.localizedShortName(language: languageManager.current))
-                    .font(DS.sans(.subheadline, .bold))
-                    .foregroundStyle(OV2.ink)
-                    .multilineTextAlignment(.center)
-                    .lineLimit(2)
-                    .minimumScaleFactor(0.8)
-                    .padding(.horizontal, 8)
-            }
-            .frame(width: side, height: side)
-            .background(
-                RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
-                    .fill(isSelected ? OV2.accentSoft.opacity(0.08) : OV2.surface)
-            )
-            .overlay(
-                RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
-                    .strokeBorder(isSelected ? OV2.accent : OV2.hairline, lineWidth: isSelected ? 2 : 1)
-            )
-            .overlay(alignment: .topTrailing) {
-                if isSelected {
-                    ZStack {
-                        Circle().fill(OV2.accent)
-                        Image(systemName: "checkmark")
-                            .font(.system(size: 11, weight: .bold))
-                            .foregroundStyle(.white)
-                    }
-                    .frame(width: 24, height: 24)
-                    .padding(10)
-                    .transition(.scale.combined(with: .opacity))
-                }
-            }
-            .shadow(color: .black.opacity(isSelected ? 0.08 : 0.04), radius: 10, y: 5)
-        }
-        .buttonStyle(SoftPressButtonStyle())
-        .opacity(index < revealed ? 1 : 0)
-        .offset(y: index < revealed ? 0 : 18)
-        .scaleEffect(index < revealed ? 1 : 0.94)
     }
 }

@@ -14,8 +14,10 @@ struct PrivacyPolicyView: View {
                 ScrollView {
                     VStack(alignment: .leading, spacing: 22) {
                         ForEach(LegalDocumentContent.privacy(language: languageManager.current)) { section in
-                            sectionTitle(section.title)
-                            sectionBody(section.body)
+                            VStack(alignment: .leading, spacing: 8) {
+                                sectionTitle(section.title)
+                                sectionBody(section.body)
+                            }
                         }
                     }
                     .padding(.horizontal, 20)
@@ -38,42 +40,36 @@ struct PrivacyPolicyView: View {
         Text(text)
             .font(DS.sans(.subheadline))
             .foregroundStyle(DS.inkSecondary)
-            .lineSpacing(4)
+            .lineSpacing(5)
             .frame(maxWidth: .infinity, alignment: .leading)
             .multilineTextAlignment(.leading)
     }
 }
 
-/// Shared calm header for legal / support sheets (Terms, Privacy, Feedback, Ambassador).
+/// Shared calm header for legal / support sheets (Terms, Privacy, Feedback, Ambassador):
+/// the title in a medium weight, and the round close button of the design.
 struct LegalHeader: View {
     let title: String
     let onClose: () -> Void
 
     var body: some View {
-        HStack(alignment: .center) {
+        HStack(alignment: .center, spacing: 12) {
             Text(title)
-                .font(DS.title(.largeTitle, .semibold))
+                .font(DS.title(.title, .semibold))
                 .foregroundStyle(DS.ink)
+                .fixedSize(horizontal: false, vertical: true)
+                .accessibilityAddTraits(.isHeader)
 
-            Spacer()
+            Spacer(minLength: 8)
 
-            Button(action: onClose) {
-                Image(systemName: "xmark")
-                    .font(.jakarta(size: 14, weight: .medium))
-                    .foregroundStyle(DS.inkSecondary)
-                    .frame(width: 38, height: 38)
-                    .background(DS.surface, in: Circle())
-                    .overlay { Circle().strokeBorder(DS.hairline, lineWidth: 1) }
-            }
-            .buttonStyle(SoftPressButtonStyle())
+            ProfileRoundButton(
+                systemImage: "xmark",
+                accessibilityLabel: AppLocalizable.string("common.close", language: AppLanguage.currentPersisted()),
+                action: onClose
+            )
         }
         .padding(.horizontal, 20)
         .padding(.top, 24)
         .padding(.bottom, 14)
-        .overlay(alignment: .bottom) {
-            Rectangle()
-                .fill(DS.hairline)
-                .frame(height: 1)
-        }
     }
 }

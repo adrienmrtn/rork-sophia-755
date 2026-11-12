@@ -36,7 +36,7 @@ struct SophiaAudioPaywall: View {
 
     var body: some View {
         ZStack {
-            DS.canvas.ignoresSafeArea()
+            DSLegacy.canvas.ignoresSafeArea()
 
             VStack(spacing: 0) {
                 HStack {
@@ -63,7 +63,7 @@ struct SophiaAudioPaywall: View {
                     .opacity(appeared ? 1 : 0)
                     .offset(y: appeared ? 0 : 20)
             }
-            .frame(maxWidth: OV2.readableWidth)
+            .frame(maxWidth: OV2Legacy.readableWidth)
         }
         .onAppear {
             if let course { cover = CourseImageMap.loadImage(for: course.id) }
@@ -90,28 +90,28 @@ struct SophiaAudioPaywall: View {
                 .resizable()
                 .scaledToFill()
                 .frame(width: 180, height: 180)
-                .clipShape(.rect(cornerRadius: DS.Radius.card))
+                .clipShape(.rect(cornerRadius: DSLegacy.Radius.card))
                 .overlay {
-                    RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
-                        .strokeBorder(DS.hairline, lineWidth: 1)
+                    RoundedRectangle(cornerRadius: DSLegacy.Radius.card, style: .continuous)
+                        .strokeBorder(DSLegacy.hairline, lineWidth: 1)
                 }
                 .overlay(alignment: .bottomTrailing) {
                     Image(systemName: "headphones")
                         .font(.system(size: 22, weight: .semibold))
                         .foregroundStyle(.white)
                         .frame(width: 52, height: 52)
-                        .background(DS.accent, in: Circle())
-                        .overlay { Circle().strokeBorder(DS.canvas, lineWidth: 3) }
+                        .background(DSLegacy.accent, in: Circle())
+                        .overlay { Circle().strokeBorder(DSLegacy.canvas, lineWidth: 3) }
                         .offset(x: 14, y: 14)
                 }
-                .dsSoftShadow()
+                .dsLegacySoftShadow()
                 .padding(.bottom, 8)
         } else {
             Image(systemName: "headphones")
                 .font(.system(size: 42, weight: .semibold))
-                .foregroundStyle(DS.accent)
+                .foregroundStyle(DSLegacy.accent)
                 .frame(width: 92, height: 92)
-                .background(DS.accentTint, in: Circle())
+                .background(DSLegacy.accentTint, in: Circle())
         }
     }
 
@@ -120,14 +120,14 @@ struct SophiaAudioPaywall: View {
     private var headline: some View {
         VStack(spacing: 10) {
             Text(languageManager.text("paywall.audio.title"))
-                .font(DS.title(.title, .heavy))
-                .foregroundStyle(DS.ink)
+                .font(DSLegacy.title(.title, .heavy))
+                .foregroundStyle(DSLegacy.ink)
                 .multilineTextAlignment(.center)
                 .fixedSize(horizontal: false, vertical: true)
 
             Text(languageManager.text("paywall.audio.subtitle"))
-                .font(DS.sans(.subheadline))
-                .foregroundStyle(DS.inkSecondary)
+                .font(DSLegacy.sans(.subheadline))
+                .foregroundStyle(DSLegacy.inkSecondary)
                 .multilineTextAlignment(.center)
                 .fixedSize(horizontal: false, vertical: true)
         }
@@ -144,11 +144,11 @@ struct SophiaAudioPaywall: View {
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(18)
-        .background(DS.surface)
-        .clipShape(.rect(cornerRadius: DS.Radius.card))
+        .background(DSLegacy.surface)
+        .clipShape(.rect(cornerRadius: DSLegacy.Radius.card))
         .overlay {
-            RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
-                .strokeBorder(DS.hairline, lineWidth: 1)
+            RoundedRectangle(cornerRadius: DSLegacy.Radius.card, style: .continuous)
+                .strokeBorder(DSLegacy.hairline, lineWidth: 1)
         }
     }
 
@@ -156,12 +156,12 @@ struct SophiaAudioPaywall: View {
         HStack(alignment: .center, spacing: 14) {
             Image(systemName: icon)
                 .font(.system(size: 16, weight: .semibold))
-                .foregroundStyle(DS.accentSoft)
+                .foregroundStyle(DSLegacy.accentSoft)
                 .frame(width: 36, height: 36)
-                .background(DS.accentTint, in: Circle())
+                .background(DSLegacy.accentTint, in: Circle())
             Text(languageManager.text(key))
-                .font(DS.sans(.subheadline, .medium))
-                .foregroundStyle(DS.ink)
+                .font(DSLegacy.sans(.subheadline, .medium))
+                .foregroundStyle(DSLegacy.ink)
                 .fixedSize(horizontal: false, vertical: true)
                 .frame(maxWidth: .infinity, alignment: .leading)
         }
@@ -172,8 +172,8 @@ struct SophiaAudioPaywall: View {
     private var bottomBar: some View {
         VStack(spacing: 10) {
             Text(priceLine)
-                .font(DS.sans(.footnote, .medium))
-                .foregroundStyle(DS.inkTertiary)
+                .font(DSLegacy.sans(.footnote, .medium))
+                .foregroundStyle(DSLegacy.inkTertiary)
                 .multilineTextAlignment(.center)
 
             Button(action: purchase) {
@@ -187,7 +187,7 @@ struct SophiaAudioPaywall: View {
                     }
                 }
             }
-            .buttonStyle(DSPrimaryButtonStyle())
+            .buttonStyle(DSLegacyPrimaryButtonStyle())
             .disabled(purchasing)
             .padding(.horizontal, 24)
 
@@ -213,10 +213,10 @@ struct SophiaAudioPaywall: View {
         } label: {
             Image(systemName: "xmark")
                 .font(.system(size: 15, weight: .semibold))
-                .foregroundStyle(DS.inkSecondary)
+                .foregroundStyle(DSLegacy.inkSecondary)
                 .frame(width: 40, height: 40)
-                .background(DS.surface, in: Circle())
-                .overlay { Circle().strokeBorder(DS.hairline, lineWidth: 1) }
+                .background(DSLegacy.surface, in: Circle())
+                .overlay { Circle().strokeBorder(DSLegacy.hairline, lineWidth: 1) }
         }
     }
 

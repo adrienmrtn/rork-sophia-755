@@ -20,13 +20,13 @@ struct PaywallLegalRow: View {
                 Button(languageManager.text("paywall.restore"), action: onRestore)
                 HStack(spacing: 6) {
                     Button(languageManager.text("settings.terms.title")) { showTerms = true }
-                    Text("·").foregroundStyle(DS.inkTertiary)
+                    Text("·").foregroundStyle(DSLegacy.inkTertiary)
                     Button(languageManager.text("settings.privacy.title")) { showPrivacy = true }
                 }
             }
         }
-        .font(DS.sans(.caption2, .medium))
-        .foregroundStyle(DS.inkTertiary)
+        .font(DSLegacy.sans(.caption2, .medium))
+        .foregroundStyle(DSLegacy.inkTertiary)
         .multilineTextAlignment(.center)
         .minimumScaleFactor(0.85)
         .frame(maxWidth: .infinity)
@@ -37,9 +37,9 @@ struct PaywallLegalRow: View {
     @ViewBuilder
     private var legalButtons: some View {
         Button(languageManager.text("paywall.restore"), action: onRestore)
-        Text("·").foregroundStyle(DS.inkTertiary)
+        Text("·").foregroundStyle(DSLegacy.inkTertiary)
         Button(languageManager.text("settings.terms.title")) { showTerms = true }
-        Text("·").foregroundStyle(DS.inkTertiary)
+        Text("·").foregroundStyle(DSLegacy.inkTertiary)
         Button(languageManager.text("settings.privacy.title")) { showPrivacy = true }
     }
 }
@@ -70,8 +70,8 @@ struct PaywallPriceFootnote: View {
 
     var body: some View {
         Text(text)
-            .font(DS.sans(.footnote, .medium))
-            .foregroundStyle(DS.inkTertiary)
+            .font(DSLegacy.sans(.footnote, .medium))
+            .foregroundStyle(DSLegacy.inkTertiary)
             .multilineTextAlignment(.center)
             .fixedSize(horizontal: false, vertical: true)
             .frame(maxWidth: .infinity)
@@ -104,27 +104,27 @@ struct PaywallUnlockList: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
             Text(languageManager.text(titleKey).uppercasedInApp())
-                .font(DS.sans(.caption, .heavy))
+                .font(DSLegacy.sans(.caption, .heavy))
                 .tracking(0.8)
-                .foregroundStyle(DS.accentSoft)
+                .foregroundStyle(DSLegacy.accentSoft)
 
             VStack(spacing: 0) {
                 ForEach(Array(items.enumerated()), id: \.element.id) { index, item in
                     if index > 0 {
-                        Divider().overlay(DS.accentSoft.opacity(0.14)).padding(.leading, 44)
+                        Divider().overlay(DSLegacy.accentSoft.opacity(0.14)).padding(.leading, 44)
                     }
                     HStack(spacing: 12) {
                         Text(item.emoji)
                             .font(.system(size: 19))
                             .frame(width: 32, height: 32)
-                            .background(DS.surface, in: RoundedRectangle(cornerRadius: 9, style: .continuous))
+                            .background(DSLegacy.surface, in: RoundedRectangle(cornerRadius: 9, style: .continuous))
                         Text(languageManager.text(item.key))
-                            .font(DS.sans(.subheadline, .semibold))
-                            .foregroundStyle(DS.ink)
+                            .font(DSLegacy.sans(.subheadline, .semibold))
+                            .foregroundStyle(DSLegacy.ink)
                             .frame(maxWidth: .infinity, alignment: .leading)
                         Image(systemName: "checkmark.circle.fill")
                             .font(.system(size: 20))
-                            .foregroundStyle(.white, DS.accent)
+                            .foregroundStyle(.white, DSLegacy.accent)
                     }
                     .padding(.vertical, 9)
                 }
@@ -132,12 +132,12 @@ struct PaywallUnlockList: View {
         }
         .padding(16)
         .background(
-            LinearGradient(colors: [DS.accentTint, DS.accentTint.opacity(0.55)], startPoint: .topLeading, endPoint: .bottomTrailing),
-            in: RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
+            LinearGradient(colors: [DSLegacy.accentTint, DSLegacy.accentTint.opacity(0.55)], startPoint: .topLeading, endPoint: .bottomTrailing),
+            in: RoundedRectangle(cornerRadius: DSLegacy.Radius.card, style: .continuous)
         )
         .overlay {
-            RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
-                .strokeBorder(DS.accentSoft.opacity(0.18), lineWidth: 1)
+            RoundedRectangle(cornerRadius: DSLegacy.Radius.card, style: .continuous)
+                .strokeBorder(DSLegacy.accentSoft.opacity(0.18), lineWidth: 1)
         }
     }
 }
@@ -183,7 +183,7 @@ struct SophiaStandardPaywall: View {
 
     var body: some View {
         ZStack {
-            DS.canvas.ignoresSafeArea()
+            DSLegacy.canvas.ignoresSafeArea()
 
             VStack(spacing: 0) {
                 HStack {
@@ -216,7 +216,7 @@ struct SophiaStandardPaywall: View {
             // landscape it stops looking like the design and pushes the CTA below the
             // fold — and Apple reviews on iPad. The background layer above stays
             // full-bleed, so gradient paywalls still reach the edges.
-            .frame(maxWidth: OV2.readableWidth)
+            .frame(maxWidth: OV2Legacy.readableWidth)
         }
         .onAppear {
             presentedAt = Date()
@@ -240,27 +240,27 @@ struct SophiaStandardPaywall: View {
                 .resizable()
                 .scaledToFill()
                 .frame(width: 96, height: 96)
-                .clipShape(.rect(cornerRadius: DS.Radius.control))
+                .clipShape(.rect(cornerRadius: DSLegacy.Radius.control))
                 .overlay {
-                    RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous)
-                        .strokeBorder(DS.hairline, lineWidth: 1)
+                    RoundedRectangle(cornerRadius: DSLegacy.Radius.control, style: .continuous)
+                        .strokeBorder(DSLegacy.hairline, lineWidth: 1)
                 }
                 .overlay(alignment: .bottomTrailing) {
                     Image(systemName: "lock.fill")
                         .font(.jakarta(size: 15, weight: .bold))
                         .foregroundStyle(.white)
                         .frame(width: 32, height: 32)
-                        .background(DS.accent, in: Circle())
+                        .background(DSLegacy.accent, in: Circle())
                         .overlay { Circle().strokeBorder(.white, lineWidth: 2) }
                         .offset(x: 8, y: 8)
                 }
-                .dsSoftShadow()
+                .dsLegacySoftShadow()
         } else {
             Image(systemName: isCourseUnlock ? "book.closed.fill" : "checklist")
                 .font(.system(size: 44, weight: .semibold))
-                .foregroundStyle(DS.accent)
+                .foregroundStyle(DSLegacy.accent)
                 .frame(width: 92, height: 92)
-                .background(DS.accentTint, in: Circle())
+                .background(DSLegacy.accentTint, in: Circle())
         }
     }
 
@@ -269,14 +269,14 @@ struct SophiaStandardPaywall: View {
     private var headline: some View {
         VStack(spacing: 10) {
             Text(titleText)
-                .font(DS.title(.title, .heavy))
-                .foregroundStyle(DS.ink)
+                .font(DSLegacy.title(.title, .heavy))
+                .foregroundStyle(DSLegacy.ink)
                 .multilineTextAlignment(.center)
                 .fixedSize(horizontal: false, vertical: true)
 
             Text(subtitleText)
-                .font(DS.sans(.subheadline))
-                .foregroundStyle(DS.inkSecondary)
+                .font(DSLegacy.sans(.subheadline))
+                .foregroundStyle(DSLegacy.inkSecondary)
                 .multilineTextAlignment(.center)
                 .fixedSize(horizontal: false, vertical: true)
         }
@@ -312,19 +312,19 @@ struct SophiaStandardPaywall: View {
                     .font(.jakarta(size: 13, weight: .bold))
                 VStack(alignment: .leading, spacing: 1) {
                     Text(languageManager.text("paywall.course.comeBack"))
-                        .font(DS.sans(.caption2, .semibold))
-                        .foregroundStyle(DS.inkSecondary)
+                        .font(DSLegacy.sans(.caption2, .semibold))
+                        .foregroundStyle(DSLegacy.inkSecondary)
                     Text(PaywallCountdown.format(remaining))
-                        .font(DS.sans(.headline, .bold))
+                        .font(DSLegacy.sans(.headline, .bold))
                         .monospacedDigit()
-                        .foregroundStyle(DS.ink)
+                        .foregroundStyle(DSLegacy.ink)
                         .contentTransition(.numericText(countsDown: true))
                 }
             }
             .padding(.horizontal, 16)
             .padding(.vertical, 10)
-            .background(DS.surface, in: Capsule())
-            .overlay { Capsule().strokeBorder(DS.hairline, lineWidth: 1) }
+            .background(DSLegacy.surface, in: Capsule())
+            .overlay { Capsule().strokeBorder(DSLegacy.hairline, lineWidth: 1) }
         }
     }
 
@@ -336,10 +336,10 @@ struct SophiaStandardPaywall: View {
                 HStack(spacing: 10) {
                     Image(systemName: "checkmark.circle.fill")
                         .font(.jakarta(size: 16, weight: .semibold))
-                        .foregroundStyle(DS.success)
+                        .foregroundStyle(DSLegacy.success)
                     Text(languageManager.text(key))
-                        .font(DS.sans(.subheadline, .medium))
-                        .foregroundStyle(DS.ink)
+                        .font(DSLegacy.sans(.subheadline, .medium))
+                        .foregroundStyle(DSLegacy.ink)
                         .frame(maxWidth: .infinity, alignment: .leading)
                 }
             }
@@ -359,8 +359,8 @@ struct SophiaStandardPaywall: View {
     private var bottomBar: some View {
         VStack(spacing: 10) {
             Text(priceLine)
-                .font(DS.sans(.footnote, .medium))
-                .foregroundStyle(DS.inkTertiary)
+                .font(DSLegacy.sans(.footnote, .medium))
+                .foregroundStyle(DSLegacy.inkTertiary)
                 .multilineTextAlignment(.center)
 
             Button(action: purchase) {
@@ -374,7 +374,7 @@ struct SophiaStandardPaywall: View {
                     }
                 }
             }
-            .buttonStyle(DSPrimaryButtonStyle())
+            .buttonStyle(DSLegacyPrimaryButtonStyle())
             .disabled(purchasing)
             .padding(.horizontal, 24)
 
@@ -402,10 +402,10 @@ struct SophiaStandardPaywall: View {
         } label: {
             Image(systemName: "xmark")
                 .font(.system(size: 15, weight: .semibold))
-                .foregroundStyle(DS.inkSecondary)
+                .foregroundStyle(DSLegacy.inkSecondary)
                 .frame(width: 40, height: 40)
-                .background(DS.surface, in: Circle())
-                .overlay { Circle().strokeBorder(DS.hairline, lineWidth: 1) }
+                .background(DSLegacy.surface, in: Circle())
+                .overlay { Circle().strokeBorder(DSLegacy.hairline, lineWidth: 1) }
         }
     }
 
@@ -470,7 +470,7 @@ struct SophiaTrainingPaywall: View {
 
     var body: some View {
         ZStack {
-            DS.canvas.ignoresSafeArea()
+            DSLegacy.canvas.ignoresSafeArea()
 
             VStack(spacing: 0) {
                 HStack {
@@ -503,7 +503,7 @@ struct SophiaTrainingPaywall: View {
             // landscape it stops looking like the design and pushes the CTA below the
             // fold — and Apple reviews on iPad. The background layer above stays
             // full-bleed, so gradient paywalls still reach the edges.
-            .frame(maxWidth: OV2.readableWidth)
+            .frame(maxWidth: OV2Legacy.readableWidth)
         }
         .onAppear {
             store.trackPaywallImpression(paywallId: "native_training", offeringIdentifier: context.offeringIdentifier)
@@ -521,9 +521,9 @@ struct SophiaTrainingPaywall: View {
     private var hero: some View {
         Image(systemName: "arrow.triangle.2.circlepath")
             .font(.system(size: 42, weight: .semibold))
-            .foregroundStyle(DS.accent)
+            .foregroundStyle(DSLegacy.accent)
             .frame(width: 92, height: 92)
-            .background(DS.accentTint, in: Circle())
+            .background(DSLegacy.accentTint, in: Circle())
     }
 
     // MARK: Headline
@@ -531,14 +531,14 @@ struct SophiaTrainingPaywall: View {
     private var headline: some View {
         VStack(spacing: 10) {
             Text(languageManager.text("paywall.training.title"))
-                .font(DS.title(.title, .heavy))
-                .foregroundStyle(DS.ink)
+                .font(DSLegacy.title(.title, .heavy))
+                .foregroundStyle(DSLegacy.ink)
                 .multilineTextAlignment(.center)
                 .fixedSize(horizontal: false, vertical: true)
 
             Text(languageManager.text("paywall.training.subtitle"))
-                .font(DS.sans(.subheadline))
-                .foregroundStyle(DS.inkSecondary)
+                .font(DSLegacy.sans(.subheadline))
+                .foregroundStyle(DSLegacy.inkSecondary)
                 .multilineTextAlignment(.center)
                 .fixedSize(horizontal: false, vertical: true)
         }
@@ -551,12 +551,12 @@ struct SophiaTrainingPaywall: View {
             statCard(
                 value: languageManager.text("paywall.training.stat1.value"),
                 label: languageManager.text("paywall.training.stat1.label"),
-                tint: DS.success
+                tint: DSLegacy.success
             )
             statCard(
                 value: languageManager.text("paywall.training.stat2.value"),
                 label: languageManager.text("paywall.training.stat2.label"),
-                tint: DS.danger
+                tint: DSLegacy.danger
             )
         }
     }
@@ -568,19 +568,19 @@ struct SophiaTrainingPaywall: View {
                 .foregroundStyle(tint)
                 .monospacedDigit()
             Text(label)
-                .font(DS.sans(.caption, .medium))
-                .foregroundStyle(DS.inkSecondary)
+                .font(DSLegacy.sans(.caption, .medium))
+                .foregroundStyle(DSLegacy.inkSecondary)
                 .multilineTextAlignment(.center)
                 .fixedSize(horizontal: false, vertical: true)
         }
         .frame(maxWidth: .infinity)
         .padding(.vertical, 18)
         .padding(.horizontal, 12)
-        .background(DS.surface)
-        .clipShape(.rect(cornerRadius: DS.Radius.card))
+        .background(DSLegacy.surface)
+        .clipShape(.rect(cornerRadius: DSLegacy.Radius.card))
         .overlay {
-            RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
-                .strokeBorder(DS.hairline, lineWidth: 1)
+            RoundedRectangle(cornerRadius: DSLegacy.Radius.card, style: .continuous)
+                .strokeBorder(DSLegacy.hairline, lineWidth: 1)
         }
     }
 
@@ -589,8 +589,8 @@ struct SophiaTrainingPaywall: View {
     private var howItWorks: some View {
         VStack(alignment: .leading, spacing: 14) {
             Text(languageManager.text("paywall.training.how.title"))
-                .font(DS.sans(.caption2, .semibold))
-                .foregroundStyle(DS.inkTertiary)
+                .font(DSLegacy.sans(.caption2, .semibold))
+                .foregroundStyle(DSLegacy.inkTertiary)
                 .tracking(1.2)
 
             howStep(1, languageManager.text("paywall.training.how.step1"))
@@ -599,24 +599,24 @@ struct SophiaTrainingPaywall: View {
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(18)
-        .background(DS.surface)
-        .clipShape(.rect(cornerRadius: DS.Radius.card))
+        .background(DSLegacy.surface)
+        .clipShape(.rect(cornerRadius: DSLegacy.Radius.card))
         .overlay {
-            RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
-                .strokeBorder(DS.hairline, lineWidth: 1)
+            RoundedRectangle(cornerRadius: DSLegacy.Radius.card, style: .continuous)
+                .strokeBorder(DSLegacy.hairline, lineWidth: 1)
         }
     }
 
     private func howStep(_ number: Int, _ text: String) -> some View {
         HStack(alignment: .top, spacing: 12) {
             Text("\(number)")
-                .font(DS.sans(.subheadline, .bold))
+                .font(DSLegacy.sans(.subheadline, .bold))
                 .foregroundStyle(.white)
                 .frame(width: 26, height: 26)
-                .background(DS.accent, in: Circle())
+                .background(DSLegacy.accent, in: Circle())
             Text(text)
-                .font(DS.sans(.subheadline, .medium))
-                .foregroundStyle(DS.ink)
+                .font(DSLegacy.sans(.subheadline, .medium))
+                .foregroundStyle(DSLegacy.ink)
                 .fixedSize(horizontal: false, vertical: true)
                 .frame(maxWidth: .infinity, alignment: .leading)
         }
@@ -628,10 +628,10 @@ struct SophiaTrainingPaywall: View {
         HStack(alignment: .top, spacing: 8) {
             Image(systemName: "sparkles")
                 .font(.jakarta(size: 13, weight: .semibold))
-                .foregroundStyle(DS.accentSoft)
+                .foregroundStyle(DSLegacy.accentSoft)
             Text(languageManager.text("paywall.training.footnote"))
-                .font(DS.sans(.caption, .medium))
-                .foregroundStyle(DS.inkTertiary)
+                .font(DSLegacy.sans(.caption, .medium))
+                .foregroundStyle(DSLegacy.inkTertiary)
                 .fixedSize(horizontal: false, vertical: true)
                 .frame(maxWidth: .infinity, alignment: .leading)
         }
@@ -642,8 +642,8 @@ struct SophiaTrainingPaywall: View {
     private var bottomBar: some View {
         VStack(spacing: 10) {
             Text(priceLine)
-                .font(DS.sans(.footnote, .medium))
-                .foregroundStyle(DS.inkTertiary)
+                .font(DSLegacy.sans(.footnote, .medium))
+                .foregroundStyle(DSLegacy.inkTertiary)
                 .multilineTextAlignment(.center)
 
             Button(action: purchase) {
@@ -657,7 +657,7 @@ struct SophiaTrainingPaywall: View {
                     }
                 }
             }
-            .buttonStyle(DSPrimaryButtonStyle())
+            .buttonStyle(DSLegacyPrimaryButtonStyle())
             .disabled(purchasing)
             .padding(.horizontal, 24)
 
@@ -685,10 +685,10 @@ struct SophiaTrainingPaywall: View {
         } label: {
             Image(systemName: "xmark")
                 .font(.system(size: 15, weight: .semibold))
-                .foregroundStyle(DS.inkSecondary)
+                .foregroundStyle(DSLegacy.inkSecondary)
                 .frame(width: 40, height: 40)
-                .background(DS.surface, in: Circle())
-                .overlay { Circle().strokeBorder(DS.hairline, lineWidth: 1) }
+                .background(DSLegacy.surface, in: Circle())
+                .overlay { Circle().strokeBorder(DSLegacy.hairline, lineWidth: 1) }
         }
     }
 
@@ -755,7 +755,7 @@ struct SophiaQuizPaywall: View {
 
     var body: some View {
         ZStack {
-            DS.canvas.ignoresSafeArea()
+            DSLegacy.canvas.ignoresSafeArea()
 
             VStack(spacing: 0) {
                 HStack {
@@ -790,7 +790,7 @@ struct SophiaQuizPaywall: View {
             // landscape it stops looking like the design and pushes the CTA below the
             // fold — and Apple reviews on iPad. The background layer above stays
             // full-bleed, so gradient paywalls still reach the edges.
-            .frame(maxWidth: OV2.readableWidth)
+            .frame(maxWidth: OV2Legacy.readableWidth)
         }
         .onAppear {
             if tracksAnalytics {
@@ -817,12 +817,12 @@ struct SophiaQuizPaywall: View {
                 ForEach(0..<5, id: \.self) { _ in
                     Image(systemName: "star.fill")
                         .font(.system(size: 9))
-                        .foregroundStyle(DS.warm)
+                        .foregroundStyle(DSLegacy.warm)
                 }
             }
             Text("\((4.8).formatted(.number.precision(.fractionLength(1)).locale(languageManager.locale))) · \(languageManager.text("paywall.quiz.rating"))")
-                .font(DS.sans(.caption2, .medium))
-                .foregroundStyle(DS.inkTertiary)
+                .font(DSLegacy.sans(.caption2, .medium))
+                .foregroundStyle(DSLegacy.inkTertiary)
         }
     }
 
@@ -831,14 +831,14 @@ struct SophiaQuizPaywall: View {
     private var headline: some View {
         VStack(spacing: 10) {
             Text(languageManager.text("paywall.quiz.title"))
-                .font(DS.title(.title, .heavy))
-                .foregroundStyle(DS.ink)
+                .font(DSLegacy.title(.title, .heavy))
+                .foregroundStyle(DSLegacy.ink)
                 .multilineTextAlignment(.center)
                 .fixedSize(horizontal: false, vertical: true)
 
             Text(languageManager.text("paywall.quiz.subtitle"))
-                .font(DS.sans(.subheadline, .medium))
-                .foregroundStyle(DS.inkSecondary)
+                .font(DSLegacy.sans(.subheadline, .medium))
+                .foregroundStyle(DSLegacy.inkSecondary)
                 .multilineTextAlignment(.center)
                 .fixedSize(horizontal: false, vertical: true)
         }
@@ -861,7 +861,7 @@ struct SophiaQuizPaywall: View {
                     }
                 }
             }
-            .buttonStyle(DSPrimaryButtonStyle())
+            .buttonStyle(DSLegacyPrimaryButtonStyle())
             .disabled(purchasing)
             .padding(.horizontal, 24)
 
@@ -894,10 +894,10 @@ struct SophiaQuizPaywall: View {
         } label: {
             Image(systemName: "xmark")
                 .font(.system(size: 15, weight: .semibold))
-                .foregroundStyle(DS.inkSecondary)
+                .foregroundStyle(DSLegacy.inkSecondary)
                 .frame(width: 40, height: 40)
-                .background(DS.surface, in: Circle())
-                .overlay { Circle().strokeBorder(DS.hairline, lineWidth: 1) }
+                .background(DSLegacy.surface, in: Circle())
+                .overlay { Circle().strokeBorder(DSLegacy.hairline, lineWidth: 1) }
         }
     }
 
@@ -962,16 +962,16 @@ private struct QuizRetentionChart: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 14) {
             HStack(spacing: 14) {
-                legend(color: DS.accentSoft, key: "paywall.quiz.chart.with", strong: true)
-                legend(color: DS.inkTertiary, key: "paywall.quiz.chart.without", strong: false)
+                legend(color: DSLegacy.accentSoft, key: "paywall.quiz.chart.with", strong: true)
+                legend(color: DSLegacy.inkTertiary, key: "paywall.quiz.chart.without", strong: false)
                 Spacer(minLength: 0)
             }
 
             HStack(alignment: .top, spacing: 6) {
                 // Le libellé de l'axe vertical, couché le long du tracé.
                 Text(languageManager.text("paywall.quiz.chart.axis"))
-                    .font(DS.sans(.caption2, .semibold))
-                    .foregroundStyle(DS.inkTertiary)
+                    .font(DSLegacy.sans(.caption2, .semibold))
+                    .foregroundStyle(DSLegacy.inkTertiary)
                     .lineLimit(1)
                     .fixedSize()
                     .rotationEffect(.degrees(-90))
@@ -986,8 +986,8 @@ private struct QuizRetentionChart: View {
                     GeometryReader { geo in
                         ForEach(Array(Self.dayMarks.enumerated()), id: \.offset) { _, mark in
                             Text(String(format: languageManager.text("paywall.quiz.chart.day"), mark.day))
-                                .font(DS.sans(.caption2, .bold))
-                                .foregroundStyle(mark.day == 1 ? DS.inkTertiary : DS.accentSoft)
+                                .font(DSLegacy.sans(.caption2, .bold))
+                                .foregroundStyle(mark.day == 1 ? DSLegacy.inkTertiary : DSLegacy.accentSoft)
                                 .fixedSize()
                                 .position(x: Self.inset + (geo.size.width - 2 * Self.inset) * mark.x, y: 8)
                         }
@@ -997,12 +997,12 @@ private struct QuizRetentionChart: View {
             }
         }
         .padding(18)
-        .background(DS.surface, in: RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
+        .background(DSLegacy.surface, in: RoundedRectangle(cornerRadius: DSLegacy.Radius.card, style: .continuous))
         .overlay {
-            RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
-                .strokeBorder(DS.hairline, lineWidth: 1)
+            RoundedRectangle(cornerRadius: DSLegacy.Radius.card, style: .continuous)
+                .strokeBorder(DSLegacy.hairline, lineWidth: 1)
         }
-        .dsSoftShadow()
+        .dsLegacySoftShadow()
         .accessibilityElement(children: .combine)
         .onAppear {
             withAnimation(.easeOut(duration: 1.8).delay(0.35)) { drawn = 1 }
@@ -1013,8 +1013,8 @@ private struct QuizRetentionChart: View {
         HStack(spacing: 6) {
             Capsule().fill(color).frame(width: 16, height: 4)
             Text(languageManager.text(key))
-                .font(DS.sans(.caption, strong ? .bold : .medium))
-                .foregroundStyle(strong ? DS.ink : DS.inkSecondary)
+                .font(DSLegacy.sans(.caption, strong ? .bold : .medium))
+                .foregroundStyle(strong ? DSLegacy.ink : DSLegacy.inkSecondary)
                 .lineLimit(1)
                 .minimumScaleFactor(0.8)
         }
@@ -1025,7 +1025,7 @@ private struct QuizRetentionChart: View {
             // Trois lignes de grille, très légères.
             ForEach(1..<4, id: \.self) { i in
                 Rectangle()
-                    .fill(DS.hairline.opacity(0.8))
+                    .fill(DSLegacy.hairline.opacity(0.8))
                     .frame(height: 1)
                     .position(x: size.width / 2, y: size.height * CGFloat(i) / 4)
             }
@@ -1033,24 +1033,24 @@ private struct QuizRetentionChart: View {
             // Sans quiz : la chute, en gris.
             Self.curve(Self.withoutQuiz, in: size)
                 .trim(from: 0, to: drawn)
-                .stroke(DS.inkTertiary.opacity(0.75), style: StrokeStyle(lineWidth: 3, lineCap: .round, lineJoin: .round))
+                .stroke(DSLegacy.inkTertiary.opacity(0.75), style: StrokeStyle(lineWidth: 3, lineCap: .round, lineJoin: .round))
 
             // Avec les quiz : l'aire teintée, puis la ligne bleue.
             Self.area(Self.withQuiz, in: size)
                 .fill(
-                    LinearGradient(colors: [DS.accentSoft.opacity(0.22), DS.accentSoft.opacity(0.0)], startPoint: .top, endPoint: .bottom)
+                    LinearGradient(colors: [DSLegacy.accentSoft.opacity(0.22), DSLegacy.accentSoft.opacity(0.0)], startPoint: .top, endPoint: .bottom)
                 )
                 .opacity(Double(drawn))
             Self.curve(Self.withQuiz, in: size)
                 .trim(from: 0, to: drawn)
-                .stroke(DS.accentSoft, style: StrokeStyle(lineWidth: 3.5, lineCap: .round, lineJoin: .round))
+                .stroke(DSLegacy.accentSoft, style: StrokeStyle(lineWidth: 3.5, lineCap: .round, lineJoin: .round))
 
             // Un point à chaque rappel : la courbe remonte.
             ForEach(Array(Self.dayMarks.dropFirst().enumerated()), id: \.offset) { _, mark in
                 let peak = Self.withQuiz.first { abs($0.x - mark.x) < 0.001 } ?? CGPoint(x: mark.x, y: 1)
                 Circle()
-                    .fill(DS.surface)
-                    .overlay(Circle().strokeBorder(DS.accentSoft, lineWidth: 2.5))
+                    .fill(DSLegacy.surface)
+                    .overlay(Circle().strokeBorder(DSLegacy.accentSoft, lineWidth: 2.5))
                     .frame(width: 11, height: 11)
                     .position(Self.point(peak, in: size))
                     .opacity(drawn >= mark.x ? 1 : 0)
@@ -1136,7 +1136,7 @@ struct SophiaCourseUnlockPaywall: View {
 
     var body: some View {
         ZStack {
-            DS.canvas.ignoresSafeArea()
+            DSLegacy.canvas.ignoresSafeArea()
 
             VStack(spacing: 0) {
                 HStack {
@@ -1175,7 +1175,7 @@ struct SophiaCourseUnlockPaywall: View {
             // landscape it stops looking like the design and pushes the CTA below the
             // fold — and Apple reviews on iPad. The background layer above stays
             // full-bleed, so gradient paywalls still reach the edges.
-            .frame(maxWidth: OV2.readableWidth)
+            .frame(maxWidth: OV2Legacy.readableWidth)
         }
         .onAppear {
             presentedAt = Date()
@@ -1205,27 +1205,27 @@ struct SophiaCourseUnlockPaywall: View {
                 .resizable()
                 .scaledToFill()
                 .frame(width: 92, height: 92)
-                .clipShape(.rect(cornerRadius: DS.Radius.control))
+                .clipShape(.rect(cornerRadius: DSLegacy.Radius.control))
                 .overlay {
-                    RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous)
-                        .strokeBorder(DS.hairline, lineWidth: 1)
+                    RoundedRectangle(cornerRadius: DSLegacy.Radius.control, style: .continuous)
+                        .strokeBorder(DSLegacy.hairline, lineWidth: 1)
                 }
                 .overlay(alignment: .bottomTrailing) {
                     Image(systemName: "lock.fill")
                         .font(.jakarta(size: 14, weight: .bold))
                         .foregroundStyle(.white)
                         .frame(width: 30, height: 30)
-                        .background(DS.accent, in: Circle())
+                        .background(DSLegacy.accent, in: Circle())
                         .overlay { Circle().strokeBorder(.white, lineWidth: 2) }
                         .offset(x: 8, y: 8)
                 }
-                .dsSoftShadow()
+                .dsLegacySoftShadow()
         } else {
             Image(systemName: "book.closed.fill")
                 .font(.system(size: 40, weight: .semibold))
-                .foregroundStyle(DS.accent)
+                .foregroundStyle(DSLegacy.accent)
                 .frame(width: 88, height: 88)
-                .background(DS.accentTint, in: Circle())
+                .background(DSLegacy.accentTint, in: Circle())
         }
     }
 
@@ -1233,8 +1233,8 @@ struct SophiaCourseUnlockPaywall: View {
 
     private var title: some View {
         Text(languageManager.text("paywall.course.title"))
-            .font(DS.title(.title, .heavy))
-            .foregroundStyle(DS.ink)
+            .font(DSLegacy.title(.title, .heavy))
+            .foregroundStyle(DSLegacy.ink)
             .multilineTextAlignment(.center)
             .fixedSize(horizontal: false, vertical: true)
             .frame(maxWidth: .infinity)
@@ -1251,23 +1251,23 @@ struct SophiaCourseUnlockPaywall: View {
                     Image(systemName: "clock.fill")
                         .font(.jakarta(size: 12, weight: .bold))
                     Text(languageManager.text("paywall.course.comeBack"))
-                        .font(DS.sans(.caption, .semibold))
+                        .font(DSLegacy.sans(.caption, .semibold))
                 }
-                .foregroundStyle(DS.inkSecondary)
+                .foregroundStyle(DSLegacy.inkSecondary)
 
                 Text(PaywallCountdown.format(remaining))
-                    .font(DS.sans(.title2, .bold))
+                    .font(DSLegacy.sans(.title2, .bold))
                     .monospacedDigit()
-                    .foregroundStyle(DS.ink)
+                    .foregroundStyle(DSLegacy.ink)
                     .contentTransition(.numericText(countsDown: true))
             }
             .frame(maxWidth: .infinity)
             .padding(.vertical, 14)
             .padding(.horizontal, 20)
-            .background(DS.surface, in: RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
+            .background(DSLegacy.surface, in: RoundedRectangle(cornerRadius: DSLegacy.Radius.card, style: .continuous))
             .overlay {
-                RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
-                    .strokeBorder(DS.hairline, lineWidth: 1)
+                RoundedRectangle(cornerRadius: DSLegacy.Radius.card, style: .continuous)
+                    .strokeBorder(DSLegacy.hairline, lineWidth: 1)
             }
             .padding(.horizontal, 22)
         }
@@ -1278,20 +1278,20 @@ struct SophiaCourseUnlockPaywall: View {
     /// Le trait d'union entre les deux issues : attendre demain, ou débloquer maintenant.
     private var orDivider: some View {
         HStack(spacing: 12) {
-            Rectangle().fill(DS.hairline).frame(height: 1)
+            Rectangle().fill(DSLegacy.hairline).frame(height: 1)
             Text(languageManager.text("paywall.course.or"))
-                .font(DS.sans(.caption, .heavy))
+                .font(DSLegacy.sans(.caption, .heavy))
                 .tracking(1.2)
-                .foregroundStyle(DS.inkTertiary)
-            Rectangle().fill(DS.hairline).frame(height: 1)
+                .foregroundStyle(DSLegacy.inkTertiary)
+            Rectangle().fill(DSLegacy.hairline).frame(height: 1)
         }
     }
 
     /// « Débloque Sophia PRO, étudié pour maximiser ce que tu retiens. »
     private var proPitch: some View {
         Text(languageManager.text("paywall.course.proPitch"))
-            .font(DS.title(.title3, .heavy))
-            .foregroundStyle(DS.accent)
+            .font(DSLegacy.title(.title3, .heavy))
+            .foregroundStyle(DSLegacy.accent)
             .multilineTextAlignment(.center)
             .fixedSize(horizontal: false, vertical: true)
             .frame(maxWidth: .infinity)
@@ -1314,7 +1314,7 @@ struct SophiaCourseUnlockPaywall: View {
                     }
                 }
             }
-            .buttonStyle(DSPrimaryButtonStyle())
+            .buttonStyle(DSLegacyPrimaryButtonStyle())
             .disabled(purchasing)
             .padding(.horizontal, 24)
 
@@ -1347,10 +1347,10 @@ struct SophiaCourseUnlockPaywall: View {
         } label: {
             Image(systemName: "xmark")
                 .font(.system(size: 15, weight: .semibold))
-                .foregroundStyle(DS.inkSecondary)
+                .foregroundStyle(DSLegacy.inkSecondary)
                 .frame(width: 40, height: 40)
-                .background(DS.surface, in: Circle())
-                .overlay { Circle().strokeBorder(DS.hairline, lineWidth: 1) }
+                .background(DSLegacy.surface, in: Circle())
+                .overlay { Circle().strokeBorder(DSLegacy.hairline, lineWidth: 1) }
         }
     }
 
@@ -1416,7 +1416,7 @@ struct SophiaDiscountPaywall: View {
     var body: some View {
         ZStack {
             LinearGradient(
-                colors: [DS.accent, DS.accentSoft],
+                colors: [DSLegacy.accent, DSLegacy.accentSoft],
                 startPoint: .top,
                 endPoint: .bottom
             )
@@ -1451,7 +1451,7 @@ struct SophiaDiscountPaywall: View {
             // landscape it stops looking like the design and pushes the CTA below the
             // fold — and Apple reviews on iPad. The background layer above stays
             // full-bleed, so gradient paywalls still reach the edges.
-            .frame(maxWidth: OV2.readableWidth)
+            .frame(maxWidth: OV2Legacy.readableWidth)
         }
         .onAppear {
             presentedAt = Date()
@@ -1491,21 +1491,21 @@ struct SophiaDiscountPaywall: View {
             Image(systemName: "flame.fill")
                 .font(.jakarta(size: 14, weight: .black))
             Text(languageManager.text("paywall.discount.endsIn"))
-                .font(DS.sans(.caption, .bold))
+                .font(DSLegacy.sans(.caption, .bold))
                 .textCase(.uppercase)
                 .tracking(0.5)
             Text(text)
-                .font(DS.sans(.headline, .heavy))
+                .font(DSLegacy.sans(.headline, .heavy))
                 .monospacedDigit()
                 .contentTransition(.numericText(countsDown: true))
         }
         .foregroundStyle(.white)
         .padding(.horizontal, 16)
         .padding(.vertical, 10)
-        .background(DS.danger, in: Capsule())
+        .background(DSLegacy.danger, in: Capsule())
         .overlay { Capsule().strokeBorder(.white.opacity(0.35), lineWidth: 1) }
         .scaleEffect(pulse ? 1.04 : 1.0)
-        .shadow(color: DS.danger.opacity(0.5), radius: pulse ? 16 : 8, y: 4)
+        .shadow(color: DSLegacy.danger.opacity(0.5), radius: pulse ? 16 : 8, y: 4)
     }
 
     // MARK: Discount badge
@@ -1514,7 +1514,7 @@ struct SophiaDiscountPaywall: View {
     private var discountBadge: some View {
         if let badge = prices.discountBadge {
             Text(badge)
-                .font(DS.title(.largeTitle, .heavy))
+                .font(DSLegacy.title(.largeTitle, .heavy))
                 .foregroundStyle(.white)
                 .padding(.horizontal, 22)
                 .padding(.vertical, 8)
@@ -1528,13 +1528,13 @@ struct SophiaDiscountPaywall: View {
     private var headline: some View {
         VStack(spacing: 10) {
             Text(languageManager.text("paywall.discount.title"))
-                .font(DS.title(.title, .heavy))
+                .font(DSLegacy.title(.title, .heavy))
                 .foregroundStyle(.white)
                 .multilineTextAlignment(.center)
                 .fixedSize(horizontal: false, vertical: true)
 
             Text(languageManager.text("paywall.discount.subtitle"))
-                .font(DS.sans(.subheadline, .medium))
+                .font(DSLegacy.sans(.subheadline, .medium))
                 .foregroundStyle(.white.opacity(0.85))
                 .multilineTextAlignment(.center)
                 .fixedSize(horizontal: false, vertical: true)
@@ -1551,24 +1551,24 @@ struct SophiaDiscountPaywall: View {
             HStack(alignment: .firstTextBaseline, spacing: 10) {
                 if let regular = prices.regularPerMonth {
                     Text(regular)
-                        .font(DS.sans(.title3, .semibold))
+                        .font(DSLegacy.sans(.title3, .semibold))
                         .foregroundStyle(.white.opacity(0.7))
                         .strikethrough()
                 }
                 Text(prices.promoPerMonth)
-                    .font(DS.title(.largeTitle, .heavy))
+                    .font(DSLegacy.title(.largeTitle, .heavy))
                     .foregroundStyle(.white)
             }
             .lineLimit(1)
             .minimumScaleFactor(0.7)
 
             Text(languageManager.text("paywall.discount.perMonth"))
-                .font(DS.sans(.footnote, .semibold))
+                .font(DSLegacy.sans(.footnote, .semibold))
                 .foregroundStyle(.white.opacity(0.85))
                 .multilineTextAlignment(.center)
 
             Text(prices.billedYearlyNote)
-                .font(DS.sans(.caption, .medium))
+                .font(DSLegacy.sans(.caption, .medium))
                 .foregroundStyle(.white.opacity(0.75))
                 .multilineTextAlignment(.center)
                 .fixedSize(horizontal: false, vertical: true)
@@ -1582,7 +1582,7 @@ struct SophiaDiscountPaywall: View {
             Button(action: purchase) {
                 HStack(spacing: 8) {
                     if purchasing {
-                        ProgressView().tint(DS.accent)
+                        ProgressView().tint(DSLegacy.accent)
                     } else {
                         Image(systemName: "bolt.fill")
                             .font(.jakarta(size: 15, weight: .bold))
@@ -1590,12 +1590,12 @@ struct SophiaDiscountPaywall: View {
                     }
                 }
             }
-            .buttonStyle(DSPrimaryButtonStyle(fill: .white, foreground: DS.accent))
+            .buttonStyle(DSLegacyPrimaryButtonStyle(fill: .white, foreground: DSLegacy.accent))
             .disabled(purchasing)
             .padding(.horizontal, 24)
 
             Text(languageManager.text("paywall.discount.noTrial"))
-                .font(DS.sans(.caption2, .medium))
+                .font(DSLegacy.sans(.caption2, .medium))
                 .foregroundStyle(.white.opacity(0.7))
 
             legalRow.padding(.bottom, 14)
@@ -1606,7 +1606,7 @@ struct SophiaDiscountPaywall: View {
         HStack(spacing: 6) {
             Button(languageManager.text("paywall.restore"), action: restore)
         }
-        .font(DS.sans(.caption2, .medium))
+        .font(DSLegacy.sans(.caption2, .medium))
         .foregroundStyle(.white.opacity(0.7))
     }
 

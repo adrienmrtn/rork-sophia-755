@@ -59,6 +59,9 @@ struct QuizView: View {
     @State private var showCollectionRankUp: Bool = false
     @State private var rewardSteps: [PostCompletionRewardStep] = []
     @State private var showRewardFlow: Bool = false
+    /// Confettis du résultat, quand le quiz finit sur trois étoiles.
+    @State private var showResultConfetti: Bool = false
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     /// Fixed XP bonus awarded when the quiz is fully completed.
     private let quizCompletionXPBonus: Int = 10
@@ -107,12 +110,6 @@ struct QuizView: View {
                     ))
             } else if !shuffledQuestions.isEmpty {
                 questionView
-            }
-
-            if showXPPopup {
-                xpPopupView
-                    .transition(.opacity.combined(with: .offset(y: 6)))
-                    .zIndex(20)
             }
 
             if showRewardFlow {
@@ -325,17 +322,34 @@ struct QuizView: View {
 
     // MARK: - Question screen
 
+    /// « Question 2 sur 8 » : le sur-titre et le libellé VoiceOver de la progression.
+    private var questionCountText: String {
+        String(
+            format: languageManager.text("elevateCourse.quiz.questionOf"),
+            currentQuestionIndex + 1,
+            shuffledQuestions.count
+        )
+    }
+
     private var questionView: some View {
         VStack(spacing: 0) {
-            quizHeader
-            progressBar
+            CourseQuizTopBar(
+                total: shuffledQuestions.count,
+                filled: currentQuestionIndex + 1,
+                closeLabel: languageManager.text("common.close"),
+                progressLabel: questionCountText,
+                combo: showCombo ? comboCount : 0,
+                onClose: { dismiss() }
+            )
+            .animation(DS.Motion.pop, value: showCombo)
+            .animation(DS.Motion.snappy, value: comboCount)
 
             ScrollView {
-                VStack(alignment: .leading, spacing: 20) {
-                    questionCard
+                VStack(spacing: 26) {
+                    questionHeader
                         .opacity(questionAppeared ? 1 : 0)
                         .offset(y: questionAppeared ? 0 : 12)
-                        .padding(.top, 16)
+                        .padding(.top, 26)
 
                     Group {
                         switch currentQuestion.type {
@@ -351,8 +365,8 @@ struct QuizView: View {
                     .offset(y: questionAppeared ? 0 : 12)
                     .id("answer_\(currentQuestionIndex)")
                 }
-                .padding(.horizontal, 20)
-                .padding(.bottom, showFeedback ? 260 : 32)
+                .padding(.horizontal, 24)
+                .padding(.bottom, 32)
             }
             .scrollIndicators(.hidden)
 
@@ -363,78 +377,14 @@ struct QuizView: View {
         }
     }
 
-    private var questionCard: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            HStack(spacing: 6) {
-                Image(systemName: course.subject.icon)
-                    .font(.jakarta(size: 11, weight: .medium))
-                Text(course.subject.localizedShortName(language: languageManager.current).uppercasedInApp())
-                    .font(DS.sans(.caption2, .semibold))
-                    .tracking(0.8)
-            }
-            .foregroundStyle(DS.accentSoft)
-            .padding(.horizontal, 10)
-            .padding(.vertical, 5)
-            .background(DS.accentTint, in: Capsule())
-
-            Text(currentQuestion.question)
-                .font(DS.title(.title3, .semibold))
-                .foregroundStyle(DS.ink)
-                .fixedSize(horizontal: false, vertical: true)
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .id("question_\(currentQuestionIndex)")
-        }
-        .dsCard()
-    }
-
-    private var progressBar: some View {
-        HStack(spacing: 12) {
-            CalmProgressBar(fraction: progressValue, height: 6)
-
-            Text("\(currentQuestionIndex + 1)/\(shuffledQuestions.count)")
-                .font(DS.sans(.caption, .medium))
-                .foregroundStyle(DS.inkSecondary)
-                .monospacedDigit()
-                .fixedSize()
-
-            if showCombo && comboCount >= 2 {
-                HStack(spacing: 4) {
-                    AnimatedFlameBadge(size: 10, showGlow: false)
-                        .frame(width: 12, height: 12)
-                    Text("x\(comboCount)")
-                        .font(DS.sans(.caption2, .semibold))
-                }
-                .foregroundStyle(DS.accentSoft)
-                .padding(.horizontal, 9)
-                .padding(.vertical, 5)
-                .background(DS.accentTint, in: Capsule())
-                .transition(.scale.combined(with: .opacity))
-            }
-        }
-        .padding(.horizontal, 20)
-        .padding(.top, 6)
-        .padding(.bottom, 4)
-    }
-
-    private var quizHeader: some View {
-        HStack {
-            Button {
-                UIImpactFeedbackGenerator(style: .light).impactOccurred()
-                dismiss()
-            } label: {
-                Image(systemName: "xmark")
-                    .font(.jakarta(size: 15, weight: .medium))
-                    .foregroundStyle(DS.inkSecondary)
-                    .frame(width: 40, height: 40)
-                    .background(DS.surface, in: Circle())
-                    .overlay { Circle().strokeBorder(DS.hairline, lineWidth: 1) }
-            }
-            .buttonStyle(SoftPressButtonStyle())
-
-            Spacer()
-        }
-        .padding(.horizontal, 20)
-        .padding(.top, 10)
+    /// Sur-titre « MATIÈRE · QUESTION n SUR N », puis la question centrée.
+    private var questionHeader: some View {
+        CourseQuizQuestionHeader(
+            subject: course.subject,
+            eyebrow: "\(course.subject.localizedShortName(language: languageManager.current)) · \(questionCountText)",
+            question: currentQuestion.question
+        )
+        .id("question_\(currentQuestionIndex)")
     }
 
     // MARK: - Choice answer (.mcq / .trueFalse)
@@ -442,7 +392,7 @@ struct QuizView: View {
     @ViewBuilder
     private var choiceAnswerBody: some View {
         if currentQuestion.type == .trueFalse {
-            HStack(spacing: 12) {
+            HStack(spacing: 10) {
                 ForEach(Array(currentQuestion.options.enumerated()), id: \.offset) { index, option in
                     trueFalseButton(index: index, text: option)
                 }
@@ -456,131 +406,38 @@ struct QuizView: View {
         }
     }
 
+    /// État visuel d'une réponse : au repos tant que rien n'est choisi ; ensuite la bonne en
+    /// vert, la mauvaise choisie en rouge, les autres estompées.
+    private func optionState(for index: Int) -> DSOptionState {
+        guard hasAnswered else { return .idle }
+        if index == currentQuestion.correctIndex { return .correct }
+        if index == selectedOptionIndex { return .wrong }
+        return .dimmed
+    }
+
+    // Pas de vibration au toucher : le verdict (`submitAnswer`) vibre aussitôt.
     private func optionRow(index: Int, text: String) -> some View {
-        Button {
+        let state: DSOptionState = optionState(for: index)
+        return Button {
             selectOption(index)
         } label: {
-            HStack(spacing: 14) {
-                Text("\(Character(UnicodeScalar(65 + index)!))")
-                    .font(DS.title(.subheadline, .semibold))
-                    .foregroundStyle(optionLetterFg(for: index))
-                    .frame(width: 34, height: 34)
-                    .background(optionLetterBg(for: index), in: Circle())
-
-                Text(text)
-                    .font(DS.sans(.body, .medium))
-                    .foregroundStyle(optionTextColor(for: index))
-                    .multilineTextAlignment(.leading)
-                    .fixedSize(horizontal: false, vertical: true)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-
-                optionTrailingIcon(for: index)
-                    .frame(width: 24, height: 24)
-            }
-            .padding(.horizontal, 14)
-            .padding(.vertical, 14)
-            .frame(minHeight: 64)
-            .background(optionRowBg(for: index))
-            .clipShape(.rect(cornerRadius: DS.Radius.control))
-            .overlay {
-                RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous)
-                    .strokeBorder(optionRowBorder(for: index), lineWidth: hasAnswered && (index == currentQuestion.correctIndex || index == selectedOptionIndex) ? 1.5 : 1)
-            }
-            .opacity(hasAnswered && index != currentQuestion.correctIndex && index != selectedOptionIndex ? 0.55 : 1)
+            CourseQuizOptionCard(text: text, state: state)
         }
-        .buttonStyle(SoftPressButtonStyle())
-        .animation(.spring(response: 0.3, dampingFraction: 0.8), value: hasAnswered)
+        .buttonStyle(PressableStyle(haptic: false))
+        .dsShake(trigger: state == .wrong ? 1 : 0)
+        .dsStagger(index)
     }
 
     private func trueFalseButton(index: Int, text: String) -> some View {
-        Button {
+        let state: DSOptionState = optionState(for: index)
+        return Button {
             selectOption(index)
         } label: {
-            VStack(spacing: 10) {
-                Image(systemName: index == 0 ? "checkmark.circle.fill" : "xmark.circle.fill")
-                    .font(.jakarta(size: 26, weight: .regular))
-                    .foregroundStyle(trueFalseIconColor(for: index))
-                Text(text)
-                    .font(DS.title(.headline, .semibold))
-                    .foregroundStyle(optionTextColor(for: index))
-                    .lineLimit(2)
-                    .minimumScaleFactor(0.8)
-                    .multilineTextAlignment(.center)
-                    .fixedSize(horizontal: false, vertical: true)
-            }
-            .frame(maxWidth: .infinity)
-            .padding(.horizontal, 8)
-            .padding(.vertical, 22)
-            .background(optionRowBg(for: index))
-            .clipShape(.rect(cornerRadius: DS.Radius.control))
-            .overlay {
-                RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous)
-                    .strokeBorder(optionRowBorder(for: index), lineWidth: hasAnswered && (index == currentQuestion.correctIndex || index == selectedOptionIndex) ? 1.5 : 1)
-            }
-            .opacity(hasAnswered && index != currentQuestion.correctIndex && index != selectedOptionIndex ? 0.55 : 1)
+            CourseQuizTrueFalseCard(text: text, isTrue: index == 0, state: state)
         }
-        .buttonStyle(SoftPressButtonStyle())
-        .animation(.spring(response: 0.3, dampingFraction: 0.8), value: hasAnswered)
-    }
-
-    private func trueFalseIconColor(for index: Int) -> Color {
-        guard hasAnswered else { return DS.accentSoft }
-        if index == currentQuestion.correctIndex { return DS.success }
-        if index == selectedOptionIndex { return DS.danger }
-        return DS.accentSoft
-    }
-
-    private func optionRowBg(for index: Int) -> Color {
-        guard hasAnswered else { return DS.surface }
-        if index == currentQuestion.correctIndex { return DS.successTint }
-        if index == selectedOptionIndex, index != currentQuestion.correctIndex { return DS.dangerTint }
-        return DS.surface
-    }
-
-    private func optionRowBorder(for index: Int) -> Color {
-        guard hasAnswered else { return DS.hairline }
-        if index == currentQuestion.correctIndex { return DS.success }
-        if index == selectedOptionIndex, index != currentQuestion.correctIndex { return DS.danger }
-        return DS.hairline
-    }
-
-    private func optionTextColor(for index: Int) -> Color {
-        guard hasAnswered else { return DS.ink }
-        if index == currentQuestion.correctIndex { return DS.success }
-        if index == selectedOptionIndex, index != currentQuestion.correctIndex { return DS.danger }
-        return DS.ink
-    }
-
-    private func optionLetterFg(for index: Int) -> Color {
-        guard hasAnswered,
-              index == currentQuestion.correctIndex || (index == selectedOptionIndex && index != currentQuestion.correctIndex) else {
-            return DS.accentSoft
-        }
-        return .white
-    }
-
-    private func optionLetterBg(for index: Int) -> Color {
-        guard hasAnswered else { return DS.accentTint }
-        if index == currentQuestion.correctIndex { return DS.success }
-        if index == selectedOptionIndex, index != currentQuestion.correctIndex { return DS.danger }
-        return DS.accentTint
-    }
-
-    @ViewBuilder
-    private func optionTrailingIcon(for index: Int) -> some View {
-        if hasAnswered && index == currentQuestion.correctIndex {
-            Image(systemName: "checkmark.circle.fill")
-                .font(.jakarta(size: 20, weight: .medium))
-                .foregroundStyle(DS.success)
-                .transition(.scale.combined(with: .opacity))
-        } else if hasAnswered && index == selectedOptionIndex && !isCorrect {
-            Image(systemName: "xmark.circle.fill")
-                .font(.jakarta(size: 20, weight: .medium))
-                .foregroundStyle(DS.danger)
-                .transition(.scale.combined(with: .opacity))
-        } else {
-            Color.clear
-        }
+        .buttonStyle(PressableStyle(haptic: false))
+        .dsShake(trigger: state == .wrong ? 1 : 0)
+        .dsStagger(index)
     }
 
     // MARK: - Chronological ordering answer (tap or drag into slots, then drag to reorder)
@@ -590,19 +447,23 @@ struct QuizView: View {
             Text(languageManager.text("quiz.chronological.instruction"))
                 .font(DS.sans(.subheadline))
                 .foregroundStyle(DS.inkSecondary)
+                .multilineTextAlignment(.center)
+                .fixedSize(horizontal: false, vertical: true)
+                .frame(maxWidth: .infinity)
 
             VStack(spacing: 8) {
                 ForEach(Array(chronoSlots.indices), id: \.self) { position in
                     chronoSlotView(position: position)
+                        .dsStagger(position)
                 }
             }
 
             if !chronoPool.isEmpty {
                 VStack(alignment: .leading, spacing: 8) {
                     Text(languageManager.text("quiz.chronological.remaining").uppercasedInApp())
-                        .font(DS.sans(.caption2, .semibold))
-                        .foregroundStyle(DS.inkTertiary)
-                        .tracking(1.0)
+                        .font(DS.sans(.caption2, .heavy))
+                        .foregroundStyle(DS.inkSecondary)
+                        .tracking(0.9)
 
                     VStack(spacing: 8) {
                         ForEach(chronoPool, id: \.self) { slot in
@@ -613,21 +474,34 @@ struct QuizView: View {
             }
 
             if hasAnswered {
-                Text("\(languageManager.text("quiz.chronological.correctOrder")) : \(correctChronologicalOrderText)")
-                    .font(DS.sans(.caption, .medium))
-                    .foregroundStyle(DS.inkSecondary)
-                    .fixedSize(horizontal: false, vertical: true)
+                correctOrderCard
             } else if chronoSlots.allSatisfy({ $0 != nil }) {
+                // Pas de vibration au toucher : le verdict vibre aussitôt.
                 Button {
-                    UIImpactFeedbackGenerator(style: .light).impactOccurred()
                     submitChronoOrder()
                 } label: {
                     Text(languageManager.text("quiz.chronological.validate"))
                 }
-                .buttonStyle(DSPrimaryButtonStyle())
+                .buttonStyle(CourseCTAStyle())
                 .padding(.top, 4)
+                .transition(.opacity.combined(with: .offset(y: 8)))
             }
         }
+    }
+
+    private var correctOrderCard: some View {
+        VStack(alignment: .leading, spacing: 6) {
+            Text(languageManager.text("quiz.chronological.correctOrder").uppercasedInApp())
+                .font(DS.sans(.caption2, .heavy))
+                .foregroundStyle(DS.inkSecondary)
+                .tracking(0.9)
+            Text(correctChronologicalOrderText)
+                .font(DS.sans(.footnote, .medium))
+                .foregroundStyle(DS.ink)
+                .lineSpacing(3)
+                .fixedSize(horizontal: false, vertical: true)
+        }
+        .dsCard(padding: 14)
     }
 
     /// One numbered slot. Tapping a filled slot returns its card to the pool below;
@@ -658,91 +532,31 @@ struct QuizView: View {
     }
 
     private func chronoSlotContent(position: Int) -> some View {
-        let slot = chronoSlots[position]
-        let filled = slot != nil
-        var isCorrectSlot = false
-        if hasAnswered, let slot, currentQuestion.originalIndices.indices.contains(slot) {
-            isCorrectSlot = currentQuestion.originalIndices[slot] == position
-        }
-        let isWrongSlot = hasAnswered && filled && !isCorrectSlot
-
-        return HStack(spacing: 12) {
-            Text("\(position + 1)")
-                .font(DS.sans(.subheadline, .semibold))
-                .foregroundStyle(slotBadgeFg(isCorrect: isCorrectSlot, isWrong: isWrongSlot, filled: filled))
-                .frame(width: 28, height: 28)
-                .background(slotBadgeBg(isCorrect: isCorrectSlot, isWrong: isWrongSlot, filled: filled), in: Circle())
-
-            Group {
-                if let slot {
-                    Text(currentQuestion.items[slot])
-                        .foregroundStyle(DS.ink)
-                } else {
-                    Text(languageManager.text("quiz.chronological.emptySlot"))
-                        .foregroundStyle(DS.inkTertiary)
-                }
+        let slot: Int? = chronoSlots[position]
+        var verdict: CourseQuizSlotVerdict = .pending
+        if hasAnswered, let slot {
+            var isCorrectSlot = false
+            if currentQuestion.originalIndices.indices.contains(slot) {
+                isCorrectSlot = currentQuestion.originalIndices[slot] == position
             }
-            .font(DS.sans(.body, .medium))
-            .multilineTextAlignment(.leading)
-            .fixedSize(horizontal: false, vertical: true)
-            .frame(maxWidth: .infinity, alignment: .leading)
+            verdict = isCorrectSlot ? .correct : .wrong
+        }
+        var text: String? = nil
+        if let slot { text = currentQuestion.items[slot] }
 
-            chronoSlotTrailingIcon(isCorrect: isCorrectSlot, isWrong: isWrongSlot, filled: filled)
-                .frame(width: 20, height: 20)
-        }
-        .padding(.horizontal, 14)
-        .padding(.vertical, 14)
-        .frame(minHeight: 56)
-        .background(slotRowBg(isCorrect: isCorrectSlot, isWrong: isWrongSlot, filled: filled))
-        .clipShape(.rect(cornerRadius: DS.Radius.control))
-        .overlay {
-            RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous)
-                .strokeBorder(
-                    slotRowBorder(isCorrect: isCorrectSlot, isWrong: isWrongSlot, filled: filled),
-                    style: StrokeStyle(lineWidth: 1, dash: filled ? [] : [5, 4])
-                )
-        }
-        .contentShape(Rectangle())
-    }
-
-    @ViewBuilder
-    private func chronoSlotTrailingIcon(isCorrect: Bool, isWrong: Bool, filled: Bool) -> some View {
-        if hasAnswered && filled {
-            Image(systemName: isCorrect ? "checkmark.circle.fill" : "xmark.circle.fill")
-                .font(.jakarta(size: 18, weight: .regular))
-                .foregroundStyle(isCorrect ? DS.success : DS.danger)
-        } else if filled {
-            Image(systemName: "line.3.horizontal")
-                .font(.jakarta(size: 13, weight: .medium))
-                .foregroundStyle(DS.inkTertiary)
-        } else {
-            Color.clear
-        }
+        return CourseQuizChronoSlotRow(
+            position: position,
+            text: text,
+            emptyText: languageManager.text("quiz.chronological.emptySlot"),
+            verdict: verdict
+        )
+        .dsShake(trigger: verdict == .wrong ? 1 : 0)
     }
 
     private func chronoPoolChip(slot: Int) -> some View {
-        HStack(spacing: 12) {
-            Image(systemName: "plus.circle")
-                .font(.jakarta(size: 16, weight: .regular))
-                .foregroundStyle(DS.accentSoft)
-            Text(currentQuestion.items[slot])
-                .font(DS.sans(.body, .medium))
-                .foregroundStyle(DS.ink)
-                .multilineTextAlignment(.leading)
-                .fixedSize(horizontal: false, vertical: true)
-                .frame(maxWidth: .infinity, alignment: .leading)
-        }
-        .padding(.horizontal, 14)
-        .padding(.vertical, 14)
-        .background(DS.surface)
-        .clipShape(.rect(cornerRadius: DS.Radius.control))
-        .overlay {
-            RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous)
-                .strokeBorder(DS.hairline, lineWidth: 1)
-        }
-        .contentShape(Rectangle())
-        .onTapGesture { tapPoolItem(slot) }
-        .draggable(String(slot))
+        CourseQuizChronoPoolRow(text: currentQuestion.items[slot])
+            .onTapGesture { tapPoolItem(slot) }
+            .draggable(String(slot))
     }
 
     /// Tapping a pool card places it in the leftmost empty slot.
@@ -787,29 +601,6 @@ struct QuizView: View {
         UIImpactFeedbackGenerator(style: .light).impactOccurred()
     }
 
-    private func slotRowBg(isCorrect: Bool, isWrong: Bool, filled: Bool) -> Color {
-        if isCorrect { return DS.successTint }
-        if isWrong { return DS.dangerTint }
-        return filled ? DS.surface : DS.surfaceMuted
-    }
-
-    private func slotRowBorder(isCorrect: Bool, isWrong: Bool, filled: Bool) -> Color {
-        if isCorrect { return DS.success }
-        if isWrong { return DS.danger }
-        return DS.hairline
-    }
-
-    private func slotBadgeBg(isCorrect: Bool, isWrong: Bool, filled: Bool) -> Color {
-        if isCorrect { return DS.success }
-        if isWrong { return DS.danger }
-        return filled ? DS.accentTint : DS.surfaceMuted
-    }
-
-    private func slotBadgeFg(isCorrect: Bool, isWrong: Bool, filled: Bool) -> Color {
-        if isCorrect || isWrong { return .white }
-        return filled ? DS.accentSoft : DS.inkTertiary
-    }
-
     private var correctChronologicalOrderText: String {
         let items = currentQuestion.items
         let originalIndices = currentQuestion.originalIndices
@@ -823,10 +614,12 @@ struct QuizView: View {
     private var sliderAnswerBody: some View {
         VStack(spacing: 20) {
             Text(sliderValueLabel(sliderValue))
-                .font(.jakarta(size: 42, weight: .semibold))
+                .font(CourseType.font(44, .heavy, relativeTo: .largeTitle))
                 .foregroundStyle(DS.ink)
                 .monospacedDigit()
                 .contentTransition(.numericText())
+                .lineLimit(1)
+                .minimumScaleFactor(0.5)
                 .frame(maxWidth: .infinity)
 
             VStack(spacing: 6) {
@@ -835,70 +628,59 @@ struct QuizView: View {
                 Slider(value: $sliderValue, in: sliderBounds, step: currentQuestion.sliderStep)
                     .tint(DS.accent)
                     .disabled(hasAnswered)
+                    .sensoryFeedback(.selection, trigger: sliderValue)
 
                 HStack {
                     Text(sliderValueLabel(currentQuestion.sliderMin))
                     Spacer()
                     Text(sliderValueLabel(currentQuestion.sliderMax))
                 }
-                .font(DS.sans(.caption2, .medium))
-                .foregroundStyle(DS.inkTertiary)
+                .font(DS.sans(.caption, .semibold))
+                .foregroundStyle(DS.inkSecondary)
             }
 
             if hasAnswered {
                 HStack(spacing: 10) {
-                    sliderResultPill(
+                    CourseQuizSliderResultPill(
                         label: languageManager.text("quiz.slider.yourGuess"),
                         value: sliderValueLabel(sliderValue),
-                        tint: sliderGuessTint
+                        tint: sliderGuessTint,
+                        fill: sliderGuessFill
                     )
-                    sliderResultPill(
+                    .dsShake(trigger: currentQuestionPoints == 0 ? 1 : 0)
+
+                    CourseQuizSliderResultPill(
                         label: languageManager.text("quiz.slider.correctAnswer"),
                         value: sliderValueLabel(currentQuestion.correctValue),
-                        tint: DS.success
+                        tint: CoursePalette.successInk,
+                        fill: DS.successTint
                     )
                 }
+                .dsPopIn()
             } else {
+                // Pas de vibration au toucher : le verdict vibre aussitôt.
                 Button {
-                    UIImpactFeedbackGenerator(style: .light).impactOccurred()
                     submitSlider()
                 } label: {
                     Text(languageManager.text("quiz.slider.validate"))
                 }
-                .buttonStyle(DSPrimaryButtonStyle())
+                .buttonStyle(CourseCTAStyle())
             }
         }
-        .padding(.vertical, 20)
-        .padding(.horizontal, 20)
-        .background(DS.surface)
-        .clipShape(.rect(cornerRadius: DS.Radius.card))
-        .overlay {
-            RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
-                .strokeBorder(DS.hairline, lineWidth: 1)
-        }
-        .dsSoftShadow()
-    }
-
-    private func sliderResultPill(label: String, value: String, tint: Color) -> some View {
-        VStack(spacing: 4) {
-            Text(label.uppercasedInApp())
-                .font(DS.sans(.caption2, .semibold))
-                .foregroundStyle(DS.inkTertiary)
-                .tracking(0.5)
-            Text(value)
-                .font(DS.sans(.subheadline, .semibold))
-                .foregroundStyle(tint)
-        }
-        .frame(maxWidth: .infinity)
-        .padding(.vertical, 10)
-        .background(DS.surfaceMuted)
-        .clipShape(.rect(cornerRadius: DS.Radius.small))
+        .dsCard()
+        .dsStagger(0)
     }
 
     private var sliderGuessTint: Color {
-        if currentQuestionPoints == currentQuestion.maxPoints { return DS.success }
-        if currentQuestionPoints > 0 { return DS.accentSoft }
+        if currentQuestionPoints == currentQuestion.maxPoints { return CoursePalette.successInk }
+        if currentQuestionPoints > 0 { return DS.accent }
         return DS.danger
+    }
+
+    private var sliderGuessFill: Color {
+        if currentQuestionPoints == currentQuestion.maxPoints { return DS.successTint }
+        if currentQuestionPoints > 0 { return DS.accentTint }
+        return DS.dangerTint
     }
 
     private var sliderBounds: ClosedRange<Double> {
@@ -923,6 +705,8 @@ struct QuizView: View {
 
     // MARK: - XP popup
 
+    // L'XP gagné s'affiche désormais dans le panneau de verdict (`feedbackBar`) : la bulle
+    // flottante n'est plus dessinée, son état reste tenu tel quel.
     private func showXPBubble(xp: Int) {
         guard xp > 0 else { return }
         popupXPAmount = xp
@@ -936,100 +720,47 @@ struct QuizView: View {
         }
     }
 
-    private var xpPopupView: some View {
-        VStack {
-            Spacer().frame(height: 96)
-            HStack(spacing: 6) {
-                AnimatedRewardBadge(kind: .xp, size: 13, showGlow: false)
-                    .frame(width: 15, height: 15)
-                Text("+\(popupXPAmount) XP")
-                    .font(DS.sans(.subheadline, .semibold))
-            }
-            .foregroundStyle(DS.accentSoft)
-            .padding(.horizontal, 14)
-            .padding(.vertical, 9)
-            .background(DS.accentTint, in: Capsule())
-            Spacer()
-        }
-        .allowsHitTesting(false)
-    }
-
     // MARK: - Feedback bar
 
+    /// Le panneau de verdict : il monte du bas avec le titre, les XP gagnés, l'explication
+    /// et « Continuer » (la vibration du bouton vient de son style).
     private var feedbackBar: some View {
-        VStack(spacing: 0) {
-            Rectangle()
-                .fill(DS.hairline)
-                .frame(height: 1)
-
-            VStack(spacing: 16) {
-                HStack(alignment: .top, spacing: 14) {
-                    Image(systemName: feedbackIconName)
-                        .font(.jakarta(size: 30, weight: .regular))
-                        .foregroundStyle(feedbackColor)
-
-                    VStack(alignment: .leading, spacing: 4) {
-                        Text(feedbackTitle)
-                            .font(DS.title(.headline, .semibold))
-                            .foregroundStyle(DS.ink)
-
-                        if isFullyCorrect, comboCount >= 2 {
-                            HStack(spacing: 4) {
-                                AnimatedFlameBadge(size: 10, showGlow: false)
-                                    .frame(width: 12, height: 12)
-                                Text(String(format: languageManager.text("quiz.combo"), comboCount))
-                                    .font(DS.sans(.caption, .medium))
-                            }
-                            .foregroundStyle(DS.accentSoft)
-                        }
-
-                        if currentQuestion.maxPoints > 2 {
-                            Text("+\(currentQuestionPoints)/\(currentQuestion.maxPoints) \(languageManager.text("quiz.pointsEarned"))")
-                                .font(DS.sans(.caption, .medium))
-                                .foregroundStyle(DS.inkTertiary)
-                        }
-
-                        if !currentQuestion.explanation.isEmpty {
-                            Text(currentQuestion.explanation)
-                                .font(DS.sans(.subheadline))
-                                .foregroundStyle(DS.inkSecondary)
-                                .fixedSize(horizontal: false, vertical: true)
-                                .padding(.top, 2)
-                        }
-                    }
-
-                    Spacer(minLength: 0)
-                }
-
-                Button {
-                    UIImpactFeedbackGenerator(style: .light).impactOccurred()
-                    nextQuestion()
-                } label: {
-                    HStack(spacing: 8) {
-                        Text(languageManager.text("common.continue"))
-                        Image(systemName: "arrow.forward")
-                            .font(.subheadline.weight(.semibold))
-                    }
-                }
-                .buttonStyle(DSPrimaryButtonStyle())
-            }
-            .padding(.horizontal, 20)
-            .padding(.top, 18)
-            .padding(.bottom, 16)
-            .background(DS.surface)
+        CourseQuizVerdictPanel(
+            tone: feedbackTone,
+            title: feedbackTitle,
+            xpText: currentQuestionPoints > 0 ? "+\(currentQuestionPoints) XP" : nil,
+            explanation: currentQuestion.explanation,
+            continueTitle: languageManager.text("common.continue"),
+            onContinue: { nextQuestion() }
+        ) {
+            feedbackDetail
         }
     }
 
-    private var feedbackIconName: String {
-        if isFullyCorrect { return "checkmark.circle.fill" }
-        if currentQuestionPoints > 0 { return "circle.lefthalf.filled" }
-        return "xmark.circle.fill"
+    @ViewBuilder
+    private var feedbackDetail: some View {
+        if isFullyCorrect, comboCount >= 2 {
+            HStack(spacing: 4) {
+                Image(systemName: "flame.fill")
+                    .font(.system(size: 11, weight: .bold))
+                    .foregroundStyle(CoursePalette.goldDeep)
+                Text(String(format: languageManager.text("quiz.combo"), comboCount))
+                    .font(DS.sans(.caption, .bold))
+                    .foregroundStyle(CoursePalette.goldInk)
+            }
+        }
+
+        if currentQuestion.maxPoints > 2 {
+            Text("+\(currentQuestionPoints)/\(currentQuestion.maxPoints) \(languageManager.text("quiz.pointsEarned"))")
+                .font(DS.sans(.caption, .semibold))
+                .foregroundStyle(DS.inkSecondary)
+        }
     }
 
-    private var feedbackColor: Color {
-        if isFullyCorrect { return DS.success }
-        if currentQuestionPoints > 0 { return DS.accentSoft }
-        return DS.danger
+    private var feedbackTone: CourseQuizVerdictTone {
+        if isFullyCorrect { return .success }
+        if currentQuestionPoints > 0 { return .partial }
+        return .failure
     }
 
     private var feedbackTitle: String {
@@ -1107,114 +838,135 @@ struct QuizView: View {
     // MARK: - Result screen
 
     private var resultView: some View {
-        ScrollView {
-            VStack(spacing: 24) {
-                Spacer(minLength: 24)
-
-                ZStack {
-                    Circle()
-                        .stroke(DS.hairline, lineWidth: 8)
-                        .frame(width: 156, height: 156)
-                    Circle()
-                        .trim(from: 0, to: ringProgress)
-                        .stroke(DS.accent, style: StrokeStyle(lineWidth: 8, lineCap: .round))
-                        .frame(width: 156, height: 156)
-                        .rotationEffect(.degrees(-90))
-                    ZStack {
-                        Circle().fill(DS.accentTint)
-                        AnimatedRewardBadge(kind: .trophy, size: 50)
-                    }
-                    .frame(width: 128, height: 128)
+        VStack(spacing: 0) {
+            GeometryReader { geo in
+                ScrollView {
+                    resultSummary
+                        .padding(.horizontal, 24)
+                        .padding(.vertical, 20)
+                        .frame(maxWidth: .infinity)
+                        .frame(minHeight: geo.size.height)
                 }
-                .scaleEffect(resultAppeared ? 1 : 0.7)
-                .opacity(resultAppeared ? 1 : 0)
-                .animation(.spring(response: 0.6, dampingFraction: 0.75).delay(0.1), value: resultAppeared)
-
-                VStack(spacing: 10) {
-                    Text(languageManager.text("quiz.completed"))
-                        .font(DS.title(.title, .semibold))
-                        .foregroundStyle(DS.ink)
-                        .opacity(resultAppeared ? 1 : 0)
-                        .offset(y: resultAppeared ? 0 : 12)
-                        .animation(.spring(response: 0.5).delay(0.25), value: resultAppeared)
-
-                    HStack(alignment: .firstTextBaseline, spacing: 6) {
-                        Text("\(scoreAnimated)")
-                            .font(.jakarta(size: 48, weight: .semibold, design: .default))
-                            .foregroundStyle(DS.ink)
-                            .contentTransition(.numericText(countsDown: false))
-                        Text("/ \(maxPossiblePoints)")
-                            .font(DS.title(.title2, .medium))
-                            .foregroundStyle(DS.inkTertiary)
-                    }
-                    .opacity(resultAppeared ? 1 : 0)
-                    .animation(.spring(response: 0.5).delay(0.4), value: resultAppeared)
-
-                    Text(languageManager.text("quiz.pointsEarned"))
-                        .font(DS.sans(.subheadline))
-                        .foregroundStyle(DS.inkSecondary)
-                        .opacity(resultAppeared ? 1 : 0)
-                        .animation(.spring(response: 0.5).delay(0.5), value: resultAppeared)
-
-                    if xpEarned > 0 {
-                        HStack(spacing: 6) {
-                            AnimatedRewardBadge(kind: .xp, size: 13, showGlow: false)
-                                .frame(width: 15, height: 15)
-                            Text("+\(xpEarned) XP")
-                                .font(DS.sans(.subheadline, .semibold))
-                        }
-                        .foregroundStyle(DS.accentSoft)
-                        .padding(.horizontal, 14)
-                        .padding(.vertical, 8)
-                        .background(DS.accentTint, in: Capsule())
-                        .scaleEffect(resultAppeared ? 1 : 0.6)
-                        .opacity(resultAppeared ? 1 : 0)
-                        .animation(.spring(response: 0.5, dampingFraction: 0.7).delay(0.65), value: resultAppeared)
-                    }
-                }
-
-                animatedScoreStars
-
-                Spacer(minLength: 12)
-
-                VStack(spacing: 12) {
-                    Button {
-                        UIImpactFeedbackGenerator(style: .light).impactOccurred()
-                        withAnimation(.easeInOut(duration: 0.3)) {
-                            showXPProgress = true
-                        }
-                        startXPProgressionSequence()
-                    } label: {
-                        HStack(spacing: 8) {
-                            Image(systemName: "house.fill")
-                            Text(languageManager.text("common.backHome"))
-                        }
-                    }
-                    .buttonStyle(DSPrimaryButtonStyle())
-
-                    Button {
-                        UIImpactFeedbackGenerator(style: .light).impactOccurred()
-                        resetQuiz()
-                    } label: {
-                        HStack(spacing: 8) {
-                            Image(systemName: "arrow.counterclockwise")
-                            Text(languageManager.text("common.retryQuiz"))
-                        }
-                    }
-                    .buttonStyle(DSSecondaryButtonStyle())
-                }
-                .padding(.horizontal, 24)
-                .padding(.bottom, 24)
-                .opacity(resultAppeared ? 1 : 0)
-                .offset(y: resultAppeared ? 0 : 20)
-                .animation(.spring(response: 0.6).delay(0.9), value: resultAppeared)
+                .scrollIndicators(.hidden)
             }
-            .padding(.horizontal, 20)
+
+            resultButtons
         }
-        .scrollIndicators(.hidden)
+        .overlay {
+            if showResultConfetti {
+                PathConfettiBurst(
+                    colors: [CoursePalette.gold, CoursePalette.goldTint, DS.accent, DS.success],
+                    pieceCount: 60,
+                    duration: 2.6,
+                    origin: CGPoint(x: 0.5, y: 0.3)
+                )
+                .ignoresSafeArea()
+                .allowsHitTesting(false)
+            }
+        }
         .onAppear {
             startResultAnimations()
         }
+    }
+
+    private var resultSummary: some View {
+        VStack(spacing: 12) {
+            resultRing
+
+            Text(languageManager.text("quiz.completed"))
+                .font(CourseType.font(24, .semibold, relativeTo: .title2))
+                .foregroundStyle(DS.ink)
+                .multilineTextAlignment(.center)
+                .fixedSize(horizontal: false, vertical: true)
+                .padding(.top, 8)
+                .opacity(resultAppeared ? 1 : 0)
+                .offset(y: resultAppeared ? 0 : 12)
+                .animation(DS.Motion.reveal.delay(0.25), value: resultAppeared)
+
+            // Le score défile jusqu'à sa valeur (`startResultAnimations`).
+            Text("\(scoreAnimated) / \(maxPossiblePoints)")
+                .font(CourseType.font(44, .heavy, relativeTo: .largeTitle))
+                .foregroundStyle(DS.ink)
+                .monospacedDigit()
+                .contentTransition(.numericText(value: Double(scoreAnimated)))
+                .lineLimit(1)
+                .minimumScaleFactor(0.6)
+                .opacity(resultAppeared ? 1 : 0)
+                .animation(DS.Motion.reveal.delay(0.4), value: resultAppeared)
+
+            Text(languageManager.text("quiz.pointsEarned"))
+                .font(DS.sans(.subheadline))
+                .foregroundStyle(DS.inkSecondary)
+                .opacity(resultAppeared ? 1 : 0)
+                .animation(DS.Motion.reveal.delay(0.5), value: resultAppeared)
+
+            if xpEarned > 0 {
+                CourseGoldPill(text: "+\(xpEarned) XP", font: DS.sans(.subheadline, .heavy))
+                    .scaleEffect(resultAppeared ? 1 : 0.6)
+                    .opacity(resultAppeared ? 1 : 0)
+                    .animation(DS.Motion.pop.delay(0.65), value: resultAppeared)
+            }
+
+            animatedScoreStars
+                .padding(.top, 4)
+        }
+    }
+
+    /// L'anneau doré se remplit à hauteur du score, autour du trophée.
+    private var resultRing: some View {
+        ZStack {
+            Circle()
+                .stroke(CoursePalette.goldTint, lineWidth: 10)
+                .padding(5)
+            Circle()
+                .trim(from: 0, to: ringProgress)
+                .stroke(CoursePalette.gold, style: StrokeStyle(lineWidth: 10, lineCap: .round))
+                .rotationEffect(.degrees(-90))
+                .padding(5)
+            Image(systemName: "trophy")
+                .font(.system(size: 54, weight: .medium))
+                .foregroundStyle(CoursePalette.goldDeep)
+        }
+        .frame(width: 150, height: 150)
+        .scaleEffect(resultAppeared ? 1 : 0.7)
+        .opacity(resultAppeared ? 1 : 0)
+        .animation(DS.Motion.pop.delay(0.1), value: resultAppeared)
+        .accessibilityHidden(true)
+    }
+
+    // Les deux boutons vibrent par leur style.
+    private var resultButtons: some View {
+        VStack(spacing: 10) {
+            Button {
+                withAnimation(.easeInOut(duration: 0.3)) {
+                    showXPProgress = true
+                }
+                startXPProgressionSequence()
+            } label: {
+                HStack(spacing: 8) {
+                    Image(systemName: "house")
+                        .font(.subheadline.weight(.semibold))
+                    Text(languageManager.text("common.backHome"))
+                }
+            }
+            .buttonStyle(DSPrimaryButtonStyle())
+
+            Button {
+                resetQuiz()
+            } label: {
+                HStack(spacing: 8) {
+                    Image(systemName: "arrow.counterclockwise")
+                        .font(.subheadline.weight(.semibold))
+                    Text(languageManager.text("common.retryQuiz"))
+                }
+            }
+            .buttonStyle(DSSecondaryButtonStyle())
+        }
+        .padding(.horizontal, 24)
+        .padding(.bottom, 24)
+        .opacity(resultAppeared ? 1 : 0)
+        .offset(y: resultAppeared ? 0 : 20)
+        .animation(DS.Motion.reveal.delay(0.9), value: resultAppeared)
     }
 
     private func resetQuiz() {
@@ -1222,6 +974,7 @@ struct QuizView: View {
             isFinished = false
         }
         resultAppeared = false
+        showResultConfetti = false
         scoreAnimated = 0
         starsRevealed = 0
         ringProgress = 0
@@ -1238,10 +991,19 @@ struct QuizView: View {
         withAnimation(.spring(response: 0.6, dampingFraction: 0.75)) {
             resultAppeared = true
         }
-        UINotificationFeedbackGenerator().notificationOccurred(.success)
 
         let targetScore = totalPointsEarned
         let totalPoints = max(maxPossiblePoints, 1)
+        let percentage = Double(targetScore) / Double(totalPoints)
+        let starCount = percentage >= 0.8 ? 3 : (percentage >= 0.5 ? 2 : 1)
+
+        // Quiz réussi (au moins la moitié des points) : la vibration de récompense.
+        if percentage >= 0.5 {
+            Haptics.celebrate()
+        } else {
+            Haptics.soft()
+        }
+
         withAnimation(.easeOut(duration: 0.9).delay(0.35)) {
             ringProgress = CGFloat(targetScore) / CGFloat(totalPoints)
         }
@@ -1259,8 +1021,6 @@ struct QuizView: View {
             }
         }
 
-        let percentage = Double(targetScore) / Double(totalPoints)
-        let starCount = percentage >= 0.8 ? 3 : (percentage >= 0.5 ? 2 : 1)
         for i in 0..<starCount {
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.2 + Double(i) * 0.2) {
                 withAnimation(.spring(response: 0.4, dampingFraction: 0.6)) {
@@ -1269,21 +1029,29 @@ struct QuizView: View {
                 UIImpactFeedbackGenerator(style: .light).impactOccurred()
             }
         }
+
+        // Trois étoiles : une pluie de confettis quand la dernière se pose.
+        if starCount == 3, !reduceMotion {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.6) {
+                guard isFinished else { return }
+                showResultConfetti = true
+            }
+        }
     }
 
     private var animatedScoreStars: some View {
-        HStack(spacing: 14) {
+        HStack(spacing: 6) {
             ForEach(0..<3, id: \.self) { index in
                 let isFilled = index < starsRevealed
                 Image(systemName: isFilled ? "star.fill" : "star")
-                    .font(.jakarta(size: 30, weight: .regular))
-                    .foregroundStyle(isFilled ? DS.accentSoft : DS.hairline)
+                    .font(.system(size: 32, weight: .regular))
+                    .foregroundStyle(isFilled ? CoursePalette.gold : DS.hairline)
                     .scaleEffect(isFilled ? 1.05 : 0.85)
                     .animation(.spring(response: 0.4, dampingFraction: 0.55), value: starsRevealed)
             }
         }
         .opacity(resultAppeared ? 1 : 0)
-        .animation(.spring(response: 0.5).delay(1.1), value: resultAppeared)
+        .animation(DS.Motion.reveal.delay(1.1), value: resultAppeared)
     }
 
     // MARK: - Post-quiz XP progression screen
@@ -1420,107 +1188,119 @@ struct QuizView: View {
     }
 
     private var xpProgressionView: some View {
-        ScrollView {
-            VStack(spacing: 22) {
-                Spacer(minLength: 20)
-
-                HStack(spacing: 6) {
-                    Image(systemName: course.subject.icon)
-                        .font(.jakarta(size: 12, weight: .medium))
-                    Text(course.subject.localizedShortName(language: languageManager.current).uppercasedInApp())
-                        .font(DS.sans(.caption, .semibold))
-                        .tracking(0.8)
+        VStack(spacing: 0) {
+            GeometryReader { geo in
+                ScrollView {
+                    xpProgressionSummary
+                        .padding(.horizontal, 24)
+                        .padding(.vertical, 20)
+                        .frame(maxWidth: .infinity)
+                        .frame(minHeight: geo.size.height)
                 }
-                .foregroundStyle(DS.accentSoft)
-                .padding(.horizontal, 14)
-                .padding(.vertical, 8)
-                .background(DS.accentTint, in: Capsule())
+                .scrollIndicators(.hidden)
+            }
+
+            // Vibre par son style.
+            Button {
+                continueAfterQuizCompletion()
+            } label: {
+                HStack(spacing: 8) {
+                    Text(languageManager.text("common.continue"))
+                    Image(systemName: "arrow.forward")
+                        .font(.subheadline.weight(.semibold))
+                }
+            }
+            .buttonStyle(DSPrimaryButtonStyle())
+            .padding(.horizontal, 24)
+            .padding(.bottom, 24)
+            .scaleEffect(xpButtonAppeared ? 1 : 0.9)
+            .opacity(xpButtonAppeared ? 1 : 0)
+        }
+    }
+
+    private var xpProgressionSummary: some View {
+        VStack(spacing: 18) {
+            xpCourseThumbnail
                 .scaleEffect(xpScreenAppeared ? 1 : 0.7)
                 .opacity(xpScreenAppeared ? 1 : 0)
 
-                ZStack {
-                    DS.accentTint
-                    if let thumb = cachedCourseThumb {
-                        Image(uiImage: thumb)
-                            .resizable()
-                            .scaledToFill()
-                    } else {
-                        SubjectBadgeView(subject: course.subject, iconSize: 60, cornerRadius: 0)
-                    }
-                }
-                .frame(width: 176, height: 176)
-                .clipShape(.rect(cornerRadius: DS.Radius.card))
-                .overlay {
-                    RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
-                        .strokeBorder(DS.hairline, lineWidth: 1)
-                }
-                .dsSoftShadow()
-                .scaleEffect(xpScreenAppeared ? 1 : 0.7)
+            Text(didLevelUp ? languageManager.text("quiz.levelUp") : languageManager.text("quiz.xpProgress"))
+                .font(CourseType.font(26, .semibold, relativeTo: .title))
+                .foregroundStyle(DS.ink)
+                .multilineTextAlignment(.center)
                 .opacity(xpScreenAppeared ? 1 : 0)
 
-                VStack(spacing: 6) {
-                    Text(didLevelUp ? languageManager.text("quiz.levelUp") : languageManager.text("quiz.xpProgress"))
-                        .font(DS.title(.title2, .semibold))
-                        .foregroundStyle(DS.ink)
-                        .opacity(xpScreenAppeared ? 1 : 0)
-
-                    HStack(alignment: .firstTextBaseline, spacing: 6) {
-                        Text("\(displayedXP)")
-                            .font(.jakarta(size: 38, weight: .semibold))
-                            .foregroundStyle(DS.ink)
-                            .monospacedDigit()
-                        Text("XP")
-                            .font(DS.title(.title3, .medium))
-                            .foregroundStyle(DS.inkTertiary)
-                    }
-                    .opacity(xpScreenAppeared ? 1 : 0)
-                }
-
-                VStack(alignment: .leading, spacing: 8) {
-                    CalmProgressBar(fraction: Double(xpBarFill), height: 10)
-
-                    Text(xpProgressLabel)
-                        .font(DS.sans(.caption, .medium))
-                        .foregroundStyle(DS.inkSecondary)
-                }
-                .padding(.horizontal, 24)
-                .opacity(xpScreenAppeared ? 1 : 0)
-
-                VStack(spacing: 10) {
-                    breakdownRow(
-                        icon: "checkmark.circle",
-                        label: languageManager.text("quiz.breakdown.correct"),
-                        amount: xpEarned - quizCompletionXPBonus
-                    )
-                    breakdownRow(
-                        icon: "trophy",
-                        label: languageManager.text("quiz.breakdown.completed"),
-                        amount: quizCompletionXPBonus
-                    )
-                }
-                .padding(.horizontal, 24)
+            xpProgressionCard
                 .opacity(xpScreenAppeared ? 1 : 0)
                 .offset(y: xpScreenAppeared ? 0 : 10)
+        }
+    }
 
-                Spacer(minLength: 12)
-
-                Button {
-                    UIImpactFeedbackGenerator(style: .light).impactOccurred()
-                    continueAfterQuizCompletion()
-                } label: {
-                    HStack(spacing: 8) {
-                        Text(languageManager.text("common.continue"))
-                        Image(systemName: "arrow.forward")
-                    }
-                }
-                .buttonStyle(DSPrimaryButtonStyle())
-                .padding(.horizontal, 24)
-                .padding(.bottom, 24)
-                .scaleEffect(xpButtonAppeared ? 1 : 0.9)
-                .opacity(xpButtonAppeared ? 1 : 0)
+    private var xpCourseThumbnail: some View {
+        ZStack {
+            DS.accentTint
+            if let thumb = cachedCourseThumb {
+                Image(uiImage: thumb)
+                    .resizable()
+                    .scaledToFill()
+            } else {
+                SubjectBadgeView(subject: course.subject, iconSize: 60, cornerRadius: 0)
             }
         }
-        .scrollIndicators(.hidden)
+        .frame(width: 152, height: 152)
+        .clipShape(.rect(cornerRadius: 28, style: .continuous))
+    }
+
+    /// La carte de progression de la matière : XP qui défile, barre dorée, détail des gains.
+    private var xpProgressionCard: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            HStack(spacing: 10) {
+                CourseSubjectAvatar(subject: course.subject, size: 36)
+                Text(course.subject.localizedShortName(language: languageManager.current))
+                    .font(DS.sans(.callout, .bold))
+                    .foregroundStyle(DS.ink)
+                    .lineLimit(2)
+                Spacer(minLength: 8)
+                Text(String(format: languageManager.text("common.levelShort"), subjectTier.level))
+                    .font(DS.sans(.caption, .heavy))
+                    .foregroundStyle(DS.ink)
+                    .padding(.horizontal, 10)
+                    .padding(.vertical, 4)
+                    .background(DS.accentTint, in: RoundedRectangle(cornerRadius: 10, style: .continuous))
+            }
+
+            HStack(alignment: .firstTextBaseline, spacing: 6) {
+                Text("\(displayedXP)")
+                    .font(CourseType.font(32, .heavy, relativeTo: .title))
+                    .foregroundStyle(DS.ink)
+                    .monospacedDigit()
+                Text("XP")
+                    .font(DS.sans(.headline, .bold))
+                    .foregroundStyle(DS.inkSecondary)
+            }
+
+            CourseXPBar(fraction: Double(xpBarFill), height: 8)
+
+            Text(xpProgressLabel)
+                .font(DS.sans(.footnote, .medium))
+                .foregroundStyle(DS.inkSecondary)
+
+            Rectangle()
+                .fill(DS.hairline)
+                .frame(height: 1)
+
+            breakdownRow(
+                icon: "checkmark",
+                label: languageManager.text("quiz.breakdown.correct"),
+                amount: xpEarned - quizCompletionXPBonus
+            )
+            breakdownRow(
+                icon: "trophy",
+                label: languageManager.text("quiz.breakdown.completed"),
+                amount: quizCompletionXPBonus
+            )
+        }
+        .dsCard(padding: 16)
     }
 
     private var xpProgressLabel: String {
@@ -1533,30 +1313,20 @@ struct QuizView: View {
     }
 
     private func breakdownRow(icon: String, label: String, amount: Int) -> some View {
-        HStack(spacing: 12) {
+        HStack(spacing: 10) {
             Image(systemName: icon)
-                .font(.jakarta(size: 15, weight: .medium))
-                .foregroundStyle(DS.accentSoft)
-                .frame(width: 36, height: 36)
+                .font(.system(size: 12, weight: .bold))
+                .foregroundStyle(DS.accent)
+                .frame(width: 28, height: 28)
                 .background(DS.accentTint, in: Circle())
 
             Text(label)
-                .font(DS.sans(.subheadline, .medium))
+                .font(DS.sans(.subheadline, .semibold))
                 .foregroundStyle(DS.ink)
 
             Spacer(minLength: 4)
 
-            Text("+\(amount) XP")
-                .font(DS.sans(.subheadline, .semibold))
-                .foregroundStyle(DS.accentSoft)
-        }
-        .padding(.horizontal, 14)
-        .padding(.vertical, 12)
-        .background(DS.surface)
-        .clipShape(.rect(cornerRadius: DS.Radius.control))
-        .overlay {
-            RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous)
-                .strokeBorder(DS.hairline, lineWidth: 1)
+            CourseGoldPill(text: "+\(amount) XP")
         }
     }
 }

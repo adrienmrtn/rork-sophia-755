@@ -18,33 +18,42 @@ struct ExploreView: View {
     @State private var selectedTrend: String?
     @FocusState private var searchFocused: Bool
 
+    /// Marge latérale de l'écran.
+    private static let sideMargin: CGFloat = 24
+
     private var language: AppLanguage { languageManager.current }
     private var trimmedQuery: String { query.trimmingCharacters(in: .whitespacesAndNewlines) }
     private var isSearching: Bool { trimmedQuery.count >= 2 }
 
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: 22) {
-                Text(languageManager.text("tab.explore"))
-                    .font(DS.title(.largeTitle, .heavy))
-                    .foregroundStyle(DS.ink)
-                    .padding(.top, 8)
-                    .padding(.horizontal, 20)
+            VStack(alignment: .leading, spacing: 24) {
+                VStack(alignment: .leading, spacing: 14) {
+                    Text(languageManager.text("tab.explore"))
+                        .font(DS.title(.largeTitle, .medium))
+                        .foregroundStyle(DS.ink)
+                        .padding(.top, 8)
 
-                searchField
-                    .padding(.horizontal, 20)
+                    searchField
+                }
+                .padding(.horizontal, Self.sideMargin)
 
                 if isSearching {
                     results
-                        .padding(.horizontal, 20)
+                        .padding(.horizontal, Self.sideMargin)
                 } else {
                     eventsSection
+                        .dsStagger(0)
                     trendingSection
+                        .dsStagger(1)
                     universesSection
-                        .padding(.horizontal, 20)
+                        .padding(.horizontal, Self.sideMargin)
+                        .dsStagger(2)
                     creatorsCarousel
+                        .dsStagger(3)
                     pathCard
-                        .padding(.horizontal, 20)
+                        .padding(.horizontal, Self.sideMargin)
+                        .dsStagger(4)
                 }
             }
             .padding(.vertical, 8)
@@ -71,36 +80,35 @@ struct ExploreView: View {
     /// avec son illustration en papier découpé (`path_poster`, même direction que le site).
     private var pathCard: some View {
         Button {
-            UIImpactFeedbackGenerator(style: .light).impactOccurred()
             onOpenPath()
         } label: {
             VStack(alignment: .leading, spacing: 6) {
                 Text(languageManager.text("path.title"))
-                    .font(DS.title(.title2, .heavy))
+                    .font(DS.title(.title3, .heavy))
                     .foregroundStyle(.white)
                     .fixedSize(horizontal: false, vertical: true)
                 Text(languageManager.text("explore.path.subtitle"))
                     .font(DS.sans(.subheadline))
-                    .foregroundStyle(.white.opacity(0.85))
+                    .foregroundStyle(Self.pathSoftText)
                     .lineSpacing(2)
                     .multilineTextAlignment(.leading)
                     .fixedSize(horizontal: false, vertical: true)
-                HStack(spacing: 6) {
+                HStack(spacing: 4) {
                     Text(String(format: languageManager.text("path.levelCaption"), currentPathLevel))
-                        .font(DS.sans(.footnote, .bold))
+                        .font(DS.sans(.subheadline, .heavy))
                         .lineLimit(1)
                     Image(systemName: "chevron.forward")
                         .font(.system(size: 11, weight: .bold))
                 }
-                .foregroundStyle(EventPalette.navy)
+                .foregroundStyle(EventPalette.ink)
                 .padding(.horizontal, 12)
                 .frame(height: 32)
                 .background(Capsule().fill(EventPalette.saffron))
-                .padding(.top, 6)
+                .padding(.top, 4)
             }
             .padding(16)
             .padding(.trailing, Self.pathPosterWidth)
-            .frame(maxWidth: .infinity, minHeight: 148, alignment: .leading)
+            .frame(maxWidth: .infinity, minHeight: 132, alignment: .leading)
             .background(alignment: .trailing) {
                 Color.clear
                     .frame(width: Self.pathPosterWidth)
@@ -114,13 +122,14 @@ struct ExploreView: View {
             }
             .background(EventPalette.navy)
             .clipShape(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
-            .dsSoftShadow()
             .contentShape(Rectangle())
         }
-        .buttonStyle(.plain)
+        .buttonStyle(.pressable)
     }
 
-    private static let pathPosterWidth: CGFloat = 128
+    private static let pathPosterWidth: CGFloat = 130
+    /// Le bleu clair du sous-titre posé sur le marine.
+    private static let pathSoftText = Color(red: 201.0 / 255.0, green: 214.0 / 255.0, blue: 238.0 / 255.0)
 
     // MARK: - Événements
 
@@ -144,16 +153,16 @@ struct ExploreView: View {
     private var eventsSection: some View {
         let items = events
         if !items.isEmpty {
-            VStack(alignment: .leading, spacing: 12) {
+            VStack(alignment: .leading, spacing: 10) {
                 NewGenSectionTitle(text: languageManager.text("badges.family.events"))
-                    .padding(.horizontal, 20)
+                    .padding(.horizontal, Self.sideMargin)
                 ScrollView(.horizontal) {
                     HStack(alignment: .top, spacing: 12) {
                         ForEach(items) { item in
                             eventCard(item.campaign, ended: item.ended)
                         }
                     }
-                    .padding(.horizontal, 20)
+                    .padding(.horizontal, Self.sideMargin)
                     .padding(.bottom, 8)
                 }
                 .scrollIndicators(.hidden)
@@ -161,19 +170,18 @@ struct ExploreView: View {
         }
     }
 
-    private static let eventCardWidth: CGFloat = 248
+    private static let eventCardWidth: CGFloat = 232
 
     /// Une carte d'événement du carrousel. Toutes ont la même taille : l'illustration a une
     /// hauteur fixe et chaque ligne de texte réserve sa place (le titre toujours deux lignes).
     private func eventCard(_ campaign: Campaign, ended: Bool) -> some View {
         let courses = campaign.courseIds.compactMap { ContentCatalog.course(withId: $0) }
         return Button {
-            UIImpactFeedbackGenerator(style: .light).impactOccurred()
             onOpenCampaign(campaign)
         } label: {
             VStack(alignment: .leading, spacing: 0) {
                 Color.clear
-                    .frame(width: Self.eventCardWidth, height: 140)
+                    .frame(width: Self.eventCardWidth, height: 130)
                     .overlay { EventArtwork(campaign: campaign, courses: courses) }
                     .overlay(alignment: .topLeading) {
                         if ended {
@@ -185,32 +193,32 @@ struct ExploreView: View {
                 VStack(alignment: .leading, spacing: 4) {
                     Text(eventDates(campaign, ended: ended))
                         .font(DS.sans(.caption, .bold))
-                        .foregroundStyle(ended ? DS.inkTertiary : DS.accentSoft)
+                        .foregroundStyle(ended ? DS.inkTertiary : DS.accent)
                         .lineLimit(1)
                         .minimumScaleFactor(0.8)
                     Text(campaign.title(for: language))
-                        .font(DS.title(.headline, .heavy))
+                        .font(DS.sans(.callout, .bold))
                         .foregroundStyle(DS.ink)
                         .lineLimit(2, reservesSpace: true)
                         .multilineTextAlignment(.leading)
                     Text(String(format: languageManager.text("event.card.coursesToRead"), courses.count))
-                        .font(DS.sans(.caption))
+                        .font(DS.sans(.footnote))
                         .foregroundStyle(DS.inkSecondary)
                         .lineLimit(1)
                         .minimumScaleFactor(0.8)
                 }
-                .padding(12)
+                .padding(.horizontal, 12)
+                .padding(.top, 10)
+                .padding(.bottom, 12)
                 .frame(width: Self.eventCardWidth, alignment: .leading)
             }
-            .background(DS.surface)
-            .clipShape(RoundedRectangle(cornerRadius: 18, style: .continuous))
-            .overlay(RoundedRectangle(cornerRadius: 18, style: .continuous).strokeBorder(DS.hairline, lineWidth: 1))
+            .homeCard()
             // Terminé : la carte passe en gris et s'efface un peu, mais reste ouvrable.
             .saturation(ended ? 0 : 1)
             .opacity(ended ? 0.6 : 1)
             .contentShape(Rectangle())
         }
-        .buttonStyle(.plain)
+        .buttonStyle(.pressable)
     }
 
     /// « Jusqu'au 30 nov. » pour un événement en cours, « 1 nov. – 30 nov. » pour un terminé.
@@ -230,9 +238,9 @@ struct ExploreView: View {
         HStack(spacing: 10) {
             Image(systemName: "magnifyingglass")
                 .font(.system(size: 16, weight: .medium))
-                .foregroundStyle(DS.inkTertiary)
+                .foregroundStyle(searchFocused ? DS.accent : DS.inkSecondary)
             TextField(languageManager.text("explore.search.placeholder"), text: $query)
-                .font(DS.sans(.body))
+                .font(DS.sans(.subheadline))
                 .foregroundStyle(DS.ink)
                 .focused($searchFocused)
                 .submitLabel(.search)
@@ -241,16 +249,24 @@ struct ExploreView: View {
                 Button {
                     query = ""
                 } label: {
-                    Image(systemName: "xmark.circle.fill")
-                        .foregroundStyle(DS.inkTertiary)
+                    Image(systemName: "xmark")
+                        .font(.system(size: 11, weight: .bold))
+                        .foregroundStyle(DS.ink)
+                        .frame(width: 28, height: 28)
+                        .background(Circle().fill(DS.accentTint))
+                        .contentShape(Circle())
                 }
-                .buttonStyle(.plain)
+                .buttonStyle(PressableStyle(scale: 0.88))
+                .accessibilityLabel(Text(languageManager.text("explore.search.clear")))
+                .transition(.scale.combined(with: .opacity))
             }
         }
-        .padding(.horizontal, 16)
-        .frame(height: 52)
-        .background(RoundedRectangle(cornerRadius: 16, style: .continuous).fill(DS.surface))
-        .overlay(RoundedRectangle(cornerRadius: 16, style: .continuous).strokeBorder(DS.hairline, lineWidth: 1))
+        .padding(.horizontal, 14)
+        .frame(height: 50)
+        // Le champ actif prend la bordure bleue des états sélectionnés.
+        .homeCard(border: searchFocused ? DS.accent : DS.hairline)
+        .animation(DS.Motion.snappy, value: searchFocused)
+        .animation(DS.Motion.snappy, value: query.isEmpty)
     }
 
     private var matchingCourses: [Course] {
@@ -280,33 +296,44 @@ struct ExploreView: View {
         let authors = matchingAuthors
         let terms = matchingTerms
         if courses.isEmpty, authors.isEmpty, terms.isEmpty {
-            VStack(spacing: 6) {
+            VStack(alignment: .leading, spacing: 4) {
                 Text(languageManager.text("library.empty.title"))
-                    .font(DS.title(.headline, .heavy))
+                    .font(DS.sans(.callout, .bold))
                     .foregroundStyle(DS.ink)
                 Text(languageManager.text("library.empty.subtitle"))
                     .font(DS.sans(.subheadline))
                     .foregroundStyle(DS.inkSecondary)
+                    .fixedSize(horizontal: false, vertical: true)
             }
-            .frame(maxWidth: .infinity)
-            .padding(.vertical, 40)
+            .padding(16)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .homeCard()
         } else {
-            if !courses.isEmpty {
-                NewGenSectionTitle(text: languageManager.text("library.tab.courses"), trailing: "· \(courses.count)")
-                ForEach(courses.prefix(12)) { course in
-                    courseRow(course)
+            // Chaque famille de résultats : son titre, puis ses lignes serrées dessous.
+            VStack(alignment: .leading, spacing: 24) {
+                if !courses.isEmpty {
+                    VStack(alignment: .leading, spacing: 9) {
+                        NewGenSectionTitle(text: languageManager.text("library.tab.courses"), trailing: "· \(courses.count)")
+                        ForEach(courses.prefix(12)) { course in
+                            courseRow(course)
+                        }
+                    }
                 }
-            }
-            if !authors.isEmpty {
-                NewGenSectionTitle(text: languageManager.text("explore.results.creators"), trailing: "· \(authors.count)")
-                ForEach(authors) { author in
-                    creatorRow(author)
+                if !authors.isEmpty {
+                    VStack(alignment: .leading, spacing: 9) {
+                        NewGenSectionTitle(text: languageManager.text("explore.results.creators"), trailing: "· \(authors.count)")
+                        ForEach(authors) { author in
+                            creatorRow(author)
+                        }
+                    }
                 }
-            }
-            if !terms.isEmpty {
-                NewGenSectionTitle(text: languageManager.text("explore.results.glossary"), trailing: "· \(terms.count)")
-                ForEach(terms) { hit in
-                    glossaryRow(hit)
+                if !terms.isEmpty {
+                    VStack(alignment: .leading, spacing: 9) {
+                        NewGenSectionTitle(text: languageManager.text("explore.results.glossary"), trailing: "· \(terms.count)")
+                        ForEach(terms) { hit in
+                            glossaryRow(hit)
+                        }
+                    }
                 }
             }
         }
@@ -316,10 +343,7 @@ struct ExploreView: View {
         CompactCourseRow(
             course: course,
             meta: "\(CreatorIdentity.forCourse(course.id).name) · \(NewGenFormat.minutes(ReadingTime.minutes(for: course, language: language), language: language))",
-            onTap: {
-                UIImpactFeedbackGenerator(style: .light).impactOccurred()
-                onOpenCourse(course)
-            }
+            onTap: { onOpenCourse(course) }
         ) {
             if progressManager.courseStatus(for: course.id) == .completed { ReadCheck() }
         }
@@ -330,36 +354,35 @@ struct ExploreView: View {
             if let course = hit.course { onOpenCourse(course) }
         } label: {
             HStack(alignment: .top, spacing: 12) {
-                ZStack {
-                    RoundedRectangle(cornerRadius: 12, style: .continuous).fill(DS.accentTint)
-                    Image(systemName: "text.book.closed")
-                        .font(.system(size: 15, weight: .medium))
-                        .foregroundStyle(DS.accentSoft)
-                }
-                .frame(width: 40, height: 40)
+                Image(systemName: "book")
+                    .font(.system(size: 17, weight: .medium))
+                    .foregroundStyle(DS.accent)
+                    .frame(width: 22, height: 22)
                 VStack(alignment: .leading, spacing: 3) {
                     Text(hit.entry.displayTerm)
                         .font(DS.sans(.subheadline, .bold))
                         .foregroundStyle(DS.ink)
+                        .multilineTextAlignment(.leading)
                     Text(hit.entry.explanation)
-                        .font(DS.sans(.caption))
+                        .font(DS.sans(.footnote))
                         .foregroundStyle(DS.inkSecondary)
-                        .lineLimit(2)
+                        .lineSpacing(2)
+                        .lineLimit(3)
+                        .multilineTextAlignment(.leading)
                     if let course = hit.course {
                         Text(course.title.withoutInlineMarkup)
-                            .font(DS.sans(.caption, .semibold))
-                            .foregroundStyle(DS.accentSoft)
+                            .font(DS.sans(.caption, .bold))
+                            .foregroundStyle(DS.accent)
                             .lineLimit(1)
                     }
                 }
                 Spacer(minLength: 0)
             }
             .padding(12)
-            .background(RoundedRectangle(cornerRadius: 18, style: .continuous).fill(DS.surface))
-            .overlay(RoundedRectangle(cornerRadius: 18, style: .continuous).strokeBorder(DS.hairline, lineWidth: 1))
+            .homeCard()
             .contentShape(Rectangle())
         }
-        .buttonStyle(.plain)
+        .buttonStyle(.pressable)
     }
 
     /// Un créateur dans les résultats de recherche : avatar, nom avec coche, pedigree, abonnés, Suivre.
@@ -370,33 +393,35 @@ struct ExploreView: View {
                 HStack(spacing: 12) {
                     AuthorAvatarView(author: author, size: 48)
                     VStack(alignment: .leading, spacing: 2) {
-                        HStack(spacing: 4) {
+                        HStack(spacing: 5) {
                             Text(author.name)
                                 .font(DS.sans(.subheadline, .bold))
                                 .foregroundStyle(DS.ink)
                                 .lineLimit(1)
-                            if author.isVerified { VerifiedCheck(size: 13) }
+                            if author.isVerified { VerifiedCheck(size: 14) }
                         }
                         if let pedigree = author.title(for: language) {
                             Text(pedigree)
                                 .font(DS.sans(.caption))
                                 .foregroundStyle(DS.inkSecondary)
-                                .lineLimit(1)
+                                .lineLimit(3)
+                                .multilineTextAlignment(.leading)
                         }
                         Text(followersLabel(author, following: following))
                             .font(DS.sans(.caption, .semibold))
-                            .foregroundStyle(DS.inkSecondary)
+                            .foregroundStyle(DS.ink)
+                            .contentTransition(.numericText())
                     }
                     Spacer(minLength: 0)
                 }
                 .contentShape(Rectangle())
             }
-            .buttonStyle(.plain)
+            .buttonStyle(.pressable)
             FollowButton(isFollowing: following, compact: true) { toggleFollow(author) }
         }
-        .padding(12)
-        .background(RoundedRectangle(cornerRadius: 18, style: .continuous).fill(DS.surface))
-        .overlay(RoundedRectangle(cornerRadius: 18, style: .continuous).strokeBorder(DS.hairline, lineWidth: 1))
+        .padding(.horizontal, 12)
+        .padding(.vertical, 10)
+        .homeCard()
     }
 
     private func followersLabel(_ author: CourseAuthor, following: Bool) -> String {
@@ -447,46 +472,46 @@ struct ExploreView: View {
                 Text(languageManager.text("explore.trending"))
                     .font(DS.sans(.footnote, .bold))
                     .foregroundStyle(DS.inkSecondary)
-                    .padding(.horizontal, 20)
+                    .padding(.horizontal, Self.sideMargin)
 
                 ScrollView(.horizontal) {
                     HStack(spacing: 8) {
                         ForEach(trends) { course in
                             let selected = selectedTrend == course.id
                             Button {
-                                UISelectionFeedbackGenerator().selectionChanged()
-                                withAnimation(.spring(response: 0.3, dampingFraction: 0.85)) {
+                                Haptics.select()
+                                withAnimation(DS.Motion.snappy) {
                                     selectedTrend = selected ? nil : course.id
                                 }
                             } label: {
-                                HStack(spacing: 6) {
+                                HStack(spacing: 8) {
                                     Image(systemName: "chart.line.uptrend.xyaxis")
                                         .font(.system(size: 12, weight: .bold))
                                     Text(course.title.withoutInlineMarkup)
                                         .font(DS.sans(.subheadline, .bold))
                                         .lineLimit(1)
                                 }
-                                .foregroundStyle(selected ? .white : DS.ink)
+                                .foregroundStyle(selected ? Color.white : DS.ink)
                                 .padding(.horizontal, 14)
-                                .frame(height: 38)
-                                .background(Capsule().fill(selected ? DS.accent : DS.surface))
-                                .overlay(Capsule().strokeBorder(selected ? DS.accent : DS.hairline, lineWidth: 1))
+                                .frame(height: 44)
+                                .homeCard(fill: selected ? DS.accent : DS.surface, border: selected ? DS.accent : DS.hairline)
+                                .contentShape(Rectangle())
                             }
-                            .buttonStyle(.plain)
+                            .buttonStyle(PressableStyle(scale: 0.96, haptic: false))
                         }
                     }
-                    .padding(.horizontal, 20)
+                    .padding(.horizontal, Self.sideMargin)
+                    .padding(.bottom, 2)
                 }
                 .scrollIndicators(.hidden)
 
                 if let selectedTrend, let course = trends.first(where: { $0.id == selectedTrend }) {
-                    VStack(spacing: 8) {
+                    VStack(spacing: 9) {
                         ForEach(trendResults(for: course)) { result in
                             courseRow(result)
                         }
                     }
-                    .padding(.horizontal, 20)
-                    .padding(.top, 4)
+                    .padding(.horizontal, Self.sideMargin)
                     .transition(.opacity.combined(with: .move(edge: .top)))
                 }
             }
@@ -524,39 +549,43 @@ struct ExploreView: View {
             LazyVGrid(columns: [GridItem(.flexible(), spacing: 10), GridItem(.flexible(), spacing: 10)], spacing: 10) {
                 ForEach(universes) { universe in
                     Button {
-                        UIImpactFeedbackGenerator(style: .light).impactOccurred()
                         onOpenUniverse(universe.name)
                     } label: {
                         universeTile(universe)
                     }
-                    .buttonStyle(.plain)
+                    .buttonStyle(.pressable)
                 }
             }
         }
     }
 
+    /// Une tuile d'univers : la couverture en haut, le nom (deux lignes réservées) et le nombre
+    /// de cours dessous, sur fond blanc.
     private func universeTile(_ universe: Universe) -> some View {
-        ZStack(alignment: .bottomLeading) {
-            CourseCover(course: universe.cover, cornerRadius: 0)
-            VStack(alignment: .leading, spacing: 1) {
+        VStack(alignment: .leading, spacing: 0) {
+            Color.clear
+                .frame(height: 84)
+                .frame(maxWidth: .infinity)
+                .overlay { CourseCover(course: universe.cover, cornerRadius: 0) }
+                .clipped()
+            VStack(alignment: .leading, spacing: 2) {
                 Text(universe.name)
-                    .font(DS.sans(.subheadline, .heavy))
-                    .foregroundStyle(.white)
-                    .lineLimit(2)
+                    .font(DS.sans(.footnote, .bold))
+                    .foregroundStyle(DS.ink)
+                    .lineLimit(2, reservesSpace: true)
                     .multilineTextAlignment(.leading)
                 Text(String(format: languageManager.text("subject.courses.count"), universe.courses.count))
                     .font(DS.sans(.caption))
-                    .foregroundStyle(.white.opacity(0.88))
+                    .foregroundStyle(DS.inkSecondary)
+                    .lineLimit(1)
             }
-            .padding(.horizontal, 12)
-            .padding(.vertical, 10)
+            .padding(.horizontal, 10)
+            .padding(.top, 8)
+            .padding(.bottom, 10)
             .frame(maxWidth: .infinity, alignment: .leading)
-            .background(Color(red: 0.043, green: 0.07, blue: 0.125).opacity(0.62))
         }
-        .frame(height: 128)
         .frame(maxWidth: .infinity)
-        .background(DS.surfaceMuted)
-        .clipShape(RoundedRectangle(cornerRadius: 18, style: .continuous))
+        .homeCard()
         .contentShape(Rectangle())
         .accessibilityElement(children: .combine)
     }
@@ -570,14 +599,14 @@ struct ExploreView: View {
     private var creatorsCarousel: some View {
         VStack(alignment: .leading, spacing: 10) {
             NewGenSectionTitle(text: languageManager.text("explore.creatorsToFollow"))
-                .padding(.horizontal, 20)
+                .padding(.horizontal, Self.sideMargin)
             ScrollView(.horizontal) {
                 HStack(alignment: .top, spacing: 10) {
                     ForEach(discoverableAuthors.prefix(8)) { author in
                         creatorCard(author)
                     }
                 }
-                .padding(.horizontal, 20)
+                .padding(.horizontal, Self.sideMargin)
                 .padding(.bottom, 8)
             }
             .scrollIndicators(.hidden)
@@ -591,37 +620,37 @@ struct ExploreView: View {
             Button { onOpenCreator(author) } label: {
                 VStack(spacing: 6) {
                     AuthorAvatarView(author: author, size: 60)
-                    HStack(spacing: 4) {
+                    HStack(spacing: 5) {
                         Text(author.name)
-                            .font(DS.sans(.subheadline, .heavy))
+                            .font(DS.sans(.subheadline, .bold))
                             .foregroundStyle(DS.ink)
                             .lineLimit(1)
                             .minimumScaleFactor(0.85)
-                        if author.isVerified { VerifiedCheck(size: 12) }
+                        if author.isVerified { VerifiedCheck(size: 13) }
                     }
                     Text(author.title(for: language) ?? "")
                         .font(DS.sans(.caption))
                         .foregroundStyle(DS.inkSecondary)
                         .multilineTextAlignment(.center)
-                        .lineLimit(2)
-                        .frame(height: 32, alignment: .top)
+                        .lineLimit(2, reservesSpace: true)
                     Text(followersLabel(author, following: following))
-                        .font(DS.sans(.caption, .bold))
-                        .foregroundStyle(DS.inkSecondary)
+                        .font(DS.sans(.footnote, .semibold))
+                        .foregroundStyle(DS.ink)
                         .lineLimit(1)
+                        .minimumScaleFactor(0.85)
+                        .contentTransition(.numericText())
                 }
+                .frame(maxWidth: .infinity)
                 .contentShape(Rectangle())
             }
-            .buttonStyle(.plain)
+            .buttonStyle(.pressable)
             FollowButton(isFollowing: following, compact: true) { toggleFollow(author) }
                 .frame(maxWidth: .infinity)
-                .padding(.top, 4)
         }
-        .padding(14)
-        .frame(width: 156)
-        .background(RoundedRectangle(cornerRadius: 18, style: .continuous).fill(DS.surface))
-        .overlay(RoundedRectangle(cornerRadius: 18, style: .continuous).strokeBorder(DS.hairline, lineWidth: 1))
-        .dsSoftShadow()
+        .padding(.horizontal, 12)
+        .padding(.vertical, 14)
+        .frame(width: 168)
+        .homeCard()
     }
 }
 
@@ -641,17 +670,17 @@ struct UniverseCoursesView: View {
 
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: 12) {
+            VStack(alignment: .leading, spacing: 9) {
                 HStack(spacing: 12) {
                     RoundIconButton(systemImage: "chevron.left", accessibilityLabel: languageManager.text("common.close")) { dismiss() }
                     Text("\(subcategory) · \(courses.count)")
-                        .font(DS.title(.title2, .heavy))
+                        .font(DS.title(.title2, .semibold))
                         .foregroundStyle(DS.ink)
                         .lineLimit(2)
                     Spacer()
                 }
                 .padding(.bottom, 8)
-                ForEach(courses) { course in
+                ForEach(Array(courses.enumerated()), id: \.element.id) { index, course in
                     CompactCourseRow(
                         course: course,
                         meta: "\(CreatorIdentity.forCourse(course.id).name) · \(NewGenFormat.minutes(ReadingTime.minutes(for: course, language: languageManager.current), language: languageManager.current))",
@@ -659,9 +688,11 @@ struct UniverseCoursesView: View {
                     ) {
                         if progressManager.courseStatus(for: course.id) == .completed { ReadCheck() }
                     }
+                    .dsStagger(min(index, 10))
                 }
             }
-            .padding(20)
+            .padding(.horizontal, 24)
+            .padding(.vertical, 20)
             .padding(.bottom, 24)
         }
         .scrollIndicators(.hidden)

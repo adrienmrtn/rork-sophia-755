@@ -31,7 +31,6 @@ struct PathQuizView: View {
     @State private var awardResult: GlobalXPAwardResult? = nil
     @State private var showRankUp = false
     @State private var showLeaveConfirm = false
-    @State private var introAppeared = false
 
     // Result screen animation.
     @State private var resultAppeared = false
@@ -107,11 +106,6 @@ struct PathQuizView: View {
         } message: {
             Text(languageManager.text("path.quiz.leave.body"))
         }
-        .onAppear {
-            withAnimation(.spring(response: 0.55, dampingFraction: 0.85).delay(0.05)) {
-                introAppeared = true
-            }
-        }
         .sophiaColorScheme()
     }
 
@@ -131,18 +125,19 @@ struct PathQuizView: View {
     }
 
     private func closeButton(action: @escaping () -> Void) -> some View {
+        // The pressable style carries the tap's vibration.
         Button {
-            UIImpactFeedbackGenerator(style: .light).impactOccurred()
             action()
         } label: {
             Image(systemName: "xmark")
-                .font(.jakarta(size: 15, weight: .medium))
-                .foregroundStyle(DS.inkSecondary)
-                .frame(width: 40, height: 40)
+                .font(.jakarta(size: 15, weight: .semibold))
+                .foregroundStyle(DS.ink)
+                .frame(width: 44, height: 44)
                 .background(DS.surface, in: Circle())
                 .overlay { Circle().strokeBorder(DS.hairline, lineWidth: 1) }
+                .contentShape(Circle())
         }
-        .buttonStyle(SoftPressButtonStyle())
+        .buttonStyle(.pressable)
     }
 
     // MARK: - Intro
@@ -153,95 +148,116 @@ struct PathQuizView: View {
                 closeButton { dismiss() }
                 Spacer()
             }
-            .padding(.horizontal, 20)
+            .padding(.horizontal, 24)
             .padding(.top, 10)
 
-            ScrollView {
-                VStack(spacing: 22) {
-                    Spacer(minLength: 12)
-
-                    ZStack {
-                        Circle()
-                            .fill(PathPalette.gold.opacity(0.16))
-                            .frame(width: 148, height: 148)
-                        Circle()
-                            .fill(PathPalette.goldGradient)
-                            .frame(width: 112, height: 112)
-                        Image(systemName: "trophy.fill")
-                            .font(.jakarta(size: 48, weight: .semibold))
-                            .foregroundStyle(.white)
-                            .shadow(color: .black.opacity(0.18), radius: 2, y: 1)
-                    }
-                    .scaleEffect(introAppeared ? 1 : 0.7)
-                    .opacity(introAppeared ? 1 : 0)
-
-                    VStack(spacing: 8) {
-                        Text(String(format: text("path.quiz.title"), level.number))
-                            .font(DS.title(.title, .semibold))
-                            .foregroundStyle(DS.ink)
-                            .multilineTextAlignment(.center)
-                        Text(level.collection.title)
-                            .font(DS.sans(.subheadline))
-                            .foregroundStyle(DS.inkSecondary)
-                            .multilineTextAlignment(.center)
-                            .padding(.horizontal, 28)
-                    }
-                    .opacity(introAppeared ? 1 : 0)
-                    .offset(y: introAppeared ? 0 : 12)
-
-                    rulesCard
-                        .padding(.horizontal, 20)
-                        .opacity(introAppeared ? 1 : 0)
-                        .offset(y: introAppeared ? 0 : 16)
-
-                    if let best = bestResult, best.attempts > 0 {
-                        HStack(spacing: 6) {
-                            Image(systemName: best.isPassed ? "checkmark.seal.fill" : "chart.bar.fill")
-                                .font(.jakarta(size: 12, weight: .medium))
-                            Text(String(format: text("path.quiz.bestScore"), best.bestCorrect, best.bestTotal))
-                                .font(DS.sans(.caption, .semibold))
-                                .monospacedDigit()
-                        }
-                        .foregroundStyle(best.isPassed ? DS.success : DS.accentSoft)
-                        .padding(.horizontal, 14)
-                        .padding(.vertical, 8)
-                        .background(best.isPassed ? DS.successTint : DS.accentTint, in: Capsule())
-                        .opacity(introAppeared ? 1 : 0)
-                    }
-
-                    Spacer(minLength: 20)
+            GeometryReader { geo in
+                ScrollView {
+                    introContent
+                        .padding(.horizontal, 24)
+                        .padding(.vertical, 16)
+                        .frame(maxWidth: .infinity)
+                        .frame(minHeight: geo.size.height)
                 }
+                .scrollIndicators(.hidden)
             }
-            .scrollIndicators(.hidden)
 
-            VStack(spacing: 12) {
-                Button {
-                    startQuiz()
-                } label: {
-                    HStack(spacing: 8) {
-                        Text(text("path.quiz.go"))
-                        Image(systemName: "arrow.forward")
-                    }
-                }
-                .buttonStyle(DSPrimaryButtonStyle())
-
-                Button {
-                    UIImpactFeedbackGenerator(style: .light).impactOccurred()
-                    dismiss()
-                } label: {
-                    Text(text("path.quiz.later"))
-                }
-                .buttonStyle(DSSecondaryButtonStyle())
-            }
-            .padding(.horizontal, 24)
-            .padding(.bottom, 24)
-            .opacity(introAppeared ? 1 : 0)
-            .offset(y: introAppeared ? 0 : 12)
+            introButtons
+                .padding(.horizontal, 24)
+                .padding(.bottom, 24)
+                .dsStagger(3)
         }
     }
 
+    private var introContent: some View {
+        VStack(spacing: 14) {
+            introTrophy
+                .dsPopIn(delay: 0.05)
+
+            VStack(spacing: 8) {
+                Text(String(format: text("path.quiz.title"), level.number))
+                    .font(DS.title(.title, .semibold))
+                    .foregroundStyle(DS.ink)
+                    .multilineTextAlignment(.center)
+                Text(level.collection.title)
+                    .font(DS.sans(.subheadline))
+                    .foregroundStyle(DS.inkSecondary)
+                    .multilineTextAlignment(.center)
+                    .lineSpacing(3)
+                    .padding(.horizontal, 16)
+            }
+            .padding(.top, 4)
+            .dsStagger(0)
+
+            rulesCard
+                .dsStagger(1)
+
+            if let best = bestResult, best.attempts > 0 {
+                bestScoreChip(best)
+                    .dsStagger(2)
+            }
+        }
+        .frame(maxWidth: 520)
+    }
+
+    private var introTrophy: some View {
+        ZStack {
+            Circle()
+                .fill(PathCardPalette.goldTint)
+                .frame(width: 132, height: 132)
+            Circle()
+                .fill(PathPalette.gold)
+                .frame(width: 100, height: 100)
+            Image(systemName: "trophy.fill")
+                .font(.jakarta(size: 42, weight: .semibold))
+                .foregroundStyle(Color.white)
+        }
+        .accessibilityHidden(true)
+    }
+
+    private func bestScoreChip(_ best: PathLevelResult) -> some View {
+        HStack(spacing: 6) {
+            Image(systemName: best.isPassed ? "checkmark.seal.fill" : "chart.bar.fill")
+                .font(.jakarta(size: 12, weight: .semibold))
+                .foregroundStyle(best.isPassed ? DS.success : DS.accent)
+            Text(String(format: text("path.quiz.bestScore"), best.bestCorrect, best.bestTotal))
+                .font(DS.sans(.footnote, .bold))
+                .monospacedDigit()
+                .foregroundStyle(best.isPassed ? DS.success : DS.ink)
+        }
+        .padding(.horizontal, 14)
+        .padding(.vertical, 6)
+        .background(
+            best.isPassed ? DS.successTint : DS.accentTint,
+            in: RoundedRectangle(cornerRadius: 14, style: .continuous)
+        )
+    }
+
+    private var introButtons: some View {
+        // Both button styles vibrate on the press: no vibration is added here.
+        VStack(spacing: 10) {
+            Button {
+                startQuiz()
+            } label: {
+                HStack(spacing: 8) {
+                    Text(text("path.quiz.go"))
+                    Image(systemName: "arrow.forward")
+                }
+            }
+            .buttonStyle(DSPrimaryButtonStyle())
+
+            Button {
+                dismiss()
+            } label: {
+                Text(text("path.quiz.later"))
+            }
+            .buttonStyle(DSSecondaryButtonStyle())
+        }
+        .frame(maxWidth: 520)
+    }
+
     private var rulesCard: some View {
-        VStack(alignment: .leading, spacing: 14) {
+        VStack(alignment: .leading, spacing: 12) {
             ruleRow(
                 icon: "shuffle",
                 text: String(format: text("path.quiz.rule.questions"), plannedQuestionCount, level.courseCount)
@@ -252,19 +268,20 @@ struct PathQuizView: View {
             )
             ruleRow(icon: "arrow.counterclockwise", text: text("path.quiz.rule.retries"))
         }
-        .dsCard()
+        .dsCard(padding: 16)
     }
 
     private func ruleRow(icon: String, text: String) -> some View {
-        HStack(alignment: .top, spacing: 12) {
+        HStack(alignment: .top, spacing: 10) {
             Image(systemName: icon)
-                .font(.jakarta(size: 14, weight: .medium))
-                .foregroundStyle(DS.accentSoft)
-                .frame(width: 32, height: 32)
+                .font(.jakarta(size: 13, weight: .semibold))
+                .foregroundStyle(DS.accent)
+                .frame(width: 30, height: 30)
                 .background(DS.accentTint, in: Circle())
             Text(text)
-                .font(DS.sans(.subheadline, .medium))
+                .font(DS.sans(.subheadline))
                 .foregroundStyle(DS.ink)
+                .multilineTextAlignment(.leading)
                 .fixedSize(horizontal: false, vertical: true)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.top, 5)
@@ -274,7 +291,7 @@ struct PathQuizView: View {
     // MARK: - Session
 
     private func startQuiz() {
-        UIImpactFeedbackGenerator(style: .medium).impactOccurred()
+        // Called from primary buttons only, whose style already vibrates on the press.
         let drawn = PathQuizBuilder.questions(for: level.collection)
         guard !drawn.isEmpty else {
             dismiss()
@@ -300,22 +317,22 @@ struct PathQuizView: View {
             HStack(spacing: 12) {
                 closeButton { showLeaveConfirm = true }
 
-                CalmProgressBar(
-                    fraction: Double(currentIndex + (answeredCurrent ? 1 : 0)) / Double(max(total, 1)),
-                    height: 6
+                DSSegmentedProgress(
+                    total: total,
+                    filled: currentIndex + (answeredCurrent ? 1 : 0),
+                    height: 6,
+                    spacing: 3
                 )
-                .animation(.spring(response: 0.4), value: currentIndex)
-                .animation(.spring(response: 0.4), value: answeredCurrent)
 
                 Text("\(currentIndex + 1)/\(total)")
-                    .font(DS.sans(.caption, .medium))
+                    .font(DS.sans(.caption, .bold))
                     .foregroundStyle(DS.inkSecondary)
                     .monospacedDigit()
                     .fixedSize()
 
                 correctPill
             }
-            .padding(.horizontal, 20)
+            .padding(.horizontal, 24)
             .padding(.top, 10)
             .padding(.bottom, 4)
 
@@ -351,24 +368,24 @@ struct PathQuizView: View {
                 ))
             }
         }
-        .animation(.spring(response: 0.45, dampingFraction: 0.86), value: currentIndex)
+        .animation(DS.Motion.reveal, value: currentIndex)
     }
 
     private var correctPill: some View {
         HStack(spacing: 4) {
             Image(systemName: "checkmark")
-                .font(.jakarta(size: 10, weight: .bold))
+                .font(.jakarta(size: 10, weight: .heavy))
             Text("\(correctCount)")
-                .font(DS.sans(.caption, .bold))
+                .font(DS.sans(.footnote, .heavy))
                 .monospacedDigit()
                 .contentTransition(.numericText(countsDown: false))
         }
         .foregroundStyle(DS.success)
-        .padding(.horizontal, 9)
-        .padding(.vertical, 5)
-        .background(DS.successTint, in: Capsule())
+        .padding(.horizontal, 10)
+        .padding(.vertical, 4)
+        .background(DS.successTint, in: RoundedRectangle(cornerRadius: 12, style: .continuous))
         .scaleEffect(counterBump ? 1.18 : 1)
-        .animation(.spring(response: 0.3, dampingFraction: 0.5), value: counterBump)
+        .animation(DS.Motion.pop, value: counterBump)
         .accessibilityLabel(String(format: text("path.quiz.correctSoFar"), correctCount))
     }
 
@@ -429,53 +446,14 @@ struct PathQuizView: View {
         VStack(spacing: 0) {
             GeometryReader { geo in
                 ScrollView {
-                    VStack(spacing: 22) {
+                    VStack(spacing: 12) {
                         Spacer(minLength: 20)
 
                         scoreBadge
 
-                        VStack(spacing: 10) {
-                            Text(didPass ? String(format: text("path.quiz.passed.title"), level.number) : text("path.quiz.failed.title"))
-                                .font(DS.title(.title, .semibold))
-                                .foregroundStyle(DS.ink)
-                                .multilineTextAlignment(.center)
-                                .padding(.horizontal, 24)
-
-                            HStack(alignment: .firstTextBaseline, spacing: 6) {
-                                Text("\(displayedCorrect)")
-                                    .font(.jakarta(size: 48, weight: .semibold))
-                                    .foregroundStyle(DS.ink)
-                                    .monospacedDigit()
-                                    .contentTransition(.numericText(countsDown: false))
-                                Text("/ \(total)")
-                                    .font(DS.title(.title2, .medium))
-                                    .foregroundStyle(DS.inkTertiary)
-                            }
-
-                            Text(resultSubtitle)
-                                .font(DS.sans(.subheadline))
-                                .foregroundStyle(DS.inkSecondary)
-                                .multilineTextAlignment(.center)
-                                .fixedSize(horizontal: false, vertical: true)
-                                .padding(.horizontal, 28)
-
-                            if didPass, let award = awardResult, award.awardedXP > 0 {
-                                HStack(spacing: 8) {
-                                    Image(systemName: "star.fill")
-                                        .font(.jakarta(size: 13, weight: .medium))
-                                    Text(String(format: text("cards.globalXP"), award.awardedXP))
-                                        .font(DS.sans(.subheadline, .semibold))
-                                        .monospacedDigit()
-                                }
-                                .foregroundStyle(DS.accentSoft)
-                                .padding(.horizontal, 16)
-                                .padding(.vertical, 9)
-                                .background(DS.accentTint, in: Capsule())
-                                .padding(.top, 4)
-                            }
-                        }
-                        .opacity(resultAppeared ? 1 : 0)
-                        .offset(y: resultAppeared ? 0 : 14)
+                        resultTexts
+                            .opacity(resultAppeared ? 1 : 0)
+                            .offset(y: resultAppeared ? 0 : 14)
 
                         Spacer(minLength: 20)
                     }
@@ -486,6 +464,7 @@ struct PathQuizView: View {
             }
 
             resultButtons
+                .frame(maxWidth: 520)
                 .padding(.horizontal, 24)
                 .padding(.bottom, 24)
                 .opacity(resultAppeared ? 1 : 0)
@@ -496,38 +475,89 @@ struct PathQuizView: View {
         }
     }
 
+    private var resultTexts: some View {
+        VStack(spacing: 12) {
+            Text(didPass ? String(format: text("path.quiz.passed.title"), level.number) : text("path.quiz.failed.title"))
+                .font(DS.title(.title2, .semibold))
+                .foregroundStyle(DS.ink)
+                .multilineTextAlignment(.center)
+                .padding(.horizontal, 24)
+                .padding(.top, 8)
+
+            scoreLine
+
+            Text(resultSubtitle)
+                .font(DS.sans(.subheadline))
+                .foregroundStyle(DS.inkSecondary)
+                .multilineTextAlignment(.center)
+                .lineSpacing(3)
+                .fixedSize(horizontal: false, vertical: true)
+                .padding(.horizontal, 28)
+
+            if didPass, let award = awardResult, award.awardedXP > 0 {
+                xpChip(award.awardedXP)
+                    .dsPopIn(delay: 1.3)
+            }
+        }
+    }
+
+    /// "14 / 20": the first number counts up (and ticks) once the screen is in.
+    private var scoreLine: some View {
+        HStack(alignment: .firstTextBaseline, spacing: 8) {
+            DSCountUp(
+                value: displayedCorrect,
+                duration: 0.8,
+                font: .jakarta(size: 44, weight: .heavy),
+                color: DS.ink
+            )
+            Text("/ \(total)")
+                .font(.jakarta(size: 44, weight: .heavy))
+                .foregroundStyle(DS.ink)
+                .monospacedDigit()
+        }
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel(Text(verbatim: "\(correctCount) / \(total)"))
+    }
+
+    private func xpChip(_ amount: Int) -> some View {
+        HStack(spacing: 6) {
+            Image(systemName: "star.fill")
+                .font(.jakarta(size: 12, weight: .semibold))
+            Text(String(format: text("cards.globalXP"), amount))
+                .font(DS.sans(.subheadline, .heavy))
+                .monospacedDigit()
+        }
+        .foregroundStyle(PathCardPalette.goldInk)
+        .padding(.horizontal, 14)
+        .padding(.vertical, 5)
+        .background(PathCardPalette.goldTint, in: RoundedRectangle(cornerRadius: 14, style: .continuous))
+    }
+
     private var scoreBadge: some View {
         ZStack {
             Circle()
                 .stroke(DS.hairline, lineWidth: 10)
-                .frame(width: 168, height: 168)
+                .frame(width: 140, height: 140)
             Circle()
                 .trim(from: 0, to: ringProgress)
                 .stroke(didPass ? PathPalette.gold : DS.accent, style: StrokeStyle(lineWidth: 10, lineCap: .round))
-                .frame(width: 168, height: 168)
+                .frame(width: 140, height: 140)
                 .rotationEffect(.degrees(-90))
             // The pass mark, so the ring reads as "this far to go".
             Circle()
                 .fill(DS.inkTertiary)
                 .frame(width: 8, height: 8)
-                .offset(y: -84)
+                .offset(y: -70)
                 .rotationEffect(.degrees(360 * Double(passMark) / Double(max(total, 1))))
-            ZStack {
-                if didPass {
-                    Circle().fill(PathPalette.goldGradient)
-                } else {
-                    Circle().fill(DS.surfaceMuted)
-                }
-                Image(systemName: didPass ? "trophy.fill" : "arrow.counterclockwise")
-                    .font(.jakarta(size: 52, weight: .semibold))
-                    .foregroundStyle(didPass ? .white : DS.inkSecondary)
-                    .shadow(color: .black.opacity(didPass ? 0.18 : 0), radius: 2, y: 1)
-            }
-            .frame(width: 132, height: 132)
-            .scaleEffect(badgeScale)
+            Image(systemName: didPass ? "trophy.fill" : "arrow.counterclockwise")
+                .font(.jakarta(size: didPass ? 56 : 46, weight: .semibold))
+                .foregroundStyle(didPass ? PathPalette.gold : DS.inkSecondary)
+                .scaleEffect(badgeScale)
         }
+        .frame(width: 150, height: 150)
         .modifier(PathShakeEffect(shakes: failShake, amplitude: 9))
         .opacity(resultAppeared ? 1 : 0)
+        .accessibilityHidden(true)
     }
 
     private var resultSubtitle: String {
@@ -540,9 +570,9 @@ struct PathQuizView: View {
 
     @ViewBuilder
     private var resultButtons: some View {
+        // The button styles vibrate on the press: no vibration is added here.
         if didPass {
             Button {
-                UIImpactFeedbackGenerator(style: .light).impactOccurred()
                 finishAfterPass()
             } label: {
                 HStack(spacing: 8) {
@@ -552,7 +582,7 @@ struct PathQuizView: View {
             }
             .buttonStyle(DSPrimaryButtonStyle())
         } else {
-            VStack(spacing: 12) {
+            VStack(spacing: 10) {
                 Button {
                     startQuiz()
                 } label: {
@@ -564,7 +594,6 @@ struct PathQuizView: View {
                 .buttonStyle(DSPrimaryButtonStyle())
 
                 Button {
-                    UIImpactFeedbackGenerator(style: .light).impactOccurred()
                     dismiss()
                 } label: {
                     Text(text("path.quiz.review"))
@@ -602,27 +631,21 @@ struct PathQuizView: View {
             ringProgress = CGFloat(target) / CGFloat(count)
         }
 
-        let steps = max(target, 1)
-        for step in 1...steps {
-            let delay = 0.3 + Double(step) * (0.8 / Double(steps))
-            DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
-                guard step <= target else { return }
-                withAnimation(.spring(response: 0.2)) {
-                    displayedCorrect = step
-                }
-                UIImpactFeedbackGenerator(style: .light).impactOccurred(intensity: 0.6)
-            }
+        // The score counts up with the ring: `DSCountUp` runs (and ticks) when its value changes.
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+            guard phase == .result else { return }
+            displayedCorrect = target
         }
 
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.25) {
+            guard phase == .result else { return }
             if didPass {
-                UINotificationFeedbackGenerator().notificationOccurred(.success)
-                withAnimation(.spring(response: 0.45, dampingFraction: 0.5)) {
+                Haptics.celebrate()
+                withAnimation(DS.Motion.pop) {
                     badgeScale = 1.12
                 }
                 showConfetti = true
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
-                    UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
                     withAnimation(.spring(response: 0.4, dampingFraction: 0.7)) {
                         badgeScale = 1
                     }
@@ -631,7 +654,7 @@ struct PathQuizView: View {
                     showConfetti = false
                 }
             } else {
-                UINotificationFeedbackGenerator().notificationOccurred(.error)
+                Haptics.error()
                 withAnimation(.linear(duration: 0.45)) {
                     failShake += 1
                 }

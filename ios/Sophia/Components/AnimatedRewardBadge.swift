@@ -73,7 +73,6 @@ struct AnimatedRewardBadge: View {
                     LinearGradient(colors: kind.colors, startPoint: .bottom, endPoint: .top)
                 )
                 .symbolEffect(.variableColor.iterative.reversing, isActive: animated)
-                .shadow(color: kind.glow.opacity(0.35), radius: size * 0.14, y: size * 0.06)
                 .scaleEffect(pulse ? 1.08 : 1)
         }
         .frame(width: size * 1.4, height: size * 1.4)

@@ -3,7 +3,7 @@ import SwiftUI
 // MARK: - Médaillon
 
 /// Le rond d'un badge : son illustration en papier découpé (embarquée, ou hébergée pour un
-/// événement), cerclée d'or quand il est gagné, grisée sinon. Tant que l'illustration n'existe
+/// événement), en couleur quand il est gagné, grisée sinon. Tant que l'illustration n'existe
 /// pas, le symbole du badge sur un fond uni.
 struct BadgeMedal: View {
     let badge: Badge
@@ -34,9 +34,6 @@ struct BadgeMedal: View {
         // Pas encore gagné : l'image reste reconnaissable, mais éteinte.
         .saturation(earned ? 1 : 0)
         .opacity(earned ? 1 : 0.45)
-        .overlay {
-            Circle().strokeBorder(earned ? DS.warm : DS.hairline, lineWidth: earned ? max(2, size * 0.045) : 1)
-        }
         .accessibilityHidden(true)
     }
 }
@@ -57,42 +54,19 @@ struct BadgesPageView: View {
     private var language: AppLanguage { languageManager.current }
 
     var body: some View {
-        let badges = BadgeCatalog.all(language: language)
+        let badges: [Badge] = BadgeCatalog.all(language: language)
         let stats = BadgeStats(progressManager: progressManager)
-        let earnedCount = badges.filter { progressManager.isBadgeEarned($0.id) }.count
+        let earnedCount: Int = badges.filter { progressManager.isBadgeEarned($0.id) }.count
         ScrollView {
-            VStack(alignment: .leading, spacing: 26) {
-                HStack(alignment: .center) {
-                    VStack(alignment: .leading, spacing: 4) {
-                        Text(languageManager.text("profile.badges"))
-                            .font(DS.title(.title, .heavy))
-                            .foregroundStyle(DS.ink)
-                        Text(String(format: languageManager.text("badge.progress"), earnedCount, badges.count))
-                            .font(DS.sans(.subheadline, .semibold))
-                            .foregroundStyle(DS.inkSecondary)
-                            .monospacedDigit()
-                    }
-                    Spacer(minLength: 0)
-                    RoundIconButton(systemImage: "xmark", accessibilityLabel: languageManager.text("common.close")) { dismiss() }
-                }
+            VStack(alignment: .leading, spacing: 20) {
+                header(earnedCount: earnedCount, total: badges.count)
+                    .dsStagger(0)
 
                 featuredCard
+                    .dsStagger(1)
 
                 ForEach(BadgeFamily.allCases, id: \.self) { family in
-                    let items = badges.filter { $0.family == family }
-                    if !items.isEmpty {
-                        VStack(alignment: .leading, spacing: 12) {
-                            NewGenSectionTitle(
-                                text: languageManager.text(family.titleKey),
-                                trailing: "\(items.filter { progressManager.isBadgeEarned($0.id) }.count)/\(items.count)"
-                            )
-                            LazyVGrid(columns: columns, spacing: 12) {
-                                ForEach(items) { badge in
-                                    cell(badge, stats: stats)
-                                }
-                            }
-                        }
-                    }
+                    familySection(family, badges: badges, stats: stats)
                 }
             }
             .padding(20)
@@ -107,10 +81,46 @@ struct BadgesPageView: View {
         }
     }
 
+    private func header(earnedCount: Int, total: Int) -> some View {
+        HStack(alignment: .center) {
+            VStack(alignment: .leading, spacing: 2) {
+                Text(languageManager.text("profile.badges"))
+                    .font(DS.title(.title, .semibold))
+                    .foregroundStyle(DS.ink)
+                Text(String(format: languageManager.text("badge.progress"), earnedCount, total))
+                    .font(DS.sans(.subheadline))
+                    .foregroundStyle(DS.inkSecondary)
+                    .monospacedDigit()
+            }
+            Spacer(minLength: 8)
+            ProfileRoundButton(systemImage: "xmark", accessibilityLabel: languageManager.text("common.close")) { dismiss() }
+        }
+    }
+
+    /// Une famille de badges : son titre, son décompte, sa grille. Rien si la famille est vide.
+    @ViewBuilder
+    private func familySection(_ family: BadgeFamily, badges: [Badge], stats: BadgeStats) -> some View {
+        let items: [Badge] = badges.filter { $0.family == family }
+        if !items.isEmpty {
+            let earnedInFamily: Int = items.filter { progressManager.isBadgeEarned($0.id) }.count
+            VStack(alignment: .leading, spacing: 10) {
+                ProfileSectionHeader(
+                    title: languageManager.text(family.titleKey),
+                    detail: "\(earnedInFamily)/\(items.count)"
+                )
+                LazyVGrid(columns: columns, spacing: 10) {
+                    ForEach(Array(items.enumerated()), id: \.element.id) { index, badge in
+                        cell(badge, stats: stats, index: index)
+                    }
+                }
+            }
+        }
+    }
+
     /// Les trois emplacements du profil : les badges choisis, puis des ronds vides.
     private var featuredCard: some View {
-        let featured = progressManager.featuredBadgeIds.compactMap { BadgeCatalog.badge(id: $0) }
-        return VStack(alignment: .leading, spacing: 12) {
+        let featured: [Badge] = progressManager.featuredBadgeIds.compactMap { BadgeCatalog.badge(id: $0) }
+        return VStack(alignment: .leading, spacing: 10) {
             Text(languageManager.text("badges.featured.title"))
                 .font(DS.sans(.subheadline, .bold))
                 .foregroundStyle(DS.ink)
@@ -119,12 +129,13 @@ struct BadgesPageView: View {
                     if index < featured.count {
                         Button { selected = featured[index] } label: {
                             BadgeMedal(badge: featured[index], earned: true, size: 60)
+                                .dsPopIn(delay: 0.15 + Double(index) * 0.07)
                         }
-                        .buttonStyle(.plain)
+                        .buttonStyle(.pressable)
                         .accessibilityLabel(Text(featured[index].title(language: language)))
                     } else {
                         Circle()
-                            .strokeBorder(DS.inkTertiary, style: StrokeStyle(lineWidth: 1.5, dash: [4, 4]))
+                            .strokeBorder(DS.inkSecondary, style: StrokeStyle(lineWidth: 1.5, dash: [4, 4]))
                             .frame(width: 60, height: 60)
                             .accessibilityHidden(true)
                     }
@@ -132,33 +143,34 @@ struct BadgesPageView: View {
                 Spacer(minLength: 0)
             }
         }
-        .padding(16)
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .background(RoundedRectangle(cornerRadius: 18, style: .continuous).fill(DS.surface))
-        .overlay(RoundedRectangle(cornerRadius: 18, style: .continuous).strokeBorder(DS.hairline, lineWidth: 1))
+        .padding(.horizontal, 16)
+        .padding(.vertical, 14)
+        .dsCard(padding: 0)
     }
 
     /// Une case de la grille. Toutes ont la même taille : le titre réserve toujours deux lignes
     /// et la ligne d'avancement garde sa place même quand elle est vide (badge gagné).
-    private func cell(_ badge: Badge, stats: BadgeStats) -> some View {
-        let earned = progressManager.isBadgeEarned(badge.id)
-        let showsProgress = !earned && badge.target > 1 && badge.metric != .league
+    /// Les cases arrivent en cascade ; le médaillon d'un badge gagné « pop » en plus.
+    private func cell(_ badge: Badge, stats: BadgeStats, index: Int) -> some View {
+        let earned: Bool = progressManager.isBadgeEarned(badge.id)
+        let showsProgress: Bool = !earned && badge.target > 1 && badge.metric != .league
+        // La grille est paresseuse : la cascade repart de zéro tous les neuf badges.
+        let order: Int = index % 9
         return Button {
-            UIImpactFeedbackGenerator(style: .light).impactOccurred()
             selected = badge
         } label: {
-            VStack(spacing: 8) {
-                BadgeMedal(badge: badge, earned: earned, size: 68)
+            VStack(spacing: 6) {
+                cellMedal(badge, earned: earned, order: order)
                 Text(badge.title(language: language))
-                    .font(DS.sans(.footnote, .bold))
+                    .font(DS.sans(.caption, .bold))
                     .foregroundStyle(earned ? DS.ink : DS.inkSecondary)
                     .multilineTextAlignment(.center)
                     .lineLimit(2, reservesSpace: true)
                     .minimumScaleFactor(0.8)
                     .frame(maxWidth: .infinity)
                 Text(showsProgress ? String(format: languageManager.text("badge.progress"), stats.progress(for: badge), badge.target) : " ")
-                    .font(DS.sans(.caption2, .semibold))
-                    .foregroundStyle(DS.inkTertiary)
+                    .font(DS.sans(.caption2))
+                    .foregroundStyle(DS.inkSecondary)
                     .monospacedDigit()
                     .lineLimit(1)
                     .opacity(showsProgress ? 1 : 0)
@@ -167,11 +179,21 @@ struct BadgesPageView: View {
             .padding(.vertical, 12)
             .padding(.horizontal, 6)
             .frame(maxWidth: .infinity, alignment: .top)
-            .background(RoundedRectangle(cornerRadius: 18, style: .continuous).fill(DS.surface))
-            .overlay(RoundedRectangle(cornerRadius: 18, style: .continuous).strokeBorder(DS.hairline, lineWidth: 1))
-            .contentShape(Rectangle())
+            .dsCard(padding: 0)
+            .contentShape(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
         }
-        .buttonStyle(.plain)
+        .buttonStyle(.pressable)
+        .dsStagger(order, step: 0.035)
+    }
+
+    @ViewBuilder
+    private func cellMedal(_ badge: Badge, earned: Bool, order: Int) -> some View {
+        if earned {
+            BadgeMedal(badge: badge, earned: true, size: 60)
+                .dsPopIn(delay: 0.18 + Double(order) * 0.035)
+        } else {
+            BadgeMedal(badge: badge, earned: false, size: 60)
+        }
     }
 }
 
@@ -185,6 +207,8 @@ struct BadgeDetailSheet: View {
     let progressManager: ProgressManager
 
     @State private var showFull = false
+    /// Secousse du bouton quand les trois emplacements du profil sont déjà pris.
+    @State private var fullShake = 0
     /// La hauteur du contenu, mesurée : la feuille s'arrête là, sans vide en dessous.
     @State private var contentHeight: CGFloat = 360
 
@@ -196,13 +220,14 @@ struct BadgeDetailSheet: View {
         let stats = BadgeStats(progressManager: progressManager)
         VStack(spacing: 14) {
             BadgeMedal(badge: badge, earned: earned, size: 120)
+                .dsPopIn(delay: 0.1)
                 .padding(.top, 28)
             Text(badge.title(language: language))
-                .font(DS.title(.title2, .heavy))
+                .font(DS.title(.title2, .semibold))
                 .foregroundStyle(DS.ink)
                 .multilineTextAlignment(.center)
             Text(badge.condition(language: language))
-                .font(DS.sans(.subheadline, .medium))
+                .font(DS.sans(.subheadline))
                 .foregroundStyle(DS.inkSecondary)
                 .multilineTextAlignment(.center)
                 .fixedSize(horizontal: false, vertical: true)
@@ -216,12 +241,12 @@ struct BadgeDetailSheet: View {
             } else {
                 VStack(spacing: 8) {
                     if badge.target > 1, badge.metric != .league {
-                        CalmProgressBar(fraction: Double(stats.progress(for: badge)) / Double(badge.target))
+                        ProfileFillBar(fraction: Double(stats.progress(for: badge)) / Double(badge.target), height: 8)
                             .frame(maxWidth: 220)
                     }
                     Text(languageManager.text("badges.locked"))
                         .font(DS.sans(.footnote, .semibold))
-                        .foregroundStyle(DS.inkTertiary)
+                        .foregroundStyle(DS.inkSecondary)
                 }
             }
 
@@ -234,23 +259,34 @@ struct BadgeDetailSheet: View {
                         .fixedSize(horizontal: false, vertical: true)
                 }
                 Button {
-                    UIImpactFeedbackGenerator(style: .light).impactOccurred()
                     let changed = progressManager.toggleFeaturedBadge(badge.id)
-                    withAnimation(.easeInOut(duration: 0.2)) { showFull = !changed }
+                    if !changed {
+                        // Trois badges déjà affichés : le bouton refuse, et le dit.
+                        Haptics.warning()
+                        fullShake += 1
+                    }
+                    withAnimation(DS.Motion.snappy) { showFull = !changed }
                 } label: {
                     Text(languageManager.text(featured ? "badges.featured.remove" : "badges.featured.add"))
-                        .font(DS.sans(.subheadline, .bold))
-                        .foregroundStyle(featured ? DS.ink : .white)
+                        .font(DS.sans(.headline, .semibold))
+                        .foregroundStyle(featured ? DS.ink : Color.white)
                         .frame(maxWidth: .infinity)
-                        .frame(height: 50)
-                        .background(RoundedRectangle(cornerRadius: 14, style: .continuous).fill(featured ? DS.surface : DS.accent))
+                        .frame(height: 54)
+                        .background(
+                            RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous)
+                                .fill(featured ? DS.surface : DS.accent)
+                        )
                         .overlay {
                             if featured {
-                                RoundedRectangle(cornerRadius: 14, style: .continuous).strokeBorder(DS.hairline, lineWidth: 1)
+                                RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous)
+                                    .strokeBorder(DS.hairline, lineWidth: 1.5)
                             }
                         }
+                        .contentShape(RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous))
                 }
-                .buttonStyle(.plain)
+                .buttonStyle(.pressable)
+                .dsShake(trigger: fullShake)
+                .animation(DS.Motion.snappy, value: featured)
                 .padding(.top, 8)
             }
         }
@@ -283,29 +319,45 @@ struct BadgeRow: View {
 
     var body: some View {
         HStack(alignment: .top, spacing: 10) {
-            ForEach(badges) { badge in
-                let content = VStack(spacing: 8) {
-                    BadgeMedal(badge: badge, earned: earned(badge), size: 60)
-                    Text(badge.title(language: languageManager.current))
-                        .font(DS.sans(.footnote, .bold))
-                        .foregroundStyle(DS.ink)
-                        .multilineTextAlignment(.center)
-                        // Deux lignes toujours réservées : toutes les cases ont la même hauteur.
-                        .lineLimit(2, reservesSpace: true)
-                        .minimumScaleFactor(0.8)
-                        .frame(maxWidth: .infinity)
-                }
-                .padding(.vertical, 14)
-                .padding(.horizontal, 6)
-                .frame(maxWidth: .infinity, alignment: .top)
-                .background(RoundedRectangle(cornerRadius: 18, style: .continuous).fill(DS.surface))
-                .overlay(RoundedRectangle(cornerRadius: 18, style: .continuous).strokeBorder(DS.hairline, lineWidth: 1))
+            ForEach(Array(badges.enumerated()), id: \.element.id) { index, badge in
                 if let onTap {
-                    Button { onTap(badge) } label: { content }.buttonStyle(.plain)
+                    Button { onTap(badge) } label: { tile(badge, index: index) }
+                        .buttonStyle(.pressable)
                 } else {
-                    content
+                    tile(badge, index: index)
                 }
             }
+        }
+    }
+
+    /// Une case : le médaillon (qui « pop » s'il est gagné) et le nom du badge.
+    private func tile(_ badge: Badge, index: Int) -> some View {
+        let isEarned: Bool = earned(badge)
+        return VStack(spacing: 6) {
+            medal(badge, isEarned: isEarned, index: index)
+            Text(badge.title(language: languageManager.current))
+                .font(DS.sans(.caption, .bold))
+                .foregroundStyle(DS.ink)
+                .multilineTextAlignment(.center)
+                // Deux lignes toujours réservées : toutes les cases ont la même hauteur.
+                .lineLimit(2, reservesSpace: true)
+                .minimumScaleFactor(0.8)
+                .frame(maxWidth: .infinity)
+        }
+        .padding(.vertical, 12)
+        .padding(.horizontal, 6)
+        .frame(maxWidth: .infinity, alignment: .top)
+        .dsCard(padding: 0)
+        .contentShape(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
+    }
+
+    @ViewBuilder
+    private func medal(_ badge: Badge, isEarned: Bool, index: Int) -> some View {
+        if isEarned {
+            BadgeMedal(badge: badge, earned: true, size: 60)
+                .dsPopIn(delay: 0.15 + Double(index) * 0.07)
+        } else {
+            BadgeMedal(badge: badge, earned: false, size: 60)
         }
     }
 }

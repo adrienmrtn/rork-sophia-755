@@ -38,7 +38,7 @@ struct DuelFlowView: View {
 
     var body: some View {
         ZStack {
-            DuelPalette.night.ignoresSafeArea()
+            DS.canvas.ignoresSafeArea()
 
             switch stage {
             case .matchmaking:
