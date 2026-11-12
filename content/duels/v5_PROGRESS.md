@@ -84,3 +84,4 @@ Restent à lancer ensuite : vague 1 rien d'autre ; vague 2 pour fr de pt it ro b
 - sk parts 8–14 fini
 - ar parts 8–14 fini
 - lt parts 8–14 fini
+- ja parts 8–14 fini ; 5 questions retirées (japonais) → 12 retirées ; images vérifiées : 98 (Trevi recadrée OK, Durga à recadrer : 429 Wikimedia)

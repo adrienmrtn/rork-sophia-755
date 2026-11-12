@@ -107,7 +107,13 @@ def main(name: str, only: list[str]) -> int:
                     raw.write_bytes(get(info["thumb"]))
                     time.sleep(1)
                 image = Image.open(raw)
-                card = contain(image) if m.get("fit") == "contain" else cover(image, m.get("focus", "center"), m.get("crop"))
+                if m.get("fit") == "contain":
+                    if m.get("crop"):
+                        l, t, r, b = m["crop"]
+                        image = image.crop((round(l * image.width), round(t * image.height), round(r * image.width), round(b * image.height)))
+                    card = contain(image)
+                else:
+                    card = cover(image, m.get("focus", "center"), m.get("crop"))
                 dest = OUT / "images" / f"{key}.jpg"
                 quality = 84
                 credits[key] = {"name": m.get("name", key), "file": m["file"], "artist": info["artist"] or None,
