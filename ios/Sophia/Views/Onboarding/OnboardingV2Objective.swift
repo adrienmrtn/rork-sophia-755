@@ -37,7 +37,7 @@ struct OnboardingV2Objective: View {
             if art > 0 {
                 OV2CoreIllustration(art: .trophy, size: art)
                     .padding(.top, 22)
-                    .dsPopIn(delay: 0.12)
+                    .ov2CoreSoftIn(delay: 0.12)
             }
 
             rows
@@ -55,7 +55,7 @@ struct OnboardingV2Objective: View {
                     isSelected: vm.isSelected(key),
                     minHeight: 56,
                     action: {
-                        withAnimation(DS.Motion.snappy) {
+                        withAnimation(OV2CoreMotion.select) {
                             vm.toggleObjective(key)
                         }
                     }

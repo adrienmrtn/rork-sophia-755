@@ -4,7 +4,6 @@ import UIKit
 /// Page 1 — Bienvenue. Un mur de couvertures de cours qui défile lentement, le logo Sophia,
 /// la phrase d'accroche, le CTA « Commencer » et la porte « J'ai déjà un compte ».
 struct OnboardingV2Welcome: View {
-    @Environment(LanguageManager.self) private var languageManager
     let onNext: () -> Void
     /// Tapped by someone who is reinstalling or switching phone. Optional so the
     /// screen still renders in a preview that has no coordinator behind it.
@@ -36,6 +35,17 @@ struct OnboardingV2Welcome: View {
         "course_11_la_prise_de_la_bastille_1789",
     ]
 
+    /// La langue de toute la page. L'accroche de marque (« Replace scrolling with… ») est en
+    /// anglais dans toutes les langues ; le sous-titre et les deux boutons suivaient, eux, la
+    /// langue de l'appareil, d'où une page à moitié en anglais, à moitié dans une autre
+    /// langue. Les quatre textes se lisent désormais dans cette seule langue : la langue de
+    /// l'app se choisit à la page suivante.
+    private static let pageLanguage: AppLanguage = .english
+
+    private func pageText(_ key: String) -> String {
+        AppLocalizable.string(key, language: Self.pageLanguage)
+    }
+
     var body: some View {
         GeometryReader { geo in
             let wallHeight: CGFloat = Self.wallHeight(for: geo.size.height)
@@ -54,6 +64,10 @@ struct OnboardingV2Welcome: View {
                 actions
             }
             .frame(width: geo.size.width, height: geo.size.height)
+            // Page en anglais : elle se lit de gauche à droite, même sur un appareil en arabe
+            // ou en hébreu, et VoiceOver la prononce en anglais.
+            .environment(\.layoutDirection, .leftToRight)
+            .environment(\.locale, Locale(identifier: Self.pageLanguage.rawValue))
             .background(alignment: .top) {
                 OnboardingV2CoverWall(images: covers)
                     .frame(height: wallHeight + geo.safeAreaInsets.top)
@@ -80,7 +94,7 @@ struct OnboardingV2Welcome: View {
         VStack(alignment: .leading, spacing: 14) {
             logo
 
-            OV2Markup.elevate(languageManager.text("onboardingV2.elevate.welcome.tagline"), highlightFont: DS.title(.title, .bold))
+            OV2Markup.elevate(pageText("onboardingV2.elevate.welcome.tagline"), highlightFont: DS.title(.title, .bold))
                 .font(DS.title(.title, .regular))
                 .foregroundStyle(OV2.ink)
                 .multilineTextAlignment(.leading)
@@ -89,7 +103,7 @@ struct OnboardingV2Welcome: View {
                 .fixedSize(horizontal: false, vertical: true)
                 .accessibilityAddTraits(.isHeader)
 
-            Text(languageManager.text("onboardingV2.welcome.subtitle"))
+            Text(pageText("onboardingV2.welcome.subtitle"))
                 .font(DS.sans(.subheadline, .regular))
                 .foregroundStyle(OV2.inkSecondary)
                 .multilineTextAlignment(.leading)
@@ -124,7 +138,7 @@ struct OnboardingV2Welcome: View {
     private var actions: some View {
         VStack(spacing: 0) {
             OnboardingV2Button(
-                title: languageManager.text("onboardingV2.welcome.cta"),
+                title: pageText("onboardingV2.welcome.cta"),
                 bottomPadding: onExistingAccount == nil ? 20 : 6,
                 action: onNext
             )
@@ -133,7 +147,7 @@ struct OnboardingV2Welcome: View {
             // app, and it must not compete with "Get started" for a new one.
             if let onExistingAccount {
                 Button(action: onExistingAccount) {
-                    Text(languageManager.text("onboardingV2.welcome.existingAccount"))
+                    Text(pageText("onboardingV2.welcome.existingAccount"))
                         .font(DS.sans(.subheadline, .semibold))
                         .tracking(0.3)
                         .foregroundStyle(OV2.accent)

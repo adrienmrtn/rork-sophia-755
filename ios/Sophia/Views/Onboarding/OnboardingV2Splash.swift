@@ -1,7 +1,7 @@
 import SwiftUI
 
 /// Écran 0 — logo animé joué une fois à l'ouverture de l'onboarding, par-dessus la page
-/// d'accueil : le symbole apparaît au centre avec un petit rebond, glisse à gauche, et le
+/// d'accueil : le symbole apparaît au centre en douceur, glisse à gauche, et le
 /// mot « Sophia » se déroule à sa droite. Puis le voile se lève sur l'accueil.
 ///
 /// L'écran de lancement du système (image `SplashLogo` centrée) ne s'anime pas : cette vue
@@ -97,7 +97,7 @@ struct OnboardingV2Splash: View {
             return
         }
 
-        withAnimation(DS.Motion.pop) {
+        withAnimation(OV2CoreMotion.settle) {
             markScale = 1
         }
         await pause(0.55)

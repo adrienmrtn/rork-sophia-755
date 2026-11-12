@@ -29,7 +29,7 @@ struct OnboardingV2ObjectiveIntro: View {
                 Spacer(minLength: 16)
 
                 OV2CoreIllustration(art: .path, size: 160)
-                    .dsPopIn(delay: 0.1)
+                    .ov2CoreSoftIn(delay: 0.1)
 
                 Spacer().frame(height: 26)
 

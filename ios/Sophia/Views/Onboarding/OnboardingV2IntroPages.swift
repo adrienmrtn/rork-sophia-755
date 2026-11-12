@@ -53,11 +53,12 @@ enum OnboardingV2IntroCatalog {
 // MARK: - Gabarit de page
 
 /// Gabarit commun des quatre pages du carrousel : l'illustration dans l'espace qui reste
-/// (réduite d'un bloc si elle ne tient pas), puis un bloc titre et un bloc sous-titre de
-/// hauteur fixe, pour que rien ne saute d'une page à l'autre.
+/// (réduite d'un bloc si elle ne tient pas), puis un bloc titre de hauteur fixe et, pour la
+/// seule page qui en garde un, un bloc sous-titre de hauteur fixe. Sans sous-titre, sa place
+/// revient à l'illustration.
 struct OnboardingV2IntroPageFrame<Visual: View>: View {
     let title: String
-    let subtitle: String
+    var subtitle: String? = nil
     @ViewBuilder let visual: () -> Visual
 
     /// Trois lignes de titre (quatre en se resserrant) et deux de sous-titre.
@@ -84,16 +85,18 @@ struct OnboardingV2IntroPageFrame<Visual: View>: View {
                 .padding(.top, 16)
                 .accessibilityAddTraits(.isHeader)
 
-            Text(subtitle)
-                .font(DS.sans(.subheadline, .regular))
-                .foregroundStyle(OV2.inkSecondary)
-                .multilineTextAlignment(.center)
-                .lineSpacing(3)
-                .lineLimit(3)
-                .minimumScaleFactor(0.75)
-                .frame(maxWidth: .infinity)
-                .frame(height: Self.subtitleHeight, alignment: .top)
-                .padding(.top, 8)
+            if let subtitle {
+                Text(subtitle)
+                    .font(DS.sans(.subheadline, .regular))
+                    .foregroundStyle(OV2.inkSecondary)
+                    .multilineTextAlignment(.center)
+                    .lineSpacing(3)
+                    .lineLimit(3)
+                    .minimumScaleFactor(0.75)
+                    .frame(maxWidth: .infinity)
+                    .frame(height: Self.subtitleHeight, alignment: .top)
+                    .padding(.top, 8)
+            }
         }
         .padding(.horizontal, 24)
     }
@@ -101,8 +104,9 @@ struct OnboardingV2IntroPageFrame<Visual: View>: View {
 
 // MARK: - 5. Quiz
 
-/// « Sophia te teste avec des quiz ludiques » : une vraie question du catalogue, la bonne
-/// réponse qui se valide, le bandeau « Excellent ! ».
+/// « Sophia te teste avec des quiz ludiques » : une vraie question du catalogue et ses trois
+/// réponses, puis la bonne qui se valide. Rien d'autre dans la carte : ni barre de
+/// progression, ni combo, ni bandeau de verdict, pour que la question respire.
 struct OnboardingV2IntroQuizPage: View {
     @Environment(LanguageManager.self) private var languageManager
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
@@ -113,24 +117,17 @@ struct OnboardingV2IntroQuizPage: View {
 
     /// Ce que la carte montre : une question à choix, sa bonne réponse et deux autres.
     struct QuizSample {
+        /// La matière de la question, en petites capitales au-dessus d'elle.
         let eyebrow: String
         let question: String
         /// Les réponses dans l'ordre d'affichage.
         let options: [String]
         let correctIndex: Int
-        /// Rang de la question dans son quiz (1 pour la première) et taille du quiz.
-        let position: Int
-        let total: Int
     }
-
-    private static let comboGold = Color(red: 0.694, green: 0.498, blue: 0.063)
-    private static let comboTint = Color(red: 0.984, green: 0.937, blue: 0.788)
-    private static let comboInk = Color(red: 0.420, green: 0.306, blue: 0.0)
 
     var body: some View {
         OnboardingV2IntroPageFrame(
-            title: languageManager.text("onboardingV2.intro.quizzes.title"),
-            subtitle: languageManager.text("onboardingV2.intro.quizzes.subtitle")
+            title: languageManager.text("onboardingV2.intro.quizzes.title")
         ) {
             card
         }
@@ -146,62 +143,30 @@ struct OnboardingV2IntroQuizPage: View {
     private var card: some View {
         if let sample {
             VStack(spacing: 0) {
-                progressRow(sample)
-
                 DSEyebrow(text: sample.eyebrow)
                     .multilineTextAlignment(.center)
-                    .padding(.top, 16)
 
                 Text(sample.question)
                     .font(DS.title(.title3, .regular))
                     .foregroundStyle(OV2.ink)
                     .multilineTextAlignment(.center)
-                    .lineSpacing(2)
+                    .lineSpacing(3)
                     .fixedSize(horizontal: false, vertical: true)
-                    .padding(.top, 6)
+                    .padding(.top, 10)
 
-                VStack(spacing: 8) {
+                VStack(spacing: 10) {
                     ForEach(Array(sample.options.enumerated()), id: \.offset) { index, option in
                         optionRow(option, isCorrect: index == sample.correctIndex)
                     }
                 }
-                .padding(.top, 14)
-
-                feedbackBar(sample)
-                    .padding(.top, 14)
+                .padding(.top, 22)
             }
-            .padding(.top, 16)
-            .padding(.horizontal, 16)
+            .padding(.horizontal, 20)
+            .padding(.top, 26)
+            .padding(.bottom, 22)
             .frame(maxWidth: .infinity)
             .ov2Card()
             .padding(.bottom, 2)
-        }
-    }
-
-    private func progressRow(_ sample: QuizSample) -> some View {
-        HStack(spacing: 10) {
-            DSSegmentedProgress(
-                total: min(max(sample.total, sample.position), 10),
-                filled: min(sample.position, 10),
-                height: 5,
-                spacing: 3
-            )
-
-            if sample.position >= 2 {
-                HStack(spacing: 3) {
-                    Image(systemName: "flame.fill")
-                        .font(.system(size: 10, weight: .bold))
-                        .foregroundStyle(Self.comboGold)
-                    Text(verbatim: "x2")
-                        .font(DS.sans(.caption2, .heavy))
-                        .foregroundStyle(Self.comboInk)
-                }
-                .padding(.horizontal, 8)
-                .padding(.vertical, 3)
-                .background(Capsule(style: .continuous).fill(Self.comboTint))
-                .scaleEffect(answered ? 1 : 0.6)
-                .opacity(answered ? 1 : 0)
-            }
         }
     }
 
@@ -212,58 +177,24 @@ struct OnboardingV2IntroQuizPage: View {
                 .font(DS.sans(.footnote, answered && isCorrect ? .bold : .medium))
                 .foregroundStyle(optionColor(answered: answered, isCorrect: isCorrect))
                 .multilineTextAlignment(.leading)
-                .lineSpacing(1)
+                .lineSpacing(2)
                 .fixedSize(horizontal: false, vertical: true)
                 .frame(maxWidth: .infinity, alignment: .leading)
 
-            if answered && isCorrect {
-                DSCheckBadge(size: 22)
-            }
+            // La coche garde sa place avant le verdict : la réponse ne se remet pas en page
+            // quand elle se valide.
+            DSCheckBadge(size: 22)
+                .opacity(answered && isCorrect ? 1 : 0)
         }
-        .padding(.horizontal, 12)
-        .padding(.vertical, 8)
-        .frame(minHeight: 42)
+        .padding(.horizontal, 14)
+        .padding(.vertical, 10)
+        .frame(minHeight: 48)
         .dsOptionCard(state, cornerRadius: 14)
     }
 
     private func optionColor(answered: Bool, isCorrect: Bool) -> Color {
         guard answered else { return OV2.ink }
         return isCorrect ? DS.success : OV2.inkTertiary
-    }
-
-    /// Le bandeau de verdict, collé au bas de la carte : « Excellent ! » et le combo.
-    private func feedbackBar(_ sample: QuizSample) -> some View {
-        HStack(spacing: 8) {
-            ZStack {
-                Circle().fill(DS.successTint)
-                Image(systemName: "checkmark")
-                    .font(.system(size: 11, weight: .heavy))
-                    .foregroundStyle(DS.success)
-            }
-            .frame(width: 26, height: 26)
-
-            Text(languageManager.text("quiz.feedback.excellent"))
-                .font(DS.sans(.subheadline, .bold))
-                .foregroundStyle(DS.success)
-
-            Spacer(minLength: 8)
-
-            if sample.position >= 2 {
-                Text(String(format: languageManager.text("quiz.combo"), 2))
-                    .font(DS.sans(.caption, .semibold))
-                    .foregroundStyle(OV2.inkSecondary)
-            }
-        }
-        .padding(.horizontal, 16)
-        .padding(.top, 12)
-        .padding(.bottom, 14)
-        .frame(maxWidth: .infinity)
-        .background(alignment: .top) {
-            Rectangle().fill(DS.hairline).frame(height: 1.5)
-        }
-        .padding(.horizontal, -16)
-        .opacity(answered ? 1 : 0)
-        .offset(y: answered || reduceMotion ? 0 : 12)
     }
 
     // MARK: Animation
@@ -277,7 +208,7 @@ struct OnboardingV2IntroQuizPage: View {
             return
         }
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.9) {
-            withAnimation(DS.Motion.snappy) {
+            withAnimation(OV2CoreMotion.select) {
                 answered = true
             }
             Haptics.success()
@@ -286,8 +217,7 @@ struct OnboardingV2IntroQuizPage: View {
 
     // MARK: Données
 
-    /// Une question à choix du cours sur les trous noirs (la deuxième du quiz de préférence :
-    /// le combo x2 y a un sens), sinon l'exemple de la table de textes.
+    /// Une question à choix du cours sur les trous noirs, sinon l'exemple de la table de textes.
     static func makeSample(languageManager: LanguageManager) -> QuizSample {
         let language: AppLanguage = languageManager.current
         if let course = ContentCatalog.course(withId: OnboardingV2IntroCatalog.blackHoleCourseId, language: language),
@@ -302,9 +232,7 @@ struct OnboardingV2IntroQuizPage: View {
                 languageManager.text("onboardingV2.elevate.quiz.sample.wrong1"),
                 languageManager.text("onboardingV2.elevate.quiz.sample.wrong2"),
             ],
-            correctIndex: 0,
-            position: 1,
-            total: 1
+            correctIndex: 0
         )
     }
 
@@ -332,15 +260,11 @@ struct OnboardingV2IntroQuizPage: View {
             // Une question ou une réponse trop longue ne tient pas dans la carte.
             guard prompt.count <= 110, texts.allSatisfy({ $0.count <= 100 }) else { continue }
 
-            let language: AppLanguage = languageManager.current
-            let counter: String = String(format: languageManager.text("duel.game.counter"), index + 1, quiz.count)
             return QuizSample(
-                eyebrow: "\(course.subject.localizedShortName(language: language)) · \(counter)".uppercasedInApp(),
+                eyebrow: course.subject.localizedShortName(language: languageManager.current).uppercasedInApp(),
                 question: prompt,
                 options: texts,
-                correctIndex: kept.firstIndex(of: correct) ?? 0,
-                position: index + 1,
-                total: quiz.count
+                correctIndex: kept.firstIndex(of: correct) ?? 0
             )
         }
         return nil
@@ -357,8 +281,7 @@ struct OnboardingV2IntroRoutePage: View {
 
     var body: some View {
         OnboardingV2IntroPageFrame(
-            title: languageManager.text("onboardingV2.intro.route.title"),
-            subtitle: languageManager.text("onboardingV2.intro.route.subtitle")
+            title: languageManager.text("onboardingV2.intro.route.title")
         ) {
             OnboardingV2PathPreview(isActive: isActive)
         }
@@ -407,8 +330,7 @@ struct OnboardingV2IntroDuelsPage: View {
 
     var body: some View {
         OnboardingV2IntroPageFrame(
-            title: languageManager.text("onboardingV2.elevate.duels.title"),
-            subtitle: languageManager.text("onboardingV2.elevate.duels.subtitle")
+            title: languageManager.text("onboardingV2.elevate.duels.title")
         ) {
             card
         }
@@ -575,7 +497,7 @@ struct OnboardingV2IntroDuelsPage: View {
             Haptics.tick()
         }
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.45) {
-            withAnimation(DS.Motion.pop) {
+            withAnimation(OV2CoreMotion.settle) {
                 youRank = Self.endRank
             }
             Haptics.success()

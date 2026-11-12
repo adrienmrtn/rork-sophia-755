@@ -71,14 +71,6 @@ struct OnboardingV2Researchers: View {
                 if !credentials.isEmpty {
                     pills
                 }
-
-                Text(languageManager.text("onboardingV2.intro.researchers.subtitle"))
-                    .font(DS.sans(.subheadline, .regular))
-                    .foregroundStyle(OV2.inkSecondary)
-                    .multilineTextAlignment(.center)
-                    .lineSpacing(3)
-                    .fixedSize(horizontal: false, vertical: true)
-                    .opacity(textIn ? 1 : 0)
             }
             .padding(.horizontal, 24)
             .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -110,7 +102,7 @@ struct OnboardingV2Researchers: View {
             .frame(width: Self.portraitSize, height: Self.portraitSize)
             .clipShape(Circle())
             .overlay(Circle().strokeBorder(DS.surface, lineWidth: 4))
-            .scaleEffect(shown || reduceMotion ? 1 : 0.3)
+            .scaleEffect(shown || reduceMotion ? 1 : 0.8)
             .opacity(shown ? 1 : 0)
             .accessibilityLabel(Text(professor.name ?? ""))
             .accessibilityHidden(professor.name == nil)
@@ -141,7 +133,7 @@ struct OnboardingV2Researchers: View {
     /// Les pastilles arrivent en cascade, chacune un peu après la précédente.
     private func pillAnimation(_ index: Int) -> Animation {
         if reduceMotion { return Animation.easeOut(duration: 0.2) }
-        return DS.Motion.snappy.delay(Double(index) * 0.07)
+        return OV2CoreMotion.select.delay(Double(index) * 0.07)
     }
 
     // MARK: - Données et animation
@@ -192,7 +184,7 @@ struct OnboardingV2Researchers: View {
         await pause(0.2)
         for count in 1...Self.portraits.count {
             if Task.isCancelled { return }
-            withAnimation(DS.Motion.pop) {
+            withAnimation(OV2CoreMotion.settle) {
                 portraitsShown = count
             }
             Haptics.tick(0.4)

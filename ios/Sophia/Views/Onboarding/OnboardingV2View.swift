@@ -331,7 +331,7 @@ struct OnboardingV2View: View {
         case .login:
             OnboardingV2Login(onSignedIn: advance)
         case .account:
-            OnboardingV2Account(progressManager: progressManager, onNext: advance)
+            OnboardingV2Account(progressManager: progressManager, initialAvatarId: vm.avatarId, onNext: advance)
         case .followCreators:
             OnboardingV2FollowCreators(vm: vm, progressManager: progressManager, onNext: advance)
         case .welcomeAboard:

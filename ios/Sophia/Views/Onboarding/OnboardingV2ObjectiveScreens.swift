@@ -5,9 +5,9 @@ import UIKit
 
 /// « Avec Sophia, tu sauras répondre à ces questions » — les questions arrivent une à une,
 /// en **bulles** de conversation : une à gauche (bleu pâle), la suivante à droite (bleu plein),
-/// chacune avec la vignette du cours qui y répond. Quand l'écran est plein, la plus ancienne
+/// chacune avec l'avatar de la personne qui la pose. Quand l'écran est plein, la plus ancienne
 /// s'efface par le haut et une nouvelle se pose en bas, si bien que les dix questions défilent
-/// en boucle tant que la page est visible.
+/// en boucle tant que la page est visible. Le bouton « Continuer » arrive après une seconde.
 /// Montré à tout le monde (page « me cultiver au quotidien »), quel que soit l'objectif choisi.
 struct OnboardingV2QuestionsScreen: View {
     @Environment(LanguageManager.self) private var languageManager
@@ -18,26 +18,22 @@ struct OnboardingV2QuestionsScreen: View {
     /// Nombre de bulles déjà envoyées. Ne « reboucle » jamais : chaque bulle garde ainsi une
     /// identité stable (son rang), et le contenu boucle par un modulo sur la liste.
     @State private var sent: Int = 0
+    /// Le bouton « Continuer » est là (une seconde après l'ouverture de la page).
+    @State private var canContinue = false
 
     /// Cadence : les premières bulles se suivent vite pour remplir l'écran, puis la
     /// conversation se pose.
     private static let fastInterval: UInt64 = 480_000_000
     private static let mediumInterval: UInt64 = 800_000_000
     private static let slowInterval: UInt64 = 2_400_000_000
+    /// Temps laissé aux premières bulles avant que le bouton « Continuer » n'arrive.
+    private static let continueDelay: TimeInterval = 1
 
-    /// Le cours qui répond à chaque question (dans l'ordre des clés `q1`…`q10`) : sa
-    /// couverture sert de vignette ; à défaut, la vignette de la matière.
-    private static let covers: [(courseId: String?, subject: Subject)] = [
-        ("course_41_pourquoi_le_ciel_est_il_bleu", .sciences),
-        ("course_12_la_strategie_de_napoleon_a_ulm_1805", .histoire),
-        ("course_67_qu_est_ce_qu_un_trou_noir", .sciences),
-        ("course_122_la_naissance_de_l_impressionnisme", .art),
-        ("course_216_la_dette_mondiale", .comprendreLeMonde),
-        ("course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur", .sciences),
-        (nil, .histoire),
-        ("course_61_le_big_bang", .sciences),
-        ("course_42_pourquoi_reve_t_on", .sciences),
-        ("course_68_la_theorie_de_la_relativite_pour_tous", .sciences),
+    /// La personne qui pose chaque question (dans l'ordre des clés `q1`…`q10`) : dix avatars
+    /// de l'app, toujours les mêmes, d'âges et d'origines variés.
+    private static let askers: [String] = [
+        "avatar_05", "avatar_15", "avatar_10", "avatar_28", "avatar_17",
+        "avatar_29", "avatar_37", "avatar_54", "avatar_55", "avatar_02",
     ]
 
     private var questions: [String] {
@@ -74,11 +70,15 @@ struct OnboardingV2QuestionsScreen: View {
             .padding(.top, 10)
 
             OnboardingV2Button(title: languageManager.text("common.continue"), action: onNext)
+                .ov2CoreAppears(canContinue)
                 .padding(.top, 14)
         }
         .ov2Background()
         .onAppear {
-            CourseImageMap.preloadImages(for: Self.covers.compactMap { $0.courseId })
+            guard !canContinue else { return }
+            DispatchQueue.main.asyncAfter(deadline: .now() + Self.continueDelay) {
+                canContinue = true
+            }
         }
         .task {
             await runConversation()
@@ -94,7 +94,7 @@ struct OnboardingV2QuestionsScreen: View {
             try? await Task.sleep(nanoseconds: 350_000_000)
         }
         while !Task.isCancelled {
-            withAnimation(reduceMotion ? nil : DS.Motion.reveal) {
+            withAnimation(reduceMotion ? nil : OV2CoreMotion.reveal) {
                 sent += 1
             }
             // Une vibration par bulle le temps d'un tour complet, puis le défilement se tait.
@@ -135,7 +135,7 @@ struct OnboardingV2QuestionsScreen: View {
     private func bubbleTransition(leading: Bool) -> AnyTransition {
         if reduceMotion { return .opacity }
         return .asymmetric(
-            insertion: .scale(scale: 0.6, anchor: leading ? .bottomLeading : .bottomTrailing)
+            insertion: .scale(scale: 0.9, anchor: leading ? .bottomLeading : .bottomTrailing)
                 .combined(with: .opacity),
             removal: .move(edge: .top).combined(with: .opacity)
         )
@@ -145,16 +145,16 @@ struct OnboardingV2QuestionsScreen: View {
 
     private func bubble(text: String, rank: Int) -> some View {
         let leading: Bool = rank % 2 == 0
-        let cover = Self.covers[rank % Self.covers.count]
+        let asker: String = Self.askers[rank % Self.askers.count]
         return HStack(alignment: .top, spacing: 10) {
             if leading {
-                OV2QuestionCover(courseId: cover.courseId, subject: cover.subject)
+                OV2QuestionAsker(avatarId: asker)
                 bubbleText(text, leading: true)
                 Spacer(minLength: 24)
             } else {
                 Spacer(minLength: 24)
                 bubbleText(text, leading: false)
-                OV2QuestionCover(courseId: cover.courseId, subject: cover.subject)
+                OV2QuestionAsker(avatarId: asker)
             }
         }
     }
@@ -180,37 +180,20 @@ struct OnboardingV2QuestionsScreen: View {
     }
 }
 
-// MARK: - Vignette d'une question
+// MARK: - Avatar d'une question
 
-/// Vignette ronde à côté d'une bulle : la couverture du cours, sinon la vignette de sa matière,
-/// cerclée de blanc puis d'un filet.
-private struct OV2QuestionCover: View {
-    let courseId: String?
-    let subject: Subject
+/// L'avatar rond à côté d'une bulle, comme si une personne posait la question : un avatar de
+/// l'app (`avatar_XX`), cerclé de blanc puis d'un filet.
+private struct OV2QuestionAsker: View {
+    let avatarId: String
 
     private static let size: CGFloat = 40
 
-    private var coverImage: UIImage? {
-        guard let courseId else { return nil }
-        return CourseImageMap.loadImage(for: courseId)
-    }
-
     var body: some View {
-        ZStack {
-            if let image = coverImage {
-                Image(uiImage: image)
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: Self.size, height: Self.size)
-                    .clipShape(Circle())
-            } else {
-                OV2CoreSubjectBadge(subject: subject, size: Self.size)
-            }
-        }
-        .frame(width: Self.size, height: Self.size)
-        .padding(2)
-        .background(Circle().fill(DS.surface))
-        .overlay(Circle().strokeBorder(DS.hairline, lineWidth: 1.5))
-        .accessibilityHidden(true)
+        AvatarCircle(avatarId: avatarId, initial: "", size: Self.size)
+            .padding(2)
+            .background(Circle().fill(DS.surface))
+            .overlay(Circle().strokeBorder(DS.hairline, lineWidth: 1.5))
+            .accessibilityHidden(true)
     }
 }
