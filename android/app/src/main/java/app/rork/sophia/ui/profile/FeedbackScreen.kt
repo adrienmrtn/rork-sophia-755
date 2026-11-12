@@ -1,30 +1,27 @@
 package app.rork.sophia.ui.profile
 
+import androidx.compose.animation.animateColorAsState
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.FlowRow
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.imePadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.foundation.text.BasicTextField
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.ArrowBack
-import androidx.compose.material.icons.filled.CheckCircle
+import androidx.compose.material.icons.filled.Close
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
@@ -33,8 +30,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.semantics.role
+import androidx.compose.ui.semantics.selected
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -42,19 +42,24 @@ import androidx.compose.ui.unit.sp
 import app.rork.sophia.data.FeedbackService
 import app.rork.sophia.data.StringStore
 import app.rork.sophia.domain.AppLanguage
-import app.rork.sophia.ui.components.CircleIconButton
-import app.rork.sophia.ui.components.ScreenTitle
-import app.rork.sophia.ui.components.SectionLabel
+import app.rork.sophia.ui.components.DSCheckBadge
+import app.rork.sophia.ui.components.DSMotion
 import app.rork.sophia.ui.components.SophiaPrimaryButton
-import app.rork.sophia.ui.components.softPress
-import app.rork.sophia.ui.components.sophiaCard
+import app.rork.sophia.ui.components.dsShake
+import app.rork.sophia.ui.components.dsStagger
+import app.rork.sophia.ui.components.pressable
+import app.rork.sophia.ui.components.rememberHaptics
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
-import app.rork.sophia.ui.theme.SophiaTypography
 import kotlinx.coroutines.launch
 
 private val CATEGORIES = listOf("bug", "idea", "feature", "content", "translation", "other")
 
+/**
+ * Le formulaire de retour dans le design « Elevate arrondi » : l'en-tête calme (titre, croix),
+ * les catégories en pastilles, les deux champs bordés, puis l'envoi. Une fois parti, la coche
+ * se dessine avec rebond.
+ */
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
 fun FeedbackScreen(
@@ -66,43 +71,47 @@ fun FeedbackScreen(
 ) {
     val context = LocalContext.current
     val scope = rememberCoroutineScope()
+    val haptics = rememberHaptics()
     var category by remember { mutableStateOf(initialCategory) }
     var message by remember { mutableStateOf("") }
     var email by remember { mutableStateOf("") }
     var sending by remember { mutableStateOf(false) }
     var sent by remember { mutableStateOf(false) }
     var error by remember { mutableStateOf<String?>(null) }
+    // Secousse du message d'erreur à chaque envoi refusé.
+    var errorShake by remember { mutableIntStateOf(0) }
+    val closeLabel = StringStore.text(context, "common.close", language)
 
     if (sent) {
         Column(
-            modifier = Modifier.fillMaxSize().background(DS.canvas).padding(DS.Space.l),
-            verticalArrangement = Arrangement.Center,
+            modifier = Modifier.fillMaxSize().background(DS.canvas).padding(horizontal = 20.dp).padding(bottom = 32.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
-            Box(
-                modifier = Modifier.height(112.dp).fillMaxWidth(),
-                contentAlignment = Alignment.Center,
-            ) {
-                androidx.compose.material3.Icon(
-                    Icons.Filled.CheckCircle,
-                    contentDescription = null,
-                    tint = DS.success,
-                    modifier = Modifier.height(88.dp),
-                )
-            }
+            Spacer(Modifier.weight(1f))
+            // Retour envoyé : la coche se dessine, avec rebond (la vibration part à l'envoi).
+            DSCheckBadge(size = 88.dp, delayMillis = 100)
             Spacer(Modifier.height(20.dp))
             Text(
                 text = StringStore.text(context, "feedback.success.title", language),
-                style = SophiaTypography.titleLarge,
+                modifier = Modifier.dsStagger(1),
+                fontFamily = PlusJakartaSans,
+                fontWeight = FontWeight.SemiBold,
+                fontSize = 22.sp,
+                lineHeight = 28.sp,
+                color = DS.ink,
                 textAlign = TextAlign.Center,
             )
             Spacer(Modifier.height(10.dp))
             Text(
                 text = StringStore.text(context, "feedback.success.body", language),
-                style = SophiaTypography.bodyMedium,
+                modifier = Modifier.padding(horizontal = 24.dp).dsStagger(2),
+                fontFamily = PlusJakartaSans,
+                fontSize = 15.sp,
+                lineHeight = 21.sp,
+                color = DS.inkSecondary,
                 textAlign = TextAlign.Center,
             )
-            Spacer(Modifier.height(28.dp))
+            Spacer(Modifier.weight(1f))
             SophiaPrimaryButton(
                 text = StringStore.text(context, "feedback.success.close", language),
                 onClick = onBack,
@@ -117,51 +126,69 @@ fun FeedbackScreen(
             .imePadding()
             .background(DS.canvas)
             .verticalScroll(rememberScrollState())
-            .padding(horizontal = DS.Space.l)
+            .padding(horizontal = 20.dp)
             .padding(bottom = 32.dp),
     ) {
-        Row(
-            modifier = Modifier.fillMaxWidth().padding(vertical = DS.Space.s),
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(12.dp),
-        ) {
-            CircleIconButton(icon = Icons.AutoMirrored.Filled.ArrowBack, onClick = onBack)
-            ScreenTitle(
-                text = StringStore.text(context, if (category == "feature") "feedback.feature.title" else "feedback.title", language),
-                modifier = Modifier.weight(1f),
-            )
-        }
+        ProfileSheetHeader(
+            title = StringStore.text(context, if (category == "feature") "feedback.feature.title" else "feedback.title", language),
+            closeIcon = Icons.Filled.Close,
+            closeLabel = closeLabel,
+            onClose = onBack,
+            modifier = Modifier.padding(top = 16.dp, bottom = 12.dp),
+        )
         Text(
             text = StringStore.text(context, "feedback.subtitle", language),
-            style = SophiaTypography.bodyMedium,
+            fontFamily = PlusJakartaSans,
+            fontSize = 15.sp,
+            lineHeight = 21.sp,
+            color = DS.inkSecondary,
         )
 
-        Spacer(Modifier.height(22.dp))
-        SectionLabel(StringStore.text(context, "feedback.category.label", language))
+        Spacer(Modifier.height(20.dp))
+        ProfileGroupLabel(StringStore.text(context, "feedback.category.label", language))
         Spacer(Modifier.height(10.dp))
         FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
             CATEGORIES.forEach { key ->
-                val selected = category == key
-                Text(
-                    text = StringStore.text(context, "feedback.category.$key", language),
-                    fontFamily = PlusJakartaSans,
-                    fontWeight = FontWeight.SemiBold,
-                    fontSize = 13.sp,
-                    color = if (selected) Color.White else DS.inkSecondary,
+                val isSelected = category == key
+                val fill by animateColorAsState(if (isSelected) DS.accent else DS.accentTint, DSMotion.snappy(), label = "categoryFill")
+                val ink by animateColorAsState(if (isSelected) Color.White else DS.ink, DSMotion.snappy(), label = "categoryInk")
+                Box(
                     modifier = Modifier
-                        .softPress(onClick = { category = key })
-                        .clip(CircleShape)
-                        .background(if (selected) DS.accent else DS.surface)
-                        .border(1.dp, if (selected) DS.accent else DS.hairline, CircleShape)
-                        .padding(horizontal = 14.dp, vertical = 9.dp),
-                )
+                        .height(40.dp)
+                        .pressable(
+                            onClick = {
+                                if (!isSelected) {
+                                    haptics.select()
+                                    category = key
+                                }
+                            },
+                            haptic = false,
+                        )
+                        .clip(RoundedCornerShape(14.dp))
+                        .background(fill)
+                        .semantics {
+                            selected = isSelected
+                            role = Role.RadioButton
+                        }
+                        .padding(horizontal = 14.dp),
+                    contentAlignment = Alignment.Center,
+                ) {
+                    Text(
+                        text = StringStore.text(context, "feedback.category.$key", language),
+                        fontFamily = PlusJakartaSans,
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 14.sp,
+                        color = ink,
+                        maxLines = 1,
+                    )
+                }
             }
         }
 
-        Spacer(Modifier.height(22.dp))
-        SectionLabel(StringStore.text(context, "feedback.message.label", language))
+        Spacer(Modifier.height(20.dp))
+        ProfileGroupLabel(StringStore.text(context, "feedback.message.label", language))
         Spacer(Modifier.height(10.dp))
-        FeedbackField(
+        ProfileTextField(
             value = message,
             onValueChange = { message = it },
             placeholder = StringStore.text(context, if (category == "feature") "feedback.feature.placeholder" else "feedback.message.placeholder", language),
@@ -169,10 +196,10 @@ fun FeedbackScreen(
             minHeight = 150.dp,
         )
 
-        Spacer(Modifier.height(18.dp))
-        SectionLabel(StringStore.text(context, "feedback.email.label", language))
+        Spacer(Modifier.height(20.dp))
+        ProfileGroupLabel(StringStore.text(context, "feedback.email.label", language))
         Spacer(Modifier.height(10.dp))
-        FeedbackField(
+        ProfileTextField(
             value = email,
             onValueChange = { email = it },
             placeholder = StringStore.text(context, "feedback.email.placeholder", language),
@@ -183,16 +210,24 @@ fun FeedbackScreen(
         Spacer(Modifier.height(14.dp))
         Text(
             text = StringStore.text(context, "feedback.technicalNote", language),
-            style = SophiaTypography.labelMedium.copy(fontSize = 11.sp, color = DS.inkTertiary),
+            fontFamily = PlusJakartaSans,
+            fontSize = 12.sp,
+            lineHeight = 17.sp,
+            color = DS.inkSecondary,
         )
 
         error?.let {
             Spacer(Modifier.height(14.dp))
             Text(
                 text = it,
-                style = SophiaTypography.bodyMedium.copy(color = DS.danger),
+                fontFamily = PlusJakartaSans,
+                fontWeight = FontWeight.SemiBold,
+                fontSize = 14.sp,
+                lineHeight = 20.sp,
+                color = DS.danger,
                 modifier = Modifier
                     .fillMaxWidth()
+                    .dsShake(trigger = errorShake)
                     .clip(DS.controlShape)
                     .background(DS.dangerTint)
                     .padding(14.dp),
@@ -217,6 +252,7 @@ fun FeedbackScreen(
                     sending = false
                     if (result.isSuccess) {
                         message = ""
+                        haptics.success()
                         sent = true
                     } else {
                         // The message stays in the field either way: a rejected email is a
@@ -228,38 +264,11 @@ fun FeedbackScreen(
                             if (badEmail) "feedback.error.email" else "feedback.error.generic",
                             language,
                         )
+                        haptics.error()
+                        errorShake += 1
                     }
                 }
             },
-        )
-    }
-}
-
-@Composable
-private fun FeedbackField(
-    value: String,
-    onValueChange: (String) -> Unit,
-    placeholder: String,
-    singleLine: Boolean,
-    minHeight: androidx.compose.ui.unit.Dp,
-) {
-    Box(
-        modifier = Modifier
-            .fillMaxWidth()
-            .heightIn(min = minHeight)
-            .sophiaCard(shape = DS.controlShape, elevation = 2.dp)
-            .padding(horizontal = 14.dp, vertical = 13.dp),
-    ) {
-        if (value.isEmpty()) {
-            Text(text = placeholder, style = SophiaTypography.bodyMedium, color = DS.inkTertiary)
-        }
-        BasicTextField(
-            value = value,
-            onValueChange = onValueChange,
-            singleLine = singleLine,
-            textStyle = SophiaTypography.bodyLarge.copy(fontSize = 16.sp, color = DS.ink),
-            cursorBrush = SolidColor(DS.accentSoft),
-            modifier = Modifier.fillMaxWidth(),
         )
     }
 }

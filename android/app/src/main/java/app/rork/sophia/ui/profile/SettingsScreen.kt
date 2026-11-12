@@ -1,62 +1,52 @@
 package app.rork.sophia.ui.profile
 
-import androidx.compose.foundation.Image
-import androidx.compose.foundation.border
-import androidx.compose.foundation.layout.width
-import androidx.compose.material.icons.filled.ArrowOutward
-import androidx.compose.material.icons.filled.Lightbulb
-import androidx.compose.ui.draw.clip
-import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.text.font.FontWeight
-import app.rork.sophia.R
-import app.rork.sophia.ui.theme.PlusJakartaSans
+import android.content.Intent
+import android.net.Uri
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ColumnScope
+import androidx.compose.foundation.layout.IntrinsicSize
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.Send
-import androidx.compose.material.icons.automirrored.filled.Login
-import androidx.compose.material.icons.automirrored.filled.Logout
-import androidx.compose.material.icons.automirrored.filled.ArrowForwardIos
-import androidx.compose.material.icons.filled.Close
-import androidx.compose.material.icons.filled.LightMode
-import androidx.compose.material.icons.filled.DarkMode
+import androidx.compose.material.icons.automirrored.outlined.Login
+import androidx.compose.material.icons.automirrored.outlined.Logout
+import androidx.compose.material.icons.automirrored.outlined.MenuBook
+import androidx.compose.material.icons.filled.ArrowOutward
 import androidx.compose.material.icons.filled.Check
-import androidx.compose.material.icons.filled.BrightnessMedium
-import androidx.compose.material.icons.filled.CloudDownload
-import androidx.compose.material.icons.filled.CreditCard
-import androidx.compose.material.icons.filled.DeleteForever
-import androidx.compose.material.icons.filled.Description
-import androidx.compose.material.icons.filled.Info
-import androidx.compose.material.icons.filled.LocalFireDepartment
-import androidx.compose.material.icons.filled.PersonAdd
-import androidx.compose.material.icons.filled.PrivacyTip
-import androidx.compose.material.icons.filled.QuestionAnswer
-import androidx.compose.material.icons.filled.Restore
-import androidx.compose.material.icons.filled.RestartAlt
-import androidx.compose.material.icons.filled.School
-import androidx.compose.material.icons.filled.Star
-import androidx.compose.material.icons.filled.Today
-import androidx.compose.material.icons.filled.WorkspacePremium
-import androidx.compose.material3.AlertDialog
+import androidx.compose.material.icons.filled.Close
+import androidx.compose.material.icons.outlined.CloudDownload
+import androidx.compose.material.icons.outlined.CreditCard
+import androidx.compose.material.icons.outlined.DeleteForever
+import androidx.compose.material.icons.outlined.Download
+import androidx.compose.material.icons.outlined.Edit
+import androidx.compose.material.icons.outlined.IosShare
+import androidx.compose.material.icons.outlined.LocalFireDepartment
+import androidx.compose.material.icons.outlined.Person
+import androidx.compose.material.icons.outlined.RestartAlt
+import androidx.compose.material.icons.outlined.StarBorder
+import androidx.compose.material.icons.outlined.Today
+import androidx.compose.material.icons.outlined.WorkspacePremium
 import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
+import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.Switch
 import androidx.compose.material3.SwitchDefaults
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
+import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
@@ -67,45 +57,56 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.clipToBounds
+import androidx.compose.ui.draw.paint
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.semantics.heading
+import androidx.compose.ui.semantics.role
+import androidx.compose.ui.semantics.selected
+import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import app.rork.sophia.BuildConfig
+import app.rork.sophia.R
 import app.rork.sophia.SophiaApplication
-import app.rork.sophia.billing.StoreViewModel
 import app.rork.sophia.audio.CourseAudioDownloads
-import androidx.compose.material.icons.filled.Download
-import app.rork.sophia.data.FeatureFlags
+import app.rork.sophia.billing.StoreViewModel
 import app.rork.sophia.data.StringStore
 import app.rork.sophia.data.catalog.CatalogStore
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.UserProgress
 import app.rork.sophia.domain.locale
-import app.rork.sophia.ui.components.ShareSophiaSheet
-import app.rork.sophia.ui.components.CircleIconButton
 import app.rork.sophia.ui.components.ConfirmDialog
-import app.rork.sophia.ui.components.ScreenTitle
-import app.rork.sophia.ui.components.SectionLabel
-import app.rork.sophia.ui.components.TintedIconBox
-import app.rork.sophia.ui.components.softPress
+import app.rork.sophia.ui.components.ShareSophiaSheet
+import app.rork.sophia.ui.components.dsStagger
+import app.rork.sophia.ui.components.pressable
+import app.rork.sophia.ui.components.rememberHaptics
 import app.rork.sophia.ui.components.sophiaCard
-import app.rork.sophia.ui.theme.AppearancePreference
+import app.rork.sophia.ui.newgen.AvatarCircle
 import app.rork.sophia.ui.theme.DS
-import app.rork.sophia.ui.theme.SophiaAppearance
-import app.rork.sophia.ui.theme.SophiaTypography
+import app.rork.sophia.ui.theme.PlusJakartaSans
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import android.content.Intent
-import android.net.Uri
 import java.text.DateFormat
 
+/** Crème et encre de l'illustration « ambassadeur » (papier découpé du site). */
+private val POSTER_CREAM = Color(0xFFFBEFC9)
+private val POSTER_INK = Color(0xFF16263D)
+
 /**
- * Mirrors the iOS `SettingsView`: everything that is not identity or social lives here,
- * behind the gear on the profile tab, in grouped inset cards.
+ * Les réglages dans le design « Elevate arrondi », comme le `SettingsView` iOS : le titre
+ * centré et la croix, la carte d'identité du lecteur, puis les groupes en cartes bordées
+ * (compte, langue, progression, abonnement, audio, aide, légal, données, à propos). Les blocs
+ * arrivent en cascade ; les rangées s'enfoncent doucement sous le doigt.
  */
 @Composable
 fun SettingsScreen(
@@ -132,12 +133,26 @@ fun SettingsScreen(
     val context = LocalContext.current
     val app = context.applicationContext as SophiaApplication
     val scope = rememberCoroutineScope()
+    val haptics = rememberHaptics()
     val userId by app.authService.userId.collectAsState()
+    // Le @ du lecteur, pour la carte d'identité en tête.
+    val handle by app.socialService.myHandle.collectAsState()
     var showResetProgress by remember { mutableStateOf(false) }
-    // Variante de navigation (A/B « nouvelle génération ») ; un changement vaut au prochain lancement.
     var showShare by remember { mutableStateOf(false) }
     if (showShare) {
         ShareSophiaSheet(language = language, onDismiss = { showShare = false })
+    }
+    var showLanguages by remember { mutableStateOf(false) }
+    if (showLanguages) {
+        LanguageSheet(
+            current = language,
+            title = StringStore.text(context, "language.section", language),
+            onPick = {
+                showLanguages = false
+                onLanguageChange(it)
+            },
+            onDismiss = { showLanguages = false },
+        )
     }
     var showDeleteAccount by remember { mutableStateOf(false) }
     var deletingAccount by remember { mutableStateOf(false) }
@@ -149,370 +164,399 @@ fun SettingsScreen(
             .fillMaxSize()
             .background(DS.canvas)
             .verticalScroll(rememberScrollState())
-            .padding(horizontal = DS.Space.l)
+            .padding(horizontal = 20.dp)
             .padding(bottom = 32.dp),
     ) {
-        Row(
-            modifier = Modifier.fillMaxWidth().padding(vertical = DS.Space.s),
-            verticalAlignment = Alignment.CenterVertically,
-        ) {
-            ScreenTitle(
-                text = StringStore.text(context, "settings.title", language),
-                modifier = Modifier.weight(1f),
-            )
-            CircleIconButton(icon = Icons.Filled.Close, onClick = onBack, size = 44.dp)
-        }
-
-        SettingsSection(StringStore.text(context, "account.title", language))
-        SettingsGroup {
-            if (userId == null) {
-                SettingsRow(
-                    icon = Icons.AutoMirrored.Filled.Login,
-                    label = StringStore.text(context, "account.create.title", language),
-                    subtitle = StringStore.text(context, "account.create.subtitle", language),
-                    onClick = {
-                        scope.launch {
-                            runCatching { app.authService.signInWithGoogle(context) }
-                            app.progressSyncService.pullOnLogin(app.progressManager.progress.value)
-                        }
-                    },
+        // Le titre centré, la croix à droite (et son pendant vide à gauche, pour le centrage).
+        ProfileCenteredTitleBar(
+            title = StringStore.text(context, "settings.title", language),
+            modifier = Modifier.padding(top = 8.dp, bottom = 12.dp),
+            trailing = {
+                ProfileRoundButton(
+                    icon = Icons.Filled.Close,
+                    contentDescription = StringStore.text(context, "common.close", language),
+                    onClick = onBack,
                 )
-            } else {
-                SettingsRow(
-                    icon = Icons.Filled.PersonAdd,
-                    label = StringStore.text(context, "account.signedIn.title", language),
-                    subtitle = userId!!.take(8) + "…",
-                    showChevron = false,
-                    onClick = {},
-                )
-                HorizontalDivider(color = DS.hairline)
-                SettingsRow(
-                    icon = Icons.AutoMirrored.Filled.Logout,
-                    label = StringStore.text(context, "account.signOut.action", language),
-                    destructive = true,
-                    onClick = { scope.launch { app.authService.signOut() } },
-                )
-                HorizontalDivider(color = DS.hairline)
-                // Google Play requires an in-app route to delete the account, and the terms
-                // promise it lives here. Confirmation first: this is not undoable.
-                SettingsRow(
-                    icon = Icons.Filled.DeleteForever,
-                    label = StringStore.text(context, "account.delete.action", language),
-                    subtitle = deleteError,
-                    destructive = true,
-                    showChevron = false,
-                    trailing = if (deletingAccount) {
-                        {
-                            CircularProgressIndicator(
-                                color = DS.danger,
-                                strokeWidth = 2.dp,
-                                modifier = Modifier.size(18.dp),
-                            )
-                        }
-                    } else {
-                        null
-                    },
-                    onClick = {
-                        if (!deletingAccount) {
-                            deleteError = null
-                            showDeleteAccount = true
-                        }
-                    },
-                )
-            }
-        }
-
-        SettingsSection(StringStore.text(context, "language.section", language))
-        SettingsGroup {
-            AppLanguage.entries.forEachIndexed { index, lang ->
-                Row(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .softPress(onClick = { onLanguageChange(lang) })
-                        .background(if (lang == language) DS.accentTint else Color.Transparent)
-                        .padding(horizontal = 14.dp, vertical = 13.dp),
-                    verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.spacedBy(12.dp),
-                ) {
-                    Text(text = lang.flag, fontSize = 20.sp)
-                    Text(
-                        text = lang.displayName,
-                        style = SophiaTypography.bodyLarge.copy(fontSize = 16.sp),
-                        modifier = Modifier.weight(1f),
-                    )
-                    if (lang == language) {
-                        Icon(
-                            Icons.Filled.Star,
-                            contentDescription = null,
-                            tint = DS.accentSoft,
-                            modifier = Modifier.size(16.dp),
-                        )
-                    }
-                }
-                if (index != AppLanguage.entries.lastIndex) HorizontalDivider(color = DS.hairline)
-            }
-        }
-
-        SettingsSection(StringStore.text(context, "settings.section.appearance", language))
-        SettingsGroup {
-            AppearancePreference.entries.forEachIndexed { index, option ->
-                val selected = SophiaAppearance.preference == option
-                Row(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .softPress(onClick = { SophiaAppearance.setPreference(context, option) })
-                        .background(if (selected) DS.accentTint else Color.Transparent)
-                        .padding(horizontal = 14.dp, vertical = 13.dp),
-                    verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.spacedBy(12.dp),
-                ) {
-                    Icon(
-                        imageVector = when (option) {
-                            AppearancePreference.LIGHT -> Icons.Filled.LightMode
-                            AppearancePreference.DARK -> Icons.Filled.DarkMode
-                            AppearancePreference.SYSTEM -> Icons.Filled.BrightnessMedium
-                        },
-                        contentDescription = null,
-                        tint = if (selected) DS.accentSoft else DS.inkSecondary,
-                        modifier = Modifier.size(20.dp),
-                    )
-                    Text(
-                        text = StringStore.text(context, option.labelKey, language),
-                        style = SophiaTypography.bodyLarge.copy(fontSize = 16.sp),
-                        modifier = Modifier.weight(1f),
-                    )
-                    if (selected) {
-                        Icon(
-                            Icons.Filled.Check,
-                            contentDescription = null,
-                            tint = DS.accentSoft,
-                            modifier = Modifier.size(18.dp),
-                        )
-                    }
-                }
-                if (index != AppearancePreference.entries.lastIndex) HorizontalDivider(color = DS.hairline)
-            }
-        }
-        Text(
-            text = StringStore.text(context, "settings.appearance.hint", language),
-            style = SophiaTypography.labelMedium,
-            modifier = Modifier.padding(start = 4.dp, top = 8.dp),
+            },
         )
 
-        SettingsSection(StringStore.text(context, "settings.section.progress", language))
-        SettingsGroup {
-            SettingsRow(
-                icon = Icons.Filled.School,
-                label = StringStore.text(context, "settings.courses.completed", language, completedCount),
-                showChevron = false,
-                onClick = {},
+        // La carte d'identité : avatar, titre de rang, @ et ancienneté. Seulement ce que l'app
+        // connaît déjà ; la ligne de détail disparaît quand il n'y a ni @ ni premier cours.
+        val rankTitle = remember(language) { ProfileIdentity.rankTitle(context, language) }
+        val memberSince = remember(progress.courseProgress, language) { ProfileIdentity.memberSince(progress, language) }
+        val accountHandle = handle?.takeIf { userId != null && it.isNotBlank() }
+        val identityDetail = listOfNotNull(
+            accountHandle?.let { "@$it" },
+            memberSince?.let { StringStore.text(context, "profile.member.since", language, it) },
+        ).joinToString(" · ").ifEmpty { null }
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .dsStagger(0, stepMillis = 40)
+                .sophiaCard()
+                .padding(horizontal = 16.dp, vertical = 14.dp)
+                .semantics(mergeDescendants = true) { },
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.spacedBy(14.dp),
+        ) {
+            AvatarCircle(
+                avatarId = progress.avatarId,
+                initial = (accountHandle ?: rankTitle).take(1).uppercase(),
+                size = 56.dp,
             )
-            HorizontalDivider(color = DS.hairline)
-            SettingsRow(
-                icon = Icons.Filled.LocalFireDepartment,
-                label = StringStore.text(context, "settings.streak.title", language, progress.streak),
-                subtitle = StringStore.text(context, "settings.streak.subtitle", language),
-                showChevron = false,
-                onClick = {},
-            )
+            Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(3.dp)) {
+                Text(
+                    text = rankTitle,
+                    fontFamily = PlusJakartaSans,
+                    fontWeight = FontWeight.SemiBold,
+                    fontSize = 17.sp,
+                    lineHeight = 22.sp,
+                    color = DS.ink,
+                )
+                if (identityDetail != null) {
+                    Text(
+                        text = identityDetail,
+                        fontFamily = PlusJakartaSans,
+                        fontSize = 13.sp,
+                        lineHeight = 18.sp,
+                        color = DS.inkSecondary,
+                    )
+                }
+            }
+        }
+
+        // L'ordre d'arrivée des blocs : chacun prend le rang suivant, plafonné.
+        var order = 0
+        fun nextOrder(): Int {
+            order += 1
+            return order.coerceAtMost(10)
+        }
+
+        SettingsSection(StringStore.text(context, "account.title", language), nextOrder()) {
+            SettingsGroup {
+                if (userId == null) {
+                    SettingsRow(
+                        icon = Icons.AutoMirrored.Outlined.Login,
+                        label = StringStore.text(context, "account.create.title", language),
+                        subtitle = StringStore.text(context, "account.create.subtitle", language),
+                        onClick = {
+                            scope.launch {
+                                runCatching { app.authService.signInWithGoogle(context) }
+                                app.progressSyncService.pullOnLogin(app.progressManager.progress.value)
+                            }
+                        },
+                    )
+                } else {
+                    SettingsRow(
+                        icon = Icons.Outlined.Person,
+                        label = StringStore.text(context, "account.signedIn.title", language),
+                        subtitle = userId!!.take(8) + "…",
+                        showChevron = false,
+                        static = true,
+                        onClick = {},
+                    )
+                    ProfileRowDivider()
+                    SettingsRow(
+                        icon = Icons.AutoMirrored.Outlined.Logout,
+                        label = StringStore.text(context, "account.signOut.action", language),
+                        destructive = true,
+                        onClick = { scope.launch { app.authService.signOut() } },
+                    )
+                    ProfileRowDivider()
+                    // Google Play requires an in-app route to delete the account, and the terms
+                    // promise it lives here. Confirmation first: this is not undoable.
+                    SettingsRow(
+                        icon = Icons.Outlined.DeleteForever,
+                        label = StringStore.text(context, "account.delete.action", language),
+                        subtitle = deleteError,
+                        destructive = true,
+                        showChevron = false,
+                        trailing = if (deletingAccount) {
+                            {
+                                CircularProgressIndicator(
+                                    color = DS.danger,
+                                    strokeWidth = 2.dp,
+                                    modifier = Modifier.size(18.dp),
+                                )
+                            }
+                        } else {
+                            null
+                        },
+                        onClick = {
+                            if (!deletingAccount) {
+                                deleteError = null
+                                showDeleteAccount = true
+                            }
+                        },
+                    )
+                }
+            }
+        }
+
+        // La langue : une pastille qui ouvre la liste, comme le sélecteur d'iOS.
+        SettingsSection(StringStore.text(context, "language.section", language), nextOrder()) {
+            Box(modifier = Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
+                Row(
+                    modifier = Modifier
+                        .pressable(onClick = { showLanguages = true })
+                        .sophiaCard(shape = RoundedCornerShape(14.dp))
+                        .padding(start = 16.dp, end = 10.dp, top = 11.dp, bottom = 11.dp)
+                        .semantics { role = Role.Button },
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.spacedBy(8.dp),
+                ) {
+                    Text(text = language.flag, fontSize = 18.sp)
+                    Text(
+                        text = language.displayName,
+                        fontFamily = PlusJakartaSans,
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 15.sp,
+                        color = DS.ink,
+                    )
+                    ProfileRowChevron()
+                }
+            }
+        }
+
+        SettingsSection(StringStore.text(context, "settings.section.progress", language), nextOrder()) {
+            SettingsGroup {
+                SettingsRow(
+                    icon = Icons.AutoMirrored.Outlined.MenuBook,
+                    label = StringStore.text(context, "settings.courses.completed", language, completedCount),
+                    showChevron = false,
+                    static = true,
+                    onClick = {},
+                )
+                ProfileRowDivider()
+                SettingsRow(
+                    icon = Icons.Outlined.LocalFireDepartment,
+                    label = StringStore.text(context, "settings.streak.title", language, progress.streak),
+                    subtitle = StringStore.text(context, "settings.streak.subtitle", language),
+                    showChevron = false,
+                    static = true,
+                    onClick = {},
+                )
+            }
         }
 
         // Subscribers used to find nothing here: no sign of Premium, no date, no way to cancel
         // (Play only lets a subscription be cancelled from its own page, linked below).
-        SettingsSection(StringStore.text(context, "settings.section.subscription", language))
-        SettingsGroup {
-            if (isPremium) {
+        SettingsSection(StringStore.text(context, "settings.section.subscription", language), nextOrder()) {
+            SettingsGroup {
+                if (isPremium) {
+                    SettingsRow(
+                        icon = Icons.Outlined.WorkspacePremium,
+                        label = StringStore.text(context, "settings.subscription.active.title", language),
+                        subtitle = subscription?.let { subscriptionSubtitle(context, it, language) },
+                        showChevron = false,
+                        static = true,
+                        onClick = {},
+                    )
+                } else {
+                    SettingsRow(
+                        icon = Icons.Outlined.WorkspacePremium,
+                        label = StringStore.text(context, "settings.premium.title", language),
+                        subtitle = StringStore.text(context, "settings.premium.subtitle", language),
+                        onClick = onShowPaywall,
+                    )
+                }
+                ProfileRowDivider()
                 SettingsRow(
-                    icon = Icons.Filled.WorkspacePremium,
-                    label = StringStore.text(context, "settings.subscription.active.title", language),
-                    subtitle = subscription?.let { subscriptionSubtitle(context, it, language) },
-                    showChevron = false,
-                    onClick = {},
-                )
-            } else {
-                SettingsRow(
-                    icon = Icons.Filled.WorkspacePremium,
-                    label = StringStore.text(context, "settings.premium.title", language),
-                    subtitle = StringStore.text(context, "settings.premium.subtitle", language),
-                    onClick = onShowPaywall,
+                    icon = Icons.Outlined.CreditCard,
+                    label = StringStore.text(context, "settings.subscription.manage.title", language),
+                    subtitle = StringStore.text(
+                        context,
+                        if (subscription?.isAppStore == true) "settings.subscription.otherStore" else "settings.subscription.manage.subtitle",
+                        language,
+                    ),
+                    onClick = { openPlaySubscriptions(context, subscription?.productId) },
                 )
             }
-            HorizontalDivider(color = DS.hairline)
-            SettingsRow(
-                icon = Icons.Filled.CreditCard,
-                label = StringStore.text(context, "settings.subscription.manage.title", language),
-                subtitle = StringStore.text(
-                    context,
-                    if (subscription?.isAppStore == true) "settings.subscription.otherStore" else "settings.subscription.manage.subtitle",
-                    language,
-                ),
-                onClick = { openPlaySubscriptions(context, subscription?.productId) },
-            )
         }
 
         val audioDownloads by CourseAudioDownloads.downloaded.collectAsState()
         if (isPremium || audioDownloads.isNotEmpty()) {
-            SettingsSection(StringStore.text(context, "settings.section.audio", language))
+            SettingsSection(StringStore.text(context, "settings.section.audio", language), nextOrder()) {
+                SettingsGroup {
+                    SettingsRow(
+                        icon = Icons.Outlined.Download,
+                        label = StringStore.text(context, "audio.downloads.title", language),
+                        subtitle = StringStore.text(
+                            context,
+                            "audio.downloads.subtitle",
+                            language,
+                            android.text.format.Formatter.formatShortFileSize(context, CourseAudioDownloads.totalBytes()),
+                        ),
+                        onClick = onOpenAudioDownloads,
+                    )
+                }
+            }
+        }
+
+        AmbassadorBanner(
+            language = language,
+            onClick = onOpenAmbassador,
+            modifier = Modifier.padding(top = 24.dp).dsStagger(nextOrder(), stepMillis = 40),
+        )
+
+        SettingsSection(StringStore.text(context, "settings.section.help", language), nextOrder()) {
             SettingsGroup {
                 SettingsRow(
-                    icon = Icons.Filled.Download,
-                    label = StringStore.text(context, "audio.downloads.title", language),
-                    subtitle = StringStore.text(
-                        context,
-                        "audio.downloads.subtitle",
-                        language,
-                        android.text.format.Formatter.formatShortFileSize(context, CourseAudioDownloads.totalBytes()),
-                    ),
-                    onClick = onOpenAudioDownloads,
+                    icon = Icons.Outlined.IosShare,
+                    label = StringStore.text(context, "share.card.title", language),
+                    subtitle = StringStore.text(context, "share.card.subtitle", language),
+                    onClick = { showShare = true },
+                )
+                ProfileRowDivider()
+                SettingsRow(
+                    icon = Icons.Outlined.Edit,
+                    label = StringStore.text(context, "settings.feedback.title", language),
+                    subtitle = StringStore.text(context, "settings.feedback.subtitle", language),
+                    onClick = onOpenFeedback,
+                )
+                ProfileRowDivider()
+                SettingsRow(
+                    icon = Icons.Outlined.StarBorder,
+                    label = StringStore.text(context, "settings.featureRequest.title", language),
+                    subtitle = StringStore.text(context, "settings.featureRequest.subtitle", language),
+                    onClick = onOpenFeatureRequest,
                 )
             }
         }
 
-        AmbassadorBanner(language = language, onClick = onOpenAmbassador)
-
-        SettingsSection(StringStore.text(context, "settings.section.help", language))
-        SettingsGroup {
-            SettingsRow(
-                icon = Icons.AutoMirrored.Filled.Send,
-                label = StringStore.text(context, "share.card.title", language),
-                subtitle = StringStore.text(context, "share.card.subtitle", language),
-                onClick = { showShare = true },
-            )
-            HorizontalDivider(color = DS.hairline)
-            SettingsRow(
-                icon = Icons.Filled.QuestionAnswer,
-                label = StringStore.text(context, "settings.feedback.title", language),
-                subtitle = StringStore.text(context, "settings.feedback.subtitle", language),
-                onClick = onOpenFeedback,
-            )
-            HorizontalDivider(color = DS.hairline)
-            SettingsRow(
-                icon = Icons.Filled.Lightbulb,
-                label = StringStore.text(context, "settings.featureRequest.title", language),
-                subtitle = StringStore.text(context, "settings.featureRequest.subtitle", language),
-                onClick = onOpenFeatureRequest,
-            )
-        }
-
-        SettingsSection(StringStore.text(context, "settings.section.legal", language))
-        SettingsGroup {
-            SettingsRow(
-                icon = Icons.Filled.Description,
-                label = StringStore.text(context, "settings.terms.title", language),
-                onClick = onOpenTerms,
-            )
-            HorizontalDivider(color = DS.hairline)
-            SettingsRow(
-                icon = Icons.Filled.PrivacyTip,
-                label = StringStore.text(context, "settings.privacy.title", language),
-                onClick = onOpenPrivacy,
-            )
-            if (!isPremium) {
-                HorizontalDivider(color = DS.hairline)
+        SettingsSection(StringStore.text(context, "settings.section.legal", language), nextOrder()) {
+            SettingsGroup {
                 SettingsRow(
-                    icon = Icons.Filled.Restore,
-                    label = StringStore.text(context, "settings.restore.title", language),
-                    onClick = onRestorePurchases,
+                    icon = null,
+                    label = StringStore.text(context, "settings.terms.title", language),
+                    onClick = onOpenTerms,
                 )
-            }
-        }
-
-        SettingsSection(StringStore.text(context, "settings.section.data", language))
-        SettingsGroup {
-            SettingsRow(
-                icon = Icons.Filled.RestartAlt,
-                label = StringStore.text(context, "settings.reset.title", language),
-                destructive = true,
-                onClick = { showResetProgress = true },
-            )
-            // Hands today's free course back, so the freemium gates can be re-tested.
-            // Debug builds only: in release this row let any free user replay the daily
-            // unlock after every course and read the whole catalogue for nothing.
-            // `BuildConfig.DEBUG` is a compile-time constant, so R8 drops the branch.
-            if (BuildConfig.DEBUG) {
-                HorizontalDivider(color = DS.hairline)
+                ProfileRowDivider()
                 SettingsRow(
-                    icon = Icons.Filled.Today,
-                    label = StringStore.text(context, "settings.debug.resetDaily", language),
-                    subtitle = StringStore.text(
-                        context,
-                        if (app.progressManager.hasClaimedDailyFreeCourse) {
-                            "settings.debug.daily.done"
-                        } else {
-                            "settings.debug.daily.pending"
-                        },
-                        language,
-                    ),
-                    showChevron = false,
-                    onClick = { app.progressManager.resetDailyCourseFlag() },
+                    icon = null,
+                    label = StringStore.text(context, "settings.privacy.title", language),
+                    onClick = onOpenPrivacy,
                 )
-                HorizontalDivider(color = DS.hairline)
-                SettingsRow(
-                    icon = Icons.Filled.WorkspacePremium,
-                    label = StringStore.text(context, "settings.debug.premium", language),
-                    subtitle = StringStore.text(context, "settings.debug.premium.subtitle", language),
-                    showChevron = false,
-                    onClick = { onDebugPremiumChange(!debugPremium) },
-                    trailing = {
-                        Switch(
-                            checked = debugPremium,
-                            onCheckedChange = onDebugPremiumChange,
-                            colors = SwitchDefaults.colors(checkedTrackColor = DS.accent),
-                        )
-                    },
-                )
-                // Le catalogue en ligne : d'où il vient, combien de cours sont sur le téléphone,
-                // quand il a été relu ; un tap force le rafraîchissement (manifeste + fichiers).
-                HorizontalDivider(color = DS.hairline)
-                val catalogVersion by CatalogStore.version.collectAsState()
-                var catalogSummary by remember { mutableStateOf("") }
-                LaunchedEffect(language, catalogVersion) {
-                    catalogSummary = withContext(Dispatchers.IO) { CatalogStore.debugSummary(language) }
+                if (!isPremium) {
+                    ProfileRowDivider()
+                    SettingsRow(
+                        icon = null,
+                        label = StringStore.text(context, "settings.restore.title", language),
+                        onClick = onRestorePurchases,
+                    )
                 }
+            }
+        }
+
+        SettingsSection(StringStore.text(context, "settings.section.data", language), nextOrder()) {
+            SettingsGroup {
                 SettingsRow(
-                    icon = Icons.Filled.CloudDownload,
-                    label = StringStore.text(context, "settings.debug.catalog", language),
-                    subtitle = catalogSummary.ifBlank {
-                        StringStore.text(context, "settings.debug.catalogRefresh", language)
-                    },
-                    showChevron = false,
+                    icon = Icons.Outlined.RestartAlt,
+                    label = StringStore.text(context, "settings.reset.title", language),
+                    destructive = true,
+                    onClick = { showResetProgress = true },
+                )
+                // Hands today's free course back, so the freemium gates can be re-tested.
+                // Debug builds only: in release this row let any free user replay the daily
+                // unlock after every course and read the whole catalogue for nothing.
+                // `BuildConfig.DEBUG` is a compile-time constant, so R8 drops the branch.
+                if (BuildConfig.DEBUG) {
+                    ProfileRowDivider()
+                    SettingsRow(
+                        icon = Icons.Outlined.Today,
+                        label = StringStore.text(context, "settings.debug.resetDaily", language),
+                        subtitle = StringStore.text(
+                            context,
+                            if (app.progressManager.hasClaimedDailyFreeCourse) {
+                                "settings.debug.daily.done"
+                            } else {
+                                "settings.debug.daily.pending"
+                            },
+                            language,
+                        ),
+                        showChevron = false,
+                        onClick = { app.progressManager.resetDailyCourseFlag() },
+                    )
+                    ProfileRowDivider()
+                    SettingsRow(
+                        icon = Icons.Outlined.WorkspacePremium,
+                        label = StringStore.text(context, "settings.debug.premium", language),
+                        subtitle = StringStore.text(context, "settings.debug.premium.subtitle", language),
+                        showChevron = false,
+                        // Une bascule : la vibration « sélection », portée par la rangée et l'interrupteur.
+                        haptic = false,
+                        onClick = {
+                            haptics.select()
+                            onDebugPremiumChange(!debugPremium)
+                        },
+                        trailing = {
+                            Switch(
+                                checked = debugPremium,
+                                onCheckedChange = {
+                                    haptics.select()
+                                    onDebugPremiumChange(it)
+                                },
+                                colors = SwitchDefaults.colors(
+                                    checkedTrackColor = DS.accent,
+                                    checkedThumbColor = Color.White,
+                                    uncheckedTrackColor = DS.hairline,
+                                    uncheckedThumbColor = Color.White,
+                                    uncheckedBorderColor = DS.hairline,
+                                ),
+                            )
+                        },
+                    )
+                    // Le catalogue en ligne : d'où il vient, combien de cours sont sur le téléphone,
+                    // quand il a été relu ; un tap force le rafraîchissement (manifeste + fichiers).
+                    ProfileRowDivider()
+                    val catalogVersion by CatalogStore.version.collectAsState()
+                    var catalogSummary by remember { mutableStateOf("") }
+                    LaunchedEffect(language, catalogVersion) {
+                        catalogSummary = withContext(Dispatchers.IO) { CatalogStore.debugSummary(language) }
+                    }
+                    SettingsRow(
+                        icon = Icons.Outlined.CloudDownload,
+                        label = StringStore.text(context, "settings.debug.catalog", language),
+                        subtitle = catalogSummary.ifBlank {
+                            StringStore.text(context, "settings.debug.catalogRefresh", language)
+                        },
+                        showChevron = false,
+                        onClick = {
+                            scope.launch {
+                                CatalogStore.refresh(context.applicationContext, language, force = true)
+                                catalogSummary = withContext(Dispatchers.IO) { CatalogStore.debugSummary(language) }
+                            }
+                        },
+                    )
+                }
+            }
+        }
+
+        SettingsSection(StringStore.text(context, "settings.section.about", language), nextOrder()) {
+            SettingsGroup {
+                SettingsInfoRow(
+                    label = StringStore.text(context, "settings.about.version", language),
+                    value = BuildConfig.VERSION_NAME,
+                )
+                // Relit le catalogue en ligne sans attendre le rafraîchissement automatique.
+                ProfileRowDivider()
+                SettingsRow(
+                    icon = null,
+                    label = StringStore.text(context, "settings.debug.catalogRefresh", language),
                     onClick = {
-                        scope.launch {
-                            CatalogStore.refresh(context.applicationContext, language, force = true)
-                            catalogSummary = withContext(Dispatchers.IO) { CatalogStore.debugSummary(language) }
-                        }
+                        scope.launch { CatalogStore.refresh(context.applicationContext, language, force = true) }
                     },
                 )
             }
         }
 
-        SettingsSection(StringStore.text(context, "settings.section.about", language))
-        SettingsGroup {
-            SettingsRow(
-                icon = Icons.Filled.Info,
-                label = StringStore.text(context, "settings.about.version", language),
-                subtitle = BuildConfig.VERSION_NAME,
-                showChevron = false,
-                onClick = {},
-            )
-            // Relit le catalogue en ligne sans attendre le rafraîchissement automatique.
-            HorizontalDivider(color = DS.hairline)
-            SettingsRow(
-                icon = Icons.Filled.CloudDownload,
-                label = StringStore.text(context, "settings.debug.catalogRefresh", language),
-                showChevron = false,
-                onClick = {
-                    scope.launch { CatalogStore.refresh(context.applicationContext, language, force = true) }
-                },
-            )
-        }
-
-        Spacer(Modifier.height(24.dp))
         Text(
             text = StringStore.text(context, "settings.footer", language),
-            style = SophiaTypography.labelMedium,
+            fontFamily = PlusJakartaSans,
+            fontSize = 13.sp,
+            color = DS.inkSecondary,
             textAlign = TextAlign.Center,
-            modifier = Modifier.fillMaxWidth(),
+            modifier = Modifier.fillMaxWidth().padding(top = 24.dp),
         )
     }
 
@@ -554,8 +598,6 @@ fun SettingsScreen(
             onDismiss = { showResetProgress = false },
         )
     }
-
-    // Deviens ambassadeur : on choisit son rôle, puis sa page s'ouvre sur le site.
 }
 
 /** « Essai gratuit jusqu'au… », « Renouvellement le… » or « Se termine le… », with the store's date. */
@@ -588,128 +630,259 @@ private fun openPlaySubscriptions(context: android.content.Context, productId: S
     runCatching { context.startActivity(intent) }
 }
 
+/** Un groupe des réglages : son sur-titre en petites capitales, puis son contenu, révélés ensemble. */
 @Composable
-private fun SettingsSection(title: String) {
-    Spacer(Modifier.height(22.dp))
-    SectionLabel(title, modifier = Modifier.padding(start = 4.dp, bottom = 10.dp))
-}
-
-/** Rows sit inside one inset card, separated by hairlines — the iOS grouped list. */
-@Composable
-private fun SettingsGroup(content: @Composable () -> Unit) {
-    Column(modifier = Modifier.fillMaxWidth().sophiaCard(shape = DS.controlShape, elevation = 4.dp)) {
+private fun SettingsSection(title: String, order: Int, content: @Composable ColumnScope.() -> Unit) {
+    Column(
+        modifier = Modifier.fillMaxWidth().padding(top = 24.dp).dsStagger(order, stepMillis = 40),
+        verticalArrangement = Arrangement.spacedBy(8.dp),
+    ) {
+        ProfileGroupLabel(text = title)
         content()
     }
 }
 
+/** Rows sit inside one bordered card, separated by hairlines: the iOS grouped list. */
+@Composable
+private fun SettingsGroup(content: @Composable ColumnScope.() -> Unit) {
+    Column(modifier = Modifier.fillMaxWidth().sophiaCard(), content = content)
+}
+
+/**
+ * Une rangée des réglages : pictogramme au trait (bleu, rouge pour une action destructrice),
+ * titre, ligne de détail, chevron. Elle s'enfonce doucement sous le doigt ; une rangée
+ * [static] ne fait qu'informer et ne réagit pas.
+ */
 @Composable
 private fun SettingsRow(
-    icon: ImageVector,
+    icon: ImageVector?,
     label: String,
     onClick: () -> Unit,
     subtitle: String? = null,
     destructive: Boolean = false,
     showChevron: Boolean = true,
+    static: Boolean = false,
+    haptic: Boolean = true,
     trailing: (@Composable () -> Unit)? = null,
 ) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .softPress(onClick = onClick)
-            .padding(horizontal = 14.dp, vertical = 13.dp),
+            .then(
+                if (static) {
+                    Modifier.semantics(mergeDescendants = true) { }
+                } else {
+                    Modifier.profileRowPress(onClick = onClick, haptic = haptic)
+                },
+            )
+            .padding(horizontal = 16.dp, vertical = 12.dp),
         verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.spacedBy(14.dp),
+        horizontalArrangement = Arrangement.spacedBy(12.dp),
     ) {
-        TintedIconBox(
-            icon = icon,
-            size = 38.dp,
-            shape = CircleShape,
-            tint = if (destructive) DS.danger else DS.accentSoft,
-            background = if (destructive) DS.dangerTint else DS.accentTint,
-        )
-        Column(modifier = Modifier.weight(1f)) {
+        if (icon != null) {
+            Icon(
+                imageVector = icon,
+                contentDescription = null,
+                tint = if (destructive) DS.danger else DS.accent,
+                modifier = Modifier.size(22.dp),
+            )
+        }
+        Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(2.dp)) {
             Text(
                 text = label,
-                style = SophiaTypography.bodyLarge.copy(fontSize = 16.sp),
+                fontFamily = PlusJakartaSans,
+                fontWeight = FontWeight.Bold,
+                fontSize = 15.sp,
+                lineHeight = 20.sp,
                 color = if (destructive) DS.danger else DS.ink,
             )
             if (subtitle != null) {
                 Text(
                     text = subtitle,
-                    style = SophiaTypography.labelMedium,
-                    color = if (destructive) DS.danger else SophiaTypography.labelMedium.color,
+                    fontFamily = PlusJakartaSans,
+                    fontSize = 13.sp,
+                    lineHeight = 18.sp,
+                    color = if (destructive) DS.danger else DS.inkSecondary,
                 )
             }
         }
         when {
             trailing != null -> trailing()
-            showChevron -> Icon(
-                Icons.AutoMirrored.Filled.ArrowForwardIos,
-                contentDescription = null,
-                tint = DS.inkTertiary,
-                modifier = Modifier.size(18.dp),
-            )
+            showChevron && !destructive -> ProfileRowChevron()
         }
     }
 }
-/**
- * Le bandeau « Deviens ambassadeur », illustré comme sur iOS : l'image du site, le titre, une
- * ligne, et le bouton qui ouvre le site des créateurs dans la langue de l'app.
- */
+
+/** Une ligne d'information : le libellé à gauche, sa valeur à droite. */
 @Composable
-private fun AmbassadorBanner(language: AppLanguage, onClick: () -> Unit) {
-    val context = LocalContext.current
-    Column(
+private fun SettingsInfoRow(label: String, value: String) {
+    Row(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(top = DS.Space.l)
-            .softPress(onClick = onClick)
-            .clip(DS.cardShape)
-            .background(DS.surface)
-            .border(1.dp, DS.hairline, DS.cardShape),
+            .semantics(mergeDescendants = true) { }
+            .padding(horizontal = 16.dp, vertical = 12.dp),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.spacedBy(12.dp),
     ) {
-        Image(
-            painter = painterResource(R.drawable.ambassador_poster),
-            contentDescription = null,
-            contentScale = ContentScale.Crop,
-            modifier = Modifier.fillMaxWidth().height(150.dp),
+        Text(
+            text = label,
+            modifier = Modifier.weight(1f),
+            fontFamily = PlusJakartaSans,
+            fontWeight = FontWeight.Bold,
+            fontSize = 15.sp,
+            color = DS.ink,
         )
-        Column(modifier = Modifier.fillMaxWidth().padding(16.dp), verticalArrangement = Arrangement.spacedBy(14.dp)) {
-            Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
-                Text(
-                    text = StringStore.text(context, "settings.ambassador.banner.title", language),
-                    fontFamily = PlusJakartaSans,
-                    fontWeight = FontWeight.ExtraBold,
-                    fontSize = 20.sp,
-                    color = DS.ink,
-                )
-                Text(
-                    text = StringStore.text(context, "settings.ambassador.banner.subtitle", language),
-                    fontFamily = PlusJakartaSans,
-                    fontSize = 15.sp,
-                    lineHeight = 21.sp,
-                    color = DS.inkSecondary,
-                )
-            }
-            Row(
+        Text(
+            text = value,
+            fontFamily = PlusJakartaSans,
+            fontSize = 15.sp,
+            color = DS.inkSecondary,
+            maxLines = 1,
+        )
+    }
+}
+
+/**
+ * La liste des langues, en feuille : la langue de l'app sur fond teinté avec sa coche ; en
+ * choisir une autre la change aussitôt et referme la feuille.
+ */
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+private fun LanguageSheet(
+    current: AppLanguage,
+    title: String,
+    onPick: (AppLanguage) -> Unit,
+    onDismiss: () -> Unit,
+) {
+    val haptics = rememberHaptics()
+    ModalBottomSheet(
+        onDismissRequest = onDismiss,
+        sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true),
+        containerColor = DS.canvas,
+    ) {
+        Column(
+            modifier = Modifier.fillMaxWidth().navigationBarsPadding().padding(start = 20.dp, end = 20.dp, bottom = 20.dp),
+            verticalArrangement = Arrangement.spacedBy(14.dp),
+        ) {
+            Text(
+                text = title,
+                modifier = Modifier.semantics { heading() },
+                fontFamily = PlusJakartaSans,
+                fontWeight = FontWeight.SemiBold,
+                fontSize = 20.sp,
+                color = DS.ink,
+            )
+            Column(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .clip(CircleShape)
-                    .background(DS.accent)
-                    .padding(horizontal = 16.dp, vertical = 13.dp),
+                    .weight(1f, fill = false)
+                    .sophiaCard()
+                    .verticalScroll(rememberScrollState()),
+            ) {
+                AppLanguage.entries.forEachIndexed { index, lang ->
+                    val isCurrent = lang == current
+                    if (index > 0) ProfileRowDivider()
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .profileRowPress(
+                                onClick = {
+                                    if (!isCurrent) haptics.select()
+                                    onPick(lang)
+                                },
+                                haptic = false,
+                            )
+                            .background(if (isCurrent) DS.accentTint else Color.Transparent)
+                            .semantics { selected = isCurrent }
+                            .padding(horizontal = 16.dp, vertical = 13.dp),
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.spacedBy(12.dp),
+                    ) {
+                        Text(text = lang.flag, fontSize = 20.sp)
+                        Text(
+                            text = lang.displayName,
+                            modifier = Modifier.weight(1f),
+                            fontFamily = PlusJakartaSans,
+                            fontWeight = if (isCurrent) FontWeight.Bold else FontWeight.Medium,
+                            fontSize = 16.sp,
+                            color = DS.ink,
+                        )
+                        if (isCurrent) {
+                            Icon(Icons.Filled.Check, contentDescription = null, tint = DS.accent, modifier = Modifier.size(18.dp))
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/**
+ * Le bandeau « Deviens ambassadeur » dans le style papier du site, comme sur iOS :
+ * l'illustration à gauche, la promesse, et la sortie vers le site des créateurs dans la langue
+ * de l'app.
+ */
+@Composable
+private fun AmbassadorBanner(language: AppLanguage, onClick: () -> Unit, modifier: Modifier = Modifier) {
+    val context = LocalContext.current
+    Row(
+        modifier = modifier
+            .fillMaxWidth()
+            .pressable(onClick = onClick)
+            .clip(DS.cardShape)
+            .background(POSTER_CREAM)
+            .height(IntrinsicSize.Min)
+            .semantics(mergeDescendants = true) { role = Role.Button },
+    ) {
+        // Peinte en fond d'une boîte, sans imposer sa taille : c'est le texte qui donne la hauteur.
+        Box(
+            modifier = Modifier
+                .width(110.dp)
+                .fillMaxHeight()
+                .clipToBounds()
+                .paint(
+                    painter = painterResource(R.drawable.ambassador_poster),
+                    sizeToIntrinsics = false,
+                    contentScale = ContentScale.Crop,
+                ),
+        )
+        Column(
+            modifier = Modifier.weight(1f).padding(14.dp),
+            verticalArrangement = Arrangement.spacedBy(6.dp),
+        ) {
+            Text(
+                text = StringStore.text(context, "settings.ambassador.banner.title", language),
+                fontFamily = PlusJakartaSans,
+                fontWeight = FontWeight.ExtraBold,
+                fontSize = 16.sp,
+                lineHeight = 21.sp,
+                color = POSTER_INK,
+            )
+            Text(
+                text = StringStore.text(context, "settings.ambassador.banner.subtitle", language),
+                fontFamily = PlusJakartaSans,
+                fontSize = 13.sp,
+                lineHeight = 18.sp,
+                color = POSTER_INK,
+            )
+            Row(
+                modifier = Modifier
+                    .padding(top = 2.dp)
+                    .clip(RoundedCornerShape(12.dp))
+                    .background(POSTER_INK)
+                    .padding(horizontal = 12.dp, vertical = 8.dp),
                 verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.Center,
+                horizontalArrangement = Arrangement.spacedBy(6.dp),
             ) {
                 Text(
                     text = StringStore.text(context, "settings.ambassador.cta", language),
                     fontFamily = PlusJakartaSans,
                     fontWeight = FontWeight.Bold,
-                    fontSize = 15.sp,
+                    fontSize = 13.sp,
                     color = Color.White,
-                    textAlign = TextAlign.Center,
+                    modifier = Modifier.weight(1f, fill = false),
                 )
-                Spacer(Modifier.width(8.dp))
-                Icon(Icons.Filled.ArrowOutward, contentDescription = null, tint = Color.White, modifier = Modifier.size(15.dp))
+                Icon(Icons.Filled.ArrowOutward, contentDescription = null, tint = Color.White, modifier = Modifier.size(13.dp))
             }
         }
     }
