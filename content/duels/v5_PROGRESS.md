@@ -91,3 +91,4 @@ Restent à lancer ensuite : vague 1 rien d'autre ; vague 2 pour fr de pt it ro b
 - hr parts 1–7 fini (texte complet pour les 29 langues) ; reste part15
 - part15 : tr hu finis
 - part15 : de nl da finis
+- part15 : sv nb fi finis
