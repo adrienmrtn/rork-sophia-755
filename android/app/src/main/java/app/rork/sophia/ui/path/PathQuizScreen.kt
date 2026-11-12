@@ -3,11 +3,9 @@ package app.rork.sophia.ui.path
 import androidx.activity.compose.BackHandler
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.Crossfade
-import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.LinearEasing
 import androidx.compose.animation.core.LinearOutSlowInEasing
-import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.spring
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.fadeIn
@@ -17,28 +15,22 @@ import androidx.compose.animation.slideOutHorizontally
 import androidx.compose.animation.togetherWith
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.BarChart
-import androidx.compose.material.icons.filled.Cancel
 import androidx.compose.material.icons.filled.Check
-import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.Close
-import androidx.compose.material.icons.filled.Contrast
 import androidx.compose.material.icons.filled.EmojiEvents
 import androidx.compose.material.icons.filled.Replay
 import androidx.compose.material.icons.filled.Shuffle
@@ -51,9 +43,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.key
-import androidx.compose.runtime.mutableDoubleStateOf
 import androidx.compose.runtime.mutableIntStateOf
-import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
@@ -69,39 +59,39 @@ import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.graphics.lerp
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.platform.LocalView
+import androidx.compose.ui.semantics.clearAndSetSemantics
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import app.rork.sophia.data.ContentCatalog
-import app.rork.sophia.data.analytics.Analytics
 import app.rork.sophia.data.ProgressManager
 import app.rork.sophia.data.StringStore
+import app.rork.sophia.data.analytics.Analytics
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.CourseSummary
 import app.rork.sophia.domain.LearningPathRules
 import app.rork.sophia.domain.PathLevel
+import app.rork.sophia.domain.PathLevelResult
 import app.rork.sophia.domain.PathQuizBuilder
-import app.rork.sophia.domain.QuizAnswer
 import app.rork.sophia.domain.QuizQuestion
-import app.rork.sophia.domain.QuizQuestionType
-import app.rork.sophia.domain.QuizScoring
 import app.rork.sophia.domain.QuizShuffler
 import app.rork.sophia.domain.ShuffledQuestion
-import app.rork.sophia.ui.components.AnswerOptionRow
-import app.rork.sophia.ui.components.AnswerState
-import app.rork.sophia.ui.components.CalmProgressBar
 import app.rork.sophia.ui.components.CircleIconButton
 import app.rork.sophia.ui.components.ConfirmDialog
-import app.rork.sophia.ui.components.OrderingAnswerControl
+import app.rork.sophia.ui.components.DSCountUp
+import app.rork.sophia.ui.components.DSMotion
+import app.rork.sophia.ui.components.DSSegmentedProgress
 import app.rork.sophia.ui.components.RankUpCelebration
-import app.rork.sophia.ui.components.SliderAnswerCard
 import app.rork.sophia.ui.components.SophiaPrimaryButton
 import app.rork.sophia.ui.components.SophiaSecondaryButton
-import app.rork.sophia.ui.components.optionLetter
-import app.rork.sophia.ui.components.softPress
+import app.rork.sophia.ui.components.dsPopIn
+import app.rork.sophia.ui.components.dsStagger
+import app.rork.sophia.ui.components.rememberHaptics
 import app.rork.sophia.ui.components.sophiaCard
 import app.rork.sophia.ui.onboarding.ConfettiBurst
 import app.rork.sophia.ui.onboarding.readableWidth
@@ -114,7 +104,7 @@ import kotlinx.coroutines.launch
 
 private enum class PathQuizPhase { Intro, Questions, Result }
 
-private data class PathQuizEntry(val course: CourseSummary, val question: ShuffledQuestion)
+internal data class PathQuizEntry(val course: CourseSummary, val question: ShuffledQuestion)
 
 /**
  * End-of-level quiz of the learning path: a fresh draw of questions mixed from the level's
@@ -130,7 +120,6 @@ fun PathQuizScreen(
     onDismiss: () -> Unit,
 ) {
     val context = LocalContext.current
-    val view = LocalView.current
     fun text(key: String, vararg args: Any): String = StringStore.text(context, key, language, *args)
 
     // The level's quizzes, read once in a single pass over the catalogue.
@@ -160,8 +149,8 @@ fun PathQuizScreen(
     var showRankUp by remember { mutableStateOf(false) }
     val total = entries.size
 
+    // Called from primary buttons only, which already vibrate on the press.
     fun startQuiz() {
-        view.pathHaptic(PathHaptic.Tap)
         val drawn = PathQuizBuilder.questions(quizzes.orEmpty())
         if (drawn.isEmpty()) {
             onDismiss()
@@ -224,33 +213,44 @@ fun PathQuizScreen(
                     Row(
                         modifier = Modifier
                             .fillMaxWidth()
-                            .padding(horizontal = 20.dp)
+                            .padding(horizontal = 24.dp)
                             .padding(top = 10.dp, bottom = 4.dp),
                         verticalAlignment = Alignment.CenterVertically,
                         horizontalArrangement = Arrangement.spacedBy(12.dp),
                     ) {
-                        CircleIconButton(icon = Icons.Filled.Close, onClick = { showLeaveConfirm = true })
-                        val fraction by animateFloatAsState(
-                            targetValue = (index + if (answeredCurrent) 1 else 0).toFloat() / maxOf(total, 1),
-                            animationSpec = spring(dampingRatio = 0.85f, stiffness = 250f),
-                            label = "pathQuizProgress",
+                        CircleIconButton(
+                            icon = Icons.Filled.Close,
+                            onClick = { showLeaveConfirm = true },
+                            size = 44.dp,
+                            tint = DS.ink,
                         )
-                        CalmProgressBar(fraction = fraction, modifier = Modifier.weight(1f))
+                        DSSegmentedProgress(
+                            total = total,
+                            filled = index + if (answeredCurrent) 1 else 0,
+                            modifier = Modifier.weight(1f),
+                            height = 6.dp,
+                            spacing = 3.dp,
+                        )
                         Text(
                             text = "${index + 1}/$total",
                             fontFamily = PlusJakartaSans,
-                            fontWeight = FontWeight.Medium,
+                            fontWeight = FontWeight.Bold,
                             fontSize = 12.sp,
                             color = DS.inkSecondary,
                             maxLines = 1,
                         )
-                        CorrectPill(count = correctCount, bump = counterBump)
+                        CorrectPill(
+                            count = correctCount,
+                            bump = counterBump,
+                            label = text("path.quiz.correctSoFar", correctCount),
+                        )
                     }
                     AnimatedContent(
                         targetState = index,
                         modifier = Modifier.weight(1f),
                         transitionSpec = {
-                            (slideInHorizontally { it } + fadeIn()) togetherWith (slideOutHorizontally { -it } + fadeOut())
+                            (slideInHorizontally(DSMotion.reveal()) { it } + fadeIn()) togetherWith
+                                (slideOutHorizontally(DSMotion.reveal()) { -it } + fadeOut())
                         },
                         label = "pathQuizQuestion",
                     ) { shownIndex ->
@@ -267,8 +267,8 @@ fun PathQuizScreen(
                                         counterBump = !counterBump
                                     }
                                 },
+                                // The panel's primary button vibrates on the press.
                                 onContinue = {
-                                    view.pathHaptic(PathHaptic.Tap)
                                     if (index < total - 1) {
                                         index += 1
                                         answeredCurrent = false
@@ -290,15 +290,10 @@ fun PathQuizScreen(
                         newlyPassed = newlyPassed,
                         isLastLevel = isLastLevel,
                         awardedXp = awardedXp,
-                        onContinue = {
-                            view.pathHaptic(PathHaptic.Tap)
-                            finishAfterPass()
-                        },
+                        // The buttons vibrate on the press: no vibration is added here.
+                        onContinue = { finishAfterPass() },
                         onRetry = { startQuiz() },
-                        onReview = {
-                            view.pathHaptic(PathHaptic.Tap)
-                            onDismiss()
-                        },
+                        onReview = onDismiss,
                     )
                 }
             }
@@ -345,83 +340,71 @@ private fun PathQuizIntro(
     level: PathLevel,
     language: AppLanguage,
     plannedCount: Int,
-    best: app.rork.sophia.domain.PathLevelResult?,
+    best: PathLevelResult?,
     ready: Boolean,
     onStart: () -> Unit,
     onClose: () -> Unit,
 ) {
     val context = LocalContext.current
     fun text(key: String, vararg args: Any): String = StringStore.text(context, key, language, *args)
-    val appeared = remember { Animatable(0f) }
-    LaunchedEffect(Unit) {
-        delay(50)
-        appeared.animateTo(1f, spring(dampingRatio = 0.85f, stiffness = 160f))
-    }
 
-    Column(modifier = Modifier.fillMaxSize()) {
-        Box(modifier = Modifier.fillMaxWidth().padding(horizontal = 20.dp).padding(top = 10.dp)) {
-            CircleIconButton(icon = Icons.Filled.Close, onClick = onClose)
+    Column(modifier = Modifier.fillMaxSize(), horizontalAlignment = Alignment.CenterHorizontally) {
+        Box(modifier = Modifier.fillMaxWidth().padding(horizontal = 24.dp).padding(top = 10.dp)) {
+            CircleIconButton(icon = Icons.Filled.Close, onClick = onClose, size = 44.dp, tint = DS.ink)
         }
         Column(
             modifier = Modifier
                 .weight(1f)
-                .fillMaxWidth()
                 .readableWidth()
-                .verticalScroll(rememberScrollState()),
+                .fillMaxWidth()
+                .verticalScroll(rememberScrollState())
+                .padding(horizontal = 24.dp, vertical = 16.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.spacedBy(22.dp),
+            verticalArrangement = Arrangement.spacedBy(14.dp, Alignment.CenterVertically),
         ) {
-            Spacer(Modifier.height(12.dp))
             Box(
-                modifier = Modifier.size(148.dp).graphicsLayer {
-                    val scale = 0.7f + 0.3f * appeared.value
-                    scaleX = scale
-                    scaleY = scale
-                    alpha = appeared.value.coerceIn(0f, 1f)
-                },
+                modifier = Modifier.dsPopIn(delayMillis = 50).size(132.dp).clearAndSetSemantics { },
                 contentAlignment = Alignment.Center,
             ) {
-                Box(Modifier.size(148.dp).clip(CircleShape).background(PathPalette.gold.copy(alpha = 0.16f)))
+                Box(Modifier.size(132.dp).clip(CircleShape).background(PathCardPalette.goldTint))
                 Box(
-                    modifier = Modifier.size(112.dp).clip(CircleShape).background(PathPalette.goldGradient),
+                    modifier = Modifier.size(100.dp).clip(CircleShape).background(PathPalette.gold),
                     contentAlignment = Alignment.Center,
                 ) {
-                    Icon(Icons.Filled.EmojiEvents, contentDescription = null, tint = Color.White, modifier = Modifier.size(54.dp))
+                    Icon(Icons.Filled.EmojiEvents, contentDescription = null, tint = Color.White, modifier = Modifier.size(46.dp))
                 }
             }
             Column(
-                modifier = Modifier.slideUp(appeared.value, 12f),
+                modifier = Modifier.padding(top = 4.dp).dsStagger(0),
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.spacedBy(8.dp),
             ) {
                 Text(
                     text = text("path.quiz.title", level.number),
                     fontFamily = PlusJakartaSans,
-                    fontWeight = FontWeight.ExtraBold,
+                    fontWeight = FontWeight.SemiBold,
                     fontSize = 28.sp,
-                    lineHeight = 33.sp,
+                    lineHeight = 34.sp,
                     color = DS.ink,
                     textAlign = TextAlign.Center,
-                    modifier = Modifier.padding(horizontal = 20.dp),
                 )
                 Text(
                     text = level.collection.title,
                     fontFamily = PlusJakartaSans,
                     fontSize = 15.sp,
-                    lineHeight = 21.sp,
+                    lineHeight = 22.sp,
                     color = DS.inkSecondary,
                     textAlign = TextAlign.Center,
-                    modifier = Modifier.padding(horizontal = 28.dp),
+                    modifier = Modifier.padding(horizontal = 16.dp),
                 )
             }
             Column(
                 modifier = Modifier
-                    .padding(horizontal = 20.dp)
-                    .slideUp(appeared.value, 16f)
+                    .dsStagger(1)
                     .fillMaxWidth()
                     .sophiaCard()
-                    .padding(DS.Space.l),
-                verticalArrangement = Arrangement.spacedBy(14.dp),
+                    .padding(16.dp),
+                verticalArrangement = Arrangement.spacedBy(12.dp),
             ) {
                 RuleRow(Icons.Filled.Shuffle, text("path.quiz.rule.questions", plannedCount, level.courseCount))
                 RuleRow(Icons.Filled.TrackChanges, text("path.quiz.rule.pass", LearningPathRules.passMark(plannedCount)))
@@ -430,38 +413,37 @@ private fun PathQuizIntro(
             if (best != null && best.attempts > 0) {
                 Row(
                     modifier = Modifier
-                        .alpha(appeared.value.coerceIn(0f, 1f))
-                        .clip(CircleShape)
+                        .dsStagger(2)
+                        .clip(RoundedCornerShape(14.dp))
                         .background(if (best.isPassed) DS.successTint else DS.accentTint)
-                        .padding(horizontal = 14.dp, vertical = 8.dp),
+                        .padding(horizontal = 14.dp, vertical = 6.dp),
                     verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.spacedBy(6.dp),
                 ) {
-                    val tint = if (best.isPassed) DS.success else DS.accentSoft
                     Icon(
                         if (best.isPassed) Icons.Filled.Verified else Icons.Filled.BarChart,
                         contentDescription = null,
-                        tint = tint,
+                        tint = if (best.isPassed) DS.success else DS.accent,
                         modifier = Modifier.size(14.dp),
                     )
                     Text(
                         text = text("path.quiz.bestScore", best.bestCorrect, best.bestTotal),
                         fontFamily = PlusJakartaSans,
-                        fontWeight = FontWeight.SemiBold,
-                        fontSize = 12.sp,
-                        color = tint,
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 13.sp,
+                        color = if (best.isPassed) DS.success else DS.ink,
                     )
                 }
             }
-            Spacer(Modifier.height(20.dp))
         }
+        // Both buttons vibrate on the press: no vibration is added here.
         Column(
             modifier = Modifier
                 .readableWidth()
                 .padding(horizontal = 24.dp)
                 .padding(bottom = 24.dp)
-                .slideUp(appeared.value, 12f),
-            verticalArrangement = Arrangement.spacedBy(12.dp),
+                .dsStagger(3),
+            verticalArrangement = Arrangement.spacedBy(10.dp),
         ) {
             SophiaPrimaryButton(text = text("path.quiz.go"), onClick = onStart, enabled = ready)
             SophiaSecondaryButton(text = text("path.quiz.later"), onClick = onClose)
@@ -470,22 +452,21 @@ private fun PathQuizIntro(
 }
 
 @Composable
-private fun RuleRow(icon: androidx.compose.ui.graphics.vector.ImageVector, label: String) {
-    Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+private fun RuleRow(icon: ImageVector, label: String) {
+    Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
         Box(
-            modifier = Modifier.size(32.dp).clip(CircleShape).background(DS.accentTint),
+            modifier = Modifier.size(30.dp).clip(CircleShape).background(DS.accentTint),
             contentAlignment = Alignment.Center,
         ) {
-            Icon(icon, contentDescription = null, tint = DS.accentSoft, modifier = Modifier.size(16.dp))
+            Icon(icon, contentDescription = null, tint = DS.accent, modifier = Modifier.size(15.dp))
         }
         Text(
             text = label,
             fontFamily = PlusJakartaSans,
-            fontWeight = FontWeight.Medium,
             fontSize = 15.sp,
             lineHeight = 21.sp,
             color = DS.ink,
-            modifier = Modifier.weight(1f).padding(top = 5.dp),
+            modifier = Modifier.weight(1f).padding(top = 4.dp),
         )
     }
 }
@@ -497,7 +478,7 @@ private fun Modifier.slideUp(progress: Float, distance: Float): Modifier = graph
 }
 
 @Composable
-private fun CorrectPill(count: Int, bump: Boolean) {
+private fun CorrectPill(count: Int, bump: Boolean, label: String) {
     // Flips on every right answer: the pill swells for a beat, then settles.
     val scale = remember { Animatable(1f) }
     var first by remember { mutableStateOf(true) }
@@ -507,7 +488,7 @@ private fun CorrectPill(count: Int, bump: Boolean) {
             return@LaunchedEffect
         }
         scale.animateTo(1.18f, spring(dampingRatio = 0.5f, stiffness = 900f))
-        scale.animateTo(1f, spring(dampingRatio = 0.5f, stiffness = 600f))
+        scale.animateTo(1f, DSMotion.pop())
     }
     Row(
         modifier = Modifier
@@ -515,9 +496,10 @@ private fun CorrectPill(count: Int, bump: Boolean) {
                 scaleX = scale.value
                 scaleY = scale.value
             }
-            .clip(CircleShape)
+            .clip(RoundedCornerShape(12.dp))
             .background(DS.successTint)
-            .padding(horizontal = 9.dp, vertical = 5.dp),
+            .padding(horizontal = 10.dp, vertical = 4.dp)
+            .clearAndSetSemantics { contentDescription = label },
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(4.dp),
     ) {
@@ -525,317 +507,9 @@ private fun CorrectPill(count: Int, bump: Boolean) {
         Text(
             text = "$count",
             fontFamily = PlusJakartaSans,
-            fontWeight = FontWeight.Bold,
-            fontSize = 12.sp,
+            fontWeight = FontWeight.ExtraBold,
+            fontSize = 13.sp,
             color = DS.success,
-        )
-    }
-}
-
-// MARK: - Question
-
-/**
- * One question with its answer controls and the feedback bar, the same interaction as the
- * course quiz. Scoring is left to [QuizScoring]; the pane only reports whether the answer
- * was fully correct, which is all the level quiz counts.
- */
-@Composable
-private fun PathQuestionPane(
-    entry: PathQuizEntry,
-    language: AppLanguage,
-    isLast: Boolean,
-    onAnswered: (fullyCorrect: Boolean) -> Unit,
-    onContinue: () -> Unit,
-) {
-    val context = LocalContext.current
-    val view = LocalView.current
-    fun text(key: String): String = StringStore.text(context, key, language)
-    val question = entry.question
-
-    var selected by remember { mutableStateOf<Int?>(null) }
-    var sliderValue by remember { mutableDoubleStateOf(question.snapToStep((question.sliderMin + question.sliderMax) / 2.0)) }
-    val chronoSlots = remember { mutableStateListOf<Int?>().apply { addAll(List(question.items.size) { null }) } }
-    val chronoPool = remember { mutableStateListOf<Int>().apply { addAll(question.items.indices) } }
-    var hasAnswered by remember { mutableStateOf(false) }
-    var earned by remember { mutableIntStateOf(0) }
-    val fullyCorrect = hasAnswered && earned == question.maxPoints
-
-    fun submit(answer: QuizAnswer) {
-        if (hasAnswered) return
-        earned = QuizScoring.points(question, answer)
-        hasAnswered = true
-        val correct = earned == question.maxPoints
-        Analytics.log(
-            "quiz_answer",
-            courseId = entry.course.id,
-            props = mapOf(
-                "question_id" to question.id,
-                "context" to "path",
-                "correct" to correct,
-                "points" to earned,
-                "max_points" to question.maxPoints,
-                "option_index" to (answer as? QuizAnswer.SingleChoice)?.index,
-            ),
-        )
-        view.pathHaptic(if (correct) PathHaptic.Confirm else PathHaptic.Reject)
-        onAnswered(correct)
-    }
-
-    Column(modifier = Modifier.fillMaxSize()) {
-        Column(
-            modifier = Modifier
-                .weight(1f)
-                .fillMaxWidth()
-                .verticalScroll(rememberScrollState())
-                .padding(horizontal = 20.dp)
-                .padding(top = 16.dp, bottom = 32.dp),
-            verticalArrangement = Arrangement.spacedBy(20.dp),
-        ) {
-            Column(
-                modifier = Modifier.fillMaxWidth().sophiaCard().padding(DS.Space.l),
-                verticalArrangement = Arrangement.spacedBy(12.dp),
-            ) {
-                Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(6.dp)) {
-                    Icon(
-                        entry.course.subjectEnum.pathIcon,
-                        contentDescription = null,
-                        tint = DS.accentSoft,
-                        modifier = Modifier.size(13.dp),
-                    )
-                    Text(
-                        text = entry.course.title,
-                        fontFamily = PlusJakartaSans,
-                        fontWeight = FontWeight.SemiBold,
-                        fontSize = 12.sp,
-                        lineHeight = 16.sp,
-                        color = DS.accentSoft,
-                        maxLines = 2,
-                    )
-                }
-                Text(
-                    text = question.question,
-                    fontFamily = PlusJakartaSans,
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 20.sp,
-                    lineHeight = 26.sp,
-                    color = DS.ink,
-                )
-            }
-
-            when (question.type) {
-                QuizQuestionType.MCQ -> Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
-                    question.options.forEachIndexed { i, option ->
-                        AnswerOptionRow(
-                            letter = optionLetter(i),
-                            text = option,
-                            state = when {
-                                hasAnswered && i == question.correctIndex -> AnswerState.Correct
-                                hasAnswered && selected == i -> AnswerState.Wrong
-                                hasAnswered -> AnswerState.Dimmed
-                                else -> AnswerState.Idle
-                            },
-                            enabled = !hasAnswered,
-                            onClick = {
-                                selected = i
-                                submit(QuizAnswer.SingleChoice(i))
-                            },
-                        )
-                    }
-                }
-                QuizQuestionType.TRUE_FALSE -> Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
-                    question.options.forEachIndexed { i, option ->
-                        TrueFalseButton(
-                            index = i,
-                            text = option,
-                            answered = hasAnswered,
-                            isCorrect = i == question.correctIndex,
-                            isSelected = selected == i,
-                            modifier = Modifier.weight(1f),
-                            onClick = {
-                                selected = i
-                                submit(QuizAnswer.SingleChoice(i))
-                            },
-                        )
-                    }
-                }
-                QuizQuestionType.CHRONOLOGICAL -> Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
-                    OrderingAnswerControl(
-                        question = question,
-                        language = language,
-                        slots = chronoSlots,
-                        pool = chronoPool,
-                        answered = hasAnswered,
-                    )
-                    if (hasAnswered) {
-                        Text(
-                            text = "${text("quiz.chronological.correctOrder")} : ${correctOrder(question)}",
-                            fontFamily = PlusJakartaSans,
-                            fontWeight = FontWeight.Medium,
-                            fontSize = 12.sp,
-                            lineHeight = 17.sp,
-                            color = DS.inkSecondary,
-                        )
-                    } else if (chronoSlots.none { it == null }) {
-                        SophiaPrimaryButton(
-                            text = text("quiz.chronological.validate"),
-                            onClick = { submit(QuizAnswer.Order(chronoSlots.filterNotNull())) },
-                        )
-                    }
-                }
-                QuizQuestionType.NUMERIC_SLIDER, QuizQuestionType.PERCENTAGE_SLIDER ->
-                    Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
-                        SliderAnswerCard(
-                            question = question,
-                            language = language,
-                            value = sliderValue,
-                            onValueChange = { sliderValue = it },
-                            answered = hasAnswered,
-                        )
-                        if (!hasAnswered) {
-                            SophiaPrimaryButton(
-                                text = text("quiz.slider.validate"),
-                                onClick = { submit(QuizAnswer.Value(sliderValue)) },
-                            )
-                        }
-                    }
-            }
-        }
-
-        if (hasAnswered) {
-            Box(Modifier.fillMaxWidth().height(1.dp).background(DS.hairline))
-            Column(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .background(DS.surface)
-                    .padding(horizontal = 20.dp)
-                    .padding(top = 18.dp, bottom = 16.dp),
-                verticalArrangement = Arrangement.spacedBy(16.dp),
-            ) {
-                val (icon, color) = when {
-                    fullyCorrect -> Icons.Filled.CheckCircle to DS.success
-                    earned > 0 -> Icons.Filled.Contrast to DS.accentSoft
-                    else -> Icons.Filled.Cancel to DS.danger
-                }
-                Row(horizontalArrangement = Arrangement.spacedBy(14.dp)) {
-                    Icon(icon, contentDescription = null, tint = color, modifier = Modifier.size(30.dp))
-                    Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(4.dp)) {
-                        Text(
-                            text = feedbackTitle(question, earned, fullyCorrect, ::text),
-                            fontFamily = PlusJakartaSans,
-                            fontWeight = FontWeight.Bold,
-                            fontSize = 17.sp,
-                            color = DS.ink,
-                        )
-                        if (question.maxPoints > 2) {
-                            Text(
-                                text = "+$earned/${question.maxPoints} ${text("quiz.pointsEarned")}",
-                                fontFamily = PlusJakartaSans,
-                                fontWeight = FontWeight.Medium,
-                                fontSize = 12.sp,
-                                color = DS.inkTertiary,
-                            )
-                        }
-                        if (question.explanation.isNotBlank()) {
-                            Text(
-                                text = question.explanation,
-                                fontFamily = PlusJakartaSans,
-                                fontSize = 15.sp,
-                                lineHeight = 21.sp,
-                                color = DS.inkSecondary,
-                                modifier = Modifier
-                                    .padding(top = 2.dp)
-                                    .heightIn(max = 220.dp)
-                                    .verticalScroll(rememberScrollState()),
-                            )
-                        }
-                    }
-                }
-                SophiaPrimaryButton(
-                    text = if (isLast) text("path.quiz.seeResult") else text("common.continue"),
-                    onClick = onContinue,
-                )
-            }
-        }
-    }
-}
-
-private fun feedbackTitle(
-    question: ShuffledQuestion,
-    earned: Int,
-    fullyCorrect: Boolean,
-    text: (String) -> String,
-): String = when (question.type) {
-    QuizQuestionType.MCQ, QuizQuestionType.TRUE_FALSE ->
-        text(if (fullyCorrect) "quiz.feedback.correct" else "quiz.feedback.wrong")
-    else -> when (earned) {
-        3 -> text("quiz.feedback.correct")
-        2 -> text("quiz.feedback.close")
-        1 -> text("quiz.feedback.far")
-        else -> text("quiz.feedback.wrong")
-    }
-}
-
-/** The items in their right order: `originalIndices[slot]` is where the item belongs. */
-private fun correctOrder(question: ShuffledQuestion): String =
-    question.items.indices
-        .sortedBy { question.originalIndices.getOrElse(it) { it } }
-        .joinToString(" → ") { question.items[it] }
-
-@Composable
-private fun TrueFalseButton(
-    index: Int,
-    text: String,
-    answered: Boolean,
-    isCorrect: Boolean,
-    isSelected: Boolean,
-    onClick: () -> Unit,
-    modifier: Modifier = Modifier,
-) {
-    val highlighted = answered && (isCorrect || isSelected)
-    val background by animateColorAsState(
-        when {
-            answered && isCorrect -> DS.successTint
-            answered && isSelected -> DS.dangerTint
-            else -> DS.surface
-        },
-        tween(220),
-        label = "tfBg",
-    )
-    val border = when {
-        answered && isCorrect -> DS.success
-        answered && isSelected -> DS.danger
-        else -> DS.hairline
-    }
-    val content = when {
-        answered && isCorrect -> DS.success
-        answered && isSelected -> DS.danger
-        else -> DS.ink
-    }
-    Column(
-        modifier = modifier
-            .alpha(if (answered && !highlighted) 0.55f else 1f)
-            .softPress(onClick = onClick, enabled = !answered)
-            .clip(DS.controlShape)
-            .background(background)
-            .border(if (highlighted) 1.5.dp else 1.dp, border, DS.controlShape)
-            .padding(horizontal = 8.dp, vertical = 22.dp),
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.spacedBy(10.dp),
-    ) {
-        Icon(
-            if (index == 0) Icons.Filled.CheckCircle else Icons.Filled.Cancel,
-            contentDescription = null,
-            tint = if (answered && (isCorrect || isSelected)) content else DS.accentSoft,
-            modifier = Modifier.size(28.dp),
-        )
-        Text(
-            text = text,
-            fontFamily = PlusJakartaSans,
-            fontWeight = FontWeight.Bold,
-            fontSize = 17.sp,
-            color = content,
-            textAlign = TextAlign.Center,
-            maxLines = 2,
         )
     }
 }
@@ -857,7 +531,7 @@ private fun PathQuizResult(
     onReview: () -> Unit,
 ) {
     val context = LocalContext.current
-    val view = LocalView.current
+    val haptics = rememberHaptics()
     val scope = rememberCoroutineScope()
     fun text(key: String, vararg args: Any): String = StringStore.text(context, key, language, *args)
     val passMark = LearningPathRules.passMark(total)
@@ -866,6 +540,7 @@ private fun PathQuizResult(
     val ring = remember { Animatable(0f) }
     val badge = remember { Animatable(0.6f) }
     val failShake = remember { Animatable(0f) }
+    // The score counts up with the ring: `DSCountUp` runs (and ticks) when its value changes.
     var displayedCorrect by remember { mutableIntStateOf(0) }
     var showConfetti by remember { mutableStateOf(false) }
 
@@ -878,28 +553,21 @@ private fun PathQuizResult(
         }
         launch {
             delay(300)
-            val steps = maxOf(correct, 1)
-            for (step in 1..steps) {
-                delay((800L / steps).coerceAtLeast(1L))
-                if (step > correct) break
-                displayedCorrect = step
-                view.pathHaptic(PathHaptic.Tick)
-            }
+            displayedCorrect = correct
         }
         delay(1250)
         if (didPass) {
-            view.pathHaptic(PathHaptic.Confirm)
+            haptics.celebrate()
             showConfetti = true
-            badge.animateTo(1.12f, spring(dampingRatio = 0.5f, stiffness = 200f))
+            badge.animateTo(1.12f, DSMotion.pop())
             delay(100)
-            view.pathHaptic(PathHaptic.Heavy)
             badge.animateTo(1f, spring(dampingRatio = 0.7f, stiffness = 250f))
             scope.launch {
                 delay(3400)
                 showConfetti = false
             }
         } else {
-            view.pathHaptic(PathHaptic.Reject)
+            haptics.error()
             failShake.animateTo(1f, tween(450, easing = LinearEasing))
         }
     }
@@ -910,18 +578,19 @@ private fun PathQuizResult(
         didPass -> text("path.quiz.passed.next")
         else -> text("path.quiz.failed.body", passMark, total)
     }
+    val scoreStyle = TextStyle(fontFamily = PlusJakartaSans, fontWeight = FontWeight.ExtraBold, fontSize = 44.sp)
 
     Box(modifier = Modifier.fillMaxSize()) {
-        Column(modifier = Modifier.fillMaxSize()) {
+        Column(modifier = Modifier.fillMaxSize(), horizontalAlignment = Alignment.CenterHorizontally) {
             Column(
                 modifier = Modifier
                     .weight(1f)
-                    .fillMaxWidth()
                     .readableWidth()
+                    .fillMaxWidth()
                     .verticalScroll(rememberScrollState())
                     .padding(vertical = 20.dp),
                 horizontalAlignment = Alignment.CenterHorizontally,
-                verticalArrangement = Arrangement.spacedBy(22.dp, Alignment.CenterVertically),
+                verticalArrangement = Arrangement.spacedBy(12.dp, Alignment.CenterVertically),
             ) {
                 ScoreBadge(
                     didPass = didPass,
@@ -934,33 +603,34 @@ private fun PathQuizResult(
                 Column(
                     modifier = Modifier.slideUp(appeared.value, 14f),
                     horizontalAlignment = Alignment.CenterHorizontally,
-                    verticalArrangement = Arrangement.spacedBy(10.dp),
+                    verticalArrangement = Arrangement.spacedBy(12.dp),
                 ) {
                     Text(
                         text = if (didPass) text("path.quiz.passed.title", level.number) else text("path.quiz.failed.title"),
                         fontFamily = PlusJakartaSans,
-                        fontWeight = FontWeight.ExtraBold,
-                        fontSize = 28.sp,
-                        lineHeight = 33.sp,
+                        fontWeight = FontWeight.SemiBold,
+                        fontSize = 24.sp,
+                        lineHeight = 30.sp,
                         color = DS.ink,
                         textAlign = TextAlign.Center,
-                        modifier = Modifier.padding(horizontal = 24.dp),
+                        modifier = Modifier.padding(horizontal = 24.dp).padding(top = 8.dp),
                     )
-                    Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
-                        Text(
-                            text = "$displayedCorrect",
-                            fontFamily = PlusJakartaSans,
-                            fontWeight = FontWeight.Bold,
-                            fontSize = 48.sp,
-                            color = DS.ink,
+                    // « 14 / 20 »: the first number counts up (and ticks) once the screen is in.
+                    Row(
+                        modifier = Modifier.clearAndSetSemantics { contentDescription = "$correct / $total" },
+                        horizontalArrangement = Arrangement.spacedBy(8.dp),
+                    ) {
+                        DSCountUp(
+                            value = displayedCorrect,
                             modifier = Modifier.alignByBaseline(),
+                            durationMillis = 800,
+                            style = scoreStyle,
+                            color = DS.ink,
                         )
                         Text(
                             text = "/ $total",
-                            fontFamily = PlusJakartaSans,
-                            fontWeight = FontWeight.Medium,
-                            fontSize = 22.sp,
-                            color = DS.inkTertiary,
+                            style = scoreStyle,
+                            color = DS.ink,
                             modifier = Modifier.alignByBaseline(),
                         )
                     }
@@ -968,7 +638,7 @@ private fun PathQuizResult(
                         text = subtitle,
                         fontFamily = PlusJakartaSans,
                         fontSize = 15.sp,
-                        lineHeight = 21.sp,
+                        lineHeight = 22.sp,
                         color = DS.inkSecondary,
                         textAlign = TextAlign.Center,
                         modifier = Modifier.padding(horizontal = 28.dp),
@@ -976,20 +646,25 @@ private fun PathQuizResult(
                     if (didPass && awardedXp > 0) {
                         Row(
                             modifier = Modifier
-                                .padding(top = 4.dp)
-                                .clip(CircleShape)
-                                .background(DS.accentTint)
-                                .padding(horizontal = 16.dp, vertical = 9.dp),
+                                .dsPopIn(delayMillis = 1300)
+                                .clip(RoundedCornerShape(14.dp))
+                                .background(PathCardPalette.goldTint)
+                                .padding(horizontal = 14.dp, vertical = 6.dp),
                             verticalAlignment = Alignment.CenterVertically,
-                            horizontalArrangement = Arrangement.spacedBy(8.dp),
+                            horizontalArrangement = Arrangement.spacedBy(6.dp),
                         ) {
-                            Icon(Icons.Filled.Star, contentDescription = null, tint = DS.accentSoft, modifier = Modifier.size(14.dp))
+                            Icon(
+                                Icons.Filled.Star,
+                                contentDescription = null,
+                                tint = PathCardPalette.goldInk,
+                                modifier = Modifier.size(14.dp),
+                            )
                             Text(
                                 text = text("cards.globalXP", awardedXp),
                                 fontFamily = PlusJakartaSans,
-                                fontWeight = FontWeight.SemiBold,
+                                fontWeight = FontWeight.ExtraBold,
                                 fontSize = 15.sp,
-                                color = DS.accentSoft,
+                                color = PathCardPalette.goldInk,
                             )
                         }
                     }
@@ -1001,7 +676,7 @@ private fun PathQuizResult(
                     .padding(horizontal = 24.dp)
                     .padding(bottom = 24.dp)
                     .slideUp(appeared.value, 12f),
-                verticalArrangement = Arrangement.spacedBy(12.dp),
+                verticalArrangement = Arrangement.spacedBy(10.dp),
             ) {
                 if (didPass) {
                     SophiaPrimaryButton(text = text("common.continue"), onClick = onContinue)
@@ -1035,7 +710,10 @@ private fun PathQuizResult(
     }
 }
 
-/** The ring fills to the score, with a dot at the pass mark so it reads as "this far to go". */
+/**
+ * The ring fills to the score, with a dot at the pass mark so it reads as "this far to go".
+ * A golden trophy pops in its middle once the level is passed.
+ */
 @Composable
 private fun ScoreBadge(
     didPass: Boolean,
@@ -1050,11 +728,12 @@ private fun ScoreBadge(
     val ringColor = if (didPass) PathPalette.gold else DS.accent
     Box(
         modifier = modifier
-            .size(180.dp)
-            .graphicsLayer { translationX = shakeOffset(shake, 9.dp.toPx()) },
+            .size(150.dp)
+            .graphicsLayer { translationX = shakeOffset(shake, 9.dp.toPx()) }
+            .clearAndSetSemantics { },
         contentAlignment = Alignment.Center,
     ) {
-        Canvas(modifier = Modifier.size(168.dp)) {
+        Canvas(modifier = Modifier.size(140.dp)) {
             val stroke = 10.dp.toPx()
             val radius = size.minDimension / 2f
             drawCircle(hairline, radius = radius, style = Stroke(stroke))
@@ -1077,23 +756,16 @@ private fun ScoreBadge(
                 ),
             )
         }
-        Box(
+        Icon(
+            if (didPass) Icons.Filled.EmojiEvents else Icons.Filled.Replay,
+            contentDescription = null,
+            tint = if (didPass) PathPalette.gold else DS.inkSecondary,
             modifier = Modifier
-                .size(132.dp)
+                .size(if (didPass) 64.dp else 52.dp)
                 .graphicsLayer {
                     scaleX = badgeScale
                     scaleY = badgeScale
-                }
-                .clip(CircleShape)
-                .then(if (didPass) Modifier.background(PathPalette.goldGradient) else Modifier.background(DS.surfaceMuted)),
-            contentAlignment = Alignment.Center,
-        ) {
-            Icon(
-                if (didPass) Icons.Filled.EmojiEvents else Icons.Filled.Replay,
-                contentDescription = null,
-                tint = if (didPass) Color.White else DS.inkSecondary,
-                modifier = Modifier.size(58.dp),
-            )
-        }
+                },
+        )
     }
 }
