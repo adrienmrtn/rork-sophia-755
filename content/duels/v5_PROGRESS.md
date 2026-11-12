@@ -49,3 +49,4 @@ Restent à lancer ensuite : vague 1 rien d'autre ; vague 2 pour fr de pt it ro b
   sk sr ar he fi et lt lv ja (au fil des places libres) ; puis images (part 15) et remplacements (part 16).
 - 03:25 : pl et hu parts 1–7 finis ; vague 2 lancée aussi pour fr de
 - el parts 1–7 fini ; vague 2 lancée pour pt
+- es parts 8–14 fini (es complet pour le texte) ; vague 2 lancée pour it
