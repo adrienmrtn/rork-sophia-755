@@ -234,7 +234,13 @@
     "artist": "Anant Shivaji Desai, Ravi Varma Press",
     "license": "Public domain",
     "source": "https://commons.wikimedia.org/wiki/File:Durga_Mahishasura-mardini,_the_slayer_of_the_buffalo_demon.jpg",
-    "fit": "contain"
+    "fit": "contain",
+    "crop": [
+      0,
+      0,
+      1,
+      0.86
+    ]
   },
   "v5a_myth_lamassu": {
     "name": "Lamassu from the palace of Sargon II, Khorsabad",

@@ -85,3 +85,4 @@ Restent à lancer ensuite : vague 1 rien d'autre ; vague 2 pour fr de pt it ro b
 - ar parts 8–14 fini
 - lt parts 8–14 fini
 - ja parts 8–14 fini ; 5 questions retirées (japonais) → 12 retirées ; images vérifiées : 98 (Trevi recadrée OK, Durga à recadrer : 429 Wikimedia)
+- images : 100 (Durga et Trevi recadrées, réintégrées) ; crédits fusionnés dans content/duels/images.json ; upload = 85 images + 15 drapeaux
