@@ -94,6 +94,43 @@ extension AppLocalizableAdditions {
             "fr": "Oui",
             "en": "Yes",
         ],
+        // Les quatre questions qui arrêtent le chargement, dans l'ordre.
+        "onboardingV2.loading.question.q1": [
+            "fr": "Lis-tu un peu chaque jour\u{00A0}?",
+            "en": "Do you read a little every day?",
+        ],
+        "onboardingV2.loading.question.q2": [
+            "fr": "Es-tu du genre à vouloir tout comprendre\u{00A0}?",
+            "en": "Are you the kind of person who wants to understand everything?",
+        ],
+        "onboardingV2.loading.question.q3": [
+            "fr": "Passes-tu trop de temps sur ton téléphone\u{00A0}?",
+            "en": "Do you spend too much time on your phone?",
+        ],
+        "onboardingV2.loading.question.q4": [
+            "fr": "Aimerais-tu mieux retenir ce que tu lis\u{00A0}?",
+            "en": "Would you like to remember more of what you read?",
+        ],
+        "onboardingV2.loading.paused": [
+            "fr": "En pause",
+            "en": "Paused",
+        ],
+
+        // MARK: Création de compte
+        "onboardingV2.login.connect": [
+            "fr": "Me connecter",
+            "en": "Sign in",
+        ],
+
+        // MARK: Suis des profs
+        "onboardingV2.follow.courses": [
+            "fr": "Ses cours",
+            "en": "Their courses",
+        ],
+        "onboardingV2.follow.about": [
+            "fr": "En savoir plus sur %@",
+            "en": "More about %@",
+        ],
 
         // MARK: Profil
         "onboardingV2.profile.coursesTitleMarked": [

@@ -59,7 +59,7 @@ n'est qu'une photo sans dates).
 | Nom | Quand | `props` |
 | --- | --- | --- |
 | `app_open` | passage au premier plan (une fois par session) | `source` : `direct`, `notification`, `widget`, `link` ; `nav` : `classic` ou `newgen`, la variante de navigation tirée au sort (A/B du prompt 2) |
-| `onboarding_step` | un écran d'onboarding s'affiche | `step` (nom analytique de l'écran, identique sur les deux plateformes ; Android émet `paywall` là où iOS distingue `paywall_annual` et `paywall_comparison`), `index` |
+| `onboarding_step` | un écran d'onboarding s'affiche | `step` (nom analytique de l'écran, identique sur les deux plateformes ; Android émet `paywall` là où iOS distingue `paywall_annual` et `paywall_comparison`), `index`. Sur iOS, chaque réponse à une des quatre questions de l'écran de chargement émet aussi cet événement avec `step` = `loading_question` (ce n'est pas un écran : à écarter d'un entonnoir), `question` (`reads_daily`, `curious`, `too_much_phone`, `wants_to_remember`) et `answer` (booléen), sans `index` |
 
 ### Fil (cartes)
 

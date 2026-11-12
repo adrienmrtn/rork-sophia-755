@@ -1,13 +1,19 @@
 import SwiftUI
 
-/// Page 10 — connexion obligatoire (Apple / Google). Réutilise `AuthProvidersView`.
-/// Le coordinateur avance automatiquement dès qu'une session Supabase est établie.
+/// Page 10 — connexion obligatoire (Apple / Google).
+///
+/// La page ne montre qu'un bouton, « Me connecter » ; il ouvre une languette, juste assez
+/// haute pour ses deux boutons « Continuer avec Apple » et « Continuer avec Google »
+/// (`AuthProvidersView`, avec son état de chargement, ses messages d'erreur et son
+/// garde-temps). Le coordinateur avance automatiquement dès qu'une session Supabase est établie.
 struct OnboardingV2Login: View {
     @Environment(LanguageManager.self) private var languageManager
     var onSignedIn: () -> Void
 
     @State private var showTerms = false
     @State private var showPrivacy = false
+    /// La languette des deux fournisseurs de connexion est ouverte.
+    @State private var showProviders = false
 
     var body: some View {
         VStack(spacing: 0) {
@@ -29,8 +35,11 @@ struct OnboardingV2Login: View {
             Spacer(minLength: 16)
 
             VStack(spacing: 14) {
-                AuthProvidersView(onSignedIn: onSignedIn)
-                    .padding(.horizontal, OV2End.side)
+                OnboardingV2Button(
+                    title: languageManager.text("onboardingV2.login.connect"),
+                    bottomPadding: 0,
+                    action: { showProviders = true }
+                )
                 #if DEBUG && targetEnvironment(simulator)
                 Button("Skip login · simulator only") {
                     onSignedIn()
@@ -51,11 +60,57 @@ struct OnboardingV2Login: View {
         .ov2Background()
         .sheet(isPresented: $showTerms) { TermsView() }
         .sheet(isPresented: $showPrivacy) { PrivacyPolicyView() }
+        .sheet(isPresented: $showProviders) {
+            OnboardingV2SignInSheet(onSignedIn: {
+                showProviders = false
+                onSignedIn()
+            })
+        }
+    }
+}
+
+/// Languette de connexion : « Continuer avec Apple » et « Continuer avec Google ».
+///
+/// Elle épouse son contenu : sa hauteur est celle, mesurée, des deux boutons et de leurs
+/// marges (plus le message d'erreur ou l'indicateur d'attente quand ils apparaissent), au
+/// lieu d'une demi-page vide. La zone sûre du bas s'ajoute d'elle-même sous cette hauteur.
+/// Si le contenu dépassait l'écran (très grande taille de texte, message long), il défile.
+struct OnboardingV2SignInSheet: View {
+    var onSignedIn: () -> Void
+
+    /// Hauteur mesurée du contenu ; 0 tant que la première mesure n'est pas arrivée.
+    @State private var contentHeight: CGFloat = 0
+
+    /// Hauteur de départ, avant la première mesure : la poignée, deux boutons de 54 pt, leur
+    /// écart et les marges.
+    private static let estimatedHeight: CGFloat = 176
+
+    var body: some View {
+        ScrollView(.vertical) {
+            AuthProvidersView(onSignedIn: onSignedIn)
+                .padding(.horizontal, OV2End.side)
+                // Sous la poignée de la languette.
+                .padding(.top, 34)
+                .padding(.bottom, 16)
+                .frame(maxWidth: OV2.readableWidth)
+                .frame(maxWidth: .infinity)
+                .onGeometryChange(for: CGFloat.self) { proxy in
+                    proxy.size.height
+                } action: { height in
+                    contentHeight = height
+                }
+        }
+        .scrollIndicators(.hidden)
+        .scrollBounceBehavior(.basedOnSize)
+        .background(OV2.bg.ignoresSafeArea())
+        .presentationDetents([.height(contentHeight > 0 ? contentHeight : Self.estimatedHeight)])
+        .presentationDragIndicator(.visible)
+        .preferredColorScheme(.light)
     }
 }
 
 /// Illustration ronde des écrans de connexion : un lecteur parmi ses livres, pris dans la
-/// série des avatars de l'app. Elle se pose avec un rebond, et rétrécit d'elle-même quand
+/// série des avatars de l'app. Elle se pose en douceur, et rétrécit d'elle-même quand
 /// l'écran est court (petit iPhone, grande taille de texte).
 struct OV2EndAccountIllustration: View {
     var maxSize: CGFloat = 190
@@ -70,11 +125,11 @@ struct OV2EndAccountIllustration: View {
             .aspectRatio(1, contentMode: .fit)
             .frame(maxWidth: maxSize, maxHeight: maxSize)
             .clipShape(Circle())
-            .scaleEffect(shown || reduceMotion ? 1 : 0.7)
+            .scaleEffect(shown || reduceMotion ? 1 : 0.9)
             .opacity(shown ? 1 : 0)
             .onAppear {
                 guard !shown else { return }
-                withAnimation(DS.Motion.pop.delay(0.15)) { shown = true }
+                withAnimation(DSCalmMotion.settle.delay(0.15)) { shown = true }
             }
             .accessibilityHidden(true)
     }

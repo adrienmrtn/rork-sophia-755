@@ -297,7 +297,7 @@ struct OV2CoreCheckSquare: View {
                 .padding(size * 0.25)
         }
         .frame(width: size, height: size)
-        .animation(DS.Motion.snappy, value: isOn)
+        .animation(DSCalmMotion.state, value: isOn)
         .accessibilityHidden(true)
     }
 }
