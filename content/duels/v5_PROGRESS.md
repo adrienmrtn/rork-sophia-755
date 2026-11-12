@@ -60,3 +60,4 @@ Restent à lancer ensuite : vague 1 rien d'autre ; vague 2 pour fr de pt it ro b
 - de, tr parts 8–14 finis ; vague 2 lancée pour pl hu (el en attente)
 - sk parts 1–7 fini ; vague 2 lancée pour el
 - ar parts 1–7 fini ; vague 2 lancée pour sr
+- fi parts 1–7 fini ; vague 2 lancée pour sk
