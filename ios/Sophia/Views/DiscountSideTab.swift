@@ -79,7 +79,7 @@ struct DiscountSideTab: View {
                 bottomLeadingRadius: corner,
                 style: .continuous
             )
-            .fill(DS.accent)
+            .fill(DSLegacy.accent)
         )
         .overlay(
             UnevenRoundedRectangle(
@@ -98,7 +98,7 @@ struct DiscountSideTab: View {
             }
             .padding(.leading, 6)
         }
-        .shadow(color: DS.accent.opacity(0.3), radius: 12, x: -2, y: 6)
+        .shadow(color: DSLegacy.accent.opacity(0.3), radius: 12, x: -2, y: 6)
         .scaleEffect(pressed ? 0.92 : 1)
     }
 }

@@ -53,7 +53,7 @@ struct OnboardingV2PaywallAnnual: View {
             VStack(spacing: 20) {
                 Image(systemName: "graduationcap.fill")
                     .font(.system(size: 46))
-                    .foregroundStyle(OV2.accent)
+                    .foregroundStyle(OV2Legacy.accent)
 
                 headline
                     .padding(.horizontal, 28)
@@ -64,8 +64,8 @@ struct OnboardingV2PaywallAnnual: View {
                     OnboardingHaptics.selection()
                     onClose()
                 }
-                .font(DS.sans(.subheadline, .semibold))
-                .foregroundStyle(OV2.accentSoft)
+                .font(DSLegacy.sans(.subheadline, .semibold))
+                .foregroundStyle(OV2Legacy.accentSoft)
             }
             .ov2Reveal(delay: 0.1)
 
@@ -75,11 +75,11 @@ struct OnboardingV2PaywallAnnual: View {
             // puis la ligne légale, sans marge inutile entre les trois.
             VStack(spacing: 0) {
                 Text(languageManager.text("onboardingV2.pw.twoTaps"))
-                    .font(DS.sans(.footnote, .medium))
-                    .foregroundStyle(OV2.inkSecondary)
+                    .font(DSLegacy.sans(.footnote, .medium))
+                    .foregroundStyle(OV2Legacy.inkSecondary)
                     .padding(.bottom, 10)
 
-                OnboardingV2Button(
+                OnboardingV2LegacyButton(
                     title: purchasing
                         ? languageManager.text("common.processing")
                         : languageManager.trialText("onboardingV2.pw.startTrial", days: store.annualTrialDays),
@@ -92,8 +92,8 @@ struct OnboardingV2PaywallAnnual: View {
                 // button: "(facturé 39,99 € par an)".
                 if !prices.yearlyBilledNote.isEmpty {
                     Text("(\(prices.yearlyBilledNote))")
-                        .font(DS.sans(.footnote, .medium))
-                        .foregroundStyle(OV2.inkSecondary)
+                        .font(DSLegacy.sans(.footnote, .medium))
+                        .foregroundStyle(OV2Legacy.inkSecondary)
                         .multilineTextAlignment(.center)
                         .padding(.bottom, 8)
                 }
@@ -101,7 +101,7 @@ struct OnboardingV2PaywallAnnual: View {
                 legalRow.padding(.bottom, 10)
             }
         }
-        .ov2Background()
+        .ov2LegacyBackground()
         .onAppear {
             store.trackPaywallImpression(paywallId: "onboarding_annual")
             if photos.isEmpty { photos = Array(OnboardingStudentPhotos.load().prefix(3)) }
@@ -118,13 +118,13 @@ struct OnboardingV2PaywallAnnual: View {
             HStack(spacing: 4) {
                 Image(systemName: "star.fill")
                     .font(.system(size: 11))
-                    .foregroundStyle(OV2.warm)
+                    .foregroundStyle(OV2Legacy.warm)
                 Text((4.8).formatted(.number.precision(.fractionLength(1)).locale(languageManager.locale)))
-                    .font(DS.sans(.footnote, .bold))
-                    .foregroundStyle(OV2.ink)
+                    .font(DSLegacy.sans(.footnote, .bold))
+                    .foregroundStyle(OV2Legacy.ink)
                 Text("· " + languageManager.text("onboardingV2.loading.social.count"))
-                    .font(DS.sans(.footnote, .medium))
-                    .foregroundStyle(OV2.inkSecondary)
+                    .font(DSLegacy.sans(.footnote, .medium))
+                    .foregroundStyle(OV2Legacy.inkSecondary)
                     .lineLimit(1)
             }
         }
@@ -140,8 +140,8 @@ struct OnboardingV2PaywallAnnual: View {
         let green = languageManager.trialText("onboardingV2.pw.tryFree", days: store.annualTrialDays)
         let rest = String(format: languageManager.text("onboardingV2.pw.thenPrice"), prices.yearlyPerMonth)
         return (
-            Text(green + " ").font(DS.title(.title2, .heavy)).foregroundColor(OV2.success)
-                + Text(rest).font(DS.title(.title2, .heavy)).foregroundColor(OV2.ink)
+            Text(green + " ").font(DSLegacy.title(.title2, .heavy)).foregroundColor(OV2Legacy.success)
+                + Text(rest).font(DSLegacy.title(.title2, .heavy)).foregroundColor(OV2Legacy.ink)
         )
         .multilineTextAlignment(.center)
     }
@@ -153,7 +153,7 @@ struct OnboardingV2PaywallAnnual: View {
         } label: {
             Image(systemName: "xmark")
                 .font(.system(size: 16, weight: .semibold))
-                .foregroundStyle(OV2.inkTertiary)
+                .foregroundStyle(OV2Legacy.inkTertiary)
                 .frame(width: 40, height: 40)
         }
     }
@@ -238,8 +238,8 @@ struct OnboardingV2PaywallComparison: View {
             ScrollView(showsIndicators: false) {
                 VStack(alignment: .leading, spacing: 20) {
                     Text(languageManager.text("onboardingV2.pw.compare.title"))
-                        .font(DS.title(.title, .heavy))
-                        .foregroundStyle(OV2.ink)
+                        .font(DSLegacy.title(.title, .heavy))
+                        .foregroundStyle(OV2Legacy.ink)
                         .padding(.top, 4)
 
                     comparisonTable
@@ -253,7 +253,7 @@ struct OnboardingV2PaywallComparison: View {
                 planCard(.yearly)
                 planCard(.short)
 
-                OnboardingV2Button(
+                OnboardingV2LegacyButton(
                     title: purchasing
                         ? languageManager.text("common.processing")
                         : (selectedHasTrial
@@ -270,7 +270,7 @@ struct OnboardingV2PaywallComparison: View {
             .padding(.horizontal, 24)
             .padding(.top, 6)
         }
-        .ov2Background()
+        .ov2LegacyBackground()
         .onAppear {
             store.trackPaywallImpression(paywallId: "onboarding_comparison")
         }
@@ -287,7 +287,7 @@ struct OnboardingV2PaywallComparison: View {
             HStack(spacing: 0) {
                 Spacer(minLength: 0)
                 Text(languageManager.text("onboardingV2.pw.free"))
-                    .font(DS.sans(.caption, .semibold)).foregroundStyle(OV2.inkTertiary)
+                    .font(DSLegacy.sans(.caption, .semibold)).foregroundStyle(OV2Legacy.inkTertiary)
                     .lineLimit(2)
                     .minimumScaleFactor(0.75)
                     .multilineTextAlignment(.center)
@@ -295,14 +295,14 @@ struct OnboardingV2PaywallComparison: View {
                 VStack(spacing: 4) {
                     Image(systemName: "crown.fill")
                         .font(.system(size: 15, weight: .bold))
-                        .foregroundStyle(OV2.warm)
+                        .foregroundStyle(OV2Legacy.warm)
                     Text(languageManager.text("onboardingV2.pw.pro"))
-                        .font(DS.sans(.caption, .heavy)).foregroundStyle(.white)
+                        .font(DSLegacy.sans(.caption, .heavy)).foregroundStyle(.white)
                         .lineLimit(1)
                         .minimumScaleFactor(0.8)
                         .padding(.horizontal, 10)
                         .frame(minWidth: 52, minHeight: 24)
-                        .background(OV2.accent, in: Capsule())
+                        .background(OV2Legacy.accent, in: Capsule())
                 }
                 .frame(width: comparisonColumnWidth)
             }
@@ -310,29 +310,29 @@ struct OnboardingV2PaywallComparison: View {
 
             ForEach(Array(ov2PaywallFeatures.enumerated()), id: \.element.key) { index, feature in
                 if index > 0 {
-                    Divider().overlay(OV2.hairline)
+                    Divider().overlay(OV2Legacy.hairline)
                 }
                 HStack(spacing: 0) {
                     Text(languageManager.text(feature.key))
-                        .font(DS.sans(.subheadline, .semibold))
-                        .foregroundStyle(OV2.ink)
+                        .font(DSLegacy.sans(.subheadline, .semibold))
+                        .foregroundStyle(OV2Legacy.ink)
                         .fixedSize(horizontal: false, vertical: true)
                         .frame(maxWidth: .infinity, alignment: .leading)
                     Group {
                         if feature.free {
                             Image(systemName: "checkmark")
                                 .font(.system(size: 13, weight: .bold))
-                                .foregroundStyle(OV2.inkTertiary)
+                                .foregroundStyle(OV2Legacy.inkTertiary)
                         } else {
                             Image(systemName: "xmark")
                                 .font(.system(size: 12, weight: .bold))
-                                .foregroundStyle(OV2.inkTertiary.opacity(0.6))
+                                .foregroundStyle(OV2Legacy.inkTertiary.opacity(0.6))
                         }
                     }
                     .frame(width: comparisonColumnWidth)
                     Image(systemName: "checkmark.circle.fill")
                         .font(.system(size: 22))
-                        .foregroundStyle(.white, OV2.accent)
+                        .foregroundStyle(.white, OV2Legacy.accent)
                         .frame(width: comparisonColumnWidth)
                 }
                 .frame(minHeight: Self.rowHeight)
@@ -342,19 +342,19 @@ struct OnboardingV2PaywallComparison: View {
         .background(alignment: .trailing) {
             // La bande PRO, du haut en bas de la carte.
             LinearGradient(
-                colors: [OV2.accent.opacity(0.14), OV2.accentSoft.opacity(0.05)],
+                colors: [OV2Legacy.accent.opacity(0.14), OV2Legacy.accentSoft.opacity(0.05)],
                 startPoint: .top, endPoint: .bottom
             )
             .frame(width: comparisonColumnWidth)
             .overlay(alignment: .leading) {
-                Rectangle().fill(OV2.accent.opacity(0.18)).frame(width: 1)
+                Rectangle().fill(OV2Legacy.accent.opacity(0.18)).frame(width: 1)
             }
         }
-        .background(OV2.surface, in: RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
-        .clipShape(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
+        .background(OV2Legacy.surface, in: RoundedRectangle(cornerRadius: DSLegacy.Radius.card, style: .continuous))
+        .clipShape(RoundedRectangle(cornerRadius: DSLegacy.Radius.card, style: .continuous))
         .overlay(
-            RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
-                .strokeBorder(OV2.hairline, lineWidth: 1)
+            RoundedRectangle(cornerRadius: DSLegacy.Radius.card, style: .continuous)
+                .strokeBorder(OV2Legacy.hairline, lineWidth: 1)
         )
         .shadow(color: .black.opacity(0.05), radius: 14, y: 6)
     }
@@ -371,8 +371,8 @@ struct OnboardingV2PaywallComparison: View {
                     Text(isYearly
                          ? languageManager.text("onboardingV2.pw.yearly")
                          : languageManager.text(shortIsWeekly ? "onboardingV2.pw.weekly" : "onboardingV2.pw.monthly"))
-                        .font(DS.sans(.body, .bold))
-                        .foregroundStyle(OV2.ink)
+                        .font(DSLegacy.sans(.body, .bold))
+                        .foregroundStyle(OV2Legacy.ink)
                     // Le prix affiché en gros est dans l'unité du plan court des deux côtés
                     // (par mois, ou par semaine face à un plan hebdo), pour comparer les deux
                     // plans dans la même unité. Le montant réellement prélevé reste sous le
@@ -380,8 +380,8 @@ struct OnboardingV2PaywallComparison: View {
                     Text(isYearly
                          ? prices.yearlyBilledNote
                          : languageManager.text(shortIsWeekly ? "onboardingV2.pw.weeklyBilling" : "onboardingV2.pw.monthlyBilling"))
-                        .font(DS.sans(.caption, .medium))
-                        .foregroundStyle(OV2.inkSecondary)
+                        .font(DSLegacy.sans(.caption, .medium))
+                        .foregroundStyle(OV2Legacy.inkSecondary)
                         .lineLimit(2)
                         .minimumScaleFactor(0.85)
                         .fixedSize(horizontal: false, vertical: true)
@@ -390,14 +390,14 @@ struct OnboardingV2PaywallComparison: View {
                 VStack(alignment: .trailing, spacing: 3) {
                     // Les deux plans dans la même unité : « 3,33 € / mois » face à « 9,99 € / mois ».
                     Text(isYearly ? prices.yearlyPerShortPeriod : shortPlanPriceWithPeriod)
-                        .font(DS.sans(.body, .bold))
-                        .foregroundStyle(OV2.ink)
+                        .font(DSLegacy.sans(.body, .bold))
+                        .foregroundStyle(OV2Legacy.ink)
                         .lineLimit(1)
                         .minimumScaleFactor(0.8)
                     if isYearly ? yearlyHasTrial : shortHasTrial {
                         Text(languageManager.trialText("onboardingV2.pw.trialBadge", days: trialDays(plan)))
-                            .font(DS.sans(.caption2, .bold))
-                            .foregroundStyle(OV2.success)
+                            .font(DSLegacy.sans(.caption2, .bold))
+                            .foregroundStyle(OV2Legacy.success)
                             .lineLimit(2)
                             .minimumScaleFactor(0.8)
                             .multilineTextAlignment(.trailing)
@@ -407,21 +407,21 @@ struct OnboardingV2PaywallComparison: View {
             }
             .padding(16)
             .background(
-                RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous)
-                    .fill(isSelected ? OV2.accentSoft.opacity(0.08) : OV2.surface)
+                RoundedRectangle(cornerRadius: DSLegacy.Radius.control, style: .continuous)
+                    .fill(isSelected ? OV2Legacy.accentSoft.opacity(0.08) : OV2Legacy.surface)
             )
             .overlay(
-                RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous)
-                    .strokeBorder(isSelected ? OV2.accent : OV2.hairline, lineWidth: isSelected ? 2 : 1)
+                RoundedRectangle(cornerRadius: DSLegacy.Radius.control, style: .continuous)
+                    .strokeBorder(isSelected ? OV2Legacy.accent : OV2Legacy.hairline, lineWidth: isSelected ? 2 : 1)
             )
             .overlay(alignment: .topTrailing) {
                 if isYearly, let badge = prices.discountBadge {
                     // "-58%" is a badge; "Économise -58 %" would read as a double negative.
                     Text(String(format: languageManager.text("onboardingV2.pw.save"), badge.trimmingCharacters(in: CharacterSet(charactersIn: "-"))))
-                        .font(DS.sans(.caption2, .bold))
+                        .font(DSLegacy.sans(.caption2, .bold))
                         .foregroundStyle(.white)
                         .padding(.horizontal, 8).padding(.vertical, 4)
-                        .background(OV2.accent, in: Capsule())
+                        .background(OV2Legacy.accent, in: Capsule())
                         .offset(x: -12, y: -10)
                 }
             }
@@ -441,7 +441,7 @@ struct OnboardingV2PaywallComparison: View {
         } label: {
             Image(systemName: "xmark")
                 .font(.system(size: 16, weight: .semibold))
-                .foregroundStyle(OV2.inkTertiary)
+                .foregroundStyle(OV2Legacy.inkTertiary)
                 .frame(width: 40, height: 40)
         }
     }
@@ -494,13 +494,13 @@ struct OnboardingV2LegalRow: View {
                 Button(languageManager.text("paywall.restore"), action: onRestore)
                 HStack(spacing: 6) {
                     Button(languageManager.text("settings.terms.title")) { showTerms = true }
-                    Text("·").foregroundStyle(OV2.inkTertiary)
+                    Text("·").foregroundStyle(OV2Legacy.inkTertiary)
                     Button(languageManager.text("settings.privacy.title")) { showPrivacy = true }
                 }
             }
         }
-        .font(DS.sans(.caption2, .medium))
-        .foregroundStyle(OV2.inkTertiary)
+        .font(DSLegacy.sans(.caption2, .medium))
+        .foregroundStyle(OV2Legacy.inkTertiary)
         .multilineTextAlignment(.center)
         .minimumScaleFactor(0.85)
         .frame(maxWidth: .infinity)
@@ -511,9 +511,9 @@ struct OnboardingV2LegalRow: View {
     @ViewBuilder
     private var legalButtons: some View {
         Button(languageManager.text("paywall.restore"), action: onRestore)
-        Text("·").foregroundStyle(OV2.inkTertiary)
+        Text("·").foregroundStyle(OV2Legacy.inkTertiary)
         Button(languageManager.text("settings.terms.title")) { showTerms = true }
-        Text("·").foregroundStyle(OV2.inkTertiary)
+        Text("·").foregroundStyle(OV2Legacy.inkTertiary)
         Button(languageManager.text("settings.privacy.title")) { showPrivacy = true }
     }
 }

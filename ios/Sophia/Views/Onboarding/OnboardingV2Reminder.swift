@@ -25,16 +25,16 @@ struct OnboardingV2Reminder: View {
 
             Image(systemName: "bell.fill")
                 .font(.system(size: 96))
-                .foregroundStyle(OV2.warm)
+                .foregroundStyle(OV2Legacy.warm)
                 .rotationEffect(.degrees(bellWobble ? 12 : -12), anchor: .top)
                 .scaleEffect(bellIn ? 1 : 0.5)
                 .opacity(bellIn ? 1 : 0)
 
             Spacer()
 
-            OnboardingV2Button(title: languageManager.text("onboardingV2.reminder.cta"), action: onNext)
+            OnboardingV2LegacyButton(title: languageManager.text("onboardingV2.reminder.cta"), action: onNext)
         }
-        .ov2Background()
+        .ov2LegacyBackground()
         .onAppear {
             withAnimation(.spring(response: 0.6, dampingFraction: 0.6)) { bellIn = true }
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
@@ -55,8 +55,8 @@ struct OnboardingV2Reminder: View {
         words.indices.reduce(Text("")) { partial, i in
             let word = words[i] + (i < words.count - 1 ? " " : "")
             let styled = Text(word)
-                .font(DS.title(.title, i < boldCount ? .heavy : .semibold))
-                .foregroundColor(i < boldCount ? OV2.ink : OV2.inkTertiary.opacity(0.5))
+                .font(DSLegacy.title(.title, i < boldCount ? .heavy : .semibold))
+                .foregroundColor(i < boldCount ? OV2Legacy.ink : OV2Legacy.inkTertiary.opacity(0.5))
             return partial + styled
         }
         .multilineTextAlignment(.center)
