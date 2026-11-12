@@ -132,7 +132,8 @@ struct DuelFlowView: View {
             abandoned: true,
             tiebreak: false,
             answers: game.answers,
-            pick: game.myPick
+            pick: game.myPick,
+            review: game.review
         ))
     }
 

@@ -269,3 +269,36 @@ toujours vrai, sur iOS comme sur Android).
 - **Nouvelles questions** : après `build_duels_seed.py`, traduire les nouvelles (un lot `packs` ne
   contenant qu'elles), relancer `build_duels_i18n_sql.py`. Une question sans traduction reste jouable,
   en anglais.
+
+## Fin de partie : décompte, victoire, relecture (12/11/2026)
+
+iOS et Android, duel classé comme duel entre amis.
+
+- **Ouverture de l'écran de résultat.** Les deux joueurs face à face ; leurs bonnes réponses
+  défilent ensemble de zéro à leur total (le plus petit s'arrête le premier), vite puis de plus
+  en plus lentement (de 55 ms à 330 ms entre deux points), un cran de vibration par point. Puis
+  l'issue se dévoile : pour une victoire, le titre qui se pose (ressort amorti), la couronne, le
+  vainqueur un peu agrandi et les confettis ; pour une défaite ou une égalité, le titre seul,
+  sans confettis. La carte des trophées (compteur, jauge, montée de ligue) et les boutons
+  suivent comme avant, une fois l'issue dévoilée. Avec les animations réduites (« Réduire les
+  animations » sur iOS, échelle d'animation à zéro sur Android), tout est en place d'emblée,
+  sans confettis.
+- **« Revoir les questions ».** Une ligne sous la carte des trophées ouvre la relecture : pour
+  chaque question jouée, son rang (ou « Mort subite »), son texte et sa vignette, la bonne
+  réponse, puis une ligne par joueur (avatar, ce qu'il a répondu, coche s'il a marqué, croix
+  sinon, tiret et « Pas de réponse » s'il n'a pas répondu). Au curseur, la coche va au plus
+  proche, comme le point.
+- **Données : rien de nouveau côté serveur.** L'app a déjà tout à la fin d'une partie. Duel
+  classé : les réponses de l'adversaire arrivent avec la partie (`bot` de chaque manche,
+  `tiebreak_bot`). Duel entre amis : `duel_friend_state` rend `opponent_answers`,
+  `my_points` et `opponent_points` pour toutes les questions closes. `DuelGameModel` range une
+  entrée par question close (`DuelReviewEntry`) et la passe à l'écran dans `DuelSummary.review`.
+  Une question close pendant une coupure réseau (duel entre amis) y figure sans réponse de ma
+  part, avec celle de l'ami. Aucune migration, aucun fichier SQL à exécuter. La relecture
+  n'existe que sur l'écran de résultat : une partie de l'historique ne peut pas être relue
+  (il faudrait une fonction serveur qui rende `duel_matches` question par question).
+- **Code.** iOS : `Views/Duels/DuelResultView.swift` (`playOpening`), `DuelReviewView.swift`,
+  `DuelGameModel.swift` (`DuelReviewEntry`, `review`). Android : `ui/duels/DuelResultScreen.kt`,
+  `DuelReviewScreen.kt` (`DuelReviewText`), `DuelGameModel.kt` (`DuelReviewEntry`,
+  `DuelRules.scoreCountDelayMs`) ; tests dans `DuelGameModelTest`, `DuelLiveGameTest` et
+  `DuelRulesTest`. Textes : `duel.review.open` et `duel.review.noAnswer`, dans les 30 langues.

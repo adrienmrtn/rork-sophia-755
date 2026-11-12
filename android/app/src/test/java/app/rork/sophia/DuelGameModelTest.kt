@@ -165,6 +165,16 @@ class DuelGameModelTest {
         assertFalse(summary.forfeit)
         assertEquals(List(20) { it % 2 == 0 }, model.playerMarks)
         assertEquals(List(20) { it % 4 == 0 }, model.opponentMarks)
+
+        // La relecture : une entrée par question jouée, avec les réponses des deux joueurs.
+        val review = summary.review
+        assertEquals(List(20) { it }, review.map { it.index })
+        assertEquals((0 until 20).map { model.questionAt(it).id }, review.map { it.question.id })
+        assertEquals(summary.answers, review.map { it.mine })
+        assertEquals(List(20) { if (it % 4 == 0) 0 else 1 }, review.map { it.theirs?.choice })
+        assertEquals(List(20) { it % 2 == 0 }, review.map { it.playerPoint })
+        assertEquals(List(20) { it % 4 == 0 }, review.map { it.opponentPoint })
+        assertTrue(review.all { it.iAnswered && it.theyAnswered && !it.isTiebreak })
     }
 
     @Test
