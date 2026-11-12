@@ -39,3 +39,11 @@ La v4 (400 questions) est terminée : supabase/duels_v4_a_coller/1..3 (voir cont
   quelques agents multi-langues à la fin.
 - Retirées (intraduisibles / donnent la réponse) : dq_en_2_284, dq_en_4_309, dq_en_1_276, dq_en_2_277 (voir _excluded.json)
 (Une langue est finie pour une vague quand out/<lang>/part<N>.json existe et passe `check` pour toutes ses parts.)
+
+## 12/11 03:20 UTC : reprise après la limite d'usage
+Les 20 agents interrompus ont été relancés (ils reprennent où ils étaient) :
+- vague 1 (parts 1–7) : ar el et fi he hu ja lt lv pl sk sr
+- vague 2 (parts 8–14) : es pt-PT nb cs nl tr
+- images a et b
+Restent à lancer ensuite : vague 1 rien d'autre ; vague 2 pour fr de pt it ro bg da sv ru hr sl hu el pl
+  sk sr ar he fi et lt lv ja (au fil des places libres) ; puis images (part 15) et remplacements (part 16).
