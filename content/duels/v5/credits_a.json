@@ -89,7 +89,14 @@
     "artist": "Paul Gauguin",
     "license": "Public domain",
     "source": "https://commons.wikimedia.org/wiki/File:Gauguin_-_Where_Do_We_Come_From%3F_What_Are_We%3F_Where_Are_We_Going%3F_(1897-98).jpg",
-    "fit": "contain"
+    "fit": "cover",
+    "focus": "center",
+    "crop": [
+      0.35,
+      0,
+      0.75,
+      1
+    ]
   },
   "v5a_ingres_odalisque": {
     "name": "La Grande Odalisque, Jean-Auguste-Dominique Ingres, 1814",
@@ -165,7 +172,13 @@
     "license": "CC0",
     "source": "https://commons.wikimedia.org/wiki/File:Le_Penseur_Mus%C3%A9e_Rodin_Paris_S.1295.jpg",
     "fit": "cover",
-    "focus": "center"
+    "focus": "center",
+    "crop": [
+      0.1,
+      0,
+      0.9,
+      0.68
+    ]
   },
   "v5a_myth_ganesha": {
     "name": "Ganesha, Kalighat painting, Calcutta, 19th century",
@@ -400,7 +413,14 @@
     "artist": "Gustave Courbet",
     "license": "Public domain",
     "source": "https://commons.wikimedia.org/wiki/File:Gustave_Courbet_-_Le_D%C3%A9sesp%C3%A9r%C3%A9_(1843).jpg",
-    "fit": "contain"
+    "fit": "cover",
+    "focus": "center",
+    "crop": [
+      0.1,
+      0,
+      0.9,
+      0.86
+    ]
   },
   "v5a_myth_bastet": {
     "name": "Statuette of Bastet, Egypt, Metropolitan Museum of Art",
@@ -410,5 +430,13 @@
     "source": "https://commons.wikimedia.org/wiki/File:Bastet_MET_DP310891.jpg",
     "fit": "cover",
     "focus": "center"
+  },
+  "v5a_myth_phaeton": {
+    "name": "The Fall of Phaeton, Peter Paul Rubens, c. 1604-1608",
+    "file": "Sir Peter Paul Rubens, The Fall of Phaeton, c. 1604-1605, probably reworked c. 1606-1608, NGA 71349.jpg",
+    "artist": "Peter Paul Rubens",
+    "license": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Sir_Peter_Paul_Rubens,_The_Fall_of_Phaeton,_c._1604-1605,_probably_reworked_c._1606-1608,_NGA_71349.jpg",
+    "fit": "contain"
   }
 }
