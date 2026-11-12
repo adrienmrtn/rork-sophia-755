@@ -1,0 +1,87 @@
+{
+  "_comment": "Illustrations de la page « Voici ton profil » de l'onboarding (une par objectif), même direction que les avatars (manifest-avatars-duels.json). Deux essais par objectif (a, b) ; celui retenu (cultivate b, curiosity a, exams a, impress b, reduce_screen b) est copié, en 480 px, en onboarding_profile_<objectif> dans ios/Sophia/Assets.xcassets et android/app/src/main/res/drawable-nodpi.",
+  "defaults": {
+    "style": "digital_illustration/2d_art_poster",
+    "size": "square_hd",
+    "max_side": 600,
+    "colors": [
+      [
+        26,
+        58,
+        107
+      ],
+      [
+        242,
+        177,
+        52
+      ],
+      [
+        224,
+        90,
+        58
+      ],
+      [
+        251,
+        247,
+        239
+      ],
+      [
+        92,
+        58,
+        38
+      ],
+      [
+        160,
+        110,
+        70
+      ],
+      [
+        222,
+        184,
+        146
+      ]
+    ]
+  },
+  "items": [
+    {
+      "name": "onboarding_profile_cultivate_a",
+      "prompt": "A stack of three thick books with a small sprouting plant growing out of the top book and a few small four-point stars around it. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red, cream, warm brown and tan, bold simple forms, subtle paper grain, plain cream paper background, single centered object, lots of empty space around it, no text, no letters, no numbers, no outlines."
+    },
+    {
+      "name": "onboarding_profile_cultivate_b",
+      "prompt": "A stack of three thick books with a small sprouting plant growing out of the top book and a few small four-point stars around it. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red, cream, warm brown and tan, bold simple forms, subtle paper grain, plain cream paper background, single centered object, lots of empty space around it, no text, no letters, no numbers, no outlines."
+    },
+    {
+      "name": "onboarding_profile_reduce_screen_a",
+      "prompt": "A smartphone lying face down with a small crescent moon and stars resting above it, and an open book leaning against the phone. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red, cream, warm brown and tan, bold simple forms, subtle paper grain, plain cream paper background, single centered object, lots of empty space around it, no text, no letters, no numbers, no outlines."
+    },
+    {
+      "name": "onboarding_profile_reduce_screen_b",
+      "prompt": "A smartphone lying face down with a small crescent moon and stars resting above it, and an open book leaning against the phone. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red, cream, warm brown and tan, bold simple forms, subtle paper grain, plain cream paper background, single centered object, lots of empty space around it, no text, no letters, no numbers, no outlines."
+    },
+    {
+      "name": "onboarding_profile_exams_a",
+      "prompt": "A graduation cap with a tassel sitting on top of a rolled diploma tied with a ribbon. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red, cream, warm brown and tan, bold simple forms, subtle paper grain, plain cream paper background, single centered object, lots of empty space around it, no text, no letters, no numbers, no outlines."
+    },
+    {
+      "name": "onboarding_profile_exams_b",
+      "prompt": "A graduation cap with a tassel sitting on top of a rolled diploma tied with a ribbon. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red, cream, warm brown and tan, bold simple forms, subtle paper grain, plain cream paper background, single centered object, lots of empty space around it, no text, no letters, no numbers, no outlines."
+    },
+    {
+      "name": "onboarding_profile_impress_a",
+      "prompt": "A large speech bubble with a shining four-point star inside it, with smaller sparkles around. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red, cream, warm brown and tan, bold simple forms, subtle paper grain, plain cream paper background, single centered object, lots of empty space around it, no text, no letters, no numbers, no outlines."
+    },
+    {
+      "name": "onboarding_profile_impress_b",
+      "prompt": "A large speech bubble with a shining four-point star inside it, with smaller sparkles around. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red, cream, warm brown and tan, bold simple forms, subtle paper grain, plain cream paper background, single centered object, lots of empty space around it, no text, no letters, no numbers, no outlines."
+    },
+    {
+      "name": "onboarding_profile_curiosity_a",
+      "prompt": "A brass telescope on a tripod pointing up toward a small ringed planet and a few stars. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red, cream, warm brown and tan, bold simple forms, subtle paper grain, plain cream paper background, single centered object, lots of empty space around it, no text, no letters, no numbers, no outlines."
+    },
+    {
+      "name": "onboarding_profile_curiosity_b",
+      "prompt": "A brass telescope on a tripod pointing up toward a small ringed planet and a few stars. Flat poster illustration, paper-cut shapes, limited palette of deep navy blue, saffron yellow, coral red, cream, warm brown and tan, bold simple forms, subtle paper grain, plain cream paper background, single centered object, lots of empty space around it, no text, no letters, no numbers, no outlines."
+    }
+  ]
+}
