@@ -60,7 +60,6 @@ struct SettingsView: View {
                             .padding(.horizontal, 20)
                         }
 
-                        appearanceSection
 
                         readingSection
 
