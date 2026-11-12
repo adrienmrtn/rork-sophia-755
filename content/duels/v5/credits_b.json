@@ -219,23 +219,29 @@
     "license": "Public domain",
     "source": "https://commons.wikimedia.org/wiki/File:Tower_Bridge,_III._(closed),_London,_England-LCCN2002696929.jpg",
     "fit": "cover",
-    "focus": "center"
+    "focus": "center",
+    "crop": [
+      0.03,
+      0.04,
+      0.7,
+      0.88
+    ]
   },
   "v5b_monument_karnak": {
     "name": "Great Hypostyle Hall, Karnak, Luxor, Egypt",
-    "file": "Karnak Hypostyle Hall (9794663325).jpg",
-    "artist": "Gary Todd from Xinzheng, China",
+    "file": "Karnak Temple Great Hypostyle Hall 2014.jpg",
+    "artist": "Tsyganov Sergey",
     "license": "CC0",
-    "source": "https://commons.wikimedia.org/wiki/File:Karnak_Hypostyle_Hall_(9794663325).jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Karnak_Temple_Great_Hypostyle_Hall_2014.jpg",
     "fit": "cover",
     "focus": "center"
   },
   "v5b_monument_shwedagon": {
-    "name": "Shwedagon Pagoda, Yangon, Rijksmuseum photograph",
-    "file": "Shwedagon pagode, Rangoon Shwé Dagon pagoda. Rangoon, 565 (titel op object), RP-F-00-5342-2.jpg",
-    "artist": "Rijksmuseum",
-    "license": "CC0",
-    "source": "https://commons.wikimedia.org/wiki/File:Shwedagon_pagode,_Rangoon_Shw%C3%A9_Dagon_pagoda._Rangoon,_565_(titel_op_object),_RP-F-00-5342-2.jpg",
+    "name": "Shwedagon Pagoda, Yangon (U.S. Department of State)",
+    "file": "Near-Full Moon as Seen During Secretary Kerry's Visit to Shwedagon Pagoda in Rangoon (14692543669).jpg",
+    "artist": "U.S. Department of State from United States",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Near-Full_Moon_as_Seen_During_Secretary_Kerry%27s_Visit_to_Shwedagon_Pagoda_in_Rangoon_(14692543669).jpg",
     "fit": "cover",
     "focus": "center"
   },
@@ -309,7 +315,13 @@
     "license": "Public domain",
     "source": "https://commons.wikimedia.org/wiki/File:Photograph_of_the_Golden_Temple,_Amritsar,_ca.1900%E2%80%9310.jpg",
     "fit": "cover",
-    "focus": "center"
+    "focus": "center",
+    "crop": [
+      0,
+      0,
+      1,
+      0.87
+    ]
   },
   "v5b_monument_us_capitol": {
     "name": "United States Capitol, Washington, D.C., Carol M. Highsmith",
@@ -335,6 +347,24 @@
     "artist": "U.S. Geological Survey from Reston, VA, USA",
     "license": "Public domain",
     "source": "https://commons.wikimedia.org/wiki/File:Hello_There,_Manatee_(23105073981).jpg",
+    "fit": "cover",
+    "focus": "center"
+  },
+  "v5b_monument_kremlin": {
+    "name": "Moscow Kremlin, photochrom, c. 1890-1900",
+    "file": "The Moscou. Le Kremlin-LCCN2001697451.jpg",
+    "artist": "Photochrom Print Collection",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:The_Moscou._Le_Kremlin-LCCN2001697451.jpg",
+    "fit": "cover",
+    "focus": "center"
+  },
+  "v5b_nature_niagara": {
+    "name": "Horseshoe Fall from Goat Island, Niagara, Detroit Publishing Co., c. 1900",
+    "file": "Horseshoe Fall from Goat Island, Niagara-LCCN2008676329.jpg",
+    "artist": null,
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Horseshoe_Fall_from_Goat_Island,_Niagara-LCCN2008676329.jpg",
     "fit": "cover",
     "focus": "center"
   }
