@@ -74,3 +74,4 @@ Restent à lancer ensuite : vague 1 rien d'autre ; vague 2 pour fr de pt it ro b
 - pl parts 8–14 fini
 - bg parts 8–14 fini
 - hu parts 8–14 fini
+- hu parts 8–14 fini ; 5 remplacements écrits (v5/final_replacements.json)
