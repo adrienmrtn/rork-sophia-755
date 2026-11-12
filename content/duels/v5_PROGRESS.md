@@ -68,3 +68,4 @@ Restent à lancer ensuite : vague 1 rien d'autre ; vague 2 pour fr de pt it ro b
 - lv parts 1–7 fini (vague 1 complète pour les 29 langues) ; vague 2 lancée pour lt (en attente : lv ja)
 - ro parts 8–14 fini ; vague 2 lancée pour lv (en attente : ja)
 - it parts 8–14 fini ; vague 2 lancée pour ja (toutes les langues lancées)
+- da parts 8–14 fini
