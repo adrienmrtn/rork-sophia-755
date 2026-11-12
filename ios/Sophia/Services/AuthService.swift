@@ -162,6 +162,8 @@ final class AuthService {
         GIDSignIn.sharedInstance.signOut()
         currentUser = nil
         SocialService.shared.clearLocalState()
+        // La récompense de parrainage appartient au compte qui vient de partir.
+        ReferralService.shared.clearLocalState()
     }
 
     /// Supprime définitivement le compte via l'Edge Function `delete-user` (service role côté serveur),
