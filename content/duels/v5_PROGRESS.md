@@ -93,3 +93,4 @@ Restent à lancer ensuite : vague 1 rien d'autre ; vague 2 pour fr de pt it ro b
 - part15 : de nl da finis
 - part15 : sv nb fi finis
 - part15 : fr es it finis
+- part15 : pt pt-PT ro finis
