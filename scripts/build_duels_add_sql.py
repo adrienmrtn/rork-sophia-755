@@ -102,7 +102,7 @@ def main() -> int:
     for n, chunk in enumerate(files, start=1):
         text = (f"-- Duels, questions ajoutées — fichier {n} sur {len(files)}, à exécuter dans l'ordre.\n"
                 "BEGIN;\n\n" + "\n".join(chunk) + "\nCOMMIT;\n")
-        (a.paste_dir / f"{n}_duels_ajout.sql").write_text(text, encoding="utf-8")
+        (a.paste_dir / f"{n:02d}_duels_ajout.sql").write_text(text, encoding="utf-8")
         print(f"{a.paste_dir / f'{n}_duels_ajout.sql'} : {len(text.encode()) / 1e3:.0f} ko")
     print(f"{a.migration} : {len(new)} questions, {len(LANGS)} langues")
     return 0

@@ -97,3 +97,9 @@ Restent à lancer ensuite : vague 1 rien d'autre ; vague 2 pour fr de pt it ro b
 - part15 : pl cs sk hr sr sl finis
 - part15 : ru bg el finis
 - part15 : et lt lv finis (reste ar he ja)
+
+## v5 TERMINÉE
+- 1 500 questions actives (1 400 texte − 12 retirées + 12 remplacements + 100 images), 43 500 traductions.
+- SQL : supabase/duels_v5_a_coller/01..10_duels_ajout.sql, testé sur Postgres local (2 passages, sans erreur).
+- Images : déposer content/duels/v5/upload/duels dans le bucket course-images avant le SQL (vérifié en lecture : aucun fichier existant écrasé).
+- Base vérifiée en lecture le 12/11 : 1 321 questions (ni v4 ni v5 encore appliquées).

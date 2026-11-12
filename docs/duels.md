@@ -284,3 +284,21 @@ toujours vrai, sur iOS comme sur Android).
 - SQL des ajouts seulement (questions + traductions) : `python3 scripts/build_duels_add_sql.py
   --baseline content/duels/v4/baseline_ids.txt --migration supabase/migrations/20261114010100_duels_v4_add.sql
   --paste-dir supabase/duels_v4_a_coller` ; fichiers à coller dans l'ordre dans l'éditeur SQL.
+
+## 1 500 questions de plus, dont 100 à image (12/11/2026)
+
+- 1 400 questions texte écrites par couloir (deux par matière : histoire avant/après 1500, sciences
+  physiques/vivant, littérature avant/après 1850, arts visuels/arts du spectacle, mythologie
+  européenne/reste du monde, géographie/société et idées), chaque lot relu par un vérificateur
+  indépendant, puis dédoublonnées entre lots et contre le vivier. Sources : `scripts/duels_source/40_v5_*.json`.
+- 100 questions à image (portraits, œuvres, monuments, mythologie, sciences et nature, 15 drapeaux),
+  images Wikimedia Commons du domaine public ou CC0 et flagcdn, mises au format de l'app par
+  `scripts/duels_v5_images.py` (aucun envoi), vérifiées une à une : `41_v5_images.json`. Crédits dans
+  `content/duels/images.json`. Fichiers à déposer : `content/duels/v5/upload/duels/` → bucket
+  `course-images` (fusionne avec le dossier `duels/` existant), AVANT d'exécuter le SQL.
+- Traductions natives dans les 29 langues (lots `content/duels/i18n/lots_v5`). Une question qui n'a pas de
+  sens dans une langue (nom local qui donne la réponse, terme japonais transparent…) est retirée de
+  toutes les langues : 12 retirées (`_excluded.json`, jamais insérées), remplacées par 12 autres
+  (`42_v5_replacements.json`). Total : 1 500 questions actives.
+- SQL : `supabase/migrations/20261115010100_duels_v5_add.sql` et, pour l'éditeur SQL,
+  `supabase/duels_v5_a_coller/01…10_duels_ajout.sql` (dans l'ordre). Indépendant du lot des 400.
