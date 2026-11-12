@@ -13,6 +13,12 @@ data class OnboardingAnswers(
     val knowledgeLevel: Int = 1,
     val motivation: String? = null,
     val topics: List<String> = emptyList(),
+    /**
+     * L'avatar choisi sur la page du prénom (`avatar_01`…), ou null tant que la page n'a pas
+     * été passée. Il rejoint la progression (`UserProgress.avatarId`) une fois la page du
+     * compte franchie.
+     */
+    val avatarId: String? = null,
 )
 
 class OnboardingStore(context: Context) {
@@ -76,6 +82,7 @@ class OnboardingStore(context: Context) {
             ?.split(',')
             ?.filter { it.isNotBlank() }
             .orEmpty(),
+        avatarId = prefs.getString(KEY_AVATAR, null),
     )
 
     fun saveAnswers(answers: OnboardingAnswers) {
@@ -85,6 +92,7 @@ class OnboardingStore(context: Context) {
             .putInt(KEY_KNOWLEDGE, answers.knowledgeLevel)
             .putString(KEY_MOTIVATION, answers.motivation)
             .putString(KEY_TOPICS, answers.topics.joinToString(","))
+            .putString(KEY_AVATAR, answers.avatarId)
             .apply()
     }
 
@@ -100,5 +108,8 @@ class OnboardingStore(context: Context) {
         private const val KEY_KNOWLEDGE = "sophia_user_knowledge_level"
         private const val KEY_MOTIVATION = "sophia_user_motivation"
         private const val KEY_TOPICS = "sophia_user_interests"
+
+        // Propre à l'onboarding : l'avatar choisi avant qu'un compte existe.
+        private const val KEY_AVATAR = "sophia_onboarding_avatar_id"
     }
 }

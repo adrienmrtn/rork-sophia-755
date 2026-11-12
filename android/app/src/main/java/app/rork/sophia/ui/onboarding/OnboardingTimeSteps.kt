@@ -1,9 +1,9 @@
 package app.rork.sophia.ui.onboarding
 
 import androidx.compose.animation.AnimatedContent
-import androidx.compose.animation.SizeTransform
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.Animatable
+import androidx.compose.animation.core.LinearOutSlowInEasing
 import androidx.compose.animation.core.RepeatMode
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.animateFloat
@@ -45,6 +45,7 @@ import androidx.compose.material3.Slider
 import androidx.compose.material3.SliderDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableFloatStateOf
@@ -65,6 +66,7 @@ import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.semantics.clearAndSetSemantics
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.heading
@@ -75,6 +77,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.IntOffset
+import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import app.rork.sophia.R
@@ -84,7 +87,6 @@ import app.rork.sophia.domain.formatted
 import app.rork.sophia.domain.locale
 import app.rork.sophia.ui.components.DSHighlightTitle
 import app.rork.sophia.ui.components.DSMotion
-import app.rork.sophia.ui.components.dsPopIn
 import app.rork.sophia.ui.components.dsStagger
 import app.rork.sophia.ui.components.rememberHaptics
 import app.rork.sophia.ui.components.sophiaCard
@@ -103,7 +105,7 @@ internal fun screenTimeLabel(context: android.content.Context, minutes: Int, lan
 
 /**
  * « How long do you spend on your phone each day? »: a slider from 30 min to 10 h in blocks
- * of 30 min; the big number rolls as it changes.
+ * of 30 min. Le grand nombre ne bouge pas d'un cran à l'autre : voir [PhoneTimeNumber].
  *
  * « Elevate arrondi » style: centred title, a round illustration when the height allows, the
  * time very large and in blue, the slider and its bounds, then the pinned call to action.
@@ -146,35 +148,19 @@ internal fun PhoneTimeStep(
             OV2CoreIllustration(
                 art = R.drawable.antiscroll_poster,
                 size = art,
-                modifier = Modifier.padding(top = 22.dp).dsPopIn(120),
+                modifier = Modifier.padding(top = 22.dp).ov2CalmIn(120),
             )
         }
         // The number and the slider sit in the middle of the height left under the illustration.
         Spacer(Modifier.height(24.dp))
         Spacer(Modifier.weight(1f))
-        AnimatedContent(
-            targetState = slider.toInt(),
-            transitionSpec = {
-                val up = targetState > initialState
-                (slideInVertically(DSMotion.snappy<IntOffset>()) { if (up) it / 2 else -it / 2 } + fadeIn(tween(160))) togetherWith
-                    (slideOutVertically(tween(160)) { if (up) -it / 2 else it / 2 } + fadeOut(tween(120))) using
-                    SizeTransform(clip = false)
-            },
-            modifier = Modifier.padding(horizontal = OV2Core.sideInset).dsStagger(1),
-            label = "minutes",
-        ) { value ->
-            Text(
-                text = screenTimeLabel(context, value, language),
-                style = TextStyle(fontFeatureSettings = "tnum"),
-                fontFamily = PlusJakartaSans,
-                fontWeight = FontWeight.ExtraBold,
-                fontSize = numberSize,
-                letterSpacing = (-2).sp,
-                color = DS.accent,
-                maxLines = 1,
-                softWrap = false,
-            )
-        }
+        PhoneTimeNumber(
+            minutes = slider.toInt(),
+            fontSize = numberSize,
+            // Lu comme avant par le lecteur d'écran : « 3h30 », « 30 min ».
+            spoken = screenTimeLabel(context, slider.toInt(), language),
+            modifier = Modifier.dsStagger(1),
+        )
         Column(
             modifier = Modifier
                 .padding(horizontal = 32.dp)
@@ -193,7 +179,7 @@ internal fun PhoneTimeStep(
             val dragged by interaction.collectIsDraggedAsState()
             val thumbScale by animateFloatAsState(
                 targetValue = if (pressed || dragged) 1.18f else 1f,
-                animationSpec = DSMotion.press(),
+                animationSpec = OV2Calm.quick(),
                 label = "phoneTimeThumb",
             )
             // The slider of the style: a thin rounded track without notches, a round blue thumb
@@ -252,6 +238,56 @@ internal fun PhoneTimeStep(
     }
 }
 
+/**
+ * Le grand nombre de la page « temps de téléphone », stable au milieu de l'écran : toujours
+ * la même forme, « 3h30 » (« 0h30 », « 3h00 », « 10h00 »), dans trois cases de largeur fixe.
+ * Le « h » est au centre exact ; les heures s'alignent contre lui à gauche, les minutes à
+ * droite, chacune dans une case de deux chiffres tabulaires. D'un cran à l'autre, seuls les
+ * chiffres changent : rien ne se décale, rien ne glisse.
+ *
+ * La ligne se lit de gauche à droite dans toutes les langues, comme le libellé « 3h30 ».
+ */
+@Composable
+private fun PhoneTimeNumber(
+    minutes: Int,
+    fontSize: androidx.compose.ui.unit.TextUnit,
+    spoken: String,
+    modifier: Modifier = Modifier,
+) {
+    val style = TextStyle(
+        fontFamily = PlusJakartaSans,
+        fontWeight = FontWeight.ExtraBold,
+        fontSize = fontSize,
+        letterSpacing = (-2).sp,
+        color = DS.accent,
+        // Chiffres tabulaires : un « 1 » prend la même place qu'un « 0 ».
+        fontFeatureSettings = "tnum",
+    )
+    CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Ltr) {
+        Row(
+            modifier = modifier
+                .fillMaxWidth()
+                .clearAndSetSemantics { contentDescription = spoken },
+            horizontalArrangement = Arrangement.Center,
+            verticalAlignment = Alignment.CenterVertically,
+        ) {
+            PhoneTimeDigits(text = (minutes / 60).toString(), style = style, alignment = Alignment.CenterEnd)
+            Text(text = "h", style = style, maxLines = 1, softWrap = false)
+            PhoneTimeDigits(text = String.format(java.util.Locale.ROOT, "%02d", minutes % 60), style = style, alignment = Alignment.CenterStart)
+        }
+    }
+}
+
+/** Une case de deux chiffres : sa largeur est celle de « 00 », le texte s'y cale d'un côté. */
+@Composable
+private fun PhoneTimeDigits(text: String, style: TextStyle, alignment: Alignment) {
+    Box(contentAlignment = alignment) {
+        // Invisible : donne à la case sa largeur, la même pour « 3 » et pour « 10 ».
+        Text(text = "00", style = style, maxLines = 1, softWrap = false, modifier = Modifier.alpha(0f))
+        Text(text = text, style = style, maxLines = 1, softWrap = false)
+    }
+}
+
 /** « 27 ans », « 1 an », « 3 года »: the word for years agreed with the number. */
 internal fun yearsText(context: android.content.Context, years: Int, language: AppLanguage): String =
     StringStore.text(context, "onboardingV2.yearsGrid.years", language, years)
@@ -281,7 +317,7 @@ private val GRID_SPACING = 7.dp
  *
  * The sequence lasts about 14 seconds and nothing gives the number away before: the title is
  * neutral (« Here's your life in years »), the « phone » line of the legend counts along with
- * the squares. « Continue » works from the first frame to the last.
+ * the squares. « Continuer » n'apparaît qu'une fois l'animation terminée, avec la conclusion.
  *
  * Every counter is saved, so a rotation or a trip to the background resumes the sequence
  * where it was instead of replaying it.
@@ -378,13 +414,17 @@ internal fun YearsGridStep(language: AppLanguage, phoneMinutes: Int, onContinue:
         return free < freeFilled || free < screenFilled
     }
 
-    // The CTA is pinned outside the scroll, always there and always active: one can move on
-    // without waiting for the end.
+    // Le bouton est épinglé hors du défilement et sa place est gardée dès le départ, mais il
+    // n'apparaît (et ne répond) qu'à la fin de l'animation, quand la conclusion est là.
+    val ctaAlpha by animateFloatAsState(if (showConclusion) 1f else 0f, tween(350), label = "gridCta")
     OV2CorePage(
         footer = {
             OnboardingCta(
                 text = StringStore.text(context, "common.continue", language),
-                onClick = onContinue,
+                onClick = { if (showConclusion) onContinue() },
+                modifier = Modifier
+                    .alpha(ctaAlpha)
+                    .then(if (showConclusion) Modifier else Modifier.clearAndSetSemantics { }),
             )
         },
     ) { available ->
@@ -466,7 +506,7 @@ internal fun YearsGridStep(language: AppLanguage, phoneMinutes: Int, onContinue:
         }
         // The number, large, then the sentence: what the page wants remembered. Its place is
         // kept from the start, so nothing jumps when it arrives.
-        val conclusion by animateFloatAsState(if (showConclusion) 1f else 0f, DSMotion.pop(), label = "gridConclusion")
+        val conclusion by animateFloatAsState(if (showConclusion) 1f else 0f, OV2Calm.settle(), label = "gridConclusion")
         Row(
             modifier = Modifier
                 .fillMaxWidth()
@@ -515,18 +555,19 @@ private fun YearCell(
 ) {
     val scale by animateFloatAsState(
         targetValue = if (!revealed) 0.3f else if (filled) 1f else 0.88f,
-        animationSpec = spring(dampingRatio = 0.72f, stiffness = Spring.StiffnessMedium),
+        animationSpec = OV2Calm.quick(),
         label = "yearScale",
     )
     val alpha by animateFloatAsState(if (revealed) 1f else 0f, tween(200), label = "yearAlpha")
     val animatedColor by animateColorAsState(color, tween(400), label = "yearColor")
-    // A year going to the phone lands with a small bounce (not on a restored page).
+    // Une année qui part au téléphone se pose en revenant d'un peu plus grand, sans rebond
+    // (pas sur une page restaurée).
     val startedAsPhone = remember { phone }
     val bump = remember { Animatable(1f) }
     LaunchedEffect(phone) {
         if (phone && !startedAsPhone) {
-            bump.snapTo(1.3f)
-            bump.animateTo(1f, DSMotion.pop())
+            bump.snapTo(1.18f)
+            bump.animateTo(1f, OV2Calm.settle())
         }
     }
     Box(
@@ -583,7 +624,8 @@ private fun LegendRow(
 /**
  * « With Sophia, turn that time into knowledge »: the sentence turns bold word by word, then
  * the last word keeps swapping (knowledge, art, philosophy…) in the blue of the style.
- * No button: a tap anywhere moves on.
+ * No button: a tap anywhere moves on, mais seulement une fois que le mot a commencé à
+ * changer : avant, l'invitation à toucher l'écran n'est pas affichée et un appui ne fait rien.
  */
 @Composable
 internal fun TransformStep(language: AppLanguage, onContinue: () -> Unit) {
@@ -601,7 +643,8 @@ internal fun TransformStep(language: AppLanguage, onContinue: () -> Unit) {
             .filter { it.isNotEmpty() }
     }
     var boldCount by remember { mutableIntStateOf(0) }
-    var showHint by remember { mutableStateOf(false) }
+    // Vrai dès que le mot a changé une première fois : l'invitation apparaît et l'appui compte.
+    var canContinue by remember { mutableStateOf(false) }
     var swapping by remember { mutableStateOf(false) }
     var swapIndex by remember { mutableIntStateOf(0) }
 
@@ -612,10 +655,17 @@ internal fun TransformStep(language: AppLanguage, onContinue: () -> Unit) {
             haptics.select()
             delay(320)
         }
-        showHint = true
-        if (swapWords.size <= 1) return@LaunchedEffect
+        if (swapWords.size <= 1) {
+            // Un seul mot : rien à faire défiler, la phrase entière suffit.
+            canContinue = true
+            return@LaunchedEffect
+        }
         delay(750)
+        // Le premier changement de mot lance l'animation, et ouvre la suite.
         swapping = true
+        swapIndex += 1
+        haptics.select()
+        canContinue = true
         while (true) {
             delay(1150)
             swapIndex += 1
@@ -628,7 +678,8 @@ internal fun TransformStep(language: AppLanguage, onContinue: () -> Unit) {
         artBase = 150.dp,
         sentenceWords = words + swapWords,
         hint = StringStore.text(context, "onboardingV2.transform.tapHint", language),
-        hintVisible = showHint,
+        hintVisible = canContinue,
+        canContinue = canContinue,
         onContinue = onContinue,
     ) { style ->
         ProgressiveWords(
@@ -673,8 +724,9 @@ private fun SwapWordCell(
         AnimatedContent(
             targetState = if (swapping) index % words.size else 0,
             transitionSpec = {
-                (slideInVertically(DSMotion.snappy<IntOffset>()) { -it } + fadeIn()) togetherWith
-                    (slideOutVertically { it } + fadeOut())
+                // Le mot suivant descend à sa place et s'y arrête, sans rebond.
+                (slideInVertically(tween<IntOffset>(260, easing = LinearOutSlowInEasing)) { -it } + fadeIn(tween(220))) togetherWith
+                    (slideOutVertically(tween(220)) { it } + fadeOut(tween(160)))
             },
             label = "swapWord",
         ) { i ->
@@ -761,7 +813,7 @@ private fun TapToContinueScaffold(
                 interactionSource = remember { MutableInteractionSource() },
                 indication = null,
             ) {
-                if (!advanced) {
+                if (canContinue && !advanced) {
                     advanced = true
                     haptics.confirm()
                     onContinue()

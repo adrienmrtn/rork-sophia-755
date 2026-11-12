@@ -1,11 +1,12 @@
 package app.rork.sophia.ui.onboarding
 
 import androidx.compose.animation.animateColorAsState
-import androidx.compose.animation.core.animateDpAsState
-import androidx.compose.animation.core.tween
+import androidx.compose.animation.core.animateFloatAsState
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -13,6 +14,10 @@ import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.imePadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.lazy.LazyRow
+import androidx.compose.foundation.lazy.itemsIndexed
+import androidx.compose.foundation.lazy.rememberLazyListState
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
@@ -39,11 +44,14 @@ import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.focus.onFocusChanged
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.role
+import androidx.compose.ui.semantics.selected
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
@@ -56,11 +64,11 @@ import app.rork.sophia.R
 import app.rork.sophia.data.StringStore
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.Subject
-import app.rork.sophia.ui.components.DSMotion
-import app.rork.sophia.ui.components.dsPopIn
 import app.rork.sophia.ui.components.dsStagger
 import app.rork.sophia.ui.components.pressable
 import app.rork.sophia.ui.components.rememberHaptics
+import app.rork.sophia.ui.newgen.AvatarCircle
+import app.rork.sophia.ui.newgen.Avatars
 import app.rork.sophia.ui.theme.DS
 import kotlinx.coroutines.delay
 
@@ -142,21 +150,34 @@ private fun OptionRows(topPadding: Dp, content: @Composable () -> Unit) {
 
 // MARK: - First name
 
+/** Diamètre d'un avatar du carrousel de la page du prénom (celui qui est choisi ; les autres sont réduits). */
+private val NAME_AVATAR_SIZE = 72.dp
+
 /**
  * « What's your name? »: one field, the keyboard coming up by itself, « Continue » as soon as
  * there is a name, and « Skip » for anyone who would rather not say.
+ *
+ * On y choisit aussi son avatar : les avatars de l'app sur une ligne qui défile, celui qui
+ * est choisi entouré de bleu. Un avatar est toujours proposé d'entrée ([initialAvatarId],
+ * sinon un tiré au hasard) ; il est rendu avec le prénom, que l'on continue ou que l'on
+ * passe.
  */
 @Composable
 internal fun NameStep(
     language: AppLanguage,
     initialName: String,
-    onSubmit: (String) -> Unit,
+    /** L'avatar déjà choisi (retour sur la page, reprise après fermeture), ou null au premier passage. */
+    initialAvatarId: String?,
+    onSubmit: (name: String, avatarId: String) -> Unit,
 ) {
     val context = LocalContext.current
     val haptics = rememberHaptics()
     val keyboard = LocalSoftwareKeyboardController.current
     val focusRequester = remember { FocusRequester() }
     var name by rememberSaveable { mutableStateOf(initialName) }
+    var avatarId by rememberSaveable {
+        mutableStateOf(initialAvatarId?.takeIf { Avatars.drawable(it) != null } ?: Avatars.all.random())
+    }
     var focused by remember { mutableStateOf(false) }
     val trimmed = name.trim()
 
@@ -169,11 +190,11 @@ internal fun NameStep(
     fun commit() {
         if (trimmed.isEmpty()) return
         keyboard?.hide()
-        onSubmit(trimmed)
+        onSubmit(trimmed, avatarId)
     }
 
-    // The keyboard takes half of a small screen: the illustration shrinks (or goes) with the
-    // height that is left, the content scrolls if it must, the CTA stays above the keyboard.
+    // The keyboard takes half of a small screen: the content scrolls if it must, the CTA stays
+    // above the keyboard.
     OV2CorePage(
         modifier = Modifier.imePadding(),
         footer = {
@@ -194,7 +215,7 @@ internal fun NameStep(
                         onClick = {
                             keyboard?.hide()
                             haptics.select()
-                            onSubmit("")
+                            onSubmit("", avatarId)
                         },
                         haptic = false,
                     )
@@ -210,25 +231,35 @@ internal fun NameStep(
                 )
             }
         },
-    ) { available ->
-        val art by animateDpAsState(
-            targetValue = OV2Core.artSize(base = 116.dp, available = available, reserved = 200.dp),
-            animationSpec = tween(220),
-            label = "nameArt",
-        )
+    ) {
         OV2CoreQuestionTitle(
             title = StringStore.text(context, "onboardingV2.name.title", language),
-            subtitle = StringStore.text(context, "onboardingV2.name.subtitle", language),
             modifier = Modifier.padding(top = OV2Core.topInset).dsStagger(0),
         )
-        if (art >= 48.dp) {
-            OV2CoreIllustration(
-                art = R.drawable.onb_art_reader,
-                size = art,
-                modifier = Modifier.padding(top = 22.dp).dsPopIn(120),
-            )
-        }
-        val edge by animateColorAsState(if (focused) DS.accent else DS.hairline, DSMotion.snappy(), label = "nameBorder")
+        // Le choix de l'avatar, à la place de l'illustration : « Choisis ton avatar » et la
+        // ligne des avatars.
+        val avatarLabel = StringStore.text(context, "profile.avatar.title", language)
+        Text(
+            text = avatarLabel,
+            style = ov2CoreSubtitleStyle,
+            textAlign = TextAlign.Center,
+            modifier = Modifier
+                .padding(horizontal = OV2Core.sideInset)
+                .padding(top = 20.dp)
+                .dsStagger(1),
+        )
+        NameAvatarCarousel(
+            selected = avatarId,
+            label = avatarLabel,
+            onSelect = { id ->
+                if (id != avatarId) {
+                    haptics.select()
+                    avatarId = id
+                }
+            },
+            modifier = Modifier.padding(top = 10.dp).dsStagger(1),
+        )
+        val edge by animateColorAsState(if (focused) DS.accent else DS.hairline, OV2Calm.quick(), label = "nameBorder")
         val fieldStyle = OV2.headline.copy(fontSize = 17.sp, lineHeight = 23.sp, fontWeight = FontWeight.SemiBold, color = DS.ink)
         BasicTextField(
             value = name,
@@ -245,7 +276,7 @@ internal fun NameStep(
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(horizontal = OV2Core.sideInset)
-                .padding(top = 26.dp)
+                .padding(top = 22.dp)
                 .dsStagger(2)
                 .focusRequester(focusRequester)
                 .onFocusChanged { focused = it.isFocused },
@@ -273,6 +304,58 @@ internal fun NameStep(
     }
 }
 
+/**
+ * Les avatars de l'app (`avatar_01`…) sur une ligne qui défile : celui qui est choisi est à
+ * sa taille et cerclé de bleu, les autres un peu réduits. La ligne s'ouvre sur l'avatar
+ * choisi. Mêmes ronds ([AvatarCircle]) que la feuille de choix du profil.
+ */
+@Composable
+private fun NameAvatarCarousel(
+    selected: String,
+    label: String,
+    onSelect: (String) -> Unit,
+    modifier: Modifier = Modifier,
+) {
+    // L'avatar choisi à l'ouverture est amené en vue, avec deux voisins avant lui.
+    val startIndex = remember { (Avatars.all.indexOf(selected) - 2).coerceAtLeast(0) }
+    val listState = rememberLazyListState(initialFirstVisibleItemIndex = startIndex)
+    LazyRow(
+        state = listState,
+        modifier = modifier.fillMaxWidth(),
+        contentPadding = PaddingValues(horizontal = OV2Core.sideInset, vertical = 4.dp),
+        horizontalArrangement = Arrangement.spacedBy(8.dp),
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        itemsIndexed(Avatars.all, key = { _, id -> id }) { index, id ->
+            val isSelected = id == selected
+            val ring by animateColorAsState(
+                targetValue = if (isSelected) DS.accent else DS.accent.copy(alpha = 0f),
+                animationSpec = OV2Calm.quick(),
+                label = "nameAvatarRing",
+            )
+            val scale by animateFloatAsState(if (isSelected) 1f else 0.82f, OV2Calm.quick(), label = "nameAvatarScale")
+            AvatarCircle(
+                avatarId = id,
+                initial = "",
+                size = NAME_AVATAR_SIZE,
+                modifier = Modifier
+                    .graphicsLayer {
+                        scaleX = scale
+                        scaleY = scale
+                    }
+                    // Un choix : la vibration « sélection » est donnée par la page, pas par l'appui.
+                    .pressable(onClick = { onSelect(id) }, scaleDown = 0.94f, haptic = false)
+                    .border(3.dp, ring, CircleShape)
+                    .semantics {
+                        this.selected = isSelected
+                        role = Role.RadioButton
+                        contentDescription = "$label ${index + 1}"
+                    },
+            )
+        }
+    }
+}
+
 // MARK: - Age
 
 /** « How old are you? »: six ranges, one answer. */
@@ -293,17 +376,16 @@ internal fun AgeStep(
             )
         },
     ) { available ->
-        val art = OV2Core.artSize(base = 124.dp, available = available, reserved = 506.dp)
+        val art = OV2Core.artSize(base = 124.dp, available = available, reserved = 478.dp)
         OV2CoreQuestionTitle(
             title = StringStore.text(context, "onboardingV2.age.title", language),
-            subtitle = StringStore.text(context, "onboardingV2.age.subtitle", language),
             modifier = Modifier.padding(top = OV2Core.topInset).dsStagger(0),
         )
         if (art > 0.dp) {
             OV2CoreIllustration(
                 art = R.drawable.onb_art_mirror,
                 size = art,
-                modifier = Modifier.padding(top = 22.dp).dsPopIn(120),
+                modifier = Modifier.padding(top = 22.dp).ov2CalmIn(120),
             )
         }
         OptionRows(topPadding = 24.dp) {
@@ -396,7 +478,7 @@ internal fun KnowledgeStep(
             OV2CoreIllustration(
                 art = R.drawable.onb_art_growth,
                 size = art,
-                modifier = Modifier.padding(top = 22.dp).dsPopIn(120),
+                modifier = Modifier.padding(top = 22.dp).ov2CalmIn(120),
             )
         }
         OptionRows(topPadding = 24.dp) {

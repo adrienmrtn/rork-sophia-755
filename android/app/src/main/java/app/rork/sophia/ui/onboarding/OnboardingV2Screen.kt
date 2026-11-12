@@ -357,7 +357,22 @@ fun OnboardingV2Screen(
         }
     }
 
+    /**
+     * L'avatar choisi sur la page du prénom devient celui de la progression. Posé après la
+     * page du compte, pas avant : une progression locale qui porterait déjà un avatar ne
+     * serait plus « vide » au moment de la connexion, et quelqu'un qui retrouve son compte
+     * se verrait demander de choisir entre deux progressions. L'avatar d'un compte retrouvé
+     * n'est jamais remplacé.
+     */
+    fun applyChosenAvatar() {
+        val chosen = answers.avatarId ?: return
+        runCatching {
+            if (app.progressManager.progress.value.avatarId == null) app.progressManager.setAvatar(chosen)
+        }
+    }
+
     fun finish() {
+        applyChosenAvatar()
         runCatching {
             likedCourseIds.forEach { id ->
                 if (!app.progressManager.isFavorite(id)) {
@@ -435,6 +450,7 @@ fun OnboardingV2Screen(
 
     /** Login, skipped or done, lands on the same next page. */
     fun advanceFromLogin() {
+        applyChosenAvatar()
         // « Suis des profs » n'a rien à montrer sans créateur dans le catalogue.
         val hasCreators = AuthorStore.all(context.applicationContext).any { it.courseIds.isNotEmpty() }
         goTo(if (hasCreators) OnboardingStep.FollowCreators else OnboardingStep.WelcomeAboard)
@@ -561,8 +577,11 @@ fun OnboardingV2Screen(
                 OnboardingStep.Name -> NameStep(
                     language = language,
                     initialName = answers.firstName,
-                    onSubmit = { name ->
-                        updateAnswers { it.copy(firstName = name.take(FIRST_NAME_MAX_LENGTH)) }
+                    initialAvatarId = answers.avatarId,
+                    onSubmit = { name, avatarId ->
+                        // L'avatar choisi est gardé avec les réponses ; il rejoint la progression
+                        // après la page du compte (voir `applyChosenAvatar`).
+                        updateAnswers { it.copy(firstName = name.take(FIRST_NAME_MAX_LENGTH), avatarId = avatarId) }
                         goTo(OnboardingStep.Age)
                     },
                 )
