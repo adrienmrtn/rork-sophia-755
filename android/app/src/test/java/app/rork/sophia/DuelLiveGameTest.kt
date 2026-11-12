@@ -208,6 +208,13 @@ class DuelLiveGameTest {
         assertTrue(summary.friendly)
         assertTrue(summary.won)
         assertFalse(summary.abandoned)
+        // La relecture : mes réponses, et celles de l'ami telles que le serveur les rapporte.
+        val review = summary.review
+        assertEquals(List(20) { it }, review.map { it.index })
+        assertEquals(model.answers, review.map { it.mine })
+        assertEquals(List(20) { model.opponentAnswerAt(it).choice }, review.map { it.theirs?.choice })
+        assertEquals(List(20) { true }, review.map { it.playerPoint })
+        assertEquals(List(20) { it % 2 == 0 }, review.map { it.opponentPoint })
     }
 
     @Test
@@ -224,5 +231,9 @@ class DuelLiveGameTest {
         assertTrue("score ${model.playerScore}", model.playerScore >= 18)
         assertEquals(model.playerScore, model.playerMarks.count { it == true })
         assertEquals(DuelRules.roundNumber(19, 4), model.roundNumber)
+        // La relecture garde une entrée par question, celles de la coupure comprises.
+        val review = model.summary.review
+        assertEquals(List(20) { it }, review.map { it.index })
+        assertEquals(model.playerScore, review.count { it.playerPoint })
     }
 }

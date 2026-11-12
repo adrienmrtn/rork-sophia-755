@@ -354,7 +354,8 @@ struct DuelFriendFlowView: View {
             abandoned: true,
             tiebreak: false,
             answers: game.answers,
-            friendly: true
+            friendly: true,
+            review: game.review
         ))
     }
 
