@@ -256,7 +256,7 @@ private struct DSPopInModifier: ViewModifier {
     }
 }
 
-private struct DSShakeEffect: GeometryEffect {
+nonisolated private struct DSShakeEffect: GeometryEffect {
     var travel: CGFloat = 7
     var shakes: CGFloat = 3
     var animatableData: CGFloat

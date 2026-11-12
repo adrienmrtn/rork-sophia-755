@@ -1,7 +1,8 @@
 import SwiftUI
 
-/// Compact animated flame for badges (Home streak, discount, Profile hero) : un dégradé
-/// rose → orange → jaune, un halo rose, et un battement vif.
+/// Compact animated flame for badges (Home streak, discount, Profile hero) : la flamme
+/// safran du style « Elevate arrondi » (même teinte que `DSFlame`), un halo discret et un
+/// battement vif. Pour la grande flamme de l'écran de série, voir `DSFlame`.
 struct AnimatedFlameBadge: View {
     var size: CGFloat = 24
     var showGlow: Bool = true
@@ -11,15 +12,17 @@ struct AnimatedFlameBadge: View {
     @State private var flameScale: CGFloat = 1.0
     @State private var flameRotation: Double = 0
 
-    static let pink = Color(red: 0.96, green: 0.30, blue: 0.56)
-    static let orange = Color(red: 1.0, green: 0.55, blue: 0.18)
-    static let yellow = Color(red: 1.0, green: 0.84, blue: 0.35)
+    // Les trois tons du dégradé, du pied au sommet. Les noms datent de l'ancienne flamme
+    // rose ; ils portent désormais le safran du style (#E6B233) et ses voisins.
+    static let pink = Color(red: 0.851, green: 0.596, blue: 0.118)
+    static let orange = Color(red: 0.902, green: 0.698, blue: 0.200)
+    static let yellow = Color(red: 0.969, green: 0.843, blue: 0.455)
 
     var body: some View {
         ZStack {
             if showGlow {
                 Circle()
-                    .fill(Self.pink.opacity(0.35))
+                    .fill(Self.orange.opacity(0.28))
                     .frame(width: size * 1.7, height: size * 1.7)
                     .blur(radius: size * 0.22)
             }
@@ -34,7 +37,6 @@ struct AnimatedFlameBadge: View {
                     )
                 )
                 .symbolEffect(.variableColor.iterative.reversing, isActive: animated)
-                .shadow(color: Self.pink.opacity(0.35), radius: size * 0.14, y: size * 0.06)
                 .scaleEffect(flameScale)
                 .rotationEffect(.degrees(flameRotation))
         }

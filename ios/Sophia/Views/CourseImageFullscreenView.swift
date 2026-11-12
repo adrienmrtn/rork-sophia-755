@@ -30,11 +30,14 @@ struct CourseImageFullscreenView: View {
                         dismiss()
                     } label: {
                         Image(systemName: "xmark")
-                            .font(.jakarta(size: 16, weight: .bold))
+                            .font(.system(size: 16, weight: .semibold))
                             .foregroundStyle(.white)
-                            .frame(width: 40, height: 40)
+                            .frame(width: 44, height: 44)
                             .background(.white.opacity(0.15), in: Circle())
+                            .overlay { Circle().strokeBorder(.white.opacity(0.25), lineWidth: 1) }
+                            .contentShape(Circle())
                     }
+                    .buttonStyle(.pressable)
                     .padding(.trailing, 20)
                     .padding(.top, 12)
                 }
@@ -43,7 +46,7 @@ struct CourseImageFullscreenView: View {
 
                 if let credit, !credit.isEmpty {
                     Text(credit)
-                        .font(.jakarta(.caption, design: .rounded))
+                        .font(DS.sans(.caption))
                         .foregroundStyle(.white.opacity(0.65))
                         .multilineTextAlignment(.center)
                         .padding(.horizontal, 24)
@@ -62,7 +65,7 @@ struct CourseImageFullscreenView: View {
             .onEnded { _ in
                 lastScale = scale
                 if scale <= 1 {
-                    withAnimation(.spring(response: 0.35)) {
+                    withAnimation(DS.Motion.snappy) {
                         scale = 1
                         offset = .zero
                         lastOffset = .zero

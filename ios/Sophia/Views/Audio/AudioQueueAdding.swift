@@ -253,7 +253,8 @@ struct AudioBrowseView: View {
                 }
         }
         .buttonStyle(.plain)
-        .sensoryFeedback(.selection, trigger: selected)
+        // Un seul cran, sur la pastille qui vient d'être choisie.
+        .sensoryFeedback(.selection, trigger: selected) { _, isSelected in isSelected }
     }
 }
 
