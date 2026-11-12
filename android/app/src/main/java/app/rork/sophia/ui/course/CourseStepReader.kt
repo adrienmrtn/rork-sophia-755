@@ -2,8 +2,7 @@ package app.rork.sophia.ui.course
 
 import android.content.Context
 import androidx.compose.animation.core.Animatable
-import androidx.compose.animation.core.Spring
-import androidx.compose.animation.core.spring
+import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -22,6 +21,7 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.background
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -32,6 +32,7 @@ import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import app.rork.sophia.ui.components.DSMotion
 import app.rork.sophia.ui.theme.DS
 
 /**
@@ -200,8 +201,8 @@ internal fun CourseStepReader(
             // De la place sous le dernier passage, pour qu'il puisse toujours monter jusqu'au
             // repère de lecture même quand rien ne le suit encore.
             contentPadding = PaddingValues(
-                start = DS.Space.l,
-                end = DS.Space.l,
+                start = 24.dp,
+                end = 24.dp,
                 top = DS.Space.l,
                 bottom = maxOf(160.dp, viewport * 0.85f),
             ),
@@ -213,7 +214,8 @@ internal fun CourseStepReader(
                 val progress = remember(step.id) { Animatable(if (animate) 0f else 1f) }
                 LaunchedEffect(step.id) {
                     if (progress.value < 1f) {
-                        progress.animateTo(1f, spring(dampingRatio = 0.8f, stiffness = Spring.StiffnessMediumLow))
+                        // Le ressort « reveal » du style : large et posé.
+                        progress.animateTo(1f, DSMotion.reveal())
                     }
                     entered += step.id
                 }
@@ -236,21 +238,26 @@ internal fun CourseStepReader(
     }
 }
 
-/** La barre du lecteur pas à pas : une capsule par section, qui se remplit passage après passage. */
+/**
+ * La barre du lecteur : une capsule fine par section. Pas à pas, chacune se remplit passage
+ * après passage ; par pages, elles sont pleines jusqu'à la section courante. Le remplissage
+ * est animé.
+ */
 @Composable
 internal fun SteppedProgressBar(
     fills: List<Float>,
     modifier: Modifier = Modifier,
-    height: Dp = 6.dp,
-    activeColor: Color = DS.accentSoft,
-    trackColor: Color = DS.hairline,
+    height: Dp = 5.dp,
+    activeColor: Color = DS.accent,
+    trackColor: Color = DS.ink.copy(alpha = 0.12f),
 ) {
-    Row(modifier = modifier.fillMaxWidth().height(height), horizontalArrangement = Arrangement.spacedBy(4.dp)) {
+    Row(modifier = modifier.fillMaxWidth().height(height), horizontalArrangement = Arrangement.spacedBy(5.dp)) {
         fills.forEach { fill ->
+            val shown by animateFloatAsState(fill.coerceIn(0f, 1f), DSMotion.reveal(), label = "sectionFill")
             Box(modifier = Modifier.weight(1f).fillMaxHeight().clip(CircleShape).background(trackColor)) {
                 Box(
                     modifier = Modifier
-                        .fillMaxWidth(fill.coerceIn(0f, 1f))
+                        .fillMaxWidth(shown.coerceIn(0f, 1f))
                         .fillMaxHeight()
                         .clip(CircleShape)
                         .background(activeColor),

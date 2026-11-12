@@ -68,8 +68,11 @@ import app.rork.sophia.data.StringStore
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.CourseSummary
 import app.rork.sophia.domain.locale
+import androidx.compose.ui.graphics.Color
 import app.rork.sophia.ui.components.CourseImage
-import app.rork.sophia.ui.components.softPress
+import app.rork.sophia.ui.components.CourseRoundIconButton
+import app.rork.sophia.ui.components.pressable
+import app.rork.sophia.ui.components.sophiaCard
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
 import app.rork.sophia.ui.theme.SophiaTypography
@@ -123,7 +126,7 @@ internal fun AudioCover(courseId: String, modifier: Modifier = Modifier, corner:
         modifier = modifier
             .clip(RoundedCornerShape(corner))
             .background(DS.surfaceMuted)
-            .border(1.dp, DS.hairline, RoundedCornerShape(corner)),
+            .border(1.5.dp, DS.hairline, RoundedCornerShape(corner)),
     ) {
         CourseImage(courseId = courseId, modifier = Modifier.matchParentSize(), contentScale = ContentScale.Crop)
     }
@@ -238,7 +241,7 @@ fun CourseAudioButton(
                 .size(size)
                 .clip(CircleShape)
                 .background(DS.surface.copy(alpha = 0.92f))
-                .border(1.dp, DS.hairline, CircleShape)
+                .border(1.5.dp, if (player.current?.courseId == courseId) DS.accent else DS.hairline, CircleShape)
                 .combinedClickable(
                     interactionSource = remember { MutableInteractionSource() },
                     indication = null,
@@ -298,24 +301,42 @@ fun AudioPlayChoiceDialog(
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .clip(DS.controlShape)
-                .softPress(onClick = {
+                .pressable(scaleDown = 0.98f, onClick = {
                     onDismiss()
                     action()
                 })
-                .padding(vertical = 12.dp, horizontal = 4.dp),
+                .padding(vertical = 10.dp, horizontal = 4.dp),
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.spacedBy(14.dp),
         ) {
-            Icon(icon, contentDescription = null, tint = DS.accentSoft)
-            Text(text, style = SophiaTypography.bodyLarge.copy(fontSize = 16.sp), color = DS.ink)
+            Box(
+                modifier = Modifier.size(36.dp).background(DS.accentTint, CircleShape),
+                contentAlignment = Alignment.Center,
+            ) {
+                Icon(icon, contentDescription = null, tint = DS.accent, modifier = Modifier.size(20.dp))
+            }
+            Text(
+                text,
+                style = SophiaTypography.bodyLarge.copy(fontSize = 16.sp, fontWeight = FontWeight.SemiBold),
+                color = DS.ink,
+            )
         }
     }
 
     AlertDialog(
         onDismissRequest = onDismiss,
         containerColor = DS.surface,
-        title = { Text(t("audio.choice.title"), style = SophiaTypography.titleMedium) },
+        shape = RoundedCornerShape(24.dp),
+        title = {
+            Text(
+                t("audio.choice.title"),
+                fontFamily = PlusJakartaSans,
+                fontWeight = FontWeight.SemiBold,
+                fontSize = 19.sp,
+                lineHeight = 25.sp,
+                color = DS.ink,
+            )
+        },
         text = {
             Column {
                 Choice(t("audio.playNow"), Icons.Filled.PlayArrow, onPlayNow)
@@ -352,17 +373,17 @@ fun AudioMiniPlayer(language: AppLanguage, onOpen: () -> Unit) {
     ) {
         val item = current ?: return@AnimatedVisibility
         val summary = rememberCourseSummary(item.courseId, language)
+        // The card of the style: white, bordered, with its bottom edge; the whole bar opens
+        // the player.
         Column(
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(horizontal = 10.dp, vertical = 6.dp)
-                .clip(DS.controlShape)
-                .background(DS.surface)
-                .border(1.dp, DS.hairline, DS.controlShape)
-                .softPress(onClick = onOpen, scaleDown = 0.99f),
+                .pressable(onClick = onOpen, scaleDown = 0.99f)
+                .sophiaCard(shape = DS.controlShape),
         ) {
             Row(
-                modifier = Modifier.padding(start = 8.dp, end = 4.dp, top = 7.dp, bottom = 7.dp),
+                modifier = Modifier.padding(start = 8.dp, end = 4.dp, top = 8.dp, bottom = 8.dp),
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.spacedBy(12.dp),
             ) {
@@ -388,22 +409,28 @@ fun AudioMiniPlayer(language: AppLanguage, onOpen: () -> Unit) {
                         maxLines = 1,
                     )
                 }
+                // The round blue play button of the style.
                 Box(
-                    modifier = Modifier.size(40.dp).clip(CircleShape).softPress(onClick = { CourseAudioPlayer.togglePlayPause() }),
+                    modifier = Modifier
+                        .size(40.dp)
+                        .pressable(onClick = { CourseAudioPlayer.togglePlayPause() }, scaleDown = 0.9f)
+                        .clip(CircleShape)
+                        .background(DS.accent),
                     contentAlignment = Alignment.Center,
                 ) {
                     if (state.isBuffering) {
-                        CircularProgressIndicator(color = DS.accent, strokeWidth = 2.dp, modifier = Modifier.size(20.dp))
+                        CircularProgressIndicator(color = Color.White, strokeWidth = 2.dp, modifier = Modifier.size(18.dp))
                     } else {
                         Icon(
                             if (state.isPlaying) Icons.Filled.Pause else Icons.Filled.PlayArrow,
                             contentDescription = StringStore.text(context, if (state.isPlaying) "audio.pause" else "audio.play", language),
-                            tint = DS.ink,
+                            tint = Color.White,
+                            modifier = Modifier.size(22.dp),
                         )
                     }
                 }
                 Box(
-                    modifier = Modifier.size(36.dp).clip(CircleShape).softPress(onClick = { CourseAudioPlayer.stop() }),
+                    modifier = Modifier.size(36.dp).clip(CircleShape).pressable(onClick = { CourseAudioPlayer.stop() }),
                     contentAlignment = Alignment.Center,
                 ) {
                     Icon(
@@ -414,13 +441,23 @@ fun AudioMiniPlayer(language: AppLanguage, onOpen: () -> Unit) {
                     )
                 }
             }
+            // The blue bar of the position, on its pale track.
             Box(
                 modifier = Modifier
-                    .padding(horizontal = 14.dp)
-                    .fillMaxWidth(state.progress)
-                    .height(2.dp)
-                    .background(DS.accent),
-            )
+                    .padding(start = 14.dp, end = 14.dp, bottom = 7.dp)
+                    .fillMaxWidth()
+                    .height(3.dp)
+                    .clip(CircleShape)
+                    .background(DS.accentTint),
+            ) {
+                Box(
+                    modifier = Modifier
+                        .fillMaxWidth(state.progress.coerceIn(0f, 1f))
+                        .height(3.dp)
+                        .clip(CircleShape)
+                        .background(DS.accent),
+                )
+            }
         }
     }
 }
@@ -448,40 +485,33 @@ fun CourseReaderAudioButton(
     val isCurrent = player.current?.courseId == courseId
     val playing = isCurrent && player.isPlaying
 
-    Box(
-        modifier = Modifier
-            .size(40.dp)
-            .clip(CircleShape)
-            .background(DS.surface)
-            .border(1.dp, DS.hairline, CircleShape)
-            .softPress(onClick = {
-                when {
-                    !isPremium -> onLocked()
-                    player.current != null && !isCurrent -> choice = true
-                    else -> {
-                        CourseAudioPlayer.isPremium = true
-                        if (!isCurrent) {
-                            CourseAudioPlayer.play(courseId)
-                        } else if (!player.isPlaying) {
-                            CourseAudioPlayer.resume()
-                        }
-                        onOpenPlayer()
+    // The round header button of the reader; tinted and ringed in blue while this course's
+    // narration is loaded.
+    CourseRoundIconButton(
+        icon = when {
+            playing -> Icons.Filled.GraphicEq
+            isPremium -> Icons.Filled.Headphones
+            else -> Icons.Filled.Lock
+        },
+        contentDescription = StringStore.text(context, "audio.listen", language),
+        size = 42.dp,
+        active = isCurrent,
+        onClick = {
+            when {
+                !isPremium -> onLocked()
+                player.current != null && !isCurrent -> choice = true
+                else -> {
+                    CourseAudioPlayer.isPremium = true
+                    if (!isCurrent) {
+                        CourseAudioPlayer.play(courseId)
+                    } else if (!player.isPlaying) {
+                        CourseAudioPlayer.resume()
                     }
+                    onOpenPlayer()
                 }
-            }),
-        contentAlignment = Alignment.Center,
-    ) {
-        Icon(
-            imageVector = when {
-                playing -> Icons.Filled.GraphicEq
-                isPremium -> Icons.Filled.Headphones
-                else -> Icons.Filled.Lock
-            },
-            contentDescription = StringStore.text(context, "audio.listen", language),
-            tint = if (isCurrent) DS.accent else DS.inkSecondary,
-            modifier = Modifier.size(19.dp),
-        )
-    }
+            }
+        },
+    )
     if (choice) {
         AudioPlayChoiceDialog(
             courseId = courseId,

@@ -1,31 +1,32 @@
 package app.rork.sophia.ui.course
 
+import androidx.compose.animation.animateColorAsState
+import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.animateFloatAsState
-import androidx.compose.animation.core.spring
+import androidx.compose.animation.core.tween
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowForward
+import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Close
-import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material.icons.filled.Lock
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
-import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -37,9 +38,11 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.drawBehind
 import androidx.compose.ui.draw.scale
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.StrokeCap
+import androidx.compose.ui.graphics.drawOutline
+import androidx.compose.ui.graphics.drawscope.translate
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
@@ -53,21 +56,30 @@ import app.rork.sophia.data.analytics.Analytics
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.Course
 import app.rork.sophia.domain.UserProgress
-import app.rork.sophia.ui.components.AnimatedRewardBadge
-import app.rork.sophia.ui.components.RewardBadgeKind
+import app.rork.sophia.ui.components.CourseGoldPill
 import app.rork.sophia.ui.components.CourseImage
-import app.rork.sophia.ui.components.softPress
+import app.rork.sophia.ui.components.CoursePrimaryButton
+import app.rork.sophia.ui.components.CourseRoundIconButton
+import app.rork.sophia.ui.components.CourseSubjectAvatar
+import app.rork.sophia.ui.components.CourseXPBar
+import app.rork.sophia.ui.components.DSCheckBadge
+import app.rork.sophia.ui.components.DSMotion
+import app.rork.sophia.ui.components.dsPopIn
+import app.rork.sophia.ui.components.dsStagger
+import app.rork.sophia.ui.components.pressable
+import app.rork.sophia.ui.components.rememberHaptics
+import app.rork.sophia.ui.components.sophiaCard
 import app.rork.sophia.ui.newgen.CreatorIdentity
 import app.rork.sophia.ui.newgen.LikeHeartIcon
 import app.rork.sophia.ui.newgen.LikedTint
 import app.rork.sophia.ui.onboarding.readableWidth
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
-import app.rork.sophia.ui.theme.SophiaTypography
 
 /**
- * End-of-course celebration, mirroring the iOS `CourseCompletedView`: cover, title,
- * the XP just earned, then close / quiz.
+ * End-of-course celebration, mirroring the iOS `CourseCompletedView`: the cover with a check
+ * that draws itself, the title, the XP just earned on a golden bar that fills, then
+ * close / quiz. The phone celebrates when the screen arrives.
  */
 @Composable
 fun CourseCompletedScreen(
@@ -87,13 +99,23 @@ fun CourseCompletedScreen(
     onQuiz: () -> Unit,
 ) {
     val context = LocalContext.current
+    val haptics = rememberHaptics()
     var appeared by remember(course.id) { mutableStateOf(false) }
     val scale by animateFloatAsState(
-        targetValue = if (appeared) 1f else 0.7f,
-        animationSpec = spring(dampingRatio = 0.6f),
+        targetValue = if (appeared) 1f else 0.6f,
+        animationSpec = DSMotion.pop(),
         label = "coverScale",
     )
-    LaunchedEffect(course.id) { appeared = true }
+    // The golden bar starts where the level stood before these XP, then fills up to now.
+    val xpFraction = if (xpForLevel <= 0) 1f else (xpIntoLevel.toFloat() / xpForLevel).coerceIn(0f, 1f)
+    val xpStart = if (xpForLevel <= 0) 1f else ((xpIntoLevel - earnedXP).toFloat() / xpForLevel).coerceIn(0f, xpFraction)
+    val xpBar = remember(course.id) { Animatable(xpStart) }
+    LaunchedEffect(course.id) {
+        appeared = true
+        // The cover lands, the check draws itself, the phone celebrates.
+        haptics.celebrate()
+        xpBar.animateTo(xpFraction, tween(durationMillis = 800, delayMillis = 900))
+    }
 
     Column(
         modifier = Modifier.fillMaxSize().background(DS.canvas),
@@ -108,143 +130,193 @@ fun CourseCompletedScreen(
                 .fillMaxWidth()
                 .readableWidth()
                 .verticalScroll(rememberScrollState())
-                .padding(DS.Space.l),
+                .padding(horizontal = 24.dp, vertical = 28.dp),
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
-        Box(
-            modifier = Modifier
-                .size(168.dp)
-                .scale(scale)
-                .clip(DS.cardShape),
-        ) {
-            CourseImage(
-                courseId = course.id,
-                modifier = Modifier.fillMaxSize(),
-                contentScale = ContentScale.Crop,
-                maxEdgePx = 480,
-            )
-        }
-        Spacer(Modifier.height(22.dp))
-        Text(
-            text = StringStore.text(context, "course.completed", language),
-            style = SophiaTypography.displayLarge,
-            textAlign = TextAlign.Center,
-        )
-        Spacer(Modifier.height(20.dp))
-        Column(
-            modifier = Modifier
-                .fillMaxWidth()
-                .clip(DS.cardShape)
-                .background(DS.surface)
-                .padding(DS.Space.m),
-        ) {
-            Text(text = course.title, style = SophiaTypography.titleMedium, maxLines = 2)
-            Spacer(Modifier.height(10.dp))
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                Text(
-                    // The translated subject, as iOS shows it; the enum name printed « Litterature »
-                    // and « Comprendre_le_monde » in every language.
-                    text = StringStore.text(context, "subject.${course.subjectEnum.storageKey}.short", language),
-                    style = SophiaTypography.labelMedium,
-                    modifier = Modifier.weight(1f),
-                )
-                AnimatedRewardBadge(
-                    kind = RewardBadgeKind.Xp,
-                    size = 16.dp,
-                    showGlow = false,
-                    modifier = Modifier.size(20.dp),
-                )
-                Spacer(Modifier.width(4.dp))
-                Text(
-                    text = "+$earnedXP XP",
-                    style = SophiaTypography.titleMedium,
-                    color = DS.accentSoft,
-                )
+            Box(modifier = Modifier.size(152.dp).scale(scale)) {
+                Box(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .clip(RoundedCornerShape(28.dp))
+                        .background(DS.accentTint),
+                ) {
+                    CourseImage(
+                        courseId = course.id,
+                        modifier = Modifier.fillMaxSize(),
+                        contentScale = ContentScale.Crop,
+                        maxEdgePx = 480,
+                    )
+                }
+                // The green check draws itself once the cover has landed.
+                Box(
+                    modifier = Modifier
+                        .align(Alignment.BottomEnd)
+                        .offset(x = 8.dp, y = 8.dp)
+                        .background(DS.surface, CircleShape)
+                        .padding(3.dp),
+                ) {
+                    DSCheckBadge(size = 34.dp, delayMillis = 300)
+                }
             }
-            Spacer(Modifier.height(10.dp))
-            LinearProgressIndicator(
-                progress = {
-                    if (xpForLevel <= 0) 1f else (xpIntoLevel.toFloat() / xpForLevel).coerceIn(0f, 1f)
-                },
-                modifier = Modifier.fillMaxWidth().clip(DS.controlShape),
-                color = DS.accent,
-                trackColor = DS.hairline,
-                strokeCap = StrokeCap.Round,
-            )
-            Spacer(Modifier.height(6.dp))
+            Spacer(Modifier.height(22.dp))
             Text(
-                text = StringStore.text(context, "common.levelShort", language, level) +
-                    " · $xpIntoLevel / $xpForLevel XP",
-                style = SophiaTypography.labelMedium,
+                text = StringStore.text(context, "course.completed", language),
+                fontFamily = PlusJakartaSans,
+                fontWeight = FontWeight.SemiBold,
+                fontSize = 26.sp,
+                lineHeight = 33.sp,
+                color = DS.ink,
+                textAlign = TextAlign.Center,
+                modifier = Modifier.dsStagger(1),
             )
-        }
-        if (progress != null && progressManager != null) {
-            Spacer(Modifier.height(12.dp))
-            CourseEndSocialRow(course = course, language = language, progress = progress, progressManager = progressManager)
-        }
-        if (freemiumNote != null) {
-            Spacer(Modifier.height(14.dp))
-            Row(
+            Spacer(Modifier.height(18.dp))
+            Column(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .clip(DS.controlShape)
-                    .background(DS.accentTint)
-                    .padding(14.dp),
-                verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.spacedBy(10.dp),
+                    .dsStagger(3, stepMillis = 110)
+                    .sophiaCard()
+                    .padding(DS.Space.m),
+                verticalArrangement = Arrangement.spacedBy(10.dp),
             ) {
-                Text("🔒", fontSize = 15.sp)
-                Text(text = freemiumNote, style = SophiaTypography.labelMedium)
+                Text(
+                    text = course.title,
+                    fontFamily = PlusJakartaSans,
+                    fontWeight = FontWeight.Medium,
+                    fontSize = 14.sp,
+                    lineHeight = 20.sp,
+                    color = DS.inkSecondary,
+                    maxLines = 2,
+                    overflow = TextOverflow.Ellipsis,
+                )
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.spacedBy(10.dp),
+                ) {
+                    CourseSubjectAvatar(subject = course.subjectEnum, size = 36.dp)
+                    Text(
+                        // The translated subject, as iOS shows it; the enum name printed « Litterature »
+                        // and « Comprendre_le_monde » in every language.
+                        text = StringStore.text(context, "subject.${course.subjectEnum.storageKey}.short", language),
+                        fontFamily = PlusJakartaSans,
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 16.sp,
+                        color = DS.ink,
+                        maxLines = 2,
+                        overflow = TextOverflow.Ellipsis,
+                        modifier = Modifier.weight(1f),
+                    )
+                    Text(
+                        text = StringStore.text(context, "common.levelShort", language, level),
+                        fontFamily = PlusJakartaSans,
+                        fontWeight = FontWeight.ExtraBold,
+                        fontSize = 12.sp,
+                        color = DS.ink,
+                        maxLines = 1,
+                        modifier = Modifier
+                            .clip(RoundedCornerShape(10.dp))
+                            .background(DS.accentTint)
+                            .padding(horizontal = 10.dp, vertical = 4.dp),
+                    )
+                }
+                Text(
+                    text = "$xpIntoLevel / $xpForLevel XP",
+                    fontFamily = PlusJakartaSans,
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 15.sp,
+                    color = DS.ink,
+                )
+                CourseXPBar(fraction = xpBar.value, height = 8.dp)
+                CourseGoldPill(
+                    text = StringStore.text(context, "common.xpEarned", language, earnedXP),
+                    modifier = Modifier.dsPopIn(delayMillis = 1100),
+                )
+            }
+            if (progress != null && progressManager != null) {
+                Spacer(Modifier.height(18.dp))
+                CourseEndSocialRow(
+                    course = course,
+                    language = language,
+                    progress = progress,
+                    progressManager = progressManager,
+                    modifier = Modifier.dsStagger(4, stepMillis = 110),
+                )
+            }
+            if (freemiumNote != null) {
+                Spacer(Modifier.height(18.dp))
+                Row(
+                    modifier = Modifier
+                        .dsStagger(5, stepMillis = 110)
+                        .clip(DS.cardShape)
+                        .background(DS.accentTint)
+                        .padding(horizontal = 14.dp, vertical = 8.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.spacedBy(8.dp),
+                ) {
+                    Icon(Icons.Filled.Lock, contentDescription = null, tint = DS.accent, modifier = Modifier.size(15.dp))
+                    Text(
+                        text = freemiumNote,
+                        fontFamily = PlusJakartaSans,
+                        fontWeight = FontWeight.SemiBold,
+                        fontSize = 13.sp,
+                        lineHeight = 18.sp,
+                        color = DS.ink,
+                        modifier = Modifier.weight(1f, fill = false),
+                    )
+                }
             }
         }
-        }
+        // The actions, anchored at the bottom of the screen. Both vibrate by their style.
         Row(
-            modifier = Modifier.fillMaxWidth().readableWidth().padding(DS.Space.l),
-            horizontalArrangement = Arrangement.spacedBy(14.dp),
+            modifier = Modifier
+                .fillMaxWidth()
+                .readableWidth()
+                .padding(start = 24.dp, end = 24.dp, bottom = 24.dp)
+                .dsStagger(7, stepMillis = 110),
+            horizontalArrangement = Arrangement.spacedBy(10.dp),
             verticalAlignment = Alignment.CenterVertically,
         ) {
-            IconButton(
+            CourseRoundIconButton(
+                icon = Icons.Filled.Close,
                 onClick = onClose,
-                modifier = Modifier.size(56.dp).clip(CircleShape).background(DS.surface),
-            ) {
-                Icon(Icons.Filled.Close, contentDescription = null, tint = DS.inkSecondary)
-            }
+                contentDescription = StringStore.text(context, "common.close", language),
+                size = 56.dp,
+            )
             if (showQuizCta) {
-                Button(
+                CoursePrimaryButton(
+                    text = StringStore.text(context, "common.miniQuiz", language),
                     onClick = onQuiz,
-                    modifier = Modifier.weight(1f).height(56.dp),
-                    shape = DS.controlShape,
-                    colors = ButtonDefaults.buttonColors(containerColor = DS.accent, contentColor = Color.White),
-                ) {
-                    Text(
-                        text = if (quizLocked) {
-                            "🔒 " + StringStore.text(context, "common.miniQuiz", language)
-                        } else {
-                            StringStore.text(context, "common.miniQuiz", language)
-                        },
-                        fontFamily = PlusJakartaSans,
-                        fontWeight = FontWeight.SemiBold,
-                        fontSize = 16.sp,
-                    )
-                }
+                    leadingIcon = if (quizLocked) Icons.Filled.Lock else null,
+                    trailingIcon = Icons.AutoMirrored.Filled.ArrowForward,
+                    modifier = Modifier.weight(1f),
+                )
             } else {
-                Button(
+                CoursePrimaryButton(
+                    text = StringStore.text(context, "course.finish", language),
                     onClick = onClose,
-                    modifier = Modifier.weight(1f).height(56.dp),
-                    shape = DS.controlShape,
-                    colors = ButtonDefaults.buttonColors(containerColor = DS.accent, contentColor = Color.White),
-                ) {
-                    Text(
-                        text = StringStore.text(context, "course.finish", language),
-                        fontFamily = PlusJakartaSans,
-                        fontWeight = FontWeight.SemiBold,
-                        fontSize = 16.sp,
-                    )
-                }
+                    leadingIcon = Icons.Filled.Check,
+                    modifier = Modifier.weight(1f),
+                )
             }
         }
     }
+}
+
+/** The chrome of a button of the « like / follow » row: a bordered card with its bottom edge. */
+@Composable
+private fun Modifier.socialChrome(fill: Color, border: Color): Modifier {
+    val shape = DS.cardShape
+    val animatedFill by animateColorAsState(fill, DSMotion.snappy(), label = "socialFill")
+    val animatedBorder by animateColorAsState(border, DSMotion.snappy(), label = "socialBorder")
+    return this
+        .drawBehind {
+            val outline = shape.createOutline(size, layoutDirection, this)
+            translate(top = 1.5.dp.toPx()) { drawOutline(outline, animatedBorder) }
+        }
+        .clip(shape)
+        .background(DS.surface)
+        .background(animatedFill)
+        .border(1.5.dp, animatedBorder, shape)
 }
 
 /**
@@ -257,36 +329,40 @@ private fun CourseEndSocialRow(
     language: AppLanguage,
     progress: UserProgress,
     progressManager: ProgressManager,
+    modifier: Modifier = Modifier,
 ) {
     val context = LocalContext.current
+    val haptics = rememberHaptics()
     val author = remember(course.id) { CreatorIdentity.forCourse(context.applicationContext, course.id).author }
     val liked = course.id in progress.likedCourseIds
     var likeBurst by remember(course.id) { mutableIntStateOf(0) }
-    val shape = RoundedCornerShape(14.dp)
 
     Row(
-        modifier = Modifier.fillMaxWidth(),
+        modifier = modifier.fillMaxWidth(),
         horizontalArrangement = Arrangement.spacedBy(10.dp),
         verticalAlignment = Alignment.CenterVertically,
     ) {
         Row(
             modifier = Modifier
                 .weight(1f)
-                .height(48.dp)
-                .softPress(onClick = {
+                .height(50.dp)
+                // The choice vibrates as a selection; the press itself stays silent.
+                .pressable(haptic = false, onClick = {
+                    haptics.select()
                     val wasLiked = progressManager.isLiked(course.id)
                     progressManager.toggleLike(course.id)
                     if (!wasLiked) likeBurst++
                     Analytics.log(if (wasLiked) "unlike" else "like", courseId = course.id, screen = "course_end")
                 })
-                .clip(shape)
-                .background(if (liked) LikedTint.copy(alpha = 0.1f) else DS.surface)
-                .border(1.dp, if (liked) LikedTint.copy(alpha = 0.45f) else DS.hairline, shape)
-                .padding(horizontal = 14.dp),
+                .socialChrome(
+                    fill = if (liked) LikedTint.copy(alpha = 0.1f) else DS.surface,
+                    border = if (liked) LikedTint.copy(alpha = 0.55f) else DS.hairline,
+                )
+                .padding(horizontal = 12.dp),
             horizontalArrangement = Arrangement.spacedBy(8.dp, Alignment.CenterHorizontally),
             verticalAlignment = Alignment.CenterVertically,
         ) {
-            LikeHeartIcon(liked = liked, burst = likeBurst, size = 16.dp, idleTint = DS.ink)
+            LikeHeartIcon(liked = liked, burst = likeBurst, size = 17.dp, idleTint = LikedTint)
             Text(
                 text = StringStore.text(context, if (liked) "course.end.liked" else "course.end.like", language),
                 fontFamily = PlusJakartaSans,
@@ -295,6 +371,7 @@ private fun CourseEndSocialRow(
                 color = if (liked) LikedTint else DS.ink,
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis,
+                modifier = Modifier.weight(1f, fill = false),
             )
         }
 
@@ -304,16 +381,18 @@ private fun CourseEndSocialRow(
             Row(
                 modifier = Modifier
                     .weight(1f)
-                    .height(48.dp)
-                    .softPress(onClick = {
+                    .height(50.dp)
+                    .pressable(haptic = false, onClick = {
+                        haptics.select()
                         val wasFollowing = progressManager.isFollowing(author.slug)
                         progressManager.toggleFollow(author.slug)
                         Analytics.log(if (wasFollowing) "unfollow" else "follow", courseId = course.id, screen = "course_end", props = mapOf("creator" to author.slug))
                     })
-                    .clip(shape)
-                    .background(if (following) DS.surface else DS.accent)
-                    .then(if (following) Modifier.border(1.dp, DS.hairline, shape) else Modifier)
-                    .padding(horizontal = 14.dp),
+                    .socialChrome(
+                        fill = if (following) DS.accentTint else DS.surface,
+                        border = if (following) DS.accent else DS.hairline,
+                    )
+                    .padding(horizontal = 12.dp),
                 horizontalArrangement = Arrangement.spacedBy(8.dp, Alignment.CenterHorizontally),
                 verticalAlignment = Alignment.CenterVertically,
             ) {
@@ -327,9 +406,10 @@ private fun CourseEndSocialRow(
                     fontFamily = PlusJakartaSans,
                     fontWeight = FontWeight.Bold,
                     fontSize = 15.sp,
-                    color = if (following) DS.ink else Color.White,
+                    color = if (following) DS.accent else DS.ink,
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis,
+                    modifier = Modifier.weight(1f, fill = false),
                 )
             }
         }

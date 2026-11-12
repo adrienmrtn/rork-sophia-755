@@ -38,8 +38,8 @@ import app.rork.sophia.data.StringStore
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.ui.components.ConfirmDialog
 import app.rork.sophia.ui.components.SectionLabel
+import app.rork.sophia.ui.components.pressable
 import app.rork.sophia.ui.components.sophiaCard
-import app.rork.sophia.ui.components.softPress
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
 import app.rork.sophia.ui.theme.SophiaTypography
@@ -57,15 +57,19 @@ fun AudioDownloadsScreen(language: AppLanguage, onBack: () -> Unit) {
         LazyColumn(modifier = Modifier.fillMaxSize(), contentPadding = PaddingValues(DS.Space.l)) {
             item(key = "used") {
                 Row(
-                    modifier = Modifier.fillMaxWidth().sophiaCard(shape = DS.controlShape, elevation = 2.dp).padding(16.dp),
+                    modifier = Modifier.fillMaxWidth().sophiaCard().padding(16.dp),
                     verticalAlignment = Alignment.CenterVertically,
                 ) {
-                    Text(t("audio.downloads.used"), style = SophiaTypography.bodyLarge, modifier = Modifier.weight(1f))
+                    Text(
+                        t("audio.downloads.used"),
+                        style = SophiaTypography.bodyLarge.copy(fontWeight = FontWeight.SemiBold),
+                        modifier = Modifier.weight(1f),
+                    )
                     Text(
                         AudioFormat.bytes(context, items.sumOf { it.bytes }),
                         fontFamily = PlusJakartaSans,
-                        fontWeight = FontWeight.SemiBold,
-                        color = DS.inkSecondary,
+                        fontWeight = FontWeight.Bold,
+                        color = DS.accent,
                     )
                 }
                 Text(
@@ -107,7 +111,7 @@ fun AudioDownloadsScreen(language: AppLanguage, onBack: () -> Unit) {
                             modifier = Modifier
                                 .size(38.dp)
                                 .clip(CircleShape)
-                                .softPress(onClick = {
+                                .pressable(scaleDown = 0.9f, onClick = {
                                     CourseAudioDownloads.delete(item.key.courseId, item.key.language)
                                 }),
                             contentAlignment = Alignment.Center,
@@ -122,7 +126,7 @@ fun AudioDownloadsScreen(language: AppLanguage, onBack: () -> Unit) {
                     SectionLabel(
                         t("audio.downloads.deleteAll"),
                         color = DS.danger,
-                        modifier = Modifier.softPress(onClick = { confirmDeleteAll = true }).padding(vertical = 8.dp),
+                        modifier = Modifier.pressable(onClick = { confirmDeleteAll = true }).padding(vertical = 8.dp),
                     )
                 }
             }
